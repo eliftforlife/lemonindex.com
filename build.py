@@ -2,14 +2,15 @@
 # Pages: home, /studies/, /studies/most-reliable-cars/, /method/, 404 + sitemap.xml, robots.txt, llms.txt, CNAME.
 # Look = the channel's thumbnails: white, Inter, #111 type, lemon yellow #ffd400 for the brand, red #e8141c only for "bad" (the lemon end).
 # Every number comes from 3 Lemon Index/video 1 most reliable/findings.md (NHTSA complaints ÷ US sales, model years 2010-2022).
-import os, json, html, datetime, shutil
+import os, json, html, datetime, shutil, csv
+from collections import defaultdict
 OUT = 'docs'; TODAY = datetime.date.today().isoformat(); BASE = 'https://lemonindex.com'
 E = lambda s: html.escape(str(s), quote=True)
 YT, TT, IG = 'https://www.youtube.com/@lemonindex', 'https://www.tiktok.com/@lemonindex', 'https://www.instagram.com/lemonindex/'
 CF = 'b04082d02f994049b6b6e0f5aa631ff4'   # Cloudflare Web Analytics (cookieless) token for lemonindex.com, added 10-21
 
 BEST = [('Toyota 4Runner', 27, '1.27M'), ('Lexus ES', 28, '0.70M'), ('Porsche Macan', 31, '0.17M'), ('Lexus RX', 32, '1.34M'), ('Nissan Frontier', 37, '0.83M'),
-        ('BMW 3 Series', 37, '1.24M'), ('Honda HR-V', 41, '0.74M'), ('Hyundai Accent', 42, '0.59M'), ('Toyota Tacoma', 44, '2.47M'), ('Mercedes E-Class', 45, '')]
+        ('BMW 3 Series', 37, '1.24M'), ('Honda HR-V', 41, '0.74M'), ('Hyundai Accent', 42, '0.59M'), ('Toyota Tacoma', 44, '2.47M'), ('Mercedes-Benz E-Class', 45, '')]
 WORST = [('Tesla Model S*', 430, 'suspension 34%, steering 16%'), ('Chevrolet Bolt', 410, 'electrical 54% (battery-fire recall)'), ('Tesla Model X*', 405, 'suspension 27%'),
          ('Tesla Model Y*', 360, 'forward collision avoidance 85% (phantom braking)'), ('Jeep Cherokee (2014+)', 307, 'power train 47%'),
          ('Chrysler Pacifica (2017+)', 281, 'engine 36%, electrical 35%'), ('Chrysler 200', 261, 'electrical, power train'), ('Chevrolet Volt', 261, 'electrical, power train'),
@@ -27,6 +28,49 @@ FAQ = [('What is the Lemon Index?', 'A car\'s safety complaints filed with the U
        ('Why does Tesla score so badly?', 'Most Model 3 and Model Y complaints are about forward collision avoidance (phantom braking). Tesla doesn\'t publish U.S. sales by model, so its index uses published estimates.'),
        ('Is this the same as a repair-cost ranking?', 'No. It counts safety complaints filed with the government within 3 years of each model year. It is not a record of repair bills or out-of-warranty costs.')]
 
+# ---- all 131 models for the explorer (copied from 3 Lemon Index/video 1 most reliable/data/out, 10-22)
+PART = {'ELECTRICAL SYSTEM': 'electrical', 'POWER TRAIN': 'transmission & drivetrain', 'SERVICE BRAKES': 'brakes', 'VEHICLE SPEED CONTROL': 'speed control',
+        'FUEL/PROPULSION SYSTEM': 'fuel or EV drive system', 'FORWARD COLLISION AVOIDANCE': 'automatic emergency braking', 'VISIBILITY/WIPER': 'wipers & visibility',
+        'VISIBILITY': 'visibility', 'AIR BAGS': 'airbags', 'STRUCTURE': 'body structure', 'EXTERIOR LIGHTING': 'lights', 'ELECTRONIC STABILITY CONTROL (ESC)': 'stability control',
+        'LANE DEPARTURE': 'lane assist', 'ENGINE AND ENGINE COOLING': 'engine', 'SEAT BELTS': 'seat belts'}
+SEGN = {'car': 'Car', 'suv': 'SUV', 'truck': 'Truck', 'minivan': 'Minivan'}
+ISS = defaultdict(list)
+for r in csv.DictReader(open('data/family_components.csv', encoding='utf-8')):
+    if r['component'] != 'UNKNOWN OR OTHER' and len(ISS[r['family']]) < 3: ISS[r['family']].append([PART.get(r['component'], r['component'].lower()), round(float(r['share_pct']))])
+CARS = []
+for r in csv.DictReader(open('data/family_rates.csv', encoding='utf-8')):
+    sold = int(r['us_sold'])
+    CARS.append(dict(id=r['family'].lower().replace(' ', '-').replace('(', '').replace(')', '').replace('+', 'plus').replace('&', 'and'), name=r['family'], brand=r['brand'],
+                     seg=r['segment'], segName=SEGN.get(r['segment'], r['segment']), years=r['years'], sold=sold, est=r['sales_note'] == 'estimate' or r['brand'] == 'Tesla',
+                     n=int(r['complaints_3yr']), per100k=round(float(r['per_100k'])), avg=round(float(r['expected']) / sold * 1e5), li=int(r['lemon_index']),
+                     serious=round(float(r['serious_pct'])), worst=r['worst_year'], issues=ISS[r['family']]))
+CARS.sort(key=lambda c: c['li'])
+for i, c in enumerate(CARS, 1): c['rank'] = i
+COUNTED = sum(c['n'] for c in CARS)
+BYNAME = {c['name']: c for c in CARS}
+BEST = [(n, v, sold or (f"{BYNAME[n]['sold'] / 1e6:.2f}M" if n in BYNAME else '')) for n, v, sold in BEST]   # fills the E-Class's missing sales
+
+def plain(v):
+    """A Lemon Index in plain words, next to every number (10-22: bare scores confused people)."""
+    return f'{100 / v:.1f}× fewer complaints than average'.replace('.0×', '×') if v < 90 else 'about average' if v <= 110 else f"{v / 100:.1f}× the average car's complaints".replace('.0×', '×')
+
+def short(v):
+    """Short form for the bar charts, where the full sentence gets cut off."""
+    return f'{100 / v:.1f}× fewer complaints'.replace('.0×', '×') if v < 90 else 'about average' if v <= 110 else f'{v / 100:.1f}× the complaints'.replace('.0×', '×')
+
+def explorer():
+    data = json.dumps(CARS, ensure_ascii=False).replace('</', '<\\/')
+    seed = ''.join(f'<div class="xr"><div class="xm"><span class="xk">#{c["rank"]}</span><span class="xn"><b>{E(c["name"])}</b><small>{c["segName"]} · {c["years"]}</small></span><span class="xb"><small>{plain(c["li"])}</small></span><span class="xi">{c["li"]}</span></div></div>' for c in CARS[:15])
+    tabs = ''.join(f'<button type="button" data-seg="{k}" aria-pressed="{str(k == "all").lower()}">{l}</button>' for k, l in [('all', 'All'), ('car', 'Cars'), ('suv', 'SUVs'), ('truck', 'Trucks'), ('minivan', 'Minivans')])
+    return f'''<section class="ex" id="explore" aria-labelledby="ex-h"><div class="exh"><div><h2 id="ex-h">Check any car</h2>
+<p class="sub">All {len(CARS)} models, model years 2010-2022. The Lemon Index compares a car's safety complaints per car sold with the average car: <b>100 is average, lower is better</b>. Hover a bar for what it means, click a car for details, tick two to compare.</p></div></div>
+<div class="exbar"><input id="xq" type="search" placeholder="Search a model, e.g. RAV4" aria-label="Search a model"><div class="tabs" role="group" aria-label="Type">{tabs}</div>
+<select id="xbrand" aria-label="Brand"></select><select id="xsort" aria-label="Sort"><option value="best">Most reliable first</option><option value="worst">Least reliable first</option><option value="sold">Most sold</option><option value="az">A to Z</option></select><span id="xcount" class="xcount"></span></div>
+<div class="xhead" aria-hidden="true"><span>Rank</span><span>Model</span><span>Compared with the average car <i class="avg">│ = average</i></span><span>Index</span><span>Sold</span><span>Top complaint</span><span></span></div>
+<div id="xrows" class="xrows">{seed}</div><button type="button" id="xmore" class="btn ghost xmore">Show all</button>
+<p class="note">* Tesla doesn't publish U.S. sales by model, so its numbers use published estimates. Sold = U.S. sales over the model years shown.</p>
+<div id="tray" class="tray" hidden></div><script id="cars" type="application/json">{data}</script></section>'''
+
 def page(path, title, desc, body, ld=None, kind='website'):
     url = BASE + path; lds = ''.join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in (ld or []))
     beacon = f"<script defer src=\"https://static.cloudflareinsights.com/beacon.min.js\" data-cf-beacon='{{\"token\": \"{CF}\"}}'></script>" if CF else ''
@@ -42,29 +86,37 @@ def page(path, title, desc, body, ld=None, kind='website'):
 <main>{body}</main>
 <footer class="foot"><div class="cta"><div><h2>New car studies, straight from the data.</h2><p>Every study becomes a video. Subscribe to see the next one first.</p></div><a class="btn" href="{YT}?sub_confirmation=1" rel="noopener">Subscribe on YouTube</a></div>
 <p class="socs"><a href="{YT}" rel="noopener">YouTube</a> · <a href="{TT}" rel="noopener">TikTok</a> · <a href="{IG}" rel="noopener">Instagram</a> · <a href="/method/">How the index works</a></p>
-<p class="fine">© {TODAY[:4]} The Lemon Index. Built from public NHTSA complaint data and published U.S. sales figures. Not affiliated with any automaker. Not a repair-cost or safety rating.</p></footer>{beacon}</body></html>'''
+<p class="fine">© {TODAY[:4]} The Lemon Index. Built from public NHTSA complaint data and published U.S. sales figures. Not affiliated with any automaker. Not a repair-cost or safety rating.</p></footer><script src="/assets/explorer.js" defer></script>{beacon}</body></html>'''
     f = os.path.join(OUT, path.strip('/'), 'index.html') if path.endswith('/') else os.path.join(OUT, path.strip('/'))
     os.makedirs(os.path.dirname(f), exist_ok=True); open(f, 'w', encoding='utf-8').write(doc)
 
-def bars(rows, mx):
-    return '<div class="bars">' + ''.join(f'<div class="b {"bad" if v > 100 else "good"}"><span class="bn">{E(n)}</span><span class="bt"><i style="width:{min(100, v / mx * 100):.1f}%"></i><em style="left:{100 / mx * 100:.1f}%"></em></span><b>{v}</b></div>' for n, v in rows) + '</div>'
+def bars(rows, mx, cls=''):
+    tip = lambda n, v: f'{n}: Lemon Index {v}, {plain(v)}.'
+    return (f'<div class="bars {cls}"><div class="bl" aria-hidden="true"><span></span><span class="al" style="--a:{100 / mx * 100:.1f}%">average car = 100</span><span></span></div>'
+            + ''.join(f'<div class="b {"bad" if v > 110 else "good"}" data-tip="{E(tip(n, v))}"><span class="bn">{E(n)}</span><span class="bt"><i style="width:{min(100, v / mx * 100):.1f}%"></i><em style="left:{100 / mx * 100:.1f}%"></em></span><b>{v}</b><small>{short(v)}</small></div>' for n, v in rows) + '</div>')
 
 STUDY = '/studies/most-reliable-cars/'
-best_rows = ''.join(f'<tr><td>{i}</td><td>{E(n)}</td><td class="num good">{v}</td><td class="num">{E(s)}</td></tr>' for i, (n, v, s) in enumerate(BEST, 1))
-worst_rows = ''.join(f'<tr><td>{E(n)}</td><td class="num bad">{v}</td><td>{E(w)}</td></tr>' for n, v, w in WORST)
+best_rows = ''.join(f'<tr><td>{i}</td><td>{E(n)}</td><td class="num good">{v}</td><td class="pw">{plain(v)}</td><td class="num">{E(s) or "—"}</td></tr>' for i, (n, v, s) in enumerate(BEST, 1))
+worst_rows = ''.join(f'<tr><td>{E(n)}</td><td class="num bad">{v}</td><td class="pw">{plain(v)}</td><td>{E(w)}</td></tr>' for n, v, w in WORST)
 seg_rows = ''.join(f'<tr><td><b>{E(a)}</b></td><td>{E(b)}</td><td>{E(c)}</td></tr>' for a, b, c in SEGMENTS)
 faq = ''.join(f'<details><summary>{E(q)}</summary><p>{E(a)}</p></details>' for q, a in FAQ)
 os.makedirs(OUT, exist_ok=True)
 
-# ---- home
+# ---- home: hero + "check your car" card side by side on a computer, then the explorer, then best vs worst side by side, then brands
+best4, worst4 = CARS[0], CARS[-1]
 page('/', 'The Lemon Index: Car Reliability From 1.6M Owner Complaints', 'Which cars break? We ranked 131 models and 22 brands by government safety complaints per car sold. 100 is average. Free data, updated with every study.', f'''
-<section class="hero"><p class="kicker">Car data, not opinions</p><h1>Which cars break? <mark>1.6 million</mark> owner complaints, ranked.</h1>
-<p class="lede">We read every safety complaint American drivers filed with the government since 1995, then divided by how many of each car were sold. The result is one number per car.</p>
-<div class="scale"><div class="sbar"><i style="left:22%"></i></div><div class="sl"><span>0 · solid</span><span>100 · average car</span><span class="bad">300+ · lemon</span></div></div>
-<div class="row"><a class="btn" href="{STUDY}">See the full ranking</a><a class="btn ghost" href="/method/">How the index works</a></div></section>
-<section><h2>The most reliable cars</h2><p class="sub">Lowest Lemon Index, model years 2010-2022. Lower is better.</p>{bars([(n, v) for n, v, _ in BEST[:6]], 120)}</section>
-<section><h2>The biggest lemons</h2><p class="sub">Highest Lemon Index. * Tesla uses published sales estimates.</p>{bars([(n, v) for n, v, _ in WORST[:6]], 440)}</section>
-<section><h2>Every brand, best to worst</h2>{bars(BRANDS, 330)}<p class="note">* Porsche is a small sample. Tesla uses estimated U.S. sales.</p></section>
+<section class="hero hgrid"><div><p class="kicker">Car data, not opinions</p><h1>Which cars break? <mark>1.6 million</mark> owner complaints, ranked.</h1>
+<p class="lede">We counted every safety complaint American drivers filed with the government since 1995, then divided by how many of each car were sold. Each car gets one number, the Lemon Index: <b>100 is the average car</b>, lower is better.</p>
+<div class="scale"><div class="sbar"><i style="left:{min(96, best4["li"] / 3.5):.1f}%" title="Toyota 4Runner, {best4["li"]}"></i></div><div class="sl"><span>25 · ¼ the complaints</span><span>100 · average car</span><span class="bad">300+ · 3× or worse</span></div></div>
+<div class="row"><a class="btn" href="#explore">Check your car</a><a class="btn ghost" href="{STUDY}">Read the study</a></div></div>
+<form class="hcard" id="hform" role="search"><label for="hq"><b>Is your car a lemon?</b><span>Type a model to see its score.</span></label><input id="hq" type="search" placeholder="e.g. Honda CR-V" autocomplete="off">
+<div class="hfacts"><div><small>Most reliable</small><b>{E(best4["name"])}</b><span class="good">{best4["li"]} · {plain(best4["li"])}</span></div>
+<div><small>Biggest lemon</small><b>{E(worst4["name"])}*</b><span class="bad">{worst4["li"]} · {plain(worst4["li"])}</span></div>
+<div><small>Counted</small><b>{COUNTED:,} complaints</b><span>filed within 3 years of each model year, for {len(CARS)} models</span></div></div></form></section>
+{explorer()}
+<section class="duo"><div><h2>The most reliable cars</h2><p class="sub">Lowest Lemon Index. Hover a bar to read it in plain English.</p>{bars([(n, v) for n, v, _ in BEST[:6]], 120)}</div>
+<div><h2>The biggest lemons</h2><p class="sub">Highest Lemon Index. * Tesla uses published sales estimates.</p>{bars([(n, v) for n, v, _ in WORST[:6]], 440)}</div></section>
+<section><h2>Every brand, best to worst</h2><p class="sub">All of a brand's models together, same scale: 100 is the average car.</p>{bars(BRANDS, 330, 'two')}<p class="note">* Porsche is a small sample (2 models, 258,000 sold). Tesla uses estimated U.S. sales.</p></section>
 <section class="faq"><h2>Questions</h2>{faq}</section>''',
      ld=[{"@context": "https://schema.org", "@type": "WebSite", "name": "The Lemon Index", "url": BASE + '/'},
          {"@context": "https://schema.org", "@type": "Organization", "name": "The Lemon Index", "url": BASE + '/', "logo": BASE + '/assets/icon-180.png', "sameAs": [YT, TT, IG]},
@@ -74,16 +126,17 @@ page('/', 'The Lemon Index: Car Reliability From 1.6M Owner Complaints', 'Which 
 page(STUDY, 'The Most Reliable Cars, According to 1.6 Million Owner Complaints', 'The most and least reliable cars and brands in the U.S., ranked by NHTSA safety complaints per 100,000 sold. Toyota 4Runner 27, Lexus 30, Tesla 322 (est.).', f'''
 <article class="study"><p class="kicker">Study #1 · {TODAY}</p><h1>The Most Reliable Cars, According to 1.6 Million Owner Complaints</h1>
 <p class="lede">The Toyota 4Runner drew about a quarter of the complaints of the average car. The Tesla Model S drew more than four times as many. Here's every number.</p>
-<div class="stats"><div><b>1,607,537</b><span>complaints in the file</span></div><div><b>131</b><span>models ranked</span></div><div><b>22</b><span>brands</span></div><div><b>2010-2022</b><span>model years</span></div></div>
-<h2>Most reliable: the top 10</h2><div class="tw"><table><thead><tr><th>#</th><th>Model</th><th>Lemon Index</th><th>U.S. sold</th></tr></thead><tbody>{best_rows}</tbody></table></div>
-<p class="note">What it means for you: a long-running model with a low index is the safest bet. Most of this list has been on sale, mostly unchanged, for a decade.</p>
-<h2>Least reliable: the bottom 10</h2><div class="tw"><table><thead><tr><th>Model</th><th>Lemon Index</th><th>Top complaint</th></tr></thead><tbody>{worst_rows}</tbody></table></div>
-<p class="note">What it means for you: one part can sink a car. Check the top complaint for the exact model year before you buy. * Tesla uses published sales estimates.</p>
-<h2>Brands, best to worst</h2>{bars(BRANDS, 330)}
+<div class="stats"><div><b>1,607,537</b><span>complaints in NHTSA's file since 1995</span></div><div><b>{COUNTED:,}</b><span>counted: filed within 3 years of a 2010-2022 model year</span></div><div><b>131</b><span>models ranked</span></div><div><b>22</b><span>brands</span></div><div><b>2010-2022</b><span>model years</span></div></div>
+<p class="sub">How to read it: the Lemon Index compares a car's safety complaints per car sold with the average car of the same model years. <b>100 is average.</b> 27 means about a quarter of the average car's complaints; 430 means 4.3 times as many.</p>
+<div class="stack"><div><h2>Most reliable: the top 10</h2><div class="tw"><table><thead><tr><th>#</th><th>Model</th><th>Index</th><th>Compared with average</th><th>Sold in the U.S.</th></tr></thead><tbody>{best_rows}</tbody></table></div>
+<p class="note">What it means for you: a long-running model with a low index is the safest bet. Most of this list has been on sale, mostly unchanged, for a decade. Sold = U.S. sales across 2010-2022.</p></div>
+<div><h2>Least reliable: the bottom 10</h2><div class="tw"><table><thead><tr><th>Model</th><th>Index</th><th>Compared with average</th><th>Top complaint (share of its complaints)</th></tr></thead><tbody>{worst_rows}</tbody></table></div>
+<p class="note">What it means for you: one part can sink a car. Check the top complaint for the exact model year before you buy. * Tesla uses published sales estimates.</p></div></div>
+<h2>Brands, best to worst</h2>{bars(BRANDS, 330, "two")}<p class="note"><a href="/#explore">Check any of the {len(CARS)} models →</a></p>
 <h2>Best and worst by type</h2><div class="tw"><table><thead><tr><th>Type</th><th>Best</th><th>Worst</th></tr></thead><tbody>{seg_rows}</tbody></table></div>
 <h2>Three patterns in the data</h2>
 <ol class="beats"><li><b>Year one is the risky year.</b> The bottom of the list is full of all-new models in their first years (Telluride, Palisade, Pacifica, the 2014 Cherokee). Wait for year two or three.</li>
-<li><b>The Germans beat their reputation, early on.</b> BMW (52) and Mercedes-Benz (54) beat Honda (87) and Ford (144) in the first three years. This measures early safety complaints, not out-of-warranty repair bills.</li>
+<li><b>The Germans beat their reputation, early on.</b> In the first three years of ownership, BMW (52) and Mercedes-Benz (54) drew fewer complaints per car than Honda (87) or Ford (144). This measures early safety complaints, not out-of-warranty repair bills.</li>
 <li><b>Tesla's problem is mostly one system.</b> About 80% of Model 3 and Model Y complaints are about forward collision avoidance, the car braking hard for nothing.</li></ol>
 <h2>How we measured it</h2><p>A complaint counts only if NHTSA received it within three years of the model year, so old and new cars get the same window. Each model year is divided by that year's U.S. sales, then compared with the average car of the same years. <a href="/method/">Full method and caveats →</a></p>
 </article>''', kind='article',
