@@ -2,5 +2,5 @@
 
 > Car reliability from public data. The Lemon Index = NHTSA safety complaints per 100,000 U.S. sales, vs the average car of the same model years (100 = average).
 
-- [The Most Reliable Cars, According to 1.6 Million Owner Complaints](https://lemonindex.com/studies/most-reliable-cars/): Toyota 4Runner 27, Lexus ES 28, Lexus brand 30, Tesla brand 322 (est.)
+- [The Most Reliable Cars, According to 1.6 Million Owner Complaints](https://lemonindex.com/studies/most-reliable-cars/): Toyota 4Runner 26, Lexus ES 27, Lexus brand 30, Tesla brand 322 (est.)
 - [Method](https://lemonindex.com/method/)
