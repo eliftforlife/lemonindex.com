@@ -50,7 +50,7 @@
       <div><b>${c.sold.toLocaleString()}${c.est ? '*' : ''}</b><span>sold in the U.S., model years ${c.years}</span></div>
       <div><b>${c.serious}%</b><span>of complaints involved a crash, fire or injury</span></div>
       <div><b>${c.worst || '—'}</b><span>its worst model year</span></div>
-      <div class="xw"><span>What owners complained about</span><ul>${c.issues.map(([k, v]) => `<li><i style="width:${v}%"></i><span><b>${k}</b> ${v}%</span></li>`).join('')}</ul><small>One complaint can name several parts, so these can add up to more than 100%.</small></div></div>`;
+      <div class="xw"><span>What owners complained about</span><ul>${c.issues.map(([k, v]) => `<li><i style="width:${v}%"></i><span><b>${k}</b> ${v}%</span></li>`).join('')}</ul><small>One complaint can name several parts, so these can add up to more than 100%.</small></div>${c.yp ? `<div class="xl"><a class="btn ghost" href="/cars/${c.id}/">See every ${c.name} year and its problems →</a></div>` : ''}</div>`;
   }
 
   function render() {
