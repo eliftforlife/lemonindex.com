@@ -127,3 +127,12 @@ td.pw { color: var(--ink2); font-size: 14px; white-space: nowrap; }
 .pts { display: grid; gap: 8px; max-width: 640px; } .pt { display: grid; grid-template-columns: minmax(0, 220px) 1fr 52px; gap: 12px; align-items: center; } .pt .bt { height: 12px; background: var(--soft); border-radius: 6px; overflow: hidden; } .pt .bt i { display: block; height: 100%; background: var(--ink); } .pt b { text-align: right; }
 .study blockquote { margin: 14px 0; padding: 14px 18px; border-left: 4px solid #ffd400; background: var(--soft); border-radius: 0 12px 12px 0; max-width: 72ch; } .study blockquote p { margin: 0 0 6px; } .study blockquote cite { font-style: normal; font-size: 13px; color: var(--mute); }
 .xl { grid-column: 1 / -1; } b.good { color: inherit; } b.bad, .lede b.bad { color: #e8141c; }
+/* car finder at the top (10-29) */
+.finder { padding-top: 48px; } .finder h1 { margin-bottom: 8px; } .finder .lede { margin-bottom: 18px; }
+.fq { position: relative; max-width: 760px; } .fq input { width: 100%; box-sizing: border-box; font: inherit; font-size: 19px; padding: 16px 18px; border: 2px solid var(--ink); border-radius: 14px; background: #fff; }
+.fq input:focus { outline: 3px solid #ffd400; outline-offset: 2px; }
+.fsug { position: absolute; z-index: 20; left: 0; right: 0; top: calc(100% + 6px); background: #fff; border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 18px 40px -20px rgba(17, 18, 20, .35); overflow: hidden; }
+.fsug a { display: grid; gap: 2px; padding: 12px 16px; color: var(--ink); text-decoration: none; border-top: 1px solid var(--line); } .fsug a:first-child { border-top: 0; }
+.fsug a.on, .fsug a:hover { background: #fff7cc; } .fsug small { color: var(--mute); font-size: 13px; }
+.finder .look { max-width: 760px; margin: 12px 0 0; }
+.hero2 { padding-top: 8px; } .hero2 .sub { max-width: 72ch; }

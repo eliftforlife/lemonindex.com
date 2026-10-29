@@ -50,6 +50,17 @@ COUNTED = sum(c['n'] for c in CARS)
 BYNAME = {c['name']: c for c in CARS}
 YP = {f['id'] for f in json.load(open('data/years.json', encoding='utf-8'))}   # models with a page per model year (10-29)
 for c in CARS: c['yp'] = c['id'] in YP
+PICK = {}
+for f in json.load(open('data/years.json', encoding='utf-8')):
+    if f['name'] in BYNAME: PICK.setdefault(BYNAME[f['name']]['brand'], []).append([f['name'], f['id'], [v['y'] for v in f['years']]])
+PICK = dict(sorted((b, sorted(m)) for b, m in PICK.items()))
+def finder(h='Look up any car', sub='Type your car, or pick it below. Every model year from 2010 to 2022: its score, its top problems and real owner complaints.'):
+    """10-29 (Elijah): the first thing on the page is an easy car filter. Type "2016 pilot", or pick brand, model, year (assets/lookup.js)."""
+    pick = json.dumps(PICK, ensure_ascii=False).replace('</', '<\\/')
+    return f"""<section class="finder" aria-labelledby="fh"><h1 id="fh">{h}</h1><p class="lede">{sub}</p>
+<div class="fq"><input id="fq" type="search" placeholder="e.g. 2016 Honda Pilot" autocomplete="off" aria-label="Type a car"><div id="fsug" class="fsug" role="listbox" hidden></div></div>
+<form class="look" id="look" onsubmit="return false"><select id="lb" aria-label="Brand"><option value="">Brand</option></select><select id="lm" aria-label="Model" disabled><option value="">Model</option></select><select id="ly" aria-label="Year" disabled><option value="">Year</option></select><button type="button" class="btn" id="lgo" disabled>Show problems</button></form>
+<script id="pick" type="application/json">{pick}</script></section>"""
 BEST = [(n, v, sold or (f"{BYNAME[n]['sold'] / 1e6:.2f}M" if n in BYNAME else '')) for n, v, sold in BEST]   # fills the E-Class's missing sales
 
 # 10-24: every list is rebuilt from the data (the 10-24 sales-timing fix moved some numbers; hand-typed lists drifted).
@@ -74,7 +85,7 @@ def explorer():
     data = json.dumps(CARS, ensure_ascii=False).replace('</', '<\\/')
     seed = ''.join(f'<div class="xr"><div class="xm"><span class="xk">#{c["rank"]}</span><span class="xn"><b>{E(c["name"])}</b><small>{c["segName"]} · {c["years"]}</small></span><span class="xb"><small>{plain(c["li"])}</small></span><span class="xi">{c["li"]}</span></div></div>' for c in CARS[:15])
     tabs = ''.join(f'<button type="button" data-seg="{k}" aria-pressed="{str(k == "all").lower()}">{l}</button>' for k, l in [('all', 'All'), ('car', 'Cars'), ('suv', 'SUVs'), ('truck', 'Trucks'), ('minivan', 'Minivans')])
-    return f'''<section class="ex" id="explore" aria-labelledby="ex-h"><div class="exh"><div><h2 id="ex-h">Check any car</h2>
+    return f'''<section class="ex" id="explore" aria-labelledby="ex-h"><div class="exh"><div><h2 id="ex-h">Compare every model</h2>
 <p class="sub">All {len(CARS)} models, model years 2010-2022. The Lemon Index compares a car's safety complaints per car sold with the average car: <b>100 is average, lower is better</b>. Hover a bar for what it means, click a car for details, tick two to compare.</p></div></div>
 <div class="exbar"><input id="xq" type="search" placeholder="Search a model, e.g. RAV4" aria-label="Search a model"><div class="tabs" role="group" aria-label="Type">{tabs}</div>
 <select id="xbrand" aria-label="Brand"></select><select id="xsort" aria-label="Sort"><option value="best">Most reliable first</option><option value="worst">Least reliable first</option><option value="sold">Most sold</option><option value="az">A to Z</option></select><span id="xcount" class="xcount"></span></div>
@@ -98,7 +109,7 @@ def page(path, title, desc, body, ld=None, kind='website'):
 <main>{body}</main>
 <footer class="foot"><div class="cta"><div><h2>New car studies, straight from the data.</h2><p>Every study becomes a video. Subscribe to see the next one first.</p></div><a class="btn" href="{YT}?sub_confirmation=1" rel="noopener">Subscribe on YouTube</a></div>
 <p class="socs"><a href="{YT}" rel="noopener">YouTube</a> · <a href="{TT}" rel="noopener">TikTok</a> · <a href="{IG}" rel="noopener">Instagram</a> · <a href="/method/">How the index works</a></p>
-<p class="fine">© {TODAY[:4]} The Lemon Index. Built from public NHTSA complaint data and published U.S. sales figures. Not affiliated with any automaker. Not a repair-cost or safety rating.</p></footer><script src="/assets/explorer.js" defer></script>{beacon}</body></html>'''
+<p class="fine">© {TODAY[:4]} The Lemon Index. Built from public NHTSA complaint data and published U.S. sales figures. Not affiliated with any automaker. Not a repair-cost or safety rating.</p></footer><script src="/assets/explorer.js" defer></script><script src="/assets/lookup.js" defer></script>{beacon}</body></html>'''
     f = os.path.join(OUT, path.strip('/'), 'index.html') if path.endswith('/') else os.path.join(OUT, path.strip('/'))
     os.makedirs(os.path.dirname(f), exist_ok=True); open(f, 'w', encoding='utf-8').write(doc)
 
@@ -114,17 +125,12 @@ seg_rows = ''.join(f'<tr><td><b>{E(a)}</b></td><td>{E(b)}</td><td>{E(c)}</td></t
 faq = ''.join(f'<details><summary>{E(q)}</summary><p>{E(a)}</p></details>' for q, a in FAQ)
 os.makedirs(OUT, exist_ok=True)
 
-# ---- home: hero + "check your car" card side by side on a computer, then the explorer, then best vs worst side by side, then brands
+# ---- home: the car finder first (10-29), how to read a score, the explorer, then best vs worst side by side, then brands
 best4, worst4 = CARS[0], CARS[-1]
 page('/', 'The Lemon Index: Car Reliability From 1.6M Owner Complaints', 'Which cars break? We ranked 131 models and 22 brands by government safety complaints per car sold. 100 is average. Free data, updated with every study.', f'''
-<section class="hero hgrid"><div><p class="kicker">Car data, not opinions</p><h1>Which cars break? <mark>1.6 million</mark> owner complaints, ranked.</h1>
-<p class="lede">We counted every safety complaint American drivers filed with the government since 1995, then divided by how many of each car were sold. Each car gets one number, the Lemon Index: <b>100 is the average car</b>, lower is better.</p>
-<div class="scale"><div class="sbar"><i style="left:{min(96, best4["li"] / 3.5):.1f}%" title="Toyota 4Runner, {best4["li"]}"></i></div><div class="sl"><span>25 · ¼ the complaints</span><span>100 · average car</span><span class="bad">300+ · 3× or worse</span></div></div>
-<div class="row"><a class="btn" href="/cars/">Look up your car + year</a><a class="btn ghost" href="#explore">Compare models</a><a class="btn ghost" href="{STUDY}">Read the study</a></div></div>
-<form class="hcard" id="hform" role="search"><label for="hq"><b>Is your car a lemon?</b><span>Type a model to see its score.</span></label><input id="hq" type="search" placeholder="e.g. Honda CR-V" autocomplete="off">
-<div class="hfacts"><div><small>Most reliable</small><b>{E(best4["name"])}</b><span class="good">{best4["li"]} · {plain(best4["li"])}</span></div>
-<div><small>Biggest lemon</small><b>{E(worst4["name"])}*</b><span class="bad">{worst4["li"]} · {plain(worst4["li"])}</span></div>
-<div><small>Counted</small><b>{COUNTED:,} complaints</b><span>filed within 3 years of each model year, for {len(CARS)} models</span></div></div></form></section>
+{finder()}
+<section class="hero2"><p class="kicker">How to read a score</p><p class="sub">We counted {COUNTED:,} safety complaints owners filed with the government, then divided by how many of each car were sold. <b>100 is the average car</b>, lower is better.</p>
+<div class="scale"><div class="sbar"><i style="left:{min(96, best4["li"] / 3.5):.1f}%" title="{E(best4["name"])}, {best4["li"]}"></i></div><div class="sl"><span>25 · ¼ the complaints</span><span>100 · average car</span><span class="bad">300+ · 3× or worse</span></div></div></section>
 {explorer()}
 <section class="duo"><div><h2>The most reliable cars</h2><p class="sub">Lowest Lemon Index. Hover a bar to read it in plain English.</p>{bars([(n, v) for n, v, _ in BEST[:6]], 120)}</div>
 <div><h2>The biggest lemons</h2><p class="sub">Highest Lemon Index. * Tesla uses published sales estimates.</p>{bars([(n, v) for n, v, _ in WORST[:6]], 440)}</div></section>
@@ -144,7 +150,7 @@ page(STUDY, 'The Most Reliable Cars, According to 1.6 Million Owner Complaints',
 <p class="note">What it means for you: a long-running model with a low index is the safest bet. Most of this list has been on sale, mostly unchanged, for a decade. Sold = U.S. sales across 2010-2022.</p></div>
 <div><h2>Least reliable: the bottom 10</h2><div class="tw"><table><thead><tr><th>Model</th><th>Index</th><th>Compared with average</th><th>Top complaint (share of its complaints)</th></tr></thead><tbody>{worst_rows}</tbody></table></div>
 <p class="note">What it means for you: one part can sink a car. Check the top complaint for the exact model year before you buy. * Tesla uses published sales estimates.</p></div></div>
-<h2>Brands, best to worst</h2>{bars(BRANDS, 330, "two")}<p class="note"><a href="/#explore">Check any of the {len(CARS)} models →</a></p>
+<h2>Brands, best to worst</h2>{bars(BRANDS, 330, "two")}<p class="note"><a href="/cars/">Look up any of the {len(CARS)} models by year →</a></p>
 <h2>Best and worst by type</h2><div class="tw"><table><thead><tr><th>Type</th><th>Best</th><th>Worst</th></tr></thead><tbody>{seg_rows}</tbody></table></div>
 <h2>Three patterns in the data</h2>
 <ol class="beats"><li><b>New designs are a gamble, but year one is only a little worse.</b> Several of the worst models are recent all-new designs (Telluride, Palisade, Pacifica, the 2014-on Cherokee). Across 31 new models, the first model year drew about 20% more complaints than the next three, so waiting a year helps a little. It isn't a rule.</li>
@@ -219,17 +225,8 @@ for f in YEARS: pick.setdefault(BYNAME[f['name']]['brand'], []).append([f['name'
 pick = dict(sorted((b, sorted(m)) for b, m in pick.items()))
 lst = ''.join(f'<div><h3>{E(b)}</h3>' + ''.join(f'<a href="/cars/{i}/">{E(n)}</a>' for n, i, _ in m) + '</div>' for b, m in pick.items())
 page('/cars/', 'Look Up Your Car: Problems by Model and Year | The Lemon Index', f'Pick your car and model year to see its owner complaints, its top problems and how it compares with every other year. {len(YEARS)} models, 2010-2022.', f'''
-<section><p class="kicker">Car lookup</p><h1>Look up your car</h1><p class="lede">Pick a brand, model and year to see what owners reported to the government, and how that year compares with the others.</p>
-<form class="look" id="look" onsubmit="return false"><select id="lb" aria-label="Brand"><option value="">Brand</option></select><select id="lm" aria-label="Model" disabled><option value="">Model</option></select><select id="ly" aria-label="Year" disabled><option value="">Year</option></select><button type="button" class="btn" id="lgo" disabled>Show problems</button></form>
-<h2>Every model</h2><div class="brands">{lst}</div></section>
-<script id="pick" type="application/json">{json.dumps(pick, ensure_ascii=False).replace("</", "<\\/")}</script>
-<script>(()=>{{const P=JSON.parse(document.getElementById('pick').textContent),$=i=>document.getElementById(i),b=$('lb'),m=$('lm'),y=$('ly'),g=$('lgo');
-const opt=(s,l,ph)=>{{s.innerHTML='<option value="">'+ph+'</option>'+l.map(([v,t])=>'<option value="'+v+'">'+t+'</option>').join('');s.disabled=!l.length}};
-opt(b,Object.keys(P).map(k=>[k,k]),'Brand');
-b.onchange=()=>{{opt(m,(P[b.value]||[]).map(([n,i])=>[i,n]),'Model');opt(y,[],'Year');g.disabled=true}};
-m.onchange=()=>{{const r=(P[b.value]||[]).find(x=>x[1]===m.value);opt(y,r?r[2].slice().reverse().map(v=>[v,v]):[],'Year');g.disabled=!m.value}};
-y.onchange=()=>{{g.disabled=!m.value}};
-g.onclick=()=>{{if(m.value)location.href='/cars/'+m.value+'/'+(y.value?y.value+'/':'')}};}})();</script>''',
+{finder('Look up your car')}
+<section><h2>Every model</h2><div class="brands">{lst}</div></section>''',
      ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": "Look up your car", "url": BASE + '/cars/'}])
 yurls.insert(0, '/cars/')
 
