@@ -54,7 +54,7 @@ PICK = {}
 for f in json.load(open('data/years.json', encoding='utf-8')):
     if f['name'] in BYNAME: PICK.setdefault(BYNAME[f['name']]['brand'], []).append([f['name'], f['id'], [v['y'] for v in f['years']]])
 PICK = dict(sorted((b, sorted(m)) for b, m in PICK.items()))
-def finder(h='Look up any car', sub='Type your car, or pick it below. Every model year from 2010 to 2022: its score, its top problems and real owner complaints.'):
+def finder(h='Look up any car', sub='Type your car, or pick it below. Every model year from 2000 to 2022: its score, its top problems and real owner complaints.'):
     """10-29 (Elijah): the first thing on the page is an easy car filter. Type "2016 pilot", or pick brand, model, year (assets/lookup.js)."""
     pick = json.dumps(PICK, ensure_ascii=False).replace('</', '<\\/')
     return f"""<section class="finder" aria-labelledby="fh"><h1 id="fh">{h}</h1><p class="lede">{sub}</p>
@@ -185,20 +185,27 @@ page('/method/', 'How the Lemon Index Works | The Lemon Index', 'How we turn NHT
 # ---- model-year lookup (10-29, Elijah: "a per year / model lookup so people can look at their car's exact issues").
 # data/years.json comes from data_years.py: per family and model year the index, complaints, sold, top problem areas and up to 3 owner complaints.
 YEARS = [f for f in json.load(open('data/years.json', encoding='utf-8')) if f['name'] in BYNAME]
+# 10-29: model years 2000-2009 added (Elijah's car is a 2008). Their scores are rough (fewer owners filed online, launch years sold partly the
+# calendar year before), so a pre-2010 year with under 20 complaints gets no score, and its page says the score is rough.
+for f in YEARS:
+    for v in f['years']: v['ok'] = v['y'] >= 2010 or v['n'] >= 20
+LIS = lambda v: v['li'] if v['ok'] else '–'
+CLS = lambda v: ('bad' if v['li'] > 110 else 'good') if v['ok'] else 'good'
+PLN = lambda v: plain(v['li']) if v['ok'] else 'too few complaints to score'
 CARU = lambda f, y=None: f'/cars/{f["id"]}/' + (f'{y}/' if y else '')
 yurls = []
 def ybars(f, cur=None):
-    mx = max(120, max(v['li'] for v in f['years']) * 1.08)
+    mx = max(120, max(v['li'] for v in f['years'] if v['ok']) * 1.08)
     return (f'<div class="bars yb"><div class="bl" aria-hidden="true"><span></span><span class="al" style="--a:{100 / mx * 100:.1f}%">average car = 100</span><span></span></div>'
-            + ''.join(f'<a class="b {"bad" if v["li"] > 110 else "good"}{" cur" if v["y"] == cur else ""}" href="{CARU(f, v["y"])}" data-tip="{E(f["name"])} {v["y"]}: Lemon Index {v["li"]}, {plain(v["li"])}."><span class="bn">{v["y"]}</span><span class="bt"><i style="width:{min(100, v["li"] / mx * 100):.1f}%"></i><em style="left:{100 / mx * 100:.1f}%"></em></span><b>{v["li"]}</b><small>{short(v["li"])}</small></a>' for v in f['years']) + '</div>')
+            + ''.join(f'<a class="b {CLS(v)}{" cur" if v["y"] == cur else ""}" href="{CARU(f, v["y"])}" data-tip="{E(f["name"])} {v["y"]}: ' + (f'Lemon Index {v["li"]}, {plain(v["li"])}' if v['ok'] else f'only {v["n"]} complaints, too few to score') + f'."><span class="bn">{v["y"]}</span><span class="bt"><i style="width:{min(100, v["li"] / mx * 100) if v["ok"] else 0:.1f}%"></i><em style="left:{100 / mx * 100:.1f}%"></em></span><b>{LIS(v)}</b><small>{short(v["li"]) if v["ok"] else "few complaints"}</small></a>' for v in f['years']) + '</div>')
 for f in YEARS:
-    c = BYNAME[f['name']]; ys = f['years']; best, worst = min(ys, key=lambda v: v['li']), max(ys, key=lambda v: v['li'])
-    rows = ''.join(f'<tr><td><a href="{CARU(f, v["y"])}">{v["y"]}</a></td><td class="num {"bad" if v["li"] > 110 else "good"}">{v["li"]}</td><td class="pw">{plain(v["li"])}</td><td class="num">{v["n"]:,}</td><td>{E(v["parts"][0][0]) + f" ({v["parts"][0][1]}%)" if v["parts"] else "—"}</td></tr>' for v in ys)
+    c = BYNAME[f['name']]; ys = f['years']; sc = [v for v in ys if v['ok']]; best, worst = min(sc, key=lambda v: v['li']), max(sc, key=lambda v: v['li'])
+    rows = ''.join(f'<tr><td><a href="{CARU(f, v["y"])}">{v["y"]}</a></td><td class="num {CLS(v)}">{LIS(v)}</td><td class="pw">{PLN(v)}</td><td class="num">{v["n"]:,}</td><td>{E(v["parts"][0][0]) + f" ({v["parts"][0][1]}%)" if v["parts"] else "—"}</td></tr>' for v in ys)
     page(CARU(f), f'{f["name"]} Reliability by Year: Best and Worst Years | The Lemon Index',
          f'Every {f["name"]} model year from {ys[0]["y"]} to {ys[-1]["y"]}, ranked by NHTSA owner complaints per car sold. Best: {best["y"]}. Worst: {worst["y"]} ({plain(worst["li"])}).', f'''
 <article class="study"><p class="kicker"><a href="/cars/">All cars</a> · {E(c["segName"])}</p><h1>{E(f["name"])} reliability by year</h1>
 <p class="lede">Best year: <b>{best["y"]}</b>, {plain(best["li"])}. Worst year: <b>{worst["y"]}</b>, {plain(worst["li"])}. Click a year to see what owners reported.</p>
-<p class="sub">Lemon Index = safety complaints filed with the government within 3 years, per car sold, compared with the average car of the same model year. <b>100 is average, lower is better.</b></p>
+<p class="sub">Lemon Index = safety complaints filed with the government within 3 years, per car sold, compared with the average car of the same model year. <b>100 is average, lower is better.</b>{" Scores before 2010 are rough: fewer owners filed complaints back then." if ys[0]["y"] < 2010 else ""}</p>
 {ybars(f)}<h2>Every year</h2><div class="tw"><table><thead><tr><th>Year</th><th>Index</th><th>Compared with average</th><th>Complaints</th><th>Top complaint</th></tr></thead><tbody>{rows}</tbody></table></div>
 <p class="note">Whole model ({c["years"]}): Lemon Index {c["li"]}, {plain(c["li"])}. <a href="/method/">How the index works</a></p></article>''',
          ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": f'{f["name"]} reliability by year', "url": BASE + CARU(f)}])
@@ -208,12 +215,13 @@ for f in YEARS:
         parts = ''.join(f'<div class="pt"><span>{E(p)}</span><span class="bt"><i style="width:{k}%"></i></span><b>{k}%</b></div>' for p, k in v['parts'])
         qs = ''.join(f'<blockquote><p>{E(q["text"])}</p><cite>{y} {E(f["name"])} owner · NHTSA complaint {q["odi"]}</cite></blockquote>' for q in v['quotes'])
         top = ', '.join(f'{p} {k}%' for p, k in v['parts'][:2])
-        near = ' · '.join(f'<a href="{CARU(f, w["y"])}">{w["y"]}: {w["li"]}</a>' for w in (prev, nxt) if w)
+        near = ' · '.join(f'<a href="{CARU(f, w["y"])}">{w["y"]}: {LIS(w)}</a>' for w in (prev, nxt) if w)
+        old = '<p class="note">Older model year: fewer owners filed complaints with the government back then, and a new model&#39;s first cars often sold the year before, so treat the score as rough. The problems and owner complaints below are exactly as filed.</p>' if y < 2010 and v['ok'] else '<p class="note">Older model year: fewer owners filed complaints with the government back then. The complaints below are exactly as filed.</p>' if y < 2010 else ''
         page(CARU(f, y), f'{y} {f["name"]} Problems and Owner Complaints | The Lemon Index',
-             f'The {y} {f["name"]} drew {plain(v["li"])}, by NHTSA owner complaints per car sold.' + (f' Top problems: {top}.' if top else '') + ' Real owner complaints and every other year.', f'''
+             (f'The {y} {f["name"]} drew {plain(v["li"])}, by NHTSA owner complaints per car sold.' if v['ok'] else f'Owners filed only {v["n"]} NHTSA safety complaints about the {y} {f["name"]} in its first 3 years.') + (f' Top problems: {top}.' if top else '') + ' Real owner complaints and every other year.', f'''
 <article class="study"><p class="kicker"><a href="/cars/">All cars</a> · <a href="{CARU(f)}">{E(f["name"])}</a> · {y}</p><h1>{y} {E(f["name"])}: problems and owner complaints</h1>
-<p class="lede">The {y} {E(f["name"])} drew <b class="{"bad" if v["li"] > 110 else "good"}">{plain(v["li"])}</b>, per car sold. Owners filed {v["n"]:,} safety complaints with the government within 3 years. {v["sold"]:,} were sold in the U.S.</p>
-<div class="stats"><div><b class="{"bad" if v["li"] > 110 else "good"}">{v["li"]}</b><span>Lemon Index (100 = average car)</span></div><div><b>{v["n"]:,}</b><span>complaints in its first 3 years</span></div><div><b>{v["sold"]:,}</b><span>sold in the U.S.</span></div><div><b>{best["y"]}</b><span>best {E(f["name"])} year ({best["li"]})</span></div></div>
+<p class="lede">{f'The {y} {E(f["name"])} drew <b class="{CLS(v)}">{plain(v["li"])}</b>, per car sold. Owners filed {v["n"]:,} safety complaints with the government within 3 years.' if v['ok'] else f'Owners filed only <b class="good">{v["n"]} safety complaints</b> with the government in its first 3 years: too few to score, and few for a car that sold this well.'} {v["sold"]:,} were sold in the U.S.</p>{old}
+<div class="stats"><div><b class="{CLS(v)}">{LIS(v)}</b><span>Lemon Index (100 = average car)</span></div><div><b>{v["n"]:,}</b><span>complaints in its first 3 years</span></div><div><b>{v["sold"]:,}</b><span>sold in the U.S.</span></div><div><b>{best["y"]}</b><span>best {E(f["name"])} year ({best["li"]})</span></div></div>
 {f'<h2>What owners complained about</h2><div class="pts">{parts}</div><p class="note">Share of this year&#39;s complaints. One complaint can name more than one area.</p>' if parts else ''}
 {f'<h2>In owners&#39; words</h2>{qs}<p class="note">Picked from complaints about the top problem areas, as filed (letter case adjusted). Search the number at nhtsa.gov to read the full complaint.</p>' if qs else ''}
 <h2>Every {E(f["name"])} year</h2>{ybars(f, y)}<p class="note">{near}{" · " if near else ""}<a href="{CARU(f)}">all years</a></p>
@@ -224,7 +232,7 @@ pick = {}
 for f in YEARS: pick.setdefault(BYNAME[f['name']]['brand'], []).append([f['name'], f['id'], [v['y'] for v in f['years']]])
 pick = dict(sorted((b, sorted(m)) for b, m in pick.items()))
 lst = ''.join(f'<div><h3>{E(b)}</h3>' + ''.join(f'<a href="/cars/{i}/">{E(n)}</a>' for n, i, _ in m) + '</div>' for b, m in pick.items())
-page('/cars/', 'Look Up Your Car: Problems by Model and Year | The Lemon Index', f'Pick your car and model year to see its owner complaints, its top problems and how it compares with every other year. {len(YEARS)} models, 2010-2022.', f'''
+page('/cars/', 'Look Up Your Car: Problems by Model and Year | The Lemon Index', f'Pick your car and model year to see its owner complaints, its top problems and how it compares with every other year. {len(YEARS)} models, 2000-2022.', f'''
 {finder('Look up your car')}
 <section><h2>Every model</h2><div class="brands">{lst}</div></section>''',
      ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": "Look up your car", "url": BASE + '/cars/'}])
