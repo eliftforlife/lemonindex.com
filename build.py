@@ -127,8 +127,9 @@ os.makedirs(OUT, exist_ok=True)
 
 # ---- home: the car finder first (10-29), how to read a score, the explorer, then best vs worst side by side, then brands
 best4, worst4 = CARS[0], CARS[-1]
-page('/', 'The Lemon Index: Car Reliability From 1.6M Owner Complaints', 'Which cars break? We ranked 131 models and 22 brands by government safety complaints per car sold. 100 is average. Free data, updated with every study.', f'''
-{finder()}
+# 10-30: Google showed /method/ for "lemon index" (its h1 was the only one saying the brand), so the home h1 now carries the name too.
+page('/', "The Lemon Index: Look Up Any Car's Problems by Year", "Look up any car's problems by model year, 2000 to 2022: its reliability score, top problem areas and real owner complaints, from 1.6 million complaints filed with the government. 100 is the average car.", f'''
+{finder(h='<span class="fbrand">The Lemon Index</span>Look up any car')}
 <section class="hero2"><p class="kicker">How to read a score</p><p class="sub">We counted {COUNTED:,} safety complaints owners filed with the government, then divided by how many of each car were sold. <b>100 is the average car</b>, lower is better.</p>
 <div class="scale"><div class="sbar"><i style="left:{min(96, best4["li"] / 3.5):.1f}%" title="{E(best4["name"])}, {best4["li"]}"></i></div><div class="sl"><span>25 · ¼ the complaints</span><span>100 · average car</span><span class="bad">300+ · 3× or worse</span></div></div></section>
 {explorer()}
@@ -136,7 +137,7 @@ page('/', 'The Lemon Index: Car Reliability From 1.6M Owner Complaints', 'Which 
 <div><h2>The biggest lemons</h2><p class="sub">Highest Lemon Index. * Tesla uses published sales estimates.</p>{bars([(n, v) for n, v, _ in WORST[:6]], 440)}</div></section>
 <section><h2>Every brand, best to worst</h2><p class="sub">All of a brand's models together, same scale: 100 is the average car.</p>{bars(BRANDS, 330, 'two')}<p class="note">* Porsche is a small sample (2 models, 258,000 sold). Tesla uses estimated U.S. sales.</p></section>
 <section class="faq"><h2>Questions</h2>{faq}</section>''',
-     ld=[{"@context": "https://schema.org", "@type": "WebSite", "name": "The Lemon Index", "url": BASE + '/'},
+     ld=[{"@context": "https://schema.org", "@type": "WebSite", "name": "The Lemon Index", "alternateName": ["Lemon Index", "lemonindex"], "url": BASE + '/'},
          {"@context": "https://schema.org", "@type": "Organization", "name": "The Lemon Index", "url": BASE + '/', "logo": BASE + '/assets/icon-180.png', "sameAs": [YT, TT, IG]},
          {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in FAQ]}])
 
@@ -171,8 +172,9 @@ page('/studies/', 'Car Reliability Studies | The Lemon Index', 'Every Lemon Inde
      ld=[{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Car Reliability Studies", "url": BASE + '/studies/', "hasPart": [{"@type": "Article", "headline": "The Most Reliable Cars, According to 1.6 Million Owner Complaints", "url": BASE + STUDY}]}])
 
 # ---- method
-page('/method/', 'How the Lemon Index Works | The Lemon Index', 'How we turn NHTSA safety complaints and U.S. sales into one reliability number per car, plus the caveats that come with it.', '''
-<article class="study"><h1>How the Lemon Index works</h1>
+page('/method/', 'Method: How We Score Car Reliability | The Lemon Index', 'How we turn NHTSA safety complaints and U.S. sales into one reliability number per car, plus the caveats that come with it.', '''
+<article class="study"><p class="kicker">Method</p><h1>How we score car reliability</h1>
+<p><a class="btn" href="/cars/">Look up your car</a></p>
 <ol class="beats"><li><b>Complaints:</b> the full NHTSA owner-complaint file (1,607,537 vehicle complaints, 1995 to October 2026).</li>
 <li><b>Sales:</b> U.S. sales per model per year from automakers' published figures. Tesla doesn't report by model, so we use published estimates and say so.</li>
 <li><b>Same window for every car:</b> a complaint counts only if it was filed within 3 years of the model year.</li>
@@ -180,7 +182,7 @@ page('/method/', 'How the Lemon Index Works | The Lemon Index', 'How we turn NHT
 <li><b>Index:</b> each car's rate against the average car of the same model years. 100 = average, 50 = half the complaints, 300 = triple.</li></ol>
 <h2>What it doesn't measure</h2><p>A complaint is a safety complaint filed with the government, not a repair record. Fleet and rental-heavy models have fewer owners filing. Luxury lessees often go straight to the dealer. Some owners file more readily than others. Read it as early-life safety complaints, not total cost of ownership.</p>
 <h2>Using the data</h2><p>The rankings are free to cite with a link to lemonindex.com (CC BY 4.0). The raw complaint data is public at NHTSA.</p></article>''',
-     ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": "How the Lemon Index Works", "url": BASE + '/method/', "about": "Car reliability measured as NHTSA safety complaints per 100,000 U.S. sales"}])
+     ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": "How We Score Car Reliability", "url": BASE + '/method/', "about": "Car reliability measured as NHTSA safety complaints per 100,000 U.S. sales"}])
 
 # ---- model-year lookup (10-29, Elijah: "a per year / model lookup so people can look at their car's exact issues").
 # data/years.json comes from data_years.py: per family and model year the index, complaints, sold, top problem areas and up to 3 owner complaints.
