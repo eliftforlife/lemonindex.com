@@ -1,3 +1,4 @@
 _shot*
 _shots.mjs
 __pycache__
+data/cache/

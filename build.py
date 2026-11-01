@@ -2,7 +2,7 @@
 # Pages: home, /studies/, /studies/most-reliable-cars/, /method/, 404 + sitemap.xml, robots.txt, llms.txt, CNAME.
 # Look = the channel's thumbnails: white, Inter, #111 type, lemon yellow #ffd400 for the brand, red #e8141c only for "bad" (the lemon end).
 # Every number comes from data/*.csv (autopilot/lib/lemon.py, with the 10-24 mysales sales-timing fix); was 3 Lemon Index/video 1 most reliable/findings.md (NHTSA complaints ÷ US sales, model years 2010-2022).
-import os, json, html, datetime, shutil, csv
+import os, re, json, html, datetime, shutil, csv
 from collections import defaultdict
 OUT = 'docs'; TODAY = datetime.date.today().isoformat(); BASE = 'https://lemonindex.com'
 E = lambda s: html.escape(str(s), quote=True)
@@ -103,13 +103,13 @@ def page(path, title, desc, body, ld=None, kind='website'):
 <meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}/assets/og.png"><meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap"><link rel="stylesheet" href="/assets/site.css?v=1030">{lds}</head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap"><link rel="stylesheet" href="/assets/site.css?v=1031">{lds}</head>
 <body><a class="spons" href="https://mealmonster.app/?utm_source=lemonindex&amp;utm_medium=sponsor_bar" rel="noopener">Sponsored by <b>Meal Monster</b> · the easy food tracker</a><header class="top"><a class="brand" href="/"><img src="/assets/icon-64.png" alt="" width="32" height="32">The Lemon Index</a>
 <nav><a href="/cars/">Look up a car</a><a href="/studies/">Studies</a><a href="/method/">Method</a><a class="yt" href="{YT}?sub_confirmation=1" rel="noopener">Subscribe</a></nav></header>
 <main>{body}</main>
 <footer class="foot"><div class="cta"><div><h2>New car studies, straight from the data.</h2><p>Every study becomes a video. Subscribe to see the next one first.</p></div><a class="btn" href="{YT}?sub_confirmation=1" rel="noopener">Subscribe on YouTube</a></div>
-<p class="socs"><a href="{YT}" rel="noopener">YouTube</a> · <a href="{TT}" rel="noopener">TikTok</a> · <a href="{IG}" rel="noopener">Instagram</a> · <a href="/method/">How the index works</a></p>
-<p class="fine">© {TODAY[:4]} The Lemon Index. Built from public NHTSA complaint data and published U.S. sales figures. Not affiliated with any automaker. Not a repair-cost or safety rating.</p></footer><script src="/assets/explorer.js" defer></script><script src="/assets/lookup.js" defer></script>{beacon}</body></html>'''
+<p class="socs"><a href="{YT}" rel="noopener">YouTube</a> · <a href="{TT}" rel="noopener">TikTok</a> · <a href="{IG}" rel="noopener">Instagram</a> · <a href="/method/">How the index works</a> · <a href="/compare/">Compare cars</a></p>
+<p class="fine"><a href="/terms/">Terms</a> · <a href="/privacy/">Privacy</a> · <a href="/refunds/">Refunds</a> · <a href="/contact/">Contact</a><br>© {TODAY[:4]} The Lemon Index. Built from public NHTSA complaint data and published U.S. sales figures. Not affiliated with any automaker. Not a repair-cost or safety rating.</p></footer><script src="/assets/explorer.js" defer></script><script src="/assets/lookup.js" defer></script>{beacon}</body></html>'''
     f = os.path.join(OUT, path.strip('/'), 'index.html') if path.endswith('/') else os.path.join(OUT, path.strip('/'))
     os.makedirs(os.path.dirname(f), exist_ok=True); open(f, 'w', encoding='utf-8').write(doc)
 
@@ -181,6 +181,11 @@ page('/method/', 'Method: How We Score Car Reliability | The Lemon Index', 'How 
 <li><b>Rate:</b> complaints per 100,000 cars sold, matched model year to sales year. When a new model's first cars sold the calendar year before its model year (that year shows almost no complaints), those sales are counted with the first model year. Since 10-24.</li>
 <li><b>Index:</b> each car's rate against the average car of the same model years. 100 = average, 50 = half the complaints, 300 = triple.</li></ol>
 <h2>What it doesn't measure</h2><p>A complaint is a safety complaint filed with the government, not a repair record. Fleet and rental-heavy models have fewer owners filing. Luxury lessees often go straight to the dealer. Some owners file more readily than others. Read it as early-life safety complaints, not total cost of ownership.</p>
+<h2>Also on every car page</h2><ul><li><b>Recalls:</b> every NHTSA safety recall campaign for that model year (NHTSA recalls API).</li>
+<li><b>Crash tests:</b> NHTSA 5-star safety ratings for each body style tested (model years 2011 on).</li>
+<li><b>Fuel economy:</b> EPA combined mpg and yearly fuel cost from fueleconomy.gov, across the versions sold that year.</li>
+<li><b>When problems show up:</b> the odometer reading owners gave in their complaints. Unlike the score, this uses every complaint for the model year, because high-mileage failures come years later. Readings of 0 or over 400,000 miles are left out.</li>
+<li><b>How serious:</b> complaints in which the owner reported a crash, a fire, an injury, a death or a tow. Owners report these; NHTSA doesn&#39;t confirm the cause.</li></ul>
 <h2>Using the data</h2><p>The rankings are free to cite with a link to lemonindex.com (CC BY 4.0). The raw complaint data is public at NHTSA.</p></article>''',
      ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": "How We Score Car Reliability", "url": BASE + '/method/', "about": "Car reliability measured as NHTSA safety complaints per 100,000 U.S. sales"}])
 
@@ -196,20 +201,103 @@ CLS = lambda v: ('bad' if v['li'] > 110 else 'good') if v['ok'] else 'good'
 PLN = lambda v: plain(v['li']) if v['ok'] else 'too few complaints to score'
 CARU = lambda f, y=None: f'/cars/{f["id"]}/' + (f'{y}/' if y else '')
 yurls = []
+
+# ---- 10-31 extras (Elijah: "do all 5"): recalls, crash tests and fuel economy from the official APIs (data_fetch_api.py),
+# when problems show up (odometer at complaint) and how serious they were (data_extras_local.py).
+_load = lambda p: json.load(open(p, encoding='utf-8')) if os.path.exists(p) else {}
+XL, XA = _load('data/extras_local.json'), _load('data/extras_api.json')
+def extra(fid, y):
+    d = dict(XL.get(fid, {}).get(str(y), {})); d.update(XA.get(fid, {}).get(str(y), {}) or {}); return d
+mi = lambda n: f'{int(n):,} miles'
+REPORT_NOTE = '<p class="note">The full Lemon Index report adds the mileage for every problem area, every recall in plain English and what to check before you buy. <b>Coming soon.</b></p>'
+RPART = lambda s: PART.get(s.split(':')[0], s.split(':')[0].lower()).replace('service brakes, hydraulic', 'brakes')
+def rsum(r):
+    """A recall in one plain sentence: skip the "X is recalling certain ... vehicles ..." opener, keep the defect."""
+    s = re.sub(r'\s+', ' ', r['summary']).strip()
+    s = re.sub(r'^.*?\brecalling\b.*?\b(vehicles|trucks|pick-ups|pickups|cars|SUVs|equipment|tires|seats|motorcycles)\b(?:[^.]|\.(?=\d))*?(?<!\bCo)(?<!\bInc)\.(?!\d)\s*', '', s)
+    first = re.split(r'(?<!\bCo)(?<!\bInc)(?<!\bCorp)(?<!\bNo)\.\s+(?=[A-Z(])', s)[0].strip().rstrip('.') if s else ''
+    if len(first) < 25 or 'recalling' in first: first = re.sub(r'\s+', ' ', r.get('risk') or '').strip().rstrip('.')
+    first = first + '.' if first else ''
+    return first[:220] + ('…' if len(first) > 220 else '')
+def stars(n):
+    return f'<span class="stars" aria-label="{n} out of 5 stars">{"★" * int(n)}{"☆" * (5 - int(n))}</span>' if str(n).isdigit() else '<span class="muted">not rated</span>'
+def miles_html(x, name):
+    m, cs = x.get('miles'), x.get('comps') or []
+    if not m: return ''
+    top = cs[0] if cs else None
+    return (f'<h2>When problems show up</h2><p>Half of the {name} complaints that listed a mileage came before <b>{mi(m["median"])}</b>. Most came between {mi(m["p25"])} and {mi(m["p75"])}.</p>'
+            + (f'<p>The top problem area, <b>{E(top[0])}</b>, usually showed up between <b>{mi(top[2])} and {mi(top[3])}</b>.</p>' if top else '') + REPORT_NOTE)
+def sev_html(x):
+    s = x.get('sev')
+    if not s or not s.get('total'): return ''
+    cells = [('crash', 'reported a crash'), ('fire', 'reported a fire'), ('injured', 'reported an injury'), ('towed', 'needed a tow'), ('deaths', 'reported a death')]
+    stat = ''.join(f'<div><b class="{"bad" if s.get(k) else "good"}">{s.get(k, 0):,}</b><span>{lbl}</span></div>' for k, lbl in cells if k != 'deaths' or s.get(k))
+    return f'<h2>How serious</h2><div class="stats">{stat}</div><p class="note">Out of {s["total"]:,} complaints filed about this model year so far. Owners report these themselves; NHTSA doesn&#39;t confirm the cause.</p>'
+def recalls_html(x, f, y):
+    if 'recalls' not in x: return ''
+    rs, nm = x['recalls'], E(f['name'])
+    mk, md = (x.get('names') or [['', '']])[0][:2]
+    link = f'https://www.nhtsa.gov/vehicle/{y}/{mk.replace(" ", "%20")}/{md.replace(" ", "%20")}' if mk else 'https://www.nhtsa.gov/recalls'
+    if not rs: return f'<h2>Recalls</h2><p>No safety recalls on record for the {y} {nm}. Still run the VIN at <a href="https://www.nhtsa.gov/recalls" rel="noopener">nhtsa.gov/recalls</a>.</p>'
+    li = ''.join(f'<li><b>{E(RPART(r["part"]))}</b> <small>{E(r["date"][-4:])}</small><br>{E(rsum(r))} <small class="muted">NHTSA {E(r["id"])}</small></li>' for r in rs[:6])
+    more = f' <a href="{link}" rel="noopener">See all {len(rs)} at nhtsa.gov</a>.' if len(rs) > 6 else f' <a href="{link}" rel="noopener">Details at nhtsa.gov</a>.'
+    return f'<h2>Recalls: {len(rs)}</h2><ul class="recalls">{li}</ul><p class="note">Recall work is free at any dealer. Check a specific car&#39;s VIN at <a href="https://www.nhtsa.gov/recalls" rel="noopener">nhtsa.gov/recalls</a>.{more}</p>'
+def specs_html(x, y, name=''):
+    out = ''
+    s = x.get('safety')
+    if s and s.get('variants'):
+        rows = ''.join(f'<tr><td>{E(re.sub(r"^\d{4} ", "", v["desc"]).replace(name + " ", "").replace(name.split(" ", 1)[-1] + " ", ""))}</td><td>{stars(v["overall"])}</td><td>{stars(v["front"])}</td><td>{stars(v["side"])}</td><td>{stars(v["rollover"])}</td></tr>' for v in s['variants'])
+        out += f'<h2>Crash tests</h2><p>Best NHTSA overall rating: {stars(s["best"]) if s.get("best") else "not rated"}</p><div class="tw"><table><thead><tr><th>Version</th><th>Overall</th><th>Frontal</th><th>Side</th><th>Rollover</th></tr></thead><tbody>{rows}</tbody></table></div><p class="note">NHTSA 5-star safety ratings (government crash tests).</p>'
+    elif y >= 2011 and 'safety' in x:
+        out += '<h2>Crash tests</h2><p>NHTSA didn&#39;t publish a 5-star crash test for this model year.</p>'
+    m = x.get('mpg')
+    if m:
+        u = 'MPGe' if m.get('ev') else 'mpg'
+        rng = lambda a, suf='': f'{a[0]:,}{suf}' if a[0] == a[1] else f'{a[0]:,}–{a[1]:,}{suf}'
+        cost = f' About <b>${rng(m["cost"])}</b> a year in {"electricity" if m.get("ev") else "fuel"} (EPA estimate at today&#39;s prices).' if m.get('cost') else ''
+        eng = f' Engines: {E(", ".join(m["engines"]))}.' if m.get('engines') and not m.get('ev') else ''
+        out += f'<h2>Fuel economy</h2><p><b>{rng(m["comb"])} {u}</b> combined.{cost}{eng}</p><p class="note">EPA ratings from fueleconomy.gov, across the versions sold that year.</p>'
+    return out
 def ybars(f, cur=None):
     mx = max(120, max(v['li'] for v in f['years'] if v['ok']) * 1.08)
     return (f'<div class="bars yb"><div class="bl" aria-hidden="true"><span></span><span class="al" style="--a:{100 / mx * 100:.1f}%">average car = 100</span><span></span></div>'
             + ''.join(f'<a class="b {CLS(v)}{" cur" if v["y"] == cur else ""}" href="{CARU(f, v["y"])}" data-tip="{E(f["name"])} {v["y"]}: ' + (f'Lemon Index {v["li"]}, {plain(v["li"])}' if v['ok'] else f'only {v["n"]} complaints, too few to score') + f'."><span class="bn">{v["y"]}</span><span class="bt"><i style="width:{min(100, v["li"] / mx * 100) if v["ok"] else 0:.1f}%"></i><em style="left:{100 / mx * 100:.1f}%"></em></span><b>{LIS(v)}</b><small>{short(v["li"]) if v["ok"] else "few complaints"}</small></a>' for v in f['years']) + '</div>')
+# 10-31 idea 5: "X vs Y" pages for the best-selling rivals in each type (people search "camry vs accord reliability").
+FY = {f['id']: f for f in YEARS}
+RIVALS = defaultdict(list); PAIRS = []
+for seg, top in (('car', 10), ('suv', 10), ('truck', 7), ('minivan', 5)):
+    ids = [c['id'] for c in sorted((c for c in CARS if c['seg'] == seg and c['id'] in FY), key=lambda c: -c['sold'])][:top]
+    for i, a in enumerate(ids):
+        for b in ids[i + 1:]:
+            PAIRS.append((a, b)); RIVALS[a].append(b); RIVALS[b].append(a)
+CMPU = lambda a, b: f'/compare/{a}-vs-{b}/'
+cmpu = lambda a, b: CMPU(a, b) if (a, b) in PAIRS else CMPU(b, a)
+def yearx(fid, y): return extra(fid, y)
 for f in YEARS:
     c = BYNAME[f['name']]; ys = f['years']; sc = [v for v in ys if v['ok']]; best, worst = min(sc, key=lambda v: v['li']), max(sc, key=lambda v: v['li'])
-    rows = ''.join(f'<tr><td><a href="{CARU(f, v["y"])}">{v["y"]}</a></td><td class="num {CLS(v)}">{LIS(v)}</td><td class="pw">{PLN(v)}</td><td class="num">{v["n"]:,}</td><td>{E(v["parts"][0][0]) + f" ({v["parts"][0][1]}%)" if v["parts"] else "—"}</td></tr>' for v in ys)
-    page(CARU(f), f'{f["name"]} Reliability by Year: Best and Worst Years | The Lemon Index',
+    good3 = sorted(sc, key=lambda v: v['li'])[:3]; bad3 = [v for v in sorted(sc, key=lambda v: -v['li']) if v['li'] > 110][:3]
+    def why(v):
+        xx = yearx(f['id'], v['y']); bits = [plain(v['li'])]
+        if v['parts']: bits.append(f'top problem: {v["parts"][0][0]}')
+        if 'recalls' in xx: bits.append(f'{len(xx["recalls"])} recalls')
+        return E(', '.join(bits))
+    buy = ''.join(f'<li><a href="{CARU(f, v["y"])}"><b>{v["y"]}</b></a>: {why(v)}</li>' for v in good3)
+    avoid = ''.join(f'<li><a href="{CARU(f, v["y"])}"><b>{v["y"]}</b></a>: {why(v)}</li>' for v in bad3)
+    picks = (f'<div class="stack"><div><h2>Best {E(f["name"])} years to buy</h2><ol class="beats">{buy}</ol></div>'
+             + (f'<div><h2>{E(f["name"])} years to avoid</h2><ol class="beats">{avoid}</ol></div>' if avoid else f'<div><h2>Years to avoid</h2><p>No {E(f["name"])} year drew more than about the average car&#39;s complaints.</p></div>') + '</div>')
+    vs = ' · '.join(f'<a href="{cmpu(f["id"], o)}">vs {E(FY[o]["name"])}</a>' for o in RIVALS.get(f['id'], [])[:8])
+    def yx(v):
+        xx = yearx(f['id'], v['y']); m = xx.get('mpg'); sf = xx.get('safety')
+        return (f'<td class="num">{len(xx["recalls"]) if "recalls" in xx else "—"}</td><td>{stars(sf["best"]) if sf and sf.get("best") else "—"}</td>'
+                f'<td class="num">{(f"{m["comb"][0]}–{m["comb"][1]}" if m["comb"][0] != m["comb"][1] else m["comb"][0]) if m else "—"}</td>')
+    rows = ''.join(f'<tr><td><a href="{CARU(f, v["y"])}">{v["y"]}</a></td><td class="num {CLS(v)}">{LIS(v)}</td><td class="pw">{PLN(v)}</td><td class="num">{v["n"]:,}</td><td>{E(v["parts"][0][0]) + f" ({v["parts"][0][1]}%)" if v["parts"] else "—"}</td>{yx(v)}</tr>' for v in ys)
+    page(CARU(f), f'{f["name"]} Years to Avoid and Best Years to Buy | The Lemon Index',
          f'Every {f["name"]} model year from {ys[0]["y"]} to {ys[-1]["y"]}, ranked by NHTSA owner complaints per car sold. Best: {best["y"]}. Worst: {worst["y"]} ({plain(worst["li"])}).', f'''
 <article class="study"><p class="kicker"><a href="/cars/">All cars</a> · {E(c["segName"])}</p><h1>{E(f["name"])} reliability by year</h1>
 <p class="lede">Best year: <b>{best["y"]}</b>, {plain(best["li"])}. Worst year: <b>{worst["y"]}</b>, {plain(worst["li"])}. Click a year to see what owners reported.</p>
 <p class="sub">Lemon Index = safety complaints filed with the government within 3 years, per car sold, compared with the average car of the same model year. <b>100 is average, lower is better.</b>{" Scores before 2010 are rough: fewer owners filed complaints back then." if ys[0]["y"] < 2010 else ""}</p>
-{ybars(f)}<h2>Every year</h2><div class="tw"><table><thead><tr><th>Year</th><th>Index</th><th>Compared with average</th><th>Complaints</th><th>Top complaint</th></tr></thead><tbody>{rows}</tbody></table></div>
-<p class="note">Whole model ({c["years"]}): Lemon Index {c["li"]}, {plain(c["li"])}. <a href="/method/">How the index works</a></p></article>''',
+{ybars(f)}{picks}<h2>Every year</h2><div class="tw"><table><thead><tr><th>Year</th><th>Index</th><th>Compared with average</th><th>Complaints</th><th>Top complaint</th><th>Recalls</th><th>Crash test</th><th>MPG</th></tr></thead><tbody>{rows}</tbody></table></div>
+<p class="note">Whole model ({c["years"]}): Lemon Index {c["li"]}, {plain(c["li"])}. <a href="/method/">How the index works</a></p>{f'<h2>Compare the {E(f["name"])}</h2><p>{vs}</p>' if vs else ''}</article>''',
          ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": f'{f["name"]} reliability by year', "url": BASE + CARU(f)}])
     yurls.append(CARU(f))
     for i, v in enumerate(ys):
@@ -219,12 +307,14 @@ for f in YEARS:
         top = ', '.join(f'{p} {k}%' for p, k in v['parts'][:2])
         near = ' · '.join(f'<a href="{CARU(f, w["y"])}">{w["y"]}: {LIS(w)}</a>' for w in (prev, nxt) if w)
         old = '<p class="note">Older model year: fewer owners filed complaints with the government back then, and a new model&#39;s first cars often sold the year before, so treat the score as rough. The problems and owner complaints below are exactly as filed.</p>' if y < 2010 and v['ok'] else '<p class="note">Older model year: fewer owners filed complaints with the government back then. The complaints below are exactly as filed.</p>' if y < 2010 else ''
-        page(CARU(f, y), f'{y} {f["name"]} Problems and Owner Complaints | The Lemon Index',
-             (f'The {y} {f["name"]} drew {plain(v["li"])}, by NHTSA owner complaints per car sold.' if v['ok'] else f'Owners filed only {v["n"]} NHTSA safety complaints about the {y} {f["name"]} in its first 3 years.') + (f' Top problems: {top}.' if top else '') + ' Real owner complaints and every other year.', f'''
+        x = extra(f['id'], y); nrec = len(x['recalls']) if 'recalls' in x else None
+        page(CARU(f, y), f'{y} {f["name"]} Problems, Recalls and Complaints | The Lemon Index',
+             (f'{nrec} recalls. ' if nrec else '') + (f'The {y} {f["name"]} drew {plain(v["li"])}, by NHTSA owner complaints per car sold.' if v['ok'] else f'Owners filed only {v["n"]} NHTSA safety complaints about the {y} {f["name"]} in its first 3 years.') + (f' Top problems: {top}.' if top else '') + ' Real owner complaints and every other year.', f'''
 <article class="study"><p class="kicker"><a href="/cars/">All cars</a> · <a href="{CARU(f)}">{E(f["name"])}</a> · {y}</p><h1>{y} {E(f["name"])}: problems and owner complaints</h1>
 <p class="lede">{f'The {y} {E(f["name"])} drew <b class="{CLS(v)}">{plain(v["li"])}</b>, per car sold. Owners filed {v["n"]:,} safety complaints with the government within 3 years.' if v['ok'] else f'Owners filed only <b class="good">{v["n"]} safety complaints</b> with the government in its first 3 years: too few to score, and few for a car that sold this well.'} {v["sold"]:,} were sold in the U.S.</p>{old}
 <div class="stats"><div><b class="{CLS(v)}">{LIS(v)}</b><span>Lemon Index (100 = average car)</span></div><div><b>{v["n"]:,}</b><span>complaints in its first 3 years</span></div><div><b>{v["sold"]:,}</b><span>sold in the U.S.</span></div><div><b>{best["y"]}</b><span>best {E(f["name"])} year ({best["li"]})</span></div></div>
 {f'<h2>What owners complained about</h2><div class="pts">{parts}</div><p class="note">Share of this year&#39;s complaints. One complaint can name more than one area.</p>' if parts else ''}
+{miles_html(x, E(f["name"]))}{sev_html(x)}{recalls_html(x, f, y)}{specs_html(x, y, f["name"])}
 {f'<h2>In owners&#39; words</h2>{qs}<p class="note">Picked from complaints about the top problem areas, as filed (letter case adjusted). Search the number at nhtsa.gov to read the full complaint.</p>' if qs else ''}
 <h2>Every {E(f["name"])} year</h2>{ybars(f, y)}<p class="note">{near}{" · " if near else ""}<a href="{CARU(f)}">all years</a></p>
 <h2>Before you buy one</h2><p>Run the car&#39;s VIN through the free recall check at <a href="https://www.nhtsa.gov/recalls" rel="noopener">nhtsa.gov/recalls</a>, and ask for records of any recall work. A complaint is an owner&#39;s report, not a confirmed defect, and this is not a repair-cost rating.</p></article>''', kind='article',
@@ -240,8 +330,67 @@ page('/cars/', 'Look Up Your Car: Problems by Model and Year | The Lemon Index',
      ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": "Look up your car", "url": BASE + '/cars/'}])
 yurls.insert(0, '/cars/')
 
+curls = []
+for a, b in PAIRS:
+    A, B = FY[a], FY[b]; ca, cb = BYNAME[A['name']], BYNAME[B['name']]
+    ya, yb = {v['y']: v for v in A['years'] if v['ok']}, {v['y']: v for v in B['years'] if v['ok']}
+    shared = sorted(set(ya) & set(yb))
+    if len(shared) < 2: continue
+    wa = sum(ya[y]['li'] < yb[y]['li'] for y in shared); wb = sum(yb[y]['li'] < ya[y]['li'] for y in shared)
+    lead, trail = (A, B) if ca['li'] <= cb['li'] else (B, A)
+    rows = ''.join(f'<tr><td>{y}</td><td class="num {CLS(ya[y])}"><a href="{CARU(A, y)}">{ya[y]["li"]}</a></td><td class="num {CLS(yb[y])}"><a href="{CARU(B, y)}">{yb[y]["li"]}</a></td><td>{E(A["name"] if ya[y]["li"] < yb[y]["li"] else B["name"] if yb[y]["li"] < ya[y]["li"] else "tie")}</td></tr>' for y in shared)
+    def facts(F):
+        last = max(v['y'] for v in F['years']); xx = extra(F['id'], last); m, sf = xx.get('mpg'), xx.get('safety')
+        rec = sum(len(extra(F['id'], v['y']).get('recalls', [])) for v in F['years'] if v['y'] in shared)
+        return rec, (f'{m["comb"][0]}–{m["comb"][1]}' if m and m['comb'][0] != m['comb'][1] else (m['comb'][0] if m else '—')), (stars(sf['best']) if sf and sf.get('best') else '—'), last
+    fa, fb = facts(A), facts(B)
+    title = f'{A["name"]} vs {B["name"]} Reliability: Which Has Fewer Problems?'
+    page(CMPU(a, b), title + ' | The Lemon Index',
+         f'{lead["name"]} vs {trail["name"]}: owner complaints per car sold for every model year both were sold ({shared[0]}-{shared[-1]}), plus recalls, crash tests and fuel economy.', f'''
+<article class="study"><p class="kicker"><a href="/cars/">All cars</a> · Compare</p><h1>{E(A["name"])} vs {E(B["name"])}: which has fewer problems?</h1>
+<p class="lede">Overall, the <b>{E(lead["name"])}</b> drew fewer complaints per car sold. The {E(A["name"])} had fewer in <b>{wa} of {len(shared)}</b> model years both were sold; the {E(B["name"])} in <b>{wb}</b>.</p>
+<div class="stats"><div><b class="{"bad" if ca["li"] > 110 else "good"}">{ca["li"]}</b><span>{E(A["name"])}: {plain(ca["li"])}</span></div><div><b class="{"bad" if cb["li"] > 110 else "good"}">{cb["li"]}</b><span>{E(B["name"])}: {plain(cb["li"])}</span></div></div>
+<p class="sub">Lemon Index = safety complaints filed with the government within 3 years, per car sold, against the average car of the same model year. <b>100 is average, lower is better.</b></p>
+<h2>Year by year</h2><div class="tw"><table><thead><tr><th>Model year</th><th>{E(A["name"])}</th><th>{E(B["name"])}</th><th>Fewer complaints</th></tr></thead><tbody>{rows}</tbody></table></div>
+<h2>Side by side</h2><div class="tw"><table><thead><tr><th></th><th>{E(A["name"])}</th><th>{E(B["name"])}</th></tr></thead><tbody>
+<tr><td>Recalls ({shared[0]}-{shared[-1]})</td><td class="num">{fa[0]}</td><td class="num">{fb[0]}</td></tr>
+<tr><td>MPG (latest year)</td><td class="num">{fa[1]}</td><td class="num">{fb[1]}</td></tr>
+<tr><td>Best crash test (latest year)</td><td>{fa[2]}</td><td>{fb[2]}</td></tr>
+<tr><td>Most reliable year</td><td><a href="{CARU(A, min((ya[y] for y in ya), key=lambda v: v["li"])["y"])}">{min((ya[y] for y in ya), key=lambda v: v["li"])["y"]}</a></td><td><a href="{CARU(B, min((yb[y] for y in yb), key=lambda v: v["li"])["y"])}">{min((yb[y] for y in yb), key=lambda v: v["li"])["y"]}</a></td></tr>
+</tbody></table></div>
+<p class="note"><a href="{CARU(A)}">Every {E(A["name"])} year</a> · <a href="{CARU(B)}">Every {E(B["name"])} year</a> · <a href="/method/">How the index works</a></p></article>''', kind='article',
+         ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": title, "url": BASE + CMPU(a, b)}])
+    curls.append(CMPU(a, b))
+cl = ''.join(f'<li><a href="{u}">{E(FY[a]["name"])} vs {E(FY[b]["name"])}</a></li>' for (a, b), u in zip([p for p in PAIRS if CMPU(*p) in curls], curls))
+page('/compare/', 'Car Reliability Comparisons: Model vs Model | The Lemon Index', f'{len(curls)} head-to-head reliability comparisons of popular rivals, year by year, from NHTSA owner complaints per car sold.', f'''
+<section><h1>Compare cars</h1><p class="lede">Popular rivals head to head: which drew fewer owner complaints per car sold, year by year.</p><ul class="cmp">{cl}</ul></section>''',
+     ld=[{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Car reliability comparisons", "url": BASE + '/compare/'}])
+curls.insert(0, '/compare/')
+
+# 10-31: policy pages Stripe checks before it activates payments (and that a paid report needs anyway).
+LEGAL_NAME, ADDRESS, CONTACT = 'Westbrook Software LLC', '4539 N 22nd St Ste R, Phoenix, AZ 85016', 'hello@elijahwestbrook.com'
+def legal(path, title, body):
+    page(path, f'{title} | The Lemon Index', f'{title} for lemonindex.com, operated by {LEGAL_NAME}.', f'<article class="study"><p class="kicker">Updated {TODAY}</p><h1>{title}</h1>{body}</article>')
+legal('/contact/', 'Contact', f'''<p>Questions about the data, a report or a purchase: email <a href="mailto:{CONTACT}">{CONTACT}</a>. We usually answer within 2 business days.</p>
+<p>The Lemon Index is operated by {LEGAL_NAME}, {ADDRESS}.</p>''')
+legal('/refunds/', 'Refund policy', f'''<p>The full Lemon Index report is a digital product that unlocks right away, so <b>all sales are final</b> once reports are unlocked.</p>
+<p>We will refund you in full if you were charged twice by mistake, or if you can&#39;t access the reports and we can&#39;t fix it within 7 days. Email <a href="mailto:{CONTACT}">{CONTACT}</a> within 14 days of your purchase.</p>''')
+legal('/privacy/', 'Privacy policy', f'''<p>{LEGAL_NAME} ("we") runs lemonindex.com. This page says what we collect and why.</p>
+<h2>Visiting the site</h2><p>We use Cloudflare Web Analytics, which counts visits without cookies and without identifying you. We don&#39;t run ad trackers.</p>
+<h2>If you create an account or buy a report</h2><p>We store your email address to sign you in and to remember that you unlocked the reports. Payments are handled by Stripe; we never see or store your card number. If you opt in, we email you car-buying tips and new studies, and every email has an unsubscribe link.</p>
+<h2>Sharing</h2><p>We don&#39;t sell your personal information. We share it only with the services that run the site (hosting, sign-in, email, Stripe) and when the law requires it.</p>
+<h2>Your choices</h2><p>Email <a href="mailto:{CONTACT}">{CONTACT}</a> to get a copy of your data or to delete your account.</p>
+<p>{LEGAL_NAME}, {ADDRESS}.</p>''')
+legal('/terms/', 'Terms of use', f'''<p>lemonindex.com is operated by {LEGAL_NAME}, {ADDRESS}. By using the site you agree to these terms.</p>
+<h2>The data</h2><p>Our scores, recalls, crash tests and fuel-economy figures come from public U.S. government data (NHTSA and the EPA) and published sales figures. Owner complaints are owners&#39; own reports, not confirmed defects. The site is for general information. It isn&#39;t a mechanical inspection, a repair-cost estimate or a guarantee about any car. Have a car inspected before you buy it.</p>
+<h2>Paid reports</h2><p>A one-time payment unlocks every full report for the account that bought it, for as long as we offer them. Prices are shown before you pay, and payments are processed by Stripe. See the <a href="/refunds/">refund policy</a>.</p>
+<h2>Using our work</h2><p>You may cite our free rankings with a link to lemonindex.com (CC BY 4.0). Don&#39;t copy or resell the paid reports.</p>
+<h2>Limits</h2><p>The site is provided as is. To the extent the law allows, {LEGAL_NAME} isn&#39;t liable for decisions made using it. Arizona law governs these terms.</p>
+<p>Questions: <a href="mailto:{CONTACT}">{CONTACT}</a>.</p>''')
+LEGAL_URLS = ['/contact/', '/refunds/', '/privacy/', '/terms/']
+
 open(f'{OUT}/404.html', 'w', encoding='utf-8').write(open(f'{OUT}/index.html', encoding='utf-8').read().replace('<main>', '<main><section><h1>That page drove off.</h1><p><a href="/">Back to the rankings</a></p></section><!--', 1).replace('</main>', '--></main>', 1))
-urls = ['/', STUDY, '/studies/', '/method/'] + yurls
+urls = ['/', STUDY, '/studies/', '/method/'] + yurls + curls + LEGAL_URLS
 open(f'{OUT}/sitemap.xml', 'w', encoding='utf-8').write('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + ''.join(f'<url><loc>{BASE}{u}</loc><lastmod>{TODAY}</lastmod></url>' for u in urls) + '</urlset>')
 open(f'{OUT}/robots.txt', 'w').write(f'User-agent: *\nAllow: /\n\nUser-agent: GPTBot\nAllow: /\nUser-agent: ClaudeBot\nAllow: /\nUser-agent: PerplexityBot\nAllow: /\nUser-agent: Google-Extended\nAllow: /\n\nSitemap: {BASE}/sitemap.xml\n')
 open(f'{OUT}/llms.txt', 'w', encoding='utf-8').write(f'# The Lemon Index\n\n> Car reliability from public data. The Lemon Index = NHTSA safety complaints per 100,000 U.S. sales, vs the average car of the same model years (100 = average).\n\n- [The Most Reliable Cars, According to 1.6 Million Owner Complaints]({BASE}{STUDY}): Toyota 4Runner 26, Lexus ES 27, Lexus brand 30, Tesla brand 322 (est.)\n- [Method]({BASE}/method/)\n')

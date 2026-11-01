@@ -141,3 +141,8 @@ td.pw { color: var(--ink2); font-size: 14px; white-space: nowrap; }
 .spons { display: block; text-align: center; font: 500 12px/1.3 Inter, system-ui, -apple-system, "Segoe UI", Arial, sans-serif; letter-spacing: .02em; padding: 7px 16px; background: #eef3f8; color: #505a66; text-decoration: none; }
 .spons b { color: #3f78b4; font-weight: 700; }
 .spons:hover b, .spons:focus-visible b { text-decoration: underline; }
+/* 10-31: recalls, crash-test stars, compare lists */
+.stars { color: #c99a00; letter-spacing: .05em; white-space: nowrap; } .muted { color: var(--mute); }
+.recalls { list-style: none; padding: 0; margin: 12px 0; display: grid; gap: 10px; }
+.recalls li { background: var(--soft); border-radius: 12px; padding: 12px 14px; line-height: 1.45; } .recalls small { color: var(--mute); }
+.cmp { columns: 2 280px; padding-left: 18px; } .cmp li { margin: 6px 0; break-inside: avoid; }
