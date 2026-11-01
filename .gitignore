@@ -2,3 +2,4 @@ _shot*
 _shots.mjs
 __pycache__
 data/cache/
+_shots_ev.mjs

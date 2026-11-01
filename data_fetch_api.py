@@ -59,7 +59,7 @@ def recalls(year, names):
                 seen[c] = {'id': c, 'date': r.get('ReportReceivedDate', ''), 'part': r.get('Component', ''),
                            'summary': (r.get('Summary') or '').strip()[:600], 'risk': (r.get('Consequence') or '').strip()[:400],
                            'fix': (r.get('Remedy') or '').strip()[:400]}
-    return sorted(seen.values(), key=lambda r: r['date'][-4:] + r['date'][:5])
+    return sorted(seen.values(), key=lambda r: r['date'][6:10] + r['date'][3:5] + r['date'][:2])   # dates are DD/MM/YYYY
 
 
 def safety(year, names, fam):
