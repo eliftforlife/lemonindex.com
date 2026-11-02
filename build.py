@@ -1,3 +1,4 @@
+import re
 # Builds lemonindex.com into docs/ (GitHub Pages serves main /docs).   usage: py build.py
 # Pages: home, /studies/, /studies/most-reliable-cars/, /method/, 404 + sitemap.xml, robots.txt, llms.txt, CNAME.
 # Look = the channel's thumbnails: white, Inter, #111 type, lemon yellow #ffd400 for the brand, red #e8141c only for "bad" (the lemon end).
@@ -103,13 +104,13 @@ def page(path, title, desc, body, ld=None, kind='website'):
 <meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}/assets/og.png"><meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap"><link rel="stylesheet" href="/assets/site.css?v=1031">{lds}</head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap"><link rel="stylesheet" href="/assets/site.css?v=1102c">{lds}</head>
 <body><a class="spons" href="https://mealmonster.app/?utm_source=lemonindex&amp;utm_medium=sponsor_bar" rel="noopener">Sponsored by <b>Meal Monster</b> · the easy food tracker</a><header class="top"><a class="brand" href="/"><img src="/assets/icon-64.png" alt="" width="32" height="32">The Lemon Index</a>
 <nav><a href="/cars/">Look up a car</a><a href="/electric/">Electric</a><a href="/studies/">Studies</a><a href="/method/">Method</a><a class="yt" href="{YT}?sub_confirmation=1" rel="noopener">Subscribe</a></nav></header>
 <main>{body}</main>
 <footer class="foot"><div class="cta"><div><h2>New car studies, straight from the data.</h2><p>Every study becomes a video. Subscribe to see the next one first.</p></div><a class="btn" href="{YT}?sub_confirmation=1" rel="noopener">Subscribe on YouTube</a></div>
-<p class="socs"><a href="{YT}" rel="noopener">YouTube</a> · <a href="{TT}" rel="noopener">TikTok</a> · <a href="{IG}" rel="noopener">Instagram</a> · <a href="/method/">How the index works</a> · <a href="/compare/">Compare cars</a></p>
-<p class="fine"><a href="/terms/">Terms</a> · <a href="/privacy/">Privacy</a> · <a href="/refunds/">Refunds</a> · <a href="/contact/">Contact</a><br>© {TODAY[:4]} The Lemon Index. Built from public NHTSA complaint data and published U.S. sales figures. Not affiliated with any automaker. Not a repair-cost or safety rating.</p></footer><script src="/assets/explorer.js" defer></script><script src="/assets/lookup.js" defer></script>{beacon}</body></html>'''
+<p class="socs"><a href="{YT}" rel="noopener">YouTube</a> · <a href="{TT}" rel="noopener">TikTok</a> · <a href="{IG}" rel="noopener">Instagram</a> · <a href="/method/">How the index works</a> · <a href="/compare/">Compare cars</a> · <button class="supl" onclick="window.liSupport&amp;&amp;liSupport()">Support the Lemon Index</button></p>
+<p class="fine"><a href="/terms/">Terms</a> · <a href="/privacy/">Privacy</a> · <a href="/refunds/">Refunds</a> · <a href="/contact/">Contact</a><br>© {TODAY[:4]} The Lemon Index. Built from public NHTSA complaint data and published U.S. sales figures. Not affiliated with any automaker. Not a repair-cost or safety rating.</p></footer><script src="/assets/explorer.js" defer></script><script src="/assets/support.js?v=1102" defer></script><script src="/assets/lookup.js" defer></script>{beacon}</body></html>'''
     f = os.path.join(OUT, path.strip('/'), 'index.html') if path.endswith('/') else os.path.join(OUT, path.strip('/'))
     os.makedirs(os.path.dirname(f), exist_ok=True); open(f, 'w', encoding='utf-8').write(doc)
 
@@ -228,6 +229,20 @@ def miles_html(x, name):
     top = cs[0] if cs else None
     return (f'<h2>When problems show up</h2><p>Half of the {name} complaints that listed a mileage came before <b>{mi(m["median"])}</b>. Most came between {mi(m["p25"])} and {mi(m["p75"])}.</p>'
             + (f'<p>The top problem area, <b>{E(top[0])}</b>, usually showed up between <b>{mi(top[2])} and {mi(top[3])}</b>.</p>' if top else '') + REPORT_NOTE)
+# ---- 11-02 price box (Elijah): dealer asking prices by mileage, measured from real listings while researching each video (data/prices.json);
+# private-party row waits for licensed data; salvage = sourced rule of thumb, never a made-up exact number.
+def money(n): return f'${n / 1000:.1f}K'
+def price_html(fid, y, name):
+    d = (json.load(open('data/prices.json', encoding='utf-8')) if os.path.exists('data/prices.json') else {}).get(fid, {}).get(str(y))
+    if not d: return ''
+    rows = ''.join(f'<tr><td>{E(b["label"])}</td><td class="num pg">{money(b["med"] * .9)}</td><td class="num pf">{money(b["med"])}</td><td class="num ph">{money(b["med"] * 1.05)}+</td></tr>'
+                   for b in d['buckets'] if b['n'] >= 10)
+    if not rows: return ''
+    return f'''<h2>What to pay</h2><p>Typical dealer asking price for a {y} {E(d.get("model", name))} by mileage, from <b>{d["n"]:,}</b> dealer listings nationwide ({E(d["date"])}). Under the great-deal number is about 10% below typical; over the high number is more than 5% above.</p>
+<div class="tw"><table class="price"><thead><tr><th>Miles</th><th>Great deal<br><small>at or under</small></th><th>Typical</th><th>Too high<br><small>at or over</small></th></tr></thead><tbody>{rows}</tbody></table></div>
+<div class="pnotes"><p><b>Private seller:</b> coming soon. Private sellers often ask less than dealers, but we only publish a number once it&#39;s measured.</p>
+<p><b>Salvage or rebuilt title:</b> usually sells for well under a clean title. Estimates run from about 27% less (a matched study of 2,389 cars) to as much as 50% less (Edmunds). This is a guide, not a price; get an inspection.</p></div>
+<p class="note">Asking prices, not sale prices. Trim, engine, 4x4, condition and location move the price. Estimates, not an appraisal.</p>'''
 def sev_html(x):
     s = x.get('sev')
     if not s or not s.get('total'): return ''
@@ -315,7 +330,7 @@ for f in YEARS:
 <p class="lede">{f'The {y} {E(f["name"])} drew <b class="{CLS(v)}">{plain(v["li"])}</b>, per car sold. Owners filed {v["n"]:,} safety complaints with the government within 3 years.' if v['ok'] else f'Owners filed only <b class="good">{v["n"]} safety complaints</b> with the government in its first 3 years: too few to score, and few for a car that sold this well.'} {v["sold"]:,} were sold in the U.S.</p>{old}
 <div class="stats"><div><b class="{CLS(v)}">{LIS(v)}</b><span>Lemon Index (100 = average car)</span></div><div><b>{v["n"]:,}</b><span>complaints in its first 3 years</span></div><div><b>{v["sold"]:,}</b><span>sold in the U.S.</span></div><div><b>{best["y"]}</b><span>best {E(f["name"])} year ({best["li"]})</span></div></div>
 {f'<h2>What owners complained about</h2><div class="pts">{parts}</div><p class="note">Share of this year&#39;s complaints. One complaint can name more than one area.</p>' if parts else ''}
-{miles_html(x, E(f["name"]))}{sev_html(x)}{recalls_html(x, f, y)}{specs_html(x, y, f["name"])}
+{price_html(f["id"], y, f["name"])}{miles_html(x, E(f["name"]))}{sev_html(x)}{recalls_html(x, f, y)}{specs_html(x, y, f["name"])}
 {f'<h2>In owners&#39; words</h2>{qs}<p class="note">Picked from complaints about the top problem areas, as filed (letter case adjusted). Search the number at nhtsa.gov to read the full complaint.</p>' if qs else ''}
 <h2>Every {E(f["name"])} year</h2>{ybars(f, y)}<p class="note">{near}{" · " if near else ""}<a href="{CARU(f)}">all years</a></p>
 <h2>Before you buy one</h2><p>Run the car&#39;s VIN through the free recall check at <a href="https://www.nhtsa.gov/recalls" rel="noopener">nhtsa.gov/recalls</a>, and ask for records of any recall work. A complaint is an owner&#39;s report, not a confirmed defect, and this is not a repair-cost rating.</p></article>''', kind='article',
@@ -346,19 +361,38 @@ for a, b in PAIRS:
         return rec, (f'{m["comb"][0]}–{m["comb"][1]}' if m and m['comb'][0] != m['comb'][1] else (m['comb'][0] if m else '—')), (stars(sf['best']) if sf and sf.get('best') else '—'), last
     fa, fb = facts(A), facts(B)
     title = f'{A["name"]} vs {B["name"]} Reliability: Which Has Fewer Problems?'
+    # 11-02 (Elijah): one clear winner up top, a 2-column scorecard that stays side by side on phones, and bars instead of a wide table
+    close = abs(ca['li'] - cb['li']) <= max(ca['li'], cb['li']) * .08
+    lc_, tc_ = (ca, cb) if lead is A else (cb, ca); fewer = round((1 - lc_['li'] / max(tc_['li'], 1)) * 100)
+    lw, tw_ = (wa, wb) if lead is A else (wb, wa)
+    if close: verdict = f'<p class="vk">Verdict</p><p class="vw">Too close to call</p><p class="vs">Overall they drew about the same complaints per car sold ({ca["li"]} vs {cb["li"]}). Pick by model year below.</p>'
+    else: verdict = f'<p class="vk">Winner</p><p class="vw">{E(lead["name"])}</p><p class="vs">About <b>{fewer}% fewer</b> owner complaints per car sold than the {E(trail["name"])}, and fewer in <b>{lw} of {len(shared)}</b> model years both were sold.</p>'
+    num = lambda x: float(re.match(r'[\d.]+', str(x)).group()) if re.match(r'[\d.]+', str(x)) else None
+    def better(x, y, high):
+        if x is None or y is None or x == y: return '', ''
+        return ('w', '') if (x > y) == high else ('', 'w')
+    def srow(lab, va, vb, cls):
+        return f'<div class="dl">{lab}</div><div class="dv {cls[0]}">{va}</div><div class="dv {cls[1]}">{vb}</div>'
+    stA = num(re.sub(r'<[^>]+>', '', fa[2]).count('★')) if '★' in fa[2] else None; stB = num(re.sub(r'<[^>]+>', '', fb[2]).count('★')) if '★' in fb[2] else None
+    bA, bB = min((ya[y] for y in ya), key=lambda v: v['li']), min((yb[y] for y in yb), key=lambda v: v['li'])
+    duel = f'<div class="duel"><div></div><div class="dh"><a href="{CARU(A)}">{E(A["name"])}</a></div><div class="dh"><a href="{CARU(B)}">{E(B["name"])}</a></div>' + \
+        srow('Lemon Index<br><small>100 = average, lower is better</small>', f'<b>{ca["li"]}</b>', f'<b>{cb["li"]}</b>', better(ca['li'], cb['li'], False)) + \
+        srow(f'Years with fewer complaints<br><small>{shared[0]}–{shared[-1]}</small>', f'{wa} of {len(shared)}', f'{wb} of {len(shared)}', better(wa, wb, True)) + \
+        srow(f'Recalls<br><small>{shared[0]}–{shared[-1]}</small>', fa[0], fb[0], better(fa[0], fb[0], False)) + \
+        srow('MPG<br><small>latest year</small>', fa[1], fb[1], better(num(fa[1]), num(fb[1]), True)) + \
+        srow('Crash test<br><small>best, latest year</small>', fa[2], fb[2], better(stA, stB, True)) + \
+        srow('Best year to buy', f'<a href="{CARU(A, bA["y"])}">{bA["y"]}</a>', f'<a href="{CARU(B, bB["y"])}">{bB["y"]}</a>', ('', '')) + '</div>'
+    mx = max(max(ya[y]['li'], yb[y]['li']) for y in shared)
+    yrs = ''.join(f'''<div class="yr"><div class="yy">{y}</div><div class="yb">
+<a class="ybar {CLS(ya[y])}{' w' if ya[y]['li'] < yb[y]['li'] else ''}" href="{CARU(A, y)}"><i style="width:{ya[y]['li'] / mx * 100:.0f}%"></i><span>{E(A["name"])} <b>{ya[y]['li']}</b></span></a>
+<a class="ybar {CLS(yb[y])}{' w' if yb[y]['li'] < ya[y]['li'] else ''}" href="{CARU(B, y)}"><i style="width:{yb[y]['li'] / mx * 100:.0f}%"></i><span>{E(B["name"])} <b>{yb[y]['li']}</b></span></a></div></div>''' for y in shared)
     page(CMPU(a, b), title + ' | The Lemon Index',
          f'{lead["name"]} vs {trail["name"]}: owner complaints per car sold for every model year both were sold ({shared[0]}-{shared[-1]}), plus recalls, crash tests and fuel economy.', f'''
-<article class="study"><p class="kicker"><a href="/cars/">All cars</a> · Compare</p><h1>{E(A["name"])} vs {E(B["name"])}: which has fewer problems?</h1>
-<p class="lede">Overall, the <b>{E(lead["name"])}</b> drew fewer complaints per car sold. The {E(A["name"])} had fewer in <b>{wa} of {len(shared)}</b> model years both were sold; the {E(B["name"])} in <b>{wb}</b>.</p>
-<div class="stats"><div><b class="{"bad" if ca["li"] > 110 else "good"}">{ca["li"]}</b><span>{E(A["name"])}: {plain(ca["li"])}</span></div><div><b class="{"bad" if cb["li"] > 110 else "good"}">{cb["li"]}</b><span>{E(B["name"])}: {plain(cb["li"])}</span></div></div>
-<p class="sub">Lemon Index = safety complaints filed with the government within 3 years, per car sold, against the average car of the same model year. <b>100 is average, lower is better.</b></p>
-<h2>Year by year</h2><div class="tw"><table><thead><tr><th>Model year</th><th>{E(A["name"])}</th><th>{E(B["name"])}</th><th>Fewer complaints</th></tr></thead><tbody>{rows}</tbody></table></div>
-<h2>Side by side</h2><div class="tw"><table><thead><tr><th></th><th>{E(A["name"])}</th><th>{E(B["name"])}</th></tr></thead><tbody>
-<tr><td>Recalls ({shared[0]}-{shared[-1]})</td><td class="num">{fa[0]}</td><td class="num">{fb[0]}</td></tr>
-<tr><td>MPG (latest year)</td><td class="num">{fa[1]}</td><td class="num">{fb[1]}</td></tr>
-<tr><td>Best crash test (latest year)</td><td>{fa[2]}</td><td>{fb[2]}</td></tr>
-<tr><td>Most reliable year</td><td><a href="{CARU(A, min((ya[y] for y in ya), key=lambda v: v["li"])["y"])}">{min((ya[y] for y in ya), key=lambda v: v["li"])["y"]}</a></td><td><a href="{CARU(B, min((yb[y] for y in yb), key=lambda v: v["li"])["y"])}">{min((yb[y] for y in yb), key=lambda v: v["li"])["y"]}</a></td></tr>
-</tbody></table></div>
+<article class="study cmpp"><p class="kicker"><a href="/cars/">All cars</a> · Compare</p><h1>{E(A["name"])} vs {E(B["name"])}: which has fewer problems?</h1>
+<div class="verdict{' tie' if close else ''}">{verdict}</div>
+<h2>Head to head</h2>{duel}
+<p class="sub">Lemon Index = safety complaints filed with the government within 3 years, per car sold, against the average car of the same model year. <b>100 is average, lower is better.</b> Green check = the better of the two on that line.</p>
+<h2>Year by year</h2><p class="sub">Shorter bar = fewer complaints per car sold. Tap a year for its full report.</p><div class="yrs">{yrs}</div>
 <p class="note"><a href="{CARU(A)}">Every {E(A["name"])} year</a> · <a href="{CARU(B)}">Every {E(B["name"])} year</a> · <a href="/method/">How the index works</a></p></article>''', kind='article',
          ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": title, "url": BASE + CMPU(a, b)}])
     curls.append(CMPU(a, b))

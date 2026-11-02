@@ -146,3 +146,53 @@ td.pw { color: var(--ink2); font-size: 14px; white-space: nowrap; }
 .recalls { list-style: none; padding: 0; margin: 12px 0; display: grid; gap: 10px; }
 .recalls li { background: var(--soft); border-radius: 12px; padding: 12px 14px; line-height: 1.45; } .recalls small { color: var(--mute); }
 .cmp { columns: 2 280px; padding-left: 18px; } .cmp li { margin: 6px 0; break-inside: avoid; }
+/* support popup (assets/support.js) */
+.sup { position: fixed; inset: 0; z-index: 50; display: grid; place-items: center; background: rgba(17,18,20,.45); padding: 16px; }
+.sup[hidden] { display: none; }
+.sup-card { position: relative; background: var(--bg); border-radius: 22px; padding: 28px 24px 20px; max-width: 440px; width: 100%; box-shadow: 0 24px 60px rgba(0,0,0,.25); text-align: center; }
+.sup-x { position: absolute; top: 10px; right: 12px; border: 0; background: none; font-size: 28px; line-height: 1; color: var(--mute); cursor: pointer; }
+.sup-kick { display: inline-block; background: var(--lemon); font-weight: 800; font-size: 13px; letter-spacing: .04em; text-transform: uppercase; border-radius: 999px; padding: 4px 12px; margin: 0 0 12px; }
+.sup h2 { font-size: 23px; line-height: 1.2; margin: 0 0 8px; text-wrap: balance; }
+.sup-sub { color: var(--ink2); font-size: 15px; margin: 0 0 18px; }
+.sup-amts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 14px; }
+.sup-amts button { font: 800 18px Inter, system-ui, sans-serif; padding: 12px 0; border-radius: 12px; border: 2px solid var(--line); background: var(--soft); color: var(--ink); cursor: pointer; }
+.sup-amts button[aria-checked="true"] { border-color: var(--ink); background: var(--lemon); }
+.sup-go { width: 100%; box-sizing: border-box; font-size: 18px; }
+.sup-later { border: 0; background: none; color: var(--mute); font: 600 15px Inter, system-ui, sans-serif; margin-top: 10px; cursor: pointer; }
+.sup-fine { color: var(--mute); font-size: 12px; margin: 10px 0 0; }
+.foot .supl { background: none; border: 0; color: inherit; font: inherit; text-decoration: underline; cursor: pointer; padding: 0; }
+
+/* 11-02 compare pages: verdict + 2-column scorecard + year bars (phone first) */
+.cmpp .verdict { background: var(--lemon-soft); border: 2px solid var(--ink); border-radius: 18px; padding: 18px 20px; margin: 18px 0 8px; box-shadow: 0 5px 0 var(--ink); }
+.cmpp .verdict.tie { background: var(--soft); }
+.cmpp .vk { margin: 0; font-size: 13px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--ink2); }
+.cmpp .vw { margin: 2px 0 6px; font-size: clamp(28px, 7vw, 40px); font-weight: 900; letter-spacing: -.03em; line-height: 1.05; }
+.cmpp .vs { margin: 0; color: var(--ink2); }
+.duel { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr) minmax(0, 1fr); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
+.duel > div { padding: 12px 10px; border-top: 1px solid var(--line); min-width: 0; overflow-wrap: anywhere; }
+.duel > div:nth-child(-n+3) { border-top: 0; }
+.duel .dh { font-weight: 900; font-size: 15px; line-height: 1.2; background: var(--soft); text-align: center; }
+.duel .dh a { color: var(--ink); text-decoration: none; }
+.duel > div:first-child { background: var(--soft); }
+.duel .dl { font-size: 14px; font-weight: 700; line-height: 1.25; color: var(--ink); }
+.duel .dl small { font-weight: 400; color: var(--mute); font-size: 12px; }
+.duel .dv { text-align: center; font-variant-numeric: tabular-nums; font-size: 17px; }
+.duel .dv b { font-size: 24px; font-weight: 900; }
+.duel .dv.w { background: #e7f6ec; font-weight: 800; }
+.duel .dv.w::after { content: " ✓"; color: var(--good); font-weight: 900; }
+.duel .stars { font-size: 13px; letter-spacing: -1px; }
+.yrs { display: grid; gap: 10px; }
+.yr { display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 10px; align-items: center; }
+.yr .yy { font-weight: 900; font-size: 17px; font-variant-numeric: tabular-nums; }
+.yr .yb { display: grid; gap: 4px; min-width: 0; }
+.ybar { position: relative; display: block; height: 30px; border-radius: 8px; background: var(--soft); color: var(--ink); text-decoration: none; overflow: hidden; }
+.ybar i { position: absolute; inset: 0 auto 0 0; background: #c9ccd1; border-radius: 8px; }
+.ybar.bad i { background: #f3b6b9; } .ybar.w i { background: #bfe6cc; }
+.ybar span { position: relative; display: block; padding: 0 10px; line-height: 30px; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ybar.w span b::after { content: " ✓"; color: var(--good); }
+@media (min-width: 720px) { .duel .dh { font-size: 18px; } .duel .dl { font-size: 15px; } .duel > div { padding: 14px 16px; } }
+
+/* 11-02 price box */
+table.price td.pg { color: var(--good); font-weight: 800; } table.price td.pf { font-weight: 900; } table.price td.ph { color: var(--red); font-weight: 800; }
+.pnotes { display: grid; gap: 8px; margin: 14px 0; } .pnotes p { margin: 0; background: var(--soft); border-radius: 12px; padding: 12px 14px; font-size: 15px; }
+table.price td:first-child { white-space: nowrap; } table.price th small { font-weight: 600; color: var(--mute); }
