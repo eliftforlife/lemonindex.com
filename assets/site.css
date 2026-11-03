@@ -310,3 +310,20 @@ table.price td:first-child { white-space: nowrap; } table.price th small { font-
 @media (min-width: 760px) { .yph img { max-height: 300px; } .yph { margin: 8px 0 10px; } }
 .h2s { display: block; font-size: 13px; font-weight: 600; letter-spacing: 0; color: var(--mute); margin-top: 3px; }
 .yqa h3 { font-size: 17px; margin: 18px 0 4px; letter-spacing: -.01em; } .yqa p { margin: 0; color: var(--ink2); max-width: 70ch; }
+
+/* "Help our site" question box (11-03) */
+.ask { margin: 40px 0 8px; }
+.ask-card { background: var(--lemon-soft); border: 2px solid var(--ink); border-radius: 20px; padding: 20px 20px 16px; max-width: 720px; }
+.ask-kick { display: inline-block; margin: 0 0 8px; background: var(--lemon); font-weight: 800; font-size: 13px; letter-spacing: .04em; text-transform: uppercase; border-radius: 999px; padding: 4px 12px; }
+.ask-q { font-size: 22px; line-height: 1.2; margin: 0 0 14px; letter-spacing: -.02em; text-wrap: balance; }
+.ask-opts { display: flex; flex-wrap: wrap; gap: 8px; }
+.ask-opts button { font: inherit; font-weight: 700; font-size: 15px; background: #fff; color: var(--ink); border: 1.5px solid var(--ink); border-radius: 999px; padding: 9px 16px; cursor: pointer; }
+.ask-opts button:hover { background: var(--lemon); }
+.ask-rs { display: grid; gap: 6px; }
+.ask-r { display: grid; grid-template-columns: minmax(0, 1.2fr) 1fr 44px; gap: 10px; align-items: center; font-size: 15px; }
+.ask-r span { min-width: 0; overflow-wrap: anywhere; } .ask-r b { text-align: right; font-variant-numeric: tabular-nums; }
+.ask-r i { height: 12px; background: #fff; border-radius: 6px; overflow: hidden; } .ask-r s { display: block; height: 100%; background: var(--ink); }
+.ask-r.me s { background: var(--red); } .ask-r.me span b { color: var(--red); }
+.ask-n { margin: 12px 0 0; font-weight: 600; color: var(--ink2); }
+.ask-next { margin-top: 12px; }
+.ask-fine { margin: 12px 0 0; font-size: 13px; color: var(--mute); }
