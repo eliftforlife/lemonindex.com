@@ -23,21 +23,22 @@
   box.className = 'sup'; box.hidden = true; box.setAttribute('role', 'dialog'); box.setAttribute('aria-modal', 'true'); box.setAttribute('aria-labelledby', 'sup-h');
   box.innerHTML = `<div class="sup-card">
   <button class="sup-x" aria-label="Close">×</button>
-  <div class="sup-top"><img src="/assets/icon-64.png" alt="" width="44" height="44"><span>The Lemon Index</span></div>
-  <h2 id="sup-h">Keep it 100% free</h2>
-  <p class="sup-sub">Every report here is free: no paywall, no signup. If it helped you dodge a lemon, chip in and keep it that way.</p>
+  <div class="sup-art" aria-hidden="true"><svg viewBox="0 0 240 132"><g fill="none" stroke-width="14"><path d="M28 118A92 92 0 0 1 58.2 49.8" stroke="#1a8f4c"/><path d="M60 48.4A92 92 0 0 1 179.9 48.4" stroke="#d2d2d7"/><path d="M181.8 49.8A92 92 0 0 1 212 118" stroke="#e8141c"/></g><g class="sup-ndl"><path d="M116 118L120 34L124 118Z"/><circle cx="120" cy="118" r="11"/><circle cx="120" cy="118" r="5" fill="#ffd400"/></g></svg>
+    <p><b>$0</b>to read any report</p></div>
+  <h2 id="sup-h">Keep it 100% free. <span>Chip in if it helped.</span></h2>
+  <ul class="sup-why"><li>Every car report stays free for everyone</li><li>No paywall, no account needed</li><li>Pays for new studies, tools and videos</li></ul>
   <div class="sup-amts" role="radiogroup" aria-label="Amount">
     ${[5, 10, 15].map(a => `<button type="button" role="radio" data-a="${a}" aria-checked="${a === pick}">$${a}</button>`).join('')}
     <button type="button" role="radio" data-a="custom" aria-checked="false">Other</button>
   </div>
   <a class="btn sup-go" href="#" rel="noopener" target="_blank">Chip in $10</a>
   <button type="button" class="sup-later">Maybe later</button>
-  <p class="sup-fine"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 11V8a5 5 0 0 1 10 0v3M5 11h14v10H5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>Secure checkout by Stripe. Support isn't tax-deductible and doesn't unlock anything.</p>
+  <p class="sup-fine">Secure checkout by Stripe. Not tax-deductible; doesn't unlock anything.</p>
 </div>`;
   document.body.appendChild(box);
   const go = box.querySelector('.sup-go');
   const sync = () => { box.querySelectorAll('[data-a]').forEach(b => b.setAttribute('aria-checked', String(String(pick) === b.dataset.a)));
-    go.textContent = pick === 'custom' ? 'Choose your amount →' : `Chip in $${pick} →`; go.href = LINKS[pick] || '#'; };
+    go.textContent = pick === 'custom' ? 'Choose your amount' : `Chip in $${pick}`; go.href = LINKS[pick] || '#'; };
   box.querySelectorAll('[data-a]').forEach(b => b.addEventListener('click', () => { pick = b.dataset.a === 'custom' ? 'custom' : +b.dataset.a; sync(); }));
   const close = () => { box.classList.remove('on'); setTimeout(() => (box.hidden = true), 250); mark(); };
   box.querySelector('.sup-x').onclick = close; box.querySelector('.sup-later').onclick = close;
