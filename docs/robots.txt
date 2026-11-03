@@ -10,4 +10,16 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
+# bulk dataset scrapers: the data is free at /data/ with credit instead
+User-agent: CCBot
+Disallow: /
+User-agent: Bytespider
+Disallow: /
+User-agent: Diffbot
+Disallow: /
+User-agent: Omgilibot
+Disallow: /
+User-agent: ImagesiftBot
+Disallow: /
+
 Sitemap: https://lemonindex.com/sitemap.xml

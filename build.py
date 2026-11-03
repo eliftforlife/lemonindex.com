@@ -112,6 +112,15 @@ def fit_desc(d):
     if len(d) <= 160: return d
     k = d.rfind('. ', 0, 159)
     return d[:k + 1] if k > 100 else d[:157].rsplit(' ', 1)[0] + '…'
+# top navigation (11-03, Elijah: "make mobile navigation on top better"): one row on desktop; on phones a swipeable chip row under the
+# logo (assets/nav.js keeps the current page's chip in view and tucks the header away while scrolling down)
+NAV = [('/cars/', 'Look up a car'), ('/vote/', 'Vote'), ('/compare/', 'Compare'), ('/electric/', 'Electric'), ('/vin/', 'VIN check'),
+       ('/car-loan-rates/', 'Loan rates'), ('/studies/', 'Studies'), ('/data/', 'Free data'), ('/method/', 'How it works')]
+def navlinks(path):
+    on = lambda u: path.startswith(u) or (u == '/cars/' and path.startswith('/cars'))
+    return ''.join(f'<a href="{u}"{" class=on aria-current=page" if on(u) else ""}>{t}</a>' for u, t in NAV)
+# free-data credit line under every car page (11-03): the data is CC BY 4.0, so copying it is fine as long as it credits us (see /data/)
+CITE = '<p class="cite">Free to use with credit: <q>Source: The Lemon Index (lemonindex.com)</q>. <a href="/data/">Get the data</a></p>'
 def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None):
     title, desc = fit_title(title), fit_desc(desc)
     url = BASE + path; lds = ''.join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in (ld or []))
@@ -122,12 +131,12 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None):
 <meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}{img or "/assets/og.png"}"><meta name="twitter:card" content="summary_large_image">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://static.nhtsa.gov; connect-src 'self' https://cloudflareinsights.com https://vpic.nhtsa.dot.gov https://lemon-survey.elift08.workers.dev; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap"><link rel="stylesheet" href="/assets/site.css?v=1103d">{lds}</head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap"><link rel="stylesheet" href="/assets/site.css?v=1103e"><script src="/assets/nav.js?v=1103" defer></script>{lds}</head>
 <body><header class="top"><a class="brand" href="/"><img src="/assets/icon-64.png" alt="" width="32" height="32">The Lemon Index</a>
-<nav><a href="/cars/">Look up a car</a><a href="/electric/">Electric</a><a href="/studies/">Studies</a><a href="/compare/">Compare</a><a href="/vin/">VIN check</a><a href="/vote/">Vote</a><a href="/method/">How it works</a><a class="yt" href="{YT}?sub_confirmation=1" rel="noopener">Subscribe</a></nav></header>
-<main>{body}{ask_html(ask)}</main>
+<nav class="mainnav" aria-label="Main">{navlinks(path)}</nav><a class="yt" href="{YT}?sub_confirmation=1" rel="noopener">Subscribe</a></header>
+<main>{body}{CITE if path.startswith('/cars/') else ''}{ask_html(ask)}</main>
 <footer class="foot"><div class="cta"><div><h2>New car studies, straight from the data.</h2><p>Every study becomes a video. Subscribe to see the next one first.</p></div><a class="btn" href="{YT}?sub_confirmation=1" rel="noopener">Subscribe on YouTube</a></div>
-<p class="socs"><a href="{YT}" rel="noopener">YouTube</a> · <a href="{TT}" rel="noopener">TikTok</a> · <a href="{IG}" rel="noopener">Instagram</a> · <a href="/method/">How the index works</a> · <a href="/compare/">Compare cars</a> · <a href="/car-loan-rates/">Car loan rates</a> · <a href="/vote/">Vote</a> · <button class="supl" type="button">Support the Lemon Index</button></p>
+<p class="socs"><a href="{YT}" rel="noopener">YouTube</a> · <a href="{TT}" rel="noopener">TikTok</a> · <a href="{IG}" rel="noopener">Instagram</a> · <a href="/method/">How the index works</a> · <a href="/compare/">Compare cars</a> · <a href="/car-loan-rates/">Car loan rates</a> · <a href="/vote/">Vote</a> · <a href="/data/">Free data</a> · <button class="supl" type="button">Support the Lemon Index</button></p>
 <p class="fine"><a href="/terms/">Terms</a> · <a href="/privacy/">Privacy</a> · <a href="/refunds/">Refunds</a> · <a href="/contact/">Contact</a><br>© {TODAY[:4]} The Lemon Index. Built from public NHTSA complaint data and published U.S. sales figures. Not affiliated with any automaker. Not a repair-cost or safety rating.</p></footer><script src="/assets/explorer.js" defer></script><script src="/assets/support.js?v=1103b" defer></script><script src="/assets/lookup.js?v=1103" defer></script>{beacon}</body></html>'''
     f = os.path.join(OUT, path.strip('/'), 'index.html') if path.endswith('/') else os.path.join(OUT, path.strip('/'))
     os.makedirs(os.path.dirname(f), exist_ok=True); open(f, 'w', encoding='utf-8').write(doc)
@@ -610,13 +619,62 @@ def loan_body():
 <p>When a dealer arranges your loan, the lender approves a rate (the &ldquo;buy rate&rdquo;) and the dealer can add points on top. Federal settlements with several big lenders capped that markup at about 1 to 1.25 points, and lenders commonly cap it at 2 to 3. That markup is negotiable.</p>
 <ol class="beats"><li><b>Get pre-approved first.</b> A quote from your bank or a credit union is your leverage.</li><li><b>Ask the dealer to beat it.</b> If they can&#39;t, use your own loan.</li><li><b>Compare the total cost, not the monthly payment.</b> A longer loan lowers the payment and raises what you pay overall.</li></ol>
 <p class="note">General information, not financial advice. Check a specific car&#39;s problems and recalls before you buy: <a href="/cars/">look up any car</a> or <a href="/vin/">check a VIN</a>.</p></article>"""
+# ---- free data (11-03, Elijah: "how do we give this data away for free with attribution" -> "build data page"). CC BY 4.0.
+# Only our own numbers go in the files: the Lemon Index score, NHTSA complaint counts and the transmission rate. No sales figures
+# (third-party), no prices (CarGurus/MarketCheck terms), no complaint text.
+import csv
+def csv_write(path, head, rows):
+    with open(path, 'w', newline='', encoding='utf-8') as fh:
+        fh.write('# The Lemon Index (lemonindex.com). License: CC BY 4.0, free to use with credit: "Source: The Lemon Index (lemonindex.com)". Updated ' + TODAY + '\n')
+        w = csv.writer(fh); w.writerow(head); w.writerows(rows)
+    return len(rows), os.path.getsize(path)
+os.makedirs(f'{OUT}/data', exist_ok=True)
+_top = lambda v, k: (v['parts'][k][0], v['parts'][k][1]) if k < len(v.get('parts') or []) else ('', '')
+_r1 = [[f['id'], f['name'], v['y'], v['li'], v['n']] + [x for k in range(3) for x in _top(v, k)] for f in YEARS for v in f["years"]]
+DL1 = csv_write(f'{OUT}/data/lemon-index-by-year.csv', ['family_id', 'model', 'model_year', 'lemon_index', 'nhtsa_complaints', 'top_problem_1', 'top_problem_1_complaints',
+                'top_problem_2', 'top_problem_2_complaints', 'top_problem_3', 'top_problem_3_complaints'], _r1)
+_names = {f["id"]: f["name"] for f in YEARS}
+_r2 = [[fid, _names.get(fid, fid), int(y), d['n'], d['all'], d['rate']] for fid, ys in TR.items() for y, d in sorted(ys.items())]
+DL2 = csv_write(f'{OUT}/data/transmission-complaints-by-year.csv', ['family_id', 'model', 'model_year', 'transmission_complaints', 'all_complaints', 'transmission_complaints_per_100k_sold'], _r2)
+_kb = lambda b: f'{b / 1024:,.0f} KB'
+_cols1 = [('family_id', 'Our id for the model (same as the page URL)'), ('model', 'Make and model'), ('model_year', 'Model year'),
+          ('lemon_index', 'Owner complaints per car sold, scaled so 100 = the average car. Lower is better.'),
+          ('nhtsa_complaints', 'Owner complaints filed with NHTSA that the score counts'), ('top_problem_1..3', 'The three parts owners complained about most, with how many complaints each')]
+_cols2 = [('transmission_complaints', 'Complaints that describe a transmission problem (matched on the complaint text)'), ('all_complaints', 'All complaints for that model year'),
+          ('transmission_complaints_per_100k_sold', 'Transmission complaints per 100,000 cars sold')]
+_tbl = lambda cols: '<div class="tw"><table><thead><tr><th>Column</th><th>What it means</th></tr></thead><tbody>' + ''.join(f'<tr><td><code>{E(a)}</code></td><td>{E(b)}</td></tr>' for a, b in cols) + '</tbody></table></div>'
+_copy = lambda label, text: f'<div class="cpy"><p class="cpy-l">{label}</p><div class="cpy-r"><code>{E(text)}</code><button type="button" class="btn btn-ghost cpy-b" data-copy="{E(text)}">Copy</button></div></div>'
+def _ds(name, desc, url, cols):
+    return {"@context": "https://schema.org", "@type": "Dataset", "name": name, "description": desc, "url": BASE + '/data/', "license": "https://creativecommons.org/licenses/by/4.0/",
+            "isAccessibleForFree": True, "creator": {"@type": "Organization", "name": "The Lemon Index", "url": BASE}, "dateModified": TODAY, "variableMeasured": [a for a, _ in cols],
+            "distribution": [{"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": BASE + url}], "isBasedOn": "https://www.nhtsa.gov/nhtsa-datasets-and-apis"}
+page('/data/', 'Free Car Reliability Data (CSV, CC BY 4.0) | Lemon Index',
+     'Download free car reliability data: the Lemon Index score, NHTSA owner complaints and transmission complaints for every model year we cover. Free to use with credit.',
+     f"""<article class="study"><p class="kicker"><a href="/cars/">All cars</a> · Free data</p><h1>Free car reliability data</h1>
+<p class="lede">Use it in your article, video, app, class or research. It&#39;s free, and it stays free. All we ask is that you credit us.</p>
+<div class="lic"><b>License: <a href="https://creativecommons.org/licenses/by/4.0/" rel="license noopener">CC BY 4.0</a></b><p>You can copy, share, chart, remix and even use it commercially. Just credit <q>The Lemon Index (lemonindex.com)</q> and link back when you can.</p></div>
+<h2>How to credit us</h2>
+{_copy('In an article or post', 'Source: The Lemon Index (lemonindex.com), based on NHTSA owner complaints.')}
+{_copy('As a link (HTML)', '<a href="https://lemonindex.com/">The Lemon Index</a>')}
+{_copy('In a video', 'Data: lemonindex.com')}
+<h2>Download</h2>
+<div class="dls"><a class="dl" href="/data/lemon-index-by-year.csv" download><b>Lemon Index by model year</b><span>{DL1[0]:,} model years · CSV · {_kb(DL1[1])}</span></a>
+<a class="dl" href="/data/transmission-complaints-by-year.csv" download><b>Transmission complaints by model year</b><span>{DL2[0]:,} model years · CSV · {_kb(DL2[1])}</span></a></div>
+<p class="note">Updated {TODAY}. Line 1 of each file is the credit line, starting with #. In a spreadsheet just delete that row; in code, skip comment lines (pandas: <code>comment=&#39;#&#39;</code>).</p>
+<h2>What&#39;s in the files</h2><h3>Lemon Index by model year</h3>{_tbl(_cols1)}<h3>Transmission complaints by model year</h3>{_tbl(_cols2)}
+<h2>Where the numbers come from</h2><p>Owner complaints come from NHTSA, the U.S. government&#39;s vehicle safety agency, which publishes them for free. The score and the transmission matching are ours. <a href="/method/">See exactly how the index works</a>.</p>
+<p class="note">Not included: car prices, sales figures and complaint text (other sources own those). Please don&#39;t present the data as an official rating, and don&#39;t suggest we endorse you. Using it somewhere big, or want a custom cut? <a href="/contact/">Tell us</a>. We&#39;d love to see it.</p>
+</article><script src="/assets/data.js?v=1103" defer></script>""",
+     ld=[_ds('Lemon Index car reliability by model year', 'Owner complaints per car sold for each model year (100 = the average car), plus each year&#39;s top problem areas, from NHTSA owner complaints.'.replace('&#39;', "'"), '/data/lemon-index-by-year.csv', _cols1),
+         _ds('Transmission complaints by car model year', 'Transmission-related NHTSA owner complaints for each model year, as a count and per 100,000 cars sold.', '/data/transmission-complaints-by-year.csv', _cols2)])
+
 # ---- vote page (11-03): polls in data/votes.json (data_votes.py), counts from the lemon-survey Worker (/v). TS = Turnstile site key (public) once Elijah creates it.
 TS = ''
 page('/vote/', 'Vote: Most Reliable Car Brand, Best Insurance, Best Years | Lemon Index',
      'Vote on the most reliable car brand, the best and worst car insurance, the best used SUV, truck and model years. See what won this week, this month or all time.',
      f'''<section class="vote-hero"><p class="kicker"><a href="/cars/">All cars</a> · Vote</p><h1>What do car owners really think?</h1>
-<p>Vote on brands, models, years, insurance and more. Then see what won this week, this month, the last 6 months or all time. Our scores come from government complaint data; these are just opinions from people like you.</p></section>
-<main id="vote" data-site="lemon" data-ts="{TS}"></main><script src="/assets/vote.js?v=1103b" defer></script>''',
+<p>Tap through quick polls on brands, models, years and insurance, then see what everyone picked this week, month or all time.</p></section>
+<main id="vote" data-site="lemon" data-ts="{TS}"></main><script src="/assets/vote.js?v=1103c" defer></script>''',
      ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": "Lemon Index car polls", "url": BASE + '/vote/'}])
 page('/car-loan-rates/', 'Car Loan Rates by Credit Score: Is Your Rate Fair? | Lemon Index',
      'Average new and used car loan rates for every credit score tier (Experian, Q2 2026), and a free check that shows what an above-average dealer rate costs you.',
@@ -721,9 +779,9 @@ LEGAL_URLS = ['/contact/', '/refunds/', '/privacy/', '/terms/']
 exec(open('electric_pages.py', encoding='utf-8').read())
 
 open(f'{OUT}/404.html', 'w', encoding='utf-8').write(open(f'{OUT}/index.html', encoding='utf-8').read().replace('<main>', '<main><section><h1>That page drove off.</h1><p><a href="/">Back to the rankings</a></p></section><!--', 1).replace('</main>', '--></main>', 1))
-urls = ['/', STUDY, '/studies/', '/method/', '/vin/', '/car-loan-rates/', '/vote/'] + eurls + yurls + curls + LEGAL_URLS
+urls = ['/', STUDY, '/studies/', '/method/', '/vin/', '/car-loan-rates/', '/vote/', '/data/'] + eurls + yurls + curls + LEGAL_URLS
 open(f'{OUT}/sitemap.xml', 'w', encoding='utf-8').write('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + ''.join(f'<url><loc>{BASE}{u}</loc><lastmod>{TODAY}</lastmod></url>' for u in urls) + '</urlset>')
-open(f'{OUT}/robots.txt', 'w').write(f'User-agent: *\nAllow: /\n\nUser-agent: GPTBot\nAllow: /\nUser-agent: ClaudeBot\nAllow: /\nUser-agent: PerplexityBot\nAllow: /\nUser-agent: Google-Extended\nAllow: /\n\nSitemap: {BASE}/sitemap.xml\n')
+open(f'{OUT}/robots.txt', 'w').write(f'User-agent: *\nAllow: /\n\nUser-agent: GPTBot\nAllow: /\nUser-agent: ClaudeBot\nAllow: /\nUser-agent: PerplexityBot\nAllow: /\nUser-agent: Google-Extended\nAllow: /\n\n# bulk dataset scrapers: the data is free at /data/ with credit instead\nUser-agent: CCBot\nDisallow: /\nUser-agent: Bytespider\nDisallow: /\nUser-agent: Diffbot\nDisallow: /\nUser-agent: Omgilibot\nDisallow: /\nUser-agent: ImagesiftBot\nDisallow: /\n\nSitemap: {BASE}/sitemap.xml\n')
 open(f'{OUT}/llms.txt', 'w', encoding='utf-8').write(f'# The Lemon Index\n\n> Car reliability from public data. The Lemon Index = NHTSA safety complaints per 100,000 U.S. sales, vs the average car of the same model years (100 = average).\n\n- [The Most Reliable Cars, According to 1.6 Million Owner Complaints]({BASE}{STUDY}): Toyota 4Runner 26, Lexus ES 27, Lexus brand 30, Tesla brand 322 (est.)\n- [The Most Reliable Electric Cars]({BASE}/electric/): {len(RK)} EVs by NHTSA complaints per car sold, best {best['name']} {best['li']}, plus fires, yearly cost and driver-assist crash reports\n- [Method]({BASE}/method/)\n')
 open(f'{OUT}/CNAME', 'w').write('lemonindex.com')
 open(f'{OUT}/google00cb28bea71f4c18.html', 'w').write('google-site-verification: google00cb28bea71f4c18.html')   # Search Console ownership (11-02); never remove
