@@ -131,7 +131,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None):
 <meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}{img or "/assets/og.png"}"><meta name="twitter:card" content="summary_large_image">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://static.nhtsa.gov; connect-src 'self' https://cloudflareinsights.com https://vpic.nhtsa.dot.gov https://lemon-survey.elift08.workers.dev; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"><link rel="stylesheet" href="/assets/site.css?v=1103k"><script src="/assets/nav.js?v=1103d" defer></script>{lds}</head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"><link rel="stylesheet" href="/assets/site.css?v=1103l"><script src="/assets/nav.js?v=1103d" defer></script>{lds}</head>
 <body><header class="top"><a class="brand" href="/"><img src="/assets/icon-64.png" alt="" width="32" height="32">The Lemon Index</a>
 <nav class="mainnav" aria-label="Main">{navlinks(path)}</nav><a class="yt" href="{YT}?sub_confirmation=1" rel="noopener">Subscribe</a></header>
 <main>{body}{CITE if path.startswith('/cars/') else ''}{'' if path == '/vote/' else ask_html(ask)}</main>
@@ -519,12 +519,12 @@ def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
                  + (f'<details><summary>More owner reports</summary>{more}</details>' if more else '') + '</section>')
     return f'''
 <article class="yp"><section class="yhead"><p class="kicker"><a href="/cars/">All cars</a> · <a href="{CARU(f)}">{nm}</a> · {y}</p>
-<div class="yhead-g{'' if ph else ' noph'}">{f'<div class="yhead-ph">{ph}</div>' if ph else f'<div class="yhead-ph"><div class="yts yts-in">{tiles}</div></div>'}<header class="yh"><h1>{y} {nm}</h1><p class="yh-sub">Reliability, problems and recalls</p>{f'<p class="yc-note">{SN[f["id"]][1]}</p>' if f["id"] in SN else ""}{hero.replace('{BW}', bw)}{old}</header></div>
-<nav class="yswitch" aria-label="Model years"><div class="yseg">{seg}<a class="yall" href="{CARU(f)}">All years</a></div><div class="yact"><a class="btn btn-ghost" href="/compare/?c={f['id']}-{y}">Compare</a><button type="button" class="btn btn-ghost yshare" data-share="{E(share_txt)}">Share</button></div></nav></section>
-{f'<div class="yts">{tiles}</div>' if ph else ''}
-{buy}<div class="ygrid">{probs}{timeline(x["miles"], x.get("comps") or []) if x.get("miles") else ""}{recs}{(lambda pr: f'<section class="yc">{pr}</section>' if pr else '')(price_html(f["id"], y, f["name"]))}{sev}
+<div class="yhead-g2"><header class="yh"><h1>{y} {nm}</h1><p class="yh-sub">Reliability, problems and recalls</p>{f'<p class="yc-note">{SN[f["id"]][1]}</p>' if f["id"] in SN else ""}</header>{hero.replace('{BW}', bw)}</div></section>
+<section class="yyears{'' if ph else ' noph'}">{f'<div class="yy-ph">{ph}</div>' if ph else ''}<div class="yy-ch"><h2>Every {nm} year. <span class="h2s">{y} is highlighted. Lower is better.</span></h2>{ybars(f, y)}</div></section>
+<nav class="yswitch" aria-label="Model years"><div class="yseg">{seg}<a class="yall" href="{CARU(f)}">All years</a></div><div class="yact"><a class="btn btn-ghost" href="/compare/?c={f['id']}-{y}">Compare</a><button type="button" class="btn btn-ghost yshare" data-share="{E(share_txt)}">Share</button></div></nav>
+{buy}<div class="yts">{tiles}</div>{old}
+<div class="ygrid">{probs}{timeline(x["miles"], x.get("comps") or []) if x.get("miles") else ""}{recs}{(lambda pr: f'<section class="yc">{pr}</section>' if pr else '')(price_html(f["id"], y, f["name"]))}{sev}
 {fixes}{invs}{safety}{f'<section class="yc">{crash}{fuel}</section>' if crash or fuel else ''}{words}
-<section class="yc"><h2>Every {nm} year. <span class="h2s">Lower is better.</span></h2>{ybars(f, y)}</section>
 {f'<section class="yc yqa"><h2>Quick answers</h2>' + "".join(f"<h3>{E(q)}</h3><p>{a}</p>" for q, a, _ in qa) + '</section>' if qa else ''}</div>
 <p class="yc-cap">Lemon Index = safety complaints filed with the U.S. government (NHTSA) in a car&#39;s first 3 years, per car sold, against the average car of the same model year. 100 is average; lower is better. A complaint is an owner&#39;s report, not a confirmed defect. <a href="/method/">How it works</a></p></article>'''
 

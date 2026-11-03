@@ -638,3 +638,23 @@ h2 { font-size: clamp(26px, 3.6vw, 40px); line-height: 1.1; }
 
 .ygrid { max-width: none; } .yverd > p:first-child { font-size: clamp(20px, 2vw, 23px); }
 @media (max-width: 520px) { .pt { grid-template-columns: minmax(0, 1fr) 34% 40px; } }
+
+/* ---- 11-03 v5 car page (Elijah's layout): slim header (title + dial/verdict), the every-year chart right under it with this year highlighted
+   and the photo beside it (above it on phones), then the year switcher, Before you buy, the fact tiles, then the sections */
+.yhead { padding: 22px 22px 20px; } .yhead-g2 { display: grid; gap: 10px; align-items: center; }
+@media (min-width: 900px) { .yhead { padding: 28px 36px; } .yhead-g2 { grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: 28px; } }
+.yhead .yh h1 { margin-top: 2px; } .yhead .yh-sub { margin-bottom: 0; } .yhead .yhero { margin: 0; }
+.yyears { display: grid; gap: 8px; margin: 26px 0 6px; align-items: center; }
+@media (min-width: 900px) { .yyears { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 36px; } .yyears.noph { grid-template-columns: 1fr; } }
+.yy-ph .yph { margin: 0; } .yy-ph .yph img { max-height: 320px; }
+.yy-ch h2 { font-size: clamp(24px, 2.6vw, 30px); margin: 0 0 12px; } .yy-ch .h2s { display: block; font-size: .6em; font-weight: 500; }
+.yb .bl { margin-bottom: 2px; }
+.yb a.b { border-radius: 10px; padding: 1px 6px; margin: 0 -6px; transition: opacity .2s, background .2s; }
+.yb:has(a.cur) a.b:not(.cur) { opacity: .42; } .yb:has(a.cur) a.b:not(.cur):hover { opacity: 1; }
+.yb a.cur { background: #fff; box-shadow: 0 0 0 2px var(--ink), 0 10px 24px -14px rgba(0,0,0,.35); position: relative; z-index: 1; }
+.yb a.cur .bn { font-weight: 800; }
+.yswitch { margin: 18px 0 30px; padding-top: 0; border-top: 0; }
+.ybuy { padding-top: 6px; } .yts { margin-top: 14px; }
+.ybs, .yp > .yc-note { margin-top: 6px; }
+.yyears .b, .yyears .bl { grid-template-columns: 48px minmax(0, 1fr) 42px !important; } .yyears .b small, .yyears .bl > span:last-child { display: none !important; }
+@media (min-width: 900px) { .yyears { align-items: start; } .yy-ph { position: sticky; top: 90px; padding-top: 40px; } }
