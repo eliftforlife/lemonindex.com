@@ -55,6 +55,11 @@ S = [
 CAT = {'lemon': {'brands': 'Brands', 'models': 'Models', 'years': 'Years', 'insurance': 'Insurance', 'buying': 'Buying', 'owning': 'Owning'},
        'bs': {'money': 'Money', 'work': 'Work', 'brands': 'Brands', 'business': 'Business'}}
 out = {'cats': CAT, 'lemon': [dict(id=i, cat=c, q=q, a=a) for c, i, q, a in L], 'bs': [dict(id=i, cat=c, q=q, a=a) for c, i, q, a in S]}
+# head-to-head polls (11-03, Elijah: "Chevy vs Ford with two 3D pillars that adjust to who's winning, with a truck on each pillar"):
+# vote.js shows them on top of the vote page as two pillars; img = cutouts from Wikimedia Commons (credits shown under the pillars)
+out['lemon'].insert(0, dict(id='vl_chevyford', cat='brands', q='Chevy or Ford?', a=['Chevy', 'Ford'], duel={
+    'Chevy': {'img': '/assets/vote/chevy.webp', 'color': '#c9a227', 'credit': 'Ghostofakina, CC BY-SA 4.0', 'page': 'https://commons.wikimedia.org/wiki/File%3A2019_Chevrolet_Silverado_1500_Crew_Cab_LT_%28front%29%2C_10.20.19.jpg'},
+    'Ford': {'img': '/assets/vote/ford.webp', 'color': '#1f4ea8', 'credit': 'Kevauto, CC BY-SA 4.0', 'page': 'https://commons.wikimedia.org/wiki/File:2018_Ford_F-150_Crew_Cab_front_5.26.18.jpg'}}))
 for k in ('lemon', 'bs'):
     ids = [p['id'] for p in out[k]]; assert len(ids) == len(set(ids))
     for p in out[k]: assert len(p['a']) == len(set(p['a'])) and all(len(x) < 60 for x in p['a']) and p['cat'] in CAT[k]

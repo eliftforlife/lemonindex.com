@@ -22,9 +22,10 @@
   const results = (q, mine, counts) => {
     const tot = Object.values(counts).reduce((s, n) => s + n, 0) || 1;
     const rows = q.a.map(a => { const n = counts[a] || 0, p = Math.round(n / tot * 100);
-      return `<div class="ask-r${a === mine ? ' me' : ''}"><span>${E(a)}${a === mine ? ' <b>· you</b>' : ''}</span><i><s style="width:${p}%"></s></i><b>${p}%</b></div>`; }).join('');
+      return `<div class="ask-r${a === mine ? ' me' : ''}"><i style="--w:${p}%"></i><span>${E(a)}${a === mine ? ' <em>· you</em>' : ''}</span><b>${p}%</b></div>`; }).join('');
     const next = q.next && (typeof q.next === 'string' ? q.next : q.next[mine]);
     const nq = next ? byId[next] : pickSite();
+    requestAnimationFrame(() => requestAnimationFrame(() => box.querySelectorAll('.ask-r i').forEach(i => i.classList.add('go'))));
     box.innerHTML = shell(`<h2 class="ask-q">${E(q.q.replace('{car}', carName))}</h2><div class="ask-rs">${rows}</div>
 <p class="ask-n">${tot === 1 ? "You're the first to answer. Thanks!" : tot < 10 ? `You're one of the first ${tot} to answer. Thanks!` : `${tot.toLocaleString()} answers so far. Thanks!`}</p>${nq ? '<button type="button" class="btn ask-next">Next question →</button>' : ''}`);
     const nb = box.querySelector('.ask-next'); if (nb) nb.addEventListener('click', () => show(nq));
