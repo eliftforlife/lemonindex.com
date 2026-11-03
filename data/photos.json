@@ -1,0 +1,366 @@
+{
+ "ram-pickup": {
+  "2014": {
+   "src": "/assets/cars/ram-pickup-2014.webp",
+   "author": "Adam Weston",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3A2014_Ram_1500_Hemi_5.7_Front.jpg",
+   "w": 1200,
+   "h": 757
+  }
+ },
+ "mazda3": {
+  "2015": {
+   "src": "/assets/cars/mazda3-2015.webp",
+   "author": "MercurySable99",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3A2015_Mazda3_i_Sport_5-door%2C_front_left%2C_10-29-2023.jpg",
+   "w": 1200,
+   "h": 461
+  }
+ },
+ "toyota-corolla": {
+  "2015": {
+   "src": "/assets/cars/toyota-corolla-2015.webp",
+   "author": "Kevauto",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3A2015_Toyota_Corolla_LE_front_5.6.18.jpg",
+   "w": 1200,
+   "h": 609
+  },
+  "2020": {
+   "src": "/assets/cars/toyota-corolla-2020.webp",
+   "author": "Kevauto",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3A2020_Toyota_Corolla_LE_standard_front%2C_5.25.19.jpg",
+   "w": 1200,
+   "h": 597
+  }
+ },
+ "honda-civic": {
+  "2016": {
+   "src": "/assets/cars/honda-civic-2016.webp",
+   "author": "Cutlass",
+   "license": "CC0",
+   "page": "https://commons.wikimedia.org/wiki/File%3A2016_Honda_Civic_EX-T_in_Modern_Steel_Metallic%2C_front_left%2C_04-26-2025.jpg",
+   "w": 1200,
+   "h": 564
+  },
+  "2022": {
+   "src": "/assets/cars/honda-civic-2022.webp",
+   "author": "Elise240SX",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3A2022_Honda_Civic_Touring_in_Lunar_Silver_Metallic%2C_Front_Left%2C_05-10-2022.jpg",
+   "w": 1200,
+   "h": 518
+  },
+  "2012": {
+   "src": "/assets/cars/honda-civic-2012.webp",
+   "author": "IFCAR",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:2012_Honda_Civic_EX_sedan_--_04-22-2011.jpg",
+   "w": 1200,
+   "h": 633
+  }
+ },
+ "toyota-rav4": {
+  "2016": {
+   "src": "/assets/cars/toyota-rav4-2016.webp",
+   "author": "MercurySable99",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3A2016_Toyota_RAV4_XLE_AWD%2C_front_left%2C_11-15-2022.jpg",
+   "w": 1200,
+   "h": 611
+  },
+  "2019": {
+   "src": "/assets/cars/toyota-rav4-2019.webp",
+   "author": "Kevauto",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3A2019_Toyota_RAV4_LE_front_3.27.19.jpg",
+   "w": 1200,
+   "h": 652
+  }
+ },
+ "bmw-x3": {
+  "2018": {
+   "src": "/assets/cars/bmw-x3-2018.webp",
+   "author": "Kevauto",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:2018_BMW_X3_(G01)_M40i_front_4.19.18.jpg",
+   "w": 1200,
+   "h": 642
+  }
+ },
+ "chevrolet-bolt": {
+  "2020": {
+   "src": "/assets/cars/chevrolet-bolt-2020.webp",
+   "author": "4300streetcar",
+   "license": "CC BY 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3AGray_2020_Chevrolet_Bolt_EV_01.jpg",
+   "w": 1200,
+   "h": 717
+  }
+ },
+ "chevrolet-equinox": {
+  "2018": {
+   "src": "/assets/cars/chevrolet-equinox-2018.webp",
+   "author": "Kevauto",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3A2018_Chevrolet_Equinox_front_1.22.19.jpg",
+   "w": 1200,
+   "h": 679
+  }
+ },
+ "chevrolet-volt": {
+  "2017": {
+   "src": "/assets/cars/chevrolet-volt-2017.webp",
+   "author": "Kevauto",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3A2017_Chevrolet_Volt_front_5.31.18.jpg",
+   "w": 1200,
+   "h": 661
+  }
+ },
+ "chrysler-200": {
+  "2015": {
+   "src": "/assets/cars/chrysler-200-2015.webp",
+   "author": "Kevauto",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3A2015_Chrysler_200_Limited_2.4L_front_1.27.18.jpg",
+   "w": 1200,
+   "h": 507
+  }
+ },
+ "chrysler-pacifica": {
+  "2017": {
+   "src": "/assets/cars/chrysler-pacifica-2017.webp",
+   "author": "CZmarlin — Christopher Ziemnowicz, a",
+   "license": "CC0",
+   "page": "https://commons.wikimedia.org/wiki/File%3A2017_Chrysler_Pacifica_Touring_L_Plus_finished_in_Jazz_Blue_Pearlcoat_-_Maryland.jpg",
+   "w": 1200,
+   "h": 623
+  }
+ },
+ "ford-focus": {
+  "2014": {
+   "src": "/assets/cars/ford-focus-2014.webp",
+   "author": "Kevauto",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3A2014_Ford_Focus_SE_sedan_2.0L%2C_front_8.25.19.jpg",
+   "w": 1200,
+   "h": 461
+  }
+ },
+ "ford-fusion": {
+  "2010": {
+   "src": "/assets/cars/ford-fusion-2010.webp",
+   "author": "Cutlass",
+   "license": "CC0",
+   "page": "https://commons.wikimedia.org/wiki/File%3A2010_Ford_Fusion_in_Smokestone_Metallic%2C_front_left%2C_10-12-2025.jpg",
+   "w": 1200,
+   "h": 538
+  }
+ },
+ "gmc-yukon-xl": {
+  "2015": {
+   "src": "/assets/cars/gmc-yukon-xl-2015.webp",
+   "author": "Kevauto",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3A2015_GMC_Yukon_XL_SLT%2C_front_2.29.20.jpg",
+   "w": 1200,
+   "h": 612
+  }
+ },
+ "honda-accord": {
+  "2018": {
+   "src": "/assets/cars/honda-accord-2018.webp",
+   "author": "Kevauto",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3A2018_Honda_Accord_front_4.1.18.jpg",
+   "w": 1200,
+   "h": 583
+  }
+ },
+ "honda-cr-v": {
+  "2017": {
+   "src": "/assets/cars/honda-cr-v-2017.webp",
+   "author": "Kevauto",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3A2017_Honda_CR-V_front_4.11.18.jpg",
+   "w": 1200,
+   "h": 641
+  }
+ },
+ "honda-odyssey": {
+  "2018": {
+   "src": "/assets/cars/honda-odyssey-2018.webp",
+   "author": "Kevauto",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3A2018_Honda_Odyssey_front_3.16.18.jpg",
+   "w": 1200,
+   "h": 582
+  }
+ },
+ "honda-pilot": {
+  "2016": {
+   "src": "/assets/cars/honda-pilot-2016.webp",
+   "author": "Kevauto",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3A2016_Honda_Pilot_LX%2C_front_12.10.24.jpg",
+   "w": 1200,
+   "h": 613
+  }
+ },
+ "hyundai-accent": {
+  "2019": {
+   "src": "/assets/cars/hyundai-accent-2019.webp",
+   "author": "Elise240SX",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3A2019_Hyundai_Accent_Preferred_in_Urban_Grey%2C_Front_Left%2C_05-22-2022.jpg",
+   "w": 1200,
+   "h": 612
+  }
+ },
+ "jeep-cherokee": {
+  "2014": {
+   "src": "/assets/cars/jeep-cherokee-2014.webp",
+   "author": "Shadiac",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3A2014_Jeep_Cherokee_North_4x2_Edition_Canada_Front.jpg",
+   "w": 1200,
+   "h": 716
+  }
+ },
+ "jeep-gladiator": {
+  "2020": {
+   "src": "/assets/cars/jeep-gladiator-2020.webp",
+   "author": "Kevauto",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3A2020_Jeep_Gladiator_Rubicon%2C_front_10.25.20.jpg",
+   "w": 1200,
+   "h": 641
+  }
+ },
+ "jeep-renegade": {
+  "2015": {
+   "src": "/assets/cars/jeep-renegade-2015.webp",
+   "author": "Mr.choppers",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3A2015_Jeep_Renegade_Latitude_%28Colorado_Red%29%2C_front_right.jpg",
+   "w": 1200,
+   "h": 635
+  }
+ },
+ "jeep-wrangler": {
+  "2018": {
+   "src": "/assets/cars/jeep-wrangler-2018.webp",
+   "author": "Kevauto",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3A2018_Jeep_Wrangler_Unlimited_Sport_4-door_front_6.10.18.jpg",
+   "w": 1200,
+   "h": 674
+  }
+ },
+ "tesla-model-y": {
+  "2020": {
+   "src": "/assets/cars/tesla-model-y-2020.webp",
+   "author": "Kevauto",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3A2020_Tesla_Model_Y%2C_front_8.1.20.jpg",
+   "w": 1200,
+   "h": 631
+  }
+ },
+ "toyota-4runner": {
+  "2017": {
+   "src": "/assets/cars/toyota-4runner-2017.webp",
+   "author": "Alexander Migl",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3A2017_Toyota_4Runner_%28N280%29_DSC_2927.jpg",
+   "w": 1200,
+   "h": 684
+  }
+ },
+ "toyota-camry": {
+  "2019": {
+   "src": "/assets/cars/toyota-camry-2019.webp",
+   "author": "Mr.choppers",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3A2019_Toyota_Camry_LE_in_white%2C_front_left.jpg",
+   "w": 1200,
+   "h": 474
+  }
+ },
+ "toyota-tundra": {
+  "2022": {
+   "src": "/assets/cars/toyota-tundra-2022.webp",
+   "author": "Elise240SX",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3A2022_Toyota_Tundra_Limited_in_Celestial_Silver_Metallic%2C_Front_Left%2C_12-25-2021.jpg",
+   "w": 1200,
+   "h": 638
+  }
+ },
+ "volkswagen-atlas": {
+  "2018": {
+   "src": "/assets/cars/volkswagen-atlas-2018.webp",
+   "author": "Kevauto",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File%3A2018_Volkswagen_Atlas_SE%2C_front_3.24.23.jpg",
+   "w": 1200,
+   "h": 576
+  }
+ },
+ "bmw-3-series": {
+  "2006": {
+   "src": "/assets/cars/bmw-3-series-2006.webp",
+   "author": "National Highway Traffic Safety Administration",
+   "license": "Public domain",
+   "page": "https://commons.wikimedia.org/wiki/File:2006_BMW_325i_--_NHTSA.jpg",
+   "w": 1200,
+   "h": 555
+  }
+ },
+ "ford-f-series": {
+  "2016": {
+   "src": "/assets/cars/ford-f-series-2016.webp",
+   "author": "MercurySable99",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:2016_Ford_F-150_XL_SuperCab_4x2_with_XL_Sport_Package,_front_right,_07-09-2023.jpg",
+   "w": 1200,
+   "h": 482
+  },
+  "2017": {
+   "src": "/assets/cars/ford-f-series-2017.webp",
+   "author": "Kevauto",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:2017_Ford_F-150_front_5.19.18.jpg",
+   "w": 1187,
+   "h": 599
+  },
+  "2018": {
+   "src": "/assets/cars/ford-f-series-2018.webp",
+   "author": "Kevauto",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:2018_Ford_F-150_Crew_Cab_front_5.26.18.jpg",
+   "w": 1200,
+   "h": 635
+  },
+  "2019": {
+   "src": "/assets/cars/ford-f-series-2019.webp",
+   "author": "Kevauto",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:2019_Ford_F-150_Lariat_Crew_Cab,_front_2.21.20.jpg",
+   "w": 1192,
+   "h": 545
+  },
+  "2020": {
+   "src": "/assets/cars/ford-f-series-2020.webp",
+   "author": "MercurySable99",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:2020_Ford_F-150_XLT_SuperCrew_4x4_with_FX4_Off-Road_%26_Chrome_Packages,_front_left,_04-07-2023.jpg",
+   "w": 1200,
+   "h": 578
+  }
+ }
+}
