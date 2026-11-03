@@ -1,11 +1,17 @@
 // "Help our site" answers for lemonindex.com (11-03). Cloudflare Worker + D1 (binding DB -> database lemon-survey).
 // POST /a {qid, a, fid?, year?, page}  -> stores one anonymous tap, returns the answer counts for that question
 // GET  /r?qid=&fid=&year=              -> answer counts
+// GET  /v?site=lemon|bs&period=week|month|6mo|year|all|YYYY-MM   -> vote page: {counts: {qid: {answer: n}}, voters, months} (11-03)
+//      votes are the vl_* / vb_* polls in data/votes.json (one vote per poll per visitor per day), counted over the chosen window.
 // No accounts, no emails, no free text: only the fixed choices in Q below are accepted. A visitor is a salted daily hash of the IP
-// (raw IPs are never stored); one answer per question (per car) per visitor per day, max 40 answers per visitor per day.
-// Q is generated from data/survey.json by build.py (python build.py writes worker/survey_worker.js's Q line); keep them in sync.
+// (raw IPs are never stored); one answer per question (per car) per visitor per day, max 100 answers per visitor per day.
+// Q is generated from data/survey.json + data/votes.json by worker/make_worker.py -> survey_worker.dist.js (the uploaded file).
 const Q = __Q__;
-const ORIGINS = ['https://lemonindex.com', 'https://www.lemonindex.com'];
+const ORIGINS = ['https://lemonindex.com', 'https://www.lemonindex.com', 'https://thebusinessstudy.com', 'https://www.thebusinessstudy.com'];
+// cloud, hosting and VPN networks (by the network's own name, plus the big ones by number): votes from them are refused
+const HOSTING = /amazon|aws|google cloud|google llc|microsoft|azure|digitalocean|linode|akamai|ovh|hetzner|vultr|choopa|contabo|leaseweb|m247|datacamp|cdn77|hostinger|hosting|server|data ?cent(er|re)|cloud|vpn|proxy|colocation|oracle|alibaba|tencent|scaleway|ionos|godaddy|namecheap|packethub|tzulo|quadranet|zenlayer|psychz|frantech|buyvm|g-core|gcore|nforce|worldstream|clouvider/i;
+const HOSTING_ASN = new Set([16509, 14618, 15169, 396982, 8075, 14061, 63949, 20473, 16276, 24940, 51167, 60068, 9009, 212238, 136787, 202425, 13335, 31898, 45102, 132203, 62240, 46562, 53667, 21859]);
+const PRE = { lemon: 'vl_', bs: 'vb_' }, DAYS = { week: 7, month: 30, '6mo': 182, year: 365 };
 const CAR = new Set(Object.keys(Q).filter(k => Q[k].car));
 const cors = o => ({ 'Access-Control-Allow-Origin': ORIGINS.includes(o) ? o : ORIGINS[0], 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type', 'Vary': 'Origin' });
 const json = (o, body, status = 200) => new Response(JSON.stringify(body), { status, headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-store', ...cors(o) } });
@@ -26,6 +32,19 @@ export default {
       if (!Q[qid] || (CAR.has(qid) && !(fidOk(fid) && yOk(year)))) return json(o, { error: 'bad' }, 400);
       return json(o, { counts: await counts(env, qid, fid, year) });
     }
+    if (req.method === 'GET' && url.pathname === '/v') {
+      const pre = PRE[url.searchParams.get('site')], period = url.searchParams.get('period') || 'all';
+      if (!pre || !(period === 'all' || DAYS[period] || /^20\d\d-(0[1-9]|1[0-2])$/.test(period))) return json(o, { error: 'bad' }, 400);
+      const since = DAYS[period] ? new Date(Date.now() - (DAYS[period] - 1) * 864e5).toISOString().slice(0, 10) : '';
+      const where = `qid LIKE '${pre}%'` + (DAYS[period] ? ' AND day >= ?' : /^20/.test(period) ? ' AND substr(day, 1, 7) = ?' : '');
+      const bind = DAYS[period] ? [since] : /^20/.test(period) ? [period] : [];
+      const [r1, r2, r3] = await env.DB.batch([
+        env.DB.prepare(`SELECT qid, answer, COUNT(*) n FROM answers WHERE ${where} GROUP BY qid, answer`).bind(...bind),
+        env.DB.prepare(`SELECT COUNT(DISTINCT ih || day) n FROM answers WHERE ${where}`).bind(...bind),
+        env.DB.prepare(`SELECT DISTINCT substr(day, 1, 7) m FROM answers WHERE qid LIKE '${pre}%' ORDER BY m DESC LIMIT 24`)]);
+      const counts = {}; for (const r of r1.results) (counts[r.qid] ||= {})[r.answer] = r.n;
+      return json(o, { counts, voters: r2.results[0]?.n || 0, months: r3.results.map(r => r.m) });
+    }
     if (req.method === 'POST' && url.pathname === '/a') {
       let b; try { b = await req.json(); } catch { return json(o, { error: 'bad' }, 400); }
       const q = Q[b.qid]; if (!q || !q.a.includes(b.a)) return json(o, { error: 'bad' }, 400);
@@ -33,11 +52,27 @@ export default {
       const day = new Date().toISOString().slice(0, 10), ip = req.headers.get('CF-Connecting-IP') || '';
       const h = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(`${ip}|${day}|lemon-survey-v1`));
       const ih = [...new Uint8Array(h)].slice(0, 12).map(x => x.toString(16).padStart(2, '0')).join('');
-      const used = await env.DB.prepare('SELECT COUNT(*) n FROM answers WHERE ih = ? AND day = ?').bind(ih, day).first('n');
-      if (used >= 40) return json(o, { counts: await counts(env, b.qid, b.fid, b.year), limited: true });
+      // votes (11-03, Elijah: "avoid false votes or spam"): no data-center / VPN networks, a human check when TURNSTILE_SECRET is set,
+      // and one vote per poll per visitor (IP + browser, hashed) per 7-day block instead of per day
+      let vh = '';
+      if (q.v) {
+        const org = String(req.cf?.asOrganization || '');
+        if (HOSTING.test(org) || HOSTING_ASN.has(+req.cf?.asn)) return json(o, { error: 'vpn' }, 403);
+        if (env.TURNSTILE_SECRET) {
+          const fd = new FormData(); fd.append('secret', env.TURNSTILE_SECRET); fd.append('response', String(b.t || '')); fd.append('remoteip', ip);
+          const ok = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', { method: 'POST', body: fd }).then(r => r.json()).then(j => j.success).catch(() => false);
+          if (!ok) return json(o, { error: 'human' }, 403);
+        }
+        const wk = Math.floor(Date.now() / (7 * 864e5)), ua = req.headers.get('User-Agent') || '';
+        const h7 = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(`${ip}|${ua}|${wk}|lemon-vote-v1`));
+        vh = [...new Uint8Array(h7)].slice(0, 12).map(x => x.toString(16).padStart(2, '0')).join('');
+        if (await env.DB.prepare('SELECT 1 FROM answers WHERE qid = ? AND ih = ? LIMIT 1').bind(b.qid, vh).first()) return json(o, { counts: await counts(env, b.qid), voted: true });
+      }
+      const used = await env.DB.prepare('SELECT COUNT(*) n FROM answers WHERE ih IN (?, ?) AND day = ?').bind(ih, vh || ih, day).first('n');
+      if (used >= 100) return json(o, { counts: await counts(env, b.qid, b.fid, b.year), limited: true });
       const page = typeof b.page === 'string' ? b.page.slice(0, 120).replace(/[^a-z0-9/_-]/gi, '') : '';
       await env.DB.prepare('INSERT OR IGNORE INTO answers (ts, day, page, fid, year, qid, answer, ih) VALUES (?, ?, ?, ?, ?, ?, ?, ?)')
-        .bind(Date.now(), day, page, car ? b.fid : null, car ? b.year : null, b.qid, b.a, ih).run();
+        .bind(Date.now(), day, page, car ? b.fid : null, car ? b.year : null, b.qid, b.a, vh || ih).run();
       return json(o, { counts: await counts(env, b.qid, b.fid, b.year) });
     }
     return json(o, { error: 'not found' }, 404);
