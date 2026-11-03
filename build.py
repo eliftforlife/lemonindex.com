@@ -735,7 +735,7 @@ page('/vote/', 'Vote: Most Reliable Car Brand, Best Insurance, Best Years | Lemo
      'Vote on the most reliable car brand, the best and worst car insurance, the best used SUV, truck and model years. See what won this week, this month or all time.',
      f'''<section class="vote-hero"><p class="kicker"><a href="/cars/">All cars</a> · Vote</p><h1>What do car owners really think?</h1>
 <p>Tap through quick polls on brands, models, years and insurance, then see what everyone picked this week, month or all time.</p></section>
-<main id="vote" data-site="lemon" data-ts="{TS}"></main><script src="/assets/vote.js?v=1103g" defer></script>''',
+<main id="vote" data-site="lemon" data-ts="{TS}"></main><script src="/assets/vote.js?v=1103h" defer></script>''',
      ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": "Lemon Index car polls", "url": BASE + '/vote/'}])
 page('/car-loan-rates/', 'Car Loan Rates by Credit Score: Is Your Rate Fair? | Lemon Index',
      'Average new and used car loan rates for every credit score tier (Experian, Q2 2026), and a free check that shows what an above-average dealer rate costs you.',
