@@ -196,3 +196,61 @@ td.pw { color: var(--ink2); font-size: 14px; white-space: nowrap; }
 table.price td.pg { color: var(--good); font-weight: 800; } table.price td.pf { font-weight: 900; } table.price td.ph { color: var(--red); font-weight: 800; }
 .pnotes { display: grid; gap: 8px; margin: 14px 0; } .pnotes p { margin: 0; background: var(--soft); border-radius: 12px; padding: 12px 14px; font-size: 15px; }
 table.price td:first-child { white-space: nowrap; } table.price th small { font-weight: 600; color: var(--mute); }
+
+/* 11-02 finder: year first -> brand chips */
+.fsug .fhint { margin: 8px 12px 4px; font-size: 13px; font-weight: 800; color: var(--mute); text-transform: uppercase; letter-spacing: .05em; }
+.fsug .fbr { display: flex; flex-wrap: wrap; gap: 8px; padding: 6px 12px 12px; }
+.fsug .fbr button { font: 700 15px Inter, system-ui, sans-serif; padding: 8px 12px; border-radius: 999px; border: 1.5px solid var(--line); background: var(--bg); color: var(--ink); cursor: pointer; }
+.fsug .fbr button.on, .fsug .fbr button:hover { border-color: var(--ink); background: var(--lemon-soft); }
+/* 11-02 year page redesign */
+.yp { max-width: 760px; }
+.yh h1 { font-size: clamp(36px, 9vw, 60px); line-height: 1; margin: 6px 0 4px; letter-spacing: -.035em; }
+.yh-sub { margin: 0 0 18px; color: var(--mute); font-weight: 600; }
+.yv { display: flex; flex-direction: column; gap: 2px; border-radius: 18px; padding: 16px 18px; border: 2px solid var(--ink); box-shadow: 0 5px 0 var(--ink); }
+.yv b { font-size: clamp(24px, 6.5vw, 32px); font-weight: 900; letter-spacing: -.02em; line-height: 1.1; }
+.yv span { font-size: 16px; color: var(--ink2); }
+.yv.good { background: #e7f6ec; } .yv.mid { background: var(--lemon-soft); } .yv.bad { background: var(--red-soft); }
+.ym { margin: 26px 2px 6px; }
+.ym-bar { position: relative; height: 16px; border-radius: 8px; background: linear-gradient(90deg, #1a8f4c 0%, #7cc576 25%, #ffd400 40%, #ff9a3d 60%, #e8141c 100%); }
+.ym-avg { position: absolute; top: -6px; bottom: -6px; width: 3px; margin-left: -1.5px; background: var(--ink); border-radius: 2px; }
+.ym-avg span { position: absolute; top: 28px; left: 50%; transform: translateX(-50%); white-space: nowrap; font-size: 12px; font-weight: 700; color: var(--mute); }
+.ym-pin { position: absolute; top: 50%; width: 26px; height: 26px; margin: -13px 0 0 -13px; border-radius: 50%; background: #fff; border: 4px solid var(--ink); box-shadow: 0 2px 6px rgba(0,0,0,.25); }
+.ym-pin b { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); background: var(--ink); color: #fff; font-size: 15px; font-weight: 900; padding: 2px 9px; border-radius: 8px; white-space: nowrap; }
+.ym-ends { display: flex; justify-content: space-between; margin-top: 26px; font-size: 13px; color: var(--mute); font-weight: 600; }
+.yc-note { font-size: 13px; color: var(--mute); margin: 8px 0 0; }
+.yts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 22px 0 14px; }
+@media (min-width: 720px) { .yts { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.yt { background: var(--soft); border-radius: 16px; padding: 14px; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.yt-l { font-size: 14px; font-weight: 800; color: var(--ink); }
+.yt-v { font-size: 26px; font-weight: 900; letter-spacing: -.02em; line-height: 1.1; }
+.yt-v .stars { font-size: 18px; letter-spacing: 0; }
+.yt small { font-size: 12px; color: var(--mute); }
+.ychips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 8px; }
+.ychip { display: flex; flex-direction: column; text-decoration: none; color: var(--ink); border: 1.5px solid var(--line); border-radius: 12px; padding: 6px 12px; line-height: 1.15; }
+.ychip small { font-size: 11px; text-transform: uppercase; letter-spacing: .05em; color: var(--mute); font-weight: 700; } .ychip b { font-size: 16px; }
+.ychip.good { border-color: var(--good); } .ychip.bad { border-color: var(--red); }
+.yc { margin: 30px 0; } .yc h2 { margin: 0 0 12px; }
+.yc-n { display: inline-block; background: var(--ink); color: #fff; border-radius: 999px; font-size: .65em; padding: 2px 10px; vertical-align: middle; }
+.yc-cap { font-size: 14px; color: var(--mute); margin: 10px 0 0; }
+.tl { margin: 34px 4px 4px; } .tl-bar { position: relative; height: 14px; background: var(--soft); border-radius: 7px; }
+.tl-band { position: absolute; top: 0; bottom: 0; background: #ffb4b7; border-radius: 7px; }
+.tl-mid { position: absolute; top: -6px; bottom: -6px; width: 3px; margin-left: -1.5px; background: var(--red); }
+.tl-mid b { position: absolute; bottom: 22px; left: 50%; transform: translateX(-50%); white-space: nowrap; font-size: 13px; background: var(--red); color: #fff; padding: 2px 8px; border-radius: 6px; }
+.tl-ticks { position: relative; height: 18px; margin-top: 6px; font-size: 12px; color: var(--mute); }
+.tl-ticks span { position: absolute; transform: translateX(-50%); } .tl-ticks span:first-child { transform: none; } .tl-ticks span:last-child { transform: translateX(-100%); }
+.tl-top { margin: 10px 0 0; padding-left: 18px; } .tl-top li { margin: 4px 0; }
+.sv { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin-top: 8px; }
+.sv div { background: var(--soft); border-radius: 14px; padding: 10px 6px; text-align: center; }
+.sv b { display: block; font-size: 24px; font-weight: 900; } .sv .bad b { color: var(--red); } .sv .good b { color: var(--good); }
+.sv span { font-size: 13px; color: var(--ink2); }
+.rc { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.rc li { border: 1px solid var(--line); border-left: 5px solid var(--red); border-radius: 12px; padding: 10px 14px; }
+.rc li p { margin: 4px 0 0; font-size: 15px; color: var(--ink2); }
+.yp details { margin-top: 10px; } .yp details summary { cursor: pointer; font-weight: 800; padding: 8px 0; }
+.yd { border-top: 1px solid var(--line); padding-top: 4px; }
+.ym { margin-top: 40px; }
+/* 11-02 method page */
+.hw { display: grid; gap: 12px; margin: 18px 0; } @media (min-width: 720px) { .hw { grid-template-columns: repeat(3, 1fr); } }
+.hw > div { background: var(--soft); border-radius: 16px; padding: 16px; } .hw b { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--lemon); font-weight: 900; }
+.hw h3 { margin: 8px 0 4px; font-size: 19px; } .hw p { margin: 0; color: var(--ink2); font-size: 15px; }
+.hwm { margin: 64px 4px 24px; position: relative; }

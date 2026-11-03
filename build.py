@@ -104,9 +104,9 @@ def page(path, title, desc, body, ld=None, kind='website'):
 <meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}/assets/og.png"><meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap"><link rel="stylesheet" href="/assets/site.css?v=1102c">{lds}</head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap"><link rel="stylesheet" href="/assets/site.css?v=1102e">{lds}</head>
 <body><a class="spons" href="https://mealmonster.app/?utm_source=lemonindex&amp;utm_medium=sponsor_bar" rel="noopener">Sponsored by <b>Meal Monster</b> · the easy food tracker</a><header class="top"><a class="brand" href="/"><img src="/assets/icon-64.png" alt="" width="32" height="32">The Lemon Index</a>
-<nav><a href="/cars/">Look up a car</a><a href="/electric/">Electric</a><a href="/studies/">Studies</a><a href="/method/">Method</a><a class="yt" href="{YT}?sub_confirmation=1" rel="noopener">Subscribe</a></nav></header>
+<nav><a href="/cars/">Look up a car</a><a href="/electric/">Electric</a><a href="/studies/">Studies</a><a href="/method/">How it works</a><a class="yt" href="{YT}?sub_confirmation=1" rel="noopener">Subscribe</a></nav></header>
 <main>{body}</main>
 <footer class="foot"><div class="cta"><div><h2>New car studies, straight from the data.</h2><p>Every study becomes a video. Subscribe to see the next one first.</p></div><a class="btn" href="{YT}?sub_confirmation=1" rel="noopener">Subscribe on YouTube</a></div>
 <p class="socs"><a href="{YT}" rel="noopener">YouTube</a> · <a href="{TT}" rel="noopener">TikTok</a> · <a href="{IG}" rel="noopener">Instagram</a> · <a href="/method/">How the index works</a> · <a href="/compare/">Compare cars</a> · <button class="supl" onclick="window.liSupport&amp;&amp;liSupport()">Support the Lemon Index</button></p>
@@ -129,7 +129,7 @@ os.makedirs(OUT, exist_ok=True)
 # ---- home: the car finder first (10-29), how to read a score, the explorer, then best vs worst side by side, then brands
 best4, worst4 = CARS[0], CARS[-1]
 # 10-30: Google showed /method/ for "lemon index" (its h1 was the only one saying the brand), so the home h1 now carries the name too.
-page('/', "The Lemon Index: Look Up Any Car's Problems by Year", "Look up any car's problems by model year, 2000 to 2022: its reliability score, top problem areas and real owner complaints, from 1.6 million complaints filed with the government. 100 is the average car.", f'''
+page('/', "Lemon Index (LemonIndex): Look Up Any Car's Problems by Year", "Look up any car's problems by model year, 2000 to 2022: its reliability score, top problem areas and real owner complaints, from 1.6 million complaints filed with the government. 100 is the average car.", f'''
 {finder(h='<span class="fbrand">The Lemon Index</span>Look up any car')}
 <section class="hero2"><p class="kicker">How to read a score</p><p class="sub">We counted {COUNTED:,} safety complaints owners filed with the government, then divided by how many of each car were sold. <b>100 is the average car</b>, lower is better.</p>
 <div class="scale"><div class="sbar"><i style="left:{min(96, best4["li"] / 3.5):.1f}%" title="{E(best4["name"])}, {best4["li"]}"></i></div><div class="sl"><span>25 · ¼ the complaints</span><span>100 · average car</span><span class="bad">300+ · 3× or worse</span></div></div></section>
@@ -138,8 +138,8 @@ page('/', "The Lemon Index: Look Up Any Car's Problems by Year", "Look up any ca
 <div><h2>The biggest lemons</h2><p class="sub">Highest Lemon Index. * Tesla uses published sales estimates.</p>{bars([(n, v) for n, v, _ in WORST[:6]], 440)}</div></section>
 <section><h2>Every brand, best to worst</h2><p class="sub">All of a brand's models together, same scale: 100 is the average car.</p>{bars(BRANDS, 330, 'two')}<p class="note">* Porsche is a small sample (2 models, 258,000 sold). Tesla uses estimated U.S. sales.</p></section>
 <section class="faq"><h2>Questions</h2>{faq}</section>''',
-     ld=[{"@context": "https://schema.org", "@type": "WebSite", "name": "The Lemon Index", "alternateName": ["Lemon Index", "lemonindex"], "url": BASE + '/'},
-         {"@context": "https://schema.org", "@type": "Organization", "name": "The Lemon Index", "url": BASE + '/', "logo": BASE + '/assets/icon-180.png', "sameAs": [YT, TT, IG]},
+     ld=[{"@context": "https://schema.org", "@type": "WebSite", "name": "The Lemon Index", "alternateName": ["Lemon Index", "LemonIndex", "lemonindex", "lemonindex.com"], "url": BASE + '/'},
+         {"@context": "https://schema.org", "@type": "Organization", "name": "The Lemon Index", "alternateName": ["Lemon Index", "LemonIndex", "lemonindex.com"], "url": BASE + '/', "logo": BASE + '/assets/icon-180.png', "sameAs": [YT, TT, IG]},
          {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in FAQ]}])
 
 # ---- study
@@ -175,13 +175,18 @@ page('/studies/', 'Car Reliability Studies | The Lemon Index', 'Every Lemon Inde
 
 # ---- method
 page('/method/', 'Method: How We Score Car Reliability | The Lemon Index', 'How we turn NHTSA safety complaints and U.S. sales into one reliability number per car, plus the caveats that come with it.', '''
-<article class="study"><p class="kicker">Method</p><h1>How we score car reliability</h1>
+<article class="study"><p class="kicker">How it works</p><h1>How the Lemon Index works</h1>
+<p class="lede">One number per car and year: how many safety complaints owners filed, compared with an average car.</p>
+<div class="hw"><div><b>1</b><h3>Count complaints</h3><p>Every safety complaint owners filed with the U.S. government (NHTSA) in the car&#39;s first 3 years.</p></div>
+<div><b>2</b><h3>Divide by cars sold</h3><p>So a car that sold a million doesn&#39;t look worse than one that sold ten thousand.</p></div>
+<div><b>3</b><h3>Compare with the average car</h3><p>100 = average. 50 = half the complaints. 200 = double.</p></div></div>
+<div class="hwm"><div class="ym-bar"><i class="ym-avg" style="left:40%"><span>average car = 100</span></i><i class="ym-pin" style="left:12%"><b>30: great</b></i><i class="ym-pin" style="left:80%"><b>200: lemon</b></i></div><div class="ym-ends"><span>fewer complaints</span><span>more complaints</span></div></div>
 <p><a class="btn" href="/cars/">Look up your car</a></p>
-<ol class="beats"><li><b>Complaints:</b> the full NHTSA owner-complaint file (1,607,537 vehicle complaints, 1995 to October 2026).</li>
+<details class="yd"><summary>The details</summary><ol class="beats"><li><b>Complaints:</b> the full NHTSA owner-complaint file (1,607,537 vehicle complaints, 1995 to October 2026).</li>
 <li><b>Sales:</b> U.S. sales per model per year from automakers' published figures. Tesla doesn't report by model, so we use published estimates and say so.</li>
 <li><b>Same window for every car:</b> a complaint counts only if it was filed within 3 years of the model year.</li>
-<li><b>Rate:</b> complaints per 100,000 cars sold, matched model year to sales year. When a new model's first cars sold the calendar year before its model year (that year shows almost no complaints), those sales are counted with the first model year. Since 10-24.</li>
-<li><b>Index:</b> each car's rate against the average car of the same model years. 100 = average, 50 = half the complaints, 300 = triple.</li></ol>
+<li><b>Rate:</b> complaints per 100,000 cars sold, matched model year to sales year. When a new model's first cars sold the calendar year before its model year, those sales are counted with the first model year.</li>
+<li><b>Index:</b> each car's rate against the average car of the same model years.</li></ol></details>
 <h2>What it doesn't measure</h2><p>A complaint is a safety complaint filed with the government, not a repair record. Fleet and rental-heavy models have fewer owners filing. Luxury lessees often go straight to the dealer. Some owners file more readily than others. Read it as early-life safety complaints, not total cost of ownership.</p>
 <h2>Also on every car page</h2><ul><li><b>Recalls:</b> every NHTSA safety recall campaign for that model year (NHTSA recalls API).</li>
 <li><b>Crash tests:</b> NHTSA 5-star safety ratings for each body style tested (model years 2011 on).</li>
@@ -288,6 +293,78 @@ for seg, top in (('car', 10), ('suv', 10), ('truck', 7), ('minivan', 5)):
             PAIRS.append((a, b)); RIVALS[a].append(b); RIVALS[b].append(a)
 CMPU = lambda a, b: f'/compare/{a}-vs-{b}/'
 cmpu = lambda a, b: CMPU(a, b) if (a, b) in PAIRS else CMPU(b, a)
+# ---- 11-02 year-page redesign (Elijah: "less text, bars and charts, numbers that matter, built for someone looking at their own car or one they want to buy")
+NICE = lambda p: {'service brakes, hydraulic': 'brakes', 'brakes': 'brakes', 'service brakes, electric': 'brakes (electric)', 'service brakes, air': 'brakes', 'power train': 'transmission & drivetrain',
+                  'unknown or other': 'other', 'vehicle speed control': 'speed control', 'equipment': 'equipment & accessories'}.get(p.lower(), p.lower())
+def verdict(li):
+    if li < 50: return 'good', 'One of the most reliable'
+    if li < 85: return 'good', 'Better than average'
+    if li <= 115: return 'mid', 'About average'
+    if li < 200: return 'bad', 'Worse than average'
+    return 'bad', 'Lemon alert'
+def meter(li):
+    mx = 250; pos = min(li, mx) / mx * 100
+    return (f'<div class="ym" role="img" aria-label="Lemon Index {li}; the average car is 100"><div class="ym-bar"><i class="ym-avg" style="left:{100 / mx * 100:.1f}%"><span>average car</span></i>'
+            f'<i class="ym-pin" style="left:{pos:.1f}%"><b>{li}{"+" if li > mx else ""}</b></i></div><div class="ym-ends"><span>fewer complaints</span><span>more complaints</span></div></div>')
+def timeline(m, comps):
+    mx = 200000; P = lambda n: f'{min(n, mx) / mx * 100:.1f}%'
+    ticks = ''.join(f'<span style="left:{k / mx * 100:.0f}%">{k // 1000}K</span>' for k in (0, 50000, 100000, 150000, 200000))
+    seen = set(); cc = [c for c in comps if c[4] >= 15 and not (NICE(c[0]).split(' (')[0] in seen or seen.add(NICE(c[0]).split(' (')[0]))][:3]
+    top = ''.join(f'<li><b>{E(NICE(c[0]))}</b> usually around <b>{c[2] // 1000}K–{c[3] // 1000}K</b> miles</li>' for c in cc)
+    return (f'<section class="yc"><h2>When problems start</h2><div class="tl"><div class="tl-bar"><i class="tl-band" style="left:{P(m["p25"])};width:calc({P(m["p75"])} - {P(m["p25"])})"></i>'
+            f'<i class="tl-mid" style="left:{P(m["median"])}"><b>half by {m["median"] // 1000}K</b></i></div><div class="tl-ticks">{ticks}</div></div>'
+            f'<p class="yc-cap">Most owner reports came between <b>{m["p25"] // 1000}K and {m["p75"] // 1000}K miles</b> (from {m["n"]:,} complaints that listed the miles).</p>'
+            + (f'<ul class="tl-top">{top}</ul>' if top else '') + '</section>')
+def year_body(f, v, y, x, best, worst, prev, nxt, qs_list):
+    nm = E(f['name'])
+    rec = x.get('recalls') or []; m = x.get('mpg'); sf = x.get('safety'); s = x.get('sev') or {}
+    if v['ok']:
+        cls, word = verdict(v['li'])
+        hero = (f'<div class="yv {cls}"><b>{word}</b><span>{E(plain(v["li"]))}</span></div>{meter(v["li"])}')
+    else:
+        hero = f'<div class="yv mid"><b>Not enough data</b><span>Only {v["n"]} complaints in its first 3 years: too few to score.</span></div>'
+    old = '<p class="yc-note">Older model year: fewer owners filed complaints back then, so treat the score as rough.</p>' if y < 2010 else ''
+    rng = lambda a: f'{a[0]}' if a[0] == a[1] else f'{a[0]}–{a[1]}'
+    facts = [('Owner complaints', f'{v["n"]:,}', 'first 3 years'), ('Recalls', f'{len(rec)}' if 'recalls' in x else '—', 'free fix at any dealer' if rec else 'none on record'),
+             ('Fuel economy', f'{rng(m["comb"])} {"MPGe" if m.get("ev") else "mpg"}' if m else '—', 'combined, EPA'),
+             ('Crash test', stars(sf['best']) if sf and sf.get('best') else '<span class="muted">not rated</span>', 'NHTSA overall')]
+    tiles = ''.join(f'<div class="yt"><span class="yt-l">{l}</span><b class="yt-v">{val}</b><small>{sub}</small></div>' for l, val, sub in facts)
+    yrs = ''.join(f'<a class="ychip {c}" href="{CARU(f, w["y"])}"><small>{lab}</small><b>{w["y"]}</b></a>' for lab, w, c in (('best year', best, 'good'), ('worst year', worst, 'bad')) if w['y'] != y)
+    nav = ''.join(f'<a class="ychip" href="{CARU(f, w["y"])}"><small>{lab}</small><b>{w["y"]}</b></a>' for lab, w in (('previous', prev), ('next', nxt)) if w)
+    parts = ''.join(f'<div class="pt"><span>{E(NICE(p))}</span><span class="bt"><i style="width:{k}%"></i></span><b>{k}%</b></div>' for p, k in v['parts'])
+    probs = f'<section class="yc"><h2>What goes wrong most</h2><div class="pts">{parts}</div><p class="yc-cap">Share of this year&#39;s owner complaints. One complaint can name more than one area.</p></section>' if parts else ''
+    sev_items = [(s.get('crash', 0), 'crashes'), (s.get('injured', 0), 'injuries'), (s.get('fire', 0), 'fires'), (s.get('towed', 0), 'tows')]
+    sev = (f'<section class="yc"><h2>How serious</h2><p class="yc-cap">Out of {s["total"]:,} owner complaints, owners reported:</p><div class="sv">'
+           + ''.join(f'<div class="{"bad" if n else "good"}"><b>{n:,}</b><span>{lab}</span></div>' for n, lab in sev_items) + '</div></section>') if s.get('total') else ''
+    if 'recalls' in x:
+        rs = sorted(rec, key=lambda r: r['date'][6:10] + r['date'][3:5] + r['date'][:2], reverse=True)
+        card = lambda r: f'<li><b>{E(RPART(r["part"]))}</b> <small>{E(r["date"][-4:])}</small><p>{E(rsum(r))}</p></li>'
+        recs = (f'<section class="yc"><h2>Recalls <span class="yc-n">{len(rs)}</span></h2>'
+                + (f'<ul class="rc">{"".join(card(r) for r in rs[:3])}</ul>' + (f'<details><summary>Show all {len(rs)} recalls</summary><ul class="rc">{"".join(card(r) for r in rs[3:])}</ul></details>' if len(rs) > 3 else '')
+                   if rs else '<p>No safety recalls on record.</p>')
+                + '<p class="yc-cap">Recall repairs are free at any dealer. Check a specific car&#39;s VIN at <a href="https://www.nhtsa.gov/recalls" rel="noopener">nhtsa.gov/recalls</a>.</p></section>')
+    else: recs = ''
+    crash = ''
+    if sf and sf.get('variants'):
+        rows = ''.join(f'<tr><td>{E(re.sub(r"^\d{4} ", "", vv["desc"]))}</td><td>{stars(vv["overall"])}</td><td>{stars(vv["front"])}</td><td>{stars(vv["side"])}</td><td>{stars(vv["rollover"])}</td></tr>' for vv in sf['variants'])
+        crash = f'<details class="yd"><summary>Crash test details</summary><div class="tw"><table><thead><tr><th>Version</th><th>Overall</th><th>Front</th><th>Side</th><th>Rollover</th></tr></thead><tbody>{rows}</tbody></table></div></details>'
+    fuel = (f'<details class="yd"><summary>Fuel cost and engines</summary><p>About <b>${rng(m["cost"])}</b> a year in {"electricity" if m.get("ev") else "fuel"} (EPA estimate).'
+            + (f' Engines: {E(", ".join(m["engines"]))}.' if m.get('engines') and not m.get('ev') else '') + '</p></details>') if m and m.get('cost') else ''
+    words = ''
+    if qs_list:
+        q0 = qs_list[0]; more = ''.join(f'<blockquote><p>{E(q["text"])}</p><cite>NHTSA complaint {q["odi"]}</cite></blockquote>' for q in qs_list[1:])
+        words = (f'<section class="yc"><h2>In owners&#39; words</h2><blockquote><p>{E(q0["text"])}</p><cite>{y} {nm} owner · NHTSA complaint {q0["odi"]}</cite></blockquote>'
+                 + (f'<details><summary>More owner reports</summary>{more}</details>' if more else '') + '</section>')
+    return f'''
+<article class="yp"><p class="kicker"><a href="/cars/">All cars</a> · <a href="{CARU(f)}">{nm}</a> · {y}</p>
+<header class="yh"><h1>{y} {nm}</h1><p class="yh-sub">Reliability, problems and recalls</p>{hero}{old}</header>
+<div class="yts">{tiles}</div>
+<div class="ychips">{yrs}{nav}<a class="ychip" href="{CARU(f)}"><small>every</small><b>all years</b></a></div>
+{probs}{price_html(f["id"], y, f["name"])}{timeline(x["miles"], x.get("comps") or []) if x.get("miles") else ""}{sev}{recs}
+{f'<section class="yc">{crash}{fuel}</section>' if crash or fuel else ''}{words}
+<section class="yc"><h2>Every {nm} year</h2>{ybars(f, y)}</section>
+<p class="yc-cap">Lemon Index = safety complaints filed with the U.S. government (NHTSA) in a car&#39;s first 3 years, per car sold, against the average car of the same model year. 100 is average; lower is better. A complaint is an owner&#39;s report, not a confirmed defect. <a href="/method/">How it works</a></p></article>'''
+
 def yearx(fid, y): return extra(fid, y)
 for f in YEARS:
     c = BYNAME[f['name']]; ys = f['years']; sc = [v for v in ys if v['ok']]; best, worst = min(sc, key=lambda v: v['li']), max(sc, key=lambda v: v['li'])
@@ -325,15 +402,7 @@ for f in YEARS:
         old = '<p class="note">Older model year: fewer owners filed complaints with the government back then, and a new model&#39;s first cars often sold the year before, so treat the score as rough. The problems and owner complaints below are exactly as filed.</p>' if y < 2010 and v['ok'] else '<p class="note">Older model year: fewer owners filed complaints with the government back then. The complaints below are exactly as filed.</p>' if y < 2010 else ''
         x = extra(f['id'], y); nrec = len(x['recalls']) if 'recalls' in x else None
         page(CARU(f, y), f'{y} {f["name"]} Problems, Recalls and Complaints | The Lemon Index',
-             (f'{nrec} recalls. ' if nrec else '') + (f'The {y} {f["name"]} drew {plain(v["li"])}, by NHTSA owner complaints per car sold.' if v['ok'] else f'Owners filed only {v["n"]} NHTSA safety complaints about the {y} {f["name"]} in its first 3 years.') + (f' Top problems: {top}.' if top else '') + ' Real owner complaints and every other year.', f'''
-<article class="study"><p class="kicker"><a href="/cars/">All cars</a> · <a href="{CARU(f)}">{E(f["name"])}</a> · {y}</p><h1>{y} {E(f["name"])}: problems and owner complaints</h1>
-<p class="lede">{f'The {y} {E(f["name"])} drew <b class="{CLS(v)}">{plain(v["li"])}</b>, per car sold. Owners filed {v["n"]:,} safety complaints with the government within 3 years.' if v['ok'] else f'Owners filed only <b class="good">{v["n"]} safety complaints</b> with the government in its first 3 years: too few to score, and few for a car that sold this well.'} {v["sold"]:,} were sold in the U.S.</p>{old}
-<div class="stats"><div><b class="{CLS(v)}">{LIS(v)}</b><span>Lemon Index (100 = average car)</span></div><div><b>{v["n"]:,}</b><span>complaints in its first 3 years</span></div><div><b>{v["sold"]:,}</b><span>sold in the U.S.</span></div><div><b>{best["y"]}</b><span>best {E(f["name"])} year ({best["li"]})</span></div></div>
-{f'<h2>What owners complained about</h2><div class="pts">{parts}</div><p class="note">Share of this year&#39;s complaints. One complaint can name more than one area.</p>' if parts else ''}
-{price_html(f["id"], y, f["name"])}{miles_html(x, E(f["name"]))}{sev_html(x)}{recalls_html(x, f, y)}{specs_html(x, y, f["name"])}
-{f'<h2>In owners&#39; words</h2>{qs}<p class="note">Picked from complaints about the top problem areas, as filed (letter case adjusted). Search the number at nhtsa.gov to read the full complaint.</p>' if qs else ''}
-<h2>Every {E(f["name"])} year</h2>{ybars(f, y)}<p class="note">{near}{" · " if near else ""}<a href="{CARU(f)}">all years</a></p>
-<h2>Before you buy one</h2><p>Run the car&#39;s VIN through the free recall check at <a href="https://www.nhtsa.gov/recalls" rel="noopener">nhtsa.gov/recalls</a>, and ask for records of any recall work. A complaint is an owner&#39;s report, not a confirmed defect, and this is not a repair-cost rating.</p></article>''', kind='article',
+             (f'{nrec} recalls. ' if nrec else '') + (f'The {y} {f["name"]} drew {plain(v["li"])}, by NHTSA owner complaints per car sold.' if v['ok'] else f'Owners filed only {v["n"]} NHTSA safety complaints about the {y} {f["name"]} in its first 3 years.') + (f' Top problems: {top}.' if top else '') + ' Real owner complaints and every other year.', year_body(f, v, y, x, best, worst, prev, nxt, v['quotes']), kind='article',
              ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": f'{y} {f["name"]} problems and owner complaints', "url": BASE + CARU(f, y)}])
         yurls.append(CARU(f, y))
 pick = {}
