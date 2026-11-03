@@ -3,6 +3,7 @@
 (() => {
   const el = document.getElementById('pick'); if (!el) return;
   const P = JSON.parse(el.textContent), $ = id => document.getElementById(id);
+  const lookForm = $('look'); if (lookForm) lookForm.addEventListener('submit', e => e.preventDefault());   // was an inline onsubmit (blocked by the CSP)
   // 11-02: the names people actually type ("f150", "ram 1500") for families named after the whole line
   const AK = { 'ford-f-series': ' f150 150 f250 250 f350 350 super duty', 'ram-pickup': ' 1500 2500 3500', 'chevrolet-silverado': ' 1500 2500 3500', 'gmc-sierra': ' 1500 2500 3500' };
   const ALL = Object.entries(P).flatMap(([b, ms]) => ms.map(([n, id, ys]) => ({ b, n, id, ys, k: (n + ' ' + b).toLowerCase().replace(/[^a-z0-9 ]/g, ' ') + (AK[id] || '') })));

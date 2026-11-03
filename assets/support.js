@@ -38,6 +38,7 @@
   sync();
   const open = () => { if (box.hidden && !seen()) { box.hidden = false; go.focus(); } };
   window.liSupport = () => { box.hidden = false; go.focus(); };   // footer "Support the Lemon Index" link
+  document.querySelectorAll('.supl').forEach(b => b.addEventListener('click', () => window.liSupport()));   // no inline onclick (CSP)
   if (qs.has('support-preview')) return open();
   if (!isReport || seen()) return;
   // count only time the tab is actually in front, so a background tab never pops it
