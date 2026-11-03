@@ -95,14 +95,26 @@ def explorer():
 <p class="note">* Tesla doesn't publish U.S. sales by model, so its numbers use published estimates. Sold = U.S. sales over the model years shown.</p>
 <div id="tray" class="tray" hidden></div><script id="cars" type="application/json">{data}</script></section>'''
 
+def fit_title(t):
+    if len(t) > 65 and t.endswith(' | The Lemon Index'): t = t[:-len(' | The Lemon Index')] + ' | Lemon Index'
+    if len(t) > 65 and t.endswith(' | Lemon Index'): t = t[:-len(' | Lemon Index')]
+    if len(t) > 65 and ': Which Has Fewer Problems?' in t: t = t.replace(': Which Has Fewer Problems?', ' by Year') if len(t) - 19 <= 65 else t.replace(': Which Has Fewer Problems?', '').replace(' Reliability: Problems, Recalls and Range', ' Reliability, Recalls & Range')
+    return t.replace(' Problems and Recalls', ' Problems & Recalls') if len(t) > 65 else t
+def fit_desc(d):
+    if len(d) <= 160: return d
+    d = d.replace(' Real owner complaints and every other year.', '')
+    if len(d) <= 160: return d
+    k = d.rfind('. ', 0, 159)
+    return d[:k + 1] if k > 100 else d[:157].rsplit(' ', 1)[0] + '…'
 def page(path, title, desc, body, ld=None, kind='website', img=None):
+    title, desc = fit_title(title), fit_desc(desc)
     url = BASE + path; lds = ''.join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in (ld or []))
     beacon = f"<script defer src=\"https://static.cloudflareinsights.com/beacon.min.js\" data-cf-beacon='{{\"token\": \"{CF}\"}}'></script>" if CF else ''
     doc = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{E(title)}</title><meta name="description" content="{E(desc)}"><link rel="canonical" href="{url}">
 <meta property="og:type" content="{kind}"><meta property="og:site_name" content="The Lemon Index"><meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(desc)}">
 <meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}{img or "/assets/og.png"}"><meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
+<meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap"><link rel="stylesheet" href="/assets/site.css?v=1102h">{lds}</head>
 <body><a class="spons" href="https://mealmonster.app/?utm_source=lemonindex&amp;utm_medium=sponsor_bar" rel="noopener">Sponsored by <b>Meal Monster</b> · the easy food tracker</a><header class="top"><a class="brand" href="/"><img src="/assets/icon-64.png" alt="" width="32" height="32">The Lemon Index</a>
@@ -166,7 +178,7 @@ page(STUDY, 'The Most Reliable Cars, According to 1.6 Million Owner Complaints',
          {"@context": "https://schema.org", "@type": "Article", "headline": "The Most Reliable Cars, According to 1.6 Million Owner Complaints", "datePublished": TODAY, "dateModified": TODAY, "author": {"@type": "Organization", "name": "The Lemon Index"}, "image": BASE + '/assets/og.png'}])
 
 # ---- studies index
-page('/studies/', 'Car Reliability Studies | The Lemon Index', 'Every Lemon Index study: car reliability, recalls and owner complaints, measured with public data.', f'''
+page('/studies/', 'Car Reliability Studies: Rankings From Owner Complaints | Lemon Index', 'Every Lemon Index study: the most and least reliable cars, brands and electric cars, measured with 1.6 million NHTSA owner complaints and U.S. sales.', f'''
 <section><h1>Studies</h1><p class="lede">Each study turns millions of public records into one clear ranking.</p>
 <a class="card" href="{STUDY}"><span class="kicker">Study #1</span><h2>The Most Reliable Cars, According to 1.6 Million Owner Complaints</h2><p>131 models, 22 brands. Toyota 4Runner 27 · Lexus 30 · Tesla 322 (est.)</p></a>
 <a class="card" href="/electric/"><span class="kicker">Electric cars</span><h2>The Most Reliable Electric Cars, Ranked by Owner Complaints</h2><p>22 EVs, plus fires, yearly cost, common problems and driver-assist crash reports.</p></a>
@@ -481,7 +493,8 @@ for f in YEARS:
         x = extra(f['id'], y); nrec = len(x['recalls']) if 'recalls' in x else None
         qa = year_faq(f, v, y, x, best); snm = SNM(f)
         page(CARU(f, y), f'{y} {snm} Reliability, Problems and Recalls | The Lemon Index',
-             (f'{nrec} recalls. ' if nrec else '') + (f'The {y} {snm} drew {plain(v["li"])}, by NHTSA owner complaints per car sold.' if v['ok'] else f'Owners filed only {v["n"]} NHTSA safety complaints about the {y} {snm} in its first 3 years.') + (f' Top problems: {top}.' if top else '') + ' Real owner complaints and every other year.', year_body(f, v, y, x, best, worst, prev, nxt, v['quotes'], qa), kind='article', img=(PH.get(f['id'], {}).get(str(y)) or {}).get('src'),
+             (f'The {y} {snm} drew {plain(v["li"])} per car sold (NHTSA).' if v['ok'] else f'Owners filed only {v["n"]} NHTSA complaints about the {y} {snm} in its first 3 years.')
+             + (f' {nrec} recall{"s" if nrec != 1 else ""}.' if nrec else '') + (f' Top problems: {top}.' if top else '') + ' Real owner complaints and every other year.', year_body(f, v, y, x, best, worst, prev, nxt, v['quotes'], qa), kind='article', img=(PH.get(f['id'], {}).get(str(y)) or {}).get('src'),
              ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": f'{y} {snm} reliability, problems and recalls', "url": BASE + CARU(f, y)}
                  | ({"primaryImageOfPage": {"@type": "ImageObject", "contentUrl": BASE + PH[f['id']][str(y)]['src'], "license": LIC.get(PH[f['id']][str(y)]['license'], PH[f['id']][str(y)]['page']), "acquireLicensePage": PH[f['id']][str(y)]['page'], "creditText": PH[f['id']][str(y)]['author'].split('\ufffd')[0].strip()}} if str(y) in PH.get(f['id'], {}) else {})] + ([faq_ld(qa)] if qa else []))
         yurls.append(CARU(f, y))
@@ -554,24 +567,28 @@ curls.insert(0, '/compare/')
 
 # 10-31: policy pages Stripe checks before it activates payments (and that a paid report needs anyway).
 LEGAL_NAME, ADDRESS, CONTACT = 'Westbrook Software LLC', '4539 N 22nd St Ste R, Phoenix, AZ 85016', 'hello@elijahwestbrook.com'
-def legal(path, title, body):
-    page(path, f'{title} | The Lemon Index', f'{title} for lemonindex.com, operated by {LEGAL_NAME}.', f'<article class="study"><p class="kicker">Updated {TODAY}</p><h1>{title}</h1>{body}</article>')
-legal('/contact/', 'Contact', f'''<p>Questions about the data, a report or a purchase: email <a href="mailto:{CONTACT}">{CONTACT}</a>. We usually answer within 2 business days.</p>
-<p>The Lemon Index is operated by {LEGAL_NAME}, {ADDRESS}.</p>''')
-legal('/refunds/', 'Refund policy', f'''<p>The full Lemon Index report is a digital product that unlocks right away, so <b>all sales are final</b> once reports are unlocked.</p>
-<p>We will refund you in full if you were charged twice by mistake, or if you can&#39;t access the reports and we can&#39;t fix it within 7 days. Email <a href="mailto:{CONTACT}">{CONTACT}</a> within 14 days of your purchase.</p>''')
+def legal(path, title, body, seo_title, desc):
+    page(path, seo_title, desc, f'<article class="study"><p class="kicker">Updated {TODAY}</p><h1>{title}</h1>{body}</article>')
+legal('/contact/', 'Contact', f'''<p>Questions about the data, a correction, a car you want covered or a donation: email <a href="mailto:{CONTACT}">{CONTACT}</a>. We usually answer within 2 business days.</p>
+<p>The Lemon Index is operated by {LEGAL_NAME}, {ADDRESS}.</p>''', 'Contact the Lemon Index: Data Questions and Corrections',
+      'Email the Lemon Index about our car reliability data, a correction, a car you want us to cover or a donation. We usually answer within 2 business days.')
+legal('/refunds/', 'Refund policy', f'''<p>Every Lemon Index report is free. Donations are voluntary and don&#39;t unlock anything extra.</p>
+<p>If you were charged twice, donated the wrong amount or didn&#39;t mean to donate, email <a href="mailto:{CONTACT}">{CONTACT}</a> within 14 days and we&#39;ll refund it in full. Payments are processed by Stripe.</p>''', 'Refund Policy for Donations | The Lemon Index',
+      'Lemon Index reports are free and donations are voluntary. If you were charged twice or donated by mistake, email us within 14 days for a full refund.')
 legal('/privacy/', 'Privacy policy', f'''<p>{LEGAL_NAME} ("we") runs lemonindex.com. This page says what we collect and why.</p>
 <h2>Visiting the site</h2><p>We use Cloudflare Web Analytics, which counts visits without cookies and without identifying you. We don&#39;t run ad trackers.</p>
-<h2>If you create an account or buy a report</h2><p>We store your email address to sign you in and to remember that you unlocked the reports. Payments are handled by Stripe; we never see or store your card number. If you opt in, we email you car-buying tips and new studies, and every email has an unsubscribe link.</p>
+<h2>If you donate or give us your email</h2><p>Donations are handled by Stripe; we never see or store your card number. If you give us your email, we use it to send car-buying tips and new studies, and every email has an unsubscribe link.</p>
 <h2>Sharing</h2><p>We don&#39;t sell your personal information. We share it only with the services that run the site (hosting, sign-in, email, Stripe) and when the law requires it.</p>
-<h2>Your choices</h2><p>Email <a href="mailto:{CONTACT}">{CONTACT}</a> to get a copy of your data or to delete your account.</p>
-<p>{LEGAL_NAME}, {ADDRESS}.</p>''')
+<h2>Your choices</h2><p>Email <a href="mailto:{CONTACT}">{CONTACT}</a> to get a copy of your data or to have it deleted.</p>
+<p>{LEGAL_NAME}, {ADDRESS}.</p>''', 'Privacy Policy: No Ad Trackers, Cookieless Stats | Lemon Index',
+      'What lemonindex.com collects: cookieless visit counts from Cloudflare, no ad trackers, and your email only if you give it to us. Donations run through Stripe.')
 legal('/terms/', 'Terms of use', f'''<p>lemonindex.com is operated by {LEGAL_NAME}, {ADDRESS}. By using the site you agree to these terms.</p>
 <h2>The data</h2><p>Our scores, recalls, crash tests and fuel-economy figures come from public U.S. government data (NHTSA and the EPA) and published sales figures. Owner complaints are owners&#39; own reports, not confirmed defects. The site is for general information. It isn&#39;t a mechanical inspection, a repair-cost estimate or a guarantee about any car. Have a car inspected before you buy it.</p>
-<h2>Paid reports</h2><p>A one-time payment unlocks every full report for the account that bought it, for as long as we offer them. Prices are shown before you pay, and payments are processed by Stripe. See the <a href="/refunds/">refund policy</a>.</p>
-<h2>Using our work</h2><p>You may cite our free rankings with a link to lemonindex.com (CC BY 4.0). Don&#39;t copy or resell the paid reports.</p>
+<h2>Donations</h2><p>Every report is free. Donations are voluntary, processed by Stripe, and don&#39;t unlock anything. See the <a href="/refunds/">refund policy</a>.</p>
+<h2>Using our work</h2><p>You may cite our rankings with a link to lemonindex.com (CC BY 4.0). Don&#39;t copy the site wholesale or resell it.</p>
 <h2>Limits</h2><p>The site is provided as is. To the extent the law allows, {LEGAL_NAME} isn&#39;t liable for decisions made using it. Arizona law governs these terms.</p>
-<p>Questions: <a href="mailto:{CONTACT}">{CONTACT}</a>.</p>''')
+<p>Questions: <a href="mailto:{CONTACT}">{CONTACT}</a>.</p>''', 'Terms of Use: How You Can Use Lemon Index Data',
+      'The terms for using lemonindex.com: where our car reliability data comes from, what it is and isn&#39;t, citing our rankings, and donations.'.replace('&#39;', "'"))
 LEGAL_URLS = ['/contact/', '/refunds/', '/privacy/', '/terms/']
 
 # 10-31: electric cars (ranking, fires, cost, problems, driver-assist crashes, one page per EV)
@@ -584,6 +601,7 @@ open(f'{OUT}/robots.txt', 'w').write(f'User-agent: *\nAllow: /\n\nUser-agent: GP
 open(f'{OUT}/llms.txt', 'w', encoding='utf-8').write(f'# The Lemon Index\n\n> Car reliability from public data. The Lemon Index = NHTSA safety complaints per 100,000 U.S. sales, vs the average car of the same model years (100 = average).\n\n- [The Most Reliable Cars, According to 1.6 Million Owner Complaints]({BASE}{STUDY}): Toyota 4Runner 26, Lexus ES 27, Lexus brand 30, Tesla brand 322 (est.)\n- [The Most Reliable Electric Cars]({BASE}/electric/): {len(RK)} EVs by NHTSA complaints per car sold, best {best['name']} {best['li']}, plus fires, yearly cost and driver-assist crash reports\n- [Method]({BASE}/method/)\n')
 open(f'{OUT}/CNAME', 'w').write('lemonindex.com')
 open(f'{OUT}/google00cb28bea71f4c18.html', 'w').write('google-site-verification: google00cb28bea71f4c18.html')   # Search Console ownership (11-02); never remove
+open(f'{OUT}/' + open('.indexnow_key').read().strip() + '.txt', 'w').write(open('.indexnow_key').read().strip())   # IndexNow key (Bing/Yandex instant URL pings, 11-02)
 VALIAS = {}   # NHTSA make|model (as owners' complaints name it, e.g. FORD|F150) -> family id, for the VIN page
 for fid, yrs in XL.items():
     for e in yrs.values():
