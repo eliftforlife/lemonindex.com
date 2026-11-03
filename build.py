@@ -99,6 +99,7 @@ def fit_title(t):
     if len(t) > 65 and t.endswith(' | The Lemon Index'): t = t[:-len(' | The Lemon Index')] + ' | Lemon Index'
     if len(t) > 65 and t.endswith(' | Lemon Index'): t = t[:-len(' | Lemon Index')]
     if len(t) > 65 and ': Which Has Fewer Problems?' in t: t = t.replace(': Which Has Fewer Problems?', ' by Year') if len(t) - 19 <= 65 else t.replace(': Which Has Fewer Problems?', '').replace(' Reliability: Problems, Recalls and Range', ' Reliability, Recalls & Range')
+    if len(t) > 65: t = t.replace(': Years to Avoid & Best to Buy', ': Best & Worst Years')
     return t.replace(' Problems and Recalls', ' Problems & Recalls') if len(t) > 65 else t
 def fit_desc(d):
     if len(d) <= 160: return d
@@ -330,6 +331,7 @@ def timeline(m, comps):
             f'<p class="yc-cap">Most owners who filed a complaint with NHTSA had <b>{m["p25"] // 1000}K to {m["p75"] // 1000}K miles</b> on the car ({m["n"]:,} complaints listed the miles). This shows when people who had a problem reported it, not the odds that your car will have it.</p>'
             + (f'<ul class="tl-top">{top}</ul>' if top else '') + '</section>')
 X2 = _load('data/extras2.json')
+TR = _load('data/trans.json')   # transmission complaints per model-year (data_trans.py)
 PH = _load('data/photos.json')   # exact-year Wikimedia Commons cutouts (data_photos.py), {fid: {year: {src, author, license, page, w, h}}}
 LIC = {'CC BY-SA 4.0': 'https://creativecommons.org/licenses/by-sa/4.0/', 'CC BY-SA 3.0': 'https://creativecommons.org/licenses/by-sa/3.0/', 'CC BY 4.0': 'https://creativecommons.org/licenses/by/4.0/'}
 def car_photo(fid, y, name):
@@ -400,7 +402,7 @@ def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
     yrs = ''.join(f'<a class="ychip {c}" href="{CARU(f, w["y"])}"><small>{lab}</small><b>{w["y"]}</b></a>' for lab, w, c in (('best year', best, 'good'), ('worst year', worst, 'bad')) if w['y'] != y)
     nav = ''.join(f'<a class="ychip" href="{CARU(f, w["y"])}"><small>{lab}</small><b>{w["y"]}</b></a>' for lab, w in (('previous', prev), ('next', nxt)) if w)
     parts = ''.join(f'<div class="pt"><span>{E(NICE(p))}</span><span class="bt"><i style="width:{k}%"></i></span><b>{k}%</b></div>' for p, k in v['parts'])
-    probs = f'<section class="yc"><h2>What owners complain about most <span class="h2s">(from owner complaints to the government)</span></h2><div class="pts">{parts}</div><p class="yc-cap">Share of this year&#39;s owner complaints filed with NHTSA, not the share of cars that break. One complaint can name more than one area.</p></section>' if parts else ''
+    probs = f'<section class="yc"><h2>What owners complain about most <span class="h2s">(from owner complaints to the government)</span></h2><div class="pts">{parts}</div><p class="yc-cap">Share of this year&#39;s owner complaints filed with NHTSA, not the share of cars that break. One complaint can name more than one area.</p>' + (f'<p class="yc-cap"><a href="{CARU(f)}transmission/">Transmission problems in every {nm} year →</a></p>' if f['id'] in TR else '') + '</section>' if parts else ''
     sev_items = [(s.get('crash', 0), 'crashes'), (s.get('injured', 0), 'injuries'), (s.get('fire', 0), 'fires'), (s.get('towed', 0), 'tows')]
     sev = (f'<section class="yc"><h2>How serious</h2><p class="yc-cap">Out of {s["total"]:,} owner complaints, owners reported:</p><div class="sv">'
            + ''.join(f'<div class="{"bad" if n else "good"}"><b>{n:,}</b><span>{lab}</span></div>' for n, lab in sev_items) + '</div></section>') if s.get('total') else ''
@@ -472,13 +474,13 @@ for f in YEARS:
                 f'<td class="num">{(f"{m["comb"][0]}–{m["comb"][1]}" if m["comb"][0] != m["comb"][1] else m["comb"][0]) if m else "—"}</td>')
     rows = ''.join(f'<tr><td><a href="{CARU(f, v["y"])}">{v["y"]}</a></td><td class="num {CLS(v)}">{LIS(v)}</td><td class="pw">{PLN(v)}</td><td class="num">{v["n"]:,}</td><td>{E(v["parts"][0][0]) + f" ({v["parts"][0][1]}%)" if v["parts"] else "—"}</td>{yx(v)}</tr>' for v in ys)
     snm = SNM(f)
-    page(CARU(f), f'{snm} Years to Avoid and Best Years to Buy | The Lemon Index',
+    page(CARU(f), f'{snm} Reliability by Year: Years to Avoid & Best to Buy',
          f'Every {snm} model year from {ys[0]["y"]} to {ys[-1]["y"]}, ranked by NHTSA owner complaints per car sold. Best: {best["y"]}. Worst: {worst["y"]} ({plain(worst["li"])}).', f'''
 <article class="study"><p class="kicker"><a href="/cars/">All cars</a> · {E(c["segName"])}</p><h1>{E(snm)} reliability by year</h1>{f'<p class="sub">{SN[f["id"]][1]}</p>' if f["id"] in SN else ""}
 <p class="lede">Best year: <b>{best["y"]}</b>, {plain(best["li"])}. Worst year: <b>{worst["y"]}</b>, {plain(worst["li"])}. Click a year to see what owners reported.</p>
 <p class="sub">Lemon Index = safety complaints filed with the government within 3 years, per car sold, compared with the average car of the same model year. <b>100 is average, lower is better.</b>{" Scores before 2010 are rough: fewer owners filed complaints back then." if ys[0]["y"] < 2010 else ""}</p>
 {ybars(f)}{picks}<h2>Every year</h2><div class="tw"><table><thead><tr><th>Year</th><th>Index</th><th>Compared with average</th><th>Complaints</th><th>Top complaint</th><th>Recalls</th><th>Crash test</th><th>MPG</th></tr></thead><tbody>{rows}</tbody></table></div>
-<p class="note">Whole model ({c["years"]}): Lemon Index {c["li"]}, {plain(c["li"])}. <a href="/method/">How the index works</a></p>{f'<h2>Compare the {E(f["name"])}</h2><p>{vs}</p>' if vs else ''}</article>''',
+<p class="note">Whole model ({c["years"]}): Lemon Index {c["li"]}, {plain(c["li"])}. <a href="/method/">How the index works</a></p>{f'<p><a class="btn" href="{CARU(f)}transmission/">{E(snm)} transmission problems by year →</a></p>' if f["id"] in TR else ''}{f'<h2>Compare the {E(f["name"])}</h2><p>{vs}</p>' if vs else ''}</article>''',
          ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": f'{snm} reliability by year', "url": BASE + CARU(f)},
              faq_ld([(f'What are the best {snm} years?', '', f'By NHTSA owner complaints per car sold, the best {snm} years are ' + ', '.join(str(v["y"]) for v in good3) + '.')]
                     + ([(f'Which {snm} years should you avoid?', '', f'The {snm} years with the most owner complaints per car sold are ' + ', '.join(str(v["y"]) for v in bad3) + '.')] if bad3 else []))])
@@ -498,6 +500,65 @@ for f in YEARS:
              ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": f'{y} {snm} reliability, problems and recalls', "url": BASE + CARU(f, y)}
                  | ({"primaryImageOfPage": {"@type": "ImageObject", "contentUrl": BASE + PH[f['id']][str(y)]['src'], "license": LIC.get(PH[f['id']][str(y)]['license'], PH[f['id']][str(y)]['page']), "acquireLicensePage": PH[f['id']][str(y)]['page'], "creditText": PH[f['id']][str(y)]['author'].split('\ufffd')[0].strip()}} if str(y) in PH.get(f['id'], {}) else {})] + ([faq_ld(qa)] if qa else []))
         yurls.append(CARU(f, y))
+# ---- transmission pages (11-02): data/trans.json from data_trans.py
+def sent_case(t):
+    t = re.sub(r'\s+', ' ', t).strip(); t = re.sub(r'\s*\*\w{1,3}$', '', t)
+    if sum(c.isupper() for c in t) > len(t) * .5: t = '. '.join(x[:1].upper() + x[1:] for x in t.lower().split('. '))
+    return re.sub(r'\bi\b', 'I', t)
+def trans_body(f):
+    nm = E(SNM(f)); td = TR.get(f['id'], {}); ys = [v['y'] for v in f['years']]
+    rows = [(y, td.get(str(y))) for y in ys]; rated = [(y, d) for y, d in rows if d and d.get('rate') is not None]
+    if len(rated) < 3: return None, None
+    mx = max(d['rate'] for _, d in rated) * 1.05 or 1; avg = sorted(d['rate'] for _, d in rated)[len(rated) // 2]
+    worst = sorted(rated, key=lambda r: -r[1]['rate'])[:3]; best = [r for r in sorted(rated, key=lambda r: r[1]['rate']) if r[0] >= 2010][:3]
+    def rtxt(d): return ('%g per 100K sold' % d['rate']) if d and d.get('rate') is not None else 'no sales data'
+    def bad(d): return 'bad' if d and d.get('rate') and d['rate'] > avg * 2 and d['n'] >= 20 else ''
+    def wid(d): return (d['rate'] / mx * 100) if d and d.get('rate') else 0
+    bars = ''.join(f'<a class="b {bad(d)}" href="{CARU(f, y)}"><span class="bn">{y}</span><span class="bt"><i style="width:{wid(d):.1f}%"></i></span><b>{(d or {}).get("n", 0):,}</b><small>{rtxt(d)}</small></a>' for y, d in rows)
+    tot = {}
+    for _, d in rated:
+        for k, n in d['sym'].items(): tot[k] = tot.get(k, 0) + n
+    alltr = sum(d['n'] for _, d in rated)
+    smax = max(tot.values()) if tot else 1
+    sym = ''.join(f'<div class="pt"><span>{E(k)}</span><span class="bt"><i style="width:{n / smax * 100:.0f}%"></i></span><b>{round(n / alltr * 100)}%</b></div>' for k, n in sorted(tot.items(), key=lambda kv: -kv[1])[:6])
+    recs = []
+    for y in ys:
+        for r in extra(f['id'], y).get('recalls') or []:
+            if re.search(r'POWER TRAIN|TRANSMISSION', r['part'], re.I): recs.append((y, r))
+    seen = set(); rl = ''
+    for y, r in sorted(recs, key=lambda t: -t[0]):
+        k = rsum(r)[:80]
+        if k in seen or not k or k.lower().startswith(('also included', 'this recall', 'the vehicles')): continue
+        seen.add(k); rl += f'<li><b>{y}</b> <small>{E(r["date"][-4:])}</small><p>{E(rsum(r))}</p></li>'
+        if len(seen) >= 5: break
+    wq = max(worst, key=lambda r: r[1]['n']); qs = [q for q in wq[1]['q']][:2]
+    quotes = ''.join(f'<blockquote><p>{E(sent_case(q))}</p><cite>{wq[0]} {nm} owner · NHTSA complaint</cite></blockquote>' for q in qs)
+    wtxt = ', '.join(f'{y} ({d["n"]:,} complaints)' for y, d in worst)
+    qa = [(f'Which {SNM(f)} years have transmission problems?', '', f'By transmission complaints filed with NHTSA per car sold, the worst {SNM(f)} years are {", ".join(str(y) for y, _ in worst)}.'),
+          (f'What are common {SNM(f)} transmission problems?', '', 'Owners most often describe ' + ', '.join(k.lower() for k, _ in sorted(tot.items(), key=lambda kv: -kv[1])[:3]) + '.' if tot else 'Owners describe a range of shifting problems.')]
+    if best: qa.append((f'Which {SNM(f)} years have the fewest transmission complaints?', '', f'Since 2010, the {SNM(f)} years with the fewest transmission complaints per car sold are {", ".join(str(y) for y, _ in best)}.'))
+    body = f'''
+<article class="study"><p class="kicker"><a href="/cars/">All cars</a> · <a href="{CARU(f)}">{nm}</a> · Transmission</p><h1>{nm} transmission problems by year</h1>
+<p class="lede">Worst years for transmission complaints per car sold: <b>{wtxt}</b>.{f" Fewest since 2010: <b>{', '.join(str(y) for y, _ in best)}</b>." if best else ""}</p>
+<p class="sub">Transmission complaints owners filed with the U.S. government (NHTSA) for each model year, per 100,000 cars sold. A complaint counts when it&#39;s filed under the transmission, or under the power train and the owner describes the transmission (shifting, slipping, gears, CVT). It&#39;s an owner&#39;s report, not a confirmed defect, and older years have had longer to collect complaints.</p>
+<div class="bars yb">{bars}</div>
+{f'<h2>What owners describe</h2><div class="pts">{sym}</div><p class="note">Share of this model&#39;s transmission complaints that mention each symptom. One complaint can mention several.</p>' if sym else ''}
+{f'<h2>Transmission and power train recalls</h2><ul class="rc">{rl}</ul><p class="note">Recall repairs are free at any dealer. Check a specific car&#39;s VIN at <a href="https://www.nhtsa.gov/recalls" rel="noopener">nhtsa.gov/recalls</a>.</p>' if rl else ''}
+{f'<h2>In owners&#39; words</h2>{quotes}' if quotes else ''}
+<section class="yqa"><h2>Quick answers</h2>{''.join(f'<h3>{E(q)}</h3><p>{E(t)}</p>' for q, _, t in qa)}</section>
+<p class="note">See every problem, not just the transmission: <a href="{CARU(f)}">{nm} reliability by year</a>. <a href="/method/">How we count</a></p></article>'''
+    return body, qa
+turls = []
+for f in YEARS:
+    body, qa = trans_body(f)
+    if not body: continue
+    snm = SNM(f); wy = sorted(((v['y'], TR[f['id']][str(v['y'])]['rate']) for v in f['years'] if str(v['y']) in TR.get(f['id'], {}) and TR[f['id']][str(v['y'])].get('rate') is not None), key=lambda t: -t[1])[:2]
+    page(CARU(f) + 'transmission/', f'{snm} Transmission Problems by Year | The Lemon Index',
+         f'Which {snm} years have the most transmission complaints per car sold, what owners describe, and every transmission recall. Worst years: {", ".join(str(y) for y, _ in wy)}. From NHTSA owner complaints.',
+         body, kind='article', ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": f'{snm} transmission problems by year', "url": BASE + CARU(f) + 'transmission/'}, faq_ld(qa)])
+    turls.append(CARU(f) + 'transmission/')
+TRANS_OK = {u.split('/')[2] for u in turls}
+yurls += turls
 pick = {}
 for f in YEARS: pick.setdefault(BYNAME[f['name']]['brand'], []).append([f['name'], f['id'], [v['y'] for v in f['years']]])
 pick = dict(sorted((b, sorted(m)) for b, m in pick.items()))
