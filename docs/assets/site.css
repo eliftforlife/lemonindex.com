@@ -254,3 +254,14 @@ table.price td:first-child { white-space: nowrap; } table.price th small { font-
 .hw > div { background: var(--soft); border-radius: 16px; padding: 16px; } .hw b { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--lemon); font-weight: 900; }
 .hw h3 { margin: 8px 0 4px; font-size: 19px; } .hw p { margin: 0; color: var(--ink2); font-size: 15px; }
 .hwm { margin: 64px 4px 24px; position: relative; }
+/* 11-02 car pages use the full desktop width: hero left + facts right, then a 2-column grid of sections; phones stay one column */
+.yp { max-width: none; }
+@media (min-width: 1000px) {
+  .ytop { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 40px; align-items: end; }
+  .ytop .yts { margin-top: 0; }
+  .ygrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 48px; align-items: start; }
+  .ygrid .ywide { grid-column: 1 / -1; }
+  .ygrid .yc { margin: 26px 0; }
+  .yp .pts, .yp .bars { max-width: none; }
+}
+@media (min-width: 1000px) { .ytop .yts { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
