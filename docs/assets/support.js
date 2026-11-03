@@ -1,7 +1,7 @@
 // "Keep it free" support popup (Elijah 11-02, like Blender's donate prompt). Amounts open Stripe Payment Links; nothing card-related runs on this site.
 // Hidden until the links below are filled in. Shows once per 14 days, only on car/report pages, after the reader has scrolled or stayed a while.
 (() => {
-  const LINKS = { 5: '', 10: '', 15: '', custom: '' };   // Stripe Payment Links: three fixed amounts + one "customer chooses what to pay"
+  const LINKS = { 5: 'https://buy.stripe.com/eVqdR84Z25u7gtC5l9gA800', 10: 'https://buy.stripe.com/8x27sK6362hV6T2fZNgA801', 15: 'https://buy.stripe.com/9B68wO636cWz6T2bJxgA802', custom: 'https://buy.stripe.com/00w28q1MQ8Gjb9ifZNgA803' };   // Stripe Payment Links: three fixed amounts + one "customer chooses what to pay"
   const KEY = 'li-support-seen', DAYS = 14;
   const ready = Object.values(LINKS).every(Boolean);
   const isReport = /^\/(cars|electric|compare)\//.test(location.pathname) && location.pathname.split('/').filter(Boolean).length >= 2;
@@ -21,7 +21,7 @@
     ${[5, 10, 15].map(a => `<button role="radio" data-a="${a}" aria-checked="${a === pick}">$${a}</button>`).join('')}
     <button role="radio" data-a="custom" aria-checked="false">Other</button>
   </div>
-  <a class="btn sup-go" href="#" rel="noopener">Chip in $10</a>
+  <a class="btn sup-go" href="#" rel="noopener" target="_blank">Chip in $10</a>
   <button class="sup-later">Maybe later</button>
   <p class="sup-fine">Secure checkout by Stripe. Support payments aren't tax-deductible and don't unlock anything.</p>
 </div>`;
