@@ -33,7 +33,7 @@
     return `<div class="xr ${on ? 'open' : ''}" data-id="${c.id}">
       <button class="xm" data-open="${c.id}" aria-expanded="${on}">
         <span class="xk">#${c.rank}</span>
-        <span class="xn"><b>${c.name}${c.est ? '*' : ''}</b><small>${c.segName} · ${c.years}</small></span>
+        <span class="xn">${c.img ? `<img class="xph" src="${c.img}" alt="" loading="lazy">` : '<i class="xph"></i>'}<b>${c.name}${c.est ? '*' : ''}</b><small>${c.segName} · ${c.years}</small></span>
         <span class="xb" data-tip="${tip(c).replace(/"/g, '&quot;')}"><span class="bt"><i class="${bad ? 'bad' : ok ? 'good' : 'mid'}" style="width:${Math.min(100, c.li / MAX * 100).toFixed(1)}%"></i><em></em></span><small class="${bad ? 'bad' : ok ? 'good' : ''}">${words(c)}</small></span>
         <span class="xi ${bad ? 'bad' : ok ? 'good' : ''}">${c.li}</span>
         <span class="xs">${big(c.sold)}${c.est ? '*' : ''}</span>

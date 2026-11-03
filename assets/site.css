@@ -669,3 +669,49 @@ h2 { font-size: clamp(26px, 3.6vw, 40px); line-height: 1.1; }
 #ts-box { min-height: 65px; display: flex; justify-content: center; }
 .v-chk-x { margin-top: 10px; background: none; border: 0; color: var(--mute); font: inherit; font-size: 15px; padding: 10px 16px; cursor: pointer; }
 @media (min-width: 640px) { .v-chk { align-items: center; padding: 16px; } .v-chk-card { border-radius: 24px; padding: 30px 28px 18px; transform: translateY(16px) scale(.98); } }
+
+/* ---- 11-03 v6 home: Apple rhythm. Big gaps between sections, one headline per section, photo tiles. */
+.home { display: flex; flex-direction: column; gap: clamp(96px, 12vw, 160px); padding-bottom: 40px; }
+.home > section, .home > .hhero { margin: 0; padding-top: 0; padding-bottom: 0; }
+.home > .tiles-cr { margin: calc(-1 * clamp(96px, 12vw, 160px) + 14px) 0 0; }
+.home h2 { font-size: clamp(32px, 4.4vw, 52px); letter-spacing: -.03em; line-height: 1.05; margin: 0 0 28px; }
+.home h2 .h2s { display: block; font-size: .5em; letter-spacing: -.015em; margin-top: 8px; }
+.hhero .lede { font-size: clamp(19px, 2vw, 24px); color: var(--mute); margin: 10px 0 26px; }
+.fnote { margin: 16px 0 0; color: var(--mute); font-size: 14px; }
+.hread { text-align: center; } .hread .scale { max-width: 640px; margin: 0 auto; }
+.tiles { display: grid; gap: 14px; }
+@media (min-width: 820px) { .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.tile { position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; min-height: 480px; padding: 48px 28px 0; border-radius: 28px; background: #f5f5f7; color: var(--ink); text-decoration: none; overflow: hidden; transition: transform .35s cubic-bezier(.2,.9,.25,1); }
+.tile:hover { transform: scale(1.01); }
+.tile .te { margin: 0 0 6px; font-size: 15px; font-weight: 600; color: var(--mute); }
+.tile h2 { margin: 0; font-size: clamp(30px, 3.4vw, 44px); letter-spacing: -.03em; line-height: 1.05; }
+.tile .ts { margin: 10px 0 0; font-size: clamp(17px, 1.6vw, 20px); color: var(--ink2); }
+.tile .tl { display: inline-block; margin-top: 14px; color: #0066cc; font-size: 17px; } .tile .tl i { font-style: normal; }
+.tile .tp { position: relative; flex: 1; width: 100%; display: flex; align-items: flex-end; justify-content: center; padding: 26px 0 30px; }
+.tile .tp img { width: min(100%, 460px); height: auto; filter: drop-shadow(0 18px 18px rgba(0,0,0,.14)); }
+.tile .tp2 img { width: min(58%, 300px); } .tile .tp2 img.l { margin-right: -10%; position: relative; z-index: 1; } .tile .tp2 img.r { transform: scaleX(-1); }
+.tile .tsc { position: absolute; top: 14px; right: 6%; font: 800 clamp(34px, 4vw, 48px)/1 var(--sys, Inter, sans-serif); letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+.tile .tsc.good { color: #1a8a3c; } .tile .tsc.bad { color: #d70015; }
+.t-dark { background: #1d1d1f; color: #f5f5f7; } .t-dark .te, .t-dark .ts { color: #a1a1a6; } .t-dark .tl { color: #2997ff; }
+.tgauge svg { width: min(70%, 300px); height: auto; } .t-dark .tgauge text { fill: #f5f5f7; }
+.tiles-cr { color: var(--mute); font-size: 12px; text-align: center; }
+@media (max-width: 600px) { .tile { min-height: 420px; padding: 40px 20px 0; border-radius: 24px; } .home .ex .exbar { gap: 8px; } }
+
+.home .hcs .hc-cr { font-size: 12px; color: var(--mute); }
+.tsheet { align-items: center !important; padding-bottom: 44px !important; }
+.tsh { display: grid; grid-template-columns: 1fr auto auto; gap: 0; width: min(100%, 420px); text-align: left; font-size: 15px; border-radius: 14px; overflow: hidden; background: #2c2c2e; }
+.tsh > * { padding: 11px 14px; border-top: 1px solid #3a3a3c; color: #e5e5ea; font-variant-numeric: tabular-nums; } .tsh > :nth-child(-n+3) { border-top: 0; }
+.tsh > span:nth-child(3n+2) { color: #8e8e93; } .tsh b { text-align: right; font-weight: 700; } .tsh b.good { color: #30d158; } .tsh b.bad { color: #ff453a; }
+@media (max-width: 600px) {
+  .tile { min-height: 0; } .tile .tp { padding: 22px 0 26px; min-height: 190px; } .tile .tsc { top: 8px; }
+  .hcs { grid-template-columns: 1fr 1fr; gap: 10px; } .hc { padding: 10px 10px 10px; border-radius: 18px; } .hc img { max-height: 110px; }
+  .hc-b { flex-direction: column; align-items: flex-start; gap: 4px; } .hc-b b { font-size: 15px; } .hc-b span { font-size: 12.5px; } .hc-b small { display: none; }
+  .hc-b .gauge { align-self: center; transform: scale(.8); margin: -10px 0 -8px; } .hcs .hc-cr { grid-column: 1 / -1; } }
+
+/* v6 rankings: a car photo on every row; on phones the plain-English line goes (the colored score says it) */
+.xn { display: grid !important; grid-template-columns: 76px minmax(0, 1fr); column-gap: 12px; align-items: center; }
+.xn .xph { grid-row: span 2; width: 76px; height: 46px; object-fit: contain; display: block; }
+.xn b, .xn small { grid-column: 2; }
+@media (max-width: 600px) { .xn { grid-template-columns: 60px minmax(0, 1fr); } .xn .xph { width: 60px; height: 38px; } .xb small { display: none !important; } }
+.xn b { white-space: normal !important; overflow: visible !important; text-overflow: clip !important; line-height: 1.2; }
+.tile .tsc { right: auto; left: 7%; }

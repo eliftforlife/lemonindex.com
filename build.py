@@ -55,13 +55,13 @@ PICK = {}
 for f in json.load(open('data/years.json', encoding='utf-8')):
     if f['name'] in BYNAME: PICK.setdefault(BYNAME[f['name']]['brand'], []).append([f['name'], f['id'], [v['y'] for v in f['years']]])
 PICK = dict(sorted((b, sorted(m)) for b, m in PICK.items()))
-def finder(h='Look up any car', sub='Type your car, or pick it below. Every model year from 2000 to 2022: its score, its top problems and real owner complaints.'):
+def finder(h='Look up any car', sub='Every model year, 2000 to 2022. Free.', foot=''):
     """10-29 (Elijah): the first thing on the page is an easy car filter. Type "2016 pilot", or pick brand, model, year (assets/lookup.js)."""
     pick = json.dumps(PICK, ensure_ascii=False).replace('</', '<\\/')
     return f"""<section class="finder" aria-labelledby="fh"><h1 id="fh">{h}</h1><p class="lede">{sub}</p>
 <div class="fq"><input id="fq" type="search" placeholder="e.g. 2016 Honda Pilot" autocomplete="off" aria-label="Type a car"><div id="fsug" class="fsug" role="listbox" hidden></div></div>
 <form class="look" id="look"><select id="lb" aria-label="Brand"><option value="">Brand</option></select><select id="lm" aria-label="Model" disabled><option value="">Model</option></select><select id="ly" aria-label="Year" disabled><option value="">Year</option></select><button type="button" class="btn" id="lgo" disabled>Show problems</button></form>
-<script id="pick" type="application/json">{pick}</script></section>"""
+{foot}<script id="pick" type="application/json">{pick}</script></section>"""
 BEST = [(n, v, sold or (f"{BYNAME[n]['sold'] / 1e6:.2f}M" if n in BYNAME else '')) for n, v, sold in BEST]   # fills the E-Class's missing sales
 
 # 10-24: every list is rebuilt from the data (the 10-24 sales-timing fix moved some numbers; hand-typed lists drifted).
@@ -83,11 +83,11 @@ def short(v):
     return f'{100 / v:.1f}× fewer complaints'.replace('.0×', '×') if v < 90 else 'about average' if v <= 110 else f'{v / 100:.1f}× the complaints'.replace('.0×', '×')
 
 def explorer():
+    for c in CARS: ph = mphoto(c['id']); c['img'] = ph['src'] if ph else ''   # 11-03 v6: a photo on every row
     data = json.dumps(CARS, ensure_ascii=False).replace('</', '<\\/')
     seed = ''.join(f'<div class="xr"><div class="xm"><span class="xk">#{c["rank"]}</span><span class="xn"><b>{E(c["name"])}</b><small>{c["segName"]} · {c["years"]}</small></span><span class="xb"><small>{plain(c["li"])}</small></span><span class="xi">{c["li"]}</span></div></div>' for c in CARS[:15])
     tabs = ''.join(f'<button type="button" data-seg="{k}" aria-pressed="{str(k == "all").lower()}">{l}</button>' for k, l in [('all', 'All'), ('car', 'Cars'), ('suv', 'SUVs'), ('truck', 'Trucks'), ('minivan', 'Minivans')])
-    return f'''<section class="ex" id="explore" aria-labelledby="ex-h"><div class="exh"><div><h2 id="ex-h">Compare every model</h2>
-<p class="sub">All {len(CARS)} models, model years 2010-2022. The Lemon Index compares a car's safety complaints per car sold with the average car: <b>100 is average, lower is better</b>. Hover a bar for what it means, click a car for details, tick two to compare.</p></div></div>
+    return f'''<section class="ex" id="explore" aria-labelledby="ex-h"><div class="exh"><div><h2 id="ex-h">Every model, ranked. <span class="h2s">Tap one for every year.</span></h2></div></div>
 <div class="exbar"><input id="xq" type="search" placeholder="Search a model, e.g. RAV4" aria-label="Search a model"><div class="tabs" role="group" aria-label="Type">{tabs}</div>
 <select id="xbrand" aria-label="Brand"></select><select id="xsort" aria-label="Sort"><option value="best">Most reliable first</option><option value="worst">Least reliable first</option><option value="sold">Most sold</option><option value="az">A to Z</option></select><span id="xcount" class="xcount"></span></div>
 <div class="xhead" aria-hidden="true"><span>Rank</span><span>Model</span><span>Compared with the average car <i class="avg">│ = average</i></span><span>Index</span><span>Sold</span><span>Top complaint</span><span></span></div>
@@ -131,13 +131,13 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None):
 <meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}{img or "/assets/og.png"}"><meta name="twitter:card" content="summary_large_image">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://static.nhtsa.gov; connect-src 'self' https://cloudflareinsights.com https://vpic.nhtsa.dot.gov https://lemon-survey.elift08.workers.dev; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"><link rel="stylesheet" href="/assets/site.css?v=1103l"><script src="/assets/nav.js?v=1103d" defer></script>{lds}</head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"><link rel="stylesheet" href="/assets/site.css?v=1103v6b"><script src="/assets/nav.js?v=1103d" defer></script>{lds}</head>
 <body><header class="top"><a class="brand" href="/"><img src="/assets/icon-64.png" alt="" width="32" height="32">The Lemon Index</a>
 <nav class="mainnav" aria-label="Main">{navlinks(path)}</nav><a class="yt" href="{YT}?sub_confirmation=1" rel="noopener">Subscribe</a></header>
 <main>{body}{CITE if path.startswith('/cars/') else ''}{'' if path == '/vote/' else ask_html(ask)}</main>
 <footer class="foot"><div class="cta"><div><h2>New car studies, straight from the data.</h2><p>Every study becomes a video. Subscribe to see the next one first.</p></div><a class="btn" href="{YT}?sub_confirmation=1" rel="noopener">Subscribe on YouTube</a></div>
 <p class="socs"><a href="{YT}" rel="noopener">YouTube</a> · <a href="{TT}" rel="noopener">TikTok</a> · <a href="{IG}" rel="noopener">Instagram</a> · <a href="/method/">How the index works</a> · <a href="/compare/">Compare cars</a> · <a href="/car-loan-rates/">Car loan rates</a> · <a href="/vote/">Vote</a> · <a href="/data/">Free data</a> · <button class="supl" type="button">Support the Lemon Index</button></p>
-<p class="fine"><a href="/terms/">Terms</a> · <a href="/privacy/">Privacy</a> · <a href="/refunds/">Refunds</a> · <a href="/contact/">Contact</a><br>© {TODAY[:4]} The Lemon Index. Built from public NHTSA complaint data and published U.S. sales figures. Not affiliated with any automaker. Not a repair-cost or safety rating.</p></footer><script src="/assets/explorer.js" defer></script><script src="/assets/support.js?v=1103d" defer></script><script src="/assets/lookup.js?v=1103" defer></script>{beacon}</body></html>'''
+<p class="fine"><a href="/terms/">Terms</a> · <a href="/privacy/">Privacy</a> · <a href="/refunds/">Refunds</a> · <a href="/contact/">Contact</a><br>© {TODAY[:4]} The Lemon Index. Built from public NHTSA complaint data and published U.S. sales figures. Not affiliated with any automaker. Not a repair-cost or safety rating.</p></footer><script src="/assets/explorer.js?v=1103v6" defer></script><script src="/assets/support.js?v=1103d" defer></script><script src="/assets/lookup.js?v=1103" defer></script>{beacon}</body></html>'''
     f = os.path.join(OUT, path.strip('/'), 'index.html') if path.endswith('/') else os.path.join(OUT, path.strip('/'))
     os.makedirs(os.path.dirname(f), exist_ok=True); open(f, 'w', encoding='utf-8').write(doc)
 
@@ -186,6 +186,46 @@ ICONS = {   # custom 24px line icons (stroke 1.8, round), drawn for the site 11-
 }
 icon = lambda k: f'<svg class="ico" viewBox="0 0 24 24" aria-hidden="true">{ICONS[k]}</svg>'
 
+_PH = json.load(open('data/photos.json', encoding='utf-8'))
+MPH = json.load(open('data/model_photos.json', encoding='utf-8')) if os.path.exists('data/model_photos.json') else {}   # one checked photo per model (data_model_photos.py)
+def mphoto(fid, year=None):
+    """A model's photo: the exact year when we have it, else its newest checked year, else the model photo. {src, w, h, author}."""
+    ys = _PH.get(fid, {})
+    if year and str(year) in ys: return ys[str(year)]
+    if ys: return ys[max(ys)]
+    return MPH.get(fid)
+def tiles():
+    from PIL import Image
+    yrs = {f['id']: f for f in json.load(open('data/years.json', encoding='utf-8'))}
+    fid = lambda c: c['id']
+    def img(ph, alt, cls=''):
+        return f'<img class="{cls}" src="{ph["src"]}" alt="{E(alt)}" width="{ph["w"]}" height="{ph["h"]}" loading="lazy">' if ph else ''
+    who = []
+    def car_tile(c, eyebrow, cls):
+        ph = mphoto(c['id']); ph and who.append(ph['author'].split('\ufffd')[0].strip())
+        return (f'<a class="tile {cls}" href="/cars/{c["id"]}/"><div class="tt"><p class="te">{eyebrow}</p><h2>{E(c["name"])}.</h2>'
+                f'<p class="ts">{E(plain(c["li"]))}.</p><span class="tl">See every year <i>›</i></span></div>'
+                f'<div class="tp">{img(ph, c["name"])}<span class="tsc {"good" if c["li"] < 100 else "bad"}">{c["li"]}</span></div></a>')
+    best, worst = CARS[0], CARS[-1]
+    a, b = mphoto('toyota-rav4', 2019), mphoto('honda-cr-v', 2017)
+    for ph in (a, b): ph and who.append(ph['author'].split('\ufffd')[0].strip())
+    vin = mphoto('toyota-camry', 2019); vin and who.append(vin['author'].split('\ufffd')[0].strip())
+    def vimg(name):
+        w, h = Image.open(f'assets/vote/{name}.webp').size
+        return {'src': f'/assets/vote/{name}.webp', 'w': w, 'h': h}
+    who += ['Ghostofakina', 'Kevauto']
+    t = [car_tile(best, 'Most reliable', 't-good'), car_tile(worst, 'Biggest lemon' + ('*' if worst['est'] else ''), 't-bad'),
+         f'<a class="tile" href="/compare/"><div class="tt"><p class="te">Compare</p><h2>Any two cars.</h2><p class="ts">Side by side, year by year.</p><span class="tl">Compare cars <i>›</i></span></div>'
+         f'<div class="tp tp2">{img(a, "Toyota RAV4", "l")}{img(b, "Honda CR-V", "r")}</div></a>',
+         f'<a class="tile" href="/vote/"><div class="tt"><p class="te">Vote</p><h2>Chevy or Ford?</h2><p class="ts">Plus best brand and worst insurer.</p><span class="tl">Cast your vote <i>›</i></span></div>'
+         f'<div class="tp tp2">{img(vimg("chevy"), "Chevy Silverado", "l")}{img(vimg("ford"), "Ford F-150", "r")}</div></a>',
+         f'<a class="tile" href="/vin/"><div class="tt"><p class="te">VIN check</p><h2>Open recalls.</h2><p class="ts">On the exact car you\'re looking at.</p><span class="tl">Check a VIN <i>›</i></span></div>'
+         f'<div class="tp">{img(vin, "Toyota Camry")}</div></a>',
+         f'<a class="tile t-dark" href="/data/"><div class="tt"><p class="te">Free data</p><h2>Take it. Credit us.</h2><p class="ts">Every score, as a spreadsheet.</p><span class="tl">Download <i>›</i></span></div>'
+         f'<div class="tp tsheet"><div class="tsh">' + ''.join(f'<span>{E(c["name"])}</span><span>{c["years"].split("-")[0]}–{c["years"].split("-")[-1][-2:]}</span><b class="{"good" if c["li"] < 100 else "bad"}">{c["li"]}</b>' for c in (CARS[0], CARS[1], CARS[len(CARS) // 2], CARS[-2], CARS[-1])) + '</div></div></a>']
+    cr = ' · '.join(dict.fromkeys(w for w in who if w))
+    return f'<section class="tiles">{"".join(t)}</section><p class="tiles-cr">Photos: {E(cr)} (Wikimedia Commons, CC BY-SA)' + (' · *Tesla uses estimated sales.' if worst['est'] else '') + '</p>'
+
 def hero_cards():
     """Two real cars, one great and one a lemon, as stacked report cards with their dial (exact-year Commons photos from data_photos.py)."""
     ph = json.load(open('data/photos.json', encoding='utf-8')); yrs = {f['id']: f for f in json.load(open('data/years.json', encoding='utf-8'))}
@@ -201,16 +241,13 @@ def hero_cards():
 best4, worst4 = CARS[0], CARS[-1]
 # 10-30: Google showed /method/ for "lemon index" (its h1 was the only one saying the brand), so the home h1 now carries the name too.
 page('/', "Lemon Index (LemonIndex): Look Up Any Car's Problems by Year", "Look up any car's problems by model year, 2000 to 2022: its reliability score, top problem areas and real owner complaints, from 1.6 million complaints filed with the government. 100 is the average car.", f'''
-<div class="hhero">{finder(h='<span class="fbrand">The Lemon Index</span>Look up any car')}{hero_cards()}</div>
-<section class="proof"><div><b>{COUNTED:,}</b><span>owner complaints counted</span></div><div><b>{len(CARS)}</b><span>models ranked</span></div><div><b>{sum(len(f['years']) for f in json.load(open('data/years.json', encoding='utf-8'))):,}</b><span>model years with a report</span></div><div><b>$0</b><span>every report is free</span></div><p>Data from NHTSA, the U.S. government&#39;s vehicle safety agency.</p></section>
-<section class="tools"><a href="/cars/">{icon('look')}<b>Look up a car</b><span>Problems, recalls and complaints by year</span></a><a href="/compare/">{icon('compare')}<b>Compare cars</b><span>Two or more, side by side</span></a><a href="/vin/">{icon('vin')}<b>Check a VIN</b><span>Open recalls on a specific car</span></a><a href="/car-loan-rates/">{icon('loan')}<b>Loan rate check</b><span>Is the dealer&#39;s rate fair?</span></a><a href="/vote/">{icon('vote')}<b>Vote</b><span>Chevy or Ford, best brand, worst insurer</span></a><a href="/data/">{icon('data')}<b>Free data</b><span>Download it, credit us</span></a></section>
-<section class="hero2"><p class="kicker">How to read a score</p><p class="sub">We counted {COUNTED:,} safety complaints owners filed with the government, then divided by how many of each car were sold. <b>100 is the average car</b>, lower is better.</p>
-<div class="scale"><div class="sbar"><i style="left:{min(96, best4["li"] / 3.5):.1f}%" title="{E(best4["name"])}, {best4["li"]}"></i></div><div class="sl"><span>25 · ¼ the complaints</span><span>100 · average car</span><span class="bad">300+ · 3× or worse</span></div></div></section>
+<div class="home"><div class="hhero">{finder(h='<span class="fbrand">The Lemon Index</span>Look up any car.', foot=f'<p class="fnote">From {COUNTED:,} owner complaints filed with the U.S. government.</p>')}{hero_cards()}</div>
+<section class="hread"><h2>100 is the average car. <span class="h2s">Lower is better.</span></h2>
+<div class="scale"><div class="sbar"><i style="left:{min(96, best4["li"] / 3.5):.1f}%" title="{E(best4["name"])}, {best4["li"]}"></i></div><div class="sl"><span>25 · ¼ the complaints</span><span>100 · average</span><span class="bad">300 · 3×</span></div></div></section>
+{tiles()}
 {explorer()}
-<section class="duo"><div><h2>The most reliable cars</h2><p class="sub">Lowest Lemon Index. Hover a bar to read it in plain English.</p>{bars([(n, v) for n, v, _ in BEST[:6]], 120)}</div>
-<div><h2>The biggest lemons</h2><p class="sub">Highest Lemon Index. * Tesla uses published sales estimates.</p>{bars([(n, v) for n, v, _ in WORST[:6]], 440)}</div></section>
-<section><h2>Every brand, best to worst</h2><p class="sub">All of a brand's models together, same scale: 100 is the average car.</p>{bars(BRANDS, 330, 'two')}<p class="note">* Porsche is a small sample (2 models, 258,000 sold). Tesla uses estimated U.S. sales.</p></section>
-<section class="faq"><h2>Questions</h2>{faq}</section>''',
+<section><h2>Every brand, best to worst.</h2>{bars(BRANDS, 330, 'two')}<p class="note">* Porsche is a small sample (2 models, 258,000 sold). Tesla uses estimated U.S. sales.</p></section>
+<section class="faq"><h2>Questions</h2>{faq}</section></div>''',
      ld=[{"@context": "https://schema.org", "@type": "WebSite", "name": "The Lemon Index", "alternateName": ["Lemon Index", "LemonIndex", "lemonindex", "lemonindex.com"], "url": BASE + '/'},
          {"@context": "https://schema.org", "@type": "Organization", "name": "The Lemon Index", "alternateName": ["Lemon Index", "LemonIndex", "lemonindex.com"], "url": BASE + '/', "logo": BASE + '/assets/icon-180.png', "sameAs": [YT, TT, IG]},
          {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in FAQ]}])

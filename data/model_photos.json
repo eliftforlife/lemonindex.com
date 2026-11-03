@@ -1,0 +1,767 @@
+{
+"lexus-es": {
+"src": "/assets/cars/m-lexus-es.webp",
+"w": 900,
+"h": 424,
+"author": "Alexander Migl",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2022_Lexus_ES_350_%28GSZ10%29_1X7A0296.jpg",
+"title": "File:2022 Lexus ES 350 (GSZ10) 1X7A0296.jpg"
+},
+"lexus-rx": {
+"src": "/assets/cars/m-lexus-rx.webp",
+"w": 900,
+"h": 482,
+"author": "Alexander Migl",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3ALexus_RX_350_L_FL_1X7A0345.jpg",
+"title": "File:Lexus RX 350 L FL 1X7A0345.jpg"
+},
+"porsche-macan": {
+"src": "/assets/cars/m-porsche-macan.webp",
+"w": 900,
+"h": 556,
+"author": "Throwawayacc222",
+"license": "CC0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2020_Porsche_Macan_GTS_grey_front.jpg",
+"title": "File:2020 Porsche Macan GTS grey front.jpg"
+},
+"nissan-frontier": {
+"src": "/assets/cars/m-nissan-frontier.webp",
+"w": 900,
+"h": 506,
+"author": "Alexander Migl",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3ANissan_Frontier_%28D41%29_Pro-4X_Automesse_Ludwigsburg_2022_1X7A5885.jpg",
+"title": "File:Nissan Frontier (D41) Pro-4X Automesse Ludwigsburg 2022 1X7A5885.jpg"
+},
+"honda-hr-v": {
+"src": "/assets/cars/m-honda-hr-v.webp",
+"w": 900,
+"h": 469,
+"author": "Alexander Migl",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AHonda_HR-V_Hybrid_Auto_Zuerich_2021_IMG_0619.jpg",
+"title": "File:Honda HR-V Hybrid Auto Zuerich 2021 IMG 0619.jpg"
+},
+"toyota-tacoma": {
+"src": "/assets/cars/m-toyota-tacoma.webp",
+"w": 900,
+"h": 445,
+"author": "DestinationFearFan",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AToyota_Tacoma_at_2019_SF_Auto_Show.jpg",
+"title": "File:Toyota Tacoma at 2019 SF Auto Show.jpg"
+},
+"kia-rio": {
+"src": "/assets/cars/m-kia-rio.webp",
+"w": 900,
+"h": 375,
+"author": "Elise240SX",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2012_Kia_Rio_5-Door_LX_in_Bright_Silver_Metallic%2C_front_left%2C_2024-05-27.jpg",
+"title": "File:2012 Kia Rio 5-Door LX in Bright Silver Metallic, front left, 2024-05-27.jpg"
+},
+"mercedes-benz-c-class": {
+"src": "/assets/cars/m-mercedes-benz-c-class.webp",
+"w": 900,
+"h": 515,
+"author": "Alexander Migl",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AMercedes-Benz_C-Class_All-Terrain_IAA_2021_1X7A0279.jpg",
+"title": "File:Mercedes-Benz C-Class All-Terrain IAA 2021 1X7A0279.jpg"
+},
+"kia-forte": {
+"src": "/assets/cars/m-kia-forte.webp",
+"w": 900,
+"h": 526,
+"author": "Dinkun Chen",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AKIA_FORTE_%28TD%29_China.jpg",
+"title": "File:KIA FORTE (TD) China.jpg"
+},
+"mercedes-benz-gla": {
+"src": "/assets/cars/m-mercedes-benz-gla.webp",
+"w": 900,
+"h": 417,
+"author": "Vauxford",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2018_Mercedes-Benz_GLA_220_AMG_Line_Exclusive_Diesel_4MATIC_2.1_Front.jpg",
+"title": "File:2018 Mercedes-Benz GLA 220 AMG Line Exclusive Diesel 4MATIC 2.1 Front.jpg"
+},
+"kia-sportage": {
+"src": "/assets/cars/m-kia-sportage.webp",
+"w": 900,
+"h": 559,
+"author": "JamesYoung8167",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AKia_Sportage_R_facelift_Shishi_01_2022-04-26.jpg",
+"title": "File:Kia Sportage R facelift Shishi 01 2022-04-26.jpg"
+},
+"mercedes-benz-m/gle": {
+"src": "/assets/cars/m-mercedes-benz-gle.webp",
+"w": 900,
+"h": 568,
+"author": "Alexander Migl",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AMercedes-Benz_GLE%2C_Paris_Motor_Show_2018%2C_IMG_0606.jpg",
+"title": "File:Mercedes-Benz GLE, Paris Motor Show 2018, IMG 0606.jpg"
+},
+"chevrolet-trax": {
+"src": "/assets/cars/m-chevrolet-trax.webp",
+"w": 900,
+"h": 597,
+"author": "Alexander Migl",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AChevrolet_Trax_Facelift_1X7A0307.jpg",
+"title": "File:Chevrolet Trax Facelift 1X7A0307.jpg"
+},
+"chevrolet-silverado": {
+"src": "/assets/cars/m-chevrolet-silverado.webp",
+"w": 900,
+"h": 552,
+"author": "Ghostofakina",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2019_Chevrolet_Silverado_1500_Crew_Cab_LT_%28front%29%2C_10.20.19.jpg",
+"title": "File:2019 Chevrolet Silverado 1500 Crew Cab LT (front), 10.20.19.jpg"
+},
+"gmc-terrain": {
+"src": "/assets/cars/m-gmc-terrain.webp",
+"w": 900,
+"h": 676,
+"author": "Jim Hudson Buick/Pontiac/GMC/Saab, http://www.jimhudsonsuperstore.com/",
+"license": "CC BY 3.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2010_GMC_Terrain_SLT2_FWD.jpg",
+"title": "File:2010 GMC Terrain SLT2 FWD.jpg"
+},
+"bmw-x5": {
+"src": "/assets/cars/m-bmw-x5.webp",
+"w": 900,
+"h": 570,
+"author": "JamesYoung8167",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3ABMW_X5_E70_facelift_Sanming_01_2022-08-22.jpg",
+"title": "File:BMW X5 E70 facelift Sanming 01 2022-08-22.jpg"
+},
+"mazda6": {
+"src": "/assets/cars/m-mazda6.webp",
+"w": 900,
+"h": 372,
+"author": "Vauxford",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2018_Mazda6_Sport_NAV%2B_Diesel_2.2_Front.jpg",
+"title": "File:2018 Mazda6 Sport NAV+ Diesel 2.2 Front.jpg"
+},
+"toyota-sienna": {
+"src": "/assets/cars/m-toyota-sienna.webp",
+"w": 900,
+"h": 584,
+"author": "Zotyefan",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AToyota_Sienna_in_Shanghai_20220129b.jpg",
+"title": "File:Toyota Sienna in Shanghai 20220129b.jpg"
+},
+"toyota-highlander": {
+"src": "/assets/cars/m-toyota-highlander.webp",
+"w": 900,
+"h": 395,
+"author": "Dietmar Rabich",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AMariposa_%28CA%2C_USA%29%2C_Fremont%27s_Fort_Historical_Marker%2C_Toyota_Highlander_--_2022_--_141813.jpg",
+"title": "File:Mariposa (CA, USA), Fremont's Fort Historical Marker, Toyota Highlander -- 2022 -- 141813.jpg"
+},
+"bmw-5-series": {
+"src": "/assets/cars/m-bmw-5-series.webp",
+"w": 900,
+"h": 353,
+"author": "Dinkun Chen",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3ABMW_5_SERIES_LWB_SEDAN_%28BMW_G38%29_China.jpg",
+"title": "File:BMW 5 SERIES LWB SEDAN (BMW G38) China.jpg"
+},
+"nissan-murano": {
+"src": "/assets/cars/m-nissan-murano.webp",
+"w": 900,
+"h": 583,
+"author": "User3204",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2015_Dongfeng-Nissan_Murano_%28front%29.jpg",
+"title": "File:2015 Dongfeng-Nissan Murano (front).jpg"
+},
+"nissan-sentra": {
+"src": "/assets/cars/m-nissan-sentra.webp",
+"w": 900,
+"h": 368,
+"author": "Mr.choppers",
+"license": "CC BY-SA 3.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2013_Nissan_Sentra_SR_front_left.jpg",
+"title": "File:2013 Nissan Sentra SR front left.jpg"
+},
+"nissan-versa": {
+"src": "/assets/cars/m-nissan-versa.webp",
+"w": 900,
+"h": 480,
+"author": "Kevauto",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2020_Nissan_Versa_SV_1.6L%2C_front_2.29.20.jpg",
+"title": "File:2020 Nissan Versa SV 1.6L, front 2.29.20.jpg"
+},
+"mercedes-benz-glk/glc": {
+"src": "/assets/cars/m-mercedes-benz-glc.webp",
+"w": 900,
+"h": 403,
+"author": "Vauxford",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2018_Mercedes-Benz_GLC_250_Urban_Edition_4MATIC_2.0_Front.jpg",
+"title": "File:2018 Mercedes-Benz GLC 250 Urban Edition 4MATIC 2.0 Front.jpg"
+},
+"audi-q7": {
+"src": "/assets/cars/m-audi-q7.webp",
+"w": 900,
+"h": 531,
+"author": "Matti Blume",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AAudi_Q7_V12_TDI%2C_EBACE_2018%2C_Le_Grand-Saconnex_%28BL7C0651%29.jpg",
+"title": "File:Audi Q7 V12 TDI, EBACE 2018, Le Grand-Saconnex (BL7C0651).jpg"
+},
+"audi-q3": {
+"src": "/assets/cars/m-audi-q3.webp",
+"w": 900,
+"h": 489,
+"author": "Vauxford",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2015_Audi_Q3_S_Line_TDi_Quattro_S-A_2.0_Front.jpg",
+"title": "File:2015 Audi Q3 S Line TDi Quattro S-A 2.0 Front.jpg"
+},
+"audi-q5": {
+"src": "/assets/cars/m-audi-q5.webp",
+"w": 900,
+"h": 605,
+"author": "Alexander Migl",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AAudi_Q5_FY_Facelift_IMG_4139.jpg",
+"title": "File:Audi Q5 FY Facelift IMG 4139.jpg"
+},
+"nissan-altima": {
+"src": "/assets/cars/m-nissan-altima.webp",
+"w": 900,
+"h": 393,
+"author": "Kevauto",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2019_Nissan_Altima_SL_2.5L_front_3.22.19.jpg",
+"title": "File:2019 Nissan Altima SL 2.5L front 3.22.19.jpg"
+},
+"hyundai-elantra": {
+"src": "/assets/cars/m-hyundai-elantra.webp",
+"w": 900,
+"h": 402,
+"author": "Elise240SX",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2022_Hyundai_Elantra_N_in_Fiery_Red%2C_Front_Left%2C_04-18-2022.jpg",
+"title": "File:2022 Hyundai Elantra N in Fiery Red, Front Left, 04-18-2022.jpg"
+},
+"chevrolet-traverse": {
+"src": "/assets/cars/m-chevrolet-traverse.webp",
+"w": 900,
+"h": 456,
+"author": "MercurySable99",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2017_Chevrolet_Traverse_LS_AWD%2C_08-14-2022.jpg",
+"title": "File:2017 Chevrolet Traverse LS AWD, 08-14-2022.jpg"
+},
+"chevrolet-tahoe": {
+"src": "/assets/cars/m-chevrolet-tahoe.webp",
+"w": 900,
+"h": 447,
+"author": "Kevauto",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2015_Chevrolet_Tahoe_LT_5.3L_front_3.24.19.jpg",
+"title": "File:2015 Chevrolet Tahoe LT 5.3L front 3.24.19.jpg"
+},
+"honda-fit": {
+"src": "/assets/cars/m-honda-fit.webp",
+"w": 900,
+"h": 591,
+"author": "JamesYoung8167",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AHonda_Fit_GK_Shishi_01_2022-09-24.jpg",
+"title": "File:Honda Fit GK Shishi 01 2022-09-24.jpg"
+},
+"chevrolet-colorado": {
+"src": "/assets/cars/m-chevrolet-colorado.webp",
+"w": 900,
+"h": 636,
+"author": "Ethan Llamas",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2017_Chevrolet_Colorado_2.8_LTZ_Z71_4x4_in_Orange_Crush%2C_front_right.jpg",
+"title": "File:2017 Chevrolet Colorado 2.8 LTZ Z71 4x4 in Orange Crush, front right.jpg"
+},
+"kia-soul": {
+"src": "/assets/cars/m-kia-soul.webp",
+"w": 900,
+"h": 645,
+"author": "Vauxford",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2019_Kia_Soul_EV_Front.jpg",
+"title": "File:2019 Kia Soul EV Front.jpg"
+},
+"chevrolet-camaro": {
+"src": "/assets/cars/m-chevrolet-camaro.webp",
+"w": 900,
+"h": 411,
+"author": "Kevauto",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2019_Chevrolet_Camaro_base%2C_front_11.9.19.jpg",
+"title": "File:2019 Chevrolet Camaro base, front 11.9.19.jpg"
+},
+"acura-mdx": {
+"src": "/assets/cars/m-acura-mdx.webp",
+"w": 900,
+"h": 679,
+"author": "Dinkun Chen",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AACURA_MDX_%28YD2%29_China_%285%29.jpg",
+"title": "File:ACURA MDX (YD2) China (5).jpg"
+},
+"mazda-cx-9": {
+"src": "/assets/cars/m-mazda-cx-9.webp",
+"w": 900,
+"h": 579,
+"author": "Ethan Llamas",
+"license": "CC0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2012_Mazda_CX-9_3.7L_V6_2WD%2C_front_left%2C_06-28-2024.jpg",
+"title": "File:2012 Mazda CX-9 3.7L V6 2WD, front left, 06-28-2024.jpg"
+},
+"chevrolet-cruze": {
+"src": "/assets/cars/m-chevrolet-cruze.webp",
+"w": 900,
+"h": 503,
+"author": "Alexander Migl",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AChevrolet_Cruze_Back_P4250805.jpg",
+"title": "File:Chevrolet Cruze Back P4250805.jpg"
+},
+"toyota-avalon": {
+"src": "/assets/cars/m-toyota-avalon.webp",
+"w": 900,
+"h": 379,
+"author": "Dinkun Chen",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3ATOYOTA_AVALON_China.jpg",
+"title": "File:TOYOTA AVALON China.jpg"
+},
+"dodge-challenger": {
+"src": "/assets/cars/m-dodge-challenger.webp",
+"w": 900,
+"h": 454,
+"author": "User:McChizzle",
+"license": "Public domain",
+"page": "https://commons.wikimedia.org/wiki/File%3A2015_Dodge_Challenger_SRT_392_Jazz_Blue_Pearl.jpg",
+"title": "File:2015 Dodge Challenger SRT 392 Jazz Blue Pearl.jpg"
+},
+"kia-optima": {
+"src": "/assets/cars/m-kia-optima.webp",
+"w": 900,
+"h": 362,
+"author": "Vauxford",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2018_Kia_Optima_2_CRDi_ISG_1.6_facelift_Front.jpg",
+"title": "File:2018 Kia Optima 2 CRDi ISG 1.6 facelift Front.jpg"
+},
+"chevrolet-sonic": {
+"src": "/assets/cars/m-chevrolet-sonic.webp",
+"w": 900,
+"h": 487,
+"author": "MercurySable99",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2012_Chevrolet_Sonic_LT_sedan%2C_front_right%2C_09-07-2024.jpg",
+"title": "File:2012 Chevrolet Sonic LT sedan, front right, 09-07-2024.jpg"
+},
+"gmc-sierra": {
+"src": "/assets/cars/m-gmc-sierra.webp",
+"w": 900,
+"h": 442,
+"author": "Kevauto",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2019_GMC_Sierra_AT4_5.3L_V8%2C_front_12.31.19.jpg",
+"title": "File:2019 GMC Sierra AT4 5.3L V8, front 12.31.19.jpg"
+},
+"chevrolet-spark": {
+"src": "/assets/cars/m-chevrolet-spark.webp",
+"w": 900,
+"h": 570,
+"author": "Mr.choppers",
+"license": "CC BY-SA 3.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2015_Chevrolet_Spark_ev%2C_left_front.jpg",
+"title": "File:2015 Chevrolet Spark ev, left front.jpg"
+},
+"bmw-x1": {
+"src": "/assets/cars/m-bmw-x1.webp",
+"w": 900,
+"h": 443,
+"author": "Vauxford",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2018_BMW_X1_sDrive18i_xLine_1.5_Front.jpg",
+"title": "File:2018 BMW X1 sDrive18i xLine 1.5 Front.jpg"
+},
+"chevrolet-suburban": {
+"src": "/assets/cars/m-chevrolet-suburban.webp",
+"w": 900,
+"h": 623,
+"author": "Ethan Llamas",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2017_Chevrolet_Suburban_5.3_LT_V8%2C_06-21-2024.jpg",
+"title": "File:2017 Chevrolet Suburban 5.3 LT V8, 06-21-2024.jpg"
+},
+"gmc-yukon": {
+"src": "/assets/cars/m-gmc-yukon.webp",
+"w": 900,
+"h": 538,
+"author": "Mr.choppers",
+"license": "CC BY-SA 3.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2021_GMC_Yukon_Denali_in_Hunter_Metallic%2C_front_left.jpg",
+"title": "File:2021 GMC Yukon Denali in Hunter Metallic, front left.jpg"
+},
+"hyundai-kona": {
+"src": "/assets/cars/m-hyundai-kona.webp",
+"w": 900,
+"h": 404,
+"author": "Harvey Bold",
+"license": "CC0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2019_Hyundai_Kona_Premium_SE_T-GDi_-_998cc_1.0_%28120PS%29_Petrol_-_Acid_Yellow_-_02-2025%2C_Front.jpg",
+"title": "File:2019 Hyundai Kona Premium SE T-GDi - 998cc 1.0 (120PS) Petrol - Acid Yellow - 02-2025, Front.jpg"
+},
+"ford-expedition": {
+"src": "/assets/cars/m-ford-expedition.webp",
+"w": 900,
+"h": 496,
+"author": "Ethan Llamas",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AFord_Expedition_EL_XLT_2012_%281%29.jpg",
+"title": "File:Ford Expedition EL XLT 2012 (1).jpg"
+},
+"chevrolet-malibu": {
+"src": "/assets/cars/m-chevrolet-malibu.webp",
+"w": 900,
+"h": 402,
+"author": "Kevauto",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2017_Chevrolet_Malibu_%28E2XX%29_front_3.25.18.jpg",
+"title": "File:2017 Chevrolet Malibu (E2XX) front 3.25.18.jpg"
+},
+"subaru-impreza": {
+"src": "/assets/cars/m-subaru-impreza.webp",
+"w": 900,
+"h": 363,
+"author": "MercurySable99",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2021_Subaru_Impreza_Sedan%2C_front_left%2C_02-06-2023.jpg",
+"title": "File:2021 Subaru Impreza Sedan, front left, 02-06-2023.jpg"
+},
+"gmc-acadia": {
+"src": "/assets/cars/m-gmc-acadia.webp",
+"w": 900,
+"h": 473,
+"author": "Kevauto",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2013_GMC_Acadia_front_4.27.18.jpg",
+"title": "File:2013 GMC Acadia front 4.27.18.jpg"
+},
+"acura-rdx": {
+"src": "/assets/cars/m-acura-rdx.webp",
+"w": 900,
+"h": 665,
+"author": "Dinkun Chen",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AACURA_RDX_TC1_China.jpg",
+"title": "File:ACURA RDX TC1 China.jpg"
+},
+"audi-a3": {
+"src": "/assets/cars/m-audi-a3.webp",
+"w": 900,
+"h": 472,
+"author": "Peulle",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AAudi_A3_SportBack_2017_%28front_right_side%29.jpg",
+"title": "File:Audi A3 SportBack 2017 (front right side).jpg"
+},
+"subaru-legacy": {
+"src": "/assets/cars/m-subaru-legacy.webp",
+"w": 900,
+"h": 447,
+"author": "M 93",
+"license": "CC BY-SA 3.0 de",
+"page": "https://commons.wikimedia.org/wiki/File%3ASubaru_Legacy_2.0i_Comfort_%28V%29_%E2%80%93_Frontansicht%2C_26._Juni_2011%2C_D%C3%BCsseldorf.jpg",
+"title": "File:Subaru Legacy 2.0i Comfort (V) – Frontansicht, 26. Juni 2011, Düsseldorf.jpg"
+},
+"ford-ecosport": {
+"src": "/assets/cars/m-ford-ecosport.webp",
+"w": 900,
+"h": 593,
+"author": "JamesYoung8167",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AFord_EcoSport_II_Facelift_Shishi_01_2022-09-06.jpg",
+"title": "File:Ford EcoSport II Facelift Shishi 01 2022-09-06.jpg"
+},
+"hyundai-santa-fe": {
+"src": "/assets/cars/m-hyundai-santa-fe.webp",
+"w": 900,
+"h": 511,
+"author": "Matti Blume",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AHyundai_Santa_Fe%2C_GIMS_2018%2C_Le_Grand-Saconnex_%281X7A1735%29.jpg",
+"title": "File:Hyundai Santa Fe, GIMS 2018, Le Grand-Saconnex (1X7A1735).jpg"
+},
+"volkswagen-jetta": {
+"src": "/assets/cars/m-volkswagen-jetta.webp",
+"w": 900,
+"h": 618,
+"author": "Alexander Migl",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2022_Volkswagen_Jetta_VII_1X7A0154.jpg",
+"title": "File:2022 Volkswagen Jetta VII 1X7A0154.jpg"
+},
+"mercedes-benz-cla": {
+"src": "/assets/cars/m-mercedes-benz-cla.webp",
+"w": 900,
+"h": 398,
+"author": "Vauxford",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2021_Mercedes-Benz_CLA_220d_Estate_2.0_Front.jpg",
+"title": "File:2021 Mercedes-Benz CLA 220d Estate 2.0 Front.jpg"
+},
+"volkswagen-tiguan": {
+"src": "/assets/cars/m-volkswagen-tiguan.webp",
+"w": 900,
+"h": 487,
+"author": "Alexander Migl",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AVolkswagen_Tiguan_Allspace_FL_1X7A0302.jpg",
+"title": "File:Volkswagen Tiguan Allspace FL 1X7A0302.jpg"
+},
+"kia-sedona": {
+"src": "/assets/cars/m-kia-sedona.webp",
+"w": 900,
+"h": 627,
+"author": "DoulosBen",
+"license": "CC BY 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2019_Kia_Sedona.jpg",
+"title": "File:2019 Kia Sedona.jpg"
+},
+"dodge-grand-caravan": {
+"src": "/assets/cars/m-dodge-grand-caravan.webp",
+"w": 900,
+"h": 584,
+"author": "CZmarlin — Christopher Ziemnowicz would appreciate a",
+"license": "CC0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2019_Dodge_Grand_Caravan_minivan_%28RT%29_Indigo_Blue_-_2of2.jpg",
+"title": "File:2019 Dodge Grand Caravan minivan (RT) Indigo Blue - 2of2.jpg"
+},
+"chrysler-300": {
+"src": "/assets/cars/m-chrysler-300.webp",
+"w": 900,
+"h": 345,
+"author": "MercurySable99",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2011_Chrysler_300%2C_front_right%2C_07-19-2023.jpg",
+"title": "File:2011 Chrysler 300, front right, 07-19-2023.jpg"
+},
+"jeep-patriot": {
+"src": "/assets/cars/m-jeep-patriot.webp",
+"w": 900,
+"h": 653,
+"author": "JamesYoung8167",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AJeep_Patriot_facelift_Sanming_01_2022-08-19.jpg",
+"title": "File:Jeep Patriot facelift Sanming 01 2022-08-19.jpg"
+},
+"kia-sorento": {
+"src": "/assets/cars/m-kia-sorento.webp",
+"w": 900,
+"h": 592,
+"author": "Dinkun Chen",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AKIA_SORENTO_%28XM%29_China.jpg",
+"title": "File:KIA SORENTO (XM) China.jpg"
+},
+"hyundai-sonata": {
+"src": "/assets/cars/m-hyundai-sonata.webp",
+"w": 900,
+"h": 509,
+"author": "Benespit",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A0_Hyundai_Sonata_%28DN8%29fl_1.jpg",
+"title": "File:0 Hyundai Sonata (DN8)fl 1.jpg"
+},
+"subaru-forester": {
+"src": "/assets/cars/m-subaru-forester.webp",
+"w": 900,
+"h": 515,
+"author": "Vauxford",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2014_Subaru_Forester_XC_Boxer_Diesel_Symmetrical_2.5_Front.jpg",
+"title": "File:2014 Subaru Forester XC Boxer Diesel Symmetrical 2.5 Front.jpg"
+},
+"ford-mustang": {
+"src": "/assets/cars/m-ford-mustang.webp",
+"w": 900,
+"h": 454,
+"author": "Vauxford",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2018_Ford_Mustang_GT_5.0_Front.jpg",
+"title": "File:2018 Ford Mustang GT 5.0 Front.jpg"
+},
+"jeep-compass": {
+"src": "/assets/cars/m-jeep-compass.webp",
+"w": 900,
+"h": 559,
+"author": "JamesYoung8167",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AJeep_Compass_MK_facelift_Shishi_01_2022-03-03.jpg",
+"title": "File:Jeep Compass MK facelift Shishi 01 2022-03-03.jpg"
+},
+"volkswagen-passat": {
+"src": "/assets/cars/m-volkswagen-passat.webp",
+"w": 900,
+"h": 411,
+"author": "Vauxford",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2010_Volkswagen_Passat_Highline_TDi_140_2.0_Front.jpg",
+"title": "File:2010 Volkswagen Passat Highline TDi 140 2.0 Front.jpg"
+},
+"hyundai-tucson": {
+"src": "/assets/cars/m-hyundai-tucson.webp",
+"w": 900,
+"h": 397,
+"author": "Jengtingchen",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AHyundai_Tucson_Chinese_facelift_004.jpg",
+"title": "File:Hyundai Tucson Chinese facelift 004.jpg"
+},
+"nissan-pathfinder": {
+"src": "/assets/cars/m-nissan-pathfinder.webp",
+"w": 900,
+"h": 475,
+"author": "EurovisionNim",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2018_Nissan_Pathfinder_%28R52_MY18%29_ST-L_wagon_%282018-09-28%29_01.jpg",
+"title": "File:2018 Nissan Pathfinder (R52 MY18) ST-L wagon (2018-09-28) 01.jpg"
+},
+"ford-escape": {
+"src": "/assets/cars/m-ford-escape.webp",
+"w": 900,
+"h": 578,
+"author": "Tyanroon-chan",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AFord_Escape_2014_EcoBoost.jpg",
+"title": "File:Ford Escape 2014 EcoBoost.jpg"
+},
+"honda-ridgeline": {
+"src": "/assets/cars/m-honda-ridgeline.webp",
+"w": 900,
+"h": 455,
+"author": "Kevauto",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2017_Honda_Ridgeline_front_5.12.18.jpg",
+"title": "File:2017 Honda Ridgeline front 5.12.18.jpg"
+},
+"jeep-grand-cherokee": {
+"src": "/assets/cars/m-jeep-grand-cherokee.webp",
+"w": 900,
+"h": 481,
+"author": "Alexander Migl",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AJeep_Grand_Cherokee_L_Overland_Automesse_Ludwigsburg_2022_1X7A5918.jpg",
+"title": "File:Jeep Grand Cherokee L Overland Automesse Ludwigsburg 2022 1X7A5918.jpg"
+},
+"volkswagen-golf": {
+"src": "/assets/cars/m-volkswagen-golf.webp",
+"w": 900,
+"h": 415,
+"author": "Vauxford",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2020_Volkswagen_Golf_Style_1.5_Front.jpg",
+"title": "File:2020 Volkswagen Golf Style 1.5 Front.jpg"
+},
+"ford-edge": {
+"src": "/assets/cars/m-ford-edge.webp",
+"w": 900,
+"h": 542,
+"author": "Matti Blume",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AFord_Edge%2C_IAA_2017%2C_%281Y7A3333%29.jpg",
+"title": "File:Ford Edge, IAA 2017, (1Y7A3333).jpg"
+},
+"dodge-durango": {
+"src": "/assets/cars/m-dodge-durango.webp",
+"w": 900,
+"h": 658,
+"author": "DestinationFearFan",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2014_Dodge_Durango_RT.jpg",
+"title": "File:2014 Dodge Durango RT.jpg"
+},
+"subaru-outback": {
+"src": "/assets/cars/m-subaru-outback.webp",
+"w": 900,
+"h": 407,
+"author": "Vauxford",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2018_Subaru_Outback_SE_Premium_Symmetrical_CVT_2.5_Front.jpg",
+"title": "File:2018 Subaru Outback SE Premium Symmetrical CVT 2.5 Front.jpg"
+},
+"subaru-ascent": {
+"src": "/assets/cars/m-subaru-ascent.webp",
+"w": 900,
+"h": 458,
+"author": "Kevauto",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2019_Subaru_Ascent_front_12.29.18.jpg",
+"title": "File:2019 Subaru Ascent front 12.29.18.jpg"
+},
+"ford-fiesta": {
+"src": "/assets/cars/m-ford-fiesta.webp",
+"w": 900,
+"h": 461,
+"author": "Vauxford",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2017_Ford_Fiesta_Zetec_Turbo_1.0_Front.jpg",
+"title": "File:2017 Ford Fiesta Zetec Turbo 1.0 Front.jpg"
+},
+"hyundai-palisade": {
+"src": "/assets/cars/m-hyundai-palisade.webp",
+"w": 900,
+"h": 572,
+"author": "SsmIntrigue",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2020_Hyundai_Palisade_08-11-2019_2.jpg",
+"title": "File:2020 Hyundai Palisade 08-11-2019 2.jpg"
+},
+"kia-telluride": {
+"src": "/assets/cars/m-kia-telluride.webp",
+"w": 900,
+"h": 399,
+"author": "Kevauto",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2019_Kia_Telluride_EX_V6_front_4.14.19.jpg",
+"title": "File:2019 Kia Telluride EX V6 front 4.14.19.jpg"
+},
+"dodge-dart": {
+"src": "/assets/cars/m-dodge-dart.webp",
+"w": 900,
+"h": 395,
+"author": "order_242 from Chile",
+"license": "CC BY-SA 2.0",
+"page": "https://commons.wikimedia.org/wiki/File%3ADodge_Dart_2.0_Rallye_2014_%2814217526095%29.jpg",
+"title": "File:Dodge Dart 2.0 Rallye 2014 (14217526095).jpg"
+},
+"tesla-model-s": {
+"src": "/assets/cars/m-tesla-model-s.webp",
+"w": 900,
+"h": 402,
+"author": "Granada",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A20180630_Tesla_Model_S_70D_2015_midnight_blue_left_front.jpg",
+"title": "File:20180630 Tesla Model S 70D 2015 midnight blue left front.jpg"
+}
+}
