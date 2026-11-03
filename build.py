@@ -730,7 +730,7 @@ page('/data/', 'Free Car Reliability Data (CSV, CC BY 4.0) | Lemon Index',
          _ds('Transmission complaints by car model year', 'Transmission-related NHTSA owner complaints for each model year, as a count and per 100,000 cars sold.', '/data/transmission-complaints-by-year.csv', _cols2)])
 
 # ---- vote page (11-03): polls in data/votes.json (data_votes.py), counts from the lemon-survey Worker (/v). TS = Turnstile site key (public) once Elijah creates it.
-TS = '0x4AAAAAAFygoDtl00wuETO5'   # Turnstile site key (public, 11-03); the secret lives only in the lemon-survey Worker as TURNSTILE_SECRET
+TS = '0x4AAAAAAFyg56cSqOq1GMWQ'   # Turnstile site key (public, 11-03); the secret lives only in the lemon-survey Worker as TURNSTILE_SECRET
 page('/vote/', 'Vote: Most Reliable Car Brand, Best Insurance, Best Years | Lemon Index',
      'Vote on the most reliable car brand, the best and worst car insurance, the best used SUV, truck and model years. See what won this week, this month or all time.',
      f'''<section class="vote-hero"><p class="kicker"><a href="/cars/">All cars</a> · Vote</p><h1>What do car owners really think?</h1>
