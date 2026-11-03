@@ -1,13 +1,13 @@
 // "Keep it free" support popup (Elijah 11-02, like Blender's donate prompt). Amounts open Stripe Payment Links; nothing card-related runs on this site.
-// Hidden until the links below are filled in. Shows once per 14 days, only on car/report pages, after the reader has scrolled or stayed a while.
+// Shows on car/report pages after 15 s of reading (tab in front; value first, Elijah 11-03). Once per 14 days after "Maybe later", 60 days after "Chip in".
 (() => {
   const LINKS = { 5: 'https://buy.stripe.com/eVqdR84Z25u7gtC5l9gA800', 10: 'https://buy.stripe.com/8x27sK6362hV6T2fZNgA801', 15: 'https://buy.stripe.com/9B68wO636cWz6T2bJxgA802', custom: 'https://buy.stripe.com/00w28q1MQ8Gjb9ifZNgA803' };   // Stripe Payment Links: three fixed amounts + one "customer chooses what to pay"
-  const KEY = 'li-support-seen', DAYS = 14;
+  const KEY = 'li-support-seen', DAYS = 14, PAID = 'li-support-paid', PAID_DAYS = 60, READ_MS = 15000;
   const ready = Object.values(LINKS).every(Boolean);
   const isReport = /^\/(cars|electric|compare)\//.test(location.pathname) && location.pathname.split('/').filter(Boolean).length >= 2;
   const qs = new URLSearchParams(location.search);
   if (!(ready || qs.has('support-preview'))) { document.querySelectorAll('.supl').forEach(b => b.hidden = true); return; }
-  const seen = () => { try { return Date.now() - (+localStorage.getItem(KEY) || 0) < DAYS * 864e5; } catch { return false; } };
+  const seen = () => { try { return Date.now() - (+localStorage.getItem(KEY) || 0) < DAYS * 864e5 || Date.now() - (+localStorage.getItem(PAID) || 0) < PAID_DAYS * 864e5; } catch { return false; } };
   const mark = () => { try { localStorage.setItem(KEY, String(Date.now())); } catch {} };
   let pick = 10;
   const box = document.createElement('div');
@@ -34,12 +34,13 @@
   box.querySelector('.sup-x').onclick = close; box.querySelector('.sup-later').onclick = close;
   box.addEventListener('click', e => { if (e.target === box) close(); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape' && !box.hidden) close(); });
-  go.addEventListener('click', () => mark());
+  go.addEventListener('click', () => { mark(); try { localStorage.setItem(PAID, String(Date.now())); } catch {} });
   sync();
   const open = () => { if (box.hidden && !seen()) { box.hidden = false; go.focus(); } };
   window.liSupport = () => { box.hidden = false; go.focus(); };   // footer "Support the Lemon Index" link
   if (qs.has('support-preview')) return open();
   if (!isReport || seen()) return;
-  let t = setTimeout(open, 40000);
-  addEventListener('scroll', function f() { const p = (scrollY + innerHeight) / document.documentElement.scrollHeight; if (p > .7) { clearTimeout(t); removeEventListener('scroll', f); setTimeout(open, 1200); } }, { passive: true });
+  // count only time the tab is actually in front, so a background tab never pops it
+  let read = 0, last = Date.now();
+  const tick = setInterval(() => { const now = Date.now(); if (document.visibilityState === 'visible') read += now - last; last = now; if (read >= READ_MS) { clearInterval(tick); open(); } }, 500);
 })();
