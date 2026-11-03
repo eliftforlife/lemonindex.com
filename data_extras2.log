@@ -1,0 +1,17 @@
+2680 make/model/year keys
+read MFR_COMMS_RECEIVED_2000-2004.zip 496
+read MFR_COMMS_RECEIVED_2005-2009.zip 924
+read MFR_COMMS_RECEIVED_2010-2014.zip 1770
+read MFR_COMMS_RECEIVED_2015-2019.zip 2422
+read MFR_COMMS_RECEIVED_2020-2024.zip 2674
+read MFR_COMMS_RECEIVED_2025-2026.zip 2677
+ratings 200/1955 70s
+ratings 400/1955 135s
+ratings 600/1955 308s
+ratings 800/1955 351s
+ratings 1000/1955 385s
+ratings 1200/1955 546s
+ratings 1400/1955 649s
+ratings 1600/1955 773s
+ratings 1800/1955 865s
+sample 2008 Odyssey: {"tech": {"esc": "Standard", "fcw": "No", "ldw": "No"}, "photo": "https://static.nhtsa.gov/crashTest/images/2008/05Odyssey-f.jpg", "old": {"front": 5, "side": 5, "roll": 4}, "tsb": {"n": 60, "top": ["HONDA: SLIDING DOOR DOES NOT OPEN ALL THE WAY EVEN THOUGH WINDOW IS CLOSED", "HONDA: POWER DOORS CONTINUALLY LOCK, MULTIPLE TIMES, WHILE DRIVING", "HONDA: THE ENGINE SHUTS OFF, POWER ON, BUT IN ACCESSORY; NEVER USE CONVENTIONAL WHEEL & TIRE ASSEMBLIES ON…"]}, "inv": [{"id": "PE13024", "part": "Electronic Stability Control", "opened": "2013", "closed": "2013", "subject": "Inappropriate autonomous braking", "open": false}, {"id": "EQ12010", "part": "Structure:Body:Hatchback/Liftgate:Support Device/Strut", "opened": "2012", "closed": "2012", "subject": "Stabilus rear liftgate struts failing", "open": false}, {"id": "PE11034", "part": "Structure:Body:Tailgate", "opened": "2011", "closed": "2012"
