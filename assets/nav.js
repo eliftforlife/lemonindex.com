@@ -8,3 +8,7 @@
   addEventListener('scroll', () => { if (tick) return; tick = true; requestAnimationFrame(() => {
     const y = scrollY, d = y - last; if (Math.abs(d) > 6) { top.classList.toggle('tuck', d > 0 && y > 140 && !top.contains(document.activeElement)); last = y; } tick = false; }); }, { passive: true });
 })();
+// score dials (11-03): the needle swings in when the dial scrolls into view
+(() => { const g = document.querySelectorAll('[data-gauge]'); if (!g.length) return;
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return g.forEach(e => e.classList.add('in'));
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .4 }); g.forEach(e => io.observe(e)); })();

@@ -131,7 +131,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None):
 <meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}{img or "/assets/og.png"}"><meta name="twitter:card" content="summary_large_image">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://static.nhtsa.gov; connect-src 'self' https://cloudflareinsights.com https://vpic.nhtsa.dot.gov https://lemon-survey.elift08.workers.dev; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap"><link rel="stylesheet" href="/assets/site.css?v=1103g"><script src="/assets/nav.js?v=1103" defer></script>{lds}</head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;600;700;800;900&display=swap"><link rel="stylesheet" href="/assets/site.css?v=1103h"><script src="/assets/nav.js?v=1103b" defer></script>{lds}</head>
 <body><header class="top"><a class="brand" href="/"><img src="/assets/icon-64.png" alt="" width="32" height="32">The Lemon Index</a>
 <nav class="mainnav" aria-label="Main">{navlinks(path)}</nav><a class="yt" href="{YT}?sub_confirmation=1" rel="noopener">Subscribe</a></header>
 <main>{body}{CITE if path.startswith('/cars/') else ''}{'' if path == '/vote/' else ask_html(ask)}</main>
@@ -153,11 +153,53 @@ seg_rows = ''.join(f'<tr><td><b>{E(a)}</b></td><td>{E(b)}</td><td>{E(c)}</td></t
 faq = ''.join(f'<details><summary>{E(q)}</summary><p>{E(a)}</p></details>' for q, a in FAQ)
 os.makedirs(OUT, exist_ok=True)
 
+# ---- 11-03 redesign (Elijah: "why do Apple and Stripe look less AI-made... add all these things"): a signature score dial built from the
+# logo's gauge, a hero with real car photos, a proof row and custom line icons. Yellow stays an accent (the dial's hub, the logo).
+def gauge(li, size=220, label=True):
+    """The Lemon gauge: a speedometer from 0 to 300 (100 = the average car); green below 75, gray around average, red above 125.
+    The needle swings in when the dial scrolls into view (assets/nav.js adds .in). Scores past 300 peg the needle and still print the real number."""
+    cx, cy, r = 120, 118, 92
+    pt = lambda v, rr=r: (cx - rr * __import__('math').cos(__import__('math').pi * min(v, 300) / 300), cy - rr * __import__('math').sin(__import__('math').pi * min(v, 300) / 300))
+    def arc(a, b, col):
+        (x1, y1), (x2, y2) = pt(a), pt(b)
+        return f'<path d="M{x1:.1f} {y1:.1f}A{r} {r} 0 0 1 {x2:.1f} {y2:.1f}" stroke="{col}" />'
+    ticks = ''.join(f'<line x1="{pt(v, r - 16)[0]:.1f}" y1="{pt(v, r - 16)[1]:.1f}" x2="{pt(v, r - 24 if v % 100 else r - 30)[0]:.1f}" y2="{pt(v, r - 24 if v % 100 else r - 30)[1]:.1f}" />' for v in range(0, 301, 25))
+    nums = ''.join(f'<text x="{pt(v, r - 44)[0]:.1f}" y="{pt(v, r - 44)[1] + 5:.1f}">{v}</text>' for v in (0, 100, 200, 300))
+    a = min(li, 300) / 300 * 180 - 90
+    cls = 'good' if li < 75 else 'bad' if li > 125 else 'mid'
+    return (f'<figure class="gauge {cls}" data-gauge style="--a:{a:.1f}deg;width:{size}px" aria-label="Lemon Index {li}: {E(plain(li))}">'
+            f'<svg viewBox="0 0 240 150" role="img" aria-hidden="true"><g class="g-arc" fill="none" stroke-width="16" stroke-linecap="butt">{arc(0, 74, "#1a8f4c")}{arc(76, 124, "#c9ccd1")}{arc(126, 300, "#e8141c")}</g>'
+            f'<g class="g-tick">{ticks}</g><g class="g-num">{nums}</g><g class="g-ndl"><path d="M{cx - 4} {cy}L{cx} {cy - r + 6}L{cx + 4} {cy}Z" /><circle cx="{cx}" cy="{cy}" r="11" /><circle class="g-hub" cx="{cx}" cy="{cy}" r="5" /></g></svg>'
+            f'<figcaption><b>{li}</b>{"<span>Lemon Index · 100 = average car</span>" if label else ""}</figcaption></figure>')
+
+ICONS = {   # custom 24px line icons (stroke 1.8, round), drawn for the site 11-03
+ 'look': '<circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/><path d="M7.5 11.5l1-2.2h4l1 2.2v1.6h-6z"/><circle cx="8.6" cy="13.4" r=".6"/><circle cx="12.4" cy="13.4" r=".6"/>',
+ 'compare': '<rect x="3" y="9" width="6.5" height="11" rx="1.5"/><rect x="14.5" y="4" width="6.5" height="16" rx="1.5"/><path d="M6.2 5.5h4M17.8 1.8v0"/><path d="M8 5.5l2.2-2M8 5.5l2.2 2"/>',
+ 'vin': '<rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M6.5 9v6M9 9v6M11 9v6M14 9v6M16 9v6M17.8 9v6"/>',
+ 'loan': '<path d="M4 12.5 11.5 5H19v7.5L11.5 20z"/><circle cx="15.3" cy="8.7" r="1.3"/><path d="M8.6 14.6l3.6-3.6"/>',
+ 'vote': '<path d="M5 11h14l1.5 9h-17z"/><path d="M8 11V4.5h8V11"/><path d="M10.2 7.6l1.4 1.4 2.6-2.8"/>',
+ 'data': '<ellipse cx="12" cy="5.5" rx="7.5" ry="2.8"/><path d="M4.5 5.5v6c0 1.5 3.4 2.8 7.5 2.8s7.5-1.3 7.5-2.8v-6"/><path d="M4.5 11.5v6c0 1.5 3.4 2.8 7.5 2.8s7.5-1.3 7.5-2.8v-6"/>',
+}
+icon = lambda k: f'<svg class="ico" viewBox="0 0 24 24" aria-hidden="true">{ICONS[k]}</svg>'
+
+def hero_cards():
+    """Two real cars, one great and one a lemon, as stacked report cards with their dial (exact-year Commons photos from data_photos.py)."""
+    ph = json.load(open('data/photos.json', encoding='utf-8')); yrs = {f['id']: f for f in json.load(open('data/years.json', encoding='utf-8'))}
+    out = []
+    for fid, y, cls in (('toyota-rav4', 2016, 'hc-1'), ('jeep-cherokee', 2014, 'hc-2')):
+        f = yrs[fid]; v = next(w for w in f['years'] if w['y'] == y); im = ph[fid][str(y)]
+        top = (v.get('parts') or [['', 0]])[0][0]
+        out.append(f'<a class="hc {cls}" href="/cars/{fid}/{y}/"><img src="{im["src"]}" alt="{y} {E(f["name"])}" width="{im["w"]}" height="{im["h"]}" loading="eager">'
+                   f'<div class="hc-b"><div><b>{y} {E(f["name"])}</b><span>{E(plain(v["li"]))}</span>{f"<small>Top complaint: {E(top.split(",")[0])}</small>" if top else ""}</div>{gauge(v["li"], 128, False)}</div></a>')
+    return f'<div class="hcs">{"".join(out)}<p class="hc-cr">Photos: Wikimedia Commons</p></div>'
+
 # ---- home: the car finder first (10-29), how to read a score, the explorer, then best vs worst side by side, then brands
 best4, worst4 = CARS[0], CARS[-1]
 # 10-30: Google showed /method/ for "lemon index" (its h1 was the only one saying the brand), so the home h1 now carries the name too.
 page('/', "Lemon Index (LemonIndex): Look Up Any Car's Problems by Year", "Look up any car's problems by model year, 2000 to 2022: its reliability score, top problem areas and real owner complaints, from 1.6 million complaints filed with the government. 100 is the average car.", f'''
-{finder(h='<span class="fbrand">The Lemon Index</span>Look up any car')}
+<div class="hhero">{finder(h='<span class="fbrand">The Lemon Index</span>Look up any car')}{hero_cards()}</div>
+<section class="proof"><div><b>{COUNTED:,}</b><span>owner complaints counted</span></div><div><b>{len(CARS)}</b><span>models ranked</span></div><div><b>{sum(len(f['years']) for f in json.load(open('data/years.json', encoding='utf-8'))):,}</b><span>model years with a report</span></div><div><b>$0</b><span>every report is free</span></div><p>Data from NHTSA, the U.S. government&#39;s vehicle safety agency.</p></section>
+<section class="tools"><a href="/cars/">{icon('look')}<b>Look up a car</b><span>Problems, recalls and complaints by year</span></a><a href="/compare/">{icon('compare')}<b>Compare cars</b><span>Two or more, side by side</span></a><a href="/vin/">{icon('vin')}<b>Check a VIN</b><span>Open recalls on a specific car</span></a><a href="/car-loan-rates/">{icon('loan')}<b>Loan rate check</b><span>Is the dealer&#39;s rate fair?</span></a><a href="/vote/">{icon('vote')}<b>Vote</b><span>Chevy or Ford, best brand, worst insurer</span></a><a href="/data/">{icon('data')}<b>Free data</b><span>Download it, credit us</span></a></section>
 <section class="hero2"><p class="kicker">How to read a score</p><p class="sub">We counted {COUNTED:,} safety complaints owners filed with the government, then divided by how many of each car were sold. <b>100 is the average car</b>, lower is better.</p>
 <div class="scale"><div class="sbar"><i style="left:{min(96, best4["li"] / 3.5):.1f}%" title="{E(best4["name"])}, {best4["li"]}"></i></div><div class="sl"><span>25 · ¼ the complaints</span><span>100 · average car</span><span class="bad">300+ · 3× or worse</span></div></div></section>
 {explorer()}
@@ -401,7 +443,7 @@ def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
     rec = x.get('recalls') or []; m = x.get('mpg'); sf = x.get('safety'); s = x.get('sev') or {}
     if v['ok']:
         cls, word = verdict(v['li'])
-        hero = (f'<div class="yv {cls}"><b>{word}</b><span>{E(plain(v["li"]))}</span></div>{meter(v["li"])}')
+        hero = f'<div class="yhero">{gauge(v["li"], 200)}<div class="yv {cls}"><b>{word}</b><span>{E(plain(v["li"]))}</span></div></div>'
     else:
         hero = f'<div class="yv mid"><b>Not enough data</b><span>Only {v["n"]} complaints in its first 3 years: too few to score.</span></div>'
     old = '<p class="yc-note">Older model year: fewer owners filed complaints back then, so treat the score as rough.</p>' if y < 2010 else ''
