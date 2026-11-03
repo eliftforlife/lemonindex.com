@@ -99,7 +99,7 @@ def ask_html(ask):
     """'Help our site' question box (assets/survey.js). ask = (family id, model year, '2018 Honda Odyssey') on car-year pages."""
     fid, y, name = ask or ('', '', '')
     return (f'<section class="ask" id="ask" hidden data-fid="{E(fid)}" data-year="{y or ""}" data-car="{E(name)}"></section>'
-            '<script src="/assets/survey.js?v=1103" defer></script>')
+            '<script src="/assets/survey.js?v=1103" defer></script><script src="/assets/share.js?v=1103" defer></script>')
 def fit_title(t):
     if len(t) > 65 and t.endswith(' | The Lemon Index'): t = t[:-len(' | The Lemon Index')] + ' | Lemon Index'
     if len(t) > 65 and t.endswith(' | Lemon Index'): t = t[:-len(' | Lemon Index')]
@@ -122,8 +122,8 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None):
 <meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}{img or "/assets/og.png"}"><meta name="twitter:card" content="summary_large_image">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://static.nhtsa.gov; connect-src 'self' https://cloudflareinsights.com https://vpic.nhtsa.dot.gov https://lemon-survey.elift08.workers.dev; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap"><link rel="stylesheet" href="/assets/site.css?v=1103">{lds}</head>
-<body><a class="spons" href="https://mealmonster.app/?utm_source=lemonindex&amp;utm_medium=sponsor_bar" rel="noopener">Sponsored by <b>Meal Monster</b> · the easy food tracker</a><header class="top"><a class="brand" href="/"><img src="/assets/icon-64.png" alt="" width="32" height="32">The Lemon Index</a>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap"><link rel="stylesheet" href="/assets/site.css?v=1103b">{lds}</head>
+<body><header class="top"><a class="brand" href="/"><img src="/assets/icon-64.png" alt="" width="32" height="32">The Lemon Index</a>
 <nav><a href="/cars/">Look up a car</a><a href="/electric/">Electric</a><a href="/studies/">Studies</a><a href="/compare/">Compare</a><a href="/vin/">VIN check</a><a href="/method/">How it works</a><a class="yt" href="{YT}?sub_confirmation=1" rel="noopener">Subscribe</a></nav></header>
 <main>{body}{ask_html(ask)}</main>
 <footer class="foot"><div class="cta"><div><h2>New car studies, straight from the data.</h2><p>Every study becomes a video. Subscribe to see the next one first.</p></div><a class="btn" href="{YT}?sub_confirmation=1" rel="noopener">Subscribe on YouTube</a></div>
@@ -388,6 +388,7 @@ def year_faq(f, v, y, x, best):
     return [(q, a, re.sub('<[^>]+>', '', html.unescape(a))) for q, a in out]
 def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
     nm = E(SNM(f)); x2 = X2.get(f['id'], {}).get(str(y), {}); mkr = E(MAKER(f['name']))
+    share_txt = (f'{y} {SNM(f)}: {plain(v["li"])} per car sold' if v['ok'] else f'{y} {SNM(f)}: owner complaints and recalls') + (f', {len(x["recalls"])} recalls' if x.get('recalls') else '') + '. Free report:'
     rec = x.get('recalls') or []; m = x.get('mpg'); sf = x.get('safety'); s = x.get('sev') or {}
     if v['ok']:
         cls, word = verdict(v['li'])
@@ -452,7 +453,7 @@ def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
 <article class="yp"><p class="kicker"><a href="/cars/">All cars</a> · <a href="{CARU(f)}">{nm}</a> · {y}</p>
 {car_photo(f["id"], y, f["name"])}<div class="ytop"><header class="yh"><h1>{y} {nm}</h1><p class="yh-sub">Reliability, problems and recalls</p>{f'<p class="yc-note">{SN[f["id"]][1]}</p>' if f["id"] in SN else ""}{hero}{old}</header>
 <div class="ytop-r"><div class="yts">{tiles}</div>
-<div class="ychips">{yrs}{nav}<a class="ychip" href="{CARU(f)}"><small>every</small><b>all years</b></a><a class="ychip ycmp" href="/compare/?c={f['id']}-{y}"><small>side by side</small><b>Compare ⇄</b></a></div></div></div>
+<div class="ychips">{yrs}{nav}<a class="ychip" href="{CARU(f)}"><small>every</small><b>all years</b></a><a class="ychip ycmp" href="/compare/?c={f['id']}-{y}"><small>side by side</small><b>Compare ⇄</b></a><button type="button" class="ychip yshare" data-share="{E(share_txt)}"><small>send to a friend</small><b>Share ↗</b></button></div></div></div>
 <div class="ygrid">{probs}{timeline(x["miles"], x.get("comps") or []) if x.get("miles") else ""}{(lambda ph: f'<section class="yc ywide">{ph}</section>' if ph else '')(price_html(f["id"], y, f["name"]))}{sev}{recs}
 {fixes}{invs}{safety}{f'<section class="yc">{crash}{fuel}</section>' if crash or fuel else ''}{words}
 {f'<section class="yc ywide yqa"><h2>Quick answers</h2>' + "".join(f"<h3>{E(q)}</h3><p>{a}</p>" for q, a, _ in qa) + '</section>' if qa else ''}
@@ -488,6 +489,7 @@ for f in YEARS:
          f'Every {snm} model year from {ys[0]["y"]} to {ys[-1]["y"]}, ranked by NHTSA owner complaints per car sold. Best: {best["y"]}. Worst: {worst["y"]} ({plain(worst["li"])}).', f'''
 <article class="study"><p class="kicker"><a href="/cars/">All cars</a> · {E(c["segName"])}</p><h1>{E(snm)} reliability by year</h1>{f'<p class="sub">{SN[f["id"]][1]}</p>' if f["id"] in SN else ""}
 <p class="lede">Best year: <b>{best["y"]}</b>, {plain(best["li"])}. Worst year: <b>{worst["y"]}</b>, {plain(worst["li"])}. Click a year to see what owners reported.</p>
+<p><button type="button" class="btn btn-ghost" data-share="{E(f'Every {snm} year ranked by owner complaints. Best: {best["y"]}. Worst: {worst["y"]}. Free report:')}">Share ↗</button></p>
 <p class="sub">Lemon Index = safety complaints filed with the government within 3 years, per car sold, compared with the average car of the same model year. <b>100 is average, lower is better.</b>{" Scores before 2010 are rough: fewer owners filed complaints back then." if ys[0]["y"] < 2010 else ""}</p>
 {ybars(f)}{picks}{model_qa_html}<h2>Every year</h2><div class="tw"><table><thead><tr><th>Year</th><th>Index</th><th>Compared with average</th><th>Complaints</th><th>Top complaint</th><th>Recalls</th><th>Crash test</th><th>MPG</th></tr></thead><tbody>{rows}</tbody></table></div>
 <p class="note">Whole model ({c["years"]}): Lemon Index {c["li"]}, {plain(c["li"])}. <a href="/method/">How the index works</a></p>{f'<p><a class="btn" href="{CARU(f)}transmission/">{E(snm)} transmission problems by year →</a></p>' if f["id"] in TR else ''}{f'<h2>Compare the {E(f["name"])}</h2><p>{vs}</p>' if vs else ''}</article>''',
@@ -549,6 +551,7 @@ def trans_body(f):
     body = f'''
 <article class="study"><p class="kicker"><a href="/cars/">All cars</a> · <a href="{CARU(f)}">{nm}</a> · Transmission</p><h1>{nm} transmission problems by year</h1>
 <p class="lede">Worst years for transmission complaints per car sold: <b>{wtxt}</b>.{f" Fewest since 2010: <b>{', '.join(str(y) for y, _ in best)}</b>." if best else ""}</p>
+<p><button type="button" class="btn btn-ghost" data-share="{E(f'{SNM(f)} transmission problems by year. Worst: {", ".join(str(y) for y, _ in worst)}. Free report:')}">Share ↗</button></p>
 <p class="sub">Transmission complaints owners filed with the U.S. government (NHTSA) for each model year, per 100,000 cars sold. A complaint counts when it&#39;s filed under the transmission, or under the power train and the owner describes the transmission (shifting, slipping, gears, CVT). It&#39;s an owner&#39;s report, not a confirmed defect, and older years have had longer to collect complaints.</p>
 <div class="bars yb">{bars}</div>
 {f'<h2>What owners describe</h2><div class="pts">{sym}</div><p class="note">Share of this model&#39;s transmission complaints that mention each symptom. One complaint can mention several.</p>' if sym else ''}

@@ -327,3 +327,16 @@ table.price td:first-child { white-space: nowrap; } table.price th small { font-
 .ask-n { margin: 12px 0 0; font-weight: 600; color: var(--ink2); }
 .ask-next { margin-top: 12px; }
 .ask-fine { margin: 12px 0 0; font-size: 13px; color: var(--mute); }
+
+/* share (11-03) */
+button.ychip { font: inherit; cursor: pointer; } .yshare { background: var(--lemon); border-color: var(--ink); }
+.btn-ghost { background: #fff; color: var(--ink); border: 2px solid var(--ink); }
+.shr { position: fixed; inset: 0; z-index: 9; background: rgba(17, 18, 20, .45); display: grid; place-items: end center; padding: 16px; }
+.shr[hidden] { display: none; }
+.shr-card { position: relative; width: min(440px, 100%); background: #fff; border: 2px solid var(--ink); border-radius: 22px; padding: 22px 20px 18px; box-shadow: 0 14px 40px -12px rgba(0,0,0,.4); }
+.shr-x { position: absolute; right: 10px; top: 8px; background: none; border: 0; font-size: 28px; cursor: pointer; color: var(--ink); }
+.shr-h { margin: 0 0 4px; font-weight: 900; font-size: 22px; letter-spacing: -.02em; } .shr-t { margin: 0 0 14px; color: var(--ink2); font-size: 15px; }
+.shr-copy { width: 100%; } .shr-l { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-top: 12px; }
+.shr-l a { text-align: center; font-weight: 700; font-size: 14px; padding: 10px 6px; border: 1.5px solid var(--line); border-radius: 12px; text-decoration: none; color: var(--ink); }
+.shr-l a:hover { border-color: var(--ink); background: var(--lemon-soft); }
+@media (min-width: 700px) { .shr { place-items: center; } }
