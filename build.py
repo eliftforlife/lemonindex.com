@@ -131,7 +131,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None):
 <meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}{img or "/assets/og.png"}"><meta name="twitter:card" content="summary_large_image">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://static.nhtsa.gov; connect-src 'self' https://cloudflareinsights.com https://vpic.nhtsa.dot.gov https://lemon-survey.elift08.workers.dev; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"><link rel="stylesheet" href="/assets/site.css?v=1103i"><script src="/assets/nav.js?v=1103b" defer></script>{lds}</head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"><link rel="stylesheet" href="/assets/site.css?v=1103k"><script src="/assets/nav.js?v=1103d" defer></script>{lds}</head>
 <body><header class="top"><a class="brand" href="/"><img src="/assets/icon-64.png" alt="" width="32" height="32">The Lemon Index</a>
 <nav class="mainnav" aria-label="Main">{navlinks(path)}</nav><a class="yt" href="{YT}?sub_confirmation=1" rel="noopener">Subscribe</a></header>
 <main>{body}{CITE if path.startswith('/cars/') else ''}{'' if path == '/vote/' else ask_html(ask)}</main>
@@ -178,6 +178,10 @@ ICONS = {   # custom 24px line icons (stroke 1.8, round), drawn for the site 11-
  'vin': '<rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M6.5 9v6M9 9v6M11 9v6M14 9v6M16 9v6M17.8 9v6"/>',
  'loan': '<path d="M4 12.5 11.5 5H19v7.5L11.5 20z"/><circle cx="15.3" cy="8.7" r="1.3"/><path d="M8.6 14.6l3.6-3.6"/>',
  'vote': '<path d="M5 11h14l1.5 9h-17z"/><path d="M8 11V4.5h8V11"/><path d="M10.2 7.6l1.4 1.4 2.6-2.8"/>',
+ 'wrench': '<path d="M14.7 6.3a4 4 0 0 0 5 5L21 12.6l-1.6 1.6a4 4 0 0 1-5.2.5L7.3 21.6a2 2 0 0 1-2.9-2.9l6.9-6.9a4 4 0 0 1 .5-5.2L13.4 5z"/>',
+ 'warn': '<path d="M12 3.5 21.5 20h-19z"/><path d="M12 10v4.5M12 17.2v.3"/>',
+ 'up': '<path d="M4 17.5 10 11l3.5 3.5L20 8"/><path d="M15 8h5v5"/>',
+ 'doc': '<path d="M6.5 3h8l4 4v14h-12z"/><path d="M14.5 3v4h4M9.5 12h6M9.5 15.5h6"/>',
  'data': '<ellipse cx="12" cy="5.5" rx="7.5" ry="2.8"/><path d="M4.5 5.5v6c0 1.5 3.4 2.8 7.5 2.8s7.5-1.3 7.5-2.8v-6"/><path d="M4.5 11.5v6c0 1.5 3.4 2.8 7.5 2.8s7.5-1.3 7.5-2.8v-6"/>',
 }
 icon = lambda k: f'<svg class="ico" viewBox="0 0 24 24" aria-hidden="true">{ICONS[k]}</svg>'
@@ -463,14 +467,14 @@ def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
     seg = (f'<a href="{CARU(f, prev["y"])}" aria-label="{prev["y"]}">‹ {prev["y"]}</a>' if prev else '') + f'<span aria-current="page">{y}</span>' + (f'<a href="{CARU(f, nxt["y"])}" aria-label="{nxt["y"]}">{nxt["y"]} ›</a>' if nxt else '')
     bw = (lambda xs: f'<p class="ybw">{" · ".join(xs)}</p>' if xs else '')([f'{lab} <a class="{c}" href="{CARU(f, w["y"])}">{w["y"]}</a>' for lab, w, c in (('Best year', best, 'good'), ('Worst year', worst, 'bad')) if w['y'] != y])
     parts = ''.join(f'<div class="pt"><span>{E(NICE(p))}</span><span class="bt"><i style="width:{k}%"></i></span><b>{k}%</b></div>' for p, k in v['parts'])
-    probs = f'<section class="yc"><h2>What owners complain about most. <span class="h2s">From owner complaints to the government.</span></h2><div class="pts">{parts}</div><p class="yc-cap">Share of this year&#39;s owner complaints filed with NHTSA, not the share of cars that break. One complaint can name more than one area.</p>' + (f'<p class="yc-cap"><a href="{CARU(f)}transmission/">Transmission problems in every {nm} year →</a></p>' if f['id'] in TR else '') + '</section>' if parts else ''
+    probs = f'<section class="yc" id="problems"><h2>What owners complain about most. <span class="h2s">From owner complaints to the government.</span></h2><div class="pts">{parts}</div><p class="yc-cap">Share of this year&#39;s owner complaints filed with NHTSA, not the share of cars that break. One complaint can name more than one area.</p>' + (f'<p class="yc-cap"><a href="{CARU(f)}transmission/">Transmission problems in every {nm} year →</a></p>' if f['id'] in TR else '') + '</section>' if parts else ''
     sev_items = [(s.get('crash', 0), 'crashes'), (s.get('injured', 0), 'injuries'), (s.get('fire', 0), 'fires'), (s.get('towed', 0), 'tows')]
     sev = (f'<section class="yc"><h2>How serious</h2><p class="yc-cap">Out of {s["total"]:,} owner complaints, owners reported:</p><div class="sv">'
            + ''.join(f'<div class="{"bad" if n else "good"}"><b>{n:,}</b><span>{lab}</span></div>' for n, lab in sev_items) + '</div></section>') if s.get('total') else ''
     if 'recalls' in x:
         rs = sorted(rec, key=lambda r: r['date'][6:10] + r['date'][3:5] + r['date'][:2], reverse=True)
         card = lambda r: f'<li><b>{E(RPART(r["part"]))}</b> <small>{E(r["date"][-4:])}</small><p>{E(rsum(r))}</p></li>'
-        recs = (f'<section class="yc"><h2>Recalls <span class="yc-n">{len(rs)}</span></h2>'
+        recs = (f'<section class="yc" id="recalls"><h2>Recalls <span class="yc-n">{len(rs)}</span></h2>'
                 + (f'<ul class="rc">{"".join(card(r) for r in rs[:3])}</ul>' + (f'<details><summary>Show all {len(rs)} recalls</summary><ul class="rc">{"".join(card(r) for r in rs[3:])}</ul></details>' if len(rs) > 3 else '')
                    if rs else '<p>No safety recalls on record.</p>')
                 + '<p class="yc-cap">Recall repairs are free at any dealer. Check a specific car&#39;s VIN at <a href="https://www.nhtsa.gov/recalls" rel="noopener">nhtsa.gov/recalls</a>.</p></section>')
@@ -499,6 +503,15 @@ def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
         oldrow = (f'<p class="yc-cap">Crash stars (older test): front {stars(oldst["front"]) if oldst.get("front") else "—"} · side {stars(oldst["side"]) if oldst.get("side") else "—"} · rollover {stars(oldst["roll"]) if oldst.get("roll") else "—"}</p>') if oldst else ''
         photo = f'<figure class="cph"><img src="{E(x2["photo"])}" alt="NHTSA front crash test of the {y} {nm}" loading="lazy"><figcaption>Front crash test · NHTSA</figcaption></figure>' if x2.get('photo') else ''
         safety = f'<section class="yc"><h2>Safety</h2>{f"<div class=tcs>{chips}</div>" if chips else ""}{oldrow}{photo}</section>'
+    kc = []
+    if v['parts']: kc.append(('wrench', 'Most common problem', E(NICE(v['parts'][0][0])).capitalize(), f'{v["parts"][0][1]}% of owner complaints', '#problems'))
+    if 'recalls' in x: kc.append(('warn', 'Recalls', f'{len(rec)}', 'Free fix at any dealer: check the VIN' if rec else 'None on record', '/vin/' if rec else '#recalls'))
+    if best['y'] != y: kc.append(('up', 'Better year to buy', f'{best["y"]}', E(plain(best['li'])), CARU(f, best['y'])))
+    else: kc.append(('up', 'Best year', f'{y}', f'The best {nm} year we track', CARU(f)))
+    if inv_open: kc.append(('warn', 'Government investigation', f'{len(inv_open)} open', 'Owners reported enough to trigger one', '#inv'))
+    elif x2.get('tsb'): kc.append(('doc', f'Repair notes from {mkr}', f'{x2["tsb"]["n"]}', 'Ask a seller if they were done', '#fixes'))
+    buy = (f'<section class="ybuy"><h2>Before you buy. <span class="h2s">What matters most for this car.</span></h2><div class="ybuy-g">'
+           + ''.join(f'<a class="yk" href="{h}">{icon(ic)}<span class="yk-l">{lab}</span><b>{val}</b><small>{sub}</small></a>' for ic, lab, val, sub, h in kc) + '</div></section>')
     words = ''
     if qs_list:
         q0 = qs_list[0]; more = ''.join(f'<blockquote><p>{E(q["text"])}</p><cite>NHTSA complaint {q["odi"]}</cite></blockquote>' for q in qs_list[1:])
@@ -509,10 +522,10 @@ def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
 <div class="yhead-g{'' if ph else ' noph'}">{f'<div class="yhead-ph">{ph}</div>' if ph else f'<div class="yhead-ph"><div class="yts yts-in">{tiles}</div></div>'}<header class="yh"><h1>{y} {nm}</h1><p class="yh-sub">Reliability, problems and recalls</p>{f'<p class="yc-note">{SN[f["id"]][1]}</p>' if f["id"] in SN else ""}{hero.replace('{BW}', bw)}{old}</header></div>
 <nav class="yswitch" aria-label="Model years"><div class="yseg">{seg}<a class="yall" href="{CARU(f)}">All years</a></div><div class="yact"><a class="btn btn-ghost" href="/compare/?c={f['id']}-{y}">Compare</a><button type="button" class="btn btn-ghost yshare" data-share="{E(share_txt)}">Share</button></div></nav></section>
 {f'<div class="yts">{tiles}</div>' if ph else ''}
-<div class="ygrid">{probs}{timeline(x["miles"], x.get("comps") or []) if x.get("miles") else ""}{(lambda ph: f'<section class="yc ywide">{ph}</section>' if ph else '')(price_html(f["id"], y, f["name"]))}{sev}{recs}
+{buy}<div class="ygrid">{probs}{timeline(x["miles"], x.get("comps") or []) if x.get("miles") else ""}{recs}{(lambda pr: f'<section class="yc">{pr}</section>' if pr else '')(price_html(f["id"], y, f["name"]))}{sev}
 {fixes}{invs}{safety}{f'<section class="yc">{crash}{fuel}</section>' if crash or fuel else ''}{words}
-{f'<section class="yc ywide yqa"><h2>Quick answers</h2>' + "".join(f"<h3>{E(q)}</h3><p>{a}</p>" for q, a, _ in qa) + '</section>' if qa else ''}
-<section class="yc ywide"><h2>Every {nm} year</h2>{ybars(f, y)}</section></div>
+<section class="yc"><h2>Every {nm} year. <span class="h2s">Lower is better.</span></h2>{ybars(f, y)}</section>
+{f'<section class="yc yqa"><h2>Quick answers</h2>' + "".join(f"<h3>{E(q)}</h3><p>{a}</p>" for q, a, _ in qa) + '</section>' if qa else ''}</div>
 <p class="yc-cap">Lemon Index = safety complaints filed with the U.S. government (NHTSA) in a car&#39;s first 3 years, per car sold, against the average car of the same model year. 100 is average; lower is better. A complaint is an owner&#39;s report, not a confirmed defect. <a href="/method/">How it works</a></p></article>'''
 
 def yearx(fid, y): return extra(fid, y)
@@ -717,12 +730,12 @@ page('/data/', 'Free Car Reliability Data (CSV, CC BY 4.0) | Lemon Index',
          _ds('Transmission complaints by car model year', 'Transmission-related NHTSA owner complaints for each model year, as a count and per 100,000 cars sold.', '/data/transmission-complaints-by-year.csv', _cols2)])
 
 # ---- vote page (11-03): polls in data/votes.json (data_votes.py), counts from the lemon-survey Worker (/v). TS = Turnstile site key (public) once Elijah creates it.
-TS = ''
+TS = '0x4AAAAAAFygoDtl00wuETO5'   # Turnstile site key (public, 11-03); the secret lives only in the lemon-survey Worker as TURNSTILE_SECRET
 page('/vote/', 'Vote: Most Reliable Car Brand, Best Insurance, Best Years | Lemon Index',
      'Vote on the most reliable car brand, the best and worst car insurance, the best used SUV, truck and model years. See what won this week, this month or all time.',
      f'''<section class="vote-hero"><p class="kicker"><a href="/cars/">All cars</a> · Vote</p><h1>What do car owners really think?</h1>
 <p>Tap through quick polls on brands, models, years and insurance, then see what everyone picked this week, month or all time.</p></section>
-<main id="vote" data-site="lemon" data-ts="{TS}"></main><script src="/assets/vote.js?v=1103e" defer></script>''',
+<main id="vote" data-site="lemon" data-ts="{TS}"></main><script src="/assets/vote.js?v=1103f" defer></script>''',
      ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": "Lemon Index car polls", "url": BASE + '/vote/'}])
 page('/car-loan-rates/', 'Car Loan Rates by Credit Score: Is Your Rate Fair? | Lemon Index',
      'Average new and used car loan rates for every credit score tier (Experian, Q2 2026), and a free check that shows what an above-average dealer rate costs you.',
