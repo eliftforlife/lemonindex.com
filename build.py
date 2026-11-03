@@ -539,6 +539,8 @@ for f in YEARS:
     page(CARU(f), f'{snm} Reliability by Year: Years to Avoid & Best to Buy',
          f'Every {snm} model year from {ys[0]["y"]} to {ys[-1]["y"]}, ranked by NHTSA owner complaints per car sold. Best: {best["y"]}. Worst: {worst["y"]} ({plain(worst["li"])}).', f'''
 <article class="study"><p class="kicker"><a href="/cars/">All cars</a> · {E(c["segName"])}</p><h1>{E(snm)} reliability by year</h1>{f'<p class="sub">{SN[f["id"]][1]}</p>' if f["id"] in SN else ""}
+{(lambda py: car_photo(f["id"], int(py), f["name"]) if py else "")(next(iter(sorted(PH.get(f["id"], {}), reverse=True)), None))}
+<div class="yhero">{gauge(c["li"], 200)}<div class="yv {verdict(c["li"])[0]}"><b>{verdict(c["li"])[1]}</b><span>Whole model, {c["years"]}: {E(plain(c["li"]))}</span></div></div>
 <p class="lede">Best year: <b>{best["y"]}</b>, {plain(best["li"])}. Worst year: <b>{worst["y"]}</b>, {plain(worst["li"])}. Click a year to see what owners reported.</p>
 <p><button type="button" class="btn btn-ghost" data-share="{E(f'Every {snm} year ranked by owner complaints. Best: {best["y"]}. Worst: {worst["y"]}. Free report:')}">Share ↗</button></p>
 <p class="sub">Lemon Index = safety complaints filed with the government within 3 years, per car sold, compared with the average car of the same model year. <b>100 is average, lower is better.</b>{" Scores before 2010 are rough: fewer owners filed complaints back then." if ys[0]["y"] < 2010 else ""}</p>
