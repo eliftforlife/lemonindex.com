@@ -473,17 +473,21 @@ for f in YEARS:
         return (f'<td class="num">{len(xx["recalls"]) if "recalls" in xx else "—"}</td><td>{stars(sf["best"]) if sf and sf.get("best") else "—"}</td>'
                 f'<td class="num">{(f"{m["comb"][0]}–{m["comb"][1]}" if m["comb"][0] != m["comb"][1] else m["comb"][0]) if m else "—"}</td>')
     rows = ''.join(f'<tr><td><a href="{CARU(f, v["y"])}">{v["y"]}</a></td><td class="num {CLS(v)}">{LIS(v)}</td><td class="pw">{PLN(v)}</td><td class="num">{v["n"]:,}</td><td>{E(v["parts"][0][0]) + f" ({v["parts"][0][1]}%)" if v["parts"] else "—"}</td>{yx(v)}</tr>' for v in ys)
-    snm = SNM(f)
+    snm = SNM(f); li = c['li']
+    good_word = ('Yes, it is one of the most reliable models we track' if li < 50 else 'Yes, it draws fewer complaints than the average car' if li < 85 else 'It is about average' if li <= 115 else 'Not overall: it draws more complaints than the average car')
+    mqa = [(f'Is the {snm} a good car?', f'{good_word}, by owner complaints to the government per car sold ({c["years"]}: Lemon Index {li}; 100 is average). Some years are much better than others: the best is {best["y"]} and the worst is {worst["y"]}.'),
+           (f'What are the best {snm} years to buy?', f'By owner complaints per car sold: ' + ', '.join(str(v["y"]) for v in good3) + '.'),
+           (f'What {snm} years should you stay away from?', (f'The years with the most complaints per car sold: ' + ', '.join(str(v["y"]) for v in bad3) + '.') if bad3 else f'No {snm} year drew much more than an average car&#39;s complaints.')]
+    model_qa_html = '<section class="yqa"><h2>Quick answers</h2>' + ''.join(f'<h3>{E(q)}</h3><p>{a}</p>' for q, a in mqa) + '</section>'
     page(CARU(f), f'{snm} Reliability by Year: Years to Avoid & Best to Buy',
          f'Every {snm} model year from {ys[0]["y"]} to {ys[-1]["y"]}, ranked by NHTSA owner complaints per car sold. Best: {best["y"]}. Worst: {worst["y"]} ({plain(worst["li"])}).', f'''
 <article class="study"><p class="kicker"><a href="/cars/">All cars</a> · {E(c["segName"])}</p><h1>{E(snm)} reliability by year</h1>{f'<p class="sub">{SN[f["id"]][1]}</p>' if f["id"] in SN else ""}
 <p class="lede">Best year: <b>{best["y"]}</b>, {plain(best["li"])}. Worst year: <b>{worst["y"]}</b>, {plain(worst["li"])}. Click a year to see what owners reported.</p>
 <p class="sub">Lemon Index = safety complaints filed with the government within 3 years, per car sold, compared with the average car of the same model year. <b>100 is average, lower is better.</b>{" Scores before 2010 are rough: fewer owners filed complaints back then." if ys[0]["y"] < 2010 else ""}</p>
-{ybars(f)}{picks}<h2>Every year</h2><div class="tw"><table><thead><tr><th>Year</th><th>Index</th><th>Compared with average</th><th>Complaints</th><th>Top complaint</th><th>Recalls</th><th>Crash test</th><th>MPG</th></tr></thead><tbody>{rows}</tbody></table></div>
+{ybars(f)}{picks}{model_qa_html}<h2>Every year</h2><div class="tw"><table><thead><tr><th>Year</th><th>Index</th><th>Compared with average</th><th>Complaints</th><th>Top complaint</th><th>Recalls</th><th>Crash test</th><th>MPG</th></tr></thead><tbody>{rows}</tbody></table></div>
 <p class="note">Whole model ({c["years"]}): Lemon Index {c["li"]}, {plain(c["li"])}. <a href="/method/">How the index works</a></p>{f'<p><a class="btn" href="{CARU(f)}transmission/">{E(snm)} transmission problems by year →</a></p>' if f["id"] in TR else ''}{f'<h2>Compare the {E(f["name"])}</h2><p>{vs}</p>' if vs else ''}</article>''',
          ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": f'{snm} reliability by year', "url": BASE + CARU(f)},
-             faq_ld([(f'What are the best {snm} years?', '', f'By NHTSA owner complaints per car sold, the best {snm} years are ' + ', '.join(str(v["y"]) for v in good3) + '.')]
-                    + ([(f'Which {snm} years should you avoid?', '', f'The {snm} years with the most owner complaints per car sold are ' + ', '.join(str(v["y"]) for v in bad3) + '.')] if bad3 else []))])
+             faq_ld([(q, '', html.unescape(a)) for q, a in mqa])])
     yurls.append(CARU(f))
     for i, v in enumerate(ys):
         y = v['y']; prev, nxt = (ys[i - 1] if i else None), (ys[i + 1] if i + 1 < len(ys) else None)
