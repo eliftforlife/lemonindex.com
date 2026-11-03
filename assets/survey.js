@@ -10,7 +10,8 @@
   let Q, byId = {};
   const keyOf = q => q.car ? `${q.id}|${fid}|${year}` : q.id;
   const pickSite = () => { const open = Q.site.filter(q => !done[q.id]); return open.length ? open[Math.floor(Math.random() * open.length)] : null; };
-  const first = () => { const own = byId.own; if (fid && year && own && !done[keyOf(own)] && Math.random() < .5) return own; return pickSite() || (fid && year && own && !done[keyOf(own)] ? own : null); };
+  const first = () => { const f0 = byId[box.dataset.first || '']; if (f0 && !done[keyOf(f0)]) return f0;   // a page can lead with its own question (loan page: credit range)
+    const own = byId.own; if (fid && year && own && !done[keyOf(own)] && Math.random() < .5) return own; return pickSite() || (fid && year && own && !done[keyOf(own)] ? own : null); };
   const shell = inner => `<div class="ask-card"><p class="ask-kick">Help our site</p>${inner}<p class="ask-fine">Anonymous. No email, no account. Just tap an answer.</p></div>`;
   const show = q => {
     if (!q) { box.hidden = true; return; }

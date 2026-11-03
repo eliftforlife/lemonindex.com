@@ -97,9 +97,9 @@ def explorer():
 
 def ask_html(ask):
     """'Help our site' question box (assets/survey.js). ask = (family id, model year, '2018 Honda Odyssey') on car-year pages."""
-    fid, y, name = ask or ('', '', '')
-    return (f'<section class="ask" id="ask" hidden data-fid="{E(fid)}" data-year="{y or ""}" data-car="{E(name)}"></section>'
-            '<script src="/assets/survey.js?v=1103" defer></script><script src="/assets/share.js?v=1103" defer></script>')
+    fid, y, name, first = (tuple(ask) + ('',))[:4] if ask else ('', '', '', '')
+    return (f'<section class="ask" id="ask" hidden data-fid="{E(fid)}" data-year="{y or ""}" data-car="{E(name)}" data-first="{E(first)}"></section>'
+            '<script src="/assets/survey.js?v=1103b" defer></script><script src="/assets/share.js?v=1103" defer></script><script src="/assets/bars3d.js?v=1103" defer></script><script src="/assets/loan.js?v=1103" defer></script>')
 def fit_title(t):
     if len(t) > 65 and t.endswith(' | The Lemon Index'): t = t[:-len(' | The Lemon Index')] + ' | Lemon Index'
     if len(t) > 65 and t.endswith(' | Lemon Index'): t = t[:-len(' | Lemon Index')]
@@ -122,12 +122,12 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None):
 <meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}{img or "/assets/og.png"}"><meta name="twitter:card" content="summary_large_image">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://static.nhtsa.gov; connect-src 'self' https://cloudflareinsights.com https://vpic.nhtsa.dot.gov https://lemon-survey.elift08.workers.dev; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap"><link rel="stylesheet" href="/assets/site.css?v=1103b">{lds}</head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap"><link rel="stylesheet" href="/assets/site.css?v=1103c">{lds}</head>
 <body><header class="top"><a class="brand" href="/"><img src="/assets/icon-64.png" alt="" width="32" height="32">The Lemon Index</a>
 <nav><a href="/cars/">Look up a car</a><a href="/electric/">Electric</a><a href="/studies/">Studies</a><a href="/compare/">Compare</a><a href="/vin/">VIN check</a><a href="/method/">How it works</a><a class="yt" href="{YT}?sub_confirmation=1" rel="noopener">Subscribe</a></nav></header>
 <main>{body}{ask_html(ask)}</main>
 <footer class="foot"><div class="cta"><div><h2>New car studies, straight from the data.</h2><p>Every study becomes a video. Subscribe to see the next one first.</p></div><a class="btn" href="{YT}?sub_confirmation=1" rel="noopener">Subscribe on YouTube</a></div>
-<p class="socs"><a href="{YT}" rel="noopener">YouTube</a> · <a href="{TT}" rel="noopener">TikTok</a> · <a href="{IG}" rel="noopener">Instagram</a> · <a href="/method/">How the index works</a> · <a href="/compare/">Compare cars</a> · <button class="supl" type="button">Support the Lemon Index</button></p>
+<p class="socs"><a href="{YT}" rel="noopener">YouTube</a> · <a href="{TT}" rel="noopener">TikTok</a> · <a href="{IG}" rel="noopener">Instagram</a> · <a href="/method/">How the index works</a> · <a href="/compare/">Compare cars</a> · <a href="/car-loan-rates/">Car loan rates</a> · <button class="supl" type="button">Support the Lemon Index</button></p>
 <p class="fine"><a href="/terms/">Terms</a> · <a href="/privacy/">Privacy</a> · <a href="/refunds/">Refunds</a> · <a href="/contact/">Contact</a><br>© {TODAY[:4]} The Lemon Index. Built from public NHTSA complaint data and published U.S. sales figures. Not affiliated with any automaker. Not a repair-cost or safety rating.</p></footer><script src="/assets/explorer.js" defer></script><script src="/assets/support.js?v=1103b" defer></script><script src="/assets/lookup.js?v=1103" defer></script>{beacon}</body></html>'''
     f = os.path.join(OUT, path.strip('/'), 'index.html') if path.endswith('/') else os.path.join(OUT, path.strip('/'))
     os.makedirs(os.path.dirname(f), exist_ok=True); open(f, 'w', encoding='utf-8').write(doc)
@@ -571,6 +571,50 @@ for f in YEARS:
     turls.append(CARU(f) + 'transmission/')
 TRANS_OK = {u.split('/')[2] for u in turls}
 yurls += turls
+
+# ---- car loan rates (11-03, Elijah: "see if dealers are screwing you"). Experian State of the Automotive Finance Market, Q2 2026 (VantageScore 4.0).
+LOAN = {'as_of': 'Q2 2026', 'tiers': [
+    {'name': 'Super prime', 'range': '781–850', 'new': 4.41, 'used': 6.29, 'pay_new': 741, 'pay_used': 534},
+    {'name': 'Prime', 'range': '661–780', 'new': 6.15, 'used': 8.81, 'pay_new': 770, 'pay_used': 528},
+    {'name': 'Near prime', 'range': '601–660', 'new': 9.71, 'used': 13.93, 'pay_new': 816, 'pay_used': 555},
+    {'name': 'Subprime', 'range': '501–600', 'new': 13.52, 'used': 19.10, 'pay_new': 805, 'pay_used': 567},
+    {'name': 'Deep subprime', 'range': '300–500', 'new': 16.11, 'used': 21.62, 'pay_new': 779, 'pay_used': 570}]}
+def bars3d(rows, mx, unit='%'):
+    """CSS 3D bar chart (assets/bars3d.js): rows = [(label, sub, value, color)]."""
+    cols = ''.join(f'<div class="b3d-col" style="--v:{v / mx:.3f};--c:{c}"><b class="b3d-val">{v:g}{unit}</b><div class="b3d-bar"><i class="f"></i><i class="s"></i><i class="t"></i></div>'
+                   f'<span class="b3d-lab">{E(l)}<small>{E(sub)}</small></span></div>' for l, sub, v, c in rows)
+    return f'<div class="b3d" data-b3d><div class="b3d-stage">{cols}</div></div>'
+def loan_body():
+    T = LOAN['tiers']
+    opts = ''.join(f'<option value="{i}"{" selected" if i == 1 else ""}>{E(t["name"])} ({t["range"]})</option>' for i, t in enumerate(T))
+    tbl = ''.join(f'<tr><td><b>{E(t["name"])}</b><br><small>{t["range"]}</small></td><td class="num">{t["new"]:.2f}%</td><td class="num">{t["used"]:.2f}%</td><td class="num">${t["pay_new"]}</td><td class="num">${t["pay_used"]}</td></tr>' for t in T)
+    used = bars3d([(t['name'], t['range'], t['used'], '#e8141c' if t['used'] > 12 else '#111214') for t in T], 22)
+    new = bars3d([(t['name'], t['range'], t['new'], '#e8141c' if t['new'] > 12 else '#111214') for t in T], 22)
+    return f"""
+<article class="study"><p class="kicker"><a href="/cars/">All cars</a> · Car loans</p><h1>Is your car loan rate fair?</h1>
+<p class="lede">Type the rate the dealer offered. We compare it with what people with your credit actually pay, and tell you what the difference costs.</p>
+<form id="loanf" class="loan-f" autocomplete="off">
+<label>Your credit score<select name="tier">{opts}</select></label>
+<label>New or used<select name="kind"><option value="used" selected>Used car</option><option value="new">New car</option></select></label>
+<label>APR you were offered<input name="apr" inputmode="decimal" placeholder="e.g. 11.9" aria-label="APR in percent"></label>
+<label>Amount you&#39;d borrow<input name="amount" inputmode="numeric" value="25000"></label>
+<label>Loan length<select name="term"><option value="36">36 months</option><option value="48">48 months</option><option value="60" selected>60 months</option><option value="72">72 months</option><option value="84">84 months</option></select></label>
+<button class="btn" type="submit">Check my rate</button></form>
+<div id="loanout" aria-live="polite"></div>
+<script id="rates" type="application/json">{json.dumps(LOAN, separators=(",", ":"))}</script>
+<h2>Average used-car loan rate by credit score</h2>{used}
+<h2>Average new-car loan rate by credit score</h2>{new}
+<div class="tw"><table><thead><tr><th>Credit</th><th>New APR</th><th>Used APR</th><th>New payment</th><th>Used payment</th></tr></thead><tbody>{tbl}</tbody></table></div>
+<p class="note">Averages for loans opened in {LOAN["as_of"]}, from Experian&#39;s State of the Automotive Finance Market (VantageScore 4.0). Your own rate also depends on the loan length, the car&#39;s age and the lender.</p>
+<h2>How dealers make money on your loan</h2>
+<p>When a dealer arranges your loan, the lender approves a rate (the &ldquo;buy rate&rdquo;) and the dealer can add points on top. Federal settlements with several big lenders capped that markup at about 1 to 1.25 points, and lenders commonly cap it at 2 to 3. That markup is negotiable.</p>
+<ol class="beats"><li><b>Get pre-approved first.</b> A quote from your bank or a credit union is your leverage.</li><li><b>Ask the dealer to beat it.</b> If they can&#39;t, use your own loan.</li><li><b>Compare the total cost, not the monthly payment.</b> A longer loan lowers the payment and raises what you pay overall.</li></ol>
+<p class="note">General information, not financial advice. Check a specific car&#39;s problems and recalls before you buy: <a href="/cars/">look up any car</a> or <a href="/vin/">check a VIN</a>.</p></article>"""
+page('/car-loan-rates/', 'Car Loan Rates by Credit Score: Is Your Rate Fair? | Lemon Index',
+     'Average new and used car loan rates for every credit score tier (Experian, Q2 2026), and a free check that shows what an above-average dealer rate costs you.',
+     loan_body(), ask=('', '', '', 'credit'), ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": "Car loan rates by credit score", "url": BASE + '/car-loan-rates/'},
+     faq_ld([('What is a good car loan rate for my credit score?', '', 'Average rates in Q2 2026 (Experian): super prime (781+) 4.41% new / 6.29% used; prime (661-780) 6.15% / 8.81%; near prime (601-660) 9.71% / 13.93%; subprime (501-600) 13.52% / 19.10%; deep subprime (300-500) 16.11% / 21.62%.'),
+             ('Can a dealer mark up my car loan rate?', '', 'Yes. The lender approves a buy rate and the dealer can add points on top. Federal settlements with several big lenders capped that at about 1 to 1.25 points, and lenders commonly cap it at 2 to 3. Get a pre-approval from a bank or credit union first.')])])
 pick = {}
 for f in YEARS: pick.setdefault(BYNAME[f['name']]['brand'], []).append([f['name'], f['id'], [v['y'] for v in f['years']]])
 pick = dict(sorted((b, sorted(m)) for b, m in pick.items()))
@@ -669,7 +713,7 @@ LEGAL_URLS = ['/contact/', '/refunds/', '/privacy/', '/terms/']
 exec(open('electric_pages.py', encoding='utf-8').read())
 
 open(f'{OUT}/404.html', 'w', encoding='utf-8').write(open(f'{OUT}/index.html', encoding='utf-8').read().replace('<main>', '<main><section><h1>That page drove off.</h1><p><a href="/">Back to the rankings</a></p></section><!--', 1).replace('</main>', '--></main>', 1))
-urls = ['/', STUDY, '/studies/', '/method/', '/vin/'] + eurls + yurls + curls + LEGAL_URLS
+urls = ['/', STUDY, '/studies/', '/method/', '/vin/', '/car-loan-rates/'] + eurls + yurls + curls + LEGAL_URLS
 open(f'{OUT}/sitemap.xml', 'w', encoding='utf-8').write('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + ''.join(f'<url><loc>{BASE}{u}</loc><lastmod>{TODAY}</lastmod></url>' for u in urls) + '</urlset>')
 open(f'{OUT}/robots.txt', 'w').write(f'User-agent: *\nAllow: /\n\nUser-agent: GPTBot\nAllow: /\nUser-agent: ClaudeBot\nAllow: /\nUser-agent: PerplexityBot\nAllow: /\nUser-agent: Google-Extended\nAllow: /\n\nSitemap: {BASE}/sitemap.xml\n')
 open(f'{OUT}/llms.txt', 'w', encoding='utf-8').write(f'# The Lemon Index\n\n> Car reliability from public data. The Lemon Index = NHTSA safety complaints per 100,000 U.S. sales, vs the average car of the same model years (100 = average).\n\n- [The Most Reliable Cars, According to 1.6 Million Owner Complaints]({BASE}{STUDY}): Toyota 4Runner 26, Lexus ES 27, Lexus brand 30, Tesla brand 322 (est.)\n- [The Most Reliable Electric Cars]({BASE}/electric/): {len(RK)} EVs by NHTSA complaints per car sold, best {best['name']} {best['li']}, plus fires, yearly cost and driver-assist crash reports\n- [Method]({BASE}/method/)\n')

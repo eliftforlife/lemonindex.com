@@ -340,3 +340,28 @@ button.ychip { font: inherit; cursor: pointer; } .yshare { background: var(--lem
 .shr-l a { text-align: center; font-weight: 700; font-size: 14px; padding: 10px 6px; border: 1.5px solid var(--line); border-radius: 12px; text-decoration: none; color: var(--ink); }
 .shr-l a:hover { border-color: var(--ink); background: var(--lemon-soft); }
 @media (min-width: 700px) { .shr { place-items: center; } }
+
+/* 3D bars (11-03): real CSS 3D boxes; grow when scrolled into view, chart turns as it passes (assets/bars3d.js) */
+.b3d { --ry: -30deg; --rx: -16deg; margin: 18px 0 30px; perspective: 1100px; }
+.b3d-stage { display: flex; align-items: flex-end; justify-content: space-around; gap: 6px; height: 300px; padding: 0 4px 70px; transform: rotateX(var(--rx)) rotateY(var(--ry)); transform-style: preserve-3d; transition: transform .25s linear; }
+.b3d-col { position: relative; flex: 1; max-width: 120px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; transform-style: preserve-3d; }
+.b3d-bar { --w: min(54px, 11vw); --d: 26px; position: relative; width: var(--w); height: 0; transform-style: preserve-3d; transition: height 1.1s cubic-bezier(.2, .8, .2, 1); }
+.b3d.in .b3d-bar { height: calc(var(--v) * 215px); }
+.b3d-col:nth-child(2) .b3d-bar { transition-delay: .08s; } .b3d-col:nth-child(3) .b3d-bar { transition-delay: .16s; } .b3d-col:nth-child(4) .b3d-bar { transition-delay: .24s; } .b3d-col:nth-child(5) .b3d-bar { transition-delay: .32s; }
+.b3d-bar i { position: absolute; display: block; }
+.b3d-bar .f { inset: 0; background: var(--c); transform: translateZ(calc(var(--d) / 2)); border-radius: 3px 3px 0 0; }
+.b3d-bar .s { top: 0; bottom: 0; right: 0; width: var(--d); background: var(--c); filter: brightness(.62); transform-origin: right; transform: translateZ(calc(var(--d) / 2)) rotateY(90deg); }
+.b3d-bar .t { left: 0; right: 0; top: 0; height: var(--d); background: var(--c); filter: brightness(1.45) saturate(.8); transform-origin: top; transform: translateZ(calc(var(--d) / 2)) rotateX(-90deg); }
+.b3d-val { margin-bottom: 8px; font-weight: 900; font-size: 15px; font-variant-numeric: tabular-nums; opacity: 0; transition: opacity .4s .9s; }
+.b3d.in .b3d-val { opacity: 1; }
+.b3d-lab { position: absolute; top: 100%; margin-top: 12px; text-align: center; font-weight: 800; font-size: 12px; line-height: 1.2; }
+.b3d-lab small { display: block; font-weight: 600; color: var(--mute); }
+@media (prefers-reduced-motion: reduce) { .b3d-bar { transition: none; } }
+/* loan checker */
+.loan-f { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; align-items: end; background: var(--soft); border-radius: 16px; padding: 16px; margin: 18px 0 14px; }
+.loan-f label { display: grid; gap: 6px; font-weight: 800; font-size: 13px; }
+.loan-f select, .loan-f input { font: inherit; font-weight: 600; padding: 11px 12px; border: 1.5px solid var(--line); border-radius: 10px; background: #fff; min-width: 0; }
+.loan-res { border: 2px solid var(--ink); border-radius: 16px; padding: 16px 18px; margin: 4px 0 26px; }
+.loan-res > b { font-size: 21px; letter-spacing: -.02em; } .loan-res p { margin: 8px 0 0; }
+.loan-res.good { background: #e7f6ec; } .loan-res.mid { background: var(--lemon-soft); } .loan-res.bad { background: var(--red-soft); }
+.loan-pay { color: var(--ink2); font-size: 14px; }

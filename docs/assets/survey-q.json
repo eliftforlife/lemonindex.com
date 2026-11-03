@@ -1,32 +1,344 @@
 {
  "car": [
-  {"id": "own", "q": "Do you own a {car}?", "a": ["Own one now", "Used to", "Shopping for one", "No"], "next": {"Own one now": "miles", "Used to": "miles"}},
-  {"id": "miles", "q": "Miles on your {car}?", "a": ["Under 50K", "50–100K", "100–150K", "150–200K", "200K+"], "next": "paid"},
-  {"id": "paid", "q": "What did you pay for it?", "a": ["Under $5K", "$5–10K", "$10–15K", "$15–20K", "$20–30K", "$30K+"], "next": "where"},
-  {"id": "where", "q": "Where did you buy it?", "a": ["Dealer", "Private party", "CarMax / Carvana", "Auction", "Family / friend"], "next": "problem"},
-  {"id": "problem", "q": "Biggest problem so far?", "a": ["None", "Transmission", "Engine", "Electrical", "Brakes", "Suspension", "AC / heat", "Other"], "next": "bigrepair"},
-  {"id": "bigrepair", "q": "Any single repair over $1,000?", "a": ["No", "Once", "2+ times"], "next": "again"},
-  {"id": "again", "q": "Would you buy it again?", "a": ["Yes", "Maybe", "No"]}
+  {
+   "id": "own",
+   "q": "Do you own a {car}?",
+   "a": [
+    "Own one now",
+    "Used to",
+    "Shopping for one",
+    "No"
+   ],
+   "next": {
+    "Own one now": "miles",
+    "Used to": "miles"
+   }
+  },
+  {
+   "id": "miles",
+   "q": "Miles on your {car}?",
+   "a": [
+    "Under 50K",
+    "50–100K",
+    "100–150K",
+    "150–200K",
+    "200K+"
+   ],
+   "next": "paid"
+  },
+  {
+   "id": "paid",
+   "q": "What did you pay for it?",
+   "a": [
+    "Under $5K",
+    "$5–10K",
+    "$10–15K",
+    "$15–20K",
+    "$20–30K",
+    "$30K+"
+   ],
+   "next": "where"
+  },
+  {
+   "id": "where",
+   "q": "Where did you buy it?",
+   "a": [
+    "Dealer",
+    "Private party",
+    "CarMax / Carvana",
+    "Auction",
+    "Family / friend"
+   ],
+   "next": "problem"
+  },
+  {
+   "id": "problem",
+   "q": "Biggest problem so far?",
+   "a": [
+    "None",
+    "Transmission",
+    "Engine",
+    "Electrical",
+    "Brakes",
+    "Suspension",
+    "AC / heat",
+    "Other"
+   ],
+   "next": "bigrepair"
+  },
+  {
+   "id": "bigrepair",
+   "q": "Any single repair over $1,000?",
+   "a": [
+    "No",
+    "Once",
+    "2+ times"
+   ],
+   "next": "again"
+  },
+  {
+   "id": "again",
+   "q": "Would you buy it again?",
+   "a": [
+    "Yes",
+    "Maybe",
+    "No"
+   ]
+  }
  ],
  "site": [
-  {"id": "buyfrom", "q": "Where would you rather buy a used car?", "a": ["Dealer", "Private party", "CarMax / Carvana", "Auction", "Family / friend"]},
-  {"id": "ppmarket", "q": "Favorite place to find private-party cars?", "a": ["Facebook Marketplace", "Craigslist", "OfferUp", "Autotrader", "Cars.com", "CarGurus", "Word of mouth"]},
-  {"id": "dealersite", "q": "Where do you shop dealer cars?", "a": ["CarGurus", "Cars.com", "Autotrader", "CarMax", "Carvana", "Dealer websites"]},
-  {"id": "budget", "q": "Budget for your next used car?", "a": ["Under $5K", "$5–10K", "$10–15K", "$15–20K", "$20–30K", "$30K+"]},
-  {"id": "toomany", "q": "How many miles is too many?", "a": ["75K", "100K", "150K", "200K", "Doesn't matter if maintained"]},
-  {"id": "ppi", "q": "Did you get a pre-purchase inspection last time?", "a": ["Yes, paid", "Yes, free", "No", "Didn't know you could"]},
-  {"id": "history", "q": "Do you check Carfax or AutoCheck before buying?", "a": ["Always", "Sometimes", "Never"]},
-  {"id": "matters", "q": "What matters most in a used car?", "a": ["Reliability", "Price", "Gas mileage", "Safety", "Looks", "Resale value"]},
-  {"id": "keep", "q": "How long will you keep your next car?", "a": ["Under 2 years", "2–4 years", "5–7 years", "8+ years"]},
-  {"id": "negotiate", "q": "Did you negotiate last time you bought?", "a": ["Got 10%+ off", "A little off", "Paid asking", "Paid over asking"]},
-  {"id": "fear", "q": "Biggest fear buying used?", "a": ["Hidden problems", "Overpaying", "Scams", "Financing", "Paperwork"]},
-  {"id": "lemon", "q": "Ever bought a lemon?", "a": ["No", "Yes, cost me under $1K", "Yes, $1–5K", "Yes, $5K+"]},
-  {"id": "pay", "q": "How did you pay for your last car?", "a": ["Cash", "Financed", "Leased"]},
-  {"id": "salvage", "q": "Would you buy a salvage or rebuilt title?", "a": ["Yes", "If cheap enough", "Never"]},
-  {"id": "nexttype", "q": "What's your next car?", "a": ["Sedan", "SUV", "Truck", "Minivan", "Hybrid", "Electric"]},
-  {"id": "usedev", "q": "Would you buy a used electric car?", "a": ["Yes", "Maybe", "No"]},
-  {"id": "recallfree", "q": "Did you know recalls are fixed free at any dealer?", "a": ["Yes", "No"]},
-  {"id": "advice", "q": "Where do you get car advice?", "a": ["YouTube", "TikTok", "Reddit", "A mechanic", "Friends / family", "Consumer Reports"]},
-  {"id": "found", "q": "How did you find the Lemon Index?", "a": ["TikTok", "Instagram", "YouTube", "Google", "Reddit", "A friend"]}
+  {
+   "id": "buyfrom",
+   "q": "Where would you rather buy a used car?",
+   "a": [
+    "Dealer",
+    "Private party",
+    "CarMax / Carvana",
+    "Auction",
+    "Family / friend"
+   ]
+  },
+  {
+   "id": "ppmarket",
+   "q": "Favorite place to find private-party cars?",
+   "a": [
+    "Facebook Marketplace",
+    "Craigslist",
+    "OfferUp",
+    "Autotrader",
+    "Cars.com",
+    "CarGurus",
+    "Word of mouth"
+   ]
+  },
+  {
+   "id": "dealersite",
+   "q": "Where do you shop dealer cars?",
+   "a": [
+    "CarGurus",
+    "Cars.com",
+    "Autotrader",
+    "CarMax",
+    "Carvana",
+    "Dealer websites"
+   ]
+  },
+  {
+   "id": "budget",
+   "q": "Budget for your next used car?",
+   "a": [
+    "Under $5K",
+    "$5–10K",
+    "$10–15K",
+    "$15–20K",
+    "$20–30K",
+    "$30K+"
+   ]
+  },
+  {
+   "id": "toomany",
+   "q": "How many miles is too many?",
+   "a": [
+    "75K",
+    "100K",
+    "150K",
+    "200K",
+    "Doesn't matter if maintained"
+   ]
+  },
+  {
+   "id": "ppi",
+   "q": "Did you get a pre-purchase inspection last time?",
+   "a": [
+    "Yes, paid",
+    "Yes, free",
+    "No",
+    "Didn't know you could"
+   ]
+  },
+  {
+   "id": "history",
+   "q": "Do you check Carfax or AutoCheck before buying?",
+   "a": [
+    "Always",
+    "Sometimes",
+    "Never"
+   ]
+  },
+  {
+   "id": "matters",
+   "q": "What matters most in a used car?",
+   "a": [
+    "Reliability",
+    "Price",
+    "Gas mileage",
+    "Safety",
+    "Looks",
+    "Resale value"
+   ]
+  },
+  {
+   "id": "keep",
+   "q": "How long will you keep your next car?",
+   "a": [
+    "Under 2 years",
+    "2–4 years",
+    "5–7 years",
+    "8+ years"
+   ]
+  },
+  {
+   "id": "negotiate",
+   "q": "Did you negotiate last time you bought?",
+   "a": [
+    "Got 10%+ off",
+    "A little off",
+    "Paid asking",
+    "Paid over asking"
+   ]
+  },
+  {
+   "id": "fear",
+   "q": "Biggest fear buying used?",
+   "a": [
+    "Hidden problems",
+    "Overpaying",
+    "Scams",
+    "Financing",
+    "Paperwork"
+   ]
+  },
+  {
+   "id": "lemon",
+   "q": "Ever bought a lemon?",
+   "a": [
+    "No",
+    "Yes, cost me under $1K",
+    "Yes, $1–5K",
+    "Yes, $5K+"
+   ]
+  },
+  {
+   "id": "pay",
+   "q": "How did you pay for your last car?",
+   "a": [
+    "Cash",
+    "Financed",
+    "Leased"
+   ]
+  },
+  {
+   "id": "salvage",
+   "q": "Would you buy a salvage or rebuilt title?",
+   "a": [
+    "Yes",
+    "If cheap enough",
+    "Never"
+   ]
+  },
+  {
+   "id": "nexttype",
+   "q": "What's your next car?",
+   "a": [
+    "Sedan",
+    "SUV",
+    "Truck",
+    "Minivan",
+    "Hybrid",
+    "Electric"
+   ]
+  },
+  {
+   "id": "usedev",
+   "q": "Would you buy a used electric car?",
+   "a": [
+    "Yes",
+    "Maybe",
+    "No"
+   ]
+  },
+  {
+   "id": "recallfree",
+   "q": "Did you know recalls are fixed free at any dealer?",
+   "a": [
+    "Yes",
+    "No"
+   ]
+  },
+  {
+   "id": "advice",
+   "q": "Where do you get car advice?",
+   "a": [
+    "YouTube",
+    "TikTok",
+    "Reddit",
+    "A mechanic",
+    "Friends / family",
+    "Consumer Reports"
+   ]
+  },
+  {
+   "id": "found",
+   "q": "How did you find the Lemon Index?",
+   "a": [
+    "TikTok",
+    "Instagram",
+    "YouTube",
+    "Google",
+    "Reddit",
+    "A friend"
+   ]
+  },
+  {
+   "id": "credit",
+   "q": "What's your credit score range?",
+   "a": [
+    "781+",
+    "661–780",
+    "601–660",
+    "501–600",
+    "Under 500",
+    "Not sure"
+   ],
+   "next": "aprgot"
+  },
+  {
+   "id": "aprgot",
+   "q": "What APR did you get on your last car loan?",
+   "a": [
+    "Under 5%",
+    "5–8%",
+    "8–12%",
+    "12–16%",
+    "16–20%",
+    "20%+",
+    "Paid cash"
+   ],
+   "next": "down"
+  },
+  {
+   "id": "down",
+   "q": "How much did you put down on your last car?",
+   "a": [
+    "$0",
+    "Under $2K",
+    "$2–5K",
+    "$5–10K",
+    "$10K+",
+    "Paid cash"
+   ],
+   "next": "loanfrom"
+  },
+  {
+   "id": "loanfrom",
+   "q": "Who gave you the loan?",
+   "a": [
+    "The dealer",
+    "My bank",
+    "A credit union",
+    "An online lender",
+    "Paid cash"
+   ]
+  }
  ]
 }
