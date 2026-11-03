@@ -11,7 +11,8 @@
   const save = () => { try { localStorage.setItem(KEY, JSON.stringify(mine)); } catch {} };
   const E = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   const MON = m => new Date(m + '-15').toLocaleString('en-US', { month: 'long', year: 'numeric' });
-  const PER = [['week', 'This week'], ['month', 'This month'], ['6mo', '6 months'], ['year', 'This year'], ['all', 'All time']];
+  const PER = [['week', 'Week'], ['month', 'Month'], ['6mo', '6 months'], ['year', 'Year'], ['all', 'All time']];
+  const LONG = { week: 'in the last 7 days', month: 'in the last 30 days', '6mo': 'in the last 6 months', year: 'in the last year', all: 'all time' };
   let polls = [], cats = {}, counts = {}, period = 'week', cat = 'all', months = [], voters = 0, busy = {};
   const votedNow = id => mine[id] && mine[id].wk === wk ? mine[id].a : null;
 
@@ -52,8 +53,8 @@
     const tot = p => Object.values(counts[p.id] || {}).reduce((s, n) => s + n, 0);
     list.sort((x, y) => tot(y) - tot(x) || polls.indexOf(x) - polls.indexOf(y));
     root.querySelector('.v-grid').innerHTML = list.map(card).join('');
-    const lbl = (PER.find(p => p[0] === period) || [, MON(period)])[1];
-    root.querySelector('.v-sum').textContent = voters ? `${voters.toLocaleString('en-US')} ${voters === 1 ? 'person' : 'people'} voted · ${lbl.toLowerCase()}` : `No votes yet ${period === 'all' ? '' : 'in this period '}· be the first`;
+    const lbl = LONG[period] || 'in ' + MON(period);
+    root.querySelector('.v-sum').textContent = voters ? `${voters.toLocaleString('en-US')} ${voters === 1 ? 'person' : 'people'} voted ${lbl}` : `No votes yet ${period === 'all' ? '' : 'in this period '}· be the first`;
     root.querySelectorAll('.v-per [data-per]').forEach(b => b.classList.toggle('on', b.dataset.per === period));
     const sel = root.querySelector('.v-mon'); sel.innerHTML = '<option value="">Pick a month</option>' + months.map(m => `<option value="${m}"${m === period ? ' selected' : ''}>${MON(m)}</option>`).join('');
     sel.hidden = !months.length;

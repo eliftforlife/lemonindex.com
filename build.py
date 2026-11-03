@@ -122,7 +122,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None):
 <meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}{img or "/assets/og.png"}"><meta name="twitter:card" content="summary_large_image">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://static.nhtsa.gov; connect-src 'self' https://cloudflareinsights.com https://vpic.nhtsa.dot.gov https://lemon-survey.elift08.workers.dev; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap"><link rel="stylesheet" href="/assets/site.css?v=1103c">{lds}</head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap"><link rel="stylesheet" href="/assets/site.css?v=1103d">{lds}</head>
 <body><header class="top"><a class="brand" href="/"><img src="/assets/icon-64.png" alt="" width="32" height="32">The Lemon Index</a>
 <nav><a href="/cars/">Look up a car</a><a href="/electric/">Electric</a><a href="/studies/">Studies</a><a href="/compare/">Compare</a><a href="/vin/">VIN check</a><a href="/vote/">Vote</a><a href="/method/">How it works</a><a class="yt" href="{YT}?sub_confirmation=1" rel="noopener">Subscribe</a></nav></header>
 <main>{body}{ask_html(ask)}</main>
@@ -616,7 +616,7 @@ page('/vote/', 'Vote: Most Reliable Car Brand, Best Insurance, Best Years | Lemo
      'Vote on the most reliable car brand, the best and worst car insurance, the best used SUV, truck and model years. See what won this week, this month or all time.',
      f'''<section class="vote-hero"><p class="kicker"><a href="/cars/">All cars</a> · Vote</p><h1>What do car owners really think?</h1>
 <p>Vote on brands, models, years, insurance and more. Then see what won this week, this month, the last 6 months or all time. Our scores come from government complaint data; these are just opinions from people like you.</p></section>
-<main id="vote" data-site="lemon" data-ts="{TS}"></main><script src="/assets/vote.js?v=1103" defer></script>''',
+<main id="vote" data-site="lemon" data-ts="{TS}"></main><script src="/assets/vote.js?v=1103b" defer></script>''',
      ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": "Lemon Index car polls", "url": BASE + '/vote/'}])
 page('/car-loan-rates/', 'Car Loan Rates by Credit Score: Is Your Rate Fair? | Lemon Index',
      'Average new and used car loan rates for every credit score tier (Experian, Q2 2026), and a free check that shows what an above-average dealer rate costs you.',
