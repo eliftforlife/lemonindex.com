@@ -778,16 +778,17 @@ def csv_write(path, head, rows):
     return len(rows), os.path.getsize(path)
 os.makedirs(f'{OUT}/data', exist_ok=True)
 _top = lambda v, k: (v['parts'][k][0], v['parts'][k][1]) if k < len(v.get('parts') or []) else ('', '')
-_r1 = [[f['id'], f['name'], v['y'], v['li'], v['n']] + [x for k in range(3) for x in _top(v, k)] for f in YEARS for v in f["years"]]
+_r1 = [[f['id'], f['name'], v['y'], v['li'], v['n']] + [x for k in range(3) for x in _top(v, k)] + ['yes' if v.get('early') else ''] for f in YEARS for v in f["years"]]
 DL1 = csv_write(f'{OUT}/data/lemon-index-by-year.csv', ['family_id', 'model', 'model_year', 'lemon_index', 'nhtsa_complaints', 'top_problem_1', 'top_problem_1_complaints',
-                'top_problem_2', 'top_problem_2_complaints', 'top_problem_3', 'top_problem_3_complaints'], _r1)
+                'top_problem_2', 'top_problem_2_complaints', 'top_problem_3', 'top_problem_3_complaints', 'early_read'], _r1)
 _names = {f["id"]: f["name"] for f in YEARS}
 _r2 = [[fid, _names.get(fid, fid), int(y), d['n'], d['all'], d['rate']] for fid, ys in TR.items() for y, d in sorted(ys.items())]
 DL2 = csv_write(f'{OUT}/data/transmission-complaints-by-year.csv', ['family_id', 'model', 'model_year', 'transmission_complaints', 'all_complaints', 'transmission_complaints_per_100k_sold'], _r2)
 _kb = lambda b: f'{b / 1024:,.0f} KB'
 _cols1 = [('family_id', 'Our id for the model (same as the page URL)'), ('model', 'Make and model'), ('model_year', 'Model year'),
           ('lemon_index', 'Owner complaints per car sold, scaled so 100 = the average car. Lower is better.'),
-          ('nhtsa_complaints', 'Owner complaints filed with NHTSA that the score counts'), ('top_problem_1..3', 'The three parts owners complained about most, with how many complaints each')]
+          ('nhtsa_complaints', 'Owner complaints filed with NHTSA that the score counts'), ('top_problem_1..3', 'The three parts owners complained about most, with how many complaints each'),
+          ('early_read', '"yes" for 2023-2025: complaints filed so far, against other cars of the same model year. Can still change.')]
 _cols2 = [('transmission_complaints', 'Complaints that describe a transmission problem (matched on the complaint text)'), ('all_complaints', 'All complaints for that model year'),
           ('transmission_complaints_per_100k_sold', 'Transmission complaints per 100,000 cars sold')]
 _tbl = lambda cols: '<div class="tw"><table><thead><tr><th>Column</th><th>What it means</th></tr></thead><tbody>' + ''.join(f'<tr><td><code>{E(a)}</code></td><td>{E(b)}</td></tr>' for a, b in cols) + '</tbody></table></div>'
