@@ -160,13 +160,13 @@
    "kind": "repair",
    "noun": "car",
    "head": "Fixes owners look up most.",
-   "n": 100,
-   "views": 40954747,
+   "n": 87,
+   "views": 33455840,
    "topics": [
     {
      "name": "Timing chain & engine",
-     "views": 2887815,
-     "n": 7,
+     "views": 2289870,
+     "n": 6,
      "best": {
       "id": "yuDaGlwz_5Y",
       "title": "BMW N20/N26 Timing Chain Replacement DIY Part 1 - Removal & Disassembly (328i, 320i, 228i, 428i, X1)",
@@ -260,16 +260,16 @@
      "views": 559511
     },
     {
-     "id": "WR_aXg3zpWY",
-     "title": "BMW N52 Engine Diagnostics/Problems - Everything You Need To Know (128i, 325i, 328i, 330i, 528i)",
-     "channel": "FCP Euro",
-     "views": 512843
-    },
-    {
      "id": "rPUUNhjJjHU",
      "title": "BMW N55 Engine Diagnostics/Problems - Everything You Need To Know (X1, 135i, 335i, 435i, 535i)",
      "channel": "FCP Euro",
      "views": 382605
+    },
+    {
+     "id": "hZlR5sGtWig",
+     "title": "BMW 3 Series 2012-2018 (F30) used buyer's guide: specs, trims and common problems",
+     "channel": "Auto Express",
+     "views": 298433
     }
    ],
    "costs": {
@@ -538,8 +538,8 @@
    "topics": [
     {
      "name": "Versus rivals",
-     "views": 363794,
-     "n": 14,
+     "views": 331425,
+     "n": 13,
      "best": {
       "id": "UNpONmB6lL4",
       "title": "Battle of the best sellers. 2026 RAV4 or Honda CR V comparison",
@@ -604,13 +604,13 @@
     },
     {
      "name": "Problems, recalls & complaints",
-     "views": 18239,
-     "n": 5,
+     "views": 50608,
+     "n": 6,
      "best": {
-      "id": "UDOWNPcxYAE",
-      "title": "Don't Buy a 2026 RAV4 PHEV Until You Watch This",
-      "channel": "DTPMG",
-      "views": 14766
+      "id": "gfKeF-iwf1U",
+      "title": "2026 RAV4 Hybrid vs Plug-In Hybrid: Don't Make a $10,000 Mistake!",
+      "channel": "AutoMobi",
+      "views": 32369
      }
     }
    ],
@@ -658,8 +658,8 @@
    "topics": [
     {
      "name": "Reviews & first drives",
-     "views": 12439423,
-     "n": 39,
+     "views": 12955970,
+     "n": 40,
      "best": {
       "id": "vQ6e4-1uuGA",
       "title": "Exclusive First Drive of the 2026 Tesla Model Y | Jay Leno's Garage",
@@ -669,13 +669,13 @@
     },
     {
      "name": "Problems, recalls & complaints",
-     "views": 2139108,
-     "n": 10,
+     "views": 2259314,
+     "n": 11,
      "best": {
-      "id": "2npaB6MzaAY",
-      "title": "NEW Tesla Model Y Juniper Colors: WORST to BEST (Avoid this?)",
-      "channel": "Ayman",
-      "views": 516547
+      "id": "kgGizH9_t3k",
+      "title": "All NEW Features On 2026 Tesla Model Y | Don't Make a Mistake",
+      "channel": "Ryan Shaw",
+      "views": 551038
      }
     },
     {
@@ -701,20 +701,9 @@
      }
     },
     {
-     "name": "Interior, tech & features",
-     "views": 1603944,
-     "n": 7,
-     "best": {
-      "id": "kgGizH9_t3k",
-      "title": "All NEW Features On 2026 Tesla Model Y | Don't Make a Mistake",
-      "channel": "Ryan Shaw",
-      "views": 551038
-     }
-    },
-    {
      "name": "Versus rivals",
-     "views": 1601750,
-     "n": 10,
+     "views": 1516035,
+     "n": 9,
      "best": {
       "id": "ui5zyuCDuGs",
       "title": "2026 Tesla Model Y vs Model 3 (Which is Better?)",
@@ -731,6 +720,17 @@
       "title": "NEW 2026 Tesla Model Y Review | Watch Before Buying",
       "channel": "Ryan Shaw",
       "views": 441701
+     }
+    },
+    {
+     "name": "Interior, tech & features",
+     "views": 1052906,
+     "n": 6,
+     "best": {
+      "id": "iE4bueSrM8o",
+      "title": "NEW 2026 Tesla Model Y - Interior and Exterior Walkaround",
+      "channel": "CarsAround",
+      "views": 443629
      }
     },
     {
@@ -1264,8 +1264,8 @@
    "kind": "super",
    "noun": "",
    "head": "What owners and buyers watch most.",
-   "n": 100,
-   "views": 180852311,
+   "n": 99,
+   "views": 171580785,
    "topics": [
     {
      "name": "Reviews, drives & sound",

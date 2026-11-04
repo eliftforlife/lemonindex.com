@@ -42,7 +42,7 @@ TOPICS = {
   ('Oil changes & service', r'oil change|oil|service|maintenance|reset'),
  ],
  'new': [
-  ('Problems, recalls & complaints', r'problem|issue|recall|complain|regret|wrong|worst|flaw|don.?t buy|hate|broke|disappoint'),
+  ('Problems, recalls & complaints', r'problem|issue|recall|complain|regret|wrong|(?<!to )worst(?! to best)|flaw|don.?t buy|hate|broke|disappoint|mistake'),
   ('Owner reviews & long-term', r'owner|ownership|long.?term|\d+ ?(months?|miles|weeks?|k)|living with|one year|1 year|after'),
   ('Versus rivals', r'\bvs\.?\b|versus|compar|better than'),
   ('Range, MPG & charging', r'mpg|range|fuel|efficien|charg|battery|kwh|economy|supercharg'),
@@ -87,10 +87,12 @@ for study, key, years, gen, kind, noun in STUDIES:
     p = os.path.join(SRC, study, 'videos.json')
     if not os.path.exists(p): print('missing', study); continue
     R = json.load(open(p, encoding='utf-8')); T, G = {}, []
+    # reviewer C 11-04: games/toys and other generations out of the counts too (they inflated the Huracan total; the F30 set held E90/G20 videos)
+    OFFGEN = {'bmw-f30': r'\be9[0-3]\b|\bg2[0-9]\b|m340i|\b20(19|2[0-9])\b|\be4[6-9]\b|\be3[06]\b|\bn52\b|2007.?2013|2009.?2013'}
+    R = [r for r in R if not re.search(r'simulator|\bgame\b|\bgta\b|forza|roblox|beamng|\brc\b', r['title'], re.I) and not (study in OFFGEN and re.search(OFFGEN[study], r['title'], re.I))]
     for r in R:
         t = re.sub(r'\s+', ' ', r['title'].replace('\ufffd', "'")).strip()
         if kind == 'repair' and NOT_REPAIR.search(t): continue
-        if re.search(r'simulator|\bgame\b|\bgta\b|forza|roblox|beamng|\brc\b', t, re.I): continue   # games / toys, not the real thing
         top = next((n for n, pat in TOPICS[kind] if re.search(pat, t, re.I)), None)
         if not top: continue
         v = dict(id=r['id'], title=t, channel=r['channel'], views=r['views'])
