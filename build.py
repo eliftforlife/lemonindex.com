@@ -143,7 +143,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}{img or "/assets/og.png"}"><meta name="twitter:card" content="summary_large_image">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://static.nhtsa.gov; connect-src 'self' https://cloudflareinsights.com https://vpic.nhtsa.dot.gov https://lemon-survey.elift08.workers.dev; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"><link rel="stylesheet" href="/assets/site.css?v=1103v6d"><script src="/assets/nav.js?v=1103d" defer></script>{lds}</head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"><link rel="stylesheet" href="/assets/site.css?v=1103v6f"><script src="/assets/nav.js?v=1103d" defer></script>{lds}</head>
 <body><header class="top"><a class="brand" href="/"><img src="/assets/icon-64.png" alt="" width="32" height="32">The Lemon Index</a>
 <nav class="mainnav" aria-label="Main">{navlinks(path)}</nav><a class="yt" href="{YT}?sub_confirmation=1" rel="noopener">Subscribe</a></header>
 <main>{body}{CITE if path.startswith('/cars/') else ''}{'' if path == '/vote/' else ask_html(ask)}</main>
@@ -627,7 +627,7 @@ for f in YEARS:
              + (f'<div class="bwt bad"><p class="te">Years to avoid</p><h2>{bad3[0]["y"]}.</h2><div class="ychs">{"".join(chip(v, "bad") for v in bad3)}</div></div>' if bad3 else
                 f'<div class="bwt"><p class="te">Years to avoid</p><h2>None.</h2><p class="ts">No {E(f["name"])} year drew much more than the average car&#39;s complaints.</p></div>') + '</section>')
     rv = [o for o in RIVALS.get(f['id'], []) if mphoto(o)][:4]
-    vcards = ''.join(f'<a class="vs" href="{cmpu(f["id"], o)}"><span class="vs-p">{pimg(mphoto(f["id"]), f["name"], "l")}{pimg(mphoto(o), FY[o]["name"], "r")}</span><b>vs {E(FY[o]["name"])}</b></a>' for o in rv)
+    vcards = ''.join(f'<a class="mu" href="{cmpu(f["id"], o)}"><span class="mu-p">{pimg(mphoto(f["id"]), f["name"], "l")}{pimg(mphoto(o), FY[o]["name"], "r")}</span><b>vs {E(FY[o]["name"])}</b></a>' for o in rv)
     vs = ' · '.join(f'<a href="{cmpu(f["id"], o)}">vs {E(FY[o]["name"])}</a>' for o in RIVALS.get(f['id'], [])[:8])
     def yx(v):
         xx = yearx(f['id'], v['y']); m = xx.get('mpg'); sf = xx.get('safety')
@@ -648,7 +648,7 @@ for f in YEARS:
 <p><button type="button" class="btn btn-ghost" data-share="{E(f'Every {snm} year ranked by owner complaints. Best: {best["y"]}. Worst: {worst["y"]}. Free report:')}">Share ↗</button></p></section>
 <section class="yyears noph"><div class="yy-ch"><h2>Every year. <span class="h2s">Lower is better. Tap a year for its full report.</span></h2>{ybars(f)}</div>{'<p class="yc-cap">Scores before 2010 are rough: fewer owners filed complaints back then.</p>' if ys[0]["y"] < 2010 else ''}</section>
 {picks}
-{f'<section><h2>Compare the {E(f["name"])}.</h2><div class="vss">{vcards}</div>' + (f'<p class="yc-cap">{vs}</p>' if vs else '') + '</section>' if vcards or vs else ''}
+{f'<section><h2>Compare the {E(f["name"])}.</h2><div class="mus">{vcards}</div>' + (f'<p class="yc-cap">{vs}</p>' if vs else '') + '</section>' if vcards or vs else ''}
 {model_qa_html}
 <section><details class="yd"><summary>Every year in one table</summary><div class="tw"><table><thead><tr><th>Year</th><th>Index</th><th>Compared with average</th><th>Complaints</th><th>Top complaint</th><th>Recalls</th><th>Crash test</th><th>MPG</th></tr></thead><tbody>{rows}</tbody></table></div></details>
 <p class="yc-cap">Lemon Index = safety complaints filed with the government within 3 years, per car sold, against the average car of the same model year. 100 is average, lower is better. <a href="/method/">How it works</a></p>{f'<p><a class="btn" href="{CARU(f)}transmission/">{E(snm)} transmission problems by year →</a></p>' if f["id"] in TR else ''}</section></div>''',
@@ -898,10 +898,10 @@ cl = ''.join(f'<li><a href="{u}">{E(FY[a]["name"])} vs {E(FY[b]["name"])}</a></l
 _top, _seen = [], set()   # 8 match-ups, no car twice, so it isn't all Camry
 for (a, b), u in _cp:
     if mphoto(a) and mphoto(b) and a not in _seen and b not in _seen and len(_top) < 8: _top.append((a, b, u)); _seen |= {a, b}
-mcards = ''.join(f'<a class="vs" href="{u}"><span class="vs-p">{pimg(mphoto(a), FY[a]["name"], "l")}{pimg(mphoto(b), FY[b]["name"], "r")}</span><b>{E(FY[a]["name"])} <i>vs</i> {E(FY[b]["name"])}</b></a>' for a, b, u in _top)
+mcards = ''.join(f'<a class="mu" href="{u}"><span class="mu-p">{pimg(mphoto(a), FY[a]["name"], "l")}{pimg(mphoto(b), FY[b]["name"], "r")}</span><b>{E(FY[a]["name"])} <i>vs</i> {E(FY[b]["name"])}</b></a>' for a, b, u in _top)
 page('/compare/', 'Car Reliability Comparisons: Model vs Model | The Lemon Index', f'{len(curls)} head-to-head reliability comparisons of popular rivals, year by year, from NHTSA owner complaints per car sold.', f'''
 <div class="pg">{phero('Compare', 'Any two cars.', 'Problems, recalls, mpg and crash tests, side by side.', visual=pair(mphoto('toyota-rav4', 2019), mphoto('honda-cr-v', 2017), ('Toyota RAV4', 'Honda CR-V')), extra='<div id="cmpx" class="cmpx"><p class="note">Loading…</p></div>')}
-<section><h2>Popular match-ups.</h2><div class="vss">{mcards}</div>
+<section><h2>Popular match-ups.</h2><div class="mus">{mcards}</div>
 <details class="yd"><summary>All {len(curls)} match-ups</summary><ul class="cmp">{cl}</ul></details></section>
 {pcredit(who(*[mphoto(x) for a, b, _ in _top for x in (a, b)], mphoto('toyota-rav4', 2019), mphoto('honda-cr-v', 2017)))}</div><script src="/assets/compare.js?v=1102" defer></script>''',
      ld=[{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Car reliability comparisons", "url": BASE + '/compare/'}])
