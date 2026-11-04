@@ -817,3 +817,29 @@ details.qa p { margin: 0 0 18px; color: var(--ink2); max-width: 65ch; }
 .pg .study .stats { margin: 0 0 28px; }
 @media (max-width: 600px) { .pg .study .tw table td:last-child, .pg .study .tw table th:last-child { display: none; } }
 .pg .study .tw table { font-size: 15px; }
+
+/* ---- 11-03 v7 year pages */
+.bst { font-style: normal; color: #c99a06; font-size: 11px; letter-spacing: -.5px; margin-left: 8px; white-space: nowrap; }
+.yb .bn { white-space: nowrap; }
+.ysev .sv { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.ysev .sv div { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 18px 8px 16px; border-radius: 20px; background: #f5f5f7; }
+.ysev .sv .ico { width: 28px; height: 28px; margin-bottom: 4px; } .ysev .sv .bad .ico { color: #d70015; } .ysev .sv .good .ico { color: #1a8a3c; }
+.ysev .sv b { font-size: 30px; font-weight: 700; letter-spacing: -.02em; } .ysev .sv span { font-size: 14px; color: var(--ink2); }
+@media (max-width: 600px) { .ysev .sv { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+/* header: phones stack it (title, photo, verdict, years); desktop puts the text left and a big photo right */
+.yph6 { display: flex; flex-direction: column; align-items: center; } .yph6 .yh-t { display: contents; }
+.yph6 .ph-e { order: 1; } .yph6 h1 { order: 2; } .yph6 .early-b { order: 3; } .yph6 .yc-note { order: 4; } .yph6 > .ph-v { order: 5; } .yph6 .yhero { order: 6; } .yph6 .yswitch { order: 7; }
+@media (min-width: 980px) {
+  .yp6 { max-width: 1120px; }
+  .yph6 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); column-gap: 56px; align-items: center; text-align: left; max-width: 1120px; padding-top: 64px; }
+  .yph6 .yh-t { display: block; } .yph6 > .ph-v { margin: 0; }
+  .yph6 h1 { font-size: clamp(48px, 4.8vw, 68px); }
+  .yph6 .yhero { justify-content: flex-start; margin: 28px 0 0; flex-wrap: nowrap; }
+  .yph6 .yswitch { justify-content: flex-start; margin-top: 30px; flex-wrap: wrap; }
+  .yph6 .yph img { width: 100%; }
+  .yp6 > .ybuy, .yp6 > .yts, .yp6 > .ysev, .yp6 > .yyears, .yp6 > .ygrid, .yp6 > .early-n, .yp6 > .yc-note, .yp6 > .ybs { max-width: 980px; margin-left: auto; margin-right: auto; }
+}
+
+.yyears .b, .yyears .bl { grid-template-columns: 112px minmax(0, 1fr) 42px !important; } .yyears .bn { overflow: visible !important; text-overflow: clip !important; }
+@media (max-width: 600px) { .yyears .b, .yyears .bl { grid-template-columns: 96px minmax(0, 1fr) 38px !important; } .bst { font-size: 9.5px; margin-left: 5px; } }
+.mp6 .yhero { flex-direction: column; text-align: center; } .mp6 .yverd { text-align: center; }

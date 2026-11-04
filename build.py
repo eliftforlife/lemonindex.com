@@ -143,7 +143,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}{img or "/assets/og.png"}"><meta name="twitter:card" content="summary_large_image">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://static.nhtsa.gov; connect-src 'self' https://cloudflareinsights.com https://vpic.nhtsa.dot.gov https://lemon-survey.elift08.workers.dev; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"><link rel="stylesheet" href="/assets/site.css?v=1103v6f"><script src="/assets/nav.js?v=1103d" defer></script>{lds}</head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"><link rel="stylesheet" href="/assets/site.css?v=1103v7"><script src="/assets/nav.js?v=1103d" defer></script>{lds}</head>
 <body><header class="top"><a class="brand" href="/"><img src="/assets/icon-64.png" alt="" width="32" height="32">The Lemon Index</a>
 <nav class="mainnav" aria-label="Main">{navlinks(path)}</nav><a class="yt" href="{YT}?sub_confirmation=1" rel="noopener">Subscribe</a></header>
 <main>{body}{CITE if path.startswith('/cars/') else ''}{'' if path == '/vote/' else ask_html(ask)}</main>
@@ -194,6 +194,10 @@ ICONS = {   # custom 24px line icons (stroke 1.8, round), drawn for the site 11-
  'warn': '<path d="M12 3.5 21.5 20h-19z"/><path d="M12 10v4.5M12 17.2v.3"/>',
  'up': '<path d="M4 17.5 10 11l3.5 3.5L20 8"/><path d="M15 8h5v5"/>',
  'doc': '<path d="M6.5 3h8l4 4v14h-12z"/><path d="M14.5 3v4h4M9.5 12h6M9.5 15.5h6"/>',
+ 'crash': '<path d="M3.5 16.5h11l-1.6-4.6H6.2z"/><circle cx="6.6" cy="17.6" r="1.6"/><circle cx="11.6" cy="17.6" r="1.6"/><path d="M17.5 3.5l.9 2.8 2.8-.9-1.8 2.3 1.9 2.1-2.9-.1-.4 2.9-1.4-2.6"/>',
+ 'injury': '<circle cx="12" cy="12" r="8.5"/><path d="M12 8v8M8 12h8"/>',
+ 'fire': '<path d="M12 21c-3.6 0-6-2.4-6-5.6 0-3.4 3-5.4 3.6-9.4 2.2 1.4 3.4 3.4 3.4 5.4 1-.6 1.6-1.6 1.8-2.8 1.8 1.6 3.2 4 3.2 6.6C18 18.6 15.6 21 12 21z"/>',
+ 'tow': '<path d="M2.5 16.5h11v-7h3.8l3.2 4.2v2.8h-2"/><circle cx="6.5" cy="17.2" r="1.7"/><circle cx="16.5" cy="17.2" r="1.7"/><path d="M2.5 12.5l4.5-6.5"/>',
  'data': '<ellipse cx="12" cy="5.5" rx="7.5" ry="2.8"/><path d="M4.5 5.5v6c0 1.5 3.4 2.8 7.5 2.8s7.5-1.3 7.5-2.8v-6"/><path d="M4.5 11.5v6c0 1.5 3.4 2.8 7.5 2.8s7.5-1.3 7.5-2.8v-6"/>',
 }
 icon = lambda k: f'<svg class="ico" viewBox="0 0 24 24" aria-hidden="true">{ICONS[k]}</svg>'
@@ -418,10 +422,13 @@ def specs_html(x, y, name=''):
         eng = f' Engines: {E(", ".join(m["engines"]))}.' if m.get('engines') and not m.get('ev') else ''
         out += f'<h2>Fuel economy</h2><p><b>{rng(m["comb"])} {u}</b> combined.{cost}{eng}</p><p class="note">EPA ratings from fueleconomy.gov, across the versions sold that year.</p>'
     return out
+def ystar(fid, y):
+    x = extra(fid, y); sf = x.get('safety') or {}; n = sf.get('best') or ((X2.get(fid, {}).get(str(y), {}).get('old') or {}).get('front'))
+    return f'<i class="bst" title="NHTSA crash test: {n} of 5 stars" aria-label="{n} star crash test">{"★" * int(n)}</i>' if str(n).isdigit() else ''
 def ybars(f, cur=None):
     mx = max(120, max(v['li'] for v in f['years'] if v['ok']) * 1.08)
     return (f'<div class="bars yb"><div class="bl" aria-hidden="true"><span></span><span class="al" style="--a:{100 / mx * 100:.1f}%">average car = 100</span><span></span></div>'
-            + ''.join(f'<a class="b {CLS(v)}{" cur" if v["y"] == cur else ""}{" early" if v.get("early") else ""}" href="{CARU(f, v["y"])}" data-tip="{E(f["name"])} {v["y"]}: ' + (f'Lemon Index {v["li"]}, {plain(v["li"])}' if v['ok'] else f'only {v["n"]} complaints, too few to score') + f'."><span class="bn">{v["y"]}</span><span class="bt"><i style="width:{min(100, v["li"] / mx * 100) if v["ok"] else 0:.1f}%"></i><em style="left:{100 / mx * 100:.1f}%"></em></span><b>{LIS(v)}</b><small>{("early read · " if v.get("early") else "") + short(v["li"]) if v["ok"] else "few complaints"}</small></a>' for v in f['years']) + '</div>')
+            + ''.join(f'<a class="b {CLS(v)}{" cur" if v["y"] == cur else ""}{" early" if v.get("early") else ""}" href="{CARU(f, v["y"])}" data-tip="{E(f["name"])} {v["y"]}: ' + (f'Lemon Index {v["li"]}, {plain(v["li"])}' if v['ok'] else f'only {v["n"]} complaints, too few to score') + f'."><span class="bn">{v["y"]}{ystar(f["id"], v["y"])}</span><span class="bt"><i style="width:{min(100, v["li"] / mx * 100) if v["ok"] else 0:.1f}%"></i><em style="left:{100 / mx * 100:.1f}%"></em></span><b>{LIS(v)}</b><small>{("early read · " if v.get("early") else "") + short(v["li"]) if v["ok"] else "few complaints"}</small></a>' for v in f['years']) + '</div>')
 # 10-31 idea 5: "X vs Y" pages for the best-selling rivals in each type (people search "camry vs accord reliability").
 FY = {f['id']: f for f in YEARS}
 RIVALS = defaultdict(list); PAIRS = []
@@ -474,7 +481,7 @@ def year_photo(f, y):
     if shown is None: m = re.search(r'(19|20)\d\d', ph.get('title', '')); shown = int(m.group()) if m else None
     lic = ph.get('license', ''); who = (ph.get('author') or '').split('\ufffd')[0].strip()
     lic_h = f'<a href="{LIC[lic]}" rel="noopener license">{E(lic)}</a>' if lic in LIC else E(lic)
-    note = f'Photo shows a {shown} {E(nm)}. ' if shown and shown != y else f'Photo shows a {E(nm)}. ' if not shown else ''
+    note = f'Photo shows a {shown} {E(nm)}. ' if shown and shown != y else f'Photo shows {"an" if nm[0] in "AEIOU" else "a"} {E(nm)}. ' if not shown else ''
     return (f'<figure class="yph"><img src="{ph["src"]}" alt="{E(nm)}" width="{ph["w"]}" height="{ph["h"]}" fetchpriority="high">'
             f'<figcaption>{note}<a href="{E(ph.get("page", ""))}" rel="noopener">{E(who)}</a>, Wikimedia Commons · {lic_h} · background removed</figcaption></figure>')
 def clean_tsb(t):
@@ -529,7 +536,8 @@ def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
     if v['ok']:
         cls, word = verdict(v['li'])
         if v.get('early'): word = 'Early read: ' + word[0].lower() + word[1:]
-        hero = f'<div class="yhero">{gauge(v["li"], 190)}<div class="yverd {cls}"><p><b>{word}.</b> <span>{E(plain(v["li"]))}.</span></p>{{BW}}</div></div>'
+        pl = plain(v['li']); pl = '' if pl.lower() in word.lower() else f' <span>{E(pl)}.</span>'   # no "About average. about average."
+        hero = f'<div class="yhero">{gauge(v["li"], 190)}<div class="yverd {cls}"><p><b>{word}.</b>{pl}</p>{{BW}}</div></div>'
     else:
         hero = f'<div class="yverd mid"><p><b>Not enough data.</b> <span>Only {v["n"]} complaints in its first 3 years: too few to score.</span></p>{{BW}}</div>'
     old = '<p class="yc-note">Older model year: fewer owners filed complaints back then, so treat the score as rough.</p>' if y < 2010 else ''
@@ -552,15 +560,16 @@ def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
     parts = ''.join(f'<div class="pt"><span>{E(NICE(p))}</span><span class="bt"><i style="width:{k}%"></i></span><b>{k}%</b></div>' for p, k in v['parts'])
     probs = f'<section class="yc" id="problems"><h2>What owners complain about most. <span class="h2s">From owner complaints to the government.</span></h2><div class="pts">{parts}</div><p class="yc-cap">Share of this year&#39;s owner complaints filed with NHTSA, not the share of cars that break. One complaint can name more than one area.</p>' + (f'<p class="yc-cap"><a href="{CARU(f)}transmission/">Transmission problems in every {nm} year →</a></p>' if f['id'] in TR else '') + '</section>' if parts else ''
     sev_items = [(s.get('crash', 0), 'crashes'), (s.get('injured', 0), 'injuries'), (s.get('fire', 0), 'fires'), (s.get('towed', 0), 'tows')]
-    sev = (f'<section class="yc"><h2>How serious</h2><p class="yc-cap">Out of {s["total"]:,} owner complaints, owners reported:</p><div class="sv">'
-           + ''.join(f'<div class="{"bad" if n else "good"}"><b>{n:,}</b><span>{lab}</span></div>' for n, lab in sev_items) + '</div></section>') if s.get('total') else ''
+    sev = (f'<section class="ysev"><h2>How serious. <span class="h2s">Out of {s["total"]:,} owner complaints, owners reported:</span></h2><div class="sv">'
+           + ''.join(f'<div class="{"bad" if n else "good"}">{icon(ic)}<b>{n:,}</b><span>{lab}</span></div>' for (n, lab), ic in zip(sev_items, ('crash', 'injury', 'fire', 'tow'))) + '</div></section>') if s.get('total') else ''
     if 'recalls' in x:
         rs = sorted(rec, key=lambda r: r['date'][6:10] + r['date'][3:5] + r['date'][:2], reverse=True)
         card = lambda r: f'<li><b>{E(RPART(r["part"]))}</b> <small>{E(r["date"][-4:])}</small><p>{E(rsum(r))}</p></li>'
         recs = (f'<section class="yc" id="recalls"><h2>Recalls <span class="yc-n">{len(rs)}</span></h2>'
                 + (f'<ul class="rc">{"".join(card(r) for r in rs[:3])}</ul>' + (f'<details><summary>Show all {len(rs)} recalls</summary><ul class="rc">{"".join(card(r) for r in rs[3:])}</ul></details>' if len(rs) > 3 else '')
                    if rs else '<p>No safety recalls on record.</p>')
-                + '<p class="yc-cap">Recall repairs are free at any dealer. Check a specific car&#39;s VIN at <a href="https://www.nhtsa.gov/recalls" rel="noopener">nhtsa.gov/recalls</a>.</p></section>')
+                + '<p class="yc-cap">Recall repairs are free at any dealer. A recall only matters if it&#39;s still open on that exact car, so check its VIN.</p>'
+                + '<p><a class="btn" href="/vin/">Check a VIN for open recalls</a></p></section>')
     else: recs = ''
     crash = ''
     if sf and sf.get('variants'):
@@ -588,7 +597,7 @@ def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
         safety = f'<section class="yc"><h2>Safety</h2>{f"<div class=tcs>{chips}</div>" if chips else ""}{oldrow}{photo}</section>'
     kc = []
     if v['parts']: kc.append(('wrench', 'Most common problem', E(NICE(v['parts'][0][0])).capitalize(), f'{v["parts"][0][1]}% of owner complaints', '#problems'))
-    if 'recalls' in x: kc.append(('warn', 'Recalls', f'{len(rec)}', 'Free fix at any dealer: check the VIN' if rec else 'None on record', '/vin/' if rec else '#recalls'))
+    if 'recalls' in x: kc.append(('warn', 'Recalls', f'{len(rec)}', 'Free fix at any dealer' if rec else 'None on record', '#recalls'))
     if best['y'] != y: kc.append(('up', 'Better year to buy', f'{best["y"]}', E(plain(best['li'])), CARU(f, best['y'])))
     else: kc.append(('up', 'Best year', f'{y}', f'The best {nm} year we track', CARU(f)))
     if inv_open: kc.append(('warn', 'Government investigation', f'{len(inv_open)} open', 'Owners reported enough to trigger one', '#inv'))
@@ -601,12 +610,12 @@ def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
         words = (f'<section class="yc"><h2>In owners&#39; words</h2><blockquote><p>{E(q0["text"])}</p><cite>{y} {nm} owner · NHTSA complaint {q0["odi"]}</cite></blockquote>'
                  + (f'<details><summary>More owner reports</summary>{more}</details>' if more else '') + '</section>')
     return f'''
-<article class="yp yp6"><section class="ph yph6"><p class="ph-e"><a href="/cars/">All cars</a> · <a href="{CARU(f)}">{nm}</a></p><h1>{y} {nm}.</h1>{'<p class="early-b">Early read</p>' if v.get('early') else ''}
-{f'<p class="yc-note">{SN[f["id"]][1]}</p>' if f["id"] in SN else ""}{f'<div class="ph-v">{ph}</div>' if ph else ''}{hero.replace('{BW}', bw)}
-<nav class="yswitch" aria-label="Model years"><div class="yseg">{seg}<a class="yall" href="{CARU(f)}">All years</a></div><div class="yact"><a class="btn btn-ghost" href="/compare/?c={f['id']}-{y}">Compare</a><button type="button" class="btn btn-ghost yshare" data-share="{E(share_txt)}">Share</button></div></nav></section>
-{buy}<div class="yts">{tiles}</div>{old}
+<article class="yp yp6"><section class="ph yph6"><div class="yh-t"><p class="ph-e"><a href="/cars/">All cars</a> · <a href="{CARU(f)}">{nm}</a></p><h1>{y} {nm}.</h1>{'<p class="early-b">Early read</p>' if v.get('early') else ''}
+{f'<p class="yc-note">{SN[f["id"]][1]}</p>' if f["id"] in SN else ""}{hero.replace('{BW}', bw)}
+<nav class="yswitch" aria-label="Model years"><div class="yseg">{seg}<a class="yall" href="{CARU(f)}">All years</a></div><div class="yact"><a class="btn btn-ghost" href="/compare/?c={f['id']}-{y}">Compare</a><button type="button" class="btn btn-ghost yshare" data-share="{E(share_txt)}">Share</button></div></nav></div>{f'<div class="ph-v">{ph}</div>' if ph else ''}</section>
+{buy}<div class="yts">{tiles}</div>{sev}{old}
 <section class="yyears noph"><div class="yy-ch"><h2>Every {nm} year. <span class="h2s">{y} is highlighted. Lower is better.</span></h2>{ybars(f, y)}</div></section>
-<div class="ygrid">{probs}{timeline(x["miles"], x.get("comps") or []) if x.get("miles") else ""}{recs}{(lambda pr: f'<section class="yc">{pr}</section>' if pr else '')(price_html(f["id"], y, f["name"]))}{sev}
+<div class="ygrid">{probs}{timeline(x["miles"], x.get("comps") or []) if x.get("miles") else ""}{recs}{(lambda pr: f'<section class="yc">{pr}</section>' if pr else '')(price_html(f["id"], y, f["name"]))}
 {fixes}{invs}{safety}{f'<section class="yc">{crash}{fuel}</section>' if crash or fuel else ''}{words}
 {f'<section class="yc yqa"><h2>Quick answers</h2>' + qa_fold("".join(f"<h3>{E(q)}</h3><p>{a}</p>" for q, a, _ in qa)) + '</section>' if qa else ''}</div>
 <p class="yc-cap">Lemon Index = safety complaints filed with the U.S. government (NHTSA) in a car&#39;s first 3 years, per car sold, against the average car of the same model year. 100 is average; lower is better. A complaint is an owner&#39;s report, not a confirmed defect. <a href="/method/">How it works</a></p></article>'''
@@ -644,7 +653,7 @@ for f in YEARS:
          f'Every {snm} model year from {ys[0]["y"]} to {ys[-1]["y"]}, ranked by NHTSA owner complaints per car sold. Best: {best["y"]}. Worst: {worst["y"]} ({plain(worst["li"])}).', f'''
 <div class="pg mp6"><section class="ph"><p class="ph-e"><a href="/cars/">All cars</a> · {E(c["segName"])}</p><h1>{E(snm)}.</h1><p class="ph-s">Reliability by year, {ys[0]["y"]} to {ys[-1]["y"]}.</p>{f'<p class="yc-note">{SN[f["id"]][1]}</p>' if f["id"] in SN else ""}
 <div class="ph-v">{year_photo(f, ys[-1]["y"])}</div>
-<div class="yhero">{gauge(c["li"], 190)}<div class="yverd {verdict(c["li"])[0]}"><p><b>{verdict(c["li"])[1]}.</b> <span>Whole model, {c["years"]}: {E(plain(c["li"]))}.</span></p><p class="ybw">Best year <a class="good" href="{CARU(f, best["y"])}">{best["y"]}</a> · Worst year <a class="bad" href="{CARU(f, worst["y"])}">{worst["y"]}</a></p></div></div>
+<div class="yhero">{gauge(c["li"], 190)}<div class="yverd {verdict(c["li"])[0]}"><p><b>{verdict(c["li"])[1]}.</b> <span>Whole model, {c["years"]}{"" if plain(c["li"]).lower() in verdict(c["li"])[1].lower() else ": " + E(plain(c["li"]))}.</span></p><p class="ybw">Best year <a class="good" href="{CARU(f, best["y"])}">{best["y"]}</a> · Worst year <a class="bad" href="{CARU(f, worst["y"])}">{worst["y"]}</a></p></div></div>
 <p><button type="button" class="btn btn-ghost" data-share="{E(f'Every {snm} year ranked by owner complaints. Best: {best["y"]}. Worst: {worst["y"]}. Free report:')}">Share ↗</button></p></section>
 <section class="yyears noph"><div class="yy-ch"><h2>Every year. <span class="h2s">Lower is better. Tap a year for its full report.</span></h2>{ybars(f)}</div>{'<p class="yc-cap">Scores before 2010 are rough: fewer owners filed complaints back then.</p>' if ys[0]["y"] < 2010 else ''}</section>
 {picks}
