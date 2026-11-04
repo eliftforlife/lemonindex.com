@@ -11,29 +11,29 @@
 "Cessna 150/152": {
 "src": "/assets/v/cessna-152.webp",
 "w": 900,
-"h": 302,
+"h": 345,
 "author": "Robbie Klinkenberg",
 "license": "CC BY-SA 4.0",
-"page": "https://commons.wikimedia.org/wiki/File%3ACessna_152_II_PH-SKG_at_Portim%C3%A3o_Airport_05-08-2020_%282%29.jpg",
-"title": "File:Cessna 152 II PH-SKG at Portimão Airport 05-08-2020 (2).jpg"
+"page": "https://commons.wikimedia.org/wiki/File%3ACessna_152_G-CGSP_at_Portim%C3%A3o_Airport_17-8-2014.jpg",
+"title": "File:Cessna 152 G-CGSP at Portimão Airport 17-8-2014.jpg"
 },
 "Cessna 182 Skylane": {
 "src": "/assets/v/cessna-182.webp",
 "w": 900,
-"h": 404,
-"author": "Noah Wulf",
+"h": 302,
+"author": "Robbie Klinkenberg",
 "license": "CC BY-SA 4.0",
-"page": "https://commons.wikimedia.org/wiki/File%3ACivil_Air_Patrol_Cessna_182_-_Aviation_Nation_2019.jpg",
-"title": "File:Civil Air Patrol Cessna 182 - Aviation Nation 2019.jpg"
+"page": "https://commons.wikimedia.org/wiki/File%3ACessna_182M_Skylane_CS-AKX_at_Portim%C3%A3o_Airport_17-8-2014.jpg",
+"title": "File:Cessna 182M Skylane CS-AKX at Portimão Airport 17-8-2014.jpg"
 },
 "Cessna 180/185 Skywagon": {
 "src": "/assets/v/cessna-185.webp",
 "w": 900,
-"h": 368,
-"author": "James from Cheltenham, Gloucestershire",
-"license": "CC BY-SA 2.0",
-"page": "https://commons.wikimedia.org/wiki/File%3AG-SAUO_Cessna_Skywagon_185_%2826264526593%29.jpg",
-"title": "File:G-SAUO Cessna Skywagon 185 (26264526593).jpg"
+"h": 292,
+"author": "ZLEA",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3ACessna_A185E_Skywagon_%28N95LW%2C_cn_185-1185%29_%284-12-2024%29.jpg",
+"title": "File:Cessna A185E Skywagon (N95LW, cn 185-1185) (4-12-2024).jpg"
 },
 "Cessna 210 Centurion": {
 "src": "/assets/v/cessna-210.webp",
@@ -84,7 +84,7 @@
 "src": "/assets/v/piper-pa-18-super-cub.webp",
 "w": 900,
 "h": 282,
-"author": "Ad Meskens You are free to use this picture for any purpose ",
+"author": "Ad Meskens You are free to use this picture for any purpose as long as you credi",
 "license": "CC BY-SA 4.0",
 "page": "https://commons.wikimedia.org/wiki/File%3AAntwerp_Piper_PA-18_Super_Cub_D-EHCB_at_Stampe_Fly_In_2019_01.jpg",
 "title": "File:Antwerp Piper PA-18 Super Cub D-EHCB at Stampe Fly In 2019 01.jpg"
@@ -116,15 +116,6 @@
 "page": "https://commons.wikimedia.org/wiki/File%3AYV2260_Piper_PA-34-220T_Seneca_III.jpg",
 "title": "File:YV2260 Piper PA-34-220T Seneca III.jpg"
 },
-"Piper PA-46 Malibu / M350 / M600": {
-"src": "/assets/v/piper-pa-46.webp",
-"w": 900,
-"h": 359,
-"author": "Matti Blume",
-"license": "CC BY-SA 4.0",
-"page": "https://commons.wikimedia.org/wiki/File%3APiper_PA-46_M600_at_AERO_Friedrichshafen_2018_%281X7A4816%29.jpg",
-"title": "File:Piper PA-46 M600 at AERO Friedrichshafen 2018 (1X7A4816).jpg"
-},
 "Piper PA-12 / PA-22": {
 "src": "/assets/v/piper-pa-22.webp",
 "w": 900,
@@ -136,12 +127,12 @@
 },
 "Beechcraft Bonanza": {
 "src": "/assets/v/beechcraft-a36-bonanza.webp",
-"w": 900,
-"h": 300,
-"author": "James from Cheltenham, Gloucestershire",
-"license": "CC BY-SA 2.0",
-"page": "https://commons.wikimedia.org/wiki/File%3AOO-VKB_Beechcraft_Bonanza_A36_%2835110223990%29.jpg",
-"title": "File:OO-VKB Beechcraft Bonanza A36 (35110223990).jpg"
+"w": 658,
+"h": 201,
+"author": "ZLEA",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3ABeechcraft_A36_Bonanza_%28N371RA%2C_cn_E-3590%29_%281-11-2024%29.jpg",
+"title": "File:Beechcraft A36 Bonanza (N371RA, cn E-3590) (1-11-2024).jpg"
 },
 "Beechcraft Baron": {
 "src": "/assets/v/beechcraft-baron.webp",
@@ -164,20 +155,20 @@
 "Cirrus SR20": {
 "src": "/assets/v/cirrus-sr20.webp",
 "w": 900,
-"h": 297,
-"author": "James from Cheltenham, Gloucestershire",
-"license": "CC BY-SA 2.0",
-"page": "https://commons.wikimedia.org/wiki/File%3AN781CD_Cirrus_SR20_%2823248747040%29.jpg",
-"title": "File:N781CD Cirrus SR20 (23248747040).jpg"
+"h": 283,
+"author": "Steve Lynes from Sandshurst, United Kingdom",
+"license": "CC BY 2.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AEGLK_-_Cirrus_SR20_GTS_-_F-HCGA_%2829620196158%29.jpg",
+"title": "File:EGLK - Cirrus SR20 GTS - F-HCGA (29620196158).jpg"
 },
 "Cirrus SR22": {
 "src": "/assets/v/cirrus-sr22.webp",
 "w": 900,
-"h": 306,
-"author": "Hippocamelus",
-"license": "CC BY-SA 3.0",
-"page": "https://commons.wikimedia.org/wiki/File%3ACirrus_SR22_T.JPG",
-"title": "File:Cirrus SR22 T.JPG"
+"h": 317,
+"author": "James from Cheltenham, Gloucestershire",
+"license": "CC BY-SA 2.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AG-MAZZ_Cirrus_SR22_%2823641940992%29.jpg",
+"title": "File:G-MAZZ Cirrus SR22 (23641940992).jpg"
 },
 "Mooney M20": {
 "src": "/assets/v/mooney-m20.webp",
@@ -191,11 +182,11 @@
 "Diamond DA40": {
 "src": "/assets/v/diamond-da40.webp",
 "w": 900,
-"h": 272,
-"author": "ZLEA",
+"h": 263,
+"author": "Photographs by Radosław Drożdżewski (User:Zwiadowca21)",
 "license": "CC BY-SA 4.0",
-"page": "https://commons.wikimedia.org/wiki/File%3ADiamond_DA40_NG_Diamond_Star_%28N479WP%2C_cn_40.NC175%29_%289-10-2022%29.jpg",
-"title": "File:Diamond DA40 NG Diamond Star (N479WP, cn 40.NC175) (9-10-2022).jpg"
+"page": "https://commons.wikimedia.org/wiki/File%3AWalldorf_-_Diamond_DA40_Diamond_Star_D-EXFX_2015-08-30_16-00-39.JPG",
+"title": "File:Walldorf - Diamond DA40 Diamond Star D-EXFX 2015-08-30 16-00-39.JPG"
 },
 "Diamond DA20": {
 "src": "/assets/v/diamond-da20.webp",
@@ -227,11 +218,11 @@
 "Air Tractor (crop dusters)": {
 "src": "/assets/v/air-tractor-at-802.webp",
 "w": 900,
-"h": 383,
-"author": "Robbie Klinkenberg",
-"license": "CC BY 4.0",
-"page": "https://commons.wikimedia.org/wiki/File%3ATrabajos_A%C3%A9reos_Mart%C3%ADnez_Ridao_Air_Tractor_AT-802_EC-NRE_at_Portim%C3%A3o_Airport_12-06-2023_%281%29.jpg",
-"title": "File:Trabajos Aéreos Martínez Ridao Air Tractor AT-802 EC-NRE at Portimão Airport 12-06-2023 (1).jpg"
+"h": 303,
+"author": "MarcelX42",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3ABraunschweig_Airport_Helic%C3%B3pteros_del_Pac%C3%ADfico_Air_Tractor_AT-802_CC-DER_%28DSC00386%29.jpg",
+"title": "File:Braunschweig Airport Helicópteros del Pacífico Air Tractor AT-802 CC-DER (DSC00386).jpg"
 },
 "Van's RV (kit planes)": {
 "src": "/assets/v/vans-rv-7.webp",
@@ -336,7 +327,7 @@
 "src": "/assets/v/harley-davidson-electra-glide.webp",
 "w": 900,
 "h": 507,
-"author": "Medium69 (William Croch",
+"author": "Another one of my pictures: This photograph was taken by Medium69 (William Croch",
 "license": "CC BY-SA 4.0",
 "page": "https://commons.wikimedia.org/wiki/File%3AHarley-Davidson_Electra_Glide_-_236.jpg",
 "title": "File:Harley-Davidson Electra Glide - 236.jpg"
@@ -362,11 +353,11 @@
 "Harley-Davidson Dyna": {
 "src": "/assets/v/harley-davidson-dyna.webp",
 "w": 900,
-"h": 445,
-"author": "Harleyrobbio",
-"license": "CC BY-SA 4.0",
-"page": "https://commons.wikimedia.org/wiki/File%3AHarley_Davidson_Dyna_1450.jpg",
-"title": "File:Harley Davidson Dyna 1450.jpg"
+"h": 489,
+"author": "Self-photographed by Jwh",
+"license": "CC BY-SA 3.0 lu",
+"page": "https://commons.wikimedia.org/wiki/File%3AHarley-Davidson_Dyna_Super_Glide_Custom%2C_Diddeleng-101.jpg",
+"title": "File:Harley-Davidson Dyna Super Glide Custom, Diddeleng-101.jpg"
 },
 "Harley-Davidson Street 500/750": {
 "src": "/assets/v/harley-davidson-street-750.webp",
@@ -389,11 +380,11 @@
 "Honda Gold Wing": {
 "src": "/assets/v/honda-gold-wing.webp",
 "w": 900,
-"h": 553,
-"author": "Tarrakaner",
+"h": 797,
+"author": "Matti Blume",
 "license": "CC BY-SA 4.0",
-"page": "https://commons.wikimedia.org/wiki/File%3AHonda_Gold_Wing_GL_1800_%28SC79_-_2018%29.jpg",
-"title": "File:Honda Gold Wing GL 1800 (SC79 - 2018).jpg"
+"page": "https://commons.wikimedia.org/wiki/File%3AHonda_Goldwing%2C_GIMS_2019%2C_Le_Grand-Saconnex_%28GIMS0707%29.jpg",
+"title": "File:Honda Goldwing, GIMS 2019, Le Grand-Saconnex (GIMS0707).jpg"
 },
 "Honda Shadow": {
 "src": "/assets/v/honda-shadow.webp",
@@ -515,29 +506,29 @@
 "Suzuki Hayabusa": {
 "src": "/assets/v/suzuki-hayabusa.webp",
 "w": 900,
-"h": 569,
-"author": "Thesupermat",
-"license": "CC BY-SA 3.0",
-"page": "https://commons.wikimedia.org/wiki/File%3AParis_-_Salon_de_la_moto_2011_-_Suzuki_-_Hayabusa_-_002.jpg",
-"title": "File:Paris - Salon de la moto 2011 - Suzuki - Hayabusa - 002.jpg"
+"h": 543,
+"author": "PekePON",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3ASuzuki_Hayabusa_at_Tokyo_Motor_Show_2013-6.jpg",
+"title": "File:Suzuki Hayabusa at Tokyo Motor Show 2013-6.jpg"
 },
 "Suzuki V-Strom": {
 "src": "/assets/v/suzuki-dl650-v-strom.webp",
 "w": 900,
 "h": 629,
-"author": "Originally uploaded by Mschott99 (Transferred by Calliopejen",
+"author": "Originally uploaded by Mschott99 (Transferred by Calliopejen1)",
 "license": "Public domain",
 "page": "https://commons.wikimedia.org/wiki/File%3ASuzuki_V-Strom_DL650%2C_Blue_Ridge.jpg",
 "title": "File:Suzuki V-Strom DL650, Blue Ridge.jpg"
 },
 "BMW GS (R1200/R1250GS)": {
 "src": "/assets/v/bmw-r1200gs.webp",
-"w": 900,
-"h": 629,
-"author": "Diego Delso",
-"license": "CC BY-SA 3.0",
-"page": "https://commons.wikimedia.org/wiki/File%3ABMW_R1200GS_K50_Welt_Munich_Alemania_2013-04-22.jpg",
-"title": "File:BMW R1200GS K50 Welt Munich Alemania 2013-04-22.jpg"
+"w": 889,
+"h": 798,
+"author": "Jostein Nymoen from Kongsberg, Norway",
+"license": "CC BY-SA 2.0",
+"page": "https://commons.wikimedia.org/wiki/File%3ABMW_R1200GS_Adv_front_left.jpg",
+"title": "File:BMW R1200GS Adv front left.jpg"
 },
 "BMW RT (R1200/R1250RT)": {
 "src": "/assets/v/bmw-r1200rt.webp",
@@ -578,38 +569,38 @@
 "Ducati Monster": {
 "src": "/assets/v/ducati-monster.webp",
 "w": 900,
-"h": 599,
-"author": "Darryl Braaten from Vancouver, Canada",
-"license": "CC BY-SA 2.0",
-"page": "https://commons.wikimedia.org/wiki/File%3AWhite_Ducati_Monster_696_front_closeup.jpg",
-"title": "File:White Ducati Monster 696 front closeup.jpg"
+"h": 689,
+"author": "Sinank56",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3ADucati_Monster_696_2013.jpg",
+"title": "File:Ducati Monster 696 2013.jpg"
 },
 "Ducati Panigale": {
 "src": "/assets/v/ducati-panigale.webp",
 "w": 900,
-"h": 566,
-"author": "Matti Blume",
-"license": "CC BY-SA 4.0",
-"page": "https://commons.wikimedia.org/wiki/File%3ADucati_Panigale_V4_-_Tuning_World_Bodensee_2018%2C_Friedrichshafen_%28OW1A0484%29.jpg",
-"title": "File:Ducati Panigale V4 - Tuning World Bodensee 2018, Friedrichshafen (OW1A0484).jpg"
+"h": 538,
+"author": "Ducati",
+"license": "CC0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2020_Ducati_Panigale_V4_Superleggera.jpg",
+"title": "File:2020 Ducati Panigale V4 Superleggera.jpg"
 },
 "Ducati Scrambler": {
 "src": "/assets/v/ducati-scrambler-icon.webp",
-"w": 900,
-"h": 524,
-"author": "Dennis Bratland",
-"license": "CC BY-SA 4.0",
-"page": "https://commons.wikimedia.org/wiki/File%3A2015_Ducati_Scrambler_Icon_right.JPG",
-"title": "File:2015 Ducati Scrambler Icon right.JPG"
+"w": 896,
+"h": 799,
+"author": "Frank Schwichtenberg",
+"license": "CC BY-SA 3.0",
+"page": "https://commons.wikimedia.org/wiki/File%3ADucati_Scrambler_Icon_803_CC_%E2%80%93_Hamburger_Motorrad_Tage_2015_01.jpg",
+"title": "File:Ducati Scrambler Icon 803 CC – Hamburger Motorrad Tage 2015 01.jpg"
 },
 "Triumph Bonneville / Thruxton": {
 "src": "/assets/v/triumph-bonneville.webp",
 "w": 900,
-"h": 574,
-"author": "Artaxerxes",
-"license": "CC BY-SA 3.0",
-"page": "https://commons.wikimedia.org/wiki/File%3ATriumph_Bonneville_with_Cozy_sidecar_downtown_Montpelier_VT_June_2016.jpg",
-"title": "File:Triumph Bonneville with Cozy sidecar downtown Montpelier VT June 2016.jpg"
+"h": 569,
+"author": "Hogyn Lleol",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3ATriumph_Bonneville_T100_%282011%29.jpg",
+"title": "File:Triumph Bonneville T100 (2011).jpg"
 },
 "Triumph Rocket 3": {
 "src": "/assets/v/triumph-rocket-3.webp",
@@ -631,12 +622,12 @@
 },
 "KTM 790/890 Adventure": {
 "src": "/assets/v/ktm-790-adventure.webp",
-"w": 900,
-"h": 650,
-"author": "Cjp24",
+"w": 727,
+"h": 799,
+"author": "MDzakovic",
 "license": "CC BY-SA 4.0",
-"page": "https://commons.wikimedia.org/wiki/File%3AKTM_790_Adventure%2C_topcase.jpg",
-"title": "File:KTM 790 Adventure, topcase.jpg"
+"page": "https://commons.wikimedia.org/wiki/File%3AKTM_790_Adventure.jpg",
+"title": "File:KTM 790 Adventure.jpg"
 },
 "KTM 690 Duke / Enduro": {
 "src": "/assets/v/ktm-690-duke.webp",
@@ -685,12 +676,12 @@
 },
 "Ferrari 458 Italia": {
 "src": "/assets/v/2011-ferrari-458-italia.webp",
-"w": 900,
-"h": 617,
+"w": 807,
+"h": 508,
 "author": "Valder137",
 "license": "CC BY 2.0",
-"page": "https://commons.wikimedia.org/wiki/File%3AFerrari_458_2011_Italia_LFront_CECF_9April2011_%2814414488687%29.jpg",
-"title": "File:Ferrari 458 2011 Italia LFront CECF 9April2011 (14414488687).jpg"
+"page": "https://commons.wikimedia.org/wiki/File%3AFerrari_458_2011_Italia_LSideFront_CECF_9April2011_%2814414295838%29.jpg",
+"title": "File:Ferrari 458 2011 Italia LSideFront CECF 9April2011 (14414295838).jpg"
 },
 "Ferrari 488": {
 "src": "/assets/v/ferrari-488-gtb.webp",
@@ -722,20 +713,20 @@
 "Ferrari SF90 Stradale": {
 "src": "/assets/v/ferrari-sf90-stradale.webp",
 "w": 900,
-"h": 457,
-"author": "Calreyn88",
+"h": 452,
+"author": "This picture has been taken by Oleg Yunakov. Contact e-mail: yunakovgmail.com. I",
 "license": "CC BY-SA 4.0",
-"page": "https://commons.wikimedia.org/wiki/File%3A2021_Ferrari_SF90_Stradale_3.jpg",
-"title": "File:2021 Ferrari SF90 Stradale 3.jpg"
+"page": "https://commons.wikimedia.org/wiki/File%3A2025_Ferrari_SF90_Stradale_-_01.jpg",
+"title": "File:2025 Ferrari SF90 Stradale - 01.jpg"
 },
 "Ferrari 812 Superfast": {
 "src": "/assets/v/ferrari-812-superfast.webp",
 "w": 900,
-"h": 347,
-"author": "Harvey Bold",
-"license": "CC0",
-"page": "https://commons.wikimedia.org/wiki/File%3A2019_Ferrari_812_Superfast_-_6496cc_6.5_%28800PS%29_Petrol_-_Giallo_Modena_-_01-2025%2C_Front.jpg",
-"title": "File:2019 Ferrari 812 Superfast - 6496cc 6.5 (800PS) Petrol - Giallo Modena - 01-2025, Front.jpg"
+"h": 267,
+"author": "Matti Blume",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AFerrari_812_Superfast%2C_GIMS_2019%2C_Le_Grand-Saconnex_%28GIMS1324%29.jpg",
+"title": "File:Ferrari 812 Superfast, GIMS 2019, Le Grand-Saconnex (GIMS1324).jpg"
 },
 "Ferrari F12berlinetta": {
 "src": "/assets/v/ferrari-f12berlinetta.webp",
@@ -767,11 +758,11 @@
 "Ferrari Roma": {
 "src": "/assets/v/ferrari-roma.webp",
 "w": 900,
-"h": 475,
-"author": "Alexander Migl",
+"h": 405,
+"author": "Calreyn88",
 "license": "CC BY-SA 4.0",
-"page": "https://commons.wikimedia.org/wiki/File%3AFerrari_Roma_Auto_Zuerich_2021_IMG_0414.jpg",
-"title": "File:Ferrari Roma Auto Zuerich 2021 IMG 0414.jpg"
+"page": "https://commons.wikimedia.org/wiki/File%3A2021_Ferrari_Roma_8.jpg",
+"title": "File:2021 Ferrari Roma 8.jpg"
 },
 "Ferrari GTC4Lusso / FF": {
 "src": "/assets/v/ferrari-gtc4lusso.webp",
@@ -794,11 +785,11 @@
 "Lamborghini Aventador": {
 "src": "/assets/v/lamborghini-aventador.webp",
 "w": 900,
-"h": 382,
+"h": 445,
 "author": "Matti Blume",
 "license": "CC BY-SA 4.0",
-"page": "https://commons.wikimedia.org/wiki/File%3ALamborghini_Aventador_S_Roadster%2C_IAA_2017%2C_Frankfurt_%281Y7A2083%29.jpg",
-"title": "File:Lamborghini Aventador S Roadster, IAA 2017, Frankfurt (1Y7A2083).jpg"
+"page": "https://commons.wikimedia.org/wiki/File%3ALamborghini_Aventador_SVJ_Roadster%2C_GIMS_2019%2C_Le_Grand-Saconnex_%28GIMS0761%29.jpg",
+"title": "File:Lamborghini Aventador SVJ Roadster, GIMS 2019, Le Grand-Saconnex (GIMS0761).jpg"
 },
 "Lamborghini Gallardo": {
 "src": "/assets/v/lamborghini-gallardo.webp",
@@ -830,11 +821,11 @@
 "McLaren 570S / 540C": {
 "src": "/assets/v/mclaren-570s.webp",
 "w": 900,
-"h": 486,
-"author": "Mr.choppers",
-"license": "CC BY-SA 3.0",
-"page": "https://commons.wikimedia.org/wiki/File%3A2017_McLaren_570S%2C_blue%2C_front_left.jpg",
-"title": "File:2017 McLaren 570S, blue, front left.jpg"
+"h": 430,
+"author": "Vauxford",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2018_McLaren_570S_Spider_S-A_3.8_Front.jpg",
+"title": "File:2018 McLaren 570S Spider S-A 3.8 Front.jpg"
 },
 "McLaren 720S / 750S": {
 "src": "/assets/v/mclaren-720s.webp",
@@ -1047,7 +1038,7 @@
 "src": "/assets/v/porsche-918-spyder-weissach.webp",
 "w": 900,
 "h": 484,
-"author": "Edvvc on Flickr",
+"author": "Edvvc on Flickr : https://www.flickr.com/photos/edvvc/",
 "license": "CC BY 2.0",
 "page": "https://commons.wikimedia.org/wiki/File%3A2014_Porsche_918_Spyder_-_Weissach_Package.jpg",
 "title": "File:2014 Porsche 918 Spyder - Weissach Package.jpg"
