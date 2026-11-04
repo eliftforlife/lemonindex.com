@@ -881,3 +881,19 @@ details.qa p { margin: 0 0 18px; color: var(--ink2); max-width: 65ch; }
 .vsplit span { display: block; font-size: 15px; color: var(--ink2); margin-top: 6px; } .vsplit small { color: var(--mute); font-size: 12.5px; }
 .pts.vyr .pt { grid-template-columns: 56px minmax(0, 1fr) 54px; }
 .tiles .tile:not(a) { cursor: default; min-height: 0; padding-bottom: 40px; }
+
+/* 11-04 YouTube fixes (car-year pages) */
+.yfx .yfl { list-style: none; margin: 14px 0 0; padding: 0; display: grid; gap: 18px; counter-reset: yf; }
+.yfx .yfl li { display: grid; gap: 6px; min-width: 0; }
+.yfx .yf-h { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
+.yfx .yf-h span { font-weight: 700; } .yfx .yf-h b { font-variant-numeric: tabular-nums; white-space: nowrap; font-size: 14px; }
+.yfx .bt { height: 10px; overflow: hidden; } .yfx .bt i { display: block; height: 100%; position: static; }
+.yfx .yf-v { color: var(--ink); text-decoration: underline; text-decoration-color: rgba(0,0,0,.25); text-underline-offset: 3px; overflow-wrap: anywhere; }
+.yfx .yf-v:hover { text-decoration-color: var(--ink); }
+.yfx small { color: var(--mute); }
+.yfx .yf-g { margin: 26px 0 10px; font-size: 17px; }
+.yfx .ygs { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; }
+.yfx .yg { display: grid; gap: 6px; color: var(--ink); text-decoration: none; min-width: 0; }
+.yfx .yg img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 12px; background: var(--soft); }
+.yfx .yg b { font-size: 15px; line-height: 1.3; } .yfx .yg:hover b { text-decoration: underline; }
+@media (max-width: 560px) { .yfx .ygs { grid-template-columns: 1fr; gap: 12px; } .yfx .yg { grid-template-columns: 132px minmax(0, 1fr); column-gap: 12px; row-gap: 2px; align-content: start; } .yfx .yg img { grid-row: span 2; border-radius: 9px; height: auto; align-self: start; } .yfx .yg b { font-size: 14px; } }

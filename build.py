@@ -141,9 +141,9 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <title>{E(title)}</title><meta name="description" content="{E(desc)}"><link rel="canonical" href="{url}">
 <meta property="og:type" content="{kind}"><meta property="og:site_name" content="The Lemon Index"><meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(desc)}">
 <meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}{img or "/assets/og.png"}"><meta name="twitter:card" content="summary_large_image">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://static.nhtsa.gov; connect-src 'self' https://cloudflareinsights.com https://vpic.nhtsa.dot.gov https://lemon-survey.elift08.workers.dev; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://static.nhtsa.gov https://i.ytimg.com; connect-src 'self' https://cloudflareinsights.com https://vpic.nhtsa.dot.gov https://lemon-survey.elift08.workers.dev; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"><link rel="stylesheet" href="/assets/site.css?v=1104b"><script src="/assets/nav.js?v=1103d" defer></script>{lds}</head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"><link rel="stylesheet" href="/assets/site.css?v=1104d"><script src="/assets/nav.js?v=1103d" defer></script>{lds}</head>
 <body><header class="top"><a class="brand" href="/"><img src="/assets/icon-64.png" alt="" width="32" height="32">The Lemon Index</a>
 <nav class="mainnav" aria-label="Main">{navlinks(path)}</nav><a class="yt" href="{YT}?sub_confirmation=1" rel="noopener">Subscribe</a></header>
 <main>{body}{CITE if path.startswith('/cars/') else ''}{'' if path == '/vote/' else ask_html(ask)}</main>
@@ -358,6 +358,21 @@ _load = lambda p: json.load(open(p, encoding='utf-8')) if os.path.exists(p) else
 XL, XA = _load('data/extras_local.json'), _load('data/extras_api.json')
 def extra(fid, y):
     d = dict(XL.get(fid, {}).get(str(y), {})); d.update(XA.get(fid, {}).get(str(y), {}) or {}); return d
+# ---- 11-04 YouTube repair videos (data_yt.py): the fixes owners look up most for this generation, by views, with the top video for each.
+YT = _load('data/yt.json')
+def _vw(n): return f'{n / 1e6:.1f}M' if n >= 1e6 else f'{round(n / 1e3):,}K' if n >= 1e3 else str(n)
+def ytfix(fid, y, nm):
+    d = YT.get(fid)
+    if not d or y not in d['years']: return ''
+    tp = d['topics'][:8]; mx = tp[0]['views']; W = lambda v: f'https://www.youtube.com/watch?v={v["id"]}'
+    rows = ''.join(f'<li><div class="yf-h"><span>{E(t["name"])}</span><b>{_vw(t["views"])} views</b></div><span class="bt"><i style="width:{max(3, round(t["views"] / mx * 100))}%"></i></span>'
+                   f'<a class="yf-v" href="{W(t["best"])}" target="_blank" rel="noopener nofollow">&#9654; {E(t["best"]["title"])}</a><small>{E(t["best"]["channel"])} · {_vw(t["best"]["views"])} views'
+                   + (f' · {t["n"]} videos on this' if t['n'] > 1 else '') + '</small></li>' for t in tp)
+    gd = sorted(d['guides'], key=lambda v: (not re.search(r'problem|buyer|should you buy', v['title'], re.I), -v['views']))[:3]
+    cards = ''.join(f'<a class="yg" href="{W(v)}" target="_blank" rel="noopener nofollow"><img src="https://i.ytimg.com/vi/{v["id"]}/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"><b>{E(v["title"])}</b><small>{E(v["channel"])} · {_vw(v["views"])} views</small></a>' for v in gd)
+    return (f'<section class="yc yfx" id="diy"><h2>Fixes owners look up most. <span class="h2s">From {d["n"]} YouTube videos about the {E(d["gen"])} ({_vw(d["views"])} views). The {y} is the same truck.</span></h2>'
+            f'<ol class="yfl">{rows}</ol><p class="yc-cap">Views show how many people looked up each fix, not how often it breaks. Videos belong to their creators; we link to them.</p>'
+            + (f'<h3 class="yf-g">Before you buy, watch</h3><div class="ygs">{cards}</div>' if cards else '') + '</section>')
 mi = lambda n: f'{int(n):,} miles'
 REPORT_NOTE = '<p class="note">The full Lemon Index report adds the mileage for every problem area, every recall in plain English and what to check before you buy. <b>Coming soon.</b></p>'
 RPART = lambda s: PART.get(s.split(':')[0], s.split(':')[0].lower()).replace('service brakes, hydraulic', 'brakes')
@@ -615,7 +630,7 @@ def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
 <nav class="yswitch" aria-label="Model years"><div class="yseg">{seg}<a class="yall" href="{CARU(f)}">All years</a></div><div class="yact"><a class="btn btn-ghost" href="/compare/?c={f['id']}-{y}">Compare</a><button type="button" class="btn btn-ghost yshare" data-share="{E(share_txt)}">Share</button></div></nav></div>{f'<div class="ph-v">{ph}</div>' if ph else ''}</section>
 {buy}<div class="yts">{tiles}</div>{sev}{old}
 <section class="yyears noph"><div class="yy-ch"><h2>Every {nm} year. <span class="h2s">{y} is highlighted. Lower is better.</span></h2>{ybars(f, y)}</div></section>
-<div class="ygrid">{probs}{timeline(x["miles"], x.get("comps") or []) if x.get("miles") else ""}{recs}{(lambda pr: f'<section class="yc">{pr}</section>' if pr else '')(price_html(f["id"], y, f["name"]))}
+<div class="ygrid">{probs}{ytfix(f["id"], y, nm)}{timeline(x["miles"], x.get("comps") or []) if x.get("miles") else ""}{recs}{(lambda pr: f'<section class="yc">{pr}</section>' if pr else '')(price_html(f["id"], y, f["name"]))}
 {fixes}{invs}{safety}{f'<section class="yc">{crash}{fuel}</section>' if crash or fuel else ''}{words}
 {f'<section class="yc yqa"><h2>Quick answers</h2>' + qa_fold("".join(f"<h3>{E(q)}</h3><p>{a}</p>" for q, a, _ in qa)) + '</section>' if qa else ''}</div>
 <p class="yc-cap">Lemon Index = safety complaints filed with the U.S. government (NHTSA) in a car&#39;s first 3 years, per car sold, against the average car of the same model year. 100 is average; lower is better. A complaint is an owner&#39;s report, not a confirmed defect. <a href="/method/">How it works</a></p></article>'''
