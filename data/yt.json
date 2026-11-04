@@ -1371,13 +1371,13 @@
     },
     {
      "name": "Cost of owning",
-     "views": 16604562,
-     "n": 11,
+     "views": 7333036,
+     "n": 10,
      "best": {
-      "id": "mJxAxo6nJro",
-      "title": "Fixing a $1,700,000 LAMBORGHINI Huracan! (Car Mechanic Simulator)",
-      "channel": "Matgonian",
-      "views": 9271526
+      "id": "w9G9CO72x8g",
+      "title": "2020 Lamborghini Huracan Evo Review // $400,000 Ballistic Missile",
+      "channel": "Throttle House",
+      "views": 1221223
      }
     },
     {
@@ -1768,16 +1768,7 @@
      "t": 824,
      "title": "2020 Harley Davidson Sportster 883 First Ride | REVIEW"
     },
-    "msrp": {
-     "median": 14000,
-     "lo": 8900.0,
-     "hi": 112000.0,
-     "n": 3,
-     "videos": 3,
-     "id": "T7YN7E573jE",
-     "t": 1133,
-     "title": "Don't Buy a 2026 Nightster Until You Watch This!"
-    },
+    "msrp": null,
     "items": [
      [
       "Battery",

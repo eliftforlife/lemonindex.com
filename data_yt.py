@@ -90,6 +90,7 @@ for study, key, years, gen, kind, noun in STUDIES:
     for r in R:
         t = re.sub(r'\s+', ' ', r['title'].replace('\ufffd', "'")).strip()
         if kind == 'repair' and NOT_REPAIR.search(t): continue
+        if re.search(r'simulator|game|gta|forza|roblox|beamng|rc', t, re.I): continue   # games / toys, not the real thing
         top = next((n for n, pat in TOPICS[kind] if re.search(pat, t, re.I)), None)
         if not top: continue
         v = dict(id=r['id'], title=t, channel=r['channel'], views=r['views'])
