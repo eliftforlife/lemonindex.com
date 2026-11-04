@@ -918,10 +918,10 @@
    "costs": {
     "paid": null,
     "used": {
-     "median": 147490,
-     "lo": 40000.0,
+     "median": 154981,
+     "lo": 80000.0,
      "hi": 400000.0,
-     "n": 14,
+     "n": 13,
      "videos": 7,
      "id": "s34ahT4o9Uc",
      "t": 1033,
@@ -1661,11 +1661,11 @@
      "dealer": 0
     },
     "used": {
-     "median": 9000,
+     "median": 15000,
      "lo": 3000.0,
      "hi": 15000.0,
-     "n": 4,
-     "videos": 4,
+     "n": 3,
+     "videos": 3,
      "id": "7a7kkNsAo6E",
      "t": 1833,
      "title": "2021 Harley-Davidson Sportster S | Daily Rider"
