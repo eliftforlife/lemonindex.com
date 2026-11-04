@@ -35,6 +35,15 @@
 "page": "https://commons.wikimedia.org/wiki/File%3ACessna_A185E_Skywagon_%28N95LW%2C_cn_185-1185%29_%284-12-2024%29.jpg",
 "title": "File:Cessna A185E Skywagon (N95LW, cn 185-1185) (4-12-2024).jpg"
 },
+"Cessna 206 Stationair": {
+"src": "/assets/v/cessna-206.webp",
+"w": 900,
+"h": 312,
+"author": "Tomás Del Coro from Las Vegas, Nevada, USA",
+"license": "CC BY-SA 2.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AN176CP_Civil_Air_Patrol_2011_CESSNA_T206H_Turbocharged_Stationair_s-n_T20609001_%2834532677160%29.jpg",
+"title": "File:N176CP Civil Air Patrol 2011 CESSNA T206H Turbocharged Stationair s-n T20609001 (34532677160).jpg"
+},
 "Cessna 210 Centurion": {
 "src": "/assets/v/cessna-210.webp",
 "w": 900,
@@ -115,6 +124,15 @@
 "license": "CC BY-SA 4.0",
 "page": "https://commons.wikimedia.org/wiki/File%3AYV2260_Piper_PA-34-220T_Seneca_III.jpg",
 "title": "File:YV2260 Piper PA-34-220T Seneca III.jpg"
+},
+"Piper PA-46 Malibu / M350 / M600": {
+"src": "/assets/v/piper-pa-46.webp",
+"w": 900,
+"h": 376,
+"author": "James from Cheltenham, Gloucestershire",
+"license": "CC BY-SA 2.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AG-GREY_Piper_Malibu_Mirage_46_%2823306397513%29.jpg",
+"title": "File:G-GREY Piper Malibu Mirage 46 (23306397513).jpg"
 },
 "Piper PA-12 / PA-22": {
 "src": "/assets/v/piper-pa-22.webp",
@@ -214,6 +232,15 @@
 "license": "CC BY 2.0",
 "page": "https://commons.wikimedia.org/wiki/File%3AMaule_M-7_Compton_Abbas_30th_June_2013_%289218586706%29.jpg",
 "title": "File:Maule M-7 Compton Abbas 30th June 2013 (9218586706).jpg"
+},
+"Aeronca Champ": {
+"src": "/assets/v/aeronca-champ.webp",
+"w": 900,
+"h": 372,
+"author": "Alan Wilson from Peterborough, Cambs, UK",
+"license": "CC BY-SA 2.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AAeronca_7AC_Champion_%E2%80%984380%E2%80%99_%28N85636%29_%2849452279042%29.jpg",
+"title": "File:Aeronca 7AC Champion ‘4380’ (N85636) (49452279042).jpg"
 },
 "Air Tractor (crop dusters)": {
 "src": "/assets/v/air-tractor-at-802.webp",
@@ -377,6 +404,15 @@
 "page": "https://commons.wikimedia.org/wiki/File%3AHarley-Davidson_Pan_America_%282023%29.jpg",
 "title": "File:Harley-Davidson Pan America (2023).jpg"
 },
+"Harley-Davidson LiveWire": {
+"src": "/assets/v/harley-davidson-livewire.webp",
+"w": 900,
+"h": 509,
+"author": "Auge=mit",
+"license": "CC BY-SA 3.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AHarley_Davidson_LiveWire_left_noBG.jpg",
+"title": "File:Harley Davidson LiveWire left noBG.jpg"
+},
 "Honda Gold Wing": {
 "src": "/assets/v/honda-gold-wing.webp",
 "w": 900,
@@ -385,6 +421,15 @@
 "license": "CC BY-SA 4.0",
 "page": "https://commons.wikimedia.org/wiki/File%3AHonda_Goldwing%2C_GIMS_2019%2C_Le_Grand-Saconnex_%28GIMS0707%29.jpg",
 "title": "File:Honda Goldwing, GIMS 2019, Le Grand-Saconnex (GIMS0707).jpg"
+},
+"Honda CBR": {
+"src": "/assets/v/honda-cbr600rr.webp",
+"w": 900,
+"h": 721,
+"author": "Wilzz99",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AHonda_CBR1000RR_Fireblade_-_Indonesia_International_Motor_Show_2017_-_Front_view_-_April_30_2017.jpg",
+"title": "File:Honda CBR1000RR Fireblade - Indonesia International Motor Show 2017 - Front view - April 30 2017.jpg"
 },
 "Honda Shadow": {
 "src": "/assets/v/honda-shadow.webp",
@@ -395,6 +440,15 @@
 "page": "https://commons.wikimedia.org/wiki/File%3AHonda_Shadow_2010_%2810077229096%29.jpg",
 "title": "File:Honda Shadow 2010 (10077229096).jpg"
 },
+"Honda Africa Twin": {
+"src": "/assets/v/honda-africa-twin.webp",
+"w": 900,
+"h": 721,
+"author": "Morio",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AHonda_CRF1000L_front-left_2016_Auto_China.jpg",
+"title": "File:Honda CRF1000L front-left 2016 Auto China.jpg"
+},
 "Honda Rebel": {
 "src": "/assets/v/honda-rebel.webp",
 "w": 900,
@@ -404,6 +458,33 @@
 "page": "https://commons.wikimedia.org/wiki/File%3AHonda_Rebel_in_Brisbane.jpg",
 "title": "File:Honda Rebel in Brisbane.jpg"
 },
+"Honda NC700/NC750": {
+"src": "/assets/v/honda-nc750x.webp",
+"w": 900,
+"h": 607,
+"author": "Cweinandt",
+"license": "CC BY-SA 3.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AHonda_nc700x_sw_03.jpg",
+"title": "File:Honda nc700x sw 03.jpg"
+},
+"Yamaha FJR1300": {
+"src": "/assets/v/yamaha-fjr1300.webp",
+"w": 900,
+"h": 467,
+"author": "George E. Koronaios",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AYamaha_FJR_1300_in_Athens_on_10-31-2023.jpg",
+"title": "File:Yamaha FJR 1300 in Athens on 10-31-2023.jpg"
+},
+"Yamaha YZF-R1": {
+"src": "/assets/v/yamaha-yzf-r1.webp",
+"w": 761,
+"h": 798,
+"author": "Rainmaker47",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2015_Yamaha_YZF-R1.JPG",
+"title": "File:2015 Yamaha YZF-R1.JPG"
+},
 "Yamaha YZF-R6": {
 "src": "/assets/v/yamaha-yzf-r6.webp",
 "w": 900,
@@ -412,6 +493,15 @@
 "license": "CC BY-SA 4.0",
 "page": "https://commons.wikimedia.org/wiki/File%3A2018_Yamaha_YZF-R6-0.jpg",
 "title": "File:2018 Yamaha YZF-R6-0.jpg"
+},
+"Yamaha Bolt": {
+"src": "/assets/v/yamaha-bolt.webp",
+"w": 900,
+"h": 741,
+"author": "Rainmaker47",
+"license": "CC BY-SA 3.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AYamaha_BOLT_Cafe_Tokyo_Motor_Show_2013.JPG",
+"title": "File:Yamaha BOLT Cafe Tokyo Motor Show 2013.JPG"
 },
 "Yamaha V Star": {
 "src": "/assets/v/yamaha-v-star.webp",
@@ -430,6 +520,24 @@
 "license": "CC0",
 "page": "https://commons.wikimedia.org/wiki/File%3AMoscow%2C_Yamaha_XV1900_Stratoliner%2C_May_2026_01.jpg",
 "title": "File:Moscow, Yamaha XV1900 Stratoliner, May 2026 01.jpg"
+},
+"Yamaha MT-07 / MT-09": {
+"src": "/assets/v/yamaha-mt-07.webp",
+"w": 900,
+"h": 541,
+"author": "Na-Thur",
+"license": "CC BY-SA 3.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AYamaha_MT-07_2014-06-03_15.27.43.jpg",
+"title": "File:Yamaha MT-07 2014-06-03 15.27.43.jpg"
+},
+"Yamaha Super Tenere": {
+"src": "/assets/v/yamaha-super-tenere.webp",
+"w": 900,
+"h": 718,
+"author": "wallerdog",
+"license": "CC BY-SA 3.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AWdog_Yamaha_Super_Tenere.jpg",
+"title": "File:Wdog Yamaha Super Tenere.jpg"
 },
 "Kawasaki KLR650": {
 "src": "/assets/v/kawasaki-klr-650.webp",
@@ -593,6 +701,15 @@
 "page": "https://commons.wikimedia.org/wiki/File%3ADucati_Scrambler_Icon_803_CC_%E2%80%93_Hamburger_Motorrad_Tage_2015_01.jpg",
 "title": "File:Ducati Scrambler Icon 803 CC – Hamburger Motorrad Tage 2015 01.jpg"
 },
+"Ducati SportClassic": {
+"src": "/assets/v/ducati-sportclassic.webp",
+"w": 900,
+"h": 701,
+"author": "Mr.choppers",
+"license": "CC BY-SA 3.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2006_Ducati_Sport1000_monoposto.jpg",
+"title": "File:2006 Ducati Sport1000 monoposto.jpg"
+},
 "Triumph Bonneville / Thruxton": {
 "src": "/assets/v/triumph-bonneville.webp",
 "w": 900,
@@ -655,6 +772,15 @@
 "license": "CC BY-SA 4.0",
 "page": "https://commons.wikimedia.org/wiki/File%3A2015_Indian_Scout_1.jpg",
 "title": "File:2015 Indian Scout 1.jpg"
+},
+"Indian Chief / Chieftain": {
+"src": "/assets/v/indian-chieftain.webp",
+"w": 900,
+"h": 594,
+"author": "Cjp24",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AIndian_Roadmaster%2C_2015_%283%29.jpg",
+"title": "File:Indian Roadmaster, 2015 (3).jpg"
 },
 "Can-Am Spyder": {
 "src": "/assets/v/can-am-spyder-rt.webp",

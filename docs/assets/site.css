@@ -882,18 +882,47 @@ details.qa p { margin: 0 0 18px; color: var(--ink2); max-width: 65ch; }
 .pts.vyr .pt { grid-template-columns: 56px minmax(0, 1fr) 54px; }
 .tiles .tile:not(a) { cursor: default; min-height: 0; padding-bottom: 40px; }
 
-/* 11-04 YouTube fixes (car-year pages) */
-.yfx .yfl { list-style: none; margin: 14px 0 0; padding: 0; display: grid; gap: 18px; counter-reset: yf; }
-.yfx .yfl li { display: grid; gap: 6px; min-width: 0; }
-.yfx .yf-h { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
-.yfx .yf-h span { font-weight: 700; } .yfx .yf-h b { font-variant-numeric: tabular-nums; white-space: nowrap; font-size: 14px; }
-.yfx .bt { height: 10px; overflow: hidden; } .yfx .bt i { display: block; height: 100%; position: static; }
-.yfx .yf-v { color: var(--ink); text-decoration: underline; text-decoration-color: rgba(0,0,0,.25); text-underline-offset: 3px; overflow-wrap: anywhere; }
-.yfx .yf-v:hover { text-decoration-color: var(--ink); }
-.yfx small { color: var(--mute); }
-.yfx .yf-g { margin: 26px 0 10px; font-size: 17px; }
-.yfx .ygs { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; }
-.yfx .yg { display: grid; gap: 6px; color: var(--ink); text-decoration: none; min-width: 0; }
-.yfx .yg img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 12px; background: var(--soft); }
-.yfx .yg b { font-size: 15px; line-height: 1.3; } .yfx .yg:hover b { text-decoration: underline; }
-@media (max-width: 560px) { .yfx .ygs { grid-template-columns: 1fr; gap: 12px; } .yfx .yg { grid-template-columns: 132px minmax(0, 1fr); column-gap: 12px; row-gap: 2px; align-content: start; } .yfx .yg img { grid-row: span 2; border-radius: 9px; height: auto; align-self: start; } .yfx .yg b { font-size: 14px; } }
+/* 11-04 YouTube videos section (car-year, model, plane, motorcycle, supercar pages). Mobile first. */
+.yfx h2 { margin-bottom: 4px; }
+.yfx .yf-s { margin: 0 0 16px; color: var(--mute); font-size: 15px; line-height: 1.45; }
+.yfx .yfl { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.yfx .yfl li { display: grid; gap: 8px; padding: 14px; border: 1px solid var(--line); border-radius: 16px; background: #fff; min-width: 0; }
+.yfx .yf-h { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+.yfx .yf-h b { font-size: 16px; line-height: 1.3; }
+.yfx .yf-h span { flex: none; font-size: 13px; font-weight: 600; color: var(--ink2); font-variant-numeric: tabular-nums; }
+.yfx .yf-bar { display: block; height: 6px; border-radius: 6px; background: var(--soft); overflow: hidden; }
+.yfx .yf-bar i { display: block; height: 100%; border-radius: 6px; background: var(--ink); }
+.yfx .yf-v { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 12px; align-items: center; margin-top: 2px; color: var(--ink); text-decoration: none; }
+.yfx .yf-v img { width: 112px; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 10px; background: var(--soft); }
+.yfx .yf-v b { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-size: 14px; font-weight: 600; line-height: 1.35; }
+.yfx .yf-v small, .yfx .yg small { display: block; margin-top: 3px; font-size: 12px; color: var(--mute); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.yfx .yf-v:hover b, .yfx .yg:hover b { text-decoration: underline; }
+.yfx .yf-more { margin-top: 12px; }
+.yfx .yf-more > summary { cursor: pointer; font-weight: 700; padding: 12px 14px; border-radius: 999px; background: var(--soft); text-align: center; list-style: none; }
+.yfx .yf-more > summary::-webkit-details-marker { display: none; }
+.yfx .yf-more[open] > summary { margin-bottom: 12px; }
+.yfx .yf-g { margin: 24px 0 10px; font-size: 17px; }
+.yfx .ygs { display: grid; grid-auto-flow: column; grid-auto-columns: 72%; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 6px; scrollbar-width: none; }
+.yfx .ygs::-webkit-scrollbar { display: none; }
+.yfx .yg { display: grid; gap: 6px; align-content: start; scroll-snap-align: start; color: var(--ink); text-decoration: none; min-width: 0; }
+.yfx .yg img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 12px; background: var(--soft); }
+.yfx .yg b { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-size: 14px; line-height: 1.35; }
+@media (min-width: 760px) {
+  .yfx .yfl { grid-template-columns: 1fr 1fr; }
+  .yfx .ygs { grid-auto-flow: row; grid-auto-columns: auto; grid-template-columns: repeat(3, 1fr); overflow: visible; }
+}
+/* 11-04 "What owners say it costs" (inside the YouTube section) */
+.yfx .ycost { margin: 0 0 22px; }
+.yfx .ycost h3, .yfx .yf-g1 { margin: 0 0 10px; font-size: 17px; }
+.yfx .yc-bs { display: grid; gap: 10px; margin-bottom: 10px; }
+.yfx .yc-b { display: grid; gap: 2px; padding: 14px 16px; border-radius: 16px; background: var(--lemon-soft); }
+.yfx .yc-b small { font-weight: 600; color: var(--ink2); font-size: 13px; }
+.yfx .yc-b b { font-size: 30px; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.yfx .yc-b span { font-size: 13px; color: var(--ink2); line-height: 1.4; }
+.yfx .yc-h { justify-self: start; margin-top: 4px; font-size: 13px; font-weight: 700; color: var(--ink); }
+.yfx .yc-l { list-style: none; margin: 0; padding: 0; border: 1px solid var(--line); border-radius: 16px; background: #fff; }
+.yfx .yc-l li { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 12px; row-gap: 1px; padding: 12px 14px; border-top: 1px solid var(--line); }
+.yfx .yc-l li:first-child { border-top: 0; }
+.yfx .yc-l li span { font-weight: 600; } .yfx .yc-l li b { text-align: right; font-variant-numeric: tabular-nums; }
+.yfx .yc-l li small { color: var(--mute); font-size: 12px; } .yfx .yc-l li .yc-h { justify-self: end; margin: 0; font-size: 12px; }
+@media (min-width: 760px) { .yfx .yc-bs { grid-template-columns: 1fr 1fr; } }
