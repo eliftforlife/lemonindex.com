@@ -843,3 +843,12 @@ details.qa p { margin: 0 0 18px; color: var(--ink2); max-width: 65ch; }
 .yyears .b, .yyears .bl { grid-template-columns: 112px minmax(0, 1fr) 42px !important; } .yyears .bn { overflow: visible !important; text-overflow: clip !important; }
 @media (max-width: 600px) { .yyears .b, .yyears .bl { grid-template-columns: 96px minmax(0, 1fr) 38px !important; } .bst { font-size: 9.5px; margin-left: 5px; } }
 .mp6 .yhero { flex-direction: column; text-align: center; } .mp6 .yverd { text-align: center; }
+
+/* v8: model pages use the year-page header; /cars/ brand rows centered */
+.yph6 .ph-s { order: 3; } .yph6 .yh-t > p:last-child { order: 8; } .mp6 .yph6 .yhero { flex-direction: row; text-align: left; }
+@media (max-width: 979px) { .mp6 .yph6 .yhero { flex-direction: column; text-align: center; } }
+@media (min-width: 980px) { .mp6 .yph6 .ph-s { margin-left: 0; } .mp6 .yph6 .yverd { text-align: left; } .mp6 { max-width: 1120px; margin: 0 auto; } }
+.mbs { text-align: center; } .mbs .mb h3 { text-align: center; }
+.mg { display: flex !important; flex-wrap: wrap; justify-content: center; gap: 10px; } .mg .mc { width: 168px; }
+@media (max-width: 600px) { .mg .mc { width: calc(50% - 5px); } }
+.pg > section > h2 { text-align: center; } .pg > section > h2 .h2s { margin-left: auto; margin-right: auto; }
