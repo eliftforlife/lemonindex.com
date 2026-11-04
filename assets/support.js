@@ -1,12 +1,13 @@
-// "Keep it free" support (Elijah 11-02, like Blender's donate prompt; v2 11-03). Amounts open Stripe Payment Links; nothing card-related runs on this site.
-// 1. The full sheet: on car/report pages after 15 s of reading (tab in front; value first). Then quiet for 14 days after "Maybe later", 60 after "Chip in".
-// 2. The reminder (11-03, Elijah: "every 10 mins of site use another popup... keep it 100% free"): after the first sheet, every 10 minutes of
-//    reading across the site a small bar slides up ("Enjoying the Lemon Index? Keep it 100% free"). Not a blocking popup: it hides itself after
-//    14 s, shows at most twice a day, × snoozes it for the day, and never shows in the 60 days after someone chips in.
+// "Keep it free" support (Elijah 11-02, like Blender's donate prompt; v3 11-04 "ask at the aha moment", not on a timer).
+// 1. Inline card right under the page's best data (the YouTube/cost section, else the year chart, else the first data section): no popup,
+//    one tap to a $5 coffee. Always there, never in the way.
+// 2. The full sheet only at a value moment: the reader comes back after watching a fix / price video we linked (8 s+ away). Quiet for
+//    14 days after "Maybe later", 60 after "Chip in".
+// 3. The reminder bar after 3 minutes of reading across the site (most visits are 2-4 min), once a day; x snoozes it for the day.
 (() => {
   const LINKS = { 5: 'https://buy.stripe.com/eVqdR84Z25u7gtC5l9gA800', 10: 'https://buy.stripe.com/8x27sK6362hV6T2fZNgA801', 15: 'https://buy.stripe.com/9B68wO636cWz6T2bJxgA802', custom: 'https://buy.stripe.com/00w28q1MQ8Gjb9ifZNgA803' };   // Stripe Payment Links: three fixed amounts + one "customer chooses what to pay"
-  const KEY = 'li-support-seen', DAYS = 14, PAID = 'li-support-paid', PAID_DAYS = 60, READ_MS = 15000;
-  const RKEY = 'li-read', NUDGE_MS = 10 * 60e3, NUDGES_PER_DAY = 2;
+  const KEY = 'li-support-seen', DAYS = 14, PAID = 'li-support-paid', PAID_DAYS = 60;
+  const RKEY = 'li-read', NUDGE_MS = 3 * 60e3, NUDGES_PER_DAY = 1;
   const ready = Object.values(LINKS).every(Boolean);
   const isReport = /^\/(cars|electric|compare)\//.test(location.pathname) && location.pathname.split('/').filter(Boolean).length >= 2;
   const qs = new URLSearchParams(location.search);
@@ -16,7 +17,7 @@
   const seen = () => Date.now() - (+get(KEY) || 0) < DAYS * 864e5 || paid();
   const mark = () => set(KEY, String(Date.now()));
   const day = new Date().toISOString().slice(0, 10);
-  let pick = 10;
+  let pick = 5;
 
   // ---- 11-04 (Elijah: "more specific to the page they're on"): the headline and the reasons follow the page
   const H1 = ((document.querySelector('h1') || {}).textContent || '').replace(/\s+/g, ' ').replace(/[.]\s*$/, '').trim();
@@ -72,6 +73,23 @@
   window.liSupport = show;   // footer "Support the Lemon Index" link
   document.querySelectorAll('.supl').forEach(b => b.addEventListener('click', show));   // no inline onclick (CSP)
 
+  // ---- 1. inline "aha" card under the best data on the page
+  const spot = document.querySelector('#diy') || document.querySelector('.yyears') || document.querySelector('main .yc, main section.yc');
+  if (spot && !paid()) {
+    const yt = !!document.querySelector('#diy');
+    const card = document.createElement('aside');
+    card.className = 'supc'; card.setAttribute('aria-label', 'Support the Lemon Index');
+    card.innerHTML = `<img src="/assets/icon-64.png" alt="" width="40" height="40"><div class="supc-t"><b>Did this help?</b><span>${yt ? 'We went through 100+ YouTube videos and every government complaint so you don&#39;t have to.' : 'We went through every government complaint and recall so you don&#39;t have to.'} It&#39;s free, no paywall. A $5 coffee keeps it that way.</span></div>
+<div class="supc-b"><a class="btn supc-go" href="${LINKS[5]}" target="_blank" rel="noopener">Buy us a $5 coffee</a><button type="button" class="supc-o">Other amount</button></div>`;
+    spot.insertAdjacentElement('afterend', card);
+    card.querySelector('.supc-go').addEventListener('click', () => { mark(); set(PAID, String(Date.now())); });
+    card.querySelector('.supc-o').addEventListener('click', show);
+  }
+  // ---- 2. the sheet when someone comes back from a video we sent them to (the "this just saved me" moment)
+  let away = 0;
+  document.addEventListener('click', e => { if (e.target.closest('a.yf-v, a.yg, a.yc-h')) away = Date.now(); }, true);
+  document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible' && away && Date.now() - away > 8000) { away = 0; setTimeout(open, 700); } });
+
   // ---- the reminder bar
   const bar = document.createElement('div');
   bar.className = 'nud'; bar.hidden = true; bar.setAttribute('role', 'status');
@@ -89,12 +107,11 @@
   if (qs.has('support-preview')) return show();
   if (qs.has('nudge-preview')) return nudge();
   // one clock for both: only time with the tab in front counts, so a background tab never pops anything
-  let read = 0, last = Date.now(), r = state(), lastSave = 0;
+  let last = Date.now(), r = state(), lastSave = 0;
   setInterval(() => {
     const now = Date.now(), dt = document.visibilityState === 'visible' ? now - last : 0; last = now; if (!dt) return;
-    read += dt; r.ms += dt;
-    if (isReport && read >= READ_MS && !seen() && box.hidden) open();
-    if (get(KEY) && !paid() && r.snooze !== day && r.n < NUDGES_PER_DAY && r.ms >= NUDGE_MS * (r.n + 1) && box.hidden && bar.hidden) { r.n++; save(r); nudge(); }
+    r.ms += dt;
+    if (!paid() && r.snooze !== day && r.n < NUDGES_PER_DAY && r.ms >= NUDGE_MS * (r.n + 1) && box.hidden && bar.hidden) { r.n++; save(r); nudge(); }
     if (now - lastSave > 5000) { save(r); lastSave = now; }
   }, 500);
   addEventListener('pagehide', () => save(r));
