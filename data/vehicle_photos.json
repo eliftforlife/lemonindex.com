@@ -1,0 +1,686 @@
+{
+"Cessna 172 Skyhawk": {
+"src": "/assets/v/cessna-172.webp",
+"w": 900,
+"h": 292,
+"author": "Biponacci",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AAir_Auckland_Cessna_172_ZK-MDV_Ardmore.jpg",
+"title": "File:Air Auckland Cessna 172 ZK-MDV Ardmore.jpg"
+},
+"Cessna 150/152": {
+"src": "/assets/v/cessna-152.webp",
+"w": 900,
+"h": 302,
+"author": "Robbie Klinkenberg",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3ACessna_152_II_PH-SKG_at_Portim%C3%A3o_Airport_05-08-2020_%282%29.jpg",
+"title": "File:Cessna 152 II PH-SKG at Portimão Airport 05-08-2020 (2).jpg"
+},
+"Cessna 182 Skylane": {
+"src": "/assets/v/cessna-182.webp",
+"w": 900,
+"h": 404,
+"author": "Noah Wulf",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3ACivil_Air_Patrol_Cessna_182_-_Aviation_Nation_2019.jpg",
+"title": "File:Civil Air Patrol Cessna 182 - Aviation Nation 2019.jpg"
+},
+"Cessna 180/185 Skywagon": {
+"src": "/assets/v/cessna-185.webp",
+"w": 900,
+"h": 368,
+"author": "James from Cheltenham, Gloucestershire",
+"license": "CC BY-SA 2.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AG-SAUO_Cessna_Skywagon_185_%2826264526593%29.jpg",
+"title": "File:G-SAUO Cessna Skywagon 185 (26264526593).jpg"
+},
+"Cessna 210 Centurion": {
+"src": "/assets/v/cessna-210.webp",
+"w": 900,
+"h": 284,
+"author": "James from Cheltenham, Gloucestershire",
+"license": "CC BY-SA 2.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AN67JK_Cessna_210_%2827202817071%29.jpg",
+"title": "File:N67JK Cessna 210 (27202817071).jpg"
+},
+"Cessna 170": {
+"src": "/assets/v/cessna-170.webp",
+"w": 900,
+"h": 414,
+"author": "Aeroprints.com",
+"license": "CC BY-SA 3.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AG-MDAY_Cessna_170B_%289686629942%29.jpg",
+"title": "File:G-MDAY Cessna 170B (9686629942).jpg"
+},
+"Cessna 208 Caravan": {
+"src": "/assets/v/cessna-208-caravan.webp",
+"w": 900,
+"h": 391,
+"author": "James from Cheltenham, Gloucestershire",
+"license": "CC BY-SA 2.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AN533DL_Cessna_Caravan_208_%2824580819255%29.jpg",
+"title": "File:N533DL Cessna Caravan 208 (24580819255).jpg"
+},
+"Cessna 310/340/414/421 twins": {
+"src": "/assets/v/cessna-310.webp",
+"w": 900,
+"h": 305,
+"author": "James from Cheltenham, Gloucestershire",
+"license": "CC BY-SA 2.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AN310AJ_Cessna_310_%2825107007684%29.jpg",
+"title": "File:N310AJ Cessna 310 (25107007684).jpg"
+},
+"Piper PA-28 Cherokee / Warrior / Archer": {
+"src": "/assets/v/piper-pa-28.webp",
+"w": 732,
+"h": 258,
+"author": "Ronnie Robertson",
+"license": "CC BY-SA 2.0",
+"page": "https://commons.wikimedia.org/wiki/File%3APiper_PA-28_G-VICC_MG_7222.jpg",
+"title": "File:Piper PA-28 G-VICC MG 7222.jpg"
+},
+"Piper PA-18 Super Cub": {
+"src": "/assets/v/piper-pa-18-super-cub.webp",
+"w": 900,
+"h": 282,
+"author": "Ad Meskens",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AAntwerp_Piper_PA-18_Super_Cub_D-EHCB_at_Stampe_Fly_In_2019_01.jpg",
+"title": "File:Antwerp Piper PA-18 Super Cub D-EHCB at Stampe Fly In 2019 01.jpg"
+},
+"Piper J-3 Cub": {
+"src": "/assets/v/piper-j-3-cub.webp",
+"w": 900,
+"h": 333,
+"author": "The Smithsonian Institution",
+"license": "Public domain",
+"page": "https://commons.wikimedia.org/wiki/File%3APiper_J-3_Cub-NASM-2019-01671.jpg",
+"title": "File:Piper J-3 Cub-NASM-2019-01671.jpg"
+},
+"Piper PA-32 Saratoga / Cherokee Six": {
+"src": "/assets/v/piper-pa-32.webp",
+"w": 900,
+"h": 298,
+"author": "Doodybutch",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3ANew_England_Airlines_Piper_PA-32_300_2021.jpg",
+"title": "File:New England Airlines Piper PA-32 300 2021.jpg"
+},
+"Piper PA-34 Seneca": {
+"src": "/assets/v/piper-pa-34-seneca.webp",
+"w": 900,
+"h": 289,
+"author": "Carlos E. Perez S.L",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AYV2260_Piper_PA-34-220T_Seneca_III.jpg",
+"title": "File:YV2260 Piper PA-34-220T Seneca III.jpg"
+},
+"Piper PA-46 Malibu / M350 / M600": {
+"src": "/assets/v/piper-pa-46.webp",
+"w": 900,
+"h": 359,
+"author": "Matti Blume",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3APiper_PA-46_M600_at_AERO_Friedrichshafen_2018_%281X7A4816%29.jpg",
+"title": "File:Piper PA-46 M600 at AERO Friedrichshafen 2018 (1X7A4816).jpg"
+},
+"Piper PA-12 / PA-22": {
+"src": "/assets/v/piper-pa-22.webp",
+"w": 900,
+"h": 305,
+"author": "Huhu Uet",
+"license": "CC BY 3.0",
+"page": "https://commons.wikimedia.org/wiki/File%3APiper_PA-22_Colt_%28D-ECTV%29_05.jpg",
+"title": "File:Piper PA-22 Colt (D-ECTV) 05.jpg"
+},
+"Beechcraft Bonanza": {
+"src": "/assets/v/beechcraft-a36-bonanza.webp",
+"w": 900,
+"h": 300,
+"author": "James from Cheltenham, Gloucestershire",
+"license": "CC BY-SA 2.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AOO-VKB_Beechcraft_Bonanza_A36_%2835110223990%29.jpg",
+"title": "File:OO-VKB Beechcraft Bonanza A36 (35110223990).jpg"
+},
+"Beechcraft Baron": {
+"src": "/assets/v/beechcraft-baron.webp",
+"w": 900,
+"h": 489,
+"author": "Airwolfhound from Hertfordshire, UK",
+"license": "CC BY-SA 2.0",
+"page": "https://commons.wikimedia.org/wiki/File%3ABeechcraft_Baron_SM_ISR_-_RIAT_2015_%2824557432556%29.jpg",
+"title": "File:Beechcraft Baron SM ISR - RIAT 2015 (24557432556).jpg"
+},
+"Beechcraft King Air": {
+"src": "/assets/v/beechcraft-king-air.webp",
+"w": 900,
+"h": 332,
+"author": "Acroterion",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3ABeechcraft_King_Air_350_N614CW_FDK_MD1.jpg",
+"title": "File:Beechcraft King Air 350 N614CW FDK MD1.jpg"
+},
+"Cirrus SR20": {
+"src": "/assets/v/cirrus-sr20.webp",
+"w": 900,
+"h": 297,
+"author": "James from Cheltenham, Gloucestershire",
+"license": "CC BY-SA 2.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AN781CD_Cirrus_SR20_%2823248747040%29.jpg",
+"title": "File:N781CD Cirrus SR20 (23248747040).jpg"
+},
+"Cirrus SR22": {
+"src": "/assets/v/cirrus-sr22.webp",
+"w": 900,
+"h": 306,
+"author": "Hippocamelus",
+"license": "CC BY-SA 3.0",
+"page": "https://commons.wikimedia.org/wiki/File%3ACirrus_SR22_T.JPG",
+"title": "File:Cirrus SR22 T.JPG"
+},
+"Mooney M20": {
+"src": "/assets/v/mooney-m20.webp",
+"w": 900,
+"h": 295,
+"author": "Alf van Beem",
+"license": "CC0",
+"page": "https://commons.wikimedia.org/wiki/File%3AD-EDDN_Private_Mooney_M20_at_Rotterdam_The_Hague_Airport_%28RTM_-_EHRD%29%2C_pic2.JPG",
+"title": "File:D-EDDN Private Mooney M20 at Rotterdam The Hague Airport (RTM - EHRD), pic2.JPG"
+},
+"Diamond DA40": {
+"src": "/assets/v/diamond-da40.webp",
+"w": 900,
+"h": 272,
+"author": "ZLEA",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3ADiamond_DA40_NG_Diamond_Star_%28N479WP%2C_cn_40.NC175%29_%289-10-2022%29.jpg",
+"title": "File:Diamond DA40 NG Diamond Star (N479WP, cn 40.NC175) (9-10-2022).jpg"
+},
+"Diamond DA20": {
+"src": "/assets/v/diamond-da20.webp",
+"w": 900,
+"h": 299,
+"author": "bomberpilot",
+"license": "CC BY-SA 2.0",
+"page": "https://commons.wikimedia.org/wiki/File%3ADiamond_DA20_%288735090139%29.jpg",
+"title": "File:Diamond DA20 (8735090139).jpg"
+},
+"Grumman AA-1 / AA-5": {
+"src": "/assets/v/grumman-aa-5.webp",
+"w": 900,
+"h": 320,
+"author": "Ian Kirk from Broadstone, Dorset, UK",
+"license": "CC BY 2.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AGrumman_American_AA-5_Compton_Abbas_30th_June_2013_%289215815185%29.jpg",
+"title": "File:Grumman American AA-5 Compton Abbas 30th June 2013 (9215815185).jpg"
+},
+"Maule": {
+"src": "/assets/v/maule-m-7.webp",
+"w": 900,
+"h": 294,
+"author": "Ian Kirk from Broadstone, Dorset, UK",
+"license": "CC BY 2.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AMaule_M-7_Compton_Abbas_30th_June_2013_%289218586706%29.jpg",
+"title": "File:Maule M-7 Compton Abbas 30th June 2013 (9218586706).jpg"
+},
+"Air Tractor (crop dusters)": {
+"src": "/assets/v/air-tractor-at-802.webp",
+"w": 900,
+"h": 383,
+"author": "Robbie Klinkenberg",
+"license": "CC BY 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3ATrabajos_A%C3%A9reos_Mart%C3%ADnez_Ridao_Air_Tractor_AT-802_EC-NRE_at_Portim%C3%A3o_Airport_12-06-2023_%281%29.jpg",
+"title": "File:Trabajos Aéreos Martínez Ridao Air Tractor AT-802 EC-NRE at Portimão Airport 12-06-2023 (1).jpg"
+},
+"Van's RV (kit planes)": {
+"src": "/assets/v/vans-rv-7.webp",
+"w": 900,
+"h": 290,
+"author": "Aeroprints.com",
+"license": "CC BY-SA 3.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AG-IIXF_Vans_RV-7_%289705950313%29.jpg",
+"title": "File:G-IIXF Vans RV-7 (9705950313).jpg"
+},
+"Robinson R22": {
+"src": "/assets/v/robinson-r22.webp",
+"w": 351,
+"h": 158,
+"author": "Calistemon",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3ARobinson_R22_helicopter_VH-YZO_at_Lake_Walyungup%2C_May_2021_01.jpg",
+"title": "File:Robinson R22 helicopter VH-YZO at Lake Walyungup, May 2021 01.jpg"
+},
+"Robinson R44": {
+"src": "/assets/v/robinson-r44.webp",
+"w": 900,
+"h": 386,
+"author": "Diego Delso",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AHelic%C3%B3ptero_Robinson_R44%2C_Portage%2C_Alaska%2C_Estados_Unidos%2C_2017-08-22%2C_DD_43.jpg",
+"title": "File:Helicóptero Robinson R44, Portage, Alaska, Estados Unidos, 2017-08-22, DD 43.jpg"
+},
+"Robinson R66": {
+"src": "/assets/v/robinson-r66.webp",
+"w": 900,
+"h": 417,
+"author": "ZLEA",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3ARobinson_R66_%28N73BV%2C_cn_1139%29_%2810-20-2022%29.jpg",
+"title": "File:Robinson R66 (N73BV, cn 1139) (10-20-2022).jpg"
+},
+"Bell 206 / 407": {
+"src": "/assets/v/bell-206.webp",
+"w": 900,
+"h": 544,
+"author": "Ex13",
+"license": "CC BY-SA 3.0",
+"page": "https://commons.wikimedia.org/wiki/File%3ABell_206_DanOSRH_2011.JPG",
+"title": "File:Bell 206 DanOSRH 2011.JPG"
+},
+"Airbus AS350 (A-Star)": {
+"src": "/assets/v/eurocopter-as350.webp",
+"w": 900,
+"h": 331,
+"author": "James from Cheltenham, Gloucestershire",
+"license": "CC BY-SA 2.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AG-DJSM_Eurocopter_Ecureuil_AS350_Helicopter_%2825846816973%29.jpg",
+"title": "File:G-DJSM Eurocopter Ecureuil AS350 Helicopter (25846816973).jpg"
+},
+"Boeing 737": {
+"src": "/assets/v/boeing-737.webp",
+"w": 900,
+"h": 315,
+"author": "Acroterion",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3ASouthwest_Boeing_737-700_N472WN_BWI_MD1.jpg",
+"title": "File:Southwest Boeing 737-700 N472WN BWI MD1.jpg"
+},
+"Boeing 757 / 767": {
+"src": "/assets/v/boeing-767.webp",
+"w": 900,
+"h": 337,
+"author": "Robbie Klinkenberg",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3ALAN_Cargo_Boeing_767-316FER_N418LA_at_Schiphol_03-03-2022.jpg",
+"title": "File:LAN Cargo Boeing 767-316FER N418LA at Schiphol 03-03-2022.jpg"
+},
+"Boeing 777 / 787": {
+"src": "/assets/v/boeing-787.webp",
+"w": 900,
+"h": 621,
+"author": "New York-air",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AN1015X_Air_Tahiti_Nui_Boeing_787-9_Dreamliner_26.jpg",
+"title": "File:N1015X Air Tahiti Nui Boeing 787-9 Dreamliner 26.jpg"
+},
+"Airbus A320 family": {
+"src": "/assets/v/airbus-a320.webp",
+"w": 900,
+"h": 355,
+"author": "Anna Zvereva from Tallinn, Estonia",
+"license": "CC BY-SA 2.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AAirBlue_AP-EDH%2C_Airbus_A320-214_%40DXB%2C_June_2019.jpg",
+"title": "File:AirBlue AP-EDH, Airbus A320-214 @DXB, June 2019.jpg"
+},
+"Embraer regional jets": {
+"src": "/assets/v/embraer-175.webp",
+"w": 900,
+"h": 321,
+"author": "Sixflashphoto",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AAmerican_Eagle_Embraer_175.jpg",
+"title": "File:American Eagle Embraer 175.jpg"
+},
+"Harley-Davidson Touring": {
+"src": "/assets/v/harley-davidson-electra-glide.webp",
+"w": 900,
+"h": 507,
+"author": "Medium69 (William Croch)",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AHarley-Davidson_Electra_Glide_-_236.jpg",
+"title": "File:Harley-Davidson Electra Glide - 236.jpg"
+},
+"Harley-Davidson Softail": {
+"src": "/assets/v/harley-davidson-softail.webp",
+"w": 900,
+"h": 542,
+"author": "Ardfern",
+"license": "CC BY-SA 3.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AHarley-Davidson_Heritage_Softail%2C_Delamont%2C_April_2010_%2801%29.JPG",
+"title": "File:Harley-Davidson Heritage Softail, Delamont, April 2010 (01).JPG"
+},
+"Harley-Davidson Sportster": {
+"src": "/assets/v/harley-davidson-sportster.webp",
+"w": 900,
+"h": 576,
+"author": "order_242 from Chile",
+"license": "CC BY-SA 2.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AHarley_Davidson_XL_883_N_Sportster_2011_%2815762289430%29.jpg",
+"title": "File:Harley Davidson XL 883 N Sportster 2011 (15762289430).jpg"
+},
+"Harley-Davidson Dyna": {
+"src": "/assets/v/harley-davidson-dyna.webp",
+"w": 900,
+"h": 445,
+"author": "Harleyrobbio",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AHarley_Davidson_Dyna_1450.jpg",
+"title": "File:Harley Davidson Dyna 1450.jpg"
+},
+"Harley-Davidson Street 500/750": {
+"src": "/assets/v/harley-davidson-street-750.webp",
+"w": 900,
+"h": 568,
+"author": "Ryan Urlacher from USA",
+"license": "CC BY 2.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2014_Harley-Davidson_Street_750_side_view.jpg",
+"title": "File:2014 Harley-Davidson Street 750 side view.jpg"
+},
+"Harley-Davidson Pan America": {
+"src": "/assets/v/harley-davidson-pan-america.webp",
+"w": 900,
+"h": 680,
+"author": "Olinone",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AHarley-Davidson_Pan_America_%282023%29.jpg",
+"title": "File:Harley-Davidson Pan America (2023).jpg"
+},
+"Honda Gold Wing": {
+"src": "/assets/v/honda-gold-wing.webp",
+"w": 900,
+"h": 553,
+"author": "Tarrakaner",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AHonda_Gold_Wing_GL_1800_%28SC79_-_2018%29.jpg",
+"title": "File:Honda Gold Wing GL 1800 (SC79 - 2018).jpg"
+},
+"Honda Shadow": {
+"src": "/assets/v/honda-shadow.webp",
+"w": 900,
+"h": 496,
+"author": "order_242 from Chile",
+"license": "CC BY-SA 2.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AHonda_Shadow_2010_%2810077229096%29.jpg",
+"title": "File:Honda Shadow 2010 (10077229096).jpg"
+},
+"Honda Rebel": {
+"src": "/assets/v/honda-rebel.webp",
+"w": 900,
+"h": 581,
+"author": "Kgbo",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AHonda_Rebel_in_Brisbane.jpg",
+"title": "File:Honda Rebel in Brisbane.jpg"
+},
+"Yamaha YZF-R6": {
+"src": "/assets/v/yamaha-yzf-r6.webp",
+"w": 900,
+"h": 489,
+"author": "Kuro202",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2018_Yamaha_YZF-R6-0.jpg",
+"title": "File:2018 Yamaha YZF-R6-0.jpg"
+},
+"Yamaha V Star": {
+"src": "/assets/v/yamaha-v-star.webp",
+"w": 900,
+"h": 483,
+"author": "Jacek Halicki",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2016_Yamaha_XV1600_Wild_Star.jpg",
+"title": "File:2016 Yamaha XV1600 Wild Star.jpg"
+},
+"Yamaha Raider / Stratoliner": {
+"src": "/assets/v/yamaha-stratoliner.webp",
+"w": 900,
+"h": 489,
+"author": "Retired electrician",
+"license": "CC0",
+"page": "https://commons.wikimedia.org/wiki/File%3AMoscow%2C_Yamaha_XV1900_Stratoliner%2C_May_2026_01.jpg",
+"title": "File:Moscow, Yamaha XV1900 Stratoliner, May 2026 01.jpg"
+},
+"Kawasaki KLR650": {
+"src": "/assets/v/kawasaki-klr-650.webp",
+"w": 900,
+"h": 607,
+"author": "Carsamar",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2009_black_Kawasaki_KLR_650.jpg",
+"title": "File:2009 black Kawasaki KLR 650.jpg"
+},
+"Kawasaki Ninja ZX-6R / ZX-10R": {
+"src": "/assets/v/kawasaki-ninja-zx-6r.webp",
+"w": 900,
+"h": 513,
+"author": "Thesupermat",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AKawasaki_Ninja_ZX-6R_-_2018_-_Mondial_de_l%27Automobile_de_Paris_2018_-_003.jpg",
+"title": "File:Kawasaki Ninja ZX-6R - 2018 - Mondial de l'Automobile de Paris 2018 - 003.jpg"
+},
+"Kawasaki Ninja 300/400/650": {
+"src": "/assets/v/kawasaki-ninja-400.webp",
+"w": 900,
+"h": 664,
+"author": "Mr.choppers",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AKawasaki_Ninja_400_KRT_Edition_%28facelift_model%29_right_side.jpg",
+"title": "File:Kawasaki Ninja 400 KRT Edition (facelift model) right side.jpg"
+},
+"Kawasaki Concours 14": {
+"src": "/assets/v/kawasaki-1400gtr.webp",
+"w": 900,
+"h": 570,
+"author": "Cjp24",
+"license": "CC BY-SA 3.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AKawasaki_1400GTR.jpg",
+"title": "File:Kawasaki 1400GTR.jpg"
+},
+"Kawasaki Vulcan": {
+"src": "/assets/v/kawasaki-vulcan.webp",
+"w": 900,
+"h": 509,
+"author": "Thesupermat",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AKawasaki_Vulcan_S_-_MRS_Oficina_-_Mondial_de_l%27Automobile_de_Paris_2018_-_001.jpg",
+"title": "File:Kawasaki Vulcan S - MRS Oficina - Mondial de l'Automobile de Paris 2018 - 001.jpg"
+},
+"Kawasaki Versys": {
+"src": "/assets/v/kawasaki-versys.webp",
+"w": 900,
+"h": 636,
+"author": "PekePON",
+"license": "CC BY-SA 3.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AKawasaki_Versys1000_Metallic_Magnesium_Gray_right-side_2011_Tokyo_Motor_Show.jpg",
+"title": "File:Kawasaki Versys1000 Metallic Magnesium Gray right-side 2011 Tokyo Motor Show.jpg"
+},
+"Suzuki Boulevard": {
+"src": "/assets/v/suzuki-boulevard.webp",
+"w": 900,
+"h": 551,
+"author": "Chris Woodrich",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3ASuzuki_Boulevard%2C_Tilbury%2C_Ontario%2C_2026-09-07_01.jpg",
+"title": "File:Suzuki Boulevard, Tilbury, Ontario, 2026-09-07 01.jpg"
+},
+"Suzuki GSX-R": {
+"src": "/assets/v/suzuki-gsx-r.webp",
+"w": 900,
+"h": 696,
+"author": "Tontonflingueur",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3ASuzuki_GSX-R_1000_R_Mod%C3%A8le_2018_en_livr%C3%A9e_blanche.jpg",
+"title": "File:Suzuki GSX-R 1000 R Modèle 2018 en livrée blanche.jpg"
+},
+"Suzuki Hayabusa": {
+"src": "/assets/v/suzuki-hayabusa.webp",
+"w": 900,
+"h": 569,
+"author": "Thesupermat",
+"license": "CC BY-SA 3.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AParis_-_Salon_de_la_moto_2011_-_Suzuki_-_Hayabusa_-_002.jpg",
+"title": "File:Paris - Salon de la moto 2011 - Suzuki - Hayabusa - 002.jpg"
+},
+"Suzuki V-Strom": {
+"src": "/assets/v/suzuki-dl650-v-strom.webp",
+"w": 900,
+"h": 629,
+"author": "Mschott99",
+"license": "Public domain",
+"page": "https://commons.wikimedia.org/wiki/File%3ASuzuki_V-Strom_DL650%2C_Blue_Ridge.jpg",
+"title": "File:Suzuki V-Strom DL650, Blue Ridge.jpg"
+},
+"BMW GS (R1200/R1250GS)": {
+"src": "/assets/v/bmw-r1200gs.webp",
+"w": 900,
+"h": 629,
+"author": "Diego Delso",
+"license": "CC BY-SA 3.0",
+"page": "https://commons.wikimedia.org/wiki/File%3ABMW_R1200GS_K50_Welt_Munich_Alemania_2013-04-22.jpg",
+"title": "File:BMW R1200GS K50 Welt Munich Alemania 2013-04-22.jpg"
+},
+"BMW RT (R1200/R1250RT)": {
+"src": "/assets/v/bmw-r1200rt.webp",
+"w": 900,
+"h": 688,
+"author": "Hans45",
+"license": "CC BY-SA 3.0",
+"page": "https://commons.wikimedia.org/wiki/File%3ABMW_R1200RT_2014_Liquid_Cooled.JPG",
+"title": "File:BMW R1200RT 2014 Liquid Cooled.JPG"
+},
+"BMW K1600": {
+"src": "/assets/v/bmw-k1600gt.webp",
+"w": 900,
+"h": 674,
+"author": "Addvisor",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3ABMW_K1600GT_DSCF1361.jpg",
+"title": "File:BMW K1600GT DSCF1361.jpg"
+},
+"BMW S1000RR": {
+"src": "/assets/v/bmw-s1000rr.webp",
+"w": 900,
+"h": 479,
+"author": "Dennis Bratland",
+"license": "CC BY-SA 3.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2014_BMW_S1000RR_right.JPG",
+"title": "File:2014 BMW S1000RR right.JPG"
+},
+"Ducati Multistrada": {
+"src": "/assets/v/ducati-multistrada.webp",
+"w": 900,
+"h": 636,
+"author": "Thesupermat",
+"license": "CC BY-SA 3.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AParis_-_Salon_de_la_moto_2011_-_Ducati_-_Multistrada_1200_-_001.jpg",
+"title": "File:Paris - Salon de la moto 2011 - Ducati - Multistrada 1200 - 001.jpg"
+},
+"Ducati Monster": {
+"src": "/assets/v/ducati-monster.webp",
+"w": 900,
+"h": 599,
+"author": "Darryl Braaten from Vancouver, Canada",
+"license": "CC BY-SA 2.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AWhite_Ducati_Monster_696_front_closeup.jpg",
+"title": "File:White Ducati Monster 696 front closeup.jpg"
+},
+"Ducati Panigale": {
+"src": "/assets/v/ducati-panigale.webp",
+"w": 900,
+"h": 566,
+"author": "Matti Blume",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3ADucati_Panigale_V4_-_Tuning_World_Bodensee_2018%2C_Friedrichshafen_%28OW1A0484%29.jpg",
+"title": "File:Ducati Panigale V4 - Tuning World Bodensee 2018, Friedrichshafen (OW1A0484).jpg"
+},
+"Ducati Scrambler": {
+"src": "/assets/v/ducati-scrambler-icon.webp",
+"w": 900,
+"h": 524,
+"author": "Dennis Bratland",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2015_Ducati_Scrambler_Icon_right.JPG",
+"title": "File:2015 Ducati Scrambler Icon right.JPG"
+},
+"Triumph Bonneville / Thruxton": {
+"src": "/assets/v/triumph-bonneville.webp",
+"w": 900,
+"h": 574,
+"author": "Artaxerxes",
+"license": "CC BY-SA 3.0",
+"page": "https://commons.wikimedia.org/wiki/File%3ATriumph_Bonneville_with_Cozy_sidecar_downtown_Montpelier_VT_June_2016.jpg",
+"title": "File:Triumph Bonneville with Cozy sidecar downtown Montpelier VT June 2016.jpg"
+},
+"Triumph Rocket 3": {
+"src": "/assets/v/triumph-rocket-3.webp",
+"w": 900,
+"h": 555,
+"author": "Thesupermat",
+"license": "CC BY-SA 3.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AParis_-_Salon_de_la_moto_2011_-_Triumph_-_Rocket_III_Touring_-_003.jpg",
+"title": "File:Paris - Salon de la moto 2011 - Triumph - Rocket III Touring - 003.jpg"
+},
+"Triumph Tiger": {
+"src": "/assets/v/triumph-tiger.webp",
+"w": 900,
+"h": 602,
+"author": "H005",
+"license": "CC0",
+"page": "https://commons.wikimedia.org/wiki/File%3ATriumph_Tiger_800_MY_2012_side_view.jpg",
+"title": "File:Triumph Tiger 800 MY 2012 side view.jpg"
+},
+"KTM 790/890 Adventure": {
+"src": "/assets/v/ktm-790-adventure.webp",
+"w": 900,
+"h": 650,
+"author": "Cjp24",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AKTM_790_Adventure%2C_topcase.jpg",
+"title": "File:KTM 790 Adventure, topcase.jpg"
+},
+"KTM 690 Duke / Enduro": {
+"src": "/assets/v/ktm-690-duke.webp",
+"w": 900,
+"h": 488,
+"author": "Faritan Kixs",
+"license": "CC BY-SA 3.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AKTM_690_Duke_2012.JPG",
+"title": "File:KTM 690 Duke 2012.JPG"
+},
+"KTM 390": {
+"src": "/assets/v/ktm-390-duke.webp",
+"w": 900,
+"h": 576,
+"author": "PackMecEng",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2018_KTM_390_Duke.jpg",
+"title": "File:2018 KTM 390 Duke.jpg"
+},
+"Indian Scout": {
+"src": "/assets/v/indian-scout-2015.webp",
+"w": 900,
+"h": 665,
+"author": "Kawijock",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2015_Indian_Scout_1.jpg",
+"title": "File:2015 Indian Scout 1.jpg"
+},
+"Can-Am Spyder": {
+"src": "/assets/v/can-am-spyder-rt.webp",
+"w": 900,
+"h": 627,
+"author": "Thesupermat",
+"license": "CC BY-SA 3.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AParis_-_Salon_de_la_moto_2011_-_Can-Am_-_spyder_RT_-_001.jpg",
+"title": "File:Paris - Salon de la moto 2011 - Can-Am - spyder RT - 001.jpg"
+},
+"Can-Am Ryker": {
+"src": "/assets/v/can-am-ryker.webp",
+"w": 900,
+"h": 604,
+"author": "Thesupermat",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3ACan-Am_Ryker_-_Mondial_de_l%27Automobile_de_Paris_2018_-_001.jpg",
+"title": "File:Can-Am Ryker - Mondial de l'Automobile de Paris 2018 - 001.jpg"
+}
+}

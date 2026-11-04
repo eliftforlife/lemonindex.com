@@ -1,0 +1,4826 @@
+[
+{
+"name": "Harley-Davidson Touring",
+"brand": "Harley-Davidson",
+"make": "HARLEY-DAVIDSON",
+"seg": "Touring",
+"n": 1451,
+"years": [
+2005,
+2025
+],
+"by_year": {
+"2005": 22,
+"2006": 46,
+"2007": 131,
+"2008": 190,
+"2009": 202,
+"2010": 142,
+"2011": 110,
+"2012": 86,
+"2013": 65,
+"2014": 90,
+"2015": 57,
+"2016": 60,
+"2017": 64,
+"2018": 50,
+"2019": 34,
+"2020": 19,
+"2021": 7,
+"2022": 12,
+"2023": 18,
+"2024": 30,
+"2025": 16
+},
+"parts": [
+[
+"brakes",
+30
+],
+[
+"engine",
+19
+],
+[
+"transmission & drivetrain",
+17
+],
+[
+"electrical",
+14
+],
+[
+"throttle & speed control",
+8
+]
+],
+"serious": 11,
+"crash": 103,
+"fire": 20,
+"injured": 136,
+"miles": 12000,
+"recalls": [
+{
+"id": "08V357000",
+"date": "30/07/2008",
+"part": "FUEL SYSTEM, GASOLINE:STORAGE:TANK ASSEMBLY:FILLER PIPE AND CAP",
+"summary": "HARLEY DAVIDSON IS RECALLING 47,579 MY 2008  FLHP, FLHPE, FLHR, FLHRC, FLHRSE4, FLHT, FLHTC, FLHTCU, FLHTCUSE3, FLHTP, FLHX, AND FLTR MOTORCYCLES.  THESE MOTORCYCLES MAY EXPERIENCE A CRACKING OF THE FUEL FILTER SHELL LEADING TO LOSS OF FUEL PRESSURE.  THIS LOSS OF FUEL PRESSURE CAN CAUSE DIMINISHED ",
+"y": 2008
+},
+{
+"id": "26V270000",
+"date": "29/04/2026",
+"part": "ENGINE AND ENGINE COOLING:EXHAUST SYSTEM:EMISSION CONTROL:CRANKCASE (PCV)",
+"summary": "Harley-Davidson Motor Company (Harley-Davidson) is recalling certain 2024-2026 FLTRX, FLHX, 2025-2026 FXBR, FLFB, 2025 FLHXU, 2026 FLTRXL, FLTRT, FLHXL, and FLHLT motorcycles built with an Airbox Baseplate (part number 29000373). The airbox backplate breather port may be blocked, allowing pressure t",
+"y": 2025
+},
+{
+"id": "18V076000",
+"date": "29/01/2018",
+"part": "SERVICE BRAKES, HYDRAULIC:FLUID",
+"summary": "Harley-Davidson Motor Company (Harley-Davidson) is recalling all 2008-2011 Touring, CVO Touring and VSRC motorcycles equipped with anti-lock brakes (ABS), including Road King (FLHR), Road King Police (EFI) (FLHP), Road King Police (EFI) (FLHPE), Electra Glide Standard Police (EFI) (FLHTP), Electra G",
+"y": 2011
+},
+{
+"id": "16V471000",
+"date": "27/06/2016",
+"part": "POWER TRAIN:CLUTCH ASSEMBLY",
+"summary": "Harley-Davidson Motor Company (Harley-Davidson) is recalling certain model year 2016 Electric Glide Ultra Classic (FLHTCU), Electra Glide Ultra Classic Low (FLHTCUL), Ultra Limited Low (FLHTKL), Ultra Limited (FLHTK), CVO Street Glide (FLHXSE), Street Glide (FLHX), Street Glide Special (FLHXS), Road",
+"y": 2016
+},
+{
+"id": "05V427000",
+"date": "22/09/2005",
+"part": "VISIBILITY:REARVIEW MIRRORS/DEVICES",
+"summary": "CERTAIN MOTORCYCLES WERE BUILT WITH MIRRORS THAT WERE IMPROPERLY LOCATED ON THE INNER FAIRING.",
+"y": 2006
+},
+{
+"id": "17V333000",
+"date": "22/05/2017",
+"part": "ENGINE AND ENGINE COOLING",
+"summary": "Harley-Davidson Motor Company (Harley-Davidson) is recalling certain 2017 Electric Glide Ultra Classic (FLHTCU), Police Electra Glide (FLHTP), Police Road King (FLHP), Road King (FLHR), Road King Special (FLHRXS), Street Glide (FLHX), Street Glide Special (FLHXS), Road Glide (FLTRX), and Road Glide ",
+"y": 2017
+},
+{
+"id": "11V506000",
+"date": "19/10/2011",
+"part": "EXTERIOR LIGHTING:BRAKE LIGHTS:SWITCH",
+"summary": "HARLEY-DAVIDSON IS RECALLING CERTAIN MODEL YEAR 2009-2012 TOURING, CVO TOURING AND TRIKE VEHICLES MANUFACTURED FROM JUNE 6, 2008, THROUGH SEPTEMBER 16, 2011. SEE THE ABOVE LIST FOR THE MODELS INCLUDED IN THE RECALL. THE REAR BRAKE LIGHT SWITCH MAY BE EXPOSED TO EXCESSIVE HEAT FROM THE EXHAUST SYSTEM",
+"y": 2012
+},
+{
+"id": "22V781000",
+"date": "18/10/2022",
+"part": "EXTERIOR LIGHTING:BRAKE LIGHTS",
+"summary": "Harley-Davidson Motor Company (Harley-Davidson) is recalling certain 2019-2022 Trike and CVO Trike and 2020-2022 Touring and CVO Touring motorcycles.  Please refer to Addendum A for specific vehicle model details.  Due to a software error, the brake lights may illuminate without the rider applying t",
+"y": 2022
+},
+{
+"id": "18V734000",
+"date": "18/10/2018",
+"part": "POWER TRAIN:CLUTCH ASSEMBLY",
+"summary": "Harley-Davidson Motor Company (Harley-Davidson) is recalling certain 2017-2018 Police Road King (FLHP), Road King (FLHR), Road King Special (FLHRXS), Electra Glide Ultra Classic (FLHTCU), Ultra Limited (FLHTK), Ultra Limited Low (FLHTKL), Ultra Limited Shrine (FLHTK SHRINE), Police Electra Glide (FL",
+"y": 2018
+},
+{
+"id": "13V515000",
+"date": "17/10/2013",
+"part": "POWER TRAIN:CLUTCH ASSEMBLY",
+"summary": "Harley-Davidson Motor Company (Harley-Davidson) is recalling certain model year 2014 FLHTCU, FLHTK, FLHTP, FLHX, FLHXS, FLHTKSE, and FLHRSE motorcycles manufactured May 3, 2013, through October 14, 2013.  The clutch master cylinder may allow air into the clutch system.  Additionally, the motorcycles",
+"y": 2014
+},
+{
+"id": "24V672000",
+"date": "16/09/2024",
+"part": "ELECTRICAL SYSTEM:WIRING",
+"summary": "Harley-Davidson Motor Company (Harley-Davidson) is recalling certain 2024 FLHX, FLHXSE, FLTRX, FLTRXSE, and FLTRXSTSE motorcycles.  The voltage regulator output wire may rub on the front corner of the crankcase, exposing the wire and causing an electrical short circuit.  A short can result in a loss",
+"y": 2024
+},
+{
+"id": "15V216000",
+"date": "13/04/2015",
+"part": "POWER TRAIN:CLUTCH ASSEMBLY",
+"summary": "Harley-Davidson Motor Company (Harley-Davidson) notified the agency on April 9, 2015, that they are recalling certain model year 2014-2015 Electra Glide Ultra Classic (FLHTCU), Electra Glide Ultra Classic - Twin Cooled (FLHTCU TC), Ultra Limited (FLHTK), Police Electra Glide (FLHTP), Street Glide (F",
+"y": 2015
+},
+{
+"id": "14V319000",
+"date": "12/06/2014",
+"part": "SERVICE BRAKES, HYDRAULIC",
+"summary": "Harley-Davidson Motor Company (Harley-Davidson) is recalling certain model year 2014 ABS-equipped Touring and CVO Touring motorcycles, models FLHTK, FLHTKSE, FLHTKSHRINE, FLHTCU, FLHTCUTC, FLHTP, FLHX, FLHXS, FLHXSHRINE, FLHR, FLHRC, FLHP, and FLHRSE, manufactured July 1, 2013, through May 7, 2014. ",
+"y": 2014
+},
+{
+"id": "15V427000",
+"date": "06/07/2015",
+"part": "EQUIPMENT",
+"summary": "Harley-Davidson Motor Company (Harley-Davidson) is recalling certain model year 2014-2015 Road King (FLHR), Street Glide (FLHX), Street Glide Special (FLHXS), Electra Glide Ultra Classic (FLHTCU), Ultra Limited (FLHTK), Police Road King (FLHP), Police Electra Glide (FLHTP), CVO Ultra Limited (FLHTKS",
+"y": 2015
+},
+{
+"id": "14V537000",
+"date": "05/09/2014",
+"part": "POWER TRAIN:CLUTCH ASSEMBLY",
+"summary": "Harley-Davidson Motor Company (Harley-Davidson) is recalling certain model year 2014 Electra Glide Ultra Classic (FLHTCU), Ultra Limited (FLHTK), Police Electra Glide (FLHTP), Street Glide Special (FLHXS), Street Glide (FLHX), Tri Glide Ultra (FLHTCUTG), CVO Limited (FLHTKSE), CVO Road King (FLHRSE)",
+"y": 2014
+},
+{
+"id": "19V574000",
+"date": "05/08/2019",
+"part": "VISIBILITY",
+"summary": "Harley-Davidson Motor Company (Harley-Davidson) is recalling certain Touring and CVO Touring motorcycles, including 2017-2019 FLHTCU, FLHTCUL, FLHTK ANV, FLHTKL, FLTRU, FLHTK, and 2016-2019 FLHTKSE, FLHTKSE ANV, and FLTRUSE models equipped with a Harley-Davidson Detachable Tour-Pak Luggage Conversio",
+"y": 2019
+},
+{
+"id": "09V457000",
+"date": "01/12/2009",
+"part": "FUEL SYSTEM, GASOLINE:STORAGE:TANK ASSEMBLY:MOUNTING",
+"summary": "HARLEY-DAVIDSON IS RECALLING CERTAIN MODEL YEAR 2009 AND 2010 TOURING FAMILY MOTORCYCLES, INCLUDING CVO TOURING AND TRIKE PRODUCTS, MANUFACTURED FROM JUNE 6, 2008 THROUGH NOVEMBER 19, 2009.  THE FRONT FUEL TANK MOUNTS MAY DISTORT IN REACTION TO SEVERE FRAME DAMAGE FROM A FRONTAL COLLISION.  THIS CON",
+"y": 2010
+}
+],
+"names": [
+"FLHTCU",
+"FLHX",
+"FLHTK",
+"FLHTCUTG",
+"FLHTC",
+"FLHR"
+]
+},
+{
+"name": "Harley-Davidson Softail",
+"brand": "Harley-Davidson",
+"make": "HARLEY-DAVIDSON",
+"seg": "Cruiser",
+"n": 253,
+"years": [
+2005,
+2025
+],
+"by_year": {
+"2005": 16,
+"2006": 12,
+"2007": 45,
+"2008": 15,
+"2009": 18,
+"2010": 8,
+"2011": 21,
+"2012": 31,
+"2013": 10,
+"2014": 8,
+"2015": 3,
+"2016": 7,
+"2017": 10,
+"2018": 23,
+"2019": 5,
+"2020": 3,
+"2021": 4,
+"2022": 4,
+"2023": 6,
+"2024": 2,
+"2025": 2
+},
+"parts": [
+[
+"brakes",
+19
+],
+[
+"engine",
+16
+],
+[
+"wheels",
+14
+],
+[
+"electrical",
+13
+],
+[
+"transmission & drivetrain",
+11
+]
+],
+"serious": 9,
+"crash": 17,
+"fire": 2,
+"injured": 16,
+"miles": 3750,
+"recalls": [
+{
+"id": "07V173000",
+"date": "26/04/2007",
+"part": "ELECTRICAL SYSTEM:12V/24V/48V BATTERY:CABLES",
+"summary": "CERTAIN MOTORCYCLES WERE BUILT WITH A CONDITION THAT PERMITS THE POSITIVE BATTERY CABLE TO CONTACT A WELD BEAD ON THE OIL TANK.  THIS MAY CAUSE THE WELD BEAD TO ABRADE THROUGH THE INSULATION ON THE CABLE AND CAUSE AN ELECTRICAL SHORT FROM THE BATTERY THROUGH THE OIL TANK AND OIL LINES.",
+"y": 2007
+},
+{
+"id": "05V151000",
+"date": "14/04/2005",
+"part": "EQUIPMENT:OTHER:LABELS",
+"summary": "CERTAIN SOFTAIL MOTORCYCLES FAIL TO COMPLY WITH THE REQUIREMENTS OF PART 567, 'CERTIFICATION.'   THE VIN/CERTIFICATION LABEL CONTAINS INCORRECT TIRE SIZE AND INFLATION PRESSURES FOR THE FRONT WHEEL. THE LABEL STATES THE TIRE SIZE IS MT90B21 AND THE INFLATION PRESSURE AS 30 PSI, WHEREAS THE CORRECT T",
+"y": 2005
+}
+],
+"names": [
+"FLSTC",
+"FLSTF",
+"SOFTAIL",
+"FLSTN",
+"FLSTFB",
+"FLDE"
+]
+},
+{
+"name": "Harley-Davidson Sportster",
+"brand": "Harley-Davidson",
+"make": "HARLEY-DAVIDSON",
+"seg": "Cruiser",
+"n": 108,
+"years": [
+2005,
+2024
+],
+"by_year": {
+"2005": 18,
+"2006": 17,
+"2007": 16,
+"2008": 4,
+"2009": 4,
+"2010": 2,
+"2012": 6,
+"2013": 1,
+"2014": 9,
+"2015": 2,
+"2016": 6,
+"2017": 2,
+"2019": 2,
+"2020": 1,
+"2021": 6,
+"2022": 5,
+"2023": 6,
+"2024": 1
+},
+"parts": [
+[
+"engine",
+28
+],
+[
+"electrical",
+24
+],
+[
+"transmission & drivetrain",
+12
+],
+[
+"fuel system",
+10
+],
+[
+"brakes",
+10
+]
+],
+"serious": 6,
+"crash": 2,
+"fire": 2,
+"injured": 4,
+"miles": 4800,
+"recalls": [
+{
+"id": "21V225000",
+"date": "31/03/2021",
+"part": "EXTERIOR LIGHTING:HEADLIGHTS:BULBS",
+"summary": "Harley-Davidson Motor Company (Harley-Davidson) is recalling certain 2019-2021 Sportster (XL) motorcycles and 796 headlight assemblies that may have been sold as replacement parts for 2005-2019 Sportster, 2005-2017 Softail, 2005-2017 Dyna, and 2005-2011 V-Rod motorcycles.  The glass bulb within the ",
+"y": 2019
+},
+{
+"id": "22V030000",
+"date": "25/01/2022",
+"part": "ELECTRICAL SYSTEM: INSTRUMENT CLUSTER/PANEL",
+"summary": "Harley Davidson Motor Company (Harley-Davidson) is recalling certain 2021 Pan America 1250S (RA1250S), Pan America 1250 (RA1250), and Sportster S (RH1250S) motorcycles.  The instrument cluster module may not display the speedometer and neutral indicator at start-up when the module is below freezing ",
+"y": 2021
+},
+{
+"id": "06V476000",
+"date": "19/12/2006",
+"part": "ELECTRICAL SYSTEM:ALTERNATOR/GENERATOR/REGULATOR",
+"summary": "ON CERTAIN MOTORCYCLES, AS A RESULT OF A GREATER BODY THICKNESS THAN USED IN PREVIOUS MODEL YEARS, THE VOLTAGE REGULATOR MAY CONTACT THE FRONT FENDER UNDER CERTAIN CONDITIONS.  IN SOME CASES THIS CONTACT MAY ALLOW THE FRONT FENDER TO CATCH ON THE TOP SIDE OF THE REGULATOR BODY WHICH COULD IMPEDE THE",
+"y": 2007
+},
+{
+"id": "25V590000",
+"date": "11/09/2025",
+"part": "STEERING:LINKAGES",
+"summary": "Harley-Davidson Motor Company (Harley-Davidson) is recalling certain RH1250S (Sportster S) motorcycles. The upper triple clamp may fracture.",
+"y": 2024
+},
+{
+"id": "26V075000",
+"date": "10/02/2026",
+"part": "STEERING:LINKAGES",
+"summary": "Harley-Davidson Motor Company (Harley) is recalling certain 2021-2026 RH1250S (Sportster S) motorcycles. The upper triple clamp may fracture.",
+"y": 2024
+}
+],
+"names": [
+"XL1200C",
+"RH1250S",
+"XL883",
+"XL883N",
+"SPORTSTER",
+"XL1200L"
+]
+},
+{
+"name": "Harley-Davidson Dyna",
+"brand": "Harley-Davidson",
+"make": "HARLEY-DAVIDSON",
+"seg": "Cruiser",
+"n": 176,
+"years": [
+2005,
+2017
+],
+"by_year": {
+"2005": 3,
+"2006": 47,
+"2007": 17,
+"2008": 38,
+"2009": 34,
+"2010": 8,
+"2012": 9,
+"2013": 5,
+"2014": 5,
+"2015": 3,
+"2016": 6,
+"2017": 1
+},
+"parts": [
+[
+"electrical",
+19
+],
+[
+"brakes",
+18
+],
+[
+"fuel system",
+18
+],
+[
+"engine",
+16
+],
+[
+"transmission & drivetrain",
+15
+]
+],
+"serious": 11,
+"crash": 9,
+"fire": 7,
+"injured": 11,
+"miles": 5100,
+"recalls": [
+{
+"id": "08V625000",
+"date": "26/11/2008",
+"part": "FUEL SYSTEM, GASOLINE:STORAGE",
+"summary": "HARLEY-DAVIDSON IS RECALLING 349 MY 2009 FXDB, FXDC, FXDF, AND FXDL MOTORCYCLES.  THESE MOTORCYCLES HAVE A FUEL TANK VENT TUBE ASSEMBLY, PART NO. 27389-04A, WHICH MAY HAVE BEEN PRODUCED WITH A DEFECTIVE ULTRASONIC WELD ON THE ANTI-SLOSH VALVE.",
+"y": 2009
+},
+{
+"id": "07V535000",
+"date": "20/11/2007",
+"part": "ENGINE AND ENGINE COOLING:EXHAUST SYSTEM:MANIFOLD/HEADER/MUFFLER/TAIL PIPE",
+"summary": "ON CERTAIN MOTORCYCLES BUILT AND SHIPPED TO CALIFORNIA, THE CATALYTIC MUFFLER PROTECTIVE HEAT SHIELD WAS NOT INSTALLED.  THIS CONDITION COULD ALLOW DIRECT CONTACT WITH THIS MUFFLER AND CAUSE INJURY.",
+"y": 2008
+},
+{
+"id": "06V474000",
+"date": "18/12/2006",
+"part": "STEERING: STEERING WHEEL/HANDLE BAR",
+"summary": "ON CERTAIN MOTORCYCLES, THE INTERNALLY WIRED HANDLEBARS HAVE A POTENTIAL TO CRACK AT THE HOLE WHERE THE WIRES EXIT THE HANDLEBARS BETWEEN THE HANDLEBAR CLAMPS.",
+"y": 2007
+},
+{
+"id": "08V659000",
+"date": "15/12/2008",
+"part": "STRUCTURE:MOTORCYCLE:KICKSTAND/CENTER STAND",
+"summary": "HARLEY-DAVIDSON IS RECALLING 3,285 MY 2009 FXD, FXDF, FXDC, FXDL, AND FXDB MOTORCYCLES.  THE JIFFY STAND SPRING ANCHOR MAY HAVE BEEN BUILT WITH A DEFECTIVE WELD THAT MAY ALLOW THE JIFFY STAND ASSEMBLY TO NOT RETRACT AS INTENDED.",
+"y": 2009
+},
+{
+"id": "07V025000",
+"date": "01/02/2007",
+"part": "TIRES",
+"summary": "CERTAIN SPORTSTER AND DYNA MODEL MOTORCYCLES WERE BUILT WITH AN INCORRECT FRONT TIRE.",
+"y": 2007
+}
+],
+"names": [
+"FXDB",
+"FXDWG",
+"FXDC",
+"FXDL",
+"FXD",
+"FXDWGI"
+]
+},
+{
+"name": "Harley-Davidson Street 500/750",
+"brand": "Harley-Davidson",
+"make": "HARLEY-DAVIDSON",
+"seg": "Standard",
+"n": 107,
+"years": [
+2015,
+2019
+],
+"by_year": {
+"2015": 90,
+"2016": 8,
+"2017": 5,
+"2018": 3,
+"2019": 1
+},
+"parts": [
+[
+"fuel system",
+64
+],
+[
+"engine",
+18
+],
+[
+"throttle & speed control",
+16
+],
+[
+"brakes",
+12
+],
+[
+"transmission & drivetrain",
+9
+]
+],
+"serious": 15,
+"crash": 14,
+"fire": 0,
+"injured": 12,
+"miles": 375,
+"recalls": [
+{
+"id": "15V474000",
+"date": "29/07/2015",
+"part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+"summary": "Harley-Davidson Motor Company (Harley-Davidson) is recalling certain model year 2015 XG500 motorcycles manufactured January 20, 2014, to July 7, 2015, and XG750 motorcycles manufactured May 12, 2014, to July 7, 2015.  The fuel pump modules on these motorcycles have a poor seal at the fuel pump inlet",
+"y": 2015
+},
+{
+"id": "18V927000",
+"date": "21/12/2018",
+"part": "SERVICE BRAKES, HYDRAULIC:FOUNDATION COMPONENTS:DISC:CALIPER",
+"summary": "Harley-Davidson Motor Company (Harley-Davidson) is recalling certain 2016-2019 Street 500 (XG500), Street 750 (XG750), and 2017-2019 Street 750A (XG750A) motorcycles. The brake calipers may corrode internally after exposure to certain driving environments such as coastal regions or road salt, result",
+"y": 2019
+},
+{
+"id": "15V217000",
+"date": "13/04/2015",
+"part": "EXTERIOR LIGHTING",
+"summary": "Harley-Davidson Motor Company (Harley-Davidson) is recalling certain model year 2015 XG500 motorcycles manufactured January 28, 2014, to March 9, 2015, and 2015 XG750 motorcycles manufactured May 12, 2014, to March 9, 2015.  The affected motorcycles may have been manufactured without a rear reflecto",
+"y": 2015
+},
+{
+"id": "14V536000",
+"date": "05/09/2014",
+"part": "FUEL SYSTEM, GASOLINE:STORAGE:TANK ASSEMBLY:FILLER PIPE AND CAP",
+"summary": "Harley-Davidson Motor Company (Harley-Davidson) is recalling certain model year 2015 XG500 and XG750 motorcycles manufactured June 11, 2014, to August 14, 2014.  The fuel tank filler neck may be insufficiently flat, preventing the fuel cap from sealing properly.",
+"y": 2015
+}
+],
+"names": [
+"XG750",
+"XG500",
+"XG750A"
+]
+},
+{
+"name": "Harley-Davidson Pan America",
+"brand": "Harley-Davidson",
+"make": "HARLEY-DAVIDSON",
+"seg": "Adventure",
+"n": 54,
+"years": [
+2021,
+2024
+],
+"by_year": {
+"2021": 22,
+"2022": 19,
+"2023": 12,
+"2024": 1
+},
+"parts": [
+[
+"electrical",
+61
+],
+[
+"engine",
+37
+],
+[
+"fuel system",
+30
+],
+[
+"transmission & drivetrain",
+11
+],
+[
+"throttle & speed control",
+7
+]
+],
+"serious": 6,
+"crash": 3,
+"fire": 0,
+"injured": 1,
+"miles": null,
+"recalls": [
+{
+"id": "22V030000",
+"date": "25/01/2022",
+"part": "ELECTRICAL SYSTEM: INSTRUMENT CLUSTER/PANEL",
+"summary": "Harley Davidson Motor Company (Harley-Davidson) is recalling certain 2021 Pan America 1250S (RA1250S), Pan America 1250 (RA1250), and Sportster S (RH1250S) motorcycles.  The instrument cluster module may not display the speedometer and neutral indicator at start-up when the module is below freezing ",
+"y": 2021
+}
+],
+"names": [
+"RA1250S",
+"RA1250",
+"RA1250SE"
+]
+},
+{
+"name": "Honda Gold Wing",
+"brand": "Honda",
+"make": "HONDA",
+"seg": "Touring",
+"n": 269,
+"years": [
+2005,
+2024
+],
+"by_year": {
+"2005": 18,
+"2006": 22,
+"2007": 20,
+"2008": 49,
+"2009": 2,
+"2010": 24,
+"2012": 31,
+"2013": 22,
+"2014": 11,
+"2015": 9,
+"2016": 5,
+"2018": 34,
+"2019": 8,
+"2020": 1,
+"2021": 7,
+"2022": 1,
+"2023": 2,
+"2024": 3
+},
+"parts": [
+[
+"brakes",
+23
+],
+[
+"engine",
+20
+],
+[
+"transmission & drivetrain",
+17
+],
+[
+"fuel system",
+15
+],
+[
+"steering",
+14
+]
+],
+"serious": 9,
+"crash": 18,
+"fire": 0,
+"injured": 22,
+"miles": 7000,
+"recalls": [
+{
+"id": "24V820000",
+"date": "31/10/2024",
+"part": "ENGINE AND ENGINE COOLING:ENGINE:HARD PARTS INTERNAL/MECHANICAL",
+"summary": "Honda (American Honda Motor Co.) is recalling certain 2018-2021 GL1800 Goldwing motorcycles.  The primary drive gear bolt on the crankshaft may break, which can result in an engine stall and lock up the rear wheel.",
+"y": 2021
+},
+{
+"id": "06V270000",
+"date": "26/07/2006",
+"part": "EQUIPMENT:OTHER:OWNERS/SERVICE/OTHER MANUAL",
+"summary": "ON CERTAIN PASSENGER VEHICLES AND MOTORCYCLES, THE OWNER'S MANUALS CONTAIN INCORRECT CONTACT INFORMATION FOR THE NATIONAL HIGHWAY TRAFFIC SAFETY ADMINISTRATION'S (NHTSA) VEHICLE SAFETY HOTLINE.",
+"y": 2006
+},
+{
+"id": "16V347000",
+"date": "24/05/2016",
+"part": "AIR BAGS",
+"summary": "Honda (American Honda Motor, Inc.) is recalling certain model year 2006-2010 Honda GL1800 (Gold Wing) motorcycles manufactured February 8, 2006, to May 14, 2009 originally sold, or ever registered, in Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas, Puert",
+"y": 2010
+},
+{
+"id": "15V700000",
+"date": "23/10/2015",
+"part": "SERVICE BRAKES, HYDRAULIC:FOUNDATION COMPONENTS:MASTER CYLINDER",
+"summary": "American Honda Motor Co., Inc. (Honda) is recalling certain model year 2001-2010 and 2012-2015 GL1800, 2001-2005 GL1800A and 2013-2015 GL1800B motorcycles.  The rear brakes of the affected motorcycles may drag after the brakes are released.",
+"y": 2005
+},
+{
+"id": "22V449000",
+"date": "23/06/2022",
+"part": "ENGINE AND ENGINE COOLING:ENGINE:ENGINE CONTROL MODULE (ECU/ECM):SOFTWARE",
+"summary": "Honda (American Honda Motor Co) is recalling certain 2020-2022 GL1800 Gold Wing motorcycles equipped with manual transmissions.  An ignition timing software error for the engine control unit (ECU) may reduce engine performance, which can result in an engine stall.",
+"y": 2022
+},
+{
+"id": "24V113000",
+"date": "15/02/2024",
+"part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+"summary": "Honda (American Honda Motor Co.) is recalling certain 2018-2024 GL1800 (Goldwing), CBR600RR, and 2018-2019 CBR1000RR motorcycles.  The fuel pump impellers may have been improperly molded, which can cause them to deform and result in fuel pump failure.",
+"y": 2024
+},
+{
+"id": "11E054000",
+"date": "12/12/2011",
+"part": "EQUIPMENT",
+"summary": "KURYAKYN IS RECALLING CERTAIN AFTERMARKET PASSENGER FLOORBOARD MOUNTS, PART NUMBER 607005, SOLD AND INSTALLED FOR USE ON 2001-2012 HONDA GL 1800 (GOLDWING) MOTORCYCLES.  THIS MOUNT WAS SOLD ON KURYAKYN 'TRANSFORMER' PASSENGER FLOORBOARD SETS, PART NUMBER 7005 FROM SEPTEMBER 15, 2008, TO PRESENT.  TH",
+"y": 2012
+},
+{
+"id": "17V031000",
+"date": "10/01/2017",
+"part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+"summary": "Honda (American Honda Motor Co.) is recalling certain 2006-2009 and 2012 Honda GL1800 (Goldwing) motorcycles originally sold, or ever registered, in Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas, Puerto Rico, American Samoa, Guam, the Northern Mariana I",
+"y": 2012
+},
+{
+"id": "18V045000",
+"date": "09/01/2018",
+"part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+"summary": "Honda (American Honda Motor Co.) is recalling certain 2009-2010 and 2012-2016 Honda GL1800 Gold Wing motorcycles.  These motorcycles have air bag inflators assembled as part of the air bag module that may explode due to propellant degradation occurring after long-term exposure to higher absolute hum",
+"y": 2016
+},
+{
+"id": "11V567000",
+"date": "01/12/2011",
+"part": "SERVICE BRAKES, HYDRAULIC:FOUNDATION COMPONENTS:MASTER CYLINDER",
+"summary": "HONDA IS RECALLING CERTAIN MODEL YEAR 2001-2010, AND MODEL YEAR 2012 GL1800 GOLDWING MOTORCYCLES.  UNDER CERTAIN CONDITIONS, THERE IS A POSSIBILITY THAT THE COMBINED BRAKING SYSTEM'S SECONDARY MASTER CYLINDER MAY CAUSE THE REAR BRAKE TO DRAG.",
+"y": 2012
+}
+],
+"names": [
+"GL1800",
+"GL1800A",
+"GL1800B",
+"GL1800C",
+"GL1800BD"
+]
+},
+{
+"name": "Honda CBR",
+"brand": "Honda",
+"make": "HONDA",
+"seg": "Sport",
+"n": 89,
+"years": [
+2005,
+2025
+],
+"by_year": {
+"2005": 5,
+"2006": 6,
+"2007": 3,
+"2008": 20,
+"2009": 5,
+"2010": 2,
+"2011": 6,
+"2012": 12,
+"2013": 5,
+"2014": 2,
+"2015": 5,
+"2016": 4,
+"2017": 4,
+"2018": 2,
+"2019": 3,
+"2023": 1,
+"2024": 1,
+"2025": 3
+},
+"parts": [
+[
+"engine",
+56
+],
+[
+"fuel system",
+18
+],
+[
+"electrical",
+12
+],
+[
+"throttle & speed control",
+10
+],
+[
+"transmission & drivetrain",
+9
+]
+],
+"serious": 15,
+"crash": 11,
+"fire": 1,
+"injured": 8,
+"miles": 3744,
+"recalls": [
+{
+"id": "17V681000",
+"date": "26/10/2017",
+"part": "FUEL SYSTEM, GASOLINE:STORAGE:TANK ASSEMBLY:FILLER PIPE AND CAP",
+"summary": "Honda (American Honda Motor Co.) is recalling certain 2017 Honda CBR1000RR and CBR1000RR SP motorcycles.  There may be a gap between the fuel tank cap seal and the fuel filler neck which can allow water to enter the fuel tank.",
+"y": 2017
+},
+{
+"id": "06V270000",
+"date": "26/07/2006",
+"part": "EQUIPMENT:OTHER:OWNERS/SERVICE/OTHER MANUAL",
+"summary": "ON CERTAIN PASSENGER VEHICLES AND MOTORCYCLES, THE OWNER'S MANUALS CONTAIN INCORRECT CONTACT INFORMATION FOR THE NATIONAL HIGHWAY TRAFFIC SAFETY ADMINISTRATION'S (NHTSA) VEHICLE SAFETY HOTLINE.",
+"y": 2006
+},
+{
+"id": "09V174000",
+"date": "21/05/2009",
+"part": "ENGINE AND ENGINE COOLING:COOLING SYSTEM:HOSES/LINES/PIPING/FITTINGS",
+"summary": "HONDA IS RECALLING 12,894 MY 2008 CBR1000RR MOTORCYCLES.  A COOLANT HOSE CLAMP LOCATED ON THE WATER PUMP COVER MAY BREAK DUE TO FATIGUE CAUSED BY VIBRATION GENERATED AT CONTINUOUS HIGH ENGINE SPEEDS.",
+"y": 2008
+},
+{
+"id": "07V576000",
+"date": "17/12/2007",
+"part": "FUEL SYSTEM, GASOLINE:DELIVERY",
+"summary": "CERTAIN MOTORCYCLES HAVE AN IMPROPER WELDED VENT PIPE IN THE BOTTOM OF THE FUEL TANK.  DUE TO VIBRATION THE IMPROPERLY WELDED TANKS MAY CRACK AND DRIP FUEL.",
+"y": 2007
+},
+{
+"id": "24V864000",
+"date": "15/11/2024",
+"part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+"summary": "Honda (American Honda Motor Co.) is recalling certain 2007, 2009-2017 CBR600RR, 2008-2017, 2021 CBR1000RR, and 2010, 2012-2013 VFR1200 motorcycles.  The fuel pump impellers may have been improperly molded, which can cause them to deform and result in fuel pump failure.",
+"y": 2017
+},
+{
+"id": "24V113000",
+"date": "15/02/2024",
+"part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+"summary": "Honda (American Honda Motor Co.) is recalling certain 2018-2024 GL1800 (Goldwing), CBR600RR, and 2018-2019 CBR1000RR motorcycles.  The fuel pump impellers may have been improperly molded, which can cause them to deform and result in fuel pump failure.",
+"y": 2019
+}
+],
+"names": [
+"CBR1000RR",
+"CBR250R",
+"CBR600RR",
+"CBR300R",
+"CBR650R",
+"CBR1000RS"
+]
+},
+{
+"name": "Honda Shadow",
+"brand": "Honda",
+"make": "HONDA",
+"seg": "Cruiser",
+"n": 210,
+"years": [
+2005,
+2025
+],
+"by_year": {
+"2005": 57,
+"2006": 55,
+"2007": 58,
+"2008": 13,
+"2009": 6,
+"2010": 8,
+"2011": 5,
+"2012": 1,
+"2013": 2,
+"2014": 1,
+"2015": 2,
+"2016": 1,
+"2025": 1
+},
+"parts": [
+[
+"steering",
+40
+],
+[
+"fuel system",
+23
+],
+[
+"suspension",
+13
+],
+[
+"engine",
+10
+],
+[
+"electrical",
+8
+]
+],
+"serious": 6,
+"crash": 9,
+"fire": 0,
+"injured": 12,
+"miles": 4140,
+"recalls": [
+{
+"id": "06V270000",
+"date": "26/07/2006",
+"part": "EQUIPMENT:OTHER:OWNERS/SERVICE/OTHER MANUAL",
+"summary": "ON CERTAIN PASSENGER VEHICLES AND MOTORCYCLES, THE OWNER'S MANUALS CONTAIN INCORRECT CONTACT INFORMATION FOR THE NATIONAL HIGHWAY TRAFFIC SAFETY ADMINISTRATION'S (NHTSA) VEHICLE SAFETY HOTLINE.",
+"y": 2007
+},
+{
+"id": "08V141000",
+"date": "26/03/2008",
+"part": "FUEL SYSTEM, GASOLINE:DELIVERY",
+"summary": "HONDA IS RECALLING 38,934 MY 2006-2007 VT600 AND MY 2007-2008 VT750 AND VTX1300 MOTORCYCLES.  THE MOTORCYCLES MAY HAVE AN IMPROPERLY MANUFACTURED FUEL CONTROL VALVE DIAPHRAGM AND THE FUEL VALVE MAY DRIP FUEL.",
+"y": 2008
+},
+{
+"id": "15V874000",
+"date": "23/12/2015",
+"part": "ELECTRICAL SYSTEM:WIRING",
+"summary": "Honda (American Honda Motor Co.) is recalling certain model year 2012-2014 VT750CA, VT750C2 and VT750C2F, 2011-2016 VT750C, 2013-2016 VT750CS, 2010-2016 VT750C2B and 2013-2014 VT750C2S motorcycles.  Engine vibration may cause the bank angle sensor wire to rub on the wire harness joint connector, res",
+"y": 2016
+},
+{
+"id": "15V439000",
+"date": "08/07/2015",
+"part": "ELECTRICAL SYSTEM:STARTER ASSEMBLY:RELAY",
+"summary": "Honda (American Honda Motor Co.) is recalling certain model year 2013-2015 ST1300PA, 2014-2015 CB500, CBR500, CRF250L, CBR650, CTX700, NSS300, VT750, VT1300, 2015 CB300F, CBR300, CBR600, and 2014-2016 NC700 motorcycles.  In the affected motorcycles, sealant may have been incorrectly applied to the s",
+"y": 2015
+},
+{
+"id": "11V310000",
+"date": "03/06/2011",
+"part": "ELECTRICAL SYSTEM",
+"summary": "HONDA IS RECALLING CERTAIN MODEL YEAR 2010 AND 2011 VT750 MOTORCYCLES PRODUCED FROM JUNE 25, 2009, TO MARCH 28, 2011.  THE BANK ANGLE SENSOR MAY BE INCORRECTLY MANUFACTURED CREATING THE POSSIBILITY OF AN ERRONEOUS READING WHICH COULD CAUSE THE ENGINE TO STALL.",
+"y": 2011
+},
+{
+"id": "26V633000",
+"date": "02/10/2026",
+"part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+"summary": "Honda (American Honda Motor Co.) is recalling certain 2023-2025 VT1300CX and 2024-2025 VT750 motorcycles. The fuel pump may malfunction due to a manufacturing defect.",
+"y": 2025
+}
+],
+"names": [
+"VTX1300",
+"VT750",
+"VT750C",
+"VTX1800",
+"VT1300CX",
+"VT1100C"
+]
+},
+{
+"name": "Honda Africa Twin",
+"brand": "Honda",
+"make": "HONDA",
+"seg": "Adventure",
+"n": 88,
+"years": [
+2016,
+2025
+],
+"by_year": {
+"2016": 2,
+"2017": 8,
+"2018": 21,
+"2019": 14,
+"2020": 24,
+"2021": 9,
+"2022": 6,
+"2025": 4
+},
+"parts": [
+[
+"fuel system",
+66
+],
+[
+"engine",
+20
+],
+[
+"brakes",
+9
+],
+[
+"electrical",
+9
+],
+[
+"throttle & speed control",
+7
+]
+],
+"serious": 7,
+"crash": 5,
+"fire": 0,
+"injured": 2,
+"miles": 3200,
+"recalls": [
+{
+"id": "18E078000",
+"date": "03/08/2018",
+"part": "STRUCTURE:MOTORCYCLE:KICKSTAND/CENTER STAND",
+"summary": "Honda (American Honda Motor Co.) is recalling certain Honda Genuine Accessory Centerstand Kits, part number 08M70-MJP-G50, sold for possible installation on 2016-2018 Africa Twin motorcycles.  The circlip can break allowing the centerstand to detach.",
+"y": 2018
+}
+],
+"names": [
+"CRF1000",
+"CRF1000A",
+"CRF1100",
+"CRF1100D4",
+"CRF1000D",
+"CRF1100A"
+]
+},
+{
+"name": "Honda Rebel",
+"brand": "Honda",
+"make": "HONDA",
+"seg": "Cruiser",
+"n": 36,
+"years": [
+2005,
+2025
+],
+"by_year": {
+"2005": 9,
+"2006": 5,
+"2007": 5,
+"2009": 1,
+"2017": 2,
+"2021": 4,
+"2022": 4,
+"2023": 4,
+"2024": 1,
+"2025": 1
+},
+"parts": [
+[
+"engine",
+33
+],
+[
+"transmission & drivetrain",
+28
+],
+[
+"brakes",
+14
+],
+[
+"frame & body",
+8
+],
+[
+"steering",
+8
+]
+],
+"serious": 8,
+"crash": 3,
+"fire": 0,
+"injured": 3,
+"miles": 400,
+"recalls": [
+{
+"id": "25V358000",
+"date": "30/05/2025",
+"part": "ENGINE AND ENGINE COOLING:ENGINE:OIL/LUBRICATION",
+"summary": "Honda (American Honda Motor Co.) is recalling certain 2024 XL750, 2025 CMX1100, and CRF1100 motorcycles. The crankcase sealing bolt may have been improperly manufactured, which can cause the engine to leak oil onto the rear tire.",
+"y": 2025
+},
+{
+"id": "07V128000",
+"date": "21/03/2007",
+"part": "ENGINE AND ENGINE COOLING",
+"summary": "ON CERTAIN MOTORCYCLES, THE CRANKCASE BREATHER SEPARATOR MAY BE DEFECTED.  DURING THE MOLDING PROCESS, THE BREATHER PASSAGE MAY HAVE BEEN BLOCKED BY A THIN LAYER OF THE INJECTED PLASTIC MATERIAL.  THIS BLOCKAGE WILL CREATE A BUILD-UP OF PRESSURE INSIDE THE CRANKCASE AND MAY CAUSE THE LEFT SIDE ENGIN",
+"y": 2007
+}
+],
+"names": [
+"CMX250C",
+"CMX1100",
+"CMX500",
+"CMX300",
+"REBEL 1100"
+]
+},
+{
+"name": "Yamaha FJR1300",
+"brand": "Yamaha",
+"make": "YAMAHA",
+"seg": "Touring",
+"n": 192,
+"years": [
+2005,
+2018
+],
+"by_year": {
+"2005": 21,
+"2006": 63,
+"2007": 70,
+"2008": 13,
+"2009": 9,
+"2010": 2,
+"2011": 3,
+"2012": 1,
+"2013": 1,
+"2014": 2,
+"2016": 4,
+"2017": 1,
+"2018": 2
+},
+"parts": [
+[
+"electrical",
+56
+],
+[
+"fuel system",
+18
+],
+[
+"engine",
+13
+],
+[
+"transmission & drivetrain",
+7
+],
+[
+"lights",
+6
+]
+],
+"serious": 5,
+"crash": 6,
+"fire": 0,
+"injured": 5,
+"miles": 14298,
+"recalls": [
+{
+"id": "20V814000",
+"date": "29/12/2020",
+"part": "EXTERIOR LIGHTING:BRAKE LIGHTS:SWITCH",
+"summary": "Yamaha Motor Corporation, USA (Yamaha) is recalling certain 2018-2020 MTT9GT (Tracer GT), 2019 MXTGTKL (NIKEN GT), 2017-2020 MT10, 2018-2020 XTZ12 (Super Ténéré), 2013-2020 FJR13, 2018 XV19B (Star Eluder), and 2018-2021 XV19 (Star Venture) motorcycles.  The front brake switch can fail due to increas",
+"y": 2018
+},
+{
+"id": "20V813000",
+"date": "28/12/2020",
+"part": "POWER TRAIN:MANUAL TRANSMISSION:INTERNAL:GEARS",
+"summary": "Yamaha Motor Corporation, USA (Yamaha) is recalling certain 2016-2020 Yamaha FJR13A and FJR13AE motorcycles.  The second gear of the transmission can crack and break under high speed loads.",
+"y": 2018
+},
+{
+"id": "06V371000",
+"date": "28/09/2006",
+"part": "VEHICLE SPEED CONTROL",
+"summary": "ON CERTAIN MOTORCYCLES, AN IMPROPERLY DESIGNED THROTTLE POSITION SENSOR COULD CAUSE AN INTERMITTENTLY UNSTABLE IDLE WHEN THE ENGINE IS AT IDLING SPEED WHEN THE MOTORCYCLE IS STOPPED OR DURING LOW-SPEED OPERATIONS.  THE ENGINE COULD STALL AS A RESULT.",
+"y": 2005
+},
+{
+"id": "11V338000",
+"date": "27/06/2011",
+"part": "ELECTRICAL SYSTEM:WIRING",
+"summary": "YAMAHA IS RECALLING CERTAIN MODEL YEAR 2006-2009 FJR1300 MOTORCYCLES MANUFACTURED FROM FEBRUARY 2006, THROUGH MARCH 2009.  THE GROUND JOINT CONNECTOR OF THE WIRE HARNESS COULD OVERHEAT AND BECOME DEFORMED, POSSIBLY CAUSING AN INTERMITTENT GROUND WIRE CONNECTION.  IF THE ELECTRICAL SYSTEM IS NOT PROP",
+"y": 2009
+},
+{
+"id": "11V340000",
+"date": "27/06/2011",
+"part": "EXTERIOR LIGHTING:BRAKE LIGHTS:SWITCH",
+"summary": "YAMAHA IS RECALLING CERTAIN MODEL YEAR 2011 FJR1300 MOTORCYCLES MANUFACTURED FROM JANUARY 2011 THROUGH APRIL 2011.  THE BRAKE LIGHT MAY NOT ILLUMINATE WHEN THE FRONT BRAKE LEVER IS APPLIED BECAUSE THE ACTIVATING MECHANISM IN THE FRONT BRAKE SWITCH CAN BIND.",
+"y": 2011
+},
+{
+"id": "09V360000",
+"date": "17/09/2009",
+"part": "VEHICLE SPEED CONTROL",
+"summary": "YAMAHA IS RECALLING CERTAIN MODEL YEAR 2005 MOTORCYCLES MANUFACTURED BETWEEN OCTOBER 2004 AND APRIL 2005.  THE THROTTLE POSITION SENSOR CAN FAIL.",
+"y": 2005
+},
+{
+"id": "09V002000",
+"date": "08/01/2009",
+"part": "ELECTRICAL SYSTEM:IGNITION:SWITCH",
+"summary": "YAMAHA IS RECALLING 9,300 MY 2006-2009 FJR1300 MOTORCYCLES.  THE INTERNAL SWITCH WIRING COULD BECOME DISCONNECTED.   IF THIS OCCURS ELECTRICAL CURRENT FLOW WILL BE STOPPED AND THE ENGINE COULD STALL.",
+"y": 2009
+},
+{
+"id": "21V865000",
+"date": "06/11/2021",
+"part": "ENGINE AND ENGINE COOLING:ENGINE:ENGINE CONTROL MODULE (ECU/ECM):SOFTWARE",
+"summary": "Yamaha Motor Corporation, USA (Yamaha) is recalling certain 2016-2021 FJR13 motorcycles.  The Engine Control Unit (ECU) programming installed under Recall 20V-813 (990141), that was designed to prevent gear damage, may prevent the engine from accelerating as intended.",
+"y": 2018
+}
+],
+"names": [
+"FJR1300",
+"FJR1300A",
+"FJR1300AE",
+"FJR13"
+]
+},
+{
+"name": "Yamaha YZF-R1",
+"brand": "Yamaha",
+"make": "YAMAHA",
+"seg": "Sport",
+"n": 133,
+"years": [
+2005,
+2020
+],
+"by_year": {
+"2005": 9,
+"2006": 10,
+"2007": 90,
+"2008": 3,
+"2009": 2,
+"2011": 2,
+"2013": 1,
+"2015": 14,
+"2016": 1,
+"2020": 1
+},
+"parts": [
+[
+"throttle & speed control",
+41
+],
+[
+"engine",
+24
+],
+[
+"transmission & drivetrain",
+18
+],
+[
+"electrical",
+15
+],
+[
+"fuel system",
+9
+]
+],
+"serious": 9,
+"crash": 8,
+"fire": 1,
+"injured": 13,
+"miles": 380,
+"recalls": [
+{
+"id": "15V802000",
+"date": "30/11/2015",
+"part": "POWER TRAIN:MANUAL TRANSMISSION",
+"summary": "Yamaha Motor Corporation, USA (Yamaha) is recalling certain model year 2015 YZFR1, YZFR1C, YZFR1MF and YZFR1MFC motorcycles manufactured August 1, 2014, to June 1, 2015.  The affected motorcycles have transmission gears that may fail.",
+"y": 2015
+},
+{
+"id": "06V371000",
+"date": "28/09/2006",
+"part": "VEHICLE SPEED CONTROL",
+"summary": "ON CERTAIN MOTORCYCLES, AN IMPROPERLY DESIGNED THROTTLE POSITION SENSOR COULD CAUSE AN INTERMITTENTLY UNSTABLE IDLE WHEN THE ENGINE IS AT IDLING SPEED WHEN THE MOTORCYCLE IS STOPPED OR DURING LOW-SPEED OPERATIONS.  THE ENGINE COULD STALL AS A RESULT.",
+"y": 2005
+},
+{
+"id": "09V360000",
+"date": "17/09/2009",
+"part": "VEHICLE SPEED CONTROL",
+"summary": "YAMAHA IS RECALLING CERTAIN MODEL YEAR 2005 MOTORCYCLES MANUFACTURED BETWEEN OCTOBER 2004 AND APRIL 2005.  THE THROTTLE POSITION SENSOR CAN FAIL.",
+"y": 2005
+},
+{
+"id": "14V044000",
+"date": "10/02/2014",
+"part": "EXTERIOR LIGHTING:HEADLIGHTS",
+"summary": "Yamaha Motor Corporation USA (Yamaha) is recalling certain model year 2009-2013 YZFR1 motorcycles manufactured October 2008 through August 2013 and 2012-2013 XTZ12 motorcycles manufactured October 2011 through August 2013.  In the affected motorcycles, use of the headlight may generate enough heat t",
+"y": 2013
+},
+{
+"id": "06E035000",
+"date": "02/05/2006",
+"part": "SERVICE BRAKES, HYDRAULIC",
+"summary": "CERTAIN CRG FRONT BRAKE LEVERS, MODEL RB-511 DESIGNED FOR USE ON 2004-2006 YAMAHA YZF-R1 MOTORCYCLES, AND 2005-2006 YAMAHA YZF-R6 MOTORCYCLES.  MODEL RB-512 IS DESIGNED FOR USE ON 2003-2006 DUCATI 749 AND 999 MOTORCYCLES, AND ON 2004-2006 APRILIA MILLE R MOTORCYCLES.  DUE TO A MISALIGNMENT OF THE PI",
+"y": 2006
+},
+{
+"id": "14E012000",
+"date": "01/04/2014",
+"part": "EQUIPMENT",
+"summary": "Ohlins Racing AB (Ohlins) is recalling certain steering dampers kits manufactured with an incorrectly machined bracket.  These dampers were sold for use as aftermarket equipment on Yamaha R1, R6, and FZ6, Suzuki TL1000 R and GSX1300R, Honda CB600RR, and Ducati Monster 1000, 748, 848, 916, 996, and 9",
+"y": 2008
+}
+],
+"names": [
+"YZFR1",
+"YZF-R1",
+"YZFR1M",
+"YZFR1MF",
+"YZFR1S"
+]
+},
+{
+"name": "Yamaha YZF-R6",
+"brand": "Yamaha",
+"make": "YAMAHA",
+"seg": "Sport",
+"n": 15,
+"years": [
+2005,
+2016
+],
+"by_year": {
+"2005": 2,
+"2006": 5,
+"2007": 3,
+"2009": 1,
+"2013": 1,
+"2014": 1,
+"2016": 2
+},
+"parts": [
+[
+"fuel system",
+40
+],
+[
+"engine",
+20
+],
+[
+"throttle & speed control",
+20
+],
+[
+"electrical",
+13
+],
+[
+"transmission & drivetrain",
+13
+]
+],
+"serious": 47,
+"crash": 5,
+"fire": 1,
+"injured": 6,
+"miles": 2163,
+"recalls": [
+{
+"id": "14V644000",
+"date": "14/10/2014",
+"part": "WHEELS",
+"summary": "Yamaha Motor Corporation, U.S.A. (Yamaha) is recalling certain model year 2014 Yamaha YZF-R6 motorcycles manufactured August 1, 2014, to September 1, 2014.  The front and rear wheels of the affected motorcycles may have been manufactured with insufficient hardness.",
+"y": 2014
+},
+{
+"id": "10V365000",
+"date": "05/08/2010",
+"part": "EXTERIOR LIGHTING",
+"summary": "YAMAHA IS RECALLING CERTAIN MODEL YEAR 2006 THROUGH 2010 YZF-R6 MOTORCYCLES MANUFACTURED FROM AUGUST 2005 THROUGH MARCH 2010.  THE MOTORCYCLE'S FRONT SIDE REFLECTOR WAS NOT PLACED AT THE PROPER HEIGHT WHICH FAILS TO COMPLY WITH THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, \"LAMP",
+"y": 2009
+},
+{
+"id": "06V442000",
+"date": "02/11/2006",
+"part": "VEHICLE SPEED CONTROL",
+"summary": "ON CERTAIN MOTORCYCLES, THE AIR FILTER MOUNTING SCREWS MAY COME LOOSE AND FALL OUT.",
+"y": 2006
+},
+{
+"id": "06E035000",
+"date": "02/05/2006",
+"part": "SERVICE BRAKES, HYDRAULIC",
+"summary": "CERTAIN CRG FRONT BRAKE LEVERS, MODEL RB-511 DESIGNED FOR USE ON 2004-2006 YAMAHA YZF-R1 MOTORCYCLES, AND 2005-2006 YAMAHA YZF-R6 MOTORCYCLES.  MODEL RB-512 IS DESIGNED FOR USE ON 2003-2006 DUCATI 749 AND 999 MOTORCYCLES, AND ON 2004-2006 APRILIA MILLE R MOTORCYCLES.  DUE TO A MISALIGNMENT OF THE PI",
+"y": 2006
+},
+{
+"id": "14E012000",
+"date": "01/04/2014",
+"part": "EQUIPMENT",
+"summary": "Ohlins Racing AB (Ohlins) is recalling certain steering dampers kits manufactured with an incorrectly machined bracket.  These dampers were sold for use as aftermarket equipment on Yamaha R1, R6, and FZ6, Suzuki TL1000 R and GSX1300R, Honda CB600RR, and Ducati Monster 1000, 748, 848, 916, 996, and 9",
+"y": 2013
+}
+],
+"names": [
+"YZFR6",
+"YZF-R6",
+"R6",
+"YZF-R6C"
+]
+},
+{
+"name": "Yamaha Bolt",
+"brand": "Yamaha",
+"make": "YAMAHA",
+"seg": "Cruiser",
+"n": 86,
+"years": [
+2014,
+2015
+],
+"by_year": {
+"2014": 82,
+"2015": 4
+},
+"parts": [
+[
+"electrical",
+66
+],
+[
+"throttle & speed control",
+28
+],
+[
+"lights",
+8
+],
+[
+"visibility",
+7
+],
+[
+"steering",
+6
+]
+],
+"serious": 0,
+"crash": 0,
+"fire": 0,
+"injured": 0,
+"miles": 100,
+"recalls": [
+{
+"id": "13V298000",
+"date": "08/07/2013",
+"part": "ELECTRICAL SYSTEM",
+"summary": "Yamaha Motor Company (Yamaha) is recalling certain model year 2014 XVS950CU (Bolt) motorcycles manufactured March 2013 through June 2013.  Slack or sag in the wiring harness may allow it to contact the exhaust manifold causing the wires to melt, and possibly short circuit.",
+"y": 2014
+}
+],
+"names": [
+"BOLT"
+]
+},
+{
+"name": "Yamaha V Star",
+"brand": "Yamaha",
+"make": "YAMAHA",
+"seg": "Cruiser",
+"n": 208,
+"years": [
+2005,
+2019
+],
+"by_year": {
+"2005": 65,
+"2006": 66,
+"2007": 40,
+"2008": 4,
+"2009": 12,
+"2010": 2,
+"2013": 2,
+"2014": 10,
+"2015": 1,
+"2016": 2,
+"2017": 3,
+"2019": 1
+},
+"parts": [
+[
+"transmission & drivetrain",
+41
+],
+[
+"engine",
+22
+],
+[
+"fuel system",
+21
+],
+[
+"electrical",
+13
+],
+[
+"suspension",
+4
+]
+],
+"serious": 4,
+"crash": 5,
+"fire": 2,
+"injured": 6,
+"miles": 9987,
+"recalls": [
+{
+"id": "06V371000",
+"date": "28/09/2006",
+"part": "VEHICLE SPEED CONTROL",
+"summary": "ON CERTAIN MOTORCYCLES, AN IMPROPERLY DESIGNED THROTTLE POSITION SENSOR COULD CAUSE AN INTERMITTENTLY UNSTABLE IDLE WHEN THE ENGINE IS AT IDLING SPEED WHEN THE MOTORCYCLE IS STOPPED OR DURING LOW-SPEED OPERATIONS.  THE ENGINE COULD STALL AS A RESULT.",
+"y": 2005
+},
+{
+"id": "07V039000",
+"date": "07/02/2007",
+"part": "ENGINE AND ENGINE COOLING",
+"summary": "ON CERTAIN ROAD STAR WARRIOR MOTORCYCLES, THE LEAD WIRES FOR THE PICK-UP COIL CAN BREAK WHILE THE ENGINE IS RUNNING, CAUSING THE ENGINE TO STALL AND BE IMPOSSIBLE TO RESTART.",
+"y": 2007
+}
+],
+"names": [
+"XV1700",
+"XVS1100",
+"XVS950",
+"WARRIOR",
+"V-STAR",
+"XVS11"
+]
+},
+{
+"name": "Yamaha Raider / Stratoliner",
+"brand": "Yamaha",
+"make": "YAMAHA",
+"seg": "Cruiser",
+"n": 106,
+"years": [
+2006,
+2021
+],
+"by_year": {
+"2006": 69,
+"2007": 15,
+"2008": 6,
+"2009": 4,
+"2010": 3,
+"2011": 1,
+"2012": 1,
+"2018": 5,
+"2020": 1,
+"2021": 1
+},
+"parts": [
+[
+"transmission & drivetrain",
+54
+],
+[
+"engine",
+25
+],
+[
+"fuel system",
+14
+],
+[
+"electrical",
+10
+],
+[
+"throttle & speed control",
+4
+]
+],
+"serious": 5,
+"crash": 3,
+"fire": 0,
+"injured": 5,
+"miles": 21256,
+"recalls": [
+{
+"id": "20V814000",
+"date": "29/12/2020",
+"part": "EXTERIOR LIGHTING:BRAKE LIGHTS:SWITCH",
+"summary": "Yamaha Motor Corporation, USA (Yamaha) is recalling certain 2018-2020 MTT9GT (Tracer GT), 2019 MXTGTKL (NIKEN GT), 2017-2020 MT10, 2018-2020 XTZ12 (Super Ténéré), 2013-2020 FJR13, 2018 XV19B (Star Eluder), and 2018-2021 XV19 (Star Venture) motorcycles.  The front brake switch can fail due to increas",
+"y": 2021
+},
+{
+"id": "07V147000",
+"date": "02/04/2007",
+"part": "VEHICLE SPEED CONTROL:CABLES",
+"summary": "ON CERTAIN MOTORCYCLES, WHEN EQUIPPED WITH A WINDSHIELD, THE THROTTLE CABLES CAN KINK AT THE GUIDE BRACKET LOCATED AT THE STEERING HEAD WHEN THE HANDLEBAR IS TURNED ALL THE WAY TO THE LEFT.  IN THIS POSITION, A KINKED CABLE CAN CAUSE EITHER A STICKLY THROTTLE FEELING OR PREVENT THE THROTTLE FROM RET",
+"y": 2006
+}
+],
+"names": [
+"XV19",
+"XV1900",
+"STRATOLINER",
+"ROADLINER"
+]
+},
+{
+"name": "Yamaha MT-07 / MT-09",
+"brand": "Yamaha",
+"make": "YAMAHA",
+"seg": "Standard",
+"n": 40,
+"years": [
+2014,
+2025
+],
+"by_year": {
+"2014": 12,
+"2015": 13,
+"2016": 2,
+"2017": 3,
+"2018": 1,
+"2021": 1,
+"2022": 1,
+"2023": 3,
+"2024": 2,
+"2025": 2
+},
+"parts": [
+[
+"engine",
+38
+],
+[
+"transmission & drivetrain",
+35
+],
+[
+"frame & body",
+15
+],
+[
+"lights",
+15
+],
+[
+"fuel system",
+10
+]
+],
+"serious": 0,
+"crash": 0,
+"fire": 0,
+"injured": 0,
+"miles": 1200,
+"recalls": [
+{
+"id": "17V221000",
+"date": "31/03/2017",
+"part": "STEERING: STEERING WHEEL/HANDLE BAR",
+"summary": "Yamaha Motor Corporation, USA (Yamaha) is recalling certain 2015-2017 FJ-09, FZ-09, and XSR900 motorcycles.  The lower handlebar holder may loosen due to a painting issue and the inadequate application of the thread-locking agent.",
+"y": 2017
+},
+{
+"id": "15V176000",
+"date": "25/03/2015",
+"part": "POWER TRAIN:MANUAL TRANSMISSION",
+"summary": "Yamaha Motor Corporation, USA (Yamaha) is recalling certain model year 2015 FJ-09 (FJ09F/FC), FZ-09 (FZ09F/FC), FZ6R (FZ6RF/FC), Super Tenere (XTZ12F/FC), Super Tenere ES (XTZ12EF/EFC), and R6 (YZF-R6) motorcycles manufactured September 1, 2014, to November 17, 2014.  The affected motorcycles may ha",
+"y": 2015
+},
+{
+"id": "14V550000",
+"date": "10/09/2014",
+"part": "EXTERIOR LIGHTING:HEADLIGHTS",
+"summary": "Yamaha Motor Corporation, USA (Yamaha) is recalling certain model year 2014 Yamaha FZ09 motorcycles manufactured August 1, 2013, to August 29, 2014.  The affected motorcycles may have a headlight harness that is too short and when the handlebars are turned fully to the left or right the harness may ",
+"y": 2014
+}
+],
+"names": [
+"FZ09",
+"FZ-09",
+"MT-09",
+"FZ07",
+"FZ07C"
+]
+},
+{
+"name": "Yamaha Super Tenere",
+"brand": "Yamaha",
+"make": "YAMAHA",
+"seg": "Adventure",
+"n": 20,
+"years": [
+2012,
+2023
+],
+"by_year": {
+"2012": 10,
+"2013": 7,
+"2015": 1,
+"2022": 1,
+"2023": 1
+},
+"parts": [
+[
+"electrical",
+45
+],
+[
+"brakes",
+35
+],
+[
+"throttle & speed control",
+25
+],
+[
+"engine",
+20
+],
+[
+"fuel system",
+15
+]
+],
+"serious": 20,
+"crash": 4,
+"fire": 0,
+"injured": 0,
+"miles": 12200,
+"recalls": [
+{
+"id": "15V176000",
+"date": "25/03/2015",
+"part": "POWER TRAIN:MANUAL TRANSMISSION",
+"summary": "Yamaha Motor Corporation, USA (Yamaha) is recalling certain model year 2015 FJ-09 (FJ09F/FC), FZ-09 (FZ09F/FC), FZ6R (FZ6RF/FC), Super Tenere (XTZ12F/FC), Super Tenere ES (XTZ12EF/EFC), and R6 (YZF-R6) motorcycles manufactured September 1, 2014, to November 17, 2014.  The affected motorcycles may ha",
+"y": 2015
+}
+],
+"names": [
+"XT1200Z",
+"SUPER TENERE",
+"TENERE 700",
+"XT1200"
+]
+},
+{
+"name": "Kawasaki KLR650",
+"brand": "Kawasaki",
+"make": "KAWASAKI",
+"seg": "Adventure",
+"n": 199,
+"years": [
+2005,
+2024
+],
+"by_year": {
+"2005": 13,
+"2006": 14,
+"2007": 5,
+"2008": 131,
+"2009": 14,
+"2012": 1,
+"2017": 1,
+"2022": 3,
+"2023": 16,
+"2024": 1
+},
+"parts": [
+[
+"lights",
+48
+],
+[
+"engine",
+23
+],
+[
+"steering",
+10
+],
+[
+"frame & body",
+9
+],
+[
+"electrical",
+8
+]
+],
+"serious": 2,
+"crash": 1,
+"fire": 1,
+"injured": 2,
+"miles": 2750,
+"recalls": [
+{
+"id": "09V062000",
+"date": "20/02/2009",
+"part": "ELECTRICAL SYSTEM:WIRING",
+"summary": "KAWASAKI IS RECALLING 16,167 MY 2008-2009 KLR 650 (KL650E8F/L, KL650E9F/L) MOTORCYCLES.  WIRES IN THE WIRING HARNESS MIGHT BE DAMAGED DUE TO RUBBING CONTACT WITH A PORTION OF THE MOTORCYCLE FRAME.",
+"y": 2009
+},
+{
+"id": "09V059000",
+"date": "19/02/2009",
+"part": "ENGINE AND ENGINE COOLING:EXHAUST SYSTEM:MANIFOLD/HEADER/MUFFLER/TAIL PIPE",
+"summary": "KAWASAKI IS RECALLING 16,167 MY 2008-2009 KLR 650 (KL650E8F/L, KL650E9F/L) MOTORCYCLES.  THE MUFFLER ASSEMBLY IS SECURED TO THE FRAME OF THE MOTORCYCLE BY TWO BOLTS.  IT IS POSSIBLE THAT HEAT EXPANSION CYCLES OF THE MUFFLER, COMBINED WITH VIBRATION FROM VEHICLE OPERATION MAY CAUSE LOOSENING OF THE M",
+"y": 2009
+},
+{
+"id": "07V486000",
+"date": "16/10/2007",
+"part": "ENGINE AND ENGINE COOLING:EXHAUST SYSTEM:MANIFOLD/HEADER/MUFFLER/TAIL PIPE",
+"summary": "ON CERTAIN MOTORCYCLES, INSUFFICIENT TIGHTENING OF THE MUFFLER MOUNTING BOLTS COULD ALLOW THE BOLTS TO LOOSEN.",
+"y": 2008
+},
+{
+"id": "07V244000",
+"date": "07/06/2007",
+"part": "STRUCTURE:MOTORCYCLE:KICKSTAND/CENTER STAND",
+"summary": "ON CERTAIN MOTORCYCLES, THE SPRING RETAINING PIN ON THE FRAME MAY NOT HAVE BEEN COMPLETELY WELDED IN PLACE AND COULD FALL OUT, ALLOWING THE SIDESTAND TO DROP INTO THE \"PARKING\" POSITION.",
+"y": 2008
+}
+],
+"names": [
+"KLR650",
+"KL650E",
+"KL650A19",
+"KL650A6F",
+"KL650A",
+"KLR-650"
+]
+},
+{
+"name": "Kawasaki Ninja ZX-6R / ZX-10R",
+"brand": "Kawasaki",
+"make": "KAWASAKI",
+"seg": "Sport",
+"n": 155,
+"years": [
+2005,
+2025
+],
+"by_year": {
+"2005": 8,
+"2006": 16,
+"2007": 38,
+"2008": 3,
+"2009": 7,
+"2011": 7,
+"2012": 5,
+"2013": 9,
+"2014": 3,
+"2015": 1,
+"2016": 3,
+"2017": 1,
+"2019": 1,
+"2022": 3,
+"2023": 7,
+"2024": 19,
+"2025": 24
+},
+"parts": [
+[
+"engine",
+60
+],
+[
+"electrical",
+12
+],
+[
+"frame & body",
+10
+],
+[
+"transmission & drivetrain",
+9
+],
+[
+"brakes",
+5
+]
+],
+"serious": 8,
+"crash": 10,
+"fire": 2,
+"injured": 10,
+"miles": 5000,
+"recalls": [
+{
+"id": "25V798000",
+"date": "19/11/2025",
+"part": "ENGINE AND ENGINE COOLING:ENGINE:HARD PARTS INTERNAL/MECHANICAL",
+"summary": "Kawasaki Motors Corp., U.S.A. (Kawasaki) is recalling certain 2024-2026 Ninja ZX-6R, ZX-6R KRT Edition, ZX-6R KRT 40th Anniversary Edition ABS, ZX-6R ABS, and ZX-6R KRT Edition ABS motorcycles. The motorcycles may lose engine power during operation due to seizure of a metal crankshaft bushing.",
+"y": 2025
+},
+{
+"id": "12V064000",
+"date": "17/02/2012",
+"part": "ELECTRICAL SYSTEM:12V/24V/48V BATTERY",
+"summary": "KAWASAKI IS RECALLING CERTAIN MODEL YEAR 2008-2011 NINJA ZX-10R, AND 2009-2012 NINJA ZX-6R MOTORCYCLES MANUFACTURED FROM DECEMBER 14, 2007 THROUGH JULY 26, 2011.  DUE TO A MANUFACTURING ERROR, THE REGULATOR/RECTIFIER MAY INSUFFICIENTLY CHARGE THE BATTERY.",
+"y": 2012
+},
+{
+"id": "25V376000",
+"date": "05/06/2025",
+"part": "ENGINE AND ENGINE COOLING:ENGINE:HARD PARTS INTERNAL/MECHANICAL",
+"summary": "Kawasaki Motors Corp., U.S.A. (Kawasaki) is recalling certain 2024-2025 Ninja ZX-6R motorcycles. The motorcycles may lose engine power during operation due to seizure of a metal crankshaft bushing.",
+"y": 2025
+}
+],
+"names": [
+"NINJA ZX-6R",
+"ZX-6R",
+"ZX600J7F",
+"ZX1400A6F",
+"NINJA ZX-10R",
+"NINJA ZX-14R"
+]
+},
+{
+"name": "Kawasaki Ninja 300/400/650",
+"brand": "Kawasaki",
+"make": "KAWASAKI",
+"seg": "Sport",
+"n": 87,
+"years": [
+2005,
+2024
+],
+"by_year": {
+"2005": 4,
+"2006": 3,
+"2007": 5,
+"2008": 6,
+"2009": 1,
+"2010": 2,
+"2012": 3,
+"2013": 56,
+"2014": 2,
+"2015": 1,
+"2017": 1,
+"2021": 1,
+"2022": 1,
+"2024": 1
+},
+"parts": [
+[
+"engine",
+61
+],
+[
+"fuel system",
+29
+],
+[
+"transmission & drivetrain",
+26
+],
+[
+"electrical",
+10
+],
+[
+"frame & body",
+7
+]
+],
+"serious": 16,
+"crash": 9,
+"fire": 1,
+"injured": 11,
+"miles": 466,
+"recalls": [
+{
+"id": "13V328000",
+"date": "29/07/2013",
+"part": "ELECTRICAL SYSTEM",
+"summary": "Kawasaki Motors Corp. is recalling certain model year 2013 Ninja 300 and 300 ABS motorcycles manufactured July 16, 2012, through April 27, 2013.  Due to an improper setting in the Electronic Control Unit (ECU), the motorcycle may stall under deceleration.",
+"y": 2013
+},
+{
+"id": "13V310000",
+"date": "11/07/2013",
+"part": "SERVICE BRAKES, HYDRAULIC:ANTILOCK/TRACTION CONTROL/ELECTRONIC LIMITED SLIP",
+"summary": "Kawasaki Motors Corp. is recalling certain model year 2013 EX300BDFAL motorcycles manufactured August 16, 2012, through April 2, 2013.  Due to a manufacturing error, the Anti-Lock Brake System (ABS) may malfunction and lose anti-lock functionality.",
+"y": 2013
+}
+],
+"names": [
+"NINJA 300",
+"EX300",
+"EX250F7F",
+"EX250F19",
+"NINJA 250R",
+"EX250F6F"
+]
+},
+{
+"name": "Kawasaki Concours 14",
+"brand": "Kawasaki",
+"make": "KAWASAKI",
+"seg": "Touring",
+"n": 71,
+"years": [
+2005,
+2021
+],
+"by_year": {
+"2005": 4,
+"2008": 36,
+"2009": 11,
+"2010": 1,
+"2011": 4,
+"2012": 4,
+"2013": 3,
+"2014": 1,
+"2016": 4,
+"2017": 2,
+"2021": 1
+},
+"parts": [
+[
+"brakes",
+49
+],
+[
+"latches & linkages",
+8
+],
+[
+"engine",
+7
+],
+[
+"electrical",
+7
+],
+[
+"tires",
+6
+]
+],
+"serious": 6,
+"crash": 1,
+"fire": 1,
+"injured": 3,
+"miles": 7800,
+"recalls": [
+{
+"id": "08V047000",
+"date": "31/01/2008",
+"part": "EQUIPMENT",
+"summary": "KAWASAKI IS RECALLING 4,645 MY 2008 ZG1400A8F, ZG1400A8FL, ZG1400B8F, AND ZG1400B8FL MOTORCYCLES.   THE PIVOT PIN FOR THE LATCHES THAT SECURE THE SADDLEBAGS TO THE VEHICLE CAN BREAK IF FORCE IS APPLIED TO EITHER SADDLEBAG SUCH AS IN THE EVENT THE VEHICLE FALLS OVER WHILE PARKED OR IF THE SADDLEBAG I",
+"y": 2008
+},
+{
+"id": "08V048000",
+"date": "31/01/2008",
+"part": "EQUIPMENT",
+"summary": "KAWASAKI IS RECALLING 3,611 MY 2008 ZG1400A8F, ZG1400A8FL, ZG1400B8F, AND ZG1400B8FL MOTORCYCLES.   THE REAR CARRIER PLATFORM COULD BREAK IF A KAWASAKI GENUINE ACCESSORY LUGGAGE SYSTEM IS INSTALLED ON THE CARRIER PLATFORM AND A PASSENGER LEANS AGAINST IT.",
+"y": 2008
+},
+{
+"id": "12V134000",
+"date": "30/03/2012",
+"part": "ELECTRICAL SYSTEM",
+"summary": "KAWASAKI IS RECALLING CERTAIN MODEL YEAR 2009-2012 CONCOURS 14 POLICE MOTORCYCLES.  THE ADDITIONAL POLICE ACCESSORIES MAY CAUSE THE 30-AMP MAIN FUSE TO BLOW.  ALSO, THE ADDITIONAL POLICE WIRING HARNESS MAY CHAFE LEADING TO A SHORT, WHICH MAY BLOW THE MAIN FUSE.",
+"y": 2012
+},
+{
+"id": "13V387000",
+"date": "27/08/2013",
+"part": "FUEL SYSTEM, GASOLINE",
+"summary": "Kawasaki is recalling certain model year 2009-2013 Concours 14 police motorcycles.  The improper installation of additional police accessories may cause multiple safety issues such as fuel leaks, reduction of braking ability and loss of electrical power to the engine, resulting in a stall.",
+"y": 2013
+},
+{
+"id": "15V117000",
+"date": "27/02/2015",
+"part": "ELECTRICAL SYSTEM:WIRING:FUSES AND CIRCUIT BREAKERS",
+"summary": "Kawasaki Motors Corp., U.S.A. (Kawasaki) is recalling certain model year 2009-2013 Kawasaki Concours 14 and 14ABS motorcycles manufactured May 8, 2008, to February 20, 2013, and modified for police authority use.  The additional police accessories may cause the 30-amp main fuse to blow.  Also, the a",
+"y": 2013
+},
+{
+"id": "08V623000",
+"date": "26/11/2008",
+"part": "SERVICE BRAKES, HYDRAULIC:PEDALS AND LINKAGES",
+"summary": "KAWASAKI IS RECALLING 4,628 MY ZG1400A8F/A8FL, AND ZG1400B8F/B8FL MOTORCYCLES.  TRAPPED ROAD DEBRIS MAY INTERFERE WITH FREE MOVEMENT OF THE REAR BRAKE PEDAL, PREVENTING FULL RELEASE OF THE REAR BRAKE WHICH CAN LEAD TO OVERHEATING DAMAGE AND POSSIBLE BRAKE FAILURE.",
+"y": 2008
+},
+{
+"id": "12V343000",
+"date": "20/07/2012",
+"part": "SERVICE BRAKES, HYDRAULIC",
+"summary": "Kawasaki is recalling certain model year 2008-2012 Concours 14 (ZG1400 A/B/C/D) motorcycles.  Due to a gap between the brake pedal and guard, small stone or debris can become trapped, creating a brake drag.  This can cause the rear brake to overheat, leading to rear brake damage and lock-up or failu",
+"y": 2012
+},
+{
+"id": "13V370000",
+"date": "16/08/2013",
+"part": "ELECTRICAL SYSTEM",
+"summary": "Kawasaki is recalling certain model year 2012-2013 Concours 14 police motorcycles.  The additional police accessories may cause the 30-amp main fuse to blow.  Also, the additional police wiring harness may chafe leading to a short, which may blow the main fuse.",
+"y": 2013
+}
+],
+"names": [
+"CONCOURS 14",
+"ZG1400A8F",
+"CONCOURS",
+"ZG1400",
+"ZG1400A9F",
+"ZG1400B8F"
+]
+},
+{
+"name": "Kawasaki Vulcan",
+"brand": "Kawasaki",
+"make": "KAWASAKI",
+"seg": "Cruiser",
+"n": 120,
+"years": [
+2005,
+2023
+],
+"by_year": {
+"2005": 14,
+"2006": 37,
+"2007": 10,
+"2008": 13,
+"2009": 17,
+"2010": 18,
+"2011": 2,
+"2012": 1,
+"2013": 1,
+"2014": 1,
+"2015": 2,
+"2017": 1,
+"2020": 1,
+"2021": 1,
+"2023": 1
+},
+"parts": [
+[
+"engine",
+32
+],
+[
+"fuel system",
+24
+],
+[
+"electrical",
+17
+],
+[
+"transmission & drivetrain",
+16
+],
+[
+"throttle & speed control",
+12
+]
+],
+"serious": 11,
+"crash": 9,
+"fire": 0,
+"injured": 12,
+"miles": 2250,
+"recalls": [
+{
+"id": "10V507000",
+"date": "19/10/2010",
+"part": "SERVICE BRAKES, HYDRAULIC:PEDALS AND LINKAGES",
+"summary": "KAWASAKI IS RECALLING CERTAIN MODEL YEAR 2009-2010 VULCAN MOTORCYCLES.  THE ENGINE MAY STALL IF THE RIDER IS COASTING WITH THE CLUTCH PULLED IN DUE TO AN IMPROPER SETTING OF THE ENGINE CONTROL UNIT (ECU).",
+"y": 2010
+},
+{
+"id": "07V215000",
+"date": "17/05/2007",
+"part": "ELECTRICAL SYSTEM:IGNITION:MODULE",
+"summary": "CERTAIN MOTORCYCLES MAY STALL UNDER DECELERATION DUE TO AN IMPROPER SETTING OF THE ENGINE CONTROL UNIT (ECU).",
+"y": 2006
+},
+{
+"id": "08V114000",
+"date": "11/03/2008",
+"part": "FUEL SYSTEM, GASOLINE:DELIVERY:HOSES, LINES/PIPING, AND FITTINGS",
+"summary": "KAWASAKI IS RECALLING 31,789 VULCAN 900 CLASSIC, CUSTOM AND CLASSIC LT MODELS, MY 2006 VN900B6F, VN900B6FL, VN900D6F, VN900D6FL, MY 2007 VN900B7F, VN900B7FL, VN900C7F, VN900C7FL, VN900D7F, VN900D7FL, MY 2008 VN900B8F, VN900B8FL, VN900C8F, VN900D8F AND VN900D8FL MOTORCYCLES.  THE FUEL HOSE MAY NOT BE",
+"y": 2006
+}
+],
+"names": [
+"VULCAN",
+"VN900D6F",
+"VULCAN 900",
+"VN1700BAF",
+"VN900B6F",
+"VULCAN 1700 VAQUERO"
+]
+},
+{
+"name": "Kawasaki Versys",
+"brand": "Kawasaki",
+"make": "KAWASAKI",
+"seg": "Adventure",
+"n": 21,
+"years": [
+2008,
+2016
+],
+"by_year": {
+"2008": 6,
+"2009": 10,
+"2011": 1,
+"2012": 1,
+"2015": 1,
+"2016": 2
+},
+"parts": [
+[
+"visibility",
+62
+],
+[
+"equipment",
+14
+],
+[
+"electrical",
+10
+],
+[
+"wheels",
+10
+],
+[
+"transmission & drivetrain",
+5
+]
+],
+"serious": 0,
+"crash": 0,
+"fire": 0,
+"injured": 0,
+"miles": 2000,
+"recalls": [],
+"names": [
+"VERSYS",
+"VERSYS 650",
+"KLE650",
+"KLE650A9F",
+"KLE650CCFL"
+]
+},
+{
+"name": "Suzuki Boulevard",
+"brand": "Suzuki",
+"make": "SUZUKI",
+"seg": "Cruiser",
+"n": 389,
+"years": [
+2005,
+2023
+],
+"by_year": {
+"2005": 35,
+"2006": 114,
+"2007": 156,
+"2008": 45,
+"2009": 21,
+"2011": 9,
+"2012": 2,
+"2013": 2,
+"2014": 2,
+"2015": 1,
+"2018": 1,
+"2023": 1
+},
+"parts": [
+[
+"transmission & drivetrain",
+58
+],
+[
+"electrical",
+15
+],
+[
+"brakes",
+10
+],
+[
+"engine",
+8
+],
+[
+"fuel system",
+8
+]
+],
+"serious": 5,
+"crash": 11,
+"fire": 5,
+"injured": 12,
+"miles": 6000,
+"recalls": [
+{
+"id": "15E053000",
+"date": "23/06/2015",
+"part": "SEATS:MOTORCYCLE",
+"summary": "Suzuki Motor of America, Inc. (Suzuki) is recalling certain Accessory Backrest Mounting Hardware kits, part numbers 990A0-75148 and 990A0-75148-BLK, manufactured March 1, 2012, to April 21, 2015.  The affected hardware kits are for installing accessory backrests on 2006-2015 Suzuki VZR1800 (Boulevar",
+"y": 2015
+},
+{
+"id": "07V148000",
+"date": "04/04/2007",
+"part": "FUEL SYSTEM, GASOLINE:DELIVERY",
+"summary": "ON CERTAIN MOTORCYCLES, THE FUEL HOSE THAT CONNECTS THE TWO METAL FUEL DELIVERY PIPES MOUNTED ON THE THROTTLE BODY MAY HAVE BEEN CLAMPED AT A LOCATION ON THE PIPES THAT IS NOT COMPLETELY ROUND, WHICH COULD ALLOW FUEL LEAKAGE TO OCCUR.",
+"y": 2007
+}
+],
+"names": [
+"VZR1800",
+"BOULEVARD M109R",
+"VL1500",
+"VL800",
+"C50 (BOULEVARD)",
+"C90"
+]
+},
+{
+"name": "Suzuki GSX-R",
+"brand": "Suzuki",
+"make": "SUZUKI",
+"seg": "Sport",
+"n": 196,
+"years": [
+2005,
+2025
+],
+"by_year": {
+"2005": 14,
+"2006": 57,
+"2007": 97,
+"2008": 13,
+"2009": 2,
+"2013": 2,
+"2014": 2,
+"2015": 1,
+"2017": 4,
+"2018": 1,
+"2021": 2,
+"2025": 1
+},
+"parts": [
+[
+"fuel system",
+26
+],
+[
+"electrical",
+26
+],
+[
+"engine",
+16
+],
+[
+"throttle & speed control",
+12
+],
+[
+"frame & body",
+11
+]
+],
+"serious": 33,
+"crash": 50,
+"fire": 12,
+"injured": 45,
+"miles": 4500,
+"recalls": [
+{
+"id": "11V108000",
+"date": "23/02/2011",
+"part": "ELECTRICAL SYSTEM:ALTERNATOR/GENERATOR/REGULATOR",
+"summary": "SUZUKI IS RECALLING CERTAIN MODEL YEAR 2008 THROUGH 2010 MOTORCYCLES MANUFACTURED FROM JULY 2007 THROUGH SEPTEMBER 2009, EQUIPPED WITH REGULATOR/RECTIFIER ASSEMBLIES, SUZUKI PART NUMBERS 32800-41F11, 32800-15H10, 32800-05H11, 32800-41G10, 32800-15H00, 32800-18H00, 32800-05G10, 32800-10G10, 32800-05H",
+"y": 2009
+},
+{
+"id": "18V064000",
+"date": "22/01/2018",
+"part": "ENGINE AND ENGINE COOLING:ENGINE",
+"summary": "Suzuki Motor of America, Inc. (Suzuki) is recalling certain 2017-2018 GSX-R1000, GSX-R1000A, GSX-R1000RA, and GSX-R1000RZA motorcycles.  When upshifting between first and second gear, if the rider fails to engage second gear, a neutral condition will exist and may cause very high engine RPM.  If the",
+"y": 2018
+},
+{
+"id": "12V231000",
+"date": "21/05/2012",
+"part": "EQUIPMENT",
+"summary": "SUZUKI IS RECALLING CERTAIN MODEL YEAR 2012 GSX-R1000 MOTORCYCLES.  DUE TO LOOSE BOLTS THE SIDE STAND INTERLOCK SWITCH MAY FAIL.",
+"y": 2009
+},
+{
+"id": "16V018000",
+"date": "19/01/2016",
+"part": "ELECTRICAL SYSTEM",
+"summary": "Suzuki Motor of America, Inc. (Suzuki) is recalling certain model year 2008-2012 AN400, AN400A, DL1000, GSX1300R, 2008-2009 GSF1250S and GSF1250SA, 2008 GSX1300BK and GSX1300BKA, 2008-2010 GSX650F, GSX-R600, GSX-R750, VLR1800, VLR1800T, and 2009-2010 SFV650 and VZ1500 motorcycles. Due to a problem w",
+"y": 2009
+},
+{
+"id": "13V449000",
+"date": "18/10/2013",
+"part": "SERVICE BRAKES",
+"summary": "Suzuki Motor of America, Inc. (Suzuki) is recalling certain model year 2004-2013 GSX-R600 and GSX-R750, and model year 2005-2013 GSX-R1000 motorcycles.  In combination with older brake fluid, corrosion of the brake piston inside of the front brake master cylinder generates gas that may result in a r",
+"y": 2013
+},
+{
+"id": "09V022000",
+"date": "16/01/2009",
+"part": "STRUCTURE:FRAME AND MEMBERS:UNDERBODY SHIELDS",
+"summary": "AMERICAN SUZUKI (SUZUKI) IS CONDUCTING A SAFETY IMPROVEMENT CAMPAIGN INVOLVING 26,082 MY 2005-2006 GSX-R1000 MOTORCYCLES.  CRACKING OR BREAKAGE OF THE MOTORCYCLE FRAME CAN OCCUR IN CERTAIN EXTREME SITUATIONS WHERE UNUSUALLY HIGH STRESS IS PLACED ON THE FRAME.  REPEATED HARD LANDINGS FROM HAZARDOUS M",
+"y": 2006
+},
+{
+"id": "07V362000",
+"date": "15/08/2007",
+"part": "VEHICLE SPEED CONTROL",
+"summary": "ON CERTAIN MOTORCYCLES, EACH TIME THE IGNITION SWITCH IS TURNED OFF, THE ENGINE CONTROL MODULE (ECM) PRE-SETS THE POSITION OF THE IDLE SPEED CONTROL (ISC) VALVE FOR SUBSEQUENT ENGINE STARTING BY OPENING THE VALVE COMPLETELY AND THEN CLOSING IT TO A START-UP POSITION.",
+"y": 2007
+},
+{
+"id": "14V629000",
+"date": "07/10/2014",
+"part": "POWER TRAIN:MANUAL TRANSMISSION",
+"summary": "Suzuki Motor of America, Inc. (Suzuki) is recalling certain model year 2011-2014 GSX-R750 and 2009-2014 GSX-R1000 motorcycles.  If a gear is missed while upshifting, the strain applied to the drive chain after the next shift may cause the rear axle to move, damaging the left-side drive chain adjuste",
+"y": 2014
+},
+{
+"id": "18V694000",
+"date": "04/10/2018",
+"part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+"summary": "Suzuki Motor of America, Inc. (Suzuki) is recalling certain 2017-2018 Suzuki DL650A, DL650XA, GSX-R1000, GSX-R1000R, and 2018 GSX-S750 motorcycles.  During installation, the fuel pump O-ring may have been twisted, reducing the sealing performance and possibly resulting in a fuel leak.",
+"y": 2018
+}
+],
+"names": [
+"GSX-R600",
+"GSX-R1000",
+"GSX-R750"
+]
+},
+{
+"name": "Suzuki Hayabusa",
+"brand": "Suzuki",
+"make": "SUZUKI",
+"seg": "Sport",
+"n": 20,
+"years": [
+2005,
+2023
+],
+"by_year": {
+"2005": 1,
+"2006": 4,
+"2008": 7,
+"2012": 1,
+"2013": 1,
+"2018": 1,
+"2022": 2,
+"2023": 3
+},
+"parts": [
+[
+"electrical",
+30
+],
+[
+"engine",
+15
+],
+[
+"transmission & drivetrain",
+15
+],
+[
+"fuel system",
+15
+],
+[
+"brakes",
+15
+]
+],
+"serious": 10,
+"crash": 0,
+"fire": 0,
+"injured": 2,
+"miles": 2730,
+"recalls": [
+{
+"id": "11V108000",
+"date": "23/02/2011",
+"part": "ELECTRICAL SYSTEM:ALTERNATOR/GENERATOR/REGULATOR",
+"summary": "SUZUKI IS RECALLING CERTAIN MODEL YEAR 2008 THROUGH 2010 MOTORCYCLES MANUFACTURED FROM JULY 2007 THROUGH SEPTEMBER 2009, EQUIPPED WITH REGULATOR/RECTIFIER ASSEMBLIES, SUZUKI PART NUMBERS 32800-41F11, 32800-15H10, 32800-05H11, 32800-41G10, 32800-15H00, 32800-18H00, 32800-05G10, 32800-10G10, 32800-05H",
+"y": 2008
+},
+{
+"id": "16V018000",
+"date": "19/01/2016",
+"part": "ELECTRICAL SYSTEM",
+"summary": "Suzuki Motor of America, Inc. (Suzuki) is recalling certain model year 2008-2012 AN400, AN400A, DL1000, GSX1300R, 2008-2009 GSF1250S and GSF1250SA, 2008 GSX1300BK and GSX1300BKA, 2008-2010 GSX650F, GSX-R600, GSX-R750, VLR1800, VLR1800T, and 2009-2010 SFV650 and VZ1500 motorcycles. Due to a problem w",
+"y": 2012
+},
+{
+"id": "24V769000",
+"date": "17/10/2024",
+"part": "SERVICE BRAKES, HYDRAULIC:FOUNDATION COMPONENTS:MASTER CYLINDER",
+"summary": "Suzuki Motor USA, LLC (Suzuki) is recalling certain 2022-2024 GSX1300R (Hayabusa) motorcycles.  The master cylinder internal rubber components may swell due to contamination from the brake fluid cap diaphragm, which can result in a blocked brake fluid port.  As such, these motorcycles fail to comply",
+"y": 2023
+},
+{
+"id": "08E052000",
+"date": "15/08/2008",
+"part": "EQUIPMENT",
+"summary": "MOTION PRO IS RECALLING 10,000 AFTERMARKET BRAKE LEVERS, MODEL NO. 14-0415, SOLD FOR USE ON CERTAIN MY 1999 THROUGH 2008 SUZUKI AND MY 1998 THROUGH 2003 YAMAHA MOTORCYCLES.  THE LOBE HEIGHT ON SOME OF THESE LEVERS ARE SMALLER AND DO NOT PROPERLY ENGAGE THE STOMP LAMP SWITCH WHICH WILL NOT DEACTIVATE",
+"y": 2006
+},
+{
+"id": "14E012000",
+"date": "01/04/2014",
+"part": "EQUIPMENT",
+"summary": "Ohlins Racing AB (Ohlins) is recalling certain steering dampers kits manufactured with an incorrectly machined bracket.  These dampers were sold for use as aftermarket equipment on Yamaha R1, R6, and FZ6, Suzuki TL1000 R and GSX1300R, Honda CB600RR, and Ducati Monster 1000, 748, 848, 916, 996, and 9",
+"y": 2008
+}
+],
+"names": [
+"GSX1300R",
+"HAYABUSA",
+"GSX1300RAL8",
+"HAYABUSA GSX1300RA"
+]
+},
+{
+"name": "Suzuki V-Strom",
+"brand": "Suzuki",
+"make": "SUZUKI",
+"seg": "Adventure",
+"n": 55,
+"years": [
+2006,
+2024
+],
+"by_year": {
+"2006": 3,
+"2007": 6,
+"2008": 1,
+"2009": 3,
+"2011": 3,
+"2012": 10,
+"2013": 2,
+"2014": 10,
+"2017": 1,
+"2020": 3,
+"2023": 8,
+"2024": 5
+},
+"parts": [
+[
+"electrical",
+33
+],
+[
+"fuel system",
+20
+],
+[
+"engine",
+18
+],
+[
+"lights",
+16
+],
+[
+"transmission & drivetrain",
+11
+]
+],
+"serious": 7,
+"crash": 2,
+"fire": 1,
+"injured": 2,
+"miles": 1235,
+"recalls": [
+{
+"id": "11V108000",
+"date": "23/02/2011",
+"part": "ELECTRICAL SYSTEM:ALTERNATOR/GENERATOR/REGULATOR",
+"summary": "SUZUKI IS RECALLING CERTAIN MODEL YEAR 2008 THROUGH 2010 MOTORCYCLES MANUFACTURED FROM JULY 2007 THROUGH SEPTEMBER 2009, EQUIPPED WITH REGULATOR/RECTIFIER ASSEMBLIES, SUZUKI PART NUMBERS 32800-41F11, 32800-15H10, 32800-05H11, 32800-41G10, 32800-15H00, 32800-18H00, 32800-05G10, 32800-10G10, 32800-05H",
+"y": 2009
+},
+{
+"id": "16V018000",
+"date": "19/01/2016",
+"part": "ELECTRICAL SYSTEM",
+"summary": "Suzuki Motor of America, Inc. (Suzuki) is recalling certain model year 2008-2012 AN400, AN400A, DL1000, GSX1300R, 2008-2009 GSF1250S and GSF1250SA, 2008 GSX1300BK and GSX1300BKA, 2008-2010 GSX650F, GSX-R600, GSX-R750, VLR1800, VLR1800T, and 2009-2010 SFV650 and VZ1500 motorcycles. Due to a problem w",
+"y": 2012
+},
+{
+"id": "15V851000",
+"date": "18/12/2015",
+"part": "ELECTRICAL SYSTEM:WIRING",
+"summary": "Suzuki Motor of America, Inc. (Suzuki) is recalling certain model year 2014 Suzuki DL 1000 motorcycles manufactured January 17, 2014, to June 5, 2014, 2015 Suzuki DL1000 motorcycles manufactured November 4, 2014, to February 6, 2015 and 2016 Suzuki DL1000 motorcycles manufactured June 11, 2015, to J",
+"y": 2014
+},
+{
+"id": "15V854000",
+"date": "18/12/2015",
+"part": "ELECTRICAL SYSTEM:IGNITION",
+"summary": "Suzuki Motor of America, Inc. (Suzuki) is recalling certain model year 2014 DL1000 motorcycles manufactured January 17, 2014, to June 5, 2014, and 2015 DL1000 motorcycles manufactured November 5, 2014, to February 6, 2015.  The ignition switch terminals of the affected vehicles may corrode if they c",
+"y": 2014
+},
+{
+"id": "15V853000",
+"date": "18/12/2015",
+"part": "ELECTRICAL SYSTEM:12V/24V/48V BATTERY:CABLES",
+"summary": "Suzuki Motor of America, Inc. (Suzuki) is recalling certain model year 2014 Suzuki DL1000 motorcycles manufactured January 17, 2014 to June 5, 2014, and 2015 Suzuki DL1000 motorcycles manufactured November 5, 2014, to February 6, 2015.  Due to corrosion or being attached to the painted engine case, ",
+"y": 2014
+},
+{
+"id": "15V852000",
+"date": "18/12/2015",
+"part": "ENGINE AND ENGINE COOLING:ENGINE",
+"summary": "Suzuki Motor of America, Inc. (Suzuki) is recalling certain model year 2013-2014 SFV650 and AN650A, and 2012-2014 DL650A motorcycles.  Contamination from component production and storage combined with manufacturing variations may result in excessive tappet and camshaft wear within the engines of the",
+"y": 2014
+},
+{
+"id": "08E052000",
+"date": "15/08/2008",
+"part": "EQUIPMENT",
+"summary": "MOTION PRO IS RECALLING 10,000 AFTERMARKET BRAKE LEVERS, MODEL NO. 14-0415, SOLD FOR USE ON CERTAIN MY 1999 THROUGH 2008 SUZUKI AND MY 1998 THROUGH 2003 YAMAHA MOTORCYCLES.  THE LOBE HEIGHT ON SOME OF THESE LEVERS ARE SMALLER AND DO NOT PROPERLY ENGAGE THE STOMP LAMP SWITCH WHICH WILL NOT DEACTIVATE",
+"y": 2007
+},
+{
+"id": "16V878000",
+"date": "06/12/2016",
+"part": "ELECTRICAL SYSTEM:ALTERNATOR/GENERATOR/REGULATOR",
+"summary": "Suzuki Motor of America, Inc. (Suzuki) is recalling certain model year 2012-2016 DL650 motorcycles manufactured August 30, 2011, to October 12, 2015.  In the affected motorcycles, the alternator stator may have insufficient heat resistance, resulting in a short circuit of the stator wires.",
+"y": 2014
+},
+{
+"id": "18V694000",
+"date": "04/10/2018",
+"part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+"summary": "Suzuki Motor of America, Inc. (Suzuki) is recalling certain 2017-2018 Suzuki DL650A, DL650XA, GSX-R1000, GSX-R1000R, and 2018 GSX-S750 motorcycles.  During installation, the fuel pump O-ring may have been twisted, reducing the sealing performance and possibly resulting in a fuel leak.",
+"y": 2017
+},
+{
+"id": "12V038000",
+"date": "03/02/2012",
+"part": "EXTERIOR LIGHTING:BRAKE LIGHTS:SWITCH",
+"summary": "SUZUKI IS RECALLING CERTAIN MODEL YEAR 2012 AN400, AN650, AND DL650 SCOOTERS AND MOTORCYCLES MANUFACTURED PRIOR TO DECEMBER 17, 2011, BECAUSE THE LEVER-MOUNTED BRAKE LIGHT ACTUATING SWITCH(ES) MAY FAIL.",
+"y": 2012
+}
+],
+"names": [
+"DL1000",
+"DL650",
+"V-STROM 800",
+"DL800",
+"V-STROM 1050XT",
+"DL650A V-STROM"
+]
+},
+{
+"name": "BMW GS (R1200/R1250GS)",
+"brand": "BMW Motorrad",
+"make": "BMW",
+"seg": "Adventure",
+"n": 358,
+"years": [
+2005,
+2025
+],
+"by_year": {
+"2005": 51,
+"2006": 14,
+"2007": 65,
+"2008": 50,
+"2009": 37,
+"2010": 15,
+"2011": 7,
+"2012": 13,
+"2013": 12,
+"2014": 16,
+"2015": 14,
+"2016": 12,
+"2017": 10,
+"2018": 5,
+"2019": 19,
+"2020": 8,
+"2021": 1,
+"2022": 3,
+"2023": 2,
+"2024": 2,
+"2025": 2
+},
+"parts": [
+[
+"fuel system",
+45
+],
+[
+"brakes",
+20
+],
+[
+"transmission & drivetrain",
+17
+],
+[
+"engine",
+8
+],
+[
+"electrical",
+7
+]
+],
+"serious": 6,
+"crash": 12,
+"fire": 6,
+"injured": 12,
+"miles": 20000,
+"recalls": [
+{
+"id": "17V481000",
+"date": "28/07/2017",
+"part": "EQUIPMENT",
+"summary": "BMW of North America, LLC (BMW) is recalling certain 2013-2017 F800R and F800GT motorcycles, 2014-2018 R1200GS and R1200GS Adventure motorcycles, 2016-2017 S1000XR motorcycles and 2015-2017 R1200R and R1200RS, 2008-2012 F650GS, 2008-2018 F800GS, and 2014-2017 F800GS Adventure motorcycles.  When equi",
+"y": 2018
+},
+{
+"id": "05V172000",
+"date": "27/04/2005",
+"part": "ENGINE AND ENGINE COOLING",
+"summary": "ON CERTAIN MOTORCYCLES, EXPOSURE OF THE THROTTLE HOUSING TO ROAD DEBRIS COULD FALL AND BECOME CAUGHT BETWEEN THE THROTTLE-BODY AND THE ENGINE BLOCK.",
+"y": 2005
+},
+{
+"id": "06V134000",
+"date": "24/04/2006",
+"part": "SERVICE BRAKES, HYDRAULIC",
+"summary": "ON CERTAIN MOTORCYCLES, IF CERTAIN PROCEDURES ARE PERFORMED THAT INVOLVES REMOVAL OF THE FRONT LEFT BRAKE CALIPER, THE ABS SENSOR CABLE CAN BE ROUTED INCORRECTLY AND WHEN THE CALIPER IS REINSTALLED, THE SENSOR CABLE CAN COME INTO CONTACT AND RUB AGAINST THE FRONT BRAKE DISC.  OVERTIME, IF THE CHAFIN",
+"y": 2006
+},
+{
+"id": "04V297000",
+"date": "22/06/2004",
+"part": "SERVICE BRAKES, HYDRAULIC:ANTILOCK/TRACTION CONTROL/ELECTRONIC LIMITED SLIP",
+"summary": "ON CERTAIN MOTORCYCLES, THE INTEGRAL ANTI-LOCK BRAKE SYSTEM (IABS) SENSOR SEALING O-RING CONNECTION AT THE REAR AXLE HOUSING MAY BE DAMAGED.   AN OIL LEAK MAY DEVELOP.",
+"y": 2005
+},
+{
+"id": "13V154000",
+"date": "22/04/2013",
+"part": "SUSPENSION:FRONT",
+"summary": "BMW is recalling certain model year 2013 R1200 GS motorcycles manufactured January 9, 2013, through February 8, 2013.  Due to an insufficient torque of a locking bolt, the front fork tube may loosen.",
+"y": 2013
+},
+{
+"id": "06V486000",
+"date": "21/12/2006",
+"part": "TIRES:VALVE",
+"summary": "ON CERTAIN MOTORCYCLES, THE TIRE INFLATION VALVE HOLE IN THE RIM OF THE CROSS-SPOKE WHEEL WHICH IS EQUIPPED WITH THE OPTIONAL TIRE PRESSURE MONITORING SYSTEM (TPM) WAS INCORRECTLY MANUFACTURED.  A LEAK MAY DEVELOP AT THIS LOCATION POSSIBLY CAUSING SUDDEN DEFLATION OF THE TIRE.",
+"y": 2006
+},
+{
+"id": "17E052000",
+"date": "21/08/2017",
+"part": "EXTERIOR LIGHTING:TURN SIGNAL",
+"summary": "BMW of North America, LLC (BMW) is recalling certain accessory turn signals manufactured for 2006-2017 R1200GS, 2007-2008 and 2010-2017 R1200GS Adventure, 2017 F700GS and F800GS, 2013-2017 F800GT, 2015-2016 F800R, 2014-2017 F800GS Adventure, 2014-2016 S1000R, 2015-2017 R1200R, 2016-2017 R1200RS, and",
+"y": 2012
+},
+{
+"id": "18E016000",
+"date": "21/03/2018",
+"part": "EQUIPMENT",
+"summary": "BMW of North America, LLC (BMW) is recalling certain Accessory Windscreens, sold for installation on various motorcycles.  Specifically being recalled is Windscreen model number 8531917, sold for use on model year 2012-2018 F700GS motorcycles, Windscreen model number 8544629, sold for use on model y",
+"y": 2018
+},
+{
+"id": "14V065000",
+"date": "19/02/2014",
+"part": "ELECTRICAL SYSTEM",
+"summary": "BMW of North America, LLC (BMW) is recalling certain model year 2013 C 600 Sport, C 650 GT, F 700 GS, F 800 GS, F 800 GS Adventure, F 800 GT, R 1200 R and R1200 GS motorcycles.  Water may enter the side-stand switch preventing the motorcycle from starting or potentially shutting off the motorcycle w",
+"y": 2013
+},
+{
+"id": "10V276000",
+"date": "18/06/2010",
+"part": "SERVICE BRAKES, HYDRAULIC",
+"summary": "BMW IS RECALLING CERTAIN MODEL YEAR 2007 THROUGH 2009 R 1200 AND K 1200 SERIES MOTORCYCLES MANUFACTURED FROM AUGUST 2006 THROUGH MAY 2009.  DUE TO THE CURRENT ROUTING OF THE FRONT BRAKE LINES, IT IS POSSIBLE THAT DURING RIDING, AND THEREFORE ASSOCIATED VIBRATION. THE BRAKE LINES COULD BE UNDER STRAI",
+"y": 2009
+},
+{
+"id": "14V211000",
+"date": "18/04/2014",
+"part": "POWER TRAIN:MANUAL TRANSMISSION",
+"summary": "BMW of North America, LLC (BMW) is recalling certain model year 2013 R 1200 GS motorcycles manufactured November 2012 through August 2013.  Pressure inside the transmission may cause the transmission output seal to be pushed out of place.",
+"y": 2013
+},
+{
+"id": "09V129000",
+"date": "17/04/2009",
+"part": "ELECTRICAL SYSTEM",
+"summary": "BMW IS RECALLING MODEL YEAR 2008 R1200 GS AND R1200 GS ADVENTURE MOTORCYCLES.  IN CERTAIN SITUATIONS, SUCH AS HIGH GENERATOR SPEEDS COMBINED WITH LARGE DEMANDS FOR ELECTRICAL CURRENT, SPURIOUS SIGNALS COULD EMERGE WITHIN THE MOTORCYCLE'S ELECTRICAL SYSTEM.  IF THIS WERE TO OCCUR, IT COULD AFFECT THE",
+"y": 2008
+},
+{
+"id": "06V164000",
+"date": "15/05/2006",
+"part": "SERVICE BRAKES, HYDRAULIC:ANTILOCK/TRACTION CONTROL/ELECTRONIC LIMITED SLIP",
+"summary": "ON CERTAIN MOTORCYCLES, UNDER RAPID, REPEATED, AND UNUSUALLY HARSH BRAKING, LOSS OF ABS CAPABILITY COULD TEMPORARILY OCCUR.",
+"y": 2006
+},
+{
+"id": "13V617000",
+"date": "12/12/2013",
+"part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+"summary": "BMW of North America, LLC (BMW) is recalling certain model year 2005-2011 model year R-model motorcycles, model year 2005-2012 K-model motorcycles, model year 2010-2011 S 1000 model motorcycles, and model year 2006-2010 HP2 motorcycles.  In the affected motorcycles, the fuel pump flange (and the aux",
+"y": 2011
+},
+{
+"id": "15V141000",
+"date": "11/03/2015",
+"part": "WHEELS:LUGS/NUTS/BOLTS/STUDS",
+"summary": "BMW of North America, LLC (BMW) is recalling certain model year 2005-2010 R1200GS and R1200RT, 2006-2010 R1200GS Adventure, 2007-2010 R1200R, 2007 R1200S and K1200R Sport, 2005-2007 R1200ST, 2008-2009 HP2 Megamoto, 2006 HP2 Enduro, 2008-2010 HP2 Sport, 2005-2008 K1200S, 2006-2008 K1200R, K1200GT, 20",
+"y": 2010
+},
+{
+"id": "20V471000",
+"date": "10/08/2020",
+"part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+"summary": "BMW of North America, LLC (BMW) is recalling certain 2009-2011 K1300 (S, GT), 2010-2011 S1000 RR, 2005-2011 R1200 (GS, GS Adventure, R, RT, S, ST), 2006-2010 HP2 (Enduro, Megamoto, Sport), 2005-2008 K1200 (R, R Sport, S, GT), and 2012 K1600 (GT, GTL) motorcycles that were repaired under recall 13V-6",
+"y": 2011
+},
+{
+"id": "17V438000",
+"date": "10/07/2017",
+"part": "SUSPENSION:FRONT",
+"summary": "BMW of North America, LLC (BMW) is recalling certain 2014-2017 BMW R1200GS and BMW R1200GS Adventure motorcycles.   The motorcycle fixed fork tube may separate from the pressed in seal plug that secures the tube to the upper triple clamp.",
+"y": 2017
+},
+{
+"id": "21V060000",
+"date": "08/02/2021",
+"part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+"summary": "BMW of North America, LLC (BMW) is recalling certain 2011-2014 S 1000 RR/R/ HP4, R 1200 GS/GS Adventure/R/RT, K 1300 S, K 1600 GT/GTL/GTL Exclusive and 2014 R nine T motorcycles.  The fuel pump, and auxiliary fuel pump in certain models, may crack and leak fuel during vehicle operation.",
+"y": 2014
+},
+{
+"id": "09V319000",
+"date": "07/08/2009",
+"part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+"summary": "BMW IS RECALLING CERTAIN MODEL YEAR 2006 THROUGH 2008 R1200 GS MOTORCYCLES MANUFACTURED BETWEEN AUGUST 2006 AND JANUARY 2008.  THE SEALING OF THE FUEL PUMP CONTROL UNIT HOUSING MIGHT BE INSUFFICIENT AND WATER COULD INTRUDE INTO THE CONTROL UNIT HOUSING CREATING A HUMID ATMOSPHERE.  UNDER SUCH CONDIT",
+"y": 2008
+},
+{
+"id": "04V576000",
+"date": "06/12/2004",
+"part": "SERVICE BRAKES, HYDRAULIC:FOUNDATION COMPONENTS:HOSES, LINES/PIPING, AND FITTINGS",
+"summary": "ON CERTAIN MOTORCYCLES,  AN ADAPTER IN THE REAR BRAKE LINE CONNECTS A RIGID SECTION TO A FLEXIBLE SECTION.  IF THE RIGID SECTION IS NOT PROPERLY ENGAGED IN THE ADAPTER, IT IS POSSIBLE FOR A LEAK TO DEVELOP.",
+"y": 2005
+},
+{
+"id": "08V254000",
+"date": "05/06/2008",
+"part": "SERVICE BRAKES, HYDRAULIC:FOUNDATION COMPONENTS:HOSES, LINES/PIPING, AND FITTINGS",
+"summary": "BMW IS RECALLING 4,922 MY 2007-2008 R1200R, MY 2006-2007 R1200 GS, MY 2007 R1200 ST, AND MY 2008 R1200 GS ADVENTURE MOTORCYCLES.  DUE TO THE CURRENT ROUTING OF THE FRONT BRAKE LINES, IT IS POSSIBLE THAT DURING RIDING, THE BRAKE LINES COULD BE UNDER STRAIN. IF THE VIBRATION/STRAIN IS SIGNIFICANT, THE",
+"y": 2008
+},
+{
+"id": "06V104000",
+"date": "04/04/2006",
+"part": "POWER TRAIN:CLUTCH ASSEMBLY",
+"summary": "ON CERTAIN MOTORCYCLES, THE CLUTCH COMPONENTS COULD BECOME LOOSE WHILE THE MOTORCYCLE IS BEING OPERATED.",
+"y": 2006
+},
+{
+"id": "05V082000",
+"date": "03/03/2005",
+"part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+"summary": "ON CERTAIN MOTORCYCLES, THE DEFECT INVOLVES A WATER LEAK AROUND THE FUEL PUMP THAT IS INTEGRATED WITHIN THE FUEL TANK.  AN O-RING SEAL ATTACHED TO THE PUMP'S ELECTRONIC HOUSING DOES NOT MEET SPECIFICATIONS AND WATER CAN BYPASS THIS SEAL AND CONTACT THE PUMP ELECTRONICS.",
+"y": 2005
+},
+{
+"id": "08V290000",
+"date": "01/07/2008",
+"part": "POWER TRAIN:MANUAL TRANSMISSION",
+"summary": "BMW IS RECALLING 46 MY 2008 R1200 R, R1200 GS, AND R1200 GS ADVENTURE MOTORCYCLES.  DUE TO A MATERIAL DEFECT IN THE INTERMEDIATE SHAFT OF THE TRANSMISSION, THE SHAFT COULD BREAK.  IF THIS OCCURRED, IT IS POSSIBLE FOR THE TRANSMISSION TO SEIZE.",
+"y": 2008
+}
+],
+"names": [
+"R1200 GS",
+"R 1200 GS",
+"R1200 GS ADVENTURE",
+"R 1200 GS ADVENTURE",
+"R 1250 GS",
+"R 1200 GS ADV US"
+]
+},
+{
+"name": "BMW RT (R1200/R1250RT)",
+"brand": "BMW Motorrad",
+"make": "BMW",
+"seg": "Touring",
+"n": 292,
+"years": [
+2005,
+2024
+],
+"by_year": {
+"2005": 33,
+"2006": 54,
+"2007": 52,
+"2008": 32,
+"2009": 38,
+"2010": 9,
+"2011": 20,
+"2012": 11,
+"2013": 6,
+"2014": 6,
+"2015": 3,
+"2016": 1,
+"2017": 2,
+"2018": 2,
+"2019": 9,
+"2020": 6,
+"2021": 4,
+"2022": 1,
+"2023": 1,
+"2024": 2
+},
+"parts": [
+[
+"fuel system",
+55
+],
+[
+"transmission & drivetrain",
+17
+],
+[
+"brakes",
+15
+],
+[
+"electrical",
+7
+],
+[
+"engine",
+5
+]
+],
+"serious": 1,
+"crash": 1,
+"fire": 1,
+"injured": 3,
+"miles": 24455,
+"recalls": [
+{
+"id": "05V172000",
+"date": "27/04/2005",
+"part": "ENGINE AND ENGINE COOLING",
+"summary": "ON CERTAIN MOTORCYCLES, EXPOSURE OF THE THROTTLE HOUSING TO ROAD DEBRIS COULD FALL AND BECOME CAUGHT BETWEEN THE THROTTLE-BODY AND THE ENGINE BLOCK.",
+"y": 2005
+},
+{
+"id": "06V134000",
+"date": "24/04/2006",
+"part": "SERVICE BRAKES, HYDRAULIC",
+"summary": "ON CERTAIN MOTORCYCLES, IF CERTAIN PROCEDURES ARE PERFORMED THAT INVOLVES REMOVAL OF THE FRONT LEFT BRAKE CALIPER, THE ABS SENSOR CABLE CAN BE ROUTED INCORRECTLY AND WHEN THE CALIPER IS REINSTALLED, THE SENSOR CABLE CAN COME INTO CONTACT AND RUB AGAINST THE FRONT BRAKE DISC.  OVERTIME, IF THE CHAFIN",
+"y": 2006
+},
+{
+"id": "10V276000",
+"date": "18/06/2010",
+"part": "SERVICE BRAKES, HYDRAULIC",
+"summary": "BMW IS RECALLING CERTAIN MODEL YEAR 2007 THROUGH 2009 R 1200 AND K 1200 SERIES MOTORCYCLES MANUFACTURED FROM AUGUST 2006 THROUGH MAY 2009.  DUE TO THE CURRENT ROUTING OF THE FRONT BRAKE LINES, IT IS POSSIBLE THAT DURING RIDING, AND THEREFORE ASSOCIATED VIBRATION. THE BRAKE LINES COULD BE UNDER STRAI",
+"y": 2009
+},
+{
+"id": "06V164000",
+"date": "15/05/2006",
+"part": "SERVICE BRAKES, HYDRAULIC:ANTILOCK/TRACTION CONTROL/ELECTRONIC LIMITED SLIP",
+"summary": "ON CERTAIN MOTORCYCLES, UNDER RAPID, REPEATED, AND UNUSUALLY HARSH BRAKING, LOSS OF ABS CAPABILITY COULD TEMPORARILY OCCUR.",
+"y": 2006
+},
+{
+"id": "13V617000",
+"date": "12/12/2013",
+"part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+"summary": "BMW of North America, LLC (BMW) is recalling certain model year 2005-2011 model year R-model motorcycles, model year 2005-2012 K-model motorcycles, model year 2010-2011 S 1000 model motorcycles, and model year 2006-2010 HP2 motorcycles.  In the affected motorcycles, the fuel pump flange (and the aux",
+"y": 2011
+},
+{
+"id": "14V320000",
+"date": "12/06/2014",
+"part": "SUSPENSION",
+"summary": "BMW of North America, LLC (BMW) is recalling certain model year 2014 R1200 RT motorcycles manufactured November 27, 2013, to May 5, 2014.  The affected vehicles have a Dynamic Electronic Suspension Adjustment (ESA) rear shock absorber. The piston rod within the rear shock absorber can break without ",
+"y": 2014
+},
+{
+"id": "15V141000",
+"date": "11/03/2015",
+"part": "WHEELS:LUGS/NUTS/BOLTS/STUDS",
+"summary": "BMW of North America, LLC (BMW) is recalling certain model year 2005-2010 R1200GS and R1200RT, 2006-2010 R1200GS Adventure, 2007-2010 R1200R, 2007 R1200S and K1200R Sport, 2005-2007 R1200ST, 2008-2009 HP2 Megamoto, 2006 HP2 Enduro, 2008-2010 HP2 Sport, 2005-2008 K1200S, 2006-2008 K1200R, K1200GT, 20",
+"y": 2010
+},
+{
+"id": "20V471000",
+"date": "10/08/2020",
+"part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+"summary": "BMW of North America, LLC (BMW) is recalling certain 2009-2011 K1300 (S, GT), 2010-2011 S1000 RR, 2005-2011 R1200 (GS, GS Adventure, R, RT, S, ST), 2006-2010 HP2 (Enduro, Megamoto, Sport), 2005-2008 K1200 (R, R Sport, S, GT), and 2012 K1600 (GT, GTL) motorcycles that were repaired under recall 13V-6",
+"y": 2011
+},
+{
+"id": "09V256000",
+"date": "08/07/2009",
+"part": "SERVICE BRAKES, HYDRAULIC",
+"summary": "BMW IS RECALLING 1,535 MY 2007-2009 R1200RT MOTORCYCLES.  DUE TO ROUTING AND ASSEMBLY TOLERANCES OF THE FRONT BRAKE LINES, IT IS POSSIBLE FOR THE LINES TO BE UNDER STRAIN.  IN COMBINATION WITH VIBRATION DURING RIDING, THE BRAKE LINES COULD DEVELOP A LEAK.  THE LEVEL OF FLUID IN THE FRONT BRAKE FLUID",
+"y": 2009
+},
+{
+"id": "21V060000",
+"date": "08/02/2021",
+"part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+"summary": "BMW of North America, LLC (BMW) is recalling certain 2011-2014 S 1000 RR/R/ HP4, R 1200 GS/GS Adventure/R/RT, K 1300 S, K 1600 GT/GTL/GTL Exclusive and 2014 R nine T motorcycles.  The fuel pump, and auxiliary fuel pump in certain models, may crack and leak fuel during vehicle operation.",
+"y": 2014
+},
+{
+"id": "06V104000",
+"date": "04/04/2006",
+"part": "POWER TRAIN:CLUTCH ASSEMBLY",
+"summary": "ON CERTAIN MOTORCYCLES, THE CLUTCH COMPONENTS COULD BECOME LOOSE WHILE THE MOTORCYCLE IS BEING OPERATED.",
+"y": 2006
+}
+],
+"names": [
+"R1200 RT",
+"R 1200 RT",
+"R 1250 RT",
+"R 1200 RT US",
+"R 1200 RT (AUTHORITY)"
+]
+},
+{
+"name": "BMW K1600",
+"brand": "BMW Motorrad",
+"make": "BMW",
+"seg": "Touring",
+"n": 163,
+"years": [
+2011,
+2025
+],
+"by_year": {
+"2011": 1,
+"2012": 43,
+"2013": 14,
+"2014": 7,
+"2015": 2,
+"2016": 7,
+"2018": 65,
+"2019": 13,
+"2020": 1,
+"2021": 1,
+"2022": 5,
+"2023": 2,
+"2024": 1,
+"2025": 1
+},
+"parts": [
+[
+"steering",
+28
+],
+[
+"transmission & drivetrain",
+25
+],
+[
+"fuel system",
+21
+],
+[
+"suspension",
+14
+],
+[
+"engine",
+12
+]
+],
+"serious": 1,
+"crash": 0,
+"fire": 1,
+"injured": 2,
+"miles": 3800,
+"recalls": [
+{
+"id": "24V165000",
+"date": "29/02/2024",
+"part": "SUSPENSION:FRONT",
+"summary": "BMW of North America, LLC (BMW) is recalling certain 2024 R 1250RT, K 1600GT, K 1600GTL, and K 1600B motorcycles.  The front spring strut may contain an incorrectly manufactured proportional valve that can loosen, and result in strut failure and a loss of stability.",
+"y": 2024
+},
+{
+"id": "13V526000",
+"date": "25/10/2013",
+"part": "VEHICLE SPEED CONTROL",
+"summary": "BMW of North America, LLC (BMW) is recalling certain model year 2012 K1600 GT and K1600 GTL motorcycles.  In certain riding conditions, an incorrect throttle valve control signal may be received by the engine control unit, limiting the engine speed.",
+"y": 2012
+},
+{
+"id": "22V023000",
+"date": "21/01/2022",
+"part": "SUSPENSION:REAR",
+"summary": "BMW of North America, LLC (BMW) is recalling certain 2019-2020 K1600 GT, K1600 GTL, and K1600 B motorcycles.  The link strut connecting the rear suspension to the frame may have insufficient strength, which can cause the link strut to become damaged.",
+"y": 2020
+},
+{
+"id": "13V617000",
+"date": "12/12/2013",
+"part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+"summary": "BMW of North America, LLC (BMW) is recalling certain model year 2005-2011 model year R-model motorcycles, model year 2005-2012 K-model motorcycles, model year 2010-2011 S 1000 model motorcycles, and model year 2006-2010 HP2 motorcycles.  In the affected motorcycles, the fuel pump flange (and the aux",
+"y": 2012
+},
+{
+"id": "20V471000",
+"date": "10/08/2020",
+"part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+"summary": "BMW of North America, LLC (BMW) is recalling certain 2009-2011 K1300 (S, GT), 2010-2011 S1000 RR, 2005-2011 R1200 (GS, GS Adventure, R, RT, S, ST), 2006-2010 HP2 (Enduro, Megamoto, Sport), 2005-2008 K1200 (R, R Sport, S, GT), and 2012 K1600 (GT, GTL) motorcycles that were repaired under recall 13V-6",
+"y": 2012
+},
+{
+"id": "21V060000",
+"date": "08/02/2021",
+"part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+"summary": "BMW of North America, LLC (BMW) is recalling certain 2011-2014 S 1000 RR/R/ HP4, R 1200 GS/GS Adventure/R/RT, K 1300 S, K 1600 GT/GTL/GTL Exclusive and 2014 R nine T motorcycles.  The fuel pump, and auxiliary fuel pump in certain models, may crack and leak fuel during vehicle operation.",
+"y": 2014
+},
+{
+"id": "26V214000",
+"date": "02/04/2026",
+"part": "POWER TRAIN:MANUAL TRANSMISSION:SEALS/GASKETS",
+"summary": "BMW of North America, LLC (BMW) is recalling certain 2017-2025 K 1600 GT, GTL, B and 2018-2025 Grand America vehicles. The seal for the reverse gear control unit may deteriorate and allow moisture inside the control unit, which can result in the unit overheating.",
+"y": 2025
+},
+{
+"id": "19V692000",
+"date": "01/10/2019",
+"part": "POWER TRAIN:MANUAL TRANSMISSION",
+"summary": "BMW of North America, LLC (BMW) is recalling certain 2017-2020 K 1600 GT and 2018-2020 K 1600 GTL and K 1600 B motorcycles.  Certain transmission parts may not have been produced to the appropriate hardness level. This could affect the function of the transmission, possibly causing double engagement",
+"y": 2020
+}
+],
+"names": [
+"K 1600 GTL",
+"K1600B",
+"K 1600 GT",
+"K 1600 B"
+]
+},
+{
+"name": "BMW S1000RR",
+"brand": "BMW Motorrad",
+"make": "BMW",
+"seg": "Sport",
+"n": 55,
+"years": [
+2010,
+2025
+],
+"by_year": {
+"2010": 3,
+"2011": 1,
+"2012": 7,
+"2013": 2,
+"2014": 4,
+"2015": 7,
+"2016": 3,
+"2017": 2,
+"2018": 1,
+"2020": 12,
+"2021": 3,
+"2022": 5,
+"2023": 2,
+"2024": 2,
+"2025": 1
+},
+"parts": [
+[
+"engine",
+38
+],
+[
+"electrical",
+16
+],
+[
+"frame & body",
+15
+],
+[
+"fuel system",
+15
+],
+[
+"transmission & drivetrain",
+13
+]
+],
+"serious": 4,
+"crash": 0,
+"fire": 1,
+"injured": 1,
+"miles": 2050,
+"recalls": [
+{
+"id": "16V948000",
+"date": "30/12/2016",
+"part": "SUSPENSION:REAR",
+"summary": "BMW North America, LLC (BMW) is recalling certain model year 2016-2017 S 1000 RR motorcycles manufactured June 8, 2016, to November 16, 2016, and 2017 S 1000 R motorcycles manufactured on October 12, 2016.  One of the bolts on the rear suspension deflection lever may loosen and adversely affect the ",
+"y": 2017
+},
+{
+"id": "25V480000",
+"date": "25/07/2025",
+"part": "COMMUNICATION: AUTO CRASH NOTIFICATION",
+"summary": "BMW of North America, LLC (BMW) is recalling certain 2025 F 900 GS, F 800 GS, R 1300 GS Adventure, R 1300 GS, S 1000 RR, S 1000 R, and K 1600 GT vehicles equipped with the optional emergency call system. The emergency call system (eCall) may have been deactivated due to a software programming error.",
+"y": 2025
+},
+{
+"id": "23V123000",
+"date": "24/02/2023",
+"part": "SERVICE BRAKES",
+"summary": "BMW of North America, LLC (BMW) is recalling certain 2023 S 1000 RR motorcycles.  The motorcycle hand brake lever may not function correctly, reducing brake performance.",
+"y": 2023
+},
+{
+"id": "26V478000",
+"date": "23/07/2026",
+"part": "ELECTRICAL SYSTEM:IGNITION",
+"summary": "BMW of North America, LLC (BMW) is recalling certain 2024 S 1000 RR US, and 2020-2026 S 1000 RR motorcycles. The vibration of the motorcycle may cause an internal component of the ignition lock to fail, which can cause the instrument display, rear lighting, and other systems such as ABS to fail, or ",
+"y": 2025
+},
+{
+"id": "17E052000",
+"date": "21/08/2017",
+"part": "EXTERIOR LIGHTING:TURN SIGNAL",
+"summary": "BMW of North America, LLC (BMW) is recalling certain accessory turn signals manufactured for 2006-2017 R1200GS, 2007-2008 and 2010-2017 R1200GS Adventure, 2017 F700GS and F800GS, 2013-2017 F800GT, 2015-2016 F800R, 2014-2017 F800GS Adventure, 2014-2016 S1000R, 2015-2017 R1200R, 2016-2017 R1200RS, and",
+"y": 2017
+},
+{
+"id": "12V177000",
+"date": "20/04/2012",
+"part": "ENGINE AND ENGINE COOLING:ENGINE",
+"summary": "BMW IS RECALLING CERTAIN MODEL YEAR 2012 S1000RR MOTORCYCLES, MANUFACTURED FROM SEPTEMBER 1, 2011, THROUGH APRIL 10, 2012. DUE TO A MANUFACTURING PROCESS ERROR, THE CONNECTING ROD BOLTS MAY BECOME LOOSE DURING HIGH ENGINE TEMPERATURES AND/OR HIGH ENGINE OPERATING SPEEDS WHICH COULD RESULT IN CATASTR",
+"y": 2012
+},
+{
+"id": "12V585000",
+"date": "14/12/2012",
+"part": "STRUCTURE:MOTORCYCLE:KICKSTAND/CENTER STAND",
+"summary": "BMW is recalling certain model year 2012-2013 S 1000 RR motorcycles manufactured September 2011, through December 2012.  Due to a manufacturing fault, the side-stand attachment bolts could start to loosen.  The loosening of the side-stand bolts could cause the stand to separate from the frame of the",
+"y": 2013
+},
+{
+"id": "20V476000",
+"date": "13/08/2020",
+"part": "SERVICE BRAKES, HYDRAULIC:FOUNDATION COMPONENTS:DISC:CALIPER",
+"summary": "BMW of North America, LLC (BMW) is recalling certain 2019-2020 R 1250 GS, GS Adventure and R 1250 RT, 2020 S 1000 RR and S 1000 XR motorcycles.  The front brake calipers may leak brake fluid when parked.  As such, these motorcycles fail to comply with the requirements of the Federal Motor Vehicle Sa",
+"y": 2020
+},
+{
+"id": "13V617000",
+"date": "12/12/2013",
+"part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+"summary": "BMW of North America, LLC (BMW) is recalling certain model year 2005-2011 model year R-model motorcycles, model year 2005-2012 K-model motorcycles, model year 2010-2011 S 1000 model motorcycles, and model year 2006-2010 HP2 motorcycles.  In the affected motorcycles, the fuel pump flange (and the aux",
+"y": 2011
+},
+{
+"id": "20V146000",
+"date": "12/03/2020",
+"part": "EXTERIOR LIGHTING:BRAKE LIGHTS",
+"summary": "BMW of North America, LLC  (BMW) is recalling certain 2020 F900R, F900XR, S1000RR, F750GS, F850GS, F850GS Adventure, R1250GS, R1250GS Adventure, R1250RS, R1250R, RnineT, RnineT Pure and RnineT Scrambler and 2019-2020 S1000R motorcycles.  The brake light may flash instead of remain steady during emer",
+"y": 2020
+},
+{
+"id": "20V471000",
+"date": "10/08/2020",
+"part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+"summary": "BMW of North America, LLC (BMW) is recalling certain 2009-2011 K1300 (S, GT), 2010-2011 S1000 RR, 2005-2011 R1200 (GS, GS Adventure, R, RT, S, ST), 2006-2010 HP2 (Enduro, Megamoto, Sport), 2005-2008 K1200 (R, R Sport, S, GT), and 2012 K1600 (GT, GTL) motorcycles that were repaired under recall 13V-6",
+"y": 2011
+},
+{
+"id": "21V060000",
+"date": "08/02/2021",
+"part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+"summary": "BMW of North America, LLC (BMW) is recalling certain 2011-2014 S 1000 RR/R/ HP4, R 1200 GS/GS Adventure/R/RT, K 1300 S, K 1600 GT/GTL/GTL Exclusive and 2014 R nine T motorcycles.  The fuel pump, and auxiliary fuel pump in certain models, may crack and leak fuel during vehicle operation.",
+"y": 2013
+},
+{
+"id": "22V752000",
+"date": "07/10/2022",
+"part": "POWER TRAIN:CLUTCH ASSEMBLY",
+"summary": "BMW of North America, LLC (BMW) is recalling certain 2022 S1000RR, M1000RR, and 2022-2023 S1000XR and S1000R motorcycles.  The clutch cover bolts were not lubricated properly, which may cause the clutch cover to become loose and leak oil.",
+"y": 2022
+},
+{
+"id": "19V697000",
+"date": "02/10/2019",
+"part": "ENGINE",
+"summary": "BMW of North America, LLC (BMW) is recalling certain 2020 S 1000 RR motorcycles.  The oil cooler hoses may not be attached properly to the oil pipes, possibly resulting in an oil leak.",
+"y": 2020
+}
+],
+"names": [
+"S 1000 RR",
+"S1000 RR",
+"S 1000 XR",
+"S 1000 R",
+"S1000 R",
+"S1000 XR"
+]
+},
+{
+"name": "Ducati Multistrada",
+"brand": "Ducati",
+"make": "DUCATI",
+"seg": "Adventure",
+"n": 101,
+"years": [
+2005,
+2025
+],
+"by_year": {
+"2005": 8,
+"2007": 1,
+"2008": 3,
+"2010": 1,
+"2011": 7,
+"2012": 20,
+"2013": 17,
+"2014": 7,
+"2015": 5,
+"2016": 11,
+"2018": 4,
+"2019": 6,
+"2020": 6,
+"2021": 1,
+"2022": 3,
+"2025": 1
+},
+"parts": [
+[
+"brakes",
+66
+],
+[
+"fuel system",
+21
+],
+[
+"engine",
+12
+],
+[
+"transmission & drivetrain",
+6
+],
+[
+"electrical",
+4
+]
+],
+"serious": 1,
+"crash": 0,
+"fire": 0,
+"injured": 1,
+"miles": 6000,
+"recalls": [
+{
+"id": "21V212000",
+"date": "25/03/2021",
+"part": "ENGINE",
+"summary": "Ducati North America (Ducati) is recalling certain 2021 Multistrada V4 S motorcycles.  Excessive wear of the valve guides may cause the valve head to break.",
+"y": 2021
+},
+{
+"id": "17V812000",
+"date": "15/12/2017",
+"part": "SERVICE BRAKES, HYDRAULIC:FOUNDATION COMPONENTS:MASTER CYLINDER",
+"summary": "Ducati North America (Ducati) is recalling certain 2015-2018 1299 motorcycles (including STD, S, FE and SL models), Monster 1200 motorcycles (including S and R models), Multistrada motorcycles (including S and PP models), 2015-2017 Panigale R, 2016-2018 XDaviel S motorcycles and 2017-2018 Scrambler ",
+"y": 2018
+},
+{
+"id": "12V188000",
+"date": "01/05/2012",
+"part": "SERVICE BRAKES, HYDRAULIC:FOUNDATION COMPONENTS:DISC:PADS",
+"summary": "DUCATI IS RECALLING CERTAIN MODEL YEAR 2012 848, STREETFIGHTER, HYPERMOTARD, MULTISTRADA, AND MONSTER MOTORCYCLES.  THE FRICTION MATERIAL MAY DETACH FROM THE BACKING PLATE OF THE REAR BRAKE PADS.",
+"y": 2012
+}
+],
+"names": [
+"MULTISTRADA",
+"MULTISTRADA 1200 ABS",
+"MULTISTRADA 1200",
+"MULTISTRADA 1000 S 2005",
+"MULTISTRADA 1200S",
+"MULTISTRADA 1260"
+]
+},
+{
+"name": "Ducati Monster",
+"brand": "Ducati",
+"make": "DUCATI",
+"seg": "Standard",
+"n": 171,
+"years": [
+2005,
+2020
+],
+"by_year": {
+"2005": 34,
+"2006": 25,
+"2007": 64,
+"2008": 8,
+"2009": 5,
+"2012": 6,
+"2013": 2,
+"2014": 9,
+"2015": 5,
+"2016": 1,
+"2017": 2,
+"2018": 6,
+"2019": 3,
+"2020": 1
+},
+"parts": [
+[
+"fuel system",
+75
+],
+[
+"brakes",
+18
+],
+[
+"frame & body",
+4
+],
+[
+"electrical",
+3
+],
+[
+"engine",
+2
+]
+],
+"serious": 3,
+"crash": 3,
+"fire": 2,
+"injured": 1,
+"miles": 5500,
+"recalls": [
+{
+"id": "05V219000",
+"date": "13/05/2005",
+"part": "SUSPENSION:FRONT:SHOCK ABSORBER",
+"summary": "ON CERTAIN MOTORCYCLES, THE INCORRECT REAR SHOCK ABSORBER ROCKER ARM WAS INSTALLED DURING PRODUCTION.",
+"y": 2005
+},
+{
+"id": "07V477000",
+"date": "11/10/2007",
+"part": "ENGINE AND ENGINE COOLING",
+"summary": "ON CERTAIN MOTORCYCLES, THE WATER IMPELLER DOES NOT TURN DUE TO THE INSTALLATION OF AN INCORRECT LAYSHAFT.  IMPROPER OPERATION OF THE WATER PUMP COULD OCCUR CAUSING OVERHEATING OF THE ENGINE COMPONENTS AND POSSIBLY ENGINE SEIZURE.",
+"y": 2007
+}
+],
+"names": [
+"MONSTER S4RS",
+"MONSTER S2 R",
+"MONSTER 696",
+"S2R1000",
+"MONSTER 1200",
+"MONSTER S4 R"
+]
+},
+{
+"name": "Ducati Panigale",
+"brand": "Ducati",
+"make": "DUCATI",
+"seg": "Sport",
+"n": 102,
+"years": [
+2007,
+2025
+],
+"by_year": {
+"2007": 12,
+"2008": 25,
+"2009": 15,
+"2010": 5,
+"2011": 2,
+"2012": 9,
+"2013": 6,
+"2014": 3,
+"2015": 2,
+"2016": 1,
+"2017": 1,
+"2018": 9,
+"2020": 4,
+"2021": 1,
+"2023": 2,
+"2025": 5
+},
+"parts": [
+[
+"engine",
+39
+],
+[
+"fuel system",
+33
+],
+[
+"transmission & drivetrain",
+15
+],
+[
+"brakes",
+12
+],
+[
+"electrical",
+8
+]
+],
+"serious": 11,
+"crash": 5,
+"fire": 3,
+"injured": 10,
+"miles": 4000,
+"recalls": [
+{
+"id": "07V450000",
+"date": "25/09/2007",
+"part": "FUEL SYSTEM, GASOLINE:FUEL INJECTION SYSTEM",
+"summary": "ON CERTAIN MOTORCYCLES, THE ELECTRONIC CONTROL UNIT (ECU) IGNITION TIMING AND IDLE MIXTURE WERE IMPROPERLY SET DURING PRODUCTION CAUSING THE ENGINE SPEED TO DROP AND STALL THE ENGINE WHEN THE TEMPERATURE OF THE COOLING SYSTEM EXCEEDED 180F.",
+"y": 2007
+},
+{
+"id": "09V170000",
+"date": "20/05/2009",
+"part": "FUEL SYSTEM, GASOLINE:DELIVERY",
+"summary": "DUCATI IS RECALLING 1,549 MY 2009 1198, 1198 S, 1098 R, 848 AND MY 2010 F1098 STREETFIGHTER AND STREETFIGHTER S MOTORCYCLES.  THESE MOTORCYCLES MAY EXPERIENCE FUEL LEAKAGE FROM THE FUEL LINE AT THE FUEL INJECTOR CONNECTION.  THE PLASTIC FITTING BETWEEN FUEL INJECTOR AND HOSE CAN WARP OR BREAK WHICH ",
+"y": 2009
+},
+{
+"id": "08V253000",
+"date": "05/06/2008",
+"part": "POWER TRAIN",
+"summary": "DUCATI IS RECALLING 3,614 MY 2007-2008 1098, 1098S, AND 1098 TRICOLORE MOTORCYCLES.  THE REAR DRIVE SPROCKET CAN FAIL.",
+"y": 2008
+},
+{
+"id": "08V638000",
+"date": "03/12/2008",
+"part": "ELECTRICAL SYSTEM:ALTERNATOR/GENERATOR/REGULATOR",
+"summary": "DUCATI IS RECALLING 7,130 MY 2007-2008 1098, 1098S, 1098 TRICOLORE, 1098R, AND MY 2008-2009 848 MOTORCYCLES.  THE MOTORCYCLE CHARGING SYSTEM MAY BE ADVERSELY AFFECTED BY ENGINE HEAT AND STOP OPERATING.  THIS RESULTS IN DAMAGE TO THE VOLTAGE REGULATOR AND ENSUING BATTERY DISCHARGE.",
+"y": 2008
+},
+{
+"id": "14E012000",
+"date": "01/04/2014",
+"part": "EQUIPMENT",
+"summary": "Ohlins Racing AB (Ohlins) is recalling certain steering dampers kits manufactured with an incorrectly machined bracket.  These dampers were sold for use as aftermarket equipment on Yamaha R1, R6, and FZ6, Suzuki TL1000 R and GSX1300R, Honda CB600RR, and Ducati Monster 1000, 748, 848, 916, 996, and 9",
+"y": 2013
+}
+],
+"names": [
+"848",
+"1098",
+"1199 PANIGALE",
+"PANIGALE V4",
+"1198",
+"1098S"
+]
+},
+{
+"name": "Ducati Scrambler",
+"brand": "Ducati",
+"make": "DUCATI",
+"seg": "Standard",
+"n": 23,
+"years": [
+2015,
+2022
+],
+"by_year": {
+"2015": 8,
+"2016": 4,
+"2017": 2,
+"2018": 3,
+"2019": 3,
+"2020": 1,
+"2021": 1,
+"2022": 1
+},
+"parts": [
+[
+"brakes",
+74
+],
+[
+"fuel system",
+17
+],
+[
+"transmission & drivetrain",
+4
+],
+[
+"frame & body",
+4
+]
+],
+"serious": 0,
+"crash": 0,
+"fire": 0,
+"injured": 0,
+"miles": 750,
+"recalls": [
+{
+"id": "21V361000",
+"date": "17/05/2021",
+"part": "EXTERIOR LIGHTING:TURN SIGNAL",
+"summary": "Ducati North America (Ducati) is recalling certain 2021 Scrambler 800 Night Shift motorcycles.  The front and rear turn signal lights may not flash brightly enough.  As such, these motorcycles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 108, \"Lamps, R",
+"y": 2021
+},
+{
+"id": "20V781000",
+"date": "15/12/2020",
+"part": "ELECTRICAL SYSTEM:12V/24V/48V BATTERY:CABLES",
+"summary": "Ducati North America (Ducati) is recalling certain 2018-2021 Scrambler 1100 motorcycles.  The exhaust valve cable could contact the main positive battery wire and potentially short-circuit.",
+"y": 2021
+},
+{
+"id": "17V812000",
+"date": "15/12/2017",
+"part": "SERVICE BRAKES, HYDRAULIC:FOUNDATION COMPONENTS:MASTER CYLINDER",
+"summary": "Ducati North America (Ducati) is recalling certain 2015-2018 1299 motorcycles (including STD, S, FE and SL models), Monster 1200 motorcycles (including S and R models), Multistrada motorcycles (including S and PP models), 2015-2017 Panigale R, 2016-2018 XDaviel S motorcycles and 2017-2018 Scrambler ",
+"y": 2018
+},
+{
+"id": "16V891000",
+"date": "12/12/2016",
+"part": "STRUCTURE:MOTORCYCLE:KICKSTAND/CENTER STAND",
+"summary": "Ducati North America (Ducati) is recalling certain model year 2015-2016 Ducati Scrambler motorcycles manufactured February 17, 2015, to November 11, 2016.  The affected vehicles have a side stand pivot nut that can detach, potentially causing the side stand position sensor to no longer function prop",
+"y": 2016
+}
+],
+"names": [
+"SCRAMBLER",
+"SCRAMBLER 800 CAFE RACER"
+]
+},
+{
+"name": "Ducati SportClassic",
+"brand": "Ducati",
+"make": "DUCATI",
+"seg": "Standard",
+"n": 192,
+"years": [
+2006,
+2009
+],
+"by_year": {
+"2006": 76,
+"2007": 91,
+"2008": 12,
+"2009": 13
+},
+"parts": [
+[
+"fuel system",
+97
+],
+[
+"frame & body",
+6
+],
+[
+"equipment",
+2
+],
+[
+"electrical",
+2
+],
+[
+"steering",
+1
+]
+],
+"serious": 1,
+"crash": 1,
+"fire": 0,
+"injured": 1,
+"miles": 3239,
+"recalls": [
+{
+"id": "07V017000",
+"date": "24/01/2007",
+"part": "FUEL SYSTEM, GASOLINE:DELIVERY:HOSES, LINES/PIPING, AND FITTINGS",
+"summary": "ON CERTAIN MOTORCYCLES, THE FASTENERS FROM THE FUEL LINE TO THE FUEL FILLER  WERE NOT TIGHTENED PROPERLY.  THE FUEL PUMP HOSE INSIDE THE FUEL TANK MAY SEPARATE FROM THE FUEL FILTER.  THIS CONDITION WILL STOP THE ENGINE FROM RUNNING.",
+"y": 2007
+}
+],
+"names": [
+"SPORT CLASSIC",
+"1000GT"
+]
+},
+{
+"name": "Triumph Bonneville / Thruxton",
+"brand": "Triumph",
+"make": "TRIUMPH",
+"seg": "Standard",
+"n": 99,
+"years": [
+2005,
+2025
+],
+"by_year": {
+"2005": 4,
+"2006": 8,
+"2007": 1,
+"2008": 4,
+"2009": 1,
+"2013": 1,
+"2014": 1,
+"2015": 2,
+"2016": 28,
+"2017": 21,
+"2018": 4,
+"2019": 6,
+"2020": 1,
+"2022": 3,
+"2023": 4,
+"2024": 6,
+"2025": 4
+},
+"parts": [
+[
+"brakes",
+35
+],
+[
+"electrical",
+20
+],
+[
+"fuel system",
+13
+],
+[
+"engine",
+12
+],
+[
+"lights",
+8
+]
+],
+"serious": 5,
+"crash": 3,
+"fire": 0,
+"injured": 4,
+"miles": 2490,
+"recalls": [
+{
+"id": "18V084000",
+"date": "31/01/2018",
+"part": "ELECTRICAL SYSTEM:SOFTWARE",
+"summary": "Triumph Motorcycles America, LTD (Triumph) is recalling certain 2016-2018 Thruxton and Thruxton R motorcycles.  The engine may stall if the throttle is open or closed quickly while the clutch lever is pulled in.",
+"y": 2018
+},
+{
+"id": "08V624000",
+"date": "26/11/2008",
+"part": "SERVICE BRAKES, HYDRAULIC:FOUNDATION COMPONENTS:DISC:CALIPER",
+"summary": "TRIUMPH IS RECALLING 87 MY 2008-2009 THRUXTON MOTORCYCLES.  THE INSTALLED FRONT BRAKE CALIPER BRACKET BOLTS MAY BE TOO SHORT, REDUCING THREAD ENGAGEMENT OF THE BOLTS INTO THE BRAKE CALIPER BRACKET.",
+"y": 2009
+},
+{
+"id": "17V035000",
+"date": "16/01/2017",
+"part": "STEERING: STEERING WHEEL/HANDLE BAR",
+"summary": "Triumph Motorcycles America, LTD (Triumph) is recalling certain 2016-2017 Bonneville T120 and Bonneville T120 Black motorcycles.  During use, the heated hand grips may expand and cause the throttle to stick open.",
+"y": 2017
+},
+{
+"id": "20V015000",
+"date": "15/01/2020",
+"part": "STRUCTURE:MOTORCYCLE:KICKSTAND/CENTER STAND",
+"summary": "Triumph Motorcycles America, LTD (Triumph) is recalling certain 2016-2018 Thruxton, 2016-2019 Thruxton R and 2020 Thruxton TFC motorcycles.  The side stand spring may fracture, possibly allowing the side stand switch to activate and shut off the engine.",
+"y": 2018
+},
+{
+"id": "16E057000",
+"date": "13/06/2016",
+"part": "SERVICE BRAKES, HYDRAULIC",
+"summary": "Triumph Motorcycles America, LTD (Triumph) is recalling certain accessory Adjustable Brake Levers, sold as part of an aftermarket lever replacement kit, part number A2021334.  These brake levers are intended for installation on 2016 and 2017 Thruxton 1200, Street Twin, Bonneville T120, and Bonnevill",
+"y": 2017
+},
+{
+"id": "14V694000",
+"date": "03/11/2014",
+"part": "FUEL SYSTEM, GASOLINE:FUEL INJECTION SYSTEM:INJECTORS",
+"summary": "Triumph Motorcycles America, LTD (Triumph) is recalling certain model year 2014-2015 Triumph Thunderbird, Thunderbird ABS, Tiger 800,Tiger 800 ABS, Thruxton, and Bonneville motorcycles manufactured February 6, 2014, to August 7, 2014.  The engine control unit may improperly activate the fuel injecto",
+"y": 2014
+}
+],
+"names": [
+"THRUXTON",
+"BONNEVILLE",
+"BONNEVILLE T100",
+"THRUXTON R",
+"SCRAMBLER 400 X",
+"SCRAMBLER"
+]
+},
+{
+"name": "Triumph Rocket 3",
+"brand": "Triumph",
+"make": "TRIUMPH",
+"seg": "Cruiser",
+"n": 76,
+"years": [
+2005,
+2023
+],
+"by_year": {
+"2005": 20,
+"2006": 15,
+"2007": 3,
+"2008": 11,
+"2011": 1,
+"2013": 1,
+"2014": 3,
+"2015": 1,
+"2020": 13,
+"2021": 5,
+"2022": 2,
+"2023": 1
+},
+"parts": [
+[
+"transmission & drivetrain",
+39
+],
+[
+"brakes",
+26
+],
+[
+"engine",
+16
+],
+[
+"electrical",
+12
+],
+[
+"fuel system",
+8
+]
+],
+"serious": 4,
+"crash": 1,
+"fire": 0,
+"injured": 3,
+"miles": 9685,
+"recalls": [
+{
+"id": "23V730000",
+"date": "31/10/2023",
+"part": "SERVICE BRAKES, HYDRAULIC:FOUNDATION COMPONENTS:MASTER CYLINDER",
+"summary": "Triumph Motorcycles America, Ltd. (Triumph) is recalling certain 2020 Rocket 3 TFC, 2020-2024 Rocket 3 R, Rocket 3 GT, 2022 Rocket 3 GT Triple Black, and Rocket 3 R Black motorcycles.  The rear brake master cylinder may fail to move fluid through the system properly, requiring an extended distance t",
+"y": 2023
+},
+{
+"id": "20V740000",
+"date": "30/11/2020",
+"part": "SERVICE BRAKES, HYDRAULIC:POWER ASSIST:HYDRAULIC:HOSES, LINES/PIPING, AND FITTINGS",
+"summary": "Triumph Motorcycles America, LTD (Triumph) is recalling certain 2020-2021 Rocket 3 GT, Rocket 3 R, and 2020 Rocket 3 TFC motorcycles.  Air could have entered the antilock brake system (ABS) modulator while the rear brake system was filled during production.",
+"y": 2021
+},
+{
+"id": "07V455000",
+"date": "26/09/2007",
+"part": "FUEL SYSTEM, GASOLINE:FUEL INJECTION SYSTEM",
+"summary": "ON CERTAIN MOTORCYCLES, WHEN THE ENGINE IS RETURNING TO IDLE IT MAY STALL.",
+"y": 2008
+},
+{
+"id": "05V004000",
+"date": "07/01/2005",
+"part": "POWER TRAIN:DRIVELINE:DRIVESHAFT",
+"summary": "ON CERTAIN MOTORCYCLES, DAMAGE TO THE OIL SEAL OCCURRED DURING FINAL ASSEMBLY.   ONCE DAMAGED SOME OF THE OIL IN THE DRIVE UNIT COULD ESCAPE PAST THE SEAL.",
+"y": 2005
+},
+{
+"id": "06V063000",
+"date": "06/03/2006",
+"part": "STEERING: STEERING WHEEL/HANDLE BAR",
+"summary": "ON CERTAIN MOTORCYCLES, THE HANDLE BAR CLAMP BOLTS WERE NOT SUFFICIENTLY TIGHTENED.",
+"y": 2006
+}
+],
+"names": [
+"ROCKET III",
+"ROCKET 3 GT",
+"ROCKET III CLASSIC",
+"ROCKET III TOURING",
+"ROCKET 3 R",
+"ROCKET III ROADSTER"
+]
+},
+{
+"name": "Triumph Tiger",
+"brand": "Triumph",
+"make": "TRIUMPH",
+"seg": "Adventure",
+"n": 71,
+"years": [
+2006,
+2025
+],
+"by_year": {
+"2006": 2,
+"2007": 7,
+"2008": 18,
+"2009": 1,
+"2010": 2,
+"2011": 5,
+"2012": 10,
+"2013": 5,
+"2014": 1,
+"2015": 1,
+"2018": 1,
+"2019": 1,
+"2020": 1,
+"2022": 6,
+"2023": 5,
+"2024": 4,
+"2025": 1
+},
+"parts": [
+[
+"engine",
+37
+],
+[
+"lights",
+24
+],
+[
+"electrical",
+15
+],
+[
+"brakes",
+8
+],
+[
+"frame & body",
+8
+]
+],
+"serious": 4,
+"crash": 3,
+"fire": 0,
+"injured": 2,
+"miles": 3592,
+"recalls": [
+{
+"id": "13V212000",
+"date": "21/05/2013",
+"part": "POWER TRAIN",
+"summary": "Triumph Motorcycles (Triumph) is recalling certain model year 2012-2013 Speed Triple ABS motorcycles manufactured June 2012, through January 2013.  The transmission on some motorcycles may have been built with an incorrect detent spring.",
+"y": 2013
+},
+{
+"id": "07V562000",
+"date": "12/12/2007",
+"part": "EQUIPMENT:MECHANICAL:CARRIER/RACK",
+"summary": "ON CERTAIN MOTORCYCLES EQUIPPED WITH AN OPTIONAL ACCESSORY LUGGAGE RACK, UNDERSIZED WASHERS WERE USED WHICH PREVENTS THE SLIDING CARRIAGE FROM MOVING AS INTENDED.",
+"y": 2008
+}
+],
+"names": [
+"TIGER 1050 CCM ABS",
+"TIGER 1050",
+"TIGER 800",
+"TIGER 800 XC",
+"TIGER",
+"TIGER 900"
+]
+},
+{
+"name": "KTM 790/890 Adventure",
+"brand": "KTM",
+"make": "KTM",
+"seg": "Adventure",
+"n": 83,
+"years": [
+2019,
+2025
+],
+"by_year": {
+"2019": 20,
+"2020": 19,
+"2021": 27,
+"2022": 9,
+"2023": 6,
+"2024": 1,
+"2025": 1
+},
+"parts": [
+[
+"engine",
+42
+],
+[
+"brakes",
+34
+],
+[
+"fuel system",
+22
+],
+[
+"electrical",
+13
+],
+[
+"lights",
+10
+]
+],
+"serious": 2,
+"crash": 1,
+"fire": 0,
+"injured": 1,
+"miles": 2000,
+"recalls": [
+{
+"id": "21V304000",
+"date": "30/04/2021",
+"part": "SERVICE BRAKES, HYDRAULIC:FOUNDATION COMPONENTS:MASTER CYLINDER",
+"summary": "KTM North America, Inc. (KTM) is recalling certain 2019-2020 KTM 790 Adventure and 790 Adventure R, and 2020 KTM 790 Adventure R Rally motorcycles.  The front brake master cylinder piston return spring may be too weak to return the brake piston to its original position, reducing the functionality of",
+"y": 2020
+},
+{
+"id": "20V198000",
+"date": "06/04/2020",
+"part": "SERVICE BRAKES, HYDRAULIC:FOUNDATION COMPONENTS:HOSES, LINES/PIPING, AND FITTINGS",
+"summary": "KTM North America, Inc. (KTM) is recalling certain 2019-2020 790 Adventure and 790 Adventure R motorcycles.  The rear brake hose may overheat, causing the rear brake system to fail.",
+"y": 2020
+}
+],
+"names": [
+"790 ADVENTURE R",
+"790 ADVENTURE",
+"890 ADVENTURE R",
+"790 ADVENTURE R RALLY",
+"890 ADVENTURE",
+"890 ADVENTURE R RALLY"
+]
+},
+{
+"name": "KTM 690 Duke / Enduro",
+"brand": "KTM",
+"make": "KTM",
+"seg": "Standard",
+"n": 65,
+"years": [
+2008,
+2025
+],
+"by_year": {
+"2008": 2,
+"2013": 4,
+"2014": 7,
+"2015": 3,
+"2016": 11,
+"2017": 7,
+"2018": 6,
+"2019": 4,
+"2020": 5,
+"2021": 7,
+"2022": 4,
+"2023": 3,
+"2025": 2
+},
+"parts": [
+[
+"fuel system",
+75
+],
+[
+"frame & body",
+14
+],
+[
+"engine",
+8
+],
+[
+"brakes",
+5
+],
+[
+"tires",
+5
+]
+],
+"serious": 3,
+"crash": 1,
+"fire": 1,
+"injured": 0,
+"miles": 2000,
+"recalls": [
+{
+"id": "17V388000",
+"date": "20/06/2017",
+"part": "FUEL SYSTEM, GASOLINE:STORAGE:TANK ASSEMBLY:FILLER PIPE AND CAP",
+"summary": "KTM North America, Inc. (KTM) is recalling certain 2016-2017 KTM 690 Duke motorcycles.  The affected motorcycles may leak fuel from filler cap area of the fuel tank.",
+"y": 2017
+},
+{
+"id": "21V792000",
+"date": "12/10/2021",
+"part": "POWER TRAIN:CLUTCH ASSEMBLY:SLAVE CYLINDER",
+"summary": "KTM North America, Inc. (KTM) is recalling certain 2018-2020 690 Enduro R, Vitpilen 701, 701 Enduro, 701 Supermoto, 2019-2020 690 SMC R, Svartpilen, 2018-2019 690 Duke, and 2020 701 Enduro LR motorcycles.  The bellow-style gasket on the clutch slave cylinder may have been damaged during manufacturin",
+"y": 2020
+},
+{
+"id": "15V210000",
+"date": "08/04/2015",
+"part": "SERVICE BRAKES, HYDRAULIC",
+"summary": "KTM North America, Inc. (KTM) is recalling certain model year 2015 690 Enduro R motorcycles manufactured November 1, 2014, to February 28, 2015.  The rear brake line from the ABS pressure modulator to the foot brake cylinder may have been damaged during the assembly process and/or be subject to subs",
+"y": 2015
+},
+{
+"id": "22V588000",
+"date": "05/08/2022",
+"part": "TIRES:TREAD/BELT",
+"summary": "KTM North America, Inc. (KTM) is recalling certain 2019-2023 Husqvarna and KTM motorcycles with equipped with TKC80 tires.  Please refer to KTM's recall report for specific model details.  Cracks longer than 3/16 inch may develop in the tread grooves.  As such, these vehicles fail to comply with the",
+"y": 2022
+},
+{
+"id": "14V305000",
+"date": "05/06/2014",
+"part": "SERVICE BRAKES, HYDRAULIC:PEDALS AND LINKAGES",
+"summary": "KTM North America, Inc. (KTM) is recalling certain model year 2014 690 Enduro R motorcycles manufactured October 2013 to April 2014.  In the affected motorcycles, the rear brake pedal mounting bolt may loosen, allowing the rear brake pedal to detach from the motorcycle.",
+"y": 2014
+}
+],
+"names": [
+"690 DUKE",
+"690 ENDURO R",
+"690 SMC R",
+"690 ENDURO"
+]
+},
+{
+"name": "KTM 390",
+"brand": "KTM",
+"make": "KTM",
+"seg": "Standard",
+"n": 35,
+"years": [
+2015,
+2025
+],
+"by_year": {
+"2015": 3,
+"2016": 1,
+"2017": 3,
+"2018": 1,
+"2020": 2,
+"2022": 6,
+"2023": 1,
+"2024": 5,
+"2025": 13
+},
+"parts": [
+[
+"engine",
+43
+],
+[
+"electrical",
+29
+],
+[
+"throttle & speed control",
+29
+],
+[
+"fuel system",
+20
+],
+[
+"transmission & drivetrain",
+6
+]
+],
+"serious": 6,
+"crash": 1,
+"fire": 0,
+"injured": 1,
+"miles": 720,
+"recalls": [
+{
+"id": "25V907000",
+"date": "23/12/2025",
+"part": "STRUCTURE:MOTORCYCLE:KICKSTAND/CENTER STAND",
+"summary": "KTM North America, Inc. (KTM) is recalling certain 2025 390 Adventure R, 390 SMC R, 390 Adventure X, and 390 Enduro R motorcycles. Engine vibrations may cause the side stand spring to break and the side stand to fall to the ground.",
+"y": 2025
+},
+{
+"id": "25V598000",
+"date": "12/09/2025",
+"part": "VEHICLE SPEED CONTROL:THROTTLE",
+"summary": "KTM North America, Inc. is recalling certain 2022-2023 Husqvarna Svartpilen 401, Husqvarna Vitpilen 401, and 2022-2024 KTM 390 Adventure motorcycles. Water could enter the throttle (e-throttle) control unit and cause it to fail, resulting in loss of drive power.",
+"y": 2024
+},
+{
+"id": "25V825000",
+"date": "01/12/2025",
+"part": "ENGINE AND ENGINE COOLING:ENGINE:ENGINE CONTROL MODULE (ECU/ECM):SOFTWARE",
+"summary": "KTM North America, Inc. (KTM) is recalling certain 2024 Husqvarna Vitpilen 401, Husqvarna Svartpilen 401, 2024-2025 390 Duke, 2025 390 SMC R, 390 Enduro R, 390 Adventure X, and 390 Adventure R motorcycles. The engine control software may cause the engine to stall at low rpms, resulting in a loss of ",
+"y": 2025
+}
+],
+"names": [
+"390 ADVENTURE",
+"390 ADVENTURE R",
+"390 DUKE",
+"RC 390",
+"390 ENDURO R"
+]
+},
+{
+"name": "Indian Scout",
+"brand": "Indian",
+"make": "INDIAN",
+"seg": "Cruiser",
+"n": 34,
+"years": [
+2015,
+2025
+],
+"by_year": {
+"2015": 8,
+"2016": 6,
+"2018": 3,
+"2019": 1,
+"2020": 2,
+"2021": 4,
+"2022": 4,
+"2023": 2,
+"2025": 4
+},
+"parts": [
+[
+"brakes",
+35
+],
+[
+"electrical",
+29
+],
+[
+"fuel system",
+26
+],
+[
+"throttle & speed control",
+12
+],
+[
+"engine",
+12
+]
+],
+"serious": 21,
+"crash": 7,
+"fire": 0,
+"injured": 4,
+"miles": 1513,
+"recalls": [
+{
+"id": "24V970000",
+"date": "24/12/2024",
+"part": "ENGINE AND ENGINE COOLING:ENGINE:ENGINE CONTROL MODULE (ECU/ECM):SOFTWARE",
+"summary": "Indian Motorcycle Company (Indian) is recalling certain 2025 Scout and Scout Sixty motorcycles.  Please see the recall report for a complete list of affected trims.  The gear position display may falsely show that the motorcycle is in neutral.  As such, these vehicles fail to comply with the require",
+"y": 2025
+},
+{
+"id": "18V416000",
+"date": "19/06/2018",
+"part": "SERVICE BRAKES, HYDRAULIC:ANTILOCK/TRACTION CONTROL/ELECTRONIC LIMITED SLIP",
+"summary": "Indian Motorcycle Company (Indian) is recalling certain 2017-2018 Indian Scout, Scout Sixty, and Scout Bobber motorcycles.  The Anti-Lock Brake System (ABS) may have air left in the system after the assembly process.",
+"y": 2018
+},
+{
+"id": "22V837000",
+"date": "12/11/2022",
+"part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+"summary": "Indian Motorcycle Company (Indian) is recalling certain 2021-2022 Scout, Scout Bobber Sixty, Scout Bobber, Scout Icon, Scout Sixty, Scout Bobber Twenty, Scout Bobber Icon, 2022 Scout Rogue Sixty, Chief, Chief Bobber, Chief Bobber Dark Horse, Chief Dark Horse, Scout Rogue, Super Chief, and Super Chie",
+"y": 2022
+},
+{
+"id": "15V142000",
+"date": "11/03/2015",
+"part": "SERVICE BRAKES, HYDRAULIC:FOUNDATION COMPONENTS:MASTER CYLINDER",
+"summary": "Indian Motorcycle Company (Indian) is recalling certain model year 2015 Scout N15MSA00AA, N15MSA00AH, N15MSA00AR, N15MSA00AS, N15MSA00BA, N15MSA00BH, N15MSA00BS, N15MSA00CA, and N15MSA00CS motorcycles manufactured May 12, 2014, to April 9, 2015.  Due to a problem with the rear brake master cylinder,",
+"y": 2015
+},
+{
+"id": "19E007000",
+"date": "05/02/2019",
+"part": "SERVICE BRAKES",
+"summary": "Indian Motorcycle Company (Indian) is recalling certain accessory brake levers, part number 2883795-658, sold for use on Scout and Scout bobber motorcycles.  The accessory brake lever adjustment screw may have been set incorrectly, causing unintentional front brake application.",
+"y": 2019
+},
+{
+"id": "20V454000",
+"date": "04/08/2020",
+"part": "SERVICE BRAKES",
+"summary": "Indian Motorcycle Company (Indian) is recalling certain 2019 Scout, Scout Sixty, and Scout Bobber motorcycles equipped with Anti-Lock Brake Systems (ABS).  After the manufacturing process, air may remain trapped within the brake system, possibly reducing brake performance.",
+"y": 2019
+},
+{
+"id": "19V156000",
+"date": "01/03/2019",
+"part": "SERVICE BRAKES",
+"summary": "Indian Motorcycle Company (Indian) is recalling certain 2019 Indian Scout, Scout Bobber, and Scout Sixty motorcycles equipped with Anti-Lock Brake Systems (ABS).  After the manufacturing process, air may remain trapped within the brake system, possibly reducing brake performance.",
+"y": 2019
+}
+],
+"names": [
+"SCOUT",
+"SCOUT BOBBER",
+"SCOUT BOBBER SIXTY"
+]
+},
+{
+"name": "Indian Chief / Chieftain",
+"brand": "Indian",
+"make": "INDIAN",
+"seg": "Touring",
+"n": 109,
+"years": [
+2009,
+2025
+],
+"by_year": {
+"2009": 2,
+"2010": 1,
+"2014": 12,
+"2015": 10,
+"2016": 13,
+"2017": 16,
+"2018": 9,
+"2019": 14,
+"2020": 4,
+"2021": 2,
+"2022": 9,
+"2023": 5,
+"2024": 8,
+"2025": 4
+},
+"parts": [
+[
+"electrical",
+38
+],
+[
+"transmission & drivetrain",
+19
+],
+[
+"engine",
+17
+],
+[
+"lights",
+10
+],
+[
+"tires",
+8
+]
+],
+"serious": 6,
+"crash": 6,
+"fire": 0,
+"injured": 6,
+"miles": 7797,
+"recalls": [
+{
+"id": "13V391000",
+"date": "30/08/2013",
+"part": "WHEELS:RIM",
+"summary": "Indian Motorcycle Company (Indian) is recalling certain model year 2009 Deluxe and Standard, 2009-2011 Roadmaster, 2009-2013 Vintage, 2010 Bomber, 2010-2013 Classic and Dark Horse, 2011 Blackhawk Dark and Blackhawk motorcycles.  The rear rim may crack and cause a loss of air pressure.",
+"y": 2010
+},
+{
+"id": "19V776000",
+"date": "29/10/2019",
+"part": "ELECTRICAL SYSTEM",
+"summary": "Indian Motorcycle Company (Indian) is recalling certain 2014-2019 Chief, Chieftain, Roadmaster, and Springfield motorcycles.  The gear position switch contacts may oxidize, causing the gear position display to inaccurately show that the motorcycle is in neutral when it is actually in gear.",
+"y": 2019
+},
+{
+"id": "19V638000",
+"date": "29/08/2019",
+"part": "EXTERIOR LIGHTING:TAIL LIGHTS",
+"summary": "Indian Motorcycle Company (Indian) is recalling certain 2019 Chieftain motorcycles.  The tail lights may be too bright, exceeding the maximum light output allowed.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 108, \"Lamps, Refle",
+"y": 2019
+},
+{
+"id": "17V682000",
+"date": "27/10/2017",
+"part": "EXTERIOR LIGHTING:HEADLIGHTS",
+"summary": "Indian Motorcycles Company (Indian) is recalling certain 2017-2018 Chief, Chief Classic, Chief Dark Horse, Chief Vintage, Chieftain, Chieftain Classic, Cheiftain Dark Horse, Chieftain Elite, Chieftain Limited, Springfield, and Springfield Dark Horse motorcycles.  These motorcycles may be equipped wi",
+"y": 2018
+},
+{
+"id": "11V344000",
+"date": "27/06/2011",
+"part": "STRUCTURE:MOTORCYCLE:KICKSTAND/CENTER STAND",
+"summary": "POLARIS IS RECALLING CERTAIN MODEL YEAR 2009-2011 INDIAN MOTORCYCLES FOR FAILING TO CONFORM TO THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 123, \"MOTORCYCLE CONTROLS AND DISPLAYS.\"  THE SIDE STAND MAY NOT FOLD REARWARD AND UPWARD IF IT CONTACTS THE GROUND WHEN THE MOTORCYCLE IS MOVI",
+"y": 2010
+},
+{
+"id": "11V343000",
+"date": "27/06/2011",
+"part": "EXTERIOR LIGHTING:HEADLIGHTS:SWITCH",
+"summary": "POLARIS IS RECALLING CERTAIN MODEL YEAR 2009-2011 INDIAN MOTORCYCLES FOR THE BODY CONTROL MODULE (BCM) WHICH CAN CAUSE THE HEADLIGHT TO TURN OFF IN SOME CIRCUMSTANCES. IF THE HEADLIGHT SWITCH IS SLOWLY MOVED FROM ONE POSITION TO ANOTHER (HIGH BEAM TO LOW BEAM OR LOW BEAM TO HIGH BEAM), BOTH BEAMS MA",
+"y": 2010
+},
+{
+"id": "24V550000",
+"date": "23/07/2024",
+"part": "SUSPENSION:REAR",
+"summary": "Indian Motorcycle Company (Indian) is recalling certain 2024 Chieftain, Challenger, Pursuit, Roadmaster, and Springfield motorcycles.  Please refer to the recall report for a complete list of model names.  The rear suspension pushrod may buckle under load.",
+"y": 2024
+},
+{
+"id": "22V635000",
+"date": "20/08/2022",
+"part": "EXTERIOR LIGHTING:LIGHTING CONTROL MODULE:SOFTWARE",
+"summary": "Indian Motorcycle Company (Indian) is recalling certain 2014 Chief, 2015 Chief Classic, 2014-2018 Chieftain, 2015-2020 Chief Vintage, 2016-2018 Chieftain Darkhorse, 2016-2020 Springfield, 2017-2018 Chieftain Limited, and 2018-2019 Chieftain Classic motorcycles.  The electrical connection for the Veh",
+"y": 2018
+},
+{
+"id": "16V446000",
+"date": "17/06/2016",
+"part": "ENGINE AND ENGINE COOLING:EXHAUST SYSTEM",
+"summary": "Indian Motorcycle Company (Indian) is recalling certain model year 2014-2016 Chief Classic, Dark Horse, Chieftain, Roadmaster, Vintage, Springfield, and Chieftain Dark Horse motorcycles manufactured April 15, 2013, to June 16, 2015.  In the event of an engine misfire, unburned fuel may pass through ",
+"y": 2016
+},
+{
+"id": "18V055000",
+"date": "16/01/2018",
+"part": "ELECTRICAL SYSTEM:WIRING: REAR COMPARTMENT/TRUNK",
+"summary": "Indian Motorcycle Company (Indian) is recalling certain 2015-2017 Roadmaster motorcycles.  Water may enter the trunk wiring harness, potentially causing the brake light to remain illuminated even when the brakes are not applied.",
+"y": 2017
+},
+{
+"id": "19V882000",
+"date": "11/12/2019",
+"part": "ELECTRICAL SYSTEM:WIRING:FUSES AND CIRCUIT BREAKERS",
+"summary": "Indian Motorcycle Company (Indian) is recalling certain 2019 Chieftain, Vintage, Roadmaster, Dark Horse, Springfield, and FTR1200 motorcycles.  A 10A circuit breaker may be defective, tripping unexpectedly and causing a sudden loss of power and an engine stall.",
+"y": 2019
+},
+{
+"id": "18V228000",
+"date": "10/04/2018",
+"part": "ELECTRICAL SYSTEM",
+"summary": "Indian Motorcycle Company (Indian) is recalling certain 2018 Indian Chief, Chief Classic, Chief Dark Horse, Chief Vintage, Chieftain, Chieftain Classic, Chieftain Dark Horse, Chieftain Elite, Chieftain Limited, Springfield, Springfield Dark Horse, Roadmaster, Roadmaster Elite, Roadmaster Icon, and R",
+"y": 2018
+},
+{
+"id": "23V829000",
+"date": "08/12/2023",
+"part": "ENGINE AND ENGINE COOLING:ENGINE:CRANK/CAMSHAFT POSITION SENSOR",
+"summary": "Indian Motorcycle Company (Indian) is recalling certain 2023 Chieftain Elite, 2023-2024 Chieftain Dark Horse, Chieftain Dark Horse Icon, Chieftain Limited, Chieftain, Roadmaster Limited, Roadmaster Dark Horse, Roadmaster, Springfield, Springfield Dark Horse, and 2024 Roadmaster Elite motorcycles. Th",
+"y": 2024
+},
+{
+"id": "16V877000",
+"date": "06/12/2016",
+"part": "FUEL SYSTEM, GASOLINE",
+"summary": "Indian Motorcycle Company (Indian) is recalling certain model year 2014-2017 Chief Classic, Chief Dark Horse, Vintage, Chieftan, Chieftan Dark Horse, Springfield and Roadmaster motorcycles manufactured April 15, 2013, to July 15, 2016.  In the affected motorcycles, the fuel rail may contact other co",
+"y": 2017
+},
+{
+"id": "15V721000",
+"date": "02/11/2015",
+"part": "SERVICE BRAKES, HYDRAULIC:FOUNDATION COMPONENTS:MASTER CYLINDER",
+"summary": "Indian Motorcycle Company (Indian) is recalling certain model year 2015-2016 Chief Classic, Chief Vintage, Chieftain, Roadmaster, and 2016 Dark Horse motorcycles manufactured January 2, 2015, to October 23, 2015.  Due to a problem with the rear brake master cylinder, the motorcycles may have a reduc",
+"y": 2016
+},
+{
+"id": "19V339000",
+"date": "01/05/2019",
+"part": "EXTERIOR LIGHTING",
+"summary": "Indian Motorcycle Company (Indian) is recalling certain 2014 Chief and Chieftain motorcycles.  Due to a problem within the Vehicle Control Module (VCM), all of the front lights, including the headlight, may go out while riding.",
+"y": 2014
+}
+],
+"names": [
+"ROADMASTER",
+"CHIEFTAIN",
+"CHIEF VINTAGE",
+"CHALLENGER DARK HORSE",
+"CHIEFTAIN DARK HORSE",
+"CHIEF DARK HORSE"
+]
+},
+{
+"name": "Can-Am Spyder",
+"brand": "Can-Am",
+"make": "CAN-AM",
+"seg": "Three-wheel",
+"n": 489,
+"years": [
+2008,
+2024
+],
+"by_year": {
+"2008": 72,
+"2009": 30,
+"2010": 37,
+"2011": 34,
+"2012": 47,
+"2013": 153,
+"2014": 15,
+"2015": 13,
+"2016": 12,
+"2017": 10,
+"2018": 26,
+"2019": 11,
+"2020": 8,
+"2021": 7,
+"2022": 4,
+"2023": 4,
+"2024": 6
+},
+"parts": [
+[
+"fuel system",
+32
+],
+[
+"engine",
+29
+],
+[
+"steering",
+19
+],
+[
+"transmission & drivetrain",
+13
+],
+[
+"brakes",
+10
+]
+],
+"serious": 15,
+"crash": 11,
+"fire": 34,
+"injured": 41,
+"miles": 3000,
+"recalls": [
+{
+"id": "13V386000",
+"date": "28/08/2013",
+"part": "SERVICE BRAKES, HYDRAULIC:FOUNDATION COMPONENTS:MASTER CYLINDER",
+"summary": "Bombardier Recreational Products (BRP) is recalling certain model year 2013 Can-Am Spyder RT series and ST series motorcycles. The tandem brake master cylinder manifold inlet may melt allowing the brake fluid to leak out.",
+"y": 2013
+},
+{
+"id": "20V186000",
+"date": "27/03/2020",
+"part": "SERVICE BRAKES, HYDRAULIC:PEDALS AND LINKAGES",
+"summary": "Bombardier Recreational Products Inc. (BRP) is recalling certain 2020 Can-Am Spyder RT motorcycles.  During emergency braking situations, the support which holds the brake mechanism could break, causing a total loss of braking ability.",
+"y": 2020
+},
+{
+"id": "15V095000",
+"date": "19/02/2015",
+"part": "ENGINE",
+"summary": "Bombardier Recreational Products Inc. (BRP) is recalling all model year 2013 Can-Am Spyder RT motorcycles.  Prolonged idling or slow speed riding in warmer temperatures may result very high temperatures in the engine compartment.",
+"y": 2013
+},
+{
+"id": "22V352000",
+"date": "18/05/2022",
+"part": "POWER TRAIN:MANUAL TRANSMISSION",
+"summary": "Bombardier Recreational Products, Inc. (BRP) is recalling certain 2015-2019 Can-Am Spyder F3 and RT motorcycles.  The front sprocket may be defective and prematurely wear, resulting in a loss of drive power.",
+"y": 2019
+},
+{
+"id": "23V175000",
+"date": "17/03/2023",
+"part": "EXTERIOR LIGHTING:BRAKE LIGHTS",
+"summary": "Bombardier Recreational Products, Inc. (BRP) is recalling certain 2020-2023 Spyder RT and 2022-2023 Ryker motorcycles.  The brake lights may stay illuminated even if the brake pedal is not pressed.  As such, these motorcycles fail to comply with Federal Motor Vehicle Safety Standard number 108, \"Lam",
+"y": 2023
+},
+{
+"id": "09V473000",
+"date": "14/12/2009",
+"part": "ENGINE AND ENGINE COOLING",
+"summary": "BOMBARDIER RECREATIONAL PRODUCTS, INC. (BRP) IS RECALLING MODEL YEAR 2010 ROADSTER SPYDER RT SM5 AND SE5 MOTORCYCLES MANUFACTURED BETWEEN OCTOBER 13 AND OCTOBER 30, 2009.  THE CONNECTOR ON THE KEY SWITCH HARNESS MAY NOT BE LOCKED AND THE IGNITION SWITCH HARNESS MAY BE ROUTED TOO TIGHT.  IN SOME SITU",
+"y": 2010
+},
+{
+"id": "12V582000",
+"date": "12/12/2012",
+"part": "FUEL SYSTEM, GASOLINE:STORAGE:TANK ASSEMBLY:FILLER PIPE AND CAP",
+"summary": "Bombardier Recreational Products Inc. (BRP) is recalling certain model year 2008-2012 Can-Am Spyder GS, RS, and RT series vehicles.  The fuel cap may not fit onto the fuel tank filler neck, preventing it from sealing properly.",
+"y": 2012
+},
+{
+"id": "12V581000",
+"date": "12/12/2012",
+"part": "FUEL SYSTEM, GASOLINE",
+"summary": "Bombardier Recreational Products Inc. (BRP) is recalling certain model year 2008-2009 Can-Am Spyder GS and model year 2010 Can-AM Spyder RS vehicles.  Fuel vapors may exit the fuel vapor canister vent hose in the enclosed engine compartment.",
+"y": 2010
+},
+{
+"id": "17V318000",
+"date": "12/05/2017",
+"part": "EXTERIOR LIGHTING:HEADLIGHTS",
+"summary": "Bombardier Recreational Products Inc. (BRP) is recalling certain 2017 Can Am Spyder RT motorcycles.  Due to a manufacturing error within the headlight assembly, the headlight may shine too high when on the low beam setting.  As such, these vehicles fail to comply with the requirements of Federal Mot",
+"y": 2017
+},
+{
+"id": "12V159000",
+"date": "11/04/2012",
+"part": "SERVICE BRAKES, AIR:CONTROLS:FOOT CONTROL/VALVE",
+"summary": "BOMBARDIER RECREATIONAL PRODUCTS INC. (BRP) IS RECALLING CERTAIN MODEL YEAR 2010 SPYDER RT ROADSTERS.  A PIN SECURING THE BRAKE PEDAL CONNECTING ROD COULD DISENGAGE AND FALL OFF.",
+"y": 2010
+},
+{
+"id": "26V575000",
+"date": "07/09/2026",
+"part": "ELECTRICAL SYSTEM: INSTRUMENT CLUSTER/PANEL",
+"summary": "Bombardier Recreational Products, Inc. (BRP) is recalling certain 2025-2026 Can-Am Origin, Can-Am Pulse, 2025-2027 Can-Am Canyon, 2024-2027 Can-Am Spyder RT, and Can-Am Spyder F3 motorcycles equipped with a touchscreen instrument cluster. The instrument cluster may reset, freeze, or go blank. As suc",
+"y": 2024
+},
+{
+"id": "11V081000",
+"date": "07/02/2011",
+"part": "POWER TRAIN:MANUAL TRANSMISSION:COLUMN SHIFT ASSEMBLY",
+"summary": "BRP IS RECALLING CERTAIN MODEL YEAR 2011 SPYDER RT SM5 ROADSTERS.  WHILE DOWN SHIFTING IT MAY BE POSSIBLE TO INADVERTENTLY ENGAGE REVERSE WITHOUT DEPRESSING THE REVERSE BUTTON DUE TO A DEFECTIVE REVERSE ACTUATOR CABLE.",
+"y": 2011
+},
+{
+"id": "24V728000",
+"date": "01/10/2024",
+"part": "POWER TRAIN:MANUAL TRANSMISSION:INTERNAL:SHAFT:OUTPUT",
+"summary": "Bombardier Recreational Products (BRP) is recalling certain 2017-2019 Can-Am Spyder F3 and RT motorcycles.  The engine output shaft may fatigue and break, resulting in a loss of drive power.",
+"y": 2019
+},
+{
+"id": "10V232000",
+"date": "01/06/2010",
+"part": "POWER TRAIN:CLUTCH ASSEMBLY",
+"summary": "BRP IS RECALLING CERTAIN MODEL YEAR 2010 SPYDER RS SE5 2ND SERIES AND RT SE5 ROADSTERS.  WHEN BRINGING A VEHICLE EQUIPPED WITH THE SE5 SEMI-AUTOMATIC TRANSMISSION TO A FULL STOP, THE CLUTCH MAY REMAIN ENGAGED STALLING THE ENGINE.  ONCE THE ENGINE IS STALLED, IT COULD BE IMPOSSIBLE TO RE-START AND TH",
+"y": 2010
+}
+],
+"names": [
+"SPYDER RT",
+"SPYDER RS",
+"SPYDER GS",
+"SPYDER F3",
+"SPYDER",
+"SPYDER ST"
+]
+},
+{
+"name": "Can-Am Ryker",
+"brand": "Can-Am",
+"make": "CAN-AM",
+"seg": "Three-wheel",
+"n": 133,
+"years": [
+2019,
+2025
+],
+"by_year": {
+"2019": 39,
+"2020": 16,
+"2021": 35,
+"2022": 33,
+"2023": 8,
+"2025": 2
+},
+"parts": [
+[
+"steering",
+44
+],
+[
+"brakes",
+26
+],
+[
+"wheels",
+20
+],
+[
+"electrical",
+20
+],
+[
+"suspension",
+17
+]
+],
+"serious": 5,
+"crash": 6,
+"fire": 0,
+"injured": 4,
+"miles": 996,
+"recalls": [
+{
+"id": "19V683000",
+"date": "27/09/2019",
+"part": "WHEELS:LUGS/NUTS/BOLTS/STUDS",
+"summary": "Bombardier Recreational Products Inc. (BRP) is recalling certain 2019-2020 Can-Am Ryker motorcycles.  The wheel nuts may crack, causing the wheels to loosen.",
+"y": 2020
+},
+{
+"id": "22V799000",
+"date": "22/10/2022",
+"part": "ELECTRICAL SYSTEM:WIRING",
+"summary": "Bombardier Recreational Products (BRP) is recalling certain 2019-2023 Ryker motorcycles.  The position light and flasher electrical harnesses in the front fenders may loosen and rub on the tire, leading to a short circuit and resulting in an engine stall while driving.",
+"y": 2023
+},
+{
+"id": "23V175000",
+"date": "17/03/2023",
+"part": "EXTERIOR LIGHTING:BRAKE LIGHTS",
+"summary": "Bombardier Recreational Products, Inc. (BRP) is recalling certain 2020-2023 Spyder RT and 2022-2023 Ryker motorcycles.  The brake lights may stay illuminated even if the brake pedal is not pressed.  As such, these motorcycles fail to comply with Federal Motor Vehicle Safety Standard number 108, \"Lam",
+"y": 2023
+},
+{
+"id": "23V855000",
+"date": "15/12/2023",
+"part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+"summary": "Bombardier Recreational Products, Inc. (Bombardier) is recalling certain 2019-2023 Can-Am Ryker motorcycles.  The impeller may swell, causing the high-pressure fuel pump to fail.",
+"y": 2023
+},
+{
+"id": "20V632000",
+"date": "14/10/2020",
+"part": "WHEELS",
+"summary": "Bombardier Recreational Products Inc. (Bombardier) is recalling certain 2020 Can-Am Ryker motorcycles.  The front wheels may have been improperly installed, possibly resulting in their separation from the motorcycle.",
+"y": 2020
+},
+{
+"id": "22V503000",
+"date": "13/07/2022",
+"part": "STEERING: STEERING WHEEL/HANDLE BAR",
+"summary": "Bombardier Recreational Products Inc. (BRP) is recalling certain 2022 Can-Am Ryker motorcycles.  The handlebar stem bolt may break unexpectedly due to insufficient thread length.",
+"y": 2022
+}
+],
+"names": [
+"RYKER"
+]
+}
+]

@@ -114,7 +114,7 @@ def fit_desc(d):
     return d[:k + 1] if k > 100 else d[:157].rsplit(' ', 1)[0] + '…'
 # top navigation (11-03, Elijah: "make mobile navigation on top better"): one row on desktop; on phones a swipeable chip row under the
 # logo (assets/nav.js keeps the current page's chip in view and tucks the header away while scrolling down)
-NAV = [('/cars/', 'Look up a car'), ('/brands/', 'Brands'), ('/vote/', 'Vote'), ('/compare/', 'Compare'), ('/electric/', 'Electric'), ('/vin/', 'VIN check'),
+NAV = [('/cars/', 'Look up a car'), ('/brands/', 'Brands'), ('/vote/', 'Vote'), ('/compare/', 'Compare'), ('/electric/', 'Electric'), ('/motorcycles/', 'Motorcycles'), ('/planes/', 'Planes'), ('/vin/', 'VIN check'),
        ('/car-loan-rates/', 'Loan rates'), ('/studies/', 'Studies'), ('/data/', 'Free data'), ('/method/', 'How it works')]
 def navlinks(path):
     on = lambda u: path.startswith(u) or (u == '/cars/' and path.startswith('/cars'))
@@ -143,7 +143,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}{img or "/assets/og.png"}"><meta name="twitter:card" content="summary_large_image">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://static.nhtsa.gov; connect-src 'self' https://cloudflareinsights.com https://vpic.nhtsa.dot.gov https://lemon-survey.elift08.workers.dev; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"><link rel="stylesheet" href="/assets/site.css?v=1104a"><script src="/assets/nav.js?v=1103d" defer></script>{lds}</head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"><link rel="stylesheet" href="/assets/site.css?v=1104b"><script src="/assets/nav.js?v=1103d" defer></script>{lds}</head>
 <body><header class="top"><a class="brand" href="/"><img src="/assets/icon-64.png" alt="" width="32" height="32">The Lemon Index</a>
 <nav class="mainnav" aria-label="Main">{navlinks(path)}</nav><a class="yt" href="{YT}?sub_confirmation=1" rel="noopener">Subscribe</a></header>
 <main>{body}{CITE if path.startswith('/cars/') else ''}{'' if path == '/vote/' else ask_html(ask)}</main>
@@ -945,9 +945,10 @@ LEGAL_URLS = ['/contact/', '/refunds/', '/privacy/', '/terms/']
 # 10-31: electric cars (ranking, fires, cost, problems, driver-assist crashes, one page per EV)
 exec(open('electric_pages.py', encoding='utf-8').read())
 exec(open('brands_pages.py', encoding='utf-8').read())   # 11-03 brand pages
+exec(open('vehicles_pages.py', encoding='utf-8').read())   # 11-04 planes + motorcycles
 
 open(f'{OUT}/404.html', 'w', encoding='utf-8').write(open(f'{OUT}/index.html', encoding='utf-8').read().replace('<main>', '<main><div class="pg"><section class="ph"><p class="ph-e">404</p><h1>That page drove off.</h1><p class="ph-s">It may have moved. Try one of these.</p><p class="ph-404"><a class="btn" href="/cars/">Look up a car</a> <a class="btn btn-ghost" href="/brands/">Every brand</a> <a class="btn btn-ghost" href="/">Home</a></p></section></div><!--', 1).replace('</main>', '--></main>', 1))
-urls = ['/', STUDY, '/studies/', '/method/', '/vin/', '/car-loan-rates/', '/vote/', '/data/', '/brands/'] + burls + eurls + yurls + curls + LEGAL_URLS
+urls = ['/', STUDY, '/studies/', '/method/', '/vin/', '/car-loan-rates/', '/vote/', '/data/', '/brands/'] + burls + purls + murls + eurls + yurls + curls + LEGAL_URLS
 open(f'{OUT}/sitemap.xml', 'w', encoding='utf-8').write('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + ''.join(f'<url><loc>{BASE}{u}</loc><lastmod>{TODAY}</lastmod></url>' for u in urls) + '</urlset>')
 open(f'{OUT}/robots.txt', 'w').write(f'User-agent: *\nAllow: /\n\nUser-agent: GPTBot\nAllow: /\nUser-agent: ClaudeBot\nAllow: /\nUser-agent: PerplexityBot\nAllow: /\nUser-agent: Google-Extended\nAllow: /\n\n# bulk dataset scrapers: the data is free at /data/ with credit instead\nUser-agent: CCBot\nDisallow: /\nUser-agent: Bytespider\nDisallow: /\nUser-agent: Diffbot\nDisallow: /\nUser-agent: Omgilibot\nDisallow: /\nUser-agent: ImagesiftBot\nDisallow: /\n\nSitemap: {BASE}/sitemap.xml\n')
 open(f'{OUT}/llms.txt', 'w', encoding='utf-8').write(f'# The Lemon Index\n\n> Car reliability from public data. The Lemon Index = NHTSA safety complaints per 100,000 U.S. sales, vs the average car of the same model years (100 = average).\n\n- [The Most Reliable Cars, According to 1.6 Million Owner Complaints]({BASE}{STUDY}): Toyota 4Runner 26, Lexus ES 27, Lexus brand 30, Tesla brand 322 (est.)\n- [The Most Reliable Electric Cars]({BASE}/electric/): {len(RK)} EVs by NHTSA complaints per car sold, best {best['name']} {best['li']}, plus fires, yearly cost and driver-assist crash reports\n- [Method]({BASE}/method/)\n')
