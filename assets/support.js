@@ -18,6 +18,27 @@
   const day = new Date().toISOString().slice(0, 10);
   let pick = 10;
 
+  // ---- 11-04 (Elijah: "more specific to the page they're on"): the headline and the reasons follow the page
+  const H1 = ((document.querySelector('h1') || {}).textContent || '').replace(/\s+/g, ' ').replace(/[.]\s*$/, '').trim();
+  const P = location.pathname;
+  const CTX = (() => {
+    if (/^\/cars\/[^/]+\/\d{4}\//.test(P)) return { q: `Looking at a used ${H1}?`, a: 'This report is free. Help keep it that way.', why: [`Every year of the ${H1.replace(/^\d{4} /, '')} stays free`, 'No paywall, no account, no dealer spin', 'Pays for new car data and tools'] };
+    if (/^\/cars\/[^/]+\/transmission\//.test(P)) return { q: 'Checking the transmission?', a: 'Every transmission report is free.', why: ['Every model and year stays free', 'No paywall, no account', 'Pays for new car data and tools'] };
+    if (/^\/cars\/[^/]+\//.test(P)) return { q: `Shopping for a ${H1}?`, a: 'Every year of it is free to check.', why: ['Every car report stays free for everyone', 'No paywall, no account needed', 'Pays for new studies, tools and videos'] };
+    if (/^\/planes\/.+/.test(P)) return { q: `Researching the ${H1}?`, a: 'Plane accident data, free for everyone.', why: ['Every plane report stays free', 'Straight from NTSB records, no paywall', 'Pays for more aviation data'] };
+    if (/^\/planes\//.test(P)) return { q: 'Into planes?', a: 'Every accident report here is free.', why: ['Every plane report stays free', 'Straight from NTSB records, no paywall', 'Pays for more aviation data'] };
+    if (/^\/motorcycles\/.+/.test(P)) return { q: `Riding or buying a ${H1}?`, a: 'Its problems and recalls are free to check.', why: ['Every bike report stays free', 'No paywall, no account needed', 'Pays for more motorcycle data'] };
+    if (/^\/motorcycles\//.test(P)) return { q: 'Shopping for a bike?', a: 'Every motorcycle report is free.', why: ['Every bike report stays free', 'No paywall, no account needed', 'Pays for more motorcycle data'] };
+    if (/^\/supercars\/.+/.test(P)) return { q: `Dreaming about the ${H1}?`, a: 'Supercar specs and recalls, free.', why: ['Every supercar page stays free', 'Real recalls and EPA numbers', 'Pays for more data and videos'] };
+    if (/^\/supercars\//.test(P)) return { q: 'Supercar fan?', a: 'Every spec sheet here is free.', why: ['Every supercar page stays free', 'Real recalls and EPA numbers', 'Pays for more data and videos'] };
+    if (/^\/vin\//.test(P)) return { q: 'Checked a VIN?', a: 'Keep the VIN checks free.', why: ['Free VIN checks for everyone', 'No account, we don&#39;t store your VIN', 'Pays for new tools'] };
+    if (/^\/car-loan-rates\//.test(P)) return { q: 'Did this save you on your loan?', a: 'Keep the rate check free.', why: ['Free tools for every car buyer', 'No account, no dealer spin', 'Pays for new tools'] };
+    if (/^\/compare\//.test(P)) return { q: 'Comparing cars?', a: 'Every head-to-head is free.', why: ['Every comparison stays free', 'No paywall, no account', 'Pays for new car data and tools'] };
+    if (/^\/electric\//.test(P)) return { q: 'Thinking about an EV?', a: 'Every EV report is free.', why: ['Every EV report stays free', 'No paywall, no account', 'Pays for new studies'] };
+    if (/^\/brands\//.test(P)) return { q: 'Picking a brand?', a: 'Every brand report is free.', why: ['Every brand and model stays free', 'No paywall, no account', 'Pays for new studies'] };
+    return { q: 'Enjoying the Lemon Index?', a: 'Keep it 100% free.', why: ['Every car report stays free for everyone', 'No paywall, no account needed', 'Pays for new studies, tools and videos'] };
+  })();
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   // ---- the sheet (bottom sheet on phones, centered card on bigger screens)
   const box = document.createElement('div');
   box.className = 'sup'; box.hidden = true; box.setAttribute('role', 'dialog'); box.setAttribute('aria-modal', 'true'); box.setAttribute('aria-labelledby', 'sup-h');
@@ -25,8 +46,8 @@
   <button class="sup-x" aria-label="Close">×</button>
   <div class="sup-art" aria-hidden="true"><svg viewBox="0 0 240 132"><g fill="none" stroke-width="14"><path d="M28 118A92 92 0 0 1 58.2 49.8" stroke="#1a8f4c"/><path d="M60 48.4A92 92 0 0 1 179.9 48.4" stroke="#d2d2d7"/><path d="M181.8 49.8A92 92 0 0 1 212 118" stroke="#e8141c"/></g><g class="sup-ndl"><path d="M116 118L120 34L124 118Z"/><circle cx="120" cy="118" r="11"/><circle cx="120" cy="118" r="5" fill="#ffd400"/></g></svg>
     <p><b>$0</b>to read any report</p></div>
-  <h2 id="sup-h">Keep it 100% free. <span>Chip in if it helped.</span></h2>
-  <ul class="sup-why"><li>Every car report stays free for everyone</li><li>No paywall, no account needed</li><li>Pays for new studies, tools and videos</li></ul>
+  <h2 id="sup-h">${esc(CTX.q)} <span>${esc(CTX.a)} Chip in if it helped.</span></h2>
+  <ul class="sup-why">${CTX.why.map(w => `<li>${w}</li>`).join('')}</ul>
   <div class="sup-amts" role="radiogroup" aria-label="Amount">
     ${[5, 10, 15].map(a => `<button type="button" role="radio" data-a="${a}" aria-checked="${a === pick}">$${a}</button>`).join('')}
     <button type="button" role="radio" data-a="custom" aria-checked="false">Other</button>
@@ -54,7 +75,7 @@
   // ---- the reminder bar
   const bar = document.createElement('div');
   bar.className = 'nud'; bar.hidden = true; bar.setAttribute('role', 'status');
-  bar.innerHTML = `<img src="/assets/icon-64.png" alt="" width="36" height="36"><p><b>Enjoying the Lemon Index?</b><span>Keep it 100% free.</span></p>
+  bar.innerHTML = `<img src="/assets/icon-64.png" alt="" width="36" height="36"><p><b>${esc(CTX.q)}</b><span>${esc(CTX.a)}</span></p>
 <button type="button" class="btn nud-go">Chip in</button><button type="button" class="nud-x" aria-label="Not today">×</button>`;
   document.body.appendChild(bar);
   let nudgeT;
