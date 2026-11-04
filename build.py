@@ -131,7 +131,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None):
 <meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}{img or "/assets/og.png"}"><meta name="twitter:card" content="summary_large_image">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://static.nhtsa.gov; connect-src 'self' https://cloudflareinsights.com https://vpic.nhtsa.dot.gov https://lemon-survey.elift08.workers.dev; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"><link rel="stylesheet" href="/assets/site.css?v=1103v6b"><script src="/assets/nav.js?v=1103d" defer></script>{lds}</head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"><link rel="stylesheet" href="/assets/site.css?v=1103v6c"><script src="/assets/nav.js?v=1103d" defer></script>{lds}</head>
 <body><header class="top"><a class="brand" href="/"><img src="/assets/icon-64.png" alt="" width="32" height="32">The Lemon Index</a>
 <nav class="mainnav" aria-label="Main">{navlinks(path)}</nav><a class="yt" href="{YT}?sub_confirmation=1" rel="noopener">Subscribe</a></header>
 <main>{body}{CITE if path.startswith('/cars/') else ''}{'' if path == '/vote/' else ask_html(ask)}</main>
@@ -226,6 +226,21 @@ def tiles():
     cr = ' · '.join(dict.fromkeys(w for w in who if w))
     return f'<section class="tiles">{"".join(t)}</section><p class="tiles-cr">Photos: {E(cr)} (Wikimedia Commons, CC BY-SA)' + (' · *Tesla uses estimated sales.' if worst['est'] else '') + '</p>'
 
+def pimg(ph, alt, cls=''):
+    return f'<img class="{cls}" src="{ph["src"]}" alt="{E(alt)}" width="{ph["w"]}" height="{ph["h"]}" loading="lazy">' if ph else ''
+def who(*phs): return [ph['author'].split('\ufffd')[0].strip() for ph in phs if ph and ph.get('author')]
+def pcredit(names): names = list(dict.fromkeys(n for n in names if n)); return f'<p class="ph-cr">Photos: {E(" · ".join(names))} (Wikimedia Commons)</p>' if names else ''
+def pair(a, b, alts=('', '')): return f'<div class="ph-pair">{pimg(a, alts[0], "l")}{pimg(b, alts[1], "r")}</div>'
+def trio(phs, alts): return '<div class="ph-trio">' + ''.join(pimg(ph, al, f"c{i}") for i, (ph, al) in enumerate(zip(phs, alts))) + '</div>'
+def phero(eyebrow, title, sub, visual='', extra='', credit=''):
+    """The v6 page top: eyebrow, h1, one line, then the tool (extra) and the photos (visual)."""
+    v = f'<div class="ph-v">{visual}</div>' if visual else ''
+    return f'<section class="ph"><p class="ph-e">{eyebrow}</p><h1>{title}</h1><p class="ph-s">{sub}</p>{extra}{v}{credit}</section>'
+def qa_fold(html_):
+    """<h3>Q</h3><p>A</p> pairs -> tap-to-open rows."""
+    return re.sub(r'<h3>(.*?)</h3><p>(.*?)</p>', r'<details class="qa"><summary>\1</summary><p>\2</p></details>', html_)
+VOTE_IMG = lambda n: (lambda im: {'src': f'/assets/vote/{n}.webp', 'w': im.size[0], 'h': im.size[1], 'author': {'chevy': 'Ghostofakina', 'ford': 'Kevauto'}[n]})(__import__('PIL.Image', fromlist=['Image']).open(f'assets/vote/{n}.webp'))
+
 def hero_cards():
     """Two real cars, one great and one a lemon, as stacked report cards with their dial (exact-year Commons photos from data_photos.py)."""
     ph = json.load(open('data/photos.json', encoding='utf-8')); yrs = {f['id']: f for f in json.load(open('data/years.json', encoding='utf-8'))}
@@ -277,19 +292,19 @@ page(STUDY, 'The Most Reliable Cars, According to 1.6 Million Owner Complaints',
 
 # ---- studies index
 page('/studies/', 'Car Reliability Studies: Rankings From Owner Complaints | Lemon Index', 'Every Lemon Index study: the most and least reliable cars, brands and electric cars, measured with 1.6 million NHTSA owner complaints and U.S. sales.', f'''
-<section><h1>Studies</h1><p class="lede">Each study turns millions of public records into one clear ranking.</p>
-<a class="card" href="{STUDY}"><span class="kicker">Study #1</span><h2>The Most Reliable Cars, According to 1.6 Million Owner Complaints</h2><p>131 models, 22 brands. Toyota 4Runner 27 · Lexus 30 · Tesla 322 (est.)</p></a>
-<a class="card" href="/electric/"><span class="kicker">Electric cars</span><h2>The Most Reliable Electric Cars, Ranked by Owner Complaints</h2><p>22 EVs, plus fires, yearly cost, common problems and driver-assist crash reports.</p></a>
-<p class="note">Next up: cars that last past 300,000 miles, the most unreliable cars ever made, and the best used cars under $10K.</p></section>''',
+<div class="pg">{phero('Studies', 'Studies.', 'Millions of public records. One clear ranking each.')}
+<section class="tiles">
+<a class="tile" href="{STUDY}"><div class="tt"><p class="te">Study #1</p><h2>The most reliable cars.</h2><p class="ts">131 models. 1.6 million owner complaints.</p><span class="tl">Read the study <i>›</i></span></div><div class="tp">{pimg(mphoto('toyota-4runner'), 'Toyota 4Runner')}</div></a>
+<a class="tile" href="/electric/"><div class="tt"><p class="te">Electric cars</p><h2>The most reliable EVs.</h2><p class="ts">22 electric cars, plus fires and fuel cost.</p><span class="tl">See the ranking <i>›</i></span></div><div class="tp">{pimg(mphoto('tesla-model-s'), 'Tesla Model S')}</div></a></section>
+{pcredit(who(mphoto('toyota-4runner'), mphoto('tesla-model-s')))}
+<section class="pg-next"><h2>Coming next.</h2><p class="ph-s">Cars that pass 300,000 miles. The worst cars ever made. The best used cars under $10K.</p></section></div>''',
      ld=[{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Car Reliability Studies", "url": BASE + '/studies/', "hasPart": [{"@type": "Article", "headline": "The Most Reliable Cars, According to 1.6 Million Owner Complaints", "url": BASE + STUDY}]}])
 
 # ---- method
 def faq_ld(qa): return {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": t}} for q, _, t in qa]}
 METHOD_QA = [('Is it per car sold?', "Yes. Every score divides a car's complaints by how many were sold in the U.S. So Ford outselling Chevy doesn't make Ford look worse; a car only scores badly if it drew more complaints for each car on the road."), ("Isn't it just owners who skip maintenance?", "We only count complaints filed in a car's first 3 years, when it's nearly new and usually still under the factory warranty. That points at problems the car left the factory with, not a 15-year-old car that missed its oil changes."), ('Does it tell me how long a car will last?', "No. It measures early complaints, not lifespan. A truck can draw a lot of complaints in its first years and still run past 300,000 miles. Use it to see which years had problems, then check the car's own history."), ('Why so few complaints for a problem everyone knows about?', "Most owners never file with the government; they just go to a mechanic. So the counts are a small slice of real failures. That's fine for comparing cars, because every car is measured the same way, but don't read a count as the number of cars that broke."), ('Can you split it by engine or trim?', 'The government files list make, model and year, not the engine. Where the model name gives the engine away (BMW files the 328i and 335i separately, for example), we can split by it. Otherwise a score covers every engine sold that year.')]
 page('/method/', 'Method: How We Score Car Reliability | The Lemon Index', 'How we turn NHTSA safety complaints and U.S. sales into one reliability number per car, plus the caveats that come with it.', '''
-<article class="study"><p class="kicker">How it works</p><h1>How the Lemon Index works</h1>
-<p class="lede">One number per car and year: how many safety complaints owners filed, compared with an average car.</p>
-<div class="hw"><div><b>1</b><h3>Count complaints</h3><p>Every safety complaint owners filed with the U.S. government (NHTSA) in the car&#39;s first 3 years.</p></div>
+<div class="pg">''' + phero('How it works', 'One number per car.', 'Owner complaints per car sold, against the average car.') + '''<article class="study"><div class="hw"><div><b>1</b><h3>Count complaints</h3><p>Every safety complaint owners filed with the U.S. government (NHTSA) in the car&#39;s first 3 years.</p></div>
 <div><b>2</b><h3>Divide by cars sold</h3><p>So a car that sold a million doesn&#39;t look worse than one that sold ten thousand.</p></div>
 <div><b>3</b><h3>Compare with the average car</h3><p>100 = average. 50 = half the complaints. 200 = double.</p></div></div>
 <div class="hwm"><div class="ym-bar"><i class="ym-avg" style="left:40%"><span>average car = 100</span></i><i class="ym-pin" style="left:12%"><b>30: great</b></i><i class="ym-pin" style="left:80%"><b>200: lemon</b></i></div><div class="ym-ends"><span>fewer complaints</span><span>more complaints</span></div></div>
@@ -305,7 +320,7 @@ page('/method/', 'Method: How We Score Car Reliability | The Lemon Index', 'How 
 <li><b>Fuel economy:</b> EPA combined mpg and yearly fuel cost from fueleconomy.gov, across the versions sold that year.</li>
 <li><b>When problems show up:</b> the odometer reading owners gave in their complaints. Unlike the score, this uses every complaint for the model year, because high-mileage failures come years later. Readings of 0 or over 400,000 miles are left out.</li>
 <li><b>How serious:</b> complaints in which the owner reported a crash, a fire, an injury, a death or a tow. Owners report these; NHTSA doesn&#39;t confirm the cause.</li></ul>
-<h2>What people ask</h2><h3>Is it per car sold?</h3><p>Yes. Every score divides a car&#39;s complaints by how many were sold in the U.S. So Ford outselling Chevy doesn&#39;t make Ford look worse; a car only scores badly if it drew more complaints for each car on the road.</p><h3>Isn&#39;t it just owners who skip maintenance?</h3><p>We only count complaints filed in a car&#39;s first 3 years, when it&#39;s nearly new and usually still under the factory warranty. That points at problems the car left the factory with, not a 15-year-old car that missed its oil changes.</p><h3>Does it tell me how long a car will last?</h3><p>No. It measures early complaints, not lifespan. A truck can draw a lot of complaints in its first years and still run past 300,000 miles. Use it to see which years had problems, then check the car&#39;s own history.</p><h3>Why so few complaints for a problem everyone knows about?</h3><p>Most owners never file with the government; they just go to a mechanic. So the counts are a small slice of real failures. That&#39;s fine for comparing cars, because every car is measured the same way, but don&#39;t read a count as the number of cars that broke.</p><h3>Can you split it by engine or trim?</h3><p>The government files list make, model and year, not the engine. Where the model name gives the engine away (BMW files the 328i and 335i separately, for example), we can split by it. Otherwise a score covers every engine sold that year.</p><h2>Using the data</h2><p>The rankings are free to cite with a link to lemonindex.com (CC BY 4.0). The raw complaint data is public at NHTSA.</p></article>''',
+<h2>What people ask</h2>''' + qa_fold('''<h3>Is it per car sold?</h3><p>Yes. Every score divides a car&#39;s complaints by how many were sold in the U.S. So Ford outselling Chevy doesn&#39;t make Ford look worse; a car only scores badly if it drew more complaints for each car on the road.</p><h3>Isn&#39;t it just owners who skip maintenance?</h3><p>We only count complaints filed in a car&#39;s first 3 years, when it&#39;s nearly new and usually still under the factory warranty. That points at problems the car left the factory with, not a 15-year-old car that missed its oil changes.</p><h3>Does it tell me how long a car will last?</h3><p>No. It measures early complaints, not lifespan. A truck can draw a lot of complaints in its first years and still run past 300,000 miles. Use it to see which years had problems, then check the car&#39;s own history.</p><h3>Why so few complaints for a problem everyone knows about?</h3><p>Most owners never file with the government; they just go to a mechanic. So the counts are a small slice of real failures. That&#39;s fine for comparing cars, because every car is measured the same way, but don&#39;t read a count as the number of cars that broke.</p><h3>Can you split it by engine or trim?</h3><p>The government files list make, model and year, not the engine. Where the model name gives the engine away (BMW files the 328i and 335i separately, for example), we can split by it. Otherwise a score covers every engine sold that year.</p>''') + '''<h2>Using the data</h2><p>Free to cite with a link to lemonindex.com (CC BY 4.0). <a href="/data/">Download it</a>.</p></article></div>''',
      ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": "How We Score Car Reliability", "url": BASE + '/method/', "about": "Car reliability measured as NHTSA safety complaints per 100,000 U.S. sales"}, faq_ld([(q, '', a) for q, a in METHOD_QA])])
 
 # ---- model-year lookup (10-29, Elijah: "a per year / model lookup so people can look at their car's exact issues").
@@ -695,11 +710,10 @@ def loan_body():
     T = LOAN['tiers']
     opts = ''.join(f'<option value="{i}"{" selected" if i == 1 else ""}>{E(t["name"])} ({t["range"]})</option>' for i, t in enumerate(T))
     tbl = ''.join(f'<tr><td><b>{E(t["name"])}</b><br><small>{t["range"]}</small></td><td class="num">{t["new"]:.2f}%</td><td class="num">{t["used"]:.2f}%</td><td class="num">${t["pay_new"]}</td><td class="num">${t["pay_used"]}</td></tr>' for t in T)
-    used = bars3d([(t['name'], t['range'], t['used'], '#e8141c' if t['used'] > 12 else '#111214') for t in T], 22)
-    new = bars3d([(t['name'], t['range'], t['new'], '#e8141c' if t['new'] > 12 else '#111214') for t in T], 22)
+    mx = max(t['used'] for t in T)
+    rates = '<div class="lr">' + ''.join(f'<div class="lr-r"><span class="lr-n"><b>{E(t["name"])}</b><small>{t["range"]}</small></span><span class="lr-b"><i class="nw" style="width:{t["new"] / mx * 100:.1f}%"><em>{t["new"]:.1f}% new</em></i><i class="us{" hi" if t["used"] > 12 else ""}" style="width:{t["used"] / mx * 100:.1f}%"><em>{t["used"]:.1f}% used</em></i></span></div>' for t in T) + '</div>'
     return f"""
-<article class="study"><p class="kicker"><a href="/cars/">All cars</a> · Car loans</p><h1>Is your car loan rate fair?</h1>
-<p class="lede">Type the rate the dealer offered. We compare it with what people with your credit actually pay, and tell you what the difference costs.</p>
+<div class="pg">{phero('Car loans', 'Is your rate fair?', 'Type the rate the dealer offered. See what it costs you.', visual=pimg(mphoto('honda-accord', 2018), 'Honda Accord'))}<article class="study">
 <form id="loanf" class="loan-f" autocomplete="off">
 <label>Your credit score<select name="tier">{opts}</select></label>
 <label>New or used<select name="kind"><option value="used" selected>Used car</option><option value="new">New car</option></select></label>
@@ -709,14 +723,13 @@ def loan_body():
 <button class="btn" type="submit">Check my rate</button></form>
 <div id="loanout" aria-live="polite"></div>
 <script id="rates" type="application/json">{json.dumps(LOAN, separators=(",", ":"))}</script>
-<h2>Average used-car loan rate by credit score</h2>{used}
-<h2>Average new-car loan rate by credit score</h2>{new}
+<h2>What people pay. <span class="h2s">Average APR by credit score.</span></h2>{rates}
 <div class="tw"><table><thead><tr><th>Credit</th><th>New APR</th><th>Used APR</th><th>New payment</th><th>Used payment</th></tr></thead><tbody>{tbl}</tbody></table></div>
 <p class="note">Averages for loans opened in {LOAN["as_of"]}, from Experian&#39;s State of the Automotive Finance Market (VantageScore 4.0). Your own rate also depends on the loan length, the car&#39;s age and the lender.</p>
 <h2>How dealers make money on your loan</h2>
 <p>When a dealer arranges your loan, the lender approves a rate (the &ldquo;buy rate&rdquo;) and the dealer can add points on top. Federal settlements with several big lenders capped that markup at about 1 to 1.25 points, and lenders commonly cap it at 2 to 3. That markup is negotiable.</p>
 <ol class="beats"><li><b>Get pre-approved first.</b> A quote from your bank or a credit union is your leverage.</li><li><b>Ask the dealer to beat it.</b> If they can&#39;t, use your own loan.</li><li><b>Compare the total cost, not the monthly payment.</b> A longer loan lowers the payment and raises what you pay overall.</li></ol>
-<p class="note">General information, not financial advice. Check a specific car&#39;s problems and recalls before you buy: <a href="/cars/">look up any car</a> or <a href="/vin/">check a VIN</a>.</p></article>"""
+<p class="note">General information, not financial advice. Check a specific car&#39;s problems and recalls before you buy: <a href="/cars/">look up any car</a> or <a href="/vin/">check a VIN</a>.</p></article></div>"""
 # ---- free data (11-03, Elijah: "how do we give this data away for free with attribution" -> "build data page"). CC BY 4.0.
 # Only our own numbers go in the files: the Lemon Index score, NHTSA complaint counts and the transmission rate. No sales figures
 # (third-party), no prices (CarGurus/MarketCheck terms), no complaint text.
@@ -746,10 +759,10 @@ def _ds(name, desc, url, cols):
     return {"@context": "https://schema.org", "@type": "Dataset", "name": name, "description": desc, "url": BASE + '/data/', "license": "https://creativecommons.org/licenses/by/4.0/",
             "isAccessibleForFree": True, "creator": {"@type": "Organization", "name": "The Lemon Index", "url": BASE}, "dateModified": TODAY, "variableMeasured": [a for a, _ in cols],
             "distribution": [{"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": BASE + url}], "isBasedOn": "https://www.nhtsa.gov/nhtsa-datasets-and-apis"}
+DATA_SHEET = '<div class="tsh">' + ''.join(f'<span>{E(c["name"])}</span><span>{c["years"].split("-")[0]}–{c["years"].split("-")[-1][-2:]}</span><b class="{"good" if c["li"] < 100 else "bad"}">{c["li"]}</b>' for c in (CARS[0], CARS[1], CARS[len(CARS) // 2], CARS[-2], CARS[-1])) + '</div>'
 page('/data/', 'Free Car Reliability Data (CSV, CC BY 4.0) | Lemon Index',
      'Download free car reliability data: the Lemon Index score, NHTSA owner complaints and transmission complaints for every model year we cover. Free to use with credit.',
-     f"""<article class="study"><p class="kicker"><a href="/cars/">All cars</a> · Free data</p><h1>Free car reliability data</h1>
-<p class="lede">Use it in your article, video, app, class or research. It&#39;s free, and it stays free. All we ask is that you credit us.</p>
+     f"""<div class="pg">{phero('Free data', 'Take it. Credit us.', 'For articles, videos, apps and research. Free under CC BY 4.0.', visual=DATA_SHEET)}<article class="study">
 <div class="lic"><b>License: <a href="https://creativecommons.org/licenses/by/4.0/" rel="license noopener">CC BY 4.0</a></b><p>You can copy, share, chart, remix and even use it commercially. Just credit <q>The Lemon Index (lemonindex.com)</q> and link back when you can.</p></div>
 <h2>How to credit us</h2>
 {_copy('In an article or post', 'Source: The Lemon Index (lemonindex.com), based on NHTSA owner complaints.')}
@@ -759,10 +772,10 @@ page('/data/', 'Free Car Reliability Data (CSV, CC BY 4.0) | Lemon Index',
 <div class="dls"><a class="dl" href="/data/lemon-index-by-year.csv" download><b>Lemon Index by model year</b><span>{DL1[0]:,} model years · CSV · {_kb(DL1[1])}</span></a>
 <a class="dl" href="/data/transmission-complaints-by-year.csv" download><b>Transmission complaints by model year</b><span>{DL2[0]:,} model years · CSV · {_kb(DL2[1])}</span></a></div>
 <p class="note">Updated {TODAY}. Line 1 of each file is the credit line, starting with #. In a spreadsheet just delete that row; in code, skip comment lines (pandas: <code>comment=&#39;#&#39;</code>).</p>
-<h2>What&#39;s in the files</h2><h3>Lemon Index by model year</h3>{_tbl(_cols1)}<h3>Transmission complaints by model year</h3>{_tbl(_cols2)}
+<details class="yd"><summary>What&#39;s in the files</summary><h3>Lemon Index by model year</h3>{_tbl(_cols1)}<h3>Transmission complaints by model year</h3>{_tbl(_cols2)}</details>
 <h2>Where the numbers come from</h2><p>Owner complaints come from NHTSA, the U.S. government&#39;s vehicle safety agency, which publishes them for free. The score and the transmission matching are ours. <a href="/method/">See exactly how the index works</a>.</p>
 <p class="note">Not included: car prices, sales figures and complaint text (other sources own those). Please don&#39;t present the data as an official rating, and don&#39;t suggest we endorse you. Using it somewhere big, or want a custom cut? <a href="/contact/">Tell us</a>. We&#39;d love to see it.</p>
-</article><script src="/assets/data.js?v=1103" defer></script>""",
+</article></div><script src="/assets/data.js?v=1103" defer></script>""",
      ld=[_ds('Lemon Index car reliability by model year', 'Owner complaints per car sold for each model year (100 = the average car), plus each year&#39;s top problem areas, from NHTSA owner complaints.'.replace('&#39;', "'"), '/data/lemon-index-by-year.csv', _cols1),
          _ds('Transmission complaints by car model year', 'Transmission-related NHTSA owner complaints for each model year, as a count and per 100,000 cars sold.', '/data/transmission-complaints-by-year.csv', _cols2)])
 
@@ -770,8 +783,7 @@ page('/data/', 'Free Car Reliability Data (CSV, CC BY 4.0) | Lemon Index',
 TS = '0x4AAAAAAFyhvovKDo2j0cLa'   # Turnstile site key (public, 11-03); the secret lives only in the lemon-survey Worker as TURNSTILE_SECRET
 page('/vote/', 'Vote: Most Reliable Car Brand, Best Insurance, Best Years | Lemon Index',
      'Vote on the most reliable car brand, the best and worst car insurance, the best used SUV, truck and model years. See what won this week, this month or all time.',
-     f'''<section class="vote-hero"><p class="kicker"><a href="/cars/">All cars</a> · Vote</p><h1>What do car owners really think?</h1>
-<p>Tap through quick polls on brands, models, years and insurance, then see what everyone picked this week, month or all time.</p></section>
+     f'''{phero('Vote', 'What do owners really think?', 'Quick polls. See what won this week, month or all time.', visual=pair(VOTE_IMG('chevy'), VOTE_IMG('ford'), ('Chevy Silverado', 'Ford F-150')))}
 <main id="vote" data-site="lemon" data-ts="{TS}"></main><script src="/assets/vote.js?v=1103h" defer></script>''',
      ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": "Lemon Index car polls", "url": BASE + '/vote/'}])
 page('/car-loan-rates/', 'Car Loan Rates by Credit Score: Is Your Rate Fair? | Lemon Index',
@@ -782,10 +794,14 @@ page('/car-loan-rates/', 'Car Loan Rates by Credit Score: Is Your Rate Fair? | L
 pick = {}
 for f in YEARS: pick.setdefault(BYNAME[f['name']]['brand'], []).append([f['name'], f['id'], [v['y'] for v in f['years']]])
 pick = dict(sorted((b, sorted(m)) for b, m in pick.items()))
-lst = ''.join(f'<div><h3>{E(b)}</h3>' + ''.join(f'<a href="/cars/{i}/">{E(n)}</a>' for n, i, _ in m) + '</div>' for b, m in pick.items())
+def mcard(n, i):
+    li = BYNAME[n]['li']; ph = mphoto(i)
+    return f'<a class="mc" href="/cars/{i}/"><span class="mc-p">{pimg(ph, n) if ph else ""}</span><b>{E(n.split(" ", 1)[1] if " " in n else n)}</b><span class="{"good" if li < 100 else "bad"}">{li}</span></a>'
+lst = ''.join(f'<div class="mb"><h3>{E(b)}</h3><div class="mg">' + ''.join(mcard(n, i) for n, i, _ in m) + '</div></div>' for b, m in pick.items())
 page('/cars/', 'Look Up Your Car: Problems by Model and Year | The Lemon Index', f'Pick your car and model year to see its owner complaints, its top problems and how it compares with every other year. {len(YEARS)} models, 2000-2022.', f'''
-{finder('Look up your car')}
-<section><h2>Every model</h2><div class="brands">{lst}</div></section>''',
+<div class="pg"><div class="ph ph-f">{finder('<span class="ph-e">Look up</span>Look up your car.', 'Every model year, 2000 to 2022. Free.')}</div>
+<section><h2>Every model. <span class="h2s">Score in the corner: 100 is average, lower is better.</span></h2><div class="mbs">{lst}</div></section>
+<p class="ph-cr">Photos: Wikimedia Commons contributors (CC BY-SA and similar). Credits on each car&#39;s page.</p></div>''',
      ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": "Look up your car", "url": BASE + '/cars/'}])
 yurls.insert(0, '/cars/')
 
@@ -839,10 +855,17 @@ for a, b in PAIRS:
 <p class="note"><a href="{CARU(A)}">Every {E(A["name"])} year</a> · <a href="{CARU(B)}">Every {E(B["name"])} year</a> · <a href="/method/">How the index works</a></p></article>''', kind='article',
          ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": title, "url": BASE + CMPU(a, b)}])
     curls.append(CMPU(a, b))
-cl = ''.join(f'<li><a href="{u}">{E(FY[a]["name"])} vs {E(FY[b]["name"])}</a></li>' for (a, b), u in zip([p for p in PAIRS if CMPU(*p) in curls], curls))
+_cp = list(zip([p for p in PAIRS if CMPU(*p) in curls], curls))
+cl = ''.join(f'<li><a href="{u}">{E(FY[a]["name"])} vs {E(FY[b]["name"])}</a></li>' for (a, b), u in _cp)
+_top, _seen = [], set()   # 8 match-ups, no car twice, so it isn't all Camry
+for (a, b), u in _cp:
+    if mphoto(a) and mphoto(b) and a not in _seen and b not in _seen and len(_top) < 8: _top.append((a, b, u)); _seen |= {a, b}
+mcards = ''.join(f'<a class="vs" href="{u}"><span class="vs-p">{pimg(mphoto(a), FY[a]["name"], "l")}{pimg(mphoto(b), FY[b]["name"], "r")}</span><b>{E(FY[a]["name"])} <i>vs</i> {E(FY[b]["name"])}</b></a>' for a, b, u in _top)
 page('/compare/', 'Car Reliability Comparisons: Model vs Model | The Lemon Index', f'{len(curls)} head-to-head reliability comparisons of popular rivals, year by year, from NHTSA owner complaints per car sold.', f'''
-<section><h1>Compare cars</h1><p class="lede">Put up to 3 cars side by side: problems, recalls, fuel economy and crash tests.</p><div id="cmpx" class="cmpx"><p class="note">Loading…</p></div></section>
-<section><h2>Popular match-ups</h2><ul class="cmp">{cl}</ul></section><script src="/assets/compare.js?v=1102" defer></script>''',
+<div class="pg">{phero('Compare', 'Any two cars.', 'Problems, recalls, mpg and crash tests, side by side.', visual=pair(mphoto('toyota-rav4', 2019), mphoto('honda-cr-v', 2017), ('Toyota RAV4', 'Honda CR-V')), extra='<div id="cmpx" class="cmpx"><p class="note">Loading…</p></div>')}
+<section><h2>Popular match-ups.</h2><div class="vss">{mcards}</div>
+<details class="yd"><summary>All {len(curls)} match-ups</summary><ul class="cmp">{cl}</ul></details></section>
+{pcredit(who(*[mphoto(x) for a, b, _ in _top for x in (a, b)], mphoto('toyota-rav4', 2019), mphoto('honda-cr-v', 2017)))}</div><script src="/assets/compare.js?v=1102" defer></script>''',
      ld=[{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Car reliability comparisons", "url": BASE + '/compare/'}])
 curls.insert(0, '/compare/')
 
@@ -898,9 +921,10 @@ for f in YEARS:
     CJ[f['id']] = [f['name'], yy]
 json.dump(CJ, open('assets/cars.json', 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
 page('/vin/', 'Free VIN Check: Decode Any VIN and See Its Problems | The Lemon Index', 'Type a 17-character VIN to see the exact year, engine and factory, then that car\'s owner complaints and recalls. Free, from the U.S. government VIN database.', f'''
-<section class="finder"><h1>Free VIN check</h1><p class="lede">Type the 17-character VIN to see exactly what car it is, then its problems and recalls.</p>
+<div class="pg"><section class="finder ph ph-f"><h1><span class="ph-e">VIN check</span>Check any VIN.</h1><p class="lede">See exactly what car it is, then its problems and recalls.</p>
 <form id="vinf" class="vinf" autocomplete="off"><input name="vin" maxlength="20" placeholder="e.g. 1FTEW1EG8JKF05094" aria-label="VIN" spellcheck="false"><button class="btn" type="submit">Check</button></form>
-<div id="vinout" class="vinout"></div><p class="note">The VIN is on the driver-side dashboard (look through the windshield), the driver door frame, and your registration or insurance card. Decoded by NHTSA&#39;s free vPIC database; we don&#39;t store it.</p>
-<script id="pick" type="application/json">{json.dumps(PICK, ensure_ascii=False).replace("</", "<\\/")}</script><script id="valias" type="application/json">{json.dumps(VALIAS, separators=(",", ":"))}</script><script src="/assets/vin.js?v=1102b" defer></script></section>''')
+<div id="vinout" class="vinout"></div><p class="fnote">It&#39;s on the dashboard by the windshield, the door frame, or your registration. We don&#39;t store it.</p>
+<div class="ph-v">{pimg(mphoto('toyota-camry', 2019), 'Toyota Camry')}</div>{pcredit(who(mphoto('toyota-camry', 2019)))}
+<script id="pick" type="application/json">{json.dumps(PICK, ensure_ascii=False).replace("</", "<\\/")}</script><script id="valias" type="application/json">{json.dumps(VALIAS, separators=(",", ":"))}</script><script src="/assets/vin.js?v=1102b" defer></script></section></div>''')
 shutil.copytree('assets', f'{OUT}/assets', dirs_exist_ok=True); shutil.copy('data/survey.json', f'{OUT}/assets/survey-q.json'); shutil.copy('data/votes.json', f'{OUT}/assets/votes.json')
 print('built', len(urls), 'pages into', OUT)

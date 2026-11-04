@@ -8,9 +8,12 @@ from PIL import Image, ImageDraw
 HERE = os.path.dirname(os.path.abspath(__file__)); os.chdir(HERE)
 SRC = sys.argv[1]
 # checked by eye 11-03: classic/old-generation, police, crashed or cut-off photos -> no photo rather than a wrong one
-SKIP = {'chevrolet-impala', 'mercedes-benz-e-class', 'audi-a4', 'nissan-maxima', 'tesla-model-x', 'chrysler-town-and-country', 'dodge-charger',
-        'subaru-crosstrek', 'mazda-cx-5', 'ford-taurus', 'dodge-journey', 'tesla-model-3', 'ford-explorer'}
-ALIAS = {'mercedes-benz-glk/glc': 'mercedes-benz-glc', 'mercedes-benz-m/gle': 'mercedes-benz-gle'}
+SKIP = set()
+# 11-03 second pass (Elijah listed every blank row): a year in the search gets the right generation; each checked on a contact sheet
+ALIAS = {'mercedes-benz-glk/glc': 'mercedes-benz-glc', 'mercedes-benz-m/gle': 'mercedes-benz-gle',
+         **{k: f'{y}-{k}' for y, k in [(2017, 'mercedes-benz-e-class'), (2017, 'audi-a4'), (2016, 'nissan-maxima'), (2019, 'porsche-cayenne'), (2017, 'nissan-rogue'),
+            (2018, 'subaru-crosstrek'), (2017, 'mazda-cx-5'), (2014, 'chevrolet-impala'), (2013, 'ford-taurus'), (2015, 'dodge-charger'), (2014, 'dodge-journey'),
+            (2019, 'audi-a6'), (2011, 'chrysler-town-and-country'), (2016, 'ford-explorer'), (2018, 'tesla-model-3'), (2016, 'tesla-model-x'), (2016, 'toyota-tacoma')]}}
 CR = json.load(open(os.path.join(SRC, 'credits.json'), encoding='utf-8'))
 fid = lambda n: n.lower().replace(' ', '-').replace('(', '').replace(')', '').replace('+', 'plus').replace('&', 'and')
 import csv
