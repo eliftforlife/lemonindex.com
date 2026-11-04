@@ -146,6 +146,6 @@ for c in EVC:
 <h2>Recalls</h2><p>{rec_note}.{" The newest:" if rec else ""}</p><ul class="recalls">{rec}</ul>
 {sg}
 <p class="note">Complaints {WIN}. {E(SRC_NOTE)} Sales source: {E(c["src"])}.</p></article>''', kind='article',
-         ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": title, "url": BASE + EVU(c)}])
+         ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": title, "url": BASE + EVU(c)}], vis=(pimg(mphoto(c['slug']), c['name']) + pcredit(who(mphoto(c['slug'])))) if mphoto(c['slug']) else '')
     eurls.append(EVU(c))
 print('electric pages:', len(eurls))

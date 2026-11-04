@@ -15,7 +15,7 @@ from families import FAMILIES
 import mysales
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-Y0, Y1, MAX_MILES = 2000, 2022, 400_000
+Y0, Y1, MAX_MILES = 2000, 2025, 400_000
 # Reuse data_years.py's tables (old NHTSA model names, problem-area names) without running it.
 _src = ast.parse(open(os.path.join(HERE, 'data_years.py'), encoding='utf-8').read())
 _lit = {t.targets[0].id: ast.literal_eval(t.value) for t in _src.body

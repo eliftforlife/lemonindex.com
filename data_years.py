@@ -9,7 +9,7 @@ LEMON = r'C:\Users\elift\Desktop\Eliftforlife youtube\3 Lemon Index'
 sys.path.insert(0, os.path.join(LEMON, 'autopilot', 'lib'))
 from families import FAMILIES
 import mysales
-Y0, Y1, WINDOW = 2000, 2022, 3
+Y0, Y1, WINDOW = 2000, 2025, 3
 OUTD = next(d for d in os.scandir(LEMON) if d.name.startswith('v3-unreliable')).path + r'\data\out'
 PART = {'ELECTRICAL SYSTEM': 'electrical', 'POWER TRAIN': 'transmission & drivetrain', 'SERVICE BRAKES': 'brakes', 'VEHICLE SPEED CONTROL': 'speed control',
         'FUEL/PROPULSION SYSTEM': 'fuel or EV drive system', 'FORWARD COLLISION AVOIDANCE': 'automatic emergency braking', 'VISIBILITY/WIPER': 'wipers & visibility',
@@ -67,6 +67,32 @@ for f, *_ in _pats:
         my[(f, y)] = dict(li=min(round(100 * n / (s * base[y])), round(100 * n / (B[f][y] * baseB[y]))), n=n, sold=s)
 print('2000-2009 model years scored:', sum(1 for k in my if k[1] < 2010))
 
+# 11-03 (Elijah: "add newer car years, with a disclaimer"): model years 2023-2025 as an EARLY READ. Their 3-year windows aren't over
+# (the complaint file runs to Oct 2026), so each one counts every complaint filed so far and is compared with the average car of the SAME
+# model year, which has had exactly as long to draw complaints. Same sales rules as above. Flagged early=True; the pages say so.
+N0, N1 = 2023, 2025
+nwin = defaultdict(lambda: defaultdict(int))
+for make, model, year in _con.execute(f'SELECT make, model, year FROM complaints WHERE year BETWEEN {N0} AND {N1}'):
+    fam = next((f for f, mk, rx in _pats if make in mk and rx.fullmatch(model)), None)
+    if fam: nwin[fam][mysales.code(fam, year)] += 1
+NS, NB = {}, {}
+for f, *_ in _pats:
+    NS[f], into, _ = mysales.merge(sales[f], nwin[f], f, N0, N1); NB[f] = mysales.blend(NS[f], into, sales[f])
+def nbase(D):
+    out = {}
+    for y in range(N0, N1 + 1):
+        fs = [f for f, *_ in _pats if D[f].get(y)]; out[y] = sum(nwin[f][y] for f in fs) / max(1, sum(D[f][y] for f in fs))
+    return out
+nb_, nbB = nbase(NS), nbase(NB)
+EARLY = set()
+for f, *_ in _pats:
+    for y in range(N0, N1 + 1):
+        s_ = NS[f].get(y)
+        if not s_ or s_ < MIN_SOLD: continue
+        n = nwin[f][y]
+        my[(f, y)] = dict(li=min(round(100 * n / (s_ * nb_[y])), round(100 * n / (NB[f][y] * nbB[y]))), n=n, sold=s_); EARLY.add((f, y))
+print('2023-2025 early-read model years:', len(EARLY))
+
 con = sqlite3.connect(os.path.join(LEMON, 'data', 'complaints.db'))
 pats = [(fam, set(make.split('|')), re.compile(rx)) for fam, make, rx, _, _ in FAMILIES]
 comp = defaultdict(lambda: defaultdict(int)); tot = defaultdict(int); ids = defaultdict(lambda: defaultdict(list))
@@ -114,7 +140,7 @@ for fam, _, _ in pats:
         cs = [(c, k) for c, k in sorted(comp[(fam, y)].items(), key=lambda x: -x[1]) if c not in ('UNKNOWN OR OTHER', 'UNKNOWN')]
         n = tot[(fam, y)] or 1
         parts = [[part(c), round(100 * k / n)] for c, k in cs[:5]]
-        yrs.append(dict(y=y, li=m['li'], n=m['n'], sold=m['sold'], parts=parts, quotes=quotes(fam, y, [c for c, _ in cs[:2]])))
+        yrs.append(dict(y=y, li=m['li'], n=m['n'], sold=m['sold'], parts=parts, quotes=quotes(fam, y, [c for c, _ in cs[:2]])) | ({'early': True} if (fam, y) in EARLY else {}))
     if yrs: data.append(dict(id=idof(fam), name=fam, years=yrs))
 os.makedirs('data', exist_ok=True)
 json.dump(data, open('data/years.json', 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
