@@ -13,7 +13,7 @@ a { color: inherit; }
 .mainnav a { text-decoration: none; padding: 7px 10px; border-radius: 999px; white-space: nowrap; color: var(--ink2); }
 .mainnav a:hover { background: var(--soft); color: var(--ink); }
 .mainnav a.on { background: var(--lemon-soft); color: var(--ink); font-weight: 800; }
-.top .yt { background: var(--ink); color: #fff; border-radius: 999px; padding: 7px 14px; text-decoration: none; font-weight: 700; font-size: 15px; white-space: nowrap; }
+.top .yt { background: var(--ink); color: #fff; border-radius: 999px; padding: 7px 14px; text-decoration: none; font-weight: 700; font-size: 15px; white-space: nowrap; flex: none; }   /* 11-04: never squeezed (the text spilled out of the pill) */
 main { max-width: 1280px; margin: 0 auto; padding: 0 16px 40px; }
 section, article { padding-block: 40px 8px; }
 h1, h2, h3 { font-family: Archivo, Inter, system-ui, sans-serif; letter-spacing: -.018em; line-height: 1.08; text-wrap: balance; margin: 0 0 12px; }
@@ -719,6 +719,7 @@ h2 { font-size: clamp(26px, 3.6vw, 40px); line-height: 1.1; }
 /* ---- 11-03 v6 inner pages: same rhythm as the home page */
 .pg { display: flex; flex-direction: column; gap: clamp(72px, 9vw, 128px); padding-bottom: 40px; }
 .pg > section, .pg > article { margin: 0; }
+.pg > .ph { margin-left: auto; margin-right: auto; }   /* 11-04: the margin: 0 above pinned every page hero to the left on wide screens */
 .pg > .ph-cr { margin-top: calc(-1 * clamp(72px, 9vw, 128px) + 12px); }
 .pg h2 { font-size: clamp(28px, 3.6vw, 44px); letter-spacing: -.03em; line-height: 1.08; }
 .pg h2 .h2s { display: block; font-size: .5em; letter-spacing: -.01em; margin-top: 6px; color: var(--mute); font-weight: 500; }
