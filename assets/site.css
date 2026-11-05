@@ -73,7 +73,7 @@ input[type=search]:focus, select:focus { outline: 2px solid var(--lemon); border
 td.pw { color: var(--ink2); font-size: 14px; white-space: nowrap; }
 /* explorer */
 .ex { scroll-margin-top: 70px; }
-.exbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 16px 0 12px; position: sticky; top: 57px; z-index: 3; background: rgba(255, 255, 255, .95); padding: 10px 0; }
+.exbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 16px 0 12px; position: sticky; top: 52px; z-index: 3; background: rgba(255, 255, 255, .95); padding: 10px 0; }
 .exbar #xq { flex: 1 1 240px; }
 .tabs { display: flex; gap: 4px; background: var(--soft); border-radius: 12px; padding: 4px; flex-wrap: wrap; }
 .tabs button { font: inherit; font-size: 15px; font-weight: 700; border: 0; background: transparent; border-radius: 9px; padding: 8px 12px; cursor: pointer; color: var(--ink2); }
@@ -946,3 +946,12 @@ details.qa p { margin: 0 0 18px; color: var(--ink2); max-width: 65ch; }
 .evc .evs.good { color: #1a8a3c; } .evc .evs.bad { color: #d70015; }
 .evc small { font-size: 12px; color: var(--mute); text-align: center; }
 @media (max-width: 600px) { .evg { grid-template-columns: repeat(2, minmax(0, 1fr)); } .evc .mc-p { height: 64px; } .evc .mc-p img { max-height: 64px; } }
+/* 11-05 YouTube score column next to the per-year complaint bars (build.py ybars_yt) */
+.yyears .yb.yt2 .b, .yyears .yb.yt2 .bl { grid-template-columns: 44px minmax(0, 1fr) 38px minmax(0, .62fr) 30px !important; gap: 8px; }
+.yb.yt2 .yth2 { font-size: 12px; font-weight: 700; color: var(--mute); margin-bottom: 6px; } .yb.yt2 .yth2 em { display: block; font-style: normal; font-weight: 500; }
+.yb.yt2 .yth2 span:nth-child(2), .yb.yt2 .yth2 span:nth-child(4) { text-align: left; }
+.yb.yt2 .bt.ytb { height: 16px; } .yb.yt2 .bt.ytb i { background: #a1a1a6; } .yb.yt2 .bt.ytb.up i { background: #1a8a3c; } .yb.yt2 .bt.ytb.dn i { background: #d0453a; } .yb.yt2 .ytn { color: #1d1d1f; font-size: 14px; } .yb.yt2 .mute { color: var(--mute); font-weight: 600; }
+.yb.yt2 .b.old .bn { color: var(--mute); } .yb.yt2 .bt.na { background: repeating-linear-gradient(90deg, var(--soft) 0 6px, transparent 6px 12px); }
+
+/* header v7 (11-05): the round lemon logo; the old .top / .mainnav rules above are unused now */
+.gh { --gh-logo-r: 50%; }
