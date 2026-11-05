@@ -35,6 +35,8 @@ EFAQ = [('What is the most reliable electric car?', f'By owner complaints per ca
         ('Which electric car has the most problems?', f'The {worst["name"]} ({worst["li"]}), then the {RK[-2]["name"]} ({RK[-2]["li"]}) and the {RK[-3]["name"]} ({RK[-3]["li"]}). Their top complaint area: {ep(worst["issues"][0][0])}.'),
         ('Do electric cars catch fire more than gas cars?', f'Fire complaints are rare for both: {P["ev"]["fire100k"]} per 100,000 EVs sold and {P["gas"]["fire100k"]} per 100,000 other cars, in the first year or two. See the fire page for the details.'),
         ('Why does Tesla score badly?', 'Mostly one system. About 6 in 10 Model 3 and Model Y complaints are about automatic emergency braking, the car braking hard for nothing ("phantom braking"). Take those out and both rank among the best EVs.')]
+evcards = ''.join(f'<a class="evc" href="{EVU(c)}"><span class="evr">#{c["rank"]}</span><span class="mc-p">{pimg(mphoto(c["slug"]), c["name"]) if mphoto(c["slug"]) else ""}</span><b>{E(c["name"])}{"*" if c["small"] else ""}</b>'
+                  f'<span class="evs {cls(c["li"])}">{c["li"]}</span><small>{E(ep(c["issues"][0][0])) if c["issues"] else ""}</small></a>' for c in RK)   # 11-04 (Elijah): photo cards like the lookup grid, less text
 efaq = ''.join(f'<details><summary>{E(q)}</summary><p>{E(a)}</p></details>' for q, a in EFAQ)
 topics = [('/electric/fires/', 'Do electric cars catch fire more?', f'{P["ev"]["fire100k"]} fire complaints per 100,000 EVs vs {P["gas"]["fire100k"]} for other cars'),
           ('/electric/cost/', 'What an EV costs to drive per year', 'EPA yearly fuel cost for every EV vs its gas twin or rival'),
@@ -44,10 +46,10 @@ cards = ''.join(f'<a class="card" href="{u}"><h2>{E(h)}</h2><p>{E(s)}</p></a>' f
 page('/electric/', 'The Most Reliable Electric Cars, Ranked by Owner Complaints | The Lemon Index',
      f'{len(RK)} electric cars ranked by NHTSA safety complaints per car sold, model years {EV["years"][0]}-{EV["years"][1]}. Most reliable: {best["name"]}. Least: {worst["name"]}. Plus fires, yearly cost and driver-assist crashes.', f'''
 <div class="pg">{phero('Electric cars', 'The most reliable EVs.', f'Every one drew more complaints than the average car. The {E(best["name"])} came closest.', visual=trio([mphoto('chevrolet-bolt'), mphoto('tesla-model-s'), mphoto('tesla-model-y')], ['Chevrolet Bolt', 'Tesla Model S', 'Tesla Model Y']), credit=pcredit(who(mphoto('chevrolet-bolt'), mphoto('tesla-model-s'), mphoto('tesla-model-y'))))}<article class="study">
-<div class="stats"><div><b>{len(RK)}</b><span>electric cars ranked</span></div><div><b>{P["ev"]["sold"]:,}</b><span>sold in the U.S., {EV["years"][0]}-{EV["years"][1]}</span></div><div><b>{ev_x}×</b><span>the complaints of other cars, per car sold</span></div><div><b>{best["li"]}</b><span>best score: {E(best["name"])}</span></div></div>
-<p class="sub">Lemon Index = safety complaints {WIN}, per car sold, against the average car of the same model year. <b>100 is average, lower is better.</b></p>
-<div class="tw"><table><thead><tr><th>#</th><th>Electric car</th><th>Index</th><th>Compared with average</th><th>Sold in the U.S.</th><th>Top complaint</th></tr></thead><tbody>{rows}</tbody></table></div>
-<p class="note">* Under 50,000 sold: a smaller sample, so read it as a rough score. What it means for you: an EV's software and driver-assist features cause many of its complaints, so check the top complaint before you buy. {E(SRC_NOTE)}</p>
+<div class="stats"><div><b>{len(RK)}</b><span>electric cars ranked</span></div><div><b>{ev_x}×</b><span>the complaints of gas cars, per car sold</span></div><div><b>{best["li"]}</b><span>best: {E(best["name"])}</span></div></div>
+<p class="sub">Lower is better. <b>100 = the average car.</b> Tap any EV for its problems, recalls, range and yearly cost.</p>
+<div class="evg">{evcards}</div>
+<p class="note">* Under 50,000 sold: a rough score. {E(SRC_NOTE)}</p>
 <h2>More electric-car data</h2><div class="stack">{cards}</div>
 <section class="faq"><h2>Questions</h2>{efaq}</section></article></div>''', kind='article',
      ld=[{"@context": "https://schema.org", "@type": "Dataset", "name": "Electric car reliability by NHTSA complaints per car sold", "url": BASE + '/electric/', "creator": {"@type": "Organization", "name": "The Lemon Index"},

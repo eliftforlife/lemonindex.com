@@ -2,11 +2,11 @@
 "lexus-es": {
 "src": "/assets/cars/m-lexus-es.webp",
 "w": 900,
-"h": 425,
-"author": "Alexander Migl",
+"h": 354,
+"author": "Kevauto",
 "license": "CC BY-SA 4.0",
-"page": "https://commons.wikimedia.org/wiki/File%3A2022_Lexus_ES_350_%28GSZ10%29_1X7A0296.jpg",
-"title": "File:2022 Lexus ES 350 (GSZ10) 1X7A0296.jpg"
+"page": "https://commons.wikimedia.org/wiki/File%3A2019_Lexus_ES_350%2C_front_5.19.20.jpg",
+"title": "File:2019 Lexus ES 350, front 5.19.20.jpg"
 },
 "lexus-rx": {
 "src": "/assets/cars/m-2017-lexus-rx-350.webp",
@@ -83,11 +83,11 @@
 "mercedes-benz-c-class": {
 "src": "/assets/cars/m-2015-mercedes-benz-c-class.webp",
 "w": 900,
-"h": 516,
-"author": "Navigator84",
-"license": "CC BY-SA 4.0",
-"page": "https://commons.wikimedia.org/wiki/File%3AMercedes-Benz_C-Class_S204_facelift_China_2015-04-14.jpg",
-"title": "File:Mercedes-Benz C-Class S204 facelift China 2015-04-14.jpg"
+"h": 357,
+"author": "Charles from Port Chester, New York",
+"license": "CC0",
+"page": "https://commons.wikimedia.org/wiki/File%3AMercedes-Benz_C300_Bluetec_AMG_Line_Premium%2B_%28W205%2C_2015%29_%2854864161719%29.jpg",
+"title": "File:Mercedes-Benz C300 Bluetec AMG Line Premium+ (W205, 2015) (54864161719).jpg"
 },
 "nissan-maxima": {
 "src": "/assets/cars/m-2016-nissan-maxima.webp",
@@ -146,11 +146,11 @@
 "chevrolet-silverado": {
 "src": "/assets/cars/m-chevrolet-silverado.webp",
 "w": 900,
-"h": 547,
-"author": "Ghostofakina",
+"h": 409,
+"author": "Kevauto",
 "license": "CC BY-SA 4.0",
-"page": "https://commons.wikimedia.org/wiki/File%3A2019_Chevrolet_Silverado_1500_Crew_Cab_LT_%28front%29%2C_10.20.19.jpg",
-"title": "File:2019 Chevrolet Silverado 1500 Crew Cab LT (front), 10.20.19.jpg"
+"page": "https://commons.wikimedia.org/wiki/File%3A2017_Chevrolet_Silverado_1500_LT_Z71.jpg",
+"title": "File:2017 Chevrolet Silverado 1500 LT Z71.jpg"
 },
 "gmc-terrain": {
 "src": "/assets/cars/m-gmc-terrain.webp",
@@ -182,11 +182,11 @@
 "porsche-cayenne": {
 "src": "/assets/cars/m-2019-porsche-cayenne.webp",
 "w": 900,
-"h": 446,
-"author": "Vauxford",
+"h": 593,
+"author": "Alexander Migl",
 "license": "CC BY-SA 4.0",
-"page": "https://commons.wikimedia.org/wiki/File%3A2019_Porsche_Cayenne_V6_Tiptronic_3.0_Front.jpg",
-"title": "File:2019 Porsche Cayenne V6 Tiptronic 3.0 Front.jpg"
+"page": "https://commons.wikimedia.org/wiki/File%3APorsche_Cayenne_Coup%C3%A9_Top_Marques_2019_IMG_1050.jpg",
+"title": "File:Porsche Cayenne Coupé Top Marques 2019 IMG 1050.jpg"
 },
 "toyota-sienna": {
 "src": "/assets/cars/m-toyota-sienna.webp",
@@ -299,11 +299,11 @@
 "nissan-altima": {
 "src": "/assets/cars/m-nissan-altima.webp",
 "w": 900,
-"h": 417,
+"h": 377,
 "author": "Kevauto",
 "license": "CC BY-SA 4.0",
-"page": "https://commons.wikimedia.org/wiki/File%3A2019_Nissan_Altima_SL_2.5L_front_3.22.19.jpg",
-"title": "File:2019 Nissan Altima SL 2.5L front 3.22.19.jpg"
+"page": "https://commons.wikimedia.org/wiki/File%3A2019_Nissan_Altima_SL_2.5L_front_%282%29_3.22.19.jpg",
+"title": "File:2019 Nissan Altima SL 2.5L front (2) 3.22.19.jpg"
 },
 "mazda-cx-5": {
 "src": "/assets/cars/m-2017-mazda-cx-5.webp",
@@ -326,11 +326,11 @@
 "chevrolet-traverse": {
 "src": "/assets/cars/m-chevrolet-traverse.webp",
 "w": 900,
-"h": 436,
-"author": "MercurySable99",
+"h": 444,
+"author": "Kevauto",
 "license": "CC BY-SA 4.0",
-"page": "https://commons.wikimedia.org/wiki/File%3A2017_Chevrolet_Traverse_LS_AWD%2C_08-14-2022.jpg",
-"title": "File:2017 Chevrolet Traverse LS AWD, 08-14-2022.jpg"
+"page": "https://commons.wikimedia.org/wiki/File%3A2018_Chevrolet_Traverse_front_3.17.18.jpg",
+"title": "File:2018 Chevrolet Traverse front 3.17.18.jpg"
 },
 "chevrolet-tahoe": {
 "src": "/assets/cars/m-chevrolet-tahoe.webp",
@@ -353,11 +353,11 @@
 "chevrolet-colorado": {
 "src": "/assets/cars/m-chevrolet-colorado.webp",
 "w": 900,
-"h": 615,
-"author": "Ethan Llamas",
+"h": 483,
+"author": "SsmIntrigue",
 "license": "CC BY-SA 4.0",
-"page": "https://commons.wikimedia.org/wiki/File%3A2017_Chevrolet_Colorado_2.8_LTZ_Z71_4x4_in_Orange_Crush%2C_front_right.jpg",
-"title": "File:2017 Chevrolet Colorado 2.8 LTZ Z71 4x4 in Orange Crush, front right.jpg"
+"page": "https://commons.wikimedia.org/wiki/File%3A2017_Chevrolet_Colorado_Z71%2C_Front_Left%2C_09-24-2020.jpg",
+"title": "File:2017 Chevrolet Colorado Z71, Front Left, 09-24-2020.jpg"
 },
 "kia-soul": {
 "src": "/assets/cars/m-kia-soul.webp",
@@ -371,20 +371,20 @@
 "chevrolet-impala": {
 "src": "/assets/cars/m-2014-chevrolet-impala.webp",
 "w": 900,
-"h": 526,
-"author": "Greg Gjerdingen from Willmar, USA",
-"license": "CC BY 2.0",
-"page": "https://commons.wikimedia.org/wiki/File%3A2014_Chevrolet_Impala_%289453488633%29.jpg",
-"title": "File:2014 Chevrolet Impala (9453488633).jpg"
+"h": 409,
+"author": "Alexander-93",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AChevrolet_Impala_%282014%E2%80%932020%29_1X7A7173.jpg",
+"title": "File:Chevrolet Impala (2014–2020) 1X7A7173.jpg"
 },
 "chevrolet-camaro": {
 "src": "/assets/cars/m-chevrolet-camaro.webp",
 "w": 900,
-"h": 372,
-"author": "Kevauto",
+"h": 338,
+"author": "MercurySable99",
 "license": "CC BY-SA 4.0",
-"page": "https://commons.wikimedia.org/wiki/File%3A2019_Chevrolet_Camaro_base%2C_front_11.9.19.jpg",
-"title": "File:2019 Chevrolet Camaro base, front 11.9.19.jpg"
+"page": "https://commons.wikimedia.org/wiki/File%3A2017_Chevrolet_Camaro_2LT_coupe_with_RS_package%2C_front_left%2C_05-24-2025.jpg",
+"title": "File:2017 Chevrolet Camaro 2LT coupe with RS package, front left, 05-24-2025.jpg"
 },
 "acura-mdx": {
 "src": "/assets/cars/m-acura-mdx.webp",
@@ -434,11 +434,11 @@
 "dodge-challenger": {
 "src": "/assets/cars/m-dodge-challenger.webp",
 "w": 900,
-"h": 444,
-"author": "User:McChizzle",
-"license": "Public domain",
-"page": "https://commons.wikimedia.org/wiki/File%3A2015_Dodge_Challenger_SRT_392_Jazz_Blue_Pearl.jpg",
-"title": "File:2015 Dodge Challenger SRT 392 Jazz Blue Pearl.jpg"
+"h": 377,
+"author": "Elise240SX",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2019_Dodge_Challenger_RT_in_White_Knuckle%2C_Front_Left%2C_04-21-2022.jpg",
+"title": "File:2019 Dodge Challenger RT in White Knuckle, Front Left, 04-21-2022.jpg"
 },
 "kia-optima": {
 "src": "/assets/cars/m-kia-optima.webp",
@@ -533,20 +533,20 @@
 "subaru-impreza": {
 "src": "/assets/cars/m-subaru-impreza.webp",
 "w": 900,
-"h": 365,
-"author": "MercurySable99",
+"h": 454,
+"author": "Kevauto",
 "license": "CC BY-SA 4.0",
-"page": "https://commons.wikimedia.org/wiki/File%3A2021_Subaru_Impreza_Sedan%2C_front_left%2C_02-06-2023.jpg",
-"title": "File:2021 Subaru Impreza Sedan, front left, 02-06-2023.jpg"
+"page": "https://commons.wikimedia.org/wiki/File%3A2017_Subaru_Impreza_sedan_front_4.11.18.jpg",
+"title": "File:2017 Subaru Impreza sedan front 4.11.18.jpg"
 },
 "gmc-acadia": {
 "src": "/assets/cars/m-gmc-acadia.webp",
 "w": 900,
-"h": 479,
+"h": 438,
 "author": "Kevauto",
 "license": "CC BY-SA 4.0",
-"page": "https://commons.wikimedia.org/wiki/File%3A2013_GMC_Acadia_front_4.27.18.jpg",
-"title": "File:2013 GMC Acadia front 4.27.18.jpg"
+"page": "https://commons.wikimedia.org/wiki/File%3A2017_GMC_Acadia_front_3.23.18.jpg",
+"title": "File:2017 GMC Acadia front 3.23.18.jpg"
 },
 "acura-rdx": {
 "src": "/assets/cars/m-acura-rdx.webp",
@@ -560,11 +560,11 @@
 "dodge-charger": {
 "src": "/assets/cars/m-2015-dodge-charger.webp",
 "w": 900,
-"h": 558,
-"author": "Spaceinvadersaresmokinggrass",
+"h": 417,
+"author": "Elise240SX",
 "license": "CC BY-SA 4.0",
-"page": "https://commons.wikimedia.org/wiki/File%3A2015_Dodge_Charger_LX_Rallye-AWD_fl_1_quarter.jpg",
-"title": "File:2015 Dodge Charger LX Rallye-AWD fl 1 quarter.jpg"
+"page": "https://commons.wikimedia.org/wiki/File%3A2018_Dodge_Charger_GT_AWD_in_TorRed%2C_front_left%2C_2026-05-03.jpg",
+"title": "File:2018 Dodge Charger GT AWD in TorRed, front left, 2026-05-03.jpg"
 },
 "audi-a3": {
 "src": "/assets/cars/m-audi-a3.webp",
@@ -830,11 +830,11 @@
 "tesla-model-3": {
 "src": "/assets/cars/m-2018-tesla-model-3.webp",
 "w": 900,
-"h": 407,
-"author": "Alexander Migl",
+"h": 456,
+"author": "Kevauto",
 "license": "CC BY-SA 4.0",
-"page": "https://commons.wikimedia.org/wiki/File%3ATesla_Model_3_Genf_2018.jpg",
-"title": "File:Tesla Model 3 Genf 2018.jpg"
+"page": "https://commons.wikimedia.org/wiki/File%3A2021_Tesla_Model_3%2C_front_11.10.21.jpg",
+"title": "File:2021 Tesla Model 3, front 11.10.21.jpg"
 },
 "subaru-outback": {
 "src": "/assets/cars/m-subaru-outback.webp",
@@ -875,11 +875,11 @@
 "kia-telluride": {
 "src": "/assets/cars/m-kia-telluride.webp",
 "w": 900,
-"h": 387,
-"author": "Kevauto",
-"license": "CC BY-SA 4.0",
-"page": "https://commons.wikimedia.org/wiki/File%3A2019_Kia_Telluride_EX_V6_front_4.14.19.jpg",
-"title": "File:2019 Kia Telluride EX V6 front 4.14.19.jpg"
+"h": 413,
+"author": "Jason Lawrence",
+"license": "CC BY 2.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2020_Kia_Telluride_%282%29.jpg",
+"title": "File:2020 Kia Telluride (2).jpg"
 },
 "dodge-dart": {
 "src": "/assets/cars/m-dodge-dart.webp",
@@ -907,5 +907,158 @@
 "license": "CC BY-SA 4.0",
 "page": "https://commons.wikimedia.org/wiki/File%3A20180630_Tesla_Model_S_70D_2015_midnight_blue_left_front.jpg",
 "title": "File:20180630 Tesla Model S 70D 2015 midnight blue left front.jpg"
+},
+"cadillac-lyriq": {
+"src": "/assets/cars/m-cadillac-lyriq.webp",
+"w": 900,
+"h": 512,
+"author": "Elizbeth smith",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3ACadillac_Lyriq_001.jpg",
+"title": "File:Cadillac Lyriq 001.jpg"
+},
+"chevrolet-blazer-ev": {
+"src": "/assets/cars/m-chevrolet-blazer-ev.webp",
+"w": 900,
+"h": 523,
+"author": "Elise240SX",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2024_Chevrolet_Blazer_EV_RS_AWD_in_Summit_White%2C_front_left%2C_2024-03-31.jpg",
+"title": "File:2024 Chevrolet Blazer EV RS AWD in Summit White, front left, 2024-03-31.jpg"
+},
+"chevrolet-equinox-ev": {
+"src": "/assets/cars/m-chevrolet-equinox-ev.webp",
+"w": 900,
+"h": 487,
+"author": "Kevauto",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2025_Chevrolet_Equinox_EV%2C_front_right_4.26.25.jpg",
+"title": "File:2025 Chevrolet Equinox EV, front right 4.26.25.jpg"
+},
+"ford-f-150-lightning": {
+"src": "/assets/cars/m-ford-f-150-lightning.webp",
+"w": 900,
+"h": 403,
+"author": "Elise240SX",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2022_Ford_F-150_Lightning_Lariat_in_Atlas_Blue_Metallic%2C_Front_Right%2C_08-06-2022.jpg",
+"title": "File:2022 Ford F-150 Lightning Lariat in Atlas Blue Metallic, Front Right, 08-06-2022.jpg"
+},
+"ford-mustang-mach-e": {
+"src": "/assets/cars/m-ford-mustang-mach-e.webp",
+"w": 900,
+"h": 454,
+"author": "Alexander Migl",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AFord_Mustang_Mach-E_Leonberg_2022_1X7A0434.jpg",
+"title": "File:Ford Mustang Mach-E Leonberg 2022 1X7A0434.jpg"
+},
+"hyundai-ioniq-5": {
+"src": "/assets/cars/m-hyundai-ioniq-5.webp",
+"w": 900,
+"h": 420,
+"author": "Alexander Migl",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AHyundai_Ioniq_5_IAA_2021_1X7A0193.jpg",
+"title": "File:Hyundai Ioniq 5 IAA 2021 1X7A0193.jpg"
+},
+"hyundai-ioniq-6": {
+"src": "/assets/cars/m-hyundai-ioniq-6.webp",
+"w": 900,
+"h": 441,
+"author": "Alexander-93",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AHyundai_Ioniq_6_1X7A7258.jpg",
+"title": "File:Hyundai Ioniq 6 1X7A7258.jpg"
+},
+"hyundai-kona-electric": {
+"src": "/assets/cars/m-hyundai-kona-electric.webp",
+"w": 900,
+"h": 551,
+"author": "Mariordo (Mario Roberto Durán Ortiz)",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AHyundai_Kona_EV_CRI_03_2021_7544.jpg",
+"title": "File:Hyundai Kona EV CRI 03 2021 7544.jpg"
+},
+"kia-ev6": {
+"src": "/assets/cars/m-kia-ev6.webp",
+"w": 900,
+"h": 422,
+"author": "Alexander Migl",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AKia_EV6_Auto_Zuerich_2021_IMG_0435.jpg",
+"title": "File:Kia EV6 Auto Zuerich 2021 IMG 0435.jpg"
+},
+"kia-ev9": {
+"src": "/assets/cars/m-kia-ev9.webp",
+"w": 900,
+"h": 516,
+"author": "Alexander-93",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AKia_EV9_IAA_2023_1X7A0694.jpg",
+"title": "File:Kia EV9 IAA 2023 1X7A0694.jpg"
+},
+"kia-niro-ev": {
+"src": "/assets/cars/m-kia-niro-ev.webp",
+"w": 900,
+"h": 519,
+"author": "Alexander Migl",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AKia_Niro_EV_%282021%29_IMG_5313.jpg",
+"title": "File:Kia Niro EV (2021) IMG 5313.jpg"
+},
+"nissan-leaf": {
+"src": "/assets/cars/m-nissan-leaf.webp",
+"w": 900,
+"h": 421,
+"author": "Vauxford",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2018_Nissan_Leaf_2.Zero_Front.jpg",
+"title": "File:2018 Nissan Leaf 2.Zero Front.jpg"
+},
+"polestar-2": {
+"src": "/assets/cars/m-polestar-2.webp",
+"w": 900,
+"h": 463,
+"author": "Alexander Migl",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3APolestar_2_Genf_2019_1Y7A6000.jpg",
+"title": "File:Polestar 2 Genf 2019 1Y7A6000.jpg"
+},
+"rivian-r1s": {
+"src": "/assets/cars/m-rivian-r1s.webp",
+"w": 900,
+"h": 468,
+"author": "MercurySable99",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2025_Rivian_R1S_Ascend_Tri_Max%2C_front_right%2C_11-21-2025.jpg",
+"title": "File:2025 Rivian R1S Ascend Tri Max, front right, 11-21-2025.jpg"
+},
+"rivian-r1t": {
+"src": "/assets/cars/m-rivian-r1t.webp",
+"w": 900,
+"h": 465,
+"author": "DestinationFearFan",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3A2022_Rivian_R1T_front.jpg",
+"title": "File:2022 Rivian R1T front.jpg"
+},
+"tesla-cybertruck": {
+"src": "/assets/cars/m-tesla-cybertruck.webp",
+"w": 900,
+"h": 695,
+"author": "Phillip Pessar",
+"license": "CC BY 2.0",
+"page": "https://commons.wikimedia.org/wiki/File%3ATesla_Showroom_Miami_Design_District_December_2023_-_Tesla_Cybertruck_-_6.jpg",
+"title": "File:Tesla Showroom Miami Design District December 2023 - Tesla Cybertruck - 6.jpg"
+},
+"volkswagen-id-4": {
+"src": "/assets/cars/m-volkswagen-id-4.webp",
+"w": 900,
+"h": 476,
+"author": "Alexander Migl",
+"license": "CC BY-SA 4.0",
+"page": "https://commons.wikimedia.org/wiki/File%3AVolkswagen_ID.4_GTX_1X7A0301.jpg",
+"title": "File:Volkswagen ID.4 GTX 1X7A0301.jpg"
 }
 }
