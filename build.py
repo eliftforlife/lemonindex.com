@@ -147,10 +147,30 @@ def auto_hero(body, vis=''):
     hero = f'<section class="ph ph-a"><p class="ph-e">{m.group(2)}</p><h1>{h1}</h1>{lede}' + (f'<div class="ph-v">{vis}</div>' if vis else '') + '</section>'
     body = body[:m.start()] + '<div class="pg">' + hero + f'<article class="study{m.group(1)}">' + body[m.end():]
     i = body.rfind('</article>'); return body[:i] + '</article></div>' + body[i + len('</article>'):]
+# 11-05 schema: breadcrumbs on every page (Home > Cars > Honda Civic > 2016) so Google and AI tools see where a page sits
+SEGN = {'cars': 'Cars', 'brands': 'Brands', 'compare': 'Compare', 'electric': 'Electric', 'motorcycles': 'Motorcycles', 'planes': 'Planes', 'supercars': 'Supercars',
+        'vin': 'VIN decoder', 'car-loan-rates': 'Car loan rates', 'studies': 'Studies', 'data': 'Free data', 'method': 'How it works', 'transmission': 'Transmission problems'}
+def crumbs(path, title):
+    parts = [x for x in path.strip('/').split('/') if x]; items = [('The Lemon Index', BASE + '/')]; FY = globals().get('FY', {})
+    for i, x in enumerate(parts):
+        u = BASE + '/' + '/'.join(parts[:i + 1]) + '/'
+        nm = SEGN.get(x) or (FY[x]['name'] if x in FY else x if x.isdigit() else x.replace('-', ' ').title())
+        if i == len(parts) - 1 and not x.isdigit() and x not in SEGN and x not in FY: nm = title.split(' | ')[0].split(':')[0]
+        items.append((nm, u))
+    return {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": n, "item": u} for i, (n, u) in enumerate(items)]}
+def car_ld(f, y=None, mpg=None, img=None):
+    c = BYNAME.get(f['name']) or {}; brand = c.get('brand') or f['name'].split()[0]
+    d = {"@context": "https://schema.org", "@type": "Car", "name": (f'{y} ' if y else '') + f['name'], "brand": {"@type": "Brand", "name": brand},
+         "model": f['name'][len(brand):].strip() or f['name'], "url": BASE + (CARU(f, y) if y else CARU(f))}
+    if y: d["vehicleModelDate"] = str(y)
+    if mpg and not mpg.get('ev') and mpg.get('comb'): d["fuelEfficiency"] = {"@type": "QuantitativeValue", "value": mpg['comb'][1], "unitText": "MPG combined (EPA)"}
+    if img: d["image"] = BASE + img
+    return d
 def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, vis=''):
     title, desc = fit_title(title), fit_desc(desc)
     body = auto_hero(body, vis)
-    url = BASE + path; lds = ''.join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in (ld or []))
+    url = BASE + path; ld = list(ld or []) + [crumbs(path, title)]
+    lds = ''.join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in (ld or []))
     beacon = f"<script defer src=\"https://static.cloudflareinsights.com/beacon.min.js\" data-cf-beacon='{{\"token\": \"{CF}\"}}'></script>" if CF else ''
     doc = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{E(title)}</title><meta name="description" content="{E(desc)}"><link rel="canonical" href="{url}">
@@ -759,7 +779,7 @@ for f in YEARS:
 <section><details class="yd"><summary>Every year in one table</summary><div class="tw"><table><thead><tr><th>Year</th><th>Index</th><th>Compared with average</th><th>Complaints</th><th>Top complaint</th><th>Recalls</th><th>Crash test</th><th>MPG</th></tr></thead><tbody>{rows}</tbody></table></div></details>
 <p class="yc-cap">Lemon Index = safety complaints filed with the government within 3 years, per car sold, against the average car of the same model year. 100 is average, lower is better. <a href="/method/">How it works</a></p>{f'<p><a class="btn" href="{CARU(f)}transmission/">{E(snm)} transmission problems by year →</a></p>' if f["id"] in TR else ''}</section></div>''',
          ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": f'{snm} reliability by year', "url": BASE + CARU(f)},
-             faq_ld([(q, '', html.unescape(a)) for q, a in mqa])])
+             faq_ld([(q, '', html.unescape(a)) for q, a in mqa]), car_ld(f, img=(mphoto(f['id']) or {}).get('src'))])
     yurls.append(CARU(f))
     for i, v in enumerate(ys):
         y = v['y']; prev, nxt = (ys[i - 1] if i else None), (ys[i + 1] if i + 1 < len(ys) else None)
@@ -773,7 +793,7 @@ for f in YEARS:
         page(CARU(f, y), f'{y} {snm} Problems, Reliability and Recalls' + (' (Early Read)' if v.get('early') else '') + ' | The Lemon Index',
              (f'Early read: so far the {y} {snm} has drawn {plain(v["li"])} per car sold (NHTSA).' if v['ok'] and v.get('early') else f'The {y} {snm} drew {plain(v["li"])} per car sold (NHTSA).' if v['ok'] else f'Owners filed only {v["n"]} NHTSA complaints about the {y} {snm} in its first 3 years.')
              + (f' {nrec} recall{"s" if nrec != 1 else ""}.' if nrec else '') + (f' Top problems: {top}.' if top else '') + ' Real owner complaints and every other year.', year_body(f, v, y, x, best, worst, prev, nxt, v['quotes'], qa), kind='article', ask=(f['id'], y, f'{y} {snm}'), img=(PH.get(f['id'], {}).get(str(y)) or {}).get('src'),
-             ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": f'{y} {snm} problems, reliability and recalls', "url": BASE + CARU(f, y)}
+             ld=[car_ld(f, y, x.get('mpg'), (PH.get(f['id'], {}).get(str(y)) or {}).get('src')), {"@context": "https://schema.org", "@type": "WebPage", "name": f'{y} {snm} problems, reliability and recalls', "url": BASE + CARU(f, y)}
                  | ({"primaryImageOfPage": {"@type": "ImageObject", "contentUrl": BASE + PH[f['id']][str(y)]['src'], "license": LIC.get(PH[f['id']][str(y)]['license'], PH[f['id']][str(y)]['page']), "acquireLicensePage": PH[f['id']][str(y)]['page'], "creditText": PH[f['id']][str(y)]['author'].split('\ufffd')[0].strip()}} if str(y) in PH.get(f['id'], {}) else {})] + ([faq_ld(qa)] if qa else []))
         yurls.append(CARU(f, y))
 # ---- transmission pages (11-02): data/trans.json from data_trans.py
