@@ -520,6 +520,10 @@ for seg, top in (('car', 10), ('suv', 10), ('truck', 7), ('minivan', 5)):
     for i, a in enumerate(ids):
         for b in ids[i + 1:]:
             PAIRS.append((a, b)); RIVALS[a].append(b); RIVALS[b].append(a)
+# 11-05 keyword map: add every "X vs Y" pair with 1,000+ monthly searches that the sales-rank pairs above missed
+for a, b, v, _ in json.load(open('data/kw_pairs.json', encoding='utf-8')) if os.path.exists('data/kw_pairs.json') else []:
+    if v >= 1000 and a in FY and b in FY and (a, b) not in PAIRS and (b, a) not in PAIRS:
+        PAIRS.append((a, b)); RIVALS[a].append(b); RIVALS[b].append(a)
 CMPU = lambda a, b: f'/compare/{a}-vs-{b}/'
 cmpu = lambda a, b: CMPU(a, b) if (a, b) in PAIRS else CMPU(b, a)
 # ---- 11-02 year-page redesign (Elijah: "less text, bars and charts, numbers that matter, built for someone looking at their own car or one they want to buy")
@@ -731,8 +735,19 @@ for f in YEARS:
     mqa = [(f'Is the {snm} a good car?', f'{good_word}, by owner complaints to the government per car sold ({c["years"]}: Lemon Index {li}; 100 is average). Some years are much better than others: the best is {best["y"]} and the worst is {worst["y"]}.'),
            (f'What are the best {snm} years to buy?', f'By owner complaints per car sold: ' + ', '.join(str(v["y"]) for v in good3) + '.'),
            (f'What {snm} years should you stay away from?', (f'The years with the most complaints per car sold: ' + ', '.join(str(v["y"]) for v in bad3) + '.') if bad3 else f'No {snm} year drew much more than an average car&#39;s complaints.')]
+    # 11-05 keyword map: "recalls on <car>" and "<car> problems" are big searches; answer them from our own numbers
+    _rc = [(v['y'], len(extra(f['id'], v['y']).get('recalls') or [])) for v in ys if 'recalls' in extra(f['id'], v['y'])]
+    if _rc and sum(n for _, n in _rc):
+        _top = sorted(_rc, key=lambda t: -t[1])[:3]
+        mqa.append((f'How many recalls does the {snm} have?', f'{sum(n for _, n in _rc)} safety recalls across the {len(_rc)} model years we track. Most: ' + ', '.join(f'{y} ({n})' for y, n in _top if n) + '. Each year&#39;s page lists them.'))
+    _pt = defaultdict(float)
+    for v in ys:
+        for _p, _k in v['parts']: _pt[_p] += _k * v['n'] / 100
+    if _pt:
+        _tp = [NICE(x) for x, _ in sorted(_pt.items(), key=lambda kv: -kv[1])[:3]]
+        mqa.append((f'What are the most common {snm} problems?', f'Across every year, owners&#39; complaints to the government name {", ".join(_tp[:-1])} and {_tp[-1]} most. Some years are much worse than others: see the chart above.'))
     model_qa_html = '<section class="yqa"><h2>Quick answers.</h2>' + qa_fold(''.join(f'<h3>{E(q)}</h3><p>{a}</p>' for q, a in mqa)) + '</section>'
-    page(CARU(f), f'{snm} Reliability by Year: Years to Avoid & Best to Buy',
+    page(CARU(f), f'{snm} Years to Avoid, Best Years and Problems by Year',
          f'Every {snm} model year from {ys[0]["y"]} to {ys[-1]["y"]}, ranked by NHTSA owner complaints per car sold. Best: {best["y"]}. Worst: {worst["y"]} ({plain(worst["li"])}).', f'''
 <div class="pg mp6"><section class="ph yph6"><div class="yh-t"><p class="ph-e"><a href="/cars/">All cars</a> · <a href="/brands/{c["brand"].lower().replace(" ", "-")}/">{E(c["brand"])}</a> · {E(c["segName"])}</p><h1>{E(snm)}.</h1><p class="ph-s">Reliability by year, {ys[0]["y"]} to {ys[-1]["y"]}.</p>{f'<p class="yc-note">{SN[f["id"]][1]}</p>' if f["id"] in SN else ""}
 <div class="yhero">{gauge(c["li"], 190)}<div class="yverd {verdict(c["li"])[0]}"><p><b>{verdict(c["li"])[1]}.</b> <span>Whole model, {c["years"]}{"" if plain(c["li"]).lower() in verdict(c["li"])[1].lower() else ": " + E(plain(c["li"]))}.</span></p><p class="ybw">Best year <a class="good" href="{CARU(f, best["y"])}">{best["y"]}</a> · Worst year <a class="bad" href="{CARU(f, worst["y"])}">{worst["y"]}</a></p></div></div>
@@ -755,10 +770,10 @@ for f in YEARS:
         old = '<p class="note">Older model year: fewer owners filed complaints with the government back then, and a new model&#39;s first cars often sold the year before, so treat the score as rough. The problems and owner complaints below are exactly as filed.</p>' if y < 2010 and v['ok'] else '<p class="note">Older model year: fewer owners filed complaints with the government back then. The complaints below are exactly as filed.</p>' if y < 2010 else ''
         x = extra(f['id'], y); nrec = len(x['recalls']) if 'recalls' in x else None
         qa = year_faq(f, v, y, x, best); snm = SNM(f)
-        page(CARU(f, y), f'{y} {snm} Reliability, Problems and Recalls' + (' (Early Read)' if v.get('early') else '') + ' | The Lemon Index',
+        page(CARU(f, y), f'{y} {snm} Problems, Reliability and Recalls' + (' (Early Read)' if v.get('early') else '') + ' | The Lemon Index',
              (f'Early read: so far the {y} {snm} has drawn {plain(v["li"])} per car sold (NHTSA).' if v['ok'] and v.get('early') else f'The {y} {snm} drew {plain(v["li"])} per car sold (NHTSA).' if v['ok'] else f'Owners filed only {v["n"]} NHTSA complaints about the {y} {snm} in its first 3 years.')
              + (f' {nrec} recall{"s" if nrec != 1 else ""}.' if nrec else '') + (f' Top problems: {top}.' if top else '') + ' Real owner complaints and every other year.', year_body(f, v, y, x, best, worst, prev, nxt, v['quotes'], qa), kind='article', ask=(f['id'], y, f'{y} {snm}'), img=(PH.get(f['id'], {}).get(str(y)) or {}).get('src'),
-             ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": f'{y} {snm} reliability, problems and recalls', "url": BASE + CARU(f, y)}
+             ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": f'{y} {snm} problems, reliability and recalls', "url": BASE + CARU(f, y)}
                  | ({"primaryImageOfPage": {"@type": "ImageObject", "contentUrl": BASE + PH[f['id']][str(y)]['src'], "license": LIC.get(PH[f['id']][str(y)]['license'], PH[f['id']][str(y)]['page']), "acquireLicensePage": PH[f['id']][str(y)]['page'], "creditText": PH[f['id']][str(y)]['author'].split('\ufffd')[0].strip()}} if str(y) in PH.get(f['id'], {}) else {})] + ([faq_ld(qa)] if qa else []))
         yurls.append(CARU(f, y))
 # ---- transmission pages (11-02): data/trans.json from data_trans.py
@@ -915,7 +930,7 @@ page('/vote/', 'Vote: Most Reliable Car Brand, Best Insurance, Best Years | Lemo
      f'''{phero('Vote', 'What do owners really think?', 'Quick polls. See what won this week, month or all time.', visual=pair(VOTE_IMG('chevy'), VOTE_IMG('ford'), ('Chevy Silverado', 'Ford F-150')))}
 <main id="vote" data-site="lemon" data-ts="{TS}"></main><script src="/assets/vote.js?v=1103h" defer></script>''',
      ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": "Lemon Index car polls", "url": BASE + '/vote/'}])
-page('/car-loan-rates/', 'Car Loan Rates by Credit Score: Is Your Rate Fair? | Lemon Index',
+page('/car-loan-rates/', 'Car Loan Rates by Credit Score and Payment Calculator | Lemon Index',
      'Average new and used car loan rates for every credit score tier (Experian, Q2 2026), and a free check that shows what an above-average dealer rate costs you.',
      loan_body(), ask=('', '', '', 'credit'), ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": "Car loan rates by credit score", "url": BASE + '/car-loan-rates/'},
      faq_ld([('What is a good car loan rate for my credit score?', '', 'Average rates in Q2 2026 (Experian): super prime (781+) 4.41% new / 6.29% used; prime (661-780) 6.15% / 8.81%; near prime (601-660) 9.71% / 13.93%; subprime (501-600) 13.52% / 19.10%; deep subprime (300-500) 16.11% / 21.62%.'),
@@ -1051,8 +1066,8 @@ for f in YEARS:
                           sf.get('best') if sf else None, NICE(v['parts'][0][0]) if v['parts'] else None]
     CJ[f['id']] = [f['name'], yy]
 json.dump(CJ, open('assets/cars.json', 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
-page('/vin/', 'Free VIN Check: Decode Any VIN and See Its Problems | The Lemon Index', 'Type a 17-character VIN to see the exact year, engine and factory, then that car\'s owner complaints and recalls. Free, from the U.S. government VIN database.', f'''
-<div class="pg"><section class="finder ph ph-f"><h1><span class="ph-e">VIN check</span>Check any VIN.</h1><p class="lede">See exactly what car it is, then its problems and recalls.</p>
+page('/vin/', 'Free VIN Decoder and Recall Check: Look Up Any VIN | The Lemon Index', 'Free VIN decoder and lookup: type a 17-character VIN to see the exact year, engine and factory, then that car\'s recalls and owner complaints. From the U.S. government VIN database.', f'''
+<div class="pg"><section class="finder ph ph-f"><h1><span class="ph-e">Free VIN decoder</span>Check any VIN.</h1><p class="lede">Decode it, then see that car&#39;s recalls and problems.</p>
 <form id="vinf" class="vinf" autocomplete="off"><input name="vin" maxlength="20" placeholder="e.g. 1FTEW1EG8JKF05094" aria-label="VIN" spellcheck="false"><button class="btn" type="submit">Check</button></form>
 <div id="vinout" class="vinout"></div><p class="fnote">It&#39;s on the dashboard by the windshield, the door frame, or your registration. We don&#39;t store it.</p>
 <div class="ph-v">{pimg(mphoto('toyota-camry', 2019), 'Toyota Camry')}</div>{pcredit(who(mphoto('toyota-camry', 2019)))}
