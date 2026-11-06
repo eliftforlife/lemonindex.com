@@ -10,6 +10,16 @@ STUDIES = [  # study, page key, years (year pages only), what it covers, kind, n
  ('f150-1999', 'ford-f-series', Y(2000, 2003), '1997–2003 F-150', 'repair', 'truck'),
  ('bmw-f30', 'bmw-3-series', Y(2012, 2018), '2012–2018 BMW 3 Series (F30)', 'repair', 'car'),
  ('wrangler-jk', 'jeep-wrangler', Y(2007, 2018), '2007–2018 Jeep Wrangler (JK)', 'repair', 'Jeep'),
+ ('f150-2015', 'ford-f-series', Y(2015, 2020), '2015–2020 F-150', 'repair', 'truck'),
+ ('silverado-k2', 'chevrolet-silverado', Y(2014, 2018), '2014–2018 Chevy Silverado 1500', 'repair', 'truck'),
+ ('ram-4gen', 'ram-pickup', Y(2009, 2018), '2009–2018 Ram 1500', 'repair', 'truck'),
+ ('rav4-xa50', 'toyota-rav4', Y(2019, 2025), '2019–2025 Toyota RAV4', 'repair', 'RAV4'),
+ ('crv-5gen', 'honda-cr-v', Y(2017, 2022), '2017–2022 Honda CR-V', 'repair', 'CR-V'),
+ ('camry-xv50', 'toyota-camry', Y(2012, 2017), '2012–2017 Toyota Camry', 'repair', 'car'),
+ ('civic-10gen', 'honda-civic', Y(2016, 2021), '2016–2021 Honda Civic', 'repair', 'car'),
+ ('corolla-e170', 'toyota-corolla', Y(2014, 2019), '2014–2019 Toyota Corolla', 'repair', 'car'),
+ ('accord-9gen', 'honda-accord', Y(2013, 2017), '2013–2017 Honda Accord', 'repair', 'car'),
+ ('tacoma-3gen', 'toyota-tacoma', Y(2016, 2023), '2016–2023 Toyota Tacoma', 'repair', 'Tacoma'),
  ('rav4-2026', 'model:toyota-rav4', None, '2026 Toyota RAV4', 'new', ''),
  ('model-y-2026', 'model:tesla-model-y', None, '2026 Tesla Model Y', 'new', ''),
  ('cessna-172', 'plane:cessna-172-skyhawk', None, 'Cessna 172', 'plane', ''),
@@ -23,6 +33,9 @@ GUIDE = {'repair': 'Reviews & buyer guides', 'plane': 'Buying advice', 'super': 
 TOPICS = {
  'repair': [
   ('Reviews & buyer guides', r'review|buyer|should you buy|problems|watch this before|what is a|for sale|walk ?around|spotlight|sold\b|reliab|worst|avoid|things to know'),
+  ('Lifters, AFM & cam phasers', r'lifter|\bafm\b|\bdod\b|cam phaser|phaser|hemi tick|ticking'),
+  ('Oil dilution & oil burning', r'oil dilution|fuel in (the )?oil|oil consumption|burning oil|oil level rising'),
+  ('Infotainment, battery & electrical', r'radio|infotainment|touch ?screen|battery|alternator|starter|key fob|tipm|wiring|fuse'),
   ('Fuel pump, filter & tank', r'fuel pump|fuel filter|gas tank|fuel pressure|injector'),
   ('No-start: theft light, key & ignition', r'theft|anti-?theft|ignition lock|code 11|no start|won.?t start|cranks? but|ground|tipm'),
   ('Death wobble & steering', r'death wobble|track bar|steering|tie rod|drag link|steering box|stabilizer'),
@@ -88,7 +101,7 @@ for study, key, years, gen, kind, noun in STUDIES:
     if not os.path.exists(p): print('missing', study); continue
     R = json.load(open(p, encoding='utf-8')); T, G = {}, []
     # reviewer C 11-04: games/toys and other generations out of the counts too (they inflated the Huracan total; the F30 set held E90/G20 videos)
-    OFFGEN = {'bmw-f30': r'\be9[0-3]\b|\bg2[0-9]\b|m340i|\b20(19|2[0-9])\b|\be4[6-9]\b|\be3[06]\b|\bn52\b|2007.?2013|2009.?2013'}
+    OFFGEN = {'f150-2015': '\\b202[1-6]\\b|14th gen|\\b2009\\b|\\b201[0-4]\\b(?!\\s*[-–]\\s*20)', 'silverado-k2': '\\b(2019|202[0-6])\\b|t1xx|\\b200[0-9]\\b|\\b201[0-3]\\b(?!\\s*[-–]\\s*20)', 'ram-4gen': '\\b202[0-6]\\b|5th gen|\\btrx\\b', 'rav4-xa50': '\\b2026\\b|6th gen|all.new rav', 'crv-5gen': '\\b202[3-6]\\b|6th gen|4th gen|\\b201[2-6]\\b(?!\\s*[-–]\\s*20)', 'camry-xv50': '\\b(2018|2019|202[0-6])\\b|xv70|8th gen|\\b200[0-9]\\b|\\b2011\\b(?!\\s*[-–]\\s*20)', 'civic-10gen': '\\b202[2-6]\\b|11th gen|9th gen|8th gen|\\b201[0-5]\\b(?!\\s*[-–]\\s*20)', 'corolla-e170': '\\b202[0-6]\\b|12th gen|\\b200[0-9]\\b|\\b201[0-3]\\b(?!\\s*[-–]\\s*20)', 'accord-9gen': '\\b(2018|2019|202[0-6])\\b|10th gen|8th gen|\\b200[0-9]\\b|\\b201[0-2]\\b(?!\\s*[-–]\\s*20)', 'tacoma-3gen': '\\b202[4-6]\\b|4th gen|2nd gen|\\b200[5-9]\\b|\\b201[0-5]\\b(?!\\s*[-–]\\s*20)', 'bmw-f30': r'\be9[0-3]\b|\bg2[0-9]\b|m340i|\b20(19|2[0-9])\b|\be4[6-9]\b|\be3[06]\b|\bn52\b|2007.?2013|2009.?2013'}
     R = [r for r in R if not re.search(r'simulator|\bgame\b|\bgta\b|forza|roblox|beamng|\brc\b', r['title'], re.I) and not (study in OFFGEN and re.search(OFFGEN[study], r['title'], re.I))]
     for r in R:
         t = re.sub(r'\s+', ' ', r['title'].replace('\ufffd', "'")).strip()

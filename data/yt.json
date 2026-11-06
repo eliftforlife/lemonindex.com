@@ -27,8 +27,8 @@
     },
     {
      "name": "Fuel pump, filter & tank",
-     "views": 2008517,
-     "n": 10,
+     "views": 1849723,
+     "n": 9,
      "best": {
       "id": "7lPzi9M8atk",
       "title": "1997-2003 Ford F150 Fuel Pump with Truck Bed Removal",
@@ -60,24 +60,13 @@
     },
     {
      "name": "Heat, A/C & blend door",
-     "views": 1317969,
-     "n": 7,
+     "views": 1186249,
+     "n": 6,
      "best": {
       "id": "rseLe36Ozlw",
       "title": "99 Ford F150 Heater Core Lines",
       "channel": "VGAPR Garage",
       "views": 371432
-     }
-    },
-    {
-     "name": "Gauges, lights & wiring",
-     "views": 859498,
-     "n": 9,
-     "best": {
-      "id": "_SP51zq_LI8",
-      "title": "1999-2003 Ford F150 Odometer Fix / Remove Gauge Cluster",
-      "channel": "Chassis Media",
-      "views": 251463
      }
     },
     {
@@ -92,14 +81,25 @@
      }
     },
     {
-     "name": "Driveshaft, axles & 4x4",
-     "views": 692455,
-     "n": 7,
+     "name": "Gauges, lights & wiring",
+     "views": 698478,
+     "n": 8,
      "best": {
-      "id": "DF7efs6NT9g",
-      "title": "Universal Joint (U-Joint) Replacement - 2001 Ford F150 - (1997-2003), 5.4L",
-      "channel": "Insane Oil",
-      "views": 254049
+      "id": "_SP51zq_LI8",
+      "title": "1999-2003 Ford F150 Odometer Fix / Remove Gauge Cluster",
+      "channel": "Chassis Media",
+      "views": 251463
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 692770,
+     "n": 5,
+     "best": {
+      "id": "AKaq9QMVS4A",
+      "title": "1997-2003 F150 Starter & Battery Cable Replacement",
+      "channel": "InternetDude",
+      "views": 161020
      }
     }
    ],
@@ -143,6 +143,133 @@
      ]
     ]
    }
+  },
+  {
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ],
+   "gen": "2015–2020 F-150",
+   "kind": "repair",
+   "noun": "truck",
+   "head": "Fixes owners look up most.",
+   "n": 95,
+   "views": 22720163,
+   "topics": [
+    {
+     "name": "Transmission & shifter",
+     "views": 1338483,
+     "n": 6,
+     "best": {
+      "id": "j5PXg4BWllY",
+      "title": "2015-2017 F150: Transmission Fluid and Filter (6R80)",
+      "channel": "MasterJacks",
+      "views": 492118
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 636311,
+     "n": 4,
+     "best": {
+      "id": "x67sHQoc_Rs",
+      "title": "2015 - 2016 Ford F150 P1289 - Overheat Out Of Nowhere - here is the fix - Cylinder Head Temp Sensor",
+      "channel": "Ford Boss Me - Auto / Politics / Family   ",
+      "views": 283640
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 598544,
+     "n": 3,
+     "best": {
+      "id": "faaYsYCqRTw",
+      "title": "Ford F150 Oil and Filter Change DIY (2015 - 2020) 5.0L V8",
+      "channel": "Smackey's Garage",
+      "views": 290781
+     }
+    },
+    {
+     "name": "Lifters, AFM & cam phasers",
+     "views": 491320,
+     "n": 3,
+     "best": {
+      "id": "MDzpwsOs3IQ",
+      "title": "2017-2020 Ford F-150 3.5L Ecoboost Startup Rattle Fix: Make Sure You Are Getting The Latest Phasers!",
+      "channel": "FordTechMakuloco",
+      "views": 346693
+     }
+    },
+    {
+     "name": "Oil dilution & oil burning",
+     "views": 445146,
+     "n": 4,
+     "best": {
+      "id": "pblQSbikqBY",
+      "title": "Oil Consumption Update - 2019 Ford F150 5.0L",
+      "channel": "Eliminator Performance",
+      "views": 252340
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 395418,
+     "n": 2,
+     "best": {
+      "id": "H8qvzvB0rLQ",
+      "title": "2010 - 2015 Ford F150 won't start - the #1 and 2 reason why, \" Dash Flickers \" Fuel Pump Fuse Blown",
+      "channel": "Ford Boss Me - Auto / Politics / Family   ",
+      "views": 324086
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 265967,
+     "n": 1,
+     "best": {
+      "id": "hhhTytyvWuM",
+      "title": "2018 F150 Cabin Air Filter Install",
+      "channel": "Smackey's Garage",
+      "views": 265967
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 259850,
+     "n": 2,
+     "best": {
+      "id": "bZhek4vAhxM",
+      "title": "F150 2015 - 2018 4x4 Hub Lockout to eliminate 4x4 Issues - It's Just this Dang Easy",
+      "channel": "Ford Boss Me - Auto / Politics / Family   ",
+      "views": 163741
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "l1AmXeEjDtI",
+     "title": "Top 5 Problems Ford F-150 Pickup 2015-2020 13th Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 268045
+    },
+    {
+     "id": "NSztaKBYsXk",
+     "title": "2015-2017 Ford F-150 Top Reliability Issues/Problems",
+     "channel": "Camerons Car Reviews",
+     "views": 267237
+    },
+    {
+     "id": "wiAkGH6jJ6c",
+     "title": "FORD Continues to Battle Transmission Problems my 2018 F150 back at the Dealer for the 4thTime LEMON",
+     "channel": "CHUNKY CATS FISHING",
+     "views": 157379
+    }
+   ],
+   "costs": null
   }
  ],
  "bmw-3-series": [
@@ -209,8 +336,8 @@
     },
     {
      "name": "Gauges, lights & wiring",
-     "views": 1009412,
-     "n": 5,
+     "views": 818953,
+     "n": 4,
      "best": {
       "id": "6_sHAjVi-jU",
       "title": "How to Install BMW Headlights Upgrade | F30 Projector LED | 328i",
@@ -524,6 +651,1161 @@
      ]
     ]
    }
+  }
+ ],
+ "chevrolet-silverado": [
+  {
+   "years": [
+    2014,
+    2015,
+    2016,
+    2017,
+    2018
+   ],
+   "gen": "2014–2018 Chevy Silverado 1500",
+   "kind": "repair",
+   "noun": "truck",
+   "head": "Fixes owners look up most.",
+   "n": 85,
+   "views": 21882504,
+   "topics": [
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 1904616,
+     "n": 9,
+     "best": {
+      "id": "rypQ60fAQsc",
+      "title": "2014-2018 Chevy Silverado A/C Condenser Replacement - Sierra-Tahoe-Yukon-Suburban-Escalade",
+      "channel": "Falcon's Garage",
+      "views": 504254
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 1093452,
+     "n": 5,
+     "best": {
+      "id": "cwAmoPHnxG8",
+      "title": "2014 Chevy Silverado electrical issues and Stabilitrack issue FIXED!!!!",
+      "channel": "Tony Lester",
+      "views": 368622
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 1086512,
+     "n": 5,
+     "best": {
+      "id": "5CMqezI53qw",
+      "title": "How To Fix 2014+ Silverado Radio Not Working Problem in 1 Minute",
+      "channel": "BadAssEngineering",
+      "views": 409874
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 1077465,
+     "n": 2,
+     "best": {
+      "id": "fnsFjwpf-zo",
+      "title": "Misfire - GM Active Fuel Management Deletes Itself - 2015 Silverado",
+      "channel": "Watch Wes Work",
+      "views": 922855
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 913238,
+     "n": 5,
+     "best": {
+      "id": "a1pN6Hisdno",
+      "title": "Stop the shuddering on a 2016 GMC Sierra / Silverado with the 8L90 Transmission.",
+      "channel": "737mechanic",
+      "views": 251916
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 751514,
+     "n": 4,
+     "best": {
+      "id": "LJi0yPgkWHc",
+      "title": "2014-2018 Sierra/Silverado Flickering or Shutting Off...Ground Issue SOLVED!",
+      "channel": "Hunter Wilson",
+      "views": 252807
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 715538,
+     "n": 4,
+     "best": {
+      "id": "oRe_Jw-dCP0",
+      "title": "Fuel Pump Replacement 2015 Chevy Silverado in 10 Minutes",
+      "channel": "Science by Gabrawy",
+      "views": 315476
+     }
+    },
+    {
+     "name": "Lifters, AFM & cam phasers",
+     "views": 563190,
+     "n": 2,
+     "best": {
+      "id": "Smtz45lrxNc",
+      "title": "How to remove the lifters on gmc Sierra or Chevy Silverado 2012-2018 DOD|5.3 head removal",
+      "channel": "JM8686",
+      "views": 358688
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "Q3rxuitFOq4",
+     "title": "5 Ways to Bulletproof your 2014 - 2018 Chevy Silverado or GMC Sierra and Make It More Reliable",
+     "channel": "Dustin T",
+     "views": 841405
+    },
+    {
+     "id": "VV-meusi_eU",
+     "title": "2014 Silverado AC Problems (How to Fix)",
+     "channel": "Dustin T",
+     "views": 562491
+    },
+    {
+     "id": "OoGHgX0WV-A",
+     "title": "Common Problems with Chevy Silverado Sierra Trucks (2014)",
+     "channel": "Dustin T",
+     "views": 484037
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "ram-pickup": [
+  {
+   "years": [
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018
+   ],
+   "gen": "2009–2018 Ram 1500",
+   "kind": "repair",
+   "noun": "truck",
+   "head": "Fixes owners look up most.",
+   "n": 96,
+   "views": 22693562,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 1493203,
+     "n": 9,
+     "best": {
+      "id": "4yeAJLCAcVo",
+      "title": "RAM Key fob Not Working / Responding **Quick Fix**- 2016 Ram 1500",
+      "channel": "MJ Altairy",
+      "views": 431402
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 1137602,
+     "n": 5,
+     "best": {
+      "id": "Hbo1I7u_5sc",
+      "title": "How to Adjust/Aim Headlights on a 2009–2018 Ram 1500/2500/3500 (DIY)",
+      "channel": "LethalGarage",
+      "views": 484311
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 1009032,
+     "n": 8,
+     "best": {
+      "id": "XQiKW1FJf4U",
+      "title": "How to Install a 2012-2014 Ram 1500 4-Inch Suspension Lift Kit",
+      "channel": "Rough Country",
+      "views": 468866
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 659472,
+     "n": 2,
+     "best": {
+      "id": "Kz-5LCdJ1nQ",
+      "title": "100k Mile Service Ram 1500 Truck 4th Gen 2008-18",
+      "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+      "views": 579012
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 623557,
+     "n": 5,
+     "best": {
+      "id": "OwE1kuiuhS0",
+      "title": "How to Replace Front CV Axles 2011-2018 Ram 1500",
+      "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+      "views": 357029
+     }
+    },
+    {
+     "name": "Lifters, AFM & cam phasers",
+     "views": 613088,
+     "n": 1,
+     "best": {
+      "id": "OKN082YGKOA",
+      "title": "How to Replace The Lifters and Camshaft on a 2013 Dodge Ram 5.7 Hemi (Every Step in 30 Minutes!)",
+      "channel": "Jack Fletcher",
+      "views": 613088
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 497773,
+     "n": 4,
+     "best": {
+      "id": "jNe4aZDT20Q",
+      "title": "How to Replace Camshaft Sensor 2011-2018 RAM 1500",
+      "channel": "TRQ",
+      "views": 219496
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 415408,
+     "n": 2,
+     "best": {
+      "id": "blJQiyosW2Y",
+      "title": "RAM 1500 Gas Tank REMOVAL - DIY - 2009-2018",
+      "channel": "BoostedMotorsports",
+      "views": 360772
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "eSgqob8tvuI",
+     "title": "Top 5 Problems Ram Truck 1500 4th Generation 2009-17",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 2565134
+    },
+    {
+     "id": "AYk6wgSKGts",
+     "title": "2010 Ram 1500 250,000 miles - reliability review",
+     "channel": "Reagan Hughes",
+     "views": 91201
+    },
+    {
+     "id": "lt1fNeiJRec",
+     "title": "Top 5 Problems Dodge Ram 2500 Pickup 2003-2009 3rd Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 71030
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "toyota-rav4": [
+  {
+   "years": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2019–2025 Toyota RAV4",
+   "kind": "repair",
+   "noun": "RAV4",
+   "head": "Fixes owners look up most.",
+   "n": 100,
+   "views": 45871684,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 1368483,
+     "n": 4,
+     "best": {
+      "id": "K0Hcq2EICz8",
+      "title": "2019 - 2023 Toyota RAV4 Key Fob Battery Replacement - EASY DIY",
+      "channel": "Key Fob Rob",
+      "views": 864001
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 848306,
+     "n": 3,
+     "best": {
+      "id": "qzsWd00Drxg",
+      "title": "Oil Change on 2019-2025 Toyota RAV4 plus a few extra tips you should know!",
+      "channel": "Throttle-On John",
+      "views": 429800
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 445237,
+     "n": 1,
+     "best": {
+      "id": "EABF2xXr9So",
+      "title": "Quick & Easy - Reset Toyota RAV4 Maintenance Required Oil Light (2019 - 2024)",
+      "channel": "Blu-TSX",
+      "views": 445237
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 418890,
+     "n": 2,
+     "best": {
+      "id": "i04Kfrin7xc",
+      "title": "Toyota RAV4 (2019-2025): How To Replace Front Brake Pads And Rotors In The Gen 5 Toyota RAV4?",
+      "channel": "Morozov Automotive",
+      "views": 251518
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 396677,
+     "n": 2,
+     "best": {
+      "id": "v8nDanFC-wc",
+      "title": "Toyota RAV4 (2019-2025): How To Open Gas / Fuel Tank Door?",
+      "channel": "Morozov Automotive",
+      "views": 250006
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 340508,
+     "n": 1,
+     "best": {
+      "id": "WMoo2bKGxEw",
+      "title": "Toyota RAV4 (2019-2025): Cabin Air Filter Replacement. Easy DIY!",
+      "channel": "Morozov Automotive",
+      "views": 340508
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 285114,
+     "n": 1,
+     "best": {
+      "id": "rDrHzSaqsKI",
+      "title": "Toyota RAV4 (2019-2025): How To Unlock Stuck Gas Tank Door?",
+      "channel": "Morozov Automotive",
+      "views": 285114
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "aUA2Jw1nKkk",
+     "title": "Should you buy the latest Toyota RAV4 2019-2021?",
+     "channel": "The Car Care Nut",
+     "views": 1032335
+    },
+    {
+     "id": "2k2gt9HwkX8",
+     "title": "5 Most Common Problems of the Toyota Rav4 2019-2025",
+     "channel": "Carnivauto",
+     "views": 433715
+    },
+    {
+     "id": "7zBskJmtdgw",
+     "title": "Toyota RAV4 SUV 2020 in-depth review - Carbuyer",
+     "channel": "Carbuyer",
+     "views": 297910
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "honda-cr-v": [
+  {
+   "years": [
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022
+   ],
+   "gen": "2017–2022 Honda CR-V",
+   "kind": "repair",
+   "noun": "CR-V",
+   "head": "Fixes owners look up most.",
+   "n": 98,
+   "views": 25063123,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 588575,
+     "n": 1,
+     "best": {
+      "id": "Na8qtE360_I",
+      "title": "2017 - 2022 Honda CR-V Key Fob Battery Replacement - How To Change Replace CRV Remote Batteries",
+      "channel": "PYR Automotive ",
+      "views": 588575
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 483332,
+     "n": 2,
+     "best": {
+      "id": "5ESIgqUL4ac",
+      "title": "2017+ Honda CR-V Transmission CVT Fluid Change How To -Jonny DIY",
+      "channel": "Jonny DIY",
+      "views": 268093
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 450289,
+     "n": 3,
+     "best": {
+      "id": "UFtYhndrC8U",
+      "title": "2017+ Honda CR-V Oil Change How To -Jonny DIY",
+      "channel": "Jonny DIY",
+      "views": 209165
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 444961,
+     "n": 3,
+     "best": {
+      "id": "dtq83DJtsD4",
+      "title": "DIY Honda CR-V Rear Brake Replacement Using Honda Tech Instructions 2017 - 2021 Models with EPB",
+      "channel": "Rob's Garage Woodworking",
+      "views": 198053
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 437821,
+     "n": 3,
+     "best": {
+      "id": "tfiYhv5E3ho",
+      "title": "2019 Honda CRV - The Ultimate User Guide",
+      "channel": "Two Guys and a Ride",
+      "views": 177563
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 428189,
+     "n": 3,
+     "best": {
+      "id": "JucqwdxyHf0",
+      "title": "2018 Honda CR-V Multiple Warning ADAS System Lights Code P2583-76",
+      "channel": "Phillip Bailey",
+      "views": 178091
+     }
+    },
+    {
+     "name": "Oil dilution & oil burning",
+     "views": 383990,
+     "n": 3,
+     "best": {
+      "id": "RKU1pFC-UwA",
+      "title": "2017 2018 Honda CRV 1.5 Oil Dilution Product Update Recall",
+      "channel": "Jack of All Master of None",
+      "views": 211707
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 189426,
+     "n": 1,
+     "best": {
+      "id": "PktUxLb7XPg",
+      "title": "Honda CRV AWD Rear Differential Fluid Change - 5th Gen - 2018 - Vortex Garage",
+      "channel": "Vortex Garage",
+      "views": 189426
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "4pP_CATJnSQ",
+     "title": "Top 5 Problems with Honda CRV 2017 to 2022",
+     "channel": "RB The Mechanic",
+     "views": 318809
+    },
+    {
+     "id": "OLr4UJnRF9k",
+     "title": "2017 - 2022 Honda CRV problems",
+     "channel": "BCauto_",
+     "views": 182049
+    },
+    {
+     "id": "ghsGib756gw",
+     "title": "2022 Honda CR-V Hybrid: Should You Buy The Hybrid?",
+     "channel": "Ben Hardy",
+     "views": 167497
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "toyota-camry": [
+  {
+   "years": [
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017
+   ],
+   "gen": "2012–2017 Toyota Camry",
+   "kind": "repair",
+   "noun": "car",
+   "head": "Fixes owners look up most.",
+   "n": 95,
+   "views": 14645566,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 524665,
+     "n": 4,
+     "best": {
+      "id": "lRzJxGPdZbw",
+      "title": "2015-17 Toyota Camry touchscreen unresponsive not working and broken cracked screen replacement fix",
+      "channel": "exp",
+      "views": 239051
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 452927,
+     "n": 2,
+     "best": {
+      "id": "LmYqZeaY1QE",
+      "title": "2015-2017 Toyota Camry Buying guide",
+      "channel": "The Car Care Nut",
+      "views": 230563
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 319840,
+     "n": 3,
+     "best": {
+      "id": "5Lk-S6Kt2C0",
+      "title": "How to Replace Headlight Bulbs 2012-2017 Toyota Camry",
+      "channel": "TRQ",
+      "views": 138722
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 282751,
+     "n": 2,
+     "best": {
+      "id": "8vSEp_cmhUw",
+      "title": "How to Change Engine Oil 2012-2017 Toyota Camry (2.5L / 2AR-FE)",
+      "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+      "views": 174933
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 281947,
+     "n": 3,
+     "best": {
+      "id": "3IE5AccH3zA",
+      "title": "2014 Toyota Camry Transmission Fluid Change with the U760E",
+      "channel": "737mechanic",
+      "views": 118042
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 247604,
+     "n": 3,
+     "best": {
+      "id": "yjCRHnVk5Mw",
+      "title": "Toyota Camry 2013, 2014, 2015 Air Mix motor // Blend door motor AC or Heat Control Actuator",
+      "channel": "RB The Mechanic",
+      "views": 99515
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 242628,
+     "n": 2,
+     "best": {
+      "id": "TZ_UIHX3sw8",
+      "title": "2012-2014 Toyota Camry serpentine belt replacement",
+      "channel": "NutzAboutBolts",
+      "views": 158313
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 138665,
+     "n": 2,
+     "best": {
+      "id": "6XXkhTk0g8E",
+      "title": "2012 – 2014 Toyota Camry - Replacing Front Brake Pads - Easy DIY!",
+      "channel": "Dan the Fix it Man",
+      "views": 85987
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "uBryXtKpy40",
+     "title": "2015 Toyota Camry XSE V6 Start Up, Test Drive, and In Depth Review",
+     "channel": "Saabkyle04",
+     "views": 772639
+    },
+    {
+     "id": "w0A4ggSiWSc",
+     "title": "2015 Toyota Camry Review - First Drive",
+     "channel": "AutoGuide.com",
+     "views": 468894
+    },
+    {
+     "id": "DSVAlMyP1OA",
+     "title": "2016 Toyota Camry Start Up, Road Test, and Review 2.5 L 4-Cylinder",
+     "channel": "Camerons Car Reviews",
+     "views": 343191
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "honda-civic": [
+  {
+   "years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021
+   ],
+   "gen": "2016–2021 Honda Civic",
+   "kind": "repair",
+   "noun": "car",
+   "head": "Fixes owners look up most.",
+   "n": 97,
+   "views": 35968071,
+   "topics": [
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 991900,
+     "n": 4,
+     "best": {
+      "id": "-0m08oUyuZU",
+      "title": "How To Recharge A/C 10th Gen Honda Civic 2016-2021 R1234YF In-Depth | TSB Recall Condenser Issues",
+      "channel": "EyeOnAiman",
+      "views": 366691
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 840310,
+     "n": 3,
+     "best": {
+      "id": "CI7mK6rZDTA",
+      "title": "Honda Civic CVT Filter Replacement & Fluid Change DIY Transmission Maintenance 10th Gen 2016-2021 SI",
+      "channel": "Sal's Garage",
+      "views": 310061
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 708995,
+     "n": 3,
+     "best": {
+      "id": "h_7D-tew6OI",
+      "title": "2016 Honda Civic - Radio Reset / Reboot",
+      "channel": "Breezy Productions",
+      "views": 336873
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 437163,
+     "n": 2,
+     "best": {
+      "id": "kyQFCIbVdYA",
+      "title": "DIY 2016 + Civic Rear Brake Replacement With EPB Using Honda Tech Manual",
+      "channel": "Rob's Garage Woodworking",
+      "views": 264315
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 377439,
+     "n": 2,
+     "best": {
+      "id": "MCcrCx3Umgg",
+      "title": "How To Do An Oil Change on your 10th Gen Honda Civic! (2016-2021)",
+      "channel": "RevolveAuto",
+      "views": 248167
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 330586,
+     "n": 1,
+     "best": {
+      "id": "uHVRPlBaTk4",
+      "title": "Fix & Solved Honda Civic 10th Gen Car Won't Start Brake System Problem & Error Messages",
+      "channel": "macdaddypimpping",
+      "views": 330586
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 250558,
+     "n": 2,
+     "best": {
+      "id": "0jSH9U33qDw",
+      "title": "Replacing Honda Civic Rear Shocks 2016 -2020 DIY",
+      "channel": "Rob's Garage Woodworking",
+      "views": 126250
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 191004,
+     "n": 1,
+     "best": {
+      "id": "0JjHdlI7Lp0",
+      "title": "Must Have Power Mods | 10th Gen Civic X Bolt On Guide",
+      "channel": "MAPerformance",
+      "views": 191004
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "0gWdb6EKojM",
+     "title": "2016 - 2021 Honda Civic problems",
+     "channel": "BCauto_",
+     "views": 199863
+    },
+    {
+     "id": "C_yZh5AcB54",
+     "title": "How to Check a Used Honda Civic (2016+) For Hidden Problems",
+     "channel": "Justin Pritchard",
+     "views": 148458
+    },
+    {
+     "id": "H-KfLdxmr8I",
+     "title": "Common problems with HONDA CIVIC 2016 to 2021.",
+     "channel": "El papá de los autos",
+     "views": 136204
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "toyota-corolla": [
+  {
+   "years": [
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019
+   ],
+   "gen": "2014–2019 Toyota Corolla",
+   "kind": "repair",
+   "noun": "car",
+   "head": "Fixes owners look up most.",
+   "n": 89,
+   "views": 19433291,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 1161589,
+     "n": 4,
+     "best": {
+      "id": "zA8mnHt5ayQ",
+      "title": "2014 and 05-2017 Toyota Corolla oil light reset / maintenance reset",
+      "channel": "The Bravo Connection",
+      "views": 505709
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 981937,
+     "n": 8,
+     "best": {
+      "id": "bss62gsU0qk",
+      "title": "Fuse Box Locations, How To Check and Replace Fuses, Toyota Corolla, 2014, 2015, 2016, 2017, 2018",
+      "channel": "Clever Fix",
+      "views": 252024
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 836206,
+     "n": 4,
+     "best": {
+      "id": "gE0MyAqPZGM",
+      "title": "2014 Corolla How-To: Paddle Shifters | Toyota",
+      "channel": "Toyota USA",
+      "views": 386690
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 414249,
+     "n": 1,
+     "best": {
+      "id": "i8FON3-RYks",
+      "title": "2014-2019 Corolla Buying Guide",
+      "channel": "The Car Care Nut",
+      "views": 414249
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 305422,
+     "n": 2,
+     "best": {
+      "id": "w7kFA8Dj5-8",
+      "title": "How to Change Oil 2014-2019 Toyota Corolla",
+      "channel": "TRQ",
+      "views": 196463
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 283857,
+     "n": 1,
+     "best": {
+      "id": "EgVj4QnwAsk",
+      "title": "Coolant Change, Toyota Corolla, Drain & Fill 2014 2015 2016 2017 2018",
+      "channel": "Clever Fix",
+      "views": 283857
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 226746,
+     "n": 1,
+     "best": {
+      "id": "z2WUnJmk6zE",
+      "title": "Toyota Corolla Front Brake Pads & Rotors Replacement 2013-2017 - 3 1/2 Minute DIY Video",
+      "channel": "MINUTE DIY VIDEOS",
+      "views": 226746
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 141019,
+     "n": 1,
+     "best": {
+      "id": "CZRm-RgZHLg",
+      "title": "2014 Corolla How-To: Steering Wheel Controls - Audio | Toyota",
+      "channel": "Toyota USA",
+      "views": 141019
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "Gqfn5Kp52I8",
+     "title": "Top 5 Problems Toyota Corolla Sedan 11th Gen 2014-16",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 310589
+    },
+    {
+     "id": "KBFAq_uIiVc",
+     "title": "How Reliable is a 2014 Toyota Corolla S POV Test Drive",
+     "channel": "POV Nelson",
+     "views": 80767
+    },
+    {
+     "id": "PR1vZn8-3Es",
+     "title": "Toyota Auris (Corolla) 2018 in-depth review | carwow Reviews",
+     "channel": "carwow",
+     "views": 865945
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "honda-accord": [
+  {
+   "years": [
+    2013,
+    2014,
+    2015,
+    2016,
+    2017
+   ],
+   "gen": "2013–2017 Honda Accord",
+   "kind": "repair",
+   "noun": "car",
+   "head": "Fixes owners look up most.",
+   "n": 98,
+   "views": 26071830,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 1644043,
+     "n": 8,
+     "best": {
+      "id": "ud22N_vYcEg",
+      "title": "2014 Honda Accord Starter problem",
+      "channel": "Spoken Reviews",
+      "views": 319319
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 1364701,
+     "n": 5,
+     "best": {
+      "id": "CnssbAmJgMs",
+      "title": "How to Service CVT Transmission Honda Accord 2013, 2014, 2015 HCF-2",
+      "channel": "Powertool1990",
+      "views": 395118
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 667370,
+     "n": 3,
+     "best": {
+      "id": "SJv-pnEWkcg",
+      "title": "DIY 2013 2014 2015 2016 2017 Honda Accord Replacing Low Beam Headlight Bulbs",
+      "channel": "Mobile Car Mechanic",
+      "views": 252660
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 492139,
+     "n": 3,
+     "best": {
+      "id": "qQygVXnNZu8",
+      "title": "2013-2017 Honda Accord Throttle Body Cleaning DIY",
+      "channel": "MrRangerZr1",
+      "views": 177117
+     }
+    },
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 426027,
+     "n": 2,
+     "best": {
+      "id": "in1hMTC1HwI",
+      "title": "Valve Cover Gasket Replacement On 2013-2017 Honda Accord 2.4L",
+      "channel": "NNKH 2",
+      "views": 230749
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 367943,
+     "n": 1,
+     "best": {
+      "id": "BTcikmMfgzg",
+      "title": "2013-2017 Honda Accord Coolant Drain & Fill DIY",
+      "channel": "MrRangerZr1",
+      "views": 367943
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 324616,
+     "n": 2,
+     "best": {
+      "id": "HNeKxJA5dTk",
+      "title": "2013-2017 Honda Accord 2.4 cold start rattle. Cam chain tensioner- Fixed!",
+      "channel": "Tuckers' Workshop",
+      "views": 199448
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 305521,
+     "n": 2,
+     "best": {
+      "id": "ZkhQW_BzJgo",
+      "title": "Honda Accord 2013 to 2017 All Light came on ABS BRAKE TRACTION",
+      "channel": "RB The Mechanic",
+      "views": 187805
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "MZJY2NPwETo",
+     "title": "Top 5 Problems Honda Accord Coupe 9th Gen 2013-17",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 415952
+    },
+    {
+     "id": "UfAshO1XZsQ",
+     "title": "2013 - 2017 Honda accord common problems (3.5L v6)",
+     "channel": "BCauto_",
+     "views": 155262
+    },
+    {
+     "id": "8pq1I1AibvU",
+     "title": "Top 5 problems with Honda Accord 2013 to 2017",
+     "channel": "RB The Mechanic",
+     "views": 113230
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "toyota-tacoma": [
+  {
+   "years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023
+   ],
+   "gen": "2016–2023 Toyota Tacoma",
+   "kind": "repair",
+   "noun": "Tacoma",
+   "head": "Fixes owners look up most.",
+   "n": 96,
+   "views": 21074979,
+   "topics": [
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 868908,
+     "n": 6,
+     "best": {
+      "id": "V8zjVd1qVYk",
+      "title": "Here's Why This Lifted 2021 Toyota Tacoma TRD Off-Road Is THE 4x4 Truck To Buy!",
+      "channel": "TFLnow",
+      "views": 328593
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 726386,
+     "n": 5,
+     "best": {
+      "id": "rNqYpEpmUng",
+      "title": "How to Replace Transmission Fluid Drain & Fill Tacoma 2nd & 3rd Gen",
+      "channel": "Team Oil Drop",
+      "views": 418735
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 572174,
+     "n": 1,
+     "best": {
+      "id": "hELXIudcew0",
+      "title": "Why Does The 2020 Toyota Tacoma Still Have DRUM Brakes? We Ask The Chief Engineer To Find Out!",
+      "channel": "The Fast Lane Truck",
+      "views": 572174
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 155911,
+     "n": 1,
+     "best": {
+      "id": "hHj-3wU1cZE",
+      "title": "How to Replace Coolant Drain & Fill Tacoma 3rd Gen",
+      "channel": "Team Oil Drop",
+      "views": 155911
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 134147,
+     "n": 2,
+     "best": {
+      "id": "_jhrJQLyJwo",
+      "title": "3RD Gen Tacoma: ULTIMATE \"Budget\" Suspension Upgrade",
+      "channel": "Jason Explains Things",
+      "views": 80125
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 112299,
+     "n": 1,
+     "best": {
+      "id": "phESnu-eApI",
+      "title": "How To Start A 2016 - 2023 Toyota Tacoma With Key Not Detected - Dead Tacoma Remote Key Fob Battery",
+      "channel": "PYR Automotive ",
+      "views": 112299
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 60739,
+     "n": 1,
+     "best": {
+      "id": "zKlOpF1wEio",
+      "title": "What Really Fits Your 3rd Gen Tacoma - 2016+ Tacoma Fitment Guide",
+      "channel": "threepiece.us",
+      "views": 60739
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 58889,
+     "n": 1,
+     "best": {
+      "id": "r2DssnGNpW0",
+      "title": "How to Install Tacoma 3rd Gen Bumper Cap in Minutes! (WITH SENSOR)",
+      "channel": "Moto Gal Adventures",
+      "views": 58889
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "b6tRAQ_r0Ms",
+     "title": "Should you buy the latest Toyota Tacoma 2016-2021?",
+     "channel": "The Car Care Nut",
+     "views": 1023914
+    },
+    {
+     "id": "urmuPw0s-lY",
+     "title": "Top 5 Problems Toyota Tacoma Truck 3rd Generation 2016+",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 456547
+    },
+    {
+     "id": "86wZRC08Q7A",
+     "title": "2016-2019 Toyota Tacoma Reliability Issues Explained",
+     "channel": "Pickup Truck Plus SUV Talk (PUTT)",
+     "views": 369070
+    }
+   ],
+   "costs": null
   }
  ],
  "model:toyota-rav4": [

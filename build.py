@@ -178,7 +178,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}{img or "/assets/og.png"}"><meta name="twitter:card" content="summary_large_image">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://static.nhtsa.gov https://i.ytimg.com; connect-src 'self' https://cloudflareinsights.com https://vpic.nhtsa.dot.gov https://lemon-survey.elift08.workers.dev; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"><link rel="stylesheet" href="/assets/site.css?v=1105d"><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=1" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"><link rel="stylesheet" href="/assets/site.css?v=1106b"><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=1" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
 <body>{gh_header(path)}
 <main>{body}{CITE if path.startswith('/cars/') else ''}{'' if path == '/vote/' else ask_html(ask)}</main>
 <footer class="foot"><div class="cta"><div><h2>New car studies, straight from the data.</h2><p>Every study becomes a video. Subscribe to see the next one first.</p></div><a class="btn" href="{YT}?sub_confirmation=1" rel="noopener">Subscribe on YouTube</a></div>
@@ -394,10 +394,10 @@ def extra(fid, y):
     d = dict(XL.get(fid, {}).get(str(y), {})); d.update(XA.get(fid, {}).get(str(y), {}) or {}); return d
 # ---- 11-04 YouTube videos (data_yt.py): what owners/buyers watch most, by views, with the top video for each topic. Mobile first:
 # 4 topics open, the rest behind "Show more"; each topic's top video is one big tap target (thumbnail + 2-line title).
-YT = _load('data/yt.json')
+YTV = _load('data/yt.json')
 def _vw(n): return f'{n / 1e6:.1f}M' if n >= 1e6 else f'{round(n / 1e3):,}K' if n >= 1e3 else str(n)
 def ytfix(key, y=None):
-    d = next((e for e in YT.get(key, []) if e['years'] is None or y in e['years']), None)
+    d = next((e for e in YTV.get(key, []) if e['years'] is None or y in e['years']), None)
     if not d or not d['topics']: return ''
     W = lambda v: f'https://www.youtube.com/watch?v={v["id"]}'
     TH = lambda v, w=160: f'<img src="https://i.ytimg.com/vi/{v["id"]}/mqdefault.jpg" alt="" loading="lazy" width="{w}" height="{w * 9 // 16}">'
@@ -719,7 +719,7 @@ def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
     return f'''
 <article class="yp yp6"><section class="ph yph6"><div class="yh-t"><p class="ph-e"><a href="/cars/">All cars</a> · <a href="{CARU(f)}">{nm}</a></p><h1>{y} {nm}.</h1>{'<p class="early-b">Early read</p>' if v.get('early') else ''}
 {f'<p class="yc-note">{SN[f["id"]][1]}</p>' if f["id"] in SN else ""}{hero.replace('{BW}', bw)}
-<nav class="yswitch" aria-label="Model years"><div class="yseg">{seg}<a class="yall" href="{CARU(f)}">All years</a></div><div class="yact"><a class="btn btn-ghost" href="/compare/?c={f['id']}-{y}">Compare</a><button type="button" class="btn btn-ghost yshare" data-share="{E(share_txt)}">Share</button></div></nav></div>{f'<div class="ph-v">{ph}</div>' if ph else ''}</section>
+<nav class="modes" aria-label="Page mode"><a href="{CARU(f, y)}" aria-current="page">Normal</a><a href="{CARU(f, y)}advanced/">Advanced</a></nav><nav class="yswitch" aria-label="Model years"><div class="yseg">{seg}<a class="yall" href="{CARU(f)}">All years</a></div><div class="yact"><a class="btn btn-ghost" href="/compare/?c={f['id']}-{y}">Compare</a><button type="button" class="btn btn-ghost yshare" data-share="{E(share_txt)}">Share</button></div></nav></div>{f'<div class="ph-v">{ph}</div>' if ph else ''}</section>
 {buy}<div class="yts">{tiles}</div>{ytfix(f["id"], y)}{sev}{old}
 <section class="yyears noph"><div class="yy-ch"><h2>Every {nm} year. <span class="h2s">{y} is highlighted. Lower is better.</span></h2>{ybars(f, y)}</div></section>
 <div class="ygrid">{probs}{timeline(x["miles"], x.get("comps") or []) if x.get("miles") else ""}{recs}{(lambda pr: f'<section class="yc">{pr}</section>' if pr else '')(price_html(f["id"], y, f["name"]))}
@@ -1064,9 +1064,10 @@ LEGAL_URLS = ['/contact/', '/refunds/', '/privacy/', '/terms/']
 exec(open('electric_pages.py', encoding='utf-8').read())
 exec(open('brands_pages.py', encoding='utf-8').read())   # 11-03 brand pages
 exec(open('vehicles_pages.py', encoding='utf-8').read())   # 11-04 planes + motorcycles
+exec(open('advanced_pages.py', encoding='utf-8').read())   # 11-06 advanced mode
 
 open(f'{OUT}/404.html', 'w', encoding='utf-8').write(open(f'{OUT}/index.html', encoding='utf-8').read().replace('<main>', '<main><div class="pg"><section class="ph"><p class="ph-e">404</p><h1>That page drove off.</h1><p class="ph-s">It may have moved. Try one of these.</p><p class="ph-404"><a class="btn" href="/cars/">Look up a car</a> <a class="btn btn-ghost" href="/brands/">Every brand</a> <a class="btn btn-ghost" href="/">Home</a></p></section></div><!--', 1).replace('</main>', '--></main>', 1))
-urls = ['/', STUDY, '/studies/', '/method/', '/vin/', '/car-loan-rates/', '/vote/', '/data/', '/brands/'] + burls + purls + murls + surls + eurls + yurls + curls + LEGAL_URLS
+urls = ['/', STUDY, '/studies/', '/method/', '/vin/', '/car-loan-rates/', '/vote/', '/data/', '/brands/'] + burls + purls + murls + surls + eurls + yurls + ADV_URLS + curls + LEGAL_URLS
 open(f'{OUT}/sitemap.xml', 'w', encoding='utf-8').write('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + ''.join(f'<url><loc>{BASE}{u}</loc><lastmod>{TODAY}</lastmod></url>' for u in urls) + '</urlset>')
 open(f'{OUT}/robots.txt', 'w').write(f'User-agent: *\nAllow: /\n\nUser-agent: GPTBot\nAllow: /\nUser-agent: ClaudeBot\nAllow: /\nUser-agent: PerplexityBot\nAllow: /\nUser-agent: Google-Extended\nAllow: /\n\n# bulk dataset scrapers: the data is free at /data/ with credit instead\nUser-agent: CCBot\nDisallow: /\nUser-agent: Bytespider\nDisallow: /\nUser-agent: Diffbot\nDisallow: /\nUser-agent: Omgilibot\nDisallow: /\nUser-agent: ImagesiftBot\nDisallow: /\n\nSitemap: {BASE}/sitemap.xml\n')
 open(f'{OUT}/llms.txt', 'w', encoding='utf-8').write(f'# The Lemon Index\n\n> Car reliability from public data. The Lemon Index = NHTSA safety complaints per 100,000 U.S. sales, vs the average car of the same model years (100 = average).\n\n- [The Most Reliable Cars, According to 1.6 Million Owner Complaints]({BASE}{STUDY}): Toyota 4Runner 26, Lexus ES 27, Lexus brand 30, Tesla brand 322 (est.)\n- [The Most Reliable Electric Cars]({BASE}/electric/): {len(RK)} EVs by NHTSA complaints per car sold, best {best['name']} {best['li']}, plus fires, yearly cost and driver-assist crash reports\n- [Method]({BASE}/method/)\n')

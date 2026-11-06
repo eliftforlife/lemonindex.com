@@ -26,7 +26,7 @@ if PL:
 <div class="vsplit"><div><b>{p["mech_pct"]}%</b><span>the plane was part of the cause<br><small>engine, systems, structure or propeller</small></span></div><div><b>{100 - p["mech_pct"]}%</b><span>people or weather only<br><small>pilot decisions, control, fuel planning</small></span></div></div>
 <p class="yc-cap">Out of {p["judged"]:,} accidents where NTSB recorded a cause.{" When the plane was a cause, it was most often the " + E(p["mech_parts"][0][0]) + "." if p["mech_parts"] else ""}</p></section>'''
         body = f'''<div class="pg mp6"><section class="ph yph6"><div class="yh-t"><p class="ph-e"><a href="/planes/">Planes</a> · {E(p["kind"])}</p><h1>{E(p["name"])}.</h1>
-<p class="ph-s">Every U.S. accident NTSB investigated, 2008 to 2025.</p></div><div class="ph-v">{pimg(ph, p["name"]) if ph else ""}{pcredit(who(ph)) if ph else ""}</div></section>
+<p class="ph-s">Every U.S. accident NTSB investigated, 2008 to 2025.</p><nav class="modes" aria-label="Page mode"><a href="/planes/{slug}/" aria-current="page">Normal</a><a href="/planes/{slug}/advanced/">Advanced</a></nav></div><div class="ph-v">{pimg(ph, p["name"]) if ph else ""}{pcredit(who(ph)) if ph else ""}</div></section>
 <div class="yts">{stat(f'{p["n"]:,}', 'accidents')}{stat(f'{p["fatal_pct"]}%', 'were fatal', 'bad' if p['fatal_pct'] >= 20 else '')}{stat(f'{p["deaths"]:,}', 'deaths')}{stat(f'{p["destroyed_pct"]}%', 'aircraft destroyed')}</div>{ytfix('plane:' + slug)}
 <section class="yc"><h2>What happened. <span class="h2s">NTSB's defining event, share of accidents.</span></h2>{bars_pct(whatrows)}</section>
 {mech}
@@ -68,7 +68,7 @@ if MO:
                 + (f'<ul class="rc">{rc}</ul>' + (f'<details><summary>Show all {len(m["recalls"])}</summary><ul class="rc">{more}</ul></details>' if more else '') if m['recalls'] else '<p>No NHTSA recalls found for these model names.</p>')
                 + '<p class="yc-cap">Recall repairs are free at any dealer. Check a specific bike&#39;s VIN at <a href="https://www.nhtsa.gov/recalls" rel="noopener">nhtsa.gov/recalls</a>.</p></section>')
         body = f'''<div class="pg mp6"><section class="ph yph6"><div class="yh-t"><p class="ph-e"><a href="/motorcycles/">Motorcycles</a> · {E(m["brand"])} · {E(m["seg"])}</p><h1>{E(m["name"])}.</h1>
-<p class="ph-s">Owner complaints to the U.S. government, {m["years"][0]} to {m["years"][1]} models.</p></div><div class="ph-v">{pimg(ph, m["name"]) if ph else ""}{pcredit(who(ph)) if ph else ""}</div></section>
+<p class="ph-s">Owner complaints to the U.S. government, {m["years"][0]} to {m["years"][1]} models.</p><nav class="modes" aria-label="Page mode"><a href="/motorcycles/{slug}/" aria-current="page">Normal</a><a href="/motorcycles/{slug}/advanced/">Advanced</a></nav></div><div class="ph-v">{pimg(ph, m["name"]) if ph else ""}{pcredit(who(ph)) if ph else ""}</div></section>
 <div class="yts">{stat(f'{m["n"]:,}', 'owner complaints')}{stat(f'{len(m["recalls"])}', 'recalls')}{stat(f'{m["serious"]}%', 'involved a crash, fire or injury', 'bad' if m['serious'] >= 25 else '')}{stat(f'{m["miles"]:,}' if m['miles'] else '—', 'typical miles at complaint')}</div>{ytfix('moto:' + slug)}
 <section class="yc"><h2>What owners complain about. <span class="h2s">Share of complaints.</span></h2>{bars_pct(m["parts"])}</section>
 {recs}
