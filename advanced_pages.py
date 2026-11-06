@@ -78,7 +78,7 @@ def _build_adv():
         for v in ys:
             y = v['y']; x = yearx(f['id'], y); x2 = X2.get(f['id'], {}).get(str(y), {}); body, u = adv_year(f, v, y, x, x2, best, worst, ys); path = CARU(f, y) + 'advanced/'
             nrec = len(x.get('recalls') or [])
-            page(path, f'{y} {snm} Engines, Recall Campaigns and Failure Mileage | Advanced Data',
+            page(path, f'{y} {snm} Specs, Recalls and Failure Mileage',
                  f'{y} {snm} technical data: every EPA engine and transmission, {nrec} recall campaign{"s" if nrec != 1 else ""} with defect and remedy, failure mileage by system and manufacturer communications.', body)
             if u >= 3: ADV_URLS.append(path); _adv_idx += 1
             else:

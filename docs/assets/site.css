@@ -967,3 +967,11 @@ table.adv td { padding: 9px 10px; border-bottom: 1px solid var(--line, #e7e5de);
 .advh small { color: var(--mute); margin: 0 6px; } .advh a { font-family: ui-monospace, Menlo, monospace; font-weight: 600; }
 
 .advp { max-width: 1120px; margin: 0 auto; padding: 24px 16px 40px; } .advh1 { margin-bottom: 18px; } .advh1 h1 { font-size: clamp(30px, 6vw, 44px); line-height: 1.08; letter-spacing: -.02em; margin: 6px 0 8px; } .advh1 p { color: var(--mute); margin: 0 0 6px; }
+
+.ans { font-size: 17px; line-height: 1.5; color: var(--ink); margin: 8px 0 14px; max-width: 62ch; } .upd { text-align: center; font-size: 13px; color: var(--mute); margin: 18px 0 6px; }
+.bestl { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; } .bestl li { display: grid; grid-template-columns: 34px 1fr auto; gap: 10px; align-items: center; background: #fff; border-radius: 16px; padding: 12px 14px; } .bestl .rk { font-weight: 800; color: var(--mute); } .bestl b { font-size: 17px; } .bestl small { display: block; color: var(--mute); } .bestl .sc { font-weight: 800; font-size: 20px; font-variant-numeric: tabular-nums; }
+.statl { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; } .statl li { background: #fff; border-radius: 16px; padding: 14px 16px; line-height: 1.5; } .statl b { font-size: 19px; }
+
+.qh { display: inline; font: inherit; margin: 0; }
+
+.yph6 .ans { order: 3; text-align: center; } .yph6 .modes { order: 7; }

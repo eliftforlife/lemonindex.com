@@ -1,3 +1,4 @@
+import hashlib
 import re
 # Builds lemonindex.com into docs/ (GitHub Pages serves main /docs).   usage: py build.py
 # Pages: home, /studies/, /studies/most-reliable-cars/, /method/, 404 + sitemap.xml, robots.txt, llms.txt, CNAME.
@@ -119,7 +120,7 @@ NAV = [('/cars/', 'Look up a car'), ('/brands/', 'Brands'), ('/compare/', 'Compa
 # header v7 (11-05, Elijah: "headers look AI-made, look at Stripe and Apple"): Apple-thin bar, 7 plain links + More flyout, one small CTA pill;
 # phones get a full-screen menu. Styles/JS: assets/gh.css + gh.js (master copy in 0 HQ/Tools/site header/).
 NAV_TOP = [('/cars/', 'Cars'), ('/brands/', 'Brands'), ('/compare/', 'Compare'), ('/electric/', 'Electric'), ('/motorcycles/', 'Motorcycles'), ('/vin/', 'VIN check'), ('/studies/', 'Studies')]
-NAV_MORE = [('/supercars/', 'Supercars'), ('/check-engine-light/', 'Check engine light'), ('/best-gas-mileage/', 'Gas mileage'), ('/planes/', 'Planes'), ('/car-loan-rates/', 'Loan rates'), ('/vote/', 'Vote'), ('/data/', 'Free data'), ('/method/', 'How it works')]
+NAV_MORE = [('/best/', 'Best cars'), ('/stats/car-complaints/', 'Statistics'), ('/supercars/', 'Supercars'), ('/check-engine-light/', 'Check engine light'), ('/best-gas-mileage/', 'Gas mileage'), ('/planes/', 'Planes'), ('/car-loan-rates/', 'Loan rates'), ('/vote/', 'Vote'), ('/data/', 'Free data'), ('/method/', 'How it works')]
 GH_CHEV = '<svg viewBox="0 0 8 8" aria-hidden="true"><path d="M2.5 1 5.5 4 2.5 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 GH_DOWN = '<svg viewBox="0 0 8 8" aria-hidden="true"><path d="M1 2.75 4 5.75 7 2.75" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 def gh_header(path):
@@ -166,8 +167,15 @@ def car_ld(f, y=None, mpg=None, img=None):
     if mpg and not mpg.get('ev') and mpg.get('comb'): d["fuelEfficiency"] = {"@type": "QuantitativeValue", "value": mpg['comb'][1], "unitText": "MPG combined (EPA)"}
     if img: d["image"] = BASE + img
     return d
+PD = json.load(open('data/page_dates.json', encoding='utf-8')) if os.path.exists('data/page_dates.json') else {}
+_MN = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, vis=''):
     title, desc = fit_title(title), fit_desc(desc)
+    _h = hashlib.md5(body.encode('utf-8')).hexdigest()[:10]
+    if PD.get(path, {}).get('h') != _h: PD[path] = {'h': _h, 'd': TODAY}
+    _d = PD[path]['d']; _dl = f'{_MN[int(_d[5:7]) - 1]} {int(_d[8:])}, {_d[:4]}'
+    if path.startswith(('/cars/', '/motorcycles/', '/planes/', '/supercars/', '/best/', '/stats/', '/check-engine-light/', '/best-gas-mileage/', '/electric/')):
+        body += f'<p class="upd">Updated <time datetime="{_d}">{_dl}</time></p>'; ld = list(ld or []) + [{"@context": "https://schema.org", "@type": "WebPage", "url": BASE + path, "name": title, "dateModified": _d}]
     body = auto_hero(body, vis)
     url = BASE + path; ld = list(ld or []) + [crumbs(path, title)]
     lds = ''.join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in (ld or []))
@@ -178,7 +186,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}{img or "/assets/og.png"}"><meta name="twitter:card" content="summary_large_image">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://static.nhtsa.gov https://i.ytimg.com; connect-src 'self' https://cloudflareinsights.com https://vpic.nhtsa.dot.gov https://lemon-survey.elift08.workers.dev; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"><link rel="stylesheet" href="/assets/site.css?v=1106b"><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=1" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"><link rel="stylesheet" href="/assets/site.css?v=1106d"><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=1" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
 <body>{gh_header(path)}
 <main>{body}{CITE if path.startswith('/cars/') else ''}{'' if path == '/vote/' else ask_html(ask)}</main>
 <footer class="foot"><div class="cta"><div><h2>New car studies, straight from the data.</h2><p>Every study becomes a video. Subscribe to see the next one first.</p></div><a class="btn" href="{YT}?sub_confirmation=1" rel="noopener">Subscribe on YouTube</a></div>
@@ -288,7 +296,7 @@ def phero(eyebrow, title, sub, visual='', extra='', credit=''):
     return f'<section class="ph"><p class="ph-e">{eyebrow}</p><h1>{title}</h1><p class="ph-s">{sub}</p>{extra}{v}{credit}</section>'
 def qa_fold(html_):
     """<h3>Q</h3><p>A</p> pairs -> tap-to-open rows."""
-    return re.sub(r'<h3>(.*?)</h3><p>(.*?)</p>', r'<details class="qa"><summary>\1</summary><p>\2</p></details>', html_)
+    return re.sub(r'<h3>(.*?)</h3><p>(.*?)</p>', r'<details class="qa"><summary><h3 class="qh">\1</h3></summary><p>\2</p></details>', html_)
 VOTE_IMG = lambda n: (lambda im: {'src': f'/assets/vote/{n}.webp', 'w': im.size[0], 'h': im.size[1], 'author': {'chevy': 'Ghostofakina', 'ford': 'Kevauto'}[n]})(__import__('PIL.Image', fromlist=['Image']).open(f'assets/vote/{n}.webp'))
 
 def hero_cards():
@@ -400,7 +408,7 @@ def ytfix(key, y=None):
     d = next((e for e in YTV.get(key, []) if e['years'] is None or y in e['years']), None)
     if not d or not d['topics']: return ''
     W = lambda v: f'https://www.youtube.com/watch?v={v["id"]}'
-    TH = lambda v, w=160: f'<img src="https://i.ytimg.com/vi/{v["id"]}/mqdefault.jpg" alt="" loading="lazy" width="{w}" height="{w * 9 // 16}">'
+    TH = lambda v, w=160: f'<img src="https://i.ytimg.com/vi/{v["id"]}/mqdefault.jpg" alt="{E(v["title"])}" loading="lazy" width="{w}" height="{w * 9 // 16}">'
     mx = d['topics'][0]['views']
     def li(t):
         more = f' · {t["n"]} videos' if t['n'] > 1 else ''
@@ -615,7 +623,7 @@ def year_faq(f, v, y, x, best):
     n = SNM(f); out = []
     if v['ok']:
         li = v['li']; word = ('Yes, it is one of the most reliable' if li < 50 else 'Yes, better than average' if li < 85 else 'About average' if li <= 115 else 'No, it is worse than average' if li < 200 else 'No, it is one of the worst')
-        a = f'{word} by government complaints. It drew {plain(v["li"])} filed with NHTSA in its first 3 years, per car sold (Lemon Index {v["li"]}; 100 is average, lower is better).'
+        _pl = plain(v["li"]); a = f'{word} by government complaints. It drew {"about the average number of complaints" if _pl.lower() == "about average" else _pl} filed with NHTSA in its first 3 years, per car sold (Lemon Index {v["li"]}; 100 is average, lower is better).'
         if v.get('early'): a = f'It&#39;s too early to be sure. So far it has drawn {plain(v["li"])} per car sold, against other {y} cars after the same time on the road (early Lemon Index {v["li"]}; 100 is average).'
         nb = [w for w in f['years'] if w['ok'] and w['y'] >= 2010]; b2 = min(nb, key=lambda w: w['li']) if nb else best   # pre-2010 scores are rough
         if b2['y'] != y: a += f' The best {n} year by this measure{" since 2010" if nb and b2 is not best else ""} is {b2["y"]}.'
@@ -631,7 +639,31 @@ def year_faq(f, v, y, x, best):
     m = x.get('mpg')
     if m and not m.get('ev'):
         c = m['comb']; out.append((f'What gas mileage does the {y} {n} get?', f'{c[0] if c[0] == c[1] else f"{c[0]} to {c[1]}"} mpg combined, depending on the engine (EPA estimate).'))
+    sf = x.get('safety') or {}
+    if sf.get('best'): out.append((f'Is the {y} {n} safe?', f'NHTSA gave it {sf["best"]} out of 5 stars overall in its best tested version. Ratings differ by body style, and the full table is on the <a href="{CARU(f, y)}advanced/">advanced page</a>.'))
+    mi_ = x.get('miles')
+    if mi_ and mi_.get('n', 0) >= 20: out.append((f'At what mileage do {y} {n} problems start?', f'Half of the owners who gave a mileage reported the problem between {mi_["p25"]:,} and {mi_["p75"]:,} miles. The middle report was at {mi_["median"]:,} miles, from {mi_["n"]:,} complaints.'))
+    if v['parts']:
+        tr = next((k for p, k in v['parts'] if 'transmission' in p), None)
+        out.append((f'Does the {y} {n} have transmission problems?', f'Transmission and drivetrain issues make up {tr}% of its owner complaints.' if tr else f'Transmission and drivetrain issues aren&#39;t among its top 5 complaint areas.'))
+    if m and m.get('cost'):
+        co = m['cost']; out.append((f'How much does the {y} {n} cost in fuel a year?', f'About ${co[0] if co[0] == co[1] else f"{co[0]} to ${co[1]}"} a year, by the EPA&#39;s current estimate.'))
+    if m and m.get('engines') and not m.get('ev'): out.append((f'What engines does the {y} {n} have?', f'{", ".join(m["engines"])}.'))
+    good = sorted([w for w in f['years'] if w['ok'] and not w.get('early') and w['y'] >= 2010], key=lambda w: w['li'])
+    if len(good) >= 3 and good[0]['y'] != y: out.append((f'What {n} year is better than the {y}?', f'By owner complaints per car sold, the best recent years are {good[0]["y"]}, {good[1]["y"]} and {good[2]["y"]}.'))
     return [(q, a, re.sub('<[^>]+>', '', html.unescape(a))) for q, a in out]
+def answer_box(f, v, y, x, best):
+    n = E(SNM(f)); rc = x.get('recalls'); m = x.get('mpg'); bits = []
+    if v['ok']:
+        w = ('one of the most reliable years' if v['li'] < 50 else 'better than average' if v['li'] < 85 else 'about average' if v['li'] <= 115 else 'worse than average' if v['li'] < 200 else 'one of the worst years')
+        s1 = f'The {y} {n} is <b>{"so far " if v.get("early") else ""}{w}</b> by owner complaints: {v["n"]:,} complaints in its first 3 years and a Lemon Index of {v["li"]}, where 100 is the average car.'
+    else: s1 = f'The {y} {n} has too few complaints to score: {v["n"]:,} in its first 3 years.'
+    if v['parts']: bits.append(f'owners complain most about {E(NICE(v["parts"][0][0]))}')
+    if rc is not None: bits.append(f'it has {len(rc)} recall{"s" if len(rc) != 1 else ""}')
+    if m and not m.get('ev'): c = m['comb']; bits.append(f'it gets {c[0] if c[0] == c[1] else f"{c[0]} to {c[1]}"} mpg combined')
+    s2 = (bits[0][0].upper() + bits[0][1:] + (', ' + ', '.join(bits[1:-1]) + (',' if len(bits) > 2 else '') + ' and ' + bits[-1] if len(bits) > 1 else '') + '.') if bits else ''
+    s3 = f' The best {n} year is {best["y"]}.' if best['y'] != y else f' It&#39;s the best {n} year we track.'
+    return f'<p class="ans">{s1} {s2}{s3}</p>'
 # 11-03 (Elijah: "add newer car years... just have a disclaimer"): 2023-2025 are early reads
 ASOF = 'October 2026'
 EARLY_NOTE = lambda y, nm: (f'<div class="early-n"><b>Early read.</b> The {y} {nm} hasn&#39;t finished its 3-year window yet. This counts every owner complaint filed so far '
@@ -717,7 +749,7 @@ def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
         words = (f'<section class="yc"><h2>In owners&#39; words</h2><blockquote><p>{E(q0["text"])}</p><cite>{y} {nm} owner · NHTSA complaint {q0["odi"]}</cite></blockquote>'
                  + (f'<details><summary>More owner reports</summary>{more}</details>' if more else '') + '</section>')
     return f'''
-<article class="yp yp6"><section class="ph yph6"><div class="yh-t"><p class="ph-e"><a href="/cars/">All cars</a> · <a href="{CARU(f)}">{nm}</a></p><h1>{y} {nm}.</h1>{'<p class="early-b">Early read</p>' if v.get('early') else ''}
+<article class="yp yp6"><section class="ph yph6"><div class="yh-t"><p class="ph-e"><a href="/cars/">All cars</a> · <a href="{CARU(f)}">{nm}</a></p><h1>{y} {nm}.</h1>{answer_box(f, v, y, x, best)}{'<p class="early-b">Early read</p>' if v.get('early') else ''}
 {f'<p class="yc-note">{SN[f["id"]][1]}</p>' if f["id"] in SN else ""}{hero.replace('{BW}', bw)}
 <nav class="modes" aria-label="Page mode"><a href="{CARU(f, y)}" aria-current="page">Normal</a><a href="{CARU(f, y)}advanced/">Advanced</a></nav><nav class="yswitch" aria-label="Model years"><div class="yseg">{seg}<a class="yall" href="{CARU(f)}">All years</a></div><div class="yact"><a class="btn btn-ghost" href="/compare/?c={f['id']}-{y}">Compare</a><button type="button" class="btn btn-ghost yshare" data-share="{E(share_txt)}">Share</button></div></nav></div>{f'<div class="ph-v">{ph}</div>' if ph else ''}</section>
 {buy}<div class="yts">{tiles}</div>{ytfix(f["id"], y)}{sev}{old}
@@ -769,7 +801,7 @@ for f in YEARS:
     model_qa_html = '<section class="yqa"><h2>Quick answers.</h2>' + qa_fold(''.join(f'<h3>{E(q)}</h3><p>{a}</p>' for q, a in mqa)) + '</section>'
     page(CARU(f), f'{snm} Years to Avoid, Best Years and Problems by Year',
          f'Every {snm} model year from {ys[0]["y"]} to {ys[-1]["y"]}, ranked by NHTSA owner complaints per car sold. Best: {best["y"]}. Worst: {worst["y"]} ({plain(worst["li"])}).', f'''
-<div class="pg mp6"><section class="ph yph6"><div class="yh-t"><p class="ph-e"><a href="/cars/">All cars</a> · <a href="/brands/{c["brand"].lower().replace(" ", "-")}/">{E(c["brand"])}</a> · {E(c["segName"])}</p><h1>{E(snm)}.</h1><p class="ph-s">Reliability by year, {ys[0]["y"]} to {ys[-1]["y"]}.</p>{f'<p class="yc-note">{SN[f["id"]][1]}</p>' if f["id"] in SN else ""}
+<div class="pg mp6"><section class="ph yph6"><div class="yh-t"><p class="ph-e"><a href="/cars/">All cars</a> · <a href="/brands/{c["brand"].lower().replace(" ", "-")}/">{E(c["brand"])}</a> · {E(c["segName"])}</p><h1>{E(snm)}.</h1><p class="ans">The best {E(snm)} years are <b>{", ".join(str(v["y"]) for v in good3)}</b>{". Years to avoid: <b>" + ", ".join(str(v["y"]) for v in bad3) + "</b>" if bad3 else ", and no year drew much more than the average car&#39;s complaints"}. Across {c["years"]}, it has a Lemon Index of {c["li"]}, where 100 is the average car and lower is better.</p><p class="ph-s">Reliability by year, {ys[0]["y"]} to {ys[-1]["y"]}.</p>{f'<p class="yc-note">{SN[f["id"]][1]}</p>' if f["id"] in SN else ""}
 <div class="yhero">{gauge(c["li"], 190)}<div class="yverd {verdict(c["li"])[0]}"><p><b>{verdict(c["li"])[1]}.</b> <span>Whole model, {c["years"]}{"" if plain(c["li"]).lower() in verdict(c["li"])[1].lower() else ": " + E(plain(c["li"]))}.</span></p><p class="ybw">Best year <a class="good" href="{CARU(f, best["y"])}">{best["y"]}</a> · Worst year <a class="bad" href="{CARU(f, worst["y"])}">{worst["y"]}</a></p></div></div>
 <p><button type="button" class="btn btn-ghost" data-share="{E(f'Every {snm} year ranked by owner complaints. Best: {best["y"]}. Worst: {worst["y"]}. Free report:')}">Share ↗</button></p></div><div class="ph-v">{year_photo(f, ys[-1]["y"])}</div></section>
 <section class="yyears noph"><div class="yy-ch"><h2>Every year. <span class="h2s">Lower is better. Tap a year for its full report.</span></h2>{ybars(f)}</div>{'<p class="yc-cap">Scores before 2010 are rough: fewer owners filed complaints back then.</p>' if ys[0]["y"] < 2010 else ''}{yt_note(f)}</section>
@@ -1066,9 +1098,11 @@ exec(open('brands_pages.py', encoding='utf-8').read())   # 11-03 brand pages
 exec(open('vehicles_pages.py', encoding='utf-8').read())   # 11-04 planes + motorcycles
 exec(open('advanced_pages.py', encoding='utf-8').read())   # 11-06 advanced mode
 exec(open('gap_pages.py', encoding='utf-8').read())   # 11-06 keyword gaps
+exec(open('seo_pages.py', encoding='utf-8').read())   # 11-06 best-of + stats pages
+json.dump(PD, open('data/page_dates.json', 'w', encoding='utf-8'), separators=(',', ':'))
 
 open(f'{OUT}/404.html', 'w', encoding='utf-8').write(open(f'{OUT}/index.html', encoding='utf-8').read().replace('<main>', '<main><div class="pg"><section class="ph"><p class="ph-e">404</p><h1>That page drove off.</h1><p class="ph-s">It may have moved. Try one of these.</p><p class="ph-404"><a class="btn" href="/cars/">Look up a car</a> <a class="btn btn-ghost" href="/brands/">Every brand</a> <a class="btn btn-ghost" href="/">Home</a></p></section></div><!--', 1).replace('</main>', '--></main>', 1))
-urls = ['/', STUDY, '/studies/', '/method/', '/vin/', '/car-loan-rates/', '/vote/', '/data/', '/brands/'] + burls + purls + murls + surls + eurls + GAP_URLS + yurls + ADV_URLS + curls + LEGAL_URLS
+urls = ['/', STUDY, '/studies/', '/method/', '/vin/', '/car-loan-rates/', '/vote/', '/data/', '/brands/'] + burls + purls + murls + surls + eurls + GAP_URLS + SEO_URLS + yurls + ADV_URLS + curls + LEGAL_URLS
 open(f'{OUT}/sitemap.xml', 'w', encoding='utf-8').write('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + ''.join(f'<url><loc>{BASE}{u}</loc><lastmod>{TODAY}</lastmod></url>' for u in urls) + '</urlset>')
 open(f'{OUT}/robots.txt', 'w').write(f'User-agent: *\nAllow: /\n\nUser-agent: GPTBot\nAllow: /\nUser-agent: ClaudeBot\nAllow: /\nUser-agent: PerplexityBot\nAllow: /\nUser-agent: Google-Extended\nAllow: /\n\n# bulk dataset scrapers: the data is free at /data/ with credit instead\nUser-agent: CCBot\nDisallow: /\nUser-agent: Bytespider\nDisallow: /\nUser-agent: Diffbot\nDisallow: /\nUser-agent: Omgilibot\nDisallow: /\nUser-agent: ImagesiftBot\nDisallow: /\n\nSitemap: {BASE}/sitemap.xml\n')
 open(f'{OUT}/llms.txt', 'w', encoding='utf-8').write(f'# The Lemon Index\n\n> Car reliability from public data. The Lemon Index = NHTSA safety complaints per 100,000 U.S. sales, vs the average car of the same model years (100 = average).\n\n- [The Most Reliable Cars, According to 1.6 Million Owner Complaints]({BASE}{STUDY}): Toyota 4Runner 26, Lexus ES 27, Lexus brand 30, Tesla brand 322 (est.)\n- [The Most Reliable Electric Cars]({BASE}/electric/): {len(RK)} EVs by NHTSA complaints per car sold, best {best['name']} {best['li']}, plus fires, yearly cost and driver-assist crash reports\n- [Method]({BASE}/method/)\n')
