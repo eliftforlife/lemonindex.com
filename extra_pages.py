@@ -1,0 +1,32 @@
+# Pages for models with complaints but no sales data (11-06: VW Taos, Pontiac). Run by build.py with exec(). No Lemon Index here: it needs sales, so the page says so and shows the raw data.
+EXTRA_URLS = []
+def _extra_pages():
+    if not os.path.exists('data/extra_models.json'): return
+    X = _load('data/extra_models.json'); rows = lambda head, R: '<div class="tw"><table class="adv"><thead><tr>' + ''.join(f'<th>{h}</th>' for h in head) + '</tr></thead><tbody>' + ''.join('<tr>' + ''.join(f'<td>{c}</td>' for c in r) + '</tr>' for r in R) + '</tbody></table></div>'
+    for m in X.values():
+        nm = E(m['name']); path = f'/cars/{m["id"]}/'; top = m['parts'][0][0] if m['parts'] else ''; by = {int(k): v for k, v in m['by_year'].items()}; wy = max(by, key=by.get) if by and max(by.values()) else None
+        ans = f'Owners filed <b>{m["n"]:,} complaints</b> about the {m["a"]} to {m["b"]} {nm} with the government' + (f', most about {E(top)}' if top else '') + (f'. The {wy} drew the most, with {by[wy]:,}' if wy else '') + f'. It has {len(m["recalls"])} recall{"s" if len(m["recalls"]) != 1 else ""} on record.'
+        sec = [f'<section class="yc" id="years"><h2>Complaints by model year</h2>' + rows(['Model year', 'Complaints'], [[y, f'{by[y]:,}'] for y in sorted(by)]) + '<p class="yc-cap">Popular years draw more complaints partly because more were sold. We don&#39;t have sales for this model yet, so these are counts, not a score.</p></section>']
+        if m['parts']: sec.append('<section class="yc" id="problems"><h2>What owners complain about</h2>' + rows(['System', 'Share of complaints'], [[E(p).capitalize(), f'{k}%'] for p, k in m['parts']]) + '</section>')
+        if m['miles']: g = m['miles']; sec.append(f'<section class="yc"><h2>When problems show up</h2><p>Half of the owners who gave a mileage reported the problem between <b>{g["p25"]:,}</b> and <b>{g["p75"]:,}</b> miles. The middle report was at <b>{g["median"]:,}</b> miles, from {g["n"]:,} complaints.</p></section>')
+        sec.append('<section class="yc"><h2>How serious</h2>' + rows(['Crashes', 'Fires', 'Injury reports', 'Death reports'], [[f'{m["crash"]:,}', f'{m["fire"]:,}', f'{m["injured"]:,}', f'{m["deaths"]:,}']]) + '<p class="yc-cap">As reported by owners to NHTSA. Not verified.</p></section>')
+        if m['recalls']:
+            MN = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']; dt = lambda d: (lambda a: f'{MN[int(a[1]) - 1]} {a[2]}' if len(a) == 3 and a[1].isdigit() and 1 <= int(a[1]) <= 12 else E(d))(d.split('/'))
+            sec.append(f'<section class="yc" id="recalls"><h2>Recalls <span class="yc-n">{len(m["recalls"])}</span></h2><ul class="advr">' + ''.join(f'<li><p class="advh"><a href="https://www.nhtsa.gov/recalls?nhtsaId={E(r["id"])}" target="_blank" rel="noopener nofollow">{E(r["id"])}</a> <small>{dt(r["date"])}</small> <b>{E(r["part"].replace(":", " / ").title())}</b></p><p>{E(r["summary"])}</p>' + (f'<p><b>Fix.</b> {E(r["fix"])}</p>' if r.get('fix') else '') + '</li>' for r in m['recalls']) + '</ul><p class="yc-cap">Recall repairs are free at any dealer. Check the exact car&#39;s VIN for open recalls.</p></section>')
+        if m['quotes']: sec.append('<section class="yc"><h2>In owners&#39; words</h2>' + ''.join(f'<blockquote><p>{E(q["text"])}</p><cite>{q["y"]} {nm} owner · NHTSA complaint {q["odi"]}</cite></blockquote>' for q in m['quotes']) + '</section>')
+        faq = [(f'What are the most common {m["name"]} problems?', f'In owner complaints to the government, the top areas are {", ".join(p for p, _ in m["parts"][:3])}.' if m['parts'] else 'There are too few complaints to say.'), (f'How many recalls does the {m["name"]} have?', f'{len(m["recalls"])} safety recall{"s" if len(m["recalls"]) != 1 else ""} on record for the {m["a"]} to {m["b"]} models.')]
+        sec.append('<section class="yc yqa"><h2>Quick answers</h2>' + ''.join(f'<h3>{E(q)}</h3><p>{E(a)}</p>' for q, a in faq) + '</section>')
+        body = f'<div class="advp"><header class="advh1"><p class="ph-e"><a href="/cars/">All cars</a> · <a href="/brands/{m["brand"].lower()}/">{E(m["brand"])}</a></p><h1>{nm} problems and recalls.</h1><p class="ans">{ans}</p></header>{ytfix("model:" + m["id"])}<div class="ygrid">{"".join(sec)}</div><p class="yc-cap">Source: NHTSA owner complaints and recalls. We don&#39;t give this model a Lemon Index because we don&#39;t have its sales by year yet. Complaints are owner reports, not proof of a defect.</p></div>'
+        page(path, f'{m["name"]} Problems, Complaints and Recalls by Year', re.sub('<[^>]+>', '', ans), body, ld=[faq_ld([(q, '', a) for q, a in faq])]); EXTRA_URLS.append(path)
+    P = sorted([m for m in X.values() if m['brand'] == 'Pontiac'], key=lambda m: -m['n'])
+    if P:
+        lede = f'Pontiac ended in 2010, but owners still look these cars up. Here are {len(P)} models and {sum(m["n"] for m in P):,} owner complaints to the government.'
+        body = '<div class="advp"><header class="advh1"><p class="ph-e"><a href="/brands/">Brands</a></p><h1>Pontiac problems and recalls, by model.</h1><p class="ans">' + E(lede) + '</p></header><div class="ygrid"><section class="yc">' + rows(['Model', 'Years', 'Complaints', 'Recalls', 'Top complaint'], [[f'<a href="/cars/{m["id"]}/">{E(m["name"])}</a>', f'{m["a"]}–{m["b"]}', f'{m["n"]:,}', len(m['recalls']), E(m['parts'][0][0]).capitalize() if m['parts'] else '–'] for m in P]) + '</section></div><p class="yc-cap">Source: NHTSA. No Lemon Index for Pontiac yet, because we don&#39;t have sales by year.</p></div>'
+        page('/brands/pontiac/', 'Pontiac Problems and Recalls by Model', lede, body); EXTRA_URLS.insert(0, '/brands/pontiac/')
+    # links in from existing pages, so these aren't orphans
+    for f, html_ in (('docs/brands/index.html', '<p class="yc-cap" style="text-align:center"><a href="/brands/pontiac/">Pontiac (discontinued): problems and recalls by model</a></p>'), ('docs/cars/index.html', '<p class="yc-cap" style="text-align:center"><a href="/brands/pontiac/">Pontiac models</a> · <a href="/cars/volkswagen-taos/">Volkswagen Taos</a></p>'), ('docs/brands/volkswagen/index.html', '<p class="yc-cap" style="text-align:center"><a href="/cars/volkswagen-taos/">Volkswagen Taos problems and recalls</a></p>')):
+        if os.path.exists(f):
+            s = open(f, encoding='utf-8').read()
+            if html_ not in s: open(f, 'w', encoding='utf-8').write(s.replace('</main>', html_ + '</main>', 1))
+    print('extra pages', len(EXTRA_URLS))
+_extra_pages()

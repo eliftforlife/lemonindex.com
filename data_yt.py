@@ -29,6 +29,12 @@ STUDIES = [  # study, page key, years (year pages only), what it covers, kind, n
  ('sportster', 'moto:harley-davidson-sportster', None, 'Harley-Davidson Sportster', 'moto', ''),
  ('ninja-400', 'moto:kawasaki-ninja-300-400-650', None, 'Kawasaki Ninja 300 / 400 / 650', 'moto', ''),
 ]
+import sys as _s; _s.path.insert(0, SRC)
+from more_studies import SITE as _SITE   # 11-06 batch: top-search models + Taos + Pontiac
+_HAVE = {f['id'] for f in json.load(open('data/years.json', encoding='utf-8'))}
+for _sid, _fid, _a, _b, _lab in _SITE:
+    if _fid in _HAVE: STUDIES.append((_sid, _fid, Y(max(_a, 2000), _b), _lab, 'repair', 'generation'))
+    else: STUDIES.append((_sid, 'model:' + _fid, None, _lab, 'repair', ''))
 GUIDE = {'repair': 'Reviews & buyer guides', 'plane': 'Buying advice', 'super': 'Buying advice & used', 'moto': 'Buying advice'}
 TOPICS = {
  'repair': [
