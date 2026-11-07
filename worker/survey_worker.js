@@ -5,9 +5,15 @@
 //      votes are the vl_* / vb_* polls in data/votes.json (one vote per poll per visitor per day), counted over the chosen window.
 // No accounts, no emails, no free text: only the fixed choices in Q below are accepted. A visitor is a salted daily hash of the IP
 // (raw IPs are never stored); one answer per question (per car) per visitor per day, max 100 answers per visitor per day.
+// POST /apply (11-07): "Want a human to help automate your business?" applications from elijahwestbrook.com/automate/.
+//      This is the one route that stores contact details (name, email, optional phone): only what the person types, in its own table
+//      (applications), read by Elijah in the D1 dashboard. Fixed choices are checked, free text is length-capped, max 5 per visitor per day.
 // Q is generated from data/survey.json + data/votes.json by worker/make_worker.py -> survey_worker.dist.js (the uploaded file).
 const Q = __Q__;
-const ORIGINS = ['https://lemonindex.com', 'https://www.lemonindex.com', 'https://thebusinessstudy.com', 'https://www.thebusinessstudy.com'];
+const ORIGINS = ['https://lemonindex.com', 'https://www.lemonindex.com', 'https://thebusinessstudy.com', 'https://www.thebusinessstudy.com', 'https://elijahwestbrook.com', 'https://www.elijahwestbrook.com'];
+const APPLY = { size: ['Just me', '2-5', '6-20', '21-50', '51+'], hours: ['Under 5', '5-10', '10-20', '20+', 'Not sure'], budget: ['Under $500', '$500-$1,500', '$1,500-$5,000', '$5,000+', 'Not sure yet'],
+  when: ['As soon as possible', 'This month', 'In the next 3 months', 'Just exploring'],
+  areas: ['Content and social media', 'Ads', 'Sales and leads', 'Customer service', 'Website and SEO', 'Operations and admin', 'Money and finance', 'Hiring and team', 'Legal and compliance', 'Something else'] };
 // cloud, hosting and VPN networks (by the network's own name, plus the big ones by number): votes from them are refused
 const HOSTING = /amazon|aws|google cloud|google llc|microsoft|azure|digitalocean|linode|akamai|ovh|hetzner|vultr|choopa|contabo|leaseweb|m247|datacamp|cdn77|hostinger|hosting|server|data ?cent(er|re)|cloud|vpn|proxy|colocation|oracle|alibaba|tencent|scaleway|ionos|godaddy|namecheap|packethub|tzulo|quadranet|zenlayer|psychz|frantech|buyvm|g-core|gcore|nforce|worldstream|clouvider/i;
 const HOSTING_ASN = new Set([16509, 14618, 15169, 396982, 8075, 14061, 63949, 20473, 16276, 24940, 51167, 60068, 9009, 212238, 136787, 202425, 13335, 31898, 45102, 132203, 62240, 46562, 53667, 21859]);
@@ -45,12 +51,33 @@ export default {
       const counts = {}; for (const r of r1.results) (counts[r.qid] ||= {})[r.answer] = r.n;
       return json(o, { counts, voters: r2.results[0]?.n || 0, months: r3.results.map(r => r.m) });
     }
+    if (req.method === 'POST' && url.pathname === '/apply') {
+      let b; try { b = await req.json(); } catch { return json(o, { error: 'bad' }, 400); }
+      if (b.hp) return json(o, { ok: true });                                  // hidden field only bots fill in
+      const str = (v, n) => typeof v === 'string' ? v.trim().slice(0, n) : '';
+      const one = (v, k) => APPLY[k].includes(v) ? v : '';
+      const d = { business: str(b.business, 120), type: str(b.type, 80), site: str(b.site, 200), size: one(b.size, 'size'), hours: one(b.hours, 'hours'),
+        budget: one(b.budget, 'budget'), when: one(b.when, 'when'), areas: (Array.isArray(b.areas) ? b.areas : []).filter(a => APPLY.areas.includes(a)).slice(0, 10),
+        task: str(b.task, 2000), tools: str(b.tools, 400), name: str(b.name, 100), email: str(b.email, 200).toLowerCase(), phone: str(b.phone, 40), page: str(b.page, 120) };
+      if (!d.name || !/^[^@\s]+@[^@\s]+\.[a-z]{2,}$/.test(d.email) || d.task.length < 10 || !d.areas.length) return json(o, { error: 'missing' }, 400);
+      const day = new Date().toISOString().slice(0, 10), raw = req.headers.get('CF-Connecting-IP') || '', salt = env.SALT || 'lemon-survey-v1';
+      const h = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(`${raw}|${day}|${salt}|apply`));
+      const ih = [...new Uint8Array(h)].slice(0, 12).map(x => x.toString(16).padStart(2, '0')).join('');
+      await env.DB.prepare("CREATE TABLE IF NOT EXISTS applications (id INTEGER PRIMARY KEY AUTOINCREMENT, ts INTEGER, day TEXT, ih TEXT, data TEXT, status TEXT DEFAULT 'new')").run();
+      const n = await env.DB.prepare('SELECT COUNT(*) n FROM applications WHERE ih = ? AND day = ?').bind(ih, day).first('n');
+      if (n >= 5) return json(o, { error: 'limit' }, 429);
+      await env.DB.prepare('INSERT INTO applications (ts, day, ih, data) VALUES (?, ?, ?, ?)').bind(Date.now(), day, ih, JSON.stringify(d)).run();
+      return json(o, { ok: true });
+    }
     if (req.method === 'POST' && url.pathname === '/a') {
       let b; try { b = await req.json(); } catch { return json(o, { error: 'bad' }, 400); }
       const q = Q[b.qid]; if (!q || !q.a.includes(b.a)) return json(o, { error: 'bad' }, 400);
       const car = CAR.has(b.qid); if (car && !(fidOk(b.fid) && yOk(b.year))) return json(o, { error: 'bad' }, 400);
-      const day = new Date().toISOString().slice(0, 10), ip = req.headers.get('CF-Connecting-IP') || '';
-      const h = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(`${ip}|${day}|lemon-survey-v1`));
+      // 11-05 security pass: the salt lives in the Worker secret SALT (the repo is public, so a salt written here made the daily IP hashes
+      // reversible), and IPv6 visitors are keyed by their /64 (one home or phone gets a whole /64, so rotating inside it no longer buys extra votes)
+      const day = new Date().toISOString().slice(0, 10), raw = req.headers.get('CF-Connecting-IP') || '', salt = env.SALT || 'lemon-survey-v1';
+      const ip = raw.includes(':') ? raw.split(':').slice(0, 4).join(':') + '::/64' : raw;
+      const h = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(`${ip}|${day}|${salt}`));
       const ih = [...new Uint8Array(h)].slice(0, 12).map(x => x.toString(16).padStart(2, '0')).join('');
       // votes (11-03, Elijah: "avoid false votes or spam"): no data-center / VPN networks, a human check when TURNSTILE_SECRET is set,
       // and one vote per poll per visitor (IP + browser, hashed) per 7-day block instead of per day
@@ -59,12 +86,12 @@ export default {
         const org = String(req.cf?.asOrganization || '');
         if (HOSTING.test(org) || HOSTING_ASN.has(+req.cf?.asn)) return json(o, { error: 'vpn' }, 403);
         if (env.TURNSTILE_SECRET) {
-          const fd = new FormData(); fd.append('secret', env.TURNSTILE_SECRET); fd.append('response', String(b.t || '')); fd.append('remoteip', ip);
+          const fd = new FormData(); fd.append('secret', env.TURNSTILE_SECRET); fd.append('response', String(b.t || '')); fd.append('remoteip', raw);
           const ok = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', { method: 'POST', body: fd }).then(r => r.json()).then(j => j.success).catch(() => false);
           if (!ok) return json(o, { error: 'human' }, 403);
         }
         const wk = Math.floor(Date.now() / (7 * 864e5)), ua = req.headers.get('User-Agent') || '';
-        const h7 = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(`${ip}|${ua}|${wk}|lemon-vote-v1`));
+        const h7 = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(`${ip}|${ua}|${wk}|${salt}|vote`));
         vh = [...new Uint8Array(h7)].slice(0, 12).map(x => x.toString(16).padStart(2, '0')).join('');
         if (await env.DB.prepare('SELECT 1 FROM answers WHERE qid = ? AND ih = ? LIMIT 1').bind(b.qid, vh).first()) return json(o, { counts: await counts(env, b.qid), voted: true });
       }
