@@ -5,6 +5,7 @@
 //      votes are the vl_* / vb_* polls in data/votes.json (one vote per poll per visitor per day), counted over the chosen window.
 // No accounts, no emails, no free text: only the fixed choices in Q below are accepted. A visitor is a salted daily hash of the IP
 // (raw IPs are never stored); one answer per question (per car) per visitor per day, max 100 answers per visitor per day.
+// POST /suggest (11-07): tool requests for the comparison pages (table tool_requests).
 // POST /apply (11-07): "Want a human to help automate your business?" applications from elijahwestbrook.com/automate/.
 //      This is the one route that stores contact details (name, email, optional phone): only what the person types, in its own table
 //      (applications), read by Elijah in the D1 dashboard. Fixed choices are checked, free text is length-capped, max 5 per visitor per day.
@@ -67,6 +68,22 @@ export default {
       const n = await env.DB.prepare('SELECT COUNT(*) n FROM applications WHERE ih = ? AND day = ?').bind(ih, day).first('n');
       if (n >= 5) return json(o, { error: 'limit' }, 429);
       await env.DB.prepare('INSERT INTO applications (ts, day, ih, data) VALUES (?, ?, ?, ?)').bind(Date.now(), day, ih, JSON.stringify(d)).run();
+      return json(o, { ok: true });
+    }
+    if (req.method === 'POST' && url.pathname === '/suggest') {
+      // 11-07: "we missed a tool" / "add my tool" requests from elijahwestbrook.com comparison pages. Email is optional.
+      let b; try { b = await req.json(); } catch { return json(o, { error: 'bad' }, 400); }
+      if (b.hp) return json(o, { ok: true });
+      const str = (v, n) => typeof v === 'string' ? v.trim().slice(0, n) : '';
+      const d = { tool: str(b.tool, 120), url: str(b.url, 300), note: str(b.note, 1000), email: str(b.email, 200).toLowerCase(), maker: b.maker === true, page: str(b.page, 120) };
+      if (d.tool.length < 2 || (d.email && !/^[^@\s]+@[^@\s]+\.[a-z]{2,}$/.test(d.email))) return json(o, { error: 'missing' }, 400);
+      const day = new Date().toISOString().slice(0, 10), raw = req.headers.get('CF-Connecting-IP') || '', salt = env.SALT || 'lemon-survey-v1';
+      const h = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(`${raw}|${day}|${salt}|suggest`));
+      const ih = [...new Uint8Array(h)].slice(0, 12).map(x => x.toString(16).padStart(2, '0')).join('');
+      await env.DB.prepare("CREATE TABLE IF NOT EXISTS tool_requests (id INTEGER PRIMARY KEY AUTOINCREMENT, ts INTEGER, day TEXT, ih TEXT, data TEXT, status TEXT DEFAULT 'new')").run();
+      const n = await env.DB.prepare('SELECT COUNT(*) n FROM tool_requests WHERE ih = ? AND day = ?').bind(ih, day).first('n');
+      if (n >= 10) return json(o, { error: 'limit' }, 429);
+      await env.DB.prepare('INSERT INTO tool_requests (ts, day, ih, data) VALUES (?, ?, ?, ?)').bind(Date.now(), day, ih, JSON.stringify(d)).run();
       return json(o, { ok: true });
     }
     if (req.method === 'POST' && url.pathname === '/a') {
