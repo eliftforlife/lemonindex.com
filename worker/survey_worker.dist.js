@@ -28,8 +28,22 @@ async function counts(env, qid, fid, year) {
     : await env.DB.prepare('SELECT answer, COUNT(*) n FROM answers WHERE qid = ? GROUP BY answer').bind(qid).all();
   return Object.fromEntries(results.map(r => [r.answer, r.n]));
 }
+// 11-07 automations: email Elijah the moment someone applies for human help or sends a tool request. Uses Resend with the
+// RESEND_KEY Worker secret (Elijah adds it in the dashboard; until then nothing is sent and the forms work as before).
+// Sender = the already verified send.curbdibs.com domain (internal alerts only; applicant auto-replies wait for an EW domain).
+const ALERT_TO = 'hello@elijahwestbrook.com', ALERT_FROM = 'Westbrook alerts <alerts@send.curbdibs.com>';
+const esc = s => String(s || '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+async function alertMail(env, subject, rows, replyTo) {
+  if (!env.RESEND_KEY) return;
+  const html = '<table style="font:14px/1.5 -apple-system,Segoe UI,Arial">' + rows.filter(([, v]) => v && String(v).length).map(([k, v]) => `<tr><td style="color:#666;padding:4px 12px 4px 0;vertical-align:top">${esc(k)}</td><td style="padding:4px 0">${esc(Array.isArray(v) ? v.join(', ') : v)}</td></tr>`).join('') + '</table>';
+  try {
+    await fetch('https://api.resend.com/emails', { method: 'POST', headers: { Authorization: `Bearer ${env.RESEND_KEY}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ from: ALERT_FROM, to: [ALERT_TO], subject, html, ...(replyTo ? { reply_to: replyTo } : {}) }) });
+  } catch (e) { /* an alert failure never breaks the form */ }
+}
+
 export default {
-  async fetch(req, env) {
+  async fetch(req, env, ctx) {
     const o = req.headers.get('Origin') || '', url = new URL(req.url);
     if (req.method === 'OPTIONS') return new Response(null, { headers: cors(o) });
     if (!ORIGINS.includes(o)) return json(o, { error: 'origin' }, 403);
@@ -68,6 +82,9 @@ export default {
       const n = await env.DB.prepare('SELECT COUNT(*) n FROM applications WHERE ih = ? AND day = ?').bind(ih, day).first('n');
       if (n >= 5) return json(o, { error: 'limit' }, 429);
       await env.DB.prepare('INSERT INTO applications (ts, day, ih, data) VALUES (?, ?, ?, ?)').bind(Date.now(), day, ih, JSON.stringify(d)).run();
+      const m = alertMail(env, `New human-help application: ${d.business || d.name}`, [['Name', d.name], ['Email', d.email], ['Phone', d.phone], ['Business', d.business], ['Type', d.type], ['Website', d.site],
+        ['Size', d.size], ['Hours a week', d.hours], ['Budget', d.budget], ['When', d.when], ['Areas', d.areas], ['What eats their time', d.task], ['Tools now', d.tools], ['From page', d.page]], d.email);
+      if (ctx && ctx.waitUntil) ctx.waitUntil(m); else await m;
       return json(o, { ok: true });
     }
     if (req.method === 'POST' && url.pathname === '/suggest') {
@@ -84,6 +101,8 @@ export default {
       const n = await env.DB.prepare('SELECT COUNT(*) n FROM tool_requests WHERE ih = ? AND day = ?').bind(ih, day).first('n');
       if (n >= 10) return json(o, { error: 'limit' }, 429);
       await env.DB.prepare('INSERT INTO tool_requests (ts, day, ih, data) VALUES (?, ?, ?, ?)').bind(Date.now(), day, ih, JSON.stringify(d)).run();
+      const m = alertMail(env, `Tool request: ${d.tool}${d.maker ? ' (from the maker)' : ''}`, [['Tool', d.tool], ['Website', d.url], ['Note', d.note], ['Email', d.email], ['From page', d.page]], d.email || undefined);
+      if (ctx && ctx.waitUntil) ctx.waitUntil(m); else await m;
       return json(o, { ok: true });
     }
     if (req.method === 'POST' && url.pathname === '/a') {
