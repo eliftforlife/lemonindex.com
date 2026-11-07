@@ -13,6 +13,8 @@
   const qs = new URLSearchParams(location.search);
   if (!(ready || qs.has('support-preview'))) { document.querySelectorAll('.supl').forEach(b => b.hidden = true); return; }
   const get = k => { try { return localStorage.getItem(k); } catch { return null; } }, set = (k, v) => { try { localStorage.setItem(k, v); } catch {} };
+  // 11-07: donors land on /thanks/ (Stripe redirect): count them as paid so nothing asks them again for 60 days
+  if (location.pathname.startsWith('/thanks/')) { set(PAID, String(Date.now())); document.querySelectorAll('.supl').forEach(b => b.hidden = true); return; }
   const paid = () => Date.now() - (+get(PAID) || 0) < PAID_DAYS * 864e5;
   const seen = () => Date.now() - (+get(KEY) || 0) < DAYS * 864e5 || paid();
   const mark = () => set(KEY, String(Date.now()));

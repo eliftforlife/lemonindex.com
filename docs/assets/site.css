@@ -975,3 +975,13 @@ table.adv td { padding: 9px 10px; border-bottom: 1px solid var(--line, #e7e5de);
 .qh { display: inline; font: inherit; margin: 0; }
 
 .yph6 .ans { order: 3; text-align: center; } .yph6 .modes { order: 7; }
+/* 11-07: donation thank-you page */
+.thx { max-width: 640px; margin: 48px auto 72px; padding: 0 16px; text-align: center; }
+.thx-ic { width: 96px; height: 96px; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,.12); }
+.thx h1 { font-size: clamp(36px, 7vw, 56px); letter-spacing: -.02em; margin: 22px 0 10px; }
+.thx-lede { font-size: 20px; line-height: 1.45; color: var(--ink); margin: 0 auto 28px; max-width: 30ch; }
+.thx-card { text-align: left; background: #fffbe0; border: 2px solid #ffd400; border-radius: 18px; padding: 22px 24px; margin: 0 0 26px; }
+.thx-card h2 { font-size: 17px; margin: 0 0 10px; } .thx-card ul { margin: 0; padding-left: 20px; } .thx-card li { margin: 7px 0; line-height: 1.45; }
+.thx-sig { color: var(--mute); line-height: 1.55; margin: 0 0 26px; } .thx-sig b { color: var(--ink); }
+.thx-go { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 28px; } .thx-go .btn { cursor: pointer; border: 0; font: inherit; font-weight: 800; }
+.thx-fine { font-size: 13px; color: var(--mute); max-width: 52ch; margin: 0 auto; }

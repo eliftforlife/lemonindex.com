@@ -191,7 +191,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <main>{body}{CITE if path.startswith('/cars/') else ''}{'' if path == '/vote/' else ask_html(ask)}</main>
 <footer class="foot"><div class="cta"><div><h2>New car studies, straight from the data.</h2><p>Every study becomes a video. Subscribe to see the next one first.</p></div><a class="btn" href="{YT}?sub_confirmation=1" rel="noopener">Subscribe on YouTube</a></div>
 <p class="socs"><a href="{YT}" rel="noopener">YouTube</a> · <a href="{TT}" rel="noopener">TikTok</a> · <a href="{IG}" rel="noopener">Instagram</a> · <a href="/method/">How the index works</a> · <a href="/compare/">Compare cars</a> · <a href="/car-loan-rates/">Car loan rates</a> · <a href="/vote/">Vote</a> · <a href="/data/">Free data</a> · <button class="supl" type="button">Support the Lemon Index</button></p>
-<p class="fine"><a href="/terms/">Terms</a> · <a href="/privacy/">Privacy</a> · <a href="/refunds/">Refunds</a> · <a href="/contact/">Contact</a><br>© {TODAY[:4]} The Lemon Index. Built from public NHTSA complaint data and published U.S. sales figures. Not affiliated with any automaker. Not a repair-cost or safety rating.</p></footer><script src="/assets/explorer.js?v=1103v6" defer></script><script src="/assets/support.js?v=1104b" defer></script><script src="/assets/lookup.js?v=1103" defer></script>{beacon}</body></html>'''
+<p class="fine"><a href="/terms/">Terms</a> · <a href="/privacy/">Privacy</a> · <a href="/refunds/">Refunds</a> · <a href="/contact/">Contact</a><br>© {TODAY[:4]} The Lemon Index. Built from public NHTSA complaint data and published U.S. sales figures. Not affiliated with any automaker. Not a repair-cost or safety rating.</p></footer><script src="/assets/explorer.js?v=1103v6" defer></script><script src="/assets/support.js?v=1107" defer></script><script src="/assets/lookup.js?v=1103" defer></script>{beacon}</body></html>'''
     f = os.path.join(OUT, path.strip('/'), 'index.html') if path.endswith('/') else os.path.join(OUT, path.strip('/'))
     os.makedirs(os.path.dirname(f), exist_ok=True); open(f, 'w', encoding='utf-8').write(doc)
 
@@ -1100,6 +1100,7 @@ exec(open('advanced_pages.py', encoding='utf-8').read())   # 11-06 advanced mode
 exec(open('gap_pages.py', encoding='utf-8').read())   # 11-06 keyword gaps
 exec(open('seo_pages.py', encoding='utf-8').read())   # 11-06 best-of + stats pages
 exec(open('extra_pages.py', encoding='utf-8').read())   # 11-06 Taos + Pontiac
+exec(open('thanks_page.py', encoding='utf-8').read())   # 11-07 donation thank-you page (noindex)
 json.dump(PD, open('data/page_dates.json', 'w', encoding='utf-8'), separators=(',', ':'))
 
 open(f'{OUT}/404.html', 'w', encoding='utf-8').write(open(f'{OUT}/index.html', encoding='utf-8').read().replace('<main>', '<main><div class="pg"><section class="ph"><p class="ph-e">404</p><h1>That page drove off.</h1><p class="ph-s">It may have moved. Try one of these.</p><p class="ph-404"><a class="btn" href="/cars/">Look up a car</a> <a class="btn btn-ghost" href="/brands/">Every brand</a> <a class="btn btn-ghost" href="/">Home</a></p></section></div><!--', 1).replace('</main>', '--></main>', 1))
