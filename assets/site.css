@@ -986,3 +986,18 @@ table.adv td { padding: 9px 10px; border-bottom: 1px solid var(--line, #e7e5de);
 .thx-go { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 28px; } .thx-go .btn { cursor: pointer; border: 0; font: inherit; font-weight: 800; }
 .thx-fine { font-size: 13px; color: var(--mute); max-width: 52ch; margin: 0 auto; }
 .thx-ig { background: #111; color: #fff; border-radius: 14px; padding: 14px 18px; margin: 0 0 22px; font-weight: 600; } .thx-ig a { color: #ffd400; }
+/* 11-08 model pages open with "Is the <car> reliable?": one plain answer + a 3-tile scorecard (complaints, YouTube owners vs. same-age cars, safest year) */
+.mp6 .ph .rel-h { font-size: clamp(32px, 4.4vw, 54px); }
+.rel-a { font-size: 18px; } .rel-a > b:first-child { font-weight: 800; }
+.rsc { order: 3; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; width: 100%; max-width: 620px; margin: 2px 0 6px; }
+.rs { display: flex; flex-direction: column; gap: 3px; padding: 14px 14px 12px; border-radius: 16px; background: var(--soft); text-decoration: none; color: var(--ink); text-align: left; min-width: 0; }
+.rs small { font-size: 12.5px; font-weight: 600; color: var(--mute); }
+.rs b { font: 800 clamp(19px, 2.2vw, 24px)/1.12 Archivo, Inter, system-ui, sans-serif; letter-spacing: -.02em; }
+.rs b i { font-style: normal; font-weight: 600; font-size: .62em; color: var(--mute); }
+.rs span { font-size: 12.5px; color: var(--mute); line-height: 1.35; }
+.rs.good b { color: var(--good); } .rs.bad b { color: var(--red); } a.rs:hover { background: var(--line); }
+.rs-new { order: 3; font-size: 14px; color: var(--mute); margin: 6px 0 0; max-width: 620px; } .rs-new a { color: var(--ink); font-weight: 700; }
+@media (max-width: 520px) { .rsc { grid-template-columns: 1fr 1fr; } .rsc .rs:first-child { grid-column: 1 / -1; } }
+.hpl { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; } .hpl a { padding: 8px 14px; border-radius: 999px; background: var(--soft); text-decoration: none; font-size: 15px; font-weight: 600; color: var(--ink2); } .hpl a:hover { background: var(--line); color: var(--ink); }
+@media (min-width: 980px) { .mp6 .yph6 .rel-a { text-align: left; margin-left: 0; } }
+.mp6 .yph6 .yverd { display: none; }   /* the answer + tiles above say it now; the gauge stays as the one picture */

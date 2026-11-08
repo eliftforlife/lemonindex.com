@@ -188,7 +188,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}{img or "/assets/og.png"}"><meta name="twitter:card" content="summary_large_image">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://challenges.cloudflare.com https://www.googletagmanager.com; frame-src https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://static.nhtsa.gov https://i.ytimg.com https://*.google-analytics.com https://*.googletagmanager.com; connect-src 'self' https://cloudflareinsights.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://vpic.nhtsa.dot.gov https://lemon-survey.elift08.workers.dev; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"><link rel="stylesheet" href="/assets/site.css?v=1106d"><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=1" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"><link rel="stylesheet" href="/assets/site.css?v=1108r"><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=1" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
 <body>{gh_header(path)}
 <main>{body}{CITE if path.startswith('/cars/') else ''}{'' if path == '/vote/' else ask_html(ask)}</main>
 <footer class="foot"><div class="cta"><div><h2>New car studies, straight from the data.</h2><p>Every study becomes a video. Subscribe to see the next one first.</p></div><a class="btn" href="{YT}?sub_confirmation=1" rel="noopener">Subscribe on YouTube</a></div>
@@ -315,12 +315,21 @@ def hero_cards():
 # ---- home: the car finder first (10-29), how to read a score, the explorer, then best vs worst side by side, then brands
 best4, worst4 = CARS[0], CARS[-1]
 # 10-30: Google showed /method/ for "lemon index" (its h1 was the only one saying the brand), so the home h1 now carries the name too.
+# 11-08 internal links: the home page links straight to the model pages people search most, with "reliability" in the link text. First the
+# ones Search Console shows just off page 1 of Google (C-Class #11, Mazda3 #10, Audi Q5 #10, Equinox #13 on 11-08), then best sellers.
+POP_FIRST = ['mercedes-benz-c-class', 'mazda3', 'audi-q5', 'chevrolet-equinox', 'honda-accord', 'toyota-camry', 'bmw-3-series', 'audi-a4']
+def pop_checks(n=28):
+    have = {f['id'] for f in json.load(open('data/years.json', encoding='utf-8'))}; by = {c['id']: c for c in CARS}
+    ids = list(dict.fromkeys([i for i in POP_FIRST if i in by and i in have] + [c['id'] for c in sorted(CARS, key=lambda c: -c['sold']) if c['id'] in have]))[:n]
+    return ('<section class="hpop"><h2>Reliability checks people run most.</h2><p class="hpl">'
+            + ''.join(f'<a href="/cars/{i}/">{E(by[i]["name"])} reliability</a>' for i in ids) + '</p></section>')
 page('/', "Lemon Index (LemonIndex): Look Up Any Car's Problems by Year", "Look up any car's problems by model year, 2000 to 2025: its reliability score, top problem areas and real owner complaints, from 1.6 million complaints filed with the government. 100 is the average car.", f'''
 <div class="home"><div class="hhero">{finder(h='<span class="fbrand">The Lemon Index</span>Look up any car.', foot=f'<p class="fnote">From {COUNTED:,} owner complaints filed with the U.S. government.</p>')}{hero_cards()}</div>
 <section class="hread"><h2>100 is the average car. <span class="h2s">Lower is better.</span></h2>
 <div class="scale"><div class="sbar"><i style="left:{min(96, best4["li"] / 3.5):.1f}%" title="{E(best4["name"])}, {best4["li"]}"></i></div><div class="sl"><span>25 · ¼ the complaints</span><span>100 · average</span><span class="bad">300 · 3×</span></div></div></section>
 {tiles()}
 {explorer()}
+{pop_checks()}
 <section><h2>Every brand, best to worst.</h2>{bars(BRANDS, 330, 'two')}<p class="note">* Porsche is a small sample (2 models, 258,000 sold). Tesla uses estimated U.S. sales.</p></section>
 <section class="faq"><h2>Questions</h2>{faq}</section></div>''',
      ld=[{"@context": "https://schema.org", "@type": "WebSite", "name": "The Lemon Index", "alternateName": ["Lemon Index", "LemonIndex", "lemonindex", "lemonindex.com"], "url": BASE + '/'},
@@ -537,6 +546,74 @@ def yt_note(f):
     best = max((int(y) for y, s in sc.items() if s.get('score') is not None), key=lambda y: sc[str(y)]['score'])
     return (f'<p class="yc-cap"><b>YouTube rank:</b> we read {n:,} YouTube videos about the {f["name"]}, {yrs[0]} to {yrs[-1]}, and ranked every year by how much they praise it '
             f'vs. how much they talk about problems. YouTube&#39;s favorite: <b>{best}</b>. Old cars rank lower partly because most of their videos are repair and restoration videos. A gray dot means too few videos to rank.</p>')
+# 11-08 (Elijah: "make the top of every car model page answer '<car> reliability' from the YouTube stuff, maybe a different ranking"):
+# people search "Mercedes C-Class reliability", so the model page opens with that question, a plain answer and a 3-tile scorecard.
+# YouTube scores climb with newer model years for every car (old cars = repair videos), so each year is compared with the median
+# of every car of the SAME model year (>= 10 videos). Model rank = video-weighted average of those gaps. It measures how positively
+# owners and reviewers talk, not a failure rate, and the page says so. "Safest year" = the year complaints and YouTube agree on most.
+def _yt_base():
+    by = defaultdict(list)
+    for d in YTS.values():
+        for y, s in d.items():
+            if s.get('score') is not None and (s.get('videos') or 0) >= 10 and int(y) >= 2000: by[int(y)].append(s['score'])
+    return {y: sorted(v)[len(v) // 2] if len(v) % 2 else sum(sorted(v)[len(v) // 2 - 1:len(v) // 2 + 1]) / 2 for y, v in by.items() if len(v) >= 5}
+YTB = _yt_base()
+def yt_adj(fid):
+    return {int(y): s['score'] - YTB[int(y)] for y, s in YTS.get(fid, {}).items() if s.get('score') is not None and (s.get('videos') or 0) >= 10 and int(y) in YTB}
+def _yt_rank():
+    m = {}
+    for fid, d in YTS.items():
+        a = yt_adj(fid)
+        if len(a) >= 4:
+            w = {y: d[str(y)]['videos'] for y in a}; m[fid] = (sum(a[y] * w[y] for y in a) / sum(w.values()), round(sum(w.values())))
+    order = sorted(m, key=lambda k: -m[k][0])
+    return {fid: (i + 1, len(order), m[fid][1]) for i, fid in enumerate(order)}
+YTR = _yt_rank()
+def safest_year(fid, sc):
+    """The scored year that complaints (lower Lemon Index) and YouTube (vs. same-age cars) rank best together; None without YouTube data."""
+    a = yt_adj(fid); both = [v for v in sc if v['y'] in a and v['li'] <= 110]   # a year with more complaints than average is never the safest
+    if len(both) < 3: return None
+    pc = {v['y']: i / (len(both) - 1) for i, v in enumerate(sorted(both, key=lambda v: v['li']))}
+    py = {v['y']: i / (len(both) - 1) for i, v in enumerate(sorted(both, key=lambda v: -a[v['y']]))}
+    return min(both, key=lambda v: (pc[v['y']] + py[v['y']], v['li']))
+def rel_answer(f, c, snm, best, bad3, sy):
+    """('Yes.', one plain sentence) for 'Is the <car> reliable?', from complaints first, YouTube second."""
+    li = c['li']
+    word = 'Yes, very.' if li < 50 else 'Yes.' if li < 85 else 'About average.' if li <= 115 else 'Not really.'
+    _r = YTR.get(f['id'])
+    if _r and li <= 115:   # NHTSA counts safety complaints only; when YouTube owners clearly disagree, don't oversell
+        top, low = _r[0] <= _r[1] / 3, _r[0] > _r[1] * 2 / 3
+        word = ('Mostly.' if li < 85 else 'It&#39;s mixed.') if low else ('Yes, very.' if li < 50 and top else 'Yes.' if li < 85 else 'Mostly.' if top else word)
+    comp = (f'It draws {plain(li)}' if li < 90 else 'It draws about as many complaints as the average car' if li <= 110
+            else f'It draws {li / 100:.1f}× the average car&#39;s complaints'.replace('.0×', '×'))
+    r = YTR.get(f['id']); yt = ''
+    if r:
+        rk, n, _ = r; good_c = li <= 110
+        if rk <= n / 3: yt = (', and' if good_c else ', but') + ' YouTube owners sound happier with it than with most cars its age'
+        elif rk > n * 2 / 3: yt = (', but' if good_c else ', and') + ' YouTube owners complain about it more than about most cars its age'
+        else: yt = ', and YouTube owners rate it about average for its age'
+    pick = sy or best; av = sorted(v['y'] for v in bad3 if v['y'] != pick['y'])
+    AND = lambda xs: ', '.join(map(str, xs[:-1])) + (' and ' if len(xs) > 1 else '') + str(xs[-1])
+    if pick['li'] > 110: tail = f'. Even its best year, <b>{pick["y"]}</b>, draws more complaints than average.'
+    else: tail = f'. {"Safest" if sy else "Best"} year: <b>{pick["y"]}</b>.'
+    if av: tail += f' Avoid <b>{AND(av)}</b>.'
+    return word, comp + yt + tail
+def rel_top(f, c, snm, ys, sc, best, worst, bad3):
+    sy = safest_year(f['id'], sc); word, ans = rel_answer(f, c, snm, best, bad3, sy)
+    vc, vw = verdict(c['li']); tiles = [f'<div class="rs {vc}"><small>Owner complaints</small><b>{E(vw)}</b><span>Lemon Index {c["li"]} · 100 = average car</span></div>']
+    r = YTR.get(f['id'])
+    if r:
+        rk, n, vids = r; cl = 'good' if rk <= n / 3 else 'bad' if rk > n * 2 / 3 else 'mid'
+        tiles.append(f'<div class="rs {cl}"><small>YouTube owners</small><b>#{rk} <i>of {n}</i></b><span>vs. cars the same age · {vids:,} videos</span></div>')
+    if sy: tiles.append(f'<a class="rs good" href="{CARU(f, sy["y"])}"><small>Safest year</small><b>{sy["y"]}</b><span>complaints and YouTube agree</span></a>')
+    elif best['li'] <= 110: tiles.append(f'<a class="rs good" href="{CARU(f, best["y"])}"><small>Best year</small><b>{best["y"]}</b><span>fewest complaints per car sold</span></a>')
+    else: tiles.append(f'<a class="rs" href="{CARU(f, best["y"])}"><small>Least bad year</small><b>{best["y"]}</b><span>{E(short(best["li"]))}</span></a>')
+    if not r: tiles.append(f'<a class="rs bad" href="{CARU(f, worst["y"])}"><small>Worst year</small><b>{worst["y"]}</b><span>{E(short(worst["li"]))}</span></a>' if worst['li'] > 110 else
+                           f'<div class="rs"><small>Years to avoid</small><b>None</b><span>no year far above average</span></div>')
+    a = yt_adj(f['id']); last = max(v['y'] for v in sc); new = sorted((y for y in a if y > last), key=lambda y: -a[y])
+    newer = (f'<p class="rs-new">Newer than our complaint data ({last}): of the {min(new)}–{max(new)} years, YouTube sounds best about the <a href="#years">{new[0]}</a>.</p>'
+             if len(new) >= 2 else '')
+    return (f'<h1 class="rel-h">Is the {E(snm).replace("-", "-⁠")} reliable?</h1><p class="ans rel-a"><b>{word}</b> {ans}</p><div class="rsc">{"".join(tiles)}</div>{newer}'), (word + ' ' + html.unescape(re.sub('<[^>]+>', '', ans)))
 def ybars(f, cur=None):
     if YTS.get(f['id']): return ybars_yt(f, cur, YTS[f['id']])
     mx = max(120, max(v['li'] for v in f['years'] if v['ok']) * 1.08)
@@ -800,13 +877,16 @@ for f in YEARS:
     if _pt:
         _tp = [NICE(x) for x, _ in sorted(_pt.items(), key=lambda kv: -kv[1])[:3]]
         mqa.append((f'What are the most common {snm} problems?', f'Across every year, owners&#39; complaints to the government name {", ".join(_tp[:-1])} and {_tp[-1]} most. Some years are much worse than others: see the chart above.'))
+    rel_html, rel_plain = rel_top(f, c, snm, ys, sc, best, worst, bad3)
+    mqa.insert(0, (f'Is the {snm} reliable?', E(rel_plain)))
     model_qa_html = '<section class="yqa"><h2>Quick answers.</h2>' + qa_fold(''.join(f'<h3>{E(q)}</h3><p>{a}</p>' for q, a in mqa)) + '</section>'
-    page(CARU(f), f'{snm} Years to Avoid, Best Years and Problems by Year',
-         f'Every {snm} model year from {ys[0]["y"]} to {ys[-1]["y"]}, ranked by NHTSA owner complaints per car sold. Best: {best["y"]}. Worst: {worst["y"]} ({plain(worst["li"])}).', f'''
-<div class="pg mp6"><section class="ph yph6"><div class="yh-t"><p class="ph-e"><a href="/cars/">All cars</a> · <a href="/brands/{c["brand"].lower().replace(" ", "-")}/">{E(c["brand"])}</a> · {E(c["segName"])}</p><h1>{E(snm)}.</h1><p class="ans">The best {E(snm)} years are <b>{", ".join(str(v["y"]) for v in good3)}</b>{". Years to avoid: <b>" + ", ".join(str(v["y"]) for v in bad3) + "</b>" if bad3 else ", and no year drew much more than the average car&#39;s complaints"}. Across {c["years"]}, it has a Lemon Index of {c["li"]}, where 100 is the average car and lower is better.</p><p class="ph-s">Reliability by year, {ys[0]["y"]} to {ys[-1]["y"]}.</p>{f'<p class="yc-note">{SN[f["id"]][1]}</p>' if f["id"] in SN else ""}
+    _tt = next(t for t in (f'{snm} Reliability: Years to Avoid & Best Years', f'{snm} Reliability & Years to Avoid', f'{snm} Reliability by Year') if len(t) <= 65 or t.endswith('by Year'))
+    page(CARU(f), _tt,
+         f'Is the {snm} reliable? {rel_plain.split(". ")[0].rstrip(".")}. Every year {ys[0]["y"]}–{ys[-1]["y"]} ranked by owner complaints' + (' and YouTube owner reviews' if f['id'] in YTR else '') + f'. Best: {best["y"]}. Worst: {worst["y"]}.', f'''
+<div class="pg mp6"><section class="ph yph6"><div class="yh-t"><p class="ph-e"><a href="/cars/">All cars</a> · <a href="/brands/{c["brand"].lower().replace(" ", "-")}/">{E(c["brand"])}</a> · {E(c["segName"])}</p>{rel_html}{f'<p class="yc-note">{SN[f["id"]][1]}</p>' if f["id"] in SN else ""}
 <div class="yhero">{gauge(c["li"], 190)}<div class="yverd {verdict(c["li"])[0]}"><p><b>{verdict(c["li"])[1]}.</b> <span>Whole model, {c["years"]}{"" if plain(c["li"]).lower() in verdict(c["li"])[1].lower() else ": " + E(plain(c["li"]))}.</span></p><p class="ybw">Best year <a class="good" href="{CARU(f, best["y"])}">{best["y"]}</a> · Worst year <a class="bad" href="{CARU(f, worst["y"])}">{worst["y"]}</a></p></div></div>
 <p><button type="button" class="btn btn-ghost" data-share="{E(f'Every {snm} year ranked by owner complaints. Best: {best["y"]}. Worst: {worst["y"]}. Free report:')}">Share ↗</button></p></div><div class="ph-v">{year_photo(f, ys[-1]["y"])}</div></section>
-<section class="yyears noph"><div class="yy-ch"><h2>Every year. <span class="h2s">Lower is better. Tap a year for its full report.</span></h2>{ybars(f)}</div>{'<p class="yc-cap">Scores before 2010 are rough: fewer owners filed complaints back then.</p>' if ys[0]["y"] < 2010 else ''}{yt_note(f)}</section>
+<section class="yyears noph" id="years"><div class="yy-ch"><h2>Every year. <span class="h2s">Lower is better. Tap a year for its full report.</span></h2>{ybars(f)}</div>{'<p class="yc-cap">Scores before 2010 are rough: fewer owners filed complaints back then.</p>' if ys[0]["y"] < 2010 else ''}{yt_note(f)}</section>
 {ytfix("model:" + f["id"])}{picks}
 {f'<section><h2>Compare the {E(f["name"])}.</h2><div class="mus">{vcards}</div>' + (f'<p class="yc-cap">{vs}</p>' if vs else '') + '</section>' if vcards or vs else ''}
 {model_qa_html}
