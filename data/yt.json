@@ -1953,7 +1953,35 @@
      "views": 289157
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 23550,
+     "lo": 22995.0,
+     "hi": 32000.0,
+     "n": 3,
+     "videos": 3,
+     "id": "eUYZR1FoQes",
+     "t": 198,
+     "title": "2013 Chevrolet Silverado 1500 - Truck | New Car Review | AutoTrader"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 288,
+       "lo": 130.0,
+       "hi": 2500.0,
+       "n": 6,
+       "videos": 5,
+       "id": "ejSWUI3PW2M",
+       "t": 60,
+       "title": "OWNER REVIEWS!  CHEVROLET SILVERADO 2007 - 2013 COMMON PROBLEMS RELIABILITY PROBLEMS MAINTENANCE"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -3893,7 +3921,35 @@
      "views": 206966
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 25000,
+     "lo": 20000.0,
+     "hi": 29800.0,
+     "n": 5,
+     "videos": 5,
+     "id": "IXKEiZrWyVY",
+     "t": 262,
+     "title": "2008 Toyota Camry Review - Kelley Blue Book"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 88,
+       "lo": 45.0,
+       "hi": 150.0,
+       "n": 8,
+       "videos": 7,
+       "id": "6Pz6YHnpXwM",
+       "t": 121,
+       "title": "How to fix a 2007 Toyota Camry ABS and Brake light and also flickering speedometer"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
