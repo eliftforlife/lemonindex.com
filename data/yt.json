@@ -3988,7 +3988,21 @@
      "views": 240343
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 32860,
+     "lo": 26000.0,
+     "hi": 36800.0,
+     "n": 22,
+     "videos": 20,
+     "id": "nwGMuKfHNNo",
+     "t": 1593,
+     "title": "2018 Toyota Camry XSE – Redline: Review"
+    },
+    "items": []
+   }
   },
   {
    "years": [
@@ -11982,6 +11996,207 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013
+   ],
+   "gen": "2007–2013 BMW X5",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 30270249,
+   "topics": [
+    {
+     "name": "Steering & suspension",
+     "views": 620627,
+     "n": 4,
+     "best": {
+      "id": "wQgkU5zbKQ8",
+      "title": "BMW X5 E70 Rear Suspension Problem Fix",
+      "channel": "Wheels Tips!",
+      "views": 387370
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 524388,
+     "n": 3,
+     "best": {
+      "id": "bE22LoDpIQE",
+      "title": "2007-2013 BMW X5 E70 Battery replacement",
+      "channel": "Helping Hand Auto Repair",
+      "views": 453226
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 460310,
+     "n": 2,
+     "best": {
+      "id": "lYerHWxLoOY",
+      "title": "BMW X5 2009-2013 (E70) Service Reset Guide",
+      "channel": "AutoMotiv8ed",
+      "views": 320380
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 416657,
+     "n": 3,
+     "best": {
+      "id": "Dfvwqo8samo",
+      "title": "How to Reset 2011 BMW X5 Service Light Maintenance",
+      "channel": "UnpopularMechanic",
+      "views": 349072
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 358172,
+     "n": 3,
+     "best": {
+      "id": "KzSfbdPlV1E",
+      "title": "BMW X5 E70 transmission reset - will fix some issues",
+      "channel": "Real Life Videos",
+      "views": 187152
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 343171,
+     "n": 2,
+     "best": {
+      "id": "P9VTK7LoNlI",
+      "title": "BMW X5 E70 starting issue has been resolved, fuel pump relay problem",
+      "channel": "Real Life Videos",
+      "views": 217996
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 230602,
+     "n": 3,
+     "best": {
+      "id": "AB9GDFtn7QI",
+      "title": "My Cheap 2012 BMW X5 Diesel Had a $2000 Problem! Can we fix it for $250? BROKEN EGR COOLER!",
+      "channel": "Auto Auction Rebuilds",
+      "views": 106776
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 220083,
+     "n": 3,
+     "best": {
+      "id": "417x6BpsLbA",
+      "title": "BMW X5 2008 Brake Light Fix",
+      "channel": "X54Jaz",
+      "views": 99468
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "F04bZMpeTFY",
+     "title": "BMW X5 SUV (2013-2018) review - Carbuyer / Mat Watson",
+     "channel": "Carbuyer",
+     "views": 1822241
+    },
+    {
+     "id": "i1N5VSEk7SU",
+     "title": "BMW X5 SUV 2007-2013 review - CarBuyer",
+     "channel": "Carbuyer",
+     "views": 1141510
+    },
+    {
+     "id": "E0rCJp_JyDg",
+     "title": "Should You Buy a BMW X5? (Test Drive & Review E70 X5 M)",
+     "channel": "High Peak Autos",
+     "views": 378114
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2019–2025 BMW X5",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 118613511,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 433111,
+     "n": 1,
+     "best": {
+      "id": "K5fVyQx09H4",
+      "title": "2019-2022 BMW X5 ( G05 ) service light reset [ HOW TO ] #BMWX5 #DIY #G05",
+      "channel": "The Driver Mod",
+      "views": 433111
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 95303,
+     "n": 1,
+     "best": {
+      "id": "sdqLk8mBluk",
+      "title": "How to Perform a Complete Maintenance on a BMW X5 G05 | 60,000km Service",
+      "channel": "Fun Car",
+      "views": 95303
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 76957,
+     "n": 1,
+     "best": {
+      "id": "KnqwjFzw4zs",
+      "title": "Maintaining Your BMW G05 X5: Transfer Case Fluid Replacement",
+      "channel": "JKU 392 ADVENTURES",
+      "views": 76957
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "1xKal8bs14U",
+     "title": "BMW X5 Buyer's Guide: Everything You Need To Know (2019-2026 BMW G05 X5, G06 X6)",
+     "channel": "FCP Euro",
+     "views": 147455
+    },
+    {
+     "id": "o45jqUAccAQ",
+     "title": "2019-2023 BMW X5 40i (G05) Reliability Review | Expired Warranty Nightmare?",
+     "channel": "BIMMER LEAGUE",
+     "views": 128887
+    },
+    {
+     "id": "-flDvLF29V0",
+     "title": "2022 BMW X6 M50i: Should You Buy This Over The BMW X5?",
+     "channel": "Ben Hardy",
+     "views": 71512
+    }
+   ],
+   "costs": null
   }
  ],
  "nissan-altima": [
@@ -17280,6 +17495,263 @@
      "title": "2023 Chevy Bolt EUV | 3-Year Ownership Reliability Check | Batteries, Telematics & Regrets?!",
      "channel": "Jim's EV Adventures",
      "views": 28717
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "nissan-versa": [
+  {
+   "years": [
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012
+   ],
+   "gen": "2007–2012 Nissan Versa",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 12182214,
+   "topics": [
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 973276,
+     "n": 7,
+     "best": {
+      "id": "LnxCXAmxpSg",
+      "title": "Nissan Versa 2010 Cabin Air Filter Replacement | AQ1105",
+      "channel": "Filterheads",
+      "views": 674969
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 970294,
+     "n": 10,
+     "best": {
+      "id": "7RkFWQ4itlM",
+      "title": "2007 - 2011 Nissan Versa/Note/Tiida Radio Install",
+      "channel": "Provo Beast Audio Installation",
+      "views": 429932
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 785314,
+     "n": 7,
+     "best": {
+      "id": "nx9xLbwdN1E",
+      "title": "2007 Nissan Versa Brake Light Bulb Replacement",
+      "channel": "ruthlessluder",
+      "views": 393439
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 625295,
+     "n": 11,
+     "best": {
+      "id": "_ICrVY_LaYE",
+      "title": "2007 - 2012 Nissan Versa Clutch Master Cylinder Replacement and Bleed",
+      "channel": "FIX MY CAR",
+      "views": 152136
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 620133,
+     "n": 6,
+     "best": {
+      "id": "LBuNl_GUyEs",
+      "title": "How to Replace the oxygen sensor on the Nissan Versa 2007 to 2019",
+      "channel": "Haynes Manuals",
+      "views": 222579
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 395868,
+     "n": 8,
+     "best": {
+      "id": "ADz5ekKor_4",
+      "title": "How To Replace Front Control Arm 2010-2013 Nissan Versa",
+      "channel": "TRQ",
+      "views": 77962
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 384091,
+     "n": 4,
+     "best": {
+      "id": "wLJiusZhJes",
+      "title": "How to Replace the spark plugs on the Nissan Versa 2007 to 2019",
+      "channel": "Haynes Manuals",
+      "views": 185161
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 310560,
+     "n": 4,
+     "best": {
+      "id": "r_mgYO8D2cg",
+      "title": "How to Service the cooling system on the Nissan Versa 2007 to 2019",
+      "channel": "Haynes Manuals",
+      "views": 128227
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "9ieeed4aeVM",
+     "title": "Top 5 Problems Nissan Versa Sedan 2nd Generation 2012-19",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 405262
+    },
+    {
+     "id": "0D6VPmfmEa8",
+     "title": "Top 5 Problems Nissan Versa Hatchback 2007-2012 1st Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 307415
+    },
+    {
+     "id": "E83Y2upkRrU",
+     "title": "2009 Nissan Versa Keyless Ignition Problems",
+     "channel": "jeepman001",
+     "views": 46912
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019
+   ],
+   "gen": "2012–2019 Nissan Versa",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 22594218,
+   "topics": [
+    {
+     "name": "Transmission & shifter",
+     "views": 1054033,
+     "n": 14,
+     "best": {
+      "id": "_ICrVY_LaYE",
+      "title": "2007 - 2012 Nissan Versa Clutch Master Cylinder Replacement and Bleed",
+      "channel": "FIX MY CAR",
+      "views": 152136
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 707239,
+     "n": 10,
+     "best": {
+      "id": "JS_iwefSvuA",
+      "title": "Nissan Versa Cabin Air Filter Replacement ( 2014 2015 2016 2017 2018 2019 2020 )",
+      "channel": "Undercar Experts",
+      "views": 130350
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 630067,
+     "n": 6,
+     "best": {
+      "id": "LBuNl_GUyEs",
+      "title": "How to Replace the oxygen sensor on the Nissan Versa 2007 to 2019",
+      "channel": "Haynes Manuals",
+      "views": 222579
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 562266,
+     "n": 7,
+     "best": {
+      "id": "dHNi0aBxkSk",
+      "title": "2012 - 2019 Nissan Versa Radio Install",
+      "channel": "Provo Beast Audio Installation",
+      "views": 176442
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 345677,
+     "n": 3,
+     "best": {
+      "id": "8QD3yFhKWjQ",
+      "title": "How to Replace A Serpentine Belt - Nissan Versa 2013",
+      "channel": "Backyard Chevy",
+      "views": 187028
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 344300,
+     "n": 3,
+     "best": {
+      "id": "wLJiusZhJes",
+      "title": "How to Replace the spark plugs on the Nissan Versa 2007 to 2019",
+      "channel": "Haynes Manuals",
+      "views": 185161
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 280814,
+     "n": 5,
+     "best": {
+      "id": "-TS1YcJT2zg",
+      "title": "How to Replace Rear Drum Brakes 2007-2012 Nissan Versa",
+      "channel": "TRQ",
+      "views": 69806
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 223863,
+     "n": 4,
+     "best": {
+      "id": "r_mgYO8D2cg",
+      "title": "How to Service the cooling system on the Nissan Versa 2007 to 2019",
+      "channel": "Haynes Manuals",
+      "views": 128227
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "9ieeed4aeVM",
+     "title": "Top 5 Problems Nissan Versa Sedan 2nd Generation 2012-19",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 405262
+    },
+    {
+     "id": "0D6VPmfmEa8",
+     "title": "Top 5 Problems Nissan Versa Hatchback 2007-2012 1st Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 307415
+    },
+    {
+     "id": "UNA0H_9O3Jo",
+     "title": "Nissan Versa 2013-2016 transmission problems",
+     "channel": "El Meka en Los Angeles",
+     "views": 42885
     }
    ],
    "costs": null
