@@ -4296,7 +4296,35 @@
      "views": 38979
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 4799,
+     "lo": 1500.0,
+     "hi": 7200.0,
+     "n": 3,
+     "videos": 3,
+     "id": "KWMxAy_cpoo",
+     "t": 15,
+     "title": "1999 Toyota Camry XLE - for sale in Norristown, PA 19403"
+    },
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 138,
+       "lo": 40.0,
+       "hi": 200.0,
+       "n": 10,
+       "videos": 7,
+       "id": "6WfibE76l5g",
+       "t": 224,
+       "title": "1999 Toyota Camry 2.2L 4 cylinder (5sFe): EGR Clean/Remove and Replace P0401"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -23527,6 +23555,79 @@
      "title": "2013 Lexus ES 350 (XV60) Review - Reliable, Comfortable, Luxury Cruiser",
      "channel": "Kyle Liong Cars",
      "views": 106524
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2019–2025 Lexus ES",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 27200315,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 55142,
+     "n": 1,
+     "best": {
+      "id": "GT6w7ag8xbM",
+      "title": "2019-2024 Lexus ES350 ES300h EPB Release, Rear Brake Service Mode - No Scan Tool Or Battery Needed",
+      "channel": "Viktor G Automotive",
+      "views": 55142
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 39785,
+     "n": 1,
+     "best": {
+      "id": "kb2jqQgATM4",
+      "title": "2020 Lexus ES 350 oil change tips",
+      "channel": "David Parsons",
+      "views": 39785
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 32368,
+     "n": 1,
+     "best": {
+      "id": "jeQKDPeSwxM",
+      "title": "Lexus Integrated dashcam installation on 2023 ES350 - How to remove dome light console",
+      "channel": "Andy N",
+      "views": 32368
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "5ibepWVRqHw",
+     "title": "2019 Lexus ES 350 F-Sport – Baby LS Wants Younger Buyers",
+     "channel": "Redline Reviews",
+     "views": 1830013
+    },
+    {
+     "id": "4zjXp_qGry0",
+     "title": "2024 Lexus ES 350 Review | The Most Reliable Luxury Sedan!",
+     "channel": "Gold Pony",
+     "views": 142874
+    },
+    {
+     "id": "P1K2qmHzTwI",
+     "title": "2025 Lexus ES 350 Review | The Most Reliable Luxury Sedan!",
+     "channel": "Gold Pony",
+     "views": 130308
     }
    ],
    "costs": null
