@@ -14271,6 +14271,56 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2020–2025 Hyundai Sonata",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 38311519,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 41635,
+     "n": 1,
+     "best": {
+      "id": "wM_pyv9shLM",
+      "title": "2021 Hyundai sonata oil change",
+      "channel": "Hyundai How To",
+      "views": 41635
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "QFdsBvh3H3k",
+     "title": "Should You Buy a 2024 Hyundai Sonata? Thorough Review By A Mechanic",
+     "channel": "The Car Care Nut Reviews",
+     "views": 264589
+    },
+    {
+     "id": "wW5pI2OrKKM",
+     "title": "The $35,000 Question – Should You Buy a 2021 Kia K5 GT or a 2021 Hyundai Sonata Limited?",
+     "channel": "Redline Reviews",
+     "views": 148248
+    },
+    {
+     "id": "_J3hYMx3ZZ8",
+     "title": "2024 Hyundai Sonata Exterior & Interior In-Depth Walkaround",
+     "channel": "The Mount",
+     "views": 1639510
+    }
+   ],
+   "costs": null
   }
  ],
  "chevrolet-malibu": [
