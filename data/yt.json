@@ -2739,7 +2739,39 @@
      "views": 158116
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 40,
+       "lo": 40.0,
+       "hi": 90.0,
+       "n": 5,
+       "videos": 5,
+       "id": "GqxLsemrQo8",
+       "t": 363,
+       "title": "TOUR OF A MINT 1997 DODGE RAM 1500!!!"
+      }
+     ],
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 150,
+       "lo": 100.0,
+       "hi": 225.0,
+       "n": 6,
+       "videos": 4,
+       "id": "FZDDTgh6w7M",
+       "t": 43,
+       "title": "Top 3 Mods Under $100 For a 2nd Gen Dodge Ram"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -2867,7 +2899,26 @@
      "views": 162798
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 240,
+       "lo": 80.0,
+       "hi": 1400.0,
+       "n": 7,
+       "videos": 5,
+       "id": "uR5M4AcZJ-Q",
+       "t": 1316,
+       "title": "Is a 400k Mile 2005 Dodge Ram 2500 5.9 Cummins Worth It?"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -2962,7 +3013,81 @@
      "views": 344358
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": {
+     "median": 14000,
+     "lo": 6000.0,
+     "hi": 90000.0,
+     "n": 3,
+     "videos": 3,
+     "id": "O1STG9SaItg",
+     "t": 456,
+     "title": "I Bought THE CHEAPEST 6.7 Cummins - WILL IT RUN?? (5th Gen RAM DUALLY)",
+     "private": 0,
+     "dealer": 0
+    },
+    "used": {
+     "median": 47000,
+     "lo": 34350.0,
+     "hi": 60000.0,
+     "n": 8,
+     "videos": 8,
+     "id": "wpiCKhDDejI",
+     "t": 2374,
+     "title": "The 2025 Ram 1500 Tungsten SST Is The Ultimate Twin-Turbo Uber Luxury Truck"
+    },
+    "msrp": {
+     "median": 64500,
+     "lo": 52000.0,
+     "hi": 70000.0,
+     "n": 34,
+     "videos": 25,
+     "id": "KjiSK6ztIzk",
+     "t": 84,
+     "title": "The 2019 Ram 1500 Limited Is a $65,000 Ultra-Luxury Truck"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 500,
+       "lo": 80.0,
+       "hi": 1700.0,
+       "n": 11,
+       "videos": 8,
+       "id": "bTrnChd3swc",
+       "t": 139,
+       "title": "I Almost, ALMOST Bought This 2025 Ram 1500 Because It Was Too Cheap to Pass Up!"
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 735,
+       "lo": 270.0,
+       "hi": 1200.0,
+       "n": 4,
+       "videos": 4,
+       "id": "llLm0WpbOSM",
+       "t": 266,
+       "title": "2021 Ram 1500 TRX | Automotive Absurdity"
+      }
+     ],
+     [
+      "Oil change",
+      {
+       "median": 50,
+       "lo": 40.0,
+       "hi": 60.0,
+       "n": 3,
+       "videos": 2,
+       "id": "cqsxRQQ3quo",
+       "t": 14,
+       "title": "Replace Your Cabin Air Filter - 2019-2024 Ram 1500"
+      }
+     ]
+    ]
+   }
   }
  ],
  "toyota-rav4": [
@@ -4297,7 +4422,37 @@
      "views": 120624
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": {
+     "median": 3000,
+     "lo": 1500.0,
+     "hi": 3600.0,
+     "n": 5,
+     "videos": 5,
+     "id": "eL9Z-1C2hY8",
+     "t": 399,
+     "title": "The BEST used car for $3000 | 2006 Toyota Camry",
+     "private": 1,
+     "dealer": 0
+    },
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 75,
+       "lo": 30.0,
+       "hi": 200.0,
+       "n": 6,
+       "videos": 3,
+       "id": "hyGaefcpiew",
+       "t": 599,
+       "title": "2002 Toyota Camry LE review buying tips"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -4649,7 +4804,109 @@
      "views": 25294
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 30000,
+     "lo": 30000.0,
+     "hi": 32000.0,
+     "n": 6,
+     "videos": 6,
+     "id": "Mr2eRv38Ly4",
+     "t": 534,
+     "title": "The 2025 Toyota Camry is fantastic...but here's every nitpick I have with it."
+    },
+    "msrp": {
+     "median": 31896,
+     "lo": 29500.0,
+     "hi": 34636.0,
+     "n": 50,
+     "videos": 40,
+     "id": "uqbWadog8Y0",
+     "t": 980,
+     "title": "2025 Toyota Camry Review - MAJOR Improvements!"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 1500,
+       "lo": 600.0,
+       "hi": 4550.0,
+       "n": 7,
+       "videos": 5,
+       "id": "iMqphSXt4aI",
+       "t": 168,
+       "title": "This base 2025 Toyota Camry LE is a HOME RUN // Lexus DNA is built in..."
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 500,
+       "lo": 300.0,
+       "hi": 700.0,
+       "n": 4,
+       "videos": 3,
+       "id": "P8MJTx3IVzk",
+       "t": 663,
+       "title": "This is the BEST Camry of all time // 2025+ Toyota Camry LE Review"
+      }
+     ],
+     [
+      "Oil change",
+      {
+       "median": 350,
+       "lo": 300.0,
+       "hi": 1200.0,
+       "n": 5,
+       "videos": 3,
+       "id": "0iyBw9zL0Rg",
+       "t": 327,
+       "title": "Here’s How Much $$ our 2025 Toyota Camry Cost to Own for 1 Year! (More than You’d Think!)"
+      }
+     ],
+     [
+      "Brakes",
+      {
+       "median": 775,
+       "lo": 700.0,
+       "hi": 850.0,
+       "n": 2,
+       "videos": 2,
+       "id": "PK-Liq0OWyU",
+       "t": 355,
+       "title": "Here’s EVERYTHING That Needs to be Replaced on the 2025 Toyota Camry in 100,000 Miles! (With Cost)"
+      }
+     ],
+     [
+      "Insurance",
+      {
+       "median": 1637,
+       "lo": 1434.0,
+       "hi": 1840.0,
+       "n": 2,
+       "videos": 2,
+       "id": "PK-Liq0OWyU",
+       "t": 437,
+       "title": "Here’s EVERYTHING That Needs to be Replaced on the 2025 Toyota Camry in 100,000 Miles! (With Cost)"
+      }
+     ],
+     [
+      "Battery",
+      {
+       "median": 6250,
+       "lo": 6000.0,
+       "hi": 6500.0,
+       "n": 4,
+       "videos": 2,
+       "id": "gnscrcmhZ3Q",
+       "t": 152,
+       "title": "15 SHOCKING Toyota Camry 2025 Problems You Need to Know Before Buying"
+      }
+     ]
+    ]
+   }
   }
  ],
  "honda-civic": [
@@ -23190,6 +23447,89 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018
+   ],
+   "gen": "2013–2018 Lexus ES",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 13601432,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 219934,
+     "n": 1,
+     "best": {
+      "id": "VdN0Jvy-8JI",
+      "title": "2013-2015 Lexus ES350 how to reset maintenance light",
+      "channel": "DAN THE CAR MAN",
+      "views": 219934
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 125916,
+     "n": 2,
+     "best": {
+      "id": "xZsZIV68p78",
+      "title": "HELP! My Lexus Can't MOVE!? ('13 ES350: Transmission FAIL @185k miles?)",
+      "channel": "Pine Hollow Auto Diagnostics",
+      "views": 102155
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 73224,
+     "n": 2,
+     "best": {
+      "id": "S64v67xQPFs",
+      "title": "2017 Lexus ES350 oil and maintenance reset",
+      "channel": "The G Automotive And More",
+      "views": 60986
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 33020,
+     "n": 1,
+     "best": {
+      "id": "B0pdwjDBTWM",
+      "title": "2016 2017 2018 Lexus ES350 Front Brake Pads Replacement",
+      "channel": "Brian Balatbat",
+      "views": 33020
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "dHdTGsnvjho",
+     "title": "2013-2018 Lexus ES 350 Buyer’s Guide - Reliability & Common Problems",
+     "channel": "Discerning Cars",
+     "views": 148894
+    },
+    {
+     "id": "rEyQO4robts",
+     "title": "2015 LEXUS ES350 vs GS350 - SPORTS LUXURY - COMPREHENSIVE REVIEW - WHICH CAR SHOULD YOU BUY?",
+     "channel": "Serg Car Reviews",
+     "views": 108938
+    },
+    {
+     "id": "VrAuCXZanME",
+     "title": "2013 Lexus ES 350 (XV60) Review - Reliable, Comfortable, Luxury Cruiser",
+     "channel": "Kyle Liong Cars",
+     "views": 106524
+    }
+   ],
+   "costs": null
   }
  ],
  "tesla-model-y": [
@@ -24129,6 +24469,136 @@
      "title": "2023 BMW X1 (218hp) - Sound & Visual Review!",
      "channel": "Visual Car Reviews",
      "views": 764496
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "mercedes-benz-c-class": [
+  {
+   "years": [
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007
+   ],
+   "gen": "2001–2007 Mercedes-Benz C-Class",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 198,
+   "views": 41427590,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 3401762,
+     "n": 11,
+     "best": {
+      "id": "YpN12SHnDXA",
+      "title": "Mercedes W203 Service Reset. Service A Reset C180 C200 C220 C230 C240 C270 C280 C350",
+      "channel": "World Mechanics",
+      "views": 922118
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 2912457,
+     "n": 11,
+     "best": {
+      "id": "UFVeZd2yx8U",
+      "title": "Mercedes w203 All Fuses and Relays Location - How to test them",
+      "channel": "doit_vehicles",
+      "views": 1106344
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 1693959,
+     "n": 5,
+     "best": {
+      "id": "IAN9WfPtG1I",
+      "title": "Buying a used Mercedes C-class W203 - 2000-2007, Common Issues, Buying advice / guide",
+      "channel": "different car review",
+      "views": 1005766
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 1436933,
+     "n": 4,
+     "best": {
+      "id": "1dblNuKrNJ8",
+      "title": "2006 Mercedes C230: How to Change the Side Mirror Lighting Unit in 720p",
+      "channel": "Willy",
+      "views": 715934
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 1206038,
+     "n": 4,
+     "best": {
+      "id": "WxNkL6veFYw",
+      "title": "Mercedes C Class (W204) Service Light Reset 2007–2014",
+      "channel": "Ask The Mechanic",
+      "views": 937765
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 1180616,
+     "n": 8,
+     "best": {
+      "id": "_2zPe1sNHp0",
+      "title": "Replace Mercedes Coolant Temp Sensor 2004 C230",
+      "channel": "mugs132",
+      "views": 554951
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 926907,
+     "n": 5,
+     "best": {
+      "id": "VgRCxOS2cD8",
+      "title": "Mercedes W203 ESP ABS Module Replacement. ABS Light ESP Light on C180 C200 C230 C240 C270 C280",
+      "channel": "World Mechanics",
+      "views": 432782
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 640134,
+     "n": 3,
+     "best": {
+      "id": "WyMbpITvlRA",
+      "title": "Mercedes w203 Fuel Pump Replacement c class c160 c180 c200 c230",
+      "channel": "doit_vehicles",
+      "views": 285098
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "3FdLB3US3CI",
+     "title": "Mercedes C-Class saloon 2007 - 2011 review - CarBuyer",
+     "channel": "Carbuyer",
+     "views": 1578138
+    },
+    {
+     "id": "4NkwIZbT2TA",
+     "title": "The Modern Muscle Car Nobody Counted: Headers, Problems and Dyno 2005 Mercedes W203 C55 AMG",
+     "channel": "Fluid MotorUnion",
+     "views": 233705
+    },
+    {
+     "id": "aQF5yTvu2Yk",
+     "title": "Used Mercedes C-Class W204 Buyers guide (2007-2015) Avoid faults and common problems (CDI/CGI)",
+     "channel": "The Miles Driven",
+     "views": 230059
     }
    ],
    "costs": null
