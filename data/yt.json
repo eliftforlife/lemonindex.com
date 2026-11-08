@@ -11854,6 +11854,134 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006
+   ],
+   "gen": "2000–2006 BMW X5",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 198,
+   "views": 20985687,
+   "topics": [
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 1001831,
+     "n": 4,
+     "best": {
+      "id": "tv2TK3fq10k",
+      "title": "BMW E46 3 Series, X5 E53, or X3 E83 Door Lock Repair Kit Tutorial Intructional Video",
+      "channel": "mattski1212",
+      "views": 351205
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 759566,
+     "n": 5,
+     "best": {
+      "id": "sjx0q8QYV6E",
+      "title": "X5 Service Interval Light Reset E53 BMW",
+      "channel": "BIMMER ZEIT",
+      "views": 605282
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 538750,
+     "n": 5,
+     "best": {
+      "id": "TRtpyZAF_Hg",
+      "title": "Oil Change & Filter Replacement BMW X5 2000-2006",
+      "channel": "2CarPros",
+      "views": 163216
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 363516,
+     "n": 5,
+     "best": {
+      "id": "AB9GDFtn7QI",
+      "title": "My Cheap 2012 BMW X5 Diesel Had a $2000 Problem! Can we fix it for $250? BROKEN EGR COOLER!",
+      "channel": "Auto Auction Rebuilds",
+      "views": 106776
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 277853,
+     "n": 6,
+     "best": {
+      "id": "JIKKOQFbMVM",
+      "title": "How to Remove Radio / Tuner from BMW X5 2005 for repair.",
+      "channel": "HiTechElectronic",
+      "views": 94765
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 245652,
+     "n": 2,
+     "best": {
+      "id": "Rn6fEjPcXzk",
+      "title": "How to Diagnose BMW Transfer Case Actuator Gear Failure E83 X3 E53 X5 Brake ABS 4X4 Lights On 5F39",
+      "channel": "BIMMER ZEIT",
+      "views": 182269
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 230278,
+     "n": 5,
+     "best": {
+      "id": "F-sHendgzdY",
+      "title": "Bmw X5 E53 4.8is Suspension Issue Self.Levl.Susp.Inact ( 2x axle air bags) 4.6is / 4.4i / 3.0d /3.0i",
+      "channel": "Bogdan_Gogu",
+      "views": 75244
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 207322,
+     "n": 1,
+     "best": {
+      "id": "OxpDLwu4T3s",
+      "title": "BMW X5 E53 (also E60 & E46) common problem, lean misfire at idle and engine rattle: BMTroubleU",
+      "channel": "BMTroubleU",
+      "views": 207322
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "66S0vvGHGbE",
+     "title": "Should You Buy a Used BMW X5? (E53 Test Drive & Review)",
+     "channel": "High Peak Autos",
+     "views": 667094
+    },
+    {
+     "id": "wMiXwXodT3I",
+     "title": "BMW X5 Buyers guide E53 (2000-2006) Avoid buying a broken BMW X5 (3.0i, 3.0d, 4.4i, 4.6is,4.8is, V8)",
+     "channel": "The Miles Driven",
+     "views": 160696
+    },
+    {
+     "id": "KoqqAQSCvh4",
+     "title": "BMW X5 Buyers guide E70 (2006-2013) Avoid buying a broken BMW X5 and E71 BMW X6 with this review",
+     "channel": "The Miles Driven",
+     "views": 158616
+    }
+   ],
+   "costs": null
   }
  ],
  "nissan-altima": [
@@ -18441,6 +18569,79 @@
      "title": "Mazda 6 2020 in-depth review | carwow Reviews",
      "channel": "carwow",
      "views": 2313955
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "dodge-challenger": [
+  {
+   "years": [
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023
+   ],
+   "gen": "2008–2023 Dodge Challenger",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 130365338,
+   "topics": [
+    {
+     "name": "Transmission & shifter",
+     "views": 491164,
+     "n": 2,
+     "best": {
+      "id": "ORAeR26h89c",
+      "title": "2008 2020 Dodge Challenger How to Check Transmission Fluid Location Find ATF Dipstick 2019 2018 2017",
+      "channel": "Fixbook",
+      "views": 307850
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 315779,
+     "n": 1,
+     "best": {
+      "id": "W63CrHbhS1o",
+      "title": "2011-2017 Chrysler 300, Dodge Charger, and Dodge Challenger 3.6 spark plug replacement",
+      "channel": "MotorCity Mechanic",
+      "views": 315779
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "vEOejD7CjOs",
+     "title": "2015 Dodge Challenger SRT Hellcat Start Up, Road Test, and In Depth Review",
+     "channel": "Saabkyle04",
+     "views": 3514641
+    },
+    {
+     "id": "xgHIvDHqUDA",
+     "title": "2019 Dodge Challenger Hellcat Redeye Widebody Review - How is This Street Legal?",
+     "channel": "TheStraightPipes",
+     "views": 3007812
+    },
+    {
+     "id": "0SHHCS2s_H4",
+     "title": "2020 Dodge Challenger HELLCAT 727HP Review on AUTOBAHN (No Speed Limit) by AutoTopNL",
+     "channel": "AutoTopNL",
+     "views": 1917396
     }
    ],
    "costs": null
