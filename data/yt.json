@@ -8758,7 +8758,26 @@
      "views": 114901
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 200,
+       "lo": 50.0,
+       "hi": 200.0,
+       "n": 7,
+       "videos": 6,
+       "id": "XXir4Lz9r0k",
+       "t": 39,
+       "title": "Cheap Intake Mod - 2005-07 Ford Focus"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
