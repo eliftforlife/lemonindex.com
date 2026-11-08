@@ -17409,6 +17409,132 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019
+   ],
+   "gen": "2015–2019 Subaru Legacy",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 11610907,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 200949,
+     "n": 7,
+     "best": {
+      "id": "1T8N-dcAuL4",
+      "title": "Subaru Legacy Key Fob Battery Replacement (2015 - 2021)",
+      "channel": "FobBattery",
+      "views": 51891
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 168654,
+     "n": 1,
+     "best": {
+      "id": "cerk8-l2ezI",
+      "title": "2014- 2019 SUBARU LEGACY REAR BRAKE PAD REPLACEMENT (WITH ELECTRONIC PARKING BRAKE )",
+      "channel": "JoeTheAutoGuy",
+      "views": 168654
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 119051,
+     "n": 1,
+     "best": {
+      "id": "lPwVOtsaoa0",
+      "title": "2012-2019 Subaru Legacy Outback TR690 Transmission Fluid Change How To DIY",
+      "channel": "Valley Mobile Automotive",
+      "views": 119051
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 108887,
+     "n": 5,
+     "best": {
+      "id": "Qm81iUwbQBA",
+      "title": "OIL CHANGE 2017 18 19 subaru legacy",
+      "channel": "Live Free",
+      "views": 31278
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 28940,
+     "n": 1,
+     "best": {
+      "id": "k9qXP87u2Bk",
+      "title": "How to Replace the front strut on the Subaru Legacy 2010 to 2016",
+      "channel": "Haynes Manuals",
+      "views": 28940
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 26389,
+     "n": 1,
+     "best": {
+      "id": "yE1GNN-0w-0",
+      "title": "How to Replace the oxygen sensor on the Subaru Legacy 2010 to 2016",
+      "channel": "Haynes Manuals",
+      "views": 26389
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 21080,
+     "n": 1,
+     "best": {
+      "id": "jkfomPGh6AU",
+      "title": "How to Replace Cabin Air Filter 2016 Subaru Legacy | AQ1102",
+      "channel": "Filterheads",
+      "views": 21080
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 20574,
+     "n": 1,
+     "best": {
+      "id": "iMel688Jq4I",
+      "title": "How to Replace the drive axle on the Subaru Legacy 2010 to 2016",
+      "channel": "Haynes Manuals",
+      "views": 20574
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "QtsqKCzTuLw",
+     "title": "Should You Buy a 2019 Subaru Legacy?",
+     "channel": "Motor Illustrated",
+     "views": 15150
+    },
+    {
+     "id": "Ydcz4GsTxL4",
+     "title": "A (not so) Quick Look at my 2017 Subaru Legacy + Car Problems / Updates",
+     "channel": "Owen Dowell",
+     "views": 13512
+    },
+    {
+     "id": "BId7ZjJWA4s",
+     "title": "2015 Subaru Legacy 3.6R Limited - Review & Test Drive",
+     "channel": "Engineering Explained",
+     "views": 566997
+    }
+   ],
+   "costs": null
   }
  ],
  "mazda3": [
