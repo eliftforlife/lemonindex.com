@@ -3188,7 +3188,37 @@
      "views": 291080
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": {
+     "median": 1700,
+     "lo": 800.0,
+     "hi": 2200.0,
+     "n": 3,
+     "videos": 3,
+     "id": "A2flPaJtu8I",
+     "t": 475,
+     "title": "A personal review of a 1999 Honda CRV",
+     "private": 1,
+     "dealer": 0
+    },
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 70,
+       "lo": 20.0,
+       "hi": 185.0,
+       "n": 7,
+       "videos": 6,
+       "id": "3vfprnwvr5Q",
+       "t": 1811,
+       "title": "Power Steering leaks! Fixed! Flush and Pump Rebuild - Part 1 - 1999 Honda CRV"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -3314,7 +3344,35 @@
      "views": 202010
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 3000,
+     "lo": 2100.0,
+     "hi": 8000.0,
+     "n": 5,
+     "videos": 4,
+     "id": "WqMuFlJusbE",
+     "t": 91,
+     "title": "Honda CR-V (2nd Gen) | Reliability, 0-60, 4WD, Price, Practicality..."
+    },
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 800,
+       "lo": 140.0,
+       "hi": 2000.0,
+       "n": 15,
+       "videos": 8,
+       "id": "xVDIpe15K8k",
+       "t": 85,
+       "title": "Honda CR-V Mk2 (2002-2006) Common Problems. Almost Perfect SUV"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -3440,7 +3498,26 @@
      "views": 477531
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 310,
+       "lo": 130.0,
+       "hi": 750.0,
+       "n": 16,
+       "videos": 9,
+       "id": "gMUlCUF7rtI",
+       "t": 69,
+       "title": "3rd Generation Honda CR-V (2007-2011): Common problems, Reliability, Pros and Cons"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -8806,7 +8883,26 @@
      "views": 803178
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 300,
+       "lo": 60.0,
+       "hi": 400.0,
+       "n": 7,
+       "videos": 5,
+       "id": "zI-kCtIID3U",
+       "t": 20,
+       "title": "How to Replace Front Brake Pads and Rotors Ford Focus 2008-2011 - EASY!"
+      }
+     ]
+    ]
+   }
   }
  ],
  "chevrolet-equinox": [
@@ -13790,6 +13886,257 @@
      "title": "SOLD 2002 Hyundai Sonata GLS Meticulous Motors Florida For Sale LOOK",
      "channel": "MeticulousMotors",
      "views": 85336
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2006,
+    2007,
+    2008,
+    2009,
+    2010
+   ],
+   "gen": "2006–2010 Hyundai Sonata",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 19710043,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 1743224,
+     "n": 22,
+     "best": {
+      "id": "RDFchcE3JEw",
+      "title": "DIY Replace Alternator on Hyundai Sonata 3.3L - V6 2006 - 2009 for less than $150",
+      "channel": "Paul Stallman",
+      "views": 229624
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 515692,
+     "n": 7,
+     "best": {
+      "id": "jn_N5g1b-VI",
+      "title": "How to Replace the Brake Light Switch on Hyundai Sonata 2006 2007 2008 2009 2010 ABS ESC LIGHT",
+      "channel": "World Mechanics",
+      "views": 297165
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 441259,
+     "n": 3,
+     "best": {
+      "id": "R4ebjE8X_sw",
+      "title": "2006-2010 Hyundai Sonata V6 Spark Plug Change",
+      "channel": "Dissonant Cognizance",
+      "views": 243720
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 367961,
+     "n": 3,
+     "best": {
+      "id": "rCWasue2tO4",
+      "title": "Hyundai Sonata 3.3 V6 Oil Change 2006 2007 2008 2009 2010",
+      "channel": "World Mechanics",
+      "views": 232969
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 330942,
+     "n": 3,
+     "best": {
+      "id": "QelvHyuRv8A",
+      "title": "Timing chain replacement Hyundai Sonata 2006-2009 GLS 2.4L DOHC Install Remove Replace",
+      "channel": "Fixing cars and stuff",
+      "views": 246807
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 310041,
+     "n": 6,
+     "best": {
+      "id": "FV-GXloqgpY",
+      "title": "Throttle Actuator Service Hyundai Sonata 2009-2014",
+      "channel": "2CarPros",
+      "views": 160853
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 298973,
+     "n": 3,
+     "best": {
+      "id": "7FbS8ENSuRg",
+      "title": "How to Recharge the A/C Hyundai Sonata 2006 - 2010. How to Refill Air Conditioner",
+      "channel": "World Mechanics",
+      "views": 243054
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 223252,
+     "n": 7,
+     "best": {
+      "id": "dkmMQJneW3M",
+      "title": "Replace 2007 Hyundai Sonata Front and Rear Exterior Door Handles",
+      "channel": "bestgirlsdad",
+      "views": 93267
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "2iJy5VeA0UE",
+     "title": "Top 5 Problems Hyundai Sonata Sedan 2006-2010 5th Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 42214
+    },
+    {
+     "id": "66erAqE80RE",
+     "title": "2007 HYUNDAI SONATA Interior Exterior tour by Automotive Review",
+     "channel": "AutomotiveReview",
+     "views": 354946
+    },
+    {
+     "id": "C89prjqdKaI",
+     "title": "2008 Hyundai Sonata Review - Kelley Blue Book",
+     "channel": "Kelley Blue Book",
+     "views": 237798
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2011,
+    2012,
+    2013,
+    2014
+   ],
+   "gen": "2011–2014 Hyundai Sonata",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 20966857,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 980689,
+     "n": 11,
+     "best": {
+      "id": "JGKztRYigv4",
+      "title": "2013 Hyundai Sonata Stop Light Switch Replacement, Fuse Locations",
+      "channel": "Lehew",
+      "views": 172411
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 709534,
+     "n": 2,
+     "best": {
+      "id": "lrkARm38wfc",
+      "title": "HYUNDAI STEERING WHEEL NOISE : HOW TO FIX - SONATA/ OPTIMA 2011-2014 UNDER $20!! FAST & EASY!",
+      "channel": "Hidalgo Motors Co TV",
+      "views": 497000
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 548710,
+     "n": 3,
+     "best": {
+      "id": "Y35DBG2YJRA",
+      "title": "Cheap fix - Spun rod bearing with engine knocking - 2011 Hyundai Sonata",
+      "channel": "Brian Kiellish",
+      "views": 462873
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 527259,
+     "n": 7,
+     "best": {
+      "id": "3m81t_LYOLo",
+      "title": "2011 Hyundai Sonata won't start issue.....one click....fixed!",
+      "channel": "Peter L",
+      "views": 148246
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 428210,
+     "n": 4,
+     "best": {
+      "id": "0jH2h-D6D3o",
+      "title": "2011-2014 Hyundai Sonata Transmission Fluid Change MADE EASY",
+      "channel": "MrRangerZr1",
+      "views": 176053
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 416126,
+     "n": 6,
+     "best": {
+      "id": "CLDy56PgCNY",
+      "title": "How to Replace Front Brakes on a 2013 Hyundai Sonata",
+      "channel": "How to Get Stuff Done",
+      "views": 127792
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 380805,
+     "n": 4,
+     "best": {
+      "id": "KvR-mzarHMk",
+      "title": "2011-2015 Hyundai Sonata lock actuator, door handle, window replacement",
+      "channel": "Rust Belt Auto",
+      "views": 223759
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 346282,
+     "n": 4,
+     "best": {
+      "id": "hxHxCVrbixI",
+      "title": "2011 Hyundai Sonata A/C not cooling diagnosis. - EGM Diagnosis #4",
+      "channel": "Educated Grease Monkey",
+      "views": 185203
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "1iVWPkw9U-A",
+     "title": "Top 5 Problems Hyundai Sonata Sedan 6th Generation 2011-14",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 558861
+    },
+    {
+     "id": "OMgI3pqFOr8",
+     "title": "2012 Hyundai Sonata Review - LUBRICATION PROBLEM SOLVED!",
+     "channel": "Carro Chefe",
+     "views": 158387
+    },
+    {
+     "id": "1n-Hpm1lyRc",
+     "title": "2011-2014 Hyundai Sonata YF common issues/Used car buyers guide!",
+     "channel": "S&E's Garage",
+     "views": 50845
     }
    ],
    "costs": null
@@ -19944,6 +20291,260 @@
      "title": "2011 Kia Rio LX - Review in Spanish/Español",
      "channel": "KG- R!",
      "views": 91381
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017
+   ],
+   "gen": "2012–2017 Kia Rio",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 19922047,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 259348,
+     "n": 4,
+     "best": {
+      "id": "XhEaqS6GUzc",
+      "title": "2012 - 2017 Kia Rio Oil Change DIY",
+      "channel": "Buckeye Ballistics",
+      "views": 126861
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 194816,
+     "n": 1,
+     "best": {
+      "id": "79xJv6876S8",
+      "title": "Kia Rio Door Latch Repair/ Installation - Door Locks FIXED 2012-2017",
+      "channel": "EnoughAboutCars",
+      "views": 194816
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 189403,
+     "n": 3,
+     "best": {
+      "id": "oYqwP-GY8L4",
+      "title": "How to change the cabin air filter on a Kia Rio 2012, 2013, 2014, 2015, 2016, 2017",
+      "channel": "Mountain Man Mo",
+      "views": 80533
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 119188,
+     "n": 2,
+     "best": {
+      "id": "L4KddXS7JXY",
+      "title": "Starter install 2013 Kia Rio",
+      "channel": "jpulley",
+      "views": 79164
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 105124,
+     "n": 2,
+     "best": {
+      "id": "BHwaIr9VE8U",
+      "title": "How to Replace the Crankshaft Position Sensor on a Kia Rio 2012-2017 P0335 OBD2 Error Code",
+      "channel": "Mountain Man Mo",
+      "views": 72180
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 88370,
+     "n": 2,
+     "best": {
+      "id": "tRcdu3rWUBs",
+      "title": "How to refill coolant in a Kia Rio / Hyundai Accent (2012, 2013, 2014, 2015, 2016, 2017, 2018)",
+      "channel": "Mountain Man Mo",
+      "views": 57838
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 76177,
+     "n": 2,
+     "best": {
+      "id": "LtwZV0cH5TU",
+      "title": "2016 Kia Rio 1.6L GDI Timing chain replacement quick overview and key points",
+      "channel": "Tad’s Workshop",
+      "views": 58865
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 65423,
+     "n": 2,
+     "best": {
+      "id": "_rJai4HKvlM",
+      "title": "Fuel Filter Replacement: 2012 Kia Rio 1.4L",
+      "channel": "build that stuff",
+      "views": 44629
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "WObYlidcGBs",
+     "title": "KIA #RIO Problems After 1 Year of Ownership - 2014 Kia Rio 1.4 CRDI 5dr Diesel",
+     "channel": "wetryanything",
+     "views": 38463
+    },
+    {
+     "id": "MQqL3kd7NOo",
+     "title": "Kia Rio 3rd Gen 2012 to 2017 common problems, issues, defects and complaints",
+     "channel": "HOWSTUFFINMYCARWORKS",
+     "views": 30591
+    },
+    {
+     "id": "SYG7FAxUtDI",
+     "title": "2012 Kia Rio SX Hatchback Start Up, Exhaust, Test Drive, and In Depth Review",
+     "channel": "Saabkyle04",
+     "views": 546626
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023
+   ],
+   "gen": "2018–2023 Kia Rio",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 14934940,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 274678,
+     "n": 1,
+     "best": {
+      "id": "U1aR8iDH33E",
+      "title": "Kia Rio 2018-2021 Service Light Reset",
+      "channel": "AutoMotiv8ed",
+      "views": 274678
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 185861,
+     "n": 3,
+     "best": {
+      "id": "Xmb4PJfRsM8",
+      "title": "Kia Rio Key Fob Battery Replacement (2014 - 2021)",
+      "channel": "FobBattery",
+      "views": 79955
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 107000,
+     "n": 2,
+     "best": {
+      "id": "GZNFy_KNfjY",
+      "title": "Kia Rio Brake Pad Change 2005-to-2020. Easy",
+      "channel": "Flashback502",
+      "views": 91760
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 69148,
+     "n": 4,
+     "best": {
+      "id": "4P0-1_A35ko",
+      "title": "2021 Kia Rio Oil Change",
+      "channel": "Toe Thumb Mechanics",
+      "views": 23612
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 36111,
+     "n": 1,
+     "best": {
+      "id": "Bn7uPzxaTKM",
+      "title": "Kia rio 2018 steering hard eps light on / eps control module replacement",
+      "channel": "Abdullah auto electrician",
+      "views": 36111
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 17900,
+     "n": 1,
+     "best": {
+      "id": "8W5M5NqmmEk",
+      "title": "How To Remove 2017-2020 Kia Rio Door Panel.",
+      "channel": "Rich Ideates",
+      "views": 17900
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 10350,
+     "n": 1,
+     "best": {
+      "id": "Kq7dewxMYBY",
+      "title": "How to Replace Cabin Air Filter in a Kia Rio (2018-2020) C7085",
+      "channel": "BNX TruFilter",
+      "views": 10350
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 6753,
+     "n": 1,
+     "best": {
+      "id": "RdmXhQBBHEg",
+      "title": "2012-2019 Kia Rio Spark Plug Replacement How To DIY",
+      "channel": "Valley Mobile Automotive",
+      "views": 6753
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "-BpqBNvORMw",
+     "title": "Common faults/problems in the 2018 Kia Rio: lights, electronics, paint...",
+     "channel": "De Todo Un Poko Oficial",
+     "views": 348911
+    },
+    {
+     "id": "KXy3q2Kx7xA",
+     "title": "KIA Rio GT Line 2022 - First FULL Review 4K | Exterior - Interior, 120 HP, Price",
+     "channel": "JR Car Reviews",
+     "views": 680949
+    },
+    {
+     "id": "7u3ioI4hH-A",
+     "title": "2018 Kia Rio Review",
+     "channel": "AutoGuide.com",
+     "views": 415729
     }
    ],
    "costs": null
