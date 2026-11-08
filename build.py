@@ -9,7 +9,7 @@ from collections import defaultdict
 OUT = 'docs'; TODAY = datetime.date.today().isoformat(); BASE = 'https://lemonindex.com'
 E = lambda s: html.escape(str(s), quote=True)
 YT, TT, IG = 'https://www.youtube.com/@lemonindex', 'https://www.tiktok.com/@lemonindex', 'https://www.instagram.com/lemonindex/'
-GA = 'G-8FF76Z2G18'   # Google Analytics 4, added 11-08 (Mediavine Journey checks GA4 sessions); config in assets/ga.js
+GA = 'G-3352CDDC5E'   # Google Analytics 4, added 11-08 (Mediavine Journey checks GA4 sessions); config in assets/ga.js
 CF = 'b04082d02f994049b6b6e0f5aa631ff4'   # Cloudflare Web Analytics (cookieless) token for lemonindex.com, added 10-21
 
 BEST = [('Toyota 4Runner', 27, '1.27M'), ('Lexus ES', 28, '0.70M'), ('Porsche Macan', 31, '0.17M'), ('Lexus RX', 32, '1.34M'), ('Nissan Frontier', 37, '0.83M'),
@@ -181,7 +181,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
     url = BASE + path; ld = list(ld or []) + [crumbs(path, title)]
     lds = ''.join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in (ld or []))
     beacon = f"<script defer src=\"https://static.cloudflareinsights.com/beacon.min.js\" data-cf-beacon='{{\"token\": \"{CF}\"}}'></script>" if CF else ''
-    if GA: beacon += f'<script async src="https://www.googletagmanager.com/gtag/js?id={GA}"></script><script src="/assets/ga.js?v=1"></script>'
+    if GA: beacon += f'<script async src="https://www.googletagmanager.com/gtag/js?id={GA}"></script><script src="/assets/ga.js?v=2"></script>'
     doc = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{E(title)}</title><meta name="description" content="{E(desc)}"><link rel="canonical" href="{url}">
 <meta property="og:type" content="{kind}"><meta property="og:site_name" content="The Lemon Index"><meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(desc)}">
