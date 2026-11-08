@@ -1729,7 +1729,98 @@
      "views": 820556
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": {
+     "median": 80000,
+     "lo": 53000.0,
+     "hi": 80000.0,
+     "n": 3,
+     "videos": 3,
+     "id": "E-62TZDSvig",
+     "t": 512,
+     "title": "Why Are These Not Selling??? (2025 Jeep Wrangler Rubicon 392)",
+     "private": 0,
+     "dealer": 0
+    },
+    "used": null,
+    "msrp": {
+     "median": 48500,
+     "lo": 31800.0,
+     "hi": 60000.0,
+     "n": 30,
+     "videos": 20,
+     "id": "6_Zzq7Mdnz8",
+     "t": 83,
+     "title": "Should You Buy a 2019 Jeep Wrangler? Dude I Love or Hate My New Ride Ep.1"
+    },
+    "items": [
+     [
+      "Tires",
+      {
+       "median": 650,
+       "lo": 500.0,
+       "hi": 800.0,
+       "n": 4,
+       "videos": 4,
+       "id": "Pe5dtwFjVaw",
+       "t": 233,
+       "title": "NEW 2023 JEEP WRANGLER 2 DOOR RUBICON STING GRAY CLEARCOAT 4K WALKAROUND"
+      }
+     ],
+     [
+      "Transmission",
+      {
+       "median": 3000,
+       "lo": 2500.0,
+       "hi": 4500.0,
+       "n": 3,
+       "videos": 3,
+       "id": "ceZyhVCMNkA",
+       "t": 135,
+       "title": "Is The 2019 Jeep Wrangler Any Good With ONLY 4-Cylinders Under The Hood?"
+      }
+     ],
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 167,
+       "lo": 150.0,
+       "hi": 1000.0,
+       "n": 5,
+       "videos": 3,
+       "id": "DkerjUOHzx0",
+       "t": 2017,
+       "title": "Jeep Wrangler JL 100,000 Miles Real Owner Review, Likes & Dislikes"
+      }
+     ],
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 650,
+       "lo": 400.0,
+       "hi": 900.0,
+       "n": 4,
+       "videos": 3,
+       "id": "00pTY95nGxo",
+       "t": 86,
+       "title": "Lift Kit Installation Cost for Both JL and JK Wranglers"
+      }
+     ],
+     [
+      "Steering & suspension",
+      {
+       "median": 1250,
+       "lo": 1000.0,
+       "hi": 1500.0,
+       "n": 2,
+       "videos": 2,
+       "id": "UpZ0HvDnhwM",
+       "t": 534,
+       "title": "The 2023 Jeep Wrangler Unlimited Willys Is A Heritage Inspired 4x4 With Big Tires"
+      }
+     ]
+    ]
+   }
   }
  ],
  "chevrolet-silverado": [
@@ -9681,7 +9772,26 @@
      "views": 70111
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 180,
+       "lo": 70.0,
+       "hi": 300.0,
+       "n": 6,
+       "videos": 6,
+       "id": "ptr86bNTBP4",
+       "t": 302,
+       "title": "1997 2001 Ford Explorer Theft light Blinking fast fix￼ ￼￼"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -10356,7 +10466,26 @@
      "views": 129361
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 215,
+       "lo": 50.0,
+       "hi": 260.0,
+       "n": 12,
+       "videos": 11,
+       "id": "Hyzx-Hm5HNQ",
+       "t": 495,
+       "title": "How to  bypass SKIM immobilize on a Jeep Grand Cherokee 1999 to 2004"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -10483,7 +10612,26 @@
      "views": 154128
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 75,
+       "lo": 40.0,
+       "hi": 200.0,
+       "n": 6,
+       "videos": 4,
+       "id": "fEKBtBdJhe0",
+       "t": 268,
+       "title": "2005 Jeep Grand Cherokee Not Starting"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -10564,7 +10712,61 @@
      "views": 80967
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 71000,
+     "lo": 40000.0,
+     "hi": 75000.0,
+     "n": 6,
+     "videos": 6,
+     "id": "yf0Tn90NFiw",
+     "t": 1737,
+     "title": "The 2025 Jeep Grand Cherokee Summit Reserve Is An Ultra Luxurious & Capable SUV"
+    },
+    "items": [
+     [
+      "Tires",
+      {
+       "median": 1722,
+       "lo": 1645.0,
+       "hi": 1800.0,
+       "n": 2,
+       "videos": 2,
+       "id": "7ju5-mDbmkg",
+       "t": 722,
+       "title": "2025 Jeep Grand Cherokee Limited: TEST DRIVE+FULL REVIEW"
+      }
+     ],
+     [
+      "Insurance",
+      {
+       "median": 1416,
+       "lo": 1416.0,
+       "hi": 1416.0,
+       "n": 4,
+       "videos": 2,
+       "id": "KmI1ek_Pkac",
+       "t": 75,
+       "title": "Jeep Grand Cherokee 2023 | Money Breakdown | Cost to Own"
+      }
+     ],
+     [
+      "Yearly cost to own",
+      {
+       "median": 666,
+       "lo": 666.0,
+       "hi": 666.0,
+       "n": 2,
+       "videos": 2,
+       "id": "KmI1ek_Pkac",
+       "t": 102,
+       "title": "Jeep Grand Cherokee 2023 | Money Breakdown | Cost to Own"
+      }
+     ]
+    ]
+   }
   }
  ],
  "chevrolet-cruze": [
@@ -14450,6 +14652,131 @@
      "title": "2020 Chevrolet Malibu Premier - Exterior and Interior Walk Around",
      "channel": "FrontSeatReviews",
      "views": 1123176
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003
+   ],
+   "gen": "1997–2003 Chevrolet Malibu",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 5839739,
+   "topics": [
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 1337174,
+     "n": 10,
+     "best": {
+      "id": "MdvUdO5DKfk",
+      "title": "2001 Chevy Malibu Won't Start - Anti-Theft, Security Flaw",
+      "channel": "Tom Landry",
+      "views": 382199
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 726539,
+     "n": 11,
+     "best": {
+      "id": "126ZJdW1G94",
+      "title": "3.1 water pump replacement, 2000 Chevrolet Malibu",
+      "channel": "Robinson's Automotive ",
+      "views": 254646
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 183753,
+     "n": 6,
+     "best": {
+      "id": "eQ2glK47ZQs",
+      "title": "97-2003 Chevy Malibu Replace Front Brakes and Rotors",
+      "channel": "Hank's Garage",
+      "views": 70629
+     }
+    },
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 165430,
+     "n": 3,
+     "best": {
+      "id": "cyOB6d5s2Fw",
+      "title": "2002 Chevy Malibu Intake Manifold Gasket Repair Part 1 of 2",
+      "channel": "Johnson's Gee-rage",
+      "views": 80103
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 154249,
+     "n": 4,
+     "best": {
+      "id": "3h4TnqQrqZk",
+      "title": "EGR Valve Replacement 2001 Chevy Malibu",
+      "channel": "Jeff Needham",
+      "views": 77202
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 120112,
+     "n": 5,
+     "best": {
+      "id": "Uj5cIOT4QZE",
+      "title": "1997 - 2005 Chevy Malibu Radio Install",
+      "channel": "Provo Beast Audio Installation",
+      "views": 45905
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 102650,
+     "n": 2,
+     "best": {
+      "id": "fbRLID4mwSQ",
+      "title": "How to REPLACE the HEAD GASKETS on a 2003 CHEVY MALIBU with a 3.1 LITER (3100) V6 ENGINE!",
+      "channel": "Trash picking",
+      "views": 96078
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 95184,
+     "n": 4,
+     "best": {
+      "id": "Rx142xYPSAU",
+      "title": "Replacing spark plugs and ignition wires on a 2001 Chevy Malibu 3 1 V 6",
+      "channel": "SammyVista72",
+      "views": 80210
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "Qvgy-nhWz_Q",
+     "title": "Overheating problems with Chevy Malibu '01",
+     "channel": "Zyberfunnyclips",
+     "views": 153449
+    },
+    {
+     "id": "UJFHk0tTieI",
+     "title": "1999 chevy malibu IAC problems? vibration on drive & reverse",
+     "channel": "derozjia",
+     "views": 18519
+    },
+    {
+     "id": "gP0th8YNMNU",
+     "title": "2002 Malibu problems",
+     "channel": "Kia Mills",
+     "views": 10315
     }
    ],
    "costs": null
@@ -22088,6 +22415,131 @@
      "title": "2020 Dodge Challenger HELLCAT 727HP Review on AUTOBAHN (No Speed Limit) by AutoTopNL",
      "channel": "AutoTopNL",
      "views": 1917396
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "lexus-es": [
+  {
+   "years": [
+    2000,
+    2001
+   ],
+   "gen": "1997–2001 Lexus ES",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 195,
+   "views": 3979296,
+   "topics": [
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 248893,
+     "n": 3,
+     "best": {
+      "id": "bDSmfxb1o1E",
+      "title": "2000 Lexus Es300 Knock Sensor - Location & Repair",
+      "channel": "RashaadRahh",
+      "views": 207644
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 236110,
+     "n": 8,
+     "best": {
+      "id": "8DxCStRixqI",
+      "title": "How to Replace Alternator 1997-2001 Lexus ES300",
+      "channel": "TRQ",
+      "views": 64758
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 147099,
+     "n": 7,
+     "best": {
+      "id": "2slUxnPRUwY",
+      "title": "How to Replace Rear Strut and Spring Assembly 1997-2001 Lexus ES300",
+      "channel": "TRQ",
+      "views": 37812
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 131137,
+     "n": 2,
+     "best": {
+      "id": "bep44-1OhcE",
+      "title": "How to Replace Timing Belt, Water Pump & Seals 1997-2001 Lexus ES 300",
+      "channel": "TRQ",
+      "views": 108261
+     }
+    },
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 110300,
+     "n": 1,
+     "best": {
+      "id": "RElM61_yeWI",
+      "title": "How To Replace Valve Cover Gaskets 1997-2003 Lexus ES300",
+      "channel": "TRQ",
+      "views": 110300
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 64853,
+     "n": 3,
+     "best": {
+      "id": "_1dR1ZsA77g",
+      "title": "How to Replace Spark Plugs 1997-2001 Lexus ES 300",
+      "channel": "TRQ",
+      "views": 38008
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 59989,
+     "n": 4,
+     "best": {
+      "id": "Xk378Vpna4A",
+      "title": "1998 lexus es300 clicking noise from relay box",
+      "channel": "Ponyo Tran",
+      "views": 48335
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 51015,
+     "n": 2,
+     "best": {
+      "id": "2tNlo7SDlxU",
+      "title": "How to Replace Rear Brakes 1997-2001 Lexus ES300",
+      "channel": "TRQ",
+      "views": 26708
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "ZAb7Noq9juI",
+     "title": "Top 5 Problems Lexus ES300 Sedan 3rd Generation 1997-2001",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 226739
+    },
+    {
+     "id": "BV7SbJPtQ8s",
+     "title": "1997 Lexus ES 300 Review - The Early Days Of Lexus Reliability!",
+     "channel": "Shooting Cars",
+     "views": 52332
+    },
+    {
+     "id": "dNRNXIitW24",
+     "title": "2000 Lexus ES300 Shifting Problems Caused by Knock Sensor",
+     "channel": "Synthetic Lubricant",
+     "views": 23378
     }
    ],
    "costs": null
