@@ -522,7 +522,48 @@
      "views": 218358
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 35178,
+     "lo": 24000.0,
+     "hi": 46355.0,
+     "n": 4,
+     "videos": 3,
+     "id": "z6oAeMDx4NA",
+     "t": 752,
+     "title": "2014 Ford F-150 XLT Ecoboost Review, Walkaround, Exhaust, & Test Drive"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 345,
+       "lo": 150.0,
+       "hi": 1000.0,
+       "n": 15,
+       "videos": 9,
+       "id": "Wev-kXEYI-A",
+       "t": 466,
+       "title": "$500 EBAY PARTS vs. 2010 FORD F150"
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 350,
+       "lo": 200.0,
+       "hi": 500.0,
+       "n": 2,
+       "videos": 2,
+       "id": "kHSwcuJzHVg",
+       "t": 257,
+       "title": "Top 5 Ford F150 Truck Accessories Under $500 for 2009-2014 F150s - The Haul"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -627,7 +668,94 @@
      "views": 139877
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": {
+     "median": 55000,
+     "lo": 13583.0,
+     "hi": 60000.0,
+     "n": 5,
+     "videos": 4,
+     "id": "peUK7DW29QE",
+     "t": 995,
+     "title": "Do I Regret Buying The 2025 Ford F-150 Tremor?",
+     "private": 0,
+     "dealer": 0
+    },
+    "used": {
+     "median": 57000,
+     "lo": 51000.0,
+     "hi": 75000.0,
+     "n": 9,
+     "videos": 9,
+     "id": "-GzSbwnqyjY",
+     "t": 62,
+     "title": "The 2023 Ford F-150 Raptor R Is King Pickup Truck"
+    },
+    "msrp": {
+     "median": 61000,
+     "lo": 44000.0,
+     "hi": 71000.0,
+     "n": 35,
+     "videos": 27,
+     "id": "4dRkTkkSlWc",
+     "t": 128,
+     "title": "2021 Ford F-150 Lariat PowerBoost Review // $60,000 Powerhouse"
+    },
+    "items": [
+     [
+      "Tires",
+      {
+       "median": 1150,
+       "lo": 800.0,
+       "hi": 1350.0,
+       "n": 12,
+       "videos": 4,
+       "id": "iSgb4mGBFXQ",
+       "t": 177,
+       "title": "2024 F150 WHIPPLE PROS AND CONS | FULL BUILD REVIEW"
+      }
+     ],
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 165,
+       "lo": 25.0,
+       "hi": 675.0,
+       "n": 3,
+       "videos": 3,
+       "id": "BfJexiYTjNY",
+       "t": 1685,
+       "title": "What It's Like to Live with a 2024 Ford F-150 Tremor (POV)"
+      }
+     ],
+     [
+      "Yearly cost to own",
+      {
+       "median": 714,
+       "lo": 567.0,
+       "hi": 860.0,
+       "n": 2,
+       "videos": 2,
+       "id": "7kPro7oFB0s",
+       "t": 554,
+       "title": "2023 FORD F-150 LIMITED POWERBOOST REVIEW: THE MOST EDUCATIONAL VIDEO ON THIS HYBRID 4x4 BEAST!"
+      }
+     ],
+     [
+      "Insurance",
+      {
+       "median": 1322,
+       "lo": 1322.0,
+       "hi": 1322.0,
+       "n": 2,
+       "videos": 2,
+       "id": "VijGV5vZNk4",
+       "t": 112,
+       "title": "Ford F-150 Raptor 2024 | Cost to Own | Financial Analysis"
+      }
+     ]
+    ]
+   }
   }
  ],
  "bmw-3-series": [
@@ -7506,7 +7634,26 @@
      "views": 167712
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 110,
+       "lo": 50.0,
+       "hi": 130.0,
+       "n": 6,
+       "videos": 5,
+       "id": "LysijrfdtUc",
+       "t": 298,
+       "title": "Ford Escape Battery Replacement (2001-2007)"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -7632,7 +7779,26 @@
      "views": 300733
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 215,
+       "lo": 35.0,
+       "hi": 400.0,
+       "n": 22,
+       "videos": 14,
+       "id": "h6KGTfZLTsU",
+       "t": 86,
+       "title": "2008-2012 Ford Escape Power Steering Code B2278 : EPAS Torque Sensor Critical Installation Steps"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -7726,7 +7892,21 @@
      "views": 342071
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 33500,
+     "lo": 30000.0,
+     "hi": 39955.0,
+     "n": 30,
+     "videos": 22,
+     "id": "MCUYGTOvyHU",
+     "t": 540,
+     "title": "2020 Ford Escape - Review & Road Test"
+    },
+    "items": []
+   }
   }
  ],
  "ford-focus": [
@@ -12382,6 +12562,255 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2000,
+    2001
+   ],
+   "gen": "1998–2001 Nissan Altima",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 5336767,
+   "topics": [
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 707075,
+     "n": 5,
+     "best": {
+      "id": "Vwg2wm13ilM",
+      "title": "How To Replace Fuel Filter on Nissan Altima 2001",
+      "channel": "Roluardo",
+      "views": 392626
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 696752,
+     "n": 9,
+     "best": {
+      "id": "idRh6H0OAos",
+      "title": "How to Clean and Test EGR Valve on Nissan Altima 2001",
+      "channel": "Roluardo",
+      "views": 391920
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 414026,
+     "n": 6,
+     "best": {
+      "id": "LswOgaik03k",
+      "title": "2001 Nissan Altima Alternator Replacement",
+      "channel": "Roluardo",
+      "views": 218256
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 381406,
+     "n": 4,
+     "best": {
+      "id": "xrthm4Fsh-8",
+      "title": "Replacement of Distributor Cap / Rotor / Spark Plug Wires on Nissan Altima 2001",
+      "channel": "Roluardo",
+      "views": 349239
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 297030,
+     "n": 2,
+     "best": {
+      "id": "pIe_tFUdIAw",
+      "title": "2001 Nissan Altima Timing Chain and Oil Pump Replacement (Part 1) DIY",
+      "channel": "50sKid",
+      "views": 179097
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 211532,
+     "n": 5,
+     "best": {
+      "id": "J34bQR_abFg",
+      "title": "How to Replace a Water Pump on a 2001 Nissan Altima DIY",
+      "channel": "50sKid",
+      "views": 110162
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 137792,
+     "n": 2,
+     "best": {
+      "id": "bGS5NGaftrM",
+      "title": "Nissan Altima 1997-2001 no start - fix. No spark or CEL.",
+      "channel": "Nissan Nut",
+      "views": 129907
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 69646,
+     "n": 2,
+     "best": {
+      "id": "cprhTPveKYA",
+      "title": "How to Replace a FWD CV Axle (2001 Nissan Altima) DIY",
+      "channel": "50sKid",
+      "views": 54160
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "FVbJlDB54SY",
+     "title": "1999 Nissan Altima idle problems",
+     "channel": "Felix Cervantes",
+     "views": 26560
+    },
+    {
+     "id": "ZQL64ITOww4",
+     "title": "1998 Nissan Altima Review – Reliable 90s Sedan That Still Holds Up!",
+     "channel": "Car reviews ",
+     "views": 446
+    },
+    {
+     "id": "HvEFGmvlNn4",
+     "title": "2001 Nissan Altima Start Up and Review 2.4 L 4-Cylinder",
+     "channel": "Camerons Car Reviews",
+     "views": 97448
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2002,
+    2003,
+    2004,
+    2005,
+    2006
+   ],
+   "gen": "2002–2006 Nissan Altima",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 13368050,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 789320,
+     "n": 10,
+     "best": {
+      "id": "86jk8XmJn88",
+      "title": "Remove and Replace Radio on Nissan Altima 2002 2003 2004",
+      "channel": "Benjamin Hurt",
+      "views": 306270
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 747802,
+     "n": 8,
+     "best": {
+      "id": "JARUTEHFB7A",
+      "title": "Nissan P0335 Crankshaft Position Sensor Replacement 2003 Altima 2.5 (2002-2006 Similar)",
+      "channel": "Big Dog50001 Automotive",
+      "views": 262279
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 479160,
+     "n": 3,
+     "best": {
+      "id": "-EjD8Zz4Fw4",
+      "title": "How To Install Replace Remove Rear Shocks Struts 2002-06 Nissan Altima",
+      "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+      "views": 225815
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 379426,
+     "n": 4,
+     "best": {
+      "id": "d-jPLHGABmI",
+      "title": "Fuel Pump Replacement On A 2001-2006 Nissan Altima",
+      "channel": "How to Automotive",
+      "views": 293081
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 320134,
+     "n": 7,
+     "best": {
+      "id": "lnPAx4raO7Y",
+      "title": "2005 2006 Nissan Altima Cluster Fuel Gauge Problem Information",
+      "channel": "ClusterFixWashington",
+      "views": 101772
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 295540,
+     "n": 2,
+     "best": {
+      "id": "1fhvFQ6EiZ0",
+      "title": "How To install Replace Ignition Coils 2.5L 2002-06 Nissan Altima",
+      "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+      "views": 157355
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 295261,
+     "n": 6,
+     "best": {
+      "id": "HG9vw72sfq4",
+      "title": "2002 Nissan Altima 2.5L won't start",
+      "channel": "autodiagnóstico N.R. Lo básico Ramirez",
+      "views": 174351
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 271958,
+     "n": 2,
+     "best": {
+      "id": "QwFsknXL_tU",
+      "title": "2006 nissan altima 3.5 SL shift lock(transmission wouldn't shift from park) how to fix it",
+      "channel": "African Gamer & Auto Insights ",
+      "views": 230234
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "I3TkIJYdepw",
+     "title": "Top 5 Problems Nissan Altima Sedan 3rd Generation 2002-06",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 312754
+    },
+    {
+     "id": "KUYDao-H4vY",
+     "title": "problems overfill the transmission oil 2005 nissan altima automatic",
+     "channel": "santosutah",
+     "views": 25026
+    },
+    {
+     "id": "XAl5yE2cttY",
+     "title": "2006 Nissan Altima high idle problems",
+     "channel": "AutoVids",
+     "views": 24414
+    }
+   ],
+   "costs": null
   }
  ],
  "hyundai-sonata": [
@@ -16401,6 +16830,138 @@
      "title": "Introducing the 2019 Subaru Ascent SUV | Model Walkaround",
      "channel": "Subaru",
      "views": 590893
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "mazda-cx-9": [
+  {
+   "years": [
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015
+   ],
+   "gen": "2007–2015 Mazda CX-9",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 10243251,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 358375,
+     "n": 6,
+     "best": {
+      "id": "0BFVeZ0Jivo",
+      "title": "2007-2015 Mazda CX-9 Alternator Replacement Step by Step Guide.",
+      "channel": "Automotive Insight",
+      "views": 89827
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 336041,
+     "n": 9,
+     "best": {
+      "id": "c9Ix9wkLuRc",
+      "title": "How to Replace Cabin Air Filter 2013 Mazda CX-9 | AQ1109",
+      "channel": "Filterheads",
+      "views": 107250
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 263021,
+     "n": 5,
+     "best": {
+      "id": "O4Wi1Emo4lg",
+      "title": "How to Replace Window Regulator 2007-2015 Mazda CX-9",
+      "channel": "TRQ",
+      "views": 79066
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 157872,
+     "n": 6,
+     "best": {
+      "id": "qtXDIvBRp7s",
+      "title": "Mazda 2011 cx9 Camshaft position sensor replacement.",
+      "channel": "ꭗtoph",
+      "views": 49977
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 132357,
+     "n": 5,
+     "best": {
+      "id": "x5dTJqvm3tg",
+      "title": "How To Mazda Transmission Drain And Fill/2011 Mazda CX-9 Transmission Drain And Fill Plug Location",
+      "channel": "How I Fixed It!",
+      "views": 41490
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 124682,
+     "n": 4,
+     "best": {
+      "id": "fyCfk8eS3WA",
+      "title": "How to Replace Lower Control Arm 2007-2015 Mazda CX-9",
+      "channel": "TRQ",
+      "views": 35062
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 96233,
+     "n": 4,
+     "best": {
+      "id": "F5ffIw_pSOo",
+      "title": "Mazda CX-9 2008-15 License Plate Light Cover Removal Replacement LED",
+      "channel": "Cars N' Boba",
+      "views": 35294
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 94799,
+     "n": 4,
+     "best": {
+      "id": "WcU-zoC6VC0",
+      "title": "How to Replace Front Brakes 2007-2015 Mazda CX-9",
+      "channel": "TRQ",
+      "views": 31346
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "8VKoWAfb-do",
+     "title": "Top 5 Problems Mazda CX-9 SUV 2007-2015 1st Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 260752
+    },
+    {
+     "id": "sIz7CToJMYY",
+     "title": "2007 Mazda CX-9 Review - The Most Reliable SUV Ever Built?",
+     "channel": "Auto Autopsy",
+     "views": 59743
+    },
+    {
+     "id": "0ULPZ_VcVAU",
+     "title": "New 2013 Mazda CX-9 0-60 MPH Drive and Review",
+     "channel": "The Fast Lane Car",
+     "views": 351962
     }
    ],
    "costs": null
