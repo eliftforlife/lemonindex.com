@@ -4684,7 +4684,48 @@
      "views": 79742
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 21260,
+     "lo": 20000.0,
+     "hi": 30000.0,
+     "n": 7,
+     "videos": 6,
+     "id": "5kh_sWf4CVo",
+     "t": 275,
+     "title": "The 2004 Honda Civic Si Is a Quirky, Forgotten Hot Hatchback"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 750,
+       "lo": 500.0,
+       "hi": 1500.0,
+       "n": 8,
+       "videos": 7,
+       "id": "OLBZ1Wkjn2c",
+       "t": 950,
+       "title": "I Bought a 2004 Honda Civic Hybrid"
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 170,
+       "lo": 160.0,
+       "hi": 400.0,
+       "n": 6,
+       "videos": 5,
+       "id": "OLBZ1Wkjn2c",
+       "t": 344,
+       "title": "I Bought a 2004 Honda Civic Hybrid"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -4811,7 +4852,35 @@
      "views": 144628
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 22000,
+     "lo": 15000.0,
+     "hi": 30000.0,
+     "n": 3,
+     "videos": 3,
+     "id": "U6EXc2g2pkE",
+     "t": 282,
+     "title": "2006 Honda Civic Sedan Review - Kelley Blue Book"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 250,
+       "lo": 60.0,
+       "hi": 320.0,
+       "n": 9,
+       "videos": 4,
+       "id": "wpOCc7Zrf7E",
+       "t": 131,
+       "title": "8 Gen Honda Civic (2006-2011) - Common Problems. What to look for when bying a used one?"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -19321,6 +19390,134 @@
      "title": "2025 Nissan Sentra vs 2025 Nissan Versa Which One Should You Buy Full Comparison & Test Drive Review",
      "channel": "Cars Unlocked",
      "views": 36826
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "kia-rio": [
+  {
+   "years": [
+    2001,
+    2002,
+    2003,
+    2004,
+    2005
+   ],
+   "gen": "2001–2005 Kia Rio",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 3503222,
+   "topics": [
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 282015,
+     "n": 3,
+     "best": {
+      "id": "jgbTdyeaWbM",
+      "title": "2001 KIA RIO IAC/ Idle Air Control Valve Testing and Cleaning",
+      "channel": "Jamie Jones TheCarMan",
+      "views": 173772
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 269133,
+     "n": 9,
+     "best": {
+      "id": "FBoJ40_wuiQ",
+      "title": "2003 Kia Rio Clutch and Clutch Cable Installation",
+      "channel": "Perfection Hytest",
+      "views": 161875
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 255609,
+     "n": 2,
+     "best": {
+      "id": "8rAtyKBbh-k",
+      "title": "2004 Kia Rio Fuel Pump and Filter Replacement Part 1",
+      "channel": "My Name?",
+      "views": 143225
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 131723,
+     "n": 2,
+     "best": {
+      "id": "4_5fVYwqMVs",
+      "title": "Replacing Ignition coil Kia Rio 2001",
+      "channel": "VOLTΛ",
+      "views": 130618
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 91756,
+     "n": 1,
+     "best": {
+      "id": "GZNFy_KNfjY",
+      "title": "Kia Rio Brake Pad Change 2005-to-2020. Easy",
+      "channel": "Flashback502",
+      "views": 91756
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 73097,
+     "n": 4,
+     "best": {
+      "id": "c4mdR9xrXBs",
+      "title": "2002 Kia Rio Starter change",
+      "channel": "Mike Martin",
+      "views": 33870
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 32918,
+     "n": 1,
+     "best": {
+      "id": "Mj958bCpQZk",
+      "title": "2004 KIA Rio oil change",
+      "channel": "Travis Bailey",
+      "views": 32918
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 18177,
+     "n": 2,
+     "best": {
+      "id": "988w7Y0B3Vg",
+      "title": "2001-05 Kia Rio Front Wheel Bearing Replacement Without a Press!!",
+      "channel": "Ranger Auto Repair & Service ",
+      "views": 16061
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "NrLLJyj-gbw",
+     "title": "Car Problems Kia Rio 2002 poor acceleration, excessive vibration and engine shaking",
+     "channel": "Mark Carroll",
+     "views": 19019
+    },
+    {
+     "id": "TQUEkllccxo",
+     "title": "Used Kia Rio 1st gen Reliability | Most Common Problems Faults and Issues",
+     "channel": "AutoProblems",
+     "views": 7305
+    },
+    {
+     "id": "3mXbi_2qAMU",
+     "title": "Kia Rio I Problems | Weaknesses of the Used Kia Rio 1999 - 2005",
+     "channel": "MasterCarsPro",
+     "views": 3013
     }
    ],
    "costs": null
