@@ -1634,7 +1634,61 @@
      "views": 124802
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 6000,
+     "lo": 3000.0,
+     "hi": 10000.0,
+     "n": 3,
+     "videos": 3,
+     "id": "7nIsmufBgpw",
+     "t": 666,
+     "title": "Buy or Bust! Jeep Wrangler TJ High Miles Review!"
+    },
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 251,
+       "lo": 120.0,
+       "hi": 900.0,
+       "n": 18,
+       "videos": 10,
+       "id": "mz1cjA7T3JI",
+       "t": 439,
+       "title": "1999 JEEP WRANGLER REVIEW!"
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 350,
+       "lo": 300.0,
+       "hi": 400.0,
+       "n": 4,
+       "videos": 4,
+       "id": "vKnrDA_Cd0Y",
+       "t": 632,
+       "title": "1998 Jeep Wrangler TJ - Penny Pincher"
+      }
+     ],
+     [
+      "Water pump / cooling",
+      {
+       "median": 198,
+       "lo": 100.0,
+       "hi": 297.0,
+       "n": 2,
+       "videos": 2,
+       "id": "axjwDPFYFmc",
+       "t": 29,
+       "title": "Lifted 2000 Jeep Wrangler TJ Sport Update"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -11019,7 +11073,21 @@
      "views": 17808
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 22145,
+     "lo": 17000.0,
+     "hi": 22759.0,
+     "n": 6,
+     "videos": 5,
+     "id": "VHaFZhnNLGc",
+     "t": 364,
+     "title": "2017 Chevrolet Cruze Hatchback Premier RS - Start Up, Road Test & In Depth Review"
+    },
+    "items": []
+   }
   }
  ],
  "honda-pilot": [
@@ -11276,7 +11344,26 @@
      "views": 132524
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 130,
+       "lo": 64.0,
+       "hi": 350.0,
+       "n": 13,
+       "videos": 10,
+       "id": "5E2ERTjCi7Y",
+       "t": 267,
+       "title": "1st Gen Honda Pilot - How Reliable Are They Really?"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -11404,7 +11491,35 @@
      "views": 190924
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 34470,
+     "lo": 30000.0,
+     "hi": 42000.0,
+     "n": 14,
+     "videos": 9,
+     "id": "cAsJx1iY1AY",
+     "t": 282,
+     "title": "2009 Honda Pilot Review - Kelley Blue Book"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 60,
+       "lo": 50.0,
+       "hi": 380.0,
+       "n": 5,
+       "videos": 4,
+       "id": "lxSRA524K5w",
+       "t": 877,
+       "title": "2009-2015 Honda Pilot 3.5 V6 J35 Valve Cover, VCM and PCV Valve Replacement"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -11484,7 +11599,35 @@
      "views": 73180
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 44000,
+     "lo": 40000.0,
+     "hi": 50000.0,
+     "n": 37,
+     "videos": 23,
+     "id": "cJDgxx57HtQ",
+     "t": 595,
+     "title": "2025 Honda Pilot TrailSport review // Get the V6 while you can?"
+    },
+    "items": [
+     [
+      "Insurance",
+      {
+       "median": 1343,
+       "lo": 1343.0,
+       "hi": 1343.04,
+       "n": 3,
+       "videos": 2,
+       "id": "S6DYD1TQE2w",
+       "t": 133,
+       "title": "Honda Pilot 2025 | Cost To Own | Cost Breakdown"
+      }
+     ]
+    ]
+   }
   }
  ],
  "nissan-rogue": [
@@ -14777,6 +14920,257 @@
      "title": "2002 Malibu problems",
      "channel": "Kia Mills",
      "views": 10315
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2004,
+    2005,
+    2006,
+    2007
+   ],
+   "gen": "2004–2007 Chevrolet Malibu",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 7011532,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 1239070,
+     "n": 11,
+     "best": {
+      "id": "ZF7UNFXxugA",
+      "title": "How to reprogram a 2005-2018 Chevrolet Malibu Key Fob",
+      "channel": "Bryan Pauta",
+      "views": 844533
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 620214,
+     "n": 11,
+     "best": {
+      "id": "Pbhp73a0-rA",
+      "title": "2007 Chevy Malibu Power Steering Failure",
+      "channel": "Hannah Pajor",
+      "views": 108429
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 297948,
+     "n": 2,
+     "best": {
+      "id": "xWQt5Zg7XTw",
+      "title": "Shuddering/Slipping 2004 Malibu Transmission Free FIX - Cheapest Transmission Repair Ever",
+      "channel": "David Sunshine",
+      "views": 290594
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 236607,
+     "n": 7,
+     "best": {
+      "id": "0G9q8veeQyI",
+      "title": "How to Change the Oil (2005 Chevy Malibu)",
+      "channel": "Pliers and Plugs",
+      "views": 146649
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 213124,
+     "n": 6,
+     "best": {
+      "id": "x1VIuF40SLc",
+      "title": "Replacing the water pump on a 2006 Chevy Malibu V6",
+      "channel": "I Can Fix It !!!",
+      "views": 59166
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 150059,
+     "n": 3,
+     "best": {
+      "id": "IYtug75uX-s",
+      "title": "Hannah Replaces Front Pads & Rotors - '07 Chevy Malibu",
+      "channel": "South Main Auto LLC",
+      "views": 123029
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 145602,
+     "n": 3,
+     "best": {
+      "id": "DnI4OiQCiXE",
+      "title": "2004-2007 Chevrolet Malibu Turn Signal / Parking Light Fix",
+      "channel": "Dealer Specialty Services of PA",
+      "views": 127491
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 124810,
+     "n": 2,
+     "best": {
+      "id": "p1b8GhRNC5U",
+      "title": "Door lock acting up 2005 Chevy Malibu fix it here",
+      "channel": "one auto shop",
+      "views": 118083
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "aF3grR8pXHA",
+     "title": "Chevrolet Malibu (6th Gen) - Review",
+     "channel": "MauKapranos",
+     "views": 73247
+    },
+    {
+     "id": "9ycyydEkv84",
+     "title": "2007 Chevy Malibu Walkaround and Tour",
+     "channel": "Car Reviews with Josh",
+     "views": 31903
+    },
+    {
+     "id": "rKFFiq-jJo8",
+     "title": "2005 Chevy Malibu walkaround",
+     "channel": "Showcase Mitsubishi",
+     "views": 31118
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2008,
+    2009,
+    2010,
+    2011,
+    2012
+   ],
+   "gen": "2008–2012 Chevrolet Malibu",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 47135771,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 1195867,
+     "n": 6,
+     "best": {
+      "id": "19xdh0fEbqw",
+      "title": "Chevy Malibu Head Light Bulb Replacement - EASY and FAST - 2008 - 2012 - How to",
+      "channel": "Chad Williams",
+      "views": 465577
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 1116476,
+     "n": 6,
+     "best": {
+      "id": "eOGkQzak93w",
+      "title": "2008-2012 Chevrolet Malibu How To Remove Radio EASY DIY HD!!",
+      "channel": "SCS",
+      "views": 387379
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 1039530,
+     "n": 10,
+     "best": {
+      "id": "71FH1QjdSTs",
+      "title": "2011 Chevrolet Malibu how to fix service ESC and loss of power.",
+      "channel": "Jeremy Messer",
+      "views": 202723
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 1012440,
+     "n": 8,
+     "best": {
+      "id": "RTGaI2Ug_Qo",
+      "title": "Replacing a Camshaft position sensor on a 2008 Chevrolet Malibu 2.4L Ecotec",
+      "channel": "lastmoto777",
+      "views": 389763
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 650503,
+     "n": 3,
+     "best": {
+      "id": "P6oqoLEdPYo",
+      "title": "2009 Chevy Malibu electric power steering motor and torque sensor replacement",
+      "channel": "Brandon Morrison",
+      "views": 344016
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 558307,
+     "n": 6,
+     "best": {
+      "id": "VJm7xjzXt6s",
+      "title": "How to Change Transmission Fluid In A 2011 Chevy Malibu with A Sealed Trans",
+      "channel": "okc vet garage",
+      "views": 257849
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 542877,
+     "n": 2,
+     "best": {
+      "id": "2AcRVfBW7HQ",
+      "title": "FIX! - 2010 Malibu cranks/no start up problem solved",
+      "channel": "ShahForward",
+      "views": 488351
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 510483,
+     "n": 7,
+     "best": {
+      "id": "XTaD931wHjM",
+      "title": "How to Replace Front Lower Control Arm 2008-12 Chevy Malibu",
+      "channel": "TRQ",
+      "views": 139091
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "7Wx6yXIoXbw",
+     "title": "Top 5 Problems Chevy Malibu Sedan 7th Generation 2008-2012",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 511444
+    },
+    {
+     "id": "qJhZqXqY5H4",
+     "title": "2008 - 2012 Chevrolet Malibu Common Problems | Should You Buy The Chevy Malibu? #chevymalibuproblems",
+     "channel": "Alex The Car Doctor",
+     "views": 134868
+    },
+    {
+     "id": "APZGhN2yIJA",
+     "title": "2010 Chevy Malibu start problems",
+     "channel": "Yungmcafee",
+     "views": 89878
     }
    ],
    "costs": null
@@ -22540,6 +22934,259 @@
      "title": "2000 Lexus ES300 Shifting Problems Caused by Knock Sensor",
      "channel": "Synthetic Lubricant",
      "views": 23378
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2002,
+    2003,
+    2004,
+    2005,
+    2006
+   ],
+   "gen": "2002–2006 Lexus ES",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 5780182,
+   "topics": [
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 520823,
+     "n": 3,
+     "best": {
+      "id": "9tLxoyHtuGI",
+      "title": "How To Change 2GR-FE Coils & Spark Plugs 2006-18 Lexus ES350 / 2006-17 Toyota Camry - Under 1 Hour",
+      "channel": "The Sundae Drive",
+      "views": 372435
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 232508,
+     "n": 4,
+     "best": {
+      "id": "hoszqKqTdG8",
+      "title": "How to Replace Cabin Air Filter 2002 Lexus ES300 | AQ1064",
+      "channel": "Filterheads",
+      "views": 147708
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 127713,
+     "n": 3,
+     "best": {
+      "id": "DkgL73WqOug",
+      "title": "How To Replace Shocks & Struts on a 2004-2006 Lexus ES330",
+      "channel": "AutoZone",
+      "views": 71863
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 115009,
+     "n": 4,
+     "best": {
+      "id": "JM-Z5__rHzg",
+      "title": "How To Program A Lexus ES330 Remote Key Fob 2004 - 2006 DIY Tutorial",
+      "channel": "PYR Automotive ",
+      "views": 51168
+     }
+    },
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 102100,
+     "n": 1,
+     "best": {
+      "id": "r3Br7elwWWo",
+      "title": "2004 Lexus ES330 Valve Cover Gaskets Removal",
+      "channel": "The G Automotive And More",
+      "views": 102100
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 100278,
+     "n": 2,
+     "best": {
+      "id": "TBJ9mwwGNCw",
+      "title": "2002 Lexus ES300 - How to Reset the VSC Traction off Lights",
+      "channel": "Cars and Service",
+      "views": 97485
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 70722,
+     "n": 2,
+     "best": {
+      "id": "ZxBU0J0Zd_o",
+      "title": "2005 Lexus ES330 Timing belt replace.",
+      "channel": "Element Lifestyle",
+      "views": 40030
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 70020,
+     "n": 2,
+     "best": {
+      "id": "OHTrYwH_gT8",
+      "title": "How To Replace 2003-2006 Lexus RX330/ES330 Timing Belt, Water Pump, Crank and Cam Seals",
+      "channel": "Sloth King Garage",
+      "views": 49449
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "IL-3dhH_c3o",
+     "title": "A Reliable CLOUD You Can Get For $5k or Less | 2003 Lexus ES300 Review",
+     "channel": "BIONIC AL",
+     "views": 67357
+    },
+    {
+     "id": "EwkYkJl5Ibo",
+     "title": "This Is How The 2002 Lexus ES Offered Bulletproof Reliability (And A Polarizing Design!)",
+     "channel": "Antique TAGS",
+     "views": 14016
+    },
+    {
+     "id": "6GRxIzcLjHc",
+     "title": "The 2002-2006 Lexus ES Was Boring but Was Super Reliable with A Ton of Luxury",
+     "channel": "Antique TAGS",
+     "views": 1902
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012
+   ],
+   "gen": "2007–2012 Lexus ES",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 8141564,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 495363,
+     "n": 2,
+     "best": {
+      "id": "ghLwf8Jqy1k",
+      "title": "2007 - 2012 Lexus Es350 how to reset oil maintenance light",
+      "channel": "The Bravo Connection",
+      "views": 460346
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 339498,
+     "n": 5,
+     "best": {
+      "id": "ExmgatDrRHY",
+      "title": "2011 Lexus ES350 (TPMS) Tire pressure monitoring system reset",
+      "channel": "Tire Pressure Monitoring System",
+      "views": 163059
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 60715,
+     "n": 2,
+     "best": {
+      "id": "jcou2Tq6Idk",
+      "title": "How to Replace the Rear Brake Pads and Turn Rotors On a 2008 Lexus ES350",
+      "channel": "How to Automotive",
+      "views": 48212
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 43379,
+     "n": 1,
+     "best": {
+      "id": "zAV6GTpjj7M",
+      "title": "2007-2012 Lexus ES-350 Rear Shock Strut Replacement Partsavatar.ca",
+      "channel": "Johnathon Wheeler",
+      "views": 43379
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 42911,
+     "n": 1,
+     "best": {
+      "id": "2vv1AR4aYGc",
+      "title": "2008 Lexus ES350 radiator replacement walk through",
+      "channel": "Brian Balatbat",
+      "views": 42911
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 41080,
+     "n": 2,
+     "best": {
+      "id": "zXOFx54z0ZM",
+      "title": "Replaced Starter, Replaced Ignition Switch, Still No Crank! 2007 Lexus ES350",
+      "channel": "Advanced Level Diagnostics",
+      "views": 30037
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 36778,
+     "n": 1,
+     "best": {
+      "id": "QpdxtbUy6vk",
+      "title": "2007-2010 Lexus ES350 P0304 cylinder Misfire. DIAGNOSIS. Check engine VSC light \"p030\", chewed wire!",
+      "channel": "Fixing it Yourself",
+      "views": 36778
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 28147,
+     "n": 1,
+     "best": {
+      "id": "mWeSPJensus",
+      "title": "Lexus ES 350 How To Replace Spark Plugs 2012 - 2018 V6",
+      "channel": "Friendly Mechanic",
+      "views": 28147
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "3t3zd-j3-Q4",
+     "title": "TRUE COST of The LEXUS ES350 ! (2012 - 2018) | Cost of maintenance, Spare Parts & Common problems",
+     "channel": "234 DRIVE",
+     "views": 9642
+    },
+    {
+     "id": "-szum_IZGDQ",
+     "title": "2009 Lexus ES350: A Luxurious and Reliable Sedan with Smooth Ride and Plenty of Power",
+     "channel": "IM MOTOR GROUP",
+     "views": 5670
+    },
+    {
+     "id": "a3VvNcjOnQI",
+     "title": "2009 Lexus ES 350 Buyer’s Guide Review. *The Best Value Luxury Sedan!*",
+     "channel": "TheRKHCollection ",
+     "views": 4895
     }
    ],
    "costs": null
