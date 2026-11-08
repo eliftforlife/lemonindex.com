@@ -1985,7 +1985,39 @@
      "views": 201996
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 200,
+       "lo": 75.0,
+       "hi": 1000.0,
+       "n": 17,
+       "videos": 9,
+       "id": "Tb4yPzdZ-AI",
+       "t": 1065,
+       "title": "Is it really worth it? CAR WIZARD does an insane tear down on '99 Silverado!"
+      }
+     ],
+     [
+      "Oil change",
+      {
+       "median": 148,
+       "lo": 100.0,
+       "hi": 196.0,
+       "n": 4,
+       "videos": 2,
+       "id": "pAkRYIyJ1Tk",
+       "t": 114,
+       "title": "2002 Chevy Silverado 2500 HD Duramax Very Long Term Update"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -2269,7 +2301,44 @@
      "views": 100216
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 40000,
+     "lo": 28140.0,
+     "hi": 70000.0,
+     "n": 3,
+     "videos": 3,
+     "id": "xjZUEYpNjCs",
+     "t": 101,
+     "title": "How Much Is My 2021 Silverado Worth in 2022? [Big Gains]"
+    },
+    "msrp": {
+     "median": 58000,
+     "lo": 44840.0,
+     "hi": 69900.0,
+     "n": 26,
+     "videos": 20,
+     "id": "qoo_DT0zBwE",
+     "t": 671,
+     "title": "Do You Really Need The BIG V8? 2020 Chevy Silverado 5.3 vs 6.2 0-60 MPH Shootout!"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 1200,
+       "lo": 337.0,
+       "hi": 2550.0,
+       "n": 5,
+       "videos": 3,
+       "id": "DKAxx1yc4fI",
+       "t": 503,
+       "title": "We Have Issues... 2025 Chevy Silverado HD Diesel Long-term Update!"
+      }
+     ]
+    ]
+   }
   }
  ],
  "ram-pickup": [
@@ -3497,7 +3566,35 @@
      "views": 456070
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 30495,
+     "lo": 27500.0,
+     "hi": 33600.0,
+     "n": 13,
+     "videos": 13,
+     "id": "PUXCKaR9ZUo",
+     "t": 55,
+     "title": "2016 Mazda CX-5 vs Honda CR-V vs Subaru Forester AWD Snow Traction Mashup Review"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 80,
+       "lo": 70.0,
+       "hi": 200.0,
+       "n": 5,
+       "videos": 5,
+       "id": "wVgPAZQkyj4",
+       "t": 221,
+       "title": "I turned my 2014 Honda CRV SUV into a camper! My old build vs. my new build. The Wanda!"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -3577,7 +3674,30 @@
      "views": 197819
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 35000,
+     "lo": 30000.0,
+     "hi": 40000.0,
+     "n": 3,
+     "videos": 3,
+     "id": "PNe-oEwSdWg",
+     "t": 1242,
+     "title": "2024 Honda CR-V driving REVIEW - why is it so popular?"
+    },
+    "msrp": {
+     "median": 35395,
+     "lo": 32000.0,
+     "hi": 38750.0,
+     "n": 28,
+     "videos": 24,
+     "id": "efSolYJ5k0U",
+     "t": 1085,
+     "title": "2023 Honda CR-V Sport Touring & EX – Redline: First Look"
+    },
+    "items": []
+   }
   }
  ],
  "toyota-camry": [
@@ -4558,7 +4678,59 @@
      "views": 445471
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": {
+     "median": 1800,
+     "lo": 800.0,
+     "hi": 12000.0,
+     "n": 6,
+     "videos": 5,
+     "id": "w9iTT5vxCpw",
+     "t": 14,
+     "title": "Building a $2000 K-Swap Honda Civic In 29 Minutes",
+     "private": 0,
+     "dealer": 0
+    },
+    "used": {
+     "median": 25000,
+     "lo": 5000.0,
+     "hi": 45000.0,
+     "n": 4,
+     "videos": 4,
+     "id": "7g1zuDIJNMI",
+     "t": 641,
+     "title": "1999 Honda Civic Si (EM1) - Driving the High-Revving Icon"
+    },
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 80,
+       "lo": 70.0,
+       "hi": 120.0,
+       "n": 3,
+       "videos": 3,
+       "id": "aeESqWHPr9M",
+       "t": 55,
+       "title": "2000 Civic si idle issue solved!-Vacuum leak!"
+      }
+     ],
+     [
+      "Transmission",
+      {
+       "median": 600,
+       "lo": 400.0,
+       "hi": 800.0,
+       "n": 2,
+       "videos": 2,
+       "id": "w9iTT5vxCpw",
+       "t": 37,
+       "title": "Building a $2000 K-Swap Honda Civic In 29 Minutes"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -13494,6 +13666,133 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005
+   ],
+   "gen": "1999–2005 Hyundai Sonata",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 5527111,
+   "topics": [
+    {
+     "name": "Cooling system",
+     "views": 546410,
+     "n": 4,
+     "best": {
+      "id": "Lyt6VagThNg",
+      "title": "Timing belt replacement Hyundai Sonata 2.7L V6 2005 water pump Install Remove Replace",
+      "channel": "Fixing cars and stuff",
+      "views": 426339
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 354388,
+     "n": 10,
+     "best": {
+      "id": "SyrDQqBa5KY",
+      "title": "2004 Hyundai Sonata Optima V6 2.7 crankshaft position sensor location and replacement P0335 P1372",
+      "channel": "CaptnAlex",
+      "views": 126703
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 264382,
+     "n": 7,
+     "best": {
+      "id": "NfvWe0aEcUs",
+      "title": "Alternator Replacement [2000 Hyundai Sonata]",
+      "channel": "MattsMotorz",
+      "views": 79025
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 122375,
+     "n": 5,
+     "best": {
+      "id": "muqrsTeXico",
+      "title": "Hyundai Sonata 2004 No Crank / Won't Start Issue",
+      "channel": "NuckleberryFinn",
+      "views": 78304
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 54647,
+     "n": 1,
+     "best": {
+      "id": "7pxkS4VKBKc",
+      "title": "2004 Hyundai Sonata AC Repair",
+      "channel": "APDTY",
+      "views": 54647
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 32761,
+     "n": 3,
+     "best": {
+      "id": "Wd2vnkKRpfs",
+      "title": "2005 Hyundai Sonata-Spark Plug Change#sparkplugs",
+      "channel": "JANKA AUTOWORKS",
+      "views": 14277
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 30886,
+     "n": 2,
+     "best": {
+      "id": "ktQ5e81vA8c",
+      "title": "hyundai v4 oil pump timing | 2005 hyundai sonata timing marks | car timing belt replacement",
+      "channel": "Mechanical Tips",
+      "views": 17962
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 28366,
+     "n": 1,
+     "best": {
+      "id": "mzX_kEW4m1Y",
+      "title": "2002-2005 Hyundai / Sonata / EF / NF / How to install a tail light bulb",
+      "channel": "Authentic Reign",
+      "views": 28366
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "dOoO7P22kl4",
+     "title": "(SOLD) 2001 Hyundai Sonata review - Cheap Reliable Automatic car for sale",
+     "channel": "UVS",
+     "views": 31655
+    },
+    {
+     "id": "O-DUaf0JZqo",
+     "title": "Used Hyundai Sonata 2002 - 2005 Reliability | Most Common Problems Faults and Issues",
+     "channel": "AutoProblems",
+     "views": 15505
+    },
+    {
+     "id": "Kn4Lk81O1jI",
+     "title": "SOLD 2002 Hyundai Sonata GLS Meticulous Motors Florida For Sale LOOK",
+     "channel": "MeticulousMotors",
+     "views": 85336
+    }
+   ],
+   "costs": null
   }
  ],
  "chevrolet-malibu": [
@@ -19518,6 +19817,133 @@
      "title": "Kia Rio I Problems | Weaknesses of the Used Kia Rio 1999 - 2005",
      "channel": "MasterCarsPro",
      "views": 3013
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011
+   ],
+   "gen": "2006–2011 Kia Rio",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 7344470,
+   "topics": [
+    {
+     "name": "Starter, alternator & belts",
+     "views": 246532,
+     "n": 2,
+     "best": {
+      "id": "VmyBt2zMSiw",
+      "title": "2006-2011 Kia Rio timing belt replacement",
+      "channel": "Rust Belt Auto",
+      "views": 236252
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 234889,
+     "n": 7,
+     "best": {
+      "id": "P5ihoAovpv0",
+      "title": "2011 Kia Rio starter motor removal and installation",
+      "channel": "Mark Mateikat",
+      "views": 96550
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 192494,
+     "n": 3,
+     "best": {
+      "id": "4Sr9NDLvdv8",
+      "title": "Oil Change & Filter Replacement Kia Rio 2005-2011",
+      "channel": "2CarPros",
+      "views": 152648
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 163131,
+     "n": 4,
+     "best": {
+      "id": "ngKxxr9NG7w",
+      "title": "Kia Rio 2010 Spark Plug Replacement",
+      "channel": "Manuel Collazo",
+      "views": 99070
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 89922,
+     "n": 3,
+     "best": {
+      "id": "BMoPNufnuGE",
+      "title": "2006 Kia Rio Transmission Removal",
+      "channel": "Riggs Co.",
+      "views": 41341
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 79267,
+     "n": 2,
+     "best": {
+      "id": "Ivd9_i4jU0g",
+      "title": "Knock Sensor Replacement - 2006 - 2011 Kia Rio - Hyundai Accent - 1.6L - P0326",
+      "channel": "GoTech",
+      "views": 53148
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 76066,
+     "n": 2,
+     "best": {
+      "id": "KHILoNahaxU",
+      "title": "2006 to 2010 KIA Rio radiator removal",
+      "channel": "Newbies Work on Cars",
+      "views": 39863
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 72856,
+     "n": 1,
+     "best": {
+      "id": "vi7X9tpI03Q",
+      "title": "2006-2011 Kia Rio outer tie rod, ball joint, sway bar link pin replacement",
+      "channel": "Rust Belt Auto",
+      "views": 72856
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "FX2dJLuObt4",
+     "title": "HELP! No Crank Starting Problems. 2010 Kia Rio",
+     "channel": "OkieGrower75",
+     "views": 11131
+    },
+    {
+     "id": "qtM4-dvuY0Y",
+     "title": "Review: 2006 Kia Rio LX",
+     "channel": "MyRide on Autobytel",
+     "views": 96705
+    },
+    {
+     "id": "bft4haLk6cY",
+     "title": "2011 Kia Rio LX - Review in Spanish/Español",
+     "channel": "KG- R!",
+     "views": 91381
     }
    ],
    "costs": null
