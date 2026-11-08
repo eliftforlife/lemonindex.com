@@ -17755,6 +17755,133 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2020–2025 Nissan Versa",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 9996960,
+   "topics": [
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 110375,
+     "n": 5,
+     "best": {
+      "id": "9dI8HthrNdM",
+      "title": "How to replace a cabin air filter on a 2021 Nissan Versa. Don’t pay $99 at the dealership!",
+      "channel": "West Chester Autos",
+      "views": 25459
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 46072,
+     "n": 3,
+     "best": {
+      "id": "t-HobXDZBYI",
+      "title": "How To Replace 2020 - 2022 Nissan Versa Remote Key Fob Battery - Change Replacement Key Batteries",
+      "channel": "PYR Automotive ",
+      "views": 30790
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 33233,
+     "n": 3,
+     "best": {
+      "id": "58TlX4aX1Us",
+      "title": "How To Reset Oil Life On 2020 - 2025 NISSAN VERSA - Clear Versa Oil Change Service Interval Light",
+      "channel": "PYR Automotive ",
+      "views": 15311
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 29565,
+     "n": 2,
+     "best": {
+      "id": "Ax1h6ANcZLY",
+      "title": "2019-2024 NISSAN VERSA 1.6L SV, Troubleshoot and Service Mass Air Flow, MAP sensors, and Air Filter",
+      "channel": "Pro Tips Plus",
+      "views": 19698
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 14603,
+     "n": 1,
+     "best": {
+      "id": "JtiTrO8iZmo",
+      "title": "2020 Nissan versa transmission fluid and filters change",
+      "channel": "Fix It Daniel",
+      "views": 14603
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 13298,
+     "n": 1,
+     "best": {
+      "id": "bqpZpTthGcM",
+      "title": "2019-2024 NISSAN VERSA 1.6L SV, Replace Spark Plugs and Inspect Coils (HR16DE)",
+      "channel": "Pro Tips Plus",
+      "views": 13298
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 12027,
+     "n": 1,
+     "best": {
+      "id": "twPx8KpiSJ0",
+      "title": "2019-2024 NISSAN VERSA 1.6L SV, Replace Front Disc Pads and Rotors (HR16DE)",
+      "channel": "Pro Tips Plus",
+      "views": 12027
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 8503,
+     "n": 1,
+     "best": {
+      "id": "7cV5O8JS4x8",
+      "title": "2020 - 2024 Nissan versa oil change",
+      "channel": "Jack In Trades",
+      "views": 8503
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "-lqZ6FBAsNk",
+     "title": "Should You Buy a 2024 Nissan Versa? Thorough Review By A Mechanic",
+     "channel": "The Car Care Nut Reviews",
+     "views": 459869
+    },
+    {
+     "id": "IXopGaWJ_MU",
+     "title": "2025 Nissan Versa SV Review and Test Dive! Should you buy this or Nissan Sentra?",
+     "channel": "Cars Unlocked",
+     "views": 46877
+    },
+    {
+     "id": "hLdCx1m5qu0",
+     "title": "2025 Nissan Sentra vs 2025 Nissan Versa Which One Should You Buy Full Comparison & Test Drive Review",
+     "channel": "Cars Unlocked",
+     "views": 36826
+    }
+   ],
+   "costs": null
   }
  ],
  "subaru-legacy": [
