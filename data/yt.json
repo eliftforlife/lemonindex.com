@@ -4936,7 +4936,48 @@
      "views": 222110
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 21000,
+     "lo": 19000.0,
+     "hi": 24830.0,
+     "n": 13,
+     "videos": 11,
+     "id": "O3sxowGV8Nw",
+     "t": 146,
+     "title": "2013 Honda Civic Review, Walkaround, Exhaust, Test Drive"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 210,
+       "lo": 120.0,
+       "hi": 1000.0,
+       "n": 13,
+       "videos": 9,
+       "id": "Rp5RiWi6dpw",
+       "t": 448,
+       "title": "2013 Honda Civic EXL NAVI in 2021: My Experience!!!"
+      }
+     ],
+     [
+      "Steering & suspension",
+      {
+       "median": 20,
+       "lo": 20.0,
+       "hi": 20.0,
+       "n": 2,
+       "videos": 2,
+       "id": "pHfqDLJbiAg",
+       "t": 364,
+       "title": "The best mods for your daily | 2013 Honda Civic Build list & cost breakdown!"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -4973,7 +5014,83 @@
      "views": 174657
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 33000,
+     "lo": 30000.0,
+     "hi": 48000.0,
+     "n": 11,
+     "videos": 10,
+     "id": "lj_stQcf4yE",
+     "t": 274,
+     "title": "2022 Honda Civic 1.5T Sedan vs Hatchback"
+    },
+    "msrp": {
+     "median": 30000,
+     "lo": 25890.0,
+     "hi": 33000.0,
+     "n": 45,
+     "videos": 36,
+     "id": "e5t74-BBz5w",
+     "t": 21,
+     "title": "2025 Honda Civic Hybrid | Best Car for $30,000"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 137,
+       "lo": 60.0,
+       "hi": 1371.0,
+       "n": 8,
+       "videos": 8,
+       "id": "3FI8vyxhaUs",
+       "t": 1427,
+       "title": "What It's Like to Live with a 2024 Honda Civic Type R (POV)"
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 1200,
+       "lo": 900.0,
+       "hi": 1500.0,
+       "n": 4,
+       "videos": 4,
+       "id": "rGMWjQX5LG8",
+       "t": 593,
+       "title": "The 2025 Honda Civic SI is Winning a Losing Battle // In-Depth Review"
+      }
+     ],
+     [
+      "Insurance",
+      {
+       "median": 1811,
+       "lo": 1500.0,
+       "hi": 2122.0,
+       "n": 2,
+       "videos": 2,
+       "id": "TCiv-st6QJQ",
+       "t": 883,
+       "title": "2025 Honda Civic Hybrid review // Wow, a Honda home run!"
+      }
+     ],
+     [
+      "Oil change",
+      {
+       "median": 150,
+       "lo": 100.0,
+       "hi": 200.0,
+       "n": 2,
+       "videos": 2,
+       "id": "CFh692aeZNA",
+       "t": 688,
+       "title": "2023 Honda Civic Type R FL5 - Morning Commute - 21,000 Miles of Ownership (POV Drive)"
+      }
+     ]
+    ]
+   }
   }
  ],
  "toyota-corolla": [
@@ -5354,7 +5471,26 @@
      "views": 94782
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 600,
+       "lo": 500.0,
+       "hi": 700.0,
+       "n": 8,
+       "videos": 6,
+       "id": "LwPpVn74RF4",
+       "t": 209,
+       "title": "Copart 2001 Honda Accord V6 gets $700 Maaco Paint Job + Motor Mount + Trans Flush = For Sale Soon!"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -13077,6 +13213,90 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2019–2025 Nissan Altima",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 21982538,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 384644,
+     "n": 3,
+     "best": {
+      "id": "bG60Cqoqe9M",
+      "title": "How To Start A 2019 - 2023 Nissan Altima With Key ID Incorrect - Dead Remote Fob Battery Not Working",
+      "channel": "PYR Automotive ",
+      "views": 208260
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 226888,
+     "n": 2,
+     "best": {
+      "id": "1WezbLGy30E",
+      "title": "How To Change A 2019 - 2022 Nissan Altima Cabin Air Filter - Remove Replace A/C AC Filter Location",
+      "channel": "PYR Automotive ",
+      "views": 189454
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 94761,
+     "n": 1,
+     "best": {
+      "id": "QbfHpTAyz7o",
+      "title": "2016-2021 Nissan Altima mass air flow sensor replacement rough idle",
+      "channel": "Jabo The Mechanic",
+      "views": 94761
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 82265,
+     "n": 2,
+     "best": {
+      "id": "9gLbeWnSQRQ",
+      "title": "How to use the Paddle Shifters on a 2020 Nissan Altima SR ( CVT Transmission )",
+      "channel": "CountryBoyModz",
+      "views": 51542
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "IMNhBEtbZjI",
+     "title": "2020 Nissan Altima vs 2020 Nissan Sentra | Which one should you buy? |",
+     "channel": "Cars Unlocked",
+     "views": 112090
+    },
+    {
+     "id": "_VbT-bTvAvE",
+     "title": "2023 Nissan Altima SR vs 2023 Nissan Maxima SR Which One Should You Buy?",
+     "channel": "Cars Unlocked",
+     "views": 107028
+    },
+    {
+     "id": "FLgiJSe7AjU",
+     "title": "Nissan Altima Review | Should You Buy a 2019–2026 Nissan Altima?",
+     "channel": "CarMax",
+     "views": 60379
+    }
+   ],
+   "costs": null
   }
  ],
  "hyundai-sonata": [
@@ -18250,6 +18470,134 @@
      "title": "Michael Rants about the 2014 Chevrolet Spark's Reliability",
      "channel": "chicago3media",
      "views": 1544
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022
+   ],
+   "gen": "2016–2022 Chevrolet Spark",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 6830808,
+   "topics": [
+    {
+     "name": "Brakes & ABS",
+     "views": 98080,
+     "n": 3,
+     "best": {
+      "id": "Gh9wRSuCLYE",
+      "title": "How to Change 2013-2019 Chevy Spark Brake Stop Light Bulbs w/ 7443 LED",
+      "channel": "Alla Lighting Automotive LED Bulbs",
+      "views": 64653
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 85758,
+     "n": 5,
+     "best": {
+      "id": "p9N1cQP9C48",
+      "title": "(2016 - 2022) 2020 Chevy Spark Oil Change",
+      "channel": "Moto Motorized",
+      "views": 39884
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 28036,
+     "n": 2,
+     "best": {
+      "id": "J0fnIF5gTyo",
+      "title": "2016 - 2022 Chevy Spark Remote Key Fob Battery Replacement - How To Change Remove Replace Batteries",
+      "channel": "PYR Automotive ",
+      "views": 15786
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 26223,
+     "n": 2,
+     "best": {
+      "id": "08rm948umyc",
+      "title": "2016 Chevy Spark Clutch Replacement",
+      "channel": "Low Life Antics",
+      "views": 15080
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 19957,
+     "n": 1,
+     "best": {
+      "id": "hK_yZRKoXuI",
+      "title": "2013 - 2021 Chevy Spark Horn Replacement (Wolo BadBoy)",
+      "channel": "Hank's Garage",
+      "views": 19957
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 12956,
+     "n": 1,
+     "best": {
+      "id": "vz6bQ8ac6Co",
+      "title": "How to fulldown fuel tank and change fuel pump assembly chevrolet spark 2019 model",
+      "channel": "Mark Mechanic",
+      "views": 12956
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 11873,
+     "n": 1,
+     "best": {
+      "id": "T5xo_Gn3s-o",
+      "title": "2016 Chevy spark front wheel bearing replacement",
+      "channel": "Wil ",
+      "views": 11873
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 9151,
+     "n": 1,
+     "best": {
+      "id": "DCNatVpik7I",
+      "title": "Spark Plug Change | 2019 Chevrolet Spark (2016-2022)",
+      "channel": "NBHRaven",
+      "views": 9151
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "Cmo4oDI1bWA",
+     "title": "Update On Maintenance & Reliability Of The 2021 Chevy Spark LT // Currently at 50k miles",
+     "channel": "NotYourAverageEV",
+     "views": 2256
+    },
+    {
+     "id": "WeWz_X6eg2c",
+     "title": "2020 Chevy Spark 1LT // review and test drive // 100 rental cars",
+     "channel": "100 Rental Cars",
+     "views": 289860
+    },
+    {
+     "id": "iWnsZKUharU",
+     "title": "2017 Chevrolet Spark: Review",
+     "channel": "Gold Pony",
+     "views": 246082
     }
    ],
    "costs": null
