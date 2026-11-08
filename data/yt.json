@@ -9295,7 +9295,26 @@
      "views": 22518
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 152,
+       "lo": 40.0,
+       "hi": 300.0,
+       "n": 8,
+       "videos": 7,
+       "id": "00DYx9PEINo",
+       "t": 120,
+       "title": "EVAP PURGE SOLENOID INSTALL 2006 CHEVY EQUINOX CHECK ENGINE CODE P0455, P0171, P0446"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -9384,7 +9403,30 @@
      "views": 9825
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 36000,
+     "lo": 34000.0,
+     "hi": 40000.0,
+     "n": 6,
+     "videos": 6,
+     "id": "tUY568HZFoo",
+     "t": 1316,
+     "title": "2025 Chevy Equinox RS: TEST DRIVE+FULL REVIEW"
+    },
+    "msrp": {
+     "median": 33000,
+     "lo": 30000.0,
+     "hi": 35000.0,
+     "n": 53,
+     "videos": 42,
+     "id": "8dtDZBNVfCQ",
+     "t": 297,
+     "title": "2025 Chevrolet Equinox | MotorWeek Road Test"
+    },
+    "items": []
+   }
   }
  ],
  "ford-explorer": [
@@ -9764,7 +9806,26 @@
      "views": 38734
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 52,
+       "lo": 30.0,
+       "hi": 75.0,
+       "n": 4,
+       "videos": 4,
+       "id": "D72M6DysWsk",
+       "t": 139,
+       "title": "Door Ajar problem SOLVED (Ford Explorer 2002)"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -9890,7 +9951,21 @@
      "views": 78502
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 39999,
+     "lo": 34300.0,
+     "hi": 55000.0,
+     "n": 7,
+     "videos": 6,
+     "id": "Ffltc05Lbzc",
+     "t": 265,
+     "title": "Motorweek Video of the 2007 Ford Explorer Sport Trac"
+    },
+    "items": []
+   }
   },
   {
    "years": [
@@ -9984,7 +10059,44 @@
      "views": 630724
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 60000,
+     "lo": 50000.0,
+     "hi": 60000.0,
+     "n": 6,
+     "videos": 6,
+     "id": "6wXIVNrtrJI",
+     "t": 24,
+     "title": "2020 Ford Explorer - Is the ST's performance worth the price?"
+    },
+    "msrp": {
+     "median": 51812,
+     "lo": 41000.0,
+     "hi": 58000.0,
+     "n": 40,
+     "videos": 28,
+     "id": "5jyqxscXD9E",
+     "t": 1847,
+     "title": "Is the All-New 2020 Ford Explorer ST Worthy of the \"ST\" Badge?"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 450,
+       "lo": 200.0,
+       "hi": 500.0,
+       "n": 6,
+       "videos": 4,
+       "id": "kBmXlt8rr2Y",
+       "t": 122,
+       "title": "Watch Before You Buy a 2022 Ford Explorer"
+      }
+     ]
+    ]
+   }
   }
  ],
  "jeep-grand-cherokee": [
