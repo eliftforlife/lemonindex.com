@@ -16965,6 +16965,91 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023
+   ],
+   "gen": "2016–2023 Mazda CX-9",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 27847866,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 369903,
+     "n": 3,
+     "best": {
+      "id": "CEwKv4UY3Lw",
+      "title": "2019 Mazda CX9 oil light reset",
+      "channel": "Bisimoto",
+      "views": 256824
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 200004,
+     "n": 2,
+     "best": {
+      "id": "4CLbJ2CXxhM",
+      "title": "Mazda CX-9 Smart Key Fob Battery Replacement (2016 - 2019)",
+      "channel": "FobBattery",
+      "views": 120480
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 137048,
+     "n": 2,
+     "best": {
+      "id": "tUoivDtIKmU",
+      "title": "Mazda CX-9 Cabin Air Filter Replacement in 2 minutes 2016 2017 2018 2019 2020",
+      "channel": "Andrew Silver",
+      "views": 71053
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 43315,
+     "n": 1,
+     "best": {
+      "id": "Lx8jmuMbjNA",
+      "title": "Oil Change Due Warning Won't Reset Issue Fix for Mazda CX9 CX5 CX30 2016 and other models",
+      "channel": "Tech & Life",
+      "views": 43315
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "h99Esw-KZG0",
+     "title": "Should you buy a 2023 Mazda CX-9 or wait for the 2024 CX-90?",
+     "channel": "Raiti's Rides",
+     "views": 130204
+    },
+    {
+     "id": "ctsJF4Y0Bfg",
+     "title": "Mazda CX9 Buyers Guide (2016-2023) Avoid buying a CX-9 with reliability issues and common faults",
+     "channel": "The Miles Driven",
+     "views": 78643
+    },
+    {
+     "id": "WiTmSRUZXoE",
+     "title": "2019 Mazda CX-9 Review - Three Rows of Joy",
+     "channel": "TheStraightPipes",
+     "views": 801209
+    }
+   ],
+   "costs": null
   }
  ],
  "volkswagen-atlas": [
