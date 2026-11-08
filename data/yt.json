@@ -17535,6 +17535,89 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2020–2025 Subaru Legacy",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 7568458,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 40692,
+     "n": 1,
+     "best": {
+      "id": "tkalv6OhWgU",
+      "title": "2020+ Subaru Legacy & Outback Infotainment Firmware installation (1080p) - June 2026 revision!🍁",
+      "channel": "Monsieur's Channel 6ix",
+      "views": 40692
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 35262,
+     "n": 1,
+     "best": {
+      "id": "oDLnlvBvd98",
+      "title": "(2015-2022) Subaru Legacy Front Brake Pad and Rotor Replacement (DIY SAVE MONEY!)",
+      "channel": "Homeowner Repair",
+      "views": 35262
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 21763,
+     "n": 1,
+     "best": {
+      "id": "i0IjPObByy0",
+      "title": "Upgrade Your Subaru Legacy: Easy Diy Rear Brake Pad Replacement Guide (2015-2022)",
+      "channel": "Homeowner Repair",
+      "views": 21763
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 10988,
+     "n": 1,
+     "best": {
+      "id": "GsojDbxsIQE",
+      "title": "2020-2023 Subaru Legacy & Outback Cabin Air Filter Replacement in 1 Minute DON'T PAY THE DEALER $100",
+      "channel": "Mountaintopper",
+      "views": 10988
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "szxGR5axvCo",
+     "title": "2024 Subaru Legacy Sport -- After 7 Days, Should You Buy THIS Over Camry or Accord??",
+     "channel": "Car Confections",
+     "views": 77952
+    },
+    {
+     "id": "wB1DJoIwkX0",
+     "title": "2020 Subaru Legacy First Impressions; Should You Buy a Vehicle with No Maintenance History? | #218",
+     "channel": "Consumer Reports",
+     "views": 37203
+    },
+    {
+     "id": "HRIywJdZrPo",
+     "title": "Is the 2020 Subaru Legacy XT the MOST reliable AWD sedan?",
+     "channel": "Raiti's Rides",
+     "views": 26351
+    }
+   ],
+   "costs": null
   }
  ],
  "mazda3": [
