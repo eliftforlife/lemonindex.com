@@ -15168,7 +15168,48 @@
      "views": 158616
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 55000,
+     "lo": 50000.0,
+     "hi": 60000.0,
+     "n": 4,
+     "videos": 3,
+     "id": "aYl7SU47Adg",
+     "t": 401,
+     "title": "2006 BMW X5 4.8is - Driving The 355hp V8 Sport E53"
+    },
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 275,
+       "lo": 150.0,
+       "hi": 600.0,
+       "n": 22,
+       "videos": 9,
+       "id": "AB9GDFtn7QI",
+       "t": 1494,
+       "title": "My Cheap 2012 BMW X5 Diesel Had a $2000 Problem! Can we fix it for $250? BROKEN EGR COOLER!"
+      }
+     ],
+     [
+      "Oil leak repair",
+      {
+       "median": 410,
+       "lo": 280.0,
+       "hi": 450.0,
+       "n": 6,
+       "videos": 2,
+       "id": "gtX5sPozjJ0",
+       "t": 444,
+       "title": "BMW X5 E53. Is it worth buying used BMW?"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -15708,7 +15749,26 @@
      "views": 97448
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 90,
+       "lo": 40.0,
+       "hi": 200.0,
+       "n": 5,
+       "videos": 4,
+       "id": "4gguZyvWnuk",
+       "t": 169,
+       "title": "2000 Nissan Altima GLE"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -15834,7 +15894,26 @@
      "views": 24414
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 100,
+       "lo": 80.0,
+       "hi": 120.0,
+       "n": 5,
+       "videos": 5,
+       "id": "ixMVV4DWBkE",
+       "t": 178,
+       "title": "!SCRAPYARD SPECIAL! 2005 Nissan Altima 2.5"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -15961,7 +16040,39 @@
      "views": 85367
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 250,
+       "lo": 100.0,
+       "hi": 500.0,
+       "n": 9,
+       "videos": 6,
+       "id": "wXJpS3VoDs8",
+       "t": 355,
+       "title": "Watch This Before Buying a Nissan Altima 2007-2012"
+      }
+     ],
+     [
+      "Transmission",
+      {
+       "median": 1150,
+       "lo": 300.0,
+       "hi": 2000.0,
+       "n": 4,
+       "videos": 4,
+       "id": "wXJpS3VoDs8",
+       "t": 251,
+       "title": "Watch This Before Buying a Nissan Altima 2007-2012"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -16045,7 +16156,21 @@
      "views": 60379
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 32998,
+     "lo": 27000.0,
+     "hi": 37000.0,
+     "n": 16,
+     "videos": 15,
+     "id": "fApUi7z3ciA",
+     "t": 1773,
+     "title": "2019 Nissan Altima Vs 2019 Toyota Camry – Can Nissan Dethrone The Best Seller?"
+    },
+    "items": []
+   }
   }
  ],
  "hyundai-sonata": [
@@ -20043,6 +20168,134 @@
      "title": "2014 Toyota Highlander Liftgate Problems",
      "channel": "Kyle Moody",
      "views": 56525
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007
+   ],
+   "gen": "2001–2007 Toyota Highlander",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 9745657,
+   "topics": [
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 372328,
+     "n": 4,
+     "best": {
+      "id": "tdnB4jaGSig",
+      "title": "How to Replace Spark Plugs Toyota Highlander V6 2000-2007",
+      "channel": "2CarPros",
+      "views": 277304
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 359400,
+     "n": 6,
+     "best": {
+      "id": "yI4vpemfWvg",
+      "title": "Toyota Highlander 2007 Check Engine VSC TRAC Light - Solved",
+      "channel": "Amer Khaqan",
+      "views": 147407
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 341982,
+     "n": 4,
+     "best": {
+      "id": "s9LksZmDOsQ",
+      "title": "2002-2010 Toyota Highlander Timing belt replacement",
+      "channel": "Rust Belt Auto",
+      "views": 219521
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 306522,
+     "n": 8,
+     "best": {
+      "id": "8dDVV1OAe9Q",
+      "title": "How To Program A Toyota Highlander Remote Key Fob 2001 - 2007 DIY Tutorial",
+      "channel": "PYR Automotive ",
+      "views": 165847
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 243991,
+     "n": 3,
+     "best": {
+      "id": "NhKHH2W7bwg",
+      "title": "Toyota Highlander Climate Control Heater A/C Repair DIY Fix 2001-2007",
+      "channel": "Smart Easy DIY",
+      "views": 204694
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 209325,
+     "n": 6,
+     "best": {
+      "id": "6Sg0v_W87MU",
+      "title": "How to Replace Front Oxygen Sensor 2001-2007 Toyota Highlander",
+      "channel": "TRQ",
+      "views": 58622
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 162241,
+     "n": 4,
+     "best": {
+      "id": "2jSHRjk7mSM",
+      "title": "How to Service the Transmission Toyota Highlander 2001-2007 AWD V6",
+      "channel": "2CarPros",
+      "views": 89459
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 150407,
+     "n": 7,
+     "best": {
+      "id": "78rDqpK0CuM",
+      "title": "How to Replace Front Brake Pads and Rotor Toyota Highlander 2000-2007 - EASY!",
+      "channel": "2CarPros",
+      "views": 32616
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "mFvXGmmL3Sc",
+     "title": "Top 5 Problems Toyota Highlander SUV 1st Generation 2001-07",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 376014
+    },
+    {
+     "id": "JBq-6ddeo6I",
+     "title": "Toyota Highlander (2001-2007) - Common Problems, Reliability, Pros and Cons",
+     "channel": "MaxTheCarGuy",
+     "views": 138958
+    },
+    {
+     "id": "6aoRvifPtB8",
+     "title": "How Reliable is a 230,000 Mile Toyota Highlander? | Budget Car Camping | 1st Gen Highlander",
+     "channel": "The Fraziers",
+     "views": 122509
     }
    ],
    "costs": null
@@ -30705,6 +30958,135 @@
      "title": "5 Things I Hate About The Mercedes C300 W205 Problems",
      "channel": "TheDurbinCompound",
      "views": 382941
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "mercedes-benz-m/gle": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005
+   ],
+   "gen": "1998–2005 Mercedes-Benz M/GLE",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 16816938,
+   "topics": [
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 817823,
+     "n": 10,
+     "best": {
+      "id": "Wrno17kP0Gc",
+      "title": "How to Remove and Replace Door Actuator Mercedes W163 ML230 ML270 ML320 ML350 ML400 ML430 ML500",
+      "channel": "World Mechanics",
+      "views": 230285
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 795149,
+     "n": 4,
+     "best": {
+      "id": "NyaKkMtsHYE",
+      "title": "MERCEDES W163 TRANSMISSION CONTROL MODULE REPLACEMENT AND LOCATION ML320 ML430 ML350 ML500",
+      "channel": "Auto Repair Guys",
+      "views": 315997
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 773202,
+     "n": 3,
+     "best": {
+      "id": "2-spj5H_VSk",
+      "title": "Serpentine Belt Replacement Install and Belt Diagram Mercedes W163 ML320 ML430 ML500 ML350",
+      "channel": "World Mechanics",
+      "views": 557189
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 645887,
+     "n": 6,
+     "best": {
+      "id": "3cYEGrYdx74",
+      "title": "1999 Mercedes Benz ML320 ML 320 lateral acceleration sensor fix BAS ESP light",
+      "channel": "joesnowmobiles",
+      "views": 183490
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 552011,
+     "n": 5,
+     "best": {
+      "id": "Jkuap-JM7To",
+      "title": "W163 Mercedes Benz ML Class (ML320) fuel gauge reset instructions",
+      "channel": "DIY Dharma",
+      "views": 267935
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 439328,
+     "n": 4,
+     "best": {
+      "id": "-i2XLoIT6fU",
+      "title": "Radio Removal and Replacement on Mercedes w163 ML320 ML430 ML230 ML270 ML350 ML400 ML500",
+      "channel": "World Mechanics",
+      "views": 223068
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 420658,
+     "n": 4,
+     "best": {
+      "id": "H3Gt29wzPRk",
+      "title": "Mercedes w163 Service Reset Oil Life Reset on ML320 ML430 ML350 ML500 ML270 ML230 ML400",
+      "channel": "World Mechanics",
+      "views": 224944
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 302607,
+     "n": 1,
+     "best": {
+      "id": "15U0waKZlCo",
+      "title": "Buying a used Mercedes M-class W163 - 1997-2005, Common Issues, Buying advice / guide",
+      "channel": "different car review",
+      "views": 302607
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "I6EmITsoQGQ",
+     "title": "WICH MERCEDES ML W163 or W164 you can BUY AND ENJOY ! ALL Problems with W163 and W164",
+     "channel": "SNG Garage Eng",
+     "views": 39618
+    },
+    {
+     "id": "2bSymHbyGnA",
+     "title": "What quality defects/teething problems does the Mercedes W163 ML 270 CDI have? #BuyingAdvice",
+     "channel": "Mercedesfakt",
+     "views": 38247
+    },
+    {
+     "id": "yFyueDpOL7Q",
+     "title": "Mercedes Ml w163 central locking problems resolved",
+     "channel": "AUTOFS Solutions",
+     "views": 12125
     }
    ],
    "costs": null
