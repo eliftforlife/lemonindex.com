@@ -24292,7 +24292,35 @@
      "views": 10092
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 45000,
+     "lo": 32000.0,
+     "hi": 80000.0,
+     "n": 3,
+     "videos": 3,
+     "id": "uaWjVEoFK_0",
+     "t": 275,
+     "title": "2006 Ford Expedition Eddie Bauer"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 225,
+       "lo": 75.0,
+       "hi": 600.0,
+       "n": 6,
+       "videos": 5,
+       "id": "q1R7uzyA0GQ",
+       "t": 169,
+       "title": "DPFE EGR Sensor for Ford Expedition - 2001 - 2002 - 2003 - 2004 , P0401 Code"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -24424,7 +24452,35 @@
      "views": 30298
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 54285,
+     "lo": 51000.0,
+     "hi": 56950.0,
+     "n": 9,
+     "videos": 6,
+     "id": "-kKV25xTTQE",
+     "t": 355,
+     "title": "2016 Ford Expedition Start Up and Review 3.5 L Turbo V6 Ecoboost"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 150,
+       "lo": 80.0,
+       "hi": 1600.0,
+       "n": 7,
+       "videos": 6,
+       "id": "jbFV6ciUjjk",
+       "t": 546,
+       "title": "2008 Ford Expedition XLT 4x4 Review"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -27283,6 +27339,138 @@
      "title": "2016 Chevrolet Camaro SS 6-Spd Start Up, Road Test, and In Depth Review",
      "channel": "Saabkyle04",
      "views": 2195473
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "chevrolet-sonic": [
+  {
+   "years": [
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ],
+   "gen": "2012–2020 Chevrolet Sonic",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 14725532,
+   "topics": [
+    {
+     "name": "Cooling system",
+     "views": 433440,
+     "n": 7,
+     "best": {
+      "id": "bhhB_eSICyI",
+      "title": "2013 Chevy Sonic and Cruze 1.8 Thermostat replacement for P0597 code",
+      "channel": "ThePracticalMechanic",
+      "views": 128576
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 375286,
+     "n": 4,
+     "best": {
+      "id": "QpcKsh9uqnc",
+      "title": "2011 - 2016 Chevy Sonic transmission fluid change ( drain and refill )",
+      "channel": "Brian Balatbat",
+      "views": 137268
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 352557,
+     "n": 5,
+     "best": {
+      "id": "Dyo6-a5gzqc",
+      "title": "Changing the oil in a 2013 Chevy Sonic",
+      "channel": "funbro1",
+      "views": 144541
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 234689,
+     "n": 7,
+     "best": {
+      "id": "mXjik_QKHos",
+      "title": "2013 Chevy sonic radio removal",
+      "channel": "Brian Balatbat",
+      "views": 55054
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 181889,
+     "n": 2,
+     "best": {
+      "id": "xyqOo5MhgGk",
+      "title": "How to Replace Spark Plugs Chevrolet Sonic 1.4L Gasoline 2009-2015",
+      "channel": "2CarPros",
+      "views": 132039
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 150073,
+     "n": 2,
+     "best": {
+      "id": "U02l4dglfcU",
+      "title": "My IAA $3K Theft Recovery 2015 Chevy Sonic Has Drugs in it!!! Repairs + Does it Drive??",
+      "channel": "Auto Auction Rebuilds",
+      "views": 113009
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 109664,
+     "n": 4,
+     "best": {
+      "id": "f0mqfyykcWM",
+      "title": "How to Replace Front Strut & Spring Assemblies 2012-2020 Chevrolet Sonic",
+      "channel": "TRQ",
+      "views": 42865
+     }
+    },
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 100428,
+     "n": 2,
+     "best": {
+      "id": "WrfKYUK99OU",
+      "title": "How to Replace Valve Cover 2012-2020 Chevrolet Sonic",
+      "channel": "TRQ",
+      "views": 67207
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "copgdQz6AGg",
+     "title": "Top 5 Problems Chevrolet Sonic Hatchback 2012-2020 1st Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 110714
+    },
+    {
+     "id": "Y4_C55paqm8",
+     "title": "Chevrolet Sonic 2017 Turbo Premier Test Drive Buyer's Guide",
+     "channel": "carandtrain",
+     "views": 18341
+    },
+    {
+     "id": "CWsosT-qeP4",
+     "title": "Regular Car Reviews: 2013 Chevrolet Sonic",
+     "channel": "Regular Car Reviews",
+     "views": 764311
     }
    ],
    "costs": null
