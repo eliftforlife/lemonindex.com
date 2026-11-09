@@ -34998,7 +34998,26 @@
      "views": 230059
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 600,
+       "lo": 200.0,
+       "hi": 1400.0,
+       "n": 15,
+       "videos": 3,
+       "id": "cVE3Cshdxxc",
+       "t": 149,
+       "title": "Buying a used Mercedes C-Class W204 (2000-2007): The Truth About Its Reliability (BUYING GUIDE)"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -36333,6 +36352,124 @@
      "title": "BMW X1 vs Mercedes GLA vs Audi Q3 2017 SUV review | Mat Watson Reviews",
      "channel": "carwow",
      "views": 3056151
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "audi-a3": [
+  {
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ],
+   "gen": "2015–2020 Audi A3",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 196,
+   "views": 45762327,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 1249745,
+     "n": 7,
+     "best": {
+      "id": "hvxQfG812wY",
+      "title": "How To: Audi A3 8V MMI Reset",
+      "channel": "Advanced In-Car Technologies",
+      "views": 500704
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 645782,
+     "n": 2,
+     "best": {
+      "id": "FVJEnMesSY0",
+      "title": "HOW TO CLEAR THE SOS WARNING LIGHT | MAJOR ISSUE | AUDI A3 S3 2020 2021 2022 | VOLKSWAGEN VW SKODA",
+      "channel": "CRD",
+      "views": 467722
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 424775,
+     "n": 3,
+     "best": {
+      "id": "dTpbrSyRqe8",
+      "title": "Audi S3 Water Pump & Thermostat Replacement DIY (2015-2021 Audi 8V A3, S3, TT, TTS)",
+      "channel": "FCP Euro",
+      "views": 189011
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 193341,
+     "n": 1,
+     "best": {
+      "id": "b5hE_f5mLSU",
+      "title": "2005-2019 Audi or VW DSG transmission fluid change a3 s4 s5 a4 eos jetta tt",
+      "channel": "Gage Fixes Everything",
+      "views": 193341
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 169237,
+     "n": 2,
+     "best": {
+      "id": "Y8qCR9UavAQ",
+      "title": "Audi A3 Battery Replacement DIY (2015-2020 MQB Audi 8V A3 & S3)",
+      "channel": "FCP Euro",
+      "views": 106940
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 151759,
+     "n": 2,
+     "best": {
+      "id": "22RZsd9nuGY",
+      "title": "2016 Audi A3 Carlinkit Apple Carplay Install Guide",
+      "channel": "Tech Round Up",
+      "views": 77859
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 139818,
+     "n": 1,
+     "best": {
+      "id": "hBRv7J721WY",
+      "title": "Audi A3 Cabin Air Filter Replacement ( 2015 2016 2017 2018 2019 2020 2022 )",
+      "channel": "Undercar Experts",
+      "views": 139818
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "Pkg6JnkW7aA",
+     "title": "Audi A3 vs Volkswagen Golf 2018 review - which should you buy? | Head-to-Head",
+     "channel": "carwow",
+     "views": 1675517
+    },
+    {
+     "id": "bTsIGl8WnZE",
+     "title": "Audi A3 e-tron plug-in 2018 review - Carbuyer",
+     "channel": "Carbuyer",
+     "views": 260202
+    },
+    {
+     "id": "2VUyg0D6fvM",
+     "title": "THE AUDI S3 (8V) BUYERS GUIDE | AVOID Buying until watching this!",
+     "channel": "Scottish Car Clan",
+     "views": 103557
     }
    ],
    "costs": null
