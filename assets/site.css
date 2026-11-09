@@ -1004,3 +1004,5 @@ table.adv td { padding: 9px 10px; border-bottom: 1px solid var(--line, #e7e5de);
 /* 11-08 b: scorecard moved under the car photo, so the top is just the question + answer */
 .ph-v .rsc { margin: 18px auto 0; } .ph-v .rs-new { margin: 10px auto 0; text-align: center; }
 @media (min-width: 980px) { .ph-v .rsc { max-width: 560px; } }
+/* 11-08 (Elijah): a bit more white space between the header and the "Look up any car." hero */
+.home > .hhero { padding-top: clamp(28px, 5vw, 64px); }
