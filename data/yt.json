@@ -18761,6 +18761,376 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008
+   ],
+   "gen": "2003–2008 Subaru Forester",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 7900289,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 270032,
+     "n": 6,
+     "best": {
+      "id": "pk1fL33PJhs",
+      "title": "How to Subaru Forester car Stereo radio Removal 2003 - 2008 = Car Stereo HELP",
+      "channel": "Factory Car Stereo Repair",
+      "views": 145753
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 79619,
+     "n": 4,
+     "best": {
+      "id": "Rys3hY0pD4I",
+      "title": "2005 Subaru Forester XT Transmission Flush",
+      "channel": "JRobling",
+      "views": 33956
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 74242,
+     "n": 4,
+     "best": {
+      "id": "17NEkYAQzwE",
+      "title": "How to Replace Spark Plugs on a 2006 Subaru Forester (SOHC EJ25 P0301, P0302, P0303, P0304)",
+      "channel": "Bootstrappin'",
+      "views": 26058
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 73502,
+     "n": 3,
+     "best": {
+      "id": "n6FFxm59DL0",
+      "title": "How to Replace Cabin Air Filter 2008 Subaru Forester | AQ1128",
+      "channel": "Filterheads",
+      "views": 49054
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 72667,
+     "n": 1,
+     "best": {
+      "id": "xJCR3A44CJE",
+      "title": "Subaru Forester 2005 - Timing belt change gone bad.",
+      "channel": "Fit Organic Living",
+      "views": 72667
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 65753,
+     "n": 2,
+     "best": {
+      "id": "s5hMpdC-Um4",
+      "title": "2003 Subaru Forester p0519 idle speed malfunction IAC valve throttle body low idle speed hunt clean",
+      "channel": "Mechanical Mentor",
+      "views": 36155
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 62216,
+     "n": 3,
+     "best": {
+      "id": "k9WoZcVyMIw",
+      "title": "How to Change Oil 2003-2008 Subaru Forester",
+      "channel": "TRQ",
+      "views": 35592
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 48581,
+     "n": 2,
+     "best": {
+      "id": "AI-FIpPBUmY",
+      "title": "How to Replace Radiator 2003-2008 Subaru Forester",
+      "channel": "TRQ",
+      "views": 33383
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "H8UvzIJKxC4",
+     "title": "Subaru Forester SUV 2008 - 2012 review - CarBuyer",
+     "channel": "Carbuyer",
+     "views": 408380
+    },
+    {
+     "id": "cULDzziJOEg",
+     "title": "Top 5 Problems Subaru Forester 2003-2008 2nd Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 177179
+    },
+    {
+     "id": "g7r70zGwQl8",
+     "title": "Subaru Forester Gen2 (2003-2008) Common Problems, Reliability, Pros and Cons",
+     "channel": "MaxTheCarGuy",
+     "views": 43404
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2009,
+    2010,
+    2011,
+    2012,
+    2013
+   ],
+   "gen": "2009–2013 Subaru Forester",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 14839556,
+   "topics": [
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 397753,
+     "n": 9,
+     "best": {
+      "id": "dSrytXGLTCE",
+      "title": "2010 Subaru Forester A/C Repair: Expansion Valve & Condenser Leak Fix",
+      "channel": "South Main Auto LLC",
+      "views": 104959
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 237767,
+     "n": 4,
+     "best": {
+      "id": "eo1kyRHni4o",
+      "title": "2008-2012 Subaru Forester Radio Replacement | Android 10, Carplay, DSP, Bluetooth...",
+      "channel": "Seicane",
+      "views": 149291
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 222307,
+     "n": 3,
+     "best": {
+      "id": "LFn9gTgVFYU",
+      "title": "Subaru Forester 2012 to 2017 Head Light Replacement",
+      "channel": "Ken Deininger",
+      "views": 158226
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 177461,
+     "n": 4,
+     "best": {
+      "id": "YK0A6SfyElI",
+      "title": "2009 Subaru Forester 2.5L: Replacing the spark plugs and spark plug wires",
+      "channel": "AKJeeper",
+      "views": 118407
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 141707,
+     "n": 4,
+     "best": {
+      "id": "zDMHqRMzDYk",
+      "title": "2012-2018 Subaru Forester Throttle Body & Mass Air Flow Sensor Cleaning",
+      "channel": "Justin Rosenthal",
+      "views": 49580
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 110553,
+     "n": 4,
+     "best": {
+      "id": "TAGlxiswkgo",
+      "title": "3rd GEN (2009-13) Subaru Forester FB ENGINE Coolant Replacement/Fill",
+      "channel": "Hursty's Garage",
+      "views": 79275
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 72465,
+     "n": 3,
+     "best": {
+      "id": "IMHzbkzLhQ0",
+      "title": "2010 Subaru Forester (3rd Gen) - How to check automatic transmission fluid",
+      "channel": "DIY Tutorial Guy",
+      "views": 34613
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 63664,
+     "n": 3,
+     "best": {
+      "id": "dKzCgywgXXE",
+      "title": "Subaru Forester Oil change + Air filter | 2011 ‎4-Cyl, PZEV, 2.5 Liter | SH - Third Generation |",
+      "channel": "Matthew Warpenberg",
+      "views": 26529
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "7DxdJ8VStg8",
+     "title": "Subaru Forester SUV 2013 review - CarBuyer",
+     "channel": "Carbuyer",
+     "views": 693449
+    },
+    {
+     "id": "H8UvzIJKxC4",
+     "title": "Subaru Forester SUV 2008 - 2012 review - CarBuyer",
+     "channel": "Carbuyer",
+     "views": 408380
+    },
+    {
+     "id": "qxRwvCWJuyI",
+     "title": "2012 Subaru Forester Reliability and Problems. Should you buy?",
+     "channel": "car PROblems",
+     "views": 23536
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+   ],
+   "gen": "2019–2024 Subaru Forester",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 37476923,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 134544,
+     "n": 2,
+     "best": {
+      "id": "onRGVmKA_uo",
+      "title": "How To Reset Oil Life On A 2023 Subaru Forester",
+      "channel": "Midwest Auto Care & Transmission Center",
+      "views": 77035
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "_PFq3HM-QhI",
+     "title": "5 Reasons Why You Should Buy A 2021 Subaru Forester - Quick Buyer's Guide",
+     "channel": "Boston Auto Blog",
+     "views": 188497
+    },
+    {
+     "id": "ISGQCUxVOLA",
+     "title": "Should You Buy a New 2019 Subaru Forester? Dude I Love (or Hate) My New Ride Ep.2",
+     "channel": "The Fast Lane Car",
+     "views": 172977
+    },
+    {
+     "id": "zWmGcN1D35k",
+     "title": "2023 Subaru Outback VS 2023 Subaru Forester || Which One Should You Buy?",
+     "channel": "Car Help Corner",
+     "views": 105594
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2025
+   ],
+   "gen": "2025 Subaru Forester",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 139,
+   "views": 23617340,
+   "topics": [
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 21293,
+     "n": 1,
+     "best": {
+      "id": "aZxpgPbWhzI",
+      "title": "Our 2025 Subaru Forester Has a Major Oil Leak.",
+      "channel": "Automotive Anonymous ",
+      "views": 21293
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 11387,
+     "n": 1,
+     "best": {
+      "id": "A1oqMYDI5f0",
+      "title": "2025-2026 Subaru Forester How to Replace Cabin Air Filter",
+      "channel": "Oil Light Reset ",
+      "views": 11387
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 3768,
+     "n": 1,
+     "best": {
+      "id": "CS4ZreTG1NQ",
+      "title": "2025 Subaru Forester 2.5L Oil Change, Reset and Torque Specs",
+      "channel": "mechanicRHP",
+      "views": 3768
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "SQnDKBbqgyM",
+     "title": "Should You Buy a 2025 Subaru Forester? Thorough Review By A Mechanic",
+     "channel": "The Car Care Nut Reviews",
+     "views": 783817
+    },
+    {
+     "id": "zZIWXNNP8fo",
+     "title": "Should You Buy a 2025 Subaru Forester Hybrid? Thorough Review By A Mechanic",
+     "channel": "The Car Care Nut Reviews",
+     "views": 317919
+    },
+    {
+     "id": "0l0RVl9piqI",
+     "title": "2025 Subaru Forester vs Outback: Which should you buy?",
+     "channel": "Alex Prestigiacomo",
+     "views": 70224
+    }
+   ],
+   "costs": null
   }
  ],
  "toyota-highlander": [
