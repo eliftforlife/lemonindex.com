@@ -17720,6 +17720,364 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009
+   ],
+   "gen": "2003–2009 Kia Sorento",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 9773189,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 759741,
+     "n": 11,
+     "best": {
+      "id": "GHDwE3f3Wpc",
+      "title": "Kia Sorento (2003 - 2013) - Replace the starter motor",
+      "channel": "Haynes Manuals",
+      "views": 163660
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 442002,
+     "n": 5,
+     "best": {
+      "id": "rasUnUe4x6Y",
+      "title": "2003-2006 Kia Sorento Crankshaft Sensor Replacement!",
+      "channel": "ERICSDIYGARAGE",
+      "views": 266926
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 384961,
+     "n": 7,
+     "best": {
+      "id": "zNCBj2LoSJo",
+      "title": "How to Replace Cabin Air Filter 2008 Kia Sorento | AQ1142",
+      "channel": "Filterheads",
+      "views": 142407
+     }
+    },
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 367340,
+     "n": 2,
+     "best": {
+      "id": "G8AMdPFxUns",
+      "title": "2003-2006 Kia Sorento Spark Plug And Valve Cover Gasket Replacement Part 1 Step-By-Step Walkthrough",
+      "channel": "ERICSDIYGARAGE",
+      "views": 227024
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 328907,
+     "n": 5,
+     "best": {
+      "id": "SfFHsbUQ1P4",
+      "title": "Kia Sorento (2003 - 2013) - Replace the thermostat",
+      "channel": "Haynes Manuals",
+      "views": 125939
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 270528,
+     "n": 4,
+     "best": {
+      "id": "qrZbR9UnQTo",
+      "title": "Kia Sorento (2003 - 2013) - Replace the drive belt",
+      "channel": "Haynes Manuals",
+      "views": 115237
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 236493,
+     "n": 5,
+     "best": {
+      "id": "3J8zCIPhqAM",
+      "title": "Clutch replacement overview 2005 Kia Sorento Manual Transmission removal",
+      "channel": "Fixing cars and stuff",
+      "views": 84196
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 231805,
+     "n": 3,
+     "best": {
+      "id": "yWER-SjV-kA",
+      "title": "Kia Sorento (2003 - 2013) - Replace the spark plugs",
+      "channel": "Haynes Manuals",
+      "views": 127411
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "C1-6WOobOcY",
+     "title": "Roadfly.com - 2007 Kia Sorento Car Review",
+     "channel": "RoadflyTV",
+     "views": 235257
+    },
+    {
+     "id": "aICOJPNyUFo",
+     "title": "2006 Kia Sorento Start Up, Road Test, and Review 3.5 L V6",
+     "channel": "Camerons Car Reviews",
+     "views": 156054
+    },
+    {
+     "id": "zAM_1NKtqKU",
+     "title": "2003-2009 Kia Sorento Pre-Owned Vehicle Review",
+     "channel": "Wild About Wheels",
+     "views": 144078
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2011,
+    2012,
+    2013,
+    2014,
+    2015
+   ],
+   "gen": "2011–2015 Kia Sorento",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 18956803,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 480577,
+     "n": 6,
+     "best": {
+      "id": "6LCpd6jjS0s",
+      "title": "How to Start A 2014 - 2020 Kia Sorento With Dead Remote Key Fob Battery \"Key Not Detected\"",
+      "channel": "PYR Automotive ",
+      "views": 181867
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 475520,
+     "n": 5,
+     "best": {
+      "id": "tsBtIwQsnRc",
+      "title": "Sealed Transmission Fluid Check & Change In Kia Optima Sorento Sportage Rio Santa Fe etc. 2011 & Up",
+      "channel": "MotorCarNut",
+      "views": 267342
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 371814,
+     "n": 5,
+     "best": {
+      "id": "pECqfgZA9hY",
+      "title": "How to Replace Cabin Air Filter 2012 Kia Sorento | AQ1197",
+      "channel": "Filterheads",
+      "views": 218404
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 366737,
+     "n": 4,
+     "best": {
+      "id": "W9CiGu2HsZE",
+      "title": "2011 kia sorento door issues SOLVED!!!",
+      "channel": "Charlie Turner",
+      "views": 254161
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 340995,
+     "n": 4,
+     "best": {
+      "id": "vnl8Vp2g7XQ",
+      "title": "How to change rear brakes and rotors on a 2013 Kia Sorento",
+      "channel": "NitroZ18 Fishing",
+      "views": 102977
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 329107,
+     "n": 6,
+     "best": {
+      "id": "h1gEbwJEc2g",
+      "title": "P200a intake manifold runner code. 2011 Kia Sorento 2.4 liter 4 cylinder.",
+      "channel": "ZX9 Green",
+      "views": 186133
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 320386,
+     "n": 2,
+     "best": {
+      "id": "HvrvXUl6NYk",
+      "title": "Kia Sorento 2014 SXL Resetting The \"Service In\" Oil Change Maintenance Interval Counter/Timer HD",
+      "channel": "Richard Lloyd",
+      "views": 290971
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 316890,
+     "n": 1,
+     "best": {
+      "id": "mxST5QYTDaA",
+      "title": "2011 Kia Sorento - no start - won't start - push button starting issues",
+      "channel": "Bryan M",
+      "views": 316890
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "d-Q3cxGr-SQ",
+     "title": "Top 5 Problems Kia Sorento SUV 3rd Generation 2015-20",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 466422
+    },
+    {
+     "id": "SQX-JLZ2x2A",
+     "title": "Top 5 Problems Kia Sorento SUV 2nd Generation 2011-15",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 354698
+    },
+    {
+     "id": "iD42Y8tyYJg",
+     "title": "2011-2015 Kia Sorento defects and common problems",
+     "channel": "HOWSTUFFINMYCARWORKS",
+     "views": 218246
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2021–2025 Kia Sorento",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 43052450,
+   "topics": [
+    {
+     "name": "Transmission & shifter",
+     "views": 123590,
+     "n": 1,
+     "best": {
+      "id": "HyUg_F5wTMg",
+      "title": "Kia Sedona / Sorento 3.3L 2015-2021- Transmission Fluid Change DIY",
+      "channel": "Basic Detail",
+      "views": 123590
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 102274,
+     "n": 1,
+     "best": {
+      "id": "b1YTGUx4aMA",
+      "title": "2020 - 2022 Kia Sorento Key Fob Battery Replacement - How To Change Replace Sorento Remote Batteries",
+      "channel": "PYR Automotive ",
+      "views": 102274
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 86035,
+     "n": 1,
+     "best": {
+      "id": "1VE-OewvEFg",
+      "title": "How to RESET OIL LIGHT/SERVICE INTERVAL ON 2023 Kia Sorento S X Line",
+      "channel": "DADLIFE- Dante, your trusted Car Guy for Life! ",
+      "views": 86035
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 67118,
+     "n": 1,
+     "best": {
+      "id": "T9xyu6gI5_M",
+      "title": "2022 Kia Sorento | How To Use Your Parking Sensors!",
+      "channel": "Cardinal Kia",
+      "views": 67118
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 56082,
+     "n": 1,
+     "best": {
+      "id": "dW3yfib3s3U",
+      "title": "How To Replace Your Cabin Air Filter (2021-2023 Kia Sorento / MQ4)",
+      "channel": "KDM_Curt",
+      "views": 56082
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 43672,
+     "n": 1,
+     "best": {
+      "id": "gSYTFytMPvg",
+      "title": "How to Turn On/Off Power Folding Mirrors on 2023 Kia Sorento Hybrid SXP",
+      "channel": "DADLIFE- Dante, your trusted Car Guy for Life! ",
+      "views": 43672
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "gDSYp3sojcw",
+     "title": "2021 Kia Sorento review & buyer's guide | Auto Expert John Cadogan",
+     "channel": "Auto Expert John Cadogan",
+     "views": 299860
+    },
+    {
+     "id": "xd-uOpA5Je8",
+     "title": "2024 Kia Telluride vs 2024 Kia Sorento: Which SUV Should You Buy?",
+     "channel": "Ben Hardy",
+     "views": 89319
+    },
+    {
+     "id": "J5epTKEzyUA",
+     "title": "2022 Kia Sorento (265hp) - Sound & Visual Review!",
+     "channel": "Visual Car Reviews",
+     "views": 1734650
+    }
+   ],
+   "costs": null
   }
  ],
  "subaru-outback": [
