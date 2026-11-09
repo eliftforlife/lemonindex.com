@@ -15810,6 +15810,130 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2013,
+    2014,
+    2015
+   ],
+   "gen": "2013–2015 Chevrolet Malibu",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 14784381,
+   "topics": [
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 671646,
+     "n": 7,
+     "best": {
+      "id": "TfD97X6LdjQ",
+      "title": "2014 (2013-2016) Chevrolet Malibu LS 2.5 Code P16D0 (P16D1) Intake Solenoid Valve Replacement",
+      "channel": "FixIT",
+      "views": 261220
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 548277,
+     "n": 9,
+     "best": {
+      "id": "GbcQzut0Ahw",
+      "title": "Chevy Malibu 2015 AC Fuse and Relay Replacement",
+      "channel": "Lehew",
+      "views": 143969
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 362613,
+     "n": 3,
+     "best": {
+      "id": "spYdJFYx6jM",
+      "title": "2013 Chevrolet Malibu \"Service GM StabiliTrac\" fix",
+      "channel": "dzlfreek",
+      "views": 266301
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 259599,
+     "n": 5,
+     "best": {
+      "id": "RHcctZv_DEY",
+      "title": "Chevy Malibu Thermostat Change! 2013-2016",
+      "channel": "Flashback502",
+      "views": 84776
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 186363,
+     "n": 3,
+     "best": {
+      "id": "4rctG3fNdBc",
+      "title": "2015 Chevy Malibu won't start",
+      "channel": "ELIXA",
+      "views": 83638
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 168920,
+     "n": 2,
+     "best": {
+      "id": "ByMa8kzhlzc",
+      "title": "How to Replace Cabin Air Filter 2015 Chevrolet Malibu | AQ1164C",
+      "channel": "Filterheads",
+      "views": 93534
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 166412,
+     "n": 2,
+     "best": {
+      "id": "Lw4cRYoKNQs",
+      "title": "2013-2015 CHEVROLET MALIBU FUEL PUMP CONTROL MODULE REPLACEMENT FAST & EASY",
+      "channel": "Hidalgo Motors Co TV",
+      "views": 149013
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 166304,
+     "n": 3,
+     "best": {
+      "id": "Hl5rgxuSfjQ",
+      "title": "how to check transmission fluid level on a 2015 Chevy Malibu",
+      "channel": "Parking lot mechanic",
+      "views": 81390
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "n3VnoStW5Ns",
+     "title": "Top 5 Problems Chevy Malibu Sedan 2013-2015 8th Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 119273
+    },
+    {
+     "id": "e2J5h-4aQ18",
+     "title": "Chevy Malibu 8th Gen 2013 to 2015 common problems, issues, defects and complaints",
+     "channel": "HOWSTUFFINMYCARWORKS",
+     "views": 107373
+    },
+    {
+     "id": "lUUs--18Os0",
+     "title": "2013 Chevy Malibu electrical problems!",
+     "channel": "Tristan Matot",
+     "views": 17811
+    }
+   ],
+   "costs": null
   }
  ],
  "honda-odyssey": [
