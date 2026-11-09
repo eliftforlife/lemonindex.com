@@ -18655,6 +18655,444 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004
+   ],
+   "gen": "2000–2004 Subaru Outback",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 3288191,
+   "topics": [
+    {
+     "name": "Transmission & shifter",
+     "views": 331286,
+     "n": 7,
+     "best": {
+      "id": "CrytpSvo0bE",
+      "title": "How To Check Automatic Transmission Fluid Level On A Subaru Outback Car 2003 - 2009",
+      "channel": "hoohoohoblin",
+      "views": 105923
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 143876,
+     "n": 5,
+     "best": {
+      "id": "9xuCzM2GEcU",
+      "title": "CV axle replacement Subaru Outback 2000 Legacy Forester Install Remove Replace front drive axle",
+      "channel": "Fixing cars and stuff",
+      "views": 66374
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 109276,
+     "n": 5,
+     "best": {
+      "id": "LCTSqojXtmE",
+      "title": "How To Replace Alternator on a 2000-2004 Subaru Outback Forester Impreza",
+      "channel": "BrokenWrench",
+      "views": 50371
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 99735,
+     "n": 3,
+     "best": {
+      "id": "WXkSBzGQTjg",
+      "title": "2000-2004 Subaru Legacy/Outback and ALL Baja Instrument Panel Light Replacement",
+      "channel": "bruceyyyyy",
+      "views": 88043
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 89328,
+     "n": 3,
+     "best": {
+      "id": "foX-EIqV76s",
+      "title": "How to Guide: Adjust (And Replace) Parking Brake 2000-2004 Subaru Outback",
+      "channel": "bruceyyyyy",
+      "views": 69819
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 71298,
+     "n": 3,
+     "best": {
+      "id": "m4AlO9lwC80",
+      "title": "How to Replace Cabin Air Filter 2003-2009 Subaru Outback",
+      "channel": "TRQ",
+      "views": 59435
+     }
+    },
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 56840,
+     "n": 1,
+     "best": {
+      "id": "a82RSbIeJ0o",
+      "title": "2000 Subaru Outback - EJ251 Valve Cover Gasket Replacement",
+      "channel": "Aoghan01",
+      "views": 56840
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 48155,
+     "n": 4,
+     "best": {
+      "id": "UaQkz4ezCTE",
+      "title": "2001 Subaru Outback Oil Change Part 1",
+      "channel": "caveman joe",
+      "views": 20298
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "EIlIxzhv4dk",
+     "title": "Subaru Outback Review | 2000-2004",
+     "channel": "Driven Companion",
+     "views": 97863
+    },
+    {
+     "id": "kbestKkyx_M",
+     "title": "TODO sobre el SUBARU OUTBACK 1998/2003 | Review | Prueba a fondo",
+     "channel": "NuKeR",
+     "views": 50578
+    },
+    {
+     "id": "yXLgiRPv26Q",
+     "title": "2003 Subaru Outback Wagon Review",
+     "channel": "Grayson's Garage",
+     "views": 38077
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2005,
+    2006,
+    2007,
+    2008,
+    2009
+   ],
+   "gen": "2005–2009 Subaru Outback",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 4820835,
+   "topics": [
+    {
+     "name": "Steering & suspension",
+     "views": 521065,
+     "n": 8,
+     "best": {
+      "id": "bNIuqOJgc3M",
+      "title": "2007 Subaru Outback Suspension Noise Repair -EricTheCarGuy",
+      "channel": "EricTheCarGuy",
+      "views": 264881
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 185671,
+     "n": 6,
+     "best": {
+      "id": "Uq2JDgzNBFo",
+      "title": "How to ReCharge AC Subaru Outback 05 06 07 08 09 2005 2006 2007 2008 2009",
+      "channel": "Dirt Road Auto Repair",
+      "views": 82096
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 113612,
+     "n": 2,
+     "best": {
+      "id": "CrytpSvo0bE",
+      "title": "How To Check Automatic Transmission Fluid Level On A Subaru Outback Car 2003 - 2009",
+      "channel": "hoohoohoblin",
+      "views": 105923
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 102144,
+     "n": 2,
+     "best": {
+      "id": "3XXFTSGevBA",
+      "title": "How to Replace Spark Plugs 2005-2009 Subaru Outback",
+      "channel": "TRQ",
+      "views": 64578
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 97807,
+     "n": 3,
+     "best": {
+      "id": "5MTRyELKVd8",
+      "title": "How to Replace Power Steering Pump 2005-2009 Subaru Outback",
+      "channel": "TRQ",
+      "views": 73605
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 83685,
+     "n": 5,
+     "best": {
+      "id": "PPYDMRJclPo",
+      "title": "How to Replace Brake Bulb on a 2005 Subaru Outback",
+      "channel": "Arches Mechanic",
+      "views": 27083
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 65652,
+     "n": 3,
+     "best": {
+      "id": "u2DyPfrtNg0",
+      "title": "How to replace CV Axle 2005-2009 Subaru Outback",
+      "channel": "TRQ",
+      "views": 52904
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 62872,
+     "n": 3,
+     "best": {
+      "id": "rQcv8lZDxhQ",
+      "title": "2008 Subaru Outback Oil change",
+      "channel": "redlense4",
+      "views": 37926
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "22-yhqtsVWw",
+     "title": "Regular Car Reviews: 2005 Subaru Outback",
+     "channel": "Regular Car Reviews",
+     "views": 451121
+    },
+    {
+     "id": "8nHS4s5pjnQ",
+     "title": "2007 Subaru Outback Review - Kelley Blue Book",
+     "channel": "Kelley Blue Book",
+     "views": 179020
+    },
+    {
+     "id": "mt0lw8-1w1k",
+     "title": "2005-2009 Subaru Outback - Wagon | Used Car Review | AutoTrader",
+     "channel": "Autotrader",
+     "views": 158404
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2010,
+    2011,
+    2012,
+    2013,
+    2014
+   ],
+   "gen": "2010–2014 Subaru Outback",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 9335791,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 371441,
+     "n": 5,
+     "best": {
+      "id": "yNaZvtdMOls",
+      "title": "2012 Subaru Outback low oil indicator on after oil change even though oil levels are fine",
+      "channel": "Jackleg",
+      "views": 176894
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 327096,
+     "n": 4,
+     "best": {
+      "id": "1qnlBLAbWP0",
+      "title": "Subaru TR690 CVT Trouble! My Brother's 2011 Outback's Transmission Issues.",
+      "channel": "MrSubaru1387",
+      "views": 127597
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 302427,
+     "n": 7,
+     "best": {
+      "id": "0of-t6TbYy0",
+      "title": "How to Replace Timing Belt Kit with Water Pump 2010-2014 Subaru Outback",
+      "channel": "TRQ",
+      "views": 70317
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 268120,
+     "n": 8,
+     "best": {
+      "id": "i2UIyA2AMpw",
+      "title": "Subaru Outback 2012; check engine light, flashing brake and cruise",
+      "channel": "Christy Still",
+      "views": 109023
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 236246,
+     "n": 5,
+     "best": {
+      "id": "0ElvNGd0Rww",
+      "title": "How to Replace Front Control Arms with Ball Joint 2010-2014 Subaru Outback",
+      "channel": "TRQ",
+      "views": 106157
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 202113,
+     "n": 4,
+     "best": {
+      "id": "lYNgmWuQov8",
+      "title": "2010 - 2014 Subaru Outback / Legacy Radio Install",
+      "channel": "Provo Beast Audio Installation",
+      "views": 153267
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 192682,
+     "n": 5,
+     "best": {
+      "id": "XD7MGXqLTXQ",
+      "title": "How to Replace Upstream O2 Oxygen Sensor 2010-2014 Subaru Outback 2.5L H4",
+      "channel": "TRQ",
+      "views": 58239
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 118819,
+     "n": 2,
+     "best": {
+      "id": "A4-3-b3Imo0",
+      "title": "How to Replace Front CV Axles 2010-2014 Subaru Outback",
+      "channel": "TRQ",
+      "views": 91853
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "22lfDrWaLxg",
+     "title": "Top 5 Problems Subaru Outback Wagon 4th Generation 2010-14",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 405148
+    },
+    {
+     "id": "ZBMsFfdO9Jw",
+     "title": "2011 Subaru Outback Problems - Don't Buy Until You Watch This!",
+     "channel": "car PROblems",
+     "views": 62758
+    },
+    {
+     "id": "GH2hbxqvDHs",
+     "title": "Subaru Outback 2010 hatch won't open: 4 possible problems",
+     "channel": "Eli Egbert",
+     "views": 9057
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+   ],
+   "gen": "2020–2024 Subaru Outback",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 35839391,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 302103,
+     "n": 3,
+     "best": {
+      "id": "ZuE0Y5Td2QQ",
+      "title": "2020+ Subaru Outback Oil Change",
+      "channel": "Burnt OnBothEnds",
+      "views": 125494
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 96428,
+     "n": 1,
+     "best": {
+      "id": "Zlqhx9sgDk8",
+      "title": "How to Change Subaru Outback Air Filter & Cabin HVAC Filter // 2022 Subaru Outback",
+      "channel": "Boosted Films",
+      "views": 96428
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "C-SAX1q2zNk",
+     "title": "Should You Buy a 2024 Subaru Outback? Thorough Review By A Mechanic",
+     "channel": "The Car Care Nut Reviews",
+     "views": 493395
+    },
+    {
+     "id": "izLKqfQmbuU",
+     "title": "2020 Subaru Outback; Consumer Reports’ Reliability Survey Results | Talking Cars #229",
+     "channel": "Consumer Reports",
+     "views": 119602
+    },
+    {
+     "id": "v8aDt1CXL9A",
+     "title": "5 Reasons Why You Should Buy A 2021 Subaru Outback - Quick Buyer's Guide",
+     "channel": "Boston Auto Blog",
+     "views": 115898
+    }
+   ],
+   "costs": null
   }
  ],
  "subaru-forester": [
