@@ -9,9 +9,15 @@
 // POST /apply (11-07): "Want a human to help automate your business?" applications from elijahwestbrook.com/automate/.
 //      This is the one route that stores contact details (name, email, optional phone): only what the person types, in its own table
 //      (applications), read by Elijah in the D1 dashboard. Fixed choices are checked, free text is length-capped, max 5 per visitor per day.
+// POST /feedback (11-09): the feedback box at the bottom of lemonindex.com, mealmonster.app, thebusinessstudy.com and elijahwestbrook.com.
+//      Stores {site, page path, message, optional email, created} in table feedback. No IPs or IP hashes are stored: the per-IP limit is the
+//      FEEDBACK_RL rate-limit binding (wrangler.toml) plus an in-memory map that dies with the isolate. Read with 0 HQ/Tools/feedback.py pull.
+// Deploy: py make_worker.py, then `npx.cmd --yes wrangler deploy` from this folder (wrangler.toml).
 // Q is generated from data/survey.json + data/votes.json by worker/make_worker.py -> survey_worker.dist.js (the uploaded file).
 const Q = __Q__;
-const ORIGINS = ['https://lemonindex.com', 'https://www.lemonindex.com', 'https://thebusinessstudy.com', 'https://www.thebusinessstudy.com', 'https://elijahwestbrook.com', 'https://www.elijahwestbrook.com'];
+const ORIGINS = ['https://lemonindex.com', 'https://www.lemonindex.com', 'https://thebusinessstudy.com', 'https://www.thebusinessstudy.com', 'https://elijahwestbrook.com', 'https://www.elijahwestbrook.com', 'https://mealmonster.app', 'https://www.mealmonster.app'];
+const FB_SITE = o => ({ 'lemonindex.com': 'lemon', 'mealmonster.app': 'mm', 'thebusinessstudy.com': 'bs', 'elijahwestbrook.com': 'ew' })[o.replace(/^https:\/\/(www\.)?/, '')];
+const fbHits = new Map();   // IP -> recent send times, in memory only (gone when the isolate restarts); never written anywhere
 const APPLY = { size: ['Just me', '2-5', '6-20', '21-50', '51+'], hours: ['Under 5', '5-10', '10-20', '20+', 'Not sure'], budget: ['Under $500', '$500-$1,500', '$1,500-$5,000', '$5,000+', 'Not sure yet'],
   when: ['As soon as possible', 'This month', 'In the next 3 months', 'Just exploring'],
   areas: ['Content and social media', 'Ads', 'Sales and leads', 'Customer service', 'Website and SEO', 'Operations and admin', 'Money and finance', 'Hiring and team', 'Legal and compliance', 'Something else'] };
@@ -65,6 +71,23 @@ export default {
         env.DB.prepare(`SELECT DISTINCT substr(day, 1, 7) m FROM answers WHERE qid LIKE '${pre}%' ORDER BY m DESC LIMIT 24`)]);
       const counts = {}; for (const r of r1.results) (counts[r.qid] ||= {})[r.answer] = r.n;
       return json(o, { counts, voters: r2.results[0]?.n || 0, months: r3.results.map(r => r.m) });
+    }
+    if (req.method === 'POST' && url.pathname === '/feedback') {
+      let b; try { b = await req.json(); } catch { return json(o, { error: 'bad' }, 400); }
+      if (b.hp) return json(o, { ok: true });                                  // honeypot: only bots fill it in
+      const ip = req.headers.get('CF-Connecting-IP') || '', now = Date.now();
+      if (env.FEEDBACK_RL && !(await env.FEEDBACK_RL.limit({ key: ip })).success) return json(o, { error: 'limit' }, 429);
+      const recent = (fbHits.get(ip) || []).filter(t => now - t < 36e5);
+      if (recent.length >= 10) return json(o, { error: 'limit' }, 429);
+      recent.push(now); if (fbHits.size > 5000) fbHits.clear(); fbHits.set(ip, recent);
+      const message = typeof b.message === 'string' ? b.message.trim() : '', email = typeof b.email === 'string' ? b.email.trim().toLowerCase() : '';
+      if (message.length < 2 || message.length > 1000 || email.length > 200 || (email && !/^[^@\s]+@[^@\s]+\.[a-z]{2,}$/.test(email))) return json(o, { error: 'bad' }, 400);
+      const page = typeof b.page === 'string' ? b.page.slice(0, 200).replace(/[^a-z0-9/_.-]/gi, '') : '';
+      await env.DB.prepare('CREATE TABLE IF NOT EXISTS feedback (id INTEGER PRIMARY KEY AUTOINCREMENT, created TEXT, site TEXT, page TEXT, message TEXT, email TEXT)').run();
+      const day = new Date(now).toISOString().slice(0, 10);
+      if (await env.DB.prepare('SELECT COUNT(*) n FROM feedback WHERE created >= ?').bind(day).first('n') >= 500) return json(o, { error: 'limit' }, 429);   // flood guard
+      await env.DB.prepare('INSERT INTO feedback (created, site, page, message, email) VALUES (?, ?, ?, ?, ?)').bind(new Date(now).toISOString(), FB_SITE(o), page, message, email || null).run();
+      return json(o, { ok: true });
     }
     if (req.method === 'POST' && url.pathname === '/apply') {
       let b; try { b = await req.json(); } catch { return json(o, { error: 'bad' }, 400); }

@@ -1,0 +1,22 @@
+# lemon-survey Worker: survey taps, vote pages, /apply, /suggest and (11-09) /feedback for all 4 sites.
+# Deploy from this folder: py make_worker.py && npx.cmd --yes wrangler deploy   (secrets RESEND_KEY / TURNSTILE_SECRET stay as they are)
+name = "lemon-survey"
+main = "survey_worker.dist.js"
+compatibility_date = "2026-11-03"
+workers_dev = true
+preview_urls = false
+keep_vars = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "lemon-survey"
+database_id = "063b716c-eead-4b85-8eee-4d54f0c845a8"
+
+# per-IP limit for /feedback: counted at the edge, nothing stored
+[[ratelimits]]
+name = "FEEDBACK_RL"
+namespace_id = "1109"
+
+  [ratelimits.simple]
+  limit = 5
+  period = 60
