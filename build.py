@@ -611,7 +611,7 @@ def rel_top(f, c, snm, ys, sc, best, worst, bad3):
     if not r: tiles.append(f'<a class="rs bad" href="{CARU(f, worst["y"])}"><small>Worst year</small><b>{worst["y"]}</b><span>{E(short(worst["li"]))}</span></a>' if worst['li'] > 110 else
                            f'<div class="rs"><small>Years to avoid</small><b>None</b><span>no year far above average</span></div>')
     a = yt_adj(f['id']); last = max(v['y'] for v in sc); new = sorted((y for y in a if y > last), key=lambda y: -a[y])
-    newer = (f'<p class="rs-new">Newer than our complaint data ({last}): of the {min(new)}–{max(new)} years, YouTube sounds best about the <a href="#years">{new[0]}</a>.</p>'
+    newer = (f'<p class="rs-new">Looking at a {min(new)} or newer? Those are too new for complaint data, but YouTube owners like the <a href="#years">{new[0]}</a> best.</p>'
              if len(new) >= 2 else '')
     return (f'<h1 class="rel-h">Is the {E(snm).replace("-", "-⁠")} reliable?</h1><p class="ans rel-a"><b>{word}</b> {ans}</p><div class="rsc">{"".join(tiles)}</div>{newer}'), (word + ' ' + html.unescape(re.sub('<[^>]+>', '', ans)))
 def ybars(f, cur=None):
@@ -659,13 +659,20 @@ X2 = _load('data/extras2.json')
 TR = _load('data/trans.json')   # transmission complaints per model-year (data_trans.py)
 PH = _load('data/photos.json')   # exact-year Wikimedia Commons cutouts (data_photos.py), {fid: {year: {src, author, license, page, w, h}}}
 LIC = {'CC BY-SA 4.0': 'https://creativecommons.org/licenses/by-sa/4.0/', 'CC BY-SA 3.0': 'https://creativecommons.org/licenses/by-sa/3.0/', 'CC BY 4.0': 'https://creativecommons.org/licenses/by/4.0/'}
+# 11-08 (Elijah: "the Wikimedia credit under every photo is long"): shortest credit each license allows. Public domain / CC0 = just
+# "Wikimedia Commons". CC BY / BY-SA must name the author and say we changed it (background removed); the link goes to the photo's
+# Commons page, which states the license (CC 4.0 s3(a)(2) allows attribution through a linked page).
+def pcap(ph, who):
+    lic = ph.get('license', ''); pg = E(ph.get('page', ''))
+    if re.search(r'cc0|public domain|^pd', lic, re.I): return f'Photo: <a href="{pg}" rel="noopener">Wikimedia Commons</a>'
+    return f'Photo: <a href="{pg}" rel="noopener" title="{E(lic)}">{E(who)} / Wikimedia Commons</a>, edited'
 def car_photo(fid, y, name):
     ph = PH.get(fid, {}).get(str(y))
     if not ph: return ''
     who = ph['author'].split('\ufffd')[0].strip().replace('National Highway Traffic Safety Administration', 'NHTSA'); lic = ph['license']
     lic_h = f'<a href="{LIC[lic]}" rel="noopener license">{E(lic)}</a>' if lic in LIC else E(lic)
     return (f'<figure class="yph"><img src="{ph["src"]}" alt="{y} {E(name)}" width="{ph["w"]}" height="{ph["h"]}" fetchpriority="high">'
-            f'<figcaption>Photo: <a href="{E(ph["page"])}" rel="noopener">{E(who)}</a>, Wikimedia Commons · {lic_h} · background removed</figcaption></figure>')
+            f'<figcaption>{pcap(ph, who)}</figcaption></figure>')
 def year_photo(f, y):
     ys = PH.get(f['id'], {}); nm = SNM(f)
     if str(y) in ys: return car_photo(f['id'], y, f['name'])
@@ -675,9 +682,9 @@ def year_photo(f, y):
     if shown is None: m = re.search(r'(19|20)\d\d', ph.get('title', '')); shown = int(m.group()) if m else None
     lic = ph.get('license', ''); who = (ph.get('author') or '').split('\ufffd')[0].strip()
     lic_h = f'<a href="{LIC[lic]}" rel="noopener license">{E(lic)}</a>' if lic in LIC else E(lic)
-    note = f'Photo shows a {shown} {E(nm)}. ' if shown and shown != y else f'Photo shows {"an" if nm[0] in "AEIOU" else "a"} {E(nm)}. ' if not shown else ''
+    note = f'{shown} shown · ' if shown and shown != y else ''
     return (f'<figure class="yph"><img src="{ph["src"]}" alt="{E(nm)}" width="{ph["w"]}" height="{ph["h"]}" fetchpriority="high">'
-            f'<figcaption>{note}<a href="{E(ph.get("page", ""))}" rel="noopener">{E(who)}</a>, Wikimedia Commons · {lic_h} · background removed</figcaption></figure>')
+            f'<figcaption>{note}{pcap(ph, who)}</figcaption></figure>')
 def clean_tsb(t):
     """An automaker repair note in plain words: drop the 'HONDA:' prefix and 'Some 2017-2018 X built before ... may exhibit', fix SHOUTING, skip shop-tool notes."""
     t = t.replace('�', '').replace('…', '').strip()
