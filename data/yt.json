@@ -16523,6 +16523,498 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004
+   ],
+   "gen": "1999–2004 Honda Odyssey",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 12703891,
+   "topics": [
+    {
+     "name": "Transmission & shifter",
+     "views": 1282497,
+     "n": 15,
+     "best": {
+      "id": "R52MQ-UOhB4",
+      "title": "How I Drove My 2001 Honda Odyssey with a Bad Transmission - EricTheCarGuy",
+      "channel": "EricTheCarGuy",
+      "views": 369973
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 1024343,
+     "n": 11,
+     "best": {
+      "id": "k2PLiI6yv74",
+      "title": "Sliding Door Repair 2001 Honda Odyssey -EricTheCarGuy",
+      "channel": "EricTheCarGuy",
+      "views": 352286
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 775407,
+     "n": 13,
+     "best": {
+      "id": "oFRGbZho96U",
+      "title": "2004 Honda Odyssey Alternator Removal & Replacement without removing tensioner pulley",
+      "channel": "DIY Jeff",
+      "views": 211352
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 760916,
+     "n": 6,
+     "best": {
+      "id": "4mKSAX0vE88",
+      "title": "How To Reset the Maintenance Light on a 1999 - 2004 Honda Odyssey (or Accord)",
+      "channel": "ExcelDriveVideo",
+      "views": 465180
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 580579,
+     "n": 2,
+     "best": {
+      "id": "ckuxUVF16k8",
+      "title": "Power Steering Hose Replacement 2002 Honda Odyssey",
+      "channel": "Worse Than Chiggers",
+      "views": 512758
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 558981,
+     "n": 7,
+     "best": {
+      "id": "2Q8iQ_LUa5M",
+      "title": "Timing belt replacement Honda Odyssey 1998-2004 3.5L V6 water pump too",
+      "channel": "Fixing cars and stuff",
+      "views": 356188
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 434264,
+     "n": 9,
+     "best": {
+      "id": "fJbuog1iLPg",
+      "title": "How to Clean the EGR Port on a 1998-2004 Honda Odyssey (P0401)",
+      "channel": "How to Automotive",
+      "views": 197909
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 236992,
+     "n": 1,
+     "best": {
+      "id": "UpSIv3mk98k",
+      "title": "Front Strut Replacement, 2001 Honda Odyssey -EricTheCarGuy",
+      "channel": "EricTheCarGuy",
+      "views": 236992
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "utHlh9BdPdg",
+     "title": "2003 Honda Odyssey transmission problems",
+     "channel": "Traveling Car Guru",
+     "views": 88933
+    },
+    {
+     "id": "a768pGHPleA",
+     "title": "2004 Honda Odyssey EGR problems",
+     "channel": "Traveling Car Guru",
+     "views": 26829
+    },
+    {
+     "id": "I7013GeiGAU",
+     "title": "Regular Car Reviews: 2001 Honda Odyssey",
+     "channel": "Regular Car Reviews",
+     "views": 524868
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010
+   ],
+   "gen": "2005–2010 Honda Odyssey",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 19663784,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 1703707,
+     "n": 14,
+     "best": {
+      "id": "vJabM9rd0Lw",
+      "title": "2008 Honda Odyssey Alternator replacement.",
+      "channel": "Jo Daddy's Garage",
+      "views": 340103
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 1361304,
+     "n": 9,
+     "best": {
+      "id": "xhiIwampU7M",
+      "title": "Honda Odyssey 2005-2008: How to reset the sliding doors",
+      "channel": "MECÁNICO SANCHEZ OFICIAL",
+      "views": 368349
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 1146195,
+     "n": 8,
+     "best": {
+      "id": "zOxuk6L2qbk",
+      "title": "Honda Odyssey Replace In Cabin Air Filter (2005 - 2010)",
+      "channel": "dial2fast",
+      "views": 446223
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 1144778,
+     "n": 10,
+     "best": {
+      "id": "LrCPc9t0IPU",
+      "title": "2005 - 2010 Honda Odyssey Transmission Fluid Change",
+      "channel": "Fly Bee",
+      "views": 261194
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 854709,
+     "n": 4,
+     "best": {
+      "id": "lfaf5wTWHNw",
+      "title": "HONDA ODYSSEY OIL LIFE RESET 2005 2006 2007 2008 2009 2010",
+      "channel": "Auto Repair Guys",
+      "views": 643012
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 793782,
+     "n": 5,
+     "best": {
+      "id": "UCWPhRuGAic",
+      "title": "2006 Honda Odyssey Power Steering Rack Replacement",
+      "channel": "EricTheCarGuy",
+      "views": 359115
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 748373,
+     "n": 4,
+     "best": {
+      "id": "yHGHsiitNnQ",
+      "title": "2006 Honda Odyssey 3.5 Random Misfire Case Study Part 1 : Diagnosing the P0300, P0301, P0302, Etc.",
+      "channel": "GoTech",
+      "views": 291077
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 625867,
+     "n": 3,
+     "best": {
+      "id": "JgmmoYiVM5A",
+      "title": "Easy Fix! - (Engine Shake) 2005-2010 Honda Odyssey VSA Light / P2626 and P2647 Code",
+      "channel": "Riggs Garage",
+      "views": 477280
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "OHPak1EFsyA",
+     "title": "Top 5 Problems Honda Odyssey Minivan 3rd Generation 2005-10",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 607776
+    },
+    {
+     "id": "_PstsbIxwKk",
+     "title": "2007 Honda Odyssey automatic door problems",
+     "channel": "crkdtoes",
+     "views": 77321
+    },
+    {
+     "id": "I4YIJ-olGqs",
+     "title": "How Reliable is a 2007 Honda Odyssey EXL POV Test Drive",
+     "channel": "POV Nelson",
+     "views": 27909
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017
+   ],
+   "gen": "2011–2017 Honda Odyssey",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 20092212,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 980183,
+     "n": 9,
+     "best": {
+      "id": "Bi9GAzrWZ5w",
+      "title": "2011-2017 Honda Odyssey Alternator Replacement- A 10 Minute 4K Tutorial",
+      "channel": "The Doubtful Technician",
+      "views": 319871
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 655563,
+     "n": 4,
+     "best": {
+      "id": "45StctXJ6sQ",
+      "title": "2010 2011 2012 2013 Honda Odyssey Oil Life Reset",
+      "channel": "Under The Hood Show",
+      "views": 311850
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 625991,
+     "n": 4,
+     "best": {
+      "id": "R05ZOSvABpo",
+      "title": "Honda Odyssey Change In Cabin Air Filter ( 2011 - 2017 )",
+      "channel": "dial2fast",
+      "views": 364397
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 549790,
+     "n": 4,
+     "best": {
+      "id": "k86jISObXRA",
+      "title": "How To Lubricate Honda Odyssey Sliding Doors DIY! (2000-2015)",
+      "channel": "DANDLINC",
+      "views": 299256
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 411034,
+     "n": 3,
+     "best": {
+      "id": "nHEGaoXagPo",
+      "title": "2011-2017 Honda Odyssey Timing Belt and Water pump Replacement",
+      "channel": "Valley Mobile Automotive",
+      "views": 312704
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 327905,
+     "n": 3,
+     "best": {
+      "id": "VG_5KDuCh3g",
+      "title": "2014 - 2016 Honda Odyssey Transmission Fluid Change",
+      "channel": "Blu-TSX",
+      "views": 191288
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 325555,
+     "n": 2,
+     "best": {
+      "id": "uS3G8H8R0Ns",
+      "title": "FIX: Honda Odyssey Sliding Door Cable: Step-by-Step DIY Guide (2011-2017)",
+      "channel": "YOU Can Fix Anything: Auto",
+      "views": 191989
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 295049,
+     "n": 4,
+     "best": {
+      "id": "HfpKxbPJSos",
+      "title": "How to Replace Front Strut Assembly 2011-2017 Honda Odyssey",
+      "channel": "TRQ",
+      "views": 123572
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "N3VDRSapdaw",
+     "title": "10 Common Problems Of A Honda Odyssey (2011 - 2020)",
+     "channel": "MaxTheCarGuy",
+     "views": 152311
+    },
+    {
+     "id": "KJ2R4WrrrjY",
+     "title": "2012 honda odyssey diagnose po304 misfire problems and repair.",
+     "channel": "All Tsab",
+     "views": 41991
+    },
+    {
+     "id": "-OzTw2EGjBY",
+     "title": "2011 Honda Odyssey Touring Review - Should you buy one?",
+     "channel": "Masry Motors",
+     "views": 29390
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2025
+   ],
+   "gen": "2018–2025 Honda Odyssey",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 29809186,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 438144,
+     "n": 7,
+     "best": {
+      "id": "k1DCCwgds1U",
+      "title": "Replace Honda Odyssey Car Battery AGM | 2018 - 2025",
+      "channel": "dial2fast",
+      "views": 146226
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 173326,
+     "n": 2,
+     "best": {
+      "id": "bGQNF7eenJw",
+      "title": "Honda Odyssey Oil Change & Reset Oil Life | 2019+",
+      "channel": "dial2fast",
+      "views": 120652
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 147220,
+     "n": 2,
+     "best": {
+      "id": "eUsEo9SOWEQ",
+      "title": "How To Reset The Oil Life In 2018 - 2022 Honda Odyssey To 100% - Clear Oil Change Due Service Light",
+      "channel": "PYR Automotive ",
+      "views": 103740
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 64748,
+     "n": 1,
+     "best": {
+      "id": "OXdx6TJAOMI",
+      "title": "How To Change A 2018 - 2022 Honda Odyssey Cabin Air Filter - Replace AC Filter Replacement Location",
+      "channel": "PYR Automotive ",
+      "views": 64748
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 58834,
+     "n": 1,
+     "best": {
+      "id": "t_Itk6D-D8M",
+      "title": "2019 Honda Odyssey Transmission Service 9-Speed",
+      "channel": "The Honda Technician",
+      "views": 58834
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 41222,
+     "n": 1,
+     "best": {
+      "id": "3O_C1WIXdEk",
+      "title": "2018 Honda Odyssey sliding door issue Fix !!!",
+      "channel": "Im thegreat2004",
+      "views": 41222
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 33896,
+     "n": 1,
+     "best": {
+      "id": "SwaH9EZb_-s",
+      "title": "2019 Honda Odyssey Sensor Cleaning",
+      "channel": "OdysseyHowTo",
+      "views": 33896
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "ga8yI10nJ10",
+     "title": "Should You Buy a 2025 Honda Odyssey? Thorough Review By A Mechanic",
+     "channel": "The Car Care Nut Reviews",
+     "views": 272921
+    },
+    {
+     "id": "N3VDRSapdaw",
+     "title": "10 Common Problems Of A Honda Odyssey (2011 - 2020)",
+     "channel": "MaxTheCarGuy",
+     "views": 152311
+    },
+    {
+     "id": "YxH421DFuRs",
+     "title": "2019 Honda Odyssey problems Owner’s Review update",
+     "channel": "Myks Garage",
+     "views": 54369
+    }
+   ],
+   "costs": null
   }
  ],
  "hyundai-santa-fe": [
