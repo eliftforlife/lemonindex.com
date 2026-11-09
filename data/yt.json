@@ -13996,7 +13996,44 @@
      "views": 378114
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 5400,
+     "lo": 3500.0,
+     "hi": 10000.0,
+     "n": 5,
+     "videos": 4,
+     "id": "iGEhr8ApbXE",
+     "t": 275,
+     "title": "Used BMW X5 Buying Guide | 2013-2018 'F15' Generation | Common issues and versions to avoid!"
+    },
+    "msrp": {
+     "median": 47000,
+     "lo": 47000.0,
+     "hi": 75000.0,
+     "n": 5,
+     "videos": 5,
+     "id": "PpDr4e3gwoc",
+     "t": 300,
+     "title": "Roadfly.com - 2007 BMW X5 Car Review"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 600,
+       "lo": 175.0,
+       "hi": 1800.0,
+       "n": 27,
+       "videos": 15,
+       "id": "GxKCuftyegg",
+       "t": 313,
+       "title": "🤞 🇩🇪 Used BMW X6 Reliability | The Most Common Problems and Issues | X5 E70 and X6 E71 |"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -14069,7 +14106,57 @@
      "views": 71512
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 45000,
+     "lo": 40000.0,
+     "hi": 50000.0,
+     "n": 5,
+     "videos": 4,
+     "id": "fQzdI6xd7n8",
+     "t": 529,
+     "title": "Watch this BEFORE buying a USED BMW X5 (G05)"
+    },
+    "msrp": {
+     "median": 70000,
+     "lo": 65200.0,
+     "hi": 79500.0,
+     "n": 15,
+     "videos": 14,
+     "id": "HsBd_Vkn9Fw",
+     "t": 1291,
+     "title": "The 2019 BMW X5 Is A Right Sized SUV That Drives Like A Sport Sedan"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 5000,
+       "lo": 1500.0,
+       "hi": 8000.0,
+       "n": 5,
+       "videos": 4,
+       "id": "fQzdI6xd7n8",
+       "t": 764,
+       "title": "Watch this BEFORE buying a USED BMW X5 (G05)"
+      }
+     ],
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 1950,
+       "lo": 1900.0,
+       "hi": 2000.0,
+       "n": 2,
+       "videos": 2,
+       "id": "d6klh7Pylow",
+       "t": 249,
+       "title": "2024 BMW X5 xDrive40i - The BEST SUV For The Money?"
+      }
+     ]
+    ]
+   }
   }
  ],
  "nissan-altima": [
@@ -25988,6 +26075,80 @@
      "title": "Audi Q5 Buyer's Guide - Engine, Transmission, Interior, & Trim Options (2009-2017 Audi Q5/SQ5)",
      "channel": "FCP Euro",
      "views": 142079
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2018–2025 Audi Q5",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 40002304,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 979369,
+     "n": 6,
+     "best": {
+      "id": "WKbQCZA9ytc",
+      "title": "2019 Audi Q5 with 200K miles & the service records to prove it! What did the CAR WIZARD need to fix?",
+      "channel": "Car Wizard",
+      "views": 332557
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 299959,
+     "n": 3,
+     "best": {
+      "id": "VQcJ5fzsp1M",
+      "title": "How To Replace AUDI Q5 Remote Key Fob Battery 2018 - 2022 DIY Change Replacement Q5 Batteries",
+      "channel": "PYR Automotive ",
+      "views": 139656
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 97205,
+     "n": 1,
+     "best": {
+      "id": "vztZpt-kp80",
+      "title": "2018 - 2020 Audi Q5 Cabin Air filter Replacement - How To Replace Or Change Q5 AC Filter Location",
+      "channel": "PYR Automotive ",
+      "views": 97205
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "NyJ49KYe6LM",
+     "title": "5 Reasons Why You Should Buy A 2022 Audi Q5 - Quick Buyer's Guide",
+     "channel": "Boston Auto Blog",
+     "views": 88051
+    },
+    {
+     "id": "VMrlUUv7isk",
+     "title": "Would You Buy This 2018 Audi Q5? 🚗 Maintenance Analysis and Common Problems",
+     "channel": "CARLOS VERTRISA",
+     "views": 65246
+    },
+    {
+     "id": "XZ8NQm7hQTs",
+     "title": "Audi Q5 2021 review - better than a BMW X3 & Mercedes GLC?",
+     "channel": "carwow",
+     "views": 1971474
     }
    ],
    "costs": null
