@@ -6471,6 +6471,455 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2000,
+    2001,
+    2002
+   ],
+   "gen": "1998–2002 Toyota Corolla",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 34958748,
+   "topics": [
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 1018815,
+     "n": 8,
+     "best": {
+      "id": "XVk5nvJqWro",
+      "title": "How to check idle speed sensor status Ok or damaged Toyota Corolla. Years 1992 to 2002",
+      "channel": "Peter Finn the Car Doctor",
+      "views": 426474
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 867351,
+     "n": 8,
+     "best": {
+      "id": "JyYtSRe3xkc",
+      "title": "How to fix starter motor connection error Toyota Corolla.Years 2000 - 2008",
+      "channel": "Peter Finn the Car Doctor",
+      "views": 236251
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 729008,
+     "n": 6,
+     "best": {
+      "id": "NLsVyQYe7vU",
+      "title": "1993-2002 Toyota Corolla rear shock assembly remove and install",
+      "channel": "NutzAboutBolts",
+      "views": 381962
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 648835,
+     "n": 5,
+     "best": {
+      "id": "TKBxXuqExs4",
+      "title": "How to test fuel pump pressure Toyota Corolla. Years 1991 to 2002",
+      "channel": "Peter Finn the Car Doctor",
+      "views": 250357
+     }
+    },
+    {
+     "name": "Oil dilution & oil burning",
+     "views": 500747,
+     "n": 1,
+     "best": {
+      "id": "A595LR4SQpI",
+      "title": "1ZZFE Oil Consumption Fix How-To 8th Gen VVTi Corolla +similar",
+      "channel": "Phoenix and Dad",
+      "views": 500747
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 257853,
+     "n": 2,
+     "best": {
+      "id": "BsinmJWym6Q",
+      "title": "WINDOW SWITCH REPAIR (1998-2002) COROLLA",
+      "channel": "805ROADKING",
+      "views": 156964
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 238375,
+     "n": 3,
+     "best": {
+      "id": "i7apkohisY4",
+      "title": "How to check and add coolant Toyota Corolla. Years 1995-2002",
+      "channel": "Peter Finn the Car Doctor",
+      "views": 118614
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 222765,
+     "n": 2,
+     "best": {
+      "id": "WCJ-SaOptIM",
+      "title": "How to check and add brake fluid Toyota Corolla. Years 2002-2008",
+      "channel": "Peter Finn the Car Doctor",
+      "views": 167649
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "1vzgY1Q0iwU",
+     "title": "Top 5 Problems Toyota Corolla Sedan 9th Generation 2002-08",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 772167
+    },
+    {
+     "id": "vA3P9Be6dk0",
+     "title": "How Reliable is a Used 2000 Toyota Corolla CE POV Test Drive",
+     "channel": "POV Nelson",
+     "views": 63340
+    },
+    {
+     "id": "WoGusx3m9n4",
+     "title": "1998 TOYOTA COROLLA REVIEW, should you buy a 98 toyota corolla in 2020, Corolla review 4k",
+     "channel": "Grumpy Monkey Garage",
+     "views": 57880
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008
+   ],
+   "gen": "2003–2008 Toyota Corolla",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 64100127,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 2080025,
+     "n": 9,
+     "best": {
+      "id": "i8UBhZJYqFo",
+      "title": "How to replace the starter in a 2003 2004 2005 2006 2007 2008 Toyota Corolla",
+      "channel": "Todd's Garage",
+      "views": 470616
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 1804460,
+     "n": 4,
+     "best": {
+      "id": "bLkU7MgM4wA",
+      "title": "2007-2013 Toyota Corolla How to Clean and Check Camshaft Timing Oil Control Valve Βαλβίδα Ελέγχου",
+      "channel": "Yiannis Pagonis",
+      "views": 1593027
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 1592393,
+     "n": 7,
+     "best": {
+      "id": "vvSrMptzo_0",
+      "title": "2007-2013 Toyota Corolla How to Clean the Throttle Body and the Idle Air Control Valve PART I",
+      "channel": "Yiannis Pagonis",
+      "views": 669319
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 1436364,
+     "n": 9,
+     "best": {
+      "id": "78Mo_BLjiJc",
+      "title": "How to Replace Front Wheel Bearing & Hub 2003-2008 Toyota Corolla",
+      "channel": "TRQ",
+      "views": 469349
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 1218604,
+     "n": 7,
+     "best": {
+      "id": "czHnlPLN3sc",
+      "title": "Toyota Corolla 2006 Cabin Air Filter Replacement | AQ1044",
+      "channel": "Filterheads",
+      "views": 456208
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 946069,
+     "n": 8,
+     "best": {
+      "id": "1hCL2s-Gv_0",
+      "title": "2006 Toyota Corolla 1ZZ-FE Clutch and Rear Main Seal Replacement",
+      "channel": "Dailydriven79",
+      "views": 333153
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 943546,
+     "n": 5,
+     "best": {
+      "id": "-27a2QC89Bw",
+      "title": "How to Replace Rear Brakes 2003-2008 Toyota Corolla",
+      "channel": "TRQ",
+      "views": 394364
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 681281,
+     "n": 3,
+     "best": {
+      "id": "43P7G1owqPg",
+      "title": "How to Replace Timing Chain Tensioner 2003-2008 Toyota Corolla",
+      "channel": "TRQ",
+      "views": 306988
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "hx-4d92c-jk",
+     "title": "Top 5 Problems Toyota Corolla Sedan 10th Generation 2008-13",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 525907
+    },
+    {
+     "id": "WDwj8jpFUe4",
+     "title": "2006 TOYOTA COROLLA LE Auto Review - Reliable Used Cars ⭐",
+     "channel": "New Day Videos",
+     "views": 82526
+    },
+    {
+     "id": "nMOCf5aRSaY",
+     "title": "Corolla 2D Saloon 2004 Owner's Review: Price, Specs & Features | PakWheels",
+     "channel": "PakWheels.com",
+     "views": 544866
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2009,
+    2010,
+    2011,
+    2012,
+    2013
+   ],
+   "gen": "2009–2013 Toyota Corolla",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 29421616,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 1439116,
+     "n": 12,
+     "best": {
+      "id": "XDQcMGRcx2g",
+      "title": "2009 - 2013 Toyota Corolla Alternator Replacement",
+      "channel": "Brian Balatbat",
+      "views": 223840
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 1377012,
+     "n": 8,
+     "best": {
+      "id": "C-oeTUo6a68",
+      "title": "2010 Toyota Corolla maintenance light reset",
+      "channel": "Johnathan's World",
+      "views": 378256
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 632725,
+     "n": 4,
+     "best": {
+      "id": "Ic5wlGF7nyI",
+      "title": "2011 | Toyota | Corolla | Gated Shifter | How To by Toyota City Minneapolis MN",
+      "channel": "Luther Brookdale Toyota",
+      "views": 227403
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 618677,
+     "n": 5,
+     "best": {
+      "id": "jgt2rrGNX70",
+      "title": "How to change the oil and filter on a 2011 Toyota Corolla",
+      "channel": "Jimthecarguy",
+      "views": 163644
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 577088,
+     "n": 4,
+     "best": {
+      "id": "fdBiX-cXXeQ",
+      "title": "Toyota Corolla Spark Plug Replacement | Coil Replacement | 2009 2010 2011 2012 2013 2014 2015",
+      "channel": "BundysGarage",
+      "views": 261211
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 301934,
+     "n": 1,
+     "best": {
+      "id": "jfzFwKN308Q",
+      "title": "2011 Toyota Corolla 1.8 HOW TO RESET ABS/TRACTION LIGHT ON WITHOUT A SCAN TOOL",
+      "channel": "Stefen Phillips",
+      "views": 301934
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 281689,
+     "n": 2,
+     "best": {
+      "id": "zxFGJbjzz34",
+      "title": "Toyota Corolla Thermostat Replacement 2007-2013 DIY",
+      "channel": "JOHNNY'S WEEKENDS-Power Your World! Solar & More!",
+      "views": 159790
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 280364,
+     "n": 4,
+     "best": {
+      "id": "weMSLin87yE",
+      "title": "2009 Toyota Corolla Exterior Door Handle Replacement",
+      "channel": "Pennesnatcher Inc",
+      "views": 81058
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "SjXP9Gzpyvo",
+     "title": "Should you buy a Toyota Corolla? 2009-2013 Common problems",
+     "channel": "The Car Care Nut",
+     "views": 659881
+    },
+    {
+     "id": "RPg7Rg9luqs",
+     "title": "The 2010 Toyota Corolla: Affordable, Reliable, and My Personal Car Since 2012",
+     "channel": "Bingocat",
+     "views": 323716
+    },
+    {
+     "id": "AcgoGe7izK4",
+     "title": "2012 Toyota Corolla AC Not Working 2 Basic Common Problems DIY Fixes",
+     "channel": "HVAC Mechanic ",
+     "views": 172267
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2020–2025 Toyota Corolla",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 67426854,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 209935,
+     "n": 1,
+     "best": {
+      "id": "Zlk85S0p3v4",
+      "title": "2020 TOYOTA COROLLA - HOW TO RESET THE 'MAINTENANCE REQUIRED' / OIL LIFE / VISIT YOUR DEALER LIGHT",
+      "channel": "Dan the Fix it Man",
+      "views": 209935
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 116673,
+     "n": 1,
+     "best": {
+      "id": "YtG2ajG-0z0",
+      "title": "Battery Replacement on TOYOTA COROLLA 2021 2022 2023 2024 2025 2026",
+      "channel": "FixAlex",
+      "views": 116673
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 108890,
+     "n": 1,
+     "best": {
+      "id": "zlp7pv5yx6s",
+      "title": "Toyota Corolla Oil Change 2019-2024 (12th Generation E210)",
+      "channel": "AutoFun",
+      "views": 108890
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "1mnfX0CyKHs",
+     "title": "Should You Buy a Toyota Corolla in 2023? I Have Good News and Bad News!",
+     "channel": "The Car Care Nut",
+     "views": 879698
+    },
+    {
+     "id": "EV2c2GG5EJU",
+     "title": "Should You Buy a 2024 Toyota GR Corolla? Thorough Review By A Mechanic",
+     "channel": "The Car Care Nut Reviews",
+     "views": 455588
+    },
+    {
+     "id": "-fGKEqTZDps",
+     "title": "2022 Honda Civic VS. 2022 Toyota Corolla | Which Is The Best Reliable Small Car?",
+     "channel": "Car Help Corner",
+     "views": 211744
+    }
+   ],
+   "costs": null
   }
  ],
  "honda-accord": [
