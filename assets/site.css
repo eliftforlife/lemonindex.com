@@ -1012,3 +1012,11 @@ table.adv td { padding: 9px 10px; border-bottom: 1px solid var(--line, #e7e5de);
 @media (min-width: 980px) { .ph-v .rsc { max-width: 560px; } }
 /* 11-08 (Elijah): a bit more white space between the header and the "Look up any car." hero */
 .home > .hhero { padding-top: clamp(28px, 5vw, 64px); }
+/* 11-09 "send this to a friend": a quiet line near the bottom of car, compare, brand, best, stats and study pages (assets/share.js) */
+.shr { z-index: 100; } .shr-h { font-weight: 800; }
+.shline { margin: 44px auto 8px; max-width: 760px; padding: 16px 20px; background: #f5f5f7; border-radius: 18px; text-align: center; font-size: 16px; line-height: 1.45; color: #1d1d1f; }
+.shl { font: inherit; font-weight: 700; color: #1d1d1f; background: none; border: 0; padding: 10px 4px; margin: -10px 0; cursor: pointer; text-decoration: underline; text-decoration-color: var(--lemon); text-decoration-thickness: 3px; text-underline-offset: 5px; }
+.shl:hover { text-decoration-color: #1d1d1f; }
+[data-share]:focus-visible, .shr-card :focus-visible { outline: 2px solid #1d1d1f; outline-offset: 3px; }
+.cmp-sh { margin: 14px 0 0; }
+.shr-u { width: 100%; font: inherit; font-size: 15px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 12px; color: var(--ink); background: #f5f5f7; }

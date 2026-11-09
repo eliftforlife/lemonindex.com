@@ -55,7 +55,8 @@ for b, (rk, li) in brank.items():
 {warranty_html(b)}
 <section><h2>Every {E(b)}, ranked. <span class="h2s">Lower is better. 100 is the average car.</span></h2><div class="mbs"><div class="mb"><div class="mg">{"".join(mc(c) for c in ms)}</div></div></div></section>
 {two}
-<p class="yc-cap" style="text-align:center">{"* Small sample or estimated sales. " if est else ""}Lemon Index = safety complaints filed with the U.S. government within 3 years, per car sold, against the average car. <a href="/method/">How it works</a> · <a href="/brands/">Every brand</a></p></div>'''
+<p class="yc-cap" style="text-align:center">{"* Small sample or estimated sales. " if est else ""}Lemon Index = safety complaints filed with the U.S. government within 3 years, per car sold, against the average car. <a href="/method/">How it works</a> · <a href="/brands/">Every brand</a></p>
+{share_line(f'Is {b} reliable? Every {b} model ranked by owner complaints. Best: {best["name"]}. Worst: {worst["name"]}. Free:' if worst is not best else f'Is {b} reliable? Every {b} model ranked by owner complaints. Free:', f'Know someone looking at a {E(b)}?')}</div>'''
     page(f'/brands/{BSLUG(b)}/', f'Is {b} Reliable? Every {b} Model Ranked by Owner Complaints | The Lemon Index',
          f'{b} ranks #{rk} of {len(brank)} brands by NHTSA owner complaints per car sold (Lemon Index {li}; 100 is average). Most reliable {b}: {best["name"]}. Least: {worst["name"]}.',
          body, ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": f'{b} reliability', "url": BASE + f'/brands/{BSLUG(b)}/'}])
@@ -68,6 +69,7 @@ page('/brands/', 'Most Reliable Car Brands, Ranked by Owner Complaints | The Lem
      f'''<div class="pg">{phero('Brands', 'Every brand, ranked.', 'Owner complaints per car sold, best to worst. 100 is the average car.')}
 <section><div class="mbs"><div class="mb"><div class="mg">{"".join(cards)}</div></div></div></section>
 <section class="bwar"><p class="te">What automakers tell investors</p><h2>Warranty costs are rising. <span class="h2s">Warranty and recall costs booked per vehicle sold, from each company&#39;s 10-K.</span></h2><div class="wts">{wtile}</div>
-<p class="yc-cap">Ford&#39;s rose from $1,675 a vehicle in 2023 to $2,042 in 2025. GM&#39;s from $1,259 to $2,190. Open a brand for the details.</p></section></div>''',
+<p class="yc-cap">Ford&#39;s rose from $1,675 a vehicle in 2023 to $2,042 in 2025. GM&#39;s from $1,259 to $2,190. Open a brand for the details.</p></section>
+{share_line("Every car brand ranked by owner complaints per car sold, best to worst. Free:")}</div>''',
      ld=[{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Car brands ranked by reliability", "url": BASE + '/brands/'}])
 print('brand pages:', len(burls) + 1)

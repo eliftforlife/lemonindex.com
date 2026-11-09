@@ -51,6 +51,7 @@ page('/electric/', 'The Most Reliable Electric Cars, Ranked by Owner Complaints 
 <div class="evg">{evcards}</div>
 <p class="note">* Under 50,000 sold: a rough score. {E(SRC_NOTE)}</p>
 <h2>More electric-car data</h2><div class="stack">{cards}</div>
+{share_line(f'The most reliable electric cars, ranked by owner complaints. Closest to average: the {best["name"]}. Free:', 'Know someone thinking about an EV?')}
 <section class="faq"><h2>Questions</h2>{efaq}</section></article></div>''', kind='article',
      ld=[{"@context": "https://schema.org", "@type": "Dataset", "name": "Electric car reliability by NHTSA complaints per car sold", "url": BASE + '/electric/', "creator": {"@type": "Organization", "name": "The Lemon Index"},
           "description": f"{len(RK)} electric cars, model years {EV['years'][0]}-{EV['years'][1]}, ranked by NHTSA safety complaints per U.S. sale.", "license": "https://creativecommons.org/licenses/by/4.0/", "dateModified": TODAY},
