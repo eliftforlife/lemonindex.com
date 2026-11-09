@@ -23003,7 +23003,109 @@
      "views": 32564
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 25000,
+     "lo": 10000.0,
+     "hi": 42000.0,
+     "n": 9,
+     "videos": 8,
+     "id": "rvj7Qxhs05s",
+     "t": 55,
+     "title": "New 2024 Ford Mustang GT: Full Tour of the All-New Mustang"
+    },
+    "msrp": {
+     "median": 46560,
+     "lo": 40000.0,
+     "hi": 59000.0,
+     "n": 75,
+     "videos": 55,
+     "id": "vY6jOFHGetc",
+     "t": 914,
+     "title": "2024 Ford Mustang GT Review - BETTER Value Than Dark Horse?"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 90,
+       "lo": 75.0,
+       "hi": 450.0,
+       "n": 8,
+       "videos": 6,
+       "id": "ulUDOXGIfOE",
+       "t": 690,
+       "title": "2024 Mustang Dark Horse -  2+ Weeks of Ownership!"
+      }
+     ],
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 1200,
+       "lo": 900.0,
+       "hi": 6000.0,
+       "n": 7,
+       "videos": 5,
+       "id": "D_FkbAn0HY0",
+       "t": 194,
+       "title": "2025 Ford Mustang Ecoboost Premium POV Test Drive & Review"
+      }
+     ],
+     [
+      "Insurance",
+      {
+       "median": 2400,
+       "lo": 1776.0,
+       "hi": 2435.0,
+       "n": 5,
+       "videos": 5,
+       "id": "BDtsbr87c54",
+       "t": 96,
+       "title": "Ford Mustang GT 2024 | Cost to Own | Affordability Analysis"
+      }
+     ],
+     [
+      "Brakes",
+      {
+       "median": 1725,
+       "lo": 1700.0,
+       "hi": 1750.0,
+       "n": 4,
+       "videos": 4,
+       "id": "ATJm33rCMx0",
+       "t": 972,
+       "title": "2024 Seventh-Generation Ford Mustang in Hawaii"
+      }
+     ],
+     [
+      "Transmission",
+      {
+       "median": 1598,
+       "lo": 1595.0,
+       "hi": 1600.0,
+       "n": 2,
+       "videos": 2,
+       "id": "pHdZqaE1Mg0",
+       "t": 319,
+       "title": "New 2024 Ford Mustang GT Convertible Is Old School With New Tricks"
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 1366,
+       "lo": 1132.0,
+       "hi": 1600.0,
+       "n": 4,
+       "videos": 2,
+       "id": "kQghY7cOq9A",
+       "t": 517,
+       "title": "Monthly Payments on My NEW WHIPPLE SUPERCHARGED S650 Mustang GT! (How Much It Costs)"
+      }
+     ]
+    ]
+   }
   }
  ],
  "toyota-4runner": [
@@ -26842,6 +26944,133 @@
      "title": "2024 Hyundai Palisade Review | Capital One Auto Navigator",
      "channel": "Capital One Auto Navigator",
      "views": 907851
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "kia-soul": [
+  {
+   "years": [
+    2010,
+    2011,
+    2012,
+    2013
+   ],
+   "gen": "2010–2013 Kia Soul",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 14836478,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 621798,
+     "n": 14,
+     "best": {
+      "id": "wMgPNyxtuRs",
+      "title": "Kia Soul 2012 Battery Replacement",
+      "channel": "Fixitup Today",
+      "views": 86631
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 608712,
+     "n": 8,
+     "best": {
+      "id": "IsF4cclFMC8",
+      "title": "How to Replace Cabin Air Filter 2011 Kia Soul | AQ1188",
+      "channel": "Filterheads",
+      "views": 303980
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 297177,
+     "n": 5,
+     "best": {
+      "id": "XSTarthm9XA",
+      "title": "2013 kia soul crankshaft position sensor replacement",
+      "channel": "SFast John",
+      "views": 185619
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 196478,
+     "n": 4,
+     "best": {
+      "id": "3KkMmY6vYGU",
+      "title": "Timing belt replacement 2011 Kia Soul 2.0L how to remove or replace TB",
+      "channel": "Fixing cars and stuff",
+      "views": 136407
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 126161,
+     "n": 2,
+     "best": {
+      "id": "tsoGisq_Bxc",
+      "title": "2010-2011 Kia Soul 2.0L timing belt water pump kit replacement",
+      "channel": "Rust Belt Auto",
+      "views": 113105
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 107595,
+     "n": 4,
+     "best": {
+      "id": "97AarriC_pI",
+      "title": "How to change spark plugs on a 2010 Kia Soul 2.0",
+      "channel": "fupabox",
+      "views": 68431
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 99035,
+     "n": 3,
+     "best": {
+      "id": "NvBCbxXlqpw",
+      "title": "How To Remove 2009 - 2013 Kia Soul Tail Light - Change Replace Brake Reverse Lamp Bulb Replacement",
+      "channel": "PYR Automotive ",
+      "views": 77649
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 90342,
+     "n": 2,
+     "best": {
+      "id": "gNYKVtc7qqU",
+      "title": "2010. KIA SOUL WONT START AFTER FILLING GAS...",
+      "channel": "A-1 CHANNEL",
+      "views": 59809
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "5gTW6q-sZDo",
+     "title": "Kia Soul hatchback (2010-2014) review - CarBuyer",
+     "channel": "Carbuyer",
+     "views": 344011
+    },
+    {
+     "id": "6LkO5H-Z83E",
+     "title": "Top 5 Problems Kia Soul Hatchback 2010-2013 1st Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 104497
+    },
+    {
+     "id": "ECqpYzGcSds",
+     "title": "2011 Kia Soul Review - A Different and Very Cool SUV",
+     "channel": "Carro Chefe",
+     "views": 742755
     }
    ],
    "costs": null
@@ -32210,6 +32439,118 @@
      "title": "Are 2006-2010 Dodge Chargers still reliable? (2008 Dodge Charger RT Hemi)",
      "channel": "Seth Boyer",
      "views": 65236
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023
+   ],
+   "gen": "2011–2023 Dodge Charger",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 83104030,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 873310,
+     "n": 4,
+     "best": {
+      "id": "BIdy3HIwZis",
+      "title": "2008-2011 Chrysler 300, Dodge Charger, and Dodge Magnum starter relay issues",
+      "channel": "MotorCity Mechanic",
+      "views": 292454
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 315800,
+     "n": 1,
+     "best": {
+      "id": "W63CrHbhS1o",
+      "title": "2011-2017 Chrysler 300, Dodge Charger, and Dodge Challenger 3.6 spark plug replacement",
+      "channel": "MotorCity Mechanic",
+      "views": 315800
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 300142,
+     "n": 2,
+     "best": {
+      "id": "PwScIB0znpk",
+      "title": "2011-2014 Dodge Charger Chrysler 300 A/C not working",
+      "channel": "Geniuscarpros",
+      "views": 158290
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 129745,
+     "n": 1,
+     "best": {
+      "id": "9gg6_vmX1yQ",
+      "title": "How to Replace Fuel Pump Assembly 2011-2023 Dodge Charger 3.6L V6",
+      "channel": "TRQ",
+      "views": 129745
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 128650,
+     "n": 1,
+     "best": {
+      "id": "ZK0rSZQVaEI",
+      "title": "Replacing Thermostat on 2016 Dodge Charger 3.6L P0128 Thermostat rationality || Dodge overheating",
+      "channel": "RB The Mechanic",
+      "views": 128650
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 121550,
+     "n": 1,
+     "best": {
+      "id": "WFzSCWAw3Ac",
+      "title": "2014 - 2023 Dodge Charger - How To Reset Oil Life To 100% Clear Oil Change Required Light",
+      "channel": "PYR Automotive ",
+      "views": 121550
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "JP5kjKawKts",
+     "title": "70k Mile 2019 Dodge Charger Scat Pack Update!!! How Reliable is a Scat Pack After 70k Miles???",
+     "channel": "Slip",
+     "views": 308427
+    },
+    {
+     "id": "ssRWEMuerZs",
+     "title": "The Ultimate Dodge Charger Buying Guide - 2015-2017 All Models - Should You Buy?",
+     "channel": "Marspeed",
+     "views": 299049
+    },
+    {
+     "id": "x9I_Rl8rwMw",
+     "title": "Should You Buy A 2011-2014 Dodge Charger? – Pros/Cons, Models, Problem Areas, & More!",
+     "channel": "Marspeed",
+     "views": 229123
     }
    ],
    "costs": null
