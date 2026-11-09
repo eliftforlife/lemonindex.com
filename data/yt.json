@@ -19591,7 +19591,21 @@
      "views": 1734650
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 36590,
+     "lo": 32000.0,
+     "hi": 48000.0,
+     "n": 19,
+     "videos": 16,
+     "id": "8IckaCzc2Uc",
+     "t": 75,
+     "title": "2021 Kia Sorento Turbo vs 2021 Mazda CX 5 Turbo, comparable? Let me explain."
+    },
+    "items": []
+   }
   }
  ],
  "subaru-outback": [
@@ -24167,7 +24181,37 @@
      "views": 114348
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": {
+     "median": 1800,
+     "lo": 1300.0,
+     "hi": 2800.0,
+     "n": 3,
+     "videos": 3,
+     "id": "FylTVcK2j-8",
+     "t": 5,
+     "title": "$1800 2000 Ford Expedition Review and Test Drive",
+     "private": 0,
+     "dealer": 0
+    },
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 200,
+       "lo": 100.0,
+       "hi": 300.0,
+       "n": 3,
+       "videos": 3,
+       "id": "q1R7uzyA0GQ",
+       "t": 169,
+       "title": "DPFE EGR Sensor for Ford Expedition - 2001 - 2002 - 2003 - 2004 , P0401 Code"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
