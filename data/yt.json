@@ -8243,7 +8243,85 @@
      "views": 190052
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": {
+     "median": 1000,
+     "lo": 1000.0,
+     "hi": 5000.0,
+     "n": 3,
+     "videos": 3,
+     "id": "1thXDSope_A",
+     "t": 69,
+     "title": "1996 Toyota Tacoma Sleeper Walk Around",
+     "private": 0,
+     "dealer": 0
+    },
+    "used": {
+     "median": 9500,
+     "lo": 9000.0,
+     "hi": 10000.0,
+     "n": 4,
+     "videos": 3,
+     "id": "zPaqD7K8IEA",
+     "t": 610,
+     "title": "1st Generation Toyota Tacoma | Review and 0-60"
+    },
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 575,
+       "lo": 300.0,
+       "hi": 1911.7,
+       "n": 36,
+       "videos": 15,
+       "id": "n9yF_9XINyU",
+       "t": 700,
+       "title": "Is it really worth fixing this '02 Toyota Tacoma for $4K? CAR WIZARD shares a mechanic's view"
+      }
+     ],
+     [
+      "Oil leak repair",
+      {
+       "median": 72,
+       "lo": 44.0,
+       "hi": 2000.0,
+       "n": 12,
+       "videos": 4,
+       "id": "yizfFPN820U",
+       "t": 750,
+       "title": "2000$ Toyota Tacoma?... Was this the score of the year???"
+      }
+     ],
+     [
+      "Water pump / cooling",
+      {
+       "median": 2000,
+       "lo": 1800.0,
+       "hi": 2800.0,
+       "n": 3,
+       "videos": 2,
+       "id": "yizfFPN820U",
+       "t": 670,
+       "title": "2000$ Toyota Tacoma?... Was this the score of the year???"
+      }
+     ],
+     [
+      "Steering & suspension",
+      {
+       "median": 247,
+       "lo": 233.0,
+       "hi": 261.0,
+       "n": 2,
+       "videos": 2,
+       "id": "yizfFPN820U",
+       "t": 766,
+       "title": "2000$ Toyota Tacoma?... Was this the score of the year???"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -8375,7 +8453,57 @@
      "views": 140592
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 13000,
+     "lo": 10000.0,
+     "hi": 16000.0,
+     "n": 4,
+     "videos": 3,
+     "id": "eKcTe7feQ5M",
+     "t": 1096,
+     "title": "Overheating '13 Toyota Tacoma. Last shop want to replace something over the top? CAR WIZARD explains"
+    },
+    "msrp": {
+     "median": 26845,
+     "lo": 22300.0,
+     "hi": 30000.0,
+     "n": 5,
+     "videos": 5,
+     "id": "XbqnSZBvBeA",
+     "t": 471,
+     "title": "2015 Chevy Colorado vs Toyota Tacoma vs Nissan Frontier Matchup Review"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 800,
+       "lo": 350.0,
+       "hi": 2000.0,
+       "n": 21,
+       "videos": 5,
+       "id": "IOX3xORJsxg",
+       "t": 632,
+       "title": "We Tested 1st Gen, 2nd Gen & 3rd Gen Toyota Tacoma's After 200,000 Miles — A Clear Winner"
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 275,
+       "lo": 160.0,
+       "hi": 1800.0,
+       "n": 7,
+       "videos": 3,
+       "id": "dzFNcwhiSzI",
+       "t": 98,
+       "title": "How I Built My Dream Tacoma on a Budget! TRD Off Road 2nd Gen"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -8465,7 +8593,96 @@
      "views": 132219
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 38000,
+     "lo": 37000.0,
+     "hi": 65000.0,
+     "n": 9,
+     "videos": 9,
+     "id": "cQIGS503C3M",
+     "t": 1452,
+     "title": "Is the 2024 Toyota Tacoma TRD Pre Runner a new midsize truck WORTH the PRICE?"
+    },
+    "msrp": {
+     "median": 52998,
+     "lo": 39500.0,
+     "hi": 63000.0,
+     "n": 46,
+     "videos": 37,
+     "id": "6Utfqen_pCY",
+     "t": 1013,
+     "title": "2024 Toyota Tacoma Trailhunter Review: The One You Really Want"
+    },
+    "items": [
+     [
+      "Tires",
+      {
+       "median": 1550,
+       "lo": 585.0,
+       "hi": 3500.0,
+       "n": 10,
+       "videos": 8,
+       "id": "GCXE29yX_xI",
+       "t": 69,
+       "title": "The Ultimate 4th Gen Tacoma Builld?"
+      }
+     ],
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 1412,
+       "lo": 1325.0,
+       "hi": 3400.0,
+       "n": 8,
+       "videos": 6,
+       "id": "BymBlE_cvvw",
+       "t": 414,
+       "title": "2025 Tacoma Trailhunter vs TRD Off-Road Reviewed"
+      }
+     ],
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 600,
+       "lo": 100.0,
+       "hi": 1000.0,
+       "n": 6,
+       "videos": 5,
+       "id": "4mqlfjxK4mg",
+       "t": 260,
+       "title": "2025 Toyota Tacoma TRD Off-Road Gets a Major Upgrade"
+      }
+     ],
+     [
+      "Insurance",
+      {
+       "median": 1548,
+       "lo": 900.0,
+       "hi": 2196.0,
+       "n": 2,
+       "videos": 2,
+       "id": "1L6E2iGRxwY",
+       "t": 441,
+       "title": "Sooo let’s talk about the new 2024 Tacoma’s Price (and what I paid might shock you)"
+      }
+     ],
+     [
+      "Yearly cost to own",
+      {
+       "median": 478,
+       "lo": 478.0,
+       "hi": 478.0,
+       "n": 2,
+       "videos": 2,
+       "id": "vYIA6JGWnoo",
+       "t": 443,
+       "title": "Toyota Tacoma SR vs SR5 2024 | Which One Is A Better Value?"
+      }
+     ]
+    ]
+   }
   }
  ],
  "model:toyota-rav4": [
