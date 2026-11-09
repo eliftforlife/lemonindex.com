@@ -12920,7 +12920,26 @@
      "views": 5763
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 50,
+       "lo": 40.0,
+       "hi": 150.0,
+       "n": 7,
+       "videos": 6,
+       "id": "c22sHI5r1FI",
+       "t": 538,
+       "title": "2004 Hyundai Elantra transmission solenoid fix.....diagnosis"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -13045,7 +13064,39 @@
      "views": 16445
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 370,
+       "lo": 139.0,
+       "hi": 600.0,
+       "n": 4,
+       "videos": 4,
+       "id": "FNc8cPxtOtI",
+       "t": 24,
+       "title": "2010 Hyundai Elantra GL Presentation # 161221838A S"
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 812,
+       "lo": 625.0,
+       "hi": 1000.0,
+       "n": 2,
+       "videos": 2,
+       "id": "sUZ_hok9MuY",
+       "t": 633,
+       "title": "2010 Hyundai Elantra Review After One Year"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -13172,7 +13223,21 @@
      "views": 711590
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 20325,
+     "lo": 17200.0,
+     "hi": 21700.0,
+     "n": 10,
+     "videos": 7,
+     "id": "Jbm_RtutVaY",
+     "t": 68,
+     "title": "2012 Hyundai Elantra Limited HD Video Review"
+    },
+    "items": []
+   }
   },
   {
    "years": [
@@ -13254,7 +13319,44 @@
      "views": 48091
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 34000,
+     "lo": 26000.0,
+     "hi": 36000.0,
+     "n": 7,
+     "videos": 7,
+     "id": "KqfIVff0oD0",
+     "t": 890,
+     "title": "3 WORST And 7 BEST Things About The 2024 Hyundai Elantra N"
+    },
+    "msrp": {
+     "median": 27000,
+     "lo": 25000.0,
+     "hi": 33700.0,
+     "n": 25,
+     "videos": 21,
+     "id": "EtvdKqL3WWM",
+     "t": 1837,
+     "title": "The 2024 Hyundai Elantra! - Preferred with Tech Package (In-Depth Review)"
+    },
+    "items": [
+     [
+      "Transmission",
+      {
+       "median": 1500,
+       "lo": 1500.0,
+       "hi": 1500.0,
+       "n": 4,
+       "videos": 4,
+       "id": "HHOW2FCZeII",
+       "t": 536,
+       "title": "The 2023 Hyundai Elantra N DCT is Always Ready for Playtime (POV Drive Review)"
+      }
+     ]
+    ]
+   }
   }
  ],
  "ford-fusion": [
@@ -20280,6 +20382,259 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2009,
+    2010,
+    2011,
+    2012,
+    2013
+   ],
+   "gen": "2009–2013 Honda Fit",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 13602632,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 513812,
+     "n": 3,
+     "best": {
+      "id": "vunL-K-VGIw",
+      "title": "2012 Honda Fit - Oil Life Light Reset - How to",
+      "channel": "MyLameAnimations",
+      "views": 404046
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 421730,
+     "n": 3,
+     "best": {
+      "id": "QbK792gFl6E",
+      "title": "How to replace Spark Plugs on Honda Fit or Jazz 2009-2013 (Fix P0300, P0301, P0302, P0303, P0304)",
+      "channel": "Scooter 911",
+      "views": 293232
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 421038,
+     "n": 3,
+     "best": {
+      "id": "SveJI1B37bY",
+      "title": "[Tutorial] 2009 - 2013 Honda Fit Stock Radio Removal",
+      "channel": "Diycarmodz",
+      "views": 291773
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 242166,
+     "n": 5,
+     "best": {
+      "id": "-sPQHF1GJho",
+      "title": "How to Replace Front Strut 2009-2013 Honda Fit",
+      "channel": "TRQ",
+      "views": 86492
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 172320,
+     "n": 2,
+     "best": {
+      "id": "l05QU2VTA54",
+      "title": "How to Replace Rear Brakes 2009-2013 Honda Fit",
+      "channel": "TRQ",
+      "views": 114722
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 163854,
+     "n": 4,
+     "best": {
+      "id": "2Ds0-jwm7h0",
+      "title": "DIY: 2012 Honda Fit Sport Oil Change",
+      "channel": "Diycarmodz",
+      "views": 100829
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 140747,
+     "n": 3,
+     "best": {
+      "id": "qDb7iXPsZsU",
+      "title": "How to Replace Blower Motor 2009-2014 Honda Fit",
+      "channel": "TRQ",
+      "views": 68515
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 103460,
+     "n": 2,
+     "best": {
+      "id": "URFI-lVaSdk",
+      "title": "DIY Guide: Changing Transmission Fluid in a 2013 Honda Fit",
+      "channel": "Mark D. Hall",
+      "views": 67232
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "lYCG0WzBFc8",
+     "title": "Top 5 Problems Honda Fit Hatchback 2nd Generation 2009-13",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 392880
+    },
+    {
+     "id": "hCWXX__Kvrg",
+     "title": "Honda Fit 2nd Gen 2009 to 2013 Frequent and common problems, defects, issues, recalls and complaints",
+     "channel": "HOWSTUFFINMYCARWORKS",
+     "views": 4170
+    },
+    {
+     "id": "nGey312c-qc",
+     "title": "2011 Honda Fit Review - Kelley Blue Book",
+     "channel": "Kelley Blue Book",
+     "views": 320437
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ],
+   "gen": "2015–2020 Honda Fit",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 22924462,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 173005,
+     "n": 4,
+     "best": {
+      "id": "ntxkquV1Ek0",
+      "title": "(2015-2020) Honda Fit / Jazz - GK5 - Interior Lighting Fuse Location & Replacement - Troubleshooting",
+      "channel": "HondaFit4Adventure",
+      "views": 80470
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 162503,
+     "n": 2,
+     "best": {
+      "id": "-YTrKrG8p-o",
+      "title": "2015 - 2019 HONDA FIT/JAZZ - GK5 - How To Open A Stuck Rear Door / Trunk Hatch #HondaFit4Adventure",
+      "channel": "HondaFit4Adventure",
+      "views": 112682
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 130377,
+     "n": 1,
+     "best": {
+      "id": "_QQ9kIhpP94",
+      "title": "How to Change Honda Fit Oil + Filter ✅ (2015 - 2020)",
+      "channel": "RDMotoring",
+      "views": 130377
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 129659,
+     "n": 3,
+     "best": {
+      "id": "zQsFjwaPHj0",
+      "title": "Reset the Tire Pressure Monitor Light in the 2017 Honda Fit | Fit Quick Tips #2",
+      "channel": "CarsForNoobs",
+      "views": 73273
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 69931,
+     "n": 2,
+     "best": {
+      "id": "3k0owQXUY6c",
+      "title": "2019 Honda fit CVT transmission fluid change.",
+      "channel": "The Offroading Mechanic",
+      "views": 40487
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 69709,
+     "n": 1,
+     "best": {
+      "id": "bYSJoVMfZXc",
+      "title": "How to fix Honda Fit start engine issue (2015)/ immobilizer anti-theft system failure",
+      "channel": "Father & Son Handy Skills",
+      "views": 69709
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 51863,
+     "n": 2,
+     "best": {
+      "id": "nXu34oB0zUI",
+      "title": "timing chain tensioner cover￼ OIL LEAK 2015-2020 honda fit w0133-2068125",
+      "channel": "Live Free",
+      "views": 35157
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 26309,
+     "n": 1,
+     "best": {
+      "id": "ClaCsXqyllQ",
+      "title": "2016 Honda Fit Spark Plugs Replacement",
+      "channel": "NoneMechanic101",
+      "views": 26309
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "OoC1lhgIKis",
+     "title": "Honda Fit aka Honda Jazz 3rd gen 2015 to 2020 Frequent problems, defects, recalls and complaints",
+     "channel": "HOWSTUFFINMYCARWORKS",
+     "views": 20353
+    },
+    {
+     "id": "_9cL56kfPak",
+     "title": "5 Most Common Problems of the Honda Fit 2015 - 2020",
+     "channel": "Rondon Fuxe Box",
+     "views": 14103
+    },
+    {
+     "id": "ZJ_eIDFQ3ko",
+     "title": "2018 Honda Fit Sport Review - Back to Basics",
+     "channel": "TheStraightPipes",
+     "views": 823749
+    }
+   ],
+   "costs": null
   }
  ],
  "chevrolet-camaro": [
@@ -25460,6 +25815,138 @@
      "title": "BMW X1 vs Mercedes GLA vs Audi Q3 2017 SUV review | Mat Watson Reviews",
      "channel": "carwow",
      "views": 3056151
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "audi-q5": [
+  {
+   "years": [
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017
+   ],
+   "gen": "2009–2017 Audi Q5",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 26337238,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 819679,
+     "n": 3,
+     "best": {
+      "id": "vN6jrZjK4XQ",
+      "title": "Audi Q5, SQ5 (2009 - present) - New Battery Install",
+      "channel": "The Battery Shop",
+      "views": 497714
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 369040,
+     "n": 4,
+     "best": {
+      "id": "KTbUDlpzyo4",
+      "title": "Audi Q5 Front Brake Rotor And Brake Pad Replacement DIY (Audi MLB Q5/SQ5 2013-2017)",
+      "channel": "FCP Euro",
+      "views": 208117
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 330067,
+     "n": 4,
+     "best": {
+      "id": "1Ju2hm7Nqkc",
+      "title": "How to check oil level for 2014 - 2019 Audi Q5",
+      "channel": "Coombs Auto",
+      "views": 119369
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 300565,
+     "n": 2,
+     "best": {
+      "id": "bi1k-3XNAxc",
+      "title": "Audi Q5 2009-2018 Bumper Tail Light Housing Removal",
+      "channel": "CarCareKiosk",
+      "views": 209268
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 257178,
+     "n": 4,
+     "best": {
+      "id": "QlLTJ8yHABk",
+      "title": "Audi Q5 Tdi 2014 CGLC - EGR & intake clean Part1",
+      "channel": "EMD Porsche Specialist Caringbah Sydney",
+      "views": 109180
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 153361,
+     "n": 3,
+     "best": {
+      "id": "SrYQ3Xe858c",
+      "title": "2009, 2010, 2011, 2012 B8 Audi A4, A5, Q5 2.0T [MISFIRE FIX]",
+      "channel": "Islam Elfarra",
+      "views": 80296
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 72319,
+     "n": 1,
+     "best": {
+      "id": "VHfgXq0_BwY",
+      "title": "2011-2023 AUDI Q5 2.0T QUATTRO - Worn Spark Plugs & cracked Coil Packs",
+      "channel": "Pro Tips Plus",
+      "views": 72319
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 61258,
+     "n": 1,
+     "best": {
+      "id": "U9ctvKrWeTo",
+      "title": "2011-2017 AUDI Q5, (2.0 L TFSI I4) - Drain Contaminated Transmission Drain Fluid and Mini Flush",
+      "channel": "Pro Tips Plus",
+      "views": 61258
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "wRdW_gr0-0A",
+     "title": "Should You Buy an AUDI SQ5? (Test Drive & Review 2014 3.0 V6 TDI)",
+     "channel": "High Peak Autos",
+     "views": 251999
+    },
+    {
+     "id": "Cy54qsTjYHo",
+     "title": "Should You Buy an AUDI Q5? (Test Drive & Review 2010 2.0TDI Quattro)",
+     "channel": "High Peak Autos",
+     "views": 207005
+    },
+    {
+     "id": "qH786-1FG6M",
+     "title": "Audi Q5 Buyer's Guide - Engine, Transmission, Interior, & Trim Options (2009-2017 Audi Q5/SQ5)",
+     "channel": "FCP Euro",
+     "views": 142079
     }
    ],
    "costs": null
