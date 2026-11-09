@@ -27357,6 +27357,111 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2020–2025 Kia Soul",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 11813204,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 251016,
+     "n": 5,
+     "best": {
+      "id": "RzSxmR3vLAQ",
+      "title": "Kia Soul Key Fob Battery Replacement (2019 - 2021)",
+      "channel": "FobBattery",
+      "views": 69086
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 201526,
+     "n": 3,
+     "best": {
+      "id": "b7cQw24ezJc",
+      "title": "How To Reset The Oil Life On A 2020 - 2021 Kia Soul - Oil Change DIY",
+      "channel": "PYR Automotive ",
+      "views": 145625
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 65250,
+     "n": 2,
+     "best": {
+      "id": "Hrfl74BXNoA",
+      "title": "How To Change 2020 - 2021 Kia Soul Cabin Air filter - Replace Remove Replacement A/C Filter Location",
+      "channel": "PYR Automotive ",
+      "views": 50422
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 51069,
+     "n": 2,
+     "best": {
+      "id": "7JqUbeYwNiY",
+      "title": "2019 - 2024 KIA SOUL - BAD transmission fluid - Drain, Fill & Mini Flush",
+      "channel": "Pro Tips Plus",
+      "views": 40220
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 38061,
+     "n": 2,
+     "best": {
+      "id": "8SAtVakcrVg",
+      "title": "2019-2025 KIA SOUL, Bad Crank Position Sensor",
+      "channel": "Pro Tips Plus",
+      "views": 22911
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 25649,
+     "n": 2,
+     "best": {
+      "id": "RtFclqTLhDg",
+      "title": "How to Replace Rear Rotors & Brake Pads on a 2020+ Kia Soul (3rd Gen)",
+      "channel": "Junkyard Junkie",
+      "views": 13057
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "6J7EKw86T8Q",
+     "title": "2020-2025 Kia Soul - Top 6 Common Problems",
+     "channel": "Carnivauto",
+     "views": 29047
+    },
+    {
+     "id": "7vlkSIvS9mY",
+     "title": "2022 Kia Soul Reliability and Problems - Watch this before buy!",
+     "channel": "car PROblems",
+     "views": 13813
+    },
+    {
+     "id": "Mzx-M5q1SdQ",
+     "title": "2020 Kia Soul ENGINE PROBLEMS !",
+     "channel": "Mr blues with the Clues",
+     "views": 12183
+    }
+   ],
+   "costs": null
   }
  ],
  "kia-telluride": [
@@ -36142,7 +36247,74 @@
      "views": 385729
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 38250,
+     "lo": 35500.0,
+     "hi": 40000.0,
+     "n": 8,
+     "videos": 6,
+     "id": "lF27erOCVd0",
+     "t": 846,
+     "title": "2014 Audi A4 – Redline: Review"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 386,
+       "lo": 200.0,
+       "hi": 1200.0,
+       "n": 21,
+       "videos": 10,
+       "id": "1WB0pv3QvF4",
+       "t": 79,
+       "title": "Audi A4 2013 B8.5 High Mileage Ownership Costs!"
+      }
+     ],
+     [
+      "Water pump / cooling",
+      {
+       "median": 450,
+       "lo": 400.0,
+       "hi": 500.0,
+       "n": 4,
+       "videos": 3,
+       "id": "3g-z1yg8w1U",
+       "t": 343,
+       "title": "Should I Buy? B8/B8.5 (2010-2016) Audi S4 // The Reliable Audi"
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 309,
+       "lo": 130.0,
+       "hi": 500.0,
+       "n": 3,
+       "videos": 3,
+       "id": "1WB0pv3QvF4",
+       "t": 83,
+       "title": "Audi A4 2013 B8.5 High Mileage Ownership Costs!"
+      }
+     ],
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 340,
+       "lo": 180.0,
+       "hi": 500.0,
+       "n": 2,
+       "videos": 2,
+       "id": "k4KTXJMAGBI",
+       "t": 623,
+       "title": "Top affordable mods for your Audi S4 (B8/B8.5)"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -36486,7 +36658,48 @@
      "views": 1971474
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 53245,
+     "lo": 48900.0,
+     "hi": 60000.0,
+     "n": 24,
+     "videos": 20,
+     "id": "28KrxKVRnaI",
+     "t": 392,
+     "title": "2018 Audi Q5 – Review and Road Test"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 725,
+       "lo": 500.0,
+       "hi": 950.0,
+       "n": 4,
+       "videos": 4,
+       "id": "rDhEr2n7AaY",
+       "t": 445,
+       "title": "2019 Audi SQ5 – The Modern Day Sport Sedan?"
+      }
+     ],
+     [
+      "Brakes",
+      {
+       "median": 1150,
+       "lo": 600.0,
+       "hi": 1700.0,
+       "n": 2,
+       "videos": 2,
+       "id": "cAOQhAc9dSU",
+       "t": 1164,
+       "title": "How to Change Brake Pads on a 2018+ Audi Q5!! B9 Audi Q5 Brake Pads"
+      }
+     ]
+    ]
+   }
   }
  ],
  "audi-q3": [
