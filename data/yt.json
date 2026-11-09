@@ -16425,7 +16425,35 @@
      "views": 85336
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 2500,
+     "lo": 2500.0,
+     "hi": 2500.0,
+     "n": 4,
+     "videos": 4,
+     "id": "Yc4Y1JUOvx0",
+     "t": 91,
+     "title": "Just arrived! 2002 Hyundai Sonata, runs great, only $2500"
+    },
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 1350,
+       "lo": 200.0,
+       "hi": 2500.0,
+       "n": 4,
+       "videos": 4,
+       "id": "kygMN5spqbw",
+       "t": 12,
+       "title": "2003 Hyundai Sonata Purge Valve"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -16551,7 +16579,35 @@
      "views": 237798
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 25500,
+     "lo": 25000.0,
+     "hi": 26000.0,
+     "n": 4,
+     "videos": 4,
+     "id": "C89prjqdKaI",
+     "t": 259,
+     "title": "2008 Hyundai Sonata Review - Kelley Blue Book"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 150,
+       "lo": 100.0,
+       "hi": 200.0,
+       "n": 2,
+       "videos": 2,
+       "id": "fZVNL5CCCVI",
+       "t": 319,
+       "title": "2009 Hyundai Sonata \"Fuel tank air filter\" causing p0449, hard to fill with gas"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -16676,7 +16732,48 @@
      "views": 50845
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 20500,
+     "lo": 20000.0,
+     "hi": 21000.0,
+     "n": 4,
+     "videos": 4,
+     "id": "54ImzuqSbec",
+     "t": 312,
+     "title": "MotorWeek Road Test: 2011  Hyundai Sonata"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 620,
+       "lo": 350.0,
+       "hi": 1500.0,
+       "n": 15,
+       "videos": 3,
+       "id": "w5Pit1wEDBU",
+       "t": 30,
+       "title": "Hyundai Sonata Common Repairs & Repair Costs (2011–2019)"
+      }
+     ],
+     [
+      "Steering & suspension",
+      {
+       "median": 350,
+       "lo": 200.0,
+       "hi": 1200.0,
+       "n": 6,
+       "videos": 3,
+       "id": "8S1X7USbcxY",
+       "t": 132,
+       "title": "Review and walk around of a 2011 Hyundai Sonata GLS"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -16726,7 +16823,30 @@
      "views": 1639510
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 16000,
+     "lo": 9000.0,
+     "hi": 35000.0,
+     "n": 3,
+     "videos": 3,
+     "id": "jP32j31E5xk",
+     "t": 32,
+     "title": "2020 Hyundai Sonata 4k POV Review | Worth Buying?"
+    },
+    "msrp": {
+     "median": 33350,
+     "lo": 27500.0,
+     "hi": 35400.0,
+     "n": 31,
+     "videos": 26,
+     "id": "RLf1CQg0Zpw",
+     "t": 78,
+     "title": "The 2020 Hyundai Sonata Is a Shockingly Quirky Midsize Sedan"
+    },
+    "items": []
+   }
   }
  ],
  "chevrolet-malibu": [
@@ -17358,7 +17478,48 @@
      "views": 17811
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 27928,
+     "lo": 26000.0,
+     "hi": 30000.0,
+     "n": 6,
+     "videos": 4,
+     "id": "p6vsZIybF6A",
+     "t": 335,
+     "title": "2015 Chevrolet Malibu Start Up and Review 2.0 L Turbo 4-Cylinder"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 462,
+       "lo": 250.0,
+       "hi": 1100.0,
+       "n": 24,
+       "videos": 7,
+       "id": "V8A6DWLuP14",
+       "t": 39,
+       "title": "Chevy Malibu Common Repairs & Average Costs (2013–2019)"
+      }
+     ],
+     [
+      "Battery",
+      {
+       "median": 250,
+       "lo": 200.0,
+       "hi": 400.0,
+       "n": 3,
+       "videos": 2,
+       "id": "pewDkykApxU",
+       "t": 209,
+       "title": "2015 CHEVY MALIBU 2.5 Liter Eco Tech REPAIRS"
+      }
+     ]
+    ]
+   }
   }
  ],
  "honda-odyssey": [
@@ -20296,6 +20457,133 @@
      "title": "How Reliable is a 230,000 Mile Toyota Highlander? | Budget Car Camping | 1st Gen Highlander",
      "channel": "The Fraziers",
      "views": 122509
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013
+   ],
+   "gen": "2008–2013 Toyota Highlander",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 13716771,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 549131,
+     "n": 4,
+     "best": {
+      "id": "kaeQX7wQ4Ag",
+      "title": "2008 to 2013 Toyota Highlander Maintenance light reset 2nd gen highlander maint reset",
+      "channel": "ThePracticalMechanic",
+      "views": 213499
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 519708,
+     "n": 4,
+     "best": {
+      "id": "Qjf9QDGsAyc",
+      "title": "2008 TOYOTA HIGHLANDER OIL LIFE RESET",
+      "channel": "Jimthecarguy",
+      "views": 237458
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 339180,
+     "n": 6,
+     "best": {
+      "id": "ZOSKsGUWKjo",
+      "title": "Toyota highlander AC dont work 2011 to 2019 Ac Fuse and Relay Quick AC Fix",
+      "channel": "RB The Mechanic",
+      "views": 132147
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 182022,
+     "n": 6,
+     "best": {
+      "id": "FkhgSpiQNpU",
+      "title": "2008-2013 Toyota Highlander AC Amplifier Location & Removal",
+      "channel": "Karrs Kars",
+      "views": 35640
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 150542,
+     "n": 3,
+     "best": {
+      "id": "f__0p9LlfBA",
+      "title": "2008-2013 Toyota Highlander Front Strut Replacement",
+      "channel": "Valley Mobile Automotive",
+      "views": 65975
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 146221,
+     "n": 3,
+     "best": {
+      "id": "htgdrUc9KHY",
+      "title": "2008-2013 Toyota Highlander front brake pad replacement",
+      "channel": "JoeTheAutoGuy",
+      "views": 106384
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 123525,
+     "n": 3,
+     "best": {
+      "id": "MHxZVPoIrxY",
+      "title": "2008 Toyota Highlander 3.5 Water Pump Replacement.",
+      "channel": "Phillip Bailey",
+      "views": 55201
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 76827,
+     "n": 2,
+     "best": {
+      "id": "SaucwVAftMU",
+      "title": "2008 Toyota Highlander Intermediate Steering Shaft Replacement",
+      "channel": "JRESHOW",
+      "views": 46478
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "UZWCYGDYo-I",
+     "title": "Top 5 Problems Toyota Highlander SUV 2nd Generation 2008-13",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 398520
+    },
+    {
+     "id": "K-brL8rWsKk",
+     "title": "Fixing Most Common Problems Rear Wiper Doesn't Work Toyota Highlander 2008-2013",
+     "channel": "Multi Channel DIY",
+     "views": 31864
+    },
+    {
+     "id": "67Y-LfEizcs",
+     "title": "2008 Toyota Highlander hybrid signs of bad battery also overworking other modules major problems.1-1",
+     "channel": "TS Mobile Mechanic",
+     "views": 22135
     }
    ],
    "costs": null
@@ -31087,6 +31375,133 @@
      "title": "Mercedes Ml w163 central locking problems resolved",
      "channel": "AUTOFS Solutions",
      "views": 12125
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011
+   ],
+   "gen": "2006–2011 Mercedes-Benz M/GLE",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 18408127,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 1146271,
+     "n": 10,
+     "best": {
+      "id": "luqpT1d08Ew",
+      "title": "Mercedes-Benz ML350 (2006-2015) (and others listed below) - New Battery Install",
+      "channel": "The Battery Shop",
+      "views": 598497
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 395283,
+     "n": 6,
+     "best": {
+      "id": "HwhJVV9ri_E",
+      "title": "Quick repair airmatic suspension on my mercedes ML W164",
+      "channel": "MYMERCREPAIRS",
+      "views": 198477
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 385168,
+     "n": 2,
+     "best": {
+      "id": "MUIIHtSSwa4",
+      "title": "SOLVED - Mercedes Stuck in Park can't Shift Gear ML500 | Mercedes W164 Fix Shifter Stuck",
+      "channel": "Easy Steps",
+      "views": 340925
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 327954,
+     "n": 1,
+     "best": {
+      "id": "WZyxWkW4EBA",
+      "title": "How to Replace Cabin Air Filter 2009 Mercedes-Benz ML350 | AQ1180C",
+      "channel": "Filterheads",
+      "views": 327954
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 325112,
+     "n": 2,
+     "best": {
+      "id": "fpB-u4SwHQc",
+      "title": "2011-2019 Mercedes-Benz GLE 350 - How to Check & Add Engine Coolant (Antifreeze)",
+      "channel": "YOUCANIC",
+      "views": 252396
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 257396,
+     "n": 2,
+     "best": {
+      "id": "MDA0k_xUi14",
+      "title": "Mercedes ML 2006 rear SAM repair. No tail lights, no remote etc... Fault finding and repair.",
+      "channel": "LM Auto Repairs",
+      "views": 242488
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 213414,
+     "n": 1,
+     "best": {
+      "id": "mSpdI1AXlsc",
+      "title": "Mercedes Idler Tensioner Pulley Replacement | DIY | iRepair Autos | W164",
+      "channel": "iRepair Autos",
+      "views": 213414
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 149654,
+     "n": 2,
+     "best": {
+      "id": "-ulOLLzY1ks",
+      "title": "Mercedes ML W164 rear differential Diagnosing noise and clearing replace bearings",
+      "channel": "MYMERCREPAIRS",
+      "views": 132526
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "Nosd5t4Xj10",
+     "title": "Mercedes M-Class (ML/GLE) SUV (2011-2019) review - Carbuyer / Mat Watson",
+     "channel": "Carbuyer",
+     "views": 1750797
+    },
+    {
+     "id": "6GD5FXGdhJE",
+     "title": "😲 ALL PROBLEMS OF Mercedes ML (W164). How not to go broke with its maintenance?",
+     "channel": "АвтоСтронг",
+     "views": 169890
+    },
+    {
+     "id": "XSq_jtRY6ww",
+     "title": "🤞 🇩🇪 Used Mercedes Benz GL Reliability | X164 / ML W164 Common Faults Issues and Problems",
+     "channel": "MechAdventures",
+     "views": 107971
     }
    ],
    "costs": null
