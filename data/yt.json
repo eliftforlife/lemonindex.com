@@ -20070,6 +20070,347 @@
    "costs": null
   }
  ],
+ "chevrolet-colorado": [
+  {
+   "years": [
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012
+   ],
+   "gen": "2004–2012 Chevrolet Colorado",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 11450771,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 720999,
+     "n": 9,
+     "best": {
+      "id": "c9TRs_zkiNI",
+      "title": "2007 Chevy Colorado blower fan resistor and wiring harness replacement (also GMC Canyon, Hummer H3)",
+      "channel": "Mike Smith",
+      "views": 362967
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 603541,
+     "n": 3,
+     "best": {
+      "id": "RRPsasrZMZA",
+      "title": "2007 Chevy Colorado won't start, passlock alarm broke. Quick 9 sec. startup without repairs",
+      "channel": "buck wilkins",
+      "views": 440248
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 530602,
+     "n": 6,
+     "best": {
+      "id": "j41oNekZxd0",
+      "title": "Replace your 2008 Chevy Colorado thermostat.",
+      "channel": "Landon Hillyard",
+      "views": 130952
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 484725,
+     "n": 6,
+     "best": {
+      "id": "oPyZqx0q2TQ",
+      "title": "2007 Chevy Colorado - Replacing camshaft position sensors, P0340 & P0341",
+      "channel": "Mike Smith",
+      "views": 241862
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 422339,
+     "n": 5,
+     "best": {
+      "id": "4Q-q_TxK5vE",
+      "title": "Replacing the fuel pump in a 2004-2012 Chevy Colorado or GMC Canyon",
+      "channel": "Adam Davenport",
+      "views": 142724
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 380651,
+     "n": 6,
+     "best": {
+      "id": "3lfTynSQM5I",
+      "title": "2008 chevy colorado LS how fix ur blower fan resistor and harness",
+      "channel": "julian #1automecanic",
+      "views": 126897
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 345498,
+     "n": 5,
+     "best": {
+      "id": "k0jtrOY9lMY",
+      "title": "Chevy Colorado & GMC Canyon Oil Life Reset 2004-2015",
+      "channel": "Backyard Chevy",
+      "views": 214970
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 344091,
+     "n": 3,
+     "best": {
+      "id": "YNF2jzOSG6Q",
+      "title": "How to Replace Transmission Shift Solenoid 2004-2012 Chevrolet Colorado",
+      "channel": "TRQ",
+      "views": 235796
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "G5qrVbfYPl4",
+     "title": "Top 5 Problems Chevy Colorado Truck 1st Generation 2004-2012",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 479689
+    },
+    {
+     "id": "IdOGvMZ_CJ8",
+     "title": "Chevy Colorado and GMC Canyon 2004 to 2012 common problems, issues, defects, recalls and complaints",
+     "channel": "HOWSTUFFINMYCARWORKS",
+     "views": 24226
+    },
+    {
+     "id": "bW4OeMJ_-i0",
+     "title": "2005 Chevy Colorado problems",
+     "channel": "tjmaxxse",
+     "views": 10438
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022
+   ],
+   "gen": "2015–2022 Chevrolet Colorado",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 32955050,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 506831,
+     "n": 4,
+     "best": {
+      "id": "lmRcVkH6mp0",
+      "title": "[HOW TO] Change Engine Oil on a 2015-2022 V6 Chevy Colorado / GMC Canyon (The Best on YT)",
+      "channel": "Fondupot's Garage",
+      "views": 283725
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 399088,
+     "n": 2,
+     "best": {
+      "id": "uT84k7wpVa8",
+      "title": "The Hunt For The Fix - '15 Chevy Colorado No Com With ABS Module",
+      "channel": "South Main Auto LLC",
+      "views": 291895
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 306810,
+     "n": 3,
+     "best": {
+      "id": "iTiCokEYz3o",
+      "title": "Chevrolet Colorado Cabin Air Filter Replacement ( 2015 2016 2017 2018 2019 2020 2021 2022 )",
+      "channel": "Undercar Experts",
+      "views": 168736
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 297502,
+     "n": 3,
+     "best": {
+      "id": "Tq5oWhX9k00",
+      "title": "2019 Chevy Colorado V6 Coolant temperature sensor replacement",
+      "channel": "Josh Kolakoff",
+      "views": 119043
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 249397,
+     "n": 2,
+     "best": {
+      "id": "qwfD-__wPKI",
+      "title": "How to Replace Thermostat 2015-2022 Chevrolet Colorado 3.6L V6",
+      "channel": "TRQ",
+      "views": 211054
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 151000,
+     "n": 2,
+     "best": {
+      "id": "7jUA1bxOlaw",
+      "title": "2015 Chevy Colorado Radio Problem *FIX VIDEO*",
+      "channel": "Neil Rossi",
+      "views": 105813
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 135449,
+     "n": 2,
+     "best": {
+      "id": "eoToaHExYSQ",
+      "title": "Replace Spark Plugs, Coils, & Remove Air Intake Manifold 2015-2022 2nd Gen Chevy Colorado GMC Canyon",
+      "channel": "Wild Frontier Garage",
+      "views": 80955
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 53111,
+     "n": 1,
+     "best": {
+      "id": "Y2whne9cWp8",
+      "title": "2015+ Chevy Colorado | 2.5\" Front Suspension Lift Kit Installation",
+      "channel": "Supreme Suspensions",
+      "views": 53111
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "7TBt-IQrtS8",
+     "title": "2017 Chevy Colorado & GMC Canyon Buyer Guide: Helping You Pick the Right Mid-Sized GM Truck",
+     "channel": "TFLnow",
+     "views": 244508
+    },
+    {
+     "id": "UNsTi9Q-uAk",
+     "title": "2016 Chevy Colorado Duramax Diesel PROBLEMS UPDATE!",
+     "channel": "The Keller fam",
+     "views": 178628
+    },
+    {
+     "id": "kWe4T2uqXJw",
+     "title": "2016 Chevy Colorado Duramax Diesel PROBLEMS!!",
+     "channel": "The Keller fam",
+     "views": 142798
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2023–2025 Chevrolet Colorado",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 15537726,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 67946,
+     "n": 1,
+     "best": {
+      "id": "NQu30h5im4g",
+      "title": "Chevy Colorado / GMC Canyon Oil Change FULL SERVICE (2023 and UP)",
+      "channel": "Jason Explains Things",
+      "views": 67946
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 40917,
+     "n": 1,
+     "best": {
+      "id": "cAUcb8ffmbw",
+      "title": "2023 Chevy Colorado: Did GM Fix The Transmission?",
+      "channel": "GM Authority",
+      "views": 40917
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 35807,
+     "n": 1,
+     "best": {
+      "id": "1yqRR1xKJas",
+      "title": "2023 Chevy Colorado Infotainment Stereo Radio Fix",
+      "channel": "Cameron Brann",
+      "views": 35807
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 34755,
+     "n": 1,
+     "best": {
+      "id": "NQ1RtMsx55g",
+      "title": "Leaked! 2024 Chevy Colorado Changes Are Rather Shocking",
+      "channel": "Pickup Truck Plus SUV Talk (PUTT)",
+      "views": 34755
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "BFJRfuzPyj0",
+     "title": "2024 Chevy Colorado LT | Should You Buy GMC Canyon Or Chevy Colorado? | Walkaround & Drive (POV)",
+     "channel": "CEALLIFORNIA",
+     "views": 61887
+    },
+    {
+     "id": "9vCn8n-OrN0",
+     "title": "Should You Buy A 2025 GMC Canyon Instead Of The Chevy Colorado?",
+     "channel": "Jason Samko",
+     "views": 51818
+    },
+    {
+     "id": "MA4QGTU20Jw",
+     "title": "2023 Chevy Colorado ZR2 Review: The Coolest Midsize Truck?",
+     "channel": "Doug DeMuro",
+     "views": 291146
+    }
+   ],
+   "costs": null
+  }
+ ],
  "jeep-gladiator": [
   {
    "years": [
