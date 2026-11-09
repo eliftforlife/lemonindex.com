@@ -19487,7 +19487,35 @@
      "views": 218246
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 35500,
+     "lo": 25000.0,
+     "hi": 39900.0,
+     "n": 14,
+     "videos": 10,
+     "id": "0mfMtVBxHDg",
+     "t": 761,
+     "title": "Here's the 2014 Kia Sorento on Everyman Driver"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 182,
+       "lo": 99.0,
+       "hi": 340.0,
+       "n": 8,
+       "videos": 6,
+       "id": "3LMb77q5UNU",
+       "t": 47,
+       "title": "2013 kia sorento side view mirror glass and signal"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -21696,6 +21724,263 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006
+   ],
+   "gen": "2000–2006 Chevrolet Tahoe",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 27425673,
+   "topics": [
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 2434238,
+     "n": 12,
+     "best": {
+      "id": "44X6sZDT4QE",
+      "title": "How I \"fixed\" The AC 2003-2007 GMC Sierra, Chevrolet Silverado, Tahoe, Yukon CJ2 ECC",
+      "channel": "Ghetto Wagon",
+      "views": 837733
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 1659402,
+     "n": 13,
+     "best": {
+      "id": "on98zW00WCE",
+      "title": "How to Clean Throttle Body - 2003-2006 Chevy/GMC 5.3L (Tahoe, Silverado, Yukon, Sierra)",
+      "channel": "MightyMechanic",
+      "views": 405898
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 1452347,
+     "n": 7,
+     "best": {
+      "id": "NXwjRasWbus",
+      "title": "Installing & wiring a Double Din Stereo Head Unit - 2002 Chevy Tahoe",
+      "channel": "Tahoe Steve",
+      "views": 672614
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 1031776,
+     "n": 7,
+     "best": {
+      "id": "G3PHPNYnXds",
+      "title": "2004 Tahoe 5.3 Fuel Filter replacement (100K service part 3) FLEX FUEL VIN Z ONLY!",
+      "channel": "MAY03LT",
+      "views": 407565
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 809833,
+     "n": 7,
+     "best": {
+      "id": "2BMBoozB4T4",
+      "title": "How To Replace Rear Window Regulator 2000-2006 Chevy Tahoe",
+      "channel": "TRQ",
+      "views": 269870
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 749120,
+     "n": 7,
+     "best": {
+      "id": "7tUcsph1UFk",
+      "title": "How to Replace Upper Control Arm 2000-2006 Chevy Tahoe",
+      "channel": "TRQ",
+      "views": 175486
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 709811,
+     "n": 2,
+     "best": {
+      "id": "LSW-HBuLhkc",
+      "title": "Bad ground wire on 2005 Chevy Tahoe Z71. I talk a lot. Skip to 4:30 for the fix.",
+      "channel": "Ivan Garcia (Vanski)",
+      "views": 624109
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 655608,
+     "n": 5,
+     "best": {
+      "id": "kI1d8yVV4XY",
+      "title": "Rear Axle Removal! 1999-2005 Silverado, Sierra, Tahoe, Suburban, Avalanche, & Yukon",
+      "channel": "Dan's Guide to Everything",
+      "views": 320889
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "VlmuiFd7FQo",
+     "title": "Top 5 Problems 2000-06 GMC Yukon Sierra Chevy Suburban Tahoe Silverado Avalanche Cadillac Escalade",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 1821714
+    },
+    {
+     "id": "-E7h1T-0dEk",
+     "title": "Top 5 Problems Chevy Tahoe SUV 1st Gen 1992-2000",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 193647
+    },
+    {
+     "id": "I15DfJBly1c",
+     "title": "2000-2006 Tahoe Yukon Suburban GMT800 Buyer's Guide (Common Problems, Specs, Engines)",
+     "channel": "Useful Vids",
+     "views": 57211
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014
+   ],
+   "gen": "2007–2014 Chevrolet Tahoe",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 24155175,
+   "topics": [
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 2522433,
+     "n": 8,
+     "best": {
+      "id": "44X6sZDT4QE",
+      "title": "How I \"fixed\" The AC 2003-2007 GMC Sierra, Chevrolet Silverado, Tahoe, Yukon CJ2 ECC",
+      "channel": "Ghetto Wagon",
+      "views": 837733
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 1097063,
+     "n": 8,
+     "best": {
+      "id": "JPV4vNiKIU8",
+      "title": "07-14 Tahoe Suburban Yukon Silverado Sierra Escalade GMT900 6L80 6L90 Shift Linkage Bushing Repair",
+      "channel": "10mm404",
+      "views": 294535
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 823429,
+     "n": 7,
+     "best": {
+      "id": "ZMFrzPHZOJQ",
+      "title": "How to Program a Chevrolet Tahoe Key Fob (GMT900) GM Truck",
+      "channel": "Wild Mountain Garage",
+      "views": 271146
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 426102,
+     "n": 3,
+     "best": {
+      "id": "aEfgkxWdBYw",
+      "title": "Thermostat Replacement Yukon, Tahoe, Sierra, Silverado, Escalade GMC, Chevy 2014-2020 P0128",
+      "channel": "Danny Johnson’s Garage",
+      "views": 376076
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 411485,
+     "n": 2,
+     "best": {
+      "id": "qStKIXlXFng",
+      "title": "How To Change Your Fuel Pump On A 2006-2014 Chevy Tahoe Suburban GMC Yukon",
+      "channel": "How to Automotive",
+      "views": 324622
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 403918,
+     "n": 3,
+     "best": {
+      "id": "V1TkzR0GvvM",
+      "title": "How To Change Spark Plugs 2007-2014 Chevy Tahoe/Suburban/Silverado",
+      "channel": "S.O.G",
+      "views": 196671
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 259412,
+     "n": 2,
+     "best": {
+      "id": "UjJKXuakV30",
+      "title": "how to change daytime running light bulbs on a 2009 chevrolet tahoe part1 (EP 19)",
+      "channel": "UncleMarks DIY Automotive Fix it channel",
+      "views": 160229
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 258407,
+     "n": 2,
+     "best": {
+      "id": "7pR1-c2viXQ",
+      "title": "2007-2014 Chevy Tahoe Oil Change",
+      "channel": "S.O.G",
+      "views": 173743
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "Pumq-qFQ3TY",
+     "title": "2007 Chevrolet Tahoe electrical problems caused by air bag computer killing the low speed network.",
+     "channel": "Phillip Bailey",
+     "views": 189721
+    },
+    {
+     "id": "kbSLISo9BNA",
+     "title": "2011 Tahoe Problems - The Most Common Chevy Tahoe Issues",
+     "channel": "car PROblems",
+     "views": 25530
+    },
+    {
+     "id": "kvlTRWLHAuU",
+     "title": "2007 Chevrolet Tahoe Review - Kelley Blue Book",
+     "channel": "Kelley Blue Book",
+     "views": 557158
+    }
+   ],
+   "costs": null
   }
  ],
  "ford-mustang": [
@@ -23499,7 +23784,26 @@
      "views": 10438
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 65,
+       "lo": 50.0,
+       "hi": 150.0,
+       "n": 8,
+       "videos": 7,
+       "id": "EXM0tjDEzEw",
+       "t": 190,
+       "title": "2005 Chevy Colorado Rust-Oleum Roll-on Bed Liner review full video"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -23628,7 +23932,35 @@
      "views": 142798
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 40000,
+     "lo": 35800.0,
+     "hi": 42000.0,
+     "n": 13,
+     "videos": 11,
+     "id": "DvsG1P0n0NE",
+     "t": 351,
+     "title": "2015 Chevy Colorado Z71 Rocky Mountain Muddy & Snowy Off-Road Review"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 500,
+       "lo": 200.0,
+       "hi": 885.0,
+       "n": 3,
+       "videos": 3,
+       "id": "wlmsfdVK5wM",
+       "t": 274,
+       "title": "2.8 Duramax Fuel Filter Replacement- Chevy Colorado/GMC Canyon 2016-2021"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -23708,7 +24040,57 @@
      "views": 291146
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 40000,
+     "lo": 39000.0,
+     "hi": 50000.0,
+     "n": 7,
+     "videos": 7,
+     "id": "c082bBgBYJw",
+     "t": 1096,
+     "title": "The Fastest Midsize Truck // 2023 Chevy Colorado Review"
+    },
+    "msrp": {
+     "median": 39000,
+     "lo": 32000.0,
+     "hi": 49000.0,
+     "n": 40,
+     "videos": 33,
+     "id": "Jg3z_fEvfC8",
+     "t": 1103,
+     "title": "Why Would You Pick the 2023 GMC Canyon Over the Chevy Colorado? I Cover ALL the Differences!"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 560,
+       "lo": 60.0,
+       "hi": 1285.0,
+       "n": 6,
+       "videos": 5,
+       "id": "Jg3z_fEvfC8",
+       "t": 893,
+       "title": "Why Would You Pick the 2023 GMC Canyon Over the Chevy Colorado? I Cover ALL the Differences!"
+      }
+     ],
+     [
+      "Yearly cost to own",
+      {
+       "median": 1138,
+       "lo": 991.0,
+       "hi": 1285.0,
+       "n": 2,
+       "videos": 2,
+       "id": "6ZUbVcZkwM0",
+       "t": 160,
+       "title": "Chevy Colorado ZR2 2024 | Cost To Own | Financial Analysis"
+      }
+     ]
+    ]
+   }
   }
  ],
  "jeep-gladiator": [
@@ -29001,6 +29383,260 @@
      "title": "2018 Kia Rio Review",
      "channel": "AutoGuide.com",
      "views": 415729
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "subaru-impreza": [
+  {
+   "years": [
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007
+   ],
+   "gen": "2002–2007 Subaru Impreza",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 26780892,
+   "topics": [
+    {
+     "name": "Cooling system",
+     "views": 164038,
+     "n": 2,
+     "best": {
+      "id": "bB4iNJk7fBE",
+      "title": "Thermostat Replacement On Subaru Forester, Impreza, Outback, Crosstrek, Legacy 2.0 & 2.5L 2005 & Up",
+      "channel": "MotorCarNut",
+      "views": 122370
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 138262,
+     "n": 3,
+     "best": {
+      "id": "06LO41dqjjw",
+      "title": "Subaru Impreza Radio Removal - 2002, 2003, 2004 - 2.5RS, WRX, STI",
+      "channel": "802 Garage",
+      "views": 48842
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 119891,
+     "n": 1,
+     "best": {
+      "id": "GN6Gj8W8GPI",
+      "title": "How To Diagnose Power Steering Problem 2002-07 Subaru WRX-STi",
+      "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+      "views": 119891
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 68787,
+     "n": 2,
+     "best": {
+      "id": "ZlIpcIE38gY",
+      "title": "subaru impreza turbo 2006 cranks but wont start",
+      "channel": "Marvin Orellana Auto service",
+      "views": 54064
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 49728,
+     "n": 1,
+     "best": {
+      "id": "JCnMPMuIVYg",
+      "title": "How to Replace Cabin Air Filter 2007 Subaru Impreza | AQ1091C",
+      "channel": "Filterheads",
+      "views": 49728
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 47214,
+     "n": 1,
+     "best": {
+      "id": "gItA_O9gLIA",
+      "title": "How to change Brake Light Switch - 2005 Subaru Impreza",
+      "channel": "Innova Electronics",
+      "views": 47214
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 38385,
+     "n": 2,
+     "best": {
+      "id": "qAn9uzGAdRo",
+      "title": "How to Install Front and Rear Shifter Bushings [Subaru Impreza WRX 2002-2007]",
+      "channel": "Subearu",
+      "views": 25519
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 37923,
+     "n": 1,
+     "best": {
+      "id": "un4FKjDDnbw",
+      "title": "How to replace Subaru Axle or Repair CV Boot || Subaru Impreza WRX Wagon 2002 – 2003",
+      "channel": "CompressorSurge",
+      "views": 37923
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "OKyE0qoOrNo",
+     "title": "Steps to Increasing my Dads STi's Reliability (2007 Subaru Impreza WRX STi)",
+     "channel": "Cameron Alford",
+     "views": 92061
+    },
+    {
+     "id": "NSAwvZf0wSs",
+     "title": "What to Look out for BEFORE Buying a 2004-2005 Subaru WRX | Buyers Guide",
+     "channel": "Brendan Dougherty",
+     "views": 35323
+    },
+    {
+     "id": "BNmNtqbOh_M",
+     "title": "Review: 2004 Subaru WRX STi",
+     "channel": "Matt Maran Motoring",
+     "views": 1610844
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2008,
+    2009,
+    2010,
+    2011
+   ],
+   "gen": "2008–2011 Subaru Impreza",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 198,
+   "views": 16818953,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 227918,
+     "n": 3,
+     "best": {
+      "id": "U5QxtwOCU_c",
+      "title": "2008 - 2014 Subaru Radio Install | Impreza, WRX, STI",
+      "channel": "Provo Beast Audio Installation",
+      "views": 124711
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 129105,
+     "n": 2,
+     "best": {
+      "id": "_SLeXxUAzv8",
+      "title": "How to change the cabin air filter in a 2008-2012 Subaru Impreza / WRX / STI",
+      "channel": "Mach V Motorsports",
+      "views": 110325
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 127148,
+     "n": 3,
+     "best": {
+      "id": "bZ5xhXij078",
+      "title": "The Most Important 2008-2014 Subaru WRX Maintenance Items",
+      "channel": "MAPerformance",
+      "views": 94048
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 75943,
+     "n": 2,
+     "best": {
+      "id": "5kji2ufJQP8",
+      "title": "How To Change Transmission Fluid on a 2010 Subaru Impreza",
+      "channel": "Bullet Solano",
+      "views": 51759
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 51472,
+     "n": 3,
+     "best": {
+      "id": "Uo03zBjyM-c",
+      "title": "2008 Subaru Impreza Head Gasket Replacement - Complete Video",
+      "channel": "DMoney Garage",
+      "views": 18113
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 48111,
+     "n": 1,
+     "best": {
+      "id": "Krhe0Ib4TTc",
+      "title": "How To Replace Front Differential Fluid: 2010 Subaru Impreza",
+      "channel": "Bullet Solano",
+      "views": 48111
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 33884,
+     "n": 1,
+     "best": {
+      "id": "h3s9Z_YRxoU",
+      "title": "How To Change Spark Plugs on a 2010 Subaru Impreza",
+      "channel": "Bullet Solano",
+      "views": 33884
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 27001,
+     "n": 1,
+     "best": {
+      "id": "BDezjIth5t0",
+      "title": "How To Replace Front Door Speakers In A 2010 Subaru Impreza",
+      "channel": "michael mcginnis",
+      "views": 27001
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "ZXJPmevkVW0",
+     "title": "11 Common Problems of Subaru Impreza 4 Gen (2011-2017)",
+     "channel": "MaxTheCarGuy",
+     "views": 53163
+    },
+    {
+     "id": "-z1Cqbydobc",
+     "title": "5 Must-fix Problems With My 2010 Subaru Impreza You Can't Miss!",
+     "channel": "Ghost Garage ",
+     "views": 17191
+    },
+    {
+     "id": "CMPme8VZlj4",
+     "title": "Subaru WRX clutch pedal problems 2008-2014",
+     "channel": "Great Motorcyle rides: Washington",
+     "views": 10156
     }
    ],
    "costs": null
