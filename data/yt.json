@@ -20293,7 +20293,48 @@
      "views": 115898
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 33500,
+     "lo": 29000.0,
+     "hi": 40000.0,
+     "n": 18,
+     "videos": 14,
+     "id": "tXsP8mJj6IA",
+     "t": 981,
+     "title": "Has Subaru Built The Perfect Wagon With The New 2020 Outback?"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 2500,
+       "lo": 110.0,
+       "hi": 6000.0,
+       "n": 7,
+       "videos": 4,
+       "id": "vXz3BIhC0KI",
+       "t": 261,
+       "title": "Hail Damage Goldmines: 2023 Honda Civic, Subaru Outback & US Auction Deals"
+      }
+     ],
+     [
+      "Oil change",
+      {
+       "median": 30,
+       "lo": 25.0,
+       "hi": 65.0,
+       "n": 3,
+       "videos": 2,
+       "id": "FZ0uVkH77FI",
+       "t": 631,
+       "title": "One Year Update / Cost of Ownership on my 2022 Subaru Outback Wilderness fa24 Turbo"
+      }
+     ]
+    ]
+   }
   }
  ],
  "subaru-forester": [
@@ -20526,7 +20567,39 @@
      "views": 43404
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 328,
+       "lo": 200.0,
+       "hi": 400.0,
+       "n": 6,
+       "videos": 6,
+       "id": "OSMKpMw3zyE",
+       "t": 163,
+       "title": "2003 Subaru Forester Timing Belt and water pump resurrection 250k."
+      }
+     ],
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 500,
+       "lo": 450.0,
+       "hi": 800.0,
+       "n": 3,
+       "videos": 2,
+       "id": "a9XSjI1I0PM",
+       "t": 109,
+       "title": "Lifted 2006 Subaru Forester Walk Around"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -20652,7 +20725,39 @@
      "views": 23536
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 277,
+       "lo": 43.5,
+       "hi": 700.0,
+       "n": 19,
+       "videos": 13,
+       "id": "0mRYstqMais",
+       "t": 314,
+       "title": "2009 Subaru Forester - Owner Review in 2024, Fun but Complicated"
+      }
+     ],
+     [
+      "Brakes",
+      {
+       "median": 477,
+       "lo": 200.0,
+       "hi": 600.0,
+       "n": 3,
+       "videos": 2,
+       "id": "VF9JcU8GD6k",
+       "t": 14,
+       "title": "Rear Brakes (Pads And Rotors) | 2011 Subaru Forester"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -20702,7 +20807,30 @@
      "views": 105594
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 29000,
+     "lo": 28000.0,
+     "hi": 33000.0,
+     "n": 3,
+     "videos": 3,
+     "id": "FApGJLWHUyc",
+     "t": 1329,
+     "title": "2019 /2020 Subaru Forester | Deal Or No Deal?"
+    },
+    "msrp": {
+     "median": 28995,
+     "lo": 26000.0,
+     "hi": 30000.0,
+     "n": 13,
+     "videos": 12,
+     "id": "bjzmbw_4Y9c",
+     "t": 152,
+     "title": "2019 Subaru Forester - Review & Road Test"
+    },
+    "items": []
+   }
   },
   {
    "years": [
@@ -26574,6 +26702,133 @@
    "costs": null
   }
  ],
+ "mazda-cx-5": [
+  {
+   "years": [
+    2013,
+    2014,
+    2015,
+    2016
+   ],
+   "gen": "2013–2016 Mazda CX-5",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 24093895,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 522644,
+     "n": 4,
+     "best": {
+      "id": "aoncFAELsDQ",
+      "title": "Mazda CX-5 Stereo | Radio | Audio Unit | Removal & Installation (2013+)",
+      "channel": "happywrenching",
+      "views": 288627
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 301888,
+     "n": 2,
+     "best": {
+      "id": "lh9HO9X-ZHg",
+      "title": "Mazda CX-5 Rear Brake Pad and Rotor Replacement 2013-2016 (Without EPB Motor)",
+      "channel": "Backyard Chevy",
+      "views": 284006
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 248863,
+     "n": 4,
+     "best": {
+      "id": "dOcxU19YCO0",
+      "title": "2014 MAZDA CX5--How to do an OIL CHANGE Step by Step--Tutorial",
+      "channel": "jakeguitar01",
+      "views": 142003
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 109390,
+     "n": 1,
+     "best": {
+      "id": "oSWEtwjNvPk",
+      "title": "HOW TO REPLACE Spark Plugs on a 2013-2017 Mazda CX-5 - SUPER EASY",
+      "channel": "Buckle Up Studios",
+      "views": 109390
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 37706,
+     "n": 2,
+     "best": {
+      "id": "c7KeClyfTiM",
+      "title": "Mazda CX-5 Brake Fluid Change (2013–2026) | Step-by-Step DIY Guide",
+      "channel": "Car Fixology",
+      "views": 31889
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 34008,
+     "n": 1,
+     "best": {
+      "id": "JNifd90aRPI",
+      "title": "How To 2013 Mazda CX-5 CV Axle Replacement/Bad CV Axle Boot/Mazda Axle Noise",
+      "channel": "How I Fixed It!",
+      "views": 34008
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 32623,
+     "n": 2,
+     "best": {
+      "id": "0T46SeioJtk",
+      "title": "How to Replace Cabin Air Filter 2014 Mazda CX-5 | AQ1231",
+      "channel": "Filterheads",
+      "views": 25008
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 19725,
+     "n": 1,
+     "best": {
+      "id": "EXA027kbhUo",
+      "title": "2013-2017 Mazda CX-5 - Window Switch (Master Switch) Replacement",
+      "channel": "YOUCANIC",
+      "views": 19725
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "gEP7_DSVc2A",
+     "title": "Top 5 Problems Mazda CX-5 SUV 1st Generation 2013-16",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 760380
+    },
+    {
+     "id": "c7_u1q_FsLM",
+     "title": "Mazda CX-5 1st Gen 2013 to 2016 common problems, issues, defects, recalls and concerns",
+     "channel": "HOWSTUFFINMYCARWORKS",
+     "views": 56474
+    },
+    {
+     "id": "IZBPvYDumQM",
+     "title": "First Gen Mazda CX-5 is the BEST USED CAR of all time? Common Problems 2013-2016",
+     "channel": "Another Lap",
+     "views": 21086
+    }
+   ],
+   "costs": null
+  }
+ ],
  "mazda-cx-9": [
   {
    "years": [
@@ -29973,6 +30228,202 @@
      "title": "How To Make The 2015+ Subaru WRX Reliable",
      "channel": "Auto Enthusiast",
      "views": 102250
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023
+   ],
+   "gen": "2017–2023 Subaru Impreza",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 31546348,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 64961,
+     "n": 3,
+     "best": {
+      "id": "KB_Tc1Suwmc",
+      "title": "How to Change Your Engine Oil (2018 Subaru Impreza)",
+      "channel": "Anthony",
+      "views": 22986
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 59886,
+     "n": 2,
+     "best": {
+      "id": "OWtnJSkrXr0",
+      "title": "How to change a cabin air filter in a 2019 Subaru Impreza also works for 2017 2018 and 2020",
+      "channel": "FIX STUFF MAKE STUFF",
+      "views": 31004
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 42490,
+     "n": 1,
+     "best": {
+      "id": "IiGbPpy_3i4",
+      "title": "How To: Remove/Replace Side Mirror on 2018 Subaru Impreza",
+      "channel": "Dom Fillari",
+      "views": 42490
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 38622,
+     "n": 1,
+     "best": {
+      "id": "XBwgbUucPmA",
+      "title": "How To Diagnose a Bad Wheel Bearing - Subaru Impreza 2018",
+      "channel": "Goin Higher",
+      "views": 38622
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 20628,
+     "n": 1,
+     "best": {
+      "id": "FGMOr8C8iV0",
+      "title": "2020 - 2023 Subaru Impreza How to Replace Front Brakes Pads & Brake rotor",
+      "channel": "Axtuo Ax",
+      "views": 20628
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 20365,
+     "n": 1,
+     "best": {
+      "id": "LjqfX4PU-1I",
+      "title": "2019 Subaru Impreza tail light install. this also works on 2017-2018-2019 and 2020",
+      "channel": "FIX STUFF MAKE STUFF",
+      "views": 20365
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "akQxCMF4ROQ",
+     "title": "2015-2021 Subaru WRX Buyer’s Guide - Reliability & Common Problems",
+     "channel": "Discerning Cars",
+     "views": 151134
+    },
+    {
+     "id": "jLCYbFds9qY",
+     "title": "Top 5 Problems Subaru Impreza Hatchback 5th Generation 2017-21",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 89406
+    },
+    {
+     "id": "kbUKtF1PJ_o",
+     "title": "2020 Subaru Impreza review & buyer's guide | Auto Expert John Cadogan",
+     "channel": "Auto Expert John Cadogan",
+     "views": 86665
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2024,
+    2025
+   ],
+   "gen": "2024–2025 Subaru Impreza",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 186,
+   "views": 6438994,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 10720,
+     "n": 1,
+     "best": {
+      "id": "b7pLJ0JK2wU",
+      "title": "2024 Subaru Impreza RS upgrades🚗 | first oil change, FUMOTO valve, mudflaps, and more!",
+      "channel": "Life of Udon",
+      "views": 10720
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 10092,
+     "n": 1,
+     "best": {
+      "id": "AqSs6VX-l1I",
+      "title": "Auto Dimming Exterior Mirror with Approach Light Install for 2024-2025 Crosstrek/Impreza",
+      "channel": "Ricardo",
+      "views": 10092
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 5119,
+     "n": 1,
+     "best": {
+      "id": "vY0BWgVkFME",
+      "title": "2024-2026 Subaru Impreza/Crosstrek: How to Change Rear Differential Fluid",
+      "channel": "JT Works on Cars",
+      "views": 5119
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 474,
+     "n": 1,
+     "best": {
+      "id": "yonczXIcJAI",
+      "title": "2024 Subaru Impreza Cluster Display & Dashboard Warning Lights Guide",
+      "channel": "Auto User Guide",
+      "views": 474
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 37,
+     "n": 1,
+     "best": {
+      "id": "eeqy_3ECNF4",
+      "title": "2025 Subaru Impreza FIRST LOOK – SHOCKING Upgrades & Features You Won’t Believe",
+      "channel": "SPS Cars",
+      "views": 37
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "jpz4Xg47oqk",
+     "title": "Should You Buy The 2024 Subaru Impreza? Thorough Review By A Mechanic",
+     "channel": "The Car Care Nut Reviews",
+     "views": 330592
+    },
+    {
+     "id": "OSHVTJOAybY",
+     "title": "Should You Buy a 2025 Subaru WRX? Thorough Review By A Mechanic!",
+     "channel": "The Car Care Nut Reviews",
+     "views": 284268
+    },
+    {
+     "id": "nAkCrYckMeg",
+     "title": "2022-2025 Subaru WRX Guide - Reliability & Common Problems",
+     "channel": "Auto Enthusiast",
+     "views": 39279
     }
    ],
    "costs": null
