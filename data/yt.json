@@ -17144,6 +17144,454 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006
+   ],
+   "gen": "2001–2006 Hyundai Santa Fe",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 10714440,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 611625,
+     "n": 10,
+     "best": {
+      "id": "lsQn4Qa3HX4",
+      "title": "Alternator replacement - 2004 Hyundai Santa Fe 3.5L engine",
+      "channel": "Grease Monkey Fever",
+      "views": 189171
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 548901,
+     "n": 3,
+     "best": {
+      "id": "eItfZM_Rb3E",
+      "title": "Hyundai 2.7 Delta V6 spark plug replacement 2003 Santa Fe",
+      "channel": "fupabox",
+      "views": 285297
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 390331,
+     "n": 4,
+     "best": {
+      "id": "1lWgs3GtI0E",
+      "title": "Front Door Panel Removal and Replacement Hyundai Santa Fe 2006 2007 2008 2009 2010 2011 2012",
+      "channel": "World Mechanics",
+      "views": 211395
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 382274,
+     "n": 5,
+     "best": {
+      "id": "w4Yqxsw-i5k",
+      "title": "Replace 2001-2006 Hyundai Santa Fe Cabin Air Filter, How to Change Install 2002 2003 2004 2005",
+      "channel": "Go-Parts",
+      "views": 212510
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 370046,
+     "n": 6,
+     "best": {
+      "id": "dqwEMfZmT5o",
+      "title": "Replace Throttle Position Sensor and Clean Throttle Body. P0123 Code Fix. 2005 Hyundai Santa Fe 2.7L",
+      "channel": "Because Stuff Breaks with Justin Peters",
+      "views": 122782
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 362207,
+     "n": 4,
+     "best": {
+      "id": "nk5TkOW9bog",
+      "title": "Replace Serpentine Belt 2005 Hyundai Santa Fe 2.7L Engine",
+      "channel": "Because Stuff Breaks with Justin Peters",
+      "views": 190088
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 303384,
+     "n": 4,
+     "best": {
+      "id": "yLJx99KWTnw",
+      "title": "2001-2005 Hyundai Santa Fe Noise From Failed Shocks",
+      "channel": "APDTY",
+      "views": 217791
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 302064,
+     "n": 4,
+     "best": {
+      "id": "xUjjloMS79g",
+      "title": "2004 Hyundai santa fe 2.7 Delta V6 automatic transmission fluid replacement",
+      "channel": "fupabox",
+      "views": 176862
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "8SnGwSJsjf4",
+     "title": "Hyundai Santa Fe SUV 2006 - 2012 review - CarBuyer",
+     "channel": "Carbuyer",
+     "views": 318484
+    },
+    {
+     "id": "SsBY_J1qbHg",
+     "title": "2002 Hyundai Santa Fe 2.4L Engine problems!",
+     "channel": "grimmyman1",
+     "views": 47730
+    },
+    {
+     "id": "yJZpjxdB7LM",
+     "title": "2002 Hyundai Santa Fe 2.7L 4wd Throttle Cable problems",
+     "channel": "Doc Reidy",
+     "views": 13500
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012
+   ],
+   "gen": "2007–2012 Hyundai Santa Fe",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 15654719,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 1013022,
+     "n": 11,
+     "best": {
+      "id": "meSvOMkCRcE",
+      "title": "2007 - 2012 Hyundai SantaFe Radio Install",
+      "channel": "Provo Beast Audio Installation",
+      "views": 211406
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 372911,
+     "n": 4,
+     "best": {
+      "id": "OuoVX-55hTU",
+      "title": "Transmission fluid change Hyundai Santa Fe 2007 drain and fill",
+      "channel": "Fixing cars and stuff",
+      "views": 279354
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 342446,
+     "n": 4,
+     "best": {
+      "id": "1lWgs3GtI0E",
+      "title": "Front Door Panel Removal and Replacement Hyundai Santa Fe 2006 2007 2008 2009 2010 2011 2012",
+      "channel": "World Mechanics",
+      "views": 211395
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 332445,
+     "n": 6,
+     "best": {
+      "id": "YgBz8Mz-XFQ",
+      "title": "2008 Hyundai Santa Fe Limited with A/C Climate control issues on driver's side.",
+      "channel": "Adriano Valeri",
+      "views": 155767
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 320629,
+     "n": 6,
+     "best": {
+      "id": "xDVjp9nLDrI",
+      "title": "How to remove the upper intake manifold on a 2007 Hyundai Santa Fe",
+      "channel": "Jimthecarguy",
+      "views": 107739
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 319087,
+     "n": 6,
+     "best": {
+      "id": "0LRvzcbRR50",
+      "title": "How to Change the Engine Oil on a 2009 Hyundai Santa Fe",
+      "channel": "6speeddakota",
+      "views": 143135
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 235501,
+     "n": 6,
+     "best": {
+      "id": "8IMGHTU5NLo",
+      "title": "Front Brake Pads Replacement on Hyundai Santa Fe 2006 2007 2008 2009 2010 2011 2012",
+      "channel": "World Mechanics",
+      "views": 78492
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 225204,
+     "n": 3,
+     "best": {
+      "id": "h2SNks13Wdw",
+      "title": "How to change the spark plugs on a 2007 Hyundai Santa Fe",
+      "channel": "Jimthecarguy",
+      "views": 177465
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "bMgRkIkXXCI",
+     "title": "Top 5 Problems Hyundai Santa Fe SUV 2nd Generation 2007-13",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 625757
+    },
+    {
+     "id": "8SnGwSJsjf4",
+     "title": "Hyundai Santa Fe SUV 2006 - 2012 review - CarBuyer",
+     "channel": "Carbuyer",
+     "views": 318484
+    },
+    {
+     "id": "_b1CWn8KrZs",
+     "title": "Hyundai santa Fe 2nd Gen 2007 to 2012 common problems, issues, defects and complaints",
+     "channel": "HOWSTUFFINMYCARWORKS",
+     "views": 30279
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023
+   ],
+   "gen": "2019–2023 Hyundai Santa Fe",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 48244592,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 276621,
+     "n": 4,
+     "best": {
+      "id": "VU61KPgkazA",
+      "title": "2021 - 2023 Hyundai Santa Fe Key Fob Battery Replacement - How To Change Or Replace Remote Batteries",
+      "channel": "PYR Automotive ",
+      "views": 83227
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 206700,
+     "n": 3,
+     "best": {
+      "id": "MuNIQAb6xtU",
+      "title": "How To Change 2019 - 2020 Hyundai Santa Fe Cabin Air filter - Replace Remove Replacement Location",
+      "channel": "PYR Automotive ",
+      "views": 109260
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 131334,
+     "n": 1,
+     "best": {
+      "id": "haQN10p9BEI",
+      "title": "Step-by-Step Guide: Oil Changing for 2021-2023 Hyundai Santa Fe Owners",
+      "channel": "Spirit'ed Wrenchers",
+      "views": 131334
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 105324,
+     "n": 1,
+     "best": {
+      "id": "vXml7VHDPQc",
+      "title": "How to Remove A 2019 - 2020 Hyundai Santa Fe Tail Light - Change Replace Brake Lamp Bulb Replacement",
+      "channel": "PYR Automotive ",
+      "views": 105324
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 78899,
+     "n": 1,
+     "best": {
+      "id": "rxU8okWgsWM",
+      "title": "2021 Hyundai Santa Fe (Coupling assy-4wd replacement)",
+      "channel": "Tech86",
+      "views": 78899
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 58364,
+     "n": 1,
+     "best": {
+      "id": "Us6uMy4KK4I",
+      "title": "How To Use The Paddle Shifters (Shown On 2022 Hyundai Santa Fe Calligraphy)",
+      "channel": "Puente Hills Hyundai",
+      "views": 58364
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 39554,
+     "n": 1,
+     "best": {
+      "id": "gW1C0cwrOLs",
+      "title": "2021 Hyundai Santa Fe Fuel Door Won't Open what could be the Problem",
+      "channel": "Al Young Cuda",
+      "views": 39554
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "nlMOA4Zeh8w",
+     "title": "Should You Buy a 2023 Hyundai Santa Fe? Thorough Review by A Mechanic",
+     "channel": "The Car Care Nut Reviews",
+     "views": 352900
+    },
+    {
+     "id": "uSiTSNUxdZc",
+     "title": "Which Hyundai SUV should you BUY? 2019 Tucson or Santa Fe",
+     "channel": "Raiti's Rides",
+     "views": 268337
+    },
+    {
+     "id": "8bQLB7qocIw",
+     "title": "Should You Buy This Base Model SUV? 2020 Hyundai Santa Fe Review",
+     "channel": "Hello Road",
+     "views": 69269
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2024,
+    2025
+   ],
+   "gen": "2024–2025 Hyundai Santa Fe",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 20510911,
+   "topics": [
+    {
+     "name": "Transmission & shifter",
+     "views": 336276,
+     "n": 3,
+     "best": {
+      "id": "INKwg7qRVvc",
+      "title": "NOT AGAIN... We're Having MORE Transmission Issues with our New 2024 Hyundai Santa Fe",
+      "channel": "Car Confections",
+      "views": 180876
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 34896,
+     "n": 2,
+     "best": {
+      "id": "kTGoX2FlcAQ",
+      "title": "How to change oil on 2024+ Hyundai Santa Fe (MX5)",
+      "channel": "BWORX",
+      "views": 19260
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 20902,
+     "n": 1,
+     "best": {
+      "id": "hBPsvDkeX54",
+      "title": "How to Install Spare Wheel Assembly | Hyundai Santa Fe Calligraphy Hybrid 2024/2025 DIY Guide\"",
+      "channel": "Siraj Hakkani",
+      "views": 20902
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 2715,
+     "n": 1,
+     "best": {
+      "id": "GOHtfosY8u0",
+      "title": "AC Evaporator cleaning in a 2024 2025 2026 Hyundai Santa Fe",
+      "channel": "Mark B",
+      "views": 2715
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "xWR-UJLn_qs",
+     "title": "Car Mechanic Reviews The 2024 Hyundai Santa Fe. Should You Buy One?",
+     "channel": "The Car Care Nut Reviews",
+     "views": 490333
+    },
+    {
+     "id": "pmPozPohY5A",
+     "title": "2024/ 2025 Hyundai Santa Fe Buyers Guide: Trim Differences & Best Value!",
+     "channel": "Miguel My Car Guy",
+     "views": 10239
+    },
+    {
+     "id": "ORzOHEPCrl4",
+     "title": "2024/2025 Hyundai Santa Fe Buyers Guide + Hybrid Review",
+     "channel": "PRN_TestDrive",
+     "views": 5252
+    }
+   ],
+   "costs": null
   }
  ],
  "kia-sorento": [
