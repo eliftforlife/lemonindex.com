@@ -25077,6 +25077,134 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021
+   ],
+   "gen": "2015–2021 Mercedes-Benz C-Class",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 86215798,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 936756,
+     "n": 1,
+     "best": {
+      "id": "0C_Fj_cO9hU",
+      "title": "Reset Service C Class W205 (2014-2017) C300",
+      "channel": "Wheels Tips!",
+      "views": 936756
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 852897,
+     "n": 2,
+     "best": {
+      "id": "xFnpFPLqfvY",
+      "title": "How to Check and Add Engine Coolant in Mercedes-Benz C-class and E-class C300 W205 W206 and E300",
+      "channel": "Newroad",
+      "views": 745453
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 627533,
+     "n": 5,
+     "best": {
+      "id": "jTpNf_Itf2g",
+      "title": "DYNAMIC TRUNK LIGHTBAR installed on 2015+ Mercedes W205 C-Class Sedan",
+      "channel": "The Flexx Garage®",
+      "views": 166768
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 599280,
+     "n": 3,
+     "best": {
+      "id": "YJixaPPfSd4",
+      "title": "How to Replace Rear Brake Pads in Mercedes-Benz C300 W205 W206 and E300 W213",
+      "channel": "Newroad",
+      "views": 265015
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 558868,
+     "n": 2,
+     "best": {
+      "id": "d_zcfRgyXAM",
+      "title": "Mercedes-Benz W205 C300 Battery Replacement DIY (2012-2018 C250 & C350)",
+      "channel": "FCP Euro",
+      "views": 307031
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 460112,
+     "n": 3,
+     "best": {
+      "id": "_bsHWJW8yrE",
+      "title": "Mercedes-Benz Android 13.0 Display FULL Installation Guide For C/GLC Class (W205/X253) | 2015 - 2019",
+      "channel": "Nevera Auto",
+      "views": 217762
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 156558,
+     "n": 1,
+     "best": {
+      "id": "-TT1Nf5PgEY",
+      "title": "How to get a 2017 Mercedes-Benz C 300 into neutral (electric column shifter) MUST HAVE KEY",
+      "channel": "TowMan127",
+      "views": 156558
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 111673,
+     "n": 1,
+     "best": {
+      "id": "Nx7V7_ZCJFU",
+      "title": "Mercedes-Benz C300 Spark Plug & Ignition Coil Replacement DIY (2015-2021 Mercedes W205, M274 Engine)",
+      "channel": "FCP Euro",
+      "views": 111673
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "0Z0JmZT6LH8",
+     "title": "2019 BMW 3 Series vs Mercedes-Benz C-Class - Which one should you buy?",
+     "channel": "Cars.co.za",
+     "views": 617531
+    },
+    {
+     "id": "WTvYAPOVhjo",
+     "title": "Should You Buy a MERCEDES C CLASS COUPE? (Test Drive & Review 2019 W205 C220d)",
+     "channel": "High Peak Autos",
+     "views": 391586
+    },
+    {
+     "id": "EI5lfHk7-Us",
+     "title": "5 Things I Hate About The Mercedes C300 W205 Problems",
+     "channel": "TheDurbinCompound",
+     "views": 382941
+    }
+   ],
+   "costs": null
   }
  ],
  "mercedes-benz-cla": [
