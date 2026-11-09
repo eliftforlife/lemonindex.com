@@ -24528,6 +24528,264 @@
    "costs": null
   }
  ],
+ "gmc-sierra": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006
+   ],
+   "gen": "1999–2006 GMC Sierra",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 26888401,
+   "topics": [
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 5515227,
+     "n": 9,
+     "best": {
+      "id": "8svxHQfdsv0",
+      "title": "GMC Sierra/Chevy Silverado Cabin Air Filter Replacement (1999-2002)",
+      "channel": "Tony The Truck Guy",
+      "views": 2858867
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 1637656,
+     "n": 11,
+     "best": {
+      "id": "lUotkKXG9dY",
+      "title": "ABS Computer Module Replacement 2000-2006 GMC Yukon, XL, Sierra",
+      "channel": "2CarPros",
+      "views": 909161
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 899797,
+     "n": 8,
+     "best": {
+      "id": "cMa2bp4jbNU",
+      "title": "Fuel Filter Replacement Chevrolet Silverado Suburban Tahoe GMC Yukon XL Sierra 2000-2006 - EASY!",
+      "channel": "2CarPros",
+      "views": 328810
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 696813,
+     "n": 7,
+     "best": {
+      "id": "sM5WvCZ_KoY",
+      "title": "How to Replace the Front Wheel Bearings on a 2000-06 Chevy K1500 Silverado Suburban GMC Sierra Yukon",
+      "channel": "How to Automotive",
+      "views": 296233
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 683314,
+     "n": 3,
+     "best": {
+      "id": "OnZEd5Qhy4g",
+      "title": "2004 GMC Sierra 5.3L No Crank No Start Problem Solved!!!",
+      "channel": "Todd Rabb",
+      "views": 435216
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 627128,
+     "n": 4,
+     "best": {
+      "id": "PZ05P5wAN4s",
+      "title": "2004 GMC Sierra 1500 Brake Light Fuses, Stop Light Switch Replacement",
+      "channel": "Lehew",
+      "views": 301346
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 518218,
+     "n": 3,
+     "best": {
+      "id": "qSJcQplPVK0",
+      "title": "How to Change Oxygen (O2) Sensors - (1999-2006) GMC Sierra/Yukon, Chevy Silverado/Tahoe 5.3l)",
+      "channel": "UFixItAuto",
+      "views": 236223
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 395718,
+     "n": 1,
+     "best": {
+      "id": "uo0dCYPVDw8",
+      "title": "2002 GMC Sierra Power Steering Pump Replacement - HOW TO / TUTORIAL",
+      "channel": "Chase Cook",
+      "views": 395718
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "VlmuiFd7FQo",
+     "title": "Top 5 Problems 2000-06 GMC Yukon Sierra Chevy Suburban Tahoe Silverado Avalanche Cadillac Escalade",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 1821778
+    },
+    {
+     "id": "9-ey8cBJuSc",
+     "title": "Top 5 Problems GMC Sierra 1500 Truck 1st Generation 1999-2006",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 419490
+    },
+    {
+     "id": "LmN6_ubzyuI",
+     "title": "1999-2007 Silverado / Sierra Buyers Guide (GMT800 Common Problems, Specs, Engines)",
+     "channel": "Useful Vids",
+     "views": 105026
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013
+   ],
+   "gen": "2007–2013 GMC Sierra",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 20191623,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 1810554,
+     "n": 12,
+     "best": {
+      "id": "BJvQmke75VM",
+      "title": "2007 - 2014 GMC / Chevy Radio Install Sierra, Silverado, Avalanche (Bench Seat)",
+      "channel": "Provo Beast Audio Installation",
+      "views": 589877
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 1548371,
+     "n": 5,
+     "best": {
+      "id": "0FQDjeuj1VI",
+      "title": "Full heater core replacement (the easy way) on a 2007 GMC Sierra and similar models",
+      "channel": "vehcor",
+      "views": 485599
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 639327,
+     "n": 10,
+     "best": {
+      "id": "X6wsJA9fIiA",
+      "title": "Front Brake Pads & Rotor Replacement GMC Sierra 2007-2013",
+      "channel": "2CarPros",
+      "views": 240989
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 501256,
+     "n": 7,
+     "best": {
+      "id": "8q1DCLtuCSU",
+      "title": "2007 - 2014 GMC / Chevy Front Door Speaker Install | Sierra Silverado Avalanche Tahoe Suburban Yukon",
+      "channel": "Provo Beast Audio Installation",
+      "views": 201886
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 456704,
+     "n": 7,
+     "best": {
+      "id": "zq4v-xuCJHA",
+      "title": "2008 GMC Sierra Oil Pressure Sensor Replacement",
+      "channel": "okc vet garage",
+      "views": 163358
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 426059,
+     "n": 7,
+     "best": {
+      "id": "hTZURxqIWkQ",
+      "title": "How to Replace Shocks and Struts in a GMC Sierra 1500 2WD – 2007-2013",
+      "channel": "AutoZone",
+      "views": 153239
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 286511,
+     "n": 3,
+     "best": {
+      "id": "j1WRpsC2Nwc",
+      "title": "2003-2007 Chevrolet/GMC Silverado/Sierra No Start/no crank/electrical issue FIX",
+      "channel": "KillerKaprice",
+      "views": 230233
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 254425,
+     "n": 2,
+     "best": {
+      "id": "vp7nUX86iRY",
+      "title": "Resetting change oil light , 2008 GMC SIERRA",
+      "channel": "1508 godzilla",
+      "views": 139593
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "Tf0sunNzoEA",
+     "title": "Reliability Issues? 3.5\" Rough Country Lift Kit - '07-'18 Silverado/Sierra: 3yrs + 30k miles",
+     "channel": "LONESTAR HAWAIIAN",
+     "views": 307714
+    },
+    {
+     "id": "FznHFy311qI",
+     "title": "TCM Problems! Transmission Control Module (2007-2011 GMC Sierra 1500)",
+     "channel": "The Shop World Wide",
+     "views": 257496
+    },
+    {
+     "id": "_UXTc5BGxsM",
+     "title": "2007-2013 Silverado / Sierra Buyer's Guide (GMT900 Common Problems, Engines, Specs)",
+     "channel": "Useful Vids",
+     "views": 173930
+    }
+   ],
+   "costs": null
+  }
+ ],
  "chevrolet-colorado": [
   {
    "years": [
@@ -28750,7 +29008,26 @@
      "views": 392304
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 50,
+       "lo": 30.0,
+       "hi": 100.0,
+       "n": 5,
+       "videos": 5,
+       "id": "YyG2y8DDoFA",
+       "t": 555,
+       "title": "Budget Front End Repair on a Cheap Car: 2007 Honda Fit"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -28876,7 +29153,52 @@
      "views": 320437
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 95,
+       "lo": 30.0,
+       "hi": 1000.0,
+       "n": 8,
+       "videos": 3,
+       "id": "tK-H59LysQY",
+       "t": 954,
+       "title": "2012 Honda Fit Sport One Year Review"
+      }
+     ],
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 2000,
+       "lo": 300.0,
+       "hi": 10000.0,
+       "n": 3,
+       "videos": 3,
+       "id": "CzgeNavW1MU",
+       "t": 744,
+       "title": "Tallest Budget Lift for a GE8 Honda Fit (Part 1)"
+      }
+     ],
+     [
+      "Water pump / cooling",
+      {
+       "median": 185,
+       "lo": 185.0,
+       "hi": 185.0,
+       "n": 4,
+       "videos": 2,
+       "id": "wKNIPW1qWa0",
+       "t": 1303,
+       "title": "DIY coolant flush 2009-2013 Honda Fit(DIY guide)"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -29003,7 +29325,48 @@
      "views": 823749
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 16500,
+     "lo": 16000.0,
+     "hi": 18600.0,
+     "n": 14,
+     "videos": 11,
+     "id": "VkeHQL5m9nE",
+     "t": 327,
+     "title": "2019 Honda Fit Sport Review and Comparison"
+    },
+    "items": [
+     [
+      "Transmission",
+      {
+       "median": 800,
+       "lo": 800.0,
+       "hi": 800.0,
+       "n": 4,
+       "videos": 4,
+       "id": "0RCWoWv64fo",
+       "t": 236,
+       "title": "2017 Honda Fit - Review and Road Test"
+      }
+     ],
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 80,
+       "lo": 60.0,
+       "hi": 1500.0,
+       "n": 3,
+       "videos": 3,
+       "id": "Sp4JsYi8sO8",
+       "t": 71,
+       "title": "2015 - 2020 Honda Fit Spark Plug Change - DIY fix - OEM NGK iridium"
+      }
+     ]
+    ]
+   }
   }
  ],
  "chevrolet-camaro": [
@@ -30325,6 +30688,133 @@
      "title": "2025 Nissan Sentra vs 2025 Nissan Versa Which One Should You Buy Full Comparison & Test Drive Review",
      "channel": "Cars Unlocked",
      "views": 36826
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "nissan-maxima": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003
+   ],
+   "gen": "2000–2003 Nissan Maxima",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 6926550,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 901967,
+     "n": 15,
+     "best": {
+      "id": "nw-ECOC7GUs",
+      "title": "1995-2001 Nissan Maxima: Starter replacement",
+      "channel": "boredmder",
+      "views": 270809
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 533948,
+     "n": 3,
+     "best": {
+      "id": "_WgA8IYcaxU",
+      "title": "How to Replace Cabin Air Filter 2000 Nissan Maxima | AQ1093C",
+      "channel": "Filterheads",
+      "views": 429791
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 463223,
+     "n": 13,
+     "best": {
+      "id": "XGJ91Eq2kGc",
+      "title": "2002 Nissan Maxima: How to clean the MAF and Throttle Body",
+      "channel": "link375",
+      "views": 119979
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 267199,
+     "n": 5,
+     "best": {
+      "id": "C3WbjJ1Si4M",
+      "title": "DIY: How to change spark plugs in a 2000 - 03 Nissan Maxima",
+      "channel": "DIY Auto Channel",
+      "views": 118657
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 255664,
+     "n": 4,
+     "best": {
+      "id": "Fd4F4Mj2sZI",
+      "title": "1995-2003 Nissan Maxima: Radiator replacement",
+      "channel": "boredmder",
+      "views": 167475
+     }
+    },
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 223332,
+     "n": 2,
+     "best": {
+      "id": "1N4vJDoozMw",
+      "title": "2002 Nissan Maxima: How to replace spark plugs, ignition coils and air intake gasket",
+      "channel": "link375",
+      "views": 159448
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 125361,
+     "n": 7,
+     "best": {
+      "id": "atDL4I8I66s",
+      "title": "2001 Nissan Maxima gauge color change",
+      "channel": "Richie Montesdeoca",
+      "views": 55801
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 110581,
+     "n": 2,
+     "best": {
+      "id": "RxlW95ej-II",
+      "title": "How to Repair Rough Idle and Misfire Codes - P0300 [2002 Nissan Maxima]",
+      "channel": "link375",
+      "views": 102579
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "6Lvx0BGSqdk",
+     "title": "2000 Nissan Maxima/I30 Transmission Problems",
+     "channel": "DARTHNUT",
+     "views": 57143
+    },
+    {
+     "id": "Oa6h_pvgMZ0",
+     "title": "2001 Maxima - \"Mad Max\" idle problems - idle air volume re-learn procedure",
+     "channel": "D Fields",
+     "views": 17448
+    },
+    {
+     "id": "KwQ1TATIZFw",
+     "title": "2001 maxima starting problems.",
+     "channel": "Justin Beyer",
+     "views": 5441
     }
    ],
    "costs": null
@@ -33141,7 +33631,21 @@
      "views": 773681
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 19498,
+     "lo": 17995.0,
+     "hi": 23700.0,
+     "n": 12,
+     "videos": 12,
+     "id": "oKybySI6Yjc",
+     "t": 190,
+     "title": "2013 Dodge Dart GT Review"
+    },
+    "items": []
+   }
   }
  ],
  "chrysler-200": [
