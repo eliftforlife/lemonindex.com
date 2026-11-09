@@ -3328,7 +3328,63 @@
      "views": 215542
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": {
+     "median": 2250,
+     "lo": 1500.0,
+     "hi": 3800.0,
+     "n": 3,
+     "videos": 3,
+     "id": "IXPkxmhoveM",
+     "t": 180,
+     "title": "1st Gen RAV4: Long-Term Ownership Review & Why My CHEAP 90's Toyota Is A GREAT Car",
+     "private": 1,
+     "dealer": 0
+    },
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 300,
+       "lo": 175.0,
+       "hi": 2000.0,
+       "n": 7,
+       "videos": 4,
+       "id": "Ksv98JvBqXs",
+       "t": 4065,
+       "title": "Cylinder head gasket replacement 1997 Toyota RAV4 (episode 25)"
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 678,
+       "lo": 350.0,
+       "hi": 855.0,
+       "n": 8,
+       "videos": 2,
+       "id": "J6RrAnZvf7w",
+       "t": 837,
+       "title": "New wheels and tires for my 1997 Toyota RAV4 (episode 44)"
+      }
+     ],
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 740,
+       "lo": 450.0,
+       "hi": 855.0,
+       "n": 5,
+       "videos": 2,
+       "id": "J6RrAnZvf7w",
+       "t": 404,
+       "title": "New wheels and tires for my 1997 Toyota RAV4 (episode 44)"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -3454,7 +3510,26 @@
      "views": 7015
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 400,
+       "lo": 140.0,
+       "hi": 600.0,
+       "n": 8,
+       "videos": 5,
+       "id": "9d54FEOcf_M",
+       "t": 101,
+       "title": "Toyota Rav4 2001 - 2004 Transmission Solenoids A and B where are they?"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -18036,7 +18111,35 @@
      "views": 27909
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 31500,
+     "lo": 27000.0,
+     "hi": 36000.0,
+     "n": 4,
+     "videos": 3,
+     "id": "uS_mxXHiSSs",
+     "t": 281,
+     "title": "2009 Honda Odyssey Review - Kelley Blue Book"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 800,
+       "lo": 600.0,
+       "hi": 900.0,
+       "n": 5,
+       "videos": 5,
+       "id": "KoQJ5bwqECQ",
+       "t": 852,
+       "title": "2005-2010 Honda Odyssey sliding door roller-Most common fix."
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -18164,7 +18267,35 @@
      "views": 29390
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 40000,
+     "lo": 28995.0,
+     "hi": 44500.0,
+     "n": 13,
+     "videos": 10,
+     "id": "KJR916YXBSo",
+     "t": 778,
+     "title": "2014 Honda Odyssey EX-L Startup, Engine, Full-Tour&Review"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 325,
+       "lo": 280.0,
+       "hi": 415.0,
+       "n": 8,
+       "videos": 6,
+       "id": "QRMzxm4jll4",
+       "t": 3220,
+       "title": "2011-2017 Honda Odyssey (J35) Valve Adjustment and Oil Leak Fix"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -18275,7 +18406,21 @@
      "views": 54369
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 48000,
+     "lo": 41900.0,
+     "hi": 52000.0,
+     "n": 19,
+     "videos": 14,
+     "id": "Tku90RCytt4",
+     "t": 1710,
+     "title": "2018 Honda Odyssey Elite – Redline: Review"
+    },
+    "items": []
+   }
   }
  ],
  "hyundai-santa-fe": [
@@ -20985,6 +21130,132 @@
      "title": "New 2021 Hyundai Tucson: Should you buy one? | Auto Expert John Cadogan",
      "channel": "Auto Expert John Cadogan",
      "views": 162346
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2005,
+    2006,
+    2007,
+    2008,
+    2009
+   ],
+   "gen": "2005–2009 Hyundai Tucson",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 8652751,
+   "topics": [
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 409059,
+     "n": 4,
+     "best": {
+      "id": "w1vHlTKD9-I",
+      "title": "How to Replace Cabin Air Filter 2007 Hyundai Tucson - With Tray | AQ1118",
+      "channel": "Filterheads",
+      "views": 274484
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 320089,
+     "n": 12,
+     "best": {
+      "id": "TrjVfPiQocU",
+      "title": "Kia Sportage/Hyundai Tucson (2005 - 2016) - New Battery Install",
+      "channel": "The Battery Shop",
+      "views": 119847
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 207696,
+     "n": 2,
+     "best": {
+      "id": "aEfKbMAGay0",
+      "title": "How to change diesel injectors on Hyundai Tucson 2.0 CRDi year 2007",
+      "channel": "TCX & BTL",
+      "views": 186212
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 121653,
+     "n": 1,
+     "best": {
+      "id": "mAV1obyO7Zo",
+      "title": "2001-2006 Hyundai Elantra 2004-2009 Hyundai Tucson Seized Frozen Shifter Fix Solution",
+      "channel": "The Interior Auto Mechanic",
+      "views": 121653
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 114020,
+     "n": 6,
+     "best": {
+      "id": "n2UCJY_OQnY",
+      "title": "2008 Hyundai Tucson Rear Brake Pad Replacement",
+      "channel": "fiddlingsgc",
+      "views": 35279
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 108349,
+     "n": 3,
+     "best": {
+      "id": "DjXdFxy1Qts",
+      "title": "2005 Hyundai Tucson,crank, no start, money saving fix.",
+      "channel": "Bark's Detecting Bits",
+      "views": 96440
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 91709,
+     "n": 5,
+     "best": {
+      "id": "Fjg9sD9e7wc",
+      "title": "2006 Hyundai Tucson Driver front side control arm bushing noise",
+      "channel": "Watchdog Video",
+      "views": 27210
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 84776,
+     "n": 4,
+     "best": {
+      "id": "HefPaaHpwtY",
+      "title": "How to Change Engine Oil in a Hyundai Tucson (2005 - 2015)",
+      "channel": "Mountain Man Mo",
+      "views": 57407
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "ulMqYebaFjg",
+     "title": "Hyundai Tucson 2004-2009: The most reliable Korean SUV or a ticking time bomb?",
+     "channel": "El Weon de los autos ",
+     "views": 19064
+    },
+    {
+     "id": "g_imYFnx8_0",
+     "title": "2005 - 2009 Hyundai Tucson How to Diagnose Problems & Fix the Blower Motor Fan",
+     "channel": "Axtuo Ax",
+     "views": 18622
+    },
+    {
+     "id": "yNZ0wj-XEOI",
+     "title": "2006 Hyundai Tucson - Alternator/Charging Problems - Found the Problem & Fixed It! - Part 2",
+     "channel": "FrugalPrepper's Garage and Garden",
+     "views": 1376
     }
    ],
    "costs": null
@@ -31518,6 +31789,135 @@
      "title": "5 Things I Hate About The Mercedes C300 W205 Problems",
      "channel": "TheDurbinCompound",
      "views": 382941
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "mercedes-benz-glk/glc": [
+  {
+   "years": [
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015
+   ],
+   "gen": "2010–2015 Mercedes-Benz GLK/GLC",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 14738597,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 533635,
+     "n": 6,
+     "best": {
+      "id": "3zB5H1wtAis",
+      "title": "Reset Mercedes Service Message - 2010 GLK350",
+      "channel": "Lehew",
+      "views": 237540
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 326778,
+     "n": 3,
+     "best": {
+      "id": "0LJOWr9ZWqw",
+      "title": "How To Replace Battery On 2010 - 2015 Mercedes-Benz G-class GLK-350, GL-350, GL-450, GL-550",
+      "channel": "AutoRex",
+      "views": 304439
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 248891,
+     "n": 3,
+     "best": {
+      "id": "2JQ7VMpWP7U",
+      "title": "2013 Mercedes GLK 350 Oil Light Reset / Service Light Reset",
+      "channel": "New Vehicle Specs",
+      "views": 215693
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 123296,
+     "n": 3,
+     "best": {
+      "id": "AANxIZyBnRs",
+      "title": "Mercedes Emergency Brake Repair - 2013 GLK 350",
+      "channel": "DriverSide",
+      "views": 78405
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 81093,
+     "n": 5,
+     "best": {
+      "id": "lUFjq79kLGg",
+      "title": "Mercedes GLK (X204) Front Strut Replacement - comprehensive video with spring compression and swap",
+      "channel": "Mark H",
+      "views": 22788
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 61617,
+     "n": 2,
+     "best": {
+      "id": "7WgFyEPDFyE",
+      "title": "Mercedes GLK 350 4Matic X204 - removing and installing front axles (both left and right)",
+      "channel": "Mark H",
+      "views": 51645
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 60627,
+     "n": 1,
+     "best": {
+      "id": "_xkYPCksIdA",
+      "title": "2014 and up GLK Spark Plug Replacement",
+      "channel": "The S.A. Files",
+      "views": 60627
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 54300,
+     "n": 3,
+     "best": {
+      "id": "Mv-xYiOFl54",
+      "title": "Rear Coil Spring Replacement l Mercedes GLK & C Class In Depth Guide l W204 / X204 - Under $400",
+      "channel": "Full Throttle",
+      "views": 19987
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "uKuINy4U6C8",
+     "title": "2010 Mercedes GLK 350 4matic Review - The Beauty Of Reliability",
+     "channel": "Shooting Cars",
+     "views": 102560
+    },
+    {
+     "id": "pAOhKJP2S58",
+     "title": "TRUE COST of owning Mercedes-Benz GLK! (2008 - 2015) | Cost of Spare Parts | Common problems",
+     "channel": "234 DRIVE",
+     "views": 35519
+    },
+    {
+     "id": "GKhyMXc0JsY",
+     "title": "Mercedes GLC buyers guide X253 (2015-2022) - Reliability and common faults Mercedes GLC",
+     "channel": "The Miles Driven",
+     "views": 29069
     }
    ],
    "costs": null
