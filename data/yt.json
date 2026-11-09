@@ -21494,6 +21494,65 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2022–2025 Hyundai Tucson",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 43748001,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 157595,
+     "n": 1,
+     "best": {
+      "id": "d8Xcp5jBQcE",
+      "title": "2020-2025 Hyundai Tucson TPMS Light Reset (Tire Pressure Light)",
+      "channel": "StephenFixesThings",
+      "views": 157595
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 148476,
+     "n": 1,
+     "best": {
+      "id": "a6GBE91AW4o",
+      "title": "2022-2026 Hyundai Tucson EASY Oil Change",
+      "channel": "Cars You Can Fix",
+      "views": 148476
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "p1b4jImiVz0",
+     "title": "Should You Buy a 2025 Hyundai Tucson? Thorough Review By A Mechanic",
+     "channel": "The Car Care Nut Reviews",
+     "views": 589711
+    },
+    {
+     "id": "AlCANrfRBbk",
+     "title": "5 Reasons Why You Should Buy A 2022 Hyundai Tucson - Quick Buyer's Guide",
+     "channel": "Boston Auto Blog",
+     "views": 288800
+    },
+    {
+     "id": "lAd5rjaUjbY",
+     "title": "2025 Hyundai Tucson Hybrid Gets The Changes Buyers Want",
+     "channel": "Driven Car Reviews With Tom Voelk",
+     "views": 112832
+    }
+   ],
+   "costs": null
   }
  ],
  "chevrolet-tahoe": [
@@ -24439,7 +24498,44 @@
      "views": 861767
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 10000,
+     "lo": 10000.0,
+     "hi": 80000.0,
+     "n": 3,
+     "videos": 3,
+     "id": "dGXns-IdfUw",
+     "t": 2040,
+     "title": "MECHANIC declines $10,000 Repair! 2020 Ford Expedition 3.5 Twin Turbo"
+    },
+    "msrp": {
+     "median": 65500,
+     "lo": 60000.0,
+     "hi": 82030.0,
+     "n": 34,
+     "videos": 25,
+     "id": "UNbwYee62Rc",
+     "t": 366,
+     "title": "2018 Ford Expedition - Review and Road Test"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 960,
+       "lo": 350.0,
+       "hi": 3216.0,
+       "n": 6,
+       "videos": 3,
+       "id": "dGXns-IdfUw",
+       "t": 1943,
+       "title": "MECHANIC declines $10,000 Repair! 2020 Ford Expedition 3.5 Twin Turbo"
+      }
+     ]
+    ]
+   }
   }
  ],
  "ford-ecosport": [
