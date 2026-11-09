@@ -20381,6 +20381,309 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004
+   ],
+   "gen": "1994–2004 Ford Mustang",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 44441546,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 482533,
+     "n": 4,
+     "best": {
+      "id": "hv0zNJkuKMs",
+      "title": "How to Replace an Alternator on a 1999 - 2004 Ford Mustang 3.8L V6",
+      "channel": "lastmoto777",
+      "views": 159955
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 180063,
+     "n": 3,
+     "best": {
+      "id": "tMjuRZwp4SI",
+      "title": "2001 Ford Mustang Service Engine Soon Light Fix",
+      "channel": "FringeSniper",
+      "views": 88026
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 151323,
+     "n": 1,
+     "best": {
+      "id": "cq1N7RqW4c4",
+      "title": "Window Motor Replacement Ford Mustang 1994-2004",
+      "channel": "Danny Johnson’s Garage",
+      "views": 151323
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 132017,
+     "n": 2,
+     "best": {
+      "id": "Fnjb1q0xtyY",
+      "title": "Ford Mustang (1994 - 2004) - Service the cooling system",
+      "channel": "Haynes Manuals",
+      "views": 88070
+     }
+    },
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 97115,
+     "n": 1,
+     "best": {
+      "id": "rWbMYhp-dxU",
+      "title": "How To Replace Ford Mustang Oil Filter Adapter Gasket (1996-2012)",
+      "channel": "Late Model Restoration (LMR)",
+      "views": 97115
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 90751,
+     "n": 1,
+     "best": {
+      "id": "FLAbwWPwmek",
+      "title": "1996 MUSTANG GT WATER PUMP REPLACEMENT 1994-2004",
+      "channel": "TheRykerDane",
+      "views": 90751
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 88836,
+     "n": 1,
+     "best": {
+      "id": "qnyFILmE2Ns",
+      "title": "Struts and Shocks install Ford Mustang 1994-2004",
+      "channel": "Danny Johnson’s Garage",
+      "views": 88836
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 72205,
+     "n": 1,
+     "best": {
+      "id": "4cu_37FyQqM",
+      "title": "Fuel Filter Replacement Ford Mustang 1994-2004: How to replace a fuel filter",
+      "channel": "Danny Johnson’s Garage",
+      "views": 72205
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "vlAbDRBZYuk",
+     "title": "Top 5 Problems Ford Mustang Coupe 1994-2004 4th Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 214213
+    },
+    {
+     "id": "TMKyjs1F5yU",
+     "title": "1994-2004 Ford Mustang SN95 Buyer's Guide (Common Problems, Engines, Specs)",
+     "channel": "Useful Vids",
+     "views": 158141
+    },
+    {
+     "id": "fmb3dNnJ2_8",
+     "title": "Raving Reviewer. Known Problems on the 1994-2004 Mustang.",
+     "channel": "JC316",
+     "views": 94184
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014
+   ],
+   "gen": "2005–2014 Ford Mustang",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 58776774,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 684064,
+     "n": 5,
+     "best": {
+      "id": "iySmMQM5OLE",
+      "title": "Starter Replacement Ford Mustang 2005-2010",
+      "channel": "2CarPros",
+      "views": 195979
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 435245,
+     "n": 2,
+     "best": {
+      "id": "i62wXwGcSuM",
+      "title": "How to repair Mustang S197 chronic door panel insert issues once and for all",
+      "channel": "Doc's Boost",
+      "views": 335761
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 300350,
+     "n": 2,
+     "best": {
+      "id": "Hu0WdgkjTLI",
+      "title": "Check Engine Light! 2006 Ford Mustang GT P0171 P2195 P1000",
+      "channel": "Rainman Ray's Repairs",
+      "views": 175990
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 296406,
+     "n": 2,
+     "best": {
+      "id": "b7cB2M0zCfc",
+      "title": "2006 FORD MUSTANG STALLING NO START NO COMMUNICATION PCM DIODE",
+      "channel": "ADVANCED LEVEL AUTO",
+      "views": 148789
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 218336,
+     "n": 2,
+     "best": {
+      "id": "bXBKl6mVKp0",
+      "title": "How To Replace Cabin Air Filter On 2005-2009 Ford Mustang",
+      "channel": "Martin's Used Cars & Collectibles LLC",
+      "views": 122770
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 198163,
+     "n": 2,
+     "best": {
+      "id": "Z-n-U_B9qKE",
+      "title": "How To Change Automatic Transmission Fluid and Filter - Ford Mustang (2005-2010 4.0L V6)",
+      "channel": "Make It Easy Mechanic",
+      "views": 102495
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 182065,
+     "n": 1,
+     "best": {
+      "id": "GIX9yvIV_qY",
+      "title": "How To Fix Sputtering/Hesitation/Misfire under Acceleration on a 2005-10 Ford Mustang",
+      "channel": "Elijah Martin",
+      "views": 182065
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 117783,
+     "n": 1,
+     "best": {
+      "id": "1faPs9jZiVE",
+      "title": "How to Replace Front Strut 2005-14 Ford Mustang",
+      "channel": "TRQ",
+      "views": 117783
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "HCg7yHK6DQ0",
+     "title": "Should You Buy a 2018 Mustang GT Over a 2013 Mustang GT? - Which is Better? (In Depth Comparison)",
+     "channel": "ThatDudeinBlue",
+     "views": 576457
+    },
+    {
+     "id": "gMbsTbipGyI",
+     "title": "Should You BUY A 2005-2009 Mustang GT!?",
+     "channel": "Nate Rider",
+     "views": 518889
+    },
+    {
+     "id": "byDhTBny918",
+     "title": "Top 5 Problems Ford Mustang Coupe 5th Generation 2005-14",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 431290
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2024,
+    2025
+   ],
+   "gen": "2024–2025 Ford Mustang",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 52216519,
+   "topics": [
+    {
+     "name": "Transmission & shifter",
+     "views": 70425,
+     "n": 1,
+     "best": {
+      "id": "Ghy8o3xNUzM",
+      "title": "2025 FORD 10spd Transmission RECALL w/NextGen Engineer. F-150, Bronco, Ranger, Explorer, Mustang",
+      "channel": "The Car Guy Online",
+      "views": 70425
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "N2T3ROv2IxM",
+     "title": "Should You Buy the 2024 Mustang GT?",
+     "channel": "Professor Drives",
+     "views": 84980
+    },
+    {
+     "id": "nZI0rl5Os_I",
+     "title": "Should You BUY the S650 Mustang GT over an S550?",
+     "channel": "StangTimes",
+     "views": 32853
+    },
+    {
+     "id": "4YIl1fklFKU",
+     "title": "Should You Buy a Ford Mustang Convertible?! // 2024 Ford Mustang GT Convertible REVIEW",
+     "channel": "JAX Automotive",
+     "views": 32564
+    }
+   ],
+   "costs": null
   }
  ],
  "toyota-4runner": [
@@ -22096,6 +22399,268 @@
      "title": "Is Jeep Really Junk? Wrangler And Gladiator Reliability In 2024",
      "channel": "Jason Samko",
      "views": 73159
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "ford-edge": [
+  {
+   "years": [
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014
+   ],
+   "gen": "2007–2014 Ford Edge",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 20655600,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 894684,
+     "n": 5,
+     "best": {
+      "id": "xN8EudjkhRI",
+      "title": "2013 Ford Edge Limited heat or cool not working/climate control system reset! Blowing ￼hot or cold￼",
+      "channel": "The Meticulous Repair Tech",
+      "views": 458200
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 708954,
+     "n": 6,
+     "best": {
+      "id": "wEggEI0JEws",
+      "title": "Water Pump Leak on 2007,2008, 2009 ,2010 Ford Edge 3.5 L Fail",
+      "channel": "Craig's Car Care",
+      "views": 241836
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 643107,
+     "n": 8,
+     "best": {
+      "id": "PpCfJYmV1ls",
+      "title": "How to Replace the alternator Ford Edge 2007 - 2014",
+      "channel": "Haynes Manuals",
+      "views": 230256
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 609015,
+     "n": 8,
+     "best": {
+      "id": "EqIkUE46Kvk",
+      "title": "2007-2015 Ford Edge MKX low brake pedal fix",
+      "channel": "Rust Belt Auto",
+      "views": 141547
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 600358,
+     "n": 3,
+     "best": {
+      "id": "ZZSWnnflAto",
+      "title": "How to fix \"door ajar\" issue on 2012 Ford Edge with a screwdriver",
+      "channel": "J Haltom",
+      "views": 370031
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 480627,
+     "n": 8,
+     "best": {
+      "id": "OY1MpTPcdD4",
+      "title": "How to Replace Cabin Air Filter 2013 Ford Edge | AQ1109",
+      "channel": "Filterheads",
+      "views": 112552
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 415647,
+     "n": 5,
+     "best": {
+      "id": "t1hl4cxS61c",
+      "title": "Engine Oil Pressure warning light Glitch on 2011 Ford Edge",
+      "channel": "MACTFORDEDGE",
+      "views": 151967
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 380690,
+     "n": 3,
+     "best": {
+      "id": "GQwDFmIkapM",
+      "title": "TSS and OSS 6F50 transmission failure on 2007 2010 Ford Edge explained",
+      "channel": "MACTFORDEDGE",
+      "views": 176685
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "vollusLoatk",
+     "title": "Top 5 Problems Ford Edge SUV First Generation 2007-14",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 983494
+    },
+    {
+     "id": "Ggbth4URduk",
+     "title": "Ford Edge (Gen1, 2007-2014) - Reliability, Common Problems, Engines, Pros and Cons",
+     "channel": "MaxTheCarGuy",
+     "views": 99154
+    },
+    {
+     "id": "wgi6RfGciSc",
+     "title": "Common Problems and Issues with Your 2011 Ford Edge Limited",
+     "channel": "WillGets",
+     "views": 67795
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+   ],
+   "gen": "2015–2024 Ford Edge",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 23177309,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 1139898,
+     "n": 9,
+     "best": {
+      "id": "tLBOi3P8xL8",
+      "title": "Ford Edge Remote Key Fob Battery Replacement 2017-2024",
+      "channel": "FobBattery",
+      "views": 213239
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 386335,
+     "n": 3,
+     "best": {
+      "id": "CDe5xvG31HU",
+      "title": "How to Replace Rear Brake Pads and Rotor Ford Edge 2015-2023 | Sizes and Torque Specs!",
+      "channel": "2CarPros",
+      "views": 182670
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 324024,
+     "n": 4,
+     "best": {
+      "id": "k28bTrFrcDY",
+      "title": "Dealer Tech Diag - 2017 Ford Edge 2.0L Ecoboost Coolant Loss and Running Rough - Long Block Replace",
+      "channel": "Ford Boss Me - Auto / Politics / Family   ",
+      "views": 131060
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 242713,
+     "n": 4,
+     "best": {
+      "id": "zExFo6JzhFM",
+      "title": "2019 ford edge heater reset quick fix! if your heaters not working.",
+      "channel": "Jon p",
+      "views": 82812
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 138459,
+     "n": 1,
+     "best": {
+      "id": "TI9_IxTn2sc",
+      "title": "2015 - 2022 Ford Edge Door Code - How To Find Keypad Door Code Keyless Entry Securicode Retrieve",
+      "channel": "PYR Automotive ",
+      "views": 138459
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 97980,
+     "n": 1,
+     "best": {
+      "id": "k6CK5O7eNpM",
+      "title": "Ford Edge - Reset / Clear TPMS Tire Pressure Light (2015 - 2024)",
+      "channel": "QuiteAlright",
+      "views": 97980
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 87037,
+     "n": 1,
+     "best": {
+      "id": "wNelmrG35tg",
+      "title": "How to Replace Spark Plugs Ford Edge 2.0L 2015-2023 | EASY!",
+      "channel": "2CarPros",
+      "views": 87037
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 68884,
+     "n": 2,
+     "best": {
+      "id": "XRzMFFdAr90",
+      "title": "Ford Edge - FORD SYNC RESET (Hard and Soft Reset) 2015 - 2024",
+      "channel": "QuiteAlright",
+      "views": 34642
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "0iZzzICsVTI",
+     "title": "Ford Edge 2nd Gen 2015 to 2021 common problems, issues, defects, recalls and complaints",
+     "channel": "HOWSTUFFINMYCARWORKS",
+     "views": 96644
+    },
+    {
+     "id": "Hy1umCdWoCY",
+     "title": "5 Reasons Why You Should Buy A 2022 Ford Edge - Quick Buyer's Guide",
+     "channel": "Boston Auto Blog",
+     "views": 88690
+    },
+    {
+     "id": "3iUixydTF5M",
+     "title": "Ford Edge - TOP PROBLEMS & ISSUES 2015 - 2024 (common fixes, repairs, defects)",
+     "channel": "QuiteAlright",
+     "views": 55649
     }
    ],
    "costs": null
