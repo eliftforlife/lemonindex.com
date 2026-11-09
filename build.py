@@ -543,7 +543,7 @@ def yt_note(f):
     sc = YTS.get(f['id'])
     if not sc: return ''
     n = round(sum(s.get('videos') or 0 for s in sc.values())); yrs = sorted(int(y) for y, s in sc.items() if s.get('score') is not None)
-    best = max((int(y) for y, s in sc.items() if s.get('score') is not None), key=lambda y: sc[str(y)]['score'])
+    best = max((int(y) for y, s in sc.items() if s.get('score') is not None), key=lambda y: (sc[str(y)]['score'], sc[str(y)]['videos'], y))   # 11-08: same tie-break as the bars' #1 (score, then videos)
     return (f'<p class="yc-cap"><b>YouTube rank:</b> we read {n:,} YouTube videos about the {f["name"]}, {yrs[0]} to {yrs[-1]}, and ranked every year by how much they praise it '
             f'vs. how much they talk about problems. YouTube&#39;s favorite: <b>{best}</b>. Old cars rank lower partly because most of their videos are repair and restoration videos. A gray dot means too few videos to rank.</p>')
 # 11-08 (Elijah: "make the top of every car model page answer '<car> reliability' from the YouTube stuff, maybe a different ranking"):
