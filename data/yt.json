@@ -17984,7 +17984,26 @@
      "views": 524868
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 50,
+       "lo": 20.0,
+       "hi": 4000.0,
+       "n": 3,
+       "videos": 3,
+       "id": "W4WntfoWWpc",
+       "t": 204,
+       "title": "How to Clean Transmission Linear Solenoid 2000 Honda Odyssey"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -18803,7 +18822,26 @@
      "views": 30279
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 40,
+       "lo": 30.0,
+       "hi": 50.0,
+       "n": 4,
+       "videos": 4,
+       "id": "YgBz8Mz-XFQ",
+       "t": 117,
+       "title": "2008 Hyundai Santa Fe Limited with A/C Climate control issues on driver's side."
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -18918,7 +18956,35 @@
      "views": 69269
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 38000,
+     "lo": 32500.0,
+     "hi": 40000.0,
+     "n": 19,
+     "videos": 11,
+     "id": "yZ06CvGlkCw",
+     "t": 1390,
+     "title": "2019 Hyundai Santa Fe – \"Edgey\" New Crossover"
+    },
+    "items": [
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 445,
+       "lo": 250.0,
+       "hi": 640.0,
+       "n": 2,
+       "videos": 2,
+       "id": "2uRqUNq_8ag",
+       "t": 23,
+       "title": "2023 Hyundai Santa Fe Limited AWD | Best Value in the Lineup?"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -18997,7 +19063,30 @@
      "views": 5252
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 38000,
+     "lo": 30000.0,
+     "hi": 46000.0,
+     "n": 4,
+     "videos": 4,
+     "id": "RZ3NwpJNiXY",
+     "t": 2003,
+     "title": "2024 Hyundai Santa Fe - POV Driving Impressions"
+    },
+    "msrp": {
+     "median": 38500,
+     "lo": 34200.0,
+     "hi": 45000.0,
+     "n": 47,
+     "videos": 37,
+     "id": "6MamKI2sugQ",
+     "t": 115,
+     "title": "2024 Hyundai Santa Fe Review // Imposter Syndrome"
+    },
+    "items": []
+   }
   }
  ],
  "kia-sorento": [
@@ -21256,6 +21345,133 @@
      "title": "2006 Hyundai Tucson - Alternator/Charging Problems - Found the Problem & Fixed It! - Part 2",
      "channel": "FrugalPrepper's Garage and Garden",
      "views": 1376
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015
+   ],
+   "gen": "2010–2015 Hyundai Tucson",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 13461904,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 759755,
+     "n": 8,
+     "best": {
+      "id": "GnbbpU0eqUs",
+      "title": "Hyundai Tucson Key Fob Battery Replacement (2014 - 2019)",
+      "channel": "FobBattery",
+      "views": 316983
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 565314,
+     "n": 4,
+     "best": {
+      "id": "CfCzIDoX5z0",
+      "title": "Hyundai Tucson Brakelight Change 2015- 2019-Same for Most Years!",
+      "channel": "Flashback502",
+      "views": 338975
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 225681,
+     "n": 2,
+     "best": {
+      "id": "wz44ovfyWgc",
+      "title": "How To Reset Service Light on Hyundai Tucson 2014- 2019",
+      "channel": "Vehix411 KARMAN AUTO",
+      "views": 200204
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 218662,
+     "n": 6,
+     "best": {
+      "id": "Sj9bixz5QZ4",
+      "title": "How to replace Trunk Tail gate door Actuator Latch On Hyundai Tucson 2010-2015",
+      "channel": "FixAlex",
+      "views": 62944
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 213933,
+     "n": 8,
+     "best": {
+      "id": "ZDxkW3RO5nY",
+      "title": "Hyundai Tucson 2014 -2023 Cabin Air Filter How To Replace or Change (EASY!)",
+      "channel": "Tinker Forward",
+      "views": 57874
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 182471,
+     "n": 1,
+     "best": {
+      "id": "xXI4bXsxrI4",
+      "title": "Hyundai Tucson Spark Plug Change 2014-2019--Easy!",
+      "channel": "Flashback502",
+      "views": 182471
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 179107,
+     "n": 3,
+     "best": {
+      "id": "oBwLAH-2nSQ",
+      "title": "Hyundai Tucson 1.6T | Oil Change DIY | 2015-2017",
+      "channel": "In The Garage DIY",
+      "views": 138945
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 128351,
+     "n": 3,
+     "best": {
+      "id": "4Iz-525OAqo",
+      "title": "Intake Manifold Runner Controller DIY Replacement - 2013 Hyundai Tucson 2.4L (Codes P200A & P2004)",
+      "channel": "Double Clutch Auto Reviews",
+      "views": 84246
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "iImZjVEvCK8",
+     "title": "Top 5 Problems Hyundai Tucson SUV 3rd Generation 2015-20",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 740899
+    },
+    {
+     "id": "75vt6_-wjdk",
+     "title": "Hyundai Tucson 3rd gen 2015 to 2020 common problems, issues, defects, recalls and complaints",
+     "channel": "HOWSTUFFINMYCARWORKS",
+     "views": 41331
+    },
+    {
+     "id": "QV2YNEK5UIc",
+     "title": "2012 Hyundai Tucson 2.0 Automatic Review - Used SUVs 2019",
+     "channel": "Carro Chefe",
+     "views": 1135507
     }
    ],
    "costs": null
@@ -31918,6 +32134,159 @@
      "title": "Mercedes GLC buyers guide X253 (2015-2022) - Reliability and common faults Mercedes GLC",
      "channel": "The Miles Driven",
      "views": 29069
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022
+   ],
+   "gen": "2016–2022 Mercedes-Benz GLK/GLC",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 50198354,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 492836,
+     "n": 3,
+     "best": {
+      "id": "fZrtTUxEVxc",
+      "title": "2018 Mercedes glc 300 service reset",
+      "channel": "Gearhead slick",
+      "views": 314530
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 263426,
+     "n": 1,
+     "best": {
+      "id": "3zfE83tjJco",
+      "title": "Mercedes Benz GLC 2016-2020 Rear Brake Pad Replacement *ELECTRIC PARK BRAKE* No computer needed",
+      "channel": "AutoMotiv8ed",
+      "views": 263426
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 185882,
+     "n": 2,
+     "best": {
+      "id": "VPnqGzoErdM",
+      "title": "Replace 2018 Mercedes GLC Battery",
+      "channel": "Ed's Handyman Tips",
+      "views": 94629
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 159108,
+     "n": 1,
+     "best": {
+      "id": "89CISM8BeIo",
+      "title": "How to Replace Cabin Air Filter 2016-2022 Mercedes-Benz GLC300",
+      "channel": "TRQ",
+      "views": 159108
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 72709,
+     "n": 1,
+     "best": {
+      "id": "AbTb1C2V5AA",
+      "title": "Service light rest on 2019 glc 300 Mercedes",
+      "channel": "FERNANDO VALDOVINOS ",
+      "views": 72709
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 65934,
+     "n": 1,
+     "best": {
+      "id": "RbbgVnp5y18",
+      "title": "MERCEDES GLC300 X253 9G-TRONIC TRANSMISSION OIL FILTER FLUID HOW TO SERVICE CHANGE REPLACE PROCEDURE",
+      "channel": "Project ATHOS   ",
+      "views": 65934
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "1tpJo78XdhY",
+     "title": "New 2020 Mercedes GLC Already Has Problems...Not Even 1 Month Old!",
+     "channel": "POGAuto",
+     "views": 145756
+    },
+    {
+     "id": "pa3nAOTYWpU",
+     "title": "Mercedes GLC SUV 2020 review | carwow Reviews",
+     "channel": "carwow",
+     "views": 2711128
+    },
+    {
+     "id": "IBS8d_niFRg",
+     "title": "Mercedes GLC vs Range Rover Evoque vs BMW X3 SUV 2017 review | Head2Head",
+     "channel": "carwow",
+     "views": 1320061
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2023–2025 Mercedes-Benz GLK/GLC",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 32864155,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 95838,
+     "n": 1,
+     "best": {
+      "id": "JFoIzHK1XrU",
+      "title": "2024 Mercedes Benz GLC 300 Oil/Service Message Reset",
+      "channel": "Garrison Auto Solutions",
+      "views": 95838
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "cdhGf4Zw_-s",
+     "title": "5 Reasons Why You Should Buy A 2023 Mercedes Benz GLC - Quick Buyer's Guide",
+     "channel": "Boston Auto Blog",
+     "views": 30007
+    },
+    {
+     "id": "noysnf2wnvc",
+     "title": "2025 MERCEDES GLC SUV VS GLB SUV WHICH SHOULD YOU BUY?! Full In-Depth Review Exterior Interior MBUX",
+     "channel": "Ivan Sensei",
+     "views": 20284
+    },
+    {
+     "id": "t6KoEJWLe78",
+     "title": "Mercedes GLC 2023 Review",
+     "channel": "carwow",
+     "views": 2365839
     }
    ],
    "costs": null
