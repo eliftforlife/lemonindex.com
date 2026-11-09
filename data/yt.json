@@ -20233,7 +20233,26 @@
      "views": 9057
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 54,
+       "lo": 50.0,
+       "hi": 58.0,
+       "n": 4,
+       "videos": 3,
+       "id": "wdjbzQuAhhg",
+       "t": 1385,
+       "title": "2010 Subaru Outback Inspection & Diagnostic: P0340 Camshaft Position Sensor Diagnostic Procedure!"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
