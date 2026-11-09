@@ -19981,7 +19981,39 @@
      "views": 38077
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 50,
+       "lo": 40.0,
+       "hi": 70.0,
+       "n": 5,
+       "videos": 4,
+       "id": "fspi08YX0fY",
+       "t": 196,
+       "title": "2002 Subaru Outback H6 3.0 L.L. Bean Edition Walkaround, Start up, Tour and Updates"
+      }
+     ],
+     [
+      "Fuel pump",
+      {
+       "median": 400,
+       "lo": 350.0,
+       "hi": 450.0,
+       "n": 2,
+       "videos": 2,
+       "id": "jJmarGkH07Q",
+       "t": 726,
+       "title": "2002 Subaru Outback fuel pump troubleshoot"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -20107,7 +20139,44 @@
      "views": 158404
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 30000,
+     "lo": 10000.0,
+     "hi": 40000.0,
+     "n": 3,
+     "videos": 3,
+     "id": "9KwQTVuDJ4U",
+     "t": 121,
+     "title": "2005 Subaru Outback Review"
+    },
+    "msrp": {
+     "median": 26500,
+     "lo": 13520.0,
+     "hi": 37000.0,
+     "n": 6,
+     "videos": 6,
+     "id": "8nHS4s5pjnQ",
+     "t": 327,
+     "title": "2007 Subaru Outback Review - Kelley Blue Book"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 400,
+       "lo": 150.0,
+       "hi": 5500.0,
+       "n": 9,
+       "videos": 4,
+       "id": "6SrqJMGepAg",
+       "t": 1163,
+       "title": "2007 Outback Full Inspection: How Much Will This Bargain Subaru Cost To Make Mechanically Sound?!"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -26846,6 +26915,70 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2017–2025 Mazda CX-5",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 60766185,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 576116,
+     "n": 3,
+     "best": {
+      "id": "GzDkmUGDQmg",
+      "title": "Reset service light on 2017 Mazda CX-5",
+      "channel": "DIY Automotive Resets!",
+      "views": 281256
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 342505,
+     "n": 2,
+     "best": {
+      "id": "LKlnrLfBAA8",
+      "title": "2022 Mazda CX-5 Infotainment Tutorial | How To Use Menus & Apple CarPlay",
+      "channel": "Jonathan Sewell",
+      "views": 173520
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "GQSXA2QqkNg",
+     "title": "Should You Buy a 2024 Mazda CX-5? Thorough Review By A Mechanic",
+     "channel": "The Car Care Nut Reviews",
+     "views": 915049
+    },
+    {
+     "id": "0G_9GymITbc",
+     "title": "Mazda CX-5 (2017–2026): A Complete Reliability Guide",
+     "channel": "The Long Last Expert",
+     "views": 494899
+    },
+    {
+     "id": "zXozPN8IT3M",
+     "title": "2017-2025 Mazda CX-5 130k Mile Review & Reliability!",
+     "channel": "Realistick",
+     "views": 297227
+    }
+   ],
+   "costs": null
   }
  ],
  "mazda-cx-9": [
@@ -31732,6 +31865,134 @@
      "title": "Mazda 6 2020 in-depth review | carwow Reviews",
      "channel": "carwow",
      "views": 2313955
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "dodge-charger": [
+  {
+   "years": [
+    2006,
+    2007,
+    2008,
+    2009,
+    2010
+   ],
+   "gen": "2006–2010 Dodge Charger",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 20928245,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 706395,
+     "n": 5,
+     "best": {
+      "id": "jyyBchZD-ME",
+      "title": "How-To #8: Reset Cluster Gauge/Dashboard - 2006-2010 Dodge Charger + Other LX Models",
+      "channel": "Marspeed",
+      "views": 369619
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 611038,
+     "n": 5,
+     "best": {
+      "id": "8d1LcFUcpNE",
+      "title": "How to Replace Front Lower Ball Joints 2006-10 Dodge Charger",
+      "channel": "TRQ",
+      "views": 201561
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 543267,
+     "n": 4,
+     "best": {
+      "id": "BIdy3HIwZis",
+      "title": "2008-2011 Chrysler 300, Dodge Charger, and Dodge Magnum starter relay issues",
+      "channel": "MotorCity Mechanic",
+      "views": 292454
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 482422,
+     "n": 3,
+     "best": {
+      "id": "WsuwTRstzSU",
+      "title": "Dodge charger 2008 wont start fix #dodgecharger",
+      "channel": "Mube",
+      "views": 285954
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 331098,
+     "n": 4,
+     "best": {
+      "id": "FJYLprjql_A",
+      "title": "How to Replace Radiator 2006-10 Dodge Charger",
+      "channel": "TRQ",
+      "views": 139868
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 197902,
+     "n": 2,
+     "best": {
+      "id": "R9i49oG8waA",
+      "title": "How To Replace 2006-2010 Dodge Charger Intake Manifold Runner Valve - P1004 Code Fix!",
+      "channel": "Martin's Used Cars & Collectibles LLC",
+      "views": 108628
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 196281,
+     "n": 3,
+     "best": {
+      "id": "iDjA6XqxXaQ",
+      "title": "Changing Spark Plugs How To 3.5L V6 Dodge Charger 2006 2007 2008 2009 2010 EGG Mechanic Fix",
+      "channel": "BAKER REBUILDS",
+      "views": 72620
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 184205,
+     "n": 3,
+     "best": {
+      "id": "DfPtLu8ZvWI",
+      "title": "How to Replace Cabin Air Filter 2006-10 Dodge Charger",
+      "channel": "TRQ",
+      "views": 86549
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "6sZD_rF29-4",
+     "title": "Top 5 Problems Dodge Charger Sedan 6th Generation 2006-2010",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 358357
+    },
+    {
+     "id": "bKh20wjcN-Q",
+     "title": "2006-2010 Used Dodge Charger SE, SXT, R/T, SRT8 Buying Guide - Should you buy this car?",
+     "channel": "Marspeed",
+     "views": 220197
+    },
+    {
+     "id": "DT9hhrwEOHA",
+     "title": "Are 2006-2010 Dodge Chargers still reliable? (2008 Dodge Charger RT Hemi)",
+     "channel": "Seth Boyer",
+     "views": 65236
     }
    ],
    "costs": null
