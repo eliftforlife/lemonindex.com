@@ -3207,6 +3207,509 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2000
+   ],
+   "gen": "1996–2000 Toyota RAV4",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 10045488,
+   "topics": [
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 679673,
+     "n": 7,
+     "best": {
+      "id": "yH0ViPTtpxg",
+      "title": "How to clean Toyota RAV4 throttle body. Years 2000 to 2017",
+      "channel": "Peter Finn the Car Doctor",
+      "views": 164112
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 447362,
+     "n": 2,
+     "best": {
+      "id": "qabgg9DzY9w",
+      "title": "Timing belt replacement 1997 Toyota RAV4 (episode 26)",
+      "channel": "Lab Coat Paul",
+      "views": 294923
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 443736,
+     "n": 6,
+     "best": {
+      "id": "Z_F-6Zt0AlY",
+      "title": "Toyota 2000 Rav4 Fuel Pump Removal",
+      "channel": "LonnieJohnson1",
+      "views": 217328
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 329583,
+     "n": 1,
+     "best": {
+      "id": "Ksv98JvBqXs",
+      "title": "Cylinder head gasket replacement 1997 Toyota RAV4 (episode 25)",
+      "channel": "Lab Coat Paul",
+      "views": 329583
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 276045,
+     "n": 4,
+     "best": {
+      "id": "c1gi9hoCpEI",
+      "title": "1997 RAV4 Old Man Emu lift kit installation and suspension restoration (episode 6)",
+      "channel": "Lab Coat Paul",
+      "views": 223237
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 233985,
+     "n": 5,
+     "best": {
+      "id": "UTZhpllyo7E",
+      "title": "Fixing the rattling back door 1997 Toyota RAV4 (episode 11)",
+      "channel": "Lab Coat Paul",
+      "views": 167227
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 173425,
+     "n": 3,
+     "best": {
+      "id": "0xiDh8hB3cA",
+      "title": "How to change Power Steering Fluid - Toyota / Rav4 1996 1997 1998 1999 2000 2001 2002 2003 2004 2005",
+      "channel": "tgmac8288",
+      "views": 81934
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 166625,
+     "n": 4,
+     "best": {
+      "id": "WoBbx-Fa-rM",
+      "title": "1994 - 2000 RAV4 Coolant Damaged IAC Valve Repair Pt1",
+      "channel": "Aussie50",
+      "views": 61355
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "iZ-yms38gk4",
+     "title": "1998 Toyota Rav4 5-Speed Review and Walkaround - The World's Most Reliable SUV",
+     "channel": "Jonathan Browne Menzies",
+     "views": 51026
+    },
+    {
+     "id": "dAJYf5ttSBU",
+     "title": "1997 rav4 automatic transmission problems",
+     "channel": "jades Adventures",
+     "views": 8470
+    },
+    {
+     "id": "YuMBk7G_ixc",
+     "title": "20 Year Old Gen2 Toyota RAV4 Review My New Rocky Mountain Winter Commuter Great SUV from 2000 - 2005",
+     "channel": "Jimmy Meatwhistle",
+     "views": 215542
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2001,
+    2002,
+    2003,
+    2004,
+    2005
+   ],
+   "gen": "2001–2005 Toyota RAV4",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 12184555,
+   "topics": [
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 495504,
+     "n": 2,
+     "best": {
+      "id": "-VbbJqg7CH0",
+      "title": "How to Remove a Door Panel in a Toyota RAV4 (2001 to 2005)",
+      "channel": "ChrisFix",
+      "views": 485546
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 415709,
+     "n": 7,
+     "best": {
+      "id": "cKiC0ltPtbs",
+      "title": "How To Program A Toyota RAV4 Remote Key Fob 2001 - 2005 DIY Tutorial",
+      "channel": "PYR Automotive ",
+      "views": 145866
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 296737,
+     "n": 6,
+     "best": {
+      "id": "WVMYeJ5kcm8",
+      "title": "Replace A/F sensor on RAV4 2002, fixes error code P1135",
+      "channel": "Carlos Walter",
+      "views": 111177
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 294741,
+     "n": 4,
+     "best": {
+      "id": "9lh1Sjm8pBU",
+      "title": "2003 Toyota RAV4 Serpentine Belt Replacement",
+      "channel": "Gil Skillz",
+      "views": 185094
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 197756,
+     "n": 4,
+     "best": {
+      "id": "NWBF72sqI3M",
+      "title": "How to Replace the Thermostat on a 2001 Toyota Rav4",
+      "channel": "How to Automotive",
+      "views": 91489
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 146170,
+     "n": 6,
+     "best": {
+      "id": "ldk2uH2HDkM",
+      "title": "How to Replace a Clutch | 2005 TOYOTA RAV4",
+      "channel": "Sepehr Moghani",
+      "views": 40885
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 90341,
+     "n": 2,
+     "best": {
+      "id": "9ywoth0DJis",
+      "title": "(How To) 2001-2005 Toyota RAV4 Rear Brake Change DIY",
+      "channel": "Abuzar Baloach",
+      "views": 82231
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 71504,
+     "n": 4,
+     "best": {
+      "id": "kofzgqjFFWQ",
+      "title": "2003-2005 Toyota RAV4 Vehicle Maintenance AKA \"Richard\"",
+      "channel": "Shop Dog Fabrication",
+      "views": 33478
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "oilkimK4Xi8",
+     "title": "Toyota RAV4 2002 4D4 diesel changing starter motor...Hot starting problems",
+     "channel": "jetblack11td",
+     "views": 85982
+    },
+    {
+     "id": "HJUqFEn7jUk",
+     "title": "Used Toyota RAV4 2nd gen. Reliability | Most Common Problems Faults and Issues",
+     "channel": "AutoProblems",
+     "views": 7118
+    },
+    {
+     "id": "HEebT2zUdCA",
+     "title": "Transmission ECU, ECM Shifting Problems on a Toyota RAV4 2001 by UpFix",
+     "channel": "UpFix Automotive Electronics Repair",
+     "views": 7015
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012
+   ],
+   "gen": "2006–2012 Toyota RAV4",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 198,
+   "views": 25062830,
+   "topics": [
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 1002073,
+     "n": 4,
+     "best": {
+      "id": "s6FmcC6ax6c",
+      "title": "2006 to 2008 Toyota Rav4 VSC,4WD and check engine lights on part 2",
+      "channel": "Jeff Carbuoy",
+      "views": 351508
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 993786,
+     "n": 6,
+     "best": {
+      "id": "PCvKvaKiowI",
+      "title": "Installing New Android Radio With Backup Camera and Navigation on a \"2009 Toyota RAV4\"",
+      "channel": "Adonay Lopez DIY",
+      "views": 579856
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 682542,
+     "n": 4,
+     "best": {
+      "id": "7l0bzUkvo8U",
+      "title": "2009 to 2012 Toyota Rav4 Oil Change",
+      "channel": "This Guy (This Guy Productions)",
+      "views": 429899
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 674498,
+     "n": 5,
+     "best": {
+      "id": "nFkQhpnucQY",
+      "title": "How To Change The Transmission Fluid And Filter On A Toyota RAV4 (2005-2012)",
+      "channel": "How to Automotive",
+      "views": 345087
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 537039,
+     "n": 2,
+     "best": {
+      "id": "4lhhgbwqa_0",
+      "title": "Turn off maintenance required light Toyota rav4 2006 to 2008",
+      "channel": "All Electric",
+      "views": 275898
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 516084,
+     "n": 9,
+     "best": {
+      "id": "Q2jXAnj30U4",
+      "title": "How to Replace Rear Shock 2006-12 Toyota RAV4",
+      "channel": "TRQ",
+      "views": 117254
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 300911,
+     "n": 4,
+     "best": {
+      "id": "SJ2WjelkfME",
+      "title": "2006 to 2008 Toyota Rav4 VSC, 4WD, ABS and check engine lights on part 3.",
+      "channel": "Jeff Carbuoy",
+      "views": 136708
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 226616,
+     "n": 1,
+     "best": {
+      "id": "bL4qwmwukLk",
+      "title": "2006-2012 Rav4: Throttle Body, Intake, MAF, & Injector Service",
+      "channel": "MasterJacks",
+      "views": 226616
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "jJEmRasoxfM",
+     "title": "Toyota RAV4 SUV 2006 - 2012 review - CarBuyer",
+     "channel": "Carbuyer",
+     "views": 1125322
+    },
+    {
+     "id": "1_cZ5RfMTyw",
+     "title": "Top 5 Problems Toyota RAV4 SUV 3rd Generation 2006-2012",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 945835
+    },
+    {
+     "id": "T3F-r5uzOjM",
+     "title": "Toyota RAV4 (3rd Gen) - How Reliable Are They Really? Review, 0-60, Off Road, Cargo (2006-2012)",
+     "channel": "Not-So-Handy Car Guy",
+     "views": 271168
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018
+   ],
+   "gen": "2013–2018 Toyota RAV4",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 34984253,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 947996,
+     "n": 5,
+     "best": {
+      "id": "fmgoDvco6dc",
+      "title": "How to Oil Change Toyota Rav4 2.5L 4 Cylinder 2013 -2016 DIY and save money",
+      "channel": "Adam Bedz",
+      "views": 519553
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 699339,
+     "n": 2,
+     "best": {
+      "id": "2576urrXyb0",
+      "title": "How To Reset Maintenance Required Light in Toyota Rav4 2013-2016",
+      "channel": "DIY Save",
+      "views": 465679
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 619969,
+     "n": 7,
+     "best": {
+      "id": "zthv0qkmJC8",
+      "title": "2013-2014 Toyota Rav4 radio removal and tips.",
+      "channel": "MCD Motors",
+      "views": 112510
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 161966,
+     "n": 2,
+     "best": {
+      "id": "u1KE_apvOw0",
+      "title": "How to change transmission fluid on 2013 2014 2015 2016 2017 2018 Toyota RAV4 ￼",
+      "channel": "Master Tech",
+      "views": 113755
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 149016,
+     "n": 1,
+     "best": {
+      "id": "owyRh3BaPXU",
+      "title": "Toyota Rav4 2013 - 2017 Front Brake Pad and Rotor Replacement - How To",
+      "channel": "RM Garage",
+      "views": 149016
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 134795,
+     "n": 2,
+     "best": {
+      "id": "7jmryzNRPzA",
+      "title": "Rear Toyota shock absorber replacement: 2006 - 2018 Rav4 / Change Your Rear shock absorber",
+      "channel": "DIYAutoworksNG",
+      "views": 72792
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 126275,
+     "n": 1,
+     "best": {
+      "id": "ot0WUm4kdNE",
+      "title": "2013 Toyota Rav4 how to change or replace cabin air filter cleaner DIY easy maintenance 2014",
+      "channel": "Adam Bedz",
+      "views": 126275
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 88364,
+     "n": 1,
+     "best": {
+      "id": "zhd_7Nb9bHk",
+      "title": "DIY Oil Change Guide for Toyota RAV4 (2013-2018)",
+      "channel": "Mr. Stukov",
+      "views": 88364
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "1bsgHGjjGw0",
+     "title": "Toyota RAV4 SUV 2013 review - CarBuyer",
+     "channel": "Carbuyer",
+     "views": 624064
+    },
+    {
+     "id": "xurXtgt9SEw",
+     "title": "Top 5 Problems Toyota RAV4 SUV 2013-2018 4th Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 416947
+    },
+    {
+     "id": "KIAq0M3BUWQ",
+     "title": "Should you buy a 2013-2018 Toyota RAV4 and RAV4 Hybrid?",
+     "channel": "The Car Care Nut",
+     "views": 400730
+    }
+   ],
+   "costs": null
   }
  ],
  "honda-cr-v": [
