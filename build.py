@@ -1213,6 +1213,7 @@ legal('/privacy/', 'Privacy policy', f'''<p>{LEGAL_NAME} ("we") runs lemonindex.
 <h2>If you donate or give us your email</h2><p>Donations are handled by Stripe; we never see or store your card number. If you give us your email, we use it to send car-buying tips and new studies, and every email has an unsubscribe link.</p>
 <h2>Instagram shout-outs for donors</h2><p>When you donate, the Stripe checkout asks if you want a shout-out on our Instagram story. It&#39;s optional. If you type a name or handle there, we may post it with a thank-you (never the amount). Leave it blank and we never name you. Email us any time and we&#39;ll take a story down.</p>
 <h2>The "Help our site" questions</h2><p>Answers are anonymous. We store your answer, the page and car you were on, and a daily scrambled code (a one-way hash of your IP address and the date) that only stops repeat answers. We never store your IP address, and there&#39;s no email, name or account.</p>
+<h2>The feedback box</h2><p>Feedback messages and optional emails are stored to improve the site and never sold. We don&#39;t store your IP address with them.</p>
 <h2>Sharing</h2><p>We don&#39;t sell your personal information. We share it only with the services that run the site (hosting, sign-in, email, Stripe) and when the law requires it.</p>
 <h2>Your choices</h2><p>Email <a href="mailto:{CONTACT}">{CONTACT}</a> to get a copy of your data or to have it deleted.</p>
 <p>{LEGAL_NAME}, {ADDRESS}.</p>''', 'Privacy Policy: What We Collect and Why | Lemon Index',
