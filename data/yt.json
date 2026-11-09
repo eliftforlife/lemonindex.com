@@ -19797,6 +19797,463 @@
    "costs": null
   }
  ],
+ "ford-expedition": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002
+   ],
+   "gen": "1997–2002 Ford Expedition",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 10744469,
+   "topics": [
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 744369,
+     "n": 8,
+     "best": {
+      "id": "cYZ1AzZSlAo",
+      "title": "How To Fix Ford Auto Power Door Locks & Relay Replacement (1998-04) F-150 Mustang Taurus Expedition",
+      "channel": "ATEM OFFROAD",
+      "views": 217343
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 417157,
+     "n": 7,
+     "best": {
+      "id": "yctAwEkrRX8",
+      "title": "How to Install Fuel Pump E2297S 1999 - 2002 Ford Expedition & 1999 Lincoln Navigator",
+      "channel": "Airtex-ASC Performance Pumps",
+      "views": 253265
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 344968,
+     "n": 7,
+     "best": {
+      "id": "wQwcD9_jEhQ",
+      "title": "No Crank No Start Troubleshoot & SOLUTION 2001 Ford Expedition Starter Solenoid Problem Solved",
+      "channel": "Sam B",
+      "views": 104205
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 322574,
+     "n": 3,
+     "best": {
+      "id": "e9ntx06b5vg",
+      "title": "2001 FORD EXPEDITION: CRANK NO START, KEY ISSUE",
+      "channel": "Joey Shelton",
+      "views": 291654
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 229032,
+     "n": 7,
+     "best": {
+      "id": "qPP5raD8OR4",
+      "title": "2001 Expedition Front Brake Pad Replacement",
+      "channel": "John Dobis (CarRepairsMadeEasy)",
+      "views": 99434
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 212930,
+     "n": 5,
+     "best": {
+      "id": "IhG7arNf0Ck",
+      "title": "2001 Ford Expedition - Low or No Heat - (Reverse) Heater Core Flush",
+      "channel": "BryzGarage",
+      "views": 112476
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 205146,
+     "n": 4,
+     "best": {
+      "id": "T9DMZ73e7zg",
+      "title": "2000 Expedition coolant leak (crossover)",
+      "channel": "Auto-Motive-ish",
+      "views": 106257
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 179112,
+     "n": 3,
+     "best": {
+      "id": "ZAc8gBdIjzg",
+      "title": "2001 Ford Expedition Mass Air Flow Sensor - CRC cleaner - try this first.",
+      "channel": "broomballusba12",
+      "views": 146098
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "L7svJjZTlgw",
+     "title": "2000 Ford Expedition Review (Start Up, In Depth Tour, Engine)",
+     "channel": "PatrickReyesTV",
+     "views": 262256
+    },
+    {
+     "id": "H4mkkCBuWyU",
+     "title": "1997 Ford Expedition | Retro Review",
+     "channel": "MotorWeek",
+     "views": 115452
+    },
+    {
+     "id": "YyyyjoxZEPM",
+     "title": "1999 FORD EXPEDITION OVERVIEW Start up, walk around tour, review",
+     "channel": "AutomotiveReview",
+     "views": 114348
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2003,
+    2004,
+    2005,
+    2006
+   ],
+   "gen": "2003–2006 Ford Expedition",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 11385808,
+   "topics": [
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 1953232,
+     "n": 10,
+     "best": {
+      "id": "dP5AZp8tLnY",
+      "title": "2003-2006 Ford Expedition: Rear HVAC Temperature Blend Actuator Clicking Repair",
+      "channel": "FordTechMakuloco",
+      "views": 663408
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 1046721,
+     "n": 10,
+     "best": {
+      "id": "-4wLkc08Zwo",
+      "title": "Diagnosing No Start / No Crank/Replace Starter 2006 Ford Expedition",
+      "channel": "Jimthecarguy",
+      "views": 351716
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 849937,
+     "n": 5,
+     "best": {
+      "id": "QYMkXKcdYP4",
+      "title": "2003-2006 Ford Expedition Crank No Start Diagnosis",
+      "channel": "FordTechMakuloco",
+      "views": 794052
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 494584,
+     "n": 8,
+     "best": {
+      "id": "xtttAUYumvs",
+      "title": "2003-2004 Ford Expedition Fuel Filter Replacement",
+      "channel": "FordTechMakuloco",
+      "views": 277382
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 278636,
+     "n": 2,
+     "best": {
+      "id": "upj3LnrJd0M",
+      "title": "Brakelight switch testing and replacement Overview Ford Expedition 2004 Replace Remove how to change",
+      "channel": "Fixing cars and stuff",
+      "views": 239559
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 203522,
+     "n": 6,
+     "best": {
+      "id": "I7rZwPWmYfo",
+      "title": "How to replace a camshaft position sensor in a 2005 Ford Expedition",
+      "channel": "Everything_CJ",
+      "views": 84865
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 166007,
+     "n": 3,
+     "best": {
+      "id": "11KpfMpJyN0",
+      "title": "Blinker light flasher change out on 2003 Ford Expedition.",
+      "channel": "Jeremy Arceneaux",
+      "views": 140609
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 162487,
+     "n": 4,
+     "best": {
+      "id": "T5TU96ddIQE",
+      "title": "2006 Ford Expedition front wheel bearing replacement",
+      "channel": "Jo Daddy's Garage",
+      "views": 83371
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "i6SZ5npKHsM",
+     "title": "2003 Ford Expedition radio, DVD, window problems",
+     "channel": "OG_PreMed",
+     "views": 80984
+    },
+    {
+     "id": "XxcNJj4XiVk",
+     "title": "2006 Expedition Multiple Problems and U1900 60",
+     "channel": "Joe's Auto Electric",
+     "views": 33520
+    },
+    {
+     "id": "CguB4RmFUxs",
+     "title": "2004 Ford Expedition climate control problems",
+     "channel": "Alegría M ,",
+     "views": 10092
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017
+   ],
+   "gen": "2007–2017 Ford Expedition",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 14468156,
+   "topics": [
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 690440,
+     "n": 5,
+     "best": {
+      "id": "GbcXxq1gLnE",
+      "title": "How to Replace Crankshaft Position Sensor 2007-2017 Ford Expedition",
+      "channel": "TRQ",
+      "views": 294325
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 512361,
+     "n": 4,
+     "best": {
+      "id": "qFgPNft9T7U",
+      "title": "2008-2014 Ford F-150 & Expedition 5.4L 3v: Updated Spark Plug Replacement",
+      "channel": "FordTechMakuloco",
+      "views": 345085
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 461448,
+     "n": 7,
+     "best": {
+      "id": "QiLWsw6JLA8",
+      "title": "How To Reset Oil Service Interval On a 2007-2014 Ford Expedition",
+      "channel": "Homeowner Repair",
+      "views": 115041
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 458105,
+     "n": 6,
+     "best": {
+      "id": "x31mURZeWWw",
+      "title": "2007+ Ford Expedition Front Window Regulator Replacement",
+      "channel": "FordTechMakuloco",
+      "views": 302583
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 453376,
+     "n": 7,
+     "best": {
+      "id": "3r3E1ujtjXQ",
+      "title": "How to Replace Starter 2007-2017 Ford Expedition",
+      "channel": "TRQ",
+      "views": 141809
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 383912,
+     "n": 6,
+     "best": {
+      "id": "3Y7Tyq1RT2Q",
+      "title": "How To Replace Blower Motor Resistor 2007-2017 Ford Expedition",
+      "channel": "TRQ",
+      "views": 98766
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 375373,
+     "n": 7,
+     "best": {
+      "id": "wQO5jFNZTU0",
+      "title": "How To Replace Rear Strut 2007-2017 Ford Expedition",
+      "channel": "TRQ",
+      "views": 93004
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 223740,
+     "n": 4,
+     "best": {
+      "id": "d7TnOOuLqOk",
+      "title": "No One Can Fix This Fire Truck Ford?? ('09 Expedition: ABS PROBLEM B1342)",
+      "channel": "Pine Hollow Auto Diagnostics",
+      "views": 67452
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "s4tFnH4Su_A",
+     "title": "Top 5 Problems Ford Expedition SUV 3rd Generation 2007-17",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 539556
+    },
+    {
+     "id": "1W-pHKTz9bw",
+     "title": "'07-'14 Ford EXPEDITION/F150 POWER RUNNING BOARD Problems? Here's how I fixed them!",
+     "channel": "65SEEJAYFIVE",
+     "views": 108678
+    },
+    {
+     "id": "XCVe1jWzkdo",
+     "title": "2008-2011 Ford Expedition Power Steering Problems",
+     "channel": "The Shop World Wide",
+     "views": 30298
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2018–2025 Ford Expedition",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 27903426,
+   "topics": [
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 240926,
+     "n": 1,
+     "best": {
+      "id": "YZ0-R5_mqHg",
+      "title": "How To Change A 2018 - 2021 Ford Expedition Cabin Air filter - Replace Remove Replacement Location",
+      "channel": "PYR Automotive ",
+      "views": 240926
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 123611,
+     "n": 2,
+     "best": {
+      "id": "DiZGCEMoxow",
+      "title": "2018 - 2023 Ford Expedition No Key Detected - How to Start With Dead Bad Broken Remote Fob Battery",
+      "channel": "PYR Automotive ",
+      "views": 75914
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 38600,
+     "n": 1,
+     "best": {
+      "id": "Odxz0no-OS0",
+      "title": "2020 Ford Expedition Oil Change | Quick DIY",
+      "channel": "Engineered Mojo",
+      "views": 38600
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "CSFhI8lIiwE",
+     "title": "Should You Buy a 2025 Ford Expedition? Thorough Review By A Mechanic",
+     "channel": "The Car Care Nut Reviews",
+     "views": 239149
+    },
+    {
+     "id": "UNbwYee62Rc",
+     "title": "2018 Ford Expedition - Review and Road Test",
+     "channel": "Kelley Blue Book",
+     "views": 1468655
+    },
+    {
+     "id": "sqWMPvWrWlU",
+     "title": "$84,000 for a Ford? 2018 Ford Expedition PLATINUM Review I 400HP 2nd Gen Ecoboost V6",
+     "channel": "AutoVlog",
+     "views": 861767
+    }
+   ],
+   "costs": null
+  }
+ ],
  "ford-ecosport": [
   {
    "years": [
