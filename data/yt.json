@@ -12147,7 +12147,35 @@
      "views": 48556
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 21000,
+     "lo": 20000.0,
+     "hi": 30000.0,
+     "n": 5,
+     "videos": 4,
+     "id": "yBBdy9ctBc4",
+     "t": 84,
+     "title": "Roadfly.com - 2008 Nissan Rogue"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 3650,
+       "lo": 3500.0,
+       "hi": 3800.0,
+       "n": 2,
+       "videos": 2,
+       "id": "X8Nyx2j8Tl0",
+       "t": 105,
+       "title": "Nissan Rogue 2008-2013 Top Common Problems"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -12207,7 +12235,35 @@
      "views": 55762
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 36150,
+     "lo": 30000.0,
+     "hi": 38900.0,
+     "n": 20,
+     "videos": 15,
+     "id": "7kaMFc83jKE",
+     "t": 1415,
+     "title": "The 2023 Nissan Rogue Platinum Is A Luxurious Compact SUV With A New Turbo Engine"
+    },
+    "items": [
+     [
+      "Yearly cost to own",
+      {
+       "median": 557,
+       "lo": 375.0,
+       "hi": 738.2,
+       "n": 2,
+       "videos": 2,
+       "id": "fhPxihNYZAg",
+       "t": 905,
+       "title": "$38K Crossover Challenge: Is The 2021 Nissan Rogue Or The Mazda CX-5 A Better Buy?"
+      }
+     ]
+    ]
+   }
   }
  ],
  "chevrolet-traverse": [
@@ -12466,7 +12522,35 @@
      "views": 599843
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 50000,
+     "lo": 34000.0,
+     "hi": 54000.0,
+     "n": 13,
+     "videos": 12,
+     "id": "WcSTA7Xk2Ek",
+     "t": 1205,
+     "title": "2019 Chevrolet Traverse High Country – Large Families Wanted"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 162,
+       "lo": 100.0,
+       "hi": 380.0,
+       "n": 10,
+       "videos": 6,
+       "id": "vhi9hrcf2Ts",
+       "t": 19,
+       "title": "2018-2024 Chevy Traverse LED DIY Headlight Fix (No Dealer Needed)"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -12567,7 +12651,44 @@
      "views": 193571
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 43000,
+     "lo": 40000.0,
+     "hi": 43000.0,
+     "n": 3,
+     "videos": 3,
+     "id": "yOp2tepPRO8",
+     "t": 736,
+     "title": "2024 Chevrolet Traverse LT POV Test Drive & Review #NBCRMAG.COM"
+    },
+    "msrp": {
+     "median": 43298,
+     "lo": 39900.0,
+     "hi": 50000.0,
+     "n": 46,
+     "videos": 39,
+     "id": "EnOJB-uIFUo",
+     "t": 1966,
+     "title": "The 2024 Chevrolet Traverse Z71 Is A Spacious & Capable 3-Row Family SUV With Truck Vibes"
+    },
+    "items": [
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 2750,
+       "lo": 2500.0,
+       "hi": 3000.0,
+       "n": 4,
+       "videos": 3,
+       "id": "EnOJB-uIFUo",
+       "t": 2032,
+       "title": "The 2024 Chevrolet Traverse Z71 Is A Spacious & Capable 3-Row Family SUV With Truck Vibes"
+      }
+     ]
+    ]
+   }
   }
  ],
  "hyundai-elantra": [
@@ -20036,6 +20157,131 @@
    "costs": null
   }
  ],
+ "honda-fit": [
+  {
+   "years": [
+    2007,
+    2008
+   ],
+   "gen": "2007–2008 Honda Fit",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 129,
+   "views": 5989677,
+   "topics": [
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 196919,
+     "n": 2,
+     "best": {
+      "id": "tJMEOh4h3to",
+      "title": "How to Fix/Repair Rear Hatch Door Handle + Latch: Honda Fit/Jazz 2007 2008",
+      "channel": "6th Gear Garage",
+      "views": 141057
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 185782,
+     "n": 5,
+     "best": {
+      "id": "YtP2ckzCZKc",
+      "title": "How to Replace the starter motor on the Honda Fit 2007 to 2013",
+      "channel": "Haynes Manuals",
+      "views": 67186
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 138049,
+     "n": 1,
+     "best": {
+      "id": "DCVbMtUJbCc",
+      "title": "Episode 28. 2008 Honda Fit fuel injectors replacement.",
+      "channel": "Low Quality Films 2016",
+      "views": 138049
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 100155,
+     "n": 3,
+     "best": {
+      "id": "B3S99py-lz4",
+      "title": "How to Replace ALL of Front Suspension on Honda Fit/Jazz 2002-2008",
+      "channel": "6th Gear Garage",
+      "views": 79364
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 72327,
+     "n": 1,
+     "best": {
+      "id": "T-SCSZfAkcQ",
+      "title": "Honda Fit / Jazz OVERHEATING!!!! 2007-2008 **How To Fix** - Link To Products In Description",
+      "channel": "We The Random",
+      "views": 72327
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 66379,
+     "n": 1,
+     "best": {
+      "id": "wPhEU4bER_Y",
+      "title": "How to Replace the drive belt on the Honda Fit 2007 to 2013",
+      "channel": "Haynes Manuals",
+      "views": 66379
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 62747,
+     "n": 3,
+     "best": {
+      "id": "5FeuroHWM-g",
+      "title": "How to Replace CV axles: Honda Fit 2007-2008 w/ Manual Transmission",
+      "channel": "6th Gear Garage",
+      "views": 27904
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 57265,
+     "n": 2,
+     "best": {
+      "id": "TPXThVa7CiM",
+      "title": "2008 Honda fit sport misfire fix/vtec explanation",
+      "channel": "TheRingMan",
+      "views": 38157
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "9_VJ4FPQ0kU",
+     "title": "The 1st Gen Honda Fit 5-Speed is a Fun and Reliable Answer to Excellent Fuel Economy!",
+     "channel": "Bern on Cars",
+     "views": 89056
+    },
+    {
+     "id": "LJ2uFkQqMug",
+     "title": "Regular Car Reviews: 2007 Honda Fit",
+     "channel": "Regular Car Reviews",
+     "views": 960578
+    },
+    {
+     "id": "u_-1bcI_RXQ",
+     "title": "2007-2008 Honda Fit - Used Car Reviews",
+     "channel": "YourCarAngel",
+     "views": 392304
+    }
+   ],
+   "costs": null
+  }
+ ],
  "chevrolet-camaro": [
   {
    "years": [
@@ -24700,6 +24946,134 @@
      "title": "Used Mercedes C-Class W204 Buyers guide (2007-2015) Avoid faults and common problems (CDI/CGI)",
      "channel": "The Miles Driven",
      "views": 230059
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014
+   ],
+   "gen": "2008–2014 Mercedes-Benz C-Class",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 57932433,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 3935397,
+     "n": 5,
+     "best": {
+      "id": "g5i4Q0Lbzgk",
+      "title": "How to RESET the Service Indicator Light on a 2012 Mercedes Benz C Class W204 (and other models)",
+      "channel": "My Mate VINCE",
+      "views": 1877282
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 3289962,
+     "n": 5,
+     "best": {
+      "id": "9QTJEiupqjs",
+      "title": "Mercedes-Benz C-Class W204 Service Indicator Reset",
+      "channel": "PepsiManKolt",
+      "views": 1954214
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 1375988,
+     "n": 7,
+     "best": {
+      "id": "Ql2CzHZwHHM",
+      "title": "KEY Fob Battery replacement on a Mercedes Benz C Class W204",
+      "channel": "My Mate VINCE",
+      "views": 470709
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 1147451,
+     "n": 8,
+     "best": {
+      "id": "SXdmQm_RE3Q",
+      "title": "Mercedes W204 C300 C250 Locked ESL. Car won't start? You can use this trick to start your car.",
+      "channel": "Mercedes Benz Specialist",
+      "views": 237441
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 529041,
+     "n": 5,
+     "best": {
+      "id": "pyxBtkoiaJo",
+      "title": "MERCEDES W204 C63, SIMPLE MISFIRE TURNS INTO SERIOUS PROBLEM. COMMON M156 FAULT! PART 1",
+      "channel": "SPR Autos",
+      "views": 150868
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 516687,
+     "n": 4,
+     "best": {
+      "id": "gP29qNdMmZM",
+      "title": "MERCEDES W204 C250 CAMSHAFT POSITION SENSOR AND ADJUSTER CODE EXPLAINED",
+      "channel": "Electrical Car Repair LIVE",
+      "views": 189159
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 385648,
+     "n": 3,
+     "best": {
+      "id": "8tDQrFPIAWo",
+      "title": "How to TOP UP Engine Coolant on a 2012 MERCEDES BENZ C Class C180 W204",
+      "channel": "TUTORIALS UNDER A MINUTE",
+      "views": 197326
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 376823,
+     "n": 3,
+     "best": {
+      "id": "327HifAOCAk",
+      "title": "How to Fix Automatic Closing of Windows on a Mercedes C300 (W204 Chassis, 2008)",
+      "channel": "bpetertube",
+      "views": 164035
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "3FdLB3US3CI",
+     "title": "Mercedes C-Class saloon 2007 - 2011 review - CarBuyer",
+     "channel": "Carbuyer",
+     "views": 1578138
+    },
+    {
+     "id": "OG4G0WYoCsM",
+     "title": "Mercedes C-Class saloon (2011-2014) review - CarBuyer",
+     "channel": "Carbuyer",
+     "views": 1574085
+    },
+    {
+     "id": "YJeQz0AR9rw",
+     "title": "Should You Buy a Mercedes C-Class? (2013 C220 CDI AMG SPORT PLUS W204)",
+     "channel": "High Peak Autos",
+     "views": 245704
     }
    ],
    "costs": null
