@@ -188,7 +188,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}{img or "/assets/og.png"}"><meta name="twitter:card" content="summary_large_image">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://challenges.cloudflare.com https://www.googletagmanager.com; frame-src https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://static.nhtsa.gov https://i.ytimg.com https://*.google-analytics.com https://*.googletagmanager.com; connect-src 'self' https://cloudflareinsights.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://vpic.nhtsa.dot.gov https://lemon-survey.elift08.workers.dev; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"><link rel="stylesheet" href="/assets/site.css?v=1108r"><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=1" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"><link rel="stylesheet" href="/assets/site.css?v=1108s"><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=1" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
 <body>{gh_header(path)}
 <main>{body}{CITE if path.startswith('/cars/') else ''}{'' if path == '/vote/' else ask_html(ask)}</main>
 <footer class="foot"><div class="cta"><div><h2>New car studies, straight from the data.</h2><p>Every study becomes a video. Subscribe to see the next one first.</p></div><a class="btn" href="{YT}?sub_confirmation=1" rel="noopener">Subscribe on YouTube</a></div>
@@ -613,7 +613,7 @@ def rel_top(f, c, snm, ys, sc, best, worst, bad3):
     a = yt_adj(f['id']); last = max(v['y'] for v in sc); new = sorted((y for y in a if y > last), key=lambda y: -a[y])
     newer = (f'<p class="rs-new">Looking at a {min(new)} or newer? Those are too new for complaint data, but YouTube owners like the <a href="#years">{new[0]}</a> best.</p>'
              if len(new) >= 2 else '')
-    return (f'<h1 class="rel-h">Is the {E(snm).replace("-", "-⁠")} reliable?</h1><p class="ans rel-a"><b>{word}</b> {ans}</p><div class="rsc">{"".join(tiles)}</div>{newer}'), (word + ' ' + html.unescape(re.sub('<[^>]+>', '', ans)))
+    return (f'<h1 class="rel-h">Is the {E(snm).replace("-", "-⁠")} reliable?</h1><p class="ans rel-a"><b>{word}</b> {ans}</p>', f'<div class="rsc">{"".join(tiles)}</div>{newer}', (word + ' ' + html.unescape(re.sub('<[^>]+>', '', ans))))
 def ybars(f, cur=None):
     if YTS.get(f['id']): return ybars_yt(f, cur, YTS[f['id']])
     mx = max(120, max(v['li'] for v in f['years'] if v['ok']) * 1.08)
@@ -884,7 +884,7 @@ for f in YEARS:
     if _pt:
         _tp = [NICE(x) for x, _ in sorted(_pt.items(), key=lambda kv: -kv[1])[:3]]
         mqa.append((f'What are the most common {snm} problems?', f'Across every year, owners&#39; complaints to the government name {", ".join(_tp[:-1])} and {_tp[-1]} most. Some years are much worse than others: see the chart above.'))
-    rel_html, rel_plain = rel_top(f, c, snm, ys, sc, best, worst, bad3)
+    rel_html, rel_tiles, rel_plain = rel_top(f, c, snm, ys, sc, best, worst, bad3)
     mqa.insert(0, (f'Is the {snm} reliable?', E(rel_plain)))
     model_qa_html = '<section class="yqa"><h2>Quick answers.</h2>' + qa_fold(''.join(f'<h3>{E(q)}</h3><p>{a}</p>' for q, a in mqa)) + '</section>'
     _tt = next(t for t in (f'{snm} Reliability: Years to Avoid & Best Years', f'{snm} Reliability & Years to Avoid', f'{snm} Reliability by Year') if len(t) <= 65 or t.endswith('by Year'))
@@ -892,7 +892,7 @@ for f in YEARS:
          f'Is the {snm} reliable? {rel_plain.split(". ")[0].rstrip(".")}. Every year {ys[0]["y"]}–{ys[-1]["y"]} ranked by owner complaints' + (' and YouTube owner reviews' if f['id'] in YTR else '') + f'. Best: {best["y"]}. Worst: {worst["y"]}.', f'''
 <div class="pg mp6"><section class="ph yph6"><div class="yh-t"><p class="ph-e"><a href="/cars/">All cars</a> · <a href="/brands/{c["brand"].lower().replace(" ", "-")}/">{E(c["brand"])}</a> · {E(c["segName"])}</p>{rel_html}{f'<p class="yc-note">{SN[f["id"]][1]}</p>' if f["id"] in SN else ""}
 <div class="yhero">{gauge(c["li"], 190)}<div class="yverd {verdict(c["li"])[0]}"><p><b>{verdict(c["li"])[1]}.</b> <span>Whole model, {c["years"]}{"" if plain(c["li"]).lower() in verdict(c["li"])[1].lower() else ": " + E(plain(c["li"]))}.</span></p><p class="ybw">Best year <a class="good" href="{CARU(f, best["y"])}">{best["y"]}</a> · Worst year <a class="bad" href="{CARU(f, worst["y"])}">{worst["y"]}</a></p></div></div>
-<p><button type="button" class="btn btn-ghost" data-share="{E(f'Every {snm} year ranked by owner complaints. Best: {best["y"]}. Worst: {worst["y"]}. Free report:')}">Share ↗</button></p></div><div class="ph-v">{year_photo(f, ys[-1]["y"])}</div></section>
+<p><button type="button" class="btn btn-ghost" data-share="{E(f'Every {snm} year ranked by owner complaints. Best: {best["y"]}. Worst: {worst["y"]}. Free report:')}">Share ↗</button></p></div><div class="ph-v">{year_photo(f, ys[-1]["y"])}{rel_tiles}</div></section>
 <section class="yyears noph" id="years"><div class="yy-ch"><h2>Every year. <span class="h2s">Lower is better. Tap a year for its full report.</span></h2>{ybars(f)}</div>{'<p class="yc-cap">Scores before 2010 are rough: fewer owners filed complaints back then.</p>' if ys[0]["y"] < 2010 else ''}{yt_note(f)}</section>
 {ytfix("model:" + f["id"])}{picks}
 {f'<section><h2>Compare the {E(f["name"])}.</h2><div class="mus">{vcards}</div>' + (f'<p class="yc-cap">{vs}</p>' if vs else '') + '</section>' if vcards or vs else ''}
