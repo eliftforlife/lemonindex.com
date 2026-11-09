@@ -22826,7 +22826,94 @@
      "views": 94184
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": {
+     "median": 4000,
+     "lo": 2800.0,
+     "hi": 8500.0,
+     "n": 7,
+     "videos": 6,
+     "id": "XXxD0SGBZ84",
+     "t": 362,
+     "title": "1999 Mustang SVT Cobra: Ford's biggest SVT flop that led to Terminator - you're welcome: 1TAKE",
+     "private": 1,
+     "dealer": 0
+    },
+    "used": {
+     "median": 10500,
+     "lo": 7500.0,
+     "hi": 12000.0,
+     "n": 6,
+     "videos": 6,
+     "id": "cFVUjP3I4Ws",
+     "t": 622,
+     "title": "Review: 2002 Ford Mustang GT (Manual) w/ Flowmaster Exhaust"
+    },
+    "msrp": {
+     "median": 25248,
+     "lo": 23665.0,
+     "hi": 26830.0,
+     "n": 4,
+     "videos": 4,
+     "id": "eY-1D7lGHW4",
+     "t": 271,
+     "title": "MotorWeek | Retro Review:  2000 Ford Mustang Cobra R"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 300,
+       "lo": 75.0,
+       "hi": 700.0,
+       "n": 7,
+       "videos": 7,
+       "id": "H39uqfj6BAs",
+       "t": 934,
+       "title": "Why are SN95 New Edge Mustangs a Popular Buy? (94-04)"
+      }
+     ],
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 6000,
+       "lo": 899.0,
+       "hi": 11000.0,
+       "n": 5,
+       "videos": 5,
+       "id": "tdoiLwIZBkE",
+       "t": 1294,
+       "title": "How to Boost a STOCK 1999-2004 4.6 2V Mustang GT For Under $5,000! (450-500HP)"
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 900,
+       "lo": 600.0,
+       "hi": 5000.0,
+       "n": 7,
+       "videos": 3,
+       "id": "ZIiRZxDPUIg",
+       "t": 952,
+       "title": "Top 5 BEST Performance Mods For Your 1999-2004 Mustang GT Under $1,000! (Increase HP Cheap & Easy)"
+      }
+     ],
+     [
+      "Brakes",
+      {
+       "median": 365,
+       "lo": 250.0,
+       "hi": 590.0,
+       "n": 5,
+       "videos": 2,
+       "id": "Mcx6pPg4Skg",
+       "t": 304,
+       "title": "1994 Ford Mustang | Retro Review"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -22957,7 +23044,48 @@
      "views": 431290
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 24000,
+     "lo": 19000.0,
+     "hi": 28000.0,
+     "n": 3,
+     "videos": 3,
+     "id": "JVujDKhpls0",
+     "t": 260,
+     "title": "2008 Ford Mustang Bullitt Review - Kelley Blue Book"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 112,
+       "lo": 50.0,
+       "hi": 175.0,
+       "n": 4,
+       "videos": 4,
+       "id": "uYRm3aelq68",
+       "t": 130,
+       "title": "👉 2005 FORD MUSTANG V6"
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 350,
+       "lo": 240.0,
+       "hi": 398.0,
+       "n": 3,
+       "videos": 3,
+       "id": "bckQ-lCCSsg",
+       "t": 87,
+       "title": "2010 Ford Mustang GT - CAR and DRIVER"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -25051,7 +25179,35 @@
      "views": 67795
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 29600,
+     "lo": 27220.0,
+     "hi": 37000.0,
+     "n": 10,
+     "videos": 7,
+     "id": "ukyqYwLUnv0",
+     "t": 88,
+     "title": "2013 Ford Edge Review"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 400,
+       "lo": 200.0,
+       "hi": 900.0,
+       "n": 9,
+       "videos": 7,
+       "id": "ZZSWnnflAto",
+       "t": 37,
+       "title": "How to fix \"door ajar\" issue on 2012 Ford Edge with a screwdriver"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -27071,6 +27227,133 @@
      "title": "2011 Kia Soul Review - A Different and Very Cool SUV",
      "channel": "Carro Chefe",
      "views": 742755
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019
+   ],
+   "gen": "2014–2019 Kia Soul",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 16052764,
+   "topics": [
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 260040,
+     "n": 4,
+     "best": {
+      "id": "w4RG1NB9FC8",
+      "title": "How to Replace Cabin Air Filter 2015 KIA Soul | AQ1233",
+      "channel": "Filterheads",
+      "views": 82618
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 254610,
+     "n": 3,
+     "best": {
+      "id": "J5IGqqsiBAI",
+      "title": "Kia Soul Key Fob Battery Replacement (2014 - 2019)",
+      "channel": "FobBattery",
+      "views": 122084
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 175884,
+     "n": 5,
+     "best": {
+      "id": "NM_Tuekv0t4",
+      "title": "How to reset the service interval on a 2017 Kia soul￼",
+      "channel": "E Fixes",
+      "views": 53378
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 167395,
+     "n": 3,
+     "best": {
+      "id": "iLyrLtNT-GA",
+      "title": "2014-2019 Kia Soul - Brake Light Bulb Replacement",
+      "channel": "YOUCANIC",
+      "views": 98613
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 135017,
+     "n": 4,
+     "best": {
+      "id": "T4aFm4MqHPw",
+      "title": "CODE P1326-Knock Sensor Detection System | 2015 kIA SOUL | REDUCED POWER | KIA HAS A RECALL ON CODE",
+      "channel": "The PullUpKing 👨🏾‍🔧",
+      "views": 47936
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 117424,
+     "n": 2,
+     "best": {
+      "id": "hR3J9xGZ_1I",
+      "title": "2014-2019 Kia Soul - Upstream O2 Sensor (Replacement Guide)",
+      "channel": "YOUCANIC",
+      "views": 61234
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 106044,
+     "n": 2,
+     "best": {
+      "id": "lfDP2Zfn6bM",
+      "title": "How to change the transmission fluid on 2014-2019 Kia Soul Easiest Method",
+      "channel": "WrenchTheory501",
+      "views": 80517
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 68663,
+     "n": 2,
+     "best": {
+      "id": "JxYZD7Va7N8",
+      "title": "How to Replace Fuel Pump Module Assembly 2014-2019 Kia Soul (1.6L L4)",
+      "channel": "TRQ",
+      "views": 35746
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "5gTW6q-sZDo",
+     "title": "Kia Soul hatchback (2010-2014) review - CarBuyer",
+     "channel": "Carbuyer",
+     "views": 344011
+    },
+    {
+     "id": "VGc1a_dIO7Y",
+     "title": "Buyer's guide for 2014-2019 electric Kia Soul EV",
+     "channel": "The Late Brake Show",
+     "views": 163012
+    },
+    {
+     "id": "4ObhyuR1Al4",
+     "title": "Kia Soul 2nd generation from 2014 to 2019 common problems, issues, recalls and complaints",
+     "channel": "HOWSTUFFINMYCARWORKS",
+     "views": 97351
     }
    ],
    "costs": null
@@ -32756,6 +33039,133 @@
    "costs": null
   }
  ],
+ "chrysler-200": [
+  {
+   "years": [
+    2011,
+    2012,
+    2013,
+    2014
+   ],
+   "gen": "2011–2014 Chrysler 200",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 6996470,
+   "topics": [
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 706527,
+     "n": 5,
+     "best": {
+      "id": "dTVUKoFb2Lc",
+      "title": "Chrysler 200 CLICKING NOISE EASY FIX 2011-2014 tapping hvac ac heater recirculation actuator motor",
+      "channel": "NoNonsenseKnowHow",
+      "views": 403200
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 638586,
+     "n": 11,
+     "best": {
+      "id": "lPR6scFgouo",
+      "title": "2011 - 2014 Chrysler 200 2.4L Alternator Removal",
+      "channel": "Brian Balatbat",
+      "views": 246997
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 305524,
+     "n": 3,
+     "best": {
+      "id": "QOxyGp6gwV4",
+      "title": "2012 Chrysler 200 no crank no start fix",
+      "channel": "Jon Hansen",
+      "views": 239951
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 251733,
+     "n": 8,
+     "best": {
+      "id": "lSDTdgcwBMM",
+      "title": "How to do Coolant Flush Chrysler 200 2011 , 2012 , 2013 , 2014",
+      "channel": "Band Range",
+      "views": 74939
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 83649,
+     "n": 3,
+     "best": {
+      "id": "c6AP3bbuzgA",
+      "title": "How to Change the Oil on a 2012 Chrysler 200 2.4",
+      "channel": "MAKE PVP GREAT AGAIN",
+      "views": 64696
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 59198,
+     "n": 2,
+     "best": {
+      "id": "Sobq3cKn-Vc",
+      "title": "Don’t lose your cool – replacing coolant temperature sensor on 2014 Chrysler 200",
+      "channel": "Carbon's DIY Garage",
+      "views": 47239
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 44916,
+     "n": 2,
+     "best": {
+      "id": "3Sk8LkGZSt8",
+      "title": "Chrysler 200 2012 Door panel removal",
+      "channel": "Window Tinting Business School",
+      "views": 40376
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 35283,
+     "n": 2,
+     "best": {
+      "id": "mUJjbyUCA7s",
+      "title": "2014 chrysler 200 electrical issues?",
+      "channel": "boxing wisdom",
+      "views": 20578
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "vg-KjWV0Zpo",
+     "title": "Top 5 Problems Chrysler 200 Sedan 1st Generation 2011-14",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 397764
+    },
+    {
+     "id": "_nNzUYcdz5s",
+     "title": "Chrysler 200 2013 Starting problems/transmission problem FIX!",
+     "channel": "JSD",
+     "views": 9138
+    },
+    {
+     "id": "1GGgIS9oBbk",
+     "title": "2013 Dodge Dart vs Buick Verano vs Chrysler 200 0-60 MPH Starter Sedan Mashup Review",
+     "channel": "The Fast Lane Car",
+     "views": 215915
+    }
+   ],
+   "costs": null
+  }
+ ],
  "lexus-es": [
   {
    "years": [
@@ -35829,7 +36239,48 @@
      "views": 293719
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 49900,
+     "lo": 41250.0,
+     "hi": 52000.0,
+     "n": 17,
+     "videos": 13,
+     "id": "1jNcyMXlXBc",
+     "t": 1370,
+     "title": "The 2020 Audi S4 is a Near Perfect AWD Luxury Sport Sedan"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 800,
+       "lo": 250.0,
+       "hi": 1500.0,
+       "n": 11,
+       "videos": 4,
+       "id": "e7-lWO62fhk",
+       "t": 432,
+       "title": "Buying a used AUDI A4 B9 (2016-2024): The Truth About Its Reliability (BUYING GUIDE)"
+      }
+     ],
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 1400,
+       "lo": 1355.0,
+       "hi": 2900.0,
+       "n": 3,
+       "videos": 3,
+       "id": "issyZfK2HWo",
+       "t": 291,
+       "title": "2017 Audi A4 Prestige S-Line 2.0T Quattro S Tronic Full Review /Exhaust /Start Up /Short Drive"
+      }
+     ]
+    ]
+   }
   }
  ],
  "audi-q5": [
