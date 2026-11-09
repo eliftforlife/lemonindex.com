@@ -6742,7 +6742,26 @@
      "views": 57880
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 534,
+       "lo": 50.0,
+       "hi": 1000.0,
+       "n": 7,
+       "videos": 5,
+       "id": "x4iV1BNGHr0",
+       "t": 475,
+       "title": "Toyota Corolla 1998-2002 Window Regulator Installation"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -6869,7 +6888,26 @@
      "views": 544866
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 55,
+       "lo": 30.0,
+       "hi": 1600.0,
+       "n": 6,
+       "videos": 4,
+       "id": "i8UBhZJYqFo",
+       "t": 19,
+       "title": "How to replace the starter in a 2003 2004 2005 2006 2007 2008 Toyota Corolla"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -6995,7 +7033,35 @@
      "views": 172267
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 17000,
+     "lo": 14995.0,
+     "hi": 17980.0,
+     "n": 3,
+     "videos": 3,
+     "id": "xGsnsv1mD64",
+     "t": 275,
+     "title": "2009 Toyota Corolla Review - Kelley Blue Book"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 325,
+       "lo": 130.0,
+       "hi": 869.0,
+       "n": 6,
+       "videos": 5,
+       "id": "MAyuZq6wxKg",
+       "t": 112,
+       "title": "2013 Toyota Corolla - Video review by Sunshine Toyota"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -7067,7 +7133,35 @@
      "views": 211744
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 25000,
+     "lo": 23000.0,
+     "hi": 28000.0,
+     "n": 25,
+     "videos": 20,
+     "id": "G6LigiflRzw",
+     "t": 90,
+     "title": "2020 Toyota Corolla - Review & Road Test"
+    },
+    "items": [
+     [
+      "Steering & suspension",
+      {
+       "median": 213,
+       "lo": 136.38,
+       "hi": 250.0,
+       "n": 3,
+       "videos": 2,
+       "id": "kv2EsoujZVk",
+       "t": 905,
+       "title": "$3,000 Budget Rebuild! (2023 Toyota Corolla Hybrid)"
+      }
+     ]
+    ]
+   }
   }
  ],
  "honda-accord": [
@@ -20675,7 +20769,30 @@
      "views": 70224
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 36000,
+     "lo": 30000.0,
+     "hi": 38692.0,
+     "n": 6,
+     "videos": 6,
+     "id": "s5sOABvCCeY",
+     "t": 1240,
+     "title": "MUCH Better Off-Road! // 2025 Subaru Forester Review"
+    },
+    "msrp": {
+     "median": 35000,
+     "lo": 31415.0,
+     "hi": 40000.0,
+     "n": 40,
+     "videos": 35,
+     "id": "2bz2oyHwdqs",
+     "t": 885,
+     "title": "All-New 2025 Subaru Forester review // Can you get behind the design?"
+    },
+    "items": []
+   }
   }
  ],
  "toyota-highlander": [
@@ -29637,6 +29754,132 @@
      "title": "Subaru WRX clutch pedal problems 2008-2014",
      "channel": "Great Motorcyle rides: Washington",
      "views": 10156
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2012,
+    2013,
+    2014,
+    2015,
+    2016
+   ],
+   "gen": "2012–2016 Subaru Impreza",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 17389151,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 323258,
+     "n": 9,
+     "best": {
+      "id": "bZ5xhXij078",
+      "title": "The Most Important 2008-2014 Subaru WRX Maintenance Items",
+      "channel": "MAPerformance",
+      "views": 94048
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 200181,
+     "n": 4,
+     "best": {
+      "id": "ejQEMdqR3x8",
+      "title": "How to Recharge A/C System on a 2016 Subaru Impreza | Fixed Rattling A/C Compressor",
+      "channel": "Second Shift",
+      "views": 125212
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 199629,
+     "n": 6,
+     "best": {
+      "id": "TsLZFNgPuhY",
+      "title": "How to Replace Front Brakes 2012-2016 Subaru Impreza",
+      "channel": "TRQ",
+      "views": 58188
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 176386,
+     "n": 4,
+     "best": {
+      "id": "ntexPKIbfHs",
+      "title": "2012-2015 Subaru impreza hatchback tail light bulb change",
+      "channel": "Dave Conner",
+      "views": 86017
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 161828,
+     "n": 3,
+     "best": {
+      "id": "42cEgiW6zgs",
+      "title": "How to Change Coolant on 2012-2016 Subaru Impreza",
+      "channel": "Daniel Fliman",
+      "views": 117768
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 69883,
+     "n": 1,
+     "best": {
+      "id": "zb8Q_uXkMaE",
+      "title": "Subaru Power Steering - Fixing a 2016 Subaru Impreza w/Stiff Steering",
+      "channel": "MJ Altairy",
+      "views": 69883
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 68040,
+     "n": 1,
+     "best": {
+      "id": "nNfl5yCuT0c",
+      "title": "2012-2016 2.0L Subaru Impreza - Spark Plugs Replacement",
+      "channel": "YOUCANIC",
+      "views": 68040
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 36589,
+     "n": 2,
+     "best": {
+      "id": "Tra-IMp9Hr8",
+      "title": "2012-2016 2.0L Subaru Impreza - Starter Replacement",
+      "channel": "YOUCANIC",
+      "views": 22441
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "akQxCMF4ROQ",
+     "title": "2015-2021 Subaru WRX Buyer’s Guide - Reliability & Common Problems",
+     "channel": "Discerning Cars",
+     "views": 151135
+    },
+    {
+     "id": "jNrRiNv87kg",
+     "title": "Top 5 Problems Subaru Impreza Hatchback 2012-2016 4th Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 113550
+    },
+    {
+     "id": "Zkh5GML0y7g",
+     "title": "How To Make The 2015+ Subaru WRX Reliable",
+     "channel": "Auto Enthusiast",
+     "views": 102250
     }
    ],
    "costs": null
