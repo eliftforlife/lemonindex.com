@@ -85,7 +85,7 @@ def short(v):
     return f'{100 / v:.1f}× fewer complaints'.replace('.0×', '×') if v < 90 else 'about average' if v <= 110 else f'{v / 100:.1f}× the complaints'.replace('.0×', '×')
 
 def explorer():
-    for c in CARS: ph = mphoto(c['id']); c['img'] = ph['src'] if ph else ''   # 11-03 v6: a photo on every row
+    for c in CARS: ph = mphoto(c['id']); c['img'] = rsmall(ph['src']) if ph else ''   # 11-03 v6: a photo on every row
     data = json.dumps(CARS, ensure_ascii=False).replace('</', '<\\/')
     seed = ''.join(f'<div class="xr"><div class="xm"><span class="xk">#{c["rank"]}</span><span class="xn"><b>{E(c["name"])}</b><small>{c["segName"]} · {c["years"]}</small></span><span class="xb"><small>{plain(c["li"])}</small></span><span class="xi">{c["li"]}</span></div></div>' for c in CARS[:15])
     tabs = ''.join(f'<button type="button" data-seg="{k}" aria-pressed="{str(k == "all").lower()}">{l}</button>' for k, l in [('all', 'All'), ('car', 'Cars'), ('suv', 'SUVs'), ('truck', 'Trucks'), ('minivan', 'Minivans')])
@@ -146,7 +146,7 @@ def auto_hero(body, vis=''):
     if not m: return body
     h1 = m.group(3).strip(); h1 = h1 + '.' if h1[-1:].isalnum() else h1
     lede = f'<p class="ph-s">{m.group(4)}</p>' if m.group(4) else ''
-    hero = f'<section class="ph ph-a"><p class="ph-e">{m.group(2)}</p><h1>{h1}</h1>{lede}' + (f'<div class="ph-v">{vis}</div>' if vis else '') + '</section>'
+    hero = f'<section class="ph ph-a"><p class="ph-e">{m.group(2)}</p><h1>{h1}</h1>{lede}' + ('<div class="ph-v">' + vis.replace(' loading="lazy"', '') + '</div>' if vis else '') + '</section>'
     body = body[:m.start()] + '<div class="pg">' + hero + f'<article class="study{m.group(1)}">' + body[m.end():]
     i = body.rfind('</article>'); return body[:i] + '</article></div>' + body[i + len('</article>'):]
 # 11-05 schema: breadcrumbs on every page (Home > Cars > Honda Civic > 2016) so Google and AI tools see where a page sits
@@ -181,14 +181,14 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
     url = BASE + path; ld = list(ld or []) + [crumbs(path, title)]
     lds = ''.join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in (ld or []))
     beacon = f"<script defer src=\"https://static.cloudflareinsights.com/beacon.min.js\" data-cf-beacon='{{\"token\": \"{CF}\"}}'></script>" if CF else ''
-    if GA: beacon += f'<script async src="https://www.googletagmanager.com/gtag/js?id={GA}"></script><script src="/assets/ga.js?v=2"></script>'
+    if GA: beacon += f'<script src="/assets/ga.js?v=3" data-ga="{GA}" defer></script>'   # 11-09: ga.js loads gtag.js (180 KB) after the page has loaded
     doc = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{E(title)}</title><meta name="description" content="{E(desc)}"><link rel="canonical" href="{url}">
 <meta property="og:type" content="{kind}"><meta property="og:site_name" content="The Lemon Index"><meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(desc)}">
 <meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}{img or "/assets/og.png"}"><meta name="twitter:card" content="summary_large_image">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://challenges.cloudflare.com https://www.googletagmanager.com; frame-src https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://static.nhtsa.gov https://i.ytimg.com https://*.google-analytics.com https://*.googletagmanager.com; connect-src 'self' https://cloudflareinsights.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://vpic.nhtsa.dot.gov https://lemon-survey.elift08.workers.dev; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"><link rel="stylesheet" href="/assets/site.css?v=1108t"><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=1" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://challenges.cloudflare.com https://www.googletagmanager.com; frame-src https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://static.nhtsa.gov https://i.ytimg.com https://*.google-analytics.com https://*.googletagmanager.com; connect-src 'self' https://cloudflareinsights.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://vpic.nhtsa.dot.gov https://lemon-survey.elift08.workers.dev; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
+<link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css?v=1109p"><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=1" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
 <body>{gh_header(path)}
 <main>{body}{CITE if path.startswith('/cars/') else ''}{'' if path == '/vote/' else ask_html(ask)}</main>
 <footer class="foot"><div class="cta"><div><h2>New car studies, straight from the data.</h2><p>Every study becomes a video. Subscribe to see the next one first.</p></div><a class="btn" href="{YT}?sub_confirmation=1" rel="noopener">Subscribe on YouTube</a></div>
@@ -254,12 +254,35 @@ def mphoto(fid, year=None):
     if year and str(year) in ys: return ys[str(year)]
     if ys: return ys[max(ys)]
     return MPH.get(fid)
+# 11-09 phone speed (Lighthouse mobile LCP 4-5 s): every local photo also ships as 400 and 800 px wide copies in assets/r/<w>/ (made here on
+# first use), and each <img> gets srcset + sizes, so a phone downloads ~1/4 of the bytes. The sizes values are upper bounds of the width each
+# slot is actually shown at (measured 300-1920 px), so no photo is ever shown blurrier than before.
+RW, _RS = (400, 800), {}
+def rsrc(src):
+    """srcset for a local /assets/*.webp photo: its 400w/800w copies (made if missing or stale) + the original. '' for anything else."""
+    if src in _RS: return _RS[src]
+    p, out = (src or '').lstrip('/'), ''
+    if p.startswith('assets/') and p.endswith('.webp') and os.path.exists(p):
+        from PIL import Image
+        im = Image.open(p); ow, parts = im.size[0], []
+        for t in RW:
+            if t > ow * .75: continue   # a copy under 25% narrower saves too little to be worth shipping
+            q = 'assets/r/' + str(t) + p[len('assets'):]
+            if not os.path.exists(q) or os.path.getmtime(q) < os.path.getmtime(p):
+                os.makedirs(os.path.dirname(q), exist_ok=True); s = im if im.mode in ('RGB', 'RGBA') else im.convert('RGBA')
+                s.resize((t, round(s.size[1] * t / s.size[0])), Image.LANCZOS).save(q, 'WEBP', quality=80, method=6)
+            parts.append(f'/{q} {t}w')
+        if parts: out = ', '.join(parts + [f'{src} {ow}w'])
+    _RS[src] = out; return out
+def rset(src, sizes): s = rsrc(src); return f' srcset="{s}" sizes="{sizes}"' if s else ''
+def rsmall(src): s = rsrc(src); return s.split(' ')[0] if s else src   # the 400 px copy, for thumbnails (explorer rows are 60-76 px)
+SZ_ONE, SZ_TWO = '(max-width: 600px) 95vw, 560px', '(max-width: 600px) 52vw, 400px'   # one photo in a slot / two or three side by side
 def tiles():
     from PIL import Image
     yrs = {f['id']: f for f in json.load(open('data/years.json', encoding='utf-8'))}
     fid = lambda c: c['id']
     def img(ph, alt, cls=''):
-        return f'<img class="{cls}" src="{ph["src"]}" alt="{E(alt)}" width="{ph["w"]}" height="{ph["h"]}" loading="lazy">' if ph else ''
+        return f'<img class="{cls}" src="{ph["src"]}"{rset(ph["src"], SZ_TWO if cls else "(max-width: 600px) 88vw, 460px")} alt="{E(alt)}" width="{ph["w"]}" height="{ph["h"]}" loading="lazy">' if ph else ''
     who = []
     def car_tile(c, eyebrow, cls):
         ph = mphoto(c['id']); ph and who.append(ph['author'].split('\ufffd')[0].strip())
@@ -287,14 +310,14 @@ def tiles():
     return f'<section class="tiles">{"".join(t)}</section><p class="tiles-cr">Photos: {E(cr)} (Wikimedia Commons, CC BY-SA)' + (' · *Tesla uses estimated sales.' if worst['est'] else '') + '</p>'
 
 def pimg(ph, alt, cls=''):
-    return f'<img class="{cls}" src="{ph["src"]}" alt="{E(alt)}" width="{ph["w"]}" height="{ph["h"]}" loading="lazy">' if ph else ''
+    return f'<img class="{cls}" src="{ph["src"]}"{rset(ph["src"], SZ_TWO if cls else SZ_ONE)} alt="{E(alt)}" width="{ph["w"]}" height="{ph["h"]}" loading="lazy">' if ph else ''
 def who(*phs): return [ph['author'].split('\ufffd')[0].strip() for ph in phs if ph and ph.get('author')]
 def pcredit(names): names = list(dict.fromkeys(n for n in names if n)); return f'<p class="ph-cr">Photos: {E(" · ".join(names))} (Wikimedia Commons)</p>' if names else ''
 def pair(a, b, alts=('', '')): return f'<div class="ph-pair">{pimg(a, alts[0], "l")}{pimg(b, alts[1], "r")}</div>'
 def trio(phs, alts): return '<div class="ph-trio">' + ''.join(pimg(ph, al, f"c{i}") for i, (ph, al) in enumerate(zip(phs, alts))) + '</div>'
 def phero(eyebrow, title, sub, visual='', extra='', credit=''):
     """The v6 page top: eyebrow, h1, one line, then the tool (extra) and the photos (visual)."""
-    v = f'<div class="ph-v">{visual}</div>' if visual else ''
+    v = '<div class="ph-v">' + visual.replace(' loading="lazy"', '') + '</div>' if visual else ''   # 11-09: hero photos load right away
     return f'<section class="ph"><p class="ph-e">{eyebrow}</p><h1>{title}</h1><p class="ph-s">{sub}</p>{extra}{v}{credit}</section>'
 def qa_fold(html_):
     """<h3>Q</h3><p>A</p> pairs -> tap-to-open rows."""
@@ -308,7 +331,7 @@ def hero_cards():
     for fid, y, cls in (('toyota-rav4', 2016, 'hc-1'), ('jeep-cherokee', 2014, 'hc-2')):
         f = yrs[fid]; v = next(w for w in f['years'] if w['y'] == y); im = ph[fid][str(y)]
         top = (v.get('parts') or [['', 0]])[0][0]
-        out.append(f'<a class="hc {cls}" href="/cars/{fid}/{y}/"><img src="{im["src"]}" alt="{y} {E(f["name"])}" width="{im["w"]}" height="{im["h"]}" loading="eager">'
+        out.append(f'<a class="hc {cls}" href="/cars/{fid}/{y}/"><img src="{im["src"]}"{rset(im["src"], "(max-width: 620px) 44vw, (max-width: 999px) 94vw, 260px")} alt="{y} {E(f["name"])}" width="{im["w"]}" height="{im["h"]}" fetchpriority="high">'
                    f'<div class="hc-b"><div><b>{y} {E(f["name"])}</b><span>{E(plain(v["li"]))}</span>{f"<small>Top complaint: {E(top.split(",")[0])}</small>" if top else ""}</div>{gauge(v["li"], 128, False)}</div></a>')
     return f'<div class="hcs">{"".join(out)}<p class="hc-cr">Photos: Wikimedia Commons</p></div>'
 
@@ -671,7 +694,7 @@ def car_photo(fid, y, name):
     if not ph: return ''
     who = ph['author'].split('\ufffd')[0].strip().replace('National Highway Traffic Safety Administration', 'NHTSA'); lic = ph['license']
     lic_h = f'<a href="{LIC[lic]}" rel="noopener license">{E(lic)}</a>' if lic in LIC else E(lic)
-    return (f'<figure class="yph"><img src="{ph["src"]}" alt="{y} {E(name)}" width="{ph["w"]}" height="{ph["h"]}" fetchpriority="high">'
+    return (f'<figure class="yph"><img src="{ph["src"]}"{rset(ph["src"], SZ_ONE)} alt="{y} {E(name)}" width="{ph["w"]}" height="{ph["h"]}" fetchpriority="high">'
             f'<figcaption>{pcap(ph, who)}</figcaption></figure>')
 def year_photo(f, y):
     ys = PH.get(f['id'], {}); nm = SNM(f)
@@ -683,7 +706,7 @@ def year_photo(f, y):
     lic = ph.get('license', ''); who = (ph.get('author') or '').split('\ufffd')[0].strip()
     lic_h = f'<a href="{LIC[lic]}" rel="noopener license">{E(lic)}</a>' if lic in LIC else E(lic)
     note = f'{shown} shown · ' if shown and shown != y else ''
-    return (f'<figure class="yph"><img src="{ph["src"]}" alt="{E(nm)}" width="{ph["w"]}" height="{ph["h"]}" fetchpriority="high">'
+    return (f'<figure class="yph"><img src="{ph["src"]}"{rset(ph["src"], SZ_ONE)} alt="{E(nm)}" width="{ph["w"]}" height="{ph["h"]}" fetchpriority="high">'
             f'<figcaption>{note}{pcap(ph, who)}</figcaption></figure>')
 def clean_tsb(t):
     """An automaker repair note in plain words: drop the 'HONDA:' prefix and 'Some 2017-2018 X built before ... may exhibit', fix SHOUTING, skip shop-tool notes."""
