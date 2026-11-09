@@ -4,3 +4,6 @@ __pycache__
 data/cache/
 _shots_ev.mjs
 data/raw_more/
+
+# wrangler cache (lemon-survey deploys)
+worker/.wrangler/
