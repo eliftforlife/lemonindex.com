@@ -22098,6 +22098,99 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2021–2025 Chevrolet Tahoe",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 26100351,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 262431,
+     "n": 3,
+     "best": {
+      "id": "XJ6T7Yd8hq8",
+      "title": "How To Start A 2021 - 2024 Chevy Tahoe With No Key Found - Remote Fob Dead Battery Chevrolet",
+      "channel": "PYR Automotive ",
+      "views": 126289
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 97093,
+     "n": 1,
+     "best": {
+      "id": "MGgDT-BKrnM",
+      "title": "2019–2024 Chevy Silverado GMC Sierra Chevy Tahoe front brake replacement",
+      "channel": "My Mobile Mechanic 978",
+      "views": 97093
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 85480,
+     "n": 1,
+     "best": {
+      "id": "DT-PlV4cVmM",
+      "title": "How To Change A 2021- 2023 Chevy Tahoe Cabin Air filter - Replace Replacement Location Chevrolet",
+      "channel": "PYR Automotive ",
+      "views": 85480
+     }
+    },
+    {
+     "name": "Lifters, AFM & cam phasers",
+     "views": 72121,
+     "n": 1,
+     "best": {
+      "id": "TUJMtv3nMYc",
+      "title": "2022 Tahoe Lifter Failure. Cylinder Head Removal Finds Problem!",
+      "channel": "Wrenching With Kenny",
+      "views": 72121
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 48276,
+     "n": 1,
+     "best": {
+      "id": "YmeU2YIn-7c",
+      "title": "''Service safety restraint system\" on 2021 tahoe/suburban w/B14DC",
+      "channel": "SteeveGMTECH",
+      "views": 48276
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "6Bz-Vdt2gQg",
+     "title": "2021 Chevy Suburban Vs 2021 Chevy Tahoe: What Is The Real Difference And Which Should You Buy???",
+     "channel": "Ben Hardy",
+     "views": 111770
+    },
+    {
+     "id": "C4Ly6bLizpo",
+     "title": "BUYER BEWARE! 2021 Chevy Tahoe Rear Entertainment Package",
+     "channel": "Pickup Truck Plus SUV Talk (PUTT)",
+     "views": 66505
+    },
+    {
+     "id": "AQhg_pEHS6c",
+     "title": "2025 GMC Yukon & Chevy Tahoe Review || Amazing, but One MAJOR Problem",
+     "channel": "Car Help Corner",
+     "views": 60995
+    }
+   ],
+   "costs": null
   }
  ],
  "ford-mustang": [
