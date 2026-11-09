@@ -33269,6 +33269,130 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2015,
+    2016,
+    2017
+   ],
+   "gen": "2015–2017 Chrysler 200",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 10925691,
+   "topics": [
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 306962,
+     "n": 4,
+     "best": {
+      "id": "e1kjQ_TZO0E",
+      "title": "2015 Chrysler 200s won't start",
+      "channel": "punchrolo 2",
+      "views": 104415
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 241604,
+     "n": 6,
+     "best": {
+      "id": "ECxvKoVon44",
+      "title": "Chrysler 200 Cabin Air Filter Replacement ( 2015 2016 2017 )",
+      "channel": "Undercar Experts",
+      "views": 89007
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 216212,
+     "n": 2,
+     "best": {
+      "id": "AvzppV8UmQc",
+      "title": "2015 - 2018 chrysler 200 oil life reset / service reset",
+      "channel": "Dullah Goso hard",
+      "views": 201764
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 193144,
+     "n": 3,
+     "best": {
+      "id": "Sn4Cdou4xIQ",
+      "title": "2015 Chrysler 200C Thermostat Replacement P0128",
+      "channel": "Joe's Car Smarts-NY",
+      "views": 133182
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 185557,
+     "n": 7,
+     "best": {
+      "id": "1Ktpxpg9HTs",
+      "title": "Chrysler 200 Key Fob Battery Replacement (2015 - 2017)",
+      "channel": "FobBattery",
+      "views": 68357
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 181894,
+     "n": 3,
+     "best": {
+      "id": "12h91t1ZbeY",
+      "title": "2015 Chrysler 200S Transmission Failure",
+      "channel": "roktboy310",
+      "views": 110203
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 105745,
+     "n": 2,
+     "best": {
+      "id": "6oO7KpX9oZo",
+      "title": "2015 Chrysler 200C 2.4L Spark Plug Replacement",
+      "channel": "Joe's Car Smarts-NY",
+      "views": 71891
+     }
+    },
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 80786,
+     "n": 3,
+     "best": {
+      "id": "77xJL873zrA",
+      "title": "2015 Chrysler 200S V6, Oil Leak At 100k Miles, How To Replace The Oil Cooler",
+      "channel": "Amp Trek ",
+      "views": 54321
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "4GYu6CIqvoo",
+     "title": "Top 5 Problems With The 2015-2017 Chrysler 200 | 2nd Generation (Mechanic's Review)",
+     "channel": "Alex The Car Doctor",
+     "views": 288146
+    },
+    {
+     "id": "JoXyW8cUSoM",
+     "title": "2015 Chrysler 200 | Transmission program problems",
+     "channel": "Oz Mechanics",
+     "views": 8371
+    },
+    {
+     "id": "FYLjGr2eP4w",
+     "title": "2015 Chrysler 200 NOT STARTING PROBLEMS (TRY THIS FIRST) #CHRYSLER #chrysler200 #carproblems #winter",
+     "channel": "Drive a Million",
+     "views": 6913
+    }
+   ],
+   "costs": null
   }
  ],
  "lexus-es": [
