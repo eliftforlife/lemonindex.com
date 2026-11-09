@@ -3582,7 +3582,26 @@
      "views": 271168
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Tires",
+      {
+       "median": 2000,
+       "lo": 1000.0,
+       "hi": 3000.0,
+       "n": 2,
+       "videos": 2,
+       "id": "JRiBmp8Rg9s",
+       "t": 795,
+       "title": "2011 Toyota RAV4 Mini Overlander Build"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
