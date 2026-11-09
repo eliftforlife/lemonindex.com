@@ -35126,7 +35126,61 @@
      "views": 245704
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 34000,
+     "lo": 33000.0,
+     "hi": 35000.0,
+     "n": 4,
+     "videos": 4,
+     "id": "991qWVLa_uA",
+     "t": 279,
+     "title": "2008 Mercedes-Benz C-Class Review - Kelley Blue Book"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 458,
+       "lo": 200.0,
+       "hi": 900.0,
+       "n": 14,
+       "videos": 5,
+       "id": "gCiM_iSq984",
+       "t": 568,
+       "title": "mercedes w204 ESL FAIL STUCK? use this trick BYPASS and JUMP START YOUR CAR"
+      }
+     ],
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 1040,
+       "lo": 100.0,
+       "hi": 5000.0,
+       "n": 3,
+       "videos": 3,
+       "id": "eZ6ZE9Gf6Y4",
+       "t": 344,
+       "title": "Chicago Cars Direct Presents a 2011 Mercedes-Benz C300 4Matic Sport 4M. Mars Red/Almond. #151569"
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 162,
+       "lo": 125.0,
+       "hi": 200.0,
+       "n": 4,
+       "videos": 2,
+       "id": "wFRvrSHUbVk",
+       "t": 153,
+       "title": "Is it Worth it? 2 Year Review of My 2013 Mercedes-Benz C 300 4matic in 2024"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -35254,7 +35308,48 @@
      "views": 382941
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 48000,
+     "lo": 43000.0,
+     "hi": 65250.0,
+     "n": 11,
+     "videos": 10,
+     "id": "wxlEy7psPIU",
+     "t": 1249,
+     "title": "2015 Mercedes C-Class C300 4Matic Detailed Review and Road Test"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 1800,
+       "lo": 700.0,
+       "hi": 3500.0,
+       "n": 11,
+       "videos": 4,
+       "id": "AhMTKgwaadc",
+       "t": 278,
+       "title": "Is 2015 Mercedes C300 Still a LUXURY SMART Buy in 2026?"
+      }
+     ],
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 4000,
+       "lo": 3000.0,
+       "hi": 5000.0,
+       "n": 2,
+       "videos": 2,
+       "id": "XnSJK3Sj6cI",
+       "t": 499,
+       "title": "Mercedes C-Class review (2014 to 2018) - What Car?"
+      }
+     ]
+    ]
+   }
   }
  ],
  "mercedes-benz-glk/glc": [
@@ -36708,7 +36803,30 @@
      "views": 142079
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 26500,
+     "lo": 25000.0,
+     "hi": 28000.0,
+     "n": 4,
+     "videos": 3,
+     "id": "W0fBGQ0l_Ws",
+     "t": 753,
+     "title": "Is the Audi SQ5 still worthy of the hype? | ReDriven Audi SQ5 (2017-2021) used car review."
+    },
+    "msrp": {
+     "median": 41800,
+     "lo": 38900.0,
+     "hi": 56000.0,
+     "n": 7,
+     "videos": 6,
+     "id": "BUUQ8Lls4yQ",
+     "t": 126,
+     "title": "2013 Acura RDX vs. 2012 Audi Q5 - Vehicle Comparison"
+    },
+    "items": []
+   }
   },
   {
    "years": [
