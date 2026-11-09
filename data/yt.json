@@ -23828,6 +23828,133 @@
    "costs": null
   }
  ],
+ "dodge-dart": [
+  {
+   "years": [
+    2013,
+    2014,
+    2015,
+    2016
+   ],
+   "gen": "2013–2016 Dodge Dart",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 12660537,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 277657,
+     "n": 4,
+     "best": {
+      "id": "fjhOooIkFvo",
+      "title": "2013 Dodge Dart | Change Oil Message",
+      "channel": "Mopar",
+      "views": 143917
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 277105,
+     "n": 8,
+     "best": {
+      "id": "KHaWiIhW38k",
+      "title": "2013,2014,2015,2016 Dodge dart starter replacement 2.0 2.4 MultiAir",
+      "channel": "Ollie on Wheels llc",
+      "views": 103079
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 252690,
+     "n": 7,
+     "best": {
+      "id": "Si0mjD8cdgs",
+      "title": "2013 & 2014 Dodge Dart 2.0L Air Intake Installation",
+      "channel": "KNfilters",
+      "views": 130737
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 192076,
+     "n": 6,
+     "best": {
+      "id": "0ST97pxBeF0",
+      "title": "How to Replace Front Strut & Spring Assemblies 2013-2016 Dodge Dart",
+      "channel": "TRQ",
+      "views": 67784
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 92265,
+     "n": 2,
+     "best": {
+      "id": "nTwUUJMmpkk",
+      "title": "2016 DODGE DART, No Start Issue...Won't Crank...Clicks... Solved...",
+      "channel": "Peter L",
+      "views": 67788
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 82450,
+     "n": 3,
+     "best": {
+      "id": "aFZGYA2Q7Nw",
+      "title": "2015 Dodge Dart check engine light",
+      "channel": "knightrandom",
+      "views": 55925
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 67443,
+     "n": 1,
+     "best": {
+      "id": "QdBNtAJbZM4",
+      "title": "2015 Dodge Dart Door panel removal removing how to",
+      "channel": "FixAlex",
+      "views": 67443
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 62072,
+     "n": 2,
+     "best": {
+      "id": "B5g_4BGaEPE",
+      "title": "How to Replace Cabin Air Filter 2013-2016 Dodge Dart",
+      "channel": "TRQ",
+      "views": 51913
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "1Aeu0zwZQBg",
+     "title": "Top 5 Problems Dodge Dart Sedan 2013-2016 5th Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 182512
+    },
+    {
+     "id": "QF8irBQqlDI",
+     "title": "2013 Dodge Dart Problems and Recalls. Should you buy it?",
+     "channel": "OBD Insights",
+     "views": 14128
+    },
+    {
+     "id": "B4OmbF35AL0",
+     "title": "2013 Dodge Dart Rallye Turbo 6-spd Start Up, Exhaust, and In Depth Review",
+     "channel": "Saabkyle04",
+     "views": 773681
+    }
+   ],
+   "costs": null
+  }
+ ],
  "lexus-es": [
   {
    "years": [
