@@ -26075,6 +26075,234 @@
    "costs": null
   }
  ],
+ "audi-a4": [
+  {
+   "years": [
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016
+   ],
+   "gen": "2009–2016 Audi A4",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 50182020,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 1131080,
+     "n": 5,
+     "best": {
+      "id": "h-FzpNBSz7o",
+      "title": "SERVICE DUE! reset oil change light Audi A4 S4 A5 S5 RS4 RS5 2007-2016",
+      "channel": "Flying Wheels",
+      "views": 440750
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 905465,
+     "n": 5,
+     "best": {
+      "id": "ixDwvZbWtWM",
+      "title": "Buying a used Audi A4 (B8) - 2008-2015, Buying guide with Common Issues",
+      "channel": "different car review",
+      "views": 502417
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 781730,
+     "n": 2,
+     "best": {
+      "id": "sErylPCTv2U",
+      "title": "Audi A4 Oil Change DIY (B8 Chassis // 2009-2016)",
+      "channel": "ECS Tuning",
+      "views": 438018
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 722894,
+     "n": 4,
+     "best": {
+      "id": "1Yc-y3o_kR4",
+      "title": "Audi B8 (A4, A5, S4, S5, & Q5) Front Control Arm Replacement - DIY",
+      "channel": "FCP Euro",
+      "views": 418781
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 535633,
+     "n": 4,
+     "best": {
+      "id": "XG584KQCwyM",
+      "title": "Audi A4 B8 2.0TDI - EGR Cleaning [How to]",
+      "channel": "BestCarMods",
+      "views": 228512
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 346137,
+     "n": 2,
+     "best": {
+      "id": "HqjhGdcWZdg",
+      "title": "Audi A4 (2014) - New Battery Replacement",
+      "channel": "The Battery Shop",
+      "views": 253402
+     }
+    },
+    {
+     "name": "Lifters, AFM & cam phasers",
+     "views": 316771,
+     "n": 1,
+     "best": {
+      "id": "T0y6qByzs6Q",
+      "title": "2.0t Ticking Tapping Knocking Noise Audi VW A4 a5 a6 q5 tfsi abnormal engine sound clatter repair b8",
+      "channel": "NaptownTuner",
+      "views": 316771
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 241454,
+     "n": 2,
+     "best": {
+      "id": "34G3qDPNldE",
+      "title": "2010 Audi A4 A5 B8 Rear Brake Pads Replacement without Vagcom 2009 2011 2012 2013 2014",
+      "channel": "Cars and Coding",
+      "views": 172771
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "_Jwgkp8W9qw",
+     "title": "Audi A4 saloon 2015-2019 review - Carbuyer",
+     "channel": "Carbuyer",
+     "views": 1019608
+    },
+    {
+     "id": "LjdVTTTrZKI",
+     "title": "Audi A4 2008 - 2011 review - CarBuyer",
+     "channel": "Carbuyer",
+     "views": 859828
+    },
+    {
+     "id": "lugEvPv9tYQ",
+     "title": "Audi A4 Allroad estate 2013 review - CarBuyer",
+     "channel": "Carbuyer",
+     "views": 385729
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2017–2025 Audi A4",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 63589733,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 951299,
+     "n": 5,
+     "best": {
+      "id": "rtsjCZBvao8",
+      "title": "How To: Audi A4 B9 2017 Facelift MMI Reset",
+      "channel": "Advanced In-Car Technologies",
+      "views": 359320
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 393650,
+     "n": 1,
+     "best": {
+      "id": "lDtIheAkYaA",
+      "title": "Audi Water Pump Replacement DIY (2008-2017 Audi MLB A4, S4, A5, S5, Q5)",
+      "channel": "FCP Euro",
+      "views": 393650
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 250935,
+     "n": 2,
+     "best": {
+      "id": "3pfkyw9gIxQ",
+      "title": "2017 - 2021 Audi A4 Remote Key Fob Battery Change - How To Remove & Replace A4 Key Batteries",
+      "channel": "PYR Automotive ",
+      "views": 166654
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 90755,
+     "n": 1,
+     "best": {
+      "id": "AvmAAaYfG8s",
+      "title": "Audi A4 B9 Front Brakes Replacement Pads Rotors Allroad 2016 - 2025 DIY",
+      "channel": "Gibby's Garage",
+      "views": 90755
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 78610,
+     "n": 1,
+     "best": {
+      "id": "GrGqZ9PVQm0",
+      "title": "Audi A4 DSG Transmission Service DIY (2017-2024 Audi B9 A4, A5, Sportback, Allroad)",
+      "channel": "FCP Euro",
+      "views": 78610
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "_Jwgkp8W9qw",
+     "title": "Audi A4 saloon 2015-2019 review - Carbuyer",
+     "channel": "Carbuyer",
+     "views": 1019608
+    },
+    {
+     "id": "UcICpd1mPIs",
+     "title": "Audi A4 saloon 2020 in-depth review - Carbuyer",
+     "channel": "Carbuyer",
+     "views": 418822
+    },
+    {
+     "id": "imXHlbYLxS4",
+     "title": "Should you buy a USED Audi A4 (B9)? - What goes WRONG?",
+     "channel": "ReDriven",
+     "views": 293719
+    }
+   ],
+   "costs": null
+  }
+ ],
  "audi-q5": [
   {
    "years": [
