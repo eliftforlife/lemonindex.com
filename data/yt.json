@@ -7876,6 +7876,354 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004
+   ],
+   "gen": "1995–2004 Toyota Tacoma",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 23237014,
+   "topics": [
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 1213734,
+     "n": 10,
+     "best": {
+      "id": "GVWCCjZBfGM",
+      "title": "2004 Toyota Tacoma Throttle Body Idle Problem IAC",
+      "channel": "APDTY",
+      "views": 359014
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 608413,
+     "n": 2,
+     "best": {
+      "id": "FglBsUEOSEk",
+      "title": "Transmission Service Toyota Tacoma 1995-2004",
+      "channel": "2CarPros",
+      "views": 566008
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 525380,
+     "n": 2,
+     "best": {
+      "id": "h_VHxBmecj8",
+      "title": "Fuel Pump Replacement Toyota Tacoma 1995-2004",
+      "channel": "2CarPros",
+      "views": 368080
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 386129,
+     "n": 5,
+     "best": {
+      "id": "XVSBH0ynzyQ",
+      "title": "1998 - 2004 Toyota Tacoma Radio Install",
+      "channel": "Provo Beast Audio Installation",
+      "views": 132801
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 350130,
+     "n": 7,
+     "best": {
+      "id": "A3c84BvG9eU",
+      "title": "How to Replace Front Lower Ball Joints 1995-2004 Toyota Tacoma",
+      "channel": "TRQ",
+      "views": 98529
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 312498,
+     "n": 5,
+     "best": {
+      "id": "mSM3OyeMlWg",
+      "title": "Heater core replacement Toyota Tacoma 2000. Install Remove Replace",
+      "channel": "Fixing cars and stuff",
+      "views": 155555
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 287282,
+     "n": 4,
+     "best": {
+      "id": "EKgboMQiBr0",
+      "title": "1999 Toyota Tacoma Prerunner Rear Drum Brakes Replaced",
+      "channel": "wildwest5d5",
+      "views": 134601
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 230897,
+     "n": 2,
+     "best": {
+      "id": "P4-GQ0CpWeI",
+      "title": "Toyota Tacoma 2001-2004 Led Gauge Cluster Install.",
+      "channel": "ChaseFabbed",
+      "views": 156783
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "zSGB9DLVdSE",
+     "title": "Top 5 Problems Toyota Tacoma Pickup 1995-2004 1st Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 303150
+    },
+    {
+     "id": "WtyhiOD8Jm4",
+     "title": "1995-2004 Toyota Tacoma Buyer's Guide (1st Gen Common Problems)",
+     "channel": "Useful Vids",
+     "views": 212540
+    },
+    {
+     "id": "E-K5EswUtXg",
+     "title": "Toyota Tacoma Gen1 (1995-2004): Specs, Problems, Pros and Cons. Should you buy it?",
+     "channel": "MaxTheCarGuy",
+     "views": 190052
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015
+   ],
+   "gen": "2005–2015 Toyota Tacoma",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 24357481,
+   "topics": [
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 652640,
+     "n": 6,
+     "best": {
+      "id": "bVwdwtVNvOU",
+      "title": "How to Replace Cabin Air Filter 2007 Toyota Tacoma | AQ1045",
+      "channel": "Filterheads",
+      "views": 225880
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 641667,
+     "n": 2,
+     "best": {
+      "id": "Gzgh_LVAIDE",
+      "title": "Front Brake Pads & Rotors Replacement Toyota Tacoma 2005-2014",
+      "channel": "2CarPros",
+      "views": 532737
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 640970,
+     "n": 4,
+     "best": {
+      "id": "VucjMR7cmwQ",
+      "title": "Oil Change & Filter Replacement Toyota Tacoma V6 2005-2015",
+      "channel": "2CarPros",
+      "views": 503393
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 601287,
+     "n": 6,
+     "best": {
+      "id": "8zhG9JsC-w4",
+      "title": "How To Program A Toyota Tacoma Remote Key Fob 2003 - 2015 DIY Tutorial",
+      "channel": "PYR Automotive ",
+      "views": 264707
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 569858,
+     "n": 4,
+     "best": {
+      "id": "8hBF4X79gCY",
+      "title": "2008 Toyota Tacoma: How to fill up your transmission with ATF WS",
+      "channel": "link375",
+      "views": 261147
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 534973,
+     "n": 4,
+     "best": {
+      "id": "EDONxuxYbvQ",
+      "title": "How to replace spark plugs on 2005-2015 Toyota Tacoma 4.0L V6",
+      "channel": "AutoRex",
+      "views": 334373
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 417419,
+     "n": 4,
+     "best": {
+      "id": "I8JAA-6_WCU",
+      "title": "How to Replace Shocks and Struts in a Toyota Tacoma – 2013-2016",
+      "channel": "AutoZone",
+      "views": 230472
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 361453,
+     "n": 3,
+     "best": {
+      "id": "moOd8qdRRhc",
+      "title": "How to reset the low tire light on a 2011 Toyota Tacoma",
+      "channel": "Jimthecarguy",
+      "views": 182533
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "TIXy5zt9cLY",
+     "title": "Top 5 Problems Toyota Tacoma Truck 2nd Generation 2005-15",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 799916
+    },
+    {
+     "id": "P8IR6Y9_wOQ",
+     "title": "This Tacoma Frame is Well Preserved | Toyota Tacoma Common Problems 2005-2015",
+     "channel": "The Car Care Nut",
+     "views": 202331
+    },
+    {
+     "id": "9ZOhD0KU_gA",
+     "title": "2005-2015 Toyota Tacoma Buyer's Guide (2nd Gen Common Problems)",
+     "channel": "Useful Vids",
+     "views": 140592
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2024,
+    2025
+   ],
+   "gen": "2024–2025 Toyota Tacoma",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 17077675,
+   "topics": [
+    {
+     "name": "Transmission & shifter",
+     "views": 217045,
+     "n": 3,
+     "best": {
+      "id": "FrJuqMpA_HY",
+      "title": "2024 Toyota Tacoma Transmissions are Failing. Another Recall Coming?",
+      "channel": "The Car Guy Online",
+      "views": 158505
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 138346,
+     "n": 1,
+     "best": {
+      "id": "_mMfInF19vo",
+      "title": "How to Use 4WD In 4 Minutes (2024+ Tacoma)",
+      "channel": "TRD Takeover",
+      "views": 138346
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 66185,
+     "n": 3,
+     "best": {
+      "id": "Ms7bkPFGlkk",
+      "title": "2 Recalls Already? 4th Gen Tacoma Update + Oil Analysis",
+      "channel": "Muscle American",
+      "views": 30183
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 10683,
+     "n": 1,
+     "best": {
+      "id": "KmYVUvHLK6k",
+      "title": "2024 Toyota Tacoma Hybrid Won’t Start! Only 5,000 miles! Here’s What Happened...",
+      "channel": "The Tacoma Enthusiast",
+      "views": 10683
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 10346,
+     "n": 1,
+     "best": {
+      "id": "D6GZIL3QuVU",
+      "title": "2024-2025 Toyota Tacoma How to Replace Cabin Air Filter 2026",
+      "channel": "Oil Light Reset ",
+      "views": 10346
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "vwIq9OvFU-Q",
+     "title": "Is Toyota's Reputation For Reliability Slipping? This 2025 Toyota Tacoma Is On It's 3rd Transmission",
+     "channel": "The Fast Lane Truck",
+     "views": 471409
+    },
+    {
+     "id": "fE3Ia28sluU",
+     "title": "2024 Toyota Tacoma Buyer's Guide - Trim Levels + Engines",
+     "channel": "RevMatchTV",
+     "views": 151136
+    },
+    {
+     "id": "_5y6_48t860",
+     "title": "Reliable or a LETDOWN? 2025 Toyota Tacoma Owners Weigh In",
+     "channel": "The Car Guy Online",
+     "views": 132219
+    }
+   ],
+   "costs": null
   }
  ],
  "model:toyota-rav4": [
