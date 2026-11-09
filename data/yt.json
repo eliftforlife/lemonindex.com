@@ -13593,7 +13593,48 @@
      "views": 131075
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 23500,
+     "lo": 18000.0,
+     "hi": 28000.0,
+     "n": 6,
+     "videos": 5,
+     "id": "Qy9oYZXS9Xg",
+     "t": 246,
+     "title": "2008 Ford Fusion Review - Kelley Blue Book"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 700,
+       "lo": 22.0,
+       "hi": 900.0,
+       "n": 7,
+       "videos": 5,
+       "id": "0r46_unyYk8",
+       "t": 385,
+       "title": "2006-2010 Ford Fusion: Intermittent Loss of Brakes"
+      }
+     ],
+     [
+      "Transmission",
+      {
+       "median": 800,
+       "lo": 800.0,
+       "hi": 3500.0,
+       "n": 3,
+       "videos": 3,
+       "id": "Gug7ZQOkJDE",
+       "t": 13,
+       "title": "2008 2.3 Ford Fusion Oil Change With Filter Cartridge. Finally Fixed and Running!"
+      }
+     ]
+    ]
+   }
   }
  ],
  "bmw-x5": [
