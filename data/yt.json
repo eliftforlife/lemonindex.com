@@ -21625,7 +21625,39 @@
      "views": 122509
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 100,
+       "lo": 30.0,
+       "hi": 300.0,
+       "n": 6,
+       "videos": 5,
+       "id": "7GjzNQxQ6RU",
+       "t": 192,
+       "title": "How To Fix 2001 2007 Toyota Highlander Tail Light Failure Problem"
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 1200,
+       "lo": 700.0,
+       "hi": 2000.0,
+       "n": 6,
+       "videos": 2,
+       "id": "5tPeRmF_e_4",
+       "t": 250,
+       "title": "How Reliable is a 2005 Toyota Highlander Limited V6 225,000k POV 2 Hour Test Drive"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -21752,7 +21784,35 @@
      "views": 22135
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 36000,
+     "lo": 28000.0,
+     "hi": 41000.0,
+     "n": 11,
+     "videos": 10,
+     "id": "tjWsSqeg3Z0",
+     "t": 190,
+     "title": "Test drive: 2013 Toyota Highlander AWD Limited"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 600,
+       "lo": 400.0,
+       "hi": 1200.0,
+       "n": 3,
+       "videos": 3,
+       "id": "svSMYVIX8CY",
+       "t": 100,
+       "title": "2008 Toyota Highlander Valve Cover gasket replacement made EASY"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -21846,7 +21906,21 @@
      "views": 155298
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 44000,
+     "lo": 40000.0,
+     "hi": 51000.0,
+     "n": 37,
+     "videos": 26,
+     "id": "C25EZzPsg4Y",
+     "t": 1481,
+     "title": "The 2020 Toyota Highlander Wants To Be The Best Family SUV in America"
+    },
+    "items": []
+   }
   }
  ],
  "hyundai-tucson": [
@@ -44755,6 +44829,114 @@
      "title": "Audi Q7 2011-2015 THE MOST IN-DEPTH REVIEW | SHOULD YOU BUY ONE??",
      "channel": "Car and Driving - Car Reviews",
      "views": 62588
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2017–2025 Audi Q7",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 48665004,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 208035,
+     "n": 3,
+     "best": {
+      "id": "kaVUV0-pMMg",
+      "title": "2021 Audi Q7 Oil Change - You'll Wish You Knew This Trick!",
+      "channel": "Metaloop DIY - Cars and Tools",
+      "views": 92749
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 56651,
+     "n": 1,
+     "best": {
+      "id": "U9tW4-iMh1w",
+      "title": "How To Reset The Tire Pressure Warning On 2019 Audi Q7 Loss Of Pressure Reset MMI Warning Light",
+      "channel": "Key Fob King",
+      "views": 56651
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 50518,
+     "n": 1,
+     "best": {
+      "id": "na_iPDB-FmU",
+      "title": "2018 Audi Q7 door panel removal",
+      "channel": "TintGuy101 Ed",
+      "views": 50518
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 47286,
+     "n": 1,
+     "best": {
+      "id": "i02ceJCia88",
+      "title": "2017 - 2019 Audi Q7 How to change cabin air filter 2017 - 2019",
+      "channel": "Oil Light Reset ",
+      "views": 47286
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 43114,
+     "n": 1,
+     "best": {
+      "id": "5Ti5iteMMhs",
+      "title": "2017 Audi Q7 Maintenance Reset Suspension Service mode",
+      "channel": "Lehew",
+      "views": 43114
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 39948,
+     "n": 1,
+     "best": {
+      "id": "8moaR5HvSlY",
+      "title": "Infotainment How To - 2019 Audi Q7",
+      "channel": "Two Guys and a Ride",
+      "views": 39948
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "MnpRnR5QyK8",
+     "title": "2nd Gen Audi Q7. Is it a Luxury Bargain? || Value, 0-60, Reliability...",
+     "channel": "Not-So-Handy Car Guy",
+     "views": 214458
+    },
+    {
+     "id": "0bzDCvdOCgM",
+     "title": "2022 Audi Q7 Review - Should You Buy It?",
+     "channel": "James Salvatore",
+     "views": 80014
+    },
+    {
+     "id": "pkpHoo6jUks",
+     "title": "7 Problems With The 2024 Audi Q7 You Must Know!",
+     "channel": "Motor Future",
+     "views": 73191
     }
    ],
    "costs": null
