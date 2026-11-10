@@ -22674,7 +22674,39 @@
      "views": 57211
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 65,
+       "lo": 30.0,
+       "hi": 117.0,
+       "n": 8,
+       "videos": 6,
+       "id": "p-I3eTTdFMA",
+       "t": 238,
+       "title": "5 Common Issues That 2000-2006 Chevy Tahoes Have At 200k Miles"
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 200,
+       "lo": 150.0,
+       "hi": 250.0,
+       "n": 4,
+       "videos": 2,
+       "id": "NyzdcN50JXs",
+       "t": 393,
+       "title": "The Breakdown! We part out a 2002 Chevy Tahoe!"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -22803,7 +22835,35 @@
      "views": 557158
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 48000,
+     "lo": 33900.0,
+     "hi": 50455.0,
+     "n": 6,
+     "videos": 5,
+     "id": "6KBhfFd63Rk",
+     "t": 273,
+     "title": "Chevy Tahoe Hybrid 2010"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 375,
+       "lo": 25.0,
+       "hi": 525.0,
+       "n": 6,
+       "videos": 3,
+       "id": "3Rs8rWVGvww",
+       "t": 232,
+       "title": "Secret to replacing a TPMS Sensor YOURSELF | ACDelco TPMS Sensor on 2008 Chevy Tahoe"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
