@@ -1,0 +1,19 @@
+/* 11-10 year slider + year-page illustration (year_slider.py, yslider.js) */
+.ysl { display: grid; gap: 12px; margin-block: 8px 24px }
+.ysl-stage { position: relative; aspect-ratio: 3 / 2; max-width: 100%; background: #fff; border-radius: 18px; overflow: hidden; border: 1px solid #ebe8e1 }
+.ysl-stage img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity .22s ease }
+.ysl-stage img.on { opacity: 1 }
+.ysl-yr { position: absolute; left: 16px; top: 12px; display: grid; line-height: 1 }
+.ysl-yr b { font-size: clamp(44px, 11vw, 88px); font-weight: 800; letter-spacing: -.04em; color: #17161a; font-variant-numeric: tabular-nums }
+.ysl-gen { font-size: 13px; font-weight: 600; color: #6b6870; margin-top: 4px; letter-spacing: .02em }
+.ysl-info { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; min-height: 28px; font-size: 15px; font-weight: 600 }
+.ysl-li { padding: 4px 10px; border-radius: 999px; background: #f3f1ec }
+.ysl-li.good { background: #e6f4ea; color: #1e6b34 } .ysl-li.bad { background: #fde8e7; color: #a3241c } .ysl-li.na { font-weight: 500; color: #6b6870 }
+.ysl-yt { color: #6b6870 }
+.ysl-go { margin-left: auto }
+.ysl-range { width: 100%; height: 36px; accent-color: #e9b300; cursor: pointer; touch-action: pan-y }
+.ysl-ends { display: flex; justify-content: space-between; font-size: 12px; color: #6b6870; margin-top: -8px; font-variant-numeric: tabular-nums }
+figure.aiy { margin: 12px 0 0 }
+figure.aiy img { width: 100%; max-width: 100%; height: auto; border-radius: 14px; background: #fff }
+figure.aiy figcaption { font-size: 12.5px; color: #6b6870; margin-top: 6px }
+@media (prefers-reduced-motion: reduce) { .ysl-stage img { transition: none } }

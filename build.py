@@ -6,6 +6,7 @@ import re
 # Every number comes from data/*.csv (autopilot/lib/lemon.py, with the 10-24 mysales sales-timing fix); was 3 Lemon Index/video 1 most reliable/findings.md (NHTSA complaints ÷ US sales, model years 2010-2022).
 import os, re, json, html, datetime, shutil, csv
 from collections import defaultdict
+import year_slider as YSL   # 11-10: AI year illustrations + 'every year' slider (data/ai_year_images.json)
 OUT = 'docs'; TODAY = datetime.date.today().isoformat(); BASE = 'https://lemonindex.com'
 E = lambda s: html.escape(str(s), quote=True)
 YT, TT, IG = 'https://www.youtube.com/@lemonindex', 'https://www.tiktok.com/@lemonindex', 'https://www.instagram.com/lemonindex/'
@@ -829,6 +830,8 @@ def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
     yrs = ''.join(f'<a class="ychip {c}" href="{CARU(f, w["y"])}"><small>{lab}</small><b>{w["y"]}</b></a>' for lab, w, c in (('best year', best, 'good'), ('worst year', worst, 'bad')) if w['y'] != y)
     nav = ''.join(f'<a class="ychip" href="{CARU(f, w["y"])}"><small>{lab}</small><b>{w["y"]}</b></a>' for lab, w in (('previous', prev), ('next', nxt)) if w)
     ph = year_photo(f, y)   # 11-03 v6: nearest-year or model photo, captioned with the year it shows
+    if YSL.has(f['id']):   # 11-10: a real photo of this exact year stays first; otherwise the year's own illustration replaces a nearby-year photo
+        _ai = YSL.ai_year_html(f['id'], y, f['name']); ph = (ph + _ai) if str(y) in PH.get(f['id'], {}) else (_ai or ph)
     # 11-03 v3 header: a year switcher (‹ 2007 · 2008 · 2009 ›) and the best / worst years as one quiet line under the verdict
     seg = (f'<a href="{CARU(f, prev["y"])}" aria-label="{prev["y"]}">‹ {prev["y"]}</a>' if prev else '') + f'<span aria-current="page">{y}</span>' + (f'<a href="{CARU(f, nxt["y"])}" aria-label="{nxt["y"]}">{nxt["y"]} ›</a>' if nxt else '')
     bw = (lambda xs: f'<p class="ybw">{" · ".join(xs)}</p>' if xs else '')([f'{lab} <a class="{c}" href="{CARU(f, w["y"])}">{w["y"]}</a>' for lab, w, c in (('Best year', best, 'good'), ('Worst year', worst, 'bad')) if w['y'] != y])
@@ -943,7 +946,7 @@ for f in YEARS:
 <div class="pg mp6"><section class="ph yph6"><div class="yh-t"><p class="ph-e"><a href="/cars/">All cars</a> · <a href="/brands/{c["brand"].lower().replace(" ", "-")}/">{E(c["brand"])}</a> · {E(c["segName"])}</p>{rel_html}{f'<p class="yc-note">{SN[f["id"]][1]}</p>' if f["id"] in SN else ""}
 <div class="yhero">{gauge(c["li"], 190)}<div class="yverd {verdict(c["li"])[0]}"><p><b>{verdict(c["li"])[1]}.</b> <span>Whole model, {c["years"]}{"" if plain(c["li"]).lower() in verdict(c["li"])[1].lower() else ": " + E(plain(c["li"]))}.</span></p><p class="ybw">Best year <a class="good" href="{CARU(f, best["y"])}">{best["y"]}</a> · Worst year <a class="bad" href="{CARU(f, worst["y"])}">{worst["y"]}</a></p></div></div>
 <p><button type="button" class="btn btn-ghost" data-share="{E(f'Every {snm} year ranked by owner complaints. Best: {best["y"]}. Worst: {worst["y"]}. Free report:')}">Share ↗</button></p></div><div class="ph-v">{year_photo(f, ys[-1]["y"])}{rel_tiles}</div></section>
-<section class="yyears noph" id="years"><div class="yy-ch"><h2>Every year. <span class="h2s">Lower is better. Tap a year for its full report.</span></h2>{ybars(f)}</div>{'<p class="yc-cap">Scores before 2010 are rough: fewer owners filed complaints back then.</p>' if ys[0]["y"] < 2010 else ''}{yt_note(f)}</section>
+{YSL.year_slider_html(f['id'], f['name'], {v['y']: round(v['li']) for v in ys if v.get('ok') and v.get('li') is not None}, YSL.yt_scores(f['id']), {v['y'] for v in ys})}<section class="yyears noph" id="years"><div class="yy-ch"><h2>Every year. <span class="h2s">Lower is better. Tap a year for its full report.</span></h2>{ybars(f)}</div>{'<p class="yc-cap">Scores before 2010 are rough: fewer owners filed complaints back then.</p>' if ys[0]["y"] < 2010 else ''}{yt_note(f)}</section>
 {ytfix("model:" + f["id"])}{picks}
 {f'<section><h2>Compare the {E(f["name"])}.</h2><div class="mus">{vcards}</div>' + (f'<p class="yc-cap">{vs}</p>' if vs else '') + '</section>' if vcards or vs else ''}
 {model_qa_html}
