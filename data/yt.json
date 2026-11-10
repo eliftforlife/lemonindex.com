@@ -44166,6 +44166,132 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2006,
+    2007,
+    2008,
+    2009,
+    2010
+   ],
+   "gen": "2005–2010 Volkswagen Jetta",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 18462796,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 2299982,
+     "n": 6,
+     "best": {
+      "id": "ByU13HCbZsc",
+      "title": "Radio Removal 2006-2009 Volkswagen MK5 Golf GLI GTI Jetta R32 Rabbit",
+      "channel": "Enfig",
+      "views": 1023719
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 894706,
+     "n": 8,
+     "best": {
+      "id": "GSVtQv0HDcg",
+      "title": "VW Jetta MK5 A5 Golf MK5 Radiator Support Removal and Replacement",
+      "channel": "World Mechanics",
+      "views": 353556
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 478056,
+     "n": 4,
+     "best": {
+      "id": "yrZSZEED-Vo",
+      "title": "2006+ VW Jetta AC Problem SOLVED! Fix Intermittent Cooling Without Replacing the Compressor",
+      "channel": "Mike Fn Garage",
+      "views": 205543
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 433937,
+     "n": 3,
+     "best": {
+      "id": "doiUc1k3P5s",
+      "title": "How To Replace A VW 2.0 FSI Timing Chain | VW Golf/Jetta Mk5",
+      "channel": "Megatronics®™",
+      "views": 215793
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 420112,
+     "n": 7,
+     "best": {
+      "id": "evSR2IUBuow",
+      "title": "2007 VW Jetta Front Hub Wheel bearing replacement by Howstuffinmycarworks",
+      "channel": "HOWSTUFFINMYCARWORKS",
+      "views": 114273
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 417231,
+     "n": 7,
+     "best": {
+      "id": "adHMo3gQdaY",
+      "title": "How to fix door lock MK5 VW JETTA (2006-2010) EASY",
+      "channel": "Sidewalk Mechanics",
+      "views": 91235
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 299549,
+     "n": 3,
+     "best": {
+      "id": "e9KdBrQ8bEs",
+      "title": "VW Jetta Dashboard Warning Lights/Symbols (2005-2010) 5th Generation",
+      "channel": "Driven By Satch",
+      "views": 160905
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 283379,
+     "n": 3,
+     "best": {
+      "id": "ZgnnEkPYUjk",
+      "title": "How To Replace A Steering Angle Sensor | VW Golf/Jetta Mk5",
+      "channel": "Megatronics®™",
+      "views": 142436
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "LBumS3w--P4",
+     "title": "Serious problems found by the CAR WIZARD on customer's 'perfect' new purchase '08 VW Jetta!",
+     "channel": "Car Wizard",
+     "views": 251539
+    },
+    {
+     "id": "oiNmn6APn-s",
+     "title": "How to Replace and Diagnose HID (Xenon) Bulb Problems on VW MK5 GTI and Jetta",
+     "channel": "Deutsche Auto Parts",
+     "views": 224680
+    },
+    {
+     "id": "IhUFG0fdZyk",
+     "title": "Top 5 Problems Volkswagen Jetta Sedan 5th Generation 2006-10",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 200189
+    }
+   ],
+   "costs": null
   }
  ],
  "volkswagen-passat": [
@@ -49742,7 +49868,48 @@
      "views": 107971
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 33994,
+     "lo": 19988.0,
+     "hi": 48000.0,
+     "n": 4,
+     "videos": 4,
+     "id": "vwTj8wI6sIQ",
+     "t": 308,
+     "title": "2009 Mercedes-Benz M-Class Review - Kelley Blue Book"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 275,
+       "lo": 120.0,
+       "hi": 500.0,
+       "n": 16,
+       "videos": 5,
+       "id": "6GD5FXGdhJE",
+       "t": 692,
+       "title": "😲 ALL PROBLEMS OF Mercedes ML (W164). How not to go broke with its maintenance?"
+      }
+     ],
+     [
+      "Steering & suspension",
+      {
+       "median": 200,
+       "lo": 200.0,
+       "hi": 200.0,
+       "n": 4,
+       "videos": 2,
+       "id": "6GD5FXGdhJE",
+       "t": 1745,
+       "title": "😲 ALL PROBLEMS OF Mercedes ML (W164). How not to go broke with its maintenance?"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -49871,7 +50038,21 @@
      "views": 391338
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 57600,
+     "lo": 50000.0,
+     "hi": 60000.0,
+     "n": 9,
+     "videos": 6,
+     "id": "K1_gZde4_IM",
+     "t": 284,
+     "title": "2012 Mercedes-Benz ML350 BlueTEC HD Video Review"
+    },
+    "items": []
+   }
   },
   {
    "years": [
@@ -49932,7 +50113,48 @@
      "views": 3830747
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 68000,
+     "lo": 62000.0,
+     "hi": 84000.0,
+     "n": 16,
+     "videos": 13,
+     "id": "Ez1GO58inuw",
+     "t": 1079,
+     "title": "2020 Mercedes-Benz GLE Review - It Bounces, Like A Lowrider"
+    },
+    "items": [
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 1200,
+       "lo": 850.0,
+       "hi": 1700.0,
+       "n": 5,
+       "videos": 4,
+       "id": "Bd7gEd8Q20g",
+       "t": 532,
+       "title": "The 2021 Mercedes-AMG GLE 63 S is Trackhawk Fun with German Luxury (In-Depth Review)"
+      }
+     ],
+     [
+      "Steering & suspension",
+      {
+       "median": 1000,
+       "lo": 500.0,
+       "hi": 1200.0,
+       "n": 3,
+       "videos": 3,
+       "id": "Bd7gEd8Q20g",
+       "t": 878,
+       "title": "The 2021 Mercedes-AMG GLE 63 S is Trackhawk Fun with German Luxury (In-Depth Review)"
+      }
+     ]
+    ]
+   }
   }
  ],
  "mercedes-benz-cla": [
