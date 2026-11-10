@@ -54704,6 +54704,88 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2021–2025 Toyota Sienna",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 32908445,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 147380,
+     "n": 1,
+     "best": {
+      "id": "-LRqhDpFwxQ",
+      "title": "2021-2026 Toyota Sienna Hybrid 2nd Row Seat Removal And Airbag Warning Light Disabling Instructions",
+      "channel": "Viktor G Automotive",
+      "views": 147380
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 54653,
+     "n": 1,
+     "best": {
+      "id": "H1bJ37h2TSg",
+      "title": "2021-2024 Toyota Sienna Hybrid eCVT Transmission Fluid Replacement Instructions",
+      "channel": "Viktor G Automotive",
+      "views": 54653
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 43591,
+     "n": 1,
+     "best": {
+      "id": "NZoNeXbxyM4",
+      "title": "2006-2025 Toyota Sienna Tire Pressure Sensor Light Reset Guide: Quick Fixes for Common Issues",
+      "channel": "Doctor Reset",
+      "views": 43591
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 39801,
+     "n": 1,
+     "best": {
+      "id": "9iNSO1Rew4Y",
+      "title": "How to Calibrate Front Park Assist Sensors 2021–2025 Toyota Sienna (Most Newer Toyota/Lexus Models)",
+      "channel": "George Melnik",
+      "views": 39801
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "iArn7clyyiA",
+     "title": "Should You Buy a 2025 Toyota Sienna? If it Ain't Broke, Don't Fix It!",
+     "channel": "The Car Care Nut",
+     "views": 310785
+    },
+    {
+     "id": "ODZSbuzVlUo",
+     "title": "Should you buy a Toyota Sienna Hybrid 2021+?",
+     "channel": "The Car Care Nut",
+     "views": 259883
+    },
+    {
+     "id": "kWP3LzZperU",
+     "title": "Pick or Pass? | Should You Buy a Used 2021–2024 Toyota Sienna Review?",
+     "channel": "CarMax",
+     "views": 117909
+    }
+   ],
+   "costs": null
   }
  ],
  "dodge-grand-caravan": [
