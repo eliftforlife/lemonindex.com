@@ -38380,7 +38380,26 @@
      "views": 924394
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 60,
+       "lo": 40.0,
+       "hi": 4000.0,
+       "n": 3,
+       "videos": 3,
+       "id": "cyNfvFtrUro",
+       "t": 971,
+       "title": "2007 Mazda 6 Power Steering Pump Replacement"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -38506,7 +38525,35 @@
      "views": 497745
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 24000,
+     "lo": 20000.0,
+     "hi": 28000.0,
+     "n": 4,
+     "videos": 3,
+     "id": "_bZGFUZ33DY",
+     "t": 260,
+     "title": "Real World Test Drive Mazda 6 s GT 2010"
+    },
+    "items": [
+     [
+      "Transmission",
+      {
+       "median": 1150,
+       "lo": 900.0,
+       "hi": 1400.0,
+       "n": 2,
+       "videos": 2,
+       "id": "pxZXV4nPnNU",
+       "t": 276,
+       "title": "Car Tech_ 2010 Mazda6 Touring review"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -44732,6 +44779,136 @@
    }
   }
  ],
+ "dodge-grand-caravan": [
+  {
+   "years": [
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007
+   ],
+   "gen": "2001–2007 Dodge Grand Caravan",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 13867405,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 1304875,
+     "n": 12,
+     "best": {
+      "id": "i3DRaWGSobc",
+      "title": "ECM PCM STARTER 2003 DODGE GRAND CARAVAN 3.3L V6 WONT START",
+      "channel": "Electric Based Joe",
+      "views": 435540
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 768289,
+     "n": 4,
+     "best": {
+      "id": "uL-qmrBtjS4",
+      "title": "Dodge Caravan 2001 Cabin Air Filter Replacement | AQ1049",
+      "channel": "Filterheads",
+      "views": 621910
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 667705,
+     "n": 8,
+     "best": {
+      "id": "EZ4luHCzBeo",
+      "title": "How to Replace Thermostat Dodge Caravan 3.3L V6 2001-2010 EASY!",
+      "channel": "2CarPros",
+      "views": 273286
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 552304,
+     "n": 12,
+     "best": {
+      "id": "zH2q2bIDcko",
+      "title": "2005 Dodge Grand Caravan power door lock problem service bulletin 08-028-05",
+      "channel": "MotorCity Mechanic",
+      "views": 92539
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 491868,
+     "n": 5,
+     "best": {
+      "id": "Mh1d8_hzXNM",
+      "title": "2007, 2008, 2009 Chrysler Town and Country (Dodge Grand Caravan) - Dashboard Lights, Wipers Fix",
+      "channel": "Skill Box",
+      "views": 236681
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 374683,
+     "n": 8,
+     "best": {
+      "id": "Ui8zhMLp5EM",
+      "title": "Throttle Body Housing Service Dodge Grand Caravan 2001-2010 3.3L V6",
+      "channel": "2CarPros",
+      "views": 164944
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 288609,
+     "n": 3,
+     "best": {
+      "id": "aZZQiS9pauA",
+      "title": "How to Replace Serpentine Belt Dodge Caravan 3.3L V6 2001–2010 EASY!",
+      "channel": "2CarPros",
+      "views": 158980
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 147848,
+     "n": 2,
+     "best": {
+      "id": "kOuGsxpA9Tc",
+      "title": "2006 Dodge Grand Caravan easy inner ball joint replacement",
+      "channel": "banshee8989",
+      "views": 90876
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "U4otpqRy1Dg",
+     "title": "How To Diagnose Cam Sensor Problems on a 2003 Dodge Caravan (English)",
+     "channel": "Fred's Auto Waco",
+     "views": 21231
+    },
+    {
+     "id": "jRmpwiMLlvA",
+     "title": "2001-2007 Dodge Caravan -- Door Problems Middle Slider Replacement",
+     "channel": "BryzGarage",
+     "views": 15340
+    },
+    {
+     "id": "zM1YlKXwi2o",
+     "title": "Dodge Caravan Review | 2001-2007 | 4th Gen",
+     "channel": "Driven Companion",
+     "views": 84527
+    }
+   ],
+   "costs": null
+  }
+ ],
  "chrysler-town-and-country": [
   {
    "years": [
@@ -44859,7 +45036,26 @@
      "views": 256700
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 582,
+       "lo": 500.0,
+       "hi": 665.0,
+       "n": 4,
+       "videos": 4,
+       "id": "ZoiBRDfZAno",
+       "t": 9,
+       "title": "2001 to 2007 Chrysler Town and Country Power Steering Pump replacement"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -44989,7 +45185,48 @@
      "views": 248343
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 32995,
+     "lo": 30765.0,
+     "hi": 38995.0,
+     "n": 7,
+     "videos": 4,
+     "id": "pmMSCimiqW8",
+     "t": 302,
+     "title": "2015 Chrysler Town and Country Start Up and Review 3.6 L V6"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 82,
+       "lo": 60.0,
+       "hi": 250.0,
+       "n": 8,
+       "videos": 6,
+       "id": "fKEf4-ZhnP4",
+       "t": 262,
+       "title": "How To Replace The Cabin Air Filter In A 2012 Chrysler Town and Country Minivan Also For 2011-2014"
+      }
+     ],
+     [
+      "Transmission",
+      {
+       "median": 3500,
+       "lo": 2000.0,
+       "hi": 5000.0,
+       "n": 2,
+       "videos": 2,
+       "id": "DPGbRabLVwE",
+       "t": 18,
+       "title": "2013 Chrysler Town & Country | TCM No Power Fix Saved $5,000!"
+      }
+     ]
+    ]
+   }
   }
  ],
  "kia-sedona": [
