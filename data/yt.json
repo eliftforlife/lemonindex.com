@@ -30825,6 +30825,137 @@
    "costs": null
   }
  ],
+ "nissan-pathfinder": [
+  {
+   "years": [
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012
+   ],
+   "gen": "2005–2012 Nissan Pathfinder",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 15687092,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 858135,
+     "n": 5,
+     "best": {
+      "id": "xwALGobz4cc",
+      "title": "2005 Nissan Pathfinder Radio Removal",
+      "channel": "Enfig",
+      "views": 505868
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 529950,
+     "n": 5,
+     "best": {
+      "id": "fdk1zmJCDtg",
+      "title": "How to Replace Cabin Air Filter 2005 Nissan Pathfinder | AQ1113",
+      "channel": "Filterheads",
+      "views": 361247
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 491985,
+     "n": 6,
+     "best": {
+      "id": "fZEnFaYCqOo",
+      "title": "2005-2012 Nissan Pathfinder Camshaft Position Sensors (P0340 & P0345)",
+      "channel": "BeeCee Built",
+      "views": 268627
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 358050,
+     "n": 5,
+     "best": {
+      "id": "hPctsJlX2-8",
+      "title": "2005 - 2012 Nissan Pathfinder / 2005 -2021 Frontier Head light Housing Replacement",
+      "channel": "Grim Repair",
+      "views": 166663
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 310848,
+     "n": 5,
+     "best": {
+      "id": "6p9ofnA-UPM",
+      "title": "VDC and Slip indicator Reset. Nissan Pathfinder R51 2008",
+      "channel": "Norman No Mates",
+      "views": 139671
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 299785,
+     "n": 3,
+     "best": {
+      "id": "2QJ2bEbIBQM",
+      "title": "How to Replace the Fuel Pump on the Nissan Pathfinder 2005 to 2014",
+      "channel": "Haynes Manuals",
+      "views": 131032
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 282141,
+     "n": 3,
+     "best": {
+      "id": "4YifC2iP0Z4",
+      "title": "How to Thermostat replacement on the Nissan Pathfinder 2005 to 2014",
+      "channel": "Haynes Manuals",
+      "views": 211293
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 277568,
+     "n": 6,
+     "best": {
+      "id": "qOip58c1zZQ",
+      "title": "How to Check and Top Off Transmission Fluid - 2005 Nissan Pathfinder, 4.0L (2005-2012)",
+      "channel": "Insane Oil",
+      "views": 63152
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "3ZamvlI8fOE",
+     "title": "Top 5 Problems Nissan Pathfinder SUV 3rd Generation 2005-2012",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 614453
+    },
+    {
+     "id": "hPPyjOBOCyg",
+     "title": "Nissan Pathfinder 3rd Gen R51 2005-2012 Common Problems",
+     "channel": "MaxTheCarGuy",
+     "views": 108156
+    },
+    {
+     "id": "plre8GXgo5M",
+     "title": "2011 Nissan Pathfinder Review - The PERFECT Reliable, Family SUV?!",
+     "channel": "Ant's Car Reviews",
+     "views": 104935
+    }
+   ],
+   "costs": null
+  }
+ ],
  "hyundai-kona": [
   {
    "years": [
@@ -44043,7 +44174,21 @@
      "views": 6913
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 22690,
+     "lo": 21700.0,
+     "hi": 23000.0,
+     "n": 10,
+     "videos": 8,
+     "id": "l5kNUtbV75E",
+     "t": 65,
+     "title": "2015 Chrysler 200 S Review"
+    },
+    "items": []
+   }
   }
  ],
  "chrysler-300": [
