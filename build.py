@@ -737,6 +737,8 @@ def year_photo(f, y):
     note = f'{shown} shown · ' if shown and shown != y else ''
     return (f'<figure class="yph"><img src="{ph["src"]}"{rset(ph["src"], SZ_ONE)} alt="{E(nm)}" width="{ph["w"]}" height="{ph["h"]}" fetchpriority="high">'
             f'<figcaption>{note}{pcap(ph, who)}</figcaption></figure>')
+def car_hero(f, y):   # 11-10 (Elijah): "if a car has an AI image, remove the wiki image"
+    return YSL.ai_year_html(f['id'], y, f['name'], hero=True) or year_photo(f, y)
 def clean_tsb(t):
     """An automaker repair note in plain words: drop the 'HONDA:' prefix and 'Some 2017-2018 X built before ... may exhibit', fix SHOUTING, skip shop-tool notes."""
     t = t.replace('�', '').replace('…', '').strip()
@@ -830,9 +832,7 @@ def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
     tiles = ''.join(f'<div class="yt"><span class="yt-l">{l}</span><b class="yt-v">{val}</b><small>{sub}</small></div>' for l, val, sub in facts if l != 'Recalls')
     yrs = ''.join(f'<a class="ychip {c}" href="{CARU(f, w["y"])}"><small>{lab}</small><b>{w["y"]}</b></a>' for lab, w, c in (('best year', best, 'good'), ('worst year', worst, 'bad')) if w['y'] != y)
     nav = ''.join(f'<a class="ychip" href="{CARU(f, w["y"])}"><small>{lab}</small><b>{w["y"]}</b></a>' for lab, w in (('previous', prev), ('next', nxt)) if w)
-    ph = year_photo(f, y)   # 11-03 v6: nearest-year or model photo, captioned with the year it shows
-    if YSL.has(f['id']):   # 11-10: a real photo of this exact year stays first; otherwise the year's own illustration replaces a nearby-year photo
-        _ai = YSL.ai_year_html(f['id'], y, f['name']); ph = (ph + _ai) if str(y) in PH.get(f['id'], {}) else (_ai or ph)
+    ph = car_hero(f, y)   # 11-10 (Elijah): the year's AI illustration alone when there is one, else the nearest-year Commons photo
     # 11-03 v3 header: a year switcher (‹ 2007 · 2008 · 2009 ›) and the best / worst years as one quiet line under the verdict
     seg = (f'<a href="{CARU(f, prev["y"])}" aria-label="{prev["y"]}">‹ {prev["y"]}</a>' if prev else '') + f'<span aria-current="page">{y}</span>' + (f'<a href="{CARU(f, nxt["y"])}" aria-label="{nxt["y"]}">{nxt["y"]} ›</a>' if nxt else '')
     bw = (lambda xs: f'<p class="ybw">{" · ".join(xs)}</p>' if xs else '')([f'{lab} <a class="{c}" href="{CARU(f, w["y"])}">{w["y"]}</a>' for lab, w, c in (('Best year', best, 'good'), ('Worst year', worst, 'bad')) if w['y'] != y])
@@ -946,7 +946,7 @@ for f in YEARS:
          f'Is the {snm} reliable? {rel_plain.split(". ")[0].rstrip(".")}. Every year {ys[0]["y"]}–{ys[-1]["y"]} ranked by owner complaints' + (' and YouTube owner reviews' if f['id'] in YTR else '') + f'. Best: {best["y"]}. Worst: {worst["y"]}.', f'''
 <div class="pg mp6"><section class="ph yph6"><div class="yh-t"><p class="ph-e"><a href="/cars/">All cars</a> · <a href="/brands/{c["brand"].lower().replace(" ", "-")}/">{E(c["brand"])}</a> · {E(c["segName"])}</p>{rel_html}{f'<p class="yc-note">{SN[f["id"]][1]}</p>' if f["id"] in SN else ""}
 <div class="yhero">{gauge(c["li"], 190)}<div class="yverd {verdict(c["li"])[0]}"><p><b>{verdict(c["li"])[1]}.</b> <span>Whole model, {c["years"]}{"" if plain(c["li"]).lower() in verdict(c["li"])[1].lower() else ": " + E(plain(c["li"]))}.</span></p><p class="ybw">Best year <a class="good" href="{CARU(f, best["y"])}">{best["y"]}</a> · Worst year <a class="bad" href="{CARU(f, worst["y"])}">{worst["y"]}</a></p></div></div>
-<p><button type="button" class="btn btn-ghost" data-share="{E(f'Every {snm} year ranked by owner complaints. Best: {best["y"]}. Worst: {worst["y"]}. Free report:')}">Share ↗</button></p></div><div class="ph-v">{year_photo(f, ys[-1]["y"])}{rel_tiles}</div></section>
+<p><button type="button" class="btn btn-ghost" data-share="{E(f'Every {snm} year ranked by owner complaints. Best: {best["y"]}. Worst: {worst["y"]}. Free report:')}">Share ↗</button></p></div><div class="ph-v">{car_hero(f, ys[-1]["y"])}{rel_tiles}</div></section>
 {YSL.year_slider_html(f['id'], f['name'], {v['y']: round(v['li']) for v in ys if v.get('ok') and v.get('li') is not None}, YSL.yt_scores(f['id']), {v['y'] for v in ys})}<section class="yyears noph" id="years"><div class="yy-ch"><h2>Every year. <span class="h2s">Lower is better. Tap a year for its full report.</span></h2>{ybars(f)}</div>{'<p class="yc-cap">Scores before 2010 are rough: fewer owners filed complaints back then.</p>' if ys[0]["y"] < 2010 else ''}{yt_note(f)}</section>
 {ytfix("model:" + f["id"])}{picks}{SPECS_HOOK(f["id"])}
 {f'<section><h2>Compare the {E(f["name"])}.</h2><div class="mus">{vcards}</div>' + (f'<p class="yc-cap">{vs}</p>' if vs else '') + '</section>' if vcards or vs else ''}
@@ -954,7 +954,7 @@ for f in YEARS:
 <section><details class="yd"><summary>Every year in one table</summary><div class="tw"><table><thead><tr><th>Year</th><th>Index</th><th>Compared with average</th><th>Complaints</th><th>Top complaint</th><th>Recalls</th><th>Crash test</th><th>MPG</th></tr></thead><tbody>{rows}</tbody></table></div></details>
 <p class="yc-cap">Lemon Index = safety complaints filed with the government within 3 years, per car sold, against the average car of the same model year. 100 is average, lower is better. <a href="/method/">How it works</a></p>{f'<p><a class="btn" href="{CARU(f)}transmission/">{E(snm)} transmission problems by year →</a></p>' if f["id"] in TR else ''}</section>{share_line(f'Every {snm} year ranked by owner complaints. Best: {best["y"]}. Worst: {worst["y"]}. Free report:')}</div>''',
          ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": f'{snm} reliability by year', "url": BASE + CARU(f)},
-             faq_ld([(q, '', html.unescape(a)) for q, a in mqa]), car_ld(f, img=(mphoto(f['id']) or {}).get('src'))])
+             faq_ld([(q, '', html.unescape(a)) for q, a in mqa]), car_ld(f, img=YSL.ai_src(f['id'], ys[-1]['y']) or (mphoto(f['id']) or {}).get('src'))])
     yurls.append(CARU(f))
     for i, v in enumerate(ys):
         y = v['y']; prev, nxt = (ys[i - 1] if i else None), (ys[i + 1] if i + 1 < len(ys) else None)
@@ -968,8 +968,9 @@ for f in YEARS:
         page(CARU(f, y), f'{y} {snm} Problems, Reliability and Recalls' + (' (Early Read)' if v.get('early') else '') + ' | The Lemon Index',
              (f'Early read: so far the {y} {snm} has drawn {plain(v["li"])} per car sold (NHTSA).' if v['ok'] and v.get('early') else f'The {y} {snm} drew {plain(v["li"])} per car sold (NHTSA).' if v['ok'] else f'Owners filed only {v["n"]} NHTSA complaints about the {y} {snm} in its first 3 years.')
              + (f' {nrec} recall{"s" if nrec != 1 else ""}.' if nrec else '') + (f' Top problems: {top}.' if top else '') + ' Real owner complaints and every other year.', year_body(f, v, y, x, best, worst, prev, nxt, v['quotes'], qa), kind='article', ask=(f['id'], y, f'{y} {snm}'), img=(PH.get(f['id'], {}).get(str(y)) or {}).get('src'),
-             ld=[car_ld(f, y, x.get('mpg'), (PH.get(f['id'], {}).get(str(y)) or {}).get('src')), {"@context": "https://schema.org", "@type": "WebPage", "name": f'{y} {snm} problems, reliability and recalls', "url": BASE + CARU(f, y)}
-                 | ({"primaryImageOfPage": {"@type": "ImageObject", "contentUrl": BASE + PH[f['id']][str(y)]['src'], "license": LIC.get(PH[f['id']][str(y)]['license'], PH[f['id']][str(y)]['page']), "acquireLicensePage": PH[f['id']][str(y)]['page'], "creditText": PH[f['id']][str(y)]['author'].split('\ufffd')[0].strip()}} if str(y) in PH.get(f['id'], {}) else {})] + ([faq_ld(qa)] if qa else []))
+             ld=[car_ld(f, y, x.get('mpg'), YSL.ai_src(f['id'], y) or (PH.get(f['id'], {}).get(str(y)) or {}).get('src')), {"@context": "https://schema.org", "@type": "WebPage", "name": f'{y} {snm} problems, reliability and recalls', "url": BASE + CARU(f, y)}
+                 | ({"primaryImageOfPage": {"@type": "ImageObject", "contentUrl": BASE + PH[f['id']][str(y)]['src'], "license": LIC.get(PH[f['id']][str(y)]['license'], PH[f['id']][str(y)]['page']), "acquireLicensePage": PH[f['id']][str(y)]['page'], "creditText": PH[f['id']][str(y)]['author'].split('\ufffd')[0].strip()}} if str(y) in PH.get(f['id'], {}) and not YSL.ai_src(f['id'], y)
+                    else {"primaryImageOfPage": {"@type": "ImageObject", "contentUrl": BASE + YSL.ai_src(f['id'], y), "license": YSL.LIC, "acquireLicensePage": BASE + '/images/', "creditText": "The Lemon Index"}} if YSL.ai_src(f['id'], y) else {})] + ([faq_ld(qa)] if qa else []))
         yurls.append(CARU(f, y))
 # ---- transmission pages (11-02): data/trans.json from data_trans.py
 def sent_case(t):
@@ -1027,7 +1028,7 @@ for f in YEARS:
     snm = SNM(f); wy = sorted(((v['y'], TR[f['id']][str(v['y'])]['rate']) for v in f['years'] if str(v['y']) in TR.get(f['id'], {}) and TR[f['id']][str(v['y'])].get('rate') is not None), key=lambda t: -t[1])[:2]
     page(CARU(f) + 'transmission/', f'{snm} Transmission Problems by Year | The Lemon Index',
          f'Which {snm} years have the most transmission complaints per car sold, what owners describe, and every transmission recall. Worst years: {", ".join(str(y) for y, _ in wy)}. From NHTSA owner complaints.',
-         body, kind='article', ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": f'{snm} transmission problems by year', "url": BASE + CARU(f) + 'transmission/'}, faq_ld(qa)], vis=year_photo(f, f['years'][-1]['y']))
+         body, kind='article', ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": f'{snm} transmission problems by year', "url": BASE + CARU(f) + 'transmission/'}, faq_ld(qa)], vis=car_hero(f, f['years'][-1]['y']))
     turls.append(CARU(f) + 'transmission/')
 TRANS_OK = {u.split('/')[2] for u in turls}
 yurls += turls

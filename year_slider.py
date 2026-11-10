@@ -17,11 +17,14 @@ def _ld(fid, y, name, im):
             "license": LIC, "acquireLicensePage": BASE + '/images/', "creditText": "The Lemon Index",
             "creator": {"@type": "Organization", "name": "The Lemon Index", "url": BASE}, "copyrightNotice": "The Lemon Index, CC BY 4.0"}
 
-def ai_year_html(fid, y, name):
-    """The year's illustration for its year page ('' if none)."""
+def ai_src(fid, y): return (AIY.get(fid, {}).get(str(y)) or {}).get('src')
+
+def ai_year_html(fid, y, name, hero=False):
+    """The year's illustration ('' if none). 11-10 (Elijah): where one exists it is the page's only car image (no Commons photo); hero=True loads it first."""
     im = AIY.get(fid, {}).get(str(y))
     if not im: return ''
-    return (f'<link rel="stylesheet" href="/assets/yslider.css?v=1"><figure class="yph aiy"><img src="{im["src"]}" alt="{y} {E(name)}, {E(im["gen"])}, illustration" width="{im["w"]}" height="{im["h"]}" loading="lazy" decoding="async">'
+    ld = 'fetchpriority="high" decoding="async"' if hero else 'loading="lazy" decoding="async"'
+    return (f'<link rel="stylesheet" href="/assets/yslider.css?v=1"><figure class="yph aiy"><img src="{im["src"]}" alt="{y} {E(name)}, {E(im["gen"])}, illustration" width="{im["w"]}" height="{im["h"]}" {ld}>'
             f'<figcaption>Illustration (AI-generated) of a {y} {E(name)}. {NOTE.split(". ", 1)[1]}</figcaption></figure>'
             f'<script type="application/ld+json">{json.dumps(_ld(fid, y, name, im))}</script>')
 
