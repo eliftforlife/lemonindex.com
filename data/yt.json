@@ -37704,7 +37704,35 @@
      "views": 117558
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 44650,
+     "lo": 39300.0,
+     "hi": 52000.0,
+     "n": 34,
+     "videos": 25,
+     "id": "1W8SF_-jcCA",
+     "t": 1681,
+     "title": "2019 Acura RDX – The Return Of Precision Crafted Performance"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 350,
+       "lo": 300.0,
+       "hi": 400.0,
+       "n": 4,
+       "videos": 2,
+       "id": "TpDbexshTfQ",
+       "t": 616,
+       "title": "2019 Acura RDX Advance SH-AWD Full Review"
+      }
+     ]
+    ]
+   }
   }
  ],
  "toyota-avalon": [
@@ -55876,7 +55904,26 @@
      "views": 95364
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 255,
+       "lo": 150.0,
+       "hi": 400.0,
+       "n": 8,
+       "videos": 7,
+       "id": "1HhqwDuw3Uo",
+       "t": 38,
+       "title": "Golf Mk4 Door Lock Mechanism Fix"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
