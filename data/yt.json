@@ -28928,6 +28928,134 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ],
+   "gen": "2014–2020 Acura MDX",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 15935601,
+   "topics": [
+    {
+     "name": "Transmission & shifter",
+     "views": 258959,
+     "n": 4,
+     "best": {
+      "id": "vJ-JNCcP2iA",
+      "title": "DIY 2017 2018 2019 2020 2021 2022 Acura MDX Replacing Transmission Fluid Change",
+      "channel": "Mobile Car Mechanic",
+      "views": 97414
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 114359,
+     "n": 3,
+     "best": {
+      "id": "zwTO8sKqcbE",
+      "title": "2016 + Acura MDX how to reset the oil service maintenance light.",
+      "channel": "The Bravo Connection",
+      "views": 71390
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 91906,
+     "n": 2,
+     "best": {
+      "id": "4z8Csru0ObU",
+      "title": "Acura DRAINS Battery Overnight...CRAZY Problem!!1('17 MDX: Charging System FAULT)",
+      "channel": "Pine Hollow Auto Diagnostics",
+      "views": 58625
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 52396,
+     "n": 2,
+     "best": {
+      "id": "y5iPQE1bl4I",
+      "title": "DIY 2017 2018 2019 2020 2021 2022 Acura MDX Replacing Transfer Case Fluid",
+      "channel": "Mobile Car Mechanic",
+      "views": 30470
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 48139,
+     "n": 1,
+     "best": {
+      "id": "g900Dg6sczw",
+      "title": "2014-20 Acura MDX Front Struts, Lower Control Arms, Stabilizer Links, Tie Rod End Replacement How-To",
+      "channel": "Blue Collar Garage",
+      "views": 48139
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 33830,
+     "n": 1,
+     "best": {
+      "id": "7lEDSWm0c1k",
+      "title": "2015 Acura MDX Maintenance Reset",
+      "channel": "Lehew",
+      "views": 33830
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 31066,
+     "n": 1,
+     "best": {
+      "id": "l8T6Z1Ok4Xg",
+      "title": "All Warning Lights Were On Like Christmas Lights!! | 2018 Acura MDX P0304 Misfire On Cylinder Four",
+      "channel": "JNB Tuning",
+      "views": 31066
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 30398,
+     "n": 2,
+     "best": {
+      "id": "ZOgzaqM6EcU",
+      "title": "2015 Acura MDX rear brake pads replacement",
+      "channel": "Jabo The Mechanic",
+      "views": 15808
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "DGK53IL8hwQ",
+     "title": "2014 - 2020 Acura MDX reliability (going over common issues)",
+     "channel": "BCauto_",
+     "views": 86500
+    },
+    {
+     "id": "vkphA1TQ7Kg",
+     "title": "Acura MDX 3rd Gen 2014 to 2020 Common problems, issues, defects and complaints",
+     "channel": "HOWSTUFFINMYCARWORKS",
+     "views": 51844
+    },
+    {
+     "id": "bjQLdIQ7deY",
+     "title": "TOP 5 PROBLEMS with 3rd Generation ACURA MDX 2019 to 2021",
+     "channel": "RB The Mechanic",
+     "views": 30374
+    }
+   ],
+   "costs": null
   }
  ],
  "toyota-avalon": [
@@ -31022,7 +31150,35 @@
      "views": 46912
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 10990,
+     "lo": 10990.0,
+     "hi": 11000.0,
+     "n": 5,
+     "videos": 5,
+     "id": "WxV_TMzUzJE",
+     "t": 18,
+     "title": "2012 Nissan Versa - Overview"
+    },
+    "items": [
+     [
+      "Transmission",
+      {
+       "median": 2175,
+       "lo": 1800.0,
+       "hi": 2550.0,
+       "n": 2,
+       "videos": 2,
+       "id": "LDYk2z87PNo",
+       "t": 250,
+       "title": "2012 Nissan Versa Sedan Review - Kelley Blue Book"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -33271,7 +33427,48 @@
      "views": 213636
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 24000,
+     "lo": 21000.0,
+     "hi": 31100.0,
+     "n": 3,
+     "videos": 3,
+     "id": "mW9LO9nSvE8",
+     "t": 366,
+     "title": "2014 Subaru Legacy 4cyl vs 2015 Subaru Legacy 6cyl"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 1000,
+       "lo": 100.0,
+       "hi": 4000.0,
+       "n": 3,
+       "videos": 3,
+       "id": "he2gL1Gd5EA",
+       "t": 111,
+       "title": "How I Bought a 2011 Subaru Legacy for just $1000"
+      }
+     ],
+     [
+      "Transmission",
+      {
+       "median": 1948,
+       "lo": 1000.0,
+       "hi": 2895.0,
+       "n": 2,
+       "videos": 2,
+       "id": "SWb0H-W7d8k",
+       "t": 787,
+       "title": "2014 Subaru Legacy 2.5i Limited Review and Road Test"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -33397,7 +33594,35 @@
      "views": 566997
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 23500,
+     "lo": 22000.0,
+     "hi": 28900.0,
+     "n": 20,
+     "videos": 18,
+     "id": "GqerSD1sAcQ",
+     "t": 1322,
+     "title": "2015 Subaru Legacy – Redline: Review"
+    },
+    "items": [
+     [
+      "Transmission",
+      {
+       "median": 4872,
+       "lo": 2745.0,
+       "hi": 7000.0,
+       "n": 2,
+       "videos": 2,
+       "id": "Ww8uguBJwpY",
+       "t": 13,
+       "title": "2015 & 2016 Subaru Legacy 2.5 Review and Road Test - DETAILED in 4K"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -33480,7 +33705,30 @@
      "views": 26351
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 30000,
+     "lo": 30000.0,
+     "hi": 30000.0,
+     "n": 4,
+     "videos": 4,
+     "id": "Dh0ln2yXh7Y",
+     "t": 43,
+     "title": "2024 Subaru Legacy Sport / The Deep Cut"
+    },
+    "msrp": {
+     "median": 27490,
+     "lo": 24995.0,
+     "hi": 34195.0,
+     "n": 26,
+     "videos": 19,
+     "id": "bZkn_L89rOs",
+     "t": 1037,
+     "title": "Another Rally Legend Died.. // 2025 Subaru Legacy XT Review"
+    },
+    "items": []
+   }
   }
  ],
  "mazda3": [
@@ -34619,7 +34867,48 @@
      "views": 1917396
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 44495,
+     "lo": 34000.0,
+     "hi": 57000.0,
+     "n": 28,
+     "videos": 20,
+     "id": "6I1X6KyEmWQ",
+     "t": 113,
+     "title": "2020 Dodge Challenger R/T Scat Pack WIDEBODY Review // The Sweet Spot"
+    },
+    "items": [
+     [
+      "Tires",
+      {
+       "median": 1800,
+       "lo": 600.0,
+       "hi": 4995.0,
+       "n": 7,
+       "videos": 6,
+       "id": "rW8O4eKp52s",
+       "t": 250,
+       "title": "How much I spent Rebuilding a 2009 Dodge Challenger SRT8!"
+      }
+     ],
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 371,
+       "lo": 51.0,
+       "hi": 800.0,
+       "n": 15,
+       "videos": 6,
+       "id": "ytUshHTxtJM",
+       "t": 633,
+       "title": "2015 R/T Challenger Owners Review!!"
+      }
+     ]
+    ]
+   }
   }
  ],
  "dodge-dart": [
@@ -37270,6 +37559,134 @@
      "title": "Used Mercedes E-Class W211 Buyers guide (2002-2009) Avoid faults and common problems (CDI/CGI)",
      "channel": "The Miles Driven",
      "views": 136907
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009
+   ],
+   "gen": "2003–2009 Mercedes-Benz E-Class",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 51638669,
+   "topics": [
+    {
+     "name": "Brakes & ABS",
+     "views": 2618422,
+     "n": 4,
+     "best": {
+      "id": "JWwm3IfV8XE",
+      "title": "ABS and ESP malfunction and Mercedes does not start - Easy fix 2006 E350",
+      "channel": "Sean Symons",
+      "views": 1427279
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 1426941,
+     "n": 7,
+     "best": {
+      "id": "zJALScfHdBI",
+      "title": "Mercedes Benz E-Class 2003-2008 W211 Radio Installation",
+      "channel": "Enfig",
+      "views": 809543
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 1167684,
+     "n": 9,
+     "best": {
+      "id": "ZYoBbMAdxT0",
+      "title": "Mercedes E350 TPMS Reset (Tire Pressure Monitoring System) - W211",
+      "channel": "bpetertube",
+      "views": 288336
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 741908,
+     "n": 3,
+     "best": {
+      "id": "-bvgothtaxA",
+      "title": "Heater is not blowing hot air on Mercedes W211, W219 / Problem solved! Replacing valve W211",
+      "channel": "Amazing Road TV",
+      "views": 316942
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 734050,
+     "n": 3,
+     "best": {
+      "id": "iCh8cYZXVpU",
+      "title": "MERCEDES W211 FUEL PUMP REMOVAL AND REPLACEMENT E200 E230 E240 E280 E320 E350 E500 E550 E55 E63",
+      "channel": "Auto Repair Guys",
+      "views": 469444
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 618415,
+     "n": 5,
+     "best": {
+      "id": "yLtdqtWQwJI",
+      "title": "How to change Antifreeze | Engine Coolant for Mercedes E Class | W211",
+      "channel": "Easy Steps",
+      "views": 326720
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 566850,
+     "n": 2,
+     "best": {
+      "id": "VRLNYL4LzQg",
+      "title": "HOW TO START a W211 E320 CDI No crank no start ESP malfunction",
+      "channel": "Harrison Co",
+      "views": 423556
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 452592,
+     "n": 3,
+     "best": {
+      "id": "ShP8GWLtfEM",
+      "title": "How To Reset Transmission Control Unit W211 Mercedes Benz",
+      "channel": "Justin Frascona",
+      "views": 218939
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "S0EuLDR4oB4",
+     "title": "Mercedes E-Class saloon 2009 - 2013 review - CarBuyer",
+     "channel": "Carbuyer",
+     "views": 1257124
+    },
+    {
+     "id": "-xUUxh9mCzw",
+     "title": "Mercedes E-Class coupe (2009-2013) review - CarBuyer",
+     "channel": "Carbuyer",
+     "views": 737232
+    },
+    {
+     "id": "2XYUSHyfBMU",
+     "title": "5 Common Problems With W211 Mercedes",
+     "channel": "Justin Frascona",
+     "views": 276331
     }
    ],
    "costs": null
