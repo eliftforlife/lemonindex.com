@@ -23767,6 +23767,51 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2025
+   ],
+   "gen": "2025 Toyota 4Runner",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 196,
+   "views": 22817896,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 65719,
+     "n": 2,
+     "best": {
+      "id": "6QdAPx6UYPE",
+      "title": "The Great 4Runner Reset: Why I Replaced My 210K Mile 4Runner With a 6th Gen",
+      "channel": "Lifestyle Overland",
+      "views": 46151
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "TB8UjzNbb8I",
+     "title": "Should You Buy a 2025 Toyota 4Runner? Is This Better Than Before?",
+     "channel": "The Car Care Nut",
+     "views": 959827
+    },
+    {
+     "id": "dqUHt0hnK3Q",
+     "title": "Shopping a 2025 Toyota 4Runner? Watch This Buyer's Guide!",
+     "channel": "The Fast Lane Car",
+     "views": 270076
+    },
+    {
+     "id": "7ZmPDPJpum4",
+     "title": "2024 VS 2025 Toyota 4Runner Comparison Review || Still The Best Reliable SUV?",
+     "channel": "Car Help Corner",
+     "views": 111255
+    }
+   ],
+   "costs": null
   }
  ],
  "model:volkswagen-taos": [
@@ -38963,7 +39008,35 @@
      "views": 121431
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 63000,
+     "lo": 52400.0,
+     "hi": 66000.0,
+     "n": 11,
+     "videos": 9,
+     "id": "v17qGS-hJ1U",
+     "t": 85,
+     "title": "The New 2017 BMW 5 series Review - G30 530D xDrive 2017 - Joe Achilles"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 900,
+       "lo": 380.0,
+       "hi": 1400.0,
+       "n": 14,
+       "videos": 5,
+       "id": "J9yFzhvHpq4",
+       "t": 373,
+       "title": "WHY THE 2020 BMW 540i IS THE SMARTEST USED BMW YOU CAN BUY"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -39031,7 +39104,35 @@
      "views": 39009
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 60500,
+     "lo": 58000.0,
+     "hi": 68000.0,
+     "n": 12,
+     "videos": 10,
+     "id": "BXEXyxLpXaI",
+     "t": 337,
+     "title": "2024 BMW 530i xDrive Sedan - POV First Impressions"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 1000,
+       "lo": 733.0,
+       "hi": 1500.0,
+       "n": 8,
+       "videos": 2,
+       "id": "T9tixeIhVP8",
+       "t": 375,
+       "title": "BMW 5 Series G60 Problems | Weaknesses of the Used BMW 5 Series 2023—..."
+      }
+     ]
+    ]
+   }
   }
  ],
  "bmw-x1": [
@@ -42351,7 +42452,35 @@
      "views": 2414949
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 57500,
+     "lo": 52000.0,
+     "hi": 77000.0,
+     "n": 24,
+     "videos": 19,
+     "id": "Oh1pX18G2e8",
+     "t": 34,
+     "title": "2017 Porsche Macan S: Review"
+    },
+    "items": [
+     [
+      "Steering & suspension",
+      {
+       "median": 1055,
+       "lo": 710.0,
+       "hi": 1400.0,
+       "n": 4,
+       "videos": 3,
+       "id": "PmzlXy-iVwQ",
+       "t": 292,
+       "title": "2016 Porsche Macan - Review and Road Test"
+      }
+     ]
+    ]
+   }
   }
  ],
  "chrysler-town-and-country": [
