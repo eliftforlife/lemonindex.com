@@ -25326,7 +25326,26 @@
      "views": 105026
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 45,
+       "lo": 40.0,
+       "hi": 50.0,
+       "n": 4,
+       "videos": 4,
+       "id": "j1sKAhHeaW8",
+       "t": 377,
+       "title": "1999-2006 Silverado & Sierra Rough Country 1.50-2 in. Suspension Leveling Lift Kit Review & Install"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -32313,7 +32332,30 @@
      "views": 161832
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 43000,
+     "lo": 30000.0,
+     "hi": 48000.0,
+     "n": 5,
+     "videos": 3,
+     "id": "XRW6L-uHCS8",
+     "t": 64,
+     "title": "The 2022 Acura MDX Type S Is the Sporty SUV You Weren't Expecting"
+    },
+    "msrp": {
+     "median": 61400,
+     "lo": 51100.0,
+     "hi": 72000.0,
+     "n": 52,
+     "videos": 31,
+     "id": "XRW6L-uHCS8",
+     "t": 26,
+     "title": "The 2022 Acura MDX Type S Is the Sporty SUV You Weren't Expecting"
+    },
+    "items": []
+   }
   }
  ],
  "toyota-avalon": [
