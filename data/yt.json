@@ -26131,7 +26131,46 @@
      "views": 172499
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": {
+     "median": 3200,
+     "lo": 1400.0,
+     "hi": 5000.0,
+     "n": 4,
+     "videos": 3,
+     "id": "Qm8NBUiYzYk",
+     "t": 526,
+     "title": "You've NEVER Seen a Tundra Like THIS | '03 Toyota Tundra",
+     "private": 0,
+     "dealer": 0
+    },
+    "used": null,
+    "msrp": {
+     "median": 28958,
+     "lo": 27915.0,
+     "hi": 30000.0,
+     "n": 4,
+     "videos": 3,
+     "id": "8hpPFx4etBM",
+     "t": 178,
+     "title": "The 1st Gen Toyota Tundra is a Beloved 2000’s Full-Size Pickup!"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 1400,
+       "lo": 60.0,
+       "hi": 2000.0,
+       "n": 9,
+       "videos": 7,
+       "id": "cr-r5z0qVnM",
+       "t": 150,
+       "title": "My 2004 Toyota Tundra has already cost me $1,200 in repairs!#2004Tundra#2004ToyotaTundra#CheapTundra"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -30288,6 +30327,136 @@
    }
   }
  ],
+ "gmc-yukon": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006
+   ],
+   "gen": "2000–2006 GMC Yukon",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 17931738,
+   "topics": [
+    {
+     "name": "Brakes & ABS",
+     "views": 1509601,
+     "n": 8,
+     "best": {
+      "id": "lUotkKXG9dY",
+      "title": "ABS Computer Module Replacement 2000-2006 GMC Yukon, XL, Sierra",
+      "channel": "2CarPros",
+      "views": 909219
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 1214416,
+     "n": 8,
+     "best": {
+      "id": "44X6sZDT4QE",
+      "title": "How I \"fixed\" The AC 2003-2007 GMC Sierra, Chevrolet Silverado, Tahoe, Yukon CJ2 ECC",
+      "channel": "Ghetto Wagon",
+      "views": 837757
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 734214,
+     "n": 4,
+     "best": {
+      "id": "cMa2bp4jbNU",
+      "title": "Fuel Filter Replacement Chevrolet Silverado Suburban Tahoe GMC Yukon XL Sierra 2000-2006 - EASY!",
+      "channel": "2CarPros",
+      "views": 328909
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 645645,
+     "n": 5,
+     "best": {
+      "id": "utsGpRYtuQY",
+      "title": "GMC YUKON 2004 STARTER REMOVE INSTALL CHEVROLET BATTERY ELECTRICAL",
+      "channel": "TheRykerDane",
+      "views": 346366
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 535201,
+     "n": 8,
+     "best": {
+      "id": "UBY-BZt3mUg",
+      "title": "How to Replace Front Lower Control Arm 2000-06 GMC Yukon",
+      "channel": "TRQ",
+      "views": 111649
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 337830,
+     "n": 6,
+     "best": {
+      "id": "wJE_hlsTBu0",
+      "title": "Universal Joint Replacement - EASY - 2002 GMC Sierra - Silverado - Tahoe - Yukon",
+      "channel": "The Daninator",
+      "views": 121978
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 234684,
+     "n": 3,
+     "best": {
+      "id": "HBFyekoUuwY",
+      "title": "How to Replace Radiator 2000-13 GMC Yukon",
+      "channel": "TRQ",
+      "views": 130085
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 206288,
+     "n": 2,
+     "best": {
+      "id": "HMRRi1Obc2Q",
+      "title": "How to Replace Front Window Regulator 2000-06 GMC Yukon",
+      "channel": "TRQ",
+      "views": 113257
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "VlmuiFd7FQo",
+     "title": "Top 5 Problems 2000-06 GMC Yukon Sierra Chevy Suburban Tahoe Silverado Avalanche Cadillac Escalade",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 1822119
+    },
+    {
+     "id": "JWlPgoEO_AA",
+     "title": "Alternator & Battery Problems Solved: 2000-2006 Suburban Silverado Tahoe Yukon etc. with RPO Codes",
+     "channel": "Axle's Garage",
+     "views": 59693
+    },
+    {
+     "id": "I15DfJBly1c",
+     "title": "2000-2006 Tahoe Yukon Suburban GMT800 Buyer's Guide (Common Problems, Specs, Engines)",
+     "channel": "Useful Vids",
+     "views": 57223
+    }
+   ],
+   "costs": null
+  }
+ ],
  "gmc-yukon-xl": [
   {
    "years": [
@@ -32309,7 +32478,21 @@
      "views": 43108
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 37994,
+     "lo": 32315.0,
+     "hi": 41800.0,
+     "n": 24,
+     "videos": 15,
+     "id": "tg_OFhMvlIw",
+     "t": 790,
+     "title": "2015 Nissan Murano SL Start Up, Road Test, and In Depth Review"
+    },
+    "items": []
+   }
   },
   {
    "years": [
@@ -32354,7 +32537,30 @@
      "views": 862
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 45000,
+     "lo": 20000.0,
+     "hi": 53000.0,
+     "n": 6,
+     "videos": 6,
+     "id": "TZoWFbrFI9I",
+     "t": 697,
+     "title": "The 2025 Nissan Murano Is Better -- But Frustrating | Review"
+    },
+    "msrp": {
+     "median": 43398,
+     "lo": 40500.0,
+     "hi": 49320.0,
+     "n": 50,
+     "videos": 37,
+     "id": "Mydz3amT6jI",
+     "t": 60,
+     "title": "2025 Nissan Murano -- Did 7 Days PROVE its a Lexus RX for WAY Less Money??"
+    },
+    "items": []
+   }
   }
  ],
  "hyundai-kona": [
@@ -40561,6 +40767,134 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019
+   ],
+   "gen": "2013–2019 Nissan Sentra",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 24582376,
+   "topics": [
+    {
+     "name": "Transmission & shifter",
+     "views": 575690,
+     "n": 8,
+     "best": {
+      "id": "tHT01rarnUI",
+      "title": "How to change transmission oil on Nissan Sentra 2014",
+      "channel": "Nissan Nut",
+      "views": 92744
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 409020,
+     "n": 3,
+     "best": {
+      "id": "vmnUjgsVVRU",
+      "title": "DIY Oil Change on the Nissan Sentra 2013-2017",
+      "channel": "Corner Lot DIY",
+      "views": 194533
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 405925,
+     "n": 4,
+     "best": {
+      "id": "Msxic_XSGGI",
+      "title": "How to Replace Front Strut Assembly 2013-18 Nissan Sentra",
+      "channel": "TRQ",
+      "views": 148988
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 386508,
+     "n": 7,
+     "best": {
+      "id": "Omho6pJb6Dc",
+      "title": "How to replace starter motor on Nissan Sentra 2014, Car dont start, starter motor",
+      "channel": "RB The Mechanic",
+      "views": 95319
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 312146,
+     "n": 5,
+     "best": {
+      "id": "zjCgypjW9F0",
+      "title": "How to replace Drum brake on Nissan sentra 2014 and other",
+      "channel": "RB The Mechanic",
+      "views": 139879
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 265709,
+     "n": 5,
+     "best": {
+      "id": "UMPSUTaWUgk",
+      "title": "2013–2019 Nissan Sentra Cabin Air Filter Replacement",
+      "channel": "YOUCANIC",
+      "views": 73216
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 240628,
+     "n": 2,
+     "best": {
+      "id": "PqJYAcRz4RM",
+      "title": "How To Replace Nissan Sentra Tail Light Assembly (2013-2019)",
+      "channel": "RDMotoring",
+      "views": 158235
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 240592,
+     "n": 3,
+     "best": {
+      "id": "TDp_JRRUBWQ",
+      "title": "2013–2019 Nissan Sentra How to Check Level & Add Engine Coolant Antifreeze Engine Overheating",
+      "channel": "YOUCANIC",
+      "views": 123185
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "yyTKpqyJ97I",
+     "title": "Top 5 Problems Nissan Sentra Sedan 2013-19 7th Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 846312
+    },
+    {
+     "id": "YKNYax7FJkQ",
+     "title": "2014 NISSAN sentra problems",
+     "channel": "Frank “Dj Cisco” Lopez",
+     "views": 175186
+    },
+    {
+     "id": "oWrfUzJTngE",
+     "title": "Nissan Sentra SL 2017 Review - Don't Buy a Corolla or Civic Before Watching This Video",
+     "channel": "Carro Chefe",
+     "views": 953969
+    }
+   ],
+   "costs": null
   }
  ],
  "nissan-versa": [
@@ -43001,7 +43335,35 @@
      "views": 7624
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 16995,
+     "lo": 15200.0,
+     "hi": 17290.0,
+     "n": 5,
+     "videos": 5,
+     "id": "uoy3xs1QLmI",
+     "t": 281,
+     "title": "MotorWeek Road Test: 2010 Kia Forte Koup"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 650,
+       "lo": 450.0,
+       "hi": 1000.0,
+       "n": 13,
+       "videos": 3,
+       "id": "di5NC6CQ3Xc",
+       "t": 90,
+       "title": "Kia Forte 2012 Headlight Replacement"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -43127,7 +43489,48 @@
      "views": 212530
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 18200,
+     "lo": 16000.0,
+     "hi": 26500.0,
+     "n": 7,
+     "videos": 7,
+     "id": "IkJ2vrASBQY",
+     "t": 292,
+     "title": "2015 Kia Forte Start Up and Review 1.8 L 4-Cylinder"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 450,
+       "lo": 200.0,
+       "hi": 900.0,
+       "n": 21,
+       "videos": 8,
+       "id": "-hir_dt6BSQ",
+       "t": 780,
+       "title": "Replacing the Fuel Pump and Fuel Filter on a 2014 Kia Forte"
+      }
+     ],
+     [
+      "Transmission",
+      {
+       "median": 1700,
+       "lo": 1000.0,
+       "hi": 2000.0,
+       "n": 8,
+       "videos": 2,
+       "id": "lIqrnRbvmeU",
+       "t": 121,
+       "title": "Kia Forte Common Repairs & Average Costs (2010–2018)"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -43243,7 +43646,35 @@
      "views": 27375
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 23000,
+     "lo": 20000.0,
+     "hi": 25300.0,
+     "n": 21,
+     "videos": 16,
+     "id": "1yLG73bUbtw",
+     "t": 175,
+     "title": "2019 Kia Forte - Review & Road Test"
+    },
+    "items": [
+     [
+      "Tires",
+      {
+       "median": 225,
+       "lo": 200.0,
+       "hi": 250.0,
+       "n": 2,
+       "videos": 2,
+       "id": "gQ5GU1eN3PU",
+       "t": 260,
+       "title": "The 2020 Kia Forte GT is Kia’s New Sport Compact Infused with Stinger GT DNA"
+      }
+     ]
+    ]
+   }
   }
  ],
  "kia-rio": [
