@@ -29136,7 +29136,21 @@
      "views": 19675
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 29998,
+     "lo": 29800.0,
+     "hi": 46000.0,
+     "n": 18,
+     "videos": 17,
+     "id": "x9fpFAYKYP4",
+     "t": 1198,
+     "title": "Has GMC Turned the 2020 Acadia AT4 into a Premium Off-Road Ready Blazer?"
+    },
+    "items": []
+   }
   },
   {
    "years": [
@@ -29226,7 +29240,21 @@
      "views": 65407
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 47425,
+     "lo": 43900.0,
+     "hi": 55000.0,
+     "n": 37,
+     "videos": 30,
+     "id": "ElVnOtKHTz8",
+     "t": 1814,
+     "title": "2024 GMC Acadia Denali -- The BIG Family SUV that will SPOIL YOU!"
+    },
+    "items": []
+   }
   }
  ],
  "gmc-yukon-xl": [
@@ -30071,6 +30099,132 @@
      ]
     ]
    }
+  }
+ ],
+ "kia-sportage": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002
+   ],
+   "gen": "1995–2002 Kia Sportage",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 4192794,
+   "topics": [
+    {
+     "name": "Cooling system",
+     "views": 445396,
+     "n": 4,
+     "best": {
+      "id": "aEnidrPB10g",
+      "title": "1998 - 2002 Kia Sportage Timing Belt & Water Pump Replacement",
+      "channel": "markfothebeast",
+      "views": 321257
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 290749,
+     "n": 5,
+     "best": {
+      "id": "1ZJSmHinMxQ",
+      "title": "Kia Sportage 2001 Timing Belt Removal",
+      "channel": "Yone Ward",
+      "views": 180311
+     }
+    },
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 86823,
+     "n": 1,
+     "best": {
+      "id": "V7B2IwsHb7A",
+      "title": "2001 Kia Sportage Oil Leak Valve Cover Gasket Repair DIY",
+      "channel": "50sKid",
+      "views": 86823
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 81331,
+     "n": 2,
+     "best": {
+      "id": "PAVNXcHIBmU",
+      "title": "1999 Kia Sportage 4x4 2.0 Ltr broken crankshaft",
+      "channel": "Vid xpress",
+      "views": 63391
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 58744,
+     "n": 5,
+     "best": {
+      "id": "P9MMh-wHzyk",
+      "title": "1999 KIA Sportage Fuel Pump Removal - Krazy Karl Projects",
+      "channel": "Krazy Karl Projects",
+      "views": 25542
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 56785,
+     "n": 3,
+     "best": {
+      "id": "Y_qmvexxvj4",
+      "title": "1998 Kia Sportage Replace Alternator Belt",
+      "channel": "MyFriendGRM",
+      "views": 40570
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 34853,
+     "n": 1,
+     "best": {
+      "id": "jMFTEsHwn10",
+      "title": "2002 Kia Sportage Ball Joint Replacement",
+      "channel": "MTips18",
+      "views": 34853
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 31690,
+     "n": 4,
+     "best": {
+      "id": "7VIwPFjF3bM",
+      "title": "Fixing 4x4 Issues Vacuum Leaks 2002 Kia Sportage 4X4",
+      "channel": "Precision Knights",
+      "views": 20697
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "Byq3fxixJtc",
+     "title": "KIA SPORTAGE 1999 | 4X4, 2.0cc, 85cv, Diesel | Review español",
+     "channel": "Coche a Mano",
+     "views": 140028
+    },
+    {
+     "id": "X_QG6fYg2gI",
+     "title": "Kia Sportage Review (2001, AT, Limited)",
+     "channel": "Механикс",
+     "views": 111198
+    },
+    {
+     "id": "ju-FV7RBEjE",
+     "title": "MotorWeek | Retro Review: 1997 Kia Sportage",
+     "channel": "MotorWeek",
+     "views": 87479
+    }
+   ],
+   "costs": null
   }
  ],
  "kia-soul": [
@@ -32028,7 +32182,26 @@
      "views": 56236
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 80,
+       "lo": 50.0,
+       "hi": 650.0,
+       "n": 5,
+       "videos": 4,
+       "id": "X_RHb3S1lnk",
+       "t": 578,
+       "title": "2004 Acura MDX all 6 cylinders misfiring - valve adjustment"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -32156,7 +32329,35 @@
      "views": 54026
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 41832,
+     "lo": 40000.0,
+     "hi": 48465.0,
+     "n": 6,
+     "videos": 5,
+     "id": "HFpB8mwEWDY",
+     "t": 238,
+     "title": "Roadfly.com - 2007 Acura MDX"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 250,
+       "lo": 30.0,
+       "hi": 500.0,
+       "n": 3,
+       "videos": 3,
+       "id": "EroNAz-WfWQ",
+       "t": 64,
+       "title": "Watch This Before Buying an Acura MDX 2007-2013"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -32284,7 +32485,44 @@
      "views": 30374
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 44000,
+     "lo": 32850.0,
+     "hi": 60000.0,
+     "n": 3,
+     "videos": 3,
+     "id": "dhl9w7XnY9s",
+     "t": 413,
+     "title": "2017 Acura MDX Review"
+    },
+    "msrp": {
+     "median": 50950,
+     "lo": 45000.0,
+     "hi": 57000.0,
+     "n": 18,
+     "videos": 17,
+     "id": "S84fEJvMKNA",
+     "t": 1317,
+     "title": "2014 Acura MDX SH-AWD – Redline: Review"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 85,
+       "lo": 65.0,
+       "hi": 150.0,
+       "n": 6,
+       "videos": 4,
+       "id": "DQhlbRAlLw0",
+       "t": 1382,
+       "title": "2014 Acura MDX Used Car Review and Buying Guide"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -40530,6 +40768,137 @@
      ]
     ]
    }
+  }
+ ],
+ "volkswagen-passat": [
+  {
+   "years": [
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019
+   ],
+   "gen": "2012–2019 Volkswagen Passat",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 39872863,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 2387546,
+     "n": 7,
+     "best": {
+      "id": "Q4_6ucYSbu4",
+      "title": "How To Reset VW Passat Service Light (2012-2016)",
+      "channel": "redonKiLaus",
+      "views": 752336
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 1068241,
+     "n": 7,
+     "best": {
+      "id": "73khbDjs8GI",
+      "title": "Radio Installation Volkswagen Passat 2012-2019",
+      "channel": "Enfig",
+      "views": 389765
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 373772,
+     "n": 2,
+     "best": {
+      "id": "Wk3cLs7mEOY",
+      "title": "VW PASSAT HEATER CORE 2009-2017? Replacement Volkswagen",
+      "channel": "NoNonsenseKnowHow",
+      "views": 303751
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 319046,
+     "n": 3,
+     "best": {
+      "id": "SO0EbSQGh6c",
+      "title": "2017 VW Passat Inspection Now Reset / how to reset oil service Volkswagen",
+      "channel": "Oil Light Reset ",
+      "views": 146898
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 292398,
+     "n": 3,
+     "best": {
+      "id": "C83Js53QrYM",
+      "title": "HOW TO REPLACE REAR BRAKE PADS 2013 VOLKSWAGEN PASSAT - DIY",
+      "channel": "Dan the Fix it Man",
+      "views": 124261
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 173807,
+     "n": 2,
+     "best": {
+      "id": "EDKh5dfKJRM",
+      "title": "2012-2015 VW Passat TDI B7 Fuel Filter Replacement (Fast Method) No Scan Tool Needed!",
+      "channel": "Bradleys Garage",
+      "views": 103602
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 152203,
+     "n": 2,
+     "best": {
+      "id": "tZsbf7s_UfE",
+      "title": "2014 VOLKSWAGEN PASSAT RADIATOR REPLACEMENT",
+      "channel": "European Auto Repair",
+      "views": 86024
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 85015,
+     "n": 1,
+     "best": {
+      "id": "wuppJpG2U2E",
+      "title": "Replacing the MAP sensor on a 2013 Volkswagen Passat",
+      "channel": "Joe's Garage",
+      "views": 85015
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "M6D8XkBJFCg",
+     "title": "Top 5 Problems Volkswagen Passat Sedan 1st Generation (North America) 2012-19",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 379576
+    },
+    {
+     "id": "CmQfrjBWGKo",
+     "title": "Should You Buy a VW PASSAT CC? (Test Drive & Review 2013 CC 2.0TDI)",
+     "channel": "High Peak Autos",
+     "views": 241888
+    },
+    {
+     "id": "qxihNtULBDA",
+     "title": "Volkswagen Passat Common Problems: 2005-2014 (B6 and B7 with 3.6L VR6, 2.0T, and 4-Motion)",
+     "channel": "CashedOutCars",
+     "views": 177638
+    }
+   ],
+   "costs": null
   }
  ],
  "dodge-charger": [
