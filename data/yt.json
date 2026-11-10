@@ -28752,7 +28752,21 @@
      "views": 36017
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 21000,
+     "lo": 21000.0,
+     "hi": 21400.0,
+     "n": 7,
+     "videos": 7,
+     "id": "zk1SIFbeMzY",
+     "t": 495,
+     "title": "2018 Chevy Trax RedLine | Complete Review | with Casey Williams"
+    },
+    "items": []
+   }
   },
   {
    "years": [
@@ -28875,7 +28889,44 @@
      "views": 89891
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 24885,
+     "lo": 21000.0,
+     "hi": 26000.0,
+     "n": 3,
+     "videos": 3,
+     "id": "UIbmkfRomqo",
+     "t": 1242,
+     "title": "2025 Chevrolet Trax - 3rd Cheapest SUV in The USA Morning Commute"
+    },
+    "msrp": {
+     "median": 24100,
+     "lo": 21500.0,
+     "hi": 25000.0,
+     "n": 53,
+     "videos": 38,
+     "id": "h9qTe7LlNy8",
+     "t": 1427,
+     "title": "Should You Buy a 2024 Chevrolet Trax? Thorough Review By A Mechanic"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 28,
+       "lo": 23.0,
+       "hi": 500.0,
+       "n": 3,
+       "videos": 3,
+       "id": "8uKOJRFAjW8",
+       "t": 143,
+       "title": "DIY BUICK ENVISTA (2024 CHEVY TRAX) OIL CHANGE | SAVE TIME & MONEY AND TACKLE IT YOURSELF"
+      }
+     ]
+    ]
+   }
   }
  ],
  "gmc-acadia": [
@@ -30504,6 +30555,202 @@
      "title": "Should you buy a KIA SPORTAGE, 2.0 CRDI, 2014, Automatic? Test, Review in Spanish.",
      "channel": "Walter Koren en Español",
      "views": 60855
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022
+   ],
+   "gen": "2017–2022 Kia Sportage",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 46859929,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 429939,
+     "n": 3,
+     "best": {
+      "id": "PW6uSFDlp7U",
+      "title": "Kia Sportage Key Fob Battery Replacement (2014 - 2020)",
+      "channel": "FobBattery",
+      "views": 270483
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 325671,
+     "n": 3,
+     "best": {
+      "id": "qAXOBNSRzkw",
+      "title": "How To Reset Oil Service Interval On a 2018 KIA Sportage",
+      "channel": "Homeowner Repair",
+      "views": 158111
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 265668,
+     "n": 3,
+     "best": {
+      "id": "C06EDFYGP-U",
+      "title": "How To Replace Kia Sportage Rear Brake Pads and Rotors 2017-2021",
+      "channel": "Homeowner Repair",
+      "views": 118458
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 255284,
+     "n": 2,
+     "best": {
+      "id": "7WDLZ6ATBck",
+      "title": "2019 Kia Sportage tail light removal",
+      "channel": "LiquidSuperman",
+      "views": 132062
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 109538,
+     "n": 1,
+     "best": {
+      "id": "_gSmhTSQVkg",
+      "title": "Kia Sportage Cabin Air Filter Replacement ( 2017 2018 2019 2020 2021 2022 )",
+      "channel": "Undercar Experts",
+      "views": 109538
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 105882,
+     "n": 2,
+     "best": {
+      "id": "7YtVi4oJjO0",
+      "title": "2017-2021 KIA SPORTAGE, Worn Spark Plugs and cracked Coils",
+      "channel": "Pro Tips Plus",
+      "views": 58443
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 90349,
+     "n": 1,
+     "best": {
+      "id": "arNFQ5GIl8U",
+      "title": "How To Add Radiator Fluid To a 2015-2019 KIA Sportage With 2.4 Engine",
+      "channel": "Homeowner Repair",
+      "views": 90349
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 73680,
+     "n": 1,
+     "best": {
+      "id": "VxuMTUjblCo",
+      "title": "2018 Kia Sportage Transmission Fluid Replace",
+      "channel": "Asian Mechanic Guy",
+      "views": 73680
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "gA4XEIblrK4",
+     "title": "Kia Sportage SUV 2016-2018 review – Carbuyer",
+     "channel": "Carbuyer",
+     "views": 487675
+    },
+    {
+     "id": "8xHOO2gMZQM",
+     "title": "Top 5 Problems Kia Sportage SUV 4th Generation 2017-Present",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 358692
+    },
+    {
+     "id": "xOKeE4MARNQ",
+     "title": "Kia Sportage SUV 2019 in-depth review - Carbuyer",
+     "channel": "Carbuyer",
+     "views": 178941
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2023–2025 Kia Sportage",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 27244860,
+   "topics": [
+    {
+     "name": "Brakes & ABS",
+     "views": 152133,
+     "n": 1,
+     "best": {
+      "id": "6dCiDoWeWA4",
+      "title": "All-New 2023 Kia Sportage | How To Use Your Electronic Parking Brake With Auto Hold!",
+      "channel": "Cardinal Kia",
+      "views": 152133
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 62218,
+     "n": 2,
+     "best": {
+      "id": "QPdiDE28xbU",
+      "title": "2023 Kia Sportage How to locate and replace cabin air filter",
+      "channel": "Oil Light Reset ",
+      "views": 39447
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 43374,
+     "n": 1,
+     "best": {
+      "id": "o79pWeI4Ji0",
+      "title": "2023-2024 Sportage Hybrid Won’t Start- HELP❗️❗️ What to Do❗️",
+      "channel": "DADLIFE- Dante, your trusted Car Guy for Life! ",
+      "views": 43374
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "JerJoJiBepI",
+     "title": "2023 Kia Sportage Common Problems and Recalls. Should you buy it?",
+     "channel": "MaxTheCarGuy",
+     "views": 52766
+    },
+    {
+     "id": "PiAnGftwujw",
+     "title": "KIA Sportage L HEV 5th Generation First Look Review | PakWheels",
+     "channel": "PakWheels.com",
+     "views": 575504
+    },
+    {
+     "id": "m9isu9Lk7GM",
+     "title": "2023 Kia Sportage - Excellent SUV Review",
+     "channel": "AROVCars",
+     "views": 410100
     }
    ],
    "costs": null
@@ -32215,7 +32462,48 @@
      "views": 123948
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 48500,
+     "lo": 44000.0,
+     "hi": 50000.0,
+     "n": 6,
+     "videos": 6,
+     "id": "SV9s-zD88iM",
+     "t": 198,
+     "title": "Roadfly.com - 2011 Lexus RX 350 SUV Road Test & Review"
+    },
+    "items": [
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 1210,
+       "lo": 619.0,
+       "hi": 1800.0,
+       "n": 2,
+       "videos": 2,
+       "id": "Z1cQPuDrGzc",
+       "t": 186,
+       "title": "2013 Lexus RX 350 3.5 L V6 Review"
+      }
+     ],
+     [
+      "Yearly cost to own",
+      {
+       "median": 1375,
+       "lo": 800.0,
+       "hi": 1950.0,
+       "n": 4,
+       "videos": 2,
+       "id": "l0hRzv8sBz4",
+       "t": 1374,
+       "title": "2015 Lexus RX 450h Hybrid Detailed Review and Road Test"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -33002,6 +33290,133 @@
      "title": "2008 Acura RDX Review - Kelley Blue Book",
      "channel": "Kelley Blue Book",
      "views": 132606
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018
+   ],
+   "gen": "2013–2018 Acura RDX",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 10290025,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 436056,
+     "n": 5,
+     "best": {
+      "id": "ALvPCb1fFZg",
+      "title": "2016 - 2021 Acura RDX Remote Fob Key Battery Change - How To Remove & Replace Acura RDX Key Battery",
+      "channel": "PYR Automotive ",
+      "views": 344277
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 280690,
+     "n": 5,
+     "best": {
+      "id": "dd-8KloDQ5s",
+      "title": "2013-2018 Acura RDX Oil Change & Oil Maintenance light Reset in under 4 minutes",
+      "channel": "GT Content",
+      "views": 114847
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 221251,
+     "n": 5,
+     "best": {
+      "id": "6rxtQB1RW80",
+      "title": "2016 Acura RDX - Maintenance Reset Procedure - Oil Life Reset",
+      "channel": "Automotive Service Reset Procedures",
+      "views": 120040
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 92323,
+     "n": 3,
+     "best": {
+      "id": "eQKaPNGlPvw",
+      "title": "How To Change A 2013 - 2018 Acura RDX Cabin Air Filter - Remove Replace Replacement Filter Location",
+      "channel": "PYR Automotive ",
+      "views": 76098
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 71747,
+     "n": 4,
+     "best": {
+      "id": "UwhgheX95qc",
+      "title": "2013-2018 Acura RDX transmission fluid change",
+      "channel": "Wrenching Homestead ",
+      "views": 29596
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 49330,
+     "n": 3,
+     "best": {
+      "id": "ntFOeuPIv_U",
+      "title": "RDX TIMING BELT & WATER PUMP. 100,000 mile / 160,000 km service on a 2017 Acura RDX.",
+      "channel": "Wrench & Repeat",
+      "views": 19608
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 46330,
+     "n": 2,
+     "best": {
+      "id": "o52MnSFa1og",
+      "title": "2016 Acura RDX AWD 6 Cylinder Spark Plug Replacement and Installation (2nd Gen Model - 2015 to 2018)",
+      "channel": "Get Oats",
+      "views": 29481
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 40078,
+     "n": 2,
+     "best": {
+      "id": "Chbw3IiC-JM",
+      "title": "2014 ACURA RDX No Crank...No Start Issues...1 Click...Fixed...",
+      "channel": "Peter L",
+      "views": 34000
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "a-p_7DLdhSw",
+     "title": "2016 Acura RDX: last reliable car from Honda",
+     "channel": "AtomicCar Review",
+     "views": 29562
+    },
+    {
+     "id": "EAYYP5mxuKM",
+     "title": "2015 Acura RDX Problems and Reliability. Should you buy it?",
+     "channel": "OBD Insights",
+     "views": 24195
+    },
+    {
+     "id": "KM7r-b_Gp7w",
+     "title": "Acura RDX 2016 - Reliability and Safety",
+     "channel": "Alonso Maldonado",
+     "views": 23893
     }
    ],
    "costs": null
@@ -34181,7 +34596,35 @@
      "views": 769351
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 18400,
+     "lo": 14000.0,
+     "hi": 22000.0,
+     "n": 11,
+     "videos": 11,
+     "id": "NYQGO80istU",
+     "t": 92,
+     "title": "2014 / 2015 Ford Fiesta DETAILED Review and Road Test"
+    },
+    "items": [
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 500,
+       "lo": 400.0,
+       "hi": 795.0,
+       "n": 5,
+       "videos": 2,
+       "id": "OOA14iOZZp0",
+       "t": 32,
+       "title": "2015 Ford Fiesta ST review"
+      }
+     ]
+    ]
+   }
   }
  ],
  "ford-taurus": [
@@ -37911,7 +38354,26 @@
      "views": 13962
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 650,
+       "lo": 400.0,
+       "hi": 1500.0,
+       "n": 6,
+       "videos": 4,
+       "id": "UsCkudZxkFo",
+       "t": 2925,
+       "title": "Alternator removal & replacement! Kia Optima 2001- 2006 or Hyundai Sonata 1999 - 2005 BIG 2.7 V6"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
