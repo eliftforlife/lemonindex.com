@@ -31539,6 +31539,51 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2025
+   ],
+   "gen": "2025 Nissan Murano",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 168,
+   "views": 4262951,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 1905,
+     "n": 2,
+     "best": {
+      "id": "Jmxg-_QyofI",
+      "title": "2025 Nissan Murano Trip reset",
+      "channel": "Matthew Coufal",
+      "views": 1518
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "16aqHOfRit0",
+     "title": "Should You Buy a 2025 Nissan Murano? Thorough Review By A Mechanic!",
+     "channel": "The Car Care Nut Reviews",
+     "views": 136870
+    },
+    {
+     "id": "FTFgZx9xbLM",
+     "title": "2025 Nissan Murano Review | Should You Buy?",
+     "channel": "UsedCarsTV",
+     "views": 15236
+    },
+    {
+     "id": "T-F6luojRPY",
+     "title": "2025 Murano 2.0L turbo engine: Common problems",
+     "channel": "TopicMotor",
+     "views": 862
+    }
+   ],
+   "costs": null
   }
  ],
  "hyundai-kona": [
@@ -49182,7 +49227,35 @@
      "views": 29069
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 37500,
+     "lo": 37000.0,
+     "hi": 38000.0,
+     "n": 4,
+     "videos": 4,
+     "id": "rbhBHwPkbi4",
+     "t": 367,
+     "title": "Mercedes-Benz GLK 350 2013 Review & Test Drive with Emme Hall by RoadflyTV"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 94,
+       "lo": 75.0,
+       "hi": 130.0,
+       "n": 5,
+       "videos": 4,
+       "id": "p1D_Ls8wydg",
+       "t": 234,
+       "title": "My 2015 Mercedes GLK 350 Sport w 71000 Miles  Pros and Cons!"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -49288,7 +49361,44 @@
      "views": 1320061
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 45000,
+     "lo": 10000.0,
+     "hi": 50000.0,
+     "n": 3,
+     "videos": 3,
+     "id": "L2RRNdS4Jmk",
+     "t": 774,
+     "title": "2020 Mercedes GLC 300 | Full Review & Test Drive"
+    },
+    "msrp": {
+     "median": 50000,
+     "lo": 42500.0,
+     "hi": 59000.0,
+     "n": 18,
+     "videos": 15,
+     "id": "90lpacZLA6c",
+     "t": 151,
+     "title": "2020 Mercedes Benz GLB vs 2020 GLC | One Is Going To Be Really HOT!!!"
+    },
+    "items": [
+     [
+      "Steering & suspension",
+      {
+       "median": 250,
+       "lo": 250.0,
+       "hi": 550.0,
+       "n": 6,
+       "videos": 5,
+       "id": "EPpCkbQzsNA",
+       "t": 637,
+       "title": "2022 Mercedes-Benz GLC 300 Review | MORE STANDARD FEATURES!"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
