@@ -7,6 +7,7 @@ import re
 import os, re, json, html, datetime, shutil, csv
 from collections import defaultdict
 import year_slider as YSL   # 11-10: AI year illustrations + 'every year' slider (data/ai_year_images.json)
+import tabbed as TAB   # 11-10 (Elijah, Civic first): centered hero + tabs + Years/Engines chart for the models in TAB.ON
 OUT = 'docs'; TODAY = datetime.date.today().isoformat(); BASE = 'https://lemonindex.com'
 E = lambda s: html.escape(str(s), quote=True)
 YT, TT, IG = 'https://www.youtube.com/@lemonindex', 'https://www.tiktok.com/@lemonindex', 'https://www.instagram.com/lemonindex/'
@@ -186,6 +187,8 @@ PD = json.load(open('data/page_dates.json', encoding='utf-8')) if os.path.exists
 _MN = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, vis=''):
     title, desc = fit_title(title), fit_desc(desc)
+    _tm = re.match(r'^/cars/([^/]+)/(?:(\d{4})/)?$', path)
+    if _tm and _tm.group(1) in TAB.ON and 'tab_body' in globals(): body = tab_body(_tm.group(1), int(_tm.group(2)) if _tm.group(2) else None, body)
     _h = hashlib.md5(body.encode('utf-8')).hexdigest()[:10]
     if PD.get(path, {}).get('h') != _h: PD[path] = {'h': _h, 'd': TODAY}
     _d = PD[path]['d']; _dl = f'{_MN[int(_d[5:7]) - 1]} {int(_d[8:])}, {_d[:4]}'
@@ -599,6 +602,22 @@ def ybars_yt(f, cur, sc):
         return f'<div class="b old" data-tip="{tip}."><span class="bn">{y}</span><span class="bt na"></span><b class="mute">·</b>{yt}</div>'
     return (f'<div class="bars yb yt2"><div class="bl yth2" aria-hidden="true"><span></span><span>Complaints <em>lower = better</em></span><span></span><span>YouTube rank <em>#1 = favorite</em></span><span></span></div>'
             + ''.join(row(y) for y in ys) + '</div>')
+def yt_rank_map(f):
+    """{year: YouTube rank #} exactly as the year bars show it (rankable years only)."""
+    sc = YTS.get(f['id']) or {}; okr = yt_rankable(f, sc)
+    got = sorted(((s['score'], s['videos'], int(y)) for y, s in sc.items() if int(y) in okr), reverse=True)
+    return {y: i + 1 for i, (_, _, y) in enumerate(got)}
+def tab_body(fid, y, body):
+    """11-10: re-arrange a tabbed model's page (tabbed.py) and add the engine chart."""
+    f = FY.get(fid)
+    if not f: return body
+    li = {v['y']: v['li'] for v in f['years'] if v['ok']}; pages = {v['y'] for v in f['years']}
+    eng = TAB.engine_chart(fid, f['name'], li, yt_rank_map(f), pages, cur=y, cls=lambda v: 'bad' if v > 110 else 'good')
+    short = f['name'].split(' ', 1)[-1]
+    if y is None:
+        ld = ''.join(f'<script type="application/ld+json">{json.dumps(d)}</script>' for d in TAB.images_ld(fid, f['name']))
+        return TAB.transform_model(body, eng, short) + ld
+    return TAB.transform_year(body, eng, short)
 def yt_note(f):
     sc = YTS.get(f['id'])
     if not sc: return ''
