@@ -38543,7 +38543,35 @@
      "views": 45547
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 36800,
+     "lo": 33000.0,
+     "hi": 40000.0,
+     "n": 21,
+     "videos": 17,
+     "id": "hy2wXojz2kE",
+     "t": 1305,
+     "title": "2019 Nissan Maxima SR – The 4-Door Sports Car?"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 80,
+       "lo": 60.0,
+       "hi": 100.0,
+       "n": 2,
+       "videos": 2,
+       "id": "9rRc8Yva2Lw",
+       "t": 413,
+       "title": "2017 Maxima Platinum MOD Overview - What has been done"
+      }
+     ]
+    ]
+   }
   }
  ],
  "hyundai-accent": [
@@ -46977,7 +47005,37 @@
      "views": 136907
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": {
+     "median": 11250,
+     "lo": 5000.0,
+     "hi": 17500.0,
+     "n": 4,
+     "videos": 4,
+     "id": "MiVl_vFIGro",
+     "t": 240,
+     "title": "1997 Mercedes-Benz E320 for sale by Auto Europa Naples",
+     "private": 1,
+     "dealer": 0
+    },
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 600,
+       "lo": 263.0,
+       "hi": 950.0,
+       "n": 8,
+       "videos": 7,
+       "id": "J8lgCPa_S_M",
+       "t": 185,
+       "title": "1996 Mercedes Benz E320 HVAC fan regulator upgrade and repair"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -47105,7 +47163,48 @@
      "views": 276331
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 32988,
+     "lo": 15977.0,
+     "hi": 50000.0,
+     "n": 4,
+     "videos": 4,
+     "id": "0lSeHspA_lY",
+     "t": 316,
+     "title": "2009 Mercedes-Benz E-Class Review - Kelley Blue Book"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 300,
+       "lo": 150.0,
+       "hi": 900.0,
+       "n": 26,
+       "videos": 9,
+       "id": "VRLNYL4LzQg",
+       "t": 422,
+       "title": "HOW TO START a W211 E320 CDI No crank no start ESP malfunction"
+      }
+     ],
+     [
+      "Oil change",
+      {
+       "median": 85,
+       "lo": 80.0,
+       "hi": 150.0,
+       "n": 3,
+       "videos": 2,
+       "id": "ot-GKmBfNeQ",
+       "t": 80,
+       "title": "Mercedes-Benz W211 Basic Maintenance Guide - Everything You Need to Know"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
