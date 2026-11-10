@@ -32616,7 +32616,39 @@
      "views": 87479
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Tires",
+      {
+       "median": 450,
+       "lo": 300.0,
+       "hi": 600.0,
+       "n": 2,
+       "videos": 2,
+       "id": "Ru1zlw8OxMc",
+       "t": 8,
+       "title": "2000 Kia Sportage 4x4 Restore Part 1"
+      }
+     ],
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 300,
+       "lo": 200.0,
+       "hi": 400.0,
+       "n": 2,
+       "videos": 2,
+       "id": "YIpRu3vnHEU",
+       "t": 116,
+       "title": "2001 Kia Sportage"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -32743,7 +32775,39 @@
      "views": 122358
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 115,
+       "lo": 100.0,
+       "hi": 150.0,
+       "n": 5,
+       "videos": 4,
+       "id": "9K0sKA6hqYc",
+       "t": 947,
+       "title": "HOW TO REPLACE BREAK CALIPERS, 2005 KIA SPORTAGE"
+      }
+     ],
+     [
+      "Oil change",
+      {
+       "median": 140,
+       "lo": 100.0,
+       "hi": 180.0,
+       "n": 4,
+       "videos": 3,
+       "id": "Bw1vPqAtQqY",
+       "t": 657,
+       "title": "How to Change Oil and Filter Kia Sportage V6 2.7L 2005-2010 - EASY!"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -33733,6 +33797,261 @@
      ]
     ]
    }
+  }
+ ],
+ "subaru-crosstrek": [
+  {
+   "years": [
+    2013,
+    2014,
+    2015,
+    2016,
+    2017
+   ],
+   "gen": "2013–2017 Subaru Crosstrek",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 10702979,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 150699,
+     "n": 4,
+     "best": {
+      "id": "YR_IF0vCTdI",
+      "title": "2016 - 2024 Subaru Crosstrek Key Fob Battery Replacement - How To Change Replace Remote Batteries",
+      "channel": "PYR Automotive ",
+      "views": 62382
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 148552,
+     "n": 1,
+     "best": {
+      "id": "A7iIhhuZZ1g",
+      "title": "How to Reset Oil Light: Subaru XV Crosstrek 2013, 2014, 2015.",
+      "channel": "The Mechanic Doctor",
+      "views": 148552
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 97395,
+     "n": 2,
+     "best": {
+      "id": "DYoDXA-UDFw",
+      "title": "2014 Subaru XV Crosstrek AC Compressor Problem and Replacement",
+      "channel": "ThePracticalMechanic",
+      "views": 93578
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 95304,
+     "n": 4,
+     "best": {
+      "id": "bDmIkZ2YCSE",
+      "title": "Replacing lower control arms on Alana's 2014 Subaru XV Crosstrek",
+      "channel": "Pat's Garage Online",
+      "views": 72945
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 65295,
+     "n": 3,
+     "best": {
+      "id": "Idc9sOpG7Yw",
+      "title": "2015 Subaru XV Crosstrek Oil Change",
+      "channel": "Subariblet",
+      "views": 52131
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 60737,
+     "n": 2,
+     "best": {
+      "id": "rutgSCBTCMs",
+      "title": "Fix Recall ABS, Hill Assist Light, 2016 Subaru Crosstrek brake light switch",
+      "channel": "PassTheTime 99",
+      "views": 48083
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 35476,
+     "n": 4,
+     "best": {
+      "id": "NaErkmktIxk",
+      "title": "2013 Subaru Crosstrek CV Axle replacement",
+      "channel": "Brian Balatbat",
+      "views": 13426
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 18605,
+     "n": 2,
+     "best": {
+      "id": "M3xdXa7uihk",
+      "title": "2015–2021 Subaru Crosstrek Oil & Coolant Intermixing Explained (Step-by-Step Repair)",
+      "channel": "Wrench and Rev",
+      "views": 14993
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "Tnqt3G68l8Q",
+     "title": "Top 5 Problems Subaru Crosstrek SUV 1st Generation 2013-2017",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 333623
+    },
+    {
+     "id": "45aqh7K0sM8",
+     "title": "Subaru Crosstrek 1st Gen (GP, 2013-2017) Common Problems",
+     "channel": "MaxTheCarGuy",
+     "views": 20309
+    },
+    {
+     "id": "sl8xsLiJrks",
+     "title": "2013-2017 Subaru Crosstrek Defects, Faults, Recalls, and Common Problems",
+     "channel": "HOWSTUFFINMYCARWORKS",
+     "views": 16900
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023
+   ],
+   "gen": "2018–2023 Subaru Crosstrek",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 25759579,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 396626,
+     "n": 4,
+     "best": {
+      "id": "lU1H-vGVk8k",
+      "title": "2018 Crosstrek: Common Questions Power, CVT, Oil Consuption issues",
+      "channel": "Rick Hutton",
+      "views": 185045
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 189550,
+     "n": 3,
+     "best": {
+      "id": "GEACkaTLJIA",
+      "title": "How To: 2020 Subaru Crosstrek - Replace Cabin Air Filter",
+      "channel": "RetroCarGuy530",
+      "views": 84856
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 132067,
+     "n": 1,
+     "best": {
+      "id": "EeULg6wUHQQ",
+      "title": "2018-2023 Subaru Crosstrek Spark Plug Replacement",
+      "channel": "Valley Mobile Automotive",
+      "views": 132067
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 52515,
+     "n": 1,
+     "best": {
+      "id": "FBaIoZx4Krs",
+      "title": "2018-2020 Subaru Crosstrek Rear Differential Fluid Change",
+      "channel": "Cars Simplified",
+      "views": 52515
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 40762,
+     "n": 1,
+     "best": {
+      "id": "Cv-LHrXr2C4",
+      "title": "2019 Subaru Crosstrek CVT Transmission Fluid Change",
+      "channel": "Talking Shop 716",
+      "views": 40762
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 34743,
+     "n": 1,
+     "best": {
+      "id": "_G8av6SWbsU",
+      "title": "How to Replace Battery 2018-2023 Subaru Crosstrek",
+      "channel": "TRQ",
+      "views": 34743
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 30650,
+     "n": 1,
+     "best": {
+      "id": "qDdvS8SPBPs",
+      "title": "How to Replace Front Brakes 2018-2023 Subaru Crosstrek",
+      "channel": "TRQ",
+      "views": 30650
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 26654,
+     "n": 1,
+     "best": {
+      "id": "-LJ7730A8t8",
+      "title": "2018+ Subaru Crosstrek Serpentine Belt Replacement on 2.0L (FB20)",
+      "channel": "Cars Simplified",
+      "views": 26654
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "HoIMHX_DNEI",
+     "title": "5 Reasons Why You Should Buy A 2021 Subaru Crosstrek Sport - Quick Buyer's Guide",
+     "channel": "Boston Auto Blog",
+     "views": 53370
+    },
+    {
+     "id": "FDIxCZwzqeY",
+     "title": "2021 Subaru Crosstrek | Pros & Cons | Reliability & Resale Value Data | Pricing | Trim Info",
+     "channel": "Car Savvy",
+     "views": 43676
+    },
+    {
+     "id": "KL7tFtfFVEw",
+     "title": "2021 Subaru Crosstrek Sport 2.5 Review and Off-Road Test",
+     "channel": "Driving Sports TV",
+     "views": 953496
+    }
+   ],
+   "costs": null
   }
  ],
  "subaru-ascent": [
@@ -49385,7 +49704,21 @@
      "views": 117534
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 42135,
+     "lo": 38270.0,
+     "hi": 46000.0,
+     "n": 4,
+     "videos": 4,
+     "id": "ODJsKxy4niM",
+     "t": 267,
+     "title": "2008 BMW X3 Review - Kelley Blue Book"
+    },
+    "items": []
+   }
   },
   {
    "years": [
@@ -49513,7 +49846,35 @@
      "views": 455173
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 42000,
+     "lo": 39000.0,
+     "hi": 49000.0,
+     "n": 11,
+     "videos": 10,
+     "id": "KLxWqS7O4OY",
+     "t": 434,
+     "title": "2016 BMW X3 Start Up and Review 2.0 L Turbo 4-Cylinder"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 400,
+       "lo": 80.0,
+       "hi": 540.0,
+       "n": 7,
+       "videos": 3,
+       "id": "T4wzxB5_xr4",
+       "t": 580,
+       "title": "\"How to Fix No Audio / Sound in 2012 BMW X3 (Easy DIY Fix)\""
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -49608,7 +49969,48 @@
      "views": 122775
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 53750,
+     "lo": 45881.0,
+     "hi": 63500.0,
+     "n": 26,
+     "videos": 17,
+     "id": "6CdK-BfAnqA",
+     "t": 1129,
+     "title": "2018 BMW X3 M40i – The \"Smaller\" Ultimate Driving SUV?"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 1200,
+       "lo": 100.0,
+       "hi": 1500.0,
+       "n": 3,
+       "videos": 3,
+       "id": "GQ2xsj5KeYc",
+       "t": 587,
+       "title": "BMW X3 (2017–2024): A Complete Reliability Guide"
+      }
+     ],
+     [
+      "Brakes",
+      {
+       "median": 1200,
+       "lo": 1000.0,
+       "hi": 1400.0,
+       "n": 2,
+       "videos": 2,
+       "id": "C_mCPGOEmqs",
+       "t": 1413,
+       "title": "Review | 2018 BMW X3 | Premium Promises"
+      }
+     ]
+    ]
+   }
   }
  ],
  "mercedes-benz-c-class": [
@@ -53864,6 +54266,265 @@
      "title": "2000 Toyota Sienna XLE Start Up, Walkaround, Rev - 276K",
      "channel": "Intechdude300",
      "views": 84767
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010
+   ],
+   "gen": "2004–2010 Toyota Sienna",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 14938041,
+   "topics": [
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 1045617,
+     "n": 8,
+     "best": {
+      "id": "ivC0WdRTkNY",
+      "title": "2007 Toyota Sienna Sliding Door Repair",
+      "channel": "Rico L",
+      "views": 327827
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 789177,
+     "n": 6,
+     "best": {
+      "id": "xyha_beQuUs",
+      "title": "2008 Toyota Sienna Spark Plug change",
+      "channel": "Del Siegmund",
+      "views": 311791
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 782900,
+     "n": 8,
+     "best": {
+      "id": "CJ1re-BiA54",
+      "title": "DIY: 2004-2010 Toyota Sienna Stereo removal & installation of Tomtop 7\" touchscreen BT stereo",
+      "channel": "vuaeco",
+      "views": 199702
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 697843,
+     "n": 7,
+     "best": {
+      "id": "kGlSzS0R48U",
+      "title": "Toyota Sienna 2007 check engine light, VSC, Trac-off lights on because loose gas cap",
+      "channel": "vuaeco",
+      "views": 469498
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 527284,
+     "n": 8,
+     "best": {
+      "id": "MMqnH7QMUCk",
+      "title": "Toyota Sienna 3.3 Liter Timing Belt and Water Pump Replacement | Toyota sienna automobile model 2004",
+      "channel": "Valley Mobile Automotive",
+      "views": 185550
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 447380,
+     "n": 6,
+     "best": {
+      "id": "hkE7mP4u9OQ",
+      "title": "2004 2005 2006 Toyota Sienna AC Fix - Easy - Dont get ripped off !",
+      "channel": "BreakFree TV",
+      "views": 159624
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 368737,
+     "n": 6,
+     "best": {
+      "id": "tnrQOA3wBDM",
+      "title": "Toyota Sienna Serpentine Belt Replacement 3.5L Engine (2007-2010)",
+      "channel": "happywrenching",
+      "views": 212341
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 281801,
+     "n": 3,
+     "best": {
+      "id": "BwdCQlRp3Zg",
+      "title": "2009 Sienna Oil Change",
+      "channel": "Jim Thomas",
+      "views": 157214
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "olQQ-hgIwRc",
+     "title": "Top 5 Problems Toyota Sienna Van 2004-2010 2nd Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 423497
+    },
+    {
+     "id": "PeYs_IcclzQ",
+     "title": "How Reliable is a Used 2004 Toyota Sienna LE High Miles POV Test Drive",
+     "channel": "POV Nelson",
+     "views": 57455
+    },
+    {
+     "id": "4g-f1RlcLe0",
+     "title": "3 Common Issues with the 2004 to 2010 Toyota Sienna - Most Reliable Vehicle Ever?",
+     "channel": "Poodle Dad",
+     "views": 38248
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ],
+   "gen": "2011–2020 Toyota Sienna",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 27163570,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 780273,
+     "n": 4,
+     "best": {
+      "id": "bD0RvPC-7bc",
+      "title": "How To Program Keyless Entry Remote Key Fob On Toyota Sienna 2000-2016",
+      "channel": "Vehix411 KARMAN AUTO",
+      "views": 463099
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 747664,
+     "n": 5,
+     "best": {
+      "id": "X8aFmIc_Stc",
+      "title": "HOW TO RESET MAINTENANCE REQUIRED LIGHT ON TOYOTA SIENNA 2011 2012 2013 2014 2015 2016",
+      "channel": "Electrical Car Repair LIVE",
+      "views": 359133
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 560634,
+     "n": 7,
+     "best": {
+      "id": "_dRJthb7lM8",
+      "title": "How To Change 2011 - 2020 Toyota Sienna Cabin Air filter - Replace Remove Replacement Location",
+      "channel": "PYR Automotive ",
+      "views": 171997
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 305960,
+     "n": 2,
+     "best": {
+      "id": "7qZBLEp0uAE",
+      "title": "2011-2020 Toyota Sienna Oil Change DIY EASY",
+      "channel": "MrRangerZr1",
+      "views": 233421
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 217127,
+     "n": 3,
+     "best": {
+      "id": "atJyzcOTXrk",
+      "title": "How to Replace Spark Plugs 2011-2020 Toyota Sienna 3.5L V6",
+      "channel": "TRQ",
+      "views": 84233
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 186352,
+     "n": 2,
+     "best": {
+      "id": "HytobtmCNiM",
+      "title": "🔧 2017-2021 Toyota Sienna Transmission Fluid Change, how to check trans temperature. UA80E",
+      "channel": "Bennie Aust",
+      "views": 97987
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 131182,
+     "n": 1,
+     "best": {
+      "id": "oSb6jXfyKpE",
+      "title": "2011-2020 Toyota Sienna Drive Belt Replacement DIY EASY",
+      "channel": "MrRangerZr1",
+      "views": 131182
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 50963,
+     "n": 1,
+     "best": {
+      "id": "cdWPkPC3PBM",
+      "title": "2011 - 2019 Toyota Sienna Replacing Lower Control Arms and Ball Joints! - Driver and Passenger - DIY",
+      "channel": "Dan the Fix it Man",
+      "views": 50963
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "UT9Bnf-f47k",
+     "title": "2019 / 2020 Toyota Sienna | Reliable, But Is It Relevant?",
+     "channel": "Auto Buyers Guide | Alex on Autos",
+     "views": 267276
+    },
+    {
+     "id": "QXeI637VbTk",
+     "title": "Top 5 Problems Toyota Sienna Minivan 2011-2020 3rd Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 233911
+    },
+    {
+     "id": "4ENG_3tP_7U",
+     "title": "2011 Toyota Sienna, Problems C1201",
+     "channel": "angel pineda",
+     "views": 91979
     }
    ],
    "costs": null
