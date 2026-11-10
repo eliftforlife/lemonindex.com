@@ -12,6 +12,7 @@
       li.textContent = v.li != null ? 'Lemon Index ' + v.li : 'No Lemon Index for ' + v.y;
       li.className = 'ysl-li' + (v.li == null ? ' na' : v.li <= 80 ? ' good' : v.li >= 130 ? ' bad' : '');
       yt.textContent = v.yt != null ? 'YouTube score ' + v.yt : ''; yt.hidden = v.yt == null;
+      var bt = root.querySelector('.ysl-best'); if (bt) bt.hidden = v.y !== d.best;
       if (v.url) { go.hidden = false; go.href = v.url; go.textContent = 'See the ' + v.y + ' report ›'; } else go.hidden = true;
     }
     function show(i) {
@@ -24,7 +25,8 @@
       if (back.getAttribute('src') === v.src && back.complete) done(); else { back.onload = done; back.onerror = function () { busy = false; }; back.src = v.src; }
     }
     r.addEventListener('input', function () { show(+r.value); });
-    info(0); pre(1); pre(2);
+    cur = want = +r.value || 0;   // 11-10: the hero slider opens on the best year
+    info(cur); pre(cur - 1); pre(cur + 1); pre(cur + 2);
     // warm the whole set only once someone uses the slider
     r.addEventListener('pointerdown', function once() { r.removeEventListener('pointerdown', once); for (var i = 0; i < Y.length; i++) pre(i); });
   });

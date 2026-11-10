@@ -48,19 +48,17 @@
   box.className = 'sup'; box.hidden = true; box.setAttribute('role', 'dialog'); box.setAttribute('aria-modal', 'true'); box.setAttribute('aria-labelledby', 'sup-h');
   box.innerHTML = `<div class="sup-card">
   <button class="sup-x" aria-label="Close">×</button>
-  <div class="sup-art" aria-hidden="true"><svg viewBox="0 0 240 132"><g fill="none" stroke-width="14"><path d="M28 118A92 92 0 0 1 58.2 49.8" stroke="#1a8f4c"/><path d="M60 48.4A92 92 0 0 1 179.9 48.4" stroke="#d2d2d7"/><path d="M181.8 49.8A92 92 0 0 1 212 118" stroke="#e8141c"/></g><g class="sup-ndl"><path d="M116 118L120 34L124 118Z"/><circle cx="120" cy="118" r="11"/><circle cx="120" cy="118" r="5" fill="#ffd400"/></g></svg>
-    <p><b>$0</b>to read any report</p></div>
-  <h2 id="sup-h">${esc(CTX.q)} <span>${esc(CTX.a)} Chip in if it helped.</span></h2>
-  <ul class="sup-why">${CTX.why.map(w => `<li>${w}</li>`).join('')}</ul>
-  <p class="sup-ads"><b>Lemon has no ads right now.</b> Donations keep it ad-free and pay for more cars, images and data.</p>
-  <details class="sup-next"><summary>What donations fund next (planned)</summary><ul><li>Year-by-year images and a year slider for more cars</li><li>Engine pages for more brands (BMW is live)</li><li>A VIN report for any car</li><li>Recall alerts for your car</li><li>A Spanish version of the site</li></ul></details>
+  <div class="sup-ic"><img src="/assets/icon-64.png" alt="" width="52" height="52"></div>
+  <h2 id="sup-h">Keep Lemon ad-free</h2>
+  <p class="sup-lede">Every score, chart and image here is free. A few dollars keeps it that way.</p>
   <div class="sup-amts" role="radiogroup" aria-label="Amount">
     ${[5, 10, 15].map(a => `<button type="button" role="radio" data-a="${a}" aria-checked="${a === pick}">$${a}</button>`).join('')}
     <button type="button" role="radio" data-a="custom" aria-checked="false">Other</button>
   </div>
   <a class="btn sup-go" href="#" rel="noopener" target="_blank">Chip in $10</a>
+  <details class="sup-next"><summary>What it pays for</summary><ul><li>More cars and years</li><li>Car images and year sliders</li><li>Engine pages for more brands</li><li>VIN reports and recall alerts</li></ul></details>
   <button type="button" class="sup-later">Maybe later</button>
-  <p class="sup-fine">Secure checkout by Stripe. Not tax-deductible; doesn't unlock anything.</p>
+  <p class="sup-fine">Secure checkout by Stripe · Not tax-deductible</p>
 </div>`;
   document.body.appendChild(box);
   const go = box.querySelector('.sup-go');
@@ -84,7 +82,7 @@
     const yt = !!document.querySelector('#diy');
     const card = document.createElement('aside');
     card.className = 'supc'; card.setAttribute('aria-label', 'Support the Lemon Index');
-    card.innerHTML = `<img src="/assets/icon-64.png" alt="" width="40" height="40"><div class="supc-t"><b>Did this help?</b><span>${yt ? 'We went through 100+ YouTube videos and every government complaint so you don&#39;t have to.' : 'We went through every government complaint and recall so you don&#39;t have to.'} It&#39;s free, with no paywall and no ads. A $5 coffee keeps it that way and pays for more cars and data.</span></div>
+    card.innerHTML = `<img src="/assets/icon-64.png" alt="" width="40" height="40"><div class="supc-t"><b>Did this help?</b><span>Free, with no ads. A $5 coffee keeps it that way.</span></div>
 <div class="supc-b"><a class="btn supc-go" href="${LINKS[5]}" target="_blank" rel="noopener">Buy us a $5 coffee</a><button type="button" class="supc-o">Other amount</button></div>`;
     spot.insertAdjacentElement('afterend', card);
     card.querySelector('.supc-go').addEventListener('click', () => { mark(); set(PAID, String(Date.now())); });

@@ -1103,3 +1103,21 @@ table.spec { min-width: 820px; }
 .ii-pop a { color: inherit; text-decoration: underline; }
 .engph .ii { right: 12px; bottom: 12px; }
 .engph { max-width: 680px; }
+
+/* 11-10 (Elijah: "the dono thing looks confusing, too much text"): simpler support sheet + thanks page */
+.sup-card { text-align: center }
+.sup-ic { padding: 30px 24px 4px } .sup-ic img { width: 52px; height: 52px; border-radius: 14px; box-shadow: 0 6px 18px rgba(0,0,0,.12) }
+.sup h2 { margin: 14px 24px 8px; font-size: clamp(28px, 7.5vw, 34px); font-weight: 800; letter-spacing: -.03em }
+.sup-lede { margin: 0 28px 20px; color: var(--ink2); font-size: 16px; line-height: 1.5 }
+.sup-next { margin: 14px 24px 0; text-align: center; font-size: 14px }
+.sup-next summary { display: inline-block; list-style: none; cursor: pointer; font-weight: 600; color: var(--ink2); padding: 4px 8px; border-radius: 8px }
+.sup-next summary::-webkit-details-marker { display: none }
+.sup-next summary::after { content: " \203A"; display: inline-block; transition: transform .2s } .sup-next[open] summary::after { transform: rotate(90deg) }
+.sup-next ul { list-style: none; padding: 0; margin: 10px 0 0; display: grid; gap: 6px; color: var(--ink2) }
+.sup-next li::before { content: "\2022"; color: #e9b300; font-weight: 900; margin-right: 8px }
+.sup-later { margin-top: 2px }
+.thx-more { margin: 0 auto 24px; max-width: 420px; font-size: 15px }
+.thx-more summary { display: inline-block; list-style: none; cursor: pointer; font-weight: 600; color: var(--ink2) }
+.thx-more summary::-webkit-details-marker { display: none } .thx-more summary::after { content: " \203A" }
+.thx-more ul { list-style: none; padding: 0; margin: 10px 0 6px; display: grid; gap: 6px; color: var(--ink2) }
+.thx-ig { background: none; color: var(--mute); font-weight: 500; font-size: 14px; padding: 0; margin: 0 0 22px } .thx-ig a { color: var(--ink); }

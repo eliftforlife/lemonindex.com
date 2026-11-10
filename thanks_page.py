@@ -9,18 +9,7 @@ _REQ_CLOSE = '</form>' if DONOR_REQ_LIVE else '</form></template>'
 _TH = f'''<section class="thx">
 <img class="thx-ic" src="/assets/icon-180.png" alt="" width="96" height="96">
 <h1>Thank you. Really.</h1>
-<p class="thx-lede">You just helped keep the Lemon Index free, for you and for the next person about to buy a car.</p>
-<div class="thx-card">
-<h2>What you just paid for</h2>
-<ul>
-<li>Turning millions of government complaint records into one clear page per car.</li>
-<li>Keeping Lemon ad-free: no paywall and no ads on any report.</li>
-<li>More cars, more years and more studies, like the ones people ask for in the comments.</li>
-</ul>
-<h2>What donations fund next (planned)</h2>
-<ul><li>Year-by-year images and a year slider for more cars</li><li>Engine pages for more brands (BMW is live)</li><li>A VIN report for any car</li><li>Recall alerts for your car</li><li>A Spanish version of the site</li></ul>
-<p class="thx-note">Planned, not promised dates. Donor requests decide what goes first.</p>
-</div>
+<p class="thx-lede">You just kept Lemon free and ad-free, for you and the next person buying a car.</p>
 {_REQ_OPEN}
 <h2>What car or feature should we add next?</h2>
 <p>Optional. Donor requests go to the front of the line.</p>
@@ -28,13 +17,12 @@ _TH = f'''<section class="thx">
 <input type="text" id="thx-req-hp" name="website" tabindex="-1" autocomplete="off" class="vh" aria-hidden="true">
 <div class="thx-go"><button class="btn" type="submit">Send request</button></div><p class="thx-req-m" role="status"></p>
 {_REQ_CLOSE}
-<p class="thx-ig">Left a name for a shout-out? Watch for it on our Instagram story, <a href="https://www.instagram.com/lemonindex/" rel="noopener">@lemonindex</a>.</p>
-<p class="thx-sig">Most people read the reports and move on, and that&#39;s fine. You chipped in, and it means a lot.<br><b>Elijah</b>, who runs the Lemon Index</p>
+<details class="thx-more"><summary>What it pays for</summary><ul><li>More cars and years</li><li>Car images and year sliders</li><li>Engine pages for more brands</li><li>VIN reports and recall alerts</li></ul><p class="thx-note">Planned, no promised dates. Donor requests go first.</p></details>
 <div class="thx-go">
 <a class="btn" href="/">Check another car</a>
-<a class="btn ghost" href="/compare/">Compare two cars</a>
 <button class="btn ghost" type="button" id="thx-share">Share the Lemon Index</button>
 </div>
+<p class="thx-ig">Left a name for a shout-out? Watch our Instagram story, <a href="https://www.instagram.com/lemonindex/" rel="noopener">@lemonindex</a>. <b>Elijah</b></p>
 <p class="thx-fine">Donated the wrong amount, or didn&#39;t mean to? Email <a href="mailto:{CONTACT}">{CONTACT}</a> within 14 days for a full refund. Payments are handled by Stripe, and we never see your card number.</p>
 </section>
 <script>

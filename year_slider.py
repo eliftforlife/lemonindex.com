@@ -32,29 +32,38 @@ def ai_year_html(fid, y, name, hero=False):
     im = AIY.get(fid, {}).get(str(y))
     if not im: return ''
     ld = 'fetchpriority="high" decoding="async"' if hero else 'loading="lazy" decoding="async"'
-    return (f'<link rel="stylesheet" href="/assets/yslider.css?v=1"><figure class="yph aiy"><img src="{im["src"]}" alt="{y} {E(name)}, {E(im["gen"])}, illustration" width="{im["w"]}" height="{im["h"]}" {ld}>'
+    return (f'<link rel="stylesheet" href="/assets/yslider.css?v=3"><figure class="yph aiy"><img src="{im["src"]}" alt="{y} {E(name)}, {E(im["gen"])}, illustration" width="{im["w"]}" height="{im["h"]}" {ld}>'
             + info(f'Illustration (AI-generated) of a {y} {E(name)}. {NOTE.split(". ", 1)[1]} <a href="/images/">Download and credit text</a>') + '</figure>'
             f'<script type="application/ld+json">{json.dumps(_ld(fid, y, name, im))}</script>')
 
-def year_slider_html(fid, name, li=None, yt=None, pages=()):
+def year_slider_html(fid, name, li=None, yt=None, pages=(), start=None, hero=False):
     """'Every <model>, year by year' section: a crossfading image stage + a range slider. li/yt = {year: score}; pages = years with a page."""
     ims = AIY.get(fid)
     if not ims: return ''
     ys = sorted(int(y) for y in ims)
     data = [{"y": y, "src": ims[str(y)]['src'], "gen": ims[str(y)]['gen'], "li": (li or {}).get(y), "yt": (yt or {}).get(y),
              "url": f'/cars/{fid}/{y}/' if y in pages else None} for y in ys]
-    first = ims[str(ys[0])]; short = name.split(' ', 1)[-1] if ' ' in name else name
-    return (f'<link rel="stylesheet" href="/assets/yslider.css?v=1"><section class="ysl" id="every-year" aria-label="Every {E(short)}, year by year">'
-            f'<h2>Every {E(short)}, year by year. <span class="h2s">Slide through {ys[0]} to {ys[-1]}.</span></h2>'
-            f'<div class="ysl-stage"><img class="on" src="{first["src"]}" alt="{ys[0]} {E(name)} illustration" width="{first["w"]}" height="{first["h"]}" fetchpriority="low"><img alt="" width="{first["w"]}" height="{first["h"]}" aria-hidden="true">'
-            f'<div class="ysl-yr"><b>{ys[0]}</b><span class="ysl-gen">{E(first["gen"])}</span></div>'
+    si = ys.index(start) if start in ys else 0; y0 = ys[si]   # 11-10 (Elijah): the hero slider opens on the page's best year
+    first = ims[str(y0)]; short = name.split(' ', 1)[-1] if ' ' in name else name
+    return (f'<link rel="stylesheet" href="/assets/yslider.css?v=3"><section class="ysl{' ysl-hero' if hero else ''}" id="every-year" aria-label="Every {E(short)}, year by year">'
+            + ('' if hero else f'<h2>Every {E(short)}, year by year. <span class="h2s">Slide through {ys[0]} to {ys[-1]}.</span></h2>') +
+            f'<div class="ysl-stage"><img class="on" src="{first["src"]}" alt="{y0} {E(name)} illustration" width="{first["w"]}" height="{first["h"]}" fetchpriority="{'high' if hero else 'low'}"><img alt="" width="{first["w"]}" height="{first["h"]}" aria-hidden="true">'
+            f'<div class="ysl-yr"><b>{y0}</b><span class="ysl-gen">{E(first["gen"])}</span></div>'
             + info(f'Illustrations (AI-generated) of every {E(name)} model year. Typical factory color of the era, not sales data. Free to use under <a href="{LIC}" rel="license noopener">CC BY 4.0</a>: credit The Lemon Index (lemonindex.com). <a href="/images/">Download and credit text</a>') + '</div>'
-            f'<div class="ysl-info"><span class="ysl-li"></span><span class="ysl-yt"></span><a class="ysl-go" href="#"></a></div>'
-            f'<input class="ysl-range" type="range" min="0" max="{len(ys) - 1}" step="1" value="0" aria-label="Model year" aria-valuetext="{ys[0]}">'
+            + _info(data[si], start in ys) +
+            f'<input class="ysl-range" type="range" min="0" max="{len(ys) - 1}" step="1" value="{si}" aria-label="Model year" aria-valuetext="{y0}">'
             f'<div class="ysl-ends"><span>{ys[0]}</span><span>{ys[-1]}</span></div>'
 
-            f'<script type="application/json" class="ysl-data">{json.dumps({"name": name, "years": data})}</script></section>'
-            f'<script src="/assets/yslider.js?v=1" defer></script>')
+            f'<script type="application/json" class="ysl-data">{json.dumps({"name": name, "years": data, "best": y0 if start in ys else None})}</script></section>'
+            f'<script src="/assets/yslider.js?v=3" defer></script>')
+
+def _info(v, best):
+    """The score row, filled for the starting year in the HTML itself so nothing shifts when yslider.js takes over (11-10: CLS)."""
+    li = v.get('li'); cls = 'ysl-li' + (' na' if li is None else ' good' if li <= 80 else ' bad' if li >= 130 else '')
+    lt = f'Lemon Index {li}' if li is not None else f'No Lemon Index for {v["y"]}'
+    yt = f'<span class="ysl-yt">YouTube score {v["yt"]}</span>' if v.get('yt') is not None else '<span class="ysl-yt" hidden></span>'
+    go = f'<a class="ysl-go" href="{v["url"]}">See the {v["y"]} report ›</a>' if v.get('url') else '<a class="ysl-go" href="#" hidden></a>'
+    return (f'<div class="ysl-info"><span class="ysl-best"{"" if best else " hidden"}>Best year</span><span class="{cls}">{lt}</span>{yt}{go}</div>')
 
 def yt_scores(fid):
     """{year: YouTube score} from data/yt_scores.json (the per-year YouTube rank data the site already shows)."""
