@@ -32105,7 +32105,35 @@
      "views": 416273
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 21000,
+     "lo": 20000.0,
+     "hi": 27995.0,
+     "n": 5,
+     "videos": 4,
+     "id": "vkkLXqkroH4",
+     "t": 252,
+     "title": "2009 Dodge Journey Review - Kelley Blue Book"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 420,
+       "lo": 40.0,
+       "hi": 800.0,
+       "n": 4,
+       "videos": 3,
+       "id": "gcnp5WIPOcw",
+       "t": 32,
+       "title": "2010 Dodge Journey Heater Core Flush"
+      }
+     ]
+    ]
+   }
   }
  ],
  "honda-hr-v": [
@@ -37471,7 +37499,21 @@
      "views": 132606
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 34320,
+     "lo": 33000.0,
+     "hi": 38000.0,
+     "n": 5,
+     "videos": 5,
+     "id": "BUUQ8Lls4yQ",
+     "t": 85,
+     "title": "2013 Acura RDX vs. 2012 Audi Q5 - Vehicle Comparison"
+    },
+    "items": []
+   }
   },
   {
    "years": [
@@ -37598,7 +37640,35 @@
      "views": 23893
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 36200,
+     "lo": 35000.0,
+     "hi": 42000.0,
+     "n": 11,
+     "videos": 9,
+     "id": "b1rUxcs3bSY",
+     "t": 1570,
+     "title": "2019 Acura RDX Vs 2018 Lexus NX 300 – Who Makes The BEST Luxury SUV?"
+    },
+    "items": [
+     [
+      "Brakes",
+      {
+       "median": 355,
+       "lo": 350.0,
+       "hi": 360.0,
+       "n": 2,
+       "videos": 2,
+       "id": "518agDXuxeQ",
+       "t": 13,
+       "title": "2015 Acura RDX Timing belt replacement at 77k kms"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -48336,7 +48406,35 @@
      "views": 177638
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 24995,
+     "lo": 23000.0,
+     "hi": 26845.0,
+     "n": 11,
+     "videos": 10,
+     "id": "wlUxZYfgeRY",
+     "t": 448,
+     "title": "2016 VW Passat First Drive Review: Will German VW Engineering Still Sell Cars?"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 875,
+       "lo": 300.0,
+       "hi": 1800.0,
+       "n": 22,
+       "videos": 6,
+       "id": "TxWu9I0A0s8",
+       "t": 26,
+       "title": "VW Passat Common Repairs & Average Repair Costs (2012–2019)"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -48460,7 +48558,21 @@
      "views": 424460
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 30000,
+     "lo": 30000.0,
+     "hi": 31000.0,
+     "n": 8,
+     "videos": 8,
+     "id": "sDZiS0Q03pY",
+     "t": 26,
+     "title": "2021 Volkswagen Passat R-Line - POV Driving Impressions"
+    },
+    "items": []
+   }
   }
  ],
  "dodge-charger": [
