@@ -29946,7 +29946,35 @@
      "views": 742755
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 14000,
+     "lo": 13000.0,
+     "hi": 15000.0,
+     "n": 7,
+     "videos": 7,
+     "id": "mKIT3uyhCaA",
+     "t": 25,
+     "title": "Roadfly.com - 2010 Kia Soul"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 95,
+       "lo": 40.0,
+       "hi": 150.0,
+       "n": 4,
+       "videos": 4,
+       "id": "gpFCAuB2zBs",
+       "t": 235,
+       "title": "2010 Kia Soul 2.0 L, Starter Replacement {FROM ABOVE}"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
