@@ -30954,6 +30954,263 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ],
+   "gen": "2013–2020 Nissan Pathfinder",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 19392112,
+   "topics": [
+    {
+     "name": "Transmission & shifter",
+     "views": 581419,
+     "n": 3,
+     "best": {
+      "id": "6O4uOcr0sBw",
+      "title": "How To Change Nissan CVT Transmission Fluid | Nissan Pathfinder 2013-2020",
+      "channel": "dial2fast",
+      "views": 439790
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 470581,
+     "n": 6,
+     "best": {
+      "id": "ae4u1_9ol-M",
+      "title": "Nissan Pathfinder Cabin Air Filter Replacement ( 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 )",
+      "channel": "Undercar Experts",
+      "views": 133144
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 414545,
+     "n": 8,
+     "best": {
+      "id": "Lgf16zoO16c",
+      "title": "How to Replace Mass Air Flow Sensor 2013-2020 Nissan Pathfinder",
+      "channel": "TRQ",
+      "views": 80855
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 412740,
+     "n": 5,
+     "best": {
+      "id": "qWfgFIwg3TM",
+      "title": "2013-2020 NISSAN PATHFINDER 3.5 V6 ALTERNATOR REPLACEMENT INFINITI JX35",
+      "channel": "PANDYDIY",
+      "views": 192666
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 212780,
+     "n": 4,
+     "best": {
+      "id": "iifHt6SvbXg",
+      "title": "How to Replace Front Lower Control Arms 2013-2020 Nissan Pathfinder",
+      "channel": "TRQ",
+      "views": 87346
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 178870,
+     "n": 2,
+     "best": {
+      "id": "YYB1reMVpGQ",
+      "title": "2012-2020 Nissan Pathfinder Spark Plug Replacement",
+      "channel": "Automotive Insight",
+      "views": 149406
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 177552,
+     "n": 2,
+     "best": {
+      "id": "iFx0AQpXC1o",
+      "title": "2018 nissan pathfinder timing chains replacement in-car.",
+      "channel": "Parts shooter",
+      "views": 108482
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 164277,
+     "n": 3,
+     "best": {
+      "id": "fD5_s-jB9MM",
+      "title": "How to Replace Tail Lights 2013-2020 Nissan Pathfinder",
+      "channel": "TRQ",
+      "views": 58405
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "HDvSnwQ1Dzo",
+     "title": "Top 5 Problems Nissan Pathfinder SUV 2013-2020 4th Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 323643
+    },
+    {
+     "id": "d8FxB4tmgVs",
+     "title": "Nissan Pathfinder (R52, 2013-2020) Common Problems, Reliability, Pros and Cons",
+     "channel": "MaxTheCarGuy",
+     "views": 123717
+    },
+    {
+     "id": "AYRgppkBSLA",
+     "title": "Nissan Pathfinder 4th Gen 2013 to 2021 common problems, defects, issues, recalls and complaints",
+     "channel": "HOWSTUFFINMYCARWORKS",
+     "views": 38992
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "nissan-murano": [
+  {
+   "years": [
+    2003,
+    2004,
+    2005,
+    2006,
+    2007
+   ],
+   "gen": "2003–2007 Nissan Murano",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 10976720,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 818067,
+     "n": 3,
+     "best": {
+      "id": "jTfScQv4RcE",
+      "title": "Master Chief teaches you how to change the oil on your 2006 nissan murano",
+      "channel": "The Synthetic Soundsmith",
+      "views": 762485
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 619504,
+     "n": 10,
+     "best": {
+      "id": "psqfHzCwYM8",
+      "title": "How to Replace Alternator 2003-2007 Nissan Murano",
+      "channel": "TRQ",
+      "views": 169314
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 552598,
+     "n": 5,
+     "best": {
+      "id": "b53TT0c5aSs",
+      "title": "Spark Plug Change - 2006 Nissan Murano 3.5L",
+      "channel": "Greg's Garage",
+      "views": 400361
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 374190,
+     "n": 5,
+     "best": {
+      "id": "ImipjV7ajhI",
+      "title": "How to Replace Cabin Air Filter 2006 Nissan Murano | AQ1087",
+      "channel": "Filterheads",
+      "views": 310937
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 358292,
+     "n": 6,
+     "best": {
+      "id": "DRW_HXsy0sU",
+      "title": "2003-2007 Nissan Murano Oil change with maintenance light reset",
+      "channel": "NutzAboutBolts",
+      "views": 221929
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 354320,
+     "n": 9,
+     "best": {
+      "id": "6gS4o6HrLeE",
+      "title": "2005 Nissan Murano Crankshaft sensor Replacement",
+      "channel": "MillennnialGod",
+      "views": 143687
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 278416,
+     "n": 5,
+     "best": {
+      "id": "vMDTAH6RK1w",
+      "title": "2006 Nissan Murano transfer case noise/ problem with transfer case",
+      "channel": "TheTioMZ",
+      "views": 98646
+     }
+    },
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 220925,
+     "n": 2,
+     "best": {
+      "id": "itqkI3IkK60",
+      "title": "How To Replace Valve Cover Gaskets On A 2002-2007 Nissan Murano",
+      "channel": "How to Automotive",
+      "views": 213681
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "koUkZbQI8aE",
+     "title": "Top 5 Problems Nissan Murano SUV 1st Generation 2003-07",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 412262
+    },
+    {
+     "id": "6FD_uvwv1jo",
+     "title": "2003 nissan murano 3.5 LS transfer case problems",
+     "channel": "EL REY YA VIENE",
+     "views": 82578
+    },
+    {
+     "id": "7JStv5ez7f8",
+     "title": "HELP! - 2007 Nissan Murano climate control problems! (AC, Air Conditioning, Heating)",
+     "channel": "FastPlastic",
+     "views": 53218
+    }
+   ],
+   "costs": null
   }
  ],
  "hyundai-kona": [
@@ -41436,7 +41693,61 @@
      "views": 86665
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 26250,
+     "lo": 19000.0,
+     "hi": 31000.0,
+     "n": 18,
+     "videos": 12,
+     "id": "N4VKZbnSuCs",
+     "t": 432,
+     "title": "What are the MAJOR changes for the  2020 Subaru WRX?"
+    },
+    "items": [
+     [
+      "Transmission",
+      {
+       "median": 1850,
+       "lo": 1200.0,
+       "hi": 2500.0,
+       "n": 2,
+       "videos": 2,
+       "id": "hDBdJcMUXBU",
+       "t": 478,
+       "title": "Why Buy? | 2018 Subaru WRX Review"
+      }
+     ],
+     [
+      "Insurance",
+      {
+       "median": 996,
+       "lo": 900.0,
+       "hi": 1092.0,
+       "n": 2,
+       "videos": 2,
+       "id": "vCkCKL1lTyg",
+       "t": 592,
+       "title": "2021 Subaru WRX STI - My Ownership Costs"
+      }
+     ],
+     [
+      "Oil change",
+      {
+       "median": 85,
+       "lo": 80.0,
+       "hi": 90.0,
+       "n": 2,
+       "videos": 2,
+       "id": "E3WW3f8aC0g",
+       "t": 247,
+       "title": "2020 Subaru WRX STI  15,000 Mile Review!"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -41526,7 +41837,30 @@
      "views": 39279
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 30000,
+     "lo": 28000.0,
+     "hi": 30000.0,
+     "n": 6,
+     "videos": 5,
+     "id": "o0a1H_ZUIPM",
+     "t": 1032,
+     "title": "2024 Subaru Impreza RS | What They Do Best"
+    },
+    "msrp": {
+     "median": 25500,
+     "lo": 24000.0,
+     "hi": 31000.0,
+     "n": 32,
+     "videos": 27,
+     "id": "o0a1H_ZUIPM",
+     "t": 15,
+     "title": "2024 Subaru Impreza RS | What They Do Best"
+    },
+    "items": []
+   }
   }
  ],
  "subaru-legacy": [
@@ -43556,7 +43890,35 @@
      "views": 65236
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 35000,
+     "lo": 25000.0,
+     "hi": 51100.0,
+     "n": 7,
+     "videos": 5,
+     "id": "gZgMTujiU28",
+     "t": 425,
+     "title": "Top 10 Rarest Dodge Charger Models Ever Made! (2006-2023)"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 400,
+       "lo": 25.0,
+       "hi": 800.0,
+       "n": 13,
+       "videos": 7,
+       "id": "jDUSBsP4FPo",
+       "t": 160,
+       "title": "Cost of Owning a 2009 Dodge Charger for 1 YEAR!"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -43668,7 +44030,70 @@
      "views": 229123
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 38990,
+     "lo": 26000.0,
+     "hi": 41240.0,
+     "n": 7,
+     "videos": 5,
+     "id": "GUwsJ8a-a5o",
+     "t": 529,
+     "title": "2015 Dodge Charger SXT Snowy AWD TFL4K Review: The Winter Warrior"
+    },
+    "msrp": {
+     "median": 43580,
+     "lo": 34000.0,
+     "hi": 63000.0,
+     "n": 29,
+     "videos": 23,
+     "id": "u08cWaz0PiQ",
+     "t": 1028,
+     "title": "Is the 485 HP 2020 Dodge Charger Scat Pack Widebody a Better Option Versus the Hellcat?"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 300,
+       "lo": 30.0,
+       "hi": 1500.0,
+       "n": 7,
+       "videos": 5,
+       "id": "z2yqrP_0Fgo",
+       "t": 292,
+       "title": "How much did I pay for my 2017 Dodge Charger ScatPack? + Insurance cost."
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 270,
+       "lo": 210.0,
+       "hi": 400.0,
+       "n": 5,
+       "videos": 3,
+       "id": "rU3ebyRqv4s",
+       "t": 804,
+       "title": "2012 vs 2015 Dodge Charger RT: 40,000 Mile In-Depth Comparison Review and Road Test"
+      }
+     ],
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 775,
+       "lo": 645.0,
+       "hi": 2340.0,
+       "n": 3,
+       "videos": 3,
+       "id": "ssRWEMuerZs",
+       "t": 420,
+       "title": "The Ultimate Dodge Charger Buying Guide - 2015-2017 All Models - Should You Buy?"
+      }
+     ]
+    ]
+   }
   }
  ],
  "dodge-challenger": [
@@ -44050,7 +44475,30 @@
      "views": 215915
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 15000,
+     "lo": 15000.0,
+     "hi": 20000.0,
+     "n": 3,
+     "videos": 3,
+     "id": "E1UAP29ce-E",
+     "t": 16,
+     "title": "2012 Chrysler 200 Costa Mesa, Huntington Beach, Irvine, San Clemente, Anaheim, CA RJT3639"
+    },
+    "msrp": {
+     "median": 27000,
+     "lo": 21000.0,
+     "hi": 30000.0,
+     "n": 9,
+     "videos": 6,
+     "id": "X8uU-ZzH2Ls",
+     "t": 188,
+     "title": "2012 Chrysler 200 Convertible Drive & Review"
+    },
+    "items": []
+   }
   },
   {
    "years": [
