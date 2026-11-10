@@ -28007,7 +28007,30 @@
      "views": 18611
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 30000,
+     "lo": 18700.0,
+     "hi": 54000.0,
+     "n": 7,
+     "videos": 6,
+     "id": "1CepnWrax6M",
+     "t": 1191,
+     "title": "2025 Hyundai Kona Review || A Cheeky $35,000 Urbanite From The Future!"
+    },
+    "msrp": {
+     "median": 31000,
+     "lo": 25000.0,
+     "hi": 35000.0,
+     "n": 53,
+     "videos": 40,
+     "id": "cdFLQlfPL64",
+     "t": 82,
+     "title": "2024 Hyundai Kona Review: Small, Modern, Affordable"
+    },
+    "items": []
+   }
   }
  ],
  "hyundai-palisade": [
@@ -29174,7 +29197,35 @@
      "views": 64276
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 43500,
+     "lo": 36700.0,
+     "hi": 49000.0,
+     "n": 32,
+     "videos": 23,
+     "id": "_3TwBmtNR58",
+     "t": 97,
+     "title": "2021 VW Atlas Cross Sport.  Why we're trading after only 4 months!"
+    },
+    "items": [
+     [
+      "Yearly cost to own",
+      {
+       "median": 728,
+       "lo": 500.0,
+       "hi": 955.8,
+       "n": 2,
+       "videos": 2,
+       "id": "TuOCldJNepE",
+       "t": 772,
+       "title": "LEMON LAW!  VW Buys Kristen's 2018 VW Atlas Back!"
+      }
+     ]
+    ]
+   }
   }
  ],
  "acura-mdx": [
@@ -32807,6 +32858,133 @@
      "title": "Hyundai Accent 2010 Starting Problems,Immobilizer Problems",
      "channel": "Maqbool G Viewers",
      "views": 8601
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017
+   ],
+   "gen": "2012–2017 Hyundai Accent",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 12685619,
+   "topics": [
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 395947,
+     "n": 7,
+     "best": {
+      "id": "555hHXakZ9o",
+      "title": "2011-2017 Hyundai Accent - Replace Crankshaft Position Sensor - Girlie Garage",
+      "channel": "Girlie Garage",
+      "views": 118957
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 362757,
+     "n": 9,
+     "best": {
+      "id": "7Tdf4ERqPxw",
+      "title": "2012 - 2017 Hyundai Accent Radio Install",
+      "channel": "Provo Beast Audio Installation",
+      "views": 103115
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 246139,
+     "n": 6,
+     "best": {
+      "id": "ZE6LE9DS_0k",
+      "title": "AC FIX - 2014 Hyundai Accent",
+      "channel": "Rebel And Lace",
+      "views": 87641
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 198868,
+     "n": 5,
+     "best": {
+      "id": "gvhxgPizY0Y",
+      "title": "HOW TO REPLACE DRUM BRAKES| 2014 Hyundai Accent gets a New set of Brake Drums & Shoes!",
+      "channel": "EverythingAvron",
+      "views": 83358
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 175713,
+     "n": 5,
+     "best": {
+      "id": "pvYMtVndtwQ",
+      "title": "HOW TO REPLACE SPARK PLUGS ON HYUNDAI ACCENT 2012 - 2016| The Accent gets a new \"Spark\" of life!",
+      "channel": "EverythingAvron",
+      "views": 98146
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 175480,
+     "n": 3,
+     "best": {
+      "id": "n2Y_9u6VMTU",
+      "title": "How to Check and Fill Fluids [COMPLETE GUIDE] - Hyundai Accent (2012-2017)",
+      "channel": "Virar Automotive",
+      "views": 126674
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 118717,
+     "n": 4,
+     "best": {
+      "id": "m4g_tco3BnM",
+      "title": "HOW TO CHANGE OIL IN 2014 HYUNDAI ACCENT| Full Synthetic Engine oil Maintenance Interval",
+      "channel": "EverythingAvron",
+      "views": 43763
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 115921,
+     "n": 3,
+     "best": {
+      "id": "yKY4H1vuc6s",
+      "title": "Hyundai Accent LED Interior Lights - How to Install - 4th Gen | 2011-2016",
+      "channel": "PrecisionLED",
+      "views": 70870
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "5GwgBb-rX6Y",
+     "title": "Top 5 Problems Hyundai Accent Hatchback 2012-2017 4th Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 97169
+    },
+    {
+     "id": "ZMtvM_Xoxrk",
+     "title": "2013 Hyundai Accent GLS AUTO Start up, Walkaround and Vehicle Tour",
+     "channel": "Justins Car Reviews",
+     "views": 348034
+    },
+    {
+     "id": "4hAChmzhMsg",
+     "title": "2014 Hyundai Accent SE Review, Walkaround, Exhaust, & Test Drive",
+     "channel": "Redline Reviews",
+     "views": 272516
     }
    ],
    "costs": null
@@ -41138,7 +41316,26 @@
      "views": 143385
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 400,
+       "lo": 250.0,
+       "hi": 425.0,
+       "n": 3,
+       "videos": 2,
+       "id": "nB0X3_mIC0w",
+       "t": 200,
+       "title": "Kia Sedona 2003 Pa Inspection Reliable Economical 8-13-12"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
