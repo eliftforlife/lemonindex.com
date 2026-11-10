@@ -32870,7 +32870,35 @@
      "views": 60855
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 27498,
+     "lo": 25000.0,
+     "hi": 29990.0,
+     "n": 12,
+     "videos": 9,
+     "id": "suvceFEgb0I",
+     "t": 321,
+     "title": "2015 Kia Sportage Start Up and Review 2.4 L 4-Cylinder"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 65,
+       "lo": 35.0,
+       "hi": 99.0,
+       "n": 6,
+       "videos": 6,
+       "id": "g4R6hPOfELE",
+       "t": 451,
+       "title": "Is a 2014 KIA Sportage EX2 worth buying in 2026?"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -32997,7 +33025,35 @@
      "views": 178941
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 23250,
+     "lo": 22995.0,
+     "hi": 23800.0,
+     "n": 8,
+     "videos": 6,
+     "id": "OsNkvp9YoTw",
+     "t": 318,
+     "title": "Should you BUY a 2020 Kia Sportage or WAIT for the REDESIGN?"
+    },
+    "items": [
+     [
+      "Tires",
+      {
+       "median": 848,
+       "lo": 695.0,
+       "hi": 1000.0,
+       "n": 4,
+       "videos": 2,
+       "id": "A8kBo6f-7ks",
+       "t": 124,
+       "title": "22,000km Long-Term Update | 2019 Kia Sportage EX Review"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -33066,7 +33122,30 @@
      "views": 410100
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 35000,
+     "lo": 35000.0,
+     "hi": 60500.0,
+     "n": 3,
+     "videos": 3,
+     "id": "CIP4O_5_HWw",
+     "t": 997,
+     "title": "2025 Kia Sportage Hybrid EX - Best Hybrid SUV?"
+    },
+    "msrp": {
+     "median": 31495,
+     "lo": 27900.0,
+     "hi": 38500.0,
+     "n": 44,
+     "videos": 34,
+     "id": "AXnRx92rmYY",
+     "t": 715,
+     "title": "The 2023 Kia Sportage Hybrid is a HUGE UPDATE!"
+    },
+    "items": []
+   }
   }
  ],
  "kia-soul": [
@@ -37755,7 +37834,26 @@
      "views": 65873
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 300,
+       "lo": 100.0,
+       "hi": 490.0,
+       "n": 8,
+       "videos": 5,
+       "id": "WGatskHWFEk",
+       "t": 100,
+       "title": "2004 Chevy Impala Speedometer Problems"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -53639,6 +53737,133 @@
      "title": "MK7 VW GOLF R BUYERS GUIDE : DO NOT BUY Without Watching This!",
      "channel": "Scottish Car Clan",
      "views": 328728
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "toyota-sienna": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003
+   ],
+   "gen": "1998–2003 Toyota Sienna",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 7336859,
+   "topics": [
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 649061,
+     "n": 17,
+     "best": {
+      "id": "mDPe8lEa8jU",
+      "title": "Replace Power Window Regulator on 1999 Toyota Sienna",
+      "channel": "Roderick Young",
+      "views": 96290
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 644508,
+     "n": 5,
+     "best": {
+      "id": "bD0RvPC-7bc",
+      "title": "How To Program Keyless Entry Remote Key Fob On Toyota Sienna 2000-2016",
+      "channel": "Vehix411 KARMAN AUTO",
+      "views": 463099
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 620735,
+     "n": 6,
+     "best": {
+      "id": "zPo0Mm3ccIA",
+      "title": "Bank 1 Sensor 1 Oxygen Sensor P1135 Code on 2001 Toyota Sienna",
+      "channel": "wes schaefer",
+      "views": 467867
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 582475,
+     "n": 8,
+     "best": {
+      "id": "4ktbI2wnhfA",
+      "title": "TOYOTA SIENNA 1999 2000 2001 2002 2003 SPARK PLUGS REPLACEMENT",
+      "channel": "AutosNCars",
+      "views": 443530
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 290494,
+     "n": 6,
+     "best": {
+      "id": "1eSUTBGnv_w",
+      "title": "How To Replace Instrument Dash Light Bulb |Toyota Sienna | 1997-2003",
+      "channel": "dial2fast",
+      "views": 155852
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 284348,
+     "n": 4,
+     "best": {
+      "id": "0ILQZluQwMc",
+      "title": "Fuel filter replacement 1 of 2 in the 2000 Toyota Sienna",
+      "channel": "Brown1286",
+      "views": 128700
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 135368,
+     "n": 3,
+     "best": {
+      "id": "Fh-kNcsmZwE",
+      "title": "How to Replace Timing Belt & Water Pump: Toyota Sienna 1997-2002",
+      "channel": "Pen-Pusher",
+      "views": 81050
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 135112,
+     "n": 8,
+     "best": {
+      "id": "mqF5QqUmo-A",
+      "title": "How to Replace Drum Brakes on Toyota Sienna 2000.",
+      "channel": "Pen-Pusher",
+      "views": 37883
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "mCpwnoSkZ5I",
+     "title": "2001 Sienna rear sliding door problems",
+     "channel": "shootingstar1015",
+     "views": 90969
+    },
+    {
+     "id": "n-K_qo4mM_E",
+     "title": "2002 TOYOTA SIENNA MINIVAN OVERVIEW, Start up, Walk around tour",
+     "channel": "AutomotiveReview",
+     "views": 167411
+    },
+    {
+     "id": "ZwAcc3pEZDk",
+     "title": "2000 Toyota Sienna XLE Start Up, Walkaround, Rev - 276K",
+     "channel": "Intechdude300",
+     "views": 84767
     }
    ],
    "costs": null
