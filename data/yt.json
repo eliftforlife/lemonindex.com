@@ -24784,6 +24784,132 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2014,
+    2015,
+    2016,
+    2017,
+    2018
+   ],
+   "gen": "2014–2018 GMC Sierra",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 35287947,
+   "topics": [
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 2450704,
+     "n": 6,
+     "best": {
+      "id": "49MLX9K-dwM",
+      "title": "GMC Sierra/Chevy Silverado Cabin Air Filter Replacement (2014-2018)",
+      "channel": "Tony The Truck Guy",
+      "views": 1445624
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 1130434,
+     "n": 7,
+     "best": {
+      "id": "LJi0yPgkWHc",
+      "title": "2014-2018 Sierra/Silverado Flickering or Shutting Off...Ground Issue SOLVED!",
+      "channel": "Hunter Wilson",
+      "views": 253662
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 939959,
+     "n": 5,
+     "best": {
+      "id": "u8qicXeadJs",
+      "title": "How to replace a 2014- 2018 GMC Sierra Battery",
+      "channel": "Bryans Garage",
+      "views": 292027
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 630417,
+     "n": 4,
+     "best": {
+      "id": "b2Fugi0o2ko",
+      "title": "2014 - 2019 Silverado & Sierra: How to Check & Fill Transmission Fluid!",
+      "channel": "Trick Shift Garage",
+      "views": 416033
+     }
+    },
+    {
+     "name": "Lifters, AFM & cam phasers",
+     "views": 584391,
+     "n": 1,
+     "best": {
+      "id": "ddocB-lUuv0",
+      "title": "\"FULL VIDEO\". 2015 GMC Sierra. Replacing lifters, head gasket and more.",
+      "channel": "Toki Mechanic",
+      "views": 584391
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 576752,
+     "n": 3,
+     "best": {
+      "id": "QB7_PthYBvk",
+      "title": "'16 GMC Sierra In Tank Fuel Pump Replace",
+      "channel": "South Main Auto LLC",
+      "views": 334819
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 378633,
+     "n": 2,
+     "best": {
+      "id": "gvpsaDm-jj4",
+      "title": "2015 GMC SIERRA TURNS OFF, STALLS/DIES RANDOMLY WHILE DRIVING. ELECTRICAL PROBLEM FINALLY SOLVED!!",
+      "channel": "Awrench Productions",
+      "views": 205557
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 313638,
+     "n": 3,
+     "best": {
+      "id": "pJtDeGLjMsA",
+      "title": "[HOW TO] Change Engine Oil and Filter - 2014-2018 GMC Sierra / Chevy Silverado (Easy DIY)",
+      "channel": "Fondupot's Garage",
+      "views": 169311
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "Q3rxuitFOq4",
+     "title": "5 Ways to Bulletproof your 2014 - 2018 Chevy Silverado or GMC Sierra and Make It More Reliable",
+     "channel": "Dustin T",
+     "views": 843096
+    },
+    {
+     "id": "OoGHgX0WV-A",
+     "title": "Common Problems with Chevy Silverado Sierra Trucks (2014)",
+     "channel": "Dustin T",
+     "views": 484047
+    },
+    {
+     "id": "Tf0sunNzoEA",
+     "title": "Reliability Issues? 3.5\" Rough Country Lift Kit - '07-'18 Silverado/Sierra: 3yrs + 30k miles",
+     "channel": "LONESTAR HAWAIIAN",
+     "views": 307714
+    }
+   ],
+   "costs": null
   }
  ],
  "chevrolet-colorado": [
@@ -30818,6 +30944,132 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2004,
+    2005,
+    2006,
+    2007,
+    2008
+   ],
+   "gen": "2004–2008 Nissan Maxima",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 8562891,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 843989,
+     "n": 14,
+     "best": {
+      "id": "bJzpTHIky18",
+      "title": "1995-2008 Nissan Maxima: AC/Alternator belt replacement",
+      "channel": "boredmder",
+      "views": 375919
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 461164,
+     "n": 2,
+     "best": {
+      "id": "L8c1ezfX4jo",
+      "title": "1995-2008 Nissan Maxima: PS pump belt replacement",
+      "channel": "boredmder",
+      "views": 403197
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 271041,
+     "n": 6,
+     "best": {
+      "id": "0OcFgJl3Rnw",
+      "title": "2004 Nissan Maxima stuck gear shifter",
+      "channel": "Sheryl F",
+      "views": 129407
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 206057,
+     "n": 5,
+     "best": {
+      "id": "Cc1ROpl9du8",
+      "title": "How to fix a non working fuel gauge on 2007 Nissan Maxima",
+      "channel": "Elham Raoufian",
+      "views": 100310
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 189707,
+     "n": 4,
+     "best": {
+      "id": "4gUyo9MrSEI",
+      "title": "Camshaft Position Sensor P0345 2004-2008 Nissan Maxima",
+      "channel": "Machine Head Repair Projects",
+      "views": 112009
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 164297,
+     "n": 3,
+     "best": {
+      "id": "3lqscpWG5PQ",
+      "title": "Changing an In Cabin Air Filter in a 6th Gen Maxima",
+      "channel": "chernmax",
+      "views": 98066
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 94732,
+     "n": 3,
+     "best": {
+      "id": "J-dnuJHD3E4",
+      "title": "How to replace high pressure power steering line on 2008 Nissan Maxima",
+      "channel": "RB The Mechanic",
+      "views": 47862
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 94216,
+     "n": 5,
+     "best": {
+      "id": "-oSCh1o7_Tg",
+      "title": "How to Change 2007 Maxima Brake Lights , Back Lights , Reverse Lights",
+      "channel": "Mr.wow2569",
+      "views": 33346
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "10_PAeeS13Y",
+     "title": "2004 NISSAN MAXIMA 3.5 V6 ENGINE COMMON PROBLEMS",
+     "channel": "ADVANCED LEVEL AUTO",
+     "views": 188974
+    },
+    {
+     "id": "IRh40qH_TKA",
+     "title": "Top 5 Problems Nissan Maxima Sedan 6th Generation 2004-08",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 146481
+    },
+    {
+     "id": "aTF9n5ANHoU",
+     "title": "Top Common Engine Problems 2004-2008 Nissan Maxima Sedan",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 36449
+    }
+   ],
+   "costs": null
   }
  ],
  "kia-rio": [
@@ -34021,7 +34273,50 @@
      "views": 23378
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": {
+     "median": 2500,
+     "lo": 800.0,
+     "hi": 3000.0,
+     "n": 3,
+     "videos": 3,
+     "id": "EBvplf_PKEw",
+     "t": 43,
+     "title": "2000 Lexus ES300",
+     "private": 0,
+     "dealer": 0
+    },
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 450,
+       "lo": 300.0,
+       "hi": 700.0,
+       "n": 5,
+       "videos": 4,
+       "id": "C4LPlKIsUVk",
+       "t": 412,
+       "title": "Flipping cars for a profit #27 | 2000 Lexus es 300 with 47k"
+      }
+     ],
+     [
+      "Transmission",
+      {
+       "median": 3000,
+       "lo": 550.0,
+       "hi": 4000.0,
+       "n": 3,
+       "videos": 3,
+       "id": "59sTnL8xPbU",
+       "t": 274,
+       "title": "2001 Lexus ES300 - 183k miles, Coach Edition, Fully Serviced"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -34147,7 +34442,35 @@
      "views": 1902
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 3800,
+     "lo": 1500.0,
+     "hi": 15000.0,
+     "n": 3,
+     "videos": 3,
+     "id": "kYKCuIGA3b0",
+     "t": 105,
+     "title": "2002 Lexus ES 300 Test Drive and Review"
+    },
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 80,
+       "lo": 60.0,
+       "hi": 4000.0,
+       "n": 3,
+       "videos": 3,
+       "id": "v6mR7heu09g",
+       "t": 417,
+       "title": "2005 LEXUS ES330 TEST DRIVE & REVIEW"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -34274,7 +34597,44 @@
      "views": 4895
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 10000,
+     "lo": 10000.0,
+     "hi": 10000.0,
+     "n": 3,
+     "videos": 3,
+     "id": "1CmSXqlJCLo",
+     "t": 433,
+     "title": "2009 Lexus ES350 driving impressions/POV drive review"
+    },
+    "msrp": {
+     "median": 43000,
+     "lo": 34000.0,
+     "hi": 43216.0,
+     "n": 3,
+     "videos": 3,
+     "id": "6ZktoaFOdJc",
+     "t": 293,
+     "title": "2007 Lexus ES Review - Kelley Blue Book"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 150,
+       "lo": 140.0,
+       "hi": 300.0,
+       "n": 3,
+       "videos": 2,
+       "id": "egiKG2zzWcM",
+       "t": 161,
+       "title": "2007-2012 Lexus ES350 Most Common Issues"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -34357,7 +34717,44 @@
      "views": 106524
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 32500,
+     "lo": 20000.0,
+     "hi": 43000.0,
+     "n": 6,
+     "videos": 6,
+     "id": "rEyQO4robts",
+     "t": 136,
+     "title": "2015 LEXUS ES350 vs GS350 - SPORTS LUXURY - COMPREHENSIVE REVIEW - WHICH CAR SHOULD YOU BUY?"
+    },
+    "msrp": {
+     "median": 39000,
+     "lo": 38000.0,
+     "hi": 41820.0,
+     "n": 15,
+     "videos": 12,
+     "id": "4Dy6kvL_vmU",
+     "t": 59,
+     "title": "2018 Lexus ES 350 Review | Edmunds"
+    },
+    "items": [
+     [
+      "Steering & suspension",
+      {
+       "median": 300,
+       "lo": 51.0,
+       "hi": 500.0,
+       "n": 3,
+       "videos": 3,
+       "id": "-ue_Vy6YV7o",
+       "t": 819,
+       "title": "1 Year Ownership Review | 2016 Lexus ES350"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -34430,7 +34827,21 @@
      "views": 130308
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 46000,
+     "lo": 43000.0,
+     "hi": 52700.0,
+     "n": 25,
+     "videos": 22,
+     "id": "hxJSP1AWeQs",
+     "t": 1583,
+     "title": "2019 / 2020 Lexus ES 350 | The Classic Comfy Lexus"
+    },
+    "items": []
+   }
   }
  ],
  "tesla-model-y": [
