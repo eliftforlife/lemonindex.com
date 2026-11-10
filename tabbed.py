@@ -11,7 +11,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 E = lambda s: html.escape(str(s), quote=True)
 LIC = 'https://creativecommons.org/licenses/by/4.0/'
 BASE = 'https://lemonindex.com'
-ASSET = '<link rel="stylesheet" href="/assets/tabs.css?v=2"><script src="/assets/tabs.js?v=1"></script>'
+ASSET = '<link rel="stylesheet" href="/assets/tabs.css?v=3"><script src="/assets/tabs.js?v=1"></script>'
 
 def engines(fid):
     p = os.path.join(HERE, 'data', f'engines_{fid}.json')
@@ -88,12 +88,48 @@ def _first_sentence(tag):
         if len(re.sub('<[^>]+>', '', out)) >= 40: break
     return out.strip() or h
 
-def _tabs(panels, label):
-    """panels = [(id, tab label, html)] -> tab bar + panels. The first is open by default."""
+def _tabs(panels, label, extra=''):
+    """panels = [(id, tab label, html)] -> tab bar + panels. The first is open by default.
+    extra = small controls that share the sticky tab row (e.g. the Normal / Advanced switch), outside the tablist."""
     panels = [p for p in panels if p[2].strip()]
     bar = ''.join(f'<button class="tb-t" role="tab" id="t-{i}" aria-controls="p-{i}" data-h="{i}" aria-selected="{"true" if n == 0 else "false"}" tabindex="{0 if n == 0 else -1}">{E(t)}</button>' for n, (i, t, _) in enumerate(panels))
     body = ''.join(f'<section class="tb-p{" on" if n == 0 else ""}" role="tabpanel" id="p-{i}" aria-labelledby="t-{i}" tabindex="0">{h}</section>' for n, (i, t, h) in enumerate(panels))
-    return f'<div class="tbx"><div class="tb-bar" role="tablist" aria-label="{E(label)}">{bar}</div>{body}</div>'
+    head = f'<div class="tb-bar" role="tablist" aria-label="{E(label)}">{bar}</div>'
+    if extra: head = f'<div class="tb-row">{head}{extra}</div>'
+    return f'<div class="tbx">{head}{body}</div>'
+
+# 11-10 (Elijah: "can we make this part better?"): the year page's 4 stacked control rows (year pills, big Compare/Share buttons,
+# Normal/Advanced, tabs) become 2: the year switcher with small icon buttons on one row, and Normal/Advanced riding on the tab row.
+_ICON = {
+    'all': '<path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"/>',
+    'cmp': '<path d="M7 20V9M12 20V4M17 20v-7"/>',
+    'shr': '<path d="M12 15V3M8 7l4-4 4 4M5 12v7a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-7"/>',
+}
+_svg = lambda k: f'<svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{_ICON[k]}</svg>'
+
+def _controls(sw):
+    """yswitch nav -> one compact row: '‹ prev · YEAR · next ›' plus small All years / Compare / Share icon buttons."""
+    if not sw: return ''
+    seg = sw.find(class_='yseg'); act = sw.find(class_='yact')
+    if not seg: return str(sw)
+    alla = seg.find('a', class_='yall'); alla = alla.extract() if alla else None
+    cur = seg.find('span', attrs={'aria-current': True}); yr = cur.get_text(strip=True) if cur else ''
+    for a in seg.find_all('a'):   # '2004' -> 'Go to the 2004 report' for screen readers; the visible text keeps its arrow
+        a['aria-label'] = f'{a.get_text(strip=True).strip("‹› ")} report'
+    btns = []
+    if alla: btns.append(f'<a class="tb-ic" href="{E(alla["href"])}" aria-label="All years"><span class="tb-ic-i">{_svg("all")}</span><span class="tb-ic-l">All years</span></a>')
+    if act:
+        c = act.find('a'); sh = act.find(attrs={'data-share': True})
+        if c: btns.append(f'<a class="tb-ic" href="{E(c["href"])}" aria-label="Compare the {E(yr)} with other cars"><span class="tb-ic-i">{_svg("cmp")}</span><span class="tb-ic-l">Compare</span></a>')
+        if sh: btns.append(f'<button class="tb-ic yshare" type="button" data-share="{E(sh["data-share"])}" aria-label="Share this report"><span class="tb-ic-i">{_svg("shr")}</span><span class="tb-ic-l">Share</span></button>')
+    return f'<nav aria-label="Model years" class="yswitch tb-ctl">{seg}<div class="tb-acts">{"".join(btns)}</div></nav>'
+
+def _modes(modes):
+    """Normal / Advanced (separate URLs, so still links) as a small switch at the end of the tab row."""
+    if not modes: return ''
+    CUR = ' aria-current="page"'
+    links = ''.join(f'<a href="{E(a["href"])}"{CUR if a.get("aria-current") else ""}>{E(a.get_text(strip=True))}</a>' for a in modes.find_all('a'))
+    return f'<nav aria-label="Page mode" class="modes tb-modes">{links}</nav>'
 
 def _toggle(years_html, eng_html, short):
     if not eng_html: return years_html
@@ -145,7 +181,7 @@ def transform_year(body, eng_html, short):
     modes = yt.find('nav', class_='modes'); sw = yt.find('nav', class_='yswitch'); early = yt.find(class_='early-b'); note = yt.find('p', class_='yc-note')
     img = ''.join(str(c) for c in (pv.find_all(recursive=False) if pv else []))
     short_ans = f'<p class="ans tb-ans">{_first_sentence(ans)}</p>' if ans else ''
-    hero = f'<section class="ph tb-hero">{_s(crumbs)}<div class="tb-img">{img}</div>{_s(h1)}{_s(early)}{_s(yhero)}{_s(sw)}{_s(modes)}</section>'   # the gauge + verdict already say it: no answer paragraph
+    hero = f'<section class="ph tb-hero">{_s(crumbs)}<div class="tb-img">{img}</div>{_s(h1)}{_s(early)}{_s(yhero)}{_controls(sw)}</section>'   # the gauge + verdict already say it: no answer paragraph
     top = [c for c in root.find_all(recursive=False) if c is not ph]
     grid = next((c for c in top if 'ygrid' in (c.get('class') or [])), None)
     items = [c for c in top if c is not grid] + (grid.find_all(recursive=False) if grid else [])
@@ -169,6 +205,6 @@ def transform_year(body, eng_html, short):
             inner = ch.decode_contents(); ch.clear(); ch.append(BeautifulSoup(h2s + _toggle(inner, eng_html, short), 'html.parser'))
     J = lambda xs: ''.join(map(str, xs))
     tabs = _tabs([('overview', 'Overview', _s(note) + J(over)), ('problems', 'Problems', J(probs)), ('repairs', 'Repairs & costs', J(fix)),
-                  ('recalls', 'Recalls & safety', J(rec)), ('years', 'Every year', J(yrs)), ('questions', 'Questions', J(qa))], 'Report sections')
+                  ('recalls', 'Recalls & safety', J(rec)), ('years', 'Every year', J(yrs)), ('questions', 'Questions', J(qa))], 'Report sections', _modes(modes))
     cls = ' '.join(root.get('class') or [])
     return f'{ASSET}<article class="{cls} tbl">{hero}{tabs}{J(tail)}</article>'

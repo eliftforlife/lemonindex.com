@@ -82,3 +82,41 @@ a.er:hover { background: var(--soft); }
   .tbl .tb-hero .yhero { flex-direction: column; align-items: center; text-align: center; }
   .tbl .tb-hero .yhero > * { margin-left: auto; margin-right: auto; }
 }
+/* 11-10 compact controls (Elijah: "can we make this part better?"): 4 stacked rows -> 2.
+   Row A: the year switcher + small All years / Compare / Share icon buttons. Row B: the tab bar with Normal / Advanced at its end. */
+.tbl .tb-hero .tb-ctl { display: flex; flex-wrap: nowrap; align-items: center; justify-content: center; gap: 10px; margin: 18px auto 0; padding: 0; border: 0; max-width: 100%; }
+.tbl .tb-hero .tb-ctl .yseg { flex: 0 1 auto; min-width: 0; padding: 3px; gap: 2px; box-shadow: none; background: var(--soft); }
+.tbl .tb-hero .tb-ctl .yseg a, .tbl .tb-hero .tb-ctl .yseg span { padding: 8px 14px; font-size: 15px; min-height: 40px; display: inline-flex; align-items: center; }
+.tbl .tb-hero .tb-ctl .yseg span { background: #fff; color: var(--ink); box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+.tb-acts { display: flex; gap: 6px; flex: 0 0 auto; }
+.tb-ic { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-width: 40px; height: 40px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--line);
+  background: #fff; color: var(--ink); font: 600 14px/1 var(--sys, inherit); text-decoration: none; cursor: pointer; white-space: nowrap; }
+.tb-ic:hover { background: var(--soft); }
+.tb-ic:focus-visible, .tbl .tb-ctl .yseg a:focus-visible, .tb-modes a:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+.tb-ic-i { display: inline-flex; }
+/* the tab row: tabs scroll, the mode switch stays at the end; the row (not the bar) is the sticky element now */
+.tb-row { position: sticky; top: var(--gh-h, 52px); z-index: 40; display: flex; align-items: center; gap: 8px; margin: 0 auto 22px; padding: 8px 6px;
+  background: rgba(255,255,255,.92); -webkit-backdrop-filter: saturate(1.4) blur(14px); backdrop-filter: saturate(1.4) blur(14px); border-bottom: 1px solid var(--line); }
+.tb-row .tb-bar { position: static; flex: 1 1 auto; min-width: 0; margin: 0; padding: 0; border: 0; background: none; -webkit-backdrop-filter: none; backdrop-filter: none; justify-content: flex-start; }
+.tb-modes { flex: 0 0 auto; margin: 0 !important; padding: 3px; gap: 2px; }
+.tb-modes a { padding: 0 12px; font-size: 13px; min-height: 40px; display: inline-flex; align-items: center; }
+@media (min-width: 900px) { .tb-row .tb-bar { justify-content: center; } }
+@media (max-width: 640px) {
+  .tbl .tb-hero .tb-ctl { justify-content: space-between; gap: 6px; width: 100%; }
+  .tbl .tb-hero .tb-ctl .yseg { flex: 1 1 auto; justify-content: space-between; overflow: visible; }
+  .tbl .tb-hero .tb-ctl .yseg a, .tbl .tb-hero .tb-ctl .yseg span { padding: 8px 10px; font-size: 14px; }
+  .tb-ic { padding: 0; width: 40px; }
+  .tb-ic-l { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .tb-row { top: 0; margin-left: -16px; margin-right: -16px; padding: 6px 8px 6px 12px; gap: 6px; }
+  .tb-modes a { padding: 0 9px; font-size: 12.5px; min-height: 40px; }
+}
+/* the old site.css phone rule stacks .yswitch into a column: keep the compact controls on one row */
+.tbl .tb-hero .tb-ctl { flex-direction: row !important; align-items: center !important; }
+.tbl > .tbx { margin-top: 14px !important; }
+@media (max-width: 640px) {
+  .tbl .tb-hero .tb-ctl { margin-top: 14px; }
+  /* on phones the mode switch shrinks to one small link to the other mode */
+  .tb-modes { background: none !important; padding: 0 !important; }
+  .tb-modes a[aria-current] { display: none; }
+  .tb-modes a { border: 1px solid var(--line); border-radius: 999px; color: var(--ink2); background: #fff; }
+}
