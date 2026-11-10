@@ -30694,7 +30694,35 @@
      "views": 12933
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 26800,
+     "lo": 24995.0,
+     "hi": 29800.0,
+     "n": 5,
+     "videos": 4,
+     "id": "2fgbqz5EPQc",
+     "t": 333,
+     "title": "MotorWeek Road Test: 2010 GMC Terrain"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 150,
+       "lo": 40.0,
+       "hi": 600.0,
+       "n": 9,
+       "videos": 8,
+       "id": "bSQvZvgKN2c",
+       "t": 127,
+       "title": "GMC Terrain - HOW TO RECHARGE A/C AIR CONDITIONING BY YOURSELF (2010 - 2017)"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -30822,7 +30850,35 @@
      "views": 38414
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 40000,
+     "lo": 34000.0,
+     "hi": 40500.0,
+     "n": 9,
+     "videos": 9,
+     "id": "WbIOsH2RP0I",
+     "t": 1184,
+     "title": "2018 GMC Terrain Denali – Standing Out From The Crowd"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 125,
+       "lo": 100.0,
+       "hi": 150.0,
+       "n": 2,
+       "videos": 2,
+       "id": "ILjyNSslqQg",
+       "t": 201,
+       "title": "How to Change Headlight bulbs in GMC Terrain 2018 -2023"
+      }
+     ]
+    ]
+   }
   }
  ],
  "gmc-yukon": [
@@ -30952,7 +31008,52 @@
      "views": 57223
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Tires",
+      {
+       "median": 2250,
+       "lo": 1500.0,
+       "hi": 3000.0,
+       "n": 4,
+       "videos": 3,
+       "id": "Adpuo5S0zU4",
+       "t": 387,
+       "title": "Monster! 2001 GMC Yukon Denali XL For Sale! 41\" Super Swampers!"
+      }
+     ],
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 150,
+       "lo": 50.0,
+       "hi": 400.0,
+       "n": 3,
+       "videos": 3,
+       "id": "KQ4AhEVUoqk",
+       "t": 102,
+       "title": "My 2003 GMC Yukon with 3” lift, 33” tires, and more. Tahoe,Suburban, Yukon Xl"
+      }
+     ],
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 14000,
+       "lo": 8000.0,
+       "hi": 20000.0,
+       "n": 2,
+       "videos": 2,
+       "id": "Adpuo5S0zU4",
+       "t": 381,
+       "title": "Monster! 2001 GMC Yukon Denali XL For Sale! 41\" Super Swampers!"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -31081,7 +31182,26 @@
      "views": 22810
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 151,
+       "lo": 120.0,
+       "hi": 182.0,
+       "n": 4,
+       "videos": 3,
+       "id": "ONhpYU7_xjA",
+       "t": 467,
+       "title": "2008 Yukon Blend Door Actuator Fix and No HVAC Control Issue"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -31208,7 +31328,57 @@
      "views": 202307
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 22500,
+     "lo": 15000.0,
+     "hi": 30000.0,
+     "n": 4,
+     "videos": 4,
+     "id": "DPdIqSkhkdQ",
+     "t": 395,
+     "title": "2015 GMC Yukon Denali 6.2L 0-60 MPH First Drive & Review"
+    },
+    "msrp": {
+     "median": 57735,
+     "lo": 46000.0,
+     "hi": 74000.0,
+     "n": 7,
+     "videos": 7,
+     "id": "YpR0m-zOSmE",
+     "t": 1332,
+     "title": "2015 GMC Yukon Denali – Redline: Review"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 700,
+       "lo": 300.0,
+       "hi": 800.0,
+       "n": 7,
+       "videos": 7,
+       "id": "9EWToENvBoI",
+       "t": 660,
+       "title": "Repairing Entertainment Screens - 2016 GMC Yukon XL"
+      }
+     ],
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 1000,
+       "lo": 500.0,
+       "hi": 2500.0,
+       "n": 3,
+       "videos": 3,
+       "id": "YpR0m-zOSmE",
+       "t": 229,
+       "title": "2015 GMC Yukon Denali – Redline: Review"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -31279,7 +31449,61 @@
      "views": 634379
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 69150,
+     "lo": 58800.0,
+     "hi": 80000.0,
+     "n": 18,
+     "videos": 16,
+     "id": "9r-pPADtXuc",
+     "t": 245,
+     "title": "Truck vs SUV: We Push The Limits of the new 2021 GMC Yukon AT4 Off-Road!"
+    },
+    "items": [
+     [
+      "Oil change",
+      {
+       "median": 87,
+       "lo": 85.0,
+       "hi": 89.0,
+       "n": 2,
+       "videos": 2,
+       "id": "DHGZ5WsdpGY",
+       "t": 335,
+       "title": "2022 VS 2021 GMC Yukon DENALI Review"
+      }
+     ],
+     [
+      "Insurance",
+      {
+       "median": 2213,
+       "lo": 2213.0,
+       "hi": 2213.0,
+       "n": 2,
+       "videos": 2,
+       "id": "z350XLCixfI",
+       "t": 80,
+       "title": "GMC Yukon Denali 2023 | Cost to Own | Money Breakdown"
+      }
+     ],
+     [
+      "Yearly cost to own",
+      {
+       "median": 747,
+       "lo": 747.0,
+       "hi": 747.0,
+       "n": 2,
+       "videos": 2,
+       "id": "z350XLCixfI",
+       "t": 111,
+       "title": "GMC Yukon Denali 2023 | Cost to Own | Money Breakdown"
+      }
+     ]
+    ]
+   }
   }
  ],
  "gmc-yukon-xl": [
@@ -35224,7 +35448,21 @@
      "views": 16900
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 22850,
+     "lo": 21000.0,
+     "hi": 25995.0,
+     "n": 8,
+     "videos": 7,
+     "id": "v6M6vnY0u7E",
+     "t": 1094,
+     "title": "2016 / 2017 Subaru Crosstrek Detailed Review and Road Test - In 4K UHD!"
+    },
+    "items": []
+   }
   },
   {
    "years": [
@@ -35351,7 +35589,21 @@
      "views": 953496
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 28000,
+     "lo": 24000.0,
+     "hi": 34995.0,
+     "n": 15,
+     "videos": 12,
+     "id": "Ly7g_xipSk8",
+     "t": 348,
+     "title": "2018 Subaru Crosstrek | CarGurus Test Drive Review"
+    },
+    "items": []
+   }
   },
   {
    "years": [
@@ -35441,7 +35693,44 @@
      "views": 1770
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 26000,
+     "lo": 10000.0,
+     "hi": 27000.0,
+     "n": 3,
+     "videos": 3,
+     "id": "h4hOeEPKebQ",
+     "t": 288,
+     "title": "2025 Subaru Crosstrek Premium Review - One Major Change But It Comes At A Cost"
+    },
+    "msrp": {
+     "median": 29130,
+     "lo": 25000.0,
+     "hi": 32600.0,
+     "n": 46,
+     "videos": 37,
+     "id": "-1VHkWphg5s",
+     "t": 287,
+     "title": "2024 Subaru Crosstrek | Review & Road Test"
+    },
+    "items": [
+     [
+      "Tires",
+      {
+       "median": 1820,
+       "lo": 1100.0,
+       "hi": 2540.0,
+       "n": 2,
+       "videos": 2,
+       "id": "hzQAI6QX-Bs",
+       "t": 308,
+       "title": "2024 Subaru Crosstrek Wilderness | MotorWeek Road Test"
+      }
+     ]
+    ]
+   }
   }
  ],
  "subaru-ascent": [
@@ -36177,7 +36466,21 @@
      "views": 75196
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 24945,
+     "lo": 24000.0,
+     "hi": 26900.0,
+     "n": 8,
+     "videos": 7,
+     "id": "DNox8gSl3Yg",
+     "t": 789,
+     "title": "Off-Road (Fail): 2014 Volkswagen Tiguan on Everyman Driver"
+    },
+    "items": []
+   }
   },
   {
    "years": [
@@ -36261,7 +36564,35 @@
      "views": 64847
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 33000,
+     "lo": 26600.0,
+     "hi": 37000.0,
+     "n": 15,
+     "videos": 11,
+     "id": "vLuDVsnQocg",
+     "t": 2175,
+     "title": "2020 Subaru Outback Vs. Volkswagen Tiguan – What is The Better Family Car?"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 67,
+       "lo": 36.0,
+       "hi": 100.0,
+       "n": 3,
+       "videos": 2,
+       "id": "1FV-9LJYOTc",
+       "t": 126,
+       "title": "2021 VW Tiguan PCV VALVE OIL SEP REPLACED- BIG OIL LEAK ! & OIL CHANGE(65000 miles)"
+      }
+     ]
+    ]
+   }
   }
  ],
  "volkswagen-atlas": [
@@ -41651,7 +41982,26 @@
      "views": 118669
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 150,
+       "lo": 134.0,
+       "hi": 250.0,
+       "n": 3,
+       "videos": 2,
+       "id": "vWANVRvds3I",
+       "t": 18,
+       "title": "2003 Nissan Sentra - Cheap Car Corrosion Correction"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -41906,7 +42256,48 @@
      "views": 953969
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 18740,
+     "lo": 17600.0,
+     "hi": 19640.0,
+     "n": 11,
+     "videos": 8,
+     "id": "sFt74IAUt10",
+     "t": 239,
+     "title": "2015 Nissan Sentra Start up and Review 1.8 L 4-Cylinder"
+    },
+    "items": [
+     [
+      "Brakes",
+      {
+       "median": 396,
+       "lo": 300.0,
+       "hi": 500.0,
+       "n": 6,
+       "videos": 3,
+       "id": "qD7gN-uI2mc",
+       "t": 551,
+       "title": "2016 NISSAN SENTRA SV: HURT YOUR WALLET? PROBLEMS AND MORE. #cars #maintenance #sentra"
+      }
+     ],
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 475,
+       "lo": 200.0,
+       "hi": 750.0,
+       "n": 20,
+       "videos": 3,
+       "id": "Zg50RGYWQA4",
+       "t": 95,
+       "title": "Nissan Sentra Common Repairs & Average Costs (2013–2019)"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -42033,7 +42424,35 @@
      "views": 63562
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 22375,
+     "lo": 20000.0,
+     "hi": 24948.0,
+     "n": 28,
+     "videos": 22,
+     "id": "3RRtsmvsyGA",
+     "t": 88,
+     "title": "2025 Nissan Sentra Overview | Capital One Auto Navigator"
+    },
+    "items": [
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 700,
+       "lo": 700.0,
+       "hi": 700.0,
+       "n": 4,
+       "videos": 3,
+       "id": "7VqmYc0fLD8",
+       "t": 972,
+       "title": "2022 Nissan Sentra SR: TEST DRIVE+FULL REVIEW"
+      }
+     ]
+    ]
+   }
   }
  ],
  "nissan-versa": [
@@ -56942,7 +57361,39 @@
      "views": 84767
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 125,
+       "lo": 40.0,
+       "hi": 574.0,
+       "n": 10,
+       "videos": 9,
+       "id": "TatZNk1cxRc",
+       "t": 349,
+       "title": "2000 Toyota Sienna review"
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 1250,
+       "lo": 700.0,
+       "hi": 1800.0,
+       "n": 2,
+       "videos": 2,
+       "id": "TatZNk1cxRc",
+       "t": 63,
+       "title": "2000 Toyota Sienna review"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
