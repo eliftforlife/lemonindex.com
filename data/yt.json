@@ -28453,7 +28453,35 @@
      "views": 21414
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 20000,
+     "lo": 18900.0,
+     "hi": 20000.0,
+     "n": 12,
+     "videos": 11,
+     "id": "guLsrV1pBqY",
+     "t": 133,
+     "title": "2011 Jeep Compass first Drive Review"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 750,
+       "lo": 400.0,
+       "hi": 2500.0,
+       "n": 23,
+       "videos": 6,
+       "id": "mcgx5KuHb8E",
+       "t": 37,
+       "title": "Jeep Compass Common Repairs & Costs (2011–2017) | What Could Go Wrong?"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -37920,7 +37948,35 @@
      "views": 57940
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 37000,
+     "lo": 29000.0,
+     "hi": 39825.0,
+     "n": 11,
+     "videos": 9,
+     "id": "nDZEW1dJjmc",
+     "t": 46,
+     "title": "Driving Review - 2014 Chevrolet Impala LTZ - Test Drive - Video Review"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 85,
+       "lo": 50.0,
+       "hi": 450.0,
+       "n": 5,
+       "videos": 5,
+       "id": "DJGfuOzBXt0",
+       "t": 758,
+       "title": "2019 Chevrolet Impala LT Midnight Edition Start up Engine and full tour"
+      }
+     ]
+    ]
+   }
   }
  ],
  "chevrolet-camaro": [
