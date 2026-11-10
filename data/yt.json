@@ -29008,7 +29008,35 @@
      "views": 71251
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 35900,
+     "lo": 33988.0,
+     "hi": 47375.0,
+     "n": 11,
+     "videos": 8,
+     "id": "O8C-2Yd9M-4",
+     "t": 292,
+     "title": "2008 GMC Acadia Review - Kelley Blue Book"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 400,
+       "lo": 110.0,
+       "hi": 750.0,
+       "n": 8,
+       "videos": 6,
+       "id": "H5cMAbq2XJc",
+       "t": 738,
+       "title": "2008 GMC Acadia Service Stabilitrak - No Traction Control- Service Traction Control - Throttle Body"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -30349,6 +30377,133 @@
      "title": "2006 KIA SPORTAGE KM REVIEW - B4550",
      "channel": "BerwickCity",
      "views": 122358
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016
+   ],
+   "gen": "2011–2016 Kia Sportage",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 30380015,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 401600,
+     "n": 6,
+     "best": {
+      "id": "jjMRGAtbhwg",
+      "title": "How to Remove Radio / CD Player from Kia Sportage 2013 for Repair.",
+      "channel": "HiTechElectronic",
+      "views": 141390
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 205235,
+     "n": 4,
+     "best": {
+      "id": "bDnlQCfqFCU",
+      "title": "How to change the oil in a 2011/2012 Kia Sportage",
+      "channel": "Drinking and DIYing",
+      "views": 124713
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 122315,
+     "n": 2,
+     "best": {
+      "id": "AA5zp4ouCHM",
+      "title": "2014 Kia Sportage Brake Job step by step",
+      "channel": "The Suburban Experimentalist",
+      "views": 78889
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 122310,
+     "n": 2,
+     "best": {
+      "id": "jtSzexibgVw",
+      "title": "How to remove a door panel on a 2012 Kia Sportage (Easy || Front and Rear)",
+      "channel": "CarTunes",
+      "views": 63605
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 105245,
+     "n": 2,
+     "best": {
+      "id": "o6-jJX2jvDM",
+      "title": "2013 Kia Sportage Auto Transmission oil change | Engine oil change",
+      "channel": "Shanes Shed",
+      "views": 78195
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 74661,
+     "n": 1,
+     "best": {
+      "id": "Ais4M4ZrL_Q",
+      "title": "Changing Spark Plugs - Kia Sportage 2011-2016",
+      "channel": "supermtran",
+      "views": 74661
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 66064,
+     "n": 1,
+     "best": {
+      "id": "PhFg-W5HHps",
+      "title": "2012 Kia Sportage SX 4dr engine timing chain | kia sorento timing chain replacement timing belt",
+      "channel": "Mechanical Tips",
+      "views": 66064
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 58449,
+     "n": 2,
+     "best": {
+      "id": "kSsnukP5JC4",
+      "title": "How to Replace Cabin Air Filter 2015 Kia Sportage | AQ1118",
+      "channel": "Filterheads",
+      "views": 33927
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "gA4XEIblrK4",
+     "title": "Kia Sportage SUV 2016-2018 review – Carbuyer",
+     "channel": "Carbuyer",
+     "views": 487675
+    },
+    {
+     "id": "s3X2oRNKvE4",
+     "title": "Should You Buy a KIA SPORTAGE MK3? (Test Drive & Review 2015 2.0 CRDi KX4)",
+     "channel": "High Peak Autos",
+     "views": 194742
+    },
+    {
+     "id": "pzrNIG77K1g",
+     "title": "Should you buy a KIA SPORTAGE, 2.0 CRDI, 2014, Automatic? Test, Review in Spanish.",
+     "channel": "Walter Koren en Español",
+     "views": 60855
     }
    ],
    "costs": null
@@ -32721,6 +32876,135 @@
     },
     "items": []
    }
+  }
+ ],
+ "acura-rdx": [
+  {
+   "years": [
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012
+   ],
+   "gen": "2007–2012 Acura RDX",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 4375946,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 203644,
+     "n": 3,
+     "best": {
+      "id": "FWailtD2V_w",
+      "title": "Acura RDX Reset Oil Light Maintenance 2007-2010 how to",
+      "channel": "Emerszon TV",
+      "views": 192609
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 151323,
+     "n": 4,
+     "best": {
+      "id": "Gj0IPtDxNLQ",
+      "title": "How to reset oil life % in 2007-2012 Acura RDX",
+      "channel": "FH Motorsports",
+      "views": 84255
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 114965,
+     "n": 6,
+     "best": {
+      "id": "HvFfCd00Yzs",
+      "title": "2011 - 2015 Acura RDX Key Fob Battery Change - EASY DIY Replacement",
+      "channel": "Key Fob Rob",
+      "views": 83700
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 52349,
+     "n": 3,
+     "best": {
+      "id": "H6EPMoq63oM",
+      "title": "Acura RDX / Honda CRV Front Strut Replacement - 2007 - 2012",
+      "channel": "Hardly Moving Productions",
+      "views": 25375
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 50940,
+     "n": 1,
+     "best": {
+      "id": "Omu3PqN-TX0",
+      "title": "2010 Acura RDX MDX A/C clutch relay problem",
+      "channel": "micahdavidian",
+      "views": 50940
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 44231,
+     "n": 2,
+     "best": {
+      "id": "zZ54PQlmxck",
+      "title": "2007 Acura RDX Door Panel Removal and Speaker Replacement",
+      "channel": "clintme",
+      "views": 40028
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 34013,
+     "n": 4,
+     "best": {
+      "id": "_6-6f-pLs4k",
+      "title": "2007-2013 Acura RDX Coolant Leak",
+      "channel": "Acura n Honda How To",
+      "views": 12613
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 27441,
+     "n": 2,
+     "best": {
+      "id": "qeNRHr82KuU",
+      "title": "How To Replace Spark Plugs On Acura RDX 2.3 L turbo 2007-2012 - Simple & Easy",
+      "channel": "MotorCarNut",
+      "views": 24876
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "nXL8k-ol82E",
+     "title": "2011 Acura RDX vs Toyota 4Runner vs Range Land Rover LR4 review Mashup Review",
+     "channel": "The Fast Lane Car",
+     "views": 225389
+    },
+    {
+     "id": "MbGO5vN5ubw",
+     "title": "2009 Acura RDX Review, Walkaround, Exhaust, & Test Drive",
+     "channel": "Redline Reviews",
+     "views": 170309
+    },
+    {
+     "id": "sF2Htz5VF9o",
+     "title": "2008 Acura RDX Review - Kelley Blue Book",
+     "channel": "Kelley Blue Book",
+     "views": 132606
+    }
+   ],
+   "costs": null
   }
  ],
  "toyota-avalon": [
@@ -37878,7 +38162,44 @@
      "views": 30087
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 25000,
+     "lo": 25000.0,
+     "hi": 30000.0,
+     "n": 3,
+     "videos": 3,
+     "id": "x3P0LzE1MaY",
+     "t": 453,
+     "title": "2011 Kia Optima Review by Automotive Trends"
+    },
+    "msrp": {
+     "median": 26795,
+     "lo": 25600.0,
+     "hi": 32950.0,
+     "n": 11,
+     "videos": 8,
+     "id": "JFFqa-Kg7GI",
+     "t": 364,
+     "title": "2015 Kia Optima Start Up and Review 2.4 L 4-Cylinder"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 550,
+       "lo": 80.0,
+       "hi": 2627.0,
+       "n": 3,
+       "videos": 3,
+       "id": "qAQhHUYn6ZA",
+       "t": 240,
+       "title": "Removing the 2013 Kia Optima Theta 2.4 Engine"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -38004,7 +38325,21 @@
      "views": 1548327
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 27400,
+     "lo": 24000.0,
+     "hi": 32950.0,
+     "n": 9,
+     "videos": 8,
+     "id": "2xbm0ZhJyrU",
+     "t": 380,
+     "title": "Is the NEW 2020 Kia Optima S the BEST VALUE mid-size sedan?"
+    },
+    "items": []
+   }
   },
   {
    "years": [
@@ -38075,7 +38410,35 @@
      "views": 148259
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 32650,
+     "lo": 28390.0,
+     "hi": 34000.0,
+     "n": 22,
+     "videos": 19,
+     "id": "2mCynBgrYv4",
+     "t": 26,
+     "title": "The 2021 Kia K5 EX & GT-Line Are Value Packed Sedans with a Stylish Design"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 566,
+       "lo": 132.5,
+       "hi": 1000.0,
+       "n": 4,
+       "videos": 3,
+       "id": "_evWqMmXHys",
+       "t": 408,
+       "title": "BUYING MY DREAM CAR! grwm, process, empty car tour, tips on buying a new car + (2025 Kia K5 GT Line)"
+      }
+     ]
+    ]
+   }
   }
  ],
  "kia-rio": [
