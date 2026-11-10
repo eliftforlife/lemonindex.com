@@ -28434,7 +28434,35 @@
      "views": 351962
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 34000,
+     "lo": 30000.0,
+     "hi": 37000.0,
+     "n": 9,
+     "videos": 8,
+     "id": "VDCMD9TqZ2Y",
+     "t": 93,
+     "title": "2013 Mazda CX-9 Review"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 260,
+       "lo": 250.0,
+       "hi": 500.0,
+       "n": 3,
+       "videos": 3,
+       "id": "xTW0KOEGwYM",
+       "t": 13,
+       "title": "2010 Mazda CX-9 window gear replacement."
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -28519,7 +28547,21 @@
      "views": 801209
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 32400,
+     "lo": 32000.0,
+     "hi": 35000.0,
+     "n": 9,
+     "videos": 9,
+     "id": "bTHP98cHI6U",
+     "t": 1015,
+     "title": "The 2021 Mazda CX-9 Signature is An Even More Appealing Family SUV"
+    },
+    "items": []
+   }
   }
  ],
  "volkswagen-atlas": [
@@ -28626,6 +28668,263 @@
      "title": "Volkswagen Tiguan VS. Atlas Cross Sport - 2020 Edition - Which should you buy?!",
      "channel": "Bachman Volkswagen",
      "views": 64276
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "acura-mdx": [
+  {
+   "years": [
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006
+   ],
+   "gen": "2001–2006 Acura MDX",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 7253812,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 633959,
+     "n": 5,
+     "best": {
+      "id": "DypP5QCfx1Y",
+      "title": "How to reset Maintenance Required light 2001-2006 Acura MDX",
+      "channel": "Import Car Enthusiast",
+      "views": 366283
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 400143,
+     "n": 14,
+     "best": {
+      "id": "4mPc0C59o_U",
+      "title": "how to replace a alternator on a 2004 acura mdx",
+      "channel": "Jabo The Mechanic",
+      "views": 69252
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 348611,
+     "n": 8,
+     "best": {
+      "id": "rDo5ZA4KM7Q",
+      "title": "Power Steering Flush Acura MDX 2000-2006",
+      "channel": "2CarPros",
+      "views": 115792
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 301492,
+     "n": 6,
+     "best": {
+      "id": "AcRrE-sWmL0",
+      "title": "Replace The Radiator And Thermostat On A 2001-2006 Acura MDX",
+      "channel": "How to Automotive",
+      "views": 90607
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 284766,
+     "n": 4,
+     "best": {
+      "id": "Y5gQm3tLfUo",
+      "title": "How to Change the Transmission Fluid on a 2005 Acura MDX",
+      "channel": "How to Automotive",
+      "views": 182978
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 186610,
+     "n": 7,
+     "best": {
+      "id": "cnFHhfudT7A",
+      "title": "How to Replace Shocks and Struts in a Acura MDX – 2003-2006",
+      "channel": "AutoZone",
+      "views": 84199
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 146983,
+     "n": 6,
+     "best": {
+      "id": "vWf1_yoLWXs",
+      "title": "2002 Acura MDX Cabin Air Filter Replacement",
+      "channel": "FloridaJoe3",
+      "views": 51030
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 133647,
+     "n": 6,
+     "best": {
+      "id": "IqP5LgOtjL0",
+      "title": "2002 Acura MDX Brake Pads and Rotor Replacement",
+      "channel": "FloridaJoe3",
+      "views": 45261
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "xcRZ-hzsgL8",
+     "title": "2005 Acura MDX Touring Final Review, Tour, and Test Drive",
+     "channel": "Import Car Enthusiast",
+     "views": 87197
+    },
+    {
+     "id": "KH1f9K7yOxo",
+     "title": "2005 Acura MDX Long-Term Review (165K)",
+     "channel": "Import Car Enthusiast",
+     "views": 63543
+    },
+    {
+     "id": "T6RpW_CPNIs",
+     "title": "2004 Acura MDX Review - A FANTASTIC Used Car!",
+     "channel": "Shooting Cars",
+     "views": 56236
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013
+   ],
+   "gen": "2007–2013 Acura MDX",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 8189062,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 824948,
+     "n": 12,
+     "best": {
+      "id": "y2YsCzWm6tk",
+      "title": "Replace the Alternator on a 2007-2013 Acura MDX",
+      "channel": "How to Automotive",
+      "views": 257331
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 300464,
+     "n": 4,
+     "best": {
+      "id": "vmkTsR1l3GQ",
+      "title": "How to reset Oil Life on Acura MDX 2007-2011",
+      "channel": "RB The Mechanic",
+      "views": 146466
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 184326,
+     "n": 5,
+     "best": {
+      "id": "_LEGJ8Xko_s",
+      "title": "How to Replace Front Passengers Side CV Axle 2007-2013 Acura MDX",
+      "channel": "TRQ",
+      "views": 85171
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 177898,
+     "n": 7,
+     "best": {
+      "id": "jN_Tngp9pc0",
+      "title": "How to Replace Strut & Spring Assembly 2007-2013 Acura MDX",
+      "channel": "TRQ",
+      "views": 51752
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 157915,
+     "n": 3,
+     "best": {
+      "id": "wP4y58l4Ug0",
+      "title": "2008 MDX Electrical Issues",
+      "channel": "Richard Pinsk",
+      "views": 67909
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 107565,
+     "n": 3,
+     "best": {
+      "id": "Omu3PqN-TX0",
+      "title": "2010 Acura RDX MDX A/C clutch relay problem",
+      "channel": "micahdavidian",
+      "views": 50939
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 93585,
+     "n": 2,
+     "best": {
+      "id": "mVSWpW-Rhzs",
+      "title": "How to Replace Radiator 2007-2013 Acura MDX",
+      "channel": "TRQ",
+      "views": 52823
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 68557,
+     "n": 1,
+     "best": {
+      "id": "pBZ81GIALgM",
+      "title": "How to Replace Serpentine Belt 2007-2013 Acura MDX",
+      "channel": "TRQ",
+      "views": 68557
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "YDlGFqYLOQ8",
+     "title": "2009 Acura MDX Review - Reliability, Handling, 0-60 and more",
+     "channel": "Marc Loves Cars",
+     "views": 75455
+    },
+    {
+     "id": "dYe6vWqiKUc",
+     "title": "Acura MDX 2010 electrical problems",
+     "channel": "DIY Projects with Dr Sec",
+     "views": 60720
+    },
+    {
+     "id": "GZmR9Bzp74E",
+     "title": "2008 Acura MDX Owner Review. Reliable Used SUV",
+     "channel": "AtomicCar Review",
+     "views": 54026
     }
    ],
    "costs": null
@@ -30071,7 +30370,35 @@
      "views": 1544
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 12998,
+     "lo": 12995.0,
+     "hi": 15804.0,
+     "n": 8,
+     "videos": 8,
+     "id": "W4N4HKeOv2I",
+     "t": 675,
+     "title": "2013 Chevrolet Spark Review, Walkaround, Exhaust, & Test Drive"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 20,
+       "lo": 20.0,
+       "hi": 340.0,
+       "n": 3,
+       "videos": 3,
+       "id": "fZjrO4fWkqk",
+       "t": 10,
+       "title": "How To Change The Cabin Air Filter For 2014 Chevy Spark"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -30823,7 +31150,35 @@
      "views": 42885
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 11990,
+     "lo": 11000.0,
+     "hi": 15580.0,
+     "n": 8,
+     "videos": 6,
+     "id": "WxV_TMzUzJE",
+     "t": 18,
+     "title": "2012 Nissan Versa - Overview"
+    },
+    "items": [
+     [
+      "Transmission",
+      {
+       "median": 320,
+       "lo": 139.0,
+       "hi": 500.0,
+       "n": 4,
+       "videos": 4,
+       "id": "LDYk2z87PNo",
+       "t": 250,
+       "title": "2012 Nissan Versa Sedan Review - Kelley Blue Book"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -30950,7 +31305,70 @@
      "views": 36826
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 13000,
+     "lo": 10000.0,
+     "hi": 20000.0,
+     "n": 3,
+     "videos": 3,
+     "id": "k9k2XJZMMYs",
+     "t": 1398,
+     "title": "A Focus On Value, Not Price | 2020 Nissan Versa"
+    },
+    "msrp": {
+     "median": 19410,
+     "lo": 16000.0,
+     "hi": 21910.0,
+     "n": 42,
+     "videos": 34,
+     "id": "_Wy3DoXsdUM",
+     "t": 182,
+     "title": "2024 Nissan Versa 5-Speed Manual - Cheapest Car in The USA Morning Commute"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 235,
+       "lo": 150.0,
+       "hi": 320.0,
+       "n": 4,
+       "videos": 4,
+       "id": "_Wy3DoXsdUM",
+       "t": 526,
+       "title": "2024 Nissan Versa 5-Speed Manual - Cheapest Car in The USA Morning Commute"
+      }
+     ],
+     [
+      "Transmission",
+      {
+       "median": 1150,
+       "lo": 300.0,
+       "hi": 2000.0,
+       "n": 4,
+       "videos": 3,
+       "id": "KW1lSz1OVN8",
+       "t": 253,
+       "title": "This Is The Cheapest Car In America! | 2023 Nissan Versa Review"
+      }
+     ],
+     [
+      "Oil change",
+      {
+       "median": 45,
+       "lo": 40.0,
+       "hi": 50.0,
+       "n": 2,
+       "videos": 2,
+       "id": "wteLRUu423U",
+       "t": 309,
+       "title": "2024 Nissan Versa S | Manual Transmission | +5k miles Owner's Review (Part 2)"
+      }
+     ]
+    ]
+   }
   }
  ],
  "nissan-maxima": [
@@ -36729,6 +37147,132 @@
      ]
     ]
    }
+  }
+ ],
+ "mercedes-benz-e-class": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002
+   ],
+   "gen": "1996–2002 Mercedes-Benz E-Class",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 194,
+   "views": 21829548,
+   "topics": [
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 630828,
+     "n": 6,
+     "best": {
+      "id": "rwXMo7m5sWk",
+      "title": "Mercedes w210 E220 CDI All the Air Sensor Cleaning MAP , MAF , IAT",
+      "channel": "doit_vehicles",
+      "views": 243064
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 569415,
+     "n": 3,
+     "best": {
+      "id": "QJzV0oXlUFE",
+      "title": "Mercedes E320 service interval reset service wrench W210",
+      "channel": "Vehix411 KARMAN AUTO",
+      "views": 530250
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 524030,
+     "n": 6,
+     "best": {
+      "id": "ftzF8oIohzg",
+      "title": "Mercedes W210 Rear Window Regulator Replacement DIY - (E300, E320, E420, E430, and E55 AMG)",
+      "channel": "FCP Euro",
+      "views": 226830
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 460434,
+     "n": 2,
+     "best": {
+      "id": "U8FI4Sil6mc",
+      "title": "MERCEDES 3.2 V6 W203 W210 W208 W211 SERPENTINE BELT REPLACEMENT DIAGRAM",
+      "channel": "Auto Repair Guys",
+      "views": 323988
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 314230,
+     "n": 8,
+     "best": {
+      "id": "J8lgCPa_S_M",
+      "title": "1996 Mercedes Benz E320 HVAC fan regulator upgrade and repair",
+      "channel": "2stroketurbo",
+      "views": 92419
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 175808,
+     "n": 3,
+     "best": {
+      "id": "3egDCx8ebZg",
+      "title": "How to replace the battery - Mercedes E Class (W210)",
+      "channel": "I fix my Benz",
+      "views": 90438
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 150421,
+     "n": 1,
+     "best": {
+      "id": "vpIvd94Z0bA",
+      "title": "Mercedes E350 oil in the coolant fix w211 2002-2009",
+      "channel": "Sean Symons",
+      "views": 150421
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 130076,
+     "n": 2,
+     "best": {
+      "id": "61zerrizE3M",
+      "title": "MERCEDES CRANK NO START ISSUE....EASY FIX...DIY...E320 1998-2007....",
+      "channel": "Peter L",
+      "views": 80449
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "l9e1ImKyJiE",
+     "title": "E220 CDI Mercedes w210 Turbocharger - Problems / Removal / Replacement",
+     "channel": "doit_vehicles",
+     "views": 232812
+    },
+    {
+     "id": "XwzRTU_ntbg",
+     "title": "E220 CDI Mercedes w210 High Pressure Fuel Pump / Problems / Things to Know / Diesel Shutoff Valve",
+     "channel": "doit_vehicles",
+     "views": 224134
+    },
+    {
+     "id": "JAWBK4EvGD0",
+     "title": "Used Mercedes E-Class W211 Buyers guide (2002-2009) Avoid faults and common problems (CDI/CGI)",
+     "channel": "The Miles Driven",
+     "views": 136907
+    }
+   ],
+   "costs": null
   }
  ],
  "mercedes-benz-glk/glc": [
