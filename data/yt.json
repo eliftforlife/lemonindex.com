@@ -36862,7 +36862,21 @@
      "views": 32734
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 31545,
+     "lo": 27995.0,
+     "hi": 46000.0,
+     "n": 7,
+     "videos": 6,
+     "id": "9OqB65LEOwc",
+     "t": 229,
+     "title": "All-new 2015 BMW X1 revealed"
+    },
+    "items": []
+   }
   },
   {
    "years": [
