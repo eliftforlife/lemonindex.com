@@ -23869,7 +23869,63 @@
      "views": 115498
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": {
+     "median": 2500,
+     "lo": 1600.0,
+     "hi": 2700.0,
+     "n": 5,
+     "videos": 5,
+     "id": "qw_N4CLHDqU",
+     "t": 11,
+     "title": "2000 Toyota 4Runner buyers guide",
+     "private": 0,
+     "dealer": 0
+    },
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 100,
+       "lo": 30.0,
+       "hi": 300.0,
+       "n": 19,
+       "videos": 15,
+       "id": "JRZN8ab0cY8",
+       "t": 190,
+       "title": "Why are 3rd Gen 4Runners SO EXPENSIVE?"
+      }
+     ],
+     [
+      "Water pump / cooling",
+      {
+       "median": 110,
+       "lo": 90.0,
+       "hi": 300.0,
+       "n": 8,
+       "videos": 6,
+       "id": "u9sOY1QPxB8",
+       "t": 978,
+       "title": "3rd Gen 4Runner Maintenance Must Haves & Why We Did Them"
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 1295,
+       "lo": 290.0,
+       "hi": 2300.0,
+       "n": 4,
+       "videos": 4,
+       "id": "2dm3tdDIz_c",
+       "t": 149,
+       "title": "How Much Does it Cost to Build a 3rd Gen 4Runner? Sold to a Rockstar!"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -38482,7 +38538,35 @@
      "views": 272516
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 15000,
+     "lo": 15000.0,
+     "hi": 15995.0,
+     "n": 6,
+     "videos": 5,
+     "id": "4hAChmzhMsg",
+     "t": 839,
+     "title": "2014 Hyundai Accent SE Review, Walkaround, Exhaust, & Test Drive"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 340,
+       "lo": 300.0,
+       "hi": 380.0,
+       "n": 4,
+       "videos": 3,
+       "id": "EJz1rmdaBu8",
+       "t": 17,
+       "title": "PCV valve replacement 2012 hyundai accent"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -38608,7 +38692,30 @@
      "views": 194625
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 20000,
+     "lo": 20000.0,
+     "hi": 20000.0,
+     "n": 4,
+     "videos": 4,
+     "id": "2d3qKeCw528",
+     "t": 702,
+     "title": "Modern Motoring - Reviewing the 2018 Hyundai Accent"
+    },
+    "msrp": {
+     "median": 16000,
+     "lo": 15000.0,
+     "hi": 19995.0,
+     "n": 9,
+     "videos": 6,
+     "id": "vr-kmlkRuH4",
+     "t": 37,
+     "title": "2019 Hyundai Accent: Review"
+    },
+    "items": []
+   }
   }
  ],
  "kia-optima": [
@@ -49463,6 +49570,134 @@
      "title": "Volkswagen Golf GTI MK6 hatchback 2009 - 2012 review - CarBuyer",
      "channel": "Carbuyer",
      "views": 1170876
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021
+   ],
+   "gen": "2015–2021 Volkswagen Golf",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 198,
+   "views": 154105809,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 4349998,
+     "n": 2,
+     "best": {
+      "id": "1_UBfkLCbu0",
+      "title": "2015 VW Volkswagen Golf MK7 KEY FOB Battery Replacement",
+      "channel": "My Mate VINCE",
+      "views": 3842795
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 1824698,
+     "n": 2,
+     "best": {
+      "id": "1PSOT7GacoA",
+      "title": "Dead Misfire MK7 GTI, Another Shop Said Engine is TOAST",
+      "channel": "HumbleMechanic",
+      "views": 1500243
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 820742,
+     "n": 2,
+     "best": {
+      "id": "8Uh-rtWz5Mg",
+      "title": "Volkswagen Reset Inspection Now Error on MK7 Golf (GTI, Sportwagen, R)",
+      "channel": "Adam Chandler",
+      "views": 644621
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 706586,
+     "n": 2,
+     "best": {
+      "id": "b9dvu6ijddo",
+      "title": "VW Golf MK7 stuck fuel door",
+      "channel": "Graham McDonald",
+      "views": 461355
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 466158,
+     "n": 1,
+     "best": {
+      "id": "9yLJ8IGuMPg",
+      "title": "How to Replace Your MK7 GTI Water Pump (and why you should)",
+      "channel": "HumbleMechanic",
+      "views": 466158
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 445312,
+     "n": 2,
+     "best": {
+      "id": "PzWyTVtHMII",
+      "title": "VW Golf Service Reset MK7 Oil and Inspection Reset service light reset Mark 7 2012 to 2019",
+      "channel": "redram52",
+      "views": 247832
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 258248,
+     "n": 1,
+     "best": {
+      "id": "dxZoBldb5Po",
+      "title": "Volkswagen GTI Clutch Replacement DIY (VW Mk7 GTI & Mk7 Golf R)",
+      "channel": "FCP Euro",
+      "views": 258248
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 182482,
+     "n": 1,
+     "best": {
+      "id": "9nlDKR5N9p4",
+      "title": "VW Golf MK7 (5G) Steering Angle Sensor basic settings (ESC ACC TPMS error fix)",
+      "channel": "mr-fix",
+      "views": 182482
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "Pkg6JnkW7aA",
+     "title": "Audi A3 vs Volkswagen Golf 2018 review - which should you buy? | Head-to-Head",
+     "channel": "carwow",
+     "views": 1675603
+    },
+    {
+     "id": "RxXnm0gfB1A",
+     "title": "Volkswagen Golf MK7 (2012-2019) review - Carbuyer / Mat Watson",
+     "channel": "Carbuyer",
+     "views": 1660382
+    },
+    {
+     "id": "2JvUhYwgEGM",
+     "title": "MK7 VW GOLF R BUYERS GUIDE : DO NOT BUY Without Watching This!",
+     "channel": "Scottish Car Clan",
+     "views": 328728
     }
    ],
    "costs": null
