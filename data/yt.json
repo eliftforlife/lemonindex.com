@@ -31083,6 +31083,98 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2022–2025 Nissan Pathfinder",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 18292876,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 53290,
+     "n": 1,
+     "best": {
+      "id": "ugrHlNjj-pQ",
+      "title": "2023 - 2024 Nissan Pathfinder Key Fob Battery Replacement - How To Change Replace Remote Batteries",
+      "channel": "PYR Automotive ",
+      "views": 53290
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 50313,
+     "n": 2,
+     "best": {
+      "id": "JeD0yWsxToo",
+      "title": "2022-2025 Nissan Pathfinder oil change and oil life reset",
+      "channel": "PRviewsvlogs",
+      "views": 28890
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 44965,
+     "n": 1,
+     "best": {
+      "id": "_vZWUfLDZy4",
+      "title": "Rear Brakes 2022 Nissan Pathfinder EPB without a scan tool! Why do the brakes need replacing at 24k?",
+      "channel": "Andy The X Tech",
+      "views": 44965
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 27151,
+     "n": 1,
+     "best": {
+      "id": "GrWgF2mwano",
+      "title": "2022 Nissan Pathfinder: The transmission fixes the sins of the past!",
+      "channel": "MotoManTV",
+      "views": 27151
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 19578,
+     "n": 1,
+     "best": {
+      "id": "_q0nbuZODMA",
+      "title": "2022-2024 Pathfinder pass thru light installation",
+      "channel": "PRviewsvlogs",
+      "views": 19578
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "fK2x-j4lHWs",
+     "title": "2022 Nissan Pathfinder | Fixes Most Problems",
+     "channel": "savagegeese",
+     "views": 212843
+    },
+    {
+     "id": "fe5qrsRS4rw",
+     "title": "2022 Nissan Pathfinder vs 2022 Infiniti QX60 Which One Should You Buy?",
+     "channel": "Cars Unlocked",
+     "views": 45015
+    },
+    {
+     "id": "4bwr-P5GF7o",
+     "title": "5 Reasons Why You Should Buy A 2022 Nissan Pathfinder SV - Quick Buyer's Guide",
+     "channel": "Boston Auto Blog",
+     "views": 37779
+    }
+   ],
+   "costs": null
   }
  ],
  "nissan-murano": [
@@ -31208,6 +31300,133 @@
      "title": "HELP! - 2007 Nissan Murano climate control problems! (AC, Air Conditioning, Heating)",
      "channel": "FastPlastic",
      "views": 53218
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014
+   ],
+   "gen": "2009–2014 Nissan Murano",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 8713645,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 349429,
+     "n": 3,
+     "best": {
+      "id": "ryICmzuTVmg",
+      "title": "Best & Easiest 2008-2014 Nissan Murano alternator removal procedure",
+      "channel": "dr idiot ",
+      "views": 295056
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 232958,
+     "n": 5,
+     "best": {
+      "id": "9cEp_8tNypg",
+      "title": "How to Replace Cabin Air Filter 2011 Nissan Murano | AQ1140",
+      "channel": "Filterheads",
+      "views": 87140
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 215983,
+     "n": 4,
+     "best": {
+      "id": "C_q5Uv1IY2g",
+      "title": "2010 nissan murano spark plug change out",
+      "channel": "michael bragg",
+      "views": 150044
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 172189,
+     "n": 6,
+     "best": {
+      "id": "K5w8WHh_jy4",
+      "title": "2009 Nissan Murano LE AWD transfer case fluid change.mp4",
+      "channel": "Nando A",
+      "views": 47068
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 154629,
+     "n": 3,
+     "best": {
+      "id": "nRsXWG1XZTA",
+      "title": "Replacing the radiator on a 2010 Nissan Murano",
+      "channel": "I Can Fix It !!!",
+      "views": 68818
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 150791,
+     "n": 3,
+     "best": {
+      "id": "xjFf1gi1W5c",
+      "title": "2014 Nissan Murano ABS & Traction Control Fix - It Wasn’t The Speed Sensors",
+      "channel": "South Main Auto LLC",
+      "views": 66402
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 146721,
+     "n": 3,
+     "best": {
+      "id": "XfOQcEBHE54",
+      "title": "Nissan Murano Oil Life Reset 2008 - 2014",
+      "channel": "Fix it Felix",
+      "views": 122439
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 53210,
+     "n": 2,
+     "best": {
+      "id": "d7qBa07Qifc",
+      "title": "2010 Nissan Murano /maxima oil light reset",
+      "channel": "mannys Automotive",
+      "views": 42898
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "VBtfwSUx-f0",
+     "title": "Top 5 Problems Nissan Murano SUV 2nd Generation 2009-14",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 383667
+    },
+    {
+     "id": "tNITv4agOK4",
+     "title": "My Top 5 Problems With The Nissan Murano (2nd Generation 2009-2014)",
+     "channel": "Alex The Car Doctor",
+     "views": 184713
+    },
+    {
+     "id": "ACVvRZlcUYg",
+     "title": "A Complete Review of My 2009 Nissan Murano S - Should You Buy One in 2021?",
+     "channel": "EYVO Auto",
+     "views": 43108
     }
    ],
    "costs": null
@@ -41587,7 +41806,57 @@
      "views": 102250
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 20000,
+     "lo": 10000.0,
+     "hi": 30000.0,
+     "n": 7,
+     "videos": 6,
+     "id": "akQxCMF4ROQ",
+     "t": 824,
+     "title": "2015-2021 Subaru WRX Buyer’s Guide - Reliability & Common Problems"
+    },
+    "msrp": {
+     "median": 30000,
+     "lo": 18000.0,
+     "hi": 37000.0,
+     "n": 7,
+     "videos": 7,
+     "id": "jsS_BjAXvlA",
+     "t": 301,
+     "title": "MotorWeek | Road Test: 2015 Subaru WRX STI"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 332,
+       "lo": 48.0,
+       "hi": 675.0,
+       "n": 8,
+       "videos": 3,
+       "id": "HqXk-BfdW6Y",
+       "t": 573,
+       "title": "2013 Subaru WRX - 6 Year Update! (Reliability, Maintenance, Cost of Ownership, etc)"
+      }
+     ],
+     [
+      "Transmission",
+      {
+       "median": 1750,
+       "lo": 1000.0,
+       "hi": 2500.0,
+       "n": 2,
+       "videos": 2,
+       "id": "akQxCMF4ROQ",
+       "t": 429,
+       "title": "2015-2021 Subaru WRX Buyer’s Guide - Reliability & Common Problems"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
