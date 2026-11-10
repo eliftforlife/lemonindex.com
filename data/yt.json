@@ -27140,6 +27140,70 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2017–2025 Honda Ridgeline",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 26292980,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 80698,
+     "n": 1,
+     "best": {
+      "id": "jJZNLdWRedI",
+      "title": "Step by step battery replacement on a Honda Ridgeline (2nd Gen) or Pilot (3rd Gen).",
+      "channel": "Koolbob2",
+      "views": 80698
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 63988,
+     "n": 1,
+     "best": {
+      "id": "1Kwead_IbN4",
+      "title": "2019 Honda Ridgeline Fuel Pump Recall POV 👀👌 #honda #ridgeline #fuelpump #recall #pov #insta360",
+      "channel": "TE VIDEOS",
+      "views": 63988
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "Lznrt9QJ0Mg",
+     "title": "Car Mechanic Reviews The 2024 Honda Ridgeline. Should You Buy One?",
+     "channel": "The Car Care Nut Reviews",
+     "views": 649722
+    },
+    {
+     "id": "cS3IC5oupJ8",
+     "title": "2021 Honda Ridgeline VS. 2021 Toyota Tacoma - Which is The Best Reliable Truck?",
+     "channel": "Car Help Corner",
+     "views": 231752
+    },
+    {
+     "id": "wX-xhVwl8gI",
+     "title": "Top 5 Problems Honda Ridgeline Pickup 2017-Present 2nd Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 141244
+    }
+   ],
+   "costs": null
   }
  ],
  "jeep-gladiator": [
@@ -37820,7 +37884,26 @@
      "views": 76200
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 100,
+       "lo": 70.0,
+       "hi": 200.0,
+       "n": 17,
+       "videos": 13,
+       "id": "LfcPms0BY3M",
+       "t": 45,
+       "title": "2007 LS4 Impala SS Update"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
