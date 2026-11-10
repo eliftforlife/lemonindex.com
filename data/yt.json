@@ -31677,7 +31677,26 @@
      "views": 104935
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 60,
+       "lo": 30.0,
+       "hi": 170.0,
+       "n": 15,
+       "videos": 9,
+       "id": "roKJ4eonEHs",
+       "t": 104,
+       "title": "\"How to Fix 2007 Nissan Pathfinder AC & Heat Fan Not Working - Easy Blower Motor Replacement\""
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -34879,6 +34898,222 @@
     },
     "items": []
    }
+  }
+ ],
+ "volkswagen-tiguan": [
+  {
+   "years": [
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017
+   ],
+   "gen": "2009–2017 Volkswagen Tiguan",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 26642235,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 919175,
+     "n": 8,
+     "best": {
+      "id": "c5ssXUs9GxY",
+      "title": "VW Tiguan 2008-2016 Service & Inspection RESET",
+      "channel": "The VW Mechanic",
+      "views": 216115
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 859639,
+     "n": 5,
+     "best": {
+      "id": "UtzHKRND7pM",
+      "title": "EASY Reset/ Turn off VW 2016 Tiguan Inspection Now Light/ Notification",
+      "channel": "Blu-TSX",
+      "views": 351005
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 624956,
+     "n": 7,
+     "best": {
+      "id": "bANkcCWbg5Y",
+      "title": "2009-2016 Volkswagen Tiguan - Remove or Replace Intake Manifold",
+      "channel": "YOUCANIC",
+      "views": 208703
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 518862,
+     "n": 5,
+     "best": {
+      "id": "P72fajkfbLU",
+      "title": "2009-2016 2.0L Volkswagen Tiguan - Water Pump Replacement",
+      "channel": "YOUCANIC",
+      "views": 134993
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 482258,
+     "n": 5,
+     "best": {
+      "id": "EP4YEwH4560",
+      "title": "Volkswagen Tiguan Key Fob Battery Replacement (2010 - 2017)",
+      "channel": "FobBattery",
+      "views": 262487
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 152263,
+     "n": 2,
+     "best": {
+      "id": "t3wsqwAH2D4",
+      "title": "Transmission Fluid Change: 2009-2018 Volkswagen Tiguan, Asin 09M automatic",
+      "channel": "Bennie Aust",
+      "views": 88917
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 93059,
+     "n": 2,
+     "best": {
+      "id": "7xJ9NG3rmvM",
+      "title": "How to Replace Cabin Air Filter 2009-2017 Volkswagen Tiguan",
+      "channel": "TRQ",
+      "views": 55506
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 90538,
+     "n": 2,
+     "best": {
+      "id": "VRV7QNNNH4o",
+      "title": "VW Tiguan Rear Brake Pad Replacement - No Scan Tool - 2009-2016",
+      "channel": "MotorCarNut",
+      "views": 53514
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "qw6PTMwYzDk",
+     "title": "Fix it before they sell it? CAR WIZARD gets a '16 Tiguan with issues no new buyer would want",
+     "channel": "Car Wizard",
+     "views": 139376
+    },
+    {
+     "id": "GcgGjfhdMAw",
+     "title": "VW Tiguan buyers guide review (2008-2016) Avoid buying a broken Tiguan with the most common faults",
+     "channel": "The Miles Driven",
+     "views": 111363
+    },
+    {
+     "id": "bvcWxIpbwUQ",
+     "title": "Top 5 Problems Volkswagen Tiguan SUV 2009-2017 1st Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 75196
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+   ],
+   "gen": "2018–2024 Volkswagen Tiguan",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 51951755,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 1517170,
+     "n": 6,
+     "best": {
+      "id": "0aBqhq8TICo",
+      "title": "How to reset the oil change indicator on a 2018 Volkswagen Tiguan",
+      "channel": "mbradley4vw",
+      "views": 705524
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 438980,
+     "n": 2,
+     "best": {
+      "id": "Rje4YcpDWC0",
+      "title": "HOW TO Reset Oil Change Light - 2019/2020 Volkswagen Tiguan R-LINE",
+      "channel": "Actually Andrew",
+      "views": 361087
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 132302,
+     "n": 1,
+     "best": {
+      "id": "DAM5kNBd2Ec",
+      "title": "2018-22 VW Tiguan MQB | Spark Plug DIY",
+      "channel": "In The Garage DIY",
+      "views": 132302
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 86546,
+     "n": 1,
+     "best": {
+      "id": "kxK31AUkOZQ",
+      "title": "DIY 2019-2024 Volkswagen Tiguan Key Fob Battery Replacement | How To Replace Tiguan Batteries",
+      "channel": "How It's Fixed",
+      "views": 86546
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "KTtm9DjT454",
+     "title": "Should You Buy a 2024 Volkswagen Tiguan? Thorough Review By A Mechanic",
+     "channel": "The Car Care Nut Reviews",
+     "views": 294384
+    },
+    {
+     "id": "2yk9vLTOaTk",
+     "title": "5 Reasons Why You Should Buy A 2022 Volkswagen Tiguan - Quick Buyer's Guide",
+     "channel": "Boston Auto Blog",
+     "views": 91443
+    },
+    {
+     "id": "Aai5xaOFzU0",
+     "title": "2019 VW Tiguan R-Line Tech TDI 4 Motion DSG REVIEW – should you buy one? #usedcars #suv #tiguan",
+     "channel": "Car Babble",
+     "views": 64847
+    }
+   ],
+   "costs": null
   }
  ],
  "volkswagen-atlas": [
@@ -40069,6 +40304,136 @@
      ]
     ]
    }
+  }
+ ],
+ "nissan-sentra": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006
+   ],
+   "gen": "2000–2006 Nissan Sentra",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 12676744,
+   "topics": [
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 916954,
+     "n": 12,
+     "best": {
+      "id": "PwjL3zLpwk4",
+      "title": "2004 Sentra 1.8L Camshaft Position Sensor Replacement",
+      "channel": "northwestern2002",
+      "views": 272333
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 604997,
+     "n": 8,
+     "best": {
+      "id": "hzt4TrYph1k",
+      "title": "Nissan 1.8 Sentra Belt Replacement....Alternator/AC/Pulley. 2000",
+      "channel": "Fixing With Passion",
+      "views": 196951
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 441840,
+     "n": 4,
+     "best": {
+      "id": "D2JH8IrLAOE",
+      "title": "2005 Nissan Sentra -- Replacing the Drive Belts",
+      "channel": "TheyMightBeRacing",
+      "views": 308048
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 435853,
+     "n": 5,
+     "best": {
+      "id": "TF-JnEzcseU",
+      "title": "How to Install Fuel Pump Assembly E8502M in a 2002 - 2006 Nissan Sentra",
+      "channel": "Airtex-ASC Performance Pumps",
+      "views": 187513
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 420205,
+     "n": 5,
+     "best": {
+      "id": "zodLN5_6KaM",
+      "title": "How to Replace Cabin Air Filter 2006 Nissan Sentra | AQ1087",
+      "channel": "Filterheads",
+      "views": 323032
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 414310,
+     "n": 8,
+     "best": {
+      "id": "BJfRqbX5xMw",
+      "title": "2000-2006 Nissan Sentra Thermostat Replacement",
+      "channel": "Machine Head Repair Projects",
+      "views": 113962
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 358472,
+     "n": 4,
+     "best": {
+      "id": "eEZ3bNxoUGo",
+      "title": "2001 Nissan Sentra 1.8L QG18DE head gasket replacement. SIMPLE REPLACEMENT. START TO FINISH",
+      "channel": "Gasket masters",
+      "views": 136491
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 348091,
+     "n": 5,
+     "best": {
+      "id": "BqyUIN1EWvI",
+      "title": "HOW TO: 2000-2006 Nissan Sentra O/D (Transmission) Diagnostic mode",
+      "channel": "NJ LIFE-HACKER",
+      "views": 170562
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "c8FTHjDw0lU",
+     "title": "Nissan Sentra B15 2001-2006. Reliability and simplicity. Unpretentious, that simple. | Review",
+     "channel": "Christian Carrillo",
+     "views": 126565
+    },
+    {
+     "id": "Cw3WXrtl0O8",
+     "title": "Nissan Sentra 2005 Special Edition Review",
+     "channel": "Review Cars",
+     "views": 228116
+    },
+    {
+     "id": "t7gCD-qvYnY",
+     "title": "2002 Nissan Sentra SE-R Spec V | Retro Review",
+     "channel": "MotorWeek",
+     "views": 118669
+    }
+   ],
+   "costs": null
   }
  ],
  "nissan-versa": [
@@ -46030,7 +46395,35 @@
      "views": 200189
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 20000,
+     "lo": 20000.0,
+     "hi": 23790.0,
+     "n": 5,
+     "videos": 4,
+     "id": "IK2j2dDjLec",
+     "t": 252,
+     "title": "2008 Volkswagen Jetta Review - Kelley Blue Book"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 75,
+       "lo": 25.0,
+       "hi": 1500.0,
+       "n": 3,
+       "videos": 3,
+       "id": "_ZF06bFp7ik",
+       "t": 669,
+       "title": "2007 (A5, 2005-10) Volkswagen Jetta Door Skin Replacement, How to Save Over $600 Doing it Yourself"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -46159,7 +46552,61 @@
      "views": 345378
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 23875,
+     "lo": 17900.0,
+     "hi": 26990.0,
+     "n": 22,
+     "videos": 17,
+     "id": "2XMpW3x2AyU",
+     "t": 1051,
+     "title": "2017 Volkswagen Jetta 1.4T – Basic Transportation \"GerMerican\" Style"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 1500,
+       "lo": 600.0,
+       "hi": 2410.0,
+       "n": 12,
+       "videos": 5,
+       "id": "bzrGpACS3xQ",
+       "t": 80,
+       "title": "VW Jetta Common Repairs & Average Costs (2011–2018)"
+      }
+     ],
+     [
+      "Transmission",
+      {
+       "median": 2000,
+       "lo": 1425.0,
+       "hi": 4000.0,
+       "n": 7,
+       "videos": 3,
+       "id": "bzrGpACS3xQ",
+       "t": 158,
+       "title": "VW Jetta Common Repairs & Average Costs (2011–2018)"
+      }
+     ],
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 1000,
+       "lo": 900.0,
+       "hi": 2000.0,
+       "n": 3,
+       "videos": 2,
+       "id": "ZfOtV9Jk6Y0",
+       "t": 272,
+       "title": "2011 Volkswagen Jetta Review - Kelley Blue Book"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -46287,7 +46734,57 @@
      "views": 488333
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 30000,
+     "lo": 21000.0,
+     "hi": 40000.0,
+     "n": 3,
+     "videos": 3,
+     "id": "gbUHOngM_QU",
+     "t": 1378,
+     "title": "2024 Volkswagen Jetta Sport Review - The Economical and Fun German Sedan"
+    },
+    "msrp": {
+     "median": 27350,
+     "lo": 21995.0,
+     "hi": 30000.0,
+     "n": 32,
+     "videos": 22,
+     "id": "VPDoBbfL7-E",
+     "t": 117,
+     "title": "The 2020 Volkswagen Jetta Is a Good Car Nobody Cares About"
+    },
+    "items": [
+     [
+      "Transmission",
+      {
+       "median": 745,
+       "lo": 300.0,
+       "hi": 850.0,
+       "n": 3,
+       "videos": 3,
+       "id": "wkjYjgvaJiM",
+       "t": 345,
+       "title": "2019 Volkswagen Jetta | CarGurus Test Drive Review"
+      }
+     ],
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 52,
+       "lo": 40.0,
+       "hi": 63.0,
+       "n": 2,
+       "videos": 2,
+       "id": "0D1lEK1S5qE",
+       "t": 91,
+       "title": "TOP 3 BEST MODS for MK6 / MK7 JETTA"
+      }
+     ]
+    ]
+   }
   }
  ],
  "volkswagen-passat": [
