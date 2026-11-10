@@ -27389,7 +27389,26 @@
      "views": 66021
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 75,
+       "lo": 40.0,
+       "hi": 350.0,
+       "n": 6,
+       "videos": 4,
+       "id": "1p9I4iNyVxo",
+       "t": 422,
+       "title": "2012 Honda Ridgeline G1 Real World Review | Real People Not Actors"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -27453,7 +27472,21 @@
      "views": 141244
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 42000,
+     "lo": 38000.0,
+     "hi": 44000.0,
+     "n": 20,
+     "videos": 19,
+     "id": "Zb92baNEu9o",
+     "t": 941,
+     "title": "2017 Honda Ridgeline Review and Road Test - DETAILED in 4K UHD!"
+    },
+    "items": []
+   }
   }
  ],
  "jeep-gladiator": [
@@ -58585,7 +58618,35 @@
      "views": 126746
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 44050,
+     "lo": 38000.0,
+     "hi": 52000.0,
+     "n": 42,
+     "videos": 30,
+     "id": "A5_RLKp5UW0",
+     "t": 647,
+     "title": "2017 Chrysler Pacifica vs Toyota Sienna Minivan Drag Race & Mashup Review"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 200,
+       "lo": 50.0,
+       "hi": 1400.0,
+       "n": 3,
+       "videos": 3,
+       "id": "eUsefeIzKZU",
+       "t": 551,
+       "title": "Should You Buy A 2017-2023 Chrysler Pacifica? Ours has 200k"
+      }
+     ]
+    ]
+   }
   }
  ],
  "kia-sedona": [
