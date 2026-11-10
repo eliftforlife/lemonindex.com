@@ -57442,7 +57442,26 @@
      "views": 1033159
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 80,
+       "lo": 25.0,
+       "hi": 1500.0,
+       "n": 3,
+       "videos": 3,
+       "id": "hbcq4f-aKgA",
+       "t": 620,
+       "title": "2008 DODGE GRAND CARAVAN HOW TO RECHARGE YOUR AC - R134 FOR MY STORM CHASING VEHICLE"
+      }
+     ]
+    ]
+   }
   }
  ],
  "chrysler-town-and-country": [
