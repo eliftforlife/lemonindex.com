@@ -27631,6 +27631,137 @@
    }
   }
  ],
+ "chevrolet-trax": [
+  {
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022
+   ],
+   "gen": "2015–2022 Chevrolet Trax",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 8778650,
+   "topics": [
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 355059,
+     "n": 8,
+     "best": {
+      "id": "c3rDE_sxoSc",
+      "title": "2013 - 2021 CHEVY TRAX BLOWER MOTOR REPLACEMENT TUTORIAL | 2014 2015 2016 2017 2018 2019 2020 2021",
+      "channel": "Gearmo Auto",
+      "views": 88150
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 246423,
+     "n": 5,
+     "best": {
+      "id": "hZ-FITMzkTA",
+      "title": "2015-2023 Chevrolet Trax - Engine Oil Change and Oil Filter Replacement",
+      "channel": "YOUCANIC",
+      "views": 135809
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 231808,
+     "n": 4,
+     "best": {
+      "id": "vpmWMW2gTyQ",
+      "title": "2015-2021 Chevy Trax Water Pump Replacement",
+      "channel": "BeeCee Built",
+      "views": 94110
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 191139,
+     "n": 4,
+     "best": {
+      "id": "vpRgM9xmunw",
+      "title": "DTC P0171 Code 2017 Chevy Trax --- Diagnostics, Causes, Tests and Fix/Fixes!",
+      "channel": "The Disgruntled Mechanic",
+      "views": 61841
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 116086,
+     "n": 4,
+     "best": {
+      "id": "pyRR3EJSa2Y",
+      "title": "2017 - 2020 Chevy Trax No Remote Detected - How To Start With Dead Or Broken Key Fob Chevrolet",
+      "channel": "PYR Automotive ",
+      "views": 53226
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 97944,
+     "n": 2,
+     "best": {
+      "id": "1Co9V2jGR4w",
+      "title": "2015-2023 1.4L Chevrolet Trax - Spark Plugs Replacement",
+      "channel": "YOUCANIC",
+      "views": 81987
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 74835,
+     "n": 2,
+     "best": {
+      "id": "12LkMWO7Nsw",
+      "title": "How to Replace Front Brakes 2014-2022 Chevrolet Trax",
+      "channel": "TRQ",
+      "views": 51433
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 67977,
+     "n": 4,
+     "best": {
+      "id": "8qGzY5lbebU",
+      "title": "2015 - 2022 CHEVY TRAX LOCKS NOT WORKING _ FIX DOOR LOCK ACTUATOR _ DOOR LOCK ACTUATOR REPLACEMENT",
+      "channel": "Gearmo Auto",
+      "views": 30802
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "o4wYdmn8Aos",
+     "title": "Top 5 Problems Chevrolet Trax SUV 2015-2023 1st Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 222795
+    },
+    {
+     "id": "sEmstp02ZH8",
+     "title": "Chevy Trax aka Holden Trax 2013 to 2021 common problems, issues, defects, recalls and complaints",
+     "channel": "HOWSTUFFINMYCARWORKS",
+     "views": 71247
+    },
+    {
+     "id": "kAIbquVyo3k",
+     "title": "Should you buy a used 2013-2016 Buick Encore/Chevy Trax? The honest truth you need to hear.",
+     "channel": "Another Lap",
+     "views": 36017
+    }
+   ],
+   "costs": null
+  }
+ ],
  "gmc-acadia": [
   {
    "years": [
@@ -38775,7 +38906,87 @@
      "views": 229102
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 59995,
+     "lo": 45000.0,
+     "hi": 62000.0,
+     "n": 3,
+     "videos": 3,
+     "id": "u9VOc-zBWlA",
+     "t": 294,
+     "title": "2009 BMW 5 Series Review - Kelley Blue Book"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 246,
+       "lo": 124.0,
+       "hi": 350.0,
+       "n": 17,
+       "videos": 7,
+       "id": "aFojaZCTJMo",
+       "t": 50,
+       "title": "Bmw E60 M5 V10 general maintenance costs | Here's what to expect!"
+      }
+     ],
+     [
+      "Water pump / cooling",
+      {
+       "median": 375,
+       "lo": 220.0,
+       "hi": 685.0,
+       "n": 6,
+       "videos": 5,
+       "id": "0miR-QqqMXA",
+       "t": 302,
+       "title": "How to Find a Coolant Leak on Your Car ie. BMW 5 series E60"
+      }
+     ],
+     [
+      "Brakes",
+      {
+       "median": 465,
+       "lo": 282.0,
+       "hi": 2000.0,
+       "n": 10,
+       "videos": 4,
+       "id": "aFojaZCTJMo",
+       "t": 170,
+       "title": "Bmw E60 M5 V10 general maintenance costs | Here's what to expect!"
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 1500,
+       "lo": 900.0,
+       "hi": 3200.0,
+       "n": 7,
+       "videos": 4,
+       "id": "rPcUsj70Pzk",
+       "t": 367,
+       "title": "How To Build The PERFECT BMW E60!!"
+      }
+     ],
+     [
+      "Oil change",
+      {
+       "median": 160,
+       "lo": 150.0,
+       "hi": 200.0,
+       "n": 5,
+       "videos": 2,
+       "id": "aFojaZCTJMo",
+       "t": 17,
+       "title": "Bmw E60 M5 V10 general maintenance costs | Here's what to expect!"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -38902,7 +39113,61 @@
      "views": 763341
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 52400,
+     "lo": 49600.0,
+     "hi": 63900.0,
+     "n": 7,
+     "videos": 4,
+     "id": "O0rMdjqNxMI",
+     "t": 524,
+     "title": "2012 Audi A6 versus BMW 535i review: And the best luxury sedan is..."
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 440,
+       "lo": 150.0,
+       "hi": 1500.0,
+       "n": 12,
+       "videos": 7,
+       "id": "-0rjIKvFufc",
+       "t": 1019,
+       "title": "BMW 535i F10: 2 year ownership review"
+      }
+     ],
+     [
+      "Water pump / cooling",
+      {
+       "median": 1200,
+       "lo": 141.0,
+       "hi": 1500.0,
+       "n": 3,
+       "videos": 3,
+       "id": "ytZnHZT6Ftg",
+       "t": 682,
+       "title": "One bad day for a customer! CAR WIZARD found TWO insanely unrelated issues at time on '12 BMW 535i"
+      }
+     ],
+     [
+      "Oil leak repair",
+      {
+       "median": 1075,
+       "lo": 950.0,
+       "hi": 1200.0,
+       "n": 2,
+       "videos": 2,
+       "id": "33bwvBLvqzw",
+       "t": 586,
+       "title": "TUNED 2011 BMW F10 535i OWNERSHIP REVIEW...BIG MISTAKE"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
