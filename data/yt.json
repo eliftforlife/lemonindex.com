@@ -26306,7 +26306,68 @@
      "views": 288465
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": {
+     "median": 50000,
+     "lo": 28000.0,
+     "hi": 50000.0,
+     "n": 3,
+     "videos": 3,
+     "id": "_yLvnBr0AJc",
+     "t": 576,
+     "title": "Is Now the Time to Buy a 2nd GEN Tundra?",
+     "private": 0,
+     "dealer": 0
+    },
+    "used": {
+     "median": 10000,
+     "lo": 8000.0,
+     "hi": 36000.0,
+     "n": 5,
+     "videos": 5,
+     "id": "MMFs5MOs-0Q",
+     "t": 488,
+     "title": "Why The 2nd Gen Tundra Is The SMARTEST Truck Choice"
+    },
+    "msrp": {
+     "median": 34000,
+     "lo": 26900.0,
+     "hi": 46000.0,
+     "n": 9,
+     "videos": 8,
+     "id": "-Rp_xpMLP0U",
+     "t": 378,
+     "title": "Roadfly.com - Review of the 2007 Toyota Tundra Double Cab"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 500,
+       "lo": 300.0,
+       "hi": 3000.0,
+       "n": 7,
+       "videos": 6,
+       "id": "txS86YONP3U",
+       "t": 32,
+       "title": "Program Toyota Tundra Key & Remote (2010-2020+)  Easy How To"
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 400,
+       "lo": 300.0,
+       "hi": 500.0,
+       "n": 4,
+       "videos": 3,
+       "id": "XlNwXZ-IeKY",
+       "t": 160,
+       "title": "Redo! 2018 Toyota Tundra TRD vs a Snowy Gold Mine Hill Off-Road Review"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -26398,7 +26459,70 @@
      "views": 64046
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 47000,
+     "lo": 40000.0,
+     "hi": 60000.0,
+     "n": 5,
+     "videos": 4,
+     "id": "cBg3QcIkO2U",
+     "t": 1344,
+     "title": "I Bought a WRECKED 2025 Toyota Tundra from COPART | Wrecked to UNWRECKED"
+    },
+    "msrp": {
+     "median": 48500,
+     "lo": 40000.0,
+     "hi": 62442.0,
+     "n": 16,
+     "videos": 11,
+     "id": "3f2IwG2bIWE",
+     "t": 515,
+     "title": "BATTLE OF THE TOYOTA TUNDRAS | 2023 SR5 vs. TRD Pro vs. Capstone | Which Tundra Is Right for You?"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 800,
+       "lo": 102.0,
+       "hi": 2200.0,
+       "n": 7,
+       "videos": 6,
+       "id": "_XyDh4I0a84",
+       "t": 875,
+       "title": "2023 Toyota Tundra SR5 3.4TT POV Test Drive & Review"
+      }
+     ],
+     [
+      "Steering & suspension",
+      {
+       "median": 265,
+       "lo": 150.0,
+       "hi": 380.0,
+       "n": 2,
+       "videos": 2,
+       "id": "w-FJQ5G5pvY",
+       "t": 704,
+       "title": "2022 Toyota Tundra Limited Review | AN ABSOLUTE BEAST!"
+      }
+     ],
+     [
+      "Insurance",
+      {
+       "median": 1963,
+       "lo": 1726.0,
+       "hi": 2200.0,
+       "n": 2,
+       "videos": 2,
+       "id": "3Pfu4kOn1i0",
+       "t": 113,
+       "title": "Toyota Tundra 2024 | Money Breakdown | Cost to Own"
+      }
+     ]
+    ]
+   }
   }
  ],
  "chevrolet-colorado": [
@@ -56946,7 +57070,26 @@
      "views": 38248
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 100,
+       "lo": 45.0,
+       "hi": 2000.0,
+       "n": 11,
+       "videos": 10,
+       "id": "zcQ1s9QOtmk",
+       "t": 1169,
+       "title": "2005 toyota sienna spark plug change"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -57077,7 +57220,35 @@
      "views": 91979
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 32875,
+     "lo": 28600.0,
+     "hi": 37000.0,
+     "n": 12,
+     "videos": 8,
+     "id": "XbPBPd5flZM",
+     "t": 1430,
+     "title": "2014 Toyota Sienna Limited AWD DETAILED Review and Road Test"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 500,
+       "lo": 55.0,
+       "hi": 1200.0,
+       "n": 18,
+       "videos": 8,
+       "id": "LUSVMRvTZ3c",
+       "t": 508,
+       "title": "Dealer Tried Charging THOUSANDS! (Unnecessary Overpriced Repairs) 2015 Toyota Sienna 3.5"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -57159,7 +57330,57 @@
      "views": 117909
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 51000,
+     "lo": 42945.0,
+     "hi": 60000.0,
+     "n": 3,
+     "videos": 3,
+     "id": "iWvRydMH1i0",
+     "t": 698,
+     "title": "2021 Toyota Sienna Review: One Year and 17K Miles in Our Toyota Minivan | Long-Term Review"
+    },
+    "msrp": {
+     "median": 47835,
+     "lo": 39000.0,
+     "hi": 53000.0,
+     "n": 28,
+     "videos": 22,
+     "id": "ukkMxBouHcE",
+     "t": 1817,
+     "title": "The 2025 Toyota Sienna Platinum Is An Upscale Swagger Wagon For Big Families"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 140,
+       "lo": 75.0,
+       "hi": 1500.0,
+       "n": 3,
+       "videos": 3,
+       "id": "yoBygTUV2A0",
+       "t": 133,
+       "title": "PLASTIC WHEEL COVERS on my 2023 Toyota Sienna XSE 25th Anniversary Edition?"
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 200,
+       "lo": 125.0,
+       "hi": 300.0,
+       "n": 3,
+       "videos": 2,
+       "id": "vR7zy3IcFHU",
+       "t": 231,
+       "title": "2023 Toyota Sienna Review Good and Bad Things - Best Toyota Sienna Review XLE & XSE side by side"
+      }
+     ]
+    ]
+   }
   }
  ],
  "dodge-grand-caravan": [
