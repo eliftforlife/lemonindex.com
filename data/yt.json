@@ -22896,7 +22896,48 @@
      "views": 60995
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 69500,
+     "lo": 64500.0,
+     "hi": 80000.0,
+     "n": 49,
+     "videos": 22,
+     "id": "eLEjKOpld8k",
+     "t": 1874,
+     "title": "The 2025 Chevrolet Tahoe High Country Is A High Tech & High Luxury Family SUV"
+    },
+    "items": [
+     [
+      "Insurance",
+      {
+       "median": 2079,
+       "lo": 2079.0,
+       "hi": 2079.0,
+       "n": 4,
+       "videos": 2,
+       "id": "W9eLyJfKLDk",
+       "t": 129,
+       "title": "Chevy Tahoe Z71 2024 | Cost to Own | Cost Breakdown"
+      }
+     ],
+     [
+      "Yearly cost to own",
+      {
+       "median": 930,
+       "lo": 930.2,
+       "hi": 930.2,
+       "n": 2,
+       "videos": 2,
+       "id": "W9eLyJfKLDk",
+       "t": 161,
+       "title": "Chevy Tahoe Z71 2024 | Cost to Own | Cost Breakdown"
+      }
+     ]
+    ]
+   }
   }
  ],
  "ford-mustang": [
@@ -27335,6 +27376,136 @@
      "title": "Jeep Compass - TOP PROBLEMS & ISSUES 2007 - 2017 (common fixes, repairs, defects)",
      "channel": "QuiteAlright",
      "views": 21414
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2017–2025 Jeep Compass",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 36307999,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 732147,
+     "n": 6,
+     "best": {
+      "id": "rp9wUQT0MRs",
+      "title": "Jeep Compass (2019) - New Battery Install",
+      "channel": "The Battery Shop",
+      "views": 337563
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 443940,
+     "n": 5,
+     "best": {
+      "id": "sCOasWL0qLE",
+      "title": "2022 - 2025 Jeep Compass Limited Forward Collision Warning Reset",
+      "channel": "Mopar Mike",
+      "views": 162030
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 379014,
+     "n": 2,
+     "best": {
+      "id": "lcZ06rufm6s",
+      "title": "Jeep Compass No Start Fix (P0688) 2007 thru 2017",
+      "channel": "Git It Garage",
+      "views": 199297
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 328930,
+     "n": 2,
+     "best": {
+      "id": "bCnxzjAwfEM",
+      "title": "How to Replace Thermostat Housing 2007-2017 Jeep Compass",
+      "channel": "TRQ",
+      "views": 219158
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 298135,
+     "n": 1,
+     "best": {
+      "id": "OCGwFLnS2m0",
+      "title": "2018 - 2021 Jeep Compass Cabin Air Filter - How To Change Replace Remove Location A/C AC Air Filter",
+      "channel": "PYR Automotive ",
+      "views": 298135
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 292003,
+     "n": 4,
+     "best": {
+      "id": "mriYV9p7FcY",
+      "title": "How To Replace Front Brake Pads & Rotor 2007-2017 Jeep Compass",
+      "channel": "TRQ",
+      "views": 96281
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 114003,
+     "n": 2,
+     "best": {
+      "id": "uPIWci-A7_8",
+      "title": "How to Change a daytime running light on a 2017 Jeep Compass",
+      "channel": "Iggys Garage",
+      "views": 59428
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 94981,
+     "n": 2,
+     "best": {
+      "id": "RIE2L1hYnkE",
+      "title": "How to Replace Spark Plugs 2007-2017 Jeep Compass 2.4L L4",
+      "channel": "TRQ",
+      "views": 50859
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "KUhq0ZEa3nA",
+     "title": "Top 5 Problems Jeep Compass SUV 1st Generation 2007-2017",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 436853
+    },
+    {
+     "id": "Hh9l3OnOBAk",
+     "title": "Jeep Compass 2024: Should You Buy One? | View",
+     "channel": "MotorInc",
+     "views": 294718
+    },
+    {
+     "id": "6i0yfAglU1s",
+     "title": "Jeep Compass SUV 2018 in-depth review - Carbuyer",
+     "channel": "Carbuyer",
+     "views": 292466
     }
    ],
    "costs": null
