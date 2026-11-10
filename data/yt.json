@@ -45743,6 +45743,101 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+   ],
+   "gen": "2018–2024 BMW X3",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 44219707,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 569878,
+     "n": 3,
+     "best": {
+      "id": "mAm5lEJwzzQ",
+      "title": "Oil service light reset * HOW TO * 2019-2022 BMW X3 (G01) #bmw #oilservicelightreset #bmwX3",
+      "channel": "The Driver Mod",
+      "views": 351277
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 218076,
+     "n": 2,
+     "best": {
+      "id": "we6loU0KIhE",
+      "title": "How to replace cabin air filter in a BMW X3 2017 2018 2019 2020 2021 G01",
+      "channel": "Sliderz_Official",
+      "views": 131100
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 107293,
+     "n": 1,
+     "best": {
+      "id": "4gP9zVoyWvo",
+      "title": "How to Remove and Replace a BMW X3 (G01) Mirror & Mirror Cap",
+      "channel": "GhostRider",
+      "views": 107293
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 84371,
+     "n": 1,
+     "best": {
+      "id": "SmgAPKggASA",
+      "title": "2023 BMW X3 Engine Oil Service Required/Oil Reset Tutorial",
+      "channel": "RJ Car Tutorials",
+      "views": 84371
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 70908,
+     "n": 1,
+     "best": {
+      "id": "PjioE8wDHFg",
+      "title": "2018-2024 BMW X3 maintenance Reset Oil life Brake Service inspection warnings 2019 2020 2023",
+      "channel": "Oil Light Reset ",
+      "views": 70908
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "AzzdXl__iq4",
+     "title": "5 Reasons Why You Should Buy A 2022 BMW X3 - Quick Buyer's Guide",
+     "channel": "Boston Auto Blog",
+     "views": 424250
+    },
+    {
+     "id": "3ixi1cCLVaw",
+     "title": "BMW X3 SUV 2018 in-depth review - Carbuyer",
+     "channel": "Carbuyer",
+     "views": 187984
+    },
+    {
+     "id": "CFPxFZgY9mo",
+     "title": "BMW X3 Buyer's Guide: Everything You Need To Know (2018-2024 BMW G01 X3, G02 X4)",
+     "channel": "FCP Euro",
+     "views": 122775
+    }
+   ],
+   "costs": null
   }
  ],
  "mercedes-benz-c-class": [
@@ -49242,6 +49337,132 @@
      "title": "VW Golf Mk5 Known Problems & Things that will Break inc GTI",
      "channel": "Driven By Satch",
      "views": 238071
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2010,
+    2011,
+    2012,
+    2013,
+    2014
+   ],
+   "gen": "2010–2014 Volkswagen Golf",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 196,
+   "views": 49913368,
+   "topics": [
+    {
+     "name": "Timing chain & engine",
+     "views": 1016004,
+     "n": 5,
+     "best": {
+      "id": "lqxRfSukLBk",
+      "title": "Timing Chain Replacement 2.0TSI Golf Mk6 GTI",
+      "channel": "Four Rings Auto",
+      "views": 344248
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 566932,
+     "n": 2,
+     "best": {
+      "id": "j4wcAy-F2ok",
+      "title": "How to: VW 1.4 TSI (Golf Mk6) oil & filter change (service)",
+      "channel": "Craig's DIY Car",
+      "views": 450094
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 540602,
+     "n": 4,
+     "best": {
+      "id": "TtQC_6cmUb4",
+      "title": "VW JETTA MK6 SHIFTER REMOVAL REPLACEMENT SHIFTING KNOB GOLF MK6",
+      "channel": "Auto Repair Guys",
+      "views": 378487
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 407526,
+     "n": 2,
+     "best": {
+      "id": "CCcvLvMwHxU",
+      "title": "2010 VW Golf Tail Light Replacement",
+      "channel": "Rallsworks",
+      "views": 353085
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 358183,
+     "n": 2,
+     "best": {
+      "id": "BOQxS9Xdj70",
+      "title": "VW JETTA MK6 RADIO REMOVAL REPLACEMENT VW GOLF MK6 2011 2012 2013 2014 2015 2016",
+      "channel": "Auto Repair Guys",
+      "views": 299072
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 263514,
+     "n": 4,
+     "best": {
+      "id": "o2cNDj9WPHQ",
+      "title": "VW & Audi Brake Pads And Rotor Replacement - EASY DIY! (MK6, Beetle, Eos, Golf, GTI, Jetta, Rabbit)",
+      "channel": "FCP Euro",
+      "views": 95240
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 181362,
+     "n": 1,
+     "best": {
+      "id": "7CxqtCgjXaE",
+      "title": "Volkswagen Golf TDI Water Pump & Timing Belt Replacement DIY (2009-2013 Mk6 VW Golf TDI, Jetta TDI)",
+      "channel": "FCP Euro",
+      "views": 181362
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 177316,
+     "n": 2,
+     "best": {
+      "id": "MusagQ1W0mI",
+      "title": "2012 Vw Golf Throttle Codes P0122, P0222, P0221",
+      "channel": "CoolAirVw Rm",
+      "views": 133135
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "RxXnm0gfB1A",
+     "title": "Volkswagen Golf MK7 (2012-2019) review - Carbuyer / Mat Watson",
+     "channel": "Carbuyer",
+     "views": 1660382
+    },
+    {
+     "id": "P89eQfdUVDs",
+     "title": "Volkswagen Golf R 2014 review - Carbuyer",
+     "channel": "Carbuyer",
+     "views": 1198632
+    },
+    {
+     "id": "VCbKySEwuqM",
+     "title": "Volkswagen Golf GTI MK6 hatchback 2009 - 2012 review - CarBuyer",
+     "channel": "Carbuyer",
+     "views": 1170876
     }
    ],
    "costs": null
