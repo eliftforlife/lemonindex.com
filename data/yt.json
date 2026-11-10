@@ -26525,7 +26525,21 @@
      "views": 375129
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 20000,
+     "lo": 19995.0,
+     "hi": 27000.0,
+     "n": 11,
+     "videos": 8,
+     "id": "bE8qw1kFSOs",
+     "t": 231,
+     "title": "Before you buy a 2018 Ford EcoSport - Here's what you need to know.."
+    },
+    "items": []
+   }
   }
  ],
  "chevrolet-suburban": [
@@ -28105,7 +28119,44 @@
      "views": 907851
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 42500,
+     "lo": 40000.0,
+     "hi": 45000.0,
+     "n": 4,
+     "videos": 4,
+     "id": "7x0m-99SD3w",
+     "t": 442,
+     "title": "2024 Hyundai Palisade XRT AWD Review and Off-Road Test"
+    },
+    "msrp": {
+     "median": 49018,
+     "lo": 37000.0,
+     "hi": 52000.0,
+     "n": 38,
+     "videos": 26,
+     "id": "Jqjwqz1IzBI",
+     "t": 747,
+     "title": "Is the 2023 Hyundai Palisade Calligraphy the BEST new SUV to BUY?"
+    },
+    "items": [
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 1000,
+       "lo": 500.0,
+       "hi": 1500.0,
+       "n": 4,
+       "videos": 4,
+       "id": "lbvO5N4YiH8",
+       "t": 72,
+       "title": "REFRESHED SIBLINGS! -- 2023 Hyundai Palisade vs. 2023 Kia Telluride: Comparison"
+      }
+     ]
+    ]
+   }
   }
  ],
  "kia-soul": [
@@ -31436,7 +31487,48 @@
      "views": 6882
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 41000,
+     "lo": 40000.0,
+     "hi": 41000.0,
+     "n": 10,
+     "videos": 9,
+     "id": "5DgM_GDarUY",
+     "t": 65,
+     "title": "2011 Chevrolet Volt Performance Test"
+    },
+    "items": [
+     [
+      "Battery",
+      {
+       "median": 300,
+       "lo": 280.0,
+       "hi": 7000.0,
+       "n": 3,
+       "videos": 3,
+       "id": "urfCGuvmmwI",
+       "t": 808,
+       "title": "10 years with an EV - 2014 Chevy Volt at 172,000 miles"
+      }
+     ],
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 400,
+       "lo": 25.0,
+       "hi": 900.0,
+       "n": 3,
+       "videos": 3,
+       "id": "Golnsf3aYnw",
+       "t": 10,
+       "title": "How to Service the Transmission on a 2011-2015 Chevy Volt | Step-by-Step DIY Guide"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -33315,6 +33407,131 @@
      "title": "2004 Kia Optima LX Review - A Lot Has Changed Since 2004!",
      "channel": "Shooting Cars",
      "views": 13962
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2007,
+    2008,
+    2009,
+    2010
+   ],
+   "gen": "2007–2010 Kia Optima",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 196,
+   "views": 2899726,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 303734,
+     "n": 7,
+     "best": {
+      "id": "rgllovCd6zQ",
+      "title": "2008 kia optima 2.4l tips how to remove alternator",
+      "channel": "Lilmiddwest",
+      "views": 104958
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 206619,
+     "n": 2,
+     "best": {
+      "id": "AVc3NCExWwM",
+      "title": "2010-2015 Kia Optima Rear Brake & ROTOR Replacement",
+      "channel": "BeeCee Built",
+      "views": 203264
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 196995,
+     "n": 4,
+     "best": {
+      "id": "MYgzjhmUwZ4",
+      "title": "2010-2015 Kia Optima Spark Plug Replacement (2.4L GDI)",
+      "channel": "BeeCee Built",
+      "views": 95656
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 50728,
+     "n": 4,
+     "best": {
+      "id": "3qL8OZBHdY4",
+      "title": "How to Replace Cabin Air Filter 2008 Kia Optima | AQ1154",
+      "channel": "Filterheads",
+      "views": 41986
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 35275,
+     "n": 1,
+     "best": {
+      "id": "tlRX3Bbx1X4",
+      "title": "How to Reset The TPMS Light 2010-2015 Kia Optima and What to do if it Will Not Go Off",
+      "channel": "Whyingo",
+      "views": 35275
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 30710,
+     "n": 2,
+     "best": {
+      "id": "3IQh57DUDLA",
+      "title": "How to replace internor door handle on 2008 Kia Optima",
+      "channel": "RB The Mechanic",
+      "views": 28568
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 23069,
+     "n": 1,
+     "best": {
+      "id": "ISive-4CJiY",
+      "title": "2010-2015 Kia Optima Sway/Stabilizer Bar Links Replacement How-To",
+      "channel": "Blue Collar Garage",
+      "views": 23069
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 19157,
+     "n": 1,
+     "best": {
+      "id": "BQj_48d_Oac",
+      "title": "Belt replacement, 2009 Kia Optima",
+      "channel": "Endeavor Auto",
+      "views": 19157
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "zHVYsWY0sa0",
+     "title": "2008 Kia Optima electrical problems SOLVED!",
+     "channel": "Chris Miller",
+     "views": 20061
+    },
+    {
+     "id": "v6Iqbb7bYcY",
+     "title": "2007 Kia Optima EX Review - Sedan Review",
+     "channel": "Automotive Junkie",
+     "views": 39967
+    },
+    {
+     "id": "hD2pFgEFf7I",
+     "title": "2009 Kia Optima walk around by Mike Ward at Lagrange Toyota",
+     "channel": "LaGrange Toyota",
+     "views": 26828
     }
    ],
    "costs": null
