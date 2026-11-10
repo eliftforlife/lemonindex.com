@@ -30064,6 +30064,133 @@
    }
   }
  ],
+ "lexus-rx": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003
+   ],
+   "gen": "1999–2003 Lexus RX",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 6058216,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 329885,
+     "n": 8,
+     "best": {
+      "id": "irPrVHDiY-8",
+      "title": "How To Program A Lexus RX300 Remote Key Fob 1999 - 2003",
+      "channel": "PYR Automotive ",
+      "views": 120436
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 228218,
+     "n": 4,
+     "best": {
+      "id": "drFPRjPcFSE",
+      "title": "'02 Lexus RX300 Stall After Starting (Idle Air Control Valve Fix)",
+      "channel": "Revit Auto",
+      "views": 199122
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 199484,
+     "n": 1,
+     "best": {
+      "id": "gt3hjXW895s",
+      "title": "Buying a used Lexus RX (XU30) - 2003-2008, Buying Guide with Common Issues",
+      "channel": "different car review",
+      "views": 199484
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 171567,
+     "n": 5,
+     "best": {
+      "id": "Yo59Jp991uk",
+      "title": "Spark plug removal Lexus RX300 1999 - 2003 3.0L 1MZ-FE V6 Tune up Install remove replace",
+      "channel": "Fixing cars and stuff",
+      "views": 74388
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 136838,
+     "n": 4,
+     "best": {
+      "id": "3fZ3l0rAZH4",
+      "title": "2001 lexus rx300 air door actuator 604-907 FIX REPAIR DO IT YOURSELF HELP",
+      "channel": "Chrystian Tyler",
+      "views": 83765
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 128881,
+     "n": 7,
+     "best": {
+      "id": "RUck_fmL8NI",
+      "title": "HOW TO RESET TIRE PRESSURE ON A 2003 - 2009 LEXUS RX 350",
+      "channel": "DimasCarTech",
+      "views": 85405
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 127769,
+     "n": 2,
+     "best": {
+      "id": "jeetNga-Yx0",
+      "title": "Heater Problem On 2000 Lexus RX300",
+      "channel": "sanchito",
+      "views": 110231
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 126067,
+     "n": 6,
+     "best": {
+      "id": "-XABs8T4HZI",
+      "title": "Fixed Grandmas 2001 RX300 Transmission",
+      "channel": "Junkyard Dave",
+      "views": 63682
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "SjT1e3fwuXU",
+     "title": "2000 Lexus RX 300 – Reliable SUV for Less #lexusrx #usedsuv #cleantitle",
+     "channel": "ALWAYSSOLD123  ",
+     "views": 1683
+    },
+    {
+     "id": "XXr2xuH5Y5U",
+     "title": "2000 Lexus RX 300 Ball Joint removal problems!!!",
+     "channel": "Tim Lipovsek",
+     "views": 632
+    },
+    {
+     "id": "SChZ15qB7ow",
+     "title": "2000 Lexus RX 300 Start Up and Review 3.0 L V6",
+     "channel": "Camerons Car Reviews",
+     "views": 146634
+    }
+   ],
+   "costs": null
+  }
+ ],
  "acura-mdx": [
   {
    "years": [
@@ -32271,7 +32398,109 @@
      "views": 2195473
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 16300,
+     "lo": 5000.0,
+     "hi": 30000.0,
+     "n": 5,
+     "videos": 5,
+     "id": "P5h7wfnTH4g",
+     "t": 895,
+     "title": "I Bought a 2021 Camaro LT for Just $3,000! Now Let's Fix It!"
+    },
+    "msrp": {
+     "median": 43500,
+     "lo": 35000.0,
+     "hi": 67000.0,
+     "n": 26,
+     "videos": 23,
+     "id": "g4qCP2FtGuk",
+     "t": 26,
+     "title": "2019 Chevrolet Camaro SS 1LE: Start Up, Exhaust, Test Drive and Review"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 370,
+       "lo": 56.94,
+       "hi": 2300.0,
+       "n": 14,
+       "videos": 7,
+       "id": "P5h7wfnTH4g",
+       "t": 849,
+       "title": "I Bought a 2021 Camaro LT for Just $3,000! Now Let's Fix It!"
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 500,
+       "lo": 400.0,
+       "hi": 600.0,
+       "n": 4,
+       "videos": 4,
+       "id": "T6nY0fxmPxo",
+       "t": 511,
+       "title": "2018 Camaro 1SS 1LE Review - Intoxicating"
+      }
+     ],
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 200,
+       "lo": 200.0,
+       "hi": 1500.0,
+       "n": 5,
+       "videos": 4,
+       "id": "o0vBLmJp9ck",
+       "t": 1347,
+       "title": "2016 Chevrolet Camaro SS – Redline: Review"
+      }
+     ],
+     [
+      "Transmission",
+      {
+       "median": 1550,
+       "lo": 1500.0,
+       "hi": 1600.0,
+       "n": 4,
+       "videos": 4,
+       "id": "cj0QubywVNA",
+       "t": 310,
+       "title": "2017 Chevrolet Camaro - Review and Road Test"
+      }
+     ],
+     [
+      "Oil change",
+      {
+       "median": 115,
+       "lo": 100.0,
+       "hi": 130.0,
+       "n": 4,
+       "videos": 4,
+       "id": "0oRE75SoyNM",
+       "t": 527,
+       "title": "💰 My Cost to Own & Maintain a 2017 Camaro 2SS 😨. Car Payment, Insurance, Tires, Gas, Oil Change, etc"
+      }
+     ],
+     [
+      "Insurance",
+      {
+       "median": 1590,
+       "lo": 1200.0,
+       "hi": 1980.0,
+       "n": 2,
+       "videos": 2,
+       "id": "Ud2nHDBo0KI",
+       "t": 517,
+       "title": "2021 2SS 1LE Camaro: True Costs. How much is too much?"
+      }
+     ]
+    ]
+   }
   }
  ],
  "chevrolet-sonic": [
