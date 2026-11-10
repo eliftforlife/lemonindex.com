@@ -26,3 +26,8 @@ figure.aiy figcaption { font-size: 12.5px; color: #6b6870; margin-top: 6px }
 .ysl-hero .ysl-info { font-size: 14px; min-height: 26px; gap: 6px 10px }
 .ysl-best { padding: 4px 10px; border-radius: 999px; background: #ffd400; color: #17161a; font-weight: 700; font-size: 13px }
 .ysl-hero .ysl-range { height: 32px }
+
+/* 11-10 (Elijah): no box around the slider or the year image; every car on one canvas (same width, same baseline), so nothing jumps while sliding */
+.ysl-stage { border: 0 !important; background: transparent !important; border-radius: 0 !important; }
+.ysl-stage img { object-position: 50% 100%; }
+figure.aiy img { background: transparent !important; border-radius: 0 !important; }
