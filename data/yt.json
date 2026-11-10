@@ -26132,6 +26132,234 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021
+   ],
+   "gen": "2007–2021 Toyota Tundra",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 47561833,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 448149,
+     "n": 3,
+     "best": {
+      "id": "jOYU66w-cuU",
+      "title": "2018 Toyota Tundra oil change 5.7L V8",
+      "channel": "Andrew DeVries",
+      "views": 186274
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 418979,
+     "n": 4,
+     "best": {
+      "id": "aDQgruRzZUI",
+      "title": "How to Replace Front Lower Ball Joint 2007-Present Toyota Tundra",
+      "channel": "TRQ",
+      "views": 127147
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 413689,
+     "n": 3,
+     "best": {
+      "id": "Rlx6MGuh9iU",
+      "title": "How to Replace Starter 2007-Present Toyota Tundra 4WD",
+      "channel": "TRQ",
+      "views": 144034
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 399467,
+     "n": 3,
+     "best": {
+      "id": "wj6yI1t_LXM",
+      "title": "FIX! TPMS Low Tire Pressure Light - 2008 Toyota Tundra - NO BYPASS!",
+      "channel": "BDFresh",
+      "views": 161632
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 333277,
+     "n": 2,
+     "best": {
+      "id": "qKGr214Zt1g",
+      "title": "2007-2021 Toyota Tundra 5.7 Spark Plug Replacement — Coil Packs, Gap & Anti-Seize",
+      "channel": "Homeowner Repair",
+      "views": 196394
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 305410,
+     "n": 1,
+     "best": {
+      "id": "fvDifhPIIaM",
+      "title": "2007-2021 Toyota Tundra Transmission Fluid Change DIY",
+      "channel": "MrRangerZr1",
+      "views": 305410
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 162241,
+     "n": 1,
+     "best": {
+      "id": "tZivyeFN2Ag",
+      "title": "Toyota Tundra Cabin Air Filter Replacement 2014 2015 2016 2017 2018",
+      "channel": "Oil Light Reset ",
+      "views": 162241
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 143832,
+     "n": 1,
+     "best": {
+      "id": "4lHULTYu6uI",
+      "title": "How to Replace Rear Brakes 2007-13 Toyota Tundra",
+      "channel": "TRQ",
+      "views": 143832
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "l2OAHImTgA8",
+     "title": "Should you buy a Toyota Tundra 2007-2021?",
+     "channel": "The Car Care Nut",
+     "views": 1806318
+    },
+    {
+     "id": "CfQUOEHcweA",
+     "title": "Top 5 Problems Toyota Tundra Truck 2nd Generation 2007-Present",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 390441
+    },
+    {
+     "id": "890CQt75e_k",
+     "title": "Should You Buy/Lease/Rent or Forget the 2019 Toyota Tundra TRD Pro? Unfiltered Buddy Review",
+     "channel": "TFLnow",
+     "views": 288465
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2022–2025 Toyota Tundra",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 38006018,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 230353,
+     "n": 2,
+     "best": {
+      "id": "FqwyKgjckcc",
+      "title": "How To Remote Start 2022 - 2023 Toyota Tundra Using Factory Remote Key Fob",
+      "channel": "PYR Automotive ",
+      "views": 167265
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 163624,
+     "n": 2,
+     "best": {
+      "id": "aIsyPEwTkOg",
+      "title": "How to Install a 4-Inch Lift Kit on a 2022-2023 Toyota Tundra: Step-by-Step Guide",
+      "channel": "Rough Country",
+      "views": 87668
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 124900,
+     "n": 1,
+     "best": {
+      "id": "T3EmHhDHvwM",
+      "title": "How to Service the 2022 Toyota Tundra Active Aero Front Spoiler | Toyota",
+      "channel": "Toyota USA",
+      "views": 124900
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 100911,
+     "n": 1,
+     "best": {
+      "id": "uNIniznaPIE",
+      "title": "Many owners reporting a 2022 Toyota Tundra problem with window seal",
+      "channel": "Pickup Truck Plus SUV Talk (PUTT)",
+      "views": 100911
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 97283,
+     "n": 1,
+     "best": {
+      "id": "nuxXy9Y4IZ4",
+      "title": "2022 2023 Toyota Tundra Oil Change & Reset Maintenance Light - 3.5 Twin Turbo - How to Step by Step",
+      "channel": "Good Shepherd Garage",
+      "views": 97283
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "wpDoOQ-LAn4",
+     "title": "Should You Buy a 2022 Toyota Tundra? or keep the old V8 one?",
+     "channel": "The Car Care Nut",
+     "views": 267260
+    },
+    {
+     "id": "hMkyb3Kku4I",
+     "title": "2023 Tundra Problems - Bad Reviews",
+     "channel": "KEdRevs",
+     "views": 102333
+    },
+    {
+     "id": "CKfoTKkBkXI",
+     "title": "Toyota Tundra Problems -- Fixed For 2025?",
+     "channel": "Chris Drives",
+     "views": 64046
+    }
+   ],
+   "costs": null
   }
  ],
  "chevrolet-colorado": [
@@ -26777,6 +27005,138 @@
      "title": "Is The 2024 Nissan Frontier Really Reliable? Deep Dive Into The Problems And Issues",
      "channel": "Jason Samko",
      "views": 109456
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "honda-ridgeline": [
+  {
+   "years": [
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014
+   ],
+   "gen": "2006–2014 Honda Ridgeline",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 7272313,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 161372,
+     "n": 5,
+     "best": {
+      "id": "yFgSywR3rVw",
+      "title": "2006-2008 Honda Ridgeline alternator replacement",
+      "channel": "Rust Belt Auto",
+      "views": 68782
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 145006,
+     "n": 5,
+     "best": {
+      "id": "HZzNjh2cbF0",
+      "title": "How to Replace Cabin Air Filter 2013 Honda Ridgeline | AQ1058",
+      "channel": "Filterheads",
+      "views": 117147
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 137267,
+     "n": 5,
+     "best": {
+      "id": "CAwjP1FuQNw",
+      "title": "2006 Honda Ridgeline Transmission Fluid Change",
+      "channel": "APDTY",
+      "views": 54017
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 87636,
+     "n": 7,
+     "best": {
+      "id": "24sECzMh_-A",
+      "title": "Replacement of Front Complete Strut Assemblies on a 2006 Honda Ridgeline l SENSEN Shocks & Struts",
+      "channel": "SENSEN Shocks & Struts",
+      "views": 26757
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 80251,
+     "n": 8,
+     "best": {
+      "id": "jsm2yHmSumk",
+      "title": "How to remove a Throttle Body | 2007 Honda Ridgeline | Check Engine P0506",
+      "channel": "Ghannam Ghannam (Ghavan)",
+      "views": 16649
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 51817,
+     "n": 3,
+     "best": {
+      "id": "EEVEvniwxHo",
+      "title": "2013 Honda Ridgeline How to reset oil life maintenance minder. Quick and Easy!",
+      "channel": "HONDACARGUY",
+      "views": 32813
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 35157,
+     "n": 3,
+     "best": {
+      "id": "d1amN7bKyqo",
+      "title": "2006 Honda Ridgeline 3.5L Serpentine belt tensioner and belt replacement.",
+      "channel": "Charles And Cars",
+      "views": 23054
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 32987,
+     "n": 3,
+     "best": {
+      "id": "jcFYkHPnf_A",
+      "title": "Honda NO START! Fixed!!! [Honda Ridgeline - 1st Generation]",
+      "channel": "MC FIX IT",
+      "views": 16441
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "HLy70fsfuUw",
+     "title": "Rust Busted Spring! Honda Ridgeline 3.5 2006-2014 Multiple Problems!",
+     "channel": "Rainman Ray's Repairs",
+     "views": 170359
+    },
+    {
+     "id": "DmO8KCBOmrk",
+     "title": "2006-2014 Honda Ridgeline Power Steering Problems and Fixes",
+     "channel": "Jack of All Master of None",
+     "views": 78760
+    },
+    {
+     "id": "2qwY-t1DZ7c",
+     "title": "Honda Ridgeline 1st Gen 2006 to 2014 common problems, issues, defects, recalls and complaints",
+     "channel": "HOWSTUFFINMYCARWORKS",
+     "views": 66021
     }
    ],
    "costs": null
@@ -28223,7 +28583,44 @@
      "views": 292466
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 40000,
+     "lo": 38000.0,
+     "hi": 42000.0,
+     "n": 4,
+     "videos": 3,
+     "id": "aJuKpxZtLQo",
+     "t": 805,
+     "title": "2025 Jeep Compass Limited- Best Jeep Ever?"
+    },
+    "msrp": {
+     "median": 29495,
+     "lo": 22000.0,
+     "hi": 38000.0,
+     "n": 20,
+     "videos": 18,
+     "id": "i0cTccS6tDI",
+     "t": 95,
+     "title": "2018 Jeep Compass Trailhawk Off-Road Review"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 1500,
+       "lo": 40.0,
+       "hi": 4000.0,
+       "n": 3,
+       "videos": 3,
+       "id": "3zRpagR9jxU",
+       "t": 241,
+       "title": "Best Off Road Vehicle?: 2018 Jeep Compass Review and Test Drive"
+      }
+     ]
+    ]
+   }
   }
  ],
  "jeep-renegade": [
@@ -34451,7 +34848,21 @@
      "views": 199674
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 55850,
+     "lo": 45000.0,
+     "hi": 61000.0,
+     "n": 17,
+     "videos": 15,
+     "id": "0DlhPeeW2BA",
+     "t": 255,
+     "title": "2017 Lexus RX - Review and Road Test"
+    },
+    "items": []
+   }
   },
   {
    "years": [
@@ -34498,7 +34909,57 @@
      "views": 585372
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 76000,
+     "lo": 75000.0,
+     "hi": 77000.0,
+     "n": 5,
+     "videos": 5,
+     "id": "m0ektK0reF4",
+     "t": 22,
+     "title": "2025 Lexus RX 450h+ -- Did 7 Days PROVE it's Worth the $77,000 Price??"
+    },
+    "msrp": {
+     "median": 55558,
+     "lo": 50000.0,
+     "hi": 65000.0,
+     "n": 68,
+     "videos": 43,
+     "id": "rVK4gtXIMfg",
+     "t": 1657,
+     "title": "The 2023 Lexus RX 500h F-Sport Performance Is An Intricate & Sporty Hybrid Luxury SUV"
+    },
+    "items": [
+     [
+      "Yearly cost to own",
+      {
+       "median": 550,
+       "lo": 550.0,
+       "hi": 1800.0,
+       "n": 3,
+       "videos": 3,
+       "id": "QDi3SRWqxPw",
+       "t": 159,
+       "title": "Lexus RX 350 2024 | Cost to Own | Financial Analysis"
+      }
+     ],
+     [
+      "Insurance",
+      {
+       "median": 3039,
+       "lo": 3036.0,
+       "hi": 3042.0,
+       "n": 4,
+       "videos": 2,
+       "id": "QDi3SRWqxPw",
+       "t": 130,
+       "title": "Lexus RX 350 2024 | Cost to Own | Financial Analysis"
+      }
+     ]
+    ]
+   }
   }
  ],
  "acura-mdx": [
