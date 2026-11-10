@@ -30960,7 +30960,26 @@
      "views": 186296
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 70,
+       "lo": 38.0,
+       "hi": 160.0,
+       "n": 9,
+       "videos": 6,
+       "id": "0v4zRg1kpAI",
+       "t": 381,
+       "title": "2004 Dodge Durango 4.7L Idle Air Control Valve Replacement"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -31096,7 +31115,74 @@
      "views": 167782
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 41900,
+     "lo": 38000.0,
+     "hi": 57000.0,
+     "n": 25,
+     "videos": 22,
+     "id": "I2uV1k6tTPQ",
+     "t": 460,
+     "title": "2015 Dodge Durango R/T Start Up, Test Drive, and In Depth Review"
+    },
+    "items": [
+     [
+      "Brakes",
+      {
+       "median": 3345,
+       "lo": 3200.0,
+       "hi": 3490.0,
+       "n": 4,
+       "videos": 4,
+       "id": "ztpOOOWUvao",
+       "t": 611,
+       "title": "Over The Top! THIS Is What Makes The 2019 Dodge Durango SRT An Awesome Family Hauler"
+      }
+     ],
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 1000,
+       "lo": 695.0,
+       "hi": 1995.0,
+       "n": 3,
+       "videos": 3,
+       "id": "rwhzlabxtzs",
+       "t": 1228,
+       "title": "2018 Dodge Durango SRT Performance AWD SUV - Build & Price Review"
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 1298,
+       "lo": 995.0,
+       "hi": 1600.0,
+       "n": 2,
+       "videos": 2,
+       "id": "eoWNqfkr5TM",
+       "t": 844,
+       "title": "2023 Dodge Durango R/T Plus: TEST DRIVE+FULL REVIEW"
+      }
+     ],
+     [
+      "Insurance",
+      {
+       "median": 2568,
+       "lo": 2316.0,
+       "hi": 2820.0,
+       "n": 2,
+       "videos": 2,
+       "id": "cMn7bpTpClM",
+       "t": 1420,
+       "title": "HOW MUCH DID I PAY FOR MY 2018 DURANGO SRT"
+      }
+     ]
+    ]
+   }
   }
  ],
  "dodge-journey": [
@@ -34049,6 +34135,96 @@
      "title": "2021 Subaru Crosstrek Sport 2.5 Review and Off-Road Test",
      "channel": "Driving Sports TV",
      "views": 953496
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2024,
+    2025
+   ],
+   "gen": "2024–2025 Subaru Crosstrek",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 21613390,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 22427,
+     "n": 2,
+     "best": {
+      "id": "lKY4NnUDOf4",
+      "title": "Crosstrek 2025 / Oil & Filter Change @ 1028 KM/ 600 Miles",
+      "channel": "4am4life",
+      "views": 18913
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 20301,
+     "n": 2,
+     "best": {
+      "id": "scxHEpY7S0E",
+      "title": "2024 Subaru Crosstrek Dash Cam Install for Auto Dimming Rear Mirror",
+      "channel": "Zachary Schroeder",
+      "views": 10182
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 10064,
+     "n": 1,
+     "best": {
+      "id": "lMosEiFPisc",
+      "title": "How to replace a cabin air filter for 2018-2025 Subaru Crosstrek? 3 Min DIY FreshenOPT Auto Parts",
+      "channel": "FreshenOPT Air Filter",
+      "views": 10064
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 6932,
+     "n": 1,
+     "best": {
+      "id": "_QJ7VokV0mo",
+      "title": "2024 Subaru Crosstrek Rear Gate Light Install - 1:1 w/Jeff",
+      "channel": "S47 Industries",
+      "views": 6932
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 3190,
+     "n": 1,
+     "best": {
+      "id": "ozBLj8Id3EM",
+      "title": "Subaru Crosstrek 2025 Cabin Air Filter Replacement | AQ1262C (Carbon Filter)",
+      "channel": "Filterheads",
+      "views": 3190
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "RfDBqq2L4Gc",
+     "title": "Should You Buy a 2024 Subaru Crosstrek? Thorough Review By A Mechanic",
+     "channel": "The Car Care Nut Reviews",
+     "views": 878850
+    },
+    {
+     "id": "SrrzgiCwLWY",
+     "title": "2025 Subaru Crosstrek e-BOXER Hybrid Review – Should You Buy It?",
+     "channel": "Max Torques",
+     "views": 13386
+    },
+    {
+     "id": "Yu4R78-x2FA",
+     "title": "Buyer Beware: Hidden Issues with the 2025 Subaru Crosstrek.",
+     "channel": "Xpert_Autos ",
+     "views": 1770
     }
    ],
    "costs": null
