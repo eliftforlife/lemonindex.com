@@ -27760,6 +27760,129 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2024,
+    2025
+   ],
+   "gen": "2024–2025 Chevrolet Trax",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 10546107,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 54274,
+     "n": 2,
+     "best": {
+      "id": "xRjvTp0h4Bc",
+      "title": "2024 CHEVROLET TRAX - How to Unlock, Open & Start With Dead Chevy Trax Remote Key Fob Battery",
+      "channel": "PYR Automotive ",
+      "views": 31482
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 31278,
+     "n": 3,
+     "best": {
+      "id": "aVvhB3aRf-s",
+      "title": "2025 Chevy Trax Oil Change 1.2 Liter",
+      "channel": "John Justin",
+      "views": 26747
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 15066,
+     "n": 1,
+     "best": {
+      "id": "-7BdhI92LFA",
+      "title": "How to Release the Gear Shifter in a 2025 Chevrolet Trax | MyAirbags",
+      "channel": "MyAirbags",
+      "views": 15066
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 11909,
+     "n": 1,
+     "best": {
+      "id": "H_6T1O9k8m8",
+      "title": "2025 Chevy Trax Door Speaker Install",
+      "channel": "hino121212",
+      "views": 11909
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 7271,
+     "n": 2,
+     "best": {
+      "id": "h7uhTU64X0o",
+      "title": "2024 - 2025 CHEVY TRAX OIL LIGHT _ MAINTENANCE LIGHT RESET TUTORIAL EASY",
+      "channel": "Gearmo Auto",
+      "views": 5881
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 4990,
+     "n": 1,
+     "best": {
+      "id": "KPTCLS4Bfx0",
+      "title": "2023-2025 CHEVY TRAX LT (1.2L LIH turbo I3) Replace Spark Plugs and Coils",
+      "channel": "Pro Tips Plus",
+      "views": 4990
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 3819,
+     "n": 1,
+     "best": {
+      "id": "PaHpnoYIKaQ",
+      "title": "2023-2025 CHEVY TRAX LT (1.2L LIH turbo I3) Service Mass Air Flow Sensor and Air Filter",
+      "channel": "Pro Tips Plus",
+      "views": 3819
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 3145,
+     "n": 1,
+     "best": {
+      "id": "qQwU1i26Cs0",
+      "title": "How to replace cabin air filter 2024 Chevy Trax 2025",
+      "channel": "Oil Light Reset ",
+      "views": 3145
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "h9qTe7LlNy8",
+     "title": "Should You Buy a 2024 Chevrolet Trax? Thorough Review By A Mechanic",
+     "channel": "The Car Care Nut Reviews",
+     "views": 626774
+    },
+    {
+     "id": "uNxU1-8QIRA",
+     "title": "2024 Chevy Trax | Much Better, Assuming it's Reliable",
+     "channel": "savagegeese",
+     "views": 174144
+    },
+    {
+     "id": "axUzhSD8kJo",
+     "title": "5 Most Common Problems of the Chevrolet Trax 2024 & 2025",
+     "channel": "Carnivauto",
+     "views": 89891
+    }
+   ],
+   "costs": null
   }
  ],
  "gmc-acadia": [
@@ -36776,7 +36899,70 @@
      "views": 330323
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 27500,
+     "lo": 25000.0,
+     "hi": 30000.0,
+     "n": 4,
+     "videos": 4,
+     "id": "MxU5sW_ZI-E",
+     "t": 542,
+     "title": "WE DID IT!! 100,000 Miles On My 2019 Mazda 3 Hatchback!"
+    },
+    "msrp": {
+     "median": 27600,
+     "lo": 24000.0,
+     "hi": 31000.0,
+     "n": 27,
+     "videos": 24,
+     "id": "Gv0rLLENF4E",
+     "t": 1886,
+     "title": "2019 Mazda 3 AWD – The Most Desirable Compact Car?"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 450,
+       "lo": 135.0,
+       "hi": 1400.0,
+       "n": 5,
+       "videos": 5,
+       "id": "TTzN4cSIKi0",
+       "t": 830,
+       "title": "The 2025 Mazda3's Hidden Advantage - It's Not What You Think | In-Depth Review"
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 175,
+       "lo": 100.0,
+       "hi": 250.0,
+       "n": 2,
+       "videos": 2,
+       "id": "4HCyUfmrqQs",
+       "t": 423,
+       "title": "How Much MONEY I SPENT Maintaining My 2019 Mazda 3 Hatchback Over 75,000 Miles!"
+      }
+     ],
+     [
+      "Battery",
+      {
+       "median": 238,
+       "lo": 230.0,
+       "hi": 245.0,
+       "n": 2,
+       "videos": 2,
+       "id": "4HCyUfmrqQs",
+       "t": 441,
+       "title": "How Much MONEY I SPENT Maintaining My 2019 Mazda 3 Hatchback Over 75,000 Miles!"
+      }
+     ]
+    ]
+   }
   }
  ],
  "mazda6": [
@@ -38778,7 +38964,107 @@
      "views": 136020
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": {
+     "median": 8850,
+     "lo": 5700.0,
+     "hi": 12000.0,
+     "n": 4,
+     "videos": 3,
+     "id": "lVTB5dQ_QVs",
+     "t": 5,
+     "title": "E39 M5 Vs E60 M5 - Which One Should YOU Buy?",
+     "private": 0,
+     "dealer": 0
+    },
+    "used": {
+     "median": 34500,
+     "lo": 20000.0,
+     "hi": 45000.0,
+     "n": 10,
+     "videos": 8,
+     "id": "QvnMfRNYUIc",
+     "t": 417,
+     "title": "9 Years of BMW E39 M5 Ownership - POV Drive (Binaural Audio)"
+    },
+    "msrp": {
+     "median": 75000,
+     "lo": 72900.0,
+     "hi": 79391.0,
+     "n": 3,
+     "videos": 3,
+     "id": "BodopgnzdFQ",
+     "t": 371,
+     "title": "2000 BMW E39 M5 Review ~ Part 2/2"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 100,
+       "lo": 50.0,
+       "hi": 500.0,
+       "n": 29,
+       "videos": 16,
+       "id": "O-VhvOi8Dm0",
+       "t": 481,
+       "title": "BMW E39 M5:  Maintenance Info, Cost"
+      }
+     ],
+     [
+      "Water pump / cooling",
+      {
+       "median": 150,
+       "lo": 130.0,
+       "hi": 200.0,
+       "n": 5,
+       "videos": 3,
+       "id": "HJdnO7i9Cdo",
+       "t": 51,
+       "title": "E39 BMW 540i Maintenance Costs"
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 723,
+       "lo": 600.0,
+       "hi": 935.0,
+       "n": 5,
+       "videos": 3,
+       "id": "RCfKsB3_7dE",
+       "t": 513,
+       "title": "10 Years of E39 M5 Ownership | Thoughts, Total Cost, and Future Plans"
+      }
+     ],
+     [
+      "Steering & suspension",
+      {
+       "median": 62,
+       "lo": 40.0,
+       "hi": 85.0,
+       "n": 2,
+       "videos": 2,
+       "id": "5Al0QLLvUCE",
+       "t": 548,
+       "title": "An E39source Restoration:  2001 BMW E39 525iA"
+      }
+     ],
+     [
+      "Oil change",
+      {
+       "median": 170,
+       "lo": 150.0,
+       "hi": 190.0,
+       "n": 4,
+       "videos": 2,
+       "id": "it386AAxLG8",
+       "t": 360,
+       "title": "Case Study: 9 Years, 100,000 Miles, the Cost of Owning a BMW E39 M5"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
