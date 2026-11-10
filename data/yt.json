@@ -25454,7 +25454,26 @@
      "views": 173930
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 250,
+       "lo": 80.0,
+       "hi": 325.0,
+       "n": 5,
+       "videos": 3,
+       "id": "6Jow3sRoO-4",
+       "t": 54,
+       "title": "OWNER REVIEWS! GMC SIERRA 2007 - 2013 COMMON PROBLEMS RELIABILITY PROBLEMS MAINTENANCE TOP PROBLEMS"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -25580,7 +25599,48 @@
      "views": 307714
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 50500,
+     "lo": 49100.0,
+     "hi": 51000.0,
+     "n": 8,
+     "videos": 8,
+     "id": "v88oDYk0hxY",
+     "t": 511,
+     "title": "2016 Chevy Silverado 5.3L vs GMC Sierra 6.2L Drag Race & MPG Mashup Review"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 85,
+       "lo": 50.0,
+       "hi": 250.0,
+       "n": 6,
+       "videos": 5,
+       "id": "Q3rxuitFOq4",
+       "t": 362,
+       "title": "5 Ways to Bulletproof your 2014 - 2018 Chevy Silverado or GMC Sierra and Make It More Reliable"
+      }
+     ],
+     [
+      "Brakes",
+      {
+       "median": 150,
+       "lo": 100.0,
+       "hi": 200.0,
+       "n": 2,
+       "videos": 2,
+       "id": "EqxHvFuhJy0",
+       "t": 738,
+       "title": "2014 Chevrolet Silverado and GMC Sierra 1500 Review and Road Test"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -25686,7 +25746,44 @@
      "views": 1836818
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 50000,
+     "lo": 14000.0,
+     "hi": 70000.0,
+     "n": 3,
+     "videos": 3,
+     "id": "9pHONGpgqPI",
+     "t": 27,
+     "title": "Does The New 2022 GMC Sierra Elevation Justify Its $60,000 Price Tag?"
+    },
+    "msrp": {
+     "median": 69000,
+     "lo": 53200.0,
+     "hi": 80000.0,
+     "n": 26,
+     "videos": 20,
+     "id": "eyGmuGQNSqE",
+     "t": 20,
+     "title": "The 2020 GMC Sierra 3500HD Denali Is an $80,000 Luxury Truck"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 1000,
+       "lo": 70.0,
+       "hi": 8000.0,
+       "n": 3,
+       "videos": 3,
+       "id": "kIZCMS0qONI",
+       "t": 2734,
+       "title": "Was This 2019 GMC Sierra 5.3L L84 Engine DESTROYED In OR By Accident? ONLY 107,452 Miles!"
+      }
+     ]
+    ]
+   }
   }
  ],
  "chevrolet-colorado": [
@@ -29532,6 +29629,141 @@
      ]
     ]
    }
+  }
+ ],
+ "dodge-journey": [
+  {
+   "years": [
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ],
+   "gen": "2009–2020 Dodge Journey",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 19255170,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 2007076,
+     "n": 19,
+     "best": {
+      "id": "qYUmwaJT_fk",
+      "title": "2010 Dodge Journey Starter problem",
+      "channel": "Brian Hand",
+      "views": 302777
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 694727,
+     "n": 6,
+     "best": {
+      "id": "nAol-951_RE",
+      "title": "2015 Dodge Journey Won’t Start (Hard brake petal)",
+      "channel": "tifahnee85",
+      "views": 297171
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 681724,
+     "n": 8,
+     "best": {
+      "id": "OHLIUVgf8uU",
+      "title": "How to Replace Lower Ball Joint 2009-2020 Dodge Journey",
+      "channel": "TRQ",
+      "views": 126946
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 471653,
+     "n": 6,
+     "best": {
+      "id": "Ko9E05lHVp8",
+      "title": "2009-2020 Dodge Journey - How to Check & Add Engine Coolant",
+      "channel": "YOUCANIC",
+      "views": 126502
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 428365,
+     "n": 6,
+     "best": {
+      "id": "gcnp5WIPOcw",
+      "title": "2010 Dodge Journey Heater Core Flush",
+      "channel": "Jim Dandy",
+      "views": 104922
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 313725,
+     "n": 4,
+     "best": {
+      "id": "oaLThhCqFao",
+      "title": "How to Change the oil on a 2013 Dodge Journey 3.6",
+      "channel": "MAKE PVP GREAT AGAIN",
+      "views": 138704
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 309358,
+     "n": 1,
+     "best": {
+      "id": "zgNICN3oQas",
+      "title": "How to check transmission fluid in a 2012 Dodge Journey",
+      "channel": "Arches Mechanic",
+      "views": 309358
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 303807,
+     "n": 4,
+     "best": {
+      "id": "60giQnY2cDs",
+      "title": "How to Replace Fuel Pump 2009-2020 Dodge Journey",
+      "channel": "TRQ",
+      "views": 106750
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "A5R2-ExkPBc",
+     "title": "Top 5 Problems Dodge Journey SUV 1st Generation 2009-20",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 723971
+    },
+    {
+     "id": "JqB95ggZCVc",
+     "title": "2009-2020 Dodge Journey Problems - Top 7 Dodge Journey Issues",
+     "channel": "car PROblems",
+     "views": 133870
+    },
+    {
+     "id": "M_09UlO3sf8",
+     "title": "2014 Dodge Journey AWD Review: Is this really a Man Van?",
+     "channel": "The Fast Lane Car",
+     "views": 416273
+    }
+   ],
+   "costs": null
   }
  ],
  "hyundai-kona": [
@@ -33770,6 +34002,135 @@
      "title": "2003 Impala light problems",
      "channel": "ncryptdead",
      "views": 65873
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013
+   ],
+   "gen": "2006–2013 Chevrolet Impala",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 19083543,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 1773157,
+     "n": 13,
+     "best": {
+      "id": "Tf0GMcSAeuU",
+      "title": "How To Replace A Starter On A Chevy Impala 3.5L 3.9L 2006-2011",
+      "channel": "Backyard Chevy",
+      "views": 595951
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 765312,
+     "n": 8,
+     "best": {
+      "id": "LZic4N9NeNk",
+      "title": "2007 impala p0522 (oil pressure low stop engine)",
+      "channel": "The mech a nic",
+      "views": 211288
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 720204,
+     "n": 9,
+     "best": {
+      "id": "qS-_dLPwph8",
+      "title": "How to Replace Heater Door Actuator 2006-2013 Chevrolet Impala",
+      "channel": "TRQ",
+      "views": 208675
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 663141,
+     "n": 4,
+     "best": {
+      "id": "DgShoPBC2rs",
+      "title": "Coolant Change - 2006-2013 3.5L Chevy Impala",
+      "channel": "BlueDriver",
+      "views": 340185
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 587680,
+     "n": 8,
+     "best": {
+      "id": "4_TlfDTPmic",
+      "title": "2011 Chevrolet Impala, Stall/No Start",
+      "channel": "Pinpoint Automotive Repair",
+      "views": 100748
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 411622,
+     "n": 6,
+     "best": {
+      "id": "J3U33ppXFro",
+      "title": "2006-2011 Chevy Impala Oil Change (How To Change Oil & Filter Chevy Impala)",
+      "channel": "Backyard Chevy",
+      "views": 143627
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 402839,
+     "n": 4,
+     "best": {
+      "id": "mY-TATSTggo",
+      "title": "2012 Chevrolet Impala C0035 Service StabiliTrak/ABS/Brake System Fix",
+      "channel": "kirbyyasha",
+      "views": 199144
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 277353,
+     "n": 5,
+     "best": {
+      "id": "bl6bXlxyBak",
+      "title": "How to Replace Control Arm With Ball joint 2006-2013 Chevrolet Impala",
+      "channel": "TRQ",
+      "views": 90255
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "uCQLMblUulI",
+     "title": "Top 5 Problems Chevy Impala Sedan 9th Generation 2006-16",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 837173
+    },
+    {
+     "id": "hOGoPU7CG34",
+     "title": "Owning a used 2006-2011 Chevy Impala. Long-Term Review & Common Problems & Reliability",
+     "channel": "Another Lap",
+     "views": 97407
+    },
+    {
+     "id": "ZGPDIF4JihM",
+     "title": "2006 Chevrolet Impala Possible Electrical Problems",
+     "channel": "eddy75471",
+     "views": 76200
     }
    ],
    "costs": null
