@@ -9,6 +9,8 @@ User-agent: PerplexityBot
 Allow: /
 User-agent: Google-Extended
 Allow: /
+User-agent: Googlebot-Image
+Allow: /
 
 # bulk dataset scrapers: the data is free at /data/ with credit instead
 User-agent: CCBot
@@ -23,3 +25,4 @@ User-agent: ImagesiftBot
 Disallow: /
 
 Sitemap: https://lemonindex.com/sitemap.xml
+Sitemap: https://lemonindex.com/image-sitemap.xml

@@ -1064,3 +1064,19 @@ table.adv td { padding: 9px 10px; border-bottom: 1px solid var(--line, #e7e5de);
 .creadout .cgauge figcaption { color: #fff; } .creadout .cgauge .nd, .creadout .cgauge .hub { stroke: #fff; fill: #fff; }
 .crel a { display: inline-block; margin: 0 8px 8px 0; padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px; font: 700 15px/1.2 ui-monospace, Consolas, monospace; text-decoration: none; }
 @media (max-width: 420px) { .cs-code b { font-size: 44px; } .cgauge.sm { width: 118px; } .csearch { padding: 16px; } .cs-row input { font-size: 26px; } }
+/* 11-10 BMW specs + engine pages */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.chip { display: inline-block; padding: 6px 12px; border: 1px solid var(--line, #e7e5de); border-radius: 999px; font-size: 14px; text-decoration: none; color: inherit; background: #fff; }
+.chip:hover { border-color: #111; }
+table.adv small { color: var(--mute); font-size: 12.5px; }
+table.spec td:first-child { font-weight: 600; white-space: nowrap; }
+table.spec td { font-size: 14px; }
+.bspec details.yd { margin: 6px 0; }
+.engph { margin: 18px 0 0; } .engph img { width: 100%; max-width: 680px; height: auto; border-radius: 14px; display: block; }
+.engph figcaption { font-size: 12px; color: var(--mute); margin-top: 6px; }
+.imggrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 18px; }
+.imgcard { margin: 0; } .imgcard img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line, #e7e5de); }
+.imgcard figcaption { display: grid; gap: 4px; font-size: 13px; margin-top: 8px; } .imgcard figcaption span { color: var(--mute); }
+.imgcard code, .yc code { font-size: 12.5px; background: #f4f3ef; padding: 2px 6px; border-radius: 6px; word-break: break-word; }
+.engt table.adv { min-width: 860px; } .engt table.adv td:nth-child(2) { min-width: 210px; } .engt table.adv td:first-child { font-weight: 600; }
+table.spec { min-width: 820px; }

@@ -14,7 +14,7 @@ def has(fid): return fid in AIY
 def _ld(fid, y, name, im):
     return {"@context": "https://schema.org", "@type": "ImageObject", "contentUrl": BASE + im['src'], "name": f'{y} {name} (illustration)',
             "description": f'AI-generated illustration of a {y} {name}, {im["gen"]}, in {im["color"]}.', "width": im['w'], "height": im['h'],
-            "license": LIC, "acquireLicensePage": BASE + '/terms/', "creditText": "The Lemon Index",
+            "license": LIC, "acquireLicensePage": BASE + '/images/', "creditText": "The Lemon Index",
             "creator": {"@type": "Organization", "name": "The Lemon Index", "url": BASE}, "copyrightNotice": "The Lemon Index, CC BY 4.0"}
 
 def ai_year_html(fid, y, name):
