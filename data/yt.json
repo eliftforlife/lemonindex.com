@@ -30199,7 +30199,35 @@
      "views": 246082
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 14000,
+     "lo": 13000.0,
+     "hi": 18000.0,
+     "n": 17,
+     "videos": 15,
+     "id": "dnRvG37CpkE",
+     "t": 430,
+     "title": "2020 Chevrolet Spark 5MT: Regular Car Reivews"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 50,
+       "lo": 25.0,
+       "hi": 5000.0,
+       "n": 3,
+       "videos": 3,
+       "id": "mgTzjPsh-Mo",
+       "t": 291,
+       "title": "Rear wiper blade replacement on 2016-2022 Chevy Spark @elchanojose"
+      }
+     ]
+    ]
+   }
   }
  ],
  "chevrolet-volt": [
@@ -31431,7 +31459,52 @@
      "views": 3013
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 300,
+       "lo": 100.0,
+       "hi": 800.0,
+       "n": 6,
+       "videos": 4,
+       "id": "VknsoRCy9xI",
+       "t": 209,
+       "title": "2005 Kia Rio5 Fuel Leak Tank Pump Car Problem"
+      }
+     ],
+     [
+      "Transmission",
+      {
+       "median": 137,
+       "lo": 137.0,
+       "hi": 137.0,
+       "n": 2,
+       "videos": 2,
+       "id": "pwXhGnjrU9s",
+       "t": 345,
+       "title": "2003 Kia Rio clutch replacement - how to part 2 of 2"
+      }
+     ],
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 3145,
+       "lo": 2995.0,
+       "hi": 3295.0,
+       "n": 2,
+       "videos": 2,
+       "id": "KS51VvMlAJw",
+       "t": 12,
+       "title": "2003 Kia Rio Sedan - for sale in MESA, AZ 85212"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
