@@ -30354,6 +30354,133 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015
+   ],
+   "gen": "2010–2015 Lexus RX",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 17378159,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 416610,
+     "n": 7,
+     "best": {
+      "id": "BwyKeHw0M84",
+      "title": "How to Change Oil 2010-2015 Lexus RX350",
+      "channel": "TRQ",
+      "views": 117993
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 413373,
+     "n": 1,
+     "best": {
+      "id": "S2OJ-XyiGTg",
+      "title": "Lexus Died While Driving! Towed In! No crank no start. 2011 Lexus RX 350",
+      "channel": "Rainman Ray's Repairs",
+      "views": 413373
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 307427,
+     "n": 7,
+     "best": {
+      "id": "gUYCku9hGwU",
+      "title": "EASY Shock and Strut replacement For Lexus RX350 and RX450H 2010-2015",
+      "channel": "WrongWayUp",
+      "views": 93914
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 230642,
+     "n": 2,
+     "best": {
+      "id": "CAFD2xqA9ts",
+      "title": "How To Replace 2010 - 2015 Lexus RX350 Remote Fob Key Battery - RX 350 Replacement Change Tutorial",
+      "channel": "PYR Automotive ",
+      "views": 172454
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 228367,
+     "n": 3,
+     "best": {
+      "id": "E0A9wFylQ3o",
+      "title": "2010 RX 350 All Spark Plugs and Ignition Coils Replacement - Lexus 120,000 mile Maintenance",
+      "channel": "Carolina Cowboys",
+      "views": 128089
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 170808,
+     "n": 3,
+     "best": {
+      "id": "GvhDHBTa67c",
+      "title": "2010 Lexus RX 350 Brake Pads and Rotors Replacement Front and Rear",
+      "channel": "Carolina Cowboys",
+      "views": 84281
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 162690,
+     "n": 4,
+     "best": {
+      "id": "dXvx3PXScZs",
+      "title": "2010 Lexus RX350 Climate System Control Error AC Amplifier Problem - Air conditioner troubleshooting",
+      "channel": "Carolina Cowboys",
+      "views": 65296
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 151810,
+     "n": 2,
+     "best": {
+      "id": "sZrXpZ-_L5o",
+      "title": "Transmission Fluid Change: 2010-2015 Lexus RX350 - what everyone else is missing???",
+      "channel": "Bennie Aust",
+      "views": 116849
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "D6I5w-bt4H0",
+     "title": "Top 5 Problems 3rd Generation 2010-15 Lexus RX350 SUV",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 414903
+    },
+    {
+     "id": "6dWRft47twQ",
+     "title": "2010 Lexus RX 350 Review - 268,000 Miles! Is It Reliable?",
+     "channel": "Shooting Cars",
+     "views": 164840
+    },
+    {
+     "id": "E0ED39XjyLw",
+     "title": "2010 Lexus RX 350 HVAC Problems - Not ac blend door actuator!",
+     "channel": "Carolina Cowboys",
+     "views": 123948
+    }
+   ],
+   "costs": null
   }
  ],
  "acura-mdx": [
@@ -38486,7 +38613,48 @@
      "views": 2313955
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 23998,
+     "lo": 21900.0,
+     "hi": 33395.0,
+     "n": 26,
+     "videos": 25,
+     "id": "tRcqxQMMrkA",
+     "t": 1153,
+     "title": "2018 Mazda6 2.5T Signature – A Much Needed Power Upgrade"
+    },
+    "items": [
+     [
+      "Transmission",
+      {
+       "median": 1000,
+       "lo": 500.0,
+       "hi": 1200.0,
+       "n": 3,
+       "videos": 2,
+       "id": "4yQVCwmdzmI",
+       "t": 89,
+       "title": "2014 Mazda6 Review"
+      }
+     ],
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 1500,
+       "lo": 669.49,
+       "hi": 1900.0,
+       "n": 9,
+       "videos": 2,
+       "id": "6zcLcS1QyG4",
+       "t": 765,
+       "title": "450,000 Miles On My 2016 Mazda6 But i-ELOOP Nearly Killed It"
+      }
+     ]
+    ]
+   }
   }
  ],
  "dodge-charger": [
@@ -39359,6 +39527,140 @@
      "title": "Review: 2006 Chrysler 300C SRT8",
      "channel": "Matt Maran Motoring",
      "views": 1500566
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023
+   ],
+   "gen": "2011–2023 Chrysler 300",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 34193174,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 435839,
+     "n": 5,
+     "best": {
+      "id": "9Bs-IzcnzmI",
+      "title": "How To Start A 2011 - 2021 Chrysler 300 With Key Fob Not Detected - Dead Key Fob Won't Start Car",
+      "channel": "PYR Automotive ",
+      "views": 144145
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 315808,
+     "n": 1,
+     "best": {
+      "id": "W63CrHbhS1o",
+      "title": "2011-2017 Chrysler 300, Dodge Charger, and Dodge Challenger 3.6 spark plug replacement",
+      "channel": "MotorCity Mechanic",
+      "views": 315808
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 244314,
+     "n": 3,
+     "best": {
+      "id": "SD2aWEXg6jw",
+      "title": "HOW TO REPLACE ELECTRIC POWER STEERING PUMP IN A 2011-2014 CHRYSLER 300 FAST & EASY DO IT YOURSELF",
+      "channel": "Hidalgo Motors Co TV",
+      "views": 115171
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 222559,
+     "n": 1,
+     "best": {
+      "id": "TGVxdfUXYg0",
+      "title": "2013 Chrysler 300 | Oil Change Message",
+      "channel": "Mopar",
+      "views": 222559
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 221313,
+     "n": 2,
+     "best": {
+      "id": "PwScIB0znpk",
+      "title": "2011-2014 Dodge Charger Chrysler 300 A/C not working",
+      "channel": "Geniuscarpros",
+      "views": 158295
+     }
+    },
+    {
+     "name": "Lifters, AFM & cam phasers",
+     "views": 212775,
+     "n": 1,
+     "best": {
+      "id": "7bXtkUM6FbQ",
+      "title": "2013 Chrysler 300 Engine Ticking/Tapping Fix!!",
+      "channel": "Tv Terrence Tee",
+      "views": 212775
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 112935,
+     "n": 1,
+     "best": {
+      "id": "h-Z76WbtUAA",
+      "title": "2015 CHRYSLER 300 DONT START, BAD FUEL PUMP, HOW TO REPLACE FUEL PUMP",
+      "channel": "RB The Mechanic",
+      "views": 112935
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 106164,
+     "n": 1,
+     "best": {
+      "id": "SlYrm8v3WOQ",
+      "title": "2016 Chrysler 300 won’t start or crank up issue solved",
+      "channel": "Pinkin Warri",
+      "views": 106164
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "uKhegWlkkpY",
+     "title": "Real Quick Video: 2015 Chrysler 300S - Younger Buyers Beware!",
+     "channel": "Real Auto Reports",
+     "views": 103530
+    },
+    {
+     "id": "hQIk26lE3fk",
+     "title": "2014 Chrysler 300C: American Review for European Buyers",
+     "channel": "The Fast Lane Car",
+     "views": 58845
+    },
+    {
+     "id": "oowhfxs_hQo",
+     "title": "2023 Chrysler 300C Review // V8 'Luxury' For Under $60,000",
+     "channel": "Throttle House",
+     "views": 1181168
     }
    ],
    "costs": null
