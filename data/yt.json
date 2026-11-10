@@ -26655,7 +26655,39 @@
      "views": 180868
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 70,
+       "lo": 30.0,
+       "hi": 300.0,
+       "n": 11,
+       "videos": 7,
+       "id": "W7yJDNDMfUk",
+       "t": 1878,
+       "title": "New Project! 2003 Suburban 2500, Fixing Things with Amazon Parts, Part 1, Lights, Camera, Sunroof"
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 200,
+       "lo": 100.0,
+       "hi": 300.0,
+       "n": 5,
+       "videos": 4,
+       "id": "NjdYpE2eZq8",
+       "t": 498,
+       "title": "2002 Suburban project intro video, and 1-3inch Torsion key Lift!"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -26784,7 +26816,26 @@
      "views": 214824
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 116,
+       "lo": 50.0,
+       "hi": 182.0,
+       "n": 4,
+       "videos": 3,
+       "id": "YTSHRRTYi4s",
+       "t": 322,
+       "title": "2007 Chevy Suburban Lift Gate fix......"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -26911,7 +26962,35 @@
      "views": 6480
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 66550,
+     "lo": 66000.0,
+     "hi": 67100.0,
+     "n": 4,
+     "videos": 4,
+     "id": "CLiPLFYKejo",
+     "t": 607,
+     "title": "2015 Chevrolet Tahoe/Suburban and GMC Yukon/XL Test Drive"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 500,
+       "lo": 200.0,
+       "hi": 2000.0,
+       "n": 7,
+       "videos": 6,
+       "id": "Av1EzFH6_2k",
+       "t": 85,
+       "title": "Change Alternator 2014 - 2018 Chevy Silverado GMC Sierra Taho Yukon Suburban"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -27002,6 +27081,304 @@
      "title": "2007 - 2023 Chevrolet Suburban Problems - All Transmission, Electrical, Engine Issues...",
      "channel": "OBD Insights",
      "views": 27006
+    }
+   ],
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 60000,
+     "lo": 50000.0,
+     "hi": 70000.0,
+     "n": 4,
+     "videos": 4,
+     "id": "MBfFqZ1xGJI",
+     "t": 2082,
+     "title": "They Sold me this 2021 Suburban for $20k Because of This ONE Issue!"
+    },
+    "msrp": {
+     "median": 70000,
+     "lo": 61900.0,
+     "hi": 80000.0,
+     "n": 21,
+     "videos": 18,
+     "id": "NWSTec8vXeU",
+     "t": 647,
+     "title": "2021 Toyota Sequoia vs the New Chevy Suburban - I Directly Compare Them & Come Away Surprised!"
+    },
+    "items": [
+     [
+      "Transmission",
+      {
+       "median": 2600,
+       "lo": 2600.0,
+       "hi": 5600.0,
+       "n": 3,
+       "videos": 2,
+       "id": "MBfFqZ1xGJI",
+       "t": 1987,
+       "title": "They Sold me this 2021 Suburban for $20k Because of This ONE Issue!"
+      }
+     ]
+    ]
+   }
+  }
+ ],
+ "gmc-acadia": [
+  {
+   "years": [
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016
+   ],
+   "gen": "2007–2016 GMC Acadia",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 18293315,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 1298367,
+     "n": 12,
+     "best": {
+      "id": "QNgyFjUy-g4",
+      "title": "2013-2017 Traverse Enclave Acadia - Factory GPS Navigation Radio Upgrade - Easy Plug & Play Install!",
+      "channel": "Infotainment",
+      "views": 195208
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 607713,
+     "n": 6,
+     "best": {
+      "id": "eFQSiToWkuE",
+      "title": "2012 GMC Acadia Rear A/C Blows Warm - FIXED!!!",
+      "channel": "YnotDIY",
+      "views": 216674
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 581441,
+     "n": 6,
+     "best": {
+      "id": "lVGHF1LS7CU",
+      "title": "2007 GMC Acadia Service Stabilitrak - No Traction Control - English Part 1",
+      "channel": "Dewi Raimundo",
+      "views": 197808
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 506721,
+     "n": 6,
+     "best": {
+      "id": "u4ZoFzkGlhI",
+      "title": "How To Replace Strut 2007-16 GMC Acadia",
+      "channel": "TRQ",
+      "views": 123188
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 497269,
+     "n": 5,
+     "best": {
+      "id": "UKY0rvdT-OE",
+      "title": "How to Replace the thermostat on the GMC Acadia 2007 to 2015",
+      "channel": "Haynes Manuals",
+      "views": 180933
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 355443,
+     "n": 4,
+     "best": {
+      "id": "Z3ikov867cw",
+      "title": "How to Replace Spark Plugs 2007-2016 GMC Acadia",
+      "channel": "TRQ",
+      "views": 207442
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 337316,
+     "n": 4,
+     "best": {
+      "id": "A_-g5baX0pM",
+      "title": "2012 GMC ACADIA Electrical Problem",
+      "channel": "Joe Green",
+      "views": 124796
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 332973,
+     "n": 7,
+     "best": {
+      "id": "juR7Zqovhtw",
+      "title": "2013 GMC Acadia Transmission Hot Idle Engine transmission overheat",
+      "channel": "ThePracticalMechanic",
+      "views": 84095
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "SojRoaVDRBQ",
+     "title": "Top 5 Problems GMC Acadia SUV 1st Generation 2007-2016",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 1030064
+    },
+    {
+     "id": "--1ojSgvNNQ",
+     "title": "The Top 5 Problems - GMC Acadia ( First Generation 2007-2016) | Should you buy the GMC Acadia? #gmc",
+     "channel": "Alex The Car Doctor",
+     "views": 287807
+    },
+    {
+     "id": "i0AKRhXkhN0",
+     "title": "2007 GMC Acadia Test Drive Owner Review 228k miles transmission problems pov walkaround PLEASE SUB!",
+     "channel": "Joes Golden Garage",
+     "views": 71251
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023
+   ],
+   "gen": "2017–2023 GMC Acadia",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 11311236,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 551137,
+     "n": 8,
+     "best": {
+      "id": "JfEvTSWs0bg",
+      "title": "2017 GMC Acadia key fob battery replacement",
+      "channel": "cameratest",
+      "views": 223770
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 344021,
+     "n": 5,
+     "best": {
+      "id": "lSZgsYpaeaQ",
+      "title": "A/C blows hot on passenger side? Fix! 2007-2018 GMC Acadia",
+      "channel": "Eddie's Customs & Restorations",
+      "views": 208643
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 314422,
+     "n": 1,
+     "best": {
+      "id": "vdlgPH6yRdg",
+      "title": "How to Replace Thermostat & Housing 2017-2022 GMC Acadia",
+      "channel": "TRQ",
+      "views": 314422
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 124555,
+     "n": 3,
+     "best": {
+      "id": "opb1nijul0A",
+      "title": "How to Change Engine Oil 2017-2023 GMC Acadia",
+      "channel": "TRQ",
+      "views": 76564
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 64384,
+     "n": 1,
+     "best": {
+      "id": "UtIT4C9WmbA",
+      "title": "🔧 2018-2023 Traverse, Acadia, Enclave transmission shudder, service and fix 9T65 “how to”",
+      "channel": "Bennie Aust",
+      "views": 64384
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 54483,
+     "n": 1,
+     "best": {
+      "id": "28T3Y2YHwZU",
+      "title": "2018 GMC Acadia \"Loss of steering assist and AC\" Thermostat issue?",
+      "channel": "HR Repair",
+      "views": 54483
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 52919,
+     "n": 1,
+     "best": {
+      "id": "seAlGbg5Hwg",
+      "title": "How to Replace Front Brakes 2017-2023 GMC Acadia",
+      "channel": "TRQ",
+      "views": 52919
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 38374,
+     "n": 1,
+     "best": {
+      "id": "WGqvI6modhc",
+      "title": "No Start No Crank Problem - 2019 GMC ACADIA - Diagnosis - Solved",
+      "channel": "Peter L",
+      "views": 38374
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "q6YOChVEyZE",
+     "title": "Top 5 Problems GMC Acadia SUV 2017-2024 2nd Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 154881
+    },
+    {
+     "id": "Wc8rwO1Wz5g",
+     "title": "TOP 5 Problems GMC Acadia 2.0 TUBO 2017 to 2023",
+     "channel": "RB The Mechanic",
+     "views": 20308
+    },
+    {
+     "id": "N1M_bgaor-k",
+     "title": "2017 GMC Acadia SUV Problems, Recalls and Complaints. Should you buy?",
+     "channel": "car PROblems",
+     "views": 19675
     }
    ],
    "costs": null
@@ -32084,6 +32461,135 @@
      "title": "Nissan Maxima 8th Gen 2015 to 2021 common problems, issues, defects, recalls and complaints",
      "channel": "HOWSTUFFINMYCARWORKS",
      "views": 45547
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "hyundai-accent": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005
+   ],
+   "gen": "2000–2005 Hyundai Accent",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 6202160,
+   "topics": [
+    {
+     "name": "Starter, alternator & belts",
+     "views": 473633,
+     "n": 3,
+     "best": {
+      "id": "JEWW6DFZI1o",
+      "title": "How to replace the Timing Belt on a 2005 Hyundai Accent, long version",
+      "channel": "pannonic mechanic",
+      "views": 275139
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 389829,
+     "n": 1,
+     "best": {
+      "id": "l4BhQvNYodA",
+      "title": "How to Replace Cabin Air Filter 2001 Hyundai Accent | AQ1021",
+      "channel": "Filterheads",
+      "views": 389829
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 270924,
+     "n": 5,
+     "best": {
+      "id": "1bW6sTnldyw",
+      "title": "Replace an Outside Door Handle on a 2000-2006 Hyundai Accent by @GettinJunkDone",
+      "channel": "Gettin' Junk Done",
+      "views": 83460
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 232428,
+     "n": 5,
+     "best": {
+      "id": "UdZ5f8Ut4Os",
+      "title": "2005-2011 Hyundai Accent Clutch and Slave Cylinder Replacement",
+      "channel": "SprocketHead",
+      "views": 104776
+     }
+    },
+    {
+     "name": "Lifters, AFM & cam phasers",
+     "views": 202596,
+     "n": 1,
+     "best": {
+      "id": "TF_KxaoFCdQ",
+      "title": "How to replace Hydraulic Valve Lifters on a 2005 Hyundai Accent",
+      "channel": "pannonic mechanic",
+      "views": 202596
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 169312,
+     "n": 2,
+     "best": {
+      "id": "QHhInpa9l5Q",
+      "title": "Replace Camshaft & Crankshaft Position Sensors on a 2002 Hyundai Accent by @GettinJunkDone",
+      "channel": "Gettin' Junk Done",
+      "views": 159368
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 124188,
+     "n": 3,
+     "best": {
+      "id": "vTcNfhOpEmM",
+      "title": "2000-2005 Hyundai Accent front strut replacement",
+      "channel": "fupabox",
+      "views": 95973
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 98098,
+     "n": 3,
+     "best": {
+      "id": "x5PtpeMbuxI",
+      "title": "Front brake pad replacement 2000-2005 Hyundai Accent pads rotor Excel Install Remove Replace How to",
+      "channel": "Fixing cars and stuff",
+      "views": 61667
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "eRiN52fu4GQ",
+     "title": "turn signal problems 2000 Hyundai accent",
+     "channel": "Jose Diaz",
+     "views": 1613
+    },
+    {
+     "id": "_w9JnjWF4Zo",
+     "title": "2000 Hyundai Accent Review",
+     "channel": "Men and Motors",
+     "views": 183129
+    },
+    {
+     "id": "bydJ03yrPbI",
+     "title": "Review Hyundai Accent 1.3i 84hp 12v year 2004 A very complete and versatile car",
+     "channel": "SomosdeMotor",
+     "views": 86147
     }
    ],
    "costs": null
@@ -40743,7 +41249,30 @@
      "views": 36053
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 51000,
+     "lo": 42000.0,
+     "hi": 60000.0,
+     "n": 4,
+     "videos": 4,
+     "id": "Fn_htHFC4cw",
+     "t": 43,
+     "title": "The 2022 Kia Carnival Is a High-Tech Luxury Minivan"
+    },
+    "msrp": {
+     "median": 40000,
+     "lo": 36800.0,
+     "hi": 48000.0,
+     "n": 30,
+     "videos": 25,
+     "id": "Fn_htHFC4cw",
+     "t": 14,
+     "title": "The 2022 Kia Carnival Is a High-Tech Luxury Minivan"
+    },
+    "items": []
+   }
   }
  ]
 }
