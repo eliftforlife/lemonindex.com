@@ -28036,7 +28036,44 @@
      "views": 368331
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 36395,
+     "lo": 35790.0,
+     "hi": 37000.0,
+     "n": 4,
+     "videos": 4,
+     "id": "VEOnLIgWvw8",
+     "t": 834,
+     "title": "How Reliable Is a Kia Telluride After a Year? Long-Term 2020 Kia Telluride Review"
+    },
+    "msrp": {
+     "median": 40000,
+     "lo": 35800.0,
+     "hi": 46525.0,
+     "n": 29,
+     "videos": 24,
+     "id": "tEUaZMS8j7Q",
+     "t": 2193,
+     "title": "Is The 2020 Kia Telluride The New 3-Row SUV King?"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 335,
+       "lo": 200.0,
+       "hi": 600.0,
+       "n": 7,
+       "videos": 4,
+       "id": "omoEmTTDHjk",
+       "t": 1708,
+       "title": "I Surprised My Wife With a Fully Loaded Rebuilt 2024 Kia Telluride!"
+      }
+     ]
+    ]
+   }
   }
  ],
  "subaru-ascent": [
@@ -36942,7 +36979,35 @@
      "views": 47465
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 35000,
+     "lo": 34100.0,
+     "hi": 43000.0,
+     "n": 11,
+     "videos": 11,
+     "id": "N6srb_QmYCE",
+     "t": 24,
+     "title": "2021 BMW X1 // Is the Most Affordable BMW any Good?? ($35k)"
+    },
+    "items": [
+     [
+      "Tires",
+      {
+       "median": 190,
+       "lo": 100.0,
+       "hi": 280.0,
+       "n": 2,
+       "videos": 2,
+       "id": "XlGw17mEMb4",
+       "t": 645,
+       "title": "2019 BMW X1 review - what other reviewers missed!"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -37011,7 +37076,35 @@
      "views": 764496
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 46450,
+     "lo": 40900.0,
+     "hi": 50000.0,
+     "n": 42,
+     "videos": 32,
+     "id": "rYWtJ0OE6_4",
+     "t": 222,
+     "title": "Road Tripping The 2023 BMW X1 — What's it Like?"
+    },
+    "items": [
+     [
+      "Steering & suspension",
+      {
+       "median": 575,
+       "lo": 550.0,
+       "hi": 600.0,
+       "n": 4,
+       "videos": 3,
+       "id": "LR8z0Z6VvBU",
+       "t": 620,
+       "title": "2025 BMW X1 Xdrive28i: TEST DRIVE+FULL REVIEW"
+      }
+     ]
+    ]
+   }
   }
  ],
  "mercedes-benz-c-class": [
@@ -37891,6 +37984,68 @@
      "title": "Mercedes E-Class coupe 2014 review - Carbuyer",
      "channel": "Carbuyer",
      "views": 1116076
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023
+   ],
+   "gen": "2017–2023 Mercedes-Benz E-Class",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 76045220,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 542304,
+     "n": 3,
+     "best": {
+      "id": "blt8cYCL7ko",
+      "title": "Mercedes E-Class | Service Reset | 2018 W213",
+      "channel": "MercMan Tips",
+      "views": 386716
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 131708,
+     "n": 1,
+     "best": {
+      "id": "-8-HR5xb9M8",
+      "title": "Two Mercedes E Class’ 2017 654 Engine Knocking Noise In And Out Same Day",
+      "channel": "Enka Motors",
+      "views": 131708
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "WzpbfxvGprQ",
+     "title": "Should You Buy a MERCEDES E CLASS? (Test Drive & Review W213 E220d)",
+     "channel": "High Peak Autos",
+     "views": 412650
+    },
+    {
+     "id": "JlQH9Jm_eh8",
+     "title": "Mercedes-AMG E 63 Estate 2018 review - Carbuyer",
+     "channel": "Carbuyer",
+     "views": 127464
+    },
+    {
+     "id": "tshl9KwkruM",
+     "title": "Mercedes E-Class W213 In-Depth Buyers Guide (2016-2023) Avoid faults and common problems",
+     "channel": "The Miles Driven",
+     "views": 127387
     }
    ],
    "costs": null
