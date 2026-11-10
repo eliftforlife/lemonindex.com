@@ -29017,7 +29017,21 @@
      "views": 85808
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 16995,
+     "lo": 15000.0,
+     "hi": 22000.0,
+     "n": 7,
+     "videos": 7,
+     "id": "1tfWPsx9do4",
+     "t": 51,
+     "title": "2007 Jeep Patriot Review - Kelley Blue Book"
+    },
+    "items": []
+   }
   }
  ],
  "chevrolet-suburban": [
@@ -30327,6 +30341,137 @@
    }
   }
  ],
+ "gmc-terrain": [
+  {
+   "years": [
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017
+   ],
+   "gen": "2010–2017 GMC Terrain",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 12933731,
+   "topics": [
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 635846,
+     "n": 3,
+     "best": {
+      "id": "_sKDb2TMRe0",
+      "title": "How to fix reduced engine power mode on GMC and Chevy / Throttle body cleaning on 2010 GMC Terrain",
+      "channel": "DIY with Chris Home Projects",
+      "views": 565031
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 623224,
+     "n": 7,
+     "best": {
+      "id": "7kPYDT_YEEw",
+      "title": "How to change a battery in a GMC Terrain (2014-18)",
+      "channel": "OldSoulMillennial",
+      "views": 202397
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 450302,
+     "n": 7,
+     "best": {
+      "id": "bSQvZvgKN2c",
+      "title": "GMC Terrain - HOW TO RECHARGE A/C AIR CONDITIONING BY YOURSELF (2010 - 2017)",
+      "channel": "QuiteAlright",
+      "views": 101825
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 409356,
+     "n": 1,
+     "best": {
+      "id": "77qiVc9ld_c",
+      "title": "How to check and fill transmission fluid on a 2010-2017 GMC Terrain, Chevy Equinox 2.4L",
+      "channel": "George Melnik",
+      "views": 409356
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 210623,
+     "n": 4,
+     "best": {
+      "id": "QXc-v7FT_JE",
+      "title": "Replace and Program ABS Module on 2014 GMC Terrain | ABS Light & Code C056D",
+      "channel": "South Main Auto LLC",
+      "views": 96134
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 185592,
+     "n": 7,
+     "best": {
+      "id": "HSpEk4hEZy4",
+      "title": "2012 GMC Terrain Engine rattle noise on start up, cold start, Stretched timing chain, Timing codes",
+      "channel": "Video Service Information",
+      "views": 47144
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 173711,
+     "n": 6,
+     "best": {
+      "id": "0x9BvJwFyOs",
+      "title": "2011 GMC Terrain Oil Life Reset",
+      "channel": "Midwest Auto Care & Transmission Center",
+      "views": 51415
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 167472,
+     "n": 2,
+     "best": {
+      "id": "i0vSHFwIa3Q",
+      "title": "GMC Terrain - Reset / Clear TPMS Tire Pressure Light (2010 - 2017)",
+      "channel": "QuiteAlright",
+      "views": 135559
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "CGuVyS9XSq4",
+     "title": "GMC Terrain - TOP PROBLEMS & ISSUES 2010 - 2017 (common fixes, repairs, defects)",
+     "channel": "QuiteAlright",
+     "views": 177464
+    },
+    {
+     "id": "uy9uYdQpvPI",
+     "title": "2010-2017 Chevrolet Equinox / GMC Terrain Problems - Should You Buy",
+     "channel": "car PROblems",
+     "views": 38600
+    },
+    {
+     "id": "KFsOI3ctsjg",
+     "title": "2011 GMC terrain motor problems",
+     "channel": "Jayson Watz",
+     "views": 12933
+    }
+   ],
+   "costs": null
+  }
+ ],
  "gmc-yukon": [
   {
    "years": [
@@ -30581,6 +30726,133 @@
      "title": "2012 GMC Yukon Denali - Electrical Problems - Multiple Codes PO573 C0196 B1235 B2555 U0233",
      "channel": "FrugalPrepper's Garage and Garden",
      "views": 22810
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ],
+   "gen": "2015–2020 GMC Yukon",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 26812118,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 1152286,
+     "n": 9,
+     "best": {
+      "id": "lYl1Sdix6ow",
+      "title": "2015 - 2020 GMC Yukon Key Fob Battery Replacement - How To Replace, Change Remote Key Fob Batteries",
+      "channel": "PYR Automotive ",
+      "views": 245119
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 828579,
+     "n": 3,
+     "best": {
+      "id": "KYVhW80OcOM",
+      "title": "Head light bulb change 2015-2020 Yukon, Tahoe, Suburban, Sierra, Silverado, Escalade GMC, Chevy",
+      "channel": "Danny Johnson’s Garage",
+      "views": 476154
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 435259,
+     "n": 5,
+     "best": {
+      "id": "ym5msyZYeik",
+      "title": "2015 - 2020 GMC Yukon Cabin Air Filter - How to Change Remove Replace - Replacement Location",
+      "channel": "PYR Automotive ",
+      "views": 169975
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 407528,
+     "n": 2,
+     "best": {
+      "id": "aEfgkxWdBYw",
+      "title": "Thermostat Replacement Yukon, Tahoe, Sierra, Silverado, Escalade GMC, Chevy 2014-2020 P0128",
+      "channel": "Danny Johnson’s Garage",
+      "views": 376435
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 402888,
+     "n": 6,
+     "best": {
+      "id": "OLauQEYZrNk",
+      "title": "2015-2020 GM Front Strut replacement: Magneride Yukon Tahoe Suburban Sierra Escalade Chevy GMC",
+      "channel": "Danny Johnson’s Garage",
+      "views": 119543
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 342936,
+     "n": 3,
+     "best": {
+      "id": "Ok6o18tD82E",
+      "title": "2015 - 2020 GMC Yukon Tail Light Removal - How To Remove & Change Brake Reverse Light Taillight",
+      "channel": "PYR Automotive ",
+      "views": 250752
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 229699,
+     "n": 3,
+     "best": {
+      "id": "Euefcr8i-EM",
+      "title": "2015 2016 2017 2018 2019 gmc Yukon no crank no start \"fixed!!\"",
+      "channel": "The Joey Show",
+      "views": 132844
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 184560,
+     "n": 4,
+     "best": {
+      "id": "RvE3O-CPJDU",
+      "title": "How to Change Oil Yourself on GMC Yukon 4th Generation 2015-20",
+      "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+      "views": 57608
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "EHxPcQEheds",
+     "title": "Top 5 Problems GMC Yukon SUV 4th Gen 2015-20",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 395174
+    },
+    {
+     "id": "uLDnq7Dbsus",
+     "title": "Common Problems Yukon, Tahoe, Suburban and how to fix them 2015-2020",
+     "channel": "Danny Johnson’s Garage",
+     "views": 247393
+    },
+    {
+     "id": "S91QNB8gqSs",
+     "title": "Everything wrong with my Yukon over 3 years. 2015-2020 Common Problems Yukon, Tahoe, Suburban GMC",
+     "channel": "Danny Johnson’s Garage",
+     "views": 202307
     }
    ],
    "costs": null
@@ -31753,7 +32025,21 @@
      "views": 1456206
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 22500,
+     "lo": 20000.0,
+     "hi": 25000.0,
+     "n": 4,
+     "videos": 4,
+     "id": "t4HD1o3GB80",
+     "t": 593,
+     "title": "Off-Road Review: 2016 Honda HR-V 4WD on Everyman Driver"
+    },
+    "items": []
+   }
   },
   {
    "years": [
@@ -31844,7 +32130,44 @@
      "views": 173146
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 30000,
+     "lo": 27290.0,
+     "hi": 30000.0,
+     "n": 3,
+     "videos": 3,
+     "id": "itcRZ91S_lY",
+     "t": 28,
+     "title": "Is This 2023 Honda HRV Sport WORTH A Price Of $27,290?"
+    },
+    "msrp": {
+     "median": 27000,
+     "lo": 25000.0,
+     "hi": 28950.0,
+     "n": 28,
+     "videos": 25,
+     "id": "CG6xGxRMYMM",
+     "t": 24,
+     "title": "2023 Honda HR-V Sport & EX-L – Redline: First Look"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 115,
+       "lo": 89.99,
+       "hi": 140.0,
+       "n": 4,
+       "videos": 2,
+       "id": "QL26FYPUpR4",
+       "t": 830,
+       "title": "2023 Honda HR-V Sport Ownership POV Review. How Has It Been Owning It For 2 Years and 16k Miles?"
+      }
+     ]
+    ]
+   }
   }
  ],
  "nissan-pathfinder": [
@@ -32371,7 +32694,26 @@
      "views": 53218
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 250,
+       "lo": 20.0,
+       "hi": 600.0,
+       "n": 7,
+       "videos": 6,
+       "id": "znS90eXNBLc",
+       "t": 22,
+       "title": "2006 Nissan Murano Door Lock Actuator Replacement (Dorman)"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -32498,7 +32840,26 @@
      "views": 43108
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 230,
+       "lo": 50.0,
+       "hi": 300.0,
+       "n": 8,
+       "videos": 5,
+       "id": "g3NBb01pZJU",
+       "t": 258,
+       "title": "How to replace change Headlight bulb in Nissan Murano 2009-2014"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
