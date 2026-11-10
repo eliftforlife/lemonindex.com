@@ -41015,6 +41015,133 @@
    }
   }
  ],
+ "kia-forte": [
+  {
+   "years": [
+    2010,
+    2011,
+    2012,
+    2013
+   ],
+   "gen": "2010–2013 Kia Forte",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 9442470,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 536406,
+     "n": 9,
+     "best": {
+      "id": "lqkfpBtwV90",
+      "title": "2010 Kia Forte Headlight Bulb Replacement & Relay and Fuse Locations",
+      "channel": "Lehew",
+      "views": 133582
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 205240,
+     "n": 7,
+     "best": {
+      "id": "AuTnsIKIcHg",
+      "title": "How to Replace MAP Sensor 2010-2013 Kia Forte Koup",
+      "channel": "TRQ",
+      "views": 54396
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 181742,
+     "n": 4,
+     "best": {
+      "id": "pcEXPhc1M2w",
+      "title": "Oil Change & Filter Replacement Kia Forte 2009-2013",
+      "channel": "2CarPros",
+      "views": 163657
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 179940,
+     "n": 4,
+     "best": {
+      "id": "WKxIDEpmepw",
+      "title": "2011 Kia Forte Koup - Change brake tail light bulb - How To",
+      "channel": "Canadian Eh",
+      "views": 103081
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 111886,
+     "n": 2,
+     "best": {
+      "id": "ENVTqOebBGw",
+      "title": "How to Replace Accessory Drive Belt Tensioner 2010-2013 Kia Forte Koup 2.4L L4",
+      "channel": "TRQ",
+      "views": 58520
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 108405,
+     "n": 1,
+     "best": {
+      "id": "im59xQuZguk",
+      "title": "2011 Kia Forte Koup - Low Beam Light Replacement",
+      "channel": "FullThrottle099",
+      "views": 108405
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 93372,
+     "n": 2,
+     "best": {
+      "id": "Ai6Qmjnbqa0",
+      "title": "2010 Kia Forte Transmission Oil change How To",
+      "channel": "Martin Acosta",
+      "views": 62029
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 92614,
+     "n": 3,
+     "best": {
+      "id": "PK6TnwhDj74",
+      "title": "KIA SOUL AND FORTE 2.0L TIMING CHAIN REPLACEMENT (2012-2019)",
+      "channel": "Gabriel Reese Mobile Mechanic",
+      "views": 52385
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "J9DpWGkYhGY",
+     "title": "2011 Kia Forte engine ticking problems",
+     "channel": "Nameloc",
+     "views": 110506
+    },
+    {
+     "id": "JvtOafx5kKY",
+     "title": "Top 5 Problems Kia Forte Koup 2010-2013 1st Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 61905
+    },
+    {
+     "id": "Pw0zSPaBWpw",
+     "title": "2012 Kia Forte cold ENGINE PROBLEMS",
+     "channel": "Minnesota waterneck",
+     "views": 7624
+    }
+   ],
+   "costs": null
+  }
+ ],
  "kia-rio": [
   {
    "years": [
@@ -49741,7 +49868,26 @@
      "views": 12125
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 45,
+       "lo": 40.0,
+       "hi": 125.0,
+       "n": 8,
+       "videos": 5,
+       "id": "jBXVloULKSM",
+       "t": 272,
+       "title": "😁 Mercedes ML (W163): лучше, чем \"гелик\" и надёжнее, чем BMW Х5?"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
