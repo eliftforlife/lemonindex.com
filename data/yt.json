@@ -29956,6 +29956,133 @@
    }
   }
  ],
+ "dodge-durango": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003
+   ],
+   "gen": "1998–2003 Dodge Durango",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 10089981,
+   "topics": [
+    {
+     "name": "Cooling system",
+     "views": 889825,
+     "n": 10,
+     "best": {
+      "id": "C88q8eBhALo",
+      "title": "Changing the thermostat on a 2002 Dodge Durango with a 4.7L",
+      "channel": "carlmorones",
+      "views": 348781
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 483157,
+     "n": 4,
+     "best": {
+      "id": "qpg7FTMBTRU",
+      "title": "Dodge Dakota/Durango Radio/Stereo/Deck Install 2001-2004",
+      "channel": "Tony The Truck Guy",
+      "views": 332419
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 387230,
+     "n": 3,
+     "best": {
+      "id": "ZLQsvjViv8k",
+      "title": "1998 Dodge Durango No Start or No Bus or Randomly Stalls #dodge #offroad #diy #mechanic #howto",
+      "channel": "Jason Fellon",
+      "views": 337413
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 266363,
+     "n": 2,
+     "best": {
+      "id": "2MZbdQk5h-w",
+      "title": "2000 dodge durango 5.9L fan clutch removal",
+      "channel": "Angel's Garage ",
+      "views": 176366
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 219698,
+     "n": 1,
+     "best": {
+      "id": "fQ9hy-8_Mfc",
+      "title": "How to Install Fuel Pump E7117M 1998 - 2003 Dodge Durango",
+      "channel": "Airtex-ASC Performance Pumps",
+      "views": 219698
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 216214,
+     "n": 1,
+     "best": {
+      "id": "nSqvYkSwBiA",
+      "title": "How to Replace the Power Steering Pump on a 2001 Dodge Durango SLT 4x4",
+      "channel": "Joe Williams",
+      "views": 216214
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 187960,
+     "n": 7,
+     "best": {
+      "id": "kCg4fUXFTt8",
+      "title": "1998 Dodge Durango how to recharge AC",
+      "channel": "Jason Fellon",
+      "views": 68838
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 145517,
+     "n": 1,
+     "best": {
+      "id": "yfR7A1CVzuQ",
+      "title": "1998 Dodge Durango ABS and Brake light Repair",
+      "channel": "Jason Fellon",
+      "views": 145517
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "uRdmoWv8Pgc",
+     "title": "Top 5 Problems Dodge Durango SUV 1st Generation 1998-2003",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 247745
+    },
+    {
+     "id": "1kwxLf0BcL0",
+     "title": "Durango Heater Core Problems, 2000 Dodge Durango",
+     "channel": "Lee Pfeifer",
+     "views": 99246
+    },
+    {
+     "id": "GgWWi2FsDcA",
+     "title": "Common Problems with the 2000 Dodge Durango - 4.7L V8 Magnum",
+     "channel": "Second Hand Speed",
+     "views": 58210
+    }
+   ],
+   "costs": null
+  }
+ ],
  "dodge-journey": [
   {
    "years": [
@@ -38411,7 +38538,26 @@
      "views": 8601
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 290,
+       "lo": 120.0,
+       "hi": 400.0,
+       "n": 5,
+       "videos": 4,
+       "id": "_yO5lLB_yWE",
+       "t": 126,
+       "title": "2011 Hyundai Accent | Dealer Cost Reveal"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
