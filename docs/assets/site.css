@@ -918,21 +918,27 @@ details.qa p { margin: 0 0 18px; color: var(--ink2); max-width: 65ch; }
   .yfx .yfl { grid-template-columns: 1fr 1fr; }
   .yfx .ygs { grid-auto-flow: row; grid-auto-columns: auto; grid-template-columns: repeat(3, 1fr); overflow: visible; }
 }
-/* 11-04 "What owners say it costs" (inside the YouTube section) */
-.yfx .ycost { margin: 0 0 22px; }
-.yfx .ycost h3, .yfx .yf-g1 { margin: 0 0 10px; font-size: 17px; }
-.yfx .yc-bs { display: grid; gap: 10px; margin-bottom: 10px; }
-.yfx .yc-b { display: grid; gap: 2px; padding: 14px 16px; border-radius: 16px; background: var(--lemon-soft); }
-.yfx .yc-b small { font-weight: 600; color: var(--ink2); font-size: 13px; }
-.yfx .yc-b b { font-size: 30px; line-height: 1.1; font-variant-numeric: tabular-nums; }
-.yfx .yc-b span { font-size: 13px; color: var(--ink2); line-height: 1.4; }
-.yfx .yc-h { justify-self: start; margin-top: 4px; font-size: 13px; font-weight: 700; color: var(--ink); }
-.yfx .yc-l { list-style: none; margin: 0; padding: 0; border: 1px solid var(--line); border-radius: 16px; background: #fff; }
-.yfx .yc-l li { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 12px; row-gap: 1px; padding: 12px 14px; border-top: 1px solid var(--line); }
-.yfx .yc-l li:first-child { border-top: 0; }
-.yfx .yc-l li span { font-weight: 600; } .yfx .yc-l li b { text-align: right; font-variant-numeric: tabular-nums; }
-.yfx .yc-l li small { color: var(--mute); font-size: 12px; } .yfx .yc-l li .yc-h { justify-self: end; margin: 0; font-size: 12px; }
-@media (min-width: 760px) { .yfx .yc-bs { grid-template-columns: 1fr 1fr; } }
+/* 11-10 "What owners say it costs" (Elijah: "make this visually better"): uniform tiles, a range bar per cost, quoted prices as a small strip */
+.yfx .yf-s { font-size: 14px; }
+.yfx .ycost { margin: 0 0 26px; }
+.yfx .ycost h3, .yfx .yf-g1 { margin: 0 0 12px; font-size: 17px; }
+.yfx .yc-g { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.yfx .yc-g li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px 12px; align-items: center; padding: 14px 16px; border: 1px solid var(--line); border-radius: 16px; background: #fff; min-width: 0; }
+.yfx .yc-t { display: grid; gap: 1px; min-width: 0; } .yfx .yc-t span { font-weight: 700; font-size: 16px; line-height: 1.25; } .yfx .yc-t small { font-size: 12px; color: var(--mute); }
+.yfx .yc-g li > b { font-size: 24px; font-weight: 900; line-height: 1; letter-spacing: -.01em; font-variant-numeric: tabular-nums; text-align: right; }
+.yfx .yc-r { grid-column: 1 / -1; position: relative; display: block; height: 8px; border-radius: 8px; background: var(--soft); }
+.yfx .yc-r i { position: absolute; top: 0; bottom: 0; border-radius: 8px; background: var(--lemon); }
+.yfx .yc-r em { position: absolute; top: -3px; width: 4px; height: 14px; margin-left: -2px; border-radius: 3px; background: var(--ink); }
+.yfx .yc-m { grid-column: 1 / -1; display: flex; justify-content: space-between; align-items: center; gap: 10px; min-width: 0; }
+.yfx .yc-m small { font-size: 12.5px; color: var(--mute); font-variant-numeric: tabular-nums; }
+.yfx .yc-h { flex: none; display: inline-flex; align-items: center; gap: 4px; padding: 6px 11px; border-radius: 999px; background: var(--soft); color: var(--ink); font-size: 12.5px; font-weight: 700; text-decoration: none; white-space: nowrap; }
+.yfx .yc-h:hover { background: var(--lemon-soft); } .yfx .yc-h:focus-visible { outline: 2.5px solid #e9b300; outline-offset: 2px; }
+.yfx .yc-ph { margin-top: 20px !important; }
+.yfx .yc-p { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+.yfx .yc-p li { display: grid; gap: 2px; justify-items: start; padding: 12px 14px; border-radius: 14px; background: var(--soft); }
+.yfx .yc-p small { font-size: 12px; font-weight: 700; color: var(--mute); } .yfx .yc-p b { font-size: 19px; font-weight: 900; font-variant-numeric: tabular-nums; } .yfx .yc-p span { font-size: 12px; color: var(--mute); }
+.yfx .yc-p .yc-h { margin-top: 4px; padding: 4px 9px; background: #fff; }
+@media (min-width: 760px) { .yfx .yc-g { grid-template-columns: 1fr 1fr; } }
 /* 11-04 inline support card (support.js v3): sits right under the page's best data */
 .supc { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 12px 14px; align-items: start; margin: 18px 0 8px; padding: 16px; border-radius: 18px; background: var(--lemon-soft); }
 .supc img { border-radius: 10px; }

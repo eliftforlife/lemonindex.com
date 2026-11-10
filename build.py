@@ -207,7 +207,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}{img or "/assets/og.png"}"><meta name="twitter:card" content="summary_large_image">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://challenges.cloudflare.com https://www.googletagmanager.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; frame-src https://challenges.cloudflare.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cloudflareinsights.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://vpic.nhtsa.dot.gov https://lemon-survey.elift08.workers.dev https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="google-adsense-account" content="{ADS}"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=1110f"><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=1" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
+<link rel="stylesheet" href="/assets/site.css?v=1110g"><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=1" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
 <body>{gh_header(path)}
 <main>{body}{CITE if path.startswith('/cars/') else ''}{'' if path == '/vote/' else ask_html(path)}</main>
 <footer class="foot"><div class="cta"><div><h2>New car studies, straight from the data.</h2><p>Every study becomes a video. Subscribe to see the next one first.</p></div><a class="btn" href="{YT}?sub_confirmation=1" rel="noopener">Subscribe on YouTube</a></div>
@@ -483,28 +483,31 @@ def ytfix(key, y=None):
     tp = d['topics']; first = ''.join(li(t) for t in tp[:4]); rest = ''.join(li(t) for t in tp[4:])
     same = f' The {y} is the same {d["noun"]}.' if y and d['noun'] else ''
     cards = ''.join(f'<a class="yg" href="{W(v)}" target="_blank" rel="noopener nofollow">{TH(v, 320)}<b>{E(v["title"])}</b><small>{E(v["channel"])} · {_vw(v["views"])} views</small></a>' for v in d['guides'])
-    cst = d.get('costs'); costh = ''
-    if cst:
+    cst = d.get('costs'); costh = ''; costcap = ''
+    if cst:   # 11-10 (Elijah: "make this visually better"): uniform cost tiles with a range bar, prices as a small separate strip, disclaimer behind the (i)
         M = lambda n: f'${n / 1e6:.2f}M' if n >= 1e6 else f'${n:,.0f}'
         R = lambda n: M(float(f'{n:.2g}')) if n >= 100 else M(n)   # ranges: 2 significant figures
-        HEAR = lambda x: f'<a class="yc-h" href="https://www.youtube.com/watch?v={x["id"]}&t={x["t"]}s" target="_blank" rel="noopener nofollow">Hear it &#9654;</a>'
-        big = []
-        if cst.get('paid'):
-            pp = cst['paid']; who = ' · ' + ', '.join(w for w in ([f'{pp["private"]} private party'] if pp['private'] else []) + ([f'{pp["dealer"]} from dealers'] if pp['dealer'] else []))
-            big.append(f'<div class="yc-b"><small>Price owners say they paid</small><b>{M(pp["median"])}</b><span>middle of {pp["n"]} prices in {pp["videos"]} videos{who if (pp["private"] or pp["dealer"]) else ""}; most between {R(pp["lo"])} and {R(pp["hi"])}.</span>{HEAR(pp)}</div>')
-        if cst.get('used'):
-            pu = cst['used']; big.append(f'<div class="yc-b"><small>Used prices people quote</small><b>{M(pu["median"])}</b><span>middle of {pu["n"]} prices in {pu["videos"]} videos; most fall between {R(pu["lo"])} and {R(pu["hi"])}.</span>{HEAR(pu)}</div>')
-        if cst.get('msrp'):
-            pm = cst['msrp']; big.append(f'<div class="yc-b"><small>New price people quote</small><b>{M(pm["median"])}</b><span>middle of {pm["n"]} quotes in {pm["videos"]} videos; most between {R(pm["lo"])} and {R(pm["hi"])}.</span>{HEAR(pm)}</div>')
-        rows = ''.join(f'<li><span>{E(k)}</span><b>{M(x["median"])}</b><small>{x["videos"]} videos · most {R(x["lo"])}–{R(x["hi"])}</small>{HEAR(x)}</li>' for k, x in cst['items'])
-        costh = (f'<div class="ycost"><h3>What owners say it costs</h3>' + (f'<div class="yc-bs">{"".join(big)}</div>' if big else '')
-                 + (f'<ul class="yc-l">{rows}</ul>' if rows else '')
-                 + '<p class="yc-cap">Dollar amounts people say out loud in these videos (median, so one wild number can&#39;t swing it). Not verified sales; real prices depend on year, miles, condition and where you live. Tap Hear it to jump to the moment.</p></div>')
+        HEAR = lambda x, what: f'<a class="yc-h" href="https://www.youtube.com/watch?v={x["id"]}&t={x["t"]}s" target="_blank" rel="noopener nofollow" aria-label="Hear it: {E(what)} in the video">&#9654; Hear it</a>'
+        stats = []
+        for key, label in (('paid', 'Owners paid'), ('used', 'Used price'), ('msrp', 'Price when new')):
+            x = cst.get(key)
+            if x: stats.append(f'<li><small>{label}</small><b>{M(x["median"])}</b><span>{x["videos"]} videos</span>{HEAR(x, label.lower())}</li>')
+        def tile(k, x):
+            nm, sub = (k.split(' (', 1) + [''])[:2]; sub = sub.rstrip(')')
+            top = max(x['hi'], x['median']) * 1.25 or 1; L = lambda v: max(0, min(100, round(v / top * 100, 1)))
+            return (f'<li><div class="yc-t"><span>{E(nm)}</span>' + (f'<small>{E(sub)}</small>' if sub else '') + '</div>'
+                    f'<b>{M(x["median"])}</b>'
+                    f'<span class="yc-r" aria-hidden="true"><i style="left:{L(x["lo"])}%;width:{max(2, L(x["hi"]) - L(x["lo"]))}%"></i><em style="left:{L(x["median"])}%"></em></span>'
+                    f'<div class="yc-m"><small>most {R(x["lo"])}–{R(x["hi"])} · {x["videos"]} videos</small>{HEAR(x, nm)}</div></li>')
+        tiles = ''.join(tile(k, x) for k, x in cst['items'])
+        costh = ('<div class="ycost">' + (f'<h3>What owners say it costs</h3><ul class="yc-g">{tiles}</ul>' if tiles else '')
+                 + (f'<h3 class="yc-ph">Prices people quote</h3><ul class="yc-p">{"".join(stats)}</ul>' if stats else '') + '</div>')
+        costcap = '<p class="yc-cap">Costs are the middle (median) of the dollar amounts people say out loud in these videos, so one wild number can&#39;t swing it. They aren&#39;t verified bills or sales; real prices depend on year, miles, condition and where you live. Tap Hear it to jump to the moment.</p>'
     cap = 'Views show how many people looked up each fix, not how often it breaks.' if d['kind'] == 'repair' else 'Views show what people watch most, not how often something goes wrong.'
-    return (f'<section class="yc yfx" id="diy"><h2>{d["head"]}</h2><p class="yf-s">From {d["n"]} YouTube videos about the {E(d["gen"])}, {_vw(d["views"])} views.{same}</p>'
+    return (f'<section class="yc yfx" id="diy"><h2>{d["head"]}</h2><p class="yf-s">From {d["n"]} YouTube videos · {_vw(d["views"])} views · {E(d["gen"])}</p>'
             + (costh + '<h3 class="yf-g yf-g1">Most-watched topics</h3>' if costh else '') + f'<ol class="yfl">{first}</ol>' + (f'<details class="yf-more"><summary>Show {len(tp) - 4} more</summary><ol class="yfl">{rest}</ol></details>' if rest else '')
             + (f'<h3 class="yf-g">Before you buy, watch</h3><div class="ygs">{cards}</div>' if cards else '')
-            + f'<p class="yc-cap">{cap} Videos belong to their creators; we link to them.</p></section>')
+            + f'<p class="yc-cap">{cap} Videos belong to their creators; we link to them.{(" " + E(same.strip())) if same else ""}</p>' + costcap + '</section>')
 mi = lambda n: f'{int(n):,} miles'
 REPORT_NOTE = '<p class="note">The full Lemon Index report adds the mileage for every problem area, every recall in plain English and what to check before you buy. <b>Coming soon.</b></p>'
 RPART = lambda s: PART.get(s.split(':')[0], s.split(':')[0].lower()).replace('service brakes, hydraulic', 'brakes')
