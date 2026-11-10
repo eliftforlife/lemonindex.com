@@ -30342,6 +30342,142 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2011–2025 Dodge Durango",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 45017915,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 1053406,
+     "n": 8,
+     "best": {
+      "id": "1Qx9ujWxyjQ",
+      "title": "BATTERY LOCATION, REPLACEMENT - Dodge Durango / Jeep Grand Cherokee 2011 and UP",
+      "channel": "SuperPete",
+      "views": 214497
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 696170,
+     "n": 3,
+     "best": {
+      "id": "SPMyDp82RKg",
+      "title": "Towed in Blown UP! 2020 Dodge Durango 3.6 Overheating!",
+      "channel": "Rainman Ray's Repairs",
+      "views": 448114
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 279145,
+     "n": 1,
+     "best": {
+      "id": "mEtvKBxLaII",
+      "title": "2011-2019 Dodge Durango 3.6L Spark Plug Replacement",
+      "channel": "MechDjango",
+      "views": 279145
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 229054,
+     "n": 2,
+     "best": {
+      "id": "CJyVqzDkA8c",
+      "title": "How to check transmission fluid 2012 Dodge Durango",
+      "channel": "Auto Repair Tips",
+      "views": 141734
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 171691,
+     "n": 1,
+     "best": {
+      "id": "75JUp4JGQiY",
+      "title": "2014 - 2021 Dodge Durango - How To Reset Oil Life to 100% - Clear Oil Change Required Light Messsage",
+      "channel": "PYR Automotive ",
+      "views": 171691
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 168520,
+     "n": 2,
+     "best": {
+      "id": "GUfomT-nEnE",
+      "title": "2013 Dodge Durango rt won't start",
+      "channel": "Manny",
+      "views": 89654
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 106982,
+     "n": 1,
+     "best": {
+      "id": "LNQpzGrISEg",
+      "title": "2012 Dodge Durango AC/Heat Temp Blend Door Actuator Issues",
+      "channel": "Family, Cars, and Speed",
+      "views": 106982
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 79037,
+     "n": 1,
+     "best": {
+      "id": "YdPj6JhO0BE",
+      "title": "2016 Dodge Durango oil life reset",
+      "channel": "Triple T",
+      "views": 79037
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "AJnyuUSdZqY",
+     "title": "Top 5 Problems Dodge Durango SUV 2011-2023 3rd Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 324343
+    },
+    {
+     "id": "1Sj6YR20Pco",
+     "title": "Common problems with the 2011-2021 Dodge Durango (3rd gen).",
+     "channel": "El papá de los autos",
+     "views": 209858
+    },
+    {
+     "id": "BrejWkGa0Mo",
+     "title": "10 Most Common Problems Of A Dodge Durango (3rd Gen, 2011-2022)",
+     "channel": "MaxTheCarGuy",
+     "views": 167782
+    }
+   ],
+   "costs": null
   }
  ],
  "dodge-journey": [
