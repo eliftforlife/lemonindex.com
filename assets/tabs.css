@@ -1,0 +1,84 @@
+/* 11-10 tabbed car pages (tabbed.py): centered hero, sticky tab bar, Years / Engines toggle, engine chart. Uses site.css tokens. */
+.tbl { max-width: 1040px; margin: 0 auto; }
+/* hero: one centered column, the car (or year slider) first and large */
+.tbl .tb-hero { display: flex; flex-direction: column; align-items: center; text-align: center; padding-top: clamp(18px, 3vw, 36px); max-width: 860px; margin: 0 auto; grid-template-columns: none; }
+.tbl .tb-hero .ph-e { order: 0; font-size: 14px; color: var(--mute); margin: 0 0 6px; }
+.tbl .tb-hero .tb-img { width: 100%; display: flex; justify-content: center; margin: 0 0 6px; }
+.tbl .tb-hero .tb-img .yph { margin: 0; width: 100%; display: flex; justify-content: center; position: relative; }
+.tbl .tb-hero .tb-img .yph img { width: min(100%, 720px); height: auto; filter: drop-shadow(0 22px 22px rgba(0,0,0,.14)); }
+.tbl .tb-hero .tb-img .ysl { width: 100%; max-width: 760px; margin: 0 auto; }
+.tbl .tb-hero h1 { font-size: clamp(34px, 5vw, 60px); line-height: 1.04; letter-spacing: -.03em; margin: 10px 0 8px; text-wrap: balance; }
+.tbl .tb-hero .tb-ans { font-size: clamp(17px, 1.7vw, 20px); color: var(--ink2); max-width: 36em; margin: 0 auto; text-wrap: balance; }
+.tbl .tb-hero .yhero { margin: 18px auto 0; justify-content: center; }
+.tbl .tb-hero .yswitch, .tbl .tb-hero .modes { margin-top: 16px; justify-content: center; }
+.tbl .tb-hero > p:last-child { margin-top: 10px; }
+/* tab bar */
+.tbx { margin-top: clamp(24px, 4vw, 40px); }
+.tb-bar { position: sticky; top: var(--gh-h, 52px); z-index: 40; display: flex; gap: 4px; justify-content: center; padding: 8px 6px; margin: 0 auto 22px;
+  background: rgba(255,255,255,.92); -webkit-backdrop-filter: saturate(1.4) blur(14px); backdrop-filter: saturate(1.4) blur(14px); border-bottom: 1px solid var(--line);
+  overflow-x: auto; scrollbar-width: none; }
+.tb-bar::-webkit-scrollbar { display: none; }
+.tb-t { flex: 0 0 auto; font: 600 15px/1 var(--sys, inherit); color: var(--ink2); background: none; border: 0; border-radius: 999px; padding: 10px 16px; cursor: pointer; white-space: nowrap; }
+.tb-t:hover { background: var(--soft); color: var(--ink); }
+.tb-t[aria-selected="true"] { background: var(--ink); color: #fff; }
+.tb-t:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+.tb-p { display: grid; gap: clamp(28px, 4vw, 44px); outline: none; }
+.tb-p > * { margin: 0; }
+.tbjs .tb-p:not(.on) { display: none; }
+/* the tab panels' own sections sit in one column, not the old 2-column grid */
+.tbl .tb-p .yc, .tbl .tb-p .ysev, .tbl .tb-p .ybuy, .tbl .tb-p .yyears { max-width: 860px; width: 100%; margin-left: auto; margin-right: auto; }
+.tbl .tb-p .yts { max-width: 860px; margin: 0 auto; }
+/* Years / Engines toggle */
+.tg-b { display: inline-flex; gap: 2px; padding: 3px; border-radius: 999px; background: var(--soft); margin: 4px 0 18px; }
+.tg-o { font: 600 14px/1 var(--sys, inherit); border: 0; background: none; color: var(--ink2); padding: 9px 16px; border-radius: 999px; cursor: pointer; }
+.tg-o[aria-pressed="true"] { background: #fff; color: var(--ink); box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+.tg-o:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+.tbjs .tg-v:not(.on) { display: none; }
+/* engine chart: image on the left spanning its years, one row per year on the right */
+.engc { display: grid; gap: 14px; }
+.engc-h { display: grid; grid-template-columns: minmax(150px, 220px) 52px minmax(0, 1fr) 96px; gap: 12px; font-size: 12px; color: var(--mute); font-weight: 600; padding: 0 4px; }
+.engc-h em { font-style: normal; font-weight: 400; }
+.engc-h span:nth-child(3), .engc-h span:nth-child(4) { text-align: left; }
+.eg { display: grid; grid-template-columns: minmax(150px, 220px) minmax(0, 1fr); gap: 12px; align-items: start; padding: 12px 4px; border-top: 1px solid var(--line); }
+.eg-im { grid-row: 1 / span 2; position: relative; display: block; }
+.eg-im img { width: 100%; height: auto; display: block; }
+.eg-im .ii { right: 2px; bottom: 2px; }
+.eg-n { grid-column: 1; display: flex; flex-direction: column; gap: 2px; }
+.eg-n b { font-size: 16px; } .eg-n small { color: var(--mute); font-size: 12.5px; }
+.eg-r { grid-column: 2; grid-row: 1 / span 2; display: grid; gap: 4px; }
+.er { display: grid; grid-template-columns: 52px minmax(0, 1fr) 44px 52px; gap: 10px; align-items: center; padding: 4px 6px; border-radius: 8px; color: inherit; text-decoration: none; font-variant-numeric: tabular-nums; }
+a.er:hover { background: var(--soft); }
+.er.cur { background: var(--lemon-soft); }
+.er-y { font-weight: 700; }
+.er-bt { position: relative; height: 14px; background: var(--soft); border-radius: 6px; overflow: hidden; }
+.er-bt i { position: absolute; inset: 0 auto 0 0; background: var(--ink); border-radius: 6px; }
+.er-bt em { position: absolute; top: -2px; bottom: -2px; width: 2px; background: var(--lemon); }
+.er-bt.na { background: transparent; }
+.er.bad .er-bt i { background: var(--red); } .er.good .er-bt i { background: var(--ink); }
+.er b { text-align: right; font-weight: 800; } .er.bad b:not(.er-rk) { color: var(--red); }
+.er-rk { color: var(--ink); } .er .mute { color: var(--mute); font-weight: 600; }
+@media (max-width: 640px) {
+  .tb-bar { justify-content: flex-start; top: 0; margin-left: -16px; margin-right: -16px; padding-left: 12px; }
+  .tb-t { font-size: 14px; padding: 9px 13px; }
+  .engc-h { display: none; }
+  .eg { grid-template-columns: 1fr; }
+  .eg-im { grid-row: auto; max-width: 260px; margin: 0 auto; }
+  .eg-n { grid-column: 1; text-align: center; align-items: center; }
+  .eg-r { grid-column: 1; grid-row: auto; }
+  .er { grid-template-columns: 46px minmax(0, 1fr) 40px 44px; gap: 8px; }
+}
+/* 11-10 spacing fixes: the page root's own flex gap and the old sections' top margins left big empty bands around the tab bar */
+.tbl { gap: 0 !important; row-gap: 0 !important; }
+.tbl > .tbx { margin-top: clamp(20px, 3vw, 32px) !important; }
+.tbl .tb-p > * { margin-top: 0 !important; }
+.tbl .tb-p > :first-child { padding-top: 0 !important; }
+/* the year page's car sits on the page, not in a white card */
+.tbl .tb-hero .yph, .tbl .tb-hero .yph img { background: transparent !important; box-shadow: none !important; border: 0 !important; border-radius: 0 !important; }
+.tbl .tb-hero .yph img { filter: none; }
+.tbl .tb-hero .yph .ii { right: 8px; bottom: 8px; }
+.tbl .tb-p { padding-top: 0 !important; }
+@media (max-width: 640px) {
+  .tbl .tb-hero { padding-top: 12px !important; }
+  .tbl .tb-hero .yhero { flex-direction: column; align-items: center; text-align: center; }
+  .tbl .tb-hero .yhero > * { margin-left: auto; margin-right: auto; }
+}

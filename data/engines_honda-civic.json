@@ -1,0 +1,445 @@
+[
+ {
+  "id": "eb-1-2",
+  "name": "1.2 L EB",
+  "code": "EB1 / EB2",
+  "size": "1.2 L inline-4",
+  "years": [
+   1973,
+   1974,
+   1975,
+   1976,
+   1977,
+   1978,
+   1979
+  ],
+  "note": "Carbureted SOHC 4-cylinder (1,169 to 1,237 cc)",
+  "src": [
+   "https://en.wikipedia.org/wiki/Honda_E_engine"
+  ],
+  "img": {
+   "src": "/assets/engines/civic/honda-civic-eb-1-2-engine.webp",
+   "w": 640,
+   "h": 606
+  }
+ },
+ {
+  "id": "ed-1-5-cvcc",
+  "name": "1.5 L CVCC",
+  "code": "ED",
+  "size": "1.5 L inline-4",
+  "years": [
+   1975,
+   1976,
+   1977,
+   1978,
+   1979
+  ],
+  "note": "Honda CVCC lean-burn 4-cylinder (1,488 cc)",
+  "src": [
+   "https://en.wikipedia.org/wiki/Honda_E_engine"
+  ],
+  "img": {
+   "src": "/assets/engines/civic/honda-civic-ed-1-5-cvcc-engine.webp",
+   "w": 640,
+   "h": 492
+  }
+ },
+ {
+  "id": "ej-1-3",
+  "name": "1.3 L EJ",
+  "code": "EJ",
+  "size": "1.3 L inline-4",
+  "years": [
+   1980,
+   1981,
+   1982,
+   1983
+  ],
+  "note": "Carbureted CVCC 4-cylinder (1,335 cc)",
+  "src": [
+   "https://en.wikipedia.org/wiki/Honda_E_engine"
+  ],
+  "img": {
+   "src": "/assets/engines/civic/honda-civic-ej-1-3-engine.webp",
+   "w": 640,
+   "h": 573
+  }
+ },
+ {
+  "id": "em-1-5",
+  "name": "1.5 L EM",
+  "code": "EM1",
+  "size": "1.5 L inline-4",
+  "years": [
+   1980,
+   1981,
+   1982,
+   1983
+  ],
+  "note": "Carbureted CVCC 4-cylinder (1,488 cc)",
+  "src": [
+   "https://en.wikipedia.org/wiki/Honda_E_engine"
+  ],
+  "img": {
+   "src": "/assets/engines/civic/honda-civic-em-1-5-engine.webp",
+   "w": 640,
+   "h": 631
+  }
+ },
+ {
+  "id": "ev-1-3",
+  "name": "1.3 L EV",
+  "code": "EV1",
+  "size": "1.3 L inline-4",
+  "years": [
+   1984,
+   1985,
+   1986,
+   1987
+  ],
+  "note": "12-valve carbureted 4-cylinder (1,342 cc)",
+  "src": [
+   "https://en.wikipedia.org/wiki/Honda_E_engine",
+   "https://www.fueleconomy.gov/feg/download.shtml"
+  ],
+  "img": {
+   "src": "/assets/engines/civic/honda-civic-ev-1-3-engine.webp",
+   "w": 640,
+   "h": 570
+  }
+ },
+ {
+  "id": "ew-1-5",
+  "name": "1.5 L EW",
+  "code": "EW / D15A3 (Si)",
+  "size": "1.5 L inline-4",
+  "years": [
+   1984,
+   1985,
+   1986,
+   1987
+  ],
+  "note": "12-valve 4-cylinder, fuel-injected in the Si (1,488 cc)",
+  "src": [
+   "https://en.wikipedia.org/wiki/Honda_E_engine",
+   "https://en.wikipedia.org/wiki/Honda_D_engine",
+   "https://www.fueleconomy.gov/feg/download.shtml"
+  ],
+  "img": {
+   "src": "/assets/engines/civic/honda-civic-ew-1-5-engine.webp",
+   "w": 640,
+   "h": 595
+  }
+ },
+ {
+  "id": "d15",
+  "name": "1.5 L D15",
+  "code": "D15B2 / D15B7 / D15B8 / D15Z1",
+  "size": "1.5 L inline-4",
+  "years": [
+   1988,
+   1989,
+   1990,
+   1991,
+   1992,
+   1993,
+   1994,
+   1995
+  ],
+  "note": "16-valve SOHC, VTEC-E in the 1992 to 1995 VX",
+  "src": [
+   "https://en.wikipedia.org/wiki/Honda_D_engine",
+   "https://www.fueleconomy.gov/feg/download.shtml"
+  ],
+  "img": {
+   "src": "/assets/engines/civic/honda-civic-d15-engine.webp",
+   "w": 640,
+   "h": 578
+  }
+ },
+ {
+  "id": "d16",
+  "name": "1.6 L D16",
+  "code": "D16A6 / D16Z6 / D16Y7 / D16Y8",
+  "size": "1.6 L inline-4",
+  "years": [
+   1988,
+   1989,
+   1990,
+   1991,
+   1992,
+   1993,
+   1994,
+   1995,
+   1996,
+   1997,
+   1998,
+   1999,
+   2000
+  ],
+  "note": "16-valve SOHC, VTEC in the EX and Si",
+  "src": [
+   "https://en.wikipedia.org/wiki/Honda_D_engine",
+   "https://www.fueleconomy.gov/feg/download.shtml"
+  ],
+  "img": {
+   "src": "/assets/engines/civic/honda-civic-d16-engine.webp",
+   "w": 640,
+   "h": 559
+  }
+ },
+ {
+  "id": "d17",
+  "name": "1.7 L D17",
+  "code": "D17A1 / D17A2",
+  "size": "1.7 L inline-4",
+  "years": [
+   2001,
+   2002,
+   2003,
+   2004,
+   2005
+  ],
+  "note": "16-valve SOHC VTEC",
+  "src": [
+   "https://en.wikipedia.org/wiki/Honda_D_engine",
+   "https://www.fueleconomy.gov/feg/download.shtml"
+  ],
+  "img": {
+   "src": "/assets/engines/civic/honda-civic-d17-engine.webp",
+   "w": 613,
+   "h": 640
+  }
+ },
+ {
+  "id": "k20-si",
+  "name": "2.0 L K20 (Si)",
+  "code": "K20A3 / K20Z3",
+  "size": "2.0 L inline-4",
+  "years": [
+   2002,
+   2003,
+   2004,
+   2005,
+   2006,
+   2007,
+   2008,
+   2009,
+   2010,
+   2011
+  ],
+  "note": "DOHC i-VTEC in the Civic Si",
+  "src": [
+   "https://en.wikipedia.org/wiki/Honda_K_engine",
+   "https://www.fueleconomy.gov/feg/download.shtml"
+  ],
+  "img": {
+   "src": "/assets/engines/civic/honda-civic-k20-si-engine.webp",
+   "w": 640,
+   "h": 596
+  }
+ },
+ {
+  "id": "hybrid-1-3",
+  "name": "1.3 L hybrid",
+  "code": "Honda IMA",
+  "size": "1.3 L inline-4 + electric motor",
+  "years": [
+   2003,
+   2004,
+   2005,
+   2006,
+   2007,
+   2008,
+   2009,
+   2010,
+   2011
+  ],
+  "note": "Gas engine with a thin electric motor (Civic Hybrid)",
+  "src": [
+   "https://www.fueleconomy.gov/feg/download.shtml"
+  ],
+  "img": {
+   "src": "/assets/engines/civic/honda-civic-hybrid-1-3-engine.webp",
+   "w": 640,
+   "h": 557
+  }
+ },
+ {
+  "id": "r18",
+  "name": "1.8 L R18",
+  "code": "R18A1 / R18Z1",
+  "size": "1.8 L inline-4",
+  "years": [
+   2006,
+   2007,
+   2008,
+   2009,
+   2010,
+   2011,
+   2012,
+   2013,
+   2014,
+   2015
+  ],
+  "note": "16-valve SOHC i-VTEC",
+  "src": [
+   "https://en.wikipedia.org/wiki/Honda_R_engine",
+   "https://www.fueleconomy.gov/feg/download.shtml"
+  ],
+  "img": {
+   "src": "/assets/engines/civic/honda-civic-r18-engine.webp",
+   "w": 640,
+   "h": 592
+  }
+ },
+ {
+  "id": "k24-si",
+  "name": "2.4 L K24 (Si)",
+  "code": "K24Z7",
+  "size": "2.4 L inline-4",
+  "years": [
+   2012,
+   2013,
+   2014,
+   2015
+  ],
+  "note": "DOHC i-VTEC in the Civic Si",
+  "src": [
+   "https://en.wikipedia.org/wiki/Honda_K_engine",
+   "https://www.fueleconomy.gov/feg/download.shtml"
+  ],
+  "img": {
+   "src": "/assets/engines/civic/honda-civic-k24-si-engine.webp",
+   "w": 640,
+   "h": 576
+  }
+ },
+ {
+  "id": "hybrid-1-5",
+  "name": "1.5 L hybrid",
+  "code": "LEA (IMA)",
+  "size": "1.5 L inline-4 + electric motor",
+  "years": [
+   2012,
+   2013,
+   2014,
+   2015
+  ],
+  "note": "Gas engine with a thin electric motor (Civic Hybrid)",
+  "src": [
+   "https://en.wikipedia.org/wiki/Honda_L_engine",
+   "https://www.fueleconomy.gov/feg/download.shtml"
+  ],
+  "img": {
+   "src": "/assets/engines/civic/honda-civic-hybrid-1-5-engine.webp",
+   "w": 640,
+   "h": 533
+  }
+ },
+ {
+  "id": "k20c",
+  "name": "2.0 L K20C",
+  "code": "K20C2 / K20C9",
+  "size": "2.0 L inline-4",
+  "years": [
+   2016,
+   2017,
+   2018,
+   2019,
+   2020,
+   2021,
+   2022,
+   2023,
+   2024,
+   2025,
+   2026
+  ],
+  "note": "Base engine (LX, Sport)",
+  "src": [
+   "https://en.wikipedia.org/wiki/Honda_K_engine",
+   "https://www.fueleconomy.gov/feg/download.shtml"
+  ],
+  "img": {
+   "src": "/assets/engines/civic/honda-civic-k20c-engine.webp",
+   "w": 640,
+   "h": 568
+  }
+ },
+ {
+  "id": "l15-turbo",
+  "name": "1.5 L turbo",
+  "code": "L15B7 / L15BA / L15CA",
+  "size": "1.5 L turbo inline-4",
+  "years": [
+   2016,
+   2017,
+   2018,
+   2019,
+   2020,
+   2021,
+   2022,
+   2023,
+   2024,
+   2025,
+   2026
+  ],
+  "note": "Turbocharged, also the Civic Si engine",
+  "src": [
+   "https://en.wikipedia.org/wiki/Honda_L_engine",
+   "https://www.fueleconomy.gov/feg/download.shtml"
+  ],
+  "img": {
+   "src": "/assets/engines/civic/honda-civic-l15-turbo-engine.webp",
+   "w": 640,
+   "h": 539
+  }
+ },
+ {
+  "id": "k20c1-type-r",
+  "name": "2.0 L turbo (Type R)",
+  "code": "K20C1",
+  "size": "2.0 L turbo inline-4",
+  "years": [
+   2017,
+   2018,
+   2019,
+   2020,
+   2021,
+   2023,
+   2024,
+   2025,
+   2026
+  ],
+  "note": "Civic Type R only",
+  "src": [
+   "https://en.wikipedia.org/wiki/Honda_K_engine",
+   "https://www.fueleconomy.gov/feg/download.shtml"
+  ],
+  "img": {
+   "src": "/assets/engines/civic/honda-civic-k20c1-type-r-engine.webp",
+   "w": 640,
+   "h": 553
+  }
+ },
+ {
+  "id": "hybrid-2-0",
+  "name": "2.0 L hybrid",
+  "code": "Two-motor hybrid",
+  "size": "2.0 L inline-4 + two motors",
+  "years": [
+   2025,
+   2026
+  ],
+  "note": "Civic Hybrid (Sport, Sport Touring)",
+  "src": [
+   "https://www.fueleconomy.gov/feg/download.shtml"
+  ],
+  "img": {
+   "src": "/assets/engines/civic/honda-civic-hybrid-2-0-engine.webp",
+   "w": 640,
+   "h": 467
+  }
+ }
+]

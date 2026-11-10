@@ -296,6 +296,7 @@ else:
         body = (f'<div class="advp"><header class="advh1"><p class="ph-e"><a href="/data/">Free data</a></p><h1>Free car and engine illustrations.</h1><p class="ans">{E(lede)}</p></header>'
                 f'<div class="ygrid"><section class="yc"><h2>BMW engines</h2><div class="imggrid">{cards}</div></section>'
                 f'<section class="yc">{car_cards}</section>'
+                + (f'<section class="yc">{TAB.images_cards()}</section>' if TAB.images_cards() else '') +
                 f'<section class="yc"><h2>How to credit</h2><p>Copy this line next to the image: <code>Image: The Lemon Index (lemonindex.com), CC BY 4.0</code>, '
                 f'and link "CC BY 4.0" to <a href="{CCBY}" rel="noopener license" style="overflow-wrap:anywhere">{CCBY}</a>. If you change the image, say so.</p>'
                 '<p class="yc-cap">Engine photos on our engine pages that come from Wikimedia Commons are not ours: they keep their authors&#39; own licenses, linked under each photo.</p></section></div></div>')
@@ -307,6 +308,7 @@ else:
         + ''.join(f'<url><loc>{BASE}{p}</loc><image:image><image:loc>{BASE}{E(ph["src"])}</image:loc></image:image></url>' for p, ph in IMG_PAGES)
         + ''.join(f'<url><loc>{BASE}/cars/{_f}/{y}/</loc><image:image><image:loc>{BASE}{E(im["src"])}</image:loc></image:image></url>'
                   for _f, _ii in YSL.AIY.items() for y, im in _ii.items() if int(y) in {v['y'] for f in YEARS if f['id'] == _f for v in f['years']})
+        + ''.join(f'<url><loc>{BASE}{pg}</loc><image:image><image:loc>{BASE}{E(src)}</image:loc></image:image></url>' for pg, src in TAB.sitemap_images())
         + (''.join(f'<url><loc>{BASE}/images/</loc>' + ''.join(f'<image:image><image:loc>{BASE}{E(ph["src"])}</image:loc></image:image>' for _, ph in ours) + '</url>' for _ in [0]) if ours else '')
         + '</urlset>')
     print('bmw pages', len(BMW_URLS), 'engines', len(ENG_OK), 'engine images', len(IMG_PAGES), 'ours (CC BY)', len(ours))
