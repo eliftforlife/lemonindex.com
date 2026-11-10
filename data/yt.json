@@ -26976,7 +26976,44 @@
      "views": 164629
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 34000,
+     "lo": 13600.0,
+     "hi": 36000.0,
+     "n": 3,
+     "videos": 3,
+     "id": "otgynR7RyCM",
+     "t": 344,
+     "title": "2015 Nissan Frontier PRO-4X Ruts & Guts Snowy Off-Road Review"
+    },
+    "msrp": {
+     "median": 26845,
+     "lo": 22700.0,
+     "hi": 33000.0,
+     "n": 17,
+     "videos": 14,
+     "id": "XbqnSZBvBeA",
+     "t": 471,
+     "title": "2015 Chevy Colorado vs Toyota Tacoma vs Nissan Frontier Matchup Review"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 800,
+       "lo": 550.0,
+       "hi": 2321.0,
+       "n": 13,
+       "videos": 4,
+       "id": "CjDJXJNUDkU",
+       "t": 452,
+       "title": "Nissan Frontier 2005-2021 : 6 Common Problems"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -27046,7 +27083,57 @@
      "views": 109456
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 40000,
+     "lo": 26000.0,
+     "hi": 56000.0,
+     "n": 6,
+     "videos": 5,
+     "id": "ud42k0FJ1WY",
+     "t": 1062,
+     "title": "2025 Nissan Frontier vs Ford Ranger - Which Updated Midsize Pickup is Best?"
+    },
+    "msrp": {
+     "median": 35000,
+     "lo": 29800.0,
+     "hi": 44150.0,
+     "n": 22,
+     "videos": 16,
+     "id": "GOeW7VSxUj8",
+     "t": 2047,
+     "title": "The 2022 Nissan Frontier PRO-4X Is A Redesigned Off-Road Capable Compact Truck"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 800,
+       "lo": 110.0,
+       "hi": 2000.0,
+       "n": 8,
+       "videos": 7,
+       "id": "-mebHHaT0LY",
+       "t": 730,
+       "title": "3rd Gen Nissan Frontier Issues and Complaints - Should You Be Worried?"
+      }
+     ],
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 800,
+       "lo": 255.0,
+       "hi": 3890.0,
+       "n": 5,
+       "videos": 5,
+       "id": "QThftMqaPgs",
+       "t": 351,
+       "title": "2022 Nissan Frontier PRO 4X 4x4: TEST DRIVE+FULL REVIEW"
+      }
+     ]
+    ]
+   }
   }
  ],
  "honda-ridgeline": [
@@ -28883,7 +28970,21 @@
      "views": 376829
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 27000,
+     "lo": 20300.0,
+     "hi": 32000.0,
+     "n": 19,
+     "videos": 16,
+     "id": "h8Mcgajr7wM",
+     "t": 293,
+     "title": "2017 Jeep Renegade - Review and Road Test"
+    },
+    "items": []
+   }
   }
  ],
  "jeep-patriot": [
@@ -55466,7 +55567,35 @@
      "views": 62588
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 50302,
+     "lo": 47700.0,
+     "hi": 60000.0,
+     "n": 10,
+     "videos": 9,
+     "id": "FbuzryqnLSk",
+     "t": 284,
+     "title": "2008 Audi Q7 Review - Kelley Blue Book"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 400,
+       "lo": 20.0,
+       "hi": 400.0,
+       "n": 5,
+       "videos": 4,
+       "id": "WyAOt7L8S-c",
+       "t": 2188,
+       "title": "Audi Air Suspension MALFUNCTION? ('14 Q7 TDI)"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -55574,7 +55703,44 @@
      "views": 73191
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 24000,
+     "lo": 20000.0,
+     "hi": 28000.0,
+     "n": 4,
+     "videos": 4,
+     "id": "NfzYn9J5dWY",
+     "t": 881,
+     "title": "2025 Audi Q7 | Updated Again, Is It Enough?"
+    },
+    "msrp": {
+     "median": 60000,
+     "lo": 54000.0,
+     "hi": 65500.0,
+     "n": 15,
+     "videos": 12,
+     "id": "Mr0om_OARh0",
+     "t": 1529,
+     "title": "2017 Audi Q7 3.0T – Redline: Review"
+    },
+    "items": [
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 1050,
+       "lo": 600.0,
+       "hi": 1500.0,
+       "n": 2,
+       "videos": 2,
+       "id": "KfvkHTlDDBc",
+       "t": 79,
+       "title": "The 2021 Audi Q7 Is Affordable Luxury"
+      }
+     ]
+    ]
+   }
   }
  ],
  "audi-q3": [
