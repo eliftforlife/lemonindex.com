@@ -31332,6 +31332,102 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023
+   ],
+   "gen": "2016–2023 Nissan Maxima",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 31824915,
+   "topics": [
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 222269,
+     "n": 3,
+     "best": {
+      "id": "NgxXGuzM0Kg",
+      "title": "2015 - 2018 Nissan Maxima Cabin Air Filter - How To Change Remove Replace Replacement Location",
+      "channel": "PYR Automotive ",
+      "views": 118585
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 154536,
+     "n": 3,
+     "best": {
+      "id": "5eh_cotZ3PM",
+      "title": "2016 - 2021 Nissan Maxima - How To Unlock & Start With Key ID Incorrect - Dead Remote Fob Battery",
+      "channel": "PYR Automotive ",
+      "views": 82870
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 76844,
+     "n": 2,
+     "best": {
+      "id": "rk-iIxtHHHg",
+      "title": "How to Replace Upstream O2 Sensor 2012-2018 Nissan Maxima 3.5L V6",
+      "channel": "TRQ",
+      "views": 42707
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 70532,
+     "n": 1,
+     "best": {
+      "id": "iSDCXh4z6E4",
+      "title": "How to Replace Spark Plugs 2012-2018 Nissan Maxima 3.5L V6",
+      "channel": "TRQ",
+      "views": 70532
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 31337,
+     "n": 1,
+     "best": {
+      "id": "sV28T3xMU0w",
+      "title": "How to check Oil and fluids Nissan Maxima 2015-2022",
+      "channel": "repairED",
+      "views": 31337
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "_VbT-bTvAvE",
+     "title": "2023 Nissan Altima SR vs 2023 Nissan Maxima SR Which One Should You Buy?",
+     "channel": "Cars Unlocked",
+     "views": 107068
+    },
+    {
+     "id": "O_bzw7M8Gaw",
+     "title": "2022 Kia Stinger vs Nissan Maxima Which One Should You Buy?",
+     "channel": "Cars Unlocked",
+     "views": 66829
+    },
+    {
+     "id": "_ZWNXLYkJrA",
+     "title": "Nissan Maxima 8th Gen 2015 to 2021 common problems, issues, defects, recalls and complaints",
+     "channel": "HOWSTUFFINMYCARWORKS",
+     "views": 45547
+    }
+   ],
+   "costs": null
   }
  ],
  "kia-rio": [
