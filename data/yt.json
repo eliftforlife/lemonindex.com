@@ -34134,6 +34134,134 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ],
+   "gen": "2014–2020 Chevrolet Impala",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 21552786,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 906888,
+     "n": 8,
+     "best": {
+      "id": "HLeLGLcAWN8",
+      "title": "Chevy Impala Battery Replacement & Installation 2014-2020 3.6L V6 2.5L ECOTEC LS LT LTZ Premier",
+      "channel": "WorkingWithWimberley",
+      "views": 192875
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 291813,
+     "n": 4,
+     "best": {
+      "id": "oY6pZt3STaU",
+      "title": "How To Change A 2014 - 2020 Chevy Impala Cabin Air filter - Remove Replace Filter Location Chevrolet",
+      "channel": "PYR Automotive ",
+      "views": 121665
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 248338,
+     "n": 4,
+     "best": {
+      "id": "ae311CxBOTI",
+      "title": "How to Release Shifter on Chevrolet Impala 2015 - 2019 | MyAirbags",
+      "channel": "MyAirbags",
+      "views": 114276
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 231728,
+     "n": 3,
+     "best": {
+      "id": "tzkQJH8CNMg",
+      "title": "How To Change the Oil in a 2014-2020 Chevy Impala 3.6L V6 2.5L ECOTEC LT LTZ Premier Oil Reset",
+      "channel": "WorkingWithWimberley",
+      "views": 114793
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 152229,
+     "n": 3,
+     "best": {
+      "id": "O2ntrrlIfZM",
+      "title": "Chevy Impala Front Brake Pad & Rotor Replacement 2014-2019 3.6L VVT V6 2.5L ECOTEC LS LT LTZ Premier",
+      "channel": "WorkingWithWimberley",
+      "views": 61498
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 101668,
+     "n": 2,
+     "best": {
+      "id": "bA5zEga-bRM",
+      "title": "How to change the fuel pump on a 2017 Chevrolet Impala Malibu",
+      "channel": "Shug Penn",
+      "views": 72964
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 100159,
+     "n": 1,
+     "best": {
+      "id": "UfKaREfU6Pg",
+      "title": "2014 - 2019 Chevrolet Impala Outside Ambient Air Temperature Sensor Replacement",
+      "channel": "Thomas Lavery - Just Learning by Doing",
+      "views": 100159
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 90537,
+     "n": 2,
+     "best": {
+      "id": "AAS_bGcKEVE",
+      "title": "No Start Problem with a 2014 CHEVY IMPALA, No Crank at all...just Clicks...Fixed",
+      "channel": "Peter L",
+      "views": 59704
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "4aKZBxTQdZM",
+     "title": "Chevrolet Impala 10th Gen 2014 to 2020 Frequent problems, defects, issues, recalls and complaints.",
+     "channel": "HOWSTUFFINMYCARWORKS",
+     "views": 80606
+    },
+    {
+     "id": "nX9QEKImr3s",
+     "title": "Chevy Impala 2014 problems",
+     "channel": "BoSS clips ",
+     "views": 73703
+    },
+    {
+     "id": "DH5NOfjK-Tc",
+     "title": "2014 Chevrolet Impala transmission electrical problems",
+     "channel": "Oz Mechanics",
+     "views": 57940
+    }
+   ],
+   "costs": null
   }
  ],
  "chevrolet-camaro": [
