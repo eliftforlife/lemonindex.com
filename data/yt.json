@@ -29460,7 +29460,21 @@
      "views": 590893
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 34050,
+     "lo": 32000.0,
+     "hi": 42000.0,
+     "n": 32,
+     "videos": 27,
+     "id": "4HavWCdF65M",
+     "t": 1273,
+     "title": "2019 Subaru Ascent Review - The Three-Row Subie!"
+    },
+    "items": []
+   }
   }
  ],
  "mazda-cx-5": [
@@ -31912,6 +31926,137 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019
+   ],
+   "gen": "2010–2019 Ford Taurus",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 18591239,
+   "topics": [
+    {
+     "name": "Cooling system",
+     "views": 1249311,
+     "n": 3,
+     "best": {
+      "id": "XBHUwRKDa1s",
+      "title": "How to change a water pump in Ford V6 3.5 & 3.7-liter engines 2012-19 Explorer, Taurus, Edge & more",
+      "channel": "C.L.S. ALL-IN-ONE ",
+      "views": 1175687
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 533191,
+     "n": 5,
+     "best": {
+      "id": "U0HktTWiw0Y",
+      "title": "No Crank, new starter, how to troubleshoot, any car! (2011 Ford Taurus)",
+      "channel": "ScannerDanner",
+      "views": 314883
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 168153,
+     "n": 3,
+     "best": {
+      "id": "mWhJGjazWUE",
+      "title": "2014 Ford Taurus cranks but does not turn on- FIXED",
+      "channel": "Leroy Franco",
+      "views": 112805
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 145705,
+     "n": 3,
+     "best": {
+      "id": "yYwMB-1PLoc",
+      "title": "2010 Ford Taurus door panel removal",
+      "channel": "JJsCarAudio101",
+      "views": 53033
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 127833,
+     "n": 3,
+     "best": {
+      "id": "qCSB18F2LH0",
+      "title": "Power Steering Rack Removal GUIDE 2010-2019 Ford Taurus",
+      "channel": "Leekautorepair",
+      "views": 62335
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 101958,
+     "n": 2,
+     "best": {
+      "id": "0jmEjnM5lvw",
+      "title": "2013 Taurus Fuel pump driver module testing and replacement",
+      "channel": "MT406 Mechanics",
+      "views": 78633
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 75280,
+     "n": 1,
+     "best": {
+      "id": "CzgOi17MV1w",
+      "title": "Ford Taurus - FORD SYNC RESET (Hard and Soft Reset) 2013 - 2019",
+      "channel": "QuiteAlright",
+      "views": 75280
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 62254,
+     "n": 1,
+     "best": {
+      "id": "ogQ_PUfMqGs",
+      "title": "2014 Ford Taurus rear brakes replacement",
+      "channel": "Jabo The Mechanic",
+      "views": 62254
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "ruCVinKBOTI",
+     "title": "Ford Taurus - TOP PROBLEMS & ISSUES 2013 - 2019 (common fixes, repairs, defects)",
+     "channel": "QuiteAlright",
+     "views": 112712
+    },
+    {
+     "id": "efIIbs7zl1o",
+     "title": "Top 5 Problems Ford Taurus Sedan 2010-2019 6th Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 61732
+    },
+    {
+     "id": "mCmVpi5Cebw",
+     "title": "How Reliable is Ford Taurus SHO | A complete Review and Buying Guide | 2015 Taurus SHO",
+     "channel": "Jioni Drive",
+     "views": 51281
+    }
+   ],
+   "costs": null
   }
  ],
  "chevrolet-camaro": [
@@ -33000,7 +33145,68 @@
      "views": 28717
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": {
+     "median": 30078,
+     "lo": 29000.0,
+     "hi": 35846.18,
+     "n": 6,
+     "videos": 5,
+     "id": "rSyvVtpdas0",
+     "t": 92,
+     "title": "2023 Chevy Bolt EUV Review",
+     "private": 0,
+     "dealer": 0
+    },
+    "used": {
+     "median": 37000,
+     "lo": 26000.0,
+     "hi": 80000.0,
+     "n": 3,
+     "videos": 3,
+     "id": "QW1wCU3cW9s",
+     "t": 121,
+     "title": "Would You Buy A 2020 Chevy Bolt?"
+    },
+    "msrp": {
+     "median": 37000,
+     "lo": 30700.0,
+     "hi": 38000.0,
+     "n": 28,
+     "videos": 23,
+     "id": "hcyYDrJU6dQ",
+     "t": 1538,
+     "title": "The 2020 Chevrolet Bolt is the True Affordable Long Range EV of Today, But..."
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 298,
+       "lo": 50.0,
+       "hi": 545.0,
+       "n": 4,
+       "videos": 4,
+       "id": "YBDPgnwhyxM",
+       "t": 146,
+       "title": "Chevy Bolt EV STEERING GEAR Replacement *2019 * NO DEALERSHIP * HOW TO SAVE UP TO $2500*"
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 700,
+       "lo": 386.0,
+       "hi": 800.0,
+       "n": 3,
+       "videos": 3,
+       "id": "2KtDwG86Nng",
+       "t": 1313,
+       "title": "2023 Chevy Bolt EUV | 3-Year Ownership Reliability Check | Batteries, Telematics & Regrets?!"
+      }
+     ]
+    ]
+   }
   }
  ],
  "nissan-versa": [
@@ -39310,7 +39516,70 @@
      "views": 114764
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 30000,
+     "lo": 30000.0,
+     "hi": 48000.0,
+     "n": 11,
+     "videos": 9,
+     "id": "vQxSzWx4I1k",
+     "t": 1400,
+     "title": "Every Tesla Model Y Year Compared (2020 to 2027)"
+    },
+    "msrp": {
+     "median": 49990,
+     "lo": 44990.0,
+     "hi": 65900.0,
+     "n": 25,
+     "videos": 20,
+     "id": "G8JSwNwXu9A",
+     "t": 177,
+     "title": "2023 Tesla Model Y Review With All New Updates"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 1148,
+       "lo": 900.0,
+       "hi": 1400.0,
+       "n": 6,
+       "videos": 4,
+       "id": "2kQ9FwbXaok",
+       "t": 141,
+       "title": "SHOULD YOU BUY TESLA MODEL Y IN 2025? My 40,000 Miles Review!"
+      }
+     ],
+     [
+      "Insurance",
+      {
+       "median": 2244,
+       "lo": 2244.0,
+       "hi": 2244.0,
+       "n": 2,
+       "videos": 2,
+       "id": "BQ41L6Uzsk0",
+       "t": 1250,
+       "title": "May 2025 Tesla Model Y & 3 | What I Wish I Knew Before Buying"
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 1750,
+       "lo": 1500.0,
+       "hi": 2000.0,
+       "n": 2,
+       "videos": 2,
+       "id": "1LrSJH0kvmI",
+       "t": 376,
+       "title": "1200 Miles in 24 Hours: 2023 Tesla Model Y Performance Road Trip"
+      }
+     ]
+    ]
+   }
   }
  ],
  "bmw-5-series": [
@@ -42468,7 +42737,35 @@
      "views": 3056151
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 37000,
+     "lo": 33600.0,
+     "hi": 49000.0,
+     "n": 17,
+     "videos": 14,
+     "id": "37hxPReDuIc",
+     "t": 290,
+     "title": "2015 Mercedes GLA 250 Review"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 550,
+       "lo": 125.0,
+       "hi": 638.0,
+       "n": 8,
+       "videos": 4,
+       "id": "Em9psHBbibE",
+       "t": 1168,
+       "title": "How to Replace Spark Plugs Mercedes Benz GLA 250 2014-2020 | Sizes and Torque Specs Included!"
+      }
+     ]
+    ]
+   }
   }
  ],
  "audi-a3": [
