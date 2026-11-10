@@ -22,7 +22,8 @@
   let pick = 5;
 
   // ---- 11-04 (Elijah: "more specific to the page they're on"): the headline and the reasons follow the page
-  const H1 = ((document.querySelector('h1') || {}).textContent || '').replace(/\s+/g, ' ').replace(/[.]\s*$/, '').trim();
+  const H1 = ( ((document.querySelector('h1') || {}).textContent || '').replace(/\s+/g, ' ').replace(/[.]\s*$/, '').trim())
+    .replace(/^Is (?:the |a |an )?/i, '').replace(/\s+(?:reliable|a good car|worth it)\??$/i, '');   // 11-10: model pages' h1 became 'Is the <car> reliable?'
   const P = location.pathname;
   const CTX = (() => {
     if (/^\/cars\/[^/]+\/\d{4}\//.test(P)) return { q: `Looking at a used ${H1}?`, a: 'This report is free. Help keep it that way.', why: [`Every year of the ${H1.replace(/^\d{4} /, '')} stays free`, 'No paywall, no account, no dealer spin', 'Pays for new car data and tools'] };
