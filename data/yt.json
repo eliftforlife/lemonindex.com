@@ -40434,6 +40434,133 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012
+   ],
+   "gen": "2007–2012 Nissan Sentra",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 13957730,
+   "topics": [
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 991186,
+     "n": 9,
+     "best": {
+      "id": "jt2ZWNp059Q",
+      "title": "How to Replace Cabin Air Filter 2009 Nissan Sentra | AQ1114",
+      "channel": "Filterheads",
+      "views": 234717
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 848229,
+     "n": 10,
+     "best": {
+      "id": "ID5PlgYUgGI",
+      "title": "2007 to 2012 Nissan versa/sentra 1.8 SPEED SENSOR replacement p0720. car wont accelerate",
+      "channel": "Budgetboostx5",
+      "views": 179244
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 638342,
+     "n": 9,
+     "best": {
+      "id": "VZu-YwxrRy8",
+      "title": "How to Replace Shocks and Struts in a Nissan Sentra B16 – 2007 – 2012",
+      "channel": "AutoZone",
+      "views": 109341
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 617059,
+     "n": 6,
+     "best": {
+      "id": "imjoeoTo_cI",
+      "title": "2007-2012 Nissan Sentra Spark Plug Change",
+      "channel": "The Carizon",
+      "views": 229643
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 524142,
+     "n": 7,
+     "best": {
+      "id": "lWm4rOzHmvE",
+      "title": "How to Reset the Maintenance Required Light on a 2010 Nissan Sentra",
+      "channel": "Roy's Garage 808",
+      "views": 179283
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 302009,
+     "n": 5,
+     "best": {
+      "id": "adaoDiDo1rA",
+      "title": "2007 Nissan Sentra 2.0 Transmission Filter and Fluid Change.",
+      "channel": "thomas brian",
+      "views": 116046
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 241490,
+     "n": 4,
+     "best": {
+      "id": "xZTkr-rgYQE",
+      "title": "How To Replace Rear Drum Brakes 2007-2012 Nissan Sentra",
+      "channel": "TRQ",
+      "views": 110089
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 232426,
+     "n": 5,
+     "best": {
+      "id": "VhQM_yVM8R0",
+      "title": "How to replace the starter motor on the Nissan Sentra 2007 to 2012",
+      "channel": "Haynes Manuals",
+      "views": 108471
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "3-tyqCX5rz8",
+     "title": "Top 5 Problems Nissan Sentra Sedan 6th Generation 2007-12",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 210510
+    },
+    {
+     "id": "i4zlyam0xZ4",
+     "title": "2011 Nissan Sentra Acceleration/Transmission Problems",
+     "channel": "Ernie Garcia",
+     "views": 49745
+    },
+    {
+     "id": "IZl0OFWI7pU",
+     "title": "2009 Nissan Sentra Review - WITH 300K KM!!! Is the B16 Sentra any good?",
+     "channel": "Carro Chefe",
+     "views": 358270
+    }
+   ],
+   "costs": null
   }
  ],
  "nissan-versa": [
@@ -46269,7 +46396,26 @@
      "views": 72842
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 350,
+       "lo": 20.0,
+       "hi": 1000.0,
+       "n": 6,
+       "videos": 6,
+       "id": "l269Fj12qy4",
+       "t": 20,
+       "title": "2000 VW Jetta secondary air pump/ p0411"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
