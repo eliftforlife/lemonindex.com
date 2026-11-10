@@ -29056,6 +29056,54 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2022–2025 Acura MDX",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 24131824,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 60222,
+     "n": 1,
+     "best": {
+      "id": "vDWdvv0k4K8",
+      "title": "2022 -2024 Acura MDX - How To Reset Oil Life To 100% & Clear Oil Change Service Maintenance Reminder",
+      "channel": "PYR Automotive ",
+      "views": 60222
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "x9GzdCUV5Uo",
+     "title": "2021 Lexus RX 350 VS. 2022 Acura MDX - Reliable Luxury",
+     "channel": "Car Help Corner",
+     "views": 199671
+    },
+    {
+     "id": "MyfOcKX4ydM",
+     "title": "The 2025 Acura MDX Type S is the MOST reliable midsize performance SUV!",
+     "channel": "Raiti's Rides",
+     "views": 170512
+    },
+    {
+     "id": "hYwZvzIbizU",
+     "title": "2025 Lexus RX VS Acura MDX VS Mazda CX-70 || Which Reliable Luxury SUV Is Best?",
+     "channel": "Car Help Corner",
+     "views": 161832
+    }
+   ],
+   "costs": null
   }
  ],
  "toyota-avalon": [
@@ -33301,7 +33349,35 @@
      "views": 474629
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 33995,
+     "lo": 20000.0,
+     "hi": 35730.0,
+     "n": 5,
+     "videos": 3,
+     "id": "xx3HBkRzY-M",
+     "t": 428,
+     "title": "2008 Subaru Legacy SPEC.B \"Drivers Seat\""
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 1300,
+       "lo": 1000.0,
+       "hi": 1600.0,
+       "n": 2,
+       "videos": 2,
+       "id": "Jxh02W-Ondc",
+       "t": 41,
+       "title": "Review: 2009 Subaru Legacy 2.5i! Perfect first car for your teen?"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -37687,6 +37763,134 @@
      "title": "5 Common Problems With W211 Mercedes",
      "channel": "Justin Frascona",
      "views": 276331
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016
+   ],
+   "gen": "2010–2016 Mercedes-Benz E-Class",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 56237663,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 1193821,
+     "n": 4,
+     "best": {
+      "id": "e3b3CEylS9M",
+      "title": "Auxiliary Battery Malfunction: Mercedes E Class W212 Replace",
+      "channel": "carbuyingtipscom",
+      "views": 529781
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 1068300,
+     "n": 4,
+     "best": {
+      "id": "HyLP-CsGv8I",
+      "title": "How to Reset Mercedes Automatic Transmission 722.9, 722.6 / Reset Mercedes W212 722.9 GEARBOX",
+      "channel": "Amazing Road TV",
+      "views": 478287
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 889468,
+     "n": 6,
+     "best": {
+      "id": "u_cQBHk67JQ",
+      "title": "Reset Service Mercedes E350 W212 E-Class",
+      "channel": "Wheels Tips!",
+      "views": 317599
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 727460,
+     "n": 3,
+     "best": {
+      "id": "KAGvPCPSkYI",
+      "title": "Reset service 2010 E350 Mercedes - Guide works for E Class - C Class - M Class",
+      "channel": "Wheels Tips!",
+      "views": 430057
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 605077,
+     "n": 3,
+     "best": {
+      "id": "glzJ51Wjs2M",
+      "title": "EGR/Air Shutoff Valve Cleaning | Mercedes M272 Engine E-Class W212",
+      "channel": "Zaki Garage",
+      "views": 332231
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 411969,
+     "n": 4,
+     "best": {
+      "id": "G8k8Xy820IQ",
+      "title": "Rear Shocks Replacement | Mercedes E Class W212",
+      "channel": "Zaki Garage",
+      "views": 136940
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 296595,
+     "n": 1,
+     "best": {
+      "id": "LCEh5mIeoZI",
+      "title": "Installing Ebay Facelift LED Tail Lights on my 2010 Mercedes E-Class (W212)",
+      "channel": "Aziz Design",
+      "views": 296595
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 208295,
+     "n": 1,
+     "best": {
+      "id": "RdEXU2prpis",
+      "title": "How to fix Mercedes C or E-Class C204 C207 W205 W212 parking brake",
+      "channel": "Daves Discoveries",
+      "views": 208295
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "VBb4SgW28cg",
+     "title": "Mercedes E-Class saloon 2013 review - CarBuyer",
+     "channel": "Carbuyer",
+     "views": 1500847
+    },
+    {
+     "id": "S0EuLDR4oB4",
+     "title": "Mercedes E-Class saloon 2009 - 2013 review - CarBuyer",
+     "channel": "Carbuyer",
+     "views": 1257124
+    },
+    {
+     "id": "1k1bEehnLmw",
+     "title": "Mercedes E-Class coupe 2014 review - Carbuyer",
+     "channel": "Carbuyer",
+     "views": 1116076
     }
    ],
    "costs": null
