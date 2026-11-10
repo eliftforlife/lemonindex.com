@@ -31430,6 +31430,115 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+   ],
+   "gen": "2015–2024 Nissan Murano",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 14590273,
+   "topics": [
+    {
+     "name": "Transmission & shifter",
+     "views": 177669,
+     "n": 4,
+     "best": {
+      "id": "gAXL6BjI48Y",
+      "title": "CVT Transmission Fluid change Nissan Murano. (2015-2024) Easy",
+      "channel": "Ray Man Can",
+      "views": 69221
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 103354,
+     "n": 5,
+     "best": {
+      "id": "X-ZLM2EiWZ0",
+      "title": "2015-2018 Nissan Murano Oil Change",
+      "channel": "SirMalo Performance",
+      "views": 24058
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 74379,
+     "n": 2,
+     "best": {
+      "id": "OMvha4jvVrI",
+      "title": "2019 - 2024 Nissan Murano Key Fob Battery Replacement - How To Change Or Replace Remote Batteries",
+      "channel": "PYR Automotive ",
+      "views": 39516
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 59687,
+     "n": 3,
+     "best": {
+      "id": "nPwyQxjl3QQ",
+      "title": "2015 Nissan Murano Spark Plug Replacement Plus MIL on And CVT Judder",
+      "channel": "Phillip Bailey",
+      "views": 24360
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 26163,
+     "n": 1,
+     "best": {
+      "id": "4xBXe6CrJO0",
+      "title": "2016 Nissan Murano Thermostat Replacement.",
+      "channel": "Kay Auto",
+      "views": 26163
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 20016,
+     "n": 1,
+     "best": {
+      "id": "gDJZY3yH8Ek",
+      "title": "2016 Nissan Murano oil light reset",
+      "channel": "Andriy Bexkorovaynyy",
+      "views": 20016
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "huJvlzOJYnc",
+     "title": "2023 Nissan Murano Review | Nissan's Reliable, Luxury SUV !",
+     "channel": "Gold Pony",
+     "views": 85382
+    },
+    {
+     "id": "gaAotroxzN0",
+     "title": "2021 Nissan Murano Review | Nissan's Reliable Mid-Size SUV",
+     "channel": "Gold Pony",
+     "views": 51645
+    },
+    {
+     "id": "ACVvRZlcUYg",
+     "title": "A Complete Review of My 2009 Nissan Murano S - Should You Buy One in 2021?",
+     "channel": "EYVO Auto",
+     "views": 43108
+    }
+   ],
+   "costs": null
   }
  ],
  "hyundai-kona": [
@@ -37713,7 +37822,35 @@
      "views": 764311
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 18000,
+     "lo": 16750.0,
+     "hi": 20000.0,
+     "n": 9,
+     "videos": 9,
+     "id": "LtPp3dSPG5s",
+     "t": 261,
+     "title": "2015 Chevrolet Sonic Start Up and Review 1.4 L 4-Cylinder Turbo"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 60,
+       "lo": 40.0,
+       "hi": 1000.0,
+       "n": 7,
+       "videos": 4,
+       "id": "BhS9juzelvk",
+       "t": 360,
+       "title": "Chevy Sonic 100,000 MILES!  Update - Repairs Needed + Review @ 100k!  (2015 Chevrolet Sonic LT 1.8)"
+      }
+     ]
+    ]
+   }
   }
  ],
  "chevrolet-spark": [
@@ -41555,7 +41692,57 @@
      "views": 1610844
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 10000,
+     "lo": 10000.0,
+     "hi": 30000.0,
+     "n": 5,
+     "videos": 5,
+     "id": "vTQpdiRr01s",
+     "t": 459,
+     "title": "Why I bought the 2004 Subaru WRX !"
+    },
+    "msrp": {
+     "median": 29000,
+     "lo": 25000.0,
+     "hi": 31997.0,
+     "n": 3,
+     "videos": 3,
+     "id": "IjFAFjzfeok",
+     "t": 520,
+     "title": "Here's Why the 2004 Subaru Impreza WRX STI Is an Icon"
+    },
+    "items": [
+     [
+      "Transmission",
+      {
+       "median": 1250,
+       "lo": 200.0,
+       "hi": 2300.0,
+       "n": 4,
+       "videos": 4,
+       "id": "EY9HJlwAWqU",
+       "t": 215,
+       "title": "2007 Subaru WRX STI // Gears and Gasoline"
+      }
+     ],
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 100,
+       "lo": 30.0,
+       "hi": 3500.0,
+       "n": 3,
+       "videos": 3,
+       "id": "vu31wgzg5Rg",
+       "t": 491,
+       "title": "2006 Subaru Impreza WRX STI Walkaround"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -41680,7 +41867,35 @@
      "views": 10156
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 27000,
+     "lo": 25000.0,
+     "hi": 35000.0,
+     "n": 7,
+     "videos": 7,
+     "id": "80nMhkfKlBc",
+     "t": 307,
+     "title": "2009 Subaru Impreza WRX Review - Kelley Blue Book"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 500,
+       "lo": 150.0,
+       "hi": 900.0,
+       "n": 11,
+       "videos": 3,
+       "id": "FrfJpls071Y",
+       "t": 65,
+       "title": "8 Major Repairs Every 2011 Subaru Impreza Will Need That You Can't Ignore"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -43777,6 +43992,135 @@
      ]
     ]
    }
+  }
+ ],
+ "volkswagen-jetta": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005
+   ],
+   "gen": "1999–2005 Volkswagen Jetta",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 19406850,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 1445723,
+     "n": 14,
+     "best": {
+      "id": "VE1YVzWGthA",
+      "title": "1999 - 2004 VW Jetta / Golf / GLI / GTI Radio, Amp, and Sub Install",
+      "channel": "Provo Beast Audio Installation",
+      "views": 333822
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 1095119,
+     "n": 3,
+     "best": {
+      "id": "y-dQoBTQ2yQ",
+      "title": "VW Golf Jetta Mk4 Door Lock Module Removal",
+      "channel": "BMAC VAGS",
+      "views": 1004441
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 791064,
+     "n": 5,
+     "best": {
+      "id": "yR-rIMQgcfI",
+      "title": "How to Replace Blown Head Gasket on a 2004 VW Jetta 2.0L Engine (Part 2 of 2)",
+      "channel": "YeechBlitz",
+      "views": 298402
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 609463,
+     "n": 8,
+     "best": {
+      "id": "it1RVwdRqSI",
+      "title": "How To Replace Radiator 2005-10 Volkswagen Jetta",
+      "channel": "TRQ",
+      "views": 116845
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 460697,
+     "n": 4,
+     "best": {
+      "id": "S10H9HrsMpo",
+      "title": "2003 VW Jetta 2.0L. Stalls. Codes P0321, P0322. Crankshaft sensor diagnosis.",
+      "channel": "Randy Templeton",
+      "views": 335066
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 420229,
+     "n": 4,
+     "best": {
+      "id": "zXKNkqUFsYo",
+      "title": "VW Jetta Golf MK4 1.8T Turbo Timing Belt Replacement Seat Leon VW Bora",
+      "channel": "World Mechanics",
+      "views": 218757
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 403183,
+     "n": 8,
+     "best": {
+      "id": "Z4O4mu8TWPA",
+      "title": "2004 VW Jetta Master Brake Cylinder Removal Install Part 1",
+      "channel": "jcx2bby",
+      "views": 77709
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 399348,
+     "n": 3,
+     "best": {
+      "id": "dPYVFhd6PYI",
+      "title": "VW Jetta 2004 EPC light and Gas Pedal Fix",
+      "channel": "marcibm1",
+      "views": 171832
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "faIIfxKv-AQ",
+     "title": "Drivers Front Door Latch Replacement MK4 Jetta (Also tips about Alarm related problems on your VW)",
+     "channel": "Deutsche Auto Parts",
+     "views": 333781
+    },
+    {
+     "id": "WJ4g2Rj4X1s",
+     "title": "Volkswagen Jetta MK4 ⚠️| SHOULD YOU BUY IT? THERE’S A CATCH… (Review)",
+     "channel": "CarshopGaraje",
+     "views": 159345
+    },
+    {
+     "id": "p1eQ5XL-zPM",
+     "title": "2005.5 Volkswagen Jetta MKV Wiring Harness Problems",
+     "channel": "IsoscelesKr4mer",
+     "views": 72842
+    }
+   ],
+   "costs": null
   }
  ],
  "volkswagen-passat": [
@@ -48991,7 +49335,48 @@
      "views": 2365839
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 54800,
+     "lo": 50000.0,
+     "hi": 62000.0,
+     "n": 42,
+     "videos": 32,
+     "id": "JsxLJihaCEk",
+     "t": 501,
+     "title": "2024 Mercedes-Benz GLC 300 [Coupe] - 16 THINGS YOU SHOULD KNOW"
+    },
+    "items": [
+     [
+      "Steering & suspension",
+      {
+       "median": 250,
+       "lo": 250.0,
+       "hi": 250.0,
+       "n": 5,
+       "videos": 4,
+       "id": "LHieWlEiKJw",
+       "t": 83,
+       "title": "Amazing plug-in range// 2025 Mercedes-Benz GLC 350e review"
+      }
+     ],
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 1475,
+       "lo": 1150.0,
+       "hi": 1800.0,
+       "n": 2,
+       "videos": 2,
+       "id": "XkVh3BSNFNs",
+       "t": 713,
+       "title": "2023 Mercedes GLC 300: Still the Gold Standard in the segment!"
+      }
+     ]
+    ]
+   }
   }
  ],
  "mercedes-benz-m/gle": [
