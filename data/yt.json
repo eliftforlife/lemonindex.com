@@ -32208,7 +32208,39 @@
      "views": 146634
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 2556,
+       "lo": 113.0,
+       "hi": 5000.0,
+       "n": 4,
+       "videos": 3,
+       "id": "3fZ3l0rAZH4",
+       "t": 364,
+       "title": "2001 lexus rx300 air door actuator 604-907 FIX REPAIR DO IT YOURSELF HELP"
+      }
+     ],
+     [
+      "Brakes",
+      {
+       "median": 2600,
+       "lo": 2500.0,
+       "hi": 2700.0,
+       "n": 2,
+       "videos": 2,
+       "id": "dZZjCkNhy40",
+       "t": 368,
+       "title": "Would You Buy a Car This Cheap? | 2000 Lexus RX300 Sale"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -32335,7 +32367,26 @@
      "views": 188781
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 638,
+       "lo": 300.0,
+       "hi": 1500.0,
+       "n": 12,
+       "videos": 7,
+       "id": "F7CsYAG4w3M",
+       "t": 913,
+       "title": "How to Replace CV Axle Lexus RX350 2004–2009 | With Sizes and Torque Specs!"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -42955,7 +43006,30 @@
      "views": 1500566
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 11500,
+     "lo": 5000.0,
+     "hi": 18000.0,
+     "n": 4,
+     "videos": 3,
+     "id": "k5DtNTAYcRk",
+     "t": 931,
+     "title": "Review: 2006 Chrysler 300C SRT8"
+    },
+    "msrp": {
+     "median": 39375,
+     "lo": 32995.0,
+     "hi": 41900.0,
+     "n": 5,
+     "videos": 5,
+     "id": "HP4yzlLJlpo",
+     "t": 373,
+     "title": "2007 CHRYSLER 300C HERITAGE EDITION"
+    },
+    "items": []
+   }
   },
   {
    "years": [
@@ -43089,7 +43163,44 @@
      "views": 1181168
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 27000,
+     "lo": 27000.0,
+     "hi": 46000.0,
+     "n": 3,
+     "videos": 3,
+     "id": "lvoeXo_tF08",
+     "t": 895,
+     "title": "Should you BUY a 2020 Chrysler 300 or WAIT for a REDESIGN?"
+    },
+    "msrp": {
+     "median": 35000,
+     "lo": 32000.0,
+     "hi": 37897.0,
+     "n": 14,
+     "videos": 11,
+     "id": "lvoeXo_tF08",
+     "t": 316,
+     "title": "Should you BUY a 2020 Chrysler 300 or WAIT for a REDESIGN?"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 800,
+       "lo": 600.0,
+       "hi": 1500.0,
+       "n": 5,
+       "videos": 4,
+       "id": "LC9p4Ttarf8",
+       "t": 50,
+       "title": "2012 Chrysler 300 Bluetooth fix( HFM replacement )"
+      }
+     ]
+    ]
+   }
   }
  ],
  "lexus-es": [
@@ -45148,6 +45259,136 @@
      ]
     ]
    }
+  }
+ ],
+ "bmw-x3": [
+  {
+   "years": [
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010
+   ],
+   "gen": "2004–2010 BMW X3",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 198,
+   "views": 17727790,
+   "topics": [
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 1305528,
+     "n": 10,
+     "best": {
+      "id": "sml5ewz0HzA",
+      "title": "BMW X3 (E83) 2004-2010 Transfer Case Oil Change - DIY Repair",
+      "channel": "BentleyPublishers",
+      "views": 512033
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 863286,
+     "n": 4,
+     "best": {
+      "id": "svefECX_Sng",
+      "title": "Tire Pressure Reset on a BMW X3 E83",
+      "channel": "AskTheCarExperts",
+      "views": 347495
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 795852,
+     "n": 14,
+     "best": {
+      "id": "YN_SMirqQfY",
+      "title": "BMW X3 Touchscreen with Apple CarPlay // How to Install (2004-2010)",
+      "channel": "JD Cars",
+      "views": 148630
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 675182,
+     "n": 10,
+     "best": {
+      "id": "XGViO3ZYdn8",
+      "title": "BMW E83 X3 Water Pump & Thermostat Replacement DIY (BMW N52 128i, 325i, 328i, 330i, 528i, X3, X5)",
+      "channel": "FCP Euro",
+      "views": 104755
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 499105,
+     "n": 6,
+     "best": {
+      "id": "YWqFjSOX_I0",
+      "title": "BMW X3 E83 M Sport 4x4+ABS+Brake lights! How I Fixed it!",
+      "channel": "Build&Drive",
+      "views": 196239
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 269839,
+     "n": 3,
+     "best": {
+      "id": "SsC7QSSlfO8",
+      "title": "BMW X3 E83 Automatic transmission fluid service",
+      "channel": "Chris Thompson",
+      "views": 126366
+     }
+    },
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 223504,
+     "n": 5,
+     "best": {
+      "id": "Awyclpp8WYM",
+      "title": "How to Replace Valve Cover Gasket 2007-12 BMW X3",
+      "channel": "TRQ",
+      "views": 108049
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 221510,
+     "n": 5,
+     "best": {
+      "id": "ngDXO5pk4AE",
+      "title": "Fix Broken BMW X3 (e83) Window -- Drive-Dogs Replacement - Regulator Repair",
+      "channel": "VoxRobot",
+      "views": 93194
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "vZHzbRjbtsM",
+     "title": "BMW X3 SUV (2010-2014) review - CarBuyer",
+     "channel": "Carbuyer",
+     "views": 1058062
+    },
+    {
+     "id": "nvel6NSwrVI",
+     "title": "BMW X3 Buyers guide E83 (2004-2010) Avoid buying a broken BMW X3 (2.0d, 3.0d, 2.0i 2.5ii, 3.0i)",
+     "channel": "The Miles Driven",
+     "views": 120391
+    },
+    {
+     "id": "kzSiEf_cLpA",
+     "title": "BMW X3 my-2004-2010- buyers review",
+     "channel": "Autoblog",
+     "views": 117534
+    }
+   ],
+   "costs": null
   }
  ],
  "mercedes-benz-c-class": [
@@ -48398,6 +48639,136 @@
    }
   }
  ],
+ "volkswagen-golf": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006
+   ],
+   "gen": "1999–2006 Volkswagen Golf",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 196,
+   "views": 59280838,
+   "topics": [
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 3563049,
+     "n": 4,
+     "best": {
+      "id": "iCL9oa9TjUk",
+      "title": "4K ✅ Fix it: ABS Sensor Replacement // VW Golf MK4 // remove the ABS sensor (without breaking it )",
+      "channel": "BG Tech for You",
+      "views": 2678872
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 2416240,
+     "n": 10,
+     "best": {
+      "id": "y-dQoBTQ2yQ",
+      "title": "VW Golf Jetta Mk4 Door Lock Module Removal",
+      "channel": "BMAC VAGS",
+      "views": 1004441
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 1073687,
+     "n": 8,
+     "best": {
+      "id": "4wEU5b81cbI",
+      "title": "Vw Golf mk4 Clutch Pedal Repair",
+      "channel": "GerrysDiy",
+      "views": 215418
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 915724,
+     "n": 4,
+     "best": {
+      "id": "Vz1j3JU8E6M",
+      "title": "Buying a used VW Golf Mk 5 - 2003-2008, Common Issues, Buying advice / guide",
+      "channel": "different car review",
+      "views": 347732
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 862184,
+     "n": 8,
+     "best": {
+      "id": "FeIPLA8XDJg",
+      "title": "VW Golf MK4 2.0 Radiator Removal and Replacement",
+      "channel": "Ovens Garage",
+      "views": 318041
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 829429,
+     "n": 4,
+     "best": {
+      "id": "r1n3Pd4Bzcs",
+      "title": "How to test, fix or replace starter motor VW Golf Mk4",
+      "channel": "WheelsAndMotors",
+      "views": 344017
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 464252,
+     "n": 2,
+     "best": {
+      "id": "32cB4jk-OMc",
+      "title": "VW Golf mk4 TDI relay 109 removal and install",
+      "channel": "Cory's DIY Auto",
+      "views": 271239
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 344256,
+     "n": 4,
+     "best": {
+      "id": "Fmsh89j6OY8",
+      "title": "VW Jetta, Beetle, Golf & GTI Mk4 No AC Fix",
+      "channel": "deamonmachine",
+      "views": 142393
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "TVT8079jERk",
+     "title": "Problems with wipers (don't work) on VW Golf Mk4, Bora, Jetta, Skoda, Seat? Replace the 377 relay…",
+     "channel": "TUTORIALE AUTO",
+     "views": 219786
+    },
+    {
+     "id": "u760LzAwAFE",
+     "title": "VW Golf mk4 Fuse box and wire connection problems SOLVED",
+     "channel": "Kaspars Zvirgzdins",
+     "views": 207053
+    },
+    {
+     "id": "_g_34h1yBd0",
+     "title": "5 Biggest Problems with my MK4 VW Golf",
+     "channel": "RHanson",
+     "views": 95364
+    }
+   ],
+   "costs": null
+  }
+ ],
  "dodge-grand-caravan": [
   {
    "years": [
@@ -48525,7 +48896,26 @@
      "views": 84527
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 189,
+       "lo": 68.0,
+       "hi": 300.0,
+       "n": 6,
+       "videos": 6,
+       "id": "i3DRaWGSobc",
+       "t": 60,
+       "title": "ECM PCM STARTER 2003 DODGE GRAND CARAVAN 3.3L V6 WONT START"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
