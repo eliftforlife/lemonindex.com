@@ -30615,6 +30615,216 @@
    "costs": null
   }
  ],
+ "honda-hr-v": [
+  {
+   "years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022
+   ],
+   "gen": "2016–2022 Honda HR-V",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 45857464,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 399990,
+     "n": 2,
+     "best": {
+      "id": "CFClXhWBlAE",
+      "title": "🔑 Honda HR-V Key Battery Replacement Guide 2016-2020 🚘",
+      "channel": "FobBattery",
+      "views": 306158
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 186818,
+     "n": 2,
+     "best": {
+      "id": "zXjOtTLOuwU",
+      "title": "Honda HR-V 2017-2021 Learn How To Check The Oil Level, Brake Fluid, Antifreeze & Washer Fluid",
+      "channel": "Jimthecarguy",
+      "views": 123518
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 174978,
+     "n": 2,
+     "best": {
+      "id": "c66HfVE_6y4",
+      "title": "Reset Tire Light Honda HR-V 2020, 2021, 2022",
+      "channel": "TommyGymTV",
+      "views": 112709
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 167699,
+     "n": 2,
+     "best": {
+      "id": "gs_Bk8lLd9o",
+      "title": "How to Change Oil 2016-2022 Honda HR-V",
+      "channel": "TRQ",
+      "views": 98741
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 131480,
+     "n": 2,
+     "best": {
+      "id": "1tGiQi6Wgqs",
+      "title": "2016-2022 Honda HR-V Transmission Fluid Change CVT Drain & Refill",
+      "channel": "Jo Dempsey",
+      "views": 92490
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 117614,
+     "n": 2,
+     "best": {
+      "id": "GlPHqkbzzlo",
+      "title": "2016 2017 Honda HRV ----- Door Panel Removal Replacement Install How to Remove",
+      "channel": "DIYHonda",
+      "views": 75893
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 112234,
+     "n": 1,
+     "best": {
+      "id": "KazofipoT-k",
+      "title": "Honda HR-V Cabin Air FiIlter Replacement Location 2016 2017 How To",
+      "channel": "Oil Light Reset ",
+      "views": 112234
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "JiNtyfyLhig",
+     "title": "Honda HR-V 2nd Gen 2016 2022 Frequent and common problems, issues, defects, recalls and complaints",
+     "channel": "HOWSTUFFINMYCARWORKS",
+     "views": 38543
+    },
+    {
+     "id": "MVwJmYYBUMc",
+     "title": "Honda HR-V 2022 Review",
+     "channel": "carwow",
+     "views": 2219663
+    },
+    {
+     "id": "gU3Y2C-pxWY",
+     "title": "Honda HR-V SUV 2018 review | Mat Watson Reviews",
+     "channel": "carwow",
+     "views": 1456206
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2023–2025 Honda HR-V",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 17611684,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 169091,
+     "n": 1,
+     "best": {
+      "id": "JLgd_JNuxaI",
+      "title": "2023 - 2026 Honda HR-V Key Fob Battery Replacement - How To Change Replace HRV Remote Batteries",
+      "channel": "PYR Automotive ",
+      "views": 169091
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 48804,
+     "n": 1,
+     "best": {
+      "id": "sd_qUWyL2KU",
+      "title": "How to reset Oil Light on 2023-2025 Honda HRV 2.0L",
+      "channel": "Vagabond Builds",
+      "views": 48804
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 19216,
+     "n": 1,
+     "best": {
+      "id": "7V-tXtzg_AM",
+      "title": "Oil Change 2023 Honda HR-V with 2.0L engine",
+      "channel": "Vagabond Builds",
+      "views": 19216
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 13305,
+     "n": 1,
+     "best": {
+      "id": "tSB36ay-HiY",
+      "title": "How To Replace 2023 - 2026 HONDA HR-V Cabin Air Filter - DIY Change Filter Replacement Location",
+      "channel": "PYR Automotive ",
+      "views": 13305
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 11606,
+     "n": 1,
+     "best": {
+      "id": "RXDhQYF1rPI",
+      "title": "2023 Honda HR-V Rear Differential Service",
+      "channel": "Brian Austin",
+      "views": 11606
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "j7TeYiQqWMc",
+     "title": "2023 Honda HR-V VS Toyota Corolla Cross || Which Small SUV Should You Buy?",
+     "channel": "Car Help Corner",
+     "views": 276918
+    },
+    {
+     "id": "Cd1d6wYcMAI",
+     "title": "RELIABLE & AFFORDABLE! -- 2024 Toyota Corolla Cross vs. 2024 Honda HR-V: Comparison",
+     "channel": "Car Confections",
+     "views": 187565
+    },
+    {
+     "id": "JFQgWfUEZG4",
+     "title": "2023 Honda CR-V vs Honda HR-V || Which SUV Should You Buy?",
+     "channel": "Car Help Corner",
+     "views": 173146
+    }
+   ],
+   "costs": null
+  }
+ ],
  "hyundai-kona": [
   {
    "years": [
@@ -38329,7 +38539,26 @@
      "views": 5441
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 290,
+       "lo": 30.0,
+       "hi": 300.0,
+       "n": 3,
+       "videos": 3,
+       "id": "XGJ91Eq2kGc",
+       "t": 458,
+       "title": "2002 Nissan Maxima: How to clean the MAF and Throttle Body"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -38455,7 +38684,26 @@
      "views": 36449
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 35,
+       "lo": 30.0,
+       "hi": 60.0,
+       "n": 5,
+       "videos": 4,
+       "id": "0OcFgJl3Rnw",
+       "t": 52,
+       "title": "2004 Nissan Maxima stuck gear shifter"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -38583,7 +38831,21 @@
      "views": 783529
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 33000,
+     "lo": 32400.0,
+     "hi": 33270.0,
+     "n": 6,
+     "videos": 6,
+     "id": "mjjgm5XlMgc",
+     "t": 811,
+     "title": "2014 Nissan Maxima 3.5SV Review, Walkaround, Exhaust, & Test Drive"
+    },
+    "items": []
+   }
   },
   {
    "years": [
@@ -48731,7 +48993,35 @@
      "views": 103557
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 36000,
+     "lo": 29900.0,
+     "hi": 42000.0,
+     "n": 15,
+     "videos": 13,
+     "id": "yk8yvt5lWVc",
+     "t": 1114,
+     "title": "2015 Audi A3 2.0T Quattro – Redline: Review"
+    },
+    "items": [
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 4400,
+       "lo": 800.0,
+       "hi": 8000.0,
+       "n": 4,
+       "videos": 4,
+       "id": "cgH6zMSFLwU",
+       "t": 628,
+       "title": "2015 Audi A3 Review"
+      }
+     ]
+    ]
+   }
   }
  ],
  "audi-a4": [
