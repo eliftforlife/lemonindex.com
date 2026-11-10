@@ -23639,6 +23639,134 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009
+   ],
+   "gen": "2003–2009 Toyota 4Runner",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 12394743,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 622659,
+     "n": 5,
+     "best": {
+      "id": "jZmTCxFgMNQ",
+      "title": "2004 Toyota 4Runner Driveline Service -EricTheCarGuy",
+      "channel": "EricTheCarGuy",
+      "views": 365454
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 553905,
+     "n": 2,
+     "best": {
+      "id": "YTS4ke7nViE",
+      "title": "2005 Toyota 4Runner Front Axle, Wheel Bearing, & Hub Replacement -EricTheCarGuy",
+      "channel": "EricTheCarGuy",
+      "views": 503220
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 459135,
+     "n": 6,
+     "best": {
+      "id": "cAAS1DZwI-M",
+      "title": "How To Program The Auto Door Lock Function on 2003-2009 4runners",
+      "channel": "Canadian Gearhead",
+      "views": 276746
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 359939,
+     "n": 5,
+     "best": {
+      "id": "PS8Pjxyh2OY",
+      "title": "How To Replace The Alternator On A 2002-2009 Toyota 4runner",
+      "channel": "How to Automotive",
+      "views": 220625
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 353226,
+     "n": 5,
+     "best": {
+      "id": "6JsE434Qhls",
+      "title": "2005 Toyota 4Runner Rear Differential Rebuild - Bearing Replacement",
+      "channel": "ThePracticalMechanic",
+      "views": 307705
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 265930,
+     "n": 3,
+     "best": {
+      "id": "yv8BwggCfuQ",
+      "title": "2004 Toyota 4Runner Transmission Fluid and Filter Change (Part 2) -EricTheCarGuy",
+      "channel": "EricTheCarGuy",
+      "views": 241142
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 261025,
+     "n": 5,
+     "best": {
+      "id": "4ANLGsNgFw8",
+      "title": "2004 Toyota 4Runner Cabin Air Filter Replacement -EricTheCarGuy",
+      "channel": "EricTheCarGuy",
+      "views": 130470
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 80810,
+     "n": 1,
+     "best": {
+      "id": "yzfGmA-T9TI",
+      "title": "2005 Toyota 4Runner Gas / Fuel Gauge Problem - Fixed!",
+      "channel": "Rick's Tid-Bits",
+      "views": 80810
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "LDfhauU5U30",
+     "title": "Toyota 4Runner - 3rd Gen vs. 4th Gen V8 Comparison (Reliability, Specs, 0-60...)",
+     "channel": "Not-So-Handy Car Guy",
+     "views": 166360
+    },
+    {
+     "id": "J0xn9DHNNMo",
+     "title": "15 Most Common Toyota 4Runner 5th Gen Problems (N280, 2009-2023)",
+     "channel": "MaxTheCarGuy",
+     "views": 98652
+    },
+    {
+     "id": "zk2CKLxm6Dg",
+     "title": "2003-2009 Toyota 4Runner 4th Gen Buyer's Guide (Common Problems, Engines, Options, Specs)",
+     "channel": "Useful Vids",
+     "views": 89921
+    }
+   ],
+   "costs": null
   }
  ],
  "model:volkswagen-taos": [
@@ -30181,7 +30309,26 @@
      "views": 14452
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 30,
+       "lo": 23.0,
+       "hi": 150.0,
+       "n": 3,
+       "videos": 3,
+       "id": "7kdPlGHQMVk",
+       "t": 38,
+       "title": "2004 TOYOTA AVALON REAR SUBWOOFER - SPEAKER REPLACEMENT / REPAIR - DIY"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -30310,7 +30457,35 @@
      "views": 129219
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 32000,
+     "lo": 27800.0,
+     "hi": 33500.0,
+     "n": 3,
+     "videos": 3,
+     "id": "f7i8FwVba3A",
+     "t": 352,
+     "title": "MotorWeek Road Test: 2011 Toyota Avalon"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 790,
+       "lo": 780.0,
+       "hi": 800.0,
+       "n": 4,
+       "videos": 4,
+       "id": "iJvB1DW9dCw",
+       "t": 218,
+       "title": "3 Things I HATE About My 2011 Toyota Avalon Limited (3rd Gen)"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -30437,7 +30612,21 @@
      "views": 12318
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 34100,
+     "lo": 32600.0,
+     "hi": 35800.0,
+     "n": 13,
+     "videos": 7,
+     "id": "rrETtolrb9U",
+     "t": 290,
+     "title": "Road Test: 2013 Toyota Avalon"
+    },
+    "items": []
+   }
   },
   {
    "years": [
@@ -33993,6 +34182,203 @@
      "title": "2012 KIA OPTIMA SX Steering drift problems , Drifts on its own.",
      "channel": "OptimaKia5",
      "views": 30087
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ],
+   "gen": "2016–2020 Kia Optima",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 17471556,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 700841,
+     "n": 9,
+     "best": {
+      "id": "dh3ogrRRLgk",
+      "title": "Kia Optima Key Fob Battery Replacement (2014 - 2020)",
+      "channel": "FobBattery",
+      "views": 215630
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 187042,
+     "n": 4,
+     "best": {
+      "id": "_GHn2X1ECHI",
+      "title": "2015-2020 Kia Optima Side Mirror Replacement",
+      "channel": "YOUCANIC",
+      "views": 74967
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 152937,
+     "n": 3,
+     "best": {
+      "id": "1fm6FqIbfhU",
+      "title": "Reset maintenance oil change message on 2019 Kia Optima",
+      "channel": "Rob Faith (Prof. Car dude)",
+      "views": 116450
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 115040,
+     "n": 2,
+     "best": {
+      "id": "VkREUZ6S-Ws",
+      "title": "2016 KIA OPTIMA...No Crank...No Start...One click...FIXED...",
+      "channel": "Peter L",
+      "views": 63121
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 99448,
+     "n": 2,
+     "best": {
+      "id": "o5KXHqlfr0s",
+      "title": "2015-2020 Kia Optima Rear Rotor and Brake pad Replacement",
+      "channel": "YOUCANIC",
+      "views": 60397
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 96445,
+     "n": 2,
+     "best": {
+      "id": "IhLRsK0GUso",
+      "title": "How to Reset The TPMS Light 2015-2019 Kia Optima and What to do if it Will Not Go Off",
+      "channel": "Whyingo",
+      "views": 58548
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 87078,
+     "n": 3,
+     "best": {
+      "id": "WAR2GG3Uo6c",
+      "title": "Kia Optima Cabin Air Filter Replacement ( 2016 2017 2018 2019 2020 )",
+      "channel": "Undercar Experts",
+      "views": 48589
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 81773,
+     "n": 2,
+     "best": {
+      "id": "x5YytFkG118",
+      "title": "2016-2018 Kia Optima High Pressure Fuel Pump Replacement",
+      "channel": "Valley Mobile Automotive",
+      "views": 61079
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "k8SC2_YDa5g",
+     "title": "Kia Optima 4th generation 2015 to 2020 common problems, defects, issues, recalls and complaints.",
+     "channel": "HOWSTUFFINMYCARWORKS",
+     "views": 72145
+    },
+    {
+     "id": "BRyJ4qS2fDk",
+     "title": "Should you buy a Used 2017 KIA Optima 1.7 CRDi GT-Line S Estate DCT For Sale @SmallCarsDirect?",
+     "channel": "Small Cars Direct",
+     "views": 15336
+    },
+    {
+     "id": "fLrTOxkCZjc",
+     "title": "2019 KIA Optima Turbo - Exterior and Interior Walkaround - Debut 2018 New York Auto Show",
+     "channel": "SuperCarTube",
+     "views": 1548327
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2021–2025 Kia Optima",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 185,
+   "views": 39913347,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 241944,
+     "n": 2,
+     "best": {
+      "id": "gX1stGY1jtI",
+      "title": "How to Replace Kia K5 GT Key Fob Battery",
+      "channel": "Danny Drives",
+      "views": 123677
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 180306,
+     "n": 2,
+     "best": {
+      "id": "mwqwQsshM7s",
+      "title": "KIA K5 OIL CHANGE DIY! 2021-2024 KIA K5",
+      "channel": "Arty's Garage",
+      "views": 147231
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 177609,
+     "n": 1,
+     "best": {
+      "id": "C0i8X0Z-hqM",
+      "title": "2021 - 2022 Kia K5 - How To Reset Oil Life Light - Oil Change Service Maintenance Reset",
+      "channel": "PYR Automotive ",
+      "views": 177609
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "Zah3VtYnwb4",
+     "title": "Is the 2021 Kia K5 GT-Line a RELIABLE midsize sedan?",
+     "channel": "Raiti's Rides",
+     "views": 248043
+    },
+    {
+     "id": "y7A2N76sSWQ",
+     "title": "This 2024 Kia K5 Has a Major Engine Problem… But That’s Not the Worst Part!",
+     "channel": "Royalty Auto Service",
+     "views": 203202
+    },
+    {
+     "id": "wW5pI2OrKKM",
+     "title": "The $35,000 Question – Should You Buy a 2021 Kia K5 GT or a 2021 Hyundai Sonata Limited?",
+     "channel": "Redline Reviews",
+     "views": 148259
     }
    ],
    "costs": null
