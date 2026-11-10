@@ -26127,6 +26127,216 @@
    }
   }
  ],
+ "nissan-frontier": [
+  {
+   "years": [
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021
+   ],
+   "gen": "2005–2021 Nissan Frontier",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 23429246,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 690063,
+     "n": 3,
+     "best": {
+      "id": "Uirmei4GwkE",
+      "title": "How can a tune up cost $400? CAR WIZARD explains how modern maintenance is done on this '11 Frontier",
+      "channel": "Car Wizard",
+      "views": 445709
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 523308,
+     "n": 4,
+     "best": {
+      "id": "W3utESXyH0Y",
+      "title": "How To Program A 1998 - 2020 Nissan Frontier Remote Key Fob - Keyless Entry - DIY Video Tutorial",
+      "channel": "PYR Automotive ",
+      "views": 297157
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 514204,
+     "n": 6,
+     "best": {
+      "id": "Tft6vvex6TU",
+      "title": "How to Replace Crankshaft Position Sensor 2005-2021 Nissan Frontier (4.0L V6)",
+      "channel": "TRQ",
+      "views": 159145
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 411184,
+     "n": 3,
+     "best": {
+      "id": "r279NIRbqxQ",
+      "title": "2005 Nissan Frontier Code P0346 With Slip Light Fixed",
+      "channel": "Daniel “Rescue Moving Services” Rescue Movers",
+      "views": 145892
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 404314,
+     "n": 4,
+     "best": {
+      "id": "D42GwxXz7fw",
+      "title": "2005 2006 2007 ^ Nissan Frontier, Pathfinder, Xterra radiator removal (walkthrough )",
+      "channel": "Brian Balatbat",
+      "views": 164952
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 314399,
+     "n": 2,
+     "best": {
+      "id": "lTcumvOR9M8",
+      "title": "How to Perform a Transmission Service on a 2005-2013 Nissan Frontier",
+      "channel": "How to Automotive",
+      "views": 273165
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 304693,
+     "n": 2,
+     "best": {
+      "id": "BkDQlbErfmM",
+      "title": "2007 Nissan Frontier Timing Chain Replacement - 4.0L",
+      "channel": "Grey Tech",
+      "views": 242189
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 254420,
+     "n": 3,
+     "best": {
+      "id": "mc12FhhvBOg",
+      "title": "How to add Refrigerant to AC System on 2008 Nissan Frontier using Artic Freeze 134A Refrigerant",
+      "channel": "HOWSTUFFINMYCARWORKS",
+      "views": 166888
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "bHDCkRxhl3o",
+     "title": "2018 Nissan Frontier: It's Cheap, But Should You Buy One? — Cars.com",
+     "channel": "Cars.com",
+     "views": 335925
+    },
+    {
+     "id": "PdMdIXr64Ds",
+     "title": "Top 5 Problems Nissan Frontier Pickup 2005-2021 2nd Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 225382
+    },
+    {
+     "id": "RAphsiNpxH8",
+     "title": "2017 Nissan Frontier Least vs Most Expensive Side by Side Buyer's Guide",
+     "channel": "The Fast Lane Truck",
+     "views": 164629
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2022–2025 Nissan Frontier",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 22782593,
+   "topics": [
+    {
+     "name": "Timing chain & engine",
+     "views": 107500,
+     "n": 1,
+     "best": {
+      "id": "xhxmYvgdd4c",
+      "title": "2022 Nissan Frontier Oil Change Guide",
+      "channel": "Z1 Off-Road",
+      "views": 107500
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 55441,
+     "n": 1,
+     "best": {
+      "id": "tfp08hvPeoA",
+      "title": "How To Shut Off Sensors On Your New 2023 Nissan Frontier Pro-4x",
+      "channel": "Canadian Cruisin",
+      "views": 55441
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 28719,
+     "n": 1,
+     "best": {
+      "id": "rDS2pirzQzQ",
+      "title": "2025 Nissan Frontier: Recalls, Tailgate Flaw, & Minor Issues + Suspension Update",
+      "channel": "Zeta Dog Productions",
+      "views": 28719
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "LIe5JniJ4n4",
+     "title": "Should You Buy a 2025 Nissan Frontier? Thorough Review By A Mechanic",
+     "channel": "The Car Care Nut Reviews",
+     "views": 846631
+    },
+    {
+     "id": "JzpjxXr3Pjg",
+     "title": "The Last Simple Reliable Truck? // 2025 Nissan Frontier Pro4X Review",
+     "channel": "Sarah -n- Tuned",
+     "views": 351480
+    },
+    {
+     "id": "A_o-6uFh_9E",
+     "title": "Is The 2024 Nissan Frontier Really Reliable? Deep Dive Into The Problems And Issues",
+     "channel": "Jason Samko",
+     "views": 109456
+    }
+   ],
+   "costs": null
+  }
+ ],
  "jeep-gladiator": [
   {
    "years": [
@@ -29863,7 +30073,48 @@
      "views": 97351
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 20400,
+     "lo": 16000.0,
+     "hi": 33700.0,
+     "n": 18,
+     "videos": 14,
+     "id": "wu-czb6Q1Hw",
+     "t": 348,
+     "title": "Road Test: 2014 Kia Soul"
+    },
+    "items": [
+     [
+      "Transmission",
+      {
+       "median": 1800,
+       "lo": 400.0,
+       "hi": 7000.0,
+       "n": 3,
+       "videos": 3,
+       "id": "R0TYQSkCNM4",
+       "t": 146,
+       "title": "2014 Kia Soul Review and Road Test (Quick Spin)"
+      }
+     ],
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 700,
+       "lo": 400.0,
+       "hi": 1000.0,
+       "n": 5,
+       "videos": 3,
+       "id": "kBek61Yj_II",
+       "t": 385,
+       "title": "TOP 5 Problems on 2nd generation KIA Soul 2014 to 2019"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -29968,7 +30219,44 @@
      "views": 12183
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 25000,
+     "lo": 25000.0,
+     "hi": 25000.0,
+     "n": 4,
+     "videos": 4,
+     "id": "_N78bk6CI00",
+     "t": 438,
+     "title": "More Spirit than Expected // 2023 Kia Soul Review and Buying Guide"
+    },
+    "msrp": {
+     "median": 27000,
+     "lo": 20400.0,
+     "hi": 30000.0,
+     "n": 19,
+     "videos": 16,
+     "id": "-7ui_fGvZao",
+     "t": 1486,
+     "title": "2020 Kia Soul GT-Line – Long Live The Box Car"
+    },
+    "items": [
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 800,
+       "lo": 500.0,
+       "hi": 11000.0,
+       "n": 3,
+       "videos": 3,
+       "id": "pRoESlvHgXM",
+       "t": 268,
+       "title": "2024 KIA Soul EX+ Full Review - It Puts The FUN In Functional!"
+      }
+     ]
+    ]
+   }
   }
  ],
  "kia-telluride": [
@@ -30306,7 +30594,35 @@
      "views": 21086
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 24998,
+     "lo": 22000.0,
+     "hi": 31590.0,
+     "n": 14,
+     "videos": 13,
+     "id": "P03GeBLL7XA",
+     "t": 1024,
+     "title": "2016 Mazda CX-5 – Redline: Review"
+    },
+    "items": [
+     [
+      "Transmission",
+      {
+       "median": 1150,
+       "lo": 1000.0,
+       "hi": 1300.0,
+       "n": 2,
+       "videos": 2,
+       "id": "VcIbS4h1goQ",
+       "t": 2718,
+       "title": "2016 Mazda CX-5 GT - The most complete review EVER!"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -30370,7 +30686,44 @@
      "views": 297227
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 31000,
+     "lo": 31000.0,
+     "hi": 31000.0,
+     "n": 4,
+     "videos": 4,
+     "id": "QexAw3pRRF4",
+     "t": 1,
+     "title": "2025 Mazda CX-5 Select Review - The Only Crossover Worth Buying at $30k?"
+    },
+    "msrp": {
+     "median": 30000,
+     "lo": 25270.0,
+     "hi": 38000.0,
+     "n": 27,
+     "videos": 21,
+     "id": "TaZ7HeLmTj4",
+     "t": 1196,
+     "title": "2017 Mazda CX-5 – Not All Crossovers are Boring!"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 150,
+       "lo": 100.0,
+       "hi": 200.0,
+       "n": 4,
+       "videos": 3,
+       "id": "CcOw6As0hSU",
+       "t": 499,
+       "title": "2019 Mazda CX-5 Signature – Shaming Pricey Luxury SUV's"
+      }
+     ]
+    ]
+   }
   }
  ],
  "mazda-cx-9": [
@@ -33260,6 +33613,135 @@
      "title": "How Reliable is Ford Taurus SHO | A complete Review and Buying Guide | 2015 Taurus SHO",
      "channel": "Jioni Drive",
      "views": 51281
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "chevrolet-impala": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005
+   ],
+   "gen": "2000–2005 Chevrolet Impala",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 9796533,
+   "topics": [
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 488702,
+     "n": 5,
+     "best": {
+      "id": "ptADvMadKRU",
+      "title": "How to Replace Cabin Air Filter 2003 Chevrolet Impala | AQ1001",
+      "channel": "Filterheads",
+      "views": 209362
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 463082,
+     "n": 10,
+     "best": {
+      "id": "YoDzUvLgiwk",
+      "title": "2004 Chevy Impala Engine Won`t Start 60 amp open fuse",
+      "channel": "Pete Sambolin",
+      "views": 138726
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 432248,
+     "n": 3,
+     "best": {
+      "id": "sm_oeQxjlrg",
+      "title": "How to install a Water Pump: 2000 - 2004 Chevrolet Impala 3.4L V6 WP-625 AW5033",
+      "channel": "Airtex-ASC Performance Pumps",
+      "views": 250602
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 310561,
+     "n": 7,
+     "best": {
+      "id": "AU7Xq1NO_G4",
+      "title": "2000-2005 Impala (8th Gen) Ignition Lock Cylinder Replacement",
+      "channel": "Certified Shadetree",
+      "views": 77210
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 248446,
+     "n": 4,
+     "best": {
+      "id": "w1uQJ-69z1w",
+      "title": "Chevy Impala Fuel Pressure Regulator Change (2000-2005)--Similar Process for Many Other Years",
+      "channel": "Flashback502",
+      "views": 108118
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 165287,
+     "n": 2,
+     "best": {
+      "id": "DQhJAFB18jU",
+      "title": "2005 Chevy Impala Power Steering Hose Leak Repair",
+      "channel": "Michael Hamlin",
+      "views": 132503
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 163780,
+     "n": 6,
+     "best": {
+      "id": "4DEZ3n9IlNQ",
+      "title": "2001 Chevy Impala LS 3.8 security light reset",
+      "channel": "YU ZE Yy",
+      "views": 67749
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 143145,
+     "n": 5,
+     "best": {
+      "id": "xSrKIqO6xjI",
+      "title": "2002 chevy impala misfire problem diagnosis",
+      "channel": "O S",
+      "views": 60688
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "UjvOXhOuX0w",
+     "title": "2003 Chevy Impala Security Problems? Fix it in under 45 seconds.",
+     "channel": "Jason Elders",
+     "views": 157786
+    },
+    {
+     "id": "WGatskHWFEk",
+     "title": "2004 Chevy Impala Speedometer Problems",
+     "channel": "davesgarage512",
+     "views": 128914
+    },
+    {
+     "id": "kZDyaUGBky4",
+     "title": "2003 Impala light problems",
+     "channel": "ncryptdead",
+     "views": 65873
     }
    ],
    "costs": null
