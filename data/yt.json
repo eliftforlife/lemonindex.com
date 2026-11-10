@@ -24910,6 +24910,112 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2019–2025 GMC Sierra",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 50038407,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 1913762,
+     "n": 6,
+     "best": {
+      "id": "tsNm4OFNdHE",
+      "title": "2019 - 2021 GMC Sierra / Tahoe Key Fob Battery Replacement - EASY DIY",
+      "channel": "Key Fob Rob",
+      "views": 1210425
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 479417,
+     "n": 2,
+     "best": {
+      "id": "yzCvuAJEqhU",
+      "title": "2019-2024 Sierra/Silverado: 10-speed Transmission Fluid & Filter Change (10L80)",
+      "channel": "MasterJacks",
+      "views": 389074
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 407681,
+     "n": 2,
+     "best": {
+      "id": "T1-buTxE4eQ",
+      "title": "2019-2024 Sierra/Silverado: Rear Differential Service",
+      "channel": "MasterJacks",
+      "views": 206740
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 296959,
+     "n": 1,
+     "best": {
+      "id": "7gKbLHhD1cw",
+      "title": "Radiator Fan Won't Turn Off? GUARANTEED FIX!! For 2014-2019 Chevy Silverado & GMC Sierra trucks!",
+      "channel": "The Brothers Workshop",
+      "views": 296959
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 237936,
+     "n": 2,
+     "best": {
+      "id": "5bpnCXBcq8c",
+      "title": "How to Remove GMC Sierra / Chevy Silverado Truck Mirror Caps (2019-2025)!",
+      "channel": "DONSLIFE",
+      "views": 123100
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 192299,
+     "n": 1,
+     "best": {
+      "id": "Jh96mqbBf3o",
+      "title": "2020 GMC Sierra how to service and change your brake pads",
+      "channel": "Nitro Rednecks",
+      "views": 192299
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "rnkDWGle7Ac",
+     "title": "2021 GMC Sierra 1500 Elevation: The Trim Most Buyers Pick?",
+     "channel": "DeLo Enterprises",
+     "views": 127740
+    },
+    {
+     "id": "GiJ1ee9CH50",
+     "title": "2021 Silverado and Sierra MAJOR ENGINE PROBLEMS - Consumer Reports 2019 2020",
+     "channel": "The Sundae Drive",
+     "views": 100250
+    },
+    {
+     "id": "MQmX-LZAick",
+     "title": "2019 GMC Sierra SLT Lifted Review Test Drive and Features",
+     "channel": "Joshua McDonald - Automotive",
+     "views": 1836818
+    }
+   ],
+   "costs": null
   }
  ],
  "chevrolet-colorado": [
@@ -31070,6 +31176,134 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015
+   ],
+   "gen": "2009–2015 Nissan Maxima",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 15896599,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 536880,
+     "n": 5,
+     "best": {
+      "id": "39KcHPRvc0E",
+      "title": "Replacing Alternator on Nissan Maxima 2010 to 2015 FULL GUIDE",
+      "channel": "RB The Mechanic",
+      "views": 264318
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 421074,
+     "n": 8,
+     "best": {
+      "id": "16iu8WLMsCo",
+      "title": "How to Replace Front Lower Control Arms w/ Ball Joint 2009-2014 Nissan Maxima",
+      "channel": "TRQ",
+      "views": 74380
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 361296,
+     "n": 6,
+     "best": {
+      "id": "Xq0EB5EmWoQ",
+      "title": "2011, 2012, 2013 and 2014 Nissan Maxima 3.5L Air Intake Installation",
+      "channel": "AEMintakes",
+      "views": 161449
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 359814,
+     "n": 7,
+     "best": {
+      "id": "NgxXGuzM0Kg",
+      "title": "2015 - 2018 Nissan Maxima Cabin Air Filter - How To Change Remove Replace Replacement Location",
+      "channel": "PYR Automotive ",
+      "views": 118572
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 289638,
+     "n": 4,
+     "best": {
+      "id": "EeWsqQpL-48",
+      "title": "2010 Maxima reset maintenance",
+      "channel": "Lehew",
+      "views": 165271
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 265314,
+     "n": 4,
+     "best": {
+      "id": "pd6Bsg5CtDI",
+      "title": "Nissan Maxima CVT Transmission Fluid and filters change 2013-2019",
+      "channel": "RG AutoVlog",
+      "views": 133974
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 210419,
+     "n": 2,
+     "best": {
+      "id": "AA-1yLyJmjg",
+      "title": "How to Replace Power Steering Pressure Line 2009-2014 Nissan Maxima",
+      "channel": "TRQ",
+      "views": 114464
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 204688,
+     "n": 3,
+     "best": {
+      "id": "9e9ywZ_HUs8",
+      "title": "2010 Nissan Maxima Spark Plug Replacement",
+      "channel": "RG AutoVlog",
+      "views": 72693
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "IrEv2ZdOBSI",
+     "title": "Top 5 Problems Nissan Maxima Sedan 2009-2014 7th Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 105154
+    },
+    {
+     "id": "_ZWNXLYkJrA",
+     "title": "Nissan Maxima 8th Gen 2015 to 2021 common problems, issues, defects, recalls and complaints",
+     "channel": "HOWSTUFFINMYCARWORKS",
+     "views": 45547
+    },
+    {
+     "id": "gYk-BZxC2-0",
+     "title": "2013 Nissan Altima vs Maxima 0-60 MPH Mashup Review",
+     "channel": "The Fast Lane Car",
+     "views": 783529
+    }
+   ],
+   "costs": null
   }
  ],
  "kia-rio": [
@@ -31451,7 +31685,35 @@
      "views": 546626
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 17120,
+     "lo": 15557.71,
+     "hi": 18340.0,
+     "n": 8,
+     "videos": 6,
+     "id": "Fpez4Ih0_Ks",
+     "t": 768,
+     "title": "2013 Kia Rio SX – Redline: Review"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 38,
+       "lo": 25.0,
+       "hi": 50.0,
+       "n": 2,
+       "videos": 2,
+       "id": "sX1fiJPa3DY",
+       "t": 124,
+       "title": "How to Replace a Crankshaft Position Sensor, 2013 Kia Rio (P0335, P0336). Very detailed directions."
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -31578,7 +31840,21 @@
      "views": 415729
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 19000,
+     "lo": 15900.0,
+     "hi": 20000.0,
+     "n": 7,
+     "videos": 7,
+     "id": "TYv1_7JnsYE",
+     "t": 296,
+     "title": "2019 Kia Rio – Review and Road Test"
+    },
+    "items": []
+   }
   }
  ],
  "subaru-impreza": [
