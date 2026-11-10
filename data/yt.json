@@ -56000,7 +56000,26 @@
      "views": 238071
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 150,
+       "lo": 20.0,
+       "hi": 3000.0,
+       "n": 3,
+       "videos": 3,
+       "id": "he2XTNHJBdE",
+       "t": 786,
+       "title": "COMPLETELY Fixing a TRASHED MK5 GTI ~ Worth It?"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
