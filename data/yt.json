@@ -30833,7 +30833,26 @@
      "views": 58210
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 600,
+       "lo": 35.0,
+       "hi": 900.0,
+       "n": 7,
+       "videos": 7,
+       "id": "qgMS1hnNEsc",
+       "t": 102,
+       "title": "1st Gen 2003 Dodge Durango 4.7L Startup Sound Diagnostics"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -31787,7 +31806,21 @@
      "views": 38992
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 34494,
+     "lo": 29800.0,
+     "hi": 39000.0,
+     "n": 12,
+     "videos": 10,
+     "id": "6kZAGxyFrec",
+     "t": 475,
+     "title": "Watch This: 2014 Nissan Pathfinder SUV on Everyman Driver"
+    },
+    "items": []
+   }
   },
   {
    "years": [
@@ -31879,7 +31912,21 @@
      "views": 37779
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 45160,
+     "lo": 38460.0,
+     "hi": 50000.0,
+     "n": 32,
+     "videos": 25,
+     "id": "s64GQctlLxY",
+     "t": 23,
+     "title": "2022 Nissan Pathfinder Platinum 4WD - POV Review"
+    },
+    "items": []
+   }
   }
  ],
  "nissan-murano": [
