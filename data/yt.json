@@ -56126,7 +56126,26 @@
      "views": 1170876
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 330,
+       "lo": 20.0,
+       "hi": 800.0,
+       "n": 3,
+       "videos": 3,
+       "id": "fp_h0TFTFGI",
+       "t": 484,
+       "title": "The Best Budget Car You Should Buy! 2013 Volkswagen Golf MK6 Review "
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
