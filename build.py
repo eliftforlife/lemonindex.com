@@ -573,18 +573,26 @@ def ystar(fid, y):
 # topics, top}}} from 3 Lemon Index/data/yt/yt_score.py. Models that have it get a second bar per year (higher = YouTube likes it more), plus rows
 # for older years that only YouTube covers (e.g. 1970s-90s Civics). Everything else is unchanged.
 YTS = json.load(open('data/yt_scores.json', encoding='utf-8')) if os.path.exists('data/yt_scores.json') else {}
+YT_MIN = 10   # 11-10 (Elijah: "remove YT rank from cars that don't have enough data, it's making them auto first place"): a year needs 10+ videos to be ranked
+def yt_rankable(f, sc):
+    """Years that may get a YouTube rank: 10+ videos, and (if 2010 or newer) an owner-complaint score too. Brand-new years only have
+    launch reviews and no owner data yet, so they used to win #1 by default (e.g. the 2026 Civic)."""
+    li = {v['y'] for v in f['years'] if v['ok']}
+    return {int(y) for y, s in sc.items() if s.get('score') is not None and (s.get('videos') or 0) >= YT_MIN and (int(y) < 2010 or int(y) in li)}
 def ybars_yt(f, cur, sc):
     mx = max(120, max(v['li'] for v in f['years'] if v['ok']) * 1.08); byy = {v['y']: v for v in f['years']}
     ys = sorted(set(byy) | {int(y) for y in sc})
-    got = sorted(((s['score'], s['videos'], int(y)) for y, s in sc.items() if s.get('score') is not None), reverse=True)
-    RK = {y: i + 1 for i, (_, _, y) in enumerate(got)}; lo, hi = got[-1][0], got[0][0]
+    okr = yt_rankable(f, sc)
+    got = sorted(((s['score'], s['videos'], int(y)) for y, s in sc.items() if int(y) in okr), reverse=True)
+    if not got: got = [(50, 0, 0)]
+    RK = {y: i + 1 for i, (_, _, y) in enumerate(got) if y}; lo, hi = got[-1][0], got[0][0]
     def row(y):
-        v = byy.get(y); s = sc.get(str(y)) or {}; ss = s.get('score'); rk = RK.get(y)
+        v = byy.get(y); s = sc.get(str(y)) or {}; rk = RK.get(y); ss = s.get('score') if rk else None
         # bar = score stretched over the model's own range (YouTube scores sit close to 50); the number is the rank, #1 = YouTube's favorite year
         w = 8 + 92 * (ss - lo) / max(1, hi - lo) if ss is not None else 0
         tier = '' if rk is None else (' up' if rk <= len(RK) / 3 else ' dn' if rk > len(RK) * 2 / 3 else '')
         yt = (f'<span class="bt ytb{tier}"><i style="width:{w:.0f}%"></i></span><b class="ytn">#{rk}</b>' if ss is not None else '<span class="bt ytb"></span><b class="ytn mute">·</b>')
-        tip = f'{E(f["name"])} {y}: ' + (f'Lemon Index {v["li"]}' if v and v['ok'] else 'no complaint score') + (f'. YouTube rank #{rk} of {len(RK)} (score {ss}, {s["videos"]:g} videos)' if ss is not None else '. Too few YouTube videos to rank')
+        tip = f'{E(f["name"])} {y}: ' + (f'Lemon Index {v["li"]}' if v and v['ok'] else 'no complaint score') + (f'. YouTube rank #{rk} of {len(RK)} (score {ss}, {s["videos"]:g} videos)' if ss is not None else '. Not enough YouTube or owner data yet to rank')
         if v:
             return (f'<a class="b {CLS(v)}{" cur" if y == cur else ""}" href="{CARU(f, y)}" data-tip="{tip}."><span class="bn">{y}</span><span class="bt"><i style="width:{min(100, v["li"] / mx * 100) if v["ok"] else 0:.1f}%"></i>'
                     f'<em style="left:{100 / mx * 100:.1f}%"></em></span><b>{LIS(v)}</b>{yt}</a>')
@@ -595,9 +603,11 @@ def yt_note(f):
     sc = YTS.get(f['id'])
     if not sc: return ''
     n = round(sum(s.get('videos') or 0 for s in sc.values())); yrs = sorted(int(y) for y, s in sc.items() if s.get('score') is not None)
-    best = max((int(y) for y, s in sc.items() if s.get('score') is not None), key=lambda y: (sc[str(y)]['score'], sc[str(y)]['videos'], y))   # 11-08: same tie-break as the bars' #1 (score, then videos)
+    okr = yt_rankable(f, sc)
+    if not okr: return ''
+    best = max(okr, key=lambda y: (sc[str(y)]['score'], sc[str(y)]['videos'], y))   # 11-08: same tie-break as the bars' #1; 11-10: only rankable years
     return (f'<p class="yc-cap"><b>YouTube rank:</b> we read {n:,} YouTube videos about the {f["name"]}, {yrs[0]} to {yrs[-1]}, and ranked every year by how much they praise it '
-            f'vs. how much they talk about problems. YouTube&#39;s favorite: <b>{best}</b>. Old cars rank lower partly because most of their videos are repair and restoration videos. A gray dot means too few videos to rank.</p>')
+            f'vs. how much they talk about problems. YouTube&#39;s favorite: <b>{best}</b>. Old cars rank lower partly because most of their videos are repair and restoration videos. A gray dot means not enough data yet: under 10 videos, or a new year with no owner complaints to compare.</p>')
 # 11-08 (Elijah: "make the top of every car model page answer '<car> reliability' from the YouTube stuff, maybe a different ranking"):
 # people search "Mercedes C-Class reliability", so the model page opens with that question, a plain answer and a 3-tile scorecard.
 # YouTube scores climb with newer model years for every car (old cars = repair videos), so each year is compared with the median
@@ -947,7 +957,7 @@ for f in YEARS:
 <div class="pg mp6"><section class="ph yph6"><div class="yh-t"><p class="ph-e"><a href="/cars/">All cars</a> · <a href="/brands/{c["brand"].lower().replace(" ", "-")}/">{E(c["brand"])}</a> · {E(c["segName"])}</p>{rel_html}{f'<p class="yc-note">{SN[f["id"]][1]}</p>' if f["id"] in SN else ""}
 <div class="yhero">{gauge(c["li"], 190)}<div class="yverd {verdict(c["li"])[0]}"><p><b>{verdict(c["li"])[1]}.</b> <span>Whole model, {c["years"]}{"" if plain(c["li"]).lower() in verdict(c["li"])[1].lower() else ": " + E(plain(c["li"]))}.</span></p><p class="ybw">Best year <a class="good" href="{CARU(f, best["y"])}">{best["y"]}</a> · Worst year <a class="bad" href="{CARU(f, worst["y"])}">{worst["y"]}</a></p></div></div>
 <p><button type="button" class="btn btn-ghost" data-share="{E(f'Every {snm} year ranked by owner complaints. Best: {best["y"]}. Worst: {worst["y"]}. Free report:')}">Share ↗</button></p></div><div class="ph-v">{car_hero(f, ys[-1]["y"])}{rel_tiles}</div></section>
-{YSL.year_slider_html(f['id'], f['name'], {v['y']: round(v['li']) for v in ys if v.get('ok') and v.get('li') is not None}, YSL.yt_scores(f['id']), {v['y'] for v in ys})}<section class="yyears noph" id="years"><div class="yy-ch"><h2>Every year. <span class="h2s">Lower is better. Tap a year for its full report.</span></h2>{ybars(f)}</div>{'<p class="yc-cap">Scores before 2010 are rough: fewer owners filed complaints back then.</p>' if ys[0]["y"] < 2010 else ''}{yt_note(f)}</section>
+{YSL.year_slider_html(f['id'], f['name'], {v['y']: round(v['li']) for v in ys if v.get('ok') and v.get('li') is not None}, {y: sc_ for y, sc_ in YSL.yt_scores(f['id']).items() if y in yt_rankable(f, YTS.get(f['id'], {}))}, {v['y'] for v in ys})}<section class="yyears noph" id="years"><div class="yy-ch"><h2>Every year. <span class="h2s">Lower is better. Tap a year for its full report.</span></h2>{ybars(f)}</div>{'<p class="yc-cap">Scores before 2010 are rough: fewer owners filed complaints back then.</p>' if ys[0]["y"] < 2010 else ''}{yt_note(f)}</section>
 {ytfix("model:" + f["id"])}{picks}{SPECS_HOOK(f["id"])}
 {f'<section><h2>Compare the {E(f["name"])}.</h2><div class="mus">{vcards}</div>' + (f'<p class="yc-cap">{vs}</p>' if vs else '') + '</section>' if vcards or vs else ''}
 {model_qa_html}

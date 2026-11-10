@@ -1,97 +1,106 @@
 {
  "B48": {
-  "src": "/assets/engines/bmw-b48-engine-photo.webp",
-  "w": 960,
-  "h": 845,
-  "author": "Wikisympathisant",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:BMW_B48_im_BMW-Museum_2018-06.jpg",
-  "file": "File:BMW B48 im BMW-Museum 2018-06.jpg"
+  "src": "/assets/engines/bmw-b48-turbo-inline-4-engine.webp",
+  "w": 1200,
+  "h": 1020,
+  "ai": true,
+  "title": "BMW B48 2.0-liter turbo inline-4 engine (illustration)",
+  "bytes": 148854
  },
  "B58": {
   "src": "/assets/engines/bmw-b58-turbo-inline-6-engine.webp",
   "w": 1200,
-  "h": 800,
+  "h": 973,
   "ai": true,
   "title": "BMW B58 3.0-liter turbo inline-6 engine (illustration)",
-  "bytes": 89128
+  "bytes": 143314
  },
  "N20": {
-  "src": "/assets/engines/bmw-n20-engine-photo.webp",
-  "w": 960,
-  "h": 1440,
-  "author": "Hullie",
-  "license": "CC BY-SA 3.0",
-  "page": "https://commons.wikimedia.org/wiki/File:BMW_N20_Engine.JPG",
-  "file": "File:BMW N20 Engine.JPG"
+  "src": "/assets/engines/bmw-n20-turbo-inline-4-engine.webp",
+  "w": 1200,
+  "h": 1069,
+  "ai": true,
+  "title": "BMW N20 2.0-liter turbo inline-4 engine (illustration)",
+  "bytes": 149932
  },
  "N52": {
-  "src": "/assets/engines/bmw-n52-engine-photo.webp",
-  "w": 960,
-  "h": 720,
-  "author": "IntelPentiumMMX",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:BMW-N52.jpg",
-  "file": "File:BMW-N52.jpg"
+  "src": "/assets/engines/bmw-n52-inline-6-engine.webp",
+  "w": 1200,
+  "h": 1016,
+  "ai": true,
+  "title": "BMW N52 3.0-liter inline-6 engine (illustration)",
+  "bytes": 126974
  },
  "N54": {
   "src": "/assets/engines/bmw-n54-twin-turbo-inline-6-engine.webp",
   "w": 1200,
-  "h": 800,
+  "h": 984,
   "ai": true,
   "title": "BMW N54 3.0-liter twin-turbo inline-6 engine (illustration)",
-  "bytes": 77498
+  "bytes": 134400
  },
  "N55": {
   "src": "/assets/engines/bmw-n55-turbo-inline-6-engine.webp",
   "w": 1200,
-  "h": 800,
+  "h": 1080,
   "ai": true,
   "title": "BMW N55 3.0-liter single-turbo inline-6 engine (illustration)",
-  "bytes": 94558
+  "bytes": 144194
  },
  "N63": {
   "src": "/assets/engines/bmw-n63-twin-turbo-v8-engine.webp",
   "w": 1200,
-  "h": 800,
+  "h": 806,
   "ai": true,
   "title": "BMW N63 4.4-liter twin-turbo V8 engine (illustration)",
-  "bytes": 109456
+  "bytes": 146980
  },
  "S54": {
-  "src": "/assets/engines/bmw-s54-engine-photo.webp",
-  "w": 960,
-  "h": 720,
-  "author": "sirronwong",
-  "license": "CC BY 2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:2007_BMW_Z4_M_Coup%C3%A9_engine.jpg",
-  "file": "File:2007 BMW Z4 M Coupé engine.jpg"
+  "src": "/assets/engines/bmw-s54-inline-6-engine.webp",
+  "w": 1200,
+  "h": 922,
+  "ai": true,
+  "title": "BMW S54 3.2-liter inline-6 engine (illustration)",
+  "bytes": 143546
  },
  "S55": {
-  "src": "/assets/engines/bmw-s55-engine-photo.webp",
-  "w": 960,
-  "h": 720,
-  "author": "Cjp24",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:BMW_M2_Edition_designed_by_FUTURA_2000_(2).jpg",
-  "file": "File:BMW M2 Edition designed by FUTURA 2000 (2).jpg"
+  "src": "/assets/engines/bmw-s55-twin-turbo-inline-6-engine.webp",
+  "w": 1200,
+  "h": 1056,
+  "ai": true,
+  "title": "BMW S55 3.0-liter twin-turbo inline-6 engine (illustration)",
+  "bytes": 143142
  },
  "S58": {
-  "src": "/assets/engines/bmw-s58-engine-photo.webp",
-  "w": 960,
-  "h": 796,
-  "author": "Wikisympathisant",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:2023-04-08_BMW_S58_straight-6-engine_2nd-view.jpg",
-  "file": "File:2023-04-08 BMW S58 straight-6-engine 2nd-view.jpg"
+  "src": "/assets/engines/bmw-s58-twin-turbo-inline-6-engine.webp",
+  "w": 1200,
+  "h": 850,
+  "ai": true,
+  "title": "BMW S58 3.0-liter twin-turbo inline-6 engine (illustration)",
+  "bytes": 129178
  },
  "S63": {
-  "src": "/assets/engines/bmw-s63-engine-photo.webp",
-  "w": 960,
-  "h": 640,
-  "author": "Matti Blume",
-  "license": "CC BY-SA 4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:BMW_S63,_Techno-Classica_2018,_Essen_(IMG_0053).jpg",
-  "file": "File:BMW S63, Techno-Classica 2018, Essen (IMG 0053).jpg"
+  "src": "/assets/engines/bmw-s63-twin-turbo-v8-engine.webp",
+  "w": 1200,
+  "h": 953,
+  "ai": true,
+  "title": "BMW S63 4.4-liter twin-turbo V8 engine (illustration)",
+  "bytes": 143358
+ },
+ "M54": {
+  "src": "/assets/engines/bmw-m54-inline-6-engine.webp",
+  "w": 1200,
+  "h": 1116,
+  "ai": true,
+  "title": "BMW M54 inline-6 engine (illustration)",
+  "bytes": 131352
+ },
+ "N62": {
+  "src": "/assets/engines/bmw-n62-v8-engine.webp",
+  "w": 1200,
+  "h": 1027,
+  "ai": true,
+  "title": "BMW N62 V8 engine (illustration)",
+  "bytes": 138986
  }
 }
