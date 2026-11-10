@@ -1080,3 +1080,13 @@ table.spec td { font-size: 14px; }
 .imgcard code, .yc code { font-size: 12.5px; background: #f4f3ef; padding: 2px 6px; border-radius: 6px; word-break: break-word; }
 .engt table.adv { min-width: 860px; } .engt table.adv td:nth-child(2) { min-width: 210px; } .engt table.adv td:first-child { font-weight: 600; }
 table.spec { min-width: 820px; }
+/* 11-10 donation copy: ad-free line + planned list in the support sheet; donor request box on /thanks/ */
+.vh { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.sup-ads { margin: -6px 24px 10px; font-size: 15px; color: var(--ink2); }
+.sup-next { margin: 0 24px 16px; font-size: 14px; color: var(--ink2); }
+.sup-next summary { cursor: pointer; font-weight: 700; color: var(--ink); }
+.sup-next ul { margin: 8px 0 0; padding-left: 18px; display: grid; gap: 4px; }
+.thx-note { font-size: 14px; color: var(--mute); }
+.thx-req textarea { width: 100%; box-sizing: border-box; font: 16px/1.4 Inter, system-ui, sans-serif; padding: 12px 14px; border: 1.5px solid var(--line); border-radius: 14px; resize: vertical; }
+.thx-req textarea:focus { outline: 3px solid var(--lemon); outline-offset: 2px; }
+.thx-req-m:empty { display: none; } .thx-req-m { font-weight: 700; margin: 10px 0 0; }

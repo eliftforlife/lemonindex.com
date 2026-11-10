@@ -40,7 +40,7 @@
     if (/^\/compare\//.test(P)) return { q: 'Comparing cars?', a: 'Every head-to-head is free.', why: ['Every comparison stays free', 'No paywall, no account', 'Pays for new car data and tools'] };
     if (/^\/electric\//.test(P)) return { q: 'Thinking about an EV?', a: 'Every EV report is free.', why: ['Every EV report stays free', 'No paywall, no account', 'Pays for new studies'] };
     if (/^\/brands\//.test(P)) return { q: 'Picking a brand?', a: 'Every brand report is free.', why: ['Every brand and model stays free', 'No paywall, no account', 'Pays for new studies'] };
-    return { q: 'Enjoying the Lemon Index?', a: 'Keep it 100% free.', why: ['Every car report stays free for everyone', 'No paywall, no account needed', 'Pays for new studies, tools and videos'] };
+    return { q: 'Enjoying the Lemon Index?', a: 'Keep it free and ad-free.', why: ['Every car report stays free for everyone', 'No paywall, no account needed', 'Pays for new studies, tools and videos'] };
   })();
   const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   // ---- the sheet (bottom sheet on phones, centered card on bigger screens)
@@ -52,6 +52,8 @@
     <p><b>$0</b>to read any report</p></div>
   <h2 id="sup-h">${esc(CTX.q)} <span>${esc(CTX.a)} Chip in if it helped.</span></h2>
   <ul class="sup-why">${CTX.why.map(w => `<li>${w}</li>`).join('')}</ul>
+  <p class="sup-ads"><b>Lemon has no ads right now.</b> Donations keep it ad-free and pay for more cars, images and data.</p>
+  <details class="sup-next"><summary>What donations fund next (planned)</summary><ul><li>Year-by-year images and a year slider for more cars</li><li>Engine pages for more brands (BMW is live)</li><li>A VIN report for any car</li><li>Recall alerts for your car</li><li>A Spanish version of the site</li></ul></details>
   <div class="sup-amts" role="radiogroup" aria-label="Amount">
     ${[5, 10, 15].map(a => `<button type="button" role="radio" data-a="${a}" aria-checked="${a === pick}">$${a}</button>`).join('')}
     <button type="button" role="radio" data-a="custom" aria-checked="false">Other</button>
@@ -82,7 +84,7 @@
     const yt = !!document.querySelector('#diy');
     const card = document.createElement('aside');
     card.className = 'supc'; card.setAttribute('aria-label', 'Support the Lemon Index');
-    card.innerHTML = `<img src="/assets/icon-64.png" alt="" width="40" height="40"><div class="supc-t"><b>Did this help?</b><span>${yt ? 'We went through 100+ YouTube videos and every government complaint so you don&#39;t have to.' : 'We went through every government complaint and recall so you don&#39;t have to.'} It&#39;s free, no paywall. A $5 coffee keeps it that way.</span></div>
+    card.innerHTML = `<img src="/assets/icon-64.png" alt="" width="40" height="40"><div class="supc-t"><b>Did this help?</b><span>${yt ? 'We went through 100+ YouTube videos and every government complaint so you don&#39;t have to.' : 'We went through every government complaint and recall so you don&#39;t have to.'} It&#39;s free, with no paywall and no ads. A $5 coffee keeps it that way and pays for more cars and data.</span></div>
 <div class="supc-b"><a class="btn supc-go" href="${LINKS[5]}" target="_blank" rel="noopener">Buy us a $5 coffee</a><button type="button" class="supc-o">Other amount</button></div>`;
     spot.insertAdjacentElement('afterend', card);
     card.querySelector('.supc-go').addEventListener('click', () => { mark(); set(PAID, String(Date.now())); });

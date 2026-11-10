@@ -12,6 +12,9 @@
 // POST /feedback (11-09): the feedback box at the bottom of lemonindex.com, mealmonster.app, thebusinessstudy.com and elijahwestbrook.com.
 //      Stores {site, page path, message, optional email, created} in table feedback. No IPs or IP hashes are stored: the per-IP limit is the
 //      FEEDBACK_RL rate-limit binding (wrangler.toml) plus an in-memory map that dies with the isolate. Read with 0 HQ/Tools/feedback.py pull.
+// POST /donor-request (11-10): "What car or feature should we add next?" on lemonindex.com/thanks/ (where Stripe sends donors).
+//      Stores {request (2-300 chars), page, Stripe checkout session id if the thank-you URL carried one} in table donor_requests, plus the
+//      same salted daily IP hash the other routes use (only to cap repeat sends). No name or email. Not shown publicly. Max 5 per visitor per day.
 // Deploy: py make_worker.py, then `npx.cmd --yes wrangler deploy` from this folder (wrangler.toml).
 // Q is generated from data/survey.json + data/votes.json by worker/make_worker.py -> survey_worker.dist.js (the uploaded file).
 const Q = __Q__;
@@ -125,6 +128,27 @@ export default {
       if (n >= 10) return json(o, { error: 'limit' }, 429);
       await env.DB.prepare('INSERT INTO tool_requests (ts, day, ih, data) VALUES (?, ?, ?, ?)').bind(Date.now(), day, ih, JSON.stringify(d)).run();
       const m = alertMail(env, `Tool request: ${d.tool}${d.maker ? ' (from the maker)' : ''}`, [['Tool', d.tool], ['Website', d.url], ['Note', d.note], ['Email', d.email], ['From page', d.page]], d.email || undefined);
+      if (ctx && ctx.waitUntil) ctx.waitUntil(m); else await m;
+      return json(o, { ok: true });
+    }
+    if (req.method === 'POST' && url.pathname === '/donor-request') {
+      let b; try { b = await req.json(); } catch { return json(o, { error: 'bad' }, 400); }
+      if (b.hp) return json(o, { ok: true });                                  // honeypot: only bots fill it in
+      const ip = req.headers.get('CF-Connecting-IP') || '';
+      if (env.FEEDBACK_RL && !(await env.FEEDBACK_RL.limit({ key: 'dr:' + ip })).success) return json(o, { error: 'limit' }, 429);
+      const request = typeof b.request === 'string' ? b.request.trim().slice(0, 300) : '';
+      const session = typeof b.session === 'string' && /^cs_(live|test)_[A-Za-z0-9]{10,200}$/.test(b.session) ? b.session : '';
+      const page = typeof b.page === 'string' ? b.page.slice(0, 120).replace(/[^a-z0-9/_.-]/gi, '') : '';
+      if (request.length < 2) return json(o, { error: 'missing' }, 400);
+      const day = new Date().toISOString().slice(0, 10), salt = env.SALT || 'lemon-survey-v1';
+      const h = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(`${ip}|${day}|${salt}|donor`));
+      const ih = [...new Uint8Array(h)].slice(0, 12).map(x => x.toString(16).padStart(2, '0')).join('');
+      await env.DB.prepare("CREATE TABLE IF NOT EXISTS donor_requests (id INTEGER PRIMARY KEY AUTOINCREMENT, ts INTEGER, day TEXT, ih TEXT, site TEXT, request TEXT, session TEXT, page TEXT, status TEXT DEFAULT 'new')").run();
+      const n = await env.DB.prepare('SELECT COUNT(*) n FROM donor_requests WHERE ih = ? AND day = ?').bind(ih, day).first('n');
+      if (n >= 5) return json(o, { error: 'limit' }, 429);
+      if (await env.DB.prepare('SELECT COUNT(*) n FROM donor_requests WHERE day = ?').bind(day).first('n') >= 300) return json(o, { error: 'limit' }, 429);   // flood guard
+      await env.DB.prepare('INSERT INTO donor_requests (ts, day, ih, site, request, session, page) VALUES (?, ?, ?, ?, ?, ?, ?)').bind(Date.now(), day, ih, FB_SITE(o) || '', request, session || null, page).run();
+      const m = alertMail(env, `Donor request: ${request.slice(0, 60)}`, [['Request', request], ['Stripe session', session || '(none on the thank-you URL)'], ['From page', page]]);
       if (ctx && ctx.waitUntil) ctx.waitUntil(m); else await m;
       return json(o, { ok: true });
     }
