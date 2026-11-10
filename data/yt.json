@@ -30455,6 +30455,135 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014
+   ],
+   "gen": "2007–2014 GMC Yukon",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 19651930,
+   "topics": [
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 726328,
+     "n": 7,
+     "best": {
+      "id": "OmQz7w8Eiis",
+      "title": "0 or Low Oil Pressure? Chevy Suburban, 5.3l Vortec 2007-2014, Tahoe, Yukon. Diagnose and Fix Easiest",
+      "channel": "g3mccotter",
+      "views": 540241
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 488620,
+     "n": 6,
+     "best": {
+      "id": "3r2KdN0k4Ak",
+      "title": "DIY How to repair 2009 GMC Yukon Heater Hose & Tee Connector Chevy / GM",
+      "channel": "Matt Freytag",
+      "views": 159186
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 471937,
+     "n": 4,
+     "best": {
+      "id": "W5OHrYJqtEQ",
+      "title": "GM Truck Won't Start, NO CRANK '99-2007 Classic Silverado, Sierra, Tahoe, Yukon | AnthonyJ350",
+      "channel": "AnthonyJ350",
+      "views": 355205
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 466794,
+     "n": 5,
+     "best": {
+      "id": "rDoiTv5SFE4",
+      "title": "Service stabilitrak service traction control 2008 Yukon error code",
+      "channel": "Steve Lentz",
+      "views": 231922
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 454432,
+     "n": 2,
+     "best": {
+      "id": "JPV4vNiKIU8",
+      "title": "07-14 Tahoe Suburban Yukon Silverado Sierra Escalade GMT900 6L80 6L90 Shift Linkage Bushing Repair",
+      "channel": "10mm404",
+      "views": 294773
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 396351,
+     "n": 3,
+     "best": {
+      "id": "8q1DCLtuCSU",
+      "title": "2007 - 2014 GMC / Chevy Front Door Speaker Install | Sierra Silverado Avalanche Tahoe Suburban Yukon",
+      "channel": "Provo Beast Audio Installation",
+      "views": 202047
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 385750,
+     "n": 4,
+     "best": {
+      "id": "FR_WJMv-rqg",
+      "title": "How to Change Rear Brakes and Rotors 2007-2014 GMC Yukon Tahoe Silverado Sierra",
+      "channel": "TheRykerDane",
+      "views": 127689
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 376435,
+     "n": 1,
+     "best": {
+      "id": "aEfgkxWdBYw",
+      "title": "Thermostat Replacement Yukon, Tahoe, Sierra, Silverado, Escalade GMC, Chevy 2014-2020 P0128",
+      "channel": "Danny Johnson’s Garage",
+      "views": 376435
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "vlTcm7ewnTI",
+     "title": "Top 5 Problems GMC Yukon SUV 3rd Generation 2007-14",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 613508
+    },
+    {
+     "id": "SepnH0fK-LY",
+     "title": "Top 5 Problems | 2007-2014 Chevy Suburban | GMC Yukon XL |",
+     "channel": "SUBOVERLAND",
+     "views": 45056
+    },
+    {
+     "id": "hguQZt1u0BU",
+     "title": "2012 GMC Yukon Denali - Electrical Problems - Multiple Codes PO573 C0196 B1235 B2555 U0233",
+     "channel": "FrugalPrepper's Garage and Garden",
+     "views": 22810
+    }
+   ],
+   "costs": null
   }
  ],
  "gmc-yukon-xl": [
@@ -40892,6 +41021,133 @@
      "title": "Nissan Sentra SL 2017 Review - Don't Buy a Corolla or Civic Before Watching This Video",
      "channel": "Carro Chefe",
      "views": 953969
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2020–2025 Nissan Sentra",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 18561935,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 142149,
+     "n": 4,
+     "best": {
+      "id": "JUJZ-Dut6OI",
+      "title": "How to replace CVT FLUID and FILTERS on 2020-2026 NISSAN SENTRAS 🚘 - Full Service 🔧",
+      "channel": "Sam Aka Vlogs",
+      "views": 40940
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 86647,
+     "n": 2,
+     "best": {
+      "id": "Cn0muS0Yw3w",
+      "title": "The Fastest 2020+ Nissan Sentra SR Oil Change Guide",
+      "channel": "Metaloop DIY - Cars and Tools",
+      "views": 63741
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 68182,
+     "n": 1,
+     "best": {
+      "id": "HZpA1Enu1DI",
+      "title": "Nissan Sentra Cabin Air Filter Replacement. 2020 2021 2022 2023",
+      "channel": "Scotties Hobbies",
+      "views": 68182
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 63299,
+     "n": 2,
+     "best": {
+      "id": "cOkOVw9YuXw",
+      "title": "2023 - 2025 NISSAN SENTRA - How To Start With Dead Remote Key Fob Battery Not Working",
+      "channel": "PYR Automotive ",
+      "views": 37318
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 36034,
+     "n": 1,
+     "best": {
+      "id": "Cp6vUAdI9r0",
+      "title": "How to remove door panels on a 2020-2022 Nissan Sentra(front switches have security tabs) read below",
+      "channel": "Raul Romo SD",
+      "views": 36034
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 32909,
+     "n": 1,
+     "best": {
+      "id": "ZUgQof7Gimc",
+      "title": "2020 Nissan Sentra - CVT Transmission Failure at 24k miles !!",
+      "channel": "Traveling Car Guru",
+      "views": 32909
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 23870,
+     "n": 1,
+     "best": {
+      "id": "MxtZCTkxvho",
+      "title": "2021 Nissan Sentra serpentine belt (drive belt) replacement ￼",
+      "channel": "Ghost Auto DIY",
+      "views": 23870
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 23794,
+     "n": 1,
+     "best": {
+      "id": "swjA0rbKDcM",
+      "title": "2020 - 2025 NISSAN SENTRA - How To Reset Oil Life After Engine Oil Change & Clear Service Due Light",
+      "channel": "PYR Automotive ",
+      "views": 23794
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "PP4_LVtgRJk",
+     "title": "2022 Nissan Sentra SR // 7-Days Later: Should you BUY over Civic & Corolla??",
+     "channel": "Car Confections",
+     "views": 177119
+    },
+    {
+     "id": "IMNhBEtbZjI",
+     "title": "2020 Nissan Altima vs 2020 Nissan Sentra | Which one should you buy? |",
+     "channel": "Cars Unlocked",
+     "views": 112104
+    },
+    {
+     "id": "xHe3WlbSZW4",
+     "title": "Nissan Sentra Review | Should You Buy a 2020–2025 Nissan Sentra?",
+     "channel": "CarMax",
+     "views": 63562
     }
    ],
    "costs": null
