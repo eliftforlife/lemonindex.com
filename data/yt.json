@@ -41140,6 +41140,132 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2014,
+    2015,
+    2016,
+    2017,
+    2018
+   ],
+   "gen": "2014–2018 Kia Forte",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 10105124,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 204575,
+     "n": 6,
+     "best": {
+      "id": "AS2vxRuJnSk",
+      "title": "2018 KIA FORTE No Start No Crank Problem...Fuse? Relay? Alternator? Fuel Pump? Start?....Fixed...",
+      "channel": "Peter L",
+      "views": 43682
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 169564,
+     "n": 3,
+     "best": {
+      "id": "PvyWs7CMrIo",
+      "title": "Save $200 on 2014-2018 Kia Forte Spark Plug replacement",
+      "channel": "Daring Motors",
+      "views": 82876
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 163407,
+     "n": 4,
+     "best": {
+      "id": "71NAaEe3zsw",
+      "title": "How to: 2018 Kia Forte Head Light Bulb Removal",
+      "channel": "GEORGE LOPEZ HOW TO DO IT YOUR SELF",
+      "views": 85144
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 147126,
+     "n": 3,
+     "best": {
+      "id": "eoK4Bom8rjA",
+      "title": "How to Check and Fill Fluids [COMPLETE GUIDE] - Kia Forte (2014-2018)",
+      "channel": "Virar Automotive",
+      "views": 87425
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 96342,
+     "n": 2,
+     "best": {
+      "id": "-hir_dt6BSQ",
+      "title": "Replacing the Fuel Pump and Fuel Filter on a 2014 Kia Forte",
+      "channel": "VEW RV Adventures",
+      "views": 86666
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 87236,
+     "n": 4,
+     "best": {
+      "id": "RkS8FyQbZsw",
+      "title": "17-18 Kia Forte front brake pads. 2017-2018 Kia Forte front brake pad replacement.",
+      "channel": "Problem Solver Garage",
+      "views": 31660
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 69410,
+     "n": 1,
+     "best": {
+      "id": "1HUQt6uJQ2s",
+      "title": "How to remove front and rear door panels on 2016 Kia Forte 5",
+      "channel": "Raul Romo SD",
+      "views": 69410
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 47416,
+     "n": 2,
+     "best": {
+      "id": "teujKw5oGxk",
+      "title": "2017 kia forte wont start \"bypass\"",
+      "channel": "David Pace (Max) ",
+      "views": 27640
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "0NhTXMph6Ao",
+     "title": "2014 Mazda3 vs Honda Civic vs KIA Forte vs Toyota Corolla Matchup Review",
+     "channel": "The Fast Lane Car",
+     "views": 686044
+    },
+    {
+     "id": "IoYebZDP07U",
+     "title": "2016 Kia Forte - Review and Road Test",
+     "channel": "Kelley Blue Book",
+     "views": 329172
+    },
+    {
+     "id": "ck1Q8n_Iikg",
+     "title": "Here's the 2014 Kia Forte Review on Everyman Driver",
+     "channel": "Everyman Driver",
+     "views": 212530
+    }
+   ],
+   "costs": null
   }
  ],
  "kia-rio": [
@@ -44416,6 +44542,263 @@
      "title": "Top 5 Problems Volkswagen Jetta Sedan 5th Generation 2006-10",
      "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
      "views": 200189
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018
+   ],
+   "gen": "2011–2018 Volkswagen Jetta",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 33119345,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 2043697,
+     "n": 10,
+     "best": {
+      "id": "GvBiaQB621A",
+      "title": "HOW TO: Reset INSPEC light 2014 Volkswagen Jetta",
+      "channel": "HYENA art magazine",
+      "views": 509668
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 1216307,
+     "n": 6,
+     "best": {
+      "id": "Gzw4TCI1sBM",
+      "title": "2017 VW Jetta SE Service Reset Oil Change Reminder",
+      "channel": "Wheels Tips!",
+      "views": 421429
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 1100038,
+     "n": 8,
+     "best": {
+      "id": "BOQxS9Xdj70",
+      "title": "VW JETTA MK6 RADIO REMOVAL REPLACEMENT VW GOLF MK6 2011 2012 2013 2014 2015 2016",
+      "channel": "Auto Repair Guys",
+      "views": 299075
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 698695,
+     "n": 5,
+     "best": {
+      "id": "4x5sEti-2lQ",
+      "title": "How To ReCharge AC VW Jetta DIY 11 12 13 14 15 16 17 18 2011 2012 2013 2014 2015 2016 2017 2018",
+      "channel": "Dirt Road Auto Repair",
+      "views": 208784
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 545566,
+     "n": 1,
+     "best": {
+      "id": "tzyv8owgI_4",
+      "title": "How To: 2011 Jetta Door Panel Removal - Front and Rear",
+      "channel": "Scheufler26",
+      "views": 545566
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 466849,
+     "n": 4,
+     "best": {
+      "id": "-ORSNNGVwlw",
+      "title": "How to Replace Upstream O2 Sensor 2011-2018 Volkswagen Jetta",
+      "channel": "TRQ",
+      "views": 168024
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 404240,
+     "n": 3,
+     "best": {
+      "id": "tiBSa_N8CoY",
+      "title": "How to Replace Radiator 2011-2018 Volkswagen Jetta",
+      "channel": "TRQ",
+      "views": 196852
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 392147,
+     "n": 2,
+     "best": {
+      "id": "f-Ly6mbyUus",
+      "title": "VW MK6 Jetta / GLI Interior LED Installation Guide by USP Motorsports",
+      "channel": "USP Motorsports",
+      "views": 276390
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "oq6wio-wNzs",
+     "title": "Top 5 Problems Volkswagen Jetta Sedan 2011-2018 6th Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 404145
+    },
+    {
+     "id": "V8urwPq_afk",
+     "title": "2012 VW Jetta GLI Test Drive & Car Review by RoadflyTV with Elizabeth Kreft",
+     "channel": "RoadflyTV",
+     "views": 348625
+    },
+    {
+     "id": "5gJLZj0Fm1c",
+     "title": "2015 VW Jetta TDI - Review & Test Drive",
+     "channel": "Engineering Explained",
+     "views": 345378
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2019–2025 Volkswagen Jetta",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 33194046,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 604097,
+     "n": 4,
+     "best": {
+      "id": "6m55R_7UYMY",
+      "title": "How To Reset Oil Life On 2019 - 2022 Volkswagen Jetta - Clear VW Oil Change Service Interval Light",
+      "channel": "PYR Automotive ",
+      "views": 236401
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 448653,
+     "n": 6,
+     "best": {
+      "id": "5GNkvMd_AW4",
+      "title": "How to Change the Oil on a 2019-2024 VW Taos Jetta Golf 1.4T or 1.5T",
+      "channel": "Blauparts",
+      "views": 126203
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 306797,
+     "n": 3,
+     "best": {
+      "id": "N4sAtJ7uZ4o",
+      "title": "How to [EASILY] Replace the Battery - Volkswagen Jetta (2019-2024)",
+      "channel": "Virar Automotive",
+      "views": 131159
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 291412,
+     "n": 1,
+     "best": {
+      "id": "qloWwsxK-nw",
+      "title": "MK7 Volkswagen GTI (Jetta, Beetle, & More) Water Pump & Thermostat Housing Replacement",
+      "channel": "FCP Euro",
+      "views": 291412
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 171619,
+     "n": 2,
+     "best": {
+      "id": "6nhecvz8phc",
+      "title": "How to Check and Fill Fluids [COMPLETE GUIDE] - Volkswagen Jetta (2019-2024)",
+      "channel": "Virar Automotive",
+      "views": 131027
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 103326,
+     "n": 2,
+     "best": {
+      "id": "911DFAGjdTU",
+      "title": "Shifter Stuck in Park - Volkswagen Jetta (2019-2024)",
+      "channel": "Virar Automotive",
+      "views": 53943
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 64289,
+     "n": 1,
+     "best": {
+      "id": "S1mtPkldKL8",
+      "title": "Volkswagen Jetta Cabin Air Filter Replacement ( 2019 2020 2021 2022 )",
+      "channel": "Undercar Experts",
+      "views": 64289
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 43246,
+     "n": 1,
+     "best": {
+      "id": "FyLg4w6XqBM",
+      "title": "2021 Jetta GLI (MK7) - APR Open Intake Installation and Sound Comparison - Before and After",
+      "channel": "AutoN8 GT",
+      "views": 43246
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "esHt7Hxns3s",
+     "title": "Should You Buy a 2025 VW Jetta GLI? Thorough Review By A Mechanic",
+     "channel": "The Car Care Nut Reviews",
+     "views": 240850
+    },
+    {
+     "id": "0Jq7SYPL4Uc",
+     "title": "2019 VW Jetta GLI Review - GTI With a Trunk",
+     "channel": "TheStraightPipes",
+     "views": 539696
+    },
+    {
+     "id": "xjEFqu1R9hQ",
+     "title": "2019 Volkswagen Jetta - Review & Road Test",
+     "channel": "Kelley Blue Book",
+     "views": 488333
     }
    ],
    "costs": null
