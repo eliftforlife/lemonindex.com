@@ -189,7 +189,7 @@ else:
                       else f'Photo: {E(ph.get("author", ""))} / <a href="{pg}" rel="noopener">Wikimedia Commons</a> ({lic_h}), resized')
             alt = f'Illustration of a BMW {E(code)} {E(BENG[code]["size"])} {E(BENG[code]["layout"])} engine' if ph.get('ai') else f'BMW {E(code)} engine'
             fig = (f'<figure class="engph"><img src="{E(ph["src"])}"{rset(ph["src"], "(max-width: 700px) 100vw, 680px")} width="{ph["w"]}" height="{ph["h"]}" '
-                   f'alt="{alt}" loading="eager"><figcaption>{cr}</figcaption></figure>')
+                   f'alt="{alt}" loading="eager">' + YSL.info(cr) + '</figure>')
         body = (f'<div class="advp"><header class="advh1"><p class="ph-e"><a href="/engines/bmw/">BMW engines</a> · <a href="/brands/bmw/">BMW</a></p>'
                 f'<h1>BMW {E(code)} engine: reliability by year, specs and the cars that have it.</h1><p class="ans">{ans}</p>{fig}</header><div class="ygrid">{"".join(sec)}</div>'
                 + share_line(f'BMW {code} engine reliability, year by year. Free:') + '</div>')

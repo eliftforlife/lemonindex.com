@@ -11,6 +11,14 @@ NOTE = 'Illustration (AI-generated). Typical factory color of the era, not sales
 
 def has(fid): return fid in AIY
 
+_IIN = [0]
+def info(html_text):
+    """11-10 (Elijah): image credit / AI disclosure behind a small 'i' button in the image's bottom-right corner (assets/imginfo.js).
+    The text stays in the page (hidden until opened); ImageObject markup and alt text carry the same facts for machines."""
+    _IIN[0] += 1; i = f'ii{_IIN[0]}'
+    return (f'<button class="ii" type="button" aria-label="Image info" aria-expanded="false" aria-controls="{i}">i</button>'
+            f'<div class="ii-pop" id="{i}" role="note" hidden>{html_text}</div>')
+
 def _ld(fid, y, name, im):
     return {"@context": "https://schema.org", "@type": "ImageObject", "contentUrl": BASE + im['src'], "name": f'{y} {name} (illustration)',
             "description": f'AI-generated illustration of a {y} {name}, {im["gen"]}, in {im["color"]}.', "width": im['w'], "height": im['h'],
@@ -25,7 +33,7 @@ def ai_year_html(fid, y, name, hero=False):
     if not im: return ''
     ld = 'fetchpriority="high" decoding="async"' if hero else 'loading="lazy" decoding="async"'
     return (f'<link rel="stylesheet" href="/assets/yslider.css?v=1"><figure class="yph aiy"><img src="{im["src"]}" alt="{y} {E(name)}, {E(im["gen"])}, illustration" width="{im["w"]}" height="{im["h"]}" {ld}>'
-            f'<figcaption>Illustration (AI-generated) of a {y} {E(name)}. {NOTE.split(". ", 1)[1]}</figcaption></figure>'
+            + info(f'Illustration (AI-generated) of a {y} {E(name)}. {NOTE.split(". ", 1)[1]} <a href="/images/">Download and credit text</a>') + '</figure>'
             f'<script type="application/ld+json">{json.dumps(_ld(fid, y, name, im))}</script>')
 
 def year_slider_html(fid, name, li=None, yt=None, pages=()):
@@ -39,11 +47,12 @@ def year_slider_html(fid, name, li=None, yt=None, pages=()):
     return (f'<link rel="stylesheet" href="/assets/yslider.css?v=1"><section class="ysl" id="every-year" aria-label="Every {E(short)}, year by year">'
             f'<h2>Every {E(short)}, year by year. <span class="h2s">Slide through {ys[0]} to {ys[-1]}.</span></h2>'
             f'<div class="ysl-stage"><img class="on" src="{first["src"]}" alt="{ys[0]} {E(name)} illustration" width="{first["w"]}" height="{first["h"]}" fetchpriority="low"><img alt="" width="{first["w"]}" height="{first["h"]}" aria-hidden="true">'
-            f'<div class="ysl-yr"><b>{ys[0]}</b><span class="ysl-gen">{E(first["gen"])}</span></div></div>'
+            f'<div class="ysl-yr"><b>{ys[0]}</b><span class="ysl-gen">{E(first["gen"])}</span></div>'
+            + info(f'Illustrations (AI-generated) of every {E(name)} model year. Typical factory color of the era, not sales data. Free to use under <a href="{LIC}" rel="license noopener">CC BY 4.0</a>: credit The Lemon Index (lemonindex.com). <a href="/images/">Download and credit text</a>') + '</div>'
             f'<div class="ysl-info"><span class="ysl-li"></span><span class="ysl-yt"></span><a class="ysl-go" href="#"></a></div>'
             f'<input class="ysl-range" type="range" min="0" max="{len(ys) - 1}" step="1" value="0" aria-label="Model year" aria-valuetext="{ys[0]}">'
             f'<div class="ysl-ends"><span>{ys[0]}</span><span>{ys[-1]}</span></div>'
-            f'<p class="yc-cap">{NOTE}</p>'
+
             f'<script type="application/json" class="ysl-data">{json.dumps({"name": name, "years": data})}</script></section>'
             f'<script src="/assets/yslider.js?v=1" defer></script>')
 
