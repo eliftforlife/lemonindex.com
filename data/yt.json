@@ -28363,7 +28363,26 @@
      "views": 45925
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Tires",
+      {
+       "median": 990,
+       "lo": 250.0,
+       "hi": 3000.0,
+       "n": 6,
+       "videos": 3,
+       "id": "Adpuo5S0zU4",
+       "t": 387,
+       "title": "Monster! 2001 GMC Yukon Denali XL For Sale! 41\" Super Swampers!"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -28616,7 +28635,26 @@
      "views": 191742
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 700,
+       "lo": 700.0,
+       "hi": 7000.0,
+       "n": 3,
+       "videos": 3,
+       "id": "9EWToENvBoI",
+       "t": 660,
+       "title": "Repairing Entertainment Screens - 2016 GMC Yukon XL"
+      }
+     ]
+    ]
+   }
   }
  ],
  "hyundai-kona": [
@@ -30186,6 +30224,133 @@
      "title": "2000 Lexus RX 300 Start Up and Review 3.0 L V6",
      "channel": "Camerons Car Reviews",
      "views": 146634
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009
+   ],
+   "gen": "2004–2009 Lexus RX",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 12116171,
+   "topics": [
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 338839,
+     "n": 7,
+     "best": {
+      "id": "z-TQA5yVk7E",
+      "title": "How to Replace Cabin Air Filter 2009 Lexus RX350 | AQ1048",
+      "channel": "Filterheads",
+      "views": 139796
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 310812,
+     "n": 4,
+     "best": {
+      "id": "7_2mMeLtyTI",
+      "title": "Repair gone Wrong: Timing Belt | 2008 Lexus RX400h",
+      "channel": "Rainman Ray's Repairs",
+      "views": 168556
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 284887,
+     "n": 5,
+     "best": {
+      "id": "4CqcgPyj6wQ",
+      "title": "BEST aftermarket radio for the Money!! Install in a 2004-2009 Lexus RX 350 RX 330 Pioneer MVH-1400",
+      "channel": "Modern Greaser",
+      "views": 175783
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 213922,
+     "n": 5,
+     "best": {
+      "id": "OUcKRZMyoFY",
+      "title": "2009 Lexus RX350 Tail Light Bulb Replacement",
+      "channel": "Hank Hoy",
+      "views": 92623
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 208084,
+     "n": 4,
+     "best": {
+      "id": "xBpvY057u7g",
+      "title": "Replacing Spark Plugs on a 2005 Lexus RX330",
+      "channel": "Stephen Hunt",
+      "views": 76437
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 199484,
+     "n": 1,
+     "best": {
+      "id": "gt3hjXW895s",
+      "title": "Buying a used Lexus RX (XU30) - 2003-2008, Buying Guide with Common Issues",
+      "channel": "different car review",
+      "views": 199484
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 191543,
+     "n": 3,
+     "best": {
+      "id": "6iPf-FqNd90",
+      "title": "2004 Lexus RX330 TRAC OFF and VSC lights O2 Sensors P0171/P0174 System too lean Bank 1&2 FIXED",
+      "channel": "Itty",
+      "views": 81554
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 172565,
+     "n": 3,
+     "best": {
+      "id": "RUck_fmL8NI",
+      "title": "HOW TO RESET TIRE PRESSURE ON A 2003 - 2009 LEXUS RX 350",
+      "channel": "DimasCarTech",
+      "views": 85405
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "0urRVJInyfc",
+     "title": "2004 LEXUS RX 330 Starting Problems...Won't Crank...Clicks...Solved...",
+     "channel": "Peter L",
+     "views": 33216
+    },
+    {
+     "id": "EpUTD3mfXzk",
+     "title": "THE TRUE COST of LEXUS RX350 ! (2008 - 2015) | Cost of maintenance, Spare Parts & Common problems",
+     "channel": "234 DRIVE",
+     "views": 23946
+    },
+    {
+     "id": "yFW3XWXgOWc",
+     "title": "SOLD- 2009 Lexus RX350 Luxury Crossover SOLD-",
+     "channel": "Curious Cars",
+     "views": 188781
     }
    ],
    "costs": null
@@ -32312,7 +32477,96 @@
      "views": 113407
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 41000,
+     "lo": 35000.0,
+     "hi": 50000.0,
+     "n": 11,
+     "videos": 7,
+     "id": "RmCiuPEtuIo",
+     "t": 381,
+     "title": "Review: 2013 Chevrolet Camaro ZL1 (Manual)"
+    },
+    "msrp": {
+     "median": 36500,
+     "lo": 24550.0,
+     "hi": 54900.0,
+     "n": 11,
+     "videos": 10,
+     "id": "3y-WOp20PDE",
+     "t": 699,
+     "title": "5th Gen Camaro 184,000miles later! How Has it Held Up?"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 200,
+       "lo": 30.0,
+       "hi": 430.0,
+       "n": 15,
+       "videos": 13,
+       "id": "-UhGpeIfvP4",
+       "t": 188,
+       "title": "Watch This Before Buying a Chevrolet Camaro 2010-2015 (5th Gen)"
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 800,
+       "lo": 280.0,
+       "hi": 2000.0,
+       "n": 3,
+       "videos": 3,
+       "id": "3KzRpFfC4dw",
+       "t": 124,
+       "title": "2015 Chevy Camaro Z/28 First Drive Video"
+      }
+     ],
+     [
+      "Water pump / cooling",
+      {
+       "median": 374,
+       "lo": 75.0,
+       "hi": 430.0,
+       "n": 5,
+       "videos": 3,
+       "id": "69BVDToWDIw",
+       "t": 710,
+       "title": "2010 Chevrolet Camaro SS SLP575: Regular Car Reviews"
+      }
+     ],
+     [
+      "Oil leak repair",
+      {
+       "median": 125,
+       "lo": 100.0,
+       "hi": 150.0,
+       "n": 4,
+       "videos": 2,
+       "id": "dbzws4zbkEQ",
+       "t": 338,
+       "title": "Here’s What it REALLY Costs to Cam a 5th Gen. Camaro SS | Full Price Breakdown"
+      }
+     ],
+     [
+      "Oil change",
+      {
+       "median": 80,
+       "lo": 70.0,
+       "hi": 90.0,
+       "n": 4,
+       "videos": 2,
+       "id": "ZFEAdUFpE2k",
+       "t": 761,
+       "title": "watch this before buying a 5th gen camaro !"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -38981,6 +39235,135 @@
    "costs": null
   }
  ],
+ "chrysler-300": [
+  {
+   "years": [
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010
+   ],
+   "gen": "2005–2010 Chrysler 300",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 17070076,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 612558,
+     "n": 5,
+     "best": {
+      "id": "BIdy3HIwZis",
+      "title": "2008-2011 Chrysler 300, Dodge Charger, and Dodge Magnum starter relay issues",
+      "channel": "MotorCity Mechanic",
+      "views": 292469
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 428227,
+     "n": 5,
+     "best": {
+      "id": "TUYkJ6YGaYo",
+      "title": "How to Replace Thermostat 2005-2010 Chrysler 300",
+      "channel": "TRQ",
+      "views": 112715
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 310831,
+     "n": 5,
+     "best": {
+      "id": "iDBl1InWixQ",
+      "title": "Replace Side View Mirror Installation on 2008 Chrysler 300",
+      "channel": "CARiD",
+      "views": 131597
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 252703,
+     "n": 2,
+     "best": {
+      "id": "npW0Q3hk4eE",
+      "title": "How to Replace Cabin Air Filter 2006 Chrysler 300 | AQ1096C",
+      "channel": "Filterheads",
+      "views": 212610
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 246676,
+     "n": 4,
+     "best": {
+      "id": "uB8J-6dSjaA",
+      "title": "2006 Chrysler 300 🔺Red lightning bolt fix!!!!",
+      "channel": "Mike 230",
+      "views": 173678
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 202001,
+     "n": 3,
+     "best": {
+      "id": "FjD4rt91mB8",
+      "title": "2007 Chrysler 300c won't start, just clicking...",
+      "channel": "bdavis0605",
+      "views": 134011
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 164380,
+     "n": 1,
+     "best": {
+      "id": "kngF-dP92IQ",
+      "title": "How to Replace Fuel Pump 2005-2010 Chrysler 300",
+      "channel": "TRQ",
+      "views": 164380
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 139454,
+     "n": 1,
+     "best": {
+      "id": "M3rrP7wthcM",
+      "title": "How to Use Transmission Oil Dipstick 2005-2010 Chrysler 300",
+      "channel": "TRQ",
+      "views": 139454
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "fVK58TDMpWE",
+     "title": "Top 5 Problems Chrysler 300C Sedan 2005-2010 8th Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 265133
+    },
+    {
+     "id": "dVHrZa3SJgM",
+     "title": "How reliable is a 2006 Chrysler 300 SRT8? 5 year Review.",
+     "channel": "Matt’s MotoWoRX",
+     "views": 47935
+    },
+    {
+     "id": "k5DtNTAYcRk",
+     "title": "Review: 2006 Chrysler 300C SRT8",
+     "channel": "Matt Maran Motoring",
+     "views": 1500566
+    }
+   ],
+   "costs": null
+  }
+ ],
  "lexus-es": [
   {
    "years": [
@@ -42837,7 +43220,21 @@
      "views": 1723817
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 32000,
+     "lo": 30000.0,
+     "hi": 35000.0,
+     "n": 19,
+     "videos": 17,
+     "id": "7pE0jXUOudc",
+     "t": 383,
+     "title": "2014 Mercedes-Benz CLA45 AMG 4Matic Start Up, Exhaust, and In Depth Review"
+    },
+    "items": []
+   }
   }
  ],
  "mercedes-benz-gla": [
