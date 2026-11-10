@@ -31528,6 +31528,137 @@
    }
   }
  ],
+ "ford-taurus": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007
+   ],
+   "gen": "2000–2007 Ford Taurus",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 11261094,
+   "topics": [
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 962894,
+     "n": 8,
+     "best": {
+      "id": "5ZY5uildY1c",
+      "title": "2000-2007 Ford Taurus: Replacing Fuel Filter",
+      "channel": "Edward in TX",
+      "views": 304225
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 878933,
+     "n": 14,
+     "best": {
+      "id": "G7xeyvHx24U",
+      "title": "NEVER Install a Bigger FUSE! (Electrical Fire) 2004 Ford Taurus 3.0",
+      "channel": "Rainman Ray's Repairs",
+      "views": 340159
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 674395,
+     "n": 5,
+     "best": {
+      "id": "8xc_h8tgU3s",
+      "title": "Replacing Spark Plugs on 2000-2007 Ford Taurus 3.0L V6",
+      "channel": "Edward in TX",
+      "views": 210528
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 617842,
+     "n": 6,
+     "best": {
+      "id": "gPqZ5pmGKLo",
+      "title": "2003 Ford Taurus Thermostat Replacement",
+      "channel": "SparkysGarage",
+      "views": 191596
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 600789,
+     "n": 13,
+     "best": {
+      "id": "-GI0ZaMBQfw",
+      "title": "How to Replace Cabin Air Filter 2001 Ford Taurus | AQ1003",
+      "channel": "Filterheads",
+      "views": 182437
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 487685,
+     "n": 9,
+     "best": {
+      "id": "5rm15Br5kzw",
+      "title": "Fixing Idling Problem Throttle Position Sensor Replacement 2001 Ford Taurus",
+      "channel": "MrCaryGrant59",
+      "views": 346777
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 468660,
+     "n": 6,
+     "best": {
+      "id": "mL1BrgrNCFY",
+      "title": "2000 Ford Taurus TR Sensor Problem P0705, P1702 - Transmission Repair",
+      "channel": "Automatic Transmission",
+      "views": 204244
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 197743,
+     "n": 3,
+     "best": {
+      "id": "1vLn-dVmTDQ",
+      "title": "2002 Ford Taurus Power Window Fix",
+      "channel": "Tiptophimp",
+      "views": 166175
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "wMbwe32NOwc",
+     "title": "Top 5 Problems Ford Taurus Sedan 2000-2007 4th Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 88951
+    },
+    {
+     "id": "PfmzlUuVtLg",
+     "title": "2003 Ford Taurus Start up and Review 3.0 L V6",
+     "channel": "Camerons Car Reviews",
+     "views": 86696
+    },
+    {
+     "id": "7e6JCHDsOXw",
+     "title": "2006 FORD TAURUS SEL Review Engine Start up",
+     "channel": "AutomotiveReview",
+     "views": 80840
+    }
+   ],
+   "costs": null
+  }
+ ],
  "chevrolet-camaro": [
   {
    "years": [
@@ -36564,7 +36695,39 @@
      "views": 72807
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 480,
+       "lo": 250.0,
+       "hi": 600.0,
+       "n": 11,
+       "videos": 8,
+       "id": "M3Hn6WFIR3c",
+       "t": 78,
+       "title": "2006 Mazda 3 Automatic Transmission Problem Solved Fix"
+      }
+     ],
+     [
+      "Oil leak repair",
+      {
+       "median": 650,
+       "lo": 500.0,
+       "hi": 800.0,
+       "n": 2,
+       "videos": 2,
+       "id": "62xtLj-6psA",
+       "t": 109,
+       "title": "2007 high mileage Mazda3 Walk around review 200,000 miles 0-60 reliability"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -36689,7 +36852,21 @@
      "views": 8448
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 20000,
+     "lo": 20000.0,
+     "hi": 25590.0,
+     "n": 9,
+     "videos": 8,
+     "id": "w9XPanD743I",
+     "t": 284,
+     "title": "2012 Mazda3 SkyActiv Review - Finally, a Mazda3 that's fun and fuel efficient"
+    },
+    "items": []
+   }
   },
   {
    "years": [
@@ -36815,7 +36992,48 @@
      "views": 93270
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 24000,
+     "lo": 22545.0,
+     "hi": 25000.0,
+     "n": 15,
+     "videos": 13,
+     "id": "u5gKkBFqma0",
+     "t": 1156,
+     "title": "2018 Mazda3 GT Hatch – Aged To Perfection"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 1500,
+       "lo": 159.0,
+       "hi": 2000.0,
+       "n": 5,
+       "videos": 4,
+       "id": "qMTCHhVCbH0",
+       "t": 401,
+       "title": "2014 18 Mazda 3 Exhaust Fix – Save $2900 on Cat & Flex Pipe!"
+      }
+     ],
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 1000,
+       "lo": 1000.0,
+       "hi": 1000.0,
+       "n": 2,
+       "videos": 2,
+       "id": "7ZG3r17k9SU",
+       "t": 786,
+       "title": "2018 Mazda3 Sport vs Mazda CX-3 Review"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
