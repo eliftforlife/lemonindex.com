@@ -22175,7 +22175,26 @@
      "views": 1376
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 140,
+       "lo": 45.0,
+       "hi": 256.0,
+       "n": 7,
+       "videos": 4,
+       "id": "pO94ORZ06_U",
+       "t": 4050,
+       "title": "2005 Hyundai Tucson bumper replacement $140 Walmart bumper"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -22302,7 +22321,21 @@
      "views": 1135507
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 25200,
+     "lo": 23500.0,
+     "hi": 26900.0,
+     "n": 4,
+     "videos": 3,
+     "id": "AnM4l7uPJt4",
+     "t": 311,
+     "title": "2015 Hyundai Tucson Start Up and Review 2.4 L 4-Cylinder"
+    },
+    "items": []
+   }
   },
   {
    "years": [
@@ -27302,6 +27335,138 @@
      "title": "Jeep Compass - TOP PROBLEMS & ISSUES 2007 - 2017 (common fixes, repairs, defects)",
      "channel": "QuiteAlright",
      "views": 21414
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "jeep-renegade": [
+  {
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023
+   ],
+   "gen": "2015–2023 Jeep Renegade",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 26378773,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 409761,
+     "n": 7,
+     "best": {
+      "id": "V9XaXWr2b5Y",
+      "title": "2015 Jeep Renegade jump starting and battery removal",
+      "channel": "MotorCity Mechanic",
+      "views": 117255
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 198293,
+     "n": 4,
+     "best": {
+      "id": "IkSbobsYpQU",
+      "title": "How to Change Oil 2015-2024 Jeep Renegade (2.4L L4)",
+      "channel": "TRQ",
+      "views": 76005
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 172620,
+     "n": 2,
+     "best": {
+      "id": "ucp_hh_ITpw",
+      "title": "HOW TO CHECK TRANSMISSION FLUID LEVEL ON 2017 JEEP RENEGADE. NO DIP STICK!!!",
+      "channel": "G Auto Repair",
+      "views": 101902
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 151577,
+     "n": 2,
+     "best": {
+      "id": "15D3UDIpHl8",
+      "title": "2018 Jeep Renegade How To Replace The Cabin Air Filter",
+      "channel": "Oil Light Reset ",
+      "views": 81001
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 116684,
+     "n": 2,
+     "best": {
+      "id": "EW6mqMsw_G4",
+      "title": "How to reset the oil light on a 2016 Jeep Renegade",
+      "channel": "Viking Veteran",
+      "views": 76673
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 91268,
+     "n": 2,
+     "best": {
+      "id": "-4ltdePwzNc",
+      "title": "Four Wheel Drive Operation-How to use the 4x4 4WD transfer case on 2017 Jeep Renegade",
+      "channel": "Mopar",
+      "views": 52679
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 83441,
+     "n": 2,
+     "best": {
+      "id": "BHO3vMArv6w",
+      "title": "How to Replace Front Brakes 2015-2024 Jeep Renegade",
+      "channel": "TRQ",
+      "views": 57042
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 61239,
+     "n": 1,
+     "best": {
+      "id": "r5QCEPK6JS0",
+      "title": "Thermostat Replacement | 2016 Jeep Renegade (2.0/2.4 Engine)",
+      "channel": "jessedrifts",
+      "views": 61239
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "OqHe_bxalCE",
+     "title": "Jeep Renegade SUV 2016-2019 review - Carbuyer",
+     "channel": "Carbuyer",
+     "views": 467387
+    },
+    {
+     "id": "qLNF0jEkIeA",
+     "title": "Top 5 Problems Jeep Renegade 1st Generation 2015-Present",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 396524
+    },
+    {
+     "id": "48ux-EMoLGU",
+     "title": "2023 Jeep Renegade Trailhawk - New turbo engine, fuel consumption, performance, price, problems. ...",
+     "channel": "Opinião Sincera",
+     "views": 376829
     }
    ],
    "costs": null
