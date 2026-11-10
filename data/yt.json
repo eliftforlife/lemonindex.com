@@ -30470,6 +30470,134 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+   ],
+   "gen": "2018–2024 GMC Terrain",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 9551255,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 918686,
+     "n": 9,
+     "best": {
+      "id": "UH8u5VGdMEo",
+      "title": "2018 - 2024 GMC Terrain Key Fob Battery Replacement - EASY DIY",
+      "channel": "Key Fob Rob",
+      "views": 225283
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 196804,
+     "n": 3,
+     "best": {
+      "id": "epdvbjNpyFQ",
+      "title": "How To Change 2018 - 2021 GMC Terrain Cabin Air filter - Replace Remove Replacement Filter Location",
+      "channel": "PYR Automotive ",
+      "views": 100600
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 101102,
+     "n": 2,
+     "best": {
+      "id": "-xL86aRO1ds",
+      "title": "How to Replace Rear Brakes 2018-2024 GMC Terrain",
+      "channel": "TRQ",
+      "views": 75988
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 82891,
+     "n": 1,
+     "best": {
+      "id": "cZXbXaFxitI",
+      "title": "How to change transmission fluid 2018+ GMC Terrain / Chevy Equinox 9 Speed Transmission (9T50)",
+      "channel": "Suburban Redneck Garage",
+      "views": 82891
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 72228,
+     "n": 1,
+     "best": {
+      "id": "HLD_RRKbc6Q",
+      "title": "2018 - 2021 GMC Terrain - How To Reset The Oil Life Light - Clear Change Engine Oil Soon",
+      "channel": "PYR Automotive ",
+      "views": 72228
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 49548,
+     "n": 3,
+     "best": {
+      "id": "5SF_nEZ1f-g",
+      "title": "2018-2021 GMC Terrain/Equinox Oil Change & How I Remove Stuck Oil Filters EVERY TIME",
+      "channel": "DIY Fix It",
+      "views": 19702
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 47767,
+     "n": 2,
+     "best": {
+      "id": "O3OaCzrgqkI",
+      "title": "2021-2024 Chevy Equinox GMC Terrain Fuel Pump Replacement",
+      "channel": "ThatShortGuy",
+      "views": 28299
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 21378,
+     "n": 1,
+     "best": {
+      "id": "YWfg6vr43bw",
+      "title": "2019 GMC TERRAIN SLT 1.5T | TUNE-UP | HOW TO REPLACE SPARK PLUGS | Howto/Diy",
+      "channel": "The PullUpKing 👨🏾‍🔧",
+      "views": 21378
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "wCGVd-7ajzo",
+     "title": "GMC TERRAIN - TOP PROBLEMS & ISSUES 2018 - 2024 (common fixes, repairs, defects)",
+     "channel": "QuiteAlright",
+     "views": 53463
+    },
+    {
+     "id": "pHEyQ-srp3E",
+     "title": "2019 GMC Terrain SLT: Best Size for Most Buyers?",
+     "channel": "DeLo Enterprises",
+     "views": 44744
+    },
+    {
+     "id": "CEuRYo8qc5A",
+     "title": "GMC Terrain vs. Chevrolet Equinox Which one should you buy? | Full SUV Comparison 2023\"",
+     "channel": "Cars Unlocked",
+     "views": 38414
+    }
+   ],
+   "costs": null
   }
  ],
  "gmc-yukon": [
