@@ -31528,6 +31528,138 @@
    }
   }
  ],
+ "ford-fiesta": [
+  {
+   "years": [
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019
+   ],
+   "gen": "2011–2019 Ford Fiesta",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 45824099,
+   "topics": [
+    {
+     "name": "Transmission & shifter",
+     "views": 2361461,
+     "n": 6,
+     "best": {
+      "id": "YVJnNPbjjjs",
+      "title": "Ford DPS6 Dual Clutch Transmission Shudder 2011+Fiesta & 2012+ Focus: Clutch Replacement Procedure",
+      "channel": "FordTechMakuloco",
+      "views": 1546423
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 1346401,
+     "n": 4,
+     "best": {
+      "id": "RihBwB0gXH8",
+      "title": "FORD RADIO NOT WORKING FIXED FAST & EASY ON 2012-2014 FORD FOCUS, FIESTA, ESCAPE AND MANY MORE FIXED",
+      "channel": "Hidalgo Motors Co TV",
+      "views": 733429
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 1160892,
+     "n": 2,
+     "best": {
+      "id": "6LzjtkK4alo",
+      "title": "Ford fiesta 2013 service reset",
+      "channel": "worthyo",
+      "views": 689961
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 899643,
+     "n": 3,
+     "best": {
+      "id": "E9YIuKQmWG0",
+      "title": "Ford Fiesta 2013 Cabin Air Filter Replacement | AQ1198",
+      "channel": "Filterheads",
+      "views": 561085
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 733779,
+     "n": 3,
+     "best": {
+      "id": "ToJJyE1aBf0",
+      "title": "How to Replace Serpentine Belt 2011-2019 Ford Fiesta",
+      "channel": "TRQ",
+      "views": 306305
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 443226,
+     "n": 3,
+     "best": {
+      "id": "CjczX2x9Wec",
+      "title": "2013 Ford Fiesta Oil Light reset. (EASY)",
+      "channel": "GQ Auto Diagnostics",
+      "views": 187380
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 331753,
+     "n": 3,
+     "best": {
+      "id": "A3UY2T9oJ1Y",
+      "title": "Ford Fiesta (2013 - 2017) - Replace the front brake pads",
+      "channel": "Haynes Manuals",
+      "views": 138102
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 216377,
+     "n": 2,
+     "best": {
+      "id": "ZUJE7_86IFw",
+      "title": "How to Replace Fuel Pump Assembly 2011-2019 Ford Fiesta",
+      "channel": "TRQ",
+      "views": 108982
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "bgWetddJnZI",
+     "title": "Ford Fiesta hatchback 2013 review - Carbuyer",
+     "channel": "Carbuyer",
+     "views": 852660
+    },
+    {
+     "id": "N-Li_RP5Rcs",
+     "title": "Ford Fiesta hatchback 2008 - 2012 review -- CarBuyer",
+     "channel": "Carbuyer",
+     "views": 820389
+    },
+    {
+     "id": "9ebqqN7rYAM",
+     "title": "Ford Fiesta ST hatchback 2013 review - CarBuyer",
+     "channel": "Carbuyer",
+     "views": 769351
+    }
+   ],
+   "costs": null
+  }
+ ],
  "ford-taurus": [
   {
    "years": [
@@ -31654,6 +31786,129 @@
      "title": "2006 FORD TAURUS SEL Review Engine Start up",
      "channel": "AutomotiveReview",
      "views": 80840
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2008,
+    2009
+   ],
+   "gen": "2008–2009 Ford Taurus",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 2389039,
+   "topics": [
+    {
+     "name": "Timing chain & engine",
+     "views": 101022,
+     "n": 2,
+     "best": {
+      "id": "3uqgTjGTn_w",
+      "title": "Ford p0316 p0303 MISFIRE bad coil pack 2001-2008 Taurus Sable Mustang Explorer Ranger p0301 p0302",
+      "channel": "NoNonsenseKnowHow",
+      "views": 66116
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 92563,
+     "n": 4,
+     "best": {
+      "id": "hRk-PP8PAFg",
+      "title": "2008 Ford Taurus X SEL Transmission Clunk",
+      "channel": "Murle Campbell",
+      "views": 48740
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 80871,
+     "n": 8,
+     "best": {
+      "id": "rV5eF2AqS6I",
+      "title": "👨‍🔧 2008 2009 Ford Taurus X Factory Radio Stereo Audio Head Remove & Replace Lots More Vids Here",
+      "channel": "Horsepower House",
+      "views": 24133
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 79109,
+     "n": 4,
+     "best": {
+      "id": "XZoAiZrnx3E",
+      "title": "Oil life reset 2008 Ford Taurus SEL",
+      "channel": "Coopers Automotive Repair",
+      "views": 61186
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 72339,
+     "n": 1,
+     "best": {
+      "id": "jVIXD0HPb4I",
+      "title": "How To Diagnose and Fix Air Door Actuator on a 2008-2009 Ford Taurus / Mercury Sable",
+      "channel": "Martin's Used Cars & Collectibles LLC",
+      "views": 72339
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 55427,
+     "n": 3,
+     "best": {
+      "id": "OadzZtPjzj8",
+      "title": "2008 Ford Taurus X SEL Blend Door Actuator Clicking Noise from dash Part 2 of 3",
+      "channel": "Murle Campbell",
+      "views": 40767
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 31003,
+     "n": 1,
+     "best": {
+      "id": "g8SF-E_HFF4",
+      "title": "2008 Ford Taurus Change Turn Signal Light",
+      "channel": "TryGeek",
+      "views": 31003
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 29658,
+     "n": 2,
+     "best": {
+      "id": "OG6tTL4bmyo",
+      "title": "2008 Ford Taurus, Edge, and Flex Emergency brake removal",
+      "channel": "bc42875",
+      "views": 22193
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "33iowuBS6gs",
+     "title": "2008 Ford Taurus X Review - Kelley Blue Book",
+     "channel": "Kelley Blue Book",
+     "views": 65424
+    },
+    {
+     "id": "Gai15bNNS7o",
+     "title": "2008 Ford Taurus Review - Kelley Blue Book",
+     "channel": "Kelley Blue Book",
+     "views": 50616
+    },
+    {
+     "id": "j5utLlzmqrU",
+     "title": "Review: 2008 Ford Taurus X",
+     "channel": "MyRide on Autobytel",
+     "views": 40700
     }
    ],
    "costs": null
