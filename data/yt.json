@@ -28228,6 +28228,140 @@
    "costs": null
   }
  ],
+ "jeep-patriot": [
+  {
+   "years": [
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017
+   ],
+   "gen": "2007–2017 Jeep Patriot",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 14508154,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 799220,
+     "n": 11,
+     "best": {
+      "id": "EXgGXvCFO6Y",
+      "title": "Jeep Patriot Alternator Replaced 2009 2017 Dodge Jeep Chrysler 2.4 2.0",
+      "channel": "Second Chance Repair",
+      "views": 133765
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 763817,
+     "n": 8,
+     "best": {
+      "id": "LFXmAqknR6M",
+      "title": "Jeep Patriot (2014-2017) 6F24 Transmission Service Drain and Fill - 6 Speed Automatic",
+      "channel": "REJECT GARAGE",
+      "views": 184725
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 379152,
+     "n": 9,
+     "best": {
+      "id": "gTM3-aq_-L4",
+      "title": "How to replace Crankshaft Position Sensor 2007-2017 Jeep Patriot",
+      "channel": "TRQ",
+      "views": 80541
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 334475,
+     "n": 1,
+     "best": {
+      "id": "7xJP4WXyFZE",
+      "title": "LIGHTNINGBOLT LIGHT ON DASH FIXED FAST 2007-2017 JEEP PATRIOT LIMP MODE - NO ACCELERATION FIXED",
+      "channel": "Hidalgo Motors Co TV",
+      "views": 334475
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 329583,
+     "n": 5,
+     "best": {
+      "id": "jDX_zj3A50E",
+      "title": "2014 Jeep Patriot Rear Wheel Bearing Replacement, REALLY Loud!",
+      "channel": "JrZ CarZ",
+      "views": 104548
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 296843,
+     "n": 2,
+     "best": {
+      "id": "M74akoJl3O4",
+      "title": "2011-2017 Jeep Patriot 2.4L Spark Plug Replacement",
+      "channel": "Joel Dufkis",
+      "views": 245146
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 237556,
+     "n": 5,
+     "best": {
+      "id": "7zOF80H8Sqk",
+      "title": "How to Replace Brake Drums (2014 Jeep Patriot)",
+      "channel": "jessedrifts",
+      "views": 77640
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 222868,
+     "n": 5,
+     "best": {
+      "id": "ZtscGizMbEQ",
+      "title": "2011 Jeep Patriot Replacing Temperature/HVAC Actuators Fixing \"Clicking Under Dash\"",
+      "channel": "Patrick Murphy",
+      "views": 75569
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "5n-6d_Ciauo",
+     "title": "Used Jeep Patriot (2007-2017) - Reliability and Common Problems",
+     "channel": "MaxTheCarGuy",
+     "views": 144345
+    },
+    {
+     "id": "omagGmhTNp0",
+     "title": "Top 5 Problems Jeep Patriot SUV 2007-2017 1st Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 116638
+    },
+    {
+     "id": "xDUBF3EhU1A",
+     "title": "Jeep Patriot 2007 to 2017 common problems, issues, defects and complaints",
+     "channel": "HOWSTUFFINMYCARWORKS",
+     "views": 85808
+    }
+   ],
+   "costs": null
+  }
+ ],
  "chevrolet-suburban": [
   {
    "years": [
@@ -30078,6 +30212,133 @@
      "title": "Common Problems with the 2000 Dodge Durango - 4.7L V8 Magnum",
      "channel": "Second Hand Speed",
      "views": 58210
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009
+   ],
+   "gen": "2004–2009 Dodge Durango",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 7789740,
+   "topics": [
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 715855,
+     "n": 12,
+     "best": {
+      "id": "0v4zRg1kpAI",
+      "title": "2004 Dodge Durango 4.7L Idle Air Control Valve Replacement",
+      "channel": "Tony Collum the HOW-TO HERO",
+      "views": 235295
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 684613,
+     "n": 8,
+     "best": {
+      "id": "qpg7FTMBTRU",
+      "title": "Dodge Dakota/Durango Radio/Stereo/Deck Install 2001-2004",
+      "channel": "Tony The Truck Guy",
+      "views": 332419
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 482567,
+     "n": 7,
+     "best": {
+      "id": "thrdSeaBJYg",
+      "title": "Is your 2004 Dodge Durango overheating",
+      "channel": "1Vid4You",
+      "views": 295790
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 220504,
+     "n": 3,
+     "best": {
+      "id": "gd-qOUN361g",
+      "title": "How to Replace Spark Plugs 2003-2009 Durango 4.7 V8 (HD)",
+      "channel": "Leekautorepair",
+      "views": 119355
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 220351,
+     "n": 7,
+     "best": {
+      "id": "khSbm955XBE",
+      "title": "Dodge Dakota/Durango 2000-2004 upper control arm replacement 4x4",
+      "channel": "Daring Motors",
+      "views": 77772
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 198786,
+     "n": 6,
+     "best": {
+      "id": "ZL-01a2-_FE",
+      "title": "2007 Dodge Durango - Rear Differential Fluid Change",
+      "channel": "Ryan Birkenholz",
+      "views": 55963
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 92771,
+     "n": 3,
+     "best": {
+      "id": "mESd0ur7Mhw",
+      "title": "2004 Dodge Durango, 4 7, P0306 Cylinder 6 Misfire caused by water from windshield",
+      "channel": "Tony Collum the HOW-TO HERO",
+      "views": 36965
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 71693,
+     "n": 1,
+     "best": {
+      "id": "6o79CoQJxf8",
+      "title": "How To Replace And Reinstall A Fuel Pump On A 2005 Dodge Durango 5.7 L Engine Hemi Edition - DIY",
+      "channel": "Mr. Goody",
+      "views": 71693
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "moFshUa4LpM",
+     "title": "Top 5 Problems Dodge Durango SUV 2nd Generation 2004-09",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 258321
+    },
+    {
+     "id": "kGIP4-8wbzI",
+     "title": "Dodge Durango 2nd Gen 2004 to 2009 Frequent and common problems, defects, recalls and complaints",
+     "channel": "HOWSTUFFINMYCARWORKS",
+     "views": 6470
+    },
+    {
+     "id": "Z4r-R_HEaAI",
+     "title": "2008 Dodge Durango Review - Kelley Blue Book",
+     "channel": "Kelley Blue Book",
+     "views": 186296
     }
    ],
    "costs": null
@@ -46972,7 +47233,48 @@
      "views": 1116076
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 54600,
+     "lo": 50000.0,
+     "hi": 65000.0,
+     "n": 11,
+     "videos": 9,
+     "id": "ya9nH_vJVvQ",
+     "t": 1314,
+     "title": "2016 Mercedes-Benz E400 Coupe – Redline: Review"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 255,
+       "lo": 150.0,
+       "hi": 700.0,
+       "n": 14,
+       "videos": 5,
+       "id": "7JmfRmj2dlw",
+       "t": 194,
+       "title": "🤞 🇩🇪  Used Mercedes Benz E Class Reliability | Common Problems and Issues | W212 S212 / 2009 - 2016"
+      }
+     ],
+     [
+      "Oil change",
+      {
+       "median": 140,
+       "lo": 100.0,
+       "hi": 180.0,
+       "n": 2,
+       "videos": 2,
+       "id": "9AZaSliG1U4",
+       "t": 1358,
+       "title": "2014 Mercedes E350 Full Owner's Review"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -47034,7 +47336,21 @@
      "views": 127387
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 64000,
+     "lo": 54000.0,
+     "hi": 70000.0,
+     "n": 11,
+     "videos": 7,
+     "id": "9vk9vGO9g2A",
+     "t": 1564,
+     "title": "The 2021 Mercedes-Benz E-Class Is the Best E-Class Ever"
+    },
+    "items": []
+   }
   }
  ],
  "mercedes-benz-glk/glc": [
