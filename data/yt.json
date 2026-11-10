@@ -26004,6 +26004,136 @@
    }
   }
  ],
+ "toyota-tundra": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006
+   ],
+   "gen": "2000–2006 Toyota Tundra",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 13398968,
+   "topics": [
+    {
+     "name": "Steering & suspension",
+     "views": 904147,
+     "n": 12,
+     "best": {
+      "id": "uY8pljevOY4",
+      "title": "2000 - 2006 Toyota Tundra Rear Wheel Bearing Complete Removal & Replacement Installation DIY 1st Gen",
+      "channel": "Garage Built Hondas",
+      "views": 231668
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 647239,
+     "n": 9,
+     "best": {
+      "id": "CcfJZl3hgao",
+      "title": "How To Program A Toyota Tundra Remote Key Fob 2003 - 2007 DIY Tutorial",
+      "channel": "PYR Automotive ",
+      "views": 209326
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 563522,
+     "n": 10,
+     "best": {
+      "id": "EWBNX2vidmU",
+      "title": "2000-2006 TOYOTA TUNDRA - Replacing Front Brake Pads & Rotors - DIY BRAKE UPGRADE",
+      "channel": "Dan the Fix it Man",
+      "views": 125918
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 460694,
+     "n": 7,
+     "best": {
+      "id": "a3exL-VH3Hg",
+      "title": "Throttle Actuator Service Toyota Tundra 2000-2006",
+      "channel": "2CarPros",
+      "views": 164726
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 329333,
+     "n": 3,
+     "best": {
+      "id": "pIbeoMpGxEc",
+      "title": "2006 Toyota Tundra 1GR-FE 4.0 COMPLETE HEAD GASKET REPLACEMENT STEP BY STEP 209-305-1672",
+      "channel": "Gasket masters",
+      "views": 272050
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 291032,
+     "n": 3,
+     "best": {
+      "id": "drhUO438HOk",
+      "title": "How To Replace The Fuel Filter On A 2000-2009 Toyota Tundra",
+      "channel": "How to Automotive",
+      "views": 244526
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 271714,
+     "n": 3,
+     "best": {
+      "id": "sIJkIU9O8ws",
+      "title": "Oil Change & Filter Replacement Toyota Tundra 2000-2006",
+      "channel": "2CarPros",
+      "views": 184554
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 218821,
+     "n": 4,
+     "best": {
+      "id": "cO76Obl8uIA",
+      "title": "2004 Toyota Tundra Radiator Replacement 4.7L iforce Double cab 4x4",
+      "channel": "Dan the Fix it Man",
+      "views": 63875
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "9Z-9AklwZH4",
+     "title": "Top 5 Problems Toyota Tundra Truck 1st Generation 2000-06",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 417450
+    },
+    {
+     "id": "cPfQcIXmFiU",
+     "title": "2000-2006 Toyota Tundra Reliability And Toyota Sequoia Reliability",
+     "channel": "Nathans Porsche Workshop",
+     "views": 222138
+    },
+    {
+     "id": "ysvfteT6Oiw",
+     "title": "Buyers Guide - 1st Gen Tundra Review and Common Problems",
+     "channel": "208Tyler",
+     "views": 172499
+    }
+   ],
+   "costs": null
+  }
+ ],
  "chevrolet-colorado": [
   {
    "years": [
@@ -53515,6 +53645,138 @@
      ]
     ]
    }
+  }
+ ],
+ "chrysler-pacifica": [
+  {
+   "years": [
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2017–2025 Chrysler Pacifica",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 23718828,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 628489,
+     "n": 5,
+     "best": {
+      "id": "cs_FKgHSRrk",
+      "title": "2017 - 2021 Chrysler Pacifica key fob battery change - EASY DIY",
+      "channel": "Key Fob Rob",
+      "views": 342890
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 109134,
+     "n": 2,
+     "best": {
+      "id": "35yrC2NlBDI",
+      "title": "2017+ Chrysler Pacifica Power Sliding Door Fix 1 of 3.",
+      "channel": "The Lawn Engineer",
+      "views": 75471
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 96881,
+     "n": 1,
+     "best": {
+      "id": "67PcIZ0vyDk",
+      "title": "Chrysler Pacifica Cabin Air Filter Replacement ( 2017 2018 2019 2021 2022 )",
+      "channel": "Undercar Experts",
+      "views": 96881
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 81603,
+     "n": 1,
+     "best": {
+      "id": "zj8B9gzMirc",
+      "title": "How Replace 2017-2024 Pacifica Spark Plugs",
+      "channel": "Hood Rats Garage",
+      "views": 81603
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 80775,
+     "n": 1,
+     "best": {
+      "id": "sFXGcan39gM",
+      "title": "2017 2018 Chrysler Pacifica won't start",
+      "channel": "Auto Tech Electronic",
+      "views": 80775
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 52151,
+     "n": 1,
+     "best": {
+      "id": "NRhZSYvqye0",
+      "title": "2017+ Chrysler Pacifica Transmission Reset - How to Fix This Harsh Shifts",
+      "channel": "The Car Flip with Justin Carper",
+      "views": 52151
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 50253,
+     "n": 1,
+     "best": {
+      "id": "sUfTxNBkRLU",
+      "title": "Another Pentastar BITES THE DUST at 87k miles?! ('17 Pacifica: EATS COOLANT, P0303 Misfire)",
+      "channel": "Pine Hollow Auto Diagnostics",
+      "views": 50253
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 36133,
+     "n": 1,
+     "best": {
+      "id": "LHUcmtT77gQ",
+      "title": "2020 Chrysler Pacifica Rear Brake Service Mode/ No Scan Tool",
+      "channel": "mechanicRHP",
+      "views": 36133
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "GsmJxAoSQk0",
+     "title": "Should You Buy a 2024 Chrysler Pacifica? The Last Chrysler Product?",
+     "channel": "The Car Care Nut Reviews",
+     "views": 189992
+    },
+    {
+     "id": "eUsefeIzKZU",
+     "title": "Should You Buy A 2017-2023 Chrysler Pacifica? Ours has 200k",
+     "channel": "Sparks N Wreckreation",
+     "views": 138689
+    },
+    {
+     "id": "p8DMgBtjGbk",
+     "title": "Chrysler Pacifica Minivans 2017 to 2021 common problems, defects, issues, recalls and complaints",
+     "channel": "HOWSTUFFINMYCARWORKS",
+     "views": 126746
+    }
+   ],
+   "costs": null
   }
  ],
  "kia-sedona": [
