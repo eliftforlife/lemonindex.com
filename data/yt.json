@@ -41266,6 +41266,122 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+   ],
+   "gen": "2019–2024 Kia Forte",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 14546177,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 165590,
+     "n": 2,
+     "best": {
+      "id": "jQnea74qeAA",
+      "title": "KIA FORTE OIL CHANGE DIY! 2019-2021 KIA FORTE",
+      "channel": "Arty's Garage",
+      "views": 95842
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 85669,
+     "n": 3,
+     "best": {
+      "id": "HG3zrJU2mYs",
+      "title": "2022 - 2023 Kia Forte How to Change Cabin Air Filter",
+      "channel": "Oil Light Reset ",
+      "views": 35049
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 66224,
+     "n": 2,
+     "best": {
+      "id": "WMm05eea5Wk",
+      "title": "How to: Remove a Battery from a 2019 Kia Forte",
+      "channel": "GEORGE LOPEZ HOW TO DO IT YOUR SELF",
+      "views": 38064
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 60616,
+     "n": 2,
+     "best": {
+      "id": "t65g5UNuRk0",
+      "title": "AEM Cold Air Intake Install on 2019 Forte",
+      "channel": "Kia Forte Mods",
+      "views": 38331
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 58709,
+     "n": 1,
+     "best": {
+      "id": "y2YgTctIWYI",
+      "title": "CK - 2022 Kia Forte - How To Use Your Remote Window Control!",
+      "channel": "Cardinal Kia",
+      "views": 58709
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 32062,
+     "n": 1,
+     "best": {
+      "id": "8w5YKvX-fBU",
+      "title": "2019 Kia Forte No Start Problem....Won't Crank...Has Power but Won't run...Solved...",
+      "channel": "Peter L",
+      "views": 32062
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 20489,
+     "n": 1,
+     "best": {
+      "id": "F_g00UaPjTA",
+      "title": "CK - 2021 Kia Forte - How To Use Your Ambient Lighting!",
+      "channel": "Cardinal Kia",
+      "views": 20489
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "nhrpwsXRTUs",
+     "title": "Should you BUY a 2020 Kia Forte GT instead of a Honda Civic Si?",
+     "channel": "Raiti's Rides",
+     "views": 126199
+    },
+    {
+     "id": "AMrfCp5ni38",
+     "title": "Is the 2020 Kia Forte GT-Line the PERFECT sporty compact for a NEW car buyer?",
+     "channel": "Raiti's Rides",
+     "views": 104902
+    },
+    {
+     "id": "adBrq6gOKLw",
+     "title": "Kia's New Compact Sport Sedan! 2022 Kia Forte GT | Buyer's Guide | MotorTrend",
+     "channel": "MotorTrend Channel",
+     "views": 27375
+    }
+   ],
+   "costs": null
   }
  ],
  "kia-rio": [
