@@ -22361,7 +22361,30 @@
      "views": 112832
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": {
+     "median": 42000,
+     "lo": 40000.0,
+     "hi": 48000.0,
+     "n": 5,
+     "videos": 5,
+     "id": "7CdD6R4nVhA",
+     "t": 43,
+     "title": "The 2022 Hyundai Tucson Hybrid Looks Crazier Than It Is"
+    },
+    "msrp": {
+     "median": 35555,
+     "lo": 30000.0,
+     "hi": 40000.0,
+     "n": 35,
+     "videos": 27,
+     "id": "s2KuYR9Sy-I",
+     "t": 1500,
+     "title": "2024 Hyundai Tucson Limited vs 2025 Tucson Limited | Differences Explained!"
+    },
+    "items": []
+   }
   }
  ],
  "chevrolet-tahoe": [
@@ -27149,6 +27172,139 @@
     },
     "items": []
    }
+  }
+ ],
+ "jeep-compass": [
+  {
+   "years": [
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016
+   ],
+   "gen": "2007–2016 Jeep Compass",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 11361545,
+   "topics": [
+    {
+     "name": "Steering & suspension",
+     "views": 580087,
+     "n": 9,
+     "best": {
+      "id": "d7663YIPmkI",
+      "title": "How to Replace Rear Wheel Bearing 2007-17 Jeep Compass",
+      "channel": "TRQ",
+      "views": 118066
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 445394,
+     "n": 3,
+     "best": {
+      "id": "-7E9CCHeRR0",
+      "title": "How to Install Fuel Pump E7218M in a 2007 - 2014 Jeep Patriot, Jeep Compass, Dodge Caliber",
+      "channel": "Airtex-ASC Performance Pumps",
+      "views": 280394
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 396435,
+     "n": 4,
+     "best": {
+      "id": "bCnxzjAwfEM",
+      "title": "How to Replace Thermostat Housing 2007-2017 Jeep Compass",
+      "channel": "TRQ",
+      "views": 219158
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 343225,
+     "n": 3,
+     "best": {
+      "id": "lcZ06rufm6s",
+      "title": "Jeep Compass No Start Fix (P0688) 2007 thru 2017",
+      "channel": "Git It Garage",
+      "views": 199297
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 321613,
+     "n": 5,
+     "best": {
+      "id": "mriYV9p7FcY",
+      "title": "How To Replace Front Brake Pads & Rotor 2007-2017 Jeep Compass",
+      "channel": "TRQ",
+      "views": 96281
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 315579,
+     "n": 5,
+     "best": {
+      "id": "DovC7rt9u8w",
+      "title": "How to Replace Cabin Air Filter 2012 Jeep Compass | AQ1126",
+      "channel": "Filterheads",
+      "views": 112317
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 284807,
+     "n": 5,
+     "best": {
+      "id": "dommzZIYHhQ",
+      "title": "2007-2008 Jeep Compass radio removal and replacement",
+      "channel": "MotorCity Mechanic",
+      "views": 106873
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 272141,
+     "n": 5,
+     "best": {
+      "id": "TiZhgdMgkMw",
+      "title": "HOW TO: Reset CHAnGE OIL light on 2014 Jeep Compass",
+      "channel": "HYENA art magazine",
+      "views": 176084
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "KUhq0ZEa3nA",
+     "title": "Top 5 Problems Jeep Compass SUV 1st Generation 2007-2017",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 436874
+    },
+    {
+     "id": "74tc78_qq-s",
+     "title": "2007-2016 Jeep Compass Problems, Pros and Cons. Should you buy it?",
+     "channel": "MaxTheCarGuy",
+     "views": 32427
+    },
+    {
+     "id": "CLUNHGZEd-U",
+     "title": "Jeep Compass - TOP PROBLEMS & ISSUES 2007 - 2017 (common fixes, repairs, defects)",
+     "channel": "QuiteAlright",
+     "views": 21414
+    }
+   ],
+   "costs": null
   }
  ],
  "chevrolet-suburban": [
