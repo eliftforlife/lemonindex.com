@@ -30225,6 +30225,133 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010
+   ],
+   "gen": "2005–2010 Kia Sportage",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 8393495,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 557666,
+     "n": 12,
+     "best": {
+      "id": "uAOQaQ4jHTw",
+      "title": "Removal multimedia radio Kia Sportage 2009 OCTO Core Android 7.0 + parking camera",
+      "channel": "TV SAT NITRA",
+      "views": 143195
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 372599,
+     "n": 5,
+     "best": {
+      "id": "HzBhD1b40lg",
+      "title": "Kia sportage 2009 - Some service to my car",
+      "channel": "Dahen Zana",
+      "views": 239561
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 336607,
+     "n": 6,
+     "best": {
+      "id": "4dy_xQrShyQ",
+      "title": "Fix radiator - kia sportage 2009 _ 2008 _ 2007 _ 2006 - radiator repair (video 51)",
+      "channel": "Dahen Zana",
+      "views": 114187
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 275861,
+     "n": 6,
+     "best": {
+      "id": "UnYZUNnG8mw",
+      "title": "Front Brake Pads & Rotors Replacement Kia Sportage 2004-2010",
+      "channel": "2CarPros",
+      "views": 178150
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 176590,
+     "n": 5,
+     "best": {
+      "id": "uGZmMLrZYuE",
+      "title": "2007 Kia Sportage A/C compressor change.",
+      "channel": "Jo Daddy's Garage",
+      "views": 105732
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 174969,
+     "n": 3,
+     "best": {
+      "id": "Mcs3lmu4Wkw",
+      "title": "Power Steering Fluid Flush 2004-2010 Kia Sportage",
+      "channel": "2CarPros",
+      "views": 147775
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 162669,
+     "n": 2,
+     "best": {
+      "id": "5-R86od0yyQ",
+      "title": "Rear Differential Service Kia Sportage 2004-2010",
+      "channel": "2CarPros",
+      "views": 113627
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 108579,
+     "n": 3,
+     "best": {
+      "id": "-o_voPMYwfs",
+      "title": "Kia Sportage SL 2010-2015 - Rear Suspension Arms, Sway Bar and Anti Roll Bar Links Replacement",
+      "channel": "Turboladerschaden",
+      "views": 82112
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "iJ7kOjvDWBk",
+     "title": "2008 Kia Sportage Review - Kelley Blue Book",
+     "channel": "Kelley Blue Book",
+     "views": 167985
+    },
+    {
+     "id": "1jp5WORWlIY",
+     "title": "2009 Kia Sportage Review | Diesel better than gasoline?",
+     "channel": "CarGeekCR",
+     "views": 150798
+    },
+    {
+     "id": "5KW05SHcIbo",
+     "title": "2006 KIA SPORTAGE KM REVIEW - B4550",
+     "channel": "BerwickCity",
+     "views": 122358
+    }
+   ],
+   "costs": null
   }
  ],
  "kia-soul": [
@@ -40896,6 +41023,130 @@
      "title": "Volkswagen Passat Common Problems: 2005-2014 (B6 and B7 with 3.6L VR6, 2.0T, and 4-Motion)",
      "channel": "CashedOutCars",
      "views": 177638
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2020,
+    2021,
+    2022
+   ],
+   "gen": "2020–2022 Volkswagen Passat",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 11796229,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 137871,
+     "n": 2,
+     "best": {
+      "id": "gmV_1qHpino",
+      "title": "How To Replace 2018 - 2020 Volkswagen Passat Key Fob Battery - Change VW Passat Remote Fob Batteries",
+      "channel": "PYR Automotive ",
+      "views": 84226
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 68208,
+     "n": 1,
+     "best": {
+      "id": "29b9TibHGpc",
+      "title": "2012-2020 VW Passat B7 / B7.5 Front Brake Pads / Rotor Replacement DIY (SAVE $$$)",
+      "channel": "Bradleys Garage",
+      "views": 68208
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 54589,
+     "n": 2,
+     "best": {
+      "id": "_rZ_vdxuvCA",
+      "title": "2012 - 2022 Volkswagen Passat How to change cabin air filter",
+      "channel": "Oil Light Reset ",
+      "views": 35129
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 9782,
+     "n": 1,
+     "best": {
+      "id": "uHfQka8SNgU",
+      "title": "How to Replace Fuel Pump Module Assembly 2012-2022 Volkswagen Passat 2.5L L5",
+      "channel": "TRQ",
+      "views": 9782
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 7596,
+     "n": 1,
+     "best": {
+      "id": "Cle-OrpW-v8",
+      "title": "How to Replace Radiator 2012-2022 Volkswagen Passat",
+      "channel": "TRQ",
+      "views": 7596
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 6715,
+     "n": 1,
+     "best": {
+      "id": "3Evw_iUl7Kc",
+      "title": "How to Replace MAP Sensor 2012-2022 Volkswagen Passat 2.5L L5",
+      "channel": "TRQ",
+      "views": 6715
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 4899,
+     "n": 1,
+     "best": {
+      "id": "kbecNa01Qus",
+      "title": "The complete oil change process for the 2020 Volkswagen VW NMS Passat 4 cylinder 2.0 turbo engine",
+      "channel": "MBHub",
+      "views": 4899
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 2941,
+     "n": 1,
+     "best": {
+      "id": "K31ogphgOr4",
+      "title": "How to Replace Rear Shock Absorbers 2012-2022 Volkswagen Passat",
+      "channel": "TRQ",
+      "views": 2941
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "yn7VWSYTDVM",
+     "title": "2012-2022 Volkswagen Passat Problems and Issues Explained: The Cost to Fix and Repair",
+     "channel": "Born to Drive ™",
+     "views": 70039
+    },
+    {
+     "id": "Qzc_ZmtGBMs",
+     "title": "2020 Ford Mondeo review - better than a Volkswagen Passat? | What Car?",
+     "channel": "What Car?",
+     "views": 694940
+    },
+    {
+     "id": "P6oGtfBSzoU",
+     "title": "2022 Volkswagen's new Passat PHEV in-depth Walkaround",
+     "channel": "CarVibes",
+     "views": 424460
     }
    ],
    "costs": null
