@@ -27382,6 +27382,96 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2024,
+    2025
+   ],
+   "gen": "2024–2025 GMC Acadia",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 5284759,
+   "topics": [
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 46507,
+     "n": 2,
+     "best": {
+      "id": "XZ4QVZqfnuI",
+      "title": "How to Replace Cabin Air Filter 2017-2024 GMC Acadia",
+      "channel": "TRQ",
+      "views": 45254
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 21145,
+     "n": 1,
+     "best": {
+      "id": "ZxHxB_NCjaI",
+      "title": "How to Customize Your Gauge Cluster on Your 2024 GMC Acadia",
+      "channel": "Caleb Redd",
+      "views": 21145
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 11822,
+     "n": 2,
+     "best": {
+      "id": "mnjd3JNbiCA",
+      "title": "How to Replace Rear Sway Bar Links 2017-2024 GMC Acadia",
+      "channel": "TRQ",
+      "views": 8528
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 10184,
+     "n": 1,
+     "best": {
+      "id": "mpfb-AwuDFM",
+      "title": "How to Replace Throttle Body Assembly 2017-2024 GMC Acadia 3.6L V6",
+      "channel": "TRQ",
+      "views": 10184
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 6996,
+     "n": 2,
+     "best": {
+      "id": "8TjmlCnrXIk",
+      "title": "2024 - 2026 GMC ACADIA Key Fob Battery Replacement - How To Replace Change Acadia Remote Batteries",
+      "channel": "PYR Automotive ",
+      "views": 6265
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "q6YOChVEyZE",
+     "title": "Top 5 Problems GMC Acadia SUV 2017-2024 2nd Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 154881
+    },
+    {
+     "id": "dFJNSr35je8",
+     "title": "2025 GMC Acadia AT4 Review | Better than the Telluride or Grand Highlander?",
+     "channel": "CarGurus",
+     "views": 73937
+    },
+    {
+     "id": "_RSpkRMxVHA",
+     "title": "2024 GMC Acadia Denali: I Was Sold Until I Saw This...",
+     "channel": "Ben Hardy",
+     "views": 65407
+    }
+   ],
+   "costs": null
   }
  ],
  "gmc-yukon-xl": [
@@ -32590,6 +32680,133 @@
      "title": "Review Hyundai Accent 1.3i 84hp 12v year 2004 A very complete and versatile car",
      "channel": "SomosdeMotor",
      "views": 86147
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011
+   ],
+   "gen": "2006–2011 Hyundai Accent",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 13334241,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 886319,
+     "n": 10,
+     "best": {
+      "id": "2pUkrVLwojw",
+      "title": "Final Diagnosis: 2010 Hyundai Accent — No Start After Starter & O2 Replacement",
+      "channel": "South Main Auto LLC",
+      "views": 206788
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 585338,
+     "n": 7,
+     "best": {
+      "id": "i_5q0-4uCbA",
+      "title": "Hyundai Accent 2006 - EPS (Torque sensor) REPAIR THE PROBLEM !",
+      "channel": "Hyundai Accent 2006 [POLAND]",
+      "views": 127373
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 488517,
+     "n": 9,
+     "best": {
+      "id": "XEbmrWS8KQ8",
+      "title": "2006-2011 2010 Hyundai Accent Door Handle Replacement / Install",
+      "channel": "95_zenki",
+      "views": 119937
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 460637,
+     "n": 3,
+     "best": {
+      "id": "rn7VC5DvsiI",
+      "title": "2009 Hyundai Accent 1.6L GLS DOHC Timing belt service Part 3 of 3 720pHD",
+      "channel": "gereral1",
+      "views": 308265
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 257934,
+     "n": 3,
+     "best": {
+      "id": "UdZ5f8Ut4Os",
+      "title": "2005-2011 Hyundai Accent Clutch and Slave Cylinder Replacement",
+      "channel": "SprocketHead",
+      "views": 104776
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 168984,
+     "n": 4,
+     "best": {
+      "id": "KFeuCTiJbLQ",
+      "title": "2006-2011 Hyundai Accent Spark Plug, Coil Packs, Coil Harness Removal 2006 2007 2008 2009 2010 2011",
+      "channel": "The Interior Auto Mechanic",
+      "views": 65898
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 132031,
+     "n": 7,
+     "best": {
+      "id": "6AbzoOTCj4U",
+      "title": "2009 Hyundai Accent oil change and tire rotation",
+      "channel": "gereral1",
+      "views": 39919
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 90727,
+     "n": 4,
+     "best": {
+      "id": "9gQK1AqLBFw",
+      "title": "How To ReCharge The AC Hyundai Accent DIY 2006 2007 2008 2009 2010 2011 06 07 08 09 10 11",
+      "channel": "Dirt Road Auto Repair",
+      "views": 46359
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "Lb2Hvoye0Zk",
+     "title": "2010 Hyundai Accent - Downstream 02 sensor Problems | Diag & Repair!",
+     "channel": "Advanced Level Diagnostics",
+     "views": 17520
+    },
+    {
+     "id": "J16YEXnhpgA",
+     "title": "2008 Hyundai Accent Multiple Power Window Problems",
+     "channel": "Phillip Bailey",
+     "views": 11542
+    },
+    {
+     "id": "iWlpmbr5vI8",
+     "title": "Hyundai Accent 2010 Starting Problems,Immobilizer Problems",
+     "channel": "Maqbool G Viewers",
+     "views": 8601
     }
    ],
    "costs": null
@@ -41051,7 +41268,35 @@
      "views": 4379
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 23662,
+     "lo": 22100.0,
+     "hi": 28695.0,
+     "n": 6,
+     "videos": 5,
+     "id": "zhnEmBCKdwM",
+     "t": 309,
+     "title": "2006 Kia Sedona Review - Kelley Blue Book"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 78,
+       "lo": 70.0,
+       "hi": 350.0,
+       "n": 5,
+       "videos": 5,
+       "id": "6fmsMj2Y6ro",
+       "t": 443,
+       "title": "2007 Kia Sedona Steering Rack replacement [COMPLEX]"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -41179,7 +41424,35 @@
      "views": 451720
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 31350,
+     "lo": 27000.0,
+     "hi": 39700.0,
+     "n": 10,
+     "videos": 10,
+     "id": "5b_TcVDsPnY",
+     "t": 1376,
+     "title": "2016 Kia Sedona SX-L – Redline: Review"
+    },
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 350,
+       "lo": 285.0,
+       "hi": 400.0,
+       "n": 7,
+       "videos": 5,
+       "id": "6cX9fvZN0O4",
+       "t": 1242,
+       "title": "2018 Kia Sedona Test Drive Review: Why A Minivan Is Better Than An SUV"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
