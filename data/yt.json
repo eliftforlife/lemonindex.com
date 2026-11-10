@@ -26322,7 +26322,48 @@
      "views": 55649
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": {
+     "median": 42500,
+     "lo": 33000.0,
+     "hi": 47000.0,
+     "n": 23,
+     "videos": 18,
+     "id": "3wCh6jeYDXE",
+     "t": 469,
+     "title": "2019 Ford Edge ST: Can Ford Beat Audi? | Donut Media"
+    },
+    "items": [
+     [
+      "Steering & suspension",
+      {
+       "median": 350,
+       "lo": 42.0,
+       "hi": 795.0,
+       "n": 3,
+       "videos": 3,
+       "id": "7EKQRVs1F3U",
+       "t": 628,
+       "title": "2024 Ford Edge SEL - The LAST Year Of The Edge"
+      }
+     ],
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 400,
+       "lo": 250.0,
+       "hi": 550.0,
+       "n": 2,
+       "videos": 2,
+       "id": "_gmGRzy36dU",
+       "t": 823,
+       "title": "2007-2020 Ford Edge MKX Low Brake Pedal or Master Cylinder? Brake Bleeding *SOLVED* #fordedge"
+      }
+     ]
+    ]
+   }
   }
  ],
  "ford-expedition": [
@@ -30478,6 +30519,126 @@
      "title": "2010 Lexus RX 350 HVAC Problems - Not ac blend door actuator!",
      "channel": "Carolina Cowboys",
      "views": 123948
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022
+   ],
+   "gen": "2016–2022 Lexus RX",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 38415479,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 259839,
+     "n": 2,
+     "best": {
+      "id": "hFx3_xWvGZQ",
+      "title": "How To Change A Lexus RX350 Remote Fob Smart Key Battery 2016 - 2021 DIY Remove Replace Tutorial",
+      "channel": "PYR Automotive ",
+      "views": 203708
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 215341,
+     "n": 3,
+     "best": {
+      "id": "onbkuaQupZw",
+      "title": "How To Reset Maintenance Required Message Lexus RX350 2021 2022",
+      "channel": "Karrs Kars",
+      "views": 107803
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 148897,
+     "n": 1,
+     "best": {
+      "id": "zQPNcQhDzBc",
+      "title": "How to Reset Lexus RX350 Maintenance Required Light 2017-2020",
+      "channel": "SnapFix",
+      "views": 148897
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "0jzMykLpaSs",
+     "title": "5 Reasons Why You Should Buy A 2022 Lexus RX 350 - Quick Buyer's Guide",
+     "channel": "Boston Auto Blog",
+     "views": 398590
+    },
+    {
+     "id": "xCepJRW6IBo",
+     "title": "2016-2022 Lexus RX Buyer’s Guide - Reliability & Common Problems",
+     "channel": "Discerning Cars",
+     "views": 281684
+    },
+    {
+     "id": "x9GzdCUV5Uo",
+     "title": "2021 Lexus RX 350 VS. 2022 Acura MDX - Reliable Luxury",
+     "channel": "Car Help Corner",
+     "views": 199674
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2023–2025 Lexus RX",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 31699416,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 81841,
+     "n": 1,
+     "best": {
+      "id": "ZeGBYtq0i3w",
+      "title": "Lexus RX TPMS Reset Tutorial: Fix Tire Pressure Light (2008-2025) in Minutes!",
+      "channel": "Doctor Reset",
+      "views": 81841
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "KVsyJE5nSz4",
+     "title": "Should You Buy The 2023 Lexus RX? Everything You Need To Know",
+     "channel": "The Car Care Nut",
+     "views": 737817
+    },
+    {
+     "id": "ST4HP3lgv6s",
+     "title": "Should You Buy a Lexus RX in 2025? A Mechanic's Review",
+     "channel": "The Car Care Nut",
+     "views": 664002
+    },
+    {
+     "id": "u8uySNdIH1M",
+     "title": "Should You Buy the Last Lexus RX V6? Or Wait for the 2023 4 Cylinder Model?",
+     "channel": "The Car Care Nut",
+     "views": 585372
     }
    ],
    "costs": null
@@ -44465,6 +44626,138 @@
      ]
     ]
    }
+  }
+ ],
+ "audi-q7": [
+  {
+   "years": [
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015
+   ],
+   "gen": "2007–2015 Audi Q7",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 25130136,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 254241,
+     "n": 3,
+     "best": {
+      "id": "QgzGAsmTWtQ",
+      "title": "Audi Q7 (2007 - 2015) - New Battery Install (Under Driver Seat)",
+      "channel": "The Battery Shop",
+      "views": 184653
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 248983,
+     "n": 3,
+     "best": {
+      "id": "fDwhJAx8N4Y",
+      "title": "2007 - 2015 Audi Q7 oil change",
+      "channel": "Dullah Goso hard",
+      "views": 83925
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 218728,
+     "n": 2,
+     "best": {
+      "id": "6E3ixOBJR_s",
+      "title": "Audi Q7 Transmission Fluid Replacement DIY (2007-2015 Audi Q7 4L TDI 8-Speed Transmission Service)",
+      "channel": "FCP Euro",
+      "views": 145372
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 214762,
+     "n": 2,
+     "best": {
+      "id": "SqutSBFV2Ms",
+      "title": "How to Replace Cabin Air Filter 2009 Audi Q7 | AQ1136C",
+      "channel": "Filterheads",
+      "views": 184988
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 94463,
+     "n": 1,
+     "best": {
+      "id": "IHNz7TPhuOI",
+      "title": "Audi Q7 2011 - How to activate jacking mode (locking air suspension before using the hoist)",
+      "channel": "EMD Porsche Specialist Caringbah Sydney",
+      "views": 94463
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 88464,
+     "n": 2,
+     "best": {
+      "id": "P_lDfGGXEbU",
+      "title": "How to replace Audi Q7 Taillight Bulb change DIY rear light Replacement 2007 Model",
+      "channel": "Daddicated",
+      "views": 58358
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 85653,
+     "n": 3,
+     "best": {
+      "id": "Ii932i3ediY",
+      "title": "2006-2015 Audi Q7 How to Check & Add Coolant Level/Antifreeze Guide - Maintain Optimal Engine",
+      "channel": "YOUCANIC",
+      "views": 38014
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 78244,
+     "n": 3,
+     "best": {
+      "id": "A3kVo1AWnVg",
+      "title": "How to replace the injectors on a 2007 Audi Q7 4.2l FSI (Gas)",
+      "channel": "2BrokEurOwners",
+      "views": 27358
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "lhZHfS-fS0U",
+     "title": "Audi Q7 SUV 2013 review - CarBuyer",
+     "channel": "Carbuyer",
+     "views": 808706
+    },
+    {
+     "id": "PZ7v5iCjgYk",
+     "title": "Audi Q7 buyers guide (2015-2024) Avoid buying a broken used Audi Q7 with common faults (TFSI | TDI)",
+     "channel": "The Miles Driven",
+     "views": 68008
+    },
+    {
+     "id": "fRuY7ys0QBU",
+     "title": "Audi Q7 2011-2015 THE MOST IN-DEPTH REVIEW | SHOULD YOU BUY ONE??",
+     "channel": "Car and Driving - Car Reviews",
+     "views": 62588
+    }
+   ],
+   "costs": null
   }
  ],
  "audi-q3": [
