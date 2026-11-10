@@ -4,4 +4,5 @@
 
 - [The Most Reliable Cars, According to 1.6 Million Owner Complaints](https://lemonindex.com/studies/most-reliable-cars/): Toyota 4Runner 26, Lexus ES 27, Lexus brand 30, Tesla brand 322 (est.)
 - [The Most Reliable Electric Cars](https://lemonindex.com/electric/): 22 EVs by NHTSA complaints per car sold, best Tesla Model 3 203, plus fires, yearly cost and driver-assist crash reports
+- [Engine code lookup](https://lemonindex.com/check-engine-light/): what any OBD-II trouble code means, how serious it is, and which cars owners report it on most in NHTSA complaints
 - [Method](https://lemonindex.com/method/)

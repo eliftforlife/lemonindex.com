@@ -1034,3 +1034,33 @@ table.adv td { padding: 9px 10px; border-bottom: 1px solid var(--line, #e7e5de);
 .fb-go:hover { background: #000; } .fb-go:disabled { opacity: .5; cursor: default; } .fb-go:focus-visible { outline: 3px solid var(--lemon); outline-offset: 2px; }
 .fb-st { margin: 12px 0 0; font-size: 15px; font-weight: 600; color: #1d1d1f; } .fb-st:empty { display: none; } .fb-st.bad { color: var(--red); } .fb-st:focus { outline: none; }
 .fb-f.sent .fb-st { margin: 0; font-size: 17px; }
+
+/* 11-10 engine code lookup: big code readout + severity gauge (lemon yellow -> red), search card */
+.csearch { margin: 8px 0 28px; padding: 22px; border: 1px solid var(--line); border-radius: 22px; background: var(--soft); }
+.csearch label { display: block; font-weight: 800; font-size: 20px; letter-spacing: -.01em; margin-bottom: 10px; }
+.csearch.mini { padding: 18px; margin-top: 36px; } .csearch.mini label { font-size: 17px; }
+.cs-row { display: flex; gap: 10px; flex-wrap: wrap; }
+.cs-row input { flex: 1 1 180px; min-width: 0; font: 800 30px/1.1 ui-monospace, "SF Mono", Consolas, monospace; letter-spacing: .06em; text-transform: uppercase; padding: 14px 16px; border: 2px solid var(--ink); border-radius: 14px; background: #fff; color: var(--ink); }
+.cs-row input:focus { outline: 3px solid var(--lemon); outline-offset: 2px; }
+.cs-row button { flex: 0 0 auto; font: 800 17px/1 Inter, system-ui, sans-serif; padding: 0 22px; min-height: 56px; border: 0; border-radius: 14px; background: var(--ink); color: #fff; cursor: pointer; }
+.cs-h { margin: 10px 0 0; font-size: 14px; color: var(--mute); }
+.cs-out:empty { display: none; } .cs-out { margin-top: 16px; }
+.cs-card { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 20px; }
+.cs-card h3 { font-size: 22px; margin: 6px 0 8px; } .cs-card p { margin: 8px 0; max-width: 66ch; } .cs-card ul { margin: 4px 0 8px; padding-left: 20px; }
+.cs-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.cs-code span, .cr-sys { display: block; font-size: 13px; font-weight: 700; color: var(--mute); }
+.cs-code b { display: block; font: 900 56px/1 ui-monospace, "SF Mono", Consolas, monospace; letter-spacing: .04em; }
+.cs-k { font-weight: 800; margin-bottom: 0 !important; } .cs-note, .cs-sys { font-size: 15px; color: var(--ink2); }
+.cs-data { padding-top: 10px; border-top: 1px solid var(--line); font-size: 15px; }
+.cs-go { display: inline-block; margin-top: 8px; font-weight: 800; text-decoration: none; background: var(--lemon); padding: 10px 16px; border-radius: 999px; }
+.cs-bad { border-color: var(--red-soft); }
+.cgauge { margin: 0; width: 180px; text-align: center; flex: none; } .cgauge.sm { width: 140px; }
+.cgauge svg { width: 100%; height: auto; display: block; } .cgauge path { fill: none; stroke-width: 16; stroke-linecap: round; }
+.cgauge .g1 { stroke: var(--lemon); } .cgauge .g2 { stroke: #ff9f0a; } .cgauge .g3 { stroke: var(--red); }
+.cgauge .nd { stroke: var(--ink); stroke-width: 7; stroke-linecap: round; } .cgauge .hub { fill: var(--ink); }
+.cgauge figcaption { font-weight: 800; font-size: 15px; margin-top: 2px; } .cgauge.s3 figcaption { color: var(--red); }
+.creadout { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding: 22px; margin: 6px 0 10px; border-radius: 22px; background: var(--ink); color: #fff; }
+.creadout .cr-sys { color: #c9ccd1; } .creadout .cr-code b { display: block; font: 900 clamp(56px, 13vw, 96px)/1 ui-monospace, "SF Mono", Consolas, monospace; letter-spacing: .04em; color: var(--lemon); }
+.creadout .cgauge figcaption { color: #fff; } .creadout .cgauge .nd, .creadout .cgauge .hub { stroke: #fff; fill: #fff; }
+.crel a { display: inline-block; margin: 0 8px 8px 0; padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px; font: 700 15px/1.2 ui-monospace, Consolas, monospace; text-decoration: none; }
+@media (max-width: 420px) { .cs-code b { font-size: 44px; } .cgauge.sm { width: 118px; } .csearch { padding: 16px; } .cs-row input { font-size: 26px; } }
