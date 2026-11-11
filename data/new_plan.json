@@ -163,7 +163,7 @@
   "brand": "Toyota",
   "seg": "suv",
   "make": "TOYOTA",
-  "rx": "(SEQUOIA|SEQUOIA SR5)",
+  "rx": "(SEQUOIA|SEQUOIA SR5|SEQUOIA HYBRID)",
   "sales": {
    "wiki": "Toyota Sequoia"
   }
@@ -231,7 +231,7 @@
   "brand": "Mercury",
   "seg": "car",
   "make": "MERCURY",
-  "rx": "(MILAN)",
+  "rx": "(MILAN|MILAN HYBRID)",
   "sales": {}
  },
  "ford-freestar": {
@@ -267,7 +267,7 @@
   "brand": "Saturn",
   "seg": "suv",
   "make": "SATURN",
-  "rx": "(VUE)",
+  "rx": "(VUE|VUE HYBRID)",
   "sales": {
    "wiki": "Saturn Vue"
   }
@@ -322,7 +322,7 @@
   "brand": "Cadillac",
   "seg": "car",
   "make": "CADILLAC",
-  "rx": "(CTS)",
+  "rx": "(CTS|CTS-V)",
   "sales": {
    "wiki": "Cadillac CTS"
   }
@@ -646,5 +646,125 @@
   "sales": {
    "wiki": "Chevrolet Aveo"
   }
+ },
+ "mitsubishi-eclipse": {
+  "name": "Mitsubishi Eclipse",
+  "brand": "Mitsubishi",
+  "seg": "car",
+  "make": "MITSUBISHI",
+  "rx": "(ECLIPSE|ECLIPSE SPYDER)",
+  "sales": {},
+  "note": "the coupe/Spyder; the Eclipse Cross is a different crossover"
+ },
+ "nissan-quest": {
+  "name": "Nissan Quest",
+  "brand": "Nissan",
+  "seg": "minivan",
+  "make": "NISSAN",
+  "rx": "(QUEST)",
+  "sales": {
+   "wiki": "Nissan Quest"
+  }
+ },
+ "mercury-mountaineer": {
+  "name": "Mercury Mountaineer",
+  "brand": "Mercury",
+  "seg": "suv",
+  "make": "MERCURY",
+  "rx": "(MOUNTAINEER)",
+  "sales": {}
+ },
+ "honda-element": {
+  "name": "Honda Element",
+  "brand": "Honda",
+  "seg": "suv",
+  "make": "HONDA",
+  "rx": "(ELEMENT)",
+  "sales": {
+   "gcbc": "honda-element"
+  }
+ },
+ "volvo-s60": {
+  "name": "Volvo S60",
+  "brand": "Volvo",
+  "seg": "car",
+  "make": "VOLVO",
+  "rx": "(S60)",
+  "sales": {
+   "wiki": "Volvo S60"
+  }
+ },
+ "audi-a6": {
+  "name": "Audi A6",
+  "brand": "Audi",
+  "seg": "car",
+  "make": "AUDI",
+  "rx": "(A6|A6 ALLROAD)",
+  "sales": {
+   "gcbc": "audi-a6"
+  },
+  "note": "A6 Sportback e-tron (an EV) left out"
+ },
+ "buick-rendezvous": {
+  "name": "Buick Rendezvous",
+  "brand": "Buick",
+  "seg": "suv",
+  "make": "BUICK",
+  "rx": "(RENDEZVOUS)",
+  "sales": {
+   "wiki": "Buick Rendezvous"
+  }
+ },
+ "ford-maverick": {
+  "name": "Ford Maverick",
+  "brand": "Ford",
+  "seg": "truck",
+  "make": "FORD",
+  "rx": "(MAVERICK|MAVERICK HYBRID)",
+  "sales": {
+   "gcbc": "ford-maverick"
+  }
+ },
+ "mitsubishi-lancer": {
+  "name": "Mitsubishi Lancer",
+  "brand": "Mitsubishi",
+  "seg": "car",
+  "make": "MITSUBISHI",
+  "rx": "(LANCER|LANCER\\ EVOLUTION|LANCER\\ EVO|LANCER\\ RALLIART|LANCER\\ SPORTBACK|LANCER\\ WAGON|LANCER\\ RALIART|LANCER\\ SPORTSBACK|LANCER\\ SPORTBACK\\ RALLIART)",
+  "sales": {
+   "gcbc": "mitsubishi-lancer"
+  }
+ },
+ "toyota-matrix": {
+  "name": "Toyota Matrix",
+  "brand": "Toyota",
+  "seg": "car",
+  "make": "TOYOTA",
+  "rx": "(MATRIX)",
+  "sales": {}
+ },
+ "dodge-magnum": {
+  "name": "Dodge Magnum",
+  "brand": "Dodge",
+  "seg": "car",
+  "make": "DODGE",
+  "rx": "(MAGNUM|MAGNUM\\ AWD)",
+  "sales": {}
+ },
+ "chevrolet-venture": {
+  "name": "Chevrolet Venture",
+  "brand": "Chevrolet",
+  "seg": "minivan",
+  "make": "CHEVROLET",
+  "rx": "(VENTURE)",
+  "sales": {}
+ },
+ "ford-excursion": {
+  "name": "Ford Excursion",
+  "brand": "Ford",
+  "seg": "suv",
+  "make": "FORD",
+  "rx": "(EXCURSION)",
+  "sales": {}
  }
 }

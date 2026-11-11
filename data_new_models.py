@@ -183,8 +183,9 @@ for slug, p in PLAN.items():
     else:
         Y_.pop(slug, None); C_.pop(slug, None); XL_.pop(slug, None); EX_[slug] = extra
         if rep['sales']:   # 11-11: we HAVE its sales, they're just too thin to score - say that (with the source), not "no sales yet"
-            sv = list(rep['sales'].values())
-            extra.update(why='thin', sales_url=rep['url'], sales_years=len(sv), sales_under=sum(1 for v in sv if v < 20000))
+            sv = list(rep['sales'].values()); under = sum(1 for v in sv if v < 20000)
+            extra.update(why='thin' if under * 2 > len(sv) else 'young', sales_url=rep['url'], sales_years=len(sv), sales_under=under,
+                         full=[v['y'] for v in fam['years'] if v['li'] is not None and not v.get('early')])   # 11-11: 'young' = sells plenty, too few complete model years yet (Maverick)
     API['MAKES'][p['name']] = p['make'].split('|')
     if p.get('fe'): API['FE_MODEL'][p['name']] = p['fe']
     jobs = [(y, xl[y]) for y in sorted(xl)]

@@ -605,10 +605,10 @@
 "segment": "suv",
 "years": "2002-2009",
 "sold": 620177,
-"n": 560,
-"per100k": 90,
+"n": 564,
+"per100k": 91,
 "expected": 516.7718201306326,
-"li": 108,
+"li": 109,
 "serious": 17,
 "worst": "2003",
 "issues": [
@@ -618,7 +618,7 @@
 ],
 [
 "electrical",
-22
+23
 ],
 [
 "engine",
@@ -1348,5 +1348,185 @@
 "sales_url": "https://en.wikipedia.org/wiki/Chevrolet_Aveo",
 "sales_kind": "calendar",
 "id": "chevrolet-aveo"
+},
+{
+"name": "Nissan Quest",
+"brand": "Nissan",
+"segment": "minivan",
+"years": "2005-2007",
+"sold": 100852,
+"n": 92,
+"per100k": 91,
+"expected": 73.3341441565611,
+"li": 125,
+"serious": 13,
+"worst": "2006",
+"issues": [
+[
+"body structure",
+23
+],
+[
+"tires",
+15
+],
+[
+"visibility",
+12
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Nissan_Quest",
+"sales_kind": "calendar",
+"id": "nissan-quest"
+},
+{
+"name": "Honda Element",
+"brand": "Honda",
+"segment": "suv",
+"years": "2003-2008",
+"sold": 298311,
+"n": 500,
+"per100k": 168,
+"expected": 235.8923325796581,
+"li": 212,
+"serious": 11,
+"worst": "2003",
+"issues": [
+[
+"visibility",
+67
+],
+[
+"airbags",
+8
+],
+[
+"service brakes, hydraulic",
+7
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/honda-element-sales-figures/",
+"sales_kind": "calendar",
+"id": "honda-element"
+},
+{
+"name": "Volvo S60",
+"brand": "Volvo",
+"segment": "car",
+"years": "2012-2014",
+"sold": 67023,
+"n": 49,
+"per100k": 73,
+"expected": 76.42849466497641,
+"li": 64,
+"serious": 37,
+"worst": "2012",
+"issues": [
+[
+"speed control",
+18
+],
+[
+"airbags",
+16
+],
+[
+"electrical",
+14
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Volvo_S60",
+"sales_kind": "calendar",
+"id": "volvo-s60"
+},
+{
+"name": "Audi A6",
+"brand": "Audi",
+"segment": "car",
+"years": "2013-2019",
+"sold": 97587,
+"n": 67,
+"per100k": 69,
+"expected": 105.20586599679754,
+"li": 64,
+"serious": 16,
+"worst": "2019",
+"issues": [
+[
+"electrical",
+40
+],
+[
+"engine",
+25
+],
+[
+"airbags",
+15
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/audi-a6-sales-figures/",
+"sales_kind": "calendar",
+"id": "audi-a6"
+},
+{
+"name": "Buick Rendezvous",
+"brand": "Buick",
+"segment": "suv",
+"years": "2002-2006",
+"sold": 332447,
+"n": 394,
+"per100k": 119,
+"expected": 276.17027575802973,
+"li": 143,
+"serious": 13,
+"worst": "2002",
+"issues": [
+[
+"electrical",
+26
+],
+[
+"engine",
+17
+],
+[
+"transmission & drivetrain",
+12
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Buick_Rendezvous",
+"sales_kind": "calendar",
+"id": "buick-rendezvous"
+},
+{
+"name": "Mitsubishi Lancer",
+"brand": "Mitsubishi",
+"segment": "car",
+"years": "2005-2010",
+"sold": 151786,
+"n": 138,
+"per100k": 91,
+"expected": 132.47047846552857,
+"li": 104,
+"serious": 25,
+"worst": "2006",
+"issues": [
+[
+"transmission & drivetrain",
+26
+],
+[
+"service brakes, hydraulic",
+13
+],
+[
+"steering",
+11
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/mitsubishi-lancer-sales-figures/",
+"sales_kind": "calendar",
+"id": "mitsubishi-lancer"
 }
 ]
