@@ -33,6 +33,17 @@ def bars_pct(rows, cls=''):
 def bars_n(rows):
     mx = max([v for _, v in rows] + [1])
     return '<div class="pts vyr">' + ''.join(f'<div class="pt"><span>{E(str(k))}</span><span class="bt"><i style="width:{v / mx * 100:.0f}%"></i></span><b>{v:,}</b></div>' for k, v in rows) + '</div>'
+def hub_bars(rows, unit='', pre=''):
+    """11-10 (Elijah: "this doesn't look good"): the hub ranking lists. A small AI cutout, the model on one line with the make under it,
+    a light bar (red for the 3 highest, gray for the rest) and the number. Centered at 760 px; the label column never squeezes."""
+    mx = max([v for _, v in rows] + [1]); hi = sorted((v for _, v in rows), reverse=True)[:3]
+    out = []
+    for k, v in rows:
+        k = str(k); parts = k.split(' ', 1); make, model = (parts[0], parts[1]) if len(parts) == 2 else ('', k)
+        ph = vph(k); im = f'<img src="{E(ph["src"])}" alt="" width="{ph["w"]}" height="{ph["h"]}" loading="lazy" decoding="async">' if ph else ''
+        out.append(f'<div class="hb{" bad" if v in hi else ""}"><span class="hb-i">{im}</span><span class="hb-n"><b>{E(model)}</b><small>{E(make)}</small></span>'
+                   f'<span class="hb-t"><i style="width:{v / mx * 100:.0f}%"></i></span><b class="hb-v">{pre}{v:,}{unit}</b></div>')
+    return '<div class="hbl">' + ''.join(out) + '</div>'
 def stat(n, lab, cls=''): return f'<div class="yt"><b class="yt-v {cls}">{n}</b><small>{lab}</small></div>'
 def card(href, ph, name, big, cls, small=''):
     return (f'<a class="mc vmc" href="{href}"><span class="mc-p">{pimg(ph, valt(ph, name)) if ph else ""}</span><b>{E(name)}</b>'
@@ -74,8 +85,8 @@ if PL:
 <section class="tiles"><div class="tile"><div class="tt"><p class="te">When it crashes</p><h2>{E(fat[0]["name"])}.</h2><p class="ts">{fat[0]["fatal_pct"]}% of its accidents were fatal, the most of any common model.</p></div></div>
 <div class="tile"><div class="tt"><p class="te">Airliners</p><h2>Mostly turbulence.</h2><p class="ts">About {turb}% of U.S. airliner accidents were turbulence encounters. Under 1 in 50 were fatal.</p></div></div></section>
 <section><h2>Every model. <span class="h2s">Tap one for what happened, the phase of flight and the plane-vs-pilot split.</span></h2><div class="mbs">{groups}</div>{vgrid_note([p["name"] for p in PL], "planes and helicopters", "aircraft")}</section>
-<section class="yc"><h2>When it crashes, how often is it fatal? <span class="h2s">Models with 80+ accidents.</span></h2>{bars_pct([[p["name"], p["fatal_pct"]] for p in fat[:12]])}</section>
-<section class="yc"><h2>How often is the plane to blame? <span class="h2s">Accidents where NTSB listed an engine, system, structure or propeller problem among the causes.</span></h2>{bars_pct([[p["name"], p["mech_pct"]] for p in mech[:12]])}</section>
+<section class="yc hbsec"><h2>When it crashes, how often is it fatal? <span class="h2s">Models with 80+ accidents.</span></h2>{hub_bars([(p["name"], p["fatal_pct"]) for p in fat[:12]], '%')}</section>
+<section class="yc hbsec"><h2>How often is the plane to blame? <span class="h2s">Accidents where NTSB listed an engine, system, structure or propeller problem among the causes.</span></h2>{hub_bars([(p["name"], p["mech_pct"]) for p in mech[:12]], '%')}</section>
 <p class="yc-cap" style="text-align:center">Counts follow fleet size (the Cessna 172 is the most common plane in the U.S.), so compare the shares, not the totals. Per-plane rates need the FAA registry; coming soon. Source: {NTSB}</p></div>''',
          ld=[{"@context": "https://schema.org", "@type": "Dataset", "name": "Plane accidents by model (NTSB, 2008-2025)", "url": BASE + '/planes/', "isBasedOn": "https://www.ntsb.gov/Pages/AviationQueryV2.aspx", "creator": {"@type": "Organization", "name": "The Lemon Index"}}])
     purls.insert(0, '/planes/')
@@ -110,8 +121,8 @@ if MO:
          f'Owner complaints and recalls for {len(MO)} popular motorcycles (Harley-Davidson, Honda, Yamaha, Kawasaki, Suzuki, BMW, Ducati and more), from NHTSA.',
          f'''<div class="pg">{phero('Motorcycles', 'Motorcycle problems, by model.', 'Owner complaints and recalls filed with the U.S. government. Corner number: recalls.', visual=pimg(vph('Harley-Davidson Touring'), valt(vph('Harley-Davidson Touring'), 'Harley-Davidson Touring')) if vph('Harley-Davidson Touring') else '', credit=vcredit(vph('Harley-Davidson Touring')))}
 <section><h2>Every model. <span class="h2s">Tap one for its problems, recalls and complaints by year.</span></h2><div class="mbs">{groups}</div>{vgrid_note([m["name"] for m in MO], "motorcycles", "motorcycle")}</section>
-<section class="yc"><h2>Most recalls. <span class="h2s">NHTSA recall campaigns across the model years.</span></h2>{bars_n([(m["name"], len(m["recalls"])) for m in rec[:10]])}</section>
-<section class="yc"><h2>Most serious complaints. <span class="h2s">Share that involved a crash, fire or injury (models with 40+ complaints).</span></h2>{bars_pct([[m["name"], m["serious"]] for m in ser[:10]])}</section>
+<section class="yc hbsec"><h2>Most recalls. <span class="h2s">NHTSA recall campaigns across the model years.</span></h2>{hub_bars([(m["name"], len(m["recalls"])) for m in rec[:10]])}</section>
+<section class="yc hbsec"><h2>Most serious complaints. <span class="h2s">Share that involved a crash, fire or injury (models with 40+ complaints).</span></h2>{hub_bars([(m["name"], m["serious"]) for m in ser[:10]], '%')}</section>
 <p class="yc-cap" style="text-align:center">There are no free U.S. sales figures by motorcycle model, so this section shows counts and shares, not a per-bike score like our cars. Source: NHTSA owner complaints and recalls.</p></div>''',
          ld=[{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Motorcycle problems and recalls by model", "url": BASE + '/motorcycles/'}])
     murls.insert(0, '/motorcycles/')
@@ -151,8 +162,8 @@ if SC:
 <section class="tiles"><div class="tile"><div class="tt"><p class="te">Thirstiest</p><h2>{E(thirst[0]["name"])}.</h2><p class="ts">{thirst[0]["years"][-1]["comb"][0]} mpg combined. About ${thirst[0]["years"][-1]["cost"][1]:,} a year in fuel (EPA).</p></div></div>
 <div class="tile"><div class="tt"><p class="te">Most recalls</p><h2>{E(rec[0]["name"])}.</h2><p class="ts">{rec[0]["recalls"]} NHTSA recalls across its model years.</p></div></div></section>
 <section><h2>Every model. <span class="h2s">Tap one for every year: mpg, fuel cost, engine and recalls.</span></h2><div class="mbs">{groups}</div>{vgrid_note([c["name"] for c in SC], "cars", "car")}</section>
-<section class="yc"><h2>Yearly fuel cost. <span class="h2s">Newest model year, EPA estimate, the thirstiest version.</span></h2>{bars_n([(c["name"], c["years"][-1]["cost"][1]) for c in thirst[:12]]).replace("</b>", "</b>").replace('<b>', '<b>$')}</section>
-<section class="yc"><h2>Most recalls. <span class="h2s">NHTSA campaigns across all model years 2010–2025.</span></h2>{bars_n([(c["name"], c["recalls"]) for c in rec[:12]])}</section>
+<section class="yc hbsec"><h2>Yearly fuel cost. <span class="h2s">Newest model year, EPA estimate, the thirstiest version.</span></h2>{hub_bars([(c["name"], c["years"][-1]["cost"][1]) for c in thirst[:12]], pre='$')}</section>
+<section class="yc hbsec"><h2>Most recalls. <span class="h2s">NHTSA campaigns across all model years 2010–2025.</span></h2>{hub_bars([(c["name"], c["recalls"]) for c in rec[:12]])}</section>
 <p class="yc-cap" style="text-align:center">Owner complaints are too rare for supercars to score (Ferrari has about 70 in total), so this section shows EPA and recall data. Sources: EPA fueleconomy.gov, NHTSA.</p></div>''',
          ld=[{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Supercar fuel economy and recalls", "url": BASE + '/supercars/'}])
     surls.insert(0, '/supercars/')
