@@ -355,7 +355,20 @@ else:
             L = [card(v['src'], v['w'], v['h'], f'{v["year"]} {v["name"]} illustration', f'{v["year"]} {v["name"]}', v['page'], 'Page') for _fam, v in sorted(_AIV.items(), key=lambda kv: kv[1]['name']) if v['category'] == _c]
             if L: groups.append((_c + 's', _t, L))
         _names = {f['id']: f['name'] for f in YEARS}; _yp = {f['id']: {v['y'] for v in f['years']} for f in YEARS}
+        _gen = []   # 11-10: one picture per generation for every model
+        for _fid, _ims in sorted(YSL.AIY.items(), key=lambda kv: _names.get(kv[0], kv[0])):
+            _grp, _ms = {}, (YSL.AIM.get(_fid) or {}).get('src')
+            for _y, _im in sorted(_ims.items(), key=lambda kv: int(kv[0])): _grp.setdefault(_im['src'], []).append(int(_y))
+            if not (any(len(v) > 1 for v in _grp.values()) or _ms in _grp): continue
+            _nm = _names.get(_fid, _fid.replace('-', ' ').title())
+            for _s, _v in _grp.items():
+                if _s == _ms: continue
+                _im, _lab = _ims[str(_v[0])], (f'{_v[0]}' if len(_v) == 1 else f'{_v[0]}-{_v[-1]}')
+                _gen.append(card(_im['src'], _im['w'], _im['h'], f'{_lab} {_nm} illustration', f'{_lab} {_nm}', f'/cars/{_fid}/{_v[0]}/', 'Year page', f'<small>{E(_im["gen"])}</small>'))
+        if _gen: groups.append(('generations', 'Every car generation', _gen))
         for _fid, _ims in sorted(YSL.AIY.items()):
+            _ss = {_im['src'] for _im in _ims.values()}
+            if len(_ss) < len(_ims) or (YSL.AIM.get(_fid) or {}).get('src') in _ss: continue   # shown above (one card per generation) or under Every car model
             _nm = _names.get(_fid, _fid.replace('-', ' ').title())
             groups.append((f'years-{_fid}', f'{_nm}, every year', [card(im['src'], im['w'], im['h'], f'{y} {_nm} illustration', f'{y} {_nm}',
                                                                       f'/cars/{_fid}/{y}/' if int(y) in _yp.get(_fid, set()) else f'/cars/{_fid}/', 'Year page' if int(y) in _yp.get(_fid, set()) else 'Year slider',
@@ -382,7 +395,7 @@ else:
                   for _f, _ii in YSL.AIY.items() for y, im in _ii.items() if int(y) in {v['y'] for f in YEARS if f['id'] == _f for v in f['years']})
         + ''.join(f'<url><loc>{BASE}{pg}</loc><image:image><image:loc>{BASE}{E(src)}</image:loc></image:image></url>' for pg, src in TAB.sitemap_images())
         + ''.join(f'<url><loc>{BASE}/cars/{_f}/</loc><image:image><image:loc>{BASE}{E(m["src"])}</image:loc></image:image></url>'
-                  for _f, m in YSL.AIM.items() if _f in {f['id'] for f in YEARS} and _f not in YSL.AIY)
+                  for _f, m in YSL.AIM.items() if _f in {f['id'] for f in YEARS} and not YSL.has(_f))
         + ''.join(f'<url><loc>{BASE}{m["page"]}</loc><image:image><image:loc>{BASE}{E(m["src"])}</image:loc></image:image></url>'
                   for _f, m in YSL.AIM.items() if m.get('page') and _f not in {f['id'] for f in YEARS})
         + ''.join(f'<url><loc>{BASE}{v["page"]}</loc><image:image><image:loc>{BASE}{E(v["src"])}</image:loc></image:image></url>'

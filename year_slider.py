@@ -9,7 +9,10 @@ except FileNotFoundError: AIY = {}
 LIC = 'https://creativecommons.org/licenses/by/4.0/'
 NOTE = 'Illustration (AI-generated). Typical factory color of the era, not sales data. Free to use under <a href="' + LIC + '" rel="license noopener">CC BY 4.0</a>: credit The Lemon Index (lemonindex.com).'
 
-def has(fid): return fid in AIY
+def has(fid):
+    """True when the model page gets the year slider: its years show more than one picture (11-10: one image per generation for every
+    model, so one-generation models keep their single hero)."""
+    return len({v["src"] for v in (AIY.get(fid) or {}).values()}) > 1
 
 # 11-10 (Elijah): one AI illustration per model (data/ai_model_images.json, assets/ai-models/): the model-page hero and the /cars/ grid
 # use it instead of the Wikimedia photo. All on one 1000x600 canvas, car centered on a shared baseline, facing left.
@@ -64,7 +67,7 @@ def ai_year_html(fid, y, name, hero=False):
     im = AIY.get(fid, {}).get(str(y))
     if not im: return ''
     ld = 'fetchpriority="high" decoding="async"' if hero else 'loading="lazy" decoding="async"'
-    return (f'<link rel="stylesheet" href="/assets/yslider.css?v=6"><figure class="yph aiy"><img src="{im["src"]}" alt="{y} {E(name)}, {E(im["gen"])}, illustration" width="{im["w"]}" height="{im["h"]}" {ld}>'
+    return (f'<link rel="stylesheet" href="/assets/yslider.css?v=6"><figure class="yph aiy{' aim' if im['h'] == 600 else ''}"><img src="{im["src"]}" alt="{y} {E(name)}, {E(im["gen"])}, illustration" width="{im["w"]}" height="{im["h"]}" {ld}>'
             + info(f'Illustration (AI-generated) of a {y} {E(name)}. {NOTE.split(". ", 1)[1]} <a href="/images/">Download and credit text</a>') + '</figure>'
             f'<script type="application/ld+json">{json.dumps(_ld(fid, y, name, im))}</script>')
 
