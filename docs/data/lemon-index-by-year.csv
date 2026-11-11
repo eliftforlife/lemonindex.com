@@ -1,4 +1,4 @@
-# The Lemon Index (lemonindex.com). License: CC BY 4.0, free to use with credit: "Source: The Lemon Index (lemonindex.com)". Updated 2026-11-10
+# The Lemon Index (lemonindex.com). License: CC BY 4.0, free to use with credit: "Source: The Lemon Index (lemonindex.com)". Updated 2026-11-11
 family_id,model,model_year,lemon_index,nhtsa_complaints,top_problem_1,top_problem_1_complaints,top_problem_2,top_problem_2_complaints,top_problem_3,top_problem_3_complaints,early_read
 ford-f-series,Ford F-Series,2000,94,907,tires,29,steering,15,"service brakes, hydraulic",15,
 ford-f-series,Ford F-Series,2001,87,841,transmission & drivetrain,16,tires,16,seats,11,
