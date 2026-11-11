@@ -7,4 +7,5 @@
 - [Engine code lookup](https://lemonindex.com/check-engine-light/): what any OBD-II trouble code means, how serious it is, and which cars owners report it on most in NHTSA complaints
 - [Free engine illustrations](https://lemonindex.com/images/): free BMW engine illustrations, CC BY 4.0 (AI-generated, credit The Lemon Index)
 - [BMW engines by year](https://lemonindex.com/engines/bmw/): every BMW engine (N54, N55, B58, N63 ...) by model year: US versions and specs (EPA), owner complaints (NHTSA) and a YouTube score
+- [Supercar engines by year](https://lemonindex.com/engines/supercars/): 39 supercar engines (Ferrari F154, Lamborghini V10, McLaren M838T, Nissan VR38DETT ...) matched to their cars (EPA), with a YouTube owner score by model year, NHTSA recalls and automaker repair notes
 - [Method](https://lemonindex.com/method/)
