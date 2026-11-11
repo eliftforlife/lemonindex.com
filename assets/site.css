@@ -1175,4 +1175,7 @@ table.spec { min-width: 820px; }
 /* 11-10: models with no data yet: gray, not clickable */
 .mc.mc-nd { cursor: default; background: #f2f2f4; } .mc.mc-nd:hover { transform: none; }
 .mc.mc-nd .mc-p img { filter: grayscale(.35) opacity(.75) drop-shadow(0 8px 8px rgba(0,0,0,.08)); }
-.mc.mc-nd b { color: #6e6e73; } .mc.mc-nd > span.nd { position: absolute; top: 10px; right: 12px; font-size: 11.5px; font-weight: 600; color: #8e8e93; letter-spacing: .01em; }
+.mc.mc-nd b { color: #6e6e73; } .mc.mc-nd > span.nd { position: absolute; top: 10px; right: 12px; font-size: 11.5px; font-weight: 600; color: #6e6e73; letter-spacing: .01em; }
+
+/* 11-10: AI model illustration under the header on the no-sales-data pages (Pontiac, newer BMWs, VW Taos) */
+.advimg { display: flex; justify-content: center; margin: 0 0 22px; } .advimg figure.aim { width: min(100%, 560px); }
