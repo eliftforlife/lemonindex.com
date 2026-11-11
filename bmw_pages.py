@@ -337,55 +337,41 @@ else:
     # ---- /images/: our free engine illustrations, CC BY 4.0, with copy-paste credit text (the acquireLicensePage in the ImageObject markup)
     ours = [(p, ph) for p, ph in IMG_PAGES if ph.get('ai')]
     if ours:
-        cards = ''.join(
-            f'<figure class="imgcard"><img src="{E(ph["src"])}"{rset(ph["src"], "(max-width: 700px) 100vw, 340px")} width="{ph["w"]}" height="{ph["h"]}" alt="{E(ph["title"])}" loading="lazy">'
-            f'<figcaption><b>{E(ph["title"])}</b><span>{ph["w"]}×{ph["h"]} WebP · {ph.get("bytes", 0) // 1024} KB · Illustration (AI-generated), not a photo of a specific engine.</span>'
-            f'<span>Credit: <code>Image: The Lemon Index (lemonindex.com), CC BY 4.0</code></span>'
-            f'<span><a href="{E(ph["src"])}">Open full size</a> · <a href="{p}">Used on: BMW {E(p.split("bmw-")[1].strip("/").upper())} engine page</a></span></figcaption></figure>' for p, ph in ours)
-        lede = ('Engine illustrations we made for the Lemon Index. You may use them anywhere, including commercially, under Creative Commons Attribution 4.0 (CC BY 4.0), '
-                'as long as you credit "The Lemon Index (lemonindex.com)" and link to the license. They are AI-generated illustrations, not photos of a specific engine.')
-        # 11-10: the year-by-year car illustrations (year_slider.py / data/ai_year_images.json) are listed here too
+        # 11-10 v2 (design audit: /images/ was 155,000 px tall): small thumbnail cards (name + full size + where it's used), the credit line
+        # once at the top, jump links per group, a text filter, and only the first 12 of each group shown until "Show all" (assets/imgpage.js).
+        # Every card stays in the HTML, so the page still lists every image for search engines.
+        def card(src, w, h, alt, name, use_url, use_txt, extra=''):
+            return (f'<figure class="imgcard"><a class="ic-i" href="{E(src)}"><img src="{E(src)}" width="{w}" height="{h}" alt="{E(alt)}" loading="lazy" decoding="async"></a>'
+                    f'<figcaption><b>{E(name)}</b>{extra}<span><a href="{E(src)}">Full size</a>' + (f' · <a href="{use_url}">{E(use_txt)}</a>' if use_url else '') + '</span></figcaption></figure>')
+        groups = []
+        groups.append(('engines', 'BMW engines', [card(ph['src'], ph['w'], ph['h'], ph['title'], ph['title'], p_, 'Engine page') for p_, ph in ours]))
+        _pages = {f['id'] for f in YEARS}
+        if YSL.AIM:
+            groups.append(('models', 'Every car model', [card(m['src'], m['w'], m['h'], f'{m["year"]} {m["name"]} illustration', f'{m["year"]} {m["name"]}',
+                                                              f'/cars/{_fid}/' if _fid in _pages else m.get('page'), 'Model page')
+                                                         for _fid, m in sorted(YSL.AIM.items(), key=lambda kv: kv[1]['name'])]))
+        _AIV = json.load(open('data/ai_vehicle_images.json', encoding='utf-8')) if os.path.exists('data/ai_vehicle_images.json') else {}
+        for _c, _t in (('motorcycle', 'Motorcycles'), ('supercar', 'Supercars'), ('plane', 'Planes and helicopters')):
+            L = [card(v['src'], v['w'], v['h'], f'{v["year"]} {v["name"]} illustration', f'{v["year"]} {v["name"]}', v['page'], 'Page') for _fam, v in sorted(_AIV.items(), key=lambda kv: kv[1]['name']) if v['category'] == _c]
+            if L: groups.append((_c + 's', _t, L))
         _names = {f['id']: f['name'] for f in YEARS}; _yp = {f['id']: {v['y'] for v in f['years']} for f in YEARS}
-        car_cards = ''
         for _fid, _ims in sorted(YSL.AIY.items()):
             _nm = _names.get(_fid, _fid.replace('-', ' ').title())
-            car_cards += (f'<h2>{E(_nm)}, every year</h2><div class="imggrid">' + ''.join(
-                f'<figure class="imgcard"><img src="{E(im["src"])}" width="{im["w"]}" height="{im["h"]}" alt="{y} {E(_nm)} illustration" loading="lazy">'
-                f'<figcaption><b>{y} {E(_nm)}</b><span>{E(im["gen"])} · Illustration (AI-generated), typical color of the era.</span>'
-                f'<span>Credit: <code>Image: The Lemon Index (lemonindex.com), CC BY 4.0</code></span>'
-                f'<span><a href="{E(im["src"])}">Open full size</a> · <a href="/cars/{_fid}/{y}/" >Used on: {y} {E(_nm)}</a></span></figcaption></figure>'
-                if int(y) in _yp.get(_fid, set()) else
-                f'<figure class="imgcard"><img src="{E(im["src"])}" width="{im["w"]}" height="{im["h"]}" alt="{y} {E(_nm)} illustration" loading="lazy">'
-                f'<figcaption><b>{y} {E(_nm)}</b><span>{E(im["gen"])} · Illustration (AI-generated), typical color of the era.</span>'
-                f'<span>Credit: <code>Image: The Lemon Index (lemonindex.com), CC BY 4.0</code></span>'
-                f'<span><a href="{E(im["src"])}">Open full size</a> · <a href="/cars/{_fid}/#every-year">Used on: the {E(_nm)} year slider</a></span></figcaption></figure>'
-                for y, im in sorted(_ims.items(), key=lambda kv: int(kv[0]))) + '</div>')
-        # 11-10: one illustration per model (YSL.AIM), the image on each model page and the /cars/ grid
-        _pages = {f['id'] for f in YEARS}
-        model_cards = '<h2>Every model</h2><div class="imggrid">' + ''.join(
-            f'<figure class="imgcard"><img src="{E(m["src"])}" width="{m["w"]}" height="{m["h"]}" alt="{m["year"]} {E(m["name"])} illustration" loading="lazy">'
-            f'<figcaption><b>{m["year"]} {E(m["name"])}</b><span>Illustration (AI-generated), {E(m["color"])}.</span>'
-            f'<span>Credit: <code>Image: The Lemon Index (lemonindex.com), CC BY 4.0</code></span>'
-            f'<span><a href="{E(m["src"])}">Open full size</a>' + (f' · <a href="/cars/{_fid}/">Used on: {E(m["name"])}</a>' if _fid in _pages else f' · <a href="{m["page"]}">Used on: {E(m["name"])}</a>' if m.get('page') else '') + '</span></figcaption></figure>'
-            for _fid, m in sorted(YSL.AIM.items(), key=lambda kv: kv[1]['name'])) + '</div>' if YSL.AIM else ''
-        # 11-10: motorcycles, supercars and planes (vehicles_pages.py, data/ai_vehicle_images.json)
-        _AIV = json.load(open('data/ai_vehicle_images.json', encoding='utf-8')) if os.path.exists('data/ai_vehicle_images.json') else {}
-        veh_cards = ''.join(f'<section class="yc"><h2>{_t}</h2><div class="imggrid">' + ''.join(
-            f'<figure class="imgcard"><img src="{E(v["src"])}" width="{v["w"]}" height="{v["h"]}" alt="{v["year"]} {E(v["name"])} illustration" loading="lazy">'
-            f'<figcaption><b>{v["year"]} {E(v["name"])}</b><span>Illustration (AI-generated), {E(v["color"])}.</span>'
-            f'<span>Credit: <code>Image: The Lemon Index (lemonindex.com), CC BY 4.0</code></span>'
-            f'<span><a href="{E(v["src"])}">Open full size</a> · <a href="{v["page"]}">Used on: {E(_fam)}</a></span></figcaption></figure>'
-            for _fam, v in sorted(_AIV.items(), key=lambda kv: kv[1]['name']) if v['category'] == _c) + '</div></section>'
-            for _c, _t in (('motorcycle', 'Motorcycles'), ('supercar', 'Supercars'), ('plane', 'Planes and helicopters')) if any(v['category'] == _c for v in _AIV.values()))
-        lede = ('Car and engine illustrations we made for the Lemon Index. You may use them anywhere, including commercially, under Creative Commons Attribution 4.0 (CC BY 4.0), '
-                'as long as you credit "The Lemon Index (lemonindex.com)" and link to the license. They are AI-generated illustrations, not photos of a specific car or engine.')
-        body = (f'<div class="advp"><header class="advh1"><p class="ph-e"><a href="/data/">Free data</a></p><h1>Free car and engine illustrations.</h1><p class="ans">{E(lede)}</p></header>'
-                f'<div class="ygrid"><section class="yc"><h2>BMW engines</h2><div class="imggrid">{cards}</div></section>'
-                f'<section class="yc">{model_cards}</section>{veh_cards}<section class="yc">{car_cards}</section>'
-                + (f'<section class="yc">{TAB.images_cards()}</section>' if TAB.images_cards() else '') +
-                f'<section class="yc"><h2>How to credit</h2><p>Copy this line next to the image: <code>Image: The Lemon Index (lemonindex.com), CC BY 4.0</code>, '
-                f'and link "CC BY 4.0" to <a href="{CCBY}" rel="noopener license" style="overflow-wrap:anywhere">{CCBY}</a>. If you change the image, say so.</p>'
-                '<p class="yc-cap">Engine photos on our engine pages that come from Wikimedia Commons are not ours: they keep their authors&#39; own licenses, linked under each photo.</p></section></div></div>')
+            groups.append((f'years-{_fid}', f'{_nm}, every year', [card(im['src'], im['w'], im['h'], f'{y} {_nm} illustration', f'{y} {_nm}',
+                                                                      f'/cars/{_fid}/{y}/' if int(y) in _yp.get(_fid, set()) else f'/cars/{_fid}/', 'Year page' if int(y) in _yp.get(_fid, set()) else 'Year slider',
+                                                                      f'<small>{E(im["gen"])}</small>') for y, im in sorted(_ims.items(), key=lambda kv: int(kv[0]))]))
+        total = sum(len(g[2]) for g in groups)
+        jump = '<nav class="imgj" aria-label="Image groups">' + ''.join(f'<a href="#g-{gid}">{E(t)} <span>{len(L)}</span></a>' for gid, t, L in groups) + '</nav>'
+        secs = ''.join(f'<section class="yc imgsec" id="g-{gid}"><h2>{E(t)} <span class="h2s">{len(L)} images</span></h2><div class="imggrid ig2" data-cap="12">{"".join(L)}</div></section>' for gid, t, L in groups)
+        lede = (f'{total} illustrations we made for the Lemon Index: cars, engines, motorcycles, supercars and planes. Free to use anywhere, including commercially, under CC BY 4.0. '
+                'They are AI-generated, not photos of a specific vehicle.')
+        body = (f'<div class="advp imgp"><header class="advh1"><p class="ph-e"><a href="/data/">Free data</a></p><h1>Free car and engine illustrations.</h1><p class="ans">{E(lede)}</p></header>'
+                f'<section class="yc imgcr"><h2>How to credit</h2><p>Put this line next to the image: <code>Image: The Lemon Index (lemonindex.com), CC BY 4.0</code>, '
+                f'and link "CC BY 4.0" to <a href="{CCBY}" rel="noopener license" style="overflow-wrap:anywhere">{CCBY}</a>. If you change the image, say so.</p></section>'
+                f'{jump}<input class="cf-q imgq" type="search" placeholder="Find an image, e.g. Civic or N54" aria-label="Find an image">'
+                f'<p class="cf-none imgnone" hidden>No image matches.</p>{secs}' + (f'<section class="yc imgsec">{TAB.images_cards()}</section>' if TAB.images_cards() else '') +
+                '<p class="yc-cap">Engine photos on our engine pages that come from Wikimedia Commons are not ours: they keep their authors&#39; own licenses, linked under each photo.</p></div>'
+                '<script src="/assets/imgpage.js?v=1" defer></script>')
         page('/images/', 'Free Car & Engine Illustrations (CC BY 4.0) | Lemon Index', lede, body, ld=[img_ld(p.split('bmw-')[1].strip('/').upper(), ph) for p, ph in ours])
         BMW_URLS.append('/images/')
     # ---- image sitemap (listed in robots.txt by build.py)
