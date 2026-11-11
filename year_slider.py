@@ -39,7 +39,7 @@ def model_hero_html(fid, name):
     """The model page's top image when it has no year slider ('' if no illustration)."""
     m = AIM.get(fid)
     if not m: return ''
-    return (f'<link rel="stylesheet" href="/assets/yslider.css?v=5"><figure class="yph aiy aim"><img src="{m["src"]}" alt="{m["year"]} {E(name)}, illustration" '
+    return (f'<link rel="stylesheet" href="/assets/yslider.css?v=6"><figure class="yph aiy aim"><img src="{m["src"]}" alt="{m["year"]} {E(name)}, illustration" '
             f'width="{m["w"]}" height="{m["h"]}" fetchpriority="high" decoding="async">' + info(model_info_text(fid)) + '</figure>'
             f'<script type="application/ld+json">{json.dumps(model_ld(fid))}</script>')
 
@@ -64,7 +64,7 @@ def ai_year_html(fid, y, name, hero=False):
     im = AIY.get(fid, {}).get(str(y))
     if not im: return ''
     ld = 'fetchpriority="high" decoding="async"' if hero else 'loading="lazy" decoding="async"'
-    return (f'<link rel="stylesheet" href="/assets/yslider.css?v=5"><figure class="yph aiy"><img src="{im["src"]}" alt="{y} {E(name)}, {E(im["gen"])}, illustration" width="{im["w"]}" height="{im["h"]}" {ld}>'
+    return (f'<link rel="stylesheet" href="/assets/yslider.css?v=6"><figure class="yph aiy"><img src="{im["src"]}" alt="{y} {E(name)}, {E(im["gen"])}, illustration" width="{im["w"]}" height="{im["h"]}" {ld}>'
             + info(f'Illustration (AI-generated) of a {y} {E(name)}. {NOTE.split(". ", 1)[1]} <a href="/images/">Download and credit text</a>') + '</figure>'
             f'<script type="application/ld+json">{json.dumps(_ld(fid, y, name, im))}</script>')
 
@@ -77,7 +77,7 @@ def year_slider_html(fid, name, li=None, yt=None, pages=(), start=None, hero=Fal
              "url": f'/cars/{fid}/{y}/' if y in pages else None} for y in ys]
     si = ys.index(start) if start in ys else 0; y0 = ys[si]   # 11-10 (Elijah): the hero slider opens on the page's best year
     first = ims[str(y0)]; short = name.split(' ', 1)[-1] if ' ' in name else name
-    return (f'<link rel="stylesheet" href="/assets/yslider.css?v=5"><section class="ysl{' ysl-hero' if hero else ''}" id="every-year" aria-label="Every {E(short)}, year by year">'
+    return (f'<link rel="stylesheet" href="/assets/yslider.css?v=6"><section class="ysl{' ysl-hero' if hero else ''}" id="every-year" aria-label="Every {E(short)}, year by year">'
             + ('' if hero else f'<h2>Every {E(short)}, year by year. <span class="h2s">Slide through {ys[0]} to {ys[-1]}.</span></h2>') +
             f'<div class="ysl-stage"><img class="on" src="{first["src"]}" alt="{y0} {E(name)} illustration" width="{first["w"]}" height="{first["h"]}" fetchpriority="{'high' if hero else 'low'}"><img alt="" width="{first["w"]}" height="{first["h"]}" aria-hidden="true">'
             f'<div class="ysl-yr"><b>{y0}</b><span class="ysl-gen">{E(first["gen"])}</span></div>'
