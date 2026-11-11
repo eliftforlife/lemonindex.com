@@ -1528,3 +1528,5 @@ section.hbsec > h2 .h2s { display: block; margin: 6px auto 0; text-align: center
 .hb-v { text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; } .hb.bad .hb-v { color: var(--red); }
 @media (max-width: 600px) { .hb { grid-template-columns: 48px minmax(0, 1fr) 64px; gap: 4px 10px; } .hb-t { grid-column: 2 / 4; grid-row: 2; } .hb-i { grid-row: 1 / 3; } }
 section.yc.hbsec > h2 { text-align: center !important; } .hb.bad { color: var(--ink); } .hb.bad .hb-n small { color: #6e6e73; }
+
+section.yc.hbsec > h2 { flex-direction: column; align-items: center; }
