@@ -258,7 +258,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}{img or "/assets/og.png"}"><meta name="twitter:card" content="summary_large_image">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://challenges.cloudflare.com https://www.googletagmanager.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; frame-src https://challenges.cloudflare.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cloudflareinsights.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://vpic.nhtsa.dot.gov https://lemon-survey.elift08.workers.dev https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="google-adsense-account" content="{ADS}"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=1110w"><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
+<link rel="stylesheet" href="/assets/site.css?v=1110x"><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
 <body>{gh_header(path)}
 <main>{body}{CITE if path.startswith('/cars/') else ''}{'' if path == '/vote/' else ask_html(path)}</main>
 <footer class="foot"><div class="cta"><div><h2>New car studies, straight from the data.</h2><p>Every study becomes a video. Subscribe to see the next one first.</p></div><a class="btn" href="{YT}?sub_confirmation=1" rel="noopener">Subscribe on YouTube</a></div>
@@ -484,7 +484,6 @@ page('/studies/', 'Car Reliability Studies: Rankings From Owner Complaints | Lem
 <a class="tile" href="{STUDY}"><div class="tt"><p class="te">Study #1</p><h2>The most reliable cars.</h2><p class="ts">131 models. 1.6 million owner complaints.</p><span class="tl">Read the study <i>›</i></span></div><div class="tp">{pimg(mphoto('toyota-4runner'), 'Toyota 4Runner')}</div></a>
 <a class="tile" href="/electric/"><div class="tt"><p class="te">Electric cars</p><h2>The most reliable EVs.</h2><p class="ts">22 electric cars, plus fires and fuel cost.</p><span class="tl">See the ranking <i>›</i></span></div><div class="tp">{pimg(mphoto('tesla-model-s'), 'Tesla Model S')}</div></a></section>
 {pcredit(who(mphoto('toyota-4runner'), mphoto('tesla-model-s')))}
-<section class="pg-next"><h2>Coming next.</h2><p class="ph-s">Cars that pass 300,000 miles. The worst cars ever made. The best used cars under $10K.</p></section>
 {share_line("Which cars have the fewest problems? Free studies from 1.6 million owner complaints:")}</div>''',
      ld=[{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Car Reliability Studies", "url": BASE + '/studies/', "hasPart": [{"@type": "Article", "headline": "The Most Reliable Cars, According to 1.6 Million Owner Complaints", "url": BASE + STUDY}]}])
 
@@ -1339,9 +1338,12 @@ for a, b in PAIRS:
         srow('Crash test<br><small>best, latest year</small>', fa[2], fb[2], better(stA, stB, True)) + \
         srow('Best year to buy', f'<a href="{CARU(A, bA["y"])}">{bA["y"]}</a>', f'<a href="{CARU(B, bB["y"])}">{bB["y"]}</a>', ('', '')) + '</div>'
     mx = max(max(ya[y]['li'], yb[y]['li']) for y in shared)
-    yrs = ''.join(f'''<div class="yr"><div class="yy">{y}</div><div class="yb">
+    def _yr(y): return f'''<div class="yr"><div class="yy">{y}</div><div class="yb">
 <a class="ybar {CLS(ya[y])}{' w' if ya[y]['li'] < yb[y]['li'] else ''}" href="{CARU(A, y)}"><i style="width:{ya[y]['li'] / mx * 100:.0f}%"></i><span>{E(A["name"])} <b>{ya[y]['li']}</b></span></a>
-<a class="ybar {CLS(yb[y])}{' w' if yb[y]['li'] < ya[y]['li'] else ''}" href="{CARU(B, y)}"><i style="width:{yb[y]['li'] / mx * 100:.0f}%"></i><span>{E(B["name"])} <b>{yb[y]['li']}</b></span></a></div></div>''' for y in shared)
+<a class="ybar {CLS(yb[y])}{' w' if yb[y]['li'] < ya[y]['li'] else ''}" href="{CARU(B, y)}"><i style="width:{yb[y]['li'] / mx * 100:.0f}%"></i><span>{E(B["name"])} <b>{yb[y]['li']}</b></span></a></div></div>'''
+    # 11-10 (design audit): the 6 newest shared years show; older ones fold under one tap
+    _new = sorted(shared)[-6:]; _old = [y for y in shared if y not in _new]
+    yrs = ''.join(_yr(y) for y in shared if y in _new) + (f'<details class="yrs-more"><summary>Show {len(_old)} older years</summary>' + ''.join(_yr(y) for y in _old) + '</details>' if _old else '')
     page(CMPU(a, b), title + ' | The Lemon Index',
          f'{lead["name"]} vs {trail["name"]}: owner complaints per car sold for every model year both were sold ({shared[0]}-{shared[-1]}), plus recalls, crash tests and fuel economy.', f'''
 <article class="study cmpp"><p class="kicker"><a href="/cars/">All cars</a> · Compare</p><h1>{E(A["name"])} vs {E(B["name"])}: which has fewer problems?</h1>

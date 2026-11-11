@@ -1448,3 +1448,18 @@ article.eng2 .engv table.adv td { padding: 7px 8px; font-size: 14px; } article.e
 .bcard b { font-size: 18px; line-height: 1.25; letter-spacing: -.01em; } .bcard .tl { font-size: 14px; font-weight: 600; color: #3c4043; }
 @media (max-width: 600px) { .bcards { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; } .bcard { padding: 10px 12px 12px; border-radius: 16px; } .bcard b { font-size: 15px; } .bcard .tl { font-size: 13px; } }
 .bcard { align-content: start; } .bestl.bl2 b a { overflow-wrap: anywhere; }
+
+/* 11-10 spacing pass (design audit: 150-250 px dead zones on phones): the v6 page sections sit closer on small screens */
+@media (max-width: 600px) {
+  .pg { gap: 44px; }
+  .pg > .ph { padding-bottom: 0; }
+  .pg > .ph .ph-v { margin-top: 12px; }
+  .pg > .ph + * { margin-top: -8px; }
+  .yhero { margin-bottom: 0; }
+  .fb { margin-top: 28px; }
+}
+details.yrs-more > summary { list-style: none; cursor: pointer; margin: 6px 0 2px; font-size: 14px; font-weight: 600; color: #1d1d1f; text-decoration: underline; text-decoration-color: rgba(0,0,0,.25); text-underline-offset: 3px; }
+details.yrs-more > summary::-webkit-details-marker { display: none; }
+details.yrs-more[open] > summary { display: none; }
+@media (max-width: 600px) { .pg > section, .pg > article { padding-top: 0; } .pg > .ph .ph-v { padding-bottom: 0; } }
+@media (max-width: 600px) { .pg > .shline { margin-top: -16px; } }

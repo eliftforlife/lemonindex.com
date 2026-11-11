@@ -86,8 +86,8 @@ murls = []
 if MO:
     for m in MO:
         slug = slugify(m['name']); m['slug'] = slug; ph = vph(m['name'])
-        rc = ''.join(f'<li><b>{E((r["part"] or "").split(":")[0].title())}</b> <small>{E((r["date"] or "")[-4:] or (r["date"] or "")[:4])}</small><p>{E(r["summary"][:220])}…</p></li>' for r in m['recalls'][:3])
-        more = ''.join(f'<li><b>{E((r["part"] or "").split(":")[0].title())}</b> <small>{E(r["id"])}</small><p>{E(r["summary"][:220])}…</p></li>' for r in m['recalls'][3:])
+        rc = ''.join(f'<li><b>{E((r["part"] or "").split(":")[0].title())}</b> <small>{E((r["date"] or "")[-4:] or (r["date"] or "")[:4])}</small><p>{E(rsum(r))}</p></li>' for r in m['recalls'][:3])
+        more = ''.join(f'<li><b>{E((r["part"] or "").split(":")[0].title())}</b> <small>{E(r["id"])}</small><p>{E(rsum(r))}</p></li>' for r in m['recalls'][3:])
         recs = (f'<section class="yc" id="recalls"><h2>Recalls <span class="yc-n">{len(m["recalls"])}</span></h2>'
                 + (f'<ul class="rc">{rc}</ul>' + (f'<details><summary>Show all {len(m["recalls"])}</summary><ul class="rc">{more}</ul></details>' if more else '') if m['recalls'] else '<p>No NHTSA recalls found for these model names.</p>')
                 + '<p class="yc-cap">Recall repairs are free at any dealer. Check a specific bike&#39;s VIN at <a href="https://www.nhtsa.gov/recalls" rel="noopener">nhtsa.gov/recalls</a>.</p></section>')
@@ -127,8 +127,8 @@ if SC:
         rows = ''.join(f'<tr><td><b>{y["y"]}</b></td><td class="num">{rng2(y["comb"])}</td><td class="num">{rng2(y["cost"], "$")}</td><td>{E(", ".join(y["engines"][:2]))}{" · hybrid" if y["hybrid"] else ""}</td>'
                        f'<td>{"Yes" if y["guzzler"] else "—"}</td><td class="num">{len(y["recalls"])}</td></tr>' for y in reversed(ys))
         allrec = sorted({r['id']: dict(r, y=y['y']) for y in ys for r in y['recalls']}.values(), key=lambda r: r['date'][-4:] if r['date'] else '', reverse=True)
-        rc = ''.join(f'<li><b>{E((r["part"] or "").split(":")[0].title())}</b> <small>{r["y"]} model · {E(r["id"])}</small><p>{E(r["summary"][:230])}…</p></li>' for r in allrec[:4])
-        more = ''.join(f'<li><b>{E((r["part"] or "").split(":")[0].title())}</b> <small>{r["y"]} model · {E(r["id"])}</small><p>{E(r["summary"][:230])}…</p></li>' for r in allrec[4:])
+        rc = ''.join(f'<li><b>{E((r["part"] or "").split(":")[0].title())}</b> <small>{r["y"]} model · {E(r["id"])}</small><p>{E(rsum(r))}</p></li>' for r in allrec[:4])
+        more = ''.join(f'<li><b>{E((r["part"] or "").split(":")[0].title())}</b> <small>{r["y"]} model · {E(r["id"])}</small><p>{E(rsum(r))}</p></li>' for r in allrec[4:])
         recs = (f'<section class="yc" id="recalls"><h2>Recalls <span class="yc-n">{len(allrec)}</span></h2>' + (f'<ul class="rc">{rc}</ul>' + (f'<details><summary>Show all {len(allrec)}</summary><ul class="rc">{more}</ul></details>' if more else '') if allrec else '<p>No NHTSA recalls on record for these model years.</p>') + '</section>')
         body = f'''<div class="pg mp6"><section class="ph yph6"><div class="yh-t"><p class="ph-e"><a href="/supercars/">Supercars</a> · {E(c["make"])}</p><h1>{E(c["name"])}.</h1>
 <p class="ph-s">Fuel economy, fuel cost and recalls, {ys[0]["y"]} to {last["y"]}.</p></div><div class="ph-v">{pimg(ph, valt(ph, c["name"])) if ph else ""}{vcredit(ph)}</div></section>
