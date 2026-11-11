@@ -305,7 +305,7 @@ def overview_cards_year(over, probs, fix, rec, yrs, qa):
     qs = S_.select('.yqa h3')
     c5 = _ovcard('questions', 'Questions', f'{len(qs)} quick answers' if qs else '', '', _qtitles([S_]), go='questions')
     oc = card.get('Owner complaints'); fe = card.get('Fuel economy')
-    slim = ' '.join(x for x in ((f'<span><b>{_txt(oc[0])}</b> owner complaints, first 3 years</span>' if oc else ''), (f'<span><b>{_txt(fe[0])}</b> combined, EPA</span>' if fe else '')) if x)
+    slim = ' '.join(x for x in ((f'<span><b>{_txt(oc[0])}</b> owner complaint{"" if _txt(oc[0]).strip() == "1" else "s"}, first 3 years</span>' if oc else ''), (f'<span><b>{_txt(fe[0])}</b> combined, EPA</span>' if fe else '')) if x)
     return f'<div class="ovg">{c1}{c2}{c3}{c4}{c5}</div>' + (f'<p class="ovslim">{slim}</p>' if slim else '')
 
 def transform_year(body, eng_html, short):

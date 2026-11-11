@@ -19,6 +19,7 @@ from families import FAMILIES
 PLAN = json.load(open(os.path.join(HERE, 'data', 'new_plan.json'), encoding='utf-8'))
 ONLY = set(sys.argv[1:])
 Y0, Y1, WINDOW, MIN_SOLD = 2000, 2025, 3, 20000
+LOW_MIN = 1   # 11-11: a low-sales year is listed when owners filed any complaint in its window (Elijah: LS 2013+ must show)
 PART = {'ELECTRICAL SYSTEM': 'electrical', 'POWER TRAIN': 'transmission & drivetrain', 'SERVICE BRAKES': 'brakes', 'VEHICLE SPEED CONTROL': 'speed control',
         'FUEL/PROPULSION SYSTEM': 'fuel or EV drive system', 'FORWARD COLLISION AVOIDANCE': 'automatic emergency braking', 'VISIBILITY/WIPER': 'wipers & visibility',
         'VISIBILITY': 'visibility', 'AIR BAGS': 'airbags', 'STRUCTURE': 'body structure', 'EXTERIOR LIGHTING': 'lights', 'ELECTRONIC STABILITY CONTROL (ESC)': 'stability control',
@@ -135,9 +136,11 @@ def run(slug, p):
                       'miles': {'median': ms[len(ms) // 2], 'p25': ms[len(ms) // 4], 'p75': ms[3 * len(ms) // 4], 'n': len(ms)} if len(ms) >= 5 else None}
         years_all.append(dict(y=y, n=allc[y], quotes=qs))
         if li is not None: years.append(dict(y=y, li=li, n=n, sold=s, parts=parts, quotes=qs) | ({'early': True} if y >= 2023 else {}))   # like years.json: scored years only
+        elif n >= LOW_MIN and cs.get(y) is not None and cs[y] < MIN_SOLD:   # 11-11 (Elijah): low-sales years are listed too, complaints only, no score
+            years.append(dict(y=y, li=None, n=n, sold=None, parts=parts, quotes=qs, low=dict(sold=cs[y], url=url, kind=kind)) | ({'early': True} if y >= 2023 else {}))
     # the whole-model score: model years 2010-2022 like the study; a model that mostly ended before 2010 uses all its scored years (the page says which)
-    scored = [v for v in years if 2010 <= v['y'] <= 2022]
-    if len(scored) < 3: scored = [v for v in years if not v.get('early')]
+    scored = [v for v in years if 2010 <= v['y'] <= 2022 and v['li'] is not None]
+    if len(scored) < 3: scored = [v for v in years if not v.get('early') and v['li'] is not None]
     car = None
     if len(scored) < 2 or sum(v['n'] for v in scored) < 30:   # too thin for a whole-model score (e.g. sales mostly under 20,000 a year): complaints-only page
         flags.append(f'{p["name"]}: {len(scored)} scorable model years / {sum(v["n"] for v in scored)} complaints -> complaints only'); scored = []

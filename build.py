@@ -65,6 +65,11 @@ for r in (json.load(open('data/cars_new.json', encoding='utf-8')) if os.path.exi
                          n=r['n'], per100k=r['per100k'], avg=round(r['expected'] / r['sold'] * 1e5), li=r['li'], serious=r['serious'], worst=r['worst'], issues=r['issues'],
                          new=True, sales_url=r.get('sales_url'), sales_kind=r.get('sales_kind')))
 _YJ = json.load(open('data/years.json', encoding='utf-8')) + (json.load(open('data/years_new.json', encoding='utf-8')) if os.path.exists('data/years_new.json') else [])
+# 11-11 (Elijah): low-sales years (cited U.S. sales under 20,000) are listed too: complaints, problems, recalls and a year page, never a score
+# (li None, ok False), never a best/worst pick. Study models: data/years_low.json (data_lowsales.py); new models carry them in years_new.json.
+_YLOW = json.load(open('data/years_low.json', encoding='utf-8')) if os.path.exists('data/years_low.json') else {}
+for _f in _YJ:
+    if _YLOW.get(_f['id']): _f['years'] = sorted(_f['years'] + [v for v in _YLOW[_f['id']] if v['y'] not in {w['y'] for w in _f['years']}], key=lambda v: v['y'])
 COUNTED = sum(c['n'] for c in CARS)
 BYNAME = {c['name']: c for c in CARS + CARS_NEW}
 YP = {f['id'] for f in _YJ}   # models with a page per model year (10-29)
@@ -309,7 +314,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}{img or "/assets/og.png"}"><meta name="twitter:card" content="summary_large_image">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://challenges.cloudflare.com https://www.googletagmanager.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; frame-src https://challenges.cloudflare.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cloudflareinsights.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://vpic.nhtsa.dot.gov https://lemon-survey.elift08.workers.dev https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="google-adsense-account" content="{ADS}"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=1110-11110819"><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
+<link rel="stylesheet" href="/assets/site.css?v=1110-11110920"><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
 <body>{gh_header(path)}
 <main>{body}{end_block(path, _upd, _shl)}{'' if path == '/vote/' else ask_html(path)}</main>
 <footer class="foot f2"><div class="f2-in"><div class="f2-brand"><a class="f2-logo" href="/"><img src="/assets/icon-64.png" alt="" width="28" height="28">The Lemon Index</a>
@@ -591,10 +596,12 @@ YEARS = [f for f in _YJ if f['name'] in BYNAME]
 # 10-29: model years 2000-2009 added (Elijah's car is a 2008). Their scores are rough (fewer owners filed online, launch years sold partly the
 # calendar year before), so a pre-2010 year with under 20 complaints gets no score, and its page says the score is rough.
 for f in YEARS:
-    for v in f['years']: v['ok'] = (v['y'] >= 2010 and not v.get('early')) or v['n'] >= 20   # 11-03: early-read years (2023-2025) need 20+ complaints too
+    for v in f['years']: v['ok'] = v.get('li') is not None and ((v['y'] >= 2010 and not v.get('early')) or v['n'] >= 20)   # 11-03: early-read years (2023-2025) need 20+ complaints too; 11-11: low-sales years never
+LOWS = lambda v: f'{v["low"]["sold"]:,}'   # the cited calendar-year U.S. sales of a low-sales year
+LOWSRC = lambda v: (f' (<a href="{E(v["low"]["url"])}" rel="nofollow">sales source</a>)' if v['low'].get('url') else '')
 LIS = lambda v: v['li'] if v['ok'] else '–'
-CLS = lambda v: ('bad' if v['li'] > 110 else 'good') if v['ok'] else 'good'
-PLN = lambda v: plain(v['li']) if v['ok'] else 'too few complaints to score'
+CLS = lambda v: ('bad' if v['li'] > 110 else 'good') if v['ok'] else 'na'   # 11-11: an unscored year is gray, never green
+PLN = lambda v: plain(v['li']) if v['ok'] else 'complaints only, too few sold to score' if v.get('low') else 'too few complaints to score'
 CARU = lambda f, y=None: f'/cars/{f["id"]}/' + (f'{y}/' if y else '')
 yurls = []
 
@@ -603,6 +610,8 @@ yurls = []
 _load = lambda p: json.load(open(p, encoding='utf-8')) if os.path.exists(p) else {}
 XL, XA = _load('data/extras_local.json'), _load('data/extras_api.json')
 if os.path.exists('data/extras_local_new.json'): XL.update(_load('data/extras_local_new.json')); XA.update(_load('data/extras_api_new.json'))   # 11-11 new models
+for _src, _dst in (('data/extras_local_low.json', XL), ('data/extras_api_low.json', XA)):   # 11-11 the study models' low-sales years
+    for _fid, _ys in _load(_src).items(): _dst.setdefault(_fid, {}).update(_ys)
 def extra(fid, y):
     d = dict(XL.get(fid, {}).get(str(y), {})); d.update(XA.get(fid, {}).get(str(y), {}) or {}); return d
 # ---- 11-04 YouTube videos (data_yt.py): what owners/buyers watch most, by views, with the top video for each topic. Mobile first:
@@ -738,7 +747,7 @@ def ybars_yt(f, cur, sc):
         w = 8 + 92 * (ss - lo) / max(1, hi - lo) if ss is not None else 0
         tier = '' if rk is None else (' up' if rk <= len(RK) / 3 else ' dn' if rk > len(RK) * 2 / 3 else '')
         yt = (f'<span class="bt ytb{tier}"><i style="width:{w:.0f}%"></i></span><b class="ytn">#{rk}</b>' if ss is not None else '<span class="bt ytb"></span><b class="ytn mute">·</b>')
-        tip = f'{E(f["name"])} {y}: ' + (f'Lemon Index {v["li"]}' if v and v['ok'] else 'no complaint score') + (f'. YouTube rank #{rk} of {len(RK)} (score {ss}, {s["videos"]:g} videos)' if ss is not None else '. Not enough YouTube or owner data yet to rank')
+        tip = f'{E(f["name"])} {y}: ' + (f'Lemon Index {v["li"]}' if v and v['ok'] else f'{v["n"]} complaints, too few sold to score' if v and v.get('low') else 'no complaint score') + (f'. YouTube rank #{rk} of {len(RK)} (score {ss}, {s["videos"]:g} videos)' if ss is not None else '. Not enough YouTube or owner data yet to rank')
         if v:
             return (f'<a class="b {CLS(v)}{" cur" if y == cur else ""}" href="{CARU(f, y)}" data-tip="{tip}."><span class="bn">{y}</span><span class="bt"><i style="width:{min(100, v["li"] / mx * 100) if v["ok"] else 0:.1f}%"></i>'
                     f'<em style="left:{100 / mx * 100:.1f}%"></em></span><b>{LIS(v)}</b>{yt}</a>')
@@ -872,7 +881,7 @@ def ybars(f, cur=None):
     if YTS.get(f['id']): return ybars_yt(f, cur, YTS[f['id']])
     mx = max(120, max(v['li'] for v in f['years'] if v['ok']) * 1.08)
     return (f'<div class="bars yb"><div class="bl" aria-hidden="true"><span></span><span class="al" style="--a:{100 / mx * 100:.1f}%">average car = 100</span><span></span></div>'
-            + ''.join(f'<a class="b {CLS(v)}{" cur" if v["y"] == cur else ""}{" early" if v.get("early") else ""}" href="{CARU(f, v["y"])}" data-tip="{E(f["name"])} {v["y"]}: ' + (f'Lemon Index {v["li"]}, {plain(v["li"])}' if v['ok'] else f'only {v["n"]} complaints, too few to score') + f'."><span class="bn">{v["y"]}</span><span class="bt"><i style="width:{min(100, v["li"] / mx * 100) if v["ok"] else 0:.1f}%"></i><em style="left:{100 / mx * 100:.1f}%"></em></span><b>{LIS(v)}</b><small>{("early read · " if v.get("early") else "") + short(v["li"]) if v["ok"] else "few complaints"}</small></a>' for v in f['years']) + '</div>')
+            + ''.join(f'<a class="b {CLS(v)}{" cur" if v["y"] == cur else ""}{" early" if v.get("early") else ""}" href="{CARU(f, v["y"])}" data-tip="{E(f["name"])} {v["y"]}: ' + (f'Lemon Index {v["li"]}, {plain(v["li"])}' if v['ok'] else f'{v["n"]} complaints, too few sold to score' if v.get('low') else f'only {v["n"]} complaints, too few to score') + f'."><span class="bn">{v["y"]}</span><span class="bt"><i style="width:{min(100, v["li"] / mx * 100) if v["ok"] else 0:.1f}%"></i><em style="left:{100 / mx * 100:.1f}%"></em></span><b>{LIS(v)}</b><small>{("early read · " if v.get("early") else "") + short(v["li"]) if v["ok"] else "few complaints"}</small></a>' for v in f['years']) + '</div>')
 # 10-31 idea 5: "X vs Y" pages for the best-selling rivals in each type (people search "camry vs accord reliability").
 FY = {f['id']: f for f in YEARS}
 RIVALS = defaultdict(list); PAIRS = []
@@ -970,6 +979,9 @@ def year_faq(f, v, y, x, best):
         if v.get('early'): a = f'It&#39;s too early to be sure. So far it has drawn {plain(v["li"])} per car sold, against other {y} cars after the same time on the road (early Lemon Index {v["li"]}; 100 is average).'
         nb = [w for w in f['years'] if w['ok'] and w['y'] >= 2010]; b2 = min(nb, key=lambda w: w['li']) if nb else best   # pre-2010 scores are rough
         if b2['y'] != y: a += f' The best {n} year by this measure{" since 2010" if nb and b2 is not best else ""} is {b2["y"]}.'
+    elif v.get('low'):
+        a = (f'We can&#39;t score it: only {LOWS(v)} were sold in the U.S. in {y} (calendar-year sales), under the 20,000 we need for a fair per-car score. '
+             f'Owners filed {v["n"]} complaints with NHTSA in its first 3 years.')
     else:
         a = f'There isn&#39;t enough data to score it: owners filed only {v["n"]} complaints in its first 3 years.'
     out.append((f'Is the {y} {n} reliable?', a))
@@ -1000,6 +1012,7 @@ def answer_box(f, v, y, x, best):
     if v['ok']:
         w = ('one of the most reliable years' if v['li'] < 50 else 'better than average' if v['li'] < 85 else 'about average' if v['li'] <= 115 else 'worse than average' if v['li'] < 200 else 'one of the worst years')
         s1 = f'The {y} {n} is <b>{"so far " if v.get("early") else ""}{w}</b> by owner complaints: {v["n"]:,} complaints in its first 3 years and a Lemon Index of {v["li"]}, where 100 is the average car.'
+    elif v.get('low'): s1 = f'The {y} {n} sold too few to score ({LOWS(v)} in the U.S. in {y}, under 20,000): owners filed {v["n"]:,} complaints in its first 3 years.'
     else: s1 = f'The {y} {n} has too few complaints to score: {v["n"]:,} in its first 3 years.'
     if v['parts']: bits.append(f'owners complain most about {E(NICE(v["parts"][0][0]))}')
     if rc is not None: bits.append(f'it has {len(rc)} recall{"s" if len(rc) != 1 else ""}')
@@ -1020,10 +1033,14 @@ def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
         if v.get('early'): word = 'Early read: ' + word[0].lower() + word[1:]
         pl = plain(v['li']); pl = '' if pl.lower() in word.lower() else f' <span>{E(pl)}.</span>'   # no "About average. about average."
         hero = f'<div class="yhero">{gauge(v["li"], 190)}<div class="yverd {cls}"><p><b>{word}.</b>{pl}</p>{{BW}}</div></div>'
+    elif v.get('low'):
+        hero = (f'<div class="yhero yhero-na"><div class="yverd mid"><p><b>Complaints only.</b> <span>Too few sold to score: {LOWS(v)} in the U.S. in {y}{LOWSRC(v)}, under the 20,000 a fair per-car '
+                f'score needs. Owners filed {v["n"]:,} complaint{"" if v["n"] == 1 else "s"} in its first 3 years.</span></p>{{BW}}</div></div>')   # 11-11: in a .yhero, so the tabbed page keeps it
     else:
-        hero = f'<div class="yverd mid"><p><b>Not enough data.</b> <span>Only {v["n"]} complaints in its first 3 years: too few to score.</span></p>{{BW}}</div>'
+        hero = f'<div class="yhero yhero-na"><div class="yverd mid"><p><b>Not enough data.</b> <span>Only {v["n"]} complaint{"" if v["n"] == 1 else "s"} in its first 3 years: too few to score.</span></p>{{BW}}</div></div>'
     old = '<p class="yc-note">Older model year: fewer owners filed complaints back then, so treat the score as rough.</p>' if y < 2010 else ''
     if v.get('early'): old = EARLY_NOTE(y, nm)
+    if v.get('low'): old = ''   # no score, so no "rough score" / "early read" caveat
     inv_open = [i for i in x2.get('inv', []) if i['open']]
     badges = ''.join(b for b in [f'<a class="yb bad" href="#inv">Under government investigation</a>' if inv_open else '',
                                  f'<a class="yb" href="#fixes">{x2["tsb"]["n"]} repair notes from {mkr}</a>' if x2.get('tsb') else ''] if b)

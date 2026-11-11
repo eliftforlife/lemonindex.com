@@ -1697,3 +1697,8 @@ main { padding-bottom: 16px; } .foot.f2 { margin-top: 32px; } .f2 .f2-in { paddi
 .ctn-b::after { content: "\2192"; margin-left: 8px; } .ctn-b:hover { border-color: #c7c7cc; }
 .ctn:has(> .ctn-b:only-child) { margin: 8px auto 28px; }
 .mc.mc-dup { display: none; } .cgrid[data-tab="electric"] .mc.mc-dup:not([hidden]) { display: flex; }   /* the Bolt / Model Y EV-score twins: Electric tab only, also without JS */
+/* 11-11: an unscored year (low sales or too few complaints) keeps its one-line verdict on the tabbed year page */
+.yhero.yhero-na { justify-content: center; } .yhero.yhero-na .yverd { max-width: 640px; text-align: center; }
+.yhero.yhero-na .yverd > p:first-child { font-size: clamp(18px, 2vw, 22px); line-height: 1.35; }
+@media (max-width: 520px) { .yhero.yhero-na { align-items: center; } }
+td.num.na, .b.na b { color: #6e6e73; }

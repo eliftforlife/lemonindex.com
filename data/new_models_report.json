@@ -1,5 +1,513 @@
 [
  {
+  "slug": "ford-windstar",
+  "sales": {
+   "1999": 213844,
+   "2000": 222298,
+   "2001": 179595,
+   "2002": 148875,
+   "2003": 113465
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Ford_Windstar",
+  "note": "col='Total U.S. sales'",
+  "flags": [],
+  "complaints": 6247,
+  "scored": [
+   2000,
+   2001,
+   2002,
+   2003
+  ]
+ },
+ {
+  "slug": "toyota-prius",
+  "sales": {
+   "2000": 5600,
+   "2001": 15600,
+   "2002": 20100,
+   "2003": 24600,
+   "2004": 54000,
+   "2005": 107900,
+   "2006": 107000,
+   "2007": 181200,
+   "2008": 158600,
+   "2009": 139700,
+   "2010": 140900,
+   "2011": 128100,
+   "2012": 147500,
+   "2013": 145200,
+   "2014": 122800,
+   "2015": 113800,
+   "2016": 98800,
+   "2017": 65600,
+   "2018": 87500,
+   "2019": 69700,
+   "2020": 43500,
+   "2021": 59000,
+   "2022": 36900,
+   "2023": 38100,
+   "2024": 44700,
+   "2025": 56500
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Toyota_Prius",
+  "note": "col='Annual Prius liftback sales worldwide and by region (in thousands) US[135]'",
+  "flags": [
+   "Toyota Prius 2000: 5,600 sold, 0 complaints in window -> sales merged into 2001"
+  ],
+  "complaints": 12513,
+  "scored": [
+   2001,
+   2002,
+   2003,
+   2004,
+   2005,
+   2006,
+   2007,
+   2008,
+   2009,
+   2010,
+   2011,
+   2012,
+   2013,
+   2014,
+   2015,
+   2016,
+   2017,
+   2018,
+   2019,
+   2020,
+   2021,
+   2022,
+   2023,
+   2024,
+   2025
+  ]
+ },
+ {
+  "slug": "chevrolet-cobalt",
+  "sales": {
+   "2004": 4960,
+   "2005": 212667,
+   "2006": 211451,
+   "2007": 200621,
+   "2008": 188045,
+   "2009": 104724,
+   "2010": 97376,
+   "2011": 127472
+  },
+  "kind": "model",
+  "url": "https://en.wikipedia.org/wiki/Chevrolet_Cobalt",
+  "note": "col='U.S. Sales'",
+  "flags": [
+   "Chevrolet Cobalt 2011: 127,472 sold but only 1 complaints in window -> not scored"
+  ],
+  "complaints": 7974,
+  "scored": [
+   2005,
+   2006,
+   2007,
+   2008,
+   2009,
+   2010
+  ]
+ },
+ {
+  "slug": "jeep-liberty",
+  "sales": {
+   "2005": 166883,
+   "2006": 133557,
+   "2007": 92105,
+   "2008": 66911,
+   "2009": 43503,
+   "2010": 49564,
+   "2011": 66684,
+   "2012": 75483
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/jeep-liberty-sales-figures/",
+  "note": "GoodCarBadCar annual U.S. sales",
+  "flags": [],
+  "complaints": 8881,
+  "scored": [
+   2005,
+   2006,
+   2007,
+   2008,
+   2009,
+   2010,
+   2011,
+   2012
+  ]
+ },
+ {
+  "slug": "chevrolet-trailblazer",
+  "sales": {},
+  "kind": "none",
+  "url": "",
+  "note": "no sales source",
+  "flags": [
+   "Chevrolet Trailblazer: 0 scorable model years / 0 complaints -> complaints only"
+  ],
+  "complaints": 8441,
+  "scored": []
+ },
+ {
+  "slug": "mini-cooper",
+  "sales": {
+   "2005": 40820,
+   "2006": 39171,
+   "2007": 42011,
+   "2008": 54077,
+   "2009": 45225,
+   "2010": 45644,
+   "2011": 41514,
+   "2012": 45111,
+   "2013": 45177,
+   "2014": 33467,
+   "2015": 41828,
+   "2016": 39324,
+   "2017": 32239,
+   "2018": 26119,
+   "2019": 22123,
+   "2020": 18684,
+   "2021": 22970,
+   "2022": 20012,
+   "2023": 20974,
+   "2024": 14626,
+   "2025": 15818
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/mini-cooper-sales-figures/",
+  "note": "GoodCarBadCar annual U.S. sales",
+  "flags": [
+   "Mini Cooper 2018: 26,119 sold but only 4 complaints in window -> not scored"
+  ],
+  "complaints": 4326,
+  "scored": [
+   2005,
+   2006,
+   2007,
+   2008,
+   2009,
+   2010,
+   2011,
+   2012,
+   2013,
+   2014,
+   2015,
+   2016,
+   2017,
+   2019,
+   2021,
+   2022,
+   2023
+  ]
+ },
+ {
+  "slug": "ford-ranger",
+  "sales": {
+   "2005": 120958,
+   "2006": 92420,
+   "2007": 72711,
+   "2008": 65872,
+   "2009": 55600,
+   "2010": 55364,
+   "2011": 70832,
+   "2012": 19366,
+   "2019": 83571,
+   "2020": 101485,
+   "2021": 94755,
+   "2022": 56987,
+   "2023": 32334,
+   "2024": 46205,
+   "2025": 70960
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/ford-ranger-sales-figures/",
+  "note": "GoodCarBadCar annual U.S. sales",
+  "flags": [
+   "Ford Ranger 2012: 19,366 sold, 0 complaints in window -> sales merged into 2011"
+  ],
+  "complaints": 4608,
+  "scored": [
+   2005,
+   2006,
+   2007,
+   2008,
+   2009,
+   2010,
+   2011,
+   2019,
+   2020,
+   2021,
+   2022,
+   2023,
+   2024,
+   2025
+  ]
+ },
+ {
+  "slug": "saturn-ion",
+  "sales": {},
+  "kind": "none",
+  "url": "",
+  "note": "no sales source",
+  "flags": [
+   "Saturn Ion: 0 scorable model years / 0 complaints -> complaints only"
+  ],
+  "complaints": 4344,
+  "scored": []
+ },
+ {
+  "slug": "chevrolet-corvette",
+  "sales": {
+   "1999": 29963,
+   "2000": 31208,
+   "2001": 33655,
+   "2002": 32555,
+   "2003": 27974,
+   "2004": 35276,
+   "2005": 32489,
+   "2006": 36518,
+   "2007": 33685,
+   "2008": 26971,
+   "2009": 13934,
+   "2010": 12624,
+   "2011": 13164,
+   "2012": 14132,
+   "2013": 17291,
+   "2014": 34839,
+   "2015": 33329,
+   "2016": 29995,
+   "2017": 25079,
+   "2018": 18789,
+   "2019": 17988,
+   "2020": 21627,
+   "2021": 33042,
+   "2022": 37510,
+   "2023": 34354,
+   "2024": 33331,
+   "2025": 24533,
+   "2026": 20002
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/chevrolet-corvette-sales-figures/",
+  "note": "GoodCarBadCar annual U.S. sales",
+  "flags": [],
+  "complaints": 4138,
+  "scored": [
+   2000,
+   2001,
+   2002,
+   2003,
+   2004,
+   2005,
+   2006,
+   2007,
+   2008,
+   2014,
+   2015,
+   2016,
+   2017,
+   2020,
+   2021,
+   2022,
+   2023,
+   2024,
+   2025
+  ]
+ },
+ {
+  "slug": "dodge-dakota",
+  "sales": {
+   "1999": 144148,
+   "2000": 177395,
+   "2001": 154479,
+   "2002": 130712,
+   "2003": 111273,
+   "2004": 105614,
+   "2005": 104051,
+   "2006": 76098,
+   "2007": 50702,
+   "2008": 26044,
+   "2009": 10690,
+   "2010": 13047,
+   "2011": 12156,
+   "2012": 490
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Dodge_Dakota",
+  "note": "col='US sales'",
+  "flags": [
+   "Dodge Dakota 2012: 490 sold, 0 complaints in window -> sales merged into 2011"
+  ],
+  "complaints": 3749,
+  "scored": [
+   2000,
+   2001,
+   2002,
+   2003,
+   2004,
+   2005,
+   2006,
+   2007,
+   2008
+  ]
+ },
+ {
+  "slug": "ford-freestyle",
+  "sales": {
+   "2004": 8509,
+   "2005": 76739,
+   "2006": 58602,
+   "2007": 23765
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Ford_Freestyle",
+  "note": "the Freestyle rows of the article's Total American sales table (Taurus X rows left out)",
+  "flags": [
+   "Ford Freestyle 2004: 8,509 sold, 0 complaints in window -> sales merged into 2005"
+  ],
+  "complaints": 3665,
+  "scored": [
+   2005,
+   2006,
+   2007
+  ]
+ },
+ {
+  "slug": "chevrolet-hhr",
+  "sales": {
+   "2005": 41011,
+   "2006": 101298,
+   "2007": 105175,
+   "2008": 96053,
+   "2009": 70842,
+   "2010": 75401,
+   "2011": 37012
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Chevrolet_HHR",
+  "note": "col='U.S.'",
+  "flags": [
+   "Chevrolet HHR 2005: 41,011 sold, 0 complaints in window -> sales merged into 2006"
+  ],
+  "complaints": 3574,
+  "scored": [
+   2006,
+   2007,
+   2008,
+   2009,
+   2010,
+   2011
+  ]
+ },
+ {
+  "slug": "gmc-envoy",
+  "sales": {
+   "2001": 51208,
+   "2002": 110720,
+   "2003": 127782,
+   "2004": 134897,
+   "2005": 107862,
+   "2006": 74452,
+   "2007": 48586,
+   "2008": 23876,
+   "2009": 4857
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/GMC_Envoy",
+  "note": "col='US Sales'",
+  "flags": [
+   "GMC Envoy 2001: 51,208 sold, 3 complaints in window -> sales merged into 2002"
+  ],
+  "complaints": 3550,
+  "scored": [
+   2002,
+   2003,
+   2004,
+   2005,
+   2006,
+   2007,
+   2008
+  ]
+ },
+ {
+  "slug": "nissan-titan",
+  "sales": {
+   "2005": 86945,
+   "2006": 72192,
+   "2007": 65743,
+   "2008": 34053,
+   "2009": 19042,
+   "2010": 23416,
+   "2011": 21994,
+   "2012": 21576,
+   "2013": 15691,
+   "2014": 12527,
+   "2015": 12140,
+   "2016": 21880,
+   "2017": 52924,
+   "2018": 50549,
+   "2019": 31514,
+   "2020": 26439,
+   "2021": 27406,
+   "2022": 15063,
+   "2023": 19189,
+   "2024": 14662,
+   "2025": 2043
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Nissan_Titan",
+  "note": "col='United States'",
+  "flags": [
+   "Nissan Titan 2025: 2,043 sold, 0 complaints in window -> sales merged into 2024",
+   "Nissan Titan 2012: 21,576 sold but only 3 complaints in window -> not scored"
+  ],
+  "complaints": 3464,
+  "scored": [
+   2005,
+   2006,
+   2007,
+   2008,
+   2010,
+   2011,
+   2016,
+   2017,
+   2018,
+   2019,
+   2020,
+   2021
+  ]
+ },
+ {
+  "slug": "jeep-commander",
+  "sales": {
+   "2005": 17048,
+   "2006": 88497,
+   "2007": 63027,
+   "2008": 27694,
+   "2009": 12655,
+   "2010": 8115,
+   "2011": 105
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Jeep_Commander_(XK)",
+  "note": "col='USA'",
+  "flags": [
+   "Jeep Commander 2005: 17,048 sold, 0 complaints in window -> sales merged into 2006",
+   "Jeep Commander 2011: 105 sold, 0 complaints in window -> sales merged into 2010"
+  ],
+  "complaints": 3362,
+  "scored": [
+   2006,
+   2007,
+   2008
+  ]
+ },
+ {
   "slug": "toyota-sequoia",
   "sales": {
    "2000": 9925,
@@ -219,7 +727,9 @@
   "kind": "none",
   "url": "",
   "note": "no sales source",
-  "flags": [],
+  "flags": [
+   "Chrysler PT Cruiser: 0 scorable model years / 0 complaints -> complaints only"
+  ],
   "complaints": 2623,
   "scored": []
  },
@@ -260,7 +770,9 @@
   "kind": "none",
   "url": "",
   "note": "no sales source",
-  "flags": [],
+  "flags": [
+   "Mercury Milan: 0 scorable model years / 0 complaints -> complaints only"
+  ],
   "complaints": 2519,
   "scored": []
  },
@@ -270,7 +782,9 @@
   "kind": "calendar",
   "url": "https://www.goodcarbadcar.net/ford-freestar-sales-figures/",
   "note": "GoodCarBadCar annual U.S. sales",
-  "flags": [],
+  "flags": [
+   "Ford Freestar: 0 scorable model years / 0 complaints -> complaints only"
+  ],
   "complaints": 2533,
   "scored": []
  },
@@ -331,7 +845,9 @@
   "kind": "none",
   "url": "",
   "note": "no sales source",
-  "flags": [],
+  "flags": [
+   "Chrysler Sebring: 0 scorable model years / 0 complaints -> complaints only"
+  ],
   "complaints": 2455,
   "scored": []
  },
