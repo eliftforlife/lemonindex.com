@@ -6,6 +6,19 @@ E = lambda s: html.escape(str(s), quote=True)
 BASE = 'https://lemonindex.com'
 try: AIY = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data', 'ai_year_images.json'), encoding='utf-8'))
 except FileNotFoundError: AIY = {}
+# 11-11: the former 'No data yet' models (data/years_new.json, added one by one) get their generation's picture on every year page as
+# soon as the page exists: data/ai_gen_images.json {model id: [[first year, last year, src, color, generation], ...]} (newer generation wins on overlap)
+try:
+    _D = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data')
+    _GI = json.load(open(os.path.join(_D, 'ai_gen_images.json'), encoding='utf-8'))
+    for _f in json.load(open(os.path.join(_D, 'years_new.json'), encoding='utf-8')):
+        if _f['id'] in AIY or _f['id'] not in _GI: continue
+        _m = {}
+        for _v in _f['years']:
+            _g = [g for g in _GI[_f['id']] if g[0] <= _v['y'] <= g[1]]
+            if _g: _g = max(_g, key=lambda g: g[0]); _m[str(_v['y'])] = {'src': _g[2], 'w': 1000, 'h': 600, 'color': _g[3], 'gen': _g[4]}
+        if _m: AIY[_f['id']] = _m
+except FileNotFoundError: pass
 LIC = 'https://creativecommons.org/licenses/by/4.0/'
 NOTE = 'Illustration (AI-generated). Typical factory color of the era, not sales data. Free to use under <a href="' + LIC + '" rel="license noopener">CC BY 4.0</a>: credit The Lemon Index (lemonindex.com).'
 
@@ -56,7 +69,7 @@ def info(html_text):
 
 def _ld(fid, y, name, im):
     return {"@context": "https://schema.org", "@type": "ImageObject", "contentUrl": BASE + im['src'], "name": f'{y} {name} (illustration)',
-            "description": f'AI-generated illustration of a {y} {name}, {im["gen"]}, in {im["color"]}.', "width": im['w'], "height": im['h'],
+            "description": f'AI-generated illustration of a {y} {name}, {im["gen"]}' + (f', in {im["color"]}.' if im.get("color") else '.'), "width": im['w'], "height": im['h'],
             "license": LIC, "acquireLicensePage": BASE + '/images/', "creditText": "The Lemon Index",
             "creator": {"@type": "Organization", "name": "The Lemon Index", "url": BASE}, "copyrightNotice": "The Lemon Index, CC BY 4.0"}
 

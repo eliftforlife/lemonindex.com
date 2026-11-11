@@ -1525,5 +1525,14 @@
   "color": "snow white pearl",
   "bytes": 39900,
   "page": "/electric/kia-niro-ev/"
+ },
+ "lexus-ls": {
+  "src": "/assets/ai-models/lexus-ls.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2010,
+  "name": "Lexus LS",
+  "color": "black",
+  "bytes": 35560
  }
 }

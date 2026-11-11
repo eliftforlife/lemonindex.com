@@ -1,0 +1,2849 @@
+{
+"ford-super-duty": [
+[
+1999,
+2007,
+"/assets/ai-cars/ford-super-duty-g1.webp?v=1",
+"white",
+"1st generation"
+],
+[
+2008,
+2010,
+"/assets/ai-models/ford-super-duty.webp?v=1",
+"",
+"2nd generation"
+],
+[
+2011,
+2016,
+"/assets/ai-cars/ford-super-duty-g3.webp?v=1",
+"silver",
+"3rd generation"
+],
+[
+2017,
+2022,
+"/assets/ai-cars/ford-super-duty-g4.webp?v=1",
+"white",
+"4th generation"
+],
+[
+2023,
+2025,
+"/assets/ai-cars/ford-super-duty-g5.webp?v=1",
+"dark gray",
+"5th generation"
+]
+],
+"ram-heavy-duty": [
+[
+2003,
+2009,
+"/assets/ai-cars/ram-heavy-duty-g3.webp?v=1",
+"red",
+"3rd generation"
+],
+[
+2010,
+2018,
+"/assets/ai-models/ram-heavy-duty.webp?v=1",
+"",
+"4th generation"
+],
+[
+2019,
+2025,
+"/assets/ai-cars/ram-heavy-duty-g5.webp?v=1",
+"white",
+"5th generation"
+]
+],
+"ford-windstar": [
+[
+1999,
+2003,
+"/assets/ai-models/ford-windstar.webp?v=1",
+"",
+"2nd generation"
+]
+],
+"toyota-prius": [
+[
+2001,
+2003,
+"/assets/ai-cars/toyota-prius-g1.webp?v=1",
+"silver",
+"1st generation"
+],
+[
+2004,
+2009,
+"/assets/ai-models/toyota-prius.webp?v=1",
+"",
+"2nd generation"
+],
+[
+2010,
+2015,
+"/assets/ai-cars/toyota-prius-g3.webp?v=1",
+"white",
+"3rd generation"
+],
+[
+2016,
+2022,
+"/assets/ai-cars/toyota-prius-g4.webp?v=1",
+"blue",
+"4th generation"
+],
+[
+2023,
+2025,
+"/assets/ai-cars/toyota-prius-g5.webp?v=1",
+"gray",
+"5th generation"
+]
+],
+"jeep-liberty": [
+[
+2002,
+2007,
+"/assets/ai-models/jeep-liberty.webp?v=1",
+"",
+"1st generation (KJ)"
+],
+[
+2008,
+2012,
+"/assets/ai-cars/jeep-liberty-g2.webp?v=1",
+"silver",
+"2nd generation (KK)"
+]
+],
+"chevrolet-trailblazer": [
+[
+2002,
+2009,
+"/assets/ai-models/chevrolet-trailblazer.webp?v=1",
+"",
+"1st generation"
+],
+[
+2021,
+2025,
+"/assets/ai-cars/chevrolet-trailblazer-g2.webp?v=1",
+"red",
+"2nd generation"
+]
+],
+"chevrolet-cobalt": [
+[
+2005,
+2010,
+"/assets/ai-models/chevrolet-cobalt.webp?v=1",
+"",
+"1st generation"
+]
+],
+"ford-ranger": [
+[
+1998,
+2011,
+"/assets/ai-models/ford-ranger.webp?v=1",
+"",
+"3rd generation"
+],
+[
+2019,
+2023,
+"/assets/ai-cars/ford-ranger-g4.webp?v=1",
+"white",
+"4th generation"
+],
+[
+2024,
+2025,
+"/assets/ai-cars/ford-ranger-g5.webp?v=1",
+"blue",
+"5th generation"
+]
+],
+"dodge-caravan": [
+[
+1996,
+2000,
+"/assets/ai-models/dodge-caravan.webp?v=1",
+"",
+"3rd generation"
+],
+[
+2001,
+2007,
+"/assets/ai-cars/dodge-caravan-g4.webp?v=1",
+"silver",
+"4th generation"
+]
+],
+"chevrolet-blazer": [
+[
+1995,
+2005,
+"/assets/ai-models/chevrolet-blazer.webp?v=1",
+"",
+"2nd generation"
+],
+[
+2019,
+2025,
+"/assets/ai-cars/chevrolet-blazer-g3.webp?v=1",
+"red",
+"3rd generation"
+]
+],
+"dodge-dakota": [
+[
+1997,
+2004,
+"/assets/ai-models/dodge-dakota.webp?v=1",
+"",
+"2nd generation"
+],
+[
+2005,
+2011,
+"/assets/ai-cars/dodge-dakota-g3.webp?v=1",
+"silver",
+"3rd generation"
+]
+],
+"dodge-intrepid": [
+[
+1998,
+2004,
+"/assets/ai-models/dodge-intrepid.webp?v=1",
+"",
+"2nd generation"
+]
+],
+"chevrolet-corvette": [
+[
+1997,
+2004,
+"/assets/ai-cars/chevrolet-corvette-g5.webp?v=1",
+"red",
+"5th generation (C5)"
+],
+[
+2005,
+2013,
+"/assets/ai-models/chevrolet-corvette.webp?v=1",
+"",
+"6th generation (C6)"
+],
+[
+2014,
+2019,
+"/assets/ai-cars/chevrolet-corvette-g7.webp?v=1",
+"black",
+"7th generation (C7)"
+],
+[
+2020,
+2025,
+"/assets/ai-cars/chevrolet-corvette-g8.webp?v=1",
+"red",
+"8th generation (C8)"
+]
+],
+"saturn-ion": [
+[
+2003,
+2007,
+"/assets/ai-models/saturn-ion.webp?v=1",
+"",
+"1st generation"
+]
+],
+"chevrolet-s-10": [
+[
+1994,
+2004,
+"/assets/ai-models/chevrolet-s-10.webp?v=1",
+"",
+"2nd generation"
+]
+],
+"mini-cooper": [
+[
+2002,
+2006,
+"/assets/ai-models/mini-cooper.webp?v=1",
+"",
+"1st generation (R53)"
+],
+[
+2007,
+2013,
+"/assets/ai-cars/mini-cooper-g2.webp?v=1",
+"red",
+"2nd generation (R56)"
+],
+[
+2014,
+2024,
+"/assets/ai-cars/mini-cooper-g3.webp?v=1",
+"blue",
+"3rd generation (F56)"
+]
+],
+"chevrolet-cavalier": [
+[
+1995,
+2005,
+"/assets/ai-models/chevrolet-cavalier.webp?v=1",
+"",
+"3rd generation"
+]
+],
+"ford-freestyle": [
+[
+2005,
+2007,
+"/assets/ai-models/ford-freestyle.webp?v=1",
+"",
+"1st generation"
+]
+],
+"chevrolet-hhr": [
+[
+2006,
+2011,
+"/assets/ai-models/chevrolet-hhr.webp?v=1",
+"",
+"1st generation"
+]
+],
+"chrysler-sebring": [
+[
+2001,
+2006,
+"/assets/ai-models/chrysler-sebring.webp?v=1",
+"",
+"2nd generation"
+],
+[
+2007,
+2010,
+"/assets/ai-cars/chrysler-sebring-g3.webp?v=1",
+"silver",
+"3rd generation"
+]
+],
+"dodge-neon": [
+[
+1995,
+1999,
+"/assets/ai-models/dodge-neon.webp?v=1",
+"",
+"1st generation"
+],
+[
+2000,
+2005,
+"/assets/ai-cars/dodge-neon-g2.webp?v=1",
+"silver",
+"2nd generation"
+]
+],
+"cadillac-srx": [
+[
+2004,
+2009,
+"/assets/ai-cars/cadillac-srx-g1.webp?v=1",
+"silver",
+"1st generation"
+],
+[
+2010,
+2016,
+"/assets/ai-models/cadillac-srx.webp?v=1",
+"",
+"2nd generation"
+]
+],
+"nissan-titan": [
+[
+2004,
+2015,
+"/assets/ai-models/nissan-titan.webp?v=1",
+"",
+"1st generation"
+],
+[
+2016,
+2024,
+"/assets/ai-cars/nissan-titan-g2.webp?v=1",
+"dark gray",
+"2nd generation"
+]
+],
+"jeep-commander": [
+[
+2006,
+2010,
+"/assets/ai-models/jeep-commander.webp?v=1",
+"",
+"1st generation (XK)"
+]
+],
+"dodge-avenger": [
+[
+2008,
+2014,
+"/assets/ai-models/dodge-avenger.webp?v=1",
+"",
+"2nd generation"
+]
+],
+"acura-tl": [
+[
+1999,
+2003,
+"/assets/ai-cars/acura-tl-g2.webp?v=1",
+"silver",
+"2nd generation"
+],
+[
+2004,
+2008,
+"/assets/ai-models/acura-tl.webp?v=1",
+"",
+"3rd generation"
+],
+[
+2009,
+2014,
+"/assets/ai-cars/acura-tl-g4.webp?v=1",
+"dark gray",
+"4th generation"
+]
+],
+"nissan-xterra": [
+[
+2000,
+2004,
+"/assets/ai-cars/nissan-xterra-g1.webp?v=1",
+"red",
+"1st generation"
+],
+[
+2005,
+2015,
+"/assets/ai-models/nissan-xterra.webp?v=1",
+"",
+"2nd generation"
+]
+],
+"mercury-sable": [
+[
+2000,
+2005,
+"/assets/ai-models/mercury-sable.webp?v=1",
+"",
+"4th generation"
+],
+[
+2008,
+2009,
+"/assets/ai-cars/mercury-sable-g5.webp?v=1",
+"white",
+"5th generation"
+]
+],
+"toyota-sequoia": [
+[
+2001,
+2007,
+"/assets/ai-models/toyota-sequoia.webp?v=1",
+"",
+"1st generation"
+],
+[
+2008,
+2022,
+"/assets/ai-cars/toyota-sequoia-g2.webp?v=1",
+"white",
+"2nd generation"
+]
+],
+"gmc-envoy": [
+[
+2002,
+2009,
+"/assets/ai-models/gmc-envoy.webp?v=1",
+"",
+"2nd generation"
+]
+],
+"mercury-grand-marquis": [
+[
+1998,
+2002,
+"/assets/ai-cars/mercury-grand-marquis-g3.webp?v=1",
+"white",
+"3rd generation"
+],
+[
+2003,
+2011,
+"/assets/ai-models/mercury-grand-marquis.webp?v=1",
+"",
+"4th generation"
+]
+],
+"buick-lesabre": [
+[
+2000,
+2005,
+"/assets/ai-models/buick-lesabre.webp?v=1",
+"",
+"9th generation"
+]
+],
+"chevrolet-avalanche": [
+[
+2002,
+2006,
+"/assets/ai-models/chevrolet-avalanche.webp?v=1",
+"",
+"1st generation"
+],
+[
+2007,
+2013,
+"/assets/ai-cars/chevrolet-avalanche-g2.webp?v=1",
+"black",
+"2nd generation"
+]
+],
+"dodge-stratus": [
+[
+1995,
+2000,
+"/assets/ai-models/dodge-stratus.webp?v=1",
+"",
+"1st generation"
+],
+[
+2001,
+2006,
+"/assets/ai-cars/dodge-stratus-g2.webp?v=1",
+"silver",
+"2nd generation"
+]
+],
+"volkswagen-beetle": [
+[
+1998,
+2010,
+"/assets/ai-models/volkswagen-beetle.webp?v=1",
+"",
+"1st generation"
+],
+[
+2012,
+2019,
+"/assets/ai-cars/volkswagen-beetle-g2.webp?v=1",
+"yellow",
+"2nd generation"
+]
+],
+"ford-freestar": [
+[
+2004,
+2007,
+"/assets/ai-models/ford-freestar.webp?v=1",
+"",
+"1st generation"
+]
+],
+"chrysler-pt-cruiser": [
+[
+2001,
+2010,
+"/assets/ai-models/chrysler-pt-cruiser.webp?v=1",
+"",
+"1st generation"
+]
+],
+"mercury-milan": [
+[
+2006,
+2011,
+"/assets/ai-models/mercury-milan.webp?v=1",
+"",
+"1st generation"
+]
+],
+"buick-enclave": [
+[
+2008,
+2017,
+"/assets/ai-models/buick-enclave.webp?v=1",
+"",
+"1st generation"
+],
+[
+2018,
+2024,
+"/assets/ai-cars/buick-enclave-g2.webp?v=1",
+"dark gray",
+"2nd generation"
+],
+[
+2025,
+2026,
+"/assets/ai-cars/buick-enclave-g3.webp?v=1",
+"gray",
+"3rd generation"
+]
+],
+"mazda-626": [
+[
+1998,
+2002,
+"/assets/ai-models/mazda-626.webp?v=1",
+"",
+"5th generation"
+]
+],
+"buick-regal": [
+[
+1997,
+2004,
+"/assets/ai-models/buick-regal.webp?v=1",
+"",
+"5th generation"
+],
+[
+2011,
+2017,
+"/assets/ai-cars/buick-regal-g6.webp?v=1",
+"dark gray",
+"6th generation"
+],
+[
+2018,
+2020,
+"/assets/ai-cars/buick-regal-g7.webp?v=1",
+"dark blue",
+"7th generation"
+]
+],
+"saturn-vue": [
+[
+2002,
+2007,
+"/assets/ai-models/saturn-vue.webp?v=1",
+"",
+"1st generation"
+],
+[
+2008,
+2010,
+"/assets/ai-cars/saturn-vue-g2.webp?v=1",
+"silver",
+"2nd generation"
+]
+],
+"chevrolet-venture": [
+[
+1997,
+2005,
+"/assets/ai-models/chevrolet-venture.webp?v=1",
+"",
+"1st generation"
+]
+],
+"cadillac-escalade": [
+[
+2002,
+2006,
+"/assets/ai-cars/cadillac-escalade-g2.webp?v=1",
+"black",
+"2nd generation"
+],
+[
+2007,
+2014,
+"/assets/ai-models/cadillac-escalade.webp?v=1",
+"",
+"3rd generation"
+],
+[
+2015,
+2020,
+"/assets/ai-cars/cadillac-escalade-g4.webp?v=1",
+"white",
+"4th generation"
+],
+[
+2021,
+2025,
+"/assets/ai-cars/cadillac-escalade-g5.webp?v=1",
+"black",
+"5th generation"
+]
+],
+"isuzu-rodeo": [
+[
+1998,
+2004,
+"/assets/ai-models/isuzu-rodeo.webp?v=1",
+"",
+"2nd generation"
+]
+],
+"cadillac-cts": [
+[
+2003,
+2007,
+"/assets/ai-models/cadillac-cts.webp?v=1",
+"",
+"1st generation"
+],
+[
+2008,
+2013,
+"/assets/ai-cars/cadillac-cts-g2.webp?v=1",
+"silver",
+"2nd generation"
+],
+[
+2014,
+2019,
+"/assets/ai-cars/cadillac-cts-g3.webp?v=1",
+"black",
+"3rd generation"
+]
+],
+"buick-lacrosse": [
+[
+2005,
+2009,
+"/assets/ai-models/buick-lacrosse.webp?v=1",
+"",
+"1st generation"
+],
+[
+2010,
+2016,
+"/assets/ai-cars/buick-lacrosse-g2.webp?v=1",
+"white",
+"2nd generation"
+],
+[
+2017,
+2019,
+"/assets/ai-cars/buick-lacrosse-g3.webp?v=1",
+"dark gray",
+"3rd generation"
+]
+],
+"chevrolet-monte-carlo": [
+[
+2000,
+2005,
+"/assets/ai-models/chevrolet-monte-carlo.webp?v=1",
+"",
+"6th generation"
+],
+[
+2006,
+2007,
+"/assets/ai-cars/chevrolet-monte-carlo-g7.webp?v=1",
+"red",
+"7th generation"
+]
+],
+"mazda-tribute": [
+[
+2001,
+2006,
+"/assets/ai-models/mazda-tribute.webp?v=1",
+"",
+"1st generation"
+],
+[
+2008,
+2011,
+"/assets/ai-cars/mazda-tribute-g2.webp?v=1",
+"silver",
+"2nd generation"
+]
+],
+"ford-crown-victoria": [
+[
+1998,
+2011,
+"/assets/ai-models/ford-crown-victoria.webp?v=1",
+"",
+"2nd generation"
+]
+],
+"lincoln-town-car": [
+[
+1998,
+2011,
+"/assets/ai-models/lincoln-town-car.webp?v=1",
+"",
+"3rd generation"
+]
+],
+"ford-e-series": [
+[
+1992,
+2014,
+"/assets/ai-models/ford-e-series.webp?v=1",
+"",
+"4th generation"
+],
+[
+2015,
+2025,
+"/assets/ai-cars/ford-e-series-g5.webp?v=1",
+"white",
+"5th generation"
+]
+],
+"cadillac-deville": [
+[
+1994,
+1999,
+"/assets/ai-models/cadillac-deville.webp?v=1",
+"",
+"7th generation"
+],
+[
+2000,
+2005,
+"/assets/ai-cars/cadillac-deville-g8.webp?v=1",
+"white",
+"8th generation"
+]
+],
+"mercury-mountaineer": [
+[
+2002,
+2005,
+"/assets/ai-models/mercury-mountaineer.webp?v=1",
+"",
+"2nd generation"
+],
+[
+2006,
+2010,
+"/assets/ai-cars/mercury-mountaineer-g3.webp?v=1",
+"silver",
+"3rd generation"
+]
+],
+"oldsmobile-alero": [
+[
+1999,
+2004,
+"/assets/ai-models/oldsmobile-alero.webp?v=1",
+"",
+"1st generation"
+]
+],
+"ford-flex": [
+[
+2009,
+2019,
+"/assets/ai-models/ford-flex.webp?v=1",
+"",
+"1st generation"
+]
+],
+"mitsubishi-eclipse": [
+[
+2000,
+2005,
+"/assets/ai-models/mitsubishi-eclipse.webp?v=1",
+"",
+"3rd generation (3G)"
+],
+[
+2006,
+2012,
+"/assets/ai-cars/mitsubishi-eclipse-g4.webp?v=1",
+"red",
+"4th generation (4G)"
+]
+],
+"gmc-jimmy": [
+[
+1995,
+2005,
+"/assets/ai-models/gmc-jimmy.webp?v=1",
+"",
+"2nd generation"
+]
+],
+"chevrolet-astro": [
+[
+1995,
+2005,
+"/assets/ai-models/chevrolet-astro.webp?v=1",
+"",
+"2nd generation"
+]
+],
+"nissan-armada": [
+[
+2004,
+2015,
+"/assets/ai-models/nissan-armada.webp?v=1",
+"",
+"1st generation"
+],
+[
+2017,
+2024,
+"/assets/ai-cars/nissan-armada-g2.webp?v=1",
+"dark gray",
+"2nd generation"
+]
+],
+"dodge-caliber": [
+[
+2007,
+2012,
+"/assets/ai-models/dodge-caliber.webp?v=1",
+"",
+"1st generation"
+]
+],
+"nissan-quest": [
+[
+1999,
+2002,
+"/assets/ai-cars/nissan-quest-g2.webp?v=1",
+"silver",
+"2nd generation"
+],
+[
+2004,
+2009,
+"/assets/ai-models/nissan-quest.webp?v=1",
+"",
+"3rd generation"
+],
+[
+2011,
+2017,
+"/assets/ai-cars/nissan-quest-g4.webp?v=1",
+"white",
+"4th generation"
+]
+],
+"kia-sephia": [
+[
+1998,
+2001,
+"/assets/ai-models/kia-sephia.webp?v=1",
+"",
+"2nd generation"
+]
+],
+"lincoln-mkz": [
+[
+2007,
+2012,
+"/assets/ai-models/lincoln-mkz.webp?v=1",
+"",
+"1st generation"
+],
+[
+2013,
+2020,
+"/assets/ai-cars/lincoln-mkz-g2.webp?v=1",
+"white",
+"2nd generation"
+]
+],
+"audi-a6": [
+[
+2005,
+2011,
+"/assets/ai-cars/audi-a6-g3.webp?v=1",
+"silver",
+"3rd generation (C6)"
+],
+[
+2012,
+2018,
+"/assets/ai-cars/audi-a6-g4.webp?v=1",
+"dark gray",
+"4th generation (C7)"
+],
+[
+2019,
+2025,
+"/assets/ai-cars/audi-a6-g5.webp?v=1",
+"white",
+"5th generation (C8)"
+]
+],
+"honda-passport": [
+[
+1998,
+2002,
+"/assets/ai-models/honda-passport.webp?v=1",
+"",
+"2nd generation"
+],
+[
+2019,
+2025,
+"/assets/ai-cars/honda-passport-g3.webp?v=1",
+"dark gray",
+"3rd generation"
+]
+],
+"saturn-sl": [
+[
+1996,
+2002,
+"/assets/ai-models/saturn-sl.webp?v=1",
+"",
+"2nd generation"
+]
+],
+"chrysler-concorde": [
+[
+1998,
+2004,
+"/assets/ai-models/chrysler-concorde.webp?v=1",
+"",
+"2nd generation"
+]
+],
+"volvo-xc90": [
+[
+2003,
+2014,
+"/assets/ai-models/volvo-xc90.webp?v=1",
+"",
+"1st generation"
+],
+[
+2016,
+2025,
+"/assets/ai-cars/volvo-xc90-g2.webp?v=1",
+"white",
+"2nd generation"
+]
+],
+"saturn-ls": [
+[
+2000,
+2005,
+"/assets/ai-models/saturn-ls.webp?v=1",
+"",
+"1st generation"
+]
+],
+"saturn-aura": [
+[
+2007,
+2009,
+"/assets/ai-models/saturn-aura.webp?v=1",
+"",
+"1st generation"
+]
+],
+"gmc-canyon": [
+[
+2004,
+2012,
+"/assets/ai-cars/gmc-canyon-g1.webp?v=1",
+"silver",
+"1st generation"
+],
+[
+2015,
+2022,
+"/assets/ai-models/gmc-canyon.webp?v=1",
+"",
+"2nd generation"
+],
+[
+2023,
+2025,
+"/assets/ai-cars/gmc-canyon-g3.webp?v=1",
+"gray",
+"3rd generation"
+]
+],
+"lincoln-mkx": [
+[
+2007,
+2015,
+"/assets/ai-models/lincoln-mkx.webp?v=1",
+"",
+"1st generation"
+],
+[
+2016,
+2018,
+"/assets/ai-cars/lincoln-mkx-g2.webp?v=1",
+"white",
+"2nd generation"
+]
+],
+"buick-century": [
+[
+1997,
+2005,
+"/assets/ai-models/buick-century.webp?v=1",
+"",
+"6th generation"
+]
+],
+"mitsubishi-galant": [
+[
+1999,
+2003,
+"/assets/ai-models/mitsubishi-galant.webp?v=1",
+"",
+"8th generation"
+],
+[
+2004,
+2012,
+"/assets/ai-cars/mitsubishi-galant-g9.webp?v=1",
+"silver",
+"9th generation"
+]
+],
+"volkswagen-gti": [
+[
+2006,
+2009,
+"/assets/ai-models/volkswagen-gti.webp?v=1",
+"",
+"5th generation (MK5)"
+],
+[
+2010,
+2014,
+"/assets/ai-cars/volkswagen-gti-g6.webp?v=1",
+"white",
+"6th generation (MK6)"
+],
+[
+2015,
+2021,
+"/assets/ai-cars/volkswagen-gti-g7.webp?v=1",
+"dark gray",
+"7th generation (MK7)"
+],
+[
+2022,
+2024,
+"/assets/ai-cars/volkswagen-gti-g8.webp?v=1",
+"red",
+"8th generation (MK8)"
+]
+],
+"ford-bronco-sport": [
+[
+2021,
+2025,
+"/assets/ai-models/ford-bronco-sport.webp?v=1",
+"",
+"1st generation"
+]
+],
+"saturn-outlook": [
+[
+2007,
+2010,
+"/assets/ai-models/saturn-outlook.webp?v=1",
+"",
+"1st generation"
+]
+],
+"infiniti-g35": [
+[
+2003,
+2008,
+"/assets/ai-models/infiniti-g35.webp?v=1",
+"",
+"1st generation"
+]
+],
+"saab-9-3": [
+[
+1999,
+2002,
+"/assets/ai-cars/saab-9-3-g1.webp?v=1",
+"dark blue",
+"1st generation"
+],
+[
+2003,
+2011,
+"/assets/ai-models/saab-9-3.webp?v=1",
+"",
+"2nd generation"
+]
+],
+"hyundai-ioniq-5": [
+[
+2022,
+2025,
+"/assets/ai-models/hyundai-ioniq-5.webp?v=1",
+"",
+"1st generation"
+]
+],
+"lincoln-navigator": [
+[
+1998,
+2002,
+"/assets/ai-cars/lincoln-navigator-g1.webp?v=1",
+"black",
+"1st generation"
+],
+[
+2003,
+2006,
+"/assets/ai-models/lincoln-navigator.webp?v=1",
+"",
+"2nd generation"
+],
+[
+2007,
+2017,
+"/assets/ai-cars/lincoln-navigator-g3.webp?v=1",
+"white",
+"3rd generation"
+],
+[
+2018,
+2024,
+"/assets/ai-cars/lincoln-navigator-g4.webp?v=1",
+"dark blue",
+"4th generation"
+]
+],
+"mitsubishi-outlander": [
+[
+2003,
+2006,
+"/assets/ai-cars/mitsubishi-outlander-g1.webp?v=1",
+"silver",
+"1st generation"
+],
+[
+2007,
+2013,
+"/assets/ai-cars/mitsubishi-outlander-g2.webp?v=1",
+"white",
+"2nd generation"
+],
+[
+2014,
+2021,
+"/assets/ai-models/mitsubishi-outlander.webp?v=1",
+"",
+"3rd generation"
+],
+[
+2022,
+2025,
+"/assets/ai-cars/mitsubishi-outlander-g4.webp?v=1",
+"dark blue",
+"4th generation"
+]
+],
+"chevrolet-aveo": [
+[
+2004,
+2011,
+"/assets/ai-models/chevrolet-aveo.webp?v=1",
+"",
+"1st generation"
+]
+],
+"lexus-is": [
+[
+2001,
+2005,
+"/assets/ai-cars/lexus-is-g1.webp?v=1",
+"silver",
+"1st generation"
+],
+[
+2006,
+2013,
+"/assets/ai-models/lexus-is.webp?v=1",
+"",
+"2nd generation"
+],
+[
+2014,
+2025,
+"/assets/ai-cars/lexus-is-g3.webp?v=1",
+"white",
+"3rd generation"
+]
+],
+"mercury-mariner": [
+[
+2005,
+2011,
+"/assets/ai-models/mercury-mariner.webp?v=1",
+"",
+"1st generation"
+]
+],
+"hyundai-veloster": [
+[
+2012,
+2017,
+"/assets/ai-models/hyundai-veloster.webp?v=1",
+"",
+"1st generation"
+],
+[
+2019,
+2022,
+"/assets/ai-cars/hyundai-veloster-g2.webp?v=1",
+"red",
+"2nd generation"
+]
+],
+"honda-element": [
+[
+2003,
+2011,
+"/assets/ai-models/honda-element.webp?v=1",
+"",
+"1st generation"
+]
+],
+"volvo-s60": [
+[
+2001,
+2009,
+"/assets/ai-models/volvo-s60.webp?v=1",
+"",
+"1st generation"
+],
+[
+2011,
+2018,
+"/assets/ai-cars/volvo-s60-g2.webp?v=1",
+"dark blue",
+"2nd generation"
+],
+[
+2019,
+2024,
+"/assets/ai-cars/volvo-s60-g3.webp?v=1",
+"white",
+"3rd generation"
+]
+],
+"hyundai-genesis": [
+[
+2009,
+2014,
+"/assets/ai-models/hyundai-genesis.webp?v=1",
+"",
+"1st generation"
+],
+[
+2015,
+2016,
+"/assets/ai-cars/hyundai-genesis-g2.webp?v=1",
+"black",
+"2nd generation"
+]
+],
+"buick-rendezvous": [
+[
+2002,
+2007,
+"/assets/ai-models/buick-rendezvous.webp?v=1",
+"",
+"1st generation"
+]
+],
+"ford-maverick": [
+[
+2022,
+2025,
+"/assets/ai-models/ford-maverick.webp?v=1",
+"",
+"1st generation"
+]
+],
+"toyota-matrix": [
+[
+2003,
+2008,
+"/assets/ai-models/toyota-matrix.webp?v=1",
+"",
+"1st generation"
+],
+[
+2009,
+2013,
+"/assets/ai-cars/toyota-matrix-g2.webp?v=1",
+"blue",
+"2nd generation"
+]
+],
+"ford-bronco": [
+[
+2021,
+2025,
+"/assets/ai-models/ford-bronco.webp?v=1",
+"",
+"6th generation"
+]
+],
+"dodge-magnum": [
+[
+2005,
+2008,
+"/assets/ai-models/dodge-magnum.webp?v=1",
+"",
+"1st generation"
+]
+],
+"ford-excursion": [
+[
+2000,
+2005,
+"/assets/ai-models/ford-excursion.webp?v=1",
+"",
+"1st generation"
+]
+],
+"oldsmobile-intrigue": [
+[
+1998,
+2002,
+"/assets/ai-models/oldsmobile-intrigue.webp?v=1",
+"",
+"1st generation"
+]
+],
+"mazda-cx-7": [
+[
+2007,
+2012,
+"/assets/ai-models/mazda-cx-7.webp?v=1",
+"",
+"1st generation"
+]
+],
+"dodge-nitro": [
+[
+2007,
+2011,
+"/assets/ai-models/dodge-nitro.webp?v=1",
+"",
+"1st generation"
+]
+],
+"nissan-leaf": [
+[
+2011,
+2017,
+"/assets/ai-cars/nissan-leaf-g1.webp?v=1",
+"blue",
+"1st generation"
+],
+[
+2018,
+2025,
+"/assets/ai-models/nissan-leaf.webp?v=1",
+"",
+"2nd generation"
+]
+],
+"mercury-cougar": [
+[
+1999,
+2002,
+"/assets/ai-models/mercury-cougar.webp?v=1",
+"",
+"8th generation"
+]
+],
+"ford-five-hundred": [
+[
+2005,
+2007,
+"/assets/ai-models/ford-five-hundred.webp?v=1",
+"",
+"1st generation"
+]
+],
+"scion-xb": [
+[
+2004,
+2006,
+"/assets/ai-cars/scion-xb-g1.webp?v=1",
+"black",
+"1st generation"
+],
+[
+2008,
+2015,
+"/assets/ai-models/scion-xb.webp?v=1",
+"",
+"2nd generation"
+]
+],
+"honda-prologue": [
+[
+2024,
+2025,
+"/assets/ai-models/honda-prologue.webp?v=1",
+"",
+"1st generation"
+]
+],
+"volkswagen-id-4": [
+[
+2021,
+2025,
+"/assets/ai-models/volkswagen-id-4.webp?v=1",
+"",
+"1st generation"
+]
+],
+"gmc-sonoma": [
+[
+1994,
+2004,
+"/assets/ai-models/gmc-sonoma.webp?v=1",
+"",
+"2nd generation"
+]
+],
+"volkswagen-cc": [
+[
+2009,
+2017,
+"/assets/ai-models/volkswagen-cc.webp?v=1",
+"",
+"1st generation"
+]
+],
+"lincoln-ls": [
+[
+2000,
+2006,
+"/assets/ai-models/lincoln-ls.webp?v=1",
+"",
+"1st generation"
+]
+],
+"subaru-wrx": [
+[
+2002,
+2007,
+"/assets/ai-models/subaru-wrx.webp?v=1",
+"",
+"2nd generation"
+],
+[
+2008,
+2014,
+"/assets/ai-cars/subaru-wrx-g3.webp?v=1",
+"blue",
+"3rd generation"
+],
+[
+2015,
+2021,
+"/assets/ai-cars/subaru-wrx-g4.webp?v=1",
+"white",
+"4th generation"
+],
+[
+2022,
+2025,
+"/assets/ai-cars/subaru-wrx-g5.webp?v=1",
+"gray",
+"5th generation"
+]
+],
+"volvo-s80": [
+[
+1999,
+2006,
+"/assets/ai-models/volvo-s80.webp?v=1",
+"",
+"1st generation"
+],
+[
+2007,
+2016,
+"/assets/ai-cars/volvo-s80-g2.webp?v=1",
+"black",
+"2nd generation"
+]
+],
+"buick-lucerne": [
+[
+2006,
+2011,
+"/assets/ai-models/buick-lucerne.webp?v=1",
+"",
+"1st generation"
+]
+],
+"volvo-v70": [
+[
+2001,
+2007,
+"/assets/ai-models/volvo-v70.webp?v=1",
+"",
+"2nd generation"
+]
+],
+"land-rover-range-rover": [
+[
+2003,
+2012,
+"/assets/ai-models/land-rover-range-rover.webp?v=1",
+"",
+"3rd generation (L322)"
+],
+[
+2013,
+2021,
+"/assets/ai-cars/land-rover-range-rover-g4.webp?v=1",
+"white",
+"4th generation (L405)"
+],
+[
+2022,
+2025,
+"/assets/ai-cars/land-rover-range-rover-g5.webp?v=1",
+"dark gray",
+"5th generation (L460)"
+]
+],
+"toyota-fj-cruiser": [
+[
+2007,
+2014,
+"/assets/ai-models/toyota-fj-cruiser.webp?v=1",
+"",
+"1st generation"
+]
+],
+"suzuki-forenza": [
+[
+2004,
+2008,
+"/assets/ai-models/suzuki-forenza.webp?v=1",
+"",
+"1st generation"
+]
+],
+"kia-spectra": [
+[
+2000,
+2004,
+"/assets/ai-cars/kia-spectra-g1.webp?v=1",
+"silver",
+"1st generation"
+],
+[
+2005,
+2009,
+"/assets/ai-models/kia-spectra.webp?v=1",
+"",
+"2nd generation"
+]
+],
+"acura-tlx": [
+[
+2015,
+2020,
+"/assets/ai-models/acura-tlx.webp?v=1",
+"",
+"1st generation"
+],
+[
+2021,
+2025,
+"/assets/ai-cars/acura-tlx-g2.webp?v=1",
+"red",
+"2nd generation"
+]
+],
+"fisker-ocean": [
+[
+2023,
+2024,
+"/assets/ai-models/fisker-ocean.webp?v=1",
+"",
+"1st generation"
+]
+],
+"chrysler-300m": [
+[
+1999,
+2004,
+"/assets/ai-models/chrysler-300m.webp?v=1",
+"",
+"1st generation"
+]
+],
+"mitsubishi-lancer": [
+[
+2002,
+2007,
+"/assets/ai-models/mitsubishi-lancer.webp?v=1",
+"",
+"7th generation"
+],
+[
+2008,
+2017,
+"/assets/ai-cars/mitsubishi-lancer-g8.webp?v=1",
+"silver",
+"8th generation"
+]
+],
+"volvo-xc70": [
+[
+2003,
+2007,
+"/assets/ai-cars/volvo-xc70-g1.webp?v=1",
+"silver",
+"1st generation"
+],
+[
+2008,
+2016,
+"/assets/ai-cars/volvo-xc70-g2.webp?v=1",
+"dark gray",
+"2nd generation"
+]
+],
+"fiat-500": [
+[
+2012,
+2019,
+"/assets/ai-models/fiat-500.webp?v=1",
+"",
+"1st generation"
+]
+],
+"toyota-yaris": [
+[
+2007,
+2011,
+"/assets/ai-models/toyota-yaris.webp?v=1",
+"",
+"1st generation"
+],
+[
+2012,
+2019,
+"/assets/ai-cars/toyota-yaris-g2.webp?v=1",
+"red",
+"2nd generation"
+]
+],
+"mazda-protege": [
+[
+1999,
+2003,
+"/assets/ai-models/mazda-protege.webp?v=1",
+"",
+"1st generation"
+]
+],
+"hummer-h3": [
+[
+2006,
+2010,
+"/assets/ai-models/hummer-h3.webp?v=1",
+"",
+"1st generation"
+]
+],
+"ford-transit": [
+[
+2015,
+2025,
+"/assets/ai-models/ford-transit.webp?v=1",
+"",
+"1st generation"
+]
+],
+"mazda-rx-8": [
+[
+2004,
+2011,
+"/assets/ai-models/mazda-rx-8.webp?v=1",
+"",
+"1st generation"
+]
+],
+"volkswagen-routan": [
+[
+2009,
+2014,
+"/assets/ai-models/volkswagen-routan.webp?v=1",
+"",
+"1st generation"
+]
+],
+"hyundai-tiburon": [
+[
+1997,
+2001,
+"/assets/ai-cars/hyundai-tiburon-g1.webp?v=1",
+"red",
+"1st generation"
+],
+[
+2003,
+2008,
+"/assets/ai-models/hyundai-tiburon.webp?v=1",
+"",
+"2nd generation"
+]
+],
+"oldsmobile-bravada": [
+[
+1996,
+2001,
+"/assets/ai-models/oldsmobile-bravada.webp?v=1",
+"",
+"2nd generation"
+],
+[
+2002,
+2004,
+"/assets/ai-cars/oldsmobile-bravada-g3.webp?v=1",
+"silver",
+"3rd generation"
+]
+],
+"hyundai-azera": [
+[
+2006,
+2011,
+"/assets/ai-models/hyundai-azera.webp?v=1",
+"",
+"1st generation"
+],
+[
+2012,
+2017,
+"/assets/ai-cars/hyundai-azera-g2.webp?v=1",
+"dark gray",
+"2nd generation"
+]
+],
+"mercedes-benz-sprinter": [
+[
+2007,
+2018,
+"/assets/ai-models/mercedes-benz-sprinter.webp?v=1",
+"",
+"2nd generation"
+],
+[
+2019,
+2025,
+"/assets/ai-cars/mercedes-benz-sprinter-g3.webp?v=1",
+"white",
+"3rd generation"
+]
+],
+"scion-tc": [
+[
+2005,
+2010,
+"/assets/ai-models/scion-tc.webp?v=1",
+"",
+"1st generation"
+],
+[
+2011,
+2016,
+"/assets/ai-cars/scion-tc-g2.webp?v=1",
+"black",
+"2nd generation"
+]
+],
+"acura-tsx": [
+[
+2004,
+2008,
+"/assets/ai-cars/acura-tsx-g1.webp?v=1",
+"silver",
+"1st generation"
+],
+[
+2009,
+2014,
+"/assets/ai-models/acura-tsx.webp?v=1",
+"",
+"2nd generation"
+]
+],
+"mitsubishi-montero": [
+[
+2001,
+2006,
+"/assets/ai-cars/mitsubishi-montero-g3.webp?v=1",
+"silver",
+"3rd generation"
+]
+],
+"hyundai-veracruz": [
+[
+2007,
+2012,
+"/assets/ai-models/hyundai-veracruz.webp?v=1",
+"",
+"1st generation"
+]
+],
+"nissan-350z": [
+[
+2003,
+2009,
+"/assets/ai-models/nissan-350z.webp?v=1",
+"",
+"1st generation"
+]
+],
+"mazda-mpv": [
+[
+2000,
+2006,
+"/assets/ai-models/mazda-mpv.webp?v=1",
+"",
+"2nd generation"
+]
+],
+"volvo-xc60": [
+[
+2010,
+2017,
+"/assets/ai-cars/volvo-xc60-g1.webp?v=1",
+"silver",
+"1st generation"
+],
+[
+2018,
+2025,
+"/assets/ai-models/volvo-xc60.webp?v=1",
+"",
+"2nd generation"
+]
+],
+"ram-promaster": [
+[
+2014,
+2025,
+"/assets/ai-models/ram-promaster.webp?v=1",
+"",
+"1st generation"
+]
+],
+"chevrolet-express": [
+[
+1996,
+2024,
+"/assets/ai-models/chevrolet-express.webp?v=1",
+"",
+"1st generation"
+]
+],
+"volkswagen-touareg": [
+[
+2004,
+2010,
+"/assets/ai-models/volkswagen-touareg.webp?v=1",
+"",
+"1st generation"
+],
+[
+2011,
+2017,
+"/assets/ai-cars/volkswagen-touareg-g2.webp?v=1",
+"black",
+"2nd generation"
+]
+],
+"land-rover-range-rover-sport": [
+[
+2006,
+2013,
+"/assets/ai-cars/land-rover-range-rover-sport-g1.webp?v=1",
+"silver",
+"1st generation"
+],
+[
+2014,
+2022,
+"/assets/ai-models/land-rover-range-rover-sport.webp?v=1",
+"",
+"2nd generation"
+],
+[
+2023,
+2025,
+"/assets/ai-cars/land-rover-range-rover-sport-g3.webp?v=1",
+"white",
+"3rd generation"
+]
+],
+"suzuki-grand-vitara": [
+[
+1999,
+2005,
+"/assets/ai-cars/suzuki-grand-vitara-g1.webp?v=1",
+"silver",
+"1st generation"
+],
+[
+2006,
+2013,
+"/assets/ai-models/suzuki-grand-vitara.webp?v=1",
+"",
+"2nd generation"
+]
+],
+"buick-encore": [
+[
+2013,
+2022,
+"/assets/ai-models/buick-encore.webp?v=1",
+"",
+"1st generation"
+]
+],
+"lincoln-mkc": [
+[
+2015,
+2019,
+"/assets/ai-models/lincoln-mkc.webp?v=1",
+"",
+"1st generation"
+]
+],
+"polestar-2": [
+[
+2021,
+2025,
+"/assets/ai-models/polestar-2.webp?v=1",
+"",
+"1st generation"
+]
+],
+"infiniti-qx60": [
+[
+2013,
+2020,
+"/assets/ai-models/infiniti-qx60.webp?v=1",
+"",
+"1st generation"
+],
+[
+2022,
+2025,
+"/assets/ai-cars/infiniti-qx60-g2.webp?v=1",
+"dark gray",
+"2nd generation"
+]
+],
+"acura-cl": [
+[
+2001,
+2003,
+"/assets/ai-models/acura-cl.webp?v=1",
+"",
+"2nd generation"
+]
+],
+"chevrolet-uplander": [
+[
+2005,
+2009,
+"/assets/ai-models/chevrolet-uplander.webp?v=1",
+"",
+"1st generation"
+]
+],
+"ford-transit-connect": [
+[
+2010,
+2013,
+"/assets/ai-cars/ford-transit-connect-g1.webp?v=1",
+"white",
+"1st generation"
+],
+[
+2014,
+2023,
+"/assets/ai-models/ford-transit-connect.webp?v=1",
+"",
+"2nd generation"
+]
+],
+"kia-seltos": [
+[
+2021,
+2025,
+"/assets/ai-models/kia-seltos.webp?v=1",
+"",
+"1st generation"
+]
+],
+"audi-s4": [
+[
+2000,
+2002,
+"/assets/ai-cars/audi-s4-g1.webp?v=1",
+"black",
+"1st generation (B5)"
+],
+[
+2004,
+2008,
+"/assets/ai-models/audi-s4.webp?v=1",
+"",
+"2nd generation (B6)"
+],
+[
+2010,
+2016,
+"/assets/ai-cars/audi-s4-g3.webp?v=1",
+"white",
+"3rd generation (B8)"
+],
+[
+2018,
+2025,
+"/assets/ai-cars/audi-s4-g4.webp?v=1",
+"dark blue",
+"4th generation (B9)"
+]
+],
+"toyota-c-hr": [
+[
+2018,
+2022,
+"/assets/ai-models/toyota-c-hr.webp?v=1",
+"",
+"1st generation"
+]
+],
+"kia-ev6": [
+[
+2022,
+2025,
+"/assets/ai-models/kia-ev6.webp?v=1",
+"",
+"1st generation"
+]
+],
+"infiniti-qx56": [
+[
+2004,
+2010,
+"/assets/ai-models/infiniti-qx56.webp?v=1",
+"",
+"1st generation"
+],
+[
+2011,
+2013,
+"/assets/ai-cars/infiniti-qx56-g2.webp?v=1",
+"black",
+"2nd generation"
+]
+],
+"infiniti-g37": [
+[
+2008,
+2013,
+"/assets/ai-models/infiniti-g37.webp?v=1",
+"",
+"1st generation"
+]
+],
+"land-rover-discovery": [
+[
+1999,
+2004,
+"/assets/ai-models/land-rover-discovery.webp?v=1",
+"",
+"2nd generation"
+],
+[
+2005,
+2009,
+"/assets/ai-cars/land-rover-discovery-g3.webp?v=1",
+"silver",
+"3rd generation (LR3)"
+],
+[
+2010,
+2016,
+"/assets/ai-cars/land-rover-discovery-g4.webp?v=1",
+"black",
+"4th generation (LR4)"
+],
+[
+2017,
+2025,
+"/assets/ai-cars/land-rover-discovery-g5.webp?v=1",
+"white",
+"5th generation"
+]
+],
+"cadillac-dts": [
+[
+2006,
+2011,
+"/assets/ai-models/cadillac-dts.webp?v=1",
+"",
+"1st generation"
+]
+],
+"nissan-kicks": [
+[
+2018,
+2024,
+"/assets/ai-models/nissan-kicks.webp?v=1",
+"",
+"1st generation"
+],
+[
+2025,
+2025,
+"/assets/ai-cars/nissan-kicks-g2.webp?v=1",
+"blue",
+"2nd generation"
+]
+],
+"honda-insight": [
+[
+2000,
+2006,
+"/assets/ai-cars/honda-insight-g1.webp?v=1",
+"silver",
+"1st generation"
+],
+[
+2010,
+2014,
+"/assets/ai-models/honda-insight.webp?v=1",
+"",
+"2nd generation"
+],
+[
+2019,
+2022,
+"/assets/ai-cars/honda-insight-g3.webp?v=1",
+"white",
+"3rd generation"
+]
+],
+"saturn-sky": [
+[
+2007,
+2009,
+"/assets/ai-models/saturn-sky.webp?v=1",
+"",
+"1st generation"
+]
+],
+"saab-9-5": [
+[
+1999,
+2009,
+"/assets/ai-models/saab-9-5.webp?v=1",
+"",
+"1st generation"
+],
+[
+2010,
+2011,
+"/assets/ai-cars/saab-9-5-g2.webp?v=1",
+"black",
+"2nd generation"
+]
+],
+"porsche-cayenne": [
+[
+2003,
+2010,
+"/assets/ai-cars/porsche-cayenne-g1.webp?v=1",
+"silver",
+"1st generation (955/957)"
+],
+[
+2011,
+2018,
+"/assets/ai-models/porsche-cayenne.webp?v=1",
+"",
+"2nd generation (958)"
+],
+[
+2019,
+2025,
+"/assets/ai-cars/porsche-cayenne-g3.webp?v=1",
+"white",
+"3rd generation (9YA)"
+]
+],
+"kia-k5": [
+[
+2021,
+2025,
+"/assets/ai-models/kia-k5.webp?v=1",
+"",
+"1st generation"
+]
+],
+"daewoo-nubira": [
+[
+1999,
+2002,
+"/assets/ai-models/daewoo-nubira.webp?v=1",
+"",
+"1st generation"
+]
+],
+"lincoln-aviator": [
+[
+2003,
+2005,
+"/assets/ai-cars/lincoln-aviator-g1.webp?v=1",
+"black",
+"1st generation"
+],
+[
+2020,
+2025,
+"/assets/ai-models/lincoln-aviator.webp?v=1",
+"",
+"2nd generation"
+]
+],
+"volvo-s40": [
+[
+2000,
+2004,
+"/assets/ai-models/volvo-s40.webp?v=1",
+"",
+"1st generation"
+],
+[
+2004,
+2011,
+"/assets/ai-cars/volvo-s40-g2.webp?v=1",
+"silver",
+"2nd generation"
+]
+],
+"infiniti-q50": [
+[
+2014,
+2024,
+"/assets/ai-models/infiniti-q50.webp?v=1",
+"",
+"1st generation"
+]
+],
+"daewoo-leganza": [
+[
+1999,
+2002,
+"/assets/ai-models/daewoo-leganza.webp?v=1",
+"",
+"1st generation"
+]
+],
+"jaguar-s-type": [
+[
+2000,
+2008,
+"/assets/ai-models/jaguar-s-type.webp?v=1",
+"",
+"1st generation"
+]
+],
+"nissan-juke": [
+[
+2011,
+2017,
+"/assets/ai-models/nissan-juke.webp?v=1",
+"",
+"1st generation"
+]
+],
+"mitsubishi-outlander-sport": [
+[
+2011,
+2025,
+"/assets/ai-models/mitsubishi-outlander-sport.webp?v=1",
+"",
+"1st generation"
+]
+],
+"infiniti-m35": [
+[
+2006,
+2010,
+"/assets/ai-models/infiniti-m35.webp?v=1",
+"",
+"1st generation"
+]
+],
+"land-rover-freelander": [
+[
+2002,
+2005,
+"/assets/ai-models/land-rover-freelander.webp?v=1",
+"",
+"1st generation"
+]
+],
+"toyota-venza": [
+[
+2009,
+2015,
+"/assets/ai-models/toyota-venza.webp?v=1",
+"",
+"1st generation"
+],
+[
+2021,
+2024,
+"/assets/ai-cars/toyota-venza-g2.webp?v=1",
+"gray",
+"2nd generation"
+]
+],
+"mercury-monterey": [
+[
+2004,
+2007,
+"/assets/ai-models/mercury-monterey.webp?v=1",
+"",
+"1st generation"
+]
+],
+"infiniti-fx35": [
+[
+2003,
+2008,
+"/assets/ai-models/infiniti-fx35.webp?v=1",
+"",
+"1st generation"
+],
+[
+2009,
+2013,
+"/assets/ai-cars/infiniti-fx35-g2.webp?v=1",
+"white",
+"2nd generation"
+]
+],
+"acura-integra": [
+[
+1994,
+2001,
+"/assets/ai-cars/acura-integra-g3.webp?v=1",
+"red",
+"3rd generation"
+],
+[
+2023,
+2025,
+"/assets/ai-models/acura-integra.webp?v=1",
+"",
+"5th generation"
+]
+],
+"buick-verano": [
+[
+2012,
+2017,
+"/assets/ai-models/buick-verano.webp?v=1",
+"",
+"1st generation"
+]
+],
+"daewoo-lanos": [
+[
+1999,
+2002,
+"/assets/ai-models/daewoo-lanos.webp?v=1",
+"",
+"1st generation"
+]
+],
+"cadillac-sts": [
+[
+2005,
+2011,
+"/assets/ai-models/cadillac-sts.webp?v=1",
+"",
+"1st generation"
+]
+],
+"volkswagen-eos": [
+[
+2007,
+2016,
+"/assets/ai-models/volkswagen-eos.webp?v=1",
+"",
+"1st generation"
+]
+],
+"acura-rl": [
+[
+1996,
+2004,
+"/assets/ai-cars/acura-rl-g1.webp?v=1",
+"silver",
+"1st generation"
+],
+[
+2005,
+2012,
+"/assets/ai-models/acura-rl.webp?v=1",
+"",
+"2nd generation"
+]
+],
+"mazda-mazda5": [
+[
+2006,
+2010,
+"/assets/ai-models/mazda-mazda5.webp?v=1",
+"",
+"1st generation"
+],
+[
+2012,
+2015,
+"/assets/ai-cars/mazda-mazda5-g2.webp?v=1",
+"white",
+"2nd generation"
+]
+],
+"chevrolet-tracker": [
+[
+1999,
+2004,
+"/assets/ai-models/chevrolet-tracker.webp?v=1",
+"",
+"2nd generation"
+]
+],
+"mazda-cx-90": [
+[
+2024,
+2025,
+"/assets/ai-models/mazda-cx-90.webp?v=1",
+"",
+"1st generation"
+]
+],
+"mitsubishi-diamante": [
+[
+1997,
+2004,
+"/assets/ai-models/mitsubishi-diamante.webp?v=1",
+"",
+"3rd generation"
+]
+],
+"chrysler-crossfire": [
+[
+2004,
+2008,
+"/assets/ai-models/chrysler-crossfire.webp?v=1",
+"",
+"1st generation"
+]
+],
+"jeep-wagoneer": [
+[
+2022,
+2025,
+"/assets/ai-models/jeep-wagoneer.webp?v=1",
+"",
+"1st generation"
+]
+],
+"jaguar-xf": [
+[
+2009,
+2015,
+"/assets/ai-models/jaguar-xf.webp?v=1",
+"",
+"1st generation"
+],
+[
+2016,
+2024,
+"/assets/ai-cars/jaguar-xf-g2.webp?v=1",
+"black",
+"2nd generation"
+]
+],
+"land-rover-range-rover-evoque": [
+[
+2012,
+2019,
+"/assets/ai-models/land-rover-range-rover-evoque.webp?v=1",
+"",
+"1st generation"
+],
+[
+2020,
+2025,
+"/assets/ai-cars/land-rover-range-rover-evoque-g2.webp?v=1",
+"gray",
+"2nd generation"
+]
+],
+"buick-rainier": [
+[
+2004,
+2007,
+"/assets/ai-models/buick-rainier.webp?v=1",
+"",
+"1st generation"
+]
+],
+"cadillac-ats": [
+[
+2013,
+2019,
+"/assets/ai-models/cadillac-ats.webp?v=1",
+"",
+"1st generation"
+]
+],
+"lincoln-mks": [
+[
+2009,
+2016,
+"/assets/ai-models/lincoln-mks.webp?v=1",
+"",
+"1st generation"
+]
+],
+"ford-c-max": [
+[
+2013,
+2018,
+"/assets/ai-models/ford-c-max.webp?v=1",
+"",
+"1st generation"
+]
+],
+"nissan-370z": [
+[
+2009,
+2020,
+"/assets/ai-models/nissan-370z.webp?v=1",
+"",
+"1st generation"
+]
+],
+"toyota-grand-highlander": [
+[
+2024,
+2025,
+"/assets/ai-models/toyota-grand-highlander.webp?v=1",
+"",
+"1st generation"
+]
+],
+"kia-niro": [
+[
+2017,
+2022,
+"/assets/ai-models/kia-niro.webp?v=1",
+"",
+"1st generation"
+],
+[
+2023,
+2025,
+"/assets/ai-cars/kia-niro-g2.webp?v=1",
+"gray",
+"2nd generation"
+]
+],
+"smart-fortwo": [
+[
+2008,
+2015,
+"/assets/ai-models/smart-fortwo.webp?v=1",
+"",
+"2nd generation"
+],
+[
+2016,
+2019,
+"/assets/ai-cars/smart-fortwo-g3.webp?v=1",
+"white",
+"3rd generation"
+]
+],
+"audi-a5": [
+[
+2008,
+2017,
+"/assets/ai-models/audi-a5.webp?v=1",
+"",
+"1st generation"
+],
+[
+2018,
+2025,
+"/assets/ai-cars/audi-a5-g2.webp?v=1",
+"white",
+"2nd generation"
+]
+],
+"hummer-h2": [
+[
+2003,
+2009,
+"/assets/ai-models/hummer-h2.webp?v=1",
+"",
+"1st generation"
+]
+],
+"audi-tt": [
+[
+2000,
+2006,
+"/assets/ai-models/audi-tt.webp?v=1",
+"",
+"1st generation (8N)"
+],
+[
+2008,
+2015,
+"/assets/ai-cars/audi-tt-g2.webp?v=1",
+"silver",
+"2nd generation (8J)"
+],
+[
+2016,
+2023,
+"/assets/ai-cars/audi-tt-g3.webp?v=1",
+"red",
+"3rd generation (8S)"
+]
+],
+"chevrolet-captiva": [
+[
+2012,
+2015,
+"/assets/ai-models/chevrolet-captiva.webp?v=1",
+"",
+"1st generation"
+]
+],
+"jaguar-x-type": [
+[
+2002,
+2008,
+"/assets/ai-models/jaguar-x-type.webp?v=1",
+"",
+"1st generation"
+]
+],
+"suzuki-sx4": [
+[
+2007,
+2013,
+"/assets/ai-models/suzuki-sx4.webp?v=1",
+"",
+"1st generation"
+]
+],
+"cadillac-xt5": [
+[
+2017,
+2025,
+"/assets/ai-models/cadillac-xt5.webp?v=1",
+"",
+"1st generation"
+]
+],
+"land-rover-defender": [
+[
+2020,
+2025,
+"/assets/ai-models/land-rover-defender.webp?v=1",
+"",
+"2nd generation"
+]
+],
+"lexus-ls": [
+[
+1995,
+2000,
+"/assets/ai-cars/lexus-ls-g2.webp?v=1",
+"silver",
+"2nd generation (XF20)"
+],
+[
+2001,
+2006,
+"/assets/ai-cars/lexus-ls-g3.webp?v=1",
+"white",
+"3rd generation (XF30)"
+],
+[
+2007,
+2017,
+"/assets/ai-models/lexus-ls.webp?v=1",
+"black",
+"4th generation (XF40)"
+],
+[
+2018,
+2026,
+"/assets/ai-cars/lexus-ls-g5.webp?v=1",
+"dark blue",
+"5th generation (XF50)"
+]
+]
+}
