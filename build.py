@@ -44,7 +44,7 @@ PART = {'ELECTRICAL SYSTEM': 'electrical', 'POWER TRAIN': 'transmission & drivet
         'FUEL/PROPULSION SYSTEM': 'fuel or EV drive system', 'FORWARD COLLISION AVOIDANCE': 'automatic emergency braking', 'VISIBILITY/WIPER': 'wipers & visibility',
         'VISIBILITY': 'visibility', 'AIR BAGS': 'airbags', 'STRUCTURE': 'body structure', 'EXTERIOR LIGHTING': 'lights', 'ELECTRONIC STABILITY CONTROL (ESC)': 'stability control',
         'LANE DEPARTURE': 'lane assist', 'ENGINE AND ENGINE COOLING': 'engine', 'SEAT BELTS': 'seat belts'}
-SEGN = {'car': 'Car', 'suv': 'SUV', 'truck': 'Truck', 'minivan': 'Minivan'}
+SEGN = {'car': 'Car', 'suv': 'SUV', 'truck': 'Truck', 'minivan': 'Minivan', 'van': 'Van'}   # 11-11 'van': the full-size Ford Transit
 ISS = defaultdict(list)
 for r in csv.DictReader(open('data/family_components.csv', encoding='utf-8')):
     if r['component'] != 'UNKNOWN OR OTHER' and len(ISS[r['family']]) < 3: ISS[r['family']].append([PART.get(r['component'], r['component'].lower()), round(float(r['share_pct']))])
@@ -659,7 +659,7 @@ def ytfix(key, y=None):
             + f'<p class="yc-cap">{cap} Videos belong to their creators; we link to them.{(" " + E(same.strip())) if same else ""}</p>' + costcap + '</section>')
 mi = lambda n: f'{int(n):,} miles'
 REPORT_NOTE = '<p class="note">The full Lemon Index report adds the mileage for every problem area, every recall in plain English and what to check before you buy. <b>Coming soon.</b></p>'
-RPART = lambda s: PART.get(s.split(':')[0], s.split(':')[0].lower()).replace('service brakes, hydraulic', 'brakes')
+RPART = lambda s: PART.get((s or 'other').split(':')[0], (s or 'other').split(':')[0].lower()).replace('service brakes, hydraulic', 'brakes')   # 11-11: some NHTSA recalls carry no component
 def rsum(r):
     """A recall in one plain sentence: skip the "X is recalling certain ... vehicles ..." opener, keep the defect."""
     s = re.sub(r'\s+', ' ', r['summary']).strip()
@@ -1375,6 +1375,7 @@ try: NEWM = json.load(open('data/new_models.json', encoding='utf-8'))
 except FileNotFoundError: NEWM = []
 _have = {f['id'] for f in YEARS}
 NEWM = [m for m in NEWM if m['slug'] not in _have and os.path.exists(f'assets/ai-models/{m["slug"]}.webp')]
+NEWM = [m for m in NEWM if m['slug'] not in {c['slug'] for c in EVX}]   # 11-11: an EV already has its EV card on /cars/ (Ioniq 5, Leaf, ID.4, Polestar 2, EV6 showed twice)
 _EXN = _load('data/extra_models_new.json')   # 11-11 complaints-only models (no sales source yet)
 _PLAN = _load('data/new_plan.json'); _DUP = {k: v['dupe_of'] for k, v in _PLAN.items() if v.get('dupe_of')}
 _ID = {c['id']: c for c in CARS + CARS_NEW}

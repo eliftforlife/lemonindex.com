@@ -1813,5 +1813,248 @@
    2024,
    2025
   ]
+ },
+ {
+  "slug": "lincoln-mkx",
+  "sales": {
+   "2006": 859,
+   "2007": 37953,
+   "2008": 29076,
+   "2009": 21433,
+   "2010": 21932,
+   "2011": 23395,
+   "2012": 25107,
+   "2013": 23913,
+   "2014": 23995,
+   "2015": 22199,
+   "2016": 30967,
+   "2017": 31031,
+   "2018": 28573,
+   "2019": 31711
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Lincoln_MKX",
+  "note": "col='U.S.'",
+  "flags": [
+   "Lincoln MKX 2006: 859 sold, 0 complaints in window -> sales merged into 2007",
+   "Lincoln MKX 2019: 31,711 sold, 0 complaints in window -> sales merged into 2018",
+   "Lincoln MKX 2009: 21,433 sold but only 3 complaints in window -> not scored"
+  ],
+  "complaints": 1417,
+  "scored": [
+   2007,
+   2008,
+   2010,
+   2011,
+   2012,
+   2013,
+   2014,
+   2015,
+   2016,
+   2017,
+   2018
+  ]
+ },
+ {
+  "slug": "chevrolet-monte-carlo",
+  "sales": {},
+  "kind": "none",
+  "url": "",
+  "note": "no sales source",
+  "flags": [
+   "Chevrolet Monte Carlo: 0 scorable model years / 0 complaints -> complaints only"
+  ],
+  "complaints": 1406,
+  "scored": []
+ },
+ {
+  "slug": "ford-bronco-sport",
+  "sales": {
+   "2020": 5120,
+   "2021": 108169,
+   "2022": 99547,
+   "2023": 127476,
+   "2024": 124701,
+   "2025": 134493
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Ford_Bronco_Sport",
+  "note": "col='U.S.'",
+  "flags": [
+   "Ford Bronco Sport 2020: 5,120 sold, 0 complaints in window -> sales merged into 2021"
+  ],
+  "complaints": 1385,
+  "scored": [
+   2021,
+   2022,
+   2023,
+   2024,
+   2025
+  ]
+ },
+ {
+  "slug": "ford-transit",
+  "sales": {
+   "2014": 20448,
+   "2015": 117577,
+   "2016": 143244,
+   "2017": 127360,
+   "2018": 137794,
+   "2019": 153868,
+   "2020": 131557,
+   "2021": 99745,
+   "2022": 99382,
+   "2023": 129009,
+   "2024": 152738,
+   "2025": 161797
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Ford_Transit",
+  "note": "col='U.S. sales'",
+  "flags": [
+   "Ford Transit 2014: 20,448 sold but only 3 complaints in window -> not scored",
+   "Ford Transit 2025: 161,797 sold but only 4 complaints in window -> not scored"
+  ],
+  "complaints": 785,
+  "scored": [
+   2015,
+   2016,
+   2017,
+   2018,
+   2019,
+   2020,
+   2021,
+   2022,
+   2023,
+   2024
+  ]
+ },
+ {
+  "slug": "hyundai-veloster",
+  "sales": {
+   "2011": 9284,
+   "2012": 38102,
+   "2013": 30711,
+   "2014": 27598,
+   "2015": 24245,
+   "2016": 30053,
+   "2017": 12658,
+   "2018": 10871,
+   "2019": 12849,
+   "2020": 6785,
+   "2021": 2112,
+   "2022": 1920
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Hyundai_Veloster",
+  "note": "col='United States'",
+  "flags": [
+   "Hyundai Veloster 2011: 9,284 sold, 0 complaints in window -> sales merged into 2012",
+   "Hyundai Veloster 2018: 10,871 sold, 0 complaints in window -> sales merged into 2019"
+  ],
+  "complaints": 1356,
+  "scored": [
+   2012,
+   2013,
+   2014,
+   2015,
+   2016,
+   2019
+  ]
+ },
+ {
+  "slug": "saturn-outlook",
+  "sales": {},
+  "kind": "none",
+  "url": "",
+  "note": "no sales source",
+  "flags": [
+   "Saturn Outlook: 0 scorable model years / 0 complaints -> complaints only"
+  ],
+  "complaints": 1352,
+  "scored": []
+ },
+ {
+  "slug": "infiniti-g35",
+  "sales": {},
+  "kind": "none",
+  "url": "",
+  "note": "no sales source",
+  "flags": [
+   "Infiniti G35: 0 scorable model years / 0 complaints -> complaints only"
+  ],
+  "complaints": 1352,
+  "scored": []
+ },
+ {
+  "slug": "saab-9-3",
+  "sales": {},
+  "kind": "none",
+  "url": "",
+  "note": "no sales source",
+  "flags": [
+   "Saab 9-3: 0 scorable model years / 0 complaints -> complaints only"
+  ],
+  "complaints": 1326,
+  "scored": []
+ },
+ {
+  "slug": "buick-regal",
+  "sales": {
+   "2010": 12326,
+   "2011": 40144,
+   "2012": 26383,
+   "2013": 18685,
+   "2014": 22560,
+   "2015": 19504,
+   "2016": 19833,
+   "2017": 11559,
+   "2018": 14118,
+   "2019": 10363,
+   "2020": 2484
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Buick_Regal",
+  "note": "col='United States'",
+  "flags": [
+   "Buick Regal 2010: 12,326 sold, 0 complaints in window -> sales merged into 2011"
+  ],
+  "complaints": 1315,
+  "scored": [
+   2011,
+   2012,
+   2014
+  ]
+ },
+ {
+  "slug": "chevrolet-aveo",
+  "sales": {
+   "2003": 5677,
+   "2004": 56642,
+   "2005": 68085,
+   "2006": 58244,
+   "2007": 67028,
+   "2008": 55360,
+   "2009": 38516,
+   "2010": 48623,
+   "2011": 28601
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Chevrolet_Aveo",
+  "note": "col='United States Aveo'",
+  "flags": [
+   "Chevrolet Aveo 2003: 5,677 sold, 0 complaints in window -> sales merged into 2004"
+  ],
+  "complaints": 1322,
+  "scored": [
+   2004,
+   2005,
+   2006,
+   2007,
+   2008,
+   2009,
+   2010,
+   2011
+  ]
  }
 ]

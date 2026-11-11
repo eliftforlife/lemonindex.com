@@ -1168,5 +1168,185 @@
 "sales_url": "https://en.wikipedia.org/wiki/GMC_Canyon",
 "sales_kind": "calendar",
 "id": "gmc-canyon"
+},
+{
+"name": "Lincoln MKX",
+"brand": "Lincoln",
+"segment": "suv",
+"years": "2010-2018",
+"sold": 262823,
+"n": 168,
+"per100k": 64,
+"expected": 281.8495206520079,
+"li": 60,
+"serious": 7,
+"worst": "2016",
+"issues": [
+[
+"electrical",
+28
+],
+[
+"engine",
+27
+],
+[
+"brakes",
+12
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Lincoln_MKX",
+"sales_kind": "calendar",
+"id": "lincoln-mkx"
+},
+{
+"name": "Ford Bronco Sport",
+"brand": "Ford",
+"segment": "suv",
+"years": "2021-2022",
+"sold": 212836,
+"n": 670,
+"per100k": 315,
+"expected": 233.6178270163671,
+"li": 287,
+"serious": 9,
+"worst": "2021",
+"issues": [
+[
+"electrical",
+27
+],
+[
+"engine",
+21
+],
+[
+"transmission & drivetrain",
+19
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Ford_Bronco_Sport",
+"sales_kind": "calendar",
+"id": "ford-bronco-sport"
+},
+{
+"name": "Ford Transit",
+"brand": "Ford",
+"segment": "van",
+"years": "2015-2022",
+"sold": 1010527,
+"n": 288,
+"per100k": 28,
+"expected": 1038.1632894979543,
+"li": 28,
+"serious": 10,
+"worst": "2015",
+"issues": [
+[
+"transmission & drivetrain",
+22
+],
+[
+"electrical",
+11
+],
+[
+"seats",
+11
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Ford_Transit",
+"sales_kind": "calendar",
+"id": "ford-transit"
+},
+{
+"name": "Hyundai Veloster",
+"brand": "Hyundai",
+"segment": "car",
+"years": "2012-2019",
+"sold": 183713,
+"n": 275,
+"per100k": 150,
+"expected": 197.70396182951856,
+"li": 139,
+"serious": 21,
+"worst": "2012",
+"issues": [
+[
+"visibility",
+24
+],
+[
+"transmission & drivetrain",
+18
+],
+[
+"body structure",
+14
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Hyundai_Veloster",
+"sales_kind": "calendar",
+"id": "hyundai-veloster"
+},
+{
+"name": "Buick Regal",
+"brand": "Buick",
+"segment": "car",
+"years": "2011-2014",
+"sold": 101413,
+"n": 74,
+"per100k": 73,
+"expected": 115.59569348082411,
+"li": 64,
+"serious": 11,
+"worst": "2011",
+"issues": [
+[
+"electrical",
+20
+],
+[
+"engine",
+15
+],
+[
+"transmission & drivetrain",
+14
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Buick_Regal",
+"sales_kind": "calendar",
+"id": "buick-regal"
+},
+{
+"name": "Chevrolet Aveo",
+"brand": "Chevrolet",
+"segment": "car",
+"years": "2004-2011",
+"sold": 426776,
+"n": 389,
+"per100k": 91,
+"expected": 369.51710779599716,
+"li": 105,
+"serious": 24,
+"worst": "2009",
+"issues": [
+[
+"airbags",
+24
+],
+[
+"engine",
+20
+],
+[
+"electrical",
+14
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Chevrolet_Aveo",
+"sales_kind": "calendar",
+"id": "chevrolet-aveo"
 }
 ]

@@ -544,5 +544,107 @@
    "wiki": "GMC Canyon",
    "col": "^United States Canyon$"
   }
+ },
+ "lincoln-mkx": {
+  "name": "Lincoln MKX",
+  "brand": "Lincoln",
+  "seg": "suv",
+  "make": "LINCOLN",
+  "rx": "(MKX)",
+  "sales": {
+   "wiki": "Lincoln MKX"
+  }
+ },
+ "chevrolet-monte-carlo": {
+  "name": "Chevrolet Monte Carlo",
+  "brand": "Chevrolet",
+  "seg": "car",
+  "make": "CHEVROLET",
+  "rx": "(MONTE\\ CARLO)",
+  "sales": {}
+ },
+ "ford-bronco-sport": {
+  "name": "Ford Bronco Sport",
+  "brand": "Ford",
+  "seg": "suv",
+  "make": "FORD",
+  "rx": "(BRONCO SPORT)",
+  "sales": {
+   "wiki": "Ford Bronco Sport"
+  }
+ },
+ "ford-transit": {
+  "name": "Ford Transit",
+  "brand": "Ford",
+  "seg": "van",
+  "make": "FORD",
+  "rx": "(TRANSIT|TRANSIT T-350 HD|TRANSIT 150|TRANSIT 250|TRANSIT 350|TRANSIT 350 HD)",
+  "sales": {
+   "wiki": "Ford Transit"
+  },
+  "note": "full-size Transit only; the Transit Connect is a different, smaller van with its own sales"
+ },
+ "hyundai-veloster": {
+  "name": "Hyundai Veloster",
+  "brand": "Hyundai",
+  "seg": "car",
+  "make": "HYUNDAI",
+  "rx": "(VELOSTER|VELOSTER\\ N)",
+  "sales": {
+   "wiki": "Hyundai Veloster"
+  }
+ },
+ "saturn-outlook": {
+  "name": "Saturn Outlook",
+  "brand": "Saturn",
+  "seg": "suv",
+  "make": "SATURN",
+  "rx": "(OUTLOOK)",
+  "sales": {}
+ },
+ "infiniti-g35": {
+  "name": "Infiniti G35",
+  "brand": "Infiniti",
+  "seg": "car",
+  "make": "INFINITI",
+  "rx": "(G35|G35\\ COUPE)",
+  "sales": {}
+ },
+ "volkswagen-gti": {
+  "name": "Volkswagen GTI",
+  "brand": "Volkswagen",
+  "seg": "car",
+  "make": "VOLKSWAGEN",
+  "rx": "(GTI)",
+  "sales": {},
+  "dupe_of": "volkswagen-golf"
+ },
+ "saab-9-3": {
+  "name": "Saab 9-3",
+  "brand": "Saab",
+  "seg": "car",
+  "make": "SAAB",
+  "rx": "(9\\-3|9\\-3\\ CONVERTIBLE)",
+  "sales": {}
+ },
+ "buick-regal": {
+  "name": "Buick Regal",
+  "brand": "Buick",
+  "seg": "car",
+  "make": "BUICK",
+  "rx": "(REGAL|REGAL\\ TOURX)",
+  "sales": {
+   "wiki": "Buick Regal"
+  }
+ },
+ "chevrolet-aveo": {
+  "name": "Chevrolet Aveo",
+  "brand": "Chevrolet",
+  "seg": "car",
+  "make": "CHEVROLET",
+  "rx": "(AVEO)",
+  "sales": {
+   "wiki": "Chevrolet Aveo"
+  }
  }
 }
