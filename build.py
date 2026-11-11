@@ -238,7 +238,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
     _tm = re.match(r'^/cars/(.+?)/(?:(\d{4})/)?$', path)   # lazy, so slash ids ('mercedes-benz-glk/glc') match too
     if _tm and (_tm.group(1) in TAB.ON or _tm.group(1) in globals().get('FY', {})) and 'tab_body' in globals(): body = tab_body(_tm.group(1), int(_tm.group(2)) if _tm.group(2) else None, body)
     if 'class="advp"' in body and path.startswith(('/cars/', '/motorcycles/', '/planes/')) and 'adv_body' in globals(): body = adv_body(path, body)   # 11-10: the other template
-    if 'class="pg mp6"' in body and re.match(r'^/motorcycles/[^/]+/$', path) and 'adv_body' in globals(): body = adv_body(path, body, TAB.transform_mp6)   # 11-10: motorcycle pages
+    if 'class="pg mp6"' in body and re.match(r'^/(motorcycles|supercars|planes)/[^/]+/$', path) and 'adv_body' in globals(): body = adv_body(path, body, TAB.transform_mp6)   # 11-10: motorcycle, supercar and plane pages
     _h = hashlib.md5(body.encode('utf-8')).hexdigest()[:10]
     if PD.get(path, {}).get('h') != _h: PD[path] = {'h': _h, 'd': TODAY}
     _d = PD[path]['d']; _dl = f'{_MN[int(_d[5:7]) - 1]} {int(_d[8:])}, {_d[:4]}'
@@ -711,9 +711,12 @@ def adv_body(path, body, fn=None):
     """11-10: the 'advp' template (no-sales model pages, Advanced pages) -> tabbed layout (tabbed.transform_adv); failures keep the old layout."""
     try:
         fn = fn or TAB.transform_adv
-        k = hashlib.md5('|'.join((_TAB_SRC, fn.__name__, path, body)).encode('utf-8')).hexdigest()
+        _bm = re.match(r'^/cars/(bmw-[^/]+)/$', path); eng = ''
+        if _bm and fn is TAB.transform_adv and TAB.bmw_groups(_bm.group(1)):   # 11-10: Years / Engines toggle on the no-sales BMW pages
+            eng = TAB.engine_chart(_bm.group(1), globals().get('BFAM', {}).get(_bm.group(1), _bm.group(1)), {}, {}, set())
+        k = hashlib.md5('|'.join((_TAB_SRC, fn.__name__, path, body, eng)).encode('utf-8')).hexdigest()
         if k in _TAB_OLD: _TAB_NEW[k] = _TAB_OLD[k]; return _TAB_OLD[k]
-        out = fn(body, 'Page'); _TAB_NEW[k] = out; return out
+        out = fn(body, 'Page', eng) if eng else fn(body, 'Page'); _TAB_NEW[k] = out; return out
     except Exception as ex:
         TAB_FAIL.append(f'{path}: {type(ex).__name__} {ex}'); return body
 def yt_note(f):

@@ -277,7 +277,7 @@ def _adv_sort(items, modes, short, order=None):
     tabs = _tabs(panels, f'{short} sections', _modes(modes))
     return tabs, tail
 
-def transform_adv(body, short):
+def transform_adv(body, short, eng_html=''):
     s = BeautifulSoup(body, 'html.parser'); root = s.find('div', class_='advp')
     if root is None or 'tbl' in (root.get('class') or []): return body
     hd = root.find('header', class_='advh1', recursive=False)
@@ -294,6 +294,12 @@ def transform_adv(body, short):
         if 'ygrid' in (c.get('class') or []): items += c.find_all(recursive=False)
         else: items.append(c)
     adv = bool(h1 and 'Advanced' in h1.get_text())
+    if eng_html:   # 11-10: no-sales BMWs get the Years / Engines toggle on their year table (engine groups from bmw_specs.json)
+        ys = next((c for c in items if c.get('id') == 'years'), None)
+        if ys is not None:
+            h2 = ys.find('h2'); h2s = str(h2) if h2 else ''
+            if h2: h2.extract()
+            inner = ys.decode_contents(); ys.clear(); ys.append(BeautifulSoup(h2s + _toggle(inner, eng_html, short), 'html.parser'))
     tabs, tail = _adv_sort(items, modes, short, ['problems', 'recalls', 'specs', 'repairs', 'years', 'overview', 'questions'] if adv else None); J = lambda xs: ''.join(map(str, xs))
     cls = ' '.join(root.get('class') or [])
     return f'{ASSET}<div class="{cls} tbl">{hero}{tabs}{J(tail)}</div>'
