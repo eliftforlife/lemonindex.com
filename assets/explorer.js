@@ -28,18 +28,17 @@
     return L.sort(by);
   }
 
+  // 11-10 (Elijah: "make this look better, maybe bigger images or better layouts"): each model is a card like the /cars/ grid: a big
+  // AI cutout, rank over the name, type + years, one plain line, the score on the right, and a small Compare chip in the corner.
   function row(c) {
-    const on = S.open === c.id, picked = S.pick.includes(c.id), bad = c.li > 110, ok = c.li < 90;
-    return `<div class="xr ${on ? 'open' : ''}" data-id="${c.id}">
-      <button class="xm" data-open="${c.id}" aria-expanded="${on}">
-        <span class="xk">#${c.rank}</span>
-        <span class="xn">${c.img ? `<img class="xph" src="${c.img}" alt="" loading="lazy">` : '<i class="xph"></i>'}<b>${c.name}${c.est ? '*' : ''}</b><small>${c.segName} · ${c.years}</small></span>
-        <span class="xb" data-tip="${tip(c).replace(/"/g, '&quot;')}"><span class="bt"><i class="${bad ? 'bad' : ok ? 'good' : 'mid'}" style="width:${Math.min(100, c.li / MAX * 100).toFixed(1)}%"></i><em></em></span><small class="${bad ? 'bad' : ok ? 'good' : ''}">${words(c)}</small></span>
-        <span class="xi ${bad ? 'bad' : ok ? 'good' : ''}">${c.li}</span>
-        <span class="xs">${big(c.sold)}${c.est ? '*' : ''}</span>
-        <span class="xt">${issue(c)}</span>
+    const on = S.open === c.id, picked = S.pick.includes(c.id), tier = c.li > 110 ? 'bad' : c.li < 90 ? 'good' : 'mid';
+    return `<div class="xcd ${on ? 'open' : ''}" data-id="${c.id}">
+      <button class="xcm" data-open="${c.id}" aria-expanded="${on}" title="${tip(c).replace(/"/g, '&quot;')}">
+        <span class="xci">${c.img ? `<img src="${c.img}" alt="" width="1000" height="600" loading="lazy" decoding="async">` : ''}</span>
+        <span class="xct"><small class="xck">#${c.rank}</small><b class="xcn">${c.name}${c.est ? '*' : ''}</b><small class="xcs">${c.segName} · ${c.years.replace('-', '–')}</small><span class="xcw ${tier}">${words(c)}</span></span>
+        <span class="xcv ${tier}">${c.li}</span>
       </button>
-      <label class="xc" title="Compare"><input type="checkbox" data-pick="${c.id}" ${picked ? 'checked' : ''} ${!picked && S.pick.length >= 2 ? 'disabled' : ''}><span>Compare</span></label>
+      <label class="xcc${picked ? ' on' : ''}"><input type="checkbox" data-pick="${c.id}" ${picked ? 'checked' : ''} ${!picked && S.pick.length >= 2 ? 'disabled' : ''} aria-label="Compare the ${c.name}"><span>${picked ? '✓ Compare' : '+ Compare'}</span></label>
       ${on ? detail(c) : ''}</div>`;
   }
 
