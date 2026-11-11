@@ -1264,7 +1264,7 @@ img[src*="/assets/ai-models/"], img[src*="/assets/ai-cars/"] { filter: none !imp
    backdrop (.gh-dim) that closes it, sentence-case group labels, one line icon per main item, a yellow dot on the current page. Lemon-only. */
 .gh-dim { display: none; }
 header.gh.wide.open { -webkit-backdrop-filter: none; backdrop-filter: none; }   /* a filter would make the fixed backdrop relative to the bar */
-header.gh.wide.open .gh-dim { display: block; position: fixed; inset: 0; z-index: -1; background: rgba(17, 18, 20, .25); animation: gh-dim .2s ease; }
+header.gh.wide.open .gh-dim { display: block; position: fixed; inset: var(--gh-b, 52px) 0 0 0; z-index: -1; background: rgba(17, 18, 20, .25); animation: gh-dim .2s ease; }
 @keyframes gh-dim { from { opacity: 0; } }
 header.gh.wide .gh-sheet a { display: flex; align-items: center; gap: 10px; }
 header.gh.wide .gh-sheet .gh-ic { width: 20px; height: 20px; flex: none; color: #6e6e73; }
@@ -1285,3 +1285,4 @@ header.gh.wide .gh-sheet a:hover .gh-ic { color: var(--gh-ink); }
   header.gh.wide .gh-sheet a[aria-current] { color: var(--gh-ink); }
   header.gh.wide .gh-g0 { margin-top: 6px; }
 }
+@media (min-width: 1024px) { header.gh.wide .gh-sheet a.gh-x { display: none; } }   /* the top-bar links stay out of the desktop More panel */
