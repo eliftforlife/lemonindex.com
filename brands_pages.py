@@ -36,26 +36,26 @@ cards = []
 for b, (rk, li) in brank.items():
     ms = sorted([c for c in CARS if c['brand'] == b], key=lambda c: c['li'])
     if not ms: continue
-    top = max(ms, key=lambda c: c['sold']); ph = mphoto(top['id'])
+    top = max(ms, key=lambda c: c['sold']); ph = aph(top['id'])   # 11-10 (Elijah: 'update brands car images'): AI illustrations first, Commons only where none
     cls, word = _verdict(li); est = b in ('Tesla', 'Porsche')
     def mc(c):
-        p = mphoto(c['id']); href = f'/cars/{c["id"]}/' if c['id'] in FY else f'/electric/{c["id"]}/'
+        p = aph(c['id']); href = f'/cars/{c["id"]}/' if c['id'] in FY else f'/electric/{c["id"]}/'
         return (f'<a class="mc" href="{href}"><span class="mc-p">{pimg(p, c["name"]) if p else ""}</span><b>{E(c["name"].split(" ", 1)[1] if " " in c["name"] else c["name"])}</b>'
                 f'<span class="{"good" if c["li"] < 100 else "bad"}">{c["li"]}</span></a>')
     best, worst = ms[0], ms[-1]
     two = '' if len(ms) < 2 else (f'<section class="tiles">'
         + ''.join(f'<a class="tile" href="/cars/{c["id"]}/"><div class="tt"><p class="te">{lab}</p><h2>{E(c["name"].split(" ", 1)[-1])}.</h2><p class="ts">{E(plain(c["li"]))}.</p>'
-                  f'<span class="tl">See every year <i>›</i></span></div><div class="tp">{pimg(mphoto(c["id"]), c["name"])}<span class="tsc {"good" if c["li"] < 100 else "bad"}">{c["li"]}</span></div></a>'
+                  f'<span class="tl">See every year <i>›</i></span></div><div class="tp">{pimg(aph(c["id"]), c["name"])}<span class="tsc {"good" if c["li"] < 100 else "bad"}">{c["li"]}</span></div></a>'
                   for lab, c in ((f'Most reliable {E(b)}', best), (f'Least reliable {E(b)}', worst)) if c['id'] in FY) + '</section>')
     body = f'''<div class="pg mp6"><section class="ph yph6"><div class="yh-t"><p class="ph-e"><a href="/brands/">Brands</a> · #{rk} of {len(brank)}</p><h1>{E(b)}.</h1>
 <p class="ph-s">Every {E(b)} model, ranked by owner complaints per car sold.</p>
 <div class="yhero">{gauge(li, 190)}<div class="yverd {cls}"><p><b>{word}.</b> <span>All {E(b)} models, 2010–2022{"" if plain(li).lower() in word.lower() else ": " + E(plain(li))}.</span></p>
 <p class="ybw">Best <a class="good" href="/cars/{best["id"]}/">{E(best["name"])}</a>{f' · Worst <a class="bad" href="/cars/{worst["id"]}/">{E(worst["name"])}</a>' if worst is not best else ''}</p></div></div></div>
-<div class="ph-v">{pimg(ph, top["name"])}{pcredit(who(ph))}</div></section>
+<div class="ph-v">{YSL.model_hero_html(top['id'], top['name']) if ph and ph.get('ai') else pimg(ph, top["name"]) + pcredit(who(ph))}</div></section>
 {warranty_html(b)}
 <section><h2>Every {E(b)}, ranked. <span class="h2s">Lower is better. 100 is the average car.</span></h2><div class="mbs"><div class="mb"><div class="mg">{"".join(mc(c) for c in ms)}</div></div></div></section>
 {two}
-<p class="yc-cap" style="text-align:center">{"* Small sample or estimated sales. " if est else ""}Lemon Index = safety complaints filed with the U.S. government within 3 years, per car sold, against the average car. <a href="/method/">How it works</a> · <a href="/brands/">Every brand</a></p>
+<p class="yc-cap" style="text-align:center">{"* Small sample or estimated sales. " if est else ""}Lemon Index = safety complaints filed with the U.S. government within 3 years, per car sold, against the average car. <a href="/method/">How it works</a> · <a href="/brands/">Every brand</a>{ai_note(f"{b} models") if any((aph(c["id"]) or {}).get("ai") for c in ms) else ""}{pcredit([x for c in ms for x in who(aph(c["id"]))]).replace('<p class="ph-cr">', ' · ').replace('</p>', '') if any(who(aph(c["id"])) for c in ms) else ""}</p>
 {share_line(f'Is {b} reliable? Every {b} model ranked by owner complaints. Best: {best["name"]}. Worst: {worst["name"]}. Free:' if worst is not best else f'Is {b} reliable? Every {b} model ranked by owner complaints. Free:', f'Know someone looking at a {E(b)}?')}</div>'''
     page(f'/brands/{BSLUG(b)}/', f'Is {b} Reliable? Every {b} Model Ranked by Owner Complaints | The Lemon Index',
          f'{b} ranks #{rk} of {len(brank)} brands by NHTSA owner complaints per car sold (Lemon Index {li}; 100 is average). Most reliable {b}: {best["name"]}. Least: {worst["name"]}.',
@@ -67,7 +67,7 @@ wtile = ''.join(f'<div class="wt"><b>${per(*w["yrs"][max(w["yrs"])]):,}</b><span
 page('/brands/', 'Most Reliable Car Brands, Ranked by Owner Complaints | The Lemon Index',
      f'All {len(cards)} car brands ranked by NHTSA owner complaints per car sold, best to worst, plus what Ford, GM and Tesla report spending on warranty repairs per vehicle.',
      f'''<div class="pg">{phero('Brands', 'Every brand, ranked.', 'Owner complaints per car sold, best to worst. 100 is the average car.')}
-<section><div class="mbs"><div class="mb"><div class="mg">{"".join(cards)}</div></div></div></section>
+<section><div class="mbs"><div class="mb"><div class="mg">{"".join(cards)}</div></div></div><p class="yc-cap" style="text-align:center">Car images: AI-generated illustrations{ai_note("cars on this page")}</p></section>
 <section class="bwar"><p class="te">What automakers tell investors</p><h2>Warranty costs are rising. <span class="h2s">Warranty and recall costs booked per vehicle sold, from each company&#39;s 10-K.</span></h2><div class="wts">{wtile}</div>
 <p class="yc-cap">Ford&#39;s rose from $1,675 a vehicle in 2023 to $2,042 in 2025. GM&#39;s from $1,259 to $2,190. Open a brand for the details.</p></section>
 {share_line("Every car brand ranked by owner complaints per car sold, best to worst. Free:")}</div>''',

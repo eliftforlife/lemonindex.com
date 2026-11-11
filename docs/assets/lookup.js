@@ -26,11 +26,18 @@
       sug.querySelectorAll('[data-b]').forEach(x => x.onclick = () => { q.value = `${hits[0].y} ${x.dataset.b} `; q.focus(); hits = find(q.value); cur = hits.length ? 0 : -1; show(); }); return; }
     sug.innerHTML = hits.map((h, i) => `<a role="option" href="/cars/${h.c.id}/${h.y ? h.y + '/' : ''}" class="${i === cur ? 'on' : ''}"><b>${h.y ? h.y + ' ' : ''}${h.c.n}</b><small>${h.y ? 'problems and owner complaints' : h.miss ? `no ${h.miss} in our data · every year ${h.c.ys[0]}-${h.c.ys.at(-1)}` : `every year ${h.c.ys[0]}-${h.c.ys.at(-1)}`}</small></a>`).join('');
   };
+  const miss = t => { const el = document.querySelector('.fmiss'); if (el) el.textContent = t; };
+  const submit = () => {   // Enter or Show problems with text in the box: go to the highlighted match (or the top one)
+    hits = find(q.value); const h = hits[cur >= 0 && cur < hits.length ? cur : 0];
+    if (!h) { miss("No match. Try 'Honda Civic 2016'."); return false; }
+    if (h.brand) { miss(`Add the brand and model, e.g. '${h.y} Honda Civic'.`); show(); return false; }
+    go(h.c.id, h.y); return true;
+  };
   if (q) {
-    q.addEventListener('input', () => { hits = find(q.value); cur = hits.length ? 0 : -1; show(); });
+    q.addEventListener('input', () => { hits = find(q.value); cur = hits.length ? 0 : -1; show(); miss(q.value.trim() && !hits.length ? "No match. Try 'Honda Civic 2016'." : ''); });
     q.addEventListener('keydown', e => {
       if (e.key === 'ArrowDown' || e.key === 'ArrowUp') { e.preventDefault(); if (hits.length) { cur = (cur + (e.key === 'ArrowDown' ? 1 : -1) + hits.length) % hits.length; show(); } }
-      else if (e.key === 'Enter' && hits[cur]) { e.preventDefault(); if (hits[cur].brand) { q.value = `${hits[cur].y} ${hits[cur].brand} `; hits = find(q.value); cur = hits.length ? 0 : -1; show(); } else go(hits[cur].c.id, hits[cur].y); }
+      else if (e.key === 'Enter') { e.preventDefault(); if (hits[cur] && hits[cur].brand) { q.value = `${hits[cur].y} ${hits[cur].brand} `; hits = find(q.value); cur = hits.length ? 0 : -1; show(); } else if (q.value.trim()) submit(); }
       else if (e.key === 'Escape') { sug.hidden = true; }
     });
     document.addEventListener('click', e => { if (!e.target.closest('.fq')) sug.hidden = true; });
@@ -38,11 +45,21 @@
   }
 
   // or pick from the lists
+  // 11-10 (Elijah: "the Show problems button doesn't work"): the button now follows the typed search first (its top match), then the
+  // lists; picking a year no longer jumps away on its own, so the button is the one way to go. No target -> a short hint, never a dead button.
   const b = $('lb'), m = $('lm'), y = $('ly'), g = $('lgo'); if (!b) return;
+  const tip = document.createElement('p'); tip.className = 'fmiss'; tip.setAttribute('role', 'status'); tip.setAttribute('aria-live', 'polite');
+  (lookForm || g).after(tip);
+  const say = t => { tip.textContent = t || ''; };
   const opt = (s, l, ph) => { s.innerHTML = `<option value="">${ph}</option>` + l.map(([v, t]) => `<option value="${v}">${t}</option>`).join(''); s.disabled = !l.length; };
   opt(b, Object.keys(P).map(k => [k, k]), 'Brand');
-  b.onchange = () => { opt(m, (P[b.value] || []).map(([n, i]) => [i, n]), 'Model'); opt(y, [], 'Year'); g.disabled = true; };
-  m.onchange = () => { const r = (P[b.value] || []).find(x => x[1] === m.value); opt(y, r ? r[2].slice().reverse().map(v => [v, v]) : [], 'Year (optional)'); g.disabled = !m.value; };
-  y.onchange = () => { if (m.value && y.value) go(m.value, y.value); };
-  g.onclick = () => { if (m.value) go(m.value, y.value); };
+  b.onchange = () => { opt(m, (P[b.value] || []).map(([n, i]) => [i, n]), 'Model'); opt(y, [], 'Year'); say(''); };
+  m.onchange = () => { const r = (P[b.value] || []).find(x => x[1] === m.value); opt(y, r ? r[2].slice().reverse().map(v => [v, v]) : [], 'Year (optional)'); say(''); };
+  y.onchange = () => say('');
+  g.disabled = false;
+  g.onclick = () => {
+    if (q && q.value.trim()) { if (!submit()) q.focus(); return; }
+    if (m.value) return go(m.value, y.value);
+    say(b.value ? 'Pick a model, then press Show problems.' : 'Type a car above, or pick a brand and model.');
+  };
 })();

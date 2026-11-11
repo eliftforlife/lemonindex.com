@@ -142,7 +142,15 @@ GH_DOWN = '<svg viewBox="0 0 8 8" aria-hidden="true"><path d="M1 2.75 4 5.75 7 2
 def gh_header(path):
     cur = lambda u: ' aria-current="page"' if path.startswith(u) else ''
     top = ''.join(f'<a href="{u}"{cur(u)}>{t}</a>' for u, t in NAV_TOP)
-    sheet = ''.join(f'<a class="gh-x" href="{u}"{cur(u)}>{t}</a>' for u, t in NAV_TOP) + ''.join(f'<a href="{u}"{cur(u)}>{t}</a>' for u, t in NAV_MORE)
+    # 11-10 (Elijah: the phone menu didn't fit one screen): grouped (Look up / Explore / More) in two columns on phones; headings and the
+    # top-bar links (gh-x) only show where the top bar is folded away (<1024 px). Lemon-only: the styles live in site.css, not the shared gh.css.
+    inbar = {u for u, _ in NAV_TOP}; lab = dict(NAV_TOP + NAV_MORE); lab['/check-engine-light/'] = 'Engine codes'
+    grp = [('Look up', ['/cars/', '/brands/', '/compare/', '/vin/', '/check-engine-light/']),
+           ('Explore', ['/best/', '/electric/', '/motorcycles/', '/supercars/', '/best-gas-mileage/', '/studies/', '/stats/car-complaints/']),
+           ('More', ['/planes/', '/car-loan-rates/', '/vote/', '/data/', '/method/'])]
+    assert sorted(u for _, us in grp for u in us) == sorted(lab), 'gh menu groups miss a link'
+    sheet = ''.join(f'<span class="gh-g gh-g{i}" aria-hidden="true">{g}</span>' + ''.join(f'<a class="{"gh-x " if u in inbar else ""}gh-i{i}" href="{u}"{cur(u)}>{lab[u]}</a>' for u in us)
+                    for i, (g, us) in enumerate(grp))
     return (f'<header class="gh wide" data-tuck><div class="gh-in"><a class="gh-brand" href="/"><img src="/assets/icon-64.png" alt="" width="24" height="24">The Lemon Index</a>'
             f'<nav class="gh-links" aria-label="Main">{top}<button class="gh-more" type="button" aria-expanded="false" aria-controls="gh-sheet">More{GH_DOWN}</button></nav>'
             f'<div class="gh-r"><a class="gh-cta" href="{YT}?sub_confirmation=1" rel="noopener">Subscribe{GH_CHEV}</a>'
@@ -207,12 +215,12 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}{img or "/assets/og.png"}"><meta name="twitter:card" content="summary_large_image">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://challenges.cloudflare.com https://www.googletagmanager.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; frame-src https://challenges.cloudflare.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cloudflareinsights.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://vpic.nhtsa.dot.gov https://lemon-survey.elift08.workers.dev https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="google-adsense-account" content="{ADS}"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=1110k"><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=1" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
+<link rel="stylesheet" href="/assets/site.css?v=1110m"><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=1" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
 <body>{gh_header(path)}
 <main>{body}{CITE if path.startswith('/cars/') else ''}{'' if path == '/vote/' else ask_html(path)}</main>
 <footer class="foot"><div class="cta"><div><h2>New car studies, straight from the data.</h2><p>Every study becomes a video. Subscribe to see the next one first.</p></div><a class="btn" href="{YT}?sub_confirmation=1" rel="noopener">Subscribe on YouTube</a></div>
 <p class="socs"><a href="{YT}" rel="noopener">YouTube</a> · <a href="{TT}" rel="noopener">TikTok</a> · <a href="{IG}" rel="noopener">Instagram</a> · <a href="/method/">How the index works</a> · <a href="/compare/">Compare cars</a> · <a href="/car-loan-rates/">Car loan rates</a> · <a href="/vote/">Vote</a> · <a href="/data/">Free data</a> · <button class="supl" type="button">Keep Lemon ad-free</button></p>
-<p class="fine"><a href="/terms/">Terms</a> · <a href="/privacy/">Privacy</a> · <a href="/refunds/">Refunds</a> · <a href="/contact/">Contact</a><br>© {TODAY[:4]} The Lemon Index. Built from public NHTSA complaint data and published U.S. sales figures. Not affiliated with any automaker. Not a repair-cost or safety rating.</p></footer><script src="/assets/explorer.js?v=1103v6" defer></script><script src="/assets/support.js?v=1110c" defer></script><script src="/assets/imginfo.js?v=1" defer></script><script src="/assets/lookup.js?v=1103" defer></script>{beacon}</body></html>'''
+<p class="fine"><a href="/terms/">Terms</a> · <a href="/privacy/">Privacy</a> · <a href="/refunds/">Refunds</a> · <a href="/contact/">Contact</a><br>© {TODAY[:4]} The Lemon Index. Built from public NHTSA complaint data and published U.S. sales figures. Not affiliated with any automaker. Not a repair-cost or safety rating.</p></footer><script src="/assets/explorer.js?v=1103v6" defer></script><script src="/assets/support.js?v=1110c" defer></script><script src="/assets/imginfo.js?v=1" defer></script><script src="/assets/lookup.js?v=1110" defer></script>{beacon}</body></html>'''
     f = os.path.join(OUT, path.strip('/'), 'index.html') if path.endswith('/') else os.path.join(OUT, path.strip('/'))
     os.makedirs(os.path.dirname(f), exist_ok=True)
     for _try in range(6):   # 11-09: Windows sometimes holds a just-written file for a moment (antivirus/indexer): retry instead of dying mid-build
@@ -301,37 +309,47 @@ def rsrc(src):
 def rset(src, sizes): s = rsrc(src); return f' srcset="{s}" sizes="{sizes}"' if s else ''
 def rsmall(src): s = rsrc(src); return s.split(' ')[0] if s else src   # the 400 px copy, for thumbnails (explorer rows are 60-76 px)
 SZ_ONE, SZ_TWO = '(max-width: 600px) 95vw, 560px', '(max-width: 600px) 52vw, 400px'   # one photo in a slot / two or three side by side
+def ai_note(what):
+    """11-10: one small 'i' (image info) for a group of AI illustrations inside links, where a per-image button can't go."""
+    return (f'<span class="iiw">' + YSL.info(f'Illustrations (AI-generated) of the {E(what)}, not photos of specific cars. Free to use under '
+            f'<a href="https://creativecommons.org/licenses/by/4.0/" rel="license noopener">CC BY 4.0</a>: credit The Lemon Index (lemonindex.com). <a href="/images/">Download and credit text</a>') + '</span>')
+def aph(fid, y=None):
+    """An AI illustration if the model has one, else the Commons photo."""
+    m = YSL.model_img(fid)
+    return {'src': m['src'], 'w': m['w'], 'h': m['h'], 'author': '', 'ai': m['name']} if m else mphoto(fid, y) if y else mphoto(fid)
 def tiles():
     from PIL import Image
     yrs = {f['id']: f for f in json.load(open('data/years.json', encoding='utf-8'))}
     fid = lambda c: c['id']
     def img(ph, alt, cls=''):
         return f'<img class="{cls}" src="{ph["src"]}"{rset(ph["src"], SZ_TWO if cls else "(max-width: 600px) 88vw, 460px")} alt="{E(alt)}" width="{ph["w"]}" height="{ph["h"]}" loading="lazy">' if ph else ''
-    who = []
+    who, ai = [], []
     def car_tile(c, eyebrow, cls):
-        ph = mphoto(c['id']); ph and who.append(ph['author'].split('\ufffd')[0].strip())
+        ph = aph(c['id']); ph and who.append(ph['author'].split('\ufffd')[0].strip()); ph and ph.get('ai') and ai.append(ph['ai'])
         return (f'<a class="tile {cls}" href="/cars/{c["id"]}/"><div class="tt"><p class="te">{eyebrow}</p><h2>{E(c["name"])}.</h2>'
                 f'<p class="ts">{E(plain(c["li"]))}.</p><span class="tl">See every year <i>›</i></span></div>'
                 f'<div class="tp">{img(ph, c["name"])}<span class="tsc {"good" if c["li"] < 100 else "bad"}">{c["li"]}</span></div></a>')
     best, worst = CARS[0], CARS[-1]
-    a, b = mphoto('toyota-rav4', 2019), mphoto('honda-cr-v', 2017)
-    for ph in (a, b): ph and who.append(ph['author'].split('\ufffd')[0].strip())
-    vin = mphoto('toyota-camry', 2019); vin and who.append(vin['author'].split('\ufffd')[0].strip())
+    a, b = aph('toyota-rav4', 2019), aph('honda-cr-v', 2017)
+    vin = aph('toyota-camry', 2019); sv, fd = aph('chevrolet-silverado'), aph('ford-f-series')
+    for ph in (a, b, vin, sv, fd): ph and who.append(ph['author'].split('\ufffd')[0].strip()); ph and ph.get('ai') and ai.append(ph['ai'])
     def vimg(name):
         w, h = Image.open(f'assets/vote/{name}.webp').size
         return {'src': f'/assets/vote/{name}.webp', 'w': w, 'h': h}
-    who += ['Ghostofakina', 'Kevauto']
+    if not sv: sv = vimg('chevy'); who.append('Ghostofakina')
+    if not fd: fd = vimg('ford'); who.append('Kevauto')
     t = [car_tile(best, 'Most reliable', 't-good'), car_tile(worst, 'Biggest lemon' + ('*' if worst['est'] else ''), 't-bad'),
          f'<a class="tile" href="/compare/"><div class="tt"><p class="te">Compare</p><h2>Any two cars.</h2><p class="ts">Side by side, year by year.</p><span class="tl">Compare cars <i>›</i></span></div>'
          f'<div class="tp tp2">{img(a, "Toyota RAV4", "l")}{img(b, "Honda CR-V", "r")}</div></a>',
          f'<a class="tile" href="/vote/"><div class="tt"><p class="te">Vote</p><h2>Chevy or Ford?</h2><p class="ts">Plus best brand and worst insurer.</p><span class="tl">Cast your vote <i>›</i></span></div>'
-         f'<div class="tp tp2">{img(vimg("chevy"), "Chevy Silverado", "l")}{img(vimg("ford"), "Ford F-150", "r")}</div></a>',
+         f'<div class="tp tp2">{img(sv, "Chevy Silverado", "l")}{img(fd, "Ford F-150", "r")}</div></a>',
          f'<a class="tile" href="/vin/"><div class="tt"><p class="te">VIN check</p><h2>Open recalls.</h2><p class="ts">On the exact car you\'re looking at.</p><span class="tl">Check a VIN <i>›</i></span></div>'
          f'<div class="tp">{img(vin, "Toyota Camry")}</div></a>',
          f'<a class="tile t-dark" href="/data/"><div class="tt"><p class="te">Free data</p><h2>Take it. Credit us.</h2><p class="ts">Every score, as a spreadsheet.</p><span class="tl">Download <i>›</i></span></div>'
          f'<div class="tp tsheet"><div class="tsh">' + ''.join(f'<span>{E(c["name"])}</span><span>{c["years"].split("-")[0]}–{c["years"].split("-")[-1][-2:]}</span><b class="{"good" if c["li"] < 100 else "bad"}">{c["li"]}</b>' for c in (CARS[0], CARS[1], CARS[len(CARS) // 2], CARS[-2], CARS[-1])) + '</div></div></a>']
     cr = ' · '.join(dict.fromkeys(w for w in who if w))
-    return f'<section class="tiles">{"".join(t)}</section><p class="tiles-cr">Photos: {E(cr)} (Wikimedia Commons, CC BY-SA)' + (' · *Tesla uses estimated sales.' if worst['est'] else '') + '</p>'
+    bits = ([f'Photos: {E(cr)} (Wikimedia Commons, CC BY-SA)'] if cr else []) + (['*Tesla uses estimated sales.'] if worst['est'] else [])
+    return f'<section class="tiles">{"".join(t)}</section><p class="tiles-cr">{" · ".join(bits)}' + (ai_note(", ".join(dict.fromkeys(ai))) if ai else '') + '</p>'
 
 def pimg(ph, alt, cls=''):
     return f'<img class="{cls}" src="{ph["src"]}"{rset(ph["src"], SZ_TWO if cls else SZ_ONE)} alt="{E(alt)}" width="{ph["w"]}" height="{ph["h"]}" loading="lazy">' if ph else ''
@@ -352,12 +370,14 @@ def hero_cards():
     """Two real cars, one great and one a lemon, as stacked report cards with their dial (exact-year Commons photos from data_photos.py)."""
     ph = json.load(open('data/photos.json', encoding='utf-8')); yrs = {f['id']: f for f in json.load(open('data/years.json', encoding='utf-8'))}
     out = []
-    for fid, y, cls in (('toyota-rav4', 2016, 'hc-1'), ('jeep-cherokee', 2014, 'hc-2')):
-        f = yrs[fid]; v = next(w for w in f['years'] if w['y'] == y); im = ph[fid][str(y)]
+    # 11-10 (Elijah: a car with an AI image never shows the Wikimedia one): AI illustrations, credit behind one 'i' (the RAV4 card is the 2022,
+    # the illustration's own generation; the Cherokee illustration is the same 2014-2023 generation)
+    for fid, y, cls in (('toyota-rav4', 2022, 'hc-1'), ('jeep-cherokee', 2014, 'hc-2')):
+        f = yrs[fid]; v = next(w for w in f['years'] if w['y'] == y); im = YSL.model_img(fid) or ph[fid][str(y)]
         top = (v.get('parts') or [['', 0]])[0][0]
-        out.append(f'<a class="hc {cls}" href="/cars/{fid}/{y}/"><img src="{im["src"]}"{rset(im["src"], "(max-width: 620px) 44vw, (max-width: 999px) 94vw, 260px")} alt="{y} {E(f["name"])}" width="{im["w"]}" height="{im["h"]}" fetchpriority="high">'
+        out.append(f'<a class="hc {cls}" href="/cars/{fid}/{y}/"><img src="{im["src"]}"{rset(im["src"], "(max-width: 620px) 44vw, (max-width: 999px) 94vw, 260px")} alt="{E(f["name"])}, illustration" width="{im["w"]}" height="{im["h"]}" fetchpriority="high">'
                    f'<div class="hc-b"><div><b>{y} {E(f["name"])}</b><span>{E(plain(v["li"]))}</span>{f"<small>Top complaint: {E(top.split(",")[0])}</small>" if top else ""}</div>{gauge(v["li"], 128, False)}</div></a>')
-    return f'<div class="hcs">{"".join(out)}<p class="hc-cr">Photos: Wikimedia Commons</p></div>'
+    return f'<div class="hcs">{"".join(out)}<p class="hc-cr">{ai_note("Toyota RAV4 and Jeep Cherokee")}</p></div>'
 
 # ---- home: the car finder first (10-29), how to read a score, the explorer, then best vs worst side by side, then brands
 best4, worst4 = CARS[0], CARS[-1]
@@ -1198,11 +1218,13 @@ def ndcard(m):
             f'<b>{E(short)}</b><span class="nd">No data yet</span></div>')
 _nd = {}
 for m in NEWM: _nd.setdefault(m['make'], []).append(m)
-_brands = sorted(set(pick) | set(_nd))
-lst = ''.join(f'<div class="mb"><h3>{E(b)}</h3><div class="mg">' + ''.join(mcard(n, i) for n, i, _ in pick.get(b, [])) + ''.join(ndcard(m) for m in sorted(_nd.get(b, []), key=lambda m: m['name'])) + '</div></div>' for b in _brands)
+# 11-10 (Elijah): brands with no scored model at all go last, under a small "Coming soon" heading (A-Z within each group)
+_brand = lambda b: f'<div class="mb"><h3>{E(b)}</h3><div class="mg">' + ''.join(mcard(n, i) for n, i, _ in pick.get(b, [])) + ''.join(ndcard(m) for m in sorted(_nd.get(b, []), key=lambda m: m['name'])) + '</div></div>'
+_soon = sorted(set(_nd) - set(pick))
+lst = ''.join(_brand(b) for b in sorted(pick)) + (f'<p class="mb-soon">Coming soon: no scores yet for these brands</p>' + ''.join(_brand(b) for b in _soon) if _soon else '')
 page('/cars/', 'Look Up Your Car: Problems by Model and Year | The Lemon Index', f'Pick your car and model year to see its owner complaints, its top problems and how it compares with every other year. {len(YEARS)} models, 2000-2025.', f'''
 <div class="pg"><div class="ph ph-f">{finder('<span class="ph-e">Look up</span>Look up your car.', 'Every model year, 2000 to 2025. Free.')}</div>
-<section><h2>Every model. <span class="h2s">Score in the corner: 100 is average, lower is better.</span></h2><div class="mbs">{lst}</div></section>
+<section class="cgrid"><h2>Every model. <span class="h2s">Score in the corner: 100 is average, lower is better.</span></h2><div class="mbs">{lst}</div></section>
 <p class="ph-cr">Car images: AI-generated illustrations by The Lemon Index, free under CC BY 4.0 (<a href="/images/">download</a>).</p></div>''',
      ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": "Look up your car", "url": BASE + '/cars/'}])
 yurls.insert(0, '/cars/')

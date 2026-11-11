@@ -1179,3 +1179,38 @@ table.spec { min-width: 820px; }
 
 /* 11-10: AI model illustration under the header on the no-sales-data pages (Pontiac, newer BMWs, VW Taos) */
 .advimg { display: flex; justify-content: center; margin: 0 0 22px; } .advimg figure.aim { width: min(100%, 560px); }
+
+/* 11-10 (Elijah: "the Show problems button doesn't work"): the finder's hint line (assets/lookup.js) */
+.fmiss { margin: 8px auto 0; max-width: 640px; min-height: 1.4em; font-size: 14px; font-weight: 600; color: #6e6e73; text-align: center; }
+.fmiss:empty { min-height: 0; margin: 0; }
+/* 11-10: one 'i' for a group of AI illustrations inside links (home hero cards, tiles) */
+.iiw { position: relative; display: inline-block; width: 22px; height: 22px; vertical-align: middle; margin-left: 6px; }
+.iiw .ii { right: 0; bottom: 0; }
+.iiw .ii-pop { right: -8px; bottom: 32px; width: min(300px, 80vw); max-width: none; z-index: 30; text-align: left; }
+.hcs .hc-cr { text-align: right; }
+/* 11-10 (Elijah: "make cars fit their box better / bigger"): /cars/ grid cards size the car by width in a fixed-aspect box
+   (the cutouts share a 1000x600 canvas, car bottom at y=575, tops from y=55), so every car fills ~85% of the card */
+.mg .mc { padding: 26px 6px 12px; gap: 4px; }
+.mg .mc-p { height: auto; aspect-ratio: 1000 / 530; }
+.mg .mc-p img { width: 100%; height: 100%; max-width: none; max-height: none; object-fit: cover; object-position: 50% 71%; }
+@media (max-width: 600px) { .mg .mc-p { height: auto; } .mg .mc-p img { max-height: none; } }
+/* No data yet: fade the label, never the image (an image filter with opacity showed a box behind some cars on iPhone) */
+.mc.mc-nd .mc-p img { filter: drop-shadow(0 8px 8px rgba(0,0,0,.08)); }
+.mc.mc-nd b { color: #6e6e73; font-weight: 500; }
+/* /cars/: the grid starts right under the finder */
+.pg > .ph-f + .cgrid { margin-top: calc(-1 * clamp(72px, 9vw, 128px) + 28px); padding-top: 0; }
+.pg > .cgrid > h2 { margin-top: 0; }
+/* 11-10 (Elijah): brands with no scored model yet, at the end of /cars/ */
+.mb-soon { margin: 12px 0 -18px; font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #6e6e73; text-align: center; }
+/* 11-10 (Elijah: the phone menu didn't fit one screen): grouped, two columns, ~44 px rows. Lemon-only (the shared gh.css stays as is). */
+.gh-g { display: none; }
+@media (max-width: 1023px) {
+  header.gh.wide .gh-g { display: block; grid-column: 1 / -1; margin: 14px 0 2px; font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #6e6e73; }
+  header.gh.wide .gh-g0 { margin-top: 0; }
+}
+@media (max-width: 767px) {
+  header.gh.wide .gh-sheet-in { display: grid; grid-template-columns: 1fr 1fr; align-content: start; gap: 0 16px; padding: 12px 22px 28px; }
+  header.gh.wide .gh-sheet a, header.gh.wide .gh-sheet a.gh-x { display: flex; align-items: center; min-height: 44px; padding: 0; font-size: 20px; letter-spacing: -.015em; line-height: 1.15; }
+  header.gh.wide .gh-sheet a.gh-i2 { min-height: 40px; font-size: 16px; font-weight: 500; color: #3a3a3e; }
+  header.gh.wide .gh-sheet a[aria-current] { color: #6e6e73; }
+}
