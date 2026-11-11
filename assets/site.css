@@ -1712,3 +1712,11 @@ article.sce .sce-t ul { margin: 6px 0 8px; padding-left: 20px; } article.sce .sc
 .sce-el { list-style: none; padding: 0; margin: 4px 0 12px; display: grid; gap: 8px; } .sce-el li { line-height: 1.4; } .sce-el small { color: var(--mute); display: block; }
 .sceh .ehc:not(:has(.ehc-im)) > h2 { margin-top: 30px; }
 .sceh .ehc-im { overflow: hidden; } .sceh .ehc-im > img { position: absolute; inset: 0; }
+
+/* 11-11 (Elijah: the grid is the home page): one slim row of other ways in under the tabs */
+.hchips { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; max-width: 640px; margin: -14px auto 26px; }
+.hchips a { display: inline-flex; align-items: center; min-height: 36px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--line); background: #fff; color: #3c4043; font-size: 14px; font-weight: 600; text-decoration: none; white-space: nowrap; }
+.hchips a::after { content: "\2192"; margin-left: 6px; color: #6e6e73; } .hchips a:hover { border-color: #c7c7cc; color: var(--ink); }
+.pg-home .fnote { margin: 10px 0 0; text-align: center; font-size: 13px; color: #6e6e73; }
+.pg-home > .faq { max-width: 760px; margin: 56px auto 0; }
+@media (max-width: 600px) { .hchips { margin: -10px auto 22px; gap: 6px; } .hchips a { font-size: 13px; padding: 0 11px; min-height: 34px; } }
