@@ -4,11 +4,15 @@
 import json, os
 from PIL import Image
 SRC = r'C:\Users\elift\Desktop\Eliftforlife youtube\3 Lemon Index\engine images test\civic'
+# 11-11 (Elijah approved): factory-cover press-photo style with period-correct tops (air cleaner / valve cover / plastic cover);
+# a group whose new picture failed the check twice keeps its 11-10 cutout.
+COV = r'C:\Users\elift\Desktop\Eliftforlife youtube\3 Lemon Index\engine images test\covers_regular\cut'
 HERE = os.path.dirname(os.path.abspath(__file__)); OUTD = os.path.join(HERE, 'assets', 'engines', 'civic'); os.makedirs(OUTD, exist_ok=True)
 G = json.load(open(os.path.join(SRC, 'groups.json'), encoding='utf-8'))
 out = []
 for g in G:
-    cut = os.path.join(SRC, 'cut', g['id'] + '.png'); d = {k: v for k, v in g.items() if k != 'prompt'}
+    cut = os.path.join(COV, 'civic-' + g['id'] + '.png'); d = {k: v for k, v in g.items() if k != 'prompt'}
+    if not os.path.exists(cut): cut = os.path.join(SRC, 'cut', g['id'] + '.png')
     if os.path.exists(cut):
         im = Image.open(cut).convert('RGBA'); im.thumbnail((640, 640)); name = f'honda-civic-{g["id"]}-engine.webp'
         im.save(os.path.join(OUTD, name), 'WEBP', quality=82, method=6)

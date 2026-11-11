@@ -39,8 +39,13 @@ def xmp(title):
 P = json.load(open(os.path.join(HERE, 'data', 'bmw_engine_photos.json'), encoding='utf-8'))
 for f in os.listdir(os.path.join(HERE, 'assets', 'engines')):
     if f.endswith('-ai.webp') or f.endswith('-engine-photo.webp'): os.remove(os.path.join(HERE, 'assets', 'engines', f))
+# 11-11 (Elijah approved): factory-cover press-photo style (real factory engine covers). Only engines with a checked
+# cover cutout (COV/bmw-<code>.png) are redone; any other engine keeps its current 11-10 files untouched.
+COV = r'C:\Users\elift\Desktop\Eliftforlife youtube\3 Lemon Index\engine images test\covers_regular\cut'
 for code, (fn, slug, title) in IMG.items():
-    im = Image.open(os.path.join(SRC, fn)).convert('RGBA'); im = im.resize((1200, round(im.size[1] * 1200 / im.size[0])), Image.LANCZOS)
+    cv = os.path.join(COV, f'bmw-{code.lower()}.png')
+    if not os.path.exists(cv): print(code, 'no checked cover image, kept'); continue
+    im = Image.open(cv).convert('RGBA'); im = im.resize((1200, round(im.size[1] * 1200 / im.size[0])), Image.LANCZOS)
     dst = os.path.join(HERE, 'assets', 'engines', slug + '.webp'); q = 80
     while True:
         im.save(dst, 'WEBP', quality=q, method=6, exact=False, xmp=xmp(title).encode('utf-8'))
@@ -48,6 +53,8 @@ for code, (fn, slug, title) in IMG.items():
         q -= 6
     back = Image.open(dst).info.get('xmp', b'')
     assert b'trainedAlgorithmicMedia' in (back if isinstance(back, bytes) else back.encode()), 'XMP not embedded'
+    sm = im.resize((640, round(im.size[1] * 640 / im.size[0])), Image.LANCZOS)   # 640 px card copy (bmw_pages.py)
+    sm.save(dst[:-5] + '-640.webp', 'WEBP', quality=78, method=6, exact=False, xmp=xmp(title).encode('utf-8'))
     P[code] = dict(src=f'/assets/engines/{slug}.webp', w=im.size[0], h=im.size[1], ai=True, title=title, bytes=os.path.getsize(dst))
     print(code, dst, os.path.getsize(dst) // 1024, 'KB, XMP ok')
 json.dump(P, open(os.path.join(HERE, 'data', 'bmw_engine_photos.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)

@@ -19,8 +19,8 @@
   ],
   "img": {
    "src": "/assets/engines/civic/honda-civic-eb-1-2-engine.webp",
-   "w": 640,
-   "h": 606
+   "w": 591,
+   "h": 640
   }
  },
  {
@@ -42,7 +42,7 @@
   "img": {
    "src": "/assets/engines/civic/honda-civic-ed-1-5-cvcc-engine.webp",
    "w": 640,
-   "h": 492
+   "h": 583
   }
  },
  {
@@ -63,7 +63,7 @@
   "img": {
    "src": "/assets/engines/civic/honda-civic-ej-1-3-engine.webp",
    "w": 640,
-   "h": 573
+   "h": 564
   }
  },
  {
@@ -84,7 +84,7 @@
   "img": {
    "src": "/assets/engines/civic/honda-civic-em-1-5-engine.webp",
    "w": 640,
-   "h": 631
+   "h": 628
   }
  },
  {
@@ -106,7 +106,7 @@
   "img": {
    "src": "/assets/engines/civic/honda-civic-ev-1-3-engine.webp",
    "w": 640,
-   "h": 570
+   "h": 634
   }
  },
  {
@@ -129,7 +129,7 @@
   "img": {
    "src": "/assets/engines/civic/honda-civic-ew-1-5-engine.webp",
    "w": 640,
-   "h": 595
+   "h": 621
   }
  },
  {
@@ -155,7 +155,7 @@
   "img": {
    "src": "/assets/engines/civic/honda-civic-d15-engine.webp",
    "w": 640,
-   "h": 578
+   "h": 582
   }
  },
  {
@@ -186,7 +186,7 @@
   "img": {
    "src": "/assets/engines/civic/honda-civic-d16-engine.webp",
    "w": 640,
-   "h": 559
+   "h": 615
   }
  },
  {
@@ -208,8 +208,8 @@
   ],
   "img": {
    "src": "/assets/engines/civic/honda-civic-d17-engine.webp",
-   "w": 613,
-   "h": 640
+   "w": 640,
+   "h": 622
   }
  },
  {
@@ -236,8 +236,8 @@
   ],
   "img": {
    "src": "/assets/engines/civic/honda-civic-k20-si-engine.webp",
-   "w": 640,
-   "h": 596
+   "w": 612,
+   "h": 640
   }
  },
  {
@@ -263,7 +263,7 @@
   "img": {
    "src": "/assets/engines/civic/honda-civic-hybrid-1-3-engine.webp",
    "w": 640,
-   "h": 557
+   "h": 523
   }
  },
  {
@@ -290,8 +290,8 @@
   ],
   "img": {
    "src": "/assets/engines/civic/honda-civic-r18-engine.webp",
-   "w": 640,
-   "h": 592
+   "w": 601,
+   "h": 640
   }
  },
  {
@@ -312,8 +312,8 @@
   ],
   "img": {
    "src": "/assets/engines/civic/honda-civic-k24-si-engine.webp",
-   "w": 640,
-   "h": 576
+   "w": 627,
+   "h": 640
   }
  },
  {
@@ -335,7 +335,7 @@
   "img": {
    "src": "/assets/engines/civic/honda-civic-hybrid-1-5-engine.webp",
    "w": 640,
-   "h": 533
+   "h": 603
   }
  },
  {
@@ -364,7 +364,7 @@
   "img": {
    "src": "/assets/engines/civic/honda-civic-k20c-engine.webp",
    "w": 640,
-   "h": 568
+   "h": 555
   }
  },
  {
@@ -420,7 +420,7 @@
   "img": {
    "src": "/assets/engines/civic/honda-civic-k20c1-type-r-engine.webp",
    "w": 640,
-   "h": 553
+   "h": 597
   }
  },
  {
@@ -439,7 +439,7 @@
   "img": {
    "src": "/assets/engines/civic/honda-civic-hybrid-2-0-engine.webp",
    "w": 640,
-   "h": 467
+   "h": 590
   }
  }
 ]

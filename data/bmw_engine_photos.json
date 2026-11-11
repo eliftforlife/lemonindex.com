@@ -2,26 +2,26 @@
  "B48": {
   "src": "/assets/engines/bmw-b48-turbo-inline-4-engine.webp",
   "w": 1200,
-  "h": 1020,
+  "h": 1074,
   "ai": true,
   "title": "BMW B48 2.0-liter turbo inline-4 engine (illustration)",
-  "bytes": 148854
+  "bytes": 108602
  },
  "B58": {
   "src": "/assets/engines/bmw-b58-turbo-inline-6-engine.webp",
   "w": 1200,
-  "h": 973,
+  "h": 1009,
   "ai": true,
   "title": "BMW B58 3.0-liter turbo inline-6 engine (illustration)",
-  "bytes": 143314
+  "bytes": 107902
  },
  "N20": {
   "src": "/assets/engines/bmw-n20-turbo-inline-4-engine.webp",
   "w": 1200,
-  "h": 1069,
+  "h": 1104,
   "ai": true,
   "title": "BMW N20 2.0-liter turbo inline-4 engine (illustration)",
-  "bytes": 149932
+  "bytes": 117902
  },
  "N52": {
   "src": "/assets/engines/bmw-n52-inline-6-engine.webp",
@@ -34,10 +34,10 @@
  "N54": {
   "src": "/assets/engines/bmw-n54-twin-turbo-inline-6-engine.webp",
   "w": 1200,
-  "h": 984,
+  "h": 1073,
   "ai": true,
   "title": "BMW N54 3.0-liter twin-turbo inline-6 engine (illustration)",
-  "bytes": 134400
+  "bytes": 140686
  },
  "N55": {
   "src": "/assets/engines/bmw-n55-turbo-inline-6-engine.webp",
@@ -50,18 +50,18 @@
  "N63": {
   "src": "/assets/engines/bmw-n63-twin-turbo-v8-engine.webp",
   "w": 1200,
-  "h": 806,
+  "h": 970,
   "ai": true,
   "title": "BMW N63 4.4-liter twin-turbo V8 engine (illustration)",
-  "bytes": 146980
+  "bytes": 95252
  },
  "S54": {
   "src": "/assets/engines/bmw-s54-inline-6-engine.webp",
   "w": 1200,
-  "h": 922,
+  "h": 1102,
   "ai": true,
   "title": "BMW S54 3.2-liter inline-6 engine (illustration)",
-  "bytes": 143546
+  "bytes": 145456
  },
  "S55": {
   "src": "/assets/engines/bmw-s55-twin-turbo-inline-6-engine.webp",
@@ -82,26 +82,26 @@
  "S63": {
   "src": "/assets/engines/bmw-s63-twin-turbo-v8-engine.webp",
   "w": 1200,
-  "h": 953,
+  "h": 965,
   "ai": true,
   "title": "BMW S63 4.4-liter twin-turbo V8 engine (illustration)",
-  "bytes": 143358
+  "bytes": 94382
  },
  "M54": {
   "src": "/assets/engines/bmw-m54-inline-6-engine.webp",
   "w": 1200,
-  "h": 1116,
+  "h": 1128,
   "ai": true,
   "title": "BMW M54 inline-6 engine (illustration)",
-  "bytes": 131352
+  "bytes": 145338
  },
  "N62": {
   "src": "/assets/engines/bmw-n62-v8-engine.webp",
   "w": 1200,
-  "h": 1027,
+  "h": 998,
   "ai": true,
   "title": "BMW N62 V8 engine (illustration)",
-  "bytes": 138986
+  "bytes": 108618
  },
  "S65": {
   "src": "/assets/engines/bmw-s65-v8-engine.webp",
