@@ -1503,3 +1503,12 @@ article.ev2 .tb-p { padding-top: 4px; } article.ev2 .tb-p > h2:first-child { mar
 .imgp .imgmore { margin: 12px 0 0; padding: 9px 16px; border-radius: 999px; border: 1px solid var(--line); background: #fff; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; }
 .imgp .imgcr p { margin: 0; }
 @media (max-width: 600px) { .imggrid.ig2 { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; } }
+/* 11-10 re-audit fixes: stacked cells always wrap; "Coming soon" in sentence case; shorter dead zones on the home page and above the footer */
+@media (max-width: 600px) { table.stk td, table.stk tbody th { white-space: normal !important; } }
+.mb-soon { letter-spacing: 0 !important; text-transform: none !important; font-size: 15px !important; }
+@media (max-width: 600px) {
+  .home { gap: 72px; }
+  .home > .tiles-cr { margin-top: -58px; }
+  main { padding-bottom: 16px; }
+  .foot { margin-top: 16px; }
+}
