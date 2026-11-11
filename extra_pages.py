@@ -34,9 +34,10 @@ def _extra_pages():
         body = '<div class="advp"><header class="advh1"><p class="ph-e"><a href="/brands/">Brands</a></p><h1>Pontiac problems and recalls, by model.</h1><p class="ans">' + E(lede) + '</p></header><div class="ygrid"><section class="yc">' + rows(['Model', 'Years', 'Complaints', 'Recalls', 'Top complaint'], [[f'<a href="/cars/{m["id"]}/">{E(m["name"])}</a>', f'{m["a"]}–{m["b"]}', f'{m["n"]:,}', len(m['recalls']), E(m['parts'][0][0]).capitalize() if m['parts'] else '–'] for m in P]) + '</section></div><p class="yc-cap">Source: NHTSA. No Lemon Index for Pontiac yet, because we don&#39;t have sales by year.</p></div>'
         page('/brands/pontiac/', 'Pontiac Problems and Recalls by Model', lede, body); EXTRA_URLS.insert(0, '/brands/pontiac/')
     # links in from existing pages, so these aren't orphans
-    for f, html_ in (('docs/brands/index.html', '<p class="yc-cap" style="text-align:center"><a href="/brands/pontiac/">Pontiac (discontinued): problems and recalls by model</a></p>'), ('docs/cars/index.html', '<p class="yc-cap" style="text-align:center"><a href="/brands/pontiac/">Pontiac models</a> · <a href="/cars/volkswagen-taos/">Volkswagen Taos</a></p>'), ('docs/brands/volkswagen/index.html', '<p class="yc-cap" style="text-align:center"><a href="/cars/volkswagen-taos/">Volkswagen Taos problems and recalls</a></p>')):
+    for f, html_ in (('docs/brands/index.html', '<p class="yc-cap" style="text-align:center"><a href="/brands/pontiac/">Pontiac (discontinued): problems and recalls by model</a></p>'), ('docs/cars/index.html', '<p class="ctn mb-more" data-hide="p s e"><b>More:</b> <a href="/brands/pontiac/">Pontiac models (discontinued)</a> · <a href="/cars/volkswagen-taos/">Volkswagen Taos</a></p>'), ('docs/brands/volkswagen/index.html', '<p class="yc-cap" style="text-align:center"><a href="/cars/volkswagen-taos/">Volkswagen Taos problems and recalls</a></p>')):
         if os.path.exists(f):
             s = open(f, encoding='utf-8').read()
-            if html_ not in s: open(f, 'w', encoding='utf-8').write(s.replace('</main>', html_ + '</main>', 1))
+            _at = '<p class="ph-cr" data-hide="p">' if f == 'docs/cars/index.html' and '<p class="ph-cr" data-hide="p">' in s else '</main>'   # 11-11: inside the /cars/ grid, so the tabs can hide it
+            if html_ not in s: open(f, 'w', encoding='utf-8').write(s.replace(_at, html_ + _at, 1))
     print('extra pages', len(EXTRA_URLS))
 _extra_pages()

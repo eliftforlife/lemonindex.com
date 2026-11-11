@@ -1423,18 +1423,29 @@ _brand = lambda b: (f'<div class="mb"><h3>{E(b)}</h3><div class="mg">' + ''.join
                     + ''.join(ndcard(m) for m in sorted(_nd.get(b, []), key=lambda m: m['name'])) + '</div></div>')
 _soon = sorted(set(_nd) - set(pick) - set(_xb))
 lst = ''.join(_brand(b) for b in sorted(set(pick) | set(_xb))) + (f'<p class="mb-soon">Coming soon: no scores yet for these brands</p>' + ''.join(_brand(b) for b in _soon) if _soon else '')
+def _mwcard(s):
+    if s == 'bmw-m3':
+        m = YSL.model_img('bmw-m3')
+        return (f'<a class="mc mc-sc mc-dup" data-t="p" href="/cars/bmw-m3/"><span class="mc-p">{_cimg(m, "BMW M3") if m else ""}</span><b>BMW M3</b>'
+                f'<small class="mc-k">3.0L twin-turbo inline-6</small></a>')
+    c = next((c for c in PERFX if c.get('slug') == s), None)
+    return pfcard(c).replace('class="mc ', 'class="mc mc-dup ', 1) if c else ''
+_MW = ''.join(_mwcard(s) for s in ('bmw-m3', 'gr-supra', 'shelby-gt500', 'trackhawk', 'ct5-v-blackwing', 'civic-type-r'))
+_MW = f'<div class="mb pf-top"><h3>Most wanted</h3><div class="mg">{_MW}</div></div>' if PERFX else ''
 _nev = len(EVX); _npf = sum(c.get('group', 'A') == 'A' for c in PERFX); _nsc = len(SCX) + sum(c.get('group') in ('B', 'C') for c in PERFX)
 CTABS = ('<nav class="ctabs" aria-label="Kinds of car">' + ''.join(f'<a href="{u}" data-type="{k}"{" aria-current=true" if k == "all" else ""}>{t}{f" <small>{n}</small>" if n else ""}</a>' for u, k, t, n in (
     ('/cars/', 'all', 'All cars', ''), ('/cars/?type=performance', 'performance', 'Performance', _npf or 'soon'),
     ('/cars/?type=supercars', 'supercars', 'Supercars', _nsc), ('/cars/?type=electric', 'electric', 'Electric', _nev))) + '</nav>')
-CNOTES = (f'<p class="ctn" data-for="performance" hidden>' + ('<b>Coming soon.</b> Performance cars and trims, from the Shelby GT500 to the Civic Type R. Each card shows its engine for now; horsepower, 0–60, owner complaints and recalls come as each one is checked.' if _npf else
-          '<b>Coming soon.</b> We&#39;re adding performance cars and trims next, from the Shelby GT500 to the Civic Type R.') + '</p>'
+_nsx = sum(c.get('group') in ('B', 'C') for c in PERFX)   # 11-11 (Elijah: tidy the Performance tab): a real tab header instead of one plain sentence
+CNOTES = (f'<div class="ctn pfh" data-for="performance" hidden><span class="pfh-pill">Coming soon</span><h3>Performance cars</h3>'
+          f'<p class="pfh-s">Horsepower, engines and owner reports, from the GT500 to the Type R.{ai_note("performance cars on this tab")}</p>'
+          + (f'<p class="pfh-n"><b>{_npf + _nsx} cars on the way:</b> {_npf} here, {_nsx} supercars and hypercars under <a href="/cars/?type=supercars">Supercars</a>.</p>' if _npf else '') + '</div>'
           f'<p class="ctn" data-for="supercars" hidden>Owner complaints are too rare to score supercars, so their cards lead with the engine. Cards marked Coming soon, hypercars included, are next. <a href="/supercars/">Supercar fuel costs and recalls, ranked</a></p>'
           f'<p class="ctn" data-for="electric" hidden>EV scores count complaints filed by the end of the year after the model year. <a href="/electric/">The most reliable EVs, ranked</a></p>')
 page('/cars/', 'Look Up Your Car: Problems by Model and Year | The Lemon Index', f'Pick your car and model year to see its owner complaints, its top problems and how it compares with every other year. {len(YEARS)} models, 2000-2025, plus {len(SCX)} supercars and {len(EVX)} electric cars.', f'''
 <div class="pg"><div class="ph ph-f">{finder('<span class="ph-e">Look up</span>Look up your car.', 'Every model year, 2000 to 2025. Free.')}</div>
-<section class="cgrid">{CTABS}<h2>Every model. <span class="h2s" data-hide="s p">Score in the corner: 100 is average, lower is better.</span></h2>{CNOTES}<div class="mbs">{lst}</div></section>
-<p class="ph-cr">Car images: AI-generated illustrations by The Lemon Index, free under CC BY 4.0 (<a href="/images/">download</a>).</p></div><script src="/assets/ctabs.js?v=2" defer></script>''',
+<section class="cgrid">{CTABS}<h2 data-hide="p">Every model. <span class="h2s" data-hide="s p">Score in the corner: 100 is average, lower is better.</span></h2>{CNOTES}<div class="mbs">{_MW}{lst}</div><p class="ph-cr" data-hide="p">Car images: AI-generated illustrations by The Lemon Index, free under CC BY 4.0 (<a href="/images/">download</a>).</p></section>
+<style>.pfh{{max-width:560px}}.pfh h3{{font-size:clamp(28px,6.5vw,36px);letter-spacing:-.03em;margin:10px 0 6px}}.pfh-pill{{display:inline-block;padding:4px 12px;border-radius:999px;background:#ffd400;color:#17161a;font-size:12.5px;font-weight:700;letter-spacing:.02em}}.pfh-s{{margin:0 0 6px;font-size:16px}}.pfh-n{{margin:0;font-size:14px;color:#6e6e73}}.cgrid[data-tab="performance"] .mc.mc-dup:not([hidden]){{display:flex}}.cgrid .ph-cr{{margin-top:28px}}</style></div><script src="/assets/ctabs.js?v=2" defer></script>''',
      ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": "Look up your car", "url": BASE + '/cars/'}])
 yurls.insert(0, '/cars/')
 
