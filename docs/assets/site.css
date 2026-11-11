@@ -1393,14 +1393,14 @@ article.cp2 details.cpd > :last-child { margin-bottom: 14px; }
 article.cp2 .crel { display: flex; flex-wrap: wrap; gap: 6px; }
 article.cp2 .crel a { padding: 6px 12px; border-radius: 999px; background: #f5f5f7; font-weight: 600; font-size: 14px; text-decoration: none; color: var(--ink); }
 .cf-q { width: 100%; max-width: 420px; margin: 0 0 12px; padding: 10px 14px; font: inherit; font-size: 15px; border: 1px solid var(--line); border-radius: 12px; }
-.cgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px; }
+div.cgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px; }
 .cgc { display: grid; gap: 2px; padding: 12px 14px 12px 30px; border-radius: 14px; background: #f5f5f7; color: var(--ink); text-decoration: none; position: relative; }
 .cgc::before { content: ''; position: absolute; left: 13px; top: 18px; width: 8px; height: 8px; border-radius: 50%; background: #c7c7cc; }
 .cgc.s1::before { background: #e9b300; } .cgc.s2::before { background: #ff9f0a; } .cgc.s3::before { background: var(--red); }
 .cgc b { font-size: 17px; letter-spacing: .01em; } .cgc span { font-size: 14px; line-height: 1.3; color: #3c4043; } .cgc small { font-size: 12.5px; color: #6e6e73; }
 .cgc:hover { background: #ececf0; }
 .cgc[hidden] { display: none; }
-@media (max-width: 600px) { .cgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .cgc { min-width: 0; overflow-wrap: anywhere; } .cgc { padding: 10px 10px 10px 26px; } .cgc::before { left: 10px; top: 16px; } .cgc span { font-size: 13px; } }
+@media (max-width: 600px) { div.cgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .cgc { min-width: 0; overflow-wrap: anywhere; } .cgc { padding: 10px 10px 10px 26px; } .cgc::before { left: 10px; top: 16px; } .cgc span { font-size: 13px; } }
 ol.cyr { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 0 24px; }
 ol.cyr li { display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
 ol.cyr li b { font-variant-numeric: tabular-nums; }
