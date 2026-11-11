@@ -9,7 +9,9 @@
 # Recalls: NHTSA campaigns already pulled per model and year (data/supercars.json); counted for an engine when every confirmed version of
 # that model-year had this engine, or the recall text names it. Repair notes: the automakers' notes to dealers (NHTSA manufacturer
 # communications, data/raw_more/MFR_COMMS_RECEIVED_*.zip), same matching, engine-related ones only.
-import csv, glob, io, json, os, re, sqlite3, sys, zipfile, collections
+import csv, glob, io, json, os, re, sqlite3, sys, zipfile, collections, hashlib, time, urllib.request, urllib.parse, urllib.error
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import data_perf_engine_defs as PD   # 11-11: the performance-car engine families (same page design, group 'perf')
 sys.stdout.reconfigure(encoding='utf-8'); csv.field_size_limit(10 ** 8)
 HERE = os.path.dirname(os.path.abspath(__file__))
 MAIN = r'C:\Users\elift\Code\lemonindex-site'   # data/cache and data/raw_more are not in git; read them from the main checkout
@@ -170,6 +172,21 @@ for r in csv.DictReader(open(os.path.join(CACHE, 'vehicles.csv'), encoding='utf-
         e = epa_engine(fam, r['model'], r['displ'], r['cylinders'], r['tCharger'] == 'T', r['sCharger'] == 'S', r['atvType'], y, r['eng_dscr'])
         FY[fam][y].add(e)
         if e: V[e][y][fam].add('Corvette Z06' if r['model'] == 'Corvette' else r['model'])   # the C7 Z06 is filed as plain "Corvette" with "Z06" in EPA's engine notes
+# ---- performance cars (data_perf_engine_defs.py): EPA versions by rule, each rule is one car on one engine
+GROUP = {e: 'super' for e in M}; GROUP.update({e: 'perf' for e in PD.M if e not in M})
+for e, m in PD.M.items():
+    if e not in M: M[e] = m
+CARSLUG = {}
+_fl = lambda v: float(v or 0)
+for r in csv.DictReader(open(os.path.join(CACHE, 'vehicles.csv'), encoding='utf-8', errors='replace')):
+    y = int(r['year'])
+    if y > 2026: continue
+    for e, label, slug, mk, rx, a, b, dsp, cond in PD.R:
+        if r['make'] != mk or not a <= y <= b or not re.fullmatch(rx, r['model']): continue
+        if dsp is not None and abs(_fl(r['displ']) - dsp) > .05: continue
+        sc, tc = r['sCharger'] == 'S', r['tCharger'] == 'T'
+        if (cond == 'sc' and not sc) or (cond == 'na' and (sc or tc)) or (cond == 'turbo' and not tc): continue
+        V[e][y][label].add(r['model']); CARSLUG[label] = slug
 SINGLE = {(fam, y): next(iter(es)) for fam, yy in FY.items() for y, es in yy.items() if len(es) == 1 and None not in es}
 # ---- NHTSA model names (complaints, repair notes) -> engine, only where the name and year leave no doubt
 NH = [('FERRARI', r'458.*', 2010, 2015, 'ferrari-f136'), ('FERRARI', r'CALIFORNIA', 2010, 2014, 'ferrari-f136'), ('FERRARI', r'CALIFORNIA T|CALIFORNIA', 2015, 2018, 'ferrari-f154'),
@@ -204,17 +221,34 @@ def nh_engines(mk, md, y, text=''):
         if mk == m and re.fullmatch(rx, md) and re.search(trx, text or '', re.I):
             for a, b, e in spans:
                 if a <= y <= b: out.add(e)
+    return {e for e in out if y in EY.get(e, ())} | nh_perf(mk, md, y, text)
+_NN = lambda s: re.sub(r'\s+|AMG', '', (s or '').upper())
+def nh_perf(mk, md, y, text=''):
+    md = _NN(md); out = set()
+    for m, rx, a, b, e in PD.NH:
+        if mk == m and a <= y <= b and re.fullmatch(rx, md): out.add(e)
+    for m, rx, trx, spans in PD.TXT:
+        if mk == m and re.fullmatch(rx, md) and re.search(trx, text or '', re.I):
+            for a, b, e in spans:
+                if a <= y <= b: out.add(e)
     return {e for e in out if y in EY.get(e, ())}
-MAKES = ('FERRARI', 'LAMBORGHINI', 'MCLAREN', 'ASTON MARTIN', 'BENTLEY', 'ROLLS-ROYCE', 'BUGATTI', 'AUDI', 'NISSAN', 'ACURA', 'MERCEDES-BENZ', 'CHEVROLET', 'FORD', 'LOTUS', 'PORSCHE')
+MAKES = ('FERRARI', 'LAMBORGHINI', 'MCLAREN', 'ASTON MARTIN', 'BENTLEY', 'ROLLS-ROYCE', 'BUGATTI', 'AUDI', 'NISSAN', 'ACURA', 'MERCEDES-BENZ', 'CHEVROLET', 'FORD', 'LOTUS', 'PORSCHE',
+         'DODGE', 'JEEP', 'RAM', 'CADILLAC', 'PONTIAC', 'BMW', 'LEXUS', 'TOYOTA', 'SCION', 'SUBARU', 'INFINITI', 'HONDA', 'MITSUBISHI', 'MAZDA', 'HYUNDAI', 'KIA', 'ALFA ROMEO', 'JAGUAR', 'MASERATI', 'PAGANI', 'KOENIGSEGG')
+PMODELS = ('CORVETTE', 'CAMARO', 'SS', 'CHEVEROLET SS', 'MUSTANG', 'F-150', 'F150', 'CHALLENGER', 'CHARGER', 'DURANGO', 'MAGNUM', 'VIPER', 'GRAND CHEROKEE', '1500', 'CTS', 'ATS', 'CT4', 'CT5', 'GTO', 'M3', 'M5', 'M6', 'XM', 'Z8', 'RS', 'TT',
+           'IS', 'RC', 'GS', 'LFA', 'GR', '86', 'FR-S', 'BRZ', 'WRX', 'IMPREZA', '370Z', 'Z', 'G37', 'Q50', 'Q60', 'S2000', 'TLX', 'MDX', 'LANCER', 'MX-5', 'MAZDASPEED', 'SPEED', 'VELOSTER', 'ELANTRA', 'KONA', 'STINGER', 'GIULIA', 'STELVIO', 'R8', 'NSX', 'GT-R', 'GT', 'EVORA', 'EMIRA', '911', '918')
+_PREF = re.compile('^(' + '|'.join(re.escape(x) for x in PMODELS) + ')')
 # ---- owner complaints
+print('complaints ...', flush=True)
 con = sqlite3.connect(DB)
 CMP = collections.defaultdict(lambda: collections.defaultdict(set)); PART = collections.defaultdict(collections.Counter)
-for odi, mk, md, y, comp, descr in con.execute(f"select odino, make, model, year, comp, descr from rows where make in ({','.join('?' * len(MAKES))}) and year between 2010 and 2025", MAKES):
-    if mk == 'CHEVROLET' and not (md or '').upper().startswith('CORVETTE'): continue
+_SUPER = {'FERRARI', 'LAMBORGHINI', 'MCLAREN', 'ASTON MARTIN', 'BENTLEY', 'ROLLS-ROYCE', 'BUGATTI', 'LOTUS', 'PAGANI', 'KOENIGSEGG', 'MASERATI'}
+for odi, mk, md, y, comp, descr in con.execute(f"select odino, make, model, year, comp, descr from rows where make in ({','.join('?' * len(MAKES))}) and year between 1990 and 2026", MAKES):
+    if mk not in _SUPER and mk != 'MERCEDES-BENZ' and not _PREF.match((md or '').upper().strip()): continue
     for e in nh_engines(mk, md or '', y, descr):
         if odi not in CMP[e][y]: PART[e][(comp or 'OTHER').split(':')[0].strip().title()] += 1
         CMP[e][y].add(odi)
 # ---- repair notes (manufacturer communications)
+print('repair notes ...', flush=True)
 ENGW = re.compile(r'\bengine (oil|coolant|noise|misfire|warning|light|stall|leak|knock|rattle|tick|damage|fault|power)|oil (leak|consumption|pressure|pump|level|loss)|turbo|coolant|misfire|camshaft|timing|fuel|ignition|spark plug|injector|cylinder|piston|valve|intake|exhaust|catalytic|water pump|thermostat|radiator|cooling|throttle|crankcase|check engine|\bMIL\b|\bDME\b|\bECM\b|\bECU\b|hybrid|high.voltage|supercharg|intercooler|head gasket|starter|alternator', re.I)
 SKIP = re.compile(r'gearbox|transmission|\bDCT\b|clutch|brake|headla?mp|fog lamp|seat|door|window|wiper|infotainment|underbody|record is|database|repair procedures|please find|level [123]\b|software version management|scan tool|diagnostic tester|labor operation|warranty|special tool|owner letter|delivery hold|pre-delivery|accessory|radio|navigation|paint|tire pressure|wheel bolt', re.I)
 TSB = collections.defaultdict(dict)
@@ -238,11 +272,12 @@ def one_line(s):
     s = s[:1].upper() + s[1:]
     return (s[:110].rsplit(' ', 1)[0] + '…') if len(s) > 112 else s
 PROB = re.compile(r'noise|leak|stall|hesitat|vibrat|rattl|no start|won.t start|inoperative|fail|warning|check engine|misfire|shudder|loss of|intermittent|overheat|crack|smoke|rough|fault', re.I)
-JUNK = re.compile(r'appl(y|ies) to|does not apply|vehicles with code|this document|has determined|bulletin has been|workshop manual|technical information for a|Q5|LEAF|Titan|Hand detection|^[A-Z]+;|Mustang|GT500|Resubmitting|design package|VDDM|spoiler|AC charging|HVAC|Air Condition|Techline|SERVICE INFORMATION|Supporting Evidence|throttle pedal|have been identified|identified as having|Because of an error|Automobili Lamborghini|air ducts|rubber boot|splash shield|muffler|^Information regarding', re.I)
-def tsb_top(tl):
+JUNK = re.compile(r'appl(y|ies) to|does not apply|vehicles with code|this document|has determined|bulletin has been|workshop manual|technical information for a|Q5|LEAF|Titan|Hand detection|^[A-Z]+;|Resubmitting|design package|VDDM|spoiler|AC charging|HVAC|Air Condition|Techline|SERVICE INFORMATION|Supporting Evidence|throttle pedal|have been identified|identified as having|Because of an error|Automobili Lamborghini|air ducts|rubber boot|splash shield|muffler|^Information regarding', re.I)
+def tsb_top(tl, e=''):
     seen, out = set(), []
     for s, _ in tl:
         if not PROB.search(s): continue
+        if re.search(r'Mustang|GT500|F-?150', s, re.I) and M.get(e, {}).get('make') != 'Ford': continue
         t = re.sub(r'^[A-Z][A-Za-z-]+;\s*', '', one_line(s))
         if JUNK.search(t) or JUNK.search(s[:60]): continue
         k = re.sub(r'[^a-z]', '', t.lower())[:28]
@@ -267,6 +302,28 @@ for fam, c in SC.items():
             for e in rec_engines(fam, yy['y'], r):
                 d = REC[e].setdefault(r['id'], dict(id=r['id'], date=r['date'], part=(r['part'] or '').split(':')[0].strip().title(), summary=r['summary'], years=set(), cars=set(), eng=bool(ENGR.search(r['part'] or ''))))
                 d['years'].add(yy['y']); d['cars'].add(fam)
+# ---- performance-car recalls: NHTSA's recall lookup for model names that are this engine's alone in those years (cached; ~3 requests a second)
+def _get(url):
+    p = os.path.join(CACHE, hashlib.sha1(url.encode()).hexdigest()[:20] + '.json')
+    if os.path.exists(p): return json.load(open(p, encoding='utf-8'))
+    print('  recall lookup', url[-70:], flush=True)
+    for k in range(3):
+        try:
+            d = json.loads(urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent': 'LemonIndex/1.0 (lemonindex.com)', 'Accept': 'application/json'}), timeout=25).read() or b'null')
+            json.dump(d, open(p, 'w', encoding='utf-8')); time.sleep(.35); return d
+        except urllib.error.HTTPError as ex:
+            if ex.code in (400, 404): json.dump(None, open(p, 'w', encoding='utf-8')); return None   # no such model name for that year
+            time.sleep(2 + 3 * k)
+        except Exception: time.sleep(2 + 3 * k)
+    return None
+for mk, md, a, b, e in PD.REC:
+    for y in range(a, b + 1):
+        if y not in EY.get(e, ()): continue
+        for r in (_get('https://api.nhtsa.gov/recalls/recallsByVehicle?' + urllib.parse.urlencode({'make': mk, 'model': md, 'modelYear': y})) or {}).get('results', []):
+            cid = r.get('NHTSACampaignNumber')
+            if not cid: continue
+            d = REC[e].setdefault(cid, dict(id=cid, date=r.get('ReportReceivedDate') or '', part=(r.get('Component') or '').split(':')[0].strip().title(), summary=(r.get('Summary') or '')[:300], years=set(), cars=set(), eng=bool(ENGR.search(r.get('Component') or ''))))
+            d['years'].add(y); d['cars'].add(mk.title() + ' ' + md)
 # ---- assemble
 out = {}
 for e, m in M.items():
@@ -274,7 +331,7 @@ for e, m in M.items():
     if not yrs: print('NO EPA VERSIONS', e); continue
     years = {}
     for y in sorted(yrs):
-        years[str(y)] = dict(cars={slugify(f): sorted(v) for f, v in yrs[y].items()}, n=len(CMP[e].get(y, ())), only=all((f, y) in SINGLE for f in yrs[y]))
+        years[str(y)] = dict(cars={slugify(f): sorted(v) for f, v in yrs[y].items()}, n=len(CMP[e].get(y, ())), only=all((f, y) in SINGLE for f in yrs[y] if f in SC))
     tot = sum(v['n'] for v in years.values())
     tl = sorted(TSB[e].values(), key=lambda x: (-(1 if PROB.search(x[0]) else 0), -max(x[1])))
     recs = sorted(REC[e].values(), key=lambda r: (not r['eng'], r['date'][-4:] + r['date'][3:5] if r['date'] else ''), reverse=False)
@@ -282,15 +339,16 @@ for e, m in M.items():
     cars = collections.OrderedDict()
     for y in sorted(yrs):
         for f in yrs[y]: cars.setdefault(f, []).append(y)
-    out[e] = dict(m, notes=NOTES.get(e, []), y0=min(yrs), y1=max(yrs), years=years, complaints=tot, parts=PART[e].most_common(4), chart=tot >= 30 and sum(1 for v in years.values() if v['n']) >= 3,
-                  cars=[dict(slug=slugify(f), name=f, years=ys, page=f in SC) for f, ys in cars.items()],
+    out[e] = dict(m, group=GROUP.get(e, 'super'), notes=NOTES.get(e, []) + list(m.get('notes', [])), y0=min(yrs), y1=max(yrs), years=years, complaints=tot, parts=PART[e].most_common(4), chart=tot >= 30 and sum(1 for v in years.values() if v['n']) >= 3,
+                  cars=[dict(slug=slugify(f), name=f, years=ys, page=f in SC, perf=CARSLUG.get(f, '')) for f, ys in cars.items()],
                   recalls=[dict(r, years=sorted(r['years']), cars=sorted(r['cars'])) for r in recs],
-                  tsb=dict(n=len(TSB[e]), top=tsb_top(tl)))
+                  tsb=dict(n=len(TSB[e]), top=tsb_top(tl, e)))
     print(f"{e:20} {out[e]['y0']}-{out[e]['y1']} cars {len(cars)} complaints {tot:4} recalls {len(recs):3} (engine {sum(r['eng'] for r in recs)}) notes {len(TSB[e]):4}  chart {out[e]['chart']}")
 car_eng = collections.defaultdict(dict)
 for e, d in out.items():
     for c in d['cars']:
         car_eng[c['slug']][e] = c['years']
+        if c.get('perf'): car_eng.setdefault('perf:' + c['perf'], {})[e] = sorted(set(car_eng.get('perf:' + c['perf'], {}).get(e, [])) | set(c['years']))
 nc = sorted({(f, y) for f, yy in FY.items() for y, es in yy.items() if None in es})
 print('model-years with a version no source confirms:', nc)
 json.dump(dict(engines=out, cars=car_eng, unconfirmed=[f'{f} {y}' for f, y in nc]), open(os.path.join(HERE, 'data', 'supercar_engines.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=0)

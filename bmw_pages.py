@@ -348,7 +348,7 @@ else:
                     f'<figcaption><b>{E(name)}</b>{extra}<span><a href="{E(src)}">Full size</a>' + (f' · <a href="{use_url}">{E(use_txt)}</a>' if use_url else '') + '</span></figcaption></figure>')
         groups = []
         groups.append(('engines', 'BMW engines', [card(ph['src'], ph['w'], ph['h'], ph['title'], ph['title'], p_, 'Engine page') for p_, ph in ours]))
-        if globals().get('SCE_IMGS'): groups.append(('supercar-engines', 'Supercar engines', [card(ph['src'], ph['w'], ph['h'], ph['title'], ph['title'], p_, 'Engine page') for p_, ph in SCE_IMGS]))   # 11-11 (supercar_engine_pages.py)
+        if globals().get('SCE_IMGS'): groups.append(('supercar-engines', 'Supercar and performance engines', [card(ph['src'], ph['w'], ph['h'], ph['title'], ph['title'], p_, 'Engine page') for p_, ph in SCE_IMGS]))   # 11-11 (supercar_engine_pages.py)
         _pages = {f['id'] for f in YEARS}
         if YSL.AIM:
             groups.append(('models', 'Every car model', [card(m['src'], m['w'], m['h'], f'{m["year"]} {m["name"]} illustration', f'{m["year"]} {m["name"]}',

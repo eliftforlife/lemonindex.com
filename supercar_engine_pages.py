@@ -9,7 +9,10 @@
 # the automaker's repair notes. Nothing is estimated or padded.
 import html as _shtml
 SCENG = _load('data/supercar_engines.json') if os.path.exists('data/supercar_engines.json') else {'engines': {}, 'cars': {}}
-SCY = _load('data/supercar_engine_yt.json') if os.path.exists('data/supercar_engine_yt.json') else {}
+# YouTube scores: the workers write data/supercar_engine_yt.json in the main checkout (and commit it when they deploy); a snapshot of it is
+# committed with each engine-page push so builds from other checkouts keep the ranks. The live file wins per engine.
+SCY = dict(_load('data/supercar_engine_yt_snapshot.json') if os.path.exists('data/supercar_engine_yt_snapshot.json') else {})
+SCY.update(_load('data/supercar_engine_yt.json') if os.path.exists('data/supercar_engine_yt.json') else {})
 SCP = _load('data/supercar_engine_photos.json') if os.path.exists('data/supercar_engine_photos.json') else {}
 SCE_URLS, SCE_IMGS = [], []
 SCE_SLUG = {'rr-n73': 'rolls-royce-n73', 'rr-n74': 'rolls-royce-n74'}
@@ -17,7 +20,7 @@ SCE_URL = lambda e: f'/engines/{SCE_SLUG.get(e, e)}/'
 SCE_HUB = '/engines/supercars/'
 SC_NAME = {re.sub(r'[^a-z0-9]+', '-', c['name'].lower().replace("'", '')).strip('-'): c['name'] for c in (_load('data/supercars.json') if os.path.exists('data/supercars.json') else [])}
 _SCCBY = 'https://creativecommons.org/licenses/by/4.0/'
-_SCE_AI = ('Illustration (AI-generated), not a photo of a specific engine. '
+_SCE_AI = ('Illustration (AI-generated) in the style of a factory press photo, not a photo of a specific engine; brand names and logos belong to their owners. '
            f'Free to use under <a href="{_SCCBY}" rel="noopener license">CC BY 4.0</a>: credit The Lemon Index (lemonindex.com). <a href="/images/">Download and credit text</a>')
 _SCYTI = '<svg aria-hidden="true" viewBox="0 0 24 24" width="11" height="11"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>'
 
@@ -30,9 +33,24 @@ _SCAVG = {}
 for _e in SCENG['engines']:
     _s, _a = _sce_yt(_e)
     if _s: _SCAVG[_e] = sum(_s.values()) / len(_s)
-SCE_YTRANK = {e: i + 1 for i, e in enumerate(sorted(_SCAVG, key=lambda e: (-_SCAVG[e], e)))}
+# 11-11: two groups share this code - supercar engines (/engines/supercars/) and performance-car engines (/engines/performance/);
+# each engine's YouTube rank is among the engines of its own group
+_GRP = lambda e: SCENG['engines'][e].get('group', 'super')
+SCE_YTRANK = {}
+for _g in ('super', 'perf'):
+    SCE_YTRANK.update({e: i + 1 for i, e in enumerate(sorted([e for e in _SCAVG if _GRP(e) == _g], key=lambda e: (-_SCAVG[e], e)))})
+SCE_NRANK = {g: sum(1 for e in SCE_YTRANK if _GRP(e) == g) for g in ('super', 'perf')}
+GW = {'super': 'supercar engines', 'perf': 'performance engines'}
+HUBS = {'super': '/engines/supercars/', 'perf': '/engines/performance/'}
 SCE_N = len(SCENG['engines'])
 
+SC_NAME = {**{c['slug']: c['name'] for _d in SCENG['engines'].values() for c in _d['cars']}, **SC_NAME}
+def _car_href(c):
+    """the car's own page: a supercar page, or a performance-car page once it exists (another agent adds those from data/perf_cars.json)"""
+    if c.get('page'): return f'/supercars/{c["slug"]}/'
+    for u in ((f'/cars/{c["perf"]}/', f'/performance/{c["perf"]}/') if c.get('perf') else ()):
+        if os.path.exists(os.path.join(OUT, u.strip('/'), 'index.html')): return u
+    return None
 SC_MAKE = {re.sub(r'[^a-z0-9]+', '-', c['name'].lower().replace("'", '')).strip('-'): c['make'] for c in (_load('data/supercars.json') if os.path.exists('data/supercars.json') else [])}
 def _sce_label(d, slug):
     """the car's name as this engine's page should say it: a family that had other engines too is named by its versions when there are
@@ -58,9 +76,11 @@ def _sce_rec_li(r):
     return (f'<li><p class="advh"><a href="https://www.nhtsa.gov/recalls?nhtsaId={E(r["id"])}" target="_blank" rel="noopener nofollow">{E(r["id"])}</a> '
             f'<small>{E(r["part"] or "Other")} · {E(cars)} {ys}</small></p><p>{E(rsum(r) if "rsum" in globals() else r["summary"])}</p></li>')
 
+WHY = {'super': 'Supercars sell in small numbers, so we show YouTube, recalls and the automaker&#39;s repair notes instead.',
+       'perf': 'Performance versions are mostly filed under their base model (a Shelby GT500 is filed as a Mustang), so we only count complaints whose model name or the owner&#39;s own words tie them to this engine, and lead with YouTube, recalls and the automaker&#39;s repair notes.'}
 def _sce_page(e):
     d = SCENG['engines'][e]; path = SCE_URL(e); yrs = d['years']; ys = sorted(yrs, key=int); y0, y1 = int(ys[0]), int(ys[-1])
-    yts, ytavg = _sce_yt(e); rk = SCE_YTRANK.get(e); nm = d['name']; mk = d['make']
+    yts, ytavg = _sce_yt(e); rk = SCE_YTRANK.get(e); nm = d['name']; mk = d['make']; g = _GRP(e)
     cars_s = _sce_short(d); tot = d['complaints']
     # one-line answer + chips
     yb = max(yts, key=yts.get) if len(yts) >= 2 and len(set(yts.values())) > 1 else None
@@ -68,7 +88,7 @@ def _sce_page(e):
             + (f' YouTube likes the <b>{yb}</b> best.' if yb else ''))
     chips = (f'<div class="trc"><div><b>{y0}' + (f'–{str(y1)[-2:]}' if y1 != y0 else '') + '</b><span>model years</span></div>'
              + f'<div><b>{_sce_hp(d)}</b><span>hp (factory)</span></div>'
-             + (f'<div><b>#{rk}</b><span>YouTube rank of {len(SCE_YTRANK)} supercar engines</span></div>' if rk else '<div><b>–</b><span>YouTube rank coming</span></div>') + '</div>')
+             + (f'<div><b>#{rk}</b><span>YouTube rank of {SCE_NRANK[g]} {GW[g]}</span></div>' if rk else '<div><b>–</b><span>YouTube rank coming</span></div>') + '</div>')
     # per-year chart
     sec = []
     mxn = max([1] + [v['n'] for v in yrs.values()])
@@ -79,8 +99,8 @@ def _sce_page(e):
         ow = (f'<span class="eg-o"><i style="width:{n / mxn * 100:.0f}%"></i></span><b>{n:,}</b>' if n else '<span class="eg-o na"></span><b class="mute">0</b>') if d['chart'] else ''
         return f'<div class="egr"><span class="egy">{y}<small>{E(carsof(y))}</small></span>{ow}{yt}</div>'
     nc = '' if d['chart'] else (f'<p class="note sce-nc"><b>Not enough complaints to chart.</b> Owners filed {tot:,} complaint{"" if tot == 1 else "s"} with the government that we can tie to this engine&#39;s cars, {y0}–{y1}, about any part of the car. '
-                                 'Supercars sell in small numbers, so we show YouTube, recalls and the automaker&#39;s repair notes instead.</p>' if tot else
-                                 f'<p class="note sce-nc"><b>Not enough complaints to chart.</b> We found no government complaints we can tie to this engine&#39;s cars. Supercars sell in small numbers, so we show YouTube, recalls and the automaker&#39;s repair notes instead.</p>')
+                                 + WHY[g] + '</p>' if tot else
+                                 f'<p class="note sce-nc"><b>Not enough complaints to chart.</b> We found no government complaints we can tie to this engine&#39;s cars. ' + WHY[g] + '</p>')
     if yts or d['chart']:
         head = ('<div class="egh" aria-hidden="true"><span>Year</span>' + ('<span>Owner complaints <em>count, any part of the car</em></span>' if d['chart'] else '')
                 + '<span>YouTube tone <em>0-100, higher = better</em></span></div>')
@@ -99,7 +119,7 @@ def _sce_page(e):
     sec.append('<h2>Reliability by year</h2>' + nc + chart + (f'<p class="note">{yline}</p>' if yline else '')
                + '<details class="trm"><summary>How we count: owner complaints only where the car&#39;s name and year leave no doubt; YouTube tone from videos that name this engine or its cars. <span>How we count</span></summary>'
                '<p>Owner complaints (NHTSA) are filed by model and year, not engine. We count one for this engine only when the model name and year had no other engine (e.g. "488 GTB", "GT-R"), '
-               'or, for the Corvette, when the owner&#39;s own words name the Z06, ZR1 or E-Ray. They cover the whole car (wheels, air bags, electrics ...), not only the engine, and none of them is a failure rate. '
+               'or when the owner&#39;s own words name a version that had only this engine that year (Z06, ZR1, Hellcat, GT500 ...). They cover the whole car (wheels, air bags, electrics ...), not only the engine, and none of them is a failure rate. '
                'We chart them only for engines with 30 or more, over 3 or more years. '
                'YouTube tone = how positive the videos are, 0–100, from titles and transcripts (praise vs trouble words, the title counts 3 times), weighted by views; a year needs at least 3 videos&#39; worth. '
                'A video counts for this engine when its title names the engine or a car that only had this engine in the years it names; a video whose title names no model year counts toward every year of that car, so neighboring years share most of their videos.</p></details>'
@@ -127,7 +147,8 @@ def _sce_page(e):
     for c in d['cars']:
         vs = sorted({v for y in ys for v in yrs[y]['cars'].get(c['slug'], [])})
         yl = c['years']; cn = SC_NAME.get(c['slug'], c['name'])
-        vr.append([(f'<a href="/supercars/{c["slug"]}/">{E(cn)}</a>' if c['page'] else E(cn)) + f' <small>{E(", ".join(vs[:6]))}{" ..." if len(vs) > 6 else ""}</small>',
+        hr = _car_href(c)
+        vr.append([(f'<a href="{hr}">{E(cn)}</a>' if hr else E(cn)) + f' <small>{E(", ".join(vs[:6]))}{" ..." if len(vs) > 6 else ""}</small>',
                    f'{min(yl)}–{str(max(yl))[-2:]}' if len(yl) > 1 else str(yl[0])])
     srcs = ' · '.join(f'<a href="{E(s["url"])}" rel="noopener">{E(s["title"])}</a>' for s in d['src'])
     sec.append('<section class="engv"><h2>Every US version with this engine</h2>' + _tbl(['Car and versions', 'Years'], vr)
@@ -135,8 +156,8 @@ def _sce_page(e):
                + f'Power: {_sce_hp(d)} hp, factory figures' + (f' ({E(d["hp_note"])})' if d.get('hp_note') else '') + '. ' + (d.get('caveat', '') + ' ' if d.get('caveat') else '')
                + f'Versions and years: EPA (fueleconomy.gov). Sources: {srcs}.</p></section>')
     faq = [(f'What cars have the {nm} engine?', f'In the US: the {_sce_cars_txt(d)}, model years {y0}–{y1}. See the version table for each one.'),
-           (f'Is the {nm} reliable?', ('Not enough owner complaints to judge it per car: supercars sell in small numbers. ' if not d['chart'] else f'Owners filed {tot:,} complaints we can tie to it, about any part of the car. ')
-            + (f'YouTube owners and reviewers rate it {ytavg} out of 100 on average (#{rk} of {len(SCE_YTRANK)} supercar engines). ' if ytavg is not None else '')
+           (f'Is the {nm} reliable?', (('Not enough owner complaints to judge it per car: supercars sell in small numbers. ' if g == 'super' else 'Not enough owner complaints to judge it per car: the government files most performance versions under their base model. ') if not d['chart'] else f'Owners filed {tot:,} complaints we can tie to it, about any part of the car. ')
+            + (f'YouTube owners and reviewers rate it {ytavg} out of 100 on average (#{rk} of {SCE_NRANK[g]} {GW[g]}). ' if ytavg is not None else '')
             + (f'Its cars had {len(R)} recalls ({ne} about the engine, fuel or powertrain). ' if R else '') + 'Have any used car inspected.'),
            (f'How much horsepower does the {nm} make?', f'{_sce_hp(d)} hp in factory figures, depending on the car' + (f' ({d["hp_note"]})' if d.get('hp_note') else '') + '.')]
     sec.append('<section class="yqa trq"><h2>Quick answers</h2>' + qa_fold(''.join(f'<h3>{E(q)}</h3><p>{E(_shtml.unescape(a))}</p>' for q, a in faq)) + '</section>')
@@ -144,8 +165,8 @@ def _sce_page(e):
     if ph:
         alt = f'Illustration of the {E(nm)} {E(d["size"])} {E(d["layout"])} engine'
         fig = (f'<figure class="engph"><img src="{E(ph["src"])}"{rset(ph["src"], "(max-width: 700px) 100vw, 680px")} width="{ph["w"]}" height="{ph["h"]}" alt="{alt}" loading="eager">' + YSL.info(_SCE_AI) + '</figure>')
-    body = (f'<article class="study tr2 eng2 sce"><p class="kicker"><a href="{SCE_HUB}">Supercar engines</a> · <a href="/supercars/">Supercars</a></p>'
-            f'<h1>{E(nm)} engine reliability by year</h1><p class="tra">{ans1} <button type="button" class="shl" data-share="{E(f"{nm} engine reliability, year by year. Free:")}">Share ↗</button></p>{chips}'
+    body = (f'<article class="study tr2 eng2 sce"><p class="kicker">' + ('<a href="/engines/supercars/">Supercar engines</a> · <a href="/supercars/">Supercars</a>' if g == 'super' else '<a href="/engines/performance/">Performance engines</a> · <a href="/cars/?type=performance">Performance cars</a>') + '</p>'
+            + f'<h1>{E(nm)} engine reliability by year</h1><p class="tra">{ans1} <button type="button" class="shl" data-share="{E(f"{nm} engine reliability, year by year. Free:")}">Share ↗</button></p>{chips}'
             + ''.join(sec) + '</article>')
     title = next(t_ for t_ in (f'{nm} Engine Reliability by Year, Specs & Cars', f'{nm} Engine: Reliability by Year & Specs', f'{nm} Engine Reliability', f'{nm} Engine') if len(t_) <= 65)
     desc = (f'The {_shtml.unescape(nm)} ({_shtml.unescape(d["size"])} {d["asp"]} {d["layout"]}) in the {_sce_cars_txt(d)}, {y0}-{y1}: YouTube owner score by year, '
@@ -161,11 +182,12 @@ def _sce_page(e):
     SCE_URLS.append(path)
     return dict(e=e, y0=y0, y1=y1, yt=ytavg, nyt=len(yts), rec=len(R), tsb=t['n'], tot=tot)
 
-def _sce_hub():   # a function, so the hub's locals (order, best, cards ...) don't overwrite build.py globals
-    _ST = [_sce_page(e) for e in SCENG['engines']]
+def _sce_hub(g):   # a function, so the hub's locals (order, best, cards ...) don't overwrite build.py globals
+    _ST = [_sce_page(e) for e in SCENG['engines'] if _GRP(e) == g]
+    HUB = HUBS[g]; NG = len(_ST); NR = SCE_NRANK[g]
     def _skind(e):
         d = SCENG['engines'][e]; lay = d['layout'].lower(); a = d['asp'].lower()
-        cyl = '12' if re.search(r'v12|w12|w16|v10', lay) else '8' if 'v8' in lay else '6'
+        cyl = '12' if re.search(r'v12|w12|w16|v10', lay) else '8' if 'v8' in lay else '4' if re.search(r'inline-[345]|flat-4', lay) else '6'
         return cyl, ('turbo' in a or 'supercharg' in a), ('hybrid' in a)
     def _scard(s, eager):
         e = s['e']; d = SCENG['engines'][e]; ph = SCP.get(e); cyl, tur, hyb = _skind(e); rk = SCE_YTRANK.get(e)
@@ -184,39 +206,50 @@ def _sce_hub():   # a function, so the hub's locals (order, best, cards ...) don
         return (f'<li class="ehc" data-rank="{rk or 999}" data-own="{rk or 999}" data-yt="{s["yt"] if s["yt"] is not None else -1}" data-y0="{s["y0"]}" data-y1="{s["y1"]}" data-cyl="{cyl}" '
                 f'data-turbo="{1 if tur else 0}" data-hy="{1 if hyb else 0}" data-mk="{E(d["make"])}" data-rec="{s["rec"]}">'
                 + img + f'<span class="ehc-rk sce-mk" title="Maker">{E(d["make"])}</span>'
-                + (f'<span class="ytbadge ehc-yr" title="YouTube rank by tone, of {len(SCE_YTRANK)} supercar engines with enough videos">{_SCYTI}YT #{rk}</span>' if rk
+                + (f'<span class="ytbadge ehc-yr" title="YouTube rank by tone, of {NR} {GW[g]} with enough videos">{_SCYTI}YT #{rk}</span>' if rk
                    else '<span class="ytbadge ehc-yr na" title="YouTube rank coming">' + _SCYTI + 'YT –</span>')
                 + f'<h2><a class="ehc-a" href="{SCE_URL(e)}">{E(d["name"])}</a></h2><p class="ehc-t">{E(d["size"])} {E(d["layout"])} {E(d["asp"])} · {yrs}</p>'
                 + main + f'<p class="ehc-yt">{sub}</p><ul class="ehc-cars" aria-label="Cars with the {E(d["name"])}">{chips}</ul></li>')
     order = sorted(_ST, key=lambda s: (SCE_YTRANK.get(s['e'], 999), SCENG['engines'][s['e']]['make'], s['y0']))
     cards = [_scard(s, i == 0) for i, s in enumerate(order)]
     kinds = [_skind(s['e']) for s in _ST]
-    pills = [('all', 'All'), ('12', 'V10, V12, W12, W16'), ('8', 'V8'), ('6', 'V6, flat-6, I4/I6'), ('turbo', 'Turbo or supercharged'), ('na', 'Naturally aspirated'), ('hy', 'Hybrid')]
-    nscored = len(SCE_YTRANK)
-    short = (f'{SCE_N} engines in {len(SC_NAME)} supercars, every one sourced. Supercars draw too few government complaints to score per car, so each engine shows its YouTube owner tone, recalls and the automaker&#39;s repair notes.'
+    has = lambda f: any((k[0] == f) if f in ('12', '8', '6', '4') else k[2] if f == 'hy' else k[1] if f == 'turbo' else not k[1] for k in kinds)
+    pills = [('all', 'All')] + [(k, lab) for k, lab in (('12', 'V10, V12, W12, W16' if g == 'super' else 'V10, V12'), ('8', 'V8'), ('6', '6-cylinder'), ('4', '3, 4 and 5-cylinder'),
+                                                         ('turbo', 'Turbo or supercharged'), ('na', 'Naturally aspirated'), ('hy', 'Hybrid')) if has(k)]
+    nscored = NR
+    ncars = len({c['perf'] or c['slug'] for s_ in _ST for c in SCENG['engines'][s_['e']]['cars']})
+    short = ((f'{NG} engines in {len(SC_MAKE)} supercars, every one sourced. Supercars draw too few government complaints to score per car, so each engine shows its YouTube owner tone, recalls and the automaker&#39;s repair notes.' if g == 'super' else
+              f'{NG} engines in {ncars} performance cars, every one sourced. The government files most performance versions under their base model, so each engine leads with its YouTube owner tone, recalls and the automaker&#39;s repair notes.')
              + ('' if nscored else ' YouTube ranks are coming: we&#39;re pulling the videos now.'))
     method = ('Each engine is matched to its cars from EPA&#39;s version list (fueleconomy.gov) and checked against the engine&#39;s Wikipedia article or the automaker. '
               'YouTube tone = how positive the videos that name the engine or its cars are (0–100), averaged over the scored model years; the YT badge ranks engines by it. '
               'Recalls: NHTSA, for cars and years with this engine. Repair notes: the automaker&#39;s engine-related notes to dealers (NHTSA manufacturer communications). '
               'Owner complaints are charted only where there are 30 or more. None of these is an engine failure rate. Images: AI illustrations, free to use under CC BY 4.0.')
-    body = (f'<div class="advp ehub sceh"><header class="advh1"><p class="ph-e"><a href="/supercars/">Supercars</a> · <a href="/engines/bmw/">BMW engines</a></p><h1>Supercar engines, by year.</h1>'
+    crumb = ('<a href="/supercars/">Supercars</a> · <a href="/engines/performance/">Performance engines</a> · <a href="/engines/bmw/">BMW engines</a>' if g == 'super' else
+             '<a href="/cars/?type=performance">Performance cars</a> · <a href="/engines/supercars/">Supercar engines</a> · <a href="/engines/bmw/">BMW engines</a>')
+    body = (f'<div class="advp ehub sceh"><header class="advh1"><p class="ph-e">{crumb}</p><h1>{"Supercar" if g == "super" else "Performance"} engines, by year.</h1>'
             f'<p class="ans">{short} <span class="ehub-i">{YSL.info(method)}</span></p></header>'
             '<div class="ehub-bar"><div class="ehub-f" role="group" aria-label="Show">'
             + ''.join(f'<button type="button" class="ehub-p" data-f="{k}" aria-pressed="{"true" if k == "all" else "false"}">{lab}</button>' for k, lab in pills)
             + '</div><label class="ehub-s">Sort <select id="ehub-sort"><option value="own">YouTube rank</option><option value="new">Newest</option>'
               '<option value="old">Oldest</option><option value="rec">Most recalls</option><option value="mk">Maker</option></select></label></div>'
             + f'<p class="ehub-c" aria-live="polite">{len(cards)} engines</p><ol class="ehub-g">{"".join(cards)}</ol>'
-            + share_line('Every supercar engine, year by year: YouTube score, recalls, repair notes. Free:') + '</div><script src="/assets/enghub.js?v=2" defer></script>')
+            + share_line(f'Every {"supercar" if g == "super" else "performance car"} engine, year by year: YouTube score, recalls, repair notes. Free:') + '</div><script src="/assets/enghub.js?v=2" defer></script>')
     best = [s for s in order if s['yt'] is not None]
-    hub_ans = (f'We cover {SCE_N} supercar engines, from the Ferrari F154 to the Bugatti W16. Supercars draw too few owner complaints to rank per car, so we rank them by YouTube owner tone'
+    hub_ans = ((f'We cover {NG} supercar engines, from the Ferrari F154 to the Bugatti W16. Supercars draw too few owner complaints to rank per car, so we rank them by YouTube owner tone' if g == 'super' else
+                f'We cover {NG} performance-car engines, from the Hellcat and the Coyote to the LS family and the EJ257. The government files most performance versions under their base model, so we rank them by YouTube owner tone')
                + (f': the {SCENG["engines"][best[0]["e"]]["name"]} ranks first ({best[0]["yt"]} of 100).' if best else ' once the video pull finishes.')
                + ' Each engine page shows its recalls and the automaker&#39;s repair notes by model year.')
-    faq = [('Which supercar engine is the most reliable?', _shtml.unescape(hub_ans)),
-           ('Why no owner-complaint score for supercars?', 'The Lemon Index scores cars by government complaints per car sold. Supercars sell in the hundreds or low thousands a year and draw a handful of complaints, too few to rank fairly, so we show the count and lead with YouTube, recalls and repair notes.')]
+    faq = ([('Which supercar engine is the most reliable?', _shtml.unescape(hub_ans)),
+            ('Why no owner-complaint score for supercars?', 'The Lemon Index scores cars by government complaints per car sold. Supercars sell in the hundreds or low thousands a year and draw a handful of complaints, too few to rank fairly, so we show the count and lead with YouTube, recalls and repair notes.')] if g == 'super' else
+           [('Which performance car engine is the most reliable?', _shtml.unescape(hub_ans)),
+            ('Why no owner-complaint score for performance engines?', 'Owners file government complaints under the model name, and a Hellcat is filed as a Challenger, a GT500 as a Mustang. We only count complaints whose model name or the owner&#39;s own words tie them to one engine, which is too few to rank fairly, so we lead with YouTube, recalls and repair notes.')])
+    faq = [(q, _shtml.unescape(a)) for q, a in faq]
     body = body.replace('</div><script src="/assets/enghub.js', '<section class="yqa trq"><h2>Quick answers</h2>' + qa_fold(''.join(f'<h3>{E(q)}</h3><p>{E(a)}</p>' for q, a in faq)) + '</section></div><script src="/assets/enghub.js', 1)
-    page(SCE_HUB, 'Supercar Engines: Reliability by Year (Ferrari, Lamborghini, McLaren)', _shtml.unescape(short.replace('&#39;', "'")), body,
-         ld=[faq_ld([(q, '', a) for q, a in faq]), {"@context": "https://schema.org", "@type": "CollectionPage", "name": "Supercar engines", "url": BASE + SCE_HUB,
+    page(HUB, 'Supercar Engines: Reliability by Year (Ferrari, Lamborghini, McLaren)' if g == 'super' else 'Performance Car Engines by Year: Hellcat, Coyote, LS, 2UR', _shtml.unescape(short.replace('&#39;', "'")), body,
+         ld=[faq_ld([(q, '', a) for q, a in faq]), {"@context": "https://schema.org", "@type": "CollectionPage", "name": "Supercar engines" if g == 'super' else 'Performance car engines', "url": BASE + HUB,
              "hasPart": [{"@type": "WebPage", "name": SCENG['engines'][s['e']]['name'], "url": BASE + SCE_URL(s['e'])} for s in order]}])
-    SCE_URLS.insert(0, SCE_HUB)
-if SCENG['engines']: _sce_hub()
+    SCE_URLS.insert(0, HUB)
+for _g in ('perf', 'super'):
+    if any(_GRP(e) == _g for e in SCENG['engines']): _sce_hub(_g)
 print('supercar engine pages', len(SCE_URLS), 'images', len(SCE_IMGS), 'YouTube-ranked', len(SCE_YTRANK))
