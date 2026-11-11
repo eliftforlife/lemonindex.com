@@ -78,6 +78,7 @@ def _sce_rec_li(r):
 
 WHY = {'super': 'Supercars sell in small numbers, so we show YouTube, recalls and the automaker&#39;s repair notes instead.',
        'perf': 'Performance versions are mostly filed under their base model (a Shelby GT500 is filed as a Mustang), so we only count complaints whose model name or the owner&#39;s own words tie them to this engine, and lead with YouTube, recalls and the automaker&#39;s repair notes.'}
+SCE_EXTERNAL = {'bmw-s65'}   # 11-11: built by the BMW M3 flagship work in the BMW engine design; the hub links to it, no second page here
 def _sce_page(e):
     d = SCENG['engines'][e]; path = SCE_URL(e); yrs = d['years']; ys = sorted(yrs, key=int); y0, y1 = int(ys[0]), int(ys[-1])
     yts, ytavg = _sce_yt(e); rk = SCE_YTRANK.get(e); nm = d['name']; mk = d['make']; g = _GRP(e)
@@ -177,9 +178,10 @@ def _sce_page(e):
                    "description": f'{ph["title"]}. AI-generated illustration, not a photo of a specific engine.', "width": ph['w'], "height": ph['h'], "encodingFormat": "image/webp",
                    "license": _SCCBY, "acquireLicensePage": BASE + '/images/', "creditText": "The Lemon Index", "creator": {"@type": "Organization", "name": "The Lemon Index", "url": BASE + '/'},
                    "copyrightNotice": "The Lemon Index (lemonindex.com), CC BY 4.0", "isAccessibleForFree": True})
-        SCE_IMGS.append((path, ph))
-    page(path, title, desc, body, ld=ld, vis=fig)
-    SCE_URLS.append(path)
+        if e not in SCE_EXTERNAL: SCE_IMGS.append((path, ph))
+    if e not in SCE_EXTERNAL:
+        page(path, title, desc, body, ld=ld, vis=fig)
+        SCE_URLS.append(path)
     return dict(e=e, y0=y0, y1=y1, yt=ytavg, nyt=len(yts), rec=len(R), tsb=t['n'], tot=tot)
 
 def _sce_hub(g):   # a function, so the hub's locals (order, best, cards ...) don't overwrite build.py globals
