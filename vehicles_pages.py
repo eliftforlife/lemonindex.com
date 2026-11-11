@@ -159,6 +159,7 @@ if SC:
     page('/supercars/', 'Supercar MPG, Fuel Cost & Recalls: Ferrari, Lamborghini, McLaren | The Lemon Index',
          f'Fuel economy, yearly fuel cost and recalls for {len(SC)} supercars and luxury cars (Ferrari, Lamborghini, McLaren, Bugatti, Aston Martin, Rolls-Royce and more), every model year, from EPA and NHTSA.',
          f'''<div class="pg">{phero('Supercars', 'Supercars, by the numbers.', 'EPA fuel economy and NHTSA recalls for every model year. Corner number: combined mpg.', visual=pimg(vph('Lamborghini Huracán'), valt(vph('Lamborghini Huracán'), 'Lamborghini Huracán')) if vph('Lamborghini Huracán') else '', credit=vcredit(vph('Lamborghini Huracán')))}
+<p class="ctn"><a class="ctn-b" href="/cars/?type=supercars">See them with every other car</a></p>
 <section class="tiles"><div class="tile"><div class="tt"><p class="te">Thirstiest</p><h2>{E(thirst[0]["name"])}.</h2><p class="ts">{thirst[0]["years"][-1]["comb"][0]} mpg combined. About ${thirst[0]["years"][-1]["cost"][1]:,} a year in fuel (EPA).</p></div></div>
 <div class="tile"><div class="tt"><p class="te">Most recalls</p><h2>{E(rec[0]["name"])}.</h2><p class="ts">{rec[0]["recalls"]} NHTSA recalls across its model years.</p></div></div></section>
 <section><h2>Every model. <span class="h2s">Tap one for every year: mpg, fuel cost, engine and recalls.</span></h2><div class="mbs">{groups}</div>{vgrid_note([c["name"] for c in SC], "cars", "car")}</section>

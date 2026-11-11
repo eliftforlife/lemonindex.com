@@ -1674,3 +1674,26 @@ main { padding-bottom: 16px; } .foot.f2 { margin-top: 32px; } .f2 .f2-in { paddi
   background: #fff; color: var(--ink); font-size: 14.5px; font-weight: 600; text-decoration: none; white-space: nowrap; }
 .hqk a:hover { border-color: #c7c7cc; } .hqk .gh-ic { width: 18px; height: 18px; flex: none; color: #3c4043; }
 @media (max-width: 380px) { .hqk a { gap: 5px; padding: 0 6px; font-size: 13.5px; } .hqk .gh-ic { width: 16px; height: 16px; } }
+
+/* 11-11 (Elijah: one Cars section): All cars / Performance / Supercars / Electric tabs on /cars/ (assets/ctabs.js) */
+.ctabs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; max-width: 640px; margin: 0 auto 28px; padding: 4px; border-radius: 999px; background: #f0f0f2; }
+.ctabs a { display: flex; align-items: center; justify-content: center; gap: 6px; min-height: 44px; padding: 0 10px; border-radius: 999px; color: #3c4043; font-size: 15px; font-weight: 600; text-decoration: none; white-space: nowrap; }
+.ctabs a small { font-size: 12px; font-weight: 600; color: #6e6e73; font-variant-numeric: tabular-nums; }
+.ctabs a:hover { color: var(--ink); }
+.ctabs a[aria-current] { background: #fff; color: var(--ink); box-shadow: 0 1px 3px rgba(0,0,0,.1), 0 0 0 .5px rgba(0,0,0,.04); }
+.ctabs a:focus-visible { outline: 2px solid #1d1d1f; outline-offset: 1px; }
+.pg > .cgrid > .ctabs + h2 { margin-top: 0; }
+.ctn { max-width: 640px; margin: -4px auto 24px; text-align: center; font-size: 15px; color: #3c4043; }
+.ctn a { color: var(--ink); font-weight: 600; }
+.cgrid [hidden] { display: none !important; }
+.mc .mc-k { display: block; margin-top: -2px; font-size: 12.5px; line-height: 1.3; color: #6e6e73; text-align: center; }
+.mc.mc-sc { padding-top: 22px; }
+.fsug a.fsoon { cursor: default; color: #6e6e73; } .fsug a.fsoon:hover { background: none; }
+@media (max-width: 600px) {
+  .ctabs { grid-template-columns: repeat(2, minmax(0, 1fr)); border-radius: 22px; margin-bottom: 22px; }
+  .ctabs a { border-radius: 18px; font-size: 14.5px; min-height: 42px; }
+}
+.ctn-b { display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 999px; border: 1px solid var(--line); background: #fff; color: var(--ink) !important; font-weight: 600; text-decoration: none; }
+.ctn-b::after { content: "\2192"; margin-left: 8px; } .ctn-b:hover { border-color: #c7c7cc; }
+.ctn:has(> .ctn-b:only-child) { margin: 8px auto 28px; }
+.mc.mc-dup { display: none; } .cgrid[data-tab="electric"] .mc.mc-dup:not([hidden]) { display: flex; }   /* the Bolt / Model Y EV-score twins: Electric tab only, also without JS */

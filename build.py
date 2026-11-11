@@ -73,9 +73,35 @@ PICK = {}
 for f in _YJ:
     if f['name'] in BYNAME: PICK.setdefault(BYNAME[f['name']]['brand'], []).append([f['name'], f['id'], [v['y'] for v in f['years']]])
 PICK = dict(sorted((b, sorted(m)) for b, m in PICK.items()))
+# 11-11 (Elijah: one Cars section, one search for everything): the finder also finds the supercars, the EVs and the performance cars.
+# Their entries carry a 4th item (the page they open; they have no year pages, '' = coming soon) and a 5th (the kind: sc / ev / perf).
+# PICK itself stays regular-only (the VIN page and the year pages use it).
+_jl = lambda p: json.load(open(p, encoding='utf-8')) if os.path.exists(p) else None
+_slg = lambda s: re.sub(r'[^a-z0-9]+', '-', s.lower().replace("'", '')).strip('-')
+SCX = _jl('data/supercars.json') or []
+EVX = (_jl('data/ev.json') or {}).get('cars', [])
+PERFX = _jl('data/perf_cars.json') or []   # the performance list (another agent researches it); empty = the tab shows "Coming soon"
+if isinstance(PERFX, dict): PERFX = PERFX.get('cars', [])
+_bk = {b.lower(): b for b in PICK}
+_brandof = lambda mk: _bk.get(mk.lower(), mk.title() if mk.isupper() else mk)
+def _evyears(c):
+    a, _, z = str(c['years']).partition('-'); return list(range(int(a), int(z or a) + 1))
+def perf_info(c):
+    """A performance car's id, brand, page ('' until it has one) and the line its card leads with (hp, 0-60, else the engine)."""
+    nm = c.get('name') or f"{c.get('make', '')} {c.get('model', '')}".strip(); mk = c.get('make') or c.get('brand') or nm.split(' ')[0]
+    hp = c.get('hp'); z = c.get('zero60') or c.get('0-60') or c.get('zero_to_60'); eng = c.get('engine') or ''
+    lead = ' · '.join(x for x in ((f'{hp:,} hp' if isinstance(hp, (int, float)) else str(hp) + ' hp') if hp else '', f'0–60 {z} s' if z else '') if x) or eng
+    return dict(id=c.get('slug') or _slg(nm), name=nm, brand=_brandof(mk), url=c.get('url') or '', lead=lead)
+PICK_ALL = {b: [list(x) for x in m] for b, m in PICK.items()}
+for c in SCX: PICK_ALL.setdefault(_brandof(c['make']), []).append([c['name'], _slg(c['name']), [y['y'] for y in c['years']], f"/supercars/{_slg(c['name'])}/", 'sc'])
+for c in EVX:
+    if c['slug'] not in YP: PICK_ALL.setdefault(_brandof(c['make']), []).append([c['name'], c['slug'], _evyears(c), f"/electric/{c['slug']}/", 'ev'])
+for c in PERFX:
+    i = perf_info(c); PICK_ALL.setdefault(i['brand'], []).append([i['name'], i['id'], [], i['url'], 'perf'])
+PICK_ALL = dict(sorted((b, sorted(m)) for b, m in PICK_ALL.items()))
 def finder(h='Look up any car', sub='Every model year, 2000 to 2025. Free.', foot=''):
     """10-29 (Elijah): the first thing on the page is an easy car filter. Type "2016 pilot", or pick brand, model, year (assets/lookup.js)."""
-    pick = json.dumps(PICK, ensure_ascii=False).replace('</', '<\\/')
+    pick = json.dumps(PICK_ALL, ensure_ascii=False).replace('</', '<\\/')   # 11-11: supercars, EVs and performance cars too
     return f"""<section class="finder" aria-labelledby="fh"><h1 id="fh">{h}</h1><p class="lede">{sub}</p>
 <div class="fq"><input id="fq" type="search" placeholder="e.g. 2016 Honda Pilot" autocomplete="off" aria-label="Type a car"><div id="fsug" class="fsug" role="listbox" hidden></div></div>
 <form class="look" id="look"><select id="lb" aria-label="Brand"><option value="">Brand</option></select><select id="lm" aria-label="Model" disabled><option value="">Model</option></select><select id="ly" aria-label="Year" disabled><option value="">Year</option></select><button type="button" class="btn" id="lgo" disabled>Show problems</button></form>
@@ -175,12 +201,15 @@ GH_IC = {'/cars/': '<path d="M4 16v-4l2.2-5h11.6L20 12v4z"/><path d="M4 12h16"/>
          '/best-gas-mileage/': '<path d="M5 20V5a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v15M3 20h13M5 10h9M14 8l3 3v6a1.5 1.5 0 0 0 3 0V9l-3-3"/>',
          '/studies/': '<path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/>',
          '/stats/car-complaints/': '<path d="M4 20V4M4 20h16"/><path d="M7 15l4-4 3 3 5-6"/>'}
+# 11-11 (Elijah: one Cars section): the menu's Electric and Supercars open that tab of /cars/; /electric/ and /supercars/ stay as pages
+# (they rank for their own searches) and keep their links from the footer and from the tabs
+GH_HREF = {'/electric/': '/cars/?type=electric', '/supercars/': '/cars/?type=supercars'}
 def gh_ic(u):
     return (f'<svg class="gh-ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">{GH_IC[u]}</svg>'
             if u in GH_IC else '')
 def gh_header(path):
     cur = lambda u: ' aria-current="page"' if path.startswith(u) else ''
-    top = ''.join(f'<a href="{u}"{cur(u)}>{t}</a>' for u, t in NAV_TOP)
+    top = ''.join(f'<a href="{GH_HREF.get(u, u)}"{cur(u)}>{t}</a>' for u, t in NAV_TOP)
     # 11-10 (Elijah: the phone menu didn't fit one screen): grouped (Look up / Explore / More) in two columns on phones; headings and the
     # top-bar links (gh-x) only show where the top bar is folded away (<1024 px). Lemon-only: the styles live in site.css, not the shared gh.css.
     inbar = {u for u, _ in NAV_TOP}; lab = dict(NAV_TOP + NAV_MORE); lab['/check-engine-light/'] = 'Engine codes'
@@ -188,7 +217,7 @@ def gh_header(path):
            ('Explore', ['/best/', '/electric/', '/motorcycles/', '/supercars/', '/best-gas-mileage/', '/studies/', '/stats/car-complaints/']),
            ('More', ['/planes/', '/car-loan-rates/', '/vote/', '/data/', '/method/'])]
     assert sorted(u for _, us in grp for u in us) == sorted(lab), 'gh menu groups miss a link'
-    sheet = ''.join(f'<span class="gh-g gh-g{i}" aria-hidden="true">{g}</span>' + ''.join(f'<a class="{"gh-x " if u in inbar else ""}gh-i{i}" href="{u}"{cur(u)}>{gh_ic(u)}<span>{lab[u]}</span></a>' for u in us)
+    sheet = ''.join(f'<span class="gh-g gh-g{i}" aria-hidden="true">{g}</span>' + ''.join(f'<a class="{"gh-x " if u in inbar else ""}gh-i{i}" href="{GH_HREF.get(u, u)}"{cur(u)}>{gh_ic(u)}<span>{lab[u]}</span></a>' for u in us)
                     for i, (g, us) in enumerate(grp))
     return (f'<header class="gh wide" data-tuck><div class="gh-in"><a class="gh-brand" href="/"><img src="/assets/icon-64.png" alt="" width="24" height="24">The Lemon Index</a>'
             f'<nav class="gh-links" aria-label="Main">{top}<button class="gh-more" type="button" aria-expanded="false" aria-controls="gh-sheet">More{GH_DOWN}</button></nav>'
@@ -280,7 +309,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}{img or "/assets/og.png"}"><meta name="twitter:card" content="summary_large_image">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://challenges.cloudflare.com https://www.googletagmanager.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; frame-src https://challenges.cloudflare.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cloudflareinsights.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://vpic.nhtsa.dot.gov https://lemon-survey.elift08.workers.dev https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="google-adsense-account" content="{ADS}"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=1110-11110734"><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
+<link rel="stylesheet" href="/assets/site.css?v=1110-11110819"><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
 <body>{gh_header(path)}
 <main>{body}{end_block(path, _upd, _shl)}{'' if path == '/vote/' else ask_html(path)}</main>
 <footer class="foot f2"><div class="f2-in"><div class="f2-brand"><a class="f2-logo" href="/"><img src="/assets/icon-64.png" alt="" width="28" height="28">The Lemon Index</a>
@@ -288,7 +317,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <nav class="f2-col" aria-label="Explore"><p class="f2-h">Explore</p><a href="/compare/">Compare cars</a><a href="/best/">Best cars</a><a href="/electric/">Electric cars</a><a href="/stats/car-complaints/">Statistics</a><a href="/car-loan-rates/">Car loan rates</a></nav>
 <nav class="f2-col" aria-label="Data"><p class="f2-h">Data</p><a href="/method/">How the index works</a><a href="/data/">Free data</a><a href="/images/">Free images</a><a href="/vote/">Vote</a></nav>
 <nav class="f2-col" aria-label="Support"><p class="f2-h">Support</p><button class="supl" type="button">Keep Lemon ad-free</button><a href="/contact/">Contact</a><a href="{YT}?sub_confirmation=1" rel="noopener">Subscribe on YouTube</a></nav></div>
-<div class="f2-bot"><span>© {TODAY[:4]} The Lemon Index</span><a href="/terms/">Terms</a><a href="/privacy/">Privacy</a><a href="/refunds/">Refunds</a><span class="f2-dis">Built from public NHTSA complaint data and published U.S. sales figures. Not affiliated with any automaker. Not a repair-cost or safety rating.</span></div></footer><script src="/assets/explorer.js?v=1110" defer></script><script src="/assets/support.js?v=1110c" defer></script><script src="/assets/imginfo.js?v=1" defer></script><script src="/assets/lookup.js?v=1111" defer></script>{beacon}</body></html>'''
+<div class="f2-bot"><span>© {TODAY[:4]} The Lemon Index</span><a href="/terms/">Terms</a><a href="/privacy/">Privacy</a><a href="/refunds/">Refunds</a><span class="f2-dis">Built from public NHTSA complaint data and published U.S. sales figures. Not affiliated with any automaker. Not a repair-cost or safety rating.</span></div></footer><script src="/assets/explorer.js?v=1110" defer></script><script src="/assets/support.js?v=1110c" defer></script><script src="/assets/imginfo.js?v=1" defer></script><script src="/assets/lookup.js?v=1111b" defer></script>{beacon}</body></html>'''
     f = os.path.join(OUT, path.strip('/'), 'index.html') if path.endswith('/') else os.path.join(OUT, path.strip('/'))
     os.makedirs(os.path.dirname(f), exist_ok=True)
     for _try in range(6):   # 11-09: Windows sometimes holds a just-written file for a moment (antivirus/indexer): retry instead of dying mid-build
@@ -443,7 +472,7 @@ VOTE_IMG = lambda n: (lambda im: {'src': f'/assets/vote/{n}.webp', 'w': im.size[
 
 # 11-11 (Elijah): three quick ways in, right under the search (outside the folding selects, so always visible)
 HOME_CHIPS = ('<nav class="hqk" aria-label="Browse">' + ''.join(f'<a href="{u}">{gh_ic(i)}<span>{t}</span></a>' for u, i, t in
-              (('/cars/', '/cars/', 'All cars'), ('/supercars/', '/supercars/', 'Supercars'), ('/motorcycles/', '/motorcycles/', 'Motorcycles'))) + '</nav>')
+              (('/cars/', '/cars/', 'All cars'), ('/cars/?type=supercars', '/supercars/', 'Supercars'), ('/motorcycles/', '/motorcycles/', 'Motorcycles'))) + '</nav>')
 def home_compare():
     """11-11 (Elijah: "right under the any car search should show the compare cars box first instead of the two random cars"): a compact compare
     box: one big match-up with both AI cars, two more popular ones as links, and the way into /compare/ to pick any two."""
@@ -1323,7 +1352,7 @@ pick = dict(sorted((b, sorted(m)) for b, m in pick.items()))
 def mcard(n, i):
     li = BYNAME[n]['li']; ph = YSL.model_img(i) or mphoto(i)   # 11-10 (Elijah): AI illustrations replace the Wikimedia photos on the grid
     im = (f'<img src="{ph["src"]}"{rset(ph["src"], "(max-width: 600px) 45vw, 170px")} alt="{E(n)}" width="{ph["w"]}" height="{ph["h"]}" loading="lazy">' if ph else '')
-    return f'<a class="mc" href="/cars/{i}/"><span class="mc-p">{im}</span><b>{E(n.split(" ", 1)[1] if " " in n else n)}</b><span class="{"good" if li < 100 else "bad"}">{li}</span></a>'
+    return f'<a class="mc" data-t="r" href="/cars/{i}/"><span class="mc-p">{im}</span><b>{E(n.split(" ", 1)[1] if " " in n else n)}</b><span class="{"good" if li < 100 else "bad"}">{li}</span></a>'
 # 11-10 (Elijah): models we don't have data for yet show as gray, non-clickable "No data yet" cards with their illustration
 try: NEWM = json.load(open('data/new_models.json', encoding='utf-8'))
 except FileNotFoundError: NEWM = []
@@ -1337,21 +1366,55 @@ def ndcard(m):
     img = f'<span class="mc-p"><img src="/assets/ai-models/{m["slug"]}.webp?v=1" alt="{E(nm)}" width="1000" height="600" loading="lazy"></span>'
     if m['slug'] in _DUP and _DUP[m['slug']] in _ID:   # the same model under another name: the card opens that model's page
         t = _ID[_DUP[m['slug']]]
-        return f'<a class="mc" href="/cars/{t["id"]}/" title="Counted with the {E(t["name"])}">{img}<b>{E(short)}</b><span class="{"good" if t["li"] < 100 else "bad"}">{t["li"]}</span></a>'
+        return f'<a class="mc" data-t="r" href="/cars/{t["id"]}/" title="Counted with the {E(t["name"])}">{img}<b>{E(short)}</b><span class="{"good" if t["li"] < 100 else "bad"}">{t["li"]}</span></a>'
     if m['slug'] in _EXN:
-        return f'<a class="mc mc-co" href="/cars/{m["slug"]}/" title="Owner complaints, no sales figures yet">{img}<b>{E(short)}</b><span class="nd">Complaints only</span></a>'
-    return (f'<div class="mc mc-nd" aria-disabled="true" title="No data yet"><span class="mc-p"><img src="/assets/ai-models/{m["slug"]}.webp?v=1" alt="{E(nm)}" width="1000" height="600" loading="lazy"></span>'
+        return f'<a class="mc mc-co" data-t="r" href="/cars/{m["slug"]}/" title="Owner complaints, no sales figures yet">{img}<b>{E(short)}</b><span class="nd">Complaints only</span></a>'
+    return (f'<div class="mc mc-nd" data-t="r" aria-disabled="true" title="No data yet"><span class="mc-p"><img src="/assets/ai-models/{m["slug"]}.webp?v=1" alt="{E(nm)}" width="1000" height="600" loading="lazy"></span>'
             f'<b>{E(short)}</b><span class="nd">No data yet</span></div>')
 _nd = {}
 for m in NEWM: _nd.setdefault(m['make'], []).append(m)
+# 11-11 (Elijah: one Cars section): the supercars, the EVs and the performance cars join the grid under their brands, tagged for the tabs
+# (data-t: r regular, s supercar, e electric, p performance). Supercar and performance cards lead with the engine / hp, not a score.
+_AIV = _jl('data/ai_vehicle_images.json') or {}; _VPH = _jl('data/vehicle_photos.json') or {}
+def _vimg(name):
+    a = _AIV.get(name); return {'src': a['src'], 'w': a['w'], 'h': a['h']} if a else _VPH.get(name)
+def _cimg(ph, alt):
+    return (f'<img src="{ph["src"]}"{rset(ph["src"], "(max-width: 600px) 45vw, 170px")} alt="{E(alt)}" width="{ph["w"]}" height="{ph["h"]}" loading="lazy">' if ph else '')
+def _short(nm, mk): return nm[len(mk) + 1:] if nm.startswith(mk + ' ') else nm
+def sccard(c):
+    last = c['years'][-1]; eng = (last.get('engines') or [''])[0].replace('-cyl', '-cylinder')
+    return (f'<a class="mc mc-sc" data-t="s" href="/supercars/{_slg(c["name"])}/" title="Supercar: engine, fuel cost and recalls"><span class="mc-p">{_cimg(_vimg(c["name"]), c["name"])}</span>'
+            f'<b>{E(_short(c["name"], c["make"]))}</b><small class="mc-k">{E(eng)}</small></a>')
+def evcard(c, dup=False):
+    return (f'<a class="mc{" mc-dup" if dup else ""}" data-t="e" href="/electric/{c["slug"]}/" title="EV score: complaints per car sold, model years {E(c["years"])}"><span class="mc-p">{_cimg(mphoto(c["slug"]), c["name"])}</span>'
+            f'<b>{E(_short(c["name"], c["name"].split(" ")[0]))}</b><span class="{"good" if c["li"] < 100 else "bad"}">{c["li"]}</span></a>')
+def pfcard(c):
+    i = perf_info(c); ph = _vimg(i['name']) or ({'src': c['img'], 'w': c.get('w', 1000), 'h': c.get('h', 600)} if c.get('img') else None)
+    inner = (f'<span class="mc-p">{_cimg(ph, i["name"])}</span><b>{E(_short(i["name"], i["brand"]))}</b>' + (f'<small class="mc-k">{E(i["lead"])}</small>' if i['lead'] else ''))
+    if i['url']: return f'<a class="mc mc-sc" data-t="p" href="{E(i["url"])}">{inner}</a>'
+    return f'<div class="mc mc-nd mc-sc" data-t="p" aria-disabled="true" title="Coming soon">{inner}<span class="nd">Coming soon</span></div>'
+_xb = {}
+for c in SCX: _xb.setdefault(_brandof(c['make']), []).append((c['name'], sccard(c)))
+for c in EVX:
+    _xb.setdefault(_brandof(c['make']), []).append((c['name'], evcard(c, c['slug'] in YP)))   # Bolt / Model Y: Electric-tab twin of the regular card
+for c in PERFX: _xb.setdefault(perf_info(c)['brand'], []).append((perf_info(c)['name'], pfcard(c)))
 # 11-10 (Elijah): brands with no scored model at all go last, under a small "Coming soon" heading (A-Z within each group)
-_brand = lambda b: f'<div class="mb"><h3>{E(b)}</h3><div class="mg">' + ''.join(mcard(n, i) for n, i, _ in pick.get(b, [])) + ''.join(ndcard(m) for m in sorted(_nd.get(b, []), key=lambda m: m['name'])) + '</div></div>'
-_soon = sorted(set(_nd) - set(pick))
-lst = ''.join(_brand(b) for b in sorted(pick)) + (f'<p class="mb-soon">Coming soon: no scores yet for these brands</p>' + ''.join(_brand(b) for b in _soon) if _soon else '')
-page('/cars/', 'Look Up Your Car: Problems by Model and Year | The Lemon Index', f'Pick your car and model year to see its owner complaints, its top problems and how it compares with every other year. {len(YEARS)} models, 2000-2025.', f'''
+_brand = lambda b: (f'<div class="mb"><h3>{E(b)}</h3><div class="mg">' + ''.join(mcard(n, i) for n, i, _ in pick.get(b, [])) + ''.join(h for _, h in sorted(_xb.get(b, [])))
+                    + ''.join(ndcard(m) for m in sorted(_nd.get(b, []), key=lambda m: m['name'])) + '</div></div>')
+_soon = sorted(set(_nd) - set(pick) - set(_xb))
+lst = ''.join(_brand(b) for b in sorted(set(pick) | set(_xb))) + (f'<p class="mb-soon">Coming soon: no scores yet for these brands</p>' + ''.join(_brand(b) for b in _soon) if _soon else '')
+_nev = len(EVX); _npf = len(PERFX)
+CTABS = ('<nav class="ctabs" aria-label="Kinds of car">' + ''.join(f'<a href="{u}" data-type="{k}"{" aria-current=true" if k == "all" else ""}>{t}{f" <small>{n}</small>" if n else ""}</a>' for u, k, t, n in (
+    ('/cars/', 'all', 'All cars', ''), ('/cars/?type=performance', 'performance', 'Performance', _npf or 'soon'),
+    ('/cars/?type=supercars', 'supercars', 'Supercars', len(SCX)), ('/cars/?type=electric', 'electric', 'Electric', _nev))) + '</nav>')
+CNOTES = (f'<p class="ctn" data-for="performance" hidden>' + ('Performance cars and trims lead with horsepower and 0–60. Each gets its owner complaints and recalls as its data comes in.' if _npf else
+          '<b>Coming soon.</b> We&#39;re adding performance cars and trims next, from the Shelby GT500 to the Civic Type R.') + '</p>'
+          f'<p class="ctn" data-for="supercars" hidden>Owner complaints are too rare to score supercars, so their cards lead with the engine. <a href="/supercars/">Supercar fuel costs and recalls, ranked</a></p>'
+          f'<p class="ctn" data-for="electric" hidden>EV scores count complaints filed by the end of the year after the model year. <a href="/electric/">The most reliable EVs, ranked</a></p>')
+page('/cars/', 'Look Up Your Car: Problems by Model and Year | The Lemon Index', f'Pick your car and model year to see its owner complaints, its top problems and how it compares with every other year. {len(YEARS)} models, 2000-2025, plus {len(SCX)} supercars and {len(EVX)} electric cars.', f'''
 <div class="pg"><div class="ph ph-f">{finder('<span class="ph-e">Look up</span>Look up your car.', 'Every model year, 2000 to 2025. Free.')}</div>
-<section class="cgrid"><h2>Every model. <span class="h2s">Score in the corner: 100 is average, lower is better.</span></h2><div class="mbs">{lst}</div></section>
-<p class="ph-cr">Car images: AI-generated illustrations by The Lemon Index, free under CC BY 4.0 (<a href="/images/">download</a>).</p></div>''',
+<section class="cgrid">{CTABS}<h2>Every model. <span class="h2s" data-hide="s p">Score in the corner: 100 is average, lower is better.</span></h2>{CNOTES}<div class="mbs">{lst}</div></section>
+<p class="ph-cr">Car images: AI-generated illustrations by The Lemon Index, free under CC BY 4.0 (<a href="/images/">download</a>).</p></div><script src="/assets/ctabs.js?v=2" defer></script>''',
      ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": "Look up your car", "url": BASE + '/cars/'}])
 yurls.insert(0, '/cars/')
 

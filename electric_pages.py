@@ -48,6 +48,7 @@ page('/electric/', 'The Most Reliable Electric Cars, Ranked by Owner Complaints 
 <div class="pg">{phero('Electric cars', 'The most reliable EVs.', f'Every one drew more complaints than the average car. The {E(best["name"])} came closest.', visual=trio([mphoto('chevrolet-bolt'), mphoto('tesla-model-s'), mphoto('tesla-model-y')], ['Chevrolet Bolt', 'Tesla Model S', 'Tesla Model Y']), credit=pcredit(who(mphoto('chevrolet-bolt'), mphoto('tesla-model-s'), mphoto('tesla-model-y'))))}<article class="study">
 <div class="stats"><div><b>{len(RK)}</b><span>electric cars ranked</span></div><div><b>{ev_x}×</b><span>the complaints of gas cars, per car sold</span></div><div><b>{best["li"]}</b><span>best: {E(best["name"])}</span></div></div>
 <p class="sub">Lower is better. <b>100 = the average car.</b> Tap any EV for its problems, recalls, range and yearly cost.</p>
+<p class="ctn"><a class="ctn-b" href="/cars/?type=electric">See them with every other car</a></p>
 <div class="evg">{evcards}</div>
 <p class="note">* Under 50,000 sold: a rough score. {E(SRC_NOTE)}</p>
 <h2>More electric-car data</h2><div class="stack">{cards}</div>
