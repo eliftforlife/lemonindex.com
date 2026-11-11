@@ -424,5 +424,125 @@
   "sales": {
    "wiki": "Lincoln MKZ"
   }
+ },
+ "lexus-ls": {
+  "name": "Lexus LS",
+  "brand": "Lexus",
+  "seg": "car",
+  "make": "LEXUS",
+  "rx": "(LS|LS ?[0-9]{3}[A-Z]*|LS HYBRID)",
+  "sales": {
+   "gcbc": "lexus-ls"
+  },
+  "note": "site feedback request 11-11 (LS 400/430/460/500)"
+ },
+ "mitsubishi-outlander": {
+  "name": "Mitsubishi Outlander",
+  "brand": "Mitsubishi",
+  "seg": "suv",
+  "make": "MITSUBISHI",
+  "rx": "(OUTLANDER|OUTLANDER PHEV)",
+  "sales": {
+   "wiki": "Mitsubishi Outlander"
+  }
+ },
+ "mercury-sable": {
+  "name": "Mercury Sable",
+  "brand": "Mercury",
+  "seg": "car",
+  "make": "MERCURY",
+  "rx": "(SABLE)",
+  "sales": {}
+ },
+ "lexus-is": {
+  "name": "Lexus IS",
+  "brand": "Lexus",
+  "seg": "car",
+  "make": "LEXUS",
+  "rx": "(IS\\ 250|IS|IS\\ 350|IS\\ 300|IS\\ 250C|IS\\ 350C|IS\\ F)",
+  "sales": {
+   "wiki": "Lexus IS"
+  }
+ },
+ "buick-lesabre": {
+  "name": "Buick LeSabre",
+  "brand": "Buick",
+  "seg": "car",
+  "make": "BUICK",
+  "rx": "(LESABRE)",
+  "sales": {}
+ },
+ "volvo-xc90": {
+  "name": "Volvo XC90",
+  "brand": "Volvo",
+  "seg": "suv",
+  "make": "VOLVO",
+  "rx": "(XC90)",
+  "sales": {
+   "wiki": "Volvo XC90"
+  }
+ },
+ "mercury-mariner": {
+  "name": "Mercury Mariner",
+  "brand": "Mercury",
+  "seg": "suv",
+  "make": "MERCURY",
+  "rx": "(MARINER|MARINER HYBRID|MARINER HEV)",
+  "sales": {}
+ },
+ "oldsmobile-alero": {
+  "name": "Oldsmobile Alero",
+  "brand": "Oldsmobile",
+  "seg": "car",
+  "make": "OLDSMOBILE",
+  "rx": "(ALERO)",
+  "sales": {}
+ },
+ "hyundai-genesis": {
+  "name": "Hyundai Genesis",
+  "brand": "Hyundai",
+  "seg": "car",
+  "make": "HYUNDAI",
+  "rx": "(GENESIS)",
+  "sales": {
+   "gcbc": "hyundai-genesis"
+  }
+ },
+ "saturn-ls": {
+  "name": "Saturn LS",
+  "brand": "Saturn",
+  "seg": "car",
+  "make": "SATURN",
+  "rx": "(LS)",
+  "sales": {}
+ },
+ "dodge-nitro": {
+  "name": "Dodge Nitro",
+  "brand": "Dodge",
+  "seg": "suv",
+  "make": "DODGE",
+  "rx": "(NITRO|NITRO\\ 4X4|NITRO\\ 4X2)",
+  "sales": {
+   "gcbc": "dodge-nitro"
+  }
+ },
+ "saturn-aura": {
+  "name": "Saturn Aura",
+  "brand": "Saturn",
+  "seg": "car",
+  "make": "SATURN",
+  "rx": "(AURA)",
+  "sales": {}
+ },
+ "gmc-canyon": {
+  "name": "GMC Canyon",
+  "brand": "GMC",
+  "seg": "truck",
+  "make": "GMC",
+  "rx": "(CANYON)",
+  "sales": {
+   "wiki": "GMC Canyon",
+   "col": "^United States Canyon$"
+  }
  }
 }

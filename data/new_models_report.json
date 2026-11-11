@@ -913,5 +913,389 @@
    2016,
    2017
   ]
+ },
+ {
+  "slug": "lexus-ls",
+  "sales": {
+   "2005": 26043,
+   "2006": 19546,
+   "2007": 35226,
+   "2008": 20255,
+   "2009": 11334,
+   "2010": 11675,
+   "2011": 9568,
+   "2012": 8344,
+   "2013": 10727,
+   "2014": 8559,
+   "2015": 7165,
+   "2016": 5514,
+   "2017": 4094,
+   "2018": 9301,
+   "2019": 5528,
+   "2020": 3650,
+   "2021": 3739,
+   "2022": 2679,
+   "2023": 2237,
+   "2024": 2163,
+   "2025": 1082
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/lexus-ls-sales-figures/",
+  "note": "GoodCarBadCar annual U.S. sales",
+  "flags": [
+   "Lexus LS 2020: 3,650 sold, 0 complaints in window -> sales merged into 2021",
+   "Lexus LS 2022: 2,679 sold, 0 complaints in window -> sales merged into 2023",
+   "Lexus LS 2024: 2,163 sold, 0 complaints in window -> sales merged into 2025"
+  ],
+  "complaints": 643,
+  "scored": [
+   2005,
+   2007,
+   2008
+  ]
+ },
+ {
+  "slug": "mitsubishi-outlander",
+  "sales": {
+   "2002": 11346,
+   "2003": 34088,
+   "2004": 18104,
+   "2005": 11848,
+   "2006": 11493,
+   "2007": 23285,
+   "2008": 13471,
+   "2009": 10283,
+   "2010": 12500,
+   "2011": 9788,
+   "2012": 7750,
+   "2013": 12287,
+   "2014": 13068,
+   "2015": 19055,
+   "2016": 26576,
+   "2017": 35409,
+   "2018": 41818,
+   "2019": 40775,
+   "2020": 29096,
+   "2021": 36133,
+   "2022": 42903,
+   "2023": 49182,
+   "2024": 52228,
+   "2025": 42189
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Mitsubishi_Outlander",
+  "note": "col='U.S.'",
+  "flags": [
+   "Mitsubishi Outlander 2002: 11,346 sold, 0 complaints in window -> sales merged into 2003",
+   "Mitsubishi Outlander 2021: 36,133 sold, 0 complaints in window -> sales merged into 2022"
+  ],
+  "complaints": 1341,
+  "scored": [
+   2003,
+   2007,
+   2016,
+   2017,
+   2018,
+   2019,
+   2020,
+   2022,
+   2023,
+   2024,
+   2025
+  ]
+ },
+ {
+  "slug": "mercury-sable",
+  "sales": {},
+  "kind": "none",
+  "url": "",
+  "note": "no sales source",
+  "flags": [
+   "Mercury Sable: 0 scorable model years / 0 complaints -> complaints only"
+  ],
+  "complaints": 1750,
+  "scored": []
+ },
+ {
+  "slug": "lexus-is",
+  "sales": {
+   "2000": 15540,
+   "2001": 22486,
+   "2002": 20306,
+   "2003": 13559,
+   "2004": 9972,
+   "2005": 15789,
+   "2006": 54267,
+   "2007": 54933,
+   "2008": 49432,
+   "2009": 38077,
+   "2010": 34129,
+   "2011": 29669,
+   "2012": 27708,
+   "2013": 35017,
+   "2014": 51358,
+   "2015": 46430,
+   "2016": 37289,
+   "2017": 26482,
+   "2018": 22927,
+   "2019": 14920,
+   "2020": 13600,
+   "2021": 21998,
+   "2022": 21386,
+   "2023": 22521,
+   "2024": 18946,
+   "2025": 19714
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Lexus_IS",
+  "note": "col='Sales US'",
+  "flags": [
+   "Lexus IS 2000: 15,540 sold, 0 complaints in window -> sales merged into 2001",
+   "Lexus IS 2013: 35,017 sold but only 2 complaints in window -> not scored",
+   "Lexus IS 2016: 37,289 sold but only 4 complaints in window -> not scored",
+   "Lexus IS 2017: 26,482 sold but only 3 complaints in window -> not scored",
+   "Lexus IS 2018: 22,927 sold but only 4 complaints in window -> not scored",
+   "Lexus IS 2021: 21,998 sold but only 2 complaints in window -> not scored"
+  ],
+  "complaints": 1719,
+  "scored": [
+   2001,
+   2002,
+   2006,
+   2007,
+   2008,
+   2009,
+   2010,
+   2011,
+   2012,
+   2014,
+   2015,
+   2022,
+   2023
+  ]
+ },
+ {
+  "slug": "buick-lesabre",
+  "sales": {},
+  "kind": "none",
+  "url": "",
+  "note": "no sales source",
+  "flags": [
+   "Buick LeSabre: 0 scorable model years / 0 complaints -> complaints only"
+  ],
+  "complaints": 1713,
+  "scored": []
+ },
+ {
+  "slug": "volvo-xc90",
+  "sales": {
+   "2002": 4379,
+   "2003": 35791,
+   "2004": 39230,
+   "2005": 36025,
+   "2006": 33241,
+   "2007": 31358,
+   "2008": 18981,
+   "2009": 10757,
+   "2010": 10119,
+   "2011": 10609,
+   "2012": 9513,
+   "2013": 6845,
+   "2014": 3952,
+   "2015": 12777,
+   "2016": 32526,
+   "2017": 30996,
+   "2018": 31609,
+   "2019": 35760,
+   "2020": 34251,
+   "2021": 38657,
+   "2022": 34101,
+   "2023": 39920,
+   "2024": 39492,
+   "2025": 40217
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Volvo_XC90",
+  "note": "col='United States'",
+  "flags": [
+   "Volvo XC90 2002: 4,379 sold, 0 complaints in window -> sales merged into 2003",
+   "Volvo XC90 2010: 10,119 sold, 0 complaints in window -> sales merged into 2011",
+   "Volvo XC90 2012: 9,513 sold, 0 complaints in window -> sales merged into 2013",
+   "Volvo XC90 2015: 12,777 sold, 0 complaints in window -> sales merged into 2016"
+  ],
+  "complaints": 1532,
+  "scored": [
+   2003,
+   2004,
+   2005,
+   2006,
+   2007,
+   2011,
+   2016,
+   2017,
+   2018,
+   2019,
+   2020,
+   2021,
+   2022,
+   2023,
+   2024,
+   2025
+  ]
+ },
+ {
+  "slug": "mercury-mariner",
+  "sales": {},
+  "kind": "none",
+  "url": "",
+  "note": "no sales source",
+  "flags": [
+   "Mercury Mariner: 0 scorable model years / 0 complaints -> complaints only"
+  ],
+  "complaints": 1512,
+  "scored": []
+ },
+ {
+  "slug": "oldsmobile-alero",
+  "sales": {},
+  "kind": "none",
+  "url": "",
+  "note": "no sales source",
+  "flags": [
+   "Oldsmobile Alero: 0 scorable model years / 0 complaints -> complaints only"
+  ],
+  "complaints": 1493,
+  "scored": []
+ },
+ {
+  "slug": "hyundai-genesis",
+  "sales": {
+   "2008": 6167,
+   "2009": 21889,
+   "2010": 29121,
+   "2011": 32998,
+   "2012": 33973,
+   "2013": 32330,
+   "2014": 29992,
+   "2015": 31374,
+   "2016": 23230
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/hyundai-genesis-sales-figures/",
+  "note": "GoodCarBadCar annual U.S. sales",
+  "flags": [
+   "Hyundai Genesis 2008: 6,167 sold, 0 complaints in window -> sales merged into 2009",
+   "Hyundai Genesis 2014: 29,992 sold, 5 complaints in window -> sales merged into 2015"
+  ],
+  "complaints": 1244,
+  "scored": [
+   2009,
+   2010,
+   2011,
+   2012,
+   2013,
+   2015,
+   2016
+  ]
+ },
+ {
+  "slug": "saturn-ls",
+  "sales": {},
+  "kind": "none",
+  "url": "",
+  "note": "no sales source",
+  "flags": [
+   "Saturn LS: 0 scorable model years / 0 complaints -> complaints only"
+  ],
+  "complaints": 1458,
+  "scored": []
+ },
+ {
+  "slug": "dodge-nitro",
+  "sales": {
+   "2006": 16990,
+   "2007": 74825,
+   "2008": 36368,
+   "2009": 17443,
+   "2010": 22618,
+   "2011": 24434
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/dodge-nitro-sales-figures/",
+  "note": "GoodCarBadCar annual U.S. sales",
+  "flags": [
+   "Dodge Nitro 2006: 16,990 sold, 0 complaints in window -> sales merged into 2007"
+  ],
+  "complaints": 1457,
+  "scored": [
+   2007,
+   2008,
+   2010,
+   2011
+  ]
+ },
+ {
+  "slug": "saturn-aura",
+  "sales": {},
+  "kind": "none",
+  "url": "",
+  "note": "no sales source",
+  "flags": [
+   "Saturn Aura: 0 scorable model years / 0 complaints -> complaints only"
+  ],
+  "complaints": 1439,
+  "scored": []
+ },
+ {
+  "slug": "gmc-canyon",
+  "sales": {
+   "2004": 27193,
+   "2005": 34845,
+   "2006": 23979,
+   "2007": 20888,
+   "2008": 14974,
+   "2009": 10107,
+   "2010": 7992,
+   "2011": 9590,
+   "2012": 8735,
+   "2013": 929,
+   "2014": 3070,
+   "2015": 30077,
+   "2016": 37449,
+   "2017": 32106,
+   "2018": 33492,
+   "2019": 32825,
+   "2020": 25190,
+   "2021": 24125,
+   "2022": 27819,
+   "2023": 22458,
+   "2024": 38215,
+   "2025": 36477
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/GMC_Canyon",
+  "note": "col='United States Canyon'",
+  "flags": [
+   "GMC Canyon 2013: 929 sold, 0 complaints in window -> sales merged into 2012",
+   "GMC Canyon 2014: 3,070 sold, 0 complaints in window -> sales merged into 2015"
+  ],
+  "complaints": 1429,
+  "scored": [
+   2004,
+   2005,
+   2006,
+   2007,
+   2015,
+   2016,
+   2017,
+   2018,
+   2019,
+   2020,
+   2021,
+   2022,
+   2023,
+   2024,
+   2025
+  ]
  }
 ]

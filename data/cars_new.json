@@ -958,5 +958,215 @@
 "sales_url": "https://en.wikipedia.org/wiki/Lincoln_MKZ",
 "sales_kind": "calendar",
 "id": "lincoln-mkz"
+},
+{
+"name": "Lexus LS",
+"brand": "Lexus",
+"segment": "car",
+"years": "2005-2008",
+"sold": 81524,
+"n": 54,
+"per100k": 66,
+"expected": 69.279557637261,
+"li": 78,
+"serious": 24,
+"worst": "2008",
+"issues": [
+[
+"engine",
+19
+],
+[
+"transmission & drivetrain",
+17
+],
+[
+"speed control",
+13
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/lexus-ls-sales-figures/",
+"sales_kind": "calendar",
+"id": "lexus-ls"
+},
+{
+"name": "Mitsubishi Outlander",
+"brand": "Mitsubishi",
+"segment": "suv",
+"years": "2016-2022",
+"sold": 252710,
+"n": 353,
+"per100k": 140,
+"expected": 274.61785000303445,
+"li": 129,
+"serious": 18,
+"worst": "2016",
+"issues": [
+[
+"body structure",
+24
+],
+[
+"electrical",
+13
+],
+[
+"brakes",
+12
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Mitsubishi_Outlander",
+"sales_kind": "calendar",
+"id": "mitsubishi-outlander"
+},
+{
+"name": "Lexus IS",
+"brand": "Lexus",
+"segment": "car",
+"years": "2010-2022",
+"sold": 210680,
+"n": 74,
+"per100k": 35,
+"expected": 231.5839147415815,
+"li": 32,
+"serious": 27,
+"worst": "2014",
+"issues": [
+[
+"speed control",
+20
+],
+[
+"electrical",
+14
+],
+[
+"engine",
+14
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Lexus_IS",
+"sales_kind": "calendar",
+"id": "lexus-is"
+},
+{
+"name": "Volvo XC90",
+"brand": "Volvo",
+"segment": "suv",
+"years": "2011-2022",
+"sold": 271405,
+"n": 165,
+"per100k": 61,
+"expected": 284.38994671052933,
+"li": 58,
+"serious": 13,
+"worst": "2016",
+"issues": [
+[
+"electrical",
+35
+],
+[
+"engine",
+27
+],
+[
+"brakes",
+20
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Volvo_XC90",
+"sales_kind": "calendar",
+"id": "volvo-xc90"
+},
+{
+"name": "Hyundai Genesis",
+"brand": "Hyundai",
+"segment": "car",
+"years": "2010-2016",
+"sold": 213018,
+"n": 284,
+"per100k": 133,
+"expected": 231.25981989339053,
+"li": 123,
+"serious": 14,
+"worst": "2012",
+"issues": [
+[
+"engine",
+19
+],
+[
+"electrical",
+19
+],
+[
+"transmission & drivetrain",
+14
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/hyundai-genesis-sales-figures/",
+"sales_kind": "calendar",
+"id": "hyundai-genesis"
+},
+{
+"name": "Dodge Nitro",
+"brand": "Dodge",
+"segment": "suv",
+"years": "2007-2011",
+"sold": 175235,
+"n": 331,
+"per100k": 189,
+"expected": 171.13863741674487,
+"li": 193,
+"serious": 13,
+"worst": "2007",
+"issues": [
+[
+"electrical",
+29
+],
+[
+"fuel system, gasoline",
+27
+],
+[
+"transmission & drivetrain",
+14
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/dodge-nitro-sales-figures/",
+"sales_kind": "calendar",
+"id": "dodge-nitro"
+},
+{
+"name": "GMC Canyon",
+"brand": "GMC",
+"segment": "truck",
+"years": "2015-2022",
+"sold": 246153,
+"n": 236,
+"per100k": 96,
+"expected": 253.9173702272922,
+"li": 93,
+"serious": 9,
+"worst": "2015",
+"issues": [
+[
+"transmission & drivetrain",
+34
+],
+[
+"steering",
+30
+],
+[
+"electrical",
+16
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/GMC_Canyon",
+"sales_kind": "calendar",
+"id": "gmc-canyon"
 }
 ]
