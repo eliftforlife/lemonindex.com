@@ -106,6 +106,12 @@ else:
             parts = [f'{E(BFAM.get(x["fam"], x["fam"]))} {("Index " + str(x["li"])) if x.get("li") else (str(x["n"]) + " complaints")}' for x in e['combined']]
             return f'<small>all engines combined: {"; ".join(parts)}</small>', None
         return '—', None
+    # 11-10 v2: each engine's YouTube rank among the BMW engines here (average tone over its years with enough videos), for the page badge
+    _YTAVG = {}
+    for _c in BENG:
+        _v = [d['score'] for d in (BYT.get(_c) or {}).values() if d and d.get('score') is not None]
+        if _v: _YTAVG[_c] = sum(_v) / len(_v)
+    _YTRANK = {c: i + 1 for i, c in enumerate(sorted(_YTAVG, key=lambda c: -_YTAVG[c]))}
     def _engine_page(code):
         meta = BENG[code]; yrs = BEY.get(code) or {}
         if not yrs: return None
@@ -149,32 +155,54 @@ else:
         ans = (f'The {E(meta["name"])} is BMW&#39;s {E(meta["size"])} {E(meta["asp"])} {E(meta["layout"])}, made {E(meta["made"])}. '
                f'In the US it was used in the {E(models_s)} from model years {y0} to {y1}' + (f', rated {hp[0]}' + (f'–{hp[-1]}' if len(hp) > 1 else '') + ' hp' if hp else '') + '. '
                + (f'{txt_total:,} owner complaints to the government name the {E(code)} in their own words. ' if txt_total else '') + (bline.replace('<b>', '').replace('</b>', '') + ' ' if bline else ''))
+        # 11-10 v2 (design audit): one-line answer, 3 chips, a per-year chart (owner score + YouTube tone), the matching rules folded,
+        # and the "fewest complaints" sentence said once (it used to repeat in the answer, under the table and in the FAQ).
+        lo_y = min(bs, key=bs.get) if len(bs) >= 2 else None
+        yb_y = max(yt_scores, key=yt_scores.get) if len(yt_scores) >= 2 and len(set(yt_scores.values())) > 1 else None
+        ans1 = (f'BMW&#39;s {E(meta["size"])} {E(meta["asp"])} {E(meta["layout"])} in the {E(models_s)}, model years {y0}–{y1}.'
+                + (f' Fewest owner complaints per car: the <b>{lo_y}</b>.' if lo_y else '') + (f' YouTube likes the <b>{yb_y}</b> best.' if yb_y else ''))
+        rk = _YTRANK.get(code)
+        chips = (f'<div class="trc"><div><b>{y0}–{str(y1)[-2:]}</b><span>model years</span></div>'
+                 + (f'<div><b>{hp[0]}' + (f'–{hp[-1]}' if len(hp) > 1 else '') + '</b><span>hp (US)</span></div>' if hp else '')
+                 + (f'<div><b>#{rk}</b><span>YouTube rank of {len(_YTRANK)} BMW engines</span></div>' if rk else '<div><b>–</b><span>not enough YouTube videos to rank</span></div>') + '</div>')
+        mxi = max([150] + [v for k, v in own.values() if k == 'b'])
+        def erow(y):
+            e = yrs[y]; k = own.get(int(y)); sc = yt_scores.get(int(y))
+            if k and k[0] == 'b': ow = f'<span class="eg-o {"bad" if k[1] > 110 else "good" if k[1] < 90 else ""}"><i style="width:{min(100, k[1] / mxi * 100):.0f}%"></i></span><b class="{"bad" if k[1] > 110 else "good" if k[1] < 90 else ""}">{k[1]}</b>'
+            elif k: ow = f'<span class="eg-o na"></span><b class="mute">{k[1]:,}<small> compl.</small></b>'
+            else: ow = '<span class="eg-o na"></span><b class="mute">·</b>'
+            yt = (f'<span class="eg-t"><i style="width:{sc}%"></i></span><b>{sc}</b>' if sc is not None else '<span class="eg-t na"></span><b class="mute">·</b>')
+            cars = ', '.join(BFAM.get(f, f).replace('BMW ', '') for f in e['models'])
+            return f'<div class="egr"><span class="egy">{y}<small>{E(cars)}</small></span>{ow}{yt}</div>'
+        chart = ('<div class="egc"><div class="egh" aria-hidden="true"><span>Year</span><span>Owner complaints <em>Lemon Index, lower = better</em></span><span>YouTube tone <em>0-100, higher = better</em></span></div>'
+                 + ''.join(erow(y) for y in ys) + '</div>')
         sec = []
-        sec.append('<section class="yc engt"><h2>Reliability by year. <span class="h2s">Owner complaints and YouTube, per model year this engine was sold.</span></h2>'
-                   + _rows(['Year', 'Cars with it', 'Owner complaints', f'Complaints naming "{E(code)}"', 'YouTube says', 'Top complaint areas'], rows)
-                   + (f'<p>{bline}</p>' if bline else '') + (f'<p>{yline}</p>' if yline else '') + (f'<p>{agree}</p>' if agree else '')
-                   + '<p class="yc-cap">How each number is matched to the engine: <b>(a)</b> complaints filed under a version name that used only this engine that year (e.g. "335I"); '
+        sec.append('<h2>Reliability by year</h2>' + chart + (f'<p class="note">{yline}</p>' if yline else '') + (f'<p class="note">{agree}</p>' if agree else '')
+                   + '<details class="trm"><summary>Owner score = the whole car&#39;s Lemon Index where this was its only engine that year; a gray dot means the model shared engines, so the number isn&#39;t this engine&#39;s alone. <span>How we count</span></summary>'
+                   '<p>How each number is matched to the engine: <b>(a)</b> complaints filed under a version name that used only this engine that year (e.g. "335I"); '
                    '<b>(b)</b> the model had only this engine that year, so its Lemon Index (complaints per car sold vs the average car) applies to every car with this engine; '
                    '"all engines combined" = the model had several engines under one name, so its number is not this engine&#39;s alone. '
-                   'Owner complaints in (a) and (b) cover the whole car (brakes, air bags, electrics ...), not only the engine: see the top complaint areas. '
-                   f'Complaints naming "{E(code)}" = complaints whose own text mentions the code, about a model and year that had it. None of these is a failure rate. '
-                   'YouTube says = how positive the videos are, 0–100 (higher = more positive), from video titles and transcripts, counted only where the title names the engine or a version that used it. '
-                   'A video whose title names no model year counts toward every year of its generation, so neighboring years share most of their videos; "naming" = how many titles name that year. Under 3 videos&#39; worth shows "not enough videos".</p></section>')
+                   'Owner complaints cover the whole car (brakes, air bags, electrics ...), not only the engine. None of these is a failure rate. '
+                   'YouTube tone = how positive the videos are, 0–100, from titles and transcripts that name the engine or a version that used it. '
+                   'A video whose title names no model year counts toward every year of its generation, so neighboring years share most of their videos.</p></details>'
+                   + '<details class="cpd engd"><summary>All the numbers, year by year</summary>'
+                   + _rows(['Year', 'Cars with it', 'Owner complaints', f'Complaints naming "{E(code)}"', 'YouTube says', 'Top complaint areas'], rows) + '</details>')
         if meta.get('notes'):
-            sec.append(f'<section class="yc"><h2>Known issues on record</h2><ul>' + ''.join(f'<li>{E(n)}</li>' for n in meta['notes'])
+            sec.append(f'<section class="engk"><h2>Known issues on record</h2><ul>' + ''.join(f'<li>{E(n)}</li>' for n in meta['notes'])
                        + f'</ul><p class="yc-cap">According to <a href="{E(meta["src"])}" rel="noopener">Wikipedia&#39;s {E(meta["name"])} article</a> and its sources.</p></section>')
         vers = collections.OrderedDict()
         for f in BVER:
             for y in sorted(BVER[f], key=int):
                 for v in BVER[f][y]:
                     if v.get('code') == code: vers.setdefault((f, v['model'], v.get('hp'), v.get('tq')), []).append(int(y))
-        vr = [[_fam_link(f), E(m), f'{min(yl)}–{max(yl)}' if len(yl) > 1 else str(yl[0]), f'{hp_} hp' if hp_ else '—', f'{tq} lb-ft' if tq else '—'] for (f, m, hp_, tq), yl in vers.items()]
-        sec.append('<section class="yc"><h2>Every US version with this engine</h2>' + _rows(['Model', 'Version', 'Model years', 'Power', 'Torque'], vr)
+        # 11-10 v2: 3 compact columns (model + version, years, power / torque) so it fits a phone without stacking
+        vr = [[f'{_fam_link(f)} <small>{E(m)}</small>', f'{min(yl)}–{str(max(yl))[-2:]}' if len(yl) > 1 else str(yl[0]), (f'{hp_} hp' if hp_ else '—') + (f'<small> · {tq} lb-ft</small>' if tq else '')] for (f, m, hp_, tq), yl in vers.items()]
+        sec.append('<section class="engv"><h2>Every US version with this engine</h2>' + _rows(['Model and version', 'Years', 'Power'], vr)
                    + f'<p class="yc-cap">Versions and years: EPA (fueleconomy.gov). Engine and power: <a href="{E(meta["src"])}" rel="noopener">Wikipedia, {E(meta["name"])}</a> (BMW ratings; US figures can differ by a few hp).</p></section>')
         faq = [(f'What cars have the {meta["name"]} engine?', f'In the US: the {models_s}, model years {y0}–{y1}. See the version table for each one.'),
                (f'Is the {code} reliable?', (re.sub('<[^>]+>', '', bline) + ' ' if bline else '') + 'Government complaints are filed by model and year, not engine, and they cover the whole car, so none of these numbers is an engine failure rate. We only credit a number to this engine where the version name or the model year leaves no doubt. Have any used car inspected.')]
         if hp: faq.append((f'How much horsepower does the {code} make?', f'BMW rated it at {hp[0]}' + (f' to {hp[-1]}' if len(hp) > 1 else '') + ' hp in US versions, depending on the car and year.'))
-        sec.append('<section class="yc yqa"><h2>Quick answers</h2>' + ''.join(f'<h3>{E(q)}</h3><p>{E(a)}</p>' for q, a in faq) + '</section>')
+        sec.append('<section class="yqa trq"><h2>Quick answers</h2>' + qa_fold(''.join(f'<h3>{E(q)}</h3><p>{E(a)}</p>' for q, a in faq)) + '</section>')
         path = ENG_URL(code)
         ph = BPH.get(code); fig = ''
         if ph:   # a real Wikimedia Commons photo whose file name/description names this code, or (N54/N55/B58/N63 only, Elijah 11-10) a labeled AI illustration
@@ -190,14 +218,14 @@ else:
             alt = f'Illustration of a BMW {E(code)} {E(BENG[code]["size"])} {E(BENG[code]["layout"])} engine' if ph.get('ai') else f'BMW {E(code)} engine'
             fig = (f'<figure class="engph"><img src="{E(ph["src"])}"{rset(ph["src"], "(max-width: 700px) 100vw, 680px")} width="{ph["w"]}" height="{ph["h"]}" '
                    f'alt="{alt}" loading="eager">' + YSL.info(cr) + '</figure>')
-        body = (f'<div class="advp"><header class="advh1"><p class="ph-e"><a href="/engines/bmw/">BMW engines</a> · <a href="/brands/bmw/">BMW</a></p>'
-                f'<h1>BMW {E(code)} engine: reliability by year, specs and the cars that have it.</h1><p class="ans">{ans}</p>{fig}</header><div class="ygrid">{"".join(sec)}</div>'
-                + share_line(f'BMW {code} engine reliability, year by year. Free:') + '</div>')
+        body = (f'<article class="study tr2 eng2"><p class="kicker"><a href="/engines/bmw/">BMW engines</a> · <a href="/brands/bmw/">BMW</a></p>'
+                f'<h1>BMW {E(code)} engine reliability by year</h1><p class="tra">{ans1} <button type="button" class="shl" data-share="{E(f"BMW {code} engine reliability, year by year. Free:")}">Share ↗</button></p>{chips}'
+                + ''.join(sec) + '</article>')
         title = next(t for t in (f'BMW {code} Engine Reliability by Year, Specs & Cars', f'BMW {code} Engine: Reliability by Year & Specs', f'BMW {code} Engine Reliability') if len(t) <= 65)
         ld = [faq_ld([(q, '', a) for q, a in faq])]
         if ph and ph.get('ai'): ld.append(img_ld(code, ph)); IMG_PAGES.append((path, ph))
         elif ph: IMG_PAGES.append((path, ph))
-        page(path, title, _html.unescape(re.sub('<[^>]+>', '', ans)), body, ld=ld)
+        page(path, title, _html.unescape(re.sub('<[^>]+>', '', ans)), body, ld=ld, vis=fig)
         ENG_OK.add(code); BMW_URLS.append(path)
         return dict(code=code, years=f'{y0}–{y1}', y0=int(y0), y1=int(y1), fams=fams, models=models_s, b=scored_b, a=scored_a, comb=comb_only, n=len(ys), txt=txt_total,
                     yt=(round(sum(yt_scores.values()) / len(yt_scores)) if yt_scores else None, len(yt_scores)),

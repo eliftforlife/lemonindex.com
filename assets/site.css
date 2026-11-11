@@ -1404,3 +1404,28 @@ article.cp2 .crel a { padding: 6px 12px; border-radius: 999px; background: #f5f5
 ol.cyr { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 0 24px; }
 ol.cyr li { display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
 ol.cyr li b { font-variant-numeric: tabular-nums; }
+
+/* 11-10 v2 BMW engine pages (article.eng2): engine image hero, answer + chips, a per-year chart like the engines hub */
+.pg:has(> article.eng2) > .ph-a .ph-v .engph { width: min(64%, 440px); margin: 0 auto; }
+.pg:has(> article.eng2) > .ph-a .ph-v .engph img { width: 100%; height: auto; }
+article.eng2 .egc { margin: 6px 0 10px; }
+article.eng2 .egh, article.eng2 .egr { display: grid; grid-template-columns: minmax(78px, 1fr) minmax(0, 1fr) 40px minmax(0, 1fr) 30px; gap: 6px 8px; align-items: center; }
+article.eng2 .egh { font-size: 12px; font-weight: 600; color: #6e6e73; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+article.eng2 .egh span:nth-child(2) { grid-column: 2 / 4; } article.eng2 .egh span:nth-child(3) { grid-column: 4 / 6; }
+article.eng2 .egh em { display: block; font-style: normal; font-weight: 400; }
+article.eng2 .egr { padding: 7px 0; border-bottom: 1px solid #f0f0f2; font-size: 14.5px; }
+article.eng2 .egy { font-weight: 600; font-variant-numeric: tabular-nums; display: grid; line-height: 1.2; }
+article.eng2 .egy small { font-weight: 400; font-size: 11.5px; color: #6e6e73; }
+article.eng2 .eg-o, article.eng2 .eg-t { display: block; height: 10px; border-radius: 5px; background: #f2f2f4; position: relative; overflow: hidden; }
+article.eng2 .eg-o i, article.eng2 .eg-t i { position: absolute; inset: 0 auto 0 0; border-radius: 5px; background: #b9bcc2; }
+article.eng2 .eg-o.good i { background: #137a3a; } article.eng2 .eg-o.bad i { background: var(--red); } article.eng2 .eg-t i { background: #8e8e93; }
+article.eng2 .egr > b { text-align: right; font-variant-numeric: tabular-nums; font-weight: 700; }
+article.eng2 .egr > b.good { color: #137a3a; } article.eng2 .egr > b.bad { color: var(--red); } article.eng2 .egr > b.mute { color: #8e8e93; font-weight: 500; }
+article.eng2 .egr > b small { font-size: 11px; font-weight: 500; }
+article.eng2 details.cpd { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin-top: 8px; }
+article.eng2 details.cpd > summary { list-style: none; cursor: pointer; padding: 12px 32px 12px 0; font-weight: 600; position: relative; }
+article.eng2 details.cpd > summary::-webkit-details-marker { display: none; }
+article.eng2 details.cpd > summary::after { content: '+'; position: absolute; right: 4px; top: 8px; font-size: 24px; font-weight: 300; color: #6e6e73; }
+article.eng2 details.cpd[open] > summary::after { content: '\2212'; }
+article.eng2 .engk ul { margin: 0; padding-left: 20px; } article.eng2 .engk li { margin: 4px 0; }
+article.eng2 .engv table.adv td { padding: 7px 8px; font-size: 14px; } article.eng2 .engv table.adv td:nth-child(2), article.eng2 .engv table.adv td:nth-child(3) { white-space: nowrap; }
