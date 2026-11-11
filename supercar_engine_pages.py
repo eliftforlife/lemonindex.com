@@ -161,7 +161,7 @@ def _sce_page(e):
     SCE_URLS.append(path)
     return dict(e=e, y0=y0, y1=y1, yt=ytavg, nyt=len(yts), rec=len(R), tsb=t['n'], tot=tot)
 
-if SCENG['engines']:
+def _sce_hub():   # a function, so the hub's locals (order, best, cards ...) don't overwrite build.py globals
     _ST = [_sce_page(e) for e in SCENG['engines']]
     def _skind(e):
         d = SCENG['engines'][e]; lay = d['layout'].lower(); a = d['asp'].lower()
@@ -218,4 +218,5 @@ if SCENG['engines']:
          ld=[faq_ld([(q, '', a) for q, a in faq]), {"@context": "https://schema.org", "@type": "CollectionPage", "name": "Supercar engines", "url": BASE + SCE_HUB,
              "hasPart": [{"@type": "WebPage", "name": SCENG['engines'][s['e']]['name'], "url": BASE + SCE_URL(s['e'])} for s in order]}])
     SCE_URLS.insert(0, SCE_HUB)
+if SCENG['engines']: _sce_hub()
 print('supercar engine pages', len(SCE_URLS), 'images', len(SCE_IMGS), 'YouTube-ranked', len(SCE_YTRANK))

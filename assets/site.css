@@ -1711,3 +1711,4 @@ article.sce .sce-t ul { margin: 6px 0 8px; padding-left: 20px; } article.sce .sc
 .sceh .ehc-rk.sce-mk { background: #f5f5f7; color: var(--ink2); font-weight: 700; }
 .sce-el { list-style: none; padding: 0; margin: 4px 0 12px; display: grid; gap: 8px; } .sce-el li { line-height: 1.4; } .sce-el small { color: var(--mute); display: block; }
 .sceh .ehc:not(:has(.ehc-im)) > h2 { margin-top: 30px; }
+.sceh .ehc-im { overflow: hidden; } .sceh .ehc-im > img { position: absolute; inset: 0; }

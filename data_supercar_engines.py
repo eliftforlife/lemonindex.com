@@ -169,7 +169,7 @@ for r in csv.DictReader(open(os.path.join(CACHE, 'vehicles.csv'), encoding='utf-
         if fam in SC and y not in {x['y'] for x in SC[fam]['years']} and fam != 'Chevrolet Corvette Z06': continue
         e = epa_engine(fam, r['model'], r['displ'], r['cylinders'], r['tCharger'] == 'T', r['sCharger'] == 'S', r['atvType'], y, r['eng_dscr'])
         FY[fam][y].add(e)
-        if e: V[e][y][fam].add(r['model'])
+        if e: V[e][y][fam].add('Corvette Z06' if r['model'] == 'Corvette' else r['model'])   # the C7 Z06 is filed as plain "Corvette" with "Z06" in EPA's engine notes
 SINGLE = {(fam, y): next(iter(es)) for fam, yy in FY.items() for y, es in yy.items() if len(es) == 1 and None not in es}
 # ---- NHTSA model names (complaints, repair notes) -> engine, only where the name and year leave no doubt
 NH = [('FERRARI', r'458.*', 2010, 2015, 'ferrari-f136'), ('FERRARI', r'CALIFORNIA', 2010, 2014, 'ferrari-f136'), ('FERRARI', r'CALIFORNIA T|CALIFORNIA', 2015, 2018, 'ferrari-f154'),
