@@ -4,8 +4,10 @@ YT_SRC = r'C:\Users\elift\Desktop\Eliftforlife youtube\3 Lemon Index\data\yt'
 def _seo_pages():
     PAGEID = {c['name']: c['id'] for c in CARS}; HAS = {f['id'] for f in YEARS}
     def carlink(c): return f'<a href="/cars/{c["id"]}/">{E(c["name"])}</a>' if c['id'] in HAS else E(c['name'])
+    # 11-10 v2 (design audit): every ranking row gets the car's AI illustration and a tier-colored score (helpers in gap_pages.py)
+    bimg, tier = best_img, best_tier
     def rows(L, sub):
-        return '<ol class="bestl">' + ''.join(f'<li><span class="rk">{i}</span><div><b>{carlink(c)}</b><small>{sub(c)}</small></div><span class="sc">{c["li"]}</span></li>' for i, c in enumerate(L, 1)) + '</ol>'
+        return '<ol class="bestl bl2">' + ''.join(f'<li><span class="rk">{i}</span>{bimg(c["id"], c["name"])}<div><b>{carlink(c)}</b><small>{sub(c)}</small></div><span class="sc {tier(c["li"])}">{c["li"]}</span></li>' for i, c in enumerate(L, 1)) + '</ol>'
     top = lambda c: E(', '.join(f'{p} {k}%' for p, k in c['issues'][:2])) if c.get('issues') else ''
     SEG = [('cars', 'car', 'cars'), ('suvs', 'suv', 'SUVs'), ('trucks', 'truck', 'trucks'), ('minivans', 'minivan', 'minivans')]
     cards = []
@@ -23,7 +25,7 @@ def _seo_pages():
         d = json.load(open(p, encoding='utf-8')); R = []
         for r in d['ranking'][:20]:
             c = BYNAME.get(r['model']); R.append((r, c))
-        lis = '<ol class="bestl">' + ''.join(f'<li><span class="rk">{i}</span><div><b>{carlink(c) if c else E(r["model"])}</b><small>{r["videos"]} of {d["videos"]} videos</small></div><span class="sc">{c["li"] if c else "–"}</span></li>' for i, (r, c) in enumerate(R[:15], 1)) + '</ol>'
+        lis = '<ol class="bestl bl2">' + ''.join(f'<li><span class="rk">{i}</span>{bimg(c["id"] if c else None, r["model"])}<div><b>{carlink(c) if c else E(r["model"])}</b><small>{r["videos"]} of {d["videos"]} videos</small></div><span class="sc {tier(c["li"]) if c else ""}">{c["li"] if c else "–"}</span></li>' for i, (r, c) in enumerate(R[:15], 1)) + '</ol>'
         safe = sorted([x for x in R if x[1] and x[1]['li'] < 100], key=lambda x: x[1]['li'])[:3]
         lede = f'In {d["videos"]} YouTube videos on the best used cars under {label}, the most-picked are the {R[0][0]["model"]}, {R[1][0]["model"]} and {R[2][0]["model"]}.' + (f' Among the top picks, the {safe[0][0]["model"]} has the fewest owner complaints.' if safe else '')
         body = f'<div class="advp"><header class="advh1"><p class="ph-e"><a href="/best/">Best cars</a></p><h1>Best used cars under {label}.</h1><p class="ans">{E(lede)}</p></header><div class="ygrid"><section class="yc"><h2>What buyers&#39; guides pick, with complaint scores</h2>{lis}<p class="yc-cap">Right column: Lemon Index, where 100 is the average car and lower is better. A dash means we don&#39;t score that model.</p></section></div><p class="yc-cap">Picks come from {d["videos"]} YouTube videos with {d["views"] / 1e6:.1f}M views. A pick counts when the model is in the title or named in the video. Check the exact model year before you buy.</p></div>'
@@ -33,11 +35,29 @@ def _seo_pages():
         segof = {c['id']: c['seg'] for c in CARS}; L = sorted([m for m in GAP['mpg'] if segof.get(m['id']) == 'suv'], key=lambda m: -m['comb'])[:15]
         if len(L) >= 5:
             lede = f'The best gas mileage SUVs we track are the {L[0]["name"]} at {L[0]["comb"]} mpg combined, the {L[1]["name"]} at {L[1]["comb"]} and the {L[2]["name"]} at {L[2]["comb"]}, using their best gas or hybrid version.'
-            body = ('<div class="advp"><header class="advh1"><p class="ph-e"><a href="/best/">Best cars</a></p><h1>SUVs with the best gas mileage.</h1><p class="ans">' + E(lede) + '</p></header><div class="ygrid"><section class="yc"><div class="tw"><table class="adv"><thead><tr><th>SUV</th><th>Combined</th><th>City / hwy</th><th>Fuel cost/yr</th><th>Lemon Index</th></tr></thead><tbody>'
-                    + ''.join(f'<tr><td><a href="/cars/{m["id"]}/">{E(m["name"])}</a>{" (hybrid)" if m["hyb"] else ""}</td><td>{m["comb"]}</td><td>{m["city"]} / {m["hwy"]}</td><td>${m["cost"]:,}</td><td>{m["li"] or "–"}</td></tr>' for m in L) + '</tbody></table></div></section></div><p class="yc-cap">EPA mileage, best version sold 2019 to 2025, gas and hybrid only. Lemon Index covers model years 2010 to 2022, where 100 is the average car and lower is better.</p></div>')
+            body = ('<div class="advp"><header class="advh1"><p class="ph-e"><a href="/best/">Best cars</a></p><h1>SUVs with the best gas mileage.</h1><p class="ans">' + E(lede) + '</p></header><div class="ygrid"><section class="yc">' + mpg_rows(L) + '</section></div><p class="yc-cap">EPA mileage, best version sold 2019 to 2025, gas and hybrid only. Lemon Index covers model years 2010 to 2022, where 100 is the average car and lower is better.</p></div>')
             body += share_line('SUVs with the best gas mileage, next to their owner complaint scores. Free list:')
             page('/best/suvs-gas-mileage/', 'SUVs With the Best Gas Mileage, With Complaint Scores', lede, body); SEO_URLS.append('/best/suvs-gas-mileage/'); cards.append(('/best/suvs-gas-mileage/', 'SUVs with the best gas mileage'))
-    hub = '<div class="advp"><header class="advh1"><h1>Best cars, by the data.</h1><p class="ans">Rankings built from government complaint data and YouTube buyer&#39;s guides.</p></header><ul class="bestl">' + ''.join(f'<li style="grid-template-columns:1fr"><b><a href="{u}">{E(t)}</a></b></li>' for u, t in cards + [('/best-gas-mileage/', 'Best gas mileage'), ('/check-engine-light/', 'Which cars get the check engine light most')]) + '</ul></div>'
+    # 11-10 v2: the index as photo cards, each with the #1 car of its list
+    lead = {}
+    for slug, sg, nm in SEG:
+        L = sorted([c for c in CARS if c['seg'] == sg and c['sold'] >= 150000], key=lambda c: c['li']); lead[f'/best/most-reliable-{slug}/'] = L[0]['id']
+    for k in ('5k', '10k', '15k', '20k'):
+        p_ = os.path.join(YT_SRC, f'best-used-{k}', 'consensus.json')
+        if os.path.exists(p_):
+            c0 = next((BYNAME.get(r['model']) for r in json.load(open(p_, encoding='utf-8'))['ranking'] if BYNAME.get(r['model'])), None)
+            if c0: lead[f'/best/used-cars-under-{k[:-1]}000/'] = c0['id']
+    if GAP:
+        segof = {c['id']: c['seg'] for c in CARS}
+        lead['/best/suvs-gas-mileage/'] = next((m['id'] for m in sorted([m for m in GAP['mpg'] if segof.get(m['id']) == 'suv'], key=lambda m: -m['comb'])), None)
+        lead['/best-gas-mileage/'] = GAP['mpg'][0]['id']; lead['/check-engine-light/'] = GAP['cel'][0]['id']
+    allc = cards + [('/best-gas-mileage/', 'Best gas mileage'), ('/check-engine-light/', 'Which cars get the check engine light most')]
+    def _bc(u, t):
+        ph = aph(lead[u]) if lead.get(u) else None
+        im = f'<span class="bcp"><img src="{ph["src"]}" alt="" width="{ph["w"]}" height="{ph["h"]}" loading="lazy" decoding="async"></span>' if ph else '<span class="bcp"></span>'
+        return f'<a class="bcard" href="{u}">{im}<b>{E(t)}</b><span class="tl">See the list <i>›</i></span></a>'
+    hub = ('<div class="advp"><header class="advh1"><h1>Best cars, by the data.</h1><p class="ans">Rankings built from government complaint data and YouTube buyer&#39;s guides.</p></header><div class="bcards">'
+           + ''.join(_bc(u, t) for u, t in allc) + '</div></div>')
     hub += share_line('The best cars, SUVs, trucks and minivans, ranked by real owner data. Free:')
     page('/best/', 'Best Cars Ranked by Real Owner Data | The Lemon Index', 'The most reliable cars, SUVs, trucks and minivans, plus the best used cars by budget, ranked from government complaint data.', hub); SEO_URLS.insert(0, '/best/')
     # ---- statistics

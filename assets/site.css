@@ -1429,3 +1429,22 @@ article.eng2 details.cpd > summary::after { content: '+'; position: absolute; ri
 article.eng2 details.cpd[open] > summary::after { content: '\2212'; }
 article.eng2 .engk ul { margin: 0; padding-left: 20px; } article.eng2 .engk li { margin: 4px 0; }
 article.eng2 .engv table.adv td { padding: 7px 8px; font-size: 14px; } article.eng2 .engv table.adv td:nth-child(2), article.eng2 .engv table.adv td:nth-child(3) { white-space: nowrap; }
+
+/* 11-10 v2 best lists: a car photo on every row, tier-colored scores, mpg rows; the /best/ index as photo cards */
+.bestl.bl2 li { grid-template-columns: 26px 96px minmax(0, 1fr) auto; gap: 10px; padding: 8px 12px 8px 10px; background: #f5f5f7; }
+.bestl.bl2 .bph { display: block; aspect-ratio: 1000 / 530; overflow: hidden; }
+.bestl.bl2 .bph img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 71%; }
+.bestl.bl2 .bph img[src*="/assets/cars/"] { object-fit: contain; object-position: 50% 100%; }
+.bestl.bl2 b { font-size: 16px; line-height: 1.25; } .bestl.bl2 small { display: block; font-size: 12.5px; color: #6e6e73; line-height: 1.35; margin-top: 2px; }
+.bestl.bl2 .sc { font-size: 22px; font-weight: 800; font-variant-numeric: tabular-nums; min-width: 40px; text-align: right; }
+.bestl.bl2 .sc.good { color: #137a3a; } .bestl.bl2 .sc.bad { color: var(--red); }
+.bestl.mpgl .sc { display: grid; line-height: 1; } .bestl.mpgl .sc small { font-size: 11px; font-weight: 600; color: #6e6e73; text-align: right; margin-top: 3px; }
+@media (max-width: 600px) { .bestl.bl2 li { grid-template-columns: 20px 84px minmax(0, 1fr) auto; gap: 8px; padding: 8px 10px 8px 8px; } .bestl.bl2 b { font-size: 15px; } .bestl.bl2 .sc { font-size: 20px; } }
+.bcards { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; margin-top: 8px; }
+.bcard { display: grid; gap: 6px; padding: 14px 16px 16px; border-radius: 20px; background: #f5f5f7; color: var(--ink); text-decoration: none; transition: transform .25s cubic-bezier(.2,.9,.25,1); }
+.bcard:hover { transform: translateY(-2px); }
+.bcard .bcp { display: block; aspect-ratio: 1000 / 530; overflow: hidden; margin: 0 6% 4px; }
+.bcard .bcp img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 71%; }
+.bcard b { font-size: 18px; line-height: 1.25; letter-spacing: -.01em; } .bcard .tl { font-size: 14px; font-weight: 600; color: #3c4043; }
+@media (max-width: 600px) { .bcards { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; } .bcard { padding: 10px 12px 12px; border-radius: 16px; } .bcard b { font-size: 15px; } .bcard .tl { font-size: 13px; } }
+.bcard { align-content: start; } .bestl.bl2 b a { overflow-wrap: anywhere; }

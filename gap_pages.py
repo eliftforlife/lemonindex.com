@@ -1,6 +1,19 @@
 # Keyword-gap pages (11-06): /check-engine-light/ and /best-gas-mileage/. Run by build.py with exec(). Data: data/gap.json from data_gap.py.
 GAP = _load('data/gap.json') if os.path.exists('data/gap.json') else None
 GAP_URLS = []
+
+# 11-10 v2 (design audit): shared ranking-row helpers (also used by seo_pages.py): the car's AI illustration, a tier color, mpg rows
+def best_img(fid, alt):
+    ph = aph(fid) if fid else None
+    return f'<span class="bph"><img src="{ph["src"]}" alt="{E(alt)}" width="{ph["w"]}" height="{ph["h"]}" loading="lazy" decoding="async"></span>' if ph else '<span class="bph"></span>'
+def best_tier(v): return '' if not isinstance(v, (int, float)) else 'good' if v < 90 else 'bad' if v > 110 else ''
+def mpg_rows(L):
+    out = []
+    for i, m in enumerate(L, 1):
+        sub = f'{m["city"]} city / {m["hwy"]} hwy · ${m["cost"]:,}/yr · Lemon Index {m["li"] or "–"}'
+        out.append(f'<li><span class="rk">{i}</span>{best_img(m["id"], m["name"])}<div><b><a href="/cars/{m["id"]}/">{E(m["name"])}</a>{" hybrid" if m.get("hyb") else ""}</b>'
+                   f'<small>{sub}</small></div><span class="sc mpg">{m["comb"]}<small>mpg</small></span></li>')
+    return '<ol class="bestl bl2 mpgl">' + ''.join(out) + '</ol>'
 def _gap_pages():
     if not GAP: return
     T = lambda head, rows: '<div class="tw"><table class="adv"><thead><tr>' + ''.join(f'<th>{h}</th>' for h in head) + '</tr></thead><tbody>' + ''.join('<tr>' + ''.join(f'<td>{c}</td>' for c in r) + '</tr>' for r in rows) + '</tbody></table></div>'
@@ -23,9 +36,9 @@ def _gap_pages():
          ld=[faq_ld([(q, re.sub('&#39;', "'", a), None) for q, a in faq])] if False else [{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": html.unescape(a)}} for q, a in faq]}]); GAP_URLS.append('/check-engine-light/')
     M = GAP['mpg'][:25]; gas = sorted([m for m in GAP['mpg'] if m.get('gas')], key=lambda m: -m['gas'])[:15]; both = sorted([m for m in GAP['mpg'] if m.get('li') and m['li'] <= 80], key=lambda m: -m['comb'])[:10]
     body = (f'<div class="advp"><header class="advh1"><p class="ph-e"><a href="/">The Lemon Index</a></p><h1>Best gas mileage cars, with their complaint scores.</h1><p>EPA mileage tells you what a car saves at the pump. The Lemon Index tells you what owners complained about. Here are both, side by side.</p></header>'
-            '<div class="ygrid"><section class="yc" id="both"><h2>High mileage and few complaints</h2>' + T(['Model', 'Best combined mpg', 'Lemon Index'], [[link(m), f'{m["comb"]}{" hybrid" if m["hyb"] else ""}', m['li']] for m in both]) + '<p class="yc-cap">Models with a Lemon Index of 80 or lower. 100 is the average car, lower is better.</p></section>'
-            '<section class="yc" id="all"><h2>Best combined mpg, any model</h2>' + T(['Model', 'Combined', 'City / hwy', 'Fuel cost/yr', 'Lemon Index'], [[link(m) + (' (hybrid)' if m['hyb'] else ''), m['comb'], f'{m["city"]} / {m["hwy"]}', f'${m["cost"]:,}', m['li'] or '–'] for m in M]) + '</section>'
-            '<section class="yc" id="gas"><h2>Best mpg without a hybrid</h2>' + T(['Model', 'Combined', 'Lemon Index'], [[link(m), m['gas'], m['li'] or '–'] for m in gas]) + '</section></div>'
+            '<div class="ygrid"><section class="yc" id="both"><h2>High mileage and few complaints</h2>' + mpg_rows(both) + '<p class="yc-cap">Models with a Lemon Index of 80 or lower. 100 is the average car, lower is better.</p></section>'
+            '<section class="yc" id="all"><h2>Best combined mpg, any model</h2>' + mpg_rows(M) + '</section>'
+            '<section class="yc" id="gas"><h2>Best mpg without a hybrid</h2>' + mpg_rows([dict(m, comb=m['gas'], hyb=False) for m in gas]) + '</section></div>'
             '<p class="yc-cap">Mileage: EPA, best version sold 2019 to 2025, gas and hybrid only, so no plug-ins or EVs. Fuel cost is the EPA&#39;s current estimate. Lemon Index covers model years 2010 to 2022, so a very new redesign may differ.</p></div>')
     page('/best-gas-mileage/', 'Best Gas Mileage Cars, Ranked With Owner Complaint Scores | The Lemon Index', 'The best gas mileage cars and SUVs by EPA combined mpg, next to their owner complaint scores, so you can see which ones save gas and stay out of the shop.', body); GAP_URLS.append('/best-gas-mileage/')
 _gap_pages()
