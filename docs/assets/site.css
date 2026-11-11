@@ -1364,3 +1364,8 @@ article.tr2 .q3m { display: block; width: max-content; }
   table.stk tr > :first-child::before { content: none; }
   table.stk td:empty { display: none; }
 }
+@media (max-width: 600px) {   /* cells keep their own inline content (links, small notes): the label floats left instead of making the cell a flex row */
+  table.stk td, table.stk tbody th { display: flow-root; text-align: right; overflow-wrap: normal; word-break: normal; }
+  table.stk td::before, table.stk tbody th::before { float: left; max-width: 46%; margin-right: 10px; }
+  table.stk td > *, table.stk tbody th > * { overflow-wrap: break-word; }
+}

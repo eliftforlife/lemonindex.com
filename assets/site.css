@@ -1349,3 +1349,23 @@ main:has(article.tr2) { padding-bottom: 8px; }
 body:has(article.tr2) .foot { margin-top: 16px; }
 article.tr2 .q3m { display: block; width: max-content; }
 @media (min-width: 700px) { article.tr2 blockquote.q3 p { -webkit-line-clamp: 5; } article.tr2 .q3m { display: none; } }
+/* 11-10 (design audit: tables cut off on phones, moto/plane Advanced showed only the first column): no forced 720 px width; 2-3 column
+   tables fit and wrap, 4+ column tables (class stk + data-label, added in build.py stack_tables) become one small card per row. */
+@media (max-width: 600px) {
+  .tw > table.adv, .engt table.adv, .tw > table { min-width: 0 !important; }
+  table.adv td, table.adv th { min-width: 0 !important; white-space: normal; overflow-wrap: anywhere; }
+  .tw:has(> table.stk) { border: 0; border-radius: 0; overflow: visible; }
+  table.stk, table.stk tbody { display: block; width: 100%; }
+  table.stk thead, table.stk tr:has(> th):not(:has(> td)) { display: none; }
+  table.stk tr { display: grid; grid-template-columns: 1fr; gap: 2px; padding: 10px 12px; margin: 0 0 8px; background: #f5f5f7; border-radius: 14px; }
+  table.stk td, table.stk tbody th { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 3px 0; border: 0; min-width: 0; text-align: right; font-size: 14.5px; }
+  table.stk td::before, table.stk tbody th::before { content: attr(data-label); flex: none; max-width: 48%; text-align: left; font-size: 12.5px; font-weight: 500; color: #6e6e73; }
+  table.stk tr > :first-child { display: block; text-align: left; font-size: 15.5px; font-weight: 700; padding-bottom: 4px; }
+  table.stk tr > :first-child::before { content: none; }
+  table.stk td:empty { display: none; }
+}
+@media (max-width: 600px) {   /* cells keep their own inline content (links, small notes): the label floats left instead of making the cell a flex row */
+  table.stk td, table.stk tbody th { display: flow-root; text-align: right; overflow-wrap: normal; word-break: normal; }
+  table.stk td::before, table.stk tbody th::before { float: left; max-width: 46%; margin-right: 10px; }
+  table.stk td > *, table.stk tbody th > * { overflow-wrap: break-word; }
+}

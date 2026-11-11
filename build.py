@@ -182,6 +182,26 @@ def navlinks(path):
 # free-data credit line under every car page (11-03): the data is CC BY 4.0, so copying it is fine as long as it credits us (see /data/)
 CITE = '<p class="cite">Free to use with credit: <q>Source: The Lemon Index (lemonindex.com)</q>. <a href="/data/">Get the data</a></p>'
 _AH = re.compile(r'<article class="study([^"]*)"><p class="kicker">(.*?)</p>\s*<h1>(.*?)</h1>\s*(?:<p class="lede">(.*?)</p>)?', re.S)
+_TBL = re.compile(r'<table(?:\s[^>]*)?>.*?</table>', re.S)
+def stack_tables(body):
+    """11-10 (design audit: tables cut off on phones): every table with 4+ columns gets class "stk" and a data-label on each cell (its
+    column header), so site.css can show each row as a small stacked card under 600 px. Narrower tables just fit the screen."""
+    def one(m):
+        t = m.group(0)
+        if ' stk' in t[:200]: return t
+        from bs4 import BeautifulSoup
+        s = BeautifulSoup(t, 'html.parser'); tb = s.find('table'); rows = tb.find_all('tr')
+        hr = next((r for r in rows if r.find('th') and not r.find('td')), None)
+        if not hr: return t
+        heads = [c.get_text(' ', strip=True) for c in hr.find_all(['th', 'td'])]
+        if len(heads) < 4: return t
+        for r in rows:
+            if r is hr: continue
+            for i, c in enumerate(r.find_all(['td', 'th'], recursive=False)):
+                if i < len(heads) and heads[i]: c['data-label'] = heads[i]
+        tb['class'] = (tb.get('class') or []) + ['stk']
+        return str(s)
+    return _TBL.sub(one, body)
 def auto_hero(body, vis=''):
     """11-03 v6 for every remaining article page (studies, compare pairs, transmission, electric, legal): its kicker + h1 + lede become the
     centered photo hero the other pages have, and the article sits under it with the v6 spacing."""
@@ -225,6 +245,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
     if path.startswith(('/cars/', '/motorcycles/', '/planes/', '/supercars/', '/best/', '/stats/', '/check-engine-light/', '/best-gas-mileage/', '/electric/')):
         body += f'<p class="upd">Updated <time datetime="{_d}">{_dl}</time></p>'; ld = list(ld or []) + [{"@context": "https://schema.org", "@type": "WebPage", "url": BASE + path, "name": title, "dateModified": _d}]
     body = auto_hero(body, vis)
+    if '<table' in body: body = stack_tables(body)   # 11-10: wide tables become stacked rows on phones (site.css .stk)
     if re.fullmatch(r'/cars/[^/]+/', path) and 'SEARCH_MINI' in globals(): body += SEARCH_MINI + CODES_JS   # 11-10: engine code lookup on model pages (added after the date hash, so dates don't move)
     url = BASE + path; ld = list(ld or []) + [crumbs(path, title)]
     lds = ''.join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in (ld or []))
@@ -237,7 +258,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}{img or "/assets/og.png"}"><meta name="twitter:card" content="summary_large_image">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://challenges.cloudflare.com https://www.googletagmanager.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; frame-src https://challenges.cloudflare.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cloudflareinsights.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://vpic.nhtsa.dot.gov https://lemon-survey.elift08.workers.dev https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="google-adsense-account" content="{ADS}"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=1110r"><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
+<link rel="stylesheet" href="/assets/site.css?v=1110s"><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
 <body>{gh_header(path)}
 <main>{body}{CITE if path.startswith('/cars/') else ''}{'' if path == '/vote/' else ask_html(path)}</main>
 <footer class="foot"><div class="cta"><div><h2>New car studies, straight from the data.</h2><p>Every study becomes a video. Subscribe to see the next one first.</p></div><a class="btn" href="{YT}?sub_confirmation=1" rel="noopener">Subscribe on YouTube</a></div>
