@@ -11,11 +11,40 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 E = lambda s: html.escape(str(s), quote=True)
 LIC = 'https://creativecommons.org/licenses/by/4.0/'
 BASE = 'https://lemonindex.com'
-ASSET = '<link rel="stylesheet" href="/assets/tabs.css?v=3"><script src="/assets/tabs.js?v=1"></script>'
+ASSET = '<link rel="stylesheet" href="/assets/tabs.css?v=4"><script src="/assets/tabs.js?v=1"></script>'
 
 def engines(fid):
     p = os.path.join(HERE, 'data', f'engines_{fid}.json')
     return json.load(open(p, encoding='utf-8')) if os.path.exists(p) else []
+
+_BMW = None
+def bmw_groups(fid):
+    """11-10 rollout: BMW models get the Years / Engines toggle from data/bmw_specs.json (engine code per EPA version + year),
+    with the engine illustration from data/bmw_engine_photos.json when there is one."""
+    global _BMW
+    if not fid.startswith('bmw-'): return []
+    if _BMW is None:
+        try:
+            _BMW = (json.load(open(os.path.join(HERE, 'data', 'bmw_specs.json'), encoding='utf-8')),
+                    json.load(open(os.path.join(HERE, 'data', 'bmw_engine_photos.json'), encoding='utf-8')) if os.path.exists(os.path.join(HERE, 'data', 'bmw_engine_photos.json')) else {})
+        except Exception: _BMW = ({}, {})
+    sp, ph = _BMW
+    by = {}
+    for y, vs in ((sp.get('versions') or {}).get(fid) or {}).items():
+        for v in vs:
+            if v.get('code'): by.setdefault(v['code'], set()).add(int(y))
+    out = []
+    for code, ys in by.items():
+        e = (sp.get('engines') or {}).get(code) or {}
+        asp = {'naturally aspirated': '', 'non-turbo': '', 'single twin-scroll turbo': 'turbo'}.get(e.get('asp') or '', e.get('asp') or '')
+        nm = ' '.join(x for x in (e.get('size'), asp, e.get('layout')) if x) or code
+        g = {'id': code.lower(), 'name': nm, 'code': code, 'years': sorted(ys), 'src': [x for x in (e.get('src'), 'https://www.fueleconomy.gov/') if x]}
+        im = ph.get(code)
+        if im: g['img'] = {'src': im['src'], 'w': im['w'], 'h': im['h']}
+        out.append(g)
+    return sorted(out, key=lambda g: (g['years'][0], g['code']))
+
+def groups(fid): return engines(fid) or bmw_groups(fid)
 
 def _span(ys):
     """[1973..1979] -> '1973–1979'; gaps -> '2017–2021, 2023–2026'."""
@@ -34,7 +63,7 @@ YTI = '<svg aria-hidden="true" viewBox="0 0 24 24" width="11" height="11"><path 
 def engine_chart(fid, name, li, yt, pages, cur=None, cls=lambda li: '', ysc=None):
     """Every engine, with its image on the left and one row per model year on the right.
     li = {year: Lemon Index} (only years with enough complaints), yt = {year: YouTube rank #} (only rankable years), pages = years with a page."""
-    gs = engines(fid)
+    gs = groups(fid)
     if not gs: return ''
     mx = max([120] + [v * 1.08 for v in li.values()])
     # 11-10 (Elijah: "put YT rank in the corner of all engines"): each engine's YouTube rank among the engines here, by its average
@@ -158,7 +187,9 @@ def transform_model(body, eng_html, short):
     links = [l for l in (pv.find_all(['link', 'script'], recursive=False) if pv else [])]
     rsc = pv.find(class_='rsc') if pv else None; rnew = pv.find(class_='rs-new') if pv else None
     short_ans = f'<p class="ans tb-ans">{_first_sentence(ans)}</p>' if ans else ''
-    sl = _s(slider).replace('>Best year<', '>Safest year<')   # the slider opens on the site's safest year (complaints + YouTube); 'Best year' below means fewest complaints
+    sl = _s(slider).replace('>Best year<', '>Safest year<')
+    if not slider and pv:   # 11-10 rollout: no year images -> the model's own picture fills the same hero slot (car-image work can drop in here later)
+        fig = pv.find('figure', class_='yph'); sl = _s(fig)   # the slider opens on the site's safest year (complaints + YouTube); 'Best year' below means fewest complaints
     hero = (f'<section class="ph tb-hero">{_s(crumbs)}<div class="tb-img">{"".join(map(str, links))}{sl}</div>{_s(h1)}{short_ans}{_s(yhero)}{_s(share)}</section>')
     secs = [c for c in root.find_all(recursive=False) if c is not ph]
     pick = lambda pred: [c for c in secs if pred(c)]
@@ -177,7 +208,7 @@ def transform_model(body, eng_html, short):
             if h2: h2.extract()
             inner = ch.decode_contents(); ch.clear(); ch.append(BeautifulSoup(h2s + _toggle(inner, eng_html, short), 'html.parser'))
     over = f'{_s(note)}{_s(rsc)}{_s(rnew)}' + ''.join(map(str, bw + rest))
-    tabs = _tabs([('overview', 'Overview', over), ('years', 'Years & engines', ''.join(map(str, years))), ('compare', 'Compare', ''.join(map(str, cmp_))),
+    tabs = _tabs([('overview', 'Overview', over), ('years', 'Years & engines' if eng_html else 'Years', ''.join(map(str, years))), ('compare', 'Compare', ''.join(map(str, cmp_))),
                   ('questions', 'Questions', ''.join(map(str, qa))), ('data', 'All the data', ''.join(map(str, table)))], f'{short} sections')
     cls = ' '.join(root.get('class') or [])
     return f'{ASSET}<div class="{cls} tbl">{hero}{tabs}{tail}</div>'

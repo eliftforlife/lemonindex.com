@@ -188,7 +188,7 @@ _MN = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'No
 def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, vis=''):
     title, desc = fit_title(title), fit_desc(desc)
     _tm = re.match(r'^/cars/([^/]+)/(?:(\d{4})/)?$', path)
-    if _tm and _tm.group(1) in TAB.ON and 'tab_body' in globals(): body = tab_body(_tm.group(1), int(_tm.group(2)) if _tm.group(2) else None, body)
+    if _tm and (_tm.group(1) in TAB.ON or _tm.group(1) in globals().get('FY', {})) and 'tab_body' in globals(): body = tab_body(_tm.group(1), int(_tm.group(2)) if _tm.group(2) else None, body)
     _h = hashlib.md5(body.encode('utf-8')).hexdigest()[:10]
     if PD.get(path, {}).get('h') != _h: PD[path] = {'h': _h, 'd': TODAY}
     _d = PD[path]['d']; _dl = f'{_MN[int(_d[5:7]) - 1]} {int(_d[8:])}, {_d[:4]}'
@@ -610,18 +610,34 @@ def yt_rank_map(f):
     sc = YTS.get(f['id']) or {}; okr = yt_rankable(f, sc)
     got = sorted(((s['score'], s['videos'], int(y)) for y, s in sc.items() if int(y) in okr), reverse=True)
     return {y: i + 1 for i, (_, _, y) in enumerate(got)}
+TAB_FAIL = []
+# The BeautifulSoup re-arrange costs ~80 s over ~2,300 pages, so results are cached outside the repo, keyed by the page body,
+# the engine chart and tabbed.py + tabs code itself: an unchanged page skips the parse.
+import pickle, tempfile
+_TAB_CACHE = os.path.join(tempfile.gettempdir(), 'lemonindex_tabcache.pkl')
+_TAB_SRC = hashlib.md5(b''.join(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), _f), 'rb').read() for _f in ('tabbed.py', 'year_slider.py'))).hexdigest()
+try: _TAB_OLD = pickle.load(open(_TAB_CACHE, 'rb'))
+except Exception: _TAB_OLD = {}
+_TAB_NEW = {}
 def tab_body(fid, y, body):
-    """11-10: re-arrange a tabbed model's page (tabbed.py) and add the engine chart."""
+    """11-10: re-arrange a model/year page into the tabbed layout (tabbed.py); any page it can't parse keeps the old layout."""
+    try: return _tab_body(fid, y, body)
+    except Exception as ex:
+        TAB_FAIL.append(f'{fid}/{y or ""}: {type(ex).__name__} {ex}'); return body
+def _tab_body(fid, y, body):
     f = FY.get(fid)
     if not f: return body
     li = {v['y']: v['li'] for v in f['years'] if v['ok']}; pages = {v['y'] for v in f['years']}
     ytr = yt_rank_map(f); _sc = YTS.get(fid) or {}
     eng = TAB.engine_chart(fid, f['name'], li, ytr, pages, cur=y, cls=lambda v: 'bad' if v > 110 else 'good', ysc={yy: _sc[str(yy)]['score'] for yy in ytr})
     short = f['name'].split(' ', 1)[-1]
+    k = hashlib.md5('|'.join((_TAB_SRC, fid, str(y), short, eng, body)).encode('utf-8')).hexdigest()
+    if k in _TAB_OLD: _TAB_NEW[k] = _TAB_OLD[k]; return _TAB_OLD[k]
     if y is None:
         ld = ''.join(f'<script type="application/ld+json">{json.dumps(d)}</script>' for d in TAB.images_ld(fid, f['name']))
-        return TAB.transform_model(body, eng, short) + ld
-    return TAB.transform_year(body, eng, short)
+        out = TAB.transform_model(body, eng, short) + ld
+    else: out = TAB.transform_year(body, eng, short)
+    _TAB_NEW[k] = out; return out
 def yt_note(f):
     sc = YTS.get(f['id'])
     if not sc: return ''
@@ -1318,3 +1334,8 @@ page('/vin/', 'Free VIN Decoder and Recall Check: Look Up Any VIN | The Lemon In
 <script id="pick" type="application/json">{json.dumps(PICK, ensure_ascii=False).replace("</", "<\\/")}</script><script id="valias" type="application/json">{json.dumps(VALIAS, separators=(",", ":"))}</script><script src="/assets/vin.js?v=1106a" defer></script></section></div>''')
 shutil.copytree('assets', f'{OUT}/assets', dirs_exist_ok=True); shutil.copy('data/survey.json', f'{OUT}/assets/survey-q.json'); shutil.copy('data/votes.json', f'{OUT}/assets/votes.json')
 print('built', len(urls), 'pages into', OUT)
+print('tab layout failures:', len(TAB_FAIL), TAB_FAIL[:5], '| cache hits', sum(1 for k in _TAB_NEW if k in _TAB_OLD), 'of', len(_TAB_NEW))
+try:
+    with open(_TAB_CACHE + '.tmp', 'wb') as _fh: pickle.dump(_TAB_NEW, _fh, protocol=pickle.HIGHEST_PROTOCOL)
+    os.replace(_TAB_CACHE + '.tmp', _TAB_CACHE)
+except Exception as ex: print('tab cache not saved:', ex)
