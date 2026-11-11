@@ -9,6 +9,15 @@
   const ALL = Object.entries(P).flatMap(([b, ms]) => ms.map(([n, id, ys]) => ({ b, n, id, ys, k: (n + ' ' + b).toLowerCase().replace(/[^a-z0-9 ]/g, ' ') + (AK[id] || '') })));
   const go = (id, y) => { location.href = '/cars/' + id + '/' + (y ? y + '/' : ''); };
 
+  // 11-11 (Elijah: "the buttons underneath should come in when you click the look-up box"): Brand / Model / Year / Show problems stay
+  // folded (inert, not tabbable) until the box is focused, tapped or typed in; then they slide in and stay. Without JS they simply show.
+  const box = $('fq'), form = $('look');
+  if (box && form) {
+    const open = () => { if (!form.classList.contains('fo-closed')) return; form.classList.remove('fo-closed'); form.inert = false; form.removeAttribute('aria-hidden'); box.setAttribute('aria-expanded', 'true'); };
+    form.classList.add('fo-closed'); form.inert = true; form.setAttribute('aria-hidden', 'true');
+    box.setAttribute('aria-controls', 'look'); box.setAttribute('aria-expanded', 'false');
+    ['focus', 'pointerdown', 'input'].forEach(ev => box.addEventListener(ev, open));
+  }
   // typed search: a 4-digit year anywhere picks the year, the other words have to match the model name
   const q = $('fq'), sug = $('fsug'); let hits = [], cur = -1;
   const find = s => {

@@ -219,6 +219,7 @@ def transform_model(body, eng_html, short):
     nrow = len(S_.select('table tbody tr')); c_d = _ovcard('data', 'All the data', f'{nrow} model years' if nrow else '', 'in one table: index, complaints, recalls, mpg' if nrow else '', go='the table')
     over = f'{_s(note)}<div class="ovg ovg4">{c_y}{c_c}{c_q}{c_d}</div>' + (f'<p class="ovslim">{_txt(rnew)}</p>' if rnew else '')   # 11-10: preview cards
     years = bw + years
+    over = _ovfilter(over, [('years', 0, ''.join(map(str, years))), ('compare', 0, ''.join(map(str, cmp_))), ('questions', 0, ''.join(map(str, qa))), ('data', 0, ''.join(map(str, table)))])
     tabs = _tabs([('overview', 'Overview', over), ('years', 'Years & engines' if eng_html else 'Years', ''.join(map(str, years))), ('compare', 'Compare', ''.join(map(str, cmp_))),
                   ('questions', 'Questions', ''.join(map(str, qa))), ('data', 'All the data', ''.join(map(str, table)))], f'{short} sections')
     cls = ' '.join(root.get('class') or [])
@@ -237,6 +238,12 @@ _OVI = {'problems': '<path d="M14.7 6.3a4 4 0 0 0 5 5L21 12.6l-1.6 1.6a4 4 0 0 1
         'specs': '<circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/>'}
 def _ovsvg(k): return f'<svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">{_OVI.get(k, _OVI["data"])}</svg>'
 def _txt(t): return re.sub(r'\s+', ' ', t.get_text(' ', strip=True)) if t is not None else ''
+def _ovfilter(html_, panels):
+    """Drop the preview card of a tab the page doesn't have (e.g. no Compare tab yet); 4 left -> two rows of 2."""
+    have = {i for i, _, h in panels if h.strip()}
+    out = re.sub(r'<a class="ovc[^"]*" href="#p-([a-z]+)">.*?</a>', lambda m: m.group(0) if m.group(1) in have else '', html_, flags=re.S)
+    n = len(re.findall(r'<a class="ovc', out))
+    return out.replace('<div class="ovg">', '<div class="ovg ovg4">') if n == 4 else out.replace('<div class="ovg ovg4">', '<div class="ovg">') if n in (3, 5) else out
 def _ovcard(tid, label, value, line='', vis='', go=None):
     na = not value
     return (f'<a class="ovc{" ovc-na" if na else ""}" href="#p-{tid}"><span class="ovc-h">{_ovsvg(tid)}{E(label)}</span>'
@@ -272,8 +279,11 @@ def overview_cards_year(over, probs, fix, rec, yrs, qa):
     costs = [(_txt(li.find(class_='yc-t').find('span')), _txt(li.find('b'))) for li in S_.select('#diy .yc-g li') if li.find(class_='yc-t') and li.find('b')]
     costs = [c for c in costs if not c[0].lower().startswith('other')] or costs
     notes = next((v for k, v in card.items() if k.startswith('Repair notes')), None)
-    nnotes = _txt(notes[0]) if notes else None
-    mk = next((k.replace('Repair notes from ', '') for k in card if k.startswith('Repair notes')), '')
+    nnotes = _txt(notes[0]) if notes else None; _mk2 = ''
+    if not nnotes and S_.select_one('#fixes .yc-cap b'):   # the card grid may show an open investigation instead: read the count from the tab itself
+        nnotes = _txt(S_.select_one('#fixes .yc-cap b')); hm = re.match(r'Problems (.+?) told dealers', _txt(S_.select_one('#fixes h2')))
+        _mk2 = hm.group(1) if hm else ''
+    mk = next((k.replace('Repair notes from ', '') for k in card if k.startswith('Repair notes')), '') or _mk2
     if costs: c2 = _ovcard('repairs', 'Repairs & costs', E(costs[0][1]), f'{E(costs[0][0])}: typical owner quote', (f'<span class="ovc-s2">{nnotes} repair notes{" from " + E(mk) if mk else ""}</span>' if nnotes else ''), go='repairs')
     elif nnotes: c2 = _ovcard('repairs', 'Repairs & costs', E(nnotes), f'repair notes{" " + E(mk) if mk else ""} sent dealers', go='repairs')
     else:
@@ -347,6 +357,8 @@ def transform_year(body, eng_html, short):
     over = [c for c in over if 'early-n' not in (c.get('class') or [])]
     tail = [c for c in tail if not (c.name == 'p' and 'yc-cap' in (c.get('class') or []) and _txt(c).startswith('Lemon Index ='))]
     over_html = overview_cards_year(over, probs, fix, rec, yrs, qa)
+    _pl = [('problems', 0, J(probs)), ('repairs', 0, J(fix)), ('recalls', 0, J(rec)), ('years', 0, J(yrs)), ('questions', 0, J(qa))]
+    over_html = _ovfilter(over_html, _pl)
     tabs = _tabs([('overview', 'Overview', over_html), ('problems', 'Problems', J(probs)), ('repairs', 'Repairs & costs', J(fix)),
                   ('recalls', 'Recalls & safety', J(rec)), ('years', 'Every year', J(yrs)), ('questions', 'Questions', J(qa))], 'Report sections', _modes(modes))
     cls = ' '.join(root.get('class') or [])

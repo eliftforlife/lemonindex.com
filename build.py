@@ -57,12 +57,20 @@ for r in csv.DictReader(open('data/family_rates.csv', encoding='utf-8')):
                      serious=round(float(r['serious_pct'])), worst=r['worst_year'], issues=ISS[r['family']]))
 CARS.sort(key=lambda c: c['li'])
 for i, c in enumerate(CARS, 1): c['rank'] = i
+# 11-11 (Elijah: fill the "No data yet" cards): models added one by one by data_new_models.py, scored with the study's method against the
+# published average car. They get model + year pages and a real /cars/ card, but stay out of the study's ranking of 131 (CARS / rank).
+CARS_NEW = []
+for r in (json.load(open('data/cars_new.json', encoding='utf-8')) if os.path.exists('data/cars_new.json') else []):
+    CARS_NEW.append(dict(id=r['id'], name=r['name'], brand=r['brand'], seg=r['segment'], segName=SEGN.get(r['segment'], r['segment']), years=r['years'], sold=r['sold'], est=False,
+                         n=r['n'], per100k=r['per100k'], avg=round(r['expected'] / r['sold'] * 1e5), li=r['li'], serious=r['serious'], worst=r['worst'], issues=r['issues'],
+                         new=True, sales_url=r.get('sales_url'), sales_kind=r.get('sales_kind')))
+_YJ = json.load(open('data/years.json', encoding='utf-8')) + (json.load(open('data/years_new.json', encoding='utf-8')) if os.path.exists('data/years_new.json') else [])
 COUNTED = sum(c['n'] for c in CARS)
-BYNAME = {c['name']: c for c in CARS}
-YP = {f['id'] for f in json.load(open('data/years.json', encoding='utf-8'))}   # models with a page per model year (10-29)
+BYNAME = {c['name']: c for c in CARS + CARS_NEW}
+YP = {f['id'] for f in _YJ}   # models with a page per model year (10-29)
 for c in CARS: c['yp'] = c['id'] in YP
 PICK = {}
-for f in json.load(open('data/years.json', encoding='utf-8')):
+for f in _YJ:
     if f['name'] in BYNAME: PICK.setdefault(BYNAME[f['name']]['brand'], []).append([f['name'], f['id'], [v['y'] for v in f['years']]])
 PICK = dict(sorted((b, sorted(m)) for b, m in PICK.items()))
 def finder(h='Look up any car', sub='Every model year, 2000 to 2025. Free.', foot=''):
@@ -272,7 +280,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}{img or "/assets/og.png"}"><meta name="twitter:card" content="summary_large_image">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://challenges.cloudflare.com https://www.googletagmanager.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; frame-src https://challenges.cloudflare.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cloudflareinsights.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://vpic.nhtsa.dot.gov https://lemon-survey.elift08.workers.dev https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="google-adsense-account" content="{ADS}"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=1110-11102137"><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
+<link rel="stylesheet" href="/assets/site.css?v=1110-11110656"><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
 <body>{gh_header(path)}
 <main>{body}{end_block(path, _upd, _shl)}{'' if path == '/vote/' else ask_html(path)}</main>
 <footer class="foot f2"><div class="f2-in"><div class="f2-brand"><a class="f2-logo" href="/"><img src="/assets/icon-64.png" alt="" width="28" height="28">The Lemon Index</a>
@@ -280,7 +288,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <nav class="f2-col" aria-label="Explore"><p class="f2-h">Explore</p><a href="/compare/">Compare cars</a><a href="/best/">Best cars</a><a href="/electric/">Electric cars</a><a href="/stats/car-complaints/">Statistics</a><a href="/car-loan-rates/">Car loan rates</a></nav>
 <nav class="f2-col" aria-label="Data"><p class="f2-h">Data</p><a href="/method/">How the index works</a><a href="/data/">Free data</a><a href="/images/">Free images</a><a href="/vote/">Vote</a></nav>
 <nav class="f2-col" aria-label="Support"><p class="f2-h">Support</p><button class="supl" type="button">Keep Lemon ad-free</button><a href="/contact/">Contact</a><a href="{YT}?sub_confirmation=1" rel="noopener">Subscribe on YouTube</a></nav></div>
-<div class="f2-bot"><span>© {TODAY[:4]} The Lemon Index</span><a href="/terms/">Terms</a><a href="/privacy/">Privacy</a><a href="/refunds/">Refunds</a><span class="f2-dis">Built from public NHTSA complaint data and published U.S. sales figures. Not affiliated with any automaker. Not a repair-cost or safety rating.</span></div></footer><script src="/assets/explorer.js?v=1110" defer></script><script src="/assets/support.js?v=1110c" defer></script><script src="/assets/imginfo.js?v=1" defer></script><script src="/assets/lookup.js?v=1110" defer></script>{beacon}</body></html>'''
+<div class="f2-bot"><span>© {TODAY[:4]} The Lemon Index</span><a href="/terms/">Terms</a><a href="/privacy/">Privacy</a><a href="/refunds/">Refunds</a><span class="f2-dis">Built from public NHTSA complaint data and published U.S. sales figures. Not affiliated with any automaker. Not a repair-cost or safety rating.</span></div></footer><script src="/assets/explorer.js?v=1110" defer></script><script src="/assets/support.js?v=1110c" defer></script><script src="/assets/imginfo.js?v=1" defer></script><script src="/assets/lookup.js?v=1111" defer></script>{beacon}</body></html>'''
     f = os.path.join(OUT, path.strip('/'), 'index.html') if path.endswith('/') else os.path.join(OUT, path.strip('/'))
     os.makedirs(os.path.dirname(f), exist_ok=True)
     for _try in range(6):   # 11-09: Windows sometimes holds a just-written file for a moment (antivirus/indexer): retry instead of dying mid-build
@@ -382,7 +390,7 @@ def aph(fid, y=None):
     return {'src': m['src'], 'w': m['w'], 'h': m['h'], 'author': '', 'ai': m['name']} if m else mphoto(fid, y) if y else mphoto(fid)
 def tiles():
     from PIL import Image
-    yrs = {f['id']: f for f in json.load(open('data/years.json', encoding='utf-8'))}
+    yrs = {f['id']: f for f in _YJ}
     fid = lambda c: c['id']
     def img(ph, alt, cls=''):
         return f'<img class="{cls}" src="{ph["src"]}"{rset(ph["src"], SZ_TWO if cls else "(max-width: 600px) 88vw, 460px")} alt="{E(alt)}" width="{ph["w"]}" height="{ph["h"]}" loading="lazy">' if ph else ''
@@ -435,7 +443,7 @@ VOTE_IMG = lambda n: (lambda im: {'src': f'/assets/vote/{n}.webp', 'w': im.size[
 
 def hero_cards():
     """Two real cars, one great and one a lemon, as stacked report cards with their dial (exact-year Commons photos from data_photos.py)."""
-    ph = json.load(open('data/photos.json', encoding='utf-8')); yrs = {f['id']: f for f in json.load(open('data/years.json', encoding='utf-8'))}
+    ph = json.load(open('data/photos.json', encoding='utf-8')); yrs = {f['id']: f for f in _YJ}
     out = []
     # 11-10 (Elijah: a car with an AI image never shows the Wikimedia one): AI illustrations, credit behind one 'i' (the RAV4 card is the 2022,
     # the illustration's own generation; the Cherokee illustration is the same 2014-2023 generation)
@@ -453,7 +461,7 @@ best4, worst4 = CARS[0], CARS[-1]
 # ones Search Console shows just off page 1 of Google (C-Class #11, Mazda3 #10, Audi Q5 #10, Equinox #13 on 11-08), then best sellers.
 POP_FIRST = ['mercedes-benz-c-class', 'mazda3', 'audi-q5', 'chevrolet-equinox', 'honda-accord', 'toyota-camry', 'bmw-3-series', 'audi-a4']
 def pop_checks(n=28):
-    have = {f['id'] for f in json.load(open('data/years.json', encoding='utf-8'))}; by = {c['id']: c for c in CARS}
+    have = {f['id'] for f in _YJ}; by = {c['id']: c for c in CARS}
     ids = list(dict.fromkeys([i for i in POP_FIRST if i in by and i in have] + [c['id'] for c in sorted(CARS, key=lambda c: -c['sold']) if c['id'] in have]))[:n]
     return ('<section class="hpop"><h2>Reliability checks people run most.</h2><p class="hpl">'
             + ''.join(f'<a href="/cars/{i}/">{E(by[i]["name"])} reliability</a>' for i in ids) + '</p></section>')
@@ -534,7 +542,7 @@ page('/method/', 'Method: How We Score Car Reliability | The Lemon Index', 'How 
 
 # ---- model-year lookup (10-29, Elijah: "a per year / model lookup so people can look at their car's exact issues").
 # data/years.json comes from data_years.py: per family and model year the index, complaints, sold, top problem areas and up to 3 owner complaints.
-YEARS = [f for f in json.load(open('data/years.json', encoding='utf-8')) if f['name'] in BYNAME]
+YEARS = [f for f in _YJ if f['name'] in BYNAME]
 # 10-29: model years 2000-2009 added (Elijah's car is a 2008). Their scores are rough (fewer owners filed online, launch years sold partly the
 # calendar year before), so a pre-2010 year with under 20 complaints gets no score, and its page says the score is rough.
 for f in YEARS:
@@ -549,6 +557,7 @@ yurls = []
 # when problems show up (odometer at complaint) and how serious they were (data_extras_local.py).
 _load = lambda p: json.load(open(p, encoding='utf-8')) if os.path.exists(p) else {}
 XL, XA = _load('data/extras_local.json'), _load('data/extras_api.json')
+if os.path.exists('data/extras_local_new.json'): XL.update(_load('data/extras_local_new.json')); XA.update(_load('data/extras_api_new.json'))   # 11-11 new models
 def extra(fid, y):
     d = dict(XL.get(fid, {}).get(str(y), {})); d.update(XA.get(fid, {}).get(str(y), {}) or {}); return d
 # ---- 11-04 YouTube videos (data_yt.py): what owners/buyers watch most, by views, with the top video for each topic. Mobile first:
@@ -855,7 +864,7 @@ def timeline(m, comps):
             f'<i class="tl-mid" style="left:{P(m["median"])}"><b>half by {m["median"] // 1000}K</b></i></div><div class="tl-ticks">{ticks}</div></div>'
             f'<p class="yc-cap">Most owners who filed a complaint with NHTSA had <b>{m["p25"] // 1000}K to {m["p75"] // 1000}K miles</b> on the car ({m["n"]:,} complaints listed the miles). This shows when people who had a problem reported it, not the odds that your car will have it.</p>'
             + (f'<ul class="tl-top">{top}</ul>' if top else '') + '</section>')
-X2 = _load('data/extras2.json')
+X2 = _load('data/extras2.json'); X2.update(_load('data/extras2_new.json'))   # 11-11 new models: repair notes, investigations, safety tech
 TR = _load('data/trans.json')   # transmission complaints per model-year (data_trans.py)
 PH = _load('data/photos.json')   # exact-year Wikimedia Commons cutouts (data_photos.py), {fid: {year: {src, author, license, page, w, h}}}
 LIC = {'CC BY-SA 4.0': 'https://creativecommons.org/licenses/by-sa/4.0/', 'CC BY-SA 3.0': 'https://creativecommons.org/licenses/by-sa/3.0/', 'CC BY 4.0': 'https://creativecommons.org/licenses/by/4.0/'}

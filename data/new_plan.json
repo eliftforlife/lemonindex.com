@@ -1,0 +1,5 @@
+{
+ "ford-windstar": {"name": "Ford Windstar", "brand": "Ford", "seg": "minivan", "make": "FORD", "rx": "WINDSTAR", "sales": {"wiki": "Ford Windstar"}},
+ "toyota-prius": {"name": "Toyota Prius", "brand": "Toyota", "seg": "car", "make": "TOYOTA", "rx": "PRIUS", "sales": {"wiki": "Toyota Prius", "col": "US\\[", "scale": 1000}, "fe": "PRIUS(?!C|V|PRIME|PLUGIN)"},
+ "chevrolet-cobalt": {"name": "Chevrolet Cobalt", "brand": "Chevrolet", "seg": "car", "make": "CHEVROLET", "rx": "COBALT( SS)?", "sales": {"wiki": "Chevrolet Cobalt", "col": "U\\.S\\. Sales", "kind": "model"}}
+}

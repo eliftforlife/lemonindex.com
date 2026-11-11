@@ -1645,3 +1645,8 @@ main { padding-bottom: 16px; } .foot.f2 { margin-top: 32px; } .f2 .f2-in { paddi
 .tbl .tb-p > .rsc + .ovg { margin-top: 14px !important; }
 @media (max-width: 600px) { .ovg.ovg4 > .ovc { grid-column: auto; } }
 @media (max-width: 600px) { .ovg.ovg4 > .ovc, .ovg.ovg4 > .ovc:nth-child(4), .ovg.ovg4 > .ovc:nth-child(5) { grid-column: auto; } } .ovc { min-width: 0; }
+
+/* 11-11 finder: Brand / Model / Year / Show problems fold away until the search box is used (assets/lookup.js adds .fo-closed) */
+.look { max-height: 240px; transition: max-height .2s ease, opacity .2s ease, margin .2s ease; }
+.look.fo-closed { max-height: 0; opacity: 0; margin-top: 0 !important; margin-bottom: 0 !important; overflow: hidden; visibility: hidden; }
+@media (prefers-reduced-motion: reduce) { .look { transition: none; } }

@@ -1,0 +1,92 @@
+[
+{
+"name": "Ford Windstar",
+"brand": "Ford",
+"segment": "minivan",
+"years": "2000-2003",
+"sold": 664233,
+"n": 786,
+"per100k": 118,
+"expected": 679.9835062407825,
+"li": 116,
+"serious": 20,
+"worst": "2000",
+"issues": [
+[
+"transmission & drivetrain",
+17
+],
+[
+"body structure",
+15
+],
+[
+"service brakes, hydraulic",
+10
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Ford_Windstar",
+"sales_kind": "calendar",
+"id": "ford-windstar"
+},
+{
+"name": "Toyota Prius",
+"brand": "Toyota",
+"segment": "car",
+"years": "2010-2022",
+"sold": 1259300,
+"n": 2442,
+"per100k": 194,
+"expected": 1366.0449582041617,
+"li": 179,
+"serious": 13,
+"worst": "2010",
+"issues": [
+[
+"service brakes, hydraulic",
+36
+],
+[
+"service brakes, electric",
+21
+],
+[
+"speed control",
+13
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Toyota_Prius",
+"sales_kind": "calendar",
+"id": "toyota-prius"
+},
+{
+"name": "Chevrolet Cobalt",
+"brand": "Chevrolet",
+"segment": "car",
+"years": "2005-2010",
+"sold": 1014884,
+"n": 2082,
+"per100k": 205,
+"expected": 836.1892067810818,
+"li": 249,
+"serious": 15,
+"worst": "2006",
+"issues": [
+[
+"steering",
+58
+],
+[
+"service brakes, hydraulic",
+13
+],
+[
+"electrical",
+12
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Chevrolet_Cobalt",
+"sales_kind": "model",
+"id": "chevrolet-cobalt"
+}
+]
