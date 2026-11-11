@@ -88,7 +88,7 @@ def short(v):
     return f'{100 / v:.1f}× fewer complaints'.replace('.0×', '×') if v < 90 else 'about average' if v <= 110 else f'{v / 100:.1f}× the complaints'.replace('.0×', '×')
 
 def explorer():
-    for c in CARS: ph = mphoto(c['id']); c['img'] = rsmall(ph['src']) if ph else ''   # 11-03 v6: a photo on every row
+    for c in CARS: ph = YSL.model_img(c['id']) or mphoto(c['id']); c['img'] = rsmall(ph['src']) if ph else ''   # 11-03 v6: a photo on every row
     data = json.dumps(CARS, ensure_ascii=False).replace('</', '<\\/')
     seed = ''.join(f'<div class="xr"><div class="xm"><span class="xk">#{c["rank"]}</span><span class="xn"><b>{E(c["name"])}</b><small>{c["segName"]} · {c["years"]}</small></span><span class="xb"><small>{plain(c["li"])}</small></span><span class="xi">{c["li"]}</span></div></div>' for c in CARS[:15])
     tabs = ''.join(f'<button type="button" data-seg="{k}" aria-pressed="{str(k == "all").lower()}">{l}</button>' for k, l in [('all', 'All'), ('car', 'Cars'), ('suv', 'SUVs'), ('truck', 'Trucks'), ('minivan', 'Minivans')])
@@ -207,7 +207,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}{img or "/assets/og.png"}"><meta name="twitter:card" content="summary_large_image">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://challenges.cloudflare.com https://www.googletagmanager.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; frame-src https://challenges.cloudflare.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cloudflareinsights.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://vpic.nhtsa.dot.gov https://lemon-survey.elift08.workers.dev https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="google-adsense-account" content="{ADS}"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=1110i"><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=1" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
+<link rel="stylesheet" href="/assets/site.css?v=1110j"><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=1" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
 <body>{gh_header(path)}
 <main>{body}{CITE if path.startswith('/cars/') else ''}{'' if path == '/vote/' else ask_html(path)}</main>
 <footer class="foot"><div class="cta"><div><h2>New car studies, straight from the data.</h2><p>Every study becomes a video. Subscribe to see the next one first.</p></div><a class="btn" href="{YT}?sub_confirmation=1" rel="noopener">Subscribe on YouTube</a></div>
@@ -995,7 +995,7 @@ for f in YEARS:
          f'Is the {snm} reliable? {rel_plain.split(". ")[0].rstrip(".")}. Every year {ys[0]["y"]}–{ys[-1]["y"]} ranked by owner complaints' + (' and YouTube owner reviews' if f['id'] in YTR else '') + f'. Best: {best["y"]}. Worst: {worst["y"]}.', f'''
 <div class="pg mp6"><section class="ph yph6"><div class="yh-t"><p class="ph-e"><a href="/cars/">All cars</a> · <a href="/brands/{c["brand"].lower().replace(" ", "-")}/">{E(c["brand"])}</a> · {E(c["segName"])}</p>{rel_html}{f'<p class="yc-note">{SN[f["id"]][1]}</p>' if f["id"] in SN else ""}
 <div class="yhero">{gauge(c["li"], 190)}<div class="yverd {verdict(c["li"])[0]}"><p><b>{verdict(c["li"])[1]}.</b> <span>Whole model, {c["years"]}{"" if plain(c["li"]).lower() in verdict(c["li"])[1].lower() else ": " + E(plain(c["li"]))}.</span></p><p class="ybw">Best year <a class="good" href="{CARU(f, best["y"])}">{best["y"]}</a> · Worst year <a class="bad" href="{CARU(f, worst["y"])}">{worst["y"]}</a></p></div></div>
-<p><button type="button" class="btn btn-ghost" data-share="{E(f'Every {snm} year ranked by owner complaints. Best: {best["y"]}. Worst: {worst["y"]}. Free report:')}">Share ↗</button></p></div><div class="ph-v">{(YSL.year_slider_html(f['id'], f['name'], {v['y']: round(v['li']) for v in ys if v.get('ok') and v.get('li') is not None}, {y: sc_ for y, sc_ in YSL.yt_scores(f['id']).items() if y in yt_rankable(f, YTS.get(f['id'], {}))}, {v['y'] for v in ys}, start=(safest_year(f['id'], sc) or best)['y'], hero=True) if YSL.has(f['id']) else car_hero(f, ys[-1]["y"]))}{rel_tiles}</div></section>
+<p><button type="button" class="btn btn-ghost" data-share="{E(f'Every {snm} year ranked by owner complaints. Best: {best["y"]}. Worst: {worst["y"]}. Free report:')}">Share ↗</button></p></div><div class="ph-v">{(YSL.year_slider_html(f['id'], f['name'], {v['y']: round(v['li']) for v in ys if v.get('ok') and v.get('li') is not None}, {y: sc_ for y, sc_ in YSL.yt_scores(f['id']).items() if y in yt_rankable(f, YTS.get(f['id'], {}))}, {v['y'] for v in ys}, start=(safest_year(f['id'], sc) or best)['y'], hero=True) if YSL.has(f['id']) else (YSL.model_hero_html(f['id'], f['name']) or car_hero(f, ys[-1]["y"])))}{rel_tiles}</div></section>
 <section class="yyears noph" id="years"><div class="yy-ch"><h2>Every year. <span class="h2s">Lower is better. Tap a year for its full report.</span></h2>{ybars(f)}</div>{'<p class="yc-cap">Scores before 2010 are rough: fewer owners filed complaints back then.</p>' if ys[0]["y"] < 2010 else ''}{yt_note(f)}</section>
 {ytfix("model:" + f["id"])}{picks}{SPECS_HOOK(f["id"])}
 {f'<section><h2>Compare the {E(f["name"])}.</h2><div class="mus">{vcards}</div>' + (f'<p class="yc-cap">{vs}</p>' if vs else '') + '</section>' if vcards or vs else ''}
@@ -1184,13 +1184,26 @@ pick = {}
 for f in YEARS: pick.setdefault(BYNAME[f['name']]['brand'], []).append([f['name'], f['id'], [v['y'] for v in f['years']]])
 pick = dict(sorted((b, sorted(m)) for b, m in pick.items()))
 def mcard(n, i):
-    li = BYNAME[n]['li']; ph = mphoto(i)
-    return f'<a class="mc" href="/cars/{i}/"><span class="mc-p">{pimg(ph, n) if ph else ""}</span><b>{E(n.split(" ", 1)[1] if " " in n else n)}</b><span class="{"good" if li < 100 else "bad"}">{li}</span></a>'
-lst = ''.join(f'<div class="mb"><h3>{E(b)}</h3><div class="mg">' + ''.join(mcard(n, i) for n, i, _ in m) + '</div></div>' for b, m in pick.items())
+    li = BYNAME[n]['li']; ph = YSL.model_img(i) or mphoto(i)   # 11-10 (Elijah): AI illustrations replace the Wikimedia photos on the grid
+    im = (f'<img src="{ph["src"]}"{rset(ph["src"], "(max-width: 600px) 45vw, 170px")} alt="{E(n)}" width="{ph["w"]}" height="{ph["h"]}" loading="lazy">' if ph else '')
+    return f'<a class="mc" href="/cars/{i}/"><span class="mc-p">{im}</span><b>{E(n.split(" ", 1)[1] if " " in n else n)}</b><span class="{"good" if li < 100 else "bad"}">{li}</span></a>'
+# 11-10 (Elijah): models we don't have data for yet show as gray, non-clickable "No data yet" cards with their illustration
+try: NEWM = json.load(open('data/new_models.json', encoding='utf-8'))
+except FileNotFoundError: NEWM = []
+_have = {f['id'] for f in YEARS}
+NEWM = [m for m in NEWM if m['slug'] not in _have and os.path.exists(f'assets/ai-models/{m["slug"]}.webp')]
+def ndcard(m):
+    nm = m['name']; short = nm.split(' ', 1)[1] if nm.startswith(m['make'] + ' ') else nm
+    return (f'<div class="mc mc-nd" aria-disabled="true" title="No data yet"><span class="mc-p"><img src="/assets/ai-models/{m["slug"]}.webp?v=1" alt="{E(nm)}" width="1000" height="600" loading="lazy"></span>'
+            f'<b>{E(short)}</b><span class="nd">No data yet</span></div>')
+_nd = {}
+for m in NEWM: _nd.setdefault(m['make'], []).append(m)
+_brands = sorted(set(pick) | set(_nd))
+lst = ''.join(f'<div class="mb"><h3>{E(b)}</h3><div class="mg">' + ''.join(mcard(n, i) for n, i, _ in pick.get(b, [])) + ''.join(ndcard(m) for m in sorted(_nd.get(b, []), key=lambda m: m['name'])) + '</div></div>' for b in _brands)
 page('/cars/', 'Look Up Your Car: Problems by Model and Year | The Lemon Index', f'Pick your car and model year to see its owner complaints, its top problems and how it compares with every other year. {len(YEARS)} models, 2000-2025.', f'''
 <div class="pg"><div class="ph ph-f">{finder('<span class="ph-e">Look up</span>Look up your car.', 'Every model year, 2000 to 2025. Free.')}</div>
 <section><h2>Every model. <span class="h2s">Score in the corner: 100 is average, lower is better.</span></h2><div class="mbs">{lst}</div></section>
-<p class="ph-cr">Photos: Wikimedia Commons contributors (CC BY-SA and similar). Credits on each car&#39;s page.</p></div>''',
+<p class="ph-cr">Car images: AI-generated illustrations by The Lemon Index, free under CC BY 4.0 (<a href="/images/">download</a>).</p></div>''',
      ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": "Look up your car", "url": BASE + '/cars/'}])
 yurls.insert(0, '/cars/')
 

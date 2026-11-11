@@ -332,11 +332,19 @@ else:
                 f'<span>Credit: <code>Image: The Lemon Index (lemonindex.com), CC BY 4.0</code></span>'
                 f'<span><a href="{E(im["src"])}">Open full size</a> · <a href="/cars/{_fid}/#every-year">Used on: the {E(_nm)} year slider</a></span></figcaption></figure>'
                 for y, im in sorted(_ims.items(), key=lambda kv: int(kv[0]))) + '</div>')
+        # 11-10: one illustration per model (YSL.AIM), the image on each model page and the /cars/ grid
+        _pages = {f['id'] for f in YEARS}
+        model_cards = '<h2>Every model</h2><div class="imggrid">' + ''.join(
+            f'<figure class="imgcard"><img src="{E(m["src"])}" width="{m["w"]}" height="{m["h"]}" alt="{m["year"]} {E(m["name"])} illustration" loading="lazy">'
+            f'<figcaption><b>{m["year"]} {E(m["name"])}</b><span>Illustration (AI-generated), {E(m["color"])}.</span>'
+            f'<span>Credit: <code>Image: The Lemon Index (lemonindex.com), CC BY 4.0</code></span>'
+            f'<span><a href="{E(m["src"])}">Open full size</a>' + (f' · <a href="/cars/{_fid}/">Used on: {E(m["name"])}</a>' if _fid in _pages else '') + '</span></figcaption></figure>'
+            for _fid, m in sorted(YSL.AIM.items(), key=lambda kv: kv[1]['name'])) + '</div>' if YSL.AIM else ''
         lede = ('Car and engine illustrations we made for the Lemon Index. You may use them anywhere, including commercially, under Creative Commons Attribution 4.0 (CC BY 4.0), '
                 'as long as you credit "The Lemon Index (lemonindex.com)" and link to the license. They are AI-generated illustrations, not photos of a specific car or engine.')
         body = (f'<div class="advp"><header class="advh1"><p class="ph-e"><a href="/data/">Free data</a></p><h1>Free car and engine illustrations.</h1><p class="ans">{E(lede)}</p></header>'
                 f'<div class="ygrid"><section class="yc"><h2>BMW engines</h2><div class="imggrid">{cards}</div></section>'
-                f'<section class="yc">{car_cards}</section>'
+                f'<section class="yc">{model_cards}</section><section class="yc">{car_cards}</section>'
                 + (f'<section class="yc">{TAB.images_cards()}</section>' if TAB.images_cards() else '') +
                 f'<section class="yc"><h2>How to credit</h2><p>Copy this line next to the image: <code>Image: The Lemon Index (lemonindex.com), CC BY 4.0</code>, '
                 f'and link "CC BY 4.0" to <a href="{CCBY}" rel="noopener license" style="overflow-wrap:anywhere">{CCBY}</a>. If you change the image, say so.</p>'
@@ -350,6 +358,8 @@ else:
         + ''.join(f'<url><loc>{BASE}/cars/{_f}/{y}/</loc><image:image><image:loc>{BASE}{E(im["src"])}</image:loc></image:image></url>'
                   for _f, _ii in YSL.AIY.items() for y, im in _ii.items() if int(y) in {v['y'] for f in YEARS if f['id'] == _f for v in f['years']})
         + ''.join(f'<url><loc>{BASE}{pg}</loc><image:image><image:loc>{BASE}{E(src)}</image:loc></image:image></url>' for pg, src in TAB.sitemap_images())
+        + ''.join(f'<url><loc>{BASE}/cars/{_f}/</loc><image:image><image:loc>{BASE}{E(m["src"])}</image:loc></image:image></url>'
+                  for _f, m in YSL.AIM.items() if _f in {f['id'] for f in YEARS} and _f not in YSL.AIY)
         + (''.join(f'<url><loc>{BASE}/images/</loc>' + ''.join(f'<image:image><image:loc>{BASE}{E(ph["src"])}</image:loc></image:image>' for _, ph in ours) + '</url>' for _ in [0]) if ours else '')
         + '</urlset>')
     print('bmw pages', len(BMW_URLS), 'engines', len(ENG_OK), 'engine images', len(IMG_PAGES), 'ours (CC BY)', len(ours))

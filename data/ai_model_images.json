@@ -1,0 +1,1379 @@
+{
+ "acura-mdx": {
+  "src": "/assets/ai-models/acura-mdx.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2010,
+  "name": "Acura MDX",
+  "color": "silver",
+  "bytes": 43630
+ },
+ "acura-rdx": {
+  "src": "/assets/ai-models/acura-rdx.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2018,
+  "name": "Acura RDX",
+  "color": "white",
+  "bytes": 40430
+ },
+ "audi-a3": {
+  "src": "/assets/ai-models/audi-a3.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2016,
+  "name": "Audi A3",
+  "color": "dark gray",
+  "bytes": 38214
+ },
+ "audi-a4": {
+  "src": "/assets/ai-models/audi-a4.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2019,
+  "name": "Audi A4",
+  "color": "black",
+  "bytes": 38580
+ },
+ "audi-q3": {
+  "src": "/assets/ai-models/audi-q3.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2025,
+  "name": "Audi Q3",
+  "color": "deep blue",
+  "bytes": 46584
+ },
+ "audi-q5": {
+  "src": "/assets/ai-models/audi-q5.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2019,
+  "name": "Audi Q5",
+  "color": "dark red",
+  "bytes": 49148
+ },
+ "audi-q7": {
+  "src": "/assets/ai-models/audi-q7.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2019,
+  "name": "Audi Q7",
+  "color": "silver",
+  "bytes": 47402
+ },
+ "bmw-2-series": {
+  "src": "/assets/ai-models/bmw-2-series.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2019,
+  "name": "BMW 2 Series",
+  "color": "white",
+  "bytes": 37254
+ },
+ "bmw-3-series": {
+  "src": "/assets/ai-models/bmw-3-series.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2019,
+  "name": "BMW 3 Series",
+  "color": "dark gray",
+  "bytes": 39778
+ },
+ "bmw-4-series": {
+  "src": "/assets/ai-models/bmw-4-series.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2019,
+  "name": "BMW 4 Series",
+  "color": "black",
+  "bytes": 32114
+ },
+ "bmw-5-series": {
+  "src": "/assets/ai-models/bmw-5-series.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2017,
+  "name": "BMW 5 Series",
+  "color": "deep blue",
+  "bytes": 40184
+ },
+ "bmw-7-series": {
+  "src": "/assets/ai-models/bmw-7-series.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2019,
+  "name": "BMW 7 Series",
+  "color": "dark red",
+  "bytes": 44496
+ },
+ "bmw-i4": {
+  "src": "/assets/ai-models/bmw-i4.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2023,
+  "name": "BMW i4",
+  "color": "silver",
+  "bytes": 43876
+ },
+ "bmw-ix": {
+  "src": "/assets/ai-models/bmw-ix.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2023,
+  "name": "BMW iX",
+  "color": "white",
+  "bytes": 39402
+ },
+ "bmw-m3": {
+  "src": "/assets/ai-models/bmw-m3.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2018,
+  "name": "BMW M3",
+  "color": "dark gray",
+  "bytes": 38378
+ },
+ "bmw-m5": {
+  "src": "/assets/ai-models/bmw-m5.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2019,
+  "name": "BMW M5",
+  "color": "black",
+  "bytes": 39920
+ },
+ "bmw-x1": {
+  "src": "/assets/ai-models/bmw-x1.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2013,
+  "name": "BMW X1",
+  "color": "deep blue",
+  "bytes": 39846
+ },
+ "bmw-x2": {
+  "src": "/assets/ai-models/bmw-x2.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2020,
+  "name": "BMW X2",
+  "color": "dark red",
+  "bytes": 43030
+ },
+ "bmw-x3": {
+  "src": "/assets/ai-models/bmw-x3.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2018,
+  "name": "BMW X3",
+  "color": "silver",
+  "bytes": 44050
+ },
+ "bmw-x4": {
+  "src": "/assets/ai-models/bmw-x4.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2020,
+  "name": "BMW X4",
+  "color": "white",
+  "bytes": 41480
+ },
+ "bmw-x5": {
+  "src": "/assets/ai-models/bmw-x5.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2016,
+  "name": "BMW X5",
+  "color": "dark gray",
+  "bytes": 46700
+ },
+ "bmw-x6": {
+  "src": "/assets/ai-models/bmw-x6.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2020,
+  "name": "BMW X6",
+  "color": "black",
+  "bytes": 43458
+ },
+ "bmw-x7": {
+  "src": "/assets/ai-models/bmw-x7.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2021,
+  "name": "BMW X7",
+  "color": "deep blue",
+  "bytes": 44702
+ },
+ "bmw-z4": {
+  "src": "/assets/ai-models/bmw-z4.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2020,
+  "name": "BMW Z4",
+  "color": "dark red",
+  "bytes": 40224
+ },
+ "chevrolet-bolt": {
+  "src": "/assets/ai-models/chevrolet-bolt.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2023,
+  "name": "Chevrolet Bolt",
+  "color": "silver",
+  "bytes": 47262
+ },
+ "chevrolet-camaro": {
+  "src": "/assets/ai-models/chevrolet-camaro.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2022,
+  "name": "Chevrolet Camaro",
+  "color": "white",
+  "bytes": 29946
+ },
+ "chevrolet-colorado": {
+  "src": "/assets/ai-models/chevrolet-colorado.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2020,
+  "name": "Chevrolet Colorado",
+  "color": "dark gray",
+  "bytes": 38344
+ },
+ "chevrolet-cruze": {
+  "src": "/assets/ai-models/chevrolet-cruze.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2019,
+  "name": "Chevrolet Cruze",
+  "color": "black",
+  "bytes": 38820
+ },
+ "chevrolet-equinox": {
+  "src": "/assets/ai-models/chevrolet-equinox.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2012,
+  "name": "Chevrolet Equinox",
+  "color": "deep blue",
+  "bytes": 41638
+ },
+ "chevrolet-impala": {
+  "src": "/assets/ai-models/chevrolet-impala.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2019,
+  "name": "Chevrolet Impala",
+  "color": "dark red",
+  "bytes": 39158
+ },
+ "chevrolet-malibu": {
+  "src": "/assets/ai-models/chevrolet-malibu.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2021,
+  "name": "Chevrolet Malibu",
+  "color": "silver",
+  "bytes": 38006
+ },
+ "chevrolet-silverado": {
+  "src": "/assets/ai-models/chevrolet-silverado.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2012,
+  "name": "Chevrolet Silverado",
+  "color": "white",
+  "bytes": 33802
+ },
+ "chevrolet-sonic": {
+  "src": "/assets/ai-models/chevrolet-sonic.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2018,
+  "name": "Chevrolet Sonic",
+  "color": "dark gray",
+  "bytes": 47318
+ },
+ "chevrolet-spark": {
+  "src": "/assets/ai-models/chevrolet-spark.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2019,
+  "name": "Chevrolet Spark",
+  "color": "black",
+  "bytes": 46236
+ },
+ "chevrolet-suburban": {
+  "src": "/assets/ai-models/chevrolet-suburban.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2010,
+  "name": "Chevrolet Suburban",
+  "color": "deep blue",
+  "bytes": 34404
+ },
+ "chevrolet-tahoe": {
+  "src": "/assets/ai-models/chevrolet-tahoe.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2010,
+  "name": "Chevrolet Tahoe",
+  "color": "dark red",
+  "bytes": 41432
+ },
+ "chevrolet-traverse": {
+  "src": "/assets/ai-models/chevrolet-traverse.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2013,
+  "name": "Chevrolet Traverse",
+  "color": "silver",
+  "bytes": 37828
+ },
+ "chevrolet-trax": {
+  "src": "/assets/ai-models/chevrolet-trax.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2022,
+  "name": "Chevrolet Trax",
+  "color": "white",
+  "bytes": 42878
+ },
+ "chevrolet-volt": {
+  "src": "/assets/ai-models/chevrolet-volt.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2017,
+  "name": "Chevrolet Volt",
+  "color": "dark gray",
+  "bytes": 37336
+ },
+ "chrysler-200": {
+  "src": "/assets/ai-models/chrysler-200.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2016,
+  "name": "Chrysler 200",
+  "color": "black",
+  "bytes": 33578
+ },
+ "chrysler-300": {
+  "src": "/assets/ai-models/chrysler-300.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2010,
+  "name": "Chrysler 300",
+  "color": "deep blue",
+  "bytes": 39412
+ },
+ "chrysler-pacifica": {
+  "src": "/assets/ai-models/chrysler-pacifica.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2025,
+  "name": "Chrysler Pacifica",
+  "color": "dark red",
+  "bytes": 45724
+ },
+ "chrysler-town-and-country": {
+  "src": "/assets/ai-models/chrysler-town-and-country.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2015,
+  "name": "Chrysler Town & Country",
+  "color": "silver",
+  "bytes": 41618
+ },
+ "dodge-challenger": {
+  "src": "/assets/ai-models/dodge-challenger.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2020,
+  "name": "Dodge Challenger",
+  "color": "white",
+  "bytes": 32376
+ },
+ "dodge-charger": {
+  "src": "/assets/ai-models/dodge-charger.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2022,
+  "name": "Dodge Charger",
+  "color": "dark gray",
+  "bytes": 31730
+ },
+ "dodge-dart": {
+  "src": "/assets/ai-models/dodge-dart.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2016,
+  "name": "Dodge Dart",
+  "color": "black",
+  "bytes": 34426
+ },
+ "dodge-durango": {
+  "src": "/assets/ai-models/dodge-durango.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2020,
+  "name": "Dodge Durango",
+  "color": "deep blue",
+  "bytes": 37560
+ },
+ "dodge-grand-caravan": {
+  "src": "/assets/ai-models/dodge-grand-caravan.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2004,
+  "name": "Dodge Grand Caravan",
+  "color": "dark red",
+  "bytes": 41582
+ },
+ "dodge-journey": {
+  "src": "/assets/ai-models/dodge-journey.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2011,
+  "name": "Dodge Journey",
+  "color": "silver",
+  "bytes": 41628
+ },
+ "ford-ecosport": {
+  "src": "/assets/ai-models/ford-ecosport.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2022,
+  "name": "Ford EcoSport",
+  "color": "white",
+  "bytes": 47198
+ },
+ "ford-edge": {
+  "src": "/assets/ai-models/ford-edge.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2008,
+  "name": "Ford Edge",
+  "color": "dark gray",
+  "bytes": 40590
+ },
+ "ford-escape": {
+  "src": "/assets/ai-models/ford-escape.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2019,
+  "name": "Ford Escape",
+  "color": "black",
+  "bytes": 46024
+ },
+ "ford-expedition": {
+  "src": "/assets/ai-models/ford-expedition.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2011,
+  "name": "Ford Expedition",
+  "color": "deep blue",
+  "bytes": 39154
+ },
+ "ford-explorer": {
+  "src": "/assets/ai-models/ford-explorer.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2008,
+  "name": "Ford Explorer",
+  "color": "dark red",
+  "bytes": 39818
+ },
+ "ford-f-series": {
+  "src": "/assets/ai-models/ford-f-series.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2007,
+  "name": "Ford F-150",
+  "color": "silver",
+  "bytes": 32574
+ },
+ "ford-fiesta": {
+  "src": "/assets/ai-models/ford-fiesta.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2019,
+  "name": "Ford Fiesta",
+  "color": "white",
+  "bytes": 38558
+ },
+ "ford-focus": {
+  "src": "/assets/ai-models/ford-focus.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2010,
+  "name": "Ford Focus",
+  "color": "dark gray",
+  "bytes": 38066
+ },
+ "ford-fusion": {
+  "src": "/assets/ai-models/ford-fusion.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2018,
+  "name": "Ford Fusion",
+  "color": "black",
+  "bytes": 35556
+ },
+ "ford-mustang": {
+  "src": "/assets/ai-models/ford-mustang.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2008,
+  "name": "Ford Mustang",
+  "color": "deep blue",
+  "bytes": 29660
+ },
+ "ford-taurus": {
+  "src": "/assets/ai-models/ford-taurus.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2016,
+  "name": "Ford Taurus",
+  "color": "dark red",
+  "bytes": 42718
+ },
+ "gmc-acadia": {
+  "src": "/assets/ai-models/gmc-acadia.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2013,
+  "name": "GMC Acadia",
+  "color": "silver",
+  "bytes": 45350
+ },
+ "gmc-sierra": {
+  "src": "/assets/ai-models/gmc-sierra.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2010,
+  "name": "GMC Sierra",
+  "color": "white",
+  "bytes": 34528
+ },
+ "gmc-terrain": {
+  "src": "/assets/ai-models/gmc-terrain.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2017,
+  "name": "GMC Terrain",
+  "color": "dark gray",
+  "bytes": 44376
+ },
+ "gmc-yukon": {
+  "src": "/assets/ai-models/gmc-yukon.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2013,
+  "name": "GMC Yukon",
+  "color": "black",
+  "bytes": 39380
+ },
+ "gmc-yukon-xl": {
+  "src": "/assets/ai-models/gmc-yukon-xl.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2011,
+  "name": "GMC Yukon XL",
+  "color": "deep blue",
+  "bytes": 34996
+ },
+ "honda-accord": {
+  "src": "/assets/ai-models/honda-accord.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2011,
+  "name": "Honda Accord",
+  "color": "dark red",
+  "bytes": 37762
+ },
+ "honda-civic": {
+  "src": "/assets/ai-models/honda-civic.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2015,
+  "name": "Honda Civic",
+  "color": "silver",
+  "bytes": 40344
+ },
+ "honda-cr-v": {
+  "src": "/assets/ai-models/honda-cr-v.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2001,
+  "name": "Honda CR-V",
+  "color": "white",
+  "bytes": 39926
+ },
+ "honda-fit": {
+  "src": "/assets/ai-models/honda-fit.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2012,
+  "name": "Honda Fit",
+  "color": "dark gray",
+  "bytes": 41244
+ },
+ "honda-hr-v": {
+  "src": "/assets/ai-models/honda-hr-v.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2019,
+  "name": "Honda HR-V",
+  "color": "black",
+  "bytes": 39578
+ },
+ "honda-odyssey": {
+  "src": "/assets/ai-models/honda-odyssey.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2013,
+  "name": "Honda Odyssey",
+  "color": "deep blue",
+  "bytes": 37810
+ },
+ "honda-pilot": {
+  "src": "/assets/ai-models/honda-pilot.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2008,
+  "name": "Honda Pilot",
+  "color": "dark red",
+  "bytes": 41716
+ },
+ "honda-ridgeline": {
+  "src": "/assets/ai-models/honda-ridgeline.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2013,
+  "name": "Honda Ridgeline",
+  "color": "silver",
+  "bytes": 41034
+ },
+ "hyundai-accent": {
+  "src": "/assets/ai-models/hyundai-accent.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2014,
+  "name": "Hyundai Accent",
+  "color": "white",
+  "bytes": 40090
+ },
+ "hyundai-elantra": {
+  "src": "/assets/ai-models/hyundai-elantra.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2016,
+  "name": "Hyundai Elantra",
+  "color": "dark gray",
+  "bytes": 40022
+ },
+ "hyundai-kona": {
+  "src": "/assets/ai-models/hyundai-kona.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2018,
+  "name": "Hyundai Kona",
+  "color": "black",
+  "bytes": 47024
+ },
+ "hyundai-palisade": {
+  "src": "/assets/ai-models/hyundai-palisade.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2025,
+  "name": "Hyundai Palisade",
+  "color": "deep blue",
+  "bytes": 46978
+ },
+ "hyundai-santa-fe": {
+  "src": "/assets/ai-models/hyundai-santa-fe.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2016,
+  "name": "Hyundai Santa Fe",
+  "color": "dark red",
+  "bytes": 39366
+ },
+ "hyundai-sonata": {
+  "src": "/assets/ai-models/hyundai-sonata.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2004,
+  "name": "Hyundai Sonata",
+  "color": "silver",
+  "bytes": 39082
+ },
+ "hyundai-tucson": {
+  "src": "/assets/ai-models/hyundai-tucson.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2010,
+  "name": "Hyundai Tucson",
+  "color": "white",
+  "bytes": 39468
+ },
+ "jeep-cherokee": {
+  "src": "/assets/ai-models/jeep-cherokee.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2022,
+  "name": "Jeep Cherokee",
+  "color": "dark gray",
+  "bytes": 42922
+ },
+ "jeep-compass": {
+  "src": "/assets/ai-models/jeep-compass.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2013,
+  "name": "Jeep Compass",
+  "color": "black",
+  "bytes": 40198
+ },
+ "jeep-gladiator": {
+  "src": "/assets/ai-models/jeep-gladiator.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2025,
+  "name": "Jeep Gladiator",
+  "color": "deep blue",
+  "bytes": 39192
+ },
+ "jeep-grand-cherokee": {
+  "src": "/assets/ai-models/jeep-grand-cherokee.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2010,
+  "name": "Jeep Grand Cherokee",
+  "color": "dark red",
+  "bytes": 47148
+ },
+ "jeep-patriot": {
+  "src": "/assets/ai-models/jeep-patriot.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2010,
+  "name": "Jeep Patriot",
+  "color": "silver",
+  "bytes": 44146
+ },
+ "jeep-renegade": {
+  "src": "/assets/ai-models/jeep-renegade.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2019,
+  "name": "Jeep Renegade",
+  "color": "white",
+  "bytes": 42500
+ },
+ "jeep-wrangler": {
+  "src": "/assets/ai-models/jeep-wrangler.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2015,
+  "name": "Jeep Wrangler",
+  "color": "dark gray",
+  "bytes": 42452
+ },
+ "kia-forte": {
+  "src": "/assets/ai-models/kia-forte.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2022,
+  "name": "Kia Forte",
+  "color": "black",
+  "bytes": 33706
+ },
+ "kia-optima": {
+  "src": "/assets/ai-models/kia-optima.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2017,
+  "name": "Kia Optima",
+  "color": "deep blue",
+  "bytes": 40002
+ },
+ "kia-rio": {
+  "src": "/assets/ai-models/kia-rio.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2012,
+  "name": "Kia Rio",
+  "color": "dark red",
+  "bytes": 36920
+ },
+ "kia-sedona": {
+  "src": "/assets/ai-models/kia-sedona.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2010,
+  "name": "Kia Sedona",
+  "color": "silver",
+  "bytes": 41554
+ },
+ "kia-sorento": {
+  "src": "/assets/ai-models/kia-sorento.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2018,
+  "name": "Kia Sorento",
+  "color": "white",
+  "bytes": 40038
+ },
+ "kia-soul": {
+  "src": "/assets/ai-models/kia-soul.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2012,
+  "name": "Kia Soul",
+  "color": "dark gray",
+  "bytes": 43346
+ },
+ "kia-sportage": {
+  "src": "/assets/ai-models/kia-sportage.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2010,
+  "name": "Kia Sportage",
+  "color": "black",
+  "bytes": 41860
+ },
+ "kia-telluride": {
+  "src": "/assets/ai-models/kia-telluride.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2025,
+  "name": "Kia Telluride",
+  "color": "deep blue",
+  "bytes": 42032
+ },
+ "lexus-es": {
+  "src": "/assets/ai-models/lexus-es.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2015,
+  "name": "Lexus ES",
+  "color": "dark red",
+  "bytes": 40924
+ },
+ "lexus-rx": {
+  "src": "/assets/ai-models/lexus-rx.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2013,
+  "name": "Lexus RX",
+  "color": "silver",
+  "bytes": 41588
+ },
+ "mazda-cx-5": {
+  "src": "/assets/ai-models/mazda-cx-5.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2022,
+  "name": "Mazda CX-5",
+  "color": "white",
+  "bytes": 36618
+ },
+ "mazda-cx-9": {
+  "src": "/assets/ai-models/mazda-cx-9.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2017,
+  "name": "Mazda CX-9",
+  "color": "dark gray",
+  "bytes": 42434
+ },
+ "mazda3": {
+  "src": "/assets/ai-models/mazda3.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2017,
+  "name": "Mazda3",
+  "color": "black",
+  "bytes": 35628
+ },
+ "mazda6": {
+  "src": "/assets/ai-models/mazda6.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2017,
+  "name": "Mazda6",
+  "color": "deep blue",
+  "bytes": 37062
+ },
+ "mercedes-benz-c-class": {
+  "src": "/assets/ai-models/mercedes-benz-c-class.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2001,
+  "name": "Mercedes-Benz C-Class",
+  "color": "dark red",
+  "bytes": 43210
+ },
+ "mercedes-benz-cla": {
+  "src": "/assets/ai-models/mercedes-benz-cla.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2018,
+  "name": "Mercedes-Benz CLA",
+  "color": "silver",
+  "bytes": 42466
+ },
+ "mercedes-benz-e-class": {
+  "src": "/assets/ai-models/mercedes-benz-e-class.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2011,
+  "name": "Mercedes-Benz E-Class",
+  "color": "white",
+  "bytes": 34926
+ },
+ "mercedes-benz-gla": {
+  "src": "/assets/ai-models/mercedes-benz-gla.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2017,
+  "name": "Mercedes-Benz GLA",
+  "color": "dark gray",
+  "bytes": 44750
+ },
+ "nissan-altima": {
+  "src": "/assets/ai-models/nissan-altima.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2021,
+  "name": "Nissan Altima",
+  "color": "black",
+  "bytes": 35808
+ },
+ "nissan-frontier": {
+  "src": "/assets/ai-models/nissan-frontier.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2017,
+  "name": "Nissan Frontier",
+  "color": "deep blue",
+  "bytes": 35102
+ },
+ "nissan-maxima": {
+  "src": "/assets/ai-models/nissan-maxima.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2011,
+  "name": "Nissan Maxima",
+  "color": "dark red",
+  "bytes": 36034
+ },
+ "nissan-murano": {
+  "src": "/assets/ai-models/nissan-murano.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2011,
+  "name": "Nissan Murano",
+  "color": "silver",
+  "bytes": 43012
+ },
+ "nissan-pathfinder": {
+  "src": "/assets/ai-models/nissan-pathfinder.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2010,
+  "name": "Nissan Pathfinder",
+  "color": "white",
+  "bytes": 39854
+ },
+ "nissan-rogue": {
+  "src": "/assets/ai-models/nissan-rogue.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2010,
+  "name": "Nissan Rogue",
+  "color": "dark gray",
+  "bytes": 45822
+ },
+ "nissan-sentra": {
+  "src": "/assets/ai-models/nissan-sentra.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2010,
+  "name": "Nissan Sentra",
+  "color": "black",
+  "bytes": 35814
+ },
+ "nissan-versa": {
+  "src": "/assets/ai-models/nissan-versa.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2010,
+  "name": "Nissan Versa",
+  "color": "deep blue",
+  "bytes": 43158
+ },
+ "pontiac-aztek": {
+  "src": "/assets/ai-models/pontiac-aztek.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2005,
+  "name": "Pontiac Aztek",
+  "color": "dark red",
+  "bytes": 38662
+ },
+ "pontiac-bonneville": {
+  "src": "/assets/ai-models/pontiac-bonneville.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2003,
+  "name": "Pontiac Bonneville",
+  "color": "silver",
+  "bytes": 34842
+ },
+ "pontiac-firebird": {
+  "src": "/assets/ai-models/pontiac-firebird.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2002,
+  "name": "Pontiac Firebird",
+  "color": "white",
+  "bytes": 27250
+ },
+ "pontiac-g5": {
+  "src": "/assets/ai-models/pontiac-g5.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2008,
+  "name": "Pontiac G5",
+  "color": "dark gray",
+  "bytes": 36318
+ },
+ "pontiac-g6": {
+  "src": "/assets/ai-models/pontiac-g6.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2008,
+  "name": "Pontiac G6",
+  "color": "black",
+  "bytes": 33330
+ },
+ "pontiac-g8": {
+  "src": "/assets/ai-models/pontiac-g8.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2009,
+  "name": "Pontiac G8",
+  "color": "deep blue",
+  "bytes": 33012
+ },
+ "pontiac-grand-am": {
+  "src": "/assets/ai-models/pontiac-grand-am.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2004,
+  "name": "Pontiac Grand Am",
+  "color": "dark red",
+  "bytes": 40772
+ },
+ "pontiac-grand-prix": {
+  "src": "/assets/ai-models/pontiac-grand-prix.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2006,
+  "name": "Pontiac Grand Prix",
+  "color": "silver",
+  "bytes": 33260
+ },
+ "pontiac-gto": {
+  "src": "/assets/ai-models/pontiac-gto.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2005,
+  "name": "Pontiac GTO",
+  "color": "white",
+  "bytes": 32484
+ },
+ "pontiac-montana": {
+  "src": "/assets/ai-models/pontiac-montana.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2004,
+  "name": "Pontiac Montana",
+  "color": "dark gray",
+  "bytes": 37004
+ },
+ "pontiac-solstice": {
+  "src": "/assets/ai-models/pontiac-solstice.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2008,
+  "name": "Pontiac Solstice",
+  "color": "black",
+  "bytes": 35818
+ },
+ "pontiac-sunfire": {
+  "src": "/assets/ai-models/pontiac-sunfire.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2004,
+  "name": "Pontiac Sunfire",
+  "color": "deep blue",
+  "bytes": 32352
+ },
+ "pontiac-torrent": {
+  "src": "/assets/ai-models/pontiac-torrent.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2008,
+  "name": "Pontiac Torrent",
+  "color": "dark red",
+  "bytes": 42050
+ },
+ "pontiac-vibe": {
+  "src": "/assets/ai-models/pontiac-vibe.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2009,
+  "name": "Pontiac Vibe",
+  "color": "silver",
+  "bytes": 40850
+ },
+ "porsche-macan": {
+  "src": "/assets/ai-models/porsche-macan.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2021,
+  "name": "Porsche Macan",
+  "color": "white",
+  "bytes": 38738
+ },
+ "ram-pickup": {
+  "src": "/assets/ai-models/ram-pickup.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2002,
+  "name": "Ram 1500",
+  "color": "dark gray",
+  "bytes": 35008
+ },
+ "subaru-ascent": {
+  "src": "/assets/ai-models/subaru-ascent.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2025,
+  "name": "Subaru Ascent",
+  "color": "black",
+  "bytes": 42528
+ },
+ "subaru-crosstrek": {
+  "src": "/assets/ai-models/subaru-crosstrek.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2013,
+  "name": "Subaru Crosstrek",
+  "color": "deep blue",
+  "bytes": 44172
+ },
+ "subaru-forester": {
+  "src": "/assets/ai-models/subaru-forester.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2013,
+  "name": "Subaru Forester",
+  "color": "dark red",
+  "bytes": 46094
+ },
+ "subaru-impreza": {
+  "src": "/assets/ai-models/subaru-impreza.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2010,
+  "name": "Subaru Impreza",
+  "color": "silver",
+  "bytes": 35146
+ },
+ "subaru-legacy": {
+  "src": "/assets/ai-models/subaru-legacy.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2012,
+  "name": "Subaru Legacy",
+  "color": "white",
+  "bytes": 36752
+ },
+ "subaru-outback": {
+  "src": "/assets/ai-models/subaru-outback.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2004,
+  "name": "Subaru Outback",
+  "color": "dark gray",
+  "bytes": 36202
+ },
+ "tesla-model-y": {
+  "src": "/assets/ai-models/tesla-model-y.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2025,
+  "name": "Tesla Model Y",
+  "color": "black",
+  "bytes": 30868
+ },
+ "toyota-4runner": {
+  "src": "/assets/ai-models/toyota-4runner.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2020,
+  "name": "Toyota 4Runner",
+  "color": "deep blue",
+  "bytes": 36520
+ },
+ "toyota-avalon": {
+  "src": "/assets/ai-models/toyota-avalon.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2012,
+  "name": "Toyota Avalon",
+  "color": "dark red",
+  "bytes": 38344
+ },
+ "toyota-camry": {
+  "src": "/assets/ai-models/toyota-camry.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2021,
+  "name": "Toyota Camry",
+  "color": "silver",
+  "bytes": 41666
+ },
+ "toyota-corolla": {
+  "src": "/assets/ai-models/toyota-corolla.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2002,
+  "name": "Toyota Corolla",
+  "color": "white",
+  "bytes": 33472
+ },
+ "toyota-highlander": {
+  "src": "/assets/ai-models/toyota-highlander.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2002,
+  "name": "Toyota Highlander",
+  "color": "dark gray",
+  "bytes": 39996
+ },
+ "toyota-rav4": {
+  "src": "/assets/ai-models/toyota-rav4.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2022,
+  "name": "Toyota RAV4",
+  "color": "black",
+  "bytes": 41228
+ },
+ "toyota-sienna": {
+  "src": "/assets/ai-models/toyota-sienna.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2012,
+  "name": "Toyota Sienna",
+  "color": "deep blue",
+  "bytes": 37608
+ },
+ "toyota-tacoma": {
+  "src": "/assets/ai-models/toyota-tacoma.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2001,
+  "name": "Toyota Tacoma",
+  "color": "dark red",
+  "bytes": 41496
+ },
+ "toyota-tundra": {
+  "src": "/assets/ai-models/toyota-tundra.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2015,
+  "name": "Toyota Tundra",
+  "color": "silver",
+  "bytes": 38484
+ },
+ "volkswagen-atlas": {
+  "src": "/assets/ai-models/volkswagen-atlas.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2025,
+  "name": "Volkswagen Atlas",
+  "color": "white",
+  "bytes": 43376
+ },
+ "volkswagen-golf": {
+  "src": "/assets/ai-models/volkswagen-golf.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2014,
+  "name": "Volkswagen Golf",
+  "color": "dark gray",
+  "bytes": 38500
+ },
+ "volkswagen-jetta": {
+  "src": "/assets/ai-models/volkswagen-jetta.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2015,
+  "name": "Volkswagen Jetta",
+  "color": "black",
+  "bytes": 37300
+ },
+ "volkswagen-passat": {
+  "src": "/assets/ai-models/volkswagen-passat.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2016,
+  "name": "Volkswagen Passat",
+  "color": "deep blue",
+  "bytes": 40202
+ },
+ "volkswagen-taos": {
+  "src": "/assets/ai-models/volkswagen-taos.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2023,
+  "name": "Volkswagen Taos",
+  "color": "dark red",
+  "bytes": 49402
+ },
+ "volkswagen-tiguan": {
+  "src": "/assets/ai-models/volkswagen-tiguan.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2014,
+  "name": "Volkswagen Tiguan",
+  "color": "silver",
+  "bytes": 46236
+ },
+ "mercedes-benz-glk/glc": {
+  "src": "/assets/ai-models/mercedes-benz-glk-glc.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2019,
+  "name": "Mercedes-Benz GLC",
+  "color": "silver",
+  "bytes": 40286
+ },
+ "mercedes-benz-m/gle": {
+  "src": "/assets/ai-models/mercedes-benz-m-gle.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2018,
+  "name": "Mercedes-Benz GLE",
+  "color": "black",
+  "bytes": 41554
+ }
+}

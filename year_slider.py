@@ -11,6 +11,29 @@ NOTE = 'Illustration (AI-generated). Typical factory color of the era, not sales
 
 def has(fid): return fid in AIY
 
+# 11-10 (Elijah): one AI illustration per model (data/ai_model_images.json, assets/ai-models/): the model-page hero and the /cars/ grid
+# use it instead of the Wikimedia photo. All on one 1000x600 canvas, car centered on a shared baseline, facing left.
+try: AIM = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data', 'ai_model_images.json'), encoding='utf-8'))
+except FileNotFoundError: AIM = {}
+def model_img(fid): return AIM.get(fid)
+def model_info_text(fid):
+    m = AIM[fid]
+    return (f'Illustration (AI-generated) of a {m["year"]} {E(m["name"])}. Free to use under <a href="{LIC}" rel="license noopener">CC BY 4.0</a>: '
+            f'credit The Lemon Index (lemonindex.com). <a href="/images/">Download and credit text</a>')
+def model_ld(fid):
+    m = AIM[fid]
+    return {"@context": "https://schema.org", "@type": "ImageObject", "contentUrl": BASE + m['src'], "name": f'{m["year"]} {m["name"]} (illustration)',
+            "description": f'AI-generated illustration of a {m["year"]} {m["name"]} in {m["color"]}.', "width": m['w'], "height": m['h'],
+            "license": LIC, "acquireLicensePage": BASE + '/images/', "creditText": "The Lemon Index",
+            "creator": {"@type": "Organization", "name": "The Lemon Index", "url": BASE}, "copyrightNotice": "The Lemon Index, CC BY 4.0"}
+def model_hero_html(fid, name):
+    """The model page's top image when it has no year slider ('' if no illustration)."""
+    m = AIM.get(fid)
+    if not m: return ''
+    return (f'<link rel="stylesheet" href="/assets/yslider.css?v=5"><figure class="yph aiy aim"><img src="{m["src"]}" alt="{m["year"]} {E(name)}, illustration" '
+            f'width="{m["w"]}" height="{m["h"]}" fetchpriority="high" decoding="async">' + info(model_info_text(fid)) + '</figure>'
+            f'<script type="application/ld+json">{json.dumps(model_ld(fid))}</script>')
+
 _IIN = [0]
 def info(html_text):
     """11-10 (Elijah): image credit / AI disclosure behind a small 'i' button in the image's bottom-right corner (assets/imginfo.js).
@@ -32,7 +55,7 @@ def ai_year_html(fid, y, name, hero=False):
     im = AIY.get(fid, {}).get(str(y))
     if not im: return ''
     ld = 'fetchpriority="high" decoding="async"' if hero else 'loading="lazy" decoding="async"'
-    return (f'<link rel="stylesheet" href="/assets/yslider.css?v=4"><figure class="yph aiy"><img src="{im["src"]}" alt="{y} {E(name)}, {E(im["gen"])}, illustration" width="{im["w"]}" height="{im["h"]}" {ld}>'
+    return (f'<link rel="stylesheet" href="/assets/yslider.css?v=5"><figure class="yph aiy"><img src="{im["src"]}" alt="{y} {E(name)}, {E(im["gen"])}, illustration" width="{im["w"]}" height="{im["h"]}" {ld}>'
             + info(f'Illustration (AI-generated) of a {y} {E(name)}. {NOTE.split(". ", 1)[1]} <a href="/images/">Download and credit text</a>') + '</figure>'
             f'<script type="application/ld+json">{json.dumps(_ld(fid, y, name, im))}</script>')
 
@@ -45,7 +68,7 @@ def year_slider_html(fid, name, li=None, yt=None, pages=(), start=None, hero=Fal
              "url": f'/cars/{fid}/{y}/' if y in pages else None} for y in ys]
     si = ys.index(start) if start in ys else 0; y0 = ys[si]   # 11-10 (Elijah): the hero slider opens on the page's best year
     first = ims[str(y0)]; short = name.split(' ', 1)[-1] if ' ' in name else name
-    return (f'<link rel="stylesheet" href="/assets/yslider.css?v=4"><section class="ysl{' ysl-hero' if hero else ''}" id="every-year" aria-label="Every {E(short)}, year by year">'
+    return (f'<link rel="stylesheet" href="/assets/yslider.css?v=5"><section class="ysl{' ysl-hero' if hero else ''}" id="every-year" aria-label="Every {E(short)}, year by year">'
             + ('' if hero else f'<h2>Every {E(short)}, year by year. <span class="h2s">Slide through {ys[0]} to {ys[-1]}.</span></h2>') +
             f'<div class="ysl-stage"><img class="on" src="{first["src"]}" alt="{y0} {E(name)} illustration" width="{first["w"]}" height="{first["h"]}" fetchpriority="{'high' if hero else 'low'}"><img alt="" width="{first["w"]}" height="{first["h"]}" aria-hidden="true">'
             f'<div class="ysl-yr"><b>{y0}</b><span class="ysl-gen">{E(first["gen"])}</span></div>'
@@ -55,7 +78,7 @@ def year_slider_html(fid, name, li=None, yt=None, pages=(), start=None, hero=Fal
             f'<div class="ysl-ends"><span>{ys[0]}</span><span>{ys[-1]}</span></div>'
 
             f'<script type="application/json" class="ysl-data">{json.dumps({"name": name, "years": data, "best": y0 if start in ys else None})}</script></section>'
-            f'<script src="/assets/yslider.js?v=3" defer></script>')
+            f'<script src="/assets/yslider.js?v=4" defer></script>')
 
 def _info(v, best):
     """The score row, filled for the starting year in the HTML itself so nothing shifts when yslider.js takes over (11-10: CLS)."""
