@@ -117,7 +117,9 @@ def feedback_html(q, placeholder='', note=''):
             '<button class="fb-go" type="submit">Send</button></div><p class="fb-st" role="status" aria-live="polite" tabindex="-1"></p></form></section>')
 def ask_html(path):
     """Bottom of every page: 11-09 the one-tap survey (survey.js) is gone (Elijah: "remove the bottom questions and instead just have a feedback box")."""
-    return (('' if path in NOFB else feedback_html('How can we make Lemon Index better?', 'A car we should add, something confusing, a mistake you spotted…') + '<script src="/assets/feedback.js?v=1109" defer></script>')
+    fb = '' if path in NOFB else feedback_html('How can we make Lemon Index better?', 'A car we should add, something confusing, a mistake you spotted…')
+    if fb and path.endswith('/transmission/'): fb = f'<details class="fbx"><summary>Spot a mistake? Tell us</summary>{fb}</details>'   # 11-10: folded on the problem pages
+    return ((fb + '<script src="/assets/feedback.js?v=1109" defer></script>' if fb else '')
             + '<script src="/assets/share.js?v=1109" defer></script><script src="/assets/bars3d.js?v=1103" defer></script><script src="/assets/loan.js?v=1103" defer></script>')
 def fit_title(t):
     if len(t) > 65 and t.endswith(' | The Lemon Index'): t = t[:-len(' | The Lemon Index')] + ' | Lemon Index'
@@ -235,7 +237,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}{img or "/assets/og.png"}"><meta name="twitter:card" content="summary_large_image">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://challenges.cloudflare.com https://www.googletagmanager.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; frame-src https://challenges.cloudflare.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cloudflareinsights.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://vpic.nhtsa.dot.gov https://lemon-survey.elift08.workers.dev https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="google-adsense-account" content="{ADS}"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=1110q"><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
+<link rel="stylesheet" href="/assets/site.css?v=1110r"><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
 <body>{gh_header(path)}
 <main>{body}{CITE if path.startswith('/cars/') else ''}{'' if path == '/vote/' else ask_html(path)}</main>
 <footer class="foot"><div class="cta"><div><h2>New car studies, straight from the data.</h2><p>Every study becomes a video. Subscribe to see the next one first.</p></div><a class="btn" href="{YT}?sub_confirmation=1" rel="noopener">Subscribe on YouTube</a></div>
@@ -1089,10 +1091,16 @@ def trans_body(f):
     if len(rated) < 3: return None, None
     mx = max(d['rate'] for _, d in rated) * 1.05 or 1; avg = sorted(d['rate'] for _, d in rated)[len(rated) // 2]
     worst = sorted(rated, key=lambda r: -r[1]['rate'])[:3]; best = [r for r in sorted(rated, key=lambda r: r[1]['rate']) if r[0] >= 2010][:3]
-    def rtxt(d): return ('%g per 100K sold' % d['rate']) if d and d.get('rate') is not None else 'no sales data'
-    def bad(d): return 'bad' if d and d.get('rate') and d['rate'] > avg * 2 and d['n'] >= 20 else ''
+    # 11-10 v2 (Elijah: "too much text… too much white space… simplify"): a one-sentence answer + 3 stat chips under the car, a one-line
+    # method with the full note behind "How we count", tier-colored bars (red worst, green best since 2010, gray the rest) with a tick at
+    # the typical year, quotes clamped to 3 lines, and the questions folded into tap-to-open rows (still real text + FAQPage schema).
+    bestset = {y for y, _ in best}
+    def tier(y, d): return 'bad' if d and d.get('rate') and d['rate'] > avg * 2 and d['n'] >= 20 else 'good' if y in bestset else ''
     def wid(d): return (d['rate'] / mx * 100) if d and d.get('rate') else 0
-    bars = ''.join(f'<a class="b {bad(d)}" href="{CARU(f, y)}"><span class="bn">{y}</span><span class="bt"><i style="width:{wid(d):.1f}%"></i></span><b>{(d or {}).get("n", 0):,}</b><small>{rtxt(d)}</small></a>' for y, d in rows)
+    def rate(d): return ('%.1f' % d['rate']).rstrip('0').rstrip('.') if d and d.get('rate') is not None else '–'
+    def tip(y, d): return f'{y}: {(d or {}).get("n", 0):,} transmission complaints' + (f', {rate(d)} per 100,000 sold' if d and d.get('rate') is not None else ', no sales data')
+    tick = f'<em style="left:{avg / mx * 100:.1f}%"></em>'
+    bars = ''.join(f'<a class="b {tier(y, d)}" href="{CARU(f, y)}" title="{E(tip(y, d))}"><span class="bn">{y}</span><span class="bt"><i style="width:{wid(d):.1f}%"></i>{tick}</span><b>{rate(d)}</b></a>' for y, d in rows)
     tot = {}
     for _, d in rated:
         for k, n in d['sym'].items(): tot[k] = tot.get(k, 0) + n
@@ -1110,22 +1118,28 @@ def trans_body(f):
         seen.add(k); rl += f'<li><b>{y}</b> <small>{E(r["date"][-4:])}</small><p>{E(rsum(r))}</p></li>'
         if len(seen) >= 5: break
     wq = max(worst, key=lambda r: r[1]['n']); qs = [q for q in wq[1]['q']][:2]
-    quotes = ''.join(f'<blockquote><p>{E(sent_case(q))}</p><cite>{wq[0]} {nm} owner · NHTSA complaint</cite></blockquote>' for q in qs)
-    wtxt = ', '.join(f'{y} ({d["n"]:,} complaints)' for y, d in worst)
+    quotes = ''.join(f'<blockquote class="q3"><input type="checkbox" id="q3-{i}" class="q3x" hidden><p>{E(sent_case(q))}</p>'
+                     + (f'<label for="q3-{i}" class="q3m">more</label>' if len(q) > 110 else '') + f'<cite>{wq[0]} {nm} owner · NHTSA complaint</cite></blockquote>' for i, q in enumerate(qs))
+    AND = lambda xs: ', '.join(map(str, xs[:-1])) + (' and ' if len(xs) > 1 else '') + str(xs[-1])
+    wys = sorted(y for y, _ in worst); bys = sorted(y for y, _ in best)
+    chips = (f'<div class="trc"><div><b>{worst[0][0]}</b><span>worst year</span></div>' + (f'<div><b>{best[0][0]}</b><span>fewest since 2010</span></div>' if best else '')
+             + f'<div><b>{alltr:,}</b><span>transmission complaints</span></div></div>')
     qa = [(f'Which {SNM(f)} years have transmission problems?', '', f'By transmission complaints filed with NHTSA per car sold, the worst {SNM(f)} years are {", ".join(str(y) for y, _ in worst)}.'),
           (f'What are common {SNM(f)} transmission problems?', '', 'Owners most often describe ' + ', '.join(k.lower() for k, _ in sorted(tot.items(), key=lambda kv: -kv[1])[:3]) + '.' if tot else 'Owners describe a range of shifting problems.')]
     if best: qa.append((f'Which {SNM(f)} years have the fewest transmission complaints?', '', f'Since 2010, the {SNM(f)} years with the fewest transmission complaints per car sold are {", ".join(str(y) for y, _ in best)}.'))
+    share = E(f'{SNM(f)} transmission problems by year. Worst: {", ".join(str(y) for y, _ in worst)}. Free report:')
     body = f'''
-<article class="study"><p class="kicker"><a href="/cars/">All cars</a> · <a href="{CARU(f)}">{nm}</a> · Transmission</p><h1>{nm} transmission problems by year</h1>
-<p class="lede">Worst years for transmission complaints per car sold: <b>{wtxt}</b>.{f" Fewest since 2010: <b>{', '.join(str(y) for y, _ in best)}</b>." if best else ""}</p>
-<p><button type="button" class="btn btn-ghost" data-share="{E(f'{SNM(f)} transmission problems by year. Worst: {", ".join(str(y) for y, _ in worst)}. Free report:')}">Share ↗</button></p>
-<p class="sub">Transmission complaints owners filed with the U.S. government (NHTSA) for each model year, per 100,000 cars sold. A complaint counts when it&#39;s filed under the transmission, or under the power train and the owner describes the transmission (shifting, slipping, gears, CVT). It&#39;s an owner&#39;s report, not a confirmed defect, and older years have had longer to collect complaints.</p>
-<div class="bars yb">{bars}</div>
-{f'<h2>What owners describe</h2><div class="pts">{sym}</div><p class="note">Share of this model&#39;s transmission complaints that mention each symptom. One complaint can mention several.</p>' if sym else ''}
+<article class="study tr2"><p class="kicker"><a href="/cars/">All cars</a> · <a href="{CARU(f)}">{nm}</a> · Transmission</p><h1>{nm} transmission problems by year</h1>
+<p class="tra">Worst years: <b>{AND(wys)}</b>.{f" Best since 2010: <b>{AND(bys)}</b>." if best else ""} <button type="button" class="shl" data-share="{share}">Share ↗</button></p>
+{chips}
+<h2>Every year</h2>
+<details class="trm"><summary>Transmission complaints per 100,000 cars sold, from NHTSA owner reports. <span>How we count</span></summary><p>A complaint counts when it&#39;s filed under the transmission, or under the power train and the owner describes the transmission (shifting, slipping, gears, CVT). It&#39;s an owner&#39;s report, not a confirmed defect, and older years have had longer to collect complaints. The thin line on each bar marks a typical year for this model. Tap a year for its full report.</p></details>
+<div class="bars yb trb">{bars}</div>
+{f'<h2>What owners describe</h2><div class="pts trp">{sym}</div><p class="note">Share of this model&#39;s transmission complaints that mention each symptom. One complaint can mention several.</p>' if sym else ''}
 {f'<h2>Transmission and power train recalls</h2><ul class="rc">{rl}</ul><p class="note">Recall repairs are free at any dealer. Check a specific car&#39;s VIN at <a href="https://www.nhtsa.gov/recalls" rel="noopener">nhtsa.gov/recalls</a>.</p>' if rl else ''}
 {f'<h2>In owners&#39; words</h2>{quotes}' if quotes else ''}
-<section class="yqa"><h2>Quick answers</h2>{''.join(f'<h3>{E(q)}</h3><p>{E(t)}</p>' for q, _, t in qa)}</section>
-<p class="note">See every problem, not just the transmission: <a href="{CARU(f)}">{nm} reliability by year</a>. <a href="/method/">How we count</a></p></article>'''
+<section class="yqa trq"><h2>Quick answers</h2>{qa_fold(''.join(f'<h3>{E(q)}</h3><p>{E(t)}</p>' for q, _, t in qa))}</section>
+<p class="note">Every problem, not just the transmission: <a href="{CARU(f)}">{nm} reliability by year</a>.</p></article>'''
     return body, qa
 turls = []
 for f in YEARS:
