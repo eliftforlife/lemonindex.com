@@ -1575,6 +1575,7 @@ exec(open('extra_pages.py', encoding='utf-8').read())   # 11-06 Taos + Pontiac
 exec(open('supercar_engine_pages.py', encoding='utf-8').read())   # 11-11 supercar engines hub + engine pages (before the BMW pages phase: /images/ lists their images)
 BMW_PHASE = 'pages'; exec(open('bmw_pages.py', encoding='utf-8').read())   # 11-10 BMW model pages + engine pages
 exec(open('thanks_page.py', encoding='utf-8').read())   # 11-07 donation thank-you page (noindex)
+import perf_page; perf_page.build_all(OUT)   # 11-11 performance-car pages (data/perf/<slug>.json): generation slider + performance-first Overview on the car's page
 json.dump(PD, open('data/page_dates.json', 'w', encoding='utf-8'), separators=(',', ':'))
 
 open(f'{OUT}/404.html', 'w', encoding='utf-8').write(open(f'{OUT}/index.html', encoding='utf-8').read().replace('<main>', '<main><div class="pg"><section class="ph"><p class="ph-e">404</p><h1>That page drove off.</h1><p class="ph-s">It may have moved. Try one of these.</p><p class="ph-404"><a class="btn" href="/cars/">Look up a car</a> <a class="btn btn-ghost" href="/brands/">Every brand</a> <a class="btn btn-ghost" href="/">Home</a></p></section></div><!--', 1).replace('</main>', '--></main>', 1))

@@ -22,7 +22,7 @@ exec(_src[_a:_b])   # PRAISE, TROUBLE, NOTPROB, YR4, YR2, years_in (kept identic
 S = json.load(open(os.path.join(HERE, 'data', 'bmw_specs.json'), encoding='utf-8'))
 V = S['versions']; EY = S['engine_years']
 SY = json.load(open(os.path.join(YT, 'study_years.json'), encoding='utf-8'))
-CODE = re.compile(r'\b(M54|N52|N54|N55|N20|B46|B48|B58|N62|N63|S55|S58|S63|S54)\b', re.I)
+CODE = re.compile(r'\b(M54|N52|N54|N55|N20|B46|B48|B58|N62|N63|S55|S58|S63|S54|S65)\b', re.I)
 VER = re.compile(r'\b(M?\d{3}(?:i|e|d|is|xi|ci)|[xX][1-7] ?[xs]?[Dd]rive ?\d\d[ie]|[xX][1-7] ?M\d0i|M\d0i)\b')
 ENG_YEARS = {c: sorted(int(y) for y in ys) for c, ys in EY.items()}
 def fam_of_study(st):

@@ -102,5 +102,13 @@
   "ai": true,
   "title": "BMW N62 V8 engine (illustration)",
   "bytes": 138986
+ },
+ "S65": {
+  "src": "/assets/engines/bmw-s65-v8-engine.webp",
+  "w": 1200,
+  "h": 1086,
+  "ai": true,
+  "title": "BMW S65 4.0-liter V8 engine (illustration)",
+  "bytes": 148948
  }
 }

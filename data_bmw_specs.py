@@ -109,6 +109,8 @@ ENG = {
     'S58': dict(name='BMW S58', layout='inline-6', asp='twin-turbo', size='3.0 L', made='2019–present', src=W + 'BMW_S58', notes=[]),
     'S63': dict(name='BMW S63', layout='V8', asp='twin-turbo ("hot-vee")', size='4.4 L', made='2009–present', src=W + 'BMW_S63', notes=[]),
     'S54': dict(name='BMW S54', layout='inline-6', asp='naturally aspirated', size='3.2 L', made='2000–2008', src=W + 'BMW_M54', notes=[]),
+    'S65': dict(name='BMW S65', layout='V8', asp='naturally aspirated', size='4.0 L', made='2007–2013', src=W + 'BMW_S65',   # 11-11: the E9x M3's V8 (M3 flagship performance page)
+                notes=['BMW extended the warranty on the S65 idle control actuator to 10 years / 120,000 miles for 2013 M3 coupes and convertibles (service bulletin SI B01 03 16, filed with NHTSA); BMW said it is not a recall.']),
 }
 
 # ---- RULES: (code, family, model regex (on EPA model, case-insensitive, matched from the start), first MY, last MY, cyl, displ, hp, lb-ft)
@@ -215,6 +217,8 @@ r('S58', 'bmw-x3', r'X3 M Competition$', 2020, 2021, 6, '3.0', 503, 442); r('S58
 r('S58', 'bmw-x4', r'X4 M$', 2020, 2021, 6, '3.0', 473, 442); r('S58', 'bmw-x4', r'X4 M$', 2022, 2024, 6, '3.0', 473, 457)
 r('S58', 'bmw-x4', r'X4 M Competition$', 2020, 2021, 6, '3.0', 503, 442); r('S58', 'bmw-x4', r'X4 M Competition$', 2022, 2024, 6, '3.0', 503, 479)
 r('S58', 'bmw-2-series', r'M2$', 2023, 2024, 6, '3.0', 453, 406)
+# S65 (E9x M3; the 4.4 L S65B44 went only to the non-US M3 GTS and CRT)
+r('S65', 'bmw-m3', r'M3$', 2008, 2013, 8, '4.0', 414, 295)
 # S63
 r('S63', 'bmw-x5', r'X5 (xDriveM|M)$', 2010, 2013, 8, '4.4', 547, 502); r('S63', 'bmw-x5', r'X5 M$', 2015, 2019, 8, '4.4', 567, 553)
 r('S63', 'bmw-x5', r'X5 M$', 2020, 2023, 8, '4.4', 591, 553); r('S63', 'bmw-x5', r'X5 M Competition$', 2020, 2023, 8, '4.4', 617, 553)
@@ -279,7 +283,7 @@ C = collections.defaultdict(lambda: collections.defaultdict(lambda: dict(ids=set
 VC = collections.defaultdict(lambda: collections.defaultdict(lambda: collections.defaultdict(set)))   # fam -> y -> vkey -> ids
 STR = collections.defaultdict(lambda: collections.defaultdict(collections.Counter))
 TXT = collections.defaultdict(lambda: collections.defaultdict(set))   # code -> y -> ids naming the code
-CODE_RX = re.compile(r'\b(M54|N52|N54|N55|N20|N26|B46|B48|B58|N62|N63|S55|S58|S63|S54)\b')
+CODE_RX = re.compile(r'\b(M54|N52|N54|N55|N20|N26|B46|B48|B58|N62|N63|S55|S58|S63|S54|S65)\b')
 PART = {'ELECTRICAL SYSTEM': 'electrical', 'POWER TRAIN': 'transmission & drivetrain', 'SERVICE BRAKES': 'brakes', 'SERVICE BRAKES, HYDRAULIC': 'brakes', 'VEHICLE SPEED CONTROL': 'speed control',
         'FUEL/PROPULSION SYSTEM': 'fuel system', 'FUEL SYSTEM, GASOLINE': 'fuel system', 'FUEL SYSTEM, OTHER': 'fuel system', 'ENGINE AND ENGINE COOLING': 'engine', 'ENGINE': 'engine', 'STEERING': 'steering',
         'SUSPENSION': 'suspension', 'AIR BAGS': 'air bags', 'STRUCTURE': 'body & structure', 'VISIBILITY': 'visibility', 'EXTERIOR LIGHTING': 'lights', 'WHEELS': 'wheels', 'TIRES': 'tires',

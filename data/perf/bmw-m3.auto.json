@@ -1,0 +1,902 @@
+{
+ "built": "2026-11-11",
+ "nhtsa": {
+  "by_year": {
+   "1995": 12,
+   "1996": 1,
+   "1997": 19,
+   "1998": 14,
+   "1999": 11,
+   "2001": 14,
+   "2002": 40,
+   "2003": 54,
+   "2004": 31,
+   "2005": 12,
+   "2006": 14,
+   "2008": 82,
+   "2009": 45,
+   "2010": 15,
+   "2011": 41,
+   "2012": 6,
+   "2013": 13,
+   "2015": 4,
+   "2016": 5,
+   "2017": 3,
+   "2018": 9,
+   "2021": 3,
+   "2022": 1,
+   "2023": 1,
+   "2025": 2
+  },
+  "gens": {
+   "e46": {
+    "n": 165,
+    "issues": {
+     "Rod bearings": {
+      "n": 3,
+      "ex": [
+       "10095288",
+       "10452254"
+      ]
+     },
+     "VANOS": {
+      "n": 7,
+      "ex": [
+       "10344604",
+       "10344897"
+      ]
+     },
+     "SMG gearbox": {
+      "n": 26,
+      "ex": [
+       "10028346",
+       "10031136"
+      ]
+     }
+    }
+   },
+   "e92": {
+    "n": 202,
+    "issues": {
+     "Rod bearings": {
+      "n": 30,
+      "ex": [
+       "10525919",
+       "10730302"
+      ]
+     },
+     "Throttle actuators": {
+      "n": 4,
+      "ex": [
+       "10917999",
+       "10947979"
+      ]
+     },
+     "Idle control actuator": {
+      "n": 0,
+      "ex": []
+     },
+     "M DCT gearbox": {
+      "n": 50,
+      "ex": [
+       "10257488",
+       "10257659"
+      ]
+     }
+    }
+   },
+   "f80": {
+    "n": 21,
+    "issues": {
+     "Crank hub": {
+      "n": 5,
+      "ex": [
+       "11289880",
+       "11289890"
+      ]
+     },
+     "Carbon on intake valves": {
+      "n": 0,
+      "ex": []
+     },
+     "Gasket oil leaks": {
+      "n": 0,
+      "ex": []
+     }
+    }
+   },
+   "g80": {
+    "n": 7,
+    "issues": {
+     "Oil use": {
+      "n": 0,
+      "ex": []
+     }
+    }
+   }
+  }
+ },
+ "recalls": {
+  "2001": [
+   {
+    "id": "20V018000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2000-2005 323iT, 325iT, 325xiT, 320i, 323i, 325i, 325xi, 328i, 330i and 330xi and 2000-2006 323Ci, 325Ci, 328Ci, 330Ci, M3 Coupe, 323Cic, 325Cic, 330Cic, and M3 Convertible vehicles equipped with non-desiccated frontal Takata PSAN inflators and PSPI passenger frontal air bag inflators containing phase stabilized ammonium nitrate (PSAN) propellan"
+   },
+   {
+    "id": "17V047000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2000-2002 BMW 320i, 323i, 325i, 325xi, 330i, 330xi, 323Ci, 325Ci, 330Ci, M3, 323iT, 325iT and 325xiT vehicles, 2001-2002 525i, 530i, 540i, M5, 525iT and 540iT vehicles, and 2001-2003 X5 3.0i, X5 4.4i, and X5 4.6is vehicles.  These vehicles may have had a driver-side air bag module installed as replacement equipment such as after a vehicle crash "
+   },
+   {
+    "id": "14V428000",
+    "part": "AIR BAGS",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain model year 2000 323i sedans, coupes, convertibles, and Sports Wagons; 2000 328i sedans and coupes; 2001-2005 325i sedans, coupes, convertibles, and Sport Wagons; 2001-2005 325xi sedans and Sports Wagons; 2006 325i coupes and convertibles; 2001-2006 330i sedans, coupes, and convertibles; 2001-2005 330xi sedans; and 2001-2006 M3 coupes and convert"
+   },
+   {
+    "id": "01V245000",
+    "part": "PARKING BRAKE:CONVENTIONAL:MECHANICAL:LINKAGE AND CABLE",
+    "summary": "VEHICLE DESCRIPTION:   PASSENGER VEHICLES.  THE TWO SCREWS THAT SECURE THE PARKING BRAKE CABLE MOUNTING BRACKET TO THE BACKING PLATE WERE NOT TIGHTENED PROPERLY.  AS A RESULT, THE SCREWS COULD LOOSEN AND EVENTUALLY FALL INTO THE PARKING BRAKE DRUM."
+   }
+  ],
+  "2002": [
+   {
+    "id": "20V018000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2000-2005 323iT, 325iT, 325xiT, 320i, 323i, 325i, 325xi, 328i, 330i and 330xi and 2000-2006 323Ci, 325Ci, 328Ci, 330Ci, M3 Coupe, 323Cic, 325Cic, 330Cic, and M3 Convertible vehicles equipped with non-desiccated frontal Takata PSAN inflators and PSPI passenger frontal air bag inflators containing phase stabilized ammonium nitrate (PSAN) propellan"
+   },
+   {
+    "id": "17V047000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2000-2002 BMW 320i, 323i, 325i, 325xi, 330i, 330xi, 323Ci, 325Ci, 330Ci, M3, 323iT, 325iT and 325xiT vehicles, 2001-2002 525i, 530i, 540i, M5, 525iT and 540iT vehicles, and 2001-2003 X5 3.0i, X5 4.4i, and X5 4.6is vehicles.  These vehicles may have had a driver-side air bag module installed as replacement equipment such as after a vehicle crash "
+   },
+   {
+    "id": "14V428000",
+    "part": "AIR BAGS",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain model year 2000 323i sedans, coupes, convertibles, and Sports Wagons; 2000 328i sedans and coupes; 2001-2005 325i sedans, coupes, convertibles, and Sport Wagons; 2001-2005 325xi sedans and Sports Wagons; 2006 325i coupes and convertibles; 2001-2006 330i sedans, coupes, and convertibles; 2001-2005 330xi sedans; and 2001-2006 M3 coupes and convert"
+   },
+   {
+    "id": "15V318000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain model year 2002-2005 325i, 325xi, 330i, and 330xi Sedans, and 325xi and 325i Sportswagons, 2002-2006 330Ci, 325Ci, and M3 Convertibles and 325i, 330i, and M3 Coupes, 2002-2003 M5, 540i, 525i Sedan, and 530i Sedans, and 540i and 525i Sportswagons, and 2003 X5 3.0i and 4.4i Sports Activity Vehicles.  Please note that the 5-series and X5 vehicles a"
+   },
+   {
+    "id": "13V172000",
+    "part": "AIR BAGS",
+    "summary": "BMW is recalling certain model year 2002-2003 325i, 325xi, 330i, 330xi sedans; 325Ci and 330Ci coupes and convertibles; 325iT and 325xiT Sports Wagons; and M3 coupes and convertibles to address a safety defect in the passenger side frontal air bag which may produce excessive internal pressure causing the inflator to rupture upon deployment of the air bag."
+   }
+  ],
+  "2003": [
+   {
+    "id": "20V018000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2000-2005 323iT, 325iT, 325xiT, 320i, 323i, 325i, 325xi, 328i, 330i and 330xi and 2000-2006 323Ci, 325Ci, 328Ci, 330Ci, M3 Coupe, 323Cic, 325Cic, 330Cic, and M3 Convertible vehicles equipped with non-desiccated frontal Takata PSAN inflators and PSPI passenger frontal air bag inflators containing phase stabilized ammonium nitrate (PSAN) propellan"
+   },
+   {
+    "id": "14V428000",
+    "part": "AIR BAGS",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain model year 2000 323i sedans, coupes, convertibles, and Sports Wagons; 2000 328i sedans and coupes; 2001-2005 325i sedans, coupes, convertibles, and Sport Wagons; 2001-2005 325xi sedans and Sports Wagons; 2006 325i coupes and convertibles; 2001-2006 330i sedans, coupes, and convertibles; 2001-2005 330xi sedans; and 2001-2006 M3 coupes and convert"
+   },
+   {
+    "id": "15V318000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain model year 2002-2005 325i, 325xi, 330i, and 330xi Sedans, and 325xi and 325i Sportswagons, 2002-2006 330Ci, 325Ci, and M3 Convertibles and 325i, 330i, and M3 Coupes, 2002-2003 M5, 540i, 525i Sedan, and 530i Sedans, and 540i and 525i Sportswagons, and 2003 X5 3.0i and 4.4i Sports Activity Vehicles.  Please note that the 5-series and X5 vehicles a"
+   },
+   {
+    "id": "13V172000",
+    "part": "AIR BAGS",
+    "summary": "BMW is recalling certain model year 2002-2003 325i, 325xi, 330i, 330xi sedans; 325Ci and 330Ci coupes and convertibles; 325iT and 325xiT Sports Wagons; and M3 coupes and convertibles to address a safety defect in the passenger side frontal air bag which may produce excessive internal pressure causing the inflator to rupture upon deployment of the air bag."
+   },
+   {
+    "id": "03V160000",
+    "part": "VISIBILITY:POWER WINDOW DEVICES AND CONTROLS",
+    "summary": "ON CERTAIN PASSENGER VEHICLES, THE WINDOW LIFTING ANTI-PINCHING DEVICE MIGHT NOT FUNCTION PROPERLY."
+   }
+  ],
+  "2004": [
+   {
+    "id": "20V018000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2000-2005 323iT, 325iT, 325xiT, 320i, 323i, 325i, 325xi, 328i, 330i and 330xi and 2000-2006 323Ci, 325Ci, 328Ci, 330Ci, M3 Coupe, 323Cic, 325Cic, 330Cic, and M3 Convertible vehicles equipped with non-desiccated frontal Takata PSAN inflators and PSPI passenger frontal air bag inflators containing phase stabilized ammonium nitrate (PSAN) propellan"
+   },
+   {
+    "id": "14V428000",
+    "part": "AIR BAGS",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain model year 2000 323i sedans, coupes, convertibles, and Sports Wagons; 2000 328i sedans and coupes; 2001-2005 325i sedans, coupes, convertibles, and Sport Wagons; 2001-2005 325xi sedans and Sports Wagons; 2006 325i coupes and convertibles; 2001-2006 330i sedans, coupes, and convertibles; 2001-2005 330xi sedans; and 2001-2006 M3 coupes and convert"
+   },
+   {
+    "id": "15V318000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain model year 2002-2005 325i, 325xi, 330i, and 330xi Sedans, and 325xi and 325i Sportswagons, 2002-2006 330Ci, 325Ci, and M3 Convertibles and 325i, 330i, and M3 Coupes, 2002-2003 M5, 540i, 525i Sedan, and 530i Sedans, and 540i and 525i Sportswagons, and 2003 X5 3.0i and 4.4i Sports Activity Vehicles.  Please note that the 5-series and X5 vehicles a"
+   }
+  ],
+  "2005": [
+   {
+    "id": "20V018000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2000-2005 323iT, 325iT, 325xiT, 320i, 323i, 325i, 325xi, 328i, 330i and 330xi and 2000-2006 323Ci, 325Ci, 328Ci, 330Ci, M3 Coupe, 323Cic, 325Cic, 330Cic, and M3 Convertible vehicles equipped with non-desiccated frontal Takata PSAN inflators and PSPI passenger frontal air bag inflators containing phase stabilized ammonium nitrate (PSAN) propellan"
+   },
+   {
+    "id": "14V428000",
+    "part": "AIR BAGS",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain model year 2000 323i sedans, coupes, convertibles, and Sports Wagons; 2000 328i sedans and coupes; 2001-2005 325i sedans, coupes, convertibles, and Sport Wagons; 2001-2005 325xi sedans and Sports Wagons; 2006 325i coupes and convertibles; 2001-2006 330i sedans, coupes, and convertibles; 2001-2005 330xi sedans; and 2001-2006 M3 coupes and convert"
+   },
+   {
+    "id": "15V318000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain model year 2002-2005 325i, 325xi, 330i, and 330xi Sedans, and 325xi and 325i Sportswagons, 2002-2006 330Ci, 325Ci, and M3 Convertibles and 325i, 330i, and M3 Coupes, 2002-2003 M5, 540i, 525i Sedan, and 530i Sedans, and 540i and 525i Sportswagons, and 2003 X5 3.0i and 4.4i Sports Activity Vehicles.  Please note that the 5-series and X5 vehicles a"
+   }
+  ],
+  "2006": [
+   {
+    "id": "20V017000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2008-2013 128i and 135i Convertibles, 128i, 135i, and M Coupes, 2007-2010 X3 30si and X3 xDrive30i, 2013-2015 X1 sDrive28i, X1 xDrive28i and X1 xDrive35i, 2007-2013 328i, 328i xDrive, 335i, 335is, 335i xDrive and M3 Coupes, 2006-2011 328i, 328xi, 328i xDrive, 325i, 325xi, 330i, 330xi, 335i, 335xi, 335i\r\nxDrive and M3, 2009-2011 335D, 2006-2012 3"
+   },
+   {
+    "id": "20V018000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2000-2005 323iT, 325iT, 325xiT, 320i, 323i, 325i, 325xi, 328i, 330i and 330xi and 2000-2006 323Ci, 325Ci, 328Ci, 330Ci, M3 Coupe, 323Cic, 325Cic, 330Cic, and M3 Convertible vehicles equipped with non-desiccated frontal Takata PSAN inflators and PSPI passenger frontal air bag inflators containing phase stabilized ammonium nitrate (PSAN) propellan"
+   },
+   {
+    "id": "17V676000",
+    "part": "ELECTRICAL SYSTEM:WIRING",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2006-2011 323i, 325i, 325xi, 328i, 328xi, 330i, 330xi, 335i, 335xi and M3, 2007-2011 328i xDrive, 335i xDrive and 335is and 2009-2011 335d vehicles.  The wiring and electrical connectors for the system that controls air flow for the heating and air conditioning system may overheat."
+   },
+   {
+    "id": "14V428000",
+    "part": "AIR BAGS",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain model year 2000 323i sedans, coupes, convertibles, and Sports Wagons; 2000 328i sedans and coupes; 2001-2005 325i sedans, coupes, convertibles, and Sport Wagons; 2001-2005 325xi sedans and Sports Wagons; 2006 325i coupes and convertibles; 2001-2006 330i sedans, coupes, and convertibles; 2001-2005 330xi sedans; and 2001-2006 M3 coupes and convert"
+   },
+   {
+    "id": "15V318000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain model year 2002-2005 325i, 325xi, 330i, and 330xi Sedans, and 325xi and 325i Sportswagons, 2002-2006 330Ci, 325Ci, and M3 Convertibles and 325i, 330i, and M3 Coupes, 2002-2003 M5, 540i, 525i Sedan, and 530i Sedans, and 540i and 525i Sportswagons, and 2003 X5 3.0i and 4.4i Sports Activity Vehicles.  Please note that the 5-series and X5 vehicles a"
+   }
+  ],
+  "2008": [
+   {
+    "id": "19V472000",
+    "part": "ELECTRICAL SYSTEM:WIRING:FUSES AND CIRCUIT BREAKERS",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2009 328i and 328xi, 2009-2011 335d, 2008-2012 M3 Coupe and M3 Convertible, and 2008-2011 M3 Sedan vehicles.  The connection of the positive battery cable at the fuse box terminal may degrade, resulting in an intermittent loss of electrical power."
+   },
+   {
+    "id": "20V017000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2008-2013 128i and 135i Convertibles, 128i, 135i, and M Coupes, 2007-2010 X3 30si and X3 xDrive30i, 2013-2015 X1 sDrive28i, X1 xDrive28i and X1 xDrive35i, 2007-2013 328i, 328i xDrive, 335i, 335is, 335i xDrive and M3 Coupes, 2006-2011 328i, 328xi, 328i xDrive, 325i, 325xi, 330i, 330xi, 335i, 335xi, 335i\r\nxDrive and M3, 2009-2011 335D, 2006-2012 3"
+   },
+   {
+    "id": "17V676000",
+    "part": "ELECTRICAL SYSTEM:WIRING",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2006-2011 323i, 325i, 325xi, 328i, 328xi, 330i, 330xi, 335i, 335xi and M3, 2007-2011 328i xDrive, 335i xDrive and 335is and 2009-2011 335d vehicles.  The wiring and electrical connectors for the system that controls air flow for the heating and air conditioning system may overheat."
+   },
+   {
+    "id": "16V071000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain model year 2008-2013 128i and 135i coupes and convertibles and 1 Series M coupes, 2006-2011 325i, 325xi, 328i, 328xi, 328i xDrive, 330i, 330xi, 335i, 335xi, 335i xDrive Sedans, 2009-2011 335d sedans, 2006-2012 325xiT, 328i and 328xi sports wagons, 2007-2013 328i, 328xi, 328i xDrive, 335i, 335xi, 335i xDrive, 335is and M3 Coupes and Convertibles,"
+   },
+   {
+    "id": "08V595000",
+    "part": "POWER TRAIN:CLUTCH ASSEMBLY",
+    "summary": "BMW IS RECALLING 2,500 MY 2008-2009 M3 PASSENGER VEHICLES WITH AN OPTIONAL DOUBLE CLUTCH TRANSMISSION.  THE PROBLEM INVOLVES THE DOUBLE CLUTCH GEARBOX.  IN A SITUATION OF RAPID VEHICLE DECELERATION, THE TRANSMISSION SOFTWARE MAY PERFORM A MULTISTAGE DOWNSHIFT."
+   }
+  ],
+  "2009": [
+   {
+    "id": "19V472000",
+    "part": "ELECTRICAL SYSTEM:WIRING:FUSES AND CIRCUIT BREAKERS",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2009 328i and 328xi, 2009-2011 335d, 2008-2012 M3 Coupe and M3 Convertible, and 2008-2011 M3 Sedan vehicles.  The connection of the positive battery cable at the fuse box terminal may degrade, resulting in an intermittent loss of electrical power."
+   },
+   {
+    "id": "20V017000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2008-2013 128i and 135i Convertibles, 128i, 135i, and M Coupes, 2007-2010 X3 30si and X3 xDrive30i, 2013-2015 X1 sDrive28i, X1 xDrive28i and X1 xDrive35i, 2007-2013 328i, 328i xDrive, 335i, 335is, 335i xDrive and M3 Coupes, 2006-2011 328i, 328xi, 328i xDrive, 325i, 325xi, 330i, 330xi, 335i, 335xi, 335i\r\nxDrive and M3, 2009-2011 335D, 2006-2012 3"
+   },
+   {
+    "id": "17V676000",
+    "part": "ELECTRICAL SYSTEM:WIRING",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2006-2011 323i, 325i, 325xi, 328i, 328xi, 330i, 330xi, 335i, 335xi and M3, 2007-2011 328i xDrive, 335i xDrive and 335is and 2009-2011 335d vehicles.  The wiring and electrical connectors for the system that controls air flow for the heating and air conditioning system may overheat."
+   },
+   {
+    "id": "16V071000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain model year 2008-2013 128i and 135i coupes and convertibles and 1 Series M coupes, 2006-2011 325i, 325xi, 328i, 328xi, 328i xDrive, 330i, 330xi, 335i, 335xi, 335i xDrive Sedans, 2009-2011 335d sedans, 2006-2012 325xiT, 328i and 328xi sports wagons, 2007-2013 328i, 328xi, 328i xDrive, 335i, 335xi, 335i xDrive, 335is and M3 Coupes and Convertibles,"
+   },
+   {
+    "id": "08V595000",
+    "part": "POWER TRAIN:CLUTCH ASSEMBLY",
+    "summary": "BMW IS RECALLING 2,500 MY 2008-2009 M3 PASSENGER VEHICLES WITH AN OPTIONAL DOUBLE CLUTCH TRANSMISSION.  THE PROBLEM INVOLVES THE DOUBLE CLUTCH GEARBOX.  IN A SITUATION OF RAPID VEHICLE DECELERATION, THE TRANSMISSION SOFTWARE MAY PERFORM A MULTISTAGE DOWNSHIFT."
+   }
+  ],
+  "2010": [
+   {
+    "id": "19V472000",
+    "part": "ELECTRICAL SYSTEM:WIRING:FUSES AND CIRCUIT BREAKERS",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2009 328i and 328xi, 2009-2011 335d, 2008-2012 M3 Coupe and M3 Convertible, and 2008-2011 M3 Sedan vehicles.  The connection of the positive battery cable at the fuse box terminal may degrade, resulting in an intermittent loss of electrical power."
+   },
+   {
+    "id": "20V017000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2008-2013 128i and 135i Convertibles, 128i, 135i, and M Coupes, 2007-2010 X3 30si and X3 xDrive30i, 2013-2015 X1 sDrive28i, X1 xDrive28i and X1 xDrive35i, 2007-2013 328i, 328i xDrive, 335i, 335is, 335i xDrive and M3 Coupes, 2006-2011 328i, 328xi, 328i xDrive, 325i, 325xi, 330i, 330xi, 335i, 335xi, 335i\r\nxDrive and M3, 2009-2011 335D, 2006-2012 3"
+   },
+   {
+    "id": "17V676000",
+    "part": "ELECTRICAL SYSTEM:WIRING",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2006-2011 323i, 325i, 325xi, 328i, 328xi, 330i, 330xi, 335i, 335xi and M3, 2007-2011 328i xDrive, 335i xDrive and 335is and 2009-2011 335d vehicles.  The wiring and electrical connectors for the system that controls air flow for the heating and air conditioning system may overheat."
+   },
+   {
+    "id": "16V071000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain model year 2008-2013 128i and 135i coupes and convertibles and 1 Series M coupes, 2006-2011 325i, 325xi, 328i, 328xi, 328i xDrive, 330i, 330xi, 335i, 335xi, 335i xDrive Sedans, 2009-2011 335d sedans, 2006-2012 325xiT, 328i and 328xi sports wagons, 2007-2013 328i, 328xi, 328i xDrive, 335i, 335xi, 335i xDrive, 335is and M3 Coupes and Convertibles,"
+   }
+  ],
+  "2011": [
+   {
+    "id": "19V472000",
+    "part": "ELECTRICAL SYSTEM:WIRING:FUSES AND CIRCUIT BREAKERS",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2009 328i and 328xi, 2009-2011 335d, 2008-2012 M3 Coupe and M3 Convertible, and 2008-2011 M3 Sedan vehicles.  The connection of the positive battery cable at the fuse box terminal may degrade, resulting in an intermittent loss of electrical power."
+   },
+   {
+    "id": "20V017000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2008-2013 128i and 135i Convertibles, 128i, 135i, and M Coupes, 2007-2010 X3 30si and X3 xDrive30i, 2013-2015 X1 sDrive28i, X1 xDrive28i and X1 xDrive35i, 2007-2013 328i, 328i xDrive, 335i, 335is, 335i xDrive and M3 Coupes, 2006-2011 328i, 328xi, 328i xDrive, 325i, 325xi, 330i, 330xi, 335i, 335xi, 335i\r\nxDrive and M3, 2009-2011 335D, 2006-2012 3"
+   },
+   {
+    "id": "17V676000",
+    "part": "ELECTRICAL SYSTEM:WIRING",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2006-2011 323i, 325i, 325xi, 328i, 328xi, 330i, 330xi, 335i, 335xi and M3, 2007-2011 328i xDrive, 335i xDrive and 335is and 2009-2011 335d vehicles.  The wiring and electrical connectors for the system that controls air flow for the heating and air conditioning system may overheat."
+   },
+   {
+    "id": "16V071000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain model year 2008-2013 128i and 135i coupes and convertibles and 1 Series M coupes, 2006-2011 325i, 325xi, 328i, 328xi, 328i xDrive, 330i, 330xi, 335i, 335xi, 335i xDrive Sedans, 2009-2011 335d sedans, 2006-2012 325xiT, 328i and 328xi sports wagons, 2007-2013 328i, 328xi, 328i xDrive, 335i, 335xi, 335i xDrive, 335is and M3 Coupes and Convertibles,"
+   }
+  ],
+  "2012": [
+   {
+    "id": "19V472000",
+    "part": "ELECTRICAL SYSTEM:WIRING:FUSES AND CIRCUIT BREAKERS",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2009 328i and 328xi, 2009-2011 335d, 2008-2012 M3 Coupe and M3 Convertible, and 2008-2011 M3 Sedan vehicles.  The connection of the positive battery cable at the fuse box terminal may degrade, resulting in an intermittent loss of electrical power."
+   },
+   {
+    "id": "20V017000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2008-2013 128i and 135i Convertibles, 128i, 135i, and M Coupes, 2007-2010 X3 30si and X3 xDrive30i, 2013-2015 X1 sDrive28i, X1 xDrive28i and X1 xDrive35i, 2007-2013 328i, 328i xDrive, 335i, 335is, 335i xDrive and M3 Coupes, 2006-2011 328i, 328xi, 328i xDrive, 325i, 325xi, 330i, 330xi, 335i, 335xi, 335i\r\nxDrive and M3, 2009-2011 335D, 2006-2012 3"
+   },
+   {
+    "id": "16V071000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain model year 2008-2013 128i and 135i coupes and convertibles and 1 Series M coupes, 2006-2011 325i, 325xi, 328i, 328xi, 328i xDrive, 330i, 330xi, 335i, 335xi, 335i xDrive Sedans, 2009-2011 335d sedans, 2006-2012 325xiT, 328i and 328xi sports wagons, 2007-2013 328i, 328xi, 328i xDrive, 335i, 335xi, 335i xDrive, 335is and M3 Coupes and Convertibles,"
+   }
+  ],
+  "2013": [
+   {
+    "id": "20V017000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2008-2013 128i and 135i Convertibles, 128i, 135i, and M Coupes, 2007-2010 X3 30si and X3 xDrive30i, 2013-2015 X1 sDrive28i, X1 xDrive28i and X1 xDrive35i, 2007-2013 328i, 328i xDrive, 335i, 335is, 335i xDrive and M3 Coupes, 2006-2011 328i, 328xi, 328i xDrive, 325i, 325xi, 330i, 330xi, 335i, 335xi, 335i\r\nxDrive and M3, 2009-2011 335D, 2006-2012 3"
+   },
+   {
+    "id": "16V071000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain model year 2008-2013 128i and 135i coupes and convertibles and 1 Series M coupes, 2006-2011 325i, 325xi, 328i, 328xi, 328i xDrive, 330i, 330xi, 335i, 335xi, 335i xDrive Sedans, 2009-2011 335d sedans, 2006-2012 325xiT, 328i and 328xi sports wagons, 2007-2013 328i, 328xi, 328i xDrive, 335i, 335xi, 335i xDrive, 335is and M3 Coupes and Convertibles,"
+   }
+  ],
+  "2015": [
+   {
+    "id": "16V653000",
+    "part": "STRUCTURE:FRAME AND MEMBERS",
+    "summary": "BMW North America, LLC (BMW) is recalling certain model year 2016 BMW M2 Coupe vehicles, 2015-2017 M3 Sedan vehicles and 2015-2016 M4 Coupe and M4 Convertible vehicles.  During servicing of the rear differential for a prior service action, the rear sub-frame bolts may have been reused instead of being replaced.  Reuse of the existing bolts may cause the bolts to loosen."
+   },
+   {
+    "id": "15V782000",
+    "part": "POWER TRAIN:DRIVELINE:DRIVESHAFT",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain model year 2015-2016 M3 Sedan vehicles manufactured May 30, 2015, to September 2, 2015, 2016 M4 Coupe vehicles manufactured July 3, 2015, to September 11, 2015, and 2015-2016 M4 Convertible vehicles manufactured May 29, 2015, to August 4, 2015. The affected vehicles have a driveshaft with a slip-joint that may not have been filled with grease.  "
+   },
+   {
+    "id": "24V288000",
+    "part": "AIR BAGS:SIDE/WINDOW",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2014-2015 2 Series Coupe (228i, 228i xDrive, M235i), 3 Series Sedan (320i, 320i xDrive, 328i, 328i xDrive, 335i, 335i xDrive, M3, 328d, 328d xDrive), 4 Series Coupe (428i, 428i xDrive, 435i, 435i xDrive, M4), and 2015 4 Series Gran Coupe (428i, 428i xDrive, 435i, 435i xDrive) vehicles.  The head air bag inflator may fail at the weld joint, which"
+   }
+  ],
+  "2016": [
+   {
+    "id": "18V713000",
+    "part": "POWER TRAIN:DRIVELINE:DRIVESHAFT",
+    "summary": "BMW of North America, LLC  (BMW) is recalling certain 2016-2017 BMW M3 Sedans, 2016-2017 BMW M4 and M4 GTS Coupes and 2017 BMW M4 Convertible vehicles.  The connection between the driveshaft and the flange may fail resulting in a loss of propulsion."
+   },
+   {
+    "id": "16V653000",
+    "part": "STRUCTURE:FRAME AND MEMBERS",
+    "summary": "BMW North America, LLC (BMW) is recalling certain model year 2016 BMW M2 Coupe vehicles, 2015-2017 M3 Sedan vehicles and 2015-2016 M4 Coupe and M4 Convertible vehicles.  During servicing of the rear differential for a prior service action, the rear sub-frame bolts may have been reused instead of being replaced.  Reuse of the existing bolts may cause the bolts to loosen."
+   },
+   {
+    "id": "15V782000",
+    "part": "POWER TRAIN:DRIVELINE:DRIVESHAFT",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain model year 2015-2016 M3 Sedan vehicles manufactured May 30, 2015, to September 2, 2015, 2016 M4 Coupe vehicles manufactured July 3, 2015, to September 11, 2015, and 2015-2016 M4 Convertible vehicles manufactured May 29, 2015, to August 4, 2015. The affected vehicles have a driveshaft with a slip-joint that may not have been filled with grease.  "
+   }
+  ],
+  "2017": [
+   {
+    "id": "18V713000",
+    "part": "POWER TRAIN:DRIVELINE:DRIVESHAFT",
+    "summary": "BMW of North America, LLC  (BMW) is recalling certain 2016-2017 BMW M3 Sedans, 2016-2017 BMW M4 and M4 GTS Coupes and 2017 BMW M4 Convertible vehicles.  The connection between the driveshaft and the flange may fail resulting in a loss of propulsion."
+   },
+   {
+    "id": "16V653000",
+    "part": "STRUCTURE:FRAME AND MEMBERS",
+    "summary": "BMW North America, LLC (BMW) is recalling certain model year 2016 BMW M2 Coupe vehicles, 2015-2017 M3 Sedan vehicles and 2015-2016 M4 Coupe and M4 Convertible vehicles.  During servicing of the rear differential for a prior service action, the rear sub-frame bolts may have been reused instead of being replaced.  Reuse of the existing bolts may cause the bolts to loosen."
+   }
+  ],
+  "2018": [],
+  "2021": [
+   {
+    "id": "21V554000",
+    "part": "SEAT BELTS",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2021 2 Series (230i, 230i xDrive, M240i, M240i xDrive), 330e, 330e Xdrive, 4 Series Coupe (430i, 430i xDrive, M440i xDrive) M4 Coupe, M4 Competition Coupe, BMW 4 Series Convertible (430i, M440i), BMW X1 sDrive28i, xDrive28i, 2 Series Gran Coupe (228i, 228i xDrive, M235i xDrive), M2 Competition Coupe, 330i, 330i xDrive, M340i, M340i xDrive, M3, M"
+   },
+   {
+    "id": "21V062000",
+    "part": "SERVICE BRAKES, HYDRAULIC",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2020-2021 8 Series Coupe, Grand Coupe and convertible 840i, 840i xDrive, M850i xDrive, M8 and 740 Li, 740 Li xDrive, 750 Li xDrive, M760 Li xDrive, X6 sDrive40i, X6 xDrive40i, X6 xdrive50i, X6 M50i, X6M, and 2019-2021 X5 sDrive40i, X5 xDrive40i, X5 xDrive50i, X5 M50i, X5M, X7 xDrive40i, X7 xDrive50i, X7 M50i, and 2021 M3, M3 Competition, M4 Coup"
+   },
+   {
+    "id": "21V298000",
+    "part": "SEAT BELTS:FRONT:BUCKLE ASSEMBLY",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2021 330i, 330i xDrive, M340i, M3, and 330e xDrive vehicles.   The bolt securing the seat belt assembly to the frame was not tightened to specification."
+   }
+  ],
+  "2022": [],
+  "2023": [
+   {
+    "id": "23V118000",
+    "part": "ELECTRICAL SYSTEM:BODY CONTROL MODULE:SOFTWARE",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2023 330i, 330i xDrive, M340i, M340i xDrive, M3, 330e, 330e xDrive, 430i Convertible, 430i xDrive, M440i, 2022-2023 430i, 430i xDrive, M440i xDrive, i4 eDrive40, and i4 M50 vehicles.  During a service visit, a replacement electronic control unit (ECU) may have been installed with incorrect programming, which can cause the automatic door locking "
+   }
+  ],
+  "2024": [],
+  "2025": []
+ },
+ "yt": {
+  "bmw-m3-g3": {
+   "videos": 200,
+   "praise": [
+    [
+     "Handling and steering",
+     22
+    ],
+    [
+     "Looks",
+     20
+    ],
+    [
+     "Power and acceleration",
+     18
+    ],
+    [
+     "Manual gearbox",
+     13
+    ]
+   ],
+   "trouble": [
+    [
+     "Rod bearings",
+     10
+    ],
+    [
+     "SMG / DCT gearbox",
+     10
+    ],
+    [
+     "VANOS",
+     10
+    ],
+    [
+     "Oil leaks (gaskets, seals, housings)",
+     8
+    ]
+   ],
+   "top": [
+    {
+     "id": "E6pm5eW6F7k",
+     "title": "RICHARD HAMMOND MODIFIED MY E46 BMW M3 THAT I RESTORED",
+     "views": 5052601,
+     "ch": "Mat Armstrong"
+    },
+    {
+     "id": "LmZxh8HTa-0",
+     "title": "BMW E46 M3 vs E36 M3 vs M2 Comp: DRAG RACE",
+     "views": 3414143,
+     "ch": "carwow"
+    },
+    {
+     "id": "3uNiye9G8HI",
+     "title": "The Ultimate BMW M3 Review: E30 vs E36 vs E46 vs E92 vs F80",
+     "views": 2620419,
+     "ch": "Car Throttle"
+    }
+   ]
+  },
+  "bmw-m3-g4": {
+   "videos": 200,
+   "praise": [
+    [
+     "Power and acceleration",
+     14
+    ],
+    [
+     "Handling and steering",
+     14
+    ],
+    [
+     "Looks",
+     12
+    ],
+    [
+     "Everyday comfort",
+     8
+    ]
+   ],
+   "trouble": [
+    [
+     "Rod bearings",
+     11
+    ],
+    [
+     "SMG / DCT gearbox",
+     6
+    ],
+    [
+     "Throttle actuators",
+     6
+    ]
+   ],
+   "top": [
+    {
+     "id": "fGDNzMLfSBY",
+     "title": "Here's Why the BMW M3 E92 Was the Craziest BMW M3",
+     "views": 2826313,
+     "ch": "Doug DeMuro"
+    },
+    {
+     "id": "3uNiye9G8HI",
+     "title": "The Ultimate BMW M3 Review: E30 vs E36 vs E46 vs E92 vs F80",
+     "views": 2620420,
+     "ch": "Car Throttle"
+    },
+    {
+     "id": "kjPh9lUNxOc",
+     "title": "[POV 4K] BMW M3 E92 Full Armytrix - Slippery When Wet",
+     "views": 2127787,
+     "ch": "Simply Driving"
+    }
+   ]
+  },
+  "bmw-m3-g5": {
+   "videos": 200,
+   "praise": [
+    [
+     "Looks",
+     26
+    ],
+    [
+     "Everyday comfort",
+     14
+    ],
+    [
+     "Power and acceleration",
+     14
+    ],
+    [
+     "Handling and steering",
+     13
+    ]
+   ],
+   "trouble": [
+    [
+     "Crank hub",
+     8
+    ]
+   ],
+   "top": [
+    {
+     "id": "3uNiye9G8HI",
+     "title": "The Ultimate BMW M3 Review: E30 vs E36 vs E46 vs E92 vs F80",
+     "views": 2620419,
+     "ch": "Car Throttle"
+    },
+    {
+     "id": "iszHLSMaMhc",
+     "title": "BMW M3 Competition Top Speed Acceleration Autobahn POV Sound - 450 HP F80 Sedan",
+     "views": 2259686,
+     "ch": "AutoTopNL"
+    },
+    {
+     "id": "xKcx7vXZcHc",
+     "title": "2018 BMW M3 CS Review - The Best M3",
+     "views": 2249131,
+     "ch": "TheStraightPipes"
+    }
+   ]
+  },
+  "bmw-m3-competition": {
+   "videos": 200,
+   "praise": [
+    [
+     "Handling and steering",
+     25
+    ],
+    [
+     "Looks",
+     24
+    ],
+    [
+     "Everyday comfort",
+     22
+    ],
+    [
+     "Power and acceleration",
+     18
+    ]
+   ],
+   "trouble": [],
+   "top": [
+    {
+     "id": "u3EiY7sQWr4",
+     "title": "The Definitive Review: M3 Competition feat G82 M4 and E30 M3 — Jason Cammisa on the Icons — Ep. 03",
+     "views": 3021276,
+     "ch": "Hagerty"
+    },
+    {
+     "id": "bUVB0eB9d6Q",
+     "title": "2021 BMW M3 Competition - Wild Sedan!",
+     "views": 2644292,
+     "ch": "RoCars"
+    },
+    {
+     "id": "JOCCV9SOFn8",
+     "title": "BMW M3 Competition - Brutal Sedan in detail",
+     "views": 2348463,
+     "ch": "RoCars"
+    }
+   ]
+  },
+  "bmw-m3-g6": {
+   "videos": 200,
+   "praise": [
+    [
+     "Looks",
+     34
+    ],
+    [
+     "Power and acceleration",
+     25
+    ],
+    [
+     "Everyday comfort",
+     24
+    ],
+    [
+     "Handling and steering",
+     23
+    ]
+   ],
+   "trouble": [],
+   "top": [
+    {
+     "id": "ueGoScRwCp8",
+     "title": "BMW M3 G80 XDrive 720HP STAGE 1+ INFINITAS TEST DRIVE ON GERMAN AUTOBAHN🏎",
+     "views": 11532918,
+     "ch": "TopSpeedGermany"
+    },
+    {
+     "id": "CAQFv9G8Wn4",
+     "title": "Crazy 2021 M3 Competition meets Porsche 992 and Macan Turbo on German Autobahn✔",
+     "views": 3506394,
+     "ch": "Cars on Autobahn"
+    },
+    {
+     "id": "bUVB0eB9d6Q",
+     "title": "2021 BMW M3 Competition - Wild Sedan!",
+     "views": 2644237,
+     "ch": "RoCars"
+    }
+   ]
+  },
+  "bmw-s54": null,
+  "bmw-s65": null,
+  "bmw-s55": null,
+  "bmw-s58": null
+ },
+ "scores": {
+  "bmw-m3-competition": {
+   "years": {
+    "2016": {
+     "score": 56,
+     "weight": 9.7,
+     "videos": 27,
+     "named": 1,
+     "top": [
+      {
+       "id": "6MJwx9ypKsU",
+       "title": "535HP BMW M3 Competition F80 *FAST* on AUTOBAHN [NO SPEED LIMIT] by AutoTopNL",
+       "views": 283405
+      },
+      {
+       "id": "4GgD1Y5EZ-8",
+       "title": "BMW F80 M3 Competition POV Test Drive | Bootmod3 (Stage 1) | F80 M3 EXHAUST & ACCELERATIONS",
+       "views": 225358
+      },
+      {
+       "id": "NV0uU3b__tw",
+       "title": "How bad are NON-COMPETITION PACKAGE F80 M3'S?",
+       "views": 160208
+      }
+     ]
+    },
+    "2017": {
+     "score": 54,
+     "weight": 10.7,
+     "videos": 28,
+     "named": 2,
+     "top": [
+      {
+       "id": "6MJwx9ypKsU",
+       "title": "535HP BMW M3 Competition F80 *FAST* on AUTOBAHN [NO SPEED LIMIT] by AutoTopNL",
+       "views": 283405
+      },
+      {
+       "id": "4GgD1Y5EZ-8",
+       "title": "BMW F80 M3 Competition POV Test Drive | Bootmod3 (Stage 1) | F80 M3 EXHAUST & ACCELERATIONS",
+       "views": 225358
+      },
+      {
+       "id": "NV0uU3b__tw",
+       "title": "How bad are NON-COMPETITION PACKAGE F80 M3'S?",
+       "views": 160208
+      }
+     ]
+    },
+    "2018": {
+     "score": 54,
+     "weight": 16.7,
+     "videos": 34,
+     "named": 8,
+     "top": [
+      {
+       "id": "1qvJLYjyVIY",
+       "title": "BMW M3 Competition Package 2018 review | Mat Watson Reviews",
+       "views": 1149712
+      },
+      {
+       "id": "IJNvsQicy5w",
+       "title": "2018 BMW M3 Competition Pack - Still The Benchmark?",
+       "views": 418797
+      },
+      {
+       "id": "VBbqRTiKo_8",
+       "title": "INSIDE the BMW M3 Competition Package 2018 | SOUND In Depth Review Interior Exterior",
+       "views": 411637
+      }
+     ]
+    },
+    "2021": {
+     "score": 59,
+     "weight": 19.2,
+     "videos": 60,
+     "named": 9,
+     "top": [
+      {
+       "id": "bUVB0eB9d6Q",
+       "title": "2021 BMW M3 Competition - Wild Sedan!",
+       "views": 2644292
+      },
+      {
+       "id": "XddW1bpdGWY",
+       "title": "BMW M3 G80 Competition REVIEW on AUTOBAHN by AutoTopNL",
+       "views": 1775653
+      },
+      {
+       "id": "n3bCcVRDct0",
+       "title": "I Bought a TOTALED BMW G80 M3 Competition SIGHT UNSEEN",
+       "views": 957701
+      }
+     ]
+    },
+    "2022": {
+     "score": 61,
+     "weight": 16.2,
+     "videos": 57,
+     "named": 6,
+     "top": [
+      {
+       "id": "XddW1bpdGWY",
+       "title": "BMW M3 G80 Competition REVIEW on AUTOBAHN by AutoTopNL",
+       "views": 1775653
+      },
+      {
+       "id": "n3bCcVRDct0",
+       "title": "I Bought a TOTALED BMW G80 M3 Competition SIGHT UNSEEN",
+       "views": 957701
+      },
+      {
+       "id": "tl8COSG5PCE",
+       "title": "MY EYES - 510HP BEAST BMW M3 Competition G80 | Cinematic Short Film 4K",
+       "views": 768339
+      }
+     ]
+    },
+    "2023": {
+     "score": 61,
+     "weight": 21.2,
+     "videos": 62,
+     "named": 11,
+     "top": [
+      {
+       "id": "XddW1bpdGWY",
+       "title": "BMW M3 G80 Competition REVIEW on AUTOBAHN by AutoTopNL",
+       "views": 1775653
+      },
+      {
+       "id": "cqP8x4IFiA4",
+       "title": "The 2023 BMW M3 Competition xDrive is an //M Car Masterpiece (POV Drive Review)",
+       "views": 1089908
+      },
+      {
+       "id": "n3bCcVRDct0",
+       "title": "I Bought a TOTALED BMW G80 M3 Competition SIGHT UNSEEN",
+       "views": 957701
+      }
+     ]
+    },
+    "2024": {
+     "score": 58,
+     "weight": 19.2,
+     "videos": 60,
+     "named": 9,
+     "top": [
+      {
+       "id": "XddW1bpdGWY",
+       "title": "BMW M3 G80 Competition REVIEW on AUTOBAHN by AutoTopNL",
+       "views": 1775653
+      },
+      {
+       "id": "0Psvo5hKlgM",
+       "title": "POV Night Drive 2024 BMW G80 M3 Competition XDRIVE | Pure Drive Vibes",
+       "views": 998018
+      },
+      {
+       "id": "n3bCcVRDct0",
+       "title": "I Bought a TOTALED BMW G80 M3 Competition SIGHT UNSEEN",
+       "views": 957701
+      }
+     ]
+    },
+    "2025": {
+     "score": 57,
+     "weight": 33.2,
+     "videos": 74,
+     "named": 23,
+     "top": [
+      {
+       "id": "XddW1bpdGWY",
+       "title": "BMW M3 G80 Competition REVIEW on AUTOBAHN by AutoTopNL",
+       "views": 1775653
+      },
+      {
+       "id": "n3bCcVRDct0",
+       "title": "I Bought a TOTALED BMW G80 M3 Competition SIGHT UNSEEN",
+       "views": 957701
+      },
+      {
+       "id": "ZXIelmU1ssg",
+       "title": "2025 BMW M3 Competition xDrive - POV Night Drive (Binaural Audio)",
+       "views": 919312
+      }
+     ]
+    }
+   },
+   "videos": 146,
+   "pulled": 200
+  }
+ }
+}

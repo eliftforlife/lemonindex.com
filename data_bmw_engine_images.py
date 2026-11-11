@@ -18,7 +18,8 @@ IMG = {'M54': ('bmw_m54.png', 'bmw-m54-inline-6-engine', 'BMW M54 inline-6 engin
        'S54': ('bmw_s54.png', 'bmw-s54-inline-6-engine', 'BMW S54 3.2-liter inline-6 engine (illustration)'),
        'S55': ('bmw_s55.png', 'bmw-s55-twin-turbo-inline-6-engine', 'BMW S55 3.0-liter twin-turbo inline-6 engine (illustration)'),
        'S58': ('bmw_s58.png', 'bmw-s58-twin-turbo-inline-6-engine', 'BMW S58 3.0-liter twin-turbo inline-6 engine (illustration)'),
-       'S63': ('bmw_s63.png', 'bmw-s63-twin-turbo-v8-engine', 'BMW S63 4.4-liter twin-turbo V8 engine (illustration)')}
+       'S63': ('bmw_s63.png', 'bmw-s63-twin-turbo-v8-engine', 'BMW S63 4.4-liter twin-turbo V8 engine (illustration)'),
+       'S65': ('bmw_s65.png', 'bmw-s65-v8-engine', 'BMW S65 4.0-liter V8 engine (illustration)')}   # 11-11: the performance-engines agent's LOW image (engine images test/performance-engines/bmw-s65.png), cut out
 # 11-10 (Elijah: "if there's an AI image, don't also show the Commons photo"): every engine page uses its AI cutout. No M30 page (its cars predate our data).
 LIC = 'https://creativecommons.org/licenses/by/4.0/'; LICENSOR = 'https://lemonindex.com/images/'
 def xmp(title):

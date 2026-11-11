@@ -1,0 +1,1242 @@
+{
+ "slug": "bmw-m3",
+ "name": "BMW M3",
+ "short": "M3",
+ "make": "BMW",
+ "page": "/cars/bmw-m3/",
+ "focus": "g80",
+ "star": "g80-comp",
+ "h1": "BMW M3: performance, engines and what owners say",
+ "yt_model": "bmw-m3",
+ "nhtsa": {
+  "make": "BMW",
+  "models": [
+   "M3",
+   "M3 US"
+  ]
+ },
+ "topics_extra": {
+  "Rod bearings": "rod bearings?",
+  "VANOS": "\\bvanos",
+  "Throttle actuators": "throttle actuators?",
+  "Crank hub": "crank ?hub",
+  "SMG / DCT gearbox": "\\bsmg\\b|\\bdct\\b|dual.?clutch|double.?clutch",
+  "Clutch": "\\bclutch\\b"
+ },
+ "gens": [
+  {
+   "id": "e46",
+   "code": "E46",
+   "years": "2001–2006",
+   "y0": 2001,
+   "y1": 2006,
+   "engine": "S54",
+   "body": "Coupe and convertible",
+   "img": "/assets/perf/bmw-m3-e46.webp",
+   "color": "Laguna Seca Blue",
+   "yt_study": "bmw-m3-g3",
+   "tag": "The last naturally aspirated six. Revs to 8,000.",
+   "variants": [
+    {
+     "id": "e46",
+     "name": "M3",
+     "years": "2001–2006",
+     "hp": {
+      "v": 333,
+      "src": [
+       "b06spec",
+       "b01"
+      ],
+      "note": "at 7,900 rpm"
+     },
+     "tq": {
+      "v": 262,
+      "src": [
+       "b06spec"
+      ],
+      "note": "at 4,900 rpm"
+     },
+     "z60": {
+      "v": 4.5,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 4.8,
+      "csrc": [
+       "b06spec"
+      ]
+     },
+     "top": {
+      "v": "155 mph",
+      "src": [
+       "b06spec"
+      ],
+      "note": "limited"
+     },
+     "trans": {
+      "v": "6-speed manual or 6-speed SMG",
+      "src": [
+       "b06spec",
+       "b06price"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,415 lb",
+      "src": [
+       "b06spec"
+      ],
+      "note": "coupe"
+     },
+     "price": {
+      "v": "$46,045",
+      "src": [
+       "b01"
+      ],
+      "note": "2001 coupe at launch"
+     }
+    },
+    {
+     "id": "e46-zcp",
+     "name": "Competition Package",
+     "years": "2005–2006",
+     "pkg": true,
+     "hp": {
+      "v": 333,
+      "src": [
+       "b05zcp"
+      ],
+      "note": "same engine"
+     },
+     "what": "19-inch forged wheels, quicker steering, M Track mode, CSL-style cross-drilled brakes",
+     "what_src": [
+      "b05zcp"
+     ],
+     "top": {
+      "v": "155 mph",
+      "src": [
+       "b06spec"
+      ],
+      "note": "limited"
+     },
+     "trans": {
+      "v": "6-speed manual or SMG",
+      "src": [
+       "b05zcp"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "+$4,000",
+      "src": [
+       "b05zcp",
+       "b06price"
+      ],
+      "note": "coupe option"
+     }
+    }
+   ]
+  },
+  {
+   "id": "e92",
+   "code": "E9x",
+   "years": "2008–2013",
+   "y0": 2008,
+   "y1": 2013,
+   "engine": "S65",
+   "body": "Sedan, coupe and convertible",
+   "img": "/assets/perf/bmw-m3-e92.webp",
+   "color": "Melbourne Red",
+   "yt_study": "bmw-m3-g4",
+   "tag": "The only V8 M3. 414 hp at 8,300 rpm, no turbos.",
+   "variants": [
+    {
+     "id": "e9x",
+     "name": "M3",
+     "years": "2008–2013",
+     "hp": {
+      "v": 414,
+      "src": [
+       "b07",
+       "b08spec"
+      ],
+      "note": "at 8,300 rpm"
+     },
+     "tq": {
+      "v": 295,
+      "src": [
+       "b07",
+       "b08spec"
+      ],
+      "note": "at 3,900 rpm"
+     },
+     "z60": {
+      "v": 4.3,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "top": {
+      "v": "155 mph",
+      "src": [
+       "b08spec"
+      ],
+      "note": "limited"
+     },
+     "trans": {
+      "v": "6-speed manual or 7-speed M DCT",
+      "src": [
+       "b08price",
+       "b08spec"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,726 lb",
+      "src": [
+       "b08spec"
+      ],
+      "note": "sedan, manual"
+     },
+     "price": {
+      "v": "$57,275",
+      "src": [
+       "b08price"
+      ],
+      "note": "2008 coupe; sedan $54,575"
+     }
+    },
+    {
+     "id": "e9x-zcp",
+     "name": "Competition Package",
+     "years": "2011–2013",
+     "pkg": true,
+     "hp": {
+      "v": 414,
+      "src": [
+       "b10fg",
+       "gts11"
+      ],
+      "note": "same engine"
+     },
+     "what": "10 mm lower, 19-inch wheels, retuned dampers and stability control",
+     "what_src": [
+      "b10fg",
+      "gts11"
+     ],
+     "z60": {
+      "v": null,
+      "who": "",
+      "src": [],
+      "claim": 4.5,
+      "csrc": [
+       "b10fg"
+      ]
+     },
+     "trans": {
+      "v": "6-speed manual or 7-speed M DCT",
+      "src": [
+       "b10fg"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "+$2,500",
+      "src": [
+       "gts11"
+      ],
+      "note": "option"
+     }
+    }
+   ]
+  },
+  {
+   "id": "f80",
+   "code": "F80",
+   "years": "2015–2018",
+   "y0": 2015,
+   "y1": 2018,
+   "engine": "S55",
+   "body": "Sedan (the coupe became the M4)",
+   "img": "/assets/perf/bmw-m3-f80.webp",
+   "color": "Yas Marina Blue",
+   "yt_study": "bmw-m3-g5",
+   "comp_study": "bmw-m3-competition",
+   "comp_label": "Competition Package",
+   "tag": "Turbos arrive. Torque jumps from 295 to 406 lb-ft.",
+   "variants": [
+    {
+     "id": "f80",
+     "name": "M3",
+     "years": "2015–2018",
+     "hp": {
+      "v": 425,
+      "src": [
+       "b15spec",
+       "b13"
+      ],
+      "note": "at 5,500–7,300 rpm"
+     },
+     "tq": {
+      "v": 406,
+      "src": [
+       "b15spec"
+      ],
+      "note": "at 1,850–5,500 rpm"
+     },
+     "z60": {
+      "v": 3.8,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 3.9,
+      "csrc": [
+       "b15spec"
+      ]
+     },
+     "top": {
+      "v": "155 mph",
+      "src": [
+       "b15spec"
+      ],
+      "note": "limited"
+     },
+     "trans": {
+      "v": "6-speed manual or 7-speed M DCT",
+      "src": [
+       "b15spec",
+       "b15price"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,540 lb",
+      "src": [
+       "b15spec"
+      ],
+      "note": "manual; DCT 3,595 lb"
+     },
+     "price": {
+      "v": "$62,000",
+      "src": [
+       "b13",
+       "b15price"
+      ],
+      "note": "plus destination"
+     }
+    },
+    {
+     "id": "f80-comp",
+     "name": "Competition Package",
+     "years": "2016–2018",
+     "pkg": true,
+     "hp": {
+      "v": 444,
+      "src": [
+       "b16comp",
+       "b16price"
+      ],
+      "note": ""
+     },
+     "what": "444 hp, 20-inch forged wheels, retuned suspension, differential and stability control",
+     "what_src": [
+      "b16comp"
+     ],
+     "z60": {
+      "v": 4.0,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 3.8,
+      "csrc": [
+       "b16comp"
+      ]
+     },
+     "trans": {
+      "v": "6-speed manual or 7-speed M DCT",
+      "src": [
+       "b16comp"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "+$5,500",
+      "src": [
+       "b16price"
+      ],
+      "note": "2016 option"
+     }
+    },
+    {
+     "id": "f80-cs",
+     "name": "M3 CS",
+     "years": "2018",
+     "hp": {
+      "v": 453,
+      "src": [
+       "b17cs"
+      ],
+      "note": "at 6,250 rpm"
+     },
+     "tq": {
+      "v": 443,
+      "src": [
+       "b17cs"
+      ],
+      "note": "at 4,000–5,380 rpm"
+     },
+     "z60": {
+      "v": null,
+      "who": "",
+      "src": [],
+      "claim": 3.7,
+      "csrc": [
+       "b17cs"
+      ]
+     },
+     "top": {
+      "v": "174 mph",
+      "src": [
+       "b17cs"
+      ],
+      "note": "limited, M Driver’s Package standard"
+     },
+     "trans": {
+      "v": "7-speed M DCT",
+      "src": [
+       "b17cs"
+      ],
+      "note": ""
+     }
+    }
+   ]
+  },
+  {
+   "id": "g80",
+   "code": "G80",
+   "years": "2021–2025",
+   "y0": 2021,
+   "y1": 2025,
+   "engine": "S58",
+   "body": "Sedan",
+   "img": "/assets/perf/bmw-m3-g80.webp",
+   "color": "Isle of Man Green",
+   "yt_study": "bmw-m3-g6",
+   "comp_study": "bmw-m3-competition",
+   "comp_label": "M3 Competition",
+   "tag": "The Competition. 503 hp, 8-speed, all-wheel drive from 2022.",
+   "variants": [
+    {
+     "id": "g80",
+     "name": "M3",
+     "years": "2021–2025",
+     "hp": {
+      "v": 473,
+      "src": [
+       "b21",
+       "b25"
+      ],
+      "note": "at 6,250 rpm"
+     },
+     "tq": {
+      "v": 406,
+      "src": [
+       "b21"
+      ],
+      "note": "at 2,650–6,130 rpm"
+     },
+     "z60": {
+      "v": 3.9,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 4.1,
+      "csrc": [
+       "b21"
+      ]
+     },
+     "top": {
+      "v": "155 mph",
+      "src": [
+       "b21"
+      ],
+      "note": "limited"
+     },
+     "trans": {
+      "v": "6-speed manual, rear-drive",
+      "src": [
+       "b21"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,840 lb",
+      "src": [
+       "b21",
+       "b25"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$69,900",
+      "src": [
+       "b21"
+      ],
+      "note": "2021, plus $995 destination"
+     }
+    },
+    {
+     "id": "g80-comp",
+     "name": "M3 Competition",
+     "years": "2021–2025",
+     "star": true,
+     "hp": {
+      "v": 503,
+      "src": [
+       "b21",
+       "b25"
+      ],
+      "note": "at 6,250 rpm"
+     },
+     "tq": {
+      "v": 479,
+      "src": [
+       "b21"
+      ],
+      "note": "at 2,750–5,500 rpm"
+     },
+     "z60": {
+      "v": 3.5,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 3.8,
+      "csrc": [
+       "b21"
+      ]
+     },
+     "top": {
+      "v": "155 mph",
+      "src": [
+       "b21"
+      ],
+      "note": "limited"
+     },
+     "trans": {
+      "v": "8-speed M Steptronic, rear-drive",
+      "src": [
+       "b21"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,890 lb",
+      "src": [
+       "b21"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$72,800",
+      "src": [
+       "b21"
+      ],
+      "note": "2021, plus $995 destination"
+     }
+    },
+    {
+     "id": "g80-comp-x",
+     "name": "Competition xDrive",
+     "years": "2022–2024",
+     "hp": {
+      "v": 503,
+      "src": [
+       "b22x"
+      ],
+      "note": ""
+     },
+     "tq": {
+      "v": 479,
+      "src": [
+       "b22x"
+      ],
+      "note": ""
+     },
+     "z60": {
+      "v": 3.0,
+      "who": "MotorTrend",
+      "src": [
+       "z60"
+      ],
+      "claim": 3.4,
+      "csrc": [
+       "b22x"
+      ]
+     },
+     "top": {
+      "v": "155 mph",
+      "src": [
+       "b22x"
+      ],
+      "note": "limited; 180 with M Driver’s Package"
+     },
+     "trans": {
+      "v": "8-speed M Steptronic, all-wheel drive",
+      "src": [
+       "b22x"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,990 lb",
+      "src": [
+       "b22x"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$76,900",
+      "src": [
+       "b22x"
+      ],
+      "note": "plus $995 destination"
+     }
+    },
+    {
+     "id": "g80-comp-x25",
+     "name": "Competition xDrive",
+     "years": "2025",
+     "hp": {
+      "v": 523,
+      "src": [
+       "b25"
+      ],
+      "note": "+20 hp"
+     },
+     "tq": {
+      "v": 479,
+      "src": [
+       "b25"
+      ],
+      "note": "at 2,750–5,730 rpm"
+     },
+     "z60": {
+      "v": null,
+      "who": "",
+      "src": [],
+      "claim": 3.4,
+      "csrc": [
+       "b25"
+      ]
+     },
+     "top": {
+      "v": "155 mph",
+      "src": [
+       "b25"
+      ],
+      "note": "limited"
+     },
+     "trans": {
+      "v": "8-speed M Steptronic, all-wheel drive",
+      "src": [
+       "b25"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,990 lb",
+      "src": [
+       "b25"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$85,300",
+      "src": [
+       "b25"
+      ],
+      "note": "plus $1,175 destination"
+     }
+    },
+    {
+     "id": "g80-cs",
+     "name": "M3 CS",
+     "years": "2024",
+     "hp": {
+      "v": 543,
+      "src": [
+       "b23cs"
+      ],
+      "note": "at 6,250–7,200 rpm"
+     },
+     "tq": {
+      "v": 479,
+      "src": [
+       "b23cs"
+      ],
+      "note": ""
+     },
+     "z60": {
+      "v": 2.7,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 3.2,
+      "csrc": [
+       "b23cs"
+      ]
+     },
+     "top": {
+      "v": "188 mph",
+      "src": [
+       "b23cs"
+      ],
+      "note": "limited"
+     },
+     "trans": {
+      "v": "8-speed M Steptronic, all-wheel drive",
+      "src": [
+       "b23cs"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,915 lb",
+      "src": [
+       "b23cs"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$118,700",
+      "src": [
+       "b23cs"
+      ],
+      "note": "plus $995 destination"
+     }
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "S54": {
+   "name": "BMW S54",
+   "what": "3.2-liter inline-6, naturally aspirated",
+   "page": "/engines/bmw-s54/",
+   "yt": [
+    "bmw",
+    "S54"
+   ],
+   "study": "bmw-s54",
+   "facts": [
+    [
+     "Redline",
+     "8,000 rpm",
+     [
+      "ws54",
+      "bb54"
+     ]
+    ],
+    [
+     "Output",
+     "333 hp, 262 lb-ft",
+     [
+      "b06spec"
+     ]
+    ],
+    [
+     "Breathing",
+     "Six individual throttle bodies",
+     [
+      "ws54",
+      "bb54"
+     ]
+    ],
+    [
+     "Block",
+     "Cast iron, aluminum head",
+     [
+      "ws54"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Rod bearings",
+     "kind": "BMW service actions",
+     "rx": "rod bearing|connecting rod|spun (a )?bearing",
+     "x": "BMW replaced oil pumps and rod bearings on 2001–2003 cars under two service actions and extended engine coverage to 6 years / 100,000 miles, long expired. Bearings are still the S54’s best-known weak spot.",
+     "fix": "Oil analysis, or preventive bearings (ECS Tuning: about every 100k miles).",
+     "src": [
+      "sib356",
+      "sib404",
+      "bb54",
+      "ecs46"
+     ]
+    },
+    {
+     "t": "VANOS",
+     "kind": "Owner-reported",
+     "rx": "vanos",
+     "x": "Worn VANOS hub tabs and sprocket bolts that back out. BMWBLOG calls it the most common S54 issue.",
+     "fix": "VANOS rebuild with updated hubs.",
+     "src": [
+      "bb54",
+      "ecs46"
+     ]
+    },
+    {
+     "t": "SMG gearbox",
+     "kind": "Owner complaints",
+     "rx": "\\bsmg\\b",
+     "x": "Owners filed complaints about the optional SMG automated manual: surging and replaced units.",
+     "fix": "",
+     "src": [
+      "nhtsa"
+     ]
+    }
+   ]
+  },
+  "S65": {
+   "name": "BMW S65",
+   "what": "4.0-liter V8, naturally aspirated",
+   "page": "/engines/bmw-s65/",
+   "yt": [
+    "scy",
+    "bmw-s65"
+   ],
+   "study": "bmw-s65",
+   "facts": [
+    [
+     "Redline",
+     "8,400 rpm",
+     [
+      "ws65",
+      "bb65"
+     ]
+    ],
+    [
+     "Output",
+     "414 hp, 295 lb-ft",
+     [
+      "b07"
+     ]
+    ],
+    [
+     "Breathing",
+     "Eight individual throttle bodies",
+     [
+      "ws65",
+      "bb65"
+     ]
+    ],
+    [
+     "Weight",
+     "445 lb, lighter than the S54 six",
+     [
+      "ws65"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Rod bearings",
+     "kind": "Owner-reported",
+     "rx": "rod bearing|connecting rod|spun (a )?bearing",
+     "x": "Tight bearing clearances plus hard revving on cold oil wear the bearings early. A spun bearing can end the engine.",
+     "fix": "Preventive bearings around 60,000–80,000 miles (BMWBLOG). Warm the oil first.",
+     "src": [
+      "bb65",
+      "ecs92"
+     ]
+    },
+    {
+     "t": "Throttle actuators",
+     "kind": "Owner-reported",
+     "rx": "throttle (actuator|body|motor)",
+     "x": "The two actuators that drive the throttle bodies wear out inside and trigger limp mode (codes 2B15, 2B16, 2B21).",
+     "fix": "Rebuilt or new actuators, often both at once.",
+     "src": [
+      "bb65",
+      "ecs92"
+     ]
+    },
+    {
+     "t": "Idle control actuator",
+     "kind": "BMW warranty extension",
+     "rx": "idle (control|actuator|valve)",
+     "x": "BMW extended coverage on the idle control actuator to 10 years / 120,000 miles for 2013 coupes and convertibles. Not a recall.",
+     "fix": "",
+     "src": [
+      "tsb65"
+     ]
+    },
+    {
+     "t": "M DCT gearbox",
+     "kind": "Owner complaints",
+     "rx": "\\bdct\\b|dual.?clutch|double.?clutch",
+     "x": "The M DCT is the gearbox E9x owners name most in complaints, mostly on 2008–2009 cars. A 2008 recall (08V595000) covered about 2,500 DCT cars.",
+     "fix": "",
+     "src": [
+      "nhtsa"
+     ]
+    }
+   ]
+  },
+  "S55": {
+   "name": "BMW S55",
+   "what": "3.0-liter inline-6, twin-turbo",
+   "page": "/engines/bmw-s55/",
+   "yt": [
+    "scy",
+    "bmw-s55"
+   ],
+   "study": "bmw-s55",
+   "facts": [
+    [
+     "Max rpm",
+     "7,600 rpm",
+     [
+      "b13",
+      "wn55"
+     ]
+    ],
+    [
+     "Output",
+     "425–453 hp, up to 443 lb-ft",
+     [
+      "b15spec",
+      "b16comp",
+      "b17cs"
+     ]
+    ],
+    [
+     "Block",
+     "Closed deck, no liners",
+     [
+      "b13",
+      "wn55"
+     ]
+    ],
+    [
+     "Crank",
+     "Forged, lightweight",
+     [
+      "b13"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Crank hub",
+     "kind": "Owner-reported, disputed",
+     "rx": "crank ?(shaft)? ?hub|spun hub",
+     "x": "The crank hub is pressed on, not keyed. Under high torque, mostly on tuned cars, it can slip and knock the timing out. BMWBLOG calls it rare but serious.",
+     "fix": "Aftermarket keyed or pinned hub.",
+     "src": [
+      "bb55",
+      "rsr55"
+     ]
+    },
+    {
+     "t": "Carbon on intake valves",
+     "kind": "Owner-reported",
+     "rx": "carbon (build|buildup|deposit)",
+     "x": "Direct injection lets carbon build on the intake valves: rough idle and misfires.",
+     "fix": "Walnut-blast the valves.",
+     "src": [
+      "bb55"
+     ]
+    },
+    {
+     "t": "Gasket oil leaks",
+     "kind": "Owner-reported",
+     "rx": "oil leak|leaking oil",
+     "x": "Valve cover, oil pan and oil filter housing gaskets leak with age.",
+     "fix": "Replace the gaskets.",
+     "src": [
+      "bb55"
+     ]
+    }
+   ]
+  },
+  "S58": {
+   "name": "BMW S58",
+   "what": "3.0-liter inline-6, twin-turbo",
+   "page": "/engines/bmw-s58/",
+   "yt": [
+    "scy",
+    "bmw-s58"
+   ],
+   "study": "bmw-s58",
+   "facts": [
+    [
+     "Redline",
+     "7,200 rpm",
+     [
+      "wb58"
+     ]
+    ],
+    [
+     "Output",
+     "473–543 hp, up to 479 lb-ft",
+     [
+      "b21",
+      "b25",
+      "b23cs"
+     ]
+    ],
+    [
+     "Head",
+     "Cast around a 3D-printed core",
+     [
+      "b25"
+     ]
+    ],
+    [
+     "Block",
+     "Closed deck, no liners",
+     [
+      "b25"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "No known pattern yet",
+     "kind": "Owner-reported",
+     "rx": "",
+     "x": "No widespread S58 failure is documented. BMWBLOG says it has so far avoided the systemic problems of older M engines.",
+     "fix": "",
+     "src": [
+      "bb58",
+      "bb58b"
+     ]
+    },
+    {
+     "t": "Oil use",
+     "kind": "Owner-reported",
+     "rx": "oil consumption|burning oil|using oil",
+     "x": "Some owners report higher oil use than expected. Check the level between services.",
+     "fix": "",
+     "src": [
+      "bb58b"
+     ]
+    }
+   ]
+  }
+ },
+ "compare": [
+  {
+   "slug": "mercedes-amg-c63",
+   "name": "Mercedes-AMG C63",
+   "img": "/assets/ai-perf/amg-c63.webp?v=1"
+  },
+  {
+   "slug": "audi-rs-5",
+   "name": "Audi RS 5",
+   "img": "/assets/ai-perf/audi-rs5.webp?v=1"
+  },
+  {
+   "slug": "alfa-romeo-giulia-quadrifoglio",
+   "name": "Giulia Quadrifoglio",
+   "img": "/assets/ai-perf/giulia-qv.webp?v=1"
+  },
+  {
+   "slug": "bmw-m4",
+   "name": "BMW M4",
+   "img": "/assets/ai-perf/bmw-m4.webp?v=1"
+  }
+ ],
+ "sources": {
+  "b06spec": {
+   "t": "BMW NA: 2006 BMW M3 technical specifications (press kit)",
+   "u": "https://newsroom.bmwgroup.com/americas/download/a07aa6d9-e9ae-4d4b-a475-5fbe604d8e36/20260728122717972-793.doc",
+   "k": "BMW"
+  },
+  "b06price": {
+   "t": "BMW NA: 2006 M3 pricing (Sept 2005)",
+   "u": "https://newsroom.bmwgroup.com/americas/download/09caec96-b35d-452b-8675-bc0ab6ffa138/20260728122718101-508.doc",
+   "k": "BMW"
+  },
+  "b01": {
+   "t": "BMW NA press release, Jan 5 2001 (via The Auto Channel)",
+   "u": "https://www.theautochannel.com/news/press/date/20010105/press033676.html",
+   "k": "BMW"
+  },
+  "b05zcp": {
+   "t": "BMW NA: M3 Competition Package North American debut (Jan 2005)",
+   "u": "https://newsroom.bmwgroup.com/americas/bmw-h2r-record-car-and-m3-competition-package-make-north-american-debuts-at-the-los-angeles-international-auto-show",
+   "k": "BMW"
+  },
+  "b07": {
+   "t": "BMW NA: The all-new BMW M3 Coupe (Oct 2007)",
+   "u": "https://newsroom.bmwgroup.com/americas/the-all-new-bmw-m3-coupe",
+   "k": "BMW"
+  },
+  "b08spec": {
+   "t": "BMW NA: Technical data, 2008 BMW M3 Sedan",
+   "u": "https://newsroom.bmwgroup.com/americas/download/27e67804-259e-4a49-acf6-95d5880b4159/20260728123807923-303.pdf",
+   "k": "BMW"
+  },
+  "b08price": {
+   "t": "BMW NA: 2008 M3 suggested retail prices (Mar 2008)",
+   "u": "https://newsroom.bmwgroup.com/americas/download/842eebfb-2be9-4610-9d5f-0223dc929668/20260728123809603-401.pdf",
+   "k": "BMW"
+  },
+  "b10fg": {
+   "t": "BMW NA: The 2011 BMW Frozen Gray M3 Coupe (Jun 2010)",
+   "u": "https://newsroom.bmwgroup.com/americas/the-2011-bmw-frozen-gray-m3-coupe",
+   "k": "BMW"
+  },
+  "gts11": {
+   "t": "GTSpirit: BMW M3 Competition Package for 2011 models (citing Motor Authority)",
+   "u": "https://gtspirit.com/2010/01/30/bmw-m3-competition-package-for-2011-models/",
+   "k": "outlet"
+  },
+  "b13": {
+   "t": "BMW NA: The all-new BMW M3 Sedan and M4 Coupe (Dec 2013)",
+   "u": "https://newsroom.bmwgroup.com/americas/the-all-new-bmw-m3-sedan-and-bmw-m4-coupe",
+   "k": "BMW"
+  },
+  "b15spec": {
+   "t": "BMW NA: Technical data, 2015 BMW M3 Sedan",
+   "u": "https://newsroom.bmwgroup.com/americas/download/833bdcb8-ce2d-4971-99de-92523ec8eca2/20260728125325418-496.pdf",
+   "k": "BMW"
+  },
+  "b15price": {
+   "t": "BMW NA: M3/M4 pricing guide MY2015 (Jul 2014)",
+   "u": "https://newsroom.bmwgroup.com/americas/download/76e6e6fd-6b26-422b-9922-c15af4aea6bf/20260728125325342-831.pdf",
+   "k": "BMW"
+  },
+  "b16comp": {
+   "t": "BMW NA: New Competition Package amps up the BMW M3 and M4 (Jan 2016)",
+   "u": "https://newsroom.bmwgroup.com/americas/new-competition-package-amps-up-the-bmw-m3-and-m4",
+   "k": "BMW"
+  },
+  "b16price": {
+   "t": "BMW NA: M3/M4 pricing guide MY2016 (Mar 2016)",
+   "u": "https://newsroom.bmwgroup.com/americas/download/1ffbf741-adf2-447b-b66d-a67f6ab2665d/20260728125325565-184.pdf",
+   "k": "BMW"
+  },
+  "b17cs": {
+   "t": "BMW NA: The first-ever BMW M3 CS (Nov 2017)",
+   "u": "https://newsroom.bmwgroup.com/americas/the-first-ever-bmw-m3-cs",
+   "k": "BMW"
+  },
+  "b21": {
+   "t": "BMW NA: The new 2021 BMW M3 Sedan and M4 Coupe",
+   "u": "https://newsroom.bmwgroup.com/americas/the-new-2021-bmw-m3-sedan-and-m4-coupe",
+   "k": "BMW"
+  },
+  "b22x": {
+   "t": "BMW NA: The new 2022 BMW M3 Competition xDrive Sedan",
+   "u": "https://newsroom.bmwgroup.com/americas/the-new-2022-bmw-m3-competition-xdrive-sedan-and-m4-competition-xdrive-coupe",
+   "k": "BMW"
+  },
+  "b23cs": {
+   "t": "BMW NA: The BMW M3 CS: lighter, stronger, faster (Jan 2023)",
+   "u": "https://newsroom.bmwgroup.com/americas/the-bmw-m3-cs-lighter-stronger-faster",
+   "k": "BMW"
+  },
+  "b25": {
+   "t": "BMW NA: The new 2025 BMW M3 (May 2024)",
+   "u": "https://newsroom.bmwgroup.com/americas/the-new-2025-bmw-m3",
+   "k": "BMW"
+  },
+  "z60": {
+   "t": "0-60specs.com: BMW M3 0-60 runs by magazine (Car and Driver, MotorTrend)",
+   "u": "https://www.0-60specs.com/bmw-m3-0-60-times/",
+   "k": "magazine tests, aggregated"
+  },
+  "ws54": {
+   "t": "Wikipedia: BMW S54",
+   "u": "https://en.wikipedia.org/wiki/BMW_S54",
+   "k": "Wikipedia"
+  },
+  "ws65": {
+   "t": "Wikipedia: BMW S65",
+   "u": "https://en.wikipedia.org/wiki/BMW_S65",
+   "k": "Wikipedia"
+  },
+  "wn55": {
+   "t": "Wikipedia: BMW N55 (S55 section)",
+   "u": "https://en.wikipedia.org/wiki/BMW_N55",
+   "k": "Wikipedia"
+  },
+  "wb58": {
+   "t": "Wikipedia: BMW B58 (S58 section)",
+   "u": "https://en.wikipedia.org/wiki/BMW_B58",
+   "k": "Wikipedia"
+  },
+  "bb54": {
+   "t": "BMWBLOG: BMW S54 engine, everything you need to know (2022)",
+   "u": "https://www.bmwblog.com/2022/10/10/bmw-s54-engine-everything-you-need-to-know/",
+   "k": "outlet"
+  },
+  "bb65": {
+   "t": "BMWBLOG: BMW S65 engine reliability, tuning, maintenance (2025)",
+   "u": "https://www.bmwblog.com/2025/03/20/bmw-s65-engine-reliability-tuning-maintenance/",
+   "k": "outlet"
+  },
+  "bb55": {
+   "t": "BMWBLOG: BMW S55 engine overview (2023)",
+   "u": "https://www.bmwblog.com/2023/10/19/bmw-s55-engine-overview",
+   "k": "outlet"
+  },
+  "bb58": {
+   "t": "BMWBLOG: BMW S58 reliability, efficiency and tuning (2024)",
+   "u": "https://www.bmwblog.com/2024/04/29/bmw-s58-reliability-efficiency-and-tuning/",
+   "k": "outlet"
+  },
+  "bb58b": {
+   "t": "BMWBLOG: BMW B58 vs S58 (2026)",
+   "u": "https://www.bmwblog.com/2026/05/04/bmw-b58-vs-s58-engine-comparison/",
+   "k": "outlet"
+  },
+  "ecs46": {
+   "t": "ECS Tuning: most common BMW E46 M3 problems",
+   "u": "https://blog.ecstuning.com/most-common-bmw-e46-m3-problems/",
+   "k": "parts seller"
+  },
+  "ecs92": {
+   "t": "ECS Tuning: common problems for the BMW E92 M3",
+   "u": "https://blog.ecstuning.com/common-problems-for-the-bmw-e92-m3/",
+   "k": "parts seller"
+  },
+  "sib356": {
+   "t": "BMW NA SI B11 02 03 (Campaign 356): E46 M3 oil pump and rod bearings",
+   "u": "https://cdn.shopify.com/s/files/1/0533/1684/5721/files/Recall_1_of_2_SBI_110203.pdf",
+   "k": "BMW bulletin"
+  },
+  "sib404": {
+   "t": "BMW NA SI B11 04 04: E46 M3 connecting rod bearings (via Euroconnex)",
+   "u": "https://euroconnex.co/blogs/the-phoenix-e46-m3/total-recall",
+   "k": "BMW bulletin"
+  },
+  "tsb65": {
+   "t": "BMW NA SI B01 03 16: S65 idle control actuator warranty extension (filed with NHTSA)",
+   "u": "https://static.nhtsa.gov/odi/tsbs/2016/MC-10151158-9999.pdf",
+   "k": "BMW bulletin"
+  },
+  "rsr55": {
+   "t": "Studio RSR: S55 crank hub fix (F80 M3 / F82 M4)",
+   "u": "https://studiorsr.com/blogs/tech-and-parts/s55-crank-hub-fix-f80-m3-and-f82-m4-keyed-crank",
+   "k": "parts seller"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ }
+}
