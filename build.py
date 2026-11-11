@@ -195,8 +195,10 @@ PD = json.load(open('data/page_dates.json', encoding='utf-8')) if os.path.exists
 _MN = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, vis=''):
     title, desc = fit_title(title), fit_desc(desc)
-    _tm = re.match(r'^/cars/([^/]+)/(?:(\d{4})/)?$', path)
+    _tm = re.match(r'^/cars/(.+?)/(?:(\d{4})/)?$', path)   # lazy, so slash ids ('mercedes-benz-glk/glc') match too
     if _tm and (_tm.group(1) in TAB.ON or _tm.group(1) in globals().get('FY', {})) and 'tab_body' in globals(): body = tab_body(_tm.group(1), int(_tm.group(2)) if _tm.group(2) else None, body)
+    if 'class="advp"' in body and path.startswith(('/cars/', '/motorcycles/', '/planes/')) and 'adv_body' in globals(): body = adv_body(path, body)   # 11-10: the other template
+    if 'class="pg mp6"' in body and re.match(r'^/motorcycles/[^/]+/$', path) and 'adv_body' in globals(): body = adv_body(path, body, TAB.transform_mp6)   # 11-10: motorcycle pages
     _h = hashlib.md5(body.encode('utf-8')).hexdigest()[:10]
     if PD.get(path, {}).get('h') != _h: PD[path] = {'h': _h, 'd': TODAY}
     _d = PD[path]['d']; _dl = f'{_MN[int(_d[5:7]) - 1]} {int(_d[8:])}, {_d[:4]}'
@@ -215,7 +217,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}{img or "/assets/og.png"}"><meta name="twitter:card" content="summary_large_image">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://challenges.cloudflare.com https://www.googletagmanager.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; frame-src https://challenges.cloudflare.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cloudflareinsights.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://vpic.nhtsa.dot.gov https://lemon-survey.elift08.workers.dev https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="google-adsense-account" content="{ADS}"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=1110m"><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=1" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
+<link rel="stylesheet" href="/assets/site.css?v=1110n"><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=1" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
 <body>{gh_header(path)}
 <main>{body}{CITE if path.startswith('/cars/') else ''}{'' if path == '/vote/' else ask_html(path)}</main>
 <footer class="foot"><div class="cta"><div><h2>New car studies, straight from the data.</h2><p>Every study becomes a video. Subscribe to see the next one first.</p></div><a class="btn" href="{YT}?sub_confirmation=1" rel="noopener">Subscribe on YouTube</a></div>
@@ -225,7 +227,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
     os.makedirs(os.path.dirname(f), exist_ok=True)
     for _try in range(6):   # 11-09: Windows sometimes holds a just-written file for a moment (antivirus/indexer): retry instead of dying mid-build
         try: open(f, 'w', encoding='utf-8').write(doc); break
-        except PermissionError:
+        except OSError:   # 11-10: Errno 22 (Invalid argument) is the same transient lock
             if _try == 5: raise
             import time; time.sleep(.5)
 
@@ -281,7 +283,10 @@ icon = lambda k: f'<svg class="ico" viewBox="0 0 24 24" aria-hidden="true">{ICON
 _PH = json.load(open('data/photos.json', encoding='utf-8'))
 MPH = json.load(open('data/model_photos.json', encoding='utf-8')) if os.path.exists('data/model_photos.json') else {}   # one checked photo per model (data_model_photos.py)
 def mphoto(fid, year=None):
-    """A model's photo: the exact year when we have it, else its newest checked year, else the model photo. {src, w, h, author}."""
+    """A model's photo: the exact year when we have it, else its newest checked year, else the model photo. {src, w, h, author}.
+    11-10 (Elijah: "if a car has an AI image, don't show the Wikimedia one"): the model's AI illustration wins everywhere (author '', ai = name)."""
+    m = YSL.model_img(fid)
+    if m: return {'src': m['src'], 'w': m['w'], 'h': m['h'], 'author': '', 'ai': m['name']}
     ys = _PH.get(fid, {})
     if year and str(year) in ys: return ys[str(year)]
     if ys: return ys[max(ys)]
@@ -353,8 +358,12 @@ def tiles():
 
 def pimg(ph, alt, cls=''):
     return f'<img class="{cls}" src="{ph["src"]}"{rset(ph["src"], SZ_TWO if cls else SZ_ONE)} alt="{E(alt)}" width="{ph["w"]}" height="{ph["h"]}" loading="lazy">' if ph else ''
-def who(*phs): return [ph['author'].split('\ufffd')[0].strip() for ph in phs if ph and ph.get('author')]
-def pcredit(names): names = list(dict.fromkeys(n for n in names if n)); return f'<p class="ph-cr">Photos: {E(" · ".join(names))} (Wikimedia Commons)</p>' if names else ''
+AI_MARK = '~ai~'   # who() puts this in for an AI illustration; pcredit() turns it into the (i) disclosure
+def who(*phs): return [AI_MARK if ph.get('ai') else ph['author'].split('\ufffd')[0].strip() for ph in phs if ph and (ph.get('author') or ph.get('ai'))]
+def pcredit(names):
+    names = list(dict.fromkeys(n for n in names if n)); ai = AI_MARK in names; names = [n for n in names if n != AI_MARK]
+    if not names and not ai: return ''
+    return '<p class="ph-cr">' + (f'Photos: {E(" · ".join(names))} (Wikimedia Commons)' if names else '') + (ai_note('cars shown') if ai else '') + '</p>'
 def pair(a, b, alts=('', '')): return f'<div class="ph-pair">{pimg(a, alts[0], "l")}{pimg(b, alts[1], "r")}</div>'
 def trio(phs, alts): return '<div class="ph-trio">' + ''.join(pimg(ph, al, f"c{i}") for i, (ph, al) in enumerate(zip(phs, alts))) + '</div>'
 def phero(eyebrow, title, sub, visual='', extra='', credit=''):
@@ -658,6 +667,15 @@ def _tab_body(fid, y, body):
         out = TAB.transform_model(body, eng, short) + ld
     else: out = TAB.transform_year(body, eng, short)
     _TAB_NEW[k] = out; return out
+def adv_body(path, body, fn=None):
+    """11-10: the 'advp' template (no-sales model pages, Advanced pages) -> tabbed layout (tabbed.transform_adv); failures keep the old layout."""
+    try:
+        fn = fn or TAB.transform_adv
+        k = hashlib.md5('|'.join((_TAB_SRC, fn.__name__, path, body)).encode('utf-8')).hexdigest()
+        if k in _TAB_OLD: _TAB_NEW[k] = _TAB_OLD[k]; return _TAB_OLD[k]
+        out = fn(body, 'Page'); _TAB_NEW[k] = out; return out
+    except Exception as ex:
+        TAB_FAIL.append(f'{path}: {type(ex).__name__} {ex}'); return body
 def yt_note(f):
     sc = YTS.get(f['id'])
     if not sc: return ''
@@ -795,6 +813,7 @@ def car_photo(fid, y, name):
     return (f'<figure class="yph"><img src="{ph["src"]}"{rset(ph["src"], SZ_ONE)} alt="{y} {E(name)}" width="{ph["w"]}" height="{ph["h"]}" fetchpriority="high">'
             + YSL.info(f'{pcap(ph, who)} ({lic_h})') + '</figure>')
 def year_photo(f, y):
+    if YSL.model_img(f['id']): return YSL.model_hero_html(f['id'], f['name'])   # 11-10: the model's AI illustration beats any Commons photo
     ys = PH.get(f['id'], {}); nm = SNM(f)
     if str(y) in ys: return car_photo(f['id'], y, f['name'])
     near = sorted(ys, key=lambda k: abs(int(k) - y))
@@ -1036,10 +1055,10 @@ for f in YEARS:
         qa = year_faq(f, v, y, x, best); snm = SNM(f)
         page(CARU(f, y), f'{y} {snm} Problems, Reliability and Recalls' + (' (Early Read)' if v.get('early') else '') + ' | The Lemon Index',
              (f'Early read: so far the {y} {snm} has drawn {plain(v["li"])} per car sold (NHTSA).' if v['ok'] and v.get('early') else f'The {y} {snm} drew {plain(v["li"])} per car sold (NHTSA).' if v['ok'] else f'Owners filed only {v["n"]} NHTSA complaints about the {y} {snm} in its first 3 years.')
-             + (f' {nrec} recall{"s" if nrec != 1 else ""}.' if nrec else '') + (f' Top problems: {top}.' if top else '') + ' Real owner complaints and every other year.', year_body(f, v, y, x, best, worst, prev, nxt, v['quotes'], qa), kind='article', ask=(f['id'], y, f'{y} {snm}'), img=(PH.get(f['id'], {}).get(str(y)) or {}).get('src'),
-             ld=[car_ld(f, y, x.get('mpg'), YSL.ai_src(f['id'], y) or (PH.get(f['id'], {}).get(str(y)) or {}).get('src')), {"@context": "https://schema.org", "@type": "WebPage", "name": f'{y} {snm} problems, reliability and recalls', "url": BASE + CARU(f, y)}
-                 | ({"primaryImageOfPage": {"@type": "ImageObject", "contentUrl": BASE + PH[f['id']][str(y)]['src'], "license": LIC.get(PH[f['id']][str(y)]['license'], PH[f['id']][str(y)]['page']), "acquireLicensePage": PH[f['id']][str(y)]['page'], "creditText": PH[f['id']][str(y)]['author'].split('\ufffd')[0].strip()}} if str(y) in PH.get(f['id'], {}) and not YSL.ai_src(f['id'], y)
-                    else {"primaryImageOfPage": {"@type": "ImageObject", "contentUrl": BASE + YSL.ai_src(f['id'], y), "license": YSL.LIC, "acquireLicensePage": BASE + '/images/', "creditText": "The Lemon Index"}} if YSL.ai_src(f['id'], y) else {})] + ([faq_ld(qa)] if qa else []))
+             + (f' {nrec} recall{"s" if nrec != 1 else ""}.' if nrec else '') + (f' Top problems: {top}.' if top else '') + ' Real owner complaints and every other year.', year_body(f, v, y, x, best, worst, prev, nxt, v['quotes'], qa), kind='article', ask=(f['id'], y, f'{y} {snm}'), img=YSL.ai_src(f['id'], y) or (YSL.model_img(f['id']) or {}).get('src') or (PH.get(f['id'], {}).get(str(y)) or {}).get('src'),
+             ld=[car_ld(f, y, x.get('mpg'), YSL.ai_src(f['id'], y) or (YSL.model_img(f['id']) or {}).get('src') or (PH.get(f['id'], {}).get(str(y)) or {}).get('src')), {"@context": "https://schema.org", "@type": "WebPage", "name": f'{y} {snm} problems, reliability and recalls', "url": BASE + CARU(f, y)}
+                 | ({"primaryImageOfPage": {"@type": "ImageObject", "contentUrl": BASE + PH[f['id']][str(y)]['src'], "license": LIC.get(PH[f['id']][str(y)]['license'], PH[f['id']][str(y)]['page']), "acquireLicensePage": PH[f['id']][str(y)]['page'], "creditText": PH[f['id']][str(y)]['author'].split('\ufffd')[0].strip()}} if str(y) in PH.get(f['id'], {}) and not YSL.ai_src(f['id'], y) and not YSL.model_img(f['id'])
+                    else {"primaryImageOfPage": {"@type": "ImageObject", "contentUrl": BASE + (YSL.ai_src(f['id'], y) or YSL.model_img(f['id'])['src']), "license": YSL.LIC, "acquireLicensePage": BASE + '/images/', "creditText": "The Lemon Index"}} if YSL.ai_src(f['id'], y) or YSL.model_img(f['id']) else {})] + ([faq_ld(qa)] if qa else []))
         yurls.append(CARU(f, y))
 # ---- transmission pages (11-02): data/trans.json from data_trans.py
 def sent_case(t):

@@ -247,3 +247,65 @@ def transform_year(body, eng_html, short):
                   ('recalls', 'Recalls & safety', J(rec)), ('years', 'Every year', J(yrs)), ('questions', 'Questions', J(qa))], 'Report sections', _modes(modes))
     cls = ' '.join(root.get('class') or [])
     return f'{ASSET}<article class="{cls} tbl">{hero}{tabs}{J(tail)}</article>'
+
+# 11-10 rollout, part 2: the other template ("advp": the 27 no-sales model pages, every Advanced year page, motorcycle and plane
+# Advanced pages). Same idea: centered hero (crumbs, image, h1, one-sentence answer, stat tiles), sections sorted into tabs, the
+# Normal / Advanced switch on the tab row. Nothing is dropped: an unknown section lands in Overview.
+_ADV = [  # (tab id, label, section ids, h2 prefixes)
+    ('years', 'Years', ('years', 'neighbors'), ('Complaints by model year', 'Nearby model years', 'Every model year')),
+    ('problems', 'Problems', ('problems', 'mileage', 'systems', 'severity'), ('What owners complain', 'When problems', 'How serious', 'In owners', 'Failure mileage', 'Complaints by system', 'Severity')),
+    ('repairs', 'Repairs & costs', ('diy', 'fixes', 'youtube'), ('Fixes', 'YouTube repair', 'What owners say it costs')),
+    ('recalls', 'Recalls & safety', ('recalls', 'campaigns', 'investigations', 'tsb', 'tech', 'inv'), ('Recall', 'NHTSA investigations', 'Manufacturer communications', 'Safety', 'Investigations')),
+    ('specs', 'Specs & engines', ('engines', 'specs'), ('Engines', 'Specs')),
+    ('questions', 'Questions', (), ()),
+]
+def _adv_sort(items, modes, short):
+    """Sections -> (tab bar + panels, tail items), by section id / h2 (see _ADV)."""
+    H = lambda c: (c.find('h2').get_text(' ', strip=True) if c.find('h2') else '')
+    got = {t[0]: [] for t in _ADV}; over, tail = [], []
+    for c in items:
+        k = c.get('class') or []; h = H(c); cid = c.get('id') or ''
+        if 'shline' in k or (c.name == 'p' and 'yc-cap' in k): tail.append(c); continue
+        if 'yqa' in k: got['questions'].append(c); continue
+        for tid, _, ids, pre in _ADV:
+            if cid in ids or (cid.startswith(ids) if ids else False) or (pre and h.startswith(pre)) or ('yfx' in k and tid == 'repairs') or ('bspec' in k and tid == 'specs'):
+                got[tid].append(c); break
+        else: over.append(c)
+    J = lambda xs: ''.join(map(str, xs))
+    panels = [('overview', 'Overview', J(over))] + [(tid, lab, J(got[tid])) for tid, lab, _, _ in _ADV]
+    tabs = _tabs(panels, f'{short} sections', _modes(modes))
+    return tabs, tail
+
+def transform_adv(body, short):
+    s = BeautifulSoup(body, 'html.parser'); root = s.find('div', class_='advp')
+    if root is None or 'tbl' in (root.get('class') or []): return body
+    hd = root.find('header', class_='advh1', recursive=False)
+    crumbs = hd.find('p', class_='ph-e') if hd else None; h1 = hd.find('h1') if hd else None
+    modes = hd.find('nav', class_='modes') if hd else None
+    ans = (hd.find('p', class_='ans') or next((p for p in hd.find_all('p', recursive=False) if p is not crumbs), None)) if hd else None
+    img = root.find('div', class_='advimg', recursive=False); yts = root.find('div', class_='yts', recursive=False)
+    short_ans = f'<p class="ans tb-ans">{_first_sentence(ans)}</p>' if ans else ''
+    hero = (f'<section class="ph tb-hero">{_s(crumbs)}' + (f'<div class="tb-img">{img.decode_contents()}</div>' if img else '')
+            + f'{_s(h1)}{short_ans}{_s(yts)}</section>')
+    items = []
+    for c in root.find_all(recursive=False):
+        if c in (hd, img, yts): continue
+        if 'ygrid' in (c.get('class') or []): items += c.find_all(recursive=False)
+        else: items.append(c)
+    tabs, tail = _adv_sort(items, modes, short); J = lambda xs: ''.join(map(str, xs))
+    cls = ' '.join(root.get('class') or [])
+    return f'{ASSET}<div class="{cls} tbl">{hero}{tabs}{J(tail)}</div>'
+
+def transform_mp6(body, short):
+    """Motorcycle pages (vehicles_pages.py, 'pg mp6'): centered hero (crumbs, photo + its credit, h1, one line, stat tiles) and tabs."""
+    s = BeautifulSoup(body, 'html.parser'); root = s.find('div', class_='mp6')
+    if root is None or 'tbl' in (root.get('class') or []): return body
+    ph = root.find('section', class_='ph', recursive=False); yt = ph.find(class_='yh-t'); pv = ph.find(class_='ph-v')
+    crumbs = yt.find('p', class_='ph-e'); h1 = yt.find('h1'); sub = yt.find('p', class_='ph-s'); modes = yt.find('nav', class_='modes')
+    yts = root.find('div', class_='yts', recursive=False)
+    hero = (f'<section class="ph tb-hero">{_s(crumbs)}' + (f'<div class="tb-img">{pv.decode_contents()}</div>' if pv else '')
+            + f'{_s(h1)}' + (f'<p class="ans tb-ans">{sub.decode_contents()}</p>' if sub else '') + f'{_s(yts)}</section>')
+    items = [c for c in root.find_all(recursive=False) if c not in (ph, yts)]
+    tabs, tail = _adv_sort(items, modes, short); J = lambda xs: ''.join(map(str, xs))
+    cls = ' '.join(root.get('class') or [])
+    return f'{ASSET}<div class="{cls} tbl">{hero}{tabs}{J(tail)}</div>'

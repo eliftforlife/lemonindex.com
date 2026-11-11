@@ -15,6 +15,15 @@ def has(fid): return fid in AIY
 # use it instead of the Wikimedia photo. All on one 1000x600 canvas, car centered on a shared baseline, facing left.
 try: AIM = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data', 'ai_model_images.json'), encoding='utf-8'))
 except FileNotFoundError: AIM = {}
+# 11-10 (Elijah: swap every Wikimedia car photo that has an AI match): the 'No data yet' illustrations (data/new_models.json) also count
+# for models we score without year pages (e.g. VW ID.4, Kia EV6), and slash ids map to their file names.
+try:
+    for _m in json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data', 'new_models.json'), encoding='utf-8')):
+        if _m['slug'] not in AIM and os.path.exists(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'assets', 'ai-models', _m['slug'] + '.webp')):
+            AIM[_m['slug']] = {'src': f"/assets/ai-models/{_m['slug']}.webp?v=1", 'w': 1000, 'h': 600, 'year': _m.get('year'), 'name': _m['name'], 'color': ''}
+except FileNotFoundError: pass
+for _sl, _fl in (('mercedes-benz-glk/glc', 'mercedes-benz-glk-glc'), ('mercedes-benz-m/gle', 'mercedes-benz-m-gle')):
+    if _sl not in AIM and _fl in AIM: AIM[_sl] = AIM[_fl]
 def model_img(fid): return AIM.get(fid)
 def model_info_text(fid):
     m = AIM[fid]
@@ -23,7 +32,7 @@ def model_info_text(fid):
 def model_ld(fid):
     m = AIM[fid]
     return {"@context": "https://schema.org", "@type": "ImageObject", "contentUrl": BASE + m['src'], "name": f'{m["year"]} {m["name"]} (illustration)',
-            "description": f'AI-generated illustration of a {m["year"]} {m["name"]} in {m["color"]}.', "width": m['w'], "height": m['h'],
+            "description": f'AI-generated illustration of a {m["year"]} {m["name"]}' + (f' in {m["color"]}.' if m.get("color") else '.'), "width": m['w'], "height": m['h'],
             "license": LIC, "acquireLicensePage": BASE + '/images/', "creditText": "The Lemon Index",
             "creator": {"@type": "Organization", "name": "The Lemon Index", "url": BASE}, "copyrightNotice": "The Lemon Index, CC BY 4.0"}
 def model_hero_html(fid, name):
