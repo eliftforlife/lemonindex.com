@@ -1260,3 +1260,28 @@ img[src*="/assets/ai-models/"], img[src*="/assets/ai-cars/"] { filter: none !imp
   .ex .exbar .tabs::-webkit-scrollbar { display: none; }
   .ex .exbar .tabs button { flex: none; padding: 8px 12px; }
 }
+/* 11-10 v2 menu (Elijah: "click out of menu", "remove bottom white", "look a little better"): a panel only as tall as its links, a dimmed
+   backdrop (.gh-dim) that closes it, sentence-case group labels, one line icon per main item, a yellow dot on the current page. Lemon-only. */
+.gh-dim { display: none; }
+header.gh.wide.open { -webkit-backdrop-filter: none; backdrop-filter: none; }   /* a filter would make the fixed backdrop relative to the bar */
+header.gh.wide.open .gh-dim { display: block; position: fixed; inset: 0; z-index: -1; background: rgba(17, 18, 20, .25); animation: gh-dim .2s ease; }
+@keyframes gh-dim { from { opacity: 0; } }
+header.gh.wide .gh-sheet a { display: flex; align-items: center; gap: 10px; }
+header.gh.wide .gh-sheet .gh-ic { width: 20px; height: 20px; flex: none; color: #6e6e73; }
+header.gh.wide .gh-sheet a[aria-current] { color: var(--gh-ink); }
+header.gh.wide .gh-sheet a[aria-current] .gh-ic { color: var(--gh-ink); }
+header.gh.wide .gh-sheet a[aria-current]::after { content: ""; width: 7px; height: 7px; flex: none; border-radius: 50%; background: #f2c200; }
+header.gh.wide .gh-sheet a:hover .gh-ic { color: var(--gh-ink); }
+@media (max-width: 1023px) {
+  header.gh.wide .gh-g { margin: 12px 0 2px; font-size: 13px; font-weight: 500; letter-spacing: 0; text-transform: none; color: #6e6e73; }
+  header.gh.wide .gh-g1, header.gh.wide .gh-g2 { border-top: 1px solid rgba(0, 0, 0, .07); padding-top: 12px; }
+}
+@media (max-width: 767px) {
+  header.gh.wide .gh-sheet { height: auto; max-height: calc(100dvh - var(--gh-b, 48px) - 16px); overflow-y: auto; border-radius: 0 0 22px 22px;
+    box-shadow: 0 1px 0 var(--gh-line), 0 28px 48px -20px rgba(0, 0, 0, .3); }
+  header.gh.wide .gh-sheet-in { gap: 0 14px; padding: 4px 20px 16px; }
+  header.gh.wide .gh-sheet a, header.gh.wide .gh-sheet a.gh-x { gap: 10px; min-height: 46px; font-size: 19px; font-weight: 650; letter-spacing: -.012em; }
+  header.gh.wide .gh-sheet a.gh-i2 { min-height: 40px; font-size: 15.5px; font-weight: 500; color: #3a3a3e; }
+  header.gh.wide .gh-sheet a[aria-current] { color: var(--gh-ink); }
+  header.gh.wide .gh-g0 { margin-top: 6px; }
+}
