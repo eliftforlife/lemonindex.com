@@ -242,6 +242,17 @@ def transform_year(body, eng_html, short):
             h2 = ch.find('h2'); h2s = str(h2) if h2 else ''
             if h2: h2.extract()
             inner = ch.decode_contents(); ch.clear(); ch.append(BeautifulSoup(h2s + _toggle(inner, eng_html, short), 'html.parser'))
+    # 11-10 desktop pass: a chip that repeats a "Before you buy" card goes; the stat tiles (.yts) join that card grid (one card system)
+    bg = next((c.find(class_='ybuy-g') for c in over if c.find(class_='ybuy-g')), None)
+    if bg is not None:
+        hrefs = {a.get('href') for a in bg.find_all('a')}
+        for c in [c for c in over if 'ybs' in (c.get('class') or [])]:
+            for a in c.find_all('a', class_='yb'):
+                if a.get('href') in hrefs: a.extract()
+            if not c.find('a'): over.remove(c)
+        for c in [c for c in over if 'yts' in (c.get('class') or [])]:
+            for tile in c.find_all(class_='yt', recursive=False): tile['class'] = (tile.get('class') or []) + ['yk', 'ykt']; bg.append(tile.extract())
+            over.remove(c)
     J = lambda xs: ''.join(map(str, xs))
     tabs = _tabs([('overview', 'Overview', _s(note) + J(over)), ('problems', 'Problems', J(probs)), ('repairs', 'Repairs & costs', J(fix)),
                   ('recalls', 'Recalls & safety', J(rec)), ('years', 'Every year', J(yrs)), ('questions', 'Questions', J(qa))], 'Report sections', _modes(modes))
