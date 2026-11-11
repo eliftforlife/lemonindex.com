@@ -1375,5 +1375,155 @@
   "name": "Mercedes-Benz GLE",
   "color": "black",
   "bytes": 41554
+ },
+ "tesla-model-s": {
+  "src": "/assets/ai-models/tesla-model-s.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2017,
+  "name": "Tesla Model S",
+  "color": "pearl white",
+  "bytes": 33026,
+  "page": "/electric/tesla-model-s/"
+ },
+ "tesla-model-3": {
+  "src": "/assets/ai-models/tesla-model-3.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2021,
+  "name": "Tesla Model 3",
+  "color": "midnight silver metallic",
+  "bytes": 38138,
+  "page": "/electric/tesla-model-3/"
+ },
+ "tesla-model-x": {
+  "src": "/assets/ai-models/tesla-model-x.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2018,
+  "name": "Tesla Model X",
+  "color": "deep blue metallic",
+  "bytes": 35928,
+  "page": "/electric/tesla-model-x/"
+ },
+ "tesla-cybertruck": {
+  "src": "/assets/ai-models/tesla-cybertruck.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2024,
+  "name": "Tesla Cybertruck",
+  "color": "bare brushed stainless steel",
+  "bytes": 28202,
+  "page": "/electric/tesla-cybertruck/"
+ },
+ "rivian-r1t": {
+  "src": "/assets/ai-models/rivian-r1t.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2022,
+  "name": "Rivian R1T",
+  "color": "Rivian blue",
+  "bytes": 36416,
+  "page": "/electric/rivian-r1t/"
+ },
+ "rivian-r1s": {
+  "src": "/assets/ai-models/rivian-r1s.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2023,
+  "name": "Rivian R1S",
+  "color": "forest green",
+  "bytes": 36548,
+  "page": "/electric/rivian-r1s/"
+ },
+ "cadillac-lyriq": {
+  "src": "/assets/ai-models/cadillac-lyriq.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2024,
+  "name": "Cadillac Lyriq",
+  "color": "satin steel metallic",
+  "bytes": 43304,
+  "page": "/electric/cadillac-lyriq/"
+ },
+ "chevrolet-blazer-ev": {
+  "src": "/assets/ai-models/chevrolet-blazer-ev.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2024,
+  "name": "Chevrolet Blazer EV",
+  "color": "radiant red",
+  "bytes": 44580,
+  "page": "/electric/chevrolet-blazer-ev/"
+ },
+ "chevrolet-equinox-ev": {
+  "src": "/assets/ai-models/chevrolet-equinox-ev.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2025,
+  "name": "Chevrolet Equinox EV",
+  "color": "sterling gray metallic",
+  "bytes": 39156,
+  "page": "/electric/chevrolet-equinox-ev/"
+ },
+ "ford-f-150-lightning": {
+  "src": "/assets/ai-models/ford-f-150-lightning.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2022,
+  "name": "Ford F-150 Lightning",
+  "color": "antimatter blue",
+  "bytes": 33908,
+  "page": "/electric/ford-f-150-lightning/"
+ },
+ "ford-mustang-mach-e": {
+  "src": "/assets/ai-models/ford-mustang-mach-e.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2021,
+  "name": "Ford Mustang Mach-E",
+  "color": "grabber blue",
+  "bytes": 42808,
+  "page": "/electric/ford-mustang-mach-e/"
+ },
+ "hyundai-ioniq-6": {
+  "src": "/assets/ai-models/hyundai-ioniq-6.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2024,
+  "name": "Hyundai Ioniq 6",
+  "color": "gravity gold matte",
+  "bytes": 36208,
+  "page": "/electric/hyundai-ioniq-6/"
+ },
+ "hyundai-kona-electric": {
+  "src": "/assets/ai-models/hyundai-kona-electric.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2020,
+  "name": "Hyundai Kona Electric",
+  "color": "ceramic blue",
+  "bytes": 41276,
+  "page": "/electric/hyundai-kona-electric/"
+ },
+ "kia-ev9": {
+  "src": "/assets/ai-models/kia-ev9.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2024,
+  "name": "Kia EV9",
+  "color": "pebble gray",
+  "bytes": 35414,
+  "page": "/electric/kia-ev9/"
+ },
+ "kia-niro-ev": {
+  "src": "/assets/ai-models/kia-niro-ev.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "year": 2022,
+  "name": "Kia Niro EV",
+  "color": "snow white pearl",
+  "bytes": 39900,
+  "page": "/electric/kia-niro-ev/"
  }
 }

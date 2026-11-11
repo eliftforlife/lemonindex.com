@@ -338,13 +338,22 @@ else:
             f'<figure class="imgcard"><img src="{E(m["src"])}" width="{m["w"]}" height="{m["h"]}" alt="{m["year"]} {E(m["name"])} illustration" loading="lazy">'
             f'<figcaption><b>{m["year"]} {E(m["name"])}</b><span>Illustration (AI-generated), {E(m["color"])}.</span>'
             f'<span>Credit: <code>Image: The Lemon Index (lemonindex.com), CC BY 4.0</code></span>'
-            f'<span><a href="{E(m["src"])}">Open full size</a>' + (f' · <a href="/cars/{_fid}/">Used on: {E(m["name"])}</a>' if _fid in _pages else '') + '</span></figcaption></figure>'
+            f'<span><a href="{E(m["src"])}">Open full size</a>' + (f' · <a href="/cars/{_fid}/">Used on: {E(m["name"])}</a>' if _fid in _pages else f' · <a href="{m["page"]}">Used on: {E(m["name"])}</a>' if m.get('page') else '') + '</span></figcaption></figure>'
             for _fid, m in sorted(YSL.AIM.items(), key=lambda kv: kv[1]['name'])) + '</div>' if YSL.AIM else ''
+        # 11-10: motorcycles, supercars and planes (vehicles_pages.py, data/ai_vehicle_images.json)
+        _AIV = json.load(open('data/ai_vehicle_images.json', encoding='utf-8')) if os.path.exists('data/ai_vehicle_images.json') else {}
+        veh_cards = ''.join(f'<section class="yc"><h2>{_t}</h2><div class="imggrid">' + ''.join(
+            f'<figure class="imgcard"><img src="{E(v["src"])}" width="{v["w"]}" height="{v["h"]}" alt="{v["year"]} {E(v["name"])} illustration" loading="lazy">'
+            f'<figcaption><b>{v["year"]} {E(v["name"])}</b><span>Illustration (AI-generated), {E(v["color"])}.</span>'
+            f'<span>Credit: <code>Image: The Lemon Index (lemonindex.com), CC BY 4.0</code></span>'
+            f'<span><a href="{E(v["src"])}">Open full size</a> · <a href="{v["page"]}">Used on: {E(_fam)}</a></span></figcaption></figure>'
+            for _fam, v in sorted(_AIV.items(), key=lambda kv: kv[1]['name']) if v['category'] == _c) + '</div></section>'
+            for _c, _t in (('motorcycle', 'Motorcycles'), ('supercar', 'Supercars'), ('plane', 'Planes and helicopters')) if any(v['category'] == _c for v in _AIV.values()))
         lede = ('Car and engine illustrations we made for the Lemon Index. You may use them anywhere, including commercially, under Creative Commons Attribution 4.0 (CC BY 4.0), '
                 'as long as you credit "The Lemon Index (lemonindex.com)" and link to the license. They are AI-generated illustrations, not photos of a specific car or engine.')
         body = (f'<div class="advp"><header class="advh1"><p class="ph-e"><a href="/data/">Free data</a></p><h1>Free car and engine illustrations.</h1><p class="ans">{E(lede)}</p></header>'
                 f'<div class="ygrid"><section class="yc"><h2>BMW engines</h2><div class="imggrid">{cards}</div></section>'
-                f'<section class="yc">{model_cards}</section><section class="yc">{car_cards}</section>'
+                f'<section class="yc">{model_cards}</section>{veh_cards}<section class="yc">{car_cards}</section>'
                 + (f'<section class="yc">{TAB.images_cards()}</section>' if TAB.images_cards() else '') +
                 f'<section class="yc"><h2>How to credit</h2><p>Copy this line next to the image: <code>Image: The Lemon Index (lemonindex.com), CC BY 4.0</code>, '
                 f'and link "CC BY 4.0" to <a href="{CCBY}" rel="noopener license" style="overflow-wrap:anywhere">{CCBY}</a>. If you change the image, say so.</p>'
@@ -360,6 +369,10 @@ else:
         + ''.join(f'<url><loc>{BASE}{pg}</loc><image:image><image:loc>{BASE}{E(src)}</image:loc></image:image></url>' for pg, src in TAB.sitemap_images())
         + ''.join(f'<url><loc>{BASE}/cars/{_f}/</loc><image:image><image:loc>{BASE}{E(m["src"])}</image:loc></image:image></url>'
                   for _f, m in YSL.AIM.items() if _f in {f['id'] for f in YEARS} and _f not in YSL.AIY)
+        + ''.join(f'<url><loc>{BASE}{m["page"]}</loc><image:image><image:loc>{BASE}{E(m["src"])}</image:loc></image:image></url>'
+                  for _f, m in YSL.AIM.items() if m.get('page') and _f not in {f['id'] for f in YEARS})
+        + ''.join(f'<url><loc>{BASE}{v["page"]}</loc><image:image><image:loc>{BASE}{E(v["src"])}</image:loc></image:image></url>'
+                  for v in (json.load(open('data/ai_vehicle_images.json', encoding='utf-8')) if os.path.exists('data/ai_vehicle_images.json') else {}).values())
         + (''.join(f'<url><loc>{BASE}/images/</loc>' + ''.join(f'<image:image><image:loc>{BASE}{E(ph["src"])}</image:loc></image:image>' for _, ph in ours) + '</url>' for _ in [0]) if ours else '')
         + '</urlset>')
     print('bmw pages', len(BMW_URLS), 'engines', len(ENG_OK), 'engine images', len(IMG_PAGES), 'ours (CC BY)', len(ours))
