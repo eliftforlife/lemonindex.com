@@ -103,6 +103,8 @@ for c in EVX:
     if c['slug'] not in YP: PICK_ALL.setdefault(_brandof(c['make']), []).append([c['name'], c['slug'], _evyears(c), f"/electric/{c['slug']}/", 'ev'])
 for c in PERFX:
     i = perf_info(c); PICK_ALL.setdefault(i['brand'], []).append([c.get('search') or i['name'], i['id'], [], i['url'], 'perf'])   # 11-11: full name keeps the trim aliases searchable
+for _m in (_jl('data/moto.json') or []): PICK_ALL.setdefault(_brandof(_m['brand']), []).append([_m['name'], 'moto-' + _slg(_m['name']), [], f"/motorcycles/{_slg(_m['name'])}/", 'moto'])   # 11-11: motorcycles in the one search
+for _m in (_jl('data/moto_soon.json') or []): PICK_ALL.setdefault(_brandof(_m['make']), []).append([_m.get('search') or _m['name'], 'moto-' + _m['slug'], [], '', 'moto'])
 PICK_ALL = dict(sorted((b, sorted(m)) for b, m in PICK_ALL.items()))
 def finder(h='Look up any car', sub='Every model year, 2000 to 2025. Free.', foot=''):
     """10-29 (Elijah): the first thing on the page is an easy car filter. Type "2016 pilot", or pick brand, model, year (assets/lookup.js)."""
@@ -322,7 +324,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <nav class="f2-col" aria-label="Explore"><p class="f2-h">Explore</p><a href="/compare/">Compare cars</a><a href="/best/">Best cars</a><a href="/rankings/">Rankings</a><a href="/electric/">Electric cars</a><a href="/stats/car-complaints/">Statistics</a><a href="/car-loan-rates/">Car loan rates</a></nav>
 <nav class="f2-col" aria-label="Data"><p class="f2-h">Data</p><a href="/method/">How the index works</a><a href="/data/">Free data</a><a href="/images/">Free images</a><a href="/vote/">Vote</a></nav>
 <nav class="f2-col" aria-label="Support"><p class="f2-h">Support</p><button class="supl" type="button">Keep Lemon ad-free</button><a href="/contact/">Contact</a><a href="{YT}?sub_confirmation=1" rel="noopener">Subscribe on YouTube</a></nav></div>
-<div class="f2-bot"><span>© {TODAY[:4]} The Lemon Index</span><a href="/terms/">Terms</a><a href="/privacy/">Privacy</a><a href="/refunds/">Refunds</a><span class="f2-dis">Built from public NHTSA complaint data and published U.S. sales figures. Not affiliated with any automaker. Not a repair-cost or safety rating.</span></div></footer><script src="/assets/explorer.js?v=1110" defer></script><script src="/assets/support.js?v=1110c" defer></script><script src="/assets/imginfo.js?v=1" defer></script><script src="/assets/lookup.js?v=1111b" defer></script>{beacon}</body></html>'''
+<div class="f2-bot"><span>© {TODAY[:4]} The Lemon Index</span><a href="/terms/">Terms</a><a href="/privacy/">Privacy</a><a href="/refunds/">Refunds</a><span class="f2-dis">Built from public NHTSA complaint data and published U.S. sales figures. Not affiliated with any automaker. Not a repair-cost or safety rating.</span></div></footer><script src="/assets/explorer.js?v=1110" defer></script><script src="/assets/support.js?v=1110c" defer></script><script src="/assets/imginfo.js?v=1" defer></script><script src="/assets/lookup.js?v=1111m" defer></script>{beacon}</body></html>'''
     f = os.path.join(OUT, path.strip('/'), 'index.html') if path.endswith('/') else os.path.join(OUT, path.strip('/'))
     os.makedirs(os.path.dirname(f), exist_ok=True)
     for _try in range(6):   # 11-09: Windows sometimes holds a just-written file for a moment (antivirus/indexer): retry instead of dying mid-build
