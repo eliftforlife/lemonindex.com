@@ -59,32 +59,44 @@ def _code_pages():
         ans = (f'{c} means: {E(mm["t"])}. ' if mm else _nomean(c)[1] + ' ') + \
               (f'{E(st[1])} ' if sev else '') + \
               f'Owners named {c} in {v["n"]:,} complaints to the U.S. government' + (f', most often on the {E(topm)}.' if topm else '.')
-        body = [f'<div class="advp cpage"><header class="advh1"><p class="ph-e"><a href="/check-engine-light/">Check engine light</a> / Engine codes</p>'
-                f'<h1>{c}: {E(title_bits)}</h1><p class="ans">{ans}</p></header>']
-        body.append(f'<div class="creadout"><div class="cr-code"><span class="cr-sys">{E(SYSN[c[0]].split(" (")[0])} · {"Generic" if _generic(c) else "Manufacturer"}</span><b>{c}</b></div>' + (gauge(sev, w=bool(mm.get("w"))) if sev else '') + '</div>')
-        body.append('<div class="ygrid">')
+        # 11-10 v2 (design audit: code pages were a wall of sections): the transmission-page pattern. Code + gauge under the title, a 3-part
+        # answer (what it means / how serious / typical fix), the cars owners report it on as photo cards, everything else folded.
+        fix = (mm['c'][0] if mm else 'Have a shop read it with the maker&#39;s own scan tool first.')
+        mean1 = (E(re.split(r'(?<=[.!?])\s', mm['m'].strip(), 1)[0]) if mm else _nomean(c)[1])   # the plain-English first sentence (the title repeats the h1)
+        sevt = (f'<b>{E(st[0])}.</b> {E(st[1])}' if sev else 'Depends on what it means on your make. Get it read before a long drive.')
+        cards = ''.join(f'<a class="mc cpc" href="/cars/{i}/"><span class="mc-p">' + (lambda ph: f'<img src="{ph["src"]}" alt="{E(nm)}" width="{ph["w"]}" height="{ph["h"]}" loading="lazy" decoding="async">' if ph else '')(aph(i))
+                        + f'</span><b>{E(nm)}</b><span class="cpn">{k:,}</span></a>' for i, nm, k in models[:8])
+        det = []
         if mm:
-            body.append(f'<section class="yc" id="meaning"><h2>What {c} means</h2><p>{E(mm["m"])}</p>' +
-                        (f'<p class="yc-cap">This meaning applies to {E(", ".join(mm["makes"]))}. On other makes {c} can mean something different.</p>' if mm['mk'] else '') + '</section>')
-            body.append(f'<section class="yc" id="serious"><h2>Can I drive with {c}?</h2><p><b>{E(st[0])}.</b> {E(st[1])}</p>' +
+            det.append((f'What {c} means', f'<p>{E(mm["m"])}</p>' + (f'<p class="yc-cap">This meaning applies to {E(", ".join(mm["makes"]))}. On other makes {c} can mean something different.</p>' if mm['mk'] else '')))
+            det.append((f'Can I drive with {c}?', f'<p><b>{E(st[0])}.</b> {E(st[1])}</p>' +
                         (f'<p>{_pct(th[0][1], v["n"])}% of the owner complaints that name {c} also say the car {E(th[0][0])}. A complaint can describe more than one problem, so this doesn&#39;t prove the code caused it.</p>' if th else '') +
-                        (f'<p>{_pct(v["towed"], v["n"])}% of those owners said the car had to be towed.</p>' if v['towed'] >= 5 and _pct(v['towed'], v['n']) >= 5 else '') + '</section>')
-            body.append(f'<section class="yc" id="causes"><h2>Common causes of {c}</h2><ul class="fx">' + ''.join(f'<li>{E(x)}</li>' for x in mm['c']) + '</ul><p class="yc-cap">A shop should confirm the cause with a scan and tests before replacing parts.</p></section>')
+                        (f'<p>{_pct(v["towed"], v["n"])}% of those owners said the car had to be towed.</p>' if v['towed'] >= 5 and _pct(v['towed'], v['n']) >= 5 else '')))
+            det.append((f'Common causes of {c}', '<ul class="fx">' + ''.join(f'<li>{E(x)}</li>' for x in mm['c']) + '</ul><p class="yc-cap">A shop should confirm the cause with a scan and tests before replacing parts.</p>'))
         else:
-            body.append(f'<section class="yc" id="meaning"><h2>What {c} means</h2><p>{_nomean(c)[2]} We haven&#39;t verified its meaning yet. A dealer or a scanner with the maker&#39;s software can tell you exactly what it means on your car.</p>'
-                        f'<p>Owners who reported it drive: ' + ', '.join(f'{E(m)} ({k})' for m, k in v['makes'][:4]) + '.</p></section>')
-        if models:
-            body.append(f'<section class="yc" id="cars"><h2>Cars whose owners report {c} most</h2><div class="tw"><table class="adv"><thead><tr><th>Model</th><th>Complaints naming {c}</th></tr></thead><tbody>' +
-                        ''.join(f'<tr><td><a href="/cars/{i}/">{E(nm)}</a></td><td>{k:,}</td></tr>' for i, nm, k in models) + '</tbody></table></div><p class="yc-cap">Raw complaint counts, not a failure rate: popular models get more complaints.</p>' +
-                        ((f'<p class="yc-cap">Model years with the most complaints naming {c}: ' + ', '.join(f'<a href="/cars/{i}/{y}/">{y} {E(nm)}</a> ({k})' for i, nm, y, k in years[:6]) + '.</p>') if years else '') + '</section>')
+            det.append((f'What {c} means', f'<p>{_nomean(c)[2]} We haven&#39;t verified its meaning yet. A dealer or a scanner with the maker&#39;s software can tell you exactly what it means on your car.</p>'
+                        '<p>Owners who reported it drive: ' + ', '.join(f'{E(m)} ({k})' for m, k in v['makes'][:4]) + '.</p>'))
         if th:
-            body.append(f'<section class="yc" id="owners"><h2>What owners describe</h2><ul class="fx">' + ''.join(f'<li>{E(t[0].upper() + t[1:])}: {_pct(k, v["n"])}% of complaints</li>' for t, k in th) +
-                        '</ul><p class="yc-cap">Share of complaints naming the code whose text also mentions each problem. Counted from the complaint text; we don&#39;t publish the complaints themselves.</p></section>')
+            det.append(('What owners describe', '<ul class="fx">' + ''.join(f'<li>{E(t[0].upper() + t[1:])}: {_pct(k, v["n"])}% of complaints</li>' for t, k in th) +
+                        '</ul><p class="yc-cap">Share of complaints naming the code whose text also mentions each problem.</p>'))
+        if years:
+            det.append((f'Model years that report {c} most', '<p>' + ', '.join(f'<a href="/cars/{i}/{y}/">{y} {E(nm)}</a> ({k})' for i, nm, y, k in years[:6]) + '.</p>'))
         rel = [r for r in C if r != c and r[:4] == c[:4] and (_meaning(r) is not None and C[r]['n'] >= 5 or C[r]['n'] >= 20)][:8]
-        if rel: body.append('<section class="yc" id="related"><h2>Related codes</h2><p class="crel">' + ' '.join(f'<a href="/check-engine-light/{r.lower()}/">{r}</a>' for r in rel) + '</p></section>')
-        body.append('</div>' + SEARCH_MINI.replace('Check engine light on? Look up the code', 'Look up another code') +
-                    f'<p class="yc-cap">Counts: NHTSA owner complaints whose text names {c}, all model years in our copy of the database. A complaint is an owner&#39;s report, not a diagnosis, and most owners with a code never file one. '
-                    'Meanings: the standard SAE J2012 code definitions, explained in our own words; manufacturer codes are explained only where the meaning for that make was verified. General information, not repair advice for your car.</p></div>')
+        hero = (f'<div class="creadout"><div class="cr-code"><span class="cr-sys">{E(SYSN[c[0]].split(" (")[0])} · {"Generic" if _generic(c) else "Manufacturer"}</span><b>{c}</b></div>'
+                + (gauge(sev, w=bool(mm.get("w"))) if sev else '') + '</div>')
+        body = [f'<article class="study tr2 cp2"><p class="kicker"><a href="/check-engine-light/">Check engine light</a> · Engine codes</p><h1>{c}: {E(title_bits)}</h1>',
+                f'<div class="cpa"><div><span>What it means</span><p>{mean1}</p></div><div><span>How serious</span><p>{sevt}</p></div><div><span>Typical fix</span><p>{E(fix) if mm else fix}</p></div></div>',
+                f'<p class="cpm">Owners named {c} in <b>{v["n"]:,}</b> complaints to the U.S. government' + (f', most often on the {E(topm)}.' if topm else '.') + '</p>']
+        if cards:
+            body.append(f'<h2>Cars owners report it on</h2><div class="mbs"><div class="mb"><div class="mg cpg">{cards}</div></div></div><p class="note">Complaints that name {c}, by model. Raw counts, not a failure rate: popular models get more complaints.</p>')
+        body.append('<h2>The details</h2>' + ''.join(f'<details class="cpd"><summary>{q}</summary>{h}</details>' for q, h in det))
+        if rel: body.append('<h2>Related codes</h2><p class="crel">' + ' '.join(f'<a href="/check-engine-light/{r.lower()}/">{r}</a>' for r in rel) + '</p>')
+        faq0 = [(f'What does {c} mean?', f'{mm["t"]}. {mm["m"]}'), (f'Can I drive with {c}?', f'{st[0]}. {st[1]}'), (f'What causes {c}?', '; '.join(mm['c']) + '.')] if mm else []
+        if faq0: body.append('<section class="yqa trq"><h2>Quick answers</h2>' + qa_fold(''.join(f'<h3>{E(q)}</h3><p>{E(a)}</p>' for q, a in faq0)) + '</section>')
+        body.append(SEARCH_MINI.replace('Check engine light on? Look up the code', 'Look up another code') +
+                    f'<p class="note">Counts: NHTSA owner complaints whose text names {c}. A complaint is an owner&#39;s report, not a diagnosis. Meanings: the standard SAE J2012 definitions in our own words; '
+                    'manufacturer codes only where verified for that make. General information, not repair advice for your car.</p></article>')
+        CEL_HERO = hero
         faq = []
         if mm:
             faq = [(f'What does {c} mean?', f'{mm["t"]}. {mm["m"]}'), (f'Can I drive with {c}?', f'{st[0]}. {st[1]}'), (f'What causes {c}?', '; '.join(mm['c']) + '.')]
@@ -92,7 +104,7 @@ def _code_pages():
         tt = f'{c} Code: Meaning, Causes and Which Cars Get It | The Lemon Index' if mm else f'{c} Code: Which Cars Report It and What It Can Mean | The Lemon Index'
         desc = (f'{c} means {mm["t"]}. How serious it is, common causes, and the cars owners report it on most.' if mm else
                 f'{c} is a {"manufacturer-specific" if not _generic(c) else "standard"} {SYSW[c[0]]} code. See which makes and models owners report it on, from {v["n"]:,} complaints to the U.S. government.')
-        page(path, tt, desc, ''.join(body) + CODES_JS, ld=ld)
+        page(path, tt, desc, ''.join(body) + CODES_JS, ld=ld, vis=CEL_HERO)
         if indexed: CODE_URLS.append(path)
         else:
             CODE_NOINDEX.append(path); p = os.path.join(OUT, path.strip('/'), 'index.html')
@@ -106,9 +118,13 @@ def _code_pages():
     print('engine code pages', len(CODE_URLS), 'indexed', len(CODE_NOINDEX), 'noindex | search index', len(idx), 'codes')
 
 def cel_top_html():
+    """11-10 v2: the codes owners report most, as a filterable grid of cards (assets/cardfilter.js) instead of 30 table rows."""
     if not EC: return ''
     rows = [(c, v) for c, v in EC['codes'].items() if f'/check-engine-light/{c.lower()}/' in CODE_URLS][:30]
-    return ('<section class="yc" id="codes"><h2>Engine codes owners report most</h2><div class="tw"><table class="adv"><thead><tr><th>Code</th><th>What it means</th><th>Complaints</th></tr></thead><tbody>' +
-            ''.join(f'<tr><td><a href="/check-engine-light/{c.lower()}/"><b>{c}</b></a></td><td>{E(_meaning(c)["t"])}</td><td>{v["n"]:,}</td></tr>' for c, v in rows) +
-            f'</tbody></table></div><p class="yc-cap">From {EC["total"]:,} owner complaints to NHTSA that name a trouble code. Type any code in the box above for the full answer.</p></section>')
+    sevc = lambda c: (_meaning(c) or {}).get('s') or 0
+    return ('<section class="yc" id="codes"><h2>Engine codes owners report most</h2>'
+            '<input class="cf-q" type="search" placeholder="Filter, e.g. misfire or P0420" aria-label="Filter the codes" data-filter="#cgrid">'
+            '<div class="cgrid" id="cgrid">' +
+            ''.join(f'<a class="cgc s{sevc(c)}" href="/check-engine-light/{c.lower()}/"><b>{c}</b><span>{E(_meaning(c)["t"])}</span><small>{v["n"]:,} complaints</small></a>' for c, v in rows) +
+            f'</div><p class="cf-none" hidden>No code in this list matches. Use the code box above for any code.</p><p class="yc-cap">From {EC["total"]:,} owner complaints to NHTSA that name a trouble code. The color dot is how serious the code usually is: yellow get it checked, orange soon, red now.</p></section>')
 _code_pages()
