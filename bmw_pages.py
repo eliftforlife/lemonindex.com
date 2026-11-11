@@ -348,6 +348,7 @@ else:
                     f'<figcaption><b>{E(name)}</b>{extra}<span><a href="{E(src)}">Full size</a>' + (f' · <a href="{use_url}">{E(use_txt)}</a>' if use_url else '') + '</span></figcaption></figure>')
         groups = []
         groups.append(('engines', 'BMW engines', [card(ph['src'], ph['w'], ph['h'], ph['title'], ph['title'], p_, 'Engine page') for p_, ph in ours]))
+        if globals().get('SCE_IMGS'): groups.append(('supercar-engines', 'Supercar engines', [card(ph['src'], ph['w'], ph['h'], ph['title'], ph['title'], p_, 'Engine page') for p_, ph in SCE_IMGS]))   # 11-11 (supercar_engine_pages.py)
         _pages = {f['id'] for f in YEARS}
         if YSL.AIM:
             groups.append(('models', 'Every car model', [card(m['src'], m['w'], m['h'], f'{m["year"]} {m["name"]} illustration', f'{m["year"]} {m["name"]}',
@@ -379,7 +380,7 @@ else:
         total = sum(len(g[2]) for g in groups)
         jump = '<nav class="imgj" aria-label="Image groups">' + ''.join(f'<a href="#g-{gid}">{E(t)} <span>{len(L)}</span></a>' for gid, t, L in groups) + '</nav>'
         secs = ''.join(f'<section class="yc imgsec" id="g-{gid}"><h2>{E(t)} <span class="h2s">{len(L)} images</span></h2><div class="imggrid ig2" data-cap="12">{"".join(L)}</div></section>' for gid, t, L in groups)
-        lede = (f'{total} illustrations we made for the Lemon Index: cars, engines, motorcycles, supercars and planes. Free to use anywhere, including commercially, under CC BY 4.0. '
+        lede = (f'{total} illustrations we made for the Lemon Index: cars, engines (BMW and supercar), motorcycles, supercars and planes. Free to use anywhere, including commercially, under CC BY 4.0. '
                 'They are AI-generated, not photos of a specific vehicle.')
         body = (f'<div class="advp imgp"><header class="advh1"><p class="ph-e"><a href="/data/">Free data</a></p><h1>Free car and engine illustrations.</h1><p class="ans">{E(lede)}</p></header>'
                 f'<section class="yc imgcr"><h2>How to credit</h2><p>Put this line next to the image: <code>Image: The Lemon Index (lemonindex.com), CC BY 4.0</code>, '
@@ -388,7 +389,7 @@ else:
                 f'<p class="cf-none imgnone" hidden>No image matches.</p>{secs}' + (f'<section class="yc imgsec">{TAB.images_cards()}</section>' if TAB.images_cards() else '') +
                 '<p class="yc-cap">Engine photos on our engine pages that come from Wikimedia Commons are not ours: they keep their authors&#39; own licenses, linked under each photo.</p></div>'
                 '<script src="/assets/imgpage.js?v=1" defer></script>')
-        page('/images/', 'Free Car & Engine Illustrations (CC BY 4.0) | Lemon Index', lede, body, ld=[img_ld(p.split('bmw-')[1].strip('/').upper(), ph) for p, ph in ours])
+        page('/images/', 'Free Car & Engine Illustrations (CC BY 4.0) | Lemon Index', lede, body, ld=[img_ld(p.split('bmw-')[1].strip('/').upper(), ph) for p, ph in ours] + [dict(img_ld('', ph), name=ph['title'], description=ph['title'] + '. AI-generated illustration, not a photo of a specific engine.') for p, ph in globals().get('SCE_IMGS', [])])
         BMW_URLS.append('/images/')
     # ---- image sitemap (listed in robots.txt by build.py)
     open(os.path.join(OUT, 'image-sitemap.xml'), 'w', encoding='utf-8').write(
@@ -403,6 +404,7 @@ else:
                   for _f, m in YSL.AIM.items() if m.get('page') and _f not in {f['id'] for f in YEARS})
         + ''.join(f'<url><loc>{BASE}{v["page"]}</loc><image:image><image:loc>{BASE}{E(v["src"])}</image:loc></image:image></url>'
                   for v in (json.load(open('data/ai_vehicle_images.json', encoding='utf-8')) if os.path.exists('data/ai_vehicle_images.json') else {}).values())
-        + (''.join(f'<url><loc>{BASE}/images/</loc>' + ''.join(f'<image:image><image:loc>{BASE}{E(ph["src"])}</image:loc></image:image>' for _, ph in ours) + '</url>' for _ in [0]) if ours else '')
+        + ''.join(f'<url><loc>{BASE}{p}</loc><image:image><image:loc>{BASE}{E(ph["src"])}</image:loc></image:image></url>' for p, ph in globals().get('SCE_IMGS', []))   # 11-11 supercar engines
+        + (''.join(f'<url><loc>{BASE}/images/</loc>' + ''.join(f'<image:image><image:loc>{BASE}{E(ph["src"])}</image:loc></image:image>' for _, ph in ours + list(globals().get('SCE_IMGS', []))) + '</url>' for _ in [0]) if ours else '')
         + '</urlset>')
     print('bmw pages', len(BMW_URLS), 'engines', len(ENG_OK), 'engine images', len(IMG_PAGES), 'ours (CC BY)', len(ours))

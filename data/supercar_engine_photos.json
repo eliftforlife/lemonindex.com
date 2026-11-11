@@ -1,0 +1,298 @@
+{
+ "ferrari-f136": {
+  "src": "/assets/engines/ferrari-f136-naturally-aspirated-90-v8-engine.webp",
+  "w": 1200,
+  "h": 975,
+  "ai": true,
+  "title": "Ferrari F136 4.5 L and 4.3 L 90° V8 engine (illustration)",
+  "bytes": 143744
+ },
+ "ferrari-f154": {
+  "src": "/assets/engines/ferrari-f154-twin-turbo-90-v8-engine.webp",
+  "w": 1200,
+  "h": 817,
+  "ai": true,
+  "title": "Ferrari F154 3.9 L (SF90 4.0 L) 90° V8 engine (illustration)",
+  "bytes": 129770
+ },
+ "ferrari-f140": {
+  "src": "/assets/engines/ferrari-f140-naturally-aspirated-v12-engine.webp",
+  "w": 1200,
+  "h": 955,
+  "ai": true,
+  "title": "Ferrari F140 6.3 L and 6.5 L V12 engine (illustration)",
+  "bytes": 138534
+ },
+ "ferrari-f163": {
+  "src": "/assets/engines/ferrari-f163-twin-turbo-120-v6-engine.webp",
+  "w": 1200,
+  "h": 867,
+  "ai": true,
+  "title": "Ferrari F163 3.0 L 120° V6 engine (illustration)",
+  "bytes": 144358
+ },
+ "lamborghini-v10": {
+  "src": "/assets/engines/lamborghini-v10-naturally-aspirated-90-v10-engine.webp",
+  "w": 1200,
+  "h": 921,
+  "ai": true,
+  "title": "Lamborghini / Audi 5.2 V10 5.2 L 90° V10 engine (illustration)",
+  "bytes": 143736
+ },
+ "lamborghini-l539": {
+  "src": "/assets/engines/lamborghini-l539-naturally-aspirated-v12-engine.webp",
+  "w": 1200,
+  "h": 1085,
+  "ai": true,
+  "title": "Lamborghini L539 V12 6.5 L V12 engine (illustration)",
+  "bytes": 129322
+ },
+ "lamborghini-l545": {
+  "src": "/assets/engines/lamborghini-l545-naturally-aspirated-v12-engine.webp",
+  "w": 1200,
+  "h": 950,
+  "ai": true,
+  "title": "Lamborghini L545 V12 6.5 L V12 engine (illustration)",
+  "bytes": 140500
+ },
+ "vw-ea825": {
+  "src": "/assets/engines/vw-ea825-twin-turbo-v8-engine.webp",
+  "w": 1200,
+  "h": 973,
+  "ai": true,
+  "title": "VW Group 4.0 TFSI V8 (EA825) 4.0 L V8 engine (illustration)",
+  "bytes": 130430
+ },
+ "audi-ea824": {
+  "src": "/assets/engines/audi-ea824-twin-turbo-v8-engine.webp",
+  "w": 1200,
+  "h": 1053,
+  "ai": true,
+  "title": "Audi 4.0 TFSI V8 (EA824) 4.0 L V8 engine (illustration)",
+  "bytes": 133942
+ },
+ "vw-ea839": {
+  "src": "/assets/engines/vw-ea839-turbo-v6-engine.webp",
+  "w": 1200,
+  "h": 926,
+  "ai": true,
+  "title": "VW Group 3.0 V6 (EA839) 3.0 L V6 engine (illustration)",
+  "bytes": 130028
+ },
+ "vw-w12": {
+  "src": "/assets/engines/vw-w12-twin-turbo-w12-engine.webp",
+  "w": 1200,
+  "h": 839,
+  "ai": true,
+  "title": "Bentley 6.0 W12 6.0 L W12 engine (illustration)",
+  "bytes": 133988
+ },
+ "mclaren-m838t": {
+  "src": "/assets/engines/mclaren-m838t-twin-turbo-90-flat-plane-v8-engine.webp",
+  "w": 1200,
+  "h": 787,
+  "ai": true,
+  "title": "McLaren M838T 3.8 L 90° flat-plane V8 engine (illustration)",
+  "bytes": 136060
+ },
+ "mclaren-m840t": {
+  "src": "/assets/engines/mclaren-m840t-twin-turbo-90-flat-plane-v8-engine.webp",
+  "w": 1200,
+  "h": 824,
+  "ai": true,
+  "title": "McLaren M840T 4.0 L 90° flat-plane V8 engine (illustration)",
+  "bytes": 141492
+ },
+ "mclaren-m630": {
+  "src": "/assets/engines/mclaren-m630-twin-turbo-120-v6-engine.webp",
+  "w": 1200,
+  "h": 875,
+  "ai": true,
+  "title": "McLaren M630 3.0 L 120° V6 engine (illustration)",
+  "bytes": 129334
+ },
+ "aston-am-v8": {
+  "src": "/assets/engines/aston-am-v8-naturally-aspirated-v8-engine.webp",
+  "w": 1200,
+  "h": 1094,
+  "ai": true,
+  "title": "Aston Martin 4.7 V8 4.7 L V8 engine (illustration)",
+  "bytes": 140120
+ },
+ "aston-am-v12": {
+  "src": "/assets/engines/aston-am-v12-naturally-aspirated-60-v12-engine.webp",
+  "w": 1200,
+  "h": 989,
+  "ai": true,
+  "title": "Aston Martin 5.9 V12 5.9 L 60° V12 engine (illustration)",
+  "bytes": 148848
+ },
+ "aston-ae31": {
+  "src": "/assets/engines/aston-ae31-twin-turbo-60-v12-engine.webp",
+  "w": 1200,
+  "h": 949,
+  "ai": true,
+  "title": "Aston Martin AE31 V12 5.2 L 60° V12 engine (illustration)",
+  "bytes": 137844
+ },
+ "amg-m177-m178": {
+  "src": "/assets/engines/amg-m177-m178-twin-turbo-v8-engine.webp",
+  "w": 1200,
+  "h": 991,
+  "ai": true,
+  "title": "Mercedes-AMG M177 / M178 4.0 L V8 engine (illustration)",
+  "bytes": 146570
+ },
+ "amg-m159": {
+  "src": "/assets/engines/amg-m159-naturally-aspirated-v8-engine.webp",
+  "w": 1200,
+  "h": 973,
+  "ai": true,
+  "title": "Mercedes-AMG M159 6.2 L V8 engine (illustration)",
+  "bytes": 129046
+ },
+ "amg-m256": {
+  "src": "/assets/engines/amg-m256-turbo-inline-6-engine.webp",
+  "w": 1200,
+  "h": 1053,
+  "ai": true,
+  "title": "Mercedes M256 3.0 L inline-6 engine (illustration)",
+  "bytes": 129950
+ },
+ "amg-m139": {
+  "src": "/assets/engines/amg-m139-turbo-inline-4-engine.webp",
+  "w": 1200,
+  "h": 1084,
+  "ai": true,
+  "title": "Mercedes-AMG M139 2.0 L inline-4 engine (illustration)",
+  "bytes": 128144
+ },
+ "rr-n73": {
+  "src": "/assets/engines/rr-n73-naturally-aspirated-v12-engine.webp",
+  "w": 1200,
+  "h": 955,
+  "ai": true,
+  "title": "BMW N73 V12 6.75 L V12 engine (illustration)",
+  "bytes": 137010
+ },
+ "rr-n74": {
+  "src": "/assets/engines/rr-n74-twin-turbo-60-v12-engine.webp",
+  "w": 1200,
+  "h": 1016,
+  "ai": true,
+  "title": "BMW N74 V12 6.6 L and 6.75 L 60° V12 engine (illustration)",
+  "bytes": 145470
+ },
+ "bugatti-w16": {
+  "src": "/assets/engines/bugatti-w16-quad-turbo-w16-engine.webp",
+  "w": 1200,
+  "h": 659,
+  "ai": true,
+  "title": "Bugatti W16 8.0 L W16 engine (illustration)",
+  "bytes": 131224
+ },
+ "audi-42-fsi": {
+  "src": "/assets/engines/audi-42-fsi-naturally-aspirated-90-v8-engine.webp",
+  "w": 1200,
+  "h": 1021,
+  "ai": true,
+  "title": "Audi 4.2 FSI V8 4.2 L 90° V8 engine (illustration)",
+  "bytes": 145094
+ },
+ "acura-jnc1": {
+  "src": "/assets/engines/acura-jnc1-twin-turbo-hybrid-75-v6-engine.webp",
+  "w": 1200,
+  "h": 848,
+  "ai": true,
+  "title": "Acura JNC1 3.5 L 75° V6 engine (illustration)",
+  "bytes": 143028
+ },
+ "gm-lt4": {
+  "src": "/assets/engines/gm-lt4-supercharged-90-v8-pushrod-engine.webp",
+  "w": 1200,
+  "h": 971,
+  "ai": true,
+  "title": "GM LT4 6.2 L 90° V8, pushrod engine (illustration)",
+  "bytes": 143036
+ },
+ "gm-lt5": {
+  "src": "/assets/engines/gm-lt5-supercharged-90-v8-pushrod-engine.webp",
+  "w": 1200,
+  "h": 1011,
+  "ai": true,
+  "title": "GM LT5 6.2 L 90° V8, pushrod engine (illustration)",
+  "bytes": 148372
+ },
+ "gm-lt6": {
+  "src": "/assets/engines/gm-lt6-naturally-aspirated-flat-plane-v8-dohc-engine.webp",
+  "w": 1200,
+  "h": 1009,
+  "ai": true,
+  "title": "Chevrolet LT6 5.5 L flat-plane V8, DOHC engine (illustration)",
+  "bytes": 131160
+ },
+ "gm-lt7": {
+  "src": "/assets/engines/gm-lt7-twin-turbo-v8-dohc-engine.webp",
+  "w": 1200,
+  "h": 884,
+  "ai": true,
+  "title": "Chevrolet LT7 5.5 L V8, DOHC engine (illustration)",
+  "bytes": 146620
+ },
+ "gm-lt2": {
+  "src": "/assets/engines/gm-lt2-naturally-aspirated-hybrid-90-v8-pushrod-engine.webp",
+  "w": 1200,
+  "h": 1037,
+  "ai": true,
+  "title": "GM LT2 6.2 L 90° V8, pushrod engine (illustration)",
+  "bytes": 142030
+ },
+ "ford-ecoboost-35": {
+  "src": "/assets/engines/ford-ecoboost-35-twin-turbo-v6-engine.webp",
+  "w": 1200,
+  "h": 923,
+  "ai": true,
+  "title": "Ford 3.5 EcoBoost (D35) 3.5 L V6 engine (illustration)",
+  "bytes": 130940
+ },
+ "toyota-2gr": {
+  "src": "/assets/engines/toyota-2gr-naturally-aspirated-or-supercharged-60-v6-engine.webp",
+  "w": 1200,
+  "h": 1086,
+  "ai": true,
+  "title": "Toyota 2GR-FE 3.5 L 60° V6 engine (illustration)",
+  "bytes": 149088
+ },
+ "porsche-m97": {
+  "src": "/assets/engines/porsche-m97-naturally-aspirated-gt3-or-twin-turbo-gt2-rs-flat-6-engine.webp",
+  "w": 1200,
+  "h": 782,
+  "ai": true,
+  "title": "Porsche M97 (Mezger) 3.6 to 4.0 L flat-6 engine (illustration)",
+  "bytes": 132224
+ },
+ "porsche-turbo-38": {
+  "src": "/assets/engines/porsche-turbo-38-twin-turbo-flat-6-engine.webp",
+  "w": 1200,
+  "h": 618,
+  "ai": true,
+  "title": "Porsche 3.8 twin-turbo flat-6 3.8 L flat-6 engine (illustration)",
+  "bytes": 116822
+ },
+ "porsche-9a2": {
+  "src": "/assets/engines/porsche-9a2-twin-turbo-flat-6-engine.webp",
+  "w": 1200,
+  "h": 667,
+  "ai": true,
+  "title": "Porsche 9A2 Evo 3.7 3.7 L flat-6 engine (illustration)",
+  "bytes": 137608
+ },
+ "porsche-918-v8": {
+  "src": "/assets/engines/porsche-918-v8-naturally-aspirated-v8-engine.webp",
+  "w": 1200,
+  "h": 974,
+  "ai": true,
+  "title": "Porsche 918 Spyder V8 4.6 L V8 engine (illustration)",
+  "bytes": 147704
+ }
+}

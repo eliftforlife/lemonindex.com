@@ -1,0 +1,8353 @@
+{
+"engines": {
+"ferrari-f136": {
+"make": "Ferrari",
+"code": "F136",
+"name": "Ferrari F136",
+"codes": "F136 FB (458), F136 FL (458 Speciale), F136 IB / IH (California)",
+"layout": "90° V8",
+"size": "4.5 L and 4.3 L",
+"asp": "naturally aspirated",
+"made": "built by Ferrari, developed with Maserati",
+"hp": [
+454,
+597
+],
+"src": [
+{
+"title": "Ferrari F136 engine",
+"url": "https://en.wikipedia.org/wiki/Ferrari_F136_engine"
+}
+],
+"notes": [],
+"y0": 2010,
+"y1": 2015,
+"years": {
+"2010": {
+"cars": {
+"ferrari-california": [
+"California"
+],
+"ferrari-458-italia": [
+"458 Italia"
+]
+},
+"n": 4,
+"only": true
+},
+"2011": {
+"cars": {
+"ferrari-458-italia": [
+"458 Italia"
+],
+"ferrari-california": [
+"California"
+]
+},
+"n": 2,
+"only": true
+},
+"2012": {
+"cars": {
+"ferrari-458-italia": [
+"458 Italia Coupe",
+"458 Italia Spider"
+],
+"ferrari-california": [
+"California"
+]
+},
+"n": 6,
+"only": true
+},
+"2013": {
+"cars": {
+"ferrari-california": [
+"California"
+],
+"ferrari-458-italia": [
+"458 Italia",
+"458 Spider"
+]
+},
+"n": 1,
+"only": true
+},
+"2014": {
+"cars": {
+"ferrari-458-italia": [
+"458 Italia",
+"458 Speciale",
+"458 Spider"
+],
+"ferrari-california": [
+"California"
+]
+},
+"n": 3,
+"only": true
+},
+"2015": {
+"cars": {
+"ferrari-458-italia": [
+"458 Italia",
+"458 Speciale",
+"458 Speciale Spider",
+"458 Spider"
+]
+},
+"n": 1,
+"only": true
+}
+},
+"complaints": 17,
+"parts": [
+[
+"Air Bags",
+8
+],
+[
+"Service Brakes",
+2
+],
+[
+"Unknown Or Other",
+2
+],
+[
+"Engine",
+1
+]
+],
+"chart": false,
+"cars": [
+{
+"slug": "ferrari-california",
+"name": "Ferrari California",
+"years": [
+2010,
+2011,
+2012,
+2013,
+2014
+],
+"page": true
+},
+{
+"slug": "ferrari-458-italia",
+"name": "Ferrari 458 Italia",
+"years": [
+2010,
+2011,
+2012,
+2013,
+2014,
+2015
+],
+"page": true
+}
+],
+"recalls": [
+{
+"id": "22V536000",
+"date": "26/07/2022",
+"part": "Service Brakes, Hydraulic",
+"summary": "Ferrari North America, Inc. (Ferrari) is recalling certain 2005-2009 430, 2019-2020 488 Pista, 2016 F60 America, 2005-2011 612 Scaglietti, 2010-2011 612, 2018-2022 812, 2020-2022 F8 Spider, 2020-2022 F8 Tributo, 2021-2022 Roma, 2009-2017 California, 2015-2017 California T, 2013-2017 F12 Berlinetta, ",
+"years": [
+2010,
+2011,
+2012,
+2013,
+2014
+],
+"cars": [
+"Ferrari California"
+],
+"eng": false
+},
+{
+"id": "21V833000",
+"date": "23/10/2021",
+"part": "Service Brakes, Hydraulic",
+"summary": "Ferrari North America, Inc. (Ferrari) is recalling certain 2010-2015 458 Italia, 2012-2015 458 Spider, 2014-2015 458 Speciale, 2015 458 Speciale Aperta, 2016-2019 488 GTB, and 488 Spider vehicles.  The brake system may leak brake fluid, resulting in a loss of braking ability.",
+"years": [
+2010,
+2011,
+2013,
+2014,
+2015
+],
+"cars": [
+"Ferrari 458 Italia"
+],
+"eng": false
+},
+{
+"id": "20V007000",
+"date": "09/01/2020",
+"part": "Air Bags",
+"summary": "Ferrari North America, Inc. (Ferrari) is recalling certain 2009-2011 California and 2010-2011 458 Italia vehicles equipped with non-desiccated, passenger frontal air bag inflators containing phase stabilized ammonium nitrate (PSAN) propellant that were used as interim remedy parts for previous Takat",
+"years": [
+2010,
+2011
+],
+"cars": [
+"Ferrari 458 Italia",
+"Ferrari California"
+],
+"eng": false
+},
+{
+"id": "19V006000",
+"date": "09/01/2019",
+"part": "Air Bags",
+"summary": "Ferrari North America (Ferrari) is recalling certain 2014 Ferrari California, 2014-2015 Ferrari 458 Italia, 458 Spider, 2014-2016 Ferrari FF, 2014-2017 Ferrari F12, 2015-2018 Ferrari California T, 2015 Ferrari 458 Speciale A, 2016 Ferrari F60 America, 2016-2017 Ferrari F12 tdf, 2016-2018 Ferrari 488",
+"years": [
+2014,
+2015
+],
+"cars": [
+"Ferrari 458 Italia",
+"Ferrari California"
+],
+"eng": false
+},
+{
+"id": "18V040000",
+"date": "09/01/2018",
+"part": "Air Bags",
+"summary": "On January 9, 2018 Ferrari North America, Inc. (Ferrari) recalled 1,073 model year 2013 California, 458 Italia, 458 Spider, FF, and F12 Berlinetta vehicles sold, or ever registered in the states of Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas, Puerto R",
+"years": [
+2013
+],
+"cars": [
+"Ferrari California"
+],
+"eng": false
+},
+{
+"id": "18V188000",
+"date": "23/03/2018",
+"part": "Air Bags",
+"summary": "Ferrari North America, Inc. (Ferrari) is recalling certain 2009-2011 Ferrari California, and 2010-2011 Ferrari 458 Italia vehicles that have not had their passenger frontal air bag replaced.  These passenger frontal air bag modules have air bag inflators that may explode in the event of a crash due ",
+"years": [
+2010,
+2011
+],
+"cars": [
+"Ferrari 458 Italia",
+"Ferrari California"
+],
+"eng": false
+},
+{
+"id": "18V381000",
+"date": "07/06/2018",
+"part": "Air Bags",
+"summary": "Ferrari North America, Inc. (Ferrari) is recalling certain 2012 Ferrari California, 458 Italia, 458 Spider, and FF vehicles that have not already had their passenger frontal air bag replaced.  These passenger frontal air bag modules have air bag inflators that may explode in the event of a crash due",
+"years": [
+2012
+],
+"cars": [
+"Ferrari California"
+],
+"eng": false
+},
+{
+"id": "16V341000",
+"date": "23/05/2016",
+"part": "Air Bags",
+"summary": "Ferrari North America, Inc. (Ferrari) is recalling certain model year 2009-2011 Ferrari California vehicles manufactured February 16, 2009, to July 8, 2011, and model year 2010-2011 458 Italia vehicles manufactured March 5, 2010, to July 29, 2011.  These vehicles are equipped with air bag inflators ",
+"years": [
+2010,
+2011
+],
+"cars": [
+"Ferrari 458 Italia",
+"Ferrari California"
+],
+"eng": false
+}
+],
+"tsb": {
+"n": 2,
+"top": []
+}
+},
+"ferrari-f154": {
+"make": "Ferrari",
+"code": "F154",
+"name": "Ferrari F154",
+"codes": "F154 BB, BD, BE, BH, CB, CD, CG, FA, FB",
+"layout": "90° V8",
+"size": "3.9 L (SF90 4.0 L)",
+"asp": "twin-turbo",
+"made": "built by Ferrari",
+"hp": [
+550,
+786
+],
+"hp_note": "engine only; the SF90 makes 990 hp with its motors",
+"src": [
+{
+"title": "Ferrari F154 engine",
+"url": "https://en.wikipedia.org/wiki/Ferrari_F154_engine"
+}
+],
+"notes": [],
+"y0": 2015,
+"y1": 2025,
+"years": {
+"2015": {
+"cars": {
+"ferrari-california": [
+"California T"
+]
+},
+"n": 0,
+"only": true
+},
+"2016": {
+"cars": {
+"ferrari-california": [
+"California T"
+],
+"ferrari-488": [
+"488 GTB",
+"488 Spider"
+]
+},
+"n": 2,
+"only": true
+},
+"2017": {
+"cars": {
+"ferrari-488": [
+"488 GTB",
+"488 Spider"
+],
+"ferrari-california": [
+"California T"
+]
+},
+"n": 5,
+"only": true
+},
+"2018": {
+"cars": {
+"ferrari-488": [
+"488 GTB",
+"488 Spider"
+],
+"ferrari-california": [
+"California T"
+],
+"ferrari-gtc4lusso-ff": [
+"GTC4Lusso T"
+]
+},
+"n": 4,
+"only": false
+},
+"2019": {
+"cars": {
+"ferrari-488": [
+"488 GTB",
+"488 Pista",
+"488 Pista Spider",
+"488 Spider"
+],
+"ferrari-gtc4lusso-ff": [
+"GTC4Lusso T"
+],
+"ferrari-portofino": [
+"Portofino"
+]
+},
+"n": 1,
+"only": false
+},
+"2020": {
+"cars": {
+"ferrari-488": [
+"488 Pista",
+"488 Pista Spider"
+],
+"ferrari-gtc4lusso-ff": [
+"GTC4Lusso T"
+],
+"ferrari-portofino": [
+"Portofino"
+],
+"ferrari-f8-tributo": [
+"F8 Tributo"
+]
+},
+"n": 0,
+"only": false
+},
+"2021": {
+"cars": {
+"ferrari-f8-tributo": [
+"F8 Spider",
+"F8 Tributo"
+],
+"ferrari-portofino": [
+"Portofino",
+"Portofino M"
+],
+"ferrari-roma": [
+"Roma"
+],
+"ferrari-sf90-stradale": [
+"SF90 Stradale Coupe"
+]
+},
+"n": 0,
+"only": true
+},
+"2022": {
+"cars": {
+"ferrari-f8-tributo": [
+"F8 Spider",
+"F8 Tributo"
+],
+"ferrari-roma": [
+"Roma"
+],
+"ferrari-portofino": [
+"Portofino M"
+],
+"ferrari-sf90-stradale": [
+"SF90 Spider",
+"SF90 Stradale"
+]
+},
+"n": 0,
+"only": true
+},
+"2023": {
+"cars": {
+"ferrari-f8-tributo": [
+"F8 Spider",
+"F8 Tributo"
+],
+"ferrari-portofino": [
+"Portofino M"
+],
+"ferrari-roma": [
+"Roma"
+],
+"ferrari-sf90-stradale": [
+"SF90 Spider",
+"SF90 Stradale"
+]
+},
+"n": 0,
+"only": true
+},
+"2024": {
+"cars": {
+"ferrari-roma": [
+"Roma",
+"Roma Spider"
+],
+"ferrari-sf90-stradale": [
+"SF90 Spider",
+"SF90 Stradale"
+]
+},
+"n": 0,
+"only": true
+},
+"2025": {
+"cars": {
+"ferrari-roma": [
+"Roma Spider"
+],
+"ferrari-sf90-stradale": [
+"SF90 Spider",
+"SF90 XX Spider",
+"SF90 XX Stradale"
+]
+},
+"n": 0,
+"only": true
+}
+},
+"complaints": 12,
+"parts": [
+[
+"Air Bags",
+5
+],
+[
+"Service Brakes",
+4
+],
+[
+"Unknown Or Other",
+1
+],
+[
+"Service Brakes, Hydraulic",
+1
+]
+],
+"chart": false,
+"cars": [
+{
+"slug": "ferrari-california",
+"name": "Ferrari California",
+"years": [
+2015,
+2016,
+2017,
+2018
+],
+"page": true
+},
+{
+"slug": "ferrari-488",
+"name": "Ferrari 488",
+"years": [
+2016,
+2017,
+2018,
+2019,
+2020
+],
+"page": true
+},
+{
+"slug": "ferrari-gtc4lusso-ff",
+"name": "Ferrari GTC4Lusso / FF",
+"years": [
+2018,
+2019,
+2020
+],
+"page": true
+},
+{
+"slug": "ferrari-portofino",
+"name": "Ferrari Portofino",
+"years": [
+2019,
+2020,
+2021,
+2022,
+2023
+],
+"page": true
+},
+{
+"slug": "ferrari-f8-tributo",
+"name": "Ferrari F8 Tributo",
+"years": [
+2020,
+2021,
+2022,
+2023
+],
+"page": true
+},
+{
+"slug": "ferrari-roma",
+"name": "Ferrari Roma",
+"years": [
+2021,
+2022,
+2023,
+2024,
+2025
+],
+"page": true
+},
+{
+"slug": "ferrari-sf90-stradale",
+"name": "Ferrari SF90 Stradale",
+"years": [
+2021,
+2022,
+2023,
+2024,
+2025
+],
+"page": true
+}
+],
+"recalls": [
+{
+"id": "24V810000",
+"date": "29/10/2024",
+"part": "Power Train",
+"summary": "Ferrari North America, Inc (Ferrari) is recalling certain 2023 Portofino M, F8 Spider, and 2024 Roma Spider vehicles.  The driveshaft screws may not have been tightened during production and may loosen.",
+"years": [
+2023,
+2024
+],
+"cars": [
+"Ferrari F8 Tributo",
+"Ferrari Portofino",
+"Ferrari Roma"
+],
+"eng": true
+},
+{
+"id": "23V698000",
+"date": "17/10/2023",
+"part": "Engine And Engine Cooling",
+"summary": "Ferrari North America, Inc. (Ferrari) is recalling certain 2022-2024 SF90 Stradale and SF90 Spider hybrid electric vehicles.  The turbocharger oil delivery pipe may have been manufactured incorrectly, which can lead to an oil leak.",
+"years": [
+2022,
+2023,
+2024
+],
+"cars": [
+"Ferrari SF90 Stradale"
+],
+"eng": true
+},
+{
+"id": "19V090000",
+"date": "14/02/2019",
+"part": "Fuel System, Gasoline",
+"summary": "Ferrari North America, Inc. (Ferrari) is recalling certain 2017 LaFerrari Aperta, 2018-2019 488 GTB, GTC4Lusso T, GTC4Lusso, 488 Spider, 812 Superfast, and 2019 488 Pista vehicles.  The fuel vapor separator may crack and allow fuel to leak.",
+"years": [
+2018,
+2019
+],
+"cars": [
+"Ferrari 488"
+],
+"eng": true
+},
+{
+"id": "15V881000",
+"date": "28/12/2015",
+"part": "Fuel System, Gasoline",
+"summary": "Ferrari North America (FNA) is recalling certain model year 2016 488 GTB vehicles manufactured September 9, 2015, to November 6, 2015. The affected vehicles may be equipped with a low pressure fuel line connection that was not properly coated during manufacturing. This may cause a fuel vapor leak du",
+"years": [
+2016
+],
+"cars": [
+"Ferrari 488"
+],
+"eng": true
+},
+{
+"id": "15V811000",
+"date": "01/12/2015",
+"part": "Fuel System, Gasoline",
+"summary": "Ferrari North America, Inc. (FNA) is recalling certain model year 2016 California T vehicles manufactured September 8, 2015, to November 11, 2015.  The affected vehicles have a low pressure fuel line that may not connect properly to the fuel pump feed pipe.",
+"years": [
+2016
+],
+"cars": [
+"Ferrari California"
+],
+"eng": true
+},
+{
+"id": "23V136000",
+"date": "01/03/2023",
+"part": "Seats",
+"summary": "Ferrari is recalling certain 2021-2023 Ferrari SF90 Coupe and 2022 SF90 Spider hybrid electric vehicles.  When a child seat is installed on the passenger seat (size M), the deployment of the air bag may impact the child seat.  As such, these vehicles fail to comply with Federal Motor Vehicle Safety ",
+"years": [
+2022,
+2023
+],
+"cars": [
+"Ferrari SF90 Stradale"
+],
+"eng": false
+},
+{
+"id": "22V536000",
+"date": "26/07/2022",
+"part": "Service Brakes, Hydraulic",
+"summary": "Ferrari North America, Inc. (Ferrari) is recalling certain 2005-2009 430, 2019-2020 488 Pista, 2016 F60 America, 2005-2011 612 Scaglietti, 2010-2011 612, 2018-2022 812, 2020-2022 F8 Spider, 2020-2022 F8 Tributo, 2021-2022 Roma, 2009-2017 California, 2015-2017 California T, 2013-2017 F12 Berlinetta, ",
+"years": [
+2015,
+2016,
+2017,
+2019,
+2020,
+2021,
+2022
+],
+"cars": [
+"Ferrari 488",
+"Ferrari California",
+"Ferrari F8 Tributo",
+"Ferrari Portofino",
+"Ferrari Roma"
+],
+"eng": false
+},
+{
+"id": "21V833000",
+"date": "23/10/2021",
+"part": "Service Brakes, Hydraulic",
+"summary": "Ferrari North America, Inc. (Ferrari) is recalling certain 2010-2015 458 Italia, 2012-2015 458 Spider, 2014-2015 458 Speciale, 2015 458 Speciale Aperta, 2016-2019 488 GTB, and 488 Spider vehicles.  The brake system may leak brake fluid, resulting in a loss of braking ability.",
+"years": [
+2016,
+2017,
+2018,
+2019
+],
+"cars": [
+"Ferrari 488"
+],
+"eng": false
+},
+{
+"id": "19V006000",
+"date": "09/01/2019",
+"part": "Air Bags",
+"summary": "Ferrari North America (Ferrari) is recalling certain 2014 Ferrari California, 2014-2015 Ferrari 458 Italia, 458 Spider, 2014-2016 Ferrari FF, 2014-2017 Ferrari F12, 2015-2018 Ferrari California T, 2015 Ferrari 458 Speciale A, 2016 Ferrari F60 America, 2016-2017 Ferrari F12 tdf, 2016-2018 Ferrari 488",
+"years": [
+2015,
+2016,
+2017,
+2018
+],
+"cars": [
+"Ferrari 488",
+"Ferrari California"
+],
+"eng": false
+},
+{
+"id": "19V411000",
+"date": "04/06/2019",
+"part": "Air Bags",
+"summary": "Ferrari North America, Inc. (Ferrari) is recalling certain 2018 488 Spider, 488 Pista, 2015 458 Speciale A, 2016-2018 488 GTB, 2015-2017 F12 Berlinetta, 2016 F12 tdf, and 2016-2018 Carlifornia T vehicles.  The air bag Electronic Control Unit (ECU) may malfunction, possibly causing the non-deployment",
+"years": [
+2016,
+2017,
+2018
+],
+"cars": [
+"Ferrari 488",
+"Ferrari California"
+],
+"eng": false
+},
+{
+"id": "18V164000",
+"date": "09/03/2018",
+"part": "Service Brakes, Hydraulic",
+"summary": "Ferrari North America, Inc. (Ferrari) is recalling certain 2016 488 GTB and 488 Spider vehicles.  Due to a software error, the driver may not be warned that the brake discs are critically worn.",
+"years": [
+2016
+],
+"cars": [
+"Ferrari 488"
+],
+"eng": false
+},
+{
+"id": "15V433000",
+"date": "07/07/2015",
+"part": "Air Bags",
+"summary": "Ferrari North America, Inc. (FNA) is recalling certain model year 2015 Ferrari 458 Italia, 458 Spider, 458 Speciale, 458 Speciale A, California T, FF, F12 Berlinetta, and LaFerrari vehicles manufactured December 19, 2014, to April 29, 2015. The affected vehicles may be equipped with a driver side ai",
+"years": [
+2015
+],
+"cars": [
+"Ferrari California"
+],
+"eng": false
+}
+],
+"tsb": {
+"n": 10,
+"top": []
+}
+},
+"ferrari-f140": {
+"make": "Ferrari",
+"code": "F140",
+"name": "Ferrari F140",
+"codes": "F140 EB (FF), FC (F12), FG (F12tdf), ED (GTC4Lusso), GA (812), HB (812 Competizione)",
+"layout": "V12",
+"size": "6.3 L and 6.5 L",
+"asp": "naturally aspirated",
+"hp": [
+651,
+819
+],
+"src": [
+{
+"title": "Ferrari F140 engine",
+"url": "https://en.wikipedia.org/wiki/Ferrari_F140_engine"
+}
+],
+"notes": [],
+"y0": 2012,
+"y1": 2024,
+"years": {
+"2012": {
+"cars": {
+"ferrari-gtc4lusso-ff": [
+"FF"
+]
+},
+"n": 0,
+"only": true
+},
+"2013": {
+"cars": {
+"ferrari-gtc4lusso-ff": [
+"FF"
+],
+"ferrari-f12berlinetta": [
+"F12"
+]
+},
+"n": 0,
+"only": true
+},
+"2014": {
+"cars": {
+"ferrari-f12berlinetta": [
+"F12"
+],
+"ferrari-gtc4lusso-ff": [
+"FF"
+]
+},
+"n": 0,
+"only": true
+},
+"2015": {
+"cars": {
+"ferrari-f12berlinetta": [
+"F12"
+],
+"ferrari-gtc4lusso-ff": [
+"FF"
+]
+},
+"n": 0,
+"only": true
+},
+"2016": {
+"cars": {
+"ferrari-gtc4lusso-ff": [
+"FF"
+],
+"ferrari-f12berlinetta": [
+"F12",
+"F12 tdf"
+]
+},
+"n": 0,
+"only": true
+},
+"2017": {
+"cars": {
+"ferrari-f12berlinetta": [
+"F12 Berlinetta",
+"F12 tdf"
+],
+"ferrari-gtc4lusso-ff": [
+"GTC4Lusso"
+]
+},
+"n": 2,
+"only": true
+},
+"2018": {
+"cars": {
+"ferrari-gtc4lusso-ff": [
+"GTC4Lusso"
+],
+"ferrari-812-superfast": [
+"812 Superfast"
+]
+},
+"n": 0,
+"only": false
+},
+"2019": {
+"cars": {
+"ferrari-812-superfast": [
+"812 Superfast"
+],
+"ferrari-gtc4lusso-ff": [
+"GTC4Lusso"
+]
+},
+"n": 0,
+"only": false
+},
+"2020": {
+"cars": {
+"ferrari-812-superfast": [
+"812 Superfast"
+],
+"ferrari-gtc4lusso-ff": [
+"GTC4Lusso"
+]
+},
+"n": 0,
+"only": false
+},
+"2021": {
+"cars": {
+"ferrari-812-superfast": [
+"812 GTS",
+"812 Superfast"
+]
+},
+"n": 1,
+"only": true
+},
+"2022": {
+"cars": {
+"ferrari-812-superfast": [
+"812 Competizione",
+"812 GTS"
+]
+},
+"n": 0,
+"only": true
+},
+"2023": {
+"cars": {
+"ferrari-812-superfast": [
+"812 Competizione",
+"812 Competizione A",
+"812 GTS"
+]
+},
+"n": 0,
+"only": true
+},
+"2024": {
+"cars": {
+"ferrari-812-superfast": [
+"812 Competizione",
+"812 Competizione A"
+]
+},
+"n": 0,
+"only": true
+}
+},
+"complaints": 3,
+"parts": [
+[
+"Air Bags",
+1
+],
+[
+"Visibility/Wiper",
+1
+],
+[
+"Service Brakes",
+1
+]
+],
+"chart": false,
+"cars": [
+{
+"slug": "ferrari-gtc4lusso-ff",
+"name": "Ferrari GTC4Lusso / FF",
+"years": [
+2012,
+2013,
+2014,
+2015,
+2016,
+2017,
+2018,
+2019,
+2020
+],
+"page": true
+},
+{
+"slug": "ferrari-f12berlinetta",
+"name": "Ferrari F12berlinetta",
+"years": [
+2013,
+2014,
+2015,
+2016,
+2017
+],
+"page": true
+},
+{
+"slug": "ferrari-812-superfast",
+"name": "Ferrari 812 Superfast",
+"years": [
+2018,
+2019,
+2020,
+2021,
+2022,
+2023,
+2024
+],
+"page": true
+}
+],
+"recalls": [
+{
+"id": "19V090000",
+"date": "14/02/2019",
+"part": "Fuel System, Gasoline",
+"summary": "Ferrari North America, Inc. (Ferrari) is recalling certain 2017 LaFerrari Aperta, 2018-2019 488 GTB, GTC4Lusso T, GTC4Lusso, 488 Spider, 812 Superfast, and 2019 488 Pista vehicles.  The fuel vapor separator may crack and allow fuel to leak.",
+"years": [
+2018,
+2019
+],
+"cars": [
+"Ferrari 812 Superfast"
+],
+"eng": true
+},
+{
+"id": "22V536000",
+"date": "26/07/2022",
+"part": "Service Brakes, Hydraulic",
+"summary": "Ferrari North America, Inc. (Ferrari) is recalling certain 2005-2009 430, 2019-2020 488 Pista, 2016 F60 America, 2005-2011 612 Scaglietti, 2010-2011 612, 2018-2022 812, 2020-2022 F8 Spider, 2020-2022 F8 Tributo, 2021-2022 Roma, 2009-2017 California, 2015-2017 California T, 2013-2017 F12 Berlinetta, ",
+"years": [
+2012,
+2013,
+2014,
+2015,
+2016,
+2017
+],
+"cars": [
+"Ferrari F12berlinetta",
+"Ferrari GTC4Lusso / FF"
+],
+"eng": false
+},
+{
+"id": "20V614000",
+"date": "06/10/2020",
+"part": "Visibility",
+"summary": "Ferrari North America, Inc. (Ferrari) is recalling certain 2018-2020 812 Superfast vehicles.  The rear window on these vehicles may have been bonded incorrectly, which may lead to decreased, long-term adhesion.",
+"years": [
+2018,
+2019,
+2020
+],
+"cars": [
+"Ferrari 812 Superfast"
+],
+"eng": false
+},
+{
+"id": "19V006000",
+"date": "09/01/2019",
+"part": "Air Bags",
+"summary": "Ferrari North America (Ferrari) is recalling certain 2014 Ferrari California, 2014-2015 Ferrari 458 Italia, 458 Spider, 2014-2016 Ferrari FF, 2014-2017 Ferrari F12, 2015-2018 Ferrari California T, 2015 Ferrari 458 Speciale A, 2016 Ferrari F60 America, 2016-2017 Ferrari F12 tdf, 2016-2018 Ferrari 488",
+"years": [
+2014,
+2015,
+2016,
+2017
+],
+"cars": [
+"Ferrari F12berlinetta",
+"Ferrari GTC4Lusso / FF"
+],
+"eng": false
+},
+{
+"id": "19V089000",
+"date": "14/02/2019",
+"part": "Latches/Locks/Linkages",
+"summary": "Ferrari North America, Inc. (Ferrari) is recalling certain 2017-2019 GTC4Lusso and 2018-2019 GTC4Lusso T vehicles.  Tension on the door lock mechanism may result in the vehicle's door being unable to be opened by using the external door handle.",
+"years": [
+2017
+],
+"cars": [
+"Ferrari GTC4Lusso / FF"
+],
+"eng": false
+},
+{
+"id": "19V411000",
+"date": "04/06/2019",
+"part": "Air Bags",
+"summary": "Ferrari North America, Inc. (Ferrari) is recalling certain 2018 488 Spider, 488 Pista, 2015 458 Speciale A, 2016-2018 488 GTB, 2015-2017 F12 Berlinetta, 2016 F12 tdf, and 2016-2018 Carlifornia T vehicles.  The air bag Electronic Control Unit (ECU) may malfunction, possibly causing the non-deployment",
+"years": [
+2016,
+2017
+],
+"cars": [
+"Ferrari F12berlinetta"
+],
+"eng": false
+},
+{
+"id": "18V040000",
+"date": "09/01/2018",
+"part": "Air Bags",
+"summary": "On January 9, 2018 Ferrari North America, Inc. (Ferrari) recalled 1,073 model year 2013 California, 458 Italia, 458 Spider, FF, and F12 Berlinetta vehicles sold, or ever registered in the states of Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas, Puerto R",
+"years": [
+2013
+],
+"cars": [
+"Ferrari GTC4Lusso / FF"
+],
+"eng": false
+},
+{
+"id": "18V381000",
+"date": "07/06/2018",
+"part": "Air Bags",
+"summary": "Ferrari North America, Inc. (Ferrari) is recalling certain 2012 Ferrari California, 458 Italia, 458 Spider, and FF vehicles that have not already had their passenger frontal air bag replaced.  These passenger frontal air bag modules have air bag inflators that may explode in the event of a crash due",
+"years": [
+2012
+],
+"cars": [
+"Ferrari GTC4Lusso / FF"
+],
+"eng": false
+},
+{
+"id": "15V433000",
+"date": "07/07/2015",
+"part": "Air Bags",
+"summary": "Ferrari North America, Inc. (FNA) is recalling certain model year 2015 Ferrari 458 Italia, 458 Spider, 458 Speciale, 458 Speciale A, California T, FF, F12 Berlinetta, and LaFerrari vehicles manufactured December 19, 2014, to April 29, 2015. The affected vehicles may be equipped with a driver side ai",
+"years": [
+2015
+],
+"cars": [
+"Ferrari GTC4Lusso / FF"
+],
+"eng": false
+}
+],
+"tsb": {
+"n": 4,
+"top": []
+}
+},
+"ferrari-f163": {
+"make": "Ferrari",
+"code": "F163",
+"name": "Ferrari F163",
+"codes": "F163 BC",
+"layout": "120° V6",
+"size": "3.0 L",
+"asp": "twin-turbo plug-in hybrid",
+"hp": [
+654,
+654
+],
+"hp_note": "engine only; 819 hp with the motor",
+"src": [
+{
+"title": "Ferrari F163 engine",
+"url": "https://en.wikipedia.org/wiki/Ferrari_F163_engine"
+}
+],
+"notes": [],
+"y0": 2022,
+"y1": 2025,
+"years": {
+"2022": {
+"cars": {
+"ferrari-296": [
+"296 GTB"
+]
+},
+"n": 0,
+"only": true
+},
+"2023": {
+"cars": {
+"ferrari-296": [
+"296 GTB Spider"
+]
+},
+"n": 0,
+"only": true
+},
+"2025": {
+"cars": {
+"ferrari-296": [
+"296 GTB",
+"296 GTS"
+]
+},
+"n": 0,
+"only": true
+}
+},
+"complaints": 0,
+"parts": [],
+"chart": false,
+"cars": [
+{
+"slug": "ferrari-296",
+"name": "Ferrari 296",
+"years": [
+2022,
+2023,
+2025
+],
+"page": true
+}
+],
+"recalls": [
+{
+"id": "25V716000",
+"date": "21/10/2025",
+"part": "Engine And Engine Cooling",
+"summary": "Ferrari North America, Inc. (Ferrari) is recalling certain 2025 296 GTS and 296 GTB vehicles. The nut securing the oil filter connection to the turbocharger oil feed pipes was tightened incorrectly and may cause an oil leak.",
+"years": [
+2025
+],
+"cars": [
+"Ferrari 296"
+],
+"eng": true
+}
+],
+"tsb": {
+"n": 0,
+"top": []
+}
+},
+"lamborghini-v10": {
+"make": "Lamborghini",
+"code": "V10",
+"name": "Lamborghini / Audi 5.2 V10",
+"codes": "no single code; first Audi R8 V10: BUJ",
+"layout": "90° V10",
+"size": "5.2 L",
+"asp": "naturally aspirated",
+"made": "block cast at Audi Hungaria (Győr), assembled at Sant&#39;Agata",
+"hp": [
+518,
+631
+],
+"src": [
+{
+"title": "Lamborghini V10",
+"url": "https://en.wikipedia.org/wiki/Lamborghini_V10"
+},
+{
+"title": "List of Volkswagen Group petrol engines",
+"url": "https://en.wikipedia.org/wiki/List_of_Volkswagen_Group_petrol_engines"
+}
+],
+"notes": [],
+"y0": 2010,
+"y1": 2024,
+"years": {
+"2010": {
+"cars": {
+"audi-r8": [
+"R8"
+],
+"lamborghini-gallardo": [
+"Gallardo Coupe",
+"Gallardo Spyder"
+]
+},
+"n": 0,
+"only": false
+},
+"2011": {
+"cars": {
+"audi-r8": [
+"R8",
+"R8 Spyder"
+],
+"lamborghini-gallardo": [
+"Gallardo Coupe",
+"Gallardo Spyder"
+]
+},
+"n": 0,
+"only": false
+},
+"2012": {
+"cars": {
+"audi-r8": [
+"R8",
+"R8 Spyder"
+],
+"lamborghini-gallardo": [
+"Gallardo Coupe",
+"Gallardo Spyder"
+]
+},
+"n": 0,
+"only": false
+},
+"2013": {
+"cars": {
+"lamborghini-gallardo": [
+"Gallardo Coupe",
+"Gallardo Spyder"
+]
+},
+"n": 0,
+"only": true
+},
+"2014": {
+"cars": {
+"audi-r8": [
+"R8",
+"R8 Spyder"
+],
+"lamborghini-gallardo": [
+"Gallardo Coupe",
+"Gallardo Spyder"
+]
+},
+"n": 0,
+"only": false
+},
+"2015": {
+"cars": {
+"lamborghini-hurac-n": [
+"Huracan"
+],
+"audi-r8": [
+"R8",
+"R8 Spyder"
+]
+},
+"n": 0,
+"only": false
+},
+"2016": {
+"cars": {
+"lamborghini-hurac-n": [
+"Huracan",
+"Huracan Spyder"
+]
+},
+"n": 0,
+"only": true
+},
+"2017": {
+"cars": {
+"audi-r8": [
+"R8",
+"R8 Spyder"
+],
+"lamborghini-hurac-n": [
+"Huracan",
+"Huracan 2WD",
+"Huracan Spyder",
+"Huracan Spyder 2WD"
+]
+},
+"n": 0,
+"only": true
+},
+"2018": {
+"cars": {
+"audi-r8": [
+"R8 AWD",
+"R8 RWD",
+"R8 Spyder AWD",
+"R8 Spyder RWD"
+],
+"lamborghini-hurac-n": [
+"Huracan",
+"Huracan 2WD",
+"Huracan Spyder",
+"Huracan Spyder 2WD"
+]
+},
+"n": 1,
+"only": true
+},
+"2019": {
+"cars": {
+"lamborghini-hurac-n": [
+"Huracan",
+"Huracan 2WD",
+"Huracan Spyder",
+"Huracan Spyder 2WD"
+]
+},
+"n": 0,
+"only": true
+},
+"2020": {
+"cars": {
+"audi-r8": [
+"R8 AWD",
+"R8 Spyder AWD"
+],
+"lamborghini-hurac-n": [
+"Huracan",
+"Huracan 2WD",
+"Huracan Spyder",
+"Huracan Spyder 2WD"
+]
+},
+"n": 2,
+"only": true
+},
+"2021": {
+"cars": {
+"audi-r8": [
+"R8",
+"R8 2WD",
+"R8 Spyder",
+"R8 Spyder 2WD"
+],
+"lamborghini-hurac-n": [
+"Huracan",
+"Huracan 2WD",
+"Huracan Spyder",
+"Huracan Spyder 2WD"
+]
+},
+"n": 0,
+"only": true
+},
+"2022": {
+"cars": {
+"audi-r8": [
+"R8 Coupe",
+"R8 Coupe RWD",
+"R8 Spyder",
+"R8 Spyder RWD"
+],
+"lamborghini-hurac-n": [
+"Huracan Coupe",
+"Huracan Coupe RWD",
+"Huracan Spyder",
+"Huracan Spyder RWD"
+]
+},
+"n": 0,
+"only": true
+},
+"2023": {
+"cars": {
+"lamborghini-hurac-n": [
+"Huracan Coupe",
+"Huracan Coupe 2WD",
+"Huracan Spyder",
+"Huracan Spyder 2WD"
+],
+"audi-r8": [
+"R8 Coupe RWD",
+"R8 Coupe quattro",
+"R8 GT RWD",
+"R8 Spyder RWD",
+"R8 Spyder quattro"
+]
+},
+"n": 1,
+"only": true
+},
+"2024": {
+"cars": {
+"lamborghini-hurac-n": [
+"Huracan Coupe 2WD",
+"Huracan Spyder",
+"Huracan Sterrato"
+]
+},
+"n": 0,
+"only": true
+}
+},
+"complaints": 4,
+"parts": [
+[
+"Unknown Or Other",
+2
+],
+[
+"Air Bags",
+1
+],
+[
+"Electrical System",
+1
+]
+],
+"chart": false,
+"cars": [
+{
+"slug": "audi-r8",
+"name": "Audi R8",
+"years": [
+2010,
+2011,
+2012,
+2014,
+2015,
+2017,
+2018,
+2020,
+2021,
+2022,
+2023
+],
+"page": true
+},
+{
+"slug": "lamborghini-gallardo",
+"name": "Lamborghini Gallardo",
+"years": [
+2010,
+2011,
+2012,
+2013,
+2014
+],
+"page": true
+},
+{
+"slug": "lamborghini-hurac-n",
+"name": "Lamborghini Huracán",
+"years": [
+2015,
+2016,
+2017,
+2018,
+2019,
+2020,
+2021,
+2022,
+2023,
+2024
+],
+"page": true
+}
+],
+"recalls": [
+{
+"id": "22V220000",
+"date": "06/04/2022",
+"part": "Power Train",
+"summary": "Lamborghini (Automobili Lamborghini) is recalling certain 2020-2022 Huracan EVO and 2022 Huracan STO vehicles.  The gearbox may have an insufficient amount of transmission oil, which can lead to clutch slippage, and in certain driving situations, a transmission oil leak.",
+"years": [
+2020,
+2021
+],
+"cars": [
+"Lamborghini Huracán"
+],
+"eng": true
+},
+{
+"id": "22V225000",
+"date": "06/04/2022",
+"part": "Power Train",
+"summary": "Volkswagen Group of America, Inc. (Audi) is recalling certain 2022 R8 Spyder and 2021-2022 R8 Coupe vehicles.  The gearbox may have an insufficient amount of transmission oil, which can lead to clutch slippage, and in certain driving situations, a transmission oil leak.",
+"years": [
+2021
+],
+"cars": [
+"Audi R8"
+],
+"eng": true
+},
+{
+"id": "18V639000",
+"date": "17/09/2018",
+"part": "Power Train",
+"summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2017-2018 Audi R8 Spyder and R8 Coupe vehicles.  Transmission fluid may leak from the gearbox ventilation hose after certain high speed and maneuvering situations.",
+"years": [
+2017
+],
+"cars": [
+"Audi R8"
+],
+"eng": true
+},
+{
+"id": "24V701000",
+"date": "19/09/2024",
+"part": "Structure",
+"summary": "Lamborghini (Automobili Lamborghini) is recalling certain 2024 Huracan EVO Spyder vehicles.  The right front frame bracket may have been installed on the wrong side of the vehicle.  As such, these vehicles fail to comply with the requirements of the Federal Motor Vehicle Safety Standard (FMVSS) numb",
+"years": [
+2024
+],
+"cars": [
+"Lamborghini Huracán"
+],
+"eng": false
+},
+{
+"id": "23V826000",
+"date": "07/12/2023",
+"part": "Electrical System",
+"summary": "Lamborghini (Automobili Lamborghini) is recalling certain 2015-2024 Huracan vehicles.  The headlights may be incorrectly adjusted.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 108, \"Lamps, Reflective Devices, and Associated Equipment.\"",
+"years": [
+2015,
+2016,
+2017,
+2018,
+2019,
+2020,
+2021
+],
+"cars": [
+"Lamborghini Huracán"
+],
+"eng": false
+},
+{
+"id": "22V081000",
+"date": "16/02/2022",
+"part": "Exterior Lighting",
+"summary": "Lamborghini (Automobili Lamborghini) is recalling certain 2015-2020 Huracan vehicles.  The caps that cover the low-beam headlight horizontal adjustment screws are missing, which can allow the headlights to be improperly adjusted.  As such, these vehicles fail to comply with the requirements of Feder",
+"years": [
+2015,
+2016,
+2017,
+2018,
+2019,
+2020
+],
+"cars": [
+"Lamborghini Huracán"
+],
+"eng": false
+},
+{
+"id": "21V466000",
+"date": "23/06/2021",
+"part": "Back Over Prevention",
+"summary": "Lamborghini (Automobili Lamborghini) is recalling certain 2018-2021 Huracan vehicles.  In temperatures below 41°F, the rearview camera may not display due to a software error in the infotainment system.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Sta",
+"years": [
+2018,
+2019,
+2020,
+2021
+],
+"cars": [
+"Lamborghini Huracán"
+],
+"eng": false
+},
+{
+"id": "19V014000",
+"date": "11/01/2019",
+"part": "Air Bags",
+"summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2015 Passat, 2015-2016 Eos, 2015-2017 CC, 2016-2017 TT Roadster, TT Coupe, 2017 Audi R8 Coupe, and R8 Spyder vehicles.  Upon deployment of the driver's frontal air bag, excessive internal pressure may cause the inflator to explode.",
+"years": [
+2017
+],
+"cars": [
+"Audi R8"
+],
+"eng": false
+}
+],
+"tsb": {
+"n": 120,
+"top": [
+"Using the UV additive to find engine oil leaks",
+"The MIL is on; DTCs for misfire, air/fuel ratio imbalance, or lean fuel system stored in the ECM P030000",
+"This bulleitn provides information regarding UV Leak additive for finding oil leaks"
+]
+}
+},
+"lamborghini-l539": {
+"make": "Lamborghini",
+"code": "L539",
+"name": "Lamborghini L539 V12",
+"codes": "L539",
+"layout": "V12",
+"size": "6.5 L",
+"asp": "naturally aspirated",
+"hp": [
+690,
+770
+],
+"src": [
+{
+"title": "Lamborghini Aventador",
+"url": "https://en.wikipedia.org/wiki/Lamborghini_Aventador"
+},
+{
+"title": "Lamborghini V12",
+"url": "https://en.wikipedia.org/wiki/Lamborghini_V12"
+}
+],
+"notes": [],
+"y0": 2012,
+"y1": 2022,
+"years": {
+"2012": {
+"cars": {
+"lamborghini-aventador": [
+"Aventador Coupe"
+]
+},
+"n": 0,
+"only": true
+},
+"2013": {
+"cars": {
+"lamborghini-aventador": [
+"Aventador Coupe",
+"Aventador Roadster"
+]
+},
+"n": 0,
+"only": true
+},
+"2014": {
+"cars": {
+"lamborghini-aventador": [
+"Aventador Coupe",
+"Aventador Roadster",
+"Aventador Veneno Coupe"
+]
+},
+"n": 1,
+"only": true
+},
+"2015": {
+"cars": {
+"lamborghini-aventador": [
+"Aventador Coupe",
+"Aventador Roadster"
+]
+},
+"n": 0,
+"only": true
+},
+"2016": {
+"cars": {
+"lamborghini-aventador": [
+"Aventador Coupe",
+"Aventador Roadster"
+]
+},
+"n": 0,
+"only": true
+},
+"2017": {
+"cars": {
+"lamborghini-aventador": [
+"Aventador Coupe",
+"Aventador Coupe LP740-4",
+"Aventador Roadster",
+"Aventador Roadster LP740-4"
+]
+},
+"n": 0,
+"only": true
+},
+"2018": {
+"cars": {
+"lamborghini-aventador": [
+"Aventador Coupe",
+"Aventador Roadster",
+"Aventador S Coupe",
+"Aventador S Roadster"
+]
+},
+"n": 1,
+"only": true
+},
+"2019": {
+"cars": {
+"lamborghini-aventador": [
+"Aventador Coupe",
+"Aventador Roadster"
+]
+},
+"n": 0,
+"only": true
+},
+"2020": {
+"cars": {
+"lamborghini-aventador": [
+"Aventador Coupe",
+"Aventador Roadster",
+"Aventador Sian Coupe",
+"Aventador Sian Roadster"
+]
+},
+"n": 0,
+"only": true
+},
+"2021": {
+"cars": {
+"lamborghini-aventador": [
+"Aventador Coupe",
+"Aventador Roadster",
+"Aventador Sian Coupe",
+"Aventador Sian Roadster"
+]
+},
+"n": 0,
+"only": true
+},
+"2022": {
+"cars": {
+"lamborghini-aventador": [
+"Aventador Countach",
+"Aventador Coupe",
+"Aventador Roadster"
+]
+},
+"n": 0,
+"only": true
+}
+},
+"complaints": 2,
+"parts": [
+[
+"Engine",
+1
+],
+[
+"Power Train",
+1
+]
+],
+"chart": false,
+"cars": [
+{
+"slug": "lamborghini-aventador",
+"name": "Lamborghini Aventador",
+"years": [
+2012,
+2013,
+2014,
+2015,
+2016,
+2017,
+2018,
+2019,
+2020,
+2021,
+2022
+],
+"page": true
+}
+],
+"recalls": [
+{
+"id": "19V696000",
+"date": "02/10/2019",
+"part": "Electrical System",
+"summary": "Automobili Lamborghini (Lamborghini) is recalling certain 2017-2019 Aventador S Coupè and Aventador S Roadster vehicles.  The engine management software may allow the engine to stall when coasting to a stop.",
+"years": [
+2018
+],
+"cars": [
+"Lamborghini Aventador"
+],
+"eng": false
+},
+{
+"id": "18V461000",
+"date": "11/07/2018",
+"part": "Wheels",
+"summary": "Automobili Lamborghini (Lamborghini) is recalling certain 2015-2016 Lamborghini Aventador SV Coupe and Aventador SV Roadster vehicles.  The bolts centering and supporting the brake discs to the wheel's hub may loosen over time. Continued driving with loose centering bolts may result in the wheel det",
+"years": [
+2015,
+2016
+],
+"cars": [
+"Lamborghini Aventador"
+],
+"eng": false
+}
+],
+"tsb": {
+"n": 16,
+"top": [
+"The starter motor, on some vehicles, fails to crank immediately and the lower starter motor screw, without…",
+"Some vehicles will be experiencing an external corrosion on the alternator positive pole fastener and would…"
+]
+}
+},
+"lamborghini-l545": {
+"make": "Lamborghini",
+"code": "L545",
+"name": "Lamborghini L545 V12",
+"codes": "L545",
+"layout": "V12",
+"size": "6.5 L",
+"asp": "naturally aspirated plug-in hybrid",
+"hp": [
+814,
+814
+],
+"hp_note": "engine only; 1,001 hp with the motors",
+"src": [
+{
+"title": "Lamborghini Revuelto",
+"url": "https://en.wikipedia.org/wiki/Lamborghini_Revuelto"
+}
+],
+"notes": [],
+"y0": 2024,
+"y1": 2025,
+"years": {
+"2024": {
+"cars": {
+"lamborghini-revuelto": [
+"Revuelto"
+]
+},
+"n": 0,
+"only": true
+},
+"2025": {
+"cars": {
+"lamborghini-revuelto": [
+"Revuelto"
+]
+},
+"n": 0,
+"only": true
+}
+},
+"complaints": 0,
+"parts": [],
+"chart": false,
+"cars": [
+{
+"slug": "lamborghini-revuelto",
+"name": "Lamborghini Revuelto",
+"years": [
+2024,
+2025
+],
+"page": true
+}
+],
+"recalls": [
+{
+"id": "24V945000",
+"date": "19/12/2024",
+"part": "Engine And Engine Cooling",
+"summary": "Lamborghini (Automobili Lamborghini) is recalling certain 2024 Revuelto vehicles.  The oil circuit connection flange screws may have been improperly tightened during assembly, which could cause the oil line to leak.",
+"years": [
+2024
+],
+"cars": [
+"Lamborghini Revuelto"
+],
+"eng": true
+},
+{
+"id": "26V053000",
+"date": "29/01/2026",
+"part": "Back Over Prevention",
+"summary": "Lamborghini (Automobili Lamborghini) is recalling certain 2024-2025 Revuelto vehicles. A software error may prevent the rearview camera image from displaying. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 111, \"Rear Visibility.\"",
+"years": [
+2024,
+2025
+],
+"cars": [
+"Lamborghini Revuelto"
+],
+"eng": false
+},
+{
+"id": "25V477000",
+"date": "22/07/2025",
+"part": "Structure",
+"summary": "Lamborghini (Automobili Lamborghini) is recalling certain 2024-2025 Revuelto vehicles. The gas springs that allow the doors to open and stay open, may fail due to improperly assembled support pins in the springs.",
+"years": [
+2024,
+2025
+],
+"cars": [
+"Lamborghini Revuelto"
+],
+"eng": false
+},
+{
+"id": "24V765000",
+"date": "15/10/2024",
+"part": "Visibility",
+"summary": "Lamborghini (Automobili Lamborghini) is recalling certain 2024 Revuelto vehicles.  The connecting rod between the passenger wiper arm and the wiper motor may bend and separate from the wiper motor, causing the wipers to fail.",
+"years": [
+2024
+],
+"cars": [
+"Lamborghini Revuelto"
+],
+"eng": false
+}
+],
+"tsb": {
+"n": 1,
+"top": []
+}
+},
+"vw-ea825": {
+"make": "Volkswagen Group",
+"code": "EA825",
+"name": "VW Group 4.0 TFSI V8 (EA825)",
+"codes": "EA825 (Bentley 2019+: CVDA)",
+"layout": "V8",
+"size": "4.0 L",
+"asp": "twin-turbo",
+"hp": [
+542,
+657
+],
+"src": [
+{
+"title": "List of Volkswagen Group petrol engines",
+"url": "https://en.wikipedia.org/wiki/List_of_Volkswagen_Group_petrol_engines"
+},
+{
+"title": "Bentley Bentayga",
+"url": "https://en.wikipedia.org/wiki/Bentley_Bentayga"
+},
+{
+"title": "Lamborghini Urus",
+"url": "https://en.wikipedia.org/wiki/Lamborghini_Urus"
+}
+],
+"caveat": "Wikipedia&#39;s Continental GT article files the 2019+ Bentley V8 as EA824; the VW engine list and the Bentayga article file it as EA825.",
+"notes": [
+[
+"November 2020 recall: 2019-2020 Urus, fuel-line quick connectors could soften and leak (fire risk).",
+"https://en.wikipedia.org/wiki/Lamborghini_Urus"
+]
+],
+"y0": 2019,
+"y1": 2025,
+"years": {
+"2019": {
+"cars": {
+"bentley-bentayga": [
+"Bentayga"
+],
+"lamborghini-urus": [
+"Urus"
+]
+},
+"n": 1,
+"only": true
+},
+"2020": {
+"cars": {
+"bentley-continental-gt": [
+"Continental GT",
+"Continental GT Convertible"
+],
+"bentley-bentayga": [
+"Bentayga"
+],
+"lamborghini-urus": [
+"Urus"
+]
+},
+"n": 0,
+"only": false
+},
+"2021": {
+"cars": {
+"bentley-continental-gt": [
+"Continental GT",
+"Continental GT Convertible"
+],
+"bentley-bentayga": [
+"Bentayga"
+],
+"lamborghini-urus": [
+"Urus"
+]
+},
+"n": 0,
+"only": false
+},
+"2022": {
+"cars": {
+"bentley-continental-gt": [
+"Continental GT",
+"Continental GT V8 Convertible"
+],
+"bentley-bentayga": [
+"Bentayga"
+],
+"lamborghini-urus": [
+"Urus"
+]
+},
+"n": 1,
+"only": false
+},
+"2023": {
+"cars": {
+"lamborghini-urus": [
+"Urus Performante",
+"Urus S"
+],
+"bentley-continental-gt": [
+"Continental GT",
+"Continental GT Convertible"
+],
+"bentley-bentayga": [
+"Bentayga",
+"Bentayga EWB"
+]
+},
+"n": 1,
+"only": false
+},
+"2024": {
+"cars": {
+"lamborghini-urus": [
+"Urus Performante",
+"Urus S"
+],
+"bentley-continental-gt": [
+"Continental GT",
+"Continental GTC"
+],
+"bentley-bentayga": [
+"Bentayga",
+"Bentayga EWB"
+]
+},
+"n": 1,
+"only": false
+},
+"2025": {
+"cars": {
+"bentley-bentayga": [
+"Bentayga",
+"Bentayga EWB"
+]
+},
+"n": 0,
+"only": false
+}
+},
+"complaints": 4,
+"parts": [
+[
+"Engine",
+1
+],
+[
+"Structure",
+1
+],
+[
+"Fuel System, Gasoline",
+1
+],
+[
+"Visibility/Wiper",
+1
+]
+],
+"chart": false,
+"cars": [
+{
+"slug": "bentley-bentayga",
+"name": "Bentley Bentayga",
+"years": [
+2019,
+2020,
+2021,
+2022,
+2023,
+2024,
+2025
+],
+"page": true
+},
+{
+"slug": "lamborghini-urus",
+"name": "Lamborghini Urus",
+"years": [
+2019,
+2020,
+2021,
+2022,
+2023,
+2024
+],
+"page": true
+},
+{
+"slug": "bentley-continental-gt",
+"name": "Bentley Continental GT",
+"years": [
+2020,
+2021,
+2022,
+2023,
+2024
+],
+"page": true
+}
+],
+"recalls": [
+{
+"id": "23V592000",
+"date": "23/08/2023",
+"part": "Fuel System, Gasoline",
+"summary": "Bentley Motors, Inc. (Bentley) is recalling certain 2017-2023 Bentayga vehicles.  The fuel supply module wiring can overheat and melt the flange, resulting in a fuel leak.",
+"years": [
+2019
+],
+"cars": [
+"Bentley Bentayga"
+],
+"eng": true
+},
+{
+"id": "21V336000",
+"date": "12/05/2021",
+"part": "Engine",
+"summary": "Lamborghini (Automobili Lamborghini) is recalling certain 2021 Urus vehicles.  Cracks may develop on the surface of the engine cylinder bore.",
+"years": [
+2021
+],
+"cars": [
+"Lamborghini Urus"
+],
+"eng": true
+},
+{
+"id": "20V321000",
+"date": "02/06/2020",
+"part": "Fuel System, Gasoline",
+"summary": "Bentley Motors, Inc. (Bentley) is recalling certain 2019-2020 Bentayga vehicles.  A fuel line quick connector located in the engine compartment may leak.",
+"years": [
+2019
+],
+"cars": [
+"Bentley Bentayga"
+],
+"eng": true
+},
+{
+"id": "20V713000",
+"date": "18/11/2020",
+"part": "Fuel System, Gasoline",
+"summary": "Automobili Lamborghini (Lamborghini) is recalling certain 2019-2020 Urus vehicles.  High temperatures in the engine compartment may damage the fuel line quick connector, possibly resulting in a fuel leak.",
+"years": [
+2019,
+2020
+],
+"cars": [
+"Lamborghini Urus"
+],
+"eng": true
+},
+{
+"id": "25V903000",
+"date": "22/12/2025",
+"part": "Back Over Prevention",
+"summary": "Lamborghini (Automobili Lamborghini) is recalling certain 2019-2024 Urus vehicles. A software error may deactivate the rearview camera image, resulting in the image not displaying. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 111, \"Rear",
+"years": [
+2019,
+2020,
+2021,
+2022
+],
+"cars": [
+"Lamborghini Urus"
+],
+"eng": false
+},
+{
+"id": "22V804000",
+"date": "26/10/2022",
+"part": "Back Over Prevention",
+"summary": "Lamborghini (Automobili Lamborghini) is recalling certain 2022 Urus vehicles.  The infotainment system may become damaged, which can result in an inoperative rearview camera display.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 111, \"R",
+"years": [
+2022
+],
+"cars": [
+"Lamborghini Urus"
+],
+"eng": false
+},
+{
+"id": "21V603000",
+"date": "04/08/2021",
+"part": "Seat Belts",
+"summary": "Lamborghini (Automobili Lamborghini) is recalling certain 2021 Urus vehicles.  The middle-rear passenger seat belt automatic locking retractors may deactivate early, which can prevent the child restraint system from securing properly.  As such, these vehicles fail to comply with the requirements of ",
+"years": [
+2021
+],
+"cars": [
+"Lamborghini Urus"
+],
+"eng": false
+},
+{
+"id": "20V092000",
+"date": "17/02/2020",
+"part": "Air Bags",
+"summary": "Bentley Motors, Inc. (Bentley) is recalling certain 2018-2020 Bentayga vehicles.  In the event of a crash, the side curtain air bags may not properly inflate.",
+"years": [
+2019
+],
+"cars": [
+"Bentley Bentayga"
+],
+"eng": false
+},
+{
+"id": "20V154000",
+"date": "18/03/2020",
+"part": "Seat Belts",
+"summary": "Bentley Motors, Inc. (Bentley) is recalling certain 2018-2020 Bentayga vehicles equipped with third-row seats.  The third-row upper seat belt attachment may not stay connected to the vehicle in the event of a crash.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehic",
+"years": [
+2019
+],
+"cars": [
+"Bentley Bentayga"
+],
+"eng": false
+}
+],
+"tsb": {
+"n": 130,
+"top": [
+"Bentayga V8 Kovomo- DTC P103A00 evident - Engine Oil Fuel Portion Too High",
+"Bentayga V8 Kovomo - DTC P310B00 with Symptom Code 2638 - Check Engine Lamp - Fuel Pressure Regulation",
+"Bentayga V8 Kovomo - DTC P304300 with symptom code (10061) - Fuel Pump Mechanical Malfunction - MIL lamp"
+]
+}
+},
+"audi-ea824": {
+"make": "Volkswagen Group",
+"code": "EA824",
+"name": "Audi 4.0 TFSI V8 (EA824)",
+"codes": "EA824 (Continental GT V8: CMMC / CYCB; V8 S: CMMD / CYCA)",
+"layout": "V8",
+"size": "4.0 L",
+"asp": "twin-turbo",
+"hp": [
+500,
+572
+],
+"src": [
+{
+"title": "Bentley Continental GT",
+"url": "https://en.wikipedia.org/wiki/Bentley_Continental_GT"
+},
+{
+"title": "List of Volkswagen Group petrol engines",
+"url": "https://en.wikipedia.org/wiki/List_of_Volkswagen_Group_petrol_engines"
+}
+],
+"notes": [],
+"y0": 2013,
+"y1": 2017,
+"years": {
+"2013": {
+"cars": {
+"bentley-continental-gt": [
+"Continental GT",
+"Continental GTC"
+]
+},
+"n": 0,
+"only": false
+},
+"2014": {
+"cars": {
+"bentley-continental-gt": [
+"Continental GT",
+"Continental GTC"
+]
+},
+"n": 0,
+"only": false
+},
+"2015": {
+"cars": {
+"bentley-continental-gt": [
+"Continental GT",
+"Continental GT Convertible",
+"Continental GT3-R"
+]
+},
+"n": 0,
+"only": false
+},
+"2016": {
+"cars": {
+"bentley-continental-gt": [
+"Continental GT",
+"Continental GT Convertible"
+]
+},
+"n": 0,
+"only": false
+},
+"2017": {
+"cars": {
+"bentley-continental-gt": [
+"Continental GT",
+"Continental GT Convertible"
+]
+},
+"n": 0,
+"only": false
+}
+},
+"complaints": 0,
+"parts": [],
+"chart": false,
+"cars": [
+{
+"slug": "bentley-continental-gt",
+"name": "Bentley Continental GT",
+"years": [
+2013,
+2014,
+2015,
+2016,
+2017
+],
+"page": true
+}
+],
+"recalls": [],
+"tsb": {
+"n": 4,
+"top": [
+"V8 Kovomo - Emission control warning illuminated within the DIP - Exhaust Gas Temperature Sensor DTCs evident…",
+"Misfiring, 4.0l TFSI Customer statement / workshop findings: Customer statement: Engine warning light on"
+]
+}
+},
+"vw-ea839": {
+"make": "Volkswagen Group",
+"code": "EA839",
+"name": "VW Group 3.0 V6 (EA839)",
+"codes": "EA839",
+"layout": "V6",
+"size": "3.0 L",
+"asp": "turbo plug-in hybrid",
+"hp": [
+443,
+443
+],
+"hp_note": "with the motor",
+"src": [
+{
+"title": "Bentley Bentayga",
+"url": "https://en.wikipedia.org/wiki/Bentley_Bentayga"
+},
+{
+"title": "List of Volkswagen Group petrol engines",
+"url": "https://en.wikipedia.org/wiki/List_of_Volkswagen_Group_petrol_engines"
+}
+],
+"notes": [],
+"y0": 2020,
+"y1": 2025,
+"years": {
+"2020": {
+"cars": {
+"bentley-bentayga": [
+"Bentayga"
+]
+},
+"n": 0,
+"only": false
+},
+"2021": {
+"cars": {
+"bentley-bentayga": [
+"Bentayga"
+]
+},
+"n": 0,
+"only": false
+},
+"2023": {
+"cars": {
+"bentley-bentayga": [
+"Bentayga Hybrid"
+]
+},
+"n": 0,
+"only": false
+},
+"2025": {
+"cars": {
+"bentley-bentayga": [
+"Bentayga Hybrid"
+]
+},
+"n": 0,
+"only": false
+}
+},
+"complaints": 0,
+"parts": [],
+"chart": false,
+"cars": [
+{
+"slug": "bentley-bentayga",
+"name": "Bentley Bentayga",
+"years": [
+2020,
+2021,
+2023,
+2025
+],
+"page": true
+}
+],
+"recalls": [
+{
+"id": "25V811000",
+"date": "24/11/2025",
+"part": "Electrical System",
+"summary": "Bentley Motors, Inc. (Bentley) is recalling certain 2023 Bentayga Hybrid vehicles. The high voltage battery may overheat while charging.",
+"years": [
+2023
+],
+"cars": [
+"Bentley Bentayga"
+],
+"eng": true
+}
+],
+"tsb": {
+"n": 118,
+"top": [
+"Bentayga and New Flying Spur Hybrid - DTC P103A00 evident - Engine Oil Fuel Portion Too High",
+"Multiple random misfires evident during PDI",
+"Poor Engine Running Complaints (Misfires) Petrol Engines Only"
+]
+}
+},
+"vw-w12": {
+"make": "Bentley",
+"code": "W12",
+"name": "Bentley 6.0 W12",
+"codes": "EA398 family (BWR / BEB, Speed: CKHC / BWRA)",
+"layout": "W12",
+"size": "6.0 L",
+"asp": "twin-turbo",
+"made": "hand-built by Bentley in Crewe; production ended in 2024",
+"hp": [
+552,
+700
+],
+"src": [
+{
+"title": "Volkswagen Group W12 engine",
+"url": "https://en.wikipedia.org/wiki/Volkswagen_Group_W12_engine"
+},
+{
+"title": "Bentley Continental GT",
+"url": "https://en.wikipedia.org/wiki/Bentley_Continental_GT"
+},
+{
+"title": "End of an era as final Bentley W12 engine hand-built in Crewe (The Manufacturer)",
+"url": "https://www.themanufacturer.com/articles/end-of-an-era-as-final-bentley-w12-engine-hand-built-in-crewe/"
+}
+],
+"notes": [],
+"y0": 2010,
+"y1": 2024,
+"years": {
+"2010": {
+"cars": {
+"bentley-continental-gt": [
+"Continental Flying Spur",
+"Continental GT",
+"Continental GTC",
+"Continental Supersports"
+]
+},
+"n": 0,
+"only": true
+},
+"2011": {
+"cars": {
+"bentley-continental-gt": [
+"Continental Flying Spur",
+"Continental GTC",
+"Continental Supersports",
+"Continental Supersports Convertible"
+]
+},
+"n": 0,
+"only": true
+},
+"2012": {
+"cars": {
+"bentley-continental-gt": [
+"Continental Flying Spur",
+"Continental GT",
+"Continental GTC",
+"Continental Supersports",
+"Continental Supersports Convertible"
+]
+},
+"n": 1,
+"only": true
+},
+"2013": {
+"cars": {
+"bentley-continental-gt": [
+"Continental Flying Spur",
+"Continental GT",
+"Continental GTC",
+"Continental Supersports Convertible"
+]
+},
+"n": 0,
+"only": false
+},
+"2014": {
+"cars": {
+"bentley-continental-gt": [
+"Continental GT",
+"Continental GT Speed Convertible",
+"Continental GTC"
+]
+},
+"n": 0,
+"only": false
+},
+"2015": {
+"cars": {
+"bentley-continental-gt": [
+"Continental GT",
+"Continental GT Convertible"
+]
+},
+"n": 0,
+"only": false
+},
+"2016": {
+"cars": {
+"bentley-continental-gt": [
+"Continental GT",
+"Continental GT Convertible"
+]
+},
+"n": 0,
+"only": false
+},
+"2017": {
+"cars": {
+"bentley-bentayga": [
+"Bentayga"
+],
+"bentley-continental-gt": [
+"Continental GT",
+"Continental GT Convertible",
+"Continental Supersports",
+"Continental Supersports Convertible"
+]
+},
+"n": 9,
+"only": false
+},
+"2018": {
+"cars": {
+"bentley-bentayga": [
+"Bentayga"
+],
+"bentley-continental-gt": [
+"Continental GT Convertible",
+"Continental Supersports Convertible"
+]
+},
+"n": 1,
+"only": true
+},
+"2020": {
+"cars": {
+"bentley-bentayga": [
+"Bentayga"
+],
+"bentley-continental-gt": [
+"Continental GT",
+"Continental GT Convertible"
+]
+},
+"n": 0,
+"only": false
+},
+"2021": {
+"cars": {
+"bentley-continental-gt": [
+"Continental GT",
+"Continental GT Convertible"
+],
+"bentley-bentayga": [
+"Bentayga"
+]
+},
+"n": 0,
+"only": false
+},
+"2022": {
+"cars": {
+"bentley-continental-gt": [
+"Continental GT Speed",
+"Continental GT Speed Convertible"
+],
+"bentley-bentayga": [
+"Bentayga Speed"
+]
+},
+"n": 0,
+"only": false
+},
+"2023": {
+"cars": {
+"bentley-continental-gt": [
+"Continental GT Convertible Speed",
+"Continental GT Speed"
+],
+"bentley-bentayga": [
+"Bentayga Speed"
+]
+},
+"n": 0,
+"only": false
+},
+"2024": {
+"cars": {
+"bentley-continental-gt": [
+"Continental GT",
+"Continental GTC"
+]
+},
+"n": 0,
+"only": false
+}
+},
+"complaints": 11,
+"parts": [
+[
+"Air Bags",
+3
+],
+[
+"Service Brakes",
+3
+],
+[
+"Visibility/Wiper",
+1
+],
+[
+"Unknown Or Other",
+1
+]
+],
+"chart": false,
+"cars": [
+{
+"slug": "bentley-continental-gt",
+"name": "Bentley Continental GT",
+"years": [
+2010,
+2011,
+2012,
+2013,
+2014,
+2015,
+2016,
+2017,
+2018,
+2020,
+2021,
+2022,
+2023,
+2024
+],
+"page": true
+},
+{
+"slug": "bentley-bentayga",
+"name": "Bentley Bentayga",
+"years": [
+2017,
+2018,
+2020,
+2021,
+2022,
+2023
+],
+"page": true
+}
+],
+"recalls": [
+{
+"id": "23V592000",
+"date": "23/08/2023",
+"part": "Fuel System, Gasoline",
+"summary": "Bentley Motors, Inc. (Bentley) is recalling certain 2017-2023 Bentayga vehicles.  The fuel supply module wiring can overheat and melt the flange, resulting in a fuel leak.",
+"years": [
+2017,
+2018
+],
+"cars": [
+"Bentley Bentayga"
+],
+"eng": true
+},
+{
+"id": "15V688000",
+"date": "21/10/2015",
+"part": "Electrical System",
+"summary": "Bentley Motors, Inc. (Bentley) is recalling certain model year 2012-2014 Continental GT vehicles manufactured February 1, 2011, to April 30, 2014, 2012-2015 Continental GTC vehicles manufactured February 1, 2011, to June 30, 2014, 2012-2013 Continental Flying Spur vehicles manufactured March 31, 201",
+"years": [
+2012
+],
+"cars": [
+"Bentley Continental GT"
+],
+"eng": true
+},
+{
+"id": "20V092000",
+"date": "17/02/2020",
+"part": "Air Bags",
+"summary": "Bentley Motors, Inc. (Bentley) is recalling certain 2018-2020 Bentayga vehicles.  In the event of a crash, the side curtain air bags may not properly inflate.",
+"years": [
+2018
+],
+"cars": [
+"Bentley Bentayga"
+],
+"eng": false
+},
+{
+"id": "20V154000",
+"date": "18/03/2020",
+"part": "Seat Belts",
+"summary": "Bentley Motors, Inc. (Bentley) is recalling certain 2018-2020 Bentayga vehicles equipped with third-row seats.  The third-row upper seat belt attachment may not stay connected to the vehicle in the event of a crash.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehic",
+"years": [
+2018
+],
+"cars": [
+"Bentley Bentayga"
+],
+"eng": false
+},
+{
+"id": "18V632000",
+"date": "14/09/2018",
+"part": "Back Over Prevention",
+"summary": "Bentley Motors, Inc. (Bentley) is recalling certain 2018 Bentley Mulsanne and 2018 Bentayga vehicles.  When reverse gear has been selected, the rearview camera display may be obstructed or may not be fully visible within two seconds.  As such, these vehicles fail to comply with the requirements of F",
+"years": [
+2018
+],
+"cars": [
+"Bentley Bentayga"
+],
+"eng": false
+},
+{
+"id": "16V816000",
+"date": "10/11/2016",
+"part": "Seats",
+"summary": "Bentley Motors, Inc. (Bentley) is recalling certain model year 2017 Bentayga vehicles manufactured March 1, 2016, to September 30, 2016.  During the assembly process, the affected vehicles may not have had the seat mechanism and instrument panel joints properly tightened.",
+"years": [
+2017
+],
+"cars": [
+"Bentley Bentayga"
+],
+"eng": false
+},
+{
+"id": "13V484000",
+"date": "17/10/2013",
+"part": "Service Brakes, Hydraulic",
+"summary": "Bentley Motors, Inc. (Bentley) is recalling certain model year 2007 through 2011 Continental GT, GTC, and Flying Spur vehicles, manufactured from July 2006 through June 2010 and equipped with carbon ceramic brake discs.  In the affected vehicles, the stainless steel screws that secure the brake roto",
+"years": [
+2010,
+2011
+],
+"cars": [
+"Bentley Continental GT"
+],
+"eng": false
+}
+],
+"tsb": {
+"n": 273,
+"top": [
+"New Continental GT/GTC, New Flying Spur and Bentayga - Low Oil Pressure Warning During Early Vehicle Life -…",
+"W12 - Oil leak from engine Technical Background: -The breather return line and the oil dipstick tube Orings…",
+"W12 TSI Camshaft Phaser Position Related DTC Customer Statement: -Customer reporting (Emission Control…"
+]
+}
+},
+"mclaren-m838t": {
+"make": "McLaren",
+"code": "M838T",
+"name": "McLaren M838T",
+"codes": "M838T (12C, 650S, 675LT), M838TE (540C, 570S, 600LT, 620R)",
+"layout": "90° flat-plane V8",
+"size": "3.8 L",
+"asp": "twin-turbo",
+"made": "assembled by Ricardo in Shoreham-by-Sea, UK",
+"hp": [
+533,
+666
+],
+"src": [
+{
+"title": "McLaren M838T engine",
+"url": "https://en.wikipedia.org/wiki/McLaren_M838T_engine"
+},
+{
+"title": "McLaren 570S",
+"url": "https://en.wikipedia.org/wiki/McLaren_570S"
+}
+],
+"notes": [],
+"y0": 2012,
+"y1": 2020,
+"years": {
+"2012": {
+"cars": {
+"mclaren-650s-12c": [
+"MP4-12C Coupe"
+]
+},
+"n": 5,
+"only": true
+},
+"2014": {
+"cars": {
+"mclaren-650s-12c": [
+"MP4-12C Coupe",
+"MP4-12C Spider"
+]
+},
+"n": 4,
+"only": true
+},
+"2015": {
+"cars": {
+"mclaren-650s-12c": [
+"650S Coupe",
+"650S Spider"
+]
+},
+"n": 3,
+"only": true
+},
+"2016": {
+"cars": {
+"mclaren-650s-12c": [
+"650S Can-Am",
+"650S Coupe",
+"650S Spider",
+"675LT Coupe",
+"675LT Spider"
+],
+"mclaren-570s-540c": [
+"570S Coupe"
+]
+},
+"n": 1,
+"only": true
+},
+"2017": {
+"cars": {
+"mclaren-570s-540c": [
+"570GT",
+"570S Coupe"
+]
+},
+"n": 3,
+"only": true
+},
+"2018": {
+"cars": {
+"mclaren-570s-540c": [
+"540C Coupe",
+"570GT",
+"570S Coupe",
+"570S Spider"
+]
+},
+"n": 0,
+"only": true
+},
+"2019": {
+"cars": {
+"mclaren-570s-540c": [
+"570GT",
+"570S Coupe",
+"570S Spider",
+"600LT Coupe"
+]
+},
+"n": 2,
+"only": true
+},
+"2020": {
+"cars": {
+"mclaren-570s-540c": [
+"570S Coupe",
+"570S Spider",
+"600LT Spider"
+]
+},
+"n": 2,
+"only": true
+}
+},
+"complaints": 20,
+"parts": [
+[
+"Exterior Lighting",
+7
+],
+[
+"Engine",
+3
+],
+[
+"Air Bags",
+2
+],
+[
+"Structure",
+2
+]
+],
+"chart": false,
+"cars": [
+{
+"slug": "mclaren-650s-12c",
+"name": "McLaren 650S / 12C",
+"years": [
+2012,
+2014,
+2015,
+2016
+],
+"page": true
+},
+{
+"slug": "mclaren-570s-540c",
+"name": "McLaren 570S / 540C",
+"years": [
+2016,
+2017,
+2018,
+2019,
+2020
+],
+"page": true
+}
+],
+"recalls": [
+{
+"id": "13V541000",
+"date": "30/10/2013",
+"part": "Visibility",
+"summary": "McLaren Automotive, Inc. (McLaren) is recalling certain model year 2012-2014 MP4 12-C Spider and Coupe vehicles manufactured October 10, 2011, through October 23, 2013 and originally sold in, or currently registered in, Florida, Georgia, Alabama, Mississippi, Louisiana, and Texas.  Due to a combinat",
+"years": [
+2014
+],
+"cars": [
+"McLaren 650S / 12C"
+],
+"eng": false
+}
+],
+"tsb": {
+"n": 26,
+"top": [
+"Engine Coolant Pump Leak Diagnostics",
+"Engine Warning Light ON With or Without Engine Running Issues",
+"Sports Series - Fuel Adaptions with Engine Warning Light"
+]
+}
+},
+"mclaren-m840t": {
+"make": "McLaren",
+"code": "M840T",
+"name": "McLaren M840T",
+"codes": "M840T (720S, 765LT), M840TE (GT)",
+"layout": "90° flat-plane V8",
+"size": "4.0 L",
+"asp": "twin-turbo",
+"made": "assembled by Ricardo in Shoreham-by-Sea, UK",
+"hp": [
+612,
+755
+],
+"src": [
+{
+"title": "McLaren M840T engine",
+"url": "https://en.wikipedia.org/wiki/McLaren_M840T_engine"
+},
+{
+"title": "McLaren GT",
+"url": "https://en.wikipedia.org/wiki/McLaren_GT"
+}
+],
+"notes": [],
+"y0": 2018,
+"y1": 2022,
+"years": {
+"2018": {
+"cars": {
+"mclaren-720s-750s": [
+"720S Coupe"
+]
+},
+"n": 1,
+"only": true
+},
+"2019": {
+"cars": {
+"mclaren-720s-750s": [
+"720S Coupe",
+"720S Spider"
+]
+},
+"n": 1,
+"only": true
+},
+"2020": {
+"cars": {
+"mclaren-720s-750s": [
+"720S Coupe",
+"720S Spider"
+],
+"mclaren-gt": [
+"GT"
+]
+},
+"n": 1,
+"only": true
+},
+"2021": {
+"cars": {
+"mclaren-gt": [
+"GT"
+],
+"mclaren-720s-750s": [
+"720S Coupe",
+"720S Coupe LM",
+"720S Spider",
+"765LT Coupe"
+]
+},
+"n": 0,
+"only": true
+},
+"2022": {
+"cars": {
+"mclaren-720s-750s": [
+"720S Coupe",
+"720S Spider",
+"765LT Spider"
+],
+"mclaren-gt": [
+"GT"
+]
+},
+"n": 0,
+"only": true
+}
+},
+"complaints": 3,
+"parts": [
+[
+"Unknown Or Other",
+1
+],
+[
+"Suspension",
+1
+],
+[
+"Structure",
+1
+]
+],
+"chart": false,
+"cars": [
+{
+"slug": "mclaren-720s-750s",
+"name": "McLaren 720S / 750S",
+"years": [
+2018,
+2019,
+2020,
+2021,
+2022
+],
+"page": true
+},
+{
+"slug": "mclaren-gt",
+"name": "McLaren GT",
+"years": [
+2020,
+2021,
+2022
+],
+"page": true
+}
+],
+"recalls": [
+{
+"id": "20V231000",
+"date": "23/04/2020",
+"part": "Fuel System, Gasoline",
+"summary": "McLaren Automotive Incorporated (McLaren) is recalling certain 2016-2020 720S, 2019 Senna, 2020 GT, and 2017-2019 570GT vehicles.  The Noise, Vibration, and Harshness (NVH) foam pad underneath the fuel tank may retain moisture and corrode the fuel tank, potentially causing a fuel leak.",
+"years": [
+2020
+],
+"cars": [
+"McLaren GT"
+],
+"eng": true
+},
+{
+"id": "25V216000",
+"date": "09/04/2025",
+"part": "Service Brakes, Hydraulic",
+"summary": "McLaren Automotive Incorporated (McClaren) is recalling certain 2020-2025 600LT, 720S, Artura, GT, and GTS vehicles.  The brake lines may be routed incorrectly and cause the brakes on the incorrect side to activate, possibly resulting in one of the rear wheels locking up.",
+"years": [
+2020,
+2021,
+2022
+],
+"cars": [
+"McLaren 720S / 750S",
+"McLaren GT"
+],
+"eng": false
+},
+{
+"id": "24V661000",
+"date": "10/09/2024",
+"part": "Latches/Locks/Linkages",
+"summary": "McLaren Automotive Incorporated (McLaren) is recalling certain 2020-2023 McLaren GT vehicles.  The manual release cable of the hood latch may have excessive tension that can cause the latch to open, resulting in the hood opening unexpectedly.",
+"years": [
+2020,
+2021,
+2022
+],
+"cars": [
+"McLaren GT"
+],
+"eng": false
+},
+{
+"id": "22V103000",
+"date": "23/02/2022",
+"part": "Air Bags",
+"summary": "McLaren Automotive Incorporated (McLaren) is recalling certain 2019-2021 McLaren GT vehicles.  The driver's air bag and the occupant restraint controller may be improperly connected, which can result in a deactivated driver's air bag that will not deploy in a crash.",
+"years": [
+2020,
+2021
+],
+"cars": [
+"McLaren GT"
+],
+"eng": false
+},
+{
+"id": "21V561000",
+"date": "23/07/2021",
+"part": "Service Brakes, Hydraulic",
+"summary": "McLaren Automotive Incorporated (McLaren) is recalling certain 2020 570S, GT, 2019 600LT, and 2019-2020 720S vehicles.  The brake assembly banjo bolt may be missing the holes that supply brake fluid to the caliper, which would cause the brakes to fail on one corner of the vehicle.",
+"years": [
+2020
+],
+"cars": [
+"McLaren GT"
+],
+"eng": false
+}
+],
+"tsb": {
+"n": 22,
+"top": [
+"Engine System Fault Warning Message - Fuel System Adaptions",
+"Turbo Wastegate Rattle",
+"Engine Oil Leak Detection Dye"
+]
+}
+},
+"mclaren-m630": {
+"make": "McLaren",
+"code": "M630",
+"name": "McLaren M630",
+"codes": "M630",
+"layout": "120° V6",
+"size": "3.0 L",
+"asp": "twin-turbo plug-in hybrid",
+"hp": [
+577,
+577
+],
+"hp_note": "engine only; 671 hp with the motor",
+"src": [
+{
+"title": "McLaren M630 engine",
+"url": "https://en.wikipedia.org/wiki/McLaren_M630_engine"
+}
+],
+"notes": [],
+"y0": 2023,
+"y1": 2023,
+"years": {
+"2023": {
+"cars": {
+"mclaren-artura": [
+"Artura"
+]
+},
+"n": 1,
+"only": true
+}
+},
+"complaints": 1,
+"parts": [
+[
+"Fuel System, Gasoline",
+1
+]
+],
+"chart": false,
+"cars": [
+{
+"slug": "mclaren-artura",
+"name": "McLaren Artura",
+"years": [
+2023
+],
+"page": true
+}
+],
+"recalls": [
+{
+"id": "23V796000",
+"date": "23/11/2023",
+"part": "Engine",
+"summary": "McLaren Automotive Incorporated (McLaren) is recalling certain 2023-2024 Artura vehicles.  A pipe in the low-pressure fuel pipe assembly may detach, which can result in a fuel leak.",
+"years": [
+2023
+],
+"cars": [
+"McLaren Artura"
+],
+"eng": true
+},
+{
+"id": "22V908000",
+"date": "08/12/2022",
+"part": "Fuel System, Gasoline",
+"summary": "McLaren Automotive Incorporated (McLaren) is recalling certain 2023 Artura vehicles.  The nuts for the high pressure fuel pipe may loosen, which can result in a fuel leak.",
+"years": [
+2023
+],
+"cars": [
+"McLaren Artura"
+],
+"eng": true
+},
+{
+"id": "25V216000",
+"date": "09/04/2025",
+"part": "Service Brakes, Hydraulic",
+"summary": "McLaren Automotive Incorporated (McClaren) is recalling certain 2020-2025 600LT, 720S, Artura, GT, and GTS vehicles.  The brake lines may be routed incorrectly and cause the brakes on the incorrect side to activate, possibly resulting in one of the rear wheels locking up.",
+"years": [
+2023
+],
+"cars": [
+"McLaren Artura"
+],
+"eng": false
+}
+],
+"tsb": {
+"n": 30,
+"top": [
+"McLaren Artura Engine Oil Leak Diagnosis Guide - Front of Engine",
+"McLaren Artura Oil Leak Diagnosis Guide - Rear of Engine"
+]
+}
+},
+"aston-am-v8": {
+"make": "Aston Martin",
+"code": "AM14",
+"name": "Aston Martin 4.7 V8",
+"codes": "AM14 (also called AJ37; Jaguar AJ-V8 based)",
+"layout": "V8",
+"size": "4.7 L",
+"asp": "naturally aspirated",
+"made": "hand-assembled at Aston Martin&#39;s Cologne plant",
+"hp": [
+420,
+430
+],
+"src": [
+{
+"title": "Aston Martin V8 engine",
+"url": "https://en.wikipedia.org/wiki/Aston_Martin_V8_engine"
+},
+{
+"title": "Aston Martin Vantage (2005)",
+"url": "https://en.wikipedia.org/wiki/Aston_Martin_Vantage_(2005)"
+}
+],
+"notes": [],
+"y0": 2010,
+"y1": 2016,
+"years": {
+"2010": {
+"cars": {
+"aston-martin-vantage": [
+"V8 Vantage"
+]
+},
+"n": 2,
+"only": true
+},
+"2011": {
+"cars": {
+"aston-martin-vantage": [
+"V8 Vantage",
+"V8 Vantage S"
+]
+},
+"n": 2,
+"only": false
+},
+"2012": {
+"cars": {
+"aston-martin-vantage": [
+"V8 Vantage",
+"V8 Vantage S"
+]
+},
+"n": 1,
+"only": false
+},
+"2013": {
+"cars": {
+"aston-martin-vantage": [
+"V8 Vantage",
+"V8 Vantage S"
+]
+},
+"n": 0,
+"only": true
+},
+"2014": {
+"cars": {
+"aston-martin-vantage": [
+"V8 Vantage",
+"V8 Vantage S"
+]
+},
+"n": 0,
+"only": true
+},
+"2015": {
+"cars": {
+"aston-martin-vantage": [
+"V8 Vantage",
+"V8 Vantage S",
+"Vantage GT"
+]
+},
+"n": 3,
+"only": false
+},
+"2016": {
+"cars": {
+"aston-martin-vantage": [
+"V8 Vantage",
+"V8 Vantage S",
+"Vantage GT"
+]
+},
+"n": 4,
+"only": false
+}
+},
+"complaints": 12,
+"parts": [
+[
+"Exterior Lighting",
+5
+],
+[
+"Power Train",
+2
+],
+[
+"Vehicle Speed Control",
+1
+],
+[
+"Service Brakes",
+1
+]
+],
+"chart": false,
+"cars": [
+{
+"slug": "aston-martin-vantage",
+"name": "Aston Martin Vantage",
+"years": [
+2010,
+2011,
+2012,
+2013,
+2014,
+2015,
+2016
+],
+"page": true
+}
+],
+"recalls": [
+{
+"id": "17V391000",
+"date": "21/06/2017",
+"part": "Power Train",
+"summary": "Aston Martin the Americas (Aston Martin) is recalling certain 2011-2014 V8 Vantage vehicles equipped with 7-speed Auto-Shift Manual (ASM) \"SportShift II\" transmissions.  A connector for the clutch fluid line may break, resulting in a hydraulic fluid leak.",
+"years": [
+2011,
+2012,
+2013,
+2014
+],
+"cars": [
+"Aston Martin Vantage"
+],
+"eng": true
+},
+{
+"id": "17V390000",
+"date": "21/06/2017",
+"part": "Power Train",
+"summary": "Aston Martin The Americas (Aston Martin) is recalling certain 2012 V8 Vantage vehicles equipped with 6-speed Auto-Shift Manual (ASM) transmissions.  A connector for the transmission fluid lines may break resulting in a hydraulic fluid leak.",
+"years": [
+2012
+],
+"cars": [
+"Aston Martin Vantage"
+],
+"eng": true
+},
+{
+"id": "17V389000",
+"date": "21/06/2017",
+"part": "Electrical System",
+"summary": "Aston Martin The Americas (Aston Martin) is recalling certain 2011-2012 V8 Vantage vehicles.  The affected vehicles received updated transmission and engine control software which may conflict with the pre-existing clutch settings and may cause the transmission to shift to neutral, or enable clutch ",
+"years": [
+2011,
+2012
+],
+"cars": [
+"Aston Martin Vantage"
+],
+"eng": false
+},
+{
+"id": "15V846000",
+"date": "16/12/2015",
+"part": "Latches/Locks/Linkages",
+"summary": "Aston Martin Lagonda of North America (Aston Martin) is recalling certain model year 2010-2015 DB9, 2010-2012 DBS, 2010-2016 V8 Vantage, 2012 Virage, 2010-2016 Rapide, 2014-2016 Vanquish, 2011-2016 V12 Vantage, and 2012-2013 V12 Zagato vehicles.   The affected vehicles are equipped with interior doo",
+"years": [
+2010,
+2011,
+2012,
+2013,
+2014,
+2015,
+2016
+],
+"cars": [
+"Aston Martin Vantage"
+],
+"eng": false
+},
+{
+"id": "14V010000",
+"date": "16/01/2014",
+"part": "Vehicle Speed Control",
+"summary": "Aston Martin Lagonda of North America (Aston Martin) is recalling certain model year 2008-2014 DB9 and V8 Vantage, 2009-2012 DBS, 2010-2012 Rapide, 2014 Rapide S, 2011-2012 V12 Vantage, 2011-2014 V8 Vantage S and 2012 Virage vehicles.  Due to a manufacturing error, the accelerator pedal arm may brea",
+"years": [
+2010,
+2011,
+2012,
+2013,
+2014
+],
+"cars": [
+"Aston Martin Vantage"
+],
+"eng": false
+},
+{
+"id": "14V753000",
+"date": "25/11/2014",
+"part": "Seats",
+"summary": "Aston Martin Lagonda of North America (Aston Martin) is recalling certain model year 2006-2014 DB9, V12 Vantage, V8 Vantage, DBS, and Virage vehicles manufactured July 3, 2006, to November 5, 2014.  In the affected vehicles, the electronic control module for the driver and front passenger seat heate",
+"years": [
+2010,
+2011,
+2012,
+2013,
+2014
+],
+"cars": [
+"Aston Martin Vantage"
+],
+"eng": false
+},
+{
+"id": "13V228000",
+"date": "29/05/2013",
+"part": "Vehicle Speed Control",
+"summary": "Aston Martin is recalling certain model year DB9, Virage, V8 Vantage, V12 Vantage, and Rapide vehicles manufactured from May 14, 2012, through April 10, 2013.  Due to a manufacturing error, the throttle pedal arm may break.",
+"years": [
+2012,
+2013,
+2014
+],
+"cars": [
+"Aston Martin Vantage"
+],
+"eng": false
+}
+],
+"tsb": {
+"n": 5,
+"top": []
+}
+},
+"aston-am-v12": {
+"make": "Aston Martin",
+"code": "AM V12",
+"name": "Aston Martin 5.9 V12",
+"codes": "AM08 (DBS), AM11 (V12 Vantage), AM28 (V12 Vantage S)",
+"layout": "60° V12",
+"size": "5.9 L",
+"asp": "naturally aspirated",
+"made": "Aston Martin&#39;s engine plant in Cologne",
+"hp": [
+510,
+565
+],
+"src": [
+{
+"title": "Aston Martin V12 engine",
+"url": "https://en.wikipedia.org/wiki/Aston_Martin_V12_engine"
+},
+{
+"title": "Aston Martin Vantage (2005)",
+"url": "https://en.wikipedia.org/wiki/Aston_Martin_Vantage_(2005)"
+}
+],
+"caveat": "EPA lists the V12 Vantage S as 6.0 L; Aston Martin&#39;s figure is 5.9 L.",
+"notes": [],
+"y0": 2010,
+"y1": 2017,
+"years": {
+"2010": {
+"cars": {
+"aston-martin-dbs": [
+"DBS"
+]
+},
+"n": 0,
+"only": true
+},
+"2011": {
+"cars": {
+"aston-martin-vantage": [
+"V12 Vantage"
+],
+"aston-martin-dbs": [
+"DBS"
+]
+},
+"n": 0,
+"only": false
+},
+"2012": {
+"cars": {
+"aston-martin-dbs": [
+"DBS"
+],
+"aston-martin-vantage": [
+"V12 Vantage"
+]
+},
+"n": 0,
+"only": false
+},
+"2015": {
+"cars": {
+"aston-martin-vantage": [
+"V12 Vantage S"
+]
+},
+"n": 1,
+"only": false
+},
+"2016": {
+"cars": {
+"aston-martin-vantage": [
+"V12 Vantage S"
+]
+},
+"n": 0,
+"only": false
+},
+"2017": {
+"cars": {
+"aston-martin-vantage": [
+"V12 Vantage S"
+]
+},
+"n": 1,
+"only": true
+}
+},
+"complaints": 2,
+"parts": [
+[
+"Exterior Lighting",
+1
+],
+[
+"Engine",
+1
+]
+],
+"chart": false,
+"cars": [
+{
+"slug": "aston-martin-dbs",
+"name": "Aston Martin DBS",
+"years": [
+2010,
+2011,
+2012
+],
+"page": true
+},
+{
+"slug": "aston-martin-vantage",
+"name": "Aston Martin Vantage",
+"years": [
+2011,
+2012,
+2015,
+2016,
+2017
+],
+"page": true
+}
+],
+"recalls": [
+{
+"id": "17V796000",
+"date": "11/12/2017",
+"part": "Power Train",
+"summary": "Aston Martin The Americas (Aston Martin) is recalling certain 2009-2016 DB9, 2009-2012 DBS, 2010-2015 Rapide, 2012 Virage, and 2014 Vanquish vehicles equipped with a 6-Speed Touchtronic II Automatic Transmission.  A communication error between the Engine Control Module (ECM) and the Transmission Con",
+"years": [
+2010,
+2011,
+2012
+],
+"cars": [
+"Aston Martin DBS"
+],
+"eng": true
+},
+{
+"id": "15V846000",
+"date": "16/12/2015",
+"part": "Latches/Locks/Linkages",
+"summary": "Aston Martin Lagonda of North America (Aston Martin) is recalling certain model year 2010-2015 DB9, 2010-2012 DBS, 2010-2016 V8 Vantage, 2012 Virage, 2010-2016 Rapide, 2014-2016 Vanquish, 2011-2016 V12 Vantage, and 2012-2013 V12 Zagato vehicles.   The affected vehicles are equipped with interior doo",
+"years": [
+2010,
+2011,
+2012,
+2015,
+2016
+],
+"cars": [
+"Aston Martin DBS",
+"Aston Martin Vantage"
+],
+"eng": false
+},
+{
+"id": "14V010000",
+"date": "16/01/2014",
+"part": "Vehicle Speed Control",
+"summary": "Aston Martin Lagonda of North America (Aston Martin) is recalling certain model year 2008-2014 DB9 and V8 Vantage, 2009-2012 DBS, 2010-2012 Rapide, 2014 Rapide S, 2011-2012 V12 Vantage, 2011-2014 V8 Vantage S and 2012 Virage vehicles.  Due to a manufacturing error, the accelerator pedal arm may brea",
+"years": [
+2010,
+2011,
+2012
+],
+"cars": [
+"Aston Martin DBS",
+"Aston Martin Vantage"
+],
+"eng": false
+},
+{
+"id": "14V753000",
+"date": "25/11/2014",
+"part": "Seats",
+"summary": "Aston Martin Lagonda of North America (Aston Martin) is recalling certain model year 2006-2014 DB9, V12 Vantage, V8 Vantage, DBS, and Virage vehicles manufactured July 3, 2006, to November 5, 2014.  In the affected vehicles, the electronic control module for the driver and front passenger seat heate",
+"years": [
+2010,
+2011,
+2012
+],
+"cars": [
+"Aston Martin DBS",
+"Aston Martin Vantage"
+],
+"eng": false
+},
+{
+"id": "13V228000",
+"date": "29/05/2013",
+"part": "Vehicle Speed Control",
+"summary": "Aston Martin is recalling certain model year DB9, Virage, V8 Vantage, V12 Vantage, and Rapide vehicles manufactured from May 14, 2012, through April 10, 2013.  Due to a manufacturing error, the throttle pedal arm may break.",
+"years": [
+2012
+],
+"cars": [
+"Aston Martin DBS",
+"Aston Martin Vantage"
+],
+"eng": false
+}
+],
+"tsb": {
+"n": 9,
+"top": [
+"Procedure for the Bosch engine management system (EMS) to do the variable valve timing (VVT) learn procedure,…"
+]
+}
+},
+"aston-ae31": {
+"make": "Aston Martin",
+"code": "AE31",
+"name": "Aston Martin AE31 V12",
+"codes": "AE31",
+"layout": "60° V12",
+"size": "5.2 L",
+"asp": "twin-turbo",
+"hp": [
+600,
+759
+],
+"src": [
+{
+"title": "Aston Martin DB11",
+"url": "https://en.wikipedia.org/wiki/Aston_Martin_DB11"
+},
+{
+"title": "Aston Martin DBS Superleggera",
+"url": "https://en.wikipedia.org/wiki/Aston_Martin_DBS_Superleggera"
+},
+{
+"title": "Aston Martin V12 engine",
+"url": "https://en.wikipedia.org/wiki/Aston_Martin_V12_engine"
+}
+],
+"notes": [],
+"y0": 2017,
+"y1": 2023,
+"years": {
+"2017": {
+"cars": {
+"aston-martin-db11-db12": [
+"DB11 V12"
+]
+},
+"n": 0,
+"only": true
+},
+"2018": {
+"cars": {
+"aston-martin-db11-db12": [
+"DB11 V12"
+]
+},
+"n": 0,
+"only": false
+},
+"2019": {
+"cars": {
+"aston-martin-db11-db12": [
+"DB11 V12"
+],
+"aston-martin-dbs": [
+"DBS"
+]
+},
+"n": 0,
+"only": false
+},
+"2020": {
+"cars": {
+"aston-martin-db11-db12": [
+"DB11 V12"
+],
+"aston-martin-dbs": [
+"DBS"
+]
+},
+"n": 0,
+"only": false
+},
+"2021": {
+"cars": {
+"aston-martin-dbs": [
+"DBS"
+],
+"aston-martin-db11-db12": [
+"DB11 V12"
+]
+},
+"n": 0,
+"only": false
+},
+"2022": {
+"cars": {
+"aston-martin-dbs": [
+"DBS"
+],
+"aston-martin-db11-db12": [
+"DB11 V12"
+]
+},
+"n": 0,
+"only": false
+},
+"2023": {
+"cars": {
+"aston-martin-vantage": [
+"Vantage V12"
+],
+"aston-martin-dbs": [
+"DBS"
+],
+"aston-martin-db11-db12": [
+"DB11 V12"
+]
+},
+"n": 0,
+"only": false
+}
+},
+"complaints": 0,
+"parts": [],
+"chart": false,
+"cars": [
+{
+"slug": "aston-martin-db11-db12",
+"name": "Aston Martin DB11 / DB12",
+"years": [
+2017,
+2018,
+2019,
+2020,
+2021,
+2022,
+2023
+],
+"page": true
+},
+{
+"slug": "aston-martin-dbs",
+"name": "Aston Martin DBS",
+"years": [
+2019,
+2020,
+2021,
+2022,
+2023
+],
+"page": true
+},
+{
+"slug": "aston-martin-vantage",
+"name": "Aston Martin Vantage",
+"years": [
+2023
+],
+"page": true
+}
+],
+"recalls": [],
+"tsb": {
+"n": 10,
+"top": [
+"Inspection Process for Damper Oil Leakage",
+"Procedure to learn engine misfire corrections (V12) - DBS Superleggera added to document"
+]
+}
+},
+"amg-m177-m178": {
+"make": "Mercedes-AMG",
+"code": "M177/M178",
+"name": "Mercedes-AMG M177 / M178",
+"codes": "M178 (AMG GT 2-door), M177 (AMG GT 4-door and 2024+ coupe, every Aston Martin here)",
+"layout": "V8",
+"size": "4.0 L",
+"asp": "twin-turbo",
+"made": "hand-assembled at AMG in Affalterbach, one engine per builder",
+"hp": [
+456,
+720
+],
+"src": [
+{
+"title": "Mercedes-AMG M178 engine",
+"url": "https://en.wikipedia.org/wiki/Mercedes-Benz_M178_engine"
+},
+{
+"title": "Mercedes-AMG GT",
+"url": "https://en.wikipedia.org/wiki/Mercedes-AMG_GT"
+},
+{
+"title": "Aston Martin Vantage (2018)",
+"url": "https://en.wikipedia.org/wiki/Aston_Martin_Vantage_(2018)"
+},
+{
+"title": "Aston Martin DBX",
+"url": "https://en.wikipedia.org/wiki/Aston_Martin_DBX"
+}
+],
+"notes": [],
+"y0": 2016,
+"y1": 2025,
+"years": {
+"2016": {
+"cars": {
+"mercedes-amg-gt": [
+"AMG GT S"
+]
+},
+"n": 10,
+"only": true
+},
+"2017": {
+"cars": {
+"mercedes-amg-gt": [
+"AMG GT",
+"AMG GT S"
+]
+},
+"n": 1,
+"only": true
+},
+"2018": {
+"cars": {
+"mercedes-amg-gt": [
+"AMG GT C Coupe",
+"AMG GT C Roadster",
+"AMG GT Coupe",
+"AMG GT R Coupe",
+"AMG GT Roadster",
+"AMG GT S Coupe"
+],
+"aston-martin-db11-db12": [
+"DB11 V8"
+]
+},
+"n": 2,
+"only": false
+},
+"2019": {
+"cars": {
+"aston-martin-vantage": [
+"Vantage V8"
+],
+"aston-martin-db11-db12": [
+"DB11 V8"
+],
+"mercedes-amg-gt": [
+"AMG GT 63 4matic Plus",
+"AMG GT 63 S 4matic Plus",
+"AMG GT C Coupe",
+"AMG GT C Roadster",
+"AMG GT Coupe",
+"AMG GT R Coupe",
+"AMG GT Roadster",
+"AMG GT S Coupe"
+]
+},
+"n": 0,
+"only": false
+},
+"2020": {
+"cars": {
+"aston-martin-vantage": [
+"Vantage Manual",
+"Vantage V8"
+],
+"aston-martin-db11-db12": [
+"DB11 V8"
+],
+"mercedes-amg-gt": [
+"AMG GT 63 4matic Plus",
+"AMG GT 63 S 4matic Plus",
+"AMG GT C Coupe",
+"AMG GT C Roadster",
+"AMG GT Coupe",
+"AMG GT R Coupe",
+"AMG GT R Roadster",
+"AMG GT Roadster"
+]
+},
+"n": 0,
+"only": false
+},
+"2021": {
+"cars": {
+"aston-martin-vantage": [
+"Vantage Manual",
+"Vantage V8"
+],
+"aston-martin-db11-db12": [
+"DB11 V8"
+],
+"aston-martin-dbx": [
+"DBX V8"
+],
+"mercedes-amg-gt": [
+"AMG GT 63 4matic Plus",
+"AMG GT 63 S 4matic Plus",
+"AMG GT Black Series",
+"AMG GT C Coupe",
+"AMG GT C Roadster",
+"AMG GT Coupe",
+"AMG GT R Coupe",
+"AMG GT Roadster"
+]
+},
+"n": 0,
+"only": false
+},
+"2022": {
+"cars": {
+"aston-martin-db11-db12": [
+"DB11 V8"
+],
+"aston-martin-vantage": [
+"Vantage V8"
+],
+"aston-martin-dbx": [
+"DBX V8"
+]
+},
+"n": 0,
+"only": false
+},
+"2023": {
+"cars": {
+"aston-martin-vantage": [
+"Vantage V8"
+],
+"aston-martin-db11-db12": [
+"DB11 V8"
+],
+"aston-martin-dbx": [
+"DBX 707",
+"DBX V8"
+],
+"mercedes-amg-gt": [
+"AMG GT 63 4matic Plus",
+"AMG GT 63 S 4matic Plus"
+]
+},
+"n": 1,
+"only": false
+},
+"2024": {
+"cars": {
+"aston-martin-db11-db12": [
+"DB12 V8"
+],
+"mercedes-amg-gt": [
+"AMG GT 55 4matic Plus (coupe)",
+"AMG GT 63 4matic Plus",
+"AMG GT 63 4matic Plus (coupe)"
+],
+"aston-martin-dbx": [
+"DBX 707",
+"DBX V8"
+]
+},
+"n": 1,
+"only": false
+},
+"2025": {
+"cars": {
+"aston-martin-vantage": [
+"Vantage"
+],
+"aston-martin-db11-db12": [
+"DB12 V8"
+],
+"aston-martin-dbx": [
+"DBX 707"
+],
+"mercedes-amg-gt": [
+"AMG GT 55 4matic Plus (coupe)",
+"AMG GT 63 4matic Plus",
+"AMG GT 63 4matic Plus (coupe)",
+"AMG GT 63 PRO 4matic Plus (coupe)",
+"AMG GT 63 S E Performance",
+"AMG GT 63 S E Performance (coupe)"
+]
+},
+"n": 3,
+"only": false
+}
+},
+"complaints": 18,
+"parts": [
+[
+"Power Train",
+6
+],
+[
+"Service Brakes",
+3
+],
+[
+"Steering",
+2
+],
+[
+"Engine",
+2
+]
+],
+"chart": false,
+"cars": [
+{
+"slug": "mercedes-amg-gt",
+"name": "Mercedes-AMG GT",
+"years": [
+2016,
+2017,
+2018,
+2019,
+2020,
+2021,
+2023,
+2024,
+2025
+],
+"page": true
+},
+{
+"slug": "aston-martin-db11-db12",
+"name": "Aston Martin DB11 / DB12",
+"years": [
+2018,
+2019,
+2020,
+2021,
+2022,
+2023,
+2024,
+2025
+],
+"page": true
+},
+{
+"slug": "aston-martin-vantage",
+"name": "Aston Martin Vantage",
+"years": [
+2019,
+2020,
+2021,
+2022,
+2023,
+2025
+],
+"page": true
+},
+{
+"slug": "aston-martin-dbx",
+"name": "Aston Martin DBX",
+"years": [
+2021,
+2022,
+2023,
+2024,
+2025
+],
+"page": true
+}
+],
+"recalls": [
+{
+"id": "24V712000",
+"date": "24/09/2024",
+"part": "Engine And Engine Cooling",
+"summary": "Aston Martin The Americas (Aston Martin) is recalling certain 2024-2025 DBX707, 2024-2025 DB12, and 2025 Vantage vehicles.  The engine oil cooler hose may split during vehicle operation, resulting in a loss of oil and oil pressure.",
+"years": [
+2025
+],
+"cars": [
+"Aston Martin Vantage"
+],
+"eng": true
+},
+{
+"id": "21V478000",
+"date": "25/06/2021",
+"part": "Power Train",
+"summary": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain 2016-2018 AMG GT vehicles.  The bonding between the carbon-fiber driveshaft and the flange may be insufficient, which could result in driveshaft separation.",
+"years": [
+2017
+],
+"cars": [
+"Mercedes-AMG GT"
+],
+"eng": true
+},
+{
+"id": "19V457000",
+"date": "14/06/2019",
+"part": "Power Train",
+"summary": "Mercedes-Benz USA, LLC. (MBUSA) is recalling certain 2016-2017 AMG GTS and 2017 AMG GT vehicles.  The bonding between the carbon-fiber driveshaft and the engine/transmission flange may be insufficient, causing the driveshaft to separate while in motion.",
+"years": [
+2017
+],
+"cars": [
+"Mercedes-AMG GT"
+],
+"eng": true
+},
+{
+"id": "16V308000",
+"date": "17/05/2016",
+"part": "Power Train",
+"summary": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain model year 2016 AMG GT S vehicles manufactured June 1, 2015 to July 24, 2015.  In affected vehicles, the adhesive bond between the carbon-fiber driveshaft and the rear flange may fail, and as a result, there may be a loss of torque to the rear whee",
+"years": [
+2016
+],
+"cars": [
+"Mercedes-AMG GT"
+],
+"eng": true
+},
+{
+"id": "25V001000",
+"date": "03/01/2025",
+"part": "Back Over Prevention",
+"summary": "Aston Martin The Americas (Aston Martin) is recalling certain 2024-2025 DB12, 2025 Vantage, and 2025 DBX707 vehicles.  The rearview camera image may be obstructed by the infotainment home screen menu when the vehicle is placed in reverse.  As such, these vehicles fail to comply with the requirements",
+"years": [
+2025
+],
+"cars": [
+"Aston Martin Vantage"
+],
+"eng": false
+},
+{
+"id": "21V058000",
+"date": "05/02/2021",
+"part": "Electrical System",
+"summary": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain 2016 - 2021 CLA-Class, GLA-Class, GLE-Class, GLS-Class, SLC-Class, A-Class, GT-Class, C-Class, E-Class, S-Class, CLS-Class, SL-Class, B-Class, GLB-Class, GLC-Class, and G-Class vehicles.  Please refer to the Part 573 report for specific vehicle mod",
+"years": [
+2017
+],
+"cars": [
+"Mercedes-AMG GT"
+],
+"eng": false
+},
+{
+"id": "19V787000",
+"date": "01/11/2019",
+"part": "Communication",
+"summary": "Mercedes-Benz USA, LLC. (MBUSA) is recalling certain 2013-2017 vehicles due to a software fault that may cause the date and time for the emergency call system (eCall) to differ from the actual date and time, potentially relaying an inaccurate vehicle location.  For a full list of the affected models",
+"years": [
+2016,
+2017
+],
+"cars": [
+"Mercedes-AMG GT"
+],
+"eng": false
+},
+{
+"id": "17V177000",
+"date": "14/03/2017",
+"part": "Electrical System",
+"summary": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain 2016 AMG GT-S, GLC300, CLA250 and GLE300d 4Matic vehicles, 2013 C250, E350 BlueTec and G63 AMG vehicles, 2008-2014 C300 vehicles, 2013-2014 C300 4Matic and ML350 4Matic vehicles, 2009 C350 vehicles, 2014 CLS550, E350 4Matic, E350 Coupe 4Matic, E350",
+"years": [
+2016
+],
+"cars": [
+"Mercedes-AMG GT"
+],
+"eng": false
+},
+{
+"id": "17V818000",
+"date": "18/12/2017",
+"part": "Air Bags",
+"summary": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain 2017 AMG GT & AMG GT-C Roadster and 2018 AMG GT-S & GT Roadster vehicles equipped with AMG Performance Seats.  The passenger occupant classification system (OCS) might not function properly, possibly causing the passenger frontal air bag to be inco",
+"years": [
+2017,
+2018
+],
+"cars": [
+"Mercedes-AMG GT"
+],
+"eng": false
+}
+],
+"tsb": {
+"n": 92,
+"top": [
+"- Engine diagnosis indicator lamp (MIL) lights up",
+"Combustion engine could no longer be started, only electric driving possible Cause High-voltage belt-driven…",
+"Complaints of oil leaking from rear differential oil pan area"
+]
+}
+},
+"amg-m159": {
+"make": "Mercedes-AMG",
+"code": "M159",
+"name": "Mercedes-AMG M159",
+"codes": "M159 (dry-sump M156)",
+"layout": "V8",
+"size": "6.2 L",
+"asp": "naturally aspirated",
+"hp": [
+563,
+622
+],
+"src": [
+{
+"title": "Mercedes-Benz M156 / M159 engine",
+"url": "https://en.wikipedia.org/wiki/Mercedes-Benz_M159_engine"
+}
+],
+"notes": [],
+"y0": 2011,
+"y1": 2015,
+"years": {
+"2011": {
+"cars": {
+"mercedes-amg-gt": [
+"SLS AMG"
+]
+},
+"n": 0,
+"only": true
+},
+"2012": {
+"cars": {
+"mercedes-amg-gt": [
+"SLS AMG",
+"SLS AMG Roadster"
+]
+},
+"n": 3,
+"only": true
+},
+"2013": {
+"cars": {
+"mercedes-amg-gt": [
+"SLS AMG Coupe",
+"SLS AMG GT Coupe",
+"SLS AMG GT Roadster",
+"SLS AMG Roadster"
+]
+},
+"n": 0,
+"only": true
+},
+"2014": {
+"cars": {
+"mercedes-amg-gt": [
+"SLS AMG Black Series Coupe",
+"SLS AMG Coupe",
+"SLS AMG GT Coupe",
+"SLS AMG GT Roadster",
+"SLS AMG Roadster"
+]
+},
+"n": 0,
+"only": true
+},
+"2015": {
+"cars": {
+"mercedes-amg-gt": [
+"SLS AMG GT Coupe",
+"SLS AMG GT Roadster"
+]
+},
+"n": 0,
+"only": true
+}
+},
+"complaints": 3,
+"parts": [
+[
+"Fuel/Propulsion System",
+2
+],
+[
+"Unknown Or Other",
+1
+]
+],
+"chart": false,
+"cars": [
+{
+"slug": "mercedes-amg-gt",
+"name": "Mercedes-AMG GT",
+"years": [
+2011,
+2012,
+2013,
+2014,
+2015
+],
+"page": true
+}
+],
+"recalls": [],
+"tsb": {
+"n": 1,
+"top": [
+"Engine indicator lamp lights up, oil pressure warning in instrument cluster The following fault is stored in…"
+]
+}
+},
+"amg-m256": {
+"make": "Mercedes-Benz",
+"code": "M256",
+"name": "Mercedes M256",
+"codes": "M256 (GT 43, GT 53)",
+"layout": "inline-6",
+"size": "3.0 L",
+"asp": "turbo, 48-volt mild hybrid",
+"hp": [
+362,
+429
+],
+"hp_note": "engine only",
+"src": [
+{
+"title": "Mercedes-Benz M256 engine",
+"url": "https://en.wikipedia.org/wiki/Mercedes-Benz_M256_engine"
+},
+{
+"title": "Mercedes-AMG GT 4-Door Coupé",
+"url": "https://en.wikipedia.org/wiki/Mercedes-AMG_GT_4-Door_Coup%C3%A9"
+}
+],
+"notes": [],
+"y0": 2019,
+"y1": 2025,
+"years": {
+"2019": {
+"cars": {
+"mercedes-amg-gt": [
+"AMG GT 53 4matic Plus"
+]
+},
+"n": 3,
+"only": false
+},
+"2020": {
+"cars": {
+"mercedes-amg-gt": [
+"AMG GT 53 4matic Plus"
+]
+},
+"n": 1,
+"only": false
+},
+"2021": {
+"cars": {
+"mercedes-amg-gt": [
+"AMG GT 43 4matic Plus",
+"AMG GT 53 4matic Plus"
+]
+},
+"n": 1,
+"only": false
+},
+"2022": {
+"cars": {
+"mercedes-amg-gt": [
+"AMG GT 43 4matic Plus",
+"AMG GT 53 4matic Plus"
+]
+},
+"n": 2,
+"only": true
+},
+"2023": {
+"cars": {
+"mercedes-amg-gt": [
+"AMG GT 43 4matic Plus",
+"AMG GT 53 4matic Plus"
+]
+},
+"n": 2,
+"only": false
+},
+"2024": {
+"cars": {
+"mercedes-amg-gt": [
+"AMG GT 43 4matic Plus",
+"AMG GT 53 4matic Plus"
+]
+},
+"n": 1,
+"only": false
+},
+"2025": {
+"cars": {
+"mercedes-amg-gt": [
+"AMG GT 43 4matic Plus",
+"AMG GT 53 4matic Plus"
+]
+},
+"n": 0,
+"only": false
+}
+},
+"complaints": 10,
+"parts": [
+[
+"Electrical System",
+4
+],
+[
+"Wheels",
+1
+],
+[
+"Exterior Lighting",
+1
+],
+[
+"Fuel System, Gasoline",
+1
+]
+],
+"chart": false,
+"cars": [
+{
+"slug": "mercedes-amg-gt",
+"name": "Mercedes-AMG GT",
+"years": [
+2019,
+2020,
+2021,
+2022,
+2023,
+2024,
+2025
+],
+"page": true
+}
+],
+"recalls": [],
+"tsb": {
+"n": 43,
+"top": [
+"Combustion engine could no longer be started, only electric driving possible",
+"Check engine light illuminated Fault code present in MRG3 control unit P22C900 - The valve of the exhaust gas…",
+"No cooling output, compressor inoperative"
+]
+}
+},
+"amg-m139": {
+"make": "Mercedes-AMG",
+"code": "M139",
+"name": "Mercedes-AMG M139",
+"codes": "M139",
+"layout": "inline-4",
+"size": "2.0 L",
+"asp": "turbo, mild hybrid",
+"hp": [
+416,
+416
+],
+"made": "hand-assembled, one engine per builder",
+"src": [
+{
+"title": "Mercedes-Benz M139 engine",
+"url": "https://en.wikipedia.org/wiki/Mercedes-Benz_M139_engine"
+},
+{
+"title": "Mercedes-AMG GT",
+"url": "https://en.wikipedia.org/wiki/Mercedes-AMG_GT"
+}
+],
+"notes": [],
+"y0": 2025,
+"y1": 2025,
+"years": {
+"2025": {
+"cars": {
+"mercedes-amg-gt": [
+"AMG GT 43 (coupe)"
+]
+},
+"n": 0,
+"only": false
+}
+},
+"complaints": 0,
+"parts": [],
+"chart": false,
+"cars": [
+{
+"slug": "mercedes-amg-gt",
+"name": "Mercedes-AMG GT",
+"years": [
+2025
+],
+"page": true
+}
+],
+"recalls": [],
+"tsb": {
+"n": 0,
+"top": []
+}
+},
+"rr-n73": {
+"make": "BMW",
+"code": "N73",
+"name": "BMW N73 V12",
+"codes": "N73B68",
+"layout": "V12",
+"size": "6.75 L",
+"asp": "naturally aspirated",
+"hp": [
+453,
+453
+],
+"src": [
+{
+"title": "BMW N73",
+"url": "https://en.wikipedia.org/wiki/BMW_N73"
+},
+{
+"title": "Rolls-Royce Phantom (2003)",
+"url": "https://en.wikipedia.org/wiki/Rolls-Royce_Phantom_(2003)"
+}
+],
+"notes": [],
+"y0": 2010,
+"y1": 2017,
+"years": {
+"2010": {
+"cars": {
+"rolls-royce-phantom": [
+"Phantom",
+"Phantom Coupe",
+"Phantom Drophead Coupe",
+"Phantom EWB"
+]
+},
+"n": 0,
+"only": true
+},
+"2011": {
+"cars": {
+"rolls-royce-phantom": [
+"Phantom",
+"Phantom Coupe",
+"Phantom Drophead Coupe",
+"Phantom EWB"
+]
+},
+"n": 0,
+"only": true
+},
+"2012": {
+"cars": {
+"rolls-royce-phantom": [
+"Phantom",
+"Phantom Coupe",
+"Phantom Drophead Coupe",
+"Phantom EWB"
+]
+},
+"n": 0,
+"only": true
+},
+"2013": {
+"cars": {
+"rolls-royce-phantom": [
+"Phantom",
+"Phantom Coupe",
+"Phantom Drophead Coupe",
+"Phantom EWB"
+]
+},
+"n": 0,
+"only": true
+},
+"2014": {
+"cars": {
+"rolls-royce-phantom": [
+"Phantom",
+"Phantom Coupe",
+"Phantom Drophead Coupe",
+"Phantom EWB"
+]
+},
+"n": 1,
+"only": true
+},
+"2015": {
+"cars": {
+"rolls-royce-phantom": [
+"Phantom",
+"Phantom Coupe",
+"Phantom Drophead Coupe",
+"Phantom EWB"
+]
+},
+"n": 0,
+"only": true
+},
+"2016": {
+"cars": {
+"rolls-royce-phantom": [
+"Phantom",
+"Phantom Coupe",
+"Phantom Drophead Coupe",
+"Phantom EWB"
+]
+},
+"n": 0,
+"only": true
+},
+"2017": {
+"cars": {
+"rolls-royce-phantom": [
+"Phantom",
+"Phantom Coupe",
+"Phantom Drophead Coupe",
+"Phantom EWB"
+]
+},
+"n": 0,
+"only": true
+}
+},
+"complaints": 1,
+"parts": [
+[
+"Unknown Or Other",
+1
+]
+],
+"chart": false,
+"cars": [
+{
+"slug": "rolls-royce-phantom",
+"name": "Rolls-Royce Phantom",
+"years": [
+2010,
+2011,
+2012,
+2013,
+2014,
+2015,
+2016,
+2017
+],
+"page": true
+}
+],
+"recalls": [
+{
+"id": "13V047000",
+"date": "07/02/2013",
+"part": "Fuel System, Gasoline",
+"summary": "Rolls-Royce Motor Cars is recalling certain model year 2013 Phantom vehicles manufactured from November 2, 2012, through January 18, 2013.  The fuel filler necks may be missing the anti-misfueling devices.  The devices prevent misfueling and discharge static electricity.",
+"years": [
+2013
+],
+"cars": [
+"Rolls-Royce Phantom"
+],
+"eng": true
+},
+{
+"id": "15V787000",
+"date": "23/11/2015",
+"part": "Air Bags",
+"summary": "BMW of North America, LLC (BMW) is recalling certain model year 2015-2016 Rolls-Royce Phantom vehicles manufactured May 22, 2015, to September 23, 2015.  The affected vehicles have left and right side curtain air bags that may not have been manufactured properly.",
+"years": [
+2015,
+2016
+],
+"cars": [
+"Rolls-Royce Phantom"
+],
+"eng": false
+},
+{
+"id": "10V447000",
+"date": "01/10/2010",
+"part": "Service Brakes, Hydraulic",
+"summary": "ROLLS-ROYCE IS RECALLING CERTAIN MODEL YEAR 2003-2010 PHANTOM, MODEL YEAR 2007-2010 PHANTOM DROPHEAD COUPE, AND MODEL YEAR 2008-2010 PHANTOM COUPE VEHICLES.  A CHECK VALVE OF THE BRAKE VACUUM PUMP MAY LEAK A SMALL AMOUNT OF LUBRICATING OIL.  OVER TIME THIS COULD RESULT IN CONTAMINATION OF THE BRAKE ",
+"years": [
+2010
+],
+"cars": [
+"Rolls-Royce Phantom"
+],
+"eng": false
+}
+],
+"tsb": {
+"n": 8,
+"top": [
+"Engine MIL light is illuminated and fault 12BF08 Lambda probe, from meager to fat slow reaction"
+]
+}
+},
+"rr-n74": {
+"make": "BMW",
+"code": "N74",
+"name": "BMW N74 V12",
+"codes": "N74B66 (Ghost to 2020), N74B68 (Phantom VIII, Cullinan, Ghost 2021+)",
+"layout": "60° V12",
+"size": "6.6 L and 6.75 L",
+"asp": "twin-turbo",
+"hp": [
+563,
+624
+],
+"src": [
+{
+"title": "BMW N74",
+"url": "https://en.wikipedia.org/wiki/BMW_N74"
+}
+],
+"notes": [],
+"y0": 2010,
+"y1": 2025,
+"years": {
+"2010": {
+"cars": {
+"rolls-royce-ghost": [
+"Ghost"
+]
+},
+"n": 0,
+"only": true
+},
+"2011": {
+"cars": {
+"rolls-royce-ghost": [
+"Ghost"
+]
+},
+"n": 1,
+"only": true
+},
+"2012": {
+"cars": {
+"rolls-royce-ghost": [
+"Ghost",
+"Ghost EWB"
+]
+},
+"n": 0,
+"only": true
+},
+"2013": {
+"cars": {
+"rolls-royce-ghost": [
+"Ghost",
+"Ghost EWB"
+]
+},
+"n": 0,
+"only": true
+},
+"2014": {
+"cars": {
+"rolls-royce-ghost": [
+"Ghost",
+"Ghost EWB"
+]
+},
+"n": 0,
+"only": true
+},
+"2015": {
+"cars": {
+"rolls-royce-ghost": [
+"Ghost",
+"Ghost EWB"
+]
+},
+"n": 0,
+"only": true
+},
+"2016": {
+"cars": {
+"rolls-royce-ghost": [
+"Ghost",
+"Ghost EWB"
+]
+},
+"n": 0,
+"only": true
+},
+"2017": {
+"cars": {
+"rolls-royce-ghost": [
+"Ghost",
+"Ghost EWB"
+]
+},
+"n": 0,
+"only": true
+},
+"2018": {
+"cars": {
+"rolls-royce-phantom": [
+"Phantom",
+"Phantom EWB"
+],
+"rolls-royce-ghost": [
+"Ghost",
+"Ghost EWB"
+]
+},
+"n": 0,
+"only": true
+},
+"2019": {
+"cars": {
+"rolls-royce-ghost": [
+"Ghost",
+"Ghost EWB"
+],
+"rolls-royce-phantom": [
+"Phantom",
+"Phantom EWB"
+],
+"rolls-royce-cullinan": [
+"Cullinan"
+]
+},
+"n": 0,
+"only": true
+},
+"2020": {
+"cars": {
+"rolls-royce-phantom": [
+"Phantom",
+"Phantom EWB"
+],
+"rolls-royce-ghost": [
+"Ghost",
+"Ghost Black Badge",
+"Ghost EWB"
+],
+"rolls-royce-cullinan": [
+"Cullinan",
+"Cullinan Black Badge"
+]
+},
+"n": 0,
+"only": true
+},
+"2021": {
+"cars": {
+"rolls-royce-phantom": [
+"Phantom",
+"Phantom EWB"
+],
+"rolls-royce-cullinan": [
+"Cullinan",
+"Cullinan Black Badge"
+],
+"rolls-royce-ghost": [
+"Ghost",
+"Ghost EWB"
+]
+},
+"n": 0,
+"only": true
+},
+"2022": {
+"cars": {
+"rolls-royce-phantom": [
+"Phantom",
+"Phantom Extended"
+],
+"rolls-royce-cullinan": [
+"Cullinan",
+"Cullinan Black Badge"
+],
+"rolls-royce-ghost": [
+"Ghost",
+"Ghost Black Badge",
+"Ghost Extended"
+]
+},
+"n": 0,
+"only": true
+},
+"2023": {
+"cars": {
+"rolls-royce-phantom": [
+"Phantom",
+"Phantom Extended"
+],
+"rolls-royce-ghost": [
+"Ghost",
+"Ghost Black Badge",
+"Ghost Extended"
+],
+"rolls-royce-cullinan": [
+"Cullinan",
+"Cullinan Black Badge"
+]
+},
+"n": 0,
+"only": true
+},
+"2024": {
+"cars": {
+"rolls-royce-phantom": [
+"Phantom",
+"Phantom Extended"
+],
+"rolls-royce-ghost": [
+"Ghost",
+"Ghost Black Badge",
+"Ghost Extended"
+],
+"rolls-royce-cullinan": [
+"Cullinan",
+"Cullinan Black Badge"
+]
+},
+"n": 0,
+"only": true
+},
+"2025": {
+"cars": {
+"rolls-royce-cullinan": [
+"Cullinan",
+"Cullinan Black Badge"
+],
+"rolls-royce-phantom": [
+"Phantom",
+"Phantom Extended"
+],
+"rolls-royce-ghost": [
+"Ghost",
+"Ghost Black Badge",
+"Ghost Extended"
+]
+},
+"n": 0,
+"only": true
+}
+},
+"complaints": 1,
+"parts": [
+[
+"Engine And Engine Cooling",
+1
+]
+],
+"chart": false,
+"cars": [
+{
+"slug": "rolls-royce-ghost",
+"name": "Rolls-Royce Ghost",
+"years": [
+2010,
+2011,
+2012,
+2013,
+2014,
+2015,
+2016,
+2017,
+2018,
+2019,
+2020,
+2021,
+2022,
+2023,
+2024,
+2025
+],
+"page": true
+},
+{
+"slug": "rolls-royce-phantom",
+"name": "Rolls-Royce Phantom",
+"years": [
+2018,
+2019,
+2020,
+2021,
+2022,
+2023,
+2024,
+2025
+],
+"page": true
+},
+{
+"slug": "rolls-royce-cullinan",
+"name": "Rolls-Royce Cullinan",
+"years": [
+2019,
+2020,
+2021,
+2022,
+2023,
+2024,
+2025
+],
+"page": true
+}
+],
+"recalls": [
+{
+"id": "18V248000",
+"date": "18/04/2018",
+"part": "Engine And Engine Cooling",
+"summary": "BMW of North America, LLC (BMW) is recalling certain 2011-2012 BMW 550i, 550i xDrive, 550i Gran Turismo, 550i Gran Turismo xDrive, 750i, 750Li, 750i xDrive, 750Li xDrive, 760Li, X5 xDrive50i, X5 M, X6 xDrive50i, X6 M, ActiveHybrid7, MINI Cooper S Convertible, John Cooper Works (JCW) Convertible, Coo",
+"years": [
+2010,
+2011,
+2012
+],
+"cars": [
+"Rolls-Royce Ghost"
+],
+"eng": true
+},
+{
+"id": "12V166000",
+"date": "10/04/2012",
+"part": "Engine And Engine Cooling",
+"summary": "ROLLS-ROYCE IS RECALLING CERTAIN MODEL YEAR 2011 GHOST VEHICLES EQUIPPED WITH TURBOCHARGED ENGINES BECAUSE THE CIRCUIT BOARD FOR THE ELECTRIC AUXILIARY WATER PUMP CAN OVERHEAT.",
+"years": [
+2010,
+2011
+],
+"cars": [
+"Rolls-Royce Ghost"
+],
+"eng": true
+},
+{
+"id": "11V522000",
+"date": "20/10/2011",
+"part": "Engine And Engine Cooling",
+"summary": "ROLLS-ROYCE IS RECALLING CERTAIN MODEL YEAR 2010 GHOST VEHICLES MANUFACTURED FROM SEPTEMBER 2009 THROUGH SEPTEMBER 2010, EQUIPPED WITH TURBOCHARGED ENGINES, BECAUSE THE CIRCUIT BOARD FOR THE ELECTRIC AUXILIARY WATER PUMP CAN OVERHEAT.",
+"years": [
+2010
+],
+"cars": [
+"Rolls-Royce Ghost"
+],
+"eng": true
+},
+{
+"id": "26V143000",
+"date": "12/03/2026",
+"part": "Seat Belts",
+"summary": "BMW of North America, LLC (Rolls-Royce) is recalling certain 2020-2026 Rolls-Royce Cullinan vehicles. The fixing bolts may not have been properly tightened. The bolts may loosen and damage the left or right rear seat belt webbing or allow the backrest to move under pressure from items in the luggage",
+"years": [
+2020,
+2021,
+2022,
+2023,
+2024,
+2025
+],
+"cars": [
+"Rolls-Royce Cullinan"
+],
+"eng": false
+},
+{
+"id": "23V645000",
+"date": "21/09/2023",
+"part": "Electrical System",
+"summary": "BMW of North America, LLC (BMW) is recalling certain 2021-2023 Rolls-Royce Ghost vehicles.  The single-layer tempered glass protecting the instrument cluster may break in a crash.",
+"years": [
+2021,
+2022,
+2023
+],
+"cars": [
+"Rolls-Royce Ghost"
+],
+"eng": false
+},
+{
+"id": "22V721000",
+"date": "28/09/2022",
+"part": "Exterior Lighting",
+"summary": "BMW of North America, LLC (BMW) is recalling certain 2023 Rolls-Royce Phantom vehicles.  The headlights may not have received a metal coating application, which can result in the low beams not adequately illuminating road signs.  As such, these vehicles fail to comply with the requirements of Federa",
+"years": [
+2023
+],
+"cars": [
+"Rolls-Royce Phantom"
+],
+"eng": false
+},
+{
+"id": "21V554000",
+"date": "21/07/2021",
+"part": "Seat Belts",
+"summary": "BMW of North America, LLC (BMW) is recalling certain 2021 2 Series (230i, 230i xDrive, M240i, M240i xDrive), 330e, 330e Xdrive, 4 Series Coupe (430i, 430i xDrive, M440i xDrive) M4 Coupe, M4 Competition Coupe, BMW 4 Series Convertible (430i, M440i), BMW X1 sDrive28i, xDrive28i, 2 Series Gran Coupe (2",
+"years": [
+2021
+],
+"cars": [
+"Rolls-Royce Cullinan",
+"Rolls-Royce Ghost",
+"Rolls-Royce Phantom"
+],
+"eng": false
+},
+{
+"id": "21V855000",
+"date": "03/11/2021",
+"part": "Back Over Prevention",
+"summary": "Rolls-Royce Motor Cars, Ltd. (Rolls-Royce) is recalling certain 2019-2022 Rolls-Royce Phantom vehicles.  The Central Information Display may not raise to the correct position, resulting in a rearview camera image that is partially blocked from view.",
+"years": [
+2019,
+2020,
+2021,
+2022
+],
+"cars": [
+"Rolls-Royce Phantom"
+],
+"eng": false
+},
+{
+"id": "19V612000",
+"date": "21/08/2019",
+"part": "Exterior Lighting",
+"summary": "BMW of North America, LLC (BMW) is recalling certain 2019 Rolls-Royce Cullinan vehicles.  The brake lights may not be bright enough.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 108, \"Lamps, Reflective Devices, and Associated E",
+"years": [
+2019
+],
+"cars": [
+"Rolls-Royce Cullinan"
+],
+"eng": false
+},
+{
+"id": "19V684000",
+"date": "28/09/2019",
+"part": "Back Over Prevention",
+"summary": "BMW of North America, LLC (BMW) is recalling certain 2018 540d, 2018-2020 530i, 530i xDrive, 540i, 540i xDrive, M550i xDrive, M5, 530e, 530e xDrive, X3 sDrive, X3 xDrive, X3 M40i, X3 M, and 2019-2020 X4 xDrive, X4 M40i, X4 M, X7 xDrive, X7 M50i, 740Li, 740Li xDrive, 750Li, 750Li xDrive, 8 Series Con",
+"years": [
+2018,
+2019
+],
+"cars": [
+"Rolls-Royce Cullinan",
+"Rolls-Royce Phantom"
+],
+"eng": false
+},
+{
+"id": "18V097000",
+"date": "08/02/2018",
+"part": "Air Bags",
+"summary": "BMW of North America, LLC (BMW) is recalling certain 2018 Rolls-Royce Ghost vehicles.  The head air bags in these vehicles may have been damaged during vehicle assembly, possibly causing the head air bags to not fully inflate upon deployment.",
+"years": [
+2018
+],
+"cars": [
+"Rolls-Royce Ghost"
+],
+"eng": false
+},
+{
+"id": "16V747000",
+"date": "17/10/2016",
+"part": "Seat Belts",
+"summary": "BMW of North America, LLC (BMW) is recalling certain model year 2016-2017 X1 sDrive28i, X1 xDrive28i, MINI Hardtop 4 Door Cooper, Mini Hardtop 4 Door Cooper S, MINI Cooper Clubman, and Cooper S Clubman, 2017 Rolls-Royce Ghost, and 2016 528i vehicles.  The vehicle-sensitive locking mechanism of the s",
+"years": [
+2017
+],
+"cars": [
+"Rolls-Royce Ghost"
+],
+"eng": false
+},
+{
+"id": "15V695000",
+"date": "23/10/2015",
+"part": "Air Bags",
+"summary": "BMW of North America, LLC (BMW) is recalling one model year 2015 Rolls-Royce Ghost manufactured on January 23, 2014.  The affected vehicle has thorax air bags fitted to both front seats that may fail to meet the side impact performance requirements for the front seat occupants.  As such, this vehicl",
+"years": [
+2015
+],
+"cars": [
+"Rolls-Royce Ghost"
+],
+"eng": false
+},
+{
+"id": "12V368000",
+"date": "27/07/2012",
+"part": "Equipment",
+"summary": "Certain model year 2012 Ghost passenger vehicles manufactured from March 27, 2012, through July 13, 2012 were equipped with 20-inch tires, but the tire information label states that the vehicles were equipped with 19-inch tires.  Therefore, the label does not conform to the requirements of Federal M",
+"years": [
+2012
+],
+"cars": [
+"Rolls-Royce Ghost"
+],
+"eng": false
+}
+],
+"tsb": {
+"n": 17,
+"top": [
+"Engine MIL light is illuminated and fault 12BF08 Lambda probe, from meager to fat slow reaction",
+"Information and instructions on carrying out a Cylinder Leakage Test on an N74 engine",
+"When opening and closing the fuel filler flap there is a loud noise"
+]
+}
+},
+"bugatti-w16": {
+"make": "Bugatti",
+"code": "W16",
+"name": "Bugatti W16",
+"codes": "no public code",
+"layout": "W16",
+"size": "8.0 L",
+"asp": "quad-turbo",
+"hp": [
+987,
+1578
+],
+"src": [
+{
+"title": "Bugatti W16 engine",
+"url": "https://en.wikipedia.org/wiki/Bugatti_W16_engine"
+},
+{
+"title": "Bugatti Chiron",
+"url": "https://en.wikipedia.org/wiki/Bugatti_Chiron"
+}
+],
+"notes": [],
+"y0": 2010,
+"y1": 2024,
+"years": {
+"2010": {
+"cars": {
+"bugatti-veyron": [
+"Veyron"
+]
+},
+"n": 0,
+"only": true
+},
+"2011": {
+"cars": {
+"bugatti-veyron": [
+"Veyron"
+]
+},
+"n": 0,
+"only": true
+},
+"2012": {
+"cars": {
+"bugatti-veyron": [
+"Veyron"
+]
+},
+"n": 0,
+"only": true
+},
+"2013": {
+"cars": {
+"bugatti-veyron": [
+"Veyron"
+]
+},
+"n": 0,
+"only": true
+},
+"2014": {
+"cars": {
+"bugatti-veyron": [
+"Veyron"
+]
+},
+"n": 0,
+"only": true
+},
+"2015": {
+"cars": {
+"bugatti-veyron": [
+"Veyron"
+]
+},
+"n": 0,
+"only": true
+},
+"2018": {
+"cars": {
+"bugatti-chiron": [
+"Chiron"
+]
+},
+"n": 0,
+"only": true
+},
+"2019": {
+"cars": {
+"bugatti-chiron": [
+"Chiron"
+]
+},
+"n": 0,
+"only": true
+},
+"2020": {
+"cars": {
+"bugatti-chiron": [
+"Chiron"
+]
+},
+"n": 0,
+"only": true
+},
+"2021": {
+"cars": {
+"bugatti-chiron": [
+"Chiron",
+"Chiron Pur Sport"
+]
+},
+"n": 0,
+"only": true
+},
+"2022": {
+"cars": {
+"bugatti-chiron": [
+"Chiron",
+"Chiron Pur Sport",
+"Chiron Super Sport"
+]
+},
+"n": 0,
+"only": true
+},
+"2023": {
+"cars": {
+"bugatti-chiron": [
+"Chiron",
+"Chiron Pur Sport",
+"Chiron Super Sport"
+]
+},
+"n": 0,
+"only": true
+},
+"2024": {
+"cars": {
+"bugatti-chiron": [
+"Chiron Super Sport"
+]
+},
+"n": 0,
+"only": true
+}
+},
+"complaints": 0,
+"parts": [],
+"chart": false,
+"cars": [
+{
+"slug": "bugatti-veyron",
+"name": "Bugatti Veyron",
+"years": [
+2010,
+2011,
+2012,
+2013,
+2014,
+2015
+],
+"page": true
+},
+{
+"slug": "bugatti-chiron",
+"name": "Bugatti Chiron",
+"years": [
+2018,
+2019,
+2020,
+2021,
+2022,
+2023,
+2024
+],
+"page": true
+}
+],
+"recalls": [
+{
+"id": "20V731000",
+"date": "24/11/2020",
+"part": "Power Train",
+"summary": "Bugatti (Bugatti) is recalling certain 2020 DIVO and Chiron vehicles.  The rear left-hand driveshaft may break.",
+"years": [
+2020
+],
+"cars": [
+"Bugatti Chiron"
+],
+"eng": true
+},
+{
+"id": "16V200000",
+"date": "08/04/2016",
+"part": "Fuel System, Gasoline",
+"summary": "Bugatti is recalling certain model year 2006-2010 Veyron vehicles manufactured March 10, 2006, to January 17, 2010 and 2010-2011 Veyron Grand Sport vehicles manufactured September 29, 2009, to June 30, 2010.  In the affected vehicles, the fuel tank gauge may indicate that there is more fuel in the t",
+"years": [
+2010
+],
+"cars": [
+"Bugatti Veyron"
+],
+"eng": true
+},
+{
+"id": "24V096000",
+"date": "09/02/2024",
+"part": "Seat Belts",
+"summary": "Bugatti is recalling certain 2016-2023 Bugatti Chiron vehicles.  The audible chime may not activate when the vehicle starts, and the driver has not buckled their seat belt.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 208, \"Occ",
+"years": [
+2018,
+2019,
+2020,
+2021,
+2022,
+2023
+],
+"cars": [
+"Bugatti Chiron"
+],
+"eng": false
+},
+{
+"id": "23V388000",
+"date": "31/05/2023",
+"part": "Wheels",
+"summary": "Bugatti (Bugatti) is recalling one 2023 Chiron Super Sport vehicle.  The incorrect wheels were installed on the vehicle.",
+"years": [
+2023
+],
+"cars": [
+"Bugatti Chiron"
+],
+"eng": false
+},
+{
+"id": "22V198000",
+"date": "28/03/2022",
+"part": "Structure",
+"summary": "Bugatti is recalling one 2018 Chiron vehicle.  One of the screws that fastens the front frame support may be loose.",
+"years": [
+2018
+],
+"cars": [
+"Bugatti Chiron"
+],
+"eng": false
+},
+{
+"id": "21V984000",
+"date": "16/12/2021",
+"part": "Tires",
+"summary": "Bugatti is recalling certain 2021-2022 Chiron Pur Sport vehicles.  After 2,500 miles of usage, the rear tires may develop cracks.",
+"years": [
+2021,
+2022
+],
+"cars": [
+"Bugatti Chiron"
+],
+"eng": false
+},
+{
+"id": "20V732000",
+"date": "24/11/2020",
+"part": "Electronic Stability Control (Esc)",
+"summary": "Bugatti (Bugatti) is recalling certain 2017-2020 Chiron, 2018-2020 Chiron Sport and 2020-2021 DIVO vehicles.  After an ignition cycle, the Electronic Stability Control (ESC) does not automatically default back to the full-function original mode if the Handling Mode is selected on the Drive Mode swit",
+"years": [
+2018,
+2019,
+2020
+],
+"cars": [
+"Bugatti Chiron"
+],
+"eng": false
+},
+{
+"id": "18V420000",
+"date": "20/06/2018",
+"part": "Air Bags",
+"summary": "Bugatti is recalling certain 2018 Chiron vehicles.  The heat shield for the gas generator for the side air bags may have been incorrectly installed during the air bag manufacturing process, potentially reducing the performance of the air bag.  As such, these vehicles fail to comply with the requirem",
+"years": [
+2018
+],
+"cars": [
+"Bugatti Chiron"
+],
+"eng": false
+},
+{
+"id": "17V764000",
+"date": "29/11/2017",
+"part": "Seats",
+"summary": "Bugatti is recalling certain 2017-2018 Chiron vehicles.  The front seat recliner brackets may not be welded properly, which can cause the back of the seat to move unexpectedly, affecting the driver's seating position.",
+"years": [
+2018
+],
+"cars": [
+"Bugatti Chiron"
+],
+"eng": false
+},
+{
+"id": "16V166000",
+"date": "23/03/2016",
+"part": "Structure",
+"summary": "Bugatti is recalling certain 2006-2010 Veyron vehicles manufactured March 10, 2006, to March 9, 2012, 2010-2012 Veyron Grand Sport vehicles manufactured September 29, 2009, to October 14, 2014, and 2011-2013 Veyron Super Sport vehicles manufactured February 18, 2011, to August 17, 2012.  In the affe",
+"years": [
+2010
+],
+"cars": [
+"Bugatti Veyron"
+],
+"eng": false
+}
+],
+"tsb": {
+"n": 1,
+"top": []
+}
+},
+"audi-42-fsi": {
+"make": "Audi",
+"code": "4.2 FSI",
+"name": "Audi 4.2 FSI V8",
+"codes": "code not confirmed",
+"layout": "90° V8",
+"size": "4.2 L",
+"asp": "naturally aspirated",
+"hp": [
+414,
+414
+],
+"src": [
+{
+"title": "Audi R8 (Type 42)",
+"url": "https://en.wikipedia.org/wiki/Audi_R8_(Type_42)"
+}
+],
+"notes": [],
+"y0": 2010,
+"y1": 2015,
+"years": {
+"2010": {
+"cars": {
+"audi-r8": [
+"R8"
+]
+},
+"n": 0,
+"only": false
+},
+"2011": {
+"cars": {
+"audi-r8": [
+"R8",
+"R8 Spyder"
+]
+},
+"n": 0,
+"only": false
+},
+"2012": {
+"cars": {
+"audi-r8": [
+"R8",
+"R8 Spyder"
+]
+},
+"n": 0,
+"only": false
+},
+"2014": {
+"cars": {
+"audi-r8": [
+"R8",
+"R8 Spyder"
+]
+},
+"n": 0,
+"only": false
+},
+"2015": {
+"cars": {
+"audi-r8": [
+"R8",
+"R8 Spyder"
+]
+},
+"n": 0,
+"only": false
+}
+},
+"complaints": 0,
+"parts": [],
+"chart": false,
+"cars": [
+{
+"slug": "audi-r8",
+"name": "Audi R8",
+"years": [
+2010,
+2011,
+2012,
+2014,
+2015
+],
+"page": true
+}
+],
+"recalls": [],
+"tsb": {
+"n": 0,
+"top": []
+}
+},
+"nissan-vr38dett": {
+"make": "Nissan",
+"code": "VR38DETT",
+"name": "Nissan VR38DETT",
+"codes": "VR38DETT",
+"layout": "60° V6",
+"size": "3.8 L",
+"asp": "twin-turbo",
+"made": "hand-built by Takumi craftsmen at Nissan&#39;s Yokohama plant",
+"hp": [
+478,
+592
+],
+"src": [
+{
+"title": "Nissan VR engine",
+"url": "https://en.wikipedia.org/wiki/Nissan_VR_engine"
+},
+{
+"title": "Nissan GT-R",
+"url": "https://en.wikipedia.org/wiki/Nissan_GT-R"
+}
+],
+"notes": [],
+"y0": 2010,
+"y1": 2024,
+"years": {
+"2010": {
+"cars": {
+"nissan-gt-r": [
+"GT-R"
+]
+},
+"n": 11,
+"only": true
+},
+"2011": {
+"cars": {
+"nissan-gt-r": [
+"GT-R"
+]
+},
+"n": 1,
+"only": true
+},
+"2012": {
+"cars": {
+"nissan-gt-r": [
+"GT-R"
+]
+},
+"n": 0,
+"only": true
+},
+"2013": {
+"cars": {
+"nissan-gt-r": [
+"GT-R"
+]
+},
+"n": 1,
+"only": true
+},
+"2014": {
+"cars": {
+"nissan-gt-r": [
+"GT-R"
+]
+},
+"n": 0,
+"only": true
+},
+"2015": {
+"cars": {
+"nissan-gt-r": [
+"GT-R"
+]
+},
+"n": 0,
+"only": true
+},
+"2016": {
+"cars": {
+"nissan-gt-r": [
+"GT-R"
+]
+},
+"n": 0,
+"only": true
+},
+"2017": {
+"cars": {
+"nissan-gt-r": [
+"GT-R"
+]
+},
+"n": 1,
+"only": true
+},
+"2018": {
+"cars": {
+"nissan-gt-r": [
+"GT-R"
+]
+},
+"n": 0,
+"only": true
+},
+"2019": {
+"cars": {
+"nissan-gt-r": [
+"GT-R"
+]
+},
+"n": 0,
+"only": true
+},
+"2020": {
+"cars": {
+"nissan-gt-r": [
+"GT-R"
+]
+},
+"n": 0,
+"only": true
+},
+"2021": {
+"cars": {
+"nissan-gt-r": [
+"GT-R"
+]
+},
+"n": 0,
+"only": true
+},
+"2023": {
+"cars": {
+"nissan-gt-r": [
+"GT-R"
+]
+},
+"n": 0,
+"only": true
+},
+"2024": {
+"cars": {
+"nissan-gt-r": [
+"GT-R"
+]
+},
+"n": 0,
+"only": true
+}
+},
+"complaints": 14,
+"parts": [
+[
+"Fuel/Propulsion System",
+4
+],
+[
+"Electrical System",
+3
+],
+[
+"Exterior Lighting",
+2
+],
+[
+"Power Train",
+2
+]
+],
+"chart": false,
+"cars": [
+{
+"slug": "nissan-gt-r",
+"name": "Nissan GT-R",
+"years": [
+2010,
+2011,
+2012,
+2013,
+2014,
+2015,
+2016,
+2017,
+2018,
+2019,
+2020,
+2021,
+2023,
+2024
+],
+"page": true
+}
+],
+"recalls": [
+{
+"id": "21V402000",
+"date": "27/05/2021",
+"part": "Suspension",
+"summary": "Nissan North America, Inc. (Nissan) is recalling certain 2020 Nissan Murano, INFINITI QX60, 2021 Nissan GT-R, INFINITI QX50, and Q50 vehicles.  The front steering knuckle or rear axle housing may have insufficient strength due to improper heat-treatment.",
+"years": [
+2021
+],
+"cars": [
+"Nissan GT-R"
+],
+"eng": false
+},
+{
+"id": "19V654000",
+"date": "12/09/2019",
+"part": "Back Over Prevention",
+"summary": "Nissan North America, Inc. (Nissan) is recalling certain 2018-2019 Nissan Altima, Armada, Frontier, Kicks, Leaf, Maxima, Murano, NV, NV200, Pathfinder, Rogue, Rogue Sport, Sentra, Titan, Titan Diesel, Versa Note and Versa Sedan vehicles, as well as Infiniti Q50, Q60, QX30 and QX80 vehicles.  Additio",
+"years": [
+2019
+],
+"cars": [
+"Nissan GT-R"
+],
+"eng": false
+},
+{
+"id": "15V795000",
+"date": "24/11/2015",
+"part": "Equipment",
+"summary": "Nissan North America, Inc. (Nissan) is recalling certain model year 2015-2016 GT-R vehicles manufactured February 24, 2014, to June 16, 2015 to be sold in Puerto Rico.  The affected vehicles have a Certification Label that is missing the Gross Vehicle Weight Rating (GVWR) and Gross Axle Weight Ratin",
+"years": [
+2015,
+2016
+],
+"cars": [
+"Nissan GT-R"
+],
+"eng": false
+}
+],
+"tsb": {
+"n": 32,
+"top": [
+"Certain vehicles would display, in the instrument cluster, a warning light illumination of a loose fuel cap…",
+"Vent control valve replacement",
+"Affecting all nissan with abs or abs/vdc"
+]
+}
+},
+"acura-jnc1": {
+"make": "Acura",
+"code": "JNC1",
+"name": "Acura JNC1",
+"codes": "JNC1",
+"layout": "75° V6",
+"size": "3.5 L",
+"asp": "twin-turbo hybrid",
+"made": "hand-assembled at Honda&#39;s Anna, Ohio engine plant",
+"hp": [
+573,
+602
+],
+"hp_note": "with the motors",
+"src": [
+{
+"title": "Honda NSX (second generation)",
+"url": "https://en.wikipedia.org/wiki/Honda_NSX_(second_generation)"
+},
+{
+"title": "First serial production 2017 Acura NSX rolls off the line (Honda)",
+"url": "https://global.honda/en/newsroom/news/2016/4160525eng.html"
+}
+],
+"notes": [],
+"y0": 2017,
+"y1": 2022,
+"years": {
+"2017": {
+"cars": {
+"acura-nsx": [
+"NSX Hybrid"
+]
+},
+"n": 6,
+"only": true
+},
+"2018": {
+"cars": {
+"acura-nsx": [
+"NSX Hybrid"
+]
+},
+"n": 0,
+"only": true
+},
+"2019": {
+"cars": {
+"acura-nsx": [
+"NSX Hybrid"
+]
+},
+"n": 1,
+"only": true
+},
+"2020": {
+"cars": {
+"acura-nsx": [
+"NSX Hybrid"
+]
+},
+"n": 0,
+"only": true
+},
+"2021": {
+"cars": {
+"acura-nsx": [
+"NSX Hybrid"
+]
+},
+"n": 1,
+"only": true
+},
+"2022": {
+"cars": {
+"acura-nsx": [
+"NSX Hybrid"
+]
+},
+"n": 0,
+"only": true
+}
+},
+"complaints": 8,
+"parts": [
+[
+"Fuel/Propulsion System",
+3
+],
+[
+"Service Brakes",
+2
+],
+[
+"Electrical System",
+1
+],
+[
+"Air Bags",
+1
+]
+],
+"chart": false,
+"cars": [
+{
+"slug": "acura-nsx",
+"name": "Acura NSX",
+"years": [
+2017,
+2018,
+2019,
+2020,
+2021,
+2022
+],
+"page": true
+}
+],
+"recalls": [],
+"tsb": {
+"n": 10,
+"top": [
+"Tech line summary article - If there's an EVAP system leak from the filler neck (DTC P0455 [EVAP system large…",
+"Tech line summary article - To improve efficiency, the factory has installed new equipment for filling the…"
+]
+}
+},
+"gm-lt4": {
+"make": "Chevrolet",
+"code": "LT4",
+"name": "GM LT4",
+"codes": "LT4",
+"layout": "90° V8, pushrod",
+"size": "6.2 L",
+"asp": "supercharged",
+"hp": [
+650,
+650
+],
+"src": [
+{
+"title": "General Motors LS-based small-block engine",
+"url": "https://en.wikipedia.org/wiki/General_Motors_LS-based_small-block_engine"
+}
+],
+"notes": [],
+"y0": 2015,
+"y1": 2019,
+"years": {
+"2015": {
+"cars": {
+"chevrolet-corvette-z06": [
+"Corvette"
+]
+},
+"n": 6,
+"only": true
+},
+"2016": {
+"cars": {
+"chevrolet-corvette-z06": [
+"Corvette"
+]
+},
+"n": 13,
+"only": true
+},
+"2017": {
+"cars": {
+"chevrolet-corvette-z06": [
+"Corvette"
+]
+},
+"n": 25,
+"only": true
+},
+"2018": {
+"cars": {
+"chevrolet-corvette-z06": [
+"Corvette"
+]
+},
+"n": 5,
+"only": true
+},
+"2019": {
+"cars": {
+"chevrolet-corvette-z06": [
+"Corvette Z06"
+]
+},
+"n": 17,
+"only": false
+}
+},
+"complaints": 66,
+"parts": [
+[
+"Wheels",
+59
+],
+[
+"Engine",
+2
+],
+[
+"Power Train",
+1
+],
+[
+"Tires",
+1
+]
+],
+"chart": true,
+"cars": [
+{
+"slug": "chevrolet-corvette-z06",
+"name": "Chevrolet Corvette Z06",
+"years": [
+2015,
+2016,
+2017,
+2018,
+2019
+],
+"page": true
+}
+],
+"recalls": [],
+"tsb": {
+"n": 0,
+"top": []
+}
+},
+"gm-lt5": {
+"make": "Chevrolet",
+"code": "LT5",
+"name": "GM LT5",
+"codes": "LT5",
+"layout": "90° V8, pushrod",
+"size": "6.2 L",
+"asp": "supercharged",
+"hp": [
+755,
+755
+],
+"src": [
+{
+"title": "General Motors LS-based small-block engine",
+"url": "https://en.wikipedia.org/wiki/General_Motors_LS-based_small-block_engine"
+}
+],
+"notes": [],
+"y0": 2019,
+"y1": 2019,
+"years": {
+"2019": {
+"cars": {
+"chevrolet-corvette-z06": [
+"Corvette ZR1"
+]
+},
+"n": 3,
+"only": false
+}
+},
+"complaints": 3,
+"parts": [
+[
+"Wheels",
+2
+],
+[
+"Structure",
+1
+]
+],
+"chart": false,
+"cars": [
+{
+"slug": "chevrolet-corvette-z06",
+"name": "Chevrolet Corvette Z06",
+"years": [
+2019
+],
+"page": true
+}
+],
+"recalls": [],
+"tsb": {
+"n": 1,
+"top": [
+"18267 - Service Update - Certain vehicles equipped with RPO LT5 (6.2L SUPERCHARGED V8), a fuel injector may…"
+]
+}
+},
+"gm-lt6": {
+"make": "Chevrolet",
+"code": "LT6",
+"name": "Chevrolet LT6",
+"codes": "LT6 (Gemini family)",
+"layout": "flat-plane V8, DOHC",
+"size": "5.5 L",
+"asp": "naturally aspirated",
+"hp": [
+670,
+670
+],
+"src": [
+{
+"title": "Chevrolet Gemini small-block engine",
+"url": "https://en.wikipedia.org/wiki/Chevrolet_Gemini_small-block_engine"
+}
+],
+"notes": [],
+"y0": 2023,
+"y1": 2025,
+"years": {
+"2023": {
+"cars": {
+"chevrolet-corvette-z06": [
+"Corvette Z06",
+"Corvette Z06 Carbon Aero"
+]
+},
+"n": 3,
+"only": true
+},
+"2024": {
+"cars": {
+"chevrolet-corvette-z06": [
+"Corvette Z06",
+"Corvette Z06 Carbon Aero"
+]
+},
+"n": 3,
+"only": false
+},
+"2025": {
+"cars": {
+"chevrolet-corvette-z06": [
+"Corvette Z06",
+"Corvette Z06 Carbon Aero"
+]
+},
+"n": 0,
+"only": false
+}
+},
+"complaints": 6,
+"parts": [
+[
+"Fuel/Propulsion System",
+3
+],
+[
+"Unknown Or Other",
+1
+],
+[
+"Electrical System",
+1
+],
+[
+"Service Brakes",
+1
+]
+],
+"chart": false,
+"cars": [
+{
+"slug": "chevrolet-corvette-z06",
+"name": "Chevrolet Corvette Z06",
+"years": [
+2023,
+2024,
+2025
+],
+"page": true
+}
+],
+"recalls": [],
+"tsb": {
+"n": 0,
+"top": []
+}
+},
+"gm-lt7": {
+"make": "Chevrolet",
+"code": "LT7",
+"name": "Chevrolet LT7",
+"codes": "LT7 (Gemini family)",
+"layout": "V8, DOHC",
+"size": "5.5 L",
+"asp": "twin-turbo",
+"hp": [
+1064,
+1064
+],
+"src": [
+{
+"title": "Chevrolet Gemini small-block engine",
+"url": "https://en.wikipedia.org/wiki/Chevrolet_Gemini_small-block_engine"
+},
+{
+"title": "Chevrolet Corvette (C8)",
+"url": "https://en.wikipedia.org/wiki/Chevrolet_Corvette_(C8)"
+}
+],
+"notes": [],
+"y0": 2025,
+"y1": 2025,
+"years": {
+"2025": {
+"cars": {
+"chevrolet-corvette-z06": [
+"Corvette ZR1"
+]
+},
+"n": 0,
+"only": false
+}
+},
+"complaints": 0,
+"parts": [],
+"chart": false,
+"cars": [
+{
+"slug": "chevrolet-corvette-z06",
+"name": "Chevrolet Corvette Z06",
+"years": [
+2025
+],
+"page": true
+}
+],
+"recalls": [],
+"tsb": {
+"n": 0,
+"top": []
+}
+},
+"gm-lt2": {
+"make": "Chevrolet",
+"code": "LT2",
+"name": "GM LT2",
+"codes": "LT2",
+"layout": "90° V8, pushrod",
+"size": "6.2 L",
+"asp": "naturally aspirated hybrid",
+"hp": [
+655,
+655
+],
+"hp_note": "E-Ray, with the front motor",
+"src": [
+{
+"title": "Chevrolet Corvette (C8)",
+"url": "https://en.wikipedia.org/wiki/Chevrolet_Corvette_(C8)"
+}
+],
+"notes": [],
+"y0": 2024,
+"y1": 2025,
+"years": {
+"2024": {
+"cars": {
+"chevrolet-corvette-z06": [
+"Corvette E-RAY"
+]
+},
+"n": 0,
+"only": false
+},
+"2025": {
+"cars": {
+"chevrolet-corvette-z06": [
+"Corvette E-Ray"
+]
+},
+"n": 0,
+"only": false
+}
+},
+"complaints": 0,
+"parts": [],
+"chart": false,
+"cars": [
+{
+"slug": "chevrolet-corvette-z06",
+"name": "Chevrolet Corvette Z06",
+"years": [
+2024,
+2025
+],
+"page": true
+}
+],
+"recalls": [
+{
+"id": "26V213000",
+"date": "02/04/2026",
+"part": "Exterior Lighting",
+"summary": "General Motors, LLC (GM) is recalling certain 2026 Chevrolet Corvette ZR1X Coupe, Corvette ZR1X Convertible, Corvette Coupe E-Ray, Corvette Convertible E-Ray, Corvette Convertible, Corvette Coupe, 2025 Corvette E-Ray Coupe, Corvette E-Ray Convertible, Corvette Convertible, and Corvette Coupe vehicle",
+"years": [
+2025
+],
+"cars": [
+"Chevrolet Corvette Z06"
+],
+"eng": false
+}
+],
+"tsb": {
+"n": 8,
+"top": []
+}
+},
+"ford-ecoboost-35": {
+"make": "Ford",
+"code": "D35",
+"name": "Ford 3.5 EcoBoost (D35)",
+"codes": "D35 (second-generation 3.5 EcoBoost)",
+"layout": "V6",
+"size": "3.5 L",
+"asp": "twin-turbo",
+"hp": [
+647,
+660
+],
+"src": [
+{
+"title": "Ford EcoBoost engine",
+"url": "https://en.wikipedia.org/wiki/Ford_EcoBoost_engine"
+},
+{
+"title": "Ford GT",
+"url": "https://en.wikipedia.org/wiki/Ford_GT"
+}
+],
+"notes": [
+[
+"About 200 2017-2018 Ford GTs were recalled for a possible hydraulic leak and fire risk.",
+"https://en.wikipedia.org/wiki/Ford_GT"
+]
+],
+"y0": 2017,
+"y1": 2022,
+"years": {
+"2017": {
+"cars": {
+"ford-gt": [
+"GT"
+]
+},
+"n": 0,
+"only": true
+},
+"2018": {
+"cars": {
+"ford-gt": [
+"GT"
+]
+},
+"n": 0,
+"only": true
+},
+"2019": {
+"cars": {
+"ford-gt": [
+"GT"
+]
+},
+"n": 0,
+"only": true
+},
+"2020": {
+"cars": {
+"ford-gt": [
+"GT"
+]
+},
+"n": 0,
+"only": true
+},
+"2021": {
+"cars": {
+"ford-gt": [
+"GT"
+]
+},
+"n": 0,
+"only": true
+},
+"2022": {
+"cars": {
+"ford-gt": [
+"GT"
+]
+},
+"n": 0,
+"only": true
+}
+},
+"complaints": 0,
+"parts": [],
+"chart": false,
+"cars": [
+{
+"slug": "ford-gt",
+"name": "Ford GT",
+"years": [
+2017,
+2018,
+2019,
+2020,
+2021,
+2022
+],
+"page": true
+}
+],
+"recalls": [
+{
+"id": "25V443000",
+"date": "27/06/2025",
+"part": "Structure",
+"summary": "Ford Motor Company (Ford) is recalling certain 2017 GT vehicles previously repaired incorrectly under recall 18V707. The rear wing valve block may leak hydraulic fluid.",
+"years": [
+2017
+],
+"cars": [
+"Ford GT"
+],
+"eng": false
+},
+{
+"id": "18V707000",
+"date": "09/10/2018",
+"part": "Structure",
+"summary": "Ford Motor Company (Ford) is recalling certain 2017-2018 Ford GT vehicles.  The rear wing valve block may leak hydraulic fluid.",
+"years": [
+2017,
+2018
+],
+"cars": [
+"Ford GT"
+],
+"eng": false
+}
+],
+"tsb": {
+"n": 5,
+"top": [
+"Some 2017-2022 Ford GT vehicles may exhibit a runs rough or hard start with or without an illuminated MIL…",
+"During service and repair requiring removal and replacement of a crankshaft bolt and/or crankshaft damper,…"
+]
+}
+},
+"toyota-2gr": {
+"make": "Toyota",
+"code": "2GR-FE",
+"name": "Toyota 2GR-FE",
+"codes": "2GR-FE",
+"layout": "60° V6",
+"size": "3.5 L",
+"asp": "naturally aspirated or supercharged",
+"made": "Toyota engine, Lotus engine management",
+"hp": [
+276,
+416
+],
+"src": [
+{
+"title": "Toyota GR engine",
+"url": "https://en.wikipedia.org/wiki/Toyota_GR_engine"
+},
+{
+"title": "Lotus Evora",
+"url": "https://en.wikipedia.org/wiki/Lotus_Evora"
+},
+{
+"title": "Lotus Emira",
+"url": "https://en.wikipedia.org/wiki/Lotus_Emira"
+}
+],
+"notes": [],
+"y0": 2010,
+"y1": 2025,
+"years": {
+"2010": {
+"cars": {
+"lotus-evora-emira": [
+"Evora"
+]
+},
+"n": 2,
+"only": true
+},
+"2011": {
+"cars": {
+"lotus-evora-emira": [
+"Evora"
+]
+},
+"n": 2,
+"only": true
+},
+"2012": {
+"cars": {
+"lotus-evora-emira": [
+"Evora"
+]
+},
+"n": 2,
+"only": true
+},
+"2013": {
+"cars": {
+"lotus-evora-emira": [
+"Evora"
+]
+},
+"n": 3,
+"only": true
+},
+"2014": {
+"cars": {
+"lotus-evora-emira": [
+"Evora"
+]
+},
+"n": 3,
+"only": true
+},
+"2017": {
+"cars": {
+"lotus-evora-emira": [
+"Evora"
+]
+},
+"n": 3,
+"only": true
+},
+"2018": {
+"cars": {
+"lotus-evora-emira": [
+"Evora"
+]
+},
+"n": 1,
+"only": true
+},
+"2020": {
+"cars": {
+"lotus-evora-emira": [
+"Evora",
+"Evora GT"
+]
+},
+"n": 0,
+"only": true
+},
+"2021": {
+"cars": {
+"lotus-evora-emira": [
+"Evora GT"
+]
+},
+"n": 0,
+"only": true
+},
+"2024": {
+"cars": {
+"lotus-evora-emira": [
+"Emira"
+]
+},
+"n": 1,
+"only": true
+},
+"2025": {
+"cars": {
+"lotus-evora-emira": [
+"Emira"
+]
+},
+"n": 0,
+"only": true
+}
+},
+"complaints": 17,
+"parts": [
+[
+"Suspension",
+6
+],
+[
+"Engine",
+5
+],
+[
+"Power Train",
+1
+],
+[
+"Air Bags",
+1
+]
+],
+"chart": false,
+"cars": [
+{
+"slug": "lotus-evora-emira",
+"name": "Lotus Evora / Emira",
+"years": [
+2010,
+2011,
+2012,
+2013,
+2014,
+2017,
+2018,
+2020,
+2021,
+2024,
+2025
+],
+"page": true
+}
+],
+"recalls": [
+{
+"id": "14V280000",
+"date": "27/05/2014",
+"part": "Engine And Engine Cooling",
+"summary": "Lotus Cars USA, Inc. (Lotus) is recalling certain model year 2008-2011 Elise and Exige vehicles manufactured from November 2007 to July 2011, and 2011 Evora vehicles manufactured September 2010 through September 2011.  The oil cooler hose may detach from its fitting.",
+"years": [
+2011
+],
+"cars": [
+"Lotus Evora / Emira"
+],
+"eng": true
+},
+{
+"id": "13V314000",
+"date": "16/07/2013",
+"part": "Engine And Engine Cooling",
+"summary": "Lotus Cars USA, Inc. is recalling certain model year 2011 Evora supercharged vehicles equipped with a manual transmission and manufactured September 2010 through September 2011. The engine oil cooler hose may chafe and rupture resulting in oil loss.",
+"years": [
+2011
+],
+"cars": [
+"Lotus Evora / Emira"
+],
+"eng": true
+},
+{
+"id": "12V477000",
+"date": "01/10/2012",
+"part": "Engine And Engine Cooling",
+"summary": "Lotus is recalling certain model year 2011 Evora supercharged vehicles manufactured from February 2011 through September 2011, equipped with a three-piece oil feed pipe with a flexible hose section. This engine mounted oil feed pipe, used to supply oil to the engine cylinder head, can rupture.",
+"years": [
+2011
+],
+"cars": [
+"Lotus Evora / Emira"
+],
+"eng": true
+},
+{
+"id": "19V263000",
+"date": "02/04/2019",
+"part": "Structure",
+"summary": "Lotus Cars USA, Inc. (Lotus) is recalling certain 2017-2018 Evora vehicles.  The toe board in the passenger footwell lacks stiffness, allowing the knee of an unbelted occupant to contact the rigid structure of the vehicle, in the event of a crash.  As such, these vehicles fail to comply with the req",
+"years": [
+2017,
+2018
+],
+"cars": [
+"Lotus Evora / Emira"
+],
+"eng": false
+},
+{
+"id": "18V781000",
+"date": "06/11/2018",
+"part": "Steering",
+"summary": "Lotus Cars Limited (Lotus) is recalling certain 2018 Lotus Evora vehicles.  Due to an assembly error, in the event of a frontal collision, the steering column may not properly collapse to absorb some of the impact energy.",
+"years": [
+2018
+],
+"cars": [
+"Lotus Evora / Emira"
+],
+"eng": false
+},
+{
+"id": "13V216000",
+"date": "21/05/2013",
+"part": "Equipment",
+"summary": "Lotus Cars is recalling certain model year 2013 Evora vehicles manufactured September 2012 through November 2012.  These vehicles have been granted a temporary exemption from the requirement to conform to the latest passenger side advanced air bag requirements covered by Federal Motor Vehicle Safety",
+"years": [
+2013
+],
+"cars": [
+"Lotus Evora / Emira"
+],
+"eng": false
+}
+],
+"tsb": {
+"n": 17,
+"top": [
+"Diagnosing medium temperature engine coolant thermostat operation to prevent unnecessary thermostat replacement",
+"Fitment of tail lamp link lead harnesses to prevent rear tail lamp failure",
+"Odometer mileage adjustment implications of module substitutions on Emira vehicles"
+]
+}
+},
+"porsche-m97": {
+"make": "Porsche",
+"code": "M97",
+"name": "Porsche M97 (Mezger)",
+"codes": "M97.77 (GT3, GT3 RS 3.8), M97.74 (GT3 RS 4.0), M97.70 (GT2 RS)",
+"layout": "flat-6",
+"size": "3.6 to 4.0 L",
+"asp": "naturally aspirated (GT3) or twin-turbo (GT2 RS)",
+"hp": [
+612,
+612
+],
+"hp_note": "GT2 RS; the GT3 figures aren&#39;t in our sources",
+"src": [
+{
+"title": "Porsche 911 GT3",
+"url": "https://en.wikipedia.org/wiki/Porsche_911_GT3"
+},
+{
+"title": "Porsche 911 GT2",
+"url": "https://en.wikipedia.org/wiki/Porsche_911_GT2"
+},
+{
+"title": "Porsche 997",
+"url": "https://en.wikipedia.org/wiki/Porsche_997"
+}
+],
+"notes": [],
+"y0": 2010,
+"y1": 2011,
+"years": {
+"2010": {
+"cars": {
+"porsche-911-turbo-gt3": [
+"911 GT3",
+"911 GT3 RS"
+]
+},
+"n": 3,
+"only": false
+},
+"2011": {
+"cars": {
+"porsche-911-turbo-gt3": [
+"911 GT2 RS",
+"911 GT3",
+"911 GT3 RS"
+]
+},
+"n": 2,
+"only": false
+}
+},
+"complaints": 5,
+"parts": [
+[
+"Engine",
+3
+],
+[
+"Suspension",
+1
+],
+[
+"Engine And Engine Cooling",
+1
+]
+],
+"chart": false,
+"cars": [
+{
+"slug": "porsche-911-turbo-gt3",
+"name": "Porsche 911 Turbo / GT3",
+"years": [
+2010,
+2011
+],
+"page": true
+}
+],
+"recalls": [],
+"tsb": {
+"n": 98,
+"top": [
+"After witching engine off, this cause oil pressure warning light to be unnecessarily activated, in instrument…",
+"A plug, pressed and sealed into crankcase, was not securely sealed enough and this resulted in plug becoming…",
+"Center intake-air distributor Information: This is to inform you of a voluntary Workshop Campaign on the…"
+]
+}
+},
+"porsche-ma1-gt3": {
+"make": "Porsche",
+"code": "MA1 GT3",
+"name": "Porsche GT3 flat-6 (MA1)",
+"codes": "MA1.75 (991 GT3), MA1.76 (GT3 RS, 991.2 GT3); the 992 GT3 keeps the 991.2 engine",
+"layout": "flat-6",
+"size": "3.8 L and 4.0 L",
+"asp": "naturally aspirated",
+"hp": [
+468,
+513
+],
+"hp_note": "475 to 520 PS",
+"src": [
+{
+"title": "Porsche 911 GT3",
+"url": "https://en.wikipedia.org/wiki/Porsche_911_GT3"
+},
+{
+"title": "Porsche 991",
+"url": "https://en.wikipedia.org/wiki/Porsche_991"
+},
+{
+"title": "Porsche 911 (992)",
+"url": "https://en.wikipedia.org/wiki/Porsche_911_(992)"
+}
+],
+"notes": [
+[
+"In 2014 Porsche replaced the engine in all 785 991 GT3s built so far after a supplier error in the connecting-rod bolts (two cars caught fire), and later gave a 10-year / 120,000-mile engine warranty over valvetrain wear.",
+"https://en.wikipedia.org/wiki/Porsche_911_GT3"
+]
+],
+"y0": 2014,
+"y1": 2024,
+"years": {
+"2014": {
+"cars": {
+"porsche-911-turbo-gt3": [
+"911 GT3"
+]
+},
+"n": 0,
+"only": false
+},
+"2015": {
+"cars": {
+"porsche-911-turbo-gt3": [
+"911 GT3"
+]
+},
+"n": 0,
+"only": false
+},
+"2016": {
+"cars": {
+"porsche-911-turbo-gt3": [
+"911 GT3",
+"911 GT3 RS"
+]
+},
+"n": 0,
+"only": false
+},
+"2018": {
+"cars": {
+"porsche-911-turbo-gt3": [
+"911 GT3",
+"911 GT3 Touring"
+]
+},
+"n": 1,
+"only": false
+},
+"2019": {
+"cars": {
+"porsche-911-turbo-gt3": [
+"911 GT3",
+"911 GT3 RS",
+"911 GT3 Touring"
+]
+},
+"n": 0,
+"only": false
+},
+"2022": {
+"cars": {
+"porsche-911-turbo-gt3": [
+"911 GT3",
+"911 GT3 Touring"
+]
+},
+"n": 0,
+"only": false
+},
+"2023": {
+"cars": {
+"porsche-911-turbo-gt3": [
+"911 GT3",
+"911 GT3 RS",
+"911 GT3 Touring"
+]
+},
+"n": 0,
+"only": false
+},
+"2024": {
+"cars": {
+"porsche-911-turbo-gt3": [
+"911 GT3",
+"911 GT3 RS",
+"911 GT3 Touring"
+]
+},
+"n": 0,
+"only": false
+}
+},
+"complaints": 1,
+"parts": [
+[
+"Back Over Prevention",
+1
+]
+],
+"chart": false,
+"cars": [
+{
+"slug": "porsche-911-turbo-gt3",
+"name": "Porsche 911 Turbo / GT3",
+"years": [
+2014,
+2015,
+2016,
+2018,
+2019,
+2022,
+2023,
+2024
+],
+"page": true
+}
+],
+"recalls": [],
+"tsb": {
+"n": 175,
+"top": [
+"Technical information for Oil Leakage in the Area of the Upper Part of the Oil Pan and Crankcase: Checking…",
+"Instructions on advanced technical information for DME fault P310B00 - fuel low pressure",
+"Technical information on the check engine warning light active in conjunction with fault memory entry…"
+]
+}
+},
+"porsche-turbo-38": {
+"make": "Porsche",
+"code": "3.8 Turbo",
+"name": "Porsche 3.8 twin-turbo flat-6",
+"codes": "997.2 and 991 Turbo (code not public); 991.2 GT2 RS: MDH.NA",
+"layout": "flat-6",
+"size": "3.8 L",
+"asp": "twin-turbo",
+"hp": [
+493,
+691
+],
+"src": [
+{
+"title": "Porsche 997",
+"url": "https://en.wikipedia.org/wiki/Porsche_997"
+},
+{
+"title": "Porsche 991",
+"url": "https://en.wikipedia.org/wiki/Porsche_991"
+},
+{
+"title": "Porsche 911 GT2",
+"url": "https://en.wikipedia.org/wiki/Porsche_911_GT2"
+}
+],
+"notes": [],
+"y0": 2010,
+"y1": 2019,
+"years": {
+"2010": {
+"cars": {
+"porsche-911-turbo-gt3": [
+"911 Turbo Cabriolet",
+"911 Turbo Coupe",
+"911 Turbo S Cabriolet",
+"911 Turbo S Coupe"
+]
+},
+"n": 0,
+"only": false
+},
+"2011": {
+"cars": {
+"porsche-911-turbo-gt3": [
+"911 Turbo Cabriolet",
+"911 Turbo Coupe",
+"911 Turbo S Cabriolet",
+"911 Turbo S Coupe"
+]
+},
+"n": 0,
+"only": false
+},
+"2012": {
+"cars": {
+"porsche-911-turbo-gt3": [
+"911 Turbo Cabriolet",
+"911 Turbo Coupe",
+"911 Turbo S Cabriolet",
+"911 Turbo S Coupe"
+]
+},
+"n": 0,
+"only": true
+},
+"2013": {
+"cars": {
+"porsche-911-turbo-gt3": [
+"911 Turbo",
+"911 Turbo Cabriolet",
+"911 Turbo S",
+"911 Turbo S Cabriolet"
+]
+},
+"n": 0,
+"only": true
+},
+"2014": {
+"cars": {
+"porsche-911-turbo-gt3": [
+"911 Turbo",
+"911 Turbo Cabriolet",
+"911 Turbo S",
+"911 Turbo S Cabriolet"
+]
+},
+"n": 0,
+"only": false
+},
+"2015": {
+"cars": {
+"porsche-911-turbo-gt3": [
+"911 Turbo",
+"911 Turbo S"
+]
+},
+"n": 0,
+"only": false
+},
+"2016": {
+"cars": {
+"porsche-911-turbo-gt3": [
+"911 Turbo",
+"911 Turbo Cabriolet",
+"911 Turbo S",
+"911 Turbo S Cabriolet"
+]
+},
+"n": 0,
+"only": false
+},
+"2017": {
+"cars": {
+"porsche-911-turbo-gt3": [
+"911 Turbo",
+"911 Turbo Cabriolet",
+"911 Turbo S",
+"911 Turbo S Cabriolet"
+]
+},
+"n": 1,
+"only": true
+},
+"2018": {
+"cars": {
+"porsche-911-turbo-gt3": [
+"911 GT2 RS",
+"911 Turbo",
+"911 Turbo Cabriolet",
+"911 Turbo S",
+"911 Turbo S Cabriolet",
+"911 Turbo S Exclusive"
+]
+},
+"n": 0,
+"only": false
+},
+"2019": {
+"cars": {
+"porsche-911-turbo-gt3": [
+"911 GT2 RS",
+"911 Turbo",
+"911 Turbo Cabriolet",
+"911 Turbo S",
+"911 Turbo S Cabriolet",
+"911 Turbo S Exclusive Cabriolet"
+]
+},
+"n": 0,
+"only": false
+}
+},
+"complaints": 1,
+"parts": [
+[
+"Exterior Lighting",
+1
+]
+],
+"chart": false,
+"cars": [
+{
+"slug": "porsche-911-turbo-gt3",
+"name": "Porsche 911 Turbo / GT3",
+"years": [
+2010,
+2011,
+2012,
+2013,
+2014,
+2015,
+2016,
+2017,
+2018,
+2019
+],
+"page": true
+}
+],
+"recalls": [
+{
+"id": "20E091000",
+"date": "11/12/2020",
+"part": "Suspension",
+"summary": "Ohlins USA, Inc (Ohlins) is recalling certain Front Struts, part number POS 5N20.  These struts were sold as part of Ohlins strut kits part number POZ MN02, intended for installation on 1999-2005 Porsche 911 Carrera 4 and 4S (generation 996), and 2001-2006 Porsche 911 Turbo / Turbo S (generation 996",
+"years": [
+2013
+],
+"cars": [
+"Porsche 911 Turbo / GT3"
+],
+"eng": false
+}
+],
+"tsb": {
+"n": 115,
+"top": [
+"Instructions on carrying ou the WKE8 Workshop campaign, which is a re-programming of the DME control unit in…",
+"Between throttle housing and pressure pipe, clamp on rubber sleeve failed to be tightened as required,…",
+"Instructions for reprogramming the High Voltage Control Unit on 918 Spyder models in the event of a red or…"
+]
+}
+},
+"porsche-9a2": {
+"make": "Porsche",
+"code": "9A2 Evo",
+"name": "Porsche 9A2 Evo 3.7",
+"codes": "9A2 Evo (MDB.CB)",
+"layout": "flat-6",
+"size": "3.7 L",
+"asp": "twin-turbo",
+"hp": [
+572,
+641
+],
+"src": [
+{
+"title": "Porsche 911 (992)",
+"url": "https://en.wikipedia.org/wiki/Porsche_911_(992)"
+},
+{
+"title": "Corazón y alma (Porsche Newsroom)",
+"url": "https://newsroom.porsche.com/es_ES/tecnologia/2020/es-porsche-motor-boxer-911-turbo-s-christophorus-394-20422.html"
+}
+],
+"notes": [],
+"y0": 2021,
+"y1": 2025,
+"years": {
+"2021": {
+"cars": {
+"porsche-911-turbo-gt3": [
+"911 Turbo",
+"911 Turbo Cabriolet",
+"911 Turbo S",
+"911 Turbo S Cabriolet"
+]
+},
+"n": 0,
+"only": true
+},
+"2022": {
+"cars": {
+"porsche-911-turbo-gt3": [
+"911 Turbo",
+"911 Turbo Cabriolet",
+"911 Turbo S",
+"911 Turbo S Cabriolet"
+]
+},
+"n": 0,
+"only": false
+},
+"2023": {
+"cars": {
+"porsche-911-turbo-gt3": [
+"911 Turbo",
+"911 Turbo Cabriolet",
+"911 Turbo S",
+"911 Turbo S Cabriolet"
+]
+},
+"n": 0,
+"only": false
+},
+"2024": {
+"cars": {
+"porsche-911-turbo-gt3": [
+"911 Turbo",
+"911 Turbo Cabriolet",
+"911 Turbo S",
+"911 Turbo S Cabriolet"
+]
+},
+"n": 0,
+"only": false
+},
+"2025": {
+"cars": {
+"porsche-911-turbo-gt3": [
+"911 Turbo",
+"911 Turbo Cabriolet",
+"911 Turbo S",
+"911 Turbo S Cabriolet"
+]
+},
+"n": 0,
+"only": true
+}
+},
+"complaints": 0,
+"parts": [],
+"chart": false,
+"cars": [
+{
+"slug": "porsche-911-turbo-gt3",
+"name": "Porsche 911 Turbo / GT3",
+"years": [
+2021,
+2022,
+2023,
+2024,
+2025
+],
+"page": true
+}
+],
+"recalls": [
+{
+"id": "23V715000",
+"date": "25/10/2023",
+"part": "Air Bags",
+"summary": "Porsche Cars North America, Inc. (Porsche) is recalling certain 2021-2023 911 Turbo S, 2022 911 Turbo, 2022-2023 911 GT3 Touring, 911 GT3, 911 Carrera 4 GTS, 2022-2024 911 Carrera GTS, 2023 911 GT3 RS, 911 Dakar, and 2024 911 Carrera T vehicles equipped with optional full bucket seats.  The seat-mou",
+"years": [
+2021
+],
+"cars": [
+"Porsche 911 Turbo / GT3"
+],
+"eng": false
+}
+],
+"tsb": {
+"n": 102,
+"top": [
+"Instructions on advanced technical information for DME fault P310B00 - fuel low pressure",
+"Technical information for the malfunction indicator light active in instrument cluster, DME fault memory…",
+"Installation and conversion instructions for the sport exhaust on the 911 Turbo and Turbo S"
+]
+}
+},
+"porsche-918-v8": {
+"make": "Porsche",
+"code": "918 V8",
+"name": "Porsche 918 Spyder V8",
+"codes": "no public code (RS Spyder racing V8 architecture)",
+"layout": "V8",
+"size": "4.6 L",
+"asp": "naturally aspirated plug-in hybrid",
+"hp": [
+599,
+599
+],
+"hp_note": "engine only; 875 hp with the motors",
+"src": [
+{
+"title": "Porsche 918 Spyder",
+"url": "https://en.wikipedia.org/wiki/Porsche_918_Spyder"
+}
+],
+"notes": [],
+"y0": 2015,
+"y1": 2015,
+"years": {
+"2015": {
+"cars": {
+"porsche-918-spyder": [
+"918 Spyder"
+]
+},
+"n": 0,
+"only": true
+}
+},
+"complaints": 0,
+"parts": [],
+"chart": false,
+"cars": [
+{
+"slug": "porsche-918-spyder",
+"name": "Porsche 918 Spyder",
+"years": [
+2015
+],
+"page": true
+}
+],
+"recalls": [
+{
+"id": "15V335000",
+"date": "01/06/2015",
+"part": "Engine And Engine Cooling",
+"summary": "Porsche Cars North America, Inc. (Porsche) is recalling certain model year 2015 918 Spyder vehicles manufactured February 25, 2014, to April 29, 2015.  In the affected vehicles, the wiring harness for the left rear radiator fan may contact an engine heat insulation plate.",
+"years": [
+2015
+],
+"cars": [
+"Porsche 918 Spyder"
+],
+"eng": true
+},
+{
+"id": "18V287000",
+"date": "03/05/2018",
+"part": "Suspension",
+"summary": "Porsche Cars North America, Inc. (Porsche) is recalling certain 2015 Porsche 918 Spyder vehicles.  The connecting shafts of the longitudinal and transverse control arms may fail due to stress corrosion cracking, impacting vehicle handling.",
+"years": [
+2015
+],
+"cars": [
+"Porsche 918 Spyder"
+],
+"eng": false
+},
+{
+"id": "16V520000",
+"date": "08/07/2016",
+"part": "Seat Belts",
+"summary": "Porsche Cars North America, Inc. (Porsche) is recalling certain model year 2015 Porsche 918 Spyder Hybrid Electric vehicles manufactured February 2, 2015 through July 1, 2015.  In the affected vehicles, incorrect screws might have been used when re-installing and/or re-securing the seat belt mount o",
+"years": [
+2015
+],
+"cars": [
+"Porsche 918 Spyder"
+],
+"eng": false
+},
+{
+"id": "16V885000",
+"date": "09/12/2016",
+"part": "Suspension",
+"summary": "Porsche Cars North America, Inc. (Porsche) is recalling certain model year 2015 918 Spyder vehicles manufactured November 6, 2013, to July 27, 2015.  The affected vehicles have front lower control arms that may crack at the ball joint.",
+"years": [
+2015
+],
+"cars": [
+"Porsche 918 Spyder"
+],
+"eng": false
+},
+{
+"id": "14V457000",
+"date": "28/07/2014",
+"part": "Suspension",
+"summary": "Porsche Cars of North America, Inc. (Porsche) is recalling certain model year 2015 918 Spyder vehicles manufactured May 7, 2014, to June 18, 2014.  The affected vehicles may have been manufactured with rear-axle control arms that may break, causing difficulty controlling the vehicle.",
+"years": [
+2015
+],
+"cars": [
+"Porsche 918 Spyder"
+],
+"eng": false
+}
+],
+"tsb": {
+"n": 104,
+"top": [
+"Concerns: Oil intake pipe Information: In the course of endurance testing under high load, it has been…",
+"Symptom: Vehicle jerking while driving using the combustion engine",
+"Instructions for reprogramming the High Voltage Control Unit on 918 Spyder models in the event of a red or…"
+]
+}
+}
+},
+"cars": {
+"ferrari-california": {
+"ferrari-f136": [
+2010,
+2011,
+2012,
+2013,
+2014
+],
+"ferrari-f154": [
+2015,
+2016,
+2017,
+2018
+]
+},
+"ferrari-458-italia": {
+"ferrari-f136": [
+2010,
+2011,
+2012,
+2013,
+2014,
+2015
+]
+},
+"ferrari-488": {
+"ferrari-f154": [
+2016,
+2017,
+2018,
+2019,
+2020
+]
+},
+"ferrari-gtc4lusso-ff": {
+"ferrari-f154": [
+2018,
+2019,
+2020
+],
+"ferrari-f140": [
+2012,
+2013,
+2014,
+2015,
+2016,
+2017,
+2018,
+2019,
+2020
+]
+},
+"ferrari-portofino": {
+"ferrari-f154": [
+2019,
+2020,
+2021,
+2022,
+2023
+]
+},
+"ferrari-f8-tributo": {
+"ferrari-f154": [
+2020,
+2021,
+2022,
+2023
+]
+},
+"ferrari-roma": {
+"ferrari-f154": [
+2021,
+2022,
+2023,
+2024,
+2025
+]
+},
+"ferrari-sf90-stradale": {
+"ferrari-f154": [
+2021,
+2022,
+2023,
+2024,
+2025
+]
+},
+"ferrari-f12berlinetta": {
+"ferrari-f140": [
+2013,
+2014,
+2015,
+2016,
+2017
+]
+},
+"ferrari-812-superfast": {
+"ferrari-f140": [
+2018,
+2019,
+2020,
+2021,
+2022,
+2023,
+2024
+]
+},
+"ferrari-296": {
+"ferrari-f163": [
+2022,
+2023,
+2025
+]
+},
+"audi-r8": {
+"lamborghini-v10": [
+2010,
+2011,
+2012,
+2014,
+2015,
+2017,
+2018,
+2020,
+2021,
+2022,
+2023
+],
+"audi-42-fsi": [
+2010,
+2011,
+2012,
+2014,
+2015
+]
+},
+"lamborghini-gallardo": {
+"lamborghini-v10": [
+2010,
+2011,
+2012,
+2013,
+2014
+]
+},
+"lamborghini-hurac-n": {
+"lamborghini-v10": [
+2015,
+2016,
+2017,
+2018,
+2019,
+2020,
+2021,
+2022,
+2023,
+2024
+]
+},
+"lamborghini-aventador": {
+"lamborghini-l539": [
+2012,
+2013,
+2014,
+2015,
+2016,
+2017,
+2018,
+2019,
+2020,
+2021,
+2022
+]
+},
+"lamborghini-revuelto": {
+"lamborghini-l545": [
+2024,
+2025
+]
+},
+"bentley-bentayga": {
+"vw-ea825": [
+2019,
+2020,
+2021,
+2022,
+2023,
+2024,
+2025
+],
+"vw-ea839": [
+2020,
+2021,
+2023,
+2025
+],
+"vw-w12": [
+2017,
+2018,
+2020,
+2021,
+2022,
+2023
+]
+},
+"lamborghini-urus": {
+"vw-ea825": [
+2019,
+2020,
+2021,
+2022,
+2023,
+2024
+]
+},
+"bentley-continental-gt": {
+"vw-ea825": [
+2020,
+2021,
+2022,
+2023,
+2024
+],
+"audi-ea824": [
+2013,
+2014,
+2015,
+2016,
+2017
+],
+"vw-w12": [
+2010,
+2011,
+2012,
+2013,
+2014,
+2015,
+2016,
+2017,
+2018,
+2020,
+2021,
+2022,
+2023,
+2024
+]
+},
+"mclaren-650s-12c": {
+"mclaren-m838t": [
+2012,
+2014,
+2015,
+2016
+]
+},
+"mclaren-570s-540c": {
+"mclaren-m838t": [
+2016,
+2017,
+2018,
+2019,
+2020
+]
+},
+"mclaren-720s-750s": {
+"mclaren-m840t": [
+2018,
+2019,
+2020,
+2021,
+2022
+]
+},
+"mclaren-gt": {
+"mclaren-m840t": [
+2020,
+2021,
+2022
+]
+},
+"mclaren-artura": {
+"mclaren-m630": [
+2023
+]
+},
+"aston-martin-vantage": {
+"aston-am-v8": [
+2010,
+2011,
+2012,
+2013,
+2014,
+2015,
+2016
+],
+"aston-am-v12": [
+2011,
+2012,
+2015,
+2016,
+2017
+],
+"aston-ae31": [
+2023
+],
+"amg-m177-m178": [
+2019,
+2020,
+2021,
+2022,
+2023,
+2025
+]
+},
+"aston-martin-dbs": {
+"aston-am-v12": [
+2010,
+2011,
+2012
+],
+"aston-ae31": [
+2019,
+2020,
+2021,
+2022,
+2023
+]
+},
+"aston-martin-db11-db12": {
+"aston-ae31": [
+2017,
+2018,
+2019,
+2020,
+2021,
+2022,
+2023
+],
+"amg-m177-m178": [
+2018,
+2019,
+2020,
+2021,
+2022,
+2023,
+2024,
+2025
+]
+},
+"mercedes-amg-gt": {
+"amg-m177-m178": [
+2016,
+2017,
+2018,
+2019,
+2020,
+2021,
+2023,
+2024,
+2025
+],
+"amg-m159": [
+2011,
+2012,
+2013,
+2014,
+2015
+],
+"amg-m256": [
+2019,
+2020,
+2021,
+2022,
+2023,
+2024,
+2025
+],
+"amg-m139": [
+2025
+]
+},
+"aston-martin-dbx": {
+"amg-m177-m178": [
+2021,
+2022,
+2023,
+2024,
+2025
+]
+},
+"rolls-royce-phantom": {
+"rr-n73": [
+2010,
+2011,
+2012,
+2013,
+2014,
+2015,
+2016,
+2017
+],
+"rr-n74": [
+2018,
+2019,
+2020,
+2021,
+2022,
+2023,
+2024,
+2025
+]
+},
+"rolls-royce-ghost": {
+"rr-n74": [
+2010,
+2011,
+2012,
+2013,
+2014,
+2015,
+2016,
+2017,
+2018,
+2019,
+2020,
+2021,
+2022,
+2023,
+2024,
+2025
+]
+},
+"rolls-royce-cullinan": {
+"rr-n74": [
+2019,
+2020,
+2021,
+2022,
+2023,
+2024,
+2025
+]
+},
+"bugatti-veyron": {
+"bugatti-w16": [
+2010,
+2011,
+2012,
+2013,
+2014,
+2015
+]
+},
+"bugatti-chiron": {
+"bugatti-w16": [
+2018,
+2019,
+2020,
+2021,
+2022,
+2023,
+2024
+]
+},
+"nissan-gt-r": {
+"nissan-vr38dett": [
+2010,
+2011,
+2012,
+2013,
+2014,
+2015,
+2016,
+2017,
+2018,
+2019,
+2020,
+2021,
+2023,
+2024
+]
+},
+"acura-nsx": {
+"acura-jnc1": [
+2017,
+2018,
+2019,
+2020,
+2021,
+2022
+]
+},
+"chevrolet-corvette-z06": {
+"gm-lt4": [
+2015,
+2016,
+2017,
+2018,
+2019
+],
+"gm-lt5": [
+2019
+],
+"gm-lt6": [
+2023,
+2024,
+2025
+],
+"gm-lt7": [
+2025
+],
+"gm-lt2": [
+2024,
+2025
+]
+},
+"ford-gt": {
+"ford-ecoboost-35": [
+2017,
+2018,
+2019,
+2020,
+2021,
+2022
+]
+},
+"lotus-evora-emira": {
+"toyota-2gr": [
+2010,
+2011,
+2012,
+2013,
+2014,
+2017,
+2018,
+2020,
+2021,
+2024,
+2025
+]
+},
+"porsche-911-turbo-gt3": {
+"porsche-m97": [
+2010,
+2011
+],
+"porsche-ma1-gt3": [
+2014,
+2015,
+2016,
+2018,
+2019,
+2022,
+2023,
+2024
+],
+"porsche-turbo-38": [
+2010,
+2011,
+2012,
+2013,
+2014,
+2015,
+2016,
+2017,
+2018,
+2019
+],
+"porsche-9a2": [
+2021,
+2022,
+2023,
+2024,
+2025
+]
+},
+"porsche-918-spyder": {
+"porsche-918-v8": [
+2015
+]
+}
+},
+"unconfirmed": [
+"Bentley Continental GT 2025",
+"Lamborghini Urus 2025"
+]
+}

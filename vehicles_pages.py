@@ -132,10 +132,22 @@ print('planes pages', len(purls), 'moto pages', len(murls))
 SC = _load('data/supercars.json') if os.path.exists('data/supercars.json') else []
 surls = []
 rng2 = lambda a, pre='', suf='': f'{pre}{a[0]:,}{suf}' if a[0] == a[1] else f'{pre}{a[0]:,}–{a[1]:,}{suf}'
+_SCE = _load('data/supercar_engines.json') if os.path.exists('data/supercar_engines.json') else {'engines': {}, 'cars': {}}   # 11-11 supercar engine pages
+_SCEU = lambda e: '/engines/' + {'rr-n73': 'rolls-royce-n73', 'rr-n74': 'rolls-royce-n74'}.get(e, e) + '/'
+def _sce_links(slug, y):
+    es = [e for e, yl in (_SCE['cars'].get(slug) or {}).items() if y in yl]
+    return ''.join(f' · <a href="{_SCEU(e)}">{E(_SCE["engines"][e]["code"])}</a>' for e in es)
+def _sce_section(slug, name):
+    es = sorted((_SCE['cars'].get(slug) or {}).items(), key=lambda kv: min(kv[1]))
+    if not es: return ''
+    li = ''.join(f'<li><a href="{_SCEU(e)}"><b>{E(_SCE["engines"][e]["name"])}</b></a> <small>{E(_SCE["engines"][e]["size"])} {E(_SCE["engines"][e]["layout"])} {E(_SCE["engines"][e]["asp"])} · '
+                 f'{min(yl)}' + (f'–{max(yl)}' if max(yl) != min(yl) else '') + '</small></li>' for e, yl in es)
+    return (f'<section class="yc" id="engines"><h2>Engines <span class="h2s">{len(es)} engine{"" if len(es) == 1 else "s"} in the {E(name)}, each with its own page: YouTube score by year, recalls and repair notes.</span></h2>'
+            f'<ul class="sce-el">{li}</ul><p><a class="btn" href="/engines/supercars/">Every supercar engine →</a></p></section>')
 if SC:
     for c in SC:
         slug = slugify(c['name']); c['slug'] = slug; ph = vph(c['name']); ys = c['years']; last = ys[-1]
-        rows = ''.join(f'<tr><td><b>{y["y"]}</b></td><td class="num">{rng2(y["comb"])}</td><td class="num">{rng2(y["cost"], "$")}</td><td>{E(", ".join(y["engines"][:2]))}{" · hybrid" if y["hybrid"] else ""}</td>'
+        rows = ''.join(f'<tr><td><b>{y["y"]}</b></td><td class="num">{rng2(y["comb"])}</td><td class="num">{rng2(y["cost"], "$")}</td><td>{E(", ".join(y["engines"][:2]))}{" · hybrid" if y["hybrid"] else ""}{_sce_links(slug, y["y"])}</td>'
                        f'<td>{"Yes" if y["guzzler"] else "—"}</td><td class="num">{len(y["recalls"])}</td></tr>' for y in reversed(ys))
         allrec = sorted({r['id']: dict(r, y=y['y']) for y in ys for r in y['recalls']}.values(), key=lambda r: r['date'][-4:] if r['date'] else '', reverse=True)
         rc = ''.join(f'<li><b>{E((r["part"] or "").split(":")[0].title())}</b> <small>{r["y"]} model · {E(r["id"])}</small><p>{E(rsum(r))}</p></li>' for r in allrec[:4])
@@ -146,7 +158,7 @@ if SC:
 <div class="yts">{stat(rng2(last["comb"], "", " mpg"), f'combined, {last["y"]} (EPA)')}{stat(rng2(last["cost"], "$"), f'fuel a year, {last["y"]} (EPA)', 'bad' if last['cost'][1] >= 5000 else '')}{stat(str(c["recalls"]), 'recalls, all years', 'bad' if c['recalls'] >= 8 else '')}{stat("Yes" if last["guzzler"] else "No", 'gas-guzzler tax')}</div>{ytfix('super:' + slug)}
 <section class="yc"><h2>Every year. <span class="h2s">EPA numbers across the versions sold that year.</span></h2><div class="tw"><table><thead><tr><th>Year</th><th>MPG</th><th>Fuel / yr</th><th>Engine</th><th>Guzzler tax</th><th>Recalls</th></tr></thead><tbody>{rows}</tbody></table></div>
 <p class="yc-cap">EPA yearly fuel cost assumes 15,000 miles at national average prices. The gas-guzzler tax is a federal tax paid on new cars that use a lot of fuel.</p></section>
-{recs}
+{_sce_section(slug, c["name"])}{recs}
 <p class="yc-cap" style="text-align:center">Sources: EPA fueleconomy.gov and NHTSA recalls. 0–60 and top-speed specs coming soon. <a href="/supercars/">Every supercar</a></p></div>'''
         page(f'/supercars/{slug}/', f'{c["name"]} MPG, Fuel Cost & Recalls by Year | The Lemon Index',
              f'{c["name"]} by model year ({ys[0]["y"]}-{last["y"]}): EPA {rng2(last["comb"])} mpg, up to ${last["cost"][1]:,} a year in fuel, {c["recalls"]} NHTSA recalls.', body,
@@ -163,6 +175,7 @@ if SC:
 <section class="tiles"><div class="tile"><div class="tt"><p class="te">Thirstiest</p><h2>{E(thirst[0]["name"])}.</h2><p class="ts">{thirst[0]["years"][-1]["comb"][0]} mpg combined. About ${thirst[0]["years"][-1]["cost"][1]:,} a year in fuel (EPA).</p></div></div>
 <div class="tile"><div class="tt"><p class="te">Most recalls</p><h2>{E(rec[0]["name"])}.</h2><p class="ts">{rec[0]["recalls"]} NHTSA recalls across its model years.</p></div></div></section>
 <section><h2>Every model. <span class="h2s">Tap one for every year: mpg, fuel cost, engine and recalls.</span></h2><div class="mbs">{groups}</div>{vgrid_note([c["name"] for c in SC], "cars", "car")}</section>
+{f'<section class="yc"><h2>Supercar engines. <span class="h2s">{len(_SCE["engines"])} engines, from the Ferrari F154 to the Bugatti W16: YouTube score by year, recalls and repair notes.</span></h2><p><a class="btn" href="/engines/supercars/">Every supercar engine →</a></p></section>' if _SCE["engines"] else ''}
 <section class="yc hbsec"><h2>Yearly fuel cost. <span class="h2s">Newest model year, EPA estimate, the thirstiest version.</span></h2>{hub_bars([(c["name"], c["years"][-1]["cost"][1]) for c in thirst[:12]], pre='$')}</section>
 <section class="yc hbsec"><h2>Most recalls. <span class="h2s">NHTSA campaigns across all model years 2010–2025.</span></h2>{hub_bars([(c["name"], c["recalls"]) for c in rec[:12]])}</section>
 <p class="yc-cap" style="text-align:center">Owner complaints are too rare for supercars to score (Ferrari has about 70 in total), so this section shows EPA and recall data. Sources: EPA fueleconomy.gov, NHTSA.</p></div>''',
