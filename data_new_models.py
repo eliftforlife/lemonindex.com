@@ -139,6 +139,8 @@ def run(slug, p):
     scored = [v for v in years if 2010 <= v['y'] <= 2022]
     if len(scored) < 3: scored = [v for v in years if not v.get('early')]
     car = None
+    if len(scored) < 2 or sum(v['n'] for v in scored) < 30:   # too thin for a whole-model score (e.g. sales mostly under 20,000 a year): complaints-only page
+        flags.append(f'{p["name"]}: {len(scored)} scorable model years / {sum(v["n"] for v in scored)} complaints -> complaints only'); scored = []
     if scored:
         N = sum(v['n'] for v in scored); S_ = sum(v['sold'] for v in scored); EXP = sum(v['sold'] * BASE[v['y']] for v in scored)
         tot = collections.Counter();
@@ -175,7 +177,11 @@ for slug, p in PLAN.items():
     if p.get('dupe_of'): print(f"{p['name']}: duplicate of /cars/{p['dupe_of']}/ (its card links there)"); continue
     fam, car, xl, extra, rep = run(slug, p); report.append(rep)
     if car and fam['years']: Y_[slug] = fam; XL_[slug] = xl; C_[slug] = dict(car, id=slug); EX_.pop(slug, None)
-    else: Y_.pop(slug, None); C_.pop(slug, None); XL_.pop(slug, None); EX_[slug] = extra
+    else:
+        Y_.pop(slug, None); C_.pop(slug, None); XL_.pop(slug, None); EX_[slug] = extra
+        if rep['sales']:   # 11-11: we HAVE its sales, they're just too thin to score - say that (with the source), not "no sales yet"
+            sv = list(rep['sales'].values())
+            extra.update(why='thin', sales_url=rep['url'], sales_years=len(sv), sales_under=sum(1 for v in sv if v < 20000))
     API['MAKES'][p['name']] = p['make'].split('|')
     if p.get('fe'): API['FE_MODEL'][p['name']] = p['fe']
     jobs = [(y, xl[y]) for y in sorted(xl)]
@@ -197,4 +203,7 @@ json.dump(list(C_.values()), open(os.path.join(HERE, 'data', 'cars_new.json'), '
 json.dump(XL_, open(os.path.join(HERE, 'data', 'extras_local_new.json'), 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
 json.dump(XA_, open(os.path.join(HERE, 'data', 'extras_api_new.json'), 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
 json.dump(EX_, open(os.path.join(HERE, 'data', 'extra_models_new.json'), 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
-json.dump(report, open(os.path.join(HERE, 'data', 'new_models_report.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+_rp = os.path.join(HERE, 'data', 'new_models_report.json')   # 11-11: merge by slug, so a partial run keeps the other models' rows
+_old = json.load(open(_rp, encoding='utf-8')) if os.path.exists(_rp) else []
+_new = {r['slug'] for r in report}
+json.dump([r for r in _old if r['slug'] not in _new] + report, open(_rp, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)

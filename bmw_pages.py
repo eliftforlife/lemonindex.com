@@ -108,10 +108,13 @@ else:
         return '—', None
     # 11-10 v2: each engine's YouTube rank among the BMW engines here (average tone over its years with enough videos), for the page badge
     _YTAVG = {}
+    # 11-11 fix: ONE ranking for the engine page badge AND the /engines/bmw/ hub badge - only the engine's own years (the years its
+    # page lists), only engines that have a page, same order (average tone, then code to break ties)
     for _c in BENG:
-        _v = [d['score'] for d in (BYT.get(_c) or {}).values() if d and d.get('score') is not None]
+        _yy = BEY.get(_c) or {}
+        _v = [d['score'] for y, d in (BYT.get(_c) or {}).items() if y in _yy and d and d.get('score') is not None]
         if _v: _YTAVG[_c] = sum(_v) / len(_v)
-    _YTRANK = {c: i + 1 for i, c in enumerate(sorted(_YTAVG, key=lambda c: -_YTAVG[c]))}
+    _YTRANK = {c: i + 1 for i, c in enumerate(sorted(_YTAVG, key=lambda c: (-_YTAVG[c], c)))}
     def _engine_page(code):
         meta = BENG[code]; yrs = BEY.get(code) or {}
         if not yrs: return None
@@ -228,7 +231,7 @@ else:
         page(path, title, _html.unescape(re.sub('<[^>]+>', '', ans)), body, ld=ld, vis=fig)
         ENG_OK.add(code); BMW_URLS.append(path)
         return dict(code=code, years=f'{y0}–{y1}', y0=int(y0), y1=int(y1), fams=fams, models=models_s, b=scored_b, a=scored_a, comb=comb_only, n=len(ys), txt=txt_total,
-                    yt=(round(sum(yt_scores.values()) / len(yt_scores)) if yt_scores else None, len(yt_scores)),
+                    yt=(int(sum(yt_scores.values()) / len(yt_scores) + 0.5) if yt_scores else None, len(yt_scores)),   # 11-11: half-up, so 50.5 shows 51 and matches the rank order
                     bavg=(round(sum(v for k, v in own.values() if k == 'b') / max(1, sum(1 for k, _ in own.values() if k == 'b')))) if any(k == 'b' for k, _ in own.values()) else None)
     YP_IDS = {f['id'] for f in YEARS}
     import collections
@@ -274,7 +277,7 @@ else:
                        else f'<span class="ytbadge ehc-yr na" title="Not enough YouTube videos to rank">{_YTI}YT –</span>')
                     + f'<h2><a class="ehc-a" href="{ENG_URL(code)}">{E(code)}</a></h2><p class="ehc-t">{E(typ)} · {E(s["years"])}</p>'
                     + main + f'<p class="ehc-yt">{yt}</p><ul class="ehc-cars" aria-label="Cars with the {E(code)}">{chips}</ul></li>')
-        _ytr = {s['code']: i + 1 for i, s in enumerate(sorted([s for s in STATS if s['yt'][0] is not None], key=lambda s: -s['yt'][0]))}   # 11-10: YouTube rank badge (Elijah)
+        _ytr = _YTRANK   # 11-11: same ranking as each engine page's badge (was ranked separately here and could disagree)
         cards = [_card(s, i + 1, i == 0) for i, s in enumerate(ranked)] + [_card(s, None, False) for s in rest]
         kinds = [(_kind(s['code']), s['code']) for s in STATS]
         pills = [('all', 'All')] + [(k, lab) for k, lab, ok in (('4', '4-cylinder', any(c == '4' for (c, _), _x in kinds)), ('6', '6-cylinder', any(c == '6' for (c, _), _x in kinds)),

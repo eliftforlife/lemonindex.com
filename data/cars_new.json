@@ -658,5 +658,305 @@
 "sales_url": "https://en.wikipedia.org/wiki/Ford_Bronco",
 "sales_kind": "calendar",
 "id": "ford-bronco"
+},
+{
+"name": "Cadillac Escalade",
+"brand": "Cadillac",
+"segment": "suv",
+"years": "2011-2022",
+"sold": 368959,
+"n": 255,
+"per100k": 69,
+"expected": 389.41504743562496,
+"li": 65,
+"serious": 20,
+"worst": "2022",
+"issues": [
+[
+"engine",
+38
+],
+[
+"transmission & drivetrain",
+19
+],
+[
+"electrical",
+18
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Cadillac_Escalade",
+"sales_kind": "calendar",
+"id": "cadillac-escalade"
+},
+{
+"name": "Cadillac CTS",
+"brand": "Cadillac",
+"segment": "car",
+"years": "2010-2014",
+"sold": 211135,
+"n": 148,
+"per100k": 70,
+"expected": 240.49370764223895,
+"li": 62,
+"serious": 20,
+"worst": "2014",
+"issues": [
+[
+"electrical",
+32
+],
+[
+"transmission & drivetrain",
+18
+],
+[
+"steering",
+12
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Cadillac_CTS",
+"sales_kind": "calendar",
+"id": "cadillac-cts"
+},
+{
+"name": "Chevrolet Blazer",
+"brand": "Chevrolet",
+"segment": "suv",
+"years": "2019-2022",
+"sold": 290311,
+"n": 138,
+"per100k": 48,
+"expected": 302.37162305540664,
+"li": 46,
+"serious": 13,
+"worst": "2019",
+"issues": [
+[
+"electrical",
+30
+],
+[
+"engine",
+22
+],
+[
+"transmission & drivetrain",
+22
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/chevrolet-blazer-sales-figures/",
+"sales_kind": "calendar",
+"id": "chevrolet-blazer"
+},
+{
+"name": "Buick LaCrosse",
+"brand": "Buick",
+"segment": "car",
+"years": "2010-2017",
+"sold": 366772,
+"n": 264,
+"per100k": 72,
+"expected": 405.7115728918178,
+"li": 65,
+"serious": 19,
+"worst": "2012",
+"issues": [
+[
+"electrical",
+24
+],
+[
+"transmission & drivetrain",
+15
+],
+[
+"engine",
+11
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Buick_LaCrosse",
+"sales_kind": "calendar",
+"id": "buick-lacrosse"
+},
+{
+"name": "Mazda Tribute",
+"brand": "Mazda",
+"segment": "suv",
+"years": "2001-2008",
+"sold": 289909,
+"n": 777,
+"per100k": 268,
+"expected": 257.9869112737788,
+"li": 301,
+"serious": 10,
+"worst": "2001",
+"issues": [
+[
+"engine",
+37
+],
+[
+"electrical",
+13
+],
+[
+"transmission & drivetrain",
+12
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/mazda-tribute-sales-figures/",
+"sales_kind": "calendar",
+"id": "mazda-tribute"
+},
+{
+"name": "Chevrolet Cavalier",
+"brand": "Chevrolet",
+"segment": "car",
+"years": "2000-2004",
+"sold": 1160151,
+"n": 713,
+"per100k": 61,
+"expected": 1126.593802084748,
+"li": 63,
+"serious": 18,
+"worst": "2003",
+"issues": [
+[
+"electrical",
+19
+],
+[
+"service brakes, hydraulic",
+18
+],
+[
+"engine",
+14
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Chevrolet_Cavalier",
+"sales_kind": "calendar",
+"id": "chevrolet-cavalier"
+},
+{
+"name": "Dodge Caliber",
+"brand": "Dodge",
+"segment": "car",
+"years": "2007-2011",
+"sold": 393690,
+"n": 371,
+"per100k": 94,
+"expected": 374.68853905137604,
+"li": 99,
+"serious": 23,
+"worst": "2009",
+"issues": [
+[
+"suspension",
+18
+],
+[
+"electrical",
+16
+],
+[
+"transmission & drivetrain",
+13
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Dodge_Caliber",
+"sales_kind": "calendar",
+"id": "dodge-caliber"
+},
+{
+"name": "Ford Flex",
+"brand": "Ford",
+"segment": "suv",
+"years": "2010-2019",
+"sold": 229604,
+"n": 385,
+"per100k": 168,
+"expected": 251.16424285252657,
+"li": 153,
+"serious": 9,
+"worst": "2013",
+"issues": [
+[
+"electrical",
+34
+],
+[
+"body structure",
+13
+],
+[
+"steering",
+8
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/ford-flex-sales-figures/",
+"sales_kind": "calendar",
+"id": "ford-flex"
+},
+{
+"name": "Nissan Armada",
+"brand": "Nissan",
+"segment": "suv",
+"years": "2017-2019",
+"sold": 114396,
+"n": 90,
+"per100k": 79,
+"expected": 118.5126306276918,
+"li": 76,
+"serious": 6,
+"worst": "2019",
+"issues": [
+[
+"electrical",
+52
+],
+[
+"brakes",
+22
+],
+[
+"transmission & drivetrain",
+18
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Nissan_Armada",
+"sales_kind": "calendar",
+"id": "nissan-armada"
+},
+{
+"name": "Lincoln MKZ",
+"brand": "Lincoln",
+"segment": "car",
+"years": "2010-2017",
+"sold": 233309,
+"n": 172,
+"per100k": 74,
+"expected": 255.29591380270136,
+"li": 67,
+"serious": 26,
+"worst": "2013",
+"issues": [
+[
+"electrical",
+21
+],
+[
+"steering",
+17
+],
+[
+"transmission & drivetrain",
+15
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Lincoln_MKZ",
+"sales_kind": "calendar",
+"id": "lincoln-mkz"
 }
 ]

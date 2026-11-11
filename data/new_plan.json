@@ -290,5 +290,139 @@
   "rx": "(CARAVAN)",
   "sales": {},
   "dupe_of": "dodge-grand-caravan"
+ },
+ "cadillac-escalade": {
+  "name": "Cadillac Escalade",
+  "brand": "Cadillac",
+  "seg": "suv",
+  "make": "CADILLAC",
+  "rx": "(ESCALADE|ESCALADE ESV|ESCALADE EXT|ESCALADE HYBRID)",
+  "sales": {
+   "wiki": "Cadillac Escalade"
+  }
+ },
+ "dodge-intrepid": {
+  "name": "Dodge Intrepid",
+  "brand": "Dodge",
+  "seg": "car",
+  "make": "DODGE",
+  "rx": "(INTREPID)",
+  "sales": {}
+ },
+ "volkswagen-beetle": {
+  "name": "Volkswagen Beetle",
+  "brand": "Volkswagen",
+  "seg": "car",
+  "make": "VOLKSWAGEN",
+  "rx": "(BEETLE|BEETLE CONVERTIBLE)",
+  "sales": {}
+ },
+ "cadillac-cts": {
+  "name": "Cadillac CTS",
+  "brand": "Cadillac",
+  "seg": "car",
+  "make": "CADILLAC",
+  "rx": "(CTS)",
+  "sales": {
+   "wiki": "Cadillac CTS"
+  }
+ },
+ "chevrolet-blazer": {
+  "name": "Chevrolet Blazer",
+  "brand": "Chevrolet",
+  "seg": "suv",
+  "make": "CHEVROLET",
+  "rx": "(BLAZER)",
+  "sales": {
+   "gcbc": "chevrolet-blazer"
+  }
+ },
+ "buick-lacrosse": {
+  "name": "Buick LaCrosse",
+  "brand": "Buick",
+  "seg": "car",
+  "make": "BUICK",
+  "rx": "(LACROSSE)",
+  "sales": {
+   "wiki": "Buick LaCrosse"
+  }
+ },
+ "mazda-tribute": {
+  "name": "Mazda Tribute",
+  "brand": "Mazda",
+  "seg": "suv",
+  "make": "MAZDA",
+  "rx": "(TRIBUTE|TRIBUTE HYBRID)",
+  "sales": {
+   "gcbc": "mazda-tribute"
+  }
+ },
+ "chevrolet-cavalier": {
+  "name": "Chevrolet Cavalier",
+  "brand": "Chevrolet",
+  "seg": "car",
+  "make": "CHEVROLET",
+  "rx": "(CAVALIER)",
+  "sales": {
+   "wiki": "Chevrolet Cavalier"
+  }
+ },
+ "mercury-grand-marquis": {
+  "name": "Mercury Grand Marquis",
+  "brand": "Mercury",
+  "seg": "car",
+  "make": "MERCURY",
+  "rx": "(GRAND MARQUIS)",
+  "sales": {}
+ },
+ "land-rover-range-rover": {
+  "name": "Land Rover Range Rover",
+  "brand": "Land Rover",
+  "seg": "suv",
+  "make": "LAND ROVER",
+  "rx": "(RANGE ROVER|RANGE ROVER L322)",
+  "sales": {
+   "gcbc": "land-rover-range-rover"
+  }
+ },
+ "dodge-caliber": {
+  "name": "Dodge Caliber",
+  "brand": "Dodge",
+  "seg": "car",
+  "make": "DODGE",
+  "rx": "(CALIBER|CALIBER AWD)",
+  "sales": {
+   "wiki": "Dodge Caliber"
+  }
+ },
+ "ford-flex": {
+  "name": "Ford Flex",
+  "brand": "Ford",
+  "seg": "suv",
+  "make": "FORD",
+  "rx": "(FLEX)",
+  "sales": {
+   "gcbc": "ford-flex"
+  }
+ },
+ "nissan-armada": {
+  "name": "Nissan Armada",
+  "brand": "Nissan",
+  "seg": "suv",
+  "make": "NISSAN",
+  "rx": "(ARMADA)",
+  "sales": {
+   "wiki": "Nissan Armada"
+  }
+ },
+ "lincoln-mkz": {
+  "name": "Lincoln MKZ",
+  "brand": "Lincoln",
+  "seg": "car",
+  "make": "LINCOLN",
+  "rx": "(MKZ|MKZ HYBRID)",
+  "sales": {
+   "wiki": "Lincoln MKZ"
+  }
  }
 }
