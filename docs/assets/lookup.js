@@ -9,7 +9,7 @@
   // 11-11 (Elijah: one search for everything): supercars, EVs and performance cars ride along as [name, id, years, page, kind]; they open their
   // own page (no year pages), and a performance car without a page yet says "coming soon". Accents fold, so "huracan" finds the Huracán.
   const fold = s => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
-  const KIND = { sc: 'Supercar · engine, fuel cost and recalls', ev: 'Electric car · EV score and problems', perf: 'Performance car' };
+  const KIND = { sc: 'Supercar · engine, fuel cost and recalls', ev: 'Electric car · EV score and problems', perf: 'Performance car', moto: 'Motorcycle · complaints and recalls' };
   const ALL = Object.entries(P).flatMap(([b, ms]) => ms.map(([n, id, ys, u, t]) => ({ b, n, id, ys, u, t, k: fold(n + ' ' + b).replace(/[^a-z0-9 ]/g, ' ') + (AK[id] || '') + (t === 'ev' ? ' ev electric' : '') })));
   const href = (c, y) => c.u || (c.t ? '' : '/cars/' + c.id + '/' + (y ? y + '/' : ''));
   const go = (c, y) => { const h = href(c, y); if (!h) { miss(`The ${c.n} is coming soon.`); return false; } location.href = h; return true; };
@@ -38,7 +38,7 @@
     sug.hidden = !hits.length;
     if (hits.length && hits[0].brand) { sug.innerHTML = `<p class="fhint">${hits[0].y}: pick the brand</p><div class="fbr">` + hits.map((h, i) => `<button type="button" data-b="${h.brand}" class="${i === cur ? 'on' : ''}">${h.brand}</button>`).join('') + '</div>';
       sug.querySelectorAll('[data-b]').forEach(x => x.onclick = () => { q.value = `${hits[0].y} ${x.dataset.b} `; q.focus(); hits = find(q.value); cur = hits.length ? 0 : -1; show(); }); return; }
-    const lab = h => h.c.t ? (h.c.t === 'perf' && !h.c.u ? 'Performance car · coming soon' : KIND[h.c.t]) : h.y ? 'problems and owner complaints' : h.miss ? `no ${h.miss} in our data · every year ${h.c.ys[0]}-${h.c.ys.at(-1)}` : `every year ${h.c.ys[0]}-${h.c.ys.at(-1)}`;
+    const lab = h => h.c.t ? (!h.c.u ? ({ perf: 'Performance car', moto: 'Motorcycle' }[h.c.t] || 'Coming') + ' · coming soon' : KIND[h.c.t]) : h.y ? 'problems and owner complaints' : h.miss ? `no ${h.miss} in our data · every year ${h.c.ys[0]}-${h.c.ys.at(-1)}` : `every year ${h.c.ys[0]}-${h.c.ys.at(-1)}`;
     sug.innerHTML = hits.map((h, i) => { const u = href(h.c, h.y), cl = (i === cur ? 'on' : '') + (u ? '' : ' fsoon');
       return `<a role="option" ${u ? `href="${u}"` : 'aria-disabled="true"'} class="${cl.trim()}"><b>${h.y ? h.y + ' ' : ''}${h.c.n}</b><small>${lab(h)}</small></a>`; }).join('');
   };

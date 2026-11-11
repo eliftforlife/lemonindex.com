@@ -113,14 +113,21 @@ if MO:
              f'{m["n"]:,} NHTSA owner complaints about the {m["name"]} ({m["years"][0]}-{m["years"][1]}): top problem {m["parts"][0][0] if m["parts"] else "n/a"}, {len(m["recalls"])} recalls, {m["serious"]}% involved a crash, fire or injury.', body,
              ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": f'{m["name"]} problems', "url": BASE + f'/motorcycles/{slug}/'}] + vld(ph, f'/motorcycles/{slug}/'))
         murls.append(f'/motorcycles/{slug}/')
-    brands = list(dict.fromkeys(m['brand'] for m in sorted(MO, key=lambda m: -m['n'])))
-    groups = ''.join(f'<div class="mb"><h3>{E(b)}</h3><div class="mg">' + ''.join(card(f'/motorcycles/{m["slug"]}/', vph(m['name']), m['name'].replace(b, '').strip() or m['name'], f'{len(m["recalls"])}', 'bad' if len(m['recalls']) >= 10 else 'good', f'{m["n"]:,} complaints') for m in sorted([m for m in MO if m['brand'] == b], key=lambda m: -m['n'])) + '</div></div>' for b in brands)
+    # 11-11: the next bikes (data/moto_soon.json, AI illustrations checked by hand): coming-soon cards, not links; no stub pages
+    MS = _load('data/moto_soon.json') if os.path.exists('data/moto_soon.json') else []
+    def mscard(s):
+        nm = s['name'][len(s['make']) + 1:] if s['name'].startswith(s['make'] + ' ') else s['name']
+        img = f'<img src="{s["img"]}" alt="{E(s["name"])}, illustration" width="{s["w"]}" height="{s["h"]}" loading="lazy">' if s.get('img') else ''
+        return (f'<div class="mc vmc mc-nd" aria-disabled="true" title="Coming soon"><span class="mc-p">{img}</span><b>{E(nm)}</b>'
+                f'<small class="mc-k">{E(s["engine"])}</small><span class="nd">Coming soon</span></div>')
+    brands = list(dict.fromkeys(m['brand'] for m in sorted(MO, key=lambda m: -m['n']))) + sorted({s['make'] for s in MS} - {m['brand'] for m in MO})
+    groups = ''.join(f'<div class="mb"><h3>{E(b)}</h3><div class="mg">' + ''.join(card(f'/motorcycles/{m["slug"]}/', vph(m['name']), m['name'].replace(b, '').strip() or m['name'], f'{len(m["recalls"])}', 'bad' if len(m['recalls']) >= 10 else 'good', f'{m["n"]:,} complaints') for m in sorted([m for m in MO if m['brand'] == b], key=lambda m: -m['n'])) + ''.join(mscard(s) for s in sorted([s for s in MS if s['make'] == b], key=lambda s: s['name'])) + '</div></div>' for b in brands)
     ser = sorted([m for m in MO if m['n'] >= 40], key=lambda m: -m['serious'])
     rec = sorted(MO, key=lambda m: -len(m['recalls']))
     page('/motorcycles/', 'Motorcycle Problems & Recalls by Model: Harley, Honda, Yamaha | The Lemon Index',
          f'Owner complaints and recalls for {len(MO)} popular motorcycles (Harley-Davidson, Honda, Yamaha, Kawasaki, Suzuki, BMW, Ducati and more), from NHTSA.',
          f'''<div class="pg">{phero('Motorcycles', 'Motorcycle problems, by model.', 'Owner complaints and recalls filed with the U.S. government. Corner number: recalls.', visual=pimg(vph('Harley-Davidson Touring'), valt(vph('Harley-Davidson Touring'), 'Harley-Davidson Touring')) if vph('Harley-Davidson Touring') else '', credit=vcredit(vph('Harley-Davidson Touring')))}
-<section><h2>Every model. <span class="h2s">Tap one for its problems, recalls and complaints by year.</span></h2><div class="mbs">{groups}</div>{vgrid_note([m["name"] for m in MO], "motorcycles", "motorcycle")}</section>
+<section><h2>Every model. <span class="h2s">Tap one for its problems, recalls and complaints by year.{f' Cards marked Coming soon are next ({len(MS)} bikes).' if MS else ''}</span></h2><div class="mbs">{groups}</div>{vgrid_note([m["name"] for m in MO], "motorcycles", "motorcycle")}</section>
 <section class="yc hbsec"><h2>Most recalls. <span class="h2s">NHTSA recall campaigns across the model years.</span></h2>{hub_bars([(m["name"], len(m["recalls"])) for m in rec[:10]])}</section>
 <section class="yc hbsec"><h2>Most serious complaints. <span class="h2s">Share that involved a crash, fire or injury (models with 40+ complaints).</span></h2>{hub_bars([(m["name"], m["serious"]) for m in ser[:10]], '%')}</section>
 <p class="yc-cap" style="text-align:center">There are no free U.S. sales figures by motorcycle model, so this section shows counts and shares, not a per-bike score like our cars. Source: NHTSA owner complaints and recalls.</p></div>''',
