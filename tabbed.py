@@ -207,11 +207,96 @@ def transform_model(body, eng_html, short):
             h2 = ch.find('h2'); h2s = str(h2) if h2 else ''
             if h2: h2.extract()
             inner = ch.decode_contents(); ch.clear(); ch.append(BeautifulSoup(h2s + _toggle(inner, eng_html, short), 'html.parser'))
-    over = f'{_s(note)}{_s(rsc)}{_s(rnew)}' + ''.join(map(str, bw + rest))
+    S_ = BeautifulSoup(''.join(map(str, years + bw + cmp_ + qa + table + ([rsc] if rsc else []))), 'html.parser')
+    safest = next((a for a in S_.select('.rsc .rs') if 'Safest' in _txt(a.find('small'))), None)
+    bars = _year_bars(BeautifulSoup('<div class="yyears">' + ''.join(map(str, years)) + '</div>', 'html.parser'))
+    best_b = S_.select_one('.bw2 .bwt.good h2') or S_.select_one('.bw2 h2')
+    yv = _txt(safest.find('b')) if safest else (_txt(best_b).rstrip('.') if best_b else '')
+    c_y = _ovcard('years', 'Years & engines' if eng_html else 'Every year', E(yv), ('Safest year' if safest else 'Best year to buy') if yv else '', _ovstrip(bars), go='every year')
+    mus = [_txt(m.find('b')) for m in S_.select('.mu')][:3]
+    c_c = _ovcard('compare', 'Compare', E(mus[0]) if mus else '', ('Also ' + ', '.join(E(m.replace('vs ', '')) for m in mus[1:3])) if len(mus) > 1 else '', go='comparisons')
+    nq = len(S_.select('.yqa h3')); c_q = _ovcard('questions', 'Questions', f'{nq} quick answers' if nq else '', '', _qtitles([S_]), go='questions')
+    nrow = len(S_.select('table tbody tr')); c_d = _ovcard('data', 'All the data', f'{nrow} model years' if nrow else '', 'in one table: index, complaints, recalls, mpg' if nrow else '', go='the table')
+    over = f'{_s(note)}<div class="ovg ovg4">{c_y}{c_c}{c_q}{c_d}</div>' + (f'<p class="ovslim">{_txt(rnew)}</p>' if rnew else '')   # 11-10: preview cards
+    years = bw + years
     tabs = _tabs([('overview', 'Overview', over), ('years', 'Years & engines' if eng_html else 'Years', ''.join(map(str, years))), ('compare', 'Compare', ''.join(map(str, cmp_))),
                   ('questions', 'Questions', ''.join(map(str, qa))), ('data', 'All the data', ''.join(map(str, table)))], f'{short} sections')
     cls = ' '.join(root.get('class') or [])
     return f'{ASSET}<div class="{cls} tbl">{hero}{tabs}{tail}</div>'
+
+
+# ---------------------------------------------------------------- 11-10 Overview = 5 preview cards (Elijah: "too much text… the overview should
+# contain a snippet of Problems, Repairs & costs, Recalls & safety, Every year and Questions… they can click into each")
+# Each card: the tab's name + icon, ONE big fact, ONE short line, a tiny visual, and the whole card links to its tab (#p-<tab>, tabs.js opens it).
+_OVI = {'problems': '<path d="M14.7 6.3a4 4 0 0 0 5 5L21 12.6l-1.6 1.6a4 4 0 0 1-5.2.5L7.3 21.6a2 2 0 0 1-2.9-2.9l6.9-6.9a4 4 0 0 1 .5-5.2L13.4 5z"/>',
+        'repairs': '<path d="M12 3v18M16.5 6.5c-.8-1.2-2.4-2-4.5-2-2.8 0-4.5 1.4-4.5 3.4 0 4.6 9.5 2.6 9.5 7.6 0 2-1.9 3.5-5 3.5-2.3 0-4-.9-4.8-2.3"/>',
+        'recalls': '<path d="M12 3.5 21.5 20h-19z"/><path d="M12 10v4.5M12 17.2v.3"/>',
+        'years': '<rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/>',
+        'questions': '<circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.4a2.5 2.5 0 1 1 3.4 2.3c-.6.3-1 .8-1 1.5v.6M12 16.8v.2"/>',
+        'compare': '<path d="M8 20V9M16 20V4M4 20h16"/>', 'data': '<rect x="3.5" y="4.5" width="17" height="15" rx="2"/><path d="M3.5 9.5h17M3.5 14.5h17M9.5 4.5v15"/>',
+        'specs': '<circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/>'}
+def _ovsvg(k): return f'<svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">{_OVI.get(k, _OVI["data"])}</svg>'
+def _txt(t): return re.sub(r'\s+', ' ', t.get_text(' ', strip=True)) if t is not None else ''
+def _ovcard(tid, label, value, line='', vis='', go=None):
+    na = not value
+    return (f'<a class="ovc{" ovc-na" if na else ""}" href="#p-{tid}"><span class="ovc-h">{_ovsvg(tid)}{E(label)}</span>'
+            + (f'<b class="ovc-v">{value}</b>' if not na else '<b class="ovc-v">No data yet</b>')
+            + (f'<span class="ovc-s">{line}</span>' if line and not na else '') + (vis if not na else '')
+            + f'<span class="ovc-go">See {E(go or label.lower())} →</span></a>')
+def _ovbars(rows):   # [(label, pct)] -> 3 thin labelled bars
+    mx = max([p for _, p in rows[:3]] + [1])
+    return '<span class="ovbars">' + ''.join(f'<span class="ovbr"><em>{E(l)}</em><i style="width:{max(4, p / mx * 100):.0f}%"></i><b>{p:.0f}%</b></span>' for l, p in rows[:3]) + '</span>'
+def _ovstrip(bars):  # [(year, cls, cur)] -> a strip of small squares, this year outlined
+    return ('<span class="ovstrip" aria-hidden="true">' + ''.join(f'<i class="{c}{" cur" if cur else ""}" title="{y}"></i>' for y, c, cur in bars) + '</span>') if bars else ''
+def _qtitles(qa, n=2):
+    hs = [h for c in qa for h in c.select('.yqa h3, h3.qh')][:n]
+    return '<span class="ovq">' + ''.join(f'<span>{E(_txt(h))}</span>' for h in hs) + '</span>' if hs else ''
+def _year_bars(scope):
+    out = []
+    for b in (scope.select('.yyears .b') if scope is not None else []):
+        k = b.get('class') or []; yb = b.find(class_='bn')
+        if not yb: continue
+        out.append((_txt(yb), 'bad' if 'bad' in k else 'good' if 'good' in k else 'na', 'cur' in k))
+    return out
+def overview_cards_year(over, probs, fix, rec, yrs, qa):
+    """The 5 cards for a year page, from its own panels (nothing new to look up)."""
+    S_ = BeautifulSoup(''.join(map(str, over + probs + fix + rec + yrs + qa)), 'html.parser')
+    card = {}
+    for a in S_.select('.ybuy-g .yk'):
+        l = a.find(class_='yk-l') or a.find(class_='yt-l'); v = a.find('b'); sm = a.find('small')
+        if l: card[_txt(l)] = (v, _txt(sm), a)
+    # 1 problems
+    pts = [(_txt(r.find('span')), float(re.sub(r'[^0-9.]', '', _txt(r.find('b'))) or 0)) for r in S_.select('#problems .pt') if r.find('b')]
+    c1 = _ovcard('problems', 'Problems', E(pts[0][0].capitalize()) if pts else '', f'{pts[0][1]:.0f}% of complaints' if pts else '', _ovbars(pts) if len(pts) > 1 else '')
+    # 2 repairs & costs
+    costs = [(_txt(li.find(class_='yc-t').find('span')), _txt(li.find('b'))) for li in S_.select('#diy .yc-g li') if li.find(class_='yc-t') and li.find('b')]
+    costs = [c for c in costs if not c[0].lower().startswith('other')] or costs
+    notes = next((v for k, v in card.items() if k.startswith('Repair notes')), None)
+    nnotes = _txt(notes[0]) if notes else None
+    mk = next((k.replace('Repair notes from ', '') for k in card if k.startswith('Repair notes')), '')
+    if costs: c2 = _ovcard('repairs', 'Repairs & costs', E(costs[0][1]), f'{E(costs[0][0])}: typical owner quote', (f'<span class="ovc-s2">{nnotes} repair notes{" from " + E(mk) if mk else ""}</span>' if nnotes else ''), go='repairs')
+    elif nnotes: c2 = _ovcard('repairs', 'Repairs & costs', E(nnotes), f'repair notes{" " + E(mk) if mk else ""} sent dealers', go='repairs')
+    else:
+        tops = [_txt(li.find(class_='yf-t') or li)[:60] for li in S_.select('#diy .yfl li')][:1]
+        c2 = _ovcard('repairs', 'Repairs & costs', E(tops[0]) if tops else '', 'the fix owners look up most' if tops else '', go='repairs')
+    # 3 recalls & safety
+    n = S_.select_one('#recalls .yc-n'); nr = _txt(n) if n else (_txt(card['Recalls'][0]) if 'Recalls' in card else '')
+    stars = card.get('Crash test'); st = (str(stars[0].find(class_='stars')) if stars and stars[0] is not None and stars[0].find(class_='stars') else '')
+    if nr or st:
+        val = (f'{nr} recall{"" if nr == "1" else "s"}' if nr and nr != '0' else 'No recalls') if nr else 'Crash test'
+        c3 = _ovcard('recalls', 'Recalls & safety', val, 'Free fix at any dealer' if nr and nr != '0' else ('none on record' if nr else ''),
+                     (f'<span class="ovst">{st}<small>crash test</small></span>' if st else ''), go='recalls & safety')
+    else: c3 = _ovcard('recalls', 'Recalls & safety', '')
+    # 4 every year
+    bars = _year_bars(S_); by = card.get('Better year to buy') or card.get('Best year')
+    if by: c4 = _ovcard('years', 'Every year', E(_txt(by[0])), ('Better year to buy' if 'Better year to buy' in card else 'The best year we track'), _ovstrip(bars), go='every year')
+    else: c4 = _ovcard('years', 'Every year', f'{len(bars)} years' if bars else '', 'side by side' if bars else '', _ovstrip(bars), go='every year')
+    # 5 questions
+    qs = S_.select('.yqa h3')
+    c5 = _ovcard('questions', 'Questions', f'{len(qs)} quick answers' if qs else '', '', _qtitles([S_]), go='questions')
+    oc = card.get('Owner complaints'); fe = card.get('Fuel economy')
+    slim = ' '.join(x for x in ((f'<span><b>{_txt(oc[0])}</b> owner complaints, first 3 years</span>' if oc else ''), (f'<span><b>{_txt(fe[0])}</b> combined, EPA</span>' if fe else '')) if x)
+    return f'<div class="ovg">{c1}{c2}{c3}{c4}{c5}</div>' + (f'<p class="ovslim">{slim}</p>' if slim else '')
 
 def transform_year(body, eng_html, short):
     s = BeautifulSoup(body, 'html.parser'); root = s.find(['article', 'div'])
@@ -220,6 +305,11 @@ def transform_year(body, eng_html, short):
     modes = yt.find('nav', class_='modes'); sw = yt.find('nav', class_='yswitch'); early = yt.find(class_='early-b'); note = yt.find('p', class_='yc-note')
     img = ''.join(str(c) for c in (pv.find_all(recursive=False) if pv else []))
     short_ans = f'<p class="ans tb-ans">{_first_sentence(ans)}</p>' if ans else ''
+    en = next((c for c in root.find_all(class_='early-n')), None)
+    if early is not None:
+        pop = _info(re.sub(r'^Early read\.\s*', '', _txt(en))) if en is not None else ''
+        pop = pop.replace('<div class="ii-pop"', '<span class="ii-pop"').replace('</div>', '</span>')
+        early = BeautifulSoup(f'<p class="early-b">Early read · still collecting complaints<span class="iiw">{pop}</span></p>', 'html.parser')
     hero = f'<section class="ph tb-hero">{_s(crumbs)}<div class="tb-img">{img}</div>{_s(h1)}{_s(early)}{_s(yhero)}{_controls(sw)}</section>'   # the gauge + verdict already say it: no answer paragraph
     top = [c for c in root.find_all(recursive=False) if c is not ph]
     grid = next((c for c in top if 'ygrid' in (c.get('class') or [])), None)
@@ -254,7 +344,10 @@ def transform_year(body, eng_html, short):
             for tile in c.find_all(class_='yt', recursive=False): tile['class'] = (tile.get('class') or []) + ['yk', 'ykt']; bg.append(tile.extract())
             over.remove(c)
     J = lambda xs: ''.join(map(str, xs))
-    tabs = _tabs([('overview', 'Overview', _s(note) + J(over)), ('problems', 'Problems', J(probs)), ('repairs', 'Repairs & costs', J(fix)),
+    over = [c for c in over if 'early-n' not in (c.get('class') or [])]
+    tail = [c for c in tail if not (c.name == 'p' and 'yc-cap' in (c.get('class') or []) and _txt(c).startswith('Lemon Index ='))]
+    over_html = overview_cards_year(over, probs, fix, rec, yrs, qa)
+    tabs = _tabs([('overview', 'Overview', over_html), ('problems', 'Problems', J(probs)), ('repairs', 'Repairs & costs', J(fix)),
                   ('recalls', 'Recalls & safety', J(rec)), ('years', 'Every year', J(yrs)), ('questions', 'Questions', J(qa))], 'Report sections', _modes(modes))
     cls = ' '.join(root.get('class') or [])
     return f'{ASSET}<article class="{cls} tbl">{hero}{tabs}{J(tail)}</article>'
@@ -285,6 +378,21 @@ def _adv_sort(items, modes, short, order=None):
     J = lambda xs: ''.join(map(str, xs))
     panels = [('overview', 'Overview', J(over))] + [(tid, lab, J(got[tid])) for tid, lab, _, _ in _ADV]
     if order: panels = sorted(panels, key=lambda p: order.index(p[0]) if p[0] in order else len(order))   # 11-10: Advanced pages open on the meatiest tab
+    elif not J(over).strip() and got['years'] and got['problems']:   # 11-10: no-sales model pages get the preview-card Overview too
+        S_ = BeautifulSoup(''.join(map(str, items)), 'html.parser')
+        pts = [(_txt(r.find('span')), float(re.sub(r'[^0-9.]', '', _txt(r.find('b'))) or 0)) for r in S_.select('#problems .pt') if r.find('b')]
+        if not pts:   # the no-sales template lists problem areas as a 2-column table
+            pts = [(_txt(r.find_all('td')[0]), float(re.sub(r'[^0-9.]', '', _txt(r.find_all('td')[1])) or 0)) for r in S_.select('#problems tbody tr') if len(r.find_all('td')) >= 2]
+        nr = _txt(S_.select_one('#recalls .yc-n')) if S_.select_one('#recalls .yc-n') else ''
+        yrows = [[_txt(td) for td in tr.find_all('td')] for tr in S_.select('#years tbody tr')]
+        worst = max(yrows, key=lambda r: float(re.sub(r'[^0-9.]', '', r[1]) or 0)) if yrows and len(yrows[0]) > 1 else None
+        nv = len(S_.select('#specs .chips .chip')); nq = len(S_.select('.yqa h3, .yqa summary'))
+        cards = [_ovcard('years', 'Years', f'{len(yrows)} model years' if yrows else '', (f'Most complaints: {E(worst[0])}' if worst else ''), go='every year'),
+                 _ovcard('problems', 'Problems', E(pts[0][0].capitalize()) if pts else '', f'{pts[0][1]:.0f}% of complaints' if pts else '', _ovbars(pts) if len(pts) > 1 else ''),
+                 _ovcard('recalls', 'Recalls & safety', (f'{nr} recall{"" if nr == "1" else "s"}' if nr and nr != '0' else 'No recalls') if nr else '', 'Free fix at any dealer' if nr and nr != '0' else '', go='recalls & safety')]
+        if got['specs']: cards.append(_ovcard('specs', 'Specs & engines', f'{nv} engines' if nv else 'Every version', 'with power and mpg', go='specs'))
+        if got['questions']: cards.append(_ovcard('questions', 'Questions', f'{nq} quick answers' if nq else '', '', _qtitles([S_]), go='questions'))
+        panels = [('overview', 'Overview', f'<div class="ovg{" ovg4" if len(cards) == 4 else ""}">' + ''.join(cards) + '</div>')] + panels[1:]
     tabs = _tabs(panels, f'{short} sections', _modes(modes))
     return tabs, tail
 

@@ -1602,3 +1602,46 @@ main > .cite, main > .upd { display: none; }
 main { padding-bottom: 16px; } .foot.f2 { margin-top: 32px; } .f2 .f2-in { padding-top: 30px; }
 .thx { margin-bottom: 24px; }
 .f2 .f2-bot { border-top: 0; position: relative; } .f2 .f2-bot::before { content: ""; position: absolute; left: 16px; right: 16px; top: 0; border-top: 1px solid var(--line); }
+
+/* 11-10 Overview = 5 preview cards, one per tab (whole card opens that tab), plus a slim stat line */
+.ovg { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; }
+.ovg > .ovc { grid-column: span 2; }
+.ovg > .ovc:nth-child(4), .ovg > .ovc:nth-child(5) { grid-column: span 3; }
+.ovc { display: grid; grid-template-rows: auto auto auto 1fr auto; gap: 4px; padding: 16px 18px 14px; border-radius: 20px; background: #fff; border: 1px solid rgba(0,0,0,.08);
+  color: var(--ink); text-decoration: none; min-height: 168px; box-sizing: border-box; transition: border-color .15s, box-shadow .15s, transform .2s; }
+.ovc:hover { border-color: rgba(0,0,0,.18); box-shadow: 0 10px 24px -16px rgba(0,0,0,.25); transform: translateY(-1px); }
+.ovc:focus-visible { outline: 2.5px solid #e9b300; outline-offset: 2px; }
+.ovc-h { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; color: #3c4043; }
+.ovc-h svg { color: #6e6e73; flex: none; }
+.ovc-v { font-size: 22px; font-weight: 800; letter-spacing: -.015em; line-height: 1.2; margin-top: 4px; }
+.ovc-s { font-size: 13.5px; color: #6e6e73; line-height: 1.35; }
+.ovc-go { margin-top: 8px; font-size: 13.5px; font-weight: 600; color: #1d1d1f; }
+.ovc:hover .ovc-go { text-decoration: underline; text-underline-offset: 3px; }
+.ovc.ovc-na .ovc-v { font-size: 16px; font-weight: 600; color: #8e8e93; }
+.ovbars { display: grid; gap: 4px; margin-top: 6px; align-self: start; }
+.ovbr { display: grid; grid-template-columns: minmax(0, 1fr) 70px 34px; gap: 8px; align-items: center; font-size: 12px; color: #6e6e73; }
+.ovbr em { font-style: normal; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ovbr i { display: block; height: 6px; border-radius: 3px; background: #b9bcc2; } .ovbr:first-child i { background: var(--red); }
+.ovbr b { text-align: right; font-weight: 600; color: #3c4043; }
+.ovstrip { display: flex; flex-wrap: wrap; gap: 3px; margin-top: 8px; align-self: start; }
+.ovstrip i { width: 12px; height: 12px; border-radius: 3px; background: #e5e5ea; }
+.ovstrip i.good { background: #9fd3ad; } .ovstrip i.bad { background: #f2a3a6; } .ovstrip i.cur { outline: 2px solid #1d1d1f; outline-offset: 1px; }
+.ovst { display: grid; gap: 0; margin-top: 6px; align-self: start; } .ovst .stars { color: #e9b300; font-size: 18px; letter-spacing: 1px; } .ovst small { font-size: 12px; color: #6e6e73; }
+.ovq { display: grid; gap: 4px; margin-top: 4px; align-self: start; } .ovq span { font-size: 14px; line-height: 1.35; color: #3c4043; }
+.ovq span::before { content: "\201C"; } .ovq span::after { content: "\201D"; }
+.ovslim { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: 14px 2px 0; font-size: 13.5px; color: #6e6e73; } .ovslim b { color: var(--ink); font-weight: 700; }
+.tbl .tb-p { scroll-margin-top: 112px; }
+.early-b .iiw { margin-left: 6px; } .early-b .iiw .ii { background: rgba(255,255,255,.18); color: #fff; border-color: rgba(255,255,255,.5); }
+.early-b .iiw .ii-pop { color: #3a3a3e; font-weight: 400; text-align: left; white-space: normal; }
+@media (max-width: 900px) { .ovg > .ovc, .ovg > .ovc:nth-child(4), .ovg > .ovc:nth-child(5) { grid-column: span 3; } }
+@media (max-width: 600px) {
+  .ovg { grid-template-columns: 1fr; gap: 8px; }
+  .ovg > .ovc, .ovg > .ovc:nth-child(4), .ovg > .ovc:nth-child(5) { grid-column: auto; }
+  .ovc { min-height: 0; padding: 14px 16px 12px; } .ovc-v { font-size: 20px; }
+}
+
+.ovg.ovg4 > .ovc, .ovg.ovg4 > .ovc:nth-child(4), .ovg.ovg4 > .ovc:nth-child(5) { grid-column: span 3; }
+.ovc-s2 { font-size: 12.5px; color: #6e6e73; margin-top: 2px; align-self: start; }
+.tbl .tb-p > .rsc + .ovg { margin-top: 14px !important; }
+@media (max-width: 600px) { .ovg.ovg4 > .ovc { grid-column: auto; } }
+@media (max-width: 600px) { .ovg.ovg4 > .ovc, .ovg.ovg4 > .ovc:nth-child(4), .ovg.ovg4 > .ovc:nth-child(5) { grid-column: auto; } } .ovc { min-width: 0; }
