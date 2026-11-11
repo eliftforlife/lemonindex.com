@@ -30,15 +30,23 @@ def _info(txt):
     import year_slider as YSL
     return YSL.info(txt)
 
-def engine_chart(fid, name, li, yt, pages, cur=None, cls=lambda li: ''):
+YTI = '<svg aria-hidden="true" viewBox="0 0 24 24" width="11" height="11"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>'
+def engine_chart(fid, name, li, yt, pages, cur=None, cls=lambda li: '', ysc=None):
     """Every engine, with its image on the left and one row per model year on the right.
     li = {year: Lemon Index} (only years with enough complaints), yt = {year: YouTube rank #} (only rankable years), pages = years with a page."""
     gs = engines(fid)
     if not gs: return ''
     mx = max([120] + [v * 1.08 for v in li.values()])
+    # 11-10 (Elijah: "put YT rank in the corner of all engines"): each engine's YouTube rank among the engines here, by its average
+    # YouTube score over its rankable years (ysc = {year: score} for those years); engines with no such year show 'YT –'.
+    ysc = ysc or {}
+    gm = {i: sum(ysc[y] for y in g['years'] if y in ysc) / n for i, g in enumerate(gs) if (n := sum(1 for y in g['years'] if y in ysc))}
+    grk = {i: r + 1 for r, (i, _) in enumerate(sorted(gm.items(), key=lambda kv: -kv[1]))}
     out = []
-    for g in gs:
+    for gi, g in enumerate(gs):
         im = g.get('img') or {}
+        ytb = (f'<span class="ytbadge eg-yr" title="YouTube rank by tone, of {len(grk)} {E(name)} engines with enough videos">{YTI}YT #{grk[gi]}</span>' if gi in grk
+               else '<span class="ytbadge eg-yr na" title="Not enough YouTube videos to rank">' + YTI + 'YT –</span>')
         rows = []
         for y in g['years']:
             v = li.get(y); r = yt.get(y)
@@ -48,7 +56,7 @@ def engine_chart(fid, name, li, yt, pages, cur=None, cls=lambda li: ''):
             rows.append(f'<{tag} class="er{" " + cls(v) if v is not None else ""}{" cur" if y == cur else ""}"{href}><span class="er-y">{y}</span>{c}{t}</{tag}>')
         img = (f'<span class="eg-im"><img src="{E(im["src"])}" alt="{E(name)} {E(g["name"])} engine illustration" width="{im["w"]}" height="{im["h"]}" loading="lazy" decoding="async">'
                + _info(f'Illustration (AI-generated) of the {E(name)} {E(g["name"])} engine, not a photo of a specific engine. Free to use under <a href="{LIC}" rel="license noopener">CC BY 4.0</a>: credit The Lemon Index (lemonindex.com). <a href="/images/">Download and credit text</a>')
-               + '</span>') if im else ''
+               + ytb + '</span>') if im else ytb
         out.append(f'<div class="eg">{img}<div class="eg-n"><b>{E(g["name"])}</b><small>{E(g["code"])}</small><small>{_span(g["years"])}</small></div><div class="eg-r">{"".join(rows)}</div></div>')
     src = sorted({s for g in gs for s in g.get('src', [])})
     links = ' · '.join(f'<a href="{E(s)}" rel="noopener">{"EPA fueleconomy.gov" if "fueleconomy" in s else "Wikipedia: " + s.rsplit("/", 1)[1].replace("_", " ")}</a>' for s in src)

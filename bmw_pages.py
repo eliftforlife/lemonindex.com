@@ -218,6 +218,7 @@ else:
             cyl = '4' if 'inline-4' in lay else '6' if 'inline-6' in lay else '8' if 'V8' in lay else ''
             tur = 'twin-turbo' if 'twin-turbo' in asp else 'turbo' if 'turbo' in asp else ''
             return cyl, tur
+        _YTI = '<svg aria-hidden="true" viewBox="0 0 24 24" width="11" height="11"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>'
         def _card(s, rk, eager):
             code = s['code']; m = BENG[code]; cyl, tur = _kind(code); ph = BPH.get(code)
             typ = f'{m["size"]} {m["layout"]}' + (f' {tur}' if tur else '')
@@ -240,9 +241,12 @@ else:
             chips = ''.join(f'<li>{E(f)}</li>' for f in fams[:6]) + (f'<li class="more">+{len(fams) - 6} more</li>' if len(fams) > 6 else '')
             return (f'<li class="ehc" data-rank="{rk if rk else 999}" data-own="{s["bavg"] if s["bavg"] is not None else 9999}" data-yt="{s["yt"][0] if s["yt"][0] is not None else -1}" '
                     f'data-y0="{s["y0"]}" data-y1="{s["y1"]}" data-cyl="{cyl}" data-turbo="{1 if tur else 0}" data-m="{1 if code.startswith("S") else 0}">'
-                    + img + f'<span class="ehc-rk">{"#" + str(rk) if rk else "Unranked"}</span>'
-                    f'<h2><a class="ehc-a" href="{ENG_URL(code)}">{E(code)}</a></h2><p class="ehc-t">{E(typ)} · {E(s["years"])}</p>'
+                    + img + f'<span class="ehc-rk" title="Rank by owner complaints">{"#" + str(rk) if rk else "Unranked"}</span>'
+                    + (f'<span class="ytbadge ehc-yr" title="YouTube rank by tone, of {len(_ytr)} engines with enough videos">{_YTI}YT #{_ytr[code]}</span>' if code in _ytr
+                       else f'<span class="ytbadge ehc-yr na" title="Not enough YouTube videos to rank">{_YTI}YT –</span>')
+                    + f'<h2><a class="ehc-a" href="{ENG_URL(code)}">{E(code)}</a></h2><p class="ehc-t">{E(typ)} · {E(s["years"])}</p>'
                     + main + f'<p class="ehc-yt">{yt}</p><ul class="ehc-cars" aria-label="Cars with the {E(code)}">{chips}</ul></li>')
+        _ytr = {s['code']: i + 1 for i, s in enumerate(sorted([s for s in STATS if s['yt'][0] is not None], key=lambda s: -s['yt'][0]))}   # 11-10: YouTube rank badge (Elijah)
         cards = [_card(s, i + 1, i == 0) for i, s in enumerate(ranked)] + [_card(s, None, False) for s in rest]
         kinds = [(_kind(s['code']), s['code']) for s in STATS]
         pills = [('all', 'All')] + [(k, lab) for k, lab, ok in (('4', '4-cylinder', any(c == '4' for (c, _), _x in kinds)), ('6', '6-cylinder', any(c == '6' for (c, _), _x in kinds)),

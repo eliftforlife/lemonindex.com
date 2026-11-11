@@ -1163,3 +1163,11 @@ table.spec { min-width: 820px; }
 .ehc-cars li.more { background: none; color: var(--mute); padding-left: 2px; }
 /* tables that hold long text cells (engine x year): scroll inside their box instead of squeezing to one word per line */
 @media (max-width: 760px) { .tw > table.adv { min-width: 720px; } table.adv td { min-width: 5.5em; } }
+
+/* 11-10: YouTube rank badge in the top-right corner of every engine (Elijah) */
+.ytbadge { position: absolute; top: 12px; right: 12px; z-index: 2; display: inline-flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 800; line-height: 1; background: #17161a; color: #fff; border-radius: 999px; padding: 5px 9px 5px 8px; letter-spacing: .01em; }
+.ytbadge svg { color: #ff3b30; }
+.ytbadge.na { background: #e9e8e4; color: #6b6870; }
+.ytbadge.na svg { color: #9b98a0; }
+.eg-im .eg-yr { top: 4px; right: 4px; }
+.eg-n .eg-yr { position: static; margin-top: 4px; align-self: flex-start; }
