@@ -358,6 +358,8 @@ else:
         for _c, _t in (('motorcycle', 'Motorcycles'), ('supercar', 'Supercars'), ('plane', 'Planes and helicopters')):
             L = [card(v['src'], v['w'], v['h'], f'{v["year"]} {v["name"]} illustration', f'{v["year"]} {v["name"]}', v['page'], 'Page') for _fam, v in sorted(_AIV.items(), key=lambda kv: kv[1]['name']) if v['category'] == _c]
             if L: groups.append((_c + 's', _t, L))
+        _PF = [c for c in (json.load(open('data/perf_cars.json', encoding='utf-8')) if os.path.exists('data/perf_cars.json') else []) if isinstance(c, dict) and c.get('img')]   # 11-11 coming-soon performance cars
+        if _PF: groups.append(('performance', 'Performance cars, supercars and hypercars', [card(c['img'], c.get('w', 1000), c.get('h', 600), f'{c["name"]} illustration', c['name'], '/cars/?type=' + ('supercars' if c.get('group') in ('B', 'C') else 'performance'), 'Cars page (coming soon)') for c in _PF]))
         _names = {f['id']: f['name'] for f in YEARS}; _yp = {f['id']: {v['y'] for v in f['years']} for f in YEARS}
         _gen = []   # 11-10: one picture per generation for every model
         for _fid, _ims in sorted(YSL.AIY.items(), key=lambda kv: _names.get(kv[0], kv[0])):
@@ -392,6 +394,7 @@ else:
         page('/images/', 'Free Car & Engine Illustrations (CC BY 4.0) | Lemon Index', lede, body, ld=[img_ld(p.split('bmw-')[1].strip('/').upper(), ph) for p, ph in ours] + [dict(img_ld('', ph), name=ph['title'], description=ph['title'] + '. AI-generated illustration, not a photo of a specific engine.') for p, ph in globals().get('SCE_IMGS', [])])
         BMW_URLS.append('/images/')
     # ---- image sitemap (listed in robots.txt by build.py)
+    _PFS = [c for c in (json.load(open('data/perf_cars.json', encoding='utf-8')) if os.path.exists('data/perf_cars.json') else []) if isinstance(c, dict) and c.get('img')]   # 11-11: the coming-soon performance cards on /cars/
     open(os.path.join(OUT, 'image-sitemap.xml'), 'w', encoding='utf-8').write(
         '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">'
         + ''.join(f'<url><loc>{BASE}{p}</loc><image:image><image:loc>{BASE}{E(ph["src"])}</image:loc></image:image></url>' for p, ph in IMG_PAGES)
@@ -405,6 +408,7 @@ else:
         + ''.join(f'<url><loc>{BASE}{v["page"]}</loc><image:image><image:loc>{BASE}{E(v["src"])}</image:loc></image:image></url>'
                   for v in (json.load(open('data/ai_vehicle_images.json', encoding='utf-8')) if os.path.exists('data/ai_vehicle_images.json') else {}).values())
         + ''.join(f'<url><loc>{BASE}{p}</loc><image:image><image:loc>{BASE}{E(ph["src"])}</image:loc></image:image></url>' for p, ph in globals().get('SCE_IMGS', []))   # 11-11 supercar engines
+        + (f'<url><loc>{BASE}/cars/</loc>' + ''.join(f'<image:image><image:loc>{BASE}{E(c["img"])}</image:loc></image:image>' for c in _PFS) + '</url>' if _PFS else '')
         + (''.join(f'<url><loc>{BASE}/images/</loc>' + ''.join(f'<image:image><image:loc>{BASE}{E(ph["src"])}</image:loc></image:image>' for _, ph in ours + list(globals().get('SCE_IMGS', []))) + '</url>' for _ in [0]) if ours else '')
         + '</urlset>')
     print('bmw pages', len(BMW_URLS), 'engines', len(ENG_OK), 'engine images', len(IMG_PAGES), 'ours (CC BY)', len(ours))

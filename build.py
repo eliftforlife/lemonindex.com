@@ -102,7 +102,7 @@ for c in SCX: PICK_ALL.setdefault(_brandof(c['make']), []).append([c['name'], _s
 for c in EVX:
     if c['slug'] not in YP: PICK_ALL.setdefault(_brandof(c['make']), []).append([c['name'], c['slug'], _evyears(c), f"/electric/{c['slug']}/", 'ev'])
 for c in PERFX:
-    i = perf_info(c); PICK_ALL.setdefault(i['brand'], []).append([i['name'], i['id'], [], i['url'], 'perf'])
+    i = perf_info(c); PICK_ALL.setdefault(i['brand'], []).append([c.get('search') or i['name'], i['id'], [], i['url'], 'perf'])   # 11-11: full name keeps the trim aliases searchable
 PICK_ALL = dict(sorted((b, sorted(m)) for b, m in PICK_ALL.items()))
 def finder(h='Look up any car', sub='Every model year, 2000 to 2025. Free.', foot=''):
     """10-29 (Elijah): the first thing on the page is an easy car filter. Type "2016 pilot", or pick brand, model, year (assets/lookup.js)."""
@@ -1409,8 +1409,10 @@ def evcard(c, dup=False):
 def pfcard(c):
     i = perf_info(c); ph = _vimg(i['name']) or ({'src': c['img'], 'w': c.get('w', 1000), 'h': c.get('h', 600)} if c.get('img') else None)
     inner = (f'<span class="mc-p">{_cimg(ph, i["name"])}</span><b>{E(_short(i["name"], i["brand"]))}</b>' + (f'<small class="mc-k">{E(i["lead"])}</small>' if i['lead'] else ''))
-    if i['url']: return f'<a class="mc mc-sc" data-t="p" href="{E(i["url"])}">{inner}</a>'
-    return f'<div class="mc mc-nd mc-sc" data-t="p" aria-disabled="true" title="Coming soon">{inner}<span class="nd">Coming soon</span></div>'
+    t = 's' if c.get('group') in ('B', 'C') else 'p'   # 11-11: the list's supercars (B) and hypercars (C) join the Supercars tab
+    if i['url']: return f'<a class="mc mc-sc" data-t="{t}" href="{E(i["url"])}">{inner}</a>'
+    nd = 'Hypercar · coming soon' if c.get('group') == 'C' else 'Coming soon'
+    return f'<div class="mc mc-nd mc-sc" data-t="{t}" aria-disabled="true" title="{nd}">{inner}<span class="nd">{nd}</span></div>'
 _xb = {}
 for c in SCX: _xb.setdefault(_brandof(c['make']), []).append((c['name'], sccard(c)))
 for c in EVX:
@@ -1421,13 +1423,13 @@ _brand = lambda b: (f'<div class="mb"><h3>{E(b)}</h3><div class="mg">' + ''.join
                     + ''.join(ndcard(m) for m in sorted(_nd.get(b, []), key=lambda m: m['name'])) + '</div></div>')
 _soon = sorted(set(_nd) - set(pick) - set(_xb))
 lst = ''.join(_brand(b) for b in sorted(set(pick) | set(_xb))) + (f'<p class="mb-soon">Coming soon: no scores yet for these brands</p>' + ''.join(_brand(b) for b in _soon) if _soon else '')
-_nev = len(EVX); _npf = len(PERFX)
+_nev = len(EVX); _npf = sum(c.get('group', 'A') == 'A' for c in PERFX); _nsc = len(SCX) + sum(c.get('group') in ('B', 'C') for c in PERFX)
 CTABS = ('<nav class="ctabs" aria-label="Kinds of car">' + ''.join(f'<a href="{u}" data-type="{k}"{" aria-current=true" if k == "all" else ""}>{t}{f" <small>{n}</small>" if n else ""}</a>' for u, k, t, n in (
     ('/cars/', 'all', 'All cars', ''), ('/cars/?type=performance', 'performance', 'Performance', _npf or 'soon'),
-    ('/cars/?type=supercars', 'supercars', 'Supercars', len(SCX)), ('/cars/?type=electric', 'electric', 'Electric', _nev))) + '</nav>')
-CNOTES = (f'<p class="ctn" data-for="performance" hidden>' + ('Performance cars and trims lead with horsepower and 0–60. Each gets its owner complaints and recalls as its data comes in.' if _npf else
+    ('/cars/?type=supercars', 'supercars', 'Supercars', _nsc), ('/cars/?type=electric', 'electric', 'Electric', _nev))) + '</nav>')
+CNOTES = (f'<p class="ctn" data-for="performance" hidden>' + ('<b>Coming soon.</b> Performance cars and trims, from the Shelby GT500 to the Civic Type R. Each card shows its engine for now; horsepower, 0–60, owner complaints and recalls come as each one is checked.' if _npf else
           '<b>Coming soon.</b> We&#39;re adding performance cars and trims next, from the Shelby GT500 to the Civic Type R.') + '</p>'
-          f'<p class="ctn" data-for="supercars" hidden>Owner complaints are too rare to score supercars, so their cards lead with the engine. <a href="/supercars/">Supercar fuel costs and recalls, ranked</a></p>'
+          f'<p class="ctn" data-for="supercars" hidden>Owner complaints are too rare to score supercars, so their cards lead with the engine. Cards marked Coming soon, hypercars included, are next. <a href="/supercars/">Supercar fuel costs and recalls, ranked</a></p>'
           f'<p class="ctn" data-for="electric" hidden>EV scores count complaints filed by the end of the year after the model year. <a href="/electric/">The most reliable EVs, ranked</a></p>')
 page('/cars/', 'Look Up Your Car: Problems by Model and Year | The Lemon Index', f'Pick your car and model year to see its owner complaints, its top problems and how it compares with every other year. {len(YEARS)} models, 2000-2025, plus {len(SCX)} supercars and {len(EVX)} electric cars.', f'''
 <div class="pg"><div class="ph ph-f">{finder('<span class="ph-e">Look up</span>Look up your car.', 'Every model year, 2000 to 2025. Free.')}</div>
