@@ -255,11 +255,11 @@ _ADV = [  # (tab id, label, section ids, h2 prefixes)
     ('years', 'Years', ('years', 'neighbors'), ('Complaints by model year', 'Nearby model years', 'Every model year')),
     ('problems', 'Problems', ('problems', 'mileage', 'systems', 'severity'), ('What owners complain', 'When problems', 'How serious', 'In owners', 'Failure mileage', 'Complaints by system', 'Severity')),
     ('repairs', 'Repairs & costs', ('diy', 'fixes', 'youtube'), ('Fixes', 'YouTube repair', 'What owners say it costs')),
-    ('recalls', 'Recalls & safety', ('recalls', 'campaigns', 'investigations', 'tsb', 'tech', 'inv'), ('Recall', 'NHTSA investigations', 'Manufacturer communications', 'Safety', 'Investigations')),
+    ('recalls', 'Recalls & safety', ('recalls', 'campaigns', 'investigations', 'tsb', 'tech', 'inv', 'crash'), ('Recall', 'NHTSA investigations', 'Manufacturer communications', 'Safety', 'Investigations', 'Crash')),
     ('specs', 'Specs & engines', ('engines', 'specs'), ('Engines', 'Specs')),
     ('questions', 'Questions', (), ()),
 ]
-def _adv_sort(items, modes, short):
+def _adv_sort(items, modes, short, order=None):
     """Sections -> (tab bar + panels, tail items), by section id / h2 (see _ADV)."""
     H = lambda c: (c.find('h2').get_text(' ', strip=True) if c.find('h2') else '')
     got = {t[0]: [] for t in _ADV}; over, tail = [], []
@@ -273,6 +273,7 @@ def _adv_sort(items, modes, short):
         else: over.append(c)
     J = lambda xs: ''.join(map(str, xs))
     panels = [('overview', 'Overview', J(over))] + [(tid, lab, J(got[tid])) for tid, lab, _, _ in _ADV]
+    if order: panels = sorted(panels, key=lambda p: order.index(p[0]) if p[0] in order else len(order))   # 11-10: Advanced pages open on the meatiest tab
     tabs = _tabs(panels, f'{short} sections', _modes(modes))
     return tabs, tail
 
@@ -292,7 +293,8 @@ def transform_adv(body, short):
         if c in (hd, img, yts): continue
         if 'ygrid' in (c.get('class') or []): items += c.find_all(recursive=False)
         else: items.append(c)
-    tabs, tail = _adv_sort(items, modes, short); J = lambda xs: ''.join(map(str, xs))
+    adv = bool(h1 and 'Advanced' in h1.get_text())
+    tabs, tail = _adv_sort(items, modes, short, ['problems', 'recalls', 'specs', 'repairs', 'years', 'overview', 'questions'] if adv else None); J = lambda xs: ''.join(map(str, xs))
     cls = ' '.join(root.get('class') or [])
     return f'{ASSET}<div class="{cls} tbl">{hero}{tabs}{J(tail)}</div>'
 

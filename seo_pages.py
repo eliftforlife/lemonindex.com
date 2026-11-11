@@ -78,10 +78,25 @@ def _seo_pages():
           f'The most reliable brand by owner complaints is <b>{br[0]["brand"]}</b>, with a Lemon Index of {br[0]["lemon_index"]}. The highest is <b>{br[-1]["brand"]}</b> at {br[-1]["lemon_index"]}. 100 is the average car.', f'The most reliable popular model is the <b>{popular[0]["name"]}</b> at {popular[0]["li"]}. The highest is the <b>{popular[-1]["name"]}</b> at {popular[-1]["li"]}.']
     if cel: S_.append(f'The <b>{cel[0]["name"]}</b> drew the most check engine light complaints per vehicle sold, at {cel[0]["per"]:g} per 100,000.')
     lede = f'{sev["total"]:,} U.S. owner complaints to the government, broken down by system, brand and model.'
-    body = (f'<div class="advp"><header class="advh1"><p class="ph-e"><a href="/">The Lemon Index</a></p><h1>Car complaint statistics.</h1><p class="ans">{E(lede)}</p></header><div class="ygrid"><section class="yc"><h2>Key numbers</h2><ul class="statl">' + ''.join(f'<li>{x}</li>' for x in S_) + '</ul></section>'
-            '<section class="yc"><h2>Most complained-about systems</h2><div class="tw"><table class="adv"><thead><tr><th>System</th><th>Complaints</th><th>Share</th></tr></thead><tbody>' + ''.join(f'<tr><td>{E(PART.get(k, k.lower()))}</td><td>{v:,}</td><td>{v / all_c * 100:.1f}%</td></tr>' for k, v in tc) + '</tbody></table></div><p class="yc-cap">Model years 2010 to 2022, whole-model data. One complaint can name more than one system.</p></section>'
-            '<section class="yc"><h2>Brands</h2><div class="tw"><table class="adv"><thead><tr><th>Brand</th><th>Lemon Index</th></tr></thead><tbody>' + ''.join(f'<tr><td>{E(r["brand"])}</td><td>{r["lemon_index"]}</td></tr>' for r in br) + '</tbody></table></div></section>'
-            '<section class="yc"><h2>How to cite this</h2><p>Free to use with credit: <q>Source: The Lemon Index (lemonindex.com)</q>. The raw data is on the <a href="/data/">data page</a>, and the method is on <a href="/method/">how the index works</a>.</p></section></div><p class="yc-cap">Source: NHTSA owner complaints, recalls and sales estimates. Complaints are owner reports, not proof of a defect, and not every owner files one.</p></div>')
+    # 11-10 v2 (design audit: a list of sentences + plain tables): big stat tiles, three simple bar charts, short source lines, the cite box kept
+    T_ = [(f'{sev["total"]:,}', 'owner complaints', f'{len(YEARS)} models, by model year'), (f'{sev["crash"]:,}', 'crashes reported', 'owner reports, not verified'),
+          (f'{sev["fire"]:,}', 'fires reported', 'owner reports'), (f'{sev["injured"]:,}', 'injuries reported', 'owner reports'),
+          (f'{sev["deaths"]:,}', 'deaths reported', 'owner reports'), (f'{sev["towed"]:,}', 'cars towed', 'owner reports'), (f'{len(rec):,}', 'recall campaigns', 'across those models')]
+    tiles = '<div class="stt">' + ''.join(f'<div><b>{a}</b><span>{b}</span><small>{c}</small></div>' for a, b, c in T_) + '</div>'
+    def hbar(rows, mx, line=None, unit=''):
+        return '<div class="sbb">' + ''.join(f'<div class="sbr {cl}"><span class="sbl">{lab}</span><span class="sbt"><i style="width:{v / mx * 100:.1f}%"></i>'
+                                             + (f'<em style="left:{line / mx * 100:.1f}%"></em>' if line else '') + f'</span><b>{txt}</b></div>' for lab, v, txt, cl in rows) + '</div>'
+    sysr = [(E(PART.get(k, k.lower())).capitalize(), v, f'{v / all_c * 100:.0f}%', '') for k, v in tc]
+    brr = [(E(r['brand']), int(r['lemon_index']), r['lemon_index'], 'good' if int(r['lemon_index']) < 90 else 'bad' if int(r['lemon_index']) > 110 else '') for r in br]
+    pm = popular[:5] + popular[-5:]
+    pmr = [(f'<a href="/cars/{c["id"]}/">{E(c["name"])}</a>', c['li'], str(c['li']), 'good' if c['li'] < 90 else 'bad' if c['li'] > 110 else '') for c in pm]
+    body = (f'<div class="advp stp"><header class="advh1"><p class="ph-e"><a href="/">The Lemon Index</a></p><h1>Car complaint statistics.</h1><p class="ans">{E(lede)}</p></header>{tiles}'
+            '<section class="yc"><h2>Most complained-about systems</h2>' + hbar(sysr, max(v for _, v, _, _ in sysr)) + '<p class="yc-cap">Share of complaints, model years 2010 to 2022. One complaint can name several systems.</p></section>'
+            '<section class="yc"><h2>Brands, by Lemon Index</h2>' + hbar(brr, max(130, max(v for _, v, _, _ in brr)) * 1.05, 100) + '<p class="yc-cap">Complaints per car sold against the average car. 100 (the line) is average, lower is better.</p></section>'
+            '<section class="yc"><h2>Popular models: best 5 and worst 5</h2>' + hbar(pmr, max(c['li'] for c in pm) * 1.05, 100) + '<p class="yc-cap">Models with 150,000 or more sold.'
+            + (f' Most check engine light complaints per car sold: the {E(cel[0]["name"])} ({cel[0]["per"]:g} per 100,000).' if cel else '') + '</p></section>'
+            '<section class="yc stc"><h2>How to cite this</h2><p>Free to use with credit: <q>Source: The Lemon Index (lemonindex.com)</q>. Raw data on the <a href="/data/">data page</a>; method on <a href="/method/">how the index works</a>.</p></section>'
+            '<p class="yc-cap">Source: NHTSA owner complaints and recalls, and published U.S. sales. Complaints are owner reports, not proof of a defect.</p></div>')
     body += share_line(f'{sev["total"]:,} car complaints to the government, broken down by brand, model and system. Free to cite:', 'Know someone who writes about cars?')
     page('/stats/car-complaints/', 'Car Complaint Statistics: Brands, Models and Systems | The Lemon Index', lede + ' Free to cite.', body); SEO_URLS.append('/stats/car-complaints/')
     print('seo pages', len(SEO_URLS), 'complaints', sev['total'], 'recalls', len(rec))

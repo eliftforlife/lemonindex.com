@@ -1470,3 +1470,20 @@ article.ev2 .tb-p h2 { margin-top: 18px; }
 article.ev2 ul.evp { margin: 0 0 10px; padding-left: 20px; } article.ev2 ul.evp li { margin: 3px 0; }
 article.ev2 .trb .b { grid-template-columns: 44px 1fr 44px; }
 article.ev2 .tb-p { padding-top: 4px; } article.ev2 .tb-p > h2:first-child { margin-top: 10px; } article.ev2 .tbx + .note, article.ev2 > .note { font-size: 13px; }
+
+/* 11-10 v2 /stats/car-complaints/: stat tiles + simple bar charts */
+.stp .stt { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; margin: 6px 0 28px; }
+.stp .stt > div { background: #f5f5f7; border-radius: 16px; padding: 14px; display: grid; gap: 2px; }
+.stp .stt b { font-size: 26px; font-weight: 800; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.stp .stt span { font-size: 14px; font-weight: 600; } .stp .stt small { font-size: 12px; color: #6e6e73; }
+.stp .sbb { display: grid; gap: 6px; }
+.stp .sbr { display: grid; grid-template-columns: minmax(96px, 34%) minmax(0, 1fr) 46px; gap: 10px; align-items: center; font-size: 14.5px; }
+.stp .sbl { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.stp .sbt { position: relative; height: 12px; border-radius: 6px; background: #f2f2f4; }
+.stp .sbt i { position: absolute; inset: 0 auto 0 0; border-radius: 6px; background: #8e8e93; }
+.stp .sbr.good .sbt i { background: #137a3a; } .stp .sbr.bad .sbt i { background: var(--red); }
+.stp .sbt em { position: absolute; top: -3px; bottom: -3px; width: 1.5px; background: rgba(17,18,20,.4); }
+.stp .sbr b { text-align: right; font-variant-numeric: tabular-nums; }
+.stp .sbr.good b { color: #137a3a; } .stp .sbr.bad b { color: var(--red); }
+@media (max-width: 600px) { .stp .stt { grid-template-columns: repeat(2, minmax(0, 1fr)); } .stp .stt b { font-size: 22px; } .stp .sbr { grid-template-columns: minmax(84px, 38%) minmax(0, 1fr) 40px; font-size: 13.5px; } }
+.stp .sbr .sbl, .stp .sbr .sbl a { color: var(--ink); }
