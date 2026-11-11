@@ -54,6 +54,21 @@ def sales_for(p):
     src = p.get('sales') or {}
     if src.get('manual'):   # figures typed from a cited table that the parser can't read; every row keeps its own source
         return {int(y): int(v) for y, v in src['manual'].items()}, src.get('kind', 'calendar'), src['url'], src.get('note', '')
+    if src.get('gcbc'):
+        url = f"https://www.goodcarbadcar.net/{src['gcbc']}-sales-figures/"; cp = os.path.join(HERE, 'data', 'cache', 'gcbc', src['gcbc'] + '.html')
+        if not os.path.exists(cp):
+            import urllib.request; os.makedirs(os.path.dirname(cp), exist_ok=True)
+            open(cp, 'w', encoding='utf-8').write(urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent': 'LemonIndexResearch/0.1 (data journalism; lemonindex.com)'}), timeout=30).read().decode('utf-8', 'replace'))
+        h = open(cp, encoding='utf-8').read(); got = {}
+        for t in re.findall(r'<table[^>]*>.*?</table>', h, re.S):   # the first 'Year | Units' table is the U.S. one (Canada follows)
+            hd = [re.sub('<[^>]+>', '', x).strip() for x in re.findall(r'<th[^>]*>(.*?)</th>', t, re.S)]
+            if len(hd) >= 2 and hd[0] == 'Year' and hd[1] in ('Units', 'Sales Units'):
+                for r in re.findall(r'<tr[^>]*>(.*?)</tr>', t, re.S):
+                    c = [re.sub('<[^>]+>', '', x).strip() for x in re.findall(r'<td[^>]*>(.*?)</td>', r, re.S)]
+                    if len(c) >= 2 and re.fullmatch(r'\d{4}', c[0]) and re.fullmatch(r'[\d,]+', c[1]): got[int(c[0])] = int(c[1].replace(',', ''))
+                break
+        return got, 'calendar', url, 'GoodCarBadCar annual U.S. sales'
+    if not src: return {}, 'none', '', 'no sales source'
     title = src.get('wiki') or p['name']
     html = WIKI.fetch(title); url = 'https://en.wikipedia.org/wiki/' + title.replace(' ', '_')
     if src.get('col'):   # a table the generic parser misreads: pick the year column + the U.S. column by regex, first row per year wins
@@ -76,10 +91,14 @@ def run(slug, p):
     makes = set(p['make'].split('|')); rx = re.compile(p['rx']); names = sorted({w for w in re.findall(r'[A-Z][A-Za-z0-9-]{2,}', p['name'])} | {'NHTSA'}, key=len, reverse=True)
     win, allc, comp, ids, sev, nm, miles = collections.Counter(), collections.Counter(), collections.defaultdict(collections.Counter), collections.defaultdict(lambda: collections.defaultdict(list)), \
         collections.defaultdict(lambda: dict(total=0, crash=0, fire=0, towed=0, injured=0, deaths=0)), collections.defaultdict(collections.Counter), collections.defaultdict(list)
+    comp_all, tot_all, miles_all = collections.Counter(), collections.Counter(), []
     for odino, make, model, year, ldate, comps, crash, fire, inj, dead, towed, mi in con.execute(
             f'SELECT odino, make, model, year, ldate, comps, crash, fire, injured, deaths, towed, miles FROM complaints WHERE year BETWEEN {Y0} AND {Y1} AND make IN ({",".join("?" * len(makes))})', sorted(makes)):
         if not rx.fullmatch(model or ''): continue
         allc[year] += 1; nm[year][(make, model)] += 1
+        for c in set((comps or '').split(' | ')): comp_all[c.split(':')[0].strip() or 'UNKNOWN'] += 1
+        tot_all['crash'] += crash == 'Y'; tot_all['fire'] += fire == 'Y'; tot_all['injured'] += (inj or 0) > 0; tot_all['deaths'] += (dead or 0) > 0
+        if mi and 0 < mi < 400000: miles_all.append(mi)
         early = year >= 2023
         if not early and not (ldate and int(ldate[:4]) <= year + WINDOW): continue
         win[year] += 1; s = sev[year]; s['total'] += 1; s['crash'] += crash == 'Y'; s['fire'] += fire == 'Y'; s['towed'] += towed == 'Y'
@@ -90,7 +109,7 @@ def run(slug, p):
     cs, kind, url, note = sales_for(p)
     sold, into, flags = (mysales.merge(cs, win, p['name'], Y0, Y1) if kind == 'calendar' else ({y: v for y, v in cs.items() if Y0 <= y <= Y1}, {}, []))
     blended = mysales.blend(sold, into, cs) if kind == 'calendar' else sold
-    years, xl = [], {}
+    years, xl, years_all = [], {}, []
     med = sorted(win[y] for y in sold if win[y]) or [0]; med = med[len(med) // 2]
     for y in range(Y0, Y1 + 1):
         n = win[y]
@@ -114,6 +133,7 @@ def run(slug, p):
         ms = sorted(miles[y])
         xl[str(y)] = {'sev': sev[y], 'names': [[mk, md, k] for (mk, md), k in nm[y].most_common(4)],
                       'miles': {'median': ms[len(ms) // 2], 'p25': ms[len(ms) // 4], 'p75': ms[3 * len(ms) // 4], 'n': len(ms)} if len(ms) >= 5 else None}
+        years_all.append(dict(y=y, n=allc[y], quotes=qs))
         if li is not None: years.append(dict(y=y, li=li, n=n, sold=s, parts=parts, quotes=qs) | ({'early': True} if y >= 2023 else {}))   # like years.json: scored years only
     # the whole-model score: model years 2010-2022 like the study; a model that mostly ended before 2010 uses all its scored years (the page says which)
     scored = [v for v in years if 2010 <= v['y'] <= 2022]
@@ -129,7 +149,14 @@ def run(slug, p):
         car = dict(name=p['name'], brand=p['brand'], segment=p['seg'], years=f'{scored[0]["y"]}-{scored[-1]["y"]}', sold=S_, n=N, per100k=round(N / S_ * 1e5),
                    expected=EXP, li=round(100 * N / EXP), serious=round(100 * ser / max(N, 1)), worst=str(max(scored, key=lambda v: v['li'])['y']),
                    issues=[[part(c), round(100 * k / N)] for c, k in tot.most_common(3)], sales_url=url, sales_kind=kind)
-    return dict(id=slug, name=p['name'], years=years), car, xl, dict(slug=slug, sales=cs, kind=kind, url=url, note=note, flags=flags, complaints=sum(allc.values()),
+    ms = sorted(miles_all); n_all = sum(allc.values()); tp = sum(k for c, k in comp_all.items() if c not in ('UNKNOWN OR OTHER', 'UNKNOWN')) or 1
+    by = {y: allc[y] for y in sorted(allc) if allc[y]}
+    extra = dict(id=slug, name=p['name'], brand=p['brand'], a=min(by) if by else Y0, b=max(by) if by else Y1, n=n_all, by_year={str(y): v for y, v in by.items()},
+                 parts=[[part(c), round(100 * k / tp)] for c, k in comp_all.most_common() if c not in ('UNKNOWN OR OTHER', 'UNKNOWN')][:6],
+                 crash=tot_all['crash'], fire=tot_all['fire'], injured=tot_all['injured'], deaths=tot_all['deaths'],
+                 miles={'median': ms[len(ms) // 2], 'p25': ms[len(ms) // 4], 'p75': ms[3 * len(ms) // 4], 'n': len(ms)} if len(ms) >= 5 else None,
+                 quotes=[dict(y=v['y'], odi=q['odi'], text=q['text']) for v in sorted(years_all, key=lambda v: -v['n'])[:3] for q in v['quotes'][:1]])
+    return dict(id=slug, name=p['name'], years=years), car, xl, extra, dict(slug=slug, sales=cs, kind=kind, url=url, note=note, flags=flags, complaints=sum(allc.values()),
                                                                      scored=[v['y'] for v in years if v['li'] is not None])
 
 # ---- the same public APIs as data_fetch_api.py (its own functions and disk cache)
@@ -140,25 +167,34 @@ exec(compile(src, 'data_fetch_api.py', 'exec'), API)
 
 def load(n): p = os.path.join(HERE, 'data', n); return json.load(open(p, encoding='utf-8')) if os.path.exists(p) else ({} if 'years' not in n and 'cars' not in n else [])
 Y_, C_, XL_, XA_ = load('years_new.json'), load('cars_new.json'), load('extras_local_new.json'), load('extras_api_new.json')
+EX_ = load('extra_models_new.json') or {}
 Y_ = {f['id']: f for f in Y_}; C_ = {c['id']: c for c in C_}
 report = []
 for slug, p in PLAN.items():
     if ONLY and slug not in ONLY: continue
-    fam, car, xl, rep = run(slug, p); report.append(rep)
-    Y_[slug] = fam; XL_[slug] = xl
-    if car: C_[slug] = dict(car, id=slug)
-    else: C_.pop(slug, None)
+    if p.get('dupe_of'): print(f"{p['name']}: duplicate of /cars/{p['dupe_of']}/ (its card links there)"); continue
+    fam, car, xl, extra, rep = run(slug, p); report.append(rep)
+    if car and fam['years']: Y_[slug] = fam; XL_[slug] = xl; C_[slug] = dict(car, id=slug); EX_.pop(slug, None)
+    else: Y_.pop(slug, None); C_.pop(slug, None); XL_.pop(slug, None); EX_[slug] = extra
     API['MAKES'][p['name']] = p['make'].split('|')
     if p.get('fe'): API['FE_MODEL'][p['name']] = p['fe']
     jobs = [(y, xl[y]) for y in sorted(xl)]
     def one(j):
         y, e = j; nms = API['main_names'](e) if e['names'] else [(p['make'].split('|')[0], p['name'].split(' ', 1)[1].upper())]
         return y, {'recalls': API['recalls'](y, nms), 'safety': API['safety'](y, nms, p['name']) if int(y) >= 2011 else None, 'mpg': API['mpg'](p['name'], int(y))}
-    with cf.ThreadPoolExecutor(6) as ex: XA_[slug] = dict(ex.map(one, jobs))
-    print(f"{p['name']}: {rep['complaints']:,} complaints, scored years {rep['scored'] or 'none'}, sales {rep['kind']} {rep['note']} {rep['url']}", flush=True)
+    with cf.ThreadPoolExecutor(6) as ex: api = dict(ex.map(one, jobs))
+    if slug in EX_:   # complaints-only: recalls across all years, each with the model years it covers
+        rc = {}
+        for y, d in api.items():
+            for r in d['recalls']: rc.setdefault(r['id'], dict(r, years=[])); rc[r['id']]['years'].append(int(y))
+        EX_[slug]['recalls'] = sorted(rc.values(), key=lambda r: r['date'][6:10] + r['date'][3:5] + r['date'][:2], reverse=True)
+        XA_.pop(slug, None)
+    else: XA_[slug] = api
+    print(f"{p['name']}: {rep['complaints']:,} complaints, {'scored years ' + str(rep['scored']) if slug in C_ else 'COMPLAINTS ONLY'}, sales {rep['kind']} {rep['note']} {rep['url']}", flush=True)
     for fl in rep['flags']: print('   ', fl)
 json.dump(list(Y_.values()), open(os.path.join(HERE, 'data', 'years_new.json'), 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
 json.dump(list(C_.values()), open(os.path.join(HERE, 'data', 'cars_new.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=0)
 json.dump(XL_, open(os.path.join(HERE, 'data', 'extras_local_new.json'), 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
 json.dump(XA_, open(os.path.join(HERE, 'data', 'extras_api_new.json'), 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
+json.dump(EX_, open(os.path.join(HERE, 'data', 'extra_models_new.json'), 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
 json.dump(report, open(os.path.join(HERE, 'data', 'new_models_report.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)

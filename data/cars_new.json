@@ -88,5 +88,305 @@
 "sales_url": "https://en.wikipedia.org/wiki/Chevrolet_Cobalt",
 "sales_kind": "model",
 "id": "chevrolet-cobalt"
+},
+{
+"name": "Jeep Liberty",
+"brand": "Jeep",
+"segment": "suv",
+"years": "2010-2012",
+"sold": 191731,
+"n": 225,
+"per100k": 117,
+"expected": 215.4524700452172,
+"li": 104,
+"serious": 17,
+"worst": "2012",
+"issues": [
+[
+"airbags",
+37
+],
+[
+"electrical",
+24
+],
+[
+"engine",
+7
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/jeep-liberty-sales-figures/",
+"sales_kind": "calendar",
+"id": "jeep-liberty"
+},
+{
+"name": "Mini Cooper",
+"brand": "Mini",
+"segment": "car",
+"years": "2010-2022",
+"sold": 389409,
+"n": 183,
+"per100k": 47,
+"expected": 425.33844072158934,
+"li": 43,
+"serious": 26,
+"worst": "2014",
+"issues": [
+[
+"engine",
+19
+],
+[
+"electrical",
+16
+],
+[
+"transmission & drivetrain",
+16
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/mini-cooper-sales-figures/",
+"sales_kind": "calendar",
+"id": "mini-cooper"
+},
+{
+"name": "Ford Ranger",
+"brand": "Ford",
+"segment": "truck",
+"years": "2010-2022",
+"sold": 482360,
+"n": 248,
+"per100k": 51,
+"expected": 513.5330495420582,
+"li": 48,
+"serious": 14,
+"worst": "2019",
+"issues": [
+[
+"transmission & drivetrain",
+24
+],
+[
+"brakes",
+14
+],
+[
+"electrical",
+14
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/ford-ranger-sales-figures/",
+"sales_kind": "calendar",
+"id": "ford-ranger"
+},
+{
+"name": "Chevrolet Corvette",
+"brand": "Chevrolet",
+"segment": "car",
+"years": "2014-2022",
+"sold": 215421,
+"n": 339,
+"per100k": 157,
+"expected": 227.57281442318958,
+"li": 149,
+"serious": 3,
+"worst": "2017",
+"issues": [
+[
+"wheels",
+58
+],
+[
+"transmission & drivetrain",
+10
+],
+[
+"fuel or EV drive system",
+6
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/chevrolet-corvette-sales-figures/",
+"sales_kind": "calendar",
+"id": "chevrolet-corvette"
+},
+{
+"name": "Dodge Dakota",
+"brand": "Dodge",
+"segment": "truck",
+"years": "2000-2008",
+"sold": 936368,
+"n": 1839,
+"per100k": 196,
+"expected": 864.007855560711,
+"li": 213,
+"serious": 13,
+"worst": "2002",
+"issues": [
+[
+"suspension",
+42
+],
+[
+"service brakes, hydraulic",
+34
+],
+[
+"transmission & drivetrain",
+14
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Dodge_Dakota",
+"sales_kind": "calendar",
+"id": "dodge-dakota"
+},
+{
+"name": "Chevrolet HHR",
+"brand": "Chevrolet",
+"segment": "car",
+"years": "2006-2011",
+"sold": 526792,
+"n": 777,
+"per100k": 147,
+"expected": 462.0033159580198,
+"li": 168,
+"serious": 9,
+"worst": "2009",
+"issues": [
+[
+"steering",
+29
+],
+[
+"electrical",
+27
+],
+[
+"service brakes, hydraulic",
+15
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Chevrolet_HHR",
+"sales_kind": "calendar",
+"id": "chevrolet-hhr"
+},
+{
+"name": "GMC Envoy",
+"brand": "GMC",
+"segment": "suv",
+"years": "2002-2008",
+"sold": 679383,
+"n": 839,
+"per100k": 123,
+"expected": 572.145981326338,
+"li": 147,
+"serious": 19,
+"worst": "2003",
+"issues": [
+[
+"electrical",
+19
+],
+[
+"transmission & drivetrain",
+15
+],
+[
+"engine",
+14
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/GMC_Envoy",
+"sales_kind": "calendar",
+"id": "gmc-envoy"
+},
+{
+"name": "Nissan Titan",
+"brand": "Nissan",
+"segment": "truck",
+"years": "2010-2021",
+"sold": 256122,
+"n": 264,
+"per100k": 103,
+"expected": 265.45487252848864,
+"li": 99,
+"serious": 12,
+"worst": "2016",
+"issues": [
+[
+"transmission & drivetrain",
+27
+],
+[
+"engine",
+22
+],
+[
+"fuel or EV drive system",
+14
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Nissan_Titan",
+"sales_kind": "calendar",
+"id": "nissan-titan"
+},
+{
+"name": "Ford Freestyle",
+"brand": "Ford",
+"segment": "suv",
+"years": "2005-2007",
+"sold": 167615,
+"n": 439,
+"per100k": 262,
+"expected": 116.96940745060115,
+"li": 375,
+"serious": 4,
+"worst": "2007",
+"issues": [
+[
+"service brakes, hydraulic",
+27
+],
+[
+"transmission & drivetrain",
+24
+],
+[
+"speed control",
+20
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Ford_Freestyle",
+"sales_kind": "calendar",
+"id": "ford-freestyle"
+},
+{
+"name": "Jeep Commander",
+"brand": "Jeep",
+"segment": "suv",
+"years": "2006-2008",
+"sold": 196266,
+"n": 688,
+"per100k": 351,
+"expected": 149.7937384259203,
+"li": 459,
+"serious": 8,
+"worst": "2006",
+"issues": [
+[
+"engine",
+45
+],
+[
+"electrical",
+26
+],
+[
+"transmission & drivetrain",
+16
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Jeep_Commander_(XK)",
+"sales_kind": "calendar",
+"id": "jeep-commander"
 }
 ]

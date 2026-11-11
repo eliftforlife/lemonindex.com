@@ -1,5 +1,161 @@
 {
- "ford-windstar": {"name": "Ford Windstar", "brand": "Ford", "seg": "minivan", "make": "FORD", "rx": "WINDSTAR", "sales": {"wiki": "Ford Windstar"}},
- "toyota-prius": {"name": "Toyota Prius", "brand": "Toyota", "seg": "car", "make": "TOYOTA", "rx": "PRIUS", "sales": {"wiki": "Toyota Prius", "col": "US\\[", "scale": 1000}, "fe": "PRIUS(?!C|V|PRIME|PLUGIN)"},
- "chevrolet-cobalt": {"name": "Chevrolet Cobalt", "brand": "Chevrolet", "seg": "car", "make": "CHEVROLET", "rx": "COBALT( SS)?", "sales": {"wiki": "Chevrolet Cobalt", "col": "U\\.S\\. Sales", "kind": "model"}}
+ "ford-windstar": {
+  "name": "Ford Windstar",
+  "brand": "Ford",
+  "seg": "minivan",
+  "make": "FORD",
+  "rx": "WINDSTAR",
+  "sales": {
+   "wiki": "Ford Windstar"
+  }
+ },
+ "toyota-prius": {
+  "name": "Toyota Prius",
+  "brand": "Toyota",
+  "seg": "car",
+  "make": "TOYOTA",
+  "rx": "PRIUS",
+  "sales": {
+   "wiki": "Toyota Prius",
+   "col": "US\\[",
+   "scale": 1000
+  },
+  "fe": "PRIUS(?!C|V|PRIME|PLUGIN)"
+ },
+ "chevrolet-cobalt": {
+  "name": "Chevrolet Cobalt",
+  "brand": "Chevrolet",
+  "seg": "car",
+  "make": "CHEVROLET",
+  "rx": "COBALT( SS)?",
+  "sales": {
+   "wiki": "Chevrolet Cobalt",
+   "col": "U\\.S\\. Sales",
+   "kind": "model"
+  }
+ },
+ "jeep-liberty": {
+  "name": "Jeep Liberty",
+  "brand": "Jeep",
+  "seg": "suv",
+  "make": "JEEP",
+  "rx": "(LIBERTY)",
+  "sales": {
+   "gcbc": "jeep-liberty"
+  }
+ },
+ "chevrolet-trailblazer": {
+  "name": "Chevrolet Trailblazer",
+  "brand": "Chevrolet",
+  "seg": "suv",
+  "make": "CHEVROLET",
+  "rx": "(TRAILBLAZER|TRAILBLAZER\\ EXT|TRAILBLAZER\\ EXT\\ 370|TRAILBLAZER\\ 360)",
+  "sales": {}
+ },
+ "mini-cooper": {
+  "name": "Mini Cooper",
+  "brand": "Mini",
+  "seg": "car",
+  "make": "MINI",
+  "rx": "(COOPER|COOPER S|COOPER CONVERTIBLE|COOPER S CONVERTIBLE)",
+  "sales": {
+   "gcbc": "mini-cooper"
+  }
+ },
+ "ford-ranger": {
+  "name": "Ford Ranger",
+  "brand": "Ford",
+  "seg": "truck",
+  "make": "FORD",
+  "rx": "(RANGER)",
+  "sales": {
+   "gcbc": "ford-ranger"
+  }
+ },
+ "saturn-ion": {
+  "name": "Saturn Ion",
+  "brand": "Saturn",
+  "seg": "car",
+  "make": "SATURN",
+  "rx": "(ION)",
+  "sales": {}
+ },
+ "chevrolet-corvette": {
+  "name": "Chevrolet Corvette",
+  "brand": "Chevrolet",
+  "seg": "car",
+  "make": "CHEVROLET",
+  "rx": "(CORVETTE|CORVETTE Z06|CORVETTE CONVERTIBLE|CORVETTE COUPE)",
+  "sales": {
+   "gcbc": "chevrolet-corvette"
+  }
+ },
+ "dodge-dakota": {
+  "name": "Dodge Dakota",
+  "brand": "Dodge",
+  "seg": "truck",
+  "make": "DODGE",
+  "rx": "(DAKOTA)",
+  "sales": {
+   "wiki": "Dodge Dakota"
+  }
+ },
+ "ford-freestyle": {
+  "name": "Ford Freestyle",
+  "brand": "Ford",
+  "seg": "suv",
+  "make": "FORD",
+  "rx": "(FREESTYLE)",
+  "sales": {
+   "manual": {
+    "2004": 8509,
+    "2005": 76739,
+    "2006": 58602,
+    "2007": 23765
+   },
+   "url": "https://en.wikipedia.org/wiki/Ford_Freestyle",
+   "note": "the Freestyle rows of the article's Total American sales table (Taurus X rows left out)"
+  }
+ },
+ "chevrolet-hhr": {
+  "name": "Chevrolet HHR",
+  "brand": "Chevrolet",
+  "seg": "car",
+  "make": "CHEVROLET",
+  "rx": "(HHR)",
+  "sales": {
+   "wiki": "Chevrolet HHR"
+  }
+ },
+ "gmc-envoy": {
+  "name": "GMC Envoy",
+  "brand": "GMC",
+  "seg": "suv",
+  "make": "GMC",
+  "rx": "(ENVOY|ENVOY\\ XL|ENVOY\\ XUV|ENVOY\\ XL\\ 370|ENVOY\\ DENALI|ENVOY\\ 360|ENVOY\\ DENALI\\ XL)",
+  "sales": {
+   "wiki": "GMC Envoy"
+  }
+ },
+ "nissan-titan": {
+  "name": "Nissan Titan",
+  "brand": "Nissan",
+  "seg": "truck",
+  "make": "NISSAN",
+  "rx": "(TITAN|TITAN\\ XD)",
+  "sales": {
+   "wiki": "Nissan Titan"
+  }
+ },
+ "jeep-commander": {
+  "name": "Jeep Commander",
+  "brand": "Jeep",
+  "seg": "suv",
+  "make": "JEEP",
+  "rx": "(COMMANDER|COMMANDER\\ 4X4|COMMANDER\\ 4X2)",
+  "sales": {
+   "wiki": "Jeep Commander (XK)",
+   "col": "^USA$"
+  }
+ }
 }

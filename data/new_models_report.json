@@ -1,116 +1,48 @@
 [
  {
-  "slug": "ford-windstar",
+  "slug": "ford-freestyle",
   "sales": {
-   "1999": 213844,
-   "2000": 222298,
-   "2001": 179595,
-   "2002": 148875,
-   "2003": 113465
+   "2004": 8509,
+   "2005": 76739,
+   "2006": 58602,
+   "2007": 23765
   },
   "kind": "calendar",
-  "url": "https://en.wikipedia.org/wiki/Ford_Windstar",
-  "note": "col='Total U.S. sales'",
-  "flags": [],
-  "complaints": 6247,
-  "scored": [
-   2000,
-   2001,
-   2002,
-   2003
-  ]
- },
- {
-  "slug": "toyota-prius",
-  "sales": {
-   "2000": 5600,
-   "2001": 15600,
-   "2002": 20100,
-   "2003": 24600,
-   "2004": 54000,
-   "2005": 107900,
-   "2006": 107000,
-   "2007": 181200,
-   "2008": 158600,
-   "2009": 139700,
-   "2010": 140900,
-   "2011": 128100,
-   "2012": 147500,
-   "2013": 145200,
-   "2014": 122800,
-   "2015": 113800,
-   "2016": 98800,
-   "2017": 65600,
-   "2018": 87500,
-   "2019": 69700,
-   "2020": 43500,
-   "2021": 59000,
-   "2022": 36900,
-   "2023": 38100,
-   "2024": 44700,
-   "2025": 56500
-  },
-  "kind": "calendar",
-  "url": "https://en.wikipedia.org/wiki/Toyota_Prius",
-  "note": "col='Annual Prius liftback sales worldwide and by region (in thousands) US[135]'",
+  "url": "https://en.wikipedia.org/wiki/Ford_Freestyle",
+  "note": "the Freestyle rows of the article's Total American sales table (Taurus X rows left out)",
   "flags": [
-   "Toyota Prius 2000: 5,600 sold, 0 complaints in window -> sales merged into 2001"
+   "Ford Freestyle 2004: 8,509 sold, 0 complaints in window -> sales merged into 2005"
   ],
-  "complaints": 12513,
-  "scored": [
-   2001,
-   2002,
-   2003,
-   2004,
-   2005,
-   2006,
-   2007,
-   2008,
-   2009,
-   2010,
-   2011,
-   2012,
-   2013,
-   2014,
-   2015,
-   2016,
-   2017,
-   2018,
-   2019,
-   2020,
-   2021,
-   2022,
-   2023,
-   2024,
-   2025
-  ]
- },
- {
-  "slug": "chevrolet-cobalt",
-  "sales": {
-   "2004": 4960,
-   "2005": 212667,
-   "2006": 211451,
-   "2007": 200621,
-   "2008": 188045,
-   "2009": 104724,
-   "2010": 97376,
-   "2011": 127472
-  },
-  "kind": "model",
-  "url": "https://en.wikipedia.org/wiki/Chevrolet_Cobalt",
-  "note": "col='U.S. Sales'",
-  "flags": [
-   "Chevrolet Cobalt 2011: 127,472 sold but only 1 complaints in window -> not scored"
-  ],
-  "complaints": 7974,
+  "complaints": 3665,
   "scored": [
    2005,
    2006,
+   2007
+  ]
+ },
+ {
+  "slug": "jeep-commander",
+  "sales": {
+   "2005": 17048,
+   "2006": 88497,
+   "2007": 63027,
+   "2008": 27694,
+   "2009": 12655,
+   "2010": 8115,
+   "2011": 105
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Jeep_Commander_(XK)",
+  "note": "col='USA'",
+  "flags": [
+   "Jeep Commander 2005: 17,048 sold, 0 complaints in window -> sales merged into 2006",
+   "Jeep Commander 2011: 105 sold, 0 complaints in window -> sales merged into 2010"
+  ],
+  "complaints": 3362,
+  "scored": [
+   2006,
    2007,
-   2008,
-   2009,
-   2010
+   2008
   ]
  }
 ]

@@ -1650,3 +1650,20 @@ main { padding-bottom: 16px; } .foot.f2 { margin-top: 32px; } .f2 .f2-in { paddi
 .look { max-height: 240px; transition: max-height .2s ease, opacity .2s ease, margin .2s ease; }
 .look.fo-closed { max-height: 0; opacity: 0; margin-top: 0 !important; margin-bottom: 0 !important; overflow: hidden; visibility: hidden; }
 @media (prefers-reduced-motion: reduce) { .look { transition: none; } }
+
+/* 11-11 complaints-only models on /cars/: a normal clickable card, muted label instead of a score */
+.mc.mc-co > span.nd { position: absolute; top: 10px; right: 12px; font-size: 11.5px; font-weight: 600; color: #6e6e73; }
+
+/* 11-11 home: the compare box sits right under the search (was two example gauge cards) */
+.hcmp { position: relative; display: grid; gap: 10px; align-content: start; padding: 22px 22px 18px; border-radius: 24px; background: #f5f5f7; }
+.hcmp-k { margin: 0; font-size: 14px; font-weight: 600; color: #6e6e73; }
+.hcmp h2 { margin: 0; font-size: clamp(24px, 3vw, 32px); line-height: 1.12; letter-spacing: -.02em; }
+.hcmp-pair { display: grid; gap: 6px; color: var(--ink); text-decoration: none; }
+.hcmp-im { display: flex; justify-content: center; align-items: flex-end; }
+.hcmp-im img { width: 52%; height: auto; } .hcmp-im img.l { margin-right: -8%; position: relative; z-index: 1; } .hcmp-im img.r { transform: scaleX(-1); }
+.hcmp-pair b { text-align: center; font-size: 17px; } .hcmp-pair b i { font-style: normal; color: #6e6e73; font-weight: 500; }
+.hcmp-pair:hover b { text-decoration: underline; text-underline-offset: 3px; }
+.hcmp-l { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin: 0; }
+.hcmp-l a { padding: 6px 12px; border-radius: 999px; background: #fff; border: 1px solid var(--line); font-size: 14px; font-weight: 600; color: var(--ink); text-decoration: none; }
+.hcmp-go { justify-self: center; } .hcmp-ii { position: absolute; right: 14px; top: 14px; }
+@media (max-width: 600px) { .hcmp { padding: 18px 16px 16px; border-radius: 20px; } }
