@@ -199,7 +199,7 @@ else:
         elif ph: IMG_PAGES.append((path, ph))
         page(path, title, _html.unescape(re.sub('<[^>]+>', '', ans)), body, ld=ld)
         ENG_OK.add(code); BMW_URLS.append(path)
-        return dict(code=code, years=f'{y0}–{y1}', models=models_s, b=scored_b, a=scored_a, comb=comb_only, n=len(ys), txt=txt_total,
+        return dict(code=code, years=f'{y0}–{y1}', y0=int(y0), y1=int(y1), fams=fams, models=models_s, b=scored_b, a=scored_a, comb=comb_only, n=len(ys), txt=txt_total,
                     yt=(round(sum(yt_scores.values()) / len(yt_scores)) if yt_scores else None, len(yt_scores)),
                     bavg=(round(sum(v for k, v in own.values() if k == 'b') / max(1, sum(1 for k, _ in own.values() if k == 'b')))) if any(k == 'b' for k, _ in own.values()) else None)
     YP_IDS = {f['id'] for f in YEARS}
@@ -211,22 +211,59 @@ else:
         # YouTube tone is its own column, never mixed into the rank. Engines without a per-car score are listed after, unranked.
         ranked = sorted([s for s in STATS if s['bavg'] is not None], key=lambda s: s['bavg'])
         rest = sorted([s for s in STATS if s['bavg'] is None], key=lambda s: s['years'])
-        def _row(s, rk):
-            return [rk, f'<a href="{ENG_URL(s["code"])}">{E(s["code"])}</a>', E(BENG[s["code"]]["size"]) + ' ' + E(BENG[s["code"]]["layout"]) + (' turbo' if 'turbo' in BENG[s["code"]]['asp'] else ''),
-                    s['years'], E(s['models']),
-                    (f'<b>{s["bavg"]}</b>' if s['bavg'] is not None else '<small>no single-engine year with sales</small>'),
-                    f'{s["txt"]:,}',
-                    (f'{s["yt"][0]} <small>({s["yt"][1]} scored yrs)</small>' if s['yt'][0] is not None else '<small>not enough videos</small>')]
-        hr = [_row(s, str(i + 1)) for i, s in enumerate(ranked)] + [_row(s, '–') for s in rest]
+        # 11-10 (Elijah: the 8-column table wrapped one word per line on phones, "should have the engine images"):
+        # a card grid with each engine's illustration, plus filter pills and a sort. Every card is in the HTML (crawlable); assets/enghub.js only filters/sorts.
+        def _kind(code):
+            m = BENG[code]; lay = m['layout']; asp = m['asp']
+            cyl = '4' if 'inline-4' in lay else '6' if 'inline-6' in lay else '8' if 'V8' in lay else ''
+            tur = 'twin-turbo' if 'twin-turbo' in asp else 'turbo' if 'turbo' in asp else ''
+            return cyl, tur
+        def _card(s, rk, eager):
+            code = s['code']; m = BENG[code]; cyl, tur = _kind(code); ph = BPH.get(code)
+            typ = f'{m["size"]} {m["layout"]}' + (f' {tur}' if tur else '')
+            img = ''
+            if ph:
+                cr = ('Illustration (AI-generated), not a photo of a specific engine. '
+                      f'Free to use under <a href="{CCBY}" rel="noopener license">CC BY 4.0</a>: credit The Lemon Index (lemonindex.com). <a href="/images/">Download and credit text</a>') if ph.get('ai') \
+                     else f'Photo: {E(ph.get("author", ""))} / <a href="{E(ph.get("page", ""))}" rel="noopener">Wikimedia Commons</a> ({E(ph.get("license", ""))})'
+                th = ph['src'][:-5] + '-640.webp'   # 640 px copy for the cards (cards are <= 420 px wide); the 1200 px one stays on the engine page
+                src, w, h = (th, 640, round(ph['h'] * 640 / ph['w'])) if ph['src'].endswith('.webp') and os.path.exists(th.lstrip('/')) else (ph['src'], ph['w'], ph['h'])
+                img = (f'<div class="ehc-im"><img src="{E(src)}" width="{w}" height="{h}" alt="BMW {E(code)} {E(m["size"])} {E(m["layout"])} engine" '
+                       + ('fetchpriority="high" decoding="async">' if eager else 'loading="lazy" decoding="async">') + f'{YSL.info(cr)}</div>')
+            if s['bavg'] is not None:
+                b = s['bavg']; cls = 'good' if b < 90 else 'bad' if b > 115 else 'mid'
+                main = f'<p class="ehc-n {cls}"><b>{b}</b><span>owner complaints per car<br>100 = average car</span></p>'
+            else:
+                main = f'<p class="ehc-n none"><b>–</b><span>no per-car score<br>{s["txt"]:,} complaints name it</span></p>'
+            yt = (f'YouTube tone <b>{s["yt"][0]}</b> <small>· {s["yt"][1]} scored years</small>' if s['yt'][0] is not None else 'YouTube: <small>not enough videos</small>')
+            fams = [BFAM.get(f, f).replace('BMW ', '') for f in s['fams']]
+            chips = ''.join(f'<li>{E(f)}</li>' for f in fams[:6]) + (f'<li class="more">+{len(fams) - 6} more</li>' if len(fams) > 6 else '')
+            return (f'<li class="ehc" data-rank="{rk if rk else 999}" data-own="{s["bavg"] if s["bavg"] is not None else 9999}" data-yt="{s["yt"][0] if s["yt"][0] is not None else -1}" '
+                    f'data-y0="{s["y0"]}" data-y1="{s["y1"]}" data-cyl="{cyl}" data-turbo="{1 if tur else 0}" data-m="{1 if code.startswith("S") else 0}">'
+                    + img + f'<span class="ehc-rk">{"#" + str(rk) if rk else "Unranked"}</span>'
+                    f'<h2><a class="ehc-a" href="{ENG_URL(code)}">{E(code)}</a></h2><p class="ehc-t">{E(typ)} · {E(s["years"])}</p>'
+                    + main + f'<p class="ehc-yt">{yt}</p><ul class="ehc-cars" aria-label="Cars with the {E(code)}">{chips}</ul></li>')
+        cards = [_card(s, i + 1, i == 0) for i, s in enumerate(ranked)] + [_card(s, None, False) for s in rest]
+        kinds = [(_kind(s['code']), s['code']) for s in STATS]
+        pills = [('all', 'All')] + [(k, lab) for k, lab, ok in (('4', '4-cylinder', any(c == '4' for (c, _), _x in kinds)), ('6', '6-cylinder', any(c == '6' for (c, _), _x in kinds)),
+                 ('8', 'V8', any(c == '8' for (c, _), _x in kinds)), ('m', 'M engines', any(x.startswith('S') for _k, x in kinds)),
+                 ('turbo', 'Turbo', any(t for (_, t), _x in kinds)), ('na', 'Non-turbo', any(not t for (_, t), _x in kinds))) if ok]
         ans = ('Owners file government complaints by model and year, not engine, so we rank only where the data leaves no doubt: model years where one engine was the only engine in a model we have sales for. '
                + (f'By owner complaints per car sold, the {ranked[0]["code"]} ranks best ({ranked[0]["bavg"]}) and the {ranked[-1]["code"]} worst ({ranked[-1]["bavg"]}) of the {len(ranked)} engines we can score that way (100 = average car, lower is better; it counts complaints about the whole car, not just the engine). ' if len(ranked) >= 2 else '')
                + 'YouTube tone is shown separately. Each engine page breaks it down by model year.')
-        body = (f'<div class="advp"><header class="advh1"><p class="ph-e"><a href="/brands/bmw/">BMW</a></p><h1>BMW engines ranked by owner complaints, with specs and the cars that have them.</h1><p class="ans">{E(ans)}</p></header>'
-                '<div class="ygrid"><section class="yc">' + _rows(['Rank', 'Engine', 'Type', 'US model years', 'Cars', 'Owner complaints per car (whole car)', 'Complaints naming it', 'YouTube tone'], hr)
-                + '<p class="yc-cap">Rank = owner complaints per car sold (the Lemon Index: complaints about any part of the car, per car sold, 100 = average car, lower is better), averaged over the model years where this was the only engine in a model we have sales for. '
-                  'Engines with no such year are listed after, unranked. Complaints naming it = NHTSA complaints whose text mentions the engine code, about a model and year that had it. '
-                  'YouTube tone = how positive the videos are (0–100, higher = more positive), averaged over the scored years; it is not part of the rank. None of these is an engine failure rate.</p></section></div>'
-                + share_line('Every BMW engine ranked by owner complaints, year by year. Free:') + '</div>')
+        short = (f'The {ranked[0]["code"]} draws the fewest owner complaints per car, the {ranked[-1]["code"]} the most. Tap an engine for every year.' if len(ranked) >= 2 else 'Tap an engine for every year.')
+        method = ('Rank = owner complaints per car sold (the Lemon Index: complaints about any part of the car, per car sold, 100 = average car, lower is better), '
+                  'averaged over the model years where this was the only engine in a model we have sales for. Engines with no such year are listed after, unranked. '
+                  'Government complaints are filed by model and year, not engine. YouTube tone = how positive the videos are (0–100), averaged over the scored years; it is not part of the rank. '
+                  'None of these is an engine failure rate. Images: AI illustrations, free to use under CC BY 4.0.')
+        body = (f'<div class="advp ehub"><header class="advh1"><p class="ph-e"><a href="/brands/bmw/">BMW</a></p><h1>BMW engines, ranked by owner complaints.</h1>'
+                f'<p class="ans">{E(short)} <span class="ehub-i">{YSL.info(E(method))}</span></p></header>'
+                '<div class="ehub-bar"><div class="ehub-f" role="group" aria-label="Show">'
+                + ''.join(f'<button type="button" class="ehub-p" data-f="{k}" aria-pressed="{"true" if k == "all" else "false"}">{lab}</button>' for k, lab in pills)
+                + '</div><label class="ehub-s">Sort <select id="ehub-sort"><option value="own">Owner complaints</option><option value="new">Newest</option>'
+                  '<option value="old">Oldest</option><option value="yt">YouTube tone</option></select></label></div>'
+                + f'<p class="ehub-c" aria-live="polite">{len(cards)} engines</p><ol class="ehub-g">{"".join(cards)}</ol>'
+                + share_line('Every BMW engine ranked by owner complaints, year by year. Free:') + '</div><script src="/assets/enghub.js?v=1" defer></script>')
         faq = [('Which BMW engine is the most reliable?', ans)]
         page('/engines/bmw/', 'BMW Engines Ranked by Owner Complaints (N54, B58 & More)', ans, body, ld=[faq_ld([(q, '', a) for q, a in faq])]); BMW_URLS.insert(0, '/engines/bmw/')
     # ---- new BMW model pages (no sales -> no Lemon Index; complaints, specs, engines)

@@ -1127,3 +1127,39 @@ table.spec { min-width: 820px; }
 .thx-more summary::-webkit-details-marker { display: none } .thx-more summary::after { content: " \203A" }
 .thx-more ul { list-style: none; padding: 0; margin: 10px 0 6px; display: grid; gap: 6px; color: var(--ink2) }
 .thx-ig { background: none; color: var(--mute); font-weight: 500; font-size: 14px; padding: 0; margin: 0 0 22px } .thx-ig a { color: var(--ink); }
+/* 11-10 BMW engines hub: image cards + filter/sort bar (was an 8-column table that wrapped one word per line on phones) */
+.ehub .ans { max-width: 62ch; }
+.ehub-i { position: relative; display: inline-block; vertical-align: middle; width: 22px; height: 22px; }
+.ehub-i .ii { position: absolute; left: 0; right: auto; top: 0; bottom: auto; }
+.ehub-i .ii-pop { left: -8px; right: auto; top: 30px; bottom: auto; width: min(320px, 82vw); max-width: none; z-index: 20; font-size: 13px; line-height: 1.45; }
+.ehub-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px; margin: 8px 0 4px; }
+.ehub-f { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; padding: 2px; min-width: 0; flex: 1 1 auto; }
+.ehub-f::-webkit-scrollbar { display: none; }
+.ehub-p { flex: none; font: inherit; font-size: 14px; font-weight: 600; padding: 9px 14px; min-height: 40px; border-radius: 999px; border: 1px solid var(--line); background: #fff; color: var(--ink2); cursor: pointer; }
+.ehub-p[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: #fff; }
+.ehub-p:focus-visible, .ehub-s select:focus-visible { outline: 2.5px solid #e9b300; outline-offset: 2px; }
+.ehub-s { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; color: var(--mute); flex: none; }
+.ehub-s select { font: inherit; font-weight: 600; color: var(--ink); min-height: 40px; padding: 6px 30px 6px 12px; border: 1px solid var(--line); border-radius: 999px; background: #fff; }
+.ehub-c { font-size: 13px; color: var(--mute); margin: 6px 2px 10px; }
+.ehub-g { list-style: none; padding: 0; margin: 0 0 28px; display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 16px; }
+.ehc { position: relative; border: 1px solid var(--line); border-radius: 18px; padding: 14px 16px 16px; background: #fff; display: flex; flex-direction: column; gap: 6px; min-width: 0; transition: border-color .15s; }
+.ehc:hover { border-color: var(--ink); }
+.ehc-im { position: relative; aspect-ratio: 3 / 2; margin: 0 0 4px; }
+.ehc-im img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.ehc-im .ii { z-index: 2; right: 0; bottom: 0; }
+.ehc-rk { position: absolute; top: 12px; left: 12px; font-size: 13px; font-weight: 800; background: var(--lemon); color: var(--ink); border-radius: 999px; padding: 3px 10px; }
+.ehc h2 { margin: 0; font-size: 26px; letter-spacing: -.02em; line-height: 1.1; }
+.ehc-a { color: var(--ink); text-decoration: none; }
+.ehc-a::after { content: ""; position: absolute; inset: 0; border-radius: 18px; }
+.ehc-a:focus-visible { outline: none; } .ehc:has(.ehc-a:focus-visible) { outline: 2.5px solid #e9b300; outline-offset: 2px; }
+.ehc-t { margin: 0; color: var(--mute); font-size: 14px; }
+.ehc-n { display: flex; align-items: center; gap: 12px; margin: 6px 0 0; }
+.ehc-n b { font-size: 34px; font-weight: 900; letter-spacing: -.03em; font-variant-numeric: tabular-nums; line-height: 1; }
+.ehc-n span { font-size: 12.5px; color: var(--mute); line-height: 1.3; }
+.ehc-n.good b { color: var(--good); } .ehc-n.bad b { color: var(--red); } .ehc-n.none b { color: var(--mute); }
+.ehc-yt { margin: 0; font-size: 14px; color: var(--ink2); } .ehc-yt small { color: var(--mute); }
+.ehc-cars { list-style: none; padding: 0; margin: 4px 0 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.ehc-cars li { font-size: 12.5px; font-weight: 600; background: var(--soft); color: var(--ink2); border-radius: 999px; padding: 4px 10px; }
+.ehc-cars li.more { background: none; color: var(--mute); padding-left: 2px; }
+/* tables that hold long text cells (engine x year): scroll inside their box instead of squeezing to one word per line */
+@media (max-width: 760px) { .tw > table.adv { min-width: 720px; } table.adv td { min-width: 5.5em; } }
