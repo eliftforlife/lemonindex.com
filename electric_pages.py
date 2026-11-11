@@ -135,19 +135,21 @@ for c in EVC:
     sg = f'<p>Driver-assist crash reports to NHTSA involving a {E(c["name"])}: <b>{SG["tesla_models"].get(SGM[c["name"]], 0):,}</b> since 2021. <a href="/electric/driver-assist-crashes/">What those reports do and don\'t show →</a></p>' if c['name'] in SGM else ''
     main = f' <a href="{CARU(FY[c["slug"]])}">Its main car page</a> covers older model years.' if c['slug'] in FY else ''
     rank = f'#{c["rank"]} of {len(RK)} electric cars' if c.get('rank') else f'not ranked (under {EV["min_sold"]:,} sold)'
+    # 11-10 (design audit): EV pages in the tabbed car-page layout; the year table becomes tier-colored bars with a line at 100 (average)
+    _mx = max([110] + [y['li'] for y in c['years_detail']]) * 1.05
+    ybars = ''.join(f'<div class="b {"bad" if y["li"] > 110 else "good" if y["li"] < 90 else ""}" title="{y["y"]}: {y["n"]:,} complaints, {y["sold"]:,} sold"><span class="bn">{y["y"]}</span>'
+                    f'<span class="bt"><i style="width:{y["li"] / _mx * 100:.1f}%"></i><em style="left:{100 / _mx * 100:.1f}%"></em></span><b>{y["li"]}</b></div>' for y in c['years_detail'])
     rec_note = f'{len(c["recalls"])} recalls for model years {c["years"]}' + (f', {c["recalls_fire"]} mentioning fire' if c['recalls_fire'] else '')
     title = f'{c["name"]} Reliability: Problems, Recalls and Range ({c["years"]})'
     page(EVU(c), title + ' | The Lemon Index',
          f'{c["name"]}: Lemon Index {c["li"]} ({plain(c["li"])}), {rank}. Top problem: {ep(c["issues"][0][0]) if c["issues"] else "n/a"}. Recalls, fire complaints, EPA range and yearly cost.', f'''
-<article class="study"><p class="kicker"><a href="/electric/">Electric cars</a> · {E(c["name"])}</p><h1>{E(c["name"])} reliability, {c["years"]}</h1>
-<p class="lede">The {E(c["name"])} drew <b>{plain(c["li"])}</b>: {rank}.{main}</p>
-<div class="stats"><div><b class="{cls(c["li"])}">{c["li"]}</b><span>Lemon Index (100 = average car)</span></div><div><b>{c["per100k"]}</b><span>complaints per 100,000 sold</span></div><div><b>{c["noadas100k"]}</b><span>without driver-assist complaints</span></div><div><b>{c["sold"]:,}</b><span>sold in the U.S., {c["years"]}{" (small sample)" if c["small"] else ""}</span></div></div>
-<h2>Year by year</h2><div class="tw"><table><thead><tr><th>Model year</th><th>Index</th><th>Compared with average</th><th>Complaints</th><th>Sold</th></tr></thead><tbody>{yrs}</tbody></table></div>
-<h2>Top problems</h2><ul>{iss}</ul>
-<p>Fire complaints: <b>{c["fire"]}</b> ({c["fire100k"]} per 100,000 sold; all EVs average {P["ev"]["fire100k"]}). <a href="/electric/fires/">EV fires vs gas →</a></p>
-{cost}
-<h2>Recalls</h2><p>{rec_note}.{" The newest:" if rec else ""}</p><ul class="recalls">{rec}</ul>
-{sg}
+<article class="study tr2 ev2"><p class="kicker"><a href="/electric/">Electric cars</a> · {E(c["name"])}</p><h1>{E(c["name"])} reliability, {c["years"]}</h1>
+<p class="tra">The {E(c["name"])} drew <b>{plain(c["li"])}</b>: {rank}.{main}</p>
+<div class="trc"><div><b class="{cls(c["li"])}">{c["li"]}</b><span>Lemon Index (100 = average)</span></div><div><b>{c["per100k"]}</b><span>complaints per 100,000 sold</span></div><div><b>{c["sold"]:,}</b><span>sold, {c["years"]}{" (small sample)" if c["small"] else ""}</span></div></div>
+{TAB.ASSET}{TAB._tabs([('overview', 'Overview', f'<h2>Top problems</h2><ul class="evp">{iss}</ul><p>Without driver-assist complaints: <b>{c["noadas100k"]}</b> per 100,000 sold. Fire complaints: <b>{c["fire"]}</b> ({c["fire100k"]} per 100,000; all EVs average {P["ev"]["fire100k"]}). <a href="/electric/fires/">EV fires vs gas →</a></p>'),
+                       ('years', 'Years', f'<h2>Year by year</h2><p class="note">Lemon Index per model year. 100 is the average car (thin line), lower is better.</p><div class="bars yb trb">{ybars}</div>'),
+                       ('cost', 'Range & cost', cost),
+                       ('recalls', 'Recalls & safety', f'<h2>Recalls</h2><p>{rec_note}.{" The newest:" if rec else ""}</p><ul class="recalls">{rec}</ul>{sg}')], f'{c["name"]} sections')}
 <p class="note">Complaints {WIN}. {E(SRC_NOTE)} Sales source: {E(c["src"])}.</p></article>''', kind='article',
          ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": title, "url": BASE + EVU(c)}], vis=(pimg(mphoto(c['slug']), c['name']) + pcredit(who(mphoto(c['slug'])))) if mphoto(c['slug']) else '')
     eurls.append(EVU(c))

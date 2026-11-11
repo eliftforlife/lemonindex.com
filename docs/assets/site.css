@@ -1463,3 +1463,10 @@ details.yrs-more > summary::-webkit-details-marker { display: none; }
 details.yrs-more[open] > summary { display: none; }
 @media (max-width: 600px) { .pg > section, .pg > article { padding-top: 0; } .pg > .ph .ph-v { padding-bottom: 0; } }
 @media (max-width: 600px) { .pg > .shline { margin-top: -16px; } }
+
+/* 11-10 EV model pages (article.ev2): the tr2 hero pattern + the car-page tabs */
+article.ev2 .tbx { margin-top: 18px; }
+article.ev2 .tb-p h2 { margin-top: 18px; }
+article.ev2 ul.evp { margin: 0 0 10px; padding-left: 20px; } article.ev2 ul.evp li { margin: 3px 0; }
+article.ev2 .trb .b { grid-template-columns: 44px 1fr 44px; }
+article.ev2 .tb-p { padding-top: 4px; } article.ev2 .tb-p > h2:first-child { margin-top: 10px; } article.ev2 .tbx + .note, article.ev2 > .note { font-size: 13px; }
