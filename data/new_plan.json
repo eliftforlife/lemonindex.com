@@ -157,5 +157,138 @@
    "wiki": "Jeep Commander (XK)",
    "col": "^USA$"
   }
+ },
+ "toyota-sequoia": {
+  "name": "Toyota Sequoia",
+  "brand": "Toyota",
+  "seg": "suv",
+  "make": "TOYOTA",
+  "rx": "(SEQUOIA|SEQUOIA SR5)",
+  "sales": {
+   "wiki": "Toyota Sequoia"
+  }
+ },
+ "cadillac-srx": {
+  "name": "Cadillac SRX",
+  "brand": "Cadillac",
+  "seg": "suv",
+  "make": "CADILLAC",
+  "rx": "(SRX)",
+  "sales": {
+   "wiki": "Cadillac SRX"
+  }
+ },
+ "nissan-xterra": {
+  "name": "Nissan Xterra",
+  "brand": "Nissan",
+  "seg": "suv",
+  "make": "NISSAN",
+  "rx": "(XTERRA)",
+  "sales": {
+   "wiki": "Nissan Xterra"
+  }
+ },
+ "chevrolet-avalanche": {
+  "name": "Chevrolet Avalanche",
+  "brand": "Chevrolet",
+  "seg": "truck",
+  "make": "CHEVROLET",
+  "rx": "(AVALANCHE|AVALANCHE 1500|AVALANCHE 2500)",
+  "sales": {
+   "wiki": "Chevrolet Avalanche"
+  }
+ },
+ "acura-tl": {
+  "name": "Acura TL",
+  "brand": "Acura",
+  "seg": "car",
+  "make": "ACURA",
+  "rx": "(TL)",
+  "sales": {
+   "wiki": "Acura TL"
+  }
+ },
+ "chrysler-pt-cruiser": {
+  "name": "Chrysler PT Cruiser",
+  "brand": "Chrysler",
+  "seg": "car",
+  "make": "CHRYSLER",
+  "rx": "(PT CRUISER|PT CRUISER CONVERTIBLE|PT CRUISER CONV)",
+  "sales": {}
+ },
+ "dodge-avenger": {
+  "name": "Dodge Avenger",
+  "brand": "Dodge",
+  "seg": "car",
+  "make": "DODGE",
+  "rx": "(AVENGER|AVENGER AWD)",
+  "sales": {
+   "wiki": "Dodge Avenger"
+  }
+ },
+ "mercury-milan": {
+  "name": "Mercury Milan",
+  "brand": "Mercury",
+  "seg": "car",
+  "make": "MERCURY",
+  "rx": "(MILAN)",
+  "sales": {}
+ },
+ "ford-freestar": {
+  "name": "Ford Freestar",
+  "brand": "Ford",
+  "seg": "minivan",
+  "make": "FORD",
+  "rx": "(FREESTAR)",
+  "sales": {
+   "gcbc": "ford-freestar"
+  }
+ },
+ "buick-enclave": {
+  "name": "Buick Enclave",
+  "brand": "Buick",
+  "seg": "suv",
+  "make": "BUICK",
+  "rx": "(ENCLAVE)",
+  "sales": {
+   "wiki": "Buick Enclave"
+  }
+ },
+ "chrysler-sebring": {
+  "name": "Chrysler Sebring",
+  "brand": "Chrysler",
+  "seg": "car",
+  "make": "CHRYSLER",
+  "rx": "(SEBRING|SEBRING CONVERTIBLE|SEBRING CONV|SEBRING SEDAN|SEBRING COUPE)",
+  "sales": {}
+ },
+ "saturn-vue": {
+  "name": "Saturn Vue",
+  "brand": "Saturn",
+  "seg": "suv",
+  "make": "SATURN",
+  "rx": "(VUE)",
+  "sales": {
+   "wiki": "Saturn Vue"
+  }
+ },
+ "ford-bronco": {
+  "name": "Ford Bronco",
+  "brand": "Ford",
+  "seg": "suv",
+  "make": "FORD",
+  "rx": "(BRONCO)",
+  "sales": {
+   "wiki": "Ford Bronco"
+  }
+ },
+ "dodge-caravan": {
+  "name": "Dodge Caravan",
+  "brand": "Dodge",
+  "seg": "minivan",
+  "make": "DODGE",
+  "rx": "(CARAVAN)",
+  "sales": {},
+  "dupe_of": "dodge-grand-caravan"
  }
 }

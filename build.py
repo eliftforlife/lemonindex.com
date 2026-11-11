@@ -280,7 +280,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}{img or "/assets/og.png"}"><meta name="twitter:card" content="summary_large_image">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://challenges.cloudflare.com https://www.googletagmanager.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; frame-src https://challenges.cloudflare.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cloudflareinsights.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://vpic.nhtsa.dot.gov https://lemon-survey.elift08.workers.dev https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="google-adsense-account" content="{ADS}"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=1110-11110717"><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
+<link rel="stylesheet" href="/assets/site.css?v=1110-11110734"><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
 <body>{gh_header(path)}
 <main>{body}{end_block(path, _upd, _shl)}{'' if path == '/vote/' else ask_html(path)}</main>
 <footer class="foot f2"><div class="f2-in"><div class="f2-brand"><a class="f2-logo" href="/"><img src="/assets/icon-64.png" alt="" width="28" height="28">The Lemon Index</a>
@@ -441,6 +441,9 @@ def qa_fold(html_):
     return re.sub(r'<h3>(.*?)</h3><p>(.*?)</p>', r'<details class="qa"><summary><h3 class="qh">\1</h3></summary><p>\2</p></details>', html_)
 VOTE_IMG = lambda n: (lambda im: {'src': f'/assets/vote/{n}.webp', 'w': im.size[0], 'h': im.size[1], 'author': {'chevy': 'Ghostofakina', 'ford': 'Kevauto'}[n]})(__import__('PIL.Image', fromlist=['Image']).open(f'assets/vote/{n}.webp'))
 
+# 11-11 (Elijah): three quick ways in, right under the search (outside the folding selects, so always visible)
+HOME_CHIPS = ('<nav class="hqk" aria-label="Browse">' + ''.join(f'<a href="{u}">{gh_ic(i)}<span>{t}</span></a>' for u, i, t in
+              (('/cars/', '/cars/', 'All cars'), ('/supercars/', '/supercars/', 'Supercars'), ('/motorcycles/', '/motorcycles/', 'Motorcycles'))) + '</nav>')
 def home_compare():
     """11-11 (Elijah: "right under the any car search should show the compare cars box first instead of the two random cars"): a compact compare
     box: one big match-up with both AI cars, two more popular ones as links, and the way into /compare/ to pick any two."""
@@ -479,7 +482,7 @@ def pop_checks(n=28):
     return ('<section class="hpop"><h2>Reliability checks people run most.</h2><p class="hpl">'
             + ''.join(f'<a href="/cars/{i}/">{E(by[i]["name"])} reliability</a>' for i in ids) + '</p></section>')
 page('/', "Lemon Index (LemonIndex): Look Up Any Car's Problems by Year", "Look up any car's problems by model year, 2000 to 2025: its reliability score, top problem areas and real owner complaints, from 1.6 million complaints filed with the government. 100 is the average car.", f'''
-<div class="home"><div class="hhero">{finder(h='<span class="fbrand">The Lemon Index</span>Look up any car.', foot=f'<p class="fnote">From {COUNTED:,} owner complaints filed with the U.S. government.</p>')}{home_compare()}</div>
+<div class="home"><div class="hhero">{finder(h='<span class="fbrand">The Lemon Index</span>Look up any car.', foot=HOME_CHIPS + f'<p class="fnote">From {COUNTED:,} owner complaints filed with the U.S. government.</p>')}{home_compare()}</div>
 <section class="hread"><h2>100 is the average car. <span class="h2s">Lower is better.</span></h2>
 <div class="scale"><div class="sbar"><i style="left:{min(96, best4["li"] / 3.5):.1f}%" title="{E(best4["name"])}, {best4["li"]}"></i></div><div class="sl"><span>25 · ¼ the complaints</span><span>100 · average</span><span class="bad">300 · 3×</span></div></div></section>
 {tiles()}

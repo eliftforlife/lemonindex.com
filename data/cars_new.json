@@ -388,5 +388,275 @@
 "sales_url": "https://en.wikipedia.org/wiki/Jeep_Commander_(XK)",
 "sales_kind": "calendar",
 "id": "jeep-commander"
+},
+{
+"name": "Toyota Sequoia",
+"brand": "Toyota",
+"segment": "suv",
+"years": "2001-2010",
+"sold": 438287,
+"n": 402,
+"per100k": 92,
+"expected": 396.53643741297395,
+"li": 101,
+"serious": 10,
+"worst": "2005",
+"issues": [
+[
+"service brakes, hydraulic",
+32
+],
+[
+"engine",
+14
+],
+[
+"suspension",
+11
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Toyota_Sequoia",
+"sales_kind": "calendar",
+"id": "toyota-sequoia"
+},
+{
+"name": "Cadillac SRX",
+"brand": "Cadillac",
+"segment": "suv",
+"years": "2010-2016",
+"sold": 366983,
+"n": 336,
+"per100k": 92,
+"expected": 404.81854755162533,
+"li": 83,
+"serious": 21,
+"worst": "2016",
+"issues": [
+[
+"lights",
+24
+],
+[
+"transmission & drivetrain",
+15
+],
+[
+"electrical",
+14
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Cadillac_SRX",
+"sales_kind": "calendar",
+"id": "cadillac-srx"
+},
+{
+"name": "Nissan Xterra",
+"brand": "Nissan",
+"segment": "suv",
+"years": "2002-2010",
+"sold": 454497,
+"n": 483,
+"per100k": 106,
+"expected": 384.0808183108847,
+"li": 126,
+"serious": 11,
+"worst": "2006",
+"issues": [
+[
+"fuel system, gasoline",
+44
+],
+[
+"fuel system, other",
+11
+],
+[
+"electrical",
+8
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Nissan_Xterra",
+"sales_kind": "calendar",
+"id": "nissan-xterra"
+},
+{
+"name": "Chevrolet Avalanche",
+"brand": "Chevrolet",
+"segment": "truck",
+"years": "2002-2012",
+"sold": 571273,
+"n": 647,
+"per100k": 113,
+"expected": 503.1546326763036,
+"li": 129,
+"serious": 12,
+"worst": "2002",
+"issues": [
+[
+"electrical",
+19
+],
+[
+"service brakes, hydraulic",
+15
+],
+[
+"body structure",
+15
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Chevrolet_Avalanche",
+"sales_kind": "calendar",
+"id": "chevrolet-avalanche"
+},
+{
+"name": "Acura TL",
+"brand": "Acura",
+"segment": "car",
+"years": "2010-2013",
+"sold": 123176,
+"n": 63,
+"per100k": 51,
+"expected": 137.74709139317036,
+"li": 46,
+"serious": 6,
+"worst": "2012",
+"issues": [
+[
+"transmission & drivetrain",
+25
+],
+[
+"airbags",
+25
+],
+[
+"speed control",
+11
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Acura_TL",
+"sales_kind": "calendar",
+"id": "acura-tl"
+},
+{
+"name": "Dodge Avenger",
+"brand": "Dodge",
+"segment": "car",
+"years": "2010-2014",
+"sold": 358651,
+"n": 429,
+"per100k": 120,
+"expected": 410.7571270806702,
+"li": 104,
+"serious": 23,
+"worst": "2014",
+"issues": [
+[
+"airbags",
+29
+],
+[
+"electrical",
+22
+],
+[
+"engine",
+16
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Dodge_Avenger",
+"sales_kind": "calendar",
+"id": "dodge-avenger"
+},
+{
+"name": "Buick Enclave",
+"brand": "Buick",
+"segment": "suv",
+"years": "2010-2022",
+"sold": 667806,
+"n": 360,
+"per100k": 54,
+"expected": 717.7661491804464,
+"li": 50,
+"serious": 18,
+"worst": "2011",
+"issues": [
+[
+"transmission & drivetrain",
+17
+],
+[
+"steering",
+14
+],
+[
+"electrical",
+13
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Buick_Enclave",
+"sales_kind": "calendar",
+"id": "buick-enclave"
+},
+{
+"name": "Saturn Vue",
+"brand": "Saturn",
+"segment": "suv",
+"years": "2002-2009",
+"sold": 620177,
+"n": 560,
+"per100k": 90,
+"expected": 516.7718201306326,
+"li": 108,
+"serious": 17,
+"worst": "2003",
+"issues": [
+[
+"transmission & drivetrain",
+28
+],
+[
+"electrical",
+22
+],
+[
+"engine",
+11
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Saturn_Vue",
+"sales_kind": "calendar",
+"id": "saturn-vue"
+},
+{
+"name": "Ford Bronco",
+"brand": "Ford",
+"segment": "suv",
+"years": "2021-2022",
+"sold": 152080,
+"n": 408,
+"per100k": 268,
+"expected": 179.5647291615585,
+"li": 227,
+"serious": 5,
+"worst": "2021",
+"issues": [
+[
+"engine",
+23
+],
+[
+"wipers & visibility",
+19
+],
+[
+"brakes",
+11
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Ford_Bronco",
+"sales_kind": "calendar",
+"id": "ford-bronco"
 }
 ]

@@ -1667,3 +1667,10 @@ main { padding-bottom: 16px; } .foot.f2 { margin-top: 32px; } .f2 .f2-in { paddi
 .hcmp-l a { padding: 6px 12px; border-radius: 999px; background: #fff; border: 1px solid var(--line); font-size: 14px; font-weight: 600; color: var(--ink); text-decoration: none; }
 .hcmp-go { justify-self: center; } .hcmp-ii { position: absolute; right: 14px; top: 14px; }
 @media (max-width: 600px) { .hcmp { padding: 18px 16px 16px; border-radius: 20px; } }
+
+/* 11-11 home quick buttons under the search */
+.hqk { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; max-width: 520px; margin: 12px 0 2px; }
+.hqk a { display: flex; align-items: center; justify-content: center; gap: 7px; min-height: 44px; padding: 0 10px; border-radius: 999px; border: 1px solid var(--line);
+  background: #fff; color: var(--ink); font-size: 14.5px; font-weight: 600; text-decoration: none; white-space: nowrap; }
+.hqk a:hover { border-color: #c7c7cc; } .hqk .gh-ic { width: 18px; height: 18px; flex: none; color: #3c4043; }
+@media (max-width: 380px) { .hqk a { gap: 5px; padding: 0 6px; font-size: 13.5px; } .hqk .gh-ic { width: 16px; height: 16px; } }

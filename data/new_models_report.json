@@ -1,48 +1,392 @@
 [
  {
-  "slug": "ford-freestyle",
+  "slug": "toyota-sequoia",
   "sales": {
-   "2004": 8509,
-   "2005": 76739,
-   "2006": 58602,
-   "2007": 23765
+   "2000": 9925,
+   "2001": 68574,
+   "2002": 70187,
+   "2003": 67067,
+   "2004": 58114,
+   "2005": 45904,
+   "2006": 34315,
+   "2007": 23273,
+   "2008": 30693,
+   "2009": 16387,
+   "2010": 13848,
+   "2011": 13022,
+   "2012": 13151,
+   "2013": 13811,
+   "2014": 11806,
+   "2015": 12583,
+   "2016": 12771,
+   "2017": 12156,
+   "2018": 11121,
+   "2019": 10289,
+   "2020": 7364,
+   "2021": 8070,
+   "2022": 5314,
+   "2023": 22182,
+   "2024": 26097,
+   "2025": 26186
   },
   "kind": "calendar",
-  "url": "https://en.wikipedia.org/wiki/Ford_Freestyle",
-  "note": "the Freestyle rows of the article's Total American sales table (Taurus X rows left out)",
+  "url": "https://en.wikipedia.org/wiki/Toyota_Sequoia",
+  "note": "col='US'",
   "flags": [
-   "Ford Freestyle 2004: 8,509 sold, 0 complaints in window -> sales merged into 2005"
+   "Toyota Sequoia 2000: 9,925 sold, 0 complaints in window -> sales merged into 2001",
+   "Toyota Sequoia 2009: 16,387 sold, 1 complaints in window -> sales merged into 2010",
+   "Toyota Sequoia 2023: 22,182 sold, 0 complaints in window -> sales merged into 2022",
+   "Toyota Sequoia 2024: 26,097 sold, 0 complaints in window (no neighbour with complaints: dropped)",
+   "Toyota Sequoia 2025: 26,186 sold, 0 complaints in window (no neighbour with complaints: dropped)",
+   "Toyota Sequoia 2022: 27,496 sold but only 1 complaints in window -> not scored"
   ],
-  "complaints": 3665,
+  "complaints": 3172,
   "scored": [
+   2001,
+   2002,
+   2003,
+   2004,
    2005,
    2006,
-   2007
+   2007,
+   2008,
+   2010
   ]
  },
  {
-  "slug": "jeep-commander",
+  "slug": "cadillac-srx",
   "sales": {
-   "2005": 17048,
-   "2006": 88497,
-   "2007": 63027,
-   "2008": 27694,
-   "2009": 12655,
-   "2010": 8115,
-   "2011": 105
+   "2003": 5049,
+   "2004": 30019,
+   "2005": 22999,
+   "2006": 22043,
+   "2007": 22543,
+   "2008": 16156,
+   "2009": 20237,
+   "2010": 51094,
+   "2011": 56905,
+   "2012": 57485,
+   "2013": 56776,
+   "2014": 53578,
+   "2015": 68850,
+   "2016": 22139,
+   "2017": 156
   },
   "kind": "calendar",
-  "url": "https://en.wikipedia.org/wiki/Jeep_Commander_(XK)",
-  "note": "col='USA'",
+  "url": "https://en.wikipedia.org/wiki/Cadillac_SRX",
+  "note": "col='United States'",
   "flags": [
-   "Jeep Commander 2005: 17,048 sold, 0 complaints in window -> sales merged into 2006",
-   "Jeep Commander 2011: 105 sold, 0 complaints in window -> sales merged into 2010"
+   "Cadillac SRX 2003: 5,049 sold, 0 complaints in window -> sales merged into 2004",
+   "Cadillac SRX 2017: 156 sold, 0 complaints in window -> sales merged into 2016"
   ],
-  "complaints": 3362,
+  "complaints": 3265,
   "scored": [
+   2004,
+   2005,
    2006,
    2007,
-   2008
+   2009,
+   2010,
+   2011,
+   2012,
+   2013,
+   2014,
+   2015,
+   2016
+  ]
+ },
+ {
+  "slug": "nissan-xterra",
+  "sales": {
+   "2002": 79779,
+   "2003": 67799,
+   "2004": 66690,
+   "2005": 72447,
+   "2006": 62325,
+   "2007": 51355,
+   "2008": 33579,
+   "2009": 16455,
+   "2010": 20523,
+   "2011": 18221,
+   "2012": 18679,
+   "2013": 17766,
+   "2014": 16505,
+   "2015": 10672
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Nissan_Xterra",
+  "note": "col='United States'",
+  "flags": [],
+  "complaints": 3098,
+  "scored": [
+   2002,
+   2003,
+   2004,
+   2005,
+   2006,
+   2007,
+   2008,
+   2010
+  ]
+ },
+ {
+  "slug": "chevrolet-avalanche",
+  "sales": {
+   "2001": 52955,
+   "2002": 89372,
+   "2003": 93482,
+   "2004": 80566,
+   "2005": 63186,
+   "2006": 57076,
+   "2007": 55550,
+   "2008": 35003,
+   "2009": 16432,
+   "2010": 20515,
+   "2011": 20088,
+   "2012": 23995,
+   "2013": 16986
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Chevrolet_Avalanche",
+  "note": "col='U.S.'",
+  "flags": [
+   "Chevrolet Avalanche 2001: 52,955 sold, 1 complaints in window -> sales merged into 2002",
+   "Chevrolet Avalanche 2010: 20,515 sold but only 3 complaints in window -> not scored"
+  ],
+  "complaints": 2954,
+  "scored": [
+   2002,
+   2003,
+   2004,
+   2005,
+   2006,
+   2007,
+   2008,
+   2011,
+   2012
+  ]
+ },
+ {
+  "slug": "acura-tl",
+  "sales": {
+   "1995": 16539,
+   "1996": 24700,
+   "1997": 23151,
+   "1998": 31883,
+   "1999": 56566,
+   "2000": 67033,
+   "2001": 69484,
+   "2002": 60764,
+   "2003": 56770,
+   "2004": 77895,
+   "2005": 78218,
+   "2006": 71348,
+   "2007": 58545,
+   "2008": 46766,
+   "2009": 33620,
+   "2010": 34049,
+   "2011": 31237,
+   "2012": 33572,
+   "2013": 24318,
+   "2014": 10616
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Acura_TL",
+  "note": "col='US sales'",
+  "flags": [
+   "Acura TL 2011: 31,237 sold, 0 complaints in window -> sales merged into 2012"
+  ],
+  "complaints": 2889,
+  "scored": [
+   2000,
+   2001,
+   2002,
+   2003,
+   2004,
+   2005,
+   2006,
+   2007,
+   2008,
+   2009,
+   2010,
+   2012,
+   2013
+  ]
+ },
+ {
+  "slug": "chrysler-pt-cruiser",
+  "sales": {},
+  "kind": "none",
+  "url": "",
+  "note": "no sales source",
+  "flags": [],
+  "complaints": 2623,
+  "scored": []
+ },
+ {
+  "slug": "dodge-avenger",
+  "sales": {
+   "2007": 83804,
+   "2008": 61963,
+   "2009": 38922,
+   "2010": 50923,
+   "2011": 64023,
+   "2012": 96890,
+   "2013": 93842,
+   "2014": 51705,
+   "2015": 1268
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Dodge_Avenger",
+  "note": "col='U.S.'",
+  "flags": [
+   "Dodge Avenger 2007: 83,804 sold, 1 complaints in window -> sales merged into 2008",
+   "Dodge Avenger 2015: 1,268 sold, 0 complaints in window -> sales merged into 2014"
+  ],
+  "complaints": 2615,
+  "scored": [
+   2008,
+   2009,
+   2010,
+   2011,
+   2012,
+   2013,
+   2014
+  ]
+ },
+ {
+  "slug": "mercury-milan",
+  "sales": {},
+  "kind": "none",
+  "url": "",
+  "note": "no sales source",
+  "flags": [],
+  "complaints": 2519,
+  "scored": []
+ },
+ {
+  "slug": "ford-freestar",
+  "sales": {},
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/ford-freestar-sales-figures/",
+  "note": "GoodCarBadCar annual U.S. sales",
+  "flags": [],
+  "complaints": 2533,
+  "scored": []
+ },
+ {
+  "slug": "buick-enclave",
+  "sales": {
+   "2007": 29286,
+   "2008": 44706,
+   "2009": 43150,
+   "2010": 55426,
+   "2011": 58392,
+   "2012": 56703,
+   "2013": 60534,
+   "2014": 62300,
+   "2015": 62081,
+   "2016": 52028,
+   "2017": 48564,
+   "2018": 49647,
+   "2019": 51156,
+   "2020": 38480,
+   "2021": 41962,
+   "2022": 30533,
+   "2023": 39411,
+   "2024": 26400,
+   "2025": 39754
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Buick_Enclave",
+  "note": "col='United States'",
+  "flags": [
+   "Buick Enclave 2007: 29,286 sold, 0 complaints in window -> sales merged into 2008"
+  ],
+  "complaints": 2505,
+  "scored": [
+   2008,
+   2009,
+   2010,
+   2011,
+   2012,
+   2013,
+   2014,
+   2015,
+   2016,
+   2017,
+   2018,
+   2019,
+   2020,
+   2021,
+   2022,
+   2023,
+   2024,
+   2025
+  ]
+ },
+ {
+  "slug": "chrysler-sebring",
+  "sales": {},
+  "kind": "none",
+  "url": "",
+  "note": "no sales source",
+  "flags": [],
+  "complaints": 2455,
+  "scored": []
+ },
+ {
+  "slug": "saturn-vue",
+  "sales": {
+   "2001": 393,
+   "2002": 75478,
+   "2003": 81924,
+   "2004": 86957,
+   "2005": 91972,
+   "2006": 88581,
+   "2007": 81676,
+   "2008": 84767,
+   "2009": 28429,
+   "2010": 3201
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Saturn_Vue",
+  "note": "col='United States'",
+  "flags": [
+   "Saturn Vue 2001: 393 sold, 0 complaints in window -> sales merged into 2002"
+  ],
+  "complaints": 2351,
+  "scored": [
+   2002,
+   2003,
+   2004,
+   2005,
+   2006,
+   2007,
+   2008,
+   2009
+  ]
+ },
+ {
+  "slug": "ford-bronco",
+  "sales": {
+   "2021": 35023,
+   "2022": 117057,
+   "2023": 105665,
+   "2024": 109172,
+   "2025": 146007
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Ford_Bronco",
+  "note": "col='U.S.'",
+  "flags": [],
+  "complaints": 975,
+  "scored": [
+   2021,
+   2022,
+   2023,
+   2024,
+   2025
   ]
  }
 ]
