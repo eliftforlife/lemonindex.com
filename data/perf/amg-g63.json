@@ -1,0 +1,869 @@
+{
+ "slug": "amg-g63",
+ "name": "Mercedes-AMG G63",
+ "short": "G63",
+ "make": "Mercedes-Benz",
+ "page": "/cars/amg-g63/",
+ "focus": "w463a",
+ "star": "w463a-g63",
+ "h1": "Mercedes-AMG G63: performance, engines and what owners say",
+ "nhtsa": {
+  "make": "MERCEDES-BENZ",
+  "models": [
+   "G63",
+   "AMG G63"
+  ],
+  "note": "NHTSA has no complaints filed under the G55 AMG name, and the 2019 and later G63s are filed as AMG G63 or G63: these counts cover those two names only."
+ },
+ "topics_extra": {
+  "Intercooler pump": "intercooler pump|heat ?soak",
+  "Supercharger": "supercharger (coupler|coupling|clutch|whine|rattle|bearing)s?",
+  "Turbo oil lines": "turbo(charger)? oil (feed |supply )?lines?",
+  "Spark plugs and coils": "spark plugs?|ignition coils?|misfir(e|es|ing)",
+  "Timing chain and cam adjusters": "timing chain|chain stretch|cam(shaft)? (adjuster|phaser)s?",
+  "Differential locks": "diff(erential)? locks?"
+ },
+ "gens": [
+  {
+   "id": "w463-g55",
+   "code": "W463",
+   "years": "2003–2012",
+   "y0": 2003,
+   "y1": 2012,
+   "engine": "M113K",
+   "body": "SUV",
+   "tag": "The G55 AMG. Hand-built 5.4 V8, supercharged from 2005.",
+   "variants": [
+    {
+     "id": "w463-g55-na",
+     "name": "G55 AMG",
+     "years": "2003–2004",
+     "hp": {
+      "v": 349,
+      "src": [
+       "mb04b"
+      ],
+      "note": "at 5,500 rpm; no supercharger yet"
+     },
+     "tq": {
+      "v": 387,
+      "src": [
+       "mb04b"
+      ],
+      "note": "at 3,000 rpm"
+     },
+     "z60": {
+      "v": null,
+      "who": "",
+      "src": [],
+      "claim": 7.2,
+      "csrc": [
+       "mb04b"
+      ]
+     },
+     "trans": {
+      "v": "5-speed automatic, full-time 4WD",
+      "src": [
+       "mb04b"
+      ],
+      "note": "three locking differentials"
+     },
+     "weight": {
+      "v": "5,540 lb",
+      "src": [
+       "mb04b"
+      ],
+      "note": "2004 brochure"
+     }
+    },
+    {
+     "id": "w463-g55k",
+     "name": "G55 AMG Kompressor",
+     "years": "2005–2008",
+     "hp": {
+      "v": 469,
+      "src": [
+       "mb05b",
+       "wg"
+      ],
+      "note": "at 6,100 rpm; Wikipedia says 493 hp from MY2007"
+     },
+     "tq": {
+      "v": 516,
+      "src": [
+       "mb05b"
+      ],
+      "note": "at 2,800 rpm"
+     },
+     "z60": {
+      "v": 4.7,
+      "who": "Motor Trend",
+      "src": [
+       "z60mb"
+      ],
+      "claim": 5.5,
+      "csrc": [
+       "mb05b"
+      ]
+     },
+     "trans": {
+      "v": "5-speed automatic, full-time 4WD",
+      "src": [
+       "mb05b"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "5,590 lb",
+      "src": [
+       "mb05b"
+      ],
+      "note": "2005"
+     }
+    },
+    {
+     "id": "w463-g55-500",
+     "name": "G55 AMG (500 hp)",
+     "years": "2009–2012",
+     "hp": {
+      "v": 500,
+      "src": [
+       "mb11b",
+       "mb10b",
+       "cc09"
+      ],
+      "note": "at 6,100 rpm"
+     },
+     "tq": {
+      "v": 516,
+      "src": [
+       "mb11b"
+      ],
+      "note": "at 2,750–4,000 rpm"
+     },
+     "z60": {
+      "v": null,
+      "who": "",
+      "src": [],
+      "claim": 5.4,
+      "csrc": [
+       "mb11b",
+       "cc09"
+      ]
+     },
+     "trans": {
+      "v": "5-speed automatic, full-time 4WD",
+      "src": [
+       "mb11b"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "5,721 lb",
+      "src": [
+       "mb11b"
+      ],
+      "note": "2011"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w463-g63",
+   "code": "W463",
+   "years": "2013–2018",
+   "y0": 2013,
+   "y1": 2018,
+   "engine": "M157",
+   "body": "SUV",
+   "tag": "First G63. 5.5 twin-turbo V8, 7-speed, 563 hp from 2016.",
+   "variants": [
+    {
+     "id": "w463-g63-13",
+     "name": "G63 AMG",
+     "years": "2013–2015",
+     "hp": {
+      "v": 536,
+      "src": [
+       "mb13b",
+       "mb14b"
+      ],
+      "note": "at 5,500 rpm"
+     },
+     "tq": {
+      "v": 560,
+      "src": [
+       "mb13b",
+       "mb14b"
+      ],
+      "note": "at 2,000–5,000 rpm"
+     },
+     "z60": {
+      "v": 5.0,
+      "who": "Car and Driver",
+      "src": [
+       "z60mb"
+      ],
+      "claim": 5.3,
+      "csrc": [
+       "mb14b"
+      ]
+     },
+     "trans": {
+      "v": "7-speed AMG Speedshift Plus automatic, full-time 4WD",
+      "src": [
+       "mb14b"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "5,622 lb",
+      "src": [
+       "mb13b",
+       "mb14b"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$135,205",
+      "src": [
+       "fox13",
+       "jal13"
+      ],
+      "note": "2013, destination included; from road tests, not a maker price list"
+     }
+    },
+    {
+     "id": "w463-g63-16",
+     "name": "AMG G63",
+     "years": "2016–2018",
+     "hp": {
+      "v": 563,
+      "src": [
+       "mb16b",
+       "mb17spec"
+      ],
+      "note": "at 5,500 rpm"
+     },
+     "tq": {
+      "v": 561,
+      "src": [
+       "mb17spec",
+       "mb16b"
+      ],
+      "note": "at 1,725–5,250 rpm"
+     },
+     "z60": {
+      "v": 4.8,
+      "who": "Car and Driver",
+      "src": [
+       "z60amg"
+      ],
+      "claim": 5.3,
+      "csrc": [
+       "mb16b",
+       "mb17spec"
+      ]
+     },
+     "top": {
+      "v": "130 mph",
+      "src": [
+       "mb17spec",
+       "mb18spec"
+      ],
+      "note": "electronically limited"
+     },
+     "trans": {
+      "v": "7-speed AMG Speedshift Plus automatic, all-wheel drive",
+      "src": [
+       "mb17spec"
+      ],
+      "note": "50:50 torque split"
+     },
+     "weight": {
+      "v": "5,833 lb",
+      "src": [
+       "mb16b",
+       "mb17spec"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$141,400",
+      "src": [
+       "mb17qrg"
+      ],
+      "note": "2017, plus $925 destination; 2016 launch price not found"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w463a",
+   "code": "W463A",
+   "years": "2019–2025",
+   "y0": 2019,
+   "y1": 2025,
+   "engine": "M177",
+   "body": "SUV",
+   "tag": "New body, independent front end, 4.0 twin-turbo. 577 hp, 9-speed.",
+   "variants": [
+    {
+     "id": "w463a-g63",
+     "name": "AMG G63",
+     "years": "2019–2024",
+     "star": true,
+     "hp": {
+      "v": 577,
+      "src": [
+       "mb19spec",
+       "pr19"
+      ],
+      "note": "at 6,000 rpm"
+     },
+     "tq": {
+      "v": 627,
+      "src": [
+       "mb19spec",
+       "pr19"
+      ],
+      "note": "at 2,500–3,500 rpm"
+     },
+     "z60": {
+      "v": 3.9,
+      "who": "Car and Driver",
+      "src": [
+       "z60amg"
+      ],
+      "claim": 4.4,
+      "csrc": [
+       "mb19spec",
+       "pr19"
+      ]
+     },
+     "top": {
+      "v": "137 mph",
+      "src": [
+       "mb19spec",
+       "pr19"
+      ],
+      "note": "limited; 149 with AMG Driver’s Package"
+     },
+     "trans": {
+      "v": "9-speed AMG Speedshift TCT, all-wheel drive",
+      "src": [
+       "mb19spec",
+       "pr19"
+      ],
+      "note": "40:60 rear-biased split"
+     },
+     "weight": {
+      "v": "5,842 lb",
+      "src": [
+       "mb19spec"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$147,500",
+      "src": [
+       "mb19spec",
+       "mb19price"
+      ],
+      "note": "2019, plus $995 destination"
+     }
+    },
+    {
+     "id": "w463a-g63-25",
+     "name": "AMG G63",
+     "years": "2025",
+     "hp": {
+      "v": 577,
+      "src": [
+       "mb25qrg"
+      ],
+      "note": "at 6,000 rpm; adds 48-volt Hybrid Assist"
+     },
+     "tq": {
+      "v": 627,
+      "src": [
+       "mb25qrg"
+      ],
+      "note": "at 2,500–3,500 rpm"
+     },
+     "z60": {
+      "v": 3.9,
+      "who": "Motor Trend",
+      "src": [
+       "z60amg"
+      ],
+      "claim": 4.2,
+      "csrc": [
+       "mb25qrg"
+      ]
+     },
+     "top": {
+      "v": "137 mph",
+      "src": [
+       "mb25qrg"
+      ],
+      "note": "limited; 149 with AMG Performance Package"
+     },
+     "trans": {
+      "v": "9-speed AMG Speedshift TCT, all-wheel drive",
+      "src": [
+       "mb25qrg"
+      ],
+      "note": "40:60 rear-biased split"
+     },
+     "weight": {
+      "v": "5,842 lb",
+      "src": [
+       "mb25qrg"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$186,100",
+      "src": [
+       "mb25qrg"
+      ],
+      "note": "plus $1,150 destination"
+     }
+    },
+    {
+     "id": "w463a-g63-25-perf",
+     "name": "AMG Performance Package",
+     "years": "2025",
+     "pkg": "w463a-g63-25",
+     "hp": {
+      "v": 577,
+      "src": [
+       "mb25qrg"
+      ],
+      "note": ""
+     },
+     "tq": {
+      "v": 627,
+      "src": [
+       "mb25qrg"
+      ],
+      "note": ""
+     },
+     "z60": {
+      "v": 3.7,
+      "who": "Car and Driver",
+      "src": [
+       "z60amg"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "top": {
+      "v": "149 mph",
+      "src": [
+       "mb25qrg"
+      ],
+      "note": "electronically limited"
+     },
+     "trans": {
+      "v": "9-speed AMG Speedshift TCT, all-wheel drive",
+      "src": [
+       "mb25qrg"
+      ],
+      "note": ""
+     },
+     "what": "Adds AMG Active Ride Control, Race Start, AMG Track Pace, red calipers and a 149-mph limit.",
+     "what_src": [
+      "mb25qrg"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "M113K": {
+   "name": "Mercedes-AMG M113K",
+   "what": "5.4-liter V8, supercharged",
+   "study": "amg-m113k",
+   "page": "/engines/amg-m113k/",
+   "yt": [
+    "scy",
+    "amg-m113k"
+   ],
+   "facts": [
+    [
+     "Output",
+     "469–500 hp, 516 lb-ft",
+     [
+      "mb05b",
+      "mb11b"
+     ]
+    ],
+    [
+     "Supercharger",
+     "Helical, 11.6 psi, liquid-to-air intercooler",
+     [
+      "mb05b"
+     ]
+    ],
+    [
+     "Valvetrain",
+     "SOHC, 3 valves and 2 spark plugs per cylinder",
+     [
+      "mb05b"
+     ]
+    ],
+    [
+     "2003–2004",
+     "Same 5.4 without the supercharger, 349 hp",
+     [
+      "mb04b"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Intercooler pump failure",
+     "kind": "Enthusiast outlet",
+     "rx": "intercooler pump|heat ?soak|supercharger (cuts?|shuts?) (out|off)",
+     "x": "The pump that cools the supercharger's intercooler fails often. Intake air heats up and the engine cuts boost.",
+     "fix": "Replace it with the updated Bosch 010 pump.",
+     "src": [
+      "a113"
+     ]
+    },
+    {
+     "t": "Supercharger coupler",
+     "kind": "Parts seller",
+     "rx": "supercharger coupl(er|ing)|loss of boost|lost boost",
+     "x": "The plastic coupler that drives the supercharger can crack and break, usually around 80,000–120,000 miles, causing a sudden loss of boost.",
+     "fix": "Replace it with a billet aluminum coupler.",
+     "src": [
+      "p113"
+     ]
+    },
+    {
+     "t": "Oil leaks",
+     "kind": "Enthusiast outlet",
+     "rx": "rear main seal|valve cover gaskets?|oil leaks?|leaking oil",
+     "x": "The rear main seal and valve cover gaskets harden with age and leak.",
+     "fix": "Replace the rear main seal before the leak gets bad.",
+     "src": [
+      "a113"
+     ]
+    }
+   ]
+  },
+  "M157": {
+   "name": "Mercedes-AMG M157",
+   "what": "5.5-liter V8, twin-turbo",
+   "study": "amg-m157",
+   "page": "/engines/amg-m157/",
+   "yt": [
+    "scy",
+    "amg-m157"
+   ],
+   "facts": [
+    [
+     "Redline",
+     "6,400 rpm",
+     [
+      "mb17spec",
+      "mb18spec"
+     ]
+    ],
+    [
+     "Output",
+     "536–563 hp, up to 561 lb-ft",
+     [
+      "mb14b",
+      "mb17spec"
+     ]
+    ],
+    [
+     "Bore x stroke",
+     "98.0 x 90.5 mm, 5,461 cc",
+     [
+      "mb18spec"
+     ]
+    ],
+    [
+     "Fuel",
+     "Direct injection, 10.0:1 compression",
+     [
+      "mb16b",
+      "mb18spec"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Timing chain stretch",
+     "kind": "Enthusiast outlet",
+     "rx": "timing chain|chain stretch|chain tensioner|long crank",
+     "x": "The chain can stretch when its tensioner briefly runs short of oil, mainly on 2011–2012 engines. Long cranks, misfires and a check-engine light are the signs.",
+     "fix": "Replace the chain with the revised tensioner, guides and check valves.",
+     "src": [
+      "a157"
+     ]
+    },
+    {
+     "t": "Spark plug wear",
+     "kind": "Enthusiast outlet",
+     "rx": "spark plugs?|misfir(e|es|ing)|rough idle",
+     "x": "The twin turbos wear spark plugs quickly, causing misfires and rough idle.",
+     "fix": "Replace all eight plugs about every 40,000–50,000 miles.",
+     "src": [
+      "a157"
+     ]
+    },
+    {
+     "t": "Valve timing cover leak",
+     "kind": "Enthusiast outlet",
+     "rx": "timing cover|cover leak",
+     "x": "Oil or coolant can leak from a drain hole on the front valve timing cover when it isn't seated right.",
+     "fix": "Reseal the cover following Mercedes' service bulletin.",
+     "src": [
+      "a157"
+     ]
+    },
+    {
+     "t": "Coolant hose leaks",
+     "kind": "Enthusiast outlet",
+     "rx": "coolant (hose|leak)s?|low coolant|overheat(s|ing|ed)?",
+     "x": "Coolant hoses split, crack or pop loose with age, which can overheat the engine quickly.",
+     "fix": "Replace the leaking hose and check the ones next to it.",
+     "src": [
+      "a157"
+     ]
+    }
+   ]
+  },
+  "M177": {
+   "name": "Mercedes-AMG M177",
+   "what": "4.0-liter V8, twin-turbo",
+   "study": "amg-m177-m178",
+   "page": "/engines/amg-m177-m178/",
+   "yt": [
+    "scy",
+    "amg-m177-m178"
+   ],
+   "facts": [
+    [
+     "Redline",
+     "7,000 rpm",
+     [
+      "mb19spec"
+     ]
+    ],
+    [
+     "Output",
+     "577 hp, 627 lb-ft",
+     [
+      "mb19spec",
+      "mb25qrg"
+     ]
+    ],
+    [
+     "Turbos",
+     "Two twin-scroll turbos inside the V",
+     [
+      "pr19"
+     ]
+    ],
+    [
+     "Cylinder shutoff",
+     "Runs on four cylinders at light load",
+     [
+      "pr19"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Turbo oil feed line leak (recall)",
+     "kind": "Recall",
+     "rx": "turbo(charger)? oil (feed |supply )?lines?|oil feed line",
+     "x": "NHTSA recall 20V048000 covers some 2019 G63s: the oil feed line to the turbocharger may leak, which raises fire risk.",
+     "fix": "Dealers replace the oil feed line for free.",
+     "src": [
+      "r20v048"
+     ]
+    },
+    {
+     "t": "Cam adjuster wear",
+     "kind": "Parts seller",
+     "rx": "cam(shaft)? (adjuster|phaser)s?|p0011|p0021",
+     "x": "Old or poor oil can leave varnish that slows the cam adjusters, causing a rough cold idle and P0011/P0021 codes.",
+     "fix": "Change the oil on time with an approved full synthetic.",
+     "src": [
+      "p177"
+     ]
+    },
+    {
+     "t": "Spark plugs and coils",
+     "kind": "Parts seller",
+     "rx": "spark plugs?|ignition coils?|misfir(e|es|ing)",
+     "x": "High boost wears spark plugs fast. Misfires and hesitation under throttle are the signs.",
+     "fix": "Replace plugs on schedule, and coils as a set if one fails.",
+     "src": [
+      "p177"
+     ]
+    }
+   ]
+  }
+ },
+ "compare": [
+  {
+   "slug": "cayenne-turbo",
+   "name": "Porsche Cayenne Turbo"
+  },
+  {
+   "slug": "bmw-x5-m",
+   "name": "BMW X5 M"
+  },
+  {
+   "slug": "audi-rs-q8",
+   "name": "Audi RS Q8"
+  },
+  {
+   "slug": "escalade-v",
+   "name": "Cadillac Escalade-V"
+  }
+ ],
+ "sources": {
+  "mb04b": {
+   "t": "Mercedes-Benz USA: 2004 G-Class brochure, specifications (copy hosted by xr793.com)",
+   "u": "https://xr793.com/wp-content/uploads/2024/03/2004-Mercedes-Benz-G-Class.pdf",
+   "k": "Mercedes-Benz"
+  },
+  "mb05b": {
+   "t": "Mercedes-Benz USA: 2005 G-Class brochure, specifications (copy hosted by w124performance.com)",
+   "u": "https://w124performance.com/docs/mb/brochures/2005_brochures/2005-G-Class.pdf",
+   "k": "Mercedes-Benz"
+  },
+  "cc09": {
+   "t": "Mercedes-Benz: G-Class celebrates 30th anniversary, 2009 G55 AMG (press release via Conceptcarz)",
+   "u": "https://www.conceptcarz.com/w16096/mercedes-benz-g-class.aspx",
+   "k": "Mercedes-Benz"
+  },
+  "mb10b": {
+   "t": "Mercedes-Benz USA: 2010 G-Class brochure (copy hosted by w124performance.com)",
+   "u": "https://w124performance.com/docs/mb/brochures/2010_brochures/2010-G-Class.pdf",
+   "k": "Mercedes-Benz"
+  },
+  "mb11b": {
+   "t": "Mercedes-Benz USA: 2011 G-Class brochure, specifications (copy hosted by w124performance.com)",
+   "u": "https://w124performance.com/docs/mb/brochures/2011_brochures/2011-G-Class.pdf",
+   "k": "Mercedes-Benz"
+  },
+  "mb13b": {
+   "t": "Mercedes-Benz USA: 2013 G-Class brochure, specifications",
+   "u": "https://www.mbusa.com/vcm/MB/DigitalAssets/pdfmb/brochures/2013-G-Class.pdf",
+   "k": "Mercedes-Benz"
+  },
+  "mb14b": {
+   "t": "Mercedes-Benz USA: 2014 G-Class brochure, specifications",
+   "u": "https://www.mbusa.com/vcm/MB/DigitalAssets/pdfmb/brochures/2014-G-Class.pdf",
+   "k": "Mercedes-Benz"
+  },
+  "mb16b": {
+   "t": "Mercedes-Benz USA: 2016 G-Class brochure, specifications",
+   "u": "https://www.mbusa.com/vcm/MB/DigitalAssets/pdfmb/brochures/MY16_G.pdf",
+   "k": "Mercedes-Benz"
+  },
+  "mb17spec": {
+   "t": "MBUSA: 2017 Mercedes-AMG G63 specifications (Sept 2016)",
+   "u": "https://media.mbusa.com/news/2017-mercedes-amg-g63-specifications",
+   "k": "Mercedes-Benz"
+  },
+  "mb17qrg": {
+   "t": "MBUSA: 2017 G-Class quick reference guide (Sept 2016)",
+   "u": "https://media.mbusa.com/news/2017-g-class-quick-reference-guide",
+   "k": "Mercedes-Benz"
+  },
+  "mb18spec": {
+   "t": "MBUSA: 2018 AMG G63 specifications (Aug 2017)",
+   "u": "https://media.mbusa.com/news/specs-2018-amg-g63",
+   "k": "Mercedes-Benz"
+  },
+  "pr19": {
+   "t": "MBUSA press information: The new 2019 Mercedes-AMG G63 (Feb 2018)",
+   "u": "https://www.mbusa.com/vcm/MB/DigitalAssets/AboutUs/PressReleases/PR-2019_Mercedes-AMG_G63.pdf",
+   "k": "Mercedes-Benz"
+  },
+  "mb19spec": {
+   "t": "MBUSA: 2019 Mercedes-AMG G63 specifications (Oct 2018)",
+   "u": "https://media.mbusa.com/news/2019-mercedes-amg-g63-specifications",
+   "k": "Mercedes-Benz"
+  },
+  "mb19price": {
+   "t": "MBUSA: Mercedes-Benz announces pricing on 2019 Mercedes-AMG G 63 (Nov 2018)",
+   "u": "https://media.mbusa.com/news/mercedes-benz-announces-pricing-on-2019-mercedes-amg-g-63",
+   "k": "Mercedes-Benz"
+  },
+  "mb25qrg": {
+   "t": "MBUSA: 2025 Mercedes-AMG G 63 quick reference guide (Dec 2024)",
+   "u": "https://media.mbusa.com/news/2025-mercedes-amg-g-63-quick-reference-guide",
+   "k": "Mercedes-Benz"
+  },
+  "fox13": {
+   "t": "Fox News: Test drive, 2013 Mercedes-Benz G63 AMG",
+   "u": "https://www.foxnews.com/auto/test-drive-2013-mercedes-benz-g63-amg",
+   "k": "outlet"
+  },
+  "jal13": {
+   "t": "Jalopnik: 2013 Mercedes-Benz G63 AMG, the Jalopnik review",
+   "u": "https://jalopnik.com/mercedes-benz-g63-amg-the-jalopnik-review-504645111",
+   "k": "outlet"
+  },
+  "z60mb": {
+   "t": "0-60specs.com: Mercedes-Benz G-Class 0-60 runs by magazine (Motor Trend, Car and Driver)",
+   "u": "https://www.0-60specs.com/mercedes-benz/g-class-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "z60amg": {
+   "t": "0-60specs.com: Mercedes-AMG G-Class 0-60 runs by magazine (Car and Driver, Motor Trend)",
+   "u": "https://www.0-60specs.com/mercedes-amg/g-class-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "wg": {
+   "t": "Wikipedia: Mercedes-Benz G-Class (G55 AMG output by model year)",
+   "u": "https://en.wikipedia.org/wiki/Mercedes-Benz_G-Class",
+   "k": "Wikipedia (fallback)"
+  },
+  "a113": {
+   "t": "8020 Automotive: Mercedes M113 V8 engine problems, reliability and specs",
+   "u": "https://8020automotive.com/mercedes-m113-v8-engine-problems-reliability-specs/",
+   "k": "enthusiast outlet"
+  },
+  "p113": {
+   "t": "Euro Premium Parts: Mercedes-Benz M113 engine guide, common problems (2026)",
+   "u": "https://europremiumparts.com/blogs/buying-guides/mercedes-benz-m113-engine-guide-reliability-common-problems-tuning-potential",
+   "k": "parts seller"
+  },
+  "a157": {
+   "t": "8020 Automotive: the most common Mercedes M157 AMG engine problems",
+   "u": "https://8020automotive.com/the-5-most-common-mercedes-m157-amg-engine-problems/",
+   "k": "enthusiast outlet"
+  },
+  "p177": {
+   "t": "Euro Premium Parts: Mercedes-Benz M177 engine guide, common problems (Aug 2026)",
+   "u": "https://europremiumparts.com/blogs/buying-guides/mercedes-benz-m177-engine-guide-reliability-common-problems-tuning-potential",
+   "k": "parts seller"
+  },
+  "r20v048": {
+   "t": "NHTSA recall 20V048000: turbocharger oil feed line may leak (2019 G63 and other AMG 4.0 V8s)",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=20V048000",
+   "k": "NHTSA"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-amg-g63",
+ "img": "/assets/ai-perf/amg-g63.webp?v=1"
+}

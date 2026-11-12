@@ -1,0 +1,245 @@
+{
+ "slug": "trackhawk",
+ "name": "Jeep Grand Cherokee Trackhawk",
+ "short": "Trackhawk",
+ "make": "Jeep",
+ "page": "/cars/trackhawk/",
+ "focus": "wk2",
+ "star": "wk2-trackhawk",
+ "h1": "Jeep Grand Cherokee Trackhawk: performance, engines and what owners say",
+ "nhtsa": {
+  "make": "JEEP",
+  "models": [
+   "GRAND CHEROKEE"
+  ],
+  "note": "NHTSA files the Trackhawk under Grand Cherokee, so these counts are every Grand Cherokee of these years."
+ },
+ "topics_extra": {
+  "Supercharger noise": "supercharger (noise|rattle|whine|bearings?)|blower (noise|rattle|bearings?)",
+  "Transfer case": "transfer ?case",
+  "Front differential": "front (diff|differential)",
+  "Intercooler pump": "intercooler pump|ic pump|charge ?cooler pump",
+  "Fuel line": "fuel (line|leak)"
+ },
+ "gens": [
+  {
+   "id": "wk2",
+   "code": "WK2",
+   "years": "2018–2021",
+   "y0": 2018,
+   "y1": 2021,
+   "engine": "hellcat",
+   "body": "SUV",
+   "tag": "707 hp supercharged V-8, 8-speed, full-time four-wheel drive.",
+   "variants": [
+    {
+     "id": "wk2-trackhawk",
+     "name": "Trackhawk",
+     "years": "2018–2021",
+     "star": true,
+     "hp": {
+      "v": 707,
+      "src": [
+       "s18spec",
+       "s21"
+      ],
+      "note": "at 6,000 rpm; unchanged through 2021"
+     },
+     "tq": {
+      "v": 645,
+      "src": [
+       "s18spec",
+       "s21"
+      ],
+      "note": "at 4,800 rpm"
+     },
+     "z60": {
+      "v": 3.5,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 3.5,
+      "csrc": [
+       "s18",
+       "s21"
+      ]
+     },
+     "top": {
+      "v": "180 mph",
+      "src": [
+       "s18",
+       "s21"
+      ],
+      "note": "maker claim"
+     },
+     "trans": {
+      "v": "8-speed automatic (TorqueFlite 8HP95), full-time four-wheel drive",
+      "src": [
+       "s18spec"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "5,363 lb",
+      "src": [
+       "s18spec"
+      ],
+      "note": "maker estimate, 2018"
+     },
+     "price": {
+      "v": "$85,900",
+      "src": [
+       "s18price"
+      ],
+      "note": "2018, plus $1,095 destination"
+     }
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "hellcat": {
+   "name": "Hellcat 6.2 supercharged HEMI",
+   "what": "6.2-liter V-8, supercharged",
+   "study": "chrysler-hellcat",
+   "page": "/engines/chrysler-hellcat/",
+   "yt": [
+    "scy",
+    "chrysler-hellcat"
+   ],
+   "facts": [
+    [
+     "Rev limit",
+     "6,200 rpm (electronically limited)",
+     [
+      "s18spec"
+     ]
+    ],
+    [
+     "Output",
+     "707 hp at 6,000 rpm, 645 lb-ft at 4,800 rpm",
+     [
+      "s18spec"
+     ]
+    ],
+    [
+     "Supercharger",
+     "2.38-liter twin-screw, up to 11.6 psi boost",
+     [
+      "s18"
+     ]
+    ],
+    [
+     "Bottom end",
+     "Cast-iron block, forged steel crank, forged pistons",
+     [
+      "s18",
+      "s18spec"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Supercharger bearing wear",
+     "kind": "Owner-reported",
+     "rx": "supercharger (noise|rattle|whine|bearings?)|blower (noise|rattle|bearings?)|coupler",
+     "x": "Worn supercharger front bearings and drive coupler parts cause noise and can damage the rotors. Motor1 lists supercharger drive wear as a Trackhawk check item.",
+     "fix": "Replacing the front bearings and coupler fixes most supercharger noise.",
+     "src": [
+      "mc23",
+      "m1"
+     ]
+    },
+    {
+     "t": "Intercooler pump",
+     "kind": "Owner-reported",
+     "rx": "intercooler pump|ic pump|charge ?cooler pump",
+     "x": "Motor1 says specialist guides flag the intercooler circulation pump as a possible weak point.",
+     "fix": "",
+     "src": [
+      "m1"
+     ]
+    },
+    {
+     "t": "Fuel line may separate (2018)",
+     "kind": "Recall",
+     "rx": "fuel (line|leak)|smell(s)? (of )?(gas|fuel)",
+     "x": "Some early 2018 Trackhawks had a fuel line that could separate, risking a stall or an engine fire.",
+     "fix": "Dealers inspect and replace the fuel line free under recall U02.",
+     "src": [
+      "r18fuel",
+      "m1"
+     ]
+    }
+   ]
+  }
+ },
+ "compare": [
+  {
+   "slug": "durango-srt",
+   "name": "Dodge Durango SRT Hellcat"
+  },
+  {
+   "slug": "bmw-x5-m",
+   "name": "BMW X5 M"
+  },
+  {
+   "slug": "amg-gle63",
+   "name": "Mercedes-AMG GLE63"
+  },
+  {
+   "slug": "cayenne-turbo",
+   "name": "Porsche Cayenne Turbo"
+  }
+ ],
+ "sources": {
+  "s18spec": {
+   "t": "FCA US: 2018 Jeep Grand Cherokee Trackhawk specifications (press kit PDF)",
+   "u": "https://media.stellantisnorthamerica.com/download.do?id=18217&mid=",
+   "k": "Jeep"
+  },
+  "s18": {
+   "t": "FCA US: 707-horsepower 2018 Jeep Grand Cherokee Trackhawk (Apr 2017)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=18218",
+   "k": "Jeep"
+  },
+  "s18price": {
+   "t": "FCA US: Jeep announces pricing for 2018 Grand Cherokee Trackhawk (Aug 2017)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=18493",
+   "k": "Jeep"
+  },
+  "s21": {
+   "t": "FCA US: 2021 Jeep Grand Cherokee fact sheet",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=21914&mid=4",
+   "k": "Jeep"
+  },
+  "z60": {
+   "t": "0-60specs.com: Jeep Grand Cherokee Trackhawk 0-60 runs by magazine (Car and Driver, MotorTrend)",
+   "u": "https://www.0-60specs.com/jeep-grand-cherokee-trackhawk-0-60-times/",
+   "k": "magazine tests, aggregated"
+  },
+  "mc23": {
+   "t": "Mopar Connection: 6.2-liter HEMI supercharger front bearing replacement (Apr 2023)",
+   "u": "https://moparconnectionmagazine.com/gallery-6-2-liter-hemi-supercharger-front-bearing-replacement/",
+   "k": "enthusiast outlet"
+  },
+  "m1": {
+   "t": "Motor1: Used Jeep Grand Cherokee Trackhawk buying guide",
+   "u": "https://www.motor1.com/reviews/808233/used-jeep-grand-cherokee-trackhawk-buying-guide/",
+   "k": "outlet"
+  },
+  "r18fuel": {
+   "t": "NHTSA recall 18V048000: 2018 Grand Cherokee Trackhawk fuel line may separate",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=18V048000",
+   "k": "Recall"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-trackhawk",
+ "img": "/assets/ai-perf/trackhawk.webp?v=1"
+}

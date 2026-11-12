@@ -6,16 +6,17 @@
     var root = document.querySelector('.pf-gens'); if (!root) return;
     var stops = root.querySelectorAll('.pf-stop'), cars = root.querySelectorAll('.pf-car'), stats = root.querySelectorAll('.pf-stats'),
         blocks = document.querySelectorAll('.pf-g'), range = root.querySelector('.pf-range'), cur = -1;
-    root.querySelector('.pf-track').style.setProperty('--n', stops.length);
+    var tr = root.querySelector('.pf-track'); if (tr) tr.style.setProperty('--n', stops.length);
     function show(i, focus) {
       if (i === cur || i < 0 || i >= stops.length) return; cur = i;
       stops.forEach(function (b, k) { b.setAttribute('aria-pressed', k === i ? 'true' : 'false'); b.tabIndex = k === i ? 0 : -1; });
-      cars.forEach(function (im, k) { if (k === i) im.removeAttribute('loading'); im.classList.toggle('on', k === i); });
+      if (cars.length > 1) cars.forEach(function (im, k) { if (k === i) im.removeAttribute('loading'); im.classList.toggle('on', k === i); });   // one picture: it stays
       stats.forEach(function (s, k) { s.classList.toggle('on', k === i); });
       blocks.forEach(function (b) { b.classList.toggle('on', +b.getAttribute('data-i') === i); });
       blocks.forEach(function (b) { var row = b.querySelector('.pf-vs'), st = row && row.querySelector('.pf-star');   // phones: the starred trim first in view
         if (row && st && row.scrollWidth > row.clientWidth + 4 && b.classList.contains('on')) row.scrollLeft = st.offsetLeft - row.offsetLeft - 16; });
       if (range) { range.value = i; range.setAttribute('aria-valuetext', stops[i].querySelector('b').textContent); }
+      if (tr && tr.scrollWidth > tr.clientWidth + 2) tr.scrollLeft = Math.max(0, stops[i].offsetLeft - tr.offsetLeft - 24);   // phones: the picked generation in view
       if (focus) stops[i].focus();
       try { history.replaceState(null, '', location.pathname + location.search + (location.hash && location.hash.indexOf('#p-') === 0 ? location.hash : '')); } catch (e) {}
     }
@@ -29,8 +30,8 @@
     });
     // swipe the car left / right on phones
     var stage = root.querySelector('.pf-stage'), x0 = null;
-    stage.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
-    stage.addEventListener('touchend', function (e) {
+    if (stage && stops.length > 1) stage.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+    if (stage && stops.length > 1) stage.addEventListener('touchend', function (e) {
       if (x0 === null) return; var dx = e.changedTouches[0].clientX - x0; x0 = null;
       if (Math.abs(dx) > 40) show(Math.max(0, Math.min(stops.length - 1, cur + (dx < 0 ? 1 : -1))));
     });

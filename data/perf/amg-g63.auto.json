@@ -1,0 +1,452 @@
+{
+ "built": "2026-11-11",
+ "nhtsa": {
+  "by_year": {
+   "2013": 2,
+   "2014": 1,
+   "2015": 3,
+   "2016": 2,
+   "2017": 4,
+   "2019": 1,
+   "2021": 2,
+   "2022": 2,
+   "2023": 6,
+   "2025": 3
+  },
+  "gens": {
+   "w463-g55": {
+    "n": 0,
+    "issues": {
+     "Intercooler pump failure": {
+      "n": 0,
+      "ex": []
+     },
+     "Supercharger coupler": {
+      "n": 0,
+      "ex": []
+     },
+     "Oil leaks": {
+      "n": 0,
+      "ex": []
+     }
+    }
+   },
+   "w463-g63": {
+    "n": 12,
+    "issues": {
+     "Timing chain stretch": {
+      "n": 1,
+      "ex": [
+       "11310161"
+      ]
+     },
+     "Spark plug wear": {
+      "n": 1,
+      "ex": [
+       "11310161"
+      ]
+     },
+     "Valve timing cover leak": {
+      "n": 1,
+      "ex": [
+       "11310161"
+      ]
+     },
+     "Coolant hose leaks": {
+      "n": 0,
+      "ex": []
+     }
+    }
+   },
+   "w463a": {
+    "n": 14,
+    "issues": {
+     "Turbo oil feed line leak (recall)": {
+      "n": 0,
+      "ex": []
+     },
+     "Cam adjuster wear": {
+      "n": 0,
+      "ex": []
+     },
+     "Spark plugs and coils": {
+      "n": 0,
+      "ex": []
+     }
+    }
+   }
+  },
+  "parts": [
+   [
+    "Unknown or other",
+    8
+   ],
+   [
+    "Engine",
+    4
+   ],
+   [
+    "Fuel/propulsion system",
+    4
+   ],
+   [
+    "Electrical system",
+    3
+   ],
+   [
+    "Air bags",
+    2
+   ],
+   [
+    "Steering",
+    2
+   ]
+  ]
+ },
+ "recalls": {
+  "2003": [],
+  "2004": [],
+  "2005": [],
+  "2006": [],
+  "2007": [],
+  "2008": [],
+  "2009": [],
+  "2010": [],
+  "2011": [],
+  "2012": [],
+  "2013": [],
+  "2014": [],
+  "2015": [],
+  "2016": [],
+  "2017": [],
+  "2018": [],
+  "2019": [
+   {
+    "id": "18V761000",
+    "part": "ELECTRICAL SYSTEM:SOFTWARE",
+    "summary": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain 2019 Mercedes-Benz C300, C300 4Matic, C300 4Matic Cabrio, C300 4Matic Coupe, C300 Coupe, C300 Cabrio, C43 AMG, C43 AMG Cabrio, C43 AMG Coupe, CLS450, CLS450 4Matic, CLS53 AMG 4Matic, E53 AMG 4Matic, E450 4Matic, E450 4Matic Coupe, E53 AMG 4Matic Coupe, G550, and G63 AMG vehicles.  The Central Powertrain Controller (CPC) control unit could reset w"
+   },
+   {
+    "id": "19V788000",
+    "part": "SEAT BELTS",
+    "summary": "Mercedes-Benz USA, LLC. (MBUSA) is recalling certain 2018 E400 Wagon 4MATIC, E400 4MATIC, E43 AMG 4MATIC, 2018-2019 E63S AMG 4MATIC Wagon, E63 AMG 4MATIC Wagon, E300, E300 4MATIC, GLC63S Coupe AMG 4MATIC, 2019 CLS450, CLS450 4MATIC, CLS53 AMG 4MATIC, E450 Wagon, E53 AMG 4MATIC, GLC300, GLC63 AMG Coupe 4MATIC, G550 4MATIC, G63 AMG, GLC300 Coupe 4MATIC, GLC300 4MATIC, GLC350e 4MATIC, GLC43 AMG Coupe"
+   },
+   {
+    "id": "19V820000",
+    "part": "ELECTRICAL SYSTEM:WIRING",
+    "summary": "Mercedes-Benz USA, LLC. (MBUSA) is recalling certain 2019 G550 4MATIC and G63 AMG vehicles.  The front door wiring harnesses may have been improperly routed causing damage to the individual wires during opening and closing of the front doors."
+   },
+   {
+    "id": "20V247000",
+    "part": "LATCHES/LOCKS/LINKAGES",
+    "summary": "Mercedes-Benz USA, LLC. (MBUSA) is recalling certain 2019-2020 G550 and G63 vehicles.  The embossed lock symbol for the child safety lock on the rear doors may indicate the incorrect lock status of the child safety lock."
+   }
+  ],
+  "2020": [
+   {
+    "id": "20V247000",
+    "part": "LATCHES/LOCKS/LINKAGES",
+    "summary": "Mercedes-Benz USA, LLC. (MBUSA) is recalling certain 2019-2020 G550 and G63 vehicles.  The embossed lock symbol for the child safety lock on the rear doors may indicate the incorrect lock status of the child safety lock."
+   }
+  ],
+  "2021": [],
+  "2022": [],
+  "2023": [],
+  "2024": [],
+  "2025": []
+ },
+ "yt": {
+  "car-amg-g63": null,
+  "amg-m113k": null,
+  "amg-m157": null,
+  "amg-m177-m178": {
+   "videos": 200,
+   "praise": [
+    [
+     "Looks",
+     32
+    ],
+    [
+     "Handling and steering",
+     22
+    ],
+    [
+     "Power and acceleration",
+     21
+    ],
+    [
+     "Interior and seats",
+     16
+    ]
+   ],
+   "trouble": [
+    [
+     "Oil leaks (gaskets, seals, housings)",
+     6
+    ],
+    [
+     "Coolant leaks / water pump / overheating",
+     6
+    ]
+   ],
+   "top": [
+    {
+     "id": "Q5BYxD0wvNc",
+     "title": "I BOUGHT MY DAD A FLOOD DAMAGED ASTON MARTIN DBX",
+     "views": 13577553,
+     "ch": "Mat Armstrong"
+    },
+    {
+     "id": "LySKmMpWsQY",
+     "title": "I BOUGHT A WRECKED ASTON MARTIN DB12 THEN REBUILT IT IN 24 HOURS",
+     "views": 12922504,
+     "ch": "Mat Armstrong"
+    },
+    {
+     "id": "TcZ_bpP0RQc",
+     "title": "ATTEMPTING TO START MY FLOOD DAMAGED ASTON MARTIN DBX",
+     "views": 9945150,
+     "ch": "Mat Armstrong"
+    }
+   ]
+  }
+ },
+ "scores": {
+  "amg-m177-m178": {
+   "years": {
+    "2016": {
+     "score": 52,
+     "weight": 9.2,
+     "videos": 42,
+     "named": 3,
+     "top": [
+      {
+       "id": "Y2j_IQVRiiU",
+       "title": "The Mercedes-AMG GT S Is Ridiculously Underrated",
+       "views": 3965703
+      },
+      {
+       "id": "2KXJuOq8TqM",
+       "title": "New Mercedes AMG GT vs The Cheapest AMG GT You Can Buy // DRAG RACE, REVIEW + LAP TIME",
+       "views": 2603012
+      },
+      {
+       "id": "q8EQ6O822bc",
+       "title": "I Fixed My AMG GT R For FREE & Discovered It’s SUPER Powerful! Factory Freak Or Mercedes Test Mule?",
+       "views": 2187831
+      }
+     ]
+    },
+    "2017": {
+     "score": 49,
+     "weight": 7.2,
+     "videos": 40,
+     "named": 1,
+     "top": [
+      {
+       "id": "Y2j_IQVRiiU",
+       "title": "The Mercedes-AMG GT S Is Ridiculously Underrated",
+       "views": 3965703
+      },
+      {
+       "id": "2KXJuOq8TqM",
+       "title": "New Mercedes AMG GT vs The Cheapest AMG GT You Can Buy // DRAG RACE, REVIEW + LAP TIME",
+       "views": 2603012
+      },
+      {
+       "id": "q8EQ6O822bc",
+       "title": "I Fixed My AMG GT R For FREE & Discovered It’s SUPER Powerful! Factory Freak Or Mercedes Test Mule?",
+       "views": 2187831
+      }
+     ]
+    },
+    "2018": {
+     "score": 54,
+     "weight": 7.8,
+     "videos": 44,
+     "named": 1,
+     "top": [
+      {
+       "id": "Y2j_IQVRiiU",
+       "title": "The Mercedes-AMG GT S Is Ridiculously Underrated",
+       "views": 3965703
+      },
+      {
+       "id": "2KXJuOq8TqM",
+       "title": "New Mercedes AMG GT vs The Cheapest AMG GT You Can Buy // DRAG RACE, REVIEW + LAP TIME",
+       "views": 2603012
+      },
+      {
+       "id": "q8EQ6O822bc",
+       "title": "I Fixed My AMG GT R For FREE & Discovered It’s SUPER Powerful! Factory Freak Or Mercedes Test Mule?",
+       "views": 2187831
+      }
+     ]
+    },
+    "2019": {
+     "score": 56,
+     "weight": 15.4,
+     "videos": 79,
+     "named": 4,
+     "top": [
+      {
+       "id": "fSDhja-kGJU",
+       "title": "I BOUGHT A WRECKED MERCEDES AMG GT63 & ATTEMPTED TO FIX IT",
+       "views": 7252943
+      },
+      {
+       "id": "AN3QR7uaeD8",
+       "title": "Mercedes-AMG GT 63S | Very Expensive Car On Fire #BURN #fire",
+       "views": 6261971
+      },
+      {
+       "id": "XJB5zglQr2g",
+       "title": "ATTEMPTING TO DRIVE MY WRECKED MERCEDES AMG GT63S",
+       "views": 4371333
+      }
+     ]
+    },
+    "2020": {
+     "score": 56,
+     "weight": 13.4,
+     "videos": 77,
+     "named": 2,
+     "top": [
+      {
+       "id": "fSDhja-kGJU",
+       "title": "I BOUGHT A WRECKED MERCEDES AMG GT63 & ATTEMPTED TO FIX IT",
+       "views": 7252943
+      },
+      {
+       "id": "AN3QR7uaeD8",
+       "title": "Mercedes-AMG GT 63S | Very Expensive Car On Fire #BURN #fire",
+       "views": 6261971
+      },
+      {
+       "id": "XJB5zglQr2g",
+       "title": "ATTEMPTING TO DRIVE MY WRECKED MERCEDES AMG GT63S",
+       "views": 4371333
+      }
+     ]
+    },
+    "2021": {
+     "score": 59,
+     "weight": 19.4,
+     "videos": 95,
+     "named": 5,
+     "top": [
+      {
+       "id": "Q5BYxD0wvNc",
+       "title": "I BOUGHT MY DAD A FLOOD DAMAGED ASTON MARTIN DBX",
+       "views": 13577553
+      },
+      {
+       "id": "TcZ_bpP0RQc",
+       "title": "ATTEMPTING TO START MY FLOOD DAMAGED ASTON MARTIN DBX",
+       "views": 9945150
+      },
+      {
+       "id": "fSDhja-kGJU",
+       "title": "I BOUGHT A WRECKED MERCEDES AMG GT63 & ATTEMPTED TO FIX IT",
+       "views": 7252943
+      }
+     ]
+    },
+    "2022": {
+     "score": 57,
+     "weight": 8.7,
+     "videos": 56,
+     "named": 0,
+     "top": [
+      {
+       "id": "Q5BYxD0wvNc",
+       "title": "I BOUGHT MY DAD A FLOOD DAMAGED ASTON MARTIN DBX",
+       "views": 13577553
+      },
+      {
+       "id": "TcZ_bpP0RQc",
+       "title": "ATTEMPTING TO START MY FLOOD DAMAGED ASTON MARTIN DBX",
+       "views": 9945150
+      },
+      {
+       "id": "fSDhja-kGJU",
+       "title": "I BOUGHT A WRECKED MERCEDES AMG GT63 & ATTEMPTED TO FIX IT",
+       "views": 7252943
+      }
+     ]
+    },
+    "2023": {
+     "score": 57,
+     "weight": 10.7,
+     "videos": 58,
+     "named": 2,
+     "top": [
+      {
+       "id": "Q5BYxD0wvNc",
+       "title": "I BOUGHT MY DAD A FLOOD DAMAGED ASTON MARTIN DBX",
+       "views": 13577553
+      },
+      {
+       "id": "TcZ_bpP0RQc",
+       "title": "ATTEMPTING TO START MY FLOOD DAMAGED ASTON MARTIN DBX",
+       "views": 9945150
+      },
+      {
+       "id": "fSDhja-kGJU",
+       "title": "I BOUGHT A WRECKED MERCEDES AMG GT63 & ATTEMPTED TO FIX IT",
+       "views": 7252943
+      }
+     ]
+    },
+    "2024": {
+     "score": 56,
+     "weight": 25.6,
+     "videos": 78,
+     "named": 9,
+     "top": [
+      {
+       "id": "Q5BYxD0wvNc",
+       "title": "I BOUGHT MY DAD A FLOOD DAMAGED ASTON MARTIN DBX",
+       "views": 13577553
+      },
+      {
+       "id": "LySKmMpWsQY",
+       "title": "I BOUGHT A WRECKED ASTON MARTIN DB12 THEN REBUILT IT IN 24 HOURS",
+       "views": 12922504
+      },
+      {
+       "id": "TcZ_bpP0RQc",
+       "title": "ATTEMPTING TO START MY FLOOD DAMAGED ASTON MARTIN DBX",
+       "views": 9945150
+      }
+     ]
+    },
+    "2025": {
+     "score": 54,
+     "weight": 26.6,
+     "videos": 79,
+     "named": 10,
+     "top": [
+      {
+       "id": "Q5BYxD0wvNc",
+       "title": "I BOUGHT MY DAD A FLOOD DAMAGED ASTON MARTIN DBX",
+       "views": 13577553
+      },
+      {
+       "id": "LySKmMpWsQY",
+       "title": "I BOUGHT A WRECKED ASTON MARTIN DB12 THEN REBUILT IT IN 24 HOURS",
+       "views": 12922504
+      },
+      {
+       "id": "TcZ_bpP0RQc",
+       "title": "ATTEMPTING TO START MY FLOOD DAMAGED ASTON MARTIN DBX",
+       "views": 9945150
+      }
+     ]
+    }
+   },
+   "videos": 144,
+   "pulled": 200
+  }
+ }
+}

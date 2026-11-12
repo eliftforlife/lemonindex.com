@@ -1,4 +1,5 @@
 {
+ "mode": "inject",
  "slug": "bmw-m3",
  "name": "BMW M3",
  "short": "M3",
@@ -1230,7 +1231,7 @@
   },
   "rsr55": {
    "t": "Studio RSR: S55 crank hub fix (F80 M3 / F82 M4)",
-   "u": "https://studiorsr.com/blogs/tech-and-parts/s55-crank-hub-fix-f80-m3-and-f82-m4-keyed-crank",
+   "u": "https://studiorsr.com/blogs/tech-and-parts/s55-crank-hub-fix-f80-m3-and-f82-m4-keyed-crankhub-spline-lock",
    "k": "parts seller"
   },
   "nhtsa": {

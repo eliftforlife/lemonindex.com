@@ -1,0 +1,890 @@
+{
+ "slug": "bmw-m4",
+ "name": "BMW M4",
+ "short": "M4",
+ "make": "BMW",
+ "page": "/cars/bmw-m4/",
+ "focus": "g82",
+ "star": "g82-comp",
+ "h1": "BMW M4: performance, engines and what owners say",
+ "nhtsa": {
+  "make": "BMW",
+  "models": [
+   "M4"
+  ],
+  "note": ""
+ },
+ "topics_extra": {
+  "Crank hub": "crank ?hub",
+  "Rod bearings": "rod bearings?",
+  "DCT gearbox": "\\bdct\\b|dual.?clutch|double.?clutch",
+  "Oil leaks": "oil leaks?|leaking oil|valve cover gasket|oil filter housing",
+  "Carbon buildup": "carbon build.?up|walnut blast",
+  "Water injection": "water injection"
+ },
+ "gens": [
+  {
+   "id": "f82",
+   "code": "F82",
+   "years": "2015–2020",
+   "y0": 2015,
+   "y1": 2020,
+   "engine": "S55",
+   "body": "Coupe and convertible",
+   "tag": "The first M4. 425 hp twin-turbo six, manual or 7-speed DCT.",
+   "variants": [
+    {
+     "id": "f82",
+     "name": "M4",
+     "years": "2015–2020",
+     "hp": {
+      "v": 425,
+      "src": [
+       "b15spec",
+       "b13"
+      ],
+      "note": "at 5,500–7,300 rpm"
+     },
+     "tq": {
+      "v": 406,
+      "src": [
+       "b15spec",
+       "b13"
+      ],
+      "note": "at 1,850–5,500 rpm"
+     },
+     "z60": {
+      "v": 4.1,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 4.1,
+      "csrc": [
+       "b15spec"
+      ]
+     },
+     "top": {
+      "v": "155 mph",
+      "src": [
+       "b15spec"
+      ],
+      "note": "limited"
+     },
+     "trans": {
+      "v": "6-speed manual or 7-speed M DCT, rear-drive",
+      "src": [
+       "b15spec",
+       "b15price"
+      ],
+      "note": "DCT was a $2,900 option in 2015"
+     },
+     "weight": {
+      "v": "3,530 lb",
+      "src": [
+       "b15spec"
+      ],
+      "note": "manual; 3,585 lb with DCT"
+     },
+     "price": {
+      "v": "$64,200",
+      "src": [
+       "b15price"
+      ],
+      "note": "2015 coupe, plus $950 destination"
+     }
+    },
+    {
+     "id": "f82-comp",
+     "name": "M4 Competition Package",
+     "years": "2016–2020",
+     "pkg": "f82",
+     "hp": {
+      "v": 444,
+      "src": [
+       "b17comp",
+       "b16comp",
+       "b20her"
+      ],
+      "note": "at 7,000 rpm"
+     },
+     "tq": {
+      "v": 406,
+      "src": [
+       "b17comp"
+      ],
+      "note": "at 1,850–5,500 rpm"
+     },
+     "z60": {
+      "v": 3.8,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 3.8,
+      "csrc": [
+       "b16comp",
+       "b17comp"
+      ]
+     },
+     "top": {
+      "v": "155 mph",
+      "src": [
+       "b17comp"
+      ],
+      "note": "limited"
+     },
+     "trans": {
+      "v": "6-speed manual or 7-speed M DCT, rear-drive",
+      "src": [
+       "b17comp"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,565 lb",
+      "src": [
+       "b17comp"
+      ],
+      "note": "2017, manual; 3,620 lb with DCT"
+     },
+     "price": {
+      "v": "$5,500",
+      "src": [
+       "b16price",
+       "b17price"
+      ],
+      "note": "package price on the coupe, 2016; $4,750 from 2017"
+     },
+     "what": "Adds 19 hp, retuned adaptive suspension, 20-inch wheels and M sport exhaust.",
+     "what_src": [
+      "b16comp"
+     ]
+    },
+    {
+     "id": "f82-gts",
+     "name": "M4 GTS",
+     "years": "2016",
+     "hp": {
+      "v": 493,
+      "src": [
+       "b17spec",
+       "b16gts"
+      ],
+      "note": "at 6,250 rpm"
+     },
+     "tq": {
+      "v": 443,
+      "src": [
+       "b17spec"
+      ],
+      "note": "at 4,000–5,500 rpm"
+     },
+     "z60": {
+      "v": 3.5,
+      "who": "Road & Track",
+      "src": [
+       "z60"
+      ],
+      "claim": 3.6,
+      "csrc": [
+       "b17spec"
+      ]
+     },
+     "top": {
+      "v": "190 mph",
+      "src": [
+       "b17spec"
+      ],
+      "note": "limited"
+     },
+     "trans": {
+      "v": "7-speed M DCT, rear-drive",
+      "src": [
+       "b17spec",
+       "b16gts"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,610 lb",
+      "src": [
+       "b17spec"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$134,200",
+      "src": [
+       "gtsbf"
+      ],
+      "note": "source does not say if destination is included"
+     },
+     "what": "Water injection, coilovers, carbon parts and no rear seats. About 300 came to the U.S.",
+     "what_src": [
+      "b16gts"
+     ]
+    },
+    {
+     "id": "f82-cs",
+     "name": "M4 CS",
+     "years": "2019–2020",
+     "hp": {
+      "v": 454,
+      "src": [
+       "b19cs"
+      ],
+      "note": "at 6,250 rpm"
+     },
+     "tq": {
+      "v": 442,
+      "src": [
+       "b19cs"
+      ],
+      "note": "at 4,000–5,380 rpm"
+     },
+     "z60": {
+      "v": 3.7,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 3.8,
+      "csrc": [
+       "b19cs"
+      ]
+     },
+     "top": {
+      "v": "174 mph",
+      "src": [
+       "b19cs"
+      ],
+      "note": "limited"
+     },
+     "trans": {
+      "v": "7-speed M DCT, rear-drive",
+      "src": [
+       "b19cs"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$103,100",
+      "src": [
+       "csp"
+      ],
+      "note": "destination not stated"
+     },
+     "what": "Adds 29 hp over the M4, plus a carbon hood and roof.",
+     "what_src": [
+      "b19cs"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "g82",
+   "code": "G82",
+   "years": "2021–2025",
+   "y0": 2021,
+   "y1": 2025,
+   "engine": "S58",
+   "body": "Coupe and convertible",
+   "tag": "The Competition. 503 hp, 8-speed, all-wheel drive from 2022.",
+   "variants": [
+    {
+     "id": "g82",
+     "name": "M4",
+     "years": "2021–2025",
+     "hp": {
+      "v": 473,
+      "src": [
+       "b21",
+       "b25"
+      ],
+      "note": "at 6,250 rpm"
+     },
+     "tq": {
+      "v": 406,
+      "src": [
+       "b21",
+       "b25"
+      ],
+      "note": "at 2,650–6,130 rpm"
+     },
+     "z60": {
+      "v": 3.8,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 4.1,
+      "csrc": [
+       "b21"
+      ]
+     },
+     "top": {
+      "v": "155 mph",
+      "src": [
+       "b21"
+      ],
+      "note": "limited; 180 with M Driver’s Package"
+     },
+     "trans": {
+      "v": "6-speed manual, rear-drive",
+      "src": [
+       "b21"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,830 lb",
+      "src": [
+       "b21",
+       "b25"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$71,800",
+      "src": [
+       "b21"
+      ],
+      "note": "2021, plus $995 destination"
+     }
+    },
+    {
+     "id": "g82-comp",
+     "name": "M4 Competition",
+     "years": "2021–2025",
+     "star": true,
+     "hp": {
+      "v": 503,
+      "src": [
+       "b21",
+       "b25"
+      ],
+      "note": "at 6,250 rpm"
+     },
+     "tq": {
+      "v": 479,
+      "src": [
+       "b21",
+       "b25"
+      ],
+      "note": "at 2,750–5,500 rpm"
+     },
+     "z60": {
+      "v": null,
+      "who": "",
+      "src": [],
+      "claim": 3.8,
+      "csrc": [
+       "b21"
+      ]
+     },
+     "top": {
+      "v": "155 mph",
+      "src": [
+       "b21"
+      ],
+      "note": "limited; 180 with M Driver’s Package"
+     },
+     "trans": {
+      "v": "8-speed M Steptronic, rear-drive",
+      "src": [
+       "b21"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,880 lb",
+      "src": [
+       "b21",
+       "b25"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$74,700",
+      "src": [
+       "b21"
+      ],
+      "note": "2021, plus $995 destination"
+     }
+    },
+    {
+     "id": "g82-comp-x",
+     "name": "Competition xDrive",
+     "years": "2022–2025",
+     "hp": {
+      "v": 503,
+      "src": [
+       "b22x",
+       "b25"
+      ],
+      "note": "523 hp for 2025"
+     },
+     "tq": {
+      "v": 479,
+      "src": [
+       "b22x",
+       "b25"
+      ],
+      "note": ""
+     },
+     "z60": {
+      "v": 2.8,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 3.4,
+      "csrc": [
+       "b22x",
+       "b25"
+      ]
+     },
+     "top": {
+      "v": "155 mph",
+      "src": [
+       "b22x"
+      ],
+      "note": "limited; 180 with M Driver’s Package"
+     },
+     "trans": {
+      "v": "8-speed M Steptronic, all-wheel drive",
+      "src": [
+       "b22x"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,979 lb",
+      "src": [
+       "b22x",
+       "b25"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$78,800",
+      "src": [
+       "b22x",
+       "b25"
+      ],
+      "note": "2022, plus $995 destination; $88,300 for 2025"
+     },
+     "what": "M xDrive all-wheel drive. The 2025 update adds 20 hp, new lights and a curved screen.",
+     "what_src": [
+      "b22x",
+      "b25"
+     ]
+    },
+    {
+     "id": "g82-csl",
+     "name": "M4 CSL",
+     "years": "2023",
+     "hp": {
+      "v": 543,
+      "src": [
+       "b23csl"
+      ],
+      "note": "at 6,250 rpm"
+     },
+     "tq": {
+      "v": 479,
+      "src": [
+       "b23csl"
+      ],
+      "note": "at 2,750–5,950 rpm"
+     },
+     "z60": {
+      "v": 3.3,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 3.6,
+      "csrc": [
+       "b23csl"
+      ]
+     },
+     "top": {
+      "v": "191 mph",
+      "src": [
+       "b23csl"
+      ],
+      "note": "limited"
+     },
+     "trans": {
+      "v": "8-speed M Steptronic, rear-drive",
+      "src": [
+       "b23csl"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,640 lb",
+      "src": [
+       "b23csl"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$139,900",
+      "src": [
+       "b23csl"
+      ],
+      "note": "plus $995 destination"
+     },
+     "what": "240 lb lighter than the Competition, two seats, boost raised to 30.5 psi. 1,000 built.",
+     "what_src": [
+      "b23csl"
+     ]
+    },
+    {
+     "id": "g82-cs",
+     "name": "M4 CS",
+     "years": "2025",
+     "hp": {
+      "v": 543,
+      "src": [
+       "b25cs"
+      ],
+      "note": "at 6,250–7,200 rpm"
+     },
+     "tq": {
+      "v": 479,
+      "src": [
+       "b25cs"
+      ],
+      "note": "at 2,750–5,950 rpm"
+     },
+     "z60": {
+      "v": 3.0,
+      "who": "MotorTrend",
+      "src": [
+       "z60"
+      ],
+      "claim": 3.2,
+      "csrc": [
+       "b25cs"
+      ]
+     },
+     "top": {
+      "v": "188 mph",
+      "src": [
+       "b25cs"
+      ],
+      "note": "limited"
+     },
+     "trans": {
+      "v": "8-speed M Steptronic, all-wheel drive",
+      "src": [
+       "b25cs"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,902 lb",
+      "src": [
+       "b25cs"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$123,500",
+      "src": [
+       "b25cs"
+      ],
+      "note": "plus $1,175 destination"
+     },
+     "what": "20 hp more and 77 lb lighter than the Competition xDrive.",
+     "what_src": [
+      "b25cs"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "S55": {
+   "name": "BMW S55",
+   "what": "3.0-liter inline-6, twin-turbo",
+   "page": "/engines/bmw-s55/",
+   "yt": [
+    "scy",
+    "bmw-s55"
+   ],
+   "study": "bmw-s55",
+   "facts": [
+    [
+     "Max rpm",
+     "7,600 rpm",
+     [
+      "b13"
+     ]
+    ],
+    [
+     "Output",
+     "425–493 hp, up to 443 lb-ft",
+     [
+      "b15spec",
+      "b17spec"
+     ]
+    ],
+    [
+     "Block",
+     "Closed deck, arc-sprayed bores, no liners",
+     [
+      "b13"
+     ]
+    ],
+    [
+     "GTS",
+     "Water injection, a first for a production car",
+     [
+      "b16gts"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Crank hub",
+     "kind": "Outlet + parts seller",
+     "rx": "crank ?hub|spun hub|hub spin",
+     "x": "The stock crank hub is not keyed and can slip on the crank, throwing off cam timing. BMWBLOG calls it rare but serious; parts sellers say it is common, so how often it happens is disputed.",
+     "fix": "An aftermarket keyed or pinned crank hub is the usual fix.",
+     "src": [
+      "bb55",
+      "rsr55"
+     ]
+    },
+    {
+     "t": "Oil leaks",
+     "kind": "Outlet",
+     "rx": "oil leaks?|leaking oil|valve cover gasket|oil filter housing|oil pan gasket",
+     "x": "Gaskets wear with age. BMWBLOG names the valve cover, oil pan and oil filter housing gaskets as common leak points.",
+     "fix": "Replace the leaking gasket.",
+     "src": [
+      "bb55"
+     ]
+    },
+    {
+     "t": "Carbon buildup",
+     "kind": "Outlet",
+     "rx": "carbon build.?up|walnut blast|intake valves?",
+     "x": "Direct injection lets carbon collect on the intake valves over time, which can cause rough idle and misfires.",
+     "fix": "Clean the intake valves at intervals.",
+     "src": [
+      "bb55"
+     ]
+    }
+   ]
+  },
+  "S58": {
+   "name": "BMW S58",
+   "what": "3.0-liter inline-6, twin-turbo",
+   "page": "/engines/bmw-s58/",
+   "yt": [
+    "scy",
+    "bmw-s58"
+   ],
+   "study": "bmw-s58",
+   "facts": [
+    [
+     "Redline",
+     "7,200 rpm",
+     [
+      "b21"
+     ]
+    ],
+    [
+     "Output",
+     "473–543 hp, up to 479 lb-ft",
+     [
+      "b21",
+      "b23csl",
+      "b25cs"
+     ]
+    ],
+    [
+     "Head",
+     "Cast around a 3D-printed core",
+     [
+      "b21",
+      "b25"
+     ]
+    ],
+    [
+     "Block",
+     "Closed deck, no liners",
+     [
+      "b25"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "No known pattern yet",
+     "kind": "Owner-reported",
+     "rx": "",
+     "x": "No widespread S58 failure is documented. BMWBLOG says it has so far avoided the systemic problems of older M engines.",
+     "fix": "",
+     "src": [
+      "bb58",
+      "bb58b"
+     ]
+    },
+    {
+     "t": "Oil use",
+     "kind": "Owner-reported",
+     "rx": "oil consumption|burning oil|using oil",
+     "x": "Some owners report higher oil use than expected. Check the level between services.",
+     "fix": "",
+     "src": [
+      "bb58b"
+     ]
+    }
+   ]
+  }
+ },
+ "compare": [
+  {
+   "slug": "amg-c63",
+   "name": "Mercedes-AMG C63"
+  },
+  {
+   "slug": "audi-rs5",
+   "name": "Audi RS 5"
+  },
+  {
+   "slug": "lexus-rc-f",
+   "name": "Lexus RC F"
+  },
+  {
+   "slug": "bmw-m3",
+   "name": "BMW M3"
+  }
+ ],
+ "sources": {
+  "b13": {
+   "t": "BMW NA: The all-new BMW M3 Sedan and M4 Coupe (Dec 2013)",
+   "u": "https://newsroom.bmwgroup.com/americas/the-all-new-bmw-m3-sedan-and-bmw-m4-coupe",
+   "k": "BMW"
+  },
+  "b15spec": {
+   "t": "BMW NA: Technical data, 2015 BMW M4 Coupe",
+   "u": "https://newsroom.bmwgroup.com/americas/download/5c442f24-05ad-4ec1-856f-6ca45a834dc7/20260728125325486-676.pdf",
+   "k": "BMW"
+  },
+  "b15price": {
+   "t": "BMW NA: M3/M4 pricing guide MY2015 (Jul 2014)",
+   "u": "https://newsroom.bmwgroup.com/americas/download/76e6e6fd-6b26-422b-9922-c15af4aea6bf/20260728125325342-831.pdf",
+   "k": "BMW"
+  },
+  "b16comp": {
+   "t": "BMW NA: New Competition Package amps up the BMW M3 and M4 (Jan 2016)",
+   "u": "https://newsroom.bmwgroup.com/americas/new-competition-package-amps-up-the-bmw-m3-and-m4",
+   "k": "BMW"
+  },
+  "b16price": {
+   "t": "BMW NA: M3/M4 pricing guide MY2016 (Mar 2016)",
+   "u": "https://newsroom.bmwgroup.com/americas/download/1ffbf741-adf2-447b-b66d-a67f6ab2665d/20260728125325565-184.pdf",
+   "k": "BMW"
+  },
+  "b17price": {
+   "t": "BMW NA: M3/M4 pricing guide MY2017 (Aug 2016)",
+   "u": "https://newsroom.bmwgroup.com/americas/download/7145d082-8e20-4ac8-b765-a4f6c3047bc2/20260728132413856-211.pdf",
+   "k": "BMW"
+  },
+  "b17spec": {
+   "t": "BMW NA: Technical data, 2017 BMW M4 Coupe and M4 GTS",
+   "u": "https://newsroom.bmwgroup.com/americas/download/cbb7212b-d8a7-4f90-9f57-1a7261824e26/20260728125325665-920.pdf",
+   "k": "BMW"
+  },
+  "b17comp": {
+   "t": "BMW NA: Technical data, 2017 BMW M4 Coupe Competition Package",
+   "u": "https://newsroom.bmwgroup.com/americas/download/6d3e55fc-bac1-434d-a4be-9d5a9be0c0bc/20260728132414427-30.pdf",
+   "k": "BMW"
+  },
+  "b16gts": {
+   "t": "BMW NA: The new 2016 BMW M4 GTS, available for the first time in the US",
+   "u": "https://newsroom.bmwgroup.com/americas/the-new-2016-bmw-m4-gts-an-exclusive-high-performance-special-edition-m4-available-for-the-first-time-in-the-us",
+   "k": "BMW"
+  },
+  "gtsbf": {
+   "t": "Bimmerfile: BMWNA prices the M4 GTS at $134,200 (Nov 2015)",
+   "u": "https://www.bimmerfile.com/2015/11/17/bmwna-prices-the-m4-gts-at-134200/",
+   "k": "outlet"
+  },
+  "b19cs": {
+   "t": "BMW NA: The first-ever BMW M4 CS",
+   "u": "https://newsroom.bmwgroup.com/americas/the-first-ever-bmw-m4-cs-sporting-appeal-high-performance-for-the-road-and-track-proven-dynamics",
+   "k": "BMW"
+  },
+  "csp": {
+   "t": "Cars.com: 2020 BMW M4 CS specs",
+   "u": "https://www.cars.com/research/bmw-m4-2020/specs/405994",
+   "k": "outlet"
+  },
+  "b20her": {
+   "t": "BMW NA: The 2020 BMW M4 Edition M Heritage (Competition Package coupes)",
+   "u": "https://newsroom.bmwgroup.com/americas/the-2020-bmw-m4-edition-m-heritage",
+   "k": "BMW"
+  },
+  "b21": {
+   "t": "BMW NA: The new 2021 BMW M3 Sedan and M4 Coupe",
+   "u": "https://newsroom.bmwgroup.com/americas/the-new-2021-bmw-m3-sedan-and-m4-coupe",
+   "k": "BMW"
+  },
+  "b22x": {
+   "t": "BMW NA: The new 2022 BMW M4 Competition xDrive Coupe",
+   "u": "https://newsroom.bmwgroup.com/americas/the-new-2022-bmw-m3-competition-xdrive-sedan-and-m4-competition-xdrive-coupe",
+   "k": "BMW"
+  },
+  "b23csl": {
+   "t": "BMW NA: The BMW M4 CSL (May 2022)",
+   "u": "https://newsroom.bmwgroup.com/americas/the-bmw-m4-csl",
+   "k": "BMW"
+  },
+  "b25": {
+   "t": "BMW NA: The new 2025 BMW M4 Coupe and M4 Convertible (Jan 2024)",
+   "u": "https://newsroom.bmwgroup.com/americas/the-new-2025-bmw-m4-coupe-and-m4-convertible",
+   "k": "BMW"
+  },
+  "b25cs": {
+   "t": "BMW NA: The new 2025 BMW M4 CS (May 2024)",
+   "u": "https://newsroom.bmwgroup.com/americas/the-new-2025-bmw-m4-cs",
+   "k": "BMW"
+  },
+  "z60": {
+   "t": "0-60specs.com: BMW M4 0-60 runs by magazine (Car and Driver, MotorTrend, Road & Track)",
+   "u": "https://www.0-60specs.com/bmw-m4-0-60-times/",
+   "k": "magazine tests, aggregated"
+  },
+  "bb55": {
+   "t": "BMWBLOG: BMW S55 engine overview (2023)",
+   "u": "https://www.bmwblog.com/2023/10/19/bmw-s55-engine-overview",
+   "k": "outlet"
+  },
+  "bb58": {
+   "t": "BMWBLOG: BMW S58 reliability, efficiency and tuning (2024)",
+   "u": "https://www.bmwblog.com/2024/04/29/bmw-s58-reliability-efficiency-and-tuning/",
+   "k": "outlet"
+  },
+  "bb58b": {
+   "t": "BMWBLOG: BMW B58 vs S58 (2026)",
+   "u": "https://www.bmwblog.com/2026/05/04/bmw-b58-vs-s58-engine-comparison/",
+   "k": "outlet"
+  },
+  "rsr55": {
+   "t": "Studio RSR: S55 crank hub fix (F80 M3 / F82 M4)",
+   "u": "https://studiorsr.com/blogs/tech-and-parts/s55-crank-hub-fix-f80-m3-and-f82-m4-keyed-crankhub-spline-lock",
+   "k": "parts seller"
+  }
+ },
+ "yt_study": "car-bmw-m4",
+ "img": "/assets/ai-perf/bmw-m4.webp?v=1"
+}

@@ -95,8 +95,13 @@ def perf_info(c):
     """A performance car's id, brand, page ('' until it has one) and the line its card leads with (hp, 0-60, else the engine)."""
     nm = c.get('name') or f"{c.get('make', '')} {c.get('model', '')}".strip(); mk = c.get('make') or c.get('brand') or nm.split(' ')[0]
     hp = c.get('hp'); z = c.get('zero60') or c.get('0-60') or c.get('zero_to_60'); eng = c.get('engine') or ''
+    _pid = c.get('slug') or _slg(nm); _pd = _jl(f'data/perf/{_pid}.json') or {}   # 11-11: a car with a performance page (perf_page.py) is live, not coming soon
+    if _pd and not hp:   # its card leads with the featured trim's sourced hp and 0-60 (magazine test, else the maker's figure)
+        try:
+            import perf_page as _PP; _g, _v = _PP._star(_pd); hp = _PP._hp(_v); _zz = _PP._z(_v.get('z60'))[0]; z = _zz.replace(' s', '') if _zz else z
+        except Exception: pass
     lead = ' · '.join(x for x in ((f'{hp:,} hp' if isinstance(hp, (int, float)) else str(hp) + ' hp') if hp else '', f'0–60 {z} s' if z else '') if x) or eng
-    return dict(id=c.get('slug') or _slg(nm), name=nm, brand=_brandof(mk), url=c.get('url') or '', lead=lead)
+    return dict(id=_pid, name=nm, brand=_brandof(mk), url=c.get('url') or _pd.get('page') or '', lead=lead)
 PICK_ALL = {b: [list(x) for x in m] for b, m in PICK.items()}
 for c in SCX: PICK_ALL.setdefault(_brandof(c['make']), []).append([c['name'], _slg(c['name']), [y['y'] for y in c['years']], f"/supercars/{_slg(c['name'])}/", 'sc'])
 for c in EVX:
@@ -1577,11 +1582,11 @@ exec(open('extra_pages.py', encoding='utf-8').read())   # 11-06 Taos + Pontiac
 exec(open('supercar_engine_pages.py', encoding='utf-8').read())   # 11-11 supercar engines hub + engine pages (before the BMW pages phase: /images/ lists their images)
 BMW_PHASE = 'pages'; exec(open('bmw_pages.py', encoding='utf-8').read())   # 11-10 BMW model pages + engine pages
 exec(open('thanks_page.py', encoding='utf-8').read())   # 11-07 donation thank-you page (noindex)
-import perf_page; perf_page.build_all(OUT)   # 11-11 performance-car pages (data/perf/<slug>.json): generation slider + performance-first Overview on the car's page
+import perf_page; PERF_URLS = perf_page.build_all(OUT, page)   # 11-11 performance-car pages (data/perf/<slug>.json): the M3's own page gets the slider + performance Overview; the rest get pages of their own
 json.dump(PD, open('data/page_dates.json', 'w', encoding='utf-8'), separators=(',', ':'))
 
 open(f'{OUT}/404.html', 'w', encoding='utf-8').write(open(f'{OUT}/index.html', encoding='utf-8').read().replace('<main>', '<main><div class="pg"><section class="ph"><p class="ph-e">404</p><h1>That page drove off.</h1><p class="ph-s">It may have moved. Try one of these.</p><p class="ph-404"><a class="btn" href="/cars/">Look up a car</a> <a class="btn btn-ghost" href="/brands/">Every brand</a> <a class="btn btn-ghost" href="/">Home</a></p></section></div><!--', 1).replace('</main>', '--></main>', 1))
-urls = ['/', '/rankings/', STUDY, '/studies/', '/method/', '/vin/', '/car-loan-rates/', '/vote/', '/data/', '/brands/'] + burls + purls + murls + surls + eurls + GAP_URLS + CODE_URLS + SEO_URLS + EXTRA_URLS + BMW_URLS + SCE_URLS + yurls + ADV_URLS + curls + LEGAL_URLS
+urls = ['/', '/rankings/', STUDY, '/studies/', '/method/', '/vin/', '/car-loan-rates/', '/vote/', '/data/', '/brands/'] + PERF_URLS + burls + purls + murls + surls + eurls + GAP_URLS + CODE_URLS + SEO_URLS + EXTRA_URLS + BMW_URLS + SCE_URLS + yurls + ADV_URLS + curls + LEGAL_URLS
 open(f'{OUT}/sitemap.xml', 'w', encoding='utf-8').write('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + ''.join(f'<url><loc>{BASE}{u}</loc><lastmod>{TODAY}</lastmod></url>' for u in urls) + '</urlset>')
 open(f'{OUT}/ads.txt', 'w').write(f'google.com, {ADS.replace("ca-", "")}, DIRECT, f08c47fec0942fa0\n')
 open(f'{OUT}/robots.txt', 'w').write(f'User-agent: *\nAllow: /\n\nUser-agent: GPTBot\nAllow: /\nUser-agent: ClaudeBot\nAllow: /\nUser-agent: PerplexityBot\nAllow: /\nUser-agent: Google-Extended\nAllow: /\nUser-agent: Googlebot-Image\nAllow: /\n\n# bulk dataset scrapers: the data is free at /data/ with credit instead\nUser-agent: CCBot\nDisallow: /\nUser-agent: Bytespider\nDisallow: /\nUser-agent: Diffbot\nDisallow: /\nUser-agent: Omgilibot\nDisallow: /\nUser-agent: ImagesiftBot\nDisallow: /\n\nSitemap: {BASE}/sitemap.xml\nSitemap: {BASE}/image-sitemap.xml\n')

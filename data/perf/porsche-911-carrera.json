@@ -1,0 +1,1766 @@
+{
+ "slug": "porsche-911-carrera",
+ "name": "Porsche 911 Carrera",
+ "short": "911 Carrera",
+ "make": "Porsche",
+ "page": "/cars/porsche-911-carrera/",
+ "focus": "992",
+ "star": "992-s",
+ "h1": "Porsche 911 Carrera: performance, engines and what owners say",
+ "nhtsa": {
+  "make": "PORSCHE",
+  "models": [
+   "911",
+   "911 CARRERA",
+   "911 CARRERA S",
+   "911 CARRERA 4",
+   "911 CARRERA 4S",
+   "911 CARRERA GTS",
+   "911 CARRERA CABRIOLET",
+   "911 CARRERA S CABRIOLET",
+   "911 (997)"
+  ],
+  "note": "NHTSA files many Carreras under plain 911, which can also hold other 911 trims, so counts may include some non-Carrera cars."
+ },
+ "topics_extra": {
+  "IMS bearing": "\\bims\\b|intermediate shaft",
+  "Bore scoring": "bore scor|scored (bores?|cylinders?)|cylinder scor",
+  "Rear main seal": "rear main seal|\\brms\\b",
+  "Coil packs": "coil packs?|ignition coils?",
+  "Coolant leaks": "coolant (leak|line|pipe)s?",
+  "PDK gearbox": "\\bpdk\\b|dual.?clutch"
+ },
+ "gens": [
+  {
+   "id": "996",
+   "code": "996",
+   "years": "2000–2004",
+   "y0": 2000,
+   "y1": 2004,
+   "engine": "M96",
+   "body": "Coupe",
+   "tag": "First water-cooled 911. 3.4 liters, then 3.6 from 2002.",
+   "variants": [
+    {
+     "id": "996-34",
+     "name": "Carrera 3.4",
+     "years": "2000–2001",
+     "hp": {
+      "v": 300,
+      "src": [
+       "pr01",
+       "bg00"
+      ],
+      "note": "at 6,800 rpm"
+     },
+     "tq": {
+      "v": 258,
+      "src": [
+       "bg00"
+      ],
+      "note": "at 4,600 rpm; buyer's-guide data"
+     },
+     "z60": {
+      "v": null,
+      "who": "",
+      "src": [],
+      "claim": null,
+      "csrc": []
+     },
+     "top": {
+      "v": "174 mph",
+      "src": [
+       "pr01"
+      ],
+      "note": "manual"
+     },
+     "trans": {
+      "v": "6-speed manual, rear-drive",
+      "src": [
+       "pr01"
+      ],
+      "note": "5-speed Tiptronic S optional"
+     }
+    },
+    {
+     "id": "996-36",
+     "name": "Carrera 3.6",
+     "years": "2002–2004",
+     "hp": {
+      "v": 315,
+      "src": [
+       "mw02",
+       "pr01"
+      ],
+      "note": "Porsche's 2001 release said 320 (PS)"
+     },
+     "tq": {
+      "v": 273,
+      "src": [
+       "mw02"
+      ],
+      "note": ""
+     },
+     "z60": {
+      "v": 4.9,
+      "who": "Road & Track",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "top": {
+      "v": "178 mph",
+      "src": [
+       "pr01"
+      ],
+      "note": "manual"
+     },
+     "trans": {
+      "v": "6-speed manual, rear-drive",
+      "src": [
+       "pr01",
+       "mw02"
+      ],
+      "note": "5-speed Tiptronic S optional; 0-60 test car: manual"
+     }
+    },
+    {
+     "id": "996-4s",
+     "name": "Carrera 4S",
+     "years": "2002–2004",
+     "hp": {
+      "v": 315,
+      "src": [
+       "mw02"
+      ],
+      "note": ""
+     },
+     "tq": {
+      "v": 273,
+      "src": [
+       "mw02"
+      ],
+      "note": ""
+     },
+     "z60": {
+      "v": 4.6,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual, all-wheel drive",
+      "src": [
+       "mw02"
+      ],
+      "note": "5-speed Tiptronic optional"
+     },
+     "price": {
+      "v": "$80,965",
+      "src": [
+       "mw02"
+      ],
+      "note": "2002 manual, as quoted by MotorWeek"
+     },
+     "what": "All-wheel drive and 18-inch Turbo wheels on the 3.6 coupe",
+     "what_src": [
+      "mw02"
+     ]
+    },
+    {
+     "id": "996-40",
+     "name": "40th Anniversary Edition",
+     "years": "2004",
+     "hp": {
+      "v": 345,
+      "src": [
+       "pn5",
+       "bg40"
+      ],
+      "note": "at 6,800 rpm"
+     },
+     "tq": {
+      "v": 273,
+      "src": [
+       "bg40"
+      ],
+      "note": "at 4,250 rpm; buyer's-guide data"
+     },
+     "z60": {
+      "v": 4.7,
+      "who": "MotorTrend",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "top": {
+      "v": "180 mph",
+      "src": [
+       "wiki996"
+      ],
+      "note": "Wikipedia figure"
+     },
+     "trans": {
+      "v": "6-speed manual, rear-drive",
+      "src": [
+       "z60"
+      ],
+      "note": "as tested by MotorTrend"
+     },
+     "weight": {
+      "v": "2,959 lb",
+      "src": [
+       "bg40"
+      ],
+      "note": "buyer's-guide data"
+     },
+     "price": {
+      "v": "$89,800",
+      "src": [
+       "bg40"
+      ],
+      "note": "buyer's-guide MSRP; destination not listed"
+     },
+     "what": "1,963 built; 345 hp version of the 3.6",
+     "what_src": [
+      "pn5",
+      "wiki996"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "997-1",
+   "code": "997.1",
+   "years": "2005–2008",
+   "y0": 2005,
+   "y1": 2008,
+   "engine": "M97",
+   "body": "Coupe",
+   "tag": "Round headlights return. Carrera S gets a 355 hp 3.8.",
+   "variants": [
+    {
+     "id": "997-1",
+     "name": "Carrera",
+     "years": "2005–2008",
+     "hp": {
+      "v": 325,
+      "src": [
+       "pr04"
+      ],
+      "note": "SAE"
+     },
+     "tq": {
+      "v": 273,
+      "src": [
+       "bg05c"
+      ],
+      "note": "at 4,250 rpm; buyer's-guide data"
+     },
+     "z60": {
+      "v": 4.3,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "top": {
+      "v": "177 mph",
+      "src": [
+       "pr04c"
+      ],
+      "note": "Porsche says coupe and cabriolet match"
+     },
+     "trans": {
+      "v": "6-speed manual, rear-drive",
+      "src": [
+       "pr04"
+      ],
+      "note": "0-60 test car: manual"
+     },
+     "price": {
+      "v": "$69,300",
+      "src": [
+       "pr04"
+      ],
+      "note": "2005; destination not stated"
+     }
+    },
+    {
+     "id": "997-1-s",
+     "name": "Carrera S",
+     "years": "2005–2008",
+     "hp": {
+      "v": 355,
+      "src": [
+       "pr04"
+      ],
+      "note": "SAE"
+     },
+     "tq": {
+      "v": 295,
+      "src": [
+       "bg05s"
+      ],
+      "note": "at 4,600 rpm; buyer's-guide data"
+     },
+     "z60": {
+      "v": 4.1,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "top": {
+      "v": "182 mph",
+      "src": [
+       "pr04c"
+      ],
+      "note": "Porsche says coupe and cabriolet match"
+     },
+     "trans": {
+      "v": "6-speed manual, rear-drive",
+      "src": [
+       "pr04"
+      ],
+      "note": "0-60 test car: manual"
+     },
+     "weight": {
+      "v": "3,131 lb",
+      "src": [
+       "bg05s"
+      ],
+      "note": "buyer's-guide data"
+     },
+     "price": {
+      "v": "$79,100",
+      "src": [
+       "pr04"
+      ],
+      "note": "2005; destination not stated"
+     }
+    }
+   ]
+  },
+  {
+   "id": "997-2",
+   "code": "997.2",
+   "years": "2009–2012",
+   "y0": 2009,
+   "y1": 2012,
+   "engine": "9A1",
+   "body": "Coupe",
+   "tag": "Direct injection, PDK and no IMS bearing. GTS added for 2011.",
+   "variants": [
+    {
+     "id": "997-2",
+     "name": "Carrera",
+     "years": "2009–2012",
+     "hp": {
+      "v": 345,
+      "src": [
+       "t11",
+       "vj09"
+      ],
+      "note": "at 6,500 rpm"
+     },
+     "tq": {
+      "v": 288,
+      "src": [
+       "t11"
+      ],
+      "note": "at 4,400 rpm"
+     },
+     "z60": {
+      "v": 4.1,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 4.3,
+      "csrc": [
+       "t11"
+      ]
+     },
+     "top": {
+      "v": "179 mph",
+      "src": [
+       "t11"
+      ],
+      "note": "manual; 178 with PDK"
+     },
+     "trans": {
+      "v": "6-speed manual or 7-speed PDK, rear-drive",
+      "src": [
+       "t11",
+       "vj09"
+      ],
+      "note": "0-60 test car: PDK"
+     },
+     "weight": {
+      "v": "3,186 lb",
+      "src": [
+       "t11"
+      ],
+      "note": "2011 spec sheet"
+     },
+     "price": {
+      "v": "$75,600",
+      "src": [
+       "vj09"
+      ],
+      "note": "2009; destination not stated"
+     }
+    },
+    {
+     "id": "997-2-s",
+     "name": "Carrera S",
+     "years": "2009–2012",
+     "hp": {
+      "v": 385,
+      "src": [
+       "t11",
+       "vj09"
+      ],
+      "note": "at 6,500 rpm"
+     },
+     "tq": {
+      "v": 310,
+      "src": [
+       "t11"
+      ],
+      "note": "at 4,400 rpm"
+     },
+     "z60": {
+      "v": 3.9,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 4.5,
+      "csrc": [
+       "t11"
+      ]
+     },
+     "top": {
+      "v": "187 mph",
+      "src": [
+       "t11"
+      ],
+      "note": "manual; 186 with PDK"
+     },
+     "trans": {
+      "v": "6-speed manual or 7-speed PDK, rear-drive",
+      "src": [
+       "t11",
+       "vj09"
+      ],
+      "note": "0-60 test car: manual"
+     },
+     "weight": {
+      "v": "3,208 lb",
+      "src": [
+       "t11"
+      ],
+      "note": "2011 spec sheet"
+     },
+     "price": {
+      "v": "$86,200",
+      "src": [
+       "vj09"
+      ],
+      "note": "2009; destination not stated"
+     }
+    },
+    {
+     "id": "997-2-gts",
+     "name": "Carrera GTS",
+     "years": "2011–2012",
+     "hp": {
+      "v": 408,
+      "src": [
+       "prgts11"
+      ],
+      "note": ""
+     },
+     "tq": {
+      "v": 310,
+      "src": [
+       "prgts11"
+      ],
+      "note": "at 4,200 rpm"
+     },
+     "z60": {
+      "v": 4.3,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 4.0,
+      "csrc": [
+       "prgts11"
+      ]
+     },
+     "top": {
+      "v": "190 mph",
+      "src": [
+       "prgts11"
+      ],
+      "note": "manual"
+     },
+     "trans": {
+      "v": "6-speed manual or 7-speed PDK, rear-drive",
+      "src": [
+       "prgts11"
+      ],
+      "note": "0-60 test car: PDK"
+     },
+     "price": {
+      "v": "$103,100",
+      "src": [
+       "prgts11"
+      ],
+      "note": "2011; destination not stated"
+     },
+     "what": "Wide Carrera 4 body with rear drive, new intake, 7,500 rpm limit",
+     "what_src": [
+      "prgts11",
+      "k25"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "991-1",
+   "code": "991.1",
+   "years": "2012–2016",
+   "y0": 2012,
+   "y1": 2016,
+   "engine": "9A1",
+   "body": "Coupe",
+   "tag": "Longer wheelbase and a 7-speed manual. Last non-turbo Carrera.",
+   "variants": [
+    {
+     "id": "991-1",
+     "name": "Carrera",
+     "years": "2012–2016",
+     "hp": {
+      "v": 350,
+      "src": [
+       "t12",
+       "pr12"
+      ],
+      "note": "at 7,400 rpm"
+     },
+     "tq": {
+      "v": 287,
+      "src": [
+       "t12"
+      ],
+      "note": "at 5,600 rpm"
+     },
+     "z60": {
+      "v": 4.4,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 4.6,
+      "csrc": [
+       "t12"
+      ]
+     },
+     "top": {
+      "v": "179 mph",
+      "src": [
+       "t12"
+      ],
+      "note": "manual; 178 with PDK"
+     },
+     "trans": {
+      "v": "7-speed manual or 7-speed PDK, rear-drive",
+      "src": [
+       "t12"
+      ],
+      "note": "0-60 test car: manual"
+     },
+     "weight": {
+      "v": "3,042 lb",
+      "src": [
+       "t12"
+      ],
+      "note": "manual; 3,086 with PDK"
+     },
+     "price": {
+      "v": "$82,100",
+      "src": [
+       "pr12"
+      ],
+      "note": "2012, excluding destination"
+     }
+    },
+    {
+     "id": "991-1-s",
+     "name": "Carrera S",
+     "years": "2012–2016",
+     "hp": {
+      "v": 400,
+      "src": [
+       "t12",
+       "pr12"
+      ],
+      "note": "at 7,400 rpm"
+     },
+     "tq": {
+      "v": 325,
+      "src": [
+       "t12"
+      ],
+      "note": "at 5,600 rpm"
+     },
+     "z60": {
+      "v": 3.6,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 3.9,
+      "csrc": [
+       "t12",
+       "pr12"
+      ]
+     },
+     "top": {
+      "v": "188 mph",
+      "src": [
+       "t12",
+       "pr12"
+      ],
+      "note": "manual; 187 with PDK"
+     },
+     "trans": {
+      "v": "7-speed manual or 7-speed PDK, rear-drive",
+      "src": [
+       "t12"
+      ],
+      "note": "0-60 test car: PDK"
+     },
+     "weight": {
+      "v": "3,075 lb",
+      "src": [
+       "t12"
+      ],
+      "note": "manual; 3,120 with PDK"
+     },
+     "price": {
+      "v": "$96,400",
+      "src": [
+       "pr12"
+      ],
+      "note": "2012, excluding destination"
+     }
+    },
+    {
+     "id": "991-1-gts",
+     "name": "Carrera GTS",
+     "years": "2015–2016",
+     "hp": {
+      "v": 430,
+      "src": [
+       "t15gts",
+       "prgts15"
+      ],
+      "note": "at 7,500 rpm"
+     },
+     "tq": {
+      "v": 325,
+      "src": [
+       "t15gts"
+      ],
+      "note": "at 5,750 rpm"
+     },
+     "z60": {
+      "v": 3.6,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 3.8,
+      "csrc": [
+       "t15gts",
+       "prgts15"
+      ]
+     },
+     "top": {
+      "v": "190 mph",
+      "src": [
+       "t15gts"
+      ],
+      "note": "manual; 189 with PDK"
+     },
+     "trans": {
+      "v": "7-speed manual or 7-speed PDK, rear-drive",
+      "src": [
+       "t15gts"
+      ],
+      "note": "0-60 test car: PDK"
+     },
+     "weight": {
+      "v": "3,142 lb",
+      "src": [
+       "t15gts"
+      ],
+      "note": "lightest manual car"
+     },
+     "price": {
+      "v": "$114,200",
+      "src": [
+       "t15gts",
+       "prgts15"
+      ],
+      "note": "plus $995 destination"
+     },
+     "what": "Carrera S Powerkit engine, Sport Chrono and sport exhaust standard",
+     "what_src": [
+      "prgts15"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "991-2",
+   "code": "991.2",
+   "years": "2017–2019",
+   "y0": 2017,
+   "y1": 2019,
+   "engine": "9A2",
+   "body": "Coupe",
+   "tag": "Twin turbos for every Carrera. 370 to 450 hp.",
+   "variants": [
+    {
+     "id": "991-2",
+     "name": "Carrera",
+     "years": "2017–2019",
+     "hp": {
+      "v": 370,
+      "src": [
+       "t17",
+       "pr17"
+      ],
+      "note": "at 6,500 rpm"
+     },
+     "tq": {
+      "v": 331,
+      "src": [
+       "t17",
+       "pr17"
+      ],
+      "note": "at 1,700–5,000 rpm"
+     },
+     "z60": {
+      "v": 3.4,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 4.0,
+      "csrc": [
+       "t17",
+       "pr17"
+      ]
+     },
+     "top": {
+      "v": "183 mph",
+      "src": [
+       "t17",
+       "pr17"
+      ],
+      "note": "manual; 182 with PDK"
+     },
+     "trans": {
+      "v": "7-speed manual or 7-speed PDK, rear-drive",
+      "src": [
+       "t17",
+       "pr17"
+      ],
+      "note": "0-60 test car: PDK"
+     },
+     "weight": {
+      "v": "3,153 lb",
+      "src": [
+       "t17"
+      ],
+      "note": "manual; 3,197 with PDK"
+     },
+     "price": {
+      "v": "$89,400",
+      "src": [
+       "pr17"
+      ],
+      "note": "2017; destination not stated"
+     }
+    },
+    {
+     "id": "991-2-s",
+     "name": "Carrera S",
+     "years": "2017–2019",
+     "hp": {
+      "v": 420,
+      "src": [
+       "t17",
+       "pr17"
+      ],
+      "note": "at 6,500 rpm"
+     },
+     "tq": {
+      "v": 368,
+      "src": [
+       "t17",
+       "pr17"
+      ],
+      "note": "at 1,700–5,000 rpm"
+     },
+     "z60": {
+      "v": 3.1,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 3.7,
+      "csrc": [
+       "t17",
+       "pr17"
+      ]
+     },
+     "top": {
+      "v": "191 mph",
+      "src": [
+       "t17",
+       "pr17"
+      ],
+      "note": "manual; 190 with PDK"
+     },
+     "trans": {
+      "v": "7-speed manual or 7-speed PDK, rear-drive",
+      "src": [
+       "t17",
+       "pr17"
+      ],
+      "note": "0-60 test car: PDK"
+     },
+     "weight": {
+      "v": "3,175 lb",
+      "src": [
+       "t17"
+      ],
+      "note": "manual; 3,219 with PDK"
+     },
+     "price": {
+      "v": "$103,400",
+      "src": [
+       "pr17"
+      ],
+      "note": "2017; destination not stated"
+     }
+    },
+    {
+     "id": "991-2-gts",
+     "name": "Carrera GTS",
+     "years": "2017–2019",
+     "hp": {
+      "v": 450,
+      "src": [
+       "t17gts",
+       "prgts17"
+      ],
+      "note": "at 6,500 rpm"
+     },
+     "tq": {
+      "v": 405,
+      "src": [
+       "t17gts",
+       "prgts17"
+      ],
+      "note": "at 2,150–5,000 rpm"
+     },
+     "z60": {
+      "v": 3.0,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 3.5,
+      "csrc": [
+       "t17gts"
+      ]
+     },
+     "top": {
+      "v": "193 mph",
+      "src": [
+       "t17gts",
+       "prgts17"
+      ],
+      "note": "manual; 192 with PDK"
+     },
+     "trans": {
+      "v": "7-speed manual or 7-speed PDK, rear-drive",
+      "src": [
+       "t17gts",
+       "prgts17"
+      ],
+      "note": "0-60 test car: PDK"
+     },
+     "weight": {
+      "v": "3,197 lb",
+      "src": [
+       "t17gts"
+      ],
+      "note": "manual; 3,241 with PDK"
+     },
+     "price": {
+      "v": "$119,000",
+      "src": [
+       "prgts17"
+      ],
+      "note": "2017; destination not stated"
+     },
+     "what": "Larger turbos, wide body, sport exhaust and PASM Sport suspension",
+     "what_src": [
+      "prgts17"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "992",
+   "code": "992",
+   "years": "2020–2025",
+   "y0": 2020,
+   "y1": 2025,
+   "engine": "9A2",
+   "body": "Coupe",
+   "tag": "Wider body, 8-speed PDK. 379 to 473 hp.",
+   "variants": [
+    {
+     "id": "992",
+     "name": "Carrera",
+     "years": "2020–2024",
+     "hp": {
+      "v": 379,
+      "src": [
+       "pr20"
+      ],
+      "note": "at 6,500 rpm"
+     },
+     "tq": {
+      "v": 331,
+      "src": [
+       "pr20"
+      ],
+      "note": "at 1,950–5,000 rpm"
+     },
+     "z60": {
+      "v": 3.2,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 3.8,
+      "csrc": [
+       "pr20",
+       "t20c"
+      ]
+     },
+     "top": {
+      "v": "182 mph",
+      "src": [
+       "pr20",
+       "t20c"
+      ],
+      "note": ""
+     },
+     "trans": {
+      "v": "8-speed PDK, rear-drive",
+      "src": [
+       "pr20"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,354 lb",
+      "src": [
+       "t20c"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$97,400",
+      "src": [
+       "pr20"
+      ],
+      "note": "2020, plus $1,350 delivery"
+     }
+    },
+    {
+     "id": "992-s",
+     "name": "Carrera S",
+     "years": "2020–2024",
+     "star": true,
+     "hp": {
+      "v": 443,
+      "src": [
+       "pr20s",
+       "k20s"
+      ],
+      "note": "at 6,500 rpm"
+     },
+     "tq": {
+      "v": 390,
+      "src": [
+       "t20s",
+       "k20s"
+      ],
+      "note": "at 2,300–5,000 rpm"
+     },
+     "z60": {
+      "v": 2.9,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 3.3,
+      "csrc": [
+       "pr20s"
+      ]
+     },
+     "top": {
+      "v": "191 mph",
+      "src": [
+       "pr20s",
+       "t20s"
+      ],
+      "note": ""
+     },
+     "trans": {
+      "v": "8-speed PDK, rear-drive",
+      "src": [
+       "pr20s",
+       "t20s"
+      ],
+      "note": "7-speed manual optional; 0-60 test car: PDK"
+     },
+     "weight": {
+      "v": "3,382 lb",
+      "src": [
+       "t20s"
+      ],
+      "note": "PDK; 3,298 with manual"
+     },
+     "price": {
+      "v": "$113,200",
+      "src": [
+       "pr20s"
+      ],
+      "note": "2020, plus $1,050 delivery"
+     }
+    },
+    {
+     "id": "992-gts",
+     "name": "Carrera GTS",
+     "years": "2022–2024",
+     "hp": {
+      "v": 473,
+      "src": [
+       "r22gts"
+      ],
+      "note": ""
+     },
+     "tq": {
+      "v": 420,
+      "src": [
+       "r22gts"
+      ],
+      "note": ""
+     },
+     "z60": {
+      "v": 2.8,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "8-speed PDK or 7-speed manual, rear-drive",
+      "src": [
+       "r22gts"
+      ],
+      "note": "0-60 test car: PDK"
+     },
+     "price": {
+      "v": "$136,700",
+      "src": [
+       "r22gts"
+      ],
+      "note": "2022, plus $1,350 delivery"
+     },
+     "what": "Turbo brakes, GTS suspension; optional Lightweight package saves 55 lb",
+     "what_src": [
+      "r22gts"
+     ]
+    },
+    {
+     "id": "992-25",
+     "name": "Carrera",
+     "years": "2025",
+     "hp": {
+      "v": 388,
+      "src": [
+       "t25",
+       "k25"
+      ],
+      "note": "at 6,500 rpm"
+     },
+     "tq": {
+      "v": 331,
+      "src": [
+       "t25",
+       "k25"
+      ],
+      "note": "at 2,000–5,000 rpm"
+     },
+     "z60": {
+      "v": 3.1,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 3.7,
+      "csrc": [
+       "t25",
+       "k25"
+      ]
+     },
+     "top": {
+      "v": "183 mph",
+      "src": [
+       "t25",
+       "k25"
+      ],
+      "note": ""
+     },
+     "trans": {
+      "v": "8-speed PDK, rear-drive",
+      "src": [
+       "k25"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,342 lb",
+      "src": [
+       "t25"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$120,100",
+      "src": [
+       "r25"
+      ],
+      "note": "plus $1,995 delivery"
+     }
+    },
+    {
+     "id": "992-25-s",
+     "name": "Carrera S",
+     "years": "2025",
+     "hp": {
+      "v": 473,
+      "src": [
+       "t25s",
+       "r25s"
+      ],
+      "note": "at 6,500 rpm"
+     },
+     "tq": {
+      "v": 390,
+      "src": [
+       "t25s",
+       "r25s"
+      ],
+      "note": "at 2,200–6,000 rpm"
+     },
+     "z60": {
+      "v": 2.7,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 3.1,
+      "csrc": [
+       "r25s"
+      ]
+     },
+     "top": {
+      "v": "191 mph",
+      "src": [
+       "r25s",
+       "t25s"
+      ],
+      "note": ""
+     },
+     "trans": {
+      "v": "8-speed PDK, rear-drive",
+      "src": [
+       "r25s"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,424 lb",
+      "src": [
+       "t25s"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$146,400",
+      "src": [
+       "r25s"
+      ],
+      "note": "plus $1,995 delivery"
+     }
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "M96": {
+   "name": "Porsche M96",
+   "what": "3.4- and 3.6-liter flat-6, water-cooled",
+   "study": "",
+   "page": "",
+   "yt": [
+    "scy",
+    ""
+   ],
+   "facts": [
+    [
+     "Output",
+     "300–345 hp",
+     [
+      "pn5",
+      "mw02"
+     ]
+    ],
+    [
+     "Displacement",
+     "3.4 liters (to 2001), 3.6 liters (2002–2004)",
+     [
+      "pn5",
+      "pr01"
+     ]
+    ],
+    [
+     "Cooling",
+     "First water-cooled 911 engine, 4 valves per cylinder",
+     [
+      "pn5"
+     ]
+    ],
+    [
+     "Lubrication",
+     "Integrated dry sump",
+     [
+      "wiki996"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "IMS bearing failure",
+     "kind": "Class action settlement",
+     "rx": "\\bims\\b|intermediate shaft",
+     "x": "A U.S. class action (Eisen v. Porsche) covered 2001–2005 911s whose intermediate shaft bearing failed, which can wreck the engine. LN Engineering cites about 8% failures for the single-row bearing used 2002–2004.",
+     "fix": "Aftermarket retrofit bearings exist; LN Engineering puts the job at about $2,000–3,500.",
+     "src": [
+      "eisen",
+      "lnims",
+      "lnyears"
+     ]
+    },
+    {
+     "t": "Rear main seal leaks",
+     "kind": "Owner-reported",
+     "rx": "rear main seal|\\brms\\b",
+     "x": "The rear main seal often weeps oil on M96 and M97 engines. Wikipedia ties some cases to machining and says a later seal fixed most.",
+     "fix": "",
+     "src": [
+      "renn",
+      "wiki996"
+     ]
+    }
+   ]
+  },
+  "M97": {
+   "name": "Porsche M97",
+   "what": "3.6- and 3.8-liter flat-6, water-cooled",
+   "study": "",
+   "page": "",
+   "yt": [
+    "scy",
+    ""
+   ],
+   "facts": [
+    [
+     "Output",
+     "325–355 hp (SAE)",
+     [
+      "pr04"
+     ]
+    ],
+    [
+     "Torque",
+     "273–295 lb-ft",
+     [
+      "bg05c",
+      "bg05s"
+     ]
+    ],
+    [
+     "Displacement",
+     "3.6 liters (Carrera), 3.8 liters (Carrera S)",
+     [
+      "pr04",
+      "pn6"
+     ]
+    ],
+    [
+     "IMS bearing",
+     "Larger, non-serviceable bearing from 2006",
+     [
+      "lnyears"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Bore scoring",
+     "kind": "Owner-reported",
+     "rx": "bore scor|scored (bores?|cylinders?)|cylinder scor",
+     "x": "Scored cylinder walls are most linked to the 3.8-liter Carrera S engine. Renndriver puts a top-end repair at $8,000–15,000.",
+     "fix": "",
+     "src": [
+      "renn",
+      "wiki997"
+     ]
+    },
+    {
+     "t": "IMS bearing failure",
+     "kind": "Parts seller",
+     "rx": "\\bims\\b|intermediate shaft",
+     "x": "From 2006 the 997 used a larger IMS bearing that fails far less often (about 1% per LN Engineering) but cannot be replaced without splitting the engine. 2005 cars built before Feb. 20, 2005 fell inside the Eisen settlement class.",
+     "fix": "",
+     "src": [
+      "lnims",
+      "lnyears",
+      "eisen"
+     ]
+    },
+    {
+     "t": "Rear main seal leaks",
+     "kind": "Owner-reported",
+     "rx": "rear main seal|\\brms\\b",
+     "x": "Renndriver says the rear main seal often weeps oil on both M96 and M97 engines.",
+     "fix": "",
+     "src": [
+      "renn"
+     ]
+    }
+   ]
+  },
+  "9A1": {
+   "name": "Porsche 9A1",
+   "what": "3.4-, 3.6- and 3.8-liter flat-6, direct injection",
+   "study": "",
+   "page": "",
+   "yt": [
+    "scy",
+    ""
+   ],
+   "facts": [
+    [
+     "Redline",
+     "7,500 rpm (997.2), 7,800 rpm (991.1)",
+     [
+      "t11",
+      "t12"
+     ]
+    ],
+    [
+     "Output",
+     "345–430 hp",
+     [
+      "t11",
+      "t15gts"
+     ]
+    ],
+    [
+     "Lubrication",
+     "Integrated dry sump with on-demand oil pump",
+     [
+      "t11"
+     ]
+    ],
+    [
+     "Timing drive",
+     "No intermediate shaft, so no IMS bearing",
+     [
+      "renn"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "No known pattern yet",
+     "kind": "Owner-reported",
+     "rx": "",
+     "x": "Renndriver says the 991 engine shares none of the M96/M97 problems, and REREV calls the 9A1 very reliable.",
+     "fix": "",
+     "src": [
+      "renn",
+      "rerev"
+     ]
+    },
+    {
+     "t": "Ignition coil failures",
+     "kind": "Owner-reported",
+     "rx": "coil packs?|ignition coils?|misfir",
+     "x": "Coil packs can fail and cause misfires on 991.1 cars, per Renndriver and REREV.",
+     "fix": "",
+     "src": [
+      "renn",
+      "rerev"
+     ]
+    }
+   ]
+  },
+  "9A2": {
+   "name": "Porsche 9A2 / 9A2 Evo",
+   "what": "3.0-liter flat-6, twin-turbo",
+   "study": "porsche-9a2",
+   "page": "/engines/porsche-9a2/",
+   "yt": [
+    "scy",
+    "porsche-9a2"
+   ],
+   "facts": [
+    [
+     "Redline",
+     "7,500 rpm",
+     [
+      "t17",
+      "t25"
+     ]
+    ],
+    [
+     "Output",
+     "370–473 hp, up to 420 lb-ft",
+     [
+      "t17",
+      "r22gts",
+      "t25s"
+     ]
+    ],
+    [
+     "Injection",
+     "Piezo injectors from the 2020 992",
+     [
+      "k20s"
+     ]
+    ],
+    [
+     "Lubrication",
+     "Integrated dry sump",
+     [
+      "t17",
+      "t25"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "No widespread pattern",
+     "kind": "Owner-reported",
+     "rx": "",
+     "x": "Renndriver reports no widespread engine problems on the 991.2 or the 992.",
+     "fix": "",
+     "src": [
+      "renn"
+     ]
+    },
+    {
+     "t": "Oil use on early 2017 cars",
+     "kind": "Owner-reported",
+     "rx": "oil consumption|burning oil|using oil",
+     "x": "REREV says some early 2017 engines used up to a quart per 1,000 miles and some got new engines under warranty. Renndriver does not report it.",
+     "fix": "",
+     "src": [
+      "rerev",
+      "renn"
+     ]
+    },
+    {
+     "t": "Turbo coolant line leaks",
+     "kind": "Owner-reported",
+     "rx": "coolant (leak|line|pipe)s?",
+     "x": "REREV says coolant lines to the turbos on early 991.2 cars could leak at the fittings and Porsche updated the lines.",
+     "fix": "",
+     "src": [
+      "rerev"
+     ]
+    }
+   ]
+  }
+ },
+ "compare": [
+  {
+   "slug": "bmw-m4",
+   "name": "BMW M4"
+  },
+  {
+   "slug": "f-type-r",
+   "name": "Jaguar F-Type R / SVR"
+  },
+  {
+   "slug": "lexus-lc-500",
+   "name": "Lexus LC 500"
+  },
+  {
+   "slug": "cayman-gt4",
+   "name": "Porsche 718 Cayman GT4"
+  }
+ ],
+ "sources": {
+  "pn5": {
+   "t": "Porsche Newsroom: 60 Years of the 911, 5th generation (996) engines",
+   "u": "https://newsroom.porsche.com/en/press-kits/60-Years-Porsche-911/5.-Generation---Motoren.html",
+   "k": "Porsche"
+  },
+  "pn6": {
+   "t": "Porsche Newsroom: 60 Years of the 911, 6th generation (997) engines",
+   "u": "https://newsroom.porsche.com/en/press-kits/60-Years-Porsche-911/6.-Generation---Motoren.html",
+   "k": "Porsche"
+  },
+  "pr01": {
+   "t": "PCNA release: New look, more horsepower for 2002 911 Carrera models (May 2001, via The Auto Channel)",
+   "u": "https://www.theautochannel.com/news/2001/05/29/021892.html",
+   "k": "Porsche"
+  },
+  "mw02": {
+   "t": "MotorWeek road test: 2002 Porsche 911 Carrera 4S and Targa",
+   "u": "https://www.motorweek.org/road_tests/2002_porsche_911_carrera_4s_911_targa_program_2206",
+   "k": "magazine test"
+  },
+  "bg00": {
+   "t": "The Auto Channel buyer's guide: 2000 911 Carrera 4 Cabriolet (same 3.4 engine)",
+   "u": "https://www.theautochannel.com/buyers-guides/Porsche/overview.php?car=2000-Porsche-911-Carrera-2dr-Carrera-4-Cabriolet-w-Tiptronic&styleid=2000441108",
+   "k": "buyer's guide data"
+  },
+  "bg40": {
+   "t": "The Auto Channel buyer's guide: 2004 911 Carrera 40th Anniversary Coupe",
+   "u": "https://www.theautochannel.com/buyers-guides/Porsche/overview.php?styleid=14531",
+   "k": "buyer's guide data"
+  },
+  "pr04": {
+   "t": "PCNA release: Porsche details all-new 911 models for model year 2005 (May 2004, via The Auto Channel)",
+   "u": "https://www.theautochannel.com/news/2004/05/11/194210.html",
+   "k": "Porsche"
+  },
+  "pr04c": {
+   "t": "PCNA release: Porsche reveals new 911 Cabriolets for 2005 (Dec 2004, via The Auto Channel)",
+   "u": "https://www.theautochannel.com/news/2004/12/06/295149.html",
+   "k": "Porsche"
+  },
+  "bg05c": {
+   "t": "The Auto Channel buyer's guide: 2005 911 Carrera Cabriolet (same 3.6 engine)",
+   "u": "https://www.theautochannel.com/buyers-guides/Porsche/overview.php?styleid=16700",
+   "k": "buyer's guide data"
+  },
+  "bg05s": {
+   "t": "The Auto Channel buyer's guide: 2005 911 Carrera S",
+   "u": "https://www.theautochannel.com/buyers-guides/Porsche/overview.php?styleid=16412",
+   "k": "buyer's guide data"
+  },
+  "vj09": {
+   "t": "Porsche release on the 2009 911 Carrera and Carrera S (June 2008, via Velocity Journal)",
+   "u": "https://www.velocityjournal.com/models/19307/story/496",
+   "k": "Porsche"
+  },
+  "t11": {
+   "t": "PCNA: 2011 911 Carrera and Carrera S specifications",
+   "u": "https://newsroom.porsche.com/dam/jcr:1bcf5eae-6c09-4390-84ae-339e47ffd6de/2011_911_Carrera_Specifications.pdf",
+   "k": "Porsche"
+  },
+  "prgts11": {
+   "t": "PCNA: New 2011 911 Carrera GTS (Sept 2010, PR Newswire)",
+   "u": "https://www.prnewswire.com/news-releases/porsche-adds-expressive-and-performance-oriented-911-gts-model-102932564.html",
+   "k": "Porsche"
+  },
+  "pr12": {
+   "t": "PCNA: Porsche to unveil all-new 2012 911 Carrera (Aug 2011, PR Newswire)",
+   "u": "https://www.prnewswire.com/news-releases/porsche-to-unveil-all-new-2012-porsche-911-carrera-128228753.html",
+   "k": "Porsche"
+  },
+  "t12": {
+   "t": "PCNA: 2012 Porsche 911 (991) technical specifications",
+   "u": "https://newsroom.porsche.com/dam/jcr:6918184a-6bbe-44f3-bf4e-3f8a331dbd46/2012_911_991_Specs.pdf",
+   "k": "Porsche"
+  },
+  "t15gts": {
+   "t": "PCNA: 2015 911 Carrera GTS technical data",
+   "u": "https://newsroom.porsche.com/dam/jcr:c944dc62-e433-4c19-b452-436054dcf22a/2015_911_Carrera_GTS_Technical_Specs.pdf",
+   "k": "Porsche"
+  },
+  "prgts15": {
+   "t": "PCNA: The new 911 Carrera GTS models (Oct 2014, PR Newswire)",
+   "u": "https://www.prnewswire.com/news-releases/enhanced-power-and-performance---the-new-porsche-911-carrera-gts-models-278441751.html",
+   "k": "Porsche"
+  },
+  "pr17": {
+   "t": "PCNA: The sports car legend enhanced, the new 911 Carrera (Sept 2015, PR Newswire)",
+   "u": "https://www.prnewswire.com/news-releases/the-sports-car-legend-enhanced-the-new-porsche-911-carrera-300138483.html",
+   "k": "Porsche"
+  },
+  "t17": {
+   "t": "PCNA: 2017 911 Carrera and Carrera S technical data",
+   "u": "https://newsroom.porsche.com/dam/jcr:8a8a3990-34a8-4ae0-a11e-f4bb53abd5e0/2017_911_Carrera_and_Carrera_S_Technical_Specifications.pdf",
+   "k": "Porsche"
+  },
+  "prgts17": {
+   "t": "PCNA: The new 911 GTS models (Jan 2017, PR Newswire)",
+   "u": "https://www.prnewswire.com/news-releases/faster-and-more-capable-than-ever-before--the-new-porsche-911-gts-models-300387372.html",
+   "k": "Porsche"
+  },
+  "t17gts": {
+   "t": "PCNA: 2017 911 Carrera GTS technical data",
+   "u": "https://newsroom.porsche.com/dam/jcr:48c46ea8-77ba-42f0-9891-ddff55e82cb4/PCNA18_1000_us.pdf",
+   "k": "Porsche"
+  },
+  "pr20s": {
+   "t": "PCNA: The new 2020 911 Carrera S and 4S (Nov 2018, PR Newswire)",
+   "u": "https://www.prnewswire.com/news-releases/the-new-2020-porsche-911-carrera-s-and-4s--more-powerful-more-dynamic-unmistakably-a-911-300756577.html",
+   "k": "Porsche"
+  },
+  "t20s": {
+   "t": "PCNA: 2020 911 Carrera S and 4S U.S. specifications (PDK and manual)",
+   "u": "https://newsroom.porsche.com/dam/jcr:c96d5ec7-0422-48c9-941a-216511da809c/2020_911_Carrera_S_and_911_Carrera_4S_PDK_and_manual_transmission_US_specifications.pdf",
+   "k": "Porsche"
+  },
+  "k20s": {
+   "t": "PCNA: 2020 911 Carrera S and Carrera 4S press kit",
+   "u": "https://newsroom.porsche.com/dam/jcr:6b08630c-aa53-442c-911c-d4c2f384c031/Presskit_2020_Porsche_911_Carrera_S_and_Carrera_4S.pdf.PDF",
+   "k": "Porsche"
+  },
+  "pr20": {
+   "t": "PCNA: The 2020 911 Carrera and Carrera Cabriolet (July 2019, PR Newswire)",
+   "u": "https://www.prnewswire.com/news-releases/strong-addition-the-2020-porsche-911-carrera-and-911-carrera-cabriolet-300892673.html",
+   "k": "Porsche"
+  },
+  "t20c": {
+   "t": "PCNA: 911 Carrera and Carrera Cabriolet (992) specifications",
+   "u": "https://newsroom.porsche.com/dam/jcr:412f84c4-3a17-4aba-8758-987d495f473f/911%20Carrera%20_Carrera%20Cabv2.pdf",
+   "k": "Porsche"
+  },
+  "r22gts": {
+   "t": "PCNA: The new 2022 911 GTS models (June 2021)",
+   "u": "https://newsroom.porsche.com/dam/jcr:f562de56-6522-42bc-ba3a-ad1356d35544/52%20-%20The%20new%202022%20Porsche%20911%20GTS%20Models.pdf",
+   "k": "Porsche"
+  },
+  "r25": {
+   "t": "PCNA: The 2025 Porsche 911 models, with U.S. pricing (May 2024)",
+   "u": "https://newsroom.porsche.com/dam/jcr:f840112e-62ae-4cb6-ab74-5ffdf10496a1/37_2025_Porsche_911_T-Hybrid_Models%20.pdf",
+   "k": "Porsche"
+  },
+  "k25": {
+   "t": "PCNA: The new Porsche 911 (992.2) U.S. press kit",
+   "u": "https://newsroom.porsche.com/dam/jcr:928354fb-31e2-4b4c-af93-2c22d6de07b4/US%20911%20Carrera%20and%20Carrera%20GTS%20Press%20Kit.pdf",
+   "k": "Porsche"
+  },
+  "t25": {
+   "t": "PCNA: 911 Carrera (992.2) technical data",
+   "u": "https://newsroom.porsche.com/dam/jcr:86fc9a9b-ece1-4cca-9930-39a78e89baf3/992.2%20911%20Carrera%20and%20Carrera%20Cabriolet%20Technical%20Specifications.pdf",
+   "k": "Porsche"
+  },
+  "r25s": {
+   "t": "PCNA: 2025 911 Carrera S Coupe and Cabriolet announced (Jan 2025)",
+   "u": "https://newsroom.porsche.com/dam/jcr:0ded09b5-4750-4763-b502-cc20e1654c9c/02_2025_Porsche_911_Carrera_S_Announced.pdf",
+   "k": "Porsche"
+  },
+  "t25s": {
+   "t": "PCNA: 911 Carrera S (992.2) U.S. specifications",
+   "u": "https://newsroom.porsche.com/dam/jcr:bfdc5085-68fd-4472-9a20-6ea1d0c8cf44/Type%20992.2%20911%20Carrera%20S%20and%20911%20Carrera%20S%20Cabriolet%20U.S.%20specifications.pdf",
+   "k": "Porsche"
+  },
+  "z60": {
+   "t": "0-60specs.com: Porsche 911 0-60 runs by magazine (Car and Driver, MotorTrend, Road & Track)",
+   "u": "https://www.0-60specs.com/porsche/911-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "wiki996": {
+   "t": "Wikipedia: Porsche 996",
+   "u": "https://en.wikipedia.org/wiki/Porsche_996",
+   "k": "Wikipedia"
+  },
+  "wiki997": {
+   "t": "Wikipedia: Porsche 997",
+   "u": "https://en.wikipedia.org/wiki/Porsche_997",
+   "k": "Wikipedia"
+  },
+  "eisen": {
+   "t": "Top Class Actions: Porsche IMS engine defect settlement (Eisen v. Porsche Cars North America, 2013)",
+   "u": "https://topclassactions.com/lawsuit-settlements/closed-settlements/porsche-ims-engine-defect-class-action-lawsuit-settlement",
+   "k": "class action settlement"
+  },
+  "lnims": {
+   "t": "LN Engineering: The essential guide to Porsche 996 IMS bearing issues",
+   "u": "https://docs.lnengineering.com/article/116-the-essential-guide-to-porsche-996-ims-bearing-issues",
+   "k": "parts seller"
+  },
+  "lnyears": {
+   "t": "LN Engineering: Porsche IMS bearing problem years and when to replace",
+   "u": "https://lnengineering.com/products/the-definitive-guide-and-faq-for-porsche-ims-bearings/when-to-replace-the-porsche-ims-bearing/",
+   "k": "parts seller"
+  },
+  "renn": {
+   "t": "Renndriver: Porsche 911 common problems by generation",
+   "u": "https://renndriver.com/guides/porsche-911-common-problems/",
+   "k": "outlet"
+  },
+  "rerev": {
+   "t": "REREV: best and worst Porsche 991 years",
+   "u": "https://rerev.com/years-to-avoid/vehicles/porsche-991/",
+   "k": "outlet"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-porsche-911-carrera",
+ "img": "/assets/ai-perf/porsche-911-carrera.webp?v=1"
+}

@@ -67,23 +67,26 @@ def yt_study(st, extra=None):
     pct = lambda c: [[k, round(100 * x / n)] for k, x in c.most_common(4) if n and x / n >= .05]
     return dict(videos=n, praise=pct(pc), trouble=pct(tc), top=[dict(id=v['id'], title=v['title'], views=v.get('views') or 0, ch=v.get('channel') or '') for v in top])
 
+def studies(D):
+    """every study a page uses: per generation (site models), the car's own study, a trim study (e.g. the M3 Competition), one per engine"""
+    ids = [g.get(k) for g in D['gens'] for k in ('yt_study', 'comp_study')] + [D.get('yt_study')] + [e.get('study') for e in D['engines'].values()]
+    return list(dict.fromkeys(i for i in ids if i))
+
 def yt_all(D):
-    """every study the page uses: one per generation, the trim study (e.g. the M3 Competition) and one per engine"""
-    out = {}
-    for gd in D['gens']:
-        for k in ('yt_study', 'comp_study'):
-            if gd.get(k): out[gd[k]] = yt_study(gd[k], D.get('topics_extra'))
-    for e in D['engines'].values():
-        if e.get('study'): out[e['study']] = yt_study(e['study'], D.get('topics_extra'))
-    return out
+    return {st: yt_study(st, D.get('topics_extra')) for st in studies(D)}
 
 def nhtsa(D):
     """complaints per model year, and per generation how many complaints mention each engine issue (with 2 example complaint ids)"""
     if not os.path.exists(DB): return None
     c = sqlite3.connect(DB); n = D['nhtsa']
-    q = f"select odino, year, max(descr) from rows where make=? and model in ({','.join('?' * len(n['models']))}) and year between 1990 and 2026 group by odino"
-    rows = c.execute(q, [n['make']] + n['models']).fetchall()
+    q = f"select odino, year, max(descr), group_concat(comp, '|') from rows where make=? and model in ({','.join('?' * len(n['models']))}) and year between 1990 and 2026 group by odino"
+    allr = c.execute(q, [n['make']] + n['models']).fetchall()
+    rows = [(o, y, d) for o, y, d, _ in allr]
     by_year = collections.Counter(y for _, y, _ in rows)
+    inyrs = lambda y: any(g['y0'] <= y <= g['y1'] for g in D['gens'])
+    parts = collections.Counter()   # what the complaints are about (NHTSA's component, first level), each complaint once per part
+    for o, y, d, cp in allr:
+        if inyrs(y): parts.update({x.split(':')[0].strip().capitalize() for x in (cp or '').split('|') if x.strip()})
     gens = {}
     for gd in D['gens']:
         rs = [(o, y, d or '') for o, y, d in rows if gd['y0'] <= y <= gd['y1']]
@@ -93,7 +96,7 @@ def nhtsa(D):
             hit = [o for o, y, d in rs if re.search(i['rx'], d, re.I)]
             iss[i['t']] = dict(n=len(hit), ex=hit[:2])
         gens[gd['id']] = dict(n=len(rs), issues=iss)
-    return dict(by_year={str(y): by_year[y] for y in sorted(by_year)}, gens=gens)
+    return dict(by_year={str(y): by_year[y] for y in sorted(by_year)}, gens=gens, parts=[[k, v] for k, v in parts.most_common(6)])
 
 def recalls(D):
     """NHTSA recalls per model year (each campaign once per year), cached"""
@@ -122,8 +125,7 @@ def scores(D):
     live = {}
     for p in (os.path.join(HERE, 'data', 'supercar_engine_yt.json'), os.path.join(MAIN, 'data', 'supercar_engine_yt.json')):
         live.update(_load(p, {}) or {})
-    ids = [g.get('comp_study') for g in D['gens']] + [e.get('study') for e in D['engines'].values()]
-    return {i: live[i] for i in ids if i and i in live}
+    return {i: live[i] for i in studies(D) if i in live}
 
 if __name__ == '__main__':
     sys.stdout.reconfigure(encoding='utf-8')

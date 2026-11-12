@@ -1,0 +1,364 @@
+{
+ "built": "2026-11-11",
+ "nhtsa": {
+  "by_year": {
+   "1990": 1,
+   "1991": 1,
+   "1992": 2,
+   "1995": 13,
+   "1996": 7,
+   "1997": 4,
+   "1998": 2,
+   "1999": 21,
+   "2000": 8,
+   "2001": 9,
+   "2002": 13,
+   "2003": 14,
+   "2004": 15,
+   "2005": 6,
+   "2006": 6,
+   "2007": 4,
+   "2008": 4,
+   "2009": 2,
+   "2010": 1,
+   "2012": 6,
+   "2013": 10,
+   "2014": 6,
+   "2015": 8,
+   "2016": 2,
+   "2017": 5,
+   "2018": 1,
+   "2019": 2,
+   "2020": 7,
+   "2021": 6,
+   "2022": 10,
+   "2023": 3,
+   "2024": 7,
+   "2025": 1,
+   "2026": 1
+  },
+  "gens": {
+   "996": {
+    "n": 59,
+    "issues": {
+     "IMS bearing failure": {
+      "n": 13,
+      "ex": [
+       "10241650",
+       "10319400"
+      ]
+     },
+     "Rear main seal leaks": {
+      "n": 2,
+      "ex": [
+       "10289481",
+       "10547657"
+      ]
+     }
+    }
+   },
+   "997-1": {
+    "n": 20,
+    "issues": {
+     "Bore scoring": {
+      "n": 1,
+      "ex": [
+       "11173325"
+      ]
+     },
+     "IMS bearing failure": {
+      "n": 0,
+      "ex": []
+     },
+     "Rear main seal leaks": {
+      "n": 0,
+      "ex": []
+     }
+    }
+   },
+   "997-2": {
+    "n": 9,
+    "issues": {
+     "Ignition coil failures": {
+      "n": 0,
+      "ex": []
+     }
+    }
+   },
+   "991-1": {
+    "n": 32,
+    "issues": {
+     "Ignition coil failures": {
+      "n": 0,
+      "ex": []
+     }
+    }
+   },
+   "991-2": {
+    "n": 8,
+    "issues": {
+     "Oil use on early 2017 cars": {
+      "n": 0,
+      "ex": []
+     },
+     "Turbo coolant line leaks": {
+      "n": 0,
+      "ex": []
+     }
+    }
+   },
+   "992": {
+    "n": 34,
+    "issues": {
+     "Oil use on early 2017 cars": {
+      "n": 1,
+      "ex": [
+       "11762189"
+      ]
+     },
+     "Turbo coolant line leaks": {
+      "n": 0,
+      "ex": []
+     }
+    }
+   }
+  },
+  "parts": [
+   [
+    "Engine",
+    47
+   ],
+   [
+    "Electrical system",
+    22
+   ],
+   [
+    "Fuel/propulsion system",
+    17
+   ],
+   [
+    "Engine and engine cooling",
+    16
+   ],
+   [
+    "Power train",
+    13
+   ],
+   [
+    "Unknown or other",
+    11
+   ]
+  ]
+ },
+ "recalls": {
+  "2000": [
+   {
+    "id": "00V109000",
+    "part": "FUEL SYSTEM, GASOLINE:STORAGE:TANK ASSEMBLY",
+    "summary": "VEHICLE DESCRIPTION:  PASSENGER VEHICLES.    INCORRECT PROGRAMMING OF THE ELECTRONIC LOGIC UNIT CAN CAUSE AN INCORRECT FUEL LEVEL."
+   }
+  ],
+  "2001": [],
+  "2002": [],
+  "2003": [],
+  "2004": [],
+  "2005": [],
+  "2006": [],
+  "2007": [],
+  "2008": [],
+  "2009": [],
+  "2010": [],
+  "2011": [],
+  "2012": [],
+  "2013": [],
+  "2014": [
+   {
+    "id": "14V698000",
+    "part": "LATCHES/LOCKS/LINKAGES:HOOD:LATCH",
+    "summary": "Porsche Cars North America, Inc. (Porsche) is recalling certain model year 2014-2015 Porsche 911, Boxster, and Cayman vehicles manufactured May 7, 2014, to September 23, 2014.  The front hood upper lock components were not manufactured to specification and may fail to securely latch the vehicle's hood during operation."
+   }
+  ],
+  "2015": [
+   {
+    "id": "14V698000",
+    "part": "LATCHES/LOCKS/LINKAGES:HOOD:LATCH",
+    "summary": "Porsche Cars North America, Inc. (Porsche) is recalling certain model year 2014-2015 Porsche 911, Boxster, and Cayman vehicles manufactured May 7, 2014, to September 23, 2014.  The front hood upper lock components were not manufactured to specification and may fail to securely latch the vehicle's hood during operation."
+   }
+  ],
+  "2016": [
+   {
+    "id": "19V533000",
+    "part": "AIR BAGS: AIR BAG/RESTRAINT CONTROL MODULE",
+    "summary": "Porsche Cars North America, Inc. (Porsche) is recalling certain 2016-2017 911 and Boxster, 2016 Cayman and Panamera vehicles.  The air bag Electronic Control Unit (ECU) may have a defective power supply capacitor that can result in air bag deactivation or inadvertent deployment of the air bags."
+   },
+   {
+    "id": "17V134000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Porsche Cars North America, Inc. (Porsche) is recalling certain 2016 911 GT3 RS and 911 R vehicles and 2017 911 Carrera, 911 Carrera Cabriolet, 911 Carrera 4, 911 Carrera 4S, 911 Carrera 4S Cabriolet, 911 Carrera S, 911 Carrera S Cabriolet, 911 Targa 4, 911 Targa 4S, 911 Turbo S, 911 Turbo S Cabriolet, 718 Boxster, 718 Boxster S, 718 Cayman and 718 Cayman S vehicles.  The passenger frontal air bag"
+   }
+  ],
+  "2017": [
+   {
+    "id": "19V533000",
+    "part": "AIR BAGS: AIR BAG/RESTRAINT CONTROL MODULE",
+    "summary": "Porsche Cars North America, Inc. (Porsche) is recalling certain 2016-2017 911 and Boxster, 2016 Cayman and Panamera vehicles.  The air bag Electronic Control Unit (ECU) may have a defective power supply capacitor that can result in air bag deactivation or inadvertent deployment of the air bags."
+   },
+   {
+    "id": "16V946000",
+    "part": "AIR BAGS:SIDE/WINDOW",
+    "summary": "Porsche Cars North America, Inc. (Porsche) is recalling certain model year 2017 718 Boxster, 718 Boxster S, 718 Cayman, 718 Cayman S, 911 Carrera, 911 Carrera S, 911 Carrera S Cabriolet, 911 Carrera 4S, 911 Turbo, 911 Turbo S, 911 Carrera 4S Cabriolet, and 911 Turbo Cabriolet vehicles.  The seat mounted side air bag inflator initiator may fail to ignite during a crash."
+   },
+   {
+    "id": "17V135000",
+    "part": "VISIBILITY:WINDSHIELD",
+    "summary": "Porsche Cars North America, Inc. (Porsche) is recalling certain 2017 911 Carrera Cabriolet, 911 Carrera 4 Cabriolet, 911 Carrera 4S Cabriolet, 911 Carrera S Cabriolet, 911 Targa S, 911 Targa 4S, 911 Turbo Cabriolet, 718 Boxter and 718 Boxter S vehicles.  During manufacturing, the windshield may not have been properly bonded to the vehicle, allowing it to detach in a crash.  As such, these vehicles"
+   }
+  ],
+  "2018": [
+   {
+    "id": "19V179000",
+    "part": "AIR BAGS",
+    "summary": "Porsche Cars North America, Inc. (Porsche) is recalling certain 2018 718 Boxster, Boxster S and Boxster GTS, 718 Cayman, Cayman S and Cayman GTS, 911 Carrera, Carrera T, Targa 4 GTS, Carrera 4, Carrera S, Carrera 4S, Carrera GTS, Carrera 4 GTS, Carrera Cabriolet, Carrera S Cabriolet, Carrera 4S Cabriolet, Carrera GTS Cabriolet, Carrera 4 GTS Cabriolet, Targa 4, Targa 4S, Turbo, Turbo S, Turbo S Ex"
+   }
+  ],
+  "2019": [
+   {
+    "id": "21V201000",
+    "part": "SUSPENSION:REAR",
+    "summary": "Porsche Cars North America, Inc. (Porsche) is recalling certain 2019 Porsche 911 Speedster, 2020 Porsche 911 Carrera S Coupe, Carrera 4S Coupe, and Carrera S Cabriolet vehicles.  The screw connection on the rear axle upper control arm may be loose."
+   }
+  ],
+  "2020": [
+   {
+    "id": "24V155000",
+    "part": "VISIBILITY:WINDSHIELD",
+    "summary": "Porsche Cars North America, Inc. (Porsche) is recalling certain 2020-2024 911 vehicles.  The front windshield and rear window may not be properly secured and can detach."
+   },
+   {
+    "id": "25V896000",
+    "part": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+    "summary": "Porsche Cars North America, Inc. (Porsche) is recalling certain 2019-2025 Cayenne, Cayenne E-Hybrid, 2020-2025 911, Taycan, 2024-2025 Panamera, and 2025 Panamera E-Hybrid vehicles. The rearview camera image may not display when the vehicle is placed in reverse. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 111, \"Rear Visibility"
+   }
+  ],
+  "2021": [
+   {
+    "id": "21V157000",
+    "part": "SUSPENSION",
+    "summary": "Porsche Cars North America, Inc. (Porsche) is recalling certain 2021 Porsche Taycan Turbo, Taycan Turbo S, Taycan, Taycan 4S, 911 Turbo S Coupe, Cayman, Cayman T, Cayman S, Cayman GT4, 911 Carrera Coupe, 911 Carrera S Coupe, 911 Carrera 4S Coupe, 911 Carrera 4S Targa, 911 Carrera Cabriolet, 911 Carrera S Cabriolet, 911 Carrera 4S Targa Heritage Design Edition, 911 Carrera 4S Cabriolet, 911 Turbo C"
+   },
+   {
+    "id": "21V608000",
+    "part": "SEAT BELTS:REAR/OTHER:RETRACTOR",
+    "summary": "Porsche Cars North America, Inc. (Porsche) is recalling certain 2021 911 Carrera Coupe, 911 Carrera S Coupe, 911 Carrera 4 Coupe, 911 Carrera 4S Coupe, 911 Turbo Coupe, 911 Turbo S Coupe, Panamera, Panamera 4 E-Hybrid, Panamera 4S, Panamera GTS, Panamera Turbo S, Taycan, Taycan 4S, Taycan Turbo, and Taycan Turbo S vehicles.  The seat belt automatic locking retractors may deactivate early, which ca"
+   },
+   {
+    "id": "21V467000",
+    "part": "SEATS",
+    "summary": "Porsche Cars North America, Inc. (Porsche) is recalling certain 2021 911 Turbo Coupe, 911 Turbo S Coupe, 911 Carrera 4S Targa, 911 Carrera 4S Cabriolet, 911 Turbo S Cabriolet, and 911 Turbo Cabriolet vehicles.  Incorrect passenger seat was installed and may cause a Occupant Classification System (OCS) malfunction."
+   },
+   {
+    "id": "24V155000",
+    "part": "VISIBILITY:WINDSHIELD",
+    "summary": "Porsche Cars North America, Inc. (Porsche) is recalling certain 2020-2024 911 vehicles.  The front windshield and rear window may not be properly secured and can detach."
+   },
+   {
+    "id": "24V809000",
+    "part": "WHEELS:LUGS/NUTS/BOLTS/STUDS",
+    "summary": "Porsche Cars North America, Inc. (Porsche) is recalling certain 2025 Panamera, 2024 718 Cayman GT4 RS, 718 Spyder RS, and 2021-2024 911 vehicles.  The center lock wheel bolt may fracture and cause the wheel to detach."
+   },
+   {
+    "id": "25V896000",
+    "part": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+    "summary": "Porsche Cars North America, Inc. (Porsche) is recalling certain 2019-2025 Cayenne, Cayenne E-Hybrid, 2020-2025 911, Taycan, 2024-2025 Panamera, and 2025 Panamera E-Hybrid vehicles. The rearview camera image may not display when the vehicle is placed in reverse. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 111, \"Rear Visibility"
+   }
+  ],
+  "2022": [
+   {
+    "id": "22V897000",
+    "part": "STRUCTURE:INTERIOR PANELS:DASHBOARD",
+    "summary": "Porsche Cars North America, Inc. (Porsche) is recalling certain 2022-2023 911 vehicles.  In the event of a crash with passenger air bag deployment, the dashboard console may break, causing the air bag to deploy improperly."
+   },
+   {
+    "id": "24V155000",
+    "part": "VISIBILITY:WINDSHIELD",
+    "summary": "Porsche Cars North America, Inc. (Porsche) is recalling certain 2020-2024 911 vehicles.  The front windshield and rear window may not be properly secured and can detach."
+   },
+   {
+    "id": "24V809000",
+    "part": "WHEELS:LUGS/NUTS/BOLTS/STUDS",
+    "summary": "Porsche Cars North America, Inc. (Porsche) is recalling certain 2025 Panamera, 2024 718 Cayman GT4 RS, 718 Spyder RS, and 2021-2024 911 vehicles.  The center lock wheel bolt may fracture and cause the wheel to detach."
+   },
+   {
+    "id": "25V896000",
+    "part": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+    "summary": "Porsche Cars North America, Inc. (Porsche) is recalling certain 2019-2025 Cayenne, Cayenne E-Hybrid, 2020-2025 911, Taycan, 2024-2025 Panamera, and 2025 Panamera E-Hybrid vehicles. The rearview camera image may not display when the vehicle is placed in reverse. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 111, \"Rear Visibility"
+   }
+  ],
+  "2023": [
+   {
+    "id": "22V897000",
+    "part": "STRUCTURE:INTERIOR PANELS:DASHBOARD",
+    "summary": "Porsche Cars North America, Inc. (Porsche) is recalling certain 2022-2023 911 vehicles.  In the event of a crash with passenger air bag deployment, the dashboard console may break, causing the air bag to deploy improperly."
+   },
+   {
+    "id": "24V155000",
+    "part": "VISIBILITY:WINDSHIELD",
+    "summary": "Porsche Cars North America, Inc. (Porsche) is recalling certain 2020-2024 911 vehicles.  The front windshield and rear window may not be properly secured and can detach."
+   },
+   {
+    "id": "24V809000",
+    "part": "WHEELS:LUGS/NUTS/BOLTS/STUDS",
+    "summary": "Porsche Cars North America, Inc. (Porsche) is recalling certain 2025 Panamera, 2024 718 Cayman GT4 RS, 718 Spyder RS, and 2021-2024 911 vehicles.  The center lock wheel bolt may fracture and cause the wheel to detach."
+   },
+   {
+    "id": "25V078000",
+    "part": "SEAT BELTS: REAR/OTHER:BUCKLE ASSEMBLY",
+    "summary": "Porsche Cars North America, Inc. (Porsche) is recalling certain 2023 911 vehicles.  The bolts for the rear seat belt buckles may not be tightened properly."
+   },
+   {
+    "id": "25V896000",
+    "part": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+    "summary": "Porsche Cars North America, Inc. (Porsche) is recalling certain 2019-2025 Cayenne, Cayenne E-Hybrid, 2020-2025 911, Taycan, 2024-2025 Panamera, and 2025 Panamera E-Hybrid vehicles. The rearview camera image may not display when the vehicle is placed in reverse. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 111, \"Rear Visibility"
+   }
+  ],
+  "2024": [
+   {
+    "id": "24V155000",
+    "part": "VISIBILITY:WINDSHIELD",
+    "summary": "Porsche Cars North America, Inc. (Porsche) is recalling certain 2020-2024 911 vehicles.  The front windshield and rear window may not be properly secured and can detach."
+   },
+   {
+    "id": "24V809000",
+    "part": "WHEELS:LUGS/NUTS/BOLTS/STUDS",
+    "summary": "Porsche Cars North America, Inc. (Porsche) is recalling certain 2025 Panamera, 2024 718 Cayman GT4 RS, 718 Spyder RS, and 2021-2024 911 vehicles.  The center lock wheel bolt may fracture and cause the wheel to detach."
+   },
+   {
+    "id": "25V896000",
+    "part": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+    "summary": "Porsche Cars North America, Inc. (Porsche) is recalling certain 2019-2025 Cayenne, Cayenne E-Hybrid, 2020-2025 911, Taycan, 2024-2025 Panamera, and 2025 Panamera E-Hybrid vehicles. The rearview camera image may not display when the vehicle is placed in reverse. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 111, \"Rear Visibility"
+   },
+   {
+    "id": "26V682000",
+    "part": "WHEELS:LUGS/NUTS/BOLTS/STUDS",
+    "summary": "Porsche Cars North America, Inc. (Porsche) is recalling certain 2024 718 Cayman GT4 RS, 911 Turbo S, 911 Turbo, 911 S/T, 911 GT3 RS, 911 GT3, 911 Carrera GTS, and 718 Spyder RS vehicles. The center lock wheel bolt may fracture and cause the wheel to detach."
+   }
+  ],
+  "2025": [
+   {
+    "id": "25V079000",
+    "part": "EXTERIOR LIGHTING:LIGHTING CONTROL MODULE:SOFTWARE",
+    "summary": "Porsche Cars North America, Inc. (Porsche) is recalling certain 2025 911 vehicles.  A software error in the front-end electronics control module may result in the low beam headlights creating a glare for oncoming traffic.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 108, \"Lamps, Reflective Devices, and Associated Equipment.\""
+   },
+   {
+    "id": "25V896000",
+    "part": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+    "summary": "Porsche Cars North America, Inc. (Porsche) is recalling certain 2019-2025 Cayenne, Cayenne E-Hybrid, 2020-2025 911, Taycan, 2024-2025 Panamera, and 2025 Panamera E-Hybrid vehicles. The rearview camera image may not display when the vehicle is placed in reverse. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 111, \"Rear Visibility"
+   }
+  ]
+ },
+ "yt": {
+  "car-porsche-911-carrera": null,
+  "porsche-9a2": null
+ },
+ "scores": {}
+}

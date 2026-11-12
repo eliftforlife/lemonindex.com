@@ -1,0 +1,170 @@
+{
+ "built": "2026-11-11",
+ "nhtsa": {
+  "by_year": {
+   "1990": 4,
+   "1991": 6,
+   "1993": 2,
+   "1994": 7,
+   "1995": 1,
+   "1997": 1,
+   "1998": 1,
+   "2020": 16,
+   "2021": 20,
+   "2022": 1,
+   "2023": 5,
+   "2024": 1,
+   "2025": 2
+  },
+  "gens": {
+   "a90": {
+    "n": 45,
+    "issues": {
+     "Brake-assist recall (engine software)": {
+      "n": 0,
+      "ex": []
+     },
+     "Oil filter housing leaks": {
+      "n": 0,
+      "ex": []
+     },
+     "Coolant loss": {
+      "n": 0,
+      "ex": []
+     },
+     "Valve cover and PCV": {
+      "n": 0,
+      "ex": []
+     }
+    }
+   }
+  },
+  "parts": [
+   [
+    "Electrical system",
+    13
+   ],
+   [
+    "Engine",
+    9
+   ],
+   [
+    "Unknown or other",
+    8
+   ],
+   [
+    "Service brakes",
+    8
+   ],
+   [
+    "Steering",
+    5
+   ],
+   [
+    "Suspension",
+    2
+   ]
+  ]
+ },
+ "recalls": {
+  "2020": [
+   {
+    "id": "21V598000",
+    "part": "ENGINE",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2020 M340i, M340i xDrive, 540i, 540i xDrive, X3 M40i, 2020-2021 X4 M40i, 745Le xDrive, 2019-2021 Z4 M40i, and 2020-2021 Toyota Supra vehicles.  During engine start, the engine management software may cause loss of braking assist.  Full mechanical braking (without assist) remains available."
+   },
+   {
+    "id": "19V850000",
+    "part": "EXTERIOR LIGHTING:HEADLIGHTS",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2020 Z4 M40i, Z4 sDrive30i, 330i and 330i xDrive vehicles as well as 2020 Toyota Supra vehicles.  The headlight control units may fail causing a loss of one or both of the headlights."
+   },
+   {
+    "id": "19V684000",
+    "part": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2018 540d, 2018-2020 530i, 530i xDrive, 540i, 540i xDrive, M550i xDrive, M5, 530e, 530e xDrive, X3 sDrive, X3 xDrive, X3 M40i, X3 M, and 2019-2020 X4 xDrive, X4 M40i, X4 M, X7 xDrive, X7 M50i, 740Li, 740Li xDrive, 750Li, 750Li xDrive, 8 Series Convertible and Coupe 840i, 840i xDrive, M850i xDrive, X5 sDrive, X5 xDrive, X5 M50i, X6 xDrive, X6 M50"
+   },
+   {
+    "id": "20V700000",
+    "part": "FUEL SYSTEM, GASOLINE:STORAGE:TANK ASSEMBLY",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2020-2021 Z4 and 2020-2021 Toyota Supra vehicles.  The weld between the fuel tank halves may have been insufficiently welded, causing the weld to fail."
+   },
+   {
+    "id": "19V653000",
+    "part": "SEAT BELTS:FRONT",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2020 Toyota Supra vehicles.  The driver's seat belt guide loop mount may have been improperly welded."
+   },
+   {
+    "id": "20V355000",
+    "part": "STEERING:LINKAGES:TIE ROD ASSEMBLY",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2019 Z4 sDrive30i, 2019-2020 330i xDrive, M340i and M340i xDrive, 2020 X3M and X4M, and Toyota Supra vehicles.  In certain driving conditions, such as high temperatures and rough road surfaces, a steering gear tie rod may become damaged, possibly resulting in a fractured tie rod."
+   },
+   {
+    "id": "20V516000",
+    "part": "EXTERIOR LIGHTING:HEADLIGHTS",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2019-2020 Z4 sDrive30i, Z4 M40i and 2020 Toyota Supra vehicles.  The  headlamps are able to be adjusted horizontally.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 108, \"Lamps, Reflective Devices and Associated Equipment.\""
+   },
+   {
+    "id": "25V636000",
+    "part": "ELECTRICAL SYSTEM:STARTER ASSEMBLY:RELAY",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2019-2021 BMW 330i, 2019-2022 BMW Z4, 2020-2022 BMW 530i, X3, X4, Toyota Supra, 2021-2022 BMW 430i, 430i Convertible, and 2022 BMW 230i vehicles. The engine starter relay may corrode, causing the relay to overheat and short circuit."
+   }
+  ],
+  "2021": [
+   {
+    "id": "21V554000",
+    "part": "SEAT BELTS",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2021 2 Series (230i, 230i xDrive, M240i, M240i xDrive), 330e, 330e Xdrive, 4 Series Coupe (430i, 430i xDrive, M440i xDrive) M4 Coupe, M4 Competition Coupe, BMW 4 Series Convertible (430i, M440i), BMW X1 sDrive28i, xDrive28i, 2 Series Gran Coupe (228i, 228i xDrive, M235i xDrive), M2 Competition Coupe, 330i, 330i xDrive, M340i, M340i xDrive, M3, M"
+   },
+   {
+    "id": "20V700000",
+    "part": "FUEL SYSTEM, GASOLINE:STORAGE:TANK ASSEMBLY",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2020-2021 Z4 and 2020-2021 Toyota Supra vehicles.  The weld between the fuel tank halves may have been insufficiently welded, causing the weld to fail."
+   },
+   {
+    "id": "21V598000",
+    "part": "ENGINE",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2020 M340i, M340i xDrive, 540i, 540i xDrive, X3 M40i, 2020-2021 X4 M40i, 745Le xDrive, 2019-2021 Z4 M40i, and 2020-2021 Toyota Supra vehicles.  During engine start, the engine management software may cause loss of braking assist.  Full mechanical braking (without assist) remains available."
+   },
+   {
+    "id": "25V636000",
+    "part": "ELECTRICAL SYSTEM:STARTER ASSEMBLY:RELAY",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2019-2021 BMW 330i, 2019-2022 BMW Z4, 2020-2022 BMW 530i, X3, X4, Toyota Supra, 2021-2022 BMW 430i, 430i Convertible, and 2022 BMW 230i vehicles. The engine starter relay may corrode, causing the relay to overheat and short circuit."
+   },
+   {
+    "id": "26V056000",
+    "part": "ELECTRICAL SYSTEM:STARTER ASSEMBLY",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2021-2023 Toyota Supra, 2022-2023 2 Series Coupe, 2021-2024 5 Series (xDrive), 2021-2022 Z4, 2022-2024 4 Series (Gran Coupe), 2021-2024 4 Series (Convertible and xDrive Convertible), 2021-2023 4 Series (Coupe), 2021-2024 3 Series, 2021-2023 X4, 2021-2024 X3 vehicles. Please see the recall report for a complete list of all models. The engine star"
+   }
+  ],
+  "2022": [
+   {
+    "id": "25V636000",
+    "part": "ELECTRICAL SYSTEM:STARTER ASSEMBLY:RELAY",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2019-2021 BMW 330i, 2019-2022 BMW Z4, 2020-2022 BMW 530i, X3, X4, Toyota Supra, 2021-2022 BMW 430i, 430i Convertible, and 2022 BMW 230i vehicles. The engine starter relay may corrode, causing the relay to overheat and short circuit."
+   },
+   {
+    "id": "26V056000",
+    "part": "ELECTRICAL SYSTEM:STARTER ASSEMBLY",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2021-2023 Toyota Supra, 2022-2023 2 Series Coupe, 2021-2024 5 Series (xDrive), 2021-2022 Z4, 2022-2024 4 Series (Gran Coupe), 2021-2024 4 Series (Convertible and xDrive Convertible), 2021-2023 4 Series (Coupe), 2021-2024 3 Series, 2021-2023 X4, 2021-2024 X3 vehicles. Please see the recall report for a complete list of all models. The engine star"
+   }
+  ],
+  "2023": [
+   {
+    "id": "23V821000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION:CONTROL MODULE (TCM/PCM/TECM)",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2023 Toyota GR Supra, 3 Series Sedan (330i xDrive, M340i xDrive, M3), 5 Series Sedan (530i, 530i xDrive, M5), 4 Series Gran Coupe (430i, 430i xDrive), 4 Series Coupe (430i, 430i xDrive, M440i xDrive), 4 Series Convertible (430i, 430i xDrive, M440i xDrive), 8 Series Coupe (840i, M850i xDrive, M8), 8 Series Convertible (840i, M850i xDrive, M8), 8 "
+   },
+   {
+    "id": "26V056000",
+    "part": "ELECTRICAL SYSTEM:STARTER ASSEMBLY",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2021-2023 Toyota Supra, 2022-2023 2 Series Coupe, 2021-2024 5 Series (xDrive), 2021-2022 Z4, 2022-2024 4 Series (Gran Coupe), 2021-2024 4 Series (Convertible and xDrive Convertible), 2021-2023 4 Series (Coupe), 2021-2024 3 Series, 2021-2023 X4, 2021-2024 X3 vehicles. Please see the recall report for a complete list of all models. The engine star"
+   }
+  ],
+  "2024": [],
+  "2025": []
+ },
+ "yt": {
+  "car-gr-supra": null
+ },
+ "scores": {}
+}

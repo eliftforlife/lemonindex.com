@@ -1,0 +1,467 @@
+{
+ "slug": "gr-supra",
+ "name": "Toyota GR Supra",
+ "short": "GR Supra",
+ "make": "Toyota",
+ "page": "/cars/gr-supra/",
+ "focus": "a90",
+ "star": "a90-30",
+ "h1": "Toyota GR Supra: performance, engines and what owners say",
+ "nhtsa": {
+  "make": "TOYOTA",
+  "models": [
+   "SUPRA"
+  ],
+  "note": "NHTSA files the GR Supra under Supra, so these counts include the 2.0 and the 3.0."
+ },
+ "topics_extra": {
+  "Oil filter housing": "oil filter housing",
+  "Coolant leak": "coolant (leak|loss)|losing coolant|water pump",
+  "Valve cover / PCV": "valve cover|\\bpcv\\b|oil separator",
+  "Brake assist recall": "brake assist|vacuum pump|brake booster",
+  "Clutch": "\\bclutch\\b"
+ },
+ "gens": [
+  {
+   "id": "a90",
+   "code": "A90 (J29)",
+   "years": "2020–2025",
+   "y0": 2020,
+   "y1": 2025,
+   "engine": "B58",
+   "body": "Coupe",
+   "tag": "BMW-built six. 382 hp from 2021, 6-speed manual from 2023.",
+   "variants": [
+    {
+     "id": "a90-20",
+     "name": "GR Supra 3.0",
+     "years": "2020",
+     "hp": {
+      "v": 335,
+      "src": [
+       "t19",
+       "t19s"
+      ],
+      "note": "at 5,000–6,500 rpm"
+     },
+     "tq": {
+      "v": 365,
+      "src": [
+       "t19",
+       "t19s"
+      ],
+      "note": "lb-ft at 1,600–4,500 rpm"
+     },
+     "z60": {
+      "v": 3.7,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 4.1,
+      "csrc": [
+       "t19"
+      ]
+     },
+     "top": {
+      "v": "155 mph",
+      "src": [
+       "t19"
+      ],
+      "note": "limited"
+     },
+     "trans": {
+      "v": "8-speed automatic, rear-drive",
+      "src": [
+       "t19s"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,397 lb",
+      "src": [
+       "t19s"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$49,990",
+      "src": [
+       "t19",
+       "t19s"
+      ],
+      "note": "2020, plus $930 destination"
+     }
+    },
+    {
+     "id": "a90-30",
+     "name": "GR Supra 3.0",
+     "years": "2021–2025",
+     "star": true,
+     "hp": {
+      "v": 382,
+      "src": [
+       "t21",
+       "t21a"
+      ],
+      "note": "at 5,800–6,500 rpm"
+     },
+     "tq": {
+      "v": 368,
+      "src": [
+       "t21",
+       "t21a"
+      ],
+      "note": "lb-ft at 1,800–5,000 rpm"
+     },
+     "z60": {
+      "v": 3.7,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 3.9,
+      "csrc": [
+       "t21",
+       "t25"
+      ]
+     },
+     "top": {
+      "v": "155 mph",
+      "src": [
+       "t21"
+      ],
+      "note": "limited"
+     },
+     "trans": {
+      "v": "8-speed automatic, rear-drive",
+      "src": [
+       "t21"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$50,990",
+      "src": [
+       "t21",
+       "t25"
+      ],
+      "note": "2021, destination not included; 2025: $56,250 plus $1,095"
+     },
+     "what": "New exhaust manifold and pistons (compression 11:1 to 10.2:1) add 47 hp.",
+     "what_src": [
+      "t21",
+      "t21a"
+     ]
+    },
+    {
+     "id": "a90-mt",
+     "name": "GR Supra 3.0 manual",
+     "years": "2023–2025",
+     "hp": {
+      "v": 382,
+      "src": [
+       "tmt",
+       "t25"
+      ],
+      "note": ""
+     },
+     "tq": {
+      "v": 368,
+      "src": [
+       "t24",
+       "t25"
+      ],
+      "note": "lb-ft"
+     },
+     "z60": {
+      "v": 3.9,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 4.2,
+      "csrc": [
+       "tmt",
+       "t25"
+      ]
+     },
+     "trans": {
+      "v": "6-speed manual, rear-drive",
+      "src": [
+       "tmt"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,389 lb",
+      "src": [
+       "tmt",
+       "t25"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$52,500",
+      "src": [
+       "tmt"
+      ],
+      "note": "2023, destination not included"
+     },
+     "what": "ZF 6-speed with auto rev-matching; tested time is the A91-MT edition.",
+     "what_src": [
+      "tmt",
+      "z60"
+     ]
+    },
+    {
+     "id": "a90-20l",
+     "name": "GR Supra 2.0",
+     "years": "2021–2024",
+     "hp": {
+      "v": 255,
+      "src": [
+       "t21",
+       "t21a"
+      ],
+      "note": "at 5,000–6,500 rpm"
+     },
+     "tq": {
+      "v": 295,
+      "src": [
+       "t21",
+       "t21a"
+      ],
+      "note": "lb-ft at 1,550–4,400 rpm"
+     },
+     "z60": {
+      "v": 4.5,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 5.0,
+      "csrc": [
+       "t21"
+      ]
+     },
+     "top": {
+      "v": "155 mph",
+      "src": [
+       "t21"
+      ],
+      "note": "limited"
+     },
+     "trans": {
+      "v": "8-speed automatic, rear-drive",
+      "src": [
+       "t21a"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,181 lb",
+      "src": [
+       "t21"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$42,990",
+      "src": [
+       "t21"
+      ],
+      "note": "2021, destination not included"
+     },
+     "what": "2.0-liter turbo four (BMW B48), not the B58. Dropped for 2025.",
+     "what_src": [
+      "t21a",
+      "ae26",
+      "t25"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "B58": {
+   "name": "BMW B58",
+   "what": "3.0-liter inline-6, turbo",
+   "study": "",
+   "page": "/engines/bmw-b58/",
+   "yt": [
+    "scy",
+    ""
+   ],
+   "facts": [
+    [
+     "Redline",
+     "7,000 rpm",
+     [
+      "wb58"
+     ]
+    ],
+    [
+     "Output",
+     "335–382 hp, up to 368 lb-ft",
+     [
+      "t19",
+      "t21"
+     ]
+    ],
+    [
+     "Turbo",
+     "One twin-scroll turbo, direct injection",
+     [
+      "t19s",
+      "fcp"
+     ]
+    ],
+    [
+     "Block",
+     "Closed-deck aluminum",
+     [
+      "fcp",
+      "wb58"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Brake-assist recall (engine software)",
+     "kind": "Recall",
+     "rx": "brake assist|vacuum pump|brake booster",
+     "x": "On about 13,000 2020–2021 Supras, engine software could damage the part that powers brake assist on certain starts, lengthening stops.",
+     "fix": "Dealer updates the engine computer for free (NHTSA 21V-598).",
+     "src": [
+      "r21"
+     ]
+    },
+    {
+     "t": "Oil filter housing leaks",
+     "kind": "Parts seller",
+     "rx": "oil filter housing|ofh gasket",
+     "x": "The plastic housing and its gaskets can warp with heat and leak oil or coolant, often around 60,000–100,000 miles.",
+     "fix": "Replace the housing and gaskets.",
+     "src": [
+      "fcp"
+     ]
+    },
+    {
+     "t": "Coolant loss",
+     "kind": "Owner-reported",
+     "rx": "coolant (leak|loss)|losing coolant|water pump",
+     "x": "Owners report coolant leaks. A parts seller names the water pump seal and the heat management module as common sources.",
+     "fix": "",
+     "src": [
+      "sg58",
+      "fcp"
+     ]
+    },
+    {
+     "t": "Valve cover and PCV",
+     "kind": "Owner-reported",
+     "rx": "valve cover|\\bpcv\\b|oil separator",
+     "x": "Valve cover gasket leaks and PCV valve faults are the most-reported B58 problems on owner forums, per SlashGear.",
+     "fix": "",
+     "src": [
+      "sg58",
+      "fcp"
+     ]
+    }
+   ]
+  }
+ },
+ "compare": [
+  {
+   "slug": "nissan-z",
+   "name": "Nissan Z"
+  },
+  {
+   "slug": "bmw-m2",
+   "name": "BMW M2"
+  },
+  {
+   "slug": "mustang-gt",
+   "name": "Ford Mustang GT"
+  },
+  {
+   "slug": "camaro-ss",
+   "name": "Chevrolet Camaro SS"
+  }
+ ],
+ "sources": {
+  "t19": {
+   "t": "Toyota USA: It's back, 2020 GR Supra ready for road (May 2019)",
+   "u": "https://pressroom.toyota.com/its-back-2020-gr-supra-ready-for-road/",
+   "k": "Toyota"
+  },
+  "t19s": {
+   "t": "Toyota USA: 2020 Supra product specifications and pricing",
+   "u": "https://pressroom.toyota.com/2020-supra-product-supra/",
+   "k": "Toyota"
+  },
+  "t21a": {
+   "t": "Toyota USA: GR Supra races into 2021 with more power and four-cylinder model (Feb 2020)",
+   "u": "https://pressroom.toyota.com/toyota-gr-supra-races-into-2021-with-more-power-and-first-ever-four-cylinder-turbo-model/",
+   "k": "Toyota"
+  },
+  "t21": {
+   "t": "Toyota USA: 2021 GR Supra hits the streets (Jun 2020)",
+   "u": "https://pressroom.toyota.com/2021-toyota-gr-supra-hits-the-streets-with-more-power-a91-edition-and-first-ever-four-cylinder-turbo-model/",
+   "k": "Toyota"
+  },
+  "tmt": {
+   "t": "Toyota USA: GR Supra manual transmission now on sale (Sep 2022)",
+   "u": "https://pressroom.toyota.com/power-shift-gr-supra-manual-transmission-now-on-sale-at-us-toyota-dealerships/",
+   "k": "Toyota"
+  },
+  "t24": {
+   "t": "Toyota USA: The 2024 Toyota GR Supra (Aug 2023)",
+   "u": "https://pressroom.toyota.com/powerful-performance-striking-style-the-2024-toyota-gr-supra/",
+   "k": "Toyota"
+  },
+  "t25": {
+   "t": "Toyota USA: Take a victory lap in the 2025 Toyota GR Supra (Jun 2024)",
+   "u": "https://pressroom.toyota.com/take-a-victory-lap-in-the-2025-toyota-gr-supra/",
+   "k": "Toyota"
+  },
+  "z60": {
+   "t": "0-60specs.com: Toyota GR Supra 0-60 runs by magazine (Car and Driver, MotorTrend, MotorWeek)",
+   "u": "https://www.0-60specs.com/toyota/gr-supra-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "r21": {
+   "t": "Toyota dealer notice, Safety Recall 21TA04 / NHTSA 21V-598 (Aug 2021)",
+   "u": "https://static.nhtsa.gov/odi/rcl/2021/RCMN-21V598-4591.pdf",
+   "k": "Recall"
+  },
+  "wb58": {
+   "t": "Wikipedia: BMW B58",
+   "u": "https://en.wikipedia.org/wiki/BMW_B58",
+   "k": "Wikipedia (fallback)"
+  },
+  "fcp": {
+   "t": "FCP Euro: BMW B58 engine parts and common problems",
+   "u": "https://www.fcpeuro.com/BMW-parts/b58-engine/",
+   "k": "parts seller"
+  },
+  "sg58": {
+   "t": "SlashGear: Common problems with BMW's B58 engines, according to owners (Oct 2024)",
+   "u": "https://www.slashgear.com/1678547/bmw-b58-engine-common-problems-issues",
+   "k": "outlet"
+  },
+  "ae26": {
+   "t": "autoevolution: BMW starter recall, Toyota GR Supra 2.0 (B48) affected (Jul 2026)",
+   "u": "https://www.autoevolution.com/news/bmw-recalls-nearly-318500-vehicles-over-fire-risk-toyota-gr-supra-affected-273421.html",
+   "k": "outlet"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-gr-supra",
+ "img": "/assets/ai-perf/gr-supra.webp?v=1"
+}

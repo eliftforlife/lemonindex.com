@@ -156,3 +156,41 @@ a.pf-c:hover { box-shadow: 0 10px 24px -16px rgba(0,0,0,.3); }
   .pf-b { grid-template-columns: minmax(0, 1fr) 70px 36px; }
 }
 @media (prefers-reduced-motion: reduce) { .pf-car { transition: none; } }
+
+/* 11-11 v2: one "Sources" fold per card instead of superscripts; single-image hero; standalone pages (Problems & recalls, Questions) */
+.pf-cs { margin-top: 10px; font-size: 13px; }
+.pf-cs summary { cursor: pointer; color: var(--mute); font-weight: 600; list-style: none; display: inline-flex; align-items: center; gap: 4px; }
+.pf-cs summary::-webkit-details-marker { display: none; }
+.pf-cs summary::after { content: "+"; font-weight: 700; }
+.pf-cs[open] summary::after { content: "–"; }
+.pf-cs summary:hover { color: var(--ink); }
+.pf-cs ol { margin: 8px 0 0; padding-left: 26px; display: grid; gap: 4px; color: var(--ink2); }
+.pf-cs li { line-height: 1.35; overflow-wrap: anywhere; }
+.pf-star .pf-cs summary, .pf-star .pf-cs ol { color: rgba(255,255,255,.7); }
+.pf-star .pf-cs a { color: #fff; }
+.pf-v { display: flex; flex-direction: column; }
+.pf-v dl { flex: 1; }
+.pf-ef .pf-cs { margin-top: 0; }
+.pf-sec > .pf-cs { margin-top: 14px; }
+.pf-single .pf-car { opacity: 1; transform: none; }
+.pf-noimg { grid-template-columns: minmax(0, 1fr); }
+.pfp .pf-hero { padding-top: clamp(14px, 2.5vw, 28px); }
+.pf-yrs { display: grid; gap: 4px; max-width: 760px; }
+.pf-yr { display: grid; grid-template-columns: 48px minmax(0, 1fr) 44px; gap: 10px; align-items: center; font-size: 14.5px; font-variant-numeric: tabular-nums; }
+.pf-yr i { height: 8px; border-radius: 6px; background: #eef0f2; position: relative; overflow: hidden; }
+.pf-yr i::after { content: ""; position: absolute; inset: 0 auto 0 0; width: var(--w); background: #9aa0a6; border-radius: 6px; }
+.pf-yr b { text-align: right; }
+.pf-parts { max-width: 760px; }
+.pf-recs { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 10px; }
+.pf-recs li { border: 1px solid var(--line); border-radius: 16px; padding: 14px 16px; font-size: 14.5px; }
+.pf-recs li > b { font-variant-numeric: tabular-nums; }
+.pf-ry { float: right; color: var(--mute); font-size: 13px; }
+.pf-recs p { margin: 6px 0 0; color: var(--ink2); }
+.pfp .yqa h3 { font-size: 18px; margin: 18px 0 6px; }
+.pfp .yqa p { margin: 0; color: var(--ink2); max-width: 75ch; }
+@media (max-width: 760px) { .pf-recs { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 760px) {
+  .pf-track { display: flex; overflow-x: auto; scrollbar-width: none; justify-content: flex-start; }
+  .pf-track::-webkit-scrollbar { display: none; }
+  .pf-stop { flex: 1 0 auto; padding: 8px 12px; }
+}

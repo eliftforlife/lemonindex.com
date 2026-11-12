@@ -1,0 +1,272 @@
+{
+ "built": "2026-11-11",
+ "nhtsa": {
+  "by_year": {
+   "1990": 5,
+   "1991": 6,
+   "1992": 3,
+   "1993": 555,
+   "1994": 588,
+   "1995": 719,
+   "1996": 893,
+   "1997": 990,
+   "1998": 1027,
+   "1999": 1638,
+   "2000": 1447,
+   "2001": 883,
+   "2002": 1476,
+   "2003": 762,
+   "2004": 1295,
+   "2005": 2051,
+   "2006": 1280,
+   "2007": 1108,
+   "2008": 734,
+   "2009": 138,
+   "2010": 118,
+   "2011": 1640,
+   "2012": 1644,
+   "2013": 805,
+   "2014": 2383,
+   "2015": 1367,
+   "2016": 311,
+   "2017": 364,
+   "2018": 855,
+   "2019": 370,
+   "2020": 241,
+   "2021": 409,
+   "2022": 264,
+   "2023": 400,
+   "2024": 249,
+   "2025": 77,
+   "2026": 25
+  },
+  "gens": {
+   "wk2": {
+    "n": 1875,
+    "issues": {
+     "Supercharger bearing wear": {
+      "n": 0,
+      "ex": []
+     },
+     "Intercooler pump": {
+      "n": 0,
+      "ex": []
+     },
+     "Fuel line may separate (2018)": {
+      "n": 3,
+      "ex": [
+       "11554505",
+       "11570734"
+      ]
+     }
+    }
+   }
+  },
+  "parts": [
+   [
+    "Electrical system",
+    612
+   ],
+   [
+    "Unknown or other",
+    464
+   ],
+   [
+    "Engine",
+    299
+   ],
+   [
+    "Power train",
+    220
+   ],
+   [
+    "Steering",
+    143
+   ],
+   [
+    "Service brakes",
+    120
+   ]
+  ]
+ },
+ "recalls": {
+  "2018": [
+   {
+    "id": "18V280000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION",
+    "summary": "Chrysler (FCA US LLC) is recalling certain 2018 Dodge Charger, Durango and Challenger, Jeep Grand Cherokee and Wrangler, Chrysler 300, and RAM 1500 vehicles.  An incorrect transmission park lock rod may have been installed in the transmission."
+   },
+   {
+    "id": "18V332000",
+    "part": "ELECTRICAL SYSTEM:WIRING",
+    "summary": "Chrysler (FCA US LLC) is recalling certain 2014-2018 Dodge Journey, Charger and Durango, RAM 2500, 3500, 3500 Cab Chassis (more than 10,000lb), 4500 Cab Chassis and 5500 Cab Chassis, Jeep Cherokee and Grand Cherokee and Chrysler 300, 2014-2019 RAM 1500, 2015-2018 Dodge Challenger, 2015-2017 Chrysler 200, 2016-2018 RAM 3500 Cab Chassis (less than 10,000 lb), 2017-2018 Chrysler Pacifica and 2018 Jee"
+   },
+   {
+    "id": "18V759000",
+    "part": "EQUIPMENT:ACCESSORY:FLOOR MAT",
+    "summary": "Chrysler (FCA US LLC) is recalling certain 2018 Jeep Grand Cherokee Street and Racing Technology (SRT) and Trackhawk vehicles.  The driver's floor mat may have insufficient clearance between the mat and the accelerator pedal, possibly preventing the pedal from returning to the idle position."
+   },
+   {
+    "id": "18E097000",
+    "part": "EQUIPMENT:ACCESSORY:FLOOR MAT",
+    "summary": "Chrysler (FCA US LLC) is recalling certain Mopar Floor Mats, part numbers 6ML07TRMAA and 6GA92TRMAA, sold as accessory equipment for 2018 Jeep Grand Cherokee Street and Racing Technology (\"SRT\") and Trackhawk vehicles.  These floor mats may have insufficient clearance between the mat and the accelerator pedal, possibly inhibiting the pedal from returning to an idle position."
+   },
+   {
+    "id": "20V699000",
+    "part": "ENGINE AND ENGINE COOLING:EXHAUST SYSTEM:EMISSION CONTROL:GAS RECIRCULATION VALVE (EGR VALVE)",
+    "summary": "Chrysler (FCA US LLC) is recalling certain 2014-2019 Jeep Grand Cherokee vehicles equipped with the 3.0L EcoDiesel\r\nengines.  The Exhaust Gas Recirculation (EGR) cooler may crack and allow pre-heated vaporized coolant to enter the EGR system.  This mixture may combust inside the intake manifold."
+   },
+   {
+    "id": "18V524000",
+    "part": "ELECTRICAL SYSTEM:WIRING:FRONT UNDERHOOD",
+    "summary": "Chrysler (FCA US LLC) is recalling certain 2018 Jeep Renegade, Compass and Grand Cherokee, RAM 1500 and Promaster, Fiat 500x, Dodge Journey, Challenger, Charger and Durango and Chrysler 300x vehicles, 2017-2018 Jeep Wrangler, Dodge Grand Caravan and Chrysler Town and Country vehicles and 2018-2019 Jeep Cherokee and 2018 Chrysler Pacifica and Pacifica Hybrid vehicles.  The powertrain control module"
+   },
+   {
+    "id": "18V048000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:HOSES, LINES/PIPING, AND FITTINGS",
+    "summary": "Chrysler (FCA US LLC) is recalling certain 2018 Jeep Grand Cherokee Trackhawk vehicles equipped with a 6.2L Supercharged Engine.  The fuel line may separate."
+   },
+   {
+    "id": "22V406000",
+    "part": "FUEL SYSTEM, DIESEL:DELIVERY:FUEL PUMP",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2014-2020 Jeep Grand Cherokee, and 2014-2019 Ram 1500 vehicles equipped with 3.0L diesel engines.  A high pressure fuel pump (HPFP) failure may introduce internal debris into the fuel system, potentially resulting in fuel starvation."
+   },
+   {
+    "id": "22V426000",
+    "part": "SERVICE BRAKES, HYDRAULIC:ANTILOCK/TRACTION CONTROL/ELECTRONIC LIMITED SLIP:CONTROL UNIT/MODULE",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2018-2019 Jeep Grand Cherokee and Dodge Durango vehicles.  A malfunction in the antilock-brake system (ABS) module may illuminate the brake lights, and allow the vehicle to start and shift out of Park without the brake pedal being applied."
+   },
+   {
+    "id": "23V411000",
+    "part": "ENGINE AND ENGINE COOLING",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2014-2019 Ram 1500 and 2014-2020 Jeep Grand Cherokee vehicles equipped with 3.0L Diesel engines.  The crankshaft position sensor tone wheel may delaminate, causing the engine to lose its ability to synchronize the fuel injector pulses and cam shaft timing, possibly resulting in an engine stall."
+   },
+   {
+    "id": "24V838000",
+    "part": "SERVICE BRAKES, HYDRAULIC:ANTILOCK/TRACTION CONTROL/ELECTRONIC LIMITED SLIP:CONTROL UNIT/MODULE",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2018-2019 Jeep Grand Cherokee and Dodge Durango vehicles.  A malfunction in the antilock-brake system (ABS) module may incorrectly illuminate the brake lights and disable the ABS and electronic stability control (ESC).  In addition, the vehicle operator may be able to start and shift out of Park without the brake pedal being applied."
+   }
+  ],
+  "2019": [
+   {
+    "id": "20V191000",
+    "part": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+    "summary": "Chrysler (FCA US LLC) is recalling certain 2020 Jeep Gladiator and Jeep Cherokee, 2019-2020 Ram 1500 Pickup, Ram 2500 Pickup, Ram 3500 Pickup, Chrysler Pacifica, Dodge Durango, Jeep Grand Cherokee, Jeep Wrangler, and Jeep Renegade and 2019 Dodge Challenger vehicles equipped with 8.4\" or 12\" radio displays.  A software error can cause the rearview camera image to remain displayed after the vehicle "
+   },
+   {
+    "id": "20V699000",
+    "part": "ENGINE AND ENGINE COOLING:EXHAUST SYSTEM:EMISSION CONTROL:GAS RECIRCULATION VALVE (EGR VALVE)",
+    "summary": "Chrysler (FCA US LLC) is recalling certain 2014-2019 Jeep Grand Cherokee vehicles equipped with the 3.0L EcoDiesel\r\nengines.  The Exhaust Gas Recirculation (EGR) cooler may crack and allow pre-heated vaporized coolant to enter the EGR system.  This mixture may combust inside the intake manifold."
+   },
+   {
+    "id": "20V183000",
+    "part": "POWER TRAIN:DRIVELINE:DIFFERENTIAL UNIT",
+    "summary": "Chrysler (FCA US LLC) is recalling certain 2019 Jeep Grand Cherokee and Dodge Durango vehicles.  The front differential may have been assembled with pinion gears that are insufficiently hardened, which can lead to the gear teeth wearing down.  If both pinion gears have their teeth sufficiently worn off, torque power can not be transferred from the front wheels to the driveline, resulting in loss o"
+   },
+   {
+    "id": "22V406000",
+    "part": "FUEL SYSTEM, DIESEL:DELIVERY:FUEL PUMP",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2014-2020 Jeep Grand Cherokee, and 2014-2019 Ram 1500 vehicles equipped with 3.0L diesel engines.  A high pressure fuel pump (HPFP) failure may introduce internal debris into the fuel system, potentially resulting in fuel starvation."
+   },
+   {
+    "id": "22V426000",
+    "part": "SERVICE BRAKES, HYDRAULIC:ANTILOCK/TRACTION CONTROL/ELECTRONIC LIMITED SLIP:CONTROL UNIT/MODULE",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2018-2019 Jeep Grand Cherokee and Dodge Durango vehicles.  A malfunction in the antilock-brake system (ABS) module may illuminate the brake lights, and allow the vehicle to start and shift out of Park without the brake pedal being applied."
+   },
+   {
+    "id": "23V411000",
+    "part": "ENGINE AND ENGINE COOLING",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2014-2019 Ram 1500 and 2014-2020 Jeep Grand Cherokee vehicles equipped with 3.0L Diesel engines.  The crankshaft position sensor tone wheel may delaminate, causing the engine to lose its ability to synchronize the fuel injector pulses and cam shaft timing, possibly resulting in an engine stall."
+   },
+   {
+    "id": "24V838000",
+    "part": "SERVICE BRAKES, HYDRAULIC:ANTILOCK/TRACTION CONTROL/ELECTRONIC LIMITED SLIP:CONTROL UNIT/MODULE",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2018-2019 Jeep Grand Cherokee and Dodge Durango vehicles.  A malfunction in the antilock-brake system (ABS) module may incorrectly illuminate the brake lights and disable the ABS and electronic stability control (ESC).  In addition, the vehicle operator may be able to start and shift out of Park without the brake pedal being applied."
+   }
+  ],
+  "2020": [
+   {
+    "id": "20V191000",
+    "part": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+    "summary": "Chrysler (FCA US LLC) is recalling certain 2020 Jeep Gladiator and Jeep Cherokee, 2019-2020 Ram 1500 Pickup, Ram 2500 Pickup, Ram 3500 Pickup, Chrysler Pacifica, Dodge Durango, Jeep Grand Cherokee, Jeep Wrangler, and Jeep Renegade and 2019 Dodge Challenger vehicles equipped with 8.4\" or 12\" radio displays.  A software error can cause the rearview camera image to remain displayed after the vehicle "
+   },
+   {
+    "id": "22V406000",
+    "part": "FUEL SYSTEM, DIESEL:DELIVERY:FUEL PUMP",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2014-2020 Jeep Grand Cherokee, and 2014-2019 Ram 1500 vehicles equipped with 3.0L diesel engines.  A high pressure fuel pump (HPFP) failure may introduce internal debris into the fuel system, potentially resulting in fuel starvation."
+   },
+   {
+    "id": "23V411000",
+    "part": "ENGINE AND ENGINE COOLING",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2014-2019 Ram 1500 and 2014-2020 Jeep Grand Cherokee vehicles equipped with 3.0L Diesel engines.  The crankshaft position sensor tone wheel may delaminate, causing the engine to lose its ability to synchronize the fuel injector pulses and cam shaft timing, possibly resulting in an engine stall."
+   }
+  ],
+  "2021": [
+   {
+    "id": "21V797000",
+    "part": "EXTERIOR LIGHTING:HEADLIGHTS",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2021 Jeep Grand Cherokee L vehicles not equipped with automatic high beams.  When the master lighting switch is set to the auto position, the high beam headlights will not activate unless the master lighting switch is first changed to the 'on\" position.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard"
+   },
+   {
+    "id": "21V950000",
+    "part": "EXTERIOR LIGHTING:LIGHTING CONTROL MODULE:SOFTWARE",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2021 Jeep Grand Cherokee L vehicles equipped with smart lighting modules (SLM).  An incomplete SLM software update may cause one or both headlights to become inoperable.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 108, \"Lamps, Reflective Devices, and Associated Equipment.\""
+   },
+   {
+    "id": "21V729000",
+    "part": "VISIBILITY:REARVIEW MIRRORS/DEVICES",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2021 Jeep Grand Cherokee L vehicles.  A radio software error may prevent the rearview image from displaying.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 111, \"Rear Visibility.\""
+   },
+   {
+    "id": "21V873000",
+    "part": "AIR BAGS: AIR BAG/RESTRAINT CONTROL MODULE:SOFTWARE",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2021 Jeep Grand Cherokee L, 2022 Jeep Wagoneer, and Grand Wagoneer vehicles.  The Occupant Restraint Controller (ORC) may have incorrect software which can disable the driver, passenger, and knee air bags without warning."
+   },
+   {
+    "id": "22V180000",
+    "part": "CHILD SEAT:VEHICLE TETHER ANCHOR",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2021-2022 Jeep Grand Cherokee L vehicles.  These vehicles may have been built with a missing weld from the seat back frame to the child seat tether anchorage.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 225, \"Child Restraint Anchorage Systems.\""
+   },
+   {
+    "id": "22V284000",
+    "part": "ENGINE AND ENGINE COOLING:EXHAUST SYSTEM:EMISSION CONTROL:GAS RECIRCULATION VALVE (EGR VALVE)",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2021 Dodge Durango, Jeep Grand Cherokee WK, 2022 Jeep Grand Cherokee, and 2021-2022 Jeep Grand Cherokee L vehicles equipped with 3.6L engines.  The exhaust gas recirculation (EGR) valve may stick open, resulting in an unexpected loss of drive power."
+   },
+   {
+    "id": "22V544000",
+    "part": "EXTERIOR LIGHTING:TAIL LIGHTS",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2022 Jeep Grand Cherokee and 2021-2022 Jeep Grand Cherokee L vehicles.  The tail light side marker assemblies may be damaged and not illuminate.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 108, \"Lamp, Reflective Devices, and Associated Equipment.\""
+   },
+   {
+    "id": "23V352000",
+    "part": "STEERING:COLUMN",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2022-2023 Jeep Grand Cherokee and 2021-2023 Jeep Grand Cherokee L vehicles.  An incorrectly assembled steering column intermediate shaft may disconnect from the u-joint, and result in a loss of steering control."
+   },
+   {
+    "id": "23V413000",
+    "part": "SUSPENSION:REAR:SPRINGS:COIL SPRINGS",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2022-2023 Jeep Grand Cherokee and 2021-2023 Jeep Grand Cherokee L vehicles.  The rear coil springs may have been incorrectly installed and detach from the vehicle while driving."
+   },
+   {
+    "id": "23V577000",
+    "part": "BACK OVER PREVENTION:DISPLAY FUNCTION",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2022-2023 Jeep Grand Cherokee, 2021-2023 Jeep Grand Cherokee L, and 2022-2024 Jeep Wagoneer and Grand Wagoneer vehicles.  The Central Vision Park Assist module (CVPAM) software may prevent the rearview image from displaying when the vehicle is placed in reverse.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety"
+   },
+   {
+    "id": "24V132000",
+    "part": "SUSPENSION:FRONT:CONTROL ARM:UPPER BALL JOINT",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2021-2023 Jeep Grand Cherokee L and 2022-2023 Jeep Grand Cherokee vehicles.  The upper control arm ball joint and steering knuckle may separate and cause the wheel to fall outward, resulting in a loss of vehicle control."
+   },
+   {
+    "id": "24V436000",
+    "part": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2021-2022 Dodge Durango, 2021-2023 Chrysler Pacifica, Jeep Grand Cherokee L, 2022 Ram 1500, 2500, 3500, Chrysler Voyager, 2022-2023 Jeep Compass, Grand Cherokee, Wagoneer, Grand Wagoneer, and Ram Promaster vehicles.  The radio software may prevent the rearview image from displaying.  As such, these vehicles fail to comply with the requirements of Federal"
+   }
+  ]
+ },
+ "yt": {
+  "car-trackhawk": null,
+  "chrysler-hellcat": null
+ },
+ "scores": {}
+}
