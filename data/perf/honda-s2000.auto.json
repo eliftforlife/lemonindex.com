@@ -1,0 +1,111 @@
+{
+ "built": "2026-11-11",
+ "nhtsa": {
+  "by_year": {
+   "2000": 40,
+   "2001": 13,
+   "2002": 10,
+   "2003": 8,
+   "2004": 5,
+   "2005": 15,
+   "2006": 10,
+   "2007": 3,
+   "2008": 3
+  },
+  "gens": {
+   "ap1": {
+    "n": 71,
+    "issues": {
+     "Timing chain tensioner rattle": {
+      "n": 0,
+      "ex": []
+     },
+     "Oil use": {
+      "n": 2,
+      "ex": [
+       "10098116",
+       "10233734"
+      ]
+     },
+     "Early oiling (banjo bolts)": {
+      "n": 0,
+      "ex": []
+     },
+     "Cracked valve retainers": {
+      "n": 0,
+      "ex": []
+     }
+    }
+   },
+   "ap2": {
+    "n": 36,
+    "issues": {
+     "Timing chain tensioner rattle": {
+      "n": 0,
+      "ex": []
+     },
+     "Oil use": {
+      "n": 0,
+      "ex": []
+     }
+    }
+   }
+  },
+  "parts": [
+   [
+    "Engine and engine cooling",
+    18
+   ],
+   [
+    "Structure",
+    15
+   ],
+   [
+    "Power train",
+    14
+   ],
+   [
+    "Visibility",
+    10
+   ],
+   [
+    "Exterior lighting",
+    9
+   ],
+   [
+    "Air bags",
+    8
+   ]
+  ]
+ },
+ "recalls": {
+  "2002": [],
+  "2004": [],
+  "2006": [
+   {
+    "id": "06V270000",
+    "part": "EQUIPMENT:OTHER:OWNERS/SERVICE/OTHER MANUAL",
+    "summary": "ON CERTAIN PASSENGER VEHICLES AND MOTORCYCLES, THE OWNER'S MANUALS CONTAIN INCORRECT CONTACT INFORMATION FOR THE NATIONAL HIGHWAY TRAFFIC SAFETY ADMINISTRATION'S (NHTSA) VEHICLE SAFETY HOTLINE."
+   },
+   {
+    "id": "13V246000",
+    "part": "SERVICE BRAKES, HYDRAULIC:POWER ASSIST:VACUUM",
+    "summary": "American Honda Motor Co., Inc. (Honda) is recalling certain model year 2006 Acura RSX vehicles manufactured January 18, 2006, through August 12, 2006; and model year 2006-2007 Honda S2000 vehicles manufactured January 19, 2006, through November 13, 2006.  The brake booster may be unable to maintain a vacuum when the brake pedal is depressed, decreasing brake assist."
+   }
+  ],
+  "2007": [
+   {
+    "id": "13V246000",
+    "part": "SERVICE BRAKES, HYDRAULIC:POWER ASSIST:VACUUM",
+    "summary": "American Honda Motor Co., Inc. (Honda) is recalling certain model year 2006 Acura RSX vehicles manufactured January 18, 2006, through August 12, 2006; and model year 2006-2007 Honda S2000 vehicles manufactured January 19, 2006, through November 13, 2006.  The brake booster may be unable to maintain a vacuum when the brake pedal is depressed, decreasing brake assist."
+   }
+  ],
+  "2008": [],
+  "2009": []
+ },
+ "yt": {
+  "car-honda-s2000": null,
+  "honda-f20c": null
+ },
+ "scores": {}
+}

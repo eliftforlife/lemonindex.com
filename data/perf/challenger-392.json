@@ -1,0 +1,679 @@
+{
+ "slug": "challenger-392",
+ "name": "Dodge Challenger SRT8 / Scat Pack 392",
+ "short": "Challenger Scat Pack",
+ "make": "Dodge",
+ "page": "/cars/challenger-392/",
+ "focus": "lc15",
+ "star": "lc15-sp",
+ "h1": "Dodge Challenger SRT8 / Scat Pack 392: performance, engines and what owners say",
+ "nhtsa": {
+  "make": "DODGE",
+  "models": [
+   "CHALLENGER"
+  ],
+  "note": "NHTSA files the Challenger SRT8, SRT 392 and Scat Pack under Challenger, so these counts are every Challenger of these years."
+ },
+ "topics_extra": {
+  "Lifter tick / camshaft": "hemi tick|lifters?|cam(shaft)? (failure|wipe|wiped|lobe)|ticking",
+  "MDS / Fuel Saver": "\\bmds\\b|cylinder deactivation|fuel saver|four.?cylinder mode",
+  "Clutch": "\\bclutch\\b",
+  "Automatic transmission": "8hp70|w5a580|harsh (shift|downshift)|transmission (slip|slipping|shudder|slam)",
+  "Rear axle / differential": "differential|diff (whine|noise)|axle (hop|whine)|half ?shafts?"
+ },
+ "gens": [
+  {
+   "id": "lc08",
+   "code": "LC (2008–2010)",
+   "years": "2008–2010",
+   "y0": 2008,
+   "y1": 2010,
+   "engine": "hemi61",
+   "body": "Coupe",
+   "tag": "The retro revival: 6.1 HEMI, 425 hp, manual added for 2009.",
+   "variants": [
+    {
+     "id": "lc08-srt8",
+     "name": "SRT8 (launch)",
+     "years": "2008",
+     "hp": {
+      "v": 425,
+      "src": [
+       "s08",
+       "r08"
+      ],
+      "note": "at 6,200 rpm"
+     },
+     "tq": {
+      "v": 420,
+      "src": [
+       "s08",
+       "r08"
+      ],
+      "note": "at 4,800 rpm"
+     },
+     "z60": {
+      "v": 4.8,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "5-speed automatic, rear-drive",
+      "src": [
+       "r08srt",
+       "s08"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "4,140 lb",
+      "src": [
+       "s08"
+      ],
+      "note": "maker estimate"
+     },
+     "price": {
+      "v": "$37,995",
+      "src": [
+       "p08"
+      ],
+      "note": "2008, includes $675 destination"
+     },
+     "what": "Limited first run: numbered dash plaque, three colors, automatic only.",
+     "what_src": [
+      "r08"
+     ]
+    },
+    {
+     "id": "lc08-srt8-09",
+     "name": "SRT8",
+     "years": "2009–2010",
+     "hp": {
+      "v": 425,
+      "src": [
+       "sp09",
+       "r09e"
+      ],
+      "note": "at 6,200 rpm"
+     },
+     "tq": {
+      "v": 420,
+      "src": [
+       "sp09",
+       "r09e"
+      ],
+      "note": "at 4,800 rpm"
+     },
+     "z60": {
+      "v": 4.6,
+      "who": "MotorTrend (2009 manual)",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual or 5-speed automatic, rear-drive",
+      "src": [
+       "r09"
+      ],
+      "note": "Tremec TR-6060 manual new for 2009"
+     },
+     "weight": {
+      "v": "4,140 lb",
+      "src": [
+       "sp09"
+      ],
+      "note": "automatic, maker estimate"
+     }
+    }
+   ]
+  },
+  {
+   "id": "lc11",
+   "code": "LC (2011–2014)",
+   "years": "2011–2014",
+   "y0": 2011,
+   "y1": 2014,
+   "engine": "392",
+   "body": "Coupe",
+   "tag": "The 392 returns: 470 hp, 182 mph with the manual.",
+   "variants": [
+    {
+     "id": "lc11-srt8",
+     "name": "SRT8 392",
+     "years": "2011–2014",
+     "hp": {
+      "v": 470,
+      "src": [
+       "sp11",
+       "r11"
+      ],
+      "note": "at 6,000 rpm"
+     },
+     "tq": {
+      "v": 470,
+      "src": [
+       "sp11",
+       "r11"
+      ],
+      "note": "at 4,200 rpm"
+     },
+     "z60": {
+      "v": 4.5,
+      "who": "Car and Driver (2011 manual)",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "top": {
+      "v": "182 mph",
+      "src": [
+       "r12",
+       "r14"
+      ],
+      "note": "manual; 175 mph automatic"
+     },
+     "trans": {
+      "v": "6-speed manual or 5-speed automatic, rear-drive",
+      "src": [
+       "r11",
+       "sp12"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "4,170 lb",
+      "src": [
+       "sp11"
+      ],
+      "note": "manual, maker estimate; 4,160 lb automatic"
+     },
+     "price": {
+      "v": "$44,875",
+      "src": [
+       "gwe11"
+      ],
+      "note": "2011 Green With Envy edition, includes $825 destination"
+     }
+    },
+    {
+     "id": "lc11-core",
+     "name": "SRT Core",
+     "years": "2014",
+     "pkg": "lc11-srt8",
+     "hp": {
+      "v": 470,
+      "src": [
+       "r14"
+      ],
+      "note": ""
+     },
+     "tq": {
+      "v": 470,
+      "src": [
+       "r14"
+      ],
+      "note": ""
+     },
+     "z60": {
+      "v": null,
+      "who": "",
+      "src": [],
+      "claim": null,
+      "csrc": []
+     },
+     "top": {
+      "v": "182 mph",
+      "src": [
+       "r14"
+      ],
+      "note": "manual; 175 mph automatic"
+     },
+     "trans": {
+      "v": "6-speed manual or 5-speed automatic, rear-drive",
+      "src": [
+       "r14"
+      ],
+      "note": ""
+     },
+     "what": "Lower-priced SRT: cloth seats, cast 20-inch wheels, black Brembo calipers; under $40,000.",
+     "what_src": [
+      "r14"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lc15",
+   "code": "LC (2015–2023)",
+   "years": "2015–2023",
+   "y0": 2015,
+   "y1": 2023,
+   "engine": "392",
+   "body": "Coupe",
+   "tag": "485 hp Scat Pack, 8-speed automatic, Widebody from 2019.",
+   "variants": [
+    {
+     "id": "lc15-sp",
+     "name": "R/T Scat Pack",
+     "years": "2015–2023",
+     "star": true,
+     "hp": {
+      "v": 485,
+      "src": [
+       "p15",
+       "sp20"
+      ],
+      "note": "at 6,100 rpm"
+     },
+     "tq": {
+      "v": 475,
+      "src": [
+       "p15",
+       "sp20"
+      ],
+      "note": "at 4,100 rpm"
+     },
+     "z60": {
+      "v": 4.2,
+      "who": "Car and Driver (2015 automatic)",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual or 8-speed automatic, rear-drive",
+      "src": [
+       "p15",
+       "sp20"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "4,230 lb",
+      "src": [
+       "sp20"
+      ],
+      "note": "2020 manual; 4,236 lb automatic"
+     },
+     "price": {
+      "v": "$38,495",
+      "src": [
+       "p15",
+       "p23"
+      ],
+      "note": "2015 manual, includes $1,000 gas-guzzler tax, plus $995 destination; $45,845 in 2023"
+     }
+    },
+    {
+     "id": "lc15-spwb",
+     "name": "R/T Scat Pack Widebody",
+     "years": "2019–2023",
+     "pkg": "lc15-sp",
+     "hp": {
+      "v": 485,
+      "src": [
+       "sp20",
+       "r19"
+      ],
+      "note": ""
+     },
+     "tq": {
+      "v": 475,
+      "src": [
+       "sp20"
+      ],
+      "note": ""
+     },
+     "z60": {
+      "v": 3.9,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual or 8-speed automatic, rear-drive",
+      "src": [
+       "sp20"
+      ],
+      "note": "2020"
+     },
+     "weight": {
+      "v": "4,308 lb",
+      "src": [
+       "sp20"
+      ],
+      "note": "2020 manual; 4,314 lb automatic"
+     },
+     "what": "Hellcat Widebody flares (+3.5 in), 20x11 wheels on 305/35ZR20 tires, six-piston Brembo front brakes.",
+     "what_src": [
+      "r19",
+      "sp20"
+     ]
+    },
+    {
+     "id": "lc15-srt392",
+     "name": "SRT 392",
+     "years": "2015–2018",
+     "hp": {
+      "v": 485,
+      "src": [
+       "p15",
+       "sp15"
+      ],
+      "note": "at 6,100 rpm"
+     },
+     "tq": {
+      "v": 475,
+      "src": [
+       "p15",
+       "sp15"
+      ],
+      "note": "at 4,200 rpm"
+     },
+     "z60": {
+      "v": 4.7,
+      "who": "MotorWeek",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual or 8-speed automatic, rear-drive",
+      "src": [
+       "p15",
+       "sp15"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "4,240 lb",
+      "src": [
+       "sp15"
+      ],
+      "note": "manual, maker estimate; 4,251 lb automatic"
+     },
+     "price": {
+      "v": "$45,995",
+      "src": [
+       "p15"
+      ],
+      "note": "2015 manual, includes $1,000 gas-guzzler tax, plus $995 destination"
+     },
+     "what": "Over the Scat Pack: six-piston Brembos, three-mode adaptive dampers, forged 20x9.5 wheels.",
+     "what_src": [
+      "p15"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "392": {
+   "name": "392 HEMI 6.4",
+   "what": "6.4-liter V-8",
+   "study": "chrysler-392",
+   "page": "/engines/chrysler-392/",
+   "yt": [
+    "scy",
+    "chrysler-392"
+   ],
+   "facts": [
+    [
+     "Redline",
+     "6,400 rpm (electronically limited)",
+     [
+      "sp11",
+      "sp20"
+     ]
+    ],
+    [
+     "Output",
+     "470–485 hp, 470–475 lb-ft (Challenger)",
+     [
+      "sp11",
+      "sp20"
+     ]
+    ],
+    [
+     "Valvetrain",
+     "Pushrod, 16 valves, sodium-filled exhaust valves; cam phasing and active intake",
+     [
+      "sp20",
+      "r11"
+     ]
+    ],
+    [
+     "Build",
+     "Cast-iron block with cross-bolted mains, aluminum hemi heads, 10.9:1 compression",
+     [
+      "sp20"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Lifter and camshaft failure (\"HEMI tick\")",
+     "kind": "Owner-reported",
+     "rx": "hemi tick|lifters?|cam(shaft)? (failure|wipe|wiped|lobe)|ticking|tick(ing)? noise",
+     "x": "Owners report a tick from failed roller lifters that then wear the camshaft. SlashGear ties most cases to the cylinder-deactivation lifters, used on automatics only.",
+     "fix": "The repair is new lifters and a camshaft; catch it before metal debris spreads.",
+     "src": [
+      "sg24",
+      "r12"
+     ]
+    },
+    {
+     "t": "No engine recall",
+     "kind": "Recall",
+     "rx": "",
+     "x": "NHTSA lists no recall for the 6.4 engine on 2011–2023 Challengers. The 2015 and 2017 engine recalls cover the supercharged Hellcat only.",
+     "fix": "",
+     "src": [
+      "nhtsa"
+     ]
+    }
+   ]
+  },
+  "hemi61": {
+   "name": "6.1 SRT8 HEMI",
+   "what": "6.1-liter V-8",
+   "study": "chrysler-61-hemi",
+   "page": "/engines/chrysler-61-hemi/",
+   "yt": [
+    "scy",
+    "chrysler-61-hemi"
+   ],
+   "facts": [
+    [
+     "Redline",
+     "6,400 rpm (electronically limited)",
+     [
+      "s08"
+     ]
+    ],
+    [
+     "Output",
+     "425 hp at 6,200 rpm, 420 lb-ft at 4,800 rpm",
+     [
+      "s08",
+      "sp09"
+     ]
+    ],
+    [
+     "Bottom end",
+     "Forged crankshaft, stronger rods, oil jets cooling the pistons; no cylinder deactivation",
+     [
+      "wh"
+     ]
+    ],
+    [
+     "Build",
+     "Cast-iron block with cross-bolted mains, aluminum hemi heads, 10.3:1 compression",
+     [
+      "s08"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "No engine recall",
+     "kind": "Recall",
+     "rx": "",
+     "x": "NHTSA lists no engine recall for 2008–2010 Challengers; their recalls cover air bags, the park interlock switch and wheel spindle nuts. We found no documented 6.1 failure pattern.",
+     "fix": "",
+     "src": [
+      "nhtsa"
+     ]
+    }
+   ]
+  }
+ },
+ "compare": [
+  {
+   "slug": "mustang-gt",
+   "name": "Ford Mustang GT"
+  },
+  {
+   "slug": "camaro-ss",
+   "name": "Chevrolet Camaro SS"
+  },
+  {
+   "slug": "charger-392",
+   "name": "Dodge Charger SRT8 / Scat Pack 392"
+  },
+  {
+   "slug": "challenger-hellcat",
+   "name": "Dodge Challenger SRT Hellcat"
+  }
+ ],
+ "sources": {
+  "s08": {
+   "t": "Chrysler: 2008 Dodge Challenger SRT8 specifications (Chicago reveal, Feb 2008, PDF)",
+   "u": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2008DodgeChellengerSRT8Specifications_Reveal.pdf",
+   "k": "Dodge"
+  },
+  "r08": {
+   "t": "Chrysler: The ultimate modern American muscle coupe: all-new 2008 Dodge Challenger SRT8 (Feb 2008)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=7659",
+   "k": "Dodge"
+  },
+  "r08srt": {
+   "t": "Chrysler: Street and Racing Technology sets a new standard for the modern American muscle coupe (Feb 2008)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=7661",
+   "k": "Dodge"
+  },
+  "p08": {
+   "t": "Chrysler: Dodge announces pricing for all-new 2008 Challenger SRT8 (Nov 2007)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=7502",
+   "k": "Dodge"
+  },
+  "r09e": {
+   "t": "Chrysler: Engineering the all-new 2009 Dodge Challenger (Mar 2008)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=7773",
+   "k": "Dodge"
+  },
+  "r09": {
+   "t": "Chrysler: Dodge continues to build momentum with introduction of all-new 2009 Dodge Challenger (Aug 2008)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=8049",
+   "k": "Dodge"
+  },
+  "sp09": {
+   "t": "Chrysler: 2009 Dodge Challenger specifications (launch, PDF)",
+   "u": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2009_DodgeChallengerSpecifications_launch.pdf",
+   "k": "Dodge"
+  },
+  "r11": {
+   "t": "Chrysler Group: 2011 Dodge Challenger SRT8 392 debuts with newest HEMI V-8 (Nov 2010)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=10308",
+   "k": "Dodge"
+  },
+  "sp11": {
+   "t": "Chrysler Group: 2011 Dodge Challenger SRT8 392 specifications (PDF)",
+   "u": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2011_DG_Challenger392_Specs.pdf",
+   "k": "Dodge"
+  },
+  "gwe11": {
+   "t": "Chrysler Group: 2011 Dodge Challengers are becoming even more the envy of the muscle car market (Feb 2011)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=10517",
+   "k": "Dodge"
+  },
+  "r12": {
+   "t": "Chrysler Group: New high-tech features boost 2012 Dodge Challenger SRT8 392's overall performance (Aug 2011)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=11135",
+   "k": "Dodge"
+  },
+  "sp12": {
+   "t": "Chrysler Group: 2012 Dodge Challenger SRT8 392 specifications (PDF)",
+   "u": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2012_DG_Challenger_SRT8392_SP.pdf",
+   "k": "Dodge"
+  },
+  "r14": {
+   "t": "Chrysler Group: High-tech features boost performance of 2014 Dodge Challenger SRT (Aug 2013)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=14787",
+   "k": "Dodge"
+  },
+  "p15": {
+   "t": "FCA US: Dodge announces pricing for its new 2015 Challenger lineup (Jul 2014)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=15797",
+   "k": "Dodge"
+  },
+  "sp15": {
+   "t": "FCA US: 2015 Dodge Challenger SRT specifications (PDF)",
+   "u": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2015_DG_Challenger_SRT_SP.pdf",
+   "k": "Dodge"
+  },
+  "r19": {
+   "t": "FCA US: New 2019 Dodge Challenger SRT Hellcat Redeye (Jun 2018; also covers the R/T Scat Pack Widebody)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=19970",
+   "k": "Dodge"
+  },
+  "sp20": {
+   "t": "FCA US: 2020 Dodge Challenger / Challenger SRT specifications (PDF)",
+   "u": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/specs/2020_DG_Challenger_ChallengerSRT_SP.pdf",
+   "k": "Dodge"
+  },
+  "p23": {
+   "t": "Stellantis: Dodge opens orders and announces pricing for 2023 Challenger and Charger (Oct 2022)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=24384",
+   "k": "Dodge"
+  },
+  "z60": {
+   "t": "0-60specs.com: Dodge Challenger 0-60 runs by magazine (Car and Driver, MotorTrend, MotorWeek)",
+   "u": "https://www.0-60specs.com/dodge/challenger-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "wh": {
+   "t": "Wikipedia: Chrysler Hemi engine (6.1 section)",
+   "u": "https://en.wikipedia.org/wiki/Chrysler_Hemi_engine",
+   "k": "Wikipedia (fallback)"
+  },
+  "sg24": {
+   "t": "SlashGear: How reliable are 6.4L HEMI engines? Here's what owners have to say (Sep 2024)",
+   "u": "https://www.slashgear.com/1656386/6-4-hemi-engine-reliability-owner-reviews",
+   "k": "outlet, summarizing owner reports"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-challenger-392",
+ "img": "/assets/ai-perf/challenger-392.webp?v=1"
+}

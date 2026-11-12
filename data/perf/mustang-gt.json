@@ -1,0 +1,972 @@
+{
+ "slug": "mustang-gt",
+ "name": "Ford Mustang GT",
+ "short": "Mustang GT",
+ "make": "Ford",
+ "page": "/cars/mustang-gt/",
+ "focus": "s650",
+ "star": "s650-gt",
+ "h1": "Ford Mustang GT: performance, engines and what owners say",
+ "nhtsa": {
+  "make": "FORD",
+  "models": [
+   "MUSTANG"
+  ],
+  "note": "NHTSA files the GT under Mustang, so these counts include V6 and EcoBoost Mustangs of these years."
+ },
+ "topics_extra": {
+  "MT-82 manual gearbox": "mt-?82|grind(s|ing)? (into|in) gear|hard to shift|won'?t (go|shift) into gear",
+  "Engine tick": "\\btick(s|ing)?\\b",
+  "Oil consumption": "oil consumption|burning oil|using oil|losing oil",
+  "Spark plugs": "spark plugs?",
+  "Intake manifold": "intake manifold|coolant crossover",
+  "Clutch": "\\bclutch\\b"
+ },
+ "gens": [
+  {
+   "id": "sn95",
+   "code": "SN95 (New Edge)",
+   "years": "2000–2004",
+   "y0": 2000,
+   "y1": 2004,
+   "engine": "mod46-2v",
+   "body": "Coupe, convertible",
+   "tag": "4.6 two-valve V8 with 260 hp. Bullitt edition in 2001.",
+   "variants": [
+    {
+     "id": "sn95-gt",
+     "name": "Mustang GT",
+     "years": "2000–2004",
+     "hp": {
+      "v": 260,
+      "src": [
+       "wiki4"
+      ],
+      "note": "at 5,250 rpm"
+     },
+     "tq": {
+      "v": 302,
+      "src": [
+       "wiki4"
+      ],
+      "note": "lb-ft at 4,000 rpm"
+     },
+     "z60": {
+      "v": 6.0,
+      "who": "Road & Track",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "5-speed manual or 4-speed automatic, rear-drive",
+      "src": [
+       "wiki4"
+      ],
+      "note": ""
+     }
+    },
+    {
+     "id": "sn95-bullitt",
+     "name": "Mustang Bullitt GT",
+     "years": "2001",
+     "hp": {
+      "v": 265,
+      "src": [
+       "wiki4"
+      ],
+      "note": "5 hp more than the GT"
+     },
+     "z60": {
+      "v": 5.8,
+      "who": "Road & Track",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "what": "Coupe only: 3/4-inch lower, Tokico shocks, Cobra brakes, revised intake and exhaust.",
+     "what_src": [
+      "wiki4"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s197",
+   "code": "S197",
+   "years": "2005–2010",
+   "y0": 2005,
+   "y1": 2010,
+   "engine": "mod46-3v",
+   "body": "Coupe, convertible",
+   "tag": "4.6 three-valve V8: 300 hp, then 315 hp for 2010.",
+   "variants": [
+    {
+     "id": "s197-gt",
+     "name": "Mustang GT",
+     "years": "2005–2009",
+     "hp": {
+      "v": 300,
+      "src": [
+       "fmf",
+       "wiki5"
+      ],
+      "note": "at 5,750 rpm"
+     },
+     "tq": {
+      "v": 320,
+      "src": [
+       "wiki5"
+      ],
+      "note": "lb-ft at 4,500 rpm"
+     },
+     "z60": {
+      "v": 4.8,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "5-speed manual or 5-speed automatic, rear-drive",
+      "src": [
+       "wiki5"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,480–3,525 lb",
+      "src": [
+       "wiki5"
+      ],
+      "note": "coupe, manual to automatic"
+     },
+     "price": {
+      "v": "$24,995",
+      "src": [
+       "sw05"
+      ],
+      "note": "2005 coupe, Ford launch price"
+     }
+    },
+    {
+     "id": "s197-bullitt",
+     "name": "Mustang Bullitt",
+     "years": "2008–2009",
+     "hp": {
+      "v": 315,
+      "src": [
+       "wiki5"
+      ],
+      "note": "at 6,000 rpm"
+     },
+     "tq": {
+      "v": 325,
+      "src": [
+       "wiki5"
+      ],
+      "note": "lb-ft at 4,250 rpm"
+     },
+     "z60": {
+      "v": 5.0,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "5-speed manual, rear-drive",
+      "src": [
+       "z60"
+      ],
+      "note": ""
+     },
+     "what": "Same three-valve 4.6, tuned to 315 hp: 15 more than the GT.",
+     "what_src": [
+      "wiki5",
+      "fmf"
+     ]
+    },
+    {
+     "id": "s197-gt10",
+     "name": "Mustang GT",
+     "years": "2010",
+     "hp": {
+      "v": 315,
+      "src": [
+       "f10a",
+       "wiki5"
+      ],
+      "note": "at 6,000 rpm"
+     },
+     "tq": {
+      "v": 325,
+      "src": [
+       "wiki5"
+      ],
+      "note": "lb-ft at 4,250 rpm"
+     },
+     "z60": {
+      "v": 4.9,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "5-speed manual or 5-speed automatic, rear-drive",
+      "src": [
+       "wiki5"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,533 lb",
+      "src": [
+       "wiki5"
+      ],
+      "note": "coupe, manual; 3,575 lb automatic"
+     },
+     "price": {
+      "v": "$27,995",
+      "src": [
+       "f10a"
+      ],
+      "note": "2010 coupe, destination not included"
+     },
+     "what": "New body and interior; 15 hp more than 2005–2009.",
+     "what_src": [
+      "f10a",
+      "fmf"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s197c",
+   "code": "S197 (5.0)",
+   "years": "2011–2014",
+   "y0": 2011,
+   "y1": 2014,
+   "engine": "coyote",
+   "body": "Coupe, convertible",
+   "tag": "Coyote 5.0 arrives: 412 hp, then 420 hp from 2013.",
+   "variants": [
+    {
+     "id": "s197c-gt11",
+     "name": "Mustang GT",
+     "years": "2011–2012",
+     "hp": {
+      "v": 412,
+      "src": [
+       "f11a",
+       "wiki5"
+      ],
+      "note": "at 6,500 rpm"
+     },
+     "tq": {
+      "v": 390,
+      "src": [
+       "f11a",
+       "wiki5"
+      ],
+      "note": "lb-ft at 4,250 rpm"
+     },
+     "z60": {
+      "v": 4.6,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual or 6-speed automatic, rear-drive",
+      "src": [
+       "f11c",
+       "wiki5"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$29,645",
+      "src": [
+       "cars11"
+      ],
+      "note": "2011 coupe, plus $850 destination"
+     },
+     "what": "Optional Brembo package: Shelby GT500 front brakes, 19-inch wheels, summer tires.",
+     "what_src": [
+      "f11a"
+     ]
+    },
+    {
+     "id": "s197c-gt13",
+     "name": "Mustang GT",
+     "years": "2013–2014",
+     "hp": {
+      "v": 420,
+      "src": [
+       "p14",
+       "wiki5"
+      ],
+      "note": "at 6,500 rpm"
+     },
+     "tq": {
+      "v": 390,
+      "src": [
+       "wiki5"
+      ],
+      "note": "lb-ft at 4,250 rpm"
+     },
+     "z60": {
+      "v": 4.5,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual or 6-speed automatic, rear-drive",
+      "src": [
+       "wiki5"
+      ],
+      "note": ""
+     },
+     "what": "8 hp more; Track Package (manual) and Brembo package offered.",
+     "what_src": [
+      "p14",
+      "wiki5"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s550",
+   "code": "S550",
+   "years": "2015–2023",
+   "y0": 2015,
+   "y1": 2023,
+   "engine": "coyote",
+   "body": "Fastback, convertible",
+   "tag": "Independent rear suspension. 460 hp and a 10-speed from 2018.",
+   "variants": [
+    {
+     "id": "s550-gt15",
+     "name": "Mustang GT",
+     "years": "2015–2017",
+     "hp": {
+      "v": 435,
+      "src": [
+       "ts16",
+       "perf15"
+      ],
+      "note": "at 6,500 rpm"
+     },
+     "tq": {
+      "v": 400,
+      "src": [
+       "ts16"
+      ],
+      "note": "lb-ft at 4,250 rpm"
+     },
+     "z60": {
+      "v": 4.4,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual or 6-speed automatic, rear-drive",
+      "src": [
+       "ts16"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,705 lb",
+      "src": [
+       "ts16"
+      ],
+      "note": "fastback, manual (2016); 3,729 lb automatic"
+     },
+     "price": {
+      "v": "$32,100",
+      "src": [
+       "af15"
+      ],
+      "note": "2015 fastback, plus $825 destination"
+     }
+    },
+    {
+     "id": "s550-gt18",
+     "name": "Mustang GT",
+     "years": "2018–2023",
+     "hp": {
+      "v": 460,
+      "src": [
+       "fast18",
+       "eu18",
+       "drive22"
+      ],
+      "note": "at 7,000 rpm; 450 hp for 2022–2023 (emissions)"
+     },
+     "tq": {
+      "v": 420,
+      "src": [
+       "fast18",
+       "eu18",
+       "drive22"
+      ],
+      "note": "lb-ft at 4,600 rpm; 410 for 2022–2023"
+     },
+     "z60": {
+      "v": null,
+      "who": "",
+      "src": [],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual or 10-speed automatic, rear-drive",
+      "src": [
+       "p18"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$35,995",
+      "src": [
+       "cars18"
+      ],
+      "note": "2018 fastback, destination included"
+     },
+     "what": "Port plus direct injection adds 25 hp; new 10-speed automatic.",
+     "what_src": [
+      "fast18",
+      "p18"
+     ]
+    },
+    {
+     "id": "s550-pp",
+     "name": "Mustang GT Performance Pack",
+     "years": "2018–2023",
+     "pkg": "s550-gt18",
+     "hp": {
+      "v": 460,
+      "src": [
+       "fast18"
+      ],
+      "note": "same engine as the GT"
+     },
+     "z60": {
+      "v": 3.8,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual or 10-speed automatic, rear-drive",
+      "src": [
+       "p18"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$3,995",
+      "src": [
+       "cars18"
+      ],
+      "note": "package price on the GT, 2018"
+     },
+     "what": "Brembo six-piston fronts, Torsen diff, stiffer springs and bars, braces. Level 2: wider tires, lower.",
+     "what_src": [
+      "p22",
+      "pp2"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s650",
+   "code": "S650",
+   "years": "2024–",
+   "y0": 2024,
+   "y1": 2025,
+   "engine": "coyote",
+   "body": "Fastback, convertible",
+   "tag": "Gen 4 Coyote, two throttle bodies: 480 hp, 486 with active exhaust.",
+   "variants": [
+    {
+     "id": "s650-gt",
+     "name": "Mustang GT",
+     "years": "2024–2025",
+     "star": true,
+     "hp": {
+      "v": 480,
+      "src": [
+       "dh"
+      ],
+      "note": "486 with active exhaust"
+     },
+     "tq": {
+      "v": 415,
+      "src": [
+       "dh"
+      ],
+      "note": "lb-ft; 418 with active exhaust"
+     },
+     "z60": {
+      "v": null,
+      "who": "",
+      "src": [],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual or 10-speed automatic, rear-drive",
+      "src": [
+       "p24"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$42,495",
+      "src": [
+       "m124"
+      ],
+      "note": "2024 fastback, plus $1,595 destination"
+     },
+     "what": "Dual air box and dual throttle bodies; manual gets standard rev-matching.",
+     "what_src": [
+      "rev24",
+      "p24"
+     ]
+    },
+    {
+     "id": "s650-pp",
+     "name": "Mustang GT Performance Pack",
+     "years": "2024–2025",
+     "pkg": "s650-gt",
+     "hp": {
+      "v": 480,
+      "src": [
+       "dh"
+      ],
+      "note": "486 with active exhaust"
+     },
+     "z60": {
+      "v": 4.2,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual or 10-speed automatic, rear-drive",
+      "src": [
+       "p24"
+      ],
+      "note": ""
+     },
+     "what": "Torsen diff, tower brace, 390 mm Brembo fronts, wider rear tires, extra oil cooler.",
+     "what_src": [
+      "p24"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "mod46-2v": {
+   "name": "Ford 4.6 Modular (2-valve)",
+   "what": "4.6-liter V8, SOHC 2-valve",
+   "study": "",
+   "page": "",
+   "yt": [
+    "scy",
+    ""
+   ],
+   "facts": [
+    [
+     "Valvetrain",
+     "SOHC, 2 valves per cylinder, PI heads",
+     [
+      "wmod"
+     ]
+    ],
+    [
+     "Output",
+     "260 hp, 302 lb-ft; 265 hp in the 2001 Bullitt",
+     [
+      "wiki4"
+     ]
+    ],
+    [
+     "Intake",
+     "Nylon-composite manifold with coolant crossover",
+     [
+      "wmod"
+     ]
+    ],
+    [
+     "Bore x stroke",
+     "90.2 x 90.0 mm",
+     [
+      "wmod"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Intake manifold coolant leaks",
+     "kind": "Class action",
+     "rx": "intake manifold|coolant crossover",
+     "x": "The composite intake's coolant crossover can crack and leak, which can overheat the engine. Class actions covered some 1997–2001 Mustangs.",
+     "fix": "Replace the intake manifold.",
+     "src": [
+      "wmod"
+     ]
+    },
+    {
+     "t": "Spark plug threads",
+     "kind": "Owner-reported",
+     "rx": "spark plug (blew|blown|shot) out|plug blew out|stripped (spark )?plug|spark plug threads?",
+     "x": "Spark plug threads in the aluminum heads can be stripped or too shallow, and a plug can work loose and blow out.",
+     "fix": "Ford's approved out-of-warranty repair is a thread insert kit.",
+     "src": [
+      "wmod",
+      "wat"
+     ]
+    }
+   ]
+  },
+  "mod46-3v": {
+   "name": "Ford 4.6 Modular (3-valve)",
+   "what": "4.6-liter V8, SOHC 3-valve",
+   "study": "",
+   "page": "",
+   "yt": [
+    "scy",
+    ""
+   ],
+   "facts": [
+    [
+     "Valvetrain",
+     "SOHC, 3 valves per cylinder, variable cam timing",
+     [
+      "wmod"
+     ]
+    ],
+    [
+     "Output",
+     "300 hp, 320 lb-ft; 315 hp for 2010",
+     [
+      "fmf",
+      "wiki5",
+      "f10a"
+     ]
+    ],
+    [
+     "Block",
+     "Aluminum in the Mustang (iron in trucks)",
+     [
+      "wmod"
+     ]
+    ],
+    [
+     "Bore x stroke",
+     "90.2 x 90.0 mm",
+     [
+      "wmod"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Spark plugs break on removal",
+     "kind": "Maker bulletin",
+     "rx": "broken? spark plugs?|spark plugs? (broke|snapped|seized)|plug broke",
+     "x": "On engines built before Nov. 30, 2007, the two-piece plugs can break during removal and leave part in the head.",
+     "fix": "Ford bulletin 08-7-6 gives a hand-tool removal method and an extraction procedure.",
+     "src": [
+      "tsb876",
+      "wmod"
+     ]
+    }
+   ]
+  },
+  "coyote": {
+   "name": "Ford Coyote 5.0",
+   "what": "5.0-liter V8, DOHC 4-valve",
+   "study": "ford-coyote",
+   "page": "/engines/ford-coyote/",
+   "yt": [
+    "scy",
+    "ford-coyote"
+   ],
+   "facts": [
+    [
+     "Redline",
+     "7,000 rpm (2011)",
+     [
+      "f11a"
+     ]
+    ],
+    [
+     "Output",
+     "412–486 hp in the GT",
+     [
+      "f11a",
+      "dh"
+     ]
+    ],
+    [
+     "Fuel",
+     "Port plus direct injection from 2018",
+     [
+      "fast18"
+     ]
+    ],
+    [
+     "Build",
+     "Aluminum block and heads; 430 lb as shipped (2011)",
+     [
+      "f11a",
+      "ts16"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Ticking noise",
+     "kind": "Maker bulletin",
+     "rx": "\\btick(s|ing)?\\b",
+     "x": "Many Coyotes make a light tick, often after an oil change. Ford's service message for 2011–2024 Mustangs calls it normal and harmless.",
+     "fix": "",
+     "src": [
+      "aut24"
+     ]
+    },
+    {
+     "t": "Oil consumption (2018–2020)",
+     "kind": "Maker bulletin (F-150)",
+     "rx": "oil consumption|burning oil|using oil|losing oil",
+     "x": "Some Gen 3 Coyotes use over a quart per 3,000 miles. Ford's 2019 bulletin blames vacuum on deceleration; the bulletin and lawsuit cover the F-150.",
+     "fix": "Dealer checks for leaks, changes the oil and reprograms the engine computer.",
+     "src": [
+      "sg26"
+     ]
+    },
+    {
+     "t": "MT-82 manual gearbox (disputed)",
+     "kind": "Lawsuit",
+     "rx": "mt-?82|grind(s|ing)? (into|in) gear|hard to shift|won'?t (go|shift) into gear",
+     "x": "Owners of 2011–2019 manual Mustangs sued over hard shifts, grinding and gear lockouts. Ford denies a defect and blames normal wear.",
+     "fix": "",
+     "src": [
+      "drive20"
+     ]
+    }
+   ]
+  }
+ },
+ "compare": [
+  {
+   "slug": "camaro-ss",
+   "name": "Chevrolet Camaro SS"
+  },
+  {
+   "slug": "challenger-392",
+   "name": "Dodge Challenger SRT8 / Scat Pack 392"
+  },
+  {
+   "slug": "gr-supra",
+   "name": "Toyota GR Supra"
+  },
+  {
+   "slug": "nissan-z",
+   "name": "Nissan Z"
+  }
+ ],
+ "sources": {
+  "wiki4": {
+   "t": "Wikipedia: Ford Mustang (fourth generation)",
+   "u": "https://en.wikipedia.org/wiki/Ford_Mustang_(fourth_generation)",
+   "k": "Wikipedia (fallback)"
+  },
+  "wiki5": {
+   "t": "Wikipedia: Ford Mustang (fifth generation)",
+   "u": "https://en.wikipedia.org/wiki/Ford_Mustang_(fifth_generation)",
+   "k": "Wikipedia (fallback)"
+  },
+  "wmod": {
+   "t": "Wikipedia: Ford Modular engine",
+   "u": "https://en.wikipedia.org/wiki/Ford_Modular_engine",
+   "k": "Wikipedia (fallback)"
+  },
+  "fmf": {
+   "t": "Ford: Mustang facts, 1994 to 2010 (2009, archived)",
+   "u": "https://web.archive.org/web/20090911082041/http://www.ford.com/about-ford/news-announcements/press-releases/press-releases-detail/pr-mustang-facts2658-1994-26ndash-30169",
+   "k": "Ford"
+  },
+  "sw05": {
+   "t": "Ford press release on 2005 Mustang production and pricing (reprinted by SeriousWheels)",
+   "u": "https://seriouswheels.com/2005-ford-mustang-production.htm",
+   "k": "Ford release, reprint"
+  },
+  "f10a": {
+   "t": "Ford: 2010 Ford Mustang is fast, fun, affordable (2009, archived)",
+   "u": "https://web.archive.org/web/20090527213901/http://www.ford.com/about-ford/news-announcements/press-releases/press-releases-detail/pr-new-2010-ford-mustang-is-fast-fun-29903",
+   "k": "Ford"
+  },
+  "f11a": {
+   "t": "Ford: The 5.0-liter is back, 2011 Mustang GT (Dec 2009, archived)",
+   "u": "https://web.archive.org/web/20100430105805/http://www.ford.com/about-ford/news-announcements/press-releases/press-releases-detail/pr-the-50liter-is-back2658-2011-ford-31645",
+   "k": "Ford"
+  },
+  "f11c": {
+   "t": "Ford: 2011 Mustang GT leads class with 26 mpg, 412 hp (Mar 2010, archived)",
+   "u": "https://web.archive.org/web/20100715221828/http://www.ford.com/about-ford/news-announcements/press-releases/press-releases-detail/pr-2011-ford-mustang-gt-leads-class-32210",
+   "k": "Ford"
+  },
+  "cars11": {
+   "t": "Cars.com: 2011 Ford Mustang lineup priced (Feb 2010)",
+   "u": "https://www.cars.com/articles/2011-ford-mustang-lineup-priced-1420663216989/",
+   "k": "outlet"
+  },
+  "p14": {
+   "t": "Ford Media Center: 2014 Mustang (archived)",
+   "u": "https://web.archive.org/web/20131103052953/https://media.ford.com/content/fordmedia/fna/us/en/products/cars/mustang/2014-mustang.html",
+   "k": "Ford"
+  },
+  "perf15": {
+   "t": "Ford Media Center: 2015 Mustang press kit, performance (archived)",
+   "u": "https://web.archive.org/web/20170601112305/https://media.ford.com/content/fordmedia/fna/us/en/products/cars/mustang/2015-mustang-press-kit/performance.pdf",
+   "k": "Ford"
+  },
+  "ts16": {
+   "t": "Ford Media Center: 2016 Mustang technical specifications (archived)",
+   "u": "https://web.archive.org/web/20210710191424/https://media.ford.com/content/dam/lincolnmedia/lna/us/product/2016/2016-Ford-Mustang-Tech-Specs.pdf",
+   "k": "Ford"
+  },
+  "af15": {
+   "t": "Automotive Fleet: Ford sets 2015 Mustang pricing (Jun 2014)",
+   "u": "https://www.automotive-fleet.com/news/ford-sets-2015-mustang-pricing",
+   "k": "outlet"
+  },
+  "fast18": {
+   "t": "Ford Media Center: New Mustang GT can go 0-60 in less than four seconds (Jul 2017, archived)",
+   "u": "https://web.archive.org/web/20181022082900/https://media.ford.com/content/fordmedia/fna/us/en/news/2017/07/24/fastest-mustang-GT.html",
+   "k": "Ford"
+  },
+  "eu18": {
+   "t": "Ford of Europe: 2018 Mustang technical specifications (archived)",
+   "u": "https://web.archive.org/web/20210118091739/https://media.ford.com/content/dam/fordmedia/Europe/documents/productReleases/Mustang/2018Ford_Mustang_Tech_Spec_EU.pdf",
+   "k": "Ford (Europe spec, rpm only)"
+  },
+  "p18": {
+   "t": "Ford Media Center: 2018 Mustang (archived)",
+   "u": "https://web.archive.org/web/20220704083602/https://media.ford.com/content/fordmedia/fna/us/en/products/icons/mustang/2018-mustang.html",
+   "k": "Ford"
+  },
+  "pp2": {
+   "t": "Ford Media Center: Mustang GT Performance Pack Level 2 (Oct 2017, archived)",
+   "u": "https://web.archive.org/web/20191014035759/https://media.ford.com/content/fordmedia/fna/us/en/news/2017/10/new-mustang-gt-performance-pack-level-2.html",
+   "k": "Ford"
+  },
+  "cars18": {
+   "t": "Cars.com: Ford puts a price on 2018 Mustang (Aug 2017)",
+   "u": "https://www.cars.com/articles/ford-puts-a-price-on-2018-mustang-1420696420541",
+   "k": "outlet"
+  },
+  "p22": {
+   "t": "Ford Media Center: 2022 Mustang (archived)",
+   "u": "https://web.archive.org/web/20250209103027/https://media.ford.com/content/fordmedia/fna/us/en/products/icons/mustang/2022-mustang.html",
+   "k": "Ford"
+  },
+  "drive22": {
+   "t": "The Drive: 2022 Mustang 5.0 down 10 hp to meet emissions rules, Ford statement (Oct 2021)",
+   "u": "https://www.thedrive.com/news/42730/2022-ford-mustangs-5-0l-v8-down-10-hp-to-meet-emissions-standards",
+   "k": "outlet"
+  },
+  "rev24": {
+   "t": "Ford Media Center: 2024 Ford Mustang reveal (Sep 2022, archived)",
+   "u": "https://web.archive.org/web/20241221123219/https://media.ford.com/content/fordmedia/fna/us/en/news/2022/09/14/2024-ford-mustang-reveal.html",
+   "k": "Ford"
+  },
+  "dh": {
+   "t": "Ford Media Center: Mustang Dark Horse 500 hp; GT up to 486 hp (Dec 2022, archived)",
+   "u": "https://web.archive.org/web/20250324002126/https://media.ford.com/content/fordmedia/fna/us/en/news/2022/12/15/ho-ho-ho-horsepower--all-new-mustang-dark-horse-delivers-500-hor.html",
+   "k": "Ford"
+  },
+  "p24": {
+   "t": "Ford Media Center: 2024 Mustang (archived)",
+   "u": "https://web.archive.org/web/20250114191619/https://media.ford.com/content/fordmedia/fna/us/en/products/icons/mustang/2024-mustang.html",
+   "k": "Ford"
+  },
+  "m124": {
+   "t": "Motor1: 2024 Ford Mustang pricing (Feb 2023)",
+   "u": "https://www.motor1.com/news/654868/2024-ford-mustang-price/",
+   "k": "outlet"
+  },
+  "z60": {
+   "t": "0-60specs.com: Ford Mustang 0-60 runs by magazine (Car and Driver, MotorTrend, Road & Track)",
+   "u": "https://www.0-60specs.com/ford/mustang-0-60-times/",
+   "k": "magazine tests, aggregated"
+  },
+  "tsb876": {
+   "t": "Ford TSB 08-7-6: spark plug removal, 4.6L 3V (Apr 2008)",
+   "u": "https://www.fordservicecontent.com/Ford_Content/pubs/content/~WT/~MUS~LEN/3637/tsb08-07-06.htm",
+   "k": "Maker bulletin"
+  },
+  "wat": {
+   "t": "Wise Auto Tools: Ford spark plug blow out",
+   "u": "https://www.wiseautotools.com/blog/ford-spark-plug-blow-out-solved",
+   "k": "tool seller"
+  },
+  "aut24": {
+   "t": "The Autopian: Nobody knows what's making Ford's Coyote engines tick (Aug 2024)",
+   "u": "https://www.theautopian.com/nobody-knows-whats-making-fords-coyote-engines-tick/",
+   "k": "outlet"
+  },
+  "sg26": {
+   "t": "SlashGear: Ford Coyote 5.0 oil consumption, the Gen 3 problem explained (May 2026)",
+   "u": "https://www.slashgear.com/2161162/ford-coyote-5-0-engine-oil-consumption-gen-3-intake-valve-problem-overview/",
+   "k": "outlet"
+  },
+  "drive20": {
+   "t": "The Drive: Mustang owners file lawsuit over six-speed manual transmissions (2020)",
+   "u": "https://www.thedrive.com/news/33972/fed-up-ford-mustang-owners-file-lawsuit-over-faulty-six-speed-manual-transmissions",
+   "k": "outlet"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-mustang-gt",
+ "img": "/assets/ai-perf/mustang-gt.webp?v=1"
+}

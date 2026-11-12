@@ -265,8 +265,476 @@
   ]
  },
  "yt": {
-  "car-trackhawk": null,
-  "chrysler-hellcat": null
+  "car-trackhawk": {
+   "videos": 200,
+   "praise": [
+    [
+     "Looks",
+     13
+    ],
+    [
+     "Power and acceleration",
+     12
+    ],
+    [
+     "Everyday comfort",
+     6
+    ],
+    [
+     "Engine sound",
+     6
+    ]
+   ],
+   "trouble": [],
+   "top": [
+    {
+     "id": "pVkhw1Q0nOU",
+     "title": "When the Wife asks to take your 1000hp Trackhawk shopping",
+     "views": 13813636,
+     "ch": "SRTNINJAUSA"
+    },
+    {
+     "id": "ek_aZC4KIQM",
+     "title": "The $100,000 Jeep Trackhawk Is the Most Powerful SUV Ever",
+     "views": 7292548,
+     "ch": "Doug DeMuro"
+    },
+    {
+     "id": "k89W1qG_WtE",
+     "title": "Lambo Urus v Porsche Turbo GT v BMW X6M v Tesla Model X v Jeep Trackhawk: DRAG RACE",
+     "views": 6523940,
+     "ch": "carwow"
+    }
+   ]
+  },
+  "chrysler-hellcat": {
+   "videos": 200,
+   "praise": [
+    [
+     "Looks",
+     18
+    ],
+    [
+     "Power and acceleration",
+     14
+    ],
+    [
+     "Interior and seats",
+     10
+    ],
+    [
+     "Everyday comfort",
+     8
+    ]
+   ],
+   "trouble": [
+    [
+     "Electrical / wiring / TIPM",
+     6
+    ]
+   ],
+   "top": [
+    {
+     "id": "buzsasTfC4s",
+     "title": "Hellcat vs Z06 Corvette - drag racing",
+     "views": 26342950,
+     "ch": "Wheels"
+    },
+    {
+     "id": "pVkhw1Q0nOU",
+     "title": "When the Wife asks to take your 1000hp Trackhawk shopping",
+     "views": 13813614,
+     "ch": "SRTNINJAUSA"
+    },
+    {
+     "id": "cKx-cb0fzeo",
+     "title": "2016 Dodge Challenger SRT Hellcat - SOUND!",
+     "views": 11025539,
+     "ch": "Visual Car Reviews"
+    }
+   ]
+  }
  },
- "scores": {}
+ "scores": {
+  "car-trackhawk": {
+   "years": {
+    "2018": {
+     "score": 54,
+     "weight": 56.5,
+     "videos": 177,
+     "named": 18,
+     "top": [
+      {
+       "id": "pVkhw1Q0nOU",
+       "title": "When the Wife asks to take your 1000hp Trackhawk shopping",
+       "views": 13813636
+      },
+      {
+       "id": "ek_aZC4KIQM",
+       "title": "The $100,000 Jeep Trackhawk Is the Most Powerful SUV Ever",
+       "views": 7292548
+      },
+      {
+       "id": "k89W1qG_WtE",
+       "title": "Lambo Urus v Porsche Turbo GT v BMW X6M v Tesla Model X v Jeep Trackhawk: DRAG RACE",
+       "views": 6523940
+      }
+     ]
+    },
+    "2019": {
+     "score": 52,
+     "weight": 43.0,
+     "videos": 163,
+     "named": 4,
+     "top": [
+      {
+       "id": "pVkhw1Q0nOU",
+       "title": "When the Wife asks to take your 1000hp Trackhawk shopping",
+       "views": 13813636
+      },
+      {
+       "id": "ek_aZC4KIQM",
+       "title": "The $100,000 Jeep Trackhawk Is the Most Powerful SUV Ever",
+       "views": 7292548
+      },
+      {
+       "id": "k89W1qG_WtE",
+       "title": "Lambo Urus v Porsche Turbo GT v BMW X6M v Tesla Model X v Jeep Trackhawk: DRAG RACE",
+       "views": 6523940
+      }
+     ]
+    },
+    "2020": {
+     "score": 54,
+     "weight": 47.5,
+     "videos": 168,
+     "named": 9,
+     "top": [
+      {
+       "id": "pVkhw1Q0nOU",
+       "title": "When the Wife asks to take your 1000hp Trackhawk shopping",
+       "views": 13813636
+      },
+      {
+       "id": "ek_aZC4KIQM",
+       "title": "The $100,000 Jeep Trackhawk Is the Most Powerful SUV Ever",
+       "views": 7292548
+      },
+      {
+       "id": "k89W1qG_WtE",
+       "title": "Lambo Urus v Porsche Turbo GT v BMW X6M v Tesla Model X v Jeep Trackhawk: DRAG RACE",
+       "views": 6523940
+      }
+     ]
+    },
+    "2021": {
+     "score": 52,
+     "weight": 47.0,
+     "videos": 167,
+     "named": 8,
+     "top": [
+      {
+       "id": "pVkhw1Q0nOU",
+       "title": "When the Wife asks to take your 1000hp Trackhawk shopping",
+       "views": 13813636
+      },
+      {
+       "id": "ek_aZC4KIQM",
+       "title": "The $100,000 Jeep Trackhawk Is the Most Powerful SUV Ever",
+       "views": 7292548
+      },
+      {
+       "id": "k89W1qG_WtE",
+       "title": "Lambo Urus v Porsche Turbo GT v BMW X6M v Tesla Model X v Jeep Trackhawk: DRAG RACE",
+       "views": 6523940
+      }
+     ]
+    }
+   },
+   "videos": 194,
+   "pulled": 200
+  },
+  "chrysler-hellcat": {
+   "years": {
+    "2015": {
+     "score": 55,
+     "weight": 20.4,
+     "videos": 112,
+     "named": 13,
+     "top": [
+      {
+       "id": "buzsasTfC4s",
+       "title": "Hellcat vs Z06 Corvette - drag racing",
+       "views": 26342950
+      },
+      {
+       "id": "y-jdvMU1EKo",
+       "title": "Dodge Durango Hellcat vs Lamborghini Urus vs Jeep Trackhawk // DRAG & ROLL RACE",
+       "views": 4849740
+      },
+      {
+       "id": "MWMjR3r-nsI",
+       "title": "2015 Dodge Challenger SRT Hellcat - Jay Leno's Garage",
+       "views": 4636361
+      }
+     ]
+    },
+    "2016": {
+     "score": 50,
+     "weight": 10.4,
+     "videos": 102,
+     "named": 3,
+     "top": [
+      {
+       "id": "buzsasTfC4s",
+       "title": "Hellcat vs Z06 Corvette - drag racing",
+       "views": 26342950
+      },
+      {
+       "id": "cKx-cb0fzeo",
+       "title": "2016 Dodge Challenger SRT Hellcat - SOUND!",
+       "views": 11025539
+      },
+      {
+       "id": "y-jdvMU1EKo",
+       "title": "Dodge Durango Hellcat vs Lamborghini Urus vs Jeep Trackhawk // DRAG & ROLL RACE",
+       "views": 4849740
+      }
+     ]
+    },
+    "2017": {
+     "score": 49,
+     "weight": 8.4,
+     "videos": 100,
+     "named": 1,
+     "top": [
+      {
+       "id": "buzsasTfC4s",
+       "title": "Hellcat vs Z06 Corvette - drag racing",
+       "views": 26342950
+      },
+      {
+       "id": "y-jdvMU1EKo",
+       "title": "Dodge Durango Hellcat vs Lamborghini Urus vs Jeep Trackhawk // DRAG & ROLL RACE",
+       "views": 4849740
+      },
+      {
+       "id": "eyzGRhXp0do",
+       "title": "717HP DODGE CHARGER HELLCAT on AUTOBAHN [NO SPEED LIMIT] by AutoTopNL",
+       "views": 4597803
+      }
+     ]
+    },
+    "2018": {
+     "score": 53,
+     "weight": 29.1,
+     "videos": 150,
+     "named": 12,
+     "top": [
+      {
+       "id": "buzsasTfC4s",
+       "title": "Hellcat vs Z06 Corvette - drag racing",
+       "views": 26342950
+      },
+      {
+       "id": "pVkhw1Q0nOU",
+       "title": "When the Wife asks to take your 1000hp Trackhawk shopping",
+       "views": 13813614
+      },
+      {
+       "id": "ek_aZC4KIQM",
+       "title": "The $100,000 Jeep Trackhawk Is the Most Powerful SUV Ever",
+       "views": 7292548
+      }
+     ]
+    },
+    "2019": {
+     "score": 53,
+     "weight": 26.1,
+     "videos": 147,
+     "named": 9,
+     "top": [
+      {
+       "id": "buzsasTfC4s",
+       "title": "Hellcat vs Z06 Corvette - drag racing",
+       "views": 26342950
+      },
+      {
+       "id": "pVkhw1Q0nOU",
+       "title": "When the Wife asks to take your 1000hp Trackhawk shopping",
+       "views": 13813614
+      },
+      {
+       "id": "ek_aZC4KIQM",
+       "title": "The $100,000 Jeep Trackhawk Is the Most Powerful SUV Ever",
+       "views": 7292548
+      }
+     ]
+    },
+    "2020": {
+     "score": 51,
+     "weight": 21.1,
+     "videos": 142,
+     "named": 4,
+     "top": [
+      {
+       "id": "buzsasTfC4s",
+       "title": "Hellcat vs Z06 Corvette - drag racing",
+       "views": 26342950
+      },
+      {
+       "id": "pVkhw1Q0nOU",
+       "title": "When the Wife asks to take your 1000hp Trackhawk shopping",
+       "views": 13813614
+      },
+      {
+       "id": "ek_aZC4KIQM",
+       "title": "The $100,000 Jeep Trackhawk Is the Most Powerful SUV Ever",
+       "views": 7292548
+      }
+     ]
+    },
+    "2021": {
+     "score": 52,
+     "weight": 26.9,
+     "videos": 158,
+     "named": 7,
+     "top": [
+      {
+       "id": "buzsasTfC4s",
+       "title": "Hellcat vs Z06 Corvette - drag racing",
+       "views": 26342950
+      },
+      {
+       "id": "pVkhw1Q0nOU",
+       "title": "When the Wife asks to take your 1000hp Trackhawk shopping",
+       "views": 13813614
+      },
+      {
+       "id": "ek_aZC4KIQM",
+       "title": "The $100,000 Jeep Trackhawk Is the Most Powerful SUV Ever",
+       "views": 7292548
+      }
+     ]
+    },
+    "2022": {
+     "score": 52,
+     "weight": 14.1,
+     "videos": 116,
+     "named": 4,
+     "top": [
+      {
+       "id": "buzsasTfC4s",
+       "title": "Hellcat vs Z06 Corvette - drag racing",
+       "views": 26342950
+      },
+      {
+       "id": "y-jdvMU1EKo",
+       "title": "Dodge Durango Hellcat vs Lamborghini Urus vs Jeep Trackhawk // DRAG & ROLL RACE",
+       "views": 4849740
+      },
+      {
+       "id": "eyzGRhXp0do",
+       "title": "717HP DODGE CHARGER HELLCAT on AUTOBAHN [NO SPEED LIMIT] by AutoTopNL",
+       "views": 4597803
+      }
+     ]
+    },
+    "2023": {
+     "score": 52,
+     "weight": 13.6,
+     "videos": 115,
+     "named": 3,
+     "top": [
+      {
+       "id": "buzsasTfC4s",
+       "title": "Hellcat vs Z06 Corvette - drag racing",
+       "views": 26342950
+      },
+      {
+       "id": "y-jdvMU1EKo",
+       "title": "Dodge Durango Hellcat vs Lamborghini Urus vs Jeep Trackhawk // DRAG & ROLL RACE",
+       "views": 4849740
+      },
+      {
+       "id": "eyzGRhXp0do",
+       "title": "717HP DODGE CHARGER HELLCAT on AUTOBAHN [NO SPEED LIMIT] by AutoTopNL",
+       "views": 4597803
+      }
+     ]
+    },
+    "2024": {
+     "score": 50,
+     "weight": 11.5,
+     "videos": 112,
+     "named": 0,
+     "top": [
+      {
+       "id": "buzsasTfC4s",
+       "title": "Hellcat vs Z06 Corvette - drag racing",
+       "views": 26342950
+      },
+      {
+       "id": "y-jdvMU1EKo",
+       "title": "Dodge Durango Hellcat vs Lamborghini Urus vs Jeep Trackhawk // DRAG & ROLL RACE",
+       "views": 4849740
+      },
+      {
+       "id": "eyzGRhXp0do",
+       "title": "717HP DODGE CHARGER HELLCAT on AUTOBAHN [NO SPEED LIMIT] by AutoTopNL",
+       "views": 4597803
+      }
+     ]
+    },
+    "2025": {
+     "score": 50,
+     "weight": 9.2,
+     "videos": 100,
+     "named": 1,
+     "top": [
+      {
+       "id": "buzsasTfC4s",
+       "title": "Hellcat vs Z06 Corvette - drag racing",
+       "views": 26342950
+      },
+      {
+       "id": "y-jdvMU1EKo",
+       "title": "Dodge Durango Hellcat vs Lamborghini Urus vs Jeep Trackhawk // DRAG & ROLL RACE",
+       "views": 4849740
+      },
+      {
+       "id": "eyzGRhXp0do",
+       "title": "717HP DODGE CHARGER HELLCAT on AUTOBAHN [NO SPEED LIMIT] by AutoTopNL",
+       "views": 4597803
+      }
+     ]
+    },
+    "2026": {
+     "score": 48,
+     "weight": 9.2,
+     "videos": 100,
+     "named": 1,
+     "top": [
+      {
+       "id": "buzsasTfC4s",
+       "title": "Hellcat vs Z06 Corvette - drag racing",
+       "views": 26342950
+      },
+      {
+       "id": "y-jdvMU1EKo",
+       "title": "Dodge Durango Hellcat vs Lamborghini Urus vs Jeep Trackhawk // DRAG & ROLL RACE",
+       "views": 4849740
+      },
+      {
+       "id": "eyzGRhXp0do",
+       "title": "717HP DODGE CHARGER HELLCAT on AUTOBAHN [NO SPEED LIMIT] by AutoTopNL",
+       "views": 4597803
+      }
+     ]
+    }
+   },
+   "videos": 200,
+   "pulled": 200
+  }
+ }
 }

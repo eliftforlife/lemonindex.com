@@ -1,0 +1,738 @@
+{
+ "built": "2026-11-11",
+ "nhtsa": {
+  "by_year": {
+   "2002": 427,
+   "2003": 60,
+   "2004": 42,
+   "2005": 19,
+   "2006": 14,
+   "2008": 101,
+   "2009": 52,
+   "2010": 2,
+   "2011": 5,
+   "2012": 3,
+   "2013": 9,
+   "2014": 6,
+   "2015": 57,
+   "2016": 34,
+   "2017": 53,
+   "2018": 45,
+   "2019": 31,
+   "2020": 17,
+   "2021": 13,
+   "2022": 25,
+   "2023": 8,
+   "2024": 14,
+   "2025": 3
+  },
+  "gens": {
+   "gd": {
+    "n": 75,
+    "issues": {
+     "Ringland and piston failure": {
+      "n": 0,
+      "ex": []
+     },
+     "Bearing failure from oil starvation": {
+      "n": 0,
+      "ex": []
+     },
+     "Head gasket leaks": {
+      "n": 0,
+      "ex": []
+     },
+     "Oil consumption": {
+      "n": 0,
+      "ex": []
+     },
+     "Secondary air pump relay recall": {
+      "n": 2,
+      "ex": [
+       "10446143",
+       "11193386"
+      ]
+     }
+    }
+   },
+   "gr": {
+    "n": 178,
+    "issues": {
+     "Ringland and piston failure": {
+      "n": 12,
+      "ex": [
+       "10273870",
+       "10290169"
+      ]
+     },
+     "Bearing failure from oil starvation": {
+      "n": 10,
+      "ex": [
+       "10267401",
+       "10267601"
+      ]
+     },
+     "Head gasket leaks": {
+      "n": 0,
+      "ex": []
+     },
+     "Oil consumption": {
+      "n": 2,
+      "ex": [
+       "10345791",
+       "10394484"
+      ]
+     },
+     "Secondary air pump relay recall": {
+      "n": 7,
+      "ex": [
+       "10510201",
+       "10819981"
+      ]
+     }
+    }
+   },
+   "va": {
+    "n": 250,
+    "issues": {
+     "Ringland and piston failure": {
+      "n": 6,
+      "ex": [
+       "11014520",
+       "11151074"
+      ]
+     },
+     "Bearing failure from oil starvation": {
+      "n": 13,
+      "ex": [
+       "11256512",
+       "11277802"
+      ]
+     },
+     "Head gasket leaks": {
+      "n": 1,
+      "ex": [
+       "11470555"
+      ]
+     },
+     "Oil consumption": {
+      "n": 1,
+      "ex": [
+       "11385687"
+      ]
+     },
+     "Secondary air pump relay recall": {
+      "n": 2,
+      "ex": [
+       "11611157",
+       "11651199"
+      ]
+     }
+    }
+   }
+  },
+  "parts": [
+   [
+    "Power train",
+    160
+   ],
+   [
+    "Engine",
+    93
+   ],
+   [
+    "Electrical system",
+    65
+   ],
+   [
+    "Structure",
+    58
+   ],
+   [
+    "Unknown or other",
+    57
+   ],
+   [
+    "Service brakes",
+    56
+   ]
+  ]
+ },
+ "recalls": {
+  "2004": [],
+  "2005": [],
+  "2006": [],
+  "2007": [],
+  "2008": [
+   {
+    "id": "14V311000",
+    "part": "SERVICE BRAKES, HYDRAULIC:FOUNDATION COMPONENTS:HOSES, LINES/PIPING, AND FITTINGS",
+    "summary": "Subaru of America, Inc. (Subaru) is recalling certain model year 2005-2009 Outback and Legacy, 2008-2011 Impreza and 2008-2014 Impreza WRX/STI, and 2009-2013 Forester vehicles, currently, or formerly, registered in Connecticut, Delaware, Illinois, Indiana, Iowa, Maine, Maryland, Massachusetts, Michigan, Minnesota, Missouri, New Hampshire, New Jersey, New York, Ohio, Pennsylvania, Rhode Island, Ver"
+   },
+   {
+    "id": "14V830000",
+    "part": "SERVICE BRAKES, HYDRAULIC",
+    "summary": "Subaru of America, Inc. (Subaru) is recalling certain model year 2008-2011 Impreza, 2008-2014 WRX and STI, and 2009-2013 Forester vehicles, currently, or formerly, registered in Connecticut, Delaware, Illinois, Indiana, Iowa, Maine, Maryland, Massachusetts, Michigan, Minnesota, Missouri, New Hampshire, New Jersey, New York, Ohio, Pennsylvania, Rhode Island, Vermont, West Virginia, Wisconsin and th"
+   }
+  ],
+  "2009": [
+   {
+    "id": "14V311000",
+    "part": "SERVICE BRAKES, HYDRAULIC:FOUNDATION COMPONENTS:HOSES, LINES/PIPING, AND FITTINGS",
+    "summary": "Subaru of America, Inc. (Subaru) is recalling certain model year 2005-2009 Outback and Legacy, 2008-2011 Impreza and 2008-2014 Impreza WRX/STI, and 2009-2013 Forester vehicles, currently, or formerly, registered in Connecticut, Delaware, Illinois, Indiana, Iowa, Maine, Maryland, Massachusetts, Michigan, Minnesota, Missouri, New Hampshire, New Jersey, New York, Ohio, Pennsylvania, Rhode Island, Ver"
+   },
+   {
+    "id": "14V830000",
+    "part": "SERVICE BRAKES, HYDRAULIC",
+    "summary": "Subaru of America, Inc. (Subaru) is recalling certain model year 2008-2011 Impreza, 2008-2014 WRX and STI, and 2009-2013 Forester vehicles, currently, or formerly, registered in Connecticut, Delaware, Illinois, Indiana, Iowa, Maine, Maryland, Massachusetts, Michigan, Minnesota, Missouri, New Hampshire, New Jersey, New York, Ohio, Pennsylvania, Rhode Island, Vermont, West Virginia, Wisconsin and th"
+   }
+  ],
+  "2010": [
+   {
+    "id": "14V311000",
+    "part": "SERVICE BRAKES, HYDRAULIC:FOUNDATION COMPONENTS:HOSES, LINES/PIPING, AND FITTINGS",
+    "summary": "Subaru of America, Inc. (Subaru) is recalling certain model year 2005-2009 Outback and Legacy, 2008-2011 Impreza and 2008-2014 Impreza WRX/STI, and 2009-2013 Forester vehicles, currently, or formerly, registered in Connecticut, Delaware, Illinois, Indiana, Iowa, Maine, Maryland, Massachusetts, Michigan, Minnesota, Missouri, New Hampshire, New Jersey, New York, Ohio, Pennsylvania, Rhode Island, Ver"
+   },
+   {
+    "id": "14V830000",
+    "part": "SERVICE BRAKES, HYDRAULIC",
+    "summary": "Subaru of America, Inc. (Subaru) is recalling certain model year 2008-2011 Impreza, 2008-2014 WRX and STI, and 2009-2013 Forester vehicles, currently, or formerly, registered in Connecticut, Delaware, Illinois, Indiana, Iowa, Maine, Maryland, Massachusetts, Michigan, Minnesota, Missouri, New Hampshire, New Jersey, New York, Ohio, Pennsylvania, Rhode Island, Vermont, West Virginia, Wisconsin and th"
+   }
+  ],
+  "2011": [
+   {
+    "id": "14V311000",
+    "part": "SERVICE BRAKES, HYDRAULIC:FOUNDATION COMPONENTS:HOSES, LINES/PIPING, AND FITTINGS",
+    "summary": "Subaru of America, Inc. (Subaru) is recalling certain model year 2005-2009 Outback and Legacy, 2008-2011 Impreza and 2008-2014 Impreza WRX/STI, and 2009-2013 Forester vehicles, currently, or formerly, registered in Connecticut, Delaware, Illinois, Indiana, Iowa, Maine, Maryland, Massachusetts, Michigan, Minnesota, Missouri, New Hampshire, New Jersey, New York, Ohio, Pennsylvania, Rhode Island, Ver"
+   },
+   {
+    "id": "14V830000",
+    "part": "SERVICE BRAKES, HYDRAULIC",
+    "summary": "Subaru of America, Inc. (Subaru) is recalling certain model year 2008-2011 Impreza, 2008-2014 WRX and STI, and 2009-2013 Forester vehicles, currently, or formerly, registered in Connecticut, Delaware, Illinois, Indiana, Iowa, Maine, Maryland, Massachusetts, Michigan, Minnesota, Missouri, New Hampshire, New Jersey, New York, Ohio, Pennsylvania, Rhode Island, Vermont, West Virginia, Wisconsin and th"
+   }
+  ],
+  "2012": [
+   {
+    "id": "14V311000",
+    "part": "SERVICE BRAKES, HYDRAULIC:FOUNDATION COMPONENTS:HOSES, LINES/PIPING, AND FITTINGS",
+    "summary": "Subaru of America, Inc. (Subaru) is recalling certain model year 2005-2009 Outback and Legacy, 2008-2011 Impreza and 2008-2014 Impreza WRX/STI, and 2009-2013 Forester vehicles, currently, or formerly, registered in Connecticut, Delaware, Illinois, Indiana, Iowa, Maine, Maryland, Massachusetts, Michigan, Minnesota, Missouri, New Hampshire, New Jersey, New York, Ohio, Pennsylvania, Rhode Island, Ver"
+   },
+   {
+    "id": "14V830000",
+    "part": "SERVICE BRAKES, HYDRAULIC",
+    "summary": "Subaru of America, Inc. (Subaru) is recalling certain model year 2008-2011 Impreza, 2008-2014 WRX and STI, and 2009-2013 Forester vehicles, currently, or formerly, registered in Connecticut, Delaware, Illinois, Indiana, Iowa, Maine, Maryland, Massachusetts, Michigan, Minnesota, Missouri, New Hampshire, New Jersey, New York, Ohio, Pennsylvania, Rhode Island, Vermont, West Virginia, Wisconsin and th"
+   }
+  ],
+  "2013": [
+   {
+    "id": "14V311000",
+    "part": "SERVICE BRAKES, HYDRAULIC:FOUNDATION COMPONENTS:HOSES, LINES/PIPING, AND FITTINGS",
+    "summary": "Subaru of America, Inc. (Subaru) is recalling certain model year 2005-2009 Outback and Legacy, 2008-2011 Impreza and 2008-2014 Impreza WRX/STI, and 2009-2013 Forester vehicles, currently, or formerly, registered in Connecticut, Delaware, Illinois, Indiana, Iowa, Maine, Maryland, Massachusetts, Michigan, Minnesota, Missouri, New Hampshire, New Jersey, New York, Ohio, Pennsylvania, Rhode Island, Ver"
+   },
+   {
+    "id": "14V830000",
+    "part": "SERVICE BRAKES, HYDRAULIC",
+    "summary": "Subaru of America, Inc. (Subaru) is recalling certain model year 2008-2011 Impreza, 2008-2014 WRX and STI, and 2009-2013 Forester vehicles, currently, or formerly, registered in Connecticut, Delaware, Illinois, Indiana, Iowa, Maine, Maryland, Massachusetts, Michigan, Minnesota, Missouri, New Hampshire, New Jersey, New York, Ohio, Pennsylvania, Rhode Island, Vermont, West Virginia, Wisconsin and th"
+   }
+  ],
+  "2014": [
+   {
+    "id": "14V311000",
+    "part": "SERVICE BRAKES, HYDRAULIC:FOUNDATION COMPONENTS:HOSES, LINES/PIPING, AND FITTINGS",
+    "summary": "Subaru of America, Inc. (Subaru) is recalling certain model year 2005-2009 Outback and Legacy, 2008-2011 Impreza and 2008-2014 Impreza WRX/STI, and 2009-2013 Forester vehicles, currently, or formerly, registered in Connecticut, Delaware, Illinois, Indiana, Iowa, Maine, Maryland, Massachusetts, Michigan, Minnesota, Missouri, New Hampshire, New Jersey, New York, Ohio, Pennsylvania, Rhode Island, Ver"
+   },
+   {
+    "id": "14V830000",
+    "part": "SERVICE BRAKES, HYDRAULIC",
+    "summary": "Subaru of America, Inc. (Subaru) is recalling certain model year 2008-2011 Impreza, 2008-2014 WRX and STI, and 2009-2013 Forester vehicles, currently, or formerly, registered in Connecticut, Delaware, Illinois, Indiana, Iowa, Maine, Maryland, Massachusetts, Michigan, Minnesota, Missouri, New Hampshire, New Jersey, New York, Ohio, Pennsylvania, Rhode Island, Vermont, West Virginia, Wisconsin and th"
+   }
+  ],
+  "2015": [],
+  "2016": [],
+  "2017": [],
+  "2018": [],
+  "2019": [],
+  "2020": [],
+  "2021": []
+ },
+ "yt": {
+  "car-wrx-sti": {
+   "videos": 200,
+   "praise": [
+    [
+     "Handling and steering",
+     18
+    ],
+    [
+     "Everyday comfort",
+     16
+    ],
+    [
+     "Looks",
+     16
+    ],
+    [
+     "Power and acceleration",
+     9
+    ]
+   ],
+   "trouble": [
+    [
+     "Coolant leaks / water pump / overheating",
+     6
+    ],
+    [
+     "Ringland / pistons",
+     6
+    ],
+    [
+     "Head gasket",
+     6
+    ]
+   ],
+   "top": [
+    {
+     "id": "OlmNQmaWSoQ",
+     "title": "THE FINAL RACE - Subaru WRX STI vs Mustang",
+     "views": 40270138,
+     "ch": "CAR BROS"
+    },
+    {
+     "id": "aQG69NwVQhY",
+     "title": "Building a Subaru WRX STI in 18 minutes! (COMPLETE TRANSFORMATION)",
+     "views": 9129751,
+     "ch": "throtl"
+    },
+    {
+     "id": "ZL9xh2XiSi8",
+     "title": "Subaru Impreza WRX STi Compilation 2018 - BRUTAL Sounds!",
+     "views": 4126850,
+     "ch": "DutchMotorsport"
+    }
+   ]
+  },
+  "subaru-ej257": null
+ },
+ "scores": {
+  "car-wrx-sti": {
+   "years": {
+    "2004": {
+     "score": 55,
+     "weight": 10.1,
+     "videos": 110,
+     "named": 5,
+     "top": [
+      {
+       "id": "OlmNQmaWSoQ",
+       "title": "THE FINAL RACE - Subaru WRX STI vs Mustang",
+       "views": 40270138
+      },
+      {
+       "id": "aQG69NwVQhY",
+       "title": "Building a Subaru WRX STI in 18 minutes! (COMPLETE TRANSFORMATION)",
+       "views": 9129751
+      },
+      {
+       "id": "lCXI3lVT-WQ",
+       "title": "SUBARU WRX STI 370HP *TOP SPEED* on AUTOBAHN [NO SPEED LIMIT] by AutoTopNL",
+       "views": 2355010
+      }
+     ]
+    },
+    "2005": {
+     "score": 50,
+     "weight": 7.1,
+     "videos": 107,
+     "named": 2,
+     "top": [
+      {
+       "id": "OlmNQmaWSoQ",
+       "title": "THE FINAL RACE - Subaru WRX STI vs Mustang",
+       "views": 40270138
+      },
+      {
+       "id": "aQG69NwVQhY",
+       "title": "Building a Subaru WRX STI in 18 minutes! (COMPLETE TRANSFORMATION)",
+       "views": 9129751
+      },
+      {
+       "id": "lCXI3lVT-WQ",
+       "title": "SUBARU WRX STI 370HP *TOP SPEED* on AUTOBAHN [NO SPEED LIMIT] by AutoTopNL",
+       "views": 2355010
+      }
+     ]
+    },
+    "2006": {
+     "score": 52,
+     "weight": 7.1,
+     "videos": 107,
+     "named": 2,
+     "top": [
+      {
+       "id": "OlmNQmaWSoQ",
+       "title": "THE FINAL RACE - Subaru WRX STI vs Mustang",
+       "views": 40270138
+      },
+      {
+       "id": "aQG69NwVQhY",
+       "title": "Building a Subaru WRX STI in 18 minutes! (COMPLETE TRANSFORMATION)",
+       "views": 9129751
+      },
+      {
+       "id": "lCXI3lVT-WQ",
+       "title": "SUBARU WRX STI 370HP *TOP SPEED* on AUTOBAHN [NO SPEED LIMIT] by AutoTopNL",
+       "views": 2355010
+      }
+     ]
+    },
+    "2007": {
+     "score": 57,
+     "weight": 9.6,
+     "videos": 110,
+     "named": 5,
+     "top": [
+      {
+       "id": "OlmNQmaWSoQ",
+       "title": "THE FINAL RACE - Subaru WRX STI vs Mustang",
+       "views": 40270138
+      },
+      {
+       "id": "aQG69NwVQhY",
+       "title": "Building a Subaru WRX STI in 18 minutes! (COMPLETE TRANSFORMATION)",
+       "views": 9129751
+      },
+      {
+       "id": "lCXI3lVT-WQ",
+       "title": "SUBARU WRX STI 370HP *TOP SPEED* on AUTOBAHN [NO SPEED LIMIT] by AutoTopNL",
+       "views": 2355010
+      }
+     ]
+    },
+    "2008": {
+     "score": 50,
+     "weight": 13.2,
+     "videos": 113,
+     "named": 8,
+     "top": [
+      {
+       "id": "OlmNQmaWSoQ",
+       "title": "THE FINAL RACE - Subaru WRX STI vs Mustang",
+       "views": 40270138
+      },
+      {
+       "id": "aQG69NwVQhY",
+       "title": "Building a Subaru WRX STI in 18 minutes! (COMPLETE TRANSFORMATION)",
+       "views": 9129751
+      },
+      {
+       "id": "lCXI3lVT-WQ",
+       "title": "SUBARU WRX STI 370HP *TOP SPEED* on AUTOBAHN [NO SPEED LIMIT] by AutoTopNL",
+       "views": 2355010
+      }
+     ]
+    },
+    "2009": {
+     "score": 53,
+     "weight": 6.2,
+     "videos": 106,
+     "named": 1,
+     "top": [
+      {
+       "id": "OlmNQmaWSoQ",
+       "title": "THE FINAL RACE - Subaru WRX STI vs Mustang",
+       "views": 40270138
+      },
+      {
+       "id": "aQG69NwVQhY",
+       "title": "Building a Subaru WRX STI in 18 minutes! (COMPLETE TRANSFORMATION)",
+       "views": 9129751
+      },
+      {
+       "id": "lCXI3lVT-WQ",
+       "title": "SUBARU WRX STI 370HP *TOP SPEED* on AUTOBAHN [NO SPEED LIMIT] by AutoTopNL",
+       "views": 2355010
+      }
+     ]
+    },
+    "2010": {
+     "score": 53,
+     "weight": 7.2,
+     "videos": 107,
+     "named": 2,
+     "top": [
+      {
+       "id": "OlmNQmaWSoQ",
+       "title": "THE FINAL RACE - Subaru WRX STI vs Mustang",
+       "views": 40270138
+      },
+      {
+       "id": "aQG69NwVQhY",
+       "title": "Building a Subaru WRX STI in 18 minutes! (COMPLETE TRANSFORMATION)",
+       "views": 9129751
+      },
+      {
+       "id": "lCXI3lVT-WQ",
+       "title": "SUBARU WRX STI 370HP *TOP SPEED* on AUTOBAHN [NO SPEED LIMIT] by AutoTopNL",
+       "views": 2355010
+      }
+     ]
+    },
+    "2011": {
+     "score": 60,
+     "weight": 11.3,
+     "videos": 111,
+     "named": 6,
+     "top": [
+      {
+       "id": "OlmNQmaWSoQ",
+       "title": "THE FINAL RACE - Subaru WRX STI vs Mustang",
+       "views": 40270138
+      },
+      {
+       "id": "aQG69NwVQhY",
+       "title": "Building a Subaru WRX STI in 18 minutes! (COMPLETE TRANSFORMATION)",
+       "views": 9129751
+      },
+      {
+       "id": "lCXI3lVT-WQ",
+       "title": "SUBARU WRX STI 370HP *TOP SPEED* on AUTOBAHN [NO SPEED LIMIT] by AutoTopNL",
+       "views": 2355010
+      }
+     ]
+    },
+    "2012": {
+     "score": 58,
+     "weight": 7.9,
+     "videos": 108,
+     "named": 3,
+     "top": [
+      {
+       "id": "OlmNQmaWSoQ",
+       "title": "THE FINAL RACE - Subaru WRX STI vs Mustang",
+       "views": 40270138
+      },
+      {
+       "id": "aQG69NwVQhY",
+       "title": "Building a Subaru WRX STI in 18 minutes! (COMPLETE TRANSFORMATION)",
+       "views": 9129751
+      },
+      {
+       "id": "lCXI3lVT-WQ",
+       "title": "SUBARU WRX STI 370HP *TOP SPEED* on AUTOBAHN [NO SPEED LIMIT] by AutoTopNL",
+       "views": 2355010
+      }
+     ]
+    },
+    "2013": {
+     "score": 54,
+     "weight": 5.9,
+     "videos": 106,
+     "named": 1,
+     "top": [
+      {
+       "id": "OlmNQmaWSoQ",
+       "title": "THE FINAL RACE - Subaru WRX STI vs Mustang",
+       "views": 40270138
+      },
+      {
+       "id": "aQG69NwVQhY",
+       "title": "Building a Subaru WRX STI in 18 minutes! (COMPLETE TRANSFORMATION)",
+       "views": 9129751
+      },
+      {
+       "id": "lCXI3lVT-WQ",
+       "title": "SUBARU WRX STI 370HP *TOP SPEED* on AUTOBAHN [NO SPEED LIMIT] by AutoTopNL",
+       "views": 2355010
+      }
+     ]
+    },
+    "2014": {
+     "score": 54,
+     "weight": 11.4,
+     "videos": 112,
+     "named": 7,
+     "top": [
+      {
+       "id": "OlmNQmaWSoQ",
+       "title": "THE FINAL RACE - Subaru WRX STI vs Mustang",
+       "views": 40270138
+      },
+      {
+       "id": "aQG69NwVQhY",
+       "title": "Building a Subaru WRX STI in 18 minutes! (COMPLETE TRANSFORMATION)",
+       "views": 9129751
+      },
+      {
+       "id": "lCXI3lVT-WQ",
+       "title": "SUBARU WRX STI 370HP *TOP SPEED* on AUTOBAHN [NO SPEED LIMIT] by AutoTopNL",
+       "views": 2355010
+      }
+     ]
+    },
+    "2015": {
+     "score": 60,
+     "weight": 17.4,
+     "videos": 118,
+     "named": 13,
+     "top": [
+      {
+       "id": "OlmNQmaWSoQ",
+       "title": "THE FINAL RACE - Subaru WRX STI vs Mustang",
+       "views": 40270138
+      },
+      {
+       "id": "aQG69NwVQhY",
+       "title": "Building a Subaru WRX STI in 18 minutes! (COMPLETE TRANSFORMATION)",
+       "views": 9129751
+      },
+      {
+       "id": "lCXI3lVT-WQ",
+       "title": "SUBARU WRX STI 370HP *TOP SPEED* on AUTOBAHN [NO SPEED LIMIT] by AutoTopNL",
+       "views": 2355010
+      }
+     ]
+    },
+    "2016": {
+     "score": 56,
+     "weight": 12.9,
+     "videos": 113,
+     "named": 8,
+     "top": [
+      {
+       "id": "OlmNQmaWSoQ",
+       "title": "THE FINAL RACE - Subaru WRX STI vs Mustang",
+       "views": 40270138
+      },
+      {
+       "id": "aQG69NwVQhY",
+       "title": "Building a Subaru WRX STI in 18 minutes! (COMPLETE TRANSFORMATION)",
+       "views": 9129751
+      },
+      {
+       "id": "lCXI3lVT-WQ",
+       "title": "SUBARU WRX STI 370HP *TOP SPEED* on AUTOBAHN [NO SPEED LIMIT] by AutoTopNL",
+       "views": 2355010
+      }
+     ]
+    },
+    "2017": {
+     "score": 57,
+     "weight": 8.9,
+     "videos": 109,
+     "named": 4,
+     "top": [
+      {
+       "id": "OlmNQmaWSoQ",
+       "title": "THE FINAL RACE - Subaru WRX STI vs Mustang",
+       "views": 40270138
+      },
+      {
+       "id": "aQG69NwVQhY",
+       "title": "Building a Subaru WRX STI in 18 minutes! (COMPLETE TRANSFORMATION)",
+       "views": 9129751
+      },
+      {
+       "id": "lCXI3lVT-WQ",
+       "title": "SUBARU WRX STI 370HP *TOP SPEED* on AUTOBAHN [NO SPEED LIMIT] by AutoTopNL",
+       "views": 2355010
+      }
+     ]
+    },
+    "2018": {
+     "score": 59,
+     "weight": 15.9,
+     "videos": 116,
+     "named": 11,
+     "top": [
+      {
+       "id": "OlmNQmaWSoQ",
+       "title": "THE FINAL RACE - Subaru WRX STI vs Mustang",
+       "views": 40270138
+      },
+      {
+       "id": "aQG69NwVQhY",
+       "title": "Building a Subaru WRX STI in 18 minutes! (COMPLETE TRANSFORMATION)",
+       "views": 9129751
+      },
+      {
+       "id": "ZL9xh2XiSi8",
+       "title": "Subaru Impreza WRX STi Compilation 2018 - BRUTAL Sounds!",
+       "views": 4126850
+      }
+     ]
+    },
+    "2019": {
+     "score": 61,
+     "weight": 11.9,
+     "videos": 112,
+     "named": 7,
+     "top": [
+      {
+       "id": "OlmNQmaWSoQ",
+       "title": "THE FINAL RACE - Subaru WRX STI vs Mustang",
+       "views": 40270138
+      },
+      {
+       "id": "aQG69NwVQhY",
+       "title": "Building a Subaru WRX STI in 18 minutes! (COMPLETE TRANSFORMATION)",
+       "views": 9129751
+      },
+      {
+       "id": "lCXI3lVT-WQ",
+       "title": "SUBARU WRX STI 370HP *TOP SPEED* on AUTOBAHN [NO SPEED LIMIT] by AutoTopNL",
+       "views": 2355010
+      }
+     ]
+    },
+    "2020": {
+     "score": 56,
+     "weight": 12.9,
+     "videos": 113,
+     "named": 8,
+     "top": [
+      {
+       "id": "OlmNQmaWSoQ",
+       "title": "THE FINAL RACE - Subaru WRX STI vs Mustang",
+       "views": 40270138
+      },
+      {
+       "id": "aQG69NwVQhY",
+       "title": "Building a Subaru WRX STI in 18 minutes! (COMPLETE TRANSFORMATION)",
+       "views": 9129751
+      },
+      {
+       "id": "aclTWg9WpO4",
+       "title": "Subaru Impreza WRX STi Compilation 2020 - BRUTAL Sounds!",
+       "views": 2739549
+      }
+     ]
+    },
+    "2021": {
+     "score": 55,
+     "weight": 13.8,
+     "videos": 113,
+     "named": 8,
+     "top": [
+      {
+       "id": "OlmNQmaWSoQ",
+       "title": "THE FINAL RACE - Subaru WRX STI vs Mustang",
+       "views": 40270138
+      },
+      {
+       "id": "aQG69NwVQhY",
+       "title": "Building a Subaru WRX STI in 18 minutes! (COMPLETE TRANSFORMATION)",
+       "views": 9129751
+      },
+      {
+       "id": "lCXI3lVT-WQ",
+       "title": "SUBARU WRX STI 370HP *TOP SPEED* on AUTOBAHN [NO SPEED LIMIT] by AutoTopNL",
+       "views": 2355010
+      }
+     ]
+    }
+   },
+   "videos": 191,
+   "pulled": 200
+  }
+ }
+}

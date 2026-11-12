@@ -1,0 +1,458 @@
+{
+ "slug": "charger-hellcat",
+ "name": "Dodge Charger SRT Hellcat",
+ "short": "Charger Hellcat",
+ "make": "Dodge",
+ "page": "/cars/charger-hellcat/",
+ "focus": "ld",
+ "star": "ld-redeye",
+ "h1": "Dodge Charger SRT Hellcat: performance, engines and what owners say",
+ "nhtsa": {
+  "make": "DODGE",
+  "models": [
+   "CHARGER"
+  ],
+  "note": "NHTSA files the Charger SRT Hellcat under Charger, so these counts are every Charger of these years."
+ },
+ "topics_extra": {
+  "Supercharger noise": "supercharger (noise|rattle|whine|bearings?)|blower (noise|rattle|bearings?)|coupler",
+  "Oil cooler lines": "oil cooler (lines?|hoses?)|oil (spray|sprayed) on (the )?windshield",
+  "Fuel leak / fuel smell": "fuel (leak|rail)|smell(s)? (of )?(gas|fuel)",
+  "Theft": "stolen|theft|broke into|break.?in",
+  "Transmission": "8hp90|transmission (slip|slipping|shudder|failure)|harsh shift",
+  "Brakes": "brembo|brake (pads?|rotors?|squeal|wear)"
+ },
+ "gens": [
+  {
+   "id": "ld",
+   "code": "LD",
+   "years": "2015–2023",
+   "y0": 2015,
+   "y1": 2023,
+   "engine": "hellcat",
+   "body": "Sedan",
+   "tag": "Supercharged 6.2 V-8 sedan, 707 to 807 hp, rear-drive, automatic.",
+   "variants": [
+    {
+     "id": "ld-hellcat",
+     "name": "Charger SRT Hellcat",
+     "years": "2015–2019",
+     "hp": {
+      "v": 707,
+      "src": [
+       "c15spec",
+       "h14"
+      ],
+      "note": "at 6,000 rpm"
+     },
+     "tq": {
+      "v": 650,
+      "src": [
+       "c15spec",
+       "h14"
+      ],
+      "note": "lb-ft at 4,800 rpm"
+     },
+     "z60": {
+      "v": 3.4,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "top": {
+      "v": "204 mph",
+      "src": [
+       "h14",
+       "pk15"
+      ],
+      "note": "maker claim"
+     },
+     "trans": {
+      "v": "8-speed automatic (TorqueFlite 8HP90), rear-drive",
+      "src": [
+       "c15spec",
+       "h14"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "4,575 lb",
+      "src": [
+       "c15spec"
+      ],
+      "note": "curb weight, 2015"
+     },
+     "price": {
+      "v": "$63,995",
+      "src": [
+       "p15"
+      ],
+      "note": "2015, includes $1,700 gas-guzzler tax, plus $995 destination"
+     }
+    },
+    {
+     "id": "ld-hellcat-wb",
+     "name": "Charger SRT Hellcat Widebody",
+     "years": "2020–2023",
+     "hp": {
+      "v": 717,
+      "src": [
+       "s21spec",
+       "p21"
+      ],
+      "note": "at 6,100 rpm for 2021–2023; 707 hp at 6,000 rpm for 2020"
+     },
+     "tq": {
+      "v": 650,
+      "src": [
+       "s20spec",
+       "s21spec"
+      ],
+      "note": "lb-ft at 4,800 rpm"
+     },
+     "z60": {
+      "v": 3.8,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 3.6,
+      "csrc": [
+       "f20",
+       "p20"
+      ]
+     },
+     "top": {
+      "v": "196 mph",
+      "src": [
+       "f20",
+       "r21"
+      ],
+      "note": "maker claim"
+     },
+     "trans": {
+      "v": "8-speed automatic (TorqueFlite 8HP90), rear-drive",
+      "src": [
+       "s20spec",
+       "s21spec"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "4,587 lb",
+      "src": [
+       "s20spec",
+       "s21spec"
+      ],
+      "note": "curb weight, 2020; 4,595 lb for 2021"
+     },
+     "price": {
+      "v": "$69,645",
+      "src": [
+       "p20",
+       "p21"
+      ],
+      "note": "2020, plus $1,495 destination; $69,995 for 2021"
+     },
+     "what": "Widebody is standard from 2020: fender flares add 3.5 inches of width, with 20x11-inch wheels and 305/35 tires.",
+     "what_src": [
+      "f20",
+      "pr20"
+     ]
+    },
+    {
+     "id": "ld-redeye",
+     "name": "Charger SRT Hellcat Redeye Widebody",
+     "years": "2021–2023",
+     "star": true,
+     "hp": {
+      "v": 797,
+      "src": [
+       "s21spec",
+       "f21"
+      ],
+      "note": "at 6,300 rpm"
+     },
+     "tq": {
+      "v": 707,
+      "src": [
+       "s21spec",
+       "f21"
+      ],
+      "note": "lb-ft at 4,500 rpm"
+     },
+     "z60": {
+      "v": 3.5,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 3.6,
+      "csrc": [
+       "f21"
+      ]
+     },
+     "top": {
+      "v": "203 mph",
+      "src": [
+       "r21",
+       "f21"
+      ],
+      "note": "maker claim"
+     },
+     "trans": {
+      "v": "8-speed automatic (TorqueFlite 8HP90), rear-drive",
+      "src": [
+       "s21spec",
+       "f21"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "4,610 lb",
+      "src": [
+       "s21spec"
+      ],
+      "note": "curb weight, 2021"
+     },
+     "price": {
+      "v": "$78,595",
+      "src": [
+       "p21"
+      ],
+      "note": "2021, plus $1,495 destination"
+     },
+     "what": "Demon-derived engine: 2.7-liter supercharger at 14.5 psi, stronger rods and pistons, 6,500 rpm limit.",
+     "what_src": [
+      "r21",
+      "s21spec"
+     ]
+    },
+    {
+     "id": "ld-redeye-jb",
+     "name": "Charger SRT Hellcat Redeye Jailbreak",
+     "years": "2022–2023",
+     "pkg": "ld-redeye",
+     "hp": {
+      "v": 807,
+      "src": [
+       "j21"
+      ],
+      "note": "revised powertrain calibration"
+     },
+     "price": {
+      "v": "$86,940",
+      "src": [
+       "p23",
+       "j21"
+      ],
+      "note": "2023, plus $1,595 destination; a $995 option on the 2022 Redeye Widebody"
+     },
+     "what": "Unlocks restricted color and trim combinations, adds a Jailbreak badge and 10 hp. Every 2023 Redeye was a Jailbreak.",
+     "what_src": [
+      "j21",
+      "p23"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "hellcat": {
+   "name": "Hellcat 6.2 supercharged HEMI",
+   "what": "6.2-liter V-8, supercharged",
+   "study": "chrysler-hellcat",
+   "page": "/engines/chrysler-hellcat/",
+   "yt": [
+    "scy",
+    "chrysler-hellcat"
+   ],
+   "facts": [
+    [
+     "Rev limit",
+     "6,200 rpm (Hellcat), 6,500 rpm (Redeye), electronically limited",
+     [
+      "c15spec",
+      "s21spec"
+     ]
+    ],
+    [
+     "Output",
+     "707–807 hp, 650–707 lb-ft",
+     [
+      "c15spec",
+      "s21spec",
+      "j21"
+     ]
+    ],
+    [
+     "Supercharger",
+     "2.4-liter at 11.6 psi; Redeye 2.7-liter at 14.5 psi",
+     [
+      "r21"
+     ]
+    ],
+    [
+     "Bottom end",
+     "Cast-iron block, forged steel crank, forged pistons, powder-forged rods; 9.5:1 compression",
+     [
+      "c15spec",
+      "h14"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Supercharger bearing wear",
+     "kind": "Owner-reported",
+     "rx": "supercharger (noise|rattle|whine|bearings?)|blower (noise|rattle|bearings?)|coupler",
+     "x": "Worn supercharger front bearings cause noise and can damage the rotors and the drive coupler pins, an enthusiast magazine reports.",
+     "fix": "Replacing the four front bearings fixes nearly all of the noise.",
+     "src": [
+      "mc23"
+     ]
+    },
+    {
+     "t": "Engine oil cooler hoses may fail (2017)",
+     "kind": "Recall",
+     "rx": "oil cooler (lines?|hoses?)|oil (spray|sprayed)|losing oil|oil leak",
+     "x": "Some 2017 Hellcat Chargers and Challengers had oil cooler hoses that could fail and spray oil, raising crash and fire risk.",
+     "fix": "Dealers replace the oil cooler lines free under recall T48.",
+     "src": [
+      "rc17"
+     ]
+    },
+    {
+     "t": "Fuel rail hose may leak (2015)",
+     "kind": "Recall",
+     "rx": "fuel (leak|rail)|smell(s)? (of )?(gas|fuel)",
+     "x": "Hellcat Chargers and Challengers built September 2014 to February 2015 could leak fuel at the fuel rail crossover hose, a fire risk.",
+     "fix": "Dealers replace the fuel rail crossover hose free under recall R07.",
+     "src": [
+      "rc15"
+     ]
+    }
+   ]
+  }
+ },
+ "compare": [
+  {
+   "slug": "challenger-hellcat",
+   "name": "Dodge Challenger SRT Hellcat"
+  },
+  {
+   "slug": "cts-v",
+   "name": "Cadillac CTS-V"
+  },
+  {
+   "slug": "ct5-v-blackwing",
+   "name": "Cadillac CT5-V Blackwing"
+  },
+  {
+   "slug": "amg-e63",
+   "name": "Mercedes-AMG E63"
+  }
+ ],
+ "sources": {
+  "h14": {
+   "t": "FCA US: New 2015 Dodge Charger SRT Hellcat is the quickest, fastest and most powerful sedan in the world (Aug 2014)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=15929",
+   "k": "Dodge"
+  },
+  "pk15": {
+   "t": "FCA US: Press kit, 2015 Dodge Charger SRT (Oct 2014)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=16149",
+   "k": "Dodge"
+  },
+  "p15": {
+   "t": "FCA US: Dodge announces pricing for its new 2015 Charger model lineup (Oct 2014)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=16117",
+   "k": "Dodge"
+  },
+  "c15spec": {
+   "t": "FCA US: 2015 Dodge Charger specifications (PDF)",
+   "u": "https://media.stellantisnorthamerica.com/view-spec.do?id=15578",
+   "k": "Dodge"
+  },
+  "f20": {
+   "t": "FCA US: 2020 Dodge Charger / Charger SRT Hellcat fact sheet (Jun 2019)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=20907",
+   "k": "Dodge"
+  },
+  "pr20": {
+   "t": "FCA US: Dodge//SRT expands 2020 Charger SRT Hellcat and Scat Pack with new Widebody (Jun 2019)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=20892",
+   "k": "Dodge"
+  },
+  "p20": {
+   "t": "FCA US: Dodge announces pricing for 2020 Charger lineup, including new Charger SRT Hellcat Widebody (Sep 2019)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=21266",
+   "k": "Dodge"
+  },
+  "s20spec": {
+   "t": "FCA US: 2020 Dodge Charger / Charger SRT specifications (PDF)",
+   "u": "https://media.stellantisnorthamerica.com/view-spec.do?id=20895",
+   "k": "Dodge"
+  },
+  "r21": {
+   "t": "FCA US: Dodge introduces Demon-possessed 2021 Dodge Charger SRT Hellcat Redeye (Jul 2020)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=21813",
+   "k": "Dodge"
+  },
+  "f21": {
+   "t": "FCA US: 2021 Dodge Charger / Charger SRT fact sheet (Aug 2020)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=22105",
+   "k": "Dodge"
+  },
+  "p21": {
+   "t": "FCA US: Dodge announces pricing for 2021 Dodge Charger model lineup (Aug 2020)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=22101",
+   "k": "Dodge"
+  },
+  "s21spec": {
+   "t": "FCA US: 2021 Dodge Charger SRT specifications (PDF)",
+   "u": "https://media.stellantisnorthamerica.com/view-spec.do?id=21824",
+   "k": "Dodge"
+  },
+  "j21": {
+   "t": "Stellantis: Jailbreak model for 2022 Dodge Charger and Challenger SRT Hellcat Redeye Widebody (Nov 2021)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=23274",
+   "k": "Dodge"
+  },
+  "p23": {
+   "t": "Stellantis: Dodge opens orders and announces pricing for 2023 Challenger and Charger (Oct 2022)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=24384",
+   "k": "Dodge"
+  },
+  "z60": {
+   "t": "0-60specs.com: Dodge Charger 0-60 runs by magazine (Car and Driver, MotorTrend, MotorWeek)",
+   "u": "https://www.0-60specs.com/dodge/charger-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "mc23": {
+   "t": "Mopar Connection: 6.2-liter HEMI supercharger front bearing replacement (Apr 2023)",
+   "u": "https://moparconnectionmagazine.com/gallery-6-2-liter-hemi-supercharger-front-bearing-replacement/",
+   "k": "enthusiast outlet"
+  },
+  "rc15": {
+   "t": "NHTSA recall 15V114000: 2015 Charger/Challenger SRT Hellcat fuel rail crossover hose may leak",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=15V114000",
+   "k": "Recall"
+  },
+  "rc17": {
+   "t": "NHTSA recall 17V496000: 2017 Charger/Challenger Hellcat engine oil cooler hoses may fail",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=17V496000",
+   "k": "Recall"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-charger-hellcat",
+ "img": "/assets/ai-perf/charger-hellcat.webp?v=1"
+}

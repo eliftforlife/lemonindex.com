@@ -1,0 +1,1463 @@
+{
+ "built": "2026-11-11",
+ "nhtsa": {
+  "by_year": {
+   "1990": 85,
+   "1991": 77,
+   "1992": 69,
+   "1993": 101,
+   "1994": 356,
+   "1995": 602,
+   "1996": 246,
+   "1997": 176,
+   "1998": 236,
+   "1999": 213,
+   "2000": 311,
+   "2001": 173,
+   "2002": 118,
+   "2003": 145,
+   "2004": 116,
+   "2005": 705,
+   "2006": 424,
+   "2007": 615,
+   "2008": 356,
+   "2009": 181,
+   "2010": 261,
+   "2011": 466,
+   "2012": 469,
+   "2013": 271,
+   "2014": 359,
+   "2015": 438,
+   "2016": 379,
+   "2017": 267,
+   "2018": 195,
+   "2019": 150,
+   "2020": 120,
+   "2021": 55,
+   "2022": 50,
+   "2023": 15,
+   "2024": 84,
+   "2025": 19,
+   "2026": 8
+  },
+  "gens": {
+   "s197-54": {
+    "n": 2348,
+    "issues": {
+     "Clutch drag (2007–2009)": {
+      "n": 14,
+      "ex": [
+       "10366624",
+       "10382931"
+      ]
+     },
+     "Clutch and gearbox wear (2010–2012)": {
+      "n": 20,
+      "ex": [
+       "10382931",
+       "10392729"
+      ]
+     }
+    }
+   },
+   "s197-58": {
+    "n": 630,
+    "issues": {
+     "Clutch and gearbox wear": {
+      "n": 0,
+      "ex": []
+     }
+    }
+   },
+   "s550": {
+    "n": 225,
+    "issues": {
+     "Timing chain tensioner (2020)": {
+      "n": 2,
+      "ex": [
+       "11583644",
+       "11758368"
+      ]
+     },
+     "Supercharger drive clutch": {
+      "n": 5,
+      "ex": [
+       "11522730",
+       "11576708"
+      ]
+     },
+     "Valve cover oil leaks (2022)": {
+      "n": 1,
+      "ex": [
+       "11719817"
+      ]
+     }
+    }
+   }
+  },
+  "parts": [
+   [
+    "Air bags",
+    1587
+   ],
+   [
+    "Power train",
+    585
+   ],
+   [
+    "Vehicle speed control",
+    205
+   ],
+   [
+    "Engine",
+    188
+   ],
+   [
+    "Electrical system",
+    178
+   ],
+   [
+    "Structure",
+    160
+   ]
+  ]
+ },
+ "recalls": {
+  "2007": [
+   {
+    "id": "21E013000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain air bag inflator and/or module replacement service parts that may have been used as part of a collision repair.  The parts include certain driver-side air bag inflators and/or modules, designed to fit 2005-2014 Ford Mustang and Mustang GT500.  It also includes certain passenger-side air bag inflators and/or modules designed to fit 2005-2014 Ford Musta"
+   },
+   {
+    "id": "21V081000",
+    "part": "AIR BAGS:FRONTAL",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2005-2014 Mustang, 2004-2011 Ranger, 2009-2011 Mercury Milan, 2006 Ford GT, 2008-2012 Fusion, 2007-2010 Edge and Lincoln MKX, and 2009-2010 Lincoln MKZ vehicles.  These vehicles may be equipped with a driver or passenger frontal air bag inflator used as a replacement service part, that may explode due to propellant degradation occurring after long-ter"
+   },
+   {
+    "id": "17V024000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2012 Ford Fusion and Mustang and Lincoln Zephyr and MKZ vehicles originally sold, or ever registered, in Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas, Puerto Rico, American Samoa, Guam, the Northern Mariana Islands (Saipan), and the U.S. Virgin Islands, or \"Zone A.\"\r\n\r\nAdditionally, unless included in \"Z"
+   },
+   {
+    "id": "15V319000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2005-2014 Mustang vehicles manufactured April 6, 2004, to June 21, 2014, and 2005-2006 GT vehicles manufactured February 20, 2004, to September 22, 2006.  The affected vehicles are equipped with a dual-stage driver frontal air bag that may be susceptible to moisture intrusion which, over time, could cause the inflator to rupture."
+   },
+   {
+    "id": "16V384000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2007-2011 Ford Ranger vehicles, 2006-2011 Ford Fusion, Mercury Milan and Lincoln Zephyr/MKZ vehicles, 2007-2010 Ford Edge, Lincoln MKX vehicles, 2005-2006 Ford GT vehicles, and 2005-2011 Ford Mustang vehicles originally sold, or ever registered, in Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas,"
+   },
+   {
+    "id": "08V082000",
+    "part": "AIR BAGS:FRONTAL",
+    "summary": "FORD IS RECALLING 434,593 MY 2008 MUSTANG VEHICLES FOR FAILING TO COMPLY WITH ONE OF THE NECK INJURY REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 208, \"OCCUPANT CRASH PROTECTION,\" FOR AN UNBELTED 5TH PERCENTILE FEMALE SITTING IN THE PASSENGER SEAT WHILE IT IS IN THE FULL FORWARD POSITION."
+   },
+   {
+    "id": "09E025000",
+    "part": "EXTERIOR LIGHTING:HEADLIGHTS",
+    "summary": "DOPE, INC. IS RECALLING 42,540 COMBINATION CORNER AND BUMPER LAMP ASSEMBLIES OF VARIOUS PART NUMBERS SOLD FOR USE AS AFTERMARKET EQUIPMENT FOR VARIOUS PASSENGER VEHICLES.  THESE HEADLAMPS FAIL TO CONFORM TO THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, \"LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT.\"  THESE LAMPS DO NOT CONTAIN THE REQUIRED AMBER SIDE REFLECTORS."
+   },
+   {
+    "id": "09E012000",
+    "part": "EXTERIOR LIGHTING",
+    "summary": "SABERSPORT IS RECALLING 16,270 COMBINATION CORNER AND BUMPER LAMP ASSEMBLIES OF VARIOUS PART NUMBERS SOLD FOR USE AS AFTERMARKET EQUIPMENT FOR VARIOUS PASSENGER VEHICLES.  THESE HEADLAMPS FAIL TO CONFORM TO THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, \"LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT.\"  THESE LAMPS DO NOT CONTAIN THE REQUIRED AMBER SIDE REFLECTORS."
+   },
+   {
+    "id": "06E089000",
+    "part": "SUSPENSION:FRONT",
+    "summary": "CERTAIN AFTERMARKET EIBACH BRANDED FRONT STRUTS ONLY, PART NO. 35101.8001, AND EIBACH BRANDED FRONT STRUTS AS SUSPENSION KITS, PART NOS. 35101.840, 35101.680, 35101.780, 35100.680, 35100.780, 4.10135.680, AND 4.10035.780, SOLD FOR USE ON 2005 THROUGH 2007 FORD MUSTANG  VEHICLES.  THE FRONT ANTI ROLL BAR ATTACHMENT BRACKET ON THE FRONT STRUT CAN SEPARATE FROM THE STRUT HOUSING DUE TO INCONSISTENT W"
+   }
+  ],
+  "2008": [
+   {
+    "id": "21E013000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain air bag inflator and/or module replacement service parts that may have been used as part of a collision repair.  The parts include certain driver-side air bag inflators and/or modules, designed to fit 2005-2014 Ford Mustang and Mustang GT500.  It also includes certain passenger-side air bag inflators and/or modules designed to fit 2005-2014 Ford Musta"
+   },
+   {
+    "id": "21V081000",
+    "part": "AIR BAGS:FRONTAL",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2005-2014 Mustang, 2004-2011 Ranger, 2009-2011 Mercury Milan, 2006 Ford GT, 2008-2012 Fusion, 2007-2010 Edge and Lincoln MKX, and 2009-2010 Lincoln MKZ vehicles.  These vehicles may be equipped with a driver or passenger frontal air bag inflator used as a replacement service part, that may explode due to propellant degradation occurring after long-ter"
+   },
+   {
+    "id": "17V024000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2012 Ford Fusion and Mustang and Lincoln Zephyr and MKZ vehicles originally sold, or ever registered, in Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas, Puerto Rico, American Samoa, Guam, the Northern Mariana Islands (Saipan), and the U.S. Virgin Islands, or \"Zone A.\"\r\n\r\nAdditionally, unless included in \"Z"
+   },
+   {
+    "id": "15V319000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2005-2014 Mustang vehicles manufactured April 6, 2004, to June 21, 2014, and 2005-2006 GT vehicles manufactured February 20, 2004, to September 22, 2006.  The affected vehicles are equipped with a dual-stage driver frontal air bag that may be susceptible to moisture intrusion which, over time, could cause the inflator to rupture."
+   },
+   {
+    "id": "16V384000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2007-2011 Ford Ranger vehicles, 2006-2011 Ford Fusion, Mercury Milan and Lincoln Zephyr/MKZ vehicles, 2007-2010 Ford Edge, Lincoln MKX vehicles, 2005-2006 Ford GT vehicles, and 2005-2011 Ford Mustang vehicles originally sold, or ever registered, in Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas,"
+   },
+   {
+    "id": "08V082000",
+    "part": "AIR BAGS:FRONTAL",
+    "summary": "FORD IS RECALLING 434,593 MY 2008 MUSTANG VEHICLES FOR FAILING TO COMPLY WITH ONE OF THE NECK INJURY REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 208, \"OCCUPANT CRASH PROTECTION,\" FOR AN UNBELTED 5TH PERCENTILE FEMALE SITTING IN THE PASSENGER SEAT WHILE IT IS IN THE FULL FORWARD POSITION."
+   },
+   {
+    "id": "09E025000",
+    "part": "EXTERIOR LIGHTING:HEADLIGHTS",
+    "summary": "DOPE, INC. IS RECALLING 42,540 COMBINATION CORNER AND BUMPER LAMP ASSEMBLIES OF VARIOUS PART NUMBERS SOLD FOR USE AS AFTERMARKET EQUIPMENT FOR VARIOUS PASSENGER VEHICLES.  THESE HEADLAMPS FAIL TO CONFORM TO THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, \"LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT.\"  THESE LAMPS DO NOT CONTAIN THE REQUIRED AMBER SIDE REFLECTORS."
+   },
+   {
+    "id": "09E012000",
+    "part": "EXTERIOR LIGHTING",
+    "summary": "SABERSPORT IS RECALLING 16,270 COMBINATION CORNER AND BUMPER LAMP ASSEMBLIES OF VARIOUS PART NUMBERS SOLD FOR USE AS AFTERMARKET EQUIPMENT FOR VARIOUS PASSENGER VEHICLES.  THESE HEADLAMPS FAIL TO CONFORM TO THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, \"LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT.\"  THESE LAMPS DO NOT CONTAIN THE REQUIRED AMBER SIDE REFLECTORS."
+   }
+  ],
+  "2009": [
+   {
+    "id": "21E013000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain air bag inflator and/or module replacement service parts that may have been used as part of a collision repair.  The parts include certain driver-side air bag inflators and/or modules, designed to fit 2005-2014 Ford Mustang and Mustang GT500.  It also includes certain passenger-side air bag inflators and/or modules designed to fit 2005-2014 Ford Musta"
+   },
+   {
+    "id": "21V081000",
+    "part": "AIR BAGS:FRONTAL",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2005-2014 Mustang, 2004-2011 Ranger, 2009-2011 Mercury Milan, 2006 Ford GT, 2008-2012 Fusion, 2007-2010 Edge and Lincoln MKX, and 2009-2010 Lincoln MKZ vehicles.  These vehicles may be equipped with a driver or passenger frontal air bag inflator used as a replacement service part, that may explode due to propellant degradation occurring after long-ter"
+   },
+   {
+    "id": "18V046000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2013 Ford Mustang vehicles sold, or ever registered in the states of Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas, Puerto Rico, American Samoa, Guam, the Northern Mariana Islands (Saipan), and the U.S. Virgin Islands or \"Zone A.\"\r\n\r\nAdditionally, Ford is recalling certain 2010 Ford Edge, Fusion, Mustang "
+   },
+   {
+    "id": "17V024000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2012 Ford Fusion and Mustang and Lincoln Zephyr and MKZ vehicles originally sold, or ever registered, in Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas, Puerto Rico, American Samoa, Guam, the Northern Mariana Islands (Saipan), and the U.S. Virgin Islands, or \"Zone A.\"\r\n\r\nAdditionally, unless included in \"Z"
+   },
+   {
+    "id": "15V319000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2005-2014 Mustang vehicles manufactured April 6, 2004, to June 21, 2014, and 2005-2006 GT vehicles manufactured February 20, 2004, to September 22, 2006.  The affected vehicles are equipped with a dual-stage driver frontal air bag that may be susceptible to moisture intrusion which, over time, could cause the inflator to rupture."
+   },
+   {
+    "id": "16V384000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2007-2011 Ford Ranger vehicles, 2006-2011 Ford Fusion, Mercury Milan and Lincoln Zephyr/MKZ vehicles, 2007-2010 Ford Edge, Lincoln MKX vehicles, 2005-2006 Ford GT vehicles, and 2005-2011 Ford Mustang vehicles originally sold, or ever registered, in Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas,"
+   }
+  ],
+  "2010": [
+   {
+    "id": "19V001000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2014 Ford Mustang vehicles sold, or ever registered, in the states of Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas, Puerto Rico, American Samoa, Guam, the Northern Mariana Islands (Saipan), and the U.S. Virgin Islands or \"Zone A.\"   \r\n\r\nAdditionally, Ford is recalling certain 2011 Ford Ranger and Mercury"
+   },
+   {
+    "id": "21V081000",
+    "part": "AIR BAGS:FRONTAL",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2005-2014 Mustang, 2004-2011 Ranger, 2009-2011 Mercury Milan, 2006 Ford GT, 2008-2012 Fusion, 2007-2010 Edge and Lincoln MKX, and 2009-2010 Lincoln MKZ vehicles.  These vehicles may be equipped with a driver or passenger frontal air bag inflator used as a replacement service part, that may explode due to propellant degradation occurring after long-ter"
+   },
+   {
+    "id": "21E013000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain air bag inflator and/or module replacement service parts that may have been used as part of a collision repair.  The parts include certain driver-side air bag inflators and/or modules, designed to fit 2005-2014 Ford Mustang and Mustang GT500.  It also includes certain passenger-side air bag inflators and/or modules designed to fit 2005-2014 Ford Musta"
+   },
+   {
+    "id": "18V046000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2013 Ford Mustang vehicles sold, or ever registered in the states of Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas, Puerto Rico, American Samoa, Guam, the Northern Mariana Islands (Saipan), and the U.S. Virgin Islands or \"Zone A.\"\r\n\r\nAdditionally, Ford is recalling certain 2010 Ford Edge, Fusion, Mustang "
+   },
+   {
+    "id": "16V384000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2007-2011 Ford Ranger vehicles, 2006-2011 Ford Fusion, Mercury Milan and Lincoln Zephyr/MKZ vehicles, 2007-2010 Ford Edge, Lincoln MKX vehicles, 2005-2006 Ford GT vehicles, and 2005-2011 Ford Mustang vehicles originally sold, or ever registered, in Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas,"
+   },
+   {
+    "id": "15V319000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2005-2014 Mustang vehicles manufactured April 6, 2004, to June 21, 2014, and 2005-2006 GT vehicles manufactured February 20, 2004, to September 22, 2006.  The affected vehicles are equipped with a dual-stage driver frontal air bag that may be susceptible to moisture intrusion which, over time, could cause the inflator to rupture."
+   }
+  ],
+  "2011": [
+   {
+    "id": "19V001000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2014 Ford Mustang vehicles sold, or ever registered, in the states of Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas, Puerto Rico, American Samoa, Guam, the Northern Mariana Islands (Saipan), and the U.S. Virgin Islands or \"Zone A.\"   \r\n\r\nAdditionally, Ford is recalling certain 2011 Ford Ranger and Mercury"
+   },
+   {
+    "id": "21V081000",
+    "part": "AIR BAGS:FRONTAL",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2005-2014 Mustang, 2004-2011 Ranger, 2009-2011 Mercury Milan, 2006 Ford GT, 2008-2012 Fusion, 2007-2010 Edge and Lincoln MKX, and 2009-2010 Lincoln MKZ vehicles.  These vehicles may be equipped with a driver or passenger frontal air bag inflator used as a replacement service part, that may explode due to propellant degradation occurring after long-ter"
+   },
+   {
+    "id": "21E013000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain air bag inflator and/or module replacement service parts that may have been used as part of a collision repair.  The parts include certain driver-side air bag inflators and/or modules, designed to fit 2005-2014 Ford Mustang and Mustang GT500.  It also includes certain passenger-side air bag inflators and/or modules designed to fit 2005-2014 Ford Musta"
+   },
+   {
+    "id": "16V384000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2007-2011 Ford Ranger vehicles, 2006-2011 Ford Fusion, Mercury Milan and Lincoln Zephyr/MKZ vehicles, 2007-2010 Ford Edge, Lincoln MKX vehicles, 2005-2006 Ford GT vehicles, and 2005-2011 Ford Mustang vehicles originally sold, or ever registered, in Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas,"
+   },
+   {
+    "id": "15V319000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2005-2014 Mustang vehicles manufactured April 6, 2004, to June 21, 2014, and 2005-2006 GT vehicles manufactured February 20, 2004, to September 22, 2006.  The affected vehicles are equipped with a dual-stage driver frontal air bag that may be susceptible to moisture intrusion which, over time, could cause the inflator to rupture."
+   }
+  ],
+  "2012": [
+   {
+    "id": "19V001000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2014 Ford Mustang vehicles sold, or ever registered, in the states of Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas, Puerto Rico, American Samoa, Guam, the Northern Mariana Islands (Saipan), and the U.S. Virgin Islands or \"Zone A.\"   \r\n\r\nAdditionally, Ford is recalling certain 2011 Ford Ranger and Mercury"
+   },
+   {
+    "id": "17V024000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2012 Ford Fusion and Mustang and Lincoln Zephyr and MKZ vehicles originally sold, or ever registered, in Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas, Puerto Rico, American Samoa, Guam, the Northern Mariana Islands (Saipan), and the U.S. Virgin Islands, or \"Zone A.\"\r\n\r\nAdditionally, unless included in \"Z"
+   },
+   {
+    "id": "15V319000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2005-2014 Mustang vehicles manufactured April 6, 2004, to June 21, 2014, and 2005-2006 GT vehicles manufactured February 20, 2004, to September 22, 2006.  The affected vehicles are equipped with a dual-stage driver frontal air bag that may be susceptible to moisture intrusion which, over time, could cause the inflator to rupture."
+   },
+   {
+    "id": "16V248000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2011-2012 Ford F-150 trucks, 2012 Ford Expedition, Lincoln Navigator, and Ford Mustang vehicles.  The affected vehicles are equipped with an automatic transmission that may unexpectedly downshift to first gear, regardless of vehicle speed."
+   },
+   {
+    "id": "12V190000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION:CONTROL MODULE (TCM/PCM/TECM)",
+    "summary": "FORD IS RECALLING CERTAIN MODEL YEAR 2011-2012 FORD F-150, 2012 EXPEDITION AND LINCOLN NAVIGATOR, AND 2012-2013 MUSTANG VEHICLES, FOR FAILING TO COMPLY WITH THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NOS. 102, \"TRANSMISSION SHIFT LEVER SEQUENCE, STARTER INTERLOCK, AND TRANSMISSION BRAKING EFFECT\" AND 108 LAMPS, REFLECTIVE DEVICES AND ASSOCIATED EQUIPMENT.  THESE VEHICLES MAY HAVE "
+   },
+   {
+    "id": "21V081000",
+    "part": "AIR BAGS:FRONTAL",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2005-2014 Mustang, 2004-2011 Ranger, 2009-2011 Mercury Milan, 2006 Ford GT, 2008-2012 Fusion, 2007-2010 Edge and Lincoln MKX, and 2009-2010 Lincoln MKZ vehicles.  These vehicles may be equipped with a driver or passenger frontal air bag inflator used as a replacement service part, that may explode due to propellant degradation occurring after long-ter"
+   },
+   {
+    "id": "21E013000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain air bag inflator and/or module replacement service parts that may have been used as part of a collision repair.  The parts include certain driver-side air bag inflators and/or modules, designed to fit 2005-2014 Ford Mustang and Mustang GT500.  It also includes certain passenger-side air bag inflators and/or modules designed to fit 2005-2014 Ford Musta"
+   }
+  ],
+  "2013": [
+   {
+    "id": "19V001000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2014 Ford Mustang vehicles sold, or ever registered, in the states of Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas, Puerto Rico, American Samoa, Guam, the Northern Mariana Islands (Saipan), and the U.S. Virgin Islands or \"Zone A.\"   \r\n\r\nAdditionally, Ford is recalling certain 2011 Ford Ranger and Mercury"
+   },
+   {
+    "id": "18V046000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2013 Ford Mustang vehicles sold, or ever registered in the states of Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas, Puerto Rico, American Samoa, Guam, the Northern Mariana Islands (Saipan), and the U.S. Virgin Islands or \"Zone A.\"\r\n\r\nAdditionally, Ford is recalling certain 2010 Ford Edge, Fusion, Mustang "
+   },
+   {
+    "id": "15V319000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2005-2014 Mustang vehicles manufactured April 6, 2004, to June 21, 2014, and 2005-2006 GT vehicles manufactured February 20, 2004, to September 22, 2006.  The affected vehicles are equipped with a dual-stage driver frontal air bag that may be susceptible to moisture intrusion which, over time, could cause the inflator to rupture."
+   },
+   {
+    "id": "12V190000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION:CONTROL MODULE (TCM/PCM/TECM)",
+    "summary": "FORD IS RECALLING CERTAIN MODEL YEAR 2011-2012 FORD F-150, 2012 EXPEDITION AND LINCOLN NAVIGATOR, AND 2012-2013 MUSTANG VEHICLES, FOR FAILING TO COMPLY WITH THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NOS. 102, \"TRANSMISSION SHIFT LEVER SEQUENCE, STARTER INTERLOCK, AND TRANSMISSION BRAKING EFFECT\" AND 108 LAMPS, REFLECTIVE DEVICES AND ASSOCIATED EQUIPMENT.  THESE VEHICLES MAY HAVE "
+   },
+   {
+    "id": "21V081000",
+    "part": "AIR BAGS:FRONTAL",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2005-2014 Mustang, 2004-2011 Ranger, 2009-2011 Mercury Milan, 2006 Ford GT, 2008-2012 Fusion, 2007-2010 Edge and Lincoln MKX, and 2009-2010 Lincoln MKZ vehicles.  These vehicles may be equipped with a driver or passenger frontal air bag inflator used as a replacement service part, that may explode due to propellant degradation occurring after long-ter"
+   },
+   {
+    "id": "21E013000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain air bag inflator and/or module replacement service parts that may have been used as part of a collision repair.  The parts include certain driver-side air bag inflators and/or modules, designed to fit 2005-2014 Ford Mustang and Mustang GT500.  It also includes certain passenger-side air bag inflators and/or modules designed to fit 2005-2014 Ford Musta"
+   }
+  ],
+  "2014": [
+   {
+    "id": "19V001000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2014 Ford Mustang vehicles sold, or ever registered, in the states of Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas, Puerto Rico, American Samoa, Guam, the Northern Mariana Islands (Saipan), and the U.S. Virgin Islands or \"Zone A.\"   \r\n\r\nAdditionally, Ford is recalling certain 2011 Ford Ranger and Mercury"
+   },
+   {
+    "id": "15V319000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2005-2014 Mustang vehicles manufactured April 6, 2004, to June 21, 2014, and 2005-2006 GT vehicles manufactured February 20, 2004, to September 22, 2006.  The affected vehicles are equipped with a dual-stage driver frontal air bag that may be susceptible to moisture intrusion which, over time, could cause the inflator to rupture."
+   },
+   {
+    "id": "21E013000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain air bag inflator and/or module replacement service parts that may have been used as part of a collision repair.  The parts include certain driver-side air bag inflators and/or modules, designed to fit 2005-2014 Ford Mustang and Mustang GT500.  It also includes certain passenger-side air bag inflators and/or modules designed to fit 2005-2014 Ford Musta"
+   },
+   {
+    "id": "21V081000",
+    "part": "AIR BAGS:FRONTAL",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2005-2014 Mustang, 2004-2011 Ranger, 2009-2011 Mercury Milan, 2006 Ford GT, 2008-2012 Fusion, 2007-2010 Edge and Lincoln MKX, and 2009-2010 Lincoln MKZ vehicles.  These vehicles may be equipped with a driver or passenger frontal air bag inflator used as a replacement service part, that may explode due to propellant degradation occurring after long-ter"
+   }
+  ],
+  "2020": [
+   {
+    "id": "20V306000",
+    "part": "FORWARD COLLISION AVOIDANCE: SENSING SYSTEM: CAMERA",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2020 Mustang vehicles equipped a forward-looking camera.  The camera may be misaligned to the vehicle and features that are dependent on the camera such as Pre-Collision Assist, Adaptive Cruise Control, Lane Keeping System, Driver Alert, and Auto High Beam Control may not function as intended."
+   },
+   {
+    "id": "20V573000",
+    "part": "SERVICE BRAKES, HYDRAULIC:PEDALS AND LINKAGES",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2020 Mustang vehicles equipped with automatic transmissions.  The brake pedal bracket may fracture during sudden stopping."
+   },
+   {
+    "id": "20V263000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION:GEAR POSITION INDICATION (PRNDL)",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2019 Expedition and 2019-2020 Mustang vehicles.  The \"Transmission Not In Park\" warning message and associated chime duration are shorter than intended."
+   },
+   {
+    "id": "20V575000",
+    "part": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2020 Ford F-150, F-250, F-350, F-450, F-550, Explorer, Mustang, Transit, Expedition, Escape, Ranger and Edge, and Lincoln Nautilus and Corsair vehicles.  Due to a poor electrical connection, the rearview camera may intermittently display a blank or distorted image.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle "
+   },
+   {
+    "id": "22V382000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION:CONTROL MODULE (TCM/PCM/TECM)",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2019-2020 Mustang vehicles equipped with 5.0L engines and manual transmissions.  The Powertrain Control Module (PCM) may broadcast an unintended faulted signal to the modules controlling the reverse camera, reverse light, and driver assist features, which may disable all of these functions."
+   },
+   {
+    "id": "23V727000",
+    "part": "ELECTRICAL SYSTEM:BODY CONTROL MODULE/BCM",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2020-2023 Mustang vehicles.  The brake fluid level sensor may not activate the visual warning indicator when the brake fluid is low.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 135, \"Light Vehicle Brake Systems.\""
+   },
+   {
+    "id": "25V442000",
+    "part": "BACK OVER PREVENTION:SOFTWARE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2018-2022 Transit Connect, 2019-2020 MKZ, MKX,  Edge, Continental, F-150, Nautilus, Fusion, 2019-2023 Ranger, Mustang, 2020-2021 EcoSport, Expedition, Navigator, 2020-2022 Escape, F-250 SD, Corsair, 2020-2023 Aviator, Transit, 2020-2024 Explorer, 2021-2024 Bronco Sport, and 2022-2024 Maverick vehicles. A software error may cause the rearview camera to"
+   },
+   {
+    "id": "25V695000",
+    "part": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2015-2019 Flex, 2015 Explorer, Lincoln MKT,  Lincoln MKZ, 2015-2016 C-Max, Escape, Taurus, 2016 Fusion, 2018-2019 Taurus, 2019 Lincoln MKT, Fiesta, and 2020 Mustang vehicles.  The rearview camera may display a distorted,  intermittent, or blank image when the vehicle is in reverse."
+   }
+  ],
+  "2021": [
+   {
+    "id": "21V980000",
+    "part": "AIR BAGS:SIDE/WINDOW:CURTAIN",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021 Mustang vehicles.  The side curtain air bag inflators may have been manufactured with the incorrect amount of compressed gas, which can result in improper air bag inflation.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard numbers 226, \"Ejection Mitigation,\" and 214, \"Side Impact Protection.\""
+   },
+   {
+    "id": "22V083000",
+    "part": "AIR BAGS:KNEE BOLSTER",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2022 Mustang vehicles.  An insufficient weld on the front passenger knee air bag may result in an improper air bag deployment."
+   },
+   {
+    "id": "23V727000",
+    "part": "ELECTRICAL SYSTEM:BODY CONTROL MODULE/BCM",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2020-2023 Mustang vehicles.  The brake fluid level sensor may not activate the visual warning indicator when the brake fluid is low.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 135, \"Light Vehicle Brake Systems.\""
+   },
+   {
+    "id": "25V442000",
+    "part": "BACK OVER PREVENTION:SOFTWARE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2018-2022 Transit Connect, 2019-2020 MKZ, MKX,  Edge, Continental, F-150, Nautilus, Fusion, 2019-2023 Ranger, Mustang, 2020-2021 EcoSport, Expedition, Navigator, 2020-2022 Escape, F-250 SD, Corsair, 2020-2023 Aviator, Transit, 2020-2024 Explorer, 2021-2024 Bronco Sport, and 2022-2024 Maverick vehicles. A software error may cause the rearview camera to"
+   },
+   {
+    "id": "25V455000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2023 Bronco, Explorer, Lincoln Aviator, F-250 SD, F-350 SD, F-450 SD,  F-550 SD, 2021-2022 Lincoln Navigator, Mustang, F-150, and 2022 Expedition vehicles. The low-pressure fuel pump may fail, which can result in an engine stall while driving."
+   },
+   {
+    "id": "25V689000",
+    "part": "ELECTRICAL SYSTEM:BODY CONTROL MODULE/BCM",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2023 Mustang vehicles repaired incorrectly under recall number 23V727. The brake fluid level sensor may not activate the visual warning indicator when the brake fluid is low.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 135, \"Light Vehicle Brake Systems.\""
+   }
+  ],
+  "2022": [
+   {
+    "id": "22V083000",
+    "part": "AIR BAGS:KNEE BOLSTER",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2022 Mustang vehicles.  An insufficient weld on the front passenger knee air bag may result in an improper air bag deployment."
+   },
+   {
+    "id": "22V334000",
+    "part": "FORWARD COLLISION AVOIDANCE: SENSING SYSTEM: CAMERA",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2022 Mustang vehicles equipped with an Image Processing Module A (IPMA) or forward-facing camera.  The camera is misaligned to the vehicle, resulting in the camera not functioning as intended."
+   },
+   {
+    "id": "23V070000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2022-2023 F-150, Mustang, Explorer, Bronco, and 2023 Lincoln Aviator vehicles equipped with automatic transmissions.  The transmission may contain a loose bolt which could prevent the transmission from engaging the park gear, although the gear shifter position may indicate that the vehicle has been shifted to \"PARK.\""
+   },
+   {
+    "id": "23V727000",
+    "part": "ELECTRICAL SYSTEM:BODY CONTROL MODULE/BCM",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2020-2023 Mustang vehicles.  The brake fluid level sensor may not activate the visual warning indicator when the brake fluid is low.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 135, \"Light Vehicle Brake Systems.\""
+   },
+   {
+    "id": "24V493000",
+    "part": "STEERING:ELECTRIC POWER ASSIST SYSTEM",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2022-2023 Ford Mustang vehicles.  The secondary steering torque sensor may not be calibrated properly, which can cause the steering wheel to turn side to side against the driver's intentions."
+   },
+   {
+    "id": "25V096000",
+    "part": "STEERING:ELECTRIC POWER ASSIST SYSTEM",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2022-2023 Ford Mustang vehicles previously repaired incorrectly under recall number 24V-493.  The secondary steering torque sensor may not be calibrated properly, which can cause the steering wheel to turn side to side against the driver's intentions."
+   },
+   {
+    "id": "25V442000",
+    "part": "BACK OVER PREVENTION:SOFTWARE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2018-2022 Transit Connect, 2019-2020 MKZ, MKX,  Edge, Continental, F-150, Nautilus, Fusion, 2019-2023 Ranger, Mustang, 2020-2021 EcoSport, Expedition, Navigator, 2020-2022 Escape, F-250 SD, Corsair, 2020-2023 Aviator, Transit, 2020-2024 Explorer, 2021-2024 Bronco Sport, and 2022-2024 Maverick vehicles. A software error may cause the rearview camera to"
+   },
+   {
+    "id": "25V455000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2023 Bronco, Explorer, Lincoln Aviator, F-250 SD, F-350 SD, F-450 SD,  F-550 SD, 2021-2022 Lincoln Navigator, Mustang, F-150, and 2022 Expedition vehicles. The low-pressure fuel pump may fail, which can result in an engine stall while driving."
+   },
+   {
+    "id": "25V689000",
+    "part": "ELECTRICAL SYSTEM:BODY CONTROL MODULE/BCM",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2023 Mustang vehicles repaired incorrectly under recall number 23V727. The brake fluid level sensor may not activate the visual warning indicator when the brake fluid is low.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 135, \"Light Vehicle Brake Systems.\""
+   }
+  ]
+ },
+ "yt": {
+  "car-shelby-gt500": {
+   "videos": 200,
+   "praise": [
+    [
+     "Power and acceleration",
+     18
+    ],
+    [
+     "Looks",
+     16
+    ],
+    [
+     "Handling and steering",
+     15
+    ],
+    [
+     "Everyday comfort",
+     10
+    ]
+   ],
+   "trouble": [],
+   "top": [
+    {
+     "id": "-PebxokXOzs",
+     "title": "1967 Shelby GT500 Found In Iowa Barn",
+     "views": 17090441,
+     "ch": "Jerry Heasley"
+    },
+    {
+     "id": "1zx8-CBtXIs",
+     "title": "2020 Mustang Shelby GT500 vs Camaro ZL1 1LE vs Hellcat Redeye // DRAG RACE, ROLL RACE & LAP TIMES",
+     "views": 10024355,
+     "ch": "Throttle House"
+    },
+    {
+     "id": "O46E0gCF5os",
+     "title": "Mustang GT500 car review - Top Gear - BBC",
+     "views": 8878510,
+     "ch": "Top Gear"
+    }
+   ]
+  },
+  "ford-modular-sc": {
+   "videos": 200,
+   "praise": [
+    [
+     "Looks",
+     17
+    ],
+    [
+     "Power and acceleration",
+     13
+    ],
+    [
+     "Handling and steering",
+     10
+    ],
+    [
+     "Manual gearbox",
+     8
+    ]
+   ],
+   "trouble": [
+    [
+     "Supercharger",
+     6
+    ],
+    [
+     "Coolant leaks / water pump / overheating",
+     6
+    ]
+   ],
+   "top": [
+    {
+     "id": "O46E0gCF5os",
+     "title": "Mustang GT500 car review - Top Gear - BBC",
+     "views": 8878487,
+     "ch": "Top Gear"
+    },
+    {
+     "id": "I280XuCOfZ8",
+     "title": "6 Reasons Why I Hate the Ford GT",
+     "views": 8605123,
+     "ch": "Vehicle Virgins"
+    },
+    {
+     "id": "7-MCdfqL61E",
+     "title": "2017 Ford GT - Jay Leno's Garage",
+     "views": 6264458,
+     "ch": "Jay Leno's Garage"
+    }
+   ]
+  },
+  "ford-predator": {
+   "videos": 200,
+   "praise": [
+    [
+     "Power and acceleration",
+     16
+    ],
+    [
+     "Looks",
+     14
+    ],
+    [
+     "Handling and steering",
+     12
+    ],
+    [
+     "Interior and seats",
+     6
+    ]
+   ],
+   "trouble": [
+    [
+     "Clutch",
+     7
+    ]
+   ],
+   "top": [
+    {
+     "id": "-PebxokXOzs",
+     "title": "1967 Shelby GT500 Found In Iowa Barn",
+     "views": 17090375,
+     "ch": "Jerry Heasley"
+    },
+    {
+     "id": "NRuE38Bl5Mo",
+     "title": "2013 Ford Shelby GT500 Chases 200 MPH! - Ignition Episode 18",
+     "views": 5931126,
+     "ch": "MotorTrend Channel"
+    },
+    {
+     "id": "mzNJusygrG0",
+     "title": "70HP Supercharged Harbor Freight Predator 670cc V Twin Engine Build",
+     "views": 4608230,
+     "ch": "Red Beard's Garage"
+    }
+   ]
+  }
+ },
+ "scores": {
+  "car-shelby-gt500": {
+   "years": {
+    "2007": {
+     "score": 56,
+     "weight": 19.5,
+     "videos": 104,
+     "named": 14,
+     "top": [
+      {
+       "id": "-PebxokXOzs",
+       "title": "1967 Shelby GT500 Found In Iowa Barn",
+       "views": 17090441
+      },
+      {
+       "id": "O46E0gCF5os",
+       "title": "Mustang GT500 car review - Top Gear - BBC",
+       "views": 8878510
+      },
+      {
+       "id": "FUO6nq8BDX4",
+       "title": "We Drag Race A New and Classic Ford Shelby Mustang GT500 To See What 50 Years Of Progress Makes!",
+       "views": 3971146
+      }
+     ]
+    },
+    "2008": {
+     "score": 54,
+     "weight": 14.0,
+     "videos": 98,
+     "named": 8,
+     "top": [
+      {
+       "id": "-PebxokXOzs",
+       "title": "1967 Shelby GT500 Found In Iowa Barn",
+       "views": 17090441
+      },
+      {
+       "id": "O46E0gCF5os",
+       "title": "Mustang GT500 car review - Top Gear - BBC",
+       "views": 8878510
+      },
+      {
+       "id": "FUO6nq8BDX4",
+       "title": "We Drag Race A New and Classic Ford Shelby Mustang GT500 To See What 50 Years Of Progress Makes!",
+       "views": 3971146
+      }
+     ]
+    },
+    "2009": {
+     "score": 52,
+     "weight": 9.0,
+     "videos": 93,
+     "named": 3,
+     "top": [
+      {
+       "id": "-PebxokXOzs",
+       "title": "1967 Shelby GT500 Found In Iowa Barn",
+       "views": 17090441
+      },
+      {
+       "id": "O46E0gCF5os",
+       "title": "Mustang GT500 car review - Top Gear - BBC",
+       "views": 8878510
+      },
+      {
+       "id": "FUO6nq8BDX4",
+       "title": "We Drag Race A New and Classic Ford Shelby Mustang GT500 To See What 50 Years Of Progress Makes!",
+       "views": 3971146
+      }
+     ]
+    },
+    "2010": {
+     "score": 52,
+     "weight": 11.3,
+     "videos": 94,
+     "named": 4,
+     "top": [
+      {
+       "id": "-PebxokXOzs",
+       "title": "1967 Shelby GT500 Found In Iowa Barn",
+       "views": 17090441
+      },
+      {
+       "id": "O46E0gCF5os",
+       "title": "Mustang GT500 car review - Top Gear - BBC",
+       "views": 8878510
+      },
+      {
+       "id": "FUO6nq8BDX4",
+       "title": "We Drag Race A New and Classic Ford Shelby Mustang GT500 To See What 50 Years Of Progress Makes!",
+       "views": 3971146
+      }
+     ]
+    },
+    "2011": {
+     "score": 52,
+     "weight": 12.1,
+     "videos": 96,
+     "named": 6,
+     "top": [
+      {
+       "id": "-PebxokXOzs",
+       "title": "1967 Shelby GT500 Found In Iowa Barn",
+       "views": 17090441
+      },
+      {
+       "id": "O46E0gCF5os",
+       "title": "Mustang GT500 car review - Top Gear - BBC",
+       "views": 8878510
+      },
+      {
+       "id": "FUO6nq8BDX4",
+       "title": "We Drag Race A New and Classic Ford Shelby Mustang GT500 To See What 50 Years Of Progress Makes!",
+       "views": 3971146
+      }
+     ]
+    },
+    "2012": {
+     "score": 51,
+     "weight": 11.1,
+     "videos": 95,
+     "named": 5,
+     "top": [
+      {
+       "id": "-PebxokXOzs",
+       "title": "1967 Shelby GT500 Found In Iowa Barn",
+       "views": 17090441
+      },
+      {
+       "id": "O46E0gCF5os",
+       "title": "Mustang GT500 car review - Top Gear - BBC",
+       "views": 8878510
+      },
+      {
+       "id": "FUO6nq8BDX4",
+       "title": "We Drag Race A New and Classic Ford Shelby Mustang GT500 To See What 50 Years Of Progress Makes!",
+       "views": 3971146
+      }
+     ]
+    },
+    "2013": {
+     "score": 54,
+     "weight": 28.1,
+     "videos": 114,
+     "named": 24,
+     "top": [
+      {
+       "id": "-PebxokXOzs",
+       "title": "1967 Shelby GT500 Found In Iowa Barn",
+       "views": 17090441
+      },
+      {
+       "id": "O46E0gCF5os",
+       "title": "Mustang GT500 car review - Top Gear - BBC",
+       "views": 8878510
+      },
+      {
+       "id": "NRuE38Bl5Mo",
+       "title": "2013 Ford Shelby GT500 Chases 200 MPH! - Ignition Episode 18",
+       "views": 5931126
+      }
+     ]
+    },
+    "2014": {
+     "score": 54,
+     "weight": 16.6,
+     "videos": 101,
+     "named": 11,
+     "top": [
+      {
+       "id": "-PebxokXOzs",
+       "title": "1967 Shelby GT500 Found In Iowa Barn",
+       "views": 17090441
+      },
+      {
+       "id": "O46E0gCF5os",
+       "title": "Mustang GT500 car review - Top Gear - BBC",
+       "views": 8878510
+      },
+      {
+       "id": "FUO6nq8BDX4",
+       "title": "We Drag Race A New and Classic Ford Shelby Mustang GT500 To See What 50 Years Of Progress Makes!",
+       "views": 3971146
+      }
+     ]
+    },
+    "2020": {
+     "score": 58,
+     "weight": 49.5,
+     "videos": 132,
+     "named": 42,
+     "top": [
+      {
+       "id": "-PebxokXOzs",
+       "title": "1967 Shelby GT500 Found In Iowa Barn",
+       "views": 17090441
+      },
+      {
+       "id": "1zx8-CBtXIs",
+       "title": "2020 Mustang Shelby GT500 vs Camaro ZL1 1LE vs Hellcat Redeye // DRAG RACE, ROLL RACE & LAP TIMES",
+       "views": 10024355
+      },
+      {
+       "id": "O46E0gCF5os",
+       "title": "Mustang GT500 car review - Top Gear - BBC",
+       "views": 8878510
+      }
+     ]
+    },
+    "2021": {
+     "score": 58,
+     "weight": 12.5,
+     "videos": 95,
+     "named": 5,
+     "top": [
+      {
+       "id": "-PebxokXOzs",
+       "title": "1967 Shelby GT500 Found In Iowa Barn",
+       "views": 17090441
+      },
+      {
+       "id": "O46E0gCF5os",
+       "title": "Mustang GT500 car review - Top Gear - BBC",
+       "views": 8878510
+      },
+      {
+       "id": "FUO6nq8BDX4",
+       "title": "We Drag Race A New and Classic Ford Shelby Mustang GT500 To See What 50 Years Of Progress Makes!",
+       "views": 3971146
+      }
+     ]
+    },
+    "2022": {
+     "score": 55,
+     "weight": 13.5,
+     "videos": 96,
+     "named": 6,
+     "top": [
+      {
+       "id": "-PebxokXOzs",
+       "title": "1967 Shelby GT500 Found In Iowa Barn",
+       "views": 17090441
+      },
+      {
+       "id": "O46E0gCF5os",
+       "title": "Mustang GT500 car review - Top Gear - BBC",
+       "views": 8878510
+      },
+      {
+       "id": "FUO6nq8BDX4",
+       "title": "We Drag Race A New and Classic Ford Shelby Mustang GT500 To See What 50 Years Of Progress Makes!",
+       "views": 3971146
+      }
+     ]
+    }
+   },
+   "videos": 197,
+   "pulled": 200
+  },
+  "ford-modular-sc": {
+   "years": {
+    "1999": {
+     "score": 42,
+     "weight": 3.6,
+     "videos": 17,
+     "named": 4,
+     "top": [
+      {
+       "id": "bCsE4QXk70c",
+       "title": "I DIY BUILT A MONSTER ENGINE FOR MY SVT LIGHTNING & SO CAN YOU! COMPLETE BUILD!",
+       "views": 890135
+      },
+      {
+       "id": "tNlGyz_6J0Y",
+       "title": "Here's What Happened After \"Properly\" Breaking In My New SVT Lightning Engine! LISTEN TO THIS!",
+       "views": 694937
+      },
+      {
+       "id": "qYBqJHTzLuM",
+       "title": "I Bought My First Pickup Truck! A Super Rare F-150 SVT Lightning! It's Broken So Let's Get to Work!",
+       "views": 541104
+      }
+     ]
+    },
+    "2000": {
+     "score": 45,
+     "weight": 4.6,
+     "videos": 18,
+     "named": 5,
+     "top": [
+      {
+       "id": "bCsE4QXk70c",
+       "title": "I DIY BUILT A MONSTER ENGINE FOR MY SVT LIGHTNING & SO CAN YOU! COMPLETE BUILD!",
+       "views": 890135
+      },
+      {
+       "id": "tNlGyz_6J0Y",
+       "title": "Here's What Happened After \"Properly\" Breaking In My New SVT Lightning Engine! LISTEN TO THIS!",
+       "views": 694937
+      },
+      {
+       "id": "qYBqJHTzLuM",
+       "title": "I Bought My First Pickup Truck! A Super Rare F-150 SVT Lightning! It's Broken So Let's Get to Work!",
+       "views": 541104
+      }
+     ]
+    },
+    "2001": {
+     "score": 51,
+     "weight": 5.6,
+     "videos": 19,
+     "named": 6,
+     "top": [
+      {
+       "id": "bCsE4QXk70c",
+       "title": "I DIY BUILT A MONSTER ENGINE FOR MY SVT LIGHTNING & SO CAN YOU! COMPLETE BUILD!",
+       "views": 890135
+      },
+      {
+       "id": "tNlGyz_6J0Y",
+       "title": "Here's What Happened After \"Properly\" Breaking In My New SVT Lightning Engine! LISTEN TO THIS!",
+       "views": 694937
+      },
+      {
+       "id": "bzgECPEOwPU",
+       "title": "Here's Why the 2001 Ford F-150 SVT Lightning was Worth $32,000",
+       "views": 659028
+      }
+     ]
+    },
+    "2002": {
+     "score": null,
+     "weight": 2.6,
+     "videos": 16,
+     "named": 3,
+     "top": [
+      {
+       "id": "bCsE4QXk70c",
+       "title": "I DIY BUILT A MONSTER ENGINE FOR MY SVT LIGHTNING & SO CAN YOU! COMPLETE BUILD!",
+       "views": 890135
+      },
+      {
+       "id": "tNlGyz_6J0Y",
+       "title": "Here's What Happened After \"Properly\" Breaking In My New SVT Lightning Engine! LISTEN TO THIS!",
+       "views": 694937
+      },
+      {
+       "id": "qYBqJHTzLuM",
+       "title": "I Bought My First Pickup Truck! A Super Rare F-150 SVT Lightning! It's Broken So Let's Get to Work!",
+       "views": 541104
+      }
+     ]
+    },
+    "2003": {
+     "score": 45,
+     "weight": 3.6,
+     "videos": 17,
+     "named": 4,
+     "top": [
+      {
+       "id": "bCsE4QXk70c",
+       "title": "I DIY BUILT A MONSTER ENGINE FOR MY SVT LIGHTNING & SO CAN YOU! COMPLETE BUILD!",
+       "views": 890135
+      },
+      {
+       "id": "tNlGyz_6J0Y",
+       "title": "Here's What Happened After \"Properly\" Breaking In My New SVT Lightning Engine! LISTEN TO THIS!",
+       "views": 694937
+      },
+      {
+       "id": "qYBqJHTzLuM",
+       "title": "I Bought My First Pickup Truck! A Super Rare F-150 SVT Lightning! It's Broken So Let's Get to Work!",
+       "views": 541104
+      }
+     ]
+    },
+    "2004": {
+     "score": 50,
+     "weight": 5.6,
+     "videos": 19,
+     "named": 6,
+     "top": [
+      {
+       "id": "bCsE4QXk70c",
+       "title": "I DIY BUILT A MONSTER ENGINE FOR MY SVT LIGHTNING & SO CAN YOU! COMPLETE BUILD!",
+       "views": 890135
+      },
+      {
+       "id": "tNlGyz_6J0Y",
+       "title": "Here's What Happened After \"Properly\" Breaking In My New SVT Lightning Engine! LISTEN TO THIS!",
+       "views": 694937
+      },
+      {
+       "id": "qYBqJHTzLuM",
+       "title": "I Bought My First Pickup Truck! A Super Rare F-150 SVT Lightning! It's Broken So Let's Get to Work!",
+       "views": 541104
+      }
+     ]
+    },
+    "2005": {
+     "score": 58,
+     "weight": 20.1,
+     "videos": 21,
+     "named": 20,
+     "top": [
+      {
+       "id": "xJUOKi-pdbk",
+       "title": "I Bought a 2005 Ford GT - My Dream Car!",
+       "views": 4368182
+      },
+      {
+       "id": "Ef-diAKgRSs",
+       "title": "Inside Look At Designing The 2005 Ford GT - Jay Leno’s Garage",
+       "views": 2292270
+      },
+      {
+       "id": "ptTlrmbgFQY",
+       "title": "2017 Ford GT vs. 2005 Ford GT",
+       "views": 2080087
+      }
+     ]
+    },
+    "2006": {
+     "score": 58,
+     "weight": 6.1,
+     "videos": 7,
+     "named": 6,
+     "top": [
+      {
+       "id": "PwKFy4xYqBQ",
+       "title": "2006 FORD GT *200MPH / 320KMH* REVIEW on Autobahn [NO SPEED LIMIT]",
+       "views": 2401710
+      },
+      {
+       "id": "vYz-6fnLm9U",
+       "title": "Johnny Bohmer drives his 2006 Ford GT “BADD GT” to 310.8 MPH (500.1 KM/H)",
+       "views": 1380853
+      },
+      {
+       "id": "pO50ATn_zps",
+       "title": "2006 Ford GT | Buyer’s Guide",
+       "views": 89757
+      }
+     ]
+    },
+    "2007": {
+     "score": 59,
+     "weight": 13.3,
+     "videos": 20,
+     "named": 18,
+     "top": [
+      {
+       "id": "k0_TsOUKR7U",
+       "title": "2007 SHELBY GT500 | REVIEW on AUTOBAHN [NO SPEED LIMIT] by AutoTopNL",
+       "views": 337119
+      },
+      {
+       "id": "D8ari3hZJXs",
+       "title": "Evolution Performance - First 2007 Shelby GT500 In The 9's!",
+       "views": 277206
+      },
+      {
+       "id": "fQrqAVFUKOY",
+       "title": "2007 Shelby GT500 Review!-The Snake Returns",
+       "views": 237045
+      }
+     ]
+    },
+    "2008": {
+     "score": 57,
+     "weight": 11.8,
+     "videos": 18,
+     "named": 16,
+     "top": [
+      {
+       "id": "5cDvLGcq34k",
+       "title": "705 Horsepower of MAYHEM-2008 Shelby GT500 Review",
+       "views": 1054859
+      },
+      {
+       "id": "i91NMEMMcdo",
+       "title": "800 Horsepower of MAYHEM - JD JoyrideTV 2008 Shelby GT500 Review",
+       "views": 281105
+      },
+      {
+       "id": "i8jBXWo-emU",
+       "title": "2008 Shelby GT500",
+       "views": 169845
+      }
+     ]
+    },
+    "2009": {
+     "score": null,
+     "weight": 1.8,
+     "videos": 8,
+     "named": 6,
+     "top": [
+      {
+       "id": "HsBCbqZXxPQ",
+       "title": "2007-2009 Shelby GT500- Bolt-On Build-Ups: Stage 1",
+       "views": 158161
+      },
+      {
+       "id": "UV8n8pnJ59Q",
+       "title": "2007-2009 Shelby GT500- Bolt-On Build-Ups: Stage 2",
+       "views": 127844
+      },
+      {
+       "id": "c9UeLbIKf5Y",
+       "title": "2007 - 2009 Shelby GT500 Buyers Guide | What to look out for | Must Do Mods for your Cobra |",
+       "views": 90937
+      }
+     ]
+    },
+    "2010": {
+     "score": null,
+     "weight": 2.5,
+     "videos": 6,
+     "named": 4,
+     "top": [
+      {
+       "id": "oZkx87P6-pM",
+       "title": "First Test: 2010 Ford Shelby GT500",
+       "views": 1189040
+      },
+      {
+       "id": "YVd_kOrzons",
+       "title": "2007 – 2014 Shelby GT500 - All the facts & which one to buy",
+       "views": 83031
+      },
+      {
+       "id": "b06VY_OlfXc",
+       "title": "MotorWeek Road Test: 2010 Ford Shelby GT 500",
+       "views": 54822
+      }
+     ]
+    },
+    "2011": {
+     "score": 54,
+     "weight": 3.7,
+     "videos": 8,
+     "named": 6,
+     "top": [
+      {
+       "id": "j181HJYt2_8",
+       "title": "2011 Ford Shelby GT500 | Road Test | Edmunds.com",
+       "views": 129084
+      },
+      {
+       "id": "YVd_kOrzons",
+       "title": "2007 – 2014 Shelby GT500 - All the facts & which one to buy",
+       "views": 83031
+      },
+      {
+       "id": "N7QM4JrvDa4",
+       "title": "The S197 Ford Shelby GT500 is the MUST own muscle car Mustang!",
+       "views": 47256
+      }
+     ]
+    },
+    "2012": {
+     "score": 51,
+     "weight": 6.7,
+     "videos": 11,
+     "named": 9,
+     "top": [
+      {
+       "id": "xGSrb1I5SfU",
+       "title": "How Much Power Will A 2012 Shelby GT500 Mustang with 182,271 Miles Make?",
+       "views": 173183
+      },
+      {
+       "id": "pey5hEkUSe8",
+       "title": "VMP Performance | Stock 2012 Shelby GT500 Blasts Out 800 HP With VMP Gen3 TVS Blower",
+       "views": 115715
+      },
+      {
+       "id": "YVd_kOrzons",
+       "title": "2007 – 2014 Shelby GT500 - All the facts & which one to buy",
+       "views": 83031
+      }
+     ]
+    },
+    "2013": {
+     "score": 49,
+     "weight": 11.6,
+     "videos": 16,
+     "named": 14,
+     "top": [
+      {
+       "id": "NRuE38Bl5Mo",
+       "title": "2013 Ford Shelby GT500 Chases 200 MPH! - Ignition Episode 18",
+       "views": 5931126
+      },
+      {
+       "id": "0Oo9R7THV3I",
+       "title": "2013 Shelby GT500: Regular Car Reviews",
+       "views": 1130278
+      },
+      {
+       "id": "s2k904HhiSU",
+       "title": "2013 Ford Shelby GT500  & Carroll Shelby | Road and Track",
+       "views": 629128
+      }
+     ]
+    },
+    "2014": {
+     "score": 60,
+     "weight": 14.1,
+     "videos": 18,
+     "named": 16,
+     "top": [
+      {
+       "id": "goMC6SDmDlQ",
+       "title": "2014 Corvette Stingray vs Shelby GT500 | Track Tested",
+       "views": 923543
+      },
+      {
+       "id": "UDpXoSzqwIc",
+       "title": "Is the 2014 Shelby GT500 the better Mustang to buy than a 2021 GT500?",
+       "views": 197558
+      },
+      {
+       "id": "0zgx2LpFysY",
+       "title": "Review: 2014 Shelby GT500 - Better than the new one?",
+       "views": 134727
+      }
+     ]
+    }
+   },
+   "videos": 117,
+   "pulled": 200
+  },
+  "ford-predator": {
+   "years": {
+    "2020": {
+     "score": 46,
+     "weight": 21.9,
+     "videos": 87,
+     "named": 11,
+     "top": [
+      {
+       "id": "mzNJusygrG0",
+       "title": "70HP Supercharged Harbor Freight Predator 670cc V Twin Engine Build",
+       "views": 4608230
+      },
+      {
+       "id": "5n1sPy3Al6M",
+       "title": "Cheap Generator Better Than Honda? Predator vs Honda & GENMAX—Let’s Settle This!",
+       "views": 4106554
+      },
+      {
+       "id": "cL2FKDtpRt8",
+       "title": "Episode 1.  We put a $99.00 Predator engine in our Honda Insight.",
+       "views": 3879382
+      }
+     ]
+    },
+    "2021": {
+     "score": 46,
+     "weight": 13.9,
+     "videos": 79,
+     "named": 3,
+     "top": [
+      {
+       "id": "mzNJusygrG0",
+       "title": "70HP Supercharged Harbor Freight Predator 670cc V Twin Engine Build",
+       "views": 4608230
+      },
+      {
+       "id": "5n1sPy3Al6M",
+       "title": "Cheap Generator Better Than Honda? Predator vs Honda & GENMAX—Let’s Settle This!",
+       "views": 4106554
+      },
+      {
+       "id": "cL2FKDtpRt8",
+       "title": "Episode 1.  We put a $99.00 Predator engine in our Honda Insight.",
+       "views": 3879382
+      }
+     ]
+    },
+    "2022": {
+     "score": 45,
+     "weight": 11.9,
+     "videos": 77,
+     "named": 1,
+     "top": [
+      {
+       "id": "mzNJusygrG0",
+       "title": "70HP Supercharged Harbor Freight Predator 670cc V Twin Engine Build",
+       "views": 4608230
+      },
+      {
+       "id": "5n1sPy3Al6M",
+       "title": "Cheap Generator Better Than Honda? Predator vs Honda & GENMAX—Let’s Settle This!",
+       "views": 4106554
+      },
+      {
+       "id": "cL2FKDtpRt8",
+       "title": "Episode 1.  We put a $99.00 Predator engine in our Honda Insight.",
+       "views": 3879382
+      }
+     ]
+    },
+    "2023": {
+     "score": 49,
+     "weight": 22.9,
+     "videos": 103,
+     "named": 7,
+     "top": [
+      {
+       "id": "mzNJusygrG0",
+       "title": "70HP Supercharged Harbor Freight Predator 670cc V Twin Engine Build",
+       "views": 4608230
+      },
+      {
+       "id": "5n1sPy3Al6M",
+       "title": "Cheap Generator Better Than Honda? Predator vs Honda & GENMAX—Let’s Settle This!",
+       "views": 4106554
+      },
+      {
+       "id": "cL2FKDtpRt8",
+       "title": "Episode 1.  We put a $99.00 Predator engine in our Honda Insight.",
+       "views": 3879382
+      }
+     ]
+    },
+    "2024": {
+     "score": 49,
+     "weight": 19.9,
+     "videos": 100,
+     "named": 4,
+     "top": [
+      {
+       "id": "mzNJusygrG0",
+       "title": "70HP Supercharged Harbor Freight Predator 670cc V Twin Engine Build",
+       "views": 4608230
+      },
+      {
+       "id": "5n1sPy3Al6M",
+       "title": "Cheap Generator Better Than Honda? Predator vs Honda & GENMAX—Let’s Settle This!",
+       "views": 4106554
+      },
+      {
+       "id": "cL2FKDtpRt8",
+       "title": "Episode 1.  We put a $99.00 Predator engine in our Honda Insight.",
+       "views": 3879382
+      }
+     ]
+    },
+    "2025": {
+     "score": 47,
+     "weight": 16.9,
+     "videos": 97,
+     "named": 1,
+     "top": [
+      {
+       "id": "mzNJusygrG0",
+       "title": "70HP Supercharged Harbor Freight Predator 670cc V Twin Engine Build",
+       "views": 4608230
+      },
+      {
+       "id": "5n1sPy3Al6M",
+       "title": "Cheap Generator Better Than Honda? Predator vs Honda & GENMAX—Let’s Settle This!",
+       "views": 4106554
+      },
+      {
+       "id": "cL2FKDtpRt8",
+       "title": "Episode 1.  We put a $99.00 Predator engine in our Honda Insight.",
+       "views": 3879382
+      }
+     ]
+    },
+    "2026": {
+     "score": 51,
+     "weight": 22.9,
+     "videos": 103,
+     "named": 7,
+     "top": [
+      {
+       "id": "mzNJusygrG0",
+       "title": "70HP Supercharged Harbor Freight Predator 670cc V Twin Engine Build",
+       "views": 4608230
+      },
+      {
+       "id": "5n1sPy3Al6M",
+       "title": "Cheap Generator Better Than Honda? Predator vs Honda & GENMAX—Let’s Settle This!",
+       "views": 4106554
+      },
+      {
+       "id": "cL2FKDtpRt8",
+       "title": "Episode 1.  We put a $99.00 Predator engine in our Honda Insight.",
+       "views": 3879382
+      }
+     ]
+    }
+   },
+   "videos": 130,
+   "pulled": 200
+  }
+ }
+}

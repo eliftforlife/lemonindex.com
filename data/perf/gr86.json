@@ -1,0 +1,625 @@
+{
+ "slug": "gr86",
+ "name": "Toyota GR86",
+ "short": "GR86",
+ "make": "Toyota",
+ "page": "/cars/gr86/",
+ "focus": "zn8",
+ "star": "zn8-mt",
+ "h1": "Toyota GR86: performance, engines and what owners say",
+ "nhtsa": {
+  "make": "TOYOTA",
+  "models": [
+   "86",
+   "GR86"
+  ],
+  "note": "NHTSA files the 2013–2016 Scion FR-S under make Scion, so those complaints are not counted here; these counts are the 2017–2020 Toyota 86 and the 2022–2025 GR86."
+ },
+ "topics_extra": {
+  "Oil starvation / bearings": "oil starvation|oil pressure|spun (a )?(rod )?bearing|rod bearings?|rod knock",
+  "RTV sealant": "\\brtv\\b|sealant|pickup screen|oil pickup",
+  "Valve springs": "valve springs?",
+  "Torque dip": "torque dip",
+  "Fuel pump": "fuel pump",
+  "Clutch": "\\bclutch\\b"
+ },
+ "gens": [
+  {
+   "id": "zn6",
+   "code": "ZN6",
+   "years": "2013–2020",
+   "y0": 2013,
+   "y1": 2020,
+   "engine": "FA20",
+   "body": "Coupe",
+   "tag": "Sold as the Scion FR-S, then Toyota 86 from 2017. No 2021 U.S. car.",
+   "variants": [
+    {
+     "id": "zn6-frs",
+     "name": "Scion FR-S",
+     "years": "2013–2016",
+     "hp": {
+      "v": 200,
+      "src": [
+       "fr13",
+       "fr13p"
+      ],
+      "note": "at 7,000 rpm"
+     },
+     "tq": {
+      "v": 151,
+      "src": [
+       "fr13",
+       "fr13p"
+      ],
+      "note": "lb-ft at 6,600 rpm"
+     },
+     "z60": {
+      "v": 6.4,
+      "who": "Car and Driver",
+      "src": [
+       "z60frs"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual or 6-speed automatic, rear-drive",
+      "src": [
+       "fr13p"
+      ],
+      "note": "tested time is a 2013 manual; C/D's 2013 automatic ran 8.1 s"
+     },
+     "price": {
+      "v": "$24,200",
+      "src": [
+       "fr13p"
+      ],
+      "note": "2013 manual, plus $730 destination; automatic $25,300"
+     }
+    },
+    {
+     "id": "zn6-86",
+     "name": "Toyota 86",
+     "years": "2017–2020",
+     "hp": {
+      "v": 205,
+      "src": [
+       "t17",
+       "t19"
+      ],
+      "note": "manual, at 7,000 rpm; automatic 200 hp"
+     },
+     "tq": {
+      "v": 156,
+      "src": [
+       "t17",
+       "t19"
+      ],
+      "note": "lb-ft at 6,400 rpm, manual; automatic 151 lb-ft"
+     },
+     "z60": {
+      "v": 6.2,
+      "who": "Car and Driver",
+      "src": [
+       "z6086"
+      ],
+      "claim": 7.0,
+      "csrc": [
+       "t22p"
+      ]
+     },
+     "trans": {
+      "v": "6-speed manual or 6-speed automatic, rear-drive",
+      "src": [
+       "t17"
+      ],
+      "note": "tested time is a 2017 manual; C/D's 2017 automatic ran 7.7 s"
+     },
+     "weight": {
+      "v": "2,758 lb",
+      "src": [
+       "t17"
+      ],
+      "note": "manual"
+     },
+     "price": {
+      "v": "$26,255",
+      "src": [
+       "t17p"
+      ],
+      "note": "2017 manual, plus $865 destination; automatic $26,975"
+     },
+     "what": "Renamed from the FR-S; 5 more hp on manuals, new manual final drive, retuned shocks and springs.",
+     "what_src": [
+      "t17"
+     ]
+    },
+    {
+     "id": "zn6-trd",
+     "name": "86 TRD Special Edition",
+     "years": "2019",
+     "pkg": "zn6-86",
+     "hp": {
+      "v": 205,
+      "src": [
+       "t19",
+       "matrd"
+      ],
+      "note": "no power change"
+     },
+     "tq": {
+      "v": 156,
+      "src": [
+       "t19",
+       "matrd"
+      ],
+      "note": "lb-ft at 6,400 rpm"
+     },
+     "trans": {
+      "v": "6-speed manual, rear-drive",
+      "src": [
+       "t19"
+      ],
+      "note": "manual only"
+     },
+     "price": {
+      "v": "$32,420",
+      "src": [
+       "matrd"
+      ],
+      "note": "2019, as reported by Motor Authority; destination not stated"
+     },
+     "what": "SACHS dampers, Brembo brakes, 18-inch wheels on Pilot Sport 4 tires, TRD exhaust; 1,418 built.",
+     "what_src": [
+      "t19",
+      "matrd"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "zn8",
+   "code": "ZN8",
+   "years": "2022–2025",
+   "y0": 2022,
+   "y1": 2025,
+   "engine": "FA24",
+   "body": "Coupe",
+   "tag": "Bigger 2.4-liter boxer: 228 hp, peak torque at 3,700 rpm.",
+   "variants": [
+    {
+     "id": "zn8-mt",
+     "name": "GR86 manual",
+     "years": "2022–2025",
+     "star": true,
+     "hp": {
+      "v": 228,
+      "src": [
+       "t22p",
+       "t25"
+      ],
+      "note": ""
+     },
+     "tq": {
+      "v": 184,
+      "src": [
+       "t22p",
+       "t25"
+      ],
+      "note": "lb-ft at 3,700 rpm"
+     },
+     "z60": {
+      "v": 5.4,
+      "who": "Car and Driver",
+      "src": [
+       "z60gr"
+      ],
+      "claim": 6.1,
+      "csrc": [
+       "t22p",
+       "t25"
+      ]
+     },
+     "trans": {
+      "v": "6-speed manual, rear-drive",
+      "src": [
+       "t22a"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "2,811 lb",
+      "src": [
+       "t22p",
+       "t25"
+      ],
+      "note": "base grade"
+     },
+     "price": {
+      "v": "$27,700",
+      "src": [
+       "t22p"
+      ],
+      "note": "2022 base grade, destination not included"
+     },
+     "what": "Tested time is a 2022 GR86 Premium with the manual.",
+     "what_src": [
+      "z60gr"
+     ]
+    },
+    {
+     "id": "zn8-at",
+     "name": "GR86 automatic",
+     "years": "2022–2025",
+     "hp": {
+      "v": 228,
+      "src": [
+       "t22p"
+      ],
+      "note": ""
+     },
+     "tq": {
+      "v": 184,
+      "src": [
+       "t22p"
+      ],
+      "note": "lb-ft at 3,700 rpm"
+     },
+     "z60": {
+      "v": 6.1,
+      "who": "Car and Driver",
+      "src": [
+       "z60gr"
+      ],
+      "claim": 6.6,
+      "csrc": [
+       "t22p",
+       "t25"
+      ]
+     },
+     "trans": {
+      "v": "6-speed automatic with paddles, rear-drive",
+      "src": [
+       "t22a"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "2,851 lb",
+      "src": [
+       "t22p",
+       "t25"
+      ],
+      "note": "base grade"
+     },
+     "what": "Tested time is a 2022 GR86 Premium with the automatic.",
+     "what_src": [
+      "z60gr"
+     ]
+    },
+    {
+     "id": "zn8-prem",
+     "name": "GR86 Premium",
+     "years": "2022–2025",
+     "pkg": "zn8-mt",
+     "hp": {
+      "v": 228,
+      "src": [
+       "t22p"
+      ],
+      "note": ""
+     },
+     "tq": {
+      "v": 184,
+      "src": [
+       "t22p"
+      ],
+      "note": "lb-ft"
+     },
+     "what": "18-inch wheels on Michelin Pilot Sport 4 tires (base: 17-inch Primacy HP), duckbill spoiler.",
+     "what_src": [
+      "t22p"
+     ]
+    },
+    {
+     "id": "zn8-hak",
+     "name": "GR86 Hakone Edition",
+     "years": "2025",
+     "pkg": "zn8-mt",
+     "hp": {
+      "v": 228,
+      "src": [
+       "t25"
+      ],
+      "note": ""
+     },
+     "tq": {
+      "v": 184,
+      "src": [
+       "t25"
+      ],
+      "note": "lb-ft at 3,700 rpm"
+     },
+     "trans": {
+      "v": "6-speed manual or 6-speed automatic, rear-drive",
+      "src": [
+       "t25"
+      ],
+      "note": ""
+     },
+     "what": "SACHS dampers and Brembo brakes standard, 18-inch bronze wheels; 860 built for the U.S.",
+     "what_src": [
+      "t25"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "FA20": {
+   "name": "Subaru FA20",
+   "what": "2.0-liter flat-4, naturally aspirated",
+   "study": "subaru-fa",
+   "page": "/engines/subaru-fa/",
+   "yt": [
+    "scy",
+    "subaru-fa"
+   ],
+   "facts": [
+    [
+     "Output",
+     "200–205 hp, up to 156 lb-ft",
+     [
+      "fr13p",
+      "t17"
+     ]
+    ],
+    [
+     "Injection",
+     "Toyota D-4S: direct plus port injection",
+     [
+      "fr13",
+      "fr13p"
+     ]
+    ],
+    [
+     "Bore x stroke",
+     "86 x 86 mm, 1,998 cc",
+     [
+      "fr13",
+      "fr13p"
+     ]
+    ],
+    [
+     "Compression",
+     "12.5:1",
+     [
+      "fr13",
+      "fr13p"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Valve spring recall",
+     "kind": "Recall",
+     "rx": "valve springs?",
+     "x": "On early 2013 FR-S cars, valve springs can fracture, which can make the engine run badly or stall.",
+     "fix": "Dealer replaces the valve springs for free (NHTSA 18V-772).",
+     "src": [
+      "r18"
+     ]
+    },
+    {
+     "t": "Engine failures after the valve spring fix",
+     "kind": "Owner-reported, disputed",
+     "rx": "\\brtv\\b|sealant|oil starvation|lost power|loss of power|knocking|engine (failure|died|stall)",
+     "x": "Some owners reported power loss, knocking or a dead engine after the recall repair. Excess sealant getting into the oil is a theory, not a confirmed cause.",
+     "fix": "",
+     "src": [
+      "dvs",
+      "faq8020"
+     ]
+    },
+    {
+     "t": "Fuel pump recall",
+     "kind": "Recall",
+     "rx": "fuel pump",
+     "x": "On some 2018–2019 Toyota 86s, the low-pressure fuel pump in the tank can fail and stall the engine while driving.",
+     "fix": "Dealer replaces the fuel pump for free (NHTSA 21V-587).",
+     "src": [
+      "r21"
+     ]
+    }
+   ]
+  },
+  "FA24": {
+   "name": "Subaru FA24",
+   "what": "2.4-liter flat-4, naturally aspirated",
+   "study": "subaru-fa",
+   "page": "/engines/subaru-fa/",
+   "yt": [
+    "scy",
+    "subaru-fa"
+   ],
+   "facts": [
+    [
+     "Output",
+     "228 hp, 184 lb-ft at 3,700 rpm",
+     [
+      "t22p",
+      "t25"
+     ]
+    ],
+    [
+     "Bore x stroke",
+     "94 x 86 mm, 2,387 cc",
+     [
+      "t22a",
+      "t22p"
+     ]
+    ],
+    [
+     "Injection",
+     "Toyota D-4S: direct plus port injection",
+     [
+      "t22a",
+      "t22t"
+     ]
+    ],
+    [
+     "Cooling",
+     "Water-cooled oil cooler, 12.5:1 compression",
+     [
+      "t22t"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Oil starvation and bearing failure",
+     "kind": "Owner-reported, disputed",
+     "rx": "oil starvation|oil pressure|spun (a )?(rod )?bearing|rod bearings?|rod knock|\\brtv\\b|sealant",
+     "x": "Some early GR86s lost rod bearings; one dealer teardown blamed excess factory sealant blocking the oil pickup. How many engines are affected is not known.",
+     "fix": "Toyota rebuilt that car under warranty after first refusing.",
+     "src": [
+      "jal22"
+     ]
+    },
+    {
+     "t": "Oil pressure drops on track",
+     "kind": "Owner-reported",
+     "rx": "oil pressure",
+     "x": "An owner's data logging on one BRZ and one GR86 showed big oil pressure drops in hard right-hand corners on track.",
+     "fix": "",
+     "src": [
+      "drv23"
+     ]
+    }
+   ]
+  }
+ },
+ "compare": [
+  {
+   "slug": "subaru-brz",
+   "name": "Subaru BRZ"
+  },
+  {
+   "slug": "mx-5-miata",
+   "name": "Mazda MX-5 Miata"
+  },
+  {
+   "slug": "gr-corolla",
+   "name": "Toyota GR Corolla"
+  },
+  {
+   "slug": "civic-type-r",
+   "name": "Honda Civic Type R"
+  }
+ ],
+ "sources": {
+  "fr13": {
+   "t": "Toyota USA: 2013 Scion FR-S brings the sport back to the car (Nov 2011)",
+   "u": "https://pressroom.toyota.com/2013-scion-fr-s-brings-sport-back-to-car/",
+   "k": "Toyota"
+  },
+  "fr13p": {
+   "t": "Toyota USA: Scion announces pricing for its 2013 FR-S sports car (Mar 2012)",
+   "u": "https://pressroom.toyota.com/scion-pricing-2013-fr-s-sports-car-march22/",
+   "k": "Toyota"
+  },
+  "t17": {
+   "t": "Toyota USA: 2017 Toyota 86 is the affordable, fun-damental sports car (Sep 2016)",
+   "u": "https://pressroom.toyota.com/2017-toyota-86-is-affordable-fundamental-sports-car/",
+   "k": "Toyota"
+  },
+  "t17p": {
+   "t": "Toyota USA: 2017 value pricing for Corolla, Toyota 86 and Corolla iM (Aug 2016)",
+   "u": "https://pressroom.toyota.com/toyota-2017-pricing-corolla-86-corolla-im/",
+   "k": "Toyota"
+  },
+  "t19": {
+   "t": "Toyota USA: The purist's dream, 2019 Toyota 86 (Jul 2018)",
+   "u": "https://pressroom.toyota.com/purist-dream-2019-toyota-86-blends-sports-car-fundamentals-21st-century-perfor-comfort-tech/",
+   "k": "Toyota"
+  },
+  "matrd": {
+   "t": "Motor Authority: Toyota adds 86 TRD Special Edition for 2019 (Jul 2018)",
+   "u": "https://www.motorauthority.com/news/1117850_toyota-adds-86-trd-special-edition-for-2019",
+   "k": "outlet"
+  },
+  "t22a": {
+   "t": "Toyota USA: Drivers rejoice! Toyota debuts all-new GR 86 (Jun 2021)",
+   "u": "https://pressroom.toyota.com/drivers-rejoice-toyota-debuts-all-new-gr-86/",
+   "k": "Toyota"
+  },
+  "t22t": {
+   "t": "Toyota USA: All-new 2022 Toyota GR 86, thrills around every corner (Aug 2021)",
+   "u": "https://pressroom.toyota.com/all-new-2022-toyota-gr-86-thrills-around-every-corner/",
+   "k": "Toyota"
+  },
+  "t22p": {
+   "t": "Toyota USA: Toyota announces pricing on all-new 2022 GR86 (Oct 2021)",
+   "u": "https://pressroom.toyota.com/toyota-announces-pricing-on-all-new-2022-gr86/",
+   "k": "Toyota"
+  },
+  "t25": {
+   "t": "Toyota USA: 2025 GR86 Hakone Special Edition puts a modern twist on an icon (Jul 2024)",
+   "u": "https://pressroom.toyota.com/2025-toyota-gr86-hakone-special-edition-puts-a-modern-twist-on-an-icon/",
+   "k": "Toyota"
+  },
+  "z60frs": {
+   "t": "0-60specs.com: Scion FR-S 0-60 runs by magazine (Car and Driver, Motor Trend)",
+   "u": "https://www.0-60specs.com/scion/fr-s-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "z6086": {
+   "t": "0-60specs.com: Toyota 86 0-60 runs by magazine (Car and Driver, Motor Trend)",
+   "u": "https://www.0-60specs.com/toyota/86-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "z60gr": {
+   "t": "0-60specs.com: Toyota GR86 0-60 runs by magazine (Car and Driver, Motor Trend, MotorWeek)",
+   "u": "https://www.0-60specs.com/toyota/gr86-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "r18": {
+   "t": "NHTSA recall 18V-772: engine valve springs, 2013 Scion FR-S and Subaru models (Nov 2018)",
+   "u": "https://static.nhtsa.gov/odi/rcl/2018/RCRIT-18V772-9195.pdf",
+   "k": "Recall"
+  },
+  "r21": {
+   "t": "NHTSA recall 21V-587: low-pressure fuel pump, 2018–2019 Toyota 86 and Subaru models (Jul 2021)",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=21V587",
+   "k": "Recall"
+  },
+  "dvs": {
+   "t": "The Drive: Scion FR-S, Subaru BRZ owners claim a recall fix is destroying their engines (Mar 2019)",
+   "u": "https://www.thedrive.com/news/26848/scion-fr-s-subaru-brz-owners-say-valve-spring-recall-fix-is-destroying-their-engines",
+   "k": "outlet"
+  },
+  "faq8020": {
+   "t": "8020 Automotive: The 4 most common Subaru FA20 engine problems (updated Apr 2025)",
+   "u": "https://8020automotive.com/the-4-most-common-subaru-fa20-engine-problems/",
+   "k": "enthusiast outlet"
+  },
+  "jal22": {
+   "t": "Jalopnik: Toyota will fix that viral GR86, but the bigger warranty question remains (Aug 2022)",
+   "u": "https://jalopnik.com/toyota-will-fix-that-viral-gr86-but-the-bigger-warrant-1849365388",
+   "k": "outlet"
+  },
+  "drv23": {
+   "t": "The Drive: 2022 Subaru BRZ owner's instrumented testing shows big oil pressure drops on track (Jun 2023)",
+   "u": "https://www.thedrive.com/news/2022-subaru-brz-owners-instrumented-testing-shows-big-oil-pressure-drops-on-track",
+   "k": "outlet"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-gr86",
+ "img": "/assets/ai-perf/gr86.webp?v=1"
+}

@@ -1,0 +1,124 @@
+{
+ "built": "2026-11-11",
+ "nhtsa": {
+  "by_year": {
+   "2017": 2,
+   "2018": 1,
+   "2019": 10,
+   "2020": 1,
+   "2022": 21,
+   "2023": 19,
+   "2024": 3,
+   "2025": 4
+  },
+  "gens": {
+   "zn6": {
+    "n": 14,
+    "issues": {
+     "Valve spring recall": {
+      "n": 1,
+      "ex": [
+       "11194628"
+      ]
+     },
+     "Engine failures after the valve spring fix": {
+      "n": 2,
+      "ex": [
+       "11676173",
+       "11685141"
+      ]
+     },
+     "Fuel pump recall": {
+      "n": 1,
+      "ex": [
+       "11310143"
+      ]
+     }
+    }
+   },
+   "zn8": {
+    "n": 47,
+    "issues": {
+     "Oil starvation and bearing failure": {
+      "n": 14,
+      "ex": [
+       "11477681",
+       "11477813"
+      ]
+     },
+     "Oil pressure drops on track": {
+      "n": 2,
+      "ex": [
+       "11688386",
+       "11759341"
+      ]
+     }
+    }
+   }
+  },
+  "parts": [
+   [
+    "Engine",
+    30
+   ],
+   [
+    "Fuel/propulsion system",
+    11
+   ],
+   [
+    "Unknown or other",
+    7
+   ],
+   [
+    "Exterior lighting",
+    6
+   ],
+   [
+    "Structure",
+    3
+   ],
+   [
+    "Electrical system",
+    3
+   ]
+  ]
+ },
+ "recalls": {
+  "2014": [],
+  "2016": [],
+  "2017": [
+   {
+    "id": "17V295000",
+    "part": "TIRES:TEMPORARY/EMERGENCY SPARE TIRE",
+    "summary": "Gulf States Toyota, Inc. (Gulf States) is recalling certain 2017 4Runner , 86, Avalon, Camry, Camry Hybrid, Corolla, Corolla iM, Highlander, Highlander Hybrid, Prius, Prius C, RAV4, RAV4 Hybrid, Sienna  and Yaris vehicles.  The spare tire air pressure was not adjusted to the proper pressure as stated on the Tire Pressure Label."
+   },
+   {
+    "id": "16V920000",
+    "part": "ELECTRICAL SYSTEM:IGNITION",
+    "summary": "Toyota Motor Company (Toyota) is recalling certain model year 2017 Toyota 86 vehicles manufactured July 1, 2016 through  August 11, 2016 equipped with an automatic transmission and ignition key.  Vehicles with a push-to-start button or manual transmission are not affected.  In the affected vehicles, it may be possible to remove the ignition key without the transmission being in the \"Park\" position"
+   }
+  ],
+  "2018": [
+   {
+    "id": "21V587000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+    "summary": "Subaru of America, Inc. (Subaru) is recalling certain 2019-2020 Ascent, 2018 Forester, 2018-2020 Impreza, Legacy, Outback, 2018-2019 BRZ, WRX, and Toyota 86 vehicles.  The low-pressure fuel pump inside the fuel tank may fail."
+   }
+  ],
+  "2019": [
+   {
+    "id": "21V587000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+    "summary": "Subaru of America, Inc. (Subaru) is recalling certain 2019-2020 Ascent, 2018 Forester, 2018-2020 Impreza, Legacy, Outback, 2018-2019 BRZ, WRX, and Toyota 86 vehicles.  The low-pressure fuel pump inside the fuel tank may fail."
+   }
+  ],
+  "2020": [],
+  "2024": [],
+  "2025": []
+ },
+ "yt": {
+  "car-gr86": null,
+  "subaru-fa": null
+ },
+ "scores": {}
+}

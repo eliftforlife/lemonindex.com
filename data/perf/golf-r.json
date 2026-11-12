@@ -1,0 +1,840 @@
+{
+ "slug": "golf-r",
+ "name": "Volkswagen Golf R",
+ "short": "Golf R",
+ "make": "Volkswagen",
+ "page": "/cars/golf-r/",
+ "focus": "mk8",
+ "star": "mk8-25",
+ "h1": "Volkswagen Golf R: performance, engines and what owners say",
+ "nhtsa": {
+  "make": "VOLKSWAGEN",
+  "models": [
+   "GOLF R"
+  ],
+  "note": ""
+ },
+ "topics_extra": {
+  "Turbo wastegate": "wastegate|p2563|p00af",
+  "Water pump / coolant leaks": "water pump|coolant pump|thermostat housing|coolant leak",
+  "Haldex / AWD": "haldex|4motion|all.?wheel drive",
+  "DSG gearbox": "\\bdsg\\b|mechatronic|dual.?clutch",
+  "Carbon buildup": "carbon (build.?up|deposits)|walnut blast",
+  "Hill hold (manual)": "hill (hold|assist|start)"
+ },
+ "compare": [
+  {
+   "slug": "civic-type-r",
+   "name": "Honda Civic Type R"
+  },
+  {
+   "slug": "gr-corolla",
+   "name": "Toyota GR Corolla"
+  },
+  {
+   "slug": "focus-rs",
+   "name": "Ford Focus RS"
+  },
+  {
+   "slug": "wrx-sti",
+   "name": "Subaru WRX STI"
+  }
+ ],
+ "gens": [
+  {
+   "id": "mk6",
+   "code": "Mk6",
+   "years": "2012–2013",
+   "y0": 2012,
+   "y1": 2013,
+   "engine": "EA113",
+   "body": "3- and 5-door hatchback",
+   "tag": "256 hp, 6-speed manual only, all-wheel drive. Two or four doors.",
+   "variants": [
+    {
+     "id": "mk6-2d",
+     "name": "Golf R two-door",
+     "years": "2012–2013",
+     "hp": {
+      "v": 256,
+      "src": [
+       "s12",
+       "wpe"
+      ],
+      "note": "at 6,000 rpm"
+     },
+     "tq": {
+      "v": 243,
+      "src": [
+       "s12",
+       "wpe"
+      ],
+      "note": "lb-ft at 2,400–5,200 rpm"
+     },
+     "z60": {
+      "v": 5.9,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual, all-wheel drive",
+      "src": [
+       "s12"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$33,990",
+      "src": [
+       "s12"
+      ],
+      "note": "2012, excluding destination"
+     }
+    },
+    {
+     "id": "mk6-4d",
+     "name": "Golf R four-door",
+     "years": "2012–2013",
+     "hp": {
+      "v": 256,
+      "src": [
+       "s13",
+       "wpe"
+      ],
+      "note": "at 6,000 rpm"
+     },
+     "tq": {
+      "v": 243,
+      "src": [
+       "s13",
+       "wpe"
+      ],
+      "note": "lb-ft at 2,400–5,200 rpm"
+     },
+     "z60": {
+      "v": 5.8,
+      "who": "Motor Trend",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual, all-wheel drive",
+      "src": [
+       "s13"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$34,795",
+      "src": [
+       "s13",
+       "s12"
+      ],
+      "note": "2013 base four-door, excluding destination; in 2012 the four-door came only with sunroof and navigation ($36,090)"
+     }
+    }
+   ]
+  },
+  {
+   "id": "mk7",
+   "code": "Mk7 / Mk7.5",
+   "years": "2015–2019",
+   "y0": 2015,
+   "y1": 2019,
+   "engine": "EA888-3",
+   "body": "5-door hatchback",
+   "tag": "292 hp (288 for 2019), manual or DSG, all-wheel drive.",
+   "variants": [
+    {
+     "id": "mk7",
+     "name": "Golf R DSG",
+     "years": "2015–2017",
+     "hp": {
+      "v": 292,
+      "src": [
+       "s16",
+       "s17",
+       "s15"
+      ],
+      "note": "at 5,500 rpm (the 2015 kit says 5,400 rpm)"
+     },
+     "tq": {
+      "v": 280,
+      "src": [
+       "s15",
+       "s16"
+      ],
+      "note": "lb-ft at 1,800–5,500 rpm"
+     },
+     "z60": {
+      "v": 4.5,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 4.9,
+      "csrc": [
+       "s15",
+       "s17"
+      ]
+     },
+     "top": {
+      "v": "155 mph",
+      "src": [
+       "s15"
+      ],
+      "note": "limited"
+     },
+     "trans": {
+      "v": "6-speed DSG dual-clutch, all-wheel drive",
+      "src": [
+       "s15",
+       "s16"
+      ],
+      "note": "the only gearbox for 2015"
+     },
+     "price": {
+      "v": "$36,595",
+      "src": [
+       "s15"
+      ],
+      "note": "2015 with DSG, excluding destination"
+     }
+    },
+    {
+     "id": "mk7-mt",
+     "name": "Golf R manual",
+     "years": "2016–2017",
+     "hp": {
+      "v": 292,
+      "src": [
+       "s16",
+       "s17"
+      ],
+      "note": "at 5,500 rpm"
+     },
+     "tq": {
+      "v": 280,
+      "src": [
+       "s16"
+      ],
+      "note": "lb-ft at 1,800–5,500 rpm"
+     },
+     "z60": {
+      "v": 5.1,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 5.3,
+      "csrc": [
+       "s16",
+       "s17"
+      ]
+     },
+     "trans": {
+      "v": "6-speed manual, all-wheel drive",
+      "src": [
+       "s16"
+      ],
+      "note": "new for 2016"
+     },
+     "price": {
+      "v": "$35,650",
+      "src": [
+       "s16"
+      ],
+      "note": "2016, plus $820 destination; DSG $1,100 more"
+     }
+    },
+    {
+     "id": "mk75",
+     "name": "Golf R (Mk7.5)",
+     "years": "2018–2019",
+     "hp": {
+      "v": 292,
+      "src": [
+       "s18",
+       "s19"
+      ],
+      "note": "2018, at 5,500 rpm; VW rates the 2019 at 288 hp"
+     },
+     "tq": {
+      "v": 280,
+      "src": [
+       "s18",
+       "s19"
+      ],
+      "note": "lb-ft at 1,800–5,500 rpm"
+     },
+     "z60": {
+      "v": 4.8,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual or 7-speed DSG, all-wheel drive",
+      "src": [
+       "s18"
+      ],
+      "note": "7-speed DSG new for 2018"
+     },
+     "price": {
+      "v": "$39,785",
+      "src": [
+       "s18"
+      ],
+      "note": "2018 with manual, plus $895 destination; DSG $40,885"
+     }
+    }
+   ]
+  },
+  {
+   "id": "mk8",
+   "code": "Mk8",
+   "years": "2022–2025",
+   "y0": 2022,
+   "y1": 2025,
+   "engine": "EA888-4",
+   "body": "5-door hatchback",
+   "tag": "315 hp with a manual through 2024; 328 hp and DSG only for 2025.",
+   "variants": [
+    {
+     "id": "mk8-mt",
+     "name": "Golf R manual",
+     "years": "2022–2024",
+     "hp": {
+      "v": 315,
+      "src": [
+       "s23",
+       "s24"
+      ],
+      "note": "at 5,900 rpm"
+     },
+     "tq": {
+      "v": 280,
+      "src": [
+       "s22",
+       "s23"
+      ],
+      "note": "lb-ft at 1,900 rpm"
+     },
+     "z60": {
+      "v": 4.9,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual, all-wheel drive",
+      "src": [
+       "s22",
+       "s24"
+      ],
+      "note": "2024 was the last manual year"
+     },
+     "price": {
+      "v": "$44,090",
+      "src": [
+       "s22"
+      ],
+      "note": "2022, plus $1,095 destination"
+     }
+    },
+    {
+     "id": "mk8-dsg",
+     "name": "Golf R DSG",
+     "years": "2022–2024",
+     "hp": {
+      "v": 315,
+      "src": [
+       "s22",
+       "s23"
+      ],
+      "note": "at 5,600 rpm"
+     },
+     "tq": {
+      "v": 295,
+      "src": [
+       "s22",
+       "s23"
+      ],
+      "note": "lb-ft at 2,000 rpm"
+     },
+     "z60": {
+      "v": 3.9,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "7-speed DSG dual-clutch, all-wheel drive",
+      "src": [
+       "s22"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$44,890",
+      "src": [
+       "s22"
+      ],
+      "note": "2022, plus $1,095 destination"
+     }
+    },
+    {
+     "id": "mk8-25",
+     "name": "Golf R (2025 update)",
+     "years": "2025",
+     "star": true,
+     "hp": {
+      "v": 328,
+      "src": [
+       "s25",
+       "r25p"
+      ],
+      "note": "at 5,850 rpm"
+     },
+     "tq": {
+      "v": 295,
+      "src": [
+       "s25"
+      ],
+      "note": "lb-ft at 2,000 rpm"
+     },
+     "z60": {
+      "v": 4.1,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "7-speed DSG dual-clutch, all-wheel drive",
+      "src": [
+       "s25",
+       "r25p"
+      ],
+      "note": "no manual"
+     },
+     "price": {
+      "v": "$47,100",
+      "src": [
+       "s25",
+       "r25p"
+      ],
+      "note": "plus $1,225 destination"
+     }
+    },
+    {
+     "id": "mk8-25-black",
+     "name": "Golf R Black Edition",
+     "years": "2025",
+     "pkg": "mk8-25",
+     "what": "Gloss-black wheels, black brake calipers and carbon-fiber trim; same 328 hp.",
+     "what_src": [
+      "s25",
+      "r25p"
+     ],
+     "hp": {
+      "v": 328,
+      "src": [
+       "s25"
+      ],
+      "note": ""
+     },
+     "z60": {
+      "v": 4.1,
+      "who": "Motor Trend",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "price": {
+      "v": "$48,415",
+      "src": [
+       "r25p"
+      ],
+      "note": "plus $1,225 destination"
+     }
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "EA113": {
+   "name": "VW EA113 2.0 TSI (Golf R)",
+   "what": "2.0-liter inline-4, turbo",
+   "study": "",
+   "page": "",
+   "yt": [
+    "scy",
+    ""
+   ],
+   "facts": [
+    [
+     "Output",
+     "256 hp, 243 lb-ft",
+     [
+      "s12"
+     ]
+    ],
+    [
+     "Power peak",
+     "6,000 rpm",
+     [
+      "wpe"
+     ]
+    ],
+    [
+     "Turbo",
+     "BorgWarner K04, up to 17 psi",
+     [
+      "s12"
+     ]
+    ],
+    [
+     "Internals",
+     "Reinforced block, stronger connecting rods",
+     [
+      "s12"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Coolant pump noise and hard starts (service action)",
+     "kind": "Maker bulletin",
+     "rx": "coolant pump|water pump|hard (to )?start",
+     "x": "VW found that the coolant pump caused engine-bay noise and hard starts on some 2012–2013 Golf Rs.",
+     "fix": "Dealer replaces the coolant pump for free (Service Action 19J5).",
+     "src": [
+      "sa19j5"
+     ]
+    },
+    {
+     "t": "No other known pattern",
+     "kind": "Owner-reported",
+     "rx": "",
+     "x": "Owners filed only five NHTSA complaints for 2012–2013 Golf Rs, and none shows a repeating engine failure.",
+     "fix": "",
+     "src": [
+      "nhc12",
+      "nhc13"
+     ]
+    }
+   ]
+  },
+  "EA888-3": {
+   "name": "VW EA888 Gen 3 2.0 TSI (Golf R)",
+   "what": "2.0-liter inline-4, turbo",
+   "study": "",
+   "page": "",
+   "yt": [
+    "scy",
+    ""
+   ],
+   "facts": [
+    [
+     "Output",
+     "288–292 hp, 280 lb-ft",
+     [
+      "s16",
+      "s19"
+     ]
+    ],
+    [
+     "Displacement",
+     "1,984 cc",
+     [
+      "s16"
+     ]
+    ],
+    [
+     "Head",
+     "Exhaust passages run through the water-cooled head",
+     [
+      "s15"
+     ]
+    ],
+    [
+     "R-specific parts",
+     "Own head, exhaust valves, pistons, injection and turbo vs. GTI",
+     [
+      "s15"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Turbo wastegate sticks (class settlement)",
+     "kind": "Maker bulletin",
+     "rx": "wastegate|p2563|p00af|turbo (rattle|failure|failed|replaced)",
+     "x": "Rust can seize the turbo wastegate rod on 2015–2019 Golf Rs, setting code P2563 or P00AF. VW denies a defect but settled a class action.",
+     "fix": "VW pays 50% of a turbo repair for 8.5 years or 85,000 miles (VWP-25-16); TSB 21-25-01 first tries freeing the rod.",
+     "src": [
+      "tsbwg",
+      "vwp2516",
+      "turbofaq"
+     ]
+    },
+    {
+     "t": "Fuel hose recall (2018)",
+     "kind": "Recall",
+     "rx": "fuel (leak|smell|odor)|smells? (of|like) (gas|fuel)",
+     "x": "On some 2018 Golf Rs, the fuel hose connector in the engine bay can come loose and leak fuel, raising fire risk.",
+     "fix": "Dealer secures the fuel line connection for free (NHTSA 18V-864).",
+     "src": [
+      "rc18864"
+     ]
+    },
+    {
+     "t": "Coolant leaks at the water pump",
+     "kind": "Owner-reported",
+     "rx": "water pump|coolant pump|thermostat housing|coolant leak|losing coolant",
+     "x": "A few owners told NHTSA of coolant leaks that dealers traced to the water pump and thermostat housing.",
+     "fix": "",
+     "src": [
+      "nhc16",
+      "nhc17"
+     ]
+    }
+   ]
+  },
+  "EA888-4": {
+   "name": "VW EA888 evo4 2.0 TSI (Golf R)",
+   "what": "2.0-liter inline-4, turbo",
+   "study": "",
+   "page": "",
+   "yt": [
+    "scy",
+    ""
+   ],
+   "facts": [
+    [
+     "Output",
+     "315–328 hp, 280–295 lb-ft",
+     [
+      "s22",
+      "s25"
+     ]
+    ],
+    [
+     "Power peak",
+     "5,600–5,900 rpm",
+     [
+      "s23",
+      "s25"
+     ]
+    ],
+    [
+     "Injection",
+     "Direct, 5,076 psi (was 2,900 psi)",
+     [
+      "s22"
+     ]
+    ],
+    [
+     "Built in",
+     "Győr, Hungary",
+     [
+      "s22"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Engine cover recall (2022)",
+     "kind": "Recall",
+     "rx": "engine (design )?cover|burning plastic",
+     "x": "Hard acceleration could loosen the engine cover on 2022 Golf Rs; it can touch hot parts and melt, raising fire risk.",
+     "fix": "Dealer removes the cover, then fits an updated one for free (NHTSA 22V-163).",
+     "src": [
+      "rc22163"
+     ]
+    },
+    {
+     "t": "Coolant hose recall (2022–2023)",
+     "kind": "Recall",
+     "rx": "coolant (leak|hose)|overheat",
+     "x": "The radiator may not be fixed to the intercooler correctly, which can damage a coolant hose and let the engine overheat.",
+     "fix": "Dealer inspects the radiator and replaces damaged parts for free (NHTSA 22V-707).",
+     "src": [
+      "rc22707"
+     ]
+    },
+    {
+     "t": "Thermostat fault code P00B7",
+     "kind": "Maker bulletin",
+     "rx": "p00b7|thermostat|low coolant flow",
+     "x": "Some 2022–2024 Golf Rs set P00B7 (low coolant flow) and the check-engine light. VW says not to replace parts first.",
+     "fix": "Dealer updates the engine computer software (TSB 01-25-05).",
+     "src": [
+      "tsbth",
+      "tsbth3"
+     ]
+    }
+   ]
+  }
+ },
+ "sources": {
+  "s12": {
+   "t": "Volkswagen of America: 2012 Golf R press kit",
+   "u": "https://media.vw.com/press-kits/2012-golf-r-press-kit",
+   "k": "Volkswagen"
+  },
+  "s13": {
+   "t": "Volkswagen of America: 2013 Golf R press kit",
+   "u": "https://media.vw.com/press-kits/2013-golf-r-press-kit",
+   "k": "Volkswagen"
+  },
+  "s15": {
+   "t": "Volkswagen of America: 2015 Golf R press kit",
+   "u": "https://media.vw.com/press-kits/2015-golf-r-press-kit",
+   "k": "Volkswagen"
+  },
+  "s16": {
+   "t": "Volkswagen of America: 2016 Golf R press kit",
+   "u": "https://media.vw.com/press-kits/2016-golf-r-press-kit",
+   "k": "Volkswagen"
+  },
+  "s17": {
+   "t": "Volkswagen of America: 2017 Golf R press kit",
+   "u": "https://media.vw.com/press-kits/2017-golf-r-press-kit",
+   "k": "Volkswagen"
+  },
+  "s18": {
+   "t": "Volkswagen of America: 2018 Golf R press kit",
+   "u": "https://media.vw.com/press-kits/2018-golf-r-press-kit",
+   "k": "Volkswagen"
+  },
+  "s19": {
+   "t": "Volkswagen of America: 2019 Golf R press kit",
+   "u": "https://media.vw.com/press-kits/2019-golf-r-press-kit",
+   "k": "Volkswagen"
+  },
+  "s22": {
+   "t": "Volkswagen of America: 2022 Golf R press kit",
+   "u": "https://media.vw.com/press-kits/2022-golf-r-press-kit",
+   "k": "Volkswagen"
+  },
+  "s23": {
+   "t": "Volkswagen of America: 2023 Golf R press kit",
+   "u": "https://media.vw.com/press-kits/2023-golf-r-press-kit",
+   "k": "Volkswagen"
+  },
+  "s24": {
+   "t": "Volkswagen of America: 2024 Golf R press kit",
+   "u": "https://media.vw.com/press-kits/2024-golf-r-press-kit",
+   "k": "Volkswagen"
+  },
+  "s25": {
+   "t": "Volkswagen of America: 2025 Golf R press kit",
+   "u": "https://media.vw.com/press-kits/2025-golf-r-press-kit",
+   "k": "Volkswagen"
+  },
+  "r25p": {
+   "t": "Volkswagen of America: Volkswagen announces 2025 Golf GTI and Golf R pricing (Feb 2025)",
+   "u": "https://media.vw.com/releases/1852",
+   "k": "Volkswagen"
+  },
+  "z60": {
+   "t": "0-60specs.com: Volkswagen Golf R 0-60 times (magazine named for each run)",
+   "u": "https://www.0-60specs.com/volkswagen/golf-r-0-60-times",
+   "k": "0-60specs.com (Car and Driver, Motor Trend runs)"
+  },
+  "wpe": {
+   "t": "Wikipedia: List of Volkswagen Group petrol engines (EA113 2.0 TFSI, code CDL)",
+   "u": "https://en.wikipedia.org/wiki/List_of_Volkswagen_Group_petrol_engines",
+   "k": "Wikipedia (fallback)"
+  },
+  "sa19j5": {
+   "t": "Volkswagen Service Action 19J5: 2012 and 2013 MY Golf R coolant pump (Mar 2014, via NHTSA)",
+   "u": "https://static.nhtsa.gov/odi/tsbs/2014/MC-10124330-9999.pdf",
+   "k": "Maker bulletin"
+  },
+  "tsbwg": {
+   "t": "Volkswagen TSB 21-25-01: Turbocharger wastegate stuck, P2563/P00AF (Mar 2025, via NHTSA)",
+   "u": "https://static.nhtsa.gov/odi/tsbs/2025/MC-11016582-0001.pdf",
+   "k": "Maker bulletin"
+  },
+  "vwp2516": {
+   "t": "Volkswagen VWP-25-16: Turbocharger limited warranty extension, class action (Sep 2025, via NHTSA)",
+   "u": "https://static.nhtsa.gov/odi/tsbs/2025/MC-11023844-0001.pdf",
+   "k": "Maker bulletin"
+  },
+  "turbofaq": {
+   "t": "Volkswagen: Kimball turbocharger class settlement dealer FAQ (Sep 2025, via NHTSA)",
+   "u": "https://static.nhtsa.gov/odi/tsbs/2025/MC-11023836-0001.pdf",
+   "k": "Maker bulletin"
+  },
+  "tsbth": {
+   "t": "Volkswagen TSB 01-25-05: ECM update for thermostat performance, P00B7 (Sep 2025, via NHTSA)",
+   "u": "https://static.nhtsa.gov/odi/tsbs/2025/MC-11023837-0001.pdf",
+   "k": "Maker bulletin"
+  },
+  "tsbth3": {
+   "t": "Volkswagen TSB 01-25-05 update: adds 2023 Golf R (Feb 2026, via NHTSA)",
+   "u": "https://static.nhtsa.gov/odi/tsbs/2026/MC-11029310-0001.pdf",
+   "k": "Maker bulletin"
+  },
+  "rc18864": {
+   "t": "NHTSA recall 18V-864: 2018 Golf R fuel hose connector",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=18V864000",
+   "k": "NHTSA recall"
+  },
+  "rc22163": {
+   "t": "NHTSA recall 22V-163: 2022 Golf GTI and Golf R engine cover",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=22V163000",
+   "k": "NHTSA recall"
+  },
+  "rc22707": {
+   "t": "NHTSA recall 22V-707: 2022-2023 Golf R and GTI radiator / coolant hose",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=22V707000",
+   "k": "NHTSA recall"
+  },
+  "nhc12": {
+   "t": "NHTSA owner complaints: 2012 Volkswagen Golf R",
+   "u": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=VOLKSWAGEN&model=GOLF%20R&modelYear=2012",
+   "k": "NHTSA complaints"
+  },
+  "nhc13": {
+   "t": "NHTSA owner complaints: 2013 Volkswagen Golf R",
+   "u": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=VOLKSWAGEN&model=GOLF%20R&modelYear=2013",
+   "k": "NHTSA complaints"
+  },
+  "nhc16": {
+   "t": "NHTSA owner complaints: 2016 Volkswagen Golf R",
+   "u": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=VOLKSWAGEN&model=GOLF%20R&modelYear=2016",
+   "k": "NHTSA complaints"
+  },
+  "nhc17": {
+   "t": "NHTSA owner complaints: 2017 Volkswagen Golf R",
+   "u": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=VOLKSWAGEN&model=GOLF%20R&modelYear=2017",
+   "k": "NHTSA complaints"
+  }
+ },
+ "yt_study": "car-golf-r",
+ "img": "/assets/ai-perf/golf-r.webp?v=1"
+}

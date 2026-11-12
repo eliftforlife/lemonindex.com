@@ -1,0 +1,595 @@
+{
+ "slug": "honda-s2000",
+ "name": "Honda S2000",
+ "short": "S2000",
+ "make": "Honda",
+ "page": "/cars/honda-s2000/",
+ "focus": "ap2",
+ "star": "ap2-cr",
+ "h1": "Honda S2000: performance, engines and what owners say",
+ "nhtsa": {
+  "make": "HONDA",
+  "models": [
+   "S2000"
+  ],
+  "note": "NHTSA files the S2000 CR under S2000, so these counts are every S2000 of these years."
+ },
+ "topics_extra": {
+  "Timing chain tensioner": "tensioner|startup rattle|rattle (on|at) (cold )?start",
+  "Oil consumption": "oil consumption|burning oil|using oil|low oil",
+  "Gear synchros": "synchros?|grind(s|ing)? (into|in) (2nd|second|3rd|third)|pops? out of (gear|2nd|second)",
+  "Valve retainers": "valve retainers?",
+  "Wheel bearings": "wheel bearings?",
+  "Soft top": "soft ?top|convertible top"
+ },
+ "gens": [
+  {
+   "id": "ap1",
+   "code": "AP1",
+   "years": "2000–2003",
+   "y0": 2000,
+   "y1": 2003,
+   "engine": "F20C",
+   "body": "Convertible",
+   "tag": "2.0-liter F20C, 240 hp at 8,300 rpm, 9,000 rpm limit.",
+   "variants": [
+    {
+     "id": "ap1-00",
+     "name": "S2000",
+     "years": "2000–2001",
+     "hp": {
+      "v": 240,
+      "src": [
+       "h01pt",
+       "hac99"
+      ],
+      "note": "at 8,300 rpm"
+     },
+     "tq": {
+      "v": 153,
+      "src": [
+       "h01pt"
+      ],
+      "note": "lb-ft at 7,500 rpm"
+     },
+     "z60": {
+      "v": 5.8,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual, rear-drive",
+      "src": [
+       "h01pt",
+       "h02spec"
+      ],
+      "note": "Torsen limited-slip"
+     },
+     "weight": {
+      "v": "2,756 lb",
+      "src": [
+       "h01body"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$32,000",
+      "src": [
+       "hac99"
+      ],
+      "note": "2000, destination not stated"
+     }
+    },
+    {
+     "id": "ap1-02",
+     "name": "S2000",
+     "years": "2002–2003",
+     "hp": {
+      "v": 240,
+      "src": [
+       "h02spec"
+      ],
+      "note": "at 8,300 rpm"
+     },
+     "tq": {
+      "v": 153,
+      "src": [
+       "h02spec"
+      ],
+      "note": "lb-ft at 7,500 rpm"
+     },
+     "z60": {
+      "v": 5.4,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual, rear-drive",
+      "src": [
+       "h02spec"
+      ],
+      "note": "Torsen limited-slip"
+     },
+     "weight": {
+      "v": "2,809 lb",
+      "src": [
+       "h02spec"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$32,400",
+      "src": [
+       "h02price"
+      ],
+      "note": "2002, plus $460 destination"
+     },
+     "what": "Glass rear window with defroster, smoother gearbox, higher-capacity clutch.",
+     "what_src": [
+      "h02new"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ap2",
+   "code": "AP2",
+   "years": "2004–2009",
+   "y0": 2004,
+   "y1": 2009,
+   "engine": "F22C1",
+   "body": "Convertible",
+   "tag": "2.2-liter F22C1, more torque, 8,000 rpm redline. CR from 2008.",
+   "variants": [
+    {
+     "id": "ap2-04",
+     "name": "S2000",
+     "years": "2004–2005",
+     "hp": {
+      "v": 240,
+      "src": [
+       "h04pt",
+       "h04intro"
+      ],
+      "note": "at 7,800 rpm"
+     },
+     "tq": {
+      "v": 162,
+      "src": [
+       "h04pt",
+       "h04intro"
+      ],
+      "note": "lb-ft at 6,500 rpm"
+     },
+     "z60": {
+      "v": 5.4,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual, rear-drive",
+      "src": [
+       "h04pt"
+      ],
+      "note": "Torsen limited-slip"
+     },
+     "weight": {
+      "v": "2,835 lb",
+      "src": [
+       "h04intro"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$32,800",
+      "src": [
+       "h04price"
+      ],
+      "note": "2004, plus $515 destination"
+     },
+     "what": "Longer stroke for 2.2 liters: more torque lower down, rev limit cut from 9,000 to 8,200 rpm; 17-inch wheels.",
+     "what_src": [
+      "h04pt",
+      "h04intro"
+     ]
+    },
+    {
+     "id": "ap2-06",
+     "name": "S2000",
+     "years": "2006–2009",
+     "hp": {
+      "v": 237,
+      "src": [
+       "h06spec",
+       "h08spec"
+      ],
+      "note": "at 7,800 rpm; SAE re-rating, not a power cut"
+     },
+     "tq": {
+      "v": 162,
+      "src": [
+       "h06spec",
+       "h08spec"
+      ],
+      "note": "lb-ft at 6,800 rpm"
+     },
+     "z60": {
+      "v": null,
+      "who": "",
+      "src": [],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual, rear-drive",
+      "src": [
+       "h06spec",
+       "h08spec"
+      ],
+      "note": "Torsen limited-slip"
+     },
+     "weight": {
+      "v": "2,855 lb",
+      "src": [
+       "h06spec"
+      ],
+      "note": "2006; 2,864 lb in 2008"
+     },
+     "price": {
+      "v": "$34,050",
+      "src": [
+       "h06price"
+      ],
+      "note": "2006, plus $595 destination; 2008: $34,300 plus $635"
+     },
+     "what": "Drive-by-wire throttle and stability control (VSA) added for 2006.",
+     "what_src": [
+      "h06sum",
+      "hag"
+     ]
+    },
+    {
+     "id": "ap2-cr",
+     "name": "S2000 CR",
+     "years": "2008–2009",
+     "star": true,
+     "hp": {
+      "v": 237,
+      "src": [
+       "h08spec"
+      ],
+      "note": "at 7,800 rpm"
+     },
+     "tq": {
+      "v": 162,
+      "src": [
+       "h08spec"
+      ],
+      "note": "lb-ft at 6,800 rpm"
+     },
+     "z60": {
+      "v": 5.7,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual, rear-drive",
+      "src": [
+       "h08spec",
+       "h08pt"
+      ],
+      "note": "shorter-throw shift knob"
+     },
+     "weight": {
+      "v": "2,813 lb",
+      "src": [
+       "h08spec"
+      ],
+      "note": "with hardtop; 2,765 lb without; +42 lb with audio and A/C"
+     },
+     "price": {
+      "v": "$36,300",
+      "src": [
+       "h08price"
+      ],
+      "note": "2008, plus $635 destination; $37,300 with A/C and audio"
+     },
+     "what": "Aluminum hardtop, stiffer springs, dampers and bars, quicker steering, aero kit; 51 lb lighter.",
+     "what_src": [
+      "h08price",
+      "h08spec"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "F20C": {
+   "name": "Honda F20C",
+   "what": "2.0-liter inline-4, VTEC, naturally aspirated",
+   "study": "honda-f20c",
+   "page": "/engines/honda-f20c/",
+   "yt": [
+    "scy",
+    "honda-f20c"
+   ],
+   "facts": [
+    [
+     "Redline",
+     "9,000 rpm",
+     [
+      "h01pt"
+     ]
+    ],
+    [
+     "Output",
+     "240 hp at 8,300 rpm, 153 lb-ft",
+     [
+      "h01pt",
+      "h02spec"
+     ]
+    ],
+    [
+     "Specific output",
+     "120 hp per liter, no turbo",
+     [
+      "h01pt"
+     ]
+    ],
+    [
+     "Cylinders",
+     "FRM liners cast into an aluminum block",
+     [
+      "h01pt"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Timing chain tensioner rattle",
+     "kind": "Owner-reported",
+     "rx": "tensioner|startup rattle|rattle (on|at) (cold )?start",
+     "x": "A rattle at startup usually means the timing chain tensioner needs replacing, per SlashGear and PistonHeads buyer's guides.",
+     "fix": "Replace the timing chain tensioner.",
+     "src": [
+      "sg",
+      "ph"
+     ]
+    },
+    {
+     "t": "Oil use",
+     "kind": "Owner-reported",
+     "rx": "oil consumption|burning oil|using oil|low oil",
+     "x": "Some engines use up to a liter of oil every 1,000 miles while others use almost none. If the level runs low, the computer blocks VTEC.",
+     "fix": "",
+     "src": [
+      "ph",
+      "sg"
+     ]
+    },
+    {
+     "t": "Early oiling (banjo bolts)",
+     "kind": "Outlet report",
+     "rx": "banjo bolts?",
+     "x": "Honda updated the oil banjo bolts in mid-2002 for better engine oiling. Hagerty says later engines are thought to be a bit more durable.",
+     "fix": "",
+     "src": [
+      "hag"
+     ]
+    },
+    {
+     "t": "Cracked valve retainers",
+     "kind": "Outlet report",
+     "rx": "valve retainers?",
+     "x": "Hagerty says valve retainers can occasionally crack. It is not a widespread pattern.",
+     "fix": "",
+     "src": [
+      "hag"
+     ]
+    }
+   ]
+  },
+  "F22C1": {
+   "name": "Honda F22C1",
+   "what": "2.2-liter inline-4, VTEC, naturally aspirated",
+   "study": "honda-f20c",
+   "page": "/engines/honda-f20c/",
+   "yt": [
+    "scy",
+    "honda-f20c"
+   ],
+   "facts": [
+    [
+     "Redline",
+     "8,000 rpm",
+     [
+      "h04pt",
+      "h08spec"
+     ]
+    ],
+    [
+     "Output",
+     "237–240 hp, 162 lb-ft",
+     [
+      "h04pt",
+      "h08spec"
+     ]
+    ],
+    [
+     "Stroke",
+     "90.7 mm, up from 84.0 mm in the 2.0",
+     [
+      "h04pt"
+     ]
+    ],
+    [
+     "VTEC",
+     "Intake and exhaust, switches near 6,000 rpm",
+     [
+      "h08pt"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Timing chain tensioner rattle",
+     "kind": "Owner-reported",
+     "rx": "tensioner|startup rattle|rattle (on|at) (cold )?start",
+     "x": "A rattle at startup usually means the timing chain tensioner needs replacing, per SlashGear's S2000 buyer's guide.",
+     "fix": "Replace the timing chain tensioner.",
+     "src": [
+      "sg"
+     ]
+    },
+    {
+     "t": "Oil use",
+     "kind": "Owner-reported",
+     "rx": "oil consumption|burning oil|using oil|low oil",
+     "x": "SlashGear says the S2000 is known for using oil and needing frequent top-ups. Check the level between services.",
+     "fix": "",
+     "src": [
+      "sg"
+     ]
+    }
+   ]
+  }
+ },
+ "compare": [
+  {
+   "slug": "mx-5-miata",
+   "name": "Mazda MX-5 Miata"
+  },
+  {
+   "slug": "lotus-elise-exige",
+   "name": "Lotus Elise / Exige"
+  },
+  {
+   "slug": "370z-nismo",
+   "name": "Nissan 370Z NISMO"
+  },
+  {
+   "slug": "gr86",
+   "name": "Toyota GR86"
+  }
+ ],
+ "sources": {
+  "hac99": {
+   "t": "American Honda: S2000 roadster priced at $32,000 (Sep 17, 1999, via The Auto Channel)",
+   "u": "https://www.theautochannel.com/news/press/date/19990917/press030031.html",
+   "k": "Honda"
+  },
+  "h01pt": {
+   "t": "Honda: Honda S2000 -- Powertrain (press kit)",
+   "u": "https://hondanews.com/en-US/releases/release-5cf69ff7f30a01d81cc648004c34c870-honda-s2000-powertrain",
+   "k": "Honda"
+  },
+  "h01body": {
+   "t": "Honda: Honda S2000 -- Body (press kit)",
+   "u": "https://hondanews.com/en-US/releases/release-4bedfb5cb00b34a841f9f6004c34c870-honda-s2000-body",
+   "k": "Honda"
+  },
+  "h02spec": {
+   "t": "Honda: 2002 Honda S2000 specifications (Sep 2001)",
+   "u": "https://hondanews.com/en-US/releases/release-ac6c52b46473ca4f83631d004c34c7ed-2002-honda-s2000-specifications",
+   "k": "Honda"
+  },
+  "h02new": {
+   "t": "Honda: S2000 roadster continues to set the pace with new features for 2002 (Sep 2001)",
+   "u": "https://hondanews.com/en-US/releases/release-1eff1f3944b005df1cf1f8004c34c7ee-s2000-roadster-continues-to-set-the-pace-with-new-features-for-2002",
+   "k": "Honda"
+  },
+  "h02price": {
+   "t": "Honda: 2002 Honda S2000 prices and EPA data (Nov 2001)",
+   "u": "https://hondanews.com/en-US/releases/release-f5459c87a602e8c3abcf4e004c34c799-2002-honda-s2000-prices-and-epa-data",
+   "k": "Honda"
+  },
+  "h04intro": {
+   "t": "Honda: 2004 Honda S2000 introduction (Oct 2003)",
+   "u": "https://hondanews.com/en-US/releases/release-2c0843879cac0aea75c877004c34c4a9-2004-honda-s2000-introduction-part",
+   "k": "Honda"
+  },
+  "h04pt": {
+   "t": "Honda: 2004 Honda S2000 powertrain (Oct 2003)",
+   "u": "https://hondanews.com/releases/2004-honda-s2000-powertrain",
+   "k": "Honda"
+  },
+  "h04price": {
+   "t": "Honda: 2004 Honda S2000 prices and EPA data (Oct 2003)",
+   "u": "https://hondanews.com/en-US/releases/release-64115597b58efffd80689d004c34c498-2004-honda-s2000-prices-and-epa-data",
+   "k": "Honda"
+  },
+  "h06sum": {
+   "t": "Honda: 2006 Honda S2000 summary (Sep 2005)",
+   "u": "https://hondanews.com/en-US/releases/release-aeca3f14735993451c13aa004c34c11f-2006-honda-s2000-summary",
+   "k": "Honda"
+  },
+  "h06spec": {
+   "t": "Honda: 2006 Honda S2000 specifications",
+   "u": "https://hondanews.com/en-US/releases/release-5a35f67b82f245d1db31c6004c34c121-2006-honda-s2000-specifications",
+   "k": "Honda"
+  },
+  "h06price": {
+   "t": "Honda: 2006 Honda S2000 prices and EPA data (Nov 2005)",
+   "u": "https://hondanews.com/en-US/honda-automobiles/releases/release-fb6dc30a1edf9d9cf12c1c004c34c090-2006-honda-s2000-prices-and-epa-data",
+   "k": "Honda"
+  },
+  "h08pt": {
+   "t": "Honda: 2008 Honda S2000 powertrain (Aug 2007)",
+   "u": "https://hondanews.com/en-US/releases/release-07a7799dcde4e371e483d2004c34be71-2008-honda-s2000-powertrain",
+   "k": "Honda"
+  },
+  "h08spec": {
+   "t": "Honda: 2008 Honda S2000 and S2000 CR specifications and features (Aug 2007)",
+   "u": "https://hondanews.com/en-US/releases/release-5dbe902175c45502744cfd004c34be73-2008-honda-s2000-specifications-and-features",
+   "k": "Honda"
+  },
+  "h08price": {
+   "t": "Honda: 2008 Honda S2000 pricing starts at $34,300 (Oct 2007)",
+   "u": "https://hondanews.com/en-US/releases/release-f9c88cc0f201ea7218614f004c34bde5-2008-honda-s2000-pricing-starts-at-34-300",
+   "k": "Honda"
+  },
+  "z60": {
+   "t": "0-60specs.com: Honda S2000 0-60 runs by magazine (Car and Driver, MotorTrend, Road & Track)",
+   "u": "https://www.0-60specs.com/honda-s2000-0-60-times/",
+   "k": "magazine tests, aggregated"
+  },
+  "hag": {
+   "t": "Hagerty: Your handy 2000–09 Honda S2000 buyer’s guide (Rob Sass, Jan 2025)",
+   "u": "https://www.hagerty.com/media/market-trends/hagerty-insider/your-handy-2000-09-honda-s2000-buyers-guide/",
+   "k": "outlet"
+  },
+  "sg": {
+   "t": "SlashGear: 12 things you should know before buying a Honda S2000 (Mar 2023)",
+   "u": "https://www.slashgear.com/1219592/12-things-you-should-know-before-buying-a-honda-s2000/",
+   "k": "outlet"
+  },
+  "ph": {
+   "t": "PistonHeads: Honda S2000 buying guide, powertrain (Jul 2014)",
+   "u": "https://www.pistonheads.com/news/ph-buying-guide-contents/honda-s2000-buying-guide-powertrain/30574",
+   "k": "outlet"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-honda-s2000",
+ "img": "/assets/ai-perf/honda-s2000.webp?v=1"
+}

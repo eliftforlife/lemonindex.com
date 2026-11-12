@@ -1,0 +1,451 @@
+{
+ "slug": "durango-srt",
+ "name": "Dodge Durango SRT",
+ "short": "Durango SRT",
+ "make": "Dodge",
+ "page": "/cars/durango-srt/",
+ "focus": "wd",
+ "star": "wd-hellcat",
+ "h1": "Dodge Durango SRT: performance, engines and what owners say",
+ "nhtsa": {
+  "make": "DODGE",
+  "models": [
+   "DURANGO"
+  ],
+  "note": "NHTSA files the Durango SRT 392 and SRT Hellcat under Durango, so these counts are every Durango of these years."
+ },
+ "topics_extra": {
+  "Lifter / cam tick": "hemi tick|lifters?|cam(shaft)? (failure|wipe|wiped|lobe)|ticking",
+  "Supercharger noise": "supercharger (noise|rattle|whine|bearings?)|blower (noise|rattle|bearings?)|coupler",
+  "Rear spoiler": "spoiler",
+  "Transfer case": "transfer ?case",
+  "Brakes": "brembo|brake (pads?|rotors?|squeal|wear)"
+ },
+ "gens": [
+  {
+   "id": "wd",
+   "code": "WD",
+   "years": "2018–2025",
+   "y0": 2018,
+   "y1": 2025,
+   "engine": "392",
+   "body": "Three-row SUV",
+   "tag": "475 hp 392 SRT for 2018–2024; 710 hp Hellcat for 2021 and 2023–2025.",
+   "variants": [
+    {
+     "id": "wd-392",
+     "name": "Durango SRT 392",
+     "years": "2018–2024",
+     "hp": {
+      "v": 475,
+      "src": [
+       "s18spec",
+       "s23spec"
+      ],
+      "note": "at 6,000 rpm, SAE certified"
+     },
+     "tq": {
+      "v": 470,
+      "src": [
+       "s18spec",
+       "s23spec"
+      ],
+      "note": "lb-ft at 4,300 rpm"
+     },
+     "z60": {
+      "v": 4.7,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 4.4,
+      "csrc": [
+       "s18p"
+      ]
+     },
+     "trans": {
+      "v": "8-speed automatic (TorqueFlite 8HP70), full-time all-wheel drive",
+      "src": [
+       "s18spec",
+       "s23spec"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "5,510 lb",
+      "src": [
+       "s18spec",
+       "s23spec"
+      ],
+      "note": "maker estimate, 2018; the 2023 spec sheet lists 5,378 lb"
+     },
+     "price": {
+      "v": "$62,995",
+      "src": [
+       "s18p",
+       "s21p"
+      ],
+      "note": "2018, plus $1,095 destination; still $62,995 for 2021 (plus $1,495)"
+     }
+    },
+    {
+     "id": "wd-alchemi",
+     "name": "Durango SRT 392 AlcHEMI",
+     "years": "2024",
+     "pkg": "wd-392",
+     "price": {
+      "v": "$89,795",
+      "src": [
+       "m1a",
+       "s24a"
+      ],
+      "note": "2024, plus $1,595 destination (Motor1); Dodge priced it $3,595 over the SRT 392 Premium"
+     },
+     "what": "Up to 1,000 built: satin black forged 20-inch wheels, yellow Brembo calipers, honeycomb stripes, 392 seat embroidery.",
+     "what_src": [
+      "s24a"
+     ]
+    },
+    {
+     "id": "wd-hellcat",
+     "name": "Durango SRT Hellcat",
+     "years": "2021, 2023–2025",
+     "star": true,
+     "hp": {
+      "v": 710,
+      "src": [
+       "s21h",
+       "s23spec"
+      ],
+      "note": "at 6,100 rpm"
+     },
+     "tq": {
+      "v": 645,
+      "src": [
+       "s21h",
+       "s23spec"
+      ],
+      "note": "lb-ft at 4,300 rpm (2023 spec sheet)"
+     },
+     "z60": {
+      "v": 3.6,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 3.5,
+      "csrc": [
+       "s21h",
+       "s23"
+      ]
+     },
+     "top": {
+      "v": "180 mph",
+      "src": [
+       "s21h",
+       "s23"
+      ],
+      "note": "maker claim"
+     },
+     "trans": {
+      "v": "8-speed automatic (TorqueFlite 8HP95), full-time all-wheel drive",
+      "src": [
+       "s21h",
+       "s23spec"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "5,710 lb",
+      "src": [
+       "s23spec"
+      ],
+      "note": "maker estimate, 2023"
+     },
+     "price": {
+      "v": "$80,995",
+      "src": [
+       "s21p"
+      ],
+      "note": "2021, plus $1,495 destination"
+     },
+     "what": "Uses the supercharged 6.2 Hellcat engine instead of the 392, with the heavier-duty 8HP95 automatic; skipped 2022.",
+     "what_src": [
+      "s21h",
+      "s23",
+      "s23spec"
+     ]
+    },
+    {
+     "id": "wd-hammerhead",
+     "name": "Durango SRT Hellcat Hammerhead",
+     "years": "2025",
+     "pkg": "wd-hellcat",
+     "hp": {
+      "v": 710,
+      "src": [
+       "s25h"
+      ],
+      "note": ""
+     },
+     "z60": {
+      "v": null,
+      "who": "",
+      "src": [],
+      "claim": 3.5,
+      "csrc": [
+       "s25h"
+      ]
+     },
+     "top": {
+      "v": "180 mph",
+      "src": [
+       "s25h"
+      ],
+      "note": "maker claim"
+     },
+     "price": {
+      "v": "$113,720",
+      "src": [
+       "s25h",
+       "cars25"
+      ],
+      "note": "2025, plus $1,595 destination; every 2025 Hellcat was a Last Call special edition"
+     },
+     "what": "Last Call edition: Night Moves blue paint, Hammerhead Grey leather, satin black hood, Satin Carbon wheels, black Brembos.",
+     "what_src": [
+      "s25h"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "392": {
+   "name": "392 HEMI 6.4",
+   "what": "6.4-liter V-8",
+   "study": "chrysler-392",
+   "page": "/engines/chrysler-392/",
+   "yt": [
+    "scy",
+    "chrysler-392"
+   ],
+   "facts": [
+    [
+     "Redline",
+     "6,400 rpm (electronically limited)",
+     [
+      "s18spec"
+     ]
+    ],
+    [
+     "Output",
+     "475 hp at 6,000 rpm, 470 lb-ft at 4,300 rpm (Durango SRT)",
+     [
+      "s18spec",
+      "s23spec"
+     ]
+    ],
+    [
+     "Valvetrain",
+     "Pushrod, 16 valves, sodium-filled exhaust and hollow-stem intake valves",
+     [
+      "s18spec"
+     ]
+    ],
+    [
+     "Build",
+     "Cast-iron block with cross-bolted mains, aluminum hemi heads, 10.9:1 compression",
+     [
+      "s18spec"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Lifter and camshaft failure (\"HEMI tick\")",
+     "kind": "Owner-reported",
+     "rx": "hemi tick|lifters?|cam(shaft)? (failure|wipe|wiped|lobe)|ticking|tick(ing)? noise",
+     "x": "Owners report a tick from failed roller lifters that then wear the camshaft. SlashGear links most cases to the cylinder-deactivation (MDS) lifters and low oil flow.",
+     "fix": "Replacing the lifters and camshaft fixes it; on-time oil changes with the right oil help prevent it.",
+     "src": [
+      "sg24"
+     ]
+    },
+    {
+     "t": "No engine recall on the Durango",
+     "kind": "Recall",
+     "rx": "",
+     "x": "NHTSA lists no recall for the 6.4 engine on 2018–2024 Durangos. The recalls that hit SRT models are for other parts, such as the rear spoiler.",
+     "fix": "",
+     "src": [
+      "nhtsa",
+      "r23"
+     ]
+    }
+   ]
+  },
+  "hellcat": {
+   "name": "Hellcat 6.2 supercharged HEMI",
+   "what": "6.2-liter V-8, supercharged",
+   "study": "chrysler-hellcat",
+   "page": "/engines/chrysler-hellcat/",
+   "yt": [
+    "scy",
+    "chrysler-hellcat"
+   ],
+   "facts": [
+    [
+     "Rev limit",
+     "6,100 rpm (electronically limited)",
+     [
+      "s23spec"
+     ]
+    ],
+    [
+     "Output",
+     "710 hp at 6,100 rpm, 645 lb-ft (Durango SRT Hellcat)",
+     [
+      "s21h",
+      "s23spec"
+     ]
+    ],
+    [
+     "Supercharger",
+     "2.38-liter twin-screw, up to 11.6 psi, dual water-to-air intercoolers",
+     [
+      "s21h",
+      "s23spec"
+     ]
+    ],
+    [
+     "Bottom end",
+     "Cast-iron block, forged steel crank, forged pistons, powder-forged rods; 9.5:1 compression",
+     [
+      "s21h",
+      "s23spec"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Supercharger bearing wear",
+     "kind": "Owner-reported",
+     "rx": "supercharger (noise|rattle|whine|bearings?)|blower (noise|rattle|bearings?)|coupler",
+     "x": "Worn supercharger front bearings cause noise and can damage the rotors and the drive coupler pins, an enthusiast magazine reports.",
+     "fix": "Replacing the four front bearings fixes nearly all of the noise.",
+     "src": [
+      "mc23"
+     ]
+    },
+    {
+     "t": "No engine recall on the Durango",
+     "kind": "Recall",
+     "rx": "",
+     "x": "NHTSA lists no recall for the Hellcat engine on 2021–2025 Durangos.",
+     "fix": "",
+     "src": [
+      "nhtsa"
+     ]
+    }
+   ]
+  }
+ },
+ "compare": [
+  {
+   "slug": "trackhawk",
+   "name": "Jeep Grand Cherokee Trackhawk"
+  },
+  {
+   "slug": "grand-cherokee-srt",
+   "name": "Jeep Grand Cherokee SRT"
+  },
+  {
+   "slug": "bmw-x5-m",
+   "name": "BMW X5 M"
+  },
+  {
+   "slug": "escalade-v",
+   "name": "Cadillac Escalade-V"
+  }
+ ],
+ "sources": {
+  "s18p": {
+   "t": "FCA US: Dodge announces pricing for 2018 Dodge Durango SRT (Jul 2017)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=18448",
+   "k": "Dodge"
+  },
+  "s18spec": {
+   "t": "FCA US: 2018 Dodge Durango SRT specifications (PDF)",
+   "u": "https://s3.amazonaws.com/chryslermedia.iconicweb.com/mediasite/attachments/2018_DG_Durango_SRT_SP6d8n5alg2anql4va7gnajjcq8e.pdf",
+   "k": "Dodge"
+  },
+  "s21h": {
+   "t": "FCA US: Cat Out of Hell: Dodge//SRT introduces the 2021 Durango SRT Hellcat (Jul 2020)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=21814",
+   "k": "Dodge"
+  },
+  "s21p": {
+   "t": "FCA US: Dodge announces pricing for new 2021 Durango lineup (Aug 2020)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=22047",
+   "k": "Dodge"
+  },
+  "s23": {
+   "t": "Stellantis: The Cat Is Back: 2023 Dodge Durango SRT Hellcat returns (Aug 2022)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=24059",
+   "k": "Dodge"
+  },
+  "s23spec": {
+   "t": "Stellantis: 2023 Dodge Durango / Durango SRT specifications (PDF, copy hosted by autoevolution)",
+   "u": "https://www.autoevolution.com/pdf/news_attachements/dodge-durango-srt-hellcat-returns-for-the-2023-model-year-202969.pdf",
+   "k": "Dodge"
+  },
+  "s24a": {
+   "t": "Stellantis: Special-edition Dodge Durango SRT 392 AlcHEMI launches Last Call (Jan 2024)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=25604",
+   "k": "Dodge"
+  },
+  "m1a": {
+   "t": "Motor1: This limited-edition Dodge Durango SRT costs $91,000 (May 2024)",
+   "u": "https://www.motor1.com/news/718239/durango-srt-392-alchemi-sale-price/",
+   "k": "outlet"
+  },
+  "s25h": {
+   "t": "Stellantis: Dodge reveals 2025 Durango SRT Hellcat Hammerhead special edition (Sep 2024)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=26144",
+   "k": "Dodge"
+  },
+  "cars25": {
+   "t": "Cars.com: 2025 Dodge Durango: Hemi and Hellcat still hanging on (Jan 2025)",
+   "u": "https://cars.com/articles/2025-dodge-durango-hemi-and-hellcat-still-hanging-on-v-6-priced-from-43590-503845",
+   "k": "outlet"
+  },
+  "z60": {
+   "t": "0-60specs.com: Dodge Durango 0-60 runs by magazine (Car and Driver, MotorTrend, MotorWeek)",
+   "u": "https://www.0-60specs.com/dodge/durango-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "sg24": {
+   "t": "SlashGear: How reliable are 6.4L HEMI engines? Here's what owners have to say (Sep 2024)",
+   "u": "https://www.slashgear.com/1656386/6-4-hemi-engine-reliability-owner-reviews",
+   "k": "outlet, summarizing owner reports"
+  },
+  "mc23": {
+   "t": "Mopar Connection: 6.2-liter HEMI supercharger front bearing replacement (Apr 2023)",
+   "u": "https://moparconnectionmagazine.com/gallery-6-2-liter-hemi-supercharger-front-bearing-replacement/",
+   "k": "enthusiast outlet"
+  },
+  "r23": {
+   "t": "NHTSA recall 23V115000: 2021–2023 Durango rear spoiler may detach",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=23V115000",
+   "k": "Recall"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-durango-srt",
+ "img": "/assets/ai-perf/durango-srt.webp?v=1"
+}

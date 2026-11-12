@@ -1,0 +1,424 @@
+{
+ "slug": "lexus-lc-500",
+ "name": "Lexus LC 500",
+ "short": "LC 500",
+ "make": "Lexus",
+ "page": "/cars/lexus-lc-500/",
+ "focus": "urz100",
+ "star": "lc500",
+ "h1": "Lexus LC 500: performance, engines and what owners say",
+ "nhtsa": {
+  "make": "LEXUS",
+  "models": [
+   "LC 500",
+   "LC 500 CONVERTIBLE",
+   "LC",
+   "LC500"
+  ],
+  "note": "NHTSA has no separate LC 500h name, so hybrid complaints and recalls sit under these names with the V8 cars."
+ },
+ "topics_extra": {
+  "Door handle / actuator": "door (handle|actuator|latch)|door (won'?t|will not|doesn'?t) open",
+  "Fuel pump": "fuel pump",
+  "Water pump / coolant": "water pump|coolant (leak|loss)|losing coolant|valley plate",
+  "Convertible top leak": "(top|roof) (is )?leak|leaking (top|roof)|convertible top",
+  "Infotainment / touchpad": "touch ?pad|remote touch|infotainment|screen (freez|black)"
+ },
+ "gens": [
+  {
+   "id": "urz100",
+   "code": "URZ100",
+   "years": "2018–",
+   "y0": 2018,
+   "y1": 2025,
+   "engine": "2UR-GSE",
+   "body": "Coupe, convertible (from 2021)",
+   "tag": "Naturally aspirated V8 grand tourer; convertible added for 2021.",
+   "variants": [
+    {
+     "id": "lc500",
+     "name": "LC 500 coupe",
+     "years": "2018–2025",
+     "star": true,
+     "hp": {
+      "v": 471,
+      "src": [
+       "t17",
+       "l25s"
+      ],
+      "note": "at 7,100 rpm"
+     },
+     "tq": {
+      "v": 398,
+      "src": [
+       "l25s",
+       "c21s"
+      ],
+      "note": "lb-ft at 4,800 rpm"
+     },
+     "z60": {
+      "v": 4.6,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 4.4,
+      "csrc": [
+       "l25",
+       "l25s"
+      ]
+     },
+     "top": {
+      "v": "168 mph",
+      "src": [
+       "l25s"
+      ],
+      "note": "Lexus top track speed"
+     },
+     "trans": {
+      "v": "10-speed automatic, rear-drive",
+      "src": [
+       "t17",
+       "l25"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "4,340 lb",
+      "src": [
+       "l25s"
+      ],
+      "note": "2025 spec sheet"
+     },
+     "price": {
+      "v": "$92,000",
+      "src": [
+       "t17p",
+       "l25"
+      ],
+      "note": "2018, plus $995 destination; 2025: $100,425 including $1,175"
+     }
+    },
+    {
+     "id": "lc500-conv",
+     "name": "LC 500 convertible",
+     "years": "2021–2025",
+     "hp": {
+      "v": 471,
+      "src": [
+       "c21s"
+      ],
+      "note": "at 7,100 rpm"
+     },
+     "tq": {
+      "v": 398,
+      "src": [
+       "c21s"
+      ],
+      "note": "lb-ft at 4,800 rpm"
+     },
+     "z60": {
+      "v": 4.6,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 4.6,
+      "csrc": [
+       "c21",
+       "c21s"
+      ]
+     },
+     "top": {
+      "v": "168 mph",
+      "src": [
+       "c21",
+       "c21s"
+      ],
+      "note": "limited"
+     },
+     "trans": {
+      "v": "10-speed automatic, rear-drive",
+      "src": [
+       "c21s"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "4,540 lb",
+      "src": [
+       "c21s"
+      ],
+      "note": "2021 spec sheet"
+     },
+     "price": {
+      "v": "$101,100",
+      "src": [
+       "p21"
+      ],
+      "note": "2021, plus $1,025 destination (Lexus price sheet, Dec 2020)"
+     },
+     "what": "Fabric roof plus a new rear torsion box and extra bracing.",
+     "what_src": [
+      "c21"
+     ]
+    },
+    {
+     "id": "lc500h",
+     "name": "LC 500h hybrid",
+     "years": "2018–2025",
+     "hp": {
+      "v": 354,
+      "src": [
+       "t17p",
+       "t17",
+       "l25s"
+      ],
+      "note": "combined system output"
+     },
+     "z60": {
+      "v": 4.8,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 4.7,
+      "csrc": [
+       "l25s"
+      ]
+     },
+     "top": {
+      "v": "155 mph",
+      "src": [
+       "l25s"
+      ],
+      "note": "Lexus top track speed"
+     },
+     "trans": {
+      "v": "Multistage hybrid (CVT plus 4-speed), rear-drive",
+      "src": [
+       "t17",
+       "l25"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "4,410 lb",
+      "src": [
+       "l25s"
+      ],
+      "note": "2025 spec sheet"
+     },
+     "price": {
+      "v": "$96,510",
+      "src": [
+       "t17p"
+      ],
+      "note": "2018, plus $995 destination"
+     },
+     "what": "3.5 V6 hybrid, not the V8; 10 simulated gears. Not listed for 2026.",
+     "what_src": [
+      "t17",
+      "l25",
+      "l26"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "2UR-GSE": {
+   "name": "Lexus 2UR-GSE",
+   "what": "5.0-liter V-8, naturally aspirated",
+   "study": "toyota-2ur-gse",
+   "page": "/engines/toyota-2ur-gse/",
+   "yt": [
+    "scy",
+    "toyota-2ur-gse"
+   ],
+   "facts": [
+    [
+     "Redline",
+     "7,300 rpm",
+     [
+      "t17"
+     ]
+    ],
+    [
+     "Output",
+     "471 hp at 7,100 rpm, 398 lb-ft at 4,800 rpm (LC 500)",
+     [
+      "l25s",
+      "c21s"
+     ]
+    ],
+    [
+     "Valvetrain",
+     "Titanium intake and exhaust valves, forged connecting rods",
+     [
+      "t17"
+     ]
+    ],
+    [
+     "Fuel",
+     "Direct plus port injection (D-4S), 12.3:1 compression",
+     [
+      "t17",
+      "l25s"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "High-pressure fuel pump recall",
+     "kind": "Recall",
+     "rx": "high.?pressure (fuel )?pump|fuel leak|(smell|odor) of (gas|fuel)|(gas|fuel) (smell|odor)",
+     "x": "On some 2018 LC 500s (and RC F, GS F), a damper in one of the two high-pressure fuel pumps could crack the pump cover and leak fuel.",
+     "fix": "Dealer replaces the high-pressure fuel pumps for free (NHTSA 18V-107).",
+     "src": [
+      "r18"
+     ]
+    },
+    {
+     "t": "In-tank fuel pump recall",
+     "kind": "Recall",
+     "rx": "fuel pump|stall(ed|s|ing)? (while|when) driving|engine (shut|cut) off",
+     "x": "The low-pressure fuel pump in the tank of some 2018–2020 LC 500 and LC 500h cars can fail, which can stall the engine while driving.",
+     "fix": "Dealer fits an improved fuel pump for free (NHTSA 20V-012 and 20V-682).",
+     "src": [
+      "r20a",
+      "r20b"
+     ]
+    },
+    {
+     "t": "Water pump seepage vs. real leak",
+     "kind": "Maker bulletin",
+     "rx": "water pump|coolant (leak|loss)|losing coolant",
+     "x": "A Lexus bulletin covering 2018–2021 LC 500, LC 500 convertible and LC 500h says dry coolant residue at the pump is normal; wet residue or drips is a real leak.",
+     "fix": "Replace the water pump only for an active, wet leak.",
+     "src": [
+      "tsb"
+     ]
+    },
+    {
+     "t": "Valley plate coolant leak",
+     "kind": "Owner-reported",
+     "rx": "valley plate|pink (crust|residue|coolant)",
+     "x": "Sealant under the valley plate can fail with heat cycles and leak coolant. Guides tie it mainly to older IS F engines past about 8 years and 80,000 miles, not the LC.",
+     "fix": "Reseal the valley plate; Jalopnik puts it at about $1,500 to over $3,000.",
+     "src": [
+      "a8020",
+      "jal"
+     ]
+    }
+   ]
+  }
+ },
+ "compare": [
+  {
+   "slug": "bmw-m8",
+   "name": "BMW M8"
+  },
+  {
+   "slug": "porsche-911-carrera",
+   "name": "Porsche 911 Carrera"
+  },
+  {
+   "slug": "maserati-granturismo",
+   "name": "Maserati GranTurismo"
+  },
+  {
+   "slug": "lexus-rc-f",
+   "name": "Lexus RC F"
+  }
+ ],
+ "sources": {
+  "t17": {
+   "t": "Lexus USA: All-new Lexus LC performance coupe opens new chapter in brand history (Mar 2017)",
+   "u": "https://pressroom.lexus.com/all-new-lexus-lc-500-coupe/",
+   "k": "Lexus"
+  },
+  "t17p": {
+   "t": "Lexus USA: Lexus announces pricing for all-new 2018 LC performance coupe (Jan 2017)",
+   "u": "https://pressroom.lexus.com/lexus-pricing-2018-lc-coupe/",
+   "k": "Lexus"
+  },
+  "c21": {
+   "t": "Lexus USA: 2021 Lexus LC 500 Convertible opens possibilities for flagship performance (Jul 2020)",
+   "u": "https://pressroom.lexus.com/2021-lexus-lc-500-convertible-opens-possibilities-for-flagship-performance/",
+   "k": "Lexus"
+  },
+  "c21s": {
+   "t": "Lexus USA: 2021 LC 500 Convertible product information (PDF)",
+   "u": "https://lexus-cms-media.s3.us-east-2.amazonaws.com/wp-content/uploads/2019/11/2021-Lexus-LC-500-Convertible-Product-Information-1.pdf",
+   "k": "Lexus"
+  },
+  "p21": {
+   "t": "Lexus USA: 2020-2021 model year MSRP sheet (Dec 2020, PDF)",
+   "u": "https://lexus-cms-media.s3.us-east-2.amazonaws.com/wp-content/uploads/2020/08/MY-2020-21-Lexus-Pricing-Sheet.pdf",
+   "k": "Lexus"
+  },
+  "l25": {
+   "t": "Lexus USA: Bolstering excellence, 2025 Lexus LC 500 / 500h (Oct 2024)",
+   "u": "https://pressroom.lexus.com/bolstering-excellence-2025-lexus-lc-500-500h/",
+   "k": "Lexus"
+  },
+  "l25s": {
+   "t": "Lexus USA: 2025 LC 500 / 500h specifications (PDF)",
+   "u": "https://lexus-cms-media.s3.us-east-2.amazonaws.com/wp-content/uploads/2024/10/2025LexusLC500_500hSpecifications_FINAL.pdf",
+   "k": "Lexus"
+  },
+  "l26": {
+   "t": "Lexus USA: 2026 Lexus LC 500 (Jul 2025)",
+   "u": "https://pressroom.lexus.com/vehicle/2026-lexus-lc-500/",
+   "k": "Lexus"
+  },
+  "z60": {
+   "t": "0-60specs.com: Lexus LC 0-60 runs by magazine (Car and Driver, MotorTrend, Road & Track, MotorWeek)",
+   "u": "https://www.0-60specs.com/lexus/lc-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "r18": {
+   "t": "NHTSA recall 18V-107: 2UR-GSE high-pressure fuel pumps (Feb 2018)",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=18V107",
+   "k": "Recall"
+  },
+  "r20a": {
+   "t": "NHTSA recall 20V-012: low-pressure fuel pump (Jan 2020)",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=20V012",
+   "k": "Recall"
+  },
+  "r20b": {
+   "t": "NHTSA recall 20V-682: low-pressure fuel pump, expansion (Nov 2020)",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=20V682",
+   "k": "Recall"
+  },
+  "tsb": {
+   "t": "Lexus service bulletin L-SB-0039-20: water pump leak inspection and diagnostic tips (Oct 2020, NHTSA copy)",
+   "u": "https://static.nhtsa.gov/odi/tsbs/2020/MC-10183269-9999.pdf",
+   "k": "Maker bulletin"
+  },
+  "a8020": {
+   "t": "8020 Automotive: Ultimate Toyota 2UR-GSE engine guide (updated Jan 2024)",
+   "u": "https://8020automotive.com/ultimate-toyota-2ur-gse-engine-guide/",
+   "k": "enthusiast outlet"
+  },
+  "jal": {
+   "t": "Jalopnik: What makes the Lexus IS F and RC F 2UR-GSE V8 nearly indestructible? (Oct 2026)",
+   "u": "https://www.jalopnik.com/2296879/why-lexus-is-f-rc-f-2ur-gse-v8-nearly-indestructible/",
+   "k": "outlet"
+  },
+  "wlc": {
+   "t": "Wikipedia: Lexus LC",
+   "u": "https://en.wikipedia.org/wiki/Lexus_LC",
+   "k": "Wikipedia (fallback, chassis code only)"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-lexus-lc-500",
+ "img": "/assets/ai-perf/lexus-lc-500.webp?v=1"
+}

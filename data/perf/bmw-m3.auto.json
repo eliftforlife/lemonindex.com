@@ -728,8 +728,124 @@
     }
    ]
   },
-  "bmw-s54": null,
-  "bmw-s65": null,
+  "bmw-s54": {
+   "videos": 200,
+   "praise": [
+    [
+     "Handling and steering",
+     19
+    ],
+    [
+     "Looks",
+     18
+    ],
+    [
+     "Power and acceleration",
+     16
+    ],
+    [
+     "Manual gearbox",
+     12
+    ]
+   ],
+   "trouble": [
+    [
+     "Rod bearings",
+     19
+    ],
+    [
+     "VANOS",
+     14
+    ],
+    [
+     "Oil leaks (gaskets, seals, housings)",
+     12
+    ],
+    [
+     "SMG / DCT gearbox",
+     10
+    ]
+   ],
+   "top": [
+    {
+     "id": "E6pm5eW6F7k",
+     "title": "RICHARD HAMMOND MODIFIED MY E46 BMW M3 THAT I RESTORED",
+     "views": 5056373,
+     "ch": "Mat Armstrong"
+    },
+    {
+     "id": "0FTcr2IFeg0",
+     "title": "BMW Z4M | Car Review | Top Gear",
+     "views": 2375242,
+     "ch": "Top Gear"
+    },
+    {
+     "id": "8R9lj3B3BmY",
+     "title": "Porsche Cayman S vs Corvette Z06 vs BMW Z4M // $30,000 Question",
+     "views": 1811184,
+     "ch": "Throttle House"
+    }
+   ]
+  },
+  "bmw-s65": {
+   "videos": 200,
+   "praise": [
+    [
+     "Looks",
+     18
+    ],
+    [
+     "Power and acceleration",
+     13
+    ],
+    [
+     "Everyday comfort",
+     11
+    ],
+    [
+     "Handling and steering",
+     10
+    ]
+   ],
+   "trouble": [
+    [
+     "Rod bearings",
+     28
+    ],
+    [
+     "Throttle actuators",
+     14
+    ],
+    [
+     "Oil leaks (gaskets, seals, housings)",
+     10
+    ],
+    [
+     "SMG / DCT gearbox",
+     10
+    ]
+   ],
+   "top": [
+    {
+     "id": "NfuXp8QnWoU",
+     "title": "Building a BMW S65 V8 From Scratch - BMW E92 M3 - Project Frankfurt: PT6",
+     "views": 6861354,
+     "ch": "M539 Restorations"
+    },
+    {
+     "id": "fGDNzMLfSBY",
+     "title": "Here's Why the BMW M3 E92 Was the Craziest BMW M3",
+     "views": 2826379,
+     "ch": "Doug DeMuro"
+    },
+    {
+     "id": "u1ufYXIGrQM",
+     "title": "The E92 M3 - The Car That Changed My Life",
+     "views": 1304215,
+     "ch": "Obsessed Garage "
+    }
+   ]
+  },
   "bmw-s55": {
    "videos": 200,
    "praise": [
@@ -1022,6 +1138,340 @@
     }
    },
    "videos": 146,
+   "pulled": 200
+  },
+  "bmw-s54": {
+   "years": {
+    "2001": {
+     "score": 46,
+     "weight": 24.0,
+     "videos": 157,
+     "named": 3,
+     "top": [
+      {
+       "id": "E6pm5eW6F7k",
+       "title": "RICHARD HAMMOND MODIFIED MY E46 BMW M3 THAT I RESTORED",
+       "views": 5056373
+      },
+      {
+       "id": "6A_24qCzDqQ",
+       "title": "5 Reasons Why I Bought A Rusty E36 M3 Over The 'Superior' E46 M3",
+       "views": 1338638
+      },
+      {
+       "id": "ncBH5aF2Ce8",
+       "title": "I saved $100,000 on my Dream BMW - E46 M3 Pt 1",
+       "views": 1299823
+      }
+     ]
+    },
+    "2002": {
+     "score": 46,
+     "weight": 24.0,
+     "videos": 157,
+     "named": 3,
+     "top": [
+      {
+       "id": "E6pm5eW6F7k",
+       "title": "RICHARD HAMMOND MODIFIED MY E46 BMW M3 THAT I RESTORED",
+       "views": 5056373
+      },
+      {
+       "id": "6A_24qCzDqQ",
+       "title": "5 Reasons Why I Bought A Rusty E36 M3 Over The 'Superior' E46 M3",
+       "views": 1338638
+      },
+      {
+       "id": "ncBH5aF2Ce8",
+       "title": "I saved $100,000 on my Dream BMW - E46 M3 Pt 1",
+       "views": 1299823
+      }
+     ]
+    },
+    "2003": {
+     "score": 47,
+     "weight": 26.0,
+     "videos": 159,
+     "named": 5,
+     "top": [
+      {
+       "id": "E6pm5eW6F7k",
+       "title": "RICHARD HAMMOND MODIFIED MY E46 BMW M3 THAT I RESTORED",
+       "views": 5056373
+      },
+      {
+       "id": "6A_24qCzDqQ",
+       "title": "5 Reasons Why I Bought A Rusty E36 M3 Over The 'Superior' E46 M3",
+       "views": 1338638
+      },
+      {
+       "id": "ncBH5aF2Ce8",
+       "title": "I saved $100,000 on my Dream BMW - E46 M3 Pt 1",
+       "views": 1299823
+      }
+     ]
+    },
+    "2004": {
+     "score": 46,
+     "weight": 24.0,
+     "videos": 157,
+     "named": 3,
+     "top": [
+      {
+       "id": "E6pm5eW6F7k",
+       "title": "RICHARD HAMMOND MODIFIED MY E46 BMW M3 THAT I RESTORED",
+       "views": 5056373
+      },
+      {
+       "id": "6A_24qCzDqQ",
+       "title": "5 Reasons Why I Bought A Rusty E36 M3 Over The 'Superior' E46 M3",
+       "views": 1338638
+      },
+      {
+       "id": "ncBH5aF2Ce8",
+       "title": "I saved $100,000 on my Dream BMW - E46 M3 Pt 1",
+       "views": 1299823
+      }
+     ]
+    },
+    "2005": {
+     "score": 46,
+     "weight": 25.0,
+     "videos": 158,
+     "named": 4,
+     "top": [
+      {
+       "id": "E6pm5eW6F7k",
+       "title": "RICHARD HAMMOND MODIFIED MY E46 BMW M3 THAT I RESTORED",
+       "views": 5056373
+      },
+      {
+       "id": "6A_24qCzDqQ",
+       "title": "5 Reasons Why I Bought A Rusty E36 M3 Over The 'Superior' E46 M3",
+       "views": 1338638
+      },
+      {
+       "id": "ncBH5aF2Ce8",
+       "title": "I saved $100,000 on my Dream BMW - E46 M3 Pt 1",
+       "views": 1299823
+      }
+     ]
+    },
+    "2006": {
+     "score": 51,
+     "weight": 40.4,
+     "videos": 188,
+     "named": 13,
+     "top": [
+      {
+       "id": "E6pm5eW6F7k",
+       "title": "RICHARD HAMMOND MODIFIED MY E46 BMW M3 THAT I RESTORED",
+       "views": 5056373
+      },
+      {
+       "id": "0FTcr2IFeg0",
+       "title": "BMW Z4M | Car Review | Top Gear",
+       "views": 2375242
+      },
+      {
+       "id": "8R9lj3B3BmY",
+       "title": "Porsche Cayman S vs Corvette Z06 vs BMW Z4M // $30,000 Question",
+       "views": 1811184
+      }
+     ]
+    },
+    "2007": {
+     "score": 54,
+     "weight": 15.7,
+     "videos": 75,
+     "named": 3,
+     "top": [
+      {
+       "id": "0FTcr2IFeg0",
+       "title": "BMW Z4M | Car Review | Top Gear",
+       "views": 2375242
+      },
+      {
+       "id": "8R9lj3B3BmY",
+       "title": "Porsche Cayman S vs Corvette Z06 vs BMW Z4M // $30,000 Question",
+       "views": 1811184
+      },
+      {
+       "id": "M99aVa7VceY",
+       "title": "BMW 1000HP E21 S54 TURBO!",
+       "views": 1264771
+      }
+     ]
+    },
+    "2008": {
+     "score": 53,
+     "weight": 15.7,
+     "videos": 75,
+     "named": 3,
+     "top": [
+      {
+       "id": "0FTcr2IFeg0",
+       "title": "BMW Z4M | Car Review | Top Gear",
+       "views": 2375242
+      },
+      {
+       "id": "8R9lj3B3BmY",
+       "title": "Porsche Cayman S vs Corvette Z06 vs BMW Z4M // $30,000 Question",
+       "views": 1811184
+      },
+      {
+       "id": "M99aVa7VceY",
+       "title": "BMW 1000HP E21 S54 TURBO!",
+       "views": 1264771
+      }
+     ]
+    }
+   },
+   "videos": 195,
+   "pulled": 200
+  },
+  "bmw-s65": {
+   "years": {
+    "2008": {
+     "score": 45,
+     "weight": 33.2,
+     "videos": 189,
+     "named": 6,
+     "top": [
+      {
+       "id": "NfuXp8QnWoU",
+       "title": "Building a BMW S65 V8 From Scratch - BMW E92 M3 - Project Frankfurt: PT6",
+       "views": 6861354
+      },
+      {
+       "id": "fGDNzMLfSBY",
+       "title": "Here's Why the BMW M3 E92 Was the Craziest BMW M3",
+       "views": 2826379
+      },
+      {
+       "id": "u1ufYXIGrQM",
+       "title": "The E92 M3 - The Car That Changed My Life",
+       "views": 1304215
+      }
+     ]
+    },
+    "2009": {
+     "score": 44,
+     "weight": 31.2,
+     "videos": 187,
+     "named": 4,
+     "top": [
+      {
+       "id": "NfuXp8QnWoU",
+       "title": "Building a BMW S65 V8 From Scratch - BMW E92 M3 - Project Frankfurt: PT6",
+       "views": 6861354
+      },
+      {
+       "id": "fGDNzMLfSBY",
+       "title": "Here's Why the BMW M3 E92 Was the Craziest BMW M3",
+       "views": 2826379
+      },
+      {
+       "id": "u1ufYXIGrQM",
+       "title": "The E92 M3 - The Car That Changed My Life",
+       "views": 1304215
+      }
+     ]
+    },
+    "2010": {
+     "score": 43,
+     "weight": 33.2,
+     "videos": 189,
+     "named": 6,
+     "top": [
+      {
+       "id": "NfuXp8QnWoU",
+       "title": "Building a BMW S65 V8 From Scratch - BMW E92 M3 - Project Frankfurt: PT6",
+       "views": 6861354
+      },
+      {
+       "id": "fGDNzMLfSBY",
+       "title": "Here's Why the BMW M3 E92 Was the Craziest BMW M3",
+       "views": 2826379
+      },
+      {
+       "id": "u1ufYXIGrQM",
+       "title": "The E92 M3 - The Car That Changed My Life",
+       "views": 1304215
+      }
+     ]
+    },
+    "2011": {
+     "score": 44,
+     "weight": 34.2,
+     "videos": 190,
+     "named": 7,
+     "top": [
+      {
+       "id": "NfuXp8QnWoU",
+       "title": "Building a BMW S65 V8 From Scratch - BMW E92 M3 - Project Frankfurt: PT6",
+       "views": 6861354
+      },
+      {
+       "id": "fGDNzMLfSBY",
+       "title": "Here's Why the BMW M3 E92 Was the Craziest BMW M3",
+       "views": 2826379
+      },
+      {
+       "id": "u1ufYXIGrQM",
+       "title": "The E92 M3 - The Car That Changed My Life",
+       "views": 1304215
+      }
+     ]
+    },
+    "2012": {
+     "score": 45,
+     "weight": 32.2,
+     "videos": 188,
+     "named": 5,
+     "top": [
+      {
+       "id": "NfuXp8QnWoU",
+       "title": "Building a BMW S65 V8 From Scratch - BMW E92 M3 - Project Frankfurt: PT6",
+       "views": 6861354
+      },
+      {
+       "id": "fGDNzMLfSBY",
+       "title": "Here's Why the BMW M3 E92 Was the Craziest BMW M3",
+       "views": 2826379
+      },
+      {
+       "id": "u1ufYXIGrQM",
+       "title": "The E92 M3 - The Car That Changed My Life",
+       "views": 1304215
+      }
+     ]
+    },
+    "2013": {
+     "score": 44,
+     "weight": 31.0,
+     "videos": 186,
+     "named": 3,
+     "top": [
+      {
+       "id": "NfuXp8QnWoU",
+       "title": "Building a BMW S65 V8 From Scratch - BMW E92 M3 - Project Frankfurt: PT6",
+       "views": 6861354
+      },
+      {
+       "id": "fGDNzMLfSBY",
+       "title": "Here's Why the BMW M3 E92 Was the Craziest BMW M3",
+       "views": 2826379
+      },
+      {
+       "id": "u1ufYXIGrQM",
+       "title": "The E92 M3 - The Car That Changed My Life",
+       "views": 1304215
+      }
+     ]
+    }
+   },
+   "videos": 195,
    "pulled": 200
   },
   "bmw-s55": {

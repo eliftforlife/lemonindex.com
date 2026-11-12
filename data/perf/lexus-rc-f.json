@@ -1,0 +1,565 @@
+{
+ "slug": "lexus-rc-f",
+ "name": "Lexus RC F",
+ "short": "RC F",
+ "make": "Lexus",
+ "page": "/cars/lexus-rc-f/",
+ "focus": "usc10",
+ "star": "rcf20",
+ "h1": "Lexus RC F: performance, engines and what owners say",
+ "nhtsa": {
+  "make": "LEXUS",
+  "models": [
+   "RC F",
+   "RC"
+  ],
+  "note": "NHTSA files most RC F complaints under RC F, but the 2026 fuel pump recall and some complaints sit under RC, which also covers the RC 300 and RC 350."
+ },
+ "topics_extra": {
+  "Valley plate / coolant leak": "valley plate|coolant (leak|loss)|losing coolant|water pump",
+  "Fuel pump": "fuel pump",
+  "Torque vectoring diff": "torque vectoring|\\btvd\\b",
+  "Brake vibration": "brakes? (vibrat|shudder|judder|pulsat)|warped rotors?",
+  "Infotainment / touchpad": "touch ?pad|remote touch|infotainment|screen (freez|black)"
+ },
+ "gens": [
+  {
+   "id": "usc10",
+   "code": "USC10",
+   "years": "2015–2025",
+   "y0": 2015,
+   "y1": 2025,
+   "engine": "2UR-GSE",
+   "body": "Coupe",
+   "tag": "467–472 hp V8 coupe; Track and Fuji Speedway editions cut weight.",
+   "variants": [
+    {
+     "id": "rcf15",
+     "name": "RC F",
+     "years": "2015–2019",
+     "hp": {
+      "v": 467,
+      "src": [
+       "s15",
+       "s16"
+      ],
+      "note": "at 7,100 rpm"
+     },
+     "tq": {
+      "v": 389,
+      "src": [
+       "s15",
+       "s16"
+      ],
+      "note": "lb-ft at 4,800–5,600 rpm"
+     },
+     "z60": {
+      "v": 4.3,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 4.4,
+      "csrc": [
+       "s15",
+       "s16"
+      ]
+     },
+     "top": {
+      "v": "170 mph",
+      "src": [
+       "s15",
+       "s16"
+      ],
+      "note": "electronically limited (Lexus estimate)"
+     },
+     "trans": {
+      "v": "8-speed automatic (Sport Direct Shift), rear-drive",
+      "src": [
+       "s15",
+       "k19"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,958 lb",
+      "src": [
+       "s15",
+       "s16"
+      ],
+      "note": ""
+     }
+    },
+    {
+     "id": "rcf20",
+     "name": "RC F",
+     "years": "2020–2024",
+     "star": true,
+     "hp": {
+      "v": 472,
+      "src": [
+       "r20",
+       "s22"
+      ],
+      "note": "at 7,100 rpm"
+     },
+     "tq": {
+      "v": 395,
+      "src": [
+       "r20",
+       "s22"
+      ],
+      "note": "lb-ft at 4,800–5,600 rpm"
+     },
+     "z60": {
+      "v": 4.1,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 4.2,
+      "csrc": [
+       "r20",
+       "r22"
+      ]
+     },
+     "top": {
+      "v": "168 mph",
+      "src": [
+       "s22"
+      ],
+      "note": "Lexus top track speed"
+     },
+     "trans": {
+      "v": "8-speed automatic (Sport Direct Shift), rear-drive",
+      "src": [
+       "s22"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,946 lb",
+      "src": [
+       "s21",
+       "s22"
+      ],
+      "note": "2021–2022 spec sheets"
+     },
+     "price": {
+      "v": "$64,750",
+      "src": [
+       "r20",
+       "p20"
+      ],
+      "note": "2020, plus destination; Lexus’s Nov 2019 sheet lists $64,900 plus $1,025"
+     },
+     "what": "Update: +5 hp, shorter 3.13 final drive, launch control and lighter parts.",
+     "what_src": [
+      "r20",
+      "d20"
+     ]
+    },
+    {
+     "id": "rcf-track",
+     "name": "RC F Track Edition",
+     "years": "2020",
+     "hp": {
+      "v": 472,
+      "src": [
+       "r20"
+      ],
+      "note": "same V8 as the RC F"
+     },
+     "tq": {
+      "v": 395,
+      "src": [
+       "r20"
+      ],
+      "note": "lb-ft"
+     },
+     "z60": {
+      "v": null,
+      "who": "",
+      "src": [],
+      "claim": 3.96,
+      "csrc": [
+       "r20",
+       "d20"
+      ]
+     },
+     "top": {
+      "v": "168 mph",
+      "src": [
+       "r20"
+      ],
+      "note": ""
+     },
+     "trans": {
+      "v": "8-speed automatic (Sport Direct Shift), rear-drive",
+      "src": [
+       "r20"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,781 lb",
+      "src": [
+       "r20"
+      ],
+      "note": "176 lb less than the previous RC F"
+     },
+     "price": {
+      "v": "$96,650",
+      "src": [
+       "r20",
+       "p20"
+      ],
+      "note": "plus destination; Nov 2019 sheet lists $96,800 plus $1,025"
+     },
+     "what": "Carbon-ceramic brakes, fixed carbon wing, carbon roof and hood, titanium exhaust.",
+     "what_src": [
+      "r20",
+      "d20"
+     ]
+    },
+    {
+     "id": "rcf-fuji",
+     "name": "RC F Fuji Speedway Edition",
+     "years": "2021–2022",
+     "hp": {
+      "v": 472,
+      "src": [
+       "r22"
+      ],
+      "note": ""
+     },
+     "tq": {
+      "v": 395,
+      "src": [
+       "r22"
+      ],
+      "note": "lb-ft at 4,800 rpm"
+     },
+     "z60": {
+      "v": 4.0,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 3.96,
+      "csrc": [
+       "r21",
+       "r22"
+      ]
+     },
+     "top": {
+      "v": "168 mph",
+      "src": [
+       "r22"
+      ],
+      "note": "Lexus top track speed"
+     },
+     "trans": {
+      "v": "8-speed automatic (Sport Direct Shift), rear-drive",
+      "src": [
+       "s22"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$96,675",
+      "src": [
+       "p21",
+       "p22"
+      ],
+      "note": "2021, plus $1,025 destination; 2022: $102,245 including $1,150"
+     },
+     "what": "Limited run (60 cars for 2021, 50 for 2022): carbon-ceramic brakes, titanium exhaust, carbon aero.",
+     "what_src": [
+      "r21",
+      "r22"
+     ]
+    },
+    {
+     "id": "rcf25",
+     "name": "RC F Final Edition",
+     "years": "2025",
+     "hp": {
+      "v": 472,
+      "src": [
+       "s25",
+       "r25"
+      ],
+      "note": "at 7,100 rpm"
+     },
+     "tq": {
+      "v": 395,
+      "src": [
+       "s25"
+      ],
+      "note": "lb-ft at 4,800–5,600 rpm"
+     },
+     "z60": {
+      "v": null,
+      "who": "",
+      "src": [],
+      "claim": 4.2,
+      "csrc": [
+       "s25",
+       "r25"
+      ]
+     },
+     "top": {
+      "v": "168 mph",
+      "src": [
+       "s25"
+      ],
+      "note": "Lexus top track speed"
+     },
+     "trans": {
+      "v": "8-speed automatic (Sport Direct Shift), rear-drive",
+      "src": [
+       "s25"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,946 lb",
+      "src": [
+       "s25"
+      ],
+      "note": "2025 spec sheet"
+     },
+     "price": {
+      "v": "$94,000",
+      "src": [
+       "r25"
+      ],
+      "note": "including $1,175 destination"
+     },
+     "what": "Only RC F for 2025: carbon roof, hood, front spoiler and fixed wing standard.",
+     "what_src": [
+      "s25",
+      "r25"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "2UR-GSE": {
+   "name": "Lexus 2UR-GSE",
+   "what": "5.0-liter V-8, naturally aspirated",
+   "study": "toyota-2ur-gse",
+   "page": "/engines/toyota-2ur-gse/",
+   "yt": [
+    "scy",
+    "toyota-2ur-gse"
+   ],
+   "facts": [
+    [
+     "Redline",
+     "7,300 rpm",
+     [
+      "k19"
+     ]
+    ],
+    [
+     "Output",
+     "467 hp / 389 lb-ft (2015–2019); 472 hp / 395 lb-ft (2020–2025)",
+     [
+      "s16",
+      "s22"
+     ]
+    ],
+    [
+     "Valvetrain",
+     "Titanium intake and exhaust valves, forged connecting rods",
+     [
+      "k19",
+      "l15"
+     ]
+    ],
+    [
+     "Fuel",
+     "Direct plus port injection (D-4S), 12.3:1 compression",
+     [
+      "s15",
+      "k19"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "High-pressure fuel pump recall",
+     "kind": "Recall",
+     "rx": "high.?pressure (fuel )?pump|fuel leak|(smell|odor) of (gas|fuel)|(gas|fuel) (smell|odor)",
+     "x": "On some 2015–2018 RC Fs (and GS F, 2018 LC 500), a damper in one of the two high-pressure fuel pumps could crack the pump cover and leak fuel.",
+     "fix": "Dealer replaces the high-pressure fuel pumps for free (NHTSA 18V-107).",
+     "src": [
+      "r18"
+     ]
+    },
+    {
+     "t": "In-tank fuel pump recall",
+     "kind": "Recall",
+     "rx": "low.?pressure (fuel )?pump|fuel pump|stall(ed|s|ing)? (while|when) driving|engine (shut|cut) off|limp mode",
+     "x": "On 2015–2022 RC Fs (plus GS F and 2022 IS 500), the in-tank pump’s resin impeller can swell with hot fuel and stop the pump, which can stall the engine.",
+     "fix": "Dealer replaces the fuel pump assembly for free (NHTSA 26V-222, Lexus 26LA05).",
+     "src": [
+      "r26",
+      "r26l"
+     ]
+    },
+    {
+     "t": "Valley plate coolant leak",
+     "kind": "Owner-reported",
+     "rx": "valley plate|pink (crust|residue|coolant)",
+     "x": "Sealant under the valley plate can fail and leak coolant. 8020 Automotive ties it mainly to the older IS F and says it hasn’t heard of it on the RC F.",
+     "fix": "Reseal the valley plate; Jalopnik puts it at about $1,500 to over $3,000.",
+     "src": [
+      "a8020",
+      "jal"
+     ]
+    }
+   ]
+  }
+ },
+ "compare": [
+  {
+   "slug": "bmw-m4",
+   "name": "BMW M4"
+  },
+  {
+   "slug": "amg-c63",
+   "name": "Mercedes-AMG C63"
+  },
+  {
+   "slug": "audi-rs5",
+   "name": "Audi RS 5"
+  },
+  {
+   "slug": "lexus-lc-500",
+   "name": "Lexus LC 500"
+  }
+ ],
+ "sources": {
+  "l15": {
+   "t": "Lexus USA: The F strikes again, Lexus unleashes the 2015 RC F (Sep 2014)",
+   "u": "https://pressroom.lexus.com/releases/2015+lexus+rc+f+product+news.htm",
+   "k": "Lexus"
+  },
+  "s15": {
+   "t": "Lexus USA: 2015 RC F product information (PDF)",
+   "u": "https://s3.amazonaws.com/toyota-cms-media/toyota-pdfs/2015_RC_F_Product_Information.pdf",
+   "k": "Lexus"
+  },
+  "s16": {
+   "t": "Lexus USA: 2016 RC F product information (PDF)",
+   "u": "https://s3.amazonaws.com/toyota-cms-media/toyota-pdfs/2016_Lexus_RC_F_Product_Information.pdf",
+   "k": "Lexus"
+  },
+  "k19": {
+   "t": "Lexus USA: 2019 RC F press kit (PDF)",
+   "u": "https://lexus-cms-media.s3.us-east-2.amazonaws.com/wp-content/uploads/2019/06/2019lexusrcfpresskit.pdf",
+   "k": "Lexus"
+  },
+  "d20": {
+   "t": "Lexus USA: 2020 RC F and RC F Track Edition debut in Detroit (Jan 2019)",
+   "u": "https://pressroom.lexus.com/2020-lexus-rc-f-and-rc-f-track-edition-debut-in-detroit/",
+   "k": "Lexus"
+  },
+  "r20": {
+   "t": "Lexus USA: The pinnacle of F, 2020 RC F and RC F Track Edition (Apr 2019)",
+   "u": "https://pressroom.lexus.com/the-pinnacle-of-f-2020-lexus-rcf-and-rcf-track-edition/",
+   "k": "Lexus"
+  },
+  "p20": {
+   "t": "Lexus USA: 2020 model year MSRP sheet (Nov 2019, PDF)",
+   "u": "https://lexus-cms-media.s3.us-east-2.amazonaws.com/wp-content/uploads/2019/11/MY-2020-Lexus-Pricing-Sheet-MASTER.pdf",
+   "k": "Lexus"
+  },
+  "r21": {
+   "t": "Lexus USA: The ultimate F, 2021 RC F and RC F Fuji Speedway Edition (Sep 2020)",
+   "u": "https://pressroom.lexus.com/the-ultimate-f-2021-rc-f-and-rc-f-fuji-speedway-edition/",
+   "k": "Lexus"
+  },
+  "s21": {
+   "t": "Lexus USA: 2021 RC F product specs (PDF)",
+   "u": "https://lexus-cms-media.s3.us-east-2.amazonaws.com/wp-content/uploads/2020/09/2021-Lexus-RC-F-Product-Specs.pdf",
+   "k": "Lexus"
+  },
+  "p21": {
+   "t": "Lexus USA: 2020-2021 model year MSRP sheet (Sep 2020, PDF)",
+   "u": "https://lexus-cms-media.s3.us-east-2.amazonaws.com/wp-content/uploads/2020/09/MY-2020-21-Lexus-Pricing-Sheet.pdf",
+   "k": "Lexus"
+  },
+  "r22": {
+   "t": "Lexus USA: 2022 RC F, RC F Fuji Speedway Edition (Sep 2021)",
+   "u": "https://pressroom.lexus.com/2022-rc-f-rc-f-fuji-speedway-edition-unparalleled-crafted-performance/",
+   "k": "Lexus"
+  },
+  "s22": {
+   "t": "Lexus USA: 2022 RC F product specs (PDF)",
+   "u": "https://lexus-cms-media.s3.us-east-2.amazonaws.com/wp-content/uploads/2021/08/2022-Lexus-RC-F-Product-Specs.pdf",
+   "k": "Lexus"
+  },
+  "p22": {
+   "t": "Lexus USA: 2022 model year MSRP sheet (PDF)",
+   "u": "https://lexus-cms-media.s3.us-east-2.amazonaws.com/wp-content/uploads/2021/07/MY-2022-Lexus-Pricing-Sheet-.pdf",
+   "k": "Lexus"
+  },
+  "r25": {
+   "t": "Lexus USA: 2025 Lexus RC and RC F, a sonorous swan song (Jan 2025)",
+   "u": "https://pressroom.lexus.com/2025-lexus-rc-and-rc-f-a-sonorous-swan-song/",
+   "k": "Lexus"
+  },
+  "s25": {
+   "t": "Lexus USA: 2025 RC F specifications (PDF)",
+   "u": "https://lexus-cms-media.s3.us-east-2.amazonaws.com/wp-content/uploads/2025/01/2025_Lexus_RCF_Specs_012125update.pdf",
+   "k": "Lexus"
+  },
+  "z60": {
+   "t": "0-60specs.com: Lexus RC F 0-60 runs by magazine (Car and Driver, MotorTrend, MotorWeek)",
+   "u": "https://www.0-60specs.com/lexus/rc-f-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "r18": {
+   "t": "NHTSA recall 18V-107: 2UR-GSE high-pressure fuel pumps (Feb 2018)",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=18V107",
+   "k": "Recall"
+  },
+  "r26": {
+   "t": "NHTSA recall 26V-222: low-pressure fuel pump, 2015-2022 RC (Apr 2026)",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=26V222",
+   "k": "Recall"
+  },
+  "r26l": {
+   "t": "Lexus owner letter for recall 26V-222 / 26LA05 naming 2015-2022 RC F (NHTSA copy)",
+   "u": "https://static.nhtsa.gov/odi/rcl/2026/RIONL-26V222-9586.pdf",
+   "k": "Recall"
+  },
+  "a8020": {
+   "t": "8020 Automotive: Ultimate Toyota 2UR-GSE engine guide (updated Jan 2024)",
+   "u": "https://8020automotive.com/ultimate-toyota-2ur-gse-engine-guide/",
+   "k": "enthusiast outlet"
+  },
+  "jal": {
+   "t": "Jalopnik: What makes the Lexus IS F and RC F 2UR-GSE V8 nearly indestructible? (Oct 2026)",
+   "u": "https://www.jalopnik.com/2296879/why-lexus-is-f-rc-f-2ur-gse-v8-nearly-indestructible/",
+   "k": "outlet"
+  },
+  "wrc": {
+   "t": "Wikipedia: Lexus RC",
+   "u": "https://en.wikipedia.org/wiki/Lexus_RC",
+   "k": "Wikipedia (fallback, chassis code only)"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-lexus-rc-f",
+ "img": "/assets/ai-perf/lexus-rc-f.webp?v=1"
+}

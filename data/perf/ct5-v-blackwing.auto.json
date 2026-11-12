@@ -1,0 +1,246 @@
+{
+ "built": "2026-11-11",
+ "nhtsa": {
+  "by_year": {
+   "2020": 39,
+   "2021": 30,
+   "2022": 11,
+   "2023": 13,
+   "2024": 2,
+   "2025": 10,
+   "2026": 6
+  },
+  "gens": {
+   "g1": {
+    "n": 36,
+    "issues": {}
+   }
+  },
+  "parts": [
+   [
+    "Air bags",
+    5
+   ],
+   [
+    "Power train",
+    5
+   ],
+   [
+    "Unknown or other",
+    5
+   ],
+   [
+    "Forward collision avoidance",
+    5
+   ],
+   [
+    "Structure",
+    5
+   ],
+   [
+    "Tires",
+    4
+   ]
+  ]
+ },
+ "recalls": {
+  "2022": [
+   {
+    "id": "21V611000",
+    "part": "AIR BAGS:SIDE/WINDOW:CURTAIN",
+    "summary": "General Motors, LLC. (GM) is recalling certain 2020-2022 Cadillac CT4 and CT5 vehicles.  The roof rail side-curtain air bags may not have been installed correctly, which could result in an improper air bag deployment during a crash."
+   },
+   {
+    "id": "22V903000",
+    "part": "EXTERIOR LIGHTING:LIGHTING CONTROL MODULE:SOFTWARE",
+    "summary": "General Motors, LLC (GM) is recalling certain 2020-2023 Cadillac CT4 and CT5; 2021-2023 Buick Envision; and 2022-2023 Cadillac Escalade and Escalade ESV, Chevrolet Silverado 1500, Suburban, Tahoe, GMC Sierra 1500, Yukon, and Yukon XL vehicles.  The daytime running lights (DRLs) may not deactivate when the headlights are on.  As such, these vehicles fail to comply with the requirements of Federal M"
+   }
+  ],
+  "2023": [
+   {
+    "id": "22V903000",
+    "part": "EXTERIOR LIGHTING:LIGHTING CONTROL MODULE:SOFTWARE",
+    "summary": "General Motors, LLC (GM) is recalling certain 2020-2023 Cadillac CT4 and CT5; 2021-2023 Buick Envision; and 2022-2023 Cadillac Escalade and Escalade ESV, Chevrolet Silverado 1500, Suburban, Tahoe, GMC Sierra 1500, Yukon, and Yukon XL vehicles.  The daytime running lights (DRLs) may not deactivate when the headlights are on.  As such, these vehicles fail to comply with the requirements of Federal M"
+   }
+  ],
+  "2024": [],
+  "2025": []
+ },
+ "yt": {
+  "car-ct5-v-blackwing": null,
+  "gm-lt4": {
+   "videos": 200,
+   "praise": [
+    [
+     "Looks",
+     27
+    ],
+    [
+     "Power and acceleration",
+     18
+    ],
+    [
+     "Handling and steering",
+     13
+    ],
+    [
+     "Interior and seats",
+     12
+    ]
+   ],
+   "trouble": [
+    [
+     "Coolant leaks / water pump / overheating",
+     10
+    ],
+    [
+     "Supercharger / heat soak",
+     6
+    ]
+   ],
+   "top": [
+    {
+     "id": "Ko9kzyqW-l8",
+     "title": "Corvette Z06 | Car Review | Top Gear",
+     "views": 5401187,
+     "ch": "Top Gear"
+    },
+    {
+     "id": "Dn6gmBQUTdg",
+     "title": "2023 Corvette Z06 Review // The $100,000 Supercar",
+     "views": 3280814,
+     "ch": "Throttle House"
+    },
+    {
+     "id": "2fFMeWn0a8o",
+     "title": "Is the Chevy Corvette Z06 Finally a Supercar?",
+     "views": 2922468,
+     "ch": "Doug DeMuro"
+    }
+   ]
+  }
+ },
+ "scores": {
+  "gm-lt4": {
+   "years": {
+    "2015": {
+     "score": 52,
+     "weight": 26.0,
+     "videos": 98,
+     "named": 9,
+     "top": [
+      {
+       "id": "i-9ohImmNBE",
+       "title": "WHY Did This Camaro ZL1 Engine SEIZE on the TRACK? - LT4 Engine Teardown!",
+       "views": 1537368
+      },
+      {
+       "id": "cYHnp52YGxo",
+       "title": "Our 1967 LT4 Swapped Camaro SS Hits The Highway For The First Time!!!",
+       "views": 846988
+      },
+      {
+       "id": "b8_l79MNTJk",
+       "title": "Stock z06 vs Stock ZL1 - 1/4 mile drag race - Corvette C7 z06 vs Camaro ZL1",
+       "views": 594217
+      }
+     ]
+    },
+    "2016": {
+     "score": 54,
+     "weight": 23.0,
+     "videos": 95,
+     "named": 6,
+     "top": [
+      {
+       "id": "i-9ohImmNBE",
+       "title": "WHY Did This Camaro ZL1 Engine SEIZE on the TRACK? - LT4 Engine Teardown!",
+       "views": 1537368
+      },
+      {
+       "id": "cYHnp52YGxo",
+       "title": "Our 1967 LT4 Swapped Camaro SS Hits The Highway For The First Time!!!",
+       "views": 846988
+      },
+      {
+       "id": "aIUmkWAqC9c",
+       "title": "2016 Chevy Corvette Z06 - Review and Road Test",
+       "views": 757386
+      }
+     ]
+    },
+    "2017": {
+     "score": 52,
+     "weight": 19.0,
+     "videos": 91,
+     "named": 2,
+     "top": [
+      {
+       "id": "i-9ohImmNBE",
+       "title": "WHY Did This Camaro ZL1 Engine SEIZE on the TRACK? - LT4 Engine Teardown!",
+       "views": 1537368
+      },
+      {
+       "id": "cYHnp52YGxo",
+       "title": "Our 1967 LT4 Swapped Camaro SS Hits The Highway For The First Time!!!",
+       "views": 846988
+      },
+      {
+       "id": "b8_l79MNTJk",
+       "title": "Stock z06 vs Stock ZL1 - 1/4 mile drag race - Corvette C7 z06 vs Camaro ZL1",
+       "views": 594217
+      }
+     ]
+    },
+    "2018": {
+     "score": 51,
+     "weight": 19.0,
+     "videos": 91,
+     "named": 2,
+     "top": [
+      {
+       "id": "i-9ohImmNBE",
+       "title": "WHY Did This Camaro ZL1 Engine SEIZE on the TRACK? - LT4 Engine Teardown!",
+       "views": 1537368
+      },
+      {
+       "id": "cYHnp52YGxo",
+       "title": "Our 1967 LT4 Swapped Camaro SS Hits The Highway For The First Time!!!",
+       "views": 846988
+      },
+      {
+       "id": "b8_l79MNTJk",
+       "title": "Stock z06 vs Stock ZL1 - 1/4 mile drag race - Corvette C7 z06 vs Camaro ZL1",
+       "views": 594217
+      }
+     ]
+    },
+    "2019": {
+     "score": 53,
+     "weight": 26.0,
+     "videos": 98,
+     "named": 9,
+     "top": [
+      {
+       "id": "i-9ohImmNBE",
+       "title": "WHY Did This Camaro ZL1 Engine SEIZE on the TRACK? - LT4 Engine Teardown!",
+       "views": 1537368
+      },
+      {
+       "id": "cYHnp52YGxo",
+       "title": "Our 1967 LT4 Swapped Camaro SS Hits The Highway For The First Time!!!",
+       "views": 846988
+      },
+      {
+       "id": "wjUVyw1vhTw",
+       "title": "2019 Chevrolet Corvette Z06 Review - Does it Need a Mid-Engine?",
+       "views": 796066
+      }
+     ]
+    }
+   },
+   "videos": 113,
+   "pulled": 200
+  }
+ }
+}

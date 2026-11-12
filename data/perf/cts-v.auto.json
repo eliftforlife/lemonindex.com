@@ -1,0 +1,1147 @@
+{
+ "built": "2026-11-11",
+ "nhtsa": {
+  "by_year": {
+   "2003": 313,
+   "2004": 224,
+   "2005": 277,
+   "2006": 269,
+   "2007": 217,
+   "2008": 175,
+   "2009": 167,
+   "2010": 67,
+   "2011": 101,
+   "2012": 65,
+   "2013": 73,
+   "2014": 146,
+   "2015": 48,
+   "2016": 31,
+   "2017": 27,
+   "2018": 8,
+   "2019": 10
+  },
+  "gens": {
+   "g1": {
+    "n": 987,
+    "issues": {
+     "Fuel pump module can overheat": {
+      "n": 65,
+      "ex": [
+       "10062993",
+       "10088181"
+      ]
+     }
+    }
+   },
+   "g2": {
+    "n": 667,
+    "issues": {
+     "Supercharger rattle at idle": {
+      "n": 1,
+      "ex": [
+       "10649758"
+      ]
+     },
+     "Low-rpm buzz on replacement superchargers": {
+      "n": 0,
+      "ex": []
+     }
+    }
+   },
+   "g3": {
+    "n": 76,
+    "issues": {
+     "8-speed automatic shudder and harsh shifts (disputed)": {
+      "n": 3,
+      "ex": [
+       "11337345",
+       "11487639"
+      ]
+     }
+    }
+   }
+  },
+  "parts": [
+   [
+    "Power train",
+    416
+   ],
+   [
+    "Air bags",
+    330
+   ],
+   [
+    "Electrical system",
+    288
+   ],
+   [
+    "Engine",
+    185
+   ],
+   [
+    "Service brakes",
+    162
+   ],
+   [
+    "Steering",
+    121
+   ]
+  ]
+ },
+ "recalls": {
+  "2004": [
+   {
+    "id": "14V542000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+    "summary": "General Motors LLC (GM) is recalling certain model year 2004-2007 Cadillac CTS-V vehicles manufactured October 6, 2003, to March 15, 2007, and 2006-2007 Cadillac STS-V vehicles manufactured June 23, 2005, to March 15, 2007.  In the affected vehicles, the electrical terminals of the fuel pump module may overheat resulting in the melting of the flange material."
+   },
+   {
+    "id": "14V394000",
+    "part": "ELECTRICAL SYSTEM:IGNITION",
+    "summary": "This defect can affect the safe operation of the airbag system.  Until this recall is performed, customers should remove all items from their key rings, leaving only the ignition key.  The key fob (if applicable), should also be removed from the key ring.\r\n\r\nGeneral Motors LLC (GM) notified the agency on July 2, 2014 that they are recalling 554,328 model year 2003-2014 Cadillac CTS vehicles manufa"
+   },
+   {
+    "id": "10V105000",
+    "part": "SERVICE BRAKES, HYDRAULIC:FOUNDATION COMPONENTS:HOSES, LINES/PIPING, AND FITTINGS",
+    "summary": "GENERAL MOTORS HAS NOTIFIED NHTSA OF A DEFECT IN CERTAIN MODEL YEAR 2003-2007 CADILLAC CTS VEHICLES CURRENTLY REGISTERED IN OR ORIGINALLY SOLD IN CONNECTICUT, DELAWARE, ILLINOIS, INDIANA, IOWA, MAINE, MARYLAND, MASSACHUSETTS, MICHIGAN, MINNESOTA, MISSOURI, NEW HAMPSHIRE, NEW JERSEY, NEW YORK, OHIO, PENNSYLVANIA, RHODE ISLAND, VERMONT, WASHINGTON D.C., WEST VIRGINIA AND WISCONSIN. SOME OF THESE VEH"
+   },
+   {
+    "id": "05V024000",
+    "part": "AIR BAGS",
+    "summary": "ON CERTAIN PASSENGER VEHICLES, AN INTERACTION BETWEEN THE SENSING AND DIAGNOSTIC MODULE AND VEHICLE'S ELECTRICAL SYSTEM MAY CAUSE THE DRIVER'S FRONTAL AIR BAG AND/OR ROOF-MOUNTED SIDE IMPACT AIR BAG TO DEPLOY WHEN THE IGNITION KEY IS TURNED TO THE \"ON\" POSITION."
+   },
+   {
+    "id": "03V346000",
+    "part": "SEATS",
+    "summary": "CERTAIN PASSENGER AND SPORT UTILITY VEHICLES FAIL TO COMPLY WITH THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 207, \"SEATING SYSTEMS.\"   ONE OR BOTH FRONT ANCHOR TABS FOR THE FRONT BUCKET SEATS ARE NOT ENGAGED IN THE FLOOR PAN REINFORCEMENT SLOTS.  A SEAT WITH ONLY ONE TAB ENGAGED OR NEITHER ENGAGED WOULD NOT MEET THE STATIC REARWARD LOADING TEST REQUIREMENTS OF THE STANDARD."
+   },
+   {
+    "id": "04V273000",
+    "part": "STEERING:LINKAGES",
+    "summary": "ON CERTAIN PASSENGER VEHICLES INVOLVED IN THIS CAMPAIGN, THE LOWER CONTROL ARM BALL STUD NUT/WASHER ASSEMBLIES WITH WASHERS WERE MADE OF THE WRONG MATERIAL.  THE WASHERS MAY FRACTURE AND BECOME LOOSE OR FALL AWAY FROM THE VEHICLE, REDUCING CLAMP LOAD.  SEPARATION OF THE CONTROL ARM BALL STUD AND STEERING KNUCKLE, DUE TO DISENGAGEMENT OF THE TAPERED ATTACHMENT AND RETAINING NUT, IS POSSIBLE."
+   }
+  ],
+  "2005": [
+   {
+    "id": "14V542000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+    "summary": "General Motors LLC (GM) is recalling certain model year 2004-2007 Cadillac CTS-V vehicles manufactured October 6, 2003, to March 15, 2007, and 2006-2007 Cadillac STS-V vehicles manufactured June 23, 2005, to March 15, 2007.  In the affected vehicles, the electrical terminals of the fuel pump module may overheat resulting in the melting of the flange material."
+   },
+   {
+    "id": "14V394000",
+    "part": "ELECTRICAL SYSTEM:IGNITION",
+    "summary": "This defect can affect the safe operation of the airbag system.  Until this recall is performed, customers should remove all items from their key rings, leaving only the ignition key.  The key fob (if applicable), should also be removed from the key ring.\r\n\r\nGeneral Motors LLC (GM) notified the agency on July 2, 2014 that they are recalling 554,328 model year 2003-2014 Cadillac CTS vehicles manufa"
+   },
+   {
+    "id": "10V644000",
+    "part": "AIR BAGS:FRONTAL:SENSOR/CONTROL MODULE-INACTIVE",
+    "summary": "GENERAL MOTORS IS RECALLING CERTAIN MODEL YEAR 2005-2007 CADILLAC CTS VEHICLES.  SOME OF THESE VEHICLES HAVE A CONDITION IN WHICH REPEATED FLEXING OF THE PASSENGER SENSING SYSTEM MAT IN THE FRONT PASSENGER SEAT MAY CAUSE THE MAT TO KINK, BEND, OR FOLD.  THIS FLEXING CAN BREAK THE CONNECTIONS IN THE MAT. IF THIS OCCURS, THE SENSOR MAY NOT DETECT THE PRESENCE OF A FRONT SEAT PASSENGER AND WILL DISAB"
+   },
+   {
+    "id": "10V105000",
+    "part": "SERVICE BRAKES, HYDRAULIC:FOUNDATION COMPONENTS:HOSES, LINES/PIPING, AND FITTINGS",
+    "summary": "GENERAL MOTORS HAS NOTIFIED NHTSA OF A DEFECT IN CERTAIN MODEL YEAR 2003-2007 CADILLAC CTS VEHICLES CURRENTLY REGISTERED IN OR ORIGINALLY SOLD IN CONNECTICUT, DELAWARE, ILLINOIS, INDIANA, IOWA, MAINE, MARYLAND, MASSACHUSETTS, MICHIGAN, MINNESOTA, MISSOURI, NEW HAMPSHIRE, NEW JERSEY, NEW YORK, OHIO, PENNSYLVANIA, RHODE ISLAND, VERMONT, WASHINGTON D.C., WEST VIRGINIA AND WISCONSIN. SOME OF THESE VEH"
+   },
+   {
+    "id": "07V589000",
+    "part": "POWER TRAIN:AXLE ASSEMBLY:AXLE SHAFT:SEAL",
+    "summary": "ON CERTAIN PASSENGER VEHICLES, THE REAR AXLE PINION SEAL DOES NOT MEET ALL OF THE SPECIFICATIONS AND MAY EXPERIENCE A FLUID LEAK."
+   },
+   {
+    "id": "06V020000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY",
+    "summary": "CERTAIN VEHICLES EQUIPPED WITH V6 ENGINES MAY HAVE A CONDITION WHERE FUEL IS NO LONGER SUPPLIED TO THE ENGINE.  THIS CONDITION OCCURS WITHOUT THE ILLUMINATION OF THE FUEL LEVEL LOW INDICATOR LIGHT OR THE WARNING CHIME."
+   }
+  ],
+  "2006": [
+   {
+    "id": "14V542000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+    "summary": "General Motors LLC (GM) is recalling certain model year 2004-2007 Cadillac CTS-V vehicles manufactured October 6, 2003, to March 15, 2007, and 2006-2007 Cadillac STS-V vehicles manufactured June 23, 2005, to March 15, 2007.  In the affected vehicles, the electrical terminals of the fuel pump module may overheat resulting in the melting of the flange material."
+   },
+   {
+    "id": "14V394000",
+    "part": "ELECTRICAL SYSTEM:IGNITION",
+    "summary": "This defect can affect the safe operation of the airbag system.  Until this recall is performed, customers should remove all items from their key rings, leaving only the ignition key.  The key fob (if applicable), should also be removed from the key ring.\r\n\r\nGeneral Motors LLC (GM) notified the agency on July 2, 2014 that they are recalling 554,328 model year 2003-2014 Cadillac CTS vehicles manufa"
+   },
+   {
+    "id": "10V644000",
+    "part": "AIR BAGS:FRONTAL:SENSOR/CONTROL MODULE-INACTIVE",
+    "summary": "GENERAL MOTORS IS RECALLING CERTAIN MODEL YEAR 2005-2007 CADILLAC CTS VEHICLES.  SOME OF THESE VEHICLES HAVE A CONDITION IN WHICH REPEATED FLEXING OF THE PASSENGER SENSING SYSTEM MAT IN THE FRONT PASSENGER SEAT MAY CAUSE THE MAT TO KINK, BEND, OR FOLD.  THIS FLEXING CAN BREAK THE CONNECTIONS IN THE MAT. IF THIS OCCURS, THE SENSOR MAY NOT DETECT THE PRESENCE OF A FRONT SEAT PASSENGER AND WILL DISAB"
+   },
+   {
+    "id": "10V105000",
+    "part": "SERVICE BRAKES, HYDRAULIC:FOUNDATION COMPONENTS:HOSES, LINES/PIPING, AND FITTINGS",
+    "summary": "GENERAL MOTORS HAS NOTIFIED NHTSA OF A DEFECT IN CERTAIN MODEL YEAR 2003-2007 CADILLAC CTS VEHICLES CURRENTLY REGISTERED IN OR ORIGINALLY SOLD IN CONNECTICUT, DELAWARE, ILLINOIS, INDIANA, IOWA, MAINE, MARYLAND, MASSACHUSETTS, MICHIGAN, MINNESOTA, MISSOURI, NEW HAMPSHIRE, NEW JERSEY, NEW YORK, OHIO, PENNSYLVANIA, RHODE ISLAND, VERMONT, WASHINGTON D.C., WEST VIRGINIA AND WISCONSIN. SOME OF THESE VEH"
+   },
+   {
+    "id": "07V589000",
+    "part": "POWER TRAIN:AXLE ASSEMBLY:AXLE SHAFT:SEAL",
+    "summary": "ON CERTAIN PASSENGER VEHICLES, THE REAR AXLE PINION SEAL DOES NOT MEET ALL OF THE SPECIFICATIONS AND MAY EXPERIENCE A FLUID LEAK."
+   },
+   {
+    "id": "06V020000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY",
+    "summary": "CERTAIN VEHICLES EQUIPPED WITH V6 ENGINES MAY HAVE A CONDITION WHERE FUEL IS NO LONGER SUPPLIED TO THE ENGINE.  THIS CONDITION OCCURS WITHOUT THE ILLUMINATION OF THE FUEL LEVEL LOW INDICATOR LIGHT OR THE WARNING CHIME."
+   }
+  ],
+  "2007": [
+   {
+    "id": "14V542000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+    "summary": "General Motors LLC (GM) is recalling certain model year 2004-2007 Cadillac CTS-V vehicles manufactured October 6, 2003, to March 15, 2007, and 2006-2007 Cadillac STS-V vehicles manufactured June 23, 2005, to March 15, 2007.  In the affected vehicles, the electrical terminals of the fuel pump module may overheat resulting in the melting of the flange material."
+   },
+   {
+    "id": "14V394000",
+    "part": "ELECTRICAL SYSTEM:IGNITION",
+    "summary": "This defect can affect the safe operation of the airbag system.  Until this recall is performed, customers should remove all items from their key rings, leaving only the ignition key.  The key fob (if applicable), should also be removed from the key ring.\r\n\r\nGeneral Motors LLC (GM) notified the agency on July 2, 2014 that they are recalling 554,328 model year 2003-2014 Cadillac CTS vehicles manufa"
+   },
+   {
+    "id": "10V644000",
+    "part": "AIR BAGS:FRONTAL:SENSOR/CONTROL MODULE-INACTIVE",
+    "summary": "GENERAL MOTORS IS RECALLING CERTAIN MODEL YEAR 2005-2007 CADILLAC CTS VEHICLES.  SOME OF THESE VEHICLES HAVE A CONDITION IN WHICH REPEATED FLEXING OF THE PASSENGER SENSING SYSTEM MAT IN THE FRONT PASSENGER SEAT MAY CAUSE THE MAT TO KINK, BEND, OR FOLD.  THIS FLEXING CAN BREAK THE CONNECTIONS IN THE MAT. IF THIS OCCURS, THE SENSOR MAY NOT DETECT THE PRESENCE OF A FRONT SEAT PASSENGER AND WILL DISAB"
+   },
+   {
+    "id": "10V105000",
+    "part": "SERVICE BRAKES, HYDRAULIC:FOUNDATION COMPONENTS:HOSES, LINES/PIPING, AND FITTINGS",
+    "summary": "GENERAL MOTORS HAS NOTIFIED NHTSA OF A DEFECT IN CERTAIN MODEL YEAR 2003-2007 CADILLAC CTS VEHICLES CURRENTLY REGISTERED IN OR ORIGINALLY SOLD IN CONNECTICUT, DELAWARE, ILLINOIS, INDIANA, IOWA, MAINE, MARYLAND, MASSACHUSETTS, MICHIGAN, MINNESOTA, MISSOURI, NEW HAMPSHIRE, NEW JERSEY, NEW YORK, OHIO, PENNSYLVANIA, RHODE ISLAND, VERMONT, WASHINGTON D.C., WEST VIRGINIA AND WISCONSIN. SOME OF THESE VEH"
+   },
+   {
+    "id": "07V589000",
+    "part": "POWER TRAIN:AXLE ASSEMBLY:AXLE SHAFT:SEAL",
+    "summary": "ON CERTAIN PASSENGER VEHICLES, THE REAR AXLE PINION SEAL DOES NOT MEET ALL OF THE SPECIFICATIONS AND MAY EXPERIENCE A FLUID LEAK."
+   },
+   {
+    "id": "07V468000",
+    "part": "STRUCTURE:BODY:ROOF AND PILLARS",
+    "summary": "CERTAIN VEHICLES FAIL TO COMPLY WITH THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 118, 'POWER OPERATED WINDOW, PARTITION, AND ROOF PANEL SYSTEMS.'  UNDER THE STANDARD, THE SUNROOF MAY ONLY BE CLOSED WHEN THE IGNITION IS ON, OR AFTER THE IGNITION IS TURNED OFF, BUT BEFORE EITHER OF THE FRONT DOORS ARE OPENED.  THE AFFECTED VEHICLES MAY EXHIBIT A CONDITION WHERE THE SUNROOF CAN BE C"
+   }
+  ],
+  "2009": [
+   {
+    "id": "14V394000",
+    "part": "ELECTRICAL SYSTEM:IGNITION",
+    "summary": "This defect can affect the safe operation of the airbag system.  Until this recall is performed, customers should remove all items from their key rings, leaving only the ignition key.  The key fob (if applicable), should also be removed from the key ring.\r\n\r\nGeneral Motors LLC (GM) notified the agency on July 2, 2014 that they are recalling 554,328 model year 2003-2014 Cadillac CTS vehicles manufa"
+   },
+   {
+    "id": "11V089000",
+    "part": "SUSPENSION:REAR",
+    "summary": "GENERAL MOTORS IS RECALLING CERTAIN MODEL YEAR 2009-2010 CADILLAC CTS VEHICLES.  SOME OF THESE VEHICLES HAVE A CONDITION IN WHICH A WAX COATING ON THE REAR SUSPENSION TOE LINK JAM NUTS MAY ALLOW THE NUT(S) TO LOOSEN.  IF A NUT SUFFICIENTLY LOOSENS, THE TOE LINK COULD SEPARATE AND THE REAR WHEEL WOULD BE ABLE TO TURN INBOARD OR OUTBOARD.  OWNERS MAY HEAR A METALLIC CLANKING NOISE COMING FROM THE RE"
+   },
+   {
+    "id": "08V582000",
+    "part": "AIR BAGS:FRONTAL",
+    "summary": "GM IS RECALLING 12,662 MY 2009 CADILLAC CTS VEHICLES FOR FAILING TO CONFORM TO THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 208, 'OCCUPANT CRASH PROTECTION.'  UNDER CERTAIN CONDITIONS, A SOFTWARE CONDITION WITHIN THE PASSENGER SENSING SYSTEM MAY DISABLE THE FRONT PASSENGER AIR BAG WHEN IT SHOULD BE ENABLED OR ENABLE IT WHEN IT SHOULD BE DISABLED."
+   },
+   {
+    "id": "10V240000",
+    "part": "ELECTRICAL SYSTEM",
+    "summary": "GM IS RECALLING CERTAIN MODEL YEAR 2006-2009 BUICK, LUCERNE; CADILLAC DTS; HUMMER H2; MODEL YEAR 2008-2009 BUICK ENCLAVE; CADILLAC CTS; MODEL YEAR 2007-2009 CADILLAC ESCALADE, ESCALADE ESV, ESCALADE EXT; CHEVROLET AVALANCHE, SILVERADO, SUBURBAN, TAHOE; GMC ACADIA, SIERRA, YUKON, YUKON XL; SATURN OUTLOOK; AND MODEL YEAR 2009 CHEVROLET TRAVERSE VEHICLES EQUIPPED WITH A HEATED WASHER FLUID SYSTEM (HW"
+   },
+   {
+    "id": "10V414000",
+    "part": "EQUIPMENT",
+    "summary": "GM IS RECALLING CERTAIN MODEL YEAR 2009-2010 CADILLAC CTS ALL WHEEL DRIVE AND CTS-V VEHICLES FOR FAILING TO COMPLY WITH THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 208, \"OCCUPANT CRASH PROTECTION.\""
+   }
+  ],
+  "2010": [
+   {
+    "id": "14V394000",
+    "part": "ELECTRICAL SYSTEM:IGNITION",
+    "summary": "This defect can affect the safe operation of the airbag system.  Until this recall is performed, customers should remove all items from their key rings, leaving only the ignition key.  The key fob (if applicable), should also be removed from the key ring.\r\n\r\nGeneral Motors LLC (GM) notified the agency on July 2, 2014 that they are recalling 554,328 model year 2003-2014 Cadillac CTS vehicles manufa"
+   },
+   {
+    "id": "11V089000",
+    "part": "SUSPENSION:REAR",
+    "summary": "GENERAL MOTORS IS RECALLING CERTAIN MODEL YEAR 2009-2010 CADILLAC CTS VEHICLES.  SOME OF THESE VEHICLES HAVE A CONDITION IN WHICH A WAX COATING ON THE REAR SUSPENSION TOE LINK JAM NUTS MAY ALLOW THE NUT(S) TO LOOSEN.  IF A NUT SUFFICIENTLY LOOSENS, THE TOE LINK COULD SEPARATE AND THE REAR WHEEL WOULD BE ABLE TO TURN INBOARD OR OUTBOARD.  OWNERS MAY HEAR A METALLIC CLANKING NOISE COMING FROM THE RE"
+   },
+   {
+    "id": "10V414000",
+    "part": "EQUIPMENT",
+    "summary": "GM IS RECALLING CERTAIN MODEL YEAR 2009-2010 CADILLAC CTS ALL WHEEL DRIVE AND CTS-V VEHICLES FOR FAILING TO COMPLY WITH THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 208, \"OCCUPANT CRASH PROTECTION.\""
+   }
+  ],
+  "2011": [
+   {
+    "id": "14V341000",
+    "part": "AIR BAGS",
+    "summary": "General Motors LLC (GM) is recalling certain model year 2011 Cadillac CTS vehicles manufactured October 18, 2010, to June 2, 2011.  In the affected vehicles, vibrations from the drive shaft may cause the vehicle's roll over sensor to command the roof rail air bags to deploy."
+   },
+   {
+    "id": "14V394000",
+    "part": "ELECTRICAL SYSTEM:IGNITION",
+    "summary": "This defect can affect the safe operation of the airbag system.  Until this recall is performed, customers should remove all items from their key rings, leaving only the ignition key.  The key fob (if applicable), should also be removed from the key ring.\r\n\r\nGeneral Motors LLC (GM) notified the agency on July 2, 2014 that they are recalling 554,328 model year 2003-2014 Cadillac CTS vehicles manufa"
+   }
+  ],
+  "2012": [
+   {
+    "id": "14V394000",
+    "part": "ELECTRICAL SYSTEM:IGNITION",
+    "summary": "This defect can affect the safe operation of the airbag system.  Until this recall is performed, customers should remove all items from their key rings, leaving only the ignition key.  The key fob (if applicable), should also be removed from the key ring.\r\n\r\nGeneral Motors LLC (GM) notified the agency on July 2, 2014 that they are recalling 554,328 model year 2003-2014 Cadillac CTS vehicles manufa"
+   },
+   {
+    "id": "11V536000",
+    "part": "SERVICE BRAKES, HYDRAULIC:POWER ASSIST:VACUUM",
+    "summary": "GM IS RECALLING CERTAIN MODEL YEAR 2012 CADILLAC CTS VEHICLES MANUFACTURED FROM OCTOBER 21, 2011, THROUGH OCTOBER 26, 2011.  THESE VEHICLES MAY HAVE A CONDITION IN WHICH THE POWER VACUUM BRAKE BOOST PUSHROD RETENTION NUT MAY NOT BE TORQUED TO THE PROPER SPECIFICATION.  IF THE NUT IS NOT TORQUED TO THE PROPER SPECIFICATION, THE NUT COULD LOOSEN AND ALLOW THE PUSHROD TO SEPARATE FROM THE BRAKE PEDAL"
+   }
+  ],
+  "2013": [
+   {
+    "id": "14V394000",
+    "part": "ELECTRICAL SYSTEM:IGNITION",
+    "summary": "This defect can affect the safe operation of the airbag system.  Until this recall is performed, customers should remove all items from their key rings, leaving only the ignition key.  The key fob (if applicable), should also be removed from the key ring.\r\n\r\nGeneral Motors LLC (GM) notified the agency on July 2, 2014 that they are recalling 554,328 model year 2003-2014 Cadillac CTS vehicles manufa"
+   },
+   {
+    "id": "14V614000",
+    "part": "ELECTRICAL SYSTEM",
+    "summary": "General Motors LLC (GM) is recalling certain model year 2013-2014 Cadillac CTS, Escalade, Escalade ESV, Chevrolet Suburban, Tahoe, GMC Yukon, and Yukon XL, and 2014 Buick Enclave, Chevrolet Express, Impala, Silverado HD, Traverse, GMC Acadia, Savana, and Sierra HD vehicles.  In the affected vehicles, the chassis electronic module may be internally contaminated, resulting in an electrical short."
+   }
+  ],
+  "2014": [
+   {
+    "id": "18V595000",
+    "part": "SEATS:FRONT ASSEMBLY:SEAT HEATER/COOLER",
+    "summary": "General Motors LLC (GM) is recalling certain 2014-2016 Cadillac CTS vehicles, equipped with heated front seats.  The flexible heating mats in the front seats may be damaged over time, resulting in the seat heaters producing excessive heat."
+   },
+   {
+    "id": "14V253000",
+    "part": "VISIBILITY:WINDSHIELD WIPER/WASHER:MOTOR",
+    "summary": "General Motors LLC (GM) is recalling certain model year 2014 Cadillac CTS vehicles manufactured June 10, 2013, through February 26, 2014.  If the vehicle is turned off with wiper functionality left on and the wipers then become restricted, such as when covered in ice or snow, and the vehicle's battery goes dead and needs to be jump started, upon being jump started, the wipers will be inoperative."
+   },
+   {
+    "id": "14V446000",
+    "part": "SEATS",
+    "summary": "General Motors LLC (GM) is recalling certain model year 2013-2014 Buick Encore and Cadillac ATS; 2014 Cadillac CTS, ELR, Chevrolet Caprice and SS vehicles; and 2014-2015 Chevrolet Silverado and GMC Sierra Trucks.  Due to an incomplete weld on the seat hook bracket assembly, the front seats in the affected vehicles may not stay secured in place during a high load condition such as a crash."
+   },
+   {
+    "id": "14V338000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION",
+    "summary": "General Motors LLC (GM) is recalling certain model year 2013-2014 Cadillac ATS vehicles manufactured April 23, 2012, to March 20, 2014, and 2014 Cadillac CTS vehicles manufactured June 10, 2013, to March 20, 2014.  In the affected vehicles, the transmission shift cable may detach from either the bracket on the transmission shifter or the bracket on the transmission."
+   },
+   {
+    "id": "14V394000",
+    "part": "ELECTRICAL SYSTEM:IGNITION",
+    "summary": "This defect can affect the safe operation of the airbag system.  Until this recall is performed, customers should remove all items from their key rings, leaving only the ignition key.  The key fob (if applicable), should also be removed from the key ring.\r\n\r\nGeneral Motors LLC (GM) notified the agency on July 2, 2014 that they are recalling 554,328 model year 2003-2014 Cadillac CTS vehicles manufa"
+   },
+   {
+    "id": "14V614000",
+    "part": "ELECTRICAL SYSTEM",
+    "summary": "General Motors LLC (GM) is recalling certain model year 2013-2014 Cadillac CTS, Escalade, Escalade ESV, Chevrolet Suburban, Tahoe, GMC Yukon, and Yukon XL, and 2014 Buick Enclave, Chevrolet Express, Impala, Silverado HD, Traverse, GMC Acadia, Savana, and Sierra HD vehicles.  In the affected vehicles, the chassis electronic module may be internally contaminated, resulting in an electrical short."
+   }
+  ],
+  "2015": [
+   {
+    "id": "18V595000",
+    "part": "SEATS:FRONT ASSEMBLY:SEAT HEATER/COOLER",
+    "summary": "General Motors LLC (GM) is recalling certain 2014-2016 Cadillac CTS vehicles, equipped with heated front seats.  The flexible heating mats in the front seats may be damaged over time, resulting in the seat heaters producing excessive heat."
+   },
+   {
+    "id": "15V358000",
+    "part": "SERVICE BRAKES, HYDRAULIC:PEDALS AND LINKAGES",
+    "summary": "General Motors LLC (GM) is recalling certain model year 2015 Cadillac ATS and CTS vehicles.  The affected vehicles have a bracket between the brake pedal assembly and the rod that actuates the brakes that may fracture during normal brake pedal operation."
+   },
+   {
+    "id": "26V329000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "General Motors, LLC (GM) is recalling certain 2015 Cadillac Escalade, Escalade ESV, XTS, 2015-2016 Cadillac ATS, CTS, and SRX vehicles. The front-driver air bag inflator may rupture during deployment."
+   }
+  ],
+  "2016": [
+   {
+    "id": "18V595000",
+    "part": "SEATS:FRONT ASSEMBLY:SEAT HEATER/COOLER",
+    "summary": "General Motors LLC (GM) is recalling certain 2014-2016 Cadillac CTS vehicles, equipped with heated front seats.  The flexible heating mats in the front seats may be damaged over time, resulting in the seat heaters producing excessive heat."
+   },
+   {
+    "id": "19V086000",
+    "part": "STEERING:ELECTRIC POWER ASSIST SYSTEM",
+    "summary": "General Motors LLC (GM) is recalling certain 2016-2018 Cadillac CTS, and 2017 Cadillac ATS, Chevrolet Camaro, and Chevrolet Corvette vehicles. The electric power steering (EPS) assist system may fail."
+   },
+   {
+    "id": "25V175000",
+    "part": "STEERING:ELECTRIC POWER ASSIST SYSTEM",
+    "summary": "General Motors LLC (GM) is recalling certain 2016-2018 Cadillac CTS, 2017-2018 Cadillac ATS, Chevrolet Camaro, and Chevrolet Corvette vehicles.  The electric power steering (EPS) assist may fail."
+   },
+   {
+    "id": "26V329000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "General Motors, LLC (GM) is recalling certain 2015 Cadillac Escalade, Escalade ESV, XTS, 2015-2016 Cadillac ATS, CTS, and SRX vehicles. The front-driver air bag inflator may rupture during deployment."
+   }
+  ],
+  "2017": [
+   {
+    "id": "19V086000",
+    "part": "STEERING:ELECTRIC POWER ASSIST SYSTEM",
+    "summary": "General Motors LLC (GM) is recalling certain 2016-2018 Cadillac CTS, and 2017 Cadillac ATS, Chevrolet Camaro, and Chevrolet Corvette vehicles. The electric power steering (EPS) assist system may fail."
+   },
+   {
+    "id": "25V175000",
+    "part": "STEERING:ELECTRIC POWER ASSIST SYSTEM",
+    "summary": "General Motors LLC (GM) is recalling certain 2016-2018 Cadillac CTS, 2017-2018 Cadillac ATS, Chevrolet Camaro, and Chevrolet Corvette vehicles.  The electric power steering (EPS) assist may fail."
+   }
+  ],
+  "2018": [
+   {
+    "id": "19V086000",
+    "part": "STEERING:ELECTRIC POWER ASSIST SYSTEM",
+    "summary": "General Motors LLC (GM) is recalling certain 2016-2018 Cadillac CTS, and 2017 Cadillac ATS, Chevrolet Camaro, and Chevrolet Corvette vehicles. The electric power steering (EPS) assist system may fail."
+   },
+   {
+    "id": "25V175000",
+    "part": "STEERING:ELECTRIC POWER ASSIST SYSTEM",
+    "summary": "General Motors LLC (GM) is recalling certain 2016-2018 Cadillac CTS, 2017-2018 Cadillac ATS, Chevrolet Camaro, and Chevrolet Corvette vehicles.  The electric power steering (EPS) assist may fail."
+   }
+  ],
+  "2019": []
+ },
+ "yt": {
+  "car-cts-v": null,
+  "gm-ls-gen3": {
+   "videos": 200,
+   "praise": [
+    [
+     "Looks",
+     19
+    ],
+    [
+     "Power and acceleration",
+     17
+    ],
+    [
+     "Everyday comfort",
+     10
+    ],
+    [
+     "Handling and steering",
+     10
+    ]
+   ],
+   "trouble": [
+    [
+     "Electrical / wiring / TIPM",
+     10
+    ],
+    [
+     "Oil leaks (gaskets, seals, housings)",
+     9
+    ],
+    [
+     "Coolant leaks / water pump / overheating",
+     6
+    ],
+    [
+     "Differential / wheel hop",
+     5
+    ]
+   ],
+   "top": [
+    {
+     "id": "MuqMjucmMqk",
+     "title": "The 2019 Cadillac CTS-V Is a Crazy Fast Luxury Sedan",
+     "views": 3716085,
+     "ch": "Doug DeMuro"
+    },
+    {
+     "id": "NcCszG4yNIU",
+     "title": "The Chevy Corvette C5 Z06 Is an Insane Sports Car Bargain",
+     "views": 2339914,
+     "ch": "Doug DeMuro"
+    },
+    {
+     "id": "1xVT6JoiXfI",
+     "title": "What its like owning a Cadillac CTS-V",
+     "views": 1979753,
+     "ch": "Rob Dahm"
+    }
+   ]
+  },
+  "gm-lsa-ls9": {
+   "videos": 200,
+   "praise": [
+    [
+     "Looks",
+     18
+    ],
+    [
+     "Power and acceleration",
+     14
+    ],
+    [
+     "Everyday comfort",
+     10
+    ],
+    [
+     "Handling and steering",
+     7
+    ]
+   ],
+   "trouble": [],
+   "top": [
+    {
+     "id": "1xVT6JoiXfI",
+     "title": "What its like owning a Cadillac CTS-V",
+     "views": 1979753,
+     "ch": "Rob Dahm"
+    },
+    {
+     "id": "P4qiOETcaTM",
+     "title": "CADILLAC CTS-V - Everything You Need to Know | Up to Speed",
+     "views": 1898519,
+     "ch": "Donut"
+    },
+    {
+     "id": "rK_wYsVQvnk",
+     "title": "2011 Hennessey Cadillac CTS-V - Jay Leno's Garage",
+     "views": 1847109,
+     "ch": "Jay Leno's Garage"
+    }
+   ]
+  },
+  "gm-lt4": {
+   "videos": 200,
+   "praise": [
+    [
+     "Looks",
+     27
+    ],
+    [
+     "Power and acceleration",
+     18
+    ],
+    [
+     "Handling and steering",
+     13
+    ],
+    [
+     "Interior and seats",
+     12
+    ]
+   ],
+   "trouble": [
+    [
+     "Coolant leaks / water pump / overheating",
+     10
+    ],
+    [
+     "Heat soak / limp mode",
+     10
+    ]
+   ],
+   "top": [
+    {
+     "id": "Ko9kzyqW-l8",
+     "title": "Corvette Z06 | Car Review | Top Gear",
+     "views": 5401187,
+     "ch": "Top Gear"
+    },
+    {
+     "id": "Dn6gmBQUTdg",
+     "title": "2023 Corvette Z06 Review // The $100,000 Supercar",
+     "views": 3280814,
+     "ch": "Throttle House"
+    },
+    {
+     "id": "2fFMeWn0a8o",
+     "title": "Is the Chevy Corvette Z06 Finally a Supercar?",
+     "views": 2922468,
+     "ch": "Doug DeMuro"
+    }
+   ]
+  }
+ },
+ "scores": {
+  "gm-ls-gen3": {
+   "years": {
+    "1997": {
+     "score": 45,
+     "weight": 10.9,
+     "videos": 84,
+     "named": 7,
+     "top": [
+      {
+       "id": "NcCszG4yNIU",
+       "title": "The Chevy Corvette C5 Z06 Is an Insane Sports Car Bargain",
+       "views": 2339914
+      },
+      {
+       "id": "iq-f_hvynqA",
+       "title": "VIRGINIA MAN STRIKES GOLD WITH 1970 LS6 SS454 CHEVELLE THAT RUNS AFTER BEING PARKED 35 YEARS!!!",
+       "views": 1468131
+      },
+      {
+       "id": "4ssA_O4GGhA",
+       "title": "V12 LS1 engine dyno",
+       "views": 867326
+      }
+     ]
+    },
+    "1998": {
+     "score": 46,
+     "weight": 10.6,
+     "videos": 85,
+     "named": 7,
+     "top": [
+      {
+       "id": "NcCszG4yNIU",
+       "title": "The Chevy Corvette C5 Z06 Is an Insane Sports Car Bargain",
+       "views": 2339914
+      },
+      {
+       "id": "iq-f_hvynqA",
+       "title": "VIRGINIA MAN STRIKES GOLD WITH 1970 LS6 SS454 CHEVELLE THAT RUNS AFTER BEING PARKED 35 YEARS!!!",
+       "views": 1468131
+      },
+      {
+       "id": "4ssA_O4GGhA",
+       "title": "V12 LS1 engine dyno",
+       "views": 867326
+      }
+     ]
+    },
+    "1999": {
+     "score": 45,
+     "weight": 11.6,
+     "videos": 86,
+     "named": 8,
+     "top": [
+      {
+       "id": "NcCszG4yNIU",
+       "title": "The Chevy Corvette C5 Z06 Is an Insane Sports Car Bargain",
+       "views": 2339914
+      },
+      {
+       "id": "iq-f_hvynqA",
+       "title": "VIRGINIA MAN STRIKES GOLD WITH 1970 LS6 SS454 CHEVELLE THAT RUNS AFTER BEING PARKED 35 YEARS!!!",
+       "views": 1468131
+      },
+      {
+       "id": "4ssA_O4GGhA",
+       "title": "V12 LS1 engine dyno",
+       "views": 867326
+      }
+     ]
+    },
+    "2000": {
+     "score": 45,
+     "weight": 11.1,
+     "videos": 85,
+     "named": 7,
+     "top": [
+      {
+       "id": "NcCszG4yNIU",
+       "title": "The Chevy Corvette C5 Z06 Is an Insane Sports Car Bargain",
+       "views": 2339914
+      },
+      {
+       "id": "iq-f_hvynqA",
+       "title": "VIRGINIA MAN STRIKES GOLD WITH 1970 LS6 SS454 CHEVELLE THAT RUNS AFTER BEING PARKED 35 YEARS!!!",
+       "views": 1468131
+      },
+      {
+       "id": "4ssA_O4GGhA",
+       "title": "V12 LS1 engine dyno",
+       "views": 867326
+      }
+     ]
+    },
+    "2001": {
+     "score": 43,
+     "weight": 14.1,
+     "videos": 88,
+     "named": 10,
+     "top": [
+      {
+       "id": "NcCszG4yNIU",
+       "title": "The Chevy Corvette C5 Z06 Is an Insane Sports Car Bargain",
+       "views": 2339914
+      },
+      {
+       "id": "iq-f_hvynqA",
+       "title": "VIRGINIA MAN STRIKES GOLD WITH 1970 LS6 SS454 CHEVELLE THAT RUNS AFTER BEING PARKED 35 YEARS!!!",
+       "views": 1468131
+      },
+      {
+       "id": "8oAumIAs71g",
+       "title": "Regular Car Reviews: 2001 Chevrolet Corvette C5",
+       "views": 1069624
+      }
+     ]
+    },
+    "2002": {
+     "score": 49,
+     "weight": 14.1,
+     "videos": 88,
+     "named": 10,
+     "top": [
+      {
+       "id": "NcCszG4yNIU",
+       "title": "The Chevy Corvette C5 Z06 Is an Insane Sports Car Bargain",
+       "views": 2339914
+      },
+      {
+       "id": "iq-f_hvynqA",
+       "title": "VIRGINIA MAN STRIKES GOLD WITH 1970 LS6 SS454 CHEVELLE THAT RUNS AFTER BEING PARKED 35 YEARS!!!",
+       "views": 1468131
+      },
+      {
+       "id": "4ssA_O4GGhA",
+       "title": "V12 LS1 engine dyno",
+       "views": 867326
+      }
+     ]
+    },
+    "2003": {
+     "score": 43,
+     "weight": 8.9,
+     "videos": 82,
+     "named": 5,
+     "top": [
+      {
+       "id": "NcCszG4yNIU",
+       "title": "The Chevy Corvette C5 Z06 Is an Insane Sports Car Bargain",
+       "views": 2339914
+      },
+      {
+       "id": "iq-f_hvynqA",
+       "title": "VIRGINIA MAN STRIKES GOLD WITH 1970 LS6 SS454 CHEVELLE THAT RUNS AFTER BEING PARKED 35 YEARS!!!",
+       "views": 1468131
+      },
+      {
+       "id": "4ssA_O4GGhA",
+       "title": "V12 LS1 engine dyno",
+       "views": 867326
+      }
+     ]
+    },
+    "2004": {
+     "score": 44,
+     "weight": 13.1,
+     "videos": 95,
+     "named": 8,
+     "top": [
+      {
+       "id": "NcCszG4yNIU",
+       "title": "The Chevy Corvette C5 Z06 Is an Insane Sports Car Bargain",
+       "views": 2339914
+      },
+      {
+       "id": "iq-f_hvynqA",
+       "title": "VIRGINIA MAN STRIKES GOLD WITH 1970 LS6 SS454 CHEVELLE THAT RUNS AFTER BEING PARKED 35 YEARS!!!",
+       "views": 1468131
+      },
+      {
+       "id": "g8K5TNHnyTU",
+       "title": "Muscle Car Royalty: Original and (mostly) Unrestored 1966 Pontiac GTO - Jay Leno's Garage",
+       "views": 1291367
+      }
+     ]
+    },
+    "2005": {
+     "score": 51,
+     "weight": 9.5,
+     "videos": 45,
+     "named": 6,
+     "top": [
+      {
+       "id": "iq-f_hvynqA",
+       "title": "VIRGINIA MAN STRIKES GOLD WITH 1970 LS6 SS454 CHEVELLE THAT RUNS AFTER BEING PARKED 35 YEARS!!!",
+       "views": 1468131
+      },
+      {
+       "id": "g8K5TNHnyTU",
+       "title": "Muscle Car Royalty: Original and (mostly) Unrestored 1966 Pontiac GTO - Jay Leno's Garage",
+       "views": 1291367
+      },
+      {
+       "id": "J8IYYZr_wfM",
+       "title": "Muscle Car Of The Week 1967 Pontiac GTO Restoration and Unveiling V8TV",
+       "views": 974699
+      }
+     ]
+    },
+    "2006": {
+     "score": 50,
+     "weight": 19.0,
+     "videos": 71,
+     "named": 10,
+     "top": [
+      {
+       "id": "iq-f_hvynqA",
+       "title": "VIRGINIA MAN STRIKES GOLD WITH 1970 LS6 SS454 CHEVELLE THAT RUNS AFTER BEING PARKED 35 YEARS!!!",
+       "views": 1468131
+      },
+      {
+       "id": "g8K5TNHnyTU",
+       "title": "Muscle Car Royalty: Original and (mostly) Unrestored 1966 Pontiac GTO - Jay Leno's Garage",
+       "views": 1291367
+      },
+      {
+       "id": "JOvG_2Y-aN8",
+       "title": "Procharger Trailblazer SS AWD Donut  Burnout",
+       "views": 1167347
+      }
+     ]
+    },
+    "2007": {
+     "score": 50,
+     "weight": 9.0,
+     "videos": 53,
+     "named": 1,
+     "top": [
+      {
+       "id": "iq-f_hvynqA",
+       "title": "VIRGINIA MAN STRIKES GOLD WITH 1970 LS6 SS454 CHEVELLE THAT RUNS AFTER BEING PARKED 35 YEARS!!!",
+       "views": 1468131
+      },
+      {
+       "id": "JOvG_2Y-aN8",
+       "title": "Procharger Trailblazer SS AWD Donut  Burnout",
+       "views": 1167347
+      },
+      {
+       "id": "4ssA_O4GGhA",
+       "title": "V12 LS1 engine dyno",
+       "views": 867326
+      }
+     ]
+    },
+    "2008": {
+     "score": 50,
+     "weight": 7.7,
+     "videos": 51,
+     "named": 0,
+     "top": [
+      {
+       "id": "iq-f_hvynqA",
+       "title": "VIRGINIA MAN STRIKES GOLD WITH 1970 LS6 SS454 CHEVELLE THAT RUNS AFTER BEING PARKED 35 YEARS!!!",
+       "views": 1468131
+      },
+      {
+       "id": "JOvG_2Y-aN8",
+       "title": "Procharger Trailblazer SS AWD Donut  Burnout",
+       "views": 1167347
+      },
+      {
+       "id": "4ssA_O4GGhA",
+       "title": "V12 LS1 engine dyno",
+       "views": 867326
+      }
+     ]
+    },
+    "2009": {
+     "score": 50,
+     "weight": 7.7,
+     "videos": 51,
+     "named": 0,
+     "top": [
+      {
+       "id": "iq-f_hvynqA",
+       "title": "VIRGINIA MAN STRIKES GOLD WITH 1970 LS6 SS454 CHEVELLE THAT RUNS AFTER BEING PARKED 35 YEARS!!!",
+       "views": 1468131
+      },
+      {
+       "id": "JOvG_2Y-aN8",
+       "title": "Procharger Trailblazer SS AWD Donut  Burnout",
+       "views": 1167347
+      },
+      {
+       "id": "4ssA_O4GGhA",
+       "title": "V12 LS1 engine dyno",
+       "views": 867326
+      }
+     ]
+    }
+   },
+   "videos": 147,
+   "pulled": 200
+  },
+  "gm-lsa-ls9": {
+   "years": {
+    "2009": {
+     "score": 52,
+     "weight": 27.2,
+     "videos": 88,
+     "named": 19,
+     "top": [
+      {
+       "id": "nPVSWUo9ZSI",
+       "title": "Chevrolet Corvette 6.2L V8 LS9 Engine Assembly",
+       "views": 945318
+      },
+      {
+       "id": "C7IOelB64DE",
+       "title": "Corvette C6 ZR1 Quick Review",
+       "views": 752259
+      },
+      {
+       "id": "uOf_6O_bjOQ",
+       "title": "Hell's TA - 80 Trans Am SE LS9 Super Charged ProTouring - Dyno Session",
+       "views": 486403
+      }
+     ]
+    },
+    "2010": {
+     "score": 52,
+     "weight": 12.2,
+     "videos": 73,
+     "named": 4,
+     "top": [
+      {
+       "id": "nPVSWUo9ZSI",
+       "title": "Chevrolet Corvette 6.2L V8 LS9 Engine Assembly",
+       "views": 945318
+      },
+      {
+       "id": "C7IOelB64DE",
+       "title": "Corvette C6 ZR1 Quick Review",
+       "views": 752259
+      },
+      {
+       "id": "uOf_6O_bjOQ",
+       "title": "Hell's TA - 80 Trans Am SE LS9 Super Charged ProTouring - Dyno Session",
+       "views": 486403
+      }
+     ]
+    },
+    "2011": {
+     "score": 53,
+     "weight": 21.7,
+     "videos": 82,
+     "named": 13,
+     "top": [
+      {
+       "id": "rK_wYsVQvnk",
+       "title": "2011 Hennessey Cadillac CTS-V - Jay Leno's Garage",
+       "views": 1847109
+      },
+      {
+       "id": "nPVSWUo9ZSI",
+       "title": "Chevrolet Corvette 6.2L V8 LS9 Engine Assembly",
+       "views": 945318
+      },
+      {
+       "id": "C7IOelB64DE",
+       "title": "Corvette C6 ZR1 Quick Review",
+       "views": 752259
+      }
+     ]
+    },
+    "2012": {
+     "score": 51,
+     "weight": 14.2,
+     "videos": 79,
+     "named": 7,
+     "top": [
+      {
+       "id": "nPVSWUo9ZSI",
+       "title": "Chevrolet Corvette 6.2L V8 LS9 Engine Assembly",
+       "views": 945318
+      },
+      {
+       "id": "C7IOelB64DE",
+       "title": "Corvette C6 ZR1 Quick Review",
+       "views": 752259
+      },
+      {
+       "id": "MvEuC0Hy9J8",
+       "title": "6th Gen SS vs. 5th Gen ZL1 — What’s The Better $40k Buy?! | Camaro Buyer's Guide",
+       "views": 526745
+      }
+     ]
+    },
+    "2013": {
+     "score": 54,
+     "weight": 17.2,
+     "videos": 83,
+     "named": 11,
+     "top": [
+      {
+       "id": "nPVSWUo9ZSI",
+       "title": "Chevrolet Corvette 6.2L V8 LS9 Engine Assembly",
+       "views": 945318
+      },
+      {
+       "id": "C7IOelB64DE",
+       "title": "Corvette C6 ZR1 Quick Review",
+       "views": 752259
+      },
+      {
+       "id": "MvEuC0Hy9J8",
+       "title": "6th Gen SS vs. 5th Gen ZL1 — What’s The Better $40k Buy?! | Camaro Buyer's Guide",
+       "views": 526745
+      }
+     ]
+    },
+    "2014": {
+     "score": 51,
+     "weight": 10.4,
+     "videos": 68,
+     "named": 5,
+     "top": [
+      {
+       "id": "nPVSWUo9ZSI",
+       "title": "Chevrolet Corvette 6.2L V8 LS9 Engine Assembly",
+       "views": 945318
+      },
+      {
+       "id": "MvEuC0Hy9J8",
+       "title": "6th Gen SS vs. 5th Gen ZL1 — What’s The Better $40k Buy?! | Camaro Buyer's Guide",
+       "views": 526745
+      },
+      {
+       "id": "uOf_6O_bjOQ",
+       "title": "Hell's TA - 80 Trans Am SE LS9 Super Charged ProTouring - Dyno Session",
+       "views": 486403
+      }
+     ]
+    },
+    "2015": {
+     "score": 51,
+     "weight": 11.4,
+     "videos": 69,
+     "named": 6,
+     "top": [
+      {
+       "id": "nPVSWUo9ZSI",
+       "title": "Chevrolet Corvette 6.2L V8 LS9 Engine Assembly",
+       "views": 945318
+      },
+      {
+       "id": "MvEuC0Hy9J8",
+       "title": "6th Gen SS vs. 5th Gen ZL1 — What’s The Better $40k Buy?! | Camaro Buyer's Guide",
+       "views": 526745
+      },
+      {
+       "id": "uOf_6O_bjOQ",
+       "title": "Hell's TA - 80 Trans Am SE LS9 Super Charged ProTouring - Dyno Session",
+       "views": 486403
+      }
+     ]
+    }
+   },
+   "videos": 114,
+   "pulled": 200
+  },
+  "gm-lt4": {
+   "years": {
+    "2015": {
+     "score": 52,
+     "weight": 26.0,
+     "videos": 98,
+     "named": 9,
+     "top": [
+      {
+       "id": "i-9ohImmNBE",
+       "title": "WHY Did This Camaro ZL1 Engine SEIZE on the TRACK? - LT4 Engine Teardown!",
+       "views": 1537368
+      },
+      {
+       "id": "cYHnp52YGxo",
+       "title": "Our 1967 LT4 Swapped Camaro SS Hits The Highway For The First Time!!!",
+       "views": 846988
+      },
+      {
+       "id": "b8_l79MNTJk",
+       "title": "Stock z06 vs Stock ZL1 - 1/4 mile drag race - Corvette C7 z06 vs Camaro ZL1",
+       "views": 594217
+      }
+     ]
+    },
+    "2016": {
+     "score": 54,
+     "weight": 23.0,
+     "videos": 95,
+     "named": 6,
+     "top": [
+      {
+       "id": "i-9ohImmNBE",
+       "title": "WHY Did This Camaro ZL1 Engine SEIZE on the TRACK? - LT4 Engine Teardown!",
+       "views": 1537368
+      },
+      {
+       "id": "cYHnp52YGxo",
+       "title": "Our 1967 LT4 Swapped Camaro SS Hits The Highway For The First Time!!!",
+       "views": 846988
+      },
+      {
+       "id": "aIUmkWAqC9c",
+       "title": "2016 Chevy Corvette Z06 - Review and Road Test",
+       "views": 757386
+      }
+     ]
+    },
+    "2017": {
+     "score": 52,
+     "weight": 19.0,
+     "videos": 91,
+     "named": 2,
+     "top": [
+      {
+       "id": "i-9ohImmNBE",
+       "title": "WHY Did This Camaro ZL1 Engine SEIZE on the TRACK? - LT4 Engine Teardown!",
+       "views": 1537368
+      },
+      {
+       "id": "cYHnp52YGxo",
+       "title": "Our 1967 LT4 Swapped Camaro SS Hits The Highway For The First Time!!!",
+       "views": 846988
+      },
+      {
+       "id": "b8_l79MNTJk",
+       "title": "Stock z06 vs Stock ZL1 - 1/4 mile drag race - Corvette C7 z06 vs Camaro ZL1",
+       "views": 594217
+      }
+     ]
+    },
+    "2018": {
+     "score": 51,
+     "weight": 19.0,
+     "videos": 91,
+     "named": 2,
+     "top": [
+      {
+       "id": "i-9ohImmNBE",
+       "title": "WHY Did This Camaro ZL1 Engine SEIZE on the TRACK? - LT4 Engine Teardown!",
+       "views": 1537368
+      },
+      {
+       "id": "cYHnp52YGxo",
+       "title": "Our 1967 LT4 Swapped Camaro SS Hits The Highway For The First Time!!!",
+       "views": 846988
+      },
+      {
+       "id": "b8_l79MNTJk",
+       "title": "Stock z06 vs Stock ZL1 - 1/4 mile drag race - Corvette C7 z06 vs Camaro ZL1",
+       "views": 594217
+      }
+     ]
+    },
+    "2019": {
+     "score": 53,
+     "weight": 26.0,
+     "videos": 98,
+     "named": 9,
+     "top": [
+      {
+       "id": "i-9ohImmNBE",
+       "title": "WHY Did This Camaro ZL1 Engine SEIZE on the TRACK? - LT4 Engine Teardown!",
+       "views": 1537368
+      },
+      {
+       "id": "cYHnp52YGxo",
+       "title": "Our 1967 LT4 Swapped Camaro SS Hits The Highway For The First Time!!!",
+       "views": 846988
+      },
+      {
+       "id": "wjUVyw1vhTw",
+       "title": "2019 Chevrolet Corvette Z06 Review - Does it Need a Mid-Engine?",
+       "views": 796066
+      }
+     ]
+    }
+   },
+   "videos": 113,
+   "pulled": 200
+  }
+ }
+}

@@ -1,0 +1,280 @@
+{
+ "slug": "lexus-lfa",
+ "name": "Lexus LFA",
+ "short": "LFA",
+ "make": "Lexus",
+ "page": "/cars/lexus-lfa/",
+ "focus": "lfa10",
+ "star": "lfa",
+ "h1": "Lexus LFA: performance, engines and what owners say",
+ "nhtsa": {
+  "make": "LEXUS",
+  "models": [
+   "LFA"
+  ],
+  "note": ""
+ },
+ "topics_extra": {
+  "ASG gearbox / clutch": "\basg\b|\bclutch\b|single.?clutch|gearbox",
+  "Carbon ceramic brakes": "carbon.?ceramic|\bccm\b",
+  "Carbon body repair": "carbon (fiber|fibre) (repair|damage|crack)|\bcfrp\b",
+  "Dry sump / oil": "dry sump|oil (pressure|tank|level)",
+  "Battery drain": "battery (drain|dead|died|tender)|trickle charg"
+ },
+ "gens": [
+  {
+   "id": "lfa10",
+   "code": "LFA10",
+   "years": "2012",
+   "y0": 2012,
+   "y1": 2012,
+   "engine": "1LR-GUE",
+   "body": "Coupe",
+   "tag": "500 built by hand. 552-hp V10 co-developed with Yamaha, carbon body.",
+   "variants": [
+    {
+     "id": "lfa",
+     "name": "LFA",
+     "years": "2012",
+     "star": true,
+     "hp": {
+      "v": 552,
+      "src": [
+       "pr10",
+       "pr09"
+      ],
+      "note": "at 8,700 rpm"
+     },
+     "tq": {
+      "v": 354,
+      "src": [
+       "pr10",
+       "pr09"
+      ],
+      "note": "lb-ft at 6,800 rpm"
+     },
+     "z60": {
+      "v": 3.6,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 3.6,
+      "csrc": [
+       "pr10"
+      ]
+     },
+     "top": {
+      "v": "202 mph",
+      "src": [
+       "pr10",
+       "pr09"
+      ],
+      "note": ""
+     },
+     "trans": {
+      "v": "6-speed automated sequential gearbox (ASG), rear-drive",
+      "src": [
+       "pr10",
+       "pr09"
+      ],
+      "note": "0.2-second shifts"
+     },
+     "weight": {
+      "v": "3,263 lb",
+      "src": [
+       "tg09",
+       "luk"
+      ],
+      "note": "Lexus figure, 1,480 kg, European-spec car"
+     },
+     "price": {
+      "v": "$375,000",
+      "src": [
+       "pr10",
+       "tg09"
+      ],
+      "note": "2012, excludes delivery, processing and handling; sold on a two-year lease with intent to buy"
+     }
+    },
+    {
+     "id": "lfa-nur",
+     "name": "Nürburgring Package",
+     "years": "2012",
+     "pkg": "lfa",
+     "hp": {
+      "v": 562,
+      "src": [
+       "nur10",
+       "nuruk"
+      ],
+      "note": "+10 hp"
+     },
+     "trans": {
+      "v": "6-speed ASG, rear-drive",
+      "src": [
+       "nur10",
+       "nuruk"
+      ],
+      "note": "shifts cut to 0.15 seconds"
+     },
+     "price": {
+      "v": "$70,000",
+      "src": [
+       "nur10"
+      ],
+      "note": "package price on the $375,000 LFA; matte black paint $20,000 more"
+     },
+     "what": "Bigger front spoiler, fixed rear wing, 10 mm lower, retuned suspension. Lexus announced 50 cars.",
+     "what_src": [
+      "nur10",
+      "nuruk"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "1LR-GUE": {
+   "name": "Lexus 1LR-GUE",
+   "what": "4.8-liter V-10, naturally aspirated",
+   "study": "lexus-1lr-gue",
+   "page": "/engines/lexus-1lr-gue/",
+   "yt": [
+    "scy",
+    "lexus-1lr-gue"
+   ],
+   "facts": [
+    [
+     "Redline",
+     "9,000 rpm; idle to redline in 0.6 seconds",
+     [
+      "pr09",
+      "tg09",
+      "jal"
+     ]
+    ],
+    [
+     "Output",
+     "552 hp at 8,700 rpm, 354 lb-ft at 6,800 rpm (562 hp with the Nürburgring Package)",
+     [
+      "pr10",
+      "nur10"
+     ]
+    ],
+    [
+     "Layout",
+     "72-degree V10, dry sump, one throttle body per cylinder",
+     [
+      "luk",
+      "tg09",
+      "pr10"
+     ]
+    ],
+    [
+     "Valvetrain",
+     "Titanium valves, co-developed with Yamaha",
+     [
+      "tg09",
+      "jal"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "No known pattern",
+     "kind": "Owner-reported",
+     "rx": "",
+     "x": "No recurring 1LR-GUE failure is documented. PistonHeads found little on known problems, and a Japanese owner reported eight trouble-free years.",
+     "fix": "",
+     "src": [
+      "ph21",
+      "jal"
+     ]
+    },
+    {
+     "t": "Clutch wear from hard launches",
+     "kind": "Owner-reported",
+     "rx": "clutch (wear|slip|burn|fried|replace)|(burn|fry|fried|cook)(ed|t|ing)? (the |my )?clutch",
+     "x": "The ASG is an automated manual with a single-plate clutch. PistonHeads warns that launches without launch control can burn it.",
+     "fix": "",
+     "src": [
+      "ph21"
+     ]
+    }
+   ]
+  }
+ },
+ "compare": [
+  {
+   "slug": "porsche-carrera-gt",
+   "name": "Porsche Carrera GT"
+  },
+  {
+   "slug": "ferrari-599",
+   "name": "Ferrari 599 GTB Fiorano"
+  },
+  {
+   "slug": "lamborghini-murcielago",
+   "name": "Lamborghini Murciélago"
+  },
+  {
+   "slug": "ferrari-f430",
+   "name": "Ferrari F430"
+  }
+ ],
+ "sources": {
+  "pr09": {
+   "t": "Lexus USA: LFA supercar to make North American debut at 2009 SEMA and Los Angeles auto shows (Oct 2009)",
+   "u": "https://pressroom.lexus.com/lexus-lfa-supercar-to-make-north-american-debut-at-2009-sema-and-los-angeles-international-auto-shows/",
+   "k": "Lexus"
+  },
+  "pr10": {
+   "t": "Lexus USA: Lexus announces price of all-new LFA supercar (Feb 2010)",
+   "u": "https://pressroom.lexus.com/lexus-announces-price-of-all-new-lfa-supercar/",
+   "k": "Lexus"
+  },
+  "nur10": {
+   "t": "Lexus USA: Lexus introduces 2012 LFA Nürburgring Package (May 2010)",
+   "u": "https://pressroom.lexus.com/lexus-introduces-2012-lfa-nurburgring-package/",
+   "k": "Lexus"
+  },
+  "tg09": {
+   "t": "Toyota global newsroom: Lexus debuts LFA (Oct 2009)",
+   "u": "https://global.toyota/en/detail/308263",
+   "k": "Lexus"
+  },
+  "luk": {
+   "t": "Lexus UK media site: Lexus LFA technical information",
+   "u": "https://media.lexus.co.uk/lexus-lfa/",
+   "k": "Lexus"
+  },
+  "nuruk": {
+   "t": "Lexus UK media site: Lexus presents LFA Nürburgring Package (Feb 2011)",
+   "u": "https://media.lexus.co.uk/?p=59670",
+   "k": "Lexus"
+  },
+  "z60": {
+   "t": "0-60specs.com: Lexus LFA 0-60 runs by magazine (Car and Driver, MotorTrend, Road & Track)",
+   "u": "https://www.0-60specs.com/lexus/lfa-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "jal": {
+   "t": "Jalopnik: What it's like to own a Lexus LFA Nürburgring (Feb 2021)",
+   "u": "https://jalopnik.com/what-its-like-to-own-a-lexus-lfa-nurburging-1846237160",
+   "k": "outlet"
+  },
+  "ph21": {
+   "t": "PistonHeads: Lexus LF-A used buying guide (Jul 2021)",
+   "u": "https://www.pistonheads.com/news/ph-buying-guides/lfa/44444",
+   "k": "outlet"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-lexus-lfa",
+ "img": "/assets/ai-perf/lexus-lfa.webp?v=1"
+}

@@ -1,0 +1,508 @@
+{
+ "slug": "shelby-gt350",
+ "name": "Ford Shelby GT350",
+ "short": "GT350",
+ "make": "Ford",
+ "page": "/cars/shelby-gt350/",
+ "focus": "s550",
+ "star": "s550-r",
+ "h1": "Ford Shelby GT350: performance, engines and what owners say",
+ "nhtsa": {
+  "make": "FORD",
+  "models": [
+   "MUSTANG"
+  ],
+  "note": "NHTSA has no separate GT350 model and files the GT350 and GT350R under Mustang, so these counts are every Mustang of these years."
+ },
+ "topics_extra": {
+  "Oil consumption": "oil consumption|burn(s|ing|ed)? (a lot of |so much )?oil|using oil|quarts? of oil",
+  "Engine failure": "engine (failure|failed|blew|seized|locked up)|blown engine|spun (a )?bearing|dropped (a )?valve",
+  "Oil filter / oil leaks": "oil filter|oil leak|leaking oil|oil cooler",
+  "Limp mode / overheating": "limp mode|overheat\\w*|(transmission|differential|diff) (temp\\w*|cooler)",
+  "Cold-start rattle": "rattl\\w*|rapping|piston slap|cold start",
+  "Hesitation / surge": "hesitat\\w*|surg(e|es|ing)"
+ },
+ "gens": [
+  {
+   "id": "s550",
+   "code": "S550",
+   "years": "2016–2020",
+   "y0": 2016,
+   "y1": 2020,
+   "engine": "voodoo",
+   "body": "Fastback coupe",
+   "tag": "526-hp flat-plane-crank V-8 that revs to 8,250 rpm. Manual only.",
+   "variants": [
+    {
+     "id": "s550-16",
+     "name": "GT350",
+     "years": "2016",
+     "hp": {
+      "v": 526,
+      "src": [
+       "f16spec",
+       "ars16"
+      ],
+      "note": "at 7,500 rpm"
+     },
+     "tq": {
+      "v": 429,
+      "src": [
+       "f16spec",
+       "ars16"
+      ],
+      "note": "lb-ft at 4,750 rpm"
+     },
+     "z60": {
+      "v": 4.3,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual (Tremec TR-3160), rear-drive",
+      "src": [
+       "f16spec"
+      ],
+      "note": "Torsen limited-slip, 3.73:1 final drive"
+     },
+     "weight": {
+      "v": "3,760 lb",
+      "src": [
+       "f16spec"
+      ],
+      "note": "base car"
+     },
+     "price": {
+      "v": "$47,795",
+      "src": [
+       "ars16"
+      ],
+      "note": "2016, from Ford's online configurator; destination not stated"
+     }
+    },
+    {
+     "id": "s550-16tp",
+     "name": "Track Package",
+     "years": "2016",
+     "pkg": "s550-16",
+     "hp": {
+      "v": 526,
+      "src": [
+       "f16spec"
+      ],
+      "note": "at 7,500 rpm"
+     },
+     "tq": {
+      "v": 429,
+      "src": [
+       "f16spec"
+      ],
+      "note": "lb-ft at 4,750 rpm"
+     },
+     "trans": {
+      "v": "6-speed manual (Tremec TR-3160), rear-drive",
+      "src": [
+       "f16spec"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,791 lb",
+      "src": [
+       "f16spec"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$6,500",
+      "src": [
+       "ars16"
+      ],
+      "note": "package price on the 2016 GT350"
+     },
+     "what": "MagneRide dampers plus transmission and differential coolers. Standard from 2017.",
+     "what_src": [
+      "ars16",
+      "tg16"
+     ]
+    },
+    {
+     "id": "s550-17",
+     "name": "GT350",
+     "years": "2017–2018",
+     "hp": {
+      "v": 526,
+      "src": [
+       "tg16",
+       "ars16"
+      ],
+      "note": "at 7,500 rpm"
+     },
+     "tq": {
+      "v": 429,
+      "src": [
+       "tg16",
+       "ars16"
+      ],
+      "note": "lb-ft at 4,750 rpm"
+     },
+     "z60": {
+      "v": 4.2,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual (Tremec TR-3160), rear-drive",
+      "src": [
+       "ars16"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$56,495",
+      "src": [
+       "ars16"
+      ],
+      "note": "2017, Track Package now standard; destination not stated"
+     },
+     "what": "Track Package made standard: MagneRide, strut brace, rear spoiler, oil, transmission and differential coolers.",
+     "what_src": [
+      "tg16",
+      "ars16"
+     ]
+    },
+    {
+     "id": "s550-19",
+     "name": "GT350",
+     "years": "2019–2020",
+     "hp": {
+      "v": 526,
+      "src": [
+       "m1_20"
+      ],
+      "note": "at 7,500 rpm"
+     },
+     "z60": {
+      "v": 4.0,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual, rear-drive",
+      "src": [
+       "wsm"
+      ],
+      "note": ""
+     },
+     "what": "Retuned springs, dampers and steering, model-specific Cup 2 tires, GT350R-style grille, optional Gurney flap.",
+     "what_src": [
+      "wsm"
+     ]
+    },
+    {
+     "id": "s550-r",
+     "name": "GT350R",
+     "years": "2016–2020",
+     "star": true,
+     "hp": {
+      "v": 526,
+      "src": [
+       "f16spec",
+       "m1_20"
+      ],
+      "note": "at 7,500 rpm, same as GT350"
+     },
+     "tq": {
+      "v": 429,
+      "src": [
+       "f16spec"
+      ],
+      "note": "lb-ft at 4,750 rpm"
+     },
+     "z60": {
+      "v": 3.9,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "top": {
+      "v": "175 mph",
+      "src": [
+       "ars16"
+      ],
+      "note": "Ars Technica spec box"
+     },
+     "trans": {
+      "v": "6-speed manual (Tremec TR-3160), rear-drive",
+      "src": [
+       "f16spec"
+      ],
+      "note": "3.73:1 final drive"
+     },
+     "weight": {
+      "v": "3,655 lb",
+      "src": [
+       "f16spec"
+      ],
+      "note": "3,703 lb with Electronics Package"
+     },
+     "price": {
+      "v": "$62,195",
+      "src": [
+       "ars16"
+      ],
+      "note": "2016; destination not stated"
+     },
+     "what": "Carbon fiber wheels, Cup 2 tires, wing and bigger splitter; no A/C, stereo or rear seats. 130+ lb lighter.",
+     "what_src": [
+      "f15r"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "voodoo": {
+   "name": "Ford Voodoo 5.2",
+   "what": "5.2-liter V-8, naturally aspirated, flat-plane crank",
+   "study": "ford-voodoo",
+   "page": "/engines/ford-voodoo/",
+   "yt": [
+    "scy",
+    "ford-voodoo"
+   ],
+   "facts": [
+    [
+     "Redline",
+     "8,250 rpm",
+     [
+      "tg16",
+      "ars16"
+     ]
+    ],
+    [
+     "Output",
+     "526 hp at 7,500 rpm, 429 lb-ft at 4,750 rpm",
+     [
+      "f16spec"
+     ]
+    ],
+    [
+     "Crankshaft",
+     "Flat-plane, Ford's first production V-8 with one",
+     [
+      "f15r"
+     ]
+    ],
+    [
+     "Internals",
+     "Forged pistons and rods, 12.0:1 compression, port injection",
+     [
+      "f16spec"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Oil use and engine failures",
+     "kind": "Owner-reported",
+     "rx": "oil consumption|burn(s|ing|ed)? (a lot of |so much )?oil|using oil|quarts? of oil|engine (failure|failed|blew|seized|locked up)|blown engine|spun (a )?bearing|dropped (a )?valve",
+     "x": "Owners describe heavy oil use (one reports over 1 quart per 1,000 miles) and sudden engine failures in NHTSA complaints, including a 2019 engine that locked up at 450 miles. We found no Ford recall or bulletin for it.",
+     "fix": "",
+     "src": [
+      "nhtsa16",
+      "nhtsa19"
+     ]
+    },
+    {
+     "t": "Oil leaks at the filter and cooler",
+     "kind": "Maker bulletin",
+     "rx": "oil filter|oil leak|leaking oil|oil cooler|oil pressure sensor",
+     "x": "Ford bulletins cover leaks from damaged oil cooler tube O-rings (2015–2018) and from the oil pressure sensor near the filter (2017 cars built Jan–Sep 2017). Ford also sent 2015–2017 owners a free oil filter wrench, and some owners report filters coming loose.",
+     "fix": "Replace the cooler tube O-rings (SSM 47364) or follow TSB 18-2159.",
+     "src": [
+      "ssm47364",
+      "tsb182159",
+      "csp17b04",
+      "nhtsa16"
+     ]
+    },
+    {
+     "t": "Cold-start rattle",
+     "kind": "Maker bulletin",
+     "rx": "rattl\\w*|rapping|piston slap",
+     "x": "On 2016–2017 cars a rattle at light throttle when cold comes from piston motion in the bore. Ford says it fades when warm and is not a durability concern.",
+     "fix": "",
+     "src": [
+      "ssm46173"
+     ]
+    },
+    {
+     "t": "Hesitation or surge",
+     "kind": "Maker bulletin",
+     "rx": "hesitat\\w*|surg(e|es|ing)|cruise control (not|doesn'?t|won'?t|stopped)",
+     "x": "Ford bulletins describe hesitation or surging with no fault codes on 2015–2020 GT350 and GT350R, sometimes with cruise control not working.",
+     "fix": "Ford TSB 22-2140, the latest version, gives the service procedure.",
+     "src": [
+      "tsb222140"
+     ]
+    },
+    {
+     "t": "Timing chain tensioner (2020)",
+     "kind": "Maker bulletin",
+     "rx": "timing chain|tensioner|timing (loss|jump\\w*)",
+     "x": "On some 2020 GT350 and GT500 5.2L engines the secondary timing chain tensioner may not have been activated at assembly. That can cause timing loss, misfires and engine damage.",
+     "fix": "Dealers inspect the tensioner free under Ford program 21B26.",
+     "src": [
+      "csp21b26"
+     ]
+    },
+    {
+     "t": "Limp mode from overheating (2016, disputed)",
+     "kind": "Lawsuit",
+     "rx": "limp mode|overheat\\w*|(transmission|differential|diff) (temp\\w*|cooler)",
+     "x": "A class action said 2016 Base and Technology cars, sold without transmission and differential coolers, overheat and go into limp mode. A Florida jury found for Ford in March 2024, and the two sides then agreed to settle.",
+     "fix": "The coolers are standard on every GT350 from 2017.",
+     "src": [
+      "cc17",
+      "cc21",
+      "cc24",
+      "tg16"
+     ]
+    }
+   ]
+  }
+ },
+ "compare": [
+  {
+   "slug": "camaro-zl1",
+   "name": "Chevrolet Camaro ZL1"
+  },
+  {
+   "slug": "camaro-z28",
+   "name": "Chevrolet Camaro Z/28"
+  },
+  {
+   "slug": "bmw-m4",
+   "name": "BMW M4"
+  },
+  {
+   "slug": "shelby-gt500",
+   "name": "Ford Shelby GT500"
+  }
+ ],
+ "sources": {
+  "f16spec": {
+   "t": "Ford, Aug 24 2015: 2016 Shelby GT350 / GT350R technical specifications (PDF, archived)",
+   "u": "https://web.archive.org/web/20230418004024/https://media.ford.com/content/dam/fordmedia/North%20America/US/2015/08/24/gt350-gt350r-tech-specs.pdf",
+   "k": "Ford (archived)"
+  },
+  "f15r": {
+   "t": "Ford, Jan 12 2015: Shelby GT350R Mustang, most track-capable production Mustang ever built (archived)",
+   "u": "https://web.archive.org/web/20160801072654/https://media.ford.com/content/fordmedia/fna/us/en/news/2015/01/12/shelby-gt350r-mustang.html",
+   "k": "Ford (archived)"
+  },
+  "ars16": {
+   "t": "Ars Technica, Apr 19 2016: the Shelby GT350 is Ford's best-ever Mustang (specs and prices)",
+   "u": "https://arstechnica.com/cars/2016/04/the-shelby-mustang-gt350-is-the-best-pony-car-ford-has-ever-built/",
+   "k": "outlet"
+  },
+  "tg16": {
+   "t": "Top Gear, Apr 7 2016: 2017 Mustang GT350 gets the Track Pack as standard",
+   "u": "https://www.topgear.com/car-news/first-look/2017-ford-mustang-gt350-will-come-track-pack-standard",
+   "k": "outlet"
+  },
+  "m1_20": {
+   "t": "Motor1, Oct 1 2020: Ford Mustang Shelby GT350 officially discontinued",
+   "u": "https://www.motor1.com/news/446671/mustang-shelby-gt350-discontinued/",
+   "k": "outlet"
+  },
+  "z60": {
+   "t": "0-60specs.com: Ford Mustang 0-60 runs by magazine (Car and Driver, MotorTrend)",
+   "u": "https://www.0-60specs.com/ford/mustang-0-60-times/",
+   "k": "magazine tests, aggregated"
+  },
+  "wsm": {
+   "t": "Wikipedia: Shelby Mustang (2019 and 2020 Shelby GT350 sections)",
+   "u": "https://en.wikipedia.org/wiki/Shelby_Mustang",
+   "k": "Wikipedia (fallback; no Ford source found for the 2019 changes)"
+  },
+  "ssm46173": {
+   "t": "Ford SSM 46173: 2016–2017 GT350 5.2L rattle during cold operation (CarComplaints summary)",
+   "u": "https://www.carcomplaints.com/Ford/Mustang/2016/tsbs/tsb-ssm-46173.shtml",
+   "k": "Ford bulletin (outlet summary)"
+  },
+  "ssm47364": {
+   "t": "Ford SSM 47364: 2015–2018 GT350 oil leak at oil filter adapter / cooler O-rings (CarComplaints summary)",
+   "u": "https://www.carcomplaints.com/Ford/Mustang/2016/tsbs/tsb-ssm-47364.shtml",
+   "k": "Ford bulletin (outlet summary)"
+  },
+  "tsb182159": {
+   "t": "Ford TSB 18-2159: 2017 GT350 oil leak in the oil filter area, oil pressure sensor (CarComplaints summary)",
+   "u": "https://www.carcomplaints.com/Ford/Mustang/2017/tsbs/tsb-tsb18-2159.shtml",
+   "k": "Ford bulletin (outlet summary)"
+  },
+  "csp17b04": {
+   "t": "Ford program 17B04: 2015–2017 Shelby GT350/GT350R complimentary oil filter wrench (CarComplaints summary)",
+   "u": "https://www.carcomplaints.com/Ford/Mustang/2016/tsbs/tsb-17b04.shtml",
+   "k": "Ford bulletin (outlet summary)"
+  },
+  "tsb222140": {
+   "t": "Ford TSB 22-2140: 2015–2020 GT350/GT350R hesitation or surge, no DTCs (CarComplaints summary)",
+   "u": "https://www.carcomplaints.com/Ford/Mustang/2016/tsbs/tsb-tsb-22-2140.shtml",
+   "k": "Ford bulletin (outlet summary)"
+  },
+  "csp21b26": {
+   "t": "Ford Customer Satisfaction Program 21B26: 2020 GT350/GT500 5.2L secondary timing chain tensioner (filed with NHTSA)",
+   "u": "https://static.nhtsa.gov/odi/tsbs/2021/MC-10191520-0001.pdf",
+   "k": "Ford bulletin"
+  },
+  "cc17": {
+   "t": "CarComplaints, Mar 22 2017: Ford Mustang Shelby GT350 lawsuit says cars overheat",
+   "u": "https://www.carcomplaints.com/news/2017/ford-mustang-shelby-gt350-lawsuit-overheat.shtml",
+   "k": "outlet"
+  },
+  "cc21": {
+   "t": "CarComplaints, Jul 23 2021: class action certified for GT350 owners in nine states",
+   "u": "https://www.carcomplaints.com/news/2021/ford-class-action-lawsuit-shelby-gt350-mustang.shtml",
+   "k": "outlet"
+  },
+  "cc24": {
+   "t": "CarComplaints, May 5 2024: Ford Mustang Shelby GT350 lawsuit settlement reached",
+   "u": "https://www.carcomplaints.com/news/2024/ford-mustang-shelby-gt350-lawsuit-settlement.shtml",
+   "k": "outlet"
+  },
+  "nhtsa16": {
+   "t": "NHTSA owner complaints, 2016 Ford Mustang (GT350 reports incl. ODI 11191811, 11191798)",
+   "u": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=FORD&model=MUSTANG&modelYear=2016",
+   "k": "NHTSA (owner complaints)"
+  },
+  "nhtsa19": {
+   "t": "NHTSA owner complaints, 2019 Ford Mustang (GT350 reports incl. ODI 11253760, 11624679)",
+   "u": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=FORD&model=MUSTANG&modelYear=2019",
+   "k": "NHTSA (owner complaints)"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-shelby-gt350",
+ "img": "/assets/ai-perf/shelby-gt350.webp?v=1"
+}

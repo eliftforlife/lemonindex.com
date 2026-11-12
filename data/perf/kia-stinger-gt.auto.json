@@ -1,0 +1,153 @@
+{
+ "built": "2026-11-11",
+ "nhtsa": {
+  "by_year": {
+   "2018": 69,
+   "2019": 44,
+   "2020": 16,
+   "2021": 17,
+   "2022": 18,
+   "2023": 5
+  },
+  "gens": {
+   "ck": {
+    "n": 169,
+    "issues": {
+     "Turbo oil feed line recall": {
+      "n": 5,
+      "ex": [
+       "11577577",
+       "11586979"
+      ]
+     },
+     "Intake valve carbon": {
+      "n": 0,
+      "ex": []
+     },
+     "Timing chain tensioner (disputed)": {
+      "n": 1,
+      "ex": [
+       "11448835"
+      ]
+     }
+    }
+   }
+  },
+  "parts": [
+   [
+    "Engine",
+    48
+   ],
+   [
+    "Electrical system",
+    35
+   ],
+   [
+    "Fuel/propulsion system",
+    25
+   ],
+   [
+    "Unknown or other",
+    22
+   ],
+   [
+    "Service brakes",
+    21
+   ],
+   [
+    "Power train",
+    13
+   ]
+  ]
+ },
+ "recalls": {
+  "2019": [
+   {
+    "id": "20V518000",
+    "part": "SERVICE BRAKES, HYDRAULIC:ANTILOCK/TRACTION CONTROL/ELECTRONIC LIMITED SLIP:CONTROL UNIT/MODULE",
+    "summary": "Kia Motors America (Kia) recalled certain 2019 Stinger vehicles equipped with 3.3L T-GDI engines on August 27, 2020.  On December 30, 2020, Kia expanded the recall population and added certain 2018-2021 Stinger vehicles.  While driving, an engine compartment fire may occur in the area where the Anti-lock Brake Hydraulic Electronic Control Unit (HECU) is located."
+   },
+   {
+    "id": "23V634000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+    "summary": "Kia America, Inc. (Kia) is recalling certain 2018-2021 Stinger vehicles.  The fuel control valve plunger may stick inside the high pressure fuel pump, causing over-pressurization and loss of drive power."
+   },
+   {
+    "id": "24V169000",
+    "part": "ENGINE AND ENGINE COOLING:ENGINE:GASOLINE:TURBO/SUPERCHARGER:HOSES/PLUMBING",
+    "summary": "Kia America, Inc. (Kia) is recalling certain 2019-2020 K900, and 2018-2023 Stinger vehicles equipped with a 3.3-liter turbo gasoline direct injection engine.  The left turbocharger oil feed pipe and hose assembly may deteriorate and leak oil."
+   }
+  ],
+  "2020": [
+   {
+    "id": "21V862000",
+    "part": "ELECTRICAL SYSTEM:INSTRUMENT PANEL:FUEL GAUGE",
+    "summary": "Kia Motors America (Kia) is recalling certain 2020-2021 Stinger vehicles.  A software error in the instrument cluster may cause an inaccurate fuel gauge reading."
+   },
+   {
+    "id": "20V422000",
+    "part": "STEERING",
+    "summary": "Kia Motors America (Kia) is recalling certain 2020 Stinger vehicles equipped with a 2.0L Turbo-GDI engine.  A component within the Rack Mounted Motor Driven Power Steering (MDPS) Assembly may have been manufactured incorrectly, possibly resulting in the steering locking or becoming difficult while driving."
+   },
+   {
+    "id": "20V560000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+    "summary": "Kia Motors America (Kia) is recalling certain 2020-2021 Stinger vehicles.  The fuel pump's jet nozzle may have a plastic burr remaining from the manufacturing process, possibly causing a blocked nozzle and an insufficient fuel supply to the engine."
+   },
+   {
+    "id": "20V518000",
+    "part": "SERVICE BRAKES, HYDRAULIC:ANTILOCK/TRACTION CONTROL/ELECTRONIC LIMITED SLIP:CONTROL UNIT/MODULE",
+    "summary": "Kia Motors America (Kia) recalled certain 2019 Stinger vehicles equipped with 3.3L T-GDI engines on August 27, 2020.  On December 30, 2020, Kia expanded the recall population and added certain 2018-2021 Stinger vehicles.  While driving, an engine compartment fire may occur in the area where the Anti-lock Brake Hydraulic Electronic Control Unit (HECU) is located."
+   },
+   {
+    "id": "23V634000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+    "summary": "Kia America, Inc. (Kia) is recalling certain 2018-2021 Stinger vehicles.  The fuel control valve plunger may stick inside the high pressure fuel pump, causing over-pressurization and loss of drive power."
+   },
+   {
+    "id": "24V169000",
+    "part": "ENGINE AND ENGINE COOLING:ENGINE:GASOLINE:TURBO/SUPERCHARGER:HOSES/PLUMBING",
+    "summary": "Kia America, Inc. (Kia) is recalling certain 2019-2020 K900, and 2018-2023 Stinger vehicles equipped with a 3.3-liter turbo gasoline direct injection engine.  The left turbocharger oil feed pipe and hose assembly may deteriorate and leak oil."
+   }
+  ],
+  "2021": [
+   {
+    "id": "21V862000",
+    "part": "ELECTRICAL SYSTEM:INSTRUMENT PANEL:FUEL GAUGE",
+    "summary": "Kia Motors America (Kia) is recalling certain 2020-2021 Stinger vehicles.  A software error in the instrument cluster may cause an inaccurate fuel gauge reading."
+   },
+   {
+    "id": "20V560000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+    "summary": "Kia Motors America (Kia) is recalling certain 2020-2021 Stinger vehicles.  The fuel pump's jet nozzle may have a plastic burr remaining from the manufacturing process, possibly causing a blocked nozzle and an insufficient fuel supply to the engine."
+   },
+   {
+    "id": "20V518000",
+    "part": "SERVICE BRAKES, HYDRAULIC:ANTILOCK/TRACTION CONTROL/ELECTRONIC LIMITED SLIP:CONTROL UNIT/MODULE",
+    "summary": "Kia Motors America (Kia) recalled certain 2019 Stinger vehicles equipped with 3.3L T-GDI engines on August 27, 2020.  On December 30, 2020, Kia expanded the recall population and added certain 2018-2021 Stinger vehicles.  While driving, an engine compartment fire may occur in the area where the Anti-lock Brake Hydraulic Electronic Control Unit (HECU) is located."
+   },
+   {
+    "id": "23V634000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+    "summary": "Kia America, Inc. (Kia) is recalling certain 2018-2021 Stinger vehicles.  The fuel control valve plunger may stick inside the high pressure fuel pump, causing over-pressurization and loss of drive power."
+   },
+   {
+    "id": "24V169000",
+    "part": "ENGINE AND ENGINE COOLING:ENGINE:GASOLINE:TURBO/SUPERCHARGER:HOSES/PLUMBING",
+    "summary": "Kia America, Inc. (Kia) is recalling certain 2019-2020 K900, and 2018-2023 Stinger vehicles equipped with a 3.3-liter turbo gasoline direct injection engine.  The left turbocharger oil feed pipe and hose assembly may deteriorate and leak oil."
+   }
+  ],
+  "2022": [
+   {
+    "id": "24V169000",
+    "part": "ENGINE AND ENGINE COOLING:ENGINE:GASOLINE:TURBO/SUPERCHARGER:HOSES/PLUMBING",
+    "summary": "Kia America, Inc. (Kia) is recalling certain 2019-2020 K900, and 2018-2023 Stinger vehicles equipped with a 3.3-liter turbo gasoline direct injection engine.  The left turbocharger oil feed pipe and hose assembly may deteriorate and leak oil."
+   }
+  ]
+ },
+ "yt": {
+  "car-kia-stinger-gt": null,
+  "hyundai-g6dp": null
+ },
+ "scores": {}
+}

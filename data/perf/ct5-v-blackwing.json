@@ -1,0 +1,273 @@
+{
+ "slug": "ct5-v-blackwing",
+ "name": "Cadillac CT5-V Blackwing",
+ "short": "CT5-V Blackwing",
+ "make": "Cadillac",
+ "page": "/cars/ct5-v-blackwing/",
+ "focus": "g1",
+ "star": "g1-mt",
+ "h1": "Cadillac CT5-V Blackwing: performance, engines and what owners say",
+ "nhtsa": {
+  "make": "CADILLAC",
+  "models": [
+   "CT5"
+  ],
+  "note": "NHTSA files the CT5-V Blackwing under CT5, so these counts are every CT5 of these years."
+ },
+ "topics_extra": {
+  "Door handles": "door handle|door (won'?t|will not|doesn'?t) open|pressure pad",
+  "Supercharger / heat soak": "supercharger|heat soak|limp mode|reduced (engine )?power|p0300",
+  "Manual / clutch": "\\bclutch\\b|tremec|shifter",
+  "10-speed automatic": "10.?speed|10l80|harsh (shift|downshift)",
+  "Brakes": "brake (squeal|noise|drag|dragging)|ebcm|carbon.?ceramic",
+  "Tires": "pilot sport|tire wear|tires? (wore|worn)"
+ },
+ "gens": [
+  {
+   "id": "g1",
+   "code": "1st gen",
+   "years": "2022–",
+   "y0": 2022,
+   "y1": 2025,
+   "engine": "LT4",
+   "body": "Sedan",
+   "tag": "668 hp supercharged LT4, manual or 10-speed auto; facelift for 2025.",
+   "variants": [
+    {
+     "id": "g1-mt",
+     "name": "CT5-V Blackwing manual",
+     "years": "2022–",
+     "star": true,
+     "hp": {
+      "v": 668,
+      "src": [
+       "s24",
+       "n0810"
+      ],
+      "note": "at 6,500 rpm, GM estimate"
+     },
+     "tq": {
+      "v": 659,
+      "src": [
+       "s24",
+       "n0810"
+      ],
+      "note": "lb-ft at 3,600 rpm"
+     },
+     "z60": {
+      "v": 3.6,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 3.6,
+      "csrc": [
+       "s24",
+       "n0810"
+      ]
+     },
+     "top": {
+      "v": "200+ mph",
+      "src": [
+       "s24",
+       "n0810"
+      ],
+      "note": "Cadillac figure, on a racetrack"
+     },
+     "trans": {
+      "v": "6-speed manual, rear-drive",
+      "src": [
+       "s24"
+      ],
+      "note": "TREMEC gearbox with LuK twin-disc clutch; 3.73 final drive"
+     },
+     "weight": {
+      "v": "4,123 lb",
+      "src": [
+       "s24",
+       "n0124"
+      ],
+      "note": "Cadillac estimate"
+     },
+     "price": {
+      "v": "$84,990",
+      "src": [
+       "n0810"
+      ],
+      "note": "2022, includes $995 destination"
+     }
+    },
+    {
+     "id": "g1-at",
+     "name": "CT5-V Blackwing automatic",
+     "years": "2022–",
+     "hp": {
+      "v": 668,
+      "src": [
+       "s24",
+       "n0810"
+      ],
+      "note": "at 6,500 rpm, GM estimate"
+     },
+     "tq": {
+      "v": 659,
+      "src": [
+       "s24",
+       "n0810"
+      ],
+      "note": "lb-ft at 3,600 rpm"
+     },
+     "z60": {
+      "v": 3.5,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 3.4,
+      "csrc": [
+       "s24",
+       "n0810"
+      ]
+     },
+     "top": {
+      "v": "200+ mph",
+      "src": [
+       "s24"
+      ],
+      "note": "Cadillac figure, on a racetrack"
+     },
+     "trans": {
+      "v": "10-speed automatic, rear-drive",
+      "src": [
+       "s24",
+       "n0124"
+      ],
+      "note": "GM 10L80 with paddles; 2.85 final drive"
+     },
+     "weight": {
+      "v": "4,142 lb",
+      "src": [
+       "s24",
+       "n0124"
+      ],
+      "note": "Cadillac estimate"
+     }
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "LT4": {
+   "name": "GM LT4",
+   "what": "6.2-liter V-8, supercharged",
+   "study": "gm-lt4",
+   "page": "/engines/gm-lt4/",
+   "yt": [
+    "scy",
+    "gm-lt4"
+   ],
+   "facts": [
+    [
+     "Max engine speed",
+     "6,600 rpm",
+     [
+      "s24"
+     ]
+    ],
+    [
+     "Output",
+     "668 hp, 659 lb-ft (CT5-V Blackwing)",
+     [
+      "s24",
+      "n0810"
+     ]
+    ],
+    [
+     "Supercharger",
+     "1.7-liter, four-lobe rotors, up to 10 psi; water-to-air charge cooling; 10.0:1 compression",
+     [
+      "s24"
+     ]
+    ],
+    [
+     "Internals",
+     "Titanium intake valves, forged aluminum pistons; wet sump with external oil separator; hand-assembled",
+     [
+      "s24",
+      "n0810"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "No known engine pattern yet",
+     "kind": "Owner-reported",
+     "rx": "",
+     "x": "NHTSA lists no engine or powertrain recall for the 2022–2025 CT5. Only one owner complaint there names a Blackwing losing power (a 2023 car).",
+     "fix": "",
+     "src": [
+      "nr22",
+      "nc23"
+     ]
+    }
+   ]
+  }
+ },
+ "compare": [
+  {
+   "slug": "amg-e63",
+   "name": "Mercedes-AMG E63"
+  },
+  {
+   "slug": "bmw-m3",
+   "name": "BMW M3"
+  },
+  {
+   "slug": "charger-hellcat",
+   "name": "Dodge Charger SRT Hellcat"
+  },
+  {
+   "slug": "cts-v",
+   "name": "Cadillac CTS-V"
+  }
+ ],
+ "sources": {
+  "s24": {
+   "t": "Cadillac: 2024 CT5-V Blackwing specifications",
+   "u": "https://pressroom.cadillac.com/gmbx/us/en/cadillac/pressroom/vehicles/2024.detail.html/content/Pages/vehicle/us/en/cadillac/ct5-v-blackwing/2024.html",
+   "k": "Cadillac"
+  },
+  "n0810": {
+   "t": "Cadillac: The V-Series Blackwings have landed (Aug 2021)",
+   "u": "https://news.cadillac.com/newsroom.detail.html/Pages/news/us/en/2021/aug/0810-blackwing.html",
+   "k": "Cadillac"
+  },
+  "n0124": {
+   "t": "Cadillac: 2025 CT5-V and CT5-V Blackwing get new styling and tech (Jan 2024)",
+   "u": "https://pressroom.cadillac.com/gmbx/us/en/cadillac/pressroom/news.detail.html/content/Pages/news/us/en/2024/jan/0124-ct5v.html",
+   "k": "Cadillac"
+  },
+  "z60": {
+   "t": "0-60specs.com: Cadillac CT5-V 0-60 runs by magazine (Car and Driver, MotorTrend, MotorWeek)",
+   "u": "https://www.0-60specs.com/cadillac/ct5-v-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "nr22": {
+   "t": "NHTSA recalls for the 2022 Cadillac CT5 (curtain airbags, daytime lights; none for the engine)",
+   "u": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=CADILLAC&model=CT5&modelYear=2022",
+   "k": "NHTSA"
+  },
+  "nc23": {
+   "t": "NHTSA owner complaints, 2023 Cadillac CT5 (complaint 11761978: Blackwing loss of propulsion)",
+   "u": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=CADILLAC&model=CT5&modelYear=2023",
+   "k": "NHTSA"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-ct5-v-blackwing",
+ "img": "/assets/ai-perf/ct5-v-blackwing.webp?v=1"
+}

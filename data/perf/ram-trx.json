@@ -1,0 +1,344 @@
+{
+ "slug": "ram-trx",
+ "name": "Ram 1500 TRX",
+ "short": "TRX",
+ "make": "Ram",
+ "page": "/cars/ram-trx/",
+ "focus": "dt",
+ "star": "dt-trx",
+ "h1": "Ram 1500 TRX: performance, engines and what owners say",
+ "nhtsa": {
+  "make": "RAM",
+  "models": [
+   "1500"
+  ],
+  "note": "NHTSA files the TRX under Ram 1500, so these counts are every Ram 1500 of these years."
+ },
+ "topics_extra": {
+  "Driveline clunk": "clunk|drive ?shaft|driveline (noise|clunk)|cv boot",
+  "Uconnect screen": "uconnect|touch ?screen|screen (froze|freez|black|reboot)|radio (froze|freez|reboot)",
+  "Supercharger noise": "supercharger (noise|rattle|whine|bearings?)|blower (noise|rattle|bearings?)|coupler",
+  "Catalytic converter / O2 sensors": "catalytic|o2 sensors?|oxygen sensors?|p0420|p0430",
+  "Suspension noise": "sway bar|anti.?roll bar|track bar|panhard|suspension (noise|clunk|squeak)",
+  "Transfer case": "transfer ?case"
+ },
+ "gens": [
+  {
+   "id": "dt",
+   "code": "DT",
+   "years": "2021–2024",
+   "y0": 2021,
+   "y1": 2024,
+   "engine": "hellcat",
+   "body": "Crew cab pickup",
+   "tag": "702 hp Hellcat V-8, long-travel suspension, 35-inch tires.",
+   "variants": [
+    {
+     "id": "dt-trx",
+     "name": "Ram 1500 TRX",
+     "years": "2021–2024",
+     "star": true,
+     "hp": {
+      "v": 702,
+      "src": [
+       "s0817",
+       "s0817e",
+       "cd21"
+      ],
+      "note": "at 6,100 rpm"
+     },
+     "tq": {
+      "v": 650,
+      "src": [
+       "s0817",
+       "s0817e",
+       "cd21"
+      ],
+      "note": "lb-ft at 4,800 rpm"
+     },
+     "z60": {
+      "v": 3.7,
+      "who": "Car and Driver",
+      "src": [
+       "cd21",
+       "z60"
+      ],
+      "claim": 4.5,
+      "csrc": [
+       "s0817",
+       "s0830"
+      ]
+     },
+     "top": {
+      "v": "118 mph",
+      "src": [
+       "s0817",
+       "cd21"
+      ],
+      "note": "governor limited"
+     },
+     "trans": {
+      "v": "8-speed automatic, full-time four-wheel drive",
+      "src": [
+       "s0817"
+      ],
+      "note": "TorqueFlite 8HP95; BorgWarner 48-13 active transfer case with 2.64:1 low range"
+     },
+     "weight": {
+      "v": "6,866 lb",
+      "src": [
+       "cd21"
+      ],
+      "note": "Car and Driver's 2021 test truck; their 2022 long-term truck weighed 6,781 lb"
+     },
+     "price": {
+      "v": "$71,690",
+      "src": [
+       "s0817p"
+      ],
+      "note": "2021: $69,995 plus $1,695 destination"
+     }
+    },
+    {
+     "id": "dt-launch",
+     "name": "Ram 1500 TRX Launch Edition",
+     "years": "2021",
+     "pkg": "dt-trx",
+     "hp": {
+      "v": 702,
+      "src": [
+       "s0817l",
+       "s0817p"
+      ],
+      "note": "same engine as every TRX"
+     },
+     "tq": {
+      "v": 650,
+      "src": [
+       "s0817"
+      ],
+      "note": "lb-ft"
+     },
+     "price": {
+      "v": "$88,570",
+      "src": [
+       "s0817p"
+      ],
+      "note": "2021, plus destination"
+     },
+     "what": "702 trucks: Anvil Gray paint, special console badge, Level 2 Equipment Group, carbon trim, head-up display, beadlock-capable wheels.",
+     "what_src": [
+      "s0817l",
+      "s0817p",
+      "s0819"
+     ]
+    },
+    {
+     "id": "dt-final",
+     "name": "Ram 1500 TRX Final Edition",
+     "years": "2024",
+     "pkg": "dt-trx",
+     "hp": {
+      "v": 702,
+      "src": [
+       "s0830"
+      ],
+      "note": "same engine as every TRX"
+     },
+     "tq": {
+      "v": 650,
+      "src": [
+       "s0830"
+      ],
+      "note": "lb-ft"
+     },
+     "z60": {
+      "v": null,
+      "who": "",
+      "src": [],
+      "claim": 4.5,
+      "csrc": [
+       "s0830"
+      ]
+     },
+     "top": {
+      "v": "118 mph",
+      "src": [
+       "s0830"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$119,620",
+      "src": [
+       "s0830"
+      ],
+      "note": "2024: $117,625 plus $1,995 destination"
+     },
+     "what": "Up to 4,000 trucks: three new colors, Satin Titanium beadlock-capable wheels, build-number console badge, matte carbon trim.",
+     "what_src": [
+      "s0830"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "hellcat": {
+   "name": "Hellcat 6.2 supercharged HEMI",
+   "what": "6.2-liter V-8, supercharged",
+   "study": "chrysler-hellcat",
+   "page": "/engines/chrysler-hellcat/",
+   "yt": [
+    "scy",
+    "chrysler-hellcat"
+   ],
+   "facts": [
+    [
+     "Output",
+     "702 hp at 6,100 rpm, 650 lb-ft at 4,800 rpm (Ram TRX)",
+     [
+      "s0817e",
+      "cd21"
+     ]
+    ],
+    [
+     "Supercharger",
+     "2.38-liter twin-screw, up to 11.6 psi, twin charge air coolers on their own cooling loop",
+     [
+      "s0817e"
+     ]
+    ],
+    [
+     "Bottom end",
+     "Cast-iron block, forged steel crank, forged pistons, powder-forged rods",
+     [
+      "s0817e"
+     ]
+    ],
+    [
+     "TRX oiling",
+     "Rear-sump pan with baffles for off-road angles, external oil cooler",
+     [
+      "s0817e"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Supercharger bearing wear",
+     "kind": "Owner-reported",
+     "rx": "supercharger (noise|rattle|whine|bearings?)|blower (noise|rattle|bearings?)|coupler",
+     "x": "Worn supercharger front bearings cause noise and can damage the rotors and the drive coupler pins, an enthusiast magazine reports for the 6.2 HEMI.",
+     "fix": "Replacing the four front bearings fixes nearly all of the noise.",
+     "src": [
+      "mc23"
+     ]
+    },
+    {
+     "t": "Catalytic converter and O2 sensors (one test truck)",
+     "kind": "Magazine long-term test",
+     "rx": "catalytic|o2 sensors?|oxygen sensors?|p0420|p0430",
+     "x": "Car and Driver's 2022 TRX threw a check-engine light late in its 40,000-mile test. It needed a new right-side catalytic converter and two oxygen sensors.",
+     "fix": "The dealer replaced them at no charge.",
+     "src": [
+      "cd22"
+     ]
+    },
+    {
+     "t": "No engine recall on the TRX",
+     "kind": "Recall",
+     "rx": "",
+     "x": "NHTSA's 2021–2024 Ram 1500 recall list has no recall for the supercharged 6.2. The engine recalls on these years cover the 3.0 diesel and the 5.7 eTorque.",
+     "fix": "",
+     "src": [
+      "nhtsa",
+      "rclist"
+     ]
+    }
+   ]
+  }
+ },
+ "compare": [
+  {
+   "slug": "f150-raptor-r",
+   "name": "Ford F-150 Raptor R"
+  },
+  {
+   "slug": "f150-raptor",
+   "name": "Ford F-150 Raptor"
+  },
+  {
+   "slug": "trackhawk",
+   "name": "Jeep Grand Cherokee Trackhawk"
+  },
+  {
+   "slug": "ram-srt10",
+   "name": "Dodge Ram SRT-10"
+  }
+ ],
+ "sources": {
+  "s0817": {
+   "t": "Ram: All-new 2021 Ram 1500 TRX: quickest, fastest and most powerful mass-produced truck in the world (Aug 2020)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=21982",
+   "k": "Ram"
+  },
+  "s0817e": {
+   "t": "Ram: 2021 Ram 1500 TRX with 702-horsepower 6.2-liter supercharged HEMI V-8 engine (powertrain release, Aug 2020)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=21986",
+   "k": "Ram"
+  },
+  "s0817p": {
+   "t": "Ram: Pricing announced for all-new 2021 Ram 1500 TRX and TRX Launch Edition (Aug 2020)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=22036",
+   "k": "Ram"
+  },
+  "s0817l": {
+   "t": "Ram: Ram announces 2021 Ram 1500 TRX Launch Edition (Aug 2020)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=21995",
+   "k": "Ram"
+  },
+  "s0819": {
+   "t": "Ram: Sold out: 702 orders for Ram 1500 TRX Launch Edition filled in less than a day (Aug 2020)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=22032",
+   "k": "Ram"
+  },
+  "s0830": {
+   "t": "Ram: 2024 Ram 1500 TRX 6.2L Supercharged V8 - Final Edition salutes unprecedented run (Aug 2023)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=25237",
+   "k": "Ram"
+  },
+  "cd21": {
+   "t": "Car and Driver: Tested: 2021 Ram 1500 TRX defines awesome (Oct 2020)",
+   "u": "https://www.caranddriver.com/reviews/a34450961/2021-ram-1500-trx-by-the-numbers/",
+   "k": "Car and Driver instrumented test"
+  },
+  "cd22": {
+   "t": "Car and Driver: 2022 Ram 1500 TRX long-term road test, 40,000-mile wrap-up (Dec 2022)",
+   "u": "https://www.caranddriver.com/reviews/a38603097/2022-ram-1500-trx-reliability-maintenance/",
+   "k": "Car and Driver long-term test"
+  },
+  "z60": {
+   "t": "0-60specs.com: Ram 1500 0-60 runs by magazine (Car and Driver, MotorTrend and others)",
+   "u": "https://www.0-60specs.com/ram/1500-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "mc23": {
+   "t": "Mopar Connection: 6.2-liter HEMI supercharger front bearing replacement (Apr 2023)",
+   "u": "https://moparconnectionmagazine.com/gallery-6-2-liter-hemi-supercharger-front-bearing-replacement/",
+   "k": "enthusiast outlet"
+  },
+  "rclist": {
+   "t": "NHTSA recalls API: 2022 Ram 1500 recalls (each year 2021–2024 checked)",
+   "u": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=RAM&model=1500&modelYear=2022",
+   "k": "Recall"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-ram-trx",
+ "img": "/assets/ai-perf/ram-trx.webp?v=1"
+}

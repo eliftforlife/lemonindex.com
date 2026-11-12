@@ -1,0 +1,958 @@
+{
+ "built": "2026-11-11",
+ "nhtsa": {
+  "by_year": {
+   "1997": 4,
+   "1998": 965,
+   "1999": 1967,
+   "2000": 1075,
+   "2001": 665,
+   "2002": 423,
+   "2003": 339,
+   "2004": 1115,
+   "2005": 1567,
+   "2006": 852,
+   "2007": 191,
+   "2008": 97,
+   "2009": 12,
+   "2011": 800,
+   "2012": 640,
+   "2013": 640,
+   "2014": 783,
+   "2015": 503,
+   "2016": 161,
+   "2017": 213,
+   "2018": 233,
+   "2019": 144,
+   "2020": 55,
+   "2021": 203,
+   "2022": 59,
+   "2023": 32,
+   "2024": 14,
+   "2025": 8,
+   "2026": 14
+  },
+  "gens": {
+   "wd": {
+    "n": 748,
+    "issues": {
+     "Lifter and camshaft failure (\"HEMI tick\")": {
+      "n": 8,
+      "ex": [
+       "11454357",
+       "11697385"
+      ]
+     }
+    }
+   }
+  },
+  "parts": [
+   [
+    "Exterior lighting",
+    254
+   ],
+   [
+    "Electrical system",
+    202
+   ],
+   [
+    "Engine",
+    98
+   ],
+   [
+    "Unknown or other",
+    91
+   ],
+   [
+    "Power train",
+    62
+   ],
+   [
+    "Service brakes",
+    48
+   ]
+  ]
+ },
+ "recalls": {
+  "2018": [
+   {
+    "id": "18V280000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION",
+    "summary": "Chrysler (FCA US LLC) is recalling certain 2018 Dodge Charger, Durango and Challenger, Jeep Grand Cherokee and Wrangler, Chrysler 300, and RAM 1500 vehicles.  An incorrect transmission park lock rod may have been installed in the transmission."
+   },
+   {
+    "id": "18V332000",
+    "part": "ELECTRICAL SYSTEM:WIRING",
+    "summary": "Chrysler (FCA US LLC) is recalling certain 2014-2018 Dodge Journey, Charger and Durango, RAM 2500, 3500, 3500 Cab Chassis (more than 10,000lb), 4500 Cab Chassis and 5500 Cab Chassis, Jeep Cherokee and Grand Cherokee and Chrysler 300, 2014-2019 RAM 1500, 2015-2018 Dodge Challenger, 2015-2017 Chrysler 200, 2016-2018 RAM 3500 Cab Chassis (less than 10,000 lb), 2017-2018 Chrysler Pacifica and 2018 Jee"
+   },
+   {
+    "id": "18V524000",
+    "part": "ELECTRICAL SYSTEM:WIRING:FRONT UNDERHOOD",
+    "summary": "Chrysler (FCA US LLC) is recalling certain 2018 Jeep Renegade, Compass and Grand Cherokee, RAM 1500 and Promaster, Fiat 500x, Dodge Journey, Challenger, Charger and Durango and Chrysler 300x vehicles, 2017-2018 Jeep Wrangler, Dodge Grand Caravan and Chrysler Town and Country vehicles and 2018-2019 Jeep Cherokee and 2018 Chrysler Pacifica and Pacifica Hybrid vehicles.  The powertrain control module"
+   },
+   {
+    "id": "22V426000",
+    "part": "SERVICE BRAKES, HYDRAULIC:ANTILOCK/TRACTION CONTROL/ELECTRONIC LIMITED SLIP:CONTROL UNIT/MODULE",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2018-2019 Jeep Grand Cherokee and Dodge Durango vehicles.  A malfunction in the antilock-brake system (ABS) module may illuminate the brake lights, and allow the vehicle to start and shift out of Park without the brake pedal being applied."
+   },
+   {
+    "id": "24V838000",
+    "part": "SERVICE BRAKES, HYDRAULIC:ANTILOCK/TRACTION CONTROL/ELECTRONIC LIMITED SLIP:CONTROL UNIT/MODULE",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2018-2019 Jeep Grand Cherokee and Dodge Durango vehicles.  A malfunction in the antilock-brake system (ABS) module may incorrectly illuminate the brake lights and disable the ABS and electronic stability control (ESC).  In addition, the vehicle operator may be able to start and shift out of Park without the brake pedal being applied."
+   }
+  ],
+  "2019": [
+   {
+    "id": "20V191000",
+    "part": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+    "summary": "Chrysler (FCA US LLC) is recalling certain 2020 Jeep Gladiator and Jeep Cherokee, 2019-2020 Ram 1500 Pickup, Ram 2500 Pickup, Ram 3500 Pickup, Chrysler Pacifica, Dodge Durango, Jeep Grand Cherokee, Jeep Wrangler, and Jeep Renegade and 2019 Dodge Challenger vehicles equipped with 8.4\" or 12\" radio displays.  A software error can cause the rearview camera image to remain displayed after the vehicle "
+   },
+   {
+    "id": "20V183000",
+    "part": "POWER TRAIN:DRIVELINE:DIFFERENTIAL UNIT",
+    "summary": "Chrysler (FCA US LLC) is recalling certain 2019 Jeep Grand Cherokee and Dodge Durango vehicles.  The front differential may have been assembled with pinion gears that are insufficiently hardened, which can lead to the gear teeth wearing down.  If both pinion gears have their teeth sufficiently worn off, torque power can not be transferred from the front wheels to the driveline, resulting in loss o"
+   },
+   {
+    "id": "22V426000",
+    "part": "SERVICE BRAKES, HYDRAULIC:ANTILOCK/TRACTION CONTROL/ELECTRONIC LIMITED SLIP:CONTROL UNIT/MODULE",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2018-2019 Jeep Grand Cherokee and Dodge Durango vehicles.  A malfunction in the antilock-brake system (ABS) module may illuminate the brake lights, and allow the vehicle to start and shift out of Park without the brake pedal being applied."
+   },
+   {
+    "id": "24V838000",
+    "part": "SERVICE BRAKES, HYDRAULIC:ANTILOCK/TRACTION CONTROL/ELECTRONIC LIMITED SLIP:CONTROL UNIT/MODULE",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2018-2019 Jeep Grand Cherokee and Dodge Durango vehicles.  A malfunction in the antilock-brake system (ABS) module may incorrectly illuminate the brake lights and disable the ABS and electronic stability control (ESC).  In addition, the vehicle operator may be able to start and shift out of Park without the brake pedal being applied."
+   }
+  ],
+  "2020": [
+   {
+    "id": "20V191000",
+    "part": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+    "summary": "Chrysler (FCA US LLC) is recalling certain 2020 Jeep Gladiator and Jeep Cherokee, 2019-2020 Ram 1500 Pickup, Ram 2500 Pickup, Ram 3500 Pickup, Chrysler Pacifica, Dodge Durango, Jeep Grand Cherokee, Jeep Wrangler, and Jeep Renegade and 2019 Dodge Challenger vehicles equipped with 8.4\" or 12\" radio displays.  A software error can cause the rearview camera image to remain displayed after the vehicle "
+   },
+   {
+    "id": "21V280000",
+    "part": "AIR BAGS:CRITICAL FASTENERS",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2020-2021 Dodge Durango vehicles.  The Side Air Bag Inflatable Curtain (SABIC) fastener may be loose or missing."
+   }
+  ],
+  "2021": [
+   {
+    "id": "21V842000",
+    "part": "STRUCTURE:BODY",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2021 Dodge Durango vehicles.  The rear spoiler may not be aligned properly with the roof, resulting in damage to the spoiler during liftgate use."
+   },
+   {
+    "id": "21V280000",
+    "part": "AIR BAGS:CRITICAL FASTENERS",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2020-2021 Dodge Durango vehicles.  The Side Air Bag Inflatable Curtain (SABIC) fastener may be loose or missing."
+   },
+   {
+    "id": "22V140000",
+    "part": "SERVICE BRAKES, HYDRAULIC:ANTILOCK/TRACTION CONTROL/ELECTRONIC LIMITED SLIP:CONTROL UNIT/MODULE",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2019-2022 Ram 2500 and 2021-2022 Dodge Durango vehicles, and 2019-2022 3500 cab chassis with GVWR less than 10,000 lbs.  The ABS control module software may prevent the electronic stability control (ESC) malfunction indicator light from illuminating during certain conditions.  As such, these vehicles fail to comply with the requirements of Federal Motor "
+   },
+   {
+    "id": "22V154000",
+    "part": "STEERING:RACK AND PINION",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2021-2022 Dodge Durango and 2022 Jeep Grand Cherokee vehicles.  The steering gear rack bar may have been insufficiently hardened during manufacturing, possibly allowing it to bind within the steering rack, and resulting in difficulty steering or a loss of steering control."
+   },
+   {
+    "id": "22V284000",
+    "part": "ENGINE AND ENGINE COOLING:EXHAUST SYSTEM:EMISSION CONTROL:GAS RECIRCULATION VALVE (EGR VALVE)",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2021 Dodge Durango, Jeep Grand Cherokee WK, 2022 Jeep Grand Cherokee, and 2021-2022 Jeep Grand Cherokee L vehicles equipped with 3.6L engines.  The exhaust gas recirculation (EGR) valve may stick open, resulting in an unexpected loss of drive power."
+   },
+   {
+    "id": "23V115000",
+    "part": "STRUCTURE:BODY:HATCHBACK/LIFTGATE",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2021-2023 Dodge Durango vehicles.  The rear spoiler may not be aligned properly with the roof, resulting in damage to the spoiler during liftgate use."
+   },
+   {
+    "id": "24V436000",
+    "part": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2021-2022 Dodge Durango, 2021-2023 Chrysler Pacifica, Jeep Grand Cherokee L, 2022 Ram 1500, 2500, 3500, Chrysler Voyager, 2022-2023 Jeep Compass, Grand Cherokee, Wagoneer, Grand Wagoneer, and Ram Promaster vehicles.  The radio software may prevent the rearview image from displaying.  As such, these vehicles fail to comply with the requirements of Federal"
+   },
+   {
+    "id": "26V528000",
+    "part": "STRUCTURE:BODY:HATCHBACK/LIFTGATE",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2021-2023 Dodge Durango vehicles. The rear spoiler may not be aligned properly with the roof, possibly resulting in damage to the spoiler during liftgate use."
+   }
+  ],
+  "2023": [
+   {
+    "id": "23V640000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION:LEVER AND LINKAGE:COLUMN SHIFT",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2023 Dodge Durango Pursuit vehicles equipped with an instrument panel mounted shifter.  The shifter may experience an interference with the shifter boot and come out of gear while driving, which can result in a sudden loss of drive power."
+   },
+   {
+    "id": "26V528000",
+    "part": "STRUCTURE:BODY:HATCHBACK/LIFTGATE",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2021-2023 Dodge Durango vehicles. The rear spoiler may not be aligned properly with the roof, possibly resulting in damage to the spoiler during liftgate use."
+   }
+  ],
+  "2024": [],
+  "2025": []
+ },
+ "yt": {
+  "car-durango-srt": null,
+  "chrysler-392": {
+   "videos": 200,
+   "praise": [
+    [
+     "Looks",
+     20
+    ],
+    [
+     "Power and acceleration",
+     19
+    ],
+    [
+     "Everyday comfort",
+     14
+    ],
+    [
+     "Handling and steering",
+     13
+    ]
+   ],
+   "trouble": [
+    [
+     "Lifter / cam tick",
+     6
+    ],
+    [
+     "Lifters / AFM / cam phasers / Hemi tick",
+     6
+    ],
+    [
+     "Transfer case",
+     6
+    ]
+   ],
+   "top": [
+    {
+     "id": "UYVRkU16bb8",
+     "title": "Differences Between The SRT 392 & Scat Pack Dodge Charger",
+     "views": 2384023,
+     "ch": "RP Productions"
+    },
+    {
+     "id": "KV6XDHsuU1w",
+     "title": "2025 Dodge Charger Scat Pack Review // One Big Problem",
+     "views": 1906855,
+     "ch": "Throttle House"
+    },
+    {
+     "id": "hSZ4RYm1kTI",
+     "title": "Blown & Injected vintage 392 HEMI - Start Up",
+     "views": 1548324,
+     "ch": "Kenton McKay"
+    }
+   ]
+  },
+  "chrysler-hellcat": {
+   "videos": 200,
+   "praise": [
+    [
+     "Looks",
+     18
+    ],
+    [
+     "Power and acceleration",
+     14
+    ],
+    [
+     "Interior and seats",
+     10
+    ],
+    [
+     "Everyday comfort",
+     8
+    ]
+   ],
+   "trouble": [
+    [
+     "Electrical / wiring / TIPM",
+     6
+    ]
+   ],
+   "top": [
+    {
+     "id": "buzsasTfC4s",
+     "title": "Hellcat vs Z06 Corvette - drag racing",
+     "views": 26342950,
+     "ch": "Wheels"
+    },
+    {
+     "id": "pVkhw1Q0nOU",
+     "title": "When the Wife asks to take your 1000hp Trackhawk shopping",
+     "views": 13813614,
+     "ch": "SRTNINJAUSA"
+    },
+    {
+     "id": "cKx-cb0fzeo",
+     "title": "2016 Dodge Challenger SRT Hellcat - SOUND!",
+     "views": 11025539,
+     "ch": "Visual Car Reviews"
+    }
+   ]
+  }
+ },
+ "scores": {
+  "chrysler-392": {
+   "years": {
+    "2011": {
+     "score": 52,
+     "weight": 7.2,
+     "videos": 116,
+     "named": 0,
+     "top": [
+      {
+       "id": "UYVRkU16bb8",
+       "title": "Differences Between The SRT 392 & Scat Pack Dodge Charger",
+       "views": 2384023
+      },
+      {
+       "id": "hSZ4RYm1kTI",
+       "title": "Blown & Injected vintage 392 HEMI - Start Up",
+       "views": 1548324
+      },
+      {
+       "id": "74N5NvKHZfk",
+       "title": "I Bought A CHEAP Challenger Scat Pack Listed A NO START & Fixed It For $200! Then, I Found Videos...",
+       "views": 1458080
+      }
+     ]
+    },
+    "2012": {
+     "score": 52,
+     "weight": 9.1,
+     "videos": 135,
+     "named": 0,
+     "top": [
+      {
+       "id": "UYVRkU16bb8",
+       "title": "Differences Between The SRT 392 & Scat Pack Dodge Charger",
+       "views": 2384023
+      },
+      {
+       "id": "hSZ4RYm1kTI",
+       "title": "Blown & Injected vintage 392 HEMI - Start Up",
+       "views": 1548324
+      },
+      {
+       "id": "74N5NvKHZfk",
+       "title": "I Bought A CHEAP Challenger Scat Pack Listed A NO START & Fixed It For $200! Then, I Found Videos...",
+       "views": 1458080
+      }
+     ]
+    },
+    "2013": {
+     "score": 52,
+     "weight": 9.1,
+     "videos": 135,
+     "named": 0,
+     "top": [
+      {
+       "id": "UYVRkU16bb8",
+       "title": "Differences Between The SRT 392 & Scat Pack Dodge Charger",
+       "views": 2384023
+      },
+      {
+       "id": "hSZ4RYm1kTI",
+       "title": "Blown & Injected vintage 392 HEMI - Start Up",
+       "views": 1548324
+      },
+      {
+       "id": "74N5NvKHZfk",
+       "title": "I Bought A CHEAP Challenger Scat Pack Listed A NO START & Fixed It For $200! Then, I Found Videos...",
+       "views": 1458080
+      }
+     ]
+    },
+    "2014": {
+     "score": 55,
+     "weight": 13.6,
+     "videos": 140,
+     "named": 5,
+     "top": [
+      {
+       "id": "UYVRkU16bb8",
+       "title": "Differences Between The SRT 392 & Scat Pack Dodge Charger",
+       "views": 2384023
+      },
+      {
+       "id": "hSZ4RYm1kTI",
+       "title": "Blown & Injected vintage 392 HEMI - Start Up",
+       "views": 1548324
+      },
+      {
+       "id": "74N5NvKHZfk",
+       "title": "I Bought A CHEAP Challenger Scat Pack Listed A NO START & Fixed It For $200! Then, I Found Videos...",
+       "views": 1458080
+      }
+     ]
+    },
+    "2015": {
+     "score": 51,
+     "weight": 13.6,
+     "videos": 140,
+     "named": 5,
+     "top": [
+      {
+       "id": "UYVRkU16bb8",
+       "title": "Differences Between The SRT 392 & Scat Pack Dodge Charger",
+       "views": 2384023
+      },
+      {
+       "id": "hSZ4RYm1kTI",
+       "title": "Blown & Injected vintage 392 HEMI - Start Up",
+       "views": 1548324
+      },
+      {
+       "id": "74N5NvKHZfk",
+       "title": "I Bought A CHEAP Challenger Scat Pack Listed A NO START & Fixed It For $200! Then, I Found Videos...",
+       "views": 1458080
+      }
+     ]
+    },
+    "2016": {
+     "score": 49,
+     "weight": 10.1,
+     "videos": 136,
+     "named": 1,
+     "top": [
+      {
+       "id": "UYVRkU16bb8",
+       "title": "Differences Between The SRT 392 & Scat Pack Dodge Charger",
+       "views": 2384023
+      },
+      {
+       "id": "hSZ4RYm1kTI",
+       "title": "Blown & Injected vintage 392 HEMI - Start Up",
+       "views": 1548324
+      },
+      {
+       "id": "74N5NvKHZfk",
+       "title": "I Bought A CHEAP Challenger Scat Pack Listed A NO START & Fixed It For $200! Then, I Found Videos...",
+       "views": 1458080
+      }
+     ]
+    },
+    "2017": {
+     "score": 54,
+     "weight": 13.1,
+     "videos": 140,
+     "named": 5,
+     "top": [
+      {
+       "id": "UYVRkU16bb8",
+       "title": "Differences Between The SRT 392 & Scat Pack Dodge Charger",
+       "views": 2384023
+      },
+      {
+       "id": "hSZ4RYm1kTI",
+       "title": "Blown & Injected vintage 392 HEMI - Start Up",
+       "views": 1548324
+      },
+      {
+       "id": "74N5NvKHZfk",
+       "title": "I Bought A CHEAP Challenger Scat Pack Listed A NO START & Fixed It For $200! Then, I Found Videos...",
+       "views": 1458080
+      }
+     ]
+    },
+    "2018": {
+     "score": 53,
+     "weight": 14.6,
+     "videos": 141,
+     "named": 6,
+     "top": [
+      {
+       "id": "UYVRkU16bb8",
+       "title": "Differences Between The SRT 392 & Scat Pack Dodge Charger",
+       "views": 2384023
+      },
+      {
+       "id": "hSZ4RYm1kTI",
+       "title": "Blown & Injected vintage 392 HEMI - Start Up",
+       "views": 1548324
+      },
+      {
+       "id": "74N5NvKHZfk",
+       "title": "I Bought A CHEAP Challenger Scat Pack Listed A NO START & Fixed It For $200! Then, I Found Videos...",
+       "views": 1458080
+      }
+     ]
+    },
+    "2019": {
+     "score": 57,
+     "weight": 14.5,
+     "videos": 141,
+     "named": 6,
+     "top": [
+      {
+       "id": "UYVRkU16bb8",
+       "title": "Differences Between The SRT 392 & Scat Pack Dodge Charger",
+       "views": 2384023
+      },
+      {
+       "id": "hSZ4RYm1kTI",
+       "title": "Blown & Injected vintage 392 HEMI - Start Up",
+       "views": 1548324
+      },
+      {
+       "id": "74N5NvKHZfk",
+       "title": "I Bought A CHEAP Challenger Scat Pack Listed A NO START & Fixed It For $200! Then, I Found Videos...",
+       "views": 1458080
+      }
+     ]
+    },
+    "2020": {
+     "score": 59,
+     "weight": 19.5,
+     "videos": 146,
+     "named": 11,
+     "top": [
+      {
+       "id": "UYVRkU16bb8",
+       "title": "Differences Between The SRT 392 & Scat Pack Dodge Charger",
+       "views": 2384023
+      },
+      {
+       "id": "hSZ4RYm1kTI",
+       "title": "Blown & Injected vintage 392 HEMI - Start Up",
+       "views": 1548324
+      },
+      {
+       "id": "6I1X6KyEmWQ",
+       "title": "2020 Dodge Challenger R/T Scat Pack WIDEBODY Review // The Sweet Spot",
+       "views": 1489823
+      }
+     ]
+    },
+    "2021": {
+     "score": 50,
+     "weight": 11.0,
+     "videos": 138,
+     "named": 3,
+     "top": [
+      {
+       "id": "UYVRkU16bb8",
+       "title": "Differences Between The SRT 392 & Scat Pack Dodge Charger",
+       "views": 2384023
+      },
+      {
+       "id": "hSZ4RYm1kTI",
+       "title": "Blown & Injected vintage 392 HEMI - Start Up",
+       "views": 1548324
+      },
+      {
+       "id": "74N5NvKHZfk",
+       "title": "I Bought A CHEAP Challenger Scat Pack Listed A NO START & Fixed It For $200! Then, I Found Videos...",
+       "views": 1458080
+      }
+     ]
+    },
+    "2022": {
+     "score": 54,
+     "weight": 11.2,
+     "videos": 120,
+     "named": 4,
+     "top": [
+      {
+       "id": "UYVRkU16bb8",
+       "title": "Differences Between The SRT 392 & Scat Pack Dodge Charger",
+       "views": 2384023
+      },
+      {
+       "id": "hSZ4RYm1kTI",
+       "title": "Blown & Injected vintage 392 HEMI - Start Up",
+       "views": 1548324
+      },
+      {
+       "id": "74N5NvKHZfk",
+       "title": "I Bought A CHEAP Challenger Scat Pack Listed A NO START & Fixed It For $200! Then, I Found Videos...",
+       "views": 1458080
+      }
+     ]
+    },
+    "2023": {
+     "score": 54,
+     "weight": 10.2,
+     "videos": 119,
+     "named": 3,
+     "top": [
+      {
+       "id": "UYVRkU16bb8",
+       "title": "Differences Between The SRT 392 & Scat Pack Dodge Charger",
+       "views": 2384023
+      },
+      {
+       "id": "hSZ4RYm1kTI",
+       "title": "Blown & Injected vintage 392 HEMI - Start Up",
+       "views": 1548324
+      },
+      {
+       "id": "74N5NvKHZfk",
+       "title": "I Bought A CHEAP Challenger Scat Pack Listed A NO START & Fixed It For $200! Then, I Found Videos...",
+       "views": 1458080
+      }
+     ]
+    },
+    "2024": {
+     "score": 51,
+     "weight": 10.2,
+     "videos": 119,
+     "named": 3,
+     "top": [
+      {
+       "id": "UYVRkU16bb8",
+       "title": "Differences Between The SRT 392 & Scat Pack Dodge Charger",
+       "views": 2384023
+      },
+      {
+       "id": "hSZ4RYm1kTI",
+       "title": "Blown & Injected vintage 392 HEMI - Start Up",
+       "views": 1548324
+      },
+      {
+       "id": "74N5NvKHZfk",
+       "title": "I Bought A CHEAP Challenger Scat Pack Listed A NO START & Fixed It For $200! Then, I Found Videos...",
+       "views": 1458080
+      }
+     ]
+    },
+    "2025": {
+     "score": 52,
+     "weight": 11.8,
+     "videos": 121,
+     "named": 5,
+     "top": [
+      {
+       "id": "UYVRkU16bb8",
+       "title": "Differences Between The SRT 392 & Scat Pack Dodge Charger",
+       "views": 2384023
+      },
+      {
+       "id": "KV6XDHsuU1w",
+       "title": "2025 Dodge Charger Scat Pack Review // One Big Problem",
+       "views": 1906855
+      },
+      {
+       "id": "hSZ4RYm1kTI",
+       "title": "Blown & Injected vintage 392 HEMI - Start Up",
+       "views": 1548324
+      }
+     ]
+    },
+    "2026": {
+     "score": 59,
+     "weight": 18.8,
+     "videos": 128,
+     "named": 12,
+     "top": [
+      {
+       "id": "UYVRkU16bb8",
+       "title": "Differences Between The SRT 392 & Scat Pack Dodge Charger",
+       "views": 2384023
+      },
+      {
+       "id": "hSZ4RYm1kTI",
+       "title": "Blown & Injected vintage 392 HEMI - Start Up",
+       "views": 1548324
+      },
+      {
+       "id": "74N5NvKHZfk",
+       "title": "I Bought A CHEAP Challenger Scat Pack Listed A NO START & Fixed It For $200! Then, I Found Videos...",
+       "views": 1458080
+      }
+     ]
+    }
+   },
+   "videos": 198,
+   "pulled": 200
+  },
+  "chrysler-hellcat": {
+   "years": {
+    "2015": {
+     "score": 55,
+     "weight": 20.4,
+     "videos": 112,
+     "named": 13,
+     "top": [
+      {
+       "id": "buzsasTfC4s",
+       "title": "Hellcat vs Z06 Corvette - drag racing",
+       "views": 26342950
+      },
+      {
+       "id": "y-jdvMU1EKo",
+       "title": "Dodge Durango Hellcat vs Lamborghini Urus vs Jeep Trackhawk // DRAG & ROLL RACE",
+       "views": 4849740
+      },
+      {
+       "id": "MWMjR3r-nsI",
+       "title": "2015 Dodge Challenger SRT Hellcat - Jay Leno's Garage",
+       "views": 4636361
+      }
+     ]
+    },
+    "2016": {
+     "score": 50,
+     "weight": 10.4,
+     "videos": 102,
+     "named": 3,
+     "top": [
+      {
+       "id": "buzsasTfC4s",
+       "title": "Hellcat vs Z06 Corvette - drag racing",
+       "views": 26342950
+      },
+      {
+       "id": "cKx-cb0fzeo",
+       "title": "2016 Dodge Challenger SRT Hellcat - SOUND!",
+       "views": 11025539
+      },
+      {
+       "id": "y-jdvMU1EKo",
+       "title": "Dodge Durango Hellcat vs Lamborghini Urus vs Jeep Trackhawk // DRAG & ROLL RACE",
+       "views": 4849740
+      }
+     ]
+    },
+    "2017": {
+     "score": 49,
+     "weight": 8.4,
+     "videos": 100,
+     "named": 1,
+     "top": [
+      {
+       "id": "buzsasTfC4s",
+       "title": "Hellcat vs Z06 Corvette - drag racing",
+       "views": 26342950
+      },
+      {
+       "id": "y-jdvMU1EKo",
+       "title": "Dodge Durango Hellcat vs Lamborghini Urus vs Jeep Trackhawk // DRAG & ROLL RACE",
+       "views": 4849740
+      },
+      {
+       "id": "eyzGRhXp0do",
+       "title": "717HP DODGE CHARGER HELLCAT on AUTOBAHN [NO SPEED LIMIT] by AutoTopNL",
+       "views": 4597803
+      }
+     ]
+    },
+    "2018": {
+     "score": 53,
+     "weight": 29.1,
+     "videos": 150,
+     "named": 12,
+     "top": [
+      {
+       "id": "buzsasTfC4s",
+       "title": "Hellcat vs Z06 Corvette - drag racing",
+       "views": 26342950
+      },
+      {
+       "id": "pVkhw1Q0nOU",
+       "title": "When the Wife asks to take your 1000hp Trackhawk shopping",
+       "views": 13813614
+      },
+      {
+       "id": "ek_aZC4KIQM",
+       "title": "The $100,000 Jeep Trackhawk Is the Most Powerful SUV Ever",
+       "views": 7292548
+      }
+     ]
+    },
+    "2019": {
+     "score": 53,
+     "weight": 26.1,
+     "videos": 147,
+     "named": 9,
+     "top": [
+      {
+       "id": "buzsasTfC4s",
+       "title": "Hellcat vs Z06 Corvette - drag racing",
+       "views": 26342950
+      },
+      {
+       "id": "pVkhw1Q0nOU",
+       "title": "When the Wife asks to take your 1000hp Trackhawk shopping",
+       "views": 13813614
+      },
+      {
+       "id": "ek_aZC4KIQM",
+       "title": "The $100,000 Jeep Trackhawk Is the Most Powerful SUV Ever",
+       "views": 7292548
+      }
+     ]
+    },
+    "2020": {
+     "score": 51,
+     "weight": 21.1,
+     "videos": 142,
+     "named": 4,
+     "top": [
+      {
+       "id": "buzsasTfC4s",
+       "title": "Hellcat vs Z06 Corvette - drag racing",
+       "views": 26342950
+      },
+      {
+       "id": "pVkhw1Q0nOU",
+       "title": "When the Wife asks to take your 1000hp Trackhawk shopping",
+       "views": 13813614
+      },
+      {
+       "id": "ek_aZC4KIQM",
+       "title": "The $100,000 Jeep Trackhawk Is the Most Powerful SUV Ever",
+       "views": 7292548
+      }
+     ]
+    },
+    "2021": {
+     "score": 52,
+     "weight": 26.9,
+     "videos": 158,
+     "named": 7,
+     "top": [
+      {
+       "id": "buzsasTfC4s",
+       "title": "Hellcat vs Z06 Corvette - drag racing",
+       "views": 26342950
+      },
+      {
+       "id": "pVkhw1Q0nOU",
+       "title": "When the Wife asks to take your 1000hp Trackhawk shopping",
+       "views": 13813614
+      },
+      {
+       "id": "ek_aZC4KIQM",
+       "title": "The $100,000 Jeep Trackhawk Is the Most Powerful SUV Ever",
+       "views": 7292548
+      }
+     ]
+    },
+    "2022": {
+     "score": 52,
+     "weight": 14.1,
+     "videos": 116,
+     "named": 4,
+     "top": [
+      {
+       "id": "buzsasTfC4s",
+       "title": "Hellcat vs Z06 Corvette - drag racing",
+       "views": 26342950
+      },
+      {
+       "id": "y-jdvMU1EKo",
+       "title": "Dodge Durango Hellcat vs Lamborghini Urus vs Jeep Trackhawk // DRAG & ROLL RACE",
+       "views": 4849740
+      },
+      {
+       "id": "eyzGRhXp0do",
+       "title": "717HP DODGE CHARGER HELLCAT on AUTOBAHN [NO SPEED LIMIT] by AutoTopNL",
+       "views": 4597803
+      }
+     ]
+    },
+    "2023": {
+     "score": 52,
+     "weight": 13.6,
+     "videos": 115,
+     "named": 3,
+     "top": [
+      {
+       "id": "buzsasTfC4s",
+       "title": "Hellcat vs Z06 Corvette - drag racing",
+       "views": 26342950
+      },
+      {
+       "id": "y-jdvMU1EKo",
+       "title": "Dodge Durango Hellcat vs Lamborghini Urus vs Jeep Trackhawk // DRAG & ROLL RACE",
+       "views": 4849740
+      },
+      {
+       "id": "eyzGRhXp0do",
+       "title": "717HP DODGE CHARGER HELLCAT on AUTOBAHN [NO SPEED LIMIT] by AutoTopNL",
+       "views": 4597803
+      }
+     ]
+    },
+    "2024": {
+     "score": 50,
+     "weight": 11.5,
+     "videos": 112,
+     "named": 0,
+     "top": [
+      {
+       "id": "buzsasTfC4s",
+       "title": "Hellcat vs Z06 Corvette - drag racing",
+       "views": 26342950
+      },
+      {
+       "id": "y-jdvMU1EKo",
+       "title": "Dodge Durango Hellcat vs Lamborghini Urus vs Jeep Trackhawk // DRAG & ROLL RACE",
+       "views": 4849740
+      },
+      {
+       "id": "eyzGRhXp0do",
+       "title": "717HP DODGE CHARGER HELLCAT on AUTOBAHN [NO SPEED LIMIT] by AutoTopNL",
+       "views": 4597803
+      }
+     ]
+    },
+    "2025": {
+     "score": 50,
+     "weight": 9.2,
+     "videos": 100,
+     "named": 1,
+     "top": [
+      {
+       "id": "buzsasTfC4s",
+       "title": "Hellcat vs Z06 Corvette - drag racing",
+       "views": 26342950
+      },
+      {
+       "id": "y-jdvMU1EKo",
+       "title": "Dodge Durango Hellcat vs Lamborghini Urus vs Jeep Trackhawk // DRAG & ROLL RACE",
+       "views": 4849740
+      },
+      {
+       "id": "eyzGRhXp0do",
+       "title": "717HP DODGE CHARGER HELLCAT on AUTOBAHN [NO SPEED LIMIT] by AutoTopNL",
+       "views": 4597803
+      }
+     ]
+    },
+    "2026": {
+     "score": 48,
+     "weight": 9.2,
+     "videos": 100,
+     "named": 1,
+     "top": [
+      {
+       "id": "buzsasTfC4s",
+       "title": "Hellcat vs Z06 Corvette - drag racing",
+       "views": 26342950
+      },
+      {
+       "id": "y-jdvMU1EKo",
+       "title": "Dodge Durango Hellcat vs Lamborghini Urus vs Jeep Trackhawk // DRAG & ROLL RACE",
+       "views": 4849740
+      },
+      {
+       "id": "eyzGRhXp0do",
+       "title": "717HP DODGE CHARGER HELLCAT on AUTOBAHN [NO SPEED LIMIT] by AutoTopNL",
+       "views": 4597803
+      }
+     ]
+    }
+   },
+   "videos": 200,
+   "pulled": 200
+  }
+ }
+}

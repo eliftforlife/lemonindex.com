@@ -1,0 +1,834 @@
+{
+ "slug": "shelby-gt500",
+ "name": "Ford Shelby GT500",
+ "short": "GT500",
+ "make": "Ford",
+ "page": "/cars/shelby-gt500/",
+ "focus": "s550",
+ "star": "s550",
+ "h1": "Ford Shelby GT500: performance, engines and what owners say",
+ "nhtsa": {
+  "make": "FORD",
+  "models": [
+   "MUSTANG",
+   "GT500"
+  ],
+  "note": "NHTSA files the Shelby GT500 under Mustang (plus a few 2008 reports under GT500), so these counts are every Mustang of these years."
+ },
+ "topics_extra": {
+  "Clutch": "\\bclutch\\b|flywheel|throw.?out bearing",
+  "Dual-clutch gearbox": "\\bdct\\b|dual.?clutch|transmission (too hot|overheat\\w*)|clutch pack too hot",
+  "Supercharger": "supercharger|\\bblower\\b|isolator|coupler",
+  "Timing chain": "timing chain|tensioner",
+  "Oil leak": "oil leak|leaking oil|valve cover",
+  "Wheel hop": "wheel ?hop"
+ },
+ "gens": [
+  {
+   "id": "s197-54",
+   "code": "S197",
+   "years": "2007–2012",
+   "y0": 2007,
+   "y1": 2012,
+   "engine": "mod54",
+   "body": "Coupe, convertible",
+   "tag": "5.4 supercharged. 500 hp in 2007, 550 hp and aluminum block by 2011.",
+   "variants": [
+    {
+     "id": "s197-07",
+     "name": "GT500",
+     "years": "2007–2009",
+     "hp": {
+      "v": 500,
+      "src": [
+       "f07",
+       "ac07"
+      ],
+      "note": "at 6,000 rpm"
+     },
+     "tq": {
+      "v": 480,
+      "src": [
+       "f07",
+       "ac07"
+      ],
+      "note": "lb-ft at 4,500 rpm"
+     },
+     "z60": {
+      "v": 4.5,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual, rear-drive",
+      "src": [
+       "ac07"
+      ],
+      "note": "3.31:1 final drive"
+     },
+     "weight": {
+      "v": "3,920 lb",
+      "src": [
+       "ac07"
+      ],
+      "note": "coupe"
+     },
+     "price": {
+      "v": "$40,930",
+      "src": [
+       "ab07"
+      ],
+      "note": "2007 coupe; destination not stated"
+     }
+    },
+    {
+     "id": "s197-kr",
+     "name": "GT500KR",
+     "years": "2008–2009",
+     "hp": {
+      "v": 540,
+      "src": [
+       "fkr",
+       "fkr2"
+      ],
+      "note": "at 6,250 rpm"
+     },
+     "tq": {
+      "v": 510,
+      "src": [
+       "fkr",
+       "fkr2"
+      ],
+      "note": "lb-ft at 4,500 rpm"
+     },
+     "trans": {
+      "v": "6-speed manual (Tremec TR6060), rear-drive",
+      "src": [
+       "fkr"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,905 lb",
+      "src": [
+       "fkr"
+      ],
+      "note": "coupe"
+     },
+     "price": {
+      "v": "$79,995",
+      "src": [
+       "fkr2"
+      ],
+      "note": "2008, including destination"
+     },
+     "what": "Limited run (1,000 for 2008) with 40 more hp than the GT500.",
+     "what_src": [
+      "fkr2",
+      "fkr"
+     ]
+    },
+    {
+     "id": "s197-10",
+     "name": "GT500",
+     "years": "2010",
+     "hp": {
+      "v": 540,
+      "src": [
+       "f10pt"
+      ],
+      "note": "at 6,200 rpm"
+     },
+     "tq": {
+      "v": 510,
+      "src": [
+       "f10pt"
+      ],
+      "note": "lb-ft at 4,500 rpm"
+     },
+     "z60": {
+      "v": 4.6,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 4.3,
+      "csrc": [
+       "f10ov"
+      ]
+     },
+     "trans": {
+      "v": "6-speed manual, rear-drive",
+      "src": [
+       "f10pt"
+      ],
+      "note": "twin-disc clutch, 3.55:1 final drive"
+     },
+     "price": {
+      "v": "$46,325",
+      "src": [
+       "f10price"
+      ],
+      "note": "coupe; destination not stated"
+     }
+    },
+    {
+     "id": "s197-11",
+     "name": "GT500",
+     "years": "2011–2012",
+     "hp": {
+      "v": 550,
+      "src": [
+       "f11",
+       "f11b"
+      ],
+      "note": ""
+     },
+     "tq": {
+      "v": 510,
+      "src": [
+       "f11",
+       "f11b"
+      ],
+      "note": "lb-ft"
+     },
+     "z60": {
+      "v": 4.1,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "what": "New aluminum block, 102 lb lighter than the iron one, adds 10 hp.",
+     "what_src": [
+      "f11",
+      "f11b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s197-58",
+   "code": "S197",
+   "years": "2013–2014",
+   "y0": 2013,
+   "y1": 2014,
+   "engine": "mod58",
+   "body": "Coupe, convertible",
+   "tag": "5.8 \"Trinity\" V-8: 662 hp and a top track speed over 200 mph.",
+   "variants": [
+    {
+     "id": "s197-13",
+     "name": "GT500",
+     "years": "2013–2014",
+     "hp": {
+      "v": 662,
+      "src": [
+       "f12apr",
+       "f12may"
+      ],
+      "note": "at 6,500 rpm"
+     },
+     "tq": {
+      "v": 631,
+      "src": [
+       "f12apr",
+       "f12may"
+      ],
+      "note": "lb-ft"
+     },
+     "z60": {
+      "v": 3.5,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "top": {
+      "v": "200+ mph",
+      "src": [
+       "f12may"
+      ],
+      "note": "Ford: top track speed of more than 200 mph"
+     },
+     "trans": {
+      "v": "Manual with dual-disc clutch, rear-drive",
+      "src": [
+       "f12may"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,852 lb",
+      "src": [
+       "f12may"
+      ],
+      "note": "coupe"
+     },
+     "price": {
+      "v": "$54,200",
+      "src": [
+       "ma13"
+      ],
+      "note": "2013 coupe, plus $795 destination"
+     }
+    },
+    {
+     "id": "s197-13c",
+     "name": "GT500 convertible",
+     "years": "2013–2014",
+     "hp": {
+      "v": 662,
+      "src": [
+       "f12apr"
+      ],
+      "note": "at 6,500 rpm"
+     },
+     "tq": {
+      "v": 631,
+      "src": [
+       "f12apr"
+      ],
+      "note": "lb-ft"
+     },
+     "z60": {
+      "v": 3.7,
+      "who": "MotorTrend",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "price": {
+      "v": "$59,200",
+      "src": [
+       "ma13"
+      ],
+      "note": "2013, plus destination"
+     }
+    }
+   ]
+  },
+  {
+   "id": "s550",
+   "code": "S550",
+   "years": "2020–2022",
+   "y0": 2020,
+   "y1": 2022,
+   "engine": "predator",
+   "body": "Fastback coupe",
+   "tag": "760 hp, 7-speed dual-clutch, Carbon Fiber Track Package option.",
+   "variants": [
+    {
+     "id": "s550",
+     "name": "GT500",
+     "years": "2020–2022",
+     "star": true,
+     "hp": {
+      "v": 760,
+      "src": [
+       "f19jun",
+       "ts21"
+      ],
+      "note": "at 7,300 rpm"
+     },
+     "tq": {
+      "v": 625,
+      "src": [
+       "f19jun",
+       "ts21"
+      ],
+      "note": "lb-ft at 5,000 rpm"
+     },
+     "z60": {
+      "v": 3.7,
+      "who": "MotorTrend",
+      "src": [
+       "z60"
+      ],
+      "claim": 3.3,
+      "csrc": [
+       "ab19"
+      ]
+     },
+     "top": {
+      "v": "180 mph",
+      "src": [
+       "ts21"
+      ],
+      "note": "electronically limited"
+     },
+     "trans": {
+      "v": "7-speed dual-clutch (Tremec TR-9070), rear-drive",
+      "src": [
+       "ts21",
+       "f19aug"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "4,183 lb",
+      "src": [
+       "ts21"
+      ],
+      "note": "2021 spec"
+     },
+     "price": {
+      "v": "$73,995",
+      "src": [
+       "m119"
+      ],
+      "note": "2020, includes $1,095 destination and $2,600 gas-guzzler tax"
+     }
+    },
+    {
+     "id": "s550-cftp",
+     "name": "Carbon Fiber Track Package",
+     "years": "2020–2022",
+     "pkg": "s550",
+     "hp": {
+      "v": 760,
+      "src": [
+       "ts21"
+      ],
+      "note": "at 7,300 rpm"
+     },
+     "tq": {
+      "v": 625,
+      "src": [
+       "ts21"
+      ],
+      "note": "lb-ft at 5,000 rpm"
+     },
+     "z60": {
+      "v": 3.6,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "top": {
+      "v": "180 mph",
+      "src": [
+       "ts21"
+      ],
+      "note": "electronically limited"
+     },
+     "trans": {
+      "v": "7-speed dual-clutch (Tremec TR-9070), rear-drive",
+      "src": [
+       "ts21"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "4,081 lb",
+      "src": [
+       "ts21"
+      ],
+      "note": "2021 spec"
+     },
+     "price": {
+      "v": "$18,500",
+      "src": [
+       "m119"
+      ],
+      "note": "package price on the GT500, 2020"
+     },
+     "what": "Carbon fiber wheels, Cup 2 tires, GT4 wing and splitter wickers; no rear seat.",
+     "what_src": [
+      "f19jan",
+      "og21"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "mod54": {
+   "name": "Ford 5.4 supercharged",
+   "what": "5.4-liter V-8, supercharged",
+   "study": "ford-modular-sc",
+   "page": "/engines/ford-modular-sc/",
+   "yt": [
+    "scy",
+    "ford-modular-sc"
+   ],
+   "facts": [
+    [
+     "Redline",
+     "6,250 rpm",
+     [
+      "f07",
+      "f10pt"
+     ]
+    ],
+    [
+     "Output",
+     "500–550 hp, up to 510 lb-ft",
+     [
+      "f07",
+      "f10pt",
+      "f11"
+     ]
+    ],
+    [
+     "Supercharger",
+     "Roots-type, air-to-water intercooler, 9 psi (2007)",
+     [
+      "fkr",
+      "f07"
+     ]
+    ],
+    [
+     "Block",
+     "Iron through 2010; aluminum from 2011, 102 lb lighter",
+     [
+      "fkr",
+      "f11",
+      "f11b"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "No known engine pattern",
+     "kind": "Outlet",
+     "rx": "",
+     "x": "CarGurus' buying guide lists no common engine or supercharger failure on these cars. It points to the clutch, gearbox and wheel hop instead.",
+     "fix": "",
+     "src": [
+      "cg25"
+     ]
+    },
+    {
+     "t": "Clutch drag (2007–2009)",
+     "kind": "Maker bulletin",
+     "rx": "clutch (drag|chatter|shudder|slip\\w*)|hard to shift|creeps? in gear|won'?t go into gear",
+     "x": "Heat from stop-and-go driving can warp the flywheel so the twin-disc clutch does not fully release. Shifts get hard and the car can creep in gear.",
+     "fix": "Ford TSB 10-3-8 gives the diagnosis and clutch and flywheel repair.",
+     "src": [
+      "tsb1038"
+     ]
+    },
+    {
+     "t": "Clutch and gearbox wear (2010–2012)",
+     "kind": "Outlet",
+     "rx": "clutch (wear|worn|slip\\w*)|hard to shift|grind\\w* gears?",
+     "x": "CarGurus says the original clutch and transmission parts wore out early on 2010–2014 cars and can cause hard shifts.",
+     "fix": "",
+     "src": [
+      "cg25"
+     ]
+    }
+   ]
+  },
+  "mod58": {
+   "name": "Ford 5.8 \"Trinity\" supercharged",
+   "what": "5.8-liter V-8, supercharged",
+   "study": "ford-modular-sc",
+   "page": "/engines/ford-modular-sc/",
+   "yt": [
+    "scy",
+    "ford-modular-sc"
+   ],
+   "facts": [
+    [
+     "Rev limit",
+     "6,250 rpm; 7,000 rpm for up to 8 seconds",
+     [
+      "f12may"
+     ]
+    ],
+    [
+     "Output",
+     "662 hp at 6,500 rpm, 631 lb-ft",
+     [
+      "f12apr"
+     ]
+    ],
+    [
+     "Supercharger",
+     "2.3-liter TVS, boost up from 9 to 14 psi",
+     [
+      "f12may",
+      "f12apr"
+     ]
+    ],
+    [
+     "Block",
+     "Aluminum, plasma wire-arc coated bores",
+     [
+      "f12may"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "No known engine pattern",
+     "kind": "Outlet",
+     "rx": "",
+     "x": "CarGurus' buying guide lists no common engine or supercharger failure on the 2013–2014 cars.",
+     "fix": "",
+     "src": [
+      "cg25"
+     ]
+    },
+    {
+     "t": "Clutch and gearbox wear",
+     "kind": "Outlet",
+     "rx": "clutch (wear|worn|slip\\w*)|hard to shift|grind\\w* gears?",
+     "x": "CarGurus says the original clutch and transmission parts wore out early on 2010–2014 cars and can cause hard shifts.",
+     "fix": "",
+     "src": [
+      "cg25"
+     ]
+    }
+   ]
+  },
+  "predator": {
+   "name": "Ford Predator 5.2",
+   "what": "5.2-liter V-8, supercharged",
+   "study": "ford-predator",
+   "page": "/engines/ford-predator/",
+   "yt": [
+    "scy",
+    "ford-predator"
+   ],
+   "facts": [
+    [
+     "Redline",
+     "7,500 rpm",
+     [
+      "ts21"
+     ]
+    ],
+    [
+     "Output",
+     "760 hp at 7,300 rpm, 625 lb-ft at 5,000 rpm",
+     [
+      "ts21",
+      "f19jun"
+     ]
+    ],
+    [
+     "Supercharger",
+     "2.65-liter roots-type, inverted in the V",
+     [
+      "f19jan",
+      "ts21"
+     ]
+    ],
+    [
+     "Bottom end",
+     "Cross-plane crank, aluminum block with wire-arc liners",
+     [
+      "ts21"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Timing chain tensioner (2020)",
+     "kind": "Maker bulletin",
+     "rx": "timing chain|tensioner|timing (loss|jump\\w*)",
+     "x": "On some 2020 cars built Dec 2019 to Dec 2020, the secondary timing chain tensioner may not have been activated at the factory. That can cause timing loss, misfires and engine damage.",
+     "fix": "Dealers inspect the tensioner free under Ford program 21B26.",
+     "src": [
+      "csp21b26",
+      "cg25"
+     ]
+    },
+    {
+     "t": "Supercharger drive clutch",
+     "kind": "Maker bulletin",
+     "rx": "supercharger (pulley|clutch|drive)|p1228|loss of power|reduced power",
+     "x": "A failed one-way clutch in the supercharger drive pulley can cause a loss of power and a check-engine light (code P1228) on 2020–2021 cars.",
+     "fix": "Ford now sells the supercharger drive as its own part, so the blower can stay.",
+     "src": [
+      "ssm50578"
+     ]
+    },
+    {
+     "t": "Valve cover oil leaks (2022)",
+     "kind": "Maker bulletin",
+     "rx": "oil leak|leaking oil|valve cover|spark plug tube",
+     "x": "Some 2022 cars can leak oil from the spark plug tube or cam timing solenoid seals.",
+     "fix": "Ford says to replace both valve cover assemblies, not just the seals.",
+     "src": [
+      "ssm51811",
+      "cg25"
+     ]
+    }
+   ]
+  }
+ },
+ "compare": [
+  {
+   "slug": "challenger-hellcat",
+   "name": "Dodge Challenger SRT Hellcat"
+  },
+  {
+   "slug": "camaro-zl1",
+   "name": "Chevrolet Camaro ZL1"
+  },
+  {
+   "slug": "shelby-gt350",
+   "name": "Ford Shelby GT350"
+  },
+  {
+   "slug": "mustang-dark-horse",
+   "name": "Ford Mustang Dark Horse"
+  }
+ ],
+ "sources": {
+  "f07": {
+   "t": "Ford release, May 2 2006: 2007 Shelby GT500 rated at 500 hp (reprint on Shnack)",
+   "u": "https://shnack.com/story/63",
+   "k": "Ford (reprint)"
+  },
+  "ac07": {
+   "t": "The Auto Channel: 2007 Ford Mustang Shelby GT500 review (Rex Roy)",
+   "u": "https://theautochannel.com/news/2007/01/05/033080.html",
+   "k": "outlet"
+  },
+  "ab07": {
+   "t": "Autoblog: 2007 Ford Shelby GT500 coupe pricing",
+   "u": "https://www.autoblog.com/buy/2007-Ford-Shelby+GT500-Base__2dr_Coupe/pricing/",
+   "k": "outlet (pricing data)"
+  },
+  "fkr": {
+   "t": "Ford: 2008 Ford Shelby GT500KR technical specifications (ford.com archive, SDSU mirror)",
+   "u": "https://ophelia.sdsu.edu:8443/ford/08-30-2009/about-ford/news-announcements/press-releases/press-releases-detail/pr-2008-ford-shelby-gt500kr-technical-28118.html",
+   "k": "Ford"
+  },
+  "fkr2": {
+   "t": "Ford: Shelby GT500KR, most powerful production Mustang ever (ford.com archive, SDSU mirror)",
+   "u": "https://ophelia.sdsu.edu:8443/ford/01-24-2009/about-ford/news-announcements/press-releases/press-releases-detail/pr-ford-shelby-gt500kr-worldclass-28123.html",
+   "k": "Ford"
+  },
+  "f10pt": {
+   "t": "Ford, Mar 31 2009: 2010 Shelby GT500 packs more powerful punch (SDSU mirror)",
+   "u": "https://ophelia.sdsu.edu:8443/ford/03-03-2012/news-center/press-releases-detail/pr-2010-ford-shelby-gt500-packs-more-30100.html",
+   "k": "Ford"
+  },
+  "f10ov": {
+   "t": "Ford, Mar 31 2009: 2010 Shelby GT500 offers better ride, stability (SDSU mirror)",
+   "u": "https://ophelia.sdsu.edu:8443/ford/02-28-2010/about-ford/news-announcements/press-releases/press-releases-detail/pr-2010-ford-shelby-gt500-offers-30102.html",
+   "k": "Ford"
+  },
+  "f10price": {
+   "t": "Ford: 2010 Ford Mustang pricing, Shelby GT500 coupe $46,325 (SDSU mirror)",
+   "u": "https://ophelia.sdsu.edu:8443/ford/02-28-2010/about-ford/news-announcements/press-releases/press-releases-detail/pr-new-2010-ford-mustang-is-fast-fun-29903.html",
+   "k": "Ford"
+  },
+  "f11": {
+   "t": "Ford, Feb 8 2010: 2011 Shelby GT500 goes lightweight with aluminum engine (SDSU mirror)",
+   "u": "https://ophelia.sdsu.edu:8443/ford/03-03-2012/news-center/press-releases-detail/pr-2011-ford-shelby-gt500-goes-31975.html",
+   "k": "Ford"
+  },
+  "f11b": {
+   "t": "Ford, Feb 8 2010: Three engines, 1,267 horsepower, 2011 Mustang (SDSU mirror)",
+   "u": "https://ophelia.sdsu.edu:8443/ford/03-03-2012/news-center/press-releases-detail/pr-three-engines-1267-horsepower2658-31976.html",
+   "k": "Ford"
+  },
+  "f12apr": {
+   "t": "Ford, Apr 26 2012: At 662 hp, 2013 Shelby GT500 certified as world's most powerful V8",
+   "u": "https://media.ford.com/content/fordmedia/fna/us/en/news/2012/04/27/at-662-hp--2013-ford-shelby-gt500-certified-as-worlds-most-power.html",
+   "k": "Ford"
+  },
+  "f12may": {
+   "t": "Ford, May 17 2012: 2013 Shelby GT500 debuts as fastest, most powerful Mustang ever",
+   "u": "https://media.ford.com/content/fordmedia/fna/us/en/news/2012/05/17/2013-ford-shelby-gt500-debuts-as-fastest--most-powerful-mustang-.html",
+   "k": "Ford"
+  },
+  "ma13": {
+   "t": "Motor Authority, Mar 15 2012: 2013 Shelby GT500 priced (from Ford's retail site)",
+   "u": "https://www.motorauthority.com/news/1074142_2013-ford-mustang-shelby-gt500-priced",
+   "k": "outlet"
+  },
+  "f19jan": {
+   "t": "Ford, Jan 14 2019: All-new Shelby GT500 is the most advanced Mustang ever",
+   "u": "https://media.ford.com/content/fordmedia/fna/us/en/news/2019/01/14/most-powerful-street-legal-ford-in-history-all-new-shelby-gt500.html",
+   "k": "Ford"
+  },
+  "f19jun": {
+   "t": "Ford, Jun 19 2019: 760 horsepower, 625 lb-ft, 2020 Mustang Shelby GT500",
+   "u": "https://media.ford.com/content/fordmedia/fna/us/en/news/2019/06/19/760-horsepower-625-lb-ft-2020-mustang-shelby-gt500.html",
+   "k": "Ford"
+  },
+  "f19aug": {
+   "t": "Ford, Aug 5 2019: Stunning performance and control, 2020 Shelby GT500",
+   "u": "https://media.ford.com/content/fordmedia/fna/us/en/news/2019/08/05/stunning-performance-and-control-2020-shelby-gt500.html",
+   "k": "Ford"
+  },
+  "ts21": {
+   "t": "Ford: 2021 Mustang technical specifications (PDF)",
+   "u": "https://media.ford.com/content/fordmedia/fna/us/en/asset.download.document.pdf.html/content/dam/fordmedia/North%20America/US/product/2021/mustang/2021-Mustang-Tech-Specs.pdf",
+   "k": "Ford"
+  },
+  "og21": {
+   "t": "Ford: 2021 Shelby GT500 order guide (PDF)",
+   "u": "https://media.ford.com/content/fordmedia/fna/us/en/asset.download.document.pdf.html/content/dam/fordmedia/North%20America/US/product/2021/mustang/2021-Shelby-GT500-Order-Guide.pdf",
+   "k": "Ford"
+  },
+  "m119": {
+   "t": "Motor1, Jun 28 2019: 2020 Shelby GT500 priced below $74K (verified by Ford)",
+   "u": "https://www.motor1.com/news/357225/2020-ford-mustang-shelby-gt500-price/",
+   "k": "outlet"
+  },
+  "ab19": {
+   "t": "Autoblog, Oct 29 2019: Ford claims 3.3-second 0-60 for the Shelby GT500",
+   "u": "https://www.autoblog.com/2019/10/29/ford-mustang-shelby-gt500-0-60-acceleration-time/",
+   "k": "outlet (Ford claim)"
+  },
+  "z60": {
+   "t": "0-60specs.com: Ford Mustang 0-60 runs by magazine (Car and Driver, MotorTrend)",
+   "u": "https://www.0-60specs.com/ford/mustang-0-60-times/",
+   "k": "magazine tests, aggregated"
+  },
+  "cg25": {
+   "t": "CarGurus: Ford Mustang Shelby GT500 buying guide (Jan 2025)",
+   "u": "https://www.cargurus.com/Cars/articles/ford-mustang-shelby-gt500-buying-guide",
+   "k": "outlet"
+  },
+  "tsb1038": {
+   "t": "Ford TSB 10-3-8: 2007–2009 Shelby GT500 clutch drag (via Phoenix Friction)",
+   "u": "https://www.phoenixfriction.com/Images/pdf/tsb10-03-08.pdf",
+   "k": "Ford bulletin"
+  },
+  "csp21b26": {
+   "t": "Ford Customer Satisfaction Program 21B26: 5.2L secondary timing chain tensioner (filed with NHTSA)",
+   "u": "https://static.nhtsa.gov/odi/tsbs/2021/MC-10191520-0001.pdf",
+   "k": "Ford bulletin"
+  },
+  "ssm50578": {
+   "t": "Ford SSM 50578: 2020–2021 GT500 lack of power, P1228, supercharger drive (CarComplaints summary)",
+   "u": "https://www.carcomplaints.com/Ford/Mustang/2020/tsbs/tsb-ssm-50578.shtml",
+   "k": "Ford bulletin (outlet summary)"
+  },
+  "ssm51811": {
+   "t": "Ford SSM 51811: 2022 GT500 oil leak at spark plug tube / VCT seals (CarComplaints summary)",
+   "u": "https://www.carcomplaints.com/Ford/Mustang/2022/tsbs/tsb-ssm-51811.shtml",
+   "k": "Ford bulletin (outlet summary)"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-shelby-gt500",
+ "img": "/assets/ai-perf/shelby-gt500.webp?v=1"
+}

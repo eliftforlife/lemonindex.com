@@ -1,0 +1,729 @@
+{
+ "slug": "cts-v",
+ "name": "Cadillac CTS-V",
+ "short": "CTS-V",
+ "make": "Cadillac",
+ "page": "/cars/cts-v/",
+ "focus": "g3",
+ "star": "g3-v",
+ "h1": "Cadillac CTS-V: performance, engines and what owners say",
+ "nhtsa": {
+  "make": "CADILLAC",
+  "models": [
+   "CTS"
+  ],
+  "note": "NHTSA files the CTS-V under CTS, so these counts are every CTS of these years."
+ },
+ "topics_extra": {
+  "Supercharger rattle": "supercharger (rattle|rattling|noise|whine|bearing)|isolator|coupler",
+  "8-speed shudder": "shudder|8l90|8.?speed|harsh (shift|downshift)|torque converter",
+  "Differential / wheel hop": "differential|diff (whine|noise|clunk)|wheel ?hop|axle hop|half.?shafts?",
+  "Clutch": "\\bclutch\\b",
+  "Heat soak / limp mode": "heat soak|overheat|limp mode|reduced (engine )?power"
+ },
+ "gens": [
+  {
+   "id": "g1",
+   "code": "1st gen",
+   "years": "2004–2007",
+   "y0": 2004,
+   "y1": 2007,
+   "engine": "LS6-LS2",
+   "body": "Sedan",
+   "tag": "400 hp V8 (LS6, then LS2 from 2006), six-speed manual only.",
+   "variants": [
+    {
+     "id": "g1-ls6",
+     "name": "CTS-V (5.7 LS6)",
+     "years": "2004–2005",
+     "hp": {
+      "v": 400,
+      "src": [
+       "wcts",
+       "wls"
+      ],
+      "note": "at 6,000 rpm (Wikipedia)"
+     },
+     "tq": {
+      "v": 395,
+      "src": [
+       "wcts",
+       "wls"
+      ],
+      "note": "lb-ft at 4,800 rpm (Wikipedia)"
+     },
+     "z60": {
+      "v": 4.8,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "top": {
+      "v": "163 mph",
+      "src": [
+       "wcts"
+      ],
+      "note": "GM figure as given by Wikipedia (uncited there)"
+     },
+     "trans": {
+      "v": "6-speed manual only, rear-drive",
+      "src": [
+       "wcts"
+      ],
+      "note": "Tremec T56; Getrag limited-slip rear axle, 3.73:1"
+     }
+    },
+    {
+     "id": "g1-ls2",
+     "name": "CTS-V (6.0 LS2)",
+     "years": "2006–2007",
+     "hp": {
+      "v": 400,
+      "src": [
+       "wcts",
+       "wls"
+      ],
+      "note": "at 6,000 rpm (Wikipedia)"
+     },
+     "tq": {
+      "v": 395,
+      "src": [
+       "wcts"
+      ],
+      "note": "lb-ft at 4,400 rpm (Wikipedia)"
+     },
+     "z60": {
+      "v": 4.9,
+      "who": "MotorTrend",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "top": {
+      "v": "163 mph",
+      "src": [
+       "wcts"
+      ],
+      "note": "GM figure as given by Wikipedia (uncited there)"
+     },
+     "trans": {
+      "v": "6-speed manual only, rear-drive",
+      "src": [
+       "wcts"
+      ],
+      "note": "Tremec T56"
+     },
+     "what": "Bigger 6.0-liter LS2 with the same ratings but peak torque 400 rpm sooner; stronger rear differential and half-shafts.",
+     "what_src": [
+      "wcts"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "g2",
+   "code": "2nd gen",
+   "years": "2009–2015",
+   "y0": 2009,
+   "y1": 2015,
+   "engine": "LSA",
+   "body": "Sedan, coupe, wagon",
+   "tag": "Supercharged 556 hp LSA. Coupe and wagon join for 2011.",
+   "variants": [
+    {
+     "id": "g2-sedan",
+     "name": "CTS-V Sedan",
+     "years": "2009–2014",
+     "hp": {
+      "v": 556,
+      "src": [
+       "s12",
+       "s14",
+       "s09o"
+      ],
+      "note": "at 6,100 rpm, SAE certified"
+     },
+     "tq": {
+      "v": 551,
+      "src": [
+       "s12",
+       "s14",
+       "s09o"
+      ],
+      "note": "lb-ft at 3,800 rpm, SAE certified"
+     },
+     "z60": {
+      "v": 3.9,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual or 6-speed automatic, rear-drive",
+      "src": [
+       "s12",
+       "s09o"
+      ],
+      "note": "Tremec TR6060 manual; 6L90 paddle-shift automatic, the first automatic in a CTS-V"
+     },
+     "weight": {
+      "v": "4,222 lb",
+      "src": [
+       "s12"
+      ],
+      "note": "manual, 2012 spec sheet; automatic 4,255 lb"
+     },
+     "price": {
+      "v": "$59,995",
+      "src": [
+       "wcts"
+      ],
+      "note": "2009 base price per Wikipedia; destination not stated"
+     }
+    },
+    {
+     "id": "g2-coupe",
+     "name": "CTS-V Coupe",
+     "years": "2011–2015",
+     "hp": {
+      "v": 556,
+      "src": [
+       "c12",
+       "n1001"
+      ],
+      "note": "at 6,100 rpm, SAE certified"
+     },
+     "tq": {
+      "v": 551,
+      "src": [
+       "c12",
+       "n1001"
+      ],
+      "note": "lb-ft at 3,800 rpm"
+     },
+     "z60": {
+      "v": 3.9,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 3.9,
+      "csrc": [
+       "n1001"
+      ]
+     },
+     "trans": {
+      "v": "6-speed manual or 6-speed automatic, rear-drive",
+      "src": [
+       "n1001",
+       "c12"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "4,209 lb",
+      "src": [
+       "c12"
+      ],
+      "note": "manual, 2012 spec sheet; automatic 4,248 lb"
+     }
+    },
+    {
+     "id": "g2-wagon",
+     "name": "CTS-V Sport Wagon",
+     "years": "2011–2014",
+     "hp": {
+      "v": 556,
+      "src": [
+       "w12",
+       "n1003"
+      ],
+      "note": "at 6,100 rpm, SAE certified"
+     },
+     "tq": {
+      "v": 551,
+      "src": [
+       "w12",
+       "n1003"
+      ],
+      "note": "lb-ft at 3,800 rpm"
+     },
+     "z60": {
+      "v": 4.1,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual or 6-speed automatic, rear-drive",
+      "src": [
+       "w12",
+       "n1003"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "4,391 lb",
+      "src": [
+       "w12"
+      ],
+      "note": "manual, 2012 spec sheet; automatic 4,431 lb"
+     }
+    },
+    {
+     "id": "g2-coupe-se",
+     "name": "2015 CTS-V Coupe special edition",
+     "years": "2015",
+     "pkg": "g2-coupe",
+     "hp": {
+      "v": 556,
+      "src": [
+       "n0512"
+      ],
+      "note": ""
+     },
+     "trans": {
+      "v": "6-speed manual or 6-speed automatic, rear-drive",
+      "src": [
+       "n0512"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$72,195",
+      "src": [
+       "n0512"
+      ],
+      "note": "includes $995 destination and $1,300 gas-guzzler tax"
+     },
+     "what": "500 cars: Ebony interior with red stitching, Recaro seats, dark V grille, satin graphite wheels, red calipers.",
+     "what_src": [
+      "n0512"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "g3",
+   "code": "3rd gen",
+   "years": "2016–2019",
+   "y0": 2016,
+   "y1": 2019,
+   "engine": "LT4",
+   "body": "Sedan",
+   "tag": "640 hp supercharged LT4, 8-speed automatic, 200 mph claimed.",
+   "variants": [
+    {
+     "id": "g3-v",
+     "name": "CTS-V",
+     "years": "2016–2019",
+     "star": true,
+     "hp": {
+      "v": 640,
+      "src": [
+       "s16",
+       "n1222"
+      ],
+      "note": "at 6,400 rpm, SAE certified"
+     },
+     "tq": {
+      "v": 630,
+      "src": [
+       "s16",
+       "n1222"
+      ],
+      "note": "lb-ft at 3,600 rpm, SAE certified"
+     },
+     "z60": {
+      "v": 3.6,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 3.7,
+      "csrc": [
+       "n0429",
+       "n1222"
+      ]
+     },
+     "top": {
+      "v": "200 mph",
+      "src": [
+       "n1222",
+       "n0429"
+      ],
+      "note": "Cadillac claim"
+     },
+     "trans": {
+      "v": "8-speed automatic, rear-drive",
+      "src": [
+       "s16"
+      ],
+      "note": "Hydra-Matic 8L90 with paddles; electronic limited-slip differential"
+     },
+     "weight": {
+      "v": "4,145 lb",
+      "src": [
+       "s16"
+      ],
+      "note": "2016 spec sheet"
+     },
+     "price": {
+      "v": "$83,995",
+      "src": [
+       "n0429"
+      ],
+      "note": "2016, plus $995 destination"
+     }
+    },
+    {
+     "id": "g3-cb",
+     "name": "CTS-V Carbon Black",
+     "years": "2017–2019",
+     "pkg": "g3-v",
+     "hp": {
+      "v": 640,
+      "src": [
+       "s17o"
+      ],
+      "note": "SAE certified"
+     },
+     "tq": {
+      "v": 630,
+      "src": [
+       "s17o"
+      ],
+      "note": "lb-ft"
+     },
+     "what": "Appearance package: Black Chrome grille, dark wheels, carbon fiber splitter, hood vent, diffuser and taller spoiler.",
+     "what_src": [
+      "n1607",
+      "s17o"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "LS6-LS2": {
+   "name": "GM LS6 / LS2",
+   "what": "5.7-liter (LS6) or 6.0-liter (LS2) V-8, pushrod",
+   "study": "gm-ls-gen3",
+   "page": "/engines/gm-ls-gen3/",
+   "yt": [
+    "scy",
+    "gm-ls-gen3"
+   ],
+   "facts": [
+    [
+     "Output",
+     "400 hp, 395 lb-ft in the CTS-V",
+     [
+      "wcts",
+      "wls"
+     ]
+    ],
+    [
+     "Size",
+     "5.7 liters (LS6, 2004–2005), 6.0 liters (LS2, 2006–2007)",
+     [
+      "wcts",
+      "wls"
+     ]
+    ],
+    [
+     "Compression",
+     "10.5:1 (LS6), 10.9:1 (LS2)",
+     [
+      "wls"
+     ]
+    ],
+    [
+     "Valves",
+     "LS6 has sodium-filled exhaust valves; the LS2 uses the same heads without them",
+     [
+      "wls"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Fuel pump module can overheat",
+     "kind": "Recall",
+     "rx": "fuel pump|fuel (smell|odor|leak)|smell(s)? (of )?gas|stall(s|ed|ing)?",
+     "x": "On 2004–2007 CTS-Vs the fuel pump module's electrical terminals can overheat and melt the flange. Fuel can then leak, and the car can stall.",
+     "fix": "Dealers replace the fuel module and tank jumper harness free (NHTSA 14V-542).",
+     "src": [
+      "r14"
+     ]
+    },
+    {
+     "t": "No mechanical engine pattern found",
+     "kind": "Owner-reported",
+     "rx": "",
+     "x": "The sources used here document no recurring LS6 or LS2 mechanical failure in the CTS-V. For 2006 GM did fit a stronger rear differential and half-shafts.",
+     "fix": "",
+     "src": [
+      "wcts"
+     ]
+    }
+   ]
+  },
+  "LSA": {
+   "name": "GM LSA",
+   "what": "6.2-liter V-8, supercharged",
+   "study": "gm-lsa-ls9",
+   "page": "/engines/gm-lsa-ls9/",
+   "yt": [
+    "scy",
+    "gm-lsa-ls9"
+   ],
+   "facts": [
+    [
+     "Max engine speed",
+     "6,200 rpm",
+     [
+      "s12"
+     ]
+    ],
+    [
+     "Output",
+     "556 hp, 551 lb-ft (CTS-V)",
+     [
+      "s12",
+      "s09o"
+     ]
+    ],
+    [
+     "Supercharger",
+     "1.9-liter Eaton, twin four-lobe rotors, intercooled; 9.1:1 compression",
+     [
+      "s12",
+      "n1003"
+     ]
+    ],
+    [
+     "Block",
+     "Cast aluminum block and heads, two valves per cylinder",
+     [
+      "s12"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Supercharger rattle at idle",
+     "kind": "Maker bulletin",
+     "rx": "supercharger (rattle|rattling|noise|bearing)|isolator|coupler",
+     "x": "GM found the supercharger on 2009–2013 CTS-Vs (and 2012–2013 Camaro ZL1s) can rattle at idle. Left alone, it can ruin the bearing grease and, in the worst case, stop the engine.",
+     "fix": "Dealers replace the supercharger free under a special coverage of 10 years or 120,000 miles.",
+     "src": [
+      "ma14"
+     ]
+    },
+    {
+     "t": "Low-rpm buzz on replacement superchargers",
+     "kind": "Maker bulletin",
+     "rx": "buzz|flutter",
+     "x": "On manual 2014 CTS-Vs, and earlier ones with a replacement supercharger (solid coupling), a buzz at 800–900 rpm in second or third gear under load is normal, GM told dealers.",
+     "fix": "No repair; GM said not to replace parts for this noise.",
+     "src": [
+      "pip5192"
+     ]
+    }
+   ]
+  },
+  "LT4": {
+   "name": "GM LT4",
+   "what": "6.2-liter V-8, supercharged",
+   "study": "gm-lt4",
+   "page": "/engines/gm-lt4/",
+   "yt": [
+    "scy",
+    "gm-lt4"
+   ],
+   "facts": [
+    [
+     "Max engine speed",
+     "6,600 rpm",
+     [
+      "s16"
+     ]
+    ],
+    [
+     "Output",
+     "640 hp, 630 lb-ft (CTS-V)",
+     [
+      "s16",
+      "n1222"
+     ]
+    ],
+    [
+     "Supercharger",
+     "1.7-liter, smaller rotors than the LSA's; direct injection, 10.0:1 compression",
+     [
+      "n1222",
+      "s16"
+     ]
+    ],
+    [
+     "Heads",
+     "Rotocast A356T6 aluminum heads, titanium intake valves",
+     [
+      "n1222"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "8-speed automatic shudder and harsh shifts (disputed)",
+     "kind": "Lawsuit",
+     "rx": "shudder|harsh (shift|downshift)|8l90|torque converter|transmission (jerk|lurch|slam)",
+     "x": "A class action says GM 8L90 and 8L45 automatics built 2015–2019 can shudder when the fluid absorbs moisture and can shift harshly. GM disputes it; in 2025 an appeals court vacated the class certification.",
+     "fix": "No recall; the court record says dealer workarounds improved drive quality on some cars.",
+     "src": [
+      "sp25"
+     ]
+    }
+   ]
+  }
+ },
+ "compare": [
+  {
+   "slug": "amg-e63",
+   "name": "Mercedes-AMG E63"
+  },
+  {
+   "slug": "ct5-v-blackwing",
+   "name": "Cadillac CT5-V Blackwing"
+  },
+  {
+   "slug": "charger-hellcat",
+   "name": "Dodge Charger SRT Hellcat"
+  },
+  {
+   "slug": "camaro-zl1",
+   "name": "Chevrolet Camaro ZL1"
+  }
+ ],
+ "sources": {
+  "s16": {
+   "t": "Cadillac: 2016 CTS-V specifications (archived)",
+   "u": "https://web.archive.org/web/20160419032309/http://media.cadillac.com:80/media/us/en/cadillac/vehicles/cts-v/2016.tab1.html",
+   "k": "Cadillac"
+  },
+  "n1222": {
+   "t": "Cadillac: 2016 Cadillac CTS-V hits 200 mph with 640 hp (Dec 2014, archived)",
+   "u": "https://web.archive.org/web/20161219130413/http://media.cadillac.com/media/us/en/cadillac/news.detail.html/content/Pages/news/us/en/2014/Dec/1222-cts-v.html",
+   "k": "Cadillac"
+  },
+  "n0429": {
+   "t": "Cadillac: Next-generation 640-hp Cadillac CTS-V launches this summer (Apr 2015, archived)",
+   "u": "https://web.archive.org/web/20151009060422/http://media.cadillac.com/media/us/en/cadillac/news.detail.html/content/Pages/news/us/en/2015/apr/0429-cadillac-cts-v.html",
+   "k": "Cadillac"
+  },
+  "s17o": {
+   "t": "Cadillac: 2017 CTS-V overview (archived)",
+   "u": "https://web.archive.org/web/20190215215832/https://media.cadillac.com/media/us/en/cadillac/vehicles/cts-v/2017.html",
+   "k": "Cadillac"
+  },
+  "n1607": {
+   "t": "Cadillac: Carbon Black sport package for 2017 ATS and CTS lines, including CTS-V (Jul 2016, archived)",
+   "u": "https://web.archive.org/web/20170123200829/http://media.cadillac.com/media/us/en/cadillac/news.detail.html/content/Pages/news/us/en/2016/jul/0705-black-carbon.html",
+   "k": "Cadillac"
+  },
+  "s09o": {
+   "t": "Cadillac: 2009 CTS-V overview (archived)",
+   "u": "https://web.archive.org/web/20160909170933/http://media.cadillac.com:80/media/us/en/cadillac/vehicles/cts-v/2009.html",
+   "k": "Cadillac"
+  },
+  "s12": {
+   "t": "Cadillac: 2012 CTS-V Sedan specifications (archived)",
+   "u": "https://web.archive.org/web/20111026070623/http://media.cadillac.com:80/media/us/en/cadillac/vehicles/cts-v/2012.tab1.html",
+   "k": "Cadillac"
+  },
+  "s14": {
+   "t": "Cadillac: 2014 CTS-V Sedan specifications (archived)",
+   "u": "https://web.archive.org/web/20160315201737/http://media.cadillac.com:80/media/us/en/cadillac/vehicles/cts-v/2014.tab1.html",
+   "k": "Cadillac"
+  },
+  "c12": {
+   "t": "Cadillac: 2012 CTS-V Coupe specifications (archived)",
+   "u": "https://web.archive.org/web/20170219054240/http://media.cadillac.com:80/media/us/en/cadillac/vehicles/cts-v_coupe/2012.tab1.html",
+   "k": "Cadillac"
+  },
+  "w12": {
+   "t": "Cadillac: 2012 CTS-V Sport Wagon specifications (archived)",
+   "u": "https://web.archive.org/web/20111115033008/http://media.cadillac.com:80/media/us/en/cadillac/vehicles/CTS-V_Sport_Wagon/2012.tab1.html",
+   "k": "Cadillac"
+  },
+  "n1001": {
+   "t": "GM: Cadillac announces the 2011 CTS-V Coupe (Jan 2010, archived)",
+   "u": "https://web.archive.org/web/20120303135154/http://media.gm.com/content/media/us/en/news/news_detail.brand_gm.html/content/Pages/news/us/en/2010/Jan/NAIAS/Cadillac/0105_cadillac_ctsv_coupe",
+   "k": "Cadillac"
+  },
+  "n1003": {
+   "t": "GM: Cadillac CTS-V Sport Wagon show car debuts at the New York Auto Show (Mar 2010, archived)",
+   "u": "https://web.archive.org/web/20131212113416/http://media.gm.com/media/us/en/gm/news.detail.html/content/Pages/news/us/en/2010/Mar/10NYAS/cadillac/0329_ctsvwagon.html",
+   "k": "Cadillac"
+  },
+  "n0512": {
+   "t": "Cadillac: Cadillac celebrates V-Series with 2015 CTS-V Coupe (May 2014, archived)",
+   "u": "https://web.archive.org/web/20150703111652/http://media.cadillac.com/media/us/en/cadillac/news.detail.html/content/Pages/news/us/en/2014/May/0512-cadillac-ctsv.html",
+   "k": "Cadillac"
+  },
+  "z60": {
+   "t": "0-60specs.com: Cadillac CTS-V 0-60 runs by magazine (Car and Driver, MotorTrend, Road & Track, MotorWeek)",
+   "u": "https://www.0-60specs.com/cadillac/cts-v-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "wcts": {
+   "t": "Wikipedia: Cadillac CTS (CTS-V sections)",
+   "u": "https://en.wikipedia.org/wiki/Cadillac_CTS",
+   "k": "Wikipedia (fallback)"
+  },
+  "wls": {
+   "t": "Wikipedia: LS based GM small-block engine (LS6, LS2)",
+   "u": "https://en.wikipedia.org/wiki/LS_based_GM_small-block_engine",
+   "k": "Wikipedia (fallback)"
+  },
+  "ma14": {
+   "t": "Motor Authority: GM identifies problem with supercharger on certain Cadillac CTS-V and Camaro ZL1 models (Jun 2014)",
+   "u": "https://www.motorauthority.com/news/1092495_gm-identifies-problem-with-supercharger-on-certain-cadillac-cts-v-and-camaro-zl1-models",
+   "k": "outlet, reporting GM special coverage"
+  },
+  "pip5192": {
+   "t": "GM bulletin PIP5192A: Supercharger rattle or buzz, 6.2L LSA, Cadillac CTS-V and Camaro (Sep 2014, NHTSA file)",
+   "u": "https://static.nhtsa.gov/odi/tsbs/2014/MC-10112210-9999.pdf",
+   "k": "Maker bulletin"
+  },
+  "sp25": {
+   "t": "U.S. Court of Appeals, Sixth Circuit: Speerly v. General Motors, 8L45/8L90 transmission class action (2025)",
+   "u": "https://www.opn.ca6.uscourts.gov/opinions.pdf/25a0170p-06.pdf",
+   "k": "court record"
+  },
+  "r14": {
+   "t": "NHTSA recall 14V-542: 2004-2007 Cadillac CTS-V fuel pump module (Sep 2014)",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=14V542000",
+   "k": "Recall"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-cts-v",
+ "img": "/assets/ai-perf/cts-v.webp?v=1"
+}

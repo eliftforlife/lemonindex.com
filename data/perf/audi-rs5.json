@@ -1,0 +1,670 @@
+{
+ "slug": "audi-rs5",
+ "name": "Audi RS 5",
+ "short": "RS 5",
+ "make": "Audi",
+ "page": "/cars/audi-rs5/",
+ "focus": "b9",
+ "star": "b9-comp",
+ "h1": "Audi RS 5: performance, engines and what owners say",
+ "nhtsa": {
+  "make": "AUDI",
+  "models": [
+   "RS5",
+   "RS 5"
+  ],
+  "note": "NHTSA files the Coupe, Cabriolet and Sportback under RS5 / RS 5, so these counts include every body style."
+ },
+ "topics_extra": {
+  "Carbon buildup": "carbon (build ?up|deposits?)|walnut blast",
+  "Injectors / misfire": "injectors?|misfire|p030[0-8]",
+  "PCV valve": "\\bpcv\\b|crankcase (vent|pressure)|oil separator",
+  "Turbo oil line": "oil (feed )?line|turbo (oil )?leak",
+  "Control arm bushings": "control arms?|bushings?",
+  "S tronic gearbox": "s ?tronic|dual.?clutch|mechatronic"
+ },
+ "gens": [
+  {
+   "id": "b8",
+   "code": "B8",
+   "years": "2013–2015",
+   "y0": 2013,
+   "y1": 2015,
+   "engine": "42fsi",
+   "body": "Coupe, Cabriolet",
+   "tag": "High-revving 450 hp V-8, 7-speed S tronic, quattro.",
+   "variants": [
+    {
+     "id": "b8",
+     "name": "RS 5 Coupe",
+     "years": "2013–2015",
+     "hp": {
+      "v": 450,
+      "src": [
+       "amc12",
+       "a15"
+      ],
+      "note": "at 8,250 rpm"
+     },
+     "tq": {
+      "v": 317,
+      "src": [
+       "amc12",
+       "a15"
+      ],
+      "note": "lb-ft (430 Nm) at 4,000–6,000 rpm; Audi's 2015 U.S. kit lists 316"
+     },
+     "z60": {
+      "v": 4.4,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 4.5,
+      "csrc": [
+       "a15"
+      ]
+     },
+     "top": {
+      "v": "174 mph",
+      "src": [
+       "a15"
+      ],
+      "note": "limited, 2015 U.S. kit"
+     },
+     "trans": {
+      "v": "7-speed S tronic dual-clutch, all-wheel drive",
+      "src": [
+       "a15"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "4,009 lb",
+      "src": [
+       "a15"
+      ],
+      "note": "2015 spec sheet"
+     },
+     "price": {
+      "v": "$68,900",
+      "src": [
+       "tn13"
+      ],
+      "note": "2013, plus $895 destination"
+     }
+    },
+    {
+     "id": "b8-cab",
+     "name": "RS 5 Cabriolet",
+     "years": "2014–2015",
+     "hp": {
+      "v": 450,
+      "src": [
+       "amc13",
+       "a15"
+      ],
+      "note": "at 8,250 rpm"
+     },
+     "tq": {
+      "v": 317,
+      "src": [
+       "amc13",
+       "a15"
+      ],
+      "note": "lb-ft (430 Nm) at 4,000–6,000 rpm; Audi's 2015 U.S. kit lists 316"
+     },
+     "z60": {
+      "v": 4.3,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 4.9,
+      "csrc": [
+       "a15"
+      ]
+     },
+     "top": {
+      "v": "174 mph",
+      "src": [
+       "a15"
+      ],
+      "note": "limited, 2015 U.S. kit"
+     },
+     "trans": {
+      "v": "7-speed S tronic dual-clutch, all-wheel drive",
+      "src": [
+       "a15"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "4,420 lb",
+      "src": [
+       "a15"
+      ],
+      "note": "2015 spec sheet"
+     },
+     "price": {
+      "v": "$77,900",
+      "src": [
+       "ma14"
+      ],
+      "note": "2014; destination not stated"
+     }
+    }
+   ]
+  },
+  {
+   "id": "b9",
+   "code": "B9",
+   "years": "2018–2025",
+   "y0": 2018,
+   "y1": 2025,
+   "engine": "29tfsi",
+   "body": "Coupe, Sportback",
+   "tag": "Twin-turbo V-6, 444 hp, 8-speed automatic, quattro.",
+   "variants": [
+    {
+     "id": "b9-18",
+     "name": "RS 5 Coupe",
+     "years": "2018–2020",
+     "hp": {
+      "v": 444,
+      "src": [
+       "a18"
+      ],
+      "note": "at 5,700–6,700 rpm"
+     },
+     "tq": {
+      "v": 443,
+      "src": [
+       "a18"
+      ],
+      "note": "lb-ft at 1,900–5,000 rpm"
+     },
+     "z60": {
+      "v": 3.5,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 3.7,
+      "csrc": [
+       "a18"
+      ]
+     },
+     "top": {
+      "v": "155 mph",
+      "src": [
+       "a18"
+      ],
+      "note": "limited; 174 optional"
+     },
+     "trans": {
+      "v": "8-speed Tiptronic automatic, all-wheel drive",
+      "src": [
+       "a18"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,990 lb",
+      "src": [
+       "a18"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$69,900",
+      "src": [
+       "a18"
+      ],
+      "note": "2018, plus $975 destination"
+     }
+    },
+    {
+     "id": "b9-sb",
+     "name": "RS 5 Sportback",
+     "years": "2019–2025",
+     "hp": {
+      "v": 444,
+      "src": [
+       "aw19",
+       "a21"
+      ],
+      "note": ""
+     },
+     "tq": {
+      "v": 443,
+      "src": [
+       "aw19"
+      ],
+      "note": "lb-ft at launch; 442 from 2021"
+     },
+     "z60": {
+      "v": 3.6,
+      "who": "MotorTrend",
+      "src": [
+       "z60"
+      ],
+      "claim": 3.8,
+      "csrc": [
+       "aw19",
+       "a21"
+      ]
+     },
+     "top": {
+      "v": "155 mph",
+      "src": [
+       "aw19"
+      ],
+      "note": "limited; 174 with Dynamic plus package"
+     },
+     "trans": {
+      "v": "8-speed Tiptronic automatic, all-wheel drive",
+      "src": [
+       "a21"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "4,056 lb",
+      "src": [
+       "a21s"
+      ],
+      "note": "2021 spec sheet"
+     },
+     "price": {
+      "v": "$74,200",
+      "src": [
+       "aw19"
+      ],
+      "note": "2019, plus $995 destination"
+     }
+    },
+    {
+     "id": "b9-21",
+     "name": "RS 5 Coupe",
+     "years": "2021–2025",
+     "hp": {
+      "v": 444,
+      "src": [
+       "a21",
+       "a23"
+      ],
+      "note": "at 5,700–6,700 rpm"
+     },
+     "tq": {
+      "v": 442,
+      "src": [
+       "a21",
+       "a23"
+      ],
+      "note": "lb-ft at 1,900–5,000 rpm"
+     },
+     "z60": {
+      "v": 3.5,
+      "who": "MotorTrend",
+      "src": [
+       "z60"
+      ],
+      "claim": 3.7,
+      "csrc": [
+       "a21"
+      ]
+     },
+     "top": {
+      "v": "155 mph",
+      "src": [
+       "a21",
+       "a23"
+      ],
+      "note": "limited"
+     },
+     "trans": {
+      "v": "8-speed Tiptronic automatic, all-wheel drive",
+      "src": [
+       "a21"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,990 lb",
+      "src": [
+       "a21s"
+      ],
+      "note": "2021 spec sheet"
+     },
+     "price": {
+      "v": "$75,100",
+      "src": [
+       "a21"
+      ],
+      "note": "2021, plus $1,045 destination"
+     }
+    },
+    {
+     "id": "b9-comp",
+     "name": "RS 5 Competition",
+     "years": "2023–2025",
+     "star": true,
+     "pkg": "b9-21",
+     "hp": {
+      "v": 444,
+      "src": [
+       "a23"
+      ],
+      "note": ""
+     },
+     "tq": {
+      "v": 442,
+      "src": [
+       "a23"
+      ],
+      "note": ""
+     },
+     "z60": {
+      "v": null,
+      "who": "",
+      "src": [],
+      "claim": 3.7,
+      "csrc": [
+       "a23"
+      ]
+     },
+     "top": {
+      "v": "180 mph",
+      "src": [
+       "a23"
+      ],
+      "note": "limited"
+     },
+     "trans": {
+      "v": "8-speed Tiptronic automatic, all-wheel drive",
+      "src": [
+       "a23"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$16,100",
+      "src": [
+       "a23"
+      ],
+      "note": "package price on a $77,900 RS 5 Coupe (Dec 2022), destination extra"
+     },
+     "what": "Coilovers 10 mm lower, louder exhaust, Corsa tires, 180 mph limiter.",
+     "what_src": [
+      "a23"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "42fsi": {
+   "name": "Audi 4.2 FSI V8",
+   "what": "4.2-liter V-8, naturally aspirated",
+   "study": "audi-42-fsi",
+   "page": "/engines/audi-42-fsi/",
+   "yt": [
+    "scy",
+    "audi-42-fsi"
+   ],
+   "facts": [
+    [
+     "Redline",
+     "8,500 rpm",
+     [
+      "amc13"
+     ]
+    ],
+    [
+     "Output",
+     "450 hp at 8,250 rpm, 317 lb-ft",
+     [
+      "amc12",
+      "a15"
+     ]
+    ],
+    [
+     "Design",
+     "Long stroke (84.5 x 92.8 mm), 12.5:1 compression",
+     [
+      "amc13",
+      "a15"
+     ]
+    ],
+    [
+     "Build",
+     "Hand-assembled in Győr, Hungary; chains at the back of the engine",
+     [
+      "amc13"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Carbon buildup on intake valves",
+     "kind": "Parts seller",
+     "rx": "carbon (build ?up|deposits?)|walnut blast|intake valves?",
+     "x": "Direct injection means fuel never washes the intake valves, so carbon builds up. Signs are weak acceleration, misfires and higher fuel use.",
+     "fix": "Pull the intake manifold and clean the valves; one shop lists $1,295 and up for an RS 5.",
+     "src": [
+      "m034",
+      "arf"
+     ]
+    },
+    {
+     "t": "Injector failure",
+     "kind": "Owner-reported",
+     "rx": "injectors?|misfire|p030[0-8]",
+     "x": "An owner FAQ reports injectors that fail suddenly and can flood a cylinder; one car threw a cylinder 3 misfire at about 62,000 miles.",
+     "fix": "Replace the injectors; that owner replaced all eight.",
+     "src": [
+      "arf"
+     ]
+    },
+    {
+     "t": "PCV valve diaphragms",
+     "kind": "Owner-reported",
+     "rx": "\\bpcv\\b|crankcase vent|oil separator",
+     "x": "The two PCV valves use rubber diaphragms that can tear, per an owner FAQ.",
+     "fix": "",
+     "src": [
+      "arf"
+     ]
+    }
+   ]
+  },
+  "29tfsi": {
+   "name": "Audi 2.9 TFSI V6",
+   "what": "2.9-liter V-6, twin-turbo",
+   "study": "",
+   "page": "",
+   "yt": [
+    "scy",
+    ""
+   ],
+   "facts": [
+    [
+     "Output",
+     "444 hp at 5,700–6,700 rpm, 442–443 lb-ft",
+     [
+      "a18",
+      "a21"
+     ]
+    ],
+    [
+     "Turbos",
+     "Two, inside the V; up to 21.6 psi (1.5 bar)",
+     [
+      "amc20",
+      "a18"
+     ]
+    ],
+    [
+     "Cycle",
+     "B-cycle (Miller-like) intake timing, 10.0:1 compression",
+     [
+      "amc20",
+      "a18"
+     ]
+    ],
+    [
+     "Cooling",
+     "Exhaust manifolds cast into the heads, coolant-cooled",
+     [
+      "amc20"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Turbo oil feed line leaks",
+     "kind": "Parts seller",
+     "rx": "oil (feed )?line|turbo (oil )?leak|oil leak",
+     "x": "A parts seller says the turbo oil feed line can leak, mainly when oil changes are stretched.",
+     "fix": "The seller advises oil changes about every 5,000 miles.",
+     "src": [
+      "epp"
+     ]
+    },
+    {
+     "t": "Heat wear on hoses and intercooler parts",
+     "kind": "Parts seller",
+     "rx": "intercooler|coolant (hose|line|leak)|boost leak",
+     "x": "The same seller lists heat-related wear on hoses and intercooler parts in the tightly packed engine.",
+     "fix": "",
+     "src": [
+      "epp"
+     ]
+    },
+    {
+     "t": "PCV and crankcase pressure",
+     "kind": "Parts seller",
+     "rx": "\\bpcv\\b|crankcase pressure|rough idle",
+     "x": "PCV and crankcase pressure faults can cause a rough idle, per the same seller.",
+     "fix": "",
+     "src": [
+      "epp"
+     ]
+    },
+    {
+     "t": "Carbon buildup",
+     "kind": "Parts seller",
+     "rx": "carbon (build ?up|deposits?)|walnut blast",
+     "x": "Direct injection and short trips lead to carbon on the intake side, noticeable past 60,000 miles on B9 cars, the seller says.",
+     "fix": "",
+     "src": [
+      "epp"
+     ]
+    }
+   ]
+  }
+ },
+ "compare": [
+  {
+   "slug": "bmw-m4",
+   "name": "BMW M4"
+  },
+  {
+   "slug": "amg-c63",
+   "name": "Mercedes-AMG C63"
+  },
+  {
+   "slug": "lexus-rc-f",
+   "name": "Lexus RC F"
+  },
+  {
+   "slug": "ats-v",
+   "name": "Cadillac ATS-V"
+  }
+ ],
+ "sources": {
+  "a15": {
+   "t": "Audi of America: 2015 A5/S5/RS 5 media kit (Jul 2014)",
+   "u": "https://media.audiusa.com/assets/documents/original/717-MY15+A5+Press+Kit+FINAL+8414.pdf",
+   "k": "Audi"
+  },
+  "a18": {
+   "t": "Audi of America: 2018 RS 5 Coupe media kit (Jan 2018)",
+   "u": "https://media.audiusa.com/assets/documents/original/3937-MY2018RS5CoupePressKit.pdf",
+   "k": "Audi"
+  },
+  "aw19": {
+   "t": "Audi of America: 2019 RS 5 Sportback pricing (Aug 2018, via Automotive World)",
+   "u": "https://www.automotiveworld.com/news/all-new-2019-audi-rs-5-sportback-pricing-is-announced/",
+   "k": "Audi"
+  },
+  "a21": {
+   "t": "Audi of America: 2021 RS 5 Coupe and Sportback updates and pricing (Sep 2020)",
+   "u": "https://media.audiusa.com/assets/documents/original/7828-FINAL2021AudiRS5pricing92920.pdf",
+   "k": "Audi"
+  },
+  "a21s": {
+   "t": "Audi of America: 2021 A5 model line technical specifications",
+   "u": "https://media.audiusa.com/assets/documents/original/8363-FINAL2021A5TechSpecs.pdf",
+   "k": "Audi"
+  },
+  "a23": {
+   "t": "Audi of America: RS 5 Competition package for 2023 (May 2022, pricing Dec 2022)",
+   "u": "https://media.audiusa.com/releases/524",
+   "k": "Audi"
+  },
+  "amc12": {
+   "t": "Audi MediaCenter: RS 5 Coupé engine (archived)",
+   "u": "https://web.archive.org/web/20200815134617/https://www.audi-mediacenter.com/en/power-intensified-the-audi-rs-5-coupe-2479/engine-2504",
+   "k": "Audi"
+  },
+  "amc13": {
+   "t": "Audi MediaCenter: RS 5 Cabriolet engine (Sep 2013, archived)",
+   "u": "https://web.archive.org/web/20191207014559/https://www.audi-mediacenter.com/en/the-fascination-of-open-top-dynamism-the-audi-rs-5-cabriolet-3049/engine-3060",
+   "k": "Audi"
+  },
+  "amc20": {
+   "t": "Audi MediaCenter: revised RS 5 Coupé and Sportback, drive (Apr 2020, archived)",
+   "u": "https://web.archive.org/web/20240623044314/https://www.audi-mediacenter.com/en/the-sporty-spearhead-of-the-product-line-with-a-new-look-the-rs-5-coupe-and-rs-5-sportback-12728/drive-12735",
+   "k": "Audi"
+  },
+  "tn13": {
+   "t": "Torque News: 450hp 2013 Audi RS5 priced at $68,900 (Jul 2012)",
+   "u": "https://www.torquenews.com/106/450hp-2013-audi-rs5-priced-68900",
+   "k": "outlet"
+  },
+  "ma14": {
+   "t": "Motor Authority: 2014 Audi RS 5 Cabriolet priced from $77,900 (Mar 2013)",
+   "u": "https://www.motorauthority.com/news/1083050_2014-audi-rs-5-cabriolet-priced-from-77900",
+   "k": "outlet"
+  },
+  "z60": {
+   "t": "0-60specs.com: Audi RS 5 0-60 runs by magazine (Car and Driver, MotorTrend)",
+   "u": "https://www.0-60specs.com/audi-rs5-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "m034": {
+   "t": "034Motorsport: carbon cleaning for direct-injected Audi/VW engines",
+   "u": "https://www.034motorsport.com/service/audi-volkswagen-carbon-cleaning-service-direct-injected-engines.html",
+   "k": "parts seller"
+  },
+  "arf": {
+   "t": "Audi Revolution forum: RS5 maintenance and reliability FAQ (B8, 2019–2020)",
+   "u": "https://forums.audirevolution.net/t/rs5-maintenance-and-reliability-faq/16016",
+   "k": "owner forum"
+  },
+  "epp": {
+   "t": "Euro Premium Parts: A5/S5/RS5 B9 used buying and reliability guide (Nov 2025)",
+   "u": "https://europremiumparts.com/blogs/audi-buying-guides/achat-dune-audi-a5-s5-et-rs5-b9-doccasion-notre-guide-fiabilite",
+   "k": "parts seller"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-audi-rs5",
+ "img": "/assets/ai-perf/audi-rs5.webp?v=1"
+}

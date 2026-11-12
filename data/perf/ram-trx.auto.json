@@ -1,0 +1,650 @@
+{
+ "built": "2026-11-11",
+ "nhtsa": {
+  "by_year": {
+   "2009": 37,
+   "2013": 1279,
+   "2014": 1775,
+   "2015": 1459,
+   "2016": 1551,
+   "2017": 882,
+   "2018": 665,
+   "2019": 1492,
+   "2020": 639,
+   "2021": 682,
+   "2022": 624,
+   "2023": 203,
+   "2024": 76,
+   "2025": 362,
+   "2026": 101
+  },
+  "gens": {
+   "dt": {
+    "n": 1585,
+    "issues": {
+     "Supercharger bearing wear": {
+      "n": 0,
+      "ex": []
+     },
+     "Catalytic converter and O2 sensors (one test truck)": {
+      "n": 3,
+      "ex": [
+       "11613541",
+       "11637508"
+      ]
+     }
+    }
+   }
+  },
+  "parts": [
+   [
+    "Engine",
+    593
+   ],
+   [
+    "Electrical system",
+    491
+   ],
+   [
+    "Unknown or other",
+    256
+   ],
+   [
+    "Power train",
+    245
+   ],
+   [
+    "Service brakes",
+    154
+   ],
+   [
+    "Fuel/propulsion system",
+    145
+   ]
+  ]
+ },
+ "recalls": {
+  "2021": [
+   {
+    "id": "21V438000",
+    "part": "BACK OVER PREVENTION:DISPLAY FUNCTION",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2021 Ram 1500 vehicles equipped with a trailer reverse steering module (TRSCM).  The rearview camera image may not display.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 111, \"Rear Visibility.\""
+   },
+   {
+    "id": "21V918000",
+    "part": "BACK OVER PREVENTION:DISPLAY FUNCTION",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2021 Ram 1500 pickup trucks.  The Trailer Reverse Steering Control Module (TRSCM) may prevent the rearview image from displaying.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 111, \"Rear Visibility.\""
+   },
+   {
+    "id": "21V698000",
+    "part": "TIRES:TEMPORARY/EMERGENCY SPARE TIRE",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2021 Ram 1500 vehicles.  The incorrect-size spare tire may have been installed, which does not match the tire size and inflation pressure information on the tire placard.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 110, \"Tire Selection And Rims.\""
+   },
+   {
+    "id": "21V925000",
+    "part": "AIR BAGS:SIDE/WINDOW:CURTAIN",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2021-2022 Ram 2500, Ram 3500, and 2021 Ram 1500 Classic pickup trucks.  The side air bag inflatable curtain (SABIC) assemblies may have been manufactured with the incorrect amount of compressed gas, which can result in an improper air bag deployment."
+   },
+   {
+    "id": "21V037000",
+    "part": "SERVICE BRAKES, HYDRAULIC:FOUNDATION COMPONENTS:MASTER CYLINDER",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2020-2021 Ram 1500 Classic SLT trucks.  Certain vehicles were built without the retaining clip that secures the master cylinder push rod to the brake pedal, which can cause the brake pedal to separate from the brake system."
+   },
+   {
+    "id": "22V638000",
+    "part": "BACK OVER PREVENTION:DISPLAY FUNCTION",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2020-2021 Jeep Wrangler, RAM 1500 and 2021 Jeep Gladiator vehicles.  A radio software error may prevent the rearview image from displaying.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 111, \"Rear Visibility.\""
+   },
+   {
+    "id": "22V767000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2020-2022 Jeep Wrangler, Ram 1500, and 2021-2022 Jeep Gladiator vehicles equipped with 3.0L diesel engines.  The high pressure fuel pump (HPFP) may fail, causing an engine stall."
+   },
+   {
+    "id": "22V904000",
+    "part": "STRUCTURE:BODY:TAILGATE:HINGE AND ATTACHMENTS",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2019-2022 Ram 1500, 2500, and 3500 pickup trucks.  The tailgate may not latch properly due to misaligned tailgate strikers, which could result in the tailgate opening while driving."
+   },
+   {
+    "id": "23V059000",
+    "part": "BACK OVER PREVENTION:DISPLAY FUNCTION",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2021-2023 Ram 1500 and 2023 Ram 2500 vehicles.  The trailer reverse steering control module (TRSCM) may prevent the rearview image from displaying when the vehicle is placed in reverse.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 111, \"Rear Visibility.\""
+   },
+   {
+    "id": "23V265000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION:CONTROL MODULE (TCM/PCM/TECM)",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2021 Ram 1500 vehicles equipped with 5.7L eTorque engines.  The powertrain control module software may cause an incorrect fuel mixture condition in the engine, and result in an engine stall."
+   },
+   {
+    "id": "24V653000",
+    "part": "SERVICE BRAKES, HYDRAULIC:ANTILOCK/TRACTION CONTROL/ELECTRONIC LIMITED SLIP:CONTROL UNIT/MODULE",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2019, 2021-2024 Ram 1500 vehicles.  Due to a software malfunction, the anti-lock brake system (ABS) control module may disable the electronic stability control system.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 126, \"Electronic Stability Control Systems.\""
+   },
+   {
+    "id": "24V754000",
+    "part": "VISIBILITY:REARVIEW MIRRORS/DEVICES",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2020-2023 Ram 1500 Classic vehicles equipped with heated trailer tow rearview mirrors.  The mirror glass may detach from the driver's side heated trailer tow rearview mirror.  As such these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 111, \"Rear Visibility.\""
+   },
+   {
+    "id": "25V298000",
+    "part": "AIR BAGS",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2019-2024 Ram 1500 vehicles.  The driver's side air bag may not be connected properly, which can cause the air bag not to deploy as intended.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 208, \"Occupant Crash Protection.\""
+   },
+   {
+    "id": "25V765000",
+    "part": "AIR BAGS:FRONTAL",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2021-2022 Ram 1500, Ram 2500, Ram 3500, Ram 4500, and Ram 5500 vehicles. The steering column control module may cause the driver's side air bag not to deploy as intended. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 208, \"Occupant Crash Protection.\""
+   },
+   {
+    "id": "26V495000",
+    "part": "SEAT BELTS:REAR/OTHER:ANCHORAGE",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2019-2026 Ram 1500 vehicles. The second-row center and left-side seat belt buckle anchors may have been improperly installed. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 210, \"Seat Belt Assembly Anchorages.\""
+   }
+  ],
+  "2022": [
+   {
+    "id": "21V871000",
+    "part": "VISIBILITY:DEFROSTER/DEFOGGER/HVAC SYSTEM:WINDSHIELD:ELECTRICAL HEATING ELEMENT",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2022 Ram 1500 vehicles.  These vehicles may have been built with incompatible heating, ventilation, and air conditioning systems (HVAC), resulting in the windshield defrosting and defogging system being inoperable to drivers.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 103, \"Windshield Def"
+   },
+   {
+    "id": "22V407000",
+    "part": "BACK OVER PREVENTION:DISPLAY FUNCTION",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2022 Ram 1500, 2500 pickup trucks, and 3500 Cab Chassis vehicles with GVWR less than 10,000 lbs.  The radio software may prevent the rearview image from displaying.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 111, \"Rear Visibility.\""
+   },
+   {
+    "id": "22V766000",
+    "part": "SEAT BELTS:PRETENSIONER",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2022 Ram 1500, Jeep Gladiator, and 2021 Jeep Wrangler vehicles.  The front seat belt retractors may have an improperly welded micro gas generator, which can result in seat belt pretensioner failure."
+   },
+   {
+    "id": "22V767000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2020-2022 Jeep Wrangler, Ram 1500, and 2021-2022 Jeep Gladiator vehicles equipped with 3.0L diesel engines.  The high pressure fuel pump (HPFP) may fail, causing an engine stall."
+   },
+   {
+    "id": "22V904000",
+    "part": "STRUCTURE:BODY:TAILGATE:HINGE AND ATTACHMENTS",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2019-2022 Ram 1500, 2500, and 3500 pickup trucks.  The tailgate may not latch properly due to misaligned tailgate strikers, which could result in the tailgate opening while driving."
+   },
+   {
+    "id": "23V059000",
+    "part": "BACK OVER PREVENTION:DISPLAY FUNCTION",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2021-2023 Ram 1500 and 2023 Ram 2500 vehicles.  The trailer reverse steering control module (TRSCM) may prevent the rearview image from displaying when the vehicle is placed in reverse.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 111, \"Rear Visibility.\""
+   },
+   {
+    "id": "23V263000",
+    "part": "FUEL SYSTEM, DIESEL:DELIVERY:FUEL PUMP",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2021-2023 Jeep Wrangler, Gladiator, and 2022-2023 Ram 1500 vehicles equipped with a 3.0L diesel engine.  The high pressure fuel pump (HPFP) may fail."
+   },
+   {
+    "id": "23V264000",
+    "part": "AIR BAGS:SENSOR:SIDE IMPACT",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2022 Ram 1500 vehicles.  The B-pillar impact sensors may be missing, which can result in delayed air bag deployment or non-deployment."
+   },
+   {
+    "id": "23V654000",
+    "part": "BACK OVER PREVENTION:DISPLAY FUNCTION",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2022-2023 Ram 1500, Ram 3500 Cab Chassis with GVWR less than 10,000 lbs., and 2022-2024 Ram 2500 vehicles.  The radio software may prevent the rearview image from displaying.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 111, \"Rear Visibility.\""
+   },
+   {
+    "id": "24V437000",
+    "part": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+    "summary": "Chrysler (FCA US, LLC) is recalling one 2022 Ram 1500 Classic vehicle.  The wiring harness may short circuit and prevent the rearview image from displaying.  As such, this vehicle fails to comply with the requirements of Federal Motor Vehicle Safety Standard number 111, \"Rear Visibility.\""
+   },
+   {
+    "id": "24V436000",
+    "part": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2021-2022 Dodge Durango, 2021-2023 Chrysler Pacifica, Jeep Grand Cherokee L, 2022 Ram 1500, 2500, 3500, Chrysler Voyager, 2022-2023 Jeep Compass, Grand Cherokee, Wagoneer, Grand Wagoneer, and Ram Promaster vehicles.  The radio software may prevent the rearview image from displaying.  As such, these vehicles fail to comply with the requirements of Federal"
+   },
+   {
+    "id": "24V653000",
+    "part": "SERVICE BRAKES, HYDRAULIC:ANTILOCK/TRACTION CONTROL/ELECTRONIC LIMITED SLIP:CONTROL UNIT/MODULE",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2019, 2021-2024 Ram 1500 vehicles.  Due to a software malfunction, the anti-lock brake system (ABS) control module may disable the electronic stability control system.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 126, \"Electronic Stability Control Systems.\""
+   },
+   {
+    "id": "24V754000",
+    "part": "VISIBILITY:REARVIEW MIRRORS/DEVICES",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2020-2023 Ram 1500 Classic vehicles equipped with heated trailer tow rearview mirrors.  The mirror glass may detach from the driver's side heated trailer tow rearview mirror.  As such these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 111, \"Rear Visibility.\""
+   },
+   {
+    "id": "25V298000",
+    "part": "AIR BAGS",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2019-2024 Ram 1500 vehicles.  The driver's side air bag may not be connected properly, which can cause the air bag not to deploy as intended.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 208, \"Occupant Crash Protection.\""
+   },
+   {
+    "id": "25V765000",
+    "part": "AIR BAGS:FRONTAL",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2021-2022 Ram 1500, Ram 2500, Ram 3500, Ram 4500, and Ram 5500 vehicles. The steering column control module may cause the driver's side air bag not to deploy as intended. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 208, \"Occupant Crash Protection.\""
+   },
+   {
+    "id": "26V495000",
+    "part": "SEAT BELTS:REAR/OTHER:ANCHORAGE",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2019-2026 Ram 1500 vehicles. The second-row center and left-side seat belt buckle anchors may have been improperly installed. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 210, \"Seat Belt Assembly Anchorages.\""
+   }
+  ],
+  "2023": [
+   {
+    "id": "23V059000",
+    "part": "BACK OVER PREVENTION:DISPLAY FUNCTION",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2021-2023 Ram 1500 and 2023 Ram 2500 vehicles.  The trailer reverse steering control module (TRSCM) may prevent the rearview image from displaying when the vehicle is placed in reverse.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 111, \"Rear Visibility.\""
+   },
+   {
+    "id": "23V263000",
+    "part": "FUEL SYSTEM, DIESEL:DELIVERY:FUEL PUMP",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2021-2023 Jeep Wrangler, Gladiator, and 2022-2023 Ram 1500 vehicles equipped with a 3.0L diesel engine.  The high pressure fuel pump (HPFP) may fail."
+   },
+   {
+    "id": "23V654000",
+    "part": "BACK OVER PREVENTION:DISPLAY FUNCTION",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2022-2023 Ram 1500, Ram 3500 Cab Chassis with GVWR less than 10,000 lbs., and 2022-2024 Ram 2500 vehicles.  The radio software may prevent the rearview image from displaying.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 111, \"Rear Visibility.\""
+   },
+   {
+    "id": "23V799000",
+    "part": "STEERING:STEERING CONTROL MODULE",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2023 Ram 1500 Classic, Ram 3500 Classic, 3500 Cab Chassis, 2023-2024 Ram 2500, 4500/5500 Cab Chassis, and Ram 3500 vehicles.  The steering column control module may cause the high beams to activate when the turn signal is used or activate the turn signal when the high beams are used.  In addition, the turn signal self-canceling feature may not function p"
+   },
+   {
+    "id": "24V199000",
+    "part": "AIR BAGS:FRONTAL:DRIVER CLOCKSPRING/SPIRAL CASSETTE",
+    "summary": "Chrysler (FCA US, LLC) (Stellantis) is recalling certain 2023-2024 Ram 1500, Jeep Wrangler, Jeep Wagoneer, Jeep Grand Wagoneer, Chrysler Pacifica, Ram 3500, Ram 3500 cab chassis, Ram 2500, Ram 4500 cab chassis, Ram 5500 cab chassis, 2023 Jeep Gladiator, Jeep Grand Cherokee, Jeep Grand Cherokee L, Ram 3500 Cab Chassis with a GVWR less than 10,000 lbs., and Chrysler Voyager vehicles.  The steering c"
+   },
+   {
+    "id": "24V413000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2023 Ram 1500, 2500, and 3500 vehicles.  An insufficient weld in the transmission control unit can allow transmission fluid to leak on to electrical components, resulting in a loss of drive power or loss of park function."
+   },
+   {
+    "id": "24V653000",
+    "part": "SERVICE BRAKES, HYDRAULIC:ANTILOCK/TRACTION CONTROL/ELECTRONIC LIMITED SLIP:CONTROL UNIT/MODULE",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2019, 2021-2024 Ram 1500 vehicles.  Due to a software malfunction, the anti-lock brake system (ABS) control module may disable the electronic stability control system.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 126, \"Electronic Stability Control Systems.\""
+   },
+   {
+    "id": "24V729000",
+    "part": "STEERING:STEERING CONTROL MODULE",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2023-2024 Ram 1500 vehicles.  The turn signal self-canceling feature may not function properly.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 108, \"Lamps, Reflective devices, and Associated Equipment.\""
+   },
+   {
+    "id": "24V754000",
+    "part": "VISIBILITY:REARVIEW MIRRORS/DEVICES",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2020-2023 Ram 1500 Classic vehicles equipped with heated trailer tow rearview mirrors.  The mirror glass may detach from the driver's side heated trailer tow rearview mirror.  As such these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 111, \"Rear Visibility.\""
+   },
+   {
+    "id": "25V298000",
+    "part": "AIR BAGS",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2019-2024 Ram 1500 vehicles.  The driver's side air bag may not be connected properly, which can cause the air bag not to deploy as intended.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 208, \"Occupant Crash Protection.\""
+   },
+   {
+    "id": "26V495000",
+    "part": "SEAT BELTS:REAR/OTHER:ANCHORAGE",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2019-2026 Ram 1500 vehicles. The second-row center and left-side seat belt buckle anchors may have been improperly installed. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 210, \"Seat Belt Assembly Anchorages.\""
+   }
+  ],
+  "2024": [
+   {
+    "id": "24V199000",
+    "part": "AIR BAGS:FRONTAL:DRIVER CLOCKSPRING/SPIRAL CASSETTE",
+    "summary": "Chrysler (FCA US, LLC) (Stellantis) is recalling certain 2023-2024 Ram 1500, Jeep Wrangler, Jeep Wagoneer, Jeep Grand Wagoneer, Chrysler Pacifica, Ram 3500, Ram 3500 cab chassis, Ram 2500, Ram 4500 cab chassis, Ram 5500 cab chassis, 2023 Jeep Gladiator, Jeep Grand Cherokee, Jeep Grand Cherokee L, Ram 3500 Cab Chassis with a GVWR less than 10,000 lbs., and Chrysler Voyager vehicles.  The steering c"
+   },
+   {
+    "id": "24V653000",
+    "part": "SERVICE BRAKES, HYDRAULIC:ANTILOCK/TRACTION CONTROL/ELECTRONIC LIMITED SLIP:CONTROL UNIT/MODULE",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2019, 2021-2024 Ram 1500 vehicles.  Due to a software malfunction, the anti-lock brake system (ABS) control module may disable the electronic stability control system.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 126, \"Electronic Stability Control Systems.\""
+   },
+   {
+    "id": "24V729000",
+    "part": "STEERING:STEERING CONTROL MODULE",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2023-2024 Ram 1500 vehicles.  The turn signal self-canceling feature may not function properly.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 108, \"Lamps, Reflective devices, and Associated Equipment.\""
+   },
+   {
+    "id": "25V298000",
+    "part": "AIR BAGS",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2019-2024 Ram 1500 vehicles.  The driver's side air bag may not be connected properly, which can cause the air bag not to deploy as intended.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 208, \"Occupant Crash Protection.\""
+   },
+   {
+    "id": "26V327000",
+    "part": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2019 and 2023 Chrysler Pacifica, 2024 Ram 1500, Ram 2500, and 2024-2025 Jeep Wrangler vehicles. Contamination in the central vision processing module or improper programming may cause the rearview camera image not to display. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 111, \"Rear Vi"
+   },
+   {
+    "id": "26V495000",
+    "part": "SEAT BELTS:REAR/OTHER:ANCHORAGE",
+    "summary": "Chrysler (FCA US, LLC) is recalling certain 2019-2026 Ram 1500 vehicles. The second-row center and left-side seat belt buckle anchors may have been improperly installed. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 210, \"Seat Belt Assembly Anchorages.\""
+   }
+  ]
+ },
+ "yt": {
+  "car-ram-trx": null,
+  "chrysler-hellcat": {
+   "videos": 200,
+   "praise": [
+    [
+     "Looks",
+     18
+    ],
+    [
+     "Power and acceleration",
+     14
+    ],
+    [
+     "Interior and seats",
+     10
+    ],
+    [
+     "Everyday comfort",
+     8
+    ]
+   ],
+   "trouble": [
+    [
+     "Electrical / wiring / TIPM",
+     6
+    ]
+   ],
+   "top": [
+    {
+     "id": "buzsasTfC4s",
+     "title": "Hellcat vs Z06 Corvette - drag racing",
+     "views": 26342950,
+     "ch": "Wheels"
+    },
+    {
+     "id": "pVkhw1Q0nOU",
+     "title": "When the Wife asks to take your 1000hp Trackhawk shopping",
+     "views": 13813614,
+     "ch": "SRTNINJAUSA"
+    },
+    {
+     "id": "cKx-cb0fzeo",
+     "title": "2016 Dodge Challenger SRT Hellcat - SOUND!",
+     "views": 11025539,
+     "ch": "Visual Car Reviews"
+    }
+   ]
+  }
+ },
+ "scores": {
+  "chrysler-hellcat": {
+   "years": {
+    "2015": {
+     "score": 55,
+     "weight": 20.4,
+     "videos": 112,
+     "named": 13,
+     "top": [
+      {
+       "id": "buzsasTfC4s",
+       "title": "Hellcat vs Z06 Corvette - drag racing",
+       "views": 26342950
+      },
+      {
+       "id": "y-jdvMU1EKo",
+       "title": "Dodge Durango Hellcat vs Lamborghini Urus vs Jeep Trackhawk // DRAG & ROLL RACE",
+       "views": 4849740
+      },
+      {
+       "id": "MWMjR3r-nsI",
+       "title": "2015 Dodge Challenger SRT Hellcat - Jay Leno's Garage",
+       "views": 4636361
+      }
+     ]
+    },
+    "2016": {
+     "score": 50,
+     "weight": 10.4,
+     "videos": 102,
+     "named": 3,
+     "top": [
+      {
+       "id": "buzsasTfC4s",
+       "title": "Hellcat vs Z06 Corvette - drag racing",
+       "views": 26342950
+      },
+      {
+       "id": "cKx-cb0fzeo",
+       "title": "2016 Dodge Challenger SRT Hellcat - SOUND!",
+       "views": 11025539
+      },
+      {
+       "id": "y-jdvMU1EKo",
+       "title": "Dodge Durango Hellcat vs Lamborghini Urus vs Jeep Trackhawk // DRAG & ROLL RACE",
+       "views": 4849740
+      }
+     ]
+    },
+    "2017": {
+     "score": 49,
+     "weight": 8.4,
+     "videos": 100,
+     "named": 1,
+     "top": [
+      {
+       "id": "buzsasTfC4s",
+       "title": "Hellcat vs Z06 Corvette - drag racing",
+       "views": 26342950
+      },
+      {
+       "id": "y-jdvMU1EKo",
+       "title": "Dodge Durango Hellcat vs Lamborghini Urus vs Jeep Trackhawk // DRAG & ROLL RACE",
+       "views": 4849740
+      },
+      {
+       "id": "eyzGRhXp0do",
+       "title": "717HP DODGE CHARGER HELLCAT on AUTOBAHN [NO SPEED LIMIT] by AutoTopNL",
+       "views": 4597803
+      }
+     ]
+    },
+    "2018": {
+     "score": 53,
+     "weight": 29.1,
+     "videos": 150,
+     "named": 12,
+     "top": [
+      {
+       "id": "buzsasTfC4s",
+       "title": "Hellcat vs Z06 Corvette - drag racing",
+       "views": 26342950
+      },
+      {
+       "id": "pVkhw1Q0nOU",
+       "title": "When the Wife asks to take your 1000hp Trackhawk shopping",
+       "views": 13813614
+      },
+      {
+       "id": "ek_aZC4KIQM",
+       "title": "The $100,000 Jeep Trackhawk Is the Most Powerful SUV Ever",
+       "views": 7292548
+      }
+     ]
+    },
+    "2019": {
+     "score": 53,
+     "weight": 26.1,
+     "videos": 147,
+     "named": 9,
+     "top": [
+      {
+       "id": "buzsasTfC4s",
+       "title": "Hellcat vs Z06 Corvette - drag racing",
+       "views": 26342950
+      },
+      {
+       "id": "pVkhw1Q0nOU",
+       "title": "When the Wife asks to take your 1000hp Trackhawk shopping",
+       "views": 13813614
+      },
+      {
+       "id": "ek_aZC4KIQM",
+       "title": "The $100,000 Jeep Trackhawk Is the Most Powerful SUV Ever",
+       "views": 7292548
+      }
+     ]
+    },
+    "2020": {
+     "score": 51,
+     "weight": 21.1,
+     "videos": 142,
+     "named": 4,
+     "top": [
+      {
+       "id": "buzsasTfC4s",
+       "title": "Hellcat vs Z06 Corvette - drag racing",
+       "views": 26342950
+      },
+      {
+       "id": "pVkhw1Q0nOU",
+       "title": "When the Wife asks to take your 1000hp Trackhawk shopping",
+       "views": 13813614
+      },
+      {
+       "id": "ek_aZC4KIQM",
+       "title": "The $100,000 Jeep Trackhawk Is the Most Powerful SUV Ever",
+       "views": 7292548
+      }
+     ]
+    },
+    "2021": {
+     "score": 52,
+     "weight": 26.9,
+     "videos": 158,
+     "named": 7,
+     "top": [
+      {
+       "id": "buzsasTfC4s",
+       "title": "Hellcat vs Z06 Corvette - drag racing",
+       "views": 26342950
+      },
+      {
+       "id": "pVkhw1Q0nOU",
+       "title": "When the Wife asks to take your 1000hp Trackhawk shopping",
+       "views": 13813614
+      },
+      {
+       "id": "ek_aZC4KIQM",
+       "title": "The $100,000 Jeep Trackhawk Is the Most Powerful SUV Ever",
+       "views": 7292548
+      }
+     ]
+    },
+    "2022": {
+     "score": 52,
+     "weight": 14.1,
+     "videos": 116,
+     "named": 4,
+     "top": [
+      {
+       "id": "buzsasTfC4s",
+       "title": "Hellcat vs Z06 Corvette - drag racing",
+       "views": 26342950
+      },
+      {
+       "id": "y-jdvMU1EKo",
+       "title": "Dodge Durango Hellcat vs Lamborghini Urus vs Jeep Trackhawk // DRAG & ROLL RACE",
+       "views": 4849740
+      },
+      {
+       "id": "eyzGRhXp0do",
+       "title": "717HP DODGE CHARGER HELLCAT on AUTOBAHN [NO SPEED LIMIT] by AutoTopNL",
+       "views": 4597803
+      }
+     ]
+    },
+    "2023": {
+     "score": 52,
+     "weight": 13.6,
+     "videos": 115,
+     "named": 3,
+     "top": [
+      {
+       "id": "buzsasTfC4s",
+       "title": "Hellcat vs Z06 Corvette - drag racing",
+       "views": 26342950
+      },
+      {
+       "id": "y-jdvMU1EKo",
+       "title": "Dodge Durango Hellcat vs Lamborghini Urus vs Jeep Trackhawk // DRAG & ROLL RACE",
+       "views": 4849740
+      },
+      {
+       "id": "eyzGRhXp0do",
+       "title": "717HP DODGE CHARGER HELLCAT on AUTOBAHN [NO SPEED LIMIT] by AutoTopNL",
+       "views": 4597803
+      }
+     ]
+    },
+    "2024": {
+     "score": 50,
+     "weight": 11.5,
+     "videos": 112,
+     "named": 0,
+     "top": [
+      {
+       "id": "buzsasTfC4s",
+       "title": "Hellcat vs Z06 Corvette - drag racing",
+       "views": 26342950
+      },
+      {
+       "id": "y-jdvMU1EKo",
+       "title": "Dodge Durango Hellcat vs Lamborghini Urus vs Jeep Trackhawk // DRAG & ROLL RACE",
+       "views": 4849740
+      },
+      {
+       "id": "eyzGRhXp0do",
+       "title": "717HP DODGE CHARGER HELLCAT on AUTOBAHN [NO SPEED LIMIT] by AutoTopNL",
+       "views": 4597803
+      }
+     ]
+    },
+    "2025": {
+     "score": 50,
+     "weight": 9.2,
+     "videos": 100,
+     "named": 1,
+     "top": [
+      {
+       "id": "buzsasTfC4s",
+       "title": "Hellcat vs Z06 Corvette - drag racing",
+       "views": 26342950
+      },
+      {
+       "id": "y-jdvMU1EKo",
+       "title": "Dodge Durango Hellcat vs Lamborghini Urus vs Jeep Trackhawk // DRAG & ROLL RACE",
+       "views": 4849740
+      },
+      {
+       "id": "eyzGRhXp0do",
+       "title": "717HP DODGE CHARGER HELLCAT on AUTOBAHN [NO SPEED LIMIT] by AutoTopNL",
+       "views": 4597803
+      }
+     ]
+    },
+    "2026": {
+     "score": 48,
+     "weight": 9.2,
+     "videos": 100,
+     "named": 1,
+     "top": [
+      {
+       "id": "buzsasTfC4s",
+       "title": "Hellcat vs Z06 Corvette - drag racing",
+       "views": 26342950
+      },
+      {
+       "id": "y-jdvMU1EKo",
+       "title": "Dodge Durango Hellcat vs Lamborghini Urus vs Jeep Trackhawk // DRAG & ROLL RACE",
+       "views": 4849740
+      },
+      {
+       "id": "eyzGRhXp0do",
+       "title": "717HP DODGE CHARGER HELLCAT on AUTOBAHN [NO SPEED LIMIT] by AutoTopNL",
+       "views": 4597803
+      }
+     ]
+    }
+   },
+   "videos": 200,
+   "pulled": 200
+  }
+ }
+}

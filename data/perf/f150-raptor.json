@@ -1,0 +1,793 @@
+{
+ "slug": "f150-raptor",
+ "name": "Ford F-150 Raptor",
+ "short": "Raptor",
+ "make": "Ford",
+ "page": "/cars/f150-raptor/",
+ "focus": "g3",
+ "star": "g3-37",
+ "h1": "Ford F-150 Raptor: performance, engines and what owners say",
+ "nhtsa": {
+  "make": "FORD",
+  "models": [
+   "F-150"
+  ],
+  "note": "NHTSA files the Raptor under F-150, so these counts are every F-150 of these years."
+ },
+ "topics_extra": {
+  "Cam phaser rattle": "cam ?phasers?|(start ?up|cold start) rattle|rattle (on|at) (start|cold start)",
+  "10-speed shifting": "10.?speed|10r80|harsh (shift|downshift)|(rough|hard|clunky) shift\\w*|downshift\\w* (in)?to (1st|first)",
+  "Turbos and boost": "turbo\\w*|wastegate|intercooler|boost leak",
+  "Fox shocks / Live Valve": "fox shocks?|live valve|shocks? (leak\\w*|fail\\w*|blown)",
+  "Spark plugs / misfire": "spark plugs?|misfire|p030\\d",
+  "Timing chain": "timing chain|chain (rattle|slap|stretch)"
+ },
+ "gens": [
+  {
+   "id": "g1",
+   "code": "1st gen",
+   "years": "2010–2014",
+   "y0": 2010,
+   "y1": 2014,
+   "engine": "boss62",
+   "body": "SuperCab; SuperCrew from 2011",
+   "tag": "SVT Raptor: 411 hp 6.2 V8 (310 hp 5.4 in 2010), Fox bypass shocks.",
+   "variants": [
+    {
+     "id": "g1-54",
+     "name": "SVT Raptor 5.4 SuperCab",
+     "years": "2010",
+     "hp": {
+      "v": 310,
+      "src": [
+       "s10",
+       "f2312"
+      ],
+      "note": "at 5,000 rpm; 320 hp on E85"
+     },
+     "tq": {
+      "v": 365,
+      "src": [
+       "s10"
+      ],
+      "note": "lb-ft at 3,500 rpm; 390 lb-ft on E85"
+     },
+     "z60": {
+      "v": 8.0,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed automatic, four-wheel drive",
+      "src": [
+       "s10",
+       "s12"
+      ],
+      "note": "4.10 axle ratio"
+     },
+     "weight": {
+      "v": "5,908 lb",
+      "src": [
+       "s10"
+      ],
+      "note": "2010 spec sheet"
+     },
+     "what": "The 2010 base engine, a 5.4-liter three-valve V8; dropped for 2011.",
+     "what_src": [
+      "s10",
+      "ab10"
+     ]
+    },
+    {
+     "id": "g1-62",
+     "name": "SVT Raptor 6.2 SuperCab",
+     "years": "2010–2014",
+     "hp": {
+      "v": 411,
+      "src": [
+       "s10",
+       "s12",
+       "p14"
+      ],
+      "note": "at 5,500 rpm on premium fuel"
+     },
+     "tq": {
+      "v": 434,
+      "src": [
+       "s10",
+       "s12",
+       "p14"
+      ],
+      "note": "lb-ft at 4,500 rpm"
+     },
+     "z60": {
+      "v": 6.7,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed automatic, four-wheel drive",
+      "src": [
+       "s10",
+       "s12"
+      ],
+      "note": "4.10 axle ratio"
+     },
+     "weight": {
+      "v": "6,006 lb",
+      "src": [
+       "s10",
+       "s11"
+      ],
+      "note": "2010–2011; 6,016 lb from 2012"
+     },
+     "what": "In 2010 the 6.2 was a $3,000 option over the 5.4; from 2011 it was the only engine.",
+     "what_src": [
+      "ab10"
+     ]
+    },
+    {
+     "id": "g1-crew",
+     "name": "SVT Raptor SuperCrew",
+     "years": "2011–2014",
+     "hp": {
+      "v": 411,
+      "src": [
+       "s11",
+       "s12"
+      ],
+      "note": "at 5,500 rpm"
+     },
+     "tq": {
+      "v": 434,
+      "src": [
+       "s11",
+       "s12"
+      ],
+      "note": "lb-ft at 4,500 rpm"
+     },
+     "z60": {
+      "v": 6.6,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed automatic, four-wheel drive",
+      "src": [
+       "s10",
+       "s12"
+      ],
+      "note": "4.10 axle ratio"
+     },
+     "weight": {
+      "v": "6,200 lb",
+      "src": [
+       "s11",
+       "s12"
+      ],
+      "note": "2011; 6,210 lb from 2012"
+     },
+     "what": "Four full doors on a 145.2-inch wheelbase (SuperCab: 133.3 inches).",
+     "what_src": [
+      "s12",
+      "p14"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "g2",
+   "code": "2nd gen",
+   "years": "2017–2020",
+   "y0": 2017,
+   "y1": 2020,
+   "engine": "eb35ho",
+   "body": "SuperCab, SuperCrew",
+   "tag": "450 hp twin-turbo V6, 10-speed, up to 500 lb lighter; Live Valve 2019",
+   "variants": [
+    {
+     "id": "g2-cab",
+     "name": "Raptor SuperCab",
+     "years": "2017–2020",
+     "hp": {
+      "v": 450,
+      "src": [
+       "f1609",
+       "p17"
+      ],
+      "note": ""
+     },
+     "tq": {
+      "v": 510,
+      "src": [
+       "f1609",
+       "p17"
+      ],
+      "note": "lb-ft"
+     },
+     "z60": {
+      "v": 5.0,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "10-speed automatic, four-wheel drive",
+      "src": [
+       "p17",
+       "f1609"
+      ],
+      "note": "torque-on-demand transfer case"
+     },
+     "weight": {
+      "v": "5,525 lb",
+      "src": [
+       "wiki"
+      ],
+      "note": "Wikipedia figure; Ford says up to 500 lb lighter than the 2014"
+     },
+     "price": {
+      "v": "$49,520",
+      "src": [
+       "p17",
+       "f1611"
+      ],
+      "note": "2017, destination extra"
+     }
+    },
+    {
+     "id": "g2-crew",
+     "name": "Raptor SuperCrew",
+     "years": "2017–2020",
+     "hp": {
+      "v": 450,
+      "src": [
+       "f1609",
+       "p17"
+      ],
+      "note": ""
+     },
+     "tq": {
+      "v": 510,
+      "src": [
+       "f1609",
+       "p17"
+      ],
+      "note": "lb-ft"
+     },
+     "z60": {
+      "v": 5.1,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "10-speed automatic, four-wheel drive",
+      "src": [
+       "p17",
+       "f1609"
+      ],
+      "note": "torque-on-demand transfer case"
+     },
+     "weight": {
+      "v": "5,697 lb",
+      "src": [
+       "wiki"
+      ],
+      "note": "Wikipedia figure"
+     },
+     "what": "Four doors on a 145-inch wheelbase. 91% of early online builds were SuperCrews.",
+     "what_src": [
+      "f1601",
+      "f1611"
+     ]
+    },
+    {
+     "id": "g2-lv",
+     "name": "Raptor (2019–2020 update)",
+     "years": "2019–2020",
+     "pkg": "g2-crew",
+     "z60": {
+      "v": 5.1,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "what": "FOX Live Valve shocks that adjust damping in real time, Trail Control and optional Recaro seats.",
+     "what_src": [
+      "f1805"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "g3",
+   "code": "3rd gen",
+   "years": "2021–2025",
+   "y0": 2021,
+   "y1": 2025,
+   "engine": "eb35ho",
+   "body": "SuperCrew",
+   "tag": "Five-link coil rear, optional 37-inch tires, 450 hp twin-turbo V6.",
+   "variants": [
+    {
+     "id": "g3",
+     "name": "Raptor",
+     "years": "2021–2025",
+     "hp": {
+      "v": 450,
+      "src": [
+       "z60"
+      ],
+      "note": "as listed with Car and Driver and MotorTrend tests; Ford's 2021 launch release gave no rating"
+     },
+     "tq": {
+      "v": 510,
+      "src": [
+       "z60"
+      ],
+      "note": "lb-ft, as listed with the same tests"
+     },
+     "z60": {
+      "v": 5.2,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "10-speed automatic, four-wheel drive",
+      "src": [
+       "f2102"
+      ],
+      "note": "torque-on-demand transfer case; electronic locking rear differential standard"
+     },
+     "what": "Five-link rear with 24-inch coil springs and FOX Live Valve shocks; Dual Live Valve from 2024.",
+     "what_src": [
+      "f2102",
+      "p24"
+     ]
+    },
+    {
+     "id": "g3-37",
+     "name": "Raptor 37 (37-inch tires)",
+     "years": "2021–2025",
+     "star": true,
+     "pkg": "g3",
+     "hp": {
+      "v": 450,
+      "src": [
+       "z60"
+      ],
+      "note": "as listed with Car and Driver and MotorTrend tests; Ford's 2021 launch release gave no rating"
+     },
+     "tq": {
+      "v": 510,
+      "src": [
+       "z60"
+      ],
+      "note": "lb-ft, as listed with the same tests"
+     },
+     "z60": {
+      "v": 5.2,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "10-speed automatic, four-wheel drive",
+      "src": [
+       "f2102"
+      ],
+      "note": "torque-on-demand transfer case; electronic locking rear differential standard"
+     },
+     "what": "37-inch BFGoodrich KO2 tires: 13.1 inches of running clearance and a 33.1-degree approach angle.",
+     "what_src": [
+      "f2102",
+      "p21"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "boss62": {
+   "name": "Ford 6.2 Boss V8",
+   "what": "6.2-liter V-8",
+   "study": "",
+   "page": "",
+   "yt": [
+    "scy",
+    ""
+   ],
+   "facts": [
+    [
+     "Output",
+     "411 hp at 5,500 rpm, 434 lb-ft at 4,500 rpm (premium fuel)",
+     [
+      "s10",
+      "s12"
+     ]
+    ],
+    [
+     "Valvetrain",
+     "Single overhead cam, 2 valves per cylinder, roller-rocker shafts",
+     [
+      "s10",
+      "s12"
+     ]
+    ],
+    [
+     "Block",
+     "Iron block, aluminum heads; 9.8:1 compression",
+     [
+      "s12"
+     ]
+    ],
+    [
+     "Size",
+     "4.02 x 3.74 in bore and stroke, 6,210 cc; built at Romeo Engine Plant",
+     [
+      "s12"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Sudden downshift to first gear (transmission)",
+     "kind": "Recall",
+     "rx": "downshift\\w* (in)?to (1st|first)|unexpected(ly)? downshift|rear (wheels?|tires?) (lock\\w*|slid\\w*)",
+     "x": "2011–2013 F-150s with the 6-speed automatic can suddenly downshift into first at any speed. Ford also recalled certain 2014 F-150s for the same symptom.",
+     "fix": "Dealers reprogram the powertrain control module; 2013 trucks with the 6.2 needed a second update (19V-433).",
+     "src": [
+      "r16248",
+      "r19075",
+      "r19433",
+      "r24444"
+     ]
+    },
+    {
+     "t": "No engine recall",
+     "kind": "Recall",
+     "rx": "",
+     "x": "NHTSA lists no recall on the engine itself for 2010–2014 F-150s. No 6.2 failure pattern is documented in the sources used here.",
+     "fix": "",
+     "src": [
+      "nhtsa"
+     ]
+    }
+   ]
+  },
+  "mod54": {
+   "name": "Ford 5.4 Triton 3V V8",
+   "what": "5.4-liter V-8",
+   "study": "",
+   "page": "",
+   "yt": [
+    "scy",
+    ""
+   ],
+   "facts": [
+    [
+     "Output",
+     "310 hp at 5,000 rpm, 365 lb-ft at 3,500 rpm (320 hp, 390 lb-ft on E85)",
+     [
+      "s10"
+     ]
+    ],
+    [
+     "Valvetrain",
+     "Single overhead cam, 3 valves per cylinder, variable cam timing",
+     [
+      "s10"
+     ]
+    ],
+    [
+     "Block",
+     "Iron block, aluminum heads; 9.8:1 compression",
+     [
+      "s10"
+     ]
+    ],
+    [
+     "In the Raptor",
+     "2010 only; the 6.2 became the only engine for 2011",
+     [
+      "ab10"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "No engine or transmission recall",
+     "kind": "Recall",
+     "rx": "",
+     "x": "NHTSA lists one recall for 2010 F-150s, for an interior door handle spring. None covers the engine or transmission.",
+     "fix": "",
+     "src": [
+      "r11049"
+     ]
+    }
+   ]
+  },
+  "eb35ho": {
+   "name": "Ford 3.5 EcoBoost HO",
+   "what": "3.5-liter V-6, twin-turbo",
+   "study": "ford-ecoboost-35-ho",
+   "page": "/engines/ford-ecoboost-35-ho/",
+   "yt": [
+    "scy",
+    "ford-ecoboost-35-ho"
+   ],
+   "facts": [
+    [
+     "Output",
+     "450 hp, 510 lb-ft (Raptor)",
+     [
+      "f1609",
+      "p17"
+     ]
+    ],
+    [
+     "Turbos",
+     "Higher boost than the regular F-150 3.5, electric wastegates; 85 hp and 50 lb-ft more",
+     [
+      "p17"
+     ]
+    ],
+    [
+     "Bottom end",
+     "Piston-cooling oil jets, upgraded crank and bearings, two-piece oil pan; port and direct injection",
+     [
+      "p17"
+     ]
+    ],
+    [
+     "Compression",
+     "10.5:1 on the 2021 third-generation engine",
+     [
+      "f2102"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "10-speed shift linkage and park pin recalls (2017–2018)",
+     "kind": "Recall",
+     "rx": "roll ?pin|shift (lever|linkage)|rolled away|won'?t (stay )?in park|(not|wouldn'?t) go into gear",
+     "x": "On some 2017 F-150s with the 10-speed, the pin holding the shift linkage can fall out. A few 2017–2018 trucks were built without a park roll pin. Either can let the truck roll in Park.",
+     "fix": "Dealers replace or install the pin (17V-671, 18V-213).",
+     "src": [
+      "r17671",
+      "r18213"
+     ]
+    },
+    {
+     "t": "Shift to neutral (2021)",
+     "kind": "Recall",
+     "rx": "(shift\\w*|went|goes) (in)?to neutral|loss of (drive|motive) power|low (transmission )?fluid pressure",
+     "x": "On some 2021 F-150s a false low-fluid-pressure code can drop the 10-speed into neutral while driving.",
+     "fix": "Dealers update the powertrain software (22V-188; some trucks redone under 25V-169).",
+     "src": [
+      "r22188",
+      "r25169"
+     ]
+    },
+    {
+     "t": "High-pressure fuel pump welds (2018)",
+     "kind": "Recall",
+     "rx": "high pressure fuel pump|\\bhpfp\\b|fuel leak|smells? (of )?(gas|fuel)",
+     "x": "Welds on the high-pressure fuel pump can crack and leak fuel or oil on 5,645 2018 trucks with the 3.5 GTDI. NHTSA's summary does not say whether Raptors are included.",
+     "fix": "Dealers replace the pump (18V-392). Check the VIN on nhtsa.gov.",
+     "src": [
+      "r18392"
+     ]
+    },
+    {
+     "t": "Engine cup plug oil leak (2024–2025)",
+     "kind": "Recall",
+     "rx": "cup plug|oil leak|leaking oil|losing oil",
+     "x": "A misaligned engine cup plug can cause a fast oil leak on some 2024–2025 F-150s with the 3.5 GTDI. NHTSA's summaries do not say whether Raptors are included.",
+     "fix": "Dealers check the plug and replace it if needed (24V-851, 25V-198). Check the VIN on nhtsa.gov.",
+     "src": [
+      "r24851",
+      "r25198"
+     ]
+    }
+   ]
+  }
+ },
+ "compare": [
+  {
+   "slug": "ram-trx",
+   "name": "Ram 1500 TRX"
+  },
+  {
+   "slug": "bronco-raptor",
+   "name": "Ford Bronco Raptor"
+  },
+  {
+   "slug": "svt-lightning",
+   "name": "Ford F-150 SVT Lightning"
+  },
+  {
+   "slug": "ram-srt10",
+   "name": "Dodge Ram SRT-10"
+  }
+ ],
+ "sources": {
+  "s10": {
+   "t": "Ford: 2010 F-150 SVT Raptor technical specifications (archived)",
+   "u": "https://web.archive.org/web/20111019190724/http://media.ford.com/images/10031/2010_Raptor_Specs.pdf",
+   "k": "Ford"
+  },
+  "s11": {
+   "t": "Ford: 2011 F-150 SVT Raptor technical specifications (archived)",
+   "u": "https://web.archive.org/web/20111019190328/http://media.ford.com/images/10031/2011_Raptor_Specs.pdf",
+   "k": "Ford"
+  },
+  "s12": {
+   "t": "Ford: 2012 F-150 SVT Raptor technical specifications (archived)",
+   "u": "https://web.archive.org/web/20111019185944/http://media.ford.com/images/10031/2012_Raptor_Specs.pdf",
+   "k": "Ford"
+  },
+  "p14": {
+   "t": "Ford Media Center: 2014 F-150 SVT Raptor (archived)",
+   "u": "https://web.archive.org/web/20131205005842/https://media.ford.com/content/fordmedia/fna/us/en/products/trucks/f-150/2014-f-150-raptor.html",
+   "k": "Ford"
+  },
+  "ab10": {
+   "t": "Autoblog: 2011 F-150 SVT Raptor drops base engine, gets standard 6.2L V8 (Aug 2010, archived)",
+   "u": "https://web.archive.org/web/20100816150641/http://www.autoblog.com/2010/08/12/2011-ford-f-150-svt-raptor-to-drop-base-engine-get-standard-6-2l-v8/",
+   "k": "outlet"
+  },
+  "f1601": {
+   "t": "Ford: All-new F-150 Raptor SuperCrew (Jan 2016, archived)",
+   "u": "https://web.archive.org/web/20160304111406/https://media.ford.com/content/fordmedia/fna/us/en/news/2016/01/11/all-new-2017-f150-raptor.html",
+   "k": "Ford"
+  },
+  "f1609": {
+   "t": "Ford: All-new F-150 Raptor draws a line in the sand with 450 hp, 510 lb-ft (Sep 2016, archived)",
+   "u": "https://web.archive.org/web/20181106171239/https://media.ford.com/content/fordmedia/fna/us/en/news/2016/09/29/all-new-ford-f-150-raptor-draws-a-line-in-the-sand-with-450-hors.html",
+   "k": "Ford"
+  },
+  "f1611": {
+   "t": "Ford: 2017 F-150 Raptor ordering begins (Nov 2016, archived)",
+   "u": "https://web.archive.org/web/20210729174059/https://media.ford.com/content/fordmedia/fna/us/en/news/2016/11/04/2017-f-150-raptor-ordering-begins-online-and-at-ford-dealers.html",
+   "k": "Ford"
+  },
+  "p17": {
+   "t": "Ford Media Center: 2017 F-150 Raptor (archived)",
+   "u": "https://web.archive.org/web/20230323133908/https://media.ford.com/content/fordmedia/fna/us/en/products/trucks/f-150/2017-f-150-raptor.html",
+   "k": "Ford"
+  },
+  "f1805": {
+   "t": "Ford: Upgraded F-150 Raptor with smarter shocks, new Trail Control (May 2018, archived)",
+   "u": "https://web.archive.org/web/20190724083420/https://media.ford.com/content/fordmedia/fna/us/en/news/2018/05/24/upgraded-f-150-raptor-raises-bar-again-in-ultimate-off-road-perf.html",
+   "k": "Ford"
+  },
+  "f2102": {
+   "t": "Ford: All-new 2021 F-150 Raptor (Feb 2021, archived)",
+   "u": "https://web.archive.org/web/20210203160252/https://media.ford.com/content/fordmedia/fna/us/en/news/2021/02/03/2021-ford-f-150-raptor.html",
+   "k": "Ford"
+  },
+  "p21": {
+   "t": "Ford Media Center: 2021 F-150 Raptor (archived)",
+   "u": "https://web.archive.org/web/20220626075813/https://media.ford.com/content/fordmedia/fna/us/en/products/trucks/f-150-raptor/2021-f-150-raptor.html",
+   "k": "Ford"
+  },
+  "p24": {
+   "t": "Ford Media Center: 2024 F-150 Raptor / Raptor R (archived)",
+   "u": "https://web.archive.org/web/20230928103304/https://media.ford.com/content/fordmedia/fna/us/en/products/trucks/f-150-raptor/2024-ford-f-150-raptor.html",
+   "k": "Ford"
+  },
+  "f2312": {
+   "t": "Ford: New F-150 Raptor R cranks out 720 hp (Dec 2023; recaps the 2010 engines, archived)",
+   "u": "https://web.archive.org/web/20231220173359/https://media.ford.com/content/fordmedia/fna/us/en/news/2023/12/20/dashing-through-the-sand--new-ford-f-150-raptor-r-cranks-out-720.html",
+   "k": "Ford"
+  },
+  "wiki": {
+   "t": "Wikipedia: Ford Raptor",
+   "u": "https://en.wikipedia.org/wiki/Ford_Raptor",
+   "k": "Wikipedia (fallback; no Ford weight figure found for 2017–2020)"
+  },
+  "z60": {
+   "t": "0-60specs.com: Ford F-150 0-60 runs by magazine (Car and Driver, MotorTrend, MotorWeek)",
+   "u": "https://www.0-60specs.com/ford/f-150-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "r11049": {
+   "t": "NHTSA recall 11V-049: 2009–2010 F-150 interior door handle",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=11V049",
+   "k": "Recall"
+  },
+  "r16248": {
+   "t": "NHTSA recall 16V-248: 2011–2012 F-150 unexpected downshift to first gear",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=16V248",
+   "k": "Recall"
+  },
+  "r19075": {
+   "t": "NHTSA recall 19V-075: 2011–2013 F-150 6-speed automatic downshift to first gear",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=19V075",
+   "k": "Recall"
+  },
+  "r19433": {
+   "t": "NHTSA recall 19V-433: 2013 F-150 5.0L/6.2L, downshift fix redone",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=19V433",
+   "k": "Recall"
+  },
+  "r24444": {
+   "t": "NHTSA recall 24V-444: 2014 F-150 unexpected downshift to first gear",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=24V444",
+   "k": "Recall"
+  },
+  "r17671": {
+   "t": "NHTSA recall 17V-671: 2017 F-150 10-speed shift linkage pin",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=17V671",
+   "k": "Recall"
+  },
+  "r18213": {
+   "t": "NHTSA recall 18V-213: 2017–2018 F-150 10-speed missing park roll pin",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=18V213",
+   "k": "Recall"
+  },
+  "r22188": {
+   "t": "NHTSA recall 22V-188: 2021 F-150 false low fluid pressure code, shift to neutral",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=22V188",
+   "k": "Recall"
+  },
+  "r25169": {
+   "t": "NHTSA recall 25V-169: 2021 F-150 trucks repaired incorrectly under 22V-188",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=25V169",
+   "k": "Recall"
+  },
+  "r18392": {
+   "t": "NHTSA recall 18V-392: 2018 F-150/Expedition/Navigator 3.5L GTDI high-pressure fuel pump welds",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=18V392",
+   "k": "Recall"
+  },
+  "r24851": {
+   "t": "NHTSA recall 24V-851: 2024–2025 F-150 3.5L GTDI engine cup plug",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=24V851",
+   "k": "Recall"
+  },
+  "r25198": {
+   "t": "NHTSA recall 25V-198: 2024–2025 F-150 3.5L GTDI engine cup plug",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=25V198",
+   "k": "Recall"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-f150-raptor",
+ "img": "/assets/ai-perf/f150-raptor.webp?v=1"
+}

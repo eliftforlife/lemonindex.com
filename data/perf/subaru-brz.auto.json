@@ -1,0 +1,127 @@
+{
+ "built": "2026-11-11",
+ "nhtsa": {
+  "by_year": {
+   "2013": 64,
+   "2014": 6,
+   "2015": 3,
+   "2016": 3,
+   "2017": 7,
+   "2018": 1,
+   "2019": 1,
+   "2020": 2,
+   "2022": 10,
+   "2023": 1,
+   "2024": 3
+  },
+  "gens": {
+   "zc6": {
+    "n": 87,
+    "issues": {
+     "Valve spring recall (2013)": {
+      "n": 32,
+      "ex": [
+       "11181094",
+       "11186054"
+      ]
+     },
+     "Fuel pump recall (2018–2019)": {
+      "n": 27,
+      "ex": [
+       "10524548",
+       "10618377"
+      ]
+     },
+     "Coil packs overheat (early cars)": {
+      "n": 1,
+      "ex": [
+       "10524667"
+      ]
+     },
+     "RTV sealant and oil starvation (disputed)": {
+      "n": 6,
+      "ex": [
+       "10945176",
+       "11187281"
+      ]
+     }
+    }
+   },
+   "zd8": {
+    "n": 14,
+    "issues": {
+     "Oil pressure drops on track (disputed)": {
+      "n": 3,
+      "ex": [
+       "11477878",
+       "11477882"
+      ]
+     },
+     "RTV sealant in the oil pickup (disputed)": {
+      "n": 7,
+      "ex": [
+       "11477878",
+       "11477882"
+      ]
+     }
+    }
+   }
+  },
+  "parts": [
+   [
+    "Engine",
+    65
+   ],
+   [
+    "Unknown or other",
+    12
+   ],
+   [
+    "Fuel/propulsion system",
+    7
+   ],
+   [
+    "Electrical system",
+    5
+   ],
+   [
+    "Exterior lighting",
+    5
+   ],
+   [
+    "Power train",
+    5
+   ]
+  ]
+ },
+ "recalls": {
+  "2013": [
+   {
+    "id": "18V772000",
+    "part": "ENGINE AND ENGINE COOLING:ENGINE",
+    "summary": "Subaru of America, Inc. (Subaru) is recalling certain 2012-2014 Subaru Impreza, 2012-2013 Impreza Stationwagon, 2013 Subaru BRZ, XV Crosstrek and Toyota Scion FR-S vehicles.  The engine valve springs in these vehicles may fracture causing an engine malfunction or a possible engine stall."
+   },
+   {
+    "id": "12V254000",
+    "part": "EQUIPMENT:OTHER:OWNERS/SERVICE/OTHER MANUAL",
+    "summary": "SUBARU IS RECALLING CERTAIN MODEL YEAR 2013 BRZ VEHICLES MANUFACTURED FROM NOVEMBER 25, 2011, THROUGH MAY 25, 2012.  THE OWNERS MANUAL CONTAINS AN INACCURATE DESCRIPTION OF THE ACTUAL OPERATION OF THE FRONT PASSENGER OCCUPANT CLASSIFICATION SYSTEM.  OTHER PORTIONS OF THE OWNERS MANUAL, DESCRIBING THE AIR BAG SYSTEM, REQUIRE CLARIFICATION.  AS SUCH, THESE VEHICLES FAIL TO COMPLY WITH FEDERAL MOTO"
+   }
+  ],
+  "2015": [],
+  "2016": [],
+  "2017": [],
+  "2019": [
+   {
+    "id": "21V587000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+    "summary": "Subaru of America, Inc. (Subaru) is recalling certain 2019-2020 Ascent, 2018 Forester, 2018-2020 Impreza, Legacy, Outback, 2018-2019 BRZ, WRX, and Toyota 86 vehicles.  The low-pressure fuel pump inside the fuel tank may fail."
+   }
+  ],
+  "2023": []
+ },
+ "yt": {
+  "car-subaru-brz": null,
+  "subaru-fa": null
+ },
+ "scores": {}
+}

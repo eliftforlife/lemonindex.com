@@ -1,0 +1,658 @@
+{
+ "slug": "camaro-zl1",
+ "name": "Chevrolet Camaro ZL1",
+ "short": "Camaro ZL1",
+ "make": "Chevrolet",
+ "page": "/cars/camaro-zl1/",
+ "focus": "g6",
+ "star": "g6-1le",
+ "h1": "Chevrolet Camaro ZL1: performance, engines and what owners say",
+ "nhtsa": {
+  "make": "CHEVROLET",
+  "models": [
+   "CAMARO"
+  ],
+  "note": "NHTSA files the Camaro ZL1 under Camaro, so these counts are every Camaro of these years."
+ },
+ "topics_extra": {
+  "Supercharger rattle": "supercharger (rattle|rattling|noise|bearing)|isolator|coupler",
+  "Heat soak / misfire": "heat soak|overheat|limp mode|reduced (engine )?power|misfire|p0300",
+  "10-speed transmission": "10.?speed|10l90|harsh (shift|downshift)|wheels? lock",
+  "Clutch": "\\bclutch\\b",
+  "Differential": "differential|diff (whine|noise|cooler)"
+ },
+ "gens": [
+  {
+   "id": "g5",
+   "code": "5th gen",
+   "years": "2012–2015",
+   "y0": 2012,
+   "y1": 2015,
+   "engine": "LSA",
+   "body": "Coupe, convertible",
+   "tag": "Supercharged 580 hp LSA. Coupe from 2012, convertible from 2013.",
+   "variants": [
+    {
+     "id": "g5-cpe",
+     "name": "Camaro ZL1 Coupe",
+     "years": "2012–2015",
+     "hp": {
+      "v": 580,
+      "src": [
+       "spec15",
+       "gm0504"
+      ],
+      "note": "at 6,000 rpm, SAE certified"
+     },
+     "tq": {
+      "v": 556,
+      "src": [
+       "spec15"
+      ],
+      "note": "lb-ft at 4,200 rpm"
+     },
+     "z60": {
+      "v": 4.0,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 4.0,
+      "csrc": [
+       "gm0504"
+      ]
+     },
+     "top": {
+      "v": "184 mph",
+      "src": [
+       "gm0504"
+      ],
+      "note": ""
+     },
+     "trans": {
+      "v": "6-speed manual or 6-speed automatic, rear-drive",
+      "src": [
+       "spec15",
+       "gm0504"
+      ],
+      "note": "Tremec TR6060 manual; 6L90 automatic was a $1,185 option"
+     },
+     "weight": {
+      "v": "4,120 lb",
+      "src": [
+       "spec15"
+      ],
+      "note": "manual; automatic 4,149 lb"
+     },
+     "price": {
+      "v": "$54,995",
+      "src": [
+       "gm0504"
+      ],
+      "note": "2012, includes $900 destination"
+     }
+    },
+    {
+     "id": "g5-conv",
+     "name": "Camaro ZL1 Convertible",
+     "years": "2013–2015",
+     "hp": {
+      "v": 580,
+      "src": [
+       "spec15",
+       "gm0327"
+      ],
+      "note": "at 6,000 rpm, SAE certified"
+     },
+     "tq": {
+      "v": 556,
+      "src": [
+       "spec15"
+      ],
+      "note": "lb-ft at 4,200 rpm"
+     },
+     "z60": {
+      "v": 4.4,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual or 6-speed automatic, rear-drive",
+      "src": [
+       "spec15"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "4,374 lb",
+      "src": [
+       "spec15"
+      ],
+      "note": "manual; automatic 4,403 lb"
+     },
+     "price": {
+      "v": "$60,445",
+      "src": [
+       "ma12"
+      ],
+      "note": "2013, includes $900 destination"
+     }
+    }
+   ]
+  },
+  {
+   "id": "g6",
+   "code": "6th gen",
+   "years": "2017–2024",
+   "y0": 2017,
+   "y1": 2024,
+   "engine": "LT4",
+   "body": "Coupe, convertible",
+   "tag": "650 hp LT4, optional 10-speed auto, ZL1 1LE track package from 2018.",
+   "variants": [
+    {
+     "id": "g6-mt",
+     "name": "Camaro ZL1 Coupe manual",
+     "years": "2017–2024",
+     "hp": {
+      "v": 650,
+      "src": [
+       "spec18",
+       "gm24"
+      ],
+      "note": "at 6,400 rpm, SAE certified"
+     },
+     "tq": {
+      "v": 650,
+      "src": [
+       "spec18",
+       "gm24"
+      ],
+      "note": "lb-ft at 3,600 rpm"
+     },
+     "z60": {
+      "v": 3.7,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual with Active Rev Match, rear-drive",
+      "src": [
+       "spec18",
+       "gm24"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,883 lb",
+      "src": [
+       "spec18"
+      ],
+      "note": "2018 spec sheet"
+     },
+     "price": {
+      "v": "$62,135",
+      "src": [
+       "gm0808",
+       "gm0220"
+      ],
+      "note": "2017, includes $995 destination; $1,300 gas-guzzler tax extra"
+     }
+    },
+    {
+     "id": "g6-at",
+     "name": "Camaro ZL1 Coupe automatic",
+     "years": "2017–2024",
+     "hp": {
+      "v": 650,
+      "src": [
+       "spec18",
+       "gm24"
+      ],
+      "note": "at 6,400 rpm, SAE certified"
+     },
+     "tq": {
+      "v": 650,
+      "src": [
+       "spec18",
+       "gm24"
+      ],
+      "note": "lb-ft at 3,600 rpm"
+     },
+     "z60": {
+      "v": 3.4,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 3.5,
+      "csrc": [
+       "gm0808",
+       "gm0220"
+      ]
+     },
+     "top": {
+      "v": "198 mph",
+      "src": [
+       "gm0220"
+      ],
+      "note": "Chevrolet test, two-way average"
+     },
+     "trans": {
+      "v": "10-speed automatic, rear-drive",
+      "src": [
+       "spec18",
+       "gm24"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,944 lb",
+      "src": [
+       "spec18"
+      ],
+      "note": "2018 spec sheet"
+     },
+     "price": {
+      "v": "$65,830",
+      "src": [
+       "gm0220"
+      ],
+      "note": "2017, includes $995 destination and $2,100 gas-guzzler tax"
+     }
+    },
+    {
+     "id": "g6-1le",
+     "name": "Camaro ZL1 1LE",
+     "years": "2018–2024",
+     "star": true,
+     "pkg": "g6-mt",
+     "hp": {
+      "v": 650,
+      "src": [
+       "gm0517",
+       "spec18"
+      ],
+      "note": "at 6,400 rpm"
+     },
+     "tq": {
+      "v": 650,
+      "src": [
+       "spec18"
+      ],
+      "note": "lb-ft at 3,600 rpm"
+     },
+     "z60": {
+      "v": 3.5,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual only, rear-drive",
+      "src": [
+       "gm0517"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,820 lb",
+      "src": [
+       "spec18"
+      ],
+      "note": "Chevrolet estimate"
+     },
+     "price": {
+      "v": "$69,995",
+      "src": [
+       "gm0517"
+      ],
+      "note": "2018, includes $995 destination; the package itself was $7,500"
+     },
+     "what": "Multimatic DSSV dampers, adjustable camber and ride height, carbon wing and dive planes, 3R tires; about 60 lb lighter.",
+     "what_src": [
+      "gm0517",
+      "spec18"
+     ]
+    },
+    {
+     "id": "g6-conv",
+     "name": "Camaro ZL1 Convertible",
+     "years": "2017–2024",
+     "hp": {
+      "v": 650,
+      "src": [
+       "spec18",
+       "gm24"
+      ],
+      "note": "at 6,400 rpm, SAE certified"
+     },
+     "tq": {
+      "v": 650,
+      "src": [
+       "spec18",
+       "gm24"
+      ],
+      "note": "lb-ft at 3,600 rpm"
+     },
+     "trans": {
+      "v": "6-speed manual or 10-speed automatic, rear-drive",
+      "src": [
+       "spec18"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "4,113 lb",
+      "src": [
+       "spec18"
+      ],
+      "note": "manual; automatic 4,148 lb"
+     },
+     "price": {
+      "v": "$69,135",
+      "src": [
+       "gm0808"
+      ],
+      "note": "2017, includes destination"
+     }
+    },
+    {
+     "id": "g6-ce",
+     "name": "Camaro ZL1 Collector's Edition",
+     "years": "2024",
+     "pkg": "g6-mt",
+     "hp": {
+      "v": 650,
+      "src": [
+       "gmce",
+       "gm24"
+      ],
+      "note": ""
+     },
+     "tq": {
+      "v": 650,
+      "src": [
+       "gm24"
+      ],
+      "note": "lb-ft"
+     },
+     "price": {
+      "v": "$88,690",
+      "src": [
+       "ma23"
+      ],
+      "note": "2024, includes destination; gas-guzzler tax extra (Motor Authority)"
+     },
+     "what": "350 cars: Panther Black Matte paint, ZL1 1LE splitter and coupe wing, serialized steering wheel badge.",
+     "what_src": [
+      "gmce",
+      "gm24"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "LSA": {
+   "name": "GM LSA",
+   "what": "6.2-liter V-8, supercharged",
+   "study": "gm-lsa-ls9",
+   "page": "/engines/gm-lsa-ls9/",
+   "yt": [
+    "scy",
+    "gm-lsa-ls9"
+   ],
+   "facts": [
+    [
+     "Redline",
+     "6,200 rpm",
+     [
+      "spec15"
+     ]
+    ],
+    [
+     "Output",
+     "580 hp, 556 lb-ft (Camaro ZL1)",
+     [
+      "spec15"
+     ]
+    ],
+    [
+     "Supercharger",
+     "1.9-liter Eaton, four-lobe rotors, intercooled; 9.1:1 compression",
+     [
+      "spec15",
+      "gm0208"
+     ]
+    ],
+    [
+     "Block",
+     "Aluminum with cast-iron liners, forged steel crank",
+     [
+      "gm0208"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Supercharger rattle at idle",
+     "kind": "Maker bulletin",
+     "rx": "supercharger (rattle|rattling|noise|bearing)|isolator|coupler",
+     "x": "GM found the supercharger on 2012–2013 ZL1s (and 2009–2013 CTS-Vs) can rattle at idle. Left alone, it can ruin the bearing grease and, in the worst case, stop the engine.",
+     "fix": "Dealers replace the supercharger free under a special coverage of 10 years or 120,000 miles.",
+     "src": [
+      "ma14"
+     ]
+    },
+    {
+     "t": "Low-rpm buzz on replacement superchargers",
+     "kind": "Maker bulletin",
+     "rx": "buzz|flutter",
+     "x": "On cars with a replacement supercharger (solid coupling), a buzz at 800–900 rpm in second or third gear under load is normal, GM told dealers.",
+     "fix": "No repair; GM said not to replace parts for this noise.",
+     "src": [
+      "pip5192"
+     ]
+    }
+   ]
+  },
+  "LT4": {
+   "name": "GM LT4",
+   "what": "6.2-liter V-8, supercharged",
+   "study": "gm-lt4",
+   "page": "/engines/gm-lt4/",
+   "yt": [
+    "scy",
+    "gm-lt4"
+   ],
+   "facts": [
+    [
+     "Redline",
+     "6,600 rpm (Corvette Z06 spec sheet)",
+     [
+      "z06s"
+     ]
+    ],
+    [
+     "Output",
+     "650 hp, 650 lb-ft (Camaro ZL1)",
+     [
+      "spec18",
+      "gm24"
+     ]
+    ],
+    [
+     "Supercharger",
+     "1.7-liter, spins up to 20,000 rpm",
+     [
+      "z06r"
+     ]
+    ],
+    [
+     "Compression",
+     "10.0:1, made possible by direct injection",
+     [
+      "z06r",
+      "spec18"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Track misfire after supercharger cooling service",
+     "kind": "Maker bulletin",
+     "rx": "misfire|p0300|intercooler|charge air cooler|heat soak",
+     "x": "In high heat above 100 mph on a track, the engine can misfire (code P0300) if air was left in the supercharger cooling loop after a repair.",
+     "fix": "Dealer drains and vacuum-fills the loop with GM's tools (bulletin 17-NA-408).",
+     "src": [
+      "tsb408"
+     ]
+    },
+    {
+     "t": "10-speed automatic recall (transmission)",
+     "kind": "Recall",
+     "rx": "harsh (shift|downshift)|transmission (slam|lock)|wheels? lock|10.?speed",
+     "x": "On 2020–2022 Camaros with the 10-speed, valve body wear can cause harsh downshifts and, rarely, a brief wheel lock-up.",
+     "fix": "Dealer installs software that spots the wear and holds fifth gear before a lock-up (NHTSA 25V-148).",
+     "src": [
+      "r25"
+     ]
+    }
+   ]
+  }
+ },
+ "compare": [
+  {
+   "slug": "shelby-gt500",
+   "name": "Ford Shelby GT500"
+  },
+  {
+   "slug": "challenger-hellcat",
+   "name": "Dodge Challenger SRT Hellcat"
+  },
+  {
+   "slug": "camaro-z28",
+   "name": "Chevrolet Camaro Z/28"
+  },
+  {
+   "slug": "cts-v",
+   "name": "Cadillac CTS-V"
+  }
+ ],
+ "sources": {
+  "spec15": {
+   "t": "Chevrolet: 2015 Camaro ZL1 specifications (archived)",
+   "u": "https://web.archive.org/web/20140729032602/http://media.chevrolet.com/media/us/en/chevrolet/vehicles/camaro-zl1/2015.tab1.html",
+   "k": "Chevrolet"
+  },
+  "gm0504": {
+   "t": "Chevrolet: Camaro ZL1 joins the 11-second club (May 2012, archived)",
+   "u": "https://web.archive.org/web/20170115073931/http://media.chevrolet.com/media/us/en/chevrolet/vehicles/camaro-zl1/2012.detail.html/content/Pages/news/us/en/2012/May/0504_camaro_zl1.html",
+   "k": "Chevrolet"
+  },
+  "gm0208": {
+   "t": "Chevrolet: LSA supercharged 6.2L V-8 for the 2012 Camaro ZL1 (Feb 2011, archived)",
+   "u": "https://web.archive.org/web/20140403143618/http://media.gm.com/media/us/en/chevrolet/news.detail.html/content/Pages/news/us/en/2011/Feb/11chicago/chevrolet/0208_lsa.html",
+   "k": "Chevrolet"
+  },
+  "gm0327": {
+   "t": "Chevrolet: 2013 Camaro 1LE returns; all-new ZL1 convertible for 2013 (Mar 2012, archived)",
+   "u": "https://web.archive.org/web/20120615184058/http://media.gm.com/media/us/en/chevrolet/news.detail.html/content/Pages/news/us/en/2012/Mar/0327_camaro.html",
+   "k": "Chevrolet"
+  },
+  "ma12": {
+   "t": "Motor Authority: 2013 Chevy Camaro ZL1 Convertible pricing starts at $60,445 (Aug 2012)",
+   "u": "https://www.motorauthority.com/news/1078140_2013-chevy-camaro-zl1-convertible-pricing-starts-at-60445",
+   "k": "outlet"
+  },
+  "spec18": {
+   "t": "Chevrolet: 2018 Camaro ZL1 specifications (archived)",
+   "u": "https://web.archive.org/web/20190216223716/https://media.chevrolet.com/media/us/en/chevrolet/vehicles/camaro-zl1/2018.tab1.html",
+   "k": "Chevrolet"
+  },
+  "gm0808": {
+   "t": "Chevrolet: 2017 Camaro ZL1 and 1LE: get used to our taillights (Aug 2016, archived)",
+   "u": "https://web.archive.org/web/20161025000739/http://media.gm.com/media/us/en/chevrolet/news.detail.html/content/Pages/news/us/en/2016/aug/0808-camaro.html",
+   "k": "Chevrolet"
+  },
+  "gm0220": {
+   "t": "Chevrolet: Camaro ZL1 goes for 200 mph (Feb 2017, archived)",
+   "u": "https://web.archive.org/web/20170717152104/http://media.gm.com/media/us/en/chevrolet/news.detail.html/content/Pages/news/us/en/2017/feb/0220-camaro-zl1.html",
+   "k": "Chevrolet"
+  },
+  "gm0517": {
+   "t": "Chevrolet: ZL1 1LE Extreme Track Package leads 2018 Camaro lineup (May 2017, archived)",
+   "u": "https://web.archive.org/web/20170717155357/http://media.gm.com/media/us/en/chevrolet/news.detail.html/content/Pages/news/us/en/2017/may/0517-camaro-zl1.html",
+   "k": "Chevrolet"
+  },
+  "gm24": {
+   "t": "Chevrolet: 2024 Camaro ZL1 fact sheet",
+   "u": "https://media.gm.com/content/dam/Media/images/US/Vehicles/Chevrolet/Cars/Camaro_ZL1/2024/2024-Chevrolet-Camaro-ZL1-110123.pdf",
+   "k": "Chevrolet"
+  },
+  "gmce": {
+   "t": "Chevrolet: Chevrolet unveils Camaro final Collector's Edition (Jun 2023)",
+   "u": "https://news.chevrolet.com/newsroom.detail.html/Pages/news/us/en/2023/jun/0605-camaro.html",
+   "k": "Chevrolet"
+  },
+  "ma23": {
+   "t": "Motor Authority: 2024 Chevrolet Camaro Collector's Edition price (Jun 2023)",
+   "u": "https://www.motorauthority.com/news/1139847_2024-chevrolet-camaro-collectors-edition-price",
+   "k": "outlet"
+  },
+  "z60": {
+   "t": "0-60specs.com: Chevrolet Camaro 0-60 runs by magazine (Car and Driver, MotorTrend, Road & Track, MotorWeek)",
+   "u": "https://www.0-60specs.com/chevrolet/camaro-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "z06r": {
+   "t": "Chevrolet: 2015 Corvette Z06 LT4 engine is the most powerful ever from Chevrolet (Jun 2014, archived)",
+   "u": "https://web.archive.org/web/20160211134525/http://media.gm.com/media/us/en/chevrolet/news.detail.html/content/Pages/news/us/en/2014/Jun/0606-z06.html",
+   "k": "Chevrolet"
+  },
+  "z06s": {
+   "t": "Chevrolet: 2016 Corvette Z06 specifications (archived)",
+   "u": "https://web.archive.org/web/20161028032526/http://media.chevrolet.com/media/us/en/chevrolet/vehicles/corvette-z06/2016.tab1.html",
+   "k": "Chevrolet"
+  },
+  "ma14": {
+   "t": "Motor Authority: GM identifies problem with supercharger on certain Cadillac CTS-V and Camaro ZL1 models (Jun 2014)",
+   "u": "https://www.motorauthority.com/news/1092495_gm-identifies-problem-with-supercharger-on-certain-cadillac-cts-v-and-camaro-zl1-models",
+   "k": "outlet, reporting GM special coverage"
+  },
+  "pip5192": {
+   "t": "GM bulletin PIP5192A: Supercharger rattle or buzz, 6.2L LSA (Sep 2014, NHTSA file)",
+   "u": "https://static.nhtsa.gov/odi/tsbs/2014/MC-10112210-9999.pdf",
+   "k": "Maker bulletin"
+  },
+  "tsb408": {
+   "t": "GM bulletin 17-NA-408: Charge air cooler draining and filling, DTC P0300 (Aug 2023, NHTSA file)",
+   "u": "https://static.nhtsa.gov/odi/tsbs/2023/MC-10242261-0001.pdf",
+   "k": "Maker bulletin"
+  },
+  "r25": {
+   "t": "GM safety recall report 25V-148: 10-speed transmission valve wear (Mar 2025)",
+   "u": "https://static.nhtsa.gov/odi/rcl/2025/RCLRPT-25V148-9249.PDF",
+   "k": "Recall"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-camaro-zl1",
+ "img": "/assets/ai-perf/camaro-zl1.webp?v=1"
+}

@@ -1,0 +1,287 @@
+{
+ "built": "2026-11-11",
+ "nhtsa": {
+  "by_year": {
+   "2003": 98,
+   "2005": 14,
+   "2006": 24,
+   "2008": 36,
+   "2009": 2,
+   "2010": 28,
+   "2011": 11,
+   "2012": 3,
+   "2013": 4,
+   "2014": 6,
+   "2015": 3
+  },
+  "gens": {
+   "ct9a-viii": {
+    "n": 112,
+    "issues": {
+     "Random misfire code (2003)": {
+      "n": 9,
+      "ex": [
+       "10078606",
+       "10079147"
+      ]
+     },
+     "Timing belt area noise (2006)": {
+      "n": 0,
+      "ex": []
+     },
+     "Turbo coolant hose recall": {
+      "n": 0,
+      "ex": []
+     }
+    }
+   },
+   "ct9a-ix": {
+    "n": 24,
+    "issues": {
+     "Random misfire code (2003)": {
+      "n": 0,
+      "ex": []
+     },
+     "Timing belt area noise (2006)": {
+      "n": 12,
+      "ex": [
+       "10291153",
+       "10291199"
+      ]
+     },
+     "Turbo coolant hose recall": {
+      "n": 0,
+      "ex": []
+     }
+    }
+   },
+   "cz4a": {
+    "n": 93,
+    "issues": {
+     "Drive belt and pulley recall": {
+      "n": 2,
+      "ex": [
+       "11181255",
+       "11376190"
+      ]
+     },
+     "Fuel return pipe recall": {
+      "n": 5,
+      "ex": [
+       "10415242",
+       "10416790"
+      ]
+     }
+    }
+   }
+  },
+  "parts": [
+   [
+    "Power train",
+    134
+   ],
+   [
+    "Electronic stability control (esc)",
+    31
+   ],
+   [
+    "Engine and engine cooling",
+    25
+   ],
+   [
+    "Electrical system",
+    16
+   ],
+   [
+    "Structure",
+    13
+   ],
+   [
+    "Suspension",
+    11
+   ]
+  ]
+ },
+ "recalls": {
+  "2003": [
+   {
+    "id": "16V458000",
+    "part": "SUSPENSION:FRONT:CONTROL ARM:LOWER ARM",
+    "summary": "Mitsubishi Motors North America, Inc. (MMNA) is recalling certain model year 2002-2007 Lancer, 2004 Lancer Wagon, 2003-2006 Lancer Evolution, 2003-2006 Outlander and 2007-2013 Outlander V-6 vehicles originally sold in, or ever registered in, Connecticut, Delaware, Illinois, Indiana, Iowa, Kentucky, Maine, Maryland, Massachusetts, Michigan, Minnesota, Missouri, New Hampshire, New Jersey, New York, "
+   },
+   {
+    "id": "04V138000",
+    "part": "EQUIPMENT:OTHER:LABELS",
+    "summary": "ON CERTAIN PASSENGER VEHICLES SOLD IN THE UNITED STATES AND PUERTO RICO, THE GROSS VEHICLE WEIGHT RATING (GVWR) AND GROSS AXLE WEIGHT RATING (GAWR) AS STATED ON THE CERTIFICATION LABEL ARE IN ERROR."
+   }
+  ],
+  "2004": [
+   {
+    "id": "16V458000",
+    "part": "SUSPENSION:FRONT:CONTROL ARM:LOWER ARM",
+    "summary": "Mitsubishi Motors North America, Inc. (MMNA) is recalling certain model year 2002-2007 Lancer, 2004 Lancer Wagon, 2003-2006 Lancer Evolution, 2003-2006 Outlander and 2007-2013 Outlander V-6 vehicles originally sold in, or ever registered in, Connecticut, Delaware, Illinois, Indiana, Iowa, Kentucky, Maine, Maryland, Massachusetts, Michigan, Minnesota, Missouri, New Hampshire, New Jersey, New York, "
+   }
+  ],
+  "2005": [
+   {
+    "id": "16V458000",
+    "part": "SUSPENSION:FRONT:CONTROL ARM:LOWER ARM",
+    "summary": "Mitsubishi Motors North America, Inc. (MMNA) is recalling certain model year 2002-2007 Lancer, 2004 Lancer Wagon, 2003-2006 Lancer Evolution, 2003-2006 Outlander and 2007-2013 Outlander V-6 vehicles originally sold in, or ever registered in, Connecticut, Delaware, Illinois, Indiana, Iowa, Kentucky, Maine, Maryland, Massachusetts, Michigan, Minnesota, Missouri, New Hampshire, New Jersey, New York, "
+   },
+   {
+    "id": "05V335000",
+    "part": "ENGINE AND ENGINE COOLING:COOLING SYSTEM:HOSES/LINES/PIPING/FITTINGS",
+    "summary": "ON CERTAIN PASSENGER VEHICLES, THE TURBO CHARGER COOLANT HOSE WAS INCORRECTLY MANUFACTURED, AND MAY ALLOW COOLANT LEAKAGE."
+   }
+  ],
+  "2006": [
+   {
+    "id": "16V458000",
+    "part": "SUSPENSION:FRONT:CONTROL ARM:LOWER ARM",
+    "summary": "Mitsubishi Motors North America, Inc. (MMNA) is recalling certain model year 2002-2007 Lancer, 2004 Lancer Wagon, 2003-2006 Lancer Evolution, 2003-2006 Outlander and 2007-2013 Outlander V-6 vehicles originally sold in, or ever registered in, Connecticut, Delaware, Illinois, Indiana, Iowa, Kentucky, Maine, Maryland, Massachusetts, Michigan, Minnesota, Missouri, New Hampshire, New Jersey, New York, "
+   },
+   {
+    "id": "16V334000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Mitsubishi Motors North America, Inc. (MMNA) is recalling certain model year 2006-2007 Lancer and Lancer Evolution vehicles manufactured June 29, 2005, to June 19, 2007, equipped with certain air bag inflators assembled as part of the passenger frontal air bag modules, and used as original equipment or replacement equipment.  In the event of a crash necessitating air bag deployment, these inflator"
+   }
+  ],
+  "2008": [
+   {
+    "id": "14V562000",
+    "part": "ENGINE AND ENGINE COOLING:ENGINE:GASOLINE:BELTS AND ASSOCIATED PULLEYS",
+    "summary": "Mitsubishi Motors North America, Inc. (Mitsubishi) is recalling certain model year 2008-2011 Lancer, Lancer Evolution, and Outlander; 2009-2011 Lancer Sportback, Lancer Rilliart, and Lancer Sportback Ralliart; and 2011 Outlander Sport vehicles.  The affected vehicles, manufactured with 4B1 engines, have an engine pulley and belt arrangement for turning the alternator, the cooling fan and the power"
+   },
+   {
+    "id": "13V446000",
+    "part": "POWER TRAIN:MANUAL TRANSMISSION",
+    "summary": "Mitsubishi Motors North America, Inc. (Mitsubishi) is recalling certain model year 2008-2013 Lancer Evolution vehicles manufactured from December 12, 2007, through March 5, 2013.  In the affected vehicles, the clutch master cylinder can fail."
+   },
+   {
+    "id": "09V349000",
+    "part": "FUEL SYSTEM, OTHER:DELIVERY",
+    "summary": "MITSUBISHI IS RECALLING MODEL YEAR 2008-2009 LANCER EVOLUTION, RALLIART, AND SPORTBACK RALLIART VEHICLES EQUIPPED WITH TURBOCHARGED ENGINES.  THE MANNER IN WHICH THE FUEL RETURN PIPE IS ATTACHED TO THE ENGINE, IN COMBINATION WITH FREQUENT VEHICLE OPERATION AT CERTAIN ENGINE REVOLUTIONS, MAY RESULT IN A RESONANCE THAT, IF CONTINUED OVER TIME, MAY CAUSE A STRESS CRACK TO DEVELOP AT THE FIXED PORTION"
+   },
+   {
+    "id": "09V435000",
+    "part": "AIR BAGS:FRONTAL:SENSOR/CONTROL MODULE-INACTIVE",
+    "summary": "MITSUBISHI IS RECALLING MODEL YEAR 2008-2009 LANCER AND LANCER EVOLUTION VEHICLES ORIGINALLY SOLD IN OR CURRENTLY REGISTERED IN THE STATES OF CONNECTICUT, DELAWARE, ILLINOIS, INDIANA, IOWA, KENTUCKY, MAINE, MARYLAND, MASSACHUSETTS, MICHIGAN, MINNESOTA, MISSOURI, NEW HAMPSHIRE, NEW JERSEY, NEW YORK, OHIO, PENNSYLVANIA, RHODE ISLAND, VERMONT, VIRGINIA, WEST VIRGINIA, WISCONSIN AND DISTRICT OF COLUMB"
+   }
+  ],
+  "2009": [
+   {
+    "id": "18V071000",
+    "part": "VISIBILITY:SUN/MOON ROOF ASSEMBLY",
+    "summary": "Mitsubishi Motors North America, Inc. (MMNA) is recalling certain 2007-2010 Outlander, 2008-2010 Lancer, 2009-2010 Lancer Evolution, and 2010 Lancer Sportback vehicles equipped with sunroofs.  The sunroof glass may detach from the sunroof assembly, becoming a road hazard to other vehicles."
+   },
+   {
+    "id": "14V562000",
+    "part": "ENGINE AND ENGINE COOLING:ENGINE:GASOLINE:BELTS AND ASSOCIATED PULLEYS",
+    "summary": "Mitsubishi Motors North America, Inc. (Mitsubishi) is recalling certain model year 2008-2011 Lancer, Lancer Evolution, and Outlander; 2009-2011 Lancer Sportback, Lancer Rilliart, and Lancer Sportback Ralliart; and 2011 Outlander Sport vehicles.  The affected vehicles, manufactured with 4B1 engines, have an engine pulley and belt arrangement for turning the alternator, the cooling fan and the power"
+   },
+   {
+    "id": "13V446000",
+    "part": "POWER TRAIN:MANUAL TRANSMISSION",
+    "summary": "Mitsubishi Motors North America, Inc. (Mitsubishi) is recalling certain model year 2008-2013 Lancer Evolution vehicles manufactured from December 12, 2007, through March 5, 2013.  In the affected vehicles, the clutch master cylinder can fail."
+   },
+   {
+    "id": "09V349000",
+    "part": "FUEL SYSTEM, OTHER:DELIVERY",
+    "summary": "MITSUBISHI IS RECALLING MODEL YEAR 2008-2009 LANCER EVOLUTION, RALLIART, AND SPORTBACK RALLIART VEHICLES EQUIPPED WITH TURBOCHARGED ENGINES.  THE MANNER IN WHICH THE FUEL RETURN PIPE IS ATTACHED TO THE ENGINE, IN COMBINATION WITH FREQUENT VEHICLE OPERATION AT CERTAIN ENGINE REVOLUTIONS, MAY RESULT IN A RESONANCE THAT, IF CONTINUED OVER TIME, MAY CAUSE A STRESS CRACK TO DEVELOP AT THE FIXED PORTION"
+   },
+   {
+    "id": "09V435000",
+    "part": "AIR BAGS:FRONTAL:SENSOR/CONTROL MODULE-INACTIVE",
+    "summary": "MITSUBISHI IS RECALLING MODEL YEAR 2008-2009 LANCER AND LANCER EVOLUTION VEHICLES ORIGINALLY SOLD IN OR CURRENTLY REGISTERED IN THE STATES OF CONNECTICUT, DELAWARE, ILLINOIS, INDIANA, IOWA, KENTUCKY, MAINE, MARYLAND, MASSACHUSETTS, MICHIGAN, MINNESOTA, MISSOURI, NEW HAMPSHIRE, NEW JERSEY, NEW YORK, OHIO, PENNSYLVANIA, RHODE ISLAND, VERMONT, VIRGINIA, WEST VIRGINIA, WISCONSIN AND DISTRICT OF COLUMB"
+   }
+  ],
+  "2010": [
+   {
+    "id": "18V071000",
+    "part": "VISIBILITY:SUN/MOON ROOF ASSEMBLY",
+    "summary": "Mitsubishi Motors North America, Inc. (MMNA) is recalling certain 2007-2010 Outlander, 2008-2010 Lancer, 2009-2010 Lancer Evolution, and 2010 Lancer Sportback vehicles equipped with sunroofs.  The sunroof glass may detach from the sunroof assembly, becoming a road hazard to other vehicles."
+   },
+   {
+    "id": "14V562000",
+    "part": "ENGINE AND ENGINE COOLING:ENGINE:GASOLINE:BELTS AND ASSOCIATED PULLEYS",
+    "summary": "Mitsubishi Motors North America, Inc. (Mitsubishi) is recalling certain model year 2008-2011 Lancer, Lancer Evolution, and Outlander; 2009-2011 Lancer Sportback, Lancer Rilliart, and Lancer Sportback Ralliart; and 2011 Outlander Sport vehicles.  The affected vehicles, manufactured with 4B1 engines, have an engine pulley and belt arrangement for turning the alternator, the cooling fan and the power"
+   },
+   {
+    "id": "15V232000",
+    "part": "ELECTRICAL SYSTEM",
+    "summary": "Mitsubishi Motors North America, Inc. (Mitsubishi) is recalling certain model year 2009-2010 Mitsubishi Lancer vehicles manufactured January 12, 2009, to July 6, 2010, 2009-2010 Outlander vehicles manufactured January 12, 2009, to August 27, 2010, 2010 Lancer Sportback vehicles manufactured June 17, 2009, to June 8, 2010, and 2010 Lancer Evolution vehicles manufactured July 14, 2009, to August 4, "
+   },
+   {
+    "id": "15V233000",
+    "part": "VISIBILITY:DEFROSTER/DEFOGGER/HVAC SYSTEM:FAN/MOTOR",
+    "summary": "Mitsubishi Motors North America, Inc. (Mitsubishi) is recalling certain model year 2009-2011 Lancer vehicles manufactured March 16, 2009, to March 30, 2011, 2010-2011 Lancer Sportback vehicles manufactured June 17, 2009, to December 1, 2010, 2010-2011 Lancer Evolution vehicles manufactured July 14, 2009, to January 7, 2011, 2009-2011 Outlander vehicles manufactured February 10, 2009, to June 22, 2"
+   },
+   {
+    "id": "13V446000",
+    "part": "POWER TRAIN:MANUAL TRANSMISSION",
+    "summary": "Mitsubishi Motors North America, Inc. (Mitsubishi) is recalling certain model year 2008-2013 Lancer Evolution vehicles manufactured from December 12, 2007, through March 5, 2013.  In the affected vehicles, the clutch master cylinder can fail."
+   }
+  ],
+  "2011": [
+   {
+    "id": "14V562000",
+    "part": "ENGINE AND ENGINE COOLING:ENGINE:GASOLINE:BELTS AND ASSOCIATED PULLEYS",
+    "summary": "Mitsubishi Motors North America, Inc. (Mitsubishi) is recalling certain model year 2008-2011 Lancer, Lancer Evolution, and Outlander; 2009-2011 Lancer Sportback, Lancer Rilliart, and Lancer Sportback Ralliart; and 2011 Outlander Sport vehicles.  The affected vehicles, manufactured with 4B1 engines, have an engine pulley and belt arrangement for turning the alternator, the cooling fan and the power"
+   },
+   {
+    "id": "15V233000",
+    "part": "VISIBILITY:DEFROSTER/DEFOGGER/HVAC SYSTEM:FAN/MOTOR",
+    "summary": "Mitsubishi Motors North America, Inc. (Mitsubishi) is recalling certain model year 2009-2011 Lancer vehicles manufactured March 16, 2009, to March 30, 2011, 2010-2011 Lancer Sportback vehicles manufactured June 17, 2009, to December 1, 2010, 2010-2011 Lancer Evolution vehicles manufactured July 14, 2009, to January 7, 2011, 2009-2011 Outlander vehicles manufactured February 10, 2009, to June 22, 2"
+   },
+   {
+    "id": "13V446000",
+    "part": "POWER TRAIN:MANUAL TRANSMISSION",
+    "summary": "Mitsubishi Motors North America, Inc. (Mitsubishi) is recalling certain model year 2008-2013 Lancer Evolution vehicles manufactured from December 12, 2007, through March 5, 2013.  In the affected vehicles, the clutch master cylinder can fail."
+   }
+  ],
+  "2012": [
+   {
+    "id": "13V446000",
+    "part": "POWER TRAIN:MANUAL TRANSMISSION",
+    "summary": "Mitsubishi Motors North America, Inc. (Mitsubishi) is recalling certain model year 2008-2013 Lancer Evolution vehicles manufactured from December 12, 2007, through March 5, 2013.  In the affected vehicles, the clutch master cylinder can fail."
+   }
+  ],
+  "2013": [
+   {
+    "id": "13V446000",
+    "part": "POWER TRAIN:MANUAL TRANSMISSION",
+    "summary": "Mitsubishi Motors North America, Inc. (Mitsubishi) is recalling certain model year 2008-2013 Lancer Evolution vehicles manufactured from December 12, 2007, through March 5, 2013.  In the affected vehicles, the clutch master cylinder can fail."
+   }
+  ],
+  "2014": [
+   {
+    "id": "15V546000",
+    "part": "FUEL SYSTEM, GASOLINE:STORAGE:TANK ASSEMBLY",
+    "summary": "Mitsubishi Motors North America, Inc. (Mitsubishi) is recalling certain model year 2014-2015 Lancer Evolution vehicles manufactured January 31, 2014, to September 5, 2014, and 2014-2015 Lancer Ralliart vehicles manufactured February 3, 2014, to September 5, 2014.  The affected turbocharged vehicles have a right parking brake cable that may contact the fuel tank, wearing away the tank's protective "
+   },
+   {
+    "id": "14V281000",
+    "part": "STEERING:HYDRAULIC POWER ASSIST:HOSE, PIPING, AND CONNECTIONS",
+    "summary": "Mitsubishi Motors North America, Inc. (Mitsubishi) is recalling certain model year 2014 Lancer Evolution vehicles manufactured January 31, 2014, through February 21, 2014, and 2014 Lancer Ralliart vehicles manufactured February 3, 2014, through February 14, 2014.  The affected vehicles may have insufficient clearance between the power steering pressure tube and the crossmember brace."
+   }
+  ],
+  "2015": [
+   {
+    "id": "17V609000",
+    "part": "ELECTRICAL SYSTEM:STARTER ASSEMBLY:RELAY",
+    "summary": "Mitsubishi Motors North America, Inc. (MMNA) is recalling certain 2015-2017 Outlander, 2015-2016 Lancer and Outlander Sport, and 2015 Lancer Evolution vehicles.  These vehicles may have defective relays that can result in an engine stall, reduced engine power or the engine overheating."
+   },
+   {
+    "id": "15V546000",
+    "part": "FUEL SYSTEM, GASOLINE:STORAGE:TANK ASSEMBLY",
+    "summary": "Mitsubishi Motors North America, Inc. (Mitsubishi) is recalling certain model year 2014-2015 Lancer Evolution vehicles manufactured January 31, 2014, to September 5, 2014, and 2014-2015 Lancer Ralliart vehicles manufactured February 3, 2014, to September 5, 2014.  The affected turbocharged vehicles have a right parking brake cable that may contact the fuel tank, wearing away the tank's protective "
+   }
+  ]
+ },
+ "yt": {
+  "car-lancer-evolution": null,
+  "mitsubishi-4g63t": null,
+  "mitsubishi-4b11t": null
+ },
+ "scores": {}
+}

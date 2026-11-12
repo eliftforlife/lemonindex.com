@@ -1,0 +1,782 @@
+{
+ "slug": "camaro-ss",
+ "name": "Chevrolet Camaro SS",
+ "short": "Camaro SS",
+ "make": "Chevrolet",
+ "page": "/cars/camaro-ss/",
+ "focus": "gen6",
+ "star": "g6-1le",
+ "h1": "Chevrolet Camaro SS: performance, engines and what owners say",
+ "nhtsa": {
+  "make": "CHEVROLET",
+  "models": [
+   "CAMARO"
+  ],
+  "note": "NHTSA files the Camaro SS under Camaro, so these counts are every Camaro of these years, V6 and V8 (and the 2016-on four-cylinder)."
+ },
+ "topics_extra": {
+  "AFM lifters": "\\bafm\\b|lifters?|cylinder deactivation|active fuel management",
+  "Piston slap": "piston slap|cold start (knock|tick|noise)",
+  "Oil consumption": "oil consumption|burning oil|using oil",
+  "Transmission shudder": "shudder|torque converter",
+  "Clutch": "\\bclutch\\b|slave cylinder",
+  "High idle": "rpm hang|idle (hangs|stays|stuck) high|high idle"
+ },
+ "gens": [
+  {
+   "id": "gen4",
+   "code": "4th gen (F-body)",
+   "years": "2000–2002",
+   "y0": 2000,
+   "y1": 2002,
+   "engine": "LS1",
+   "body": "Coupe, convertible",
+   "tag": "Corvette-derived LS1 V8 with Ram Air hood; SS was a Z28 package.",
+   "variants": [
+    {
+     "id": "g4-ss00",
+     "name": "Camaro SS",
+     "years": "2000",
+     "hp": {
+      "v": 320,
+      "src": [
+       "russ"
+      ],
+      "note": "at 5,200 rpm"
+     },
+     "tq": {
+      "v": 345,
+      "src": [
+       "russ"
+      ],
+      "note": "lb-ft at 4,400 rpm"
+     },
+     "trans": {
+      "v": "6-speed manual, rear-drive",
+      "src": [
+       "russ"
+      ],
+      "note": "as tested"
+     },
+     "weight": {
+      "v": "3,439 lb",
+      "src": [
+       "russ"
+      ],
+      "note": "test car spec"
+     },
+     "price": {
+      "v": "$3,950",
+      "src": [
+       "russ"
+      ],
+      "note": "2000 SS package price on a $21,515 Z28 test car; $575 destination extra"
+     },
+     "what": "Ram Air induction and other changes lift the Z28's 305 hp to 320.",
+     "what_src": [
+      "russ"
+     ]
+    },
+    {
+     "id": "g4-ss01",
+     "name": "Camaro SS",
+     "years": "2001–2002",
+     "hp": {
+      "v": 325,
+      "src": [
+       "g01"
+      ],
+      "note": ""
+     },
+     "tq": {
+      "v": 350,
+      "src": [
+       "g01"
+      ],
+      "note": "lb-ft"
+     },
+     "z60": {
+      "v": 5.2,
+      "who": "MotorTrend",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "what": "Rating rises from 320 to 325 hp for 2001. Tested car is a 2002 35th Anniversary SS.",
+     "what_src": [
+      "g01",
+      "z60"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gen5",
+   "code": "5th gen (Zeta)",
+   "years": "2010–2015",
+   "y0": 2010,
+   "y1": 2015,
+   "engine": "LS3",
+   "body": "Coupe, convertible",
+   "tag": "LS3 with the manual, AFM-equipped L99 with the automatic.",
+   "variants": [
+    {
+     "id": "g5-ss",
+     "name": "Camaro SS manual (LS3)",
+     "years": "2010–2015",
+     "hp": {
+      "v": 426,
+      "src": [
+       "c15"
+      ],
+      "note": "at 5,900 rpm"
+     },
+     "tq": {
+      "v": 420,
+      "src": [
+       "c15"
+      ],
+      "note": "lb-ft at 4,600 rpm"
+     },
+     "z60": {
+      "v": 4.6,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual (Tremec TR6060), rear-drive",
+      "src": [
+       "c15"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,908 lb",
+      "src": [
+       "c15"
+      ],
+      "note": "2015 1SS coupe"
+     },
+     "price": {
+      "v": "$30,995",
+      "src": [
+       "p10"
+      ],
+      "note": "2010 1SS, includes $750 destination"
+     }
+    },
+    {
+     "id": "g5-ssa",
+     "name": "Camaro SS automatic (L99)",
+     "years": "2010–2015",
+     "hp": {
+      "v": 400,
+      "src": [
+       "c15"
+      ],
+      "note": "at 5,900 rpm"
+     },
+     "tq": {
+      "v": 410,
+      "src": [
+       "c15"
+      ],
+      "note": "lb-ft at 4,300 rpm"
+     },
+     "z60": {
+      "v": 4.6,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed automatic (6L80), rear-drive",
+      "src": [
+       "c15"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,946 lb",
+      "src": [
+       "c15"
+      ],
+      "note": "2015 1SS coupe"
+     },
+     "what": "L99 engine: lower 10.4:1 compression and cylinder deactivation (AFM).",
+     "what_src": [
+      "c15"
+     ]
+    },
+    {
+     "id": "g5-1le",
+     "name": "Camaro SS 1LE",
+     "years": "2013–2015",
+     "pkg": "g5-ss",
+     "hp": {
+      "v": 426,
+      "src": [
+       "c15"
+      ],
+      "note": ""
+     },
+     "tq": {
+      "v": 420,
+      "src": [
+       "c15"
+      ],
+      "note": "lb-ft"
+     },
+     "z60": {
+      "v": 4.5,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual only, rear-drive",
+      "src": [
+       "cars13",
+       "c15"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$37,035",
+      "src": [
+       "cars13"
+      ],
+      "note": "2013, includes $900 destination; the package is $3,500"
+     },
+     "what": "Solid anti-roll bars, 285/35ZR20 tires all round and a shorter 3.91 final drive.",
+     "what_src": [
+      "c15"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gen6",
+   "code": "6th gen (Alpha)",
+   "years": "2016–2024",
+   "y0": 2016,
+   "y1": 2024,
+   "engine": "LT1",
+   "body": "Coupe, convertible",
+   "tag": "Direct-injected LT1, 223 lb lighter than the 2015 SS.",
+   "variants": [
+    {
+     "id": "g6-ss",
+     "name": "Camaro SS manual",
+     "years": "2016–2024",
+     "hp": {
+      "v": 455,
+      "src": [
+       "c16",
+       "c19"
+      ],
+      "note": "at 6,000 rpm"
+     },
+     "tq": {
+      "v": 455,
+      "src": [
+       "c16",
+       "c19"
+      ],
+      "note": "lb-ft at 4,400 rpm"
+     },
+     "z60": {
+      "v": 4.0,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 4.3,
+      "csrc": [
+       "c16p"
+      ]
+     },
+     "trans": {
+      "v": "6-speed manual (Tremec TR6060), rear-drive",
+      "src": [
+       "c16pt",
+       "c19"
+      ],
+      "note": "Active Rev Match"
+     },
+     "weight": {
+      "v": "3,685 lb",
+      "src": [
+       "c16p",
+       "c19"
+      ],
+      "note": "coupe"
+     },
+     "price": {
+      "v": "$37,295",
+      "src": [
+       "c16p"
+      ],
+      "note": "2016 1SS; Chevrolet's release does not say if destination is included"
+     }
+    },
+    {
+     "id": "g6-a8",
+     "name": "Camaro SS 8-speed automatic",
+     "years": "2016–2018",
+     "hp": {
+      "v": 455,
+      "src": [
+       "c16"
+      ],
+      "note": ""
+     },
+     "tq": {
+      "v": 455,
+      "src": [
+       "c16"
+      ],
+      "note": "lb-ft"
+     },
+     "z60": {
+      "v": 3.9,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 4.0,
+      "csrc": [
+       "c16p"
+      ]
+     },
+     "trans": {
+      "v": "8-speed automatic (8L90), rear-drive",
+      "src": [
+       "c16"
+      ],
+      "note": ""
+     },
+     "what": "Automatic cars add AFM, which shuts off four cylinders at light load.",
+     "what_src": [
+      "c16pt"
+     ]
+    },
+    {
+     "id": "g6-a10",
+     "name": "Camaro SS 10-speed automatic",
+     "years": "2019–2024",
+     "hp": {
+      "v": 455,
+      "src": [
+       "c19"
+      ],
+      "note": ""
+     },
+     "tq": {
+      "v": 455,
+      "src": [
+       "c19"
+      ],
+      "note": "lb-ft"
+     },
+     "z60": {
+      "v": 3.9,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "10-speed automatic (10L80), rear-drive",
+      "src": [
+       "c19"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,697 lb",
+      "src": [
+       "c19"
+      ],
+      "note": "2019 coupe"
+     }
+    },
+    {
+     "id": "g6-1le",
+     "name": "Camaro SS 1LE",
+     "years": "2017–2024",
+     "pkg": "g6-ss",
+     "star": true,
+     "hp": {
+      "v": 455,
+      "src": [
+       "c17le"
+      ],
+      "note": ""
+     },
+     "tq": {
+      "v": 455,
+      "src": [
+       "c19"
+      ],
+      "note": "lb-ft"
+     },
+     "z60": {
+      "v": 4.1,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 4.2,
+      "csrc": [
+       "tq17"
+      ]
+     },
+     "trans": {
+      "v": "6-speed manual only, rear-drive",
+      "src": [
+       "c17le"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$44,400",
+      "src": [
+       "tq17"
+      ],
+      "note": "2017: $6,500 package on a $37,900 1SS, destination included"
+     },
+     "what": "Magnetic Ride, electronic limited-slip diff, six-piston Brembos, track coolers.",
+     "what_src": [
+      "c17le",
+      "tq17"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "LS1": {
+   "name": "GM LS1",
+   "what": "5.7-liter V8, pushrod",
+   "study": "gm-ls-gen3",
+   "page": "/engines/gm-ls-gen3/",
+   "yt": [
+    "scy",
+    "gm-ls-gen3"
+   ],
+   "facts": [
+    [
+     "Output",
+     "320–325 hp, up to 350 lb-ft (SS)",
+     [
+      "russ",
+      "g01"
+     ]
+    ],
+    [
+     "Size",
+     "5.7 liters / 346 cu in",
+     [
+      "russ"
+     ]
+    ],
+    [
+     "Build",
+     "Aluminum pushrod V8, two valves per cylinder",
+     [
+      "russ"
+     ]
+    ],
+    [
+     "SS intake",
+     "Ram Air hood scoop",
+     [
+      "russ"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Piston slap (cold-start knock)",
+     "kind": "Enthusiast outlet",
+     "rx": "piston slap|cold start (knock|tick|noise)|knock(s|ing)? when cold",
+     "x": "A knock or tick on cold starts that fades as the engine warms is common on the LS1. The outlet calls it noisy but not harmful when it goes away warm.",
+     "fix": "Usually left alone; a noise that stays when warm needs a leak-down test.",
+     "src": [
+      "e8020"
+     ]
+    },
+    {
+     "t": "Oil consumption",
+     "kind": "Enthusiast outlet",
+     "rx": "oil consumption|burning oil|using oil|blue smoke",
+     "x": "Worn piston ring seals and piston-to-wall clearance can lead to high oil use and blow-by.",
+     "fix": "Check the level between changes; a ring job is the real fix.",
+     "src": [
+      "e8020"
+     ]
+    },
+    {
+     "t": "Water pump leaks",
+     "kind": "Enthusiast outlet",
+     "rx": "water pump|coolant (leak|loss)",
+     "x": "The water pump gasket and shaft can leak or fail, often around 100,000 miles.",
+     "fix": "Replace the gasket or the pump.",
+     "src": [
+      "e8020"
+     ]
+    }
+   ]
+  },
+  "LS3": {
+   "name": "GM LS3 / L99",
+   "what": "6.2-liter V8, pushrod",
+   "study": "gm-ls3",
+   "page": "/engines/gm-ls3/",
+   "yt": [
+    "scy",
+    "gm-ls3"
+   ],
+   "facts": [
+    [
+     "Max rpm",
+     "6,600 (LS3), 6,000 (L99)",
+     [
+      "c15"
+     ]
+    ],
+    [
+     "Output",
+     "400–426 hp, up to 420 lb-ft",
+     [
+      "c15"
+     ]
+    ],
+    [
+     "Compression",
+     "10.7:1 (LS3), 10.4:1 (L99)",
+     [
+      "c15"
+     ]
+    ],
+    [
+     "Cylinder deactivation",
+     "AFM on the L99 only",
+     [
+      "c15"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "AFM lifter failure (L99, disputed)",
+     "kind": "Class action (alleged)",
+     "rx": "\\bafm\\b|lifters?|cylinder deactivation|active fuel management",
+     "x": "A pending class action says GM's AFM lifters fail early and names 2014-and-later Camaro SS. Only the automatic L99 has AFM in this generation; no court has found a defect.",
+     "fix": "",
+     "src": [
+      "cc25",
+      "c15"
+     ]
+    },
+    {
+     "t": "Rocker arm trunnion bearings",
+     "kind": "Trade outlet",
+     "rx": "trunnion|needle bearings?|rocker arm",
+     "x": "The factory rocker trunnion needle bearings can walk out and drop needles into the oil, mainly on high-rpm or modified engines with stiffer valve springs.",
+     "fix": "Fit an upgraded trunnion kit when modifying the engine.",
+     "src": [
+      "vsp"
+     ]
+    }
+   ]
+  },
+  "LT1": {
+   "name": "GM LT1",
+   "what": "6.2-liter V8, pushrod, direct injection",
+   "study": "gm-lt1",
+   "page": "/engines/gm-lt1/",
+   "yt": [
+    "scy",
+    "gm-lt1"
+   ],
+   "facts": [
+    [
+     "Output",
+     "455 hp at 6,000 rpm, 455 lb-ft at 4,400 rpm",
+     [
+      "c16",
+      "c19"
+     ]
+    ],
+    [
+     "Injection",
+     "Direct, 11.5:1 compression",
+     [
+      "c16",
+      "c16pt"
+     ]
+    ],
+    [
+     "Block",
+     "Cast aluminum with cast-in iron liners",
+     [
+      "c16"
+     ]
+    ],
+    [
+     "Cylinder deactivation",
+     "AFM on automatics (V4 mode)",
+     [
+      "c16pt",
+      "c19"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "AFM lifter failure (disputed)",
+     "kind": "Class action (alleged)",
+     "rx": "\\bafm\\b|lifters?|cylinder deactivation|active fuel management",
+     "x": "A pending class action says GM's AFM lifters fail early and names 2016-and-later Camaros. Class status was not granted as of December 2025; no court has found a defect.",
+     "fix": "",
+     "src": [
+      "cc25"
+     ]
+    },
+    {
+     "t": "RPM hangs high after throttle snap",
+     "kind": "Maker bulletin",
+     "rx": "rpm hang|idle (hangs|stays|stuck) high|high idle|revs hang",
+     "x": "GM told dealers some 2016 Camaro SS idled high after a throttle blip, and noted false P2096-P2099 codes and cold-start surge.",
+     "fix": "Dealer engine-computer update (GM PIP5379, Feb 2016).",
+     "src": [
+      "pip16"
+     ]
+    }
+   ]
+  }
+ },
+ "compare": [
+  {
+   "slug": "mustang-gt",
+   "name": "Ford Mustang GT"
+  },
+  {
+   "slug": "challenger-392",
+   "name": "Dodge Challenger SRT8 / Scat Pack 392"
+  },
+  {
+   "slug": "camaro-zl1",
+   "name": "Chevrolet Camaro ZL1"
+  },
+  {
+   "slug": "charger-392",
+   "name": "Dodge Charger SRT8 / Scat Pack 392"
+  }
+ ],
+ "sources": {
+  "russ": {
+   "t": "The Auto Channel: 2000 Chevrolet Camaro SS road test, Carey Russ",
+   "u": "https://www.theautochannel.com/vehicles/new/reviews/2000/russ0029.html",
+   "k": "outlet"
+  },
+  "g01": {
+   "t": "GM: 2001 Camaro product information, new for 2001 (archived)",
+   "u": "https://web.archive.org/web/2001/http://media.gm.com:80/chevy/01chevy/01camaro/new.htm",
+   "k": "Chevrolet"
+  },
+  "c15": {
+   "t": "Chevrolet: 2015 Camaro / Camaro SS specifications (archived)",
+   "u": "https://web.archive.org/web/2015/http://media.chevrolet.com/media/us/en/chevrolet/vehicles/camaro/2015.tab1.html",
+   "k": "Chevrolet"
+  },
+  "p10": {
+   "t": "Chevrolet: 2010 Camaro pricing announced (Oct 2008), reprinted by The Auto Channel",
+   "u": "https://www.theautochannel.com/news/2008/10/14/173199.html",
+   "k": "Chevrolet release (reprint)"
+  },
+  "cars13": {
+   "t": "Cars.com: 2013 Chevrolet Camaro 1LE priced at $37,035 (Jul 2012)",
+   "u": "https://www.cars.com/articles/2012/07/2013-chevrolet-camaro-1le-priced-at-37035",
+   "k": "outlet"
+  },
+  "c16": {
+   "t": "Chevrolet: 2016 Camaro specifications (archived)",
+   "u": "https://web.archive.org/web/20161207215231/http://media.chevrolet.com:80/media/us/en/chevrolet/vehicles/camaro/2016.tab1.html",
+   "k": "Chevrolet"
+  },
+  "c16p": {
+   "t": "Chevrolet: Lighter 2016 Camaro delivers benchmark performance (Sep 2015, archived)",
+   "u": "https://web.archive.org/web/2016/http://media.chevrolet.com/media/us/en/chevrolet/vehicles/camaro/2016.detail.html/content/Pages/news/us/en/2015/sep/0914-camaro.html",
+   "k": "Chevrolet"
+  },
+  "c16pt": {
+   "t": "Chevrolet: 2016 Camaro's driving fun rooted in new powertrains (May 2015, archived)",
+   "u": "https://web.archive.org/web/2016/http://media.chevrolet.com/media/us/en/chevrolet/vehicles/camaro/2016.detail.html/content/Pages/news/us/en/2015/may/2016-camaro/0516-camaro-powertrains.html",
+   "k": "Chevrolet"
+  },
+  "c19": {
+   "t": "Chevrolet: 2019 Camaro SS specifications (archived)",
+   "u": "https://web.archive.org/web/20201112041316/https://media.chevrolet.com/media/us/en/chevrolet/vehicles/camaro-ss/2019.tab1.html",
+   "k": "Chevrolet"
+  },
+  "c17le": {
+   "t": "Chevrolet: Camaro 1LE package returns for 2017 (Feb 2016), reprinted by netcarshow.com",
+   "u": "https://www.netcarshow.com/chevrolet/2017-camaro_1le/",
+   "k": "Chevrolet release (reprint)"
+  },
+  "tq17": {
+   "t": "Torque News: GM announces 2017 Camaro 1LE pricing and performance figures (Aug 2016)",
+   "u": "https://www.torquenews.com/106/gm-announces-2017-camaro-1le-pricing-and-performance-figures",
+   "k": "outlet"
+  },
+  "z60": {
+   "t": "0-60specs.com: Chevrolet Camaro 0-60 runs by magazine (Car and Driver, MotorTrend, Road & Track, MotorWeek)",
+   "u": "https://www.0-60specs.com/chevrolet/camaro-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "e8020": {
+   "t": "8020 Automotive: 5 common GM LS1 engine problems",
+   "u": "https://8020automotive.com/gm-ls1-engine-problems/",
+   "k": "enthusiast outlet"
+  },
+  "cc25": {
+   "t": "CarComplaints.com: GM lifter failure lawsuit includes multiple models (Dec 2025)",
+   "u": "https://www.carcomplaints.com/news/2025/gm-lifter-failure-lawsuit-models.shtml",
+   "k": "outlet"
+  },
+  "vsp": {
+   "t": "Vehicle Service Pros: Upgrading LS rocker arm trunnions (Dec 2011)",
+   "u": "https://www.vehicleservicepros.com/industry-news/article/53090026/upgrading-ls-rocker-arm-trunnions-a-necessary-fix-for-an-ls-weak-link-2011-12-19",
+   "k": "trade outlet"
+  },
+  "pip16": {
+   "t": "GM bulletin PIP5379: RPM may hang high after the throttle is snapped, 2016 Camaro SS (Feb 2016)",
+   "u": "https://static.nhtsa.gov/odi/tsbs/2016/SB-10096138-2280.pdf",
+   "k": "Maker bulletin"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-camaro-ss",
+ "img": "/assets/ai-perf/camaro-ss.webp?v=1"
+}

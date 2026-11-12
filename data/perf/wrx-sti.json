@@ -1,0 +1,806 @@
+{
+ "slug": "wrx-sti",
+ "name": "Subaru WRX STI",
+ "short": "STI",
+ "make": "Subaru",
+ "page": "/cars/wrx-sti/",
+ "focus": "va",
+ "star": "va-19",
+ "h1": "Subaru WRX STI: performance, engines and what owners say",
+ "nhtsa": {
+  "make": "SUBARU",
+  "models": [
+   "WRX STI",
+   "IMPREZA STI",
+   "IMPREZA WRX",
+   "WRX"
+  ],
+  "note": "NHTSA files most STIs under WRX (so these counts include the regular WRX), some 2008–2014 cars under WRX STI or Impreza STI, and many 2004–2014 cars under Impreza, which is not counted here."
+ },
+ "topics_extra": {
+  "Ringland / pistons": "ring ?lands?|cracked piston|piston (failure|crack)|low compression",
+  "Rod bearings": "spun (a )?(rod )?bearing|rod bearings?|rod knock",
+  "Head gasket": "head gaskets?",
+  "Oil consumption": "oil consumption|burning oil|using oil",
+  "Secondary air pump": "secondary air|air (injection )?pump",
+  "Clutch / gearbox": "\\bclutch\\b|synchros?|grinds? (into|in)"
+ },
+ "gens": [
+  {
+   "id": "gd",
+   "code": "GD",
+   "years": "2004–2007",
+   "y0": 2004,
+   "y1": 2007,
+   "engine": "EJ257",
+   "body": "Sedan",
+   "tag": "The first U.S. STI. 300 hp, 6-speed manual, adjustable center diff.",
+   "variants": [
+    {
+     "id": "gd-04",
+     "name": "Impreza WRX STi",
+     "years": "2004–2005",
+     "hp": {
+      "v": 300,
+      "src": [
+       "s03p",
+       "s03d"
+      ],
+      "note": "at 6,000 rpm"
+     },
+     "tq": {
+      "v": 300,
+      "src": [
+       "s03p",
+       "s03d"
+      ],
+      "note": "lb-ft at 4,000 rpm"
+     },
+     "z60": {
+      "v": 4.6,
+      "who": "Car and Driver",
+      "src": [
+       "z60a"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual, all-wheel drive",
+      "src": [
+       "s03p"
+      ],
+      "note": "driver-controlled center differential (DCCD)"
+     },
+     "price": {
+      "v": "$30,995",
+      "src": [
+       "s03p"
+      ],
+      "note": "2004, plus $550 destination"
+     }
+    },
+    {
+     "id": "gd-06",
+     "name": "Impreza WRX STi",
+     "years": "2006–2007",
+     "hp": {
+      "v": 300,
+      "src": [
+       "s06"
+      ],
+      "note": "at 6,000 rpm (2006); 2007 rated 293 hp"
+     },
+     "tq": {
+      "v": 300,
+      "src": [
+       "s06"
+      ],
+      "note": "lb-ft at 4,000 rpm (2006); 2007 rated 290 lb-ft"
+     },
+     "z60": {
+      "v": 4.5,
+      "who": "MotorTrend",
+      "src": [
+       "z60a"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual, all-wheel drive",
+      "src": [
+       "s06"
+      ],
+      "note": ""
+     },
+     "what": "Restyled nose; steering-angle input added to the center differential.",
+     "what_src": [
+      "s06"
+     ]
+    },
+    {
+     "id": "gd-07l",
+     "name": "Impreza WRX STI Limited",
+     "years": "2007",
+     "pkg": "gd-06",
+     "hp": {
+      "v": 293,
+      "src": [
+       "s07l"
+      ],
+      "note": "at 6,000 rpm"
+     },
+     "tq": {
+      "v": 290,
+      "src": [
+       "s07l"
+      ],
+      "note": "lb-ft at 4,400 rpm"
+     },
+     "trans": {
+      "v": "6-speed manual, all-wheel drive",
+      "src": [
+       "s07l"
+      ],
+      "note": ""
+     },
+     "what": "800 numbered cars: lip spoiler instead of the wing, leather, heated seats, moonroof.",
+     "what_src": [
+      "s07l"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gr",
+   "code": "GR / GV",
+   "years": "2008–2014",
+   "y0": 2008,
+   "y1": 2014,
+   "engine": "EJ257",
+   "body": "Hatchback; sedan from 2011",
+   "tag": "Hatch-only at launch. 305 hp; the winged sedan returned for 2011.",
+   "variants": [
+    {
+     "id": "gr-08",
+     "name": "Impreza WRX STI hatchback",
+     "years": "2008–2014",
+     "hp": {
+      "v": 305,
+      "src": [
+       "s08p",
+       "s13spec"
+      ],
+      "note": "at 6,000 rpm"
+     },
+     "tq": {
+      "v": 290,
+      "src": [
+       "s08p",
+       "s13spec"
+      ],
+      "note": "lb-ft at 4,000 rpm"
+     },
+     "z60": {
+      "v": 5.0,
+      "who": "Car and Driver",
+      "src": [
+       "z60a"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual, all-wheel drive",
+      "src": [
+       "s08p",
+       "s13spec"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,384 lb",
+      "src": [
+       "s13spec"
+      ],
+      "note": "2013 spec sheet (4- and 5-door)"
+     },
+     "price": {
+      "v": "$34,995",
+      "src": [
+       "s08p",
+       "s14p"
+      ],
+      "note": "2008, plus $645 destination; 2014: $36,495 plus $795"
+     }
+    },
+    {
+     "id": "gr-11",
+     "name": "Impreza WRX STI sedan",
+     "years": "2011–2014",
+     "hp": {
+      "v": 305,
+      "src": [
+       "s11d",
+       "s13spec"
+      ],
+      "note": "at 6,000 rpm"
+     },
+     "tq": {
+      "v": 290,
+      "src": [
+       "s13spec"
+      ],
+      "note": "lb-ft at 4,000 rpm"
+     },
+     "z60": {
+      "v": 5.0,
+      "who": "MotorTrend",
+      "src": [
+       "z60a"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual, all-wheel drive",
+      "src": [
+       "s11d"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,384 lb",
+      "src": [
+       "s13spec"
+      ],
+      "note": "2013 spec sheet (4- and 5-door)"
+     },
+     "price": {
+      "v": "$33,995",
+      "src": [
+       "s11p",
+       "s14p"
+      ],
+      "note": "2011, plus $725 destination; 2014: $34,495 plus $795"
+     },
+     "what": "Sedan with rear wing returns; lower ride, stiffer springs and thicker anti-roll bars.",
+     "what_src": [
+      "s11d",
+      "s11p"
+     ]
+    },
+    {
+     "id": "gr-11l",
+     "name": "Impreza WRX STI Limited sedan",
+     "years": "2011–2014",
+     "pkg": "gr-11",
+     "hp": {
+      "v": 305,
+      "src": [
+       "s13spec"
+      ],
+      "note": "at 6,000 rpm"
+     },
+     "tq": {
+      "v": 290,
+      "src": [
+       "s13spec"
+      ],
+      "note": "lb-ft at 4,000 rpm"
+     },
+     "z60": {
+      "v": 5.3,
+      "who": "Car and Driver",
+      "src": [
+       "z60a"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual, all-wheel drive",
+      "src": [
+       "s13spec"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,417 lb",
+      "src": [
+       "s13spec"
+      ],
+      "note": "2013 spec sheet"
+     },
+     "price": {
+      "v": "$37,345",
+      "src": [
+       "s11p",
+       "s14p"
+      ],
+      "note": "2011, plus $725 destination; 2014: $37,845 plus $795"
+     },
+     "what": "Adds leather, BBS wheels, power moonroof and fog lights.",
+     "what_src": [
+      "s11p"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "va",
+   "code": "VA",
+   "years": "2015–2021",
+   "y0": 2015,
+   "y1": 2021,
+   "engine": "EJ257",
+   "body": "Sedan",
+   "tag": "Last EJ-powered STI. 310 hp and stronger pistons from 2019.",
+   "variants": [
+    {
+     "id": "va-15",
+     "name": "WRX STI",
+     "years": "2015–2018",
+     "hp": {
+      "v": 305,
+      "src": [
+       "s15",
+       "s15spec"
+      ],
+      "note": "at 6,000 rpm"
+     },
+     "tq": {
+      "v": 290,
+      "src": [
+       "s15",
+       "s15spec"
+      ],
+      "note": "lb-ft at 4,000 rpm"
+     },
+     "z60": {
+      "v": 4.8,
+      "who": "Car and Driver",
+      "src": [
+       "z60b"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual, all-wheel drive",
+      "src": [
+       "s15spec"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,386 lb",
+      "src": [
+       "s15spec",
+       "s18spec"
+      ],
+      "note": "2015; 3,446 lb in 2018"
+     },
+     "price": {
+      "v": "$34,495",
+      "src": [
+       "s15p"
+      ],
+      "note": "2015, plus $795 destination"
+     }
+    },
+    {
+     "id": "va-19",
+     "name": "WRX STI",
+     "years": "2019–2021",
+     "star": true,
+     "hp": {
+      "v": 310,
+      "src": [
+       "s19p",
+       "s20spec",
+       "s21p"
+      ],
+      "note": "at 6,000 rpm"
+     },
+     "tq": {
+      "v": 290,
+      "src": [
+       "s20spec",
+       "s21p"
+      ],
+      "note": "lb-ft at 4,000–5,200 rpm"
+     },
+     "trans": {
+      "v": "6-speed manual, all-wheel drive",
+      "src": [
+       "s19p",
+       "s20spec"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,450 lb",
+      "src": [
+       "s20spec"
+      ],
+      "note": "2020"
+     },
+     "price": {
+      "v": "$36,595",
+      "src": [
+       "s19p",
+       "s21p"
+      ],
+      "note": "2019, plus $885 destination; 2021: $37,245 plus $925"
+     },
+     "what": "New intake, freer exhaust, retuned ECU and stronger pistons add 5 hp.",
+     "what_src": [
+      "s19p"
+     ]
+    },
+    {
+     "id": "va-15l",
+     "name": "WRX STI Limited",
+     "years": "2015–2021",
+     "hp": {
+      "v": 305,
+      "src": [
+       "s15",
+       "s19p"
+      ],
+      "note": "310 hp from 2019"
+     },
+     "tq": {
+      "v": 290,
+      "src": [
+       "s15spec",
+       "s20spec"
+      ],
+      "note": "lb-ft"
+     },
+     "z60": {
+      "v": 4.7,
+      "who": "Car and Driver",
+      "src": [
+       "z60b"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual, all-wheel drive",
+      "src": [
+       "s15spec"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,444 lb",
+      "src": [
+       "s15spec",
+       "s20spec"
+      ],
+      "note": "2015 without navigation; 3,514 lb in 2020"
+     },
+     "price": {
+      "v": "$38,495",
+      "src": [
+       "s15p",
+       "s21p"
+      ],
+      "note": "2015, plus $795 destination; 2021: $41,945 plus $925"
+     },
+     "what": "Adds leather, 8-way power driver's seat, harman/kardon audio and moonroof.",
+     "what_src": [
+      "s15"
+     ]
+    },
+    {
+     "id": "va-s209",
+     "name": "STI S209",
+     "years": "2019",
+     "hp": {
+      "v": 341,
+      "src": [
+       "s209",
+       "s209p"
+      ],
+      "note": "at 6,400 rpm"
+     },
+     "tq": {
+      "v": 330,
+      "src": [
+       "s209",
+       "s209p"
+      ],
+      "note": "lb-ft at 3,600 rpm"
+     },
+     "z60": {
+      "v": 4.4,
+      "who": "Car and Driver",
+      "src": [
+       "z60b"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual, all-wheel drive",
+      "src": [
+       "s209p"
+      ],
+      "note": "close-ratio"
+     },
+     "price": {
+      "v": "$63,995",
+      "src": [
+       "s209p"
+      ],
+      "note": "plus $885 destination; 209 cars, U.S. only"
+     },
+     "what": "Bigger HKS turbo (18.9 psi), wide body, Bilstein dampers, forged BBS wheels.",
+     "what_src": [
+      "s209p"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "EJ257": {
+   "name": "Subaru EJ257",
+   "what": "2.5-liter flat-4, turbo",
+   "study": "subaru-ej257",
+   "page": "/engines/subaru-ej257/",
+   "yt": [
+    "scy",
+    "subaru-ej257"
+   ],
+   "facts": [
+    [
+     "Redline",
+     "6,700 rpm",
+     [
+      "wej"
+     ]
+    ],
+    [
+     "Output",
+     "293–310 hp, up to 300 lb-ft (S209: 341 hp)",
+     [
+      "s03p",
+      "s07l",
+      "s19p",
+      "s209p"
+     ]
+    ],
+    [
+     "Block",
+     "Semi-closed-deck aluminum, cast-iron liners",
+     [
+      "s13spec",
+      "s15spec"
+     ]
+    ],
+    [
+     "Boost",
+     "14.7 psi; 16.2 psi from 2019",
+     [
+      "s13spec",
+      "s20spec"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Ringland and piston failure",
+     "kind": "Parts seller / enthusiast outlet",
+     "rx": "ring ?lands?|cracked piston|piston (failure|crack)|low compression",
+     "x": "Detonation can crack a piston ring land, causing low compression, blow-by and oil burning. Parts sellers say it happens on stock cars too, more often with bad tunes, low octane or full throttle at low rpm.",
+     "fix": "Rebuild with new pistons; Subaru switched to stronger pistons for 2019.",
+     "src": [
+      "maperf",
+      "cadi",
+      "sgw",
+      "s19p"
+     ]
+    },
+    {
+     "t": "Bearing failure from oil starvation",
+     "kind": "Owner-reported",
+     "rx": "spun (a )?(rod )?bearing|rod bearings?|rod knock|bearing failure",
+     "x": "SlashGear, citing a YouTube mechanic, names oil starvation of the second and third bearings as the main EJ257 problem, which can end in bearing failure.",
+     "fix": "",
+     "src": [
+      "sgw"
+     ]
+    },
+    {
+     "t": "Head gasket leaks",
+     "kind": "Outlet",
+     "rx": "head gaskets?",
+     "x": "Head gasket failures happen on the EJ257 but less often than on other EJ engines, and are more likely with a higher-boost tune, per SlashGear.",
+     "fix": "",
+     "src": [
+      "sgw"
+     ]
+    },
+    {
+     "t": "Oil consumption",
+     "kind": "Enthusiast outlet",
+     "rx": "oil consumption|burning oil|using oil",
+     "x": "A cracked ring land lets combustion gas pressurize the crankcase, which burns oil. Rising oil use can be an early warning, so check the level often.",
+     "fix": "",
+     "src": [
+      "cadi",
+      "sgw"
+     ]
+    },
+    {
+     "t": "Secondary air pump relay recall",
+     "kind": "Recall",
+     "rx": "secondary air|air (injection )?pump",
+     "x": "On turbo 2008–2014 Imprezas, including the STI, the relay for the secondary air injection pump can fail and keep the pump running until it overheats, raising fire risk.",
+     "fix": "Dealer replaces the relay for free (NHTSA 16V-738, Subaru WTM-73).",
+     "src": [
+      "r16"
+     ]
+    }
+   ]
+  }
+ },
+ "compare": [
+  {
+   "slug": "lancer-evolution",
+   "name": "Mitsubishi Lancer Evolution"
+  },
+  {
+   "slug": "golf-r",
+   "name": "Volkswagen Golf R"
+  },
+  {
+   "slug": "focus-rs",
+   "name": "Ford Focus RS"
+  },
+  {
+   "slug": "civic-type-r",
+   "name": "Honda Civic Type R"
+  }
+ ],
+ "sources": {
+  "s03d": {
+   "t": "Subaru of America: Subaru introduces the 2004 Impreza WRX STi at NAIAS (Jan 2003, via conceptcarz)",
+   "u": "https://www.conceptcarz.com/vehicle/z6723/subaru-impreza-wrx-sti.aspx",
+   "k": "Subaru (release reprint)"
+  },
+  "s03p": {
+   "t": "Subaru of America: Subaru announces 2004 Impreza WRX STi pricing (Apr 2003, via The Auto Channel)",
+   "u": "https://www.theautochannel.com/news/2003/04/23/159933.html",
+   "k": "Subaru (release reprint)"
+  },
+  "s06": {
+   "t": "Subaru of America: Impreza WRX STi restyled for 2006 (via conceptcarz)",
+   "u": "https://www.conceptcarz.com/vehicle/z11490/concepts.aspx",
+   "k": "Subaru (release reprint)"
+  },
+  "s07l": {
+   "t": "Subaru of America: Subaru unleashes Impreza WRX STI Limited for 2007 (Apr 2006, via The Auto Channel)",
+   "u": "https://www.theautochannel.com/news/2006/04/14/004095.html",
+   "k": "Subaru (release reprint)"
+  },
+  "s08p": {
+   "t": "Subaru of America: Pricing and availability of the 2008 Impreza WRX STI (Nov 2007, via The Auto Channel)",
+   "u": "https://www.theautochannel.com/news/2007/11/15/071298.html",
+   "k": "Subaru (release reprint)"
+  },
+  "s11d": {
+   "t": "Subaru of America: The wing is back, new 4-door Impreza WRX STI for 2011 (Mar 2010)",
+   "u": "https://media.subaru.com/pressrelease/81/129/wing-back-subaru-debuts-new-4-door-impreza",
+   "k": "Subaru"
+  },
+  "s11p": {
+   "t": "Subaru of America: Pricing for 2011 Impreza WRX and STI models (Jul 2010)",
+   "u": "https://media.subaru.com/pressrelease/35/1/subaru-announces-pricing-2011-impreza-wrx-sti-models",
+   "k": "Subaru"
+  },
+  "s13spec": {
+   "t": "Subaru of America: 2013 Impreza WRX STI specifications",
+   "u": "https://media.subaru.com/download.do?id=365",
+   "k": "Subaru"
+  },
+  "s14p": {
+   "t": "Subaru of America: Pricing for 2014 WRX and WRX STI (Aug 2013)",
+   "u": "https://media.subaru.com/pressrelease/469/subaru-announces-pricing-2014-wrx-wrx-sti",
+   "k": "Subaru"
+  },
+  "s15": {
+   "t": "Subaru of America: All-new 2015 WRX STI brings motorsports-derived performance to the road (Feb 2014)",
+   "u": "https://media.subaru.com/pressrelease/574/all-new-2015-subaru-wrx-sti-brings-motorsports",
+   "k": "Subaru"
+  },
+  "s15p": {
+   "t": "Subaru of America: Pricing on all-new 2015 WRX and WRX STI sedans (Feb 2014)",
+   "u": "https://media.subaru.com/pressrelease/573/1/subaru-announces-pricing-all-new-2015-wrx-wrx",
+   "k": "Subaru"
+  },
+  "s15spec": {
+   "t": "Subaru of America: 2015 WRX STI specifications",
+   "u": "https://media.subaru.com/download.do?id=559",
+   "k": "Subaru"
+  },
+  "s18spec": {
+   "t": "Subaru of America: 2018 WRX STI specifications",
+   "u": "https://media.subaru.com/download.do?id=1166",
+   "k": "Subaru"
+  },
+  "s19p": {
+   "t": "Subaru of America: Pricing on 2019 WRX STI model (May 2018)",
+   "u": "https://media.subaru.com/pressrelease/1292/1/subaru-america-announces-pricing-2019-wrx-sti-model",
+   "k": "Subaru"
+  },
+  "s20spec": {
+   "t": "Subaru of America: 2020 WRX STI specifications",
+   "u": "https://media.subaru.com/download.do?id=1464",
+   "k": "Subaru"
+  },
+  "s21p": {
+   "t": "Subaru of America: Pricing for 2021 WRX and WRX STI (Dec 2020)",
+   "u": "https://media.subaru.com/pressrelease/1674/subaru-announces-pricing-2021-wrx-wrx-sti-performance",
+   "k": "Subaru"
+  },
+  "s209": {
+   "t": "Subaru of America: STI unleashes most powerful model ever with limited-edition STI S209",
+   "u": "https://media.subaru.com/pressrelease/1481/1/subaru-tecnica-international-unleashes-most-powerful-model-ever",
+   "k": "Subaru"
+  },
+  "s209p": {
+   "t": "Subaru of America: Pricing on limited-edition STI S209 (Oct 2019)",
+   "u": "https://media.subaru.com/pressrelease/1497/1/subaru-announces-pricing-limited-edition-sti-s209",
+   "k": "Subaru"
+  },
+  "z60a": {
+   "t": "0-60specs.com: Subaru Impreza WRX / STI 0-60 runs by magazine (Car and Driver, MotorTrend, Road & Track, MotorWeek)",
+   "u": "https://www.0-60specs.com/subaru/impreza-wrx-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "z60b": {
+   "t": "0-60specs.com: Subaru WRX / WRX STI 0-60 runs by magazine (Car and Driver, MotorTrend, Road & Track, MotorWeek)",
+   "u": "https://www.0-60specs.com/subaru/wrx-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "wej": {
+   "t": "Wikipedia: Subaru EJ engine (EJ257)",
+   "u": "https://en.wikipedia.org/wiki/Subaru_EJ_engine",
+   "k": "Wikipedia (fallback)"
+  },
+  "r16": {
+   "t": "NHTSA recall 16V-738: secondary air injection pump relay, turbo Subarus (Oct 2016)",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=16V738000",
+   "k": "Recall"
+  },
+  "maperf": {
+   "t": "MAPerformance: How to avoid Subaru ringland piston failure (Jan 2020)",
+   "u": "https://www.maperformance.com/blogs/maperformance-blog/77034371-how-to-avoid-piston-failure-subaru-performance-tips",
+   "k": "parts seller"
+  },
+  "cadi": {
+   "t": "Come and Drive It: Subaru WRX / STI ringland failure",
+   "u": "https://www.comeanddriveit.com/engine/subaru-ringland-failure",
+   "k": "enthusiast outlet"
+  },
+  "sgw": {
+   "t": "SlashGear: 4 of the worst engines ever made by Subaru (Dec 2025)",
+   "u": "https://www.slashgear.com/2043888/worst-subaru-engines-ever-made/",
+   "k": "outlet"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-wrx-sti",
+ "img": "/assets/ai-perf/wrx-sti.webp?v=1"
+}

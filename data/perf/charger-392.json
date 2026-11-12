@@ -1,0 +1,714 @@
+{
+ "slug": "charger-392",
+ "name": "Dodge Charger SRT8 / SRT 392 / Scat Pack",
+ "short": "Charger 392",
+ "make": "Dodge",
+ "page": "/cars/charger-392/",
+ "focus": "ld15",
+ "star": "ld15-scatwb",
+ "h1": "Dodge Charger SRT8 / SRT 392 / Scat Pack: performance, engines and what owners say",
+ "nhtsa": {
+  "make": "DODGE",
+  "models": [
+   "CHARGER"
+  ],
+  "note": "NHTSA files the Charger SRT8, SRT 392 and Scat Pack under Charger, so these counts are every Charger of these years."
+ },
+ "topics_extra": {
+  "HEMI tick / lifters": "hemi tick|lifters?|ticking|tick(ing)? noise",
+  "Camshaft": "cam(shaft)? (failure|wipe|wiped|lobe|damage)",
+  "Stalling after refueling": "stall\\w* after (refuel|fill|filling|getting gas)|after (refueling|filling up|fill.?up)",
+  "Brakes": "brembo|brake (pads?|rotors?|squeal|wear)",
+  "Uconnect screen": "uconnect|touch ?screen|delaminat",
+  "Transmission": "transmission (slip|slipping|shudder|delay|failure)|harsh shift|8hp70|w5a580"
+ },
+ "gens": [
+  {
+   "id": "lx",
+   "code": "LX",
+   "years": "2006–2010",
+   "y0": 2006,
+   "y1": 2010,
+   "engine": "hemi61",
+   "body": "Sedan",
+   "tag": "6.1 HEMI SRT8 sedan, 425 hp, 5-speed automatic, rear-drive.",
+   "variants": [
+    {
+     "id": "lx-srt8",
+     "name": "Charger SRT8",
+     "years": "2006–2010",
+     "hp": {
+      "v": 425,
+      "src": [
+       "sp06",
+       "p06"
+      ],
+      "note": "at 6,200 rpm"
+     },
+     "tq": {
+      "v": 420,
+      "src": [
+       "sp06",
+       "p06"
+      ],
+      "note": "lb-ft at 4,800 rpm"
+     },
+     "z60": {
+      "v": 4.8,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "5-speed automatic (W5A580), rear-drive",
+      "src": [
+       "sp06",
+       "r06"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "4,160 lb",
+      "src": [
+       "sp06",
+       "sp08"
+      ],
+      "note": "estimated curb weight"
+     },
+     "price": {
+      "v": "$35,995",
+      "src": [
+       "p06"
+      ],
+      "note": "2006, includes $675 destination"
+     }
+    },
+    {
+     "id": "lx-superbee",
+     "name": "Charger SRT8 Super Bee",
+     "years": "2007–2009",
+     "pkg": "lx-srt8",
+     "hp": {
+      "v": 425,
+      "src": [
+       "sb07"
+      ],
+      "note": ""
+     },
+     "tq": {
+      "v": 420,
+      "src": [
+       "sb07"
+      ],
+      "note": "lb-ft"
+     },
+     "what": "Special-edition paint and graphics on the SRT8, no power change. 1,000 built for 2007, 1,000 for 2008, 425 for 2009.",
+     "what_src": [
+      "sb07",
+      "sb12"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ld12",
+   "code": "LD",
+   "years": "2012–2014",
+   "y0": 2012,
+   "y1": 2014,
+   "engine": "392",
+   "body": "Sedan",
+   "tag": "New 6.4 (392) HEMI, 470 hp, still a 5-speed automatic.",
+   "variants": [
+    {
+     "id": "ld12-srt8",
+     "name": "Charger SRT8",
+     "years": "2012–2014",
+     "hp": {
+      "v": 470,
+      "src": [
+       "s12spec",
+       "r12"
+      ],
+      "note": "at 6,000 rpm"
+     },
+     "tq": {
+      "v": 470,
+      "src": [
+       "s12spec",
+       "r12"
+      ],
+      "note": "lb-ft at 4,300 rpm"
+     },
+     "z60": {
+      "v": 4.3,
+      "who": "MotorTrend",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "top": {
+      "v": "175 mph",
+      "src": [
+       "r12",
+       "r14"
+      ],
+      "note": "maker claim"
+     },
+     "trans": {
+      "v": "5-speed automatic (W5A580), rear-drive",
+      "src": [
+       "s12spec",
+       "r12"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "4,365 lb",
+      "src": [
+       "s12spec",
+       "s14spec"
+      ],
+      "note": "curb weight, 2012; 4,358 lb for 2014"
+     },
+     "price": {
+      "v": "$45,795",
+      "src": [
+       "r12"
+      ],
+      "note": "2012, plus $825 destination"
+     }
+    },
+    {
+     "id": "ld12-superbee",
+     "name": "Charger SRT8 Super Bee",
+     "years": "2012–2014",
+     "hp": {
+      "v": 470,
+      "src": [
+       "sb12",
+       "r13core"
+      ],
+      "note": ""
+     },
+     "tq": {
+      "v": 470,
+      "src": [
+       "sb12"
+      ],
+      "note": "lb-ft"
+     },
+     "z60": {
+      "v": 4.2,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "top": {
+      "v": "175 mph",
+      "src": [
+       "sb12",
+       "r13core"
+      ],
+      "note": "maker claim"
+     },
+     "trans": {
+      "v": "5-speed automatic (W5A580), rear-drive",
+      "src": [
+       "sb12",
+       "s14spec"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$41,495",
+      "src": [
+       "sb12",
+       "r13core"
+      ],
+      "note": "2012, plus $825 destination; $41,995 plus $995 for 2013"
+     },
+     "what": "Cheaper SRT8: same engine, but fixed Bilstein dampers instead of adaptive ones, cast wheels and a plainer cabin.",
+     "what_src": [
+      "s12spec",
+      "s14spec",
+      "sb12"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ld15",
+   "code": "LD (2015 update)",
+   "years": "2015–2023",
+   "y0": 2015,
+   "y1": 2023,
+   "engine": "392",
+   "body": "Sedan",
+   "tag": "485 hp 392 HEMI with an 8-speed; Scat Pack Widebody from 2020.",
+   "variants": [
+    {
+     "id": "ld15-srt392",
+     "name": "Charger SRT 392",
+     "years": "2015–2018",
+     "hp": {
+      "v": 485,
+      "src": [
+       "c15spec",
+       "r15"
+      ],
+      "note": "at 6,000 rpm"
+     },
+     "tq": {
+      "v": 475,
+      "src": [
+       "c15spec",
+       "r15"
+      ],
+      "note": "lb-ft at 4,200 rpm"
+     },
+     "z60": {
+      "v": null,
+      "who": "",
+      "src": [],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "8-speed automatic (TorqueFlite 8HP70), rear-drive",
+      "src": [
+       "c15spec",
+       "r15"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "4,410 lb",
+      "src": [
+       "c15spec"
+      ],
+      "note": "estimated curb weight, 2015"
+     },
+     "price": {
+      "v": "$47,385",
+      "src": [
+       "p15"
+      ],
+      "note": "2015, plus $995 destination"
+     },
+     "what": "SRT trim: six-piston Brembo front brakes with 15.4-inch rotors, adaptive dampers and forged 20x9.5 wheels.",
+     "what_src": [
+      "r15",
+      "c15spec"
+     ]
+    },
+    {
+     "id": "ld15-scat",
+     "name": "Charger R/T Scat Pack (Scat Pack from 2019)",
+     "years": "2015–2023",
+     "hp": {
+      "v": 485,
+      "src": [
+       "c15spec",
+       "f18",
+       "s20spec"
+      ],
+      "note": "at 6,000 rpm (2015); 6,100 rpm in the 2020 spec sheet"
+     },
+     "tq": {
+      "v": 475,
+      "src": [
+       "c15spec",
+       "s20spec"
+      ],
+      "note": "lb-ft at 4,200 rpm (2015); 4,100 rpm in the 2020 spec sheet"
+     },
+     "z60": {
+      "v": 4.1,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "8-speed automatic (TorqueFlite 8HP70), rear-drive",
+      "src": [
+       "c15spec",
+       "s20spec"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "4,400 lb",
+      "src": [
+       "c15spec",
+       "s20spec"
+      ],
+      "note": "estimated, 2015; 4,373 lb in the 2020 spec sheet"
+     },
+     "price": {
+      "v": "$39,995",
+      "src": [
+       "p15",
+       "p23"
+      ],
+      "note": "2015, plus $995 destination; $48,745 plus $1,595 for 2023"
+     }
+    },
+    {
+     "id": "ld15-scatwb",
+     "name": "Charger Scat Pack Widebody",
+     "years": "2020–2023",
+     "star": true,
+     "hp": {
+      "v": 485,
+      "src": [
+       "s20spec",
+       "pr20"
+      ],
+      "note": "at 6,100 rpm"
+     },
+     "tq": {
+      "v": 475,
+      "src": [
+       "s20spec"
+      ],
+      "note": "lb-ft at 4,100 rpm"
+     },
+     "z60": {
+      "v": 4.2,
+      "who": "MotorTrend",
+      "src": [
+       "z60"
+      ],
+      "claim": 4.3,
+      "csrc": [
+       "pr20"
+      ]
+     },
+     "trans": {
+      "v": "8-speed automatic (TorqueFlite 8HP70), rear-drive",
+      "src": [
+       "s20spec",
+       "pr20"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "4,373 lb",
+      "src": [
+       "s20spec"
+      ],
+      "note": "2020; the spec sheet gives one weight for all Scat Pack models"
+     },
+     "price": {
+      "v": "$45,995",
+      "src": [
+       "p20",
+       "p21"
+      ],
+      "note": "2020, plus $1,495 destination; $46,595 for 2021"
+     },
+     "what": "Body 3.5 inches wider, 20x11 wheels with 305/35 tires, six-piston Brembos and three-mode adaptive Bilstein dampers.",
+     "what_src": [
+      "pr20",
+      "s20spec"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "hemi61": {
+   "name": "6.1 SRT8 HEMI",
+   "what": "6.1-liter V-8",
+   "study": "chrysler-61-hemi",
+   "page": "/engines/chrysler-61-hemi/",
+   "yt": [
+    "scy",
+    "chrysler-61-hemi"
+   ],
+   "facts": [
+    [
+     "Rev limit",
+     "6,400 rpm (electronically limited)",
+     [
+      "sp06"
+     ]
+    ],
+    [
+     "Output",
+     "425 hp at 6,200 rpm, 420 lb-ft at 4,800 rpm",
+     [
+      "sp06",
+      "p06"
+     ]
+    ],
+    [
+     "Build",
+     "Cast-iron block with cross-bolted mains, aluminum hemi heads, 10.3:1 compression",
+     [
+      "sp06"
+     ]
+    ],
+    [
+     "Cylinder deactivation",
+     "None; oil jets cool the pistons (Wikipedia)",
+     [
+      "wph"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Stalling after refueling (2006)",
+     "kind": "Owner-reported (NHTSA)",
+     "rx": "stall\\w* after (refuel|fill|filling|getting gas)|after (refueling|filling up|fill.?up)",
+     "x": "A few 2006 Charger SRT8 owners told NHTSA the engine sputters or stalls just after filling the tank. Only a handful of reports, not a proven pattern.",
+     "fix": "",
+     "src": [
+      "nh06"
+     ]
+    },
+    {
+     "t": "No engine recall",
+     "kind": "Recall",
+     "rx": "",
+     "x": "NHTSA lists no recall for the 6.1 engine on 2006–2010 Chargers, and the sources checked here document no 6.1 failure pattern.",
+     "fix": "",
+     "src": [
+      "nhtsa"
+     ]
+    }
+   ]
+  },
+  "392": {
+   "name": "392 HEMI 6.4",
+   "what": "6.4-liter V-8",
+   "study": "chrysler-392",
+   "page": "/engines/chrysler-392/",
+   "yt": [
+    "scy",
+    "chrysler-392"
+   ],
+   "facts": [
+    [
+     "Rev limit",
+     "6,400 rpm (electronically limited)",
+     [
+      "s12spec",
+      "c15spec"
+     ]
+    ],
+    [
+     "Output",
+     "470–485 hp, 470–475 lb-ft",
+     [
+      "s12spec",
+      "c15spec"
+     ]
+    ],
+    [
+     "Valvetrain",
+     "Pushrod, 16 valves, sodium-filled exhaust and hollow-stem intake valves",
+     [
+      "c15spec"
+     ]
+    ],
+    [
+     "Build",
+     "Cast-iron block with cross-bolted mains, aluminum hemi heads, 10.9:1 compression; Fuel Saver four-cylinder mode",
+     [
+      "s12spec",
+      "c15spec"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Lifter and camshaft failure (\"HEMI tick\")",
+     "kind": "Owner-reported",
+     "rx": "hemi tick|lifters?|cam(shaft)? (failure|wipe|wiped|lobe)|ticking|tick(ing)? noise",
+     "x": "Owners report a tick from failed roller lifters that then wear the camshaft. SlashGear links most cases to the cylinder-deactivation (MDS) lifters and low oil flow.",
+     "fix": "Replacing the lifters and camshaft fixes it; on-time oil changes with the right oil help prevent it.",
+     "src": [
+      "sg24"
+     ]
+    },
+    {
+     "t": "No engine recall on the Charger",
+     "kind": "Recall",
+     "rx": "",
+     "x": "NHTSA lists no recall for the 6.4 engine on 2012–2023 Chargers. The 2012 SRT8 recall was for the tire-pressure monitor.",
+     "fix": "",
+     "src": [
+      "nhtsa",
+      "rc12"
+     ]
+    }
+   ]
+  }
+ },
+ "compare": [
+  {
+   "slug": "challenger-392",
+   "name": "Dodge Challenger SRT8 / Scat Pack 392"
+  },
+  {
+   "slug": "chrysler-300-srt8",
+   "name": "Chrysler 300C SRT8 / 300 SRT"
+  },
+  {
+   "slug": "chevrolet-ss",
+   "name": "Chevrolet SS"
+  },
+  {
+   "slug": "charger-hellcat",
+   "name": "Dodge Charger SRT Hellcat"
+  }
+ ],
+ "sources": {
+  "r06": {
+   "t": "DaimlerChrysler: Flexing Modern Muscle: Introducing the all-new 2006 Dodge Charger SRT8 (Mar 2005)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=226",
+   "k": "Dodge"
+  },
+  "p06": {
+   "t": "DaimlerChrysler: Dodge announces pricing for all-new 2006 Charger SRT8 (Aug 2005)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=1551",
+   "k": "Dodge"
+  },
+  "sp06": {
+   "t": "DaimlerChrysler: 2006 Dodge Charger SRT8 preliminary specifications (PDF)",
+   "u": "https://media.stellantisnorthamerica.com/view-spec.do?id=904",
+   "k": "Dodge"
+  },
+  "sp08": {
+   "t": "Chrysler: 2008 Dodge Charger SRT8 specifications (PDF)",
+   "u": "https://media.stellantisnorthamerica.com/view-spec.do?id=7343",
+   "k": "Dodge"
+  },
+  "sb07": {
+   "t": "DaimlerChrysler: Dodge re-introduces Super Bee nameplate on 2007 Charger SRT8 (Jan 2006)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=4769",
+   "k": "Dodge"
+  },
+  "r12": {
+   "t": "Chrysler: 2012 Dodge Charger SRT8 delivers perfect balance of intelligent performance and power (Aug 2011)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=10509",
+   "k": "Dodge"
+  },
+  "sb12": {
+   "t": "Chrysler: 2012 Dodge Charger SRT8 Super Bee designed for core performance enthusiasts (Nov 2011)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=11737",
+   "k": "Dodge"
+  },
+  "s12spec": {
+   "t": "Chrysler: 2012 Dodge Charger SRT8 specifications (PDF)",
+   "u": "https://media.stellantisnorthamerica.com/view-spec.do?id=11138",
+   "k": "Dodge"
+  },
+  "r13core": {
+   "t": "Chrysler: SRT brand adds new Core performance models to 2013 lineup (Feb 2013)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=13828",
+   "k": "Dodge"
+  },
+  "r14": {
+   "t": "Chrysler: 2014 Dodge Charger SRT delivers balance of intelligent performance and power (Aug 2013)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=14790",
+   "k": "Dodge"
+  },
+  "s14spec": {
+   "t": "Chrysler: 2014 Dodge Charger SRT specifications (PDF)",
+   "u": "https://media.stellantisnorthamerica.com/view-spec.do?id=14781",
+   "k": "Dodge"
+  },
+  "r15": {
+   "t": "FCA US: 2015 Dodge Charger SRT Hellcat and SRT 392 power 2015 Charger to new levels of performance (Oct 2014)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=16143",
+   "k": "Dodge"
+  },
+  "p15": {
+   "t": "FCA US: Dodge announces pricing for its new 2015 Charger model lineup (Oct 2014)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=16117",
+   "k": "Dodge"
+  },
+  "c15spec": {
+   "t": "FCA US: 2015 Dodge Charger specifications (PDF)",
+   "u": "https://media.stellantisnorthamerica.com/view-spec.do?id=15578",
+   "k": "Dodge"
+  },
+  "f18": {
+   "t": "FCA US: 2018 Dodge Charger / Charger SRT fact sheet (Aug 2017)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=18370",
+   "k": "Dodge"
+  },
+  "pr20": {
+   "t": "FCA US: Dodge//SRT expands 2020 Charger SRT Hellcat and Scat Pack with new Widebody (Jun 2019)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=20892",
+   "k": "Dodge"
+  },
+  "p20": {
+   "t": "FCA US: Dodge announces pricing for 2020 Charger lineup (Sep 2019)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=21266",
+   "k": "Dodge"
+  },
+  "s20spec": {
+   "t": "FCA US: 2020 Dodge Charger / Charger SRT specifications (PDF)",
+   "u": "https://media.stellantisnorthamerica.com/view-spec.do?id=20895",
+   "k": "Dodge"
+  },
+  "p21": {
+   "t": "FCA US: Dodge announces pricing for 2021 Dodge Charger model lineup (Aug 2020)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=22101",
+   "k": "Dodge"
+  },
+  "p23": {
+   "t": "Stellantis: Dodge opens orders and announces pricing for 2023 Challenger and Charger (Oct 2022)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=24384",
+   "k": "Dodge"
+  },
+  "z60": {
+   "t": "0-60specs.com: Dodge Charger 0-60 runs by magazine (Car and Driver, MotorTrend, MotorWeek)",
+   "u": "https://www.0-60specs.com/dodge/charger-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "wph": {
+   "t": "Wikipedia: Chrysler Hemi engine (6.1 and 6.4 sections)",
+   "u": "https://en.wikipedia.org/wiki/Chrysler_Hemi_engine",
+   "k": "Wikipedia"
+  },
+  "sg24": {
+   "t": "SlashGear: How reliable are 6.4L HEMI engines? Here's what owners have to say (Sep 2024)",
+   "u": "https://www.slashgear.com/1656386/6-4-hemi-engine-reliability-owner-reviews",
+   "k": "outlet, summarizing owner reports"
+  },
+  "nh06": {
+   "t": "NHTSA owner complaints: 2006 Dodge Charger",
+   "u": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=DODGE&model=CHARGER&modelYear=2006",
+   "k": "NHTSA"
+  },
+  "rc12": {
+   "t": "NHTSA recall 12V004000: 2012 Charger SRT8 / 300 SRT8 tire-pressure monitoring",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=12V004000",
+   "k": "Recall"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-charger-392",
+ "img": "/assets/ai-perf/charger-392.webp?v=1"
+}

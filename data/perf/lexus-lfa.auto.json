@@ -1,0 +1,32 @@
+{
+ "built": "2026-11-11",
+ "nhtsa": {
+  "by_year": {},
+  "gens": {
+   "lfa10": {
+    "n": 0,
+    "issues": {
+     "Clutch wear from hard launches": {
+      "n": 0,
+      "ex": []
+     }
+    }
+   }
+  },
+  "parts": []
+ },
+ "recalls": {
+  "2012": [
+   {
+    "id": "17V006000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2012 Toyota 4Runner, Corolla, Corolla Matrix, Sienna, Yaris, Scion xB, Lexus ES350, GX460, IS-F, IS250, IS350, IS250C, IS350C, and Lexus LFA vehicles originally sold, or ever registered, in Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas, Puerto Rico, American Samoa, Guam, the Northe"
+   }
+  ]
+ },
+ "yt": {
+  "car-lexus-lfa": null,
+  "lexus-1lr-gue": null
+ },
+ "scores": {}
+}

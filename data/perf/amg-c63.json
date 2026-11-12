@@ -1,0 +1,1112 @@
+{
+ "slug": "amg-c63",
+ "name": "Mercedes-AMG C63",
+ "short": "C63",
+ "make": "Mercedes-Benz",
+ "page": "/cars/amg-c63/",
+ "focus": "w206",
+ "star": "w206",
+ "h1": "Mercedes-AMG C63: performance, engines and what owners say",
+ "nhtsa": {
+  "make": "MERCEDES-BENZ",
+  "models": [
+   "AMG C63",
+   "AMG C63 S",
+   "AMG C63S",
+   "C63"
+  ],
+  "note": "These are complaints filed under the C63 names (AMG C63, AMG C63 S, C63). Owners who filed under C-Class or C300 aren't counted, so the real number is higher."
+ },
+ "topics_extra": {
+  "Head bolts": "head bolts?|head studs?",
+  "Cam and lifter wear": "cam(shaft)? lobes?|lifters?|tappets?",
+  "Intake manifold": "intake manifold",
+  "Cam adjusters": "cam(shaft)? (adjuster|phaser)s?",
+  "Plugs and coils": "spark plugs?|ignition coils?|misfir(e|es|ing)",
+  "Hybrid battery": "high.?voltage battery|hybrid (system|battery)"
+ },
+ "gens": [
+  {
+   "id": "w204",
+   "code": "W204",
+   "years": "2008–2015",
+   "y0": 2008,
+   "y1": 2015,
+   "engine": "M156",
+   "body": "Sedan, Coupe",
+   "tag": "Hand-built 6.2 V8, no turbos. 451 hp, 510 in the Black Series.",
+   "variants": [
+    {
+     "id": "w204",
+     "name": "C63 AMG",
+     "years": "2008–2014",
+     "hp": {
+      "v": 451,
+      "src": [
+       "mb09b",
+       "pr507"
+      ],
+      "note": "at 6,800 rpm (the 2014 brochure says 6,500)"
+     },
+     "tq": {
+      "v": 443,
+      "src": [
+       "mb09b"
+      ],
+      "note": "at 5,000 rpm"
+     },
+     "z60": {
+      "v": 3.9,
+      "who": "Car and Driver",
+      "src": [
+       "z60b"
+      ],
+      "claim": 4.3,
+      "csrc": [
+       "mb09b"
+      ]
+     },
+     "top": {
+      "v": "155 mph",
+      "src": [
+       "uk08"
+      ],
+      "note": "limited"
+     },
+     "trans": {
+      "v": "7-speed automatic, rear-drive",
+      "src": [
+       "mb09b",
+       "mb14b"
+      ],
+      "note": "AMG SPEEDSHIFT PLUS; SPEEDSHIFT MCT from 2012"
+     },
+     "weight": {
+      "v": "3,860 lb",
+      "src": [
+       "z60b"
+      ],
+      "note": "listed with the Car and Driver test"
+     },
+     "price": {
+      "v": "$53,800",
+      "src": [
+       "ed08",
+       "td08"
+      ],
+      "note": "2008, plus $825 destination"
+     }
+    },
+    {
+     "id": "w204-dev",
+     "name": "AMG Development Package",
+     "years": "2010–2013",
+     "pkg": "w204",
+     "what": "Engine changes raise output to 481 hp and the speed limiter to 174 mph.",
+     "what_src": [
+      "mb13b"
+     ],
+     "hp": {
+      "v": 481,
+      "src": [
+       "mb13b",
+       "pr507"
+      ],
+      "note": ""
+     },
+     "z60": {
+      "v": 3.9,
+      "who": "Car and Driver",
+      "src": [
+       "z60b"
+      ],
+      "claim": 4.3,
+      "csrc": [
+       "mb13b"
+      ]
+     },
+     "top": {
+      "v": "174 mph",
+      "src": [
+       "mb13b"
+      ],
+      "note": "limited"
+     },
+     "trans": {
+      "v": "7-speed automatic, rear-drive",
+      "src": [
+       "mb13b"
+      ],
+      "note": ""
+     }
+    },
+    {
+     "id": "w204-coupe",
+     "name": "C63 AMG Coupe",
+     "years": "2012–2015",
+     "hp": {
+      "v": 451,
+      "src": [
+       "mb13b",
+       "mb14b"
+      ],
+      "note": ""
+     },
+     "tq": {
+      "v": 443,
+      "src": [
+       "mb13b"
+      ],
+      "note": ""
+     },
+     "z60": {
+      "v": 3.7,
+      "who": "Car and Driver",
+      "src": [
+       "z60b"
+      ],
+      "claim": 4.4,
+      "csrc": [
+       "mb12b"
+      ]
+     },
+     "trans": {
+      "v": "7-speed AMG SPEEDSHIFT MCT, rear-drive",
+      "src": [
+       "mb14b"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,870 lb",
+      "src": [
+       "z60b"
+      ],
+      "note": "listed with the Car and Driver test"
+     },
+     "price": {
+      "v": "$62,330",
+      "src": [
+       "srp14"
+      ],
+      "note": "2013 (earliest MBUSA price found), before destination"
+     }
+    },
+    {
+     "id": "w204-bs",
+     "name": "C63 AMG Black Series Coupe",
+     "years": "2012",
+     "hp": {
+      "v": 510,
+      "src": [
+       "bs12"
+      ],
+      "note": ""
+     },
+     "tq": {
+      "v": 457,
+      "src": [
+       "bs12"
+      ],
+      "note": ""
+     },
+     "z60": {
+      "v": 3.7,
+      "who": "MotorTrend",
+      "src": [
+       "z60b"
+      ],
+      "claim": 4.2,
+      "csrc": [
+       "bs12"
+      ]
+     },
+     "top": {
+      "v": "186 mph",
+      "src": [
+       "bs12"
+      ],
+      "note": ""
+     },
+     "trans": {
+      "v": "7-speed automatic, rear-drive",
+      "src": [
+       "z60b"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,770 lb",
+      "src": [
+       "z60b"
+      ],
+      "note": "listed with the MotorTrend test"
+     },
+     "price": {
+      "v": "$105,000",
+      "src": [
+       "gts12"
+      ],
+      "note": "before destination"
+     }
+    },
+    {
+     "id": "w204-507",
+     "name": "C63 AMG Edition 507",
+     "years": "2014",
+     "what": "Forged pistons, new rods and a lighter crankshaft from the SLS AMG add 56 hp.",
+     "what_src": [
+      "pr507"
+     ],
+     "hp": {
+      "v": 507,
+      "src": [
+       "td507",
+       "pr507"
+      ],
+      "note": "at 6,800 rpm"
+     },
+     "tq": {
+      "v": 450,
+      "src": [
+       "td507",
+       "pr507"
+      ],
+      "note": "at 5,200 rpm"
+     },
+     "z60": {
+      "v": 3.9,
+      "who": "Car and Driver",
+      "src": [
+       "z60b"
+      ],
+      "claim": 4.1,
+      "csrc": [
+       "pr507",
+       "td507"
+      ]
+     },
+     "top": {
+      "v": "174 mph",
+      "src": [
+       "td507"
+      ],
+      "note": "limited"
+     },
+     "trans": {
+      "v": "7-speed AMG SPEEDSHIFT MCT, rear-drive",
+      "src": [
+       "td507",
+       "mb14b"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,924 lb",
+      "src": [
+       "td507"
+      ],
+      "note": "sedan and coupe"
+     },
+     "price": {
+      "v": "$70,000",
+      "src": [
+       "srp14"
+      ],
+      "note": "2014 sedan ($72,500 coupe), plus $925 destination"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w205",
+   "code": "W205",
+   "years": "2015–2022",
+   "y0": 2015,
+   "y1": 2022,
+   "engine": "M177",
+   "body": "Sedan, Coupe, Convertible",
+   "tag": "4.0 twin-turbo V8, rear-drive. 503 hp in the C63 S.",
+   "variants": [
+    {
+     "id": "w205",
+     "name": "C63 Sedan",
+     "years": "2015–2021",
+     "hp": {
+      "v": 469,
+      "src": [
+       "pr15",
+       "mb17",
+       "qrg21"
+      ],
+      "note": "at 5,500–6,250 rpm"
+     },
+     "tq": {
+      "v": 479,
+      "src": [
+       "pr15",
+       "mb17"
+      ],
+      "note": "at 1,750–4,500 rpm"
+     },
+     "z60": {
+      "v": null,
+      "who": "",
+      "src": [],
+      "claim": 4.0,
+      "csrc": [
+       "pr15",
+       "mb17"
+      ]
+     },
+     "top": {
+      "v": "155 mph",
+      "src": [
+       "pr15",
+       "mb17"
+      ],
+      "note": "limited"
+     },
+     "trans": {
+      "v": "7-speed AMG SPEEDSHIFT MCT, rear-drive",
+      "src": [
+       "mb17",
+       "mb19"
+      ],
+      "note": "9-speed MCT from 2019"
+     },
+     "weight": {
+      "v": "3,924 lb",
+      "src": [
+       "mb17"
+      ],
+      "note": "2017"
+     },
+     "price": {
+      "v": "$63,900",
+      "src": [
+       "price15"
+      ],
+      "note": "2015, plus $925 destination"
+     }
+    },
+    {
+     "id": "w205-s",
+     "name": "C63 S Sedan",
+     "years": "2015–2018",
+     "hp": {
+      "v": 503,
+      "src": [
+       "pr15",
+       "mb17"
+      ],
+      "note": "at 5,500–6,250 rpm"
+     },
+     "tq": {
+      "v": 516,
+      "src": [
+       "pr15",
+       "mb17"
+      ],
+      "note": "at 1,750–4,500 rpm"
+     },
+     "z60": {
+      "v": 3.9,
+      "who": "Car and Driver",
+      "src": [
+       "z60a"
+      ],
+      "claim": 3.9,
+      "csrc": [
+       "pr15",
+       "mb17"
+      ]
+     },
+     "top": {
+      "v": "180 mph",
+      "src": [
+       "pr15",
+       "mb17"
+      ],
+      "note": "limited"
+     },
+     "trans": {
+      "v": "7-speed AMG SPEEDSHIFT MCT, rear-drive",
+      "src": [
+       "mb17",
+       "mb18"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,935 lb",
+      "src": [
+       "mb17"
+      ],
+      "note": "2017"
+     },
+     "price": {
+      "v": "$71,900",
+      "src": [
+       "price15"
+      ],
+      "note": "2015, plus $925 destination"
+     }
+    },
+    {
+     "id": "w205-s19",
+     "name": "C63 S Sedan",
+     "years": "2019–2021",
+     "what": "Facelift: 9-speed MCT replaces the 7-speed.",
+     "what_src": [
+      "mb19"
+     ],
+     "hp": {
+      "v": 503,
+      "src": [
+       "mb19",
+       "mb20"
+      ],
+      "note": "at 5,500–6,250 rpm"
+     },
+     "tq": {
+      "v": 516,
+      "src": [
+       "mb19",
+       "mb20"
+      ],
+      "note": "at 2,000–4,500 rpm"
+     },
+     "z60": {
+      "v": 3.7,
+      "who": "Car and Driver",
+      "src": [
+       "z60a"
+      ],
+      "claim": 3.8,
+      "csrc": [
+       "mb19",
+       "mb20"
+      ]
+     },
+     "top": {
+      "v": "180 mph",
+      "src": [
+       "mb19",
+       "mb20"
+      ],
+      "note": "limited"
+     },
+     "trans": {
+      "v": "9-speed AMG SPEEDSHIFT MCT, rear-drive",
+      "src": [
+       "mb19"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,900 lb",
+      "src": [
+       "mb20"
+      ],
+      "note": "2020, maker estimate"
+     },
+     "price": {
+      "v": "$74,600",
+      "src": [
+       "mb19"
+      ],
+      "note": "2019, plus $995 destination"
+     }
+    },
+    {
+     "id": "w205-sc",
+     "name": "C63 S Coupe",
+     "years": "2017–2022",
+     "hp": {
+      "v": 503,
+      "src": [
+       "mb17c",
+       "qrg22c"
+      ],
+      "note": "at 5,500–6,250 rpm (2017 sheet: 6,200)"
+     },
+     "tq": {
+      "v": 516,
+      "src": [
+       "mb17c"
+      ],
+      "note": "at 1,750–4,500 rpm"
+     },
+     "z60": {
+      "v": 3.8,
+      "who": "Car and Driver",
+      "src": [
+       "z60a"
+      ],
+      "claim": 3.8,
+      "csrc": [
+       "mb17c"
+      ]
+     },
+     "top": {
+      "v": "180 mph",
+      "src": [
+       "mb17c",
+       "mb19c"
+      ],
+      "note": "limited"
+     },
+     "trans": {
+      "v": "7-speed AMG SPEEDSHIFT MCT, rear-drive",
+      "src": [
+       "mb17c",
+       "mb19c"
+      ],
+      "note": "9-speed MCT from 2019"
+     },
+     "weight": {
+      "v": "4,096 lb",
+      "src": [
+       "mb17c"
+      ],
+      "note": "2017, maker figure"
+     },
+     "price": {
+      "v": "$75,000",
+      "src": [
+       "mb17c"
+      ],
+      "note": "2017, plus $925 destination"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w206",
+   "code": "W206",
+   "years": "2024–",
+   "y0": 2024,
+   "y1": 2025,
+   "engine": "M139",
+   "body": "Sedan",
+   "tag": "2.0 turbo four plus rear e-motor. 671 hp, all-wheel drive.",
+   "variants": [
+    {
+     "id": "w206",
+     "name": "C63 S E Performance",
+     "years": "2024–2025",
+     "star": true,
+     "hp": {
+      "v": 671,
+      "src": [
+       "price24",
+       "qrg24"
+      ],
+      "note": "combined; engine 469 hp at 6,750 rpm, motor 201 hp"
+     },
+     "tq": {
+      "v": 752,
+      "src": [
+       "price24",
+       "qrg24"
+      ],
+      "note": "combined, calculated by Mercedes; engine 402 lb-ft"
+     },
+     "z60": {
+      "v": 3.0,
+      "who": "MotorTrend",
+      "src": [
+       "z60a"
+      ],
+      "claim": 3.3,
+      "csrc": [
+       "price24",
+       "qrg24"
+      ]
+     },
+     "top": {
+      "v": "155 mph",
+      "src": [
+       "qrg24"
+      ],
+      "note": "limited; 174 with AMG Performance Design Package"
+     },
+     "trans": {
+      "v": "9-speed AMG SPEEDSHIFT MCT, all-wheel drive",
+      "src": [
+       "qrg24"
+      ],
+      "note": "2-speed gearbox on the rear motor"
+     },
+     "weight": {
+      "v": "4,817 lb",
+      "src": [
+       "qrg24"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$83,900",
+      "src": [
+       "price24",
+       "qrg24"
+      ],
+      "note": "2024, plus $1,150 destination"
+     }
+    },
+    {
+     "id": "w206-pdp",
+     "name": "AMG Performance Design Package",
+     "years": "2024–2025",
+     "pkg": "w206",
+     "what": "Adds 20-inch forged wheels, red calipers, AMG Track Pace and a 174 mph limiter.",
+     "what_src": [
+      "qrg24",
+      "price24"
+     ],
+     "hp": {
+      "v": 671,
+      "src": [
+       "qrg24"
+      ],
+      "note": "combined"
+     },
+     "tq": {
+      "v": 752,
+      "src": [
+       "qrg24"
+      ],
+      "note": "combined"
+     },
+     "top": {
+      "v": "174 mph",
+      "src": [
+       "qrg24"
+      ],
+      "note": "limited"
+     },
+     "trans": {
+      "v": "9-speed AMG SPEEDSHIFT MCT, all-wheel drive",
+      "src": [
+       "qrg24"
+      ],
+      "note": ""
+     }
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "M156": {
+   "name": "Mercedes-AMG M156",
+   "what": "6.2-liter V8, naturally aspirated",
+   "study": "amg-m156",
+   "page": "/engines/amg-m156/",
+   "yt": [
+    "scy",
+    "amg-m156"
+   ],
+   "facts": [
+    [
+     "Output",
+     "451–510 hp, up to 457 lb-ft",
+     [
+      "mb09b",
+      "bs12",
+      "td507"
+     ]
+    ],
+    [
+     "Bore x stroke",
+     "102.2 x 94.6 mm, 6,208 cc (sold as 6.3)",
+     [
+      "td507"
+     ]
+    ],
+    [
+     "Cylinder bores",
+     "Twin-wire-arc-sprayed coating, twice as hard as cast iron",
+     [
+      "m156"
+     ]
+    ],
+    [
+     "Valvetrain",
+     "Bucket followers with hydraulic lifters",
+     [
+      "m156"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Cylinder head bolts",
+     "kind": "Maker bulletin",
+     "rx": "head bolts?|head studs?|coolant in (the )?(oil|cylinders?)|white smoke",
+     "x": "Head bolts can stretch and snap on engines up to serial 060658 (built to about mid-2010), letting coolant into the cylinders. Mercedes covered it in an April 2011 bulletin.",
+     "fix": "Replace all head bolts and the hydraulic lifters; many owners fit studs.",
+     "src": [
+      "acr156",
+      "fcp156"
+     ]
+    },
+    {
+     "t": "Camshaft and lifter wear",
+     "kind": "Maker bulletin",
+     "rx": "cam(shaft)? lobes?|lifters?|tappets?|cold start (rattle|clatter|tick)",
+     "x": "Intake cam lobes can wear into the lifters, often near 100,000 miles, with clatter at cold start. Mercedes acknowledged the wear in a 2009 bulletin; a U.S. class action over it did not proceed.",
+     "fix": "Replace worn camshafts and lifters, and change the oil often.",
+     "src": [
+      "acr156",
+      "fcp156"
+     ]
+    },
+    {
+     "t": "Intake manifold",
+     "kind": "Parts seller",
+     "rx": "intake manifold|manifold (plate|flap)s?",
+     "x": "The center plate of the magnesium intake manifold, which holds the throttle bodies, deteriorates and causes rough running at idle.",
+     "fix": "Replace the manifold or fit a center-plate repair kit.",
+     "src": [
+      "fcp156"
+     ]
+    },
+    {
+     "t": "Crankcase breather valve",
+     "kind": "Parts seller",
+     "rx": "crankcase breather|breather valve|\\bpcv\\b|p0170",
+     "x": "The breather valve diaphragm or its hose cracks, raising oil burning and setting a P0170 fuel trim code.",
+     "fix": "Replace the breather valve; the intake manifold has to come off.",
+     "src": [
+      "fcp156"
+     ]
+    }
+   ]
+  },
+  "M177": {
+   "name": "Mercedes-AMG M177",
+   "what": "4.0-liter V8, twin-turbo",
+   "study": "amg-m177-m178",
+   "page": "/engines/amg-m177-m178/",
+   "yt": [
+    "scy",
+    "amg-m177-m178"
+   ],
+   "facts": [
+    [
+     "Redline",
+     "7,000 rpm",
+     [
+      "mb17"
+     ]
+    ],
+    [
+     "Output",
+     "469–503 hp, 479–516 lb-ft",
+     [
+      "pr15",
+      "mb17"
+     ]
+    ],
+    [
+     "Turbos",
+     "Two turbos inside the V (\"hot inside V\")",
+     [
+      "pr15"
+     ]
+    ],
+    [
+     "Bore x stroke",
+     "83.0 x 92.0 mm, 3,982 cc",
+     [
+      "mb17"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Cam adjuster wear",
+     "kind": "Parts seller",
+     "rx": "cam(shaft)? (adjuster|phaser)s?|p0011|p0021",
+     "x": "Old or poor oil can leave varnish that slows the cam adjusters, causing a rough cold idle, startup rattle and P0011/P0021 codes.",
+     "fix": "Change the oil on time with an approved 5W-40 full synthetic.",
+     "src": [
+      "p177"
+     ]
+    },
+    {
+     "t": "Spark plugs and coils",
+     "kind": "Parts seller",
+     "rx": "spark plugs?|ignition coils?|misfir(e|es|ing)",
+     "x": "Boost wears spark plugs fast. Misfires and hesitation under boost are the signs.",
+     "fix": "Replace plugs on schedule, and coils as a set if one fails.",
+     "src": [
+      "p177"
+     ]
+    },
+    {
+     "t": "Turbo oil line seepage",
+     "kind": "Parts seller",
+     "rx": "turbo(charger)? oil (feed |supply |return )?lines?|oil feed line",
+     "x": "Heat cycling can make the turbo oil feed line fittings seep, often after 50,000 miles.",
+     "fix": "Check the lines at each service and replace any that seep.",
+     "src": [
+      "p177"
+     ]
+    },
+    {
+     "t": "Water pump and thermostat",
+     "kind": "Parts seller",
+     "rx": "water pump|thermostat|overheat(s|ing|ed)?|coolant loss",
+     "x": "The water pump and electric thermostat can fail, usually after 70,000 miles, causing coolant loss and overheating.",
+     "fix": "Replace the pump and thermostat together.",
+     "src": [
+      "p177"
+     ]
+    }
+   ]
+  },
+  "M139": {
+   "name": "Mercedes-AMG M139l",
+   "what": "2.0-liter inline-4, electric turbo, plug-in hybrid",
+   "study": "amg-m139",
+   "page": "/engines/amg-m139/",
+   "yt": [
+    "scy",
+    "amg-m139"
+   ],
+   "facts": [
+    [
+     "Output",
+     "469 hp engine, 671 hp combined with the rear motor",
+     [
+      "qrg24"
+     ]
+    ],
+    [
+     "Turbo",
+     "Electric exhaust turbo, spins up to 175,000 rpm",
+     [
+      "e22"
+     ]
+    ],
+    [
+     "Block",
+     "Closed deck",
+     [
+      "e22"
+     ]
+    ],
+    [
+     "Battery",
+     "6.1 kWh (4.8 usable), 400 volts, over the rear axle",
+     [
+      "qrg24",
+      "price24",
+      "e22"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Broken valve springs",
+     "kind": "Maker bulletin",
+     "rx": "valve springs?|misfir(e|es|ing)|rough running|hard start",
+     "x": "A Mercedes bulletin for all M139 engines covers broken valve springs: check-engine light, rough running and trouble starting.",
+     "fix": "Dealers run a compression test and replace the broken springs and any damaged parts.",
+     "src": [
+      "tsb139"
+     ]
+    }
+   ]
+  }
+ },
+ "compare": [
+  {
+   "slug": "bmw-m3",
+   "name": "BMW M3"
+  },
+  {
+   "slug": "audi-rs5",
+   "name": "Audi RS 5"
+  },
+  {
+   "slug": "giulia-qv",
+   "name": "Alfa Romeo Giulia Quadrifoglio"
+  },
+  {
+   "slug": "cts-v",
+   "name": "Cadillac CTS-V"
+  }
+ ],
+ "sources": {
+  "mb09b": {
+   "t": "Mercedes-Benz USA: 2009 C-Class brochure, specifications (copy hosted by w124performance.com)",
+   "u": "https://w124performance.com/docs/mb/brochures/2009_brochures/2009-C-Class.pdf",
+   "k": "Mercedes-Benz"
+  },
+  "mb12b": {
+   "t": "Mercedes-Benz USA: 2012 C-Class Sedan and Coupe brochure (copy hosted by w124performance.com)",
+   "u": "https://w124performance.com/docs/mb/brochures/2012_brochures/2012-C-Class-Sedan-Coupe.pdf",
+   "k": "Mercedes-Benz"
+  },
+  "mb13b": {
+   "t": "Mercedes-Benz USA: 2013 C-Class Sedan and Coupe brochure (copy hosted by w124performance.com)",
+   "u": "https://w124performance.com/docs/mb/brochures/2013_brochures/2013-C-Class-Sedan-Coupe.pdf",
+   "k": "Mercedes-Benz"
+  },
+  "mb14b": {
+   "t": "Mercedes-Benz USA: 2014 C-Class Sedan and Coupe brochure, specifications (copy hosted by w124performance.com)",
+   "u": "https://w124performance.com/docs/mb/brochures/2014_brochures/2014-C-Class-Sedan-Coupe.pdf",
+   "k": "Mercedes-Benz"
+  },
+  "uk08": {
+   "t": "Mercedes-Benz UK: prices announced for C 63 AMG saloon and estate (press release via The Auto Channel)",
+   "u": "https://www.theautochannel.com/news/2007/12/23/073980.html",
+   "k": "Mercedes-Benz"
+  },
+  "ed08": {
+   "t": "Edmunds: 2008 BMW M3 vs. 2008 Mercedes-Benz C63 AMG comparison test",
+   "u": "https://www.edmunds.com/bmw/m3/2008/comparison-test1.html",
+   "k": "Edmunds"
+  },
+  "td08": {
+   "t": "TrueDelta: Mercedes-Benz C-Class price comparison, 2008 vs 2010 (base price by trim)",
+   "u": "https://www.truedelta.com/Mercedes-Benz-C-Class-vs-Mercedes-Benz-C-Class-price-comparison,179-179,2008-2010",
+   "k": "price site"
+  },
+  "srp14": {
+   "t": "MBUSA: 2014 Mercedes-Benz C-Class suggested retail prices, MY2014 vs MY2013 (Oct 2013, archived copy)",
+   "u": "https://web.archive.org/web/2024/https://media.mbusa.com/releases/release-a7fc8abfac3a4def9535fe45055178be-2014-mercedes-benz-c-class-suggested-retail-prices",
+   "k": "Mercedes-Benz"
+  },
+  "bs12": {
+   "t": "MBUSA: Mercedes-Benz C63 AMG Black Series makes waves (Feb 2012, archived copy)",
+   "u": "https://web.archive.org/web/2024/https://www.media.mbusa.com/releases/release-5540ccd1042b4920801128ce6d93e6e8-mercedes-benz-c63-amg-black-series-makes-waves",
+   "k": "Mercedes-Benz"
+  },
+  "gts12": {
+   "t": "GTspirit: 2012 Mercedes-Benz C63 AMG Black Series US price",
+   "u": "https://gtspirit.com/2012/02/23/2012-mercedes-benz-c63-amg-black-series-us-price/",
+   "k": "outlet"
+  },
+  "pr507": {
+   "t": "MBUSA press information: All-new model year 2014 C63 AMG increases power to 507 hp in Edition 507 (Feb 2013)",
+   "u": "https://www.mbusa.com/vcm/MB/DigitalAssets/AboutUs/PressRelease/C63_AMG_Edition_507.pdf",
+   "k": "Mercedes-Benz"
+  },
+  "td507": {
+   "t": "MBUSA: 2014 C63 AMG Edition 507 technical data (Oct 2013, archived copy)",
+   "u": "https://web.archive.org/web/2024/https://media.mbusa.com/releases/release-55aae03f47b344f4a0bc87e6ef5bac2e-2014-c63-amg-edition-507-technical-data",
+   "k": "Mercedes-Benz"
+  },
+  "m156": {
+   "t": "MBUSA: AMG-designed engine, one of the most powerful V8s on the planet (Jul 2009, archived copy)",
+   "u": "https://web.archive.org/web/2024/https://media.mbusa.com/releases/release-960af16c07794350b254b3586c39767e-amg-designed-engine-one-of-the-most-powerful-v8s-on-the-planet",
+   "k": "Mercedes-Benz"
+  },
+  "pr15": {
+   "t": "MBUSA press information: The new MY2015 Mercedes-AMG C63 and C63 S sedan (Feb 2015)",
+   "u": "https://www.mbusa.com/vcm/MB/DigitalAssets/AboutUs/PressReleases/AMGC63_Press_release.pdf",
+   "k": "Mercedes-Benz"
+  },
+  "price15": {
+   "t": "MBUSA: Mercedes-Benz announces pricing on all-new 2015MY Mercedes-AMG C63 and C63 S sedan (Mar 2015, via Conceptcarz)",
+   "u": "https://www.conceptcarz.com/a10934/supercars.aspx",
+   "k": "Mercedes-Benz"
+  },
+  "mb17": {
+   "t": "MBUSA: 2017 Mercedes-AMG C63 Sedan and C63 S Sedan specifications (Sept 2016)",
+   "u": "https://media.mbusa.com/news/2017-mercedes-amg-c63-sedan-and-c63-s-sedan-specifications",
+   "k": "Mercedes-Benz"
+  },
+  "mb17c": {
+   "t": "MBUSA: 2017 Mercedes-AMG C63 Coupe and C63 S Coupe specifications (Sept 2016)",
+   "u": "https://media.mbusa.com/news/2017-mercedes-amg-c63-coupe-and-c63-s-coupe-specifications-1",
+   "k": "Mercedes-Benz"
+  },
+  "mb18": {
+   "t": "MBUSA: 2018 Mercedes-AMG C63 Sedan and C63 S Sedan specifications (Aug 2017)",
+   "u": "https://media.mbusa.com/news/2018-mercedes-amg-c63-sedan-and-c63-s-sedan",
+   "k": "Mercedes-Benz"
+  },
+  "mb19": {
+   "t": "MBUSA: 2019 Mercedes-AMG C 63 and C 63 S Sedan specifications (June 2018)",
+   "u": "https://media.mbusa.com/news/2019-mercedes-amg-c-63-and-c-63-s-sedan-specifications",
+   "k": "Mercedes-Benz"
+  },
+  "mb19c": {
+   "t": "MBUSA: 2019 Mercedes-AMG C 63 Coupe and C 63 S Coupe specifications (June 2018)",
+   "u": "https://media.mbusa.com/news/2019-mercedes-amg-c-63-coupe-and-c-63-s-coupe-specifications",
+   "k": "Mercedes-Benz"
+  },
+  "mb20": {
+   "t": "MBUSA: 2020 Mercedes-AMG C 63 and C 63 S Sedan specifications (June 2019)",
+   "u": "https://media.mbusa.com/news/2020-mercedes-amg-c-63-and-c-63-s-sedan-specifications",
+   "k": "Mercedes-Benz"
+  },
+  "qrg21": {
+   "t": "MBUSA: 2021 C-Class Sedan quick reference guide (Sept 2020)",
+   "u": "https://media.mbusa.com/news/2021-c-class-sedan-quick-reference-guide",
+   "k": "Mercedes-Benz"
+  },
+  "qrg22c": {
+   "t": "MBUSA: 2022 C-Class Coupe quick reference guide (July 2021)",
+   "u": "https://media.mbusa.com/news/2022-c-class-coupe-quick-reference-guide",
+   "k": "Mercedes-Benz"
+  },
+  "e22": {
+   "t": "MBUSA: The new Mercedes-AMG C 63 S E PERFORMANCE, the dawn of a new era (Sept 2022)",
+   "u": "https://media.mbusa.com/news/the-new-mercedes-amg-c-63-s-e-performance-the-dawn-of-a-new-era",
+   "k": "Mercedes-Benz"
+  },
+  "price24": {
+   "t": "MBUSA: Mercedes-Benz USA announces pricing for all-new Mercedes-AMG C 63 S E PERFORMANCE (Apr 2024)",
+   "u": "https://media.mbusa.com/news/mercedes-benz-usa-announces-pricing-for-all-new-mercedes-amg-c-63-s-e-performance",
+   "k": "Mercedes-Benz"
+  },
+  "qrg24": {
+   "t": "MBUSA: 2024 Mercedes-AMG C 63 S E PERFORMANCE quick reference guide (Aug 2024)",
+   "u": "https://media.mbusa.com/news/2024-mercedes-amg-c-63-s-e-performance-quick-reference-guide",
+   "k": "Mercedes-Benz"
+  },
+  "z60b": {
+   "t": "0-60specs.com: Mercedes-Benz C63 AMG (W204) 0-60 runs by magazine (Car and Driver, Motor Trend)",
+   "u": "https://www.0-60specs.com/mercedes-benz/c63-amg-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "z60a": {
+   "t": "0-60specs.com: Mercedes-AMG C63 (W205, W206) 0-60 runs by magazine (Car and Driver, Motor Trend)",
+   "u": "https://www.0-60specs.com/mercedes-amg/c63-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "acr156": {
+   "t": "Australian Car Reviews: Mercedes W204 C 63 AMG recalls and service bulletins",
+   "u": "https://australiancar.reviews/?p=47324",
+   "k": "outlet"
+  },
+  "fcp156": {
+   "t": "FCP Euro: Mercedes-Benz AMG M156 engine common issues (2021)",
+   "u": "https://www.fcpeuro.com/blog/mercedes-benz-amg-m156-engine-common-issues",
+   "k": "parts seller"
+  },
+  "p177": {
+   "t": "Euro Premium Parts: Mercedes-Benz M177 engine guide, common problems (Aug 2026)",
+   "u": "https://europremiumparts.com/blogs/buying-guides/mercedes-benz-m177-engine-guide-reliability-common-problems-tuning-potential",
+   "k": "parts seller"
+  },
+  "tsb139": {
+   "t": "Mercedes-Benz bulletin LI01.30-P-075439: M139 engine, broken valve springs (Nov 2025, filed with NHTSA)",
+   "u": "https://static.nhtsa.gov/odi/tsbs/2025/MC-11025098-0001.pdf",
+   "k": "Mercedes-Benz bulletin"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-amg-c63",
+ "img": "/assets/ai-perf/amg-c63.webp?v=1"
+}

@@ -1,0 +1,468 @@
+{
+ "slug": "kia-stinger-gt",
+ "name": "Kia Stinger GT",
+ "short": "Stinger GT",
+ "make": "Kia",
+ "page": "/cars/kia-stinger-gt/",
+ "focus": "ck",
+ "star": "ck-gt22",
+ "h1": "Kia Stinger GT: performance, engines and what owners say",
+ "nhtsa": {
+  "make": "KIA",
+  "models": [
+   "STINGER"
+  ],
+  "note": "NHTSA files every Stinger under Stinger, so these counts include the 2.0T and 2.5T four-cylinder cars."
+ },
+ "topics_extra": {
+  "Turbo oil feed line": "oil feed|turbo oil (line|pipe|leak)",
+  "Carbon buildup": "carbon (build ?up|deposits)|walnut blast",
+  "Misfires / spark plugs": "misfires?|spark plugs?|ignition coils?",
+  "ABS module fire recall": "abs module|\\bhecu\\b|engine (bay|compartment) fire",
+  "Fuel pump": "fuel pump|\\bhpfp\\b"
+ },
+ "gens": [
+  {
+   "id": "ck",
+   "code": "CK",
+   "years": "2018–2023",
+   "y0": 2018,
+   "y1": 2023,
+   "engine": "G6DP",
+   "body": "Liftback sedan",
+   "tag": "Twin-turbo V6, 365 hp, then 368 hp from the 2022 refresh.",
+   "variants": [
+    {
+     "id": "ck-gt",
+     "name": "Stinger GT",
+     "years": "2018–2021",
+     "hp": {
+      "v": 365,
+      "src": [
+       "k18p",
+       "k18s"
+      ],
+      "note": "at 6,000 rpm"
+     },
+     "tq": {
+      "v": 376,
+      "src": [
+       "k18p",
+       "k18s"
+      ],
+      "note": "lb-ft at 1,300–4,500 rpm"
+     },
+     "z60": {
+      "v": 4.4,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 4.7,
+      "csrc": [
+       "k18ov"
+      ]
+     },
+     "top": {
+      "v": "167 mph",
+      "src": [
+       "k18ov"
+      ],
+      "note": "governed, with 19-inch wheels; 130 mph on 18-inch wheels"
+     },
+     "trans": {
+      "v": "8-speed automatic, rear- or all-wheel drive",
+      "src": [
+       "k18p",
+       "k18s"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,829 lb",
+      "src": [
+       "k18s"
+      ],
+      "note": "lightest RWD; up to 4,023 lb AWD with all options"
+     },
+     "price": {
+      "v": "$38,350",
+      "src": [
+       "k18p"
+      ],
+      "note": "2018 GT RWD, plus $900 destination; AWD adds $2,200"
+     },
+     "what": "GT, GT1 and GT2 share the V6; GT1 and GT2 add equipment, not power.",
+     "what_src": [
+      "k18p",
+      "k18s"
+     ]
+    },
+    {
+     "id": "ck-gt22",
+     "name": "Stinger GT1 / GT2",
+     "years": "2022–2023",
+     "star": true,
+     "hp": {
+      "v": 368,
+      "src": [
+       "k22ov",
+       "k23s"
+      ],
+      "note": "at 6,000 rpm"
+     },
+     "tq": {
+      "v": 376,
+      "src": [
+       "k22ov",
+       "k23s"
+      ],
+      "note": "lb-ft at 1,300–4,500 rpm"
+     },
+     "z60": {
+      "v": 4.6,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 4.7,
+      "csrc": [
+       "k22ov"
+      ]
+     },
+     "top": {
+      "v": "167 mph",
+      "src": [
+       "k22s"
+      ],
+      "note": "on summer tires; 149 mph on all-season tires"
+     },
+     "trans": {
+      "v": "8-speed automatic, rear- or all-wheel drive",
+      "src": [
+       "k22ov"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "4,021 lb",
+      "src": [
+       "k23s"
+      ],
+      "note": "2023 GT2 RWD; 4,176 lb AWD"
+     },
+     "price": {
+      "v": "$43,890",
+      "src": [
+       "k22p",
+       "k22sc",
+       "k23p"
+      ],
+      "note": "2022 GT1 RWD, Kia price list, plus destination ($1,045 in mid-2021); 2023 GT2 only, from $51,790 plus $1,145"
+     },
+     "what": "Refresh adds an electronic variable exhaust and 3 hp. Base GT dropped; 2023 is GT2 only.",
+     "what_src": [
+      "k22ov",
+      "k23p"
+     ]
+    },
+    {
+     "id": "ck-20t",
+     "name": "Stinger 2.0T",
+     "years": "2018–2021",
+     "hp": {
+      "v": 255,
+      "src": [
+       "k18p",
+       "k18s"
+      ],
+      "note": "at 6,200 rpm"
+     },
+     "tq": {
+      "v": 260,
+      "src": [
+       "k18p",
+       "k18s"
+      ],
+      "note": "lb-ft at 1,400–4,000 rpm"
+     },
+     "z60": {
+      "v": 6,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 5.9,
+      "csrc": [
+       "k18ov"
+      ]
+     },
+     "trans": {
+      "v": "8-speed automatic, rear- or all-wheel drive",
+      "src": [
+       "k18p",
+       "k18s"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,611 lb",
+      "src": [
+       "k18s"
+      ],
+      "note": "lightest RWD; up to 3,792 lb AWD with all options"
+     },
+     "price": {
+      "v": "$31,900",
+      "src": [
+       "k18p"
+      ],
+      "note": "2018 base RWD, plus $900 destination"
+     },
+     "what": "2.0-liter turbo four (Theta II), not the V6. Sold as the GT-Line for 2020–2021.",
+     "what_src": [
+      "k18ov",
+      "k20p"
+     ]
+    },
+    {
+     "id": "ck-25t",
+     "name": "Stinger GT-Line 2.5T",
+     "years": "2022–2023",
+     "hp": {
+      "v": 300,
+      "src": [
+       "k22ov",
+       "k23s"
+      ],
+      "note": "at 5,800 rpm"
+     },
+     "tq": {
+      "v": 311,
+      "src": [
+       "k22ov",
+       "k23s"
+      ],
+      "note": "lb-ft at 1,650–4,000 rpm"
+     },
+     "z60": {
+      "v": 5.7,
+      "who": "MotorTrend",
+      "src": [
+       "z60"
+      ],
+      "claim": 5.2,
+      "csrc": [
+       "k22ov"
+      ]
+     },
+     "top": {
+      "v": "130 mph",
+      "src": [
+       "k22s",
+       "k23s"
+      ],
+      "note": "on 18-inch tires"
+     },
+     "trans": {
+      "v": "8-speed automatic, rear- or all-wheel drive",
+      "src": [
+       "k22ov"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,814 lb",
+      "src": [
+       "k23s"
+      ],
+      "note": "2023 RWD; 3,973 lb AWD"
+     },
+     "price": {
+      "v": "$36,290",
+      "src": [
+       "k22p"
+      ],
+      "note": "2022 RWD, Kia price list, destination not included"
+     },
+     "what": "2.5-liter turbo four replaces the 2.0T, 45 hp more. Not the V6.",
+     "what_src": [
+      "k22ov"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "G6DP": {
+   "name": "Hyundai Lambda II 3.3 T-GDI (G6DP)",
+   "what": "3.3-liter V6, twin-turbo",
+   "study": "hyundai-g6dp",
+   "page": "/engines/hyundai-g6dp/",
+   "yt": [
+    "scy",
+    "hyundai-g6dp"
+   ],
+   "facts": [
+    [
+     "Output",
+     "365–368 hp, 376 lb-ft",
+     [
+      "k18p",
+      "k22ov"
+     ]
+    ],
+    [
+     "Size",
+     "3,342 cc, 92.0 x 83.8 mm, 10.0:1 compression",
+     [
+      "k18s"
+     ]
+    ],
+    [
+     "Build",
+     "Aluminum block and heads, direct injection, 24 valves",
+     [
+      "k18s"
+     ]
+    ],
+    [
+     "Award",
+     "Wards 10 Best Engines, 2018",
+     [
+      "k18w"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Turbo oil feed line recall",
+     "kind": "Recall",
+     "rx": "oil feed|turbo oil (line|pipe|leak)|turbo.{0,20}oil leak|oil leak.{0,20}turbo",
+     "x": "On 2018–2023 Stingers and 2019–2020 K900s with the 3.3T, the left turbo oil feed pipe and hose can wear out and leak oil onto hot parts, a fire risk.",
+     "fix": "Dealer replaces the left turbo oil feed pipe and hose for free (NHTSA 24V169, Kia SC300).",
+     "src": [
+      "r24"
+     ]
+    },
+    {
+     "t": "Intake valve carbon",
+     "kind": "Parts seller",
+     "rx": "carbon (build ?up|deposits)|walnut blast|dirty intake valves?",
+     "x": "Direct injection never washes the intake valves, so carbon builds up. A parts seller writing about this engine in the Genesis G70 plans for cleaning at 60,000–80,000 miles.",
+     "fix": "Walnut-blast the intake valves.",
+     "src": [
+      "tp"
+     ]
+    },
+    {
+     "t": "Timing chain tensioner (disputed)",
+     "kind": "Owner-reported",
+     "rx": "timing chain|chain tensioner",
+     "x": "Forum posts blame timing chain tensioners, but the same parts seller says no widespread defect is documented. Treat it as unconfirmed.",
+     "fix": "",
+     "src": [
+      "tp"
+     ]
+    }
+   ]
+  }
+ },
+ "compare": [
+  {
+   "slug": "genesis-g70-33t",
+   "name": "Genesis G70 3.3T"
+  },
+  {
+   "slug": "q50-red-sport",
+   "name": "Infiniti Q50 Red Sport 400"
+  },
+  {
+   "slug": "audi-s4",
+   "name": "Audi S4"
+  },
+  {
+   "slug": "tlx-type-s",
+   "name": "Acura TLX Type S"
+  }
+ ],
+ "sources": {
+  "k18p": {
+   "t": "Kia Motors America announces 2018 Stinger pricing (Nov 2017)",
+   "u": "https://www.kiamedia.com/us/en/media/pressreleases/13175/kia-motors-america-announces-2018-stinger-pricing",
+   "k": "Kia"
+  },
+  "k18ov": {
+   "t": "Kia Motors America: 2018 Kia Stinger overview (Mar 2018)",
+   "u": "https://www.kiamedia.com/us/en/media/pressreleases/13531/2018-kia-stinger-overview2",
+   "k": "Kia"
+  },
+  "k18s": {
+   "t": "KiaMedia: 2018 Stinger specifications",
+   "u": "https://www.kiamedia.com/us/en/models/stinger/2018/specifications",
+   "k": "Kia"
+  },
+  "k18w": {
+   "t": "Kia Motors America: 2018 Stinger named to Wards 10 Best Engines list (Dec 2017)",
+   "u": "https://www.kiamedia.com/us/en/media/pressreleases/13342/all-new-2018-kia-stinger-named-to-wards-10-best-engines-list",
+   "k": "Kia"
+  },
+  "k20p": {
+   "t": "KiaMedia: 2020 Stinger pricing",
+   "u": "https://www.kiamedia.com/us/en/models/stinger/2020/pricing",
+   "k": "Kia"
+  },
+  "k22ov": {
+   "t": "Kia America: 2022 Stinger overview (Mar 2021)",
+   "u": "https://www.kiamedia.com/us/en/media/pressreleases/17205/2022-stinger-overview",
+   "k": "Kia"
+  },
+  "k22p": {
+   "t": "KiaMedia: 2022 Stinger pricing",
+   "u": "https://www.kiamedia.com/us/en/models/stinger/2022/pricing",
+   "k": "Kia"
+  },
+  "k22s": {
+   "t": "KiaMedia: 2022 Stinger specifications",
+   "u": "https://www.kiamedia.com/us/en/models/stinger/2022/specifications",
+   "k": "Kia"
+  },
+  "k22sc": {
+   "t": "Kia America: 2022 Stinger Scorpion Special Edition arrives (Jun 2021)",
+   "u": "https://www.kiamedia.com/us/en/media/pressreleases/17504/2022-kia-stinger-scorpion-special-edition-arrives",
+   "k": "Kia"
+  },
+  "k23p": {
+   "t": "Kia America announces 2023 Stinger pricing (Jun 2022)",
+   "u": "https://www.kiamedia.com/us/en/media/pressreleases/19558/kia-america-announces-2023-stinger-pricing",
+   "k": "Kia"
+  },
+  "k23s": {
+   "t": "KiaMedia: 2023 Stinger specifications",
+   "u": "https://www.kiamedia.com/us/en/models/stinger/2023/specifications",
+   "k": "Kia"
+  },
+  "z60": {
+   "t": "0-60specs.com: Kia Stinger 0-60 runs by magazine (Car and Driver, MotorTrend, MotorWeek, Road & Track)",
+   "u": "https://www.0-60specs.com/kia/stinger-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "r24": {
+   "t": "NHTSA recall 24V169: 3.3T left turbo oil feed pipe may leak (2018–2023 Stinger, 2019–2020 K900)",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=24V169000",
+   "k": "Recall"
+  },
+  "tp": {
+   "t": "ThreePiece: every Genesis G70 common failure (same 3.3T engine, 2026)",
+   "u": "https://www.threepiece.us/blog/every-genesis-g70-common-failure-and-how-to-fix-them/",
+   "k": "parts seller"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-kia-stinger-gt",
+ "img": "/assets/ai-perf/kia-stinger-gt.webp?v=1"
+}

@@ -1,0 +1,219 @@
+{
+ "built": "2026-11-11",
+ "nhtsa": {
+  "by_year": {
+   "2012": 1,
+   "2013": 4,
+   "2015": 1,
+   "2016": 12,
+   "2017": 15,
+   "2018": 9,
+   "2019": 6,
+   "2022": 10,
+   "2023": 6,
+   "2024": 12,
+   "2026": 4
+  },
+  "gens": {
+   "mk6": {
+    "n": 5,
+    "issues": {
+     "Coolant pump noise and hard starts (service action)": {
+      "n": 0,
+      "ex": []
+     }
+    }
+   },
+   "mk7": {
+    "n": 43,
+    "issues": {
+     "Turbo wastegate sticks (class settlement)": {
+      "n": 0,
+      "ex": []
+     },
+     "Fuel hose recall (2018)": {
+      "n": 2,
+      "ex": [
+       "11190933",
+       "11628365"
+      ]
+     },
+     "Coolant leaks at the water pump": {
+      "n": 3,
+      "ex": [
+       "11399858",
+       "11537264"
+      ]
+     }
+    }
+   },
+   "mk8": {
+    "n": 28,
+    "issues": {
+     "Engine cover recall (2022)": {
+      "n": 0,
+      "ex": []
+     },
+     "Coolant hose recall (2022–2023)": {
+      "n": 0,
+      "ex": []
+     },
+     "Thermostat fault code P00B7": {
+      "n": 0,
+      "ex": []
+     }
+    }
+   }
+  },
+  "parts": [
+   [
+    "Electrical system",
+    15
+   ],
+   [
+    "Service brakes",
+    12
+   ],
+   [
+    "Power train",
+    11
+   ],
+   [
+    "Unknown or other",
+    10
+   ],
+   [
+    "Engine",
+    9
+   ],
+   [
+    "Forward collision avoidance",
+    9
+   ]
+  ]
+ },
+ "recalls": {
+  "2012": [],
+  "2013": [],
+  "2015": [],
+  "2016": [
+   {
+    "id": "16V337000",
+    "part": "EQUIPMENT:OTHER:LABELS",
+    "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain model year 2016 Golf R vehicles manufactured March  17, 2016 to March 23, 2016.  The affected vehicles may be equipped with a Federal Certification Label that lists an incorrect rear axle weight limit.  As such, these vehicles fail to comply with the requirements of 49 CFR Part 567, \"Certification.\""
+   },
+   {
+    "id": "16V464000",
+    "part": "LATCHES/LOCKS/LINKAGES",
+    "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2016 CC vehicles manufactured January 12, 2016, to February 3, 2016, Golf R and Tiguan vehicles manufactured November 25, 2015, to January 28, 2016, and e-Golf vehicles manufactured November 25, 2015, to January 11, 2016.  Vibrations, such as those created by opening and closing a vehicle door, may cause the rear child door locks "
+   },
+   {
+    "id": "22V543000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2016 Audi TT Roadster, TT Coupe, S3 Sedan, R8 Coupe, A3 Sedan, A3 Etron, A3 Cabriolet, 2016 Golf Sportwagen, Golf R, Golf GTI, Golf A7, and E Golf vehicles.  During air bag deployment, the front passenger air bag may explode or deploy improperly."
+   },
+   {
+    "id": "22V831000",
+    "part": "VISIBILITY/WIPER",
+    "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2016 Golf R vehicles.  Incorrect front windshield wiper software was installed which may prevent the wipers from activating.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 104, \"Windshield Wiping and Washing Systems.\""
+   }
+  ],
+  "2017": [],
+  "2018": [
+   {
+    "id": "18V803000",
+    "part": "SEATS:MID/REAR ASSEMBLY",
+    "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2018 Volkswagen e-Golf and Golf R vehicles, and Audi A3 Sedan and RS3 vehicles.  The rear seat frame head restraint guide sleeves may be incorrectly welded to the seat frame."
+   },
+   {
+    "id": "18V864000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:HOSES, LINES/PIPING, AND FITTINGS",
+    "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2018 Volkswagen Golf R vehicles.  The fuel hose quick connector may detach from the fuel supply line in the engine bay, resulting in a fuel leak."
+   },
+   {
+    "id": "20V561000",
+    "part": "UNKNOWN OR OTHER",
+    "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2018 Volkswagen Golf R and Atlas, 2017 Golf Alltrack and E-Golf and 2016-2018 Passat vehicles.  These internal use vehicles were sold without confirmation that they were built to all applicable regulatory requirements and may have been modified prior to sale.  As such, these vehicles may fail to comply with the requirements of var"
+   },
+   {
+    "id": "21V321000",
+    "part": "UNKNOWN OR OTHER",
+    "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2017 Touareg GP, Tiguan, Golf A6, E-Golf GP, CCF, 2016-2017 Passat GP, 2018-2019 Golf R GP, and 2018 Atlas vehicles.  These internal-use vehicles were sold without confirmation that they were built to all applicable regulatory requirements and may have been modified prior to sale.  As such, these vehicles may fail to comply with t"
+   }
+  ],
+  "2019": [
+   {
+    "id": "21V321000",
+    "part": "UNKNOWN OR OTHER",
+    "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2017 Touareg GP, Tiguan, Golf A6, E-Golf GP, CCF, 2016-2017 Passat GP, 2018-2019 Golf R GP, and 2018 Atlas vehicles.  These internal-use vehicles were sold without confirmation that they were built to all applicable regulatory requirements and may have been modified prior to sale.  As such, these vehicles may fail to comply with t"
+   },
+   {
+    "id": "22V815000",
+    "part": "TIRES:PRESSURE MONITORING AND REGULATING SYSTEMS",
+    "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2019 Volkswagen Tiguan LWB, Golf Sportswagen A7, Golf Alltrack, Golf R GP, Audi Q3, Audi A3 Cabriolet, 2019-2020 Jetta NF, Jetta GLI, Golf GTI, Atlas, Golf A7, Audi A3, 2020-2021 Atlas Cross Sport, and 2021 Atlas FL vehicles.  The tire pressure monitoring system may not detect an air pressure loss in adequate time when deflating o"
+   }
+  ],
+  "2022": [
+   {
+    "id": "22V163000",
+    "part": "ENGINE",
+    "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2022 Golf GTI and Golf R vehicles.  Certain driving situations, such as high acceleration driving maneuvers, may loosen the engine design cover."
+   },
+   {
+    "id": "22V542000",
+    "part": "VISIBILITY:SUN/MOON ROOF ASSEMBLY",
+    "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2022 Golf R A8 and Golf GTI vehicles.  The touch switch for the sunroof may be too sensitive, allowing it to be inadvertently pressed.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 118, \"Power-Operated Window Systems.\""
+   },
+   {
+    "id": "22V707000",
+    "part": "ENGINE AND ENGINE COOLING:COOLING SYSTEM:RADIATOR ASSEMBLY",
+    "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2022-2023 Golf R A8 and Golf GTI vehicles.  The radiator may not have been attached correctly to the intercooler, which can result in a damaged coolant hose."
+   },
+   {
+    "id": "22V823000",
+    "part": "BACK OVER PREVENTION:DISPLAY FUNCTION",
+    "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2022 Golf R A8, Audi S3, RS3 Sedan, Q4 E-Tron SUV, A3 Sedan, and 2022-2023 Volkswagen Golf GTI, and ID4 vehicles.  The rearview camera image may be blank or unresponsive when the vehicle is placed in reverse gear or when the park function is manually activated.  As such, these vehicles fail to comply with the requirements of Feder"
+   },
+   {
+    "id": "24V480000",
+    "part": "BACK OVER PREVENTION:SOFTWARE",
+    "summary": "Volkswagen Group of America, Inc. (VW) is recalling certain 2022-2024 Golf R, Golf GTI, 2024 Atlas, and 2024 Atlas Cross Sport vehicles.  The rearview camera image may be delayed or deactivated after shifting into reverse.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 111, \"Rear Visibility.\""
+   }
+  ],
+  "2023": [
+   {
+    "id": "22V707000",
+    "part": "ENGINE AND ENGINE COOLING:COOLING SYSTEM:RADIATOR ASSEMBLY",
+    "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2022-2023 Golf R A8 and Golf GTI vehicles.  The radiator may not have been attached correctly to the intercooler, which can result in a damaged coolant hose."
+   },
+   {
+    "id": "23V437000",
+    "part": "SUSPENSION:FRONT:MACPHERSON STRUT",
+    "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2023 Golf R A8 and Golf GTI vehicles.  The strut mount may be deformed, loosening the bolted connections to the suspension strut mounting."
+   },
+   {
+    "id": "24V480000",
+    "part": "BACK OVER PREVENTION:SOFTWARE",
+    "summary": "Volkswagen Group of America, Inc. (VW) is recalling certain 2022-2024 Golf R, Golf GTI, 2024 Atlas, and 2024 Atlas Cross Sport vehicles.  The rearview camera image may be delayed or deactivated after shifting into reverse.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 111, \"Rear Visibility.\""
+   }
+  ],
+  "2024": [
+   {
+    "id": "24V480000",
+    "part": "BACK OVER PREVENTION:SOFTWARE",
+    "summary": "Volkswagen Group of America, Inc. (VW) is recalling certain 2022-2024 Golf R, Golf GTI, 2024 Atlas, and 2024 Atlas Cross Sport vehicles.  The rearview camera image may be delayed or deactivated after shifting into reverse.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 111, \"Rear Visibility.\""
+   }
+  ],
+  "2025": [
+   {
+    "id": "25V638000",
+    "part": "SEAT BELTS:FRONT:RETRACTOR",
+    "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2025 GTI, Golf R, Audi A5, A6 Sportback E-Tron, S5, S6 Sportback E-Tron, 2026 Q4 Sportback E-Tron, and Q4 E-Tron vehicles. The torsion bar in one or both front seat belt retractors may have been damaged during production."
+   }
+  ]
+ },
+ "yt": {
+  "car-golf-r": null
+ },
+ "scores": {}
+}

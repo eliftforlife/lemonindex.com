@@ -1,0 +1,154 @@
+{
+ "built": "2026-11-11",
+ "nhtsa": {
+  "by_year": {
+   "2017": 2,
+   "2018": 6,
+   "2019": 6,
+   "2020": 1,
+   "2021": 11,
+   "2023": 9,
+   "2024": 1,
+   "2025": 4
+  },
+  "gens": {
+   "fk8": {
+    "n": 26,
+    "issues": {
+     "Fuel pump recall": {
+      "n": 6,
+      "ex": [
+       "11533625",
+       "11604579"
+      ]
+     },
+     "Heat in long track sessions": {
+      "n": 0,
+      "ex": []
+     },
+     "Low fuel-pressure warning on track (unconfirmed)": {
+      "n": 1,
+      "ex": [
+       "11533625"
+      ]
+     }
+    }
+   },
+   "fl5": {
+    "n": 14,
+    "issues": {
+     "Fuel pump recall": {
+      "n": 0,
+      "ex": []
+     },
+     "Heat in long track sessions": {
+      "n": 0,
+      "ex": []
+     },
+     "Low fuel-pressure warning on track (unconfirmed)": {
+      "n": 0,
+      "ex": []
+     }
+    }
+   }
+  },
+  "parts": [
+   [
+    "Steering",
+    9
+   ],
+   [
+    "Fuel/propulsion system",
+    6
+   ],
+   [
+    "Electrical system",
+    6
+   ],
+   [
+    "Engine",
+    6
+   ],
+   [
+    "Power train",
+    5
+   ],
+   [
+    "Service brakes",
+    4
+   ]
+  ]
+ },
+ "recalls": {
+  "2017": [
+   {
+    "id": "26V332000",
+    "part": "AIR BAGS:SENSOR:OCCUPANT CLASSIFICATION:FRONT PASSENGER",
+    "summary": "Honda (American Honda Motor Co.) is recalling certain 2018-2021, 2023 Acura TLX, 2019-2024 RDX, 2017-2020, 2022-2026 MDX, 2017-2021, 2023, 2025 Honda Ridgeline, 2017-2022 Pilot, 2019-2021 Passport, 2018-2026 Odyssey, 2019-2022 Insight, 2019-2021 HR-V, 2018-2020 Fit, 2020-2022 CR-V Hybrid, 2017-2022 CR-V, 2017-2018, 2021 Civic Type R, 2017-2021 Civic hatchback, 2016-2020 Civic coupe, 2016-2022 Civi"
+   }
+  ],
+  "2018": [
+   {
+    "id": "23V858000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+    "summary": "Honda (American Honda Motor Co.) is recalling certain 2013-2023 Honda Accord, Civic Coupe, Civic Sedan, Civic Hatchback, Civic Type R, CR-V, HR-V, Ridgeline, Odyssey, Acura ILX, MDX, MDX Hybrid, RDX, RLX, TLX, 2019-2022 Honda Insight, Passport, 2020 Honda CR-V Hybrid, 2018-2019 Honda Clarity PHEV, Fit, and 2015-2020 Honda Accord Hybrid, Pilot, Acura NSX vehicles.  The fuel pump inside the fuel tan"
+   },
+   {
+    "id": "26V332000",
+    "part": "AIR BAGS:SENSOR:OCCUPANT CLASSIFICATION:FRONT PASSENGER",
+    "summary": "Honda (American Honda Motor Co.) is recalling certain 2018-2021, 2023 Acura TLX, 2019-2024 RDX, 2017-2020, 2022-2026 MDX, 2017-2021, 2023, 2025 Honda Ridgeline, 2017-2022 Pilot, 2019-2021 Passport, 2018-2026 Odyssey, 2019-2022 Insight, 2019-2021 HR-V, 2018-2020 Fit, 2020-2022 CR-V Hybrid, 2017-2022 CR-V, 2017-2018, 2021 Civic Type R, 2017-2021 Civic hatchback, 2016-2020 Civic coupe, 2016-2022 Civi"
+   }
+  ],
+  "2019": [
+   {
+    "id": "23V858000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+    "summary": "Honda (American Honda Motor Co.) is recalling certain 2013-2023 Honda Accord, Civic Coupe, Civic Sedan, Civic Hatchback, Civic Type R, CR-V, HR-V, Ridgeline, Odyssey, Acura ILX, MDX, MDX Hybrid, RDX, RLX, TLX, 2019-2022 Honda Insight, Passport, 2020 Honda CR-V Hybrid, 2018-2019 Honda Clarity PHEV, Fit, and 2015-2020 Honda Accord Hybrid, Pilot, Acura NSX vehicles.  The fuel pump inside the fuel tan"
+   }
+  ],
+  "2020": [
+   {
+    "id": "23V858000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+    "summary": "Honda (American Honda Motor Co.) is recalling certain 2013-2023 Honda Accord, Civic Coupe, Civic Sedan, Civic Hatchback, Civic Type R, CR-V, HR-V, Ridgeline, Odyssey, Acura ILX, MDX, MDX Hybrid, RDX, RLX, TLX, 2019-2022 Honda Insight, Passport, 2020 Honda CR-V Hybrid, 2018-2019 Honda Clarity PHEV, Fit, and 2015-2020 Honda Accord Hybrid, Pilot, Acura NSX vehicles.  The fuel pump inside the fuel tan"
+   }
+  ],
+  "2021": [
+   {
+    "id": "26V332000",
+    "part": "AIR BAGS:SENSOR:OCCUPANT CLASSIFICATION:FRONT PASSENGER",
+    "summary": "Honda (American Honda Motor Co.) is recalling certain 2018-2021, 2023 Acura TLX, 2019-2024 RDX, 2017-2020, 2022-2026 MDX, 2017-2021, 2023, 2025 Honda Ridgeline, 2017-2022 Pilot, 2019-2021 Passport, 2018-2026 Odyssey, 2019-2022 Insight, 2019-2021 HR-V, 2018-2020 Fit, 2020-2022 CR-V Hybrid, 2017-2022 CR-V, 2017-2018, 2021 Civic Type R, 2017-2021 Civic hatchback, 2016-2020 Civic coupe, 2016-2022 Civi"
+   },
+   {
+    "id": "24V064000",
+    "part": "AIR BAGS:SENSOR:OCCUPANT CLASSIFICATION:FRONT PASSENGER",
+    "summary": "Honda (American Honda Motor Co.) is recalling certain 2020-2022 Pilot, Accord, Civic sedan, HR-V, Odyssey, 2020 Civic coupe, Fit, 2021-2022 Civic hatchback, 2021 Civic Type R, Insight, 2020-2021 CR-V, CR-V Hybrid, Passport, Ridgeline, Accord Hybrid, 2020 Acura MDX, 2022 Acura MDX, 2020-2022 Acura RDX, and 2020-2021 Acura TLX vehicles.  The front passenger seat weight sensor may crack and short cir"
+   }
+  ],
+  "2023": [
+   {
+    "id": "24V744000",
+    "part": "STEERING",
+    "summary": "Honda (American Honda Motor Co.) is recalling certain 2023-2025 Acura Integra, Civic Type R, CR-V Hybrid, CR-V, HR-V, 2022-2025 Civic, Civic Hatchback, 2024-2025 Acura Integra Type S, 2025 CR-V Fuel Cell EV, Civic Hybrid, and Civic Hatchback Hybrid vehicles.  The steering gearbox assembly may have been manufactured incorrectly, which can cause excessive internal friction and lead to difficulty ste"
+   }
+  ],
+  "2024": [
+   {
+    "id": "24V744000",
+    "part": "STEERING",
+    "summary": "Honda (American Honda Motor Co.) is recalling certain 2023-2025 Acura Integra, Civic Type R, CR-V Hybrid, CR-V, HR-V, 2022-2025 Civic, Civic Hatchback, 2024-2025 Acura Integra Type S, 2025 CR-V Fuel Cell EV, Civic Hybrid, and Civic Hatchback Hybrid vehicles.  The steering gearbox assembly may have been manufactured incorrectly, which can cause excessive internal friction and lead to difficulty ste"
+   }
+  ],
+  "2025": [
+   {
+    "id": "24V744000",
+    "part": "STEERING",
+    "summary": "Honda (American Honda Motor Co.) is recalling certain 2023-2025 Acura Integra, Civic Type R, CR-V Hybrid, CR-V, HR-V, 2022-2025 Civic, Civic Hatchback, 2024-2025 Acura Integra Type S, 2025 CR-V Fuel Cell EV, Civic Hybrid, and Civic Hatchback Hybrid vehicles.  The steering gearbox assembly may have been manufactured incorrectly, which can cause excessive internal friction and lead to difficulty ste"
+   }
+  ]
+ },
+ "yt": {
+  "car-civic-type-r": null
+ },
+ "scores": {}
+}

@@ -1,0 +1,321 @@
+{
+ "slug": "focus-rs",
+ "name": "Ford Focus RS",
+ "short": "Focus RS",
+ "make": "Ford",
+ "page": "/cars/focus-rs/",
+ "focus": "mk3",
+ "star": "mk3-rs",
+ "h1": "Ford Focus RS: performance, engines and what owners say",
+ "compare": [
+  {
+   "slug": "golf-r",
+   "name": "Volkswagen Golf R"
+  },
+  {
+   "slug": "wrx-sti",
+   "name": "Subaru WRX STI"
+  },
+  {
+   "slug": "civic-type-r",
+   "name": "Honda Civic Type R"
+  },
+  {
+   "slug": "focus-st",
+   "name": "Ford Focus ST"
+  }
+ ],
+ "nhtsa": {
+  "make": "FORD",
+  "models": [
+   "FOCUS"
+  ],
+  "note": "NHTSA files almost every Focus RS complaint under Focus (only six 2016 complaints are filed as Focus RS, and the Focus search includes them), so these counts are every Focus of these years."
+ },
+ "topics_extra": {
+  "Head gasket": "head gasket|white smoke|(losing|lost|low|loss of) coolant|coolant (loss|leak)",
+  "Oil consumption": "oil consumption|burn(s|ing)? oil|low oil|oil level",
+  "Clutch pedal sticking": "clutch pedal|pedal (stuck|sticks|sticking|stays)",
+  "Rear drive unit / AWD": "rear drive unit|\\brdu\\b|torque vectoring|\\bawd\\b",
+  "Block heater recall": "block heater"
+ },
+ "gens": [
+  {
+   "id": "mk3",
+   "code": "Mk3",
+   "years": "2016–2018",
+   "y0": 2016,
+   "y1": 2018,
+   "engine": "EB23RS",
+   "body": "Hatchback",
+   "tag": "350-hp EcoBoost, manual only, torque-vectoring all-wheel drive.",
+   "variants": [
+    {
+     "id": "mk3-rs",
+     "name": "Focus RS",
+     "years": "2016–2017",
+     "star": true,
+     "hp": {
+      "v": 350,
+      "src": [
+       "f16a",
+       "f16w"
+      ],
+      "note": "on 93-octane fuel"
+     },
+     "tq": {
+      "v": 350,
+      "src": [
+       "f16a",
+       "f16w"
+      ],
+      "note": "lb-ft on 93-octane fuel"
+     },
+     "z60": {
+      "v": 4.6,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "top": {
+      "v": "165 mph",
+      "src": [
+       "f15p",
+       "f16a"
+      ],
+      "note": ""
+     },
+     "trans": {
+      "v": "6-speed manual, all-wheel drive",
+      "src": [
+       "f15d",
+       "f16a"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,459 lb",
+      "src": [
+       "wf3"
+      ],
+      "note": "Wikipedia figure, no maker source found"
+     },
+     "price": {
+      "v": "$36,605",
+      "src": [
+       "f15p",
+       "f16a"
+      ],
+      "note": "2016, including destination"
+     }
+    },
+    {
+     "id": "mk3-le",
+     "name": "Focus RS Limited Edition",
+     "years": "2018",
+     "hp": {
+      "v": 350,
+      "src": [
+       "f17le"
+      ],
+      "note": "on 93-octane fuel"
+     },
+     "tq": {
+      "v": 350,
+      "src": [
+       "wf3"
+      ],
+      "note": "lb-ft; Wikipedia says output was unchanged"
+     },
+     "z60": {
+      "v": 4.7,
+      "who": "MotorTrend",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual, all-wheel drive",
+      "src": [
+       "f17le",
+       "wf3"
+      ],
+      "note": ""
+     },
+     "what": "Adds a Quaife mechanical front limited-slip differential, forged 19-inch wheels, black roof and the RS2 interior. 1,000 for the U.S.",
+     "what_src": [
+      "f17le"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "EB23RS": {
+   "name": "Ford 2.3 EcoBoost (Focus RS)",
+   "what": "2.3-liter inline-4, turbo",
+   "study": "",
+   "page": "",
+   "yt": [
+    "scy",
+    ""
+   ],
+   "facts": [
+    [
+     "Rev limit",
+     "6,800 rpm",
+     [
+      "f15g",
+      "f15p",
+      "f16a"
+     ]
+    ],
+    [
+     "Output",
+     "350 hp, 350 lb-ft on 93 octane",
+     [
+      "f16w",
+      "f16a"
+     ]
+    ],
+    [
+     "Turbo",
+     "Twin-scroll turbo with a larger compressor, much bigger intercooler",
+     [
+      "f15d",
+      "f16w"
+     ]
+    ],
+    [
+     "Block and head",
+     "Aluminum block with stronger cast-iron liners; heat-resistant alloy head",
+     [
+      "f15d"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Head gasket coolant leak",
+     "kind": "Maker bulletin",
+     "rx": "head gasket|white smoke|(losing|lost|low|loss of) coolant|coolant (loss|leak)",
+     "x": "On 2016–2017 cars built through July 6, 2017, the head gasket can leak coolant into the cylinders, showing as white smoke or a dropping coolant level with no outside leak.",
+     "fix": "Ford program 17B32 pressure-tested and replaced the gasket (or the head) free, with no mileage limit, through May 31, 2019.",
+     "src": [
+      "p17b32",
+      "p17b32s2"
+     ]
+    },
+    {
+     "t": "Oil use in hard driving",
+     "kind": "Maker bulletin",
+     "rx": "oil consumption|burn(s|ing)? oil|low oil|oil level",
+     "x": "Ford says track use and long stints at high rpm can raise oil use on early cars, and running low on oil can destroy the engine.",
+     "fix": "Program 16B43 reprogrammed the engine computer to call for oil changes sooner; Ford tells owners to check the oil more often.",
+     "src": [
+      "p16b43"
+     ]
+    },
+    {
+     "t": "Oil seep at the head joint",
+     "kind": "Maker bulletin",
+     "rx": "oil (leak|seep)|leaking oil|seeping oil",
+     "x": "Some 2016–2018 engines seep oil where the cylinder head meets the block.",
+     "fix": "Dealers reseal it using a revised sealant procedure (Ford SSM 47443).",
+     "src": [
+      "s47443"
+     ]
+    },
+    {
+     "t": "Block heater recall",
+     "kind": "Recall",
+     "rx": "block heater",
+     "x": "On 438 Focus RS cars with a factory block heater, the heater can leak coolant and short out when plugged in, a fire risk.",
+     "fix": "Don't plug it in; dealers replace the heater or fit a blanking plug free (Ford 25SA4, NHTSA 26V-012).",
+     "src": [
+      "r26"
+     ]
+    }
+   ]
+  }
+ },
+ "sources": {
+  "f15g": {
+   "t": "Ford Media: All-new Ford Focus RS (Feb 2015, archived)",
+   "u": "https://web.archive.org/web/2019/https://media.ford.com/content/fordmedia/fna/us/en/news/2015/02/03/all-new-ford-focus-rs.html",
+   "k": "Ford"
+  },
+  "f15d": {
+   "t": "Ford Media: All-new Ford Focus RS makes U.S. debut in New York (Mar 2015, archived)",
+   "u": "https://web.archive.org/web/2019/https://media.ford.com/content/fordmedia/fna/us/en/news/2015/03/25/all-new-ford-focus-rs-makes-us-debut-in-new-york.html",
+   "k": "Ford"
+  },
+  "f15p": {
+   "t": "Ford Media: Focus RS sprints to 62 mph in 4.7 seconds and hits 165 mph (Sep 2015, archived)",
+   "u": "https://web.archive.org/web/2019/https://media.ford.com/content/fordmedia/fna/us/en/news/2015/09/16/ford-focus-rs-62mph-in-4-7-seconds.html",
+   "k": "Ford"
+  },
+  "f16a": {
+   "t": "Ford Media: 350-horsepower Focus RS now arriving at U.S. dealerships (Jul 2016, archived)",
+   "u": "https://web.archive.org/web/2019/https://media.ford.com/content/fordmedia/fna/us/en/news/2016/07/13/buckle-up--all-new-350-horsepower-focus-rs-now-arriving-at-u-s--.html",
+   "k": "Ford"
+  },
+  "f16w": {
+   "t": "Ford Media: 2.3-liter EcoBoost powering Focus RS wins Ward's 10 Best Engines (Dec 2016, archived)",
+   "u": "https://web.archive.org/web/2019/https://media.ford.com/content/fordmedia/fna/us/en/news/2016/12/13/2-3-liter-ecoboost-powering-ford-focus-rs-wins-2017-wards-10-bes.html",
+   "k": "Ford"
+  },
+  "f17le": {
+   "t": "Ford Media: Fans inspire new limited-edition Focus RS (May 2017, archived)",
+   "u": "https://web.archive.org/web/2019/https://media.ford.com/content/fordmedia/fna/us/en/news/2017/05/31/new-limited-edition-focus-rs-performance-car-inspired-by-fans.html",
+   "k": "Ford"
+  },
+  "p17b32": {
+   "t": "Ford Customer Satisfaction Program 17B32, 2016–2017 Focus RS cylinder head gasket replacement (Jan 2018)",
+   "u": "https://static.nhtsa.gov/odi/tsbs/2018/MC-10138536-9999.pdf",
+   "k": "Maker bulletin"
+  },
+  "p17b32s2": {
+   "t": "Ford Customer Satisfaction Program 17B32, Supplement #2: extended to May 31, 2019 (Jan 2019)",
+   "u": "https://static.nhtsa.gov/odi/tsbs/2019/MC-10153980-9999.pdf",
+   "k": "Maker bulletin"
+  },
+  "p16b43": {
+   "t": "Ford Customer Satisfaction Program 16B43, 2016–2017 Focus RS PCM reprogramming for oil use (Nov 2016)",
+   "u": "https://static.nhtsa.gov/odi/tsbs/2016/SB-10096001-2532.pdf",
+   "k": "Maker bulletin"
+  },
+  "s47443": {
+   "t": "Ford Special Service Message 47443, 2016–2018 Focus RS oil seepage at block-to-head surface (Aug 2018)",
+   "u": "https://static.nhtsa.gov/odi/tsbs/2018/MC-10144929-9999.pdf",
+   "k": "Maker bulletin"
+  },
+  "r26": {
+   "t": "NHTSA recall 26V-012 (Ford 25SA4) Part 573 report: engine block heater may short circuit (May 2026)",
+   "u": "https://static.nhtsa.gov/odi/rcl/2026/RCLRPT-26V012-0381.pdf",
+   "k": "Recall"
+  },
+  "z60": {
+   "t": "0-60specs.com: Ford Focus 0-60 runs by magazine (Car and Driver, MotorTrend, Road & Track, MotorWeek)",
+   "u": "https://www.0-60specs.com/ford/focus-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "wf3": {
+   "t": "Wikipedia: Ford Focus (third generation)",
+   "u": "https://en.wikipedia.org/wiki/Ford_Focus_(third_generation)",
+   "k": "Wikipedia (fallback)"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-focus-rs",
+ "img": "/assets/ai-perf/focus-rs.webp?v=1"
+}

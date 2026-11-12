@@ -164,7 +164,193 @@
   "2025": []
  },
  "yt": {
-  "car-gr-supra": null
+  "car-gr-supra": {
+   "videos": 200,
+   "praise": [
+    [
+     "Power and acceleration",
+     30
+    ],
+    [
+     "Looks",
+     24
+    ],
+    [
+     "Handling and steering",
+     24
+    ],
+    [
+     "Manual gearbox",
+     18
+    ]
+   ],
+   "trouble": [],
+   "top": [
+    {
+     "id": "Nvedr1AeQt8",
+     "title": "\"The Pitch\" | 2022 Toyota GR Supra Commercial | Toyota",
+     "views": 17111615,
+     "ch": "Toyota USA"
+    },
+    {
+     "id": "aF5RWZ_KEOc",
+     "title": "Supra DRAG RACE: 3.0 v 2.0 v Mk4!",
+     "views": 7267468,
+     "ch": "carwow"
+    },
+    {
+     "id": "4oC8cvUb0kI",
+     "title": "Here's Why the 2020 Toyota Supra Could Be Better",
+     "views": 6053594,
+     "ch": "Doug DeMuro"
+    }
+   ]
+  }
  },
- "scores": {}
+ "scores": {
+  "car-gr-supra": {
+   "years": {
+    "2020": {
+     "score": 55,
+     "weight": 31.0,
+     "videos": 61,
+     "named": 25,
+     "top": [
+      {
+       "id": "4oC8cvUb0kI",
+       "title": "Here's Why the 2020 Toyota Supra Could Be Better",
+       "views": 6053594
+      },
+      {
+       "id": "MckxlP60cnY",
+       "title": "2020 Supra B58 Engine Teardown - First Look - Better than the 2JZ?",
+       "views": 5694428
+      },
+      {
+       "id": "FblJGCdMlds",
+       "title": "Toyota Supra 2020 in-depth review - tested on road, sideways on track and over the 1/4 mile sprint!",
+       "views": 4552347
+      }
+     ]
+    },
+    "2021": {
+     "score": 59,
+     "weight": 30.0,
+     "videos": 60,
+     "named": 24,
+     "top": [
+      {
+       "id": "CuiujPC8cmo",
+       "title": "2021 Toyota Supra meets the BMW M2 CS: the Mk4's real successor | Jason Cammisa on the Icons Ep. 01",
+       "views": 4016248
+      },
+      {
+       "id": "HcvEVr5W1eE",
+       "title": "2021 Toyota Supra vs 1994 Toyota Supra // JDM Legends Face Off",
+       "views": 2323046
+      },
+      {
+       "id": "j3eRVbdKIB0",
+       "title": "Toyota GR Supra 2.0-litre review: better than the 3.0-litre?",
+       "views": 1442766
+      }
+     ]
+    },
+    "2022": {
+     "score": 58,
+     "weight": 13.0,
+     "videos": 43,
+     "named": 7,
+     "top": [
+      {
+       "id": "Nvedr1AeQt8",
+       "title": "\"The Pitch\" | 2022 Toyota GR Supra Commercial | Toyota",
+       "views": 17111615
+      },
+      {
+       "id": "j3eRVbdKIB0",
+       "title": "Toyota GR Supra 2.0-litre review: better than the 3.0-litre?",
+       "views": 1442766
+      },
+      {
+       "id": "jHWPnuzGorA",
+       "title": "2022 Toyota Supra 3.0 Premium - POV Review",
+       "views": 1179562
+      }
+     ]
+    },
+    "2023": {
+     "score": 62,
+     "weight": 27.0,
+     "videos": 57,
+     "named": 21,
+     "top": [
+      {
+       "id": "j3eRVbdKIB0",
+       "title": "Toyota GR Supra 2.0-litre review: better than the 3.0-litre?",
+       "views": 1442766
+      },
+      {
+       "id": "I3I-DUVfmJA",
+       "title": "The 2023 Toyota Supra *MANUAL* Is a Huge Upgrade",
+       "views": 1188977
+      },
+      {
+       "id": "zv7rHL2ICmQ",
+       "title": "2023 Toyota Supra Manual: Finally!",
+       "views": 1149807
+      }
+     ]
+    },
+    "2024": {
+     "score": 61,
+     "weight": 15.0,
+     "videos": 45,
+     "named": 9,
+     "top": [
+      {
+       "id": "j3eRVbdKIB0",
+       "title": "Toyota GR Supra 2.0-litre review: better than the 3.0-litre?",
+       "views": 1442766
+      },
+      {
+       "id": "wc_iYf3h5J0",
+       "title": "Toyota GR Supra vs Nissan Z | A Real JDM Battle",
+       "views": 908293
+      },
+      {
+       "id": "VEOaCv1VPCE",
+       "title": "GR Supra | The Last Drive | Toyota",
+       "views": 897621
+      }
+     ]
+    },
+    "2025": {
+     "score": 57,
+     "weight": 9.0,
+     "videos": 39,
+     "named": 3,
+     "top": [
+      {
+       "id": "j3eRVbdKIB0",
+       "title": "Toyota GR Supra 2.0-litre review: better than the 3.0-litre?",
+       "views": 1442766
+      },
+      {
+       "id": "wc_iYf3h5J0",
+       "title": "Toyota GR Supra vs Nissan Z | A Real JDM Battle",
+       "views": 908293
+      },
+      {
+       "id": "VEOaCv1VPCE",
+       "title": "GR Supra | The Last Drive | Toyota",
+       "views": 897621
+      }
+     ]
+    }
+   },
+   "videos": 125,
+   "pulled": 200
+  }
+ }
 }

@@ -156,7 +156,48 @@
   "2025": []
  },
  "yt": {
-  "car-amg-g63": null,
+  "car-amg-g63": {
+   "videos": 200,
+   "praise": [
+    [
+     "Looks",
+     28
+    ],
+    [
+     "Power and acceleration",
+     16
+    ],
+    [
+     "Handling and steering",
+     14
+    ],
+    [
+     "Interior and seats",
+     13
+    ]
+   ],
+   "trouble": [],
+   "top": [
+    {
+     "id": "DrUVMdkb4_k",
+     "title": "Mercedes G63 AMG 6x6 Review | Top Gear | Series 21",
+     "views": 36707478,
+     "ch": "Top Gear"
+    },
+    {
+     "id": "sAmz-Evlmxk",
+     "title": "2014 Mercedes-Benz G63 AMG 6X6 vs 2014 Mercedes-Benz G63 AMG! Head 2 Head Ep. 46",
+     "views": 5537922,
+     "ch": "MotorTrend Channel"
+    },
+    {
+     "id": "3NlaOS3Vxrg",
+     "title": "2013 Range Rover vs. 2013 Mercedes-Benz G63 AMG! - Head 2 Head Episode 32",
+     "views": 5385324,
+     "ch": "MotorTrend Channel"
+    }
+   ]
+  },
   "amg-m113k": null,
   "amg-m157": null,
   "amg-m177-m178": {
@@ -212,6 +253,536 @@
   }
  },
  "scores": {
+  "car-amg-g63": {
+   "years": {
+    "2003": {
+     "score": 44,
+     "weight": 4.4,
+     "videos": 26,
+     "named": 2,
+     "top": [
+      {
+       "id": "ZMVKkwgefVk",
+       "title": "Mercedes G55 AMG AFTER 17years \"BACK TO THE FACTORY CONDITION\"  Dry Ice Cleaning + Paint Correction",
+       "views": 2201794
+      },
+      {
+       "id": "me1Vi1aoDVM",
+       "title": "Everything That's Broken On The Cheapest Mercedes G55 AMG (CROOKED MOUNTED ENGINE???)",
+       "views": 989952
+      },
+      {
+       "id": "puqGP5O-v8U",
+       "title": "Was Buying the Cheapest Mercedes G55 AMG with 220,000 Miles a Mistake?",
+       "views": 790616
+      }
+     ]
+    },
+    "2004": {
+     "score": null,
+     "weight": 2.9,
+     "videos": 25,
+     "named": 1,
+     "top": [
+      {
+       "id": "ZMVKkwgefVk",
+       "title": "Mercedes G55 AMG AFTER 17years \"BACK TO THE FACTORY CONDITION\"  Dry Ice Cleaning + Paint Correction",
+       "views": 2201794
+      },
+      {
+       "id": "me1Vi1aoDVM",
+       "title": "Everything That's Broken On The Cheapest Mercedes G55 AMG (CROOKED MOUNTED ENGINE???)",
+       "views": 989952
+      },
+      {
+       "id": "puqGP5O-v8U",
+       "title": "Was Buying the Cheapest Mercedes G55 AMG with 220,000 Miles a Mistake?",
+       "views": 790616
+      }
+     ]
+    },
+    "2005": {
+     "score": 48,
+     "weight": 3.4,
+     "videos": 25,
+     "named": 1,
+     "top": [
+      {
+       "id": "ZMVKkwgefVk",
+       "title": "Mercedes G55 AMG AFTER 17years \"BACK TO THE FACTORY CONDITION\"  Dry Ice Cleaning + Paint Correction",
+       "views": 2201794
+      },
+      {
+       "id": "me1Vi1aoDVM",
+       "title": "Everything That's Broken On The Cheapest Mercedes G55 AMG (CROOKED MOUNTED ENGINE???)",
+       "views": 989952
+      },
+      {
+       "id": "puqGP5O-v8U",
+       "title": "Was Buying the Cheapest Mercedes G55 AMG with 220,000 Miles a Mistake?",
+       "views": 790616
+      }
+     ]
+    },
+    "2006": {
+     "score": null,
+     "weight": 2.4,
+     "videos": 24,
+     "named": 0,
+     "top": [
+      {
+       "id": "ZMVKkwgefVk",
+       "title": "Mercedes G55 AMG AFTER 17years \"BACK TO THE FACTORY CONDITION\"  Dry Ice Cleaning + Paint Correction",
+       "views": 2201794
+      },
+      {
+       "id": "me1Vi1aoDVM",
+       "title": "Everything That's Broken On The Cheapest Mercedes G55 AMG (CROOKED MOUNTED ENGINE???)",
+       "views": 989952
+      },
+      {
+       "id": "puqGP5O-v8U",
+       "title": "Was Buying the Cheapest Mercedes G55 AMG with 220,000 Miles a Mistake?",
+       "views": 790616
+      }
+     ]
+    },
+    "2007": {
+     "score": null,
+     "weight": 2.4,
+     "videos": 24,
+     "named": 0,
+     "top": [
+      {
+       "id": "ZMVKkwgefVk",
+       "title": "Mercedes G55 AMG AFTER 17years \"BACK TO THE FACTORY CONDITION\"  Dry Ice Cleaning + Paint Correction",
+       "views": 2201794
+      },
+      {
+       "id": "me1Vi1aoDVM",
+       "title": "Everything That's Broken On The Cheapest Mercedes G55 AMG (CROOKED MOUNTED ENGINE???)",
+       "views": 989952
+      },
+      {
+       "id": "puqGP5O-v8U",
+       "title": "Was Buying the Cheapest Mercedes G55 AMG with 220,000 Miles a Mistake?",
+       "views": 790616
+      }
+     ]
+    },
+    "2008": {
+     "score": null,
+     "weight": 2.4,
+     "videos": 24,
+     "named": 0,
+     "top": [
+      {
+       "id": "ZMVKkwgefVk",
+       "title": "Mercedes G55 AMG AFTER 17years \"BACK TO THE FACTORY CONDITION\"  Dry Ice Cleaning + Paint Correction",
+       "views": 2201794
+      },
+      {
+       "id": "me1Vi1aoDVM",
+       "title": "Everything That's Broken On The Cheapest Mercedes G55 AMG (CROOKED MOUNTED ENGINE???)",
+       "views": 989952
+      },
+      {
+       "id": "puqGP5O-v8U",
+       "title": "Was Buying the Cheapest Mercedes G55 AMG with 220,000 Miles a Mistake?",
+       "views": 790616
+      }
+     ]
+    },
+    "2009": {
+     "score": 48,
+     "weight": 3.4,
+     "videos": 25,
+     "named": 1,
+     "top": [
+      {
+       "id": "ZMVKkwgefVk",
+       "title": "Mercedes G55 AMG AFTER 17years \"BACK TO THE FACTORY CONDITION\"  Dry Ice Cleaning + Paint Correction",
+       "views": 2201794
+      },
+      {
+       "id": "me1Vi1aoDVM",
+       "title": "Everything That's Broken On The Cheapest Mercedes G55 AMG (CROOKED MOUNTED ENGINE???)",
+       "views": 989952
+      },
+      {
+       "id": "Zru8eyKkopg",
+       "title": "2009 Mercedes-Benz G55 AMG Kompressor - POV TEST DRIVE",
+       "views": 815352
+      }
+     ]
+    },
+    "2010": {
+     "score": null,
+     "weight": 2.4,
+     "videos": 24,
+     "named": 0,
+     "top": [
+      {
+       "id": "ZMVKkwgefVk",
+       "title": "Mercedes G55 AMG AFTER 17years \"BACK TO THE FACTORY CONDITION\"  Dry Ice Cleaning + Paint Correction",
+       "views": 2201794
+      },
+      {
+       "id": "me1Vi1aoDVM",
+       "title": "Everything That's Broken On The Cheapest Mercedes G55 AMG (CROOKED MOUNTED ENGINE???)",
+       "views": 989952
+      },
+      {
+       "id": "puqGP5O-v8U",
+       "title": "Was Buying the Cheapest Mercedes G55 AMG with 220,000 Miles a Mistake?",
+       "views": 790616
+      }
+     ]
+    },
+    "2011": {
+     "score": 47,
+     "weight": 6.4,
+     "videos": 28,
+     "named": 4,
+     "top": [
+      {
+       "id": "ZMVKkwgefVk",
+       "title": "Mercedes G55 AMG AFTER 17years \"BACK TO THE FACTORY CONDITION\"  Dry Ice Cleaning + Paint Correction",
+       "views": 2201794
+      },
+      {
+       "id": "FRXJGKzqvzY",
+       "title": "2011 Mercedes-Benz G55 AMG Start Up, Exhaust, and In Depth Tour",
+       "views": 1150387
+      },
+      {
+       "id": "me1Vi1aoDVM",
+       "title": "Everything That's Broken On The Cheapest Mercedes G55 AMG (CROOKED MOUNTED ENGINE???)",
+       "views": 989952
+      }
+     ]
+    },
+    "2012": {
+     "score": 55,
+     "weight": 3.4,
+     "videos": 25,
+     "named": 1,
+     "top": [
+      {
+       "id": "ZMVKkwgefVk",
+       "title": "Mercedes G55 AMG AFTER 17years \"BACK TO THE FACTORY CONDITION\"  Dry Ice Cleaning + Paint Correction",
+       "views": 2201794
+      },
+      {
+       "id": "me1Vi1aoDVM",
+       "title": "Everything That's Broken On The Cheapest Mercedes G55 AMG (CROOKED MOUNTED ENGINE???)",
+       "views": 989952
+      },
+      {
+       "id": "puqGP5O-v8U",
+       "title": "Was Buying the Cheapest Mercedes G55 AMG with 220,000 Miles a Mistake?",
+       "views": 790616
+      }
+     ]
+    },
+    "2013": {
+     "score": 48,
+     "weight": 3.2,
+     "videos": 5,
+     "named": 3,
+     "top": [
+      {
+       "id": "3NlaOS3Vxrg",
+       "title": "2013 Range Rover vs. 2013 Mercedes-Benz G63 AMG! - Head 2 Head Episode 32",
+       "views": 5385324
+      },
+      {
+       "id": "QGN3A64-nks",
+       "title": "New G63 v Old G63: OFF-ROAD RACE!",
+       "views": 1295879
+      },
+      {
+       "id": "RdMlO2X4i2Y",
+       "title": "2013 Mercedes-Benz G63 AMG | Short Cuts | Autoblog",
+       "views": 234107
+      }
+     ]
+    },
+    "2014": {
+     "score": null,
+     "weight": 2.2,
+     "videos": 4,
+     "named": 2,
+     "top": [
+      {
+       "id": "sAmz-Evlmxk",
+       "title": "2014 Mercedes-Benz G63 AMG 6X6 vs 2014 Mercedes-Benz G63 AMG! Head 2 Head Ep. 46",
+       "views": 5537922
+      },
+      {
+       "id": "ueX2PESJfy0",
+       "title": "2014 Mercedes-Benz G63 AMG Start Up, Exhaust, and In Depth Review",
+       "views": 2927776
+      },
+      {
+       "id": "QGN3A64-nks",
+       "title": "New G63 v Old G63: OFF-ROAD RACE!",
+       "views": 1295879
+      }
+     ]
+    },
+    "2015": {
+     "score": null,
+     "weight": 2.2,
+     "videos": 4,
+     "named": 2,
+     "top": [
+      {
+       "id": "QGN3A64-nks",
+       "title": "New G63 v Old G63: OFF-ROAD RACE!",
+       "views": 1295879
+      },
+      {
+       "id": "Zn-cOPozXco",
+       "title": "DOUBLE SERVICE! Problems with My New G63 4x4 Squared...",
+       "views": 154928
+      },
+      {
+       "id": "dOSKGXFat-I",
+       "title": "2015 Mercedes-Benz G550 - Why You Don't Need the G63 AMG (POV Binaural Audio)",
+       "views": 135437
+      }
+     ]
+    },
+    "2016": {
+     "score": null,
+     "weight": 1.7,
+     "videos": 4,
+     "named": 2,
+     "top": [
+      {
+       "id": "QGN3A64-nks",
+       "title": "New G63 v Old G63: OFF-ROAD RACE!",
+       "views": 1295879
+      },
+      {
+       "id": "uuUUhB4hRZU",
+       "title": "NEW 2020 Mercedes AMG G63 vs. OLD 2016 G63 AMG | Worth the Upgrade?",
+       "views": 193375
+      },
+      {
+       "id": "Zn-cOPozXco",
+       "title": "DOUBLE SERVICE! Problems with My New G63 4x4 Squared...",
+       "views": 154928
+      }
+     ]
+    },
+    "2017": {
+     "score": 62,
+     "weight": 5.2,
+     "videos": 7,
+     "named": 5,
+     "top": [
+      {
+       "id": "rABm9V10_vs",
+       "title": "Why It Sucks Driving The '17 Mercedes G63 AMG",
+       "views": 1860151
+      },
+      {
+       "id": "QGN3A64-nks",
+       "title": "New G63 v Old G63: OFF-ROAD RACE!",
+       "views": 1295879
+      },
+      {
+       "id": "gH7iV5BK_6Q",
+       "title": "2017 Mercedes Benz G Class: G63 AMG Full Review /Exhaust /Start Up /Short Drive",
+       "views": 993084
+      }
+     ]
+    },
+    "2018": {
+     "score": null,
+     "weight": 0.2,
+     "videos": 2,
+     "named": 0,
+     "top": [
+      {
+       "id": "QGN3A64-nks",
+       "title": "New G63 v Old G63: OFF-ROAD RACE!",
+       "views": 1295879
+      },
+      {
+       "id": "Zn-cOPozXco",
+       "title": "DOUBLE SERVICE! Problems with My New G63 4x4 Squared...",
+       "views": 154928
+      }
+     ]
+    },
+    "2019": {
+     "score": 59,
+     "weight": 11.7,
+     "videos": 14,
+     "named": 12,
+     "top": [
+      {
+       "id": "WXLpBl-d14k",
+       "title": "Mercedes-AMG G63 SUV 2019 in-depth review - see why it's worth £150,000!",
+       "views": 5005140
+      },
+      {
+       "id": "o57hD1aJVMQ",
+       "title": "2019 Mercedes-AMG G63 - DRIVE & SOUND!",
+       "views": 1623629
+      },
+      {
+       "id": "QGN3A64-nks",
+       "title": "New G63 v Old G63: OFF-ROAD RACE!",
+       "views": 1295879
+      }
+     ]
+    },
+    "2020": {
+     "score": 66,
+     "weight": 7.7,
+     "videos": 10,
+     "named": 8,
+     "top": [
+      {
+       "id": "bkGMkhJ_BwY",
+       "title": "2020 Mercedes-AMG G63 vs The Cheapest AMG G-Class You Can Buy",
+       "views": 4452320
+      },
+      {
+       "id": "QGN3A64-nks",
+       "title": "New G63 v Old G63: OFF-ROAD RACE!",
+       "views": 1295879
+      },
+      {
+       "id": "zxNAxVn-RLI",
+       "title": "2020 MERCEDES G63 AMG NEW G Class V8 FULL In-Depth Review BRUTAL Sound Exhaust Interior Infotainment",
+       "views": 730704
+      }
+     ]
+    },
+    "2021": {
+     "score": 56,
+     "weight": 6.7,
+     "videos": 9,
+     "named": 7,
+     "top": [
+      {
+       "id": "QGN3A64-nks",
+       "title": "New G63 v Old G63: OFF-ROAD RACE!",
+       "views": 1295879
+      },
+      {
+       "id": "NEDjA496QMg",
+       "title": "The 577-HP 2021 Mercedes-AMG G63 is So Gratuitous and So Wonderful (In-Depth Review)",
+       "views": 327720
+      },
+      {
+       "id": "Zn-cOPozXco",
+       "title": "DOUBLE SERVICE! Problems with My New G63 4x4 Squared...",
+       "views": 154928
+      }
+     ]
+    },
+    "2022": {
+     "score": 67,
+     "weight": 6.2,
+     "videos": 8,
+     "named": 6,
+     "top": [
+      {
+       "id": "ofEUnPIZ_I0",
+       "title": "2022 Mercedes G WAGON G63 NIGHT | G Class AMG Price Drive Review Interior",
+       "views": 1383884
+      },
+      {
+       "id": "QGN3A64-nks",
+       "title": "New G63 v Old G63: OFF-ROAD RACE!",
+       "views": 1295879
+      },
+      {
+       "id": "RJdo7xpFN1Y",
+       "title": "The 2022 Mercedes-AMG G63 is a 577-HP Intimidation Tactic (POV Drive Review)",
+       "views": 669802
+      }
+     ]
+    },
+    "2023": {
+     "score": 65,
+     "weight": 7.2,
+     "videos": 9,
+     "named": 7,
+     "top": [
+      {
+       "id": "QGN3A64-nks",
+       "title": "New G63 v Old G63: OFF-ROAD RACE!",
+       "views": 1295879
+      },
+      {
+       "id": "s7bj32vhKWw",
+       "title": "The 2023 Mercedes-AMG G63 4x4 Squared Is a $350,000 Luxury Monster Truck",
+       "views": 1103714
+      },
+      {
+       "id": "V_h85FjZpUY",
+       "title": "2023 Lamborghini Urus Performante vs Mercedes-AMG G63 4x4 Squared // $350,000 Boss Battle",
+       "views": 1051276
+      }
+     ]
+    },
+    "2024": {
+     "score": 64,
+     "weight": 8.7,
+     "videos": 12,
+     "named": 10,
+     "top": [
+      {
+       "id": "QGN3A64-nks",
+       "title": "New G63 v Old G63: OFF-ROAD RACE!",
+       "views": 1295879
+      },
+      {
+       "id": "hTGzPVqcrTY",
+       "title": "I Bought My Dream Car At 21 (2024 G63)",
+       "views": 1089949
+      },
+      {
+       "id": "P1_IzqUMvUk",
+       "title": "2025 vs 2024 Mercedes G63 AMG",
+       "views": 419702
+      }
+     ]
+    },
+    "2025": {
+     "score": 63,
+     "weight": 29.2,
+     "videos": 32,
+     "named": 30,
+     "top": [
+      {
+       "id": "l0DCpUC1cV8",
+       "title": "2025 Mercedes-AMG G 63 - Sound, Interior and Exterior",
+       "views": 2040748
+      },
+      {
+       "id": "QGN3A64-nks",
+       "title": "New G63 v Old G63: OFF-ROAD RACE!",
+       "views": 1295879
+      },
+      {
+       "id": "0P17KHQk4sM",
+       "title": "NEW 2025 Mercedes G63 AMG FACELIFT POV Drive! +V8 SOUND! Interior Exterior Review 4K",
+       "views": 1200580
+      }
+     ]
+    }
+   },
+   "videos": 125,
+   "pulled": 200
+  },
   "amg-m177-m178": {
    "years": {
     "2016": {

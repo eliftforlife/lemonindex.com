@@ -167,7 +167,48 @@
   "2025": []
  },
  "yt": {
-  "car-bmw-m4": null,
+  "car-bmw-m4": {
+   "videos": 200,
+   "praise": [
+    [
+     "Looks",
+     26
+    ],
+    [
+     "Handling and steering",
+     18
+    ],
+    [
+     "Everyday comfort",
+     16
+    ],
+    [
+     "Power and acceleration",
+     15
+    ]
+   ],
+   "trouble": [],
+   "top": [
+    {
+     "id": "AFtUpMTs4vI",
+     "title": "BMW M4 - \"Ultimate Racetrack\"",
+     "views": 9757080,
+     "ch": "BMW Canada"
+    },
+    {
+     "id": "IIDu0S_StpM",
+     "title": "Buying a BMW G82 M4 and Modifying it immediately",
+     "views": 6892163,
+     "ch": "throtl"
+    },
+    {
+     "id": "Qw-RBUvEcao",
+     "title": "2023 BMW M4 Competition M Performance - Wild Coupe!",
+     "views": 5588581,
+     "ch": "RoCars"
+    }
+   ]
+  },
   "bmw-s55": {
    "videos": 200,
    "praise": [
@@ -276,6 +317,265 @@
   }
  },
  "scores": {
+  "car-bmw-m4": {
+   "years": {
+    "2015": {
+     "score": 59,
+     "weight": 6.8,
+     "videos": 21,
+     "named": 4,
+     "top": [
+      {
+       "id": "X9AmD8-JR4U",
+       "title": "You Drive A Straight Piped BMW M4 F82 To LA’s BIGGEST BMW CAR MEET [LOUD EXHAUST POV]",
+       "views": 3763289
+      },
+      {
+       "id": "-rhX3lGFvQM",
+       "title": "Restoring a 100,000 km BMW M4 F82 ZCP | Complete Maintenance & Overhaul Guide",
+       "views": 1382413
+      },
+      {
+       "id": "rg_zGzy1B5w",
+       "title": "Review: 2015 BMW M4 (DCT Automatic)",
+       "views": 1289111
+      }
+     ]
+    },
+    "2016": {
+     "score": 50,
+     "weight": 3.8,
+     "videos": 18,
+     "named": 1,
+     "top": [
+      {
+       "id": "X9AmD8-JR4U",
+       "title": "You Drive A Straight Piped BMW M4 F82 To LA’s BIGGEST BMW CAR MEET [LOUD EXHAUST POV]",
+       "views": 3763289
+      },
+      {
+       "id": "-rhX3lGFvQM",
+       "title": "Restoring a 100,000 km BMW M4 F82 ZCP | Complete Maintenance & Overhaul Guide",
+       "views": 1382413
+      },
+      {
+       "id": "JAzWTqPP_sg",
+       "title": "Watch this before buying a used BMW M3 or M4 (F80, F82, F83 - what to look for)",
+       "views": 833191
+      }
+     ]
+    },
+    "2017": {
+     "score": 60,
+     "weight": 5.8,
+     "videos": 20,
+     "named": 3,
+     "top": [
+      {
+       "id": "X9AmD8-JR4U",
+       "title": "You Drive A Straight Piped BMW M4 F82 To LA’s BIGGEST BMW CAR MEET [LOUD EXHAUST POV]",
+       "views": 3763289
+      },
+      {
+       "id": "-rhX3lGFvQM",
+       "title": "Restoring a 100,000 km BMW M4 F82 ZCP | Complete Maintenance & Overhaul Guide",
+       "views": 1382413
+      },
+      {
+       "id": "JAzWTqPP_sg",
+       "title": "Watch this before buying a used BMW M3 or M4 (F80, F82, F83 - what to look for)",
+       "views": 833191
+      }
+     ]
+    },
+    "2018": {
+     "score": 45,
+     "weight": 7.8,
+     "videos": 22,
+     "named": 5,
+     "top": [
+      {
+       "id": "X9AmD8-JR4U",
+       "title": "You Drive A Straight Piped BMW M4 F82 To LA’s BIGGEST BMW CAR MEET [LOUD EXHAUST POV]",
+       "views": 3763289
+      },
+      {
+       "id": "-rhX3lGFvQM",
+       "title": "Restoring a 100,000 km BMW M4 F82 ZCP | Complete Maintenance & Overhaul Guide",
+       "views": 1382413
+      },
+      {
+       "id": "JAzWTqPP_sg",
+       "title": "Watch this before buying a used BMW M3 or M4 (F80, F82, F83 - what to look for)",
+       "views": 833191
+      }
+     ]
+    },
+    "2019": {
+     "score": null,
+     "weight": 2.8,
+     "videos": 17,
+     "named": 0,
+     "top": [
+      {
+       "id": "X9AmD8-JR4U",
+       "title": "You Drive A Straight Piped BMW M4 F82 To LA’s BIGGEST BMW CAR MEET [LOUD EXHAUST POV]",
+       "views": 3763289
+      },
+      {
+       "id": "-rhX3lGFvQM",
+       "title": "Restoring a 100,000 km BMW M4 F82 ZCP | Complete Maintenance & Overhaul Guide",
+       "views": 1382413
+      },
+      {
+       "id": "JAzWTqPP_sg",
+       "title": "Watch this before buying a used BMW M3 or M4 (F80, F82, F83 - what to look for)",
+       "views": 833191
+      }
+     ]
+    },
+    "2020": {
+     "score": 62,
+     "weight": 6.3,
+     "videos": 21,
+     "named": 4,
+     "top": [
+      {
+       "id": "X9AmD8-JR4U",
+       "title": "You Drive A Straight Piped BMW M4 F82 To LA’s BIGGEST BMW CAR MEET [LOUD EXHAUST POV]",
+       "views": 3763289
+      },
+      {
+       "id": "0ZgXj-OiT0s",
+       "title": "2020 BMW M4 vs Mercedes-AMG C63 S // Battle Of Brutes",
+       "views": 3183618
+      },
+      {
+       "id": "-rhX3lGFvQM",
+       "title": "Restoring a 100,000 km BMW M4 F82 ZCP | Complete Maintenance & Overhaul Guide",
+       "views": 1382413
+      }
+     ]
+    },
+    "2021": {
+     "score": 56,
+     "weight": 14.7,
+     "videos": 28,
+     "named": 12,
+     "top": [
+      {
+       "id": "IIDu0S_StpM",
+       "title": "Buying a BMW G82 M4 and Modifying it immediately",
+       "views": 6892163
+      },
+      {
+       "id": "u3EiY7sQWr4",
+       "title": "The Definitive Review: M3 Competition feat G82 M4 and E30 M3 — Jason Cammisa on the Icons — Ep. 03",
+       "views": 3021441
+      },
+      {
+       "id": "DRNXWMcgVbs",
+       "title": "830HP BMW M4 G82 *BIG TURBOS* // REVIEW on AUTOBAHN",
+       "views": 1804251
+      }
+     ]
+    },
+    "2022": {
+     "score": 65,
+     "weight": 7.2,
+     "videos": 20,
+     "named": 4,
+     "top": [
+      {
+       "id": "IIDu0S_StpM",
+       "title": "Buying a BMW G82 M4 and Modifying it immediately",
+       "views": 6892163
+      },
+      {
+       "id": "u3EiY7sQWr4",
+       "title": "The Definitive Review: M3 Competition feat G82 M4 and E30 M3 — Jason Cammisa on the Icons — Ep. 03",
+       "views": 3021441
+      },
+      {
+       "id": "DRNXWMcgVbs",
+       "title": "830HP BMW M4 G82 *BIG TURBOS* // REVIEW on AUTOBAHN",
+       "views": 1804251
+      }
+     ]
+    },
+    "2023": {
+     "score": 61,
+     "weight": 8.2,
+     "videos": 21,
+     "named": 5,
+     "top": [
+      {
+       "id": "IIDu0S_StpM",
+       "title": "Buying a BMW G82 M4 and Modifying it immediately",
+       "views": 6892163
+      },
+      {
+       "id": "Qw-RBUvEcao",
+       "title": "2023 BMW M4 Competition M Performance - Wild Coupe!",
+       "views": 5588581
+      },
+      {
+       "id": "u3EiY7sQWr4",
+       "title": "The Definitive Review: M3 Competition feat G82 M4 and E30 M3 — Jason Cammisa on the Icons — Ep. 03",
+       "views": 3021441
+      }
+     ]
+    },
+    "2024": {
+     "score": 59,
+     "weight": 8.2,
+     "videos": 21,
+     "named": 5,
+     "top": [
+      {
+       "id": "IIDu0S_StpM",
+       "title": "Buying a BMW G82 M4 and Modifying it immediately",
+       "views": 6892163
+      },
+      {
+       "id": "u3EiY7sQWr4",
+       "title": "The Definitive Review: M3 Competition feat G82 M4 and E30 M3 — Jason Cammisa on the Icons — Ep. 03",
+       "views": 3021441
+      },
+      {
+       "id": "DRNXWMcgVbs",
+       "title": "830HP BMW M4 G82 *BIG TURBOS* // REVIEW on AUTOBAHN",
+       "views": 1804251
+      }
+     ]
+    },
+    "2025": {
+     "score": 57,
+     "weight": 29.2,
+     "videos": 42,
+     "named": 26,
+     "top": [
+      {
+       "id": "IIDu0S_StpM",
+       "title": "Buying a BMW G82 M4 and Modifying it immediately",
+       "views": 6892163
+      },
+      {
+       "id": "u3EiY7sQWr4",
+       "title": "The Definitive Review: M3 Competition feat G82 M4 and E30 M3 — Jason Cammisa on the Icons — Ep. 03",
+       "views": 3021441
+      },
+      {
+       "id": "E7OLBAfSLp0",
+       "title": "POV SLIDING A 900HP 2025 BMW M4 COMPETITION XDRIVE‼️",
+       "views": 2829958
+      }
+     ]
+    }
+   },
+   "videos": 101,
+   "pulled": 200
+  },
   "bmw-s55": {
    "years": {
     "2015": {

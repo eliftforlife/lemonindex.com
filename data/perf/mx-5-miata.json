@@ -1,0 +1,896 @@
+{
+ "slug": "mx-5-miata",
+ "name": "Mazda MX-5 Miata",
+ "short": "Miata",
+ "make": "Mazda",
+ "page": "/cars/mx-5-miata/",
+ "focus": "nd",
+ "star": "nd2-club",
+ "h1": "Mazda MX-5 Miata: performance, engines and what owners say",
+ "nhtsa": {
+  "make": "MAZDA",
+  "models": [
+   "MX-5 MIATA",
+   "MX-5",
+   "MIATA"
+  ],
+  "note": "NHTSA files the car as MX-5 Miata through 2005 and MX-5 after; the counts combine both and include the RF and the Mazdaspeed."
+ },
+ "topics_extra": {
+  "Manual gearbox / third gear": "(3rd|third) gear|synchros?\\b|grind(s|ing)? (into|in)|transmission (fail|went|grind)",
+  "Coolant tank / radiator": "expansion tank|coolant (tank|reservoir)|radiator (crack|leak|tank)|cracked radiator",
+  "Soft top drains / leaks": "top drains?|drain (tube|hole)s?|water (in|on) the floor|soft ?top leak",
+  "Rust": "\\brust(ed|ing|y)?\\b|frame rails?|rocker",
+  "Fuel pump": "fuel pump",
+  "Clutch": "\\bclutch\\b"
+ },
+ "gens": [
+  {
+   "id": "nb",
+   "code": "NB",
+   "years": "2000–2005",
+   "y0": 2000,
+   "y1": 2005,
+   "engine": "BP",
+   "body": "Roadster",
+   "tag": "1.8 four, variable valve timing from 2001. Turbo Mazdaspeed 2004–05.",
+   "variants": [
+    {
+     "id": "nb",
+     "name": "MX-5 Miata",
+     "years": "2001–2005",
+     "hp": {
+      "v": 142,
+      "src": [
+       "m05d",
+       "m05r2"
+      ],
+      "note": "at 7,000 rpm"
+     },
+     "tq": {
+      "v": 125,
+      "src": [
+       "m05d"
+      ],
+      "note": "lb-ft at 5,000 rpm"
+     },
+     "z60": {
+      "v": 8.1,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "5-speed manual, rear-drive",
+      "src": [
+       "m05d",
+       "m05r2"
+      ],
+      "note": "6-speed manual (LS) and 4-speed automatic optional"
+     },
+     "weight": {
+      "v": "2,447 lb",
+      "src": [
+       "m05d"
+      ],
+      "note": "2005, 5-speed manual"
+     },
+     "price": {
+      "v": "$22,098",
+      "src": [
+       "m05p"
+      ],
+      "note": "2005 cloth model, plus $560 destination; 2001 launch price not found in a Mazda source"
+     },
+     "what": "2001 facelift added variable intake valve timing to the 1.8.",
+     "what_src": [
+      "wnb",
+      "m05r2"
+     ]
+    },
+    {
+     "id": "nb-ms",
+     "name": "Mazdaspeed MX-5 Miata",
+     "years": "2004–2005",
+     "hp": {
+      "v": 178,
+      "src": [
+       "m05r",
+       "m05ms"
+      ],
+      "note": "at 6,000 rpm"
+     },
+     "tq": {
+      "v": 166,
+      "src": [
+       "m05r",
+       "m05ms"
+      ],
+      "note": "lb-ft at 4,500 rpm"
+     },
+     "z60": {
+      "v": 6.7,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual, rear-drive",
+      "src": [
+       "m05ms"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "2,529 lb",
+      "src": [
+       "m05ms",
+       "m05d"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$25,780",
+      "src": [
+       "m05r",
+       "m05pms"
+      ],
+      "note": "2005 cloth model, plus $560 destination; $26,580 with leather"
+     },
+     "what": "IHI turbo at 8.5 psi with intercooler, 9.5:1 pistons, fixed cam timing, Bilstein dampers, 17-inch wheels.",
+     "what_src": [
+      "m05r",
+      "m05ms",
+      "m05d"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nc",
+   "code": "NC",
+   "years": "2006–2015",
+   "y0": 2006,
+   "y1": 2015,
+   "engine": "MZR",
+   "body": "Roadster; power hardtop from 2007",
+   "tag": "2.0 four. 7,200 rpm redline and forged internals from 2009.",
+   "variants": [
+    {
+     "id": "nc1",
+     "name": "MX-5 Miata",
+     "years": "2006–2008",
+     "hp": {
+      "v": 170,
+      "src": [
+       "m06s",
+       "m06r"
+      ],
+      "note": "at 6,700 rpm; 166 hp with the automatic"
+     },
+     "tq": {
+      "v": 140,
+      "src": [
+       "m06s"
+      ],
+      "note": "lb-ft at 5,000 rpm"
+     },
+     "z60": {
+      "v": 6.5,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "5- or 6-speed manual, rear-drive",
+      "src": [
+       "m06s",
+       "m06r"
+      ],
+      "note": "6-speed automatic with paddles optional"
+     },
+     "weight": {
+      "v": "2,441 lb",
+      "src": [
+       "m06s"
+      ],
+      "note": "Club Spec, 5-speed manual"
+     },
+     "price": {
+      "v": "$20,435",
+      "src": [
+       "m06p"
+      ],
+      "note": "2006 Club Spec, plus $560 destination"
+     }
+    },
+    {
+     "id": "nc2",
+     "name": "MX-5 Miata",
+     "years": "2009–2015",
+     "hp": {
+      "v": 167,
+      "src": [
+       "m10",
+       "m13",
+       "m15"
+      ],
+      "note": "at 7,000 rpm; 158 hp with the automatic"
+     },
+     "tq": {
+      "v": 140,
+      "src": [
+       "m10",
+       "m15"
+      ],
+      "note": "lb-ft at 5,000 rpm"
+     },
+     "z60": {
+      "v": 6.9,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "5- or 6-speed manual, rear-drive",
+      "src": [
+       "m13",
+       "m15"
+      ],
+      "note": "6-speed automatic optional"
+     },
+     "weight": {
+      "v": "2,447 lb",
+      "src": [
+       "m13",
+       "m15"
+      ],
+      "note": "Sport, 5-speed manual"
+     },
+     "price": {
+      "v": "$23,970",
+      "src": [
+       "m15p"
+      ],
+      "note": "2015 Sport, plus $795 destination; 2009 launch price not found in a Mazda source"
+     },
+     "what": "Refresh raised the redline to 7,200 rpm and added a forged crank and rods.",
+     "what_src": [
+      "m10"
+     ]
+    },
+    {
+     "id": "nc-club",
+     "name": "MX-5 Club",
+     "years": "2013–2015",
+     "pkg": "nc2",
+     "hp": {
+      "v": 167,
+      "src": [
+       "m13",
+       "m15"
+      ],
+      "note": "at 7,000 rpm"
+     },
+     "tq": {
+      "v": 140,
+      "src": [
+       "m13",
+       "m15"
+      ],
+      "note": "lb-ft at 5,000 rpm"
+     },
+     "z60": {
+      "v": 6.1,
+      "who": "MotorTrend",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual, rear-drive",
+      "src": [
+       "m15",
+       "m15p"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$26,905",
+      "src": [
+       "m15p"
+      ],
+      "note": "2015, plus $795 destination"
+     },
+     "what": "Manual Clubs get Bilstein shocks, a limited-slip differential and a shock tower brace.",
+     "what_src": [
+      "m13",
+      "m15"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nd",
+   "code": "ND",
+   "years": "2016–2025",
+   "y0": 2016,
+   "y1": 2025,
+   "engine": "SKYG",
+   "body": "Roadster; RF power hardtop also sold",
+   "tag": "About 150 lb lighter than the NC. 181 hp and 7,500 rpm from 2019.",
+   "variants": [
+    {
+     "id": "nd1",
+     "name": "MX-5 Miata",
+     "years": "2016–2018",
+     "hp": {
+      "v": 155,
+      "src": [
+       "m16f",
+       "m16k"
+      ],
+      "note": "at 6,000 rpm"
+     },
+     "tq": {
+      "v": 148,
+      "src": [
+       "m16f",
+       "m16k"
+      ],
+      "note": "lb-ft at 4,600 rpm"
+     },
+     "z60": {
+      "v": 5.8,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual, rear-drive",
+      "src": [
+       "m16f"
+      ],
+      "note": "6-speed automatic optional"
+     },
+     "weight": {
+      "v": "2,332 lb",
+      "src": [
+       "m16f",
+       "m16k"
+      ],
+      "note": "manual; 2,381 lb automatic"
+     },
+     "price": {
+      "v": "$24,915",
+      "src": [
+       "m16p",
+       "m16f"
+      ],
+      "note": "2016 Sport, plus $820 destination"
+     }
+    },
+    {
+     "id": "nd2",
+     "name": "MX-5 Miata",
+     "years": "2019–2025",
+     "hp": {
+      "v": 181,
+      "src": [
+       "m19a",
+       "m19f"
+      ],
+      "note": "at 7,000 rpm"
+     },
+     "tq": {
+      "v": 151,
+      "src": [
+       "m19a",
+       "m19f"
+      ],
+      "note": "lb-ft at 4,000 rpm"
+     },
+     "z60": {
+      "v": 5.7,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual, rear-drive",
+      "src": [
+       "m19f"
+      ],
+      "note": "6-speed automatic optional"
+     },
+     "weight": {
+      "v": "2,339 lb",
+      "src": [
+       "m19f"
+      ],
+      "note": "manual; 2,381 lb automatic"
+     },
+     "price": {
+      "v": "$25,730",
+      "src": [
+       "m19p",
+       "m19f"
+      ],
+      "note": "2019 Sport, plus $895 destination; 2025: $29,530, destination not included"
+     },
+     "what": "Lighter pistons and rods, bigger throttle and exhaust add 26 hp; redline up from 6,800 to 7,500 rpm.",
+     "what_src": [
+      "m19a",
+      "m19p"
+     ]
+    },
+    {
+     "id": "nd2-club",
+     "name": "MX-5 Club",
+     "years": "2019–2025",
+     "pkg": "nd2",
+     "star": true,
+     "hp": {
+      "v": 181,
+      "src": [
+       "m19p",
+       "m25p"
+      ],
+      "note": "at 7,000 rpm"
+     },
+     "tq": {
+      "v": 151,
+      "src": [
+       "m19p",
+       "m25p"
+      ],
+      "note": "lb-ft at 4,000 rpm"
+     },
+     "z60": {
+      "v": 5.4,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual, rear-drive",
+      "src": [
+       "m19p",
+       "m25p"
+      ],
+      "note": "automatic Club also sold, without the LSD and Bilstein dampers"
+     },
+     "price": {
+      "v": "$29,590",
+      "src": [
+       "m19p"
+      ],
+      "note": "2019, plus $895 destination; 2025: $33,030"
+     },
+     "what": "Bilstein dampers, limited-slip differential and strut brace; 2024 added an asymmetric LSD and DSC-Track.",
+     "what_src": [
+      "m19f",
+      "m24p",
+      "m25p"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "BP": {
+   "name": "Mazda BP 1.8",
+   "what": "1.8-liter inline-4 (turbo in the Mazdaspeed)",
+   "study": "",
+   "page": "",
+   "yt": [
+    "scy",
+    ""
+   ],
+   "facts": [
+    [
+     "Redline",
+     "7,000 rpm (6,500 Mazdaspeed)",
+     [
+      "m05d"
+     ]
+    ],
+    [
+     "Output",
+     "142–178 hp, 125–166 lb-ft",
+     [
+      "m05d"
+     ]
+    ],
+    [
+     "Cam timing",
+     "Variable intake timing; Mazdaspeed uses a fixed-timing head",
+     [
+      "m05r2",
+      "m05r"
+     ]
+    ],
+    [
+     "Compression",
+     "10.0:1 (9.5:1 Mazdaspeed)",
+     [
+      "m05d"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Radiator plastic tanks crack",
+     "kind": "Parts seller",
+     "rx": "radiator (crack|leak|tank)|cracked radiator|coolant leak",
+     "x": "The stock radiator has plastic end tanks. Flyin' Miata says they last about a decade and should be replaced once they discolor.",
+     "fix": "Replace the radiator before the tanks crack.",
+     "src": [
+      "fm_nb"
+     ]
+    },
+    {
+     "t": "Ignition coil faults (2000)",
+     "kind": "Owner-reported",
+     "rx": "coil packs?|ignition coils?",
+     "x": "Several 1999–2000 owners told NHTSA of failing ignition coils that set the check-engine light or caused rough running.",
+     "fix": "",
+     "src": [
+      "nhtsa"
+     ]
+    },
+    {
+     "t": "Mazdaspeed fuel pump failures",
+     "kind": "Owner-reported",
+     "rx": "fuel pump",
+     "x": "Two 2004 Mazdaspeed owners told NHTSA of repeat fuel pump failures causing stalls and no-starts. Too few reports to call a pattern.",
+     "fix": "",
+     "src": [
+      "nhtsa"
+     ]
+    }
+   ]
+  },
+  "MZR": {
+   "name": "Mazda MZR 2.0",
+   "what": "2.0-liter inline-4",
+   "study": "",
+   "page": "",
+   "yt": [
+    "scy",
+    ""
+   ],
+   "facts": [
+    [
+     "Redline",
+     "6,700 rpm (2006–08); 7,200 rpm manual from 2009",
+     [
+      "m06s",
+      "m10"
+     ]
+    ],
+    [
+     "Output",
+     "158–170 hp, 140 lb-ft",
+     [
+      "m06s",
+      "m10"
+     ]
+    ],
+    [
+     "Build",
+     "Aluminum block and head, chain-driven cams",
+     [
+      "m06r",
+      "m10"
+     ]
+    ],
+    [
+     "Crank and rods",
+     "Forged steel from the 2009 refresh",
+     [
+      "m10",
+      "m15"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Coolant expansion tank cracks",
+     "kind": "Parts seller",
+     "rx": "expansion tank|coolant (tank|reservoir)|overheat",
+     "x": "Flyin' Miata says it has seen engines damaged when the stock plastic expansion tank cracked, lost pressure and overheated.",
+     "fix": "Replace an aging tank, or fit an aluminum one.",
+     "src": [
+      "fm_nc"
+     ]
+    },
+    {
+     "t": "No widespread engine failure pattern",
+     "kind": "Owner-reported",
+     "rx": "",
+     "x": "NHTSA complaints for 2006–2015 cars rarely mention the engine; most cover roof drains, the fuel filler and shifting.",
+     "fix": "",
+     "src": [
+      "nhtsa"
+     ]
+    }
+   ]
+  },
+  "SKYG": {
+   "name": "Mazda Skyactiv-G 2.0",
+   "what": "2.0-liter inline-4, direct injection",
+   "study": "mazda-skyactiv-g20",
+   "page": "/engines/mazda-skyactiv-g20/",
+   "yt": [
+    "scy",
+    "mazda-skyactiv-g20"
+   ],
+   "facts": [
+    [
+     "Redline",
+     "6,800 rpm; 7,500 rpm from 2019",
+     [
+      "m16k",
+      "m19a"
+     ]
+    ],
+    [
+     "Output",
+     "155–181 hp, 148–151 lb-ft",
+     [
+      "m16f",
+      "m19a"
+     ]
+    ],
+    [
+     "Compression",
+     "13.0:1, direct injection",
+     [
+      "m16k"
+     ]
+    ],
+    [
+     "2019 update",
+     "Pistons 27 g and rods 41 g lighter",
+     [
+      "m19a"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "No known engine pattern",
+     "kind": "Owner-reported",
+     "rx": "",
+     "x": "Few NHTSA complaints for 2016–2025 MX-5s involve the engine; most are about the manual gearbox and an air bag recall.",
+     "fix": "",
+     "src": [
+      "nhtsa"
+     ]
+    },
+    {
+     "t": "Fuel pump recall",
+     "kind": "Recall",
+     "rx": "fuel pump|stall",
+     "x": "On some 2018–2019 MX-5s, the low-pressure fuel pump impeller can crack and deform, so the pump can fail and the engine stall.",
+     "fix": "Dealer replaces the fuel pump for free (NHTSA 21V-875).",
+     "src": [
+      "r21875"
+     ]
+    },
+    {
+     "t": "Manual gearbox failures (transmission)",
+     "kind": "Owner-reported",
+     "rx": "(3rd|third) gear|synchros?\\b|grind(s|ing)? (into|in)",
+     "x": "Owners report third gear that grinds or won't engage, and some outright failures, mostly 2016 and 2022–2024 cars. No recall; rates unverified.",
+     "fix": "",
+     "src": [
+      "nhtsa",
+      "tn"
+     ]
+    },
+    {
+     "t": "Automatic downshift recall (transmission)",
+     "kind": "Recall",
+     "rx": "downshift|decelerat",
+     "x": "On some 2016–2019 automatics, transmission software could cause an unexpected downshift and sudden slowing.",
+     "fix": "Dealer reprograms the transmission computer for free (NHTSA 19V-072).",
+     "src": [
+      "r19072"
+     ]
+    }
+   ]
+  }
+ },
+ "compare": [
+  {
+   "slug": "gr86",
+   "name": "Toyota GR86 / 86 / Scion FR-S"
+  },
+  {
+   "slug": "subaru-brz",
+   "name": "Subaru BRZ"
+  },
+  {
+   "slug": "honda-s2000",
+   "name": "Honda S2000"
+  },
+  {
+   "slug": "lotus-elise-exige",
+   "name": "Lotus Elise / Exige"
+  }
+ ],
+ "sources": {
+  "m05r2": {
+   "t": "Mazda USA: 2005 Mazda MX-5 Miata, the undisputed champion (Sep 2004)",
+   "u": "https://news.mazdausa.com/download/2005_MX-5-Miata-release-FINAL.pdf",
+   "k": "Mazda"
+  },
+  "m05d": {
+   "t": "Mazda USA: 2005 MX-5 Miata specification deck, incl. MAZDASPEED (Jun 2004)",
+   "u": "https://news.mazdausa.com/download/cur_mspeed_specs.pdf",
+   "k": "Mazda"
+  },
+  "m05p": {
+   "t": "Mazda USA: 2005 MX-5 Miata price schedule 2005-3 (Jan 2005)",
+   "u": "https://news.mazdausa.com/download/HK-05-Miata-Pricing-1-4-05-2005-3.pdf",
+   "k": "Mazda"
+  },
+  "m05r": {
+   "t": "Mazda USA: 2005 MAZDASPEED MX-5 Miata release (Sep 2004)",
+   "u": "https://news.mazdausa.com/download/05-MS-MX-5-Miata-release-FINAL.pdf",
+   "k": "Mazda"
+  },
+  "m05ms": {
+   "t": "Mazda USA: 2005 MAZDASPEED MX-5 Miata technical specifications",
+   "u": "https://news.mazdausa.com/download/05-MS-MX-5-Miata-Spec-Sheet-FINAL.pdf",
+   "k": "Mazda"
+  },
+  "m05pms": {
+   "t": "Mazda USA: 2005 MAZDASPEED MX-5 Miata price schedule 2005-3 (Jan 2005)",
+   "u": "https://news.mazdausa.com/download/HK-05-Mazdaspeed-MX-5-Miata-Pricing-1-4-05-2005-3.pdf",
+   "k": "Mazda"
+  },
+  "m06r": {
+   "t": "Mazda USA: 2006 MX-5 Miata launch release (Sep 2005)",
+   "u": "https://news.mazdausa.com/download/MZD-MX5-MIATA-06.pdf",
+   "k": "Mazda"
+  },
+  "m06s": {
+   "t": "Mazda USA: 2006 MX-5 Miata technical specifications",
+   "u": "https://news.mazdausa.com/download/SPECS-MX5-06.pdf",
+   "k": "Mazda"
+  },
+  "m06p": {
+   "t": "Mazda USA: 2006 MX-5 Miata price schedule 2006-1 (Jun 2005)",
+   "u": "https://news.mazdausa.com/download/06MY-MX-5-MIATA-PRICING.pdf",
+   "k": "Mazda"
+  },
+  "m10": {
+   "t": "Mazda USA: 2010 MX-5 release",
+   "u": "https://news.mazdausa.com/download/2010-MX-5-Release_FINAL.pdf",
+   "k": "Mazda"
+  },
+  "m13": {
+   "t": "Mazda USA: 2013 MX-5 Miata overview",
+   "u": "https://news.mazdausa.com/download/2013-MX-5-Miata-Overview-FINAL.pdf",
+   "k": "Mazda"
+  },
+  "m15": {
+   "t": "Mazda USA: 2015 MX-5 Miata overview",
+   "u": "https://news.mazdausa.com/download/2015-Mazda-MX-5-Overview-FINAL.pdf",
+   "k": "Mazda"
+  },
+  "m15p": {
+   "t": "Mazda USA: 2015 MX-5 price schedule 2015-2 (May 2014)",
+   "u": "https://news.mazdausa.com/download/2015-Mazda-MX-5-Pricing-MSRP-2015-2.pdf",
+   "k": "Mazda"
+  },
+  "m16p": {
+   "t": "Mazda USA: Mazda announces starting price for 2016 MX-5 (Mar 2015)",
+   "u": "https://news.mazdausa.com/2015-03-30-Mazda-Announces-Starting-Price-for-2016-MX-5",
+   "k": "Mazda"
+  },
+  "m16f": {
+   "t": "Mazda USA: 2016 Mazda MX-5 fact sheet",
+   "u": "https://news.mazdausa.com/download/2016-Mazda-MX-5-Fact-Sheet.pdf",
+   "k": "Mazda"
+  },
+  "m16k": {
+   "t": "Mazda USA: 2016 Mazda MX-5 press kit (specifications)",
+   "u": "https://news.mazdausa.com/download/2016_Mazda_MX-5_Press_Kit.pdf",
+   "k": "Mazda"
+  },
+  "m19a": {
+   "t": "Mazda USA: 2019 MX-5 Miata packs more punch (Jun 2018)",
+   "u": "https://news.mazdausa.com/2018-06-20-2019-mazda-mx-5-miata-packs-more-punch-features",
+   "k": "Mazda"
+  },
+  "m19p": {
+   "t": "Mazda USA: Enhanced engine, new brown soft top for 2019 MX-5 Miata, with pricing (Oct 2018)",
+   "u": "https://news.mazdausa.com/2018-10-01-enhanced-engine-new-brown-soft-top-for-2019-mx-5-miata",
+   "k": "Mazda"
+  },
+  "m19f": {
+   "t": "Mazda USA: 2019 MX-5 soft top fact sheet",
+   "u": "https://news.mazdausa.com/download/2019-Mazda-MX-5-Press-Kit-Soft-Top-Fact-Sheet.pdf",
+   "k": "Mazda"
+  },
+  "m24p": {
+   "t": "Mazda USA: 2024 MX-5 Miata pricing and packaging (Jan 2024)",
+   "u": "https://news.mazdausa.com/2024-01-25-24MY-2024-Mazda-MX-5-Miata-Pricing-and-Packaging",
+   "k": "Mazda"
+  },
+  "m25p": {
+   "t": "Mazda USA: 2025 MX-5 Miata pricing and packaging (Dec 2024)",
+   "u": "https://news.mazdausa.com/2024-12-05-2025-Mazda-MX-5-Miata-Pricing-and-Packaging",
+   "k": "Mazda"
+  },
+  "z60": {
+   "t": "0-60specs.com: Mazda MX-5 Miata 0-60 runs by magazine (Car and Driver, MotorTrend, Road & Track, MotorWeek)",
+   "u": "https://www.0-60specs.com/mazda/mx-5-miata-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "wnb": {
+   "t": "Wikipedia: Mazda MX-5 (NB)",
+   "u": "https://en.wikipedia.org/wiki/Mazda_MX-5_(NB)",
+   "k": "Wikipedia (fallback)"
+  },
+  "fm_nb": {
+   "t": "Flyin' Miata: NB stock replacement style radiator",
+   "u": "https://www.flyinmiata.com/products/nb-stock-replacement-style-radiator",
+   "k": "parts seller"
+  },
+  "fm_nc": {
+   "t": "Flyin' Miata: Moroso aluminum coolant expansion tank for NC",
+   "u": "https://www.flyinmiata.com/products/nc-alloy-expansion-tank",
+   "k": "parts seller"
+  },
+  "r21875": {
+   "t": "NHTSA recall 21V-875: low-pressure fuel pump, 2018–2019 MX-5 and other Mazdas (Dec 2021)",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=21V875000",
+   "k": "Recall"
+  },
+  "r19072": {
+   "t": "NHTSA recall 19V-072: transmission control software, 2016–2019 MX-5 automatic (Jan 2019)",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=19V072000",
+   "k": "Recall"
+  },
+  "tn": {
+   "t": "Torque News: ND MX-5 Miata owner reports third-gear transmission issues (Mar 2025)",
+   "u": "https://www.torquenews.com/17992/my-mazda-mx-5-miata-having-transmission-issues-dealer-can-fix-it-only-if-i-remove",
+   "k": "outlet"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-mx-5-miata",
+ "img": "/assets/ai-perf/mx-5-miata.webp?v=1"
+}

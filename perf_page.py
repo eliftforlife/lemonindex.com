@@ -131,7 +131,7 @@ def build(slug, out='docs'):
     def eng_score(code):
         e = D['engines'][code]; src, key = (e.get('yt') or ['scy', ''])[:2]   # the engine's own study first, else the BMW engine attribution
         d = (SCY.get(e.get('study') or '') or {}).get('years') or (SCY.get(key or '') or {}).get('years') or (BYT.get(key) if src == 'bmw' else None)
-        gs = [x for x in G if x['engine'] == code]
+        gs = [x for x in G if x['engine'] == code] or G   # an engine only some variants use (Durango Hellcat, Raptor 5.4): the car's whole span
         return _avg(d, min(x['y0'] for x in gs), max(x['y1'] for x in gs))
     esc = {c: eng_score(c) for c in D['engines']}
     eranked = sorted([c for c in esc if esc[c][0] is not None], key=lambda c: -esc[c][0])

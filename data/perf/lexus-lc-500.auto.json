@@ -1,0 +1,76 @@
+{
+ "built": "2026-11-11",
+ "nhtsa": {
+  "by_year": {
+   "2018": 7,
+   "2020": 1,
+   "2021": 3,
+   "2024": 3
+  },
+  "gens": {
+   "urz100": {
+    "n": 14,
+    "issues": {
+     "High-pressure fuel pump recall": {
+      "n": 0,
+      "ex": []
+     },
+     "In-tank fuel pump recall": {
+      "n": 1,
+      "ex": [
+       "11206076"
+      ]
+     },
+     "Water pump seepage vs. real leak": {
+      "n": 0,
+      "ex": []
+     },
+     "Valley plate coolant leak": {
+      "n": 0,
+      "ex": []
+     }
+    }
+   }
+  },
+  "parts": [
+   [
+    "Unknown or other",
+    7
+   ],
+   [
+    "Structure",
+    4
+   ],
+   [
+    "Fuel/propulsion system",
+    3
+   ],
+   [
+    "Electrical system",
+    2
+   ],
+   [
+    "Exterior lighting",
+    1
+   ],
+   [
+    "Engine",
+    1
+   ]
+  ]
+ },
+ "recalls": {
+  "2018": [],
+  "2019": [],
+  "2020": [],
+  "2022": [],
+  "2023": [],
+  "2024": [],
+  "2025": []
+ },
+ "yt": {
+  "car-lexus-lc-500": null,
+  "toyota-2ur-gse": null
+ },
+ "scores": {}
+}

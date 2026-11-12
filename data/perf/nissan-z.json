@@ -1,0 +1,455 @@
+{
+ "slug": "nissan-z",
+ "name": "Nissan Z",
+ "short": "Z",
+ "make": "Nissan",
+ "page": "/cars/nissan-z/",
+ "focus": "rz34",
+ "star": "rz34-nismo",
+ "h1": "Nissan Z: performance, engines and what owners say",
+ "nhtsa": {
+  "make": "NISSAN",
+  "models": [
+   "Z"
+  ],
+  "note": "NHTSA files the Z NISMO under Z, so these counts are every Z of these years."
+ },
+ "topics_extra": {
+  "Turbo failure": "turbo(charger)?s? (fail|failed|failure|leak|leaking|went out)|blown turbo|white smoke",
+  "6-speed manual / clutch": "\\bclutch\\b|grind(s|ing)? (into|in) (second|2nd)|6.?speed manual|\\b6mt\\b",
+  "9-speed automatic": "9.?speed|\\b9at\\b|harsh shift",
+  "Pop-up hood recall": "pop.?up hood|hood (popped|opened)|pedestrian (sensor|protection)",
+  "MAF sensor codes": "p0101|p010b|mass air ?flow|\\bmaf\\b"
+ },
+ "gens": [
+  {
+   "id": "rz34",
+   "code": "RZ34",
+   "years": "2023–2025",
+   "y0": 2023,
+   "y1": 2025,
+   "engine": "VR30DDTT",
+   "body": "Coupe",
+   "tag": "Twin-turbo V6, 400 hp, manual or auto; 420-hp NISMO from 2024.",
+   "variants": [
+    {
+     "id": "rz34-sport",
+     "name": "Z Sport",
+     "years": "2023–2025",
+     "hp": {
+      "v": 400,
+      "src": [
+       "n23kit"
+      ],
+      "note": "at 6,400 rpm"
+     },
+     "tq": {
+      "v": 350,
+      "src": [
+       "n23kit",
+       "n24kit"
+      ],
+      "note": "lb-ft; Nissan lists 1,600–5,200 rpm for 2023 and 1,600–5,600 rpm for 2024"
+     },
+     "z60": {
+      "v": null,
+      "who": "",
+      "src": [],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual or 9-speed automatic, rear-drive",
+      "src": [
+       "n23kit"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,486 lb",
+      "src": [
+       "n23kit",
+       "n24kit"
+      ],
+      "note": "manual; 3,549 lb automatic"
+     },
+     "price": {
+      "v": "$40,990",
+      "src": [
+       "n23p",
+       "n25p"
+      ],
+      "note": "2023, plus $1,095 destination; 2025: $42,970 before destination"
+     },
+     "what": "18-inch wheels and no limited-slip differential (Performance adds one).",
+     "what_src": [
+      "n23kit"
+     ]
+    },
+    {
+     "id": "rz34-perf",
+     "name": "Z Performance",
+     "years": "2023–2025",
+     "hp": {
+      "v": 400,
+      "src": [
+       "n23kit"
+      ],
+      "note": "at 6,400 rpm"
+     },
+     "tq": {
+      "v": 350,
+      "src": [
+       "n23kit",
+       "n24kit"
+      ],
+      "note": "lb-ft"
+     },
+     "z60": {
+      "v": 4.3,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "9-speed automatic, rear-drive",
+      "src": [
+       "n23kit"
+      ],
+      "note": "tested car; 6-speed manual also offered"
+     },
+     "weight": {
+      "v": "3,602 lb",
+      "src": [
+       "n23kit",
+       "n24kit"
+      ],
+      "note": "automatic"
+     },
+     "price": {
+      "v": "$50,990",
+      "src": [
+       "n23p"
+      ],
+      "note": "2023, plus $1,095 destination; same price manual or automatic"
+     },
+     "what": "Adds a mechanical limited-slip differential, bigger brakes and 19-inch forged RAYS wheels.",
+     "what_src": [
+      "n23kit"
+     ]
+    },
+    {
+     "id": "rz34-perf-mt",
+     "name": "Z Performance manual",
+     "years": "2023–2025",
+     "hp": {
+      "v": 400,
+      "src": [
+       "n23kit"
+      ],
+      "note": ""
+     },
+     "tq": {
+      "v": 350,
+      "src": [
+       "n23kit"
+      ],
+      "note": "lb-ft"
+     },
+     "z60": {
+      "v": 4.5,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual, rear-drive",
+      "src": [
+       "n23kit"
+      ],
+      "note": "EXEDY clutch, rev matching"
+     },
+     "weight": {
+      "v": "3,536 lb",
+      "src": [
+       "n23kit",
+       "n24kit"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$50,990",
+      "src": [
+       "n23p"
+      ],
+      "note": "2023, plus $1,095 destination"
+     },
+     "what": "Early 2023 manuals were held at dealers; 174 got a new gearbox for a second-gear grind.",
+     "what_src": [
+      "pc922",
+      "p2a19"
+     ]
+    },
+    {
+     "id": "rz34-nismo",
+     "name": "Z NISMO",
+     "years": "2024–2025",
+     "star": true,
+     "hp": {
+      "v": 420,
+      "src": [
+       "n24n",
+       "n24kit"
+      ],
+      "note": "at 6,400 rpm"
+     },
+     "tq": {
+      "v": 384,
+      "src": [
+       "n24n",
+       "n24kit"
+      ],
+      "note": "lb-ft at 2,000–5,200 rpm"
+     },
+     "z60": {
+      "v": 3.9,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "9-speed automatic, rear-drive",
+      "src": [
+       "n24n",
+       "n24kit"
+      ],
+      "note": "NISMO-tuned; no manual"
+     },
+     "weight": {
+      "v": "3,704 lb",
+      "src": [
+       "n24kit"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$64,990",
+      "src": [
+       "n24n",
+       "n24p"
+      ],
+      "note": "2024, plus $1,095 destination; later list $65,750 plus $1,140"
+     },
+     "what": "More boost, its own spark timing, extra oil cooling, stiffer suspension, 15-inch front rotors.",
+     "what_src": [
+      "n24n",
+      "n24kit"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "VR30DDTT": {
+   "name": "Nissan VR30DDTT",
+   "what": "3.0-liter V6, twin-turbo",
+   "study": "nissan-vr30ddtt",
+   "page": "/engines/nissan-vr30ddtt/",
+   "yt": [
+    "scy",
+    "nissan-vr30ddtt"
+   ],
+   "facts": [
+    [
+     "Redline",
+     "6,800 rpm (maximum engine speed)",
+     [
+      "n23kit"
+     ]
+    ],
+    [
+     "Output",
+     "400–420 hp, 350–384 lb-ft (Z)",
+     [
+      "n23kit",
+      "n24kit"
+     ]
+    ],
+    [
+     "Turbos",
+     "Two small turbos with a turbo speed sensor; 15 psi max boost",
+     [
+      "n23kit"
+     ]
+    ],
+    [
+     "Block",
+     "Aluminum block and heads, 86 x 86 mm, 10.3:1 compression",
+     [
+      "n23kit"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Turbo bearing oil leaks (Infiniti cars)",
+     "kind": "Maker bulletin",
+     "rx": "turbo(charger)?s? (fail|failed|failure|leak|leaking|went out)|blown turbo|white smoke|thrust bearing",
+     "x": "On 2016–2018 Infiniti Q50 and 2017–2018 Q60 with this engine, turbo bearings can wear early and leak oil inside, causing white smoke, a check-engine light and sometimes lost power. Owners of later Q50s report the same in NHTSA complaints.",
+     "fix": "Infiniti extended turbo coverage on those cars to 10 years or 120,000 miles; the Z is not part of it.",
+     "src": [
+      "mc25",
+      "nq50"
+     ]
+    },
+    {
+     "t": "Second-gear grind, early manual cars (transmission)",
+     "kind": "Maker bulletin",
+     "rx": "grind(s|ing)? (into|in) (second|2nd)|second gear|2nd gear",
+     "x": "In late 2022 Nissan held all manual 2023 Zs at dealers over second-gear shifting, then replaced the gearbox on 174 cars with a manufacturing fault.",
+     "fix": "Fixed before sale; Nissan says the fault was corrected in production.",
+     "src": [
+      "pc922",
+      "p2a19"
+     ]
+    },
+    {
+     "t": "Check-engine light, MAF codes P0101 / P010B",
+     "kind": "Maker bulletin",
+     "rx": "p0101|p010b|mass air ?flow|\\bmaf\\b",
+     "x": "On the 2023 Z, a leaking or loose intake air duct can set airflow sensor codes and turn on the check-engine light.",
+     "fix": "Dealer checks and reseats the intake ducts (Nissan bulletin NTB23-006).",
+     "src": [
+      "ntb23"
+     ]
+    },
+    {
+     "t": "Stall after hard acceleration (Infiniti recall)",
+     "kind": "Recall",
+     "rx": "stall(ed|s|ing)?|shut (off|down) while driving",
+     "x": "On 2021 Infiniti Q50 and Q60, engine software could cut fuel after rapid acceleration and stall the engine.",
+     "fix": "Dealer reprograms the engine computer for free (NHTSA 21V-234); the Z is not included.",
+     "src": [
+      "r21"
+     ]
+    },
+    {
+     "t": "No engine recall on the Z so far",
+     "kind": "NHTSA records",
+     "rx": "",
+     "x": "NHTSA lists two Z recalls, both for the pop-up hood, and no engine recall for 2023–2025 Zs. Few owner complaints are on file.",
+     "fix": "",
+     "src": [
+      "nz"
+     ]
+    }
+   ]
+  }
+ },
+ "compare": [
+  {
+   "slug": "gr-supra",
+   "name": "Toyota GR Supra"
+  },
+  {
+   "slug": "mustang-gt",
+   "name": "Ford Mustang GT"
+  },
+  {
+   "slug": "camaro-ss",
+   "name": "Chevrolet Camaro SS"
+  },
+  {
+   "slug": "bmw-m2",
+   "name": "BMW M2"
+  }
+ ],
+ "sources": {
+  "n23kit": {
+   "t": "Nissan USA: 2023 Nissan Z press kit (overview Aug 2021, specifications May 2022)",
+   "u": "https://usa.nissannews.com/en-US/releases/2023-nissan-z-press-kit",
+   "k": "Nissan"
+  },
+  "n23p": {
+   "t": "Nissan USA: All-new 2023 Nissan Z MSRP to start at $40,990 (May 2022)",
+   "u": "https://usa.nissannews.com/en-US/releases/all-new-2023-nissan-z-msrp-to-start-at-40990",
+   "k": "Nissan"
+  },
+  "n24n": {
+   "t": "Nissan USA: New 2024 Nissan Z NISMO delivers thrilling performance from $64,990 (Sep 2023)",
+   "u": "https://usa.nissannews.com/en-US/releases/new-2024-nissan-z-nismo-delivers-thrilling-performance-from-64990",
+   "k": "Nissan"
+  },
+  "n24kit": {
+   "t": "Nissan USA: 2024 Nissan Z NISMO press kit and specifications",
+   "u": "https://usa.nissannews.com/en-US/releases/2024-nissan-z-nismo-press-kit",
+   "k": "Nissan"
+  },
+  "n24p": {
+   "t": "Nissan USA: 2024 Nissan Z pricing (later price list)",
+   "u": "https://usa.nissannews.com/en-US/releases/2024-nissan-z-pricing",
+   "k": "Nissan"
+  },
+  "n25p": {
+   "t": "Nissan USA: 2025 Nissan Z pricing (Mar 2025)",
+   "u": "https://usa.nissannews.com/en-US/releases/2025-nissan-z-pricing",
+   "k": "Nissan"
+  },
+  "z60": {
+   "t": "0-60specs.com: Nissan Z 0-60 runs by magazine (Car and Driver, MotorTrend, MotorWeek)",
+   "u": "https://www.0-60specs.com/nissan/z-0-60-times/",
+   "k": "magazine tests, aggregated"
+  },
+  "mc25": {
+   "t": "INFINITI campaign bulletin P4A05/P4A06: turbocharger emission warranty extension (Feb 2025)",
+   "u": "https://static.nhtsa.gov/odi/tsbs/2025/MC-11014069-0001.pdf",
+   "k": "Maker bulletin"
+  },
+  "nq50": {
+   "t": "NHTSA owner complaints, 2019 Infiniti Q50 (turbo failures outside the extension)",
+   "u": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=INFINITI&model=Q50&modelYear=2019",
+   "k": "NHTSA"
+  },
+  "pc922": {
+   "t": "Nissan dealer announcement PC922: quality hold on 2023 Z manual cars (Oct 2022)",
+   "u": "https://static.nhtsa.gov/odi/tsbs/2022/MC-10222872-0001.pdf",
+   "k": "Maker bulletin"
+  },
+  "p2a19": {
+   "t": "Nissan dealer announcement P2A19: 6-speed manual replaced on 174 2023 Zs (Nov 2022)",
+   "u": "https://static.nhtsa.gov/odi/tsbs/2022/MC-10226134-0001.pdf",
+   "k": "Maker bulletin"
+  },
+  "ntb23": {
+   "t": "Nissan bulletin NTB23-006: MIL on with DTC P0101 / P010B, 2023 Z (Jan 2023)",
+   "u": "https://static.nhtsa.gov/odi/tsbs/2023/MC-10231527-0001.pdf",
+   "k": "Maker bulletin"
+  },
+  "r21": {
+   "t": "NHTSA recall 21V-234: 2021 Infiniti Q50 / Q60 engine stall after rapid acceleration",
+   "u": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=INFINITI&model=Q50&modelYear=2021",
+   "k": "Recall"
+  },
+  "nz": {
+   "t": "NHTSA recalls for the 2023–2024 Nissan Z (23V-725, 24V-798, pop-up hood)",
+   "u": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=NISSAN&model=Z&modelYear=2024",
+   "k": "NHTSA"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-nissan-z",
+ "img": "/assets/ai-perf/nissan-z.webp?v=1"
+}

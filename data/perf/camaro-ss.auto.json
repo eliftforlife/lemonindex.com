@@ -1,0 +1,1815 @@
+{
+ "built": "2026-11-11",
+ "nhtsa": {
+  "by_year": {
+   "1990": 25,
+   "1991": 86,
+   "1992": 88,
+   "1993": 32,
+   "1994": 144,
+   "1995": 216,
+   "1996": 116,
+   "1997": 69,
+   "1998": 173,
+   "1999": 90,
+   "2000": 76,
+   "2001": 48,
+   "2002": 68,
+   "2010": 295,
+   "2011": 194,
+   "2012": 113,
+   "2013": 187,
+   "2014": 188,
+   "2015": 206,
+   "2016": 141,
+   "2017": 189,
+   "2018": 81,
+   "2019": 53,
+   "2020": 31,
+   "2021": 20,
+   "2022": 14,
+   "2023": 15,
+   "2024": 4
+  },
+  "gens": {
+   "gen4": {
+    "n": 192,
+    "issues": {
+     "Piston slap (cold-start knock)": {
+      "n": 1,
+      "ex": [
+       "10051458"
+      ]
+     },
+     "Oil consumption": {
+      "n": 2,
+      "ex": [
+       "10145665",
+       "897542"
+      ]
+     },
+     "Water pump leaks": {
+      "n": 0,
+      "ex": []
+     }
+    }
+   },
+   "gen5": {
+    "n": 1183,
+    "issues": {
+     "AFM lifter failure (L99, disputed)": {
+      "n": 5,
+      "ex": [
+       "10384071",
+       "11099182"
+      ]
+     },
+     "Rocker arm trunnion bearings": {
+      "n": 2,
+      "ex": [
+       "11099182",
+       "11530671"
+      ]
+     }
+    }
+   },
+   "gen6": {
+    "n": 548,
+    "issues": {
+     "AFM lifter failure (disputed)": {
+      "n": 8,
+      "ex": [
+       "11173674",
+       "11288903"
+      ]
+     },
+     "RPM hangs high after throttle snap": {
+      "n": 0,
+      "ex": []
+     }
+    }
+   }
+  },
+  "parts": [
+   [
+    "Electrical system",
+    510
+   ],
+   [
+    "Power train",
+    320
+   ],
+   [
+    "Engine",
+    279
+   ],
+   [
+    "Air bags",
+    254
+   ],
+   [
+    "Unknown or other",
+    242
+   ],
+   [
+    "Steering",
+    223
+   ]
+  ]
+ },
+ "recalls": {
+  "2000": [
+   {
+    "id": "09E025000",
+    "part": "EXTERIOR LIGHTING:HEADLIGHTS",
+    "summary": "DOPE, INC. IS RECALLING 42,540 COMBINATION CORNER AND BUMPER LAMP ASSEMBLIES OF VARIOUS PART NUMBERS SOLD FOR USE AS AFTERMARKET EQUIPMENT FOR VARIOUS PASSENGER VEHICLES.  THESE HEADLAMPS FAIL TO CONFORM TO THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, \"LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT.\"  THESE LAMPS DO NOT CONTAIN THE REQUIRED AMBER SIDE REFLECTORS."
+   },
+   {
+    "id": "09E012000",
+    "part": "EXTERIOR LIGHTING",
+    "summary": "SABERSPORT IS RECALLING 16,270 COMBINATION CORNER AND BUMPER LAMP ASSEMBLIES OF VARIOUS PART NUMBERS SOLD FOR USE AS AFTERMARKET EQUIPMENT FOR VARIOUS PASSENGER VEHICLES.  THESE HEADLAMPS FAIL TO CONFORM TO THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, \"LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT.\"  THESE LAMPS DO NOT CONTAIN THE REQUIRED AMBER SIDE REFLECTORS."
+   },
+   {
+    "id": "06E026000",
+    "part": "EXTERIOR LIGHTING",
+    "summary": "CERTAIN PRO-A MOTORS CORNER LAMPS, TURN SIGNALS, AND HEADLIGHTS SOLD AS REPLACEMENT LAMPS FOR USE ON CERTAIN PASSENGER VEHICLES LISTED ABOVE.  SOME COMBINATION LAMPS THAT ARE NOT EQUIPPED WITH AMBER SIDE REFLECTORS FAIL TO CONFORM TO FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT."
+   },
+   {
+    "id": "06E065000",
+    "part": "EXTERIOR LIGHTING",
+    "summary": "CERTAIN AJ MOTORSPORT COMBINATION LAMPS SOLD AS REPLACEMENT LAMPS FOR USE ON THE ABOVE LISTED PASSENGER VEHICLES.  COMBINATION LAMPS NOT EQUIPPED WITH AMBER SIDE REFLECTORS FAIL TO CONFORM WITH THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT."
+   }
+  ],
+  "2001": [
+   {
+    "id": "09E025000",
+    "part": "EXTERIOR LIGHTING:HEADLIGHTS",
+    "summary": "DOPE, INC. IS RECALLING 42,540 COMBINATION CORNER AND BUMPER LAMP ASSEMBLIES OF VARIOUS PART NUMBERS SOLD FOR USE AS AFTERMARKET EQUIPMENT FOR VARIOUS PASSENGER VEHICLES.  THESE HEADLAMPS FAIL TO CONFORM TO THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, \"LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT.\"  THESE LAMPS DO NOT CONTAIN THE REQUIRED AMBER SIDE REFLECTORS."
+   },
+   {
+    "id": "09E012000",
+    "part": "EXTERIOR LIGHTING",
+    "summary": "SABERSPORT IS RECALLING 16,270 COMBINATION CORNER AND BUMPER LAMP ASSEMBLIES OF VARIOUS PART NUMBERS SOLD FOR USE AS AFTERMARKET EQUIPMENT FOR VARIOUS PASSENGER VEHICLES.  THESE HEADLAMPS FAIL TO CONFORM TO THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, \"LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT.\"  THESE LAMPS DO NOT CONTAIN THE REQUIRED AMBER SIDE REFLECTORS."
+   },
+   {
+    "id": "06E026000",
+    "part": "EXTERIOR LIGHTING",
+    "summary": "CERTAIN PRO-A MOTORS CORNER LAMPS, TURN SIGNALS, AND HEADLIGHTS SOLD AS REPLACEMENT LAMPS FOR USE ON CERTAIN PASSENGER VEHICLES LISTED ABOVE.  SOME COMBINATION LAMPS THAT ARE NOT EQUIPPED WITH AMBER SIDE REFLECTORS FAIL TO CONFORM TO FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT."
+   },
+   {
+    "id": "06E065000",
+    "part": "EXTERIOR LIGHTING",
+    "summary": "CERTAIN AJ MOTORSPORT COMBINATION LAMPS SOLD AS REPLACEMENT LAMPS FOR USE ON THE ABOVE LISTED PASSENGER VEHICLES.  COMBINATION LAMPS NOT EQUIPPED WITH AMBER SIDE REFLECTORS FAIL TO CONFORM WITH THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT."
+   }
+  ],
+  "2002": [
+   {
+    "id": "09E025000",
+    "part": "EXTERIOR LIGHTING:HEADLIGHTS",
+    "summary": "DOPE, INC. IS RECALLING 42,540 COMBINATION CORNER AND BUMPER LAMP ASSEMBLIES OF VARIOUS PART NUMBERS SOLD FOR USE AS AFTERMARKET EQUIPMENT FOR VARIOUS PASSENGER VEHICLES.  THESE HEADLAMPS FAIL TO CONFORM TO THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, \"LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT.\"  THESE LAMPS DO NOT CONTAIN THE REQUIRED AMBER SIDE REFLECTORS."
+   },
+   {
+    "id": "06E026000",
+    "part": "EXTERIOR LIGHTING",
+    "summary": "CERTAIN PRO-A MOTORS CORNER LAMPS, TURN SIGNALS, AND HEADLIGHTS SOLD AS REPLACEMENT LAMPS FOR USE ON CERTAIN PASSENGER VEHICLES LISTED ABOVE.  SOME COMBINATION LAMPS THAT ARE NOT EQUIPPED WITH AMBER SIDE REFLECTORS FAIL TO CONFORM TO FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT."
+   },
+   {
+    "id": "09E012000",
+    "part": "EXTERIOR LIGHTING",
+    "summary": "SABERSPORT IS RECALLING 16,270 COMBINATION CORNER AND BUMPER LAMP ASSEMBLIES OF VARIOUS PART NUMBERS SOLD FOR USE AS AFTERMARKET EQUIPMENT FOR VARIOUS PASSENGER VEHICLES.  THESE HEADLAMPS FAIL TO CONFORM TO THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, \"LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT.\"  THESE LAMPS DO NOT CONTAIN THE REQUIRED AMBER SIDE REFLECTORS."
+   },
+   {
+    "id": "06E065000",
+    "part": "EXTERIOR LIGHTING",
+    "summary": "CERTAIN AJ MOTORSPORT COMBINATION LAMPS SOLD AS REPLACEMENT LAMPS FOR USE ON THE ABOVE LISTED PASSENGER VEHICLES.  COMBINATION LAMPS NOT EQUIPPED WITH AMBER SIDE REFLECTORS FAIL TO CONFORM WITH THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT."
+   },
+   {
+    "id": "01V381000",
+    "part": "STRUCTURE:FRAME AND MEMBERS",
+    "summary": "VEHICLE DESCRIPTION:   CERTAIN PASSENGER VEHICLES FAIL TO CONFORM TO THE REQUIREMENTS OF FMVSS NO. 208, \"OCCUPANT CRASH PROTECTION,\" AND NO. 214, \"SIDE IMPACT PROTECTION.\"  THESE VEHICLES MAY HAVE WELDS NEAR THE LOWER DRIVER'S SIDE DOOR HINGE THAT DO NOT MEET SPECIFICATIONS."
+   }
+  ],
+  "2010": [
+   {
+    "id": "19E064000",
+    "part": "ELECTRICAL SYSTEM:IGNITION",
+    "summary": "General Motors LLC (GM) is recalling certain replacement flip-key ignition transmitter assemblies sold as replacement equipment for 2010-2015 Chevrolet Camaro vehicles.  GM dealers may have inadvertently sold these assemblies as replacement keys despite them having been recalled under NHTSA recall number 14V-346 (GM number 14294) when they were the original equipment assemblies.  The driver may ac"
+   },
+   {
+    "id": "14V346000",
+    "part": "ELECTRICAL SYSTEM:IGNITION",
+    "summary": "General Motors LLC (GM) is recalling all 2010-2014 Chevrolet Camaro vehicles manufactured December 3, 2008 to May 23, 2014.  In the affected vehicles, the driver may accidentally hit the ignition key with their knee, unintentionally knocking the key out of the run position, turning off the engine."
+   },
+   {
+    "id": "09V155000",
+    "part": "ELECTRICAL SYSTEM:12V/24V/48V BATTERY:CABLES",
+    "summary": "GM IS RECALLING 1,243 MY 2010 CHEVROLET CAMARO EQUIPPED WITH A V8 ENGINE.  THE POSITIVE BATTERY CABLE MAY CONTACT THE STARTER MOTOR HOUSING AND CAUSE WEAR ON THE CABLE INSULATION.  IF THE INSULATION WEARS THROUGH TO THE CABLE, IT COULD CREATE A SHORT."
+   }
+  ],
+  "2011": [
+   {
+    "id": "19E064000",
+    "part": "ELECTRICAL SYSTEM:IGNITION",
+    "summary": "General Motors LLC (GM) is recalling certain replacement flip-key ignition transmitter assemblies sold as replacement equipment for 2010-2015 Chevrolet Camaro vehicles.  GM dealers may have inadvertently sold these assemblies as replacement keys despite them having been recalled under NHTSA recall number 14V-346 (GM number 14294) when they were the original equipment assemblies.  The driver may ac"
+   },
+   {
+    "id": "14V346000",
+    "part": "ELECTRICAL SYSTEM:IGNITION",
+    "summary": "General Motors LLC (GM) is recalling all 2010-2014 Chevrolet Camaro vehicles manufactured December 3, 2008 to May 23, 2014.  In the affected vehicles, the driver may accidentally hit the ignition key with their knee, unintentionally knocking the key out of the run position, turning off the engine."
+   },
+   {
+    "id": "14V447000",
+    "part": "SEATS:FRONT ASSEMBLY:POWER ADJUST",
+    "summary": "General Motors LLC (GM) is recalling certain model year 2011-2012 Buick LaCrosse, Regal and Chevrolet Camaro, as well as certain 2010-2012 Cadillac SRX, Chevrolet Equinox and GMC Terrain vehicles, equipped with power height adjustable driver and passenger seats.  In the affected vehicles, the bolt that secures the driver's and passenger's power front seat height adjuster may fall out causing the s"
+   }
+  ],
+  "2012": [
+   {
+    "id": "19E064000",
+    "part": "ELECTRICAL SYSTEM:IGNITION",
+    "summary": "General Motors LLC (GM) is recalling certain replacement flip-key ignition transmitter assemblies sold as replacement equipment for 2010-2015 Chevrolet Camaro vehicles.  GM dealers may have inadvertently sold these assemblies as replacement keys despite them having been recalled under NHTSA recall number 14V-346 (GM number 14294) when they were the original equipment assemblies.  The driver may ac"
+   },
+   {
+    "id": "14V346000",
+    "part": "ELECTRICAL SYSTEM:IGNITION",
+    "summary": "General Motors LLC (GM) is recalling all 2010-2014 Chevrolet Camaro vehicles manufactured December 3, 2008 to May 23, 2014.  In the affected vehicles, the driver may accidentally hit the ignition key with their knee, unintentionally knocking the key out of the run position, turning off the engine."
+   },
+   {
+    "id": "14V447000",
+    "part": "SEATS:FRONT ASSEMBLY:POWER ADJUST",
+    "summary": "General Motors LLC (GM) is recalling certain model year 2011-2012 Buick LaCrosse, Regal and Chevrolet Camaro, as well as certain 2010-2012 Cadillac SRX, Chevrolet Equinox and GMC Terrain vehicles, equipped with power height adjustable driver and passenger seats.  In the affected vehicles, the bolt that secures the driver's and passenger's power front seat height adjuster may fall out causing the s"
+   },
+   {
+    "id": "14V300000",
+    "part": "AIR BAGS",
+    "summary": "General Motors LLC (GM) is recalling certain model year 2012 Buick Verano vehicles manufactured December 2, 2011 to July, 16, 2012, Chevrolet Cruze vehicles manufactured December 7, 2011 to July 25, 2012, Chevrolet Sonic vehicles manufactured December 5, 2011 to August 2, 2012, and Chevrolet Camaro vehicles manufactured December 1, 2011 to June 11, 2012.  The driver side frontal air bag has a shor"
+   },
+   {
+    "id": "13V023000",
+    "part": "AIR BAGS",
+    "summary": "General Motors LLC (GM) is recalling certain model year 2012 Chevrolet Camaro, Cruze and Sonic, and model year 2012 Buick Verano vehicles.  The driver side frontal air bag has a shorting bar which may intermittently contact the air bag terminals."
+   }
+  ],
+  "2013": [
+   {
+    "id": "19E064000",
+    "part": "ELECTRICAL SYSTEM:IGNITION",
+    "summary": "General Motors LLC (GM) is recalling certain replacement flip-key ignition transmitter assemblies sold as replacement equipment for 2010-2015 Chevrolet Camaro vehicles.  GM dealers may have inadvertently sold these assemblies as replacement keys despite them having been recalled under NHTSA recall number 14V-346 (GM number 14294) when they were the original equipment assemblies.  The driver may ac"
+   },
+   {
+    "id": "14V346000",
+    "part": "ELECTRICAL SYSTEM:IGNITION",
+    "summary": "General Motors LLC (GM) is recalling all 2010-2014 Chevrolet Camaro vehicles manufactured December 3, 2008 to May 23, 2014.  In the affected vehicles, the driver may accidentally hit the ignition key with their knee, unintentionally knocking the key out of the run position, turning off the engine."
+   },
+   {
+    "id": "13V463000",
+    "part": "EQUIPMENT:OTHER:LABELS",
+    "summary": "General Motors (GM) is recalling certain model year 2013 and 2014 Chevrolet Camaro Coupes manufactured June 9, 2013, through September 6, 2013.  In the affected vehicles, the required air bag warning label on the sun visor may peel off.  Thus, these vehicles fail to comply to Federal Motor Vehicle Safety Standard No. 208 \"Occupant Crash Protection.\""
+   },
+   {
+    "id": "23V516000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "General Motors, LLC (GM) is recalling certain 2013 Buick Verano, Chevrolet Camero, Sonic, and Volt vehicles.  The driver-side air bag inflator may explode during deployment due to a manufacturing defect."
+   }
+  ],
+  "2014": [
+   {
+    "id": "19E064000",
+    "part": "ELECTRICAL SYSTEM:IGNITION",
+    "summary": "General Motors LLC (GM) is recalling certain replacement flip-key ignition transmitter assemblies sold as replacement equipment for 2010-2015 Chevrolet Camaro vehicles.  GM dealers may have inadvertently sold these assemblies as replacement keys despite them having been recalled under NHTSA recall number 14V-346 (GM number 14294) when they were the original equipment assemblies.  The driver may ac"
+   },
+   {
+    "id": "14V346000",
+    "part": "ELECTRICAL SYSTEM:IGNITION",
+    "summary": "General Motors LLC (GM) is recalling all 2010-2014 Chevrolet Camaro vehicles manufactured December 3, 2008 to May 23, 2014.  In the affected vehicles, the driver may accidentally hit the ignition key with their knee, unintentionally knocking the key out of the run position, turning off the engine."
+   },
+   {
+    "id": "14V409000",
+    "part": "STEERING",
+    "summary": "General Motors LLC (GM) is recalling certain model year 2014 Buick Regal, Cadillac XTS, Chevrolet Camaro and Chevrolet Impala vehicles.  Improperly torqued fasteners may cause the steering intermediate shaft and the steering gear and/or the lower control arm and the lower ball joint to separate."
+   },
+   {
+    "id": "13V463000",
+    "part": "EQUIPMENT:OTHER:LABELS",
+    "summary": "General Motors (GM) is recalling certain model year 2013 and 2014 Chevrolet Camaro Coupes manufactured June 9, 2013, through September 6, 2013.  In the affected vehicles, the required air bag warning label on the sun visor may peel off.  Thus, these vehicles fail to comply to Federal Motor Vehicle Safety Standard No. 208 \"Occupant Crash Protection.\""
+   }
+  ],
+  "2015": [
+   {
+    "id": "19E064000",
+    "part": "ELECTRICAL SYSTEM:IGNITION",
+    "summary": "General Motors LLC (GM) is recalling certain replacement flip-key ignition transmitter assemblies sold as replacement equipment for 2010-2015 Chevrolet Camaro vehicles.  GM dealers may have inadvertently sold these assemblies as replacement keys despite them having been recalled under NHTSA recall number 14V-346 (GM number 14294) when they were the original equipment assemblies.  The driver may ac"
+   },
+   {
+    "id": "15V666000",
+    "part": "AIR BAGS:SIDE/WINDOW",
+    "summary": "General Motors LLC (GM) is recalling certain model year 2015 Buick LaCrosse, Cadillac XTS, Chevrolet Camaro, Equinox, Malibu, and GMC Terrain vehicles.  The affected vehicles have front seat-mounted side impact air bags whose inflator may rupture upon its deployment."
+   }
+  ],
+  "2016": [
+   {
+    "id": "16V084000",
+    "part": "ELECTRICAL SYSTEM:SOFTWARE",
+    "summary": "Genera Motors LLC (GM) is recalling certain model year 2016 Chevrolet Camaro, Malibu, Silverado and GMC Sierra vehicles.  The radio may intermittently fail to provide an audio warning when the key has been left in the ignition and the door is opened or when the driver does not fasten their seat belt.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Stan"
+   }
+  ],
+  "2017": [
+   {
+    "id": "19V086000",
+    "part": "STEERING:ELECTRIC POWER ASSIST SYSTEM",
+    "summary": "General Motors LLC (GM) is recalling certain 2016-2018 Cadillac CTS, and 2017 Cadillac ATS, Chevrolet Camaro, and Chevrolet Corvette vehicles. The electric power steering (EPS) assist system may fail."
+   },
+   {
+    "id": "21V211000",
+    "part": "AIR BAGS:FRONTAL",
+    "summary": "General Motors, LLC (GM) is recalling certain 2017-2021 Chevrolet Camaro vehicles.  The plastic \"Camaro\" emblem, located on the steering wheel air bag cover, may separate during deployment of the frontal driver air bag."
+   },
+   {
+    "id": "25V175000",
+    "part": "STEERING:ELECTRIC POWER ASSIST SYSTEM",
+    "summary": "General Motors LLC (GM) is recalling certain 2016-2018 Cadillac CTS, 2017-2018 Cadillac ATS, Chevrolet Camaro, and Chevrolet Corvette vehicles.  The electric power steering (EPS) assist may fail."
+   }
+  ],
+  "2018": [
+   {
+    "id": "21V211000",
+    "part": "AIR BAGS:FRONTAL",
+    "summary": "General Motors, LLC (GM) is recalling certain 2017-2021 Chevrolet Camaro vehicles.  The plastic \"Camaro\" emblem, located on the steering wheel air bag cover, may separate during deployment of the frontal driver air bag."
+   },
+   {
+    "id": "25V175000",
+    "part": "STEERING:ELECTRIC POWER ASSIST SYSTEM",
+    "summary": "General Motors LLC (GM) is recalling certain 2016-2018 Cadillac CTS, 2017-2018 Cadillac ATS, Chevrolet Camaro, and Chevrolet Corvette vehicles.  The electric power steering (EPS) assist may fail."
+   }
+  ],
+  "2019": [
+   {
+    "id": "21V211000",
+    "part": "AIR BAGS:FRONTAL",
+    "summary": "General Motors, LLC (GM) is recalling certain 2017-2021 Chevrolet Camaro vehicles.  The plastic \"Camaro\" emblem, located on the steering wheel air bag cover, may separate during deployment of the frontal driver air bag."
+   }
+  ],
+  "2020": [
+   {
+    "id": "19V837000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+    "summary": "General Motors LLC (GM) is recalling certain 2020 Cadillac Escalade, Escalade ESV, Chevrolet Camaro, Silverado 1500, Suburban, Tahoe, GMC Sierra 1500, Yukon, and Yukon XL vehicles.  The fuel pump may be missing a pressure regulator, allowing for over-pressurization of the fuel system."
+   },
+   {
+    "id": "21V211000",
+    "part": "AIR BAGS:FRONTAL",
+    "summary": "General Motors, LLC (GM) is recalling certain 2017-2021 Chevrolet Camaro vehicles.  The plastic \"Camaro\" emblem, located on the steering wheel air bag cover, may separate during deployment of the frontal driver air bag."
+   },
+   {
+    "id": "25V148000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION",
+    "summary": "General Motors LLC (GM) is recalling certain 2019-2020 Cadillac CT6, 2020-2021 CT4, CT5, and 2020-2022 Chevrolet Camaro vehicles equipped with a 10-speed transmission.  The transmission may become damaged internally and cause the wheels to lock-up."
+   }
+  ],
+  "2021": [
+   {
+    "id": "20V811000",
+    "part": "SEAT BELTS",
+    "summary": "General Motors, LLC (GM) is recalling certain 2020 Chevrolet Bolt EV and 2021 GMC Canyon and Sierra 1500, 2500 and 3500, Yukon, Yukon XL, Cadillac Escalade and Escalade ESV and Chevrolet Blazer, Camaro, Colorado, Equinox, Silverado 1500, 2500 and 3500, Suburban and Tahoe vehicles.  Incorrect bolts may have been used at one or more fastening locations to secure the seat belts to the vehicle.  If an"
+   },
+   {
+    "id": "21V188000",
+    "part": "POWER TRAIN:AXLE ASSEMBLY:AXLE SHAFT",
+    "summary": "General Motors, LLC (GM) is recalling certain 2021 Chevrolet Camaro vehicles.  The left or right axle shaft may be missing a retaining ring, which could allow the axle shaft to separate while driving."
+   },
+   {
+    "id": "21V211000",
+    "part": "AIR BAGS:FRONTAL",
+    "summary": "General Motors, LLC (GM) is recalling certain 2017-2021 Chevrolet Camaro vehicles.  The plastic \"Camaro\" emblem, located on the steering wheel air bag cover, may separate during deployment of the frontal driver air bag."
+   },
+   {
+    "id": "25V148000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION",
+    "summary": "General Motors LLC (GM) is recalling certain 2019-2020 Cadillac CT6, 2020-2021 CT4, CT5, and 2020-2022 Chevrolet Camaro vehicles equipped with a 10-speed transmission.  The transmission may become damaged internally and cause the wheels to lock-up."
+   }
+  ],
+  "2022": [
+   {
+    "id": "25V148000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION",
+    "summary": "General Motors LLC (GM) is recalling certain 2019-2020 Cadillac CT6, 2020-2021 CT4, CT5, and 2020-2022 Chevrolet Camaro vehicles equipped with a 10-speed transmission.  The transmission may become damaged internally and cause the wheels to lock-up."
+   }
+  ],
+  "2023": [],
+  "2024": []
+ },
+ "yt": {
+  "car-camaro-ss": {
+   "videos": 200,
+   "praise": [
+    [
+     "Looks",
+     26
+    ],
+    [
+     "Handling and steering",
+     26
+    ],
+    [
+     "Power and acceleration",
+     18
+    ],
+    [
+     "Everyday comfort",
+     16
+    ]
+   ],
+   "trouble": [],
+   "top": [
+    {
+     "id": "rTJPDurLEKw",
+     "title": "2015 Ford Mustang GT vs. 2015 Chevrolet Camaro SS - Head 2 Head Ep. 58",
+     "views": 5519945,
+     "ch": "MotorTrend Channel"
+    },
+    {
+     "id": "OOZvKEUJcF8",
+     "title": "I BOUGHT a CAMARO SS V8 that NOBODY WANTED for $3K at AUCTION! WAS IT WORTH IT?",
+     "views": 3454423,
+     "ch": "Percepcar USA 🇺🇸 "
+    },
+    {
+     "id": "hCiC1UrQHDA",
+     "title": "2024 Mustang GT Performance vs Camaro SS 1LE // DRAG RACE and LAP TIMES",
+     "views": 2160375,
+     "ch": "Throttle House"
+    }
+   ]
+  },
+  "gm-ls-gen3": {
+   "videos": 200,
+   "praise": [
+    [
+     "Looks",
+     19
+    ],
+    [
+     "Power and acceleration",
+     17
+    ],
+    [
+     "Everyday comfort",
+     10
+    ],
+    [
+     "Handling and steering",
+     10
+    ]
+   ],
+   "trouble": [
+    [
+     "Electrical / wiring / TIPM",
+     10
+    ],
+    [
+     "Oil leaks (gaskets, seals, housings)",
+     9
+    ],
+    [
+     "Coolant leaks / water pump / overheating",
+     6
+    ]
+   ],
+   "top": [
+    {
+     "id": "MuqMjucmMqk",
+     "title": "The 2019 Cadillac CTS-V Is a Crazy Fast Luxury Sedan",
+     "views": 3716085,
+     "ch": "Doug DeMuro"
+    },
+    {
+     "id": "NcCszG4yNIU",
+     "title": "The Chevy Corvette C5 Z06 Is an Insane Sports Car Bargain",
+     "views": 2339914,
+     "ch": "Doug DeMuro"
+    },
+    {
+     "id": "1xVT6JoiXfI",
+     "title": "What its like owning a Cadillac CTS-V",
+     "views": 1979753,
+     "ch": "Rob Dahm"
+    }
+   ]
+  },
+  "gm-ls3": {
+   "videos": 200,
+   "praise": [
+    [
+     "Looks",
+     22
+    ],
+    [
+     "Everyday comfort",
+     16
+    ],
+    [
+     "Handling and steering",
+     15
+    ],
+    [
+     "Power and acceleration",
+     14
+    ]
+   ],
+   "trouble": [],
+   "top": [
+    {
+     "id": "QfJjH4oZDTA",
+     "title": "Here's Why the Chevy SS Was a Total Failure",
+     "views": 6836826,
+     "ch": "Doug DeMuro"
+    },
+    {
+     "id": "OOZvKEUJcF8",
+     "title": "I BOUGHT a CAMARO SS V8 that NOBODY WANTED for $3K at AUCTION! WAS IT WORTH IT?",
+     "views": 3454146,
+     "ch": "Percepcar USA 🇺🇸 "
+    },
+    {
+     "id": "8HP11xIDCX0",
+     "title": "2020 Chevy Camaro SS: The New Camaro Is Way Better Than You Think!!!",
+     "views": 1587027,
+     "ch": "Ben Hardy"
+    }
+   ]
+  },
+  "gm-lt1": {
+   "videos": 200,
+   "praise": [
+    [
+     "Power and acceleration",
+     16
+    ],
+    [
+     "Value",
+     11
+    ],
+    [
+     "Looks",
+     10
+    ],
+    [
+     "Manual gearbox",
+     10
+    ]
+   ],
+   "trouble": [
+    [
+     "Coolant leaks / water pump / overheating",
+     10
+    ],
+    [
+     "AFM lifters",
+     6
+    ]
+   ],
+   "top": [
+    {
+     "id": "B-gzNi6MRwI",
+     "title": "Hennessey C7 Corvette Runs 200 MPH on Texas Toll Road",
+     "views": 6354144,
+     "ch": "Hennessey Performance"
+    },
+    {
+     "id": "3rgOTILxbzY",
+     "title": "2016 Ford Mustang GT vs. 2016 Chevrolet Camaro SS – Comparison | Driving Reviews",
+     "views": 2110899,
+     "ch": "Morrie's Minnetonka Ford"
+    },
+    {
+     "id": "Vq5HkukfCEY",
+     "title": "C7 Corvette - Yes, it Really is That Good",
+     "views": 1331505,
+     "ch": "TheSmokingTire"
+    }
+   ]
+  }
+ },
+ "scores": {
+  "car-camaro-ss": {
+   "years": {
+    "2000": {
+     "score": 60,
+     "weight": 5.4,
+     "videos": 80,
+     "named": 1,
+     "top": [
+      {
+       "id": "OOZvKEUJcF8",
+       "title": "I BOUGHT a CAMARO SS V8 that NOBODY WANTED for $3K at AUCTION! WAS IT WORTH IT?",
+       "views": 3454423
+      },
+      {
+       "id": "Os45XsG4c5s",
+       "title": "I Bought A Camaro SS With A $20,000 ENGINE At COPART!",
+       "views": 1457307
+      },
+      {
+       "id": "AKw20QYYNck",
+       "title": "I Bought A $6,600 Camaro SS & Got A HUGE Surprise!",
+       "views": 1333955
+      }
+     ]
+    },
+    "2001": {
+     "score": 57,
+     "weight": 4.4,
+     "videos": 79,
+     "named": 0,
+     "top": [
+      {
+       "id": "OOZvKEUJcF8",
+       "title": "I BOUGHT a CAMARO SS V8 that NOBODY WANTED for $3K at AUCTION! WAS IT WORTH IT?",
+       "views": 3454423
+      },
+      {
+       "id": "Os45XsG4c5s",
+       "title": "I Bought A Camaro SS With A $20,000 ENGINE At COPART!",
+       "views": 1457307
+      },
+      {
+       "id": "AKw20QYYNck",
+       "title": "I Bought A $6,600 Camaro SS & Got A HUGE Surprise!",
+       "views": 1333955
+      }
+     ]
+    },
+    "2002": {
+     "score": 59,
+     "weight": 5.4,
+     "videos": 80,
+     "named": 1,
+     "top": [
+      {
+       "id": "OOZvKEUJcF8",
+       "title": "I BOUGHT a CAMARO SS V8 that NOBODY WANTED for $3K at AUCTION! WAS IT WORTH IT?",
+       "views": 3454423
+      },
+      {
+       "id": "Os45XsG4c5s",
+       "title": "I Bought A Camaro SS With A $20,000 ENGINE At COPART!",
+       "views": 1457307
+      },
+      {
+       "id": "AKw20QYYNck",
+       "title": "I Bought A $6,600 Camaro SS & Got A HUGE Surprise!",
+       "views": 1333955
+      }
+     ]
+    },
+    "2010": {
+     "score": 59,
+     "weight": 14.2,
+     "videos": 92,
+     "named": 13,
+     "top": [
+      {
+       "id": "OOZvKEUJcF8",
+       "title": "I BOUGHT a CAMARO SS V8 that NOBODY WANTED for $3K at AUCTION! WAS IT WORTH IT?",
+       "views": 3454423
+      },
+      {
+       "id": "Os45XsG4c5s",
+       "title": "I Bought A Camaro SS With A $20,000 ENGINE At COPART!",
+       "views": 1457307
+      },
+      {
+       "id": "AKw20QYYNck",
+       "title": "I Bought A $6,600 Camaro SS & Got A HUGE Surprise!",
+       "views": 1333955
+      }
+     ]
+    },
+    "2011": {
+     "score": 52,
+     "weight": 6.2,
+     "videos": 84,
+     "named": 5,
+     "top": [
+      {
+       "id": "OOZvKEUJcF8",
+       "title": "I BOUGHT a CAMARO SS V8 that NOBODY WANTED for $3K at AUCTION! WAS IT WORTH IT?",
+       "views": 3454423
+      },
+      {
+       "id": "Os45XsG4c5s",
+       "title": "I Bought A Camaro SS With A $20,000 ENGINE At COPART!",
+       "views": 1457307
+      },
+      {
+       "id": "AKw20QYYNck",
+       "title": "I Bought A $6,600 Camaro SS & Got A HUGE Surprise!",
+       "views": 1333955
+      }
+     ]
+    },
+    "2012": {
+     "score": 57,
+     "weight": 9.7,
+     "videos": 88,
+     "named": 9,
+     "top": [
+      {
+       "id": "OOZvKEUJcF8",
+       "title": "I BOUGHT a CAMARO SS V8 that NOBODY WANTED for $3K at AUCTION! WAS IT WORTH IT?",
+       "views": 3454423
+      },
+      {
+       "id": "Os45XsG4c5s",
+       "title": "I Bought A Camaro SS With A $20,000 ENGINE At COPART!",
+       "views": 1457307
+      },
+      {
+       "id": "AKw20QYYNck",
+       "title": "I Bought A $6,600 Camaro SS & Got A HUGE Surprise!",
+       "views": 1333955
+      }
+     ]
+    },
+    "2013": {
+     "score": 57,
+     "weight": 10.2,
+     "videos": 88,
+     "named": 9,
+     "top": [
+      {
+       "id": "OOZvKEUJcF8",
+       "title": "I BOUGHT a CAMARO SS V8 that NOBODY WANTED for $3K at AUCTION! WAS IT WORTH IT?",
+       "views": 3454423
+      },
+      {
+       "id": "Os45XsG4c5s",
+       "title": "I Bought A Camaro SS With A $20,000 ENGINE At COPART!",
+       "views": 1457307
+      },
+      {
+       "id": "AKw20QYYNck",
+       "title": "I Bought A $6,600 Camaro SS & Got A HUGE Surprise!",
+       "views": 1333955
+      }
+     ]
+    },
+    "2014": {
+     "score": 59,
+     "weight": 8.7,
+     "videos": 85,
+     "named": 6,
+     "top": [
+      {
+       "id": "OOZvKEUJcF8",
+       "title": "I BOUGHT a CAMARO SS V8 that NOBODY WANTED for $3K at AUCTION! WAS IT WORTH IT?",
+       "views": 3454423
+      },
+      {
+       "id": "Os45XsG4c5s",
+       "title": "I Bought A Camaro SS With A $20,000 ENGINE At COPART!",
+       "views": 1457307
+      },
+      {
+       "id": "zkYRCLNQ7vo",
+       "title": "2014 Chevrolet Camaro SS 1LE Start Up, Exhaust, and In Depth Review",
+       "views": 1452730
+      }
+     ]
+    },
+    "2015": {
+     "score": 54,
+     "weight": 14.7,
+     "videos": 91,
+     "named": 12,
+     "top": [
+      {
+       "id": "rTJPDurLEKw",
+       "title": "2015 Ford Mustang GT vs. 2015 Chevrolet Camaro SS - Head 2 Head Ep. 58",
+       "views": 5519945
+      },
+      {
+       "id": "OOZvKEUJcF8",
+       "title": "I BOUGHT a CAMARO SS V8 that NOBODY WANTED for $3K at AUCTION! WAS IT WORTH IT?",
+       "views": 3454423
+      },
+      {
+       "id": "Os45XsG4c5s",
+       "title": "I Bought A Camaro SS With A $20,000 ENGINE At COPART!",
+       "views": 1457307
+      }
+     ]
+    },
+    "2016": {
+     "score": 58,
+     "weight": 17.5,
+     "videos": 95,
+     "named": 16,
+     "top": [
+      {
+       "id": "OOZvKEUJcF8",
+       "title": "I BOUGHT a CAMARO SS V8 that NOBODY WANTED for $3K at AUCTION! WAS IT WORTH IT?",
+       "views": 3454423
+      },
+      {
+       "id": "3rgOTILxbzY",
+       "title": "2016 Ford Mustang GT vs. 2016 Chevrolet Camaro SS – Comparison | Driving Reviews",
+       "views": 2110899
+      },
+      {
+       "id": "o0vBLmJp9ck",
+       "title": "2016 Chevrolet Camaro SS – Redline: Review",
+       "views": 1710325
+      }
+     ]
+    },
+    "2017": {
+     "score": 55,
+     "weight": 16.0,
+     "videos": 94,
+     "named": 15,
+     "top": [
+      {
+       "id": "OOZvKEUJcF8",
+       "title": "I BOUGHT a CAMARO SS V8 that NOBODY WANTED for $3K at AUCTION! WAS IT WORTH IT?",
+       "views": 3454423
+      },
+      {
+       "id": "Os45XsG4c5s",
+       "title": "I Bought A Camaro SS With A $20,000 ENGINE At COPART!",
+       "views": 1457307
+      },
+      {
+       "id": "AKw20QYYNck",
+       "title": "I Bought A $6,600 Camaro SS & Got A HUGE Surprise!",
+       "views": 1333955
+      }
+     ]
+    },
+    "2018": {
+     "score": 54,
+     "weight": 13.5,
+     "videos": 90,
+     "named": 11,
+     "top": [
+      {
+       "id": "OOZvKEUJcF8",
+       "title": "I BOUGHT a CAMARO SS V8 that NOBODY WANTED for $3K at AUCTION! WAS IT WORTH IT?",
+       "views": 3454423
+      },
+      {
+       "id": "Os45XsG4c5s",
+       "title": "I Bought A Camaro SS With A $20,000 ENGINE At COPART!",
+       "views": 1457307
+      },
+      {
+       "id": "AKw20QYYNck",
+       "title": "I Bought A $6,600 Camaro SS & Got A HUGE Surprise!",
+       "views": 1333955
+      }
+     ]
+    },
+    "2019": {
+     "score": 55,
+     "weight": 14.6,
+     "videos": 90,
+     "named": 11,
+     "top": [
+      {
+       "id": "OOZvKEUJcF8",
+       "title": "I BOUGHT a CAMARO SS V8 that NOBODY WANTED for $3K at AUCTION! WAS IT WORTH IT?",
+       "views": 3454423
+      },
+      {
+       "id": "g4qCP2FtGuk",
+       "title": "2019 Chevrolet Camaro SS 1LE: Start Up, Exhaust, Test Drive and Review",
+       "views": 1459645
+      },
+      {
+       "id": "Os45XsG4c5s",
+       "title": "I Bought A Camaro SS With A $20,000 ENGINE At COPART!",
+       "views": 1457307
+      }
+     ]
+    },
+    "2020": {
+     "score": 63,
+     "weight": 13.4,
+     "videos": 89,
+     "named": 10,
+     "top": [
+      {
+       "id": "OOZvKEUJcF8",
+       "title": "I BOUGHT a CAMARO SS V8 that NOBODY WANTED for $3K at AUCTION! WAS IT WORTH IT?",
+       "views": 3454423
+      },
+      {
+       "id": "8HP11xIDCX0",
+       "title": "2020 Chevy Camaro SS: The New Camaro Is Way Better Than You Think!!!",
+       "views": 1587027
+      },
+      {
+       "id": "Os45XsG4c5s",
+       "title": "I Bought A Camaro SS With A $20,000 ENGINE At COPART!",
+       "views": 1457307
+      }
+     ]
+    },
+    "2021": {
+     "score": 64,
+     "weight": 11.9,
+     "videos": 87,
+     "named": 8,
+     "top": [
+      {
+       "id": "OOZvKEUJcF8",
+       "title": "I BOUGHT a CAMARO SS V8 that NOBODY WANTED for $3K at AUCTION! WAS IT WORTH IT?",
+       "views": 3454423
+      },
+      {
+       "id": "Os45XsG4c5s",
+       "title": "I Bought A Camaro SS With A $20,000 ENGINE At COPART!",
+       "views": 1457307
+      },
+      {
+       "id": "AKw20QYYNck",
+       "title": "I Bought A $6,600 Camaro SS & Got A HUGE Surprise!",
+       "views": 1333955
+      }
+     ]
+    },
+    "2022": {
+     "score": 63,
+     "weight": 9.4,
+     "videos": 84,
+     "named": 5,
+     "top": [
+      {
+       "id": "OOZvKEUJcF8",
+       "title": "I BOUGHT a CAMARO SS V8 that NOBODY WANTED for $3K at AUCTION! WAS IT WORTH IT?",
+       "views": 3454423
+      },
+      {
+       "id": "Os45XsG4c5s",
+       "title": "I Bought A Camaro SS With A $20,000 ENGINE At COPART!",
+       "views": 1457307
+      },
+      {
+       "id": "AKw20QYYNck",
+       "title": "I Bought A $6,600 Camaro SS & Got A HUGE Surprise!",
+       "views": 1333955
+      }
+     ]
+    },
+    "2023": {
+     "score": 65,
+     "weight": 13.4,
+     "videos": 88,
+     "named": 9,
+     "top": [
+      {
+       "id": "OOZvKEUJcF8",
+       "title": "I BOUGHT a CAMARO SS V8 that NOBODY WANTED for $3K at AUCTION! WAS IT WORTH IT?",
+       "views": 3454423
+      },
+      {
+       "id": "Os45XsG4c5s",
+       "title": "I Bought A Camaro SS With A $20,000 ENGINE At COPART!",
+       "views": 1457307
+      },
+      {
+       "id": "AKw20QYYNck",
+       "title": "I Bought A $6,600 Camaro SS & Got A HUGE Surprise!",
+       "views": 1333955
+      }
+     ]
+    },
+    "2024": {
+     "score": 58,
+     "weight": 9.4,
+     "videos": 84,
+     "named": 5,
+     "top": [
+      {
+       "id": "OOZvKEUJcF8",
+       "title": "I BOUGHT a CAMARO SS V8 that NOBODY WANTED for $3K at AUCTION! WAS IT WORTH IT?",
+       "views": 3454423
+      },
+      {
+       "id": "hCiC1UrQHDA",
+       "title": "2024 Mustang GT Performance vs Camaro SS 1LE // DRAG RACE and LAP TIMES",
+       "views": 2160375
+      },
+      {
+       "id": "Os45XsG4c5s",
+       "title": "I Bought A Camaro SS With A $20,000 ENGINE At COPART!",
+       "views": 1457307
+      }
+     ]
+    }
+   },
+   "videos": 198,
+   "pulled": 200
+  },
+  "gm-ls-gen3": {
+   "years": {
+    "1997": {
+     "score": 45,
+     "weight": 10.9,
+     "videos": 84,
+     "named": 7,
+     "top": [
+      {
+       "id": "NcCszG4yNIU",
+       "title": "The Chevy Corvette C5 Z06 Is an Insane Sports Car Bargain",
+       "views": 2339914
+      },
+      {
+       "id": "iq-f_hvynqA",
+       "title": "VIRGINIA MAN STRIKES GOLD WITH 1970 LS6 SS454 CHEVELLE THAT RUNS AFTER BEING PARKED 35 YEARS!!!",
+       "views": 1468131
+      },
+      {
+       "id": "4ssA_O4GGhA",
+       "title": "V12 LS1 engine dyno",
+       "views": 867326
+      }
+     ]
+    },
+    "1998": {
+     "score": 46,
+     "weight": 10.6,
+     "videos": 85,
+     "named": 7,
+     "top": [
+      {
+       "id": "NcCszG4yNIU",
+       "title": "The Chevy Corvette C5 Z06 Is an Insane Sports Car Bargain",
+       "views": 2339914
+      },
+      {
+       "id": "iq-f_hvynqA",
+       "title": "VIRGINIA MAN STRIKES GOLD WITH 1970 LS6 SS454 CHEVELLE THAT RUNS AFTER BEING PARKED 35 YEARS!!!",
+       "views": 1468131
+      },
+      {
+       "id": "4ssA_O4GGhA",
+       "title": "V12 LS1 engine dyno",
+       "views": 867326
+      }
+     ]
+    },
+    "1999": {
+     "score": 45,
+     "weight": 11.6,
+     "videos": 86,
+     "named": 8,
+     "top": [
+      {
+       "id": "NcCszG4yNIU",
+       "title": "The Chevy Corvette C5 Z06 Is an Insane Sports Car Bargain",
+       "views": 2339914
+      },
+      {
+       "id": "iq-f_hvynqA",
+       "title": "VIRGINIA MAN STRIKES GOLD WITH 1970 LS6 SS454 CHEVELLE THAT RUNS AFTER BEING PARKED 35 YEARS!!!",
+       "views": 1468131
+      },
+      {
+       "id": "4ssA_O4GGhA",
+       "title": "V12 LS1 engine dyno",
+       "views": 867326
+      }
+     ]
+    },
+    "2000": {
+     "score": 45,
+     "weight": 11.1,
+     "videos": 85,
+     "named": 7,
+     "top": [
+      {
+       "id": "NcCszG4yNIU",
+       "title": "The Chevy Corvette C5 Z06 Is an Insane Sports Car Bargain",
+       "views": 2339914
+      },
+      {
+       "id": "iq-f_hvynqA",
+       "title": "VIRGINIA MAN STRIKES GOLD WITH 1970 LS6 SS454 CHEVELLE THAT RUNS AFTER BEING PARKED 35 YEARS!!!",
+       "views": 1468131
+      },
+      {
+       "id": "4ssA_O4GGhA",
+       "title": "V12 LS1 engine dyno",
+       "views": 867326
+      }
+     ]
+    },
+    "2001": {
+     "score": 43,
+     "weight": 14.1,
+     "videos": 88,
+     "named": 10,
+     "top": [
+      {
+       "id": "NcCszG4yNIU",
+       "title": "The Chevy Corvette C5 Z06 Is an Insane Sports Car Bargain",
+       "views": 2339914
+      },
+      {
+       "id": "iq-f_hvynqA",
+       "title": "VIRGINIA MAN STRIKES GOLD WITH 1970 LS6 SS454 CHEVELLE THAT RUNS AFTER BEING PARKED 35 YEARS!!!",
+       "views": 1468131
+      },
+      {
+       "id": "8oAumIAs71g",
+       "title": "Regular Car Reviews: 2001 Chevrolet Corvette C5",
+       "views": 1069624
+      }
+     ]
+    },
+    "2002": {
+     "score": 49,
+     "weight": 14.1,
+     "videos": 88,
+     "named": 10,
+     "top": [
+      {
+       "id": "NcCszG4yNIU",
+       "title": "The Chevy Corvette C5 Z06 Is an Insane Sports Car Bargain",
+       "views": 2339914
+      },
+      {
+       "id": "iq-f_hvynqA",
+       "title": "VIRGINIA MAN STRIKES GOLD WITH 1970 LS6 SS454 CHEVELLE THAT RUNS AFTER BEING PARKED 35 YEARS!!!",
+       "views": 1468131
+      },
+      {
+       "id": "4ssA_O4GGhA",
+       "title": "V12 LS1 engine dyno",
+       "views": 867326
+      }
+     ]
+    },
+    "2003": {
+     "score": 43,
+     "weight": 8.9,
+     "videos": 82,
+     "named": 5,
+     "top": [
+      {
+       "id": "NcCszG4yNIU",
+       "title": "The Chevy Corvette C5 Z06 Is an Insane Sports Car Bargain",
+       "views": 2339914
+      },
+      {
+       "id": "iq-f_hvynqA",
+       "title": "VIRGINIA MAN STRIKES GOLD WITH 1970 LS6 SS454 CHEVELLE THAT RUNS AFTER BEING PARKED 35 YEARS!!!",
+       "views": 1468131
+      },
+      {
+       "id": "4ssA_O4GGhA",
+       "title": "V12 LS1 engine dyno",
+       "views": 867326
+      }
+     ]
+    },
+    "2004": {
+     "score": 44,
+     "weight": 13.1,
+     "videos": 95,
+     "named": 8,
+     "top": [
+      {
+       "id": "NcCszG4yNIU",
+       "title": "The Chevy Corvette C5 Z06 Is an Insane Sports Car Bargain",
+       "views": 2339914
+      },
+      {
+       "id": "iq-f_hvynqA",
+       "title": "VIRGINIA MAN STRIKES GOLD WITH 1970 LS6 SS454 CHEVELLE THAT RUNS AFTER BEING PARKED 35 YEARS!!!",
+       "views": 1468131
+      },
+      {
+       "id": "g8K5TNHnyTU",
+       "title": "Muscle Car Royalty: Original and (mostly) Unrestored 1966 Pontiac GTO - Jay Leno's Garage",
+       "views": 1291367
+      }
+     ]
+    },
+    "2005": {
+     "score": 51,
+     "weight": 9.5,
+     "videos": 45,
+     "named": 6,
+     "top": [
+      {
+       "id": "iq-f_hvynqA",
+       "title": "VIRGINIA MAN STRIKES GOLD WITH 1970 LS6 SS454 CHEVELLE THAT RUNS AFTER BEING PARKED 35 YEARS!!!",
+       "views": 1468131
+      },
+      {
+       "id": "g8K5TNHnyTU",
+       "title": "Muscle Car Royalty: Original and (mostly) Unrestored 1966 Pontiac GTO - Jay Leno's Garage",
+       "views": 1291367
+      },
+      {
+       "id": "J8IYYZr_wfM",
+       "title": "Muscle Car Of The Week 1967 Pontiac GTO Restoration and Unveiling V8TV",
+       "views": 974699
+      }
+     ]
+    },
+    "2006": {
+     "score": 50,
+     "weight": 19.0,
+     "videos": 71,
+     "named": 10,
+     "top": [
+      {
+       "id": "iq-f_hvynqA",
+       "title": "VIRGINIA MAN STRIKES GOLD WITH 1970 LS6 SS454 CHEVELLE THAT RUNS AFTER BEING PARKED 35 YEARS!!!",
+       "views": 1468131
+      },
+      {
+       "id": "g8K5TNHnyTU",
+       "title": "Muscle Car Royalty: Original and (mostly) Unrestored 1966 Pontiac GTO - Jay Leno's Garage",
+       "views": 1291367
+      },
+      {
+       "id": "JOvG_2Y-aN8",
+       "title": "Procharger Trailblazer SS AWD Donut  Burnout",
+       "views": 1167347
+      }
+     ]
+    },
+    "2007": {
+     "score": 50,
+     "weight": 9.0,
+     "videos": 53,
+     "named": 1,
+     "top": [
+      {
+       "id": "iq-f_hvynqA",
+       "title": "VIRGINIA MAN STRIKES GOLD WITH 1970 LS6 SS454 CHEVELLE THAT RUNS AFTER BEING PARKED 35 YEARS!!!",
+       "views": 1468131
+      },
+      {
+       "id": "JOvG_2Y-aN8",
+       "title": "Procharger Trailblazer SS AWD Donut  Burnout",
+       "views": 1167347
+      },
+      {
+       "id": "4ssA_O4GGhA",
+       "title": "V12 LS1 engine dyno",
+       "views": 867326
+      }
+     ]
+    },
+    "2008": {
+     "score": 50,
+     "weight": 7.7,
+     "videos": 51,
+     "named": 0,
+     "top": [
+      {
+       "id": "iq-f_hvynqA",
+       "title": "VIRGINIA MAN STRIKES GOLD WITH 1970 LS6 SS454 CHEVELLE THAT RUNS AFTER BEING PARKED 35 YEARS!!!",
+       "views": 1468131
+      },
+      {
+       "id": "JOvG_2Y-aN8",
+       "title": "Procharger Trailblazer SS AWD Donut  Burnout",
+       "views": 1167347
+      },
+      {
+       "id": "4ssA_O4GGhA",
+       "title": "V12 LS1 engine dyno",
+       "views": 867326
+      }
+     ]
+    },
+    "2009": {
+     "score": 50,
+     "weight": 7.7,
+     "videos": 51,
+     "named": 0,
+     "top": [
+      {
+       "id": "iq-f_hvynqA",
+       "title": "VIRGINIA MAN STRIKES GOLD WITH 1970 LS6 SS454 CHEVELLE THAT RUNS AFTER BEING PARKED 35 YEARS!!!",
+       "views": 1468131
+      },
+      {
+       "id": "JOvG_2Y-aN8",
+       "title": "Procharger Trailblazer SS AWD Donut  Burnout",
+       "views": 1167347
+      },
+      {
+       "id": "4ssA_O4GGhA",
+       "title": "V12 LS1 engine dyno",
+       "views": 867326
+      }
+     ]
+    }
+   },
+   "videos": 147,
+   "pulled": 200
+  },
+  "gm-ls3": {
+   "years": {
+    "2008": {
+     "score": 45,
+     "weight": 11.2,
+     "videos": 76,
+     "named": 7,
+     "top": [
+      {
+       "id": "9LXRHywt8bY",
+       "title": "Regular Car Reviews: 2008 Chevrolet Corvette C6",
+       "views": 800523
+      },
+      {
+       "id": "qzIGo3Q0rdU",
+       "title": "A Custom 419ci Supercharged LS3 Puts Down Big Pump-Gas Power - Engine Power S9, E18 & 19",
+       "views": 751020
+      },
+      {
+       "id": "oVAKu2oeSzA",
+       "title": "BRUTAL 600HP LS3 V8 Powered Nissan Silvia S14 Engine Swap!!",
+       "views": 730786
+      }
+     ]
+    },
+    "2009": {
+     "score": 51,
+     "weight": 16.2,
+     "videos": 81,
+     "named": 10,
+     "top": [
+      {
+       "id": "qzIGo3Q0rdU",
+       "title": "A Custom 419ci Supercharged LS3 Puts Down Big Pump-Gas Power - Engine Power S9, E18 & 19",
+       "views": 751020
+      },
+      {
+       "id": "oVAKu2oeSzA",
+       "title": "BRUTAL 600HP LS3 V8 Powered Nissan Silvia S14 Engine Swap!!",
+       "views": 730786
+      },
+      {
+       "id": "eKJt5LiABaw",
+       "title": "The Ultimate C6 Corvette Buyer's Guide!",
+       "views": 652255
+      }
+     ]
+    },
+    "2010": {
+     "score": 49,
+     "weight": 13.8,
+     "videos": 86,
+     "named": 12,
+     "top": [
+      {
+       "id": "qzIGo3Q0rdU",
+       "title": "A Custom 419ci Supercharged LS3 Puts Down Big Pump-Gas Power - Engine Power S9, E18 & 19",
+       "views": 751020
+      },
+      {
+       "id": "oVAKu2oeSzA",
+       "title": "BRUTAL 600HP LS3 V8 Powered Nissan Silvia S14 Engine Swap!!",
+       "views": 730786
+      },
+      {
+       "id": "eKJt5LiABaw",
+       "title": "The Ultimate C6 Corvette Buyer's Guide!",
+       "views": 652255
+      }
+     ]
+    },
+    "2011": {
+     "score": 46,
+     "weight": 11.8,
+     "videos": 84,
+     "named": 10,
+     "top": [
+      {
+       "id": "qzIGo3Q0rdU",
+       "title": "A Custom 419ci Supercharged LS3 Puts Down Big Pump-Gas Power - Engine Power S9, E18 & 19",
+       "views": 751020
+      },
+      {
+       "id": "oVAKu2oeSzA",
+       "title": "BRUTAL 600HP LS3 V8 Powered Nissan Silvia S14 Engine Swap!!",
+       "views": 730786
+      },
+      {
+       "id": "eKJt5LiABaw",
+       "title": "The Ultimate C6 Corvette Buyer's Guide!",
+       "views": 652255
+      }
+     ]
+    },
+    "2012": {
+     "score": 47,
+     "weight": 13.8,
+     "videos": 86,
+     "named": 12,
+     "top": [
+      {
+       "id": "qzIGo3Q0rdU",
+       "title": "A Custom 419ci Supercharged LS3 Puts Down Big Pump-Gas Power - Engine Power S9, E18 & 19",
+       "views": 751020
+      },
+      {
+       "id": "oVAKu2oeSzA",
+       "title": "BRUTAL 600HP LS3 V8 Powered Nissan Silvia S14 Engine Swap!!",
+       "views": 730786
+      },
+      {
+       "id": "eKJt5LiABaw",
+       "title": "The Ultimate C6 Corvette Buyer's Guide!",
+       "views": 652255
+      }
+     ]
+    },
+    "2013": {
+     "score": 46,
+     "weight": 11.8,
+     "videos": 84,
+     "named": 10,
+     "top": [
+      {
+       "id": "qzIGo3Q0rdU",
+       "title": "A Custom 419ci Supercharged LS3 Puts Down Big Pump-Gas Power - Engine Power S9, E18 & 19",
+       "views": 751020
+      },
+      {
+       "id": "oVAKu2oeSzA",
+       "title": "BRUTAL 600HP LS3 V8 Powered Nissan Silvia S14 Engine Swap!!",
+       "views": 730786
+      },
+      {
+       "id": "eKJt5LiABaw",
+       "title": "The Ultimate C6 Corvette Buyer's Guide!",
+       "views": 652255
+      }
+     ]
+    },
+    "2014": {
+     "score": 58,
+     "weight": 20.7,
+     "videos": 85,
+     "named": 9,
+     "top": [
+      {
+       "id": "QfJjH4oZDTA",
+       "title": "Here's Why the Chevy SS Was a Total Failure",
+       "views": 6836826
+      },
+      {
+       "id": "gbdrsDJoQ2k",
+       "title": "815+HP Supercharged Chevy SS hurting feelings at Powercruise USA",
+       "views": 1580751
+      },
+      {
+       "id": "nM_-xRPRulM",
+       "title": "2014 Chevrolet SS is a Stealth Tire Shredder",
+       "views": 1184565
+      }
+     ]
+    },
+    "2015": {
+     "score": 55,
+     "weight": 18.7,
+     "videos": 83,
+     "named": 7,
+     "top": [
+      {
+       "id": "QfJjH4oZDTA",
+       "title": "Here's Why the Chevy SS Was a Total Failure",
+       "views": 6836826
+      },
+      {
+       "id": "gbdrsDJoQ2k",
+       "title": "815+HP Supercharged Chevy SS hurting feelings at Powercruise USA",
+       "views": 1580751
+      },
+      {
+       "id": "qzIGo3Q0rdU",
+       "title": "A Custom 419ci Supercharged LS3 Puts Down Big Pump-Gas Power - Engine Power S9, E18 & 19",
+       "views": 751020
+      }
+     ]
+    },
+    "2016": {
+     "score": 56,
+     "weight": 12.5,
+     "videos": 71,
+     "named": 0,
+     "top": [
+      {
+       "id": "QfJjH4oZDTA",
+       "title": "Here's Why the Chevy SS Was a Total Failure",
+       "views": 6836826
+      },
+      {
+       "id": "gbdrsDJoQ2k",
+       "title": "815+HP Supercharged Chevy SS hurting feelings at Powercruise USA",
+       "views": 1580751
+      },
+      {
+       "id": "qzIGo3Q0rdU",
+       "title": "A Custom 419ci Supercharged LS3 Puts Down Big Pump-Gas Power - Engine Power S9, E18 & 19",
+       "views": 751020
+      }
+     ]
+    },
+    "2017": {
+     "score": 57,
+     "weight": 21.5,
+     "videos": 80,
+     "named": 9,
+     "top": [
+      {
+       "id": "QfJjH4oZDTA",
+       "title": "Here's Why the Chevy SS Was a Total Failure",
+       "views": 6836826
+      },
+      {
+       "id": "gbdrsDJoQ2k",
+       "title": "815+HP Supercharged Chevy SS hurting feelings at Powercruise USA",
+       "views": 1580751
+      },
+      {
+       "id": "qzIGo3Q0rdU",
+       "title": "A Custom 419ci Supercharged LS3 Puts Down Big Pump-Gas Power - Engine Power S9, E18 & 19",
+       "views": 751020
+      }
+     ]
+    }
+   },
+   "videos": 152,
+   "pulled": 200
+  },
+  "gm-lt1": {
+   "years": {
+    "2014": {
+     "score": 46,
+     "weight": 18.7,
+     "videos": 128,
+     "named": 5,
+     "top": [
+      {
+       "id": "B-gzNi6MRwI",
+       "title": "Hennessey C7 Corvette Runs 200 MPH on Texas Toll Road",
+       "views": 6354144
+      },
+      {
+       "id": "Vq5HkukfCEY",
+       "title": "C7 Corvette - Yes, it Really is That Good",
+       "views": 1331505
+      },
+      {
+       "id": "eYELTFLoHXc",
+       "title": "Regular Car Reviews: 2014 Corvette C7 Stingray",
+       "views": 947079
+      }
+     ]
+    },
+    "2015": {
+     "score": 43,
+     "weight": 20.7,
+     "videos": 130,
+     "named": 7,
+     "top": [
+      {
+       "id": "B-gzNi6MRwI",
+       "title": "Hennessey C7 Corvette Runs 200 MPH on Texas Toll Road",
+       "views": 6354144
+      },
+      {
+       "id": "Vq5HkukfCEY",
+       "title": "C7 Corvette - Yes, it Really is That Good",
+       "views": 1331505
+      },
+      {
+       "id": "qxFFTHbJQ7Y",
+       "title": "EXPLODED! GM 6.2L LT1/L86 Gen5 V8 Engine Teardown. 2015 Escalade Catastrophic Failure Explained",
+       "views": 1169875
+      }
+     ]
+    },
+    "2016": {
+     "score": 51,
+     "weight": 40.8,
+     "videos": 160,
+     "named": 34,
+     "top": [
+      {
+       "id": "B-gzNi6MRwI",
+       "title": "Hennessey C7 Corvette Runs 200 MPH on Texas Toll Road",
+       "views": 6354144
+      },
+      {
+       "id": "3rgOTILxbzY",
+       "title": "2016 Ford Mustang GT vs. 2016 Chevrolet Camaro SS – Comparison | Driving Reviews",
+       "views": 2110899
+      },
+      {
+       "id": "Vq5HkukfCEY",
+       "title": "C7 Corvette - Yes, it Really is That Good",
+       "views": 1331505
+      }
+     ]
+    },
+    "2017": {
+     "score": 49,
+     "weight": 24.8,
+     "videos": 144,
+     "named": 18,
+     "top": [
+      {
+       "id": "B-gzNi6MRwI",
+       "title": "Hennessey C7 Corvette Runs 200 MPH on Texas Toll Road",
+       "views": 6354144
+      },
+      {
+       "id": "Vq5HkukfCEY",
+       "title": "C7 Corvette - Yes, it Really is That Good",
+       "views": 1331505
+      },
+      {
+       "id": "RmfKDOOv1OA",
+       "title": "Corvette C7 Stingray Review - Everyday Driver",
+       "views": 838491
+      }
+     ]
+    },
+    "2018": {
+     "score": 45,
+     "weight": 20.3,
+     "videos": 139,
+     "named": 13,
+     "top": [
+      {
+       "id": "B-gzNi6MRwI",
+       "title": "Hennessey C7 Corvette Runs 200 MPH on Texas Toll Road",
+       "views": 6354144
+      },
+      {
+       "id": "Vq5HkukfCEY",
+       "title": "C7 Corvette - Yes, it Really is That Good",
+       "views": 1331505
+      },
+      {
+       "id": "RmfKDOOv1OA",
+       "title": "Corvette C7 Stingray Review - Everyday Driver",
+       "views": 838491
+      }
+     ]
+    },
+    "2019": {
+     "score": 47,
+     "weight": 21.9,
+     "videos": 140,
+     "named": 14,
+     "top": [
+      {
+       "id": "B-gzNi6MRwI",
+       "title": "Hennessey C7 Corvette Runs 200 MPH on Texas Toll Road",
+       "views": 6354144
+      },
+      {
+       "id": "Vq5HkukfCEY",
+       "title": "C7 Corvette - Yes, it Really is That Good",
+       "views": 1331505
+      },
+      {
+       "id": "RmfKDOOv1OA",
+       "title": "Corvette C7 Stingray Review - Everyday Driver",
+       "views": 838491
+      }
+     ]
+    },
+    "2020": {
+     "score": 44,
+     "weight": 7.2,
+     "videos": 57,
+     "named": 8,
+     "top": [
+      {
+       "id": "QQ7v28KMC1s",
+       "title": "Bad Corvette Camaro Trans Am Gen2 LT1 350 Teardown. Not The Problem I Was Told!",
+       "views": 663375
+      },
+      {
+       "id": "Z-IJi2xqWyo",
+       "title": "THE OTHER LT1-AWESOME & UNAPPRECIATED",
+       "views": 418013
+      },
+      {
+       "id": "1o0HzNx8JqM",
+       "title": "Borla Exhaust for 2016-2024 Camaro SS [Exhaust System Sounds]",
+       "views": 415980
+      }
+     ]
+    },
+    "2021": {
+     "score": 46,
+     "weight": 8.2,
+     "videos": 58,
+     "named": 9,
+     "top": [
+      {
+       "id": "QQ7v28KMC1s",
+       "title": "Bad Corvette Camaro Trans Am Gen2 LT1 350 Teardown. Not The Problem I Was Told!",
+       "views": 663375
+      },
+      {
+       "id": "Z-IJi2xqWyo",
+       "title": "THE OTHER LT1-AWESOME & UNAPPRECIATED",
+       "views": 418013
+      },
+      {
+       "id": "1o0HzNx8JqM",
+       "title": "Borla Exhaust for 2016-2024 Camaro SS [Exhaust System Sounds]",
+       "views": 415980
+      }
+     ]
+    },
+    "2022": {
+     "score": 44,
+     "weight": 5.2,
+     "videos": 55,
+     "named": 6,
+     "top": [
+      {
+       "id": "QQ7v28KMC1s",
+       "title": "Bad Corvette Camaro Trans Am Gen2 LT1 350 Teardown. Not The Problem I Was Told!",
+       "views": 663375
+      },
+      {
+       "id": "Z-IJi2xqWyo",
+       "title": "THE OTHER LT1-AWESOME & UNAPPRECIATED",
+       "views": 418013
+      },
+      {
+       "id": "1o0HzNx8JqM",
+       "title": "Borla Exhaust for 2016-2024 Camaro SS [Exhaust System Sounds]",
+       "views": 415980
+      }
+     ]
+    },
+    "2023": {
+     "score": 44,
+     "weight": 5.2,
+     "videos": 55,
+     "named": 6,
+     "top": [
+      {
+       "id": "QQ7v28KMC1s",
+       "title": "Bad Corvette Camaro Trans Am Gen2 LT1 350 Teardown. Not The Problem I Was Told!",
+       "views": 663375
+      },
+      {
+       "id": "Z-IJi2xqWyo",
+       "title": "THE OTHER LT1-AWESOME & UNAPPRECIATED",
+       "views": 418013
+      },
+      {
+       "id": "1o0HzNx8JqM",
+       "title": "Borla Exhaust for 2016-2024 Camaro SS [Exhaust System Sounds]",
+       "views": 415980
+      }
+     ]
+    },
+    "2024": {
+     "score": 50,
+     "weight": 7.1,
+     "videos": 56,
+     "named": 7,
+     "top": [
+      {
+       "id": "QQ7v28KMC1s",
+       "title": "Bad Corvette Camaro Trans Am Gen2 LT1 350 Teardown. Not The Problem I Was Told!",
+       "views": 663375
+      },
+      {
+       "id": "Z-IJi2xqWyo",
+       "title": "THE OTHER LT1-AWESOME & UNAPPRECIATED",
+       "views": 418013
+      },
+      {
+       "id": "1o0HzNx8JqM",
+       "title": "Borla Exhaust for 2016-2024 Camaro SS [Exhaust System Sounds]",
+       "views": 415980
+      }
+     ]
+    }
+   },
+   "videos": 180,
+   "pulled": 200
+  }
+ }
+}

@@ -1,0 +1,403 @@
+{
+ "built": "2026-11-11",
+ "nhtsa": {
+  "by_year": {
+   "2023": 2,
+   "2024": 2,
+   "2025": 1
+  },
+  "gens": {
+   "rz34": {
+    "n": 5,
+    "issues": {
+     "Turbo bearing oil leaks (Infiniti cars)": {
+      "n": 0,
+      "ex": []
+     },
+     "Second-gear grind, early manual cars (transmission)": {
+      "n": 0,
+      "ex": []
+     },
+     "Check-engine light, MAF codes P0101 / P010B": {
+      "n": 0,
+      "ex": []
+     },
+     "Stall after hard acceleration (Infiniti recall)": {
+      "n": 1,
+      "ex": [
+       "11770567"
+      ]
+     }
+    }
+   }
+  },
+  "parts": [
+   [
+    "Structure",
+    2
+   ],
+   [
+    "Electrical system",
+    1
+   ],
+   [
+    "Unknown or other",
+    1
+   ],
+   [
+    "Fuel/propulsion system",
+    1
+   ],
+   [
+    "Air bags",
+    1
+   ],
+   [
+    "Seat belts",
+    1
+   ]
+  ]
+ },
+ "recalls": {
+  "2023": [
+   {
+    "id": "23V725000",
+    "part": "STRUCTURE:BODY:BUMPERS",
+    "summary": "Nissan North America, Inc. (Nissan) is recalling certain 2023-2024 Nissan Z vehicles.  The fasteners in the left-side front bumper reinforcement clip may loosen, which can prevent the pop-up engine hood from activating."
+   },
+   {
+    "id": "24V798000",
+    "part": "STRUCTURE:BODY:BUMPERS",
+    "summary": "Nissan North America, Inc. (Nissan) is recalling certain 2023-2024 Nissan Z vehicles.  The connectors for the right-side pedestrian detection sensors may be reversed in the front bumper harness, which can prevent the pop-up engine hood from activating as intended."
+   }
+  ],
+  "2024": [
+   {
+    "id": "23V725000",
+    "part": "STRUCTURE:BODY:BUMPERS",
+    "summary": "Nissan North America, Inc. (Nissan) is recalling certain 2023-2024 Nissan Z vehicles.  The fasteners in the left-side front bumper reinforcement clip may loosen, which can prevent the pop-up engine hood from activating."
+   },
+   {
+    "id": "24V798000",
+    "part": "STRUCTURE:BODY:BUMPERS",
+    "summary": "Nissan North America, Inc. (Nissan) is recalling certain 2023-2024 Nissan Z vehicles.  The connectors for the right-side pedestrian detection sensors may be reversed in the front bumper harness, which can prevent the pop-up engine hood from activating as intended."
+   }
+  ],
+  "2025": []
+ },
+ "yt": {
+  "car-nissan-z": null,
+  "nissan-vr30ddtt": {
+   "videos": 200,
+   "praise": [
+    [
+     "Looks",
+     26
+    ],
+    [
+     "Power and acceleration",
+     18
+    ],
+    [
+     "Handling and steering",
+     16
+    ],
+    [
+     "Everyday comfort",
+     12
+    ]
+   ],
+   "trouble": [
+    [
+     "Coolant leaks / water pump / overheating",
+     6
+    ],
+    [
+     "Oil leaks (gaskets, seals, housings)",
+     5
+    ]
+   ],
+   "top": [
+    {
+     "id": "m4AiIl67eT8",
+     "title": "2023 Nissan Z | Jay Leno's Garage",
+     "views": 1786456,
+     "ch": "Jay Leno's Garage"
+    },
+    {
+     "id": "y9gCHoBrflk",
+     "title": "2023 Nissan Z Review // $50,000 Hero...With Enemies",
+     "views": 1750978,
+     "ch": "Throttle House"
+    },
+    {
+     "id": "DKHWVySAaco",
+     "title": "The TRUTH about the new Nissan Z",
+     "views": 1231988,
+     "ch": "carwow"
+    }
+   ]
+  }
+ },
+ "scores": {
+  "nissan-vr30ddtt": {
+   "years": {
+    "2016": {
+     "score": 44,
+     "weight": 9.8,
+     "videos": 77,
+     "named": 3,
+     "top": [
+      {
+       "id": "ozwqsSecTPw",
+       "title": "Here's Why the Infiniti Q50 Red Sport 400 Could Be Better",
+       "views": 1122519
+      },
+      {
+       "id": "3pAN6OR37zA",
+       "title": "Dodge Charger 392 takes on Infiniti Q50 Red Sport, drag and roll race!",
+       "views": 815149
+      },
+      {
+       "id": "sZQtfbf_2QE",
+       "title": "Blown Engine Teardown: VR30DDTT Infiniti Q50 3.0 Twin Turbo V6. What Failures Will I Find Inside?",
+       "views": 386753
+      }
+     ]
+    },
+    "2017": {
+     "score": 47,
+     "weight": 10.8,
+     "videos": 78,
+     "named": 4,
+     "top": [
+      {
+       "id": "ozwqsSecTPw",
+       "title": "Here's Why the Infiniti Q50 Red Sport 400 Could Be Better",
+       "views": 1122519
+      },
+      {
+       "id": "3pAN6OR37zA",
+       "title": "Dodge Charger 392 takes on Infiniti Q50 Red Sport, drag and roll race!",
+       "views": 815149
+      },
+      {
+       "id": "sZQtfbf_2QE",
+       "title": "Blown Engine Teardown: VR30DDTT Infiniti Q50 3.0 Twin Turbo V6. What Failures Will I Find Inside?",
+       "views": 386753
+      }
+     ]
+    },
+    "2018": {
+     "score": 54,
+     "weight": 14.3,
+     "videos": 81,
+     "named": 7,
+     "top": [
+      {
+       "id": "ozwqsSecTPw",
+       "title": "Here's Why the Infiniti Q50 Red Sport 400 Could Be Better",
+       "views": 1122519
+      },
+      {
+       "id": "3pAN6OR37zA",
+       "title": "Dodge Charger 392 takes on Infiniti Q50 Red Sport, drag and roll race!",
+       "views": 815149
+      },
+      {
+       "id": "LQ1BWE-qBjQ",
+       "title": "2018 Infiniti Q50 Red Sport 400 Review - More Grand Touring Than Sports Sedan",
+       "views": 424271
+      }
+     ]
+    },
+    "2019": {
+     "score": 49,
+     "weight": 10.3,
+     "videos": 77,
+     "named": 3,
+     "top": [
+      {
+       "id": "ozwqsSecTPw",
+       "title": "Here's Why the Infiniti Q50 Red Sport 400 Could Be Better",
+       "views": 1122519
+      },
+      {
+       "id": "3pAN6OR37zA",
+       "title": "Dodge Charger 392 takes on Infiniti Q50 Red Sport, drag and roll race!",
+       "views": 815149
+      },
+      {
+       "id": "sZQtfbf_2QE",
+       "title": "Blown Engine Teardown: VR30DDTT Infiniti Q50 3.0 Twin Turbo V6. What Failures Will I Find Inside?",
+       "views": 386753
+      }
+     ]
+    },
+    "2020": {
+     "score": 49,
+     "weight": 9.3,
+     "videos": 76,
+     "named": 2,
+     "top": [
+      {
+       "id": "ozwqsSecTPw",
+       "title": "Here's Why the Infiniti Q50 Red Sport 400 Could Be Better",
+       "views": 1122519
+      },
+      {
+       "id": "3pAN6OR37zA",
+       "title": "Dodge Charger 392 takes on Infiniti Q50 Red Sport, drag and roll race!",
+       "views": 815149
+      },
+      {
+       "id": "sZQtfbf_2QE",
+       "title": "Blown Engine Teardown: VR30DDTT Infiniti Q50 3.0 Twin Turbo V6. What Failures Will I Find Inside?",
+       "views": 386753
+      }
+     ]
+    },
+    "2021": {
+     "score": 50,
+     "weight": 12.3,
+     "videos": 79,
+     "named": 5,
+     "top": [
+      {
+       "id": "ozwqsSecTPw",
+       "title": "Here's Why the Infiniti Q50 Red Sport 400 Could Be Better",
+       "views": 1122519
+      },
+      {
+       "id": "3pAN6OR37zA",
+       "title": "Dodge Charger 392 takes on Infiniti Q50 Red Sport, drag and roll race!",
+       "views": 815149
+      },
+      {
+       "id": "sZQtfbf_2QE",
+       "title": "Blown Engine Teardown: VR30DDTT Infiniti Q50 3.0 Twin Turbo V6. What Failures Will I Find Inside?",
+       "views": 386753
+      }
+     ]
+    },
+    "2022": {
+     "score": 45,
+     "weight": 9.3,
+     "videos": 76,
+     "named": 2,
+     "top": [
+      {
+       "id": "ozwqsSecTPw",
+       "title": "Here's Why the Infiniti Q50 Red Sport 400 Could Be Better",
+       "views": 1122519
+      },
+      {
+       "id": "3pAN6OR37zA",
+       "title": "Dodge Charger 392 takes on Infiniti Q50 Red Sport, drag and roll race!",
+       "views": 815149
+      },
+      {
+       "id": "JkBeICfaiO0",
+       "title": "2022 Infiniti Q50 Red Sport 400 - POV Driving Impressions",
+       "views": 650841
+      }
+     ]
+    },
+    "2023": {
+     "score": 58,
+     "weight": 45.1,
+     "videos": 152,
+     "named": 25,
+     "top": [
+      {
+       "id": "m4AiIl67eT8",
+       "title": "2023 Nissan Z | Jay Leno's Garage",
+       "views": 1786456
+      },
+      {
+       "id": "y9gCHoBrflk",
+       "title": "2023 Nissan Z Review // $50,000 Hero...With Enemies",
+       "views": 1750978
+      },
+      {
+       "id": "DKHWVySAaco",
+       "title": "The TRUTH about the new Nissan Z",
+       "views": 1231988
+      }
+     ]
+    },
+    "2024": {
+     "score": 53,
+     "weight": 30.1,
+     "videos": 137,
+     "named": 10,
+     "top": [
+      {
+       "id": "DKHWVySAaco",
+       "title": "The TRUTH about the new Nissan Z",
+       "views": 1231988
+      },
+      {
+       "id": "ozwqsSecTPw",
+       "title": "Here's Why the Infiniti Q50 Red Sport 400 Could Be Better",
+       "views": 1122519
+      },
+      {
+       "id": "3pAN6OR37zA",
+       "title": "Dodge Charger 392 takes on Infiniti Q50 Red Sport, drag and roll race!",
+       "views": 815149
+      }
+     ]
+    },
+    "2025": {
+     "score": 54,
+     "weight": 23.2,
+     "videos": 103,
+     "named": 6,
+     "top": [
+      {
+       "id": "DKHWVySAaco",
+       "title": "The TRUTH about the new Nissan Z",
+       "views": 1231988
+      },
+      {
+       "id": "hsV_yw2PIKg",
+       "title": "The TRUE Story Of The Nissan Z",
+       "views": 557554
+      },
+      {
+       "id": "jOhed7JBgiM",
+       "title": "Nissan Z vs GR86 & 370z - Greatness in Unexpected Places | Everyday Driver Season 11",
+       "views": 536321
+      }
+     ]
+    },
+    "2026": {
+     "score": 56,
+     "weight": 25.2,
+     "videos": 105,
+     "named": 8,
+     "top": [
+      {
+       "id": "DKHWVySAaco",
+       "title": "The TRUTH about the new Nissan Z",
+       "views": 1231988
+      },
+      {
+       "id": "hsV_yw2PIKg",
+       "title": "The TRUE Story Of The Nissan Z",
+       "views": 557554
+      },
+      {
+       "id": "jOhed7JBgiM",
+       "title": "Nissan Z vs GR86 & 370z - Greatness in Unexpected Places | Everyday Driver Season 11",
+       "views": 536321
+      }
+     ]
+    }
+   },
+   "videos": 200,
+   "pulled": 200
+  }
+ }
+}

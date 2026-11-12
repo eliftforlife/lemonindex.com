@@ -1,0 +1,845 @@
+{
+ "slug": "lancer-evolution",
+ "name": "Mitsubishi Lancer Evolution",
+ "short": "Evo",
+ "make": "Mitsubishi",
+ "page": "/cars/lancer-evolution/",
+ "focus": "cz4a",
+ "star": "x-fe",
+ "h1": "Mitsubishi Lancer Evolution: performance, engines and what owners say",
+ "nhtsa": {
+  "make": "MITSUBISHI",
+  "models": [
+   "LANCER EVOLUTION"
+  ],
+  "note": "NHTSA files 2003 Evos under Lancer (not counted here), and its Lancer Evolution search for 2010, 2011, 2014 and 2015 also returns regular Lancer complaints."
+ },
+ "topics_extra": {
+  "AYC / ACD pump": "\\bayc\\b|\\bacd\\b|(ayc|acd) pump|active center diff|yaw control",
+  "Clutch / gearbox": "\\bclutch\\b|synchros?|grind(s|ing)? (into|in)? ?gear|pops? (out of|into) (gear|neutral)",
+  "TC-SST dual-clutch": "tc-?sst|twin.?clutch|dual.?clutch",
+  "Timing belt": "timing belt|idler pulley|balance (shaft )?belt",
+  "Misfire": "p0300|misfir",
+  "Rust": "\\brust(ed|ing|y)?\\b"
+ },
+ "gens": [
+  {
+   "id": "ct9a-viii",
+   "code": "CT9A (Evo VIII)",
+   "years": "2003–2005",
+   "y0": 2003,
+   "y1": 2005,
+   "engine": "4G63T",
+   "body": "Sedan",
+   "tag": "The first U.S. Evo. 271 hp and a 5-speed; 6-speed MR for 2005.",
+   "variants": [
+    {
+     "id": "viii-03",
+     "name": "Lancer Evolution",
+     "years": "2003–2004",
+     "hp": {
+      "v": 271,
+      "src": [
+       "m03spec"
+      ],
+      "note": "at 6,500 rpm (2003 spec sheet)"
+     },
+     "tq": {
+      "v": 273,
+      "src": [
+       "m03spec"
+      ],
+      "note": "lb-ft at 3,500 rpm"
+     },
+     "z60": {
+      "v": 5.0,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "top": {
+      "v": "157 mph",
+      "src": [
+       "m03spec"
+      ],
+      "note": ""
+     },
+     "trans": {
+      "v": "5-speed manual, all-wheel drive",
+      "src": [
+       "m03spec"
+      ],
+      "note": "viscous-coupled center differential"
+     },
+     "weight": {
+      "v": "3,263 lb",
+      "src": [
+       "m03spec"
+      ],
+      "note": "3,298 lb with sunroof"
+     }
+    },
+    {
+     "id": "viii-05",
+     "name": "Lancer Evolution VIII",
+     "years": "2005",
+     "hp": {
+      "v": 276,
+      "src": [
+       "m05spec"
+      ],
+      "note": "at 6,500 rpm"
+     },
+     "tq": {
+      "v": 286,
+      "src": [
+       "m05spec"
+      ],
+      "note": "lb-ft at 3,500 rpm"
+     },
+     "z60": {
+      "v": 4.7,
+      "who": "MotorTrend",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "5-speed manual, all-wheel drive",
+      "src": [
+       "m05spec",
+       "m05p"
+      ],
+      "note": "Active Center Differential standard"
+     },
+     "weight": {
+      "v": "3,263 lb",
+      "src": [
+       "m05all"
+      ],
+      "note": "3,321 lb with sunroof"
+     },
+     "price": {
+      "v": "$30,699",
+      "src": [
+       "m05p"
+      ],
+      "note": "2005; option packages not included, destination not stated"
+     },
+     "what": "5 more hp and 13 more lb-ft than 2003; Active Center Differential added.",
+     "what_src": [
+      "m03spec",
+      "m05spec",
+      "m05p"
+     ]
+    },
+    {
+     "id": "viii-rs",
+     "name": "Lancer Evolution RS",
+     "years": "2004–2005",
+     "pkg": "viii-05",
+     "hp": {
+      "v": 276,
+      "src": [
+       "m05spec"
+      ],
+      "note": "at 6,500 rpm (2005 spec sheet)"
+     },
+     "tq": {
+      "v": 286,
+      "src": [
+       "m05spec"
+      ],
+      "note": "lb-ft at 3,500 rpm"
+     },
+     "z60": {
+      "v": 4.8,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "5-speed manual, all-wheel drive",
+      "src": [
+       "m05spec"
+      ],
+      "note": "front helical limited-slip differential"
+     },
+     "weight": {
+      "v": "3,197 lb",
+      "src": [
+       "m05all"
+      ],
+      "note": "2005"
+     },
+     "what": "Stripped, lighter version with a front helical limited-slip differential.",
+     "what_src": [
+      "m05p"
+     ]
+    },
+    {
+     "id": "viii-mr",
+     "name": "Lancer Evolution MR",
+     "years": "2005",
+     "hp": {
+      "v": 276,
+      "src": [
+       "m05spec"
+      ],
+      "note": "at 6,500 rpm"
+     },
+     "tq": {
+      "v": 286,
+      "src": [
+       "m05spec"
+      ],
+      "note": "lb-ft at 3,500 rpm"
+     },
+     "z60": {
+      "v": 4.7,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual, all-wheel drive",
+      "src": [
+       "m05spec"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,285 lb",
+      "src": [
+       "m05all"
+      ],
+      "note": ""
+     },
+     "what": "6-speed gearbox, Bilstein shocks, forged BBS wheels, vortex generator, aluminum roof.",
+     "what_src": [
+      "m05p",
+      "m05spec"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ct9a-ix",
+   "code": "CT9A (Evo IX)",
+   "years": "2006",
+   "y0": 2006,
+   "y1": 2006,
+   "engine": "4G63T",
+   "body": "Sedan",
+   "tag": "One U.S. year. MIVEC lifts it to 286 hp; RS, IX and MR trims.",
+   "variants": [
+    {
+     "id": "ix",
+     "name": "Lancer Evolution IX",
+     "years": "2006",
+     "hp": {
+      "v": 286,
+      "src": [
+       "m06spec"
+      ],
+      "note": "at 6,500 rpm"
+     },
+     "tq": {
+      "v": 289,
+      "src": [
+       "m06spec"
+      ],
+      "note": "lb-ft at 3,500 rpm"
+     },
+     "z60": {
+      "v": 4.7,
+      "who": "MotorTrend",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "5-speed manual, all-wheel drive",
+      "src": [
+       "m06spec"
+      ],
+      "note": "Active Center Differential"
+     },
+     "weight": {
+      "v": "3,263 lb",
+      "src": [
+       "m06spec"
+      ],
+      "note": "3,338 lb with sunroof"
+     }
+    },
+    {
+     "id": "ix-rs",
+     "name": "Lancer Evolution IX RS",
+     "years": "2006",
+     "pkg": "ix",
+     "hp": {
+      "v": 286,
+      "src": [
+       "m06spec"
+      ],
+      "note": "at 6,500 rpm"
+     },
+     "tq": {
+      "v": 289,
+      "src": [
+       "m06spec"
+      ],
+      "note": "lb-ft at 3,500 rpm"
+     },
+     "z60": {
+      "v": 5.1,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "5-speed manual, all-wheel drive",
+      "src": [
+       "m06spec"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,219 lb",
+      "src": [
+       "m06spec"
+      ],
+      "note": ""
+     },
+     "what": "Drops the rear spoiler, power windows and other comfort items to save weight.",
+     "what_src": [
+      "m06spec"
+     ]
+    },
+    {
+     "id": "ix-mr",
+     "name": "Lancer Evolution IX MR",
+     "years": "2006",
+     "hp": {
+      "v": 286,
+      "src": [
+       "m06spec"
+      ],
+      "note": "at 6,500 rpm"
+     },
+     "tq": {
+      "v": 289,
+      "src": [
+       "m06spec"
+      ],
+      "note": "lb-ft at 3,500 rpm"
+     },
+     "z60": {
+      "v": 4.6,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual, all-wheel drive",
+      "src": [
+       "m06spec"
+      ],
+      "note": "close-ratio"
+     },
+     "weight": {
+      "v": "3,285 lb",
+      "src": [
+       "m06spec"
+      ],
+      "note": ""
+     },
+     "what": "6-speed gearbox, Bilstein shocks, forged BBS wheels, vortex generator, aluminum roof.",
+     "what_src": [
+      "m06spec"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cz4a",
+   "code": "CZ4A (Evo X)",
+   "years": "2008–2015",
+   "y0": 2008,
+   "y1": 2015,
+   "engine": "4B11T",
+   "body": "Sedan",
+   "tag": "Aluminum 4B11T, 291 hp. MR gets a 6-speed dual-clutch.",
+   "variants": [
+    {
+     "id": "x-gsr",
+     "name": "Lancer Evolution GSR",
+     "years": "2008–2015",
+     "hp": {
+      "v": 291,
+      "src": [
+       "m08spec",
+       "m15tech"
+      ],
+      "note": "at 6,500 rpm"
+     },
+     "tq": {
+      "v": 300,
+      "src": [
+       "m08spec",
+       "m15tech"
+      ],
+      "note": "lb-ft at 4,000 rpm"
+     },
+     "z60": {
+      "v": 4.6,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "5-speed manual, all-wheel drive",
+      "src": [
+       "m08spec",
+       "m15tech"
+      ],
+      "note": "Super All-Wheel Control (S-AWC)"
+     },
+     "weight": {
+      "v": "3,527 lb",
+      "src": [
+       "m15tech"
+      ],
+      "note": "2015 spec sheet"
+     },
+     "price": {
+      "v": "$34,495",
+      "src": [
+       "m15p",
+       "m15site"
+      ],
+      "note": "2015, excludes destination (2013: $34,695); 2008 launch price not found"
+     }
+    },
+    {
+     "id": "x-mr",
+     "name": "Lancer Evolution MR",
+     "years": "2008–2015",
+     "hp": {
+      "v": 291,
+      "src": [
+       "m08spec",
+       "m15tech"
+      ],
+      "note": "at 6,500 rpm"
+     },
+     "tq": {
+      "v": 300,
+      "src": [
+       "m08spec",
+       "m15tech"
+      ],
+      "note": "lb-ft at 4,000 rpm"
+     },
+     "z60": {
+      "v": 5.3,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed dual-clutch (TC-SST), all-wheel drive",
+      "src": [
+       "m08spec",
+       "m15tech"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,571 lb",
+      "src": [
+       "m15tech"
+      ],
+      "note": "2015 spec sheet"
+     },
+     "price": {
+      "v": "$38,995",
+      "src": [
+       "m15p",
+       "m15site"
+      ],
+      "note": "2015, excludes destination"
+     },
+     "what": "Twin-clutch automated gearbox, Bilstein/Eibach suspension, forged BBS wheels, two-piece front rotors.",
+     "what_src": [
+      "m15tech",
+      "m15spec"
+     ]
+    },
+    {
+     "id": "x-fe",
+     "name": "Lancer Evolution Final Edition",
+     "years": "2015",
+     "star": true,
+     "hp": {
+      "v": 303,
+      "src": [
+       "m15spec"
+      ],
+      "note": "at 6,500 rpm"
+     },
+     "tq": {
+      "v": 305,
+      "src": [
+       "m15spec"
+      ],
+      "note": "lb-ft at 4,000 rpm"
+     },
+     "z60": {
+      "v": 4.4,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "5-speed manual, all-wheel drive",
+      "src": [
+       "m15spec"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,527 lb",
+      "src": [
+       "m15spec"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$37,995",
+      "src": [
+       "m15site"
+      ],
+      "note": "2015, excludes destination; 1,600 built for the U.S. per Wikipedia"
+     },
+     "what": "12 more hp, MR suspension and brakes, black roof, dark Enkei wheels, numbered plaque.",
+     "what_src": [
+      "m15spec",
+      "wevx"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "4G63T": {
+   "name": "Mitsubishi 4G63T",
+   "what": "2.0-liter inline-4, turbo",
+   "study": "mitsubishi-4g63t",
+   "page": "/engines/mitsubishi-4g63t/",
+   "yt": [
+    "scy",
+    "mitsubishi-4g63t"
+   ],
+   "facts": [
+    [
+     "Redline",
+     "7,000 rpm",
+     [
+      "m03spec",
+      "m06spec"
+     ]
+    ],
+    [
+     "Output",
+     "271–286 hp, 273–289 lb-ft",
+     [
+      "m03spec",
+      "m05spec",
+      "m06spec"
+     ]
+    ],
+    [
+     "Block",
+     "Cast iron, aluminum head; 85.0 x 88.0 mm, 8.8:1",
+     [
+      "m03spec",
+      "m06spec"
+     ]
+    ],
+    [
+     "Turbo",
+     "Twin-scroll TD05HR; MIVEC valve timing from 2006",
+     [
+      "m05spec",
+      "m06spec"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Random misfire code (2003)",
+     "kind": "Owner-reported (NHTSA)",
+     "rx": "p0300|misfir",
+     "x": "Eight 2003 Evo complaints to NHTSA describe a recurring P0300 random-misfire code that dealers could not fix. One owner says Mitsubishi blamed a faulty input shaft in a service bulletin.",
+     "fix": "",
+     "src": [
+      "nc03"
+     ]
+    },
+    {
+     "t": "Timing belt area noise (2006)",
+     "kind": "Owner-reported (NHTSA)",
+     "rx": "timing belt|idler pulley|tensioner",
+     "x": "Thirteen 2006 Evo IX complaints describe a grinding or scraping noise from the timing belt area, mostly on cold starts. Owners blame the idler pulley or tensioner bracket, and some say a dealer pulley swap did not stop it.",
+     "fix": "",
+     "src": [
+      "nc06"
+     ]
+    },
+    {
+     "t": "Turbo coolant hose recall",
+     "kind": "Recall",
+     "rx": "coolant (hose|leak)|turbo.{0,20}coolant",
+     "x": "On some 2005 cars the turbocharger coolant hose was made wrong and can leak. Coolant on the hot manifold can catch fire.",
+     "fix": "Dealer replaces the hose for free (NHTSA 05V-335).",
+     "src": [
+      "r05"
+     ]
+    }
+   ]
+  },
+  "4B11T": {
+   "name": "Mitsubishi 4B11T",
+   "what": "2.0-liter inline-4, turbo",
+   "study": "mitsubishi-4b11t",
+   "page": "/engines/mitsubishi-4b11t/",
+   "yt": [
+    "scy",
+    "mitsubishi-4b11t"
+   ],
+   "facts": [
+    [
+     "Redline",
+     "7,000 rpm",
+     [
+      "m08spec",
+      "m15tech"
+     ]
+    ],
+    [
+     "Output",
+     "291–303 hp, 300–305 lb-ft",
+     [
+      "m08spec",
+      "m15spec"
+     ]
+    ],
+    [
+     "Block",
+     "Aluminum block and head; 86.0 x 86.0 mm, 9.0:1",
+     [
+      "m15tech"
+     ]
+    ],
+    [
+     "Valvetrain",
+     "DOHC 16-valve with MIVEC, port fuel injection",
+     [
+      "m12spec",
+      "m15tech"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Drive belt and pulley recall",
+     "kind": "Recall",
+     "rx": "drive belt|serpentine|pulley|belt (came|come|fell) off",
+     "x": "On 2008-2011 cars with 4B1 engines, the accessory pulleys can wear and let the drive belt come off. That can drain the battery and stall the engine.",
+     "fix": "Dealer fits a rubber belt and replaces worn pulleys for free (NHTSA 14V-562).",
+     "src": [
+      "r14"
+     ]
+    },
+    {
+     "t": "Fuel return pipe recall",
+     "kind": "Recall",
+     "rx": "fuel (leak|smell|odor)|gas (smell|fumes)",
+     "x": "On 2008-2009 Evos, vibration at certain engine speeds can crack the fuel return pipe where it is fixed, which can leak fuel and start a fire.",
+     "fix": "Dealer replaces the pipe and adds two brackets for free (NHTSA 09V-349).",
+     "src": [
+      "r09"
+     ]
+    },
+    {
+     "t": "No engine failure pattern",
+     "kind": "Owner-reported (NHTSA)",
+     "rx": "",
+     "x": "NHTSA complaints on 2008-2015 Evos center on the AYC/ACD hydraulic pump and the clutch, not the engine. Only a handful report engine failures.",
+     "fix": "",
+     "src": [
+      "nc08",
+      "r13"
+     ]
+    }
+   ]
+  }
+ },
+ "compare": [
+  {
+   "slug": "wrx-sti",
+   "name": "Subaru WRX STI"
+  },
+  {
+   "slug": "focus-rs",
+   "name": "Ford Focus RS"
+  },
+  {
+   "slug": "gr-corolla",
+   "name": "Toyota GR Corolla"
+  },
+  {
+   "slug": "golf-r",
+   "name": "Volkswagen Golf R"
+  }
+ ],
+ "sources": {
+  "m03spec": {
+   "t": "Mitsubishi Motors North America: 2003 Lancer Evolution specifications (mitsubishicars.com, archived Aug 2003)",
+   "u": "https://web.archive.org/web/20030814041550/http://www.mitsubishicars.com/lancerevolution/specs.html",
+   "k": "Mitsubishi (archived)"
+  },
+  "m05spec": {
+   "t": "Mitsubishi Motors North America: 2005 Lancer Evolution RS / VIII / MR mechanical specs (archived Feb 2005)",
+   "u": "https://web.archive.org/web/20050225092614/http://www.mitsubishicars.com/MMSA/jsp/lancerevolution/features_specs.jsp?t=mechanical",
+   "k": "Mitsubishi (archived)"
+  },
+  "m05all": {
+   "t": "Mitsubishi Motors North America: 2005 Lancer Evolution full specifications, weights (archived Jan 2005)",
+   "u": "https://web.archive.org/web/20050123001116/http://www.mitsubishicars.com/MMSA/jsp/lancerevolution/features_specs.jsp?t=all",
+   "k": "Mitsubishi (archived)"
+  },
+  "m05p": {
+   "t": "Mitsubishi Motors North America: 2005 Lancer Evolution features page with MSRP (archived Mar 2005)",
+   "u": "https://web.archive.org/web/20050303001804/http://www.mitsubishicars.com/MMSA/jsp/lancerevolution/features_specs.jsp",
+   "k": "Mitsubishi (archived)"
+  },
+  "m06spec": {
+   "t": "Mitsubishi Motors North America: 2006 Lancer Evolution IX RS / IX / MR specifications (archived Dec 2006)",
+   "u": "https://web.archive.org/web/20061219152201/http://www.mitsubishicars.com/MMNA/jsp/evo/06/specs.do",
+   "k": "Mitsubishi (archived)"
+  },
+  "m08spec": {
+   "t": "Mitsubishi Motors North America: 2008 Lancer Evolution GSR / MR specifications (archived Jan 2009)",
+   "u": "https://web.archive.org/web/20090131232212/http://www.mitsubishicars.com/MMNA/jsp/evo/08/specs.do",
+   "k": "Mitsubishi (archived)"
+  },
+  "m12spec": {
+   "t": "Mitsubishi Motors North America: 2012 Lancer Evolution full vehicle specifications (archived Jan 2013)",
+   "u": "https://web.archive.org/web/20130123021858/http://www.mitsubishicars.com/MMNA/jsp/evo/12/specs.do",
+   "k": "Mitsubishi (archived)"
+  },
+  "m15tech": {
+   "t": "Mitsubishi newsroom: 2015 Lancer Evolution technical and mechanical features (Jul 2014, archived)",
+   "u": "https://web.archive.org/web/20150906103831/http://media.mitsubishicars.com/channels/2015-Lancer-Evolution/releases/8b308506-285f-4759-a68a-5c23939c5986",
+   "k": "Mitsubishi (archived)"
+  },
+  "m15p": {
+   "t": "Mitsubishi newsroom: 2015 Lancer Evolution pricing (Sep 2014, archived)",
+   "u": "https://web.archive.org/web/20150906104228/http://media.mitsubishicars.com/channels/2015-Lancer-Evolution/releases/73ee443c-df38-4939-a123-89a235e01a0d",
+   "k": "Mitsubishi (archived)"
+  },
+  "m15spec": {
+   "t": "Mitsubishi Motors North America: 2015 Lancer Evolution GSR / MR / Final Edition specifications (archived Jan 2016)",
+   "u": "https://web.archive.org/web/20160101151237/http://www.mitsubishicars.com/lancer-evolution/specifications",
+   "k": "Mitsubishi (archived)"
+  },
+  "m15site": {
+   "t": "Mitsubishi Motors North America: Lancer Evolution GSR / MR / FE starting prices (archived Dec 2015)",
+   "u": "https://web.archive.org/web/20151231145025/http://www.mitsubishicars.com/lancer-evolution",
+   "k": "Mitsubishi (archived)"
+  },
+  "z60": {
+   "t": "0-60specs.com: Mitsubishi Lancer Evolution 0-60 runs by magazine (Car and Driver, MotorTrend, Road & Track, MotorWeek)",
+   "u": "https://www.0-60specs.com/mitsubishi/lancer-evolution-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "wevx": {
+   "t": "Wikipedia: Mitsubishi Lancer Evolution X (Final Edition production numbers)",
+   "u": "https://en.wikipedia.org/wiki/Mitsubishi_Lancer_Evolution_X",
+   "k": "Wikipedia (fallback)"
+  },
+  "r05": {
+   "t": "NHTSA recall 05V-335: turbocharger coolant hose (Jul 2005)",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=05V335000",
+   "k": "Recall"
+  },
+  "r09": {
+   "t": "NHTSA recall 09V-349: fuel return pipe, 2008-2009 Lancer Evolution and Ralliart (Aug 2009)",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=09V349000",
+   "k": "Recall"
+  },
+  "r13": {
+   "t": "NHTSA recall 13V-446: clutch master cylinder, 2008-2013 Lancer Evolution (Sep 2013)",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=13V446000",
+   "k": "Recall"
+  },
+  "r14": {
+   "t": "NHTSA recall 14V-562: drive belt and pulleys, 4B1 engines 2008-2011 (Dec 2014)",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=14V562000",
+   "k": "Recall"
+  },
+  "nc03": {
+   "t": "NHTSA complaints: 2003 Mitsubishi Lancer, Lancer Evolution entries",
+   "u": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=MITSUBISHI&model=LANCER&modelYear=2003",
+   "k": "NHTSA owner complaints"
+  },
+  "nc06": {
+   "t": "NHTSA complaints: 2006 Mitsubishi Lancer Evolution",
+   "u": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=MITSUBISHI&model=LANCER%20EVOLUTION&modelYear=2006",
+   "k": "NHTSA owner complaints"
+  },
+  "nc08": {
+   "t": "NHTSA complaints: 2008 Mitsubishi Lancer Evolution",
+   "u": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=MITSUBISHI&model=LANCER%20EVOLUTION&modelYear=2008",
+   "k": "NHTSA owner complaints"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-lancer-evolution",
+ "img": "/assets/ai-perf/lancer-evolution.webp?v=1"
+}

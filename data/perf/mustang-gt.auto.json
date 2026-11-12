@@ -1,0 +1,1580 @@
+{
+ "built": "2026-11-11",
+ "nhtsa": {
+  "by_year": {
+   "1990": 85,
+   "1991": 77,
+   "1992": 69,
+   "1993": 101,
+   "1994": 356,
+   "1995": 602,
+   "1996": 246,
+   "1997": 176,
+   "1998": 236,
+   "1999": 213,
+   "2000": 311,
+   "2001": 173,
+   "2002": 118,
+   "2003": 145,
+   "2004": 116,
+   "2005": 705,
+   "2006": 424,
+   "2007": 615,
+   "2008": 347,
+   "2009": 181,
+   "2010": 261,
+   "2011": 466,
+   "2012": 469,
+   "2013": 271,
+   "2014": 359,
+   "2015": 438,
+   "2016": 379,
+   "2017": 267,
+   "2018": 195,
+   "2019": 150,
+   "2020": 120,
+   "2021": 55,
+   "2022": 50,
+   "2023": 15,
+   "2024": 84,
+   "2025": 19,
+   "2026": 8
+  },
+  "gens": {
+   "sn95": {
+    "n": 863,
+    "issues": {
+     "Intake manifold coolant leaks": {
+      "n": 4,
+      "ex": [
+       "10108515",
+       "10379719"
+      ]
+     },
+     "Spark plug threads": {
+      "n": 4,
+      "ex": [
+       "10083080",
+       "10227261"
+      ]
+     }
+    }
+   },
+   "s197": {
+    "n": 2533,
+    "issues": {
+     "Spark plugs break on removal": {
+      "n": 1,
+      "ex": [
+       "10713484"
+      ]
+     }
+    }
+   },
+   "s197c": {
+    "n": 1565,
+    "issues": {
+     "Ticking noise": {
+      "n": 9,
+      "ex": [
+       "10413997",
+       "10418175"
+      ]
+     },
+     "Oil consumption (2018–2020)": {
+      "n": 2,
+      "ex": [
+       "10524852",
+       "11255867"
+      ]
+     },
+     "MT-82 manual gearbox (disputed)": {
+      "n": 44,
+      "ex": [
+       "10382931",
+       "10383097"
+      ]
+     }
+    }
+   },
+   "s550": {
+    "n": 1669,
+    "issues": {
+     "Ticking noise": {
+      "n": 16,
+      "ex": [
+       "10850935",
+       "11161810"
+      ]
+     },
+     "Oil consumption (2018–2020)": {
+      "n": 4,
+      "ex": [
+       "10918938",
+       "11179878"
+      ]
+     },
+     "MT-82 manual gearbox (disputed)": {
+      "n": 6,
+      "ex": [
+       "10668862",
+       "11013468"
+      ]
+     }
+    }
+   },
+   "s650": {
+    "n": 103,
+    "issues": {
+     "Ticking noise": {
+      "n": 0,
+      "ex": []
+     },
+     "Oil consumption (2018–2020)": {
+      "n": 1,
+      "ex": [
+       "11635774"
+      ]
+     },
+     "MT-82 manual gearbox (disputed)": {
+      "n": 0,
+      "ex": []
+     }
+    }
+   }
+  },
+  "parts": [
+   [
+    "Air bags",
+    2215
+   ],
+   [
+    "Power train",
+    902
+   ],
+   [
+    "Electrical system",
+    770
+   ],
+   [
+    "Engine",
+    514
+   ],
+   [
+    "Unknown or other",
+    449
+   ],
+   [
+    "Structure",
+    430
+   ]
+  ]
+ },
+ "recalls": {
+  "2000": [
+   {
+    "id": "09E012000",
+    "part": "EXTERIOR LIGHTING",
+    "summary": "SABERSPORT IS RECALLING 16,270 COMBINATION CORNER AND BUMPER LAMP ASSEMBLIES OF VARIOUS PART NUMBERS SOLD FOR USE AS AFTERMARKET EQUIPMENT FOR VARIOUS PASSENGER VEHICLES.  THESE HEADLAMPS FAIL TO CONFORM TO THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, \"LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT.\"  THESE LAMPS DO NOT CONTAIN THE REQUIRED AMBER SIDE REFLECTORS."
+   },
+   {
+    "id": "09E025000",
+    "part": "EXTERIOR LIGHTING:HEADLIGHTS",
+    "summary": "DOPE, INC. IS RECALLING 42,540 COMBINATION CORNER AND BUMPER LAMP ASSEMBLIES OF VARIOUS PART NUMBERS SOLD FOR USE AS AFTERMARKET EQUIPMENT FOR VARIOUS PASSENGER VEHICLES.  THESE HEADLAMPS FAIL TO CONFORM TO THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, \"LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT.\"  THESE LAMPS DO NOT CONTAIN THE REQUIRED AMBER SIDE REFLECTORS."
+   },
+   {
+    "id": "06E038000",
+    "part": "EXTERIOR LIGHTING",
+    "summary": "CERTAIN ALFAOTTO COMBINATION HEADLAMPS SOLD AS REPLACEMENT LAMPS FOR USE ON THE ABOVE LISTED PASSENGER VEHICLES.  SOME COMBINATION LAMPS THAT ARE NOT EQUIPPED WITH AMBER SIDE REFLECTORS FAIL TO CONFORM TO FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT."
+   },
+   {
+    "id": "08E050000",
+    "part": "EXTERIOR LIGHTING:HEADLIGHTS",
+    "summary": "K2 MOTOR IS RECALLING 1,921 AFTERMARKET HEADLAMPS OF VARIOUS MODELS SOLD FOR USE ON THE ABOVE LISTED VEHICLES.  THESE HEADLAMPS ARE MISSING THE AMBER SIDE REFLEX REFLECTOR WHICH FAILS TO CONFORM WITH THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, \"LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT.\""
+   },
+   {
+    "id": "06E056000",
+    "part": "FUEL SYSTEM, GASOLINE",
+    "summary": "CERTAIN AFTERMARKET FUEL FILTERS SOLD UNDER THE PUROLATOR BRAND NAME, P/N F65277, SHIPPED FROM JANUARY 16 THROUGH JUNE 2, 2006, FOR USE ON THE ABOVE LISTED PASSENGER VEHICLES.  DUE TO INCORRECT DESIGN, THE QUICK CONNECTORS MAY NOT FULLY SEAT WITH THE TUBE INTERFACE, EVEN THOUGH THE PERSON MAKING THE CONNECTION MAY BELIEVE THAT THE QUICK CONNECTOR IS FULLY ATTACHED."
+   },
+   {
+    "id": "06E064000",
+    "part": "EXTERIOR LIGHTING",
+    "summary": "CERTAIN TRADESONIC COMBINATION LAMPS SOLD AS REPLACEMENT LAMPS FOR USE ON THE ABOVE LISTED PASSENGER VEHICLES.  COMBINATION LAMPS NOT EQUIPPED WITH AMBER SIDE REFLECTORS FAIL TO CONFORM WITH THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT."
+   },
+   {
+    "id": "06E049000",
+    "part": "EXTERIOR LIGHTING",
+    "summary": "CERTAIN CK MOTORSPORTS COMBINATION HEADLIGHTS, CLEAR CORNER, BUMPER, AND SIDE MARKER LIGHTS SOLD AS REPLACEMENT LAMPS FOR USE ON THE PASSENGER VEHICLES LISTED ABOVE.  SOME COMBINATION LAMPS THAT ARE NOT EQUIPPED WITH AMBER SIDE REFLECTORS FAIL TO CONFORM TO FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT."
+   },
+   {
+    "id": "00V349000",
+    "part": "PARKING BRAKE:CONVENTIONAL",
+    "summary": "VEHICLE DESCRIPTION:  PASSENGER VEHICLES EQUIPPED WITH MANUAL TRANSMISSIONS.   IF A VEHICLE IS PARKED WITH THE PARKING BRAKE NOT FULLY APPLIED AND NOT IN FIRST GEAR, AS DIRECTED IN THE OWNER GUIDE, AND THE SELF ADJUSTMENT PAWL SUBSEQUENTLY SKIPS ONE OR TWO TEETH, THE VEHICLE COULD MOVE ON SOME GRADES."
+   },
+   {
+    "id": "99V250000",
+    "part": "SEAT BELTS:FRONT:ANCHORAGE",
+    "summary": "VEHICLE DESCRIPTION:  PASSENGER VEHICLES.  THE SEAT BELT RETRACTOR MAY HAVE A PIN SHAFT IN THE SWITCHABLE ELR/ALR MECHANISM THAT IS INCORRECTLY FORMED.   IN SOME CIRCUMSTANCES, THE SWITCHING MECHANISM COULD BECOME NONFUNCTIONAL, PREVENTING THE SEAT BELT WEBBING FROM BEING EXTRACTED FROM THE RETRACTOR.  IT IS ALSO POSSIBLE THAT MALFUNCTION OF THE MECHANISM COULD PREVENT THE BELT FROM BEING SWITCHED"
+   }
+  ],
+  "2001": [
+   {
+    "id": "09E012000",
+    "part": "EXTERIOR LIGHTING",
+    "summary": "SABERSPORT IS RECALLING 16,270 COMBINATION CORNER AND BUMPER LAMP ASSEMBLIES OF VARIOUS PART NUMBERS SOLD FOR USE AS AFTERMARKET EQUIPMENT FOR VARIOUS PASSENGER VEHICLES.  THESE HEADLAMPS FAIL TO CONFORM TO THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, \"LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT.\"  THESE LAMPS DO NOT CONTAIN THE REQUIRED AMBER SIDE REFLECTORS."
+   },
+   {
+    "id": "09E025000",
+    "part": "EXTERIOR LIGHTING:HEADLIGHTS",
+    "summary": "DOPE, INC. IS RECALLING 42,540 COMBINATION CORNER AND BUMPER LAMP ASSEMBLIES OF VARIOUS PART NUMBERS SOLD FOR USE AS AFTERMARKET EQUIPMENT FOR VARIOUS PASSENGER VEHICLES.  THESE HEADLAMPS FAIL TO CONFORM TO THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, \"LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT.\"  THESE LAMPS DO NOT CONTAIN THE REQUIRED AMBER SIDE REFLECTORS."
+   },
+   {
+    "id": "06E038000",
+    "part": "EXTERIOR LIGHTING",
+    "summary": "CERTAIN ALFAOTTO COMBINATION HEADLAMPS SOLD AS REPLACEMENT LAMPS FOR USE ON THE ABOVE LISTED PASSENGER VEHICLES.  SOME COMBINATION LAMPS THAT ARE NOT EQUIPPED WITH AMBER SIDE REFLECTORS FAIL TO CONFORM TO FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT."
+   },
+   {
+    "id": "08E050000",
+    "part": "EXTERIOR LIGHTING:HEADLIGHTS",
+    "summary": "K2 MOTOR IS RECALLING 1,921 AFTERMARKET HEADLAMPS OF VARIOUS MODELS SOLD FOR USE ON THE ABOVE LISTED VEHICLES.  THESE HEADLAMPS ARE MISSING THE AMBER SIDE REFLEX REFLECTOR WHICH FAILS TO CONFORM WITH THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, \"LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT.\""
+   },
+   {
+    "id": "06E056000",
+    "part": "FUEL SYSTEM, GASOLINE",
+    "summary": "CERTAIN AFTERMARKET FUEL FILTERS SOLD UNDER THE PUROLATOR BRAND NAME, P/N F65277, SHIPPED FROM JANUARY 16 THROUGH JUNE 2, 2006, FOR USE ON THE ABOVE LISTED PASSENGER VEHICLES.  DUE TO INCORRECT DESIGN, THE QUICK CONNECTORS MAY NOT FULLY SEAT WITH THE TUBE INTERFACE, EVEN THOUGH THE PERSON MAKING THE CONNECTION MAY BELIEVE THAT THE QUICK CONNECTOR IS FULLY ATTACHED."
+   },
+   {
+    "id": "06E064000",
+    "part": "EXTERIOR LIGHTING",
+    "summary": "CERTAIN TRADESONIC COMBINATION LAMPS SOLD AS REPLACEMENT LAMPS FOR USE ON THE ABOVE LISTED PASSENGER VEHICLES.  COMBINATION LAMPS NOT EQUIPPED WITH AMBER SIDE REFLECTORS FAIL TO CONFORM WITH THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT."
+   },
+   {
+    "id": "06E049000",
+    "part": "EXTERIOR LIGHTING",
+    "summary": "CERTAIN CK MOTORSPORTS COMBINATION HEADLIGHTS, CLEAR CORNER, BUMPER, AND SIDE MARKER LIGHTS SOLD AS REPLACEMENT LAMPS FOR USE ON THE PASSENGER VEHICLES LISTED ABOVE.  SOME COMBINATION LAMPS THAT ARE NOT EQUIPPED WITH AMBER SIDE REFLECTORS FAIL TO CONFORM TO FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT."
+   },
+   {
+    "id": "00V349000",
+    "part": "PARKING BRAKE:CONVENTIONAL",
+    "summary": "VEHICLE DESCRIPTION:  PASSENGER VEHICLES EQUIPPED WITH MANUAL TRANSMISSIONS.   IF A VEHICLE IS PARKED WITH THE PARKING BRAKE NOT FULLY APPLIED AND NOT IN FIRST GEAR, AS DIRECTED IN THE OWNER GUIDE, AND THE SELF ADJUSTMENT PAWL SUBSEQUENTLY SKIPS ONE OR TWO TEETH, THE VEHICLE COULD MOVE ON SOME GRADES."
+   }
+  ],
+  "2002": [
+   {
+    "id": "09E012000",
+    "part": "EXTERIOR LIGHTING",
+    "summary": "SABERSPORT IS RECALLING 16,270 COMBINATION CORNER AND BUMPER LAMP ASSEMBLIES OF VARIOUS PART NUMBERS SOLD FOR USE AS AFTERMARKET EQUIPMENT FOR VARIOUS PASSENGER VEHICLES.  THESE HEADLAMPS FAIL TO CONFORM TO THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, \"LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT.\"  THESE LAMPS DO NOT CONTAIN THE REQUIRED AMBER SIDE REFLECTORS."
+   },
+   {
+    "id": "09E025000",
+    "part": "EXTERIOR LIGHTING:HEADLIGHTS",
+    "summary": "DOPE, INC. IS RECALLING 42,540 COMBINATION CORNER AND BUMPER LAMP ASSEMBLIES OF VARIOUS PART NUMBERS SOLD FOR USE AS AFTERMARKET EQUIPMENT FOR VARIOUS PASSENGER VEHICLES.  THESE HEADLAMPS FAIL TO CONFORM TO THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, \"LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT.\"  THESE LAMPS DO NOT CONTAIN THE REQUIRED AMBER SIDE REFLECTORS."
+   },
+   {
+    "id": "08E050000",
+    "part": "EXTERIOR LIGHTING:HEADLIGHTS",
+    "summary": "K2 MOTOR IS RECALLING 1,921 AFTERMARKET HEADLAMPS OF VARIOUS MODELS SOLD FOR USE ON THE ABOVE LISTED VEHICLES.  THESE HEADLAMPS ARE MISSING THE AMBER SIDE REFLEX REFLECTOR WHICH FAILS TO CONFORM WITH THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, \"LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT.\""
+   },
+   {
+    "id": "06E056000",
+    "part": "FUEL SYSTEM, GASOLINE",
+    "summary": "CERTAIN AFTERMARKET FUEL FILTERS SOLD UNDER THE PUROLATOR BRAND NAME, P/N F65277, SHIPPED FROM JANUARY 16 THROUGH JUNE 2, 2006, FOR USE ON THE ABOVE LISTED PASSENGER VEHICLES.  DUE TO INCORRECT DESIGN, THE QUICK CONNECTORS MAY NOT FULLY SEAT WITH THE TUBE INTERFACE, EVEN THOUGH THE PERSON MAKING THE CONNECTION MAY BELIEVE THAT THE QUICK CONNECTOR IS FULLY ATTACHED."
+   },
+   {
+    "id": "06E064000",
+    "part": "EXTERIOR LIGHTING",
+    "summary": "CERTAIN TRADESONIC COMBINATION LAMPS SOLD AS REPLACEMENT LAMPS FOR USE ON THE ABOVE LISTED PASSENGER VEHICLES.  COMBINATION LAMPS NOT EQUIPPED WITH AMBER SIDE REFLECTORS FAIL TO CONFORM WITH THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT."
+   },
+   {
+    "id": "06E049000",
+    "part": "EXTERIOR LIGHTING",
+    "summary": "CERTAIN CK MOTORSPORTS COMBINATION HEADLIGHTS, CLEAR CORNER, BUMPER, AND SIDE MARKER LIGHTS SOLD AS REPLACEMENT LAMPS FOR USE ON THE PASSENGER VEHICLES LISTED ABOVE.  SOME COMBINATION LAMPS THAT ARE NOT EQUIPPED WITH AMBER SIDE REFLECTORS FAIL TO CONFORM TO FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT."
+   }
+  ],
+  "2003": [
+   {
+    "id": "09E012000",
+    "part": "EXTERIOR LIGHTING",
+    "summary": "SABERSPORT IS RECALLING 16,270 COMBINATION CORNER AND BUMPER LAMP ASSEMBLIES OF VARIOUS PART NUMBERS SOLD FOR USE AS AFTERMARKET EQUIPMENT FOR VARIOUS PASSENGER VEHICLES.  THESE HEADLAMPS FAIL TO CONFORM TO THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, \"LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT.\"  THESE LAMPS DO NOT CONTAIN THE REQUIRED AMBER SIDE REFLECTORS."
+   },
+   {
+    "id": "09E025000",
+    "part": "EXTERIOR LIGHTING:HEADLIGHTS",
+    "summary": "DOPE, INC. IS RECALLING 42,540 COMBINATION CORNER AND BUMPER LAMP ASSEMBLIES OF VARIOUS PART NUMBERS SOLD FOR USE AS AFTERMARKET EQUIPMENT FOR VARIOUS PASSENGER VEHICLES.  THESE HEADLAMPS FAIL TO CONFORM TO THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, \"LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT.\"  THESE LAMPS DO NOT CONTAIN THE REQUIRED AMBER SIDE REFLECTORS."
+   },
+   {
+    "id": "08E050000",
+    "part": "EXTERIOR LIGHTING:HEADLIGHTS",
+    "summary": "K2 MOTOR IS RECALLING 1,921 AFTERMARKET HEADLAMPS OF VARIOUS MODELS SOLD FOR USE ON THE ABOVE LISTED VEHICLES.  THESE HEADLAMPS ARE MISSING THE AMBER SIDE REFLEX REFLECTOR WHICH FAILS TO CONFORM WITH THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, \"LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT.\""
+   },
+   {
+    "id": "06E056000",
+    "part": "FUEL SYSTEM, GASOLINE",
+    "summary": "CERTAIN AFTERMARKET FUEL FILTERS SOLD UNDER THE PUROLATOR BRAND NAME, P/N F65277, SHIPPED FROM JANUARY 16 THROUGH JUNE 2, 2006, FOR USE ON THE ABOVE LISTED PASSENGER VEHICLES.  DUE TO INCORRECT DESIGN, THE QUICK CONNECTORS MAY NOT FULLY SEAT WITH THE TUBE INTERFACE, EVEN THOUGH THE PERSON MAKING THE CONNECTION MAY BELIEVE THAT THE QUICK CONNECTOR IS FULLY ATTACHED."
+   },
+   {
+    "id": "06V108000",
+    "part": "VEHICLE SPEED CONTROL:ACCELERATOR PEDAL",
+    "summary": "ON CERTAIN MUSTANG COBRA PASSENGER VEHICLES, THE REAR SURFACE OF THE ACCELERATOR PEDAL MAY COME INTO CONTACT WITH FLOOR CARPETING DURING HEAVY THROTTLE APPLICATION.  THE UNIQUE SURFACE PROFILE OF THE ACCELERATOR PEDAL MAY CATCH IN THE CUTOUT ON THE FLOOR CARPETING BEHIND THE ACCELERATOR PEDAL."
+   },
+   {
+    "id": "06E049000",
+    "part": "EXTERIOR LIGHTING",
+    "summary": "CERTAIN CK MOTORSPORTS COMBINATION HEADLIGHTS, CLEAR CORNER, BUMPER, AND SIDE MARKER LIGHTS SOLD AS REPLACEMENT LAMPS FOR USE ON THE PASSENGER VEHICLES LISTED ABOVE.  SOME COMBINATION LAMPS THAT ARE NOT EQUIPPED WITH AMBER SIDE REFLECTORS FAIL TO CONFORM TO FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT."
+   }
+  ],
+  "2004": [
+   {
+    "id": "09E025000",
+    "part": "EXTERIOR LIGHTING:HEADLIGHTS",
+    "summary": "DOPE, INC. IS RECALLING 42,540 COMBINATION CORNER AND BUMPER LAMP ASSEMBLIES OF VARIOUS PART NUMBERS SOLD FOR USE AS AFTERMARKET EQUIPMENT FOR VARIOUS PASSENGER VEHICLES.  THESE HEADLAMPS FAIL TO CONFORM TO THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, \"LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT.\"  THESE LAMPS DO NOT CONTAIN THE REQUIRED AMBER SIDE REFLECTORS."
+   },
+   {
+    "id": "08E050000",
+    "part": "EXTERIOR LIGHTING:HEADLIGHTS",
+    "summary": "K2 MOTOR IS RECALLING 1,921 AFTERMARKET HEADLAMPS OF VARIOUS MODELS SOLD FOR USE ON THE ABOVE LISTED VEHICLES.  THESE HEADLAMPS ARE MISSING THE AMBER SIDE REFLEX REFLECTOR WHICH FAILS TO CONFORM WITH THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, \"LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT.\""
+   },
+   {
+    "id": "09E012000",
+    "part": "EXTERIOR LIGHTING",
+    "summary": "SABERSPORT IS RECALLING 16,270 COMBINATION CORNER AND BUMPER LAMP ASSEMBLIES OF VARIOUS PART NUMBERS SOLD FOR USE AS AFTERMARKET EQUIPMENT FOR VARIOUS PASSENGER VEHICLES.  THESE HEADLAMPS FAIL TO CONFORM TO THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, \"LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT.\"  THESE LAMPS DO NOT CONTAIN THE REQUIRED AMBER SIDE REFLECTORS."
+   },
+   {
+    "id": "06E056000",
+    "part": "FUEL SYSTEM, GASOLINE",
+    "summary": "CERTAIN AFTERMARKET FUEL FILTERS SOLD UNDER THE PUROLATOR BRAND NAME, P/N F65277, SHIPPED FROM JANUARY 16 THROUGH JUNE 2, 2006, FOR USE ON THE ABOVE LISTED PASSENGER VEHICLES.  DUE TO INCORRECT DESIGN, THE QUICK CONNECTORS MAY NOT FULLY SEAT WITH THE TUBE INTERFACE, EVEN THOUGH THE PERSON MAKING THE CONNECTION MAY BELIEVE THAT THE QUICK CONNECTOR IS FULLY ATTACHED."
+   },
+   {
+    "id": "06V108000",
+    "part": "VEHICLE SPEED CONTROL:ACCELERATOR PEDAL",
+    "summary": "ON CERTAIN MUSTANG COBRA PASSENGER VEHICLES, THE REAR SURFACE OF THE ACCELERATOR PEDAL MAY COME INTO CONTACT WITH FLOOR CARPETING DURING HEAVY THROTTLE APPLICATION.  THE UNIQUE SURFACE PROFILE OF THE ACCELERATOR PEDAL MAY CATCH IN THE CUTOUT ON THE FLOOR CARPETING BEHIND THE ACCELERATOR PEDAL."
+   },
+   {
+    "id": "06E049000",
+    "part": "EXTERIOR LIGHTING",
+    "summary": "CERTAIN CK MOTORSPORTS COMBINATION HEADLIGHTS, CLEAR CORNER, BUMPER, AND SIDE MARKER LIGHTS SOLD AS REPLACEMENT LAMPS FOR USE ON THE PASSENGER VEHICLES LISTED ABOVE.  SOME COMBINATION LAMPS THAT ARE NOT EQUIPPED WITH AMBER SIDE REFLECTORS FAIL TO CONFORM TO FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT."
+   }
+  ],
+  "2005": [
+   {
+    "id": "21V081000",
+    "part": "AIR BAGS:FRONTAL",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2005-2014 Mustang, 2004-2011 Ranger, 2009-2011 Mercury Milan, 2006 Ford GT, 2008-2012 Fusion, 2007-2010 Edge and Lincoln MKX, and 2009-2010 Lincoln MKZ vehicles.  These vehicles may be equipped with a driver or passenger frontal air bag inflator used as a replacement service part, that may explode due to propellant degradation occurring after long-ter"
+   },
+   {
+    "id": "21E013000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain air bag inflator and/or module replacement service parts that may have been used as part of a collision repair.  The parts include certain driver-side air bag inflators and/or modules, designed to fit 2005-2014 Ford Mustang and Mustang GT500.  It also includes certain passenger-side air bag inflators and/or modules designed to fit 2005-2014 Ford Musta"
+   },
+   {
+    "id": "17V024000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2012 Ford Fusion and Mustang and Lincoln Zephyr and MKZ vehicles originally sold, or ever registered, in Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas, Puerto Rico, American Samoa, Guam, the Northern Mariana Islands (Saipan), and the U.S. Virgin Islands, or \"Zone A.\"\r\n\r\nAdditionally, unless included in \"Z"
+   },
+   {
+    "id": "16V384000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2007-2011 Ford Ranger vehicles, 2006-2011 Ford Fusion, Mercury Milan and Lincoln Zephyr/MKZ vehicles, 2007-2010 Ford Edge, Lincoln MKX vehicles, 2005-2006 Ford GT vehicles, and 2005-2011 Ford Mustang vehicles originally sold, or ever registered, in Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas,"
+   },
+   {
+    "id": "15V319000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2005-2014 Mustang vehicles manufactured April 6, 2004, to June 21, 2014, and 2005-2006 GT vehicles manufactured February 20, 2004, to September 22, 2006.  The affected vehicles are equipped with a dual-stage driver frontal air bag that may be susceptible to moisture intrusion which, over time, could cause the inflator to rupture."
+   },
+   {
+    "id": "08V082000",
+    "part": "AIR BAGS:FRONTAL",
+    "summary": "FORD IS RECALLING 434,593 MY 2008 MUSTANG VEHICLES FOR FAILING TO COMPLY WITH ONE OF THE NECK INJURY REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 208, \"OCCUPANT CRASH PROTECTION,\" FOR AN UNBELTED 5TH PERCENTILE FEMALE SITTING IN THE PASSENGER SEAT WHILE IT IS IN THE FULL FORWARD POSITION."
+   },
+   {
+    "id": "09E025000",
+    "part": "EXTERIOR LIGHTING:HEADLIGHTS",
+    "summary": "DOPE, INC. IS RECALLING 42,540 COMBINATION CORNER AND BUMPER LAMP ASSEMBLIES OF VARIOUS PART NUMBERS SOLD FOR USE AS AFTERMARKET EQUIPMENT FOR VARIOUS PASSENGER VEHICLES.  THESE HEADLAMPS FAIL TO CONFORM TO THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, \"LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT.\"  THESE LAMPS DO NOT CONTAIN THE REQUIRED AMBER SIDE REFLECTORS."
+   },
+   {
+    "id": "09E012000",
+    "part": "EXTERIOR LIGHTING",
+    "summary": "SABERSPORT IS RECALLING 16,270 COMBINATION CORNER AND BUMPER LAMP ASSEMBLIES OF VARIOUS PART NUMBERS SOLD FOR USE AS AFTERMARKET EQUIPMENT FOR VARIOUS PASSENGER VEHICLES.  THESE HEADLAMPS FAIL TO CONFORM TO THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, \"LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT.\"  THESE LAMPS DO NOT CONTAIN THE REQUIRED AMBER SIDE REFLECTORS."
+   },
+   {
+    "id": "06E089000",
+    "part": "SUSPENSION:FRONT",
+    "summary": "CERTAIN AFTERMARKET EIBACH BRANDED FRONT STRUTS ONLY, PART NO. 35101.8001, AND EIBACH BRANDED FRONT STRUTS AS SUSPENSION KITS, PART NOS. 35101.840, 35101.680, 35101.780, 35100.680, 35100.780, 4.10135.680, AND 4.10035.780, SOLD FOR USE ON 2005 THROUGH 2007 FORD MUSTANG  VEHICLES.  THE FRONT ANTI ROLL BAR ATTACHMENT BRACKET ON THE FRONT STRUT CAN SEPARATE FROM THE STRUT HOUSING DUE TO INCONSISTENT W"
+   }
+  ],
+  "2006": [
+   {
+    "id": "21V081000",
+    "part": "AIR BAGS:FRONTAL",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2005-2014 Mustang, 2004-2011 Ranger, 2009-2011 Mercury Milan, 2006 Ford GT, 2008-2012 Fusion, 2007-2010 Edge and Lincoln MKX, and 2009-2010 Lincoln MKZ vehicles.  These vehicles may be equipped with a driver or passenger frontal air bag inflator used as a replacement service part, that may explode due to propellant degradation occurring after long-ter"
+   },
+   {
+    "id": "21E013000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain air bag inflator and/or module replacement service parts that may have been used as part of a collision repair.  The parts include certain driver-side air bag inflators and/or modules, designed to fit 2005-2014 Ford Mustang and Mustang GT500.  It also includes certain passenger-side air bag inflators and/or modules designed to fit 2005-2014 Ford Musta"
+   },
+   {
+    "id": "17V024000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2012 Ford Fusion and Mustang and Lincoln Zephyr and MKZ vehicles originally sold, or ever registered, in Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas, Puerto Rico, American Samoa, Guam, the Northern Mariana Islands (Saipan), and the U.S. Virgin Islands, or \"Zone A.\"\r\n\r\nAdditionally, unless included in \"Z"
+   },
+   {
+    "id": "16V384000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2007-2011 Ford Ranger vehicles, 2006-2011 Ford Fusion, Mercury Milan and Lincoln Zephyr/MKZ vehicles, 2007-2010 Ford Edge, Lincoln MKX vehicles, 2005-2006 Ford GT vehicles, and 2005-2011 Ford Mustang vehicles originally sold, or ever registered, in Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas,"
+   },
+   {
+    "id": "15V319000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2005-2014 Mustang vehicles manufactured April 6, 2004, to June 21, 2014, and 2005-2006 GT vehicles manufactured February 20, 2004, to September 22, 2006.  The affected vehicles are equipped with a dual-stage driver frontal air bag that may be susceptible to moisture intrusion which, over time, could cause the inflator to rupture."
+   },
+   {
+    "id": "08V082000",
+    "part": "AIR BAGS:FRONTAL",
+    "summary": "FORD IS RECALLING 434,593 MY 2008 MUSTANG VEHICLES FOR FAILING TO COMPLY WITH ONE OF THE NECK INJURY REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 208, \"OCCUPANT CRASH PROTECTION,\" FOR AN UNBELTED 5TH PERCENTILE FEMALE SITTING IN THE PASSENGER SEAT WHILE IT IS IN THE FULL FORWARD POSITION."
+   },
+   {
+    "id": "09E025000",
+    "part": "EXTERIOR LIGHTING:HEADLIGHTS",
+    "summary": "DOPE, INC. IS RECALLING 42,540 COMBINATION CORNER AND BUMPER LAMP ASSEMBLIES OF VARIOUS PART NUMBERS SOLD FOR USE AS AFTERMARKET EQUIPMENT FOR VARIOUS PASSENGER VEHICLES.  THESE HEADLAMPS FAIL TO CONFORM TO THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, \"LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT.\"  THESE LAMPS DO NOT CONTAIN THE REQUIRED AMBER SIDE REFLECTORS."
+   },
+   {
+    "id": "09E012000",
+    "part": "EXTERIOR LIGHTING",
+    "summary": "SABERSPORT IS RECALLING 16,270 COMBINATION CORNER AND BUMPER LAMP ASSEMBLIES OF VARIOUS PART NUMBERS SOLD FOR USE AS AFTERMARKET EQUIPMENT FOR VARIOUS PASSENGER VEHICLES.  THESE HEADLAMPS FAIL TO CONFORM TO THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, \"LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT.\"  THESE LAMPS DO NOT CONTAIN THE REQUIRED AMBER SIDE REFLECTORS."
+   },
+   {
+    "id": "06E089000",
+    "part": "SUSPENSION:FRONT",
+    "summary": "CERTAIN AFTERMARKET EIBACH BRANDED FRONT STRUTS ONLY, PART NO. 35101.8001, AND EIBACH BRANDED FRONT STRUTS AS SUSPENSION KITS, PART NOS. 35101.840, 35101.680, 35101.780, 35100.680, 35100.780, 4.10135.680, AND 4.10035.780, SOLD FOR USE ON 2005 THROUGH 2007 FORD MUSTANG  VEHICLES.  THE FRONT ANTI ROLL BAR ATTACHMENT BRACKET ON THE FRONT STRUT CAN SEPARATE FROM THE STRUT HOUSING DUE TO INCONSISTENT W"
+   }
+  ],
+  "2007": [
+   {
+    "id": "21E013000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain air bag inflator and/or module replacement service parts that may have been used as part of a collision repair.  The parts include certain driver-side air bag inflators and/or modules, designed to fit 2005-2014 Ford Mustang and Mustang GT500.  It also includes certain passenger-side air bag inflators and/or modules designed to fit 2005-2014 Ford Musta"
+   },
+   {
+    "id": "21V081000",
+    "part": "AIR BAGS:FRONTAL",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2005-2014 Mustang, 2004-2011 Ranger, 2009-2011 Mercury Milan, 2006 Ford GT, 2008-2012 Fusion, 2007-2010 Edge and Lincoln MKX, and 2009-2010 Lincoln MKZ vehicles.  These vehicles may be equipped with a driver or passenger frontal air bag inflator used as a replacement service part, that may explode due to propellant degradation occurring after long-ter"
+   },
+   {
+    "id": "17V024000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2012 Ford Fusion and Mustang and Lincoln Zephyr and MKZ vehicles originally sold, or ever registered, in Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas, Puerto Rico, American Samoa, Guam, the Northern Mariana Islands (Saipan), and the U.S. Virgin Islands, or \"Zone A.\"\r\n\r\nAdditionally, unless included in \"Z"
+   },
+   {
+    "id": "15V319000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2005-2014 Mustang vehicles manufactured April 6, 2004, to June 21, 2014, and 2005-2006 GT vehicles manufactured February 20, 2004, to September 22, 2006.  The affected vehicles are equipped with a dual-stage driver frontal air bag that may be susceptible to moisture intrusion which, over time, could cause the inflator to rupture."
+   },
+   {
+    "id": "16V384000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2007-2011 Ford Ranger vehicles, 2006-2011 Ford Fusion, Mercury Milan and Lincoln Zephyr/MKZ vehicles, 2007-2010 Ford Edge, Lincoln MKX vehicles, 2005-2006 Ford GT vehicles, and 2005-2011 Ford Mustang vehicles originally sold, or ever registered, in Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas,"
+   },
+   {
+    "id": "08V082000",
+    "part": "AIR BAGS:FRONTAL",
+    "summary": "FORD IS RECALLING 434,593 MY 2008 MUSTANG VEHICLES FOR FAILING TO COMPLY WITH ONE OF THE NECK INJURY REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 208, \"OCCUPANT CRASH PROTECTION,\" FOR AN UNBELTED 5TH PERCENTILE FEMALE SITTING IN THE PASSENGER SEAT WHILE IT IS IN THE FULL FORWARD POSITION."
+   },
+   {
+    "id": "09E025000",
+    "part": "EXTERIOR LIGHTING:HEADLIGHTS",
+    "summary": "DOPE, INC. IS RECALLING 42,540 COMBINATION CORNER AND BUMPER LAMP ASSEMBLIES OF VARIOUS PART NUMBERS SOLD FOR USE AS AFTERMARKET EQUIPMENT FOR VARIOUS PASSENGER VEHICLES.  THESE HEADLAMPS FAIL TO CONFORM TO THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, \"LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT.\"  THESE LAMPS DO NOT CONTAIN THE REQUIRED AMBER SIDE REFLECTORS."
+   },
+   {
+    "id": "09E012000",
+    "part": "EXTERIOR LIGHTING",
+    "summary": "SABERSPORT IS RECALLING 16,270 COMBINATION CORNER AND BUMPER LAMP ASSEMBLIES OF VARIOUS PART NUMBERS SOLD FOR USE AS AFTERMARKET EQUIPMENT FOR VARIOUS PASSENGER VEHICLES.  THESE HEADLAMPS FAIL TO CONFORM TO THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, \"LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT.\"  THESE LAMPS DO NOT CONTAIN THE REQUIRED AMBER SIDE REFLECTORS."
+   },
+   {
+    "id": "06E089000",
+    "part": "SUSPENSION:FRONT",
+    "summary": "CERTAIN AFTERMARKET EIBACH BRANDED FRONT STRUTS ONLY, PART NO. 35101.8001, AND EIBACH BRANDED FRONT STRUTS AS SUSPENSION KITS, PART NOS. 35101.840, 35101.680, 35101.780, 35100.680, 35100.780, 4.10135.680, AND 4.10035.780, SOLD FOR USE ON 2005 THROUGH 2007 FORD MUSTANG  VEHICLES.  THE FRONT ANTI ROLL BAR ATTACHMENT BRACKET ON THE FRONT STRUT CAN SEPARATE FROM THE STRUT HOUSING DUE TO INCONSISTENT W"
+   }
+  ],
+  "2008": [
+   {
+    "id": "21E013000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain air bag inflator and/or module replacement service parts that may have been used as part of a collision repair.  The parts include certain driver-side air bag inflators and/or modules, designed to fit 2005-2014 Ford Mustang and Mustang GT500.  It also includes certain passenger-side air bag inflators and/or modules designed to fit 2005-2014 Ford Musta"
+   },
+   {
+    "id": "21V081000",
+    "part": "AIR BAGS:FRONTAL",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2005-2014 Mustang, 2004-2011 Ranger, 2009-2011 Mercury Milan, 2006 Ford GT, 2008-2012 Fusion, 2007-2010 Edge and Lincoln MKX, and 2009-2010 Lincoln MKZ vehicles.  These vehicles may be equipped with a driver or passenger frontal air bag inflator used as a replacement service part, that may explode due to propellant degradation occurring after long-ter"
+   },
+   {
+    "id": "17V024000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2012 Ford Fusion and Mustang and Lincoln Zephyr and MKZ vehicles originally sold, or ever registered, in Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas, Puerto Rico, American Samoa, Guam, the Northern Mariana Islands (Saipan), and the U.S. Virgin Islands, or \"Zone A.\"\r\n\r\nAdditionally, unless included in \"Z"
+   },
+   {
+    "id": "15V319000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2005-2014 Mustang vehicles manufactured April 6, 2004, to June 21, 2014, and 2005-2006 GT vehicles manufactured February 20, 2004, to September 22, 2006.  The affected vehicles are equipped with a dual-stage driver frontal air bag that may be susceptible to moisture intrusion which, over time, could cause the inflator to rupture."
+   },
+   {
+    "id": "16V384000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2007-2011 Ford Ranger vehicles, 2006-2011 Ford Fusion, Mercury Milan and Lincoln Zephyr/MKZ vehicles, 2007-2010 Ford Edge, Lincoln MKX vehicles, 2005-2006 Ford GT vehicles, and 2005-2011 Ford Mustang vehicles originally sold, or ever registered, in Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas,"
+   },
+   {
+    "id": "08V082000",
+    "part": "AIR BAGS:FRONTAL",
+    "summary": "FORD IS RECALLING 434,593 MY 2008 MUSTANG VEHICLES FOR FAILING TO COMPLY WITH ONE OF THE NECK INJURY REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 208, \"OCCUPANT CRASH PROTECTION,\" FOR AN UNBELTED 5TH PERCENTILE FEMALE SITTING IN THE PASSENGER SEAT WHILE IT IS IN THE FULL FORWARD POSITION."
+   },
+   {
+    "id": "09E025000",
+    "part": "EXTERIOR LIGHTING:HEADLIGHTS",
+    "summary": "DOPE, INC. IS RECALLING 42,540 COMBINATION CORNER AND BUMPER LAMP ASSEMBLIES OF VARIOUS PART NUMBERS SOLD FOR USE AS AFTERMARKET EQUIPMENT FOR VARIOUS PASSENGER VEHICLES.  THESE HEADLAMPS FAIL TO CONFORM TO THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, \"LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT.\"  THESE LAMPS DO NOT CONTAIN THE REQUIRED AMBER SIDE REFLECTORS."
+   },
+   {
+    "id": "09E012000",
+    "part": "EXTERIOR LIGHTING",
+    "summary": "SABERSPORT IS RECALLING 16,270 COMBINATION CORNER AND BUMPER LAMP ASSEMBLIES OF VARIOUS PART NUMBERS SOLD FOR USE AS AFTERMARKET EQUIPMENT FOR VARIOUS PASSENGER VEHICLES.  THESE HEADLAMPS FAIL TO CONFORM TO THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NO. 108, \"LAMPS, REFLECTIVE DEVICES, AND ASSOCIATED EQUIPMENT.\"  THESE LAMPS DO NOT CONTAIN THE REQUIRED AMBER SIDE REFLECTORS."
+   }
+  ],
+  "2009": [
+   {
+    "id": "21E013000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain air bag inflator and/or module replacement service parts that may have been used as part of a collision repair.  The parts include certain driver-side air bag inflators and/or modules, designed to fit 2005-2014 Ford Mustang and Mustang GT500.  It also includes certain passenger-side air bag inflators and/or modules designed to fit 2005-2014 Ford Musta"
+   },
+   {
+    "id": "21V081000",
+    "part": "AIR BAGS:FRONTAL",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2005-2014 Mustang, 2004-2011 Ranger, 2009-2011 Mercury Milan, 2006 Ford GT, 2008-2012 Fusion, 2007-2010 Edge and Lincoln MKX, and 2009-2010 Lincoln MKZ vehicles.  These vehicles may be equipped with a driver or passenger frontal air bag inflator used as a replacement service part, that may explode due to propellant degradation occurring after long-ter"
+   },
+   {
+    "id": "18V046000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2013 Ford Mustang vehicles sold, or ever registered in the states of Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas, Puerto Rico, American Samoa, Guam, the Northern Mariana Islands (Saipan), and the U.S. Virgin Islands or \"Zone A.\"\r\n\r\nAdditionally, Ford is recalling certain 2010 Ford Edge, Fusion, Mustang "
+   },
+   {
+    "id": "17V024000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2012 Ford Fusion and Mustang and Lincoln Zephyr and MKZ vehicles originally sold, or ever registered, in Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas, Puerto Rico, American Samoa, Guam, the Northern Mariana Islands (Saipan), and the U.S. Virgin Islands, or \"Zone A.\"\r\n\r\nAdditionally, unless included in \"Z"
+   },
+   {
+    "id": "15V319000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2005-2014 Mustang vehicles manufactured April 6, 2004, to June 21, 2014, and 2005-2006 GT vehicles manufactured February 20, 2004, to September 22, 2006.  The affected vehicles are equipped with a dual-stage driver frontal air bag that may be susceptible to moisture intrusion which, over time, could cause the inflator to rupture."
+   },
+   {
+    "id": "16V384000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2007-2011 Ford Ranger vehicles, 2006-2011 Ford Fusion, Mercury Milan and Lincoln Zephyr/MKZ vehicles, 2007-2010 Ford Edge, Lincoln MKX vehicles, 2005-2006 Ford GT vehicles, and 2005-2011 Ford Mustang vehicles originally sold, or ever registered, in Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas,"
+   }
+  ],
+  "2010": [
+   {
+    "id": "19V001000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2014 Ford Mustang vehicles sold, or ever registered, in the states of Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas, Puerto Rico, American Samoa, Guam, the Northern Mariana Islands (Saipan), and the U.S. Virgin Islands or \"Zone A.\"   \r\n\r\nAdditionally, Ford is recalling certain 2011 Ford Ranger and Mercury"
+   },
+   {
+    "id": "21V081000",
+    "part": "AIR BAGS:FRONTAL",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2005-2014 Mustang, 2004-2011 Ranger, 2009-2011 Mercury Milan, 2006 Ford GT, 2008-2012 Fusion, 2007-2010 Edge and Lincoln MKX, and 2009-2010 Lincoln MKZ vehicles.  These vehicles may be equipped with a driver or passenger frontal air bag inflator used as a replacement service part, that may explode due to propellant degradation occurring after long-ter"
+   },
+   {
+    "id": "21E013000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain air bag inflator and/or module replacement service parts that may have been used as part of a collision repair.  The parts include certain driver-side air bag inflators and/or modules, designed to fit 2005-2014 Ford Mustang and Mustang GT500.  It also includes certain passenger-side air bag inflators and/or modules designed to fit 2005-2014 Ford Musta"
+   },
+   {
+    "id": "18V046000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2013 Ford Mustang vehicles sold, or ever registered in the states of Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas, Puerto Rico, American Samoa, Guam, the Northern Mariana Islands (Saipan), and the U.S. Virgin Islands or \"Zone A.\"\r\n\r\nAdditionally, Ford is recalling certain 2010 Ford Edge, Fusion, Mustang "
+   },
+   {
+    "id": "16V384000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2007-2011 Ford Ranger vehicles, 2006-2011 Ford Fusion, Mercury Milan and Lincoln Zephyr/MKZ vehicles, 2007-2010 Ford Edge, Lincoln MKX vehicles, 2005-2006 Ford GT vehicles, and 2005-2011 Ford Mustang vehicles originally sold, or ever registered, in Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas,"
+   },
+   {
+    "id": "15V319000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2005-2014 Mustang vehicles manufactured April 6, 2004, to June 21, 2014, and 2005-2006 GT vehicles manufactured February 20, 2004, to September 22, 2006.  The affected vehicles are equipped with a dual-stage driver frontal air bag that may be susceptible to moisture intrusion which, over time, could cause the inflator to rupture."
+   }
+  ],
+  "2011": [
+   {
+    "id": "19V001000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2014 Ford Mustang vehicles sold, or ever registered, in the states of Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas, Puerto Rico, American Samoa, Guam, the Northern Mariana Islands (Saipan), and the U.S. Virgin Islands or \"Zone A.\"   \r\n\r\nAdditionally, Ford is recalling certain 2011 Ford Ranger and Mercury"
+   },
+   {
+    "id": "21V081000",
+    "part": "AIR BAGS:FRONTAL",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2005-2014 Mustang, 2004-2011 Ranger, 2009-2011 Mercury Milan, 2006 Ford GT, 2008-2012 Fusion, 2007-2010 Edge and Lincoln MKX, and 2009-2010 Lincoln MKZ vehicles.  These vehicles may be equipped with a driver or passenger frontal air bag inflator used as a replacement service part, that may explode due to propellant degradation occurring after long-ter"
+   },
+   {
+    "id": "21E013000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain air bag inflator and/or module replacement service parts that may have been used as part of a collision repair.  The parts include certain driver-side air bag inflators and/or modules, designed to fit 2005-2014 Ford Mustang and Mustang GT500.  It also includes certain passenger-side air bag inflators and/or modules designed to fit 2005-2014 Ford Musta"
+   },
+   {
+    "id": "16V384000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2007-2011 Ford Ranger vehicles, 2006-2011 Ford Fusion, Mercury Milan and Lincoln Zephyr/MKZ vehicles, 2007-2010 Ford Edge, Lincoln MKX vehicles, 2005-2006 Ford GT vehicles, and 2005-2011 Ford Mustang vehicles originally sold, or ever registered, in Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas,"
+   },
+   {
+    "id": "15V319000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2005-2014 Mustang vehicles manufactured April 6, 2004, to June 21, 2014, and 2005-2006 GT vehicles manufactured February 20, 2004, to September 22, 2006.  The affected vehicles are equipped with a dual-stage driver frontal air bag that may be susceptible to moisture intrusion which, over time, could cause the inflator to rupture."
+   }
+  ],
+  "2012": [
+   {
+    "id": "19V001000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2014 Ford Mustang vehicles sold, or ever registered, in the states of Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas, Puerto Rico, American Samoa, Guam, the Northern Mariana Islands (Saipan), and the U.S. Virgin Islands or \"Zone A.\"   \r\n\r\nAdditionally, Ford is recalling certain 2011 Ford Ranger and Mercury"
+   },
+   {
+    "id": "17V024000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2012 Ford Fusion and Mustang and Lincoln Zephyr and MKZ vehicles originally sold, or ever registered, in Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas, Puerto Rico, American Samoa, Guam, the Northern Mariana Islands (Saipan), and the U.S. Virgin Islands, or \"Zone A.\"\r\n\r\nAdditionally, unless included in \"Z"
+   },
+   {
+    "id": "15V319000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2005-2014 Mustang vehicles manufactured April 6, 2004, to June 21, 2014, and 2005-2006 GT vehicles manufactured February 20, 2004, to September 22, 2006.  The affected vehicles are equipped with a dual-stage driver frontal air bag that may be susceptible to moisture intrusion which, over time, could cause the inflator to rupture."
+   },
+   {
+    "id": "16V248000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2011-2012 Ford F-150 trucks, 2012 Ford Expedition, Lincoln Navigator, and Ford Mustang vehicles.  The affected vehicles are equipped with an automatic transmission that may unexpectedly downshift to first gear, regardless of vehicle speed."
+   },
+   {
+    "id": "12V190000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION:CONTROL MODULE (TCM/PCM/TECM)",
+    "summary": "FORD IS RECALLING CERTAIN MODEL YEAR 2011-2012 FORD F-150, 2012 EXPEDITION AND LINCOLN NAVIGATOR, AND 2012-2013 MUSTANG VEHICLES, FOR FAILING TO COMPLY WITH THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NOS. 102, \"TRANSMISSION SHIFT LEVER SEQUENCE, STARTER INTERLOCK, AND TRANSMISSION BRAKING EFFECT\" AND 108 LAMPS, REFLECTIVE DEVICES AND ASSOCIATED EQUIPMENT.  THESE VEHICLES MAY HAVE "
+   },
+   {
+    "id": "21V081000",
+    "part": "AIR BAGS:FRONTAL",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2005-2014 Mustang, 2004-2011 Ranger, 2009-2011 Mercury Milan, 2006 Ford GT, 2008-2012 Fusion, 2007-2010 Edge and Lincoln MKX, and 2009-2010 Lincoln MKZ vehicles.  These vehicles may be equipped with a driver or passenger frontal air bag inflator used as a replacement service part, that may explode due to propellant degradation occurring after long-ter"
+   },
+   {
+    "id": "21E013000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain air bag inflator and/or module replacement service parts that may have been used as part of a collision repair.  The parts include certain driver-side air bag inflators and/or modules, designed to fit 2005-2014 Ford Mustang and Mustang GT500.  It also includes certain passenger-side air bag inflators and/or modules designed to fit 2005-2014 Ford Musta"
+   }
+  ],
+  "2013": [
+   {
+    "id": "19V001000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2014 Ford Mustang vehicles sold, or ever registered, in the states of Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas, Puerto Rico, American Samoa, Guam, the Northern Mariana Islands (Saipan), and the U.S. Virgin Islands or \"Zone A.\"   \r\n\r\nAdditionally, Ford is recalling certain 2011 Ford Ranger and Mercury"
+   },
+   {
+    "id": "18V046000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2013 Ford Mustang vehicles sold, or ever registered in the states of Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas, Puerto Rico, American Samoa, Guam, the Northern Mariana Islands (Saipan), and the U.S. Virgin Islands or \"Zone A.\"\r\n\r\nAdditionally, Ford is recalling certain 2010 Ford Edge, Fusion, Mustang "
+   },
+   {
+    "id": "15V319000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2005-2014 Mustang vehicles manufactured April 6, 2004, to June 21, 2014, and 2005-2006 GT vehicles manufactured February 20, 2004, to September 22, 2006.  The affected vehicles are equipped with a dual-stage driver frontal air bag that may be susceptible to moisture intrusion which, over time, could cause the inflator to rupture."
+   },
+   {
+    "id": "12V190000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION:CONTROL MODULE (TCM/PCM/TECM)",
+    "summary": "FORD IS RECALLING CERTAIN MODEL YEAR 2011-2012 FORD F-150, 2012 EXPEDITION AND LINCOLN NAVIGATOR, AND 2012-2013 MUSTANG VEHICLES, FOR FAILING TO COMPLY WITH THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NOS. 102, \"TRANSMISSION SHIFT LEVER SEQUENCE, STARTER INTERLOCK, AND TRANSMISSION BRAKING EFFECT\" AND 108 LAMPS, REFLECTIVE DEVICES AND ASSOCIATED EQUIPMENT.  THESE VEHICLES MAY HAVE "
+   },
+   {
+    "id": "21V081000",
+    "part": "AIR BAGS:FRONTAL",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2005-2014 Mustang, 2004-2011 Ranger, 2009-2011 Mercury Milan, 2006 Ford GT, 2008-2012 Fusion, 2007-2010 Edge and Lincoln MKX, and 2009-2010 Lincoln MKZ vehicles.  These vehicles may be equipped with a driver or passenger frontal air bag inflator used as a replacement service part, that may explode due to propellant degradation occurring after long-ter"
+   },
+   {
+    "id": "21E013000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain air bag inflator and/or module replacement service parts that may have been used as part of a collision repair.  The parts include certain driver-side air bag inflators and/or modules, designed to fit 2005-2014 Ford Mustang and Mustang GT500.  It also includes certain passenger-side air bag inflators and/or modules designed to fit 2005-2014 Ford Musta"
+   }
+  ],
+  "2014": [
+   {
+    "id": "19V001000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2014 Ford Mustang vehicles sold, or ever registered, in the states of Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas, Puerto Rico, American Samoa, Guam, the Northern Mariana Islands (Saipan), and the U.S. Virgin Islands or \"Zone A.\"   \r\n\r\nAdditionally, Ford is recalling certain 2011 Ford Ranger and Mercury"
+   },
+   {
+    "id": "15V319000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2005-2014 Mustang vehicles manufactured April 6, 2004, to June 21, 2014, and 2005-2006 GT vehicles manufactured February 20, 2004, to September 22, 2006.  The affected vehicles are equipped with a dual-stage driver frontal air bag that may be susceptible to moisture intrusion which, over time, could cause the inflator to rupture."
+   },
+   {
+    "id": "21E013000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain air bag inflator and/or module replacement service parts that may have been used as part of a collision repair.  The parts include certain driver-side air bag inflators and/or modules, designed to fit 2005-2014 Ford Mustang and Mustang GT500.  It also includes certain passenger-side air bag inflators and/or modules designed to fit 2005-2014 Ford Musta"
+   },
+   {
+    "id": "21V081000",
+    "part": "AIR BAGS:FRONTAL",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2005-2014 Mustang, 2004-2011 Ranger, 2009-2011 Mercury Milan, 2006 Ford GT, 2008-2012 Fusion, 2007-2010 Edge and Lincoln MKX, and 2009-2010 Lincoln MKZ vehicles.  These vehicles may be equipped with a driver or passenger frontal air bag inflator used as a replacement service part, that may explode due to propellant degradation occurring after long-ter"
+   }
+  ],
+  "2015": [
+   {
+    "id": "16V779000",
+    "part": "ENGINE AND ENGINE COOLING:COOLING SYSTEM:HOSES/LINES/PIPING/FITTINGS",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2015-2017 Mustang vehicles manufactured February 24, 2015, to August 30, 2016.  A hose may separate from the engine oil cooler tube assembly causing an oil leak."
+   },
+   {
+    "id": "16V643000",
+    "part": "LATCHES/LOCKS/LINKAGES:DOORS:LATCH",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2012-2015 Ford Focus, 2013-2015 Ford Escape and Ford C-MAX, 2015 Lincoln MKC and Ford Mustang, and 2014-2016 Ford Transit Connect vehicles.  A component within the door latches may break, preventing the doors from latching and/or leading the driver or a passenger to believe a door is securely closed when, in fact, it is not."
+   },
+   {
+    "id": "14V774000",
+    "part": "FUEL SYSTEM, GASOLINE",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2015 Ford Mustang vehicles manufactured September 25, 2014, to October 9, 2014.  The fuel pressure sensor may not have been seated properly to the fuel jumper line, which may cause a fuel leak."
+   },
+   {
+    "id": "15V339000",
+    "part": "FUEL SYSTEM, GASOLINE:STORAGE:TANK ASSEMBLY",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2015 Ford Mustang vehicles manufactured February 14, 2014, to February 10, 2015, and equipped with 2.3L engines.  Prolonged exposure to elevated underbody temperatures can cause degradation of the fuel tank and/or fuel vapor lines, which may eventually result in a fuel leak.  In addition, this condition could cause seals in the parking brak"
+   },
+   {
+    "id": "14V649000",
+    "part": "SEAT BELTS",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2015 Ford Mustang vehicles manufactured August 18, 2014, to October 2, 2014.  In the affected vehicles, the passenger safety belt tension sensor may misclassify the size of the front passenger seat occupant.  This could cause a child size occupant to be classified as an adult and an adult passenger to be classified as a child passenger.  As"
+   },
+   {
+    "id": "15V832000",
+    "part": "SERVICE BRAKES, HYDRAULIC:FOUNDATION COMPONENTS:DISC:CALIPER",
+    "summary": "Roush Performance Products, Inc. (Roush) is recalling certain model year 2015 Ford Mustang GT Roush Stage 3 vehicles manufactured April 1, 2015, to October 31, 2015, and equipped with Roush Extreme Duty Half Shafts.  The affected vehicles have a brake caliper guide pin that may not have been sufficiently tightened during installation of the half shafts.  As a result, the caliper guide pin may loos"
+   },
+   {
+    "id": "22V011000",
+    "part": "SERVICE BRAKES, HYDRAULIC:PEDALS AND LINKAGES",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2014-2015 Fusion, Lincoln MKZ, and 2015 Mustang vehicles originally sold or ever registered, in Texas, Louisiana, Mississippi, Alabama, Florida, Georgia, South Carolina, North Carolina, Virginia and Hawaii.  Exposure to certain environmental conditions, such as high temperatures, high humidity, and salt air can cause the brake pedal bumper to corrode "
+   },
+   {
+    "id": "20V331000",
+    "part": "LATCHES/LOCKS/LINKAGES:DOORS:LATCH",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2011-2014 Fiesta, 2013-2014 Fusion, 2015 Mustang, 2013-2015 Escape and C-Max, 2012-2015 Focus, 2014-2016 Transit Connect, 2013-2014 Lincoln MKZ, and 2015 MKC vehicles.  These vehicles were previously recalled and repaired under recalls 15V-246, 16V-643 or 17V-210, however the repair may not have been completed properly.  A component within the door la"
+   },
+   {
+    "id": "22V082000",
+    "part": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2015-2017 Mustang vehicles.  The rearview camera wiring may be loose or damaged, which can result in a blank or distorted image."
+   },
+   {
+    "id": "25V572000",
+    "part": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2015-2019 Lincoln MKC, Mustang, F-350 SD, F-250 SD, F-450 SD, 2015-2017 Lincoln Navigator, Expedition, 2015-2018 Edge, Transit Connect, 2016-2019 F-550 SD, Transit, 2017-2019 Econoline, and 2019 Ranger vehicles. The rearview camera may display a distorted, inverted, or blank image when the vehicle is in reverse."
+   },
+   {
+    "id": "25V614000",
+    "part": "SEAT BELTS:PRETENSIONER",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2015-2017 Mustang vehicles. Water and road salt may corrode the front seat belt anchor pretensioner cables."
+   }
+  ],
+  "2016": [
+   {
+    "id": "15V707000",
+    "part": "SEAT BELTS",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2016 Ford Mustang vehicles manufactured September 26, 2015, to October 1, 2015.  The front and rear seat belts and child seat tether anchors may have been damaged in shipping from the supplier to the vehicle assembly plant and may not adequately restrain the occupant in a crash.  As such, these vehicles fail to comply with the requirements "
+   },
+   {
+    "id": "16V779000",
+    "part": "ENGINE AND ENGINE COOLING:COOLING SYSTEM:HOSES/LINES/PIPING/FITTINGS",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2015-2017 Mustang vehicles manufactured February 24, 2015, to August 30, 2016.  A hose may separate from the engine oil cooler tube assembly causing an oil leak."
+   },
+   {
+    "id": "22V082000",
+    "part": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2015-2017 Mustang vehicles.  The rearview camera wiring may be loose or damaged, which can result in a blank or distorted image."
+   },
+   {
+    "id": "25V572000",
+    "part": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2015-2019 Lincoln MKC, Mustang, F-350 SD, F-250 SD, F-450 SD, 2015-2017 Lincoln Navigator, Expedition, 2015-2018 Edge, Transit Connect, 2016-2019 F-550 SD, Transit, 2017-2019 Econoline, and 2019 Ranger vehicles. The rearview camera may display a distorted, inverted, or blank image when the vehicle is in reverse."
+   },
+   {
+    "id": "25V614000",
+    "part": "SEAT BELTS:PRETENSIONER",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2015-2017 Mustang vehicles. Water and road salt may corrode the front seat belt anchor pretensioner cables."
+   }
+  ],
+  "2017": [
+   {
+    "id": "16V779000",
+    "part": "ENGINE AND ENGINE COOLING:COOLING SYSTEM:HOSES/LINES/PIPING/FITTINGS",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2015-2017 Mustang vehicles manufactured February 24, 2015, to August 30, 2016.  A hose may separate from the engine oil cooler tube assembly causing an oil leak."
+   },
+   {
+    "id": "17V529000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2017 F-150 and Mustang vehicles.  The air bag inflator within the passenger frontal air bag module may rupture in the event of a crash."
+   },
+   {
+    "id": "17V168000",
+    "part": "LATCHES/LOCKS/LINKAGES:DOORS:LATCH",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2017 Ford Mustang vehicles.  The return spring for the driver side interior door handle may come loose, allowing the driver's door to unlatch in a side impact crash.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 206, \"Door Locks and Door Retention Components.\""
+   },
+   {
+    "id": "22V082000",
+    "part": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2015-2017 Mustang vehicles.  The rearview camera wiring may be loose or damaged, which can result in a blank or distorted image."
+   },
+   {
+    "id": "25V572000",
+    "part": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2015-2019 Lincoln MKC, Mustang, F-350 SD, F-250 SD, F-450 SD, 2015-2017 Lincoln Navigator, Expedition, 2015-2018 Edge, Transit Connect, 2016-2019 F-550 SD, Transit, 2017-2019 Econoline, and 2019 Ranger vehicles. The rearview camera may display a distorted, inverted, or blank image when the vehicle is in reverse."
+   },
+   {
+    "id": "25V614000",
+    "part": "SEAT BELTS:PRETENSIONER",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2015-2017 Mustang vehicles. Water and road salt may corrode the front seat belt anchor pretensioner cables."
+   }
+  ],
+  "2018": [
+   {
+    "id": "18E035000",
+    "part": "ENGINE AND ENGINE COOLING:ENGINE:GASOLINE:TURBO/SUPERCHARGER",
+    "summary": "Roush Performance Products, Inc. (Roush) is recalling certain aftermarket supercharger kits, part number R1318-6006P1-AA, sold for installation on 2018 Ford Mustangs.  The hose barb fittings on the supercharger kits may be manufactured incorrectly, possibly causing damage to the fuel lines and resulting in a fuel leak."
+   },
+   {
+    "id": "17V814000",
+    "part": "ELECTRICAL SYSTEM:SOFTWARE",
+    "summary": "Ford Motor Company is recalling certain 2018 Ford Mustang vehicles equipped with an automatic transmission and a 12.4\" digital instrument cluster.  If the ignition is turned off when the transmission is not in PARK, the instrument cluster may not illuminate the PRNDL gear position display and the operator may not receive the \"Key in Ignition\" chime when the driver's door is opened.  As such, these"
+   },
+   {
+    "id": "18V213000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2017-2018 Ford F-150 and 2018 Ford Expedition and Mustang and Lincoln Navigator vehicles equipped with 10-speed automatic transmissions.  A roll pin may not have been installed in the transmission, potentially causing a loss of the \"Park\" function."
+   },
+   {
+    "id": "25V572000",
+    "part": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2015-2019 Lincoln MKC, Mustang, F-350 SD, F-250 SD, F-450 SD, 2015-2017 Lincoln Navigator, Expedition, 2015-2018 Edge, Transit Connect, 2016-2019 F-550 SD, Transit, 2017-2019 Econoline, and 2019 Ranger vehicles. The rearview camera may display a distorted, inverted, or blank image when the vehicle is in reverse."
+   }
+  ],
+  "2019": [
+   {
+    "id": "20V263000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION:GEAR POSITION INDICATION (PRNDL)",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2019 Expedition and 2019-2020 Mustang vehicles.  The \"Transmission Not In Park\" warning message and associated chime duration are shorter than intended."
+   },
+   {
+    "id": "19V076000",
+    "part": "ELECTRICAL SYSTEM: INSTRUMENT CLUSTER/PANEL",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2019 Ford Mustang, Lincoln Nautilus, and Lincoln Navigator vehicles. At vehicle start-up, the Instrument Panel Cluster Assembly (IPC) may not function, showing a blank display.  As a result, these vehicles fail to comply with Federal Motor Vehicle Safety Standard (FMVSS) number 101, \"Controls and Displays.\""
+   },
+   {
+    "id": "22V382000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION:CONTROL MODULE (TCM/PCM/TECM)",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2019-2020 Mustang vehicles equipped with 5.0L engines and manual transmissions.  The Powertrain Control Module (PCM) may broadcast an unintended faulted signal to the modules controlling the reverse camera, reverse light, and driver assist features, which may disable all of these functions."
+   },
+   {
+    "id": "25V442000",
+    "part": "BACK OVER PREVENTION:SOFTWARE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2018-2022 Transit Connect, 2019-2020 MKZ, MKX,  Edge, Continental, F-150, Nautilus, Fusion, 2019-2023 Ranger, Mustang, 2020-2021 EcoSport, Expedition, Navigator, 2020-2022 Escape, F-250 SD, Corsair, 2020-2023 Aviator, Transit, 2020-2024 Explorer, 2021-2024 Bronco Sport, and 2022-2024 Maverick vehicles. A software error may cause the rearview camera to"
+   },
+   {
+    "id": "25V572000",
+    "part": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2015-2019 Lincoln MKC, Mustang, F-350 SD, F-250 SD, F-450 SD, 2015-2017 Lincoln Navigator, Expedition, 2015-2018 Edge, Transit Connect, 2016-2019 F-550 SD, Transit, 2017-2019 Econoline, and 2019 Ranger vehicles. The rearview camera may display a distorted, inverted, or blank image when the vehicle is in reverse."
+   },
+   {
+    "id": "26V372000",
+    "part": "ELECTRICAL SYSTEM: INSTRUMENT CLUSTER/PANEL",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2019 Ford Mustang, Lincoln Nautilus, and Lincoln Navigator vehicles previously repaired incorrectly under recall number 19V076. At vehicle start-up, the Instrument Panel Cluster Assembly (IPC) may not function, showing a blank display.  As a result, these vehicles fail to comply with Federal Motor Vehicle Safety Standard (FMVSS) number 101, \"Controls "
+   }
+  ],
+  "2020": [
+   {
+    "id": "20V306000",
+    "part": "FORWARD COLLISION AVOIDANCE: SENSING SYSTEM: CAMERA",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2020 Mustang vehicles equipped a forward-looking camera.  The camera may be misaligned to the vehicle and features that are dependent on the camera such as Pre-Collision Assist, Adaptive Cruise Control, Lane Keeping System, Driver Alert, and Auto High Beam Control may not function as intended."
+   },
+   {
+    "id": "20V573000",
+    "part": "SERVICE BRAKES, HYDRAULIC:PEDALS AND LINKAGES",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2020 Mustang vehicles equipped with automatic transmissions.  The brake pedal bracket may fracture during sudden stopping."
+   },
+   {
+    "id": "20V263000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION:GEAR POSITION INDICATION (PRNDL)",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2019 Expedition and 2019-2020 Mustang vehicles.  The \"Transmission Not In Park\" warning message and associated chime duration are shorter than intended."
+   },
+   {
+    "id": "20V575000",
+    "part": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2020 Ford F-150, F-250, F-350, F-450, F-550, Explorer, Mustang, Transit, Expedition, Escape, Ranger and Edge, and Lincoln Nautilus and Corsair vehicles.  Due to a poor electrical connection, the rearview camera may intermittently display a blank or distorted image.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle "
+   },
+   {
+    "id": "22V382000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION:CONTROL MODULE (TCM/PCM/TECM)",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2019-2020 Mustang vehicles equipped with 5.0L engines and manual transmissions.  The Powertrain Control Module (PCM) may broadcast an unintended faulted signal to the modules controlling the reverse camera, reverse light, and driver assist features, which may disable all of these functions."
+   },
+   {
+    "id": "23V727000",
+    "part": "ELECTRICAL SYSTEM:BODY CONTROL MODULE/BCM",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2020-2023 Mustang vehicles.  The brake fluid level sensor may not activate the visual warning indicator when the brake fluid is low.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 135, \"Light Vehicle Brake Systems.\""
+   },
+   {
+    "id": "25V442000",
+    "part": "BACK OVER PREVENTION:SOFTWARE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2018-2022 Transit Connect, 2019-2020 MKZ, MKX,  Edge, Continental, F-150, Nautilus, Fusion, 2019-2023 Ranger, Mustang, 2020-2021 EcoSport, Expedition, Navigator, 2020-2022 Escape, F-250 SD, Corsair, 2020-2023 Aviator, Transit, 2020-2024 Explorer, 2021-2024 Bronco Sport, and 2022-2024 Maverick vehicles. A software error may cause the rearview camera to"
+   },
+   {
+    "id": "25V695000",
+    "part": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2015-2019 Flex, 2015 Explorer, Lincoln MKT,  Lincoln MKZ, 2015-2016 C-Max, Escape, Taurus, 2016 Fusion, 2018-2019 Taurus, 2019 Lincoln MKT, Fiesta, and 2020 Mustang vehicles.  The rearview camera may display a distorted,  intermittent, or blank image when the vehicle is in reverse."
+   }
+  ],
+  "2021": [
+   {
+    "id": "21V980000",
+    "part": "AIR BAGS:SIDE/WINDOW:CURTAIN",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021 Mustang vehicles.  The side curtain air bag inflators may have been manufactured with the incorrect amount of compressed gas, which can result in improper air bag inflation.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard numbers 226, \"Ejection Mitigation,\" and 214, \"Side Impact Protection.\""
+   },
+   {
+    "id": "22V083000",
+    "part": "AIR BAGS:KNEE BOLSTER",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2022 Mustang vehicles.  An insufficient weld on the front passenger knee air bag may result in an improper air bag deployment."
+   },
+   {
+    "id": "23V727000",
+    "part": "ELECTRICAL SYSTEM:BODY CONTROL MODULE/BCM",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2020-2023 Mustang vehicles.  The brake fluid level sensor may not activate the visual warning indicator when the brake fluid is low.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 135, \"Light Vehicle Brake Systems.\""
+   },
+   {
+    "id": "25V442000",
+    "part": "BACK OVER PREVENTION:SOFTWARE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2018-2022 Transit Connect, 2019-2020 MKZ, MKX,  Edge, Continental, F-150, Nautilus, Fusion, 2019-2023 Ranger, Mustang, 2020-2021 EcoSport, Expedition, Navigator, 2020-2022 Escape, F-250 SD, Corsair, 2020-2023 Aviator, Transit, 2020-2024 Explorer, 2021-2024 Bronco Sport, and 2022-2024 Maverick vehicles. A software error may cause the rearview camera to"
+   },
+   {
+    "id": "25V455000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2023 Bronco, Explorer, Lincoln Aviator, F-250 SD, F-350 SD, F-450 SD,  F-550 SD, 2021-2022 Lincoln Navigator, Mustang, F-150, and 2022 Expedition vehicles. The low-pressure fuel pump may fail, which can result in an engine stall while driving."
+   },
+   {
+    "id": "25V689000",
+    "part": "ELECTRICAL SYSTEM:BODY CONTROL MODULE/BCM",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2023 Mustang vehicles repaired incorrectly under recall number 23V727. The brake fluid level sensor may not activate the visual warning indicator when the brake fluid is low.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 135, \"Light Vehicle Brake Systems.\""
+   }
+  ],
+  "2022": [
+   {
+    "id": "22V083000",
+    "part": "AIR BAGS:KNEE BOLSTER",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2022 Mustang vehicles.  An insufficient weld on the front passenger knee air bag may result in an improper air bag deployment."
+   },
+   {
+    "id": "22V334000",
+    "part": "FORWARD COLLISION AVOIDANCE: SENSING SYSTEM: CAMERA",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2022 Mustang vehicles equipped with an Image Processing Module A (IPMA) or forward-facing camera.  The camera is misaligned to the vehicle, resulting in the camera not functioning as intended."
+   },
+   {
+    "id": "23V070000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2022-2023 F-150, Mustang, Explorer, Bronco, and 2023 Lincoln Aviator vehicles equipped with automatic transmissions.  The transmission may contain a loose bolt which could prevent the transmission from engaging the park gear, although the gear shifter position may indicate that the vehicle has been shifted to \"PARK.\""
+   },
+   {
+    "id": "23V727000",
+    "part": "ELECTRICAL SYSTEM:BODY CONTROL MODULE/BCM",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2020-2023 Mustang vehicles.  The brake fluid level sensor may not activate the visual warning indicator when the brake fluid is low.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 135, \"Light Vehicle Brake Systems.\""
+   },
+   {
+    "id": "24V493000",
+    "part": "STEERING:ELECTRIC POWER ASSIST SYSTEM",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2022-2023 Ford Mustang vehicles.  The secondary steering torque sensor may not be calibrated properly, which can cause the steering wheel to turn side to side against the driver's intentions."
+   },
+   {
+    "id": "25V096000",
+    "part": "STEERING:ELECTRIC POWER ASSIST SYSTEM",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2022-2023 Ford Mustang vehicles previously repaired incorrectly under recall number 24V-493.  The secondary steering torque sensor may not be calibrated properly, which can cause the steering wheel to turn side to side against the driver's intentions."
+   },
+   {
+    "id": "25V442000",
+    "part": "BACK OVER PREVENTION:SOFTWARE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2018-2022 Transit Connect, 2019-2020 MKZ, MKX,  Edge, Continental, F-150, Nautilus, Fusion, 2019-2023 Ranger, Mustang, 2020-2021 EcoSport, Expedition, Navigator, 2020-2022 Escape, F-250 SD, Corsair, 2020-2023 Aviator, Transit, 2020-2024 Explorer, 2021-2024 Bronco Sport, and 2022-2024 Maverick vehicles. A software error may cause the rearview camera to"
+   },
+   {
+    "id": "25V455000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2023 Bronco, Explorer, Lincoln Aviator, F-250 SD, F-350 SD, F-450 SD,  F-550 SD, 2021-2022 Lincoln Navigator, Mustang, F-150, and 2022 Expedition vehicles. The low-pressure fuel pump may fail, which can result in an engine stall while driving."
+   },
+   {
+    "id": "25V689000",
+    "part": "ELECTRICAL SYSTEM:BODY CONTROL MODULE/BCM",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2023 Mustang vehicles repaired incorrectly under recall number 23V727. The brake fluid level sensor may not activate the visual warning indicator when the brake fluid is low.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 135, \"Light Vehicle Brake Systems.\""
+   }
+  ],
+  "2023": [
+   {
+    "id": "23V070000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2022-2023 F-150, Mustang, Explorer, Bronco, and 2023 Lincoln Aviator vehicles equipped with automatic transmissions.  The transmission may contain a loose bolt which could prevent the transmission from engaging the park gear, although the gear shifter position may indicate that the vehicle has been shifted to \"PARK.\""
+   },
+   {
+    "id": "23V727000",
+    "part": "ELECTRICAL SYSTEM:BODY CONTROL MODULE/BCM",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2020-2023 Mustang vehicles.  The brake fluid level sensor may not activate the visual warning indicator when the brake fluid is low.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 135, \"Light Vehicle Brake Systems.\""
+   },
+   {
+    "id": "24V493000",
+    "part": "STEERING:ELECTRIC POWER ASSIST SYSTEM",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2022-2023 Ford Mustang vehicles.  The secondary steering torque sensor may not be calibrated properly, which can cause the steering wheel to turn side to side against the driver's intentions."
+   },
+   {
+    "id": "25V096000",
+    "part": "STEERING:ELECTRIC POWER ASSIST SYSTEM",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2022-2023 Ford Mustang vehicles previously repaired incorrectly under recall number 24V-493.  The secondary steering torque sensor may not be calibrated properly, which can cause the steering wheel to turn side to side against the driver's intentions."
+   },
+   {
+    "id": "25V442000",
+    "part": "BACK OVER PREVENTION:SOFTWARE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2018-2022 Transit Connect, 2019-2020 MKZ, MKX,  Edge, Continental, F-150, Nautilus, Fusion, 2019-2023 Ranger, Mustang, 2020-2021 EcoSport, Expedition, Navigator, 2020-2022 Escape, F-250 SD, Corsair, 2020-2023 Aviator, Transit, 2020-2024 Explorer, 2021-2024 Bronco Sport, and 2022-2024 Maverick vehicles. A software error may cause the rearview camera to"
+   },
+   {
+    "id": "25V689000",
+    "part": "ELECTRICAL SYSTEM:BODY CONTROL MODULE/BCM",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2023 Mustang vehicles repaired incorrectly under recall number 23V727. The brake fluid level sensor may not activate the visual warning indicator when the brake fluid is low.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 135, \"Light Vehicle Brake Systems.\""
+   }
+  ],
+  "2024": [
+   {
+    "id": "23V800000",
+    "part": "SERVICE BRAKES, HYDRAULIC:PEDALS AND LINKAGES",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2024 Mustang vehicles.  The brake pedal assembly may have been manufactured incorrectly, which can result in a loose brake pedal."
+   },
+   {
+    "id": "24V220000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:HOSES, LINES/PIPING, AND FITTINGS",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2024 Mustang vehicles equipped with 2.3L engines.  The low-pressure fuel supply line may be damaged or cut, which can result in a fuel leak."
+   },
+   {
+    "id": "24V394000",
+    "part": "POWER TRAIN:CLUTCH ASSEMBLY:LINKAGE:HYDRAULIC HOSE/FITTINGS",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2024 Mustang vehicles.  The clutch pressure line may be improperly secured and contact hot exhaust components, which can result in melting of the clutch pressure line and cause a brake fluid leak."
+   },
+   {
+    "id": "24V496000",
+    "part": "SERVICE BRAKES, HYDRAULIC:BRAKE FLUID LOW WARNING:SWITCH/SENSOR/FLOAT",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2024 Mustang vehicles.  The brake fluid level sensor may not be properly configured after a Body Control Module (BCM) service update, resulting in a constantly illuminated brake fluid level warning light that can conceal a low brake fluid condition."
+   },
+   {
+    "id": "24V593000",
+    "part": "SUSPENSION:REAR",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2024 Mustang vehicles.  The rear suspension knuckles may have a casting defect that causes them to fail, which can result in a loss of vehicle handling and steering control."
+   },
+   {
+    "id": "24V634000",
+    "part": "FUEL SYSTEM, GASOLINE:FUEL INJECTION SYSTEM:INJECTORS",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2023 Lincoln Corsair, 2023-2024 Escape, 2024 Mustang, and 2025 Explorer vehicles.  The fuel injectors may have been assembled without O-ring support discs, which can result in a fuel leak."
+   },
+   {
+    "id": "24V802000",
+    "part": "ELECTRICAL SYSTEM: INSTRUMENT CLUSTER/PANEL",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2024 Mustang vehicles.  The Instrument Panel Cluster (IPC) may not illuminate at startup or while driving.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard numbers 101, \"Control and Displays\" and 102, \"Transmission shift lever sequence, starter interlock, and transmission braking effect.\""
+   },
+   {
+    "id": "25V315000",
+    "part": "BACK OVER PREVENTION:SOFTWARE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2024 Bronco, F-150, 2021-2024 Edge, 2022-2025 Escape, F-250, F-350, F-450, F-550, F-600, 2022-2024 Expedition, 2022-2025 Transit, 2021-2023 Mach-E, 2024 Ranger, Mustang, 2021-2023 Lincoln Nautilus, 2022-2024 Navigator, and 2023-2024 Corsair vehicles. A software error may cause the rearview camera image to delay, freeze, or not display when the ve"
+   },
+   {
+    "id": "25V516000",
+    "part": "ELECTRICAL SYSTEM: INSTRUMENT CLUSTER/PANEL",
+    "summary": "Ford Motor Company (Ford) is recalling one 2024 Mustang vehicle that was repaired incorrectly under recall 24V802. The Instrument Panel Cluster (IPC) may not illuminate at startup or while driving. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard numbers 101, \"Control and Displays\" and 102, \"Transmission shift lever sequence, starter interlock, "
+   },
+   {
+    "id": "25V546000",
+    "part": "EXTERIOR LIGHTING",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2024-2025 Mustang, and  Mustang GTD vehicles. Water may enter the body control module and cause a loss of communication with the exterior lighting, including the license plate light, side marker, and tail lights. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 108, \"Lamps, Reflective Devices"
+   },
+   {
+    "id": "26V418000",
+    "part": "VISIBILITY:WINDSHIELD WIPER/WASHER:MOTOR",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2024-2026 Mustang and 2025-2026 Mustang GTD vehicles. During certain cold temperature conditions, the windshield wipers may function only at their high-speed setting and the washing system may fail to function properly."
+   },
+   {
+    "id": "26V547000",
+    "part": "ELECTRICAL SYSTEM:WIRING",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2024-2026 Mustang vehicles. The engine compartment wiring harness ground connections may fracture and result in a loss of drive power, or a loss of function in the windshield washing system, headlights, air conditioning, or engine cooling fan. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS)"
+   }
+  ],
+  "2025": [
+   {
+    "id": "25V164000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION:FLUID/LUBRICANT:VALVES/VALVE BODY",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2024-2025 F-150, Bronco, 2024 Ranger, 2025 Mustang, Explorer, and Aviator vehicles.  The transmission valve body may have been machined incorrectly, which can cause reverse gear failure, or unexpected forward movement in reverse or neutral gear."
+   },
+   {
+    "id": "25V519000",
+    "part": "EXTERIOR LIGHTING:LIGHTING CONTROL MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2025 Lincoln Nautilus, Mustang Mach E, and Mustang vehicles. The LED Driver Modules may contain a burnt diode, which can cause the low-beam and high-beam headlights, daytime running lights, front position lights, and front turn signals to fail in the affected headlight. On Nautilus vehicles only, this condition may also cause the rear tail light, rear"
+   },
+   {
+    "id": "25V546000",
+    "part": "EXTERIOR LIGHTING",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2024-2025 Mustang, and  Mustang GTD vehicles. Water may enter the body control module and cause a loss of communication with the exterior lighting, including the license plate light, side marker, and tail lights. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 108, \"Lamps, Reflective Devices"
+   },
+   {
+    "id": "26V122000",
+    "part": "ENGINE AND ENGINE COOLING:EXHAUST SYSTEM:EMISSION CONTROL:GAS RECIRCULATION VALVE (EGR VALVE)",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2025 Ranger, Lincoln Nautilus, Mustang, Maverick, Explorer, Escape, Lincoln Corsair, Bronco Sport, and Bronco vehicles. The exhaust gas recirculation (EGR) valve may fail, resulting in an unexpected loss of drive power."
+   },
+   {
+    "id": "26V418000",
+    "part": "VISIBILITY:WINDSHIELD WIPER/WASHER:MOTOR",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2024-2026 Mustang and 2025-2026 Mustang GTD vehicles. During certain cold temperature conditions, the windshield wipers may function only at their high-speed setting and the washing system may fail to function properly."
+   },
+   {
+    "id": "26V547000",
+    "part": "ELECTRICAL SYSTEM:WIRING",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2024-2026 Mustang vehicles. The engine compartment wiring harness ground connections may fracture and result in a loss of drive power, or a loss of function in the windshield washing system, headlights, air conditioning, or engine cooling fan. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS)"
+   }
+  ]
+ },
+ "yt": {
+  "car-mustang-gt": null,
+  "ford-coyote": {
+   "videos": 200,
+   "praise": [
+    [
+     "Looks",
+     18
+    ],
+    [
+     "Handling and steering",
+     18
+    ],
+    [
+     "Manual gearbox",
+     16
+    ],
+    [
+     "Power and acceleration",
+     15
+    ]
+   ],
+   "trouble": [
+    [
+     "Spark plugs / coils / misfire",
+     6
+    ],
+    [
+     "Oil dilution / oil burning",
+     6
+    ],
+    [
+     "Oil consumption",
+     6
+    ],
+    [
+     "Coolant leaks / water pump / overheating",
+     6
+    ]
+   ],
+   "top": [
+    {
+     "id": "OE4AH4DZtEI",
+     "title": "Chevrolet Camaro ZL1 vs Ford Mustang Boss 302 Laguna Seca! - Head 2 Head Episode 3",
+     "views": 8493037,
+     "ch": "MotorTrend Channel"
+    },
+    {
+     "id": "l5zT005oGbA",
+     "title": "Here's Why the 2018 Ford Mustang GT Now Costs Over $50,000",
+     "views": 4032792,
+     "ch": "Doug DeMuro"
+    },
+    {
+     "id": "2mq7gj1bHys",
+     "title": "2024 Mustang Dark Horse // V8 DRAG RACE, Review & Lap Time",
+     "views": 2879067,
+     "ch": "Throttle House"
+    }
+   ]
+  }
+ },
+ "scores": {
+  "ford-coyote": {
+   "years": {
+    "2011": {
+     "score": 35,
+     "weight": 6.4,
+     "videos": 56,
+     "named": 8,
+     "top": [
+      {
+       "id": "E8uoQtbp3ac",
+       "title": "Why The Coyote 5.0 Is Unbeatable In a Truck🛻 | Explained Ep.36",
+       "views": 1335053
+      },
+      {
+       "id": "fX4trGWQzXE",
+       "title": "REVIEW: Everything Wrong With A 5.0 Coyote Engine",
+       "views": 1180499
+      },
+      {
+       "id": "RSaPOxXiyHM",
+       "title": "Building A Race-Ready 5.0L Coyote From A Pile Of Parts - Engine Power S8, E10",
+       "views": 1151186
+      }
+     ]
+    },
+    "2012": {
+     "score": 53,
+     "weight": 16.4,
+     "videos": 73,
+     "named": 12,
+     "top": [
+      {
+       "id": "OE4AH4DZtEI",
+       "title": "Chevrolet Camaro ZL1 vs Ford Mustang Boss 302 Laguna Seca! - Head 2 Head Episode 3",
+       "views": 8493037
+      },
+      {
+       "id": "E8uoQtbp3ac",
+       "title": "Why The Coyote 5.0 Is Unbeatable In a Truck🛻 | Explained Ep.36",
+       "views": 1335053
+      },
+      {
+       "id": "fX4trGWQzXE",
+       "title": "REVIEW: Everything Wrong With A 5.0 Coyote Engine",
+       "views": 1180499
+      }
+     ]
+    },
+    "2013": {
+     "score": 58,
+     "weight": 18.9,
+     "videos": 75,
+     "named": 14,
+     "top": [
+      {
+       "id": "OE4AH4DZtEI",
+       "title": "Chevrolet Camaro ZL1 vs Ford Mustang Boss 302 Laguna Seca! - Head 2 Head Episode 3",
+       "views": 8493037
+      },
+      {
+       "id": "4LXYK4rR7Sw",
+       "title": "2013 Mustang Boss 302 - Jay Leno's Garage",
+       "views": 2516883
+      },
+      {
+       "id": "whGU7NY3Gsk",
+       "title": "2013 Ford Mustang Boss 302 vs. 2013 Mitsubishi Lancer Evolution MR",
+       "views": 1946550
+      }
+     ]
+    },
+    "2014": {
+     "score": 49,
+     "weight": 4.9,
+     "videos": 54,
+     "named": 6,
+     "top": [
+      {
+       "id": "E8uoQtbp3ac",
+       "title": "Why The Coyote 5.0 Is Unbeatable In a Truck🛻 | Explained Ep.36",
+       "views": 1335053
+      },
+      {
+       "id": "fX4trGWQzXE",
+       "title": "REVIEW: Everything Wrong With A 5.0 Coyote Engine",
+       "views": 1180499
+      },
+      {
+       "id": "RSaPOxXiyHM",
+       "title": "Building A Race-Ready 5.0L Coyote From A Pile Of Parts - Engine Power S8, E10",
+       "views": 1151186
+      }
+     ]
+    },
+    "2015": {
+     "score": 53,
+     "weight": 6.1,
+     "videos": 56,
+     "named": 8,
+     "top": [
+      {
+       "id": "E8uoQtbp3ac",
+       "title": "Why The Coyote 5.0 Is Unbeatable In a Truck🛻 | Explained Ep.36",
+       "views": 1335053
+      },
+      {
+       "id": "fX4trGWQzXE",
+       "title": "REVIEW: Everything Wrong With A 5.0 Coyote Engine",
+       "views": 1180499
+      },
+      {
+       "id": "RSaPOxXiyHM",
+       "title": "Building A Race-Ready 5.0L Coyote From A Pile Of Parts - Engine Power S8, E10",
+       "views": 1151186
+      }
+     ]
+    },
+    "2016": {
+     "score": 48,
+     "weight": 5.1,
+     "videos": 55,
+     "named": 7,
+     "top": [
+      {
+       "id": "E8uoQtbp3ac",
+       "title": "Why The Coyote 5.0 Is Unbeatable In a Truck🛻 | Explained Ep.36",
+       "views": 1335053
+      },
+      {
+       "id": "fX4trGWQzXE",
+       "title": "REVIEW: Everything Wrong With A 5.0 Coyote Engine",
+       "views": 1180499
+      },
+      {
+       "id": "RSaPOxXiyHM",
+       "title": "Building A Race-Ready 5.0L Coyote From A Pile Of Parts - Engine Power S8, E10",
+       "views": 1151186
+      }
+     ]
+    },
+    "2017": {
+     "score": 44,
+     "weight": 4.1,
+     "videos": 54,
+     "named": 6,
+     "top": [
+      {
+       "id": "E8uoQtbp3ac",
+       "title": "Why The Coyote 5.0 Is Unbeatable In a Truck🛻 | Explained Ep.36",
+       "views": 1335053
+      },
+      {
+       "id": "fX4trGWQzXE",
+       "title": "REVIEW: Everything Wrong With A 5.0 Coyote Engine",
+       "views": 1180499
+      },
+      {
+       "id": "RSaPOxXiyHM",
+       "title": "Building A Race-Ready 5.0L Coyote From A Pile Of Parts - Engine Power S8, E10",
+       "views": 1151186
+      }
+     ]
+    },
+    "2018": {
+     "score": 45,
+     "weight": 9.1,
+     "videos": 59,
+     "named": 11,
+     "top": [
+      {
+       "id": "l5zT005oGbA",
+       "title": "Here's Why the 2018 Ford Mustang GT Now Costs Over $50,000",
+       "views": 4032792
+      },
+      {
+       "id": "E8uoQtbp3ac",
+       "title": "Why The Coyote 5.0 Is Unbeatable In a Truck🛻 | Explained Ep.36",
+       "views": 1335053
+      },
+      {
+       "id": "fX4trGWQzXE",
+       "title": "REVIEW: Everything Wrong With A 5.0 Coyote Engine",
+       "views": 1180499
+      }
+     ]
+    },
+    "2019": {
+     "score": 38,
+     "weight": 6.1,
+     "videos": 56,
+     "named": 8,
+     "top": [
+      {
+       "id": "E8uoQtbp3ac",
+       "title": "Why The Coyote 5.0 Is Unbeatable In a Truck🛻 | Explained Ep.36",
+       "views": 1335053
+      },
+      {
+       "id": "fX4trGWQzXE",
+       "title": "REVIEW: Everything Wrong With A 5.0 Coyote Engine",
+       "views": 1180499
+      },
+      {
+       "id": "RSaPOxXiyHM",
+       "title": "Building A Race-Ready 5.0L Coyote From A Pile Of Parts - Engine Power S8, E10",
+       "views": 1151186
+      }
+     ]
+    },
+    "2020": {
+     "score": 39,
+     "weight": 4.1,
+     "videos": 54,
+     "named": 6,
+     "top": [
+      {
+       "id": "E8uoQtbp3ac",
+       "title": "Why The Coyote 5.0 Is Unbeatable In a Truck🛻 | Explained Ep.36",
+       "views": 1335053
+      },
+      {
+       "id": "fX4trGWQzXE",
+       "title": "REVIEW: Everything Wrong With A 5.0 Coyote Engine",
+       "views": 1180499
+      },
+      {
+       "id": "RSaPOxXiyHM",
+       "title": "Building A Race-Ready 5.0L Coyote From A Pile Of Parts - Engine Power S8, E10",
+       "views": 1151186
+      }
+     ]
+    },
+    "2021": {
+     "score": 61,
+     "weight": 24.4,
+     "videos": 80,
+     "named": 19,
+     "top": [
+      {
+       "id": "73gy-qFcllM",
+       "title": "Richard Hammond drives the new Ford Mustang Mach 1",
+       "views": 2463563
+      },
+      {
+       "id": "XbB_USZCLDc",
+       "title": "2021 Mustang Mach 1 vs BMW M2 CS vs Honda Civic Type R LE // Battle Of The Special Editions",
+       "views": 1813619
+      },
+      {
+       "id": "ADYx4OFfgHw",
+       "title": "PERFECTION! 2021 Ford Mustang Mach 1 Review",
+       "views": 1722260
+      }
+     ]
+    },
+    "2022": {
+     "score": 54,
+     "weight": 12.3,
+     "videos": 67,
+     "named": 6,
+     "top": [
+      {
+       "id": "73gy-qFcllM",
+       "title": "Richard Hammond drives the new Ford Mustang Mach 1",
+       "views": 2463563
+      },
+      {
+       "id": "X9GF2WZlsIU",
+       "title": "Ford Mustang Mach 1 2022 Review",
+       "views": 2038606
+      },
+      {
+       "id": "E8uoQtbp3ac",
+       "title": "Why The Coyote 5.0 Is Unbeatable In a Truck🛻 | Explained Ep.36",
+       "views": 1335053
+      }
+     ]
+    },
+    "2023": {
+     "score": 56,
+     "weight": 8.3,
+     "videos": 64,
+     "named": 3,
+     "top": [
+      {
+       "id": "73gy-qFcllM",
+       "title": "Richard Hammond drives the new Ford Mustang Mach 1",
+       "views": 2463563
+      },
+      {
+       "id": "E8uoQtbp3ac",
+       "title": "Why The Coyote 5.0 Is Unbeatable In a Truck🛻 | Explained Ep.36",
+       "views": 1335053
+      },
+      {
+       "id": "fX4trGWQzXE",
+       "title": "REVIEW: Everything Wrong With A 5.0 Coyote Engine",
+       "views": 1180499
+      }
+     ]
+    },
+    "2024": {
+     "score": 55,
+     "weight": 27.8,
+     "videos": 84,
+     "named": 21,
+     "top": [
+      {
+       "id": "2mq7gj1bHys",
+       "title": "2024 Mustang Dark Horse // V8 DRAG RACE, Review & Lap Time",
+       "views": 2879067
+      },
+      {
+       "id": "pyAkHBjNLS8",
+       "title": "2024 Ford Mustang GT Review // $50,000 V8 Champion",
+       "views": 2537449
+      },
+      {
+       "id": "vB8rZBuciC8",
+       "title": "2024 Mustang Really Is a Dark Horse — Review & Documentary feat BMW M4 — Jason Cammisa on the ICONS",
+       "views": 2364891
+      }
+     ]
+    },
+    "2025": {
+     "score": 61,
+     "weight": 12.8,
+     "videos": 68,
+     "named": 5,
+     "top": [
+      {
+       "id": "E8uoQtbp3ac",
+       "title": "Why The Coyote 5.0 Is Unbeatable In a Truck🛻 | Explained Ep.36",
+       "views": 1335053
+      },
+      {
+       "id": "fX4trGWQzXE",
+       "title": "REVIEW: Everything Wrong With A 5.0 Coyote Engine",
+       "views": 1180499
+      },
+      {
+       "id": "RSaPOxXiyHM",
+       "title": "Building A Race-Ready 5.0L Coyote From A Pile Of Parts - Engine Power S8, E10",
+       "views": 1151186
+      }
+     ]
+    },
+    "2026": {
+     "score": 56,
+     "weight": 10.1,
+     "videos": 66,
+     "named": 3,
+     "top": [
+      {
+       "id": "E8uoQtbp3ac",
+       "title": "Why The Coyote 5.0 Is Unbeatable In a Truck🛻 | Explained Ep.36",
+       "views": 1335053
+      },
+      {
+       "id": "fX4trGWQzXE",
+       "title": "REVIEW: Everything Wrong With A 5.0 Coyote Engine",
+       "views": 1180499
+      },
+      {
+       "id": "RSaPOxXiyHM",
+       "title": "Building A Race-Ready 5.0L Coyote From A Pile Of Parts - Engine Power S8, E10",
+       "views": 1151186
+      }
+     ]
+    }
+   },
+   "videos": 177,
+   "pulled": 200
+  }
+ }
+}

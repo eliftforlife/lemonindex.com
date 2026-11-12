@@ -1,0 +1,655 @@
+{
+ "built": "2026-11-11",
+ "nhtsa": {
+  "by_year": {
+   "2010": 1,
+   "2011": 3,
+   "2012": 5,
+   "2013": 5,
+   "2014": 1,
+   "2015": 3,
+   "2016": 7,
+   "2017": 5,
+   "2018": 3,
+   "2019": 2,
+   "2021": 1
+  },
+  "gens": {
+   "w204": {
+    "n": 18,
+    "issues": {
+     "Cylinder head bolts": {
+      "n": 0,
+      "ex": []
+     },
+     "Camshaft and lifter wear": {
+      "n": 0,
+      "ex": []
+     },
+     "Intake manifold": {
+      "n": 0,
+      "ex": []
+     },
+     "Crankcase breather valve": {
+      "n": 0,
+      "ex": []
+     }
+    }
+   },
+   "w205": {
+    "n": 21,
+    "issues": {
+     "Cam adjuster wear": {
+      "n": 0,
+      "ex": []
+     },
+     "Spark plugs and coils": {
+      "n": 1,
+      "ex": [
+       "11728122"
+      ]
+     },
+     "Turbo oil line seepage": {
+      "n": 0,
+      "ex": []
+     },
+     "Water pump and thermostat": {
+      "n": 0,
+      "ex": []
+     }
+    }
+   },
+   "w206": {
+    "n": 0,
+    "issues": {
+     "Broken valve springs": {
+      "n": 0,
+      "ex": []
+     }
+    }
+   }
+  },
+  "parts": [
+   [
+    "Air bags",
+    8
+   ],
+   [
+    "Engine",
+    7
+   ],
+   [
+    "Power train",
+    5
+   ],
+   [
+    "Fuel/propulsion system",
+    4
+   ],
+   [
+    "Structure",
+    4
+   ],
+   [
+    "Unknown or other",
+    4
+   ]
+  ]
+ },
+ "recalls": {
+  "2008": [],
+  "2009": [],
+  "2010": [],
+  "2012": [],
+  "2014": [],
+  "2017": [
+   {
+    "id": "18V456000",
+    "part": "STRUCTURE:BODY",
+    "summary": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain 2017-2018 Mercedes C300 Cabriolet, C300 4Matic Cabriolet, C43 AMG Cabriolet, C63S AMG Cabriolet, and C63 AMG Cabriolet vehicles.  Due to a bonding issue introduced in the production process,  the rear beltline trim may separate from the vehicle."
+   },
+   {
+    "id": "18V850000",
+    "part": "STEERING:RACK AND PINION:RACK",
+    "summary": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain 2015-2016 Mercedes Benz C300, 2017-2019 C300 Cabrio, C300 Coupe, C63 Cabrio, 2015 C63S AMG, 2018-2019 C300, C350e, C63 AMG, C63S AMG Cabrio, 2018 C63 AMG Cabrio, C63 AMG Coupe, C63S AMG, C63S AMG Coupe, E300, E400 Cabrio, E400 Coupe, 2019 CLS450, E450 Cabrio, and E450 Coupe rear-wheel drive vehicles.  A locknut in the steering rack may break unde"
+   },
+   {
+    "id": "21V197000",
+    "part": "STRUCTURE:BODY:ROOF AND PILLARS",
+    "summary": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain 2017-2020 C300 Coupe, C43 Coupe AMG, C43 AMG, 2015-2020 C300, GLA250, 2016-2018 C350e, CLA45 Coupe AMG, 2015 C400, S65 AMG, 2015-2019 C63 AMG, 2016 C450, 2015-2016 GLA45 AMG, S600, 2016-2020 GLC300, 2017-2019 GLC43 AMG, GLE43 Coupe AMG, 2014-2019 CLA250 Coupe, 2014-2015 CLA45 AMG, 2018 GLC63 AMG, 2014-2017 S550, 2018-2020 S450, 2016-2019 GLE63 Co"
+   },
+   {
+    "id": "19V130000",
+    "part": "SEATS",
+    "summary": "Mercedes-Benz USA, LLC (Mercedes) is recalling certain 2017-2018 Mercedes-Benz C300 Cabriolet, C300 Coupe, AMG C43 Coupe, C300 4MATIC Cabriolet, C300 4MATIC Coupe, AMG C43 Cabriolet, AMG C63 Cabriolet, AMG C63 Coupe, AMG C63 S Cabriolet and  AMG C63 S Coupe vehicles and 2018 Mercedes-Benz E400 Coupe, E400 Cabriolet, E400 4MATIC Cabriolet and E400 4MATIC Coupe vehicles.  The seatbacks of the front "
+   },
+   {
+    "id": "21V058000",
+    "part": "ELECTRICAL SYSTEM:SOFTWARE",
+    "summary": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain 2016 - 2021 CLA-Class, GLA-Class, GLE-Class, GLS-Class, SLC-Class, A-Class, GT-Class, C-Class, E-Class, S-Class, CLS-Class, SL-Class, B-Class, GLB-Class, GLC-Class, and G-Class vehicles.  Please refer to the Part 573 report for specific vehicle model details.  The software design of the communication module may fail to communicate the correct veh"
+   },
+   {
+    "id": "21V032000",
+    "part": "SEAT BELTS:FRONT:RETRACTOR",
+    "summary": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain 2017-2021 C300, 2017-2020 AMG C43, and AMG C63 vehicles.  The front seat belts might not fully retract to their stowed position.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 208, \"Occupant Crash Protection.\""
+   },
+   {
+    "id": "17V627000",
+    "part": "AIR BAGS:FRONTAL",
+    "summary": "Mercedes-Benz USA, LLC. (MBUSA) is recalling these vehicles: 2014-2018 CLA250, CLA250 4Matic, CLA45 AMG 4Matic, 2015-2018 GLA250, GLA250 4Matic, GLA45 AMG 4Matic, C300 4Matic, C63S AMG, 2012-2014 C250, C350, C300 4Matic, E550 4Matic, 2013-2014 C63 AMG, 2012-2015 C250 Coupe, C350 Coupe, C63 AMG Coupe, 2013-2015 C350 4Matic Coupe, GLK250 4Matic BlueTec, GLK350, GLK350 4Matic, 2016-2017 C350e, C43 AM"
+   },
+   {
+    "id": "17V251000",
+    "part": "SEAT BELTS:PRETENSIONER",
+    "summary": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain 2017 C300, C300 4Matic, C300 Coupe, C300 Coupe 4Matic, C43 AMG, C43 AMG Coupe, C43 AMG Cabrio, C63 AMG, C63 AMG Coupe, C63S AMG, C63S AMG Coupe, C63S Cabrio, GLC300, GLC300 4Matic, GLC43 AMG, S550, S550 4Matic, S550e, S600, S63 AMG 4Matic, S65, Mercedes-Maybach S550 4Matic, and Mercedes-Maybach S600 vehicles.  The affected vehicles have front sea"
+   },
+   {
+    "id": "18V207000",
+    "part": "SEATS",
+    "summary": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain 2017-2018 C43 AMG 4Matic Coupe, C300 Coupe, C300 4Matic Coupe, C300 4Matic Cabriolet, C300 Cabriolet, C43 AMG 4Matic Cabriolet and C63S AMG Cabriolet, 2017 C63 AMG Cabriolet, C63S AMG Coupe and C63 AMG Coupe, 2018 E400 Coupe and E400 4Matic Coupe vehicles.  The seatbacks of the front seats may not properly lock on the right side of the seat."
+   },
+   {
+    "id": "17V654000",
+    "part": "POWER TRAIN:AXLE ASSEMBLY",
+    "summary": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain 2015-2016 C63 AMG, 2015-2017 C63S and 2017 C63S AMG Coupe and C63 AMG Cabrio vehicles.  The rear axle differential mounting flange may fracture from repeated aggressive launches."
+   },
+   {
+    "id": "23V854000",
+    "part": "STRUCTURE:BODY:ROOF AND PILLARS",
+    "summary": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain 2014-2020 C-Class, CLA, GLA, S-Class, GLC, and GLE vehicles.  Please refer to MBUSA's recall report for specific vehicle details.  The front roof panel located between the windshield and the panoramic sunroof may not have been bonded correctly to the vehicle during a prior repair, allowing the front panel to detach from the vehicle."
+   }
+  ],
+  "2018": [
+   {
+    "id": "18V608000",
+    "part": "VISIBILITY:GLASS, SIDE/REAR",
+    "summary": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain 2018 Mercedes-Benz C300, C300 4MATIC, C63 AMG, and C63S AMG vehicles.  Incorrect bonding of the rear window may cause the window to loosen and detach from the vehicle."
+   },
+   {
+    "id": "18V456000",
+    "part": "STRUCTURE:BODY",
+    "summary": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain 2017-2018 Mercedes C300 Cabriolet, C300 4Matic Cabriolet, C43 AMG Cabriolet, C63S AMG Cabriolet, and C63 AMG Cabriolet vehicles.  Due to a bonding issue introduced in the production process,  the rear beltline trim may separate from the vehicle."
+   },
+   {
+    "id": "18V850000",
+    "part": "STEERING:RACK AND PINION:RACK",
+    "summary": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain 2015-2016 Mercedes Benz C300, 2017-2019 C300 Cabrio, C300 Coupe, C63 Cabrio, 2015 C63S AMG, 2018-2019 C300, C350e, C63 AMG, C63S AMG Cabrio, 2018 C63 AMG Cabrio, C63 AMG Coupe, C63S AMG, C63S AMG Coupe, E300, E400 Cabrio, E400 Coupe, 2019 CLS450, E450 Cabrio, and E450 Coupe rear-wheel drive vehicles.  A locknut in the steering rack may break unde"
+   },
+   {
+    "id": "18V838000",
+    "part": "AIR BAGS:SENSOR:OCCUPANT CLASSIFICATION",
+    "summary": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain 2018 C300 Cabriolet, C300 Coupe, C300 4Matic Cabriolet, C300, C300 4Matic Coupe, C300 4Matic, C43 AMG Cabriolet, C43 AMG Coupe, C63 S AMG Cabriolet, C350e Plug-In Hybrid, C63 AMG Cabriolet, C63 AMG Coupe, C63 S AMG Coupe, C63 AMG, C63 S AMG, 2018-2019 GLC300 4Matic Coupe, GLC300, GLC63 AMG Coupe, GLC300 4Matic, GLC350e Plug-In Hybrid, GLC43 AMG C"
+   },
+   {
+    "id": "21V197000",
+    "part": "STRUCTURE:BODY:ROOF AND PILLARS",
+    "summary": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain 2017-2020 C300 Coupe, C43 Coupe AMG, C43 AMG, 2015-2020 C300, GLA250, 2016-2018 C350e, CLA45 Coupe AMG, 2015 C400, S65 AMG, 2015-2019 C63 AMG, 2016 C450, 2015-2016 GLA45 AMG, S600, 2016-2020 GLC300, 2017-2019 GLC43 AMG, GLE43 Coupe AMG, 2014-2019 CLA250 Coupe, 2014-2015 CLA45 AMG, 2018 GLC63 AMG, 2014-2017 S550, 2018-2020 S450, 2016-2019 GLE63 Co"
+   },
+   {
+    "id": "19V130000",
+    "part": "SEATS",
+    "summary": "Mercedes-Benz USA, LLC (Mercedes) is recalling certain 2017-2018 Mercedes-Benz C300 Cabriolet, C300 Coupe, AMG C43 Coupe, C300 4MATIC Cabriolet, C300 4MATIC Coupe, AMG C43 Cabriolet, AMG C63 Cabriolet, AMG C63 Coupe, AMG C63 S Cabriolet and  AMG C63 S Coupe vehicles and 2018 Mercedes-Benz E400 Coupe, E400 Cabriolet, E400 4MATIC Cabriolet and E400 4MATIC Coupe vehicles.  The seatbacks of the front "
+   },
+   {
+    "id": "21V058000",
+    "part": "ELECTRICAL SYSTEM:SOFTWARE",
+    "summary": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain 2016 - 2021 CLA-Class, GLA-Class, GLE-Class, GLS-Class, SLC-Class, A-Class, GT-Class, C-Class, E-Class, S-Class, CLS-Class, SL-Class, B-Class, GLB-Class, GLC-Class, and G-Class vehicles.  Please refer to the Part 573 report for specific vehicle model details.  The software design of the communication module may fail to communicate the correct veh"
+   },
+   {
+    "id": "21V032000",
+    "part": "SEAT BELTS:FRONT:RETRACTOR",
+    "summary": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain 2017-2021 C300, 2017-2020 AMG C43, and AMG C63 vehicles.  The front seat belts might not fully retract to their stowed position.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 208, \"Occupant Crash Protection.\""
+   },
+   {
+    "id": "17V627000",
+    "part": "AIR BAGS:FRONTAL",
+    "summary": "Mercedes-Benz USA, LLC. (MBUSA) is recalling these vehicles: 2014-2018 CLA250, CLA250 4Matic, CLA45 AMG 4Matic, 2015-2018 GLA250, GLA250 4Matic, GLA45 AMG 4Matic, C300 4Matic, C63S AMG, 2012-2014 C250, C350, C300 4Matic, E550 4Matic, 2013-2014 C63 AMG, 2012-2015 C250 Coupe, C350 Coupe, C63 AMG Coupe, 2013-2015 C350 4Matic Coupe, GLK250 4Matic BlueTec, GLK350, GLK350 4Matic, 2016-2017 C350e, C43 AM"
+   },
+   {
+    "id": "23V854000",
+    "part": "STRUCTURE:BODY:ROOF AND PILLARS",
+    "summary": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain 2014-2020 C-Class, CLA, GLA, S-Class, GLC, and GLE vehicles.  Please refer to MBUSA's recall report for specific vehicle details.  The front roof panel located between the windshield and the panoramic sunroof may not have been bonded correctly to the vehicle during a prior repair, allowing the front panel to detach from the vehicle."
+   }
+  ],
+  "2020": [
+   {
+    "id": "21V818000",
+    "part": "SEATS",
+    "summary": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain 2020 GLS450, GLS580, GLE350, GLE450, AMG C63, and 2021 AMG GLE53 vehicles.  The seats may have been assembled incorrectly."
+   },
+   {
+    "id": "21V509000",
+    "part": "EXTERIOR LIGHTING:HEADLIGHTS",
+    "summary": "Mercedes-Benz LLC (MBUSA) is recalling certain 2018-2020 C300, 2019-2020 A220, AMG C43, AMG C63, 2020 GLE580, GLB250, 2020-2021 GLE450, GLE350, 2021 AMG GLE63, and AMG GLE53 vehicles.  The LED headlights may have been incorrectly adjusted during a vehicle repair.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 108, \"Lamps, Reflective De"
+   },
+   {
+    "id": "21V961000",
+    "part": "FUEL SYSTEM, GASOLINE:FUEL INJECTION SYSTEM:FUEL RAIL",
+    "summary": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain 2019 AMG G63, C300, E300, G550, AMG GT63, AMG GT53, 2019-2020 A220, GLA250, GLC300, 2016 C300, 2020 AMG A35, AMG C43, AMG C63, CLA250, E350, E450, GLB250, GLE450, GLS450, GLS580, S560, and SL550 vehicles equipped with a gasoline engine.  During the manufacturing process, particles may have been trapped between the fuel rail and injectors, which c"
+   },
+   {
+    "id": "21V058000",
+    "part": "ELECTRICAL SYSTEM:SOFTWARE",
+    "summary": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain 2016 - 2021 CLA-Class, GLA-Class, GLE-Class, GLS-Class, SLC-Class, A-Class, GT-Class, C-Class, E-Class, S-Class, CLS-Class, SL-Class, B-Class, GLB-Class, GLC-Class, and G-Class vehicles.  Please refer to the Part 573 report for specific vehicle model details.  The software design of the communication module may fail to communicate the correct veh"
+   },
+   {
+    "id": "21V032000",
+    "part": "SEAT BELTS:FRONT:RETRACTOR",
+    "summary": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain 2017-2021 C300, 2017-2020 AMG C43, and AMG C63 vehicles.  The front seat belts might not fully retract to their stowed position.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 208, \"Occupant Crash Protection.\""
+   },
+   {
+    "id": "20V395000",
+    "part": "ELECTRICAL SYSTEM:SOFTWARE",
+    "summary": "Mercedes-Benz USA, LLC. (MBUSA) is recalling certain 2019-2020 C63 AMG, C63 AMG S, AMG GT 53, AMG GT 63, AMG GT 63 S, and 2020 GLC 63 AMG, GLC 63 AMG S vehicles.  An incorrect Electronic Stability Program (ESP) software version may cause the ESP system to react inaccurately.  On December 18, 2020, an additional 360 vehicles were added to the recall population."
+   },
+   {
+    "id": "22V232000",
+    "part": "BACK OVER PREVENTION:DISPLAY FUNCTION",
+    "summary": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain 2018-2021 CLA-Class, GLE/GLS-Class, A-Class, C-Class, E-Class, E-Class Coupe/Convertible, GLA/GLB-Class, GLC-Class, and CLS-Class vehicles.  Please refer to MBUSA's recall report for specific vehicle model details.  The rearview camera may not display the rearview image due to a software error.  As such, these vehicles fail to comply with the req"
+   },
+   {
+    "id": "22V365000",
+    "part": "ELECTRICAL SYSTEM:SOFTWARE",
+    "summary": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain 2017-2022 CLA-Class, GLA-Class, GLE-Class, GLS-Class, SLC-Class, A-Class, AMG GT-Class, C-Class, E-Class, S-Class, SL-Class, GLC-Class, CLS-Class, GLB-Class, and G-Class vehicles.  Please refer to MBUSA's recall report for specific vehicle model details.  An error in the communication module's SIM card software can cause a mobile network connecti"
+   },
+   {
+    "id": "23V854000",
+    "part": "STRUCTURE:BODY:ROOF AND PILLARS",
+    "summary": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain 2014-2020 C-Class, CLA, GLA, S-Class, GLC, and GLE vehicles.  Please refer to MBUSA's recall report for specific vehicle details.  The front roof panel located between the windshield and the panoramic sunroof may not have been bonded correctly to the vehicle during a prior repair, allowing the front panel to detach from the vehicle."
+   }
+  ],
+  "2021": [
+   {
+    "id": "21V406000",
+    "part": "SEATS:MID/REAR ASSEMBLY:HEAD RESTRAINT",
+    "summary": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain 2021 C300 Cabriolet, C43 AMG Cabriolet, C63 AMG Cabriolet, C63 AMG S Cabriolet, E450 Cabriolet, and E53 AMG Cabriolet vehicles.  The rear headrests may be incorrectly mounted to the seatbacks."
+   },
+   {
+    "id": "21V230000",
+    "part": "SEATS",
+    "summary": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain 2021 C-Class, E-Class, E-Class Coupe and Convertible, GLC, CLS, AMG GT 4-door Coupe and G-Class vehicles.  Please refer to MBUSA's recall report for specific vehicle model details.  A faulty electrical contact within the seat position switch may prevent the driver and passenger air bags and seat belt force limiters from properly activating during"
+   },
+   {
+    "id": "22V232000",
+    "part": "BACK OVER PREVENTION:DISPLAY FUNCTION",
+    "summary": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain 2018-2021 CLA-Class, GLE/GLS-Class, A-Class, C-Class, E-Class, E-Class Coupe/Convertible, GLA/GLB-Class, GLC-Class, and CLS-Class vehicles.  Please refer to MBUSA's recall report for specific vehicle model details.  The rearview camera may not display the rearview image due to a software error.  As such, these vehicles fail to comply with the req"
+   },
+   {
+    "id": "22V365000",
+    "part": "ELECTRICAL SYSTEM:SOFTWARE",
+    "summary": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain 2017-2022 CLA-Class, GLA-Class, GLE-Class, GLS-Class, SLC-Class, A-Class, AMG GT-Class, C-Class, E-Class, S-Class, SL-Class, GLC-Class, CLS-Class, GLB-Class, and G-Class vehicles.  Please refer to MBUSA's recall report for specific vehicle model details.  An error in the communication module's SIM card software can cause a mobile network connecti"
+   },
+   {
+    "id": "23V445000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+    "summary": "Mercedes-Benz USA, LLC (MBUSA) is recalling certain 2021-2023 C-Class, E-Class, S-Class, CLS, SL, GT, GLC, GLE, GLS, and G-Class vehicles.  Please refer to MBUSA's recall report for specific vehicle details.  The fuel pump may shutdown, which can result in a loss of drive power."
+   }
+  ],
+  "2022": [],
+  "2024": []
+ },
+ "yt": {
+  "car-amg-c63": null,
+  "amg-m156": null,
+  "amg-m177-m178": {
+   "videos": 200,
+   "praise": [
+    [
+     "Looks",
+     32
+    ],
+    [
+     "Handling and steering",
+     22
+    ],
+    [
+     "Power and acceleration",
+     21
+    ],
+    [
+     "Interior and seats",
+     16
+    ]
+   ],
+   "trouble": [
+    [
+     "Oil leaks (gaskets, seals, housings)",
+     6
+    ],
+    [
+     "Coolant leaks / water pump / overheating",
+     6
+    ]
+   ],
+   "top": [
+    {
+     "id": "Q5BYxD0wvNc",
+     "title": "I BOUGHT MY DAD A FLOOD DAMAGED ASTON MARTIN DBX",
+     "views": 13577553,
+     "ch": "Mat Armstrong"
+    },
+    {
+     "id": "LySKmMpWsQY",
+     "title": "I BOUGHT A WRECKED ASTON MARTIN DB12 THEN REBUILT IT IN 24 HOURS",
+     "views": 12922504,
+     "ch": "Mat Armstrong"
+    },
+    {
+     "id": "TcZ_bpP0RQc",
+     "title": "ATTEMPTING TO START MY FLOOD DAMAGED ASTON MARTIN DBX",
+     "views": 9945150,
+     "ch": "Mat Armstrong"
+    }
+   ]
+  },
+  "amg-m139": {
+   "videos": 161,
+   "praise": [
+    [
+     "Looks",
+     16
+    ],
+    [
+     "Power and acceleration",
+     9
+    ],
+    [
+     "Interior and seats",
+     7
+    ],
+    [
+     "Handling and steering",
+     7
+    ]
+   ],
+   "trouble": [],
+   "top": [
+    {
+     "id": "84Nvo7xFNEo",
+     "title": "(362HP) The New 2022 Mercedes-AMG GT 43 4-Door POV Sunset Drive",
+     "views": 5974660,
+     "ch": "SEAN McLaren P"
+    },
+    {
+     "id": "M9Wtrlhl1TI",
+     "title": "AKRAPOVIC MERCEDES AMG CLA45S C118 | STAGE 2 M139",
+     "views": 370957,
+     "ch": "Dita Racing Official"
+    },
+    {
+     "id": "AzEZHIFHc-M",
+     "title": "389 HP Mercedes AMG GT 43 Coupé by CarReviews EU",
+     "views": 182698,
+     "ch": "CarReviews EU"
+    }
+   ]
+  }
+ },
+ "scores": {
+  "amg-m177-m178": {
+   "years": {
+    "2016": {
+     "score": 52,
+     "weight": 9.2,
+     "videos": 42,
+     "named": 3,
+     "top": [
+      {
+       "id": "Y2j_IQVRiiU",
+       "title": "The Mercedes-AMG GT S Is Ridiculously Underrated",
+       "views": 3965703
+      },
+      {
+       "id": "2KXJuOq8TqM",
+       "title": "New Mercedes AMG GT vs The Cheapest AMG GT You Can Buy // DRAG RACE, REVIEW + LAP TIME",
+       "views": 2603012
+      },
+      {
+       "id": "q8EQ6O822bc",
+       "title": "I Fixed My AMG GT R For FREE & Discovered It’s SUPER Powerful! Factory Freak Or Mercedes Test Mule?",
+       "views": 2187831
+      }
+     ]
+    },
+    "2017": {
+     "score": 49,
+     "weight": 7.2,
+     "videos": 40,
+     "named": 1,
+     "top": [
+      {
+       "id": "Y2j_IQVRiiU",
+       "title": "The Mercedes-AMG GT S Is Ridiculously Underrated",
+       "views": 3965703
+      },
+      {
+       "id": "2KXJuOq8TqM",
+       "title": "New Mercedes AMG GT vs The Cheapest AMG GT You Can Buy // DRAG RACE, REVIEW + LAP TIME",
+       "views": 2603012
+      },
+      {
+       "id": "q8EQ6O822bc",
+       "title": "I Fixed My AMG GT R For FREE & Discovered It’s SUPER Powerful! Factory Freak Or Mercedes Test Mule?",
+       "views": 2187831
+      }
+     ]
+    },
+    "2018": {
+     "score": 54,
+     "weight": 7.8,
+     "videos": 44,
+     "named": 1,
+     "top": [
+      {
+       "id": "Y2j_IQVRiiU",
+       "title": "The Mercedes-AMG GT S Is Ridiculously Underrated",
+       "views": 3965703
+      },
+      {
+       "id": "2KXJuOq8TqM",
+       "title": "New Mercedes AMG GT vs The Cheapest AMG GT You Can Buy // DRAG RACE, REVIEW + LAP TIME",
+       "views": 2603012
+      },
+      {
+       "id": "q8EQ6O822bc",
+       "title": "I Fixed My AMG GT R For FREE & Discovered It’s SUPER Powerful! Factory Freak Or Mercedes Test Mule?",
+       "views": 2187831
+      }
+     ]
+    },
+    "2019": {
+     "score": 56,
+     "weight": 15.4,
+     "videos": 79,
+     "named": 4,
+     "top": [
+      {
+       "id": "fSDhja-kGJU",
+       "title": "I BOUGHT A WRECKED MERCEDES AMG GT63 & ATTEMPTED TO FIX IT",
+       "views": 7252943
+      },
+      {
+       "id": "AN3QR7uaeD8",
+       "title": "Mercedes-AMG GT 63S | Very Expensive Car On Fire #BURN #fire",
+       "views": 6261971
+      },
+      {
+       "id": "XJB5zglQr2g",
+       "title": "ATTEMPTING TO DRIVE MY WRECKED MERCEDES AMG GT63S",
+       "views": 4371333
+      }
+     ]
+    },
+    "2020": {
+     "score": 56,
+     "weight": 13.4,
+     "videos": 77,
+     "named": 2,
+     "top": [
+      {
+       "id": "fSDhja-kGJU",
+       "title": "I BOUGHT A WRECKED MERCEDES AMG GT63 & ATTEMPTED TO FIX IT",
+       "views": 7252943
+      },
+      {
+       "id": "AN3QR7uaeD8",
+       "title": "Mercedes-AMG GT 63S | Very Expensive Car On Fire #BURN #fire",
+       "views": 6261971
+      },
+      {
+       "id": "XJB5zglQr2g",
+       "title": "ATTEMPTING TO DRIVE MY WRECKED MERCEDES AMG GT63S",
+       "views": 4371333
+      }
+     ]
+    },
+    "2021": {
+     "score": 59,
+     "weight": 19.4,
+     "videos": 95,
+     "named": 5,
+     "top": [
+      {
+       "id": "Q5BYxD0wvNc",
+       "title": "I BOUGHT MY DAD A FLOOD DAMAGED ASTON MARTIN DBX",
+       "views": 13577553
+      },
+      {
+       "id": "TcZ_bpP0RQc",
+       "title": "ATTEMPTING TO START MY FLOOD DAMAGED ASTON MARTIN DBX",
+       "views": 9945150
+      },
+      {
+       "id": "fSDhja-kGJU",
+       "title": "I BOUGHT A WRECKED MERCEDES AMG GT63 & ATTEMPTED TO FIX IT",
+       "views": 7252943
+      }
+     ]
+    },
+    "2022": {
+     "score": 57,
+     "weight": 8.7,
+     "videos": 56,
+     "named": 0,
+     "top": [
+      {
+       "id": "Q5BYxD0wvNc",
+       "title": "I BOUGHT MY DAD A FLOOD DAMAGED ASTON MARTIN DBX",
+       "views": 13577553
+      },
+      {
+       "id": "TcZ_bpP0RQc",
+       "title": "ATTEMPTING TO START MY FLOOD DAMAGED ASTON MARTIN DBX",
+       "views": 9945150
+      },
+      {
+       "id": "fSDhja-kGJU",
+       "title": "I BOUGHT A WRECKED MERCEDES AMG GT63 & ATTEMPTED TO FIX IT",
+       "views": 7252943
+      }
+     ]
+    },
+    "2023": {
+     "score": 57,
+     "weight": 10.7,
+     "videos": 58,
+     "named": 2,
+     "top": [
+      {
+       "id": "Q5BYxD0wvNc",
+       "title": "I BOUGHT MY DAD A FLOOD DAMAGED ASTON MARTIN DBX",
+       "views": 13577553
+      },
+      {
+       "id": "TcZ_bpP0RQc",
+       "title": "ATTEMPTING TO START MY FLOOD DAMAGED ASTON MARTIN DBX",
+       "views": 9945150
+      },
+      {
+       "id": "fSDhja-kGJU",
+       "title": "I BOUGHT A WRECKED MERCEDES AMG GT63 & ATTEMPTED TO FIX IT",
+       "views": 7252943
+      }
+     ]
+    },
+    "2024": {
+     "score": 56,
+     "weight": 25.6,
+     "videos": 78,
+     "named": 9,
+     "top": [
+      {
+       "id": "Q5BYxD0wvNc",
+       "title": "I BOUGHT MY DAD A FLOOD DAMAGED ASTON MARTIN DBX",
+       "views": 13577553
+      },
+      {
+       "id": "LySKmMpWsQY",
+       "title": "I BOUGHT A WRECKED ASTON MARTIN DB12 THEN REBUILT IT IN 24 HOURS",
+       "views": 12922504
+      },
+      {
+       "id": "TcZ_bpP0RQc",
+       "title": "ATTEMPTING TO START MY FLOOD DAMAGED ASTON MARTIN DBX",
+       "views": 9945150
+      }
+     ]
+    },
+    "2025": {
+     "score": 54,
+     "weight": 26.6,
+     "videos": 79,
+     "named": 10,
+     "top": [
+      {
+       "id": "Q5BYxD0wvNc",
+       "title": "I BOUGHT MY DAD A FLOOD DAMAGED ASTON MARTIN DBX",
+       "views": 13577553
+      },
+      {
+       "id": "LySKmMpWsQY",
+       "title": "I BOUGHT A WRECKED ASTON MARTIN DB12 THEN REBUILT IT IN 24 HOURS",
+       "views": 12922504
+      },
+      {
+       "id": "TcZ_bpP0RQc",
+       "title": "ATTEMPTING TO START MY FLOOD DAMAGED ASTON MARTIN DBX",
+       "views": 9945150
+      }
+     ]
+    }
+   },
+   "videos": 144,
+   "pulled": 200
+  },
+  "amg-m139": {
+   "years": {
+    "2025": {
+     "score": 52,
+     "weight": 60.0,
+     "videos": 60,
+     "named": 10,
+     "top": [
+      {
+       "id": "M9Wtrlhl1TI",
+       "title": "AKRAPOVIC MERCEDES AMG CLA45S C118 | STAGE 2 M139",
+       "views": 370957
+      },
+      {
+       "id": "ta24qRPqL-E",
+       "title": "Mercedes-AMG M139 four-cylinder engine with 416 horsepower",
+       "views": 135976
+      },
+      {
+       "id": "uU_ogwatMf8",
+       "title": "No more V8 ?! - 2025 Mercedes-Benz AMG GT 43",
+       "views": 76944
+      }
+     ]
+    }
+   },
+   "videos": 60,
+   "pulled": 161
+  }
+ }
+}

@@ -1,0 +1,462 @@
+{
+ "slug": "civic-type-r",
+ "name": "Honda Civic Type R",
+ "short": "Civic Type R",
+ "make": "Honda",
+ "page": "/cars/civic-type-r/",
+ "focus": "fl5",
+ "star": "fl5",
+ "h1": "Honda Civic Type R: performance, engines and what owners say",
+ "nhtsa": {
+  "make": "HONDA",
+  "models": [
+   "CIVIC TYPE R"
+  ],
+  "note": "NHTSA lists the Type R as its own model, but some owners file it under Civic or Civic Hatchback, so these counts can run low."
+ },
+ "topics_extra": {
+  "Track overheating": "overheat(s|ed|ing)?|limp mode|coolant temp|oil temp",
+  "Fuel pump": "fuel pump|fuel pressure",
+  "Wastegate rattle": "wastegate|turbo rattle",
+  "Clutch": "\\bclutch\\b",
+  "Gear grind": "grind(s|ing)?|synchros?",
+  "Rev-match": "rev.?match"
+ },
+ "gens": [
+  {
+   "id": "fk8",
+   "code": "FK8",
+   "years": "2017–2021",
+   "y0": 2017,
+   "y1": 2021,
+   "engine": "K20C1",
+   "body": "Hatchback",
+   "tag": "First U.S. Type R. 306-hp 2.0 turbo, 6-speed manual, front-drive.",
+   "variants": [
+    {
+     "id": "fk8-17",
+     "name": "Civic Type R Touring",
+     "years": "2017–2019",
+     "hp": {
+      "v": 306,
+      "src": [
+       "h17spec",
+       "h17sale"
+      ],
+      "note": "at 6,500 rpm"
+     },
+     "tq": {
+      "v": 295,
+      "src": [
+       "h17spec",
+       "h17sale"
+      ],
+      "note": "lb-ft at 2,500–4,500 rpm"
+     },
+     "z60": {
+      "v": 4.9,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "top": {
+      "v": "about 170 mph",
+      "src": [
+       "h17ov"
+      ],
+      "note": "Honda's track top speed"
+     },
+     "trans": {
+      "v": "6-speed manual, front-drive",
+      "src": [
+       "h17spec"
+      ],
+      "note": "helical limited-slip, rev-matching"
+     },
+     "weight": {
+      "v": "3,117 lb",
+      "src": [
+       "h17spec",
+       "h17ov"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$33,900",
+      "src": [
+       "h17sale"
+      ],
+      "note": "2017, plus $875 destination"
+     }
+    },
+    {
+     "id": "fk8-20",
+     "name": "Civic Type R Touring",
+     "years": "2020–2021",
+     "hp": {
+      "v": 306,
+      "src": [
+       "h20",
+       "h21spec"
+      ],
+      "note": "at 6,500 rpm; unchanged"
+     },
+     "tq": {
+      "v": 295,
+      "src": [
+       "h20",
+       "h21spec"
+      ],
+      "note": "lb-ft at 2,500–4,500 rpm"
+     },
+     "z60": {
+      "v": 4.9,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual, front-drive",
+      "src": [
+       "h21spec"
+      ],
+      "note": "helical limited-slip, rev-matching"
+     },
+     "weight": {
+      "v": "3,121 lb",
+      "src": [
+       "h20",
+       "h21spec"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$36,995",
+      "src": [
+       "h20",
+       "h21le"
+      ],
+      "note": "2020, plus $955 destination; 2021: $37,495 plus $955"
+     },
+     "what": "Bigger grille and radiator core, two-piece front rotors, faster damper control, stiffer rear bushings.",
+     "what_src": [
+      "h20"
+     ]
+    },
+    {
+     "id": "fk8-le",
+     "name": "Civic Type R Limited Edition",
+     "years": "2021",
+     "hp": {
+      "v": 306,
+      "src": [
+       "h21spec"
+      ],
+      "note": "at 6,500 rpm"
+     },
+     "tq": {
+      "v": 295,
+      "src": [
+       "h21spec"
+      ],
+      "note": "lb-ft at 2,500–4,500 rpm"
+     },
+     "z60": {
+      "v": 4.8,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual, front-drive",
+      "src": [
+       "h21spec"
+      ],
+      "note": "helical limited-slip, rev-matching"
+     },
+     "weight": {
+      "v": "3,071 lb",
+      "src": [
+       "h21spec"
+      ],
+      "note": "Honda's release says 46 lb lighter than the Touring; the spec sheets differ by 50 lb"
+     },
+     "price": {
+      "v": "$43,995",
+      "src": [
+       "h21le"
+      ],
+      "note": "2021, plus $955 destination; 600 built for the U.S."
+     },
+     "what": "BBS forged wheels, Michelin Cup 2 tires, less sound deadening, retuned dampers and steering.",
+     "what_src": [
+      "h21le",
+      "h20le"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fl5",
+   "code": "FL5",
+   "years": "2023–2025",
+   "y0": 2023,
+   "y1": 2025,
+   "engine": "K20C1",
+   "body": "Hatchback",
+   "tag": "315 hp, 310 lb-ft, lighter flywheel. Still manual-only, one trim.",
+   "variants": [
+    {
+     "id": "fl5",
+     "name": "Civic Type R",
+     "years": "2023–2025",
+     "star": true,
+     "hp": {
+      "v": 315,
+      "src": [
+       "h23spec",
+       "h25spec"
+      ],
+      "note": "at 6,500 rpm"
+     },
+     "tq": {
+      "v": 310,
+      "src": [
+       "h23spec",
+       "h25spec"
+      ],
+      "note": "lb-ft at 2,600–4,000 rpm"
+     },
+     "z60": {
+      "v": 4.9,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual, front-drive",
+      "src": [
+       "h23spec",
+       "h23kit"
+      ],
+      "note": "helical limited-slip, rev-matching, lighter single-mass flywheel"
+     },
+     "weight": {
+      "v": "3,188 lb",
+      "src": [
+       "h23spec",
+       "h25spec"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$42,895",
+      "src": [
+       "h23price"
+      ],
+      "note": "2023, plus $1,095 destination"
+     }
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "K20C1": {
+   "name": "Honda K20C1",
+   "what": "2.0-liter inline-4, turbo",
+   "study": "",
+   "page": "",
+   "yt": [
+    "scy",
+    ""
+   ],
+   "facts": [
+    [
+     "Redline",
+     "7,000 rpm",
+     [
+      "h17spec",
+      "h23spec"
+     ]
+    ],
+    [
+     "Output",
+     "306 hp, 295 lb-ft (FK8); 315 hp, 310 lb-ft (FL5)",
+     [
+      "h17spec",
+      "h23spec"
+     ]
+    ],
+    [
+     "Design",
+     "VTEC on the exhaust cam; exhaust manifold cast into the head",
+     [
+      "h17pt"
+     ]
+    ],
+    [
+     "Built",
+     "Honda's Anna, Ohio engine plant",
+     [
+      "h17ov",
+      "h23kit",
+      "wk"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Fuel pump recall",
+     "kind": "Recall",
+     "rx": "fuel pump|stall(s|ed|ing)? while driving",
+     "x": "2018–2020 Type Rs are in NHTSA recall 23V858: the in-tank fuel pump may fail, which can stall the engine while driving.",
+     "fix": "Dealers replace the fuel pump module free of charge.",
+     "src": [
+      "r23v858"
+     ]
+    },
+    {
+     "t": "Heat in long track sessions",
+     "kind": "Owner-reported",
+     "rx": "overheat(s|ed|ing)?|limp mode|coolant temp|oil temp",
+     "x": "Track-day owners report coolant and oil temperatures climbing and power dropping in long sessions. Honda enlarged the grille and radiator core for 2020 and the FL5 grille opening by 48%.",
+     "fix": "Owners who track often add a bigger radiator or oil cooler.",
+     "src": [
+      "cxi",
+      "h20",
+      "h23kit"
+     ]
+    },
+    {
+     "t": "Low fuel-pressure warning on track (unconfirmed)",
+     "kind": "Owner-reported",
+     "rx": "fuel (rail|system) pressure|fuel pressure",
+     "x": "Owners in one CivicXI thread report a low fuel-pressure warning and limp mode on track, some with a low tank. The cause is not confirmed.",
+     "fix": "",
+     "src": [
+      "cxi"
+     ]
+    }
+   ]
+  }
+ },
+ "compare": [
+  {
+   "slug": "gr-corolla",
+   "name": "Toyota GR Corolla"
+  },
+  {
+   "slug": "golf-r",
+   "name": "Volkswagen Golf R"
+  },
+  {
+   "slug": "elantra-n",
+   "name": "Hyundai Elantra N"
+  },
+  {
+   "slug": "integra-type-s",
+   "name": "Acura Integra Type S"
+  }
+ ],
+ "sources": {
+  "h17sale": {
+   "t": "Honda: First-ever Civic Type R for America goes on sale tomorrow (Jun 14, 2017)",
+   "u": "https://hondanews.com/releases/first-ever-civic-type-r-for-america-goes-on-sale-tomorrow",
+   "k": "Honda"
+  },
+  "h17spec": {
+   "t": "Honda: 2017 Civic Type R specifications & features (Jun 2017)",
+   "u": "https://hondanews.com/en-US/honda-automobiles/releases/2017-civic-type-r-specifications-features",
+   "k": "Honda"
+  },
+  "h17pt": {
+   "t": "Honda: Honda Civic Type R powertrain (2017 press kit)",
+   "u": "https://hondanews.com/releases/honda-civic-type-r-powertrain",
+   "k": "Honda"
+  },
+  "h17ov": {
+   "t": "Honda: 2017 Honda Civic Type R press kit, overview",
+   "u": "https://hondanews.com/en-US/releases/release-acfe25287f7d481b93a0c0c020854e5e-honda-civic-type-r-overview",
+   "k": "Honda"
+  },
+  "h20": {
+   "t": "Honda: 2020 Honda Civic Type R arriving soon with upgraded performance (Feb 20, 2020)",
+   "u": "https://hondanews.com/en-US/releases/release-8ee4b11bf532d84dec796be47600f453-2020-honda-civic-type-r-arriving-soon-with-upgraded-performance-honda-sensing-and-new-logr-datalogging-smartphone-app",
+   "k": "Honda"
+  },
+  "h20le": {
+   "t": "Honda: 2021 Civic Type R Limited Edition sets Suzuka track record (Jul 9, 2020)",
+   "u": "https://hondanews.com/en-US/honda-automobiles/releases/2021-honda-civic-type-r-limited-edition-sets-suzuka-track-record",
+   "k": "Honda"
+  },
+  "h21spec": {
+   "t": "Honda: 2021 Civic Type R specifications & features (Sep 2020)",
+   "u": "https://hondanews.com/en-US/honda-automobiles/releases/2021-civic-type-r-specifications-features",
+   "k": "Honda"
+  },
+  "h21le": {
+   "t": "American Honda: 2021 Civic Type R and Type R Limited Edition pricing (Sep 2, 2020, via The Auto Channel)",
+   "u": "https://www.theautochannel.com/news/2020/09/02/857572-2021-honda-civic-type-r-limited-edition-available.html",
+   "k": "Honda"
+  },
+  "h23price": {
+   "t": "Honda: All-new 2023 Honda Civic Type R arriving at dealers (Oct 27, 2022)",
+   "u": "https://hondanews.com/en-US/honda-automobiles/releases/all-new-2023-honda-civic-type-r-the-ultimate-hot-hatch-arriving-at-dealers",
+   "k": "Honda"
+  },
+  "h23spec": {
+   "t": "Honda: 2023 Honda Civic Type R specifications & features (Oct 2022)",
+   "u": "https://hondanews.com/en-US/honda-automobiles/releases/2023-honda-civic-type-r-specifications-features",
+   "k": "Honda"
+  },
+  "h23kit": {
+   "t": "Honda: 2023 Honda Civic Type R press kit",
+   "u": "https://hondanews.com/en-US/honda-automobiles/releases/release-907c81858bdfe231c1cc3d0f70179fdc-2023-honda-civic-type-r-press-kit",
+   "k": "Honda"
+  },
+  "h25spec": {
+   "t": "Honda: 2025 Honda Civic Type R specifications & features (Oct 2024)",
+   "u": "https://hondanews.com/en-US/honda-automobiles/releases/release-a0290fb377b9a07ba1686b65910857e4-2025-honda-civic-type-r-specifications-features",
+   "k": "Honda"
+  },
+  "z60": {
+   "t": "0-60specs.com: Honda Civic 0-60 runs by magazine (Car and Driver, MotorTrend, Road & Track, MotorWeek)",
+   "u": "https://www.0-60specs.com/honda/civic-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "r23v858": {
+   "t": "NHTSA recall 23V858: Honda fuel pump may fail (includes 2018–2020 Civic Type R)",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=23V858000",
+   "k": "NHTSA recall"
+  },
+  "cxi": {
+   "t": "CivicXI forum: Limp mode on first track day (Type R owners, 2024–2025)",
+   "u": "https://www.civicxi.com/forum/threads/limp-mode-on-first-track-day.53222/",
+   "k": "owner forum"
+  },
+  "wk": {
+   "t": "Wikipedia: Honda K engine (K20C1, built in Anna, Ohio)",
+   "u": "https://en.wikipedia.org/wiki/Honda_K_engine",
+   "k": "Wikipedia (fallback, engine code only)"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-civic-type-r",
+ "img": "/assets/ai-perf/civic-type-r.webp?v=1"
+}

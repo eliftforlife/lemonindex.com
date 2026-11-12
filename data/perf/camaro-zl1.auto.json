@@ -1,0 +1,976 @@
+{
+ "built": "2026-11-11",
+ "nhtsa": {
+  "by_year": {
+   "1990": 25,
+   "1991": 86,
+   "1992": 88,
+   "1993": 32,
+   "1994": 144,
+   "1995": 216,
+   "1996": 116,
+   "1997": 69,
+   "1998": 173,
+   "1999": 90,
+   "2000": 76,
+   "2001": 48,
+   "2002": 68,
+   "2010": 295,
+   "2011": 194,
+   "2012": 113,
+   "2013": 187,
+   "2014": 188,
+   "2015": 206,
+   "2016": 141,
+   "2017": 189,
+   "2018": 81,
+   "2019": 53,
+   "2020": 31,
+   "2021": 20,
+   "2022": 14,
+   "2023": 15,
+   "2024": 4
+  },
+  "gens": {
+   "g5": {
+    "n": 694,
+    "issues": {
+     "Supercharger rattle at idle": {
+      "n": 0,
+      "ex": []
+     },
+     "Low-rpm buzz on replacement superchargers": {
+      "n": 2,
+      "ex": [
+       "11080773",
+       "11151378"
+      ]
+     }
+    }
+   },
+   "g6": {
+    "n": 407,
+    "issues": {
+     "Track misfire after supercharger cooling service": {
+      "n": 6,
+      "ex": [
+       "11298532",
+       "11317565"
+      ]
+     },
+     "10-speed automatic recall (transmission)": {
+      "n": 11,
+      "ex": [
+       "11220981",
+       "11277750"
+      ]
+     }
+    }
+   }
+  },
+  "parts": [
+   [
+    "Electrical system",
+    384
+   ],
+   [
+    "Unknown or other",
+    186
+   ],
+   [
+    "Power train",
+    181
+   ],
+   [
+    "Steering",
+    161
+   ],
+   [
+    "Engine",
+    152
+   ],
+   [
+    "Air bags",
+    89
+   ]
+  ]
+ },
+ "recalls": {
+  "2012": [
+   {
+    "id": "19E064000",
+    "part": "ELECTRICAL SYSTEM:IGNITION",
+    "summary": "General Motors LLC (GM) is recalling certain replacement flip-key ignition transmitter assemblies sold as replacement equipment for 2010-2015 Chevrolet Camaro vehicles.  GM dealers may have inadvertently sold these assemblies as replacement keys despite them having been recalled under NHTSA recall number 14V-346 (GM number 14294) when they were the original equipment assemblies.  The driver may ac"
+   },
+   {
+    "id": "14V346000",
+    "part": "ELECTRICAL SYSTEM:IGNITION",
+    "summary": "General Motors LLC (GM) is recalling all 2010-2014 Chevrolet Camaro vehicles manufactured December 3, 2008 to May 23, 2014.  In the affected vehicles, the driver may accidentally hit the ignition key with their knee, unintentionally knocking the key out of the run position, turning off the engine."
+   },
+   {
+    "id": "14V447000",
+    "part": "SEATS:FRONT ASSEMBLY:POWER ADJUST",
+    "summary": "General Motors LLC (GM) is recalling certain model year 2011-2012 Buick LaCrosse, Regal and Chevrolet Camaro, as well as certain 2010-2012 Cadillac SRX, Chevrolet Equinox and GMC Terrain vehicles, equipped with power height adjustable driver and passenger seats.  In the affected vehicles, the bolt that secures the driver's and passenger's power front seat height adjuster may fall out causing the s"
+   },
+   {
+    "id": "14V300000",
+    "part": "AIR BAGS",
+    "summary": "General Motors LLC (GM) is recalling certain model year 2012 Buick Verano vehicles manufactured December 2, 2011 to July, 16, 2012, Chevrolet Cruze vehicles manufactured December 7, 2011 to July 25, 2012, Chevrolet Sonic vehicles manufactured December 5, 2011 to August 2, 2012, and Chevrolet Camaro vehicles manufactured December 1, 2011 to June 11, 2012.  The driver side frontal air bag has a shor"
+   },
+   {
+    "id": "13V023000",
+    "part": "AIR BAGS",
+    "summary": "General Motors LLC (GM) is recalling certain model year 2012 Chevrolet Camaro, Cruze and Sonic, and model year 2012 Buick Verano vehicles.  The driver side frontal air bag has a shorting bar which may intermittently contact the air bag terminals."
+   }
+  ],
+  "2013": [
+   {
+    "id": "19E064000",
+    "part": "ELECTRICAL SYSTEM:IGNITION",
+    "summary": "General Motors LLC (GM) is recalling certain replacement flip-key ignition transmitter assemblies sold as replacement equipment for 2010-2015 Chevrolet Camaro vehicles.  GM dealers may have inadvertently sold these assemblies as replacement keys despite them having been recalled under NHTSA recall number 14V-346 (GM number 14294) when they were the original equipment assemblies.  The driver may ac"
+   },
+   {
+    "id": "14V346000",
+    "part": "ELECTRICAL SYSTEM:IGNITION",
+    "summary": "General Motors LLC (GM) is recalling all 2010-2014 Chevrolet Camaro vehicles manufactured December 3, 2008 to May 23, 2014.  In the affected vehicles, the driver may accidentally hit the ignition key with their knee, unintentionally knocking the key out of the run position, turning off the engine."
+   },
+   {
+    "id": "13V463000",
+    "part": "EQUIPMENT:OTHER:LABELS",
+    "summary": "General Motors (GM) is recalling certain model year 2013 and 2014 Chevrolet Camaro Coupes manufactured June 9, 2013, through September 6, 2013.  In the affected vehicles, the required air bag warning label on the sun visor may peel off.  Thus, these vehicles fail to comply to Federal Motor Vehicle Safety Standard No. 208 \"Occupant Crash Protection.\""
+   },
+   {
+    "id": "23V516000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "General Motors, LLC (GM) is recalling certain 2013 Buick Verano, Chevrolet Camero, Sonic, and Volt vehicles.  The driver-side air bag inflator may explode during deployment due to a manufacturing defect."
+   }
+  ],
+  "2014": [
+   {
+    "id": "19E064000",
+    "part": "ELECTRICAL SYSTEM:IGNITION",
+    "summary": "General Motors LLC (GM) is recalling certain replacement flip-key ignition transmitter assemblies sold as replacement equipment for 2010-2015 Chevrolet Camaro vehicles.  GM dealers may have inadvertently sold these assemblies as replacement keys despite them having been recalled under NHTSA recall number 14V-346 (GM number 14294) when they were the original equipment assemblies.  The driver may ac"
+   },
+   {
+    "id": "14V346000",
+    "part": "ELECTRICAL SYSTEM:IGNITION",
+    "summary": "General Motors LLC (GM) is recalling all 2010-2014 Chevrolet Camaro vehicles manufactured December 3, 2008 to May 23, 2014.  In the affected vehicles, the driver may accidentally hit the ignition key with their knee, unintentionally knocking the key out of the run position, turning off the engine."
+   },
+   {
+    "id": "14V409000",
+    "part": "STEERING",
+    "summary": "General Motors LLC (GM) is recalling certain model year 2014 Buick Regal, Cadillac XTS, Chevrolet Camaro and Chevrolet Impala vehicles.  Improperly torqued fasteners may cause the steering intermediate shaft and the steering gear and/or the lower control arm and the lower ball joint to separate."
+   },
+   {
+    "id": "13V463000",
+    "part": "EQUIPMENT:OTHER:LABELS",
+    "summary": "General Motors (GM) is recalling certain model year 2013 and 2014 Chevrolet Camaro Coupes manufactured June 9, 2013, through September 6, 2013.  In the affected vehicles, the required air bag warning label on the sun visor may peel off.  Thus, these vehicles fail to comply to Federal Motor Vehicle Safety Standard No. 208 \"Occupant Crash Protection.\""
+   }
+  ],
+  "2015": [
+   {
+    "id": "19E064000",
+    "part": "ELECTRICAL SYSTEM:IGNITION",
+    "summary": "General Motors LLC (GM) is recalling certain replacement flip-key ignition transmitter assemblies sold as replacement equipment for 2010-2015 Chevrolet Camaro vehicles.  GM dealers may have inadvertently sold these assemblies as replacement keys despite them having been recalled under NHTSA recall number 14V-346 (GM number 14294) when they were the original equipment assemblies.  The driver may ac"
+   },
+   {
+    "id": "15V666000",
+    "part": "AIR BAGS:SIDE/WINDOW",
+    "summary": "General Motors LLC (GM) is recalling certain model year 2015 Buick LaCrosse, Cadillac XTS, Chevrolet Camaro, Equinox, Malibu, and GMC Terrain vehicles.  The affected vehicles have front seat-mounted side impact air bags whose inflator may rupture upon its deployment."
+   }
+  ],
+  "2017": [
+   {
+    "id": "19V086000",
+    "part": "STEERING:ELECTRIC POWER ASSIST SYSTEM",
+    "summary": "General Motors LLC (GM) is recalling certain 2016-2018 Cadillac CTS, and 2017 Cadillac ATS, Chevrolet Camaro, and Chevrolet Corvette vehicles. The electric power steering (EPS) assist system may fail."
+   },
+   {
+    "id": "21V211000",
+    "part": "AIR BAGS:FRONTAL",
+    "summary": "General Motors, LLC (GM) is recalling certain 2017-2021 Chevrolet Camaro vehicles.  The plastic \"Camaro\" emblem, located on the steering wheel air bag cover, may separate during deployment of the frontal driver air bag."
+   },
+   {
+    "id": "25V175000",
+    "part": "STEERING:ELECTRIC POWER ASSIST SYSTEM",
+    "summary": "General Motors LLC (GM) is recalling certain 2016-2018 Cadillac CTS, 2017-2018 Cadillac ATS, Chevrolet Camaro, and Chevrolet Corvette vehicles.  The electric power steering (EPS) assist may fail."
+   }
+  ],
+  "2018": [
+   {
+    "id": "21V211000",
+    "part": "AIR BAGS:FRONTAL",
+    "summary": "General Motors, LLC (GM) is recalling certain 2017-2021 Chevrolet Camaro vehicles.  The plastic \"Camaro\" emblem, located on the steering wheel air bag cover, may separate during deployment of the frontal driver air bag."
+   },
+   {
+    "id": "25V175000",
+    "part": "STEERING:ELECTRIC POWER ASSIST SYSTEM",
+    "summary": "General Motors LLC (GM) is recalling certain 2016-2018 Cadillac CTS, 2017-2018 Cadillac ATS, Chevrolet Camaro, and Chevrolet Corvette vehicles.  The electric power steering (EPS) assist may fail."
+   }
+  ],
+  "2019": [
+   {
+    "id": "21V211000",
+    "part": "AIR BAGS:FRONTAL",
+    "summary": "General Motors, LLC (GM) is recalling certain 2017-2021 Chevrolet Camaro vehicles.  The plastic \"Camaro\" emblem, located on the steering wheel air bag cover, may separate during deployment of the frontal driver air bag."
+   }
+  ],
+  "2020": [
+   {
+    "id": "19V837000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+    "summary": "General Motors LLC (GM) is recalling certain 2020 Cadillac Escalade, Escalade ESV, Chevrolet Camaro, Silverado 1500, Suburban, Tahoe, GMC Sierra 1500, Yukon, and Yukon XL vehicles.  The fuel pump may be missing a pressure regulator, allowing for over-pressurization of the fuel system."
+   },
+   {
+    "id": "21V211000",
+    "part": "AIR BAGS:FRONTAL",
+    "summary": "General Motors, LLC (GM) is recalling certain 2017-2021 Chevrolet Camaro vehicles.  The plastic \"Camaro\" emblem, located on the steering wheel air bag cover, may separate during deployment of the frontal driver air bag."
+   },
+   {
+    "id": "25V148000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION",
+    "summary": "General Motors LLC (GM) is recalling certain 2019-2020 Cadillac CT6, 2020-2021 CT4, CT5, and 2020-2022 Chevrolet Camaro vehicles equipped with a 10-speed transmission.  The transmission may become damaged internally and cause the wheels to lock-up."
+   }
+  ],
+  "2021": [
+   {
+    "id": "20V811000",
+    "part": "SEAT BELTS",
+    "summary": "General Motors, LLC (GM) is recalling certain 2020 Chevrolet Bolt EV and 2021 GMC Canyon and Sierra 1500, 2500 and 3500, Yukon, Yukon XL, Cadillac Escalade and Escalade ESV and Chevrolet Blazer, Camaro, Colorado, Equinox, Silverado 1500, 2500 and 3500, Suburban and Tahoe vehicles.  Incorrect bolts may have been used at one or more fastening locations to secure the seat belts to the vehicle.  If an"
+   },
+   {
+    "id": "21V188000",
+    "part": "POWER TRAIN:AXLE ASSEMBLY:AXLE SHAFT",
+    "summary": "General Motors, LLC (GM) is recalling certain 2021 Chevrolet Camaro vehicles.  The left or right axle shaft may be missing a retaining ring, which could allow the axle shaft to separate while driving."
+   },
+   {
+    "id": "21V211000",
+    "part": "AIR BAGS:FRONTAL",
+    "summary": "General Motors, LLC (GM) is recalling certain 2017-2021 Chevrolet Camaro vehicles.  The plastic \"Camaro\" emblem, located on the steering wheel air bag cover, may separate during deployment of the frontal driver air bag."
+   },
+   {
+    "id": "25V148000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION",
+    "summary": "General Motors LLC (GM) is recalling certain 2019-2020 Cadillac CT6, 2020-2021 CT4, CT5, and 2020-2022 Chevrolet Camaro vehicles equipped with a 10-speed transmission.  The transmission may become damaged internally and cause the wheels to lock-up."
+   }
+  ],
+  "2022": [
+   {
+    "id": "25V148000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION",
+    "summary": "General Motors LLC (GM) is recalling certain 2019-2020 Cadillac CT6, 2020-2021 CT4, CT5, and 2020-2022 Chevrolet Camaro vehicles equipped with a 10-speed transmission.  The transmission may become damaged internally and cause the wheels to lock-up."
+   }
+  ],
+  "2023": [],
+  "2024": []
+ },
+ "yt": {
+  "car-camaro-zl1": {
+   "videos": 200,
+   "praise": [
+    [
+     "Looks",
+     24
+    ],
+    [
+     "Handling and steering",
+     16
+    ],
+    [
+     "Everyday comfort",
+     16
+    ],
+    [
+     "Power and acceleration",
+     16
+    ]
+   ],
+   "trouble": [],
+   "top": [
+    {
+     "id": "Brql3-Kj_dc",
+     "title": "Hellcat vs Camaro ZL1 - Dig Racing",
+     "views": 5077966,
+     "ch": "High Tech Corvette"
+    },
+    {
+     "id": "7ZiHjo9sGbk",
+     "title": "2019 Dodge Hellcat Redeye vs Chevy Camaro ZL1 1LE - DRAG RACE & LAP TIMES",
+     "views": 4359879,
+     "ch": "Throttle House"
+    },
+    {
+     "id": "XP6fdBHSdi0",
+     "title": "The 2017 Chevy Camaro ZL1 Is an Amazing Bargain For $65,000",
+     "views": 2832935,
+     "ch": "Doug DeMuro"
+    }
+   ]
+  },
+  "gm-lsa-ls9": {
+   "videos": 200,
+   "praise": [
+    [
+     "Looks",
+     18
+    ],
+    [
+     "Power and acceleration",
+     14
+    ],
+    [
+     "Everyday comfort",
+     10
+    ],
+    [
+     "Handling and steering",
+     7
+    ]
+   ],
+   "trouble": [],
+   "top": [
+    {
+     "id": "1xVT6JoiXfI",
+     "title": "What its like owning a Cadillac CTS-V",
+     "views": 1979753,
+     "ch": "Rob Dahm"
+    },
+    {
+     "id": "P4qiOETcaTM",
+     "title": "CADILLAC CTS-V - Everything You Need to Know | Up to Speed",
+     "views": 1898519,
+     "ch": "Donut"
+    },
+    {
+     "id": "rK_wYsVQvnk",
+     "title": "2011 Hennessey Cadillac CTS-V - Jay Leno's Garage",
+     "views": 1847109,
+     "ch": "Jay Leno's Garage"
+    }
+   ]
+  },
+  "gm-lt4": {
+   "videos": 200,
+   "praise": [
+    [
+     "Looks",
+     27
+    ],
+    [
+     "Power and acceleration",
+     18
+    ],
+    [
+     "Handling and steering",
+     13
+    ],
+    [
+     "Interior and seats",
+     12
+    ]
+   ],
+   "trouble": [
+    [
+     "Heat soak / misfire",
+     10
+    ],
+    [
+     "Coolant leaks / water pump / overheating",
+     10
+    ]
+   ],
+   "top": [
+    {
+     "id": "Ko9kzyqW-l8",
+     "title": "Corvette Z06 | Car Review | Top Gear",
+     "views": 5401187,
+     "ch": "Top Gear"
+    },
+    {
+     "id": "Dn6gmBQUTdg",
+     "title": "2023 Corvette Z06 Review // The $100,000 Supercar",
+     "views": 3280814,
+     "ch": "Throttle House"
+    },
+    {
+     "id": "2fFMeWn0a8o",
+     "title": "Is the Chevy Corvette Z06 Finally a Supercar?",
+     "views": 2922468,
+     "ch": "Doug DeMuro"
+    }
+   ]
+  }
+ },
+ "scores": {
+  "car-camaro-zl1": {
+   "years": {
+    "2012": {
+     "score": 53,
+     "weight": 18.3,
+     "videos": 100,
+     "named": 12,
+     "top": [
+      {
+       "id": "Brql3-Kj_dc",
+       "title": "Hellcat vs Camaro ZL1 - Dig Racing",
+       "views": 5077966
+      },
+      {
+       "id": "mlKMAbVk1xY",
+       "title": "1200 HP Camaro ZL1 1LE! // RESURRECTION by Hennessey",
+       "views": 2385016
+      },
+      {
+       "id": "bBDHOcvcCpM",
+       "title": "I Bought an Auction Camaro ZL1 with a \"Bad Clutch\" and Fixed it in 3 Minutes",
+       "views": 2316153
+      }
+     ]
+    },
+    "2013": {
+     "score": 52,
+     "weight": 18.3,
+     "videos": 100,
+     "named": 12,
+     "top": [
+      {
+       "id": "Brql3-Kj_dc",
+       "title": "Hellcat vs Camaro ZL1 - Dig Racing",
+       "views": 5077966
+      },
+      {
+       "id": "F9mwq6yhweQ",
+       "title": "2013 Chevrolet Camaro ZL1 Convertible Start Up, Exhaust, and In Depth Review",
+       "views": 2699117
+      },
+      {
+       "id": "mlKMAbVk1xY",
+       "title": "1200 HP Camaro ZL1 1LE! // RESURRECTION by Hennessey",
+       "views": 2385016
+      }
+     ]
+    },
+    "2014": {
+     "score": 53,
+     "weight": 9.3,
+     "videos": 90,
+     "named": 2,
+     "top": [
+      {
+       "id": "Brql3-Kj_dc",
+       "title": "Hellcat vs Camaro ZL1 - Dig Racing",
+       "views": 5077966
+      },
+      {
+       "id": "mlKMAbVk1xY",
+       "title": "1200 HP Camaro ZL1 1LE! // RESURRECTION by Hennessey",
+       "views": 2385016
+      },
+      {
+       "id": "bBDHOcvcCpM",
+       "title": "I Bought an Auction Camaro ZL1 with a \"Bad Clutch\" and Fixed it in 3 Minutes",
+       "views": 2316153
+      }
+     ]
+    },
+    "2015": {
+     "score": 52,
+     "weight": 12.3,
+     "videos": 93,
+     "named": 5,
+     "top": [
+      {
+       "id": "Brql3-Kj_dc",
+       "title": "Hellcat vs Camaro ZL1 - Dig Racing",
+       "views": 5077966
+      },
+      {
+       "id": "mlKMAbVk1xY",
+       "title": "1200 HP Camaro ZL1 1LE! // RESURRECTION by Hennessey",
+       "views": 2385016
+      },
+      {
+       "id": "bBDHOcvcCpM",
+       "title": "I Bought an Auction Camaro ZL1 with a \"Bad Clutch\" and Fixed it in 3 Minutes",
+       "views": 2316153
+      }
+     ]
+    },
+    "2017": {
+     "score": 55,
+     "weight": 17.8,
+     "videos": 99,
+     "named": 11,
+     "top": [
+      {
+       "id": "Brql3-Kj_dc",
+       "title": "Hellcat vs Camaro ZL1 - Dig Racing",
+       "views": 5077966
+      },
+      {
+       "id": "XP6fdBHSdi0",
+       "title": "The 2017 Chevy Camaro ZL1 Is an Amazing Bargain For $65,000",
+       "views": 2832935
+      },
+      {
+       "id": "mlKMAbVk1xY",
+       "title": "1200 HP Camaro ZL1 1LE! // RESURRECTION by Hennessey",
+       "views": 2385016
+      }
+     ]
+    },
+    "2018": {
+     "score": 55,
+     "weight": 29.8,
+     "videos": 111,
+     "named": 23,
+     "top": [
+      {
+       "id": "Brql3-Kj_dc",
+       "title": "Hellcat vs Camaro ZL1 - Dig Racing",
+       "views": 5077966
+      },
+      {
+       "id": "CLU0EKMyxY0",
+       "title": "Rebuilding A Wrecked 2018 Camaro ZL1",
+       "views": 2586959
+      },
+      {
+       "id": "mlKMAbVk1xY",
+       "title": "1200 HP Camaro ZL1 1LE! // RESURRECTION by Hennessey",
+       "views": 2385016
+      }
+     ]
+    },
+    "2019": {
+     "score": 61,
+     "weight": 19.8,
+     "videos": 101,
+     "named": 13,
+     "top": [
+      {
+       "id": "Brql3-Kj_dc",
+       "title": "Hellcat vs Camaro ZL1 - Dig Racing",
+       "views": 5077966
+      },
+      {
+       "id": "7ZiHjo9sGbk",
+       "title": "2019 Dodge Hellcat Redeye vs Chevy Camaro ZL1 1LE - DRAG RACE & LAP TIMES",
+       "views": 4359879
+      },
+      {
+       "id": "mlKMAbVk1xY",
+       "title": "1200 HP Camaro ZL1 1LE! // RESURRECTION by Hennessey",
+       "views": 2385016
+      }
+     ]
+    },
+    "2020": {
+     "score": 54,
+     "weight": 15.8,
+     "videos": 97,
+     "named": 9,
+     "top": [
+      {
+       "id": "Brql3-Kj_dc",
+       "title": "Hellcat vs Camaro ZL1 - Dig Racing",
+       "views": 5077966
+      },
+      {
+       "id": "mlKMAbVk1xY",
+       "title": "1200 HP Camaro ZL1 1LE! // RESURRECTION by Hennessey",
+       "views": 2385016
+      },
+      {
+       "id": "bBDHOcvcCpM",
+       "title": "I Bought an Auction Camaro ZL1 with a \"Bad Clutch\" and Fixed it in 3 Minutes",
+       "views": 2316153
+      }
+     ]
+    },
+    "2021": {
+     "score": 60,
+     "weight": 12.8,
+     "videos": 94,
+     "named": 6,
+     "top": [
+      {
+       "id": "Brql3-Kj_dc",
+       "title": "Hellcat vs Camaro ZL1 - Dig Racing",
+       "views": 5077966
+      },
+      {
+       "id": "mlKMAbVk1xY",
+       "title": "1200 HP Camaro ZL1 1LE! // RESURRECTION by Hennessey",
+       "views": 2385016
+      },
+      {
+       "id": "bBDHOcvcCpM",
+       "title": "I Bought an Auction Camaro ZL1 with a \"Bad Clutch\" and Fixed it in 3 Minutes",
+       "views": 2316153
+      }
+     ]
+    },
+    "2022": {
+     "score": 58,
+     "weight": 12.3,
+     "videos": 93,
+     "named": 5,
+     "top": [
+      {
+       "id": "Brql3-Kj_dc",
+       "title": "Hellcat vs Camaro ZL1 - Dig Racing",
+       "views": 5077966
+      },
+      {
+       "id": "mlKMAbVk1xY",
+       "title": "1200 HP Camaro ZL1 1LE! // RESURRECTION by Hennessey",
+       "views": 2385016
+      },
+      {
+       "id": "bBDHOcvcCpM",
+       "title": "I Bought an Auction Camaro ZL1 with a \"Bad Clutch\" and Fixed it in 3 Minutes",
+       "views": 2316153
+      }
+     ]
+    },
+    "2023": {
+     "score": 59,
+     "weight": 17.8,
+     "videos": 99,
+     "named": 11,
+     "top": [
+      {
+       "id": "Brql3-Kj_dc",
+       "title": "Hellcat vs Camaro ZL1 - Dig Racing",
+       "views": 5077966
+      },
+      {
+       "id": "mlKMAbVk1xY",
+       "title": "1200 HP Camaro ZL1 1LE! // RESURRECTION by Hennessey",
+       "views": 2385016
+      },
+      {
+       "id": "bBDHOcvcCpM",
+       "title": "I Bought an Auction Camaro ZL1 with a \"Bad Clutch\" and Fixed it in 3 Minutes",
+       "views": 2316153
+      }
+     ]
+    },
+    "2024": {
+     "score": 60,
+     "weight": 13.3,
+     "videos": 94,
+     "named": 6,
+     "top": [
+      {
+       "id": "Brql3-Kj_dc",
+       "title": "Hellcat vs Camaro ZL1 - Dig Racing",
+       "views": 5077966
+      },
+      {
+       "id": "mlKMAbVk1xY",
+       "title": "1200 HP Camaro ZL1 1LE! // RESURRECTION by Hennessey",
+       "views": 2385016
+      },
+      {
+       "id": "bBDHOcvcCpM",
+       "title": "I Bought an Auction Camaro ZL1 with a \"Bad Clutch\" and Fixed it in 3 Minutes",
+       "views": 2316153
+      }
+     ]
+    }
+   },
+   "videos": 198,
+   "pulled": 200
+  },
+  "gm-lsa-ls9": {
+   "years": {
+    "2009": {
+     "score": 52,
+     "weight": 27.2,
+     "videos": 88,
+     "named": 19,
+     "top": [
+      {
+       "id": "nPVSWUo9ZSI",
+       "title": "Chevrolet Corvette 6.2L V8 LS9 Engine Assembly",
+       "views": 945318
+      },
+      {
+       "id": "C7IOelB64DE",
+       "title": "Corvette C6 ZR1 Quick Review",
+       "views": 752259
+      },
+      {
+       "id": "uOf_6O_bjOQ",
+       "title": "Hell's TA - 80 Trans Am SE LS9 Super Charged ProTouring - Dyno Session",
+       "views": 486403
+      }
+     ]
+    },
+    "2010": {
+     "score": 52,
+     "weight": 12.2,
+     "videos": 73,
+     "named": 4,
+     "top": [
+      {
+       "id": "nPVSWUo9ZSI",
+       "title": "Chevrolet Corvette 6.2L V8 LS9 Engine Assembly",
+       "views": 945318
+      },
+      {
+       "id": "C7IOelB64DE",
+       "title": "Corvette C6 ZR1 Quick Review",
+       "views": 752259
+      },
+      {
+       "id": "uOf_6O_bjOQ",
+       "title": "Hell's TA - 80 Trans Am SE LS9 Super Charged ProTouring - Dyno Session",
+       "views": 486403
+      }
+     ]
+    },
+    "2011": {
+     "score": 53,
+     "weight": 21.7,
+     "videos": 82,
+     "named": 13,
+     "top": [
+      {
+       "id": "rK_wYsVQvnk",
+       "title": "2011 Hennessey Cadillac CTS-V - Jay Leno's Garage",
+       "views": 1847109
+      },
+      {
+       "id": "nPVSWUo9ZSI",
+       "title": "Chevrolet Corvette 6.2L V8 LS9 Engine Assembly",
+       "views": 945318
+      },
+      {
+       "id": "C7IOelB64DE",
+       "title": "Corvette C6 ZR1 Quick Review",
+       "views": 752259
+      }
+     ]
+    },
+    "2012": {
+     "score": 51,
+     "weight": 14.2,
+     "videos": 79,
+     "named": 7,
+     "top": [
+      {
+       "id": "nPVSWUo9ZSI",
+       "title": "Chevrolet Corvette 6.2L V8 LS9 Engine Assembly",
+       "views": 945318
+      },
+      {
+       "id": "C7IOelB64DE",
+       "title": "Corvette C6 ZR1 Quick Review",
+       "views": 752259
+      },
+      {
+       "id": "MvEuC0Hy9J8",
+       "title": "6th Gen SS vs. 5th Gen ZL1 — What’s The Better $40k Buy?! | Camaro Buyer's Guide",
+       "views": 526745
+      }
+     ]
+    },
+    "2013": {
+     "score": 54,
+     "weight": 17.2,
+     "videos": 83,
+     "named": 11,
+     "top": [
+      {
+       "id": "nPVSWUo9ZSI",
+       "title": "Chevrolet Corvette 6.2L V8 LS9 Engine Assembly",
+       "views": 945318
+      },
+      {
+       "id": "C7IOelB64DE",
+       "title": "Corvette C6 ZR1 Quick Review",
+       "views": 752259
+      },
+      {
+       "id": "MvEuC0Hy9J8",
+       "title": "6th Gen SS vs. 5th Gen ZL1 — What’s The Better $40k Buy?! | Camaro Buyer's Guide",
+       "views": 526745
+      }
+     ]
+    },
+    "2014": {
+     "score": 51,
+     "weight": 10.4,
+     "videos": 68,
+     "named": 5,
+     "top": [
+      {
+       "id": "nPVSWUo9ZSI",
+       "title": "Chevrolet Corvette 6.2L V8 LS9 Engine Assembly",
+       "views": 945318
+      },
+      {
+       "id": "MvEuC0Hy9J8",
+       "title": "6th Gen SS vs. 5th Gen ZL1 — What’s The Better $40k Buy?! | Camaro Buyer's Guide",
+       "views": 526745
+      },
+      {
+       "id": "uOf_6O_bjOQ",
+       "title": "Hell's TA - 80 Trans Am SE LS9 Super Charged ProTouring - Dyno Session",
+       "views": 486403
+      }
+     ]
+    },
+    "2015": {
+     "score": 51,
+     "weight": 11.4,
+     "videos": 69,
+     "named": 6,
+     "top": [
+      {
+       "id": "nPVSWUo9ZSI",
+       "title": "Chevrolet Corvette 6.2L V8 LS9 Engine Assembly",
+       "views": 945318
+      },
+      {
+       "id": "MvEuC0Hy9J8",
+       "title": "6th Gen SS vs. 5th Gen ZL1 — What’s The Better $40k Buy?! | Camaro Buyer's Guide",
+       "views": 526745
+      },
+      {
+       "id": "uOf_6O_bjOQ",
+       "title": "Hell's TA - 80 Trans Am SE LS9 Super Charged ProTouring - Dyno Session",
+       "views": 486403
+      }
+     ]
+    }
+   },
+   "videos": 114,
+   "pulled": 200
+  },
+  "gm-lt4": {
+   "years": {
+    "2015": {
+     "score": 52,
+     "weight": 26.0,
+     "videos": 98,
+     "named": 9,
+     "top": [
+      {
+       "id": "i-9ohImmNBE",
+       "title": "WHY Did This Camaro ZL1 Engine SEIZE on the TRACK? - LT4 Engine Teardown!",
+       "views": 1537368
+      },
+      {
+       "id": "cYHnp52YGxo",
+       "title": "Our 1967 LT4 Swapped Camaro SS Hits The Highway For The First Time!!!",
+       "views": 846988
+      },
+      {
+       "id": "b8_l79MNTJk",
+       "title": "Stock z06 vs Stock ZL1 - 1/4 mile drag race - Corvette C7 z06 vs Camaro ZL1",
+       "views": 594217
+      }
+     ]
+    },
+    "2016": {
+     "score": 54,
+     "weight": 23.0,
+     "videos": 95,
+     "named": 6,
+     "top": [
+      {
+       "id": "i-9ohImmNBE",
+       "title": "WHY Did This Camaro ZL1 Engine SEIZE on the TRACK? - LT4 Engine Teardown!",
+       "views": 1537368
+      },
+      {
+       "id": "cYHnp52YGxo",
+       "title": "Our 1967 LT4 Swapped Camaro SS Hits The Highway For The First Time!!!",
+       "views": 846988
+      },
+      {
+       "id": "aIUmkWAqC9c",
+       "title": "2016 Chevy Corvette Z06 - Review and Road Test",
+       "views": 757386
+      }
+     ]
+    },
+    "2017": {
+     "score": 52,
+     "weight": 19.0,
+     "videos": 91,
+     "named": 2,
+     "top": [
+      {
+       "id": "i-9ohImmNBE",
+       "title": "WHY Did This Camaro ZL1 Engine SEIZE on the TRACK? - LT4 Engine Teardown!",
+       "views": 1537368
+      },
+      {
+       "id": "cYHnp52YGxo",
+       "title": "Our 1967 LT4 Swapped Camaro SS Hits The Highway For The First Time!!!",
+       "views": 846988
+      },
+      {
+       "id": "b8_l79MNTJk",
+       "title": "Stock z06 vs Stock ZL1 - 1/4 mile drag race - Corvette C7 z06 vs Camaro ZL1",
+       "views": 594217
+      }
+     ]
+    },
+    "2018": {
+     "score": 51,
+     "weight": 19.0,
+     "videos": 91,
+     "named": 2,
+     "top": [
+      {
+       "id": "i-9ohImmNBE",
+       "title": "WHY Did This Camaro ZL1 Engine SEIZE on the TRACK? - LT4 Engine Teardown!",
+       "views": 1537368
+      },
+      {
+       "id": "cYHnp52YGxo",
+       "title": "Our 1967 LT4 Swapped Camaro SS Hits The Highway For The First Time!!!",
+       "views": 846988
+      },
+      {
+       "id": "b8_l79MNTJk",
+       "title": "Stock z06 vs Stock ZL1 - 1/4 mile drag race - Corvette C7 z06 vs Camaro ZL1",
+       "views": 594217
+      }
+     ]
+    },
+    "2019": {
+     "score": 53,
+     "weight": 26.0,
+     "videos": 98,
+     "named": 9,
+     "top": [
+      {
+       "id": "i-9ohImmNBE",
+       "title": "WHY Did This Camaro ZL1 Engine SEIZE on the TRACK? - LT4 Engine Teardown!",
+       "views": 1537368
+      },
+      {
+       "id": "cYHnp52YGxo",
+       "title": "Our 1967 LT4 Swapped Camaro SS Hits The Highway For The First Time!!!",
+       "views": 846988
+      },
+      {
+       "id": "wjUVyw1vhTw",
+       "title": "2019 Chevrolet Corvette Z06 Review - Does it Need a Mid-Engine?",
+       "views": 796066
+      }
+     ]
+    }
+   },
+   "videos": 113,
+   "pulled": 200
+  }
+ }
+}

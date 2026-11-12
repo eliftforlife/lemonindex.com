@@ -1,0 +1,1322 @@
+{
+ "built": "2026-11-11",
+ "nhtsa": {
+  "by_year": {
+   "1990": 20,
+   "1991": 304,
+   "1992": 470,
+   "1993": 586,
+   "1994": 676,
+   "1995": 626,
+   "1996": 324,
+   "1997": 2757,
+   "1998": 1381,
+   "1999": 1044,
+   "2000": 1075,
+   "2001": 1236,
+   "2002": 821,
+   "2003": 423,
+   "2004": 2029,
+   "2005": 1112,
+   "2006": 585,
+   "2007": 488,
+   "2008": 369,
+   "2009": 324,
+   "2010": 843,
+   "2011": 2191,
+   "2012": 1783,
+   "2013": 2989,
+   "2014": 1537,
+   "2015": 1732,
+   "2016": 2079,
+   "2017": 1452,
+   "2018": 2320,
+   "2019": 1338,
+   "2020": 736,
+   "2021": 1030,
+   "2022": 598,
+   "2023": 414,
+   "2024": 193,
+   "2025": 108,
+   "2026": 12
+  },
+  "gens": {
+   "g1": {
+    "n": 9343,
+    "issues": {
+     "Sudden downshift to first gear (transmission)": {
+      "n": 733,
+      "ex": [
+       "10547792",
+       "10549377"
+      ]
+     }
+    }
+   },
+   "g2": {
+    "n": 5846,
+    "issues": {
+     "10-speed shift linkage and park pin recalls (2017–2018)": {
+      "n": 11,
+      "ex": [
+       "11074796",
+       "11209129"
+      ]
+     },
+     "Shift to neutral (2021)": {
+      "n": 99,
+      "ex": [
+       "11084065",
+       "11308906"
+      ]
+     },
+     "High-pressure fuel pump welds (2018)": {
+      "n": 10,
+      "ex": [
+       "11002028",
+       "11194219"
+      ]
+     },
+     "Engine cup plug oil leak (2024–2025)": {
+      "n": 57,
+      "ex": [
+       "10959017",
+       "11112494"
+      ]
+     }
+    }
+   },
+   "g3": {
+    "n": 2343,
+    "issues": {
+     "10-speed shift linkage and park pin recalls (2017–2018)": {
+      "n": 6,
+      "ex": [
+       "11560668",
+       "11650539"
+      ]
+     },
+     "Shift to neutral (2021)": {
+      "n": 23,
+      "ex": [
+       "11422207",
+       "11433497"
+      ]
+     },
+     "High-pressure fuel pump welds (2018)": {
+      "n": 0,
+      "ex": []
+     },
+     "Engine cup plug oil leak (2024–2025)": {
+      "n": 6,
+      "ex": [
+       "11483066",
+       "11552824"
+      ]
+     }
+    }
+   }
+  },
+  "parts": [
+   [
+    "Power train",
+    6770
+   ],
+   [
+    "Engine",
+    3237
+   ],
+   [
+    "Electrical system",
+    1956
+   ],
+   [
+    "Unknown or other",
+    1567
+   ],
+   [
+    "Steering",
+    1295
+   ],
+   [
+    "Service brakes",
+    1282
+   ]
+  ]
+ },
+ "recalls": {
+  "2010": [
+   {
+    "id": "11V049000",
+    "part": "STRUCTURE:BODY:DOOR",
+    "summary": "FORD IS RECALLING CERTAIN MODEL YEAR 2009 AND 2010 F-150 VEHICLES MANUFACTURED FROM JANUARY 18, 2008, THROUGH NOVEMBER 30, 2009.  THE INTERIOR DOOR HANDLE HOUSING EMBOSSMENT RETAINING THE INTERIOR DOOR HANDLE SPRING MAY FRACTURE DURING NORMAL USAGE RESULTING IN INSUFFICIENT SPRING FORCE TO RETURN THE HANDLE TO THE FULLY STOWED POSITION."
+   }
+  ],
+  "2011": [
+   {
+    "id": "19V075000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION:CONTROL MODULE (TCM/PCM/TECM)",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2011-2013 F-150 vehicles equipped with a 6-speed automatic transmission.  The transmission may unexpectedly downshift into first gear, regardless of vehicle speed."
+   },
+   {
+    "id": "16V248000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2011-2012 Ford F-150 trucks, 2012 Ford Expedition, Lincoln Navigator, and Ford Mustang vehicles.  The affected vehicles are equipped with an automatic transmission that may unexpectedly downshift to first gear, regardless of vehicle speed."
+   },
+   {
+    "id": "12V190000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION:CONTROL MODULE (TCM/PCM/TECM)",
+    "summary": "FORD IS RECALLING CERTAIN MODEL YEAR 2011-2012 FORD F-150, 2012 EXPEDITION AND LINCOLN NAVIGATOR, AND 2012-2013 MUSTANG VEHICLES, FOR FAILING TO COMPLY WITH THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NOS. 102, \"TRANSMISSION SHIFT LEVER SEQUENCE, STARTER INTERLOCK, AND TRANSMISSION BRAKING EFFECT\" AND 108 LAMPS, REFLECTIVE DEVICES AND ASSOCIATED EQUIPMENT.  THESE VEHICLES MAY HAVE "
+   },
+   {
+    "id": "11V582000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION",
+    "summary": "FORD IS RECALLING CERTAIN MODEL YEAR 2011 F-150 VEHICLES MANUFACTURED FROM SEPTEMBER 9, 2011, THROUGH SEPTEMBER 22, 2011, AND MODEL YEAR 2012 F-250, F-350, F-450 AND F-550 HEAVY DUTY VEHICLES MANUFACTURED FROM SEPTEMBER 12, 2011, THROUGH SEPTEMBER 22, 2011.  THESE VEHICLES FAIL TO COMPLY WITH THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NUMBER 114, THEFT PROTECTION.  THE \r\nTRANSMISS"
+   },
+   {
+    "id": "11V128000",
+    "part": "ELECTRICAL SYSTEM:SOFTWARE",
+    "summary": "FORD IS RECALLING CERTAIN MODEL YEAR 2011 FORD F-150, F-250, F-350, F-450, F-550, EDGE, AND LINCOLN MKX TRUCKS MANUFACTURED FROM OCTOBER 25, 2010, THROUGH NOVEMBER 20, 2010.  THESE VEHICLES WERE INSPECTED USING INTEGRATED DIAGNOSTIC SYSTEM (IDS) THAT HAD A CUSTOM SOFTWARE ROUTINE TO READ THE SUSPECT BODY CONTROL MODULE (BCM) SERIAL NUMBER. BASED ON THE SERIAL NUMBER THE BCM WAS EITHER NOT AFFECTED"
+   },
+   {
+    "id": "10V659000",
+    "part": "STRUCTURE:BODY",
+    "summary": "FORD IS RECALLING CERTAIN MODEL YEAR 2011 F-150, F-250, F-350, F-450, F-550, EDGE AND LINCOLN MKX VEHICLES.  DURING A SIX-DAY PRODUCTION PERIOD, THE SUPPLIER OF THE BODY CONTROL MODULE MANUFACTURED MODULES THAT MAY HAVE THE POTENTIAL FOR AN INTERNAL SHORT."
+   }
+  ],
+  "2012": [
+   {
+    "id": "19V075000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION:CONTROL MODULE (TCM/PCM/TECM)",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2011-2013 F-150 vehicles equipped with a 6-speed automatic transmission.  The transmission may unexpectedly downshift into first gear, regardless of vehicle speed."
+   },
+   {
+    "id": "16V248000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2011-2012 Ford F-150 trucks, 2012 Ford Expedition, Lincoln Navigator, and Ford Mustang vehicles.  The affected vehicles are equipped with an automatic transmission that may unexpectedly downshift to first gear, regardless of vehicle speed."
+   },
+   {
+    "id": "12V198000",
+    "part": "AIR BAGS:FRONTAL:SENSOR/CONTROL MODULE-INACTIVE",
+    "summary": "FORD IS RECALLING CERTAIN MODEL YEAR 2012 F-150 VEHICLES MANUFACTURED FROM NOVEMBER 6, 2011, THROUGH NOVEMBER 15, 2011.  INCORRECT SOFTWARE FOR THE OCCUPANT CLASSIFICATION SYSTEM MODULE (OCSM) WAS INSTALLED ON THE VEHICLES EITHER AT THE TIME OF MANUFACTURING OR DURING THE COURSE OF REPLACEMENT OF THE MODULE AS PART OF A SERVICE REPAIR.  UNDER CERTAIN DRIVING CONDITIONS, THE OCSM MAY MISCLASSIFY TH"
+   },
+   {
+    "id": "12V190000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION:CONTROL MODULE (TCM/PCM/TECM)",
+    "summary": "FORD IS RECALLING CERTAIN MODEL YEAR 2011-2012 FORD F-150, 2012 EXPEDITION AND LINCOLN NAVIGATOR, AND 2012-2013 MUSTANG VEHICLES, FOR FAILING TO COMPLY WITH THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NOS. 102, \"TRANSMISSION SHIFT LEVER SEQUENCE, STARTER INTERLOCK, AND TRANSMISSION BRAKING EFFECT\" AND 108 LAMPS, REFLECTIVE DEVICES AND ASSOCIATED EQUIPMENT.  THESE VEHICLES MAY HAVE "
+   }
+  ],
+  "2013": [
+   {
+    "id": "19V075000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION:CONTROL MODULE (TCM/PCM/TECM)",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2011-2013 F-150 vehicles equipped with a 6-speed automatic transmission.  The transmission may unexpectedly downshift into first gear, regardless of vehicle speed."
+   },
+   {
+    "id": "19V433000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2013 F-150 vehicles equipped with 5.0L or 6.2L gasoline engines, that previously had the powertrain control module (PCM) software reprogrammed under recall 19V-075.  The software used to reprogram the PCM did not have the necessary updates to prevent the transmission from unexpectedly downshifting into first gear, regardless of vehicle speed."
+   },
+   {
+    "id": "16V345000",
+    "part": "SERVICE BRAKES, HYDRAULIC:FLUID",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2013-2014 F-150 vehicles manufactured August 1, 2013, to August 31, 2014 equipped with 3.5L engines.  The master cylinder rear cup seal may roll, resulting in brake fluid leakage from the primary reservoir into the brake booster."
+   }
+  ],
+  "2014": [
+   {
+    "id": "17V472000",
+    "part": "SEAT BELTS",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2014 Ford F-150 and E-350, 2014-2015 Ford Escape, and 2015 Lincoln MKC vehicles.  Improperly manufactured bolts may have been used to install certain seats, seatbacks, seatbelt buckles, or seatbelt anchors on these vehicles."
+   },
+   {
+    "id": "16V345000",
+    "part": "SERVICE BRAKES, HYDRAULIC:FLUID",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2013-2014 F-150 vehicles manufactured August 1, 2013, to August 31, 2014 equipped with 3.5L engines.  The master cylinder rear cup seal may roll, resulting in brake fluid leakage from the primary reservoir into the brake booster."
+   },
+   {
+    "id": "14V316000",
+    "part": "STEERING:ELECTRIC POWER ASSIST SYSTEM",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2014 Ford F-150 trucks manufactured May 26, 2014 to June 19, 2014, and equipped with Electronic Power Assist Steering (EPAS).  The affected vehicles may have an incorrectly installed EPAS gear motor position sensor magnet that can lead to a total loss of steering control while driving."
+   },
+   {
+    "id": "14V710000",
+    "part": "SEATS",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2014 Ford F-150 and Flex vehicles manufactured March 1, 2014, to May 31, 2014.  The affected vehicles were manufactured with a reduced clearance between the seat frame and the seat track assembly.  This can cause the Occupant Classification System (OCS) to inaccurately register passenger weight and improperly suppress the passenger front ai"
+   },
+   {
+    "id": "14V709000",
+    "part": "EXTERIOR LIGHTING:BRAKE LIGHTS:SWITCH",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2014 F-150 vehicles manufactured March 1, 2014, to March 13, 2014.  The affected vehicles may have a brake pedal position switch that is improperly adjusted.  As a result, the brake lights may illuminate with a delay or not at all.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS)"
+   },
+   {
+    "id": "20V332000",
+    "part": "SERVICE BRAKES, HYDRAULIC:FOUNDATION COMPONENTS:MASTER CYLINDER",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2014-2017 F-150 pickup trucks equipped with 3.5L Ecoboost engines.  The brake master cylinder may leak brake fluid into the brake booster."
+   },
+   {
+    "id": "24V444000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION:CONTROL MODULE (TCM/PCM/TECM)",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2014 F-150 vehicles.  A loss of signal between the transmission output shaft speed sensor and the powertrain control module can cause the transmission to unexpectedly downshift into first gear, regardless of vehicle speed."
+   },
+   {
+    "id": "26V378000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION:CONTROL MODULE (TCM/PCM/TECM)",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2014 F-150 vehicles previously repaired incorrectly under recall number 24V444. A loss of signal between the transmission output shaft speed sensor and the powertrain control module (PCM) can cause the transmission to unexpectedly downshift into first gear."
+   }
+  ],
+  "2017": [
+   {
+    "id": "18V894000",
+    "part": "ENGINE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2015-2019 Ford F-150 and 2017-2019 Ford F-250 Super Duty, F-350 Super Duty, F-450 Super Duty, and F-550 Super Duty pick-up trucks equipped with an engine block heater.   Water and contaminants may get into the block heater cable's splice connector causing corrosion and damage."
+   },
+   {
+    "id": "19V278000",
+    "part": "ENGINE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2015-2019 Ford F-150 and 2017-2019 Ford F-250 Super Duty, F-350 Super Duty, F-450 Super Duty, and F-550 Super Duty pick-up trucks equipped with an engine block heater and previously remedied under recall 18V894.   During the previous repair, the block heater cable's splice connector may have been damaged."
+   },
+   {
+    "id": "18V568000",
+    "part": "SEAT BELTS:PRETENSIONER",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2015-2018 Ford F-150 Regular Cab and SuperCrew Cab vehicles.  If a front seat belt pretensioner deploys as the result of a crash, the sparks may ignite materials such as carpeting or insulation within the B-pillar area."
+   },
+   {
+    "id": "17V652000",
+    "part": "LATCHES/LOCKS/LINKAGES:DOORS:LATCH",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2015-2017 Ford F-150, and 2017 F-250, F-350, F-450, and F-550 Super Duty trucks.  The doors on these vehicles may have a bent or kinked actuation cable or the door latches may freeze after water gets into the latch.  Either condition can result in the doors opening while driving although they appear to be closed."
+   },
+   {
+    "id": "17V529000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2017 F-150 and Mustang vehicles.  The air bag inflator within the passenger frontal air bag module may rupture in the event of a crash."
+   },
+   {
+    "id": "17V526000",
+    "part": "SEAT BELTS:REAR/OTHER",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2015-2017 F-150, and 2017 F-250 and F-350 trucks equipped with a crew cab.  The left rear inflatable seat belt buckle assembly may be inadequately attached to its mounting bracket.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 210, \"Seat Belt Assembly Anchorages.\""
+   },
+   {
+    "id": "17V331000",
+    "part": "LATCHES/LOCKS/LINKAGES:DOORS:LATCH",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2015-2017 F-150, and 2017 F-250, F-350, F-450, and F-550 vehicles originally produced with black or body colored exterior door handles that may have been subsequently equipped with a chrome exterior door handle cover accessory kit purchased from a Ford dealer.  These accessory door handle covers may cause the doors to unlatch in a side impact collisio"
+   },
+   {
+    "id": "17V053000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION:GEAR POSITION INDICATION (PRNDL)",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2017 F-150 trucks equipped with an eight-inch productivity screen.  In these vehicles, the instrument cluster may lose power after the initial vehicle start-up in cold ambient temperatures.  Several gauges, including the transmission gear position indicator, may not illuminate.  As such, these vehicles fail to comply with the requirements of Federal M"
+   },
+   {
+    "id": "17V332000",
+    "part": "SEATS:FRONT ASSEMBLY:RECLINER",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2017 Ford Explorer, F-150, F-250, F-350, F-450 and F-550 vehicles equipped with a manual driver's seat back recliner mechanism.  In the event of a crash, the seat back frame may not restrain the occupant due to having inadequate welds.  As such, these vehicles may not meet the requirements of Federal Motor Vehicle Safety Standard (FMVSS) numbers 202a,"
+   },
+   {
+    "id": "17V671000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION:LEVER AND LINKAGE:COLUMN SHIFT",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2017 F-150 vehicles equipped with ten-speed transmissions.  The pin that attaches the transmission shift linkage to the transmission may come out, preventing the transmission from responding to movement of the shift lever."
+   },
+   {
+    "id": "18V213000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2017-2018 Ford F-150 and 2018 Ford Expedition and Mustang and Lincoln Navigator vehicles equipped with 10-speed automatic transmissions.  A roll pin may not have been installed in the transmission, potentially causing a loss of the \"Park\" function."
+   },
+   {
+    "id": "17V599000",
+    "part": "SEATS",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2017 Ford F-150, F-250, F-350, F-450, and F-550 trucks with manually-adjusted front passenger seats.  The seat belt anchor may not be adequately welded to the seat cushion frame.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 210, \"Seat Belt Assembly Anchorages,\" and 207, \"Seating "
+   },
+   {
+    "id": "20V332000",
+    "part": "SERVICE BRAKES, HYDRAULIC:FOUNDATION COMPONENTS:MASTER CYLINDER",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2014-2017 F-150 pickup trucks equipped with 3.5L Ecoboost engines.  The brake master cylinder may leak brake fluid into the brake booster."
+   },
+   {
+    "id": "21E027000",
+    "part": "SUSPENSION:FRONT:CONTROL ARM:UPPER BALL JOINT",
+    "summary": "Tenneco Automotive (DRiV) is recalling certain MOOG K500359 ball joints, for aftermarket installation on 2015-2018 Ford F-150 trucks.  The ball joint may have a misaligned dust boot and may be missing alignment hole and installation warning tag, which may lead to improper alignment of the ball joint."
+   },
+   {
+    "id": "22V150000",
+    "part": "SERVICE BRAKES, HYDRAULIC:POWER ASSIST",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2016-2017 Ford Expedition, Lincoln Navigator, and 2016-2018 F-150 vehicles equipped with 3.5L Ecoboost engines.  The brake master cylinder may allow brake fluid to leak from the front wheel circuit into the brake booster."
+   },
+   {
+    "id": "25V236000",
+    "part": "SERVICE BRAKES, HYDRAULIC:FOUNDATION COMPONENTS:MASTER CYLINDER",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2017-2018 F-150, Expedition, and Lincoln Navigator vehicles.  The brake master cylinder may allow brake fluid to leak from the front wheel circuit into the brake booster."
+   },
+   {
+    "id": "26V237000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2015-2017 F-150 vehicles. A loss of signal between the transmission range sensor and the powertrain control module can cause the transmission to unexpectedly downshift into second gear."
+   },
+   {
+    "id": "26V370000",
+    "part": "ELECTRICAL SYSTEM: INSTRUMENT CLUSTER/PANEL",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2017 F-150 vehicles previously repaired incorrectly under recall number 17V053. The instrument cluster may lose power after initial vehicle start-up in cold ambient temperatures. Several gauges, including the transmission gear position indicator, may not illuminate.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle"
+   }
+  ],
+  "2018": [
+   {
+    "id": "20V097000",
+    "part": "EXTERIOR LIGHTING:HEADLIGHTS",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2018-2020 F-150 trucks equipped with high series LED headlamps with Autolamp (On/Off) functionality.  The Daytime Running Lamps (DRL) may remain activated instead of dimming to parking lamps when the Master Lighting Switch (MLS) is manually rotated from the \"Autolamps\" switch position to \"Headlamps On.\" As such, these vehicles fail to comply with the "
+   },
+   {
+    "id": "21V983000",
+    "part": "LATCHES/LOCKS/LINKAGES:TAILGATE:LATCH",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2018 F-150 vehicles with manual and power release tailgates.  The tailgate latches may unlatch unexpectedly while driving."
+   },
+   {
+    "id": "21V155000",
+    "part": "TIRES",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2018 F-150, 2018-2020 F-250, F-350, and 2019 Escape vehicles equipped with Continental tires.  On the affected vehicles, it is possible that one or more tires were cured for too long during tire production."
+   },
+   {
+    "id": "21E027000",
+    "part": "SUSPENSION:FRONT:CONTROL ARM:UPPER BALL JOINT",
+    "summary": "Tenneco Automotive (DRiV) is recalling certain MOOG K500359 ball joints, for aftermarket installation on 2015-2018 Ford F-150 trucks.  The ball joint may have a misaligned dust boot and may be missing alignment hole and installation warning tag, which may lead to improper alignment of the ball joint."
+   },
+   {
+    "id": "18V894000",
+    "part": "ENGINE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2015-2019 Ford F-150 and 2017-2019 Ford F-250 Super Duty, F-350 Super Duty, F-450 Super Duty, and F-550 Super Duty pick-up trucks equipped with an engine block heater.   Water and contaminants may get into the block heater cable's splice connector causing corrosion and damage."
+   },
+   {
+    "id": "18V392000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2018 Ford Expedition, F-150, and Lincoln Navigator vehicles equipped with 3.5L GTDI V6 engines.  These vehicles have high pressure fuel pump assemblies with welds that can fracture, which may cause an oil or fuel leak."
+   },
+   {
+    "id": "19V633000",
+    "part": "SEATS:FRONT ASSEMBLY:RECLINER",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2018-2020 F-150 and 2019-2020 F-250, F-350, F-450, and F-550 Super Duty pickup trucks, and 2018-2019 Ford Explorer, 2019-2020 Expedition, and 2020 Escape vehicles equipped with driver and/or passenger's manual front seat back recliner mechanisms.  Also included are certain 2020 Ford Explorer and Lincoln Aviator vehicles equipped with rear outboard sea"
+   },
+   {
+    "id": "19V278000",
+    "part": "ENGINE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2015-2019 Ford F-150 and 2017-2019 Ford F-250 Super Duty, F-350 Super Duty, F-450 Super Duty, and F-550 Super Duty pick-up trucks equipped with an engine block heater and previously remedied under recall 18V894.   During the previous repair, the block heater cable's splice connector may have been damaged."
+   },
+   {
+    "id": "18V568000",
+    "part": "SEAT BELTS:PRETENSIONER",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2015-2018 Ford F-150 Regular Cab and SuperCrew Cab vehicles.  If a front seat belt pretensioner deploys as the result of a crash, the sparks may ignite materials such as carpeting or insulation within the B-pillar area."
+   },
+   {
+    "id": "18V213000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2017-2018 Ford F-150 and 2018 Ford Expedition and Mustang and Lincoln Navigator vehicles equipped with 10-speed automatic transmissions.  A roll pin may not have been installed in the transmission, potentially causing a loss of the \"Park\" function."
+   },
+   {
+    "id": "18V214000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION:GEAR POSITION INDICATION (PRNDL)",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2018 F-650 and F-750 vehicles equipped with 6-speed automatic transmissions and 2018 Ford F-150 and Expedition vehicles equipped with 10-speed automatic transmissions (excluding Expedition vehicles with\r\na Rotary Gear Shift Dial on the console).  The gear shift cable clip may not be properly seated, allowing the transmission to be in a different gear "
+   },
+   {
+    "id": "17V672000",
+    "part": "ENGINE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2018 F-150 vehicles equipped with 3.5L engines.  The cylinder heads may have been machined without lubrication supply holes for the camshaft bearing journals."
+   },
+   {
+    "id": "17V669000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION:LEVER AND LINKAGE:COLUMN SHIFT",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2018 F-150 vehicles equipped with a 3.3L engine, a 6-speed transmission and a column mounted shift lever.  Quickly moving the shift lever from Park to Drive may cause a loss of gear indication on the instrument cluster display and a momentary selection of an unintended gear, such as Reverse or Neutral before the vehicle achieves Drive function."
+   },
+   {
+    "id": "17V598000",
+    "part": "STRUCTURE:BODY:ROOF AND PILLARS",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2018 Ford F-150 Raptor Super Cab pick-up trucks not equipped with a moonroof.  The structural roof braces may be missing rivets at the attachment of the roof rail, thereby reducing the structural integrity."
+   },
+   {
+    "id": "22V150000",
+    "part": "SERVICE BRAKES, HYDRAULIC:POWER ASSIST",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2016-2017 Ford Expedition, Lincoln Navigator, and 2016-2018 F-150 vehicles equipped with 3.5L Ecoboost engines.  The brake master cylinder may allow brake fluid to leak from the front wheel circuit into the brake booster."
+   },
+   {
+    "id": "24V852000",
+    "part": "EQUIPMENT:OTHER:LABELS",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2020-2025 Explorer, Lincoln Aviator, 2020-2024 Escape, Lincoln Corsair, 2018-2024 F-150, Expedition and Lincoln Navigator vehicles.  The air bag warning label may be missing from the dashboard.  As such, these vehicles fail to comply with the requirement Federal Motor Vehicle Safety Standard number 208, \"Occupant Crash Protection.\""
+   },
+   {
+    "id": "25V236000",
+    "part": "SERVICE BRAKES, HYDRAULIC:FOUNDATION COMPONENTS:MASTER CYLINDER",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2017-2018 F-150, Expedition, and Lincoln Navigator vehicles.  The brake master cylinder may allow brake fluid to leak from the front wheel circuit into the brake booster."
+   },
+   {
+    "id": "26V373000",
+    "part": "EXTERIOR LIGHTING:HEADLIGHTS",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2018-2020 F-150 vehicles previously repaired incorrectly under recall number 20V097. When the headlight switch is turned from \"Autolamps\" to \"Headlamps On,\" the Daytime Running Lamps (DRLs) may remain fully bright instead of dimming to parking lamps as intended. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safe"
+   },
+   {
+    "id": "26V375000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION:CONTROL MODULE (TCM/PCM/TECM)",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2018 F-150 vehicles previously repaired incorrectly under recall number 17V669. Quickly moving the shift lever from Park to Drive may cause a loss of gear indication on the instrument cluster display and a momentary selection of an unintended gear, such as Reverse or Neutral."
+   }
+  ],
+  "2019": [
+   {
+    "id": "20V097000",
+    "part": "EXTERIOR LIGHTING:HEADLIGHTS",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2018-2020 F-150 trucks equipped with high series LED headlamps with Autolamp (On/Off) functionality.  The Daytime Running Lamps (DRL) may remain activated instead of dimming to parking lamps when the Master Lighting Switch (MLS) is manually rotated from the \"Autolamps\" switch position to \"Headlamps On.\" As such, these vehicles fail to comply with the "
+   },
+   {
+    "id": "19V805000",
+    "part": "ELECTRICAL SYSTEM:12V/24V/48V BATTERY:CABLES",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2019-2020 F-150 vehicles. The fastener securing the Power Distribution Box (PDB) 12V cable and Battery Monitoring System (BMS) eyelets to the positive battery terminal may loosen and affect the vehicle's systems such as instrument panel displays and braking or steering assist.  The engine could also stall."
+   },
+   {
+    "id": "18V894000",
+    "part": "ENGINE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2015-2019 Ford F-150 and 2017-2019 Ford F-250 Super Duty, F-350 Super Duty, F-450 Super Duty, and F-550 Super Duty pick-up trucks equipped with an engine block heater.   Water and contaminants may get into the block heater cable's splice connector causing corrosion and damage."
+   },
+   {
+    "id": "19V633000",
+    "part": "SEATS:FRONT ASSEMBLY:RECLINER",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2018-2020 F-150 and 2019-2020 F-250, F-350, F-450, and F-550 Super Duty pickup trucks, and 2018-2019 Ford Explorer, 2019-2020 Expedition, and 2020 Escape vehicles equipped with driver and/or passenger's manual front seat back recliner mechanisms.  Also included are certain 2020 Ford Explorer and Lincoln Aviator vehicles equipped with rear outboard sea"
+   },
+   {
+    "id": "19V278000",
+    "part": "ENGINE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2015-2019 Ford F-150 and 2017-2019 Ford F-250 Super Duty, F-350 Super Duty, F-450 Super Duty, and F-550 Super Duty pick-up trucks equipped with an engine block heater and previously remedied under recall 18V894.   During the previous repair, the block heater cable's splice connector may have been damaged."
+   },
+   {
+    "id": "22V252000",
+    "part": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2019 F-150, Super Duty F-250, F-350, F-450, and F-550 vehicles.  Due to a poor electrical connection, the rearview camera may intermittently display a blank or distorted image.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 111, \"Rear Visibility.\""
+   },
+   {
+    "id": "24V852000",
+    "part": "EQUIPMENT:OTHER:LABELS",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2020-2025 Explorer, Lincoln Aviator, 2020-2024 Escape, Lincoln Corsair, 2018-2024 F-150, Expedition and Lincoln Navigator vehicles.  The air bag warning label may be missing from the dashboard.  As such, these vehicles fail to comply with the requirement Federal Motor Vehicle Safety Standard number 208, \"Occupant Crash Protection.\""
+   },
+   {
+    "id": "25V442000",
+    "part": "BACK OVER PREVENTION:SOFTWARE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2018-2022 Transit Connect, 2019-2020 MKZ, MKX,  Edge, Continental, F-150, Nautilus, Fusion, 2019-2023 Ranger, Mustang, 2020-2021 EcoSport, Expedition, Navigator, 2020-2022 Escape, F-250 SD, Corsair, 2020-2023 Aviator, Transit, 2020-2024 Explorer, 2021-2024 Bronco Sport, and 2022-2024 Maverick vehicles. A software error may cause the rearview camera to"
+   },
+   {
+    "id": "26V373000",
+    "part": "EXTERIOR LIGHTING:HEADLIGHTS",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2018-2020 F-150 vehicles previously repaired incorrectly under recall number 20V097. When the headlight switch is turned from \"Autolamps\" to \"Headlamps On,\" the Daytime Running Lamps (DRLs) may remain fully bright instead of dimming to parking lamps as intended. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safe"
+   }
+  ],
+  "2020": [
+   {
+    "id": "19V903000",
+    "part": "TIRES:BEAD",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2020 F-150 trucks equipped with 17-inch spare tires.  The spare tire could have been damaged when it was installed on the rim."
+   },
+   {
+    "id": "20V097000",
+    "part": "EXTERIOR LIGHTING:HEADLIGHTS",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2018-2020 F-150 trucks equipped with high series LED headlamps with Autolamp (On/Off) functionality.  The Daytime Running Lamps (DRL) may remain activated instead of dimming to parking lamps when the Master Lighting Switch (MLS) is manually rotated from the \"Autolamps\" switch position to \"Headlamps On.\" As such, these vehicles fail to comply with the "
+   },
+   {
+    "id": "19V805000",
+    "part": "ELECTRICAL SYSTEM:12V/24V/48V BATTERY:CABLES",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2019-2020 F-150 vehicles. The fastener securing the Power Distribution Box (PDB) 12V cable and Battery Monitoring System (BMS) eyelets to the positive battery terminal may loosen and affect the vehicle's systems such as instrument panel displays and braking or steering assist.  The engine could also stall."
+   },
+   {
+    "id": "20V575000",
+    "part": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2020 Ford F-150, F-250, F-350, F-450, F-550, Explorer, Mustang, Transit, Expedition, Escape, Ranger and Edge, and Lincoln Nautilus and Corsair vehicles.  Due to a poor electrical connection, the rearview camera may intermittently display a blank or distorted image.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle "
+   },
+   {
+    "id": "20V467000",
+    "part": "ELECTRICAL SYSTEM:STARTER ASSEMBLY",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2020 F-150 vehicles.  An incorrect attachment nut may have been used to attach the battery positive (B+) power supply cable to the starter motor, possibly affecting the electrical conductivity, resulting in excess heat and electrical arcing."
+   },
+   {
+    "id": "20V197000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION:GEAR POSITION INDICATION (PRNDL)",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2020 Ranger and F-150 vehicles equipped with 10-speed automatic transmissions and certain 2020 Expedition vehicles equipped with a \"police\" package.  The transmission shift cable lock clip may not be fully seated, allowing the transmission to actually be in a different gear than the gear shift position selected by the driver."
+   },
+   {
+    "id": "19V633000",
+    "part": "SEATS:FRONT ASSEMBLY:RECLINER",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2018-2020 F-150 and 2019-2020 F-250, F-350, F-450, and F-550 Super Duty pickup trucks, and 2018-2019 Ford Explorer, 2019-2020 Expedition, and 2020 Escape vehicles equipped with driver and/or passenger's manual front seat back recliner mechanisms.  Also included are certain 2020 Ford Explorer and Lincoln Aviator vehicles equipped with rear outboard sea"
+   },
+   {
+    "id": "22V250000",
+    "part": "VISIBILITY:WINDSHIELD WIPER/WASHER:LINKAGES",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2020-2021 F-150, Expedition, 2020-2022 Super Duty F-250, F-350, F-450, F-550, and 2020-2021 Lincoln Navigator vehicles.  The windshield wiper arms may break, causing the windshield wipers to fail."
+   },
+   {
+    "id": "24V852000",
+    "part": "EQUIPMENT:OTHER:LABELS",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2020-2025 Explorer, Lincoln Aviator, 2020-2024 Escape, Lincoln Corsair, 2018-2024 F-150, Expedition and Lincoln Navigator vehicles.  The air bag warning label may be missing from the dashboard.  As such, these vehicles fail to comply with the requirement Federal Motor Vehicle Safety Standard number 208, \"Occupant Crash Protection.\""
+   },
+   {
+    "id": "25V442000",
+    "part": "BACK OVER PREVENTION:SOFTWARE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2018-2022 Transit Connect, 2019-2020 MKZ, MKX,  Edge, Continental, F-150, Nautilus, Fusion, 2019-2023 Ranger, Mustang, 2020-2021 EcoSport, Expedition, Navigator, 2020-2022 Escape, F-250 SD, Corsair, 2020-2023 Aviator, Transit, 2020-2024 Explorer, 2021-2024 Bronco Sport, and 2022-2024 Maverick vehicles. A software error may cause the rearview camera to"
+   },
+   {
+    "id": "26V373000",
+    "part": "EXTERIOR LIGHTING:HEADLIGHTS",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2018-2020 F-150 vehicles previously repaired incorrectly under recall number 20V097. When the headlight switch is turned from \"Autolamps\" to \"Headlamps On,\" the Daytime Running Lamps (DRLs) may remain fully bright instead of dimming to parking lamps as intended. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safe"
+   }
+  ],
+  "2021": [
+   {
+    "id": "21V986000",
+    "part": "POWER TRAIN:DRIVELINE:DRIVESHAFT",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2022 F-150 vehicles.  Underbody heat and noise insulators may loosen and contact the aluminum driveshaft, which could damage the driveshaft and cause it to fracture."
+   },
+   {
+    "id": "21V090000",
+    "part": "VISIBILITY:WINDSHIELD:CRITICAL FASTENERS",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021 F-150 and 2020-2021 F-250, F-350, F-450, and F-550 Super Duty vehicles.  During manufacturing, the windshield may not have been properly bonded to the vehicle, allowing it to detach in a crash.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 212, \"Windshield Mounting.\""
+   },
+   {
+    "id": "21V805000",
+    "part": "AIR BAGS:SENSOR:SIDE IMPACT",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2022 Super Duty F-250, F-350, 2021 F-150, Expedition, and Lincoln Navigator vehicles.  The front-door side impact pressure sensor modules may have been damaged during supplier assembly, which can cause the side impact air bags to not deploy properly in a crash.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safe"
+   },
+   {
+    "id": "21V533000",
+    "part": "SERVICE BRAKES, HYDRAULIC",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021 F-150 vehicles.  The electronic brake booster may leak brake fluid into the electronic control unit, which could result in reduced braking performance."
+   },
+   {
+    "id": "21V653000",
+    "part": "SEAT BELTS:FRONT:WEBBING",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021 F-150 Super Cab vehicles.  The front seatbelt webbing may be incorrectly routed."
+   },
+   {
+    "id": "21V381000",
+    "part": "POWER TRAIN:DRIVELINE:DRIVESHAFT",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021 F-150 vehicles.  The two-piece driveshafts may have been improperly assembled, which could result in driveshaft separation."
+   },
+   {
+    "id": "21V407000",
+    "part": "STEERING:GEAR BOX (OTHER THAN RACK AND PINION)",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021 F-150 vehicles.  The steering gear may have internal damage, which could result in difficulty steering, or the inability to rotate the steering wheel while driving."
+   },
+   {
+    "id": "22V142000",
+    "part": "VISIBILITY:WINDSHIELD WIPER/WASHER:MOTOR",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021 F-150 vehicles.  The front windshield wiper motor may become inoperative, causing the wipers to fail."
+   },
+   {
+    "id": "22V193000",
+    "part": "ELECTRICAL SYSTEM: INTEGRATED TRAILER BRAKE CONTROL",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2022 F-150, 2022 Maverick, Expedition, Lincoln Navigator, F-250, F-350, F-450, and F-550 vehicles.  Due to a software error, a towed trailer equipped with an electric or electric-over hydraulic brake system may not brake."
+   },
+   {
+    "id": "22V188000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION:CONTROL MODULE (TCM/PCM/TECM)",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021 F-150 vehicles.  The Diagnostic Trouble Code (DTC) for low transmission fluid pressure may falsely activate and cause the transmission to unexpectedly shift into neutral."
+   },
+   {
+    "id": "22V250000",
+    "part": "VISIBILITY:WINDSHIELD WIPER/WASHER:LINKAGES",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2020-2021 F-150, Expedition, 2020-2022 Super Duty F-250, F-350, F-450, F-550, and 2020-2021 Lincoln Navigator vehicles.  The windshield wiper arms may break, causing the windshield wipers to fail."
+   },
+   {
+    "id": "22V414000",
+    "part": "FUEL SYSTEM, GASOLINE:STORAGE",
+    "summary": "Ford Motor Company (Ford) is recalling one 2021 F-150 vehicle.  A single vehicle may have been assembled without a fuel tank front attachment resulting in an unsecured fuel tank attachment strap."
+   },
+   {
+    "id": "22V623000",
+    "part": "POWER TRAIN:DRIVELINE:DRIVESHAFT",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2022 F-150 vehicles.  Underbody heat and noise insulators may loosen and contact the aluminum driveshaft, which could damage the driveshaft and cause it to fracture."
+   },
+   {
+    "id": "22V842000",
+    "part": "VISIBILITY:WINDSHIELD WIPER/WASHER:MOTOR",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2022 F-150 vehicles.  The front windshield wiper motor may become inoperative, causing the wipers to fail."
+   },
+   {
+    "id": "23V163000",
+    "part": "VISIBILITY:WINDSHIELD WIPER/WASHER:LINKAGES",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021 F-150 vehicles.  The windshield wiper arms may break, causing the windshield wipers to fail."
+   },
+   {
+    "id": "23V509000",
+    "part": "PARKING BRAKE:ELECTRICAL",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2023 F-150 vehicles equipped with a single exhaust system.  Contact with the rear axle housing may damage the wiring harness, causing the electric parking brake to activate unexpectedly."
+   },
+   {
+    "id": "23V896000",
+    "part": "POWER TRAIN:AXLE HUBS",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2023 F-150 vehicles equipped with the Trailer Tow Max Duty package and a 9.75-inch heavy duty axle with a 3/4 float axle design.  The rear axle hub bolt may fatigue and break, which can result in damage to the axle hub splines."
+   },
+   {
+    "id": "24V443000",
+    "part": "ELECTRICAL SYSTEM:BODY CONTROL MODULE:SOFTWARE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021 F-150 vehicles equipped with the Onboard Scales feature.  An over-the-air software update to the body control module (BCM) may have disabled both reverse lights."
+   },
+   {
+    "id": "24V635000",
+    "part": "ENGINE AND ENGINE COOLING:ENGINE:HARD PARTS INTERNAL/MECHANICAL",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2022 Bronco, F-150, Edge, Explorer, Lincoln Nautilus, and Lincoln Aviator vehicles equipped with either a 2.7L or 3.0L Nano EcoBoost engine.  The engine intake valves may break while driving, which can result in engine failure and a loss of drive power."
+   },
+   {
+    "id": "24V852000",
+    "part": "EQUIPMENT:OTHER:LABELS",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2020-2025 Explorer, Lincoln Aviator, 2020-2024 Escape, Lincoln Corsair, 2018-2024 F-150, Expedition and Lincoln Navigator vehicles.  The air bag warning label may be missing from the dashboard.  As such, these vehicles fail to comply with the requirement Federal Motor Vehicle Safety Standard number 208, \"Occupant Crash Protection.\""
+   },
+   {
+    "id": "25V132000",
+    "part": "ELECTRICAL SYSTEM: INTEGRATED TRAILER BRAKE CONTROL",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2022 F-150, 2022 Maverick, Expedition, Lincoln Navigator, F-250, F-350, F-450, and F-550 vehicles previously repaired incorrectly under recall number 22V-193.  Due to a software error, a towed trailer equipped with an electric or electric-over hydraulic brake system may not brake."
+   },
+   {
+    "id": "25V169000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION:CONTROL MODULE (TCM/PCM/TECM)",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021 F-150 vehicles previously repaired incorrectly under recall number 22V-188.  The Diagnostic Trouble Code (DTC) for low transmission fluid pressure may falsely activate and cause the transmission to unexpectedly shift into neutral."
+   },
+   {
+    "id": "25V315000",
+    "part": "BACK OVER PREVENTION:SOFTWARE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2024 Bronco, F-150, 2021-2024 Edge, 2022-2025 Escape, F-250, F-350, F-450, F-550, F-600, 2022-2024 Expedition, 2022-2025 Transit, 2021-2023 Mach-E, 2024 Ranger, Mustang, 2021-2023 Lincoln Nautilus, 2022-2024 Navigator, and 2023-2024 Corsair vehicles. A software error may cause the rearview camera image to delay, freeze, or not display when the ve"
+   },
+   {
+    "id": "25V348000",
+    "part": "EXTERIOR LIGHTING:BACK UP LIGHTS",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021 F-150 vehicles equipped with the Onboard Scales feature that were repaired incorrectly under recall 24V443. An over-the-air software update to the body control module (BCM) may have disabled both reverse lights."
+   },
+   {
+    "id": "25V455000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2023 Bronco, Explorer, Lincoln Aviator, F-250 SD, F-350 SD, F-450 SD,  F-550 SD, 2021-2022 Lincoln Navigator, Mustang, F-150, and 2022 Expedition vehicles. The low-pressure fuel pump may fail, which can result in an engine stall while driving."
+   },
+   {
+    "id": "25V729000",
+    "part": "VISIBILITY:SUN/MOON ROOF ASSEMBLY",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2022 Expedition, Lincoln Navigator, 2021-2023 F-150, 2022 F-250 SD, F-350 SD, and F-450 SD vehicles. The moonroof wind deflector clips may be inadequately attached to the moonroof frame, which can result in the wind deflector detaching from the vehicle."
+   },
+   {
+    "id": "26V104000",
+    "part": "ELECTRICAL SYSTEM: INTEGRATED TRAILER BRAKE CONTROL",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2026 F-150, 2022-2026 F-250 SD, F-350 SD, F-450 SD, F-550 SD, Maverick, 2024-2026 Ranger, 2023-2026 F-600 SD, 2022-2027 Lincoln Navigator, Expedition, and 2026 E-Transit vehicles. When towing a trailer, the integrated trailer module (ITRM) may lose communication with the vehicle, possibly causing a loss of brake and turn signal lights, or a loss "
+   },
+   {
+    "id": "26V402000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2018-2021 Navigator, Expedition, 2020-2021 Explorer, Lincoln Aviator, and 2021 F-150 vehicles. The transmission park pawl may engage while the vehicle is in motion, resulting in park system damage."
+   },
+   {
+    "id": "26V489000",
+    "part": "BACK OVER PREVENTION:DISPLAY FUNCTION",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2023 F-150 and 2023-2026 F-250 SD vehicles equipped with 8-inch SYNC infotainment screens. A software error may cause the rearview camera image to be obstructed by the infotainment home screen menu when the vehicle is placed in reverse. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) n"
+   }
+  ],
+  "2022": [
+   {
+    "id": "21V986000",
+    "part": "POWER TRAIN:DRIVELINE:DRIVESHAFT",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2022 F-150 vehicles.  Underbody heat and noise insulators may loosen and contact the aluminum driveshaft, which could damage the driveshaft and cause it to fracture."
+   },
+   {
+    "id": "22V193000",
+    "part": "ELECTRICAL SYSTEM: INTEGRATED TRAILER BRAKE CONTROL",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2022 F-150, 2022 Maverick, Expedition, Lincoln Navigator, F-250, F-350, F-450, and F-550 vehicles.  Due to a software error, a towed trailer equipped with an electric or electric-over hydraulic brake system may not brake."
+   },
+   {
+    "id": "22V253000",
+    "part": "STEERING:COLUMN",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2022 F-150 vehicles.  The power-adjustable telescoping steering column connector wiring may be too short.  Wiring that is too short can become damaged or separate if the adjustable steering column is extended all the way."
+   },
+   {
+    "id": "22V623000",
+    "part": "POWER TRAIN:DRIVELINE:DRIVESHAFT",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2022 F-150 vehicles.  Underbody heat and noise insulators may loosen and contact the aluminum driveshaft, which could damage the driveshaft and cause it to fracture."
+   },
+   {
+    "id": "22V675000",
+    "part": "WHEELS:LUGS/NUTS/BOLTS/STUDS",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2022 F-150 Raptor Series vehicles equipped with 37-inch tires.  The lug nuts on the wheels may have been incorrectly tightened."
+   },
+   {
+    "id": "22V686000",
+    "part": "EXTERIOR LIGHTING:LIGHTING CONTROL MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2022-2023 Bronco Sport and 2022 F-150 vehicles.  The parking lights may flicker when the headlights are activated.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 108, \"Lamps, Reflective Devices, and Associated Equipment.\""
+   },
+   {
+    "id": "22V684000",
+    "part": "AIR BAGS",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2022 F-150 vehicles.  The right-side instrument panel cover may have been manufactured incorrectly, which can cause the air bag to not deploy as intended.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 208, \"Occupant Crash Protection.\""
+   },
+   {
+    "id": "22V842000",
+    "part": "VISIBILITY:WINDSHIELD WIPER/WASHER:MOTOR",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2022 F-150 vehicles.  The front windshield wiper motor may become inoperative, causing the wipers to fail."
+   },
+   {
+    "id": "23V070000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2022-2023 F-150, Mustang, Explorer, Bronco, and 2023 Lincoln Aviator vehicles equipped with automatic transmissions.  The transmission may contain a loose bolt which could prevent the transmission from engaging the park gear, although the gear shifter position may indicate that the vehicle has been shifted to \"PARK.\""
+   },
+   {
+    "id": "23V509000",
+    "part": "PARKING BRAKE:ELECTRICAL",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2023 F-150 vehicles equipped with a single exhaust system.  Contact with the rear axle housing may damage the wiring harness, causing the electric parking brake to activate unexpectedly."
+   },
+   {
+    "id": "23V802000",
+    "part": "EXTERIOR LIGHTING:LIGHTING CONTROL MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2022 F-150 vehicles.  The parking lights may flicker when the headlights are activated.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 108, \"Lamps, Reflective Devices, and Associated Equipment.\""
+   },
+   {
+    "id": "23V896000",
+    "part": "POWER TRAIN:AXLE HUBS",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2023 F-150 vehicles equipped with the Trailer Tow Max Duty package and a 9.75-inch heavy duty axle with a 3/4 float axle design.  The rear axle hub bolt may fatigue and break, which can result in damage to the axle hub splines."
+   },
+   {
+    "id": "24V635000",
+    "part": "ENGINE AND ENGINE COOLING:ENGINE:HARD PARTS INTERNAL/MECHANICAL",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2022 Bronco, F-150, Edge, Explorer, Lincoln Nautilus, and Lincoln Aviator vehicles equipped with either a 2.7L or 3.0L Nano EcoBoost engine.  The engine intake valves may break while driving, which can result in engine failure and a loss of drive power."
+   },
+   {
+    "id": "24V682000",
+    "part": "EXTERIOR LIGHTING:LIGHTING CONTROL MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2022 F-150 vehicles.  The parking lights may flicker when the headlights are activated.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 108, \"Lamps, Reflective Devices, and Associated Equipment.\""
+   },
+   {
+    "id": "24V852000",
+    "part": "EQUIPMENT:OTHER:LABELS",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2020-2025 Explorer, Lincoln Aviator, 2020-2024 Escape, Lincoln Corsair, 2018-2024 F-150, Expedition and Lincoln Navigator vehicles.  The air bag warning label may be missing from the dashboard.  As such, these vehicles fail to comply with the requirement Federal Motor Vehicle Safety Standard number 208, \"Occupant Crash Protection.\""
+   },
+   {
+    "id": "25V132000",
+    "part": "ELECTRICAL SYSTEM: INTEGRATED TRAILER BRAKE CONTROL",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2022 F-150, 2022 Maverick, Expedition, Lincoln Navigator, F-250, F-350, F-450, and F-550 vehicles previously repaired incorrectly under recall number 22V-193.  Due to a software error, a towed trailer equipped with an electric or electric-over hydraulic brake system may not brake."
+   },
+   {
+    "id": "25V315000",
+    "part": "BACK OVER PREVENTION:SOFTWARE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2024 Bronco, F-150, 2021-2024 Edge, 2022-2025 Escape, F-250, F-350, F-450, F-550, F-600, 2022-2024 Expedition, 2022-2025 Transit, 2021-2023 Mach-E, 2024 Ranger, Mustang, 2021-2023 Lincoln Nautilus, 2022-2024 Navigator, and 2023-2024 Corsair vehicles. A software error may cause the rearview camera image to delay, freeze, or not display when the ve"
+   },
+   {
+    "id": "25V455000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2023 Bronco, Explorer, Lincoln Aviator, F-250 SD, F-350 SD, F-450 SD,  F-550 SD, 2021-2022 Lincoln Navigator, Mustang, F-150, and 2022 Expedition vehicles. The low-pressure fuel pump may fail, which can result in an engine stall while driving."
+   },
+   {
+    "id": "25V515000",
+    "part": "EXTERIOR LIGHTING:LIGHTING CONTROL MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2022 F-150 vehicles that were repaired incorrectly under recalls 22V686 and 23V802. The parking lights may flicker when the headlights are activated. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 108, \"Lamps, Reflective Devices, and Associated Equipment.\""
+   },
+   {
+    "id": "25V517000",
+    "part": "EXTERIOR LIGHTING:LIGHTING CONTROL MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2022 F-150 vehicles that were repaired incorrectly under recall 22V686. The parking lights may flicker when the headlights are activated.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 108, \"Lamps, Reflective Devices, and Associated Equipment.\""
+   },
+   {
+    "id": "25V729000",
+    "part": "VISIBILITY:SUN/MOON ROOF ASSEMBLY",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2022 Expedition, Lincoln Navigator, 2021-2023 F-150, 2022 F-250 SD, F-350 SD, and F-450 SD vehicles. The moonroof wind deflector clips may be inadequately attached to the moonroof frame, which can result in the wind deflector detaching from the vehicle."
+   },
+   {
+    "id": "26V104000",
+    "part": "ELECTRICAL SYSTEM: INTEGRATED TRAILER BRAKE CONTROL",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2026 F-150, 2022-2026 F-250 SD, F-350 SD, F-450 SD, F-550 SD, Maverick, 2024-2026 Ranger, 2023-2026 F-600 SD, 2022-2027 Lincoln Navigator, Expedition, and 2026 E-Transit vehicles. When towing a trailer, the integrated trailer module (ITRM) may lose communication with the vehicle, possibly causing a loss of brake and turn signal lights, or a loss "
+   },
+   {
+    "id": "26V489000",
+    "part": "BACK OVER PREVENTION:DISPLAY FUNCTION",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2023 F-150 and 2023-2026 F-250 SD vehicles equipped with 8-inch SYNC infotainment screens. A software error may cause the rearview camera image to be obstructed by the infotainment home screen menu when the vehicle is placed in reverse. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) n"
+   }
+  ],
+  "2023": [
+   {
+    "id": "23V070000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2022-2023 F-150, Mustang, Explorer, Bronco, and 2023 Lincoln Aviator vehicles equipped with automatic transmissions.  The transmission may contain a loose bolt which could prevent the transmission from engaging the park gear, although the gear shifter position may indicate that the vehicle has been shifted to \"PARK.\""
+   },
+   {
+    "id": "23V072000",
+    "part": "AIR BAGS:FRONTAL",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2023 F-150 vehicles.  The instrument panel top cover on the passenger-side may prevent the air bag from deploying as intended.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 208, \"Occupant Crash Protection.\""
+   },
+   {
+    "id": "23V128000",
+    "part": "POWER TRAIN:AXLE ASSEMBLY",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2023 F-150, Expedition, and Lincoln Navigator vehicles.  The front axle pinion may not have been heat-treated, which can cause it to fracture."
+   },
+   {
+    "id": "23V509000",
+    "part": "PARKING BRAKE:ELECTRICAL",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2023 F-150 vehicles equipped with a single exhaust system.  Contact with the rear axle housing may damage the wiring harness, causing the electric parking brake to activate unexpectedly."
+   },
+   {
+    "id": "23V847000",
+    "part": "STEERING:COLUMN",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2023 F-150 and Ford SD F250, F350, F450, F550, and F600 vehicles.  The steering wheel clock spring may have an insufficient weld, causing a loss of electrical connection to the driver's frontal air bag."
+   },
+   {
+    "id": "23V896000",
+    "part": "POWER TRAIN:AXLE HUBS",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2023 F-150 vehicles equipped with the Trailer Tow Max Duty package and a 9.75-inch heavy duty axle with a 3/4 float axle design.  The rear axle hub bolt may fatigue and break, which can result in damage to the axle hub splines."
+   },
+   {
+    "id": "24V852000",
+    "part": "EQUIPMENT:OTHER:LABELS",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2020-2025 Explorer, Lincoln Aviator, 2020-2024 Escape, Lincoln Corsair, 2018-2024 F-150, Expedition and Lincoln Navigator vehicles.  The air bag warning label may be missing from the dashboard.  As such, these vehicles fail to comply with the requirement Federal Motor Vehicle Safety Standard number 208, \"Occupant Crash Protection.\""
+   },
+   {
+    "id": "25V315000",
+    "part": "BACK OVER PREVENTION:SOFTWARE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2024 Bronco, F-150, 2021-2024 Edge, 2022-2025 Escape, F-250, F-350, F-450, F-550, F-600, 2022-2024 Expedition, 2022-2025 Transit, 2021-2023 Mach-E, 2024 Ranger, Mustang, 2021-2023 Lincoln Nautilus, 2022-2024 Navigator, and 2023-2024 Corsair vehicles. A software error may cause the rearview camera image to delay, freeze, or not display when the ve"
+   },
+   {
+    "id": "25V512000",
+    "part": "POWER TRAIN:AXLE HUBS",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2023-2025 F-150 vehicles equipped with the Trailer Tow Max Duty package and a 9.75-inch heavy duty axle with a 3/4 float axle design. The rear axle hub bolt may fatigue and break, which can result in damage to the axle hub splines."
+   },
+   {
+    "id": "25V729000",
+    "part": "VISIBILITY:SUN/MOON ROOF ASSEMBLY",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2022 Expedition, Lincoln Navigator, 2021-2023 F-150, 2022 F-250 SD, F-350 SD, and F-450 SD vehicles. The moonroof wind deflector clips may be inadequately attached to the moonroof frame, which can result in the wind deflector detaching from the vehicle."
+   },
+   {
+    "id": "26V104000",
+    "part": "ELECTRICAL SYSTEM: INTEGRATED TRAILER BRAKE CONTROL",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2026 F-150, 2022-2026 F-250 SD, F-350 SD, F-450 SD, F-550 SD, Maverick, 2024-2026 Ranger, 2023-2026 F-600 SD, 2022-2027 Lincoln Navigator, Expedition, and 2026 E-Transit vehicles. When towing a trailer, the integrated trailer module (ITRM) may lose communication with the vehicle, possibly causing a loss of brake and turn signal lights, or a loss "
+   },
+   {
+    "id": "26V489000",
+    "part": "BACK OVER PREVENTION:DISPLAY FUNCTION",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2023 F-150 and 2023-2026 F-250 SD vehicles equipped with 8-inch SYNC infotainment screens. A software error may cause the rearview camera image to be obstructed by the infotainment home screen menu when the vehicle is placed in reverse. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) n"
+   },
+   {
+    "id": "26V578000",
+    "part": "FUEL SYSTEM, GASOLINE:STORAGE:TANK ASSEMBLY:MOUNTING",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2023-2027 F-150 vehicles. The fuel tank may be improperly secured and leak fuel, or detach from the vehicle while driving."
+   }
+  ],
+  "2024": [
+   {
+    "id": "24V329000",
+    "part": "STEERING:COLUMN",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2024 F-150 vehicles.  The steering column lower shaft may have been secured to the steering gear assembly with an incorrect fastener, which can result in the separation of steering components and cause a loss of steering control."
+   },
+   {
+    "id": "24V486000",
+    "part": "VISIBILITY:WINDSHIELD",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2024 F-150 vehicles.  The windshield may not have been properly bonded to the vehicle, allowing it to detach during a crash.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 212, \"Windshield Mounting.\""
+   },
+   {
+    "id": "24V851000",
+    "part": "ENGINE AND ENGINE COOLING:ENGINE:OIL/LUBRICATION",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2024-2025 F-150, 2024 Expedition and 2024 Lincoln Navigator vehicles equipped with a 3.5L GTDI engine.  The engines may have a misaligned engine cup plug, which can result in a rapid oil leak."
+   },
+   {
+    "id": "24V852000",
+    "part": "EQUIPMENT:OTHER:LABELS",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2020-2025 Explorer, Lincoln Aviator, 2020-2024 Escape, Lincoln Corsair, 2018-2024 F-150, Expedition and Lincoln Navigator vehicles.  The air bag warning label may be missing from the dashboard.  As such, these vehicles fail to comply with the requirement Federal Motor Vehicle Safety Standard number 208, \"Occupant Crash Protection.\""
+   },
+   {
+    "id": "25V022000",
+    "part": "STEERING",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2024 F-150 vehicles.  The steering gear assembly may have been assembled with an incorrect rack, which can cause the gears to fracture."
+   },
+   {
+    "id": "25V164000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION:FLUID/LUBRICANT:VALVES/VALVE BODY",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2024-2025 F-150, Bronco, 2024 Ranger, 2025 Mustang, Explorer, and Aviator vehicles.  The transmission valve body may have been machined incorrectly, which can cause reverse gear failure, or unexpected forward movement in reverse or neutral gear."
+   },
+   {
+    "id": "25V198000",
+    "part": "ENGINE AND ENGINE COOLING:ENGINE:OIL/LUBRICATION",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2024-2025 F-150, Expedition, and 2024 Lincoln Navigator vehicles equipped with 3.5L GTDI engines.  The engine may have a misaligned engine cup plug, which can result in a rapid oil leak."
+   },
+   {
+    "id": "25V315000",
+    "part": "BACK OVER PREVENTION:SOFTWARE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2024 Bronco, F-150, 2021-2024 Edge, 2022-2025 Escape, F-250, F-350, F-450, F-550, F-600, 2022-2024 Expedition, 2022-2025 Transit, 2021-2023 Mach-E, 2024 Ranger, Mustang, 2021-2023 Lincoln Nautilus, 2022-2024 Navigator, and 2023-2024 Corsair vehicles. A software error may cause the rearview camera image to delay, freeze, or not display when the ve"
+   },
+   {
+    "id": "25V512000",
+    "part": "POWER TRAIN:AXLE HUBS",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2023-2025 F-150 vehicles equipped with the Trailer Tow Max Duty package and a 9.75-inch heavy duty axle with a 3/4 float axle design. The rear axle hub bolt may fatigue and break, which can result in damage to the axle hub splines."
+   },
+   {
+    "id": "26V104000",
+    "part": "ELECTRICAL SYSTEM: INTEGRATED TRAILER BRAKE CONTROL",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2026 F-150, 2022-2026 F-250 SD, F-350 SD, F-450 SD, F-550 SD, Maverick, 2024-2026 Ranger, 2023-2026 F-600 SD, 2022-2027 Lincoln Navigator, Expedition, and 2026 E-Transit vehicles. When towing a trailer, the integrated trailer module (ITRM) may lose communication with the vehicle, possibly causing a loss of brake and turn signal lights, or a loss "
+   },
+   {
+    "id": "26V578000",
+    "part": "FUEL SYSTEM, GASOLINE:STORAGE:TANK ASSEMBLY:MOUNTING",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2023-2027 F-150 vehicles. The fuel tank may be improperly secured and leak fuel, or detach from the vehicle while driving."
+   }
+  ],
+  "2025": [
+   {
+    "id": "24V851000",
+    "part": "ENGINE AND ENGINE COOLING:ENGINE:OIL/LUBRICATION",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2024-2025 F-150, 2024 Expedition and 2024 Lincoln Navigator vehicles equipped with a 3.5L GTDI engine.  The engines may have a misaligned engine cup plug, which can result in a rapid oil leak."
+   },
+   {
+    "id": "25V164000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION:FLUID/LUBRICANT:VALVES/VALVE BODY",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2024-2025 F-150, Bronco, 2024 Ranger, 2025 Mustang, Explorer, and Aviator vehicles.  The transmission valve body may have been machined incorrectly, which can cause reverse gear failure, or unexpected forward movement in reverse or neutral gear."
+   },
+   {
+    "id": "25V198000",
+    "part": "ENGINE AND ENGINE COOLING:ENGINE:OIL/LUBRICATION",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2024-2025 F-150, Expedition, and 2024 Lincoln Navigator vehicles equipped with 3.5L GTDI engines.  The engine may have a misaligned engine cup plug, which can result in a rapid oil leak."
+   },
+   {
+    "id": "25V271000",
+    "part": "EQUIPMENT:OTHER:LABELS",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2025 F-150 vehicles.  The air bag warning label may be missing from the dashboard.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 208, \"Occupant Crash Protection.\""
+   },
+   {
+    "id": "25V309000",
+    "part": "STEERING",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2025 F-150 vehicles.  The lower intermediate shaft fasteners may be improperly attached to the steering gear, allowing the shaft to come loose or detach."
+   },
+   {
+    "id": "25V344000",
+    "part": "ENGINE AND ENGINE COOLING:ENGINE:HARD PARTS INTERNAL/MECHANICAL",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2025 Transit, F-150, and Explorer vehicles. The connecting rod and rod bearing components may have manufacturing defects that can lead to engine damage and engine failure."
+   },
+   {
+    "id": "25V398000",
+    "part": "ELECTRICAL SYSTEM:WIRING",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2025 F-150 trucks. Contact with the engine coolant hose may chafe the engine wire harness or cause a pull out of the Powertrain Control Module (PCM) connector pins, causing the engine to stall."
+   },
+   {
+    "id": "25V488000",
+    "part": "SERVICE BRAKES, HYDRAULIC:POWER ASSIST:ELECTRIC:CONTROL MODULE:SOFTWARE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2025 Lincoln Navigator, F-150, Expedition, Bronco, and Ranger vehicles. The Electronic Brake Booster (EBB) module may malfunction while driving or when the driver is utilizing an Advanced Driver Assistance System (ADAS) feature, resulting in a loss of power brake assist."
+   },
+   {
+    "id": "25V512000",
+    "part": "POWER TRAIN:AXLE HUBS",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2023-2025 F-150 vehicles equipped with the Trailer Tow Max Duty package and a 9.75-inch heavy duty axle with a 3/4 float axle design. The rear axle hub bolt may fatigue and break, which can result in damage to the axle hub splines."
+   },
+   {
+    "id": "25V540000",
+    "part": "ELECTRICAL SYSTEM: INSTRUMENT CLUSTER/PANEL",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2025-2026 F-550 SD, F-450 SD, F-350 SD, F-250 SD, and 2025 F-150 vehicles. The Instrument Panel Cluster (IPC) may fail at startup."
+   },
+   {
+    "id": "25V823000",
+    "part": "SERVICE BRAKES, HYDRAULIC:POWER ASSIST:ELECTRIC:CONTROL MODULE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2025 Lincoln Navigator, F-150, Expedition, Bronco, and Ranger vehicles. The Electronic Brake Booster (EBB) module may malfunction while driving or when the driver is utilizing an Advanced Driver Assistance System (ADAS) feature, resulting in a loss of power brake assist."
+   },
+   {
+    "id": "26V104000",
+    "part": "ELECTRICAL SYSTEM: INTEGRATED TRAILER BRAKE CONTROL",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2021-2026 F-150, 2022-2026 F-250 SD, F-350 SD, F-450 SD, F-550 SD, Maverick, 2024-2026 Ranger, 2023-2026 F-600 SD, 2022-2027 Lincoln Navigator, Expedition, and 2026 E-Transit vehicles. When towing a trailer, the integrated trailer module (ITRM) may lose communication with the vehicle, possibly causing a loss of brake and turn signal lights, or a loss "
+   },
+   {
+    "id": "26V578000",
+    "part": "FUEL SYSTEM, GASOLINE:STORAGE:TANK ASSEMBLY:MOUNTING",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2023-2027 F-150 vehicles. The fuel tank may be improperly secured and leak fuel, or detach from the vehicle while driving."
+   },
+   {
+    "id": "26V655000",
+    "part": "SEATS",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2025-2027 F-150 vehicles. The front seats may have been improperly secured to the vehicle."
+   }
+  ]
+ },
+ "yt": {
+  "car-f150-raptor": null,
+  "ford-ecoboost-35-ho": {
+   "videos": 200,
+   "praise": [
+    [
+     "Looks",
+     20
+    ],
+    [
+     "Everyday comfort",
+     18
+    ],
+    [
+     "Interior and seats",
+     13
+    ],
+    [
+     "Power and acceleration",
+     12
+    ]
+   ],
+   "trouble": [
+    [
+     "Lifters / AFM / cam phasers / Hemi tick",
+     8
+    ],
+    [
+     "Cam phaser rattle",
+     8
+    ],
+    [
+     "Electrical / wiring / TIPM",
+     7
+    ],
+    [
+     "Turbos and boost",
+     6
+    ]
+   ],
+   "top": [
+    {
+     "id": "Dr1-JE4Uj8o",
+     "title": "This PERFORMANCE Raptor Engine FAILED on the FIRST START!",
+     "views": 2836361,
+     "ch": "Dave's Auto Center"
+    },
+    {
+     "id": "v-GqBcN5mdo",
+     "title": "2018 Ford F-150 Raptor - Review and Off-Road Test",
+     "views": 2385241,
+     "ch": "Kelley Blue Book"
+    },
+    {
+     "id": "KBcNfIwnJK4",
+     "title": "Here's Why a Used Ford F-150 Raptor Is a Great Financial Decision",
+     "views": 2155383,
+     "ch": "Doug DeMuro"
+    }
+   ]
+  }
+ },
+ "scores": {
+  "ford-ecoboost-35-ho": {
+   "years": {
+    "2017": {
+     "score": 55,
+     "weight": 7.6,
+     "videos": 33,
+     "named": 7,
+     "top": [
+      {
+       "id": "ocF6IsOk-pg",
+       "title": "2017 Ford Raptor Off Road Review - Offroad Monster",
+       "views": 1082856
+      },
+      {
+       "id": "XKbGidpIZUU",
+       "title": "What You Should Know Before Buying A Gen 3 Ford Raptor | 1 Year Owner Review",
+       "views": 374644
+      },
+      {
+       "id": "Ke-32SZPstw",
+       "title": "510HP Ford Raptor Review - The Overachieving Ecoboost Monster!",
+       "views": 155530
+      }
+     ]
+    },
+    "2018": {
+     "score": 48,
+     "weight": 7.1,
+     "videos": 32,
+     "named": 6,
+     "top": [
+      {
+       "id": "v-GqBcN5mdo",
+       "title": "2018 Ford F-150 Raptor - Review and Off-Road Test",
+       "views": 2385241
+      },
+      {
+       "id": "eZGlHpkX3bs",
+       "title": "2018 Ford Raptor Owner Review | 6 Months After Purchase.. (Pros and Cons)",
+       "views": 509535
+      },
+      {
+       "id": "XKbGidpIZUU",
+       "title": "What You Should Know Before Buying A Gen 3 Ford Raptor | 1 Year Owner Review",
+       "views": 374644
+      }
+     ]
+    },
+    "2019": {
+     "score": 52,
+     "weight": 9.6,
+     "videos": 35,
+     "named": 9,
+     "top": [
+      {
+       "id": "Lsevnesb2zA",
+       "title": "2019 Ford F-150 Raptor – Be The King Of All Roads",
+       "views": 509921
+      },
+      {
+       "id": "XKbGidpIZUU",
+       "title": "What You Should Know Before Buying A Gen 3 Ford Raptor | 1 Year Owner Review",
+       "views": 374644
+      },
+      {
+       "id": "wH0oFKvUgqk",
+       "title": "2019 Raptor Gains Over 100HP | Ecoboost Dyno Results | MPT",
+       "views": 162501
+      }
+     ]
+    },
+    "2020": {
+     "score": 49,
+     "weight": 5.1,
+     "videos": 30,
+     "named": 4,
+     "top": [
+      {
+       "id": "UrT4B_4v9ac",
+       "title": "Is the 2020 Ford Raptor STILL the Baddest Half-Ton Truck?!",
+       "views": 839654
+      },
+      {
+       "id": "XKbGidpIZUU",
+       "title": "What You Should Know Before Buying A Gen 3 Ford Raptor | 1 Year Owner Review",
+       "views": 374644
+      },
+      {
+       "id": "Ke-32SZPstw",
+       "title": "510HP Ford Raptor Review - The Overachieving Ecoboost Monster!",
+       "views": 155530
+      }
+     ]
+    },
+    "2021": {
+     "score": 48,
+     "weight": 10.1,
+     "videos": 34,
+     "named": 8,
+     "top": [
+      {
+       "id": "DZ0TLmaa_6I",
+       "title": "The New 2021 Ford F-150 Raptor Is Great — But It’s No TRX",
+       "views": 1068025
+      },
+      {
+       "id": "XKbGidpIZUU",
+       "title": "What You Should Know Before Buying A Gen 3 Ford Raptor | 1 Year Owner Review",
+       "views": 374644
+      },
+      {
+       "id": "-HvRJt0GgOs",
+       "title": "2021 Ford F-150 Raptor 37-Inch Review and Off-Road Test",
+       "views": 342794
+      }
+     ]
+    },
+    "2022": {
+     "score": 55,
+     "weight": 8.6,
+     "videos": 32,
+     "named": 6,
+     "top": [
+      {
+       "id": "uHk125hnm04",
+       "title": "2022 Ford Raptor | Gen 3 Is Smooth Like Butter",
+       "views": 1475496
+      },
+      {
+       "id": "lMuFUbcQtF8",
+       "title": "2022 Ford F-150 Raptor Review // The Nissan GTR Of Trucks",
+       "views": 796331
+      },
+      {
+       "id": "B9UM98F2xhI",
+       "title": "NEW RAPTOR! 2022 Ford F-150 Raptor Review",
+       "views": 733984
+      }
+     ]
+    },
+    "2023": {
+     "score": 54,
+     "weight": 5.6,
+     "videos": 29,
+     "named": 3,
+     "top": [
+      {
+       "id": "eV14-JWJzFo",
+       "title": "2023 Ford Ranger Raptor Price Review | Cost of Ownership | Exhaust | Off-road | Features | 4x4 |",
+       "views": 402393
+      },
+      {
+       "id": "XKbGidpIZUU",
+       "title": "What You Should Know Before Buying A Gen 3 Ford Raptor | 1 Year Owner Review",
+       "views": 374644
+      },
+      {
+       "id": "dYTZ4TJq1t0",
+       "title": "2023 Ford Ranger Raptor Price Review | Cost Of Ownership | Features | Practicality | Next Gen |",
+       "views": 327742
+      }
+     ]
+    },
+    "2024": {
+     "score": 61,
+     "weight": 20.6,
+     "videos": 45,
+     "named": 19,
+     "top": [
+      {
+       "id": "U-zoe7eMHZM",
+       "title": "2024 Ford Ranger Raptor Quick Review",
+       "views": 604147
+      },
+      {
+       "id": "p5Dmq-V0bbg",
+       "title": "Is The Baby Raptor is Better Than F150? // 2024 Ford Ranger Review",
+       "views": 375490
+      },
+      {
+       "id": "XKbGidpIZUU",
+       "title": "What You Should Know Before Buying A Gen 3 Ford Raptor | 1 Year Owner Review",
+       "views": 374644
+      }
+     ]
+    },
+    "2025": {
+     "score": 61,
+     "weight": 23.1,
+     "videos": 47,
+     "named": 21,
+     "top": [
+      {
+       "id": "KaYcmCkSNu8",
+       "title": "The New 2025 Ram RHO Drag Races ALL Ford Raptor Trucks!",
+       "views": 1626525
+      },
+      {
+       "id": "XKbGidpIZUU",
+       "title": "What You Should Know Before Buying A Gen 3 Ford Raptor | 1 Year Owner Review",
+       "views": 374644
+      },
+      {
+       "id": "a2xdz2z3ph4",
+       "title": "2025 Ford Ranger Raptor V6 Review | An Exercise in Excess",
+       "views": 301466
+      }
+     ]
+    },
+    "2026": {
+     "score": 56,
+     "weight": 16.6,
+     "videos": 40,
+     "named": 14,
+     "top": [
+      {
+       "id": "XKbGidpIZUU",
+       "title": "What You Should Know Before Buying A Gen 3 Ford Raptor | 1 Year Owner Review",
+       "views": 374644
+      },
+      {
+       "id": "MRYIoeVWmCw",
+       "title": "Should you buy a USED Ford Ranger Raptor in 2026?",
+       "views": 334452
+      },
+      {
+       "id": "qVkC2njarwM",
+       "title": "2026 Ford F-150 Raptor Review",
+       "views": 176714
+      }
+     ]
+    }
+   },
+   "videos": 114,
+   "pulled": 200
+  }
+ }
+}

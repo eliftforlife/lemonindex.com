@@ -1,0 +1,624 @@
+{
+ "built": "2026-11-11",
+ "nhtsa": {
+  "by_year": {
+   "2015": 16,
+   "2016": 2,
+   "2017": 4,
+   "2018": 1,
+   "2019": 1,
+   "2020": 1,
+   "2022": 1,
+   "2025": 1
+  },
+  "gens": {
+   "usc10": {
+    "n": 27,
+    "issues": {
+     "High-pressure fuel pump recall": {
+      "n": 4,
+      "ex": [
+       "11092731",
+       "11131009"
+      ]
+     },
+     "In-tank fuel pump recall": {
+      "n": 8,
+      "ex": [
+       "11092731",
+       "11131009"
+      ]
+     },
+     "Valley plate coolant leak": {
+      "n": 0,
+      "ex": []
+     }
+    }
+   }
+  },
+  "parts": [
+   [
+    "Fuel/propulsion system",
+    11
+   ],
+   [
+    "Unknown or other",
+    7
+   ],
+   [
+    "Seats",
+    3
+   ],
+   [
+    "Service brakes",
+    3
+   ],
+   [
+    "Visibility/wiper",
+    2
+   ],
+   [
+    "Fuel system, gasoline",
+    2
+   ]
+  ]
+ },
+ "recalls": {
+  "2015": [
+   {
+    "id": "18V107000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+    "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2016-2018 Lexus GS F, 2018 LC500, and 2015-2018 Lexus RC F vehicles, equipped with 5.0L V8 2UR-GSE engines with two high pressure fuel pumps.  Specific operating conditions may result in damage to the pulsation damper in one of the high pressure fuel pumps, possibly causing a fatigue crack in the fuel pump cover."
+   }
+  ],
+  "2016": [
+   {
+    "id": "18V107000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+    "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2016-2018 Lexus GS F, 2018 LC500, and 2015-2018 Lexus RC F vehicles, equipped with 5.0L V8 2UR-GSE engines with two high pressure fuel pumps.  Specific operating conditions may result in damage to the pulsation damper in one of the high pressure fuel pumps, possibly causing a fatigue crack in the fuel pump cover."
+   }
+  ],
+  "2017": [
+   {
+    "id": "18V107000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+    "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2016-2018 Lexus GS F, 2018 LC500, and 2015-2018 Lexus RC F vehicles, equipped with 5.0L V8 2UR-GSE engines with two high pressure fuel pumps.  Specific operating conditions may result in damage to the pulsation damper in one of the high pressure fuel pumps, possibly causing a fatigue crack in the fuel pump cover."
+   }
+  ],
+  "2018": [
+   {
+    "id": "18V107000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+    "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2016-2018 Lexus GS F, 2018 LC500, and 2015-2018 Lexus RC F vehicles, equipped with 5.0L V8 2UR-GSE engines with two high pressure fuel pumps.  Specific operating conditions may result in damage to the pulsation damper in one of the high pressure fuel pumps, possibly causing a fatigue crack in the fuel pump cover."
+   }
+  ],
+  "2019": [],
+  "2020": [
+   {
+    "id": "22V615000",
+    "part": "TIRES",
+    "summary": "Toyota Motor Engineering & Manufacturing (Lexus) is recalling certain 2020-2022 Lexus RC F vehicles.  The tire information label does not list the vehicle's weight capacity.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 110, \"Tire Selection and Rims.\""
+   }
+  ],
+  "2021": [
+   {
+    "id": "22V615000",
+    "part": "TIRES",
+    "summary": "Toyota Motor Engineering & Manufacturing (Lexus) is recalling certain 2020-2022 Lexus RC F vehicles.  The tire information label does not list the vehicle's weight capacity.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 110, \"Tire Selection and Rims.\""
+   }
+  ],
+  "2022": [
+   {
+    "id": "22V615000",
+    "part": "TIRES",
+    "summary": "Toyota Motor Engineering & Manufacturing (Lexus) is recalling certain 2020-2022 Lexus RC F vehicles.  The tire information label does not list the vehicle's weight capacity.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 110, \"Tire Selection and Rims.\""
+   }
+  ],
+  "2023": [],
+  "2024": [],
+  "2025": []
+ },
+ "yt": {
+  "car-lexus-rc-f": null,
+  "toyota-2ur-gse": {
+   "videos": 200,
+   "praise": [
+    [
+     "Looks",
+     37
+    ],
+    [
+     "Everyday comfort",
+     26
+    ],
+    [
+     "Power and acceleration",
+     25
+    ],
+    [
+     "Handling and steering",
+     23
+    ]
+   ],
+   "trouble": [
+    [
+     "Infotainment / touchpad",
+     8
+    ],
+    [
+     "Valley plate / coolant leak",
+     6
+    ],
+    [
+     "Coolant leaks / water pump / overheating",
+     5
+    ]
+   ],
+   "top": [
+    {
+     "id": "4t5a7cPtWac",
+     "title": "Lexus LFA vs Lexus LC500 - DRAG RACE, ROLLING RACE & BRAKE TEST",
+     "views": 6546856,
+     "ch": "carwow"
+    },
+    {
+     "id": "giIP0XdT7SA",
+     "title": "Here's Why the 2018 Lexus LC500 Costs $100,000",
+     "views": 6117689,
+     "ch": "Doug DeMuro"
+    },
+    {
+     "id": "5f_19BCNpx0",
+     "title": "2022 Lexus IS 500 Review // Old School Cool",
+     "views": 2756239,
+     "ch": "Throttle House"
+    }
+   ]
+  }
+ },
+ "scores": {
+  "toyota-2ur-gse": {
+   "years": {
+    "2008": {
+     "score": 60,
+     "weight": 6.6,
+     "videos": 34,
+     "named": 3,
+     "top": [
+      {
+       "id": "1qF6OPHDB14",
+       "title": "439.500 KM Old Lexus IS F STILL GOT IT! / Nürburgring Drive",
+       "views": 1038351
+      },
+      {
+       "id": "8qF_5uNAjPM",
+       "title": "SHOCKING the Owner with His Lexus IS F! // Nürburgring",
+       "views": 610686
+      },
+      {
+       "id": "rEoshQs3T3U",
+       "title": "LEXUS IS F | REVIEW on AUTOBAHN [NO SPEED LIMIT] by AutoTopNL",
+       "views": 599591
+      }
+     ]
+    },
+    "2009": {
+     "score": 54,
+     "weight": 4.1,
+     "videos": 31,
+     "named": 0,
+     "top": [
+      {
+       "id": "1qF6OPHDB14",
+       "title": "439.500 KM Old Lexus IS F STILL GOT IT! / Nürburgring Drive",
+       "views": 1038351
+      },
+      {
+       "id": "8qF_5uNAjPM",
+       "title": "SHOCKING the Owner with His Lexus IS F! // Nürburgring",
+       "views": 610686
+      },
+      {
+       "id": "rEoshQs3T3U",
+       "title": "LEXUS IS F | REVIEW on AUTOBAHN [NO SPEED LIMIT] by AutoTopNL",
+       "views": 599591
+      }
+     ]
+    },
+    "2010": {
+     "score": 52,
+     "weight": 5.1,
+     "videos": 32,
+     "named": 1,
+     "top": [
+      {
+       "id": "1qF6OPHDB14",
+       "title": "439.500 KM Old Lexus IS F STILL GOT IT! / Nürburgring Drive",
+       "views": 1038351
+      },
+      {
+       "id": "8qF_5uNAjPM",
+       "title": "SHOCKING the Owner with His Lexus IS F! // Nürburgring",
+       "views": 610686
+      },
+      {
+       "id": "rEoshQs3T3U",
+       "title": "LEXUS IS F | REVIEW on AUTOBAHN [NO SPEED LIMIT] by AutoTopNL",
+       "views": 599591
+      }
+     ]
+    },
+    "2011": {
+     "score": 57,
+     "weight": 5.1,
+     "videos": 32,
+     "named": 1,
+     "top": [
+      {
+       "id": "1qF6OPHDB14",
+       "title": "439.500 KM Old Lexus IS F STILL GOT IT! / Nürburgring Drive",
+       "views": 1038351
+      },
+      {
+       "id": "8qF_5uNAjPM",
+       "title": "SHOCKING the Owner with His Lexus IS F! // Nürburgring",
+       "views": 610686
+      },
+      {
+       "id": "rEoshQs3T3U",
+       "title": "LEXUS IS F | REVIEW on AUTOBAHN [NO SPEED LIMIT] by AutoTopNL",
+       "views": 599591
+      }
+     ]
+    },
+    "2012": {
+     "score": 54,
+     "weight": 4.1,
+     "videos": 31,
+     "named": 0,
+     "top": [
+      {
+       "id": "1qF6OPHDB14",
+       "title": "439.500 KM Old Lexus IS F STILL GOT IT! / Nürburgring Drive",
+       "views": 1038351
+      },
+      {
+       "id": "8qF_5uNAjPM",
+       "title": "SHOCKING the Owner with His Lexus IS F! // Nürburgring",
+       "views": 610686
+      },
+      {
+       "id": "rEoshQs3T3U",
+       "title": "LEXUS IS F | REVIEW on AUTOBAHN [NO SPEED LIMIT] by AutoTopNL",
+       "views": 599591
+      }
+     ]
+    },
+    "2013": {
+     "score": 53,
+     "weight": 5.1,
+     "videos": 32,
+     "named": 1,
+     "top": [
+      {
+       "id": "1qF6OPHDB14",
+       "title": "439.500 KM Old Lexus IS F STILL GOT IT! / Nürburgring Drive",
+       "views": 1038351
+      },
+      {
+       "id": "8qF_5uNAjPM",
+       "title": "SHOCKING the Owner with His Lexus IS F! // Nürburgring",
+       "views": 610686
+      },
+      {
+       "id": "rEoshQs3T3U",
+       "title": "LEXUS IS F | REVIEW on AUTOBAHN [NO SPEED LIMIT] by AutoTopNL",
+       "views": 599591
+      }
+     ]
+    },
+    "2014": {
+     "score": 54,
+     "weight": 4.1,
+     "videos": 31,
+     "named": 0,
+     "top": [
+      {
+       "id": "1qF6OPHDB14",
+       "title": "439.500 KM Old Lexus IS F STILL GOT IT! / Nürburgring Drive",
+       "views": 1038351
+      },
+      {
+       "id": "8qF_5uNAjPM",
+       "title": "SHOCKING the Owner with His Lexus IS F! // Nürburgring",
+       "views": 610686
+      },
+      {
+       "id": "rEoshQs3T3U",
+       "title": "LEXUS IS F | REVIEW on AUTOBAHN [NO SPEED LIMIT] by AutoTopNL",
+       "views": 599591
+      }
+     ]
+    },
+    "2015": {
+     "score": null,
+     "weight": 1.6,
+     "videos": 19,
+     "named": 0,
+     "top": [
+      {
+       "id": "99j4RkO7iC0",
+       "title": "INSANE looking Lexus RCF! Fully murdered out!",
+       "views": 2128357
+      },
+      {
+       "id": "RXJm4DcbuXg",
+       "title": "Chris Harris on Cars | Lexus RCF Road & Track Test",
+       "views": 579385
+      },
+      {
+       "id": "RbH-calvsVQ",
+       "title": "(USE20) LEXUS IS F フル加速 | V8エンジン 2UR-GSEの咆哮【エンジン始動 & 巡航回転数】",
+       "views": 567883
+      }
+     ]
+    },
+    "2016": {
+     "score": 65,
+     "weight": 11.8,
+     "videos": 42,
+     "named": 8,
+     "top": [
+      {
+       "id": "99j4RkO7iC0",
+       "title": "INSANE looking Lexus RCF! Fully murdered out!",
+       "views": 2128357
+      },
+      {
+       "id": "sIHQfqwLYys",
+       "title": "Lexus GS F vs BMW M5 | Chris Harris Drives | Top Gear",
+       "views": 1587647
+      },
+      {
+       "id": "bbuQ_xrUZfY",
+       "title": "The Lexus GS F is a Reliable V8 Burnout Machine",
+       "views": 758140
+      }
+     ]
+    },
+    "2017": {
+     "score": 61,
+     "weight": 9.8,
+     "videos": 40,
+     "named": 6,
+     "top": [
+      {
+       "id": "99j4RkO7iC0",
+       "title": "INSANE looking Lexus RCF! Fully murdered out!",
+       "views": 2128357
+      },
+      {
+       "id": "sIHQfqwLYys",
+       "title": "Lexus GS F vs BMW M5 | Chris Harris Drives | Top Gear",
+       "views": 1587647
+      },
+      {
+       "id": "bbuQ_xrUZfY",
+       "title": "The Lexus GS F is a Reliable V8 Burnout Machine",
+       "views": 758140
+      }
+     ]
+    },
+    "2018": {
+     "score": 61,
+     "weight": 20.0,
+     "videos": 80,
+     "named": 13,
+     "top": [
+      {
+       "id": "4t5a7cPtWac",
+       "title": "Lexus LFA vs Lexus LC500 - DRAG RACE, ROLLING RACE & BRAKE TEST",
+       "views": 6546856
+      },
+      {
+       "id": "giIP0XdT7SA",
+       "title": "Here's Why the 2018 Lexus LC500 Costs $100,000",
+       "views": 6117689
+      },
+      {
+       "id": "99j4RkO7iC0",
+       "title": "INSANE looking Lexus RCF! Fully murdered out!",
+       "views": 2128357
+      }
+     ]
+    },
+    "2019": {
+     "score": 62,
+     "weight": 16.5,
+     "videos": 76,
+     "named": 9,
+     "top": [
+      {
+       "id": "4t5a7cPtWac",
+       "title": "Lexus LFA vs Lexus LC500 - DRAG RACE, ROLLING RACE & BRAKE TEST",
+       "views": 6546856
+      },
+      {
+       "id": "99j4RkO7iC0",
+       "title": "INSANE looking Lexus RCF! Fully murdered out!",
+       "views": 2128357
+      },
+      {
+       "id": "sIHQfqwLYys",
+       "title": "Lexus GS F vs BMW M5 | Chris Harris Drives | Top Gear",
+       "views": 1587647
+      }
+     ]
+    },
+    "2020": {
+     "score": 63,
+     "weight": 16.5,
+     "videos": 76,
+     "named": 9,
+     "top": [
+      {
+       "id": "4t5a7cPtWac",
+       "title": "Lexus LFA vs Lexus LC500 - DRAG RACE, ROLLING RACE & BRAKE TEST",
+       "views": 6546856
+      },
+      {
+       "id": "99j4RkO7iC0",
+       "title": "INSANE looking Lexus RCF! Fully murdered out!",
+       "views": 2128357
+      },
+      {
+       "id": "sIHQfqwLYys",
+       "title": "Lexus GS F vs BMW M5 | Chris Harris Drives | Top Gear",
+       "views": 1587647
+      }
+     ]
+    },
+    "2021": {
+     "score": 67,
+     "weight": 13.3,
+     "videos": 60,
+     "named": 8,
+     "top": [
+      {
+       "id": "4t5a7cPtWac",
+       "title": "Lexus LFA vs Lexus LC500 - DRAG RACE, ROLLING RACE & BRAKE TEST",
+       "views": 6546856
+      },
+      {
+       "id": "POwlxj9cBEo",
+       "title": "2021 Lexus LC500 Review // A Ridiculously Underrated $100,000 Masterclass",
+       "views": 2684810
+      },
+      {
+       "id": "99j4RkO7iC0",
+       "title": "INSANE looking Lexus RCF! Fully murdered out!",
+       "views": 2128357
+      }
+     ]
+    },
+    "2022": {
+     "score": 62,
+     "weight": 16.1,
+     "videos": 71,
+     "named": 9,
+     "top": [
+      {
+       "id": "4t5a7cPtWac",
+       "title": "Lexus LFA vs Lexus LC500 - DRAG RACE, ROLLING RACE & BRAKE TEST",
+       "views": 6546856
+      },
+      {
+       "id": "5f_19BCNpx0",
+       "title": "2022 Lexus IS 500 Review // Old School Cool",
+       "views": 2756239
+      },
+      {
+       "id": "99j4RkO7iC0",
+       "title": "INSANE looking Lexus RCF! Fully murdered out!",
+       "views": 2128357
+      }
+     ]
+    },
+    "2023": {
+     "score": 65,
+     "weight": 15.6,
+     "videos": 70,
+     "named": 8,
+     "top": [
+      {
+       "id": "4t5a7cPtWac",
+       "title": "Lexus LFA vs Lexus LC500 - DRAG RACE, ROLLING RACE & BRAKE TEST",
+       "views": 6546856
+      },
+      {
+       "id": "99j4RkO7iC0",
+       "title": "INSANE looking Lexus RCF! Fully murdered out!",
+       "views": 2128357
+      },
+      {
+       "id": "pC85hPGpqIw",
+       "title": "Five Reasons You'll Regret Not Buying The Lexus LC500",
+       "views": 787050
+      }
+     ]
+    },
+    "2024": {
+     "score": 63,
+     "weight": 20.6,
+     "videos": 75,
+     "named": 13,
+     "top": [
+      {
+       "id": "4t5a7cPtWac",
+       "title": "Lexus LFA vs Lexus LC500 - DRAG RACE, ROLLING RACE & BRAKE TEST",
+       "views": 6546856
+      },
+      {
+       "id": "99j4RkO7iC0",
+       "title": "INSANE looking Lexus RCF! Fully murdered out!",
+       "views": 2128357
+      },
+      {
+       "id": "2HPszF7iwYw",
+       "title": "2024 Lexus LC500 Quick Review",
+       "views": 1123857
+      }
+     ]
+    },
+    "2025": {
+     "score": 61,
+     "weight": 15.1,
+     "videos": 70,
+     "named": 8,
+     "top": [
+      {
+       "id": "4t5a7cPtWac",
+       "title": "Lexus LFA vs Lexus LC500 - DRAG RACE, ROLLING RACE & BRAKE TEST",
+       "views": 6546856
+      },
+      {
+       "id": "99j4RkO7iC0",
+       "title": "INSANE looking Lexus RCF! Fully murdered out!",
+       "views": 2128357
+      },
+      {
+       "id": "a7ryZcitWOc",
+       "title": "2025 Lexus IS 500 vs BMW M340i // Which is the Best Luxury Sports Sedan for $60K?",
+       "views": 1219033
+      }
+     ]
+    },
+    "2026": {
+     "score": 60,
+     "weight": 6.8,
+     "videos": 39,
+     "named": 3,
+     "top": [
+      {
+       "id": "4t5a7cPtWac",
+       "title": "Lexus LFA vs Lexus LC500 - DRAG RACE, ROLLING RACE & BRAKE TEST",
+       "views": 6546856
+      },
+      {
+       "id": "zJWVu4i75sg",
+       "title": "2026 Lexus LC500 vs Porsche 911 // Thunder Meets Lightning",
+       "views": 1461413
+      },
+      {
+       "id": "pC85hPGpqIw",
+       "title": "Five Reasons You'll Regret Not Buying The Lexus LC500",
+       "views": 787050
+      }
+     ]
+    }
+   },
+   "videos": 198,
+   "pulled": 200
+  }
+ }
+}

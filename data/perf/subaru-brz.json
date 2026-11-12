@@ -1,0 +1,730 @@
+{
+ "slug": "subaru-brz",
+ "name": "Subaru BRZ",
+ "short": "BRZ",
+ "make": "Subaru",
+ "page": "/cars/subaru-brz/",
+ "focus": "zd8",
+ "star": "zd8-ts",
+ "h1": "Subaru BRZ: performance, engines and what owners say",
+ "nhtsa": {
+  "make": "SUBARU",
+  "models": [
+   "BRZ"
+  ],
+  "note": ""
+ },
+ "topics_extra": {
+  "Valve springs": "valve springs?",
+  "Oil pressure / starvation": "oil (pressure|starvation)|oil pickup|\\brtv\\b",
+  "Fuel pump": "fuel pump",
+  "Coil packs / misfire": "coil packs?|ignition coils?|misfires?",
+  "Clutch / throw-out bearing": "\\bclutch\\b|throw.?out bearing",
+  "Gearbox / synchros": "synchros?|grind(s|ing)? (into|in)"
+ },
+ "gens": [
+  {
+   "id": "zc6",
+   "code": "ZC6",
+   "years": "2013–2020",
+   "y0": 2013,
+   "y1": 2020,
+   "engine": "FA20",
+   "body": "Coupe",
+   "tag": "Built with Toyota. 200 hp; 205 hp with the manual from 2017.",
+   "variants": [
+    {
+     "id": "zc6-13",
+     "name": "BRZ",
+     "years": "2013–2016",
+     "hp": {
+      "v": 200,
+      "src": [
+       "s13spec",
+       "s12"
+      ],
+      "note": "at 7,000 rpm"
+     },
+     "tq": {
+      "v": 151,
+      "src": [
+       "s13spec",
+       "s12"
+      ],
+      "note": "lb-ft at 6,400 rpm"
+     },
+     "z60": {
+      "v": 6.3,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual, rear-drive",
+      "src": [
+       "s13spec"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "2,762 lb",
+      "src": [
+       "s13spec"
+      ],
+      "note": "2013 Premium manual"
+     },
+     "price": {
+      "v": "$25,495",
+      "src": [
+       "s13p"
+      ],
+      "note": "2013 Premium manual, plus $750 destination"
+     }
+    },
+    {
+     "id": "zc6-at",
+     "name": "BRZ automatic",
+     "years": "2013–2020",
+     "hp": {
+      "v": 200,
+      "src": [
+       "s13spec",
+       "s17spec"
+      ],
+      "note": "at 7,000 rpm"
+     },
+     "tq": {
+      "v": 151,
+      "src": [
+       "s13spec",
+       "s17spec"
+      ],
+      "note": "lb-ft at 6,400 rpm"
+     },
+     "z60": {
+      "v": 7.5,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed automatic, rear-drive",
+      "src": [
+       "s13spec"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "2,809 lb",
+      "src": [
+       "s13spec"
+      ],
+      "note": "2013 Premium automatic"
+     },
+     "price": {
+      "v": "$26,595",
+      "src": [
+       "s13p"
+      ],
+      "note": "2013 Premium automatic, plus $750 destination"
+     },
+     "what": "Automatic keeps 200 hp after 2017; only manual cars got the bump.",
+     "what_src": [
+      "s17spec"
+     ]
+    },
+    {
+     "id": "zc6-17",
+     "name": "BRZ",
+     "years": "2017–2020",
+     "hp": {
+      "v": 205,
+      "src": [
+       "s17spec",
+       "s17p"
+      ],
+      "note": "at 7,000 rpm"
+     },
+     "tq": {
+      "v": 156,
+      "src": [
+       "s17spec",
+       "s17p"
+      ],
+      "note": "lb-ft at 6,400 rpm"
+     },
+     "z60": {
+      "v": 6.2,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual, rear-drive",
+      "src": [
+       "s17spec"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "2,785 lb",
+      "src": [
+       "s17spec"
+      ],
+      "note": "2017 Premium manual"
+     },
+     "price": {
+      "v": "$25,495",
+      "src": [
+       "s17p"
+      ],
+      "note": "2017 Premium manual, plus $820 destination"
+     },
+     "what": "New intake and exhaust manifolds add 5 hp; final drive 4.1 to 4.3.",
+     "what_src": [
+      "s17",
+      "s17p",
+      "s17spec"
+     ]
+    },
+    {
+     "id": "zc6-pp",
+     "name": "BRZ Performance Package",
+     "years": "2017–2020",
+     "pkg": "zc6-17",
+     "hp": {
+      "v": 205,
+      "src": [
+       "s17spec"
+      ],
+      "note": "at 7,000 rpm"
+     },
+     "tq": {
+      "v": 156,
+      "src": [
+       "s17spec"
+      ],
+      "note": "lb-ft at 6,400 rpm"
+     },
+     "trans": {
+      "v": "6-speed manual, rear-drive",
+      "src": [
+       "s17",
+       "s20k"
+      ],
+      "note": "Limited manual only"
+     },
+     "weight": {
+      "v": "2,813 lb",
+      "src": [
+       "s17spec"
+      ],
+      "note": "2017"
+     },
+     "price": {
+      "v": "$1,195",
+      "src": [
+       "s17p"
+      ],
+      "note": "package price on the 2017 Limited manual ($27,645)"
+     },
+     "what": "Brembo brakes (4-piston front, 2-piston rear), SACHS dampers, 17x7.5 wheels.",
+     "what_src": [
+      "s17p",
+      "s20k"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "zd8",
+   "code": "ZD8",
+   "years": "2022–2025",
+   "y0": 2022,
+   "y1": 2025,
+   "engine": "FA24",
+   "body": "Coupe",
+   "tag": "2.4-liter, 228 hp. tS adds Brembos and Hitachi dampers from 2024.",
+   "variants": [
+    {
+     "id": "zd8-mt",
+     "name": "BRZ",
+     "years": "2022–2025",
+     "hp": {
+      "v": 228,
+      "src": [
+       "k22",
+       "s25spec"
+      ],
+      "note": "at 7,000 rpm"
+     },
+     "tq": {
+      "v": 184,
+      "src": [
+       "k22",
+       "s25spec"
+      ],
+      "note": "lb-ft at 3,700 rpm"
+     },
+     "z60": {
+      "v": 5.4,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual, rear-drive",
+      "src": [
+       "s25spec"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "2,815 lb",
+      "src": [
+       "k22",
+       "s25spec"
+      ],
+      "note": "2022 Premium manual (Subaru estimate); 2,820 lb for 2025"
+     },
+     "price": {
+      "v": "$27,995",
+      "src": [
+       "p22",
+       "p25"
+      ],
+      "note": "2022 Premium manual, plus $960 destination; 2025: $31,095 plus $1,170"
+     }
+    },
+    {
+     "id": "zd8-at",
+     "name": "BRZ automatic",
+     "years": "2022–2025",
+     "hp": {
+      "v": 228,
+      "src": [
+       "k22",
+       "s25spec"
+      ],
+      "note": "at 7,000 rpm"
+     },
+     "tq": {
+      "v": 184,
+      "src": [
+       "k22",
+       "s25spec"
+      ],
+      "note": "lb-ft at 3,700 rpm"
+     },
+     "z60": {
+      "v": 6.3,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed automatic, rear-drive",
+      "src": [
+       "s25spec",
+       "p24",
+       "p25"
+      ],
+      "note": "Limited only in 2024–2025"
+     },
+     "weight": {
+      "v": "2,864 lb",
+      "src": [
+       "k22"
+      ],
+      "note": "2022 Premium automatic (Subaru estimate)"
+     },
+     "price": {
+      "v": "$29,595",
+      "src": [
+       "p22"
+      ],
+      "note": "2022 Premium automatic, plus $960 destination"
+     }
+    },
+    {
+     "id": "zd8-ts",
+     "name": "BRZ tS",
+     "years": "2024–2025",
+     "star": true,
+     "hp": {
+      "v": 228,
+      "src": [
+       "p24",
+       "s25spec"
+      ],
+      "note": "at 7,000 rpm"
+     },
+     "tq": {
+      "v": 184,
+      "src": [
+       "s25spec"
+      ],
+      "note": "lb-ft at 3,700 rpm"
+     },
+     "z60": {
+      "v": 5.5,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual, rear-drive",
+      "src": [
+       "p24",
+       "s25spec"
+      ],
+      "note": "manual only"
+     },
+     "weight": {
+      "v": "2,851 lb",
+      "src": [
+       "s25spec"
+      ],
+      "note": "2025"
+     },
+     "price": {
+      "v": "$35,345",
+      "src": [
+       "p24",
+       "p25"
+      ],
+      "note": "2024, plus $1,120 destination; 2025: $36,245 plus $1,170"
+     },
+     "what": "STI-tuned Hitachi dampers, Brembo brakes, 18-inch wheels on Pilot Sport 4s.",
+     "what_src": [
+      "ts24",
+      "p24",
+      "s25spec"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "FA20": {
+   "name": "Subaru FA20",
+   "what": "2.0-liter flat-4, naturally aspirated",
+   "study": "subaru-fa",
+   "page": "/engines/subaru-fa/",
+   "yt": [
+    "scy",
+    "subaru-fa"
+   ],
+   "facts": [
+    [
+     "Redline",
+     "7,400 rpm",
+     [
+      "s12",
+      "s17k"
+     ]
+    ],
+    [
+     "Output",
+     "200–205 hp, 151–156 lb-ft",
+     [
+      "s13spec",
+      "s17spec"
+     ]
+    ],
+    [
+     "Fuel system",
+     "Direct plus port injection",
+     [
+      "s13spec"
+     ]
+    ],
+    [
+     "Bore x stroke",
+     "86 x 86 mm, square; aluminum block",
+     [
+      "s13spec"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Valve spring recall (2013)",
+     "kind": "Recall",
+     "rx": "valve springs?",
+     "x": "On 2013 BRZs, valve springs could break, making the engine run badly or stall. Some owners told The Drive their engines failed soon after the recall work.",
+     "fix": "Dealer replaces the valve springs for free (NHTSA 18V-772).",
+     "src": [
+      "r18",
+      "drive20"
+     ]
+    },
+    {
+     "t": "Fuel pump recall (2018–2019)",
+     "kind": "Recall",
+     "rx": "fuel pump|stall",
+     "x": "On some 2018–2019 BRZs, the low-pressure fuel pump can fail, which can stall the engine while driving.",
+     "fix": "Dealer replaces the fuel pump for free (NHTSA 21V-587).",
+     "src": [
+      "r21"
+     ]
+    },
+    {
+     "t": "Coil packs overheat (early cars)",
+     "kind": "Parts seller",
+     "rx": "coil packs?|ignition coils?|misfires?",
+     "x": "A parts seller says coil packs on early BRZs tend to overheat, causing misfires and faster spark plug wear.",
+     "fix": "Replace with the newest coil pack revision.",
+     "src": [
+      "maperf"
+     ]
+    },
+    {
+     "t": "RTV sealant and oil starvation (disputed)",
+     "kind": "Lawsuit claim, disputed",
+     "rx": "\\brtv\\b|oil pickup|oil starvation|spun (a )?bearing|rod knock",
+     "x": "A 2024 class action claims excess factory RTV sealant can flake into the oil and starve 2013–2023 BRZ engines. It is an unproven claim; no bulletin or recall has been issued.",
+     "fix": "",
+     "src": [
+      "drive24",
+      "drive22"
+     ]
+    }
+   ]
+  },
+  "FA24": {
+   "name": "Subaru FA24",
+   "what": "2.4-liter flat-4, naturally aspirated",
+   "study": "subaru-fa",
+   "page": "/engines/subaru-fa/",
+   "yt": [
+    "scy",
+    "subaru-fa"
+   ],
+   "facts": [
+    [
+     "Redline",
+     "7,000 rpm (Subaru's figure)",
+     [
+      "k22"
+     ]
+    ],
+    [
+     "Output",
+     "228 hp, 184 lb-ft at 3,700 rpm",
+     [
+      "k22",
+      "s25spec"
+     ]
+    ],
+    [
+     "Fuel system",
+     "Toyota D-4S direct plus port injection",
+     [
+      "k22"
+     ]
+    ],
+    [
+     "Bore x stroke",
+     "94 x 86 mm, 2,387 cc; 12.5:1 compression",
+     [
+      "s25spec"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Oil pressure drops on track (disputed)",
+     "kind": "Owner-reported",
+     "rx": "oil (pressure|starvation)|oil pan baffle|right.?hand (turn|corner)s?",
+     "x": "One owner's logging on a 2022 BRZ and GR86 showed oil pressure falling from 62 to 28 psi in hard right-hand track corners. Subaru and Toyota did not comment.",
+     "fix": "Owners suggest a full oil level, an oil cooler or a pan baffle for track use.",
+     "src": [
+      "drive23"
+     ]
+    },
+    {
+     "t": "RTV sealant in the oil pickup (disputed)",
+     "kind": "Owner-reported / lawsuit claim",
+     "rx": "\\brtv\\b|oil pickup|oil starvation|spun (a )?bearing|rod knock",
+     "x": "In 2022 a GR86 owner found RTV sealant in the oil pickup after a bearing failure; BRZ owners reported similar buildup. A 2024 class action makes the same claim. No bulletin or recall followed.",
+     "fix": "",
+     "src": [
+      "drive22",
+      "drive24"
+     ]
+    },
+    {
+     "t": "No engine recall",
+     "kind": "Recall",
+     "rx": "",
+     "x": "NHTSA lists no engine recall for 2022–2025 BRZs; the one recall (2022) covers rear turn signals.",
+     "fix": "",
+     "src": [
+      "r23"
+     ]
+    }
+   ]
+  }
+ },
+ "compare": [
+  {
+   "slug": "gr86",
+   "name": "Toyota GR86 / 86 / Scion FR-S"
+  },
+  {
+   "slug": "mx-5-miata",
+   "name": "Mazda MX-5 Miata"
+  },
+  {
+   "slug": "elantra-n",
+   "name": "Hyundai Elantra N"
+  },
+  {
+   "slug": "civic-type-r",
+   "name": "Honda Civic Type R"
+  }
+ ],
+ "sources": {
+  "s12": {
+   "t": "Subaru of America: 2013 Subaru BRZ marks return of the pure sports car (Jul 2012)",
+   "u": "https://media.subaru.com/pressrelease/189/1/2013-subaru-brz-marks-return-pure-sports-car",
+   "k": "Subaru"
+  },
+  "s13spec": {
+   "t": "Subaru of America: 2013 Subaru BRZ specifications",
+   "u": "https://media.subaru.com/download.do?id=192",
+   "k": "Subaru"
+  },
+  "s13p": {
+   "t": "Subaru of America: Subaru of America announces pricing for 2013 BRZ (Apr 2012, via The Auto Channel)",
+   "u": "https://www.theautochannel.com/news/2012/04/05/031575-subaru-america-announces-pricing-for-2013-brz.html",
+   "k": "Subaru (release reprint)"
+  },
+  "s17": {
+   "t": "Subaru of America: Subaru BRZ offers enhanced performance and updated styling for 2017 (May 2016)",
+   "u": "https://media.subaru.com/pressrelease/956/1/subaru-brz-offers-enhanced-performance-updated-styling-features",
+   "k": "Subaru"
+  },
+  "s17p": {
+   "t": "Subaru of America: Subaru announces pricing on updated 2017 BRZ (Jul 2016)",
+   "u": "https://media.subaru.com/pressrelease/970/127/subaru-announces-pricing-updated-2017-brz",
+   "k": "Subaru"
+  },
+  "s17k": {
+   "t": "Subaru of America: 2017 Subaru BRZ press kit",
+   "u": "https://media.subaru.com/pressrelease/954/1/2017-subaru-brz-press-kit",
+   "k": "Subaru"
+  },
+  "s17spec": {
+   "t": "Subaru of America: 2017 Subaru BRZ specifications",
+   "u": "https://media.subaru.com/download.do?id=955",
+   "k": "Subaru"
+  },
+  "s20k": {
+   "t": "Subaru of America: 2020 Subaru BRZ press kit, updated 2020 BRZ sports car",
+   "u": "https://media.subaru.com/pressrelease/1468/1/2020-subaru-brz-press-kit",
+   "k": "Subaru"
+  },
+  "k22": {
+   "t": "Subaru of America: 2022 Subaru BRZ press kit, all-new 2022 BRZ makes global debut (Nov 2020)",
+   "u": "https://media.subaru.com/newsrelease.do?id=1704&mid=127",
+   "k": "Subaru"
+  },
+  "p22": {
+   "t": "Subaru of America: Subaru announces pricing on all-new 2022 BRZ (Jul 2021)",
+   "u": "https://media.subaru.com/pressrelease/1753/127/subaru-announces-pricing-all-new-2022-brz",
+   "k": "Subaru"
+  },
+  "ts24": {
+   "t": "Subaru of America: New performance-focused 2024 Subaru BRZ tS debuts at SubieFest California (2023)",
+   "u": "https://media.subaru.com/pressrelease/2077/1/new-performance-focused-2024-subaru-brz-ts-debuts",
+   "k": "Subaru"
+  },
+  "p24": {
+   "t": "Subaru of America: Subaru announces pricing on 2024 BRZ sports car (Oct 2023)",
+   "u": "https://media.subaru.com/pressrelease/2110/127/subaru-announces-pricing-2024-brz-sports-car",
+   "k": "Subaru"
+  },
+  "p25": {
+   "t": "Subaru of America: Subaru announces pricing on 2025 BRZ (Sep 2024)",
+   "u": "https://media.subaru.com/newsrelease.do?id=2206",
+   "k": "Subaru"
+  },
+  "s25spec": {
+   "t": "Subaru of America: 2025 Subaru BRZ specifications",
+   "u": "https://media.subaru.com/view-spec.do?bFileId=44672",
+   "k": "Subaru"
+  },
+  "z60": {
+   "t": "0-60specs.com: Subaru BRZ 0-60 runs by magazine (Car and Driver, MotorTrend, MotorWeek)",
+   "u": "https://www.0-60specs.com/subaru/brz-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "r18": {
+   "t": "NHTSA recall 18V-772: engine valve springs, 2013 BRZ, other Subarus and Scion FR-S (Nov 2018)",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=18V772000",
+   "k": "Recall"
+  },
+  "r21": {
+   "t": "NHTSA recall 21V-587: low-pressure fuel pump, 2018–2019 BRZ, other Subarus and Toyota 86 (Jul 2021)",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=21V587000",
+   "k": "Recall"
+  },
+  "r23": {
+   "t": "NHTSA recall 23V-609: rear turn signals, 2022 BRZ and Toyota GR86 (Aug 2023)",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=23V609000",
+   "k": "Recall"
+  },
+  "drive20": {
+   "t": "The Drive: Engines keep failing as the Subaru BRZ/Scion FR-S valve spring recall debacle drags on (Nov 2020)",
+   "u": "https://www.thedrive.com/news/37435/engines-keep-failing-as-the-subaru-brz-scion-fr-s-valve-spring-recall-debacle-drags-on",
+   "k": "outlet"
+  },
+  "drive22": {
+   "t": "The Drive: Toyota 'looking into' 2022 GR86 engine issues after owner denied warranty fix (Aug 2022)",
+   "u": "https://www.thedrive.com/news/toyota-gr86-owners-are-reporting-serious-engine-issues-but-toyotas-not-talking",
+   "k": "outlet"
+  },
+  "drive23": {
+   "t": "The Drive: 2022 Subaru BRZ owner's instrumented testing shows big oil pressure drops on track (Jun 2023)",
+   "u": "https://www.thedrive.com/news/2022-subaru-brz-owners-instrumented-testing-shows-big-oil-pressure-drops-on-track",
+   "k": "outlet"
+  },
+  "drive24": {
+   "t": "The Drive: There's now a class action lawsuit over Toyota GR86, Subaru BRZ engine failures (Nov 2024)",
+   "u": "https://www.thedrive.com/news/theres-now-a-class-action-lawsuit-over-toyota-gr86-subaru-brz-engine-failures",
+   "k": "outlet"
+  },
+  "maperf": {
+   "t": "MAPerformance: Subaru BRZ / Toyota 86 / Scion FR-S maintenance and common issues (May 2022)",
+   "u": "https://www.maperformance.com/blogs/maperformance-blog/subaru-brz-toyota-86-scion-frs-maintenance-common-issues",
+   "k": "parts seller"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-subaru-brz",
+ "img": "/assets/ai-perf/subaru-brz.webp?v=1"
+}

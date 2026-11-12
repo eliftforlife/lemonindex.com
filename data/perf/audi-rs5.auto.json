@@ -1,0 +1,363 @@
+{
+ "built": "2026-11-11",
+ "nhtsa": {
+  "by_year": {
+   "2013": 7,
+   "2014": 5,
+   "2015": 2,
+   "2018": 1,
+   "2019": 3,
+   "2021": 2
+  },
+  "gens": {
+   "b8": {
+    "n": 14,
+    "issues": {
+     "Carbon buildup on intake valves": {
+      "n": 0,
+      "ex": []
+     },
+     "Injector failure": {
+      "n": 0,
+      "ex": []
+     },
+     "PCV valve diaphragms": {
+      "n": 0,
+      "ex": []
+     }
+    }
+   },
+   "b9": {
+    "n": 6,
+    "issues": {
+     "Turbo oil feed line leaks": {
+      "n": 0,
+      "ex": []
+     },
+     "Heat wear on hoses and intercooler parts": {
+      "n": 0,
+      "ex": []
+     },
+     "PCV and crankcase pressure": {
+      "n": 0,
+      "ex": []
+     },
+     "Carbon buildup": {
+      "n": 0,
+      "ex": []
+     }
+    }
+   }
+  },
+  "parts": [
+   [
+    "Service brakes",
+    5
+   ],
+   [
+    "Unknown or other",
+    5
+   ],
+   [
+    "Power train",
+    5
+   ],
+   [
+    "Electrical system",
+    3
+   ],
+   [
+    "Engine",
+    2
+   ],
+   [
+    "Steering",
+    1
+   ]
+  ]
+ },
+ "recalls": {
+  "2013": [],
+  "2014": [],
+  "2015": [],
+  "2018": [
+   {
+    "id": "20V760000",
+    "part": "ELECTRICAL SYSTEM:12V/24V/48V BATTERY",
+    "summary": "Volkswagen Group of America, Inc. (Audi) is recalling certain 2018-2019 Audi RS5 Coupe vehicles.  An incorrect positive battery terminal cover was installed."
+   },
+   {
+    "id": "21V874000",
+    "part": "SEATS",
+    "summary": "Volkswagen Group of America, Inc. (Audi) is recalling certain 2017-2020 A4 Allroad, A4 Sedan, 2018-2019 RS5 Coupe, 2019 RS5 Sportback, 2018-2020 A5 Cabriolet, A5 Coupe, A5 Sportback, S4 Sedan, S5 Cabriolet, S5 Coupe, and Audi S5 Sportback vehicles.  The cable connecting the seat heater to the Passenger Occupant Detection System (PODS) may have a contact fault, causing the software to misdiagnose a"
+   }
+  ],
+  "2019": [
+   {
+    "id": "22V034000",
+    "part": "TIRES",
+    "summary": "Volkswagen Group of America, Inc. (Audi) is recalling certain 2019-2021 Audi A5 Sportback, RS5 Coupe, RS5 Sportback, S5 Sportback, 2020-2021 A4 Allroad, A4 Sedan, A5 Cabriolet, A5 Coupe, A6 Allroad, A6 Sedan, A7, A8, Q5, S4 Sedan, S5 Coupe, S5 Cabriolet, S6 Sedan, S7, S8, SQ5, 2021 Q5 Sportback, Q7, Q8, RS6 Avant, RS7, RSQ8, SQ5 Sportback, SQ7, and SQ8 vehicles.  The rear axle alignment may not ha"
+   },
+   {
+    "id": "20V760000",
+    "part": "ELECTRICAL SYSTEM:12V/24V/48V BATTERY",
+    "summary": "Volkswagen Group of America, Inc. (Audi) is recalling certain 2018-2019 Audi RS5 Coupe vehicles.  An incorrect positive battery terminal cover was installed."
+   },
+   {
+    "id": "21V295000",
+    "part": "SUSPENSION:REAR:AXLE:NON-POWERED AXLE ASSEMBLY",
+    "summary": "Volkswagen Group of America, Inc. (Audi) is recalling certain 2021 Q7, Q8, Q5 Sportback, SQ5 Sportback, RS6 Avant, RS7, RS Q8, 2020-2021 Audi S6 sedan, Q5, A8, S8, A7, A6 Allroad, A5 Cabriolet, A4 sedan, A4 Allroad, SQ5, S7, A6 sedan, S5 coupe, S4 sedan, S5 Cabriolet, A5 coupe, 2019-2021 RS5 coupe, A5 Sportback, S5 Sportback, RS5 Sportback vehicles.  The lock nut on the trailing arm of the rear ax"
+   },
+   {
+    "id": "21V874000",
+    "part": "SEATS",
+    "summary": "Volkswagen Group of America, Inc. (Audi) is recalling certain 2017-2020 A4 Allroad, A4 Sedan, 2018-2019 RS5 Coupe, 2019 RS5 Sportback, 2018-2020 A5 Cabriolet, A5 Coupe, A5 Sportback, S4 Sedan, S5 Cabriolet, S5 Coupe, and Audi S5 Sportback vehicles.  The cable connecting the seat heater to the Passenger Occupant Detection System (PODS) may have a contact fault, causing the software to misdiagnose a"
+   }
+  ],
+  "2020": [
+   {
+    "id": "22V034000",
+    "part": "TIRES",
+    "summary": "Volkswagen Group of America, Inc. (Audi) is recalling certain 2019-2021 Audi A5 Sportback, RS5 Coupe, RS5 Sportback, S5 Sportback, 2020-2021 A4 Allroad, A4 Sedan, A5 Cabriolet, A5 Coupe, A6 Allroad, A6 Sedan, A7, A8, Q5, S4 Sedan, S5 Coupe, S5 Cabriolet, S6 Sedan, S7, S8, SQ5, 2021 Q5 Sportback, Q7, Q8, RS6 Avant, RS7, RSQ8, SQ5 Sportback, SQ7, and SQ8 vehicles.  The rear axle alignment may not ha"
+   },
+   {
+    "id": "21V295000",
+    "part": "SUSPENSION:REAR:AXLE:NON-POWERED AXLE ASSEMBLY",
+    "summary": "Volkswagen Group of America, Inc. (Audi) is recalling certain 2021 Q7, Q8, Q5 Sportback, SQ5 Sportback, RS6 Avant, RS7, RS Q8, 2020-2021 Audi S6 sedan, Q5, A8, S8, A7, A6 Allroad, A5 Cabriolet, A4 sedan, A4 Allroad, SQ5, S7, A6 sedan, S5 coupe, S4 sedan, S5 Cabriolet, A5 coupe, 2019-2021 RS5 coupe, A5 Sportback, S5 Sportback, RS5 Sportback vehicles.  The lock nut on the trailing arm of the rear ax"
+   }
+  ],
+  "2021": [
+   {
+    "id": "21V606000",
+    "part": "SEAT BELTS:REAR/OTHER:RETRACTOR",
+    "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2021 Volkswagen ID4, Audi A4 Allroad, A4 Sedan, A5 Cabriolet, A5 Coupe, A5 Sportback, A6 Allroad, A6 Sedan, A7, A8, E-Tron Quattro, E-Tron Sportback Quattro, Q3, Q5, Q5 Sportback, Q7, Q8, RS5 Sportback, RS5 Coupe, RS6 Avant, RS7, RSQ8, S4 Sedan, S5 Cabriolet, S5 Coupe, S5 Sportback, S6 Sedan, S7, S8, SQ5, SQ5 Sportback, SQ7, SQ8, "
+   },
+   {
+    "id": "22V034000",
+    "part": "TIRES",
+    "summary": "Volkswagen Group of America, Inc. (Audi) is recalling certain 2019-2021 Audi A5 Sportback, RS5 Coupe, RS5 Sportback, S5 Sportback, 2020-2021 A4 Allroad, A4 Sedan, A5 Cabriolet, A5 Coupe, A6 Allroad, A6 Sedan, A7, A8, Q5, S4 Sedan, S5 Coupe, S5 Cabriolet, S6 Sedan, S7, S8, SQ5, 2021 Q5 Sportback, Q7, Q8, RS6 Avant, RS7, RSQ8, SQ5 Sportback, SQ7, and SQ8 vehicles.  The rear axle alignment may not ha"
+   },
+   {
+    "id": "20V737000",
+    "part": "EXTERIOR LIGHTING:TAIL LIGHTS",
+    "summary": "Volkswagen Group of America, Inc. (Audi) is recalling certain 2021 Audi RS5 Sportback, 2020-2021 Audi A5 Sportback, and S5 Sportback vehicles.  The wiring harness for the rear lights could be missing the anti-abrasion protection in the area of the spare wheel well."
+   },
+   {
+    "id": "21V295000",
+    "part": "SUSPENSION:REAR:AXLE:NON-POWERED AXLE ASSEMBLY",
+    "summary": "Volkswagen Group of America, Inc. (Audi) is recalling certain 2021 Q7, Q8, Q5 Sportback, SQ5 Sportback, RS6 Avant, RS7, RS Q8, 2020-2021 Audi S6 sedan, Q5, A8, S8, A7, A6 Allroad, A5 Cabriolet, A4 sedan, A4 Allroad, SQ5, S7, A6 sedan, S5 coupe, S4 sedan, S5 Cabriolet, A5 coupe, 2019-2021 RS5 coupe, A5 Sportback, S5 Sportback, RS5 Sportback vehicles.  The lock nut on the trailing arm of the rear ax"
+   },
+   {
+    "id": "22V742000",
+    "part": "BACK OVER PREVENTION:DISPLAY FUNCTION",
+    "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2021 Audi A8, RS7, RS6 Avant, RS5 Sportback, RS5 Coupe, Q8, Q7, Q5 Sportback, S4 Sedan, Q5, A7, A6, A6 Allroad, A5 Sportback, A5 Coupe, A5 Cabrioleet, A4 Sedan, A4 Allroad, E-Tron Sportback Quattro, SQ7, S5 Cabriolet, E-Tron Quattro, SQ8, SQ5 Sportback, SQ5, S8, S7, S6 Sedan, S5 Sportback, S5 Coupe, 2022 E-Tron GT, and 2021-2022 R"
+   }
+  ],
+  "2022": [
+   {
+    "id": "22V102000",
+    "part": "EQUIPMENT:OTHER:LABELS",
+    "summary": "Volkswagen Group of America, Inc. (Audi) is recalling certain 2022 RS5 coupe and RS5 Sportback vehicles.  The value for the maximum combined weight of occupants and cargo on the B-pillar Tire and Loading information label is incorrect.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 110, \"Tire and Loading Information.\""
+   }
+  ],
+  "2023": [
+   {
+    "id": "24V251000",
+    "part": "AIR BAGS:SENSOR:OCCUPANT CLASSIFICATION:FRONT PASSENGER",
+    "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2023 Audi S5 Cabriolet, A4 Allroad, Q5 Sportback, A3 Sedan, S5 Sportback, SQ7, TT Coupe, TT Roadster, RS5 Sportback, 2024 A8, E-Tron Quattro, E-Tron Sportback Quattro, Q8, RSQ8, 2023-2024 Q3, Q5, and Q7 vehicles.  An electrical connection in the front passenger seat for the occupant detection system (ODS) control module may loosen"
+   }
+  ],
+  "2024": []
+ },
+ "yt": {
+  "car-audi-rs5": null,
+  "audi-42-fsi": {
+   "videos": 85,
+   "praise": [
+    [
+     "Looks",
+     24
+    ],
+    [
+     "Manual gearbox",
+     16
+    ],
+    [
+     "Value",
+     12
+    ],
+    [
+     "Handling and steering",
+     8
+    ]
+   ],
+   "trouble": [],
+   "top": [
+    {
+     "id": "jeE7nCIlXrE",
+     "title": "Audi R8 V10 versus Audi R8 V8 review",
+     "views": 1322047,
+     "ch": "iMOTORTV"
+    },
+    {
+     "id": "NyRmvK7TioA",
+     "title": "Audi R8 V8 Honest Review from an R8 Owner",
+     "views": 1304875,
+     "ch": "GetintheMix"
+    },
+    {
+     "id": "HX-R25i25rU",
+     "title": "Audi R8 V8 review - see why it's a £40,000 bargain supercar!",
+     "views": 1089152,
+     "ch": "Mat Watson Cars"
+    }
+   ]
+  }
+ },
+ "scores": {
+  "audi-42-fsi": {
+   "years": {
+    "2010": {
+     "score": 54,
+     "weight": 9.7,
+     "videos": 53,
+     "named": 1,
+     "top": [
+      {
+       "id": "jeE7nCIlXrE",
+       "title": "Audi R8 V10 versus Audi R8 V8 review",
+       "views": 1322047
+      },
+      {
+       "id": "NyRmvK7TioA",
+       "title": "Audi R8 V8 Honest Review from an R8 Owner",
+       "views": 1304875
+      },
+      {
+       "id": "HX-R25i25rU",
+       "title": "Audi R8 V8 review - see why it's a £40,000 bargain supercar!",
+       "views": 1089152
+      }
+     ]
+    },
+    "2011": {
+     "score": 54,
+     "weight": 11.7,
+     "videos": 55,
+     "named": 3,
+     "top": [
+      {
+       "id": "jeE7nCIlXrE",
+       "title": "Audi R8 V10 versus Audi R8 V8 review",
+       "views": 1322047
+      },
+      {
+       "id": "NyRmvK7TioA",
+       "title": "Audi R8 V8 Honest Review from an R8 Owner",
+       "views": 1304875
+      },
+      {
+       "id": "HX-R25i25rU",
+       "title": "Audi R8 V8 review - see why it's a £40,000 bargain supercar!",
+       "views": 1089152
+      }
+     ]
+    },
+    "2012": {
+     "score": 55,
+     "weight": 11.9,
+     "videos": 56,
+     "named": 4,
+     "top": [
+      {
+       "id": "jeE7nCIlXrE",
+       "title": "Audi R8 V10 versus Audi R8 V8 review",
+       "views": 1322047
+      },
+      {
+       "id": "NyRmvK7TioA",
+       "title": "Audi R8 V8 Honest Review from an R8 Owner",
+       "views": 1304875
+      },
+      {
+       "id": "HX-R25i25rU",
+       "title": "Audi R8 V8 review - see why it's a £40,000 bargain supercar!",
+       "views": 1089152
+      }
+     ]
+    },
+    "2013": {
+     "score": 54,
+     "weight": 11.9,
+     "videos": 56,
+     "named": 4,
+     "top": [
+      {
+       "id": "jeE7nCIlXrE",
+       "title": "Audi R8 V10 versus Audi R8 V8 review",
+       "views": 1322047
+      },
+      {
+       "id": "NyRmvK7TioA",
+       "title": "Audi R8 V8 Honest Review from an R8 Owner",
+       "views": 1304875
+      },
+      {
+       "id": "HX-R25i25rU",
+       "title": "Audi R8 V8 review - see why it's a £40,000 bargain supercar!",
+       "views": 1089152
+      }
+     ]
+    },
+    "2014": {
+     "score": 52,
+     "weight": 14.9,
+     "videos": 59,
+     "named": 7,
+     "top": [
+      {
+       "id": "jeE7nCIlXrE",
+       "title": "Audi R8 V10 versus Audi R8 V8 review",
+       "views": 1322047
+      },
+      {
+       "id": "NyRmvK7TioA",
+       "title": "Audi R8 V8 Honest Review from an R8 Owner",
+       "views": 1304875
+      },
+      {
+       "id": "HX-R25i25rU",
+       "title": "Audi R8 V8 review - see why it's a £40,000 bargain supercar!",
+       "views": 1089152
+      }
+     ]
+    },
+    "2015": {
+     "score": 55,
+     "weight": 9.9,
+     "videos": 54,
+     "named": 2,
+     "top": [
+      {
+       "id": "jeE7nCIlXrE",
+       "title": "Audi R8 V10 versus Audi R8 V8 review",
+       "views": 1322047
+      },
+      {
+       "id": "NyRmvK7TioA",
+       "title": "Audi R8 V8 Honest Review from an R8 Owner",
+       "views": 1304875
+      },
+      {
+       "id": "HX-R25i25rU",
+       "title": "Audi R8 V8 review - see why it's a £40,000 bargain supercar!",
+       "views": 1089152
+      }
+     ]
+    }
+   },
+   "videos": 70,
+   "pulled": 85
+  }
+ }
+}

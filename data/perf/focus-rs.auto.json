@@ -1,0 +1,235 @@
+{
+ "built": "2026-11-11",
+ "nhtsa": {
+  "by_year": {
+   "1999": 11,
+   "2000": 3686,
+   "2001": 1760,
+   "2002": 939,
+   "2003": 977,
+   "2004": 387,
+   "2005": 441,
+   "2006": 205,
+   "2007": 391,
+   "2008": 250,
+   "2009": 229,
+   "2010": 287,
+   "2011": 113,
+   "2012": 3770,
+   "2013": 2112,
+   "2014": 2604,
+   "2015": 1022,
+   "2016": 1183,
+   "2017": 899,
+   "2018": 837
+  },
+  "gens": {
+   "mk3": {
+    "n": 2919,
+    "issues": {
+     "Head gasket coolant leak": {
+      "n": 33,
+      "ex": [
+       "11133335",
+       "11310140"
+      ]
+     },
+     "Oil use in hard driving": {
+      "n": 57,
+      "ex": [
+       "11330569",
+       "11396047"
+      ]
+     },
+     "Oil seep at the head joint": {
+      "n": 4,
+      "ex": [
+       "11399111",
+       "11480279"
+      ]
+     },
+     "Block heater recall": {
+      "n": 2,
+      "ex": [
+       "11232959",
+       "11731612"
+      ]
+     }
+    }
+   }
+  },
+  "parts": [
+   [
+    "Power train",
+    1448
+   ],
+   [
+    "Engine",
+    695
+   ],
+   [
+    "Fuel/propulsion system",
+    415
+   ],
+   [
+    "Unknown or other",
+    263
+   ],
+   [
+    "Engine and engine cooling",
+    255
+   ],
+   [
+    "Fuel system, gasoline",
+    187
+   ]
+  ]
+ },
+ "recalls": {
+  "2016": [
+   {
+    "id": "18V735000",
+    "part": "FUEL SYSTEM, GASOLINE:STORAGE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2012-2018 Ford Focus vehicles with a 2.0L GDI or 2.0L GTDI engine.  The Canister Purge Valve (CPV) may malfunction, possibly causing excessive vacuum in fuel vapor management system."
+   },
+   {
+    "id": "18V845000",
+    "part": "POWER TRAIN:MANUAL TRANSMISSION",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2016-2018 Ford Focus vehicles equipped with a 1.0L Fox GTDI engine and a 6-speed manual transmission.  The clutch may fracture, resulting in damage to the transmission assembly and possibly a transmission fluid leak."
+   },
+   {
+    "id": "17V052000",
+    "part": "STRUCTURE:BODY",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2016 Focus and C-Max vehicles.  The floor pan may have improperly welded left-hand apron joints."
+   },
+   {
+    "id": "18V169000",
+    "part": "POWER TRAIN:MANUAL TRANSMISSION",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2013-2014 Ford Fusion vehicles equipped with a 1.6L GTDI engine and 6-speed manual transmission and 2015-2016 Ford Focus vehicles equipped with a 1.0L GTDI engine and 6-speed manual transmission.  Also included are four 2017 Ford Focus vehicles that had clutch replacements with potentially affected parts.  The clutch may fracture, resulting in damage "
+   },
+   {
+    "id": "16V698000",
+    "part": "LATCHES/LOCKS/LINKAGES:HATCHBACK/LIFTGATE:LOCK",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2013-2017 Ford Focus hatchback vehicles manufactured February 14, 2012, to August 26, 2016 and equipped with a manual transmission.  The hatchback of the affected vehicles may be unlatched with a single press of the interior latch release button.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety S"
+   },
+   {
+    "id": "23V905000",
+    "part": "ENGINE AND ENGINE COOLING:ENGINE:OIL/LUBRICATION:PUMP",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2016-2018 Ford Focus and 2018-2022 Ford EcoSport vehicles.  The oil pump drive belt or drive belt tensioner may fail, resulting in a loss of engine oil pressure."
+   },
+   {
+    "id": "26V011000",
+    "part": "EQUIPMENT:ELECTRICAL:ENGINE BLOCK HEATER",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2013-2018 Focus, 2013-2019 Escape, and 2015-2016 MKC vehicles equipped with a 2.0L engine. The engine block heater may crack and develop a coolant leak, causing it to short circuit when the block heater is plugged in."
+   },
+   {
+    "id": "26V012000",
+    "part": "EQUIPMENT:ELECTRICAL:ENGINE BLOCK HEATER",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2016-2018 Focus, 2019 Explorer, and 2024 Explorer vehicles. The engine block heater may crack and develop a coolant leak, causing it to short circuit when the block heater is plugged in."
+   },
+   {
+    "id": "26V369000",
+    "part": "FUEL SYSTEM, GASOLINE:STORAGE:EVAPORATIVE EMISSIONS:CANISTER",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2012-2018 Focus vehicles previously repaired incorrectly under recall number 18V735. The Canister Purge Valve (CPV) may malfunction, causing the engine to stall unexpectedly while driving."
+   },
+   {
+    "id": "26V376000",
+    "part": "POWER TRAIN:MANUAL TRANSMISSION",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2015-2018 Focus and 2013-2016 Fusion vehicles previously repaired incorrectly under recall numbers 18V169 and 18V845. The clutch may fracture, resulting in damage to the transmission assembly and possibly a transmission fluid leak."
+   }
+  ],
+  "2017": [
+   {
+    "id": "18V735000",
+    "part": "FUEL SYSTEM, GASOLINE:STORAGE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2012-2018 Ford Focus vehicles with a 2.0L GDI or 2.0L GTDI engine.  The Canister Purge Valve (CPV) may malfunction, possibly causing excessive vacuum in fuel vapor management system."
+   },
+   {
+    "id": "19V515000",
+    "part": "FUEL SYSTEM, GASOLINE:STORAGE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2012 and 2017 Focus vehicles equipped with 2.0L GDI gasoline engines and 2013-2014 Focus ST vehicles equipped with 2.0L GTDI engines, previously recalled under 18V-735.  The affected vehicles did not have the Powertrain Control Module (PCM) updated as intended.  Therefore, the Canister Purge Valve (CPV) may malfunction, possibly causing excessive vacu"
+   },
+   {
+    "id": "18V845000",
+    "part": "POWER TRAIN:MANUAL TRANSMISSION",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2016-2018 Ford Focus vehicles equipped with a 1.0L Fox GTDI engine and a 6-speed manual transmission.  The clutch may fracture, resulting in damage to the transmission assembly and possibly a transmission fluid leak."
+   },
+   {
+    "id": "17V528000",
+    "part": "SEAT BELTS:REAR/OTHER",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2017 Focus vehicles.  The rear left side seat back frame may have an insufficient weld between the outboard pivot bracket and the pivot nut joint, resulting in the seat back having reduced strength.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 207, \"Seating Systems,\" and 210, \"Se"
+   },
+   {
+    "id": "16V698000",
+    "part": "LATCHES/LOCKS/LINKAGES:HATCHBACK/LIFTGATE:LOCK",
+    "summary": "Ford Motor Company (Ford) is recalling certain model year 2013-2017 Ford Focus hatchback vehicles manufactured February 14, 2012, to August 26, 2016 and equipped with a manual transmission.  The hatchback of the affected vehicles may be unlatched with a single press of the interior latch release button.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety S"
+   },
+   {
+    "id": "23V905000",
+    "part": "ENGINE AND ENGINE COOLING:ENGINE:OIL/LUBRICATION:PUMP",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2016-2018 Ford Focus and 2018-2022 Ford EcoSport vehicles.  The oil pump drive belt or drive belt tensioner may fail, resulting in a loss of engine oil pressure."
+   },
+   {
+    "id": "26V011000",
+    "part": "EQUIPMENT:ELECTRICAL:ENGINE BLOCK HEATER",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2013-2018 Focus, 2013-2019 Escape, and 2015-2016 MKC vehicles equipped with a 2.0L engine. The engine block heater may crack and develop a coolant leak, causing it to short circuit when the block heater is plugged in."
+   },
+   {
+    "id": "26V012000",
+    "part": "EQUIPMENT:ELECTRICAL:ENGINE BLOCK HEATER",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2016-2018 Focus, 2019 Explorer, and 2024 Explorer vehicles. The engine block heater may crack and develop a coolant leak, causing it to short circuit when the block heater is plugged in."
+   },
+   {
+    "id": "26V369000",
+    "part": "FUEL SYSTEM, GASOLINE:STORAGE:EVAPORATIVE EMISSIONS:CANISTER",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2012-2018 Focus vehicles previously repaired incorrectly under recall number 18V735. The Canister Purge Valve (CPV) may malfunction, causing the engine to stall unexpectedly while driving."
+   },
+   {
+    "id": "26V376000",
+    "part": "POWER TRAIN:MANUAL TRANSMISSION",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2015-2018 Focus and 2013-2016 Fusion vehicles previously repaired incorrectly under recall numbers 18V169 and 18V845. The clutch may fracture, resulting in damage to the transmission assembly and possibly a transmission fluid leak."
+   }
+  ],
+  "2018": [
+   {
+    "id": "18V735000",
+    "part": "FUEL SYSTEM, GASOLINE:STORAGE",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2012-2018 Ford Focus vehicles with a 2.0L GDI or 2.0L GTDI engine.  The Canister Purge Valve (CPV) may malfunction, possibly causing excessive vacuum in fuel vapor management system."
+   },
+   {
+    "id": "18V845000",
+    "part": "POWER TRAIN:MANUAL TRANSMISSION",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2016-2018 Ford Focus vehicles equipped with a 1.0L Fox GTDI engine and a 6-speed manual transmission.  The clutch may fracture, resulting in damage to the transmission assembly and possibly a transmission fluid leak."
+   },
+   {
+    "id": "23V905000",
+    "part": "ENGINE AND ENGINE COOLING:ENGINE:OIL/LUBRICATION:PUMP",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2016-2018 Ford Focus and 2018-2022 Ford EcoSport vehicles.  The oil pump drive belt or drive belt tensioner may fail, resulting in a loss of engine oil pressure."
+   },
+   {
+    "id": "26V011000",
+    "part": "EQUIPMENT:ELECTRICAL:ENGINE BLOCK HEATER",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2013-2018 Focus, 2013-2019 Escape, and 2015-2016 MKC vehicles equipped with a 2.0L engine. The engine block heater may crack and develop a coolant leak, causing it to short circuit when the block heater is plugged in."
+   },
+   {
+    "id": "26V012000",
+    "part": "EQUIPMENT:ELECTRICAL:ENGINE BLOCK HEATER",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2016-2018 Focus, 2019 Explorer, and 2024 Explorer vehicles. The engine block heater may crack and develop a coolant leak, causing it to short circuit when the block heater is plugged in."
+   },
+   {
+    "id": "26V369000",
+    "part": "FUEL SYSTEM, GASOLINE:STORAGE:EVAPORATIVE EMISSIONS:CANISTER",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2012-2018 Focus vehicles previously repaired incorrectly under recall number 18V735. The Canister Purge Valve (CPV) may malfunction, causing the engine to stall unexpectedly while driving."
+   },
+   {
+    "id": "26V376000",
+    "part": "POWER TRAIN:MANUAL TRANSMISSION",
+    "summary": "Ford Motor Company (Ford) is recalling certain 2015-2018 Focus and 2013-2016 Fusion vehicles previously repaired incorrectly under recall numbers 18V169 and 18V845. The clutch may fracture, resulting in damage to the transmission assembly and possibly a transmission fluid leak."
+   }
+  ]
+ },
+ "yt": {
+  "car-focus-rs": null
+ },
+ "scores": {}
+}
