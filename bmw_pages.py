@@ -349,6 +349,8 @@ else:
         groups = []
         groups.append(('engines', 'BMW engines', [card(ph['src'], ph['w'], ph['h'], ph['title'], ph['title'], p_, 'Engine page') for p_, ph in ours]))
         if globals().get('SCE_IMGS'): groups.append(('supercar-engines', 'Supercar and performance engines', [card(ph['src'], ph['w'], ph['h'], ph['title'], ph['title'], p_, 'Engine page') for p_, ph in SCE_IMGS]))   # 11-11 (supercar_engine_pages.py)
+        _ES = json.load(open('data/engine_soon_images.json', encoding='utf-8')) if os.path.exists('data/engine_soon_images.json') else {}   # 11-12 /engines/ coming-soon engines
+        if _ES: groups.append(('engines-coming-soon', 'More engines (pages coming soon)', [card(ph['src'], ph['w'], ph['h'], ph['title'], ph['title'], '/engines/?type=soon', 'All engines') for _k, ph in sorted(_ES.items())]))
         _pages = {f['id'] for f in YEARS}
         if YSL.AIM:
             groups.append(('models', 'Every car model', [card(m['src'], m['w'], m['h'], f'{m["year"]} {m["name"]} illustration', f'{m["year"]} {m["name"]}',
