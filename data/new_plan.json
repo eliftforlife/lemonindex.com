@@ -766,5 +766,120 @@
   "make": "FORD",
   "rx": "(EXCURSION)",
   "sales": {}
+ },
+ "mazda-cx-7": {
+  "name": "Mazda CX-7",
+  "brand": "Mazda",
+  "seg": "suv",
+  "make": "MAZDA",
+  "rx": "(CX\\-7)",
+  "sales": {
+   "gcbc": "mazda-cx-7"
+  }
+ },
+ "ford-five-hundred": {
+  "name": "Ford Five Hundred",
+  "brand": "Ford",
+  "seg": "car",
+  "make": "FORD",
+  "rx": "(FIVE\\ HUNDRED)",
+  "sales": {}
+ },
+ "dodge-neon": {
+  "name": "Dodge Neon",
+  "brand": "Dodge",
+  "seg": "car",
+  "make": "DODGE",
+  "rx": "(NEON|NEON\\ RT)",
+  "sales": {
+   "wiki": "Dodge Neon"
+  }
+ },
+ "scion-xb": {
+  "name": "Scion xB",
+  "brand": "Scion",
+  "seg": "car",
+  "make": "SCION",
+  "rx": "(XB)",
+  "sales": {
+   "wiki": "Scion xB"
+  }
+ },
+ "ford-crown-victoria": {
+  "name": "Ford Crown Victoria",
+  "brand": "Ford",
+  "seg": "car",
+  "make": "FORD",
+  "rx": "(CROWN\\ VICTORIA)",
+  "sales": {
+   "gcbc": "ford-crown-victoria"
+  }
+ },
+ "honda-passport": {
+  "name": "Honda Passport",
+  "brand": "Honda",
+  "seg": "suv",
+  "make": "HONDA",
+  "rx": "(PASSPORT)",
+  "sales": {
+   "wiki": "Honda Passport"
+  }
+ },
+ "lincoln-navigator": {
+  "name": "Lincoln Navigator",
+  "brand": "Lincoln",
+  "seg": "suv",
+  "make": "LINCOLN",
+  "rx": "(NAVIGATOR)",
+  "sales": {
+   "wiki": "Lincoln Navigator"
+  }
+ },
+ "lincoln-town-car": {
+  "name": "Lincoln Town Car",
+  "brand": "Lincoln",
+  "seg": "car",
+  "make": "LINCOLN",
+  "rx": "(TOWN\\ CAR)",
+  "sales": {}
+ },
+ "honda-prologue": {
+  "name": "Honda Prologue",
+  "brand": "Honda",
+  "seg": "suv",
+  "make": "HONDA",
+  "rx": "(PROLOGUE)",
+  "sales": {}
+ },
+ "subaru-wrx": {
+  "name": "Subaru WRX",
+  "brand": "Subaru",
+  "seg": "car",
+  "make": "SUBARU",
+  "rx": "(WRX|WRX\\ STI)",
+  "sales": {
+   "wiki": "Subaru WRX"
+  },
+  "dupe_of": "subaru-impreza"
+ },
+ "cadillac-deville": {
+  "name": "Cadillac DeVille",
+  "brand": "Cadillac",
+  "seg": "car",
+  "make": "CADILLAC",
+  "rx": "(DEVILLE)",
+  "sales": {
+   "gcbc": "cadillac-deville"
+  }
+ },
+ "volkswagen-cc": {
+  "name": "Volkswagen CC",
+  "brand": "Volkswagen",
+  "seg": "car",
+  "make": "VOLKSWAGEN",
+  "rx": "(CC)",
+  "sales": {
+   "wiki": "Volkswagen CC"
+  }
  }
 }

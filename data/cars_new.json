@@ -1528,5 +1528,245 @@
 "sales_url": "https://www.goodcarbadcar.net/mitsubishi-lancer-sales-figures/",
 "sales_kind": "calendar",
 "id": "mitsubishi-lancer"
+},
+{
+"name": "Mazda CX-7",
+"brand": "Mazda",
+"segment": "suv",
+"years": "2007-2011",
+"sold": 175807,
+"n": 280,
+"per100k": 159,
+"expected": 173.65754606630475,
+"li": 161,
+"serious": 11,
+"worst": "2007",
+"issues": [
+[
+"engine",
+58
+],
+[
+"equipment",
+11
+],
+[
+"transmission & drivetrain",
+10
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/mazda-cx-7-sales-figures/",
+"sales_kind": "calendar",
+"id": "mazda-cx-7"
+},
+{
+"name": "Dodge Neon",
+"brand": "Dodge",
+"segment": "car",
+"years": "2000-2005",
+"sold": 790951,
+"n": 617,
+"per100k": 78,
+"expected": 739.1873848285264,
+"li": 83,
+"serious": 39,
+"worst": "2000",
+"issues": [
+[
+"airbags",
+21
+],
+[
+"service brakes, hydraulic",
+19
+],
+[
+"electrical",
+18
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Dodge_Neon",
+"sales_kind": "calendar",
+"id": "dodge-neon"
+},
+{
+"name": "Scion xB",
+"brand": "Scion",
+"segment": "car",
+"years": "2004-2010",
+"sold": 306171,
+"n": 336,
+"per100k": 110,
+"expected": 255.26339112426209,
+"li": 132,
+"serious": 16,
+"worst": "2006",
+"issues": [
+[
+"visibility",
+56
+],
+[
+"service brakes, hydraulic",
+9
+],
+[
+"speed control",
+7
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Scion_xB",
+"sales_kind": "calendar",
+"id": "scion-xb"
+},
+{
+"name": "Ford Crown Victoria",
+"brand": "Ford",
+"segment": "car",
+"years": "2005-2011",
+"sold": 320782,
+"n": 85,
+"per100k": 26,
+"expected": 273.2898396585765,
+"li": 31,
+"serious": 21,
+"worst": "2009",
+"issues": [
+[
+"steering",
+22
+],
+[
+"fuel system, gasoline",
+19
+],
+[
+"transmission & drivetrain",
+18
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/ford-crown-victoria-sales-figures/",
+"sales_kind": "calendar",
+"id": "ford-crown-victoria"
+},
+{
+"name": "Honda Passport",
+"brand": "Honda",
+"segment": "suv",
+"years": "2019-2022",
+"sold": 170091,
+"n": 301,
+"per100k": 177,
+"expected": 177.81075003649843,
+"li": 169,
+"serious": 6,
+"worst": "2019",
+"issues": [
+[
+"automatic emergency braking",
+32
+],
+[
+"electrical",
+27
+],
+[
+"engine",
+15
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Honda_Passport",
+"sales_kind": "calendar",
+"id": "honda-passport"
+},
+{
+"name": "Lincoln Navigator",
+"brand": "Lincoln",
+"segment": "suv",
+"years": "2000-2007",
+"sold": 249276,
+"n": 235,
+"per100k": 94,
+"expected": 223.50836551375104,
+"li": 105,
+"serious": 18,
+"worst": "2003",
+"issues": [
+[
+"tires",
+22
+],
+[
+"electrical",
+13
+],
+[
+"transmission & drivetrain",
+11
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Lincoln_Navigator",
+"sales_kind": "calendar",
+"id": "lincoln-navigator"
+},
+{
+"name": "Cadillac DeVille",
+"brand": "Cadillac",
+"segment": "car",
+"years": "2000-2005",
+"sold": 475714,
+"n": 276,
+"per100k": 58,
+"expected": 456.5044055043572,
+"li": 60,
+"serious": 20,
+"worst": "2000",
+"issues": [
+[
+"engine",
+25
+],
+[
+"electrical",
+18
+],
+[
+"service brakes, hydraulic",
+11
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/cadillac-deville-sales-figures/",
+"sales_kind": "calendar",
+"id": "cadillac-deville"
+},
+{
+"name": "Volkswagen CC",
+"brand": "Volkswagen",
+"segment": "car",
+"years": "2011-2012",
+"sold": 51148,
+"n": 40,
+"per100k": 78,
+"expected": 58.39501497901407,
+"li": 68,
+"serious": 5,
+"worst": "2012",
+"issues": [
+[
+"steering",
+25
+],
+[
+"airbags",
+25
+],
+[
+"electrical",
+22
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Volkswagen_CC",
+"sales_kind": "calendar",
+"id": "volkswagen-cc"
 }
 ]

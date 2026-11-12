@@ -2353,5 +2353,307 @@
    2024,
    2025
   ]
+ },
+ {
+  "slug": "mazda-cx-7",
+  "sales": {
+   "2006": 22325,
+   "2007": 41659,
+   "2008": 26811,
+   "2009": 20583,
+   "2010": 28788,
+   "2011": 35641,
+   "2012": 11327
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/mazda-cx-7-sales-figures/",
+  "note": "GoodCarBadCar annual U.S. sales",
+  "flags": [
+   "Mazda CX-7 2006: 22,325 sold, 0 complaints in window -> sales merged into 2007"
+  ],
+  "complaints": 1133,
+  "scored": [
+   2007,
+   2008,
+   2009,
+   2010,
+   2011
+  ]
+ },
+ {
+  "slug": "ford-five-hundred",
+  "sales": {},
+  "kind": "none",
+  "url": "",
+  "note": "no sales source",
+  "flags": [
+   "Ford Five Hundred: 0 scorable model years / 0 complaints -> complaints only"
+  ],
+  "complaints": 1074,
+  "scored": []
+ },
+ {
+  "slug": "dodge-neon",
+  "sales": {
+   "1994": 178960,
+   "1995": 240189,
+   "1996": 245303,
+   "1997": 208652,
+   "1998": 196497,
+   "1999": 183797,
+   "2000": 163332,
+   "2001": 137353,
+   "2002": 126118,
+   "2003": 120101,
+   "2004": 113476,
+   "2005": 113332,
+   "2006": 17239
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Dodge_Neon",
+  "note": "col='United States'",
+  "flags": [
+   "Dodge Neon 2006: 17,239 sold, 0 complaints in window -> sales merged into 2005"
+  ],
+  "complaints": 1053,
+  "scored": [
+   2000,
+   2001,
+   2002,
+   2003,
+   2004,
+   2005
+  ]
+ },
+ {
+  "slug": "scion-xb",
+  "sales": {
+   "2003": 6936,
+   "2004": 47013,
+   "2005": 54037,
+   "2006": 61306,
+   "2007": 45834,
+   "2008": 45220,
+   "2009": 25461,
+   "2010": 20364,
+   "2011": 17017,
+   "2012": 19787,
+   "2013": 17849,
+   "2014": 16583,
+   "2015": 15223,
+   "2016": 2667
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Scion_xB",
+  "note": "col='US'",
+  "flags": [
+   "Scion xB 2003: 6,936 sold, 0 complaints in window -> sales merged into 2004",
+   "Scion xB 2007: 45,834 sold, 2 complaints in window -> sales merged into 2008",
+   "Scion xB 2016: 2,667 sold, 0 complaints in window -> sales merged into 2015"
+  ],
+  "complaints": 1048,
+  "scored": [
+   2004,
+   2005,
+   2006,
+   2008,
+   2009,
+   2010
+  ]
+ },
+ {
+  "slug": "ford-crown-victoria",
+  "sales": {
+   "2005": 63939,
+   "2006": 62976,
+   "2007": 60901,
+   "2008": 48557,
+   "2009": 33255,
+   "2010": 33722,
+   "2011": 46725,
+   "2012": 4429
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/ford-crown-victoria-sales-figures/",
+  "note": "GoodCarBadCar annual U.S. sales",
+  "flags": [
+   "Ford Crown Victoria 2012: 4,429 sold, 0 complaints in window -> sales merged into 2011",
+   "Ford Crown Victoria 2010: 33,722 sold but only 3 complaints in window -> not scored"
+  ],
+  "complaints": 1007,
+  "scored": [
+   2005,
+   2006,
+   2007,
+   2008,
+   2009,
+   2011
+  ]
+ },
+ {
+  "slug": "honda-passport",
+  "sales": {
+   "1993": 106,
+   "1994": 25758,
+   "1995": 27981,
+   "1996": 28184,
+   "1997": 22622,
+   "1998": 26094,
+   "1999": 22974,
+   "2000": 21892,
+   "2001": 17448,
+   "2002": 3525,
+   "2019": 36085,
+   "2020": 39567,
+   "2021": 53133,
+   "2022": 41306,
+   "2023": 40789,
+   "2024": 32527,
+   "2025": 55231
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Honda_Passport",
+  "note": "col='US'",
+  "flags": [],
+  "complaints": 957,
+  "scored": [
+   2000,
+   2019,
+   2020,
+   2021,
+   2022,
+   2023,
+   2024,
+   2025
+  ]
+ },
+ {
+  "slug": "lincoln-navigator",
+  "sales": {
+   "1997": 26834,
+   "1998": 43859,
+   "1999": 39250,
+   "2000": 37923,
+   "2001": 31759,
+   "2002": 30613,
+   "2003": 38742,
+   "2004": 36398,
+   "2005": 25844,
+   "2006": 23947,
+   "2007": 24050,
+   "2008": 14836,
+   "2009": 8057,
+   "2010": 8245,
+   "2011": 8018,
+   "2012": 8371,
+   "2013": 8613,
+   "2014": 10433,
+   "2015": 11964,
+   "2016": 10421,
+   "2017": 10523,
+   "2018": 17839,
+   "2019": 18656,
+   "2020": 15252,
+   "2021": 15631,
+   "2022": 13206,
+   "2023": 17549,
+   "2024": 15531,
+   "2025": 22185
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Lincoln_Navigator",
+  "note": "col='United States'",
+  "flags": [],
+  "complaints": 1030,
+  "scored": [
+   2000,
+   2001,
+   2002,
+   2003,
+   2004,
+   2005,
+   2006,
+   2007,
+   2025
+  ]
+ },
+ {
+  "slug": "lincoln-town-car",
+  "sales": {},
+  "kind": "none",
+  "url": "",
+  "note": "no sales source",
+  "flags": [
+   "Lincoln Town Car: 0 scorable model years / 0 complaints -> complaints only"
+  ],
+  "complaints": 1005,
+  "scored": []
+ },
+ {
+  "slug": "honda-prologue",
+  "sales": {},
+  "kind": "none",
+  "url": "",
+  "note": "no sales source",
+  "flags": [
+   "Honda Prologue: 0 scorable model years / 0 complaints -> complaints only"
+  ],
+  "complaints": 1006,
+  "scored": []
+ },
+ {
+  "slug": "cadillac-deville",
+  "sales": {
+   "1996": 103730,
+   "1997": 104743,
+   "1998": 102022,
+   "1999": 90755,
+   "2000": 105694,
+   "2001": 95354,
+   "2002": 84927,
+   "2003": 82076,
+   "2004": 68195,
+   "2005": 38661,
+   "2006": 807
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/cadillac-deville-sales-figures/",
+  "note": "GoodCarBadCar annual U.S. sales",
+  "flags": [
+   "Cadillac DeVille 2006: 807 sold, 0 complaints in window -> sales merged into 2005"
+  ],
+  "complaints": 982,
+  "scored": [
+   2000,
+   2001,
+   2002,
+   2003,
+   2004,
+   2005
+  ]
+ },
+ {
+  "slug": "volkswagen-cc",
+  "sales": {
+   "2011": 29502,
+   "2012": 21646,
+   "2013": 15672,
+   "2014": 9995,
+   "2015": 6276,
+   "2016": 3237,
+   "2017": 1355,
+   "2018": 455
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Volkswagen_CC",
+  "note": "col='United States (sales)'",
+  "flags": [
+   "Volkswagen CC 2018: 455 sold, 0 complaints in window -> sales merged into 2017"
+  ],
+  "complaints": 983,
+  "scored": [
+   2011,
+   2012
+  ]
  }
 ]
