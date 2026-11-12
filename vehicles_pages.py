@@ -144,13 +144,93 @@ _SCEU = lambda e: '/engines/' + {'rr-n73': 'rolls-royce-n73', 'rr-n74': 'rolls-r
 def _sce_links(slug, y):
     es = [e for e, yl in (_SCE['cars'].get(slug) or {}).items() if y in yl]
     return ''.join(f' · <a href="{_SCEU(e)}">{E(_SCE["engines"][e]["code"])}</a>' for e in es)
-def _sce_section(slug, name):
+# 11-12 (Elijah on the NSX: the engine was a bare text link and the Specs tab looked empty): every engine is an image card that links to its
+# page (no confirmed engine yet = the same card, muted, "Coming soon"), and the tab opens with spec cards in the M3 page's style, built only
+# from data we hold: factory hp from each engine's sources, EPA versions, drive and mpg. No 0-60 / top speed / weight until a tested source exists.
+_SCP = _load('data/supercar_engine_photos.json') if os.path.exists('data/supercar_engine_photos.json') else {}
+_yr = lambda ys: f'{min(ys)}' + (f'–{max(ys)}' if max(ys) != min(ys) else '')
+_DRVM = {'all-wheel drive': 'AWD', 'rear-wheel drive': 'RWD', 'front-wheel drive': 'FWD', '4-wheel drive': '4WD', 'part-time 4-wheel drive': '4WD'}
+_DRV = lambda d: _DRVM.get(d.strip().lower(), d.strip())
+_EIC = ('<svg aria-hidden="true" viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">'
+        '<path d="M4 10h2V8h3V6h6v2h2l2 3h1v5h-1l-2 3h-6l-2-2H9v-3H6v2H4z"/></svg>')
+def _ecard(href, name, spec, years, ph=None, soon=False):
+    """One engine card: illustration (640 px copy, lazy), name, spec line, years. The whole card links to the engine page; soon = muted, no link."""
+    im = ''
+    if ph:
+        th = ph['src'][:-5] + '-640.webp'
+        src, w, h = (th, 640, round(ph['h'] * 640 / ph['w'])) if os.path.exists(th.lstrip('/')) else (ph['src'], ph['w'], ph['h'])
+        alt = re.sub(r'\s*\(illustration\)$', '', html.unescape(ph.get('title') or name)) + ', illustration'
+        im = f'<img src="{E(src)}" alt="{E(alt)}" width="{w}" height="{h}" loading="lazy" decoding="async">'
+    inner = (f'<span class="ecard-i{"" if im else " ecard-ni"}">{im or (_EIC + ("" if soon else _ENI))}</span><span class="ecard-t"><b>{E(name)}</b><small>{E(spec)}</small>'
+             f'<small class="ecard-y">{E(years)}</small>' + ('<span class="ecard-s">Coming soon</span>' if soon else '') + '</span>')
+    return f'<div class="ecard ecard-soon" aria-disabled="true">{inner}</div>' if soon else f'<a class="ecard" href="{E(href)}">{inner}</a>'
+def _sce_map(slug, c):
+    """[(engine id or None, years)] for the car, oldest first; None = model years with a version no source ties to an engine yet"""
     es = sorted((_SCE['cars'].get(slug) or {}).items(), key=lambda kv: min(kv[1]))
+    cov = {y for _, yl in es for y in yl}
+    un = sorted(y['y'] for y in c['years'] if y['y'] not in cov)
+    return es + ([(None, un)] if un else [])
+_ENI = '<span class="ecard-nt">No illustration yet</span>'
+def _sce_section(slug, name, c):
+    es = _sce_map(slug, c)
     if not es: return ''
-    li = ''.join(f'<li><a href="{_SCEU(e)}"><b>{E(_SCE["engines"][e]["name"])}</b></a> <small>{E(_SCE["engines"][e]["size"])} {E(_SCE["engines"][e]["layout"])} {E(_SCE["engines"][e]["asp"])} · '
-                 f'{min(yl)}' + (f'–{max(yl)}' if max(yl) != min(yl) else '') + '</small></li>' for e, yl in es)
-    return (f'<section class="yc" id="engines"><h2>Engines <span class="h2s">{len(es)} engine{"" if len(es) == 1 else "s"} in the {E(name)}, each with its own page: YouTube score by year, recalls and repair notes.</span></h2>'
-            f'<ul class="sce-el">{li}</ul><p><a class="btn" href="/engines/supercars/">Every supercar engine →</a></p></section>')
+    cards = []
+    for e, yl in sorted(es, key=lambda kv: (kv[0] is not None, max(kv[1])), reverse=True):   # newest first, like the spec cards; unconfirmed last
+        if e is None:   # EPA's own engine line for the years no source ties to an engine
+            ys = [y for y in c['years'] if y['y'] in yl]; t = sorted({t for y in ys for t in y['engines']})
+            cards.append(_ecard('', ', '.join(t).replace('-cyl', '-cylinder') + (' hybrid' if any(y['hybrid'] for y in ys) else ''), 'Engine not confirmed by a source yet', _yr(yl), soon=True)); continue
+        d = _SCE['engines'][e]
+        cards.append(_ecard(_SCEU(e), html.unescape(d['name']), html.unescape(f'{d["size"]} {d["layout"]} {d["asp"]}'), _yr(yl), _SCP.get(e)))
+    n = sum(1 for e, _ in es if e)
+    return (f'<section class="yc" id="engines"><h2>Engines <span class="h2s">{n} engine{"" if n == 1 else "s"} in the {E(name)}. Tap one for its YouTube score by year, recalls and repair notes.</span></h2>'
+            f'<div class="ecards">{"".join(cards)}</div><p><a class="btn" href="/engines/supercars/">Every supercar engine →</a></p></section>')
+def _scs_specs(slug, c):
+    """Spec cards, one per engine era of this car (the M3 page's look): factory hp, engine, drive, EPA mpg, where it's built.
+    Returns (html, hero tiles). Drive and mpg only come from model years with one engine, so a card never shows another engine's numbers."""
+    es = _sce_map(slug, c); Y = {y['y']: y for y in c['years']}; srcs = {}
+    unc = set(_SCE.get('unconfirmed') or [])   # a covered year that also has an unconfirmed version counts as two engines
+    per = {y: sum(1 for _, yl in es if y in yl) + (1 if f'{c["name"]} {y}' in unc and any(y in yl for e, yl in es if e) else 0) for y in Y}
+    cards = []
+    for e, yl in es:
+        d = _SCE['engines'][e] if e else None
+        names = {}
+        for y in yl:
+            for v in (((d['years'].get(str(y)) or {}).get('cars') or {}).get(slug, []) if d else Y[y]['names']): names[v.lower()] = v
+        nm = list(names.values()); title = (' · '.join(nm[:3]) + (f' +{len(nm) - 3} more' if len(nm) > 3 else '')) if nm else c['name']
+        one = [Y[y] for y in yl if per.get(y) == 1 and y in Y]
+        rows = []
+        if d: rows.append(('Engine', f'<a href="{_SCEU(e)}">{E(html.unescape(d["name"]))}</a>', html.unescape(f'{d["size"]} {d["layout"]} {d["asp"]}')))
+        else: rows.append(('Engine', E(', '.join(sorted({t.replace('-cyl', '-cylinder') for y in yl for t in Y[y]['engines']}))), 'EPA listing; no source names the engine yet'))
+        drv = sorted({_DRV(x) for y in one for x in y.get('drive') or []})
+        if drv: rows.append(('Drive', E(' or '.join(drv)), 'EPA'))
+        if one:
+            rg = lambda k: (min(y[k][0] for y in one), max(y[k][1] for y in one)) if all(y.get(k) for y in one) else None
+            ct, hw = rg('city'), rg('hwy')
+            rows.append(('Fuel economy', f'{rng2(rg("comb"))} mpg combined', f'{rng2(ct)} city · {rng2(hw)} highway (EPA)' if ct and hw else 'EPA'))
+        if d and d.get('made'): rows.append(('Built', E(html.unescape(d['made'])[:1].upper() + html.unescape(d['made'])[1:]), ''))
+        big = ''
+        if d and d.get('hp'):
+            solo = all(x['slug'] == slug and not x.get('perf') for x in d['cars'])
+            pl = 's' if d['hp'][0] != d['hp'][1] else ''
+            note = '; '.join(x for x in ((html.unescape(d['hp_note']) if d.get('hp_note') else ''), ('' if solo else f'range across every car with the {html.unescape(d["code"])}')) if x)
+            big = f'<p class="scs-hp"><b>{rng2(d["hp"])}</b> hp<small>Factory figure{pl}' + (f', {E(note)}' if note else '') + '</small></p>'
+            for s in d.get('src') or []: srcs.setdefault(s['url'], s['title'])
+        dl = ''.join(f'<div class="scs-r"><dt>{k}</dt><dd>{v}' + (f'<small>{E(n)}</small>' if n else '') + '</dd></div>' for k, v, n in rows)
+        cards.append(((d is not None, max(yl)), f'<article class="scs-c{"" if d else " scs-nc"}"><header><h3>{E(title)}</h3><span>{_yr(yl)}</span></header>{big}<dl>{dl}</dl></article>'))
+    cards = [h for _, h in sorted(cards, key=lambda x: x[0], reverse=True)]   # confirmed engines first, newest first like the year table
+    srcs['https://www.fueleconomy.gov/'] = 'EPA fueleconomy.gov: versions, drive and mpg'
+    fold = '<details class="scs-src"><summary>Sources</summary><ol>' + ''.join(f'<li><a href="{E(u)}" rel="noopener">{E(t)}</a></li>' for u, t in srcs.items()) + '</ol></details>'
+    body = (f'<section class="yc scs" id="specs"><h2>Specs <span class="h2s">Factory power from each engine&#39;s sources, everything else from the EPA.</span></h2>'
+            f'<div class="scs-g">{"".join(cards)}</div><p class="scs-soon">0–60 and top speed: coming soon. We only show times from a published test.</p>{fold}</section>')
+    # hero tiles: lead with power and the engine (11-11 lemon-performance-section), from the newest engine era
+    last = next((e for e, yl in sorted(es, key=lambda kv: -max(kv[1])) if e), None)
+    tiles = []
+    if last:
+        d = _SCE['engines'][last]; solo = all(x['slug'] == slug and not x.get('perf') for x in d['cars'])
+        if d.get('hp') and solo: tiles.append((f'{d["hp"][1]:,} hp', f'factory, {d["hp"][0]:,} to {d["hp"][1]:,}' if d['hp'][0] != d['hp'][1] else 'factory figure'))
+        size = re.sub(r'\s*\(.*?\)', '', d['size'])
+        tiles.append((html.unescape(re.sub(r'^\d+°\s*', '', d['layout'].split(',')[0])), html.unescape(f'{size} {d["asp"]} · {d["code"]}')))
+    return body, tiles
 if SC:
     for c in SC:
         slug = slugify(c['name']); c['slug'] = slug; ph = vph(c['name']); ys = c['years']; last = ys[-1]
@@ -159,14 +239,18 @@ if SC:
         allrec = sorted({r['id']: dict(r, y=y['y']) for y in ys for r in y['recalls']}.values(), key=lambda r: r['date'][-4:] if r['date'] else '', reverse=True)
         rc = ''.join(f'<li><b>{E((r["part"] or "").split(":")[0].title())}</b> <small>{r["y"]} model · {E(r["id"])}</small><p>{E(rsum(r))}</p></li>' for r in allrec[:4])
         more = ''.join(f'<li><b>{E((r["part"] or "").split(":")[0].title())}</b> <small>{r["y"]} model · {E(r["id"])}</small><p>{E(rsum(r))}</p></li>' for r in allrec[4:])
-        recs = (f'<section class="yc" id="recalls"><h2>Recalls <span class="yc-n">{len(allrec)}</span></h2>' + (f'<ul class="rc">{rc}</ul>' + (f'<details><summary>Show all {len(allrec)}</summary><ul class="rc">{more}</ul></details>' if more else '') if allrec else '<p>No NHTSA recalls on record for these model years.</p>') + '</section>')
+        recs = (f'<section class="yc" id="recalls"><h2>Recalls <span class="yc-n">{len(allrec)}</span></h2>' + (f'<ul class="rc">{rc}</ul>' + (f'<details><summary>Show all {len(allrec)}</summary><ul class="rc">{more}</ul></details>' if more else '') if allrec else '<p>No NHTSA recalls on record for these model years.</p>')
+                + '<p class="yc-cap">Recall repairs are free at any dealer. Check a specific car&#39;s VIN at <a href="https://www.nhtsa.gov/recalls" rel="noopener">nhtsa.gov/recalls</a> or with our <a href="/vin/">VIN check</a>.</p></section>')
+        specs, tiles = _scs_specs(slug, c)
+        tl = [stat(E(v), E(s)) for v, s in tiles] + [stat(rng2(last["comb"], "", " mpg"), f'combined, {last["y"]} (EPA)'), stat(str(c["recalls"]), 'recalls, all years', 'bad' if c['recalls'] >= 8 else ''),
+                                                    stat(rng2(last["cost"], "$"), f'fuel a year, {last["y"]} (EPA)', 'bad' if last['cost'][1] >= 5000 else '')]
         body = f'''<div class="pg mp6"><section class="ph yph6"><div class="yh-t"><p class="ph-e"><a href="/supercars/">Supercars</a> · {E(c["make"])}</p><h1>{E(c["name"])}.</h1>
-<p class="ph-s">Fuel economy, fuel cost and recalls, {ys[0]["y"]} to {last["y"]}.</p></div><div class="ph-v">{pimg(ph, valt(ph, c["name"])) if ph else ""}{vcredit(ph)}</div></section>
-<div class="yts">{stat(rng2(last["comb"], "", " mpg"), f'combined, {last["y"]} (EPA)')}{stat(rng2(last["cost"], "$"), f'fuel a year, {last["y"]} (EPA)', 'bad' if last['cost'][1] >= 5000 else '')}{stat(str(c["recalls"]), 'recalls, all years', 'bad' if c['recalls'] >= 8 else '')}{stat("Yes" if last["guzzler"] else "No", 'gas-guzzler tax')}</div>{ytfix('super:' + slug)}
+<p class="ph-s">Power, engine, fuel economy and recalls, {ys[0]["y"]} to {last["y"]}.</p></div><div class="ph-v">{pimg(ph, valt(ph, c["name"])) if ph else ""}{vcredit(ph)}</div></section>
+<div class="yts">{"".join(tl[:3])}</div>{ytfix('super:' + slug)}
 <section class="yc"><h2>Every year. <span class="h2s">EPA numbers across the versions sold that year.</span></h2><div class="tw"><table><thead><tr><th>Year</th><th>MPG</th><th>Fuel / yr</th><th>Engine</th><th>Guzzler tax</th><th>Recalls</th></tr></thead><tbody>{rows}</tbody></table></div>
 <p class="yc-cap">EPA yearly fuel cost assumes 15,000 miles at national average prices. The gas-guzzler tax is a federal tax paid on new cars that use a lot of fuel.</p></section>
-{_sce_section(slug, c["name"])}{recs}
-<p class="yc-cap" style="text-align:center">Sources: EPA fueleconomy.gov and NHTSA recalls. 0–60 and top-speed specs coming soon. <a href="/supercars/">Every supercar</a></p></div>'''
+{specs}{_sce_section(slug, c["name"], c)}{recs}
+<p class="yc-cap" style="text-align:center">Sources: EPA fueleconomy.gov, NHTSA recalls and each engine&#39;s sources (Specs tab). <a href="/supercars/">Every supercar</a></p></div>'''
         page(f'/supercars/{slug}/', f'{c["name"]} MPG, Fuel Cost & Recalls by Year | The Lemon Index',
              f'{c["name"]} by model year ({ys[0]["y"]}-{last["y"]}): EPA {rng2(last["comb"])} mpg, up to ${last["cost"][1]:,} a year in fuel, {c["recalls"]} NHTSA recalls.', body,
              ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": f'{c["name"]} fuel economy and recalls', "url": BASE + f'/supercars/{slug}/'}] + vld(ph, f'/supercars/{slug}/'))
