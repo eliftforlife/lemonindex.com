@@ -1767,3 +1767,33 @@ a.aec:hover { transform: translateY(-3px); }
 .aec-f { position: absolute; left: 6px; top: 6px; z-index: 2; padding: 3px 8px; border-radius: 999px; background: rgba(255,255,255,.92); color: #3c4043; font-size: 11px; font-weight: 700; letter-spacing: .01em; box-shadow: 0 0 0 .5px rgba(0,0,0,.08); }
 .aec-f-diesel { color: #8a5a00; } .aec-f-hybrid { color: #137a3a; } .aec-f-electric { color: #0a66c2; }
 @media (max-width: 600px) { .aefuel { gap: 6px; margin: -8px auto 22px; } .aefuel a { min-height: 34px; padding: 0 11px; font-size: 13.5px; } }
+
+/* 11-12 search v2 (usability tests): the search box at the top of the menu (gh_header GH_SEARCH + lookup.js), list/code/problem rows in the suggestions */
+header.gh.wide .gh-sheet .gh-q, .gh-sheet .gh-q { grid-column: 1 / -1; margin: 2px 0 12px; }
+.gh-q .gh-qb { position: relative; }
+.gh-q #ghq { width: 100%; box-sizing: border-box; font: inherit; font-size: 16px; line-height: 1.3; padding: 11px 14px; min-height: 46px; border: 1.5px solid #c7c7cc; border-radius: 12px; background: #fff; color: var(--ink); }
+.gh-q #ghq:focus { outline: 3px solid var(--lemon); outline-offset: 1px; border-color: var(--ink); }
+.gh-q .fsug { position: static; margin-top: 6px; box-shadow: none; }
+header.gh.wide .gh-sheet .gh-q .fsug a, .gh-sheet .gh-q .fsug a { display: grid; gap: 2px; min-height: 0; padding: 10px 14px; font-size: 15px; font-weight: 400; letter-spacing: 0; line-height: 1.3; opacity: 1; transform: none; transition: none; color: var(--ink); }
+.gh-sheet .gh-q .fsug a b { font-size: 15px; font-weight: 700; }
+.gh-sheet .gh-q .fsug a small { font-size: 12.5px; }
+.gh-q .fmiss { margin: 6px 0 0; text-align: left; font-size: 13px; }
+.fsug a.fgo { background: #fffbe6; }
+.fsug a.fgo.on, .fsug a.fgo:hover { background: var(--lemon-soft); }
+/* 11-12 /best/safest-cars-for-teens/: each model's other qualifying years as chips */
+.tn-how { max-width: 760px; margin: 0 0 18px; font-size: 14.5px; line-height: 1.5; color: var(--ink2); }
+.tn-ys { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.tn-y { display: inline-flex; align-items: center; gap: 6px; min-height: 32px; padding: 3px 10px; border-radius: 999px; border: 1px solid var(--line); background: #fff; color: var(--ink); font-size: 12.5px; text-decoration: none; }
+.tn-y:hover { border-color: #c7c7cc; }
+.tn-y span { color: #6e6e73; }
+.tn-y i { font-style: normal; font-weight: 700; font-variant-numeric: tabular-nums; }
+.tn-y i.good { color: var(--good); } .tn-y i.bad { color: var(--red); }
+/* 11-12 /about/ + /press/ */
+.abp .ab-l { margin: 0 0 12px; padding-left: 20px; line-height: 1.55; }
+.abp .ab-l li { margin: 4px 0; }
+.abp .stt.prs { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 8px; margin: 6px 0 14px; }
+.abp .stt.prs > div { background: #f5f5f7; border-radius: 16px; padding: 14px; display: grid; gap: 3px; align-content: start; }
+.abp .stt.prs b { font-size: 26px; font-weight: 800; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.abp .stt.prs span { font-size: 14px; font-weight: 600; }
+.abp .stt.prs small { font-size: 12.5px; line-height: 1.4; color: #6e6e73; }
+@media (max-width: 600px) { .abp .stt.prs { grid-template-columns: minmax(0, 1fr); } }

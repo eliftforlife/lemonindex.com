@@ -1,6 +1,26 @@
 # Best-of and statistics pages (11-06, SEO plan). Run by build.py with exec(). Every number comes from our own data; nothing here is hand-typed.
 SEO_URLS = []
 YT_SRC = r'C:\Users\elift\Desktop\Eliftforlife youtube\3 Lemon Index\data\yt'
+exec(open('teen_page.py', encoding='utf-8').read())   # 11-12 /best/safest-cars-for-teens/ (sets TEEN_CARD for the /best/ hub below)
+# 11-12 (Linda: the under-$10K list showed "–" for the Miata and Silverado): buyer-guide names ("Chevy Silverado", "VW Golf / GTI",
+# "Ford F-150") resolve to our model, its score and its live page; a model we don't score still links its page and says why there's no score
+def _bu_pages():
+    L = [(f['name'], car_href(f['id']) or f'/cars/{f["id"]}/') for f in YEARS]
+    for p_ in __import__('glob').glob('data/perf/*.json'):
+        if not p_.endswith('.auto.json'):
+            d_ = _load(p_); L.append((d_['name'], d_.get('page') or f'/cars/{d_["slug"]}/'))
+    for f_ in ('data/extra_models.json', 'data/extra_models_new.json'):
+        for m in (_load(f_) if os.path.exists(f_) else {}).values(): L.append((m['name'], f'/cars/{m["id"]}/'))
+    L += [(c['name'], f'/electric/{c["slug"]}/') for c in EVX]
+    return L
+_BU_PAGES = _bu_pages()
+def bu_resolve(model):
+    nm = re.sub(r'^VW ', 'Volkswagen ', re.sub(r'^Chevy ', 'Chevrolet ', model)).split(' / ')[0].strip()
+    nm = {'Ford F-150': 'Ford F-Series'}.get(nm, nm)
+    c = BYNAME.get(nm)
+    if c: return c, car_href(c['id'])
+    tk = set(re.findall(r'[a-z0-9]+', nm.lower()))
+    return None, next((u for n_, u in _BU_PAGES if tk <= set(re.findall(r'[a-z0-9]+', n_.lower()))), '')
 def _seo_pages():
     PAGEID = {c['name']: c['id'] for c in CARS}; HAS = {f['id'] for f in YEARS}
     def carlink(c): return f'<a href="/cars/{c["id"]}/">{E(c["name"])}</a>' if c['id'] in HAS else E(c['name'])
@@ -23,12 +43,26 @@ def _seo_pages():
         p = os.path.join(YT_SRC, f'best-used-{k}', 'consensus.json')
         if not os.path.exists(p): continue
         d = json.load(open(p, encoding='utf-8')); R = []
+        py_ = os.path.join(YT_SRC, f'best-used-{k}', 'years.json'); YRS = json.load(open(py_, encoding='utf-8')) if os.path.exists(py_) else {}
         for r in d['ranking'][:20]:
-            c = BYNAME.get(r['model']); R.append((r, c))
-        lis = '<ol class="bestl bl2">' + ''.join(f'<li><span class="rk">{i}</span>{bimg(c["id"] if c else None, r["model"])}<div><b>{carlink(c) if c else E(r["model"])}</b><small>{r["videos"]} of {d["videos"]} videos</small></div><span class="sc {tier(c["li"]) if c else ""}">{c["li"] if c else "–"}</span></li>' for i, (r, c) in enumerate(R[:15], 1)) + '</ol>'
+            c, u = bu_resolve(r['model']); R.append((r, c, u))
+        R = R[:15]   # 11-12 (Linda): the intro only names cars that are in the list
+        def span(r):   # the model years the videos named most often for this budget (data/yt/best-used-<k>/years.json)
+            sp = (YRS.get(r['model']) or {}).get('spans') or []
+            if sp: s_, n_ = max(sp, key=lambda x: x[1]); return f'{s_.replace("-", "–")} ({n_} video{"s" if n_ > 1 else ""})'
+            ys_ = (YRS.get(r['model']) or {}).get('years') or []
+            return ', '.join(y_ for y_, _ in sorted(ys_, key=lambda x: -x[1])[:2]) if ys_ else ''
+        def bu_row(i, r, c, u):
+            nm = c['name'] if c else r['model']; sp = span(r)
+            link = f'<a href="{u}">{E(nm)}</a>' if u else E(nm)
+            why = '' if c else (' · No Lemon Index yet: see its problems and recalls' if u else ' · No Lemon Index: we don&#39;t cover this model yet')
+            return (f'<li><span class="rk">{i}</span>{bimg(c["id"] if c else None, nm)}<div><b>{link}</b><small>{("Years picked most: " + sp + " · ") if sp else ""}{r["videos"]} of {d["videos"]} videos{why}</small></div>'
+                    f'<span class="sc {tier(c["li"]) if c else ""}">{c["li"] if c else "–"}</span></li>')
+        lis = '<ol class="bestl bl2">' + ''.join(bu_row(i, r, c, u) for i, (r, c, u) in enumerate(R, 1)) + '</ol>'
         safe = sorted([x for x in R if x[1] and x[1]['li'] < 100], key=lambda x: x[1]['li'])[:3]
-        lede = f'In {d["videos"]} YouTube videos on the best used cars under {label}, the most-picked are the {R[0][0]["model"]}, {R[1][0]["model"]} and {R[2][0]["model"]}.' + (f' Among the top picks, the {safe[0][0]["model"]} has the fewest owner complaints.' if safe else '')
-        body = f'<div class="advp"><header class="advh1"><p class="ph-e"><a href="/best/">Best cars</a></p><h1>Best used cars under {label}.</h1><p class="ans">{E(lede)}</p></header><div class="ygrid"><section class="yc"><h2>What buyers&#39; guides pick, with complaint scores</h2>{lis}<p class="yc-cap">Right column: Lemon Index, where 100 is the average car and lower is better. A dash means we don&#39;t score that model.</p></section></div><p class="yc-cap">Picks come from {d["videos"]} YouTube videos with {d["views"] / 1e6:.1f}M views. A pick counts when the model is in the title or named in the video. Check the exact model year before you buy.</p></div>'
+        nm3 = [x[1]['name'] if x[1] else x[0]['model'] for x in R[:3]]
+        lede = f'In {d["videos"]} YouTube videos on the best used cars under {label}, the most-picked are the {nm3[0]}, {nm3[1]} and {nm3[2]}.' + (f' Of the {len(R)} picks below, the {safe[0][1]["name"]} has the fewest owner complaints.' if safe else '')
+        body = f'<div class="advp"><header class="advh1"><p class="ph-e"><a href="/best/">Best cars</a></p><h1>Best used cars under {label}.</h1><p class="ans">{E(lede)}</p></header><div class="ygrid"><section class="yc"><h2>What buyers&#39; guides pick, with complaint scores</h2>{lis}<p class="yc-cap">Right column: the model&#39;s Lemon Index (model years 2010 to 2022), where 100 is the average car and lower is better. A dash means we don&#39;t score that model yet. &#34;Years picked most&#34; = the model-year range the most videos named for this budget; open the car for each year&#39;s own score.</p></section></div><p class="yc-cap">Picks come from {d["videos"]} YouTube videos with {d["views"] / 1e6:.1f}M views. A pick counts when the model is in the title or named in the video. These are buyer-guide picks, not prices: check the exact model year and price before you buy. Shopping for a new driver? See the <a href="/best/safest-cars-for-teens/">safest used cars for teens</a>.</p></div>'
         body += share_line(f'Best used cars under {label}: what {d["videos"]} buyer guide videos pick, with complaint scores. Free:', 'Know someone shopping on a budget?')
         page(f'/best/used-cars-under-{k[:-1]}000/', f'Best Used Cars Under {label}: What {d["videos"]} Videos Pick | The Lemon Index', lede, body); SEO_URLS.append(f'/best/used-cars-under-{k[:-1]}000/'); cards.append((f'/best/used-cars-under-{k[:-1]}000/', f'Best used cars under {label}'))
     if GAP:
@@ -52,6 +86,7 @@ def _seo_pages():
         lead['/best/suvs-gas-mileage/'] = next((m['id'] for m in sorted([m for m in GAP['mpg'] if segof.get(m['id']) == 'suv'], key=lambda m: -m['comb'])), None)
         lead['/best-gas-mileage/'] = GAP['mpg'][0]['id']; lead['/check-engine-light/'] = GAP['cel'][0]['id']
     allc = cards + [('/best-gas-mileage/', 'Best gas mileage'), ('/check-engine-light/', 'Which cars get the check engine light most')]
+    if TEEN_CARD: allc.insert(0, TEEN_CARD[:2]); lead[TEEN_CARD[0]] = TEEN_CARD[2]   # 11-12: the teen list first (Linda)
     def _bc(u, t):
         ph = aph(lead[u]) if lead.get(u) else None
         im = f'<span class="bcp"><img src="{ph["src"]}" alt="" width="{ph["w"]}" height="{ph["h"]}" loading="lazy" decoding="async"></span>' if ph else '<span class="bcp"></span>'
@@ -89,7 +124,7 @@ def _seo_pages():
     sysr = [(E(PART.get(k, k.lower())).capitalize(), v, f'{v / all_c * 100:.0f}%', '') for k, v in tc]
     brr = [(E(r['brand']), int(r['lemon_index']), r['lemon_index'], 'good' if int(r['lemon_index']) < 90 else 'bad' if int(r['lemon_index']) > 110 else '') for r in br]
     pm = popular[:5] + popular[-5:]
-    pmr = [(f'<a href="/cars/{c["id"]}/">{E(c["name"])}</a>', c['li'], str(c['li']), 'good' if c['li'] < 90 else 'bad' if c['li'] > 110 else '') for c in pm]
+    pmr = [(f'<a href="{car_href(c["id"])}">{E(c["name"])}</a>' if car_href(c['id']) else E(c['name']), c['li'], str(c['li']), 'good' if c['li'] < 90 else 'bad' if c['li'] > 110 else '') for c in pm]
     body = (f'<div class="advp stp"><header class="advh1"><p class="ph-e"><a href="/">The Lemon Index</a></p><h1>Car complaint statistics.</h1><p class="ans">{E(lede)}</p></header>{tiles}'
             '<section class="yc"><h2>Most complained-about systems</h2>' + hbar(sysr, max(v for _, v, _, _ in sysr)) + '<p class="yc-cap">Share of complaints, model years 2010 to 2022. One complaint can name several systems.</p></section>'
             '<section class="yc"><h2>Brands, by Lemon Index</h2>' + hbar(brr, max(130, max(v for _, v, _, _ in brr)) * 1.05, 100) + '<p class="yc-cap">Complaints per car sold against the average car. 100 (the line) is average, lower is better.</p></section>'

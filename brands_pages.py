@@ -39,9 +39,10 @@ for b, (rk, li) in brank.items():
     top = max(ms, key=lambda c: c['sold']); ph = aph(top['id'])   # 11-10 (Elijah: 'update brands car images'): AI illustrations first, Commons only where none
     cls, word = _verdict(li); est = b in ('Tesla', 'Porsche')
     def mc(c):
-        p = aph(c['id']); href = f'/cars/{c["id"]}/' if c['id'] in FY else f'/electric/{c["id"]}/'
-        return (f'<a class="mc" href="{href}"><span class="mc-p">{pimg(p, c["name"]) if p else ""}</span><b>{E(c["name"].split(" ", 1)[1] if " " in c["name"] else c["name"])}</b>'
-                f'<span class="{"good" if c["li"] < 100 else "bad"}">{c["li"]}</span></a>')
+        p = aph(c['id']); href = car_href(c['id'])   # 11-12: /cars/ page, else the EV page, else no link (was a 404 for the Porsche Cayenne)
+        tag = f'a class="mc" href="{href}"' if href else 'div class="mc"'
+        return (f'<{tag}><span class="mc-p">{pimg(p, c["name"]) if p else ""}</span><b>{E(c["name"].split(" ", 1)[1] if " " in c["name"] else c["name"])}</b>'
+                f'<span class="{"good" if c["li"] < 100 else "bad"}">{c["li"]}</span></{tag.split()[0]}>')
     best, worst = ms[0], ms[-1]
     two = '' if len(ms) < 2 else (f'<section class="tiles">'
         + ''.join(f'<a class="tile" href="/cars/{c["id"]}/"><div class="tt"><p class="te">{lab}</p><h2>{E(c["name"].split(" ", 1)[-1])}.</h2><p class="ts">{E(plain(c["li"]))}.</p>'
@@ -50,7 +51,7 @@ for b, (rk, li) in brank.items():
     body = f'''<div class="pg mp6"><section class="ph yph6"><div class="yh-t"><p class="ph-e"><a href="/brands/">Brands</a> · #{rk} of {len(brank)}</p><h1>{E(b)}.</h1>
 <p class="ph-s">Every {E(b)} model, ranked by owner complaints per car sold.</p>
 <div class="yhero">{gauge(li, 190)}<div class="yverd {cls}"><p><b>{word}.</b> <span>All {E(b)} models, 2010–2022{"" if plain(li).lower() in word.lower() else ": " + E(plain(li))}.</span></p>
-<p class="ybw">Best <a class="good" href="/cars/{best["id"]}/">{E(best["name"])}</a>{f' · Worst <a class="bad" href="/cars/{worst["id"]}/">{E(worst["name"])}</a>' if worst is not best else ''}</p></div></div></div>
+<p class="ybw">Best <a class="good" href="{car_href(best["id"]) or "/brands/"}">{E(best["name"])}</a>{f' · Worst <a class="bad" href="{car_href(worst["id"]) or "/brands/"}">{E(worst["name"])}</a>' if worst is not best else ''}</p></div></div></div>
 <div class="ph-v">{YSL.model_hero_html(top['id'], top['name']) if ph and ph.get('ai') else pimg(ph, top["name"]) + pcredit(who(ph))}</div></section>
 {warranty_html(b)}
 <section><h2>Every {E(b)}, ranked. <span class="h2s">Lower is better. 100 is the average car.</span></h2><div class="mbs"><div class="mb"><div class="mg">{"".join(mc(c) for c in ms)}</div></div></div></section>

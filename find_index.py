@@ -52,6 +52,13 @@ for m in NEWM:
 for r in (globals().get('AE_FIND') or []): _fadd(*r)   # 11-12 engines (all_engines.py): live engine pages + coming-soon engines
 os.makedirs(f'{OUT}/assets', exist_ok=True)   # straight into the built site: no untracked assets/find.json in the repo (it blocked the workers' auto-deploy)
 json.dump(FIND, open(f'{OUT}/assets/find.json', 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
+# 11-12 (6 usability testers): where the search sends codes, problem words and questions, so it only ever links pages that exist
+#   find-go.json = {codes: engine codes with a page, tr: models with a transmission page, best: the top-level pages and lists}
+_dirs = lambda pat: sorted(p_.replace('\\', '/').split('/')[-2] for p_ in _glob.glob(pat))
+_GO = {'codes': _dirs(f'{OUT}/check-engine-light/*/index.html'),
+       'tr': sorted({u.split('/')[2] for u in globals().get('turls', [])}),
+       'best': sorted({'/' + p_[len(OUT) + 1:].replace('\\', '/')[:-len('index.html')] for p_ in _glob.glob(f'{OUT}/*/index.html') + _glob.glob(f'{OUT}/best/*/index.html')})}
+json.dump(_GO, open(f'{OUT}/assets/find-go.json', 'w', encoding='utf-8'), separators=(',', ':'))
 
 # ---- the guard
 _idx = {r[2] for r in FIND if r[2]}; _miss = []

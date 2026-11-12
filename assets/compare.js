@@ -14,7 +14,8 @@
     q.oninput = () => {
       const s = q.value.toLowerCase(), y = (s.match(/\b(19|20)\d{2}\b/) || [''])[0], w = s.replace(/\b(19|20)\d{2}\b/, ' ').split(/[^a-z0-9]+/).filter(Boolean);
       if (!w.length) { out.innerHTML = ''; return; }
-      const hits = IDS.filter(i => w.every(x => D[i][0].toLowerCase().split(/[^a-z0-9]+/).some(t => t.startsWith(x)))).slice(0, 6);
+      // 11-12 (testers: "crv", "rouge", "chevy"): the site search's matcher (lookup.js: hyphens, aliases, typos) when it's loaded
+      const hits = (window.LQ ? LQ.pick(q.value.replace(/\b(19|20)\d{2}\b/, ' '), IDS, i => D[i][0]) : IDS.filter(i => w.every(x => D[i][0].toLowerCase().split(/[^a-z0-9]+/).some(t => t.startsWith(x))))).slice(0, 6);
       out.innerHTML = hits.map(i => { const ys = Object.keys(D[i][1]); const yy = y && D[i][1][y] ? y : ys.at(-1);
         return `<div class="cx-hit"><b>${D[i][0]}</b><select data-i="${i}">${ys.slice().reverse().map(v => `<option${v === yy ? ' selected' : ''}>${v}</option>`).join('')}</select><button type="button" data-i="${i}">Add</button></div>`; }).join('');
       out.querySelectorAll('button').forEach(b => b.onclick = () => { const sel = out.querySelector(`select[data-i="${b.dataset.i}"]`); cars.push([b.dataset.i, sel.value]); save(); draw(); });
