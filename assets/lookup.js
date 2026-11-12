@@ -9,9 +9,17 @@
   // 11-11 (Elijah: one search for everything): supercars, EVs and performance cars ride along as [name, id, years, page, kind]; they open their
   // own page (no year pages), and a performance car without a page yet says "coming soon". Accents fold, so "huracan" finds the Huracán.
   const fold = s => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
-  const KIND = { sc: 'Supercar · engine, fuel cost and recalls', ev: 'Electric car · EV score and problems', perf: 'Performance car', moto: 'Motorcycle · complaints and recalls' };
-  const ALL = Object.entries(P).flatMap(([b, ms]) => ms.map(([n, id, ys, u, t]) => ({ b, n, id, ys, u, t, k: fold(n + ' ' + b).replace(/[^a-z0-9 ]/g, ' ') + (AK[id] || '') + (t === 'ev' ? ' ev electric' : '') })));
-  const href = (c, y) => c.u || (c.t ? '' : '/cars/' + c.id + '/' + (y ? y + '/' : ''));
+  const KIND = { sc: 'Supercar · engine, fuel cost and recalls', ev: 'Electric car · EV score and problems', perf: 'Performance car · specs, engines and problems', moto: 'Motorcycle · complaints and recalls', co: 'Owner complaints and recalls' };
+  const key = (n, b, al, id) => fold(n + ' ' + b + ' ' + (al || '')).replace(/[^a-z0-9 ]/g, ' ') + (AK[id] || '');
+  let ALL = Object.entries(P).flatMap(([b, ms]) => ms.map(([n, id, ys, u, t]) => ({ b, n, id, ys, u: u || '/cars/' + id + '/', t: t || '', soon: t === 'perf' && !u, k: key(n, b, t === 'ev' ? 'ev electric' : '', id) })));
+  // 11-11 (Elijah: "M3" found nothing): the full index of every car page and card (assets/find.json, built from the same lists as the pages,
+  // with a build check that nothing is missing): [name, brand, url, kind, years, aliases, soon]. Until it loads, the lists above still work.
+  const FU = el.dataset.find; let loaded = false;
+  const load = () => { if (loaded || !FU) return; loaded = true;
+    fetch(FU).then(r => r.ok ? r.json() : null).then(F => { if (!F || !F.length) return;
+      ALL = F.map(([n, b, u, t, ys, al, soon]) => ({ b, n, id: (u.match(/^\/cars\/([^/]+)\/$/) || [])[1] || '', ys, u, t, soon: !!soon, k: key(n, b, al, (u.match(/^\/cars\/([^/]+)\/$/) || [])[1]) }));
+      if (q && q.value.trim()) { hits = find(q.value); cur = hits.length ? 0 : -1; show(); } }).catch(() => {}); };
+  const href = (c, y) => c.soon ? '' : (y && !c.t && c.ys.includes(y) ? c.u + y + '/' : c.u);
   const go = (c, y) => { const h = href(c, y); if (!h) { miss(`The ${c.n} is coming soon.`); return false; } location.href = h; return true; };
 
   // 11-11 (Elijah: "the buttons underneath should come in when you click the look-up box"): Brand / Model / Year / Show problems stay
@@ -30,15 +38,17 @@
     // 11-02 (Elijah types the year first): a year alone lists the brands that have it; year + brand lists that brand's models
     if (!w.length) return y ? Object.keys(P).filter(br => P[br].some(m => m[2].includes(y))).map(br => ({ brand: br, y })) : [];
     const brands = Object.keys(P).filter(br => br.toLowerCase().replace(/[^a-z0-9 ]/g, ' ').split(' ').some(t => t.startsWith(w[0])));
-    const order = c => (c.ys.includes(y) ? 0 : 1) + (brands.includes(c.b) ? 0 : 2);
+    const exact = c => w.every(x => c.k.split(' ').includes(x)) ? 0 : 1;   // "m3" ranks the M3 above names that merely start with it
+    const order = c => (c.soon ? 100 : 0) + (c.ys.includes(y) ? 0 : 1) + (brands.includes(c.b) ? 0 : 2) + exact(c) * 4;   // live pages first; coming soon last
     return ALL.filter(c => w.every(x => c.k.split(' ').some(t => t.startsWith(x)))).sort((p1, p2) => order(p1) - order(p2) || p1.n.localeCompare(p2.n)).slice(0, y ? 12 : 8)
-      .map(c => ({ c, y: y && !c.t && c.ys.includes(y) ? y : 0, miss: y && !c.t && !c.ys.includes(y) ? y : 0 }));
+      .map(c => ({ c, y: y && !c.t && !c.soon && c.ys.includes(y) ? y : 0, miss: y && !c.t && !c.soon && !c.ys.includes(y) ? y : 0 }));
   };
   const show = () => {
     sug.hidden = !hits.length;
     if (hits.length && hits[0].brand) { sug.innerHTML = `<p class="fhint">${hits[0].y}: pick the brand</p><div class="fbr">` + hits.map((h, i) => `<button type="button" data-b="${h.brand}" class="${i === cur ? 'on' : ''}">${h.brand}</button>`).join('') + '</div>';
       sug.querySelectorAll('[data-b]').forEach(x => x.onclick = () => { q.value = `${hits[0].y} ${x.dataset.b} `; q.focus(); hits = find(q.value); cur = hits.length ? 0 : -1; show(); }); return; }
-    const lab = h => h.c.t ? (!h.c.u ? ({ perf: 'Performance car', moto: 'Motorcycle' }[h.c.t] || 'Coming') + ' · coming soon' : KIND[h.c.t]) : h.y ? 'problems and owner complaints' : h.miss ? `no ${h.miss} in our data · every year ${h.c.ys[0]}-${h.c.ys.at(-1)}` : `every year ${h.c.ys[0]}-${h.c.ys.at(-1)}`;
+    const lab = h => h.c.soon ? (h.c.t === 'nd' ? 'No data yet' : 'Coming soon') + ({ perf: ' · performance car', sc: ' · supercar', moto: ' · motorcycle' }[h.c.t] || '')
+      : h.c.t ? KIND[h.c.t] : h.y ? 'problems and owner complaints' : h.miss ? `no ${h.miss} in our data · every year ${h.c.ys[0]}-${h.c.ys.at(-1)}` : h.c.ys.length ? `every year ${h.c.ys[0]}-${h.c.ys.at(-1)}` : 'problems and owner complaints';
     sug.innerHTML = hits.map((h, i) => { const u = href(h.c, h.y), cl = (i === cur ? 'on' : '') + (u ? '' : ' fsoon');
       return `<a role="option" ${u ? `href="${u}"` : 'aria-disabled="true"'} class="${cl.trim()}"><b>${h.y ? h.y + ' ' : ''}${h.c.n}</b><small>${lab(h)}</small></a>`; }).join('');
   };
@@ -50,6 +60,7 @@
     return go(h.c, h.y);
   };
   if (q) {
+    ['focus', 'pointerdown', 'input'].forEach(ev => q.addEventListener(ev, load, { once: true }));
     q.addEventListener('input', () => { hits = find(q.value); cur = hits.length ? 0 : -1; show(); miss(q.value.trim() && !hits.length ? "No match. Try 'Honda Civic 2016'." : ''); });
     q.addEventListener('keydown', e => {
       if (e.key === 'ArrowDown' || e.key === 'ArrowUp') { e.preventDefault(); if (hits.length) { cur = (cur + (e.key === 'ArrowDown' ? 1 : -1) + hits.length) % hits.length; show(); } }
