@@ -1,4 +1,5 @@
 # The Lemon Index (lemonindex.com). License: CC BY 4.0, free to use with credit: "Source: The Lemon Index (lemonindex.com)". Updated 2026-11-12
+# Counts: every NHTSA complaint for the model year, whenever it was filed (not just the first 3 years), so all_complaints is higher than nhtsa_complaints in lemon-index-by-year.csv.
 family_id,model,model_year,transmission_complaints,all_complaints,transmission_complaints_per_100k_sold
 ford-f-series,Ford F-Series,2000,96,2095,10.9
 ford-f-series,Ford F-Series,2001,168,2062,18.4

@@ -196,7 +196,8 @@ def transform_model(body, eng_html, short):
     sl = _s(slider)   # 11-12: the badge says 'Fewest complaints' (year_slider.py); never 'safest'
     if not slider and pv:   # 11-10 rollout: no year images -> the model's own picture fills the same hero slot (car-image work can drop in here later)
         fig = pv.find('figure', class_='yph'); sl = _s(fig)
-    hero = (f'<section class="ph tb-hero">{_s(crumbs)}<div class="tb-img">{"".join(map(str, links))}{sl}</div>{_s(h1)}{short_ans}{_s(yhero)}{_s(share)}</section>')
+    pin = yt.find(class_='pinb')   # 11-12: a pinned battery-fire recall banner stays in the hero
+    hero = (f'<section class="ph tb-hero">{_s(crumbs)}<div class="tb-img">{"".join(map(str, links))}{sl}</div>{_s(h1)}{short_ans}{_s(pin)}{_s(yhero)}{_s(share)}</section>')
     secs = [c for c in root.find_all(recursive=False) if c is not ph]
     pick = lambda pred: [c for c in secs if pred(c)]
     years = pick(lambda c: c.get('id') == 'years')
@@ -331,7 +332,8 @@ def transform_year(body, eng_html, short):
         pop = _info(re.sub(r'^Early read\.\s*', '', _txt(en))) if en is not None else ''
         pop = pop.replace('<div class="ii-pop"', '<span class="ii-pop"').replace('</div>', '</span>')
         early = BeautifulSoup(f'<p class="early-b">Early read · still collecting complaints<span class="iiw">{pop}</span></p>', 'html.parser')
-    hero = f'<section class="ph tb-hero">{_s(crumbs)}<div class="tb-img">{img}</div>{_s(h1)}{_s(early)}{_s(yhero)}{_controls(sw, modes)}</section>'   # the gauge + verdict already say it: no answer paragraph
+    pin = yt.find(class_='pinb')   # 11-12: a pinned battery-fire recall banner stays in the hero
+    hero = f'<section class="ph tb-hero">{_s(crumbs)}<div class="tb-img">{img}</div>{_s(h1)}{_s(early)}{_s(pin)}{_s(yhero)}{_controls(sw, modes)}</section>'   # the gauge + verdict already say it: no answer paragraph
     top = [c for c in root.find_all(recursive=False) if c is not ph]
     grid = next((c for c in top if 'ygrid' in (c.get('class') or [])), None)
     items = [c for c in top if c is not grid] + (grid.find_all(recursive=False) if grid else [])
@@ -340,7 +342,7 @@ def transform_year(body, eng_html, short):
     over, probs, fix, rec, yrs, qa, tail, keep = [], [], [], [], [], [], [], []
     for c in items:
         h = H(c); k = C(c)
-        if c.get('id') in ('mileage-guide', 'ask-seller'): keep.append(c)   # 11-12: shown in Overview, under the preview cards
+        if c.get('id') in ('mileage-guide', 'ask-seller', 'hybrid'): keep.append(c)   # 11-12: shown in Overview, under the preview cards ('hybrid': the RAV4 Hybrid split, ux_c.py)
         elif 'shline' in k or ('yc-cap' in k and c.name == 'p'): tail.append(c)
         elif 'yyears' in k: yrs.append(c)
         elif 'yqa' in k: qa.append(c)

@@ -1,0 +1,25 @@
+# The Lemon Index (lemonindex.com). License: CC BY 4.0, free to use with credit: "Source: The Lemon Index (lemonindex.com)". Updated 2026-11-12
+# Counts: the EV window = complaints filed with NHTSA by the end of the year after the model year (model years 2021-2024), so it differs from the main 3-year score in lemon-index-by-model.csv.
+slug,model,model_years,ev_lemon_index,ev_rank,nhtsa_complaints,complaints_per_100k_sold,complaints_without_driver_assist_per_100k,fire_complaints,recalls,recalls_mentioning_fire,epa_range_low,epa_range_high,mpge_low,mpge_high,yearly_charging_cost_low,yearly_charging_cost_high,epa_model_year,main_lemon_index,page,sales_source
+nissan-leaf,Nissan Leaf,2021-2024,128,1,30,67,47,0,5,1,149,212,109,111,700,700,2025,,https://lemonindex.com/electric/nissan-leaf/,Kelley Blue Book EV sales reports (estimates)
+kia-niro-ev,Kia Niro EV,2022-2024,162,2,35,92,79,0,5,1,,,,,,,,,https://lemonindex.com/electric/kia-niro-ev/,Kelley Blue Book EV sales reports (estimates)
+rivian-r1t,Rivian R1T,2022-2024,197,3,55,113,86,0,14,0,258,420,68,87,850,1100,2025,,https://lemonindex.com/electric/rivian-r1t/,Kelley Blue Book EV sales reports (estimates)
+rivian-r1s,Rivian R1S,2022-2024,231,4,65,131,107,0,15,0,258,410,68,85,900,1100,2025,,https://lemonindex.com/electric/rivian-r1s/,Kelley Blue Book EV sales reports (estimates)
+chevrolet-bolt,Chevrolet Bolt,2021-2023,244,5,178,133,114,2,7,5,247,259,115,120,650,650,2023,410,https://lemonindex.com/electric/chevrolet-bolt/,Kelley Blue Book EV sales reports (estimates)
+hyundai-ioniq-6,Hyundai Ioniq 6,2023-2024,265,6,38,150,131,0,6,0,240,342,103,135,550,750,2025,,https://lemonindex.com/electric/hyundai-ioniq-6/,Kelley Blue Book EV sales reports (estimates)
+hyundai-kona-electric,Hyundai Kona Electric,2021-2024,272,7,39,144,129,1,3,0,200,261,103,118,650,700,2025,,https://lemonindex.com/electric/hyundai-kona-electric/,Kelley Blue Book EV sales reports (estimates)
+ford-f-150-lightning,Ford F-150 Lightning,2022-2024,288,8,120,164,135,2,12,3,240,320,66,72,1050,1150,2025,,https://lemonindex.com/electric/ford-f-150-lightning/,Kelley Blue Book EV sales reports (estimates)
+ford-mustang-mach-e,Ford Mustang Mach-E,2021-2024,316,9,274,172,148,0,19,1,240,320,86,110,700,900,2025,,https://lemonindex.com/electric/ford-mustang-mach-e/,Kelley Blue Book EV sales reports (estimates)
+tesla-model-y,Tesla Model Y,2021-2024,344,10,2287,188,65,8,33,0,277,337,104,125,600,750,2025,359,https://lemonindex.com/electric/tesla-model-y/,Kelley Blue Book EV sales reports (estimates)
+tesla-model-3,Tesla Model 3,2021-2024,366,11,1509,200,68,2,29,0,298,363,109,137,550,700,2025,203,https://lemonindex.com/electric/tesla-model-3/,Kelley Blue Book EV sales reports (estimates)
+cadillac-lyriq,Cadillac Lyriq,2023-2024,413,12,88,234,159,1,9,0,303,326,86,92,800,900,2025,,https://lemonindex.com/electric/cadillac-lyriq/,KBB (2023-24); Wikipedia (2022)
+polestar-2,Polestar 2,2021-2024,414,13,81,232,154,0,7,0,247,270,95,107,700,800,2023,,https://lemonindex.com/electric/polestar-2/,"KBB (2021-22); Wikipedia, citing Polestar (2023-24)"
+tesla-cybertruck,Tesla Cybertruck,2024,429,14,94,241,208,2,11,0,325,335,78,82,900,1000,2025,,https://lemonindex.com/electric/tesla-cybertruck/,Kelley Blue Book EV sales reports (estimates)
+kia-ev6,Kia EV6,2022-2024,440,15,153,250,232,1,5,1,231,319,83,115,650,900,2025,,https://lemonindex.com/electric/kia-ev6/,Kelley Blue Book EV sales reports (estimates)
+tesla-model-x,Tesla Model X,2021-2024,482,16,241,258,212,1,31,0,294,329,88,98,750,850,2025,407,https://lemonindex.com/electric/tesla-model-x/,Kelley Blue Book EV sales reports (estimates)
+chevrolet-blazer-ev,Chevrolet Blazer EV,2024,512,17,68,288,199,0,5,0,283,334,85,104,750,900,2025,,https://lemonindex.com/electric/chevrolet-blazer-ev/,Kelley Blue Book EV sales reports (estimates)
+chevrolet-equinox-ev,Chevrolet Equinox EV,2024,630,18,104,355,276,0,1,0,307,319,96,109,700,800,2025,,https://lemonindex.com/electric/chevrolet-equinox-ev/,Kelley Blue Book EV sales reports (estimates)
+tesla-model-s,Tesla Model S,2021-2024,679,19,296,366,249,2,29,0,312,410,93,124,600,800,2025,430,https://lemonindex.com/electric/tesla-model-s/,Kelley Blue Book EV sales reports (estimates)
+hyundai-ioniq-5,Hyundai Ioniq 5,2022-2024,686,20,396,390,355,1,5,1,168,318,71,115,650,1050,2025,,https://lemonindex.com/electric/hyundai-ioniq-5/,Kelley Blue Book EV sales reports (estimates)
+volkswagen-id-4,Volkswagen ID.4,2021-2024,875,21,439,477,357,3,25,6,206,291,102,113,650,750,2025,,https://lemonindex.com/electric/volkswagen-id-4/,Kelley Blue Book EV sales reports (estimates)
+kia-ev9,Kia EV9,2024,1436,22,187,808,661,1,7,1,230,304,80,89,850,950,2025,,https://lemonindex.com/electric/kia-ev9/,Kelley Blue Book EV sales reports (estimates)

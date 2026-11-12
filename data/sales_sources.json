@@ -1,0 +1,611 @@
+{
+"ford-f-series": [
+"https://en.wikipedia.org/wiki/Ford_F-Series"
+],
+"chevrolet-silverado": [
+"https://en.wikipedia.org/wiki/Chevrolet_Silverado"
+],
+"ram-pickup": [
+"https://en.wikipedia.org/wiki/Ram_pickup"
+],
+"gmc-sierra": [
+"https://en.wikipedia.org/wiki/GMC_Sierra"
+],
+"toyota-tacoma": [
+"https://en.wikipedia.org/wiki/Toyota_Tacoma"
+],
+"toyota-tundra": [
+"https://en.wikipedia.org/wiki/Toyota_Tundra"
+],
+"chevrolet-colorado": [
+"https://en.wikipedia.org/wiki/Chevrolet_Colorado"
+],
+"nissan-frontier": [
+"https://en.wikipedia.org/wiki/Nissan_Navara"
+],
+"honda-ridgeline": [
+"https://en.wikipedia.org/wiki/Honda_Ridgeline"
+],
+"jeep-gladiator": [
+"https://en.wikipedia.org/wiki/Jeep_Gladiator_(JT)"
+],
+"ford-escape": [
+"https://en.wikipedia.org/wiki/Ford_Escape"
+],
+"ford-explorer": [
+"https://en.wikipedia.org/wiki/Ford_Explorer"
+],
+"ford-edge": [
+"https://en.wikipedia.org/wiki/Ford_Edge"
+],
+"ford-expedition": [
+"https://en.wikipedia.org/wiki/Ford_Expedition"
+],
+"ford-ecosport": [
+"https://en.wikipedia.org/wiki/Ford_EcoSport"
+],
+"jeep-grand-cherokee": [
+"https://en.wikipedia.org/wiki/Jeep_Grand_Cherokee"
+],
+"jeep-cherokee": [
+"https://en.wikipedia.org/wiki/Jeep_Cherokee_(KL)"
+],
+"jeep-wrangler": [
+"https://en.wikipedia.org/wiki/Jeep_Wrangler"
+],
+"jeep-compass": [
+"https://en.wikipedia.org/wiki/Jeep_Compass"
+],
+"jeep-renegade": [
+"https://en.wikipedia.org/wiki/Jeep_Renegade"
+],
+"jeep-patriot": [
+"https://en.wikipedia.org/wiki/Jeep_Patriot"
+],
+"chevrolet-equinox": [
+"https://en.wikipedia.org/wiki/Chevrolet_Equinox"
+],
+"chevrolet-traverse": [
+"https://en.wikipedia.org/wiki/Chevrolet_Traverse"
+],
+"chevrolet-tahoe": [
+"https://en.wikipedia.org/wiki/Chevrolet_Tahoe"
+],
+"chevrolet-suburban": [
+"https://en.wikipedia.org/wiki/Chevrolet_Suburban"
+],
+"chevrolet-trax": [
+"https://en.wikipedia.org/wiki/Chevrolet_Trax"
+],
+"gmc-acadia": [
+"https://en.wikipedia.org/wiki/GMC_Acadia"
+],
+"gmc-terrain": [
+"https://en.wikipedia.org/wiki/GMC_Terrain"
+],
+"gmc-yukon": [
+"https://en.wikipedia.org/wiki/Chevrolet_Tahoe"
+],
+"gmc-yukon-xl": [
+"https://en.wikipedia.org/wiki/Chevrolet_Suburban"
+],
+"dodge-durango": [
+"https://en.wikipedia.org/wiki/Dodge_Durango"
+],
+"dodge-journey": [
+"https://en.wikipedia.org/wiki/Dodge_Journey"
+],
+"toyota-rav4": [
+"https://en.wikipedia.org/wiki/Toyota_RAV4"
+],
+"toyota-highlander": [
+"https://en.wikipedia.org/wiki/Toyota_Highlander"
+],
+"toyota-4runner": [
+"https://en.wikipedia.org/wiki/Toyota_4Runner"
+],
+"honda-cr-v": [
+"https://en.wikipedia.org/wiki/Honda_CR-V"
+],
+"honda-pilot": [
+"https://en.wikipedia.org/wiki/Honda_Pilot"
+],
+"honda-hr-v": [
+"https://en.wikipedia.org/wiki/Honda_HR-V"
+],
+"nissan-rogue": [
+"https://en.wikipedia.org/wiki/Nissan_Rogue"
+],
+"nissan-pathfinder": [
+"https://en.wikipedia.org/wiki/Nissan_Pathfinder"
+],
+"nissan-murano": [
+"https://en.wikipedia.org/wiki/Nissan_Murano"
+],
+"hyundai-tucson": [
+"https://en.wikipedia.org/wiki/Hyundai_Tucson"
+],
+"hyundai-santa-fe": [
+"https://en.wikipedia.org/wiki/Hyundai_Santa_Fe"
+],
+"hyundai-kona": [
+"https://en.wikipedia.org/wiki/Hyundai_Kona"
+],
+"hyundai-palisade": [
+"https://en.wikipedia.org/wiki/Hyundai_Palisade"
+],
+"kia-sorento": [
+"https://en.wikipedia.org/wiki/Kia_Sorento"
+],
+"kia-sportage": [
+"https://en.wikipedia.org/wiki/Kia_Sportage"
+],
+"kia-soul": [
+"https://en.wikipedia.org/wiki/Kia_Soul"
+],
+"kia-telluride": [
+"https://en.wikipedia.org/wiki/Kia_Telluride"
+],
+"subaru-outback": [
+"https://en.wikipedia.org/wiki/Subaru_Outback"
+],
+"subaru-forester": [
+"https://en.wikipedia.org/wiki/Subaru_Forester"
+],
+"subaru-crosstrek": [
+"https://en.wikipedia.org/wiki/Subaru_Crosstrek"
+],
+"subaru-ascent": [
+"https://en.wikipedia.org/wiki/Subaru_Ascent"
+],
+"mazda-cx-5": [
+"https://en.wikipedia.org/wiki/Mazda_CX-5"
+],
+"mazda-cx-9": [
+"https://en.wikipedia.org/wiki/Mazda_CX-9"
+],
+"volkswagen-tiguan": [
+"https://en.wikipedia.org/wiki/Volkswagen_Tiguan"
+],
+"volkswagen-atlas": [
+"https://en.wikipedia.org/wiki/Volkswagen_Atlas"
+],
+"lexus-rx": [
+"https://en.wikipedia.org/wiki/Lexus_RX"
+],
+"acura-mdx": [
+"https://en.wikipedia.org/wiki/Acura_MDX"
+],
+"acura-rdx": [
+"https://en.wikipedia.org/wiki/Acura_RDX"
+],
+"toyota-camry": [
+"https://en.wikipedia.org/wiki/Toyota_Camry"
+],
+"toyota-corolla": [
+"https://en.wikipedia.org/wiki/Toyota_Corolla"
+],
+"toyota-prius": [
+"https://en.wikipedia.org/wiki/Toyota_Prius"
+],
+"toyota-avalon": [
+"https://en.wikipedia.org/wiki/Toyota_Avalon"
+],
+"honda-accord": [
+"https://en.wikipedia.org/wiki/Honda_Accord"
+],
+"honda-civic": [
+"https://en.wikipedia.org/wiki/Honda_Civic"
+],
+"honda-fit": [
+"https://en.wikipedia.org/wiki/Honda_Fit"
+],
+"ford-fusion": [
+"https://en.wikipedia.org/wiki/Ford_Fusion_(Americas)"
+],
+"ford-focus": [
+"https://en.wikipedia.org/wiki/Ford_Focus"
+],
+"ford-mustang": [
+"https://en.wikipedia.org/wiki/Ford_Mustang"
+],
+"ford-fiesta": [
+"https://en.wikipedia.org/wiki/Ford_Fiesta"
+],
+"ford-taurus": [
+"https://en.wikipedia.org/wiki/Ford_Taurus"
+],
+"chevrolet-malibu": [
+"https://en.wikipedia.org/wiki/Chevrolet_Malibu"
+],
+"chevrolet-cruze": [
+"https://en.wikipedia.org/wiki/Chevrolet_Cruze"
+],
+"chevrolet-impala": [
+"https://en.wikipedia.org/wiki/Chevrolet_Impala"
+],
+"chevrolet-camaro": [
+"https://en.wikipedia.org/wiki/Chevrolet_Camaro"
+],
+"chevrolet-sonic": [
+"https://en.wikipedia.org/wiki/Chevrolet_Aveo_(T300)"
+],
+"chevrolet-spark": [
+"https://en.wikipedia.org/wiki/Chevrolet_Spark"
+],
+"chevrolet-volt": [
+"https://en.wikipedia.org/wiki/Chevrolet_Volt"
+],
+"chevrolet-bolt": [
+"https://en.wikipedia.org/wiki/Chevrolet_Bolt"
+],
+"nissan-altima": [
+"https://en.wikipedia.org/wiki/Nissan_Altima"
+],
+"nissan-sentra": [
+"https://en.wikipedia.org/wiki/Nissan_Sentra"
+],
+"nissan-versa": [
+"https://en.wikipedia.org/wiki/Nissan_Versa"
+],
+"nissan-maxima": [
+"https://en.wikipedia.org/wiki/Nissan_Maxima"
+],
+"hyundai-sonata": [
+"https://en.wikipedia.org/wiki/Hyundai_Sonata"
+],
+"hyundai-elantra": [
+"https://en.wikipedia.org/wiki/Hyundai_Elantra"
+],
+"hyundai-accent": [
+"https://en.wikipedia.org/wiki/Hyundai_Accent"
+],
+"kia-optima": [
+"https://en.wikipedia.org/wiki/Kia_Optima"
+],
+"kia-forte": [
+"https://en.wikipedia.org/wiki/Kia_Forte"
+],
+"kia-rio": [
+"https://en.wikipedia.org/wiki/Kia_Rio"
+],
+"subaru-impreza": [
+"https://en.wikipedia.org/wiki/Subaru_Impreza"
+],
+"subaru-legacy": [
+"https://en.wikipedia.org/wiki/Subaru_Legacy"
+],
+"mazda3": [
+"https://en.wikipedia.org/wiki/Mazda3"
+],
+"mazda6": [
+"https://en.wikipedia.org/wiki/Mazda6"
+],
+"volkswagen-jetta": [
+"https://en.wikipedia.org/wiki/Volkswagen_Jetta"
+],
+"volkswagen-passat": [
+"https://en.wikipedia.org/wiki/Volkswagen_Passat_(North_America)"
+],
+"dodge-charger": [
+"https://en.wikipedia.org/wiki/Dodge_Charger_(2005)"
+],
+"dodge-challenger": [
+"https://en.wikipedia.org/wiki/Dodge_Challenger_(2008)"
+],
+"dodge-dart": [
+"https://en.wikipedia.org/wiki/Dodge_Dart_(PF)"
+],
+"chrysler-200": [
+"https://en.wikipedia.org/wiki/Chrysler_200"
+],
+"chrysler-300": [
+"https://en.wikipedia.org/wiki/Chrysler_300"
+],
+"lexus-es": [
+"https://en.wikipedia.org/wiki/Lexus_ES"
+],
+"tesla-model-y": [
+"https://en.wikipedia.org/wiki/Tesla_Model_Y",
+"https://en.wikipedia.org/wiki/Plug-in_electric_vehicles_in_the_United_States"
+],
+"bmw-3-series": [
+"https://en.wikipedia.org/wiki/BMW_3_Series"
+],
+"bmw-5-series": [
+"https://en.wikipedia.org/wiki/BMW_5_Series"
+],
+"bmw-x1": [
+"https://en.wikipedia.org/wiki/BMW_X1"
+],
+"bmw-x3": [
+"https://en.wikipedia.org/wiki/BMW_X3"
+],
+"bmw-x5": [
+"https://en.wikipedia.org/wiki/BMW_X5"
+],
+"mercedes-benz-c-class": [
+"https://en.wikipedia.org/wiki/Mercedes-Benz_C-Class"
+],
+"mercedes-benz-e-class": [
+"https://en.wikipedia.org/wiki/Mercedes-Benz_E-Class"
+],
+"mercedes-benz-glk/glc": [
+"https://en.wikipedia.org/wiki/Mercedes-Benz_GLK-Class"
+],
+"mercedes-benz-m/gle": [
+"https://en.wikipedia.org/wiki/Mercedes-Benz_GLE"
+],
+"mercedes-benz-cla": [
+"https://en.wikipedia.org/wiki/Mercedes-Benz_CLA"
+],
+"mercedes-benz-gla": [
+"https://en.wikipedia.org/wiki/Mercedes-Benz_GLA"
+],
+"audi-a3": [
+"https://en.wikipedia.org/wiki/Audi_A3"
+],
+"audi-a6": [
+"https://www.goodcarbadcar.net/audi-a6-sales-figures/",
+"https://en.wikipedia.org/wiki/Audi_A6",
+"https://www.best-selling-cars.com/brands/2018-full-year-usa-audi-of-america-car-sales",
+"https://audiworld.com/how-tos/slideshows/which-were-the-most-popular-audi-models-of-2019-604921",
+"https://www.best-selling-cars.com/usa/2021-full-year-usa-audi-us-sales-by-model"
+],
+"audi-q5": [
+"https://en.wikipedia.org/wiki/Audi_Q5",
+"https://www.best-selling-cars.com/brands/2018-full-year-usa-audi-of-america-car-sales",
+"https://www.best-selling-cars.com/usa/2020-full-year-usa-audi-of-america-sales-by-model",
+"https://www.best-selling-cars.com/usa/2021-full-year-usa-audi-us-sales-by-model"
+],
+"audi-q7": [
+"https://en.wikipedia.org/wiki/Audi_Q7"
+],
+"audi-q3": [
+"https://en.wikipedia.org/wiki/Audi_Q3",
+"https://www.best-selling-cars.com/brands/2018-full-year-usa-audi-of-america-car-sales",
+"https://www.best-selling-cars.com/usa/2020-full-year-usa-audi-of-america-sales-by-model",
+"https://www.best-selling-cars.com/usa/2021-full-year-usa-audi-us-sales-by-model"
+],
+"porsche-macan": [
+"https://en.wikipedia.org/wiki/Porsche_Macan"
+],
+"volkswagen-golf": [
+"https://en.wikipedia.org/wiki/Volkswagen_Golf"
+],
+"honda-odyssey": [
+"https://en.wikipedia.org/wiki/Honda_Odyssey_(North_America)"
+],
+"toyota-sienna": [
+"https://en.wikipedia.org/wiki/Toyota_Sienna"
+],
+"dodge-grand-caravan": [
+"https://en.wikipedia.org/wiki/Dodge_Caravan"
+],
+"chrysler-town-and-country": [
+"https://en.wikipedia.org/wiki/Chrysler_Town_&_Country"
+],
+"chrysler-pacifica": [
+"https://en.wikipedia.org/wiki/Chrysler_Pacifica_(minivan)"
+],
+"kia-sedona": [
+"https://en.wikipedia.org/wiki/Kia_Carnival"
+],
+"audi-a4": [
+"https://www.best-selling-cars.com/brands/2018-full-year-usa-audi-of-america-car-sales",
+"https://audiworld.com/how-tos/slideshows/which-were-the-most-popular-audi-models-of-2019-604921",
+"https://www.best-selling-cars.com/usa/2021-full-year-usa-audi-us-sales-by-model"
+],
+"porsche-cayenne": [
+"https://carscoops.com/?p=76366",
+"https://flatsixes.com/?p=62311",
+"https://www.goodcarbadcar.net/porsche-us-sales-figures/"
+],
+"tesla-model-s": [
+"https://en.wikipedia.org/wiki/Plug-in_electric_vehicles_in_the_United_States",
+"https://www.coxautoinc.com/market-insights/"
+],
+"tesla-model-x": [
+"https://en.wikipedia.org/wiki/Plug-in_electric_vehicles_in_the_United_States",
+"https://www.coxautoinc.com/market-insights/"
+],
+"tesla-model-3": [
+"https://en.wikipedia.org/wiki/Plug-in_electric_vehicles_in_the_United_States",
+"https://www.coxautoinc.com/market-insights/"
+],
+"ford-windstar": [
+"https://en.wikipedia.org/wiki/Ford_Windstar"
+],
+"chevrolet-cobalt": [
+"https://en.wikipedia.org/wiki/Chevrolet_Cobalt"
+],
+"jeep-liberty": [
+"https://www.goodcarbadcar.net/jeep-liberty-sales-figures/"
+],
+"mini-cooper": [
+"https://www.goodcarbadcar.net/mini-cooper-sales-figures/"
+],
+"ford-ranger": [
+"https://www.goodcarbadcar.net/ford-ranger-sales-figures/"
+],
+"chevrolet-corvette": [
+"https://www.goodcarbadcar.net/chevrolet-corvette-sales-figures/"
+],
+"dodge-dakota": [
+"https://en.wikipedia.org/wiki/Dodge_Dakota"
+],
+"chevrolet-hhr": [
+"https://en.wikipedia.org/wiki/Chevrolet_HHR"
+],
+"gmc-envoy": [
+"https://en.wikipedia.org/wiki/GMC_Envoy"
+],
+"nissan-titan": [
+"https://en.wikipedia.org/wiki/Nissan_Titan"
+],
+"ford-freestyle": [
+"https://en.wikipedia.org/wiki/Ford_Freestyle"
+],
+"jeep-commander": [
+"https://en.wikipedia.org/wiki/Jeep_Commander_(XK)"
+],
+"toyota-sequoia": [
+"https://en.wikipedia.org/wiki/Toyota_Sequoia"
+],
+"cadillac-srx": [
+"https://en.wikipedia.org/wiki/Cadillac_SRX"
+],
+"nissan-xterra": [
+"https://en.wikipedia.org/wiki/Nissan_Xterra"
+],
+"chevrolet-avalanche": [
+"https://en.wikipedia.org/wiki/Chevrolet_Avalanche"
+],
+"acura-tl": [
+"https://en.wikipedia.org/wiki/Acura_TL"
+],
+"dodge-avenger": [
+"https://en.wikipedia.org/wiki/Dodge_Avenger"
+],
+"buick-enclave": [
+"https://en.wikipedia.org/wiki/Buick_Enclave"
+],
+"saturn-vue": [
+"https://en.wikipedia.org/wiki/Saturn_Vue"
+],
+"ford-bronco": [
+"https://en.wikipedia.org/wiki/Ford_Bronco"
+],
+"cadillac-escalade": [
+"https://en.wikipedia.org/wiki/Cadillac_Escalade"
+],
+"cadillac-cts": [
+"https://en.wikipedia.org/wiki/Cadillac_CTS"
+],
+"chevrolet-blazer": [
+"https://www.goodcarbadcar.net/chevrolet-blazer-sales-figures/"
+],
+"buick-lacrosse": [
+"https://en.wikipedia.org/wiki/Buick_LaCrosse"
+],
+"mazda-tribute": [
+"https://www.goodcarbadcar.net/mazda-tribute-sales-figures/"
+],
+"chevrolet-cavalier": [
+"https://en.wikipedia.org/wiki/Chevrolet_Cavalier"
+],
+"dodge-caliber": [
+"https://en.wikipedia.org/wiki/Dodge_Caliber"
+],
+"ford-flex": [
+"https://www.goodcarbadcar.net/ford-flex-sales-figures/"
+],
+"nissan-armada": [
+"https://en.wikipedia.org/wiki/Nissan_Armada"
+],
+"lincoln-mkz": [
+"https://en.wikipedia.org/wiki/Lincoln_MKZ"
+],
+"lexus-ls": [
+"https://www.goodcarbadcar.net/lexus-ls-sales-figures/"
+],
+"mitsubishi-outlander": [
+"https://en.wikipedia.org/wiki/Mitsubishi_Outlander"
+],
+"lexus-is": [
+"https://en.wikipedia.org/wiki/Lexus_IS"
+],
+"volvo-xc90": [
+"https://en.wikipedia.org/wiki/Volvo_XC90"
+],
+"hyundai-genesis": [
+"https://www.goodcarbadcar.net/hyundai-genesis-sales-figures/"
+],
+"dodge-nitro": [
+"https://www.goodcarbadcar.net/dodge-nitro-sales-figures/"
+],
+"gmc-canyon": [
+"https://en.wikipedia.org/wiki/GMC_Canyon"
+],
+"lincoln-mkx": [
+"https://en.wikipedia.org/wiki/Lincoln_MKX"
+],
+"ford-bronco-sport": [
+"https://en.wikipedia.org/wiki/Ford_Bronco_Sport"
+],
+"ford-transit": [
+"https://en.wikipedia.org/wiki/Ford_Transit"
+],
+"hyundai-veloster": [
+"https://en.wikipedia.org/wiki/Hyundai_Veloster"
+],
+"buick-regal": [
+"https://en.wikipedia.org/wiki/Buick_Regal"
+],
+"chevrolet-aveo": [
+"https://en.wikipedia.org/wiki/Chevrolet_Aveo"
+],
+"nissan-quest": [
+"https://en.wikipedia.org/wiki/Nissan_Quest"
+],
+"honda-element": [
+"https://www.goodcarbadcar.net/honda-element-sales-figures/"
+],
+"volvo-s60": [
+"https://en.wikipedia.org/wiki/Volvo_S60"
+],
+"buick-rendezvous": [
+"https://en.wikipedia.org/wiki/Buick_Rendezvous"
+],
+"mitsubishi-lancer": [
+"https://www.goodcarbadcar.net/mitsubishi-lancer-sales-figures/"
+],
+"mazda-cx-7": [
+"https://www.goodcarbadcar.net/mazda-cx-7-sales-figures/"
+],
+"dodge-neon": [
+"https://en.wikipedia.org/wiki/Dodge_Neon"
+],
+"scion-xb": [
+"https://en.wikipedia.org/wiki/Scion_xB"
+],
+"ford-crown-victoria": [
+"https://www.goodcarbadcar.net/ford-crown-victoria-sales-figures/"
+],
+"honda-passport": [
+"https://en.wikipedia.org/wiki/Honda_Passport"
+],
+"lincoln-navigator": [
+"https://en.wikipedia.org/wiki/Lincoln_Navigator"
+],
+"cadillac-deville": [
+"https://www.goodcarbadcar.net/cadillac-deville-sales-figures/"
+],
+"volkswagen-cc": [
+"https://en.wikipedia.org/wiki/Volkswagen_CC"
+],
+"dodge-stratus": [
+"https://en.wikipedia.org/wiki/Dodge_Stratus"
+],
+"acura-tlx": [
+"https://en.wikipedia.org/wiki/Acura_TLX"
+],
+"toyota-yaris": [
+"https://en.wikipedia.org/wiki/Toyota_Yaris"
+],
+"toyota-fj-cruiser": [
+"https://en.wikipedia.org/wiki/Toyota_FJ_Cruiser"
+],
+"chevrolet-express": [
+"https://www.goodcarbadcar.net/chevrolet-express-sales-figures/"
+],
+"buick-encore": [
+"https://en.wikipedia.org/wiki/Buick_Encore"
+],
+"fiat-500": [
+"https://www.goodcarbadcar.net/fiat-500-sales-figures/"
+],
+"ram-promaster": [
+"https://en.wikipedia.org/wiki/Ram_ProMaster"
+]
+}

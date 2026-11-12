@@ -134,6 +134,7 @@ def variant_card(v, R, star):
             f'{what}<dl>{"".join(rows)}</dl>{R.close()}</article>')
 
 _PERF = None
+PERF_ALIAS = {'mercedes-amg-c63': 'amg-c63', 'audi-rs-5': 'audi-rs5', 'alfa-romeo-giulia-quadrifoglio': 'giulia-qv'}   # chip slug -> performance id
 def perf_list():
     global _PERF
     if _PERF is None:
@@ -320,11 +321,11 @@ def build(slug, out='docs'):
     # ---- compare chips (a rival's page once it has one, else "coming soon")
     PL = perf_list(); chips = ''
     for c in D.get('compare', []):
-        u = None
-        for x in (f'/compare/{slug}-vs-{c["slug"]}/', f'/compare/{c["slug"]}-vs-{slug}/'):
+        u = None; cs = PERF_ALIAS.get(c['slug'], c['slug'])   # 11-12: the M3 file's chip slugs name the cars differently (mercedes-amg-c63 = amg-c63)
+        for x in (f'/compare/{slug}-vs-{cs}/', f'/compare/{cs}-vs-{slug}/'):
             if os.path.exists(os.path.join(HERE, out, x.strip('/'), 'index.html')): u = x; break
-        u = u or perf_url(c['slug'], out) or None
-        img = c.get('img') or (PL.get(c['slug']) or {}).get('img') or ''
+        u = u or perf_url(cs, out) or None
+        img = c.get('img') or (PL.get(cs) or {}).get('img') or ''
         chips += ((f'<a class="pf-c" href="{E(u)}">' if u else '<div class="pf-c soon">') + (f'<img src="{E(img)}" alt="" width="1000" height="600" loading="lazy" decoding="async">' if img else '')
                   + f'<span>{E(short)} vs {E(c["name"])}</span><small>{"See it →" if u else "Coming soon"}</small>' + ('</a>' if u else '</div>'))
     cmp_sec = f'<section class="pf-sec"><h2>{ic("vs")} Compare the {E(short)}</h2><div class="pf-cmp">{chips}</div></section>' if chips else ''

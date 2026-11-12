@@ -50,6 +50,7 @@ for s in (globals().get('MS') or []): _fadd(s['name'], s['make'], '', 'moto', []
 for m in NEWM:
     if m['slug'] not in _DUP and m['slug'] not in _EXN: _fadd(m['name'], m['make'], '', 'nd', [], '', 1)
 for r in (globals().get('AE_FIND') or []): _fadd(*r)   # 11-12 engines (all_engines.py): live engine pages + coming-soon engines
+for r in (globals().get('UXC_FIND') or []): _fadd(*r)   # 11-12 UX test: the performance side-by-side pages (ux_c.py), e.g. "m3 vs c63"
 os.makedirs(f'{OUT}/assets', exist_ok=True)   # straight into the built site: no untracked assets/find.json in the repo (it blocked the workers' auto-deploy)
 json.dump(FIND, open(f'{OUT}/assets/find.json', 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
 # 11-12 (6 usability testers): where the search sends codes, problem words and questions, so it only ever links pages that exist

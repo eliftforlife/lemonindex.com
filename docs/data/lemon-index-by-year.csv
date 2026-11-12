@@ -1,4 +1,5 @@
 # The Lemon Index (lemonindex.com). License: CC BY 4.0, free to use with credit: "Source: The Lemon Index (lemonindex.com)". Updated 2026-11-12
+# Counts: nhtsa_complaints = owner complaints filed with NHTSA within 3 years of the model year (2023-2025: every complaint filed so far). Blank lemon_index = not scored (under 20,000 sold, no per-model sales figure, or too few complaints). Not a safety rating.
 family_id,model,model_year,lemon_index,nhtsa_complaints,top_problem_1,top_problem_1_complaints,top_problem_2,top_problem_2_complaints,top_problem_3,top_problem_3_complaints,early_read
 ford-f-series,Ford F-Series,2000,94,907,tires,29,steering,15,"service brakes, hydraulic",15,
 ford-f-series,Ford F-Series,2001,87,841,transmission & drivetrain,16,tires,16,seats,11,
@@ -3117,3 +3118,36 @@ ram-promaster,Ram ProMaster,2022,63,48,automatic emergency braking,35,steering,2
 ram-promaster,Ram ProMaster,2023,102,99,steering,39,electrical,27,engine,16,yes
 ram-promaster,Ram ProMaster,2024,21,12,electrical,33,automatic emergency braking,33,engine,25,yes
 ram-promaster,Ram ProMaster,2025,17,6,engine,50,steering,33,"doors, locks & latches",17,yes
+tesla-model-s,Tesla Model S,2012,,2,suspension,100,,,,,
+tesla-model-s,Tesla Model S,2013,,68,suspension,40,electrical,29,steering,10,
+tesla-model-s,Tesla Model S,2014,,59,suspension,58,speed control,8,electrical,8,
+tesla-model-s,Tesla Model S,2015,,117,suspension,61,steering,17,speed control,13,
+tesla-model-s,Tesla Model S,2016,,219,suspension,50,steering,27,speed control,21,
+tesla-model-s,Tesla Model S,2017,,152,suspension,38,electrical,30,speed control,14,
+tesla-model-s,Tesla Model S,2018,,68,suspension,26,electrical,24,speed control,22,
+tesla-model-s,Tesla Model S,2019,,26,automatic emergency braking,31,suspension,19,brakes,15,
+tesla-model-s,Tesla Model S,2020,,62,automatic emergency braking,40,suspension,18,steering,15,
+tesla-model-s,Tesla Model S,2021,,155,automatic emergency braking,37,steering,16,electrical,15,
+tesla-model-s,Tesla Model S,2022,310,126,automatic emergency braking,36,steering,16,electrical,10,
+tesla-model-s,Tesla Model S,2023,,114,automatic emergency braking,23,steering,18,electrical,9,yes
+tesla-model-s,Tesla Model S,2024,,38,lane assist,84,electrical,21,steering,11,yes
+tesla-model-s,Tesla Model S,2025,,6,suspension,33,transmission & drivetrain,33,wipers & visibility,17,yes
+tesla-model-3,Tesla Model 3,2017,,0,,,,,,,
+tesla-model-3,Tesla Model 3,2018,,228,suspension,21,speed control,18,electrical,15,
+tesla-model-3,Tesla Model 3,2019,,299,automatic emergency braking,44,lane assist,24,speed control,18,
+tesla-model-3,Tesla Model 3,2020,,280,automatic emergency braking,63,speed control,21,brakes,14,
+tesla-model-3,Tesla Model 3,2021,489,578,automatic emergency braking,97,speed control,20,brakes,20,
+tesla-model-3,Tesla Model 3,2022,276,727,automatic emergency braking,107,brakes,23,speed control,23,
+tesla-model-3,Tesla Model 3,2023,156,428,automatic emergency braking,57,steering,21,speed control,16,yes
+tesla-model-3,Tesla Model 3,2024,134,220,automatic emergency braking,29,electrical,21,steering,17,yes
+tesla-model-3,Tesla Model 3,2025,,121,automatic emergency braking,29,steering,21,lane assist,20,yes
+tesla-model-x,Tesla Model X,2016,,132,suspension,47,body structure,18,speed control,16,
+tesla-model-x,Tesla Model X,2017,,81,suspension,31,electrical,28,steering,14,
+tesla-model-x,Tesla Model X,2018,,74,suspension,26,electrical,23,speed control,20,
+tesla-model-x,Tesla Model X,2019,,53,electrical,26,suspension,26,automatic emergency braking,26,
+tesla-model-x,Tesla Model X,2020,,88,automatic emergency braking,30,suspension,25,electrical,23,
+tesla-model-x,Tesla Model X,2021,124,27,steering,26,electrical,19,suspension,19,
+tesla-model-x,Tesla Model X,2022,338,110,steering,30,automatic emergency braking,22,electrical,12,
+tesla-model-x,Tesla Model X,2023,658,194,steering,24,automatic emergency braking,13,electrical,11,yes
+tesla-model-x,Tesla Model X,2024,,27,automatic emergency braking,41,electrical,15,suspension,11,yes
+tesla-model-x,Tesla Model X,2025,,16,automatic emergency braking,31,electrical,19,brakes,12,yes

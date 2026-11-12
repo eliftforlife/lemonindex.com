@@ -1,0 +1,201 @@
+# The Lemon Index (lemonindex.com). License: CC BY 4.0, free to use with credit: "Source: The Lemon Index (lemonindex.com)". Updated 2026-11-12
+# Counts: nhtsa_complaints_3yr = NHTSA owner complaints filed within 3 years of each model year, summed over score_model_years. Not a safety rating.
+family_id,model,brand,segment,score_model_years,lemon_index,nhtsa_complaints_3yr,complaints_per_100k_sold,average_car_per_100k,study_rank,sales_note,page,sales_source
+toyota-4runner,Toyota 4Runner,Toyota,SUV,2010-2022,26,352,28,104,1,,https://lemonindex.com/cars/toyota-4runner/,https://en.wikipedia.org/wiki/Toyota_4Runner
+lexus-es,Lexus ES,Lexus,Car,2010-2022,27,204,29,107,2,,https://lemonindex.com/cars/lexus-es/,https://en.wikipedia.org/wiki/Lexus_ES
+lexus-rx,Lexus RX,Lexus,SUV,2010-2022,31,447,33,106,3,,https://lemonindex.com/cars/lexus-rx/,https://en.wikipedia.org/wiki/Lexus_RX
+porsche-macan,Porsche Macan,Porsche,SUV,2015-2022,31,55,32,103,4,,https://lemonindex.com/cars/porsche-macan/,https://en.wikipedia.org/wiki/Porsche_Macan
+nissan-frontier,Nissan Frontier,Nissan,Truck,2010-2022,37,328,39,107,5,,https://lemonindex.com/cars/nissan-frontier/,https://en.wikipedia.org/wiki/Nissan_Navara
+bmw-3-series,BMW 3 Series,BMW,Car,2010-2022,37,487,39,107,6,,https://lemonindex.com/cars/bmw-3-series/,https://en.wikipedia.org/wiki/BMW_3_Series
+honda-hr-v,Honda HR-V,Honda,SUV,2016-2022,41,310,42,103,7,,https://lemonindex.com/cars/honda-hr-v/,https://en.wikipedia.org/wiki/Honda_HR-V
+hyundai-accent,Hyundai Accent,Hyundai,Car,2010-2022,42,266,45,107,8,,https://lemonindex.com/cars/hyundai-accent/,https://en.wikipedia.org/wiki/Hyundai_Accent
+toyota-tacoma,Toyota Tacoma,Toyota,Truck,2010-2022,44,1146,46,105,9,,https://lemonindex.com/cars/toyota-tacoma/,https://en.wikipedia.org/wiki/Toyota_Tacoma
+mercedes-benz-e-class,Mercedes-Benz E-Class,Mercedes-Benz,Car,2010-2022,45,306,48,107,10,,https://lemonindex.com/cars/mercedes-benz-e-class/,https://en.wikipedia.org/wiki/Mercedes-Benz_E-Class
+audi-a4,Audi A4,Audi,Car,2016-2021,45,76,45,101,11,,https://lemonindex.com/cars/audi-a4/,https://www.best-selling-cars.com/brands/2018-full-year-usa-audi-of-america-car-sales https://audiworld.com/how-tos/slideshows/which-were-the-most-popular-audi-models-of-2019-604921 https://www.best-selling-cars.com/usa/2021-full-year-usa-audi-us-sales-by-model
+chevrolet-equinox,Chevrolet Equinox,Chevrolet,SUV,2010-2022,46,1540,48,106,12,,https://lemonindex.com/cars/chevrolet-equinox/,https://en.wikipedia.org/wiki/Chevrolet_Equinox
+toyota-corolla,Toyota Corolla,Toyota,Car,2010-2022,46,1884,49,106,13,,https://lemonindex.com/cars/toyota-corolla/,https://en.wikipedia.org/wiki/Toyota_Corolla
+kia-rio,Kia Rio,Kia,Car,2010-2022,46,179,50,107,14,,https://lemonindex.com/cars/kia-rio/,https://en.wikipedia.org/wiki/Kia_Rio
+mercedes-benz-c-class,Mercedes-Benz C-Class,Mercedes-Benz,Car,2010-2018,48,351,52,108,15,,https://lemonindex.com/cars/mercedes-benz-c-class/,https://en.wikipedia.org/wiki/Mercedes-Benz_C-Class
+toyota-camry,Toyota Camry,Toyota,Car,2010-2022,49,2432,52,106,16,,https://lemonindex.com/cars/toyota-camry/,https://en.wikipedia.org/wiki/Toyota_Camry
+nissan-maxima,Nissan Maxima,Nissan,Car,2010-2022,50,306,53,107,17,,https://lemonindex.com/cars/nissan-maxima/,https://en.wikipedia.org/wiki/Nissan_Maxima
+kia-forte,Kia Forte,Kia,Car,2010-2022,50,619,53,106,18,,https://lemonindex.com/cars/kia-forte/,https://en.wikipedia.org/wiki/Kia_Forte
+mercedes-benz-gla,Mercedes-Benz GLA,Mercedes-Benz,SUV,2015-2021,50,79,50,100,19,,https://lemonindex.com/cars/mercedes-benz-gla/,https://en.wikipedia.org/wiki/Mercedes-Benz_GLA
+kia-sportage,Kia Sportage,Kia,SUV,2010-2022,51,467,54,106,20,,https://lemonindex.com/cars/kia-sportage/,https://en.wikipedia.org/wiki/Kia_Sportage
+mercedes-benz-m/gle,Mercedes-Benz M/GLE,Mercedes-Benz,SUV,2010-2022,51,331,54,106,21,,https://lemonindex.com/cars/mercedes-benz-m/gle/,https://en.wikipedia.org/wiki/Mercedes-Benz_GLE
+chevrolet-trax,Chevrolet Trax,Chevrolet,SUV,2015-2022,52,316,52,101,22,,https://lemonindex.com/cars/chevrolet-trax/,https://en.wikipedia.org/wiki/Chevrolet_Trax
+chevrolet-silverado,Chevrolet Silverado,Chevrolet,Truck,2010-2022,54,3863,57,106,23,,https://lemonindex.com/cars/chevrolet-silverado/,https://en.wikipedia.org/wiki/Chevrolet_Silverado
+gmc-terrain,GMC Terrain,GMC,SUV,2010-2022,54,666,57,107,24,,https://lemonindex.com/cars/gmc-terrain/,https://en.wikipedia.org/wiki/GMC_Terrain
+toyota-rav4,Toyota RAV4,Toyota,SUV,2010-2022,54,2371,57,105,25,,https://lemonindex.com/cars/toyota-rav4/,https://en.wikipedia.org/wiki/Toyota_RAV4
+bmw-x5,BMW X5,BMW,SUV,2010-2022,54,344,58,108,26,,https://lemonindex.com/cars/bmw-x5/,https://en.wikipedia.org/wiki/BMW_X5
+toyota-tundra,Toyota Tundra,Toyota,Truck,2010-2022,55,816,59,106,27,,https://lemonindex.com/cars/toyota-tundra/,https://en.wikipedia.org/wiki/Toyota_Tundra
+mazda6,Mazda6,Mazda,Car,2010-2021,55,246,58,105,28,,https://lemonindex.com/cars/mazda6/,https://en.wikipedia.org/wiki/Mazda6
+mazda3,Mazda3,Mazda,Car,2010-2022,56,624,60,107,29,,https://lemonindex.com/cars/mazda3/,https://en.wikipedia.org/wiki/Mazda3
+porsche-cayenne,Porsche Cayenne,Porsche,SUV,2014-2019,56,36,58,103,30,,,https://carscoops.com/?p=76366 https://flatsixes.com/?p=62311 https://www.goodcarbadcar.net/porsche-us-sales-figures/
+toyota-sienna,Toyota Sienna,Toyota,Minivan,2010-2020,57,760,60,106,31,,https://lemonindex.com/cars/toyota-sienna/,https://en.wikipedia.org/wiki/Toyota_Sienna
+toyota-highlander,Toyota Highlander,Toyota,SUV,2010-2022,58,1427,61,105,32,,https://lemonindex.com/cars/toyota-highlander/,https://en.wikipedia.org/wiki/Toyota_Highlander
+bmw-5-series,BMW 5 Series,BMW,Car,2010-2022,58,327,62,107,33,,https://lemonindex.com/cars/bmw-5-series/,https://en.wikipedia.org/wiki/BMW_5_Series
+nissan-murano,Nissan Murano,Nissan,SUV,2010-2022,59,473,62,105,34,,https://lemonindex.com/cars/nissan-murano/,https://en.wikipedia.org/wiki/Nissan_Murano
+nissan-sentra,Nissan Sentra,Nissan,Car,2010-2022,59,1216,62,105,35,,https://lemonindex.com/cars/nissan-sentra/,https://en.wikipedia.org/wiki/Nissan_Sentra
+nissan-versa,Nissan Versa,Nissan,Car,2010-2022,59,769,63,106,36,,https://lemonindex.com/cars/nissan-versa/,https://en.wikipedia.org/wiki/Nissan_Versa
+mercedes-benz-glk/glc,Mercedes-Benz GLK/GLC,Mercedes-Benz,SUV,2010-2022,60,343,64,106,37,,https://lemonindex.com/cars/mercedes-benz-glk/glc/,https://en.wikipedia.org/wiki/Mercedes-Benz_GLK-Class
+nissan-rogue,Nissan Rogue,Nissan,SUV,2010-2022,61,2041,64,104,38,,https://lemonindex.com/cars/nissan-rogue/,https://en.wikipedia.org/wiki/Nissan_Rogue
+audi-q7,Audi Q7,Audi,SUV,2010-2022,63,175,68,107,39,,https://lemonindex.com/cars/audi-q7/,https://en.wikipedia.org/wiki/Audi_Q7
+subaru-crosstrek,Subaru Crosstrek,Subaru,SUV,2013-2022,64,737,67,105,40,,https://lemonindex.com/cars/subaru-crosstrek/,https://en.wikipedia.org/wiki/Subaru_Crosstrek
+bmw-x3,BMW X3,BMW,SUV,2010-2022,64,395,68,105,41,,https://lemonindex.com/cars/bmw-x3/,https://en.wikipedia.org/wiki/BMW_X3
+audi-q3,Audi Q3,Audi,SUV,2017-2021,66,74,65,99,42,,https://lemonindex.com/cars/audi-q3/,https://en.wikipedia.org/wiki/Audi_Q3 https://www.best-selling-cars.com/brands/2018-full-year-usa-audi-of-america-car-sales https://www.best-selling-cars.com/usa/2020-full-year-usa-audi-of-america-sales-by-model https://www.best-selling-cars.com/usa/2021-full-year-usa-audi-us-sales-by-model
+honda-civic,Honda Civic,Honda,Car,2010-2022,67,2723,71,106,43,,https://lemonindex.com/cars/honda-civic/,https://en.wikipedia.org/wiki/Honda_Civic
+audi-q5,Audi Q5,Audi,SUV,2017-2021,69,211,69,100,44,,https://lemonindex.com/cars/audi-q5/,https://en.wikipedia.org/wiki/Audi_Q5 https://www.best-selling-cars.com/brands/2018-full-year-usa-audi-of-america-car-sales https://www.best-selling-cars.com/usa/2020-full-year-usa-audi-of-america-sales-by-model https://www.best-selling-cars.com/usa/2021-full-year-usa-audi-us-sales-by-model
+nissan-altima,Nissan Altima,Nissan,Car,2010-2022,70,2362,75,107,45,,https://lemonindex.com/cars/nissan-altima/,https://en.wikipedia.org/wiki/Nissan_Altima
+mazda-cx-5,Mazda CX-5,Mazda,SUV,2013-2022,73,1029,76,105,46,,https://lemonindex.com/cars/mazda-cx-5/,https://en.wikipedia.org/wiki/Mazda_CX-5
+hyundai-elantra,Hyundai Elantra,Hyundai,Car,2010-2022,74,1864,79,107,47,,https://lemonindex.com/cars/hyundai-elantra/,https://en.wikipedia.org/wiki/Hyundai_Elantra
+chevrolet-traverse,Chevrolet Traverse,Chevrolet,SUV,2010-2022,75,1180,79,106,48,,https://lemonindex.com/cars/chevrolet-traverse/,https://en.wikipedia.org/wiki/Chevrolet_Traverse
+chevrolet-tahoe,Chevrolet Tahoe,Chevrolet,SUV,2010-2022,75,954,79,106,49,,https://lemonindex.com/cars/chevrolet-tahoe/,https://en.wikipedia.org/wiki/Chevrolet_Tahoe
+honda-fit,Honda Fit,Honda,Car,2010-2020,75,432,79,105,50,,https://lemonindex.com/cars/honda-fit/,https://en.wikipedia.org/wiki/Honda_Fit
+chevrolet-colorado,Chevrolet Colorado,Chevrolet,Truck,2010-2022,76,722,78,103,51,,https://lemonindex.com/cars/chevrolet-colorado/,https://en.wikipedia.org/wiki/Chevrolet_Colorado
+kia-soul,Kia Soul,Kia,SUV,2010-2022,76,1101,81,106,52,,https://lemonindex.com/cars/kia-soul/,https://en.wikipedia.org/wiki/Kia_Soul
+chevrolet-impala,Chevrolet Impala,Chevrolet,Car,2010-2020,76,997,82,109,53,,https://lemonindex.com/cars/chevrolet-impala/,https://en.wikipedia.org/wiki/Chevrolet_Impala
+chevrolet-camaro,Chevrolet Camaro,Chevrolet,Car,2010-2022,76,661,81,107,54,,https://lemonindex.com/cars/chevrolet-camaro/,https://en.wikipedia.org/wiki/Chevrolet_Camaro
+acura-mdx,Acura MDX,Acura,SUV,2010-2022,77,573,84,108,55,,https://lemonindex.com/cars/acura-mdx/,https://en.wikipedia.org/wiki/Acura_MDX
+mazda-cx-9,Mazda CX-9,Mazda,SUV,2010-2022,79,288,84,107,56,,https://lemonindex.com/cars/mazda-cx-9/,https://en.wikipedia.org/wiki/Mazda_CX-9
+chevrolet-cruze,Chevrolet Cruze,Chevrolet,Car,2011-2019,79,1548,86,108,57,,https://lemonindex.com/cars/chevrolet-cruze/,https://en.wikipedia.org/wiki/Chevrolet_Cruze
+toyota-avalon,Toyota Avalon,Toyota,Car,2010-2022,81,412,86,107,58,,https://lemonindex.com/cars/toyota-avalon/,https://en.wikipedia.org/wiki/Toyota_Avalon
+ford-taurus,Ford Taurus,Ford,Car,2010-2019,81,410,88,109,59,,https://lemonindex.com/cars/ford-taurus/,https://en.wikipedia.org/wiki/Ford_Taurus
+dodge-challenger,Dodge Challenger,Dodge,Car,2010-2022,81,607,85,106,60,,https://lemonindex.com/cars/dodge-challenger/,https://en.wikipedia.org/wiki/Dodge_Challenger_(2008)
+honda-accord,Honda Accord,Honda,Car,2010-2022,82,3303,88,106,61,,https://lemonindex.com/cars/honda-accord/,https://en.wikipedia.org/wiki/Honda_Accord
+kia-optima,Kia Optima,Kia,Car,2010-2022,84,1261,90,106,62,,https://lemonindex.com/cars/kia-optima/,https://en.wikipedia.org/wiki/Kia_Optima
+chevrolet-sonic,Chevrolet Sonic,Chevrolet,Car,2012-2020,85,432,91,107,63,,https://lemonindex.com/cars/chevrolet-sonic/,https://en.wikipedia.org/wiki/Chevrolet_Aveo_(T300)
+gmc-sierra,GMC Sierra,GMC,Truck,2010-2022,87,2479,92,106,64,,https://lemonindex.com/cars/gmc-sierra/,https://en.wikipedia.org/wiki/GMC_Sierra
+chevrolet-spark,Chevrolet Spark,Chevrolet,Car,2013-2022,89,284,94,105,65,,https://lemonindex.com/cars/chevrolet-spark/,https://en.wikipedia.org/wiki/Chevrolet_Spark
+bmw-x1,BMW X1,BMW,SUV,2013-2022,89,204,94,105,66,,https://lemonindex.com/cars/bmw-x1/,https://en.wikipedia.org/wiki/BMW_X1
+chevrolet-suburban,Chevrolet Suburban,Chevrolet,SUV,2010-2022,91,647,97,107,67,,https://lemonindex.com/cars/chevrolet-suburban/,https://en.wikipedia.org/wiki/Chevrolet_Suburban
+gmc-yukon,GMC Yukon,GMC,SUV,2010-2022,94,685,99,105,68,,https://lemonindex.com/cars/gmc-yukon/,https://en.wikipedia.org/wiki/Chevrolet_Tahoe
+hyundai-kona,Hyundai Kona,Hyundai,SUV,2018-2022,96,344,98,102,69,,https://lemonindex.com/cars/hyundai-kona/,https://en.wikipedia.org/wiki/Hyundai_Kona
+ford-expedition,Ford Expedition,Ford,SUV,2010-2022,98,734,103,105,70,,https://lemonindex.com/cars/ford-expedition/,https://en.wikipedia.org/wiki/Ford_Expedition
+honda-cr-v,Honda CR-V,Honda,SUV,2010-2022,99,4277,104,105,71,,https://lemonindex.com/cars/honda-cr-v/,https://en.wikipedia.org/wiki/Honda_CR-V
+chevrolet-malibu,Chevrolet Malibu,Chevrolet,Car,2010-2022,99,2293,107,107,72,,https://lemonindex.com/cars/chevrolet-malibu/,https://en.wikipedia.org/wiki/Chevrolet_Malibu
+honda-odyssey,Honda Odyssey,Honda,Minivan,2010-2022,99,1432,106,106,73,,https://lemonindex.com/cars/honda-odyssey/,https://en.wikipedia.org/wiki/Honda_Odyssey_(North_America)
+subaru-impreza,Subaru Impreza,Subaru,Car,2010-2022,100,749,106,106,74,,https://lemonindex.com/cars/subaru-impreza/,https://en.wikipedia.org/wiki/Subaru_Impreza
+ford-f-series,Ford F-Series,Ford,Truck,2010-2022,101,10459,107,106,75,,https://lemonindex.com/cars/ford-f-series/,https://en.wikipedia.org/wiki/Ford_F-Series
+gmc-acadia,GMC Acadia,GMC,SUV,2010-2022,103,1172,110,106,76,,https://lemonindex.com/cars/gmc-acadia/,https://en.wikipedia.org/wiki/GMC_Acadia
+acura-rdx,Acura RDX,Acura,SUV,2010-2022,105,625,111,105,77,,https://lemonindex.com/cars/acura-rdx/,https://en.wikipedia.org/wiki/Acura_RDX
+dodge-charger,Dodge Charger,Dodge,Car,2010-2022,107,1265,114,106,78,,https://lemonindex.com/cars/dodge-charger/,https://en.wikipedia.org/wiki/Dodge_Charger_(2005)
+audi-a3,Audi A3,Audi,Car,2010-2022,107,206,110,103,79,,https://lemonindex.com/cars/audi-a3/,https://en.wikipedia.org/wiki/Audi_A3
+subaru-legacy,Subaru Legacy,Subaru,Car,2010-2022,108,625,114,106,80,,https://lemonindex.com/cars/subaru-legacy/,https://en.wikipedia.org/wiki/Subaru_Legacy
+ford-ecosport,Ford EcoSport,Ford,SUV,2018-2022,109,276,111,101,81,,https://lemonindex.com/cars/ford-ecosport/,https://en.wikipedia.org/wiki/Ford_EcoSport
+hyundai-santa-fe,Hyundai Santa Fe,Hyundai,SUV,2010-2022,110,1597,116,106,82,,https://lemonindex.com/cars/hyundai-santa-fe/,https://en.wikipedia.org/wiki/Hyundai_Santa_Fe
+volkswagen-jetta,Volkswagen Jetta,Volkswagen,Car,2010-2022,111,1830,119,107,83,,https://lemonindex.com/cars/volkswagen-jetta/,https://en.wikipedia.org/wiki/Volkswagen_Jetta
+mercedes-benz-cla,Mercedes-Benz CLA,Mercedes-Benz,Car,2014-2021,112,192,114,102,84,,https://lemonindex.com/cars/mercedes-benz-cla/,https://en.wikipedia.org/wiki/Mercedes-Benz_CLA
+volkswagen-tiguan,Volkswagen Tiguan,Volkswagen,SUV,2011-2022,114,816,118,104,85,,https://lemonindex.com/cars/volkswagen-tiguan/,https://en.wikipedia.org/wiki/Volkswagen_Tiguan
+kia-sedona,Kia Sedona,Kia,Minivan,2010-2022,114,326,123,107,86,,https://lemonindex.com/cars/kia-sedona/,https://en.wikipedia.org/wiki/Kia_Carnival
+honda-pilot,Honda Pilot,Honda,SUV,2010-2022,117,1991,123,106,87,,https://lemonindex.com/cars/honda-pilot/,https://en.wikipedia.org/wiki/Honda_Pilot
+ram-pickup,Ram pickup,Ram,Truck,2010-2022,120,7223,126,105,88,,https://lemonindex.com/cars/ram-pickup/,https://en.wikipedia.org/wiki/Ram_pickup
+dodge-grand-caravan,Dodge Grand Caravan,Dodge,Minivan,2010-2020,120,1633,128,107,89,,https://lemonindex.com/cars/dodge-grand-caravan/,https://en.wikipedia.org/wiki/Dodge_Caravan
+gmc-yukon-xl,GMC Yukon XL,GMC,SUV,2010-2017,121,306,129,106,90,,https://lemonindex.com/cars/gmc-yukon-xl/,https://en.wikipedia.org/wiki/Chevrolet_Suburban
+chrysler-300,Chrysler 300,Chrysler,Car,2010-2022,123,707,132,107,91,,https://lemonindex.com/cars/chrysler-300/,https://en.wikipedia.org/wiki/Chrysler_300
+jeep-patriot,Jeep Patriot,Jeep,SUV,2010-2017,126,817,135,107,92,,https://lemonindex.com/cars/jeep-patriot/,https://en.wikipedia.org/wiki/Jeep_Patriot
+kia-sorento,Kia Sorento,Kia,SUV,2011-2022,128,1844,137,107,93,,https://lemonindex.com/cars/kia-sorento/,https://en.wikipedia.org/wiki/Kia_Sorento
+dodge-journey,Dodge Journey,Dodge,SUV,2010-2020,129,1210,136,105,94,,https://lemonindex.com/cars/dodge-journey/,https://en.wikipedia.org/wiki/Dodge_Journey
+hyundai-sonata,Hyundai Sonata,Hyundai,Car,2010-2022,129,2800,138,107,95,,https://lemonindex.com/cars/hyundai-sonata/,https://en.wikipedia.org/wiki/Hyundai_Sonata
+subaru-forester,Subaru Forester,Subaru,SUV,2010-2022,133,2588,140,105,96,,https://lemonindex.com/cars/subaru-forester/,https://en.wikipedia.org/wiki/Subaru_Forester
+audi-a6,Audi A6,Audi,Car,2017-2021,134,87,134,101,97,,https://lemonindex.com/cars/audi-a6/,https://www.goodcarbadcar.net/audi-a6-sales-figures/ https://en.wikipedia.org/wiki/Audi_A6 https://www.best-selling-cars.com/brands/2018-full-year-usa-audi-of-america-car-sales https://audiworld.com/how-tos/slideshows/which-were-the-most-popular-audi-models-of-2019-604921 https://www.best-selling-cars.com/usa/2021-full-year-usa-audi-us-sales-by-model
+ford-mustang,Ford Mustang,Ford,Car,2010-2022,136,1453,144,106,98,,https://lemonindex.com/cars/ford-mustang/,https://en.wikipedia.org/wiki/Ford_Mustang
+jeep-compass,Jeep Compass,Jeep,SUV,2010-2022,141,1513,147,105,99,,https://lemonindex.com/cars/jeep-compass/,https://en.wikipedia.org/wiki/Jeep_Compass
+volkswagen-passat,Volkswagen Passat,Volkswagen,Car,2012-2021,141,995,150,107,100,,https://lemonindex.com/cars/volkswagen-passat/,https://en.wikipedia.org/wiki/Volkswagen_Passat_(North_America)
+hyundai-tucson,Hyundai Tucson,Hyundai,SUV,2010-2022,145,1867,153,105,101,,https://lemonindex.com/cars/hyundai-tucson/,https://en.wikipedia.org/wiki/Hyundai_Tucson
+nissan-pathfinder,Nissan Pathfinder,Nissan,SUV,2010-2022,150,1264,161,108,102,,https://lemonindex.com/cars/nissan-pathfinder/,https://en.wikipedia.org/wiki/Nissan_Pathfinder
+ford-escape,Ford Escape,Ford,SUV,2010-2022,153,5225,163,106,103,,https://lemonindex.com/cars/ford-escape/,https://en.wikipedia.org/wiki/Ford_Escape
+honda-ridgeline,Honda Ridgeline,Honda,Truck,2010-2022,162,538,173,107,104,,https://lemonindex.com/cars/honda-ridgeline/,https://en.wikipedia.org/wiki/Honda_Ridgeline
+jeep-grand-cherokee,Jeep Grand Cherokee,Jeep,SUV,2010-2022,170,4546,179,106,105,,https://lemonindex.com/cars/jeep-grand-cherokee/,https://en.wikipedia.org/wiki/Jeep_Grand_Cherokee
+volkswagen-golf,Volkswagen Golf,Volkswagen,Car,2010-2021,170,851,178,105,106,,https://lemonindex.com/cars/volkswagen-golf/,https://en.wikipedia.org/wiki/Volkswagen_Golf
+ford-edge,Ford Edge,Ford,SUV,2010-2022,176,2917,187,106,107,,https://lemonindex.com/cars/ford-edge/,https://en.wikipedia.org/wiki/Ford_Edge
+chrysler-town-and-country,Chrysler Town & Country,Chrysler,Minivan,2010-2016,177,1428,195,110,108,,https://lemonindex.com/cars/chrysler-town-and-country/,https://en.wikipedia.org/wiki/Chrysler_Town_&_Country
+ford-explorer,Ford Explorer,Ford,SUV,2010-2022,178,4609,188,106,109,,https://lemonindex.com/cars/ford-explorer/,https://en.wikipedia.org/wiki/Ford_Explorer
+jeep-gladiator,Jeep Gladiator,Jeep,Truck,2020-2022,193,563,197,103,110,,https://lemonindex.com/cars/jeep-gladiator/,https://en.wikipedia.org/wiki/Jeep_Gladiator_(JT)
+ford-fusion,Ford Fusion,Ford,Car,2010-2020,193,5258,206,107,111,,https://lemonindex.com/cars/ford-fusion/,https://en.wikipedia.org/wiki/Ford_Fusion_(Americas)
+dodge-durango,Dodge Durango,Dodge,SUV,2011-2022,194,1509,206,106,112,,https://lemonindex.com/cars/dodge-durango/,https://en.wikipedia.org/wiki/Dodge_Durango
+jeep-wrangler,Jeep Wrangler,Jeep,SUV,2010-2022,195,4789,206,105,113,,https://lemonindex.com/cars/jeep-wrangler/,https://en.wikipedia.org/wiki/Jeep_Wrangler
+tesla-model-3,Tesla Model 3,Tesla,Car,2017-2020,203,807,204,101,114,estimate,https://lemonindex.com/cars/tesla-model-3/,https://en.wikipedia.org/wiki/Plug-in_electric_vehicles_in_the_United_States https://www.coxautoinc.com/market-insights/
+subaru-outback,Subaru Outback,Subaru,SUV,2010-2022,207,4178,219,105,115,,https://lemonindex.com/cars/subaru-outback/,https://en.wikipedia.org/wiki/Subaru_Outback
+jeep-renegade,Jeep Renegade,Jeep,SUV,2015-2022,210,1240,213,101,116,,https://lemonindex.com/cars/jeep-renegade/,https://en.wikipedia.org/wiki/Jeep_Renegade
+ford-focus,Ford Focus,Ford,Car,2010-2018,227,4198,246,108,117,,https://lemonindex.com/cars/ford-focus/,https://en.wikipedia.org/wiki/Ford_Focus
+subaru-ascent,Subaru Ascent,Subaru,SUV,2019-2022,233,745,241,103,118,,https://lemonindex.com/cars/subaru-ascent/,https://en.wikipedia.org/wiki/Subaru_Ascent
+ford-fiesta,Ford Fiesta,Ford,Car,2011-2019,237,1427,256,108,119,,https://lemonindex.com/cars/ford-fiesta/,https://en.wikipedia.org/wiki/Ford_Fiesta
+volkswagen-atlas,Volkswagen Atlas,Volkswagen,SUV,2018-2022,241,1122,247,103,120,,https://lemonindex.com/cars/volkswagen-atlas/,https://en.wikipedia.org/wiki/Volkswagen_Atlas
+hyundai-palisade,Hyundai Palisade,Hyundai,SUV,2020-2022,251,727,259,103,121,,https://lemonindex.com/cars/hyundai-palisade/,https://en.wikipedia.org/wiki/Hyundai_Palisade
+kia-telluride,Kia Telluride,Kia,SUV,2020-2022,259,876,268,103,122,,https://lemonindex.com/cars/kia-telluride/,https://en.wikipedia.org/wiki/Kia_Telluride
+chevrolet-volt,Chevrolet Volt,Chevrolet,Car,2011-2019,261,438,279,107,123,,https://lemonindex.com/cars/chevrolet-volt/,https://en.wikipedia.org/wiki/Chevrolet_Volt
+chrysler-200,Chrysler 200,Chrysler,Car,2011-2018,261,1996,282,108,124,,https://lemonindex.com/cars/chrysler-200/,https://en.wikipedia.org/wiki/Chrysler_200
+chrysler-pacifica,Chrysler Pacifica,Chrysler,Minivan,2017-2022,279,1994,290,104,125,,https://lemonindex.com/cars/chrysler-pacifica/,https://en.wikipedia.org/wiki/Chrysler_Pacifica_(minivan)
+dodge-dart,Dodge Dart,Dodge,Car,2013-2016,305,1106,331,109,126,,https://lemonindex.com/cars/dodge-dart/,https://en.wikipedia.org/wiki/Dodge_Dart_(PF)
+jeep-cherokee,Jeep Cherokee,Jeep,SUV,2014-2022,307,4660,313,102,127,,https://lemonindex.com/cars/jeep-cherokee/,https://en.wikipedia.org/wiki/Jeep_Cherokee_(KL)
+tesla-model-y,Tesla Model Y,Tesla,SUV,2020-2022,359,1858,391,109,128,estimate,https://lemonindex.com/cars/tesla-model-y/,https://en.wikipedia.org/wiki/Tesla_Model_Y https://en.wikipedia.org/wiki/Plug-in_electric_vehicles_in_the_United_States
+tesla-model-x,Tesla Model X,Tesla,SUV,2016-2020,407,428,409,100,129,estimate,https://lemonindex.com/cars/tesla-model-x/,https://en.wikipedia.org/wiki/Plug-in_electric_vehicles_in_the_United_States https://www.coxautoinc.com/market-insights/
+chevrolet-bolt,Chevrolet Bolt,Chevrolet,Car,2017-2022,410,469,418,102,130,,https://lemonindex.com/cars/chevrolet-bolt/,https://en.wikipedia.org/wiki/Chevrolet_Bolt
+tesla-model-s,Tesla Model S,Tesla,Car,2012-2020,430,773,448,104,131,estimate,https://lemonindex.com/cars/tesla-model-s/,https://en.wikipedia.org/wiki/Plug-in_electric_vehicles_in_the_United_States https://www.coxautoinc.com/market-insights/
+ford-windstar,Ford Windstar,Ford,Minivan,2000-2003,116,786,118,102,,,https://lemonindex.com/cars/ford-windstar/,https://en.wikipedia.org/wiki/Ford_Windstar
+toyota-prius,Toyota Prius,Toyota,Car,2010-2022,179,2442,194,108,,,https://lemonindex.com/cars/toyota-prius/,https://en.wikipedia.org/wiki/Toyota_Prius
+chevrolet-cobalt,Chevrolet Cobalt,Chevrolet,Car,2005-2010,249,2082,205,82,,,https://lemonindex.com/cars/chevrolet-cobalt/,https://en.wikipedia.org/wiki/Chevrolet_Cobalt
+jeep-liberty,Jeep Liberty,Jeep,SUV,2010-2012,104,225,117,112,,,https://lemonindex.com/cars/jeep-liberty/,https://www.goodcarbadcar.net/jeep-liberty-sales-figures/
+mini-cooper,Mini Cooper,Mini,Car,2010-2022,43,183,47,109,,,https://lemonindex.com/cars/mini-cooper/,https://www.goodcarbadcar.net/mini-cooper-sales-figures/
+ford-ranger,Ford Ranger,Ford,Truck,2010-2022,48,248,51,106,,,https://lemonindex.com/cars/ford-ranger/,https://www.goodcarbadcar.net/ford-ranger-sales-figures/
+chevrolet-corvette,Chevrolet Corvette,Chevrolet,Car,2014-2022,149,339,157,106,,,https://lemonindex.com/cars/chevrolet-corvette/,https://www.goodcarbadcar.net/chevrolet-corvette-sales-figures/
+dodge-dakota,Dodge Dakota,Dodge,Truck,2000-2008,213,1839,196,92,,,https://lemonindex.com/cars/dodge-dakota/,https://en.wikipedia.org/wiki/Dodge_Dakota
+chevrolet-hhr,Chevrolet HHR,Chevrolet,Car,2006-2011,168,777,147,88,,,https://lemonindex.com/cars/chevrolet-hhr/,https://en.wikipedia.org/wiki/Chevrolet_HHR
+gmc-envoy,GMC Envoy,GMC,SUV,2002-2008,147,839,123,84,,,https://lemonindex.com/cars/gmc-envoy/,https://en.wikipedia.org/wiki/GMC_Envoy
+nissan-titan,Nissan Titan,Nissan,Truck,2010-2021,99,264,103,104,,,https://lemonindex.com/cars/nissan-titan/,https://en.wikipedia.org/wiki/Nissan_Titan
+ford-freestyle,Ford Freestyle,Ford,SUV,2005-2007,375,439,262,70,,,https://lemonindex.com/cars/ford-freestyle/,https://en.wikipedia.org/wiki/Ford_Freestyle
+jeep-commander,Jeep Commander,Jeep,SUV,2006-2008,459,688,351,76,,,https://lemonindex.com/cars/jeep-commander/,https://en.wikipedia.org/wiki/Jeep_Commander_(XK)
+toyota-sequoia,Toyota Sequoia,Toyota,SUV,2001-2010,101,402,92,90,,,https://lemonindex.com/cars/toyota-sequoia/,https://en.wikipedia.org/wiki/Toyota_Sequoia
+cadillac-srx,Cadillac SRX,Cadillac,SUV,2010-2016,83,336,92,110,,,https://lemonindex.com/cars/cadillac-srx/,https://en.wikipedia.org/wiki/Cadillac_SRX
+nissan-xterra,Nissan Xterra,Nissan,SUV,2002-2010,126,483,106,85,,,https://lemonindex.com/cars/nissan-xterra/,https://en.wikipedia.org/wiki/Nissan_Xterra
+chevrolet-avalanche,Chevrolet Avalanche,Chevrolet,Truck,2002-2012,129,647,113,88,,,https://lemonindex.com/cars/chevrolet-avalanche/,https://en.wikipedia.org/wiki/Chevrolet_Avalanche
+acura-tl,Acura TL,Acura,Car,2010-2013,46,63,51,112,,,https://lemonindex.com/cars/acura-tl/,https://en.wikipedia.org/wiki/Acura_TL
+dodge-avenger,Dodge Avenger,Dodge,Car,2010-2014,104,429,120,115,,,https://lemonindex.com/cars/dodge-avenger/,https://en.wikipedia.org/wiki/Dodge_Avenger
+buick-enclave,Buick Enclave,Buick,SUV,2010-2022,50,360,54,107,,,https://lemonindex.com/cars/buick-enclave/,https://en.wikipedia.org/wiki/Buick_Enclave
+saturn-vue,Saturn Vue,Saturn,SUV,2002-2009,109,564,91,83,,,https://lemonindex.com/cars/saturn-vue/,https://en.wikipedia.org/wiki/Saturn_Vue
+ford-bronco,Ford Bronco,Ford,SUV,2021-2022,227,408,268,118,,,https://lemonindex.com/cars/ford-bronco/,https://en.wikipedia.org/wiki/Ford_Bronco
+cadillac-escalade,Cadillac Escalade,Cadillac,SUV,2011-2022,65,255,69,106,,,https://lemonindex.com/cars/cadillac-escalade/,https://en.wikipedia.org/wiki/Cadillac_Escalade
+cadillac-cts,Cadillac CTS,Cadillac,Car,2010-2014,62,148,70,114,,,https://lemonindex.com/cars/cadillac-cts/,https://en.wikipedia.org/wiki/Cadillac_CTS
+chevrolet-blazer,Chevrolet Blazer,Chevrolet,SUV,2019-2022,46,138,48,104,,,https://lemonindex.com/cars/chevrolet-blazer/,https://www.goodcarbadcar.net/chevrolet-blazer-sales-figures/
+buick-lacrosse,Buick LaCrosse,Buick,Car,2010-2017,65,264,72,111,,,https://lemonindex.com/cars/buick-lacrosse/,https://en.wikipedia.org/wiki/Buick_LaCrosse
+mazda-tribute,Mazda Tribute,Mazda,SUV,2001-2008,301,777,268,89,,,https://lemonindex.com/cars/mazda-tribute/,https://www.goodcarbadcar.net/mazda-tribute-sales-figures/
+chevrolet-cavalier,Chevrolet Cavalier,Chevrolet,Car,2000-2004,63,713,61,97,,,https://lemonindex.com/cars/chevrolet-cavalier/,https://en.wikipedia.org/wiki/Chevrolet_Cavalier
+dodge-caliber,Dodge Caliber,Dodge,Car,2007-2011,99,371,94,95,,,https://lemonindex.com/cars/dodge-caliber/,https://en.wikipedia.org/wiki/Dodge_Caliber
+ford-flex,Ford Flex,Ford,SUV,2010-2019,153,385,168,109,,,https://lemonindex.com/cars/ford-flex/,https://www.goodcarbadcar.net/ford-flex-sales-figures/
+nissan-armada,Nissan Armada,Nissan,SUV,2017-2019,76,90,79,104,,,https://lemonindex.com/cars/nissan-armada/,https://en.wikipedia.org/wiki/Nissan_Armada
+lincoln-mkz,Lincoln MKZ,Lincoln,Car,2010-2017,67,172,74,109,,,https://lemonindex.com/cars/lincoln-mkz/,https://en.wikipedia.org/wiki/Lincoln_MKZ
+lexus-ls,Lexus LS,Lexus,Car,2005-2008,78,54,66,85,,,https://lemonindex.com/cars/lexus-ls/,https://www.goodcarbadcar.net/lexus-ls-sales-figures/
+mitsubishi-outlander,Mitsubishi Outlander,Mitsubishi,SUV,2016-2022,129,353,140,109,,,https://lemonindex.com/cars/mitsubishi-outlander/,https://en.wikipedia.org/wiki/Mitsubishi_Outlander
+lexus-is,Lexus IS,Lexus,Car,2010-2022,32,74,35,110,,,https://lemonindex.com/cars/lexus-is/,https://en.wikipedia.org/wiki/Lexus_IS
+volvo-xc90,Volvo XC90,Volvo,SUV,2011-2022,58,165,61,105,,,https://lemonindex.com/cars/volvo-xc90/,https://en.wikipedia.org/wiki/Volvo_XC90
+hyundai-genesis,Hyundai Genesis,Hyundai,Car,2010-2016,123,284,133,109,,,https://lemonindex.com/cars/hyundai-genesis/,https://www.goodcarbadcar.net/hyundai-genesis-sales-figures/
+dodge-nitro,Dodge Nitro,Dodge,SUV,2007-2011,193,331,189,98,,,https://lemonindex.com/cars/dodge-nitro/,https://www.goodcarbadcar.net/dodge-nitro-sales-figures/
+gmc-canyon,GMC Canyon,GMC,Truck,2015-2022,93,236,96,103,,,https://lemonindex.com/cars/gmc-canyon/,https://en.wikipedia.org/wiki/GMC_Canyon
+lincoln-mkx,Lincoln MKX,Lincoln,SUV,2010-2018,60,168,64,107,,,https://lemonindex.com/cars/lincoln-mkx/,https://en.wikipedia.org/wiki/Lincoln_MKX
+ford-bronco-sport,Ford Bronco Sport,Ford,SUV,2021-2022,287,670,315,110,,,https://lemonindex.com/cars/ford-bronco-sport/,https://en.wikipedia.org/wiki/Ford_Bronco_Sport
+ford-transit,Ford Transit,Ford,Van,2015-2022,28,288,28,103,,,https://lemonindex.com/cars/ford-transit/,https://en.wikipedia.org/wiki/Ford_Transit
+hyundai-veloster,Hyundai Veloster,Hyundai,Car,2012-2019,139,275,150,108,,,https://lemonindex.com/cars/hyundai-veloster/,https://en.wikipedia.org/wiki/Hyundai_Veloster
+buick-regal,Buick Regal,Buick,Car,2011-2014,64,74,73,114,,,https://lemonindex.com/cars/buick-regal/,https://en.wikipedia.org/wiki/Buick_Regal
+chevrolet-aveo,Chevrolet Aveo,Chevrolet,Car,2004-2011,105,389,91,87,,,https://lemonindex.com/cars/chevrolet-aveo/,https://en.wikipedia.org/wiki/Chevrolet_Aveo
+nissan-quest,Nissan Quest,Nissan,Minivan,2005-2007,125,92,91,73,,,https://lemonindex.com/cars/nissan-quest/,https://en.wikipedia.org/wiki/Nissan_Quest
+honda-element,Honda Element,Honda,SUV,2003-2008,212,500,168,79,,,https://lemonindex.com/cars/honda-element/,https://www.goodcarbadcar.net/honda-element-sales-figures/
+volvo-s60,Volvo S60,Volvo,Car,2012-2014,64,49,73,114,,,https://lemonindex.com/cars/volvo-s60/,https://en.wikipedia.org/wiki/Volvo_S60
+audi-a6,Audi A6,Audi,Car,2013-2019,64,67,69,108,,,https://lemonindex.com/cars/audi-a6/,https://www.goodcarbadcar.net/audi-a6-sales-figures/ https://en.wikipedia.org/wiki/Audi_A6 https://www.best-selling-cars.com/brands/2018-full-year-usa-audi-of-america-car-sales https://audiworld.com/how-tos/slideshows/which-were-the-most-popular-audi-models-of-2019-604921 https://www.best-selling-cars.com/usa/2021-full-year-usa-audi-us-sales-by-model
+buick-rendezvous,Buick Rendezvous,Buick,SUV,2002-2006,143,394,119,83,,,https://lemonindex.com/cars/buick-rendezvous/,https://en.wikipedia.org/wiki/Buick_Rendezvous
+mitsubishi-lancer,Mitsubishi Lancer,Mitsubishi,Car,2005-2010,104,138,91,87,,,https://lemonindex.com/cars/mitsubishi-lancer/,https://www.goodcarbadcar.net/mitsubishi-lancer-sales-figures/
+mazda-cx-7,Mazda CX-7,Mazda,SUV,2007-2011,161,280,159,99,,,https://lemonindex.com/cars/mazda-cx-7/,https://www.goodcarbadcar.net/mazda-cx-7-sales-figures/
+dodge-neon,Dodge Neon,Dodge,Car,2000-2005,83,617,78,93,,,https://lemonindex.com/cars/dodge-neon/,https://en.wikipedia.org/wiki/Dodge_Neon
+scion-xb,Scion xB,Scion,Car,2004-2010,132,336,110,83,,,https://lemonindex.com/cars/scion-xb/,https://en.wikipedia.org/wiki/Scion_xB
+ford-crown-victoria,Ford Crown Victoria,Ford,Car,2005-2011,31,85,26,85,,,https://lemonindex.com/cars/ford-crown-victoria/,https://www.goodcarbadcar.net/ford-crown-victoria-sales-figures/
+honda-passport,Honda Passport,Honda,SUV,2019-2022,169,301,177,105,,,https://lemonindex.com/cars/honda-passport/,https://en.wikipedia.org/wiki/Honda_Passport
+lincoln-navigator,Lincoln Navigator,Lincoln,SUV,2000-2007,105,235,94,90,,,https://lemonindex.com/cars/lincoln-navigator/,https://en.wikipedia.org/wiki/Lincoln_Navigator
+cadillac-deville,Cadillac DeVille,Cadillac,Car,2000-2005,60,276,58,96,,,https://lemonindex.com/cars/cadillac-deville/,https://www.goodcarbadcar.net/cadillac-deville-sales-figures/
+volkswagen-cc,Volkswagen CC,Volkswagen,Car,2011-2012,68,40,78,114,,,https://lemonindex.com/cars/volkswagen-cc/,https://en.wikipedia.org/wiki/Volkswagen_CC
+dodge-stratus,Dodge Stratus,Dodge,Car,2000-2006,54,367,49,90,,,https://lemonindex.com/cars/dodge-stratus/,https://en.wikipedia.org/wiki/Dodge_Stratus
+acura-tlx,Acura TLX,Acura,Car,2015-2021,124,301,124,100,,,https://lemonindex.com/cars/acura-tlx/,https://en.wikipedia.org/wiki/Acura_TLX
+toyota-yaris,Toyota Yaris,Toyota,Car,2010-2013,39,40,43,113,,,https://lemonindex.com/cars/toyota-yaris/,https://en.wikipedia.org/wiki/Toyota_Yaris
+toyota-fj-cruiser,Toyota FJ Cruiser,Toyota,SUV,2007-2008,232,295,211,91,,,https://lemonindex.com/cars/toyota-fj-cruiser/,https://en.wikipedia.org/wiki/Toyota_FJ_Cruiser
+chevrolet-express,Chevrolet Express,Chevrolet,Van,2010-2021,12,88,13,108,,,https://lemonindex.com/cars/chevrolet-express/,https://www.goodcarbadcar.net/chevrolet-express-sales-figures/
+buick-encore,Buick Encore,Buick,SUV,2013-2020,37,214,39,103,,,https://lemonindex.com/cars/buick-encore/,https://en.wikipedia.org/wiki/Buick_Encore
+fiat-500,Fiat 500,Fiat,Car,2012-2015,206,351,228,111,,,https://lemonindex.com/cars/fiat-500/,https://www.goodcarbadcar.net/fiat-500-sales-figures/
+ram-promaster,Ram ProMaster,Ram,Van,2015-2022,65,262,68,104,,,https://lemonindex.com/cars/ram-promaster/,https://en.wikipedia.org/wiki/Ram_ProMaster

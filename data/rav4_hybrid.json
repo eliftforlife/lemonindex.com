@@ -1,0 +1,541 @@
+{
+"years": {
+"2016": {
+"gas": {
+"comb": [
+24,
+26
+],
+"cost": [
+2450,
+2700
+],
+"engines": [
+"2.5L 4-cyl"
+],
+"versions": [
+"RAV4",
+"RAV4 AWD",
+"RAV4 LE/XLE",
+"RAV4 Limited AWD/SE AWD"
+],
+"n": 4
+},
+"hybrid": {
+"comb": [
+32,
+32
+],
+"cost": [
+2000,
+2000
+],
+"engines": [
+"2.5L 4-cyl hybrid"
+],
+"versions": [
+"RAV4 Hybrid AWD"
+],
+"n": 1
+},
+"nhtsa": {
+"all": 257,
+"filed_hybrid": 17,
+"filed_prime": 0,
+"hybrid_system": 0
+}
+},
+"2017": {
+"gas": {
+"comb": [
+24,
+26
+],
+"cost": [
+2450,
+2700
+],
+"engines": [
+"2.5L 4-cyl"
+],
+"versions": [
+"RAV4",
+"RAV4 AWD",
+"RAV4 LE/XLE",
+"RAV4 Limited AWD/SE AWD"
+],
+"n": 4
+},
+"hybrid": {
+"comb": [
+32,
+32
+],
+"cost": [
+2000,
+2000
+],
+"engines": [
+"2.5L 4-cyl hybrid"
+],
+"versions": [
+"RAV4 Hybrid AWD"
+],
+"n": 1
+},
+"nhtsa": {
+"all": 321,
+"filed_hybrid": 14,
+"filed_prime": 0,
+"hybrid_system": 0
+}
+},
+"2018": {
+"gas": {
+"comb": [
+24,
+26
+],
+"cost": [
+2450,
+2700
+],
+"engines": [
+"2.5L 4-cyl"
+],
+"versions": [
+"RAV4",
+"RAV4 AWD",
+"RAV4 LE/XLE",
+"RAV4 Limited AWD/SE AWD"
+],
+"n": 4
+},
+"hybrid": {
+"comb": [
+32,
+32
+],
+"cost": [
+2000,
+2000
+],
+"engines": [
+"2.5L 4-cyl hybrid"
+],
+"versions": [
+"RAV4 Hybrid AWD"
+],
+"n": 1
+},
+"nhtsa": {
+"all": 348,
+"filed_hybrid": 15,
+"filed_prime": 0,
+"hybrid_system": 0
+}
+},
+"2019": {
+"gas": {
+"comb": [
+28,
+30
+],
+"cost": [
+2150,
+2300
+],
+"engines": [
+"2.5L 4-cyl"
+],
+"versions": [
+"RAV4",
+"RAV4 AWD"
+],
+"n": 3
+},
+"hybrid": {
+"comb": [
+40,
+40
+],
+"cost": [
+1600,
+1600
+],
+"engines": [
+"2.5L 4-cyl hybrid"
+],
+"versions": [
+"RAV4 Hybrid AWD"
+],
+"n": 1
+},
+"nhtsa": {
+"all": 902,
+"filed_hybrid": 22,
+"filed_prime": 0,
+"hybrid_system": 0
+}
+},
+"2020": {
+"gas": {
+"comb": [
+27,
+30
+],
+"cost": [
+2150,
+2400
+],
+"engines": [
+"2.5L 4-cyl"
+],
+"versions": [
+"RAV4",
+"RAV4 AWD",
+"RAV4 AWD LE",
+"RAV4 AWD TRD OFFROAD"
+],
+"n": 6
+},
+"hybrid": {
+"comb": [
+40,
+40
+],
+"cost": [
+1600,
+1600
+],
+"engines": [
+"2.5L 4-cyl hybrid"
+],
+"versions": [
+"RAV4 Hybrid AWD"
+],
+"n": 1
+},
+"nhtsa": {
+"all": 648,
+"filed_hybrid": 13,
+"filed_prime": 0,
+"hybrid_system": 1
+}
+},
+"2021": {
+"gas": {
+"comb": [
+28,
+30
+],
+"cost": [
+2150,
+2300
+],
+"engines": [
+"2.5L 4-cyl"
+],
+"versions": [
+"RAV4",
+"RAV4 AWD",
+"RAV4 AWD LE",
+"RAV4 AWD TRD OFFROAD"
+],
+"n": 6
+},
+"hybrid": {
+"comb": [
+40,
+40
+],
+"cost": [
+1600,
+1600
+],
+"engines": [
+"2.5L 4-cyl hybrid"
+],
+"versions": [
+"RAV4 Hybrid  AWD"
+],
+"n": 1
+},
+"prime": {
+"comb": [
+38,
+38
+],
+"cost": [
+1700,
+1700
+],
+"engines": [
+"2.5L 4-cyl hybrid"
+],
+"versions": [
+"RAV4 Prime 4WD"
+],
+"n": 1,
+"ev_miles": [
+42,
+42
+]
+},
+"nhtsa": {
+"all": 508,
+"filed_hybrid": 22,
+"filed_prime": 99,
+"hybrid_system": 0
+}
+},
+"2022": {
+"gas": {
+"comb": [
+28,
+30
+],
+"cost": [
+2150,
+2300
+],
+"engines": [
+"2.5L 4-cyl"
+],
+"versions": [
+"RAV4",
+"RAV4 AWD",
+"RAV4 AWD LE",
+"RAV4 AWD TRD OFFROAD"
+],
+"n": 6
+},
+"hybrid": {
+"comb": [
+40,
+40
+],
+"cost": [
+1600,
+1600
+],
+"engines": [
+"2.5L 4-cyl hybrid"
+],
+"versions": [
+"RAV4 Hybrid AWD"
+],
+"n": 1
+},
+"prime": {
+"comb": [
+38,
+38
+],
+"cost": [
+1700,
+1700
+],
+"engines": [
+"2.5L 4-cyl hybrid"
+],
+"versions": [
+"RAV4 Prime 4WD"
+],
+"n": 1,
+"ev_miles": [
+42,
+42
+]
+},
+"nhtsa": {
+"all": 176,
+"filed_hybrid": 5,
+"filed_prime": 22,
+"hybrid_system": 0
+}
+},
+"2023": {
+"gas": {
+"comb": [
+28,
+30
+],
+"cost": [
+2150,
+2300
+],
+"engines": [
+"2.5L 4-cyl"
+],
+"versions": [
+"RAV4",
+"RAV4 AWD",
+"RAV4 AWD LE",
+"RAV4 AWD TRD OFFROAD"
+],
+"n": 6
+},
+"hybrid": {
+"comb": [
+37,
+40
+],
+"cost": [
+1600,
+1750
+],
+"engines": [
+"2.5L 4-cyl hybrid"
+],
+"versions": [
+"RAV4 Hybrid AWD",
+"RAV4 Hybrid AWD Woodland Edition"
+],
+"n": 2
+},
+"prime": {
+"comb": [
+38,
+38
+],
+"cost": [
+1700,
+1700
+],
+"engines": [
+"2.5L 4-cyl hybrid"
+],
+"versions": [
+"RAV4 Prime 4WD"
+],
+"n": 1,
+"ev_miles": [
+42,
+42
+]
+},
+"nhtsa": {
+"all": 233,
+"filed_hybrid": 8,
+"filed_prime": 65,
+"hybrid_system": 0
+}
+},
+"2024": {
+"gas": {
+"comb": [
+28,
+30
+],
+"cost": [
+2150,
+2300
+],
+"engines": [
+"2.5L 4-cyl"
+],
+"versions": [
+"RAV4",
+"RAV4 AWD",
+"RAV4 AWD LE",
+"RAV4 AWD TRD OFFROAD"
+],
+"n": 5
+},
+"hybrid": {
+"comb": [
+37,
+39
+],
+"cost": [
+1650,
+1750
+],
+"engines": [
+"2.5L 4-cyl hybrid"
+],
+"versions": [
+"RAV4 Hybrid AWD",
+"RAV4 Hybrid AWD Woodland Edition"
+],
+"n": 2
+},
+"prime": {
+"comb": [
+38,
+38
+],
+"cost": [
+1700,
+1700
+],
+"engines": [
+"2.5L 4-cyl hybrid"
+],
+"versions": [
+"RAV4 Prime 4WD"
+],
+"n": 1,
+"ev_miles": [
+42,
+42
+]
+},
+"nhtsa": {
+"all": 206,
+"filed_hybrid": 1,
+"filed_prime": 29,
+"hybrid_system": 1
+}
+},
+"2025": {
+"gas": {
+"comb": [
+28,
+38
+],
+"cost": [
+1700,
+2300
+],
+"engines": [
+"2.5L 4-cyl"
+],
+"versions": [
+"RAV4",
+"RAV4 AWD",
+"RAV4 AWD LE",
+"RAV4 PHEV AWD"
+],
+"n": 5
+},
+"hybrid": {
+"comb": [
+37,
+39
+],
+"cost": [
+1650,
+1750
+],
+"engines": [
+"2.5L 4-cyl hybrid"
+],
+"versions": [
+"RAV4 Hybrid AWD",
+"RAV4 Hybrid AWD Woodland Edition"
+],
+"n": 2
+},
+"nhtsa": {
+"all": 105,
+"filed_hybrid": 5,
+"filed_prime": 10,
+"hybrid_system": 0
+}
+}
+},
+"source": "https://www.fueleconomy.gov/",
+"note": "NHTSA complaints: owners file almost every RAV4 complaint under \"RAV4\", whichever version they own, so the RAV4 score covers gas, Hybrid and Prime together. Counts are every complaint for the model year (all dates)."
+}

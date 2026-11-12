@@ -128,7 +128,9 @@ SGM = {'Tesla Model 3': 'Model 3', 'Tesla Model Y': 'Model Y', 'Tesla Model S': 
 for c in EVC:
     yrs = ''.join(f'<tr><td>{y["y"]}</td><td class="num {cls(y["li"])}">{y["li"]}</td><td class="pw">{plain(y["li"])}</td><td class="num">{y["n"]:,}</td><td class="num">{y["sold"]:,}</td></tr>' for y in c['years_detail'])
     iss = ''.join(f'<li><b>{E(ep(p))}</b>: {k}% of complaints</li>' for p, k in c['issues'])
-    rec = ''.join(f'<li><b>{E(RPART(r["part"]))}</b> <small>{rdate(r["date"])}</small><br>{E(rsum(r))}{" <b class=\"bad\">Fire risk.</b>" if r["fire"] else ""} <small class="muted">NHTSA {E(r["id"])}</small></li>' for r in sorted(c['recalls'], key=rkey, reverse=True)[:8])
+    _rli = lambda r: f'<li><b>{E(RPART(r["part"]))}</b> <small>{rdate(r["date"])}</small><br>{E(rsum(r))}{" <b class=\"bad\">Fire risk.</b>" if r["fire"] else ""} <small class="muted">NHTSA {E(r["id"])}</small></li>'
+    _rall = sorted(c['recalls'], key=rkey, reverse=True)
+    rec = ''.join(_rli(r) for r in _rall[:8]) + (f'</ul><details class="rc-all"><summary>Show all {len(_rall)} recalls</summary><ul class="recalls">' + ''.join(_rli(r) for r in _rall[8:]) + '</ul></details><ul class="recalls">' if len(_rall) > 8 else '')   # 11-12 (Dan): every recall, not the newest 8
     e, t = c.get('epa'), c.get('twin_epa')
     cost = (f'<h2>Range and yearly cost</h2><div class="tw"><table><tbody><tr><td>EPA range ({e["year"]})</td><td class="num">{rng(e["range"], " miles")}</td></tr>'
             f'<tr><td>Electricity use</td><td class="num">{rng(e["kwh100"])} kWh per 100 miles</td></tr><tr><td>Yearly charging cost (EPA)</td><td class="num">{costr(e["cost"])}</td></tr>'
@@ -137,6 +139,7 @@ for c in EVC:
     sg = f'<p>Driver-assist crash reports to NHTSA involving a {E(c["name"])}: <b>{SG["tesla_models"].get(SGM[c["name"]], 0):,}</b> since 2021. <a href="/electric/driver-assist-crashes/">What those reports do and don\'t show →</a></p>' if c['name'] in SGM else ''
     main = f' <a href="{CARU(FY[c["slug"]])}">Its main car page</a> covers older model years.' if c['slug'] in FY else ''
     rank = f'#{c["rank"]} of {len(RK)} electric cars' if c.get('rank') else f'not ranked (under {EV["min_sold"]:,} sold)'
+    ytb = EV_YT(c['slug'], c)   # 11-12 (Dan): what owners say on YouTube, the car pages' own block
     # 11-10 (design audit): EV pages in the tabbed car-page layout; the year table becomes tier-colored bars with a line at 100 (average)
     _mx = max([110] + [y['li'] for y in c['years_detail']]) * 1.05
     ybars = ''.join(f'<div class="b {"bad" if y["li"] > 110 else "good" if y["li"] < 90 else ""}" title="{y["y"]}: {y["n"]:,} complaints, {y["sold"]:,} sold"><span class="bn">{y["y"]}</span>'
@@ -146,11 +149,12 @@ for c in EVC:
     page(EVU(c), title + ' | The Lemon Index',
          f'{c["name"]}: Lemon Index {c["li"]} ({plain(c["li"])}), {rank}. Top problem: {ep(c["issues"][0][0]) if c["issues"] else "n/a"}. Recalls, fire complaints, EPA range and yearly cost.', f'''
 <article class="study tr2 ev2"><p class="kicker"><a href="/electric/">Electric cars</a> · {E(c["name"])}</p><h1>{E(c["name"])} reliability, {c["years"]}</h1>
-<p class="tra">The {E(c["name"])} drew <b>{plain(c["li"])}</b>: {rank}.{main}</p>{(lambda t: f'<p class="note">{t}</p>' if t else '')(two_windows(c['slug'], 'ev'))}
+<p class="tra">The {E(c["name"])} drew <b>{plain(c["li"])}</b>: {rank}.{main}</p>{(lambda t: f'<p class="note">{t}</p>' if t else '')(two_windows(c['slug'], 'ev'))}{PIN_HTML(c["slug"])}
 <div class="trc"><div><b class="{cls(c["li"])}">{c["li"]}</b><span>EV score, {c["years"].replace("-", "–")} (100 = average)</span></div><div><b>{c["per100k"]}</b><span>complaints per 100,000 sold</span></div><div><b>{c["sold"]:,}</b><span>sold, {c["years"]}{" (small sample)" if c["small"] else ""}</span></div></div>
 {TAB.ASSET}{TAB._tabs([('overview', 'Overview', f'<h2>Top problems</h2><ul class="evp">{iss}</ul><p>Without driver-assist complaints: <b>{c["noadas100k"]}</b> per 100,000 sold. Fire complaints: <b>{c["fire"]}</b> ({c["fire100k"]} per 100,000; all EVs average {P["ev"]["fire100k"]}). <a href="/electric/fires/">EV fires vs gas →</a></p>'),
                        ('years', 'Years', f'<h2>Year by year</h2><p class="note">EV score per model year: complaints filed by the end of the year after the model year, per car sold. 100 is the average car (thin line), lower is better.</p><div class="bars yb trb">{ybars}</div>'),
                        ('cost', 'Range & cost', cost),
+                       *([('owners', 'Owners on YouTube', ytb)] if ytb else []),
                        ('recalls', 'Recalls & safety', f'<h2>Recalls</h2><p>{rec_note}.{" The newest:" if rec else ""}</p><ul class="recalls">{rec}</ul>{sg}')], f'{c["name"]} sections')}
 <p class="note">Complaints {WIN}. {E(SRC_NOTE)} Sales source: {E(c["src"])}.</p></article>''', kind='article',
          ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": title, "url": BASE + EVU(c)}], vis=(pimg(mphoto(c['slug']), c['name']) + pcredit(who(mphoto(c['slug'])))) if mphoto(c['slug']) else '')
