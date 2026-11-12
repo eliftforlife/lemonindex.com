@@ -55,7 +55,33 @@
        "10547657"
       ]
      }
-    }
+    },
+    "parts": [
+     [
+      "Engine",
+      20
+     ],
+     [
+      "Engine and engine cooling",
+      14
+     ],
+     [
+      "Air bags",
+      6
+     ],
+     [
+      "Electrical system",
+      5
+     ],
+     [
+      "Seats",
+      3
+     ],
+     [
+      "Power train",
+      3
+     ]
+    ]
    },
    "997-1": {
     "n": 20,
@@ -74,7 +100,33 @@
       "n": 0,
       "ex": []
      }
-    }
+    },
+    "parts": [
+     [
+      "Engine",
+      8
+     ],
+     [
+      "Electrical system",
+      3
+     ],
+     [
+      "Engine and engine cooling",
+      2
+     ],
+     [
+      "Structure",
+      2
+     ],
+     [
+      "Power train",
+      2
+     ],
+     [
+      "Tires",
+      2
+     ]
+    ]
    },
    "997-2": {
     "n": 9,
@@ -83,7 +135,33 @@
       "n": 0,
       "ex": []
      }
-    }
+    },
+    "parts": [
+     [
+      "Engine",
+      3
+     ],
+     [
+      "Fuel system, gasoline",
+      1
+     ],
+     [
+      "Steering",
+      1
+     ],
+     [
+      "Suspension",
+      1
+     ],
+     [
+      "Unknown or other",
+      1
+     ],
+     [
+      "Fuel/propulsion system",
+      1
+     ]
+    ]
    },
    "991-1": {
     "n": 32,
@@ -92,7 +170,33 @@
       "n": 0,
       "ex": []
      }
-    }
+    },
+    "parts": [
+     [
+      "Engine",
+      8
+     ],
+     [
+      "Electrical system",
+      6
+     ],
+     [
+      "Exterior lighting",
+      6
+     ],
+     [
+      "Unknown or other",
+      5
+     ],
+     [
+      "Visibility/wiper",
+      4
+     ],
+     [
+      "Vehicle speed control",
+      3
+     ]
+    ]
    },
    "991-2": {
     "n": 8,
@@ -105,7 +209,29 @@
       "n": 0,
       "ex": []
      }
-    }
+    },
+    "parts": [
+     [
+      "Engine",
+      2
+     ],
+     [
+      "Power train",
+      2
+     ],
+     [
+      "Electrical system",
+      2
+     ],
+     [
+      "Fuel/propulsion system",
+      1
+     ],
+     [
+      "Visibility/wiper",
+      1
+     ]
+    ]
    },
    "992": {
     "n": 34,
@@ -120,7 +246,33 @@
       "n": 0,
       "ex": []
      }
-    }
+    },
+    "parts": [
+     [
+      "Fuel/propulsion system",
+      14
+     ],
+     [
+      "Engine",
+      7
+     ],
+     [
+      "Electrical system",
+      6
+     ],
+     [
+      "Power train",
+      4
+     ],
+     [
+      "Back over prevention",
+      3
+     ],
+     [
+      "Seats",
+      2
+     ]
+    ]
    }
   },
   "parts": [
@@ -358,7 +510,7 @@
  },
  "yt": {
   "car-porsche-911-carrera": {
-   "videos": 200,
+   "videos": 192,
    "praise": [
     [
      "Handling and steering",
@@ -366,21 +518,21 @@
     ],
     [
      "Looks",
-     22
+     21
     ],
     [
      "Power and acceleration",
      16
     ],
     [
-     "Everyday comfort",
+     "Manual gearbox",
      13
     ]
    ],
    "trouble": [
     [
      "IMS bearing",
-     13
+     14
     ],
     [
      "PDK gearbox",
@@ -409,23 +561,23 @@
    ]
   },
   "porsche-9a2": {
-   "videos": 157,
+   "videos": 128,
    "praise": [
     [
      "Power and acceleration",
-     24
+     23
     ],
     [
      "Everyday comfort",
-     22
+     23
+    ],
+    [
+     "Handling and steering",
+     19
     ],
     [
      "Looks",
      19
-    ],
-    [
-     "Handling and steering",
-     17
     ]
    ],
    "trouble": [],
@@ -437,16 +589,16 @@
      "ch": "carwow"
     },
     {
-     "id": "FFmT22sq6u8",
-     "title": "Porsche 911 Turbo generations DRAG RACE",
-     "views": 4788022,
-     "ch": "carwow"
-    },
-    {
      "id": "kBeNR58BH-Q",
      "title": "The 2021 Porsche 911 Turbo S 992 Is the Newest Ultra 911",
      "views": 3015569,
      "ch": "Doug DeMuro"
+    },
+    {
+     "id": "_MWgGSg7c_M",
+     "title": "Porsche 992 Turbo S vs Ferrari 488 Pista",
+     "views": 2698046,
+     "ch": "cvdzijden - Supercar Videos"
     }
    ]
   }

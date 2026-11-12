@@ -41,7 +41,33 @@
        "11573700"
       ]
      }
-    }
+    },
+    "parts": [
+     [
+      "Electrical system",
+      120
+     ],
+     [
+      "Unknown or other",
+      105
+     ],
+     [
+      "Power train",
+      72
+     ],
+     [
+      "Engine",
+      68
+     ],
+     [
+      "Air bags",
+      42
+     ],
+     [
+      "Steering",
+      38
+     ]
+    ]
    }
   },
   "parts": [
@@ -217,51 +243,87 @@
   ]
  },
  "yt": {
-  "car-challenger-hellcat": null,
-  "chrysler-hellcat": {
-   "videos": 200,
+  "car-challenger-hellcat": {
+   "videos": 190,
    "praise": [
     [
      "Looks",
      18
     ],
     [
-     "Power and acceleration",
+     "Handling and steering",
      14
+    ],
+    [
+     "Power and acceleration",
+     13
+    ],
+    [
+     "Everyday comfort",
+     9
+    ]
+   ],
+   "trouble": [],
+   "top": [
+    {
+     "id": "cKx-cb0fzeo",
+     "title": "2016 Dodge Challenger SRT Hellcat - SOUND!",
+     "views": 11026232,
+     "ch": "Visual Car Reviews"
+    },
+    {
+     "id": "P7cFiE_CWMY",
+     "title": "Hellcat Challenger & Hellcat Charger Burnout!",
+     "views": 5780935,
+     "ch": "Sinister Life"
+    },
+    {
+     "id": "MWMjR3r-nsI",
+     "title": "2015 Dodge Challenger SRT Hellcat - Jay Leno's Garage",
+     "views": 4636432,
+     "ch": "Jay Leno's Garage"
+    }
+   ]
+  },
+  "chrysler-hellcat": {
+   "videos": 166,
+   "praise": [
+    [
+     "Looks",
+     20
+    ],
+    [
+     "Power and acceleration",
+     16
+    ],
+    [
+     "Everyday comfort",
+     10
     ],
     [
      "Interior and seats",
      10
-    ],
-    [
-     "Everyday comfort",
-     8
     ]
    ],
-   "trouble": [
-    [
-     "Electrical / wiring / TIPM",
-     6
-    ]
-   ],
+   "trouble": [],
    "top": [
-    {
-     "id": "buzsasTfC4s",
-     "title": "Hellcat vs Z06 Corvette - drag racing",
-     "views": 26342950,
-     "ch": "Wheels"
-    },
-    {
-     "id": "pVkhw1Q0nOU",
-     "title": "When the Wife asks to take your 1000hp Trackhawk shopping",
-     "views": 13813614,
-     "ch": "SRTNINJAUSA"
-    },
     {
      "id": "cKx-cb0fzeo",
      "title": "2016 Dodge Challenger SRT Hellcat - SOUND!",
      "views": 11025539,
      "ch": "Visual Car Reviews"
+    },
+    {
+     "id": "ek_aZC4KIQM",
+     "title": "The $100,000 Jeep Trackhawk Is the Most Powerful SUV Ever",
+     "views": 7292548,
+     "ch": "Doug DeMuro"
+    },
+    {
+     "id": "MWMjR3r-nsI",
+     "title": "2015 Dodge Challenger SRT Hellcat - Jay Leno's Garage",
+     "views": 4636361,
+     "ch": "Jay Leno's Garage"
     }
    ]
   }

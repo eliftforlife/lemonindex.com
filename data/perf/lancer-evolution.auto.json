@@ -33,7 +33,33 @@
       "n": 0,
       "ex": []
      }
-    }
+    },
+    "parts": [
+     [
+      "Power train",
+      68
+     ],
+     [
+      "Engine and engine cooling",
+      11
+     ],
+     [
+      "Structure",
+      10
+     ],
+     [
+      "Electrical system",
+      10
+     ],
+     [
+      "Steering",
+      5
+     ],
+     [
+      "Suspension",
+      5
+     ]
+    ]
    },
    "ct9a-ix": {
     "n": 24,
@@ -53,7 +79,33 @@
       "n": 0,
       "ex": []
      }
-    }
+    },
+    "parts": [
+     [
+      "Engine and engine cooling",
+      10
+     ],
+     [
+      "Engine",
+      3
+     ],
+     [
+      "Power train",
+      3
+     ],
+     [
+      "Suspension",
+      3
+     ],
+     [
+      "Electrical system",
+      2
+     ],
+     [
+      "Service brakes, hydraulic",
+      2
+     ]
+    ]
    },
    "cz4a": {
     "n": 93,
@@ -72,7 +124,33 @@
        "10416790"
       ]
      }
-    }
+    },
+    "parts": [
+     [
+      "Power train",
+      63
+     ],
+     [
+      "Electronic stability control (esc)",
+      31
+     ],
+     [
+      "Fuel system, gasoline",
+      6
+     ],
+     [
+      "Engine",
+      6
+     ],
+     [
+      "Service brakes",
+      5
+     ],
+     [
+      "Unknown or other",
+      5
+     ]
+    ]
    }
   },
   "parts": [
@@ -280,8 +358,120 @@
  },
  "yt": {
   "car-lancer-evolution": null,
-  "mitsubishi-4g63t": null,
-  "mitsubishi-4b11t": null
+  "mitsubishi-4g63t": {
+   "videos": 145,
+   "praise": [
+    [
+     "Looks",
+     15
+    ],
+    [
+     "Power and acceleration",
+     10
+    ],
+    [
+     "Handling and steering",
+     8
+    ],
+    [
+     "Everyday comfort",
+     6
+    ]
+   ],
+   "trouble": [
+    [
+     "Oil leaks (gaskets, seals, housings)",
+     8
+    ],
+    [
+     "Clutch / gearbox",
+     8
+    ],
+    [
+     "Rust",
+     6
+    ],
+    [
+     "Fuel pump / fuel system",
+     6
+    ]
+   ],
+   "top": [
+    {
+     "id": "UbYONxCvd8g",
+     "title": "Amazing Transformation of a 20 Year Old Mitsubishi Lancer Evolution 8!",
+     "views": 2169071,
+     "ch": "Chris Goorbarry"
+    },
+    {
+     "id": "QA2xChJln_M",
+     "title": "Building My Evo 9 MR - Episode 1",
+     "views": 1692231,
+     "ch": "Gears and Gasoline"
+    },
+    {
+     "id": "Pb9n23ILj-Y",
+     "title": "I Transformed a Lancer into an EVO 9 – You Won’t Believe the Result!",
+     "views": 1519053,
+     "ch": "Oldtimer Restauration Werkstatt"
+    }
+   ]
+  },
+  "mitsubishi-4b11t": {
+   "videos": 154,
+   "praise": [
+    [
+     "Looks",
+     10
+    ],
+    [
+     "Everyday comfort",
+     9
+    ],
+    [
+     "Power and acceleration",
+     9
+    ],
+    [
+     "Interior and seats",
+     8
+    ]
+   ],
+   "trouble": [
+    [
+     "Oil leaks (gaskets, seals, housings)",
+     8
+    ],
+    [
+     "Clutch / gearbox",
+     7
+    ],
+    [
+     "Fuel pump / fuel system",
+     6
+    ]
+   ],
+   "top": [
+    {
+     "id": "k-kat0W61MY",
+     "title": "Building an Abandoned Mitsubishi Lancer Evolution X in 30 Minutes!",
+     "views": 2435862,
+     "ch": "Chris Goorbarry"
+    },
+    {
+     "id": "Gn0UkrPvPmc",
+     "title": "2008 Lancer Evo X vs. 2008 Subaru WRX STi | Title Fight | Edmunds.com",
+     "views": 2143111,
+     "ch": "InsideLineVideo"
+    },
+    {
+     "id": "f95Qv3aqNM4",
+     "title": "The Mitsubishi Lancer Evolution X Was the End of the Evo",
+     "views": 1792888,
+     "ch": "Doug DeMuro"
+    }
+   ]
+  }
  },
  "scores": {}
 }

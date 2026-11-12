@@ -22,7 +22,33 @@
   "gens": {
    "lc08": {
     "n": 442,
-    "issues": {}
+    "issues": {},
+    "parts": [
+     [
+      "Air bags",
+      120
+     ],
+     [
+      "Engine",
+      104
+     ],
+     [
+      "Electrical system",
+      93
+     ],
+     [
+      "Power train",
+      63
+     ],
+     [
+      "Engine and engine cooling",
+      44
+     ],
+     [
+      "Steering",
+      41
+     ]
+    ]
    },
    "lc11": {
     "n": 774,
@@ -34,7 +60,33 @@
        "10640703"
       ]
      }
-    }
+    },
+    "parts": [
+     [
+      "Electrical system",
+      407
+     ],
+     [
+      "Air bags",
+      119
+     ],
+     [
+      "Engine",
+      111
+     ],
+     [
+      "Steering",
+      68
+     ],
+     [
+      "Unknown or other",
+      54
+     ],
+     [
+      "Power train",
+      53
+     ]
+    ]
    },
    "lc15": {
     "n": 478,
@@ -46,7 +98,33 @@
        "11325451"
       ]
      }
-    }
+    },
+    "parts": [
+     [
+      "Electrical system",
+      120
+     ],
+     [
+      "Unknown or other",
+      105
+     ],
+     [
+      "Power train",
+      72
+     ],
+     [
+      "Engine",
+      68
+     ],
+     [
+      "Air bags",
+      42
+     ],
+     [
+      "Steering",
+      38
+     ]
+    ]
    }
   },
   "parts": [
@@ -433,11 +511,11 @@
  "yt": {
   "car-challenger-392": null,
   "chrysler-392": {
-   "videos": 200,
+   "videos": 189,
    "praise": [
     [
      "Looks",
-     20
+     21
     ],
     [
      "Power and acceleration",
@@ -445,11 +523,11 @@
     ],
     [
      "Everyday comfort",
-     14
+     15
     ],
     [
      "Handling and steering",
-     13
+     14
     ]
    ],
    "trouble": [
@@ -484,15 +562,15 @@
    ]
   },
   "chrysler-61-hemi": {
-   "videos": 200,
+   "videos": 182,
    "praise": [
     [
      "Power and acceleration",
-     11
+     12
     ],
     [
      "Looks",
-     10
+     12
     ],
     [
      "Interior and seats",
@@ -506,7 +584,7 @@
     ],
     [
      "Lifters / AFM / cam phasers / Hemi tick",
-     7
+     8
     ],
     [
      "Coolant leaks / water pump / overheating",
@@ -521,16 +599,16 @@
      "ch": "jon jon"
     },
     {
-     "id": "Rs2KOWkydtU",
-     "title": "Challenger SRT8 vs 340 Six Pack Challenger T/A - Old vs New - 1/4 Mile - Road Test TV ®",
-     "views": 1482238,
-     "ch": "Road Test TV"
-    },
-    {
      "id": "iqFOWynWWpI",
      "title": "The Jeep Grand Cherokee SRT8 Is a Fast SUV Icon",
      "views": 996773,
      "ch": "Doug DeMuro"
+    },
+    {
+     "id": "wTQDb7VEUZ4",
+     "title": "2013 Dodge Challenger SRT8 392 Review and Road Test (manual transmission)",
+     "views": 790508,
+     "ch": "Auto Buyers Guide | Alex on Autos"
     }
    ]
   }

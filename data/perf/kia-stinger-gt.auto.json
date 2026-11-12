@@ -30,7 +30,33 @@
        "11448835"
       ]
      }
-    }
+    },
+    "parts": [
+     [
+      "Engine",
+      48
+     ],
+     [
+      "Electrical system",
+      35
+     ],
+     [
+      "Fuel/propulsion system",
+      25
+     ],
+     [
+      "Unknown or other",
+      22
+     ],
+     [
+      "Service brakes",
+      21
+     ],
+     [
+      "Power train",
+      13
+     ]
+    ]
    }
   },
   "parts": [
@@ -146,8 +172,90 @@
   ]
  },
  "yt": {
-  "car-kia-stinger-gt": null,
-  "hyundai-g6dp": null
+  "car-kia-stinger-gt": {
+   "videos": 179,
+   "praise": [
+    [
+     "Looks",
+     35
+    ],
+    [
+     "Handling and steering",
+     25
+    ],
+    [
+     "Everyday comfort",
+     21
+    ],
+    [
+     "Power and acceleration",
+     15
+    ]
+   ],
+   "trouble": [],
+   "top": [
+    {
+     "id": "ZDVbx1ZEs5E",
+     "title": "Here's Why the 2018 Kia Stinger GT Is Worth $50,000",
+     "views": 5216260,
+     "ch": "Doug DeMuro"
+    },
+    {
+     "id": "dKKCmgic8Fg",
+     "title": "I Bought a Kia Stinger GT! (And Here's Why)",
+     "views": 3718160,
+     "ch": "Doug DeMuro"
+    },
+    {
+     "id": "qedwTyqZt_U",
+     "title": "Kia Stinger 2018 in-depth review - better than a BMW or Audi? | carwow Reviews",
+     "views": 2041170,
+     "ch": "carwow"
+    }
+   ]
+  },
+  "hyundai-g6dp": {
+   "videos": 191,
+   "praise": [
+    [
+     "Looks",
+     23
+    ],
+    [
+     "Everyday comfort",
+     17
+    ],
+    [
+     "Handling and steering",
+     15
+    ],
+    [
+     "Power and acceleration",
+     12
+    ]
+   ],
+   "trouble": [],
+   "top": [
+    {
+     "id": "ZDVbx1ZEs5E",
+     "title": "Here's Why the 2018 Kia Stinger GT Is Worth $50,000",
+     "views": 5216261,
+     "ch": "Doug DeMuro"
+    },
+    {
+     "id": "dKKCmgic8Fg",
+     "title": "I Bought a Kia Stinger GT! (And Here's Why)",
+     "views": 3718168,
+     "ch": "Doug DeMuro"
+    },
+    {
+     "id": "WBUJewro6g0",
+     "title": "I Bought A Turbo Stinger GTS Listed With A Bad Engine & I Didn’t Believe It! Cheap Fix Gone Wrong!",
+     "views": 1026116,
+     "ch": "LegitStreetCars"
+    }
+   ]
+  }
  },
  "scores": {}
 }

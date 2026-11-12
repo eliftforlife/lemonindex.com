@@ -22,7 +22,29 @@
       "n": 0,
       "ex": []
      }
-    }
+    },
+    "parts": [
+     [
+      "Air bags",
+      3
+     ],
+     [
+      "Fuel/propulsion system",
+      1
+     ],
+     [
+      "Engine",
+      1
+     ],
+     [
+      "Electrical system",
+      1
+     ],
+     [
+      "Suspension",
+      1
+     ]
+    ]
    },
    "mk7": {
     "n": 43,
@@ -45,7 +67,33 @@
        "11537264"
       ]
      }
-    }
+    },
+    "parts": [
+     [
+      "Engine",
+      8
+     ],
+     [
+      "Power train",
+      7
+     ],
+     [
+      "Electrical system",
+      6
+     ],
+     [
+      "Unknown or other",
+      6
+     ],
+     [
+      "Service brakes",
+      5
+     ],
+     [
+      "Fuel/propulsion system",
+      5
+     ]
+    ]
    },
    "mk8": {
     "n": 28,
@@ -62,7 +110,33 @@
       "n": 0,
       "ex": []
      }
-    }
+    },
+    "parts": [
+     [
+      "Electrical system",
+      8
+     ],
+     [
+      "Service brakes",
+      7
+     ],
+     [
+      "Forward collision avoidance",
+      6
+     ],
+     [
+      "Steering",
+      4
+     ],
+     [
+      "Power train",
+      4
+     ],
+     [
+      "Unknown or other",
+      4
+     ]
+    ]
    }
   },
   "parts": [

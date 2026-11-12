@@ -1800,3 +1800,24 @@ header.gh.wide .gh-sheet .gh-q .fsug a, .gh-sheet .gh-q .fsug a { display: grid;
 /* 11-12 (Jess): image info buttons get a 44 px tap target everywhere (26 px dot + 9 px invisible margin all round) */
 .ii { width: 26px; height: 26px; }
 .ii::after { inset: -9px; }
+/* 11-12 fix D (UX test: no real costs under Repairs & costs): "What repairs cost" from owners' NHTSA complaints (repair_costs.py) */
+.yfx .rcq { list-style: none; margin: 0 0 6px; padding: 0; display: grid; gap: 10px; }
+.yfx .rcq li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 12px; align-items: center; padding: 14px 16px; border: 1px solid var(--line); border-radius: 16px; background: #fff; min-width: 0; }
+.yfx .rcq-t { display: grid; gap: 1px; min-width: 0; } .yfx .rcq-t span { font-weight: 700; font-size: 16px; line-height: 1.25; } .yfx .rcq-t small { font-size: 12px; color: var(--mute); }
+.yfx .rcq li > b { font-size: 22px; font-weight: 900; line-height: 1.05; letter-spacing: -.01em; font-variant-numeric: tabular-nums; text-align: right; }
+.yfx .rcq-m { grid-column: 1 / -1; display: grid; gap: 2px; min-width: 0; } .yfx .rcq-m small { font-size: 12.5px; color: var(--mute); font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.yfx .rcq-few { font-size: 13.5px; color: var(--mute); margin: 8px 0 0; }
+.yfx .rcq-h { margin: 22px 0 10px; font-size: 17px; }
+.yfx .rcq-tips { margin: 0; padding-left: 20px; display: grid; gap: 8px; font-size: 15px; } .yfx .rcq-tips small { color: var(--mute); font-size: 12.5px; }
+@media (min-width: 760px) { .yfx .rcq { grid-template-columns: 1fr 1fr; } }
+.rtag { display: inline-block; margin-left: 6px; padding: 1px 8px; border-radius: 999px; background: var(--soft); color: var(--ink2); font-size: 12px; font-weight: 700; vertical-align: 1px; }   /* 11-12: recall covers only some engines */
+/* 11-12 fix D: the VIN check lists that car's recalls (assets/vin.js) */
+.vin-recalls { margin: 18px 0 0; text-align: left; } .vin-recalls h2 { font-size: 22px; letter-spacing: -.02em; margin: 0 0 6px; }
+.vin-rc { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 10px; }
+.vin-rc li { border: 1px solid var(--line); border-left: 5px solid var(--red); border-radius: 12px; padding: 10px 14px; font-size: 15px; }
+.vin-rc li p { margin: 4px 0 0; color: var(--ink2); } .vin-rc .vin-rh { margin: 0; color: var(--ink); }
+.vin-rc li.vin-no { border-left-color: var(--line); opacity: .78; } .vin-fit { font-weight: 700; color: var(--ink) !important; } .vin-fix { font-size: 14px; }
+.vin-park { background: #fde8e9; color: #b3121a; }
+.vin-open { margin: 14px 0 0; padding: 12px 14px; border-radius: 14px; background: var(--lemon-soft); font-size: 15px; line-height: 1.45; }
+.cpx { margin: 14px 0 6px; font-size: 15px; line-height: 1.5; } .cpx p { margin: 6px 0; }   /* 11-12: code page -> year + transmission pages */
+.rcq-codes a { font-weight: 700; }

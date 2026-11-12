@@ -29,7 +29,8 @@
       "n": 0,
       "ex": []
      }
-    }
+    },
+    "parts": []
    },
    "w463-g63": {
     "n": 12,
@@ -56,7 +57,33 @@
       "n": 0,
       "ex": []
      }
-    }
+    },
+    "parts": [
+     [
+      "Unknown or other",
+      3
+     ],
+     [
+      "Air bags",
+      2
+     ],
+     [
+      "Electrical system",
+      2
+     ],
+     [
+      "Steering",
+      2
+     ],
+     [
+      "Electronic stability control (esc)",
+      2
+     ],
+     [
+      "Structure",
+      2
+     ]
+    ]
    },
    "w463a": {
     "n": 14,
@@ -73,7 +100,33 @@
       "n": 0,
       "ex": []
      }
-    }
+    },
+    "parts": [
+     [
+      "Unknown or other",
+      5
+     ],
+     [
+      "Fuel/propulsion system",
+      4
+     ],
+     [
+      "Engine",
+      3
+     ],
+     [
+      "Forward collision avoidance",
+      2
+     ],
+     [
+      "Lane departure",
+      1
+     ],
+     [
+      "Visibility/wiper",
+      1
+     ]
+    ]
    }
   },
   "parts": [
@@ -157,7 +210,7 @@
  },
  "yt": {
   "car-amg-g63": {
-   "videos": 200,
+   "videos": 190,
    "praise": [
     [
      "Looks",
@@ -165,7 +218,7 @@
     ],
     [
      "Power and acceleration",
-     16
+     17
     ],
     [
      "Handling and steering",
@@ -198,26 +251,134 @@
     }
    ]
   },
-  "amg-m113k": null,
-  "amg-m157": null,
+  "amg-m113k": {
+   "videos": 186,
+   "praise": [
+    [
+     "Looks",
+     21
+    ],
+    [
+     "Power and acceleration",
+     18
+    ],
+    [
+     "Handling and steering",
+     10
+    ],
+    [
+     "Everyday comfort",
+     8
+    ]
+   ],
+   "trouble": [
+    [
+     "Oil leaks (gaskets, seals, housings)",
+     16
+    ],
+    [
+     "Rust",
+     6
+    ],
+    [
+     "Battery / alternator / starter",
+     5
+    ]
+   ],
+   "top": [
+    {
+     "id": "ZMVKkwgefVk",
+     "title": "Mercedes G55 AMG AFTER 17years \"BACK TO THE FACTORY CONDITION\"  Dry Ice Cleaning + Paint Correction",
+     "views": 2201795,
+     "ch": "I AM Detailing"
+    },
+    {
+     "id": "PSxVt9h6kms",
+     "title": "Here's Why A Mercedes Oil Change Costs $320 And Why You Should NEVER Pay That Price-Project SL55 Pt1",
+     "views": 2157000,
+     "ch": "Tavarish"
+    },
+    {
+     "id": "LuklsA__9Gk",
+     "title": "I Took A 400k Mile E55 AMG To The Dealer, Here's How Much They Want To Fix It.",
+     "views": 1814160,
+     "ch": "LegitStreetCars"
+    }
+   ]
+  },
+  "amg-m157": {
+   "videos": 179,
+   "praise": [
+    [
+     "Looks",
+     10
+    ],
+    [
+     "Handling and steering",
+     6
+    ],
+    [
+     "Value",
+     5
+    ]
+   ],
+   "trouble": [
+    [
+     "Coolant leaks / water pump / overheating",
+     13
+    ],
+    [
+     "Oil leaks (gaskets, seals, housings)",
+     12
+    ],
+    [
+     "Timing chain / tensioners",
+     8
+    ],
+    [
+     "Timing chain and cam adjusters",
+     7
+    ]
+   ],
+   "top": [
+    {
+     "id": "ri_LFckaT7g",
+     "title": "Mercedes AMG 63 V8 Engine Production | HOW IT'S MADE",
+     "views": 17547505,
+     "ch": "Cars Garage"
+    },
+    {
+     "id": "9dbT6yGT7bQ",
+     "title": "Mercedes-AMG S63 Coupe | Chris Harris Drives | Top Gear",
+     "views": 1661872,
+     "ch": "Top Gear"
+    },
+    {
+     "id": "4Qc-V0iHLMc",
+     "title": "I Bought A Broken GLS63 AMG For DIRT CHEAP & Fixed It For $18 DOLLARS! The Next Fix Was HORRIBLE!",
+     "views": 1238552,
+     "ch": "LegitStreetCars"
+    }
+   ]
+  },
   "amg-m177-m178": {
-   "videos": 200,
+   "videos": 192,
    "praise": [
     [
      "Looks",
      32
     ],
     [
-     "Handling and steering",
-     22
-    ],
-    [
      "Power and acceleration",
      21
     ],
     [
+     "Handling and steering",
+     21
+    ],
+    [
      "Interior and seats",
-     16
+     17
     ]
    ],
    "trouble": [

@@ -35,7 +35,33 @@
        "10451227"
       ]
      }
-    }
+    },
+    "parts": [
+     [
+      "Electrical system",
+      705
+     ],
+     [
+      "Engine",
+      639
+     ],
+     [
+      "Power train",
+      496
+     ],
+     [
+      "Air bags",
+      408
+     ],
+     [
+      "Fuel/propulsion system",
+      341
+     ],
+     [
+      "Fuel system, gasoline",
+      235
+     ]
+    ]
    },
    "ld12": {
     "n": 1351,
@@ -47,7 +73,33 @@
        "10865379"
       ]
      }
-    }
+    },
+    "parts": [
+     [
+      "Electrical system",
+      635
+     ],
+     [
+      "Engine",
+      205
+     ],
+     [
+      "Air bags",
+      180
+     ],
+     [
+      "Power train",
+      173
+     ],
+     [
+      "Steering",
+      145
+     ],
+     [
+      "Unknown or other",
+      106
+     ]
+    ]
    },
    "ld15": {
     "n": 822,
@@ -59,7 +111,33 @@
        "11099109"
       ]
      }
-    }
+    },
+    "parts": [
+     [
+      "Electrical system",
+      184
+     ],
+     [
+      "Unknown or other",
+      159
+     ],
+     [
+      "Air bags",
+      137
+     ],
+     [
+      "Structure",
+      106
+     ],
+     [
+      "Engine",
+      105
+     ],
+     [
+      "Power train",
+      102
+     ]
+    ]
    }
   },
   "parts": [
@@ -618,15 +696,15 @@
  "yt": {
   "car-charger-392": null,
   "chrysler-61-hemi": {
-   "videos": 200,
+   "videos": 182,
    "praise": [
     [
      "Power and acceleration",
-     11
+     12
     ],
     [
      "Looks",
-     10
+     12
     ],
     [
      "Interior and seats",
@@ -640,7 +718,7 @@
     ],
     [
      "Lifters / AFM / cam phasers / Hemi tick",
-     7
+     8
     ],
     [
      "Coolant leaks / water pump / overheating",
@@ -655,25 +733,25 @@
      "ch": "jon jon"
     },
     {
-     "id": "Rs2KOWkydtU",
-     "title": "Challenger SRT8 vs 340 Six Pack Challenger T/A - Old vs New - 1/4 Mile - Road Test TV ®",
-     "views": 1482238,
-     "ch": "Road Test TV"
-    },
-    {
      "id": "iqFOWynWWpI",
      "title": "The Jeep Grand Cherokee SRT8 Is a Fast SUV Icon",
      "views": 996773,
      "ch": "Doug DeMuro"
+    },
+    {
+     "id": "wTQDb7VEUZ4",
+     "title": "2013 Dodge Challenger SRT8 392 Review and Road Test (manual transmission)",
+     "views": 790508,
+     "ch": "Auto Buyers Guide | Alex on Autos"
     }
    ]
   },
   "chrysler-392": {
-   "videos": 200,
+   "videos": 189,
    "praise": [
     [
      "Looks",
-     20
+     21
     ],
     [
      "Power and acceleration",
@@ -681,11 +759,11 @@
     ],
     [
      "Everyday comfort",
-     14
+     15
     ],
     [
      "Handling and steering",
-     13
+     14
     ]
    ],
    "trouble": [

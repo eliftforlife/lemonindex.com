@@ -52,7 +52,33 @@
       "n": 0,
       "ex": []
      }
-    }
+    },
+    "parts": [
+     [
+      "Service brakes, hydraulic",
+      48
+     ],
+     [
+      "Engine and engine cooling",
+      30
+     ],
+     [
+      "Power train",
+      26
+     ],
+     [
+      "Electrical system",
+      24
+     ],
+     [
+      "Visibility",
+      21
+     ],
+     [
+      "Steering",
+      13
+     ]
+    ]
    },
    "gen5": {
     "n": 1183,
@@ -71,7 +97,33 @@
        "11530671"
       ]
      }
-    }
+    },
+    "parts": [
+     [
+      "Electrical system",
+      389
+     ],
+     [
+      "Air bags",
+      217
+     ],
+     [
+      "Engine",
+      189
+     ],
+     [
+      "Unknown or other",
+      155
+     ],
+     [
+      "Power train",
+      130
+     ],
+     [
+      "Steering",
+      107
+     ]
+    ]
    },
    "gen6": {
     "n": 548,
@@ -87,7 +139,33 @@
       "n": 0,
       "ex": []
      }
-    }
+    },
+    "parts": [
+     [
+      "Power train",
+      164
+     ],
+     [
+      "Steering",
+      103
+     ],
+     [
+      "Electrical system",
+      97
+     ],
+     [
+      "Engine",
+      87
+     ],
+     [
+      "Unknown or other",
+      81
+     ],
+     [
+      "Visibility/wiper",
+      28
+     ]
+    ]
    }
   },
   "parts": [
@@ -400,7 +478,7 @@
  },
  "yt": {
   "car-camaro-ss": {
-   "videos": 200,
+   "videos": 193,
    "praise": [
     [
      "Looks",
@@ -408,11 +486,11 @@
     ],
     [
      "Handling and steering",
-     26
+     24
     ],
     [
      "Power and acceleration",
-     18
+     17
     ],
     [
      "Everyday comfort",
@@ -434,15 +512,15 @@
      "ch": "Percepcar USA 🇺🇸 "
     },
     {
-     "id": "hCiC1UrQHDA",
-     "title": "2024 Mustang GT Performance vs Camaro SS 1LE // DRAG RACE and LAP TIMES",
-     "views": 2160375,
-     "ch": "Throttle House"
+     "id": "3rgOTILxbzY",
+     "title": "2016 Ford Mustang GT vs. 2016 Chevrolet Camaro SS – Comparison | Driving Reviews",
+     "views": 2110899,
+     "ch": "Morrie's Minnetonka Ford"
     }
    ]
   },
   "gm-ls-gen3": {
-   "videos": 200,
+   "videos": 177,
    "praise": [
     [
      "Looks",
@@ -450,29 +528,29 @@
     ],
     [
      "Power and acceleration",
-     17
-    ],
-    [
-     "Everyday comfort",
-     10
+     18
     ],
     [
      "Handling and steering",
+     11
+    ],
+    [
+     "Everyday comfort",
      10
     ]
    ],
    "trouble": [
     [
      "Electrical / wiring / TIPM",
-     10
+     11
     ],
     [
      "Oil leaks (gaskets, seals, housings)",
-     9
+     8
     ],
     [
      "Coolant leaks / water pump / overheating",
-     6
+     7
     ]
    ],
    "top": [
@@ -497,7 +575,7 @@
    ]
   },
   "gm-ls3": {
-   "videos": 200,
+   "videos": 177,
    "praise": [
     [
      "Looks",
@@ -505,11 +583,11 @@
     ],
     [
      "Everyday comfort",
-     16
+     18
     ],
     [
      "Handling and steering",
-     15
+     16
     ],
     [
      "Power and acceleration",
@@ -539,7 +617,7 @@
    ]
   },
   "gm-lt1": {
-   "videos": 200,
+   "videos": 185,
    "praise": [
     [
      "Power and acceleration",
@@ -550,12 +628,12 @@
      11
     ],
     [
-     "Looks",
+     "Manual gearbox",
      10
     ],
     [
-     "Manual gearbox",
-     10
+     "Looks",
+     9
     ]
    ],
    "trouble": [

@@ -61,7 +61,7 @@ def _code_pages():
               f'Owners named {c} in {v["n"]:,} complaints to the U.S. government' + (f', most often on the {E(topm)}.' if topm else '.')
         # 11-10 v2 (design audit: code pages were a wall of sections): the transmission-page pattern. Code + gauge under the title, a 3-part
         # answer (what it means / how serious / typical fix), the cars owners report it on as photo cards, everything else folded.
-        fix = (mm['c'][0] if mm else 'Have a shop read it with the maker&#39;s own scan tool first.')
+        fix = ((mm['c'][0] + ('. Then: ' + '; '.join(x[:1].lower() + x[1:] for x in mm['c'][1:3]) if len(mm['c']) > 1 else '') + '.') if mm else 'Have a shop read it with the maker&#39;s own scan tool first.')   # 11-12: the checks in order, not a "fix"
         mean1 = (E(re.split(r'(?<=[.!?])\s', mm['m'].strip(), 1)[0]) if mm else _nomean(c)[1])   # the plain-English first sentence (the title repeats the h1)
         sevt = (f'<b>{E(st[0])}.</b> {E(st[1])}' if sev else 'Depends on what it means on your make. Get it read before a long drive.')
         cards = ''.join(f'<a class="mc cpc" href="/cars/{i}/"><span class="mc-p">' + (lambda ph: f'<img src="{ph["src"]}" alt="{E(nm)}" width="{ph["w"]}" height="{ph["h"]}" loading="lazy" decoding="async">' if ph else '')(aph(i))
@@ -85,10 +85,15 @@ def _code_pages():
         hero = (f'<div class="creadout"><div class="cr-code"><span class="cr-sys">{E(SYSN[c[0]].split(" (")[0])} · {"Generic" if _generic(c) else "Manufacturer"}</span><b>{c}</b></div>'
                 + (gauge(sev, w=bool(mm.get("w"))) if sev else '') + '</div>')
         body = [f'<article class="study tr2 cp2"><p class="kicker"><a href="/check-engine-light/">Check engine light</a> · Engine codes</p><h1>{c}: {E(title_bits)}</h1>',
-                f'<div class="cpa"><div><span>What it means</span><p>{mean1}</p></div><div><span>How serious</span><p>{sevt}</p></div><div><span>Typical fix</span><p>{E(fix) if mm else fix}</p></div></div>',
+                f'<div class="cpa"><div><span>What it means</span><p>{mean1}</p></div><div><span>How serious</span><p>{sevt}</p></div><div><span>Where a shop starts</span><p>{E(fix) if mm else fix}</p></div></div>',
                 f'<p class="cpm">Owners named {c} in <b>{v["n"]:,}</b> complaints to the U.S. government' + (f', most often on the {E(topm)}.' if topm else '.') + '</p>']
         if cards:
             body.append(f'<h2>Cars owners report it on</h2><div class="mbs"><div class="mb"><div class="mg cpg">{cards}</div></div></div><p class="note">Complaints that name {c}, by model. Raw counts, not a failure rate: popular models get more complaints.</p>')
+        _tr = c[:3] in ('P07', 'P08', 'P09') or bool(re.search(r'transmission|shift|gear|torque converter|cvt|clutch', title_bits, re.I))
+        _tl = [(i, nm) for i, nm, k in models[:8] if _tr and os.path.exists(os.path.join(OUT, 'cars', i, 'transmission', 'index.html'))]
+        if years or _tl:
+            body.append('<div class="cpx">' + (f'<p><b>Years owners report it on most:</b> ' + ' · '.join(f'<a href="/cars/{i}/{y}/">{y} {E(nm)}</a>' for i, nm, y, k in years[:6]) + '</p>' if years else '')
+                        + (f'<p><b>Transmission problems by year:</b> ' + ' · '.join(f'<a href="/cars/{i}/transmission/">{E(nm)}</a>' for i, nm in _tl[:6]) + '</p>' if _tl else '') + '</div>')
         body.append('<h2>The details</h2>' + ''.join(f'<details class="cpd"><summary>{q}</summary>{h}</details>' for q, h in det))
         if rel: body.append('<h2>Related codes</h2><p class="crel">' + ' '.join(f'<a href="/check-engine-light/{r.lower()}/">{r}</a>' for r in rel) + '</p>')
         faq0 = [(f'What does {c} mean?', f'{mm["t"]}. {mm["m"]}'), (f'Can I drive with {c}?', f'{st[0]}. {st[1]}'), (f'What causes {c}?', '; '.join(mm['c']) + '.')] if mm else []

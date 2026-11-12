@@ -51,7 +51,33 @@
        "10549377"
       ]
      }
-    }
+    },
+    "parts": [
+     [
+      "Power train",
+      3395
+     ],
+     [
+      "Engine",
+      1799
+     ],
+     [
+      "Electrical system",
+      1060
+     ],
+     [
+      "Steering",
+      1046
+     ],
+     [
+      "Service brakes",
+      941
+     ],
+     [
+      "Vehicle speed control",
+      850
+     ]
+    ]
    },
    "g2": {
     "n": 5846,
@@ -84,7 +110,33 @@
        "11112494"
       ]
      }
-    }
+    },
+    "parts": [
+     [
+      "Power train",
+      2656
+     ],
+     [
+      "Engine",
+      1273
+     ],
+     [
+      "Unknown or other",
+      614
+     ],
+     [
+      "Electrical system",
+      495
+     ],
+     [
+      "Structure",
+      358
+     ],
+     [
+      "Engine and engine cooling",
+      231
+     ]
+    ]
    },
    "g3": {
     "n": 2343,
@@ -114,7 +166,33 @@
        "11552824"
       ]
      }
-    }
+    },
+    "parts": [
+     [
+      "Power train",
+      719
+     ],
+     [
+      "Electrical system",
+      401
+     ],
+     [
+      "Unknown or other",
+      288
+     ],
+     [
+      "Exterior lighting",
+      258
+     ],
+     [
+      "Engine",
+      165
+     ],
+     [
+      "Service brakes",
+      147
+     ]
+    ]
    }
   },
   "parts": [
@@ -1022,11 +1100,11 @@
  "yt": {
   "car-f150-raptor": null,
   "ford-ecoboost-35-ho": {
-   "videos": 200,
+   "videos": 191,
    "praise": [
     [
      "Looks",
-     20
+     21
     ],
     [
      "Everyday comfort",
@@ -1038,7 +1116,7 @@
     ],
     [
      "Power and acceleration",
-     12
+     13
     ]
    ],
    "trouble": [
@@ -1055,7 +1133,7 @@
      7
     ],
     [
-     "Turbos and boost",
+     "Coolant leaks / water pump / overheating",
      6
     ]
    ],

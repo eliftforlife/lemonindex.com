@@ -25,7 +25,7 @@ from bs4 import BeautifulSoup
 HERE = os.path.dirname(os.path.abspath(__file__))
 BASE = 'https://lemonindex.com'
 E = lambda s: html.escape(str(s), quote=True)
-V = '2'   # perf.css / perf.js version
+V = '3'   # perf.css / perf.js version (11-12: generation filter)
 ASSET = f'<link rel="stylesheet" href="/assets/perf.css?v={V}"><script src="/assets/perf.js?v={V}" defer></script>'
 def _load(p, d=None):
     p = os.path.join(HERE, p)
@@ -33,7 +33,46 @@ def _load(p, d=None):
 
 def _avg(d, y0, y1):
     s = [v['score'] for y, v in (d or {}).items() if y0 <= int(y) <= y1 and v and v.get('score') is not None]
-    return (round(sum(s) / len(s)), len(s)) if s else (None, 0)
+    return (int(sum(s) / len(s) + 0.5), len(s)) if s else (None, 0)   # 11-12: half-up, the same rounding as the engine pages
+
+def engine_years(e, A=None):
+    """11-12 (UX test: /engines/bmw-s58/ said 'not enough YouTube videos' while the M3 page said '#1'): ONE source for an engine's YouTube
+    tone, read the same way by the performance pages and the engine pages: the engine's own study (supercar_engine_yt.json, live file first,
+    then the snapshot data_perf.py took), else the BMW engine attribution (bmw_engine_yt.json)."""
+    SCY = {**((A or {}).get('scores') or {}), **(_load('data/supercar_engine_yt_snapshot.json', {}) or {}), **(_load('data/supercar_engine_yt.json', {}) or {})}
+    src, key = (e.get('yt') or ['scy', ''])[:2]
+    return ((SCY.get(e.get('study') or '') or {}).get('years') or (SCY.get(key or '') or {}).get('years')
+            or ((_load('data/bmw_engine_yt.json', {}) or {}).get(key) if src == 'bmw' else None) or {})
+
+def engine_tone(e, A=None):
+    """(tone 0-100, scored years): the average over every scored year of the engine, so the car page and the engine page show the same number"""
+    return _avg(engine_years(e, A), 0, 9999)
+
+def engine_ext(url):
+    """11-12: what the performance pages know about the engine whose page is `url` (e.g. '/engines/bmw-s58/'), for the engine page itself:
+    hp of every performance version using it, the known issues with their sources and owner-complaint counts, the YouTube tone.
+    None when no performance page uses this engine."""
+    out = None
+    for p in sorted(glob.glob(os.path.join(HERE, 'data', 'perf', '*.json'))):
+        if p.endswith('.auto.json'): continue
+        D = _load(p); A = _load(p[:-5] + '.auto.json', {}) or {}
+        for code, e in (D.get('engines') or {}).items():
+            if not url or e.get('page') != url: continue
+            if out is None: out = dict(hp=set(), issues={}, cars=[], tone=engine_tone(e, A), years=engine_years(e, A), study=e.get('study'), sources={})
+            gs = [g for g in D['gens'] if g['engine'] == code]
+            out['cars'].append((D['short'], D['page'], ', '.join(g['code'] for g in gs)))
+            for g in gs:
+                for v in g['variants']:
+                    if isinstance(_hp(v), (int, float)): out['hp'].add(int(_hp(v)))
+            for i in e.get('issues') or []:
+                if i['t'].lower().startswith('no known pattern'): continue
+                it = out['issues'].setdefault(i['t'], dict(i, n=0, where=[]))
+                for g in gs:
+                    n = ((((A.get('nhtsa') or {}).get('gens') or {}).get(g['id']) or {}).get('issues') or {}).get(i['t'], {}).get('n') or 0
+                    if n: it['n'] += n; it['where'].append(f'{g["code"]} {D["short"]}')
+                for sid in i.get('src') or []:
+                    if sid in D['sources']: out['sources'][sid] = D['sources'][sid]
+    return out
 
 class Refs:
     """Numbers sources in order of first use. R(ids...) records them for the open card (and returns '' so values carry no superscripts);
@@ -109,6 +148,35 @@ def perf_url(slug, out='docs'):
         if os.path.exists(os.path.join(HERE, out, u.strip('/'), 'index.html')): return u
     return ''
 
+# ---- 11-12 (UX test, Tyler: "the G80 tab shows 2008 data"): the Years, Problems, Recalls and Specs tabs follow the generation picker.
+# Year-specific rows carry data-pfy="<years>"; perf.js hides (class pf-off) the ones outside the picked generation, and a note on each tab
+# says which years show, with a "Show every year" button. Without JS every year shows.
+def _gy1(G, g):
+    """the last model year a generation covers for the filter (the newest one stays open: next year's cars belong to it)"""
+    return max(g['y1'], 2030) if g is G[-1] and (g.get('years') or '').rstrip().endswith(('–', '-')) or g is G[-1] else g['y1']
+def _years_in(t):
+    ys = set()
+    for a, b in re.findall(r'\b((?:19|20)\d\d)(?:\s*[–-]\s*((?:19|20)?\d\d))?\b', t or ''):
+        a = int(a); b = int(b) if b and len(b) == 4 else (a // 100 * 100 + int(b) if b else a)
+        ys.update(range(a, b + 1) if a <= b <= a + 20 else [a])
+    return sorted(ys)
+YF_NOTE = ('<p class="pf-yf"><span class="pf-yft">Showing the <b class="pf-yfg"></b> years only (<span class="pf-yfr"></span>).</span><span class="pf-yfx">Showing every year.</span> '
+           '<button type="button" class="pf-yall" aria-pressed="false">Show every year</button></p>')
+def _gen_parts(D, A, label):
+    """one 'what owners complain about' table per generation (NHTSA complaints in its model years), tagged for the filter"""
+    out = ''
+    for g in D['gens']:
+        ga = ((A.get('nhtsa') or {}).get('gens') or {}).get(g['id']) or {}; n = ga.get('n') or 0; parts = [p for p in ga.get('parts') or [] if not p[0].lower().startswith('unknown')]
+        ys = ' '.join(str(y) for y in range(g['y0'], _gy1(D['gens'], g) + 1))
+        if not n:
+            out += f'<section class="yc" data-pfy="{ys}"><h2>What {E(g["code"])} {E(label)} owners complain about</h2><p class="pf-none">No owner complaints on file for {E(g["years"])}.</p></section>'
+            continue
+        rows = ''.join(f'<tr><td>{E(k)}</td><td>{round(100 * v / n)}%</td><td>{v:,}</td></tr>' for k, v in parts[:6])
+        out += (f'<section class="yc" data-pfy="{ys}"><h2>What {E(g["code"])} {E(label)} owners complain about</h2>'
+                f'<p>{n:,} owner complaint{"" if n == 1 else "s"} to NHTSA for model years {E(g["years"])}. A complaint can name more than one system.</p>'
+                f'<div class="tw"><table class="adv"><thead><tr><th>System</th><th>Share of complaints</th><th>Complaints</th></tr></thead><tbody>{rows}</tbody></table></div></section>')
+    return out
+
 def build(slug, out='docs'):
     """everything both modes share: hero (slider or single image + big numbers), one block per generation, compare, the sources"""
     D = _load(f'data/perf/{slug}.json'); A = _load(f'data/perf/{slug}.auto.json', {}) or {}
@@ -118,7 +186,7 @@ def build(slug, out='docs'):
         if os.path.isdir(DP.YT):
             A.setdefault('yt', {})
             for st in DP.studies(D):
-                if not A['yt'].get(st): A['yt'][st] = DP.yt_study(st, D.get('topics_extra'))
+                if not A['yt'].get(st): A['yt'][st] = DP.yt_study(st, D.get('topics_extra'), DP.hp_cap(D))
     except Exception: pass
     BYT = _load('data/bmw_engine_yt.json', {}) or {}
     SCY = {**(A.get('scores') or {}), **(_load('data/supercar_engine_yt.json', {}) or {})}   # the snapshot data_perf.py took, the live file wins
@@ -129,10 +197,8 @@ def build(slug, out='docs'):
     gsc = {g['id']: _avg(YS, g['y0'], g['y1']) for g in G}
     granked = sorted([g['id'] for g in G if gsc[g['id']][0] is not None], key=lambda i: -gsc[i][0])
     def eng_score(code):
-        e = D['engines'][code]; src, key = (e.get('yt') or ['scy', ''])[:2]   # the engine's own study first, else the BMW engine attribution
-        d = (SCY.get(e.get('study') or '') or {}).get('years') or (SCY.get(key or '') or {}).get('years') or (BYT.get(key) if src == 'bmw' else None)
-        gs = [x for x in G if x['engine'] == code] or G   # an engine only some variants use (Durango Hellcat, Raptor 5.4): the car's whole span
-        return _avg(d, min(x['y0'] for x in gs), max(x['y1'] for x in gs))
+        # 11-12: the engine's tone over ALL its scored years (engine_tone), the same number its engine page shows
+        return engine_tone(D['engines'][code], A)
     esc = {c: eng_score(c) for c in D['engines']}
     eranked = sorted([c for c in esc if esc[c][0] is not None], key=lambda c: -esc[c][0])
     def lead(g):
@@ -140,7 +206,7 @@ def build(slug, out='docs'):
         return next((v for v in vs if v['id'] == D.get('star')), next((v for v in vs if v.get('star')), next((v for v in vs if not v.get('pkg') and _hp(v)), vs[0])))
     # ---- hero
     pills = len(G) > 1
-    stops = ''.join(f'<button type="button" class="pf-stop" data-i="{i}" aria-pressed="{"true" if i == focus else "false"}"><b>{E(g["code"])}</b><span>{E(g["years"])}</span></button>' for i, g in enumerate(G))
+    stops = ''.join(f'<button type="button" class="pf-stop" data-i="{i}" data-y0="{g["y0"]}" data-y1="{_gy1(G, g)}" aria-pressed="{"true" if i == focus else "false"}"><b>{E(g["code"])}</b><span>{E(g["years"])}</span></button>' for i, g in enumerate(G))
     multi = all(g.get('img') for g in G) and len(G) > 1
     if multi:
         imgs = ''.join(f'<img src="{E(g["img"])}" alt="{E(D["name"])} {E(g["code"])} ({E(g["years"])})' + (f' in {E(g["color"])}' if g.get('color') else '') + ', AI illustration" width="1000" height="600" '
@@ -148,7 +214,14 @@ def build(slug, out='docs'):
     else:
         pc = perf_list().get(slug) or {}
         src = D.get('img') or (G[focus].get('img') if G[focus].get('img') else pc.get('img')) or ''
-        imgs = (f'<img src="{E(src)}" alt="{E(D["name"])}' + (f' in {E(pc["img_color"])}' if pc.get('img_color') else '') + f', AI illustration" width="{pc.get("w", 1000)}" height="{pc.get("h", 600)}" class="pf-car on pf-one" decoding="async" fetchpriority="high">') if src else ''
+        # 11-12 (UX test: the C63's W206 tab showed a W204): one picture for every generation says which generation it shows, and perf.js
+        # shows that line whenever another generation is picked
+        pg = next((i for i, g in enumerate(G) if pc.get('img_year') and g['y0'] <= pc['img_year'] <= g['y1']), None) if (not D.get('img') or D['img'].split('?')[0] == (pc.get('img') or '').split('?')[0]) else None
+        imgs = (f'<img src="{E(src)}" alt="{E(D["name"])}' + (f' {E(G[pg]["code"])}' if pg is not None and pills else '') + (f' in {E(pc["img_color"])}' if pc.get('img_color') else '')
+                + f', AI illustration" width="{pc.get("w", 1000)}" height="{pc.get("h", 600)}" class="pf-car on pf-one" decoding="async" fetchpriority="high"'
+                + (f' data-pg="{pg}"' if pg is not None and pills else '') + '>') if src else ''
+        if src and pg is not None and pills:
+            imgs += f'<p class="pf-pic">Pictured: the {E(G[pg]["code"])} {E(short)} ({pc["img_year"]}). <span class="pf-picn"></span></p>'
     def stats(g):
         v = lead(g); zv, zl = _z(v.get('z60')); top = ((v.get('top') or {}).get('v') or '')
         s = [(str(_hp(v) if _hp(v) is not None else '–'), 'horsepower'), (zv.replace(' s', '') if zv else '–', '0–60 mph, sec'), (top.replace(' mph', '') or '–', 'mph top speed')]
@@ -174,7 +247,9 @@ def build(slug, out='docs'):
         sc, _ = esc[g['engine']]
         rk = (eranked.index(g['engine']) + 1) if g['engine'] in eranked else None
         eph = (eng.get('photo') or BPH.get(g['engine']) or SCP.get(eng.get('study') or '') or {})
-        eimg = (f'<img src="{E(eph["src"])}" alt="{E(eng["name"])} engine, AI illustration" width="{eph["w"]}" height="{eph["h"]}" loading="lazy" decoding="async">' if eph else '')
+        eimg = (f'<img src="{E(eph["src"])}" alt="{E(eng["name"])} engine, ' + ('AI illustration' if eph.get('ai') or not eph.get('page') else 'photo') + f'" width="{eph["w"]}" height="{eph["h"]}" loading="lazy" decoding="async">' if eph else '')
+        if eph and eph.get('page') and not eph.get('ai'):   # 11-12: a real Commons photo (the S55/S58) carries its credit
+            eimg += f'<p class="pf-cap">Photo: {E(eph.get("author", ""))} / <a href="{E(eph["page"])}" rel="noopener nofollow">Wikimedia Commons</a> ({E(eph.get("license", ""))})</p>'
         facts = ''.join(f'<div class="pf-f"><span>{E(k)}</span><b>{E(v)}</b></div>' for k, v, s in eng['facts'] if R(*s) == '')
         ytl = (f'<p class="pf-eyt">{ic("play", 16)}<span>YouTube owner tone <b>{sc}</b>/100' + (f' · #{rk} of {len(eranked)} {E(short)} engines' if rk and len(eranked) > 1 else '') + '</span></p>'
                if sc is not None else (f'<p class="pf-eyt na">{ic("play", 16)}<span>YouTube owner tone for the {E(eng["name"])}: its study is queued; the score shows here when it lands.</span></p>' if eng.get('study') else ''))
@@ -299,6 +374,32 @@ def inject(slug, out='docs'):
     ov.clear(); ov.append(BeautifulSoup(f'<div class="pf">{P["blocks"]}{rel}{P["cmp"]}<details class="pf-sd" id="pf-sources"><summary>All sources ({len(R.order)})</summary>{R.html()}</details></div>', 'html.parser'))
     qa = s.find('section', class_='yqa')
     if qa: qa.append(BeautifulSoup(''.join(f'<h3>{E(q)}</h3><p>{a}</p>' for q, a in _qa(D, P)), 'html.parser'))
+    if len(D['gens']) > 1:   # 11-12: the other tabs follow the generation picker (see _gy1)
+        def tag(el, ys):
+            if ys: el['data-pfy'] = ' '.join(str(y) for y in ys)
+        yp = s.find('section', id='p-years')
+        if yp:
+            for tr in yp.find_all('tr'):
+                td = tr.find('td')
+                if td: tag(tr, _years_in(td.get_text(' ')))
+        rp = s.find('section', id='p-recalls')
+        if rp:
+            for li in rp.find_all('li'):
+                sm = li.find('small')
+                if sm and '·' in sm.get_text(): tag(li, _years_in(sm.get_text().split('·', 1)[1]))
+        sp = s.find('section', id='p-specs')
+        if sp:
+            for dd in sp.find_all('details', class_='yd'):
+                sm = dd.find('summary')
+                if sm: tag(dd, _years_in(sm.get_text().split('·')[0]))
+        pp = s.find('section', id='p-problems')
+        if pp:   # one table per generation first; the every-year numbers stay, folded and labeled
+            whole = ''.join(str(c) for c in pp.contents); yall = f'{D["gens"][0]["y0"]}–{D["gens"][-1]["years"].split("–")[-1] or "now"}'
+            pp.clear(); pp.append(BeautifulSoup(_gen_parts(D, P['A'], short)
+                                                + f'<details class="yd pf-allyrs"><summary>Every {E(short)} year combined ({E(yall)})</summary>{whole}</details>', 'html.parser'))
+        for sid in ('p-years', 'p-problems', 'p-recalls', 'p-specs'):
+            sec = s.find('section', id=sid)
+            if sec: sec.insert(0, BeautifulSoup(YF_NOTE, 'html.parser'))
     g, v = _star(D)
     t = s.find('title'); t.string = f'{D["name"]} & {v["name"]}: 0-60, Horsepower, Engines, Problems'
     desc = (f'{D["name"]} performance by generation: the {g["code"]} {v["name"]} makes {_hp(v)} hp and runs 0-60 in {_z(v.get("z60"))[0]}. '
@@ -327,9 +428,16 @@ def standalone(slug, page_fn, out='docs'):
     y0, y1 = min(g['y0'] for g in G), max(g['y1'] for g in G)
     by = {int(y): n for y, n in (nh.get('by_year') or {}).items() if y0 <= int(y) <= y1 and any(g['y0'] <= int(y) <= g['y1'] for g in G)}
     tot = sum(by.values()); mx = max(by.values() or [1]) or 1
-    bars = ''.join(f'<div class="pf-yr"><span>{y}</span><i style="--w:{round(100 * n / mx)}%"></i><b>{n}</b></div>' for y, n in sorted(by.items()))
+    multi = len(G) > 1   # 11-12: rows carry their years so the generation picker filters this tab (perf.js)
+    bars = ''.join(f'<div class="pf-yr"' + (f' data-pfy="{y}"' if multi else '') + f'><span>{y}</span><i style="--w:{round(100 * n / mx)}%"></i><b>{n}</b></div>' for y, n in sorted(by.items()))
+    def _pbars(parts):
+        return ''.join(f'<div class="pf-b pf-bd"><span>{E(k)}</span><i style="--w:{round(100 * n / max(1, parts[0][1]))}%"></i><b>{n}</b></div>' for k, n in parts) if parts else ''
     parts = (nh.get('parts') or [])[:5]
-    parts_h = (''.join(f'<div class="pf-b pf-bd"><span>{E(k)}</span><i style="--w:{round(100 * n / max(1, parts[0][1]))}%"></i><b>{n}</b></div>' for k, n in parts)) if parts else ''
+    parts_h = _pbars(parts)
+    gp = {g['id']: (lambda ps: None if ps is None else [p for p in ps if not p[0].lower().startswith('unknown')])(((nh.get('gens') or {}).get(g['id']) or {}).get('parts')) for g in G}
+    if multi and all(v is not None for v in gp.values()):   # one "what they're about" per generation
+        parts_h = ''.join(f'<div class="pf-gp" data-pfy="{" ".join(str(y) for y in range(g["y0"], _gy1(G, g) + 1))}"><p class="pf-cap">{E(g["code"])} · {E(g["years"])}</p>'
+                          + (_pbars(gp[g['id']][:5]) or '<p class="pf-none">No owner complaints on file.</p>') + '</div>' for g in G)
     recs = []
     for g in G:
         seen = {}
@@ -337,11 +445,12 @@ def standalone(slug, page_fn, out='docs'):
             for r in rc.get(str(y), []): seen.setdefault(r['id'], (r, []))[1].append(y)
         for rid, (r, ys) in seen.items():
             first = re.split(r'(?<=[.])\s', r['summary'])[0][:260]
-            recs.append(f'<li><b>{E(rid)}</b> <span class="pf-k">{E(r["part"].split(":")[0].title() or "Recall")}</span><span class="pf-ry">{ys[0]}' + (f'–{ys[-1]}' if len(ys) > 1 else '') + f'</span><p>{E(first)}</p></li>')
-    rel = (f'<section class="pf-sec"><h2>{ic("shield")} Owner complaints to NHTSA</h2>'
+            recs.append(f'<li' + (f' data-pfy="{" ".join(map(str, ys))}"' if multi else '') + f'><b>{E(rid)}</b> <span class="pf-k">{E(r["part"].split(":")[0].title() or "Recall")}</span><span class="pf-ry">{ys[0]}' + (f'–{ys[-1]}' if len(ys) > 1 else '') + f'</span><p>{E(first)}</p></li>')
+    rel = ((YF_NOTE if multi else '') + f'<section class="pf-sec"><h2>{ic("shield")} Owner complaints to NHTSA</h2>'
            + (f'<p class="pf-li">{ic("info", 18)}<span>{E(note)}</span></p>' if note else '')
            + f'<p class="pf-li">{ic("shield", 18)}<span>No Lemon Index for the {E(short)}: the index is complaints per car sold, and sales by trim aren&#39;t published. These are raw counts.</span></p>'
-           + (f'<p class="pf-dek">{tot:,} complaint{"" if tot == 1 else "s"} for {y0}–{y1}.</p><div class="pf-yrs">{bars}</div>' if by else '<p class="pf-none">No owner complaints on file for these years.</p>')
+           + ((''.join(f'<p class="pf-dek" data-pfy="{" ".join(str(y) for y in range(g["y0"], _gy1(G, g) + 1))}">{E(g["code"])}: {sum(n for y, n in by.items() if g["y0"] <= y <= g["y1"]):,} complaints for {E(g["years"])}.</p>' for g in G) if multi
+                else f'<p class="pf-dek">{tot:,} complaint{"" if tot == 1 else "s"} for {y0}–{y1}.</p>') + f'<div class="pf-yrs">{bars}</div>' if by else '<p class="pf-none">No owner complaints on file for these years.</p>')
            + (f'<h3 class="pf-h3">What they&#39;re about</h3><div class="pf-parts">{parts_h}</div>' if parts_h else '') + '</section>'
            + f'<section class="pf-sec"><h2>{ic("warn")} Recalls</h2>' + (f'<ul class="pf-recs">{"".join(recs)}</ul>' if recs else '<p class="pf-none">No recalls on file for these years.</p>')
            + f'<p class="pf-cap">Source: NHTSA (api.nhtsa.gov). <a href="/vin/">Check a VIN</a> for open recalls on one car.</p></section>')

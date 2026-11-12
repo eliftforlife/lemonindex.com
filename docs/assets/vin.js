@@ -1,27 +1,89 @@
 // VIN check (11-02): decode a VIN with NHTSA's free vPIC API (runs in the browser), then send the reader to that car's Lemon Index page.
+// 11-12 (UX test, Marcus: "the VIN check doesn't check recalls; it sends me to nhtsa.gov"): the recalls for that make, model and year come
+// straight from NHTSA's free recalls API (api.nhtsa.gov allows lemonindex.com), each tagged against the decoded engine and fuel
+// ("3.0L diesel only" on a 3.6L gas car = probably not this car). NHTSA has no free public open-recall-by-VIN API, so the page says how to
+// confirm one is still open: the VIN lookup at nhtsa.gov/recalls or any dealer. The picture switches to the decoded model (it was a Camry).
 (() => {
   const f = document.getElementById('vinf'); if (!f) return;
   const out = document.getElementById('vinout'), PICK = JSON.parse(document.getElementById('pick').textContent);
   const VA = JSON.parse(document.getElementById('valias').textContent);
+  const VI = (() => { const e = document.getElementById('vimg'); try { return new Set(JSON.parse(e ? e.textContent : '[]')); } catch (x) { return new Set(); } })();
   const ALL = Object.entries(PICK).flatMap(([b, ms]) => ms.map(([n, id, ys]) => ({ b, n, id, ys })));
   const nz = s => (s || '').toUpperCase().replace(/[^A-Z0-9]/g, '');
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const cap = s => (s || '').toLowerCase().replace(/(^|[\s/(-])\w/g, c => c.toUpperCase());
+  // which engines / fuel a recall covers, from its "recalling certain ... equipped with ..." sentence (same rules as build.py rtag)
+  const rtag = sum => {
+    const s = (sum || '').replace(/\s+/g, ' ');
+    const sent = s.split(/(?<=\.)\s+(?=[A-Z])/).find(x => /recalling/i.test(x)) || s.slice(0, 300);
+    if (!/equipped with|with (an? |the )?[0-9.]+ ?(l|liter)|(engines?|hybrid|diesel)\b/i.test(sent)) return null;
+    const sz = sent.match(/\b(\d\.\d) ?(?:l\b|liter|-liter)/i);
+    if (/gasoline|\bgas\b/i.test(sent) && /diesel/i.test(sent)) return null;
+    if (/(equipped with|with)[^.]{0,60}(diesel|duramax|power ?stroke|cummins|\btdi\b|bluetec)|diesel engines?\b/i.test(sent)) return { fuel: 'diesel', l: sz ? sz[1] : null, t: (sz ? sz[1] + 'L diesel' : 'Diesel') + ' only' };
+    const lm = sent.match(/recalling (?:certain )?(.*?)\b(vehicles|cars|trucks|SUVs)\b/i), many = !!(lm && /,| and /i.test(lm[1]));   // a model list: a hybrid in it is a name, not a limit
+    if (/equipped with[^.]{0,40}(plug-in|phev)/i.test(sent) || (!many && /plug-in hybrid|\bphev\b|\b4xe\b/i.test(sent))) return { fuel: 'phev', t: 'Plug-in hybrid only' };
+    if (/equipped with[^.]{0,40}hybrid/i.test(sent) || (!many && /hybrid (vehicles|models|electric)/i.test(sent))) return { fuel: 'hybrid', t: 'Hybrid only' };
+    if (sz && /equipped with[^.]{0,30}\d\.\d ?(?:l\b|liter|-liter)[^.]{0,40}engine/i.test(sent)) return { l: sz[1], t: sz[1] + 'L engines only' };
+    return null;
+  };
+  const fits = (tag, car) => {   // false = another engine / fuel; true = matches this car; null = can't tell
+    if (!tag) return null;
+    if (tag.fuel === 'diesel' && car.fuel && car.fuel !== 'diesel') return false;
+    if (tag.fuel === 'phev' && car.elec !== undefined && !/phev|plug/i.test(car.elec)) return false;
+    if (tag.fuel === 'hybrid' && car.elec !== undefined && !/hev|hybrid/i.test(car.elec)) return false;
+    if (tag.l && car.l && Math.abs(+tag.l - car.l) > 0.05) return false;
+    return (tag.fuel === 'diesel' && car.fuel === 'diesel') || (tag.l && car.l) ? true : null;
+  };
+  const sentence = s => {
+    const t = (s || '').replace(/\s+/g, ' ').replace(/^.*?\brecalling\b.*?\b(vehicles|trucks|cars|SUVs|motorcycles)\b(?:[^.]|\.(?=\d))*\.\s*/i, '');
+    const o = ((t || s || '').split(/(?<=[a-z)]\.)\s+(?=[A-Z])/)[0] || '').trim(); return o.length > 230 ? o.slice(0, 228) + '…' : o;
+  };
+  const pic = document.querySelector('.ph-v img'), picBox = document.querySelector('.ph-v');
+  async function recalls(r, y, car, label) {
+    const box = document.getElementById('vinrc'); if (!box) return;
+    let res;
+    try { res = (await (await fetch(`https://api.nhtsa.gov/recalls/recallsByVehicle?make=${encodeURIComponent(r.Make)}&model=${encodeURIComponent(r.Model)}&modelYear=${y}`)).json()).results || []; }
+    catch (e) { box.innerHTML = '<p class="vin-err">Couldn&#39;t load the recall list from NHTSA just now. Check the VIN at <a href="https://www.nhtsa.gov/recalls" rel="noopener" target="_blank">nhtsa.gov/recalls</a>.</p>'; return; }
+    const seen = new Set();
+    const rows = res.filter(x => x.NHTSACampaignNumber && !seen.has(x.NHTSACampaignNumber) && seen.add(x.NHTSACampaignNumber))
+      .map(x => { const tag = rtag(x.Summary); return { x, tag, fit: fits(tag, car), d: (x.ReportReceivedDate || '').match(/(\d{4})/) }; })
+      .sort((a, b) => (a.fit === false) - (b.fit === false) || (b.d ? b.d[1] : '').localeCompare(a.d ? a.d[1] : ''));
+    const other = rows.filter(z => z.fit === false).length;
+    const li = z => `<li class="${z.fit === false ? 'vin-no' : ''}"><p class="vin-rh"><b>${esc(cap((z.x.Component || 'Recall').split(':')[0]))}</b> <small>· recall issued ${esc(z.d ? z.d[1] : '')} · <a href="https://www.nhtsa.gov/recalls?nhtsaId=${esc(z.x.NHTSACampaignNumber)}" rel="noopener" target="_blank">${esc(z.x.NHTSACampaignNumber)}</a></small>`
+      + (z.tag ? ` <span class="rtag">${esc(z.tag.t)}</span>` : '') + (z.x.parkIt ? ' <span class="rtag vin-park">Park it: don&#39;t drive</span>' : '') + '</p>'
+      + (z.fit === false ? `<p class="vin-fit">Probably not this car: it has a ${esc(car.desc)}.</p>` : '')
+      + `<p>${esc(sentence(z.x.Summary))}</p>` + (z.x.Remedy && z.fit !== false ? `<p class="vin-fix"><b>Free fix:</b> ${esc(sentence(z.x.Remedy))}</p>` : '') + '</li>';
+    box.innerHTML = `<h2>Recalls for the ${esc(label)}: ${rows.length}</h2>`
+      + (rows.length ? `<p class="note">${other ? `${rows.length - other} may apply to this car; ${other} cover${other === 1 ? 's' : ''} other engines (listed last). ` : ''}This list covers every ${esc(label)}, not only this VIN.</p><ul class="vin-rc">${rows.map(li).join('')}</ul>`
+        : '<p>NHTSA lists no recalls for this make, model and year.</p>')
+      + `<p class="vin-open"><b>Is a recall still open on this exact car?</b> Only the VIN can say. Confirm it free at <a href="https://www.nhtsa.gov/recalls" rel="noopener" target="_blank">nhtsa.gov/recalls</a> (type this VIN) or ask any ${esc(cap(r.Make))} dealer. Recall repairs are free, even on a used car.</p>`;
+  }
   f.onsubmit = async e => {
     e.preventDefault();
     const vin = nz(f.vin.value);
     if (vin.length !== 17) { out.innerHTML = '<p class="vin-err">A VIN is 17 letters and numbers. It&#39;s on the driver-side dashboard (look through the windshield) and on your registration or insurance card.</p>'; return; }
     out.innerHTML = '<p>Checking…</p>';
-    try {
-      const r = (await (await fetch(`https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinValues/${vin}?format=json`)).json()).Results[0];
-      if (!r.Make) { out.innerHTML = '<p class="vin-err">That VIN didn&#39;t decode. Double-check it (no letters I, O or Q).</p>'; return; }
-      const mk = nz(r.Make), md = nz(r.Model), y = +r.ModelYear;
-      const byAlias = VA[mk + '|' + md] && ALL.find(c => c.id === VA[mk + '|' + md]);
-      const hit = byAlias || ALL.find(c => nz(c.b) === mk && (nz(c.n.replace(c.b, '')).startsWith(md) || md.startsWith(nz(c.n.replace(c.b, ''))))) || ALL.find(c => nz(c.b) === mk && nz(c.n).includes(md));
-      const eng = [r.DisplacementL && `${(+r.DisplacementL).toFixed(1)}L`, r.EngineCylinders && `${r.EngineCylinders}-cylinder`, r.FuelTypePrimary && r.FuelTypePrimary.toLowerCase()].filter(Boolean).join(' ');
-      const rows = [['Car', `${r.ModelYear} ${r.Make[0] + r.Make.slice(1).toLowerCase()} ${r.Model}${r.Trim ? ' ' + r.Trim : ''}`], ['Engine', eng], ['Drive', r.DriveType], ['Body', r.BodyClass], ['Built in', [r.PlantCity, r.PlantCountry].filter(Boolean).join(', ').toLowerCase().replace(/\b\w/g, c => c.toUpperCase()).replace('(Usa)', '(USA)')]].filter(x => x[1]);
-      out.innerHTML = `<div class="vin-card"><dl>${rows.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join('')}</dl>
-${hit && hit.ys.includes(y) ? `<a class="btn" href="/cars/${hit.id}/${y}/">See its problems and recalls →</a>` : hit ? `<a class="btn" href="/cars/${hit.id}/">See every ${hit.n} year →</a>` : '<p class="note">We don&#39;t cover this model yet.</p>'}
-<p class="note">Open recalls are tied to the exact car: check this VIN for free at <a href="https://www.nhtsa.gov/recalls" rel="noopener" target="_blank">nhtsa.gov/recalls</a>.</p></div>`;
-    } catch (err) { out.innerHTML = '<p class="vin-err">Couldn&#39;t reach the government VIN service. Try again in a minute.</p>'; }
+    let r;
+    try { r = (await (await fetch(`https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinValues/${vin}?format=json`)).json()).Results[0]; }
+    catch (err) { out.innerHTML = '<p class="vin-err">Couldn&#39;t reach the government VIN service. Try again in a minute.</p>'; return; }
+    if (!r || !r.Make) { out.innerHTML = '<p class="vin-err">That VIN didn&#39;t decode. Double-check it (no letters I, O or Q).</p>'; return; }
+    const mk = nz(r.Make), md = nz(r.Model), y = +r.ModelYear;
+    const byAlias = VA[mk + '|' + md] && ALL.find(c => c.id === VA[mk + '|' + md]);
+    const hit = byAlias || ALL.find(c => nz(c.b) === mk && (nz(c.n.replace(c.b, '')).startsWith(md) || md.startsWith(nz(c.n.replace(c.b, ''))))) || ALL.find(c => nz(c.b) === mk && nz(c.n).includes(md));
+    const eng = [r.DisplacementL && `${(+r.DisplacementL).toFixed(1)}L`, r.EngineCylinders && `${r.EngineCylinders}-cylinder`, r.FuelTypePrimary && r.FuelTypePrimary.toLowerCase()].filter(Boolean).join(' ');
+    const label = `${r.ModelYear} ${cap(r.Make)} ${r.Model}`;
+    const rows = [['Car', `${label}${r.Trim ? ' ' + r.Trim : ''}`], ['Engine', eng], ['Drive', r.DriveType], ['Body', r.BodyClass], ['Built in', [r.PlantCity, r.PlantCountry].filter(Boolean).join(', ').toLowerCase().replace(/\b\w/g, c => c.toUpperCase()).replace('(Usa)', '(USA)')]].filter(x => x[1]);
+    out.innerHTML = `<div class="vin-card"><dl>${rows.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join('')}</dl>
+${hit && hit.ys.includes(y) ? `<a class="btn" href="/cars/${hit.id}/${y}/">See its problems and repair costs →</a>` : hit ? `<a class="btn" href="/cars/${hit.id}/">See every ${esc(hit.n)} year →</a>` : '<p class="note">We don&#39;t cover this model yet.</p>'}</div>
+<section class="vin-recalls" id="vinrc" aria-live="polite"><p>Looking up recalls…</p></section>`;
+    if (pic && picBox) {   // the picture follows the decoded model (our AI illustration of it), or goes away
+      if (hit && VI.has(hit.id)) { pic.removeAttribute('srcset'); pic.src = `/assets/ai-models/${hit.id}.webp?v=1`; pic.alt = hit.n; picBox.hidden = false; }
+      else picBox.hidden = true;
+    }
+    const ft = r.FuelTypePrimary || '';
+    const fuel = /diesel/i.test(ft) ? 'diesel' : /electric/i.test(ft) && !r.DisplacementL ? 'electric' : ft ? 'gas' : null;
+    const car = { fuel, l: r.DisplacementL ? Math.round(+r.DisplacementL * 10) / 10 : null, elec: ft ? (r.ElectrificationLevel || '') : undefined,
+                  desc: [r.DisplacementL && `${(+r.DisplacementL).toFixed(1)}L`, fuel === 'gas' ? 'gas' : fuel, 'engine'].filter(Boolean).join(' ') };
+    recalls(r, y, car, label);
   };
 })();

@@ -192,5 +192,18 @@ a.pf-c:hover { box-shadow: 0 10px 24px -16px rgba(0,0,0,.3); }
 @media (max-width: 760px) {
   .pf-track { display: flex; overflow-x: auto; scrollbar-width: none; justify-content: flex-start; }
   .pf-track::-webkit-scrollbar { display: none; }
-  .pf-stop { flex: 1 0 auto; padding: 8px 12px; }
+  .pf-stop { flex: 1 1 auto; min-width: max-content; padding: 8px 6px; }   /* 11-12 (UX test: "E46 )01–2006" was cut off): 4 generations fit a 360 px phone without scrolling */
+  .pf-stop span { white-space: nowrap; letter-spacing: -.01em; }
 }
+/* 11-12: the tabs follow the generation picker (perf.js); rows of other generations hide */
+.pf-off { display: none !important; }
+.pf-yf { display: none; }
+.pfjs .pf-yf { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; margin: 4px 0 14px; padding: 10px 14px; border-radius: 14px; background: #f5f5f7; font-size: 14px; color: var(--ink2); }
+.pf-yfx, .pf-yfa .pf-yft { display: none; }
+.pf-yfa .pf-yfx { display: inline; }
+.pf-yall { appearance: none; border: 0; background: none; padding: 6px 0; font: inherit; font-weight: 700; color: var(--ink); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; min-height: 32px; }
+.pf-allyrs { margin-top: 18px; }
+.pf-gp + .pf-gp { margin-top: 10px; }
+.pf-pic { position: absolute; left: 6px; bottom: 6px; margin: 0; padding: 3px 10px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 12px; color: var(--ink2); max-width: calc(100% - 52px); }
+.pfjs .pf-pic { display: none; }
+.pfjs .pf-pic.on { display: block; }

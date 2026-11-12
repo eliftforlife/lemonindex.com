@@ -29,7 +29,33 @@
       "n": 0,
       "ex": []
      }
-    }
+    },
+    "parts": [
+     [
+      "Unknown or other",
+      7
+     ],
+     [
+      "Structure",
+      4
+     ],
+     [
+      "Fuel/propulsion system",
+      3
+     ],
+     [
+      "Electrical system",
+      2
+     ],
+     [
+      "Exterior lighting",
+      1
+     ],
+     [
+      "Engine",
+      1
+     ]
+    ]
    }
   },
   "parts": [
@@ -69,8 +95,104 @@
   "2025": []
  },
  "yt": {
-  "car-lexus-lc-500": null,
-  "toyota-2ur-gse": null
+  "car-lexus-lc-500": {
+   "videos": 192,
+   "praise": [
+    [
+     "Looks",
+     54
+    ],
+    [
+     "Interior and seats",
+     34
+    ],
+    [
+     "Everyday comfort",
+     22
+    ],
+    [
+     "Power and acceleration",
+     21
+    ]
+   ],
+   "trouble": [
+    [
+     "Infotainment / touchpad",
+     7
+    ]
+   ],
+   "top": [
+    {
+     "id": "jln3ajP-UmM",
+     "title": "2021 Lexus LC 500 Convertible - POV Driving Impressions",
+     "views": 8671777,
+     "ch": "TheTopher"
+    },
+    {
+     "id": "giIP0XdT7SA",
+     "title": "Here's Why the 2018 Lexus LC500 Costs $100,000",
+     "views": 6117709,
+     "ch": "Doug DeMuro"
+    },
+    {
+     "id": "pTb_cOYQctc",
+     "title": "The 2021 Lexus LC500 Convertible Is the Coolest Car Nobody Will Buy",
+     "views": 4376273,
+     "ch": "Doug DeMuro"
+    }
+   ]
+  },
+  "toyota-2ur-gse": {
+   "videos": 189,
+   "praise": [
+    [
+     "Looks",
+     39
+    ],
+    [
+     "Everyday comfort",
+     26
+    ],
+    [
+     "Power and acceleration",
+     26
+    ],
+    [
+     "Handling and steering",
+     22
+    ]
+   ],
+   "trouble": [
+    [
+     "Infotainment / touchpad",
+     8
+    ],
+    [
+     "Water pump / coolant",
+     6
+    ]
+   ],
+   "top": [
+    {
+     "id": "giIP0XdT7SA",
+     "title": "Here's Why the 2018 Lexus LC500 Costs $100,000",
+     "views": 6117689,
+     "ch": "Doug DeMuro"
+    },
+    {
+     "id": "5f_19BCNpx0",
+     "title": "2022 Lexus IS 500 Review // Old School Cool",
+     "views": 2756239,
+     "ch": "Throttle House"
+    },
+    {
+     "id": "POwlxj9cBEo",
+     "title": "2021 Lexus LC500 Review // A Ridiculously Underrated $100,000 Masterclass",
+     "views": 2684810,
+     "ch": "Throttle House"
+    }
+   ]
+  }
  },
  "scores": {}
 }

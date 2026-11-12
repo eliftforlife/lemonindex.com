@@ -55,7 +55,33 @@
        "11731612"
       ]
      }
-    }
+    },
+    "parts": [
+     [
+      "Power train",
+      1448
+     ],
+     [
+      "Engine",
+      695
+     ],
+     [
+      "Fuel/propulsion system",
+      415
+     ],
+     [
+      "Unknown or other",
+      263
+     ],
+     [
+      "Engine and engine cooling",
+      255
+     ],
+     [
+      "Fuel system, gasoline",
+      187
+     ]
+    ]
    }
   },
   "parts": [

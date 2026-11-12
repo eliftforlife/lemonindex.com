@@ -31,7 +31,33 @@
        "10088181"
       ]
      }
-    }
+    },
+    "parts": [
+     [
+      "Air bags",
+      251
+     ],
+     [
+      "Power train",
+      212
+     ],
+     [
+      "Electrical system",
+      157
+     ],
+     [
+      "Service brakes",
+      119
+     ],
+     [
+      "Engine",
+      79
+     ],
+     [
+      "Service brakes, hydraulic",
+      62
+     ]
+    ]
    },
    "g2": {
     "n": 667,
@@ -46,7 +72,33 @@
       "n": 0,
       "ex": []
      }
-    }
+    },
+    "parts": [
+     [
+      "Power train",
+      180
+     ],
+     [
+      "Electrical system",
+      115
+     ],
+     [
+      "Engine",
+      98
+     ],
+     [
+      "Air bags",
+      74
+     ],
+     [
+      "Steering",
+      59
+     ],
+     [
+      "Unknown or other",
+      54
+     ]
+    ]
    },
    "g3": {
     "n": 76,
@@ -58,7 +110,33 @@
        "11487639"
       ]
      }
-    }
+    },
+    "parts": [
+     [
+      "Power train",
+      24
+     ],
+     [
+      "Electrical system",
+      16
+     ],
+     [
+      "Steering",
+      13
+     ],
+     [
+      "Unknown or other",
+      12
+     ],
+     [
+      "Engine",
+      8
+     ],
+     [
+      "Suspension",
+      6
+     ]
+    ]
    }
   },
   "parts": [
@@ -397,41 +475,41 @@
  "yt": {
   "car-cts-v": null,
   "gm-ls-gen3": {
-   "videos": 200,
+   "videos": 179,
    "praise": [
     [
      "Looks",
-     19
+     20
     ],
     [
      "Power and acceleration",
      17
     ],
     [
-     "Everyday comfort",
-     10
+     "Handling and steering",
+     11
     ],
     [
-     "Handling and steering",
-     10
+     "Everyday comfort",
+     11
     ]
    ],
    "trouble": [
     [
      "Electrical / wiring / TIPM",
-     10
+     11
     ],
     [
      "Oil leaks (gaskets, seals, housings)",
-     9
+     8
     ],
     [
      "Coolant leaks / water pump / overheating",
-     6
+     7
     ],
     [
      "Differential / wheel hop",
-     5
+     6
     ]
    ],
    "top": [
@@ -456,7 +534,7 @@
    ]
   },
   "gm-lsa-ls9": {
-   "videos": 200,
+   "videos": 160,
    "praise": [
     [
      "Looks",
@@ -464,18 +542,23 @@
     ],
     [
      "Power and acceleration",
-     14
+     16
     ],
     [
      "Everyday comfort",
-     10
+     11
     ],
     [
      "Handling and steering",
-     7
+     8
     ]
    ],
-   "trouble": [],
+   "trouble": [
+    [
+     "Clutch",
+     5
+    ]
+   ],
    "top": [
     {
      "id": "1xVT6JoiXfI",
@@ -498,11 +581,11 @@
    ]
   },
   "gm-lt4": {
-   "videos": 200,
+   "videos": 172,
    "praise": [
     [
      "Looks",
-     27
+     28
     ],
     [
      "Power and acceleration",
@@ -510,11 +593,11 @@
     ],
     [
      "Handling and steering",
-     13
+     15
     ],
     [
-     "Interior and seats",
-     12
+     "Manual gearbox",
+     13
     ]
    ],
    "trouble": [

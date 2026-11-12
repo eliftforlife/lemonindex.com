@@ -53,7 +53,33 @@
        "10031136"
       ]
      }
-    }
+    },
+    "parts": [
+     [
+      "Air bags",
+      45
+     ],
+     [
+      "Power train",
+      36
+     ],
+     [
+      "Engine and engine cooling",
+      22
+     ],
+     [
+      "Structure",
+      16
+     ],
+     [
+      "Visibility",
+      15
+     ],
+     [
+      "Suspension",
+      13
+     ]
+    ]
    },
    "e92": {
     "n": 202,
@@ -83,7 +109,33 @@
        "10257659"
       ]
      }
-    }
+    },
+    "parts": [
+     [
+      "Power train",
+      73
+     ],
+     [
+      "Engine",
+      54
+     ],
+     [
+      "Air bags",
+      45
+     ],
+     [
+      "Electrical system",
+      27
+     ],
+     [
+      "Vehicle speed control",
+      7
+     ],
+     [
+      "Service brakes",
+      6
+     ]
+    ]
    },
    "f80": {
     "n": 21,
@@ -103,7 +155,33 @@
       "n": 0,
       "ex": []
      }
-    }
+    },
+    "parts": [
+     [
+      "Fuel/propulsion system",
+      8
+     ],
+     [
+      "Engine",
+      6
+     ],
+     [
+      "Unknown or other",
+      4
+     ],
+     [
+      "Power train",
+      3
+     ],
+     [
+      "Electrical system",
+      2
+     ],
+     [
+      "Structure",
+      1
+     ]
+    ]
    },
    "g80": {
     "n": 7,
@@ -112,7 +190,33 @@
       "n": 0,
       "ex": []
      }
-    }
+    },
+    "parts": [
+     [
+      "Power train",
+      2
+     ],
+     [
+      "Unknown or other",
+      2
+     ],
+     [
+      "Seat belts",
+      1
+     ],
+     [
+      "Air bags",
+      1
+     ],
+     [
+      "Lane departure",
+      1
+     ],
+     [
+      "Steering",
+      1
+     ]
+    ]
    }
   },
   "parts": [
@@ -484,15 +588,15 @@
  },
  "yt": {
   "bmw-m3-g3": {
-   "videos": 200,
+   "videos": 182,
    "praise": [
     [
      "Handling and steering",
-     22
+     23
     ],
     [
      "Looks",
-     20
+     19
     ],
     [
      "Power and acceleration",
@@ -506,14 +610,14 @@
    "trouble": [
     [
      "Rod bearings",
+     11
+    ],
+    [
+     "VANOS",
      10
     ],
     [
      "SMG / DCT gearbox",
-     10
-    ],
-    [
-     "VANOS",
      10
     ],
     [
@@ -523,35 +627,35 @@
    ],
    "top": [
     {
-     "id": "E6pm5eW6F7k",
-     "title": "RICHARD HAMMOND MODIFIED MY E46 BMW M3 THAT I RESTORED",
-     "views": 5052601,
-     "ch": "Mat Armstrong"
-    },
-    {
-     "id": "LmZxh8HTa-0",
-     "title": "BMW E46 M3 vs E36 M3 vs M2 Comp: DRAG RACE",
-     "views": 3414143,
-     "ch": "carwow"
-    },
-    {
      "id": "3uNiye9G8HI",
      "title": "The Ultimate BMW M3 Review: E30 vs E36 vs E46 vs E92 vs F80",
      "views": 2620419,
      "ch": "Car Throttle"
+    },
+    {
+     "id": "rSC_ElDzzsI",
+     "title": "Taking an E46 M3 out for a walk then doughnuts",
+     "views": 2310018,
+     "ch": "Devin Cunningham (Devin Tyler)"
+    },
+    {
+     "id": "ncBH5aF2Ce8",
+     "title": "I saved $100,000 on my Dream BMW - E46 M3 Pt 1",
+     "views": 1299719,
+     "ch": "BigTime"
     }
    ]
   },
   "bmw-m3-g4": {
-   "videos": 200,
+   "videos": 181,
    "praise": [
-    [
-     "Power and acceleration",
-     14
-    ],
     [
      "Handling and steering",
      14
+    ],
+    [
+     "Power and acceleration",
+     13
     ],
     [
      "Looks",
@@ -565,7 +669,7 @@
    "trouble": [
     [
      "Rod bearings",
-     11
+     12
     ],
     [
      "SMG / DCT gearbox",
@@ -590,37 +694,37 @@
      "ch": "Car Throttle"
     },
     {
-     "id": "kjPh9lUNxOc",
-     "title": "[POV 4K] BMW M3 E92 Full Armytrix - Slippery When Wet",
-     "views": 2127787,
-     "ch": "Simply Driving"
+     "id": "v44ad7oBtpg",
+     "title": "The Most GODLY Sound. E92 M3 POV [4K]",
+     "views": 1663187,
+     "ch": "wettm3"
     }
    ]
   },
   "bmw-m3-g5": {
-   "videos": 200,
+   "videos": 171,
    "praise": [
     [
      "Looks",
-     26
+     25
     ],
     [
      "Everyday comfort",
-     14
+     16
     ],
     [
      "Power and acceleration",
-     14
+     16
     ],
     [
      "Handling and steering",
-     13
+     15
     ]
    ],
    "trouble": [
     [
      "Crank hub",
-     8
+     9
     ]
    ],
    "top": [
@@ -631,37 +735,37 @@
      "ch": "Car Throttle"
     },
     {
-     "id": "iszHLSMaMhc",
-     "title": "BMW M3 Competition Top Speed Acceleration Autobahn POV Sound - 450 HP F80 Sedan",
-     "views": 2259686,
-     "ch": "AutoTopNL"
-    },
-    {
      "id": "xKcx7vXZcHc",
      "title": "2018 BMW M3 CS Review - The Best M3",
      "views": 2249131,
      "ch": "TheStraightPipes"
+    },
+    {
+     "id": "gqpR-MVqPtY",
+     "title": "INSIDE the NEW BMW M3 Competition Package 2017 | Interior Exterior DETAILS w/ Revs",
+     "views": 1736081,
+     "ch": "Carvlogger"
     }
    ]
   },
   "bmw-m3-competition": {
-   "videos": 200,
+   "videos": 187,
    "praise": [
     [
      "Handling and steering",
      25
     ],
     [
-     "Looks",
-     24
-    ],
-    [
      "Everyday comfort",
      22
     ],
     [
+     "Looks",
+     22
+    ],
+    [
      "Power and acceleration",
-     18
+     17
     ]
    ],
    "trouble": [],
@@ -687,61 +791,61 @@
    ]
   },
   "bmw-m3-g6": {
-   "videos": 200,
+   "videos": 174,
    "praise": [
     [
      "Looks",
-     34
+     36
+    ],
+    [
+     "Everyday comfort",
+     25
     ],
     [
      "Power and acceleration",
      25
     ],
     [
-     "Everyday comfort",
-     24
-    ],
-    [
      "Handling and steering",
-     23
+     25
     ]
    ],
    "trouble": [],
    "top": [
     {
-     "id": "ueGoScRwCp8",
-     "title": "BMW M3 G80 XDrive 720HP STAGE 1+ INFINITAS TEST DRIVE ON GERMAN AUTOBAHN🏎",
-     "views": 11532918,
-     "ch": "TopSpeedGermany"
-    },
-    {
-     "id": "CAQFv9G8Wn4",
-     "title": "Crazy 2021 M3 Competition meets Porsche 992 and Macan Turbo on German Autobahn✔",
-     "views": 3506394,
-     "ch": "Cars on Autobahn"
-    },
-    {
      "id": "bUVB0eB9d6Q",
      "title": "2021 BMW M3 Competition - Wild Sedan!",
      "views": 2644237,
      "ch": "RoCars"
+    },
+    {
+     "id": "8uZ68XoPqhU",
+     "title": "2021 BMW M3 vs The Cheapest E90 BMW M3 You Can Buy",
+     "views": 1879133,
+     "ch": "Throttle House"
+    },
+    {
+     "id": "hucRrlWhWaU",
+     "title": "The 2021 BMW M3 Is a Fantastic Sport Sedan",
+     "views": 1736811,
+     "ch": "Doug DeMuro"
     }
    ]
   },
   "bmw-s54": {
-   "videos": 200,
+   "videos": 169,
    "praise": [
     [
      "Handling and steering",
-     19
+     21
     ],
     [
      "Looks",
-     18
+     17
     ],
     [
      "Power and acceleration",
-     16
+     17
     ],
     [
      "Manual gearbox",
@@ -751,11 +855,11 @@
    "trouble": [
     [
      "Rod bearings",
-     19
+     22
     ],
     [
      "VANOS",
-     14
+     16
     ],
     [
      "Oil leaks (gaskets, seals, housings)",
@@ -763,16 +867,10 @@
     ],
     [
      "SMG / DCT gearbox",
-     10
+     11
     ]
    ],
    "top": [
-    {
-     "id": "E6pm5eW6F7k",
-     "title": "RICHARD HAMMOND MODIFIED MY E46 BMW M3 THAT I RESTORED",
-     "views": 5056373,
-     "ch": "Mat Armstrong"
-    },
     {
      "id": "0FTcr2IFeg0",
      "title": "BMW Z4M | Car Review | Top Gear",
@@ -784,11 +882,17 @@
      "title": "Porsche Cayman S vs Corvette Z06 vs BMW Z4M // $30,000 Question",
      "views": 1811184,
      "ch": "Throttle House"
+    },
+    {
+     "id": "6A_24qCzDqQ",
+     "title": "5 Reasons Why I Bought A Rusty E36 M3 Over The 'Superior' E46 M3",
+     "views": 1338638,
+     "ch": "Car Throttle"
     }
    ]
   },
   "bmw-s65": {
-   "videos": 200,
+   "videos": 185,
    "praise": [
     [
      "Looks",
@@ -810,15 +914,15 @@
    "trouble": [
     [
      "Rod bearings",
-     28
+     29
     ],
     [
      "Throttle actuators",
-     14
+     16
     ],
     [
      "Oil leaks (gaskets, seals, housings)",
-     10
+     11
     ],
     [
      "SMG / DCT gearbox",
@@ -847,7 +951,7 @@
    ]
   },
   "bmw-s55": {
-   "videos": 200,
+   "videos": 187,
    "praise": [
     [
      "Looks",
@@ -859,7 +963,7 @@
     ],
     [
      "Handling and steering",
-     16
+     17
     ],
     [
      "Everyday comfort",
@@ -888,52 +992,50 @@
      "ch": "Hagerty"
     },
     {
-     "id": "caUYvI9YJmk",
-     "title": "BMW M2 CS v Porsche GT4 RS: DRAG RACE",
-     "views": 1868880,
-     "ch": "carwow"
-    },
-    {
      "id": "XbB_USZCLDc",
      "title": "2021 Mustang Mach 1 vs BMW M2 CS vs Honda Civic Type R LE // Battle Of The Special Editions",
      "views": 1813602,
      "ch": "Throttle House"
+    },
+    {
+     "id": "lX-s8QXago8",
+     "title": "2019 BMW M2 Competition Review - The Best BMW M Car",
+     "views": 1550662,
+     "ch": "TheStraightPipes"
     }
    ]
   },
   "bmw-s58": {
-   "videos": 200,
+   "videos": 176,
    "praise": [
     [
      "Looks",
      32
     ],
     [
-     "Power and acceleration",
-     21
-    ],
-    [
      "Everyday comfort",
-     21
+     23
     ],
     [
      "Handling and steering",
-     19
+     21
+    ],
+    [
+     "Power and acceleration",
+     21
     ]
    ],
    "trouble": [
     [
      "Coolant leaks / water pump / overheating",
+     6
+    ],
+    [
+     "Oil leaks (gaskets, seals, housings)",
      5
     ]
    ],
    "top": [
-    {
-     "id": "IIDu0S_StpM",
-     "title": "Buying a BMW G82 M4 and Modifying it immediately",
-     "views": 6889104,
-     "ch": "throtl"
-    },
     {
      "id": "u3EiY7sQWr4",
      "title": "The Definitive Review: M3 Competition feat G82 M4 and E30 M3 — Jason Cammisa on the Icons — Ep. 03",
@@ -941,9 +1043,15 @@
      "ch": "Hagerty"
     },
     {
-     "id": "Xh2u9R-p468",
-     "title": "BMW X4M v Porsche Macan Turbo v Alfa Stelvio QV: DRAG RACE",
-     "views": 2324716,
+     "id": "gDmpq-EdlX8",
+     "title": "2020 BMW X3M Competition Review - The M3 of SUV's",
+     "views": 1030204,
+     "ch": "TheStraightPipes"
+    },
+    {
+     "id": "IMUKUIW-MVs",
+     "title": "BMW X3M & X4M review on road and track - see how quick the next M3's engine is to 60mph!",
+     "views": 982173,
      "ch": "carwow"
     }
    ]

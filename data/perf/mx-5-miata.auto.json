@@ -62,7 +62,33 @@
        "10191720"
       ]
      }
-    }
+    },
+    "parts": [
+     [
+      "Structure",
+      13
+     ],
+     [
+      "Power train",
+      12
+     ],
+     [
+      "Engine and engine cooling",
+      11
+     ],
+     [
+      "Fuel system, gasoline",
+      10
+     ],
+     [
+      "Electrical system",
+      9
+     ],
+     [
+      "Suspension",
+      7
+     ]
+    ]
    },
    "nc": {
     "n": 71,
@@ -71,7 +97,33 @@
       "n": 0,
       "ex": []
      }
-    }
+    },
+    "parts": [
+     [
+      "Structure",
+      13
+     ],
+     [
+      "Air bags",
+      12
+     ],
+     [
+      "Electrical system",
+      8
+     ],
+     [
+      "Unknown or other",
+      7
+     ],
+     [
+      "Power train",
+      6
+     ],
+     [
+      "Tires",
+      5
+     ]
+    ]
    },
    "nd": {
     "n": 80,
@@ -97,7 +149,33 @@
        "11289267"
       ]
      }
-    }
+    },
+    "parts": [
+     [
+      "Power train",
+      24
+     ],
+     [
+      "Electrical system",
+      12
+     ],
+     [
+      "Unknown or other",
+      10
+     ],
+     [
+      "Air bags",
+      10
+     ],
+     [
+      "Structure",
+      7
+     ],
+     [
+      "Steering",
+      7
+     ]
+    ]
    }
   },
   "parts": [
@@ -146,8 +224,124 @@
   "2025": []
  },
  "yt": {
-  "car-mx-5-miata": null,
-  "mazda-skyactiv-g20": null
+  "car-mx-5-miata": {
+   "videos": 192,
+   "praise": [
+    [
+     "Looks",
+     22
+    ],
+    [
+     "Handling and steering",
+     21
+    ],
+    [
+     "Power and acceleration",
+     18
+    ],
+    [
+     "Manual gearbox",
+     16
+    ]
+   ],
+   "trouble": [
+    [
+     "Rust",
+     9
+    ],
+    [
+     "Coolant leaks / water pump / overheating",
+     9
+    ],
+    [
+     "Oil leaks (gaskets, seals, housings)",
+     7
+    ],
+    [
+     "Clutch",
+     6
+    ]
+   ],
+   "top": [
+    {
+     "id": "ND7jqbGwHUI",
+     "title": "Inventor of the Miata Reacts to Tiktok Miatas",
+     "views": 12727940,
+     "ch": "Real Mechanic Stuff"
+    },
+    {
+     "id": "hJUltR6UYSo",
+     "title": "Here's Why the 2019 Mazda MX-5 Miata Is the Best Miata Yet",
+     "views": 3726512,
+     "ch": "Doug DeMuro"
+    },
+    {
+     "id": "-wtBiv8hJpE",
+     "title": "7,000 Mile Roadtrip in a Civic and Miata - Episode 1",
+     "views": 3007783,
+     "ch": "Gears and Gasoline"
+    }
+   ]
+  },
+  "mazda-skyactiv-g20": {
+   "videos": 78,
+   "praise": [
+    [
+     "Handling and steering",
+     23
+    ],
+    [
+     "Looks",
+     17
+    ],
+    [
+     "Everyday comfort",
+     13
+    ],
+    [
+     "Power and acceleration",
+     12
+    ]
+   ],
+   "trouble": [
+    [
+     "Coolant leaks / water pump / overheating",
+     9
+    ],
+    [
+     "Transmission (shifting, fluid)",
+     8
+    ],
+    [
+     "Manual gearbox / third gear",
+     8
+    ],
+    [
+     "Clutch",
+     6
+    ]
+   ],
+   "top": [
+    {
+     "id": "e-1fG3UYVWs",
+     "title": "GR86 vs MX5 RF (ND2) - Is Miata Always the answer? | Everyday Driver TV Season 10",
+     "views": 961066,
+     "ch": "EverydayDriver"
+    },
+    {
+     "id": "5CA8BzgbE-A",
+     "title": "Mazda Miata ND2 | Already a Classic Car",
+     "views": 485290,
+     "ch": "savagegeese"
+    },
+    {
+     "id": "J0j9HK4iiL0",
+     "title": "The World's First Gay Car Review | Mazda Miata MX-5 | ND Manual 7-years In The Making | Is It True?",
+     "views": 446397,
+     "ch": "hinnerfuel"
+    }
+   ]
+  }
  },
  "scores": {}
 }

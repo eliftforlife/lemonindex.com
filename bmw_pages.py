@@ -85,8 +85,16 @@ else:
                 "creditText": "The Lemon Index", "creator": {"@type": "Organization", "name": "The Lemon Index", "url": BASE + '/'},
                 "copyrightNotice": "The Lemon Index (lemonindex.com), CC BY 4.0", "isAccessibleForFree": True}
     # ---- engine pages
+    # 11-12 (UX test: this page said "not enough YouTube videos" while the M3 page said "#1 of 4 M3 engines"): ONE YouTube source per engine.
+    # An engine a performance page covers (S54, S55, S58) reads the performance page's engine (perf_page.engine_ext: its own engine study);
+    # the rest keep the BMW engine attribution (data/bmw_engine_yt.json).
+    import perf_page as _PP
+    _EXT = {c: _PP.engine_ext(ENG_URL(c)) for c in BENG}
+    def _yty(code):
+        x = _EXT.get(code)
+        return (x['years'] if x and x['years'] else None) or BYT.get(code) or {}
     def _yt_cell(code, y):
-        d = (BYT.get(code) or {}).get(str(y))
+        d = _yty(code).get(str(y))
         if d and d.get('score') is not None:
             nm = d.get('named', 0)
             return f'<b>{d["score"]}</b> <small>({d["videos"]} videos, {nm if nm else "none"} naming {y})</small>', d['score']
@@ -112,7 +120,7 @@ else:
     # page lists), only engines that have a page, same order (average tone, then code to break ties)
     for _c in BENG:
         _yy = BEY.get(_c) or {}
-        _v = [d['score'] for y, d in (BYT.get(_c) or {}).items() if y in _yy and d and d.get('score') is not None]
+        _v = [d['score'] for y, d in _yty(_c).items() if y in _yy and d and d.get('score') is not None]
         if _v: _YTAVG[_c] = sum(_v) / len(_v)
     _YTRANK = {c: i + 1 for i, c in enumerate(sorted(_YTAVG, key=lambda c: (-_YTAVG[c], c)))}
     def _engine_page(code):
@@ -120,7 +128,7 @@ else:
         if not yrs: return None
         ys = sorted(yrs, key=int); y0, y1 = ys[0], ys[-1]
         fams = sorted({f for y in ys for f in yrs[y]['models']}, key=lambda f: BFAM.get(f, f))
-        hp = sorted({v['hp'] for f in BVER for y in BVER[f] for v in BVER[f][y] if v.get('code') == code and v.get('hp')})
+        hp = sorted({v['hp'] for f in BVER for y in BVER[f] for v in BVER[f][y] if v.get('code') == code and v.get('hp')} | ((_EXT.get(code) or {}).get('hp') or set()))   # 11-12: + the performance pages' versions (M3 CS, M4 CSL), so both pages give one range
         rows, scored_b, scored_a, comb_only, yt_scores, own = [], 0, 0, 0, {}, {}
         for y in ys:
             e = yrs[y]; cell, kind = _owner_cell(e); ytc, yts = _yt_cell(code, y)
@@ -167,7 +175,7 @@ else:
         rk = _YTRANK.get(code)
         chips = (f'<div class="trc"><div><b>{y0}–{str(y1)[-2:]}</b><span>model years</span></div>'
                  + (f'<div><b>{hp[0]}' + (f'–{hp[-1]}' if len(hp) > 1 else '') + '</b><span>hp (US)</span></div>' if hp else '')
-                 + (f'<div><b>#{rk}</b><span>YouTube rank of {len(_YTRANK)} BMW engines</span></div>' if rk else '<div><b>–</b><span>not enough YouTube videos to rank</span></div>') + '</div>')
+                 + (f'<div><b>{int(_YTAVG[code] + 0.5)}</b><span>YouTube owner tone /100 · #{rk} of {len(_YTRANK)} BMW engines</span></div>' if rk else '<div><b>–</b><span>not enough YouTube videos to rank</span></div>') + '</div>')
         mxi = max([150] + [v for k, v in own.values() if k == 'b'])
         def erow(y):
             e = yrs[y]; k = own.get(int(y)); sc = yt_scores.get(int(y))
@@ -190,7 +198,16 @@ else:
                    'A video whose title names no model year counts toward every year of its generation, so neighboring years share most of their videos.</p></details>'
                    + '<details class="cpd engd"><summary>All the numbers, year by year</summary>'
                    + _rows(['Year', 'Cars with it', 'Owner complaints', f'Complaints naming "{E(code)}"', 'YouTube says', 'Top complaint areas'], rows) + '</details>')
-        if meta.get('notes'):
+        # 11-12: the known issues the performance pages list for this engine (same text, sources and owner-complaint counts as the M3 page), then Wikipedia's notes
+        _x = _EXT.get(code); _pi = ''
+        if _x and _x['issues']:
+            _pi = ''.join(f'<li><b>{E(i["t"])}</b> <small>({E(i["kind"])})</small>. {E(i["x"])}' + (f' <b>Fix:</b> {E(i["fix"])}' if i.get('fix') else '')
+                          + (f' <small>{i["n"]} owner complaint{"" if i["n"] == 1 else "s"} to NHTSA mention it ({E(", ".join(i["where"]))}).</small>' if i['n'] else '') + '</li>' for i in _x['issues'].values())
+            _pi += ''.join(f'<li>{E(n)} <small>(Wikipedia)</small></li>' for n in meta.get('notes') or [])
+            _srcs = ', '.join(f'<a href="{E(v["u"])}" rel="noopener nofollow">{E(v["t"])}</a>' for v in _x['sources'].values())
+            sec.append(f'<section class="engk"><h2>Known issues on record</h2><ul>{_pi}</ul><p class="yc-cap">Sources: {_srcs}' + (f'; <a href="{E(meta["src"])}" rel="noopener">Wikipedia, {E(meta["name"])}</a>' if meta.get('notes') else '')
+                       + '. The same list as on ' + ', '.join(f'<a href="{E(u)}">the {E(n)} page</a>' for n, u, _g in _x['cars'] if u) + '.</p></section>')
+        elif meta.get('notes'):
             sec.append(f'<section class="engk"><h2>Known issues on record</h2><ul>' + ''.join(f'<li>{E(n)}</li>' for n in meta['notes'])
                        + f'</ul><p class="yc-cap">According to <a href="{E(meta["src"])}" rel="noopener">Wikipedia&#39;s {E(meta["name"])} article</a> and its sources.</p></section>')
         vers = collections.OrderedDict()

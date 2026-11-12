@@ -34,7 +34,33 @@
        "11310143"
       ]
      }
-    }
+    },
+    "parts": [
+     [
+      "Engine",
+      5
+     ],
+     [
+      "Unknown or other",
+      3
+     ],
+     [
+      "Fuel/propulsion system",
+      3
+     ],
+     [
+      "Structure",
+      2
+     ],
+     [
+      "Vehicle speed control",
+      1
+     ],
+     [
+      "Service brakes",
+      1
+     ]
+    ]
    },
    "zn8": {
     "n": 47,
@@ -53,7 +79,33 @@
        "11759341"
       ]
      }
-    }
+    },
+    "parts": [
+     [
+      "Engine",
+      25
+     ],
+     [
+      "Fuel/propulsion system",
+      8
+     ],
+     [
+      "Exterior lighting",
+      6
+     ],
+     [
+      "Unknown or other",
+      4
+     ],
+     [
+      "Power train",
+      3
+     ],
+     [
+      "Electrical system",
+      2
+     ]
+    ]
    }
   },
   "parts": [
@@ -117,8 +169,120 @@
   "2025": []
  },
  "yt": {
-  "car-gr86": null,
-  "subaru-fa": null
+  "car-gr86": {
+   "videos": 186,
+   "praise": [
+    [
+     "Handling and steering",
+     35
+    ],
+    [
+     "Manual gearbox",
+     22
+    ],
+    [
+     "Everyday comfort",
+     18
+    ],
+    [
+     "Power and acceleration",
+     17
+    ]
+   ],
+   "trouble": [
+    [
+     "RTV sealant",
+     13
+    ],
+    [
+     "Oil starvation / bearings",
+     6
+    ],
+    [
+     "Valve springs",
+     5
+    ]
+   ],
+   "top": [
+    {
+     "id": "YiRWf2iwts0",
+     "title": "TOYOTA GT86 - Everything You Need to Know | Up to Speed",
+     "views": 2713886,
+     "ch": "Donut"
+    },
+    {
+     "id": "teS-s9xnuQA",
+     "title": "REBUILDING A WRECKED SCION FR-S IN 10 MINUTES - $2200 Scion FRS Rebuild",
+     "views": 2681535,
+     "ch": "Modified Crew"
+    },
+    {
+     "id": "romf-G6CZ7g",
+     "title": "The Toyota FT-86, GT-86, Scion FRS - /CHRIS HARRIS ON CARS",
+     "views": 2355204,
+     "ch": "The Drive"
+    }
+   ]
+  },
+  "subaru-fa": {
+   "videos": 188,
+   "praise": [
+    [
+     "Handling and steering",
+     24
+    ],
+    [
+     "Everyday comfort",
+     17
+    ],
+    [
+     "Power and acceleration",
+     15
+    ],
+    [
+     "Looks",
+     13
+    ]
+   ],
+   "trouble": [
+    [
+     "RTV sealant",
+     16
+    ],
+    [
+     "Oil starvation / bearings",
+     13
+    ],
+    [
+     "Oil leaks (gaskets, seals, housings)",
+     7
+    ],
+    [
+     "Valve springs",
+     7
+    ]
+   ],
+   "top": [
+    {
+     "id": "romf-G6CZ7g",
+     "title": "The Toyota FT-86, GT-86, Scion FRS - /CHRIS HARRIS ON CARS",
+     "views": 2355200,
+     "ch": "The Drive"
+    },
+    {
+     "id": "QaR843im04A",
+     "title": "2022 Toyota GR86 Full Review featuring Mk8 VW GTI and ND2 Miata — Jason Cammisa on the Icons Ep. 04",
+     "views": 2231186,
+     "ch": "Hagerty"
+    },
+    {
+     "id": "5Yu6Gjib0Rk",
+     "title": "AE86 vs GR86: Which one is worth it?",
+     "views": 2148352,
+     "ch": "Donut"
+    }
+   ]
+  }
  },
  "scores": {}
 }

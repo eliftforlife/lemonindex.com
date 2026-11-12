@@ -13,7 +13,33 @@
   "gens": {
    "g1": {
     "n": 36,
-    "issues": {}
+    "issues": {},
+    "parts": [
+     [
+      "Air bags",
+      5
+     ],
+     [
+      "Power train",
+      5
+     ],
+     [
+      "Unknown or other",
+      5
+     ],
+     [
+      "Forward collision avoidance",
+      5
+     ],
+     [
+      "Structure",
+      5
+     ],
+     [
+      "Tires",
+      4
+     ]
+    ]
    }
   },
   "parts": [
@@ -69,11 +95,11 @@
  "yt": {
   "car-ct5-v-blackwing": null,
   "gm-lt4": {
-   "videos": 200,
+   "videos": 176,
    "praise": [
     [
      "Looks",
-     27
+     28
     ],
     [
      "Power and acceleration",
@@ -81,11 +107,11 @@
     ],
     [
      "Handling and steering",
-     13
+     14
     ],
     [
-     "Interior and seats",
-     12
+     "Manual gearbox",
+     13
     ]
    ],
    "trouble": [

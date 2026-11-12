@@ -43,7 +43,33 @@
        "11697385"
       ]
      }
-    }
+    },
+    "parts": [
+     [
+      "Exterior lighting",
+      254
+     ],
+     [
+      "Electrical system",
+      202
+     ],
+     [
+      "Engine",
+      98
+     ],
+     [
+      "Unknown or other",
+      91
+     ],
+     [
+      "Power train",
+      62
+     ],
+     [
+      "Service brakes",
+      48
+     ]
+    ]
    }
   },
   "parts": [
@@ -193,13 +219,54 @@
   "2025": []
  },
  "yt": {
-  "car-durango-srt": null,
+  "car-durango-srt": {
+   "videos": 185,
+   "praise": [
+    [
+     "Power and acceleration",
+     24
+    ],
+    [
+     "Looks",
+     23
+    ],
+    [
+     "Everyday comfort",
+     17
+    ],
+    [
+     "Handling and steering",
+     17
+    ]
+   ],
+   "trouble": [],
+   "top": [
+    {
+     "id": "NI1dP495SSE",
+     "title": "Durango Hellcat vs Shelby GT500",
+     "views": 2387406,
+     "ch": "Wheels"
+    },
+    {
+     "id": "BfYjpJuFl1s",
+     "title": "The 2021 Dodge Durango Hellcat Is the World’s Craziest 3-Row SUV",
+     "views": 2334839,
+     "ch": "Doug DeMuro"
+    },
+    {
+     "id": "_y43Oj8NohE",
+     "title": "2021 Dodge Durango SRT Hellcat Review // 710-Horsepower SUV King",
+     "views": 1783557,
+     "ch": "Throttle House"
+    }
+   ]
+  },
   "chrysler-392": {
-   "videos": 200,
+   "videos": 189,
    "praise": [
     [
      "Looks",
-     20
+     21
     ],
     [
      "Power and acceleration",
@@ -207,11 +274,11 @@
     ],
     [
      "Everyday comfort",
-     14
+     15
     ],
     [
      "Handling and steering",
-     13
+     14
     ]
    ],
    "trouble": [
@@ -225,7 +292,7 @@
     ],
     [
      "Transfer case",
-     6
+     5
     ]
    ],
    "top": [
@@ -250,49 +317,44 @@
    ]
   },
   "chrysler-hellcat": {
-   "videos": 200,
+   "videos": 161,
    "praise": [
     [
      "Looks",
-     18
+     19
     ],
     [
      "Power and acceleration",
-     14
+     16
     ],
     [
      "Interior and seats",
-     10
+     11
     ],
     [
      "Everyday comfort",
-     8
+     10
     ]
    ],
-   "trouble": [
-    [
-     "Electrical / wiring / TIPM",
-     6
-    ]
-   ],
+   "trouble": [],
    "top": [
-    {
-     "id": "buzsasTfC4s",
-     "title": "Hellcat vs Z06 Corvette - drag racing",
-     "views": 26342950,
-     "ch": "Wheels"
-    },
-    {
-     "id": "pVkhw1Q0nOU",
-     "title": "When the Wife asks to take your 1000hp Trackhawk shopping",
-     "views": 13813614,
-     "ch": "SRTNINJAUSA"
-    },
     {
      "id": "cKx-cb0fzeo",
      "title": "2016 Dodge Challenger SRT Hellcat - SOUND!",
      "views": 11025539,
      "ch": "Visual Car Reviews"
+    },
+    {
+     "id": "ek_aZC4KIQM",
+     "title": "The $100,000 Jeep Trackhawk Is the Most Powerful SUV Ever",
+     "views": 7292548,
+     "ch": "Doug DeMuro"
+    },
+    {
+     "id": "MWMjR3r-nsI",
+     "title": "2015 Dodge Challenger SRT Hellcat - Jay Leno's Garage",
+     "views": 4636361,
+     "ch": "Jay Leno's Garage"
     }
    ]
   }

@@ -279,7 +279,12 @@
   const say = t => { tip.textContent = t || ''; };
   const opt = (s, l, ph) => { s.innerHTML = `<option value="">${ph}</option>` + l.map(([v, t]) => `<option value="${v}">${t}</option>`).join(''); s.disabled = !l.length; };
   opt(b, Object.keys(P).map(k => [k, k]), 'Brand');
-  b.onchange = () => { opt(m, (P[b.value] || []).map(([n, i]) => [i, n]), 'Model'); opt(y, [], 'Year'); say(''); };
+  b.onchange = () => {   // 11-12 (UX test, Jess: "Honda's model list mixes in motorcycles"): cars first, motorcycles in their own group
+    const all = P[b.value] || [], cars = all.filter(r => r[4] !== 'moto'), bikes = all.filter(r => r[4] === 'moto');
+    opt(m, cars.map(([n, i]) => [i, n]), 'Model');
+    if (bikes.length) { const g2 = document.createElement('optgroup'); g2.label = 'Motorcycles'; bikes.forEach(([n, i]) => g2.appendChild(new Option(n, i))); m.appendChild(g2); m.disabled = false; }
+    opt(y, [], 'Year'); say('');
+  };
   m.onchange = () => { const r = (P[b.value] || []).find(x => x[1] === m.value); opt(y, r && !r[4] ? r[2].slice().reverse().map(v => [v, v]) : [], 'Year (optional)'); say(''); };
   y.onchange = () => say('');
   g.disabled = false;

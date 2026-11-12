@@ -265,7 +265,7 @@ add('P3497', 'Cylinder Deactivation System (Bank 2)', 'The system that shuts off
 
 # --- Transmission ------------------------------------------------------------------------------------------------------------
 add('P0700', 'Transmission Control System Malfunction', 'The transmission computer found its own problem and asked for the check engine light. Another transmission code with the details is usually stored too.', 2,
-    ['Any stored transmission fault (read the transmission computer too)', 'Low or old fluid', 'Solenoid or sensor fault'])
+    ['A second transmission code that says what failed (the transmission computer has to be read for it)', 'Low or old transmission fluid', 'A shift solenoid or sensor fault'])
 add('P0701', 'Transmission Control System Range/Performance', 'The transmission control system isn\'t performing as expected.', 2, ['Transmission computer fault', 'Low fluid'])
 add('P0705', 'Transmission Range Sensor A Circuit (PRNDL Input)', 'The computer can\'t tell which gear the shifter is in. The car may not start, or may show the wrong gear.', 3, ['Failed range sensor', 'Misadjusted linkage', 'Wiring fault'])
 add('P0706', 'Transmission Range Sensor A Circuit Range/Performance', 'The gear selector position signal doesn\'t make sense. Shifting and starting can act up.', 3, ['Failing range sensor', 'Misadjusted linkage'])
@@ -394,8 +394,8 @@ MAKE = {
                   c=['Worn TCC regulator or isolator valve bore', 'Failing TCC solenoid', 'Worn torque converter clutch', 'Old or burnt fluid']),
 }
 
-SEV = {1: ('Drive on, get it checked', 'You can usually keep driving. Get the code checked when you can.'),
-       2: ('Get it fixed soon', 'Fix it soon. Waiting can lead to a bigger repair or a breakdown.'),
+SEV = {1: ('Drive on, get it checked', 'You can usually keep driving. Have the code read at your next service or within a few weeks.'),
+       2: ('Get it fixed soon', 'A few more days of normal driving is usually OK, but waiting can turn a small repair into a bigger one or a breakdown.'),
        3: ('Stop and fix now', 'Don\'t put it off. This can affect safety, stall the car or cause expensive damage.')}
 
 # 11-10 (Elijah approved): "Stop and fix now" only for codes that are dangerous to drive on: overheating, low oil pressure,
@@ -405,5 +405,5 @@ STOP_KEEP = {'P0217', 'P0218', 'P0524', 'P06DD', 'P0556', 'P0A0A', 'P0AA6', 'P0A
              'U0121', 'U0122', 'U0129', 'U0131', 'U0151'}
 SOFTENED = sorted(k for k, v in D.items() if v['s'] == 3 and k not in STOP_KEEP)
 for k in SOFTENED: D[k]['s'] = 2; D[k]['w'] = 1
-SEV_W = ('Fix soon', 'Fix it soon. Stop driving if the car slips, shakes, overheats or warns you.')
+SEV_W = ('Fix soon', 'Book a shop visit this week. Stop driving if the car slips, shakes, overheats or warns you.')
 def sev_text(v): return SEV_W if v.get('w') else SEV[v['s']]

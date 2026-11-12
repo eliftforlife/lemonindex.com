@@ -46,7 +46,33 @@
        "11131680"
       ]
      }
-    }
+    },
+    "parts": [
+     [
+      "Electrical system",
+      184
+     ],
+     [
+      "Unknown or other",
+      159
+     ],
+     [
+      "Air bags",
+      137
+     ],
+     [
+      "Structure",
+      106
+     ],
+     [
+      "Engine",
+      105
+     ],
+     [
+      "Power train",
+      102
+     ]
+    ]
    }
   },
   "parts": [
@@ -292,51 +318,92 @@
   ]
  },
  "yt": {
-  "car-charger-hellcat": null,
-  "chrysler-hellcat": {
-   "videos": 200,
+  "car-charger-hellcat": {
+   "videos": 183,
    "praise": [
     [
      "Looks",
-     18
+     22
     ],
     [
      "Power and acceleration",
+     16
+    ],
+    [
+     "Interior and seats",
+     15
+    ],
+    [
+     "Handling and steering",
      14
+    ]
+   ],
+   "trouble": [],
+   "top": [
+    {
+     "id": "j1RMw838Qhk",
+     "title": "Richard Hammond commutes to work in our new 700hp Dodge Charger Hellcat!",
+     "views": 4200851,
+     "ch": "DRIVETRIBE"
+    },
+    {
+     "id": "pgguJ-XYkXY",
+     "title": "The 2020 Dodge Charger Hellcat Widebody Is the Craziest Sedan on Sale",
+     "views": 4084776,
+     "ch": "Doug DeMuro"
+    },
+    {
+     "id": "sbetgzVgDrw",
+     "title": "The 2022 Dodge Charger SRT Hellcat is So Unnecessary - and So Much Fun (POV Drive Review)",
+     "views": 2630403,
+     "ch": "MilesPerHr"
+    }
+   ]
+  },
+  "chrysler-hellcat": {
+   "videos": 166,
+   "praise": [
+    [
+     "Looks",
+     20
+    ],
+    [
+     "Power and acceleration",
+     16
+    ],
+    [
+     "Everyday comfort",
+     10
     ],
     [
      "Interior and seats",
      10
-    ],
-    [
-     "Everyday comfort",
-     8
     ]
    ],
    "trouble": [
     [
-     "Electrical / wiring / TIPM",
-     6
+     "Theft",
+     5
     ]
    ],
    "top": [
-    {
-     "id": "buzsasTfC4s",
-     "title": "Hellcat vs Z06 Corvette - drag racing",
-     "views": 26342950,
-     "ch": "Wheels"
-    },
-    {
-     "id": "pVkhw1Q0nOU",
-     "title": "When the Wife asks to take your 1000hp Trackhawk shopping",
-     "views": 13813614,
-     "ch": "SRTNINJAUSA"
-    },
     {
      "id": "cKx-cb0fzeo",
      "title": "2016 Dodge Challenger SRT Hellcat - SOUND!",
      "views": 11025539,
      "ch": "Visual Car Reviews"
+    },
+    {
+     "id": "ek_aZC4KIQM",
+     "title": "The $100,000 Jeep Trackhawk Is the Most Powerful SUV Ever",
+     "views": 7292548,
+     "ch": "Doug DeMuro"
+    },
+    {
+     "id": "MWMjR3r-nsI",
+     "title": "2015 Dodge Challenger SRT Hellcat - Jay Leno's Garage",
+     "views": 4636361,
+     "ch": "Jay Leno's Garage"
     }
    ]
   }

@@ -53,7 +53,33 @@
        "11193386"
       ]
      }
-    }
+    },
+    "parts": [
+     [
+      "Fuel system, gasoline",
+      34
+     ],
+     [
+      "Fuel/propulsion system",
+      16
+     ],
+     [
+      "Power train",
+      7
+     ],
+     [
+      "Engine and engine cooling",
+      7
+     ],
+     [
+      "Suspension",
+      6
+     ],
+     [
+      "Engine",
+      6
+     ]
+    ]
    },
    "gr": {
     "n": 178,
@@ -90,7 +116,33 @@
        "10819981"
       ]
      }
-    }
+    },
+    "parts": [
+     [
+      "Power train",
+      103
+     ],
+     [
+      "Structure",
+      50
+     ],
+     [
+      "Service brakes",
+      49
+     ],
+     [
+      "Unknown or other",
+      23
+     ],
+     [
+      "Engine and engine cooling",
+      21
+     ],
+     [
+      "Engine",
+      14
+     ]
+    ]
    },
    "va": {
     "n": 250,
@@ -128,7 +180,33 @@
        "11651199"
       ]
      }
-    }
+    },
+    "parts": [
+     [
+      "Engine",
+      73
+     ],
+     [
+      "Electrical system",
+      62
+     ],
+     [
+      "Power train",
+      50
+     ],
+     [
+      "Unknown or other",
+      34
+     ],
+     [
+      "Fuel/propulsion system",
+      20
+     ],
+     [
+      "Steering",
+      20
+     ]
+    ]
    }
   },
   "parts": [
@@ -257,36 +335,36 @@
  },
  "yt": {
   "car-wrx-sti": {
-   "videos": 200,
+   "videos": 177,
    "praise": [
     [
      "Handling and steering",
-     18
+     20
     ],
     [
      "Everyday comfort",
-     16
+     18
     ],
     [
      "Looks",
-     16
+     15
     ],
     [
      "Power and acceleration",
-     9
+     10
     ]
    ],
    "trouble": [
     [
      "Coolant leaks / water pump / overheating",
+     7
+    ],
+    [
+     "Head gasket",
      6
     ],
     [
      "Ringland / pistons",
-     6
-    ],
-    [
-     "Head gasket",
      6
     ]
    ],
@@ -311,7 +389,65 @@
     }
    ]
   },
-  "subaru-ej257": null
+  "subaru-ej257": {
+   "videos": 176,
+   "praise": [
+    [
+     "Everyday comfort",
+     18
+    ],
+    [
+     "Looks",
+     16
+    ],
+    [
+     "Power and acceleration",
+     15
+    ],
+    [
+     "Handling and steering",
+     9
+    ]
+   ],
+   "trouble": [
+    [
+     "Coolant leaks / water pump / overheating",
+     12
+    ],
+    [
+     "Head gasket",
+     11
+    ],
+    [
+     "Ringland / pistons",
+     11
+    ],
+    [
+     "Rod bearings",
+     8
+    ]
+   ],
+   "top": [
+    {
+     "id": "PyBYrW5Uc1E",
+     "title": "The $50,000 Subaru WRX STI Type RA Is the Most Expensive Subaru Ever",
+     "views": 2231195,
+     "ch": "Doug DeMuro"
+    },
+    {
+     "id": "eA0yQ5-xqvg",
+     "title": "2020 Subaru WRX STI Review // End Of The Line, Pal",
+     "views": 1795972,
+     "ch": "Throttle House"
+    },
+    {
+     "id": "NdvuJHQFFbU",
+     "title": "7 Reasons Not To Buy The 2016 Subaru WRX STI",
+     "views": 1696348,
+     "ch": "Engineering Explained"
+    }
+   ]
+  }
  },
  "scores": {
   "car-wrx-sti": {

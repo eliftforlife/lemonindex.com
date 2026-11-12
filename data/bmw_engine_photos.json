@@ -64,20 +64,24 @@
   "bytes": 145456
  },
  "S55": {
-  "src": "/assets/engines/bmw-s55-twin-turbo-inline-6-engine.webp",
+  "src": "/assets/engines/bmw-s55-straight-six-photo.webp",
   "w": 1200,
-  "h": 1056,
-  "ai": true,
-  "title": "BMW S55 3.0-liter twin-turbo inline-6 engine (illustration)",
-  "bytes": 143142
+  "h": 900,
+  "author": "Zytonits",
+  "license": "CC BY-SA 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:BMW_M4_engine_(20394482883).jpg",
+  "title": "BMW S55 3.0-liter twin-turbo inline-6 engine (photo)",
+  "bytes": 165290
  },
  "S58": {
-  "src": "/assets/engines/bmw-s58-twin-turbo-inline-6-engine.webp",
+  "src": "/assets/engines/bmw-s58-straight-six-photo.webp",
   "w": 1200,
-  "h": 850,
-  "ai": true,
-  "title": "BMW S58 3.0-liter twin-turbo inline-6 engine (illustration)",
-  "bytes": 129178
+  "h": 834,
+  "author": "Wikisympathisant",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:2023-04-08_BMW_S58_straight-6-engine_3rd_view.jpg",
+  "title": "BMW S58 3.0-liter twin-turbo inline-6 engine (photo)",
+  "bytes": 101708
  },
  "S63": {
   "src": "/assets/engines/bmw-s63-twin-turbo-v8-engine.webp",

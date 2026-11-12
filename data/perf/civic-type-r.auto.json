@@ -32,7 +32,33 @@
        "11533625"
       ]
      }
-    }
+    },
+    "parts": [
+     [
+      "Fuel/propulsion system",
+      6
+     ],
+     [
+      "Engine",
+      5
+     ],
+     [
+      "Power train",
+      4
+     ],
+     [
+      "Electrical system",
+      4
+     ],
+     [
+      "Unknown or other",
+      2
+     ],
+     [
+      "Fuel system, gasoline",
+      2
+     ]
+    ]
    },
    "fl5": {
     "n": 14,
@@ -49,7 +75,33 @@
       "n": 0,
       "ex": []
      }
-    }
+    },
+    "parts": [
+     [
+      "Steering",
+      7
+     ],
+     [
+      "Electrical system",
+      2
+     ],
+     [
+      "Service brakes",
+      2
+     ],
+     [
+      "Visibility/wiper",
+      2
+     ],
+     [
+      "Fuel system, gasoline",
+      1
+     ],
+     [
+      "Power train",
+      1
+     ]
+    ]
    }
   },
   "parts": [

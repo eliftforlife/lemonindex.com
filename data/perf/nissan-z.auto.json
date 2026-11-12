@@ -28,7 +28,33 @@
        "11770567"
       ]
      }
-    }
+    },
+    "parts": [
+     [
+      "Structure",
+      2
+     ],
+     [
+      "Electrical system",
+      1
+     ],
+     [
+      "Unknown or other",
+      1
+     ],
+     [
+      "Fuel/propulsion system",
+      1
+     ],
+     [
+      "Seat belts",
+      1
+     ],
+     [
+      "Air bags",
+      1
+     ]
+    ]
    }
   },
   "parts": [
@@ -49,11 +75,11 @@
     1
    ],
    [
-    "Air bags",
+    "Seat belts",
     1
    ],
    [
-    "Seat belts",
+    "Air bags",
     1
    ]
   ]
@@ -88,33 +114,33 @@
  "yt": {
   "car-nissan-z": null,
   "nissan-vr30ddtt": {
-   "videos": 200,
+   "videos": 178,
    "praise": [
     [
      "Looks",
-     26
+     28
     ],
     [
      "Power and acceleration",
-     18
+     20
     ],
     [
      "Handling and steering",
-     16
+     18
     ],
     [
      "Everyday comfort",
-     12
+     13
     ]
    ],
    "trouble": [
     [
      "Coolant leaks / water pump / overheating",
-     6
+     7
     ],
     [
      "Oil leaks (gaskets, seals, housings)",
-     5
+     6
     ]
    ],
    "top": [

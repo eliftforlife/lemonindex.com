@@ -16,10 +16,29 @@
       blocks.forEach(function (b) { var row = b.querySelector('.pf-vs'), st = row && row.querySelector('.pf-star');   // phones: the starred trim first in view
         if (row && st && row.scrollWidth > row.clientWidth + 4 && b.classList.contains('on')) row.scrollLeft = st.offsetLeft - row.offsetLeft - 16; });
       if (range) { range.value = i; range.setAttribute('aria-valuetext', stops[i].querySelector('b').textContent); }
+      filt();
       if (tr && tr.scrollWidth > tr.clientWidth + 2) tr.scrollLeft = Math.max(0, stops[i].offsetLeft - tr.offsetLeft - 24);   // phones: the picked generation in view
       if (focus) stops[i].focus();
       try { history.replaceState(null, '', location.pathname + location.search + (location.hash && location.hash.indexOf('#p-') === 0 ? location.hash : '')); } catch (e) {}
     }
+    // 11-12 (UX test: the G80 tab showed 2008 data): the Years / Problems / Recalls / Specs rows of other generations hide (data-pfy = their
+    // model years), each tab's note says which years show, and "Show every year" turns the filter off. One picture for every generation
+    // (the C63): a line under it says which generation it shows when another one is picked.
+    var all = false, pic = root.querySelector('.pf-car[data-pg]'), picl = root.querySelector('.pf-pic');
+    function filt() {
+      if (cur < 0) return;
+      var st = stops[cur], y0 = +st.getAttribute('data-y0'), y1 = +st.getAttribute('data-y1'), code = st.querySelector('b').textContent, yrs = st.querySelector('span').textContent;
+      document.querySelectorAll('[data-pfy]').forEach(function (el) {
+        var on = all || el.getAttribute('data-pfy').split(' ').some(function (y) { y = +y; return y >= y0 && y <= y1; });
+        el.classList.toggle('pf-off', !on);
+      });
+      document.querySelectorAll('.pf-yf').forEach(function (n) {
+        n.querySelector('.pf-yfg').textContent = code; n.querySelector('.pf-yfr').textContent = yrs; n.classList.toggle('pf-yfa', all);
+        var b = n.querySelector('.pf-yall'); b.textContent = all ? 'Only the ' + code + ' years' : 'Show every year'; b.setAttribute('aria-pressed', all ? 'true' : 'false');
+      });
+      if (pic && picl) { var o = +pic.getAttribute('data-pg') !== cur; picl.classList.toggle('on', o); var pn = picl.querySelector('.pf-picn'); if (pn) pn.textContent = o ? 'No ' + code + ' picture yet.' : ''; }
+    }
+    document.querySelectorAll('.pf-yall').forEach(function (b) { b.addEventListener('click', function () { all = !all; filt(); }); });
     stops.forEach(function (b, k) {
       b.addEventListener('click', function () { show(k); });
       b.addEventListener('keydown', function (e) {

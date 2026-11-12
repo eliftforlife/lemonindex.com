@@ -372,9 +372,9 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <title>{E(title)}</title><meta name="description" content="{E(desc)}"><link rel="canonical" href="{url}">
 <meta property="og:type" content="{kind}"><meta property="og:site_name" content="The Lemon Index"><meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(desc)}">
 <meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}{img or "/assets/og.png"}"><meta name="twitter:card" content="summary_large_image">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' '{DB_HASH}' https://static.cloudflareinsights.com https://challenges.cloudflare.com https://www.googletagmanager.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; frame-src https://challenges.cloudflare.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cloudflareinsights.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://vpic.nhtsa.dot.gov https://lemon-survey.elift08.workers.dev https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="google-adsense-account" content="{ADS}"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' '{DB_HASH}' https://static.cloudflareinsights.com https://challenges.cloudflare.com https://www.googletagmanager.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; frame-src https://challenges.cloudflare.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cloudflareinsights.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://vpic.nhtsa.dot.gov https://api.nhtsa.gov https://lemon-survey.elift08.workers.dev https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="google-adsense-account" content="{ADS}"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=1110-1112uxb3"><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
+<link rel="stylesheet" href="/assets/site.css?v=1110-1112uxb3fd"><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
 <body>{'' if path.startswith('/thanks/') else DONBAR}{gh_header(path)}
 <main>{body}{end_block(path, _upd, _shl)}{'' if path == '/vote/' else ask_html(path)}</main>
 <footer class="foot f2"><div class="f2-in"><div class="f2-brand"><a class="f2-logo" href="/"><img src="/assets/icon-64.png" alt="" width="28" height="28">The Lemon Index</a>
@@ -382,7 +382,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <nav class="f2-col" aria-label="Explore"><p class="f2-h">Explore</p><a href="/compare/">Compare cars</a><a href="/best/">Best cars</a><a href="/rankings/">Rankings</a><a href="/engines/">Every engine</a><a href="/electric/">Electric cars</a><a href="/stats/car-complaints/">Statistics</a><a href="/car-loan-rates/">Car loan rates</a></nav>
 <nav class="f2-col" aria-label="Data"><p class="f2-h">Data</p><a href="/method/">How the index works</a><a href="/data/">Free data</a><a href="/images/">Free images</a><a href="/vote/">Vote</a></nav>
 <nav class="f2-col" aria-label="Support"><p class="f2-h">Support</p><button class="supl" type="button">Keep Lemon ad-free</button><a href="/about/">About</a><a href="/press/">Press</a><a href="/contact/">Contact</a><a href="{YT}?sub_confirmation=1" rel="noopener">Subscribe on YouTube</a></nav></div>
-<div class="f2-bot"><span>© {TODAY[:4]} The Lemon Index</span><a href="/terms/">Terms</a><a href="/privacy/">Privacy</a><a href="/refunds/">Refunds</a><span class="f2-dis">Built from public NHTSA complaint data and published U.S. sales figures. Not affiliated with any automaker. Not a repair-cost or safety rating.</span></div></footer><script src="/assets/explorer.js?v=1110" defer></script><script src="/assets/support.js?v=1111d" defer></script><script src="/assets/imginfo.js?v=1" defer></script><script src="/assets/lookup.js?v=1112s" defer></script>{beacon}</body></html>'''
+<div class="f2-bot"><span>© {TODAY[:4]} The Lemon Index</span><a href="/terms/">Terms</a><a href="/privacy/">Privacy</a><a href="/refunds/">Refunds</a><span class="f2-dis">Built from public NHTSA complaint data and published U.S. sales figures. Not affiliated with any automaker. Not a repair-cost or safety rating.</span></div></footer><script src="/assets/explorer.js?v=1110" defer></script><script src="/assets/support.js?v=1111d" defer></script><script src="/assets/imginfo.js?v=1" defer></script><script src="/assets/lookup.js?v=1112sfd" defer></script>{beacon}</body></html>'''
     f = os.path.join(OUT, path.strip('/'), 'index.html') if path.endswith('/') else os.path.join(OUT, path.strip('/'))
     os.makedirs(os.path.dirname(f), exist_ok=True)
     for _try in range(6):   # 11-09: Windows sometimes holds a just-written file for a moment (antivirus/indexer): retry instead of dying mid-build
@@ -691,9 +691,24 @@ def extra(fid, y):
 YTV = _load('data/yt.json')
 BMW_PHASE = 'hooks'; exec(open('bmw_pages.py', encoding='utf-8').read())   # 11-10 BMW specs + engines: SPECS_HOOK / YEAR_SPECS_HOOK
 def _vw(n): return f'{n / 1e6:.1f}M' if n >= 1e6 else f'{round(n / 1e3):,}K' if n >= 1e3 else str(n)
+import repair_costs as RCQ   # 11-12 fix D: "What repairs cost" (owners' repair bills to NHTSA + what to ask the shop)
+_YRX = re.compile(r'(?<!\d)((?:19|20)\d\d)(?:\s*[-–]\s*((?:19|20)?\d\d))?(?!\d)')
+def _vid_gen_ok(title, ys):
+    """11-12 (UX test: a 2015 CR-V page showed 2007-2012 videos): a video whose title names model years counts for this generation only when
+    at least half the years it names are in it; no year in the title = fine"""
+    if not ys: return True
+    named = set()
+    for a, b in _YRX.findall(title or ''):
+        a = int(a); b = (int(b) if len(b) == 4 else a // 100 * 100 + int(b)) if b else a
+        named.update(range(a, b + 1) if a <= b <= a + 15 else [a])
+    named = {n for n in named if 1980 <= n <= 2030}
+    return not named or len(named & set(ys)) * 2 >= len(named)
 def ytfix(key, y=None):
     d = next((e for e in YTV.get(key, []) if e['years'] is None or y in e['years']), None)
-    if not d or not d['topics']: return ''
+    rcq = RCQ.html_block(key, y, (d or {}).get('years'), (d or {}).get('gen') or '') if y and ':' not in key else ''
+    if d and d.get('years'):   # 11-12: only this generation's videos
+        gy = d['years']; d = dict(d, topics=[t for t in d['topics'] if _vid_gen_ok(t['best']['title'], gy)], guides=[v for v in d['guides'] if _vid_gen_ok(v['title'], gy)])
+    if not d or not d['topics']: return rcq
     W = lambda v: f'https://www.youtube.com/watch?v={v["id"]}'
     TH = lambda v, w=160: f'<img src="https://i.ytimg.com/vi/{v["id"]}/mqdefault.jpg" alt="{E(v["title"])}" loading="lazy" width="{w}" height="{w * 9 // 16}">'
     mx = d['topics'][0]['views']
@@ -720,18 +735,39 @@ def ytfix(key, y=None):
                     f'<b>{M(x["median"])}</b>'
                     f'<span class="yc-r" aria-hidden="true"><i style="left:{L(x["lo"])}%;width:{max(2, L(x["hi"]) - L(x["lo"]))}%"></i><em style="left:{L(x["median"])}%"></em></span>'
                     f'<div class="yc-m"><small>most {R(x["lo"])}–{R(x["hi"])} · {x["videos"]} videos</small>{HEAR(x, nm)}</div></li>')
-        tiles = ''.join(tile(k, x) for k, x in cst['items'])
-        costh = ('<div class="ycost">' + (f'<h3>What owners say it costs</h3><ul class="yc-g">{tiles}</ul>' if tiles else '')
+        # 11-12 (UX test: "$80 Other repairs" read like a total, and one-video quotes looked like facts): only repair items 5+ videos name, never
+        # "Other" or ownership costs, each labeled as one repair
+        tiles = ''.join(tile(k.split(' (')[0] + ' (one repair, as owners say it)', x) for k, x in cst['items']
+                        if x['videos'] >= 5 and not re.match(r'(Other|Yearly|Insurance|Monthly|Lift|Exhaust / mods|Riding gear)', k))
+        costh = ('<div class="ycost">' + (f'<h3>What owners say one repair costs on YouTube</h3><ul class="yc-g">{tiles}</ul>' if tiles else '')
                  + (f'<h3 class="yc-ph">Prices people quote</h3><ul class="yc-p">{"".join(stats)}</ul>' if stats else '') + '</div>')
         costcap = '<p class="yc-cap">Costs are the middle (median) of the dollar amounts people say out loud in these videos, so one wild number can&#39;t swing it. They aren&#39;t verified bills or sales; real prices depend on year, miles, condition and where you live. Tap Hear it to jump to the moment.</p>'
     cap = 'Views show how many people looked up each fix, not how often it breaks.' if d['kind'] == 'repair' else 'Views show what people watch most, not how often something goes wrong.'
-    return (f'<section class="yc yfx" id="diy"><h2>{d["head"]}</h2><p class="yf-s">From {d["n"]} YouTube videos · {_vw(d["views"])} views · {E(d["gen"])}</p>'
+    return rcq + (f'<section class="yc yfx" id="diy"><h2>{d["head"]}</h2><p class="yf-s">From {d["n"]} YouTube videos · {_vw(d["views"])} views · {E(d["gen"])}</p>'
             + (costh + '<h3 class="yf-g yf-g1">Most-watched topics</h3>' if costh else '') + f'<ol class="yfl">{first}</ol>' + (f'<details class="yf-more"><summary>Show {len(tp) - 4} more</summary><ol class="yfl">{rest}</ol></details>' if rest else '')
             + (f'<h3 class="yf-g">Before you buy, watch</h3><div class="ygs">{cards}</div>' if cards else '')
             + f'<p class="yc-cap">{cap} Videos belong to their creators; we link to them.{(" " + E(same.strip())) if same else ""}</p>' + costcap + '</section>')
 mi = lambda n: f'{int(n):,} miles'
 REPORT_NOTE = '<p class="note">The full Lemon Index report adds the mileage for every problem area, every recall in plain English and what to check before you buy. <b>Coming soon.</b></p>'
 RPART = lambda s: PART.get((s or 'other').split(':')[0], (s or 'other').split(':')[0].lower()).replace('service brakes, hydraulic', 'brakes')   # 11-11: some NHTSA recalls carry no component
+def rtag(r):
+    """11-12 (UX test, Marcus: diesel fuel-pump and EGR recalls on his 3.6L gas Jeep): which engines or fuel a recall covers, from the
+    "recalling certain ... vehicles equipped with ..." sentence. '' when the recall names no engine or fuel."""
+    s = re.sub(r'\s+', ' ', r.get('summary') or '')
+    sent = next((x for x in re.split(r'(?<=\.)\s+(?=[A-Z])', s) if 'recalling' in x.lower()), s[:300])
+    if not re.search(r'equipped with|with (an? |the )?[0-9.]+ ?(l|liter)|(engines?|hybrid|diesel)\b', sent, re.I): return ''
+    sz = re.search(r'\b(\d\.\d) ?(?:l\b|liter|-liter)', sent, re.I)
+    if re.search(r'gasoline|\bgas\b', sent, re.I) and re.search(r'diesel', sent, re.I): return ''   # gas and diesel both covered
+    if re.search(r'(equipped with|with)[^.]{0,60}(diesel|duramax|power ?stroke|cummins|\btdi\b|bluetec)|diesel engines?\b', sent, re.I): return (sz.group(1) + 'L diesel only') if sz else 'Diesel only'
+    lm = re.search(r'recalling (?:certain )?(.*?)\b(vehicles|cars|trucks|SUVs)\b', sent, re.I)
+    many = bool(lm and re.search(r',| and ', lm.group(1)))   # a list of models: a hybrid in it is a model name, not a limit on this car
+    if re.search(r'equipped with[^.]{0,40}(plug-in|phev)', sent, re.I) or (not many and re.search(r'plug-in hybrid|\bphev\b|\b4xe\b', sent, re.I)): return 'Plug-in hybrid only'
+    if re.search(r'equipped with[^.]{0,40}hybrid', sent, re.I) or (not many and re.search(r'hybrid (vehicles|models|electric)', sent, re.I)): return 'Hybrid only'
+    if sz and re.search(r'equipped with[^.]{0,30}\d\.\d ?(?:l\b|liter|-liter)[^.]{0,40}engine', sent, re.I): return sz.group(1) + 'L engines only'
+    return ''
+def rtag_html(r):
+    t = rtag(r)
+    return f' <span class="rtag">{E(t)}</span>' if t else ''
 def rsum(r):
     """A recall in one plain sentence: skip the "X is recalling certain ... vehicles ..." opener, keep the defect."""
     s = re.sub(r'\s+', ' ', r['summary']).strip()
@@ -774,7 +810,7 @@ def recalls_html(x, f, y):
     mk, md = (x.get('names') or [['', '']])[0][:2]
     link = f'https://www.nhtsa.gov/vehicle/{y}/{mk.replace(" ", "%20")}/{md.replace(" ", "%20")}' if mk else 'https://www.nhtsa.gov/recalls'
     if not rs: return f'<h2>Recalls</h2><p>No safety recalls on record for the {y} {nm}. Still run the VIN at <a href="https://www.nhtsa.gov/recalls" rel="noopener">nhtsa.gov/recalls</a>.</p>'
-    li = ''.join(f'<li><b>{E(RPART(r["part"]))}</b> <small>{E(r["date"][-4:])}</small><br>{E(rsum(r))} <small class="muted">NHTSA {E(r["id"])}</small></li>' for r in rs[:6])
+    li = ''.join(f'<li><b>{E(RPART(r["part"]).capitalize())}</b> <small>· recall issued {E(r["date"][-4:])}</small>{rtag_html(r)}<br>{E(rsum(r))} <small class="muted">NHTSA {E(r["id"])}</small></li>' for r in rs[:6])
     more = f' <a href="{link}" rel="noopener">See all {len(rs)} at nhtsa.gov</a>.' if len(rs) > 6 else f' <a href="{link}" rel="noopener">Details at nhtsa.gov</a>.'
     return f'<h2>Recalls: {len(rs)}</h2><ul class="recalls">{li}</ul><p class="note">Recall work is free at any dealer. Check a specific car&#39;s VIN at <a href="https://www.nhtsa.gov/recalls" rel="noopener">nhtsa.gov/recalls</a>.{more}</p>'
 def specs_html(x, y, name=''):
@@ -1269,7 +1305,7 @@ def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
                                                                          (('Fewer complaints nearby', nb if how == 'near' else None, 'good' if nb and nb['li'] <= 110 else ''),
                                                                           ('Fewest of any year', best, 'good' if best['li'] <= 110 else '')) if w and w['y'] != y and not (lab.startswith('Fewest') and how == 'near' and nb['y'] == best['y'])])
     parts = ''.join(f'<div class="pt"><span>{E(NICE(p))}</span><span class="bt"><i style="width:{k}%"></i></span><b>{k}%</b></div>' for p, k in v['parts'])
-    probs = f'<section class="yc" id="problems"><h2>What owners complain about most. <span class="h2s">From owner complaints to the government.</span></h2><div class="pts">{parts}</div><p class="yc-cap">Share of this year&#39;s owner complaints filed with NHTSA, not the share of cars that break. One complaint can name more than one area.</p>' + (f'<p class="yc-cap"><a href="{CARU(f)}transmission/">Transmission problems in every {nm} year →</a></p>' if _tr_ok(f) else '') + '</section>' if parts else ''
+    probs = f'<section class="yc" id="problems"><h2>What owners complain about most. <span class="h2s">From owner complaints to the government.</span></h2><div class="pts">{parts}</div><p class="yc-cap">Share of this year&#39;s owner complaints filed with NHTSA, not the share of cars that break. One complaint can name more than one area.</p>' + (f'<p class="yc-cap"><a href="{CARU(f)}transmission/">Transmission problems in every {nm} year →</a></p>' if _tr_ok(f) else '') + RCQ.code_links(f['id'], y, label=f'the {SNM(f)} ({y - 2}–{min(y + 2, 2026)})') + '</section>' if parts else ''
     sev_items = [(s.get('crash', 0), 'crashes'), (s.get('injured', 0), 'injuries'), (s.get('fire', 0), 'fires'), (s.get('towed', 0), 'tows')]
     _base = lambda k: round(s['total'] * SEVR[k]) if SEVR.get(k) else None
     sev = (f'<section class="ysev"><h2>How serious. <span class="h2s">Out of all {s["total"]:,} owner complaints filed so far (every year since it was sold, not just the first 3), owners reported:</span></h2><div class="sv">'
@@ -1278,7 +1314,7 @@ def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
            + '</div><p class="yc-cap">&ldquo;Average car&rdquo; = what the same number of complaints would include at the rate across every model year we track. Owners report these themselves; NHTSA doesn&#39;t confirm the cause.</p></section>') if s.get('total') else ''
     if 'recalls' in x:
         rs = sorted(rec, key=lambda r: r['date'][6:10] + r['date'][3:5] + r['date'][:2], reverse=True)
-        card = lambda r: f'<li><b>{E(RPART(r["part"]))}</b> <small>{E(r["date"][-4:])}</small><p>{E(rsum(r))}</p></li>'
+        card = lambda r: f'<li><b>{E(RPART(r["part"]).capitalize())}</b> <small>· recall issued {E(r["date"][-4:])}</small>{rtag_html(r)}<p>{E(rsum(r))}</p></li>'   # 11-12: "Brakes · recall issued 2024", + which engines
         recs = (f'<section class="yc" id="recalls"><h2>Recalls <span class="yc-n">{len(rs)}</span></h2>'
                 + (f'<ul class="rc">{"".join(card(r) for r in rs[:3])}</ul>' + (f'<details><summary>Show all {len(rs)} recalls</summary><ul class="rc">{"".join(card(r) for r in rs[3:])}</ul></details>' if len(rs) > 3 else '')
                    if rs else '<p>No safety recalls on record.</p>')
@@ -1489,7 +1525,7 @@ def trans_body(f):
 {f'<h2>Transmission and power train recalls</h2><ul class="rc">{rl}</ul><p class="note">Recall repairs are free at any dealer. Check a specific car&#39;s VIN at <a href="https://www.nhtsa.gov/recalls" rel="noopener">nhtsa.gov/recalls</a>.</p>' if rl else ''}
 {f'<h2>In owners&#39; words</h2>{quotes}' if quotes else ''}
 <section class="yqa trq"><h2>Quick answers</h2>{qa_fold(''.join(f'<h3>{E(q)}</h3><p>{E(t)}</p>' for q, _, t in qa))}</section>
-<p class="note">Every problem, not just the transmission: <a href="{CARU(f)}">{nm} reliability by year</a>.</p></article>'''
+{RCQ.code_links(f['id'], None, trans_only=True, label=SNM(f))}<p class="note">Every problem, not just the transmission: <a href="{CARU(f)}">{nm} reliability by year</a>.</p></article>'''
     return body, qa
 turls = []
 for f in YEARS:
@@ -1668,6 +1704,17 @@ for c in SCX: _xb.setdefault(_brandof(c['make']), []).append((c['name'], sccard(
 for c in EVX:
     _xb.setdefault(_brandof(c['make']), []).append((c['name'], evcard(c, c['slug'] in YP)))   # Bolt / Model Y: Electric-tab twin of the regular card
 for c in PERFX: _xb.setdefault(perf_info(c)['brand'], []).append((perf_info(c)['name'], pfcard(c)))
+# 11-12 (UX test, Tyler: "the M3 is missing from the BMW row"): the M3's performance page lives on its model page (/cars/bmw-m3/), so it isn't in
+# data/perf_cars.json; its Performance-tab twin goes in the BMW row too (mc-dup: hidden on All cars, where the regular M3 card shows)
+def _m3twin():
+    try:
+        import perf_page as _PP; _d = _PP._load('data/perf/bmw-m3.json'); _g, _v = _PP._star(_d); _zz = _PP._z(_v.get('z60'))[0]
+        lead = ' · '.join(x for x in (f'{_PP._hp(_v)} hp' if _PP._hp(_v) else '', f'0–60 {_zz.replace(" s", "")} s' if _zz else '') if x) or '3.0L twin-turbo inline-6'
+    except Exception: lead = '3.0L twin-turbo inline-6'
+    m = YSL.model_img('bmw-m3')
+    return (f'<a class="mc mc-sc mc-dup" data-t="p" href="/cars/bmw-m3/"><span class="mc-p">{_cimg(m, "BMW M3") if m else ""}</span><b>M3</b>'
+            f'<small class="mc-k">{E(lead)}</small></a>')
+if os.path.exists('data/perf/bmw-m3.json') and not any(c.get('slug') == 'bmw-m3' for c in PERFX): _xb.setdefault('BMW', []).append(('BMW M3', _m3twin()))
 # 11-10 (Elijah): brands with no scored model at all go last, under a small "Coming soon" heading (A-Z within each group)
 _brand = lambda b: (f'<div class="mb"><h3>{E(b)}</h3><div class="mg">' + ''.join(mcard(n, i) for n, i, _ in pick.get(b, [])) + ''.join(h for _, h in sorted(_xb.get(b, [])))
                     + ''.join(ndcard(m) for m in sorted(_nd.get(b, []), key=lambda m: m['name'])) + '</div></div>')
@@ -1695,7 +1742,7 @@ CNOTES = (f'<div class="ctn pfh" data-for="performance" hidden><span class="pfh-
           + (f'<p class="pfh-n"><b>{_npf + _nsx} cars on the way:</b> {_npf} here, {_nsx} supercars and hypercars under <a href="/cars/?type=supercars">Supercars</a>.</p>' if _npf else '') + '</div>'
           f'<p class="ctn" data-for="supercars" hidden>Owner complaints are too rare to score supercars, so their cards lead with the engine. Cards marked Coming soon, hypercars included, are next. <a href="/supercars/">Supercar fuel costs and recalls, ranked</a></p>'
           f'<p class="ctn" data-for="electric" hidden>EV scores cover model years {EV_WIN}, with complaints filed by the end of the year after the model year. Under All cars, an EV with its own page (Bolt, Model Y) shows the main Lemon Index for its own years instead, so its two numbers differ. <a href="/electric/">The most reliable EVs, ranked</a></p>')
-CARS_GRID = f'''<section class="cgrid">{CTABS}{HCHIPS}<h2 data-hide="p">Every model. <span class="h2s" data-hide="s p">Score in the corner: 100 is average, lower is better.</span></h2>{CNOTES}<div class="mbs">{_MW}{lst}</div><p class="ph-cr" data-hide="p">Car images: AI-generated illustrations by The Lemon Index, free under CC BY 4.0 (<a href="/images/">download</a>).</p></section>
+CARS_GRID = f'''<section class="cgrid">{CTABS}{HCHIPS}<h2 data-hide="p">Every model. <span class="h2s" data-hide="s p">Score in the corner: 100 is average, lower is better.</span></h2>{CNOTES}<div class="mbs">{_MW}{lst}</div><p class="ph-cr" data-hide="p">Car images: AI-generated illustrations by The Lemon Index, free under CC BY 4.0 (<a href="/images/">download</a>).</p></section><script src="/assets/soonvote.js?v=1" defer></script>
 <style>.pfh{{max-width:560px}}.pfh h3{{font-size:clamp(28px,6.5vw,36px);letter-spacing:-.03em;margin:10px 0 6px}}.pfh-pill{{display:inline-block;padding:4px 12px;border-radius:999px;background:#ffd400;color:#17161a;font-size:12.5px;font-weight:700;letter-spacing:.02em}}.pfh-s{{margin:0 0 6px;font-size:16px}}.pfh-n{{margin:0;font-size:14px;color:#6e6e73}}.cgrid[data-tab="performance"] .mc.mc-dup:not([hidden]){{display:flex}}.cgrid .ph-cr{{margin-top:28px}}</style>'''   # 11-11: shared by /cars/ and the home page
 page('/cars/', 'Look Up Your Car: Problems by Model and Year | The Lemon Index', f'Pick your car and model year to see its owner complaints, its top problems and how it compares with every other year. {len(YEARS)} models, 2000-2025, plus {len(SCX)} supercars and {len(EVX)} electric cars.', f'''
 <div class="pg"><div class="ph ph-f">{finder('<span class="ph-e">Look up</span>Look up your car.', 'Every model year, 2000 to 2025. Free.')}</div>
@@ -1852,7 +1899,7 @@ page('/vin/', 'Free VIN Decoder and Recall Check: Look Up Any VIN | The Lemon In
 <form id="vinf" class="vinf" autocomplete="off"><input name="vin" maxlength="20" placeholder="e.g. 1FTEW1EG8JKF05094" aria-label="VIN" spellcheck="false"><button class="btn" type="submit">Check</button></form>
 <div id="vinout" class="vinout"></div><p class="fnote">It&#39;s on the dashboard by the windshield, the door frame, or your registration. We don&#39;t store it.</p>
 <div class="ph-v">{pimg(mphoto('toyota-camry', 2019), 'Toyota Camry')}</div>{pcredit(who(mphoto('toyota-camry', 2019)))}
-<script id="pick" type="application/json">{json.dumps(PICK, ensure_ascii=False).replace("</", "<\\/")}</script><script id="valias" type="application/json">{json.dumps(VALIAS, separators=(",", ":"))}</script><script src="/assets/vin.js?v=1106a" defer></script></section></div>''')
+<script id="pick" type="application/json">{json.dumps(PICK, ensure_ascii=False).replace("</", "<\\/")}</script><script id="valias" type="application/json">{json.dumps(VALIAS, separators=(",", ":"))}</script><script id="vimg" type="application/json">{json.dumps(sorted(f[:-5] for f in os.listdir("assets/ai-models") if f.endswith(".webp")), separators=(",", ":"))}</script><script src="/assets/vin.js?v=1112d" defer></script></section></div>''')
 shutil.copytree('assets', f'{OUT}/assets', dirs_exist_ok=True); shutil.copy('data/survey.json', f'{OUT}/assets/survey-q.json'); shutil.copy('data/votes.json', f'{OUT}/assets/votes.json')
 print('built', len(urls), 'pages into', OUT)
 print('tab layout failures:', len(TAB_FAIL), TAB_FAIL[:5], '| cache hits', sum(1 for k in _TAB_NEW if k in _TAB_OLD), 'of', len(_TAB_NEW))

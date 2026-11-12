@@ -45,7 +45,33 @@
        "11187281"
       ]
      }
-    }
+    },
+    "parts": [
+     [
+      "Engine",
+      56
+     ],
+     [
+      "Unknown or other",
+      11
+     ],
+     [
+      "Electrical system",
+      5
+     ],
+     [
+      "Fuel/propulsion system",
+      5
+     ],
+     [
+      "Power train",
+      5
+     ],
+     [
+      "Visibility/wiper",
+      4
+     ]
+    ]
    },
    "zd8": {
     "n": 14,
@@ -64,7 +90,33 @@
        "11477882"
       ]
      }
-    }
+    },
+    "parts": [
+     [
+      "Engine",
+      9
+     ],
+     [
+      "Exterior lighting",
+      3
+     ],
+     [
+      "Fuel/propulsion system",
+      2
+     ],
+     [
+      "Wheels",
+      1
+     ],
+     [
+      "Service brakes",
+      1
+     ],
+     [
+      "Unknown or other",
+      1
+     ]
+    ]
    }
   },
   "parts": [
@@ -120,8 +172,112 @@
   "2023": []
  },
  "yt": {
-  "car-subaru-brz": null,
-  "subaru-fa": null
+  "car-subaru-brz": {
+   "videos": 191,
+   "praise": [
+    [
+     "Handling and steering",
+     28
+    ],
+    [
+     "Everyday comfort",
+     20
+    ],
+    [
+     "Power and acceleration",
+     19
+    ],
+    [
+     "Manual gearbox",
+     16
+    ]
+   ],
+   "trouble": [
+    [
+     "Oil pressure / starvation",
+     10
+    ],
+    [
+     "Oil leaks (gaskets, seals, housings)",
+     5
+    ]
+   ],
+   "top": [
+    {
+     "id": "lSmx-vqK1TM",
+     "title": "All the Differences Between the BRZ and FR-S",
+     "views": 2041256,
+     "ch": "Matt Maran Motoring"
+    },
+    {
+     "id": "lYV3TwIkqC8",
+     "title": "The New 2022 Subaru BRZ Is Way Better Than the Original",
+     "views": 1749558,
+     "ch": "Doug DeMuro"
+    },
+    {
+     "id": "KGBXNXdjcLo",
+     "title": "The Subaru BRZ tS Isn't Quite the BRZ We Want",
+     "views": 1666875,
+     "ch": "Doug DeMuro"
+    }
+   ]
+  },
+  "subaru-fa": {
+   "videos": 188,
+   "praise": [
+    [
+     "Handling and steering",
+     24
+    ],
+    [
+     "Everyday comfort",
+     17
+    ],
+    [
+     "Power and acceleration",
+     15
+    ],
+    [
+     "Looks",
+     13
+    ]
+   ],
+   "trouble": [
+    [
+     "Oil pressure / starvation",
+     18
+    ],
+    [
+     "Oil leaks (gaskets, seals, housings)",
+     7
+    ],
+    [
+     "Valve springs",
+     7
+    ]
+   ],
+   "top": [
+    {
+     "id": "romf-G6CZ7g",
+     "title": "The Toyota FT-86, GT-86, Scion FRS - /CHRIS HARRIS ON CARS",
+     "views": 2355200,
+     "ch": "The Drive"
+    },
+    {
+     "id": "QaR843im04A",
+     "title": "2022 Toyota GR86 Full Review featuring Mk8 VW GTI and ND2 Miata — Jason Cammisa on the Icons Ep. 04",
+     "views": 2231186,
+     "ch": "Hagerty"
+    },
+    {
+     "id": "5Yu6Gjib0Rk",
+     "title": "AE86 vs GR86: Which one is worth it?",
+     "views": 2148352,
+     "ch": "Donut"
+    }
+   ]
+  }
  },
  "scores": {}
 }

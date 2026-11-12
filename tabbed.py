@@ -250,6 +250,9 @@ def _ovfilter(html_, panels):
     out = re.sub(r'<a class="ovc[^"]*" href="#p-([a-z]+)">.*?</a>', lambda m: m.group(0) if m.group(1) in have else '', html_, flags=re.S)
     n = len(re.findall(r'<a class="ovc', out))
     return out.replace('<div class="ovg">', '<div class="ovg ovg4">') if n == 4 else out.replace('<div class="ovg ovg4">', '<div class="ovg">') if n in (3, 5) else out
+def _replab(h):
+    """11-12 (UX test: an empty "costs" label): the repairs tab says "& costs" only when it shows a real cost number"""
+    return 'Repairs & costs' if ('class="rcq"' in h or 'class="yc-g"' in h) else 'Repairs'
 def _ovcard(tid, label, value, line='', vis='', go=None):
     na = not value
     return (f'<a class="ovc{" ovc-na" if na else ""}" href="#p-{tid}"><span class="ovc-h">{_ovsvg(tid)}{E(label)}</span>'
@@ -290,11 +293,13 @@ def overview_cards_year(over, probs, fix, rec, yrs, qa):
         nnotes = _txt(S_.select_one('#fixes .yc-cap b')); hm = re.match(r'Problems (.+?) told dealers', _txt(S_.select_one('#fixes h2')))
         _mk2 = hm.group(1) if hm else ''
     mk = next((k.replace('Repair notes from ', '') for k in card if k.startswith('Repair notes')), '') or _mk2
-    if costs: c2 = _ovcard('repairs', 'Repairs & costs', E(costs[0][1]), f'{E(costs[0][0])}: typical owner quote', (f'<span class="ovc-s2">{nnotes} repair notes{" from " + E(mk) if mk else ""}</span>' if nnotes else ''), go='repairs')
-    elif nnotes: c2 = _ovcard('repairs', 'Repairs & costs', E(nnotes), f'repair notes{" " + E(mk) if mk else ""} sent dealers', go='repairs')
+    rq = [(_txt(li.select_one('.rcq-t span')), _txt(li.find('b')), _txt(li.select_one('.rcq-m small'))) for li in S_.select('#costs .rcq li') if li.find('b')]
+    if rq: c2 = _ovcard('repairs', 'Repairs & costs', E(rq[0][1]), f'{E(rq[0][0])}: one repair bill · {E(rq[0][2])}', (f'<span class="ovc-s2">{nnotes} repair notes{" from " + E(mk) if mk else ""}</span>' if nnotes else ''), go='repairs')
+    elif costs: c2 = _ovcard('repairs', 'Repairs & costs', E(costs[0][1]), f'{E(costs[0][0])}: one repair, as owners say it', (f'<span class="ovc-s2">{nnotes} repair notes{" from " + E(mk) if mk else ""}</span>' if nnotes else ''), go='repairs')
+    elif nnotes: c2 = _ovcard('repairs', 'Repairs', E(nnotes), f'repair notes{" " + E(mk) if mk else ""} sent dealers', go='repairs')
     else:
         tops = [_txt(li.find(class_='yf-t') or li)[:60] for li in S_.select('#diy .yfl li')][:1]
-        c2 = _ovcard('repairs', 'Repairs & costs', E(tops[0]) if tops else '', 'the fix owners look up most' if tops else '', go='repairs')
+        c2 = _ovcard('repairs', 'Repairs', E(tops[0]) if tops else '', 'the fix owners look up most' if tops else '', go='repairs')
     # 3 recalls & safety
     n = S_.select_one('#recalls .yc-n'); nr = _txt(n) if n else (_txt(card['Recalls'][0]) if 'Recalls' in card else '')
     stars = card.get('Crash test'); st = (str(stars[0].find(class_='stars')) if stars and stars[0] is not None and stars[0].find(class_='stars') else '')
@@ -366,7 +371,7 @@ def transform_year(body, eng_html, short):
     over_html = overview_cards_year(over, probs, fix, rec, yrs, qa)
     _pl = [('problems', 0, J(probs)), ('repairs', 0, J(fix)), ('recalls', 0, J(rec)), ('years', 0, J(yrs)), ('questions', 0, J(qa))]
     over_html = _ovfilter(over_html, _pl) + (f'<div class="ovk">{J(keep)}</div>' if keep else '')
-    tabs = _tabs([('overview', 'Overview', over_html), ('problems', 'Problems', J(probs)), ('repairs', 'Repairs & costs', J(fix)),
+    tabs = _tabs([('overview', 'Overview', over_html), ('problems', 'Problems', J(probs)), ('repairs', _replab(J(fix)), J(fix)),
                   ('recalls', 'Recalls & safety', J(rec)), ('years', 'Every year', J(yrs)), ('questions', 'Questions', J(qa))], 'Report sections')
     cls = ' '.join(root.get('class') or [])
     return f'{ASSET}<article class="{cls} tbl">{hero}{tabs}{J(tail)}</article>'
@@ -395,15 +400,18 @@ def _adv_sort(items, modes, short, order=None):
                 got[tid].append(c); break
         else: over.append(c)
     J = lambda xs: ''.join(map(str, xs))
-    panels = [('overview', 'Overview', J(over))] + [(tid, lab, J(got[tid])) for tid, lab, _, _ in _ADV]
+    panels = [('overview', 'Overview', J(over))] + [(tid, _replab(J(got[tid])) if tid == 'repairs' else lab, J(got[tid])) for tid, lab, _, _ in _ADV]
     if order: panels = sorted(panels, key=lambda p: order.index(p[0]) if p[0] in order else len(order))   # 11-10: Advanced pages open on the meatiest tab
     elif not J(over).strip() and got['years'] and got['problems']:   # 11-10: no-sales model pages get the preview-card Overview too
         S_ = BeautifulSoup(''.join(map(str, items)), 'html.parser')
         pts = [(_txt(r.find('span')), float(re.sub(r'[^0-9.]', '', _txt(r.find('b'))) or 0)) for r in S_.select('#problems .pt') if r.find('b')]
         if not pts:   # the no-sales template lists problem areas as a 2-column table
             pts = [(_txt(r.find_all('td')[0]), float(re.sub(r'[^0-9.]', '', _txt(r.find_all('td')[1])) or 0)) for r in S_.select('#problems tbody tr') if len(r.find_all('td')) >= 2]
+        # 11-12 (UX test, Tyler: Harley Touring said "No data yet" over 1,451 complaints): the motorcycle pages draw both as bars, not tables
+        _SP = BeautifulSoup(J(got['problems']), 'html.parser'); _SY = BeautifulSoup(J(got['years']), 'html.parser')
+        if not pts: pts = [(_txt(r.find('span')), float(re.sub(r'[^0-9.]', '', _txt(r.find('b'))) or 0)) for r in _SP.select('.pt') if r.find('b') and r.find('span')]
         nr = _txt(S_.select_one('#recalls .yc-n')) if S_.select_one('#recalls .yc-n') else ''
-        yrows = [[_txt(td) for td in tr.find_all('td')] for tr in S_.select('#years tbody tr')]
+        yrows = [[_txt(td) for td in tr.find_all('td')] for tr in S_.select('#years tbody tr')] or [[_txt(r.find('span')), _txt(r.find('b'))] for r in _SY.select('.vyr .pt') if r.find('b')]
         worst = max(yrows, key=lambda r: float(re.sub(r'[^0-9.]', '', r[1]) or 0)) if yrows and len(yrows[0]) > 1 else None
         nv = len(S_.select('#specs .chips .chip')); nq = len(S_.select('.yqa h3, .yqa summary'))
         cards = [_ovcard('years', 'Years', f'{len(yrows)} model years' if yrows else '', (f'Most complaints: {E(worst[0])}' if worst else ''), go='every year'),

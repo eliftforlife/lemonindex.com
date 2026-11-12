@@ -42,13 +42,15 @@ def _transcript(st, vid):
     except Exception: return ''
 
 EXC = r'hot ?wheels|diecast|die-cast|lego|model kit|forza|\bgta\b|beamng|\brc (car|truck)\b|matchbox|\btoys?\b|roblox|minecraft|gran turismo|assetto|need for speed|\bnfs\b'
-def yt_study(st, extra=None):
-    """one study folder -> videos used, praise / trouble topic shares (%), the 3 most-viewed videos. None if not pulled yet."""
+def yt_study(st, extra=None, cap=None):
+    """one study folder -> videos used, praise / trouble topic shares (%), the 3 most-viewed videos. None if not pulled yet.
+    11-12 (UX test: the M3's most-watched "owner" videos were 720 hp tuned autobahn pulls): tuner, dyno and top-speed-run videos are skipped
+    (yt_score.tuned: tuner words, or a power figure over the car's stock maximum `cap` hp)."""
     p = os.path.join(YT, st, 'top.json')
     if not os.path.exists(os.path.join(YT, st, 'videos.json')) or not os.path.exists(p): return None
     g = _words(); PR, TR, NP = g['PRAISE'], g['TROUBLE'], g['NOTPROB']
     trouble = {k: v for k, v in g['CAR'].items() if k not in g['NOT_PROBLEMS']}; trouble.update(extra or {})
-    vids = [v for v in json.load(open(p, encoding='utf-8')) if not re.search(EXC, v['title'], re.I)]
+    vids = [v for v in json.load(open(p, encoding='utf-8')) if not re.search(EXC, v['title'], re.I) and not g['tuned'](v['title'], cap)]
     pc, tc, n = collections.Counter(), collections.Counter(), 0
     for v in vids:
         blob = v['title'] + ' . ' + _transcript(st, v['id']); n += 1
@@ -72,8 +74,13 @@ def studies(D):
     ids = [g.get(k) for g in D['gens'] for k in ('yt_study', 'comp_study')] + [D.get('yt_study')] + [e.get('study') for e in D['engines'].values()]
     return list(dict.fromkeys(i for i in ids if i))
 
+def hp_cap(D):
+    """the car's stock maximum hp (every version on its page), for the tuned-video filter"""
+    hp = [v['hp']['v'] for g in D['gens'] for v in g['variants'] if isinstance((v.get('hp') or {}).get('v'), (int, float))]
+    return max(hp) if hp else None
+
 def yt_all(D):
-    return {st: yt_study(st, D.get('topics_extra')) for st in studies(D)}
+    return {st: yt_study(st, D.get('topics_extra'), hp_cap(D)) for st in studies(D)}
 
 def nhtsa(D):
     """complaints per model year, and per generation how many complaints mention each engine issue (with 2 example complaint ids)"""
@@ -95,7 +102,10 @@ def nhtsa(D):
             if not i.get('rx'): continue
             hit = [o for o, y, d in rs if re.search(i['rx'], d, re.I)]
             iss[i['t']] = dict(n=len(hit), ex=hit[:2])
-        gens[gd['id']] = dict(n=len(rs), issues=iss)
+        gp = collections.Counter()   # 11-12 (UX test: the G80 tab showed 2008 problems): what each generation's complaints are about
+        for o, y, d, cp in allr:
+            if gd['y0'] <= y <= gd['y1']: gp.update({x.split(':')[0].strip().capitalize() for x in (cp or '').split('|') if x.strip()})
+        gens[gd['id']] = dict(n=len(rs), issues=iss, parts=[[k, v] for k, v in gp.most_common(6)])
     return dict(by_year={str(y): by_year[y] for y in sorted(by_year)}, gens=gens, parts=[[k, v] for k, v in parts.most_common(6)])
 
 def recalls(D):
