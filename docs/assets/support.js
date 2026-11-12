@@ -11,7 +11,7 @@
   const ready = Object.values(LINKS).every(Boolean);
   const isReport = /^\/(cars|electric|compare)\//.test(location.pathname) && location.pathname.split('/').filter(Boolean).length >= 2;
   const qs = new URLSearchParams(location.search);
-  if (!(ready || qs.has('support-preview'))) { document.querySelectorAll('.supl').forEach(b => b.hidden = true); return; }
+  if (!(ready || qs.has('support-preview'))) { document.querySelectorAll('.supl').forEach(b => b.hidden = true); const _db = document.querySelector('.donbar'); if (_db) _db.remove(); return; }
   const get = k => { try { return localStorage.getItem(k); } catch { return null; } }, set = (k, v) => { try { localStorage.setItem(k, v); } catch {} };
   // 11-07: donors land on /thanks/ (Stripe redirect): count them as paid so nothing asks them again for 60 days
   if (location.pathname.startsWith('/thanks/')) { set(PAID, String(Date.now())); document.querySelectorAll('.supl').forEach(b => b.hidden = true); return; }
@@ -107,18 +107,15 @@
   const state = () => { let r; try { r = JSON.parse(get(RKEY) || '{}'); } catch { r = {}; } if (r.day !== day) r = { day, ms: 0, n: 0, snooze: r.snooze }; return r; };
   const save = r => set(RKEY, JSON.stringify(r));
 
-  // ---- 11-11 (Elijah: "at the very bottom a little black bar that says donate... stays across the page no matter what page you're on unless you
-  // close it. Tiny."): phones only (CSS), every page except /thanks/ (returned above) and donors (paid). x hides it for 7 days.
-  const DKEY = 'li-donbar-x', DBAR_DAYS = 7;
-  if (!paid() && Date.now() - (+get(DKEY) || 0) >= DBAR_DAYS * 864e5) {
-    const db = document.createElement('div');
-    db.className = 'donbar'; db.setAttribute('role', 'region'); db.setAttribute('aria-label', 'Support the Lemon Index');
-    db.innerHTML = '<button type="button" class="donbar-go">Keep Lemon free &amp; ad-free · <b>Donate&nbsp;›</b></button>'
-      + '<button type="button" class="donbar-x" aria-label="Close the donate bar">×</button>';
-    document.body.appendChild(db); document.documentElement.classList.add('has-donbar');
-    const ga = name => { try { if (window.gtag) gtag('event', name, { page_path: location.pathname }); } catch {} };
-    db.querySelector('.donbar-go').addEventListener('click', () => { ga('donate_bar_click'); show(); });
-    db.querySelector('.donbar-x').addEventListener('click', () => { ga('donate_bar_close'); set(DKEY, String(Date.now())); db.remove(); document.documentElement.classList.remove('has-donbar'); });
+  // ---- 11-11 (Elijah): the phone donate bar at the very top (it's in the page; the head script already hid it after x / a donation)
+  const DKEY = 'li-donbar-x', DBAR_DAYS = 7, db = document.querySelector('.donbar');
+  if (db) {
+    if (paid() || Date.now() - (+get(DKEY) || 0) < DBAR_DAYS * 864e5) db.remove();
+    else {
+      const ga = name => { try { if (window.gtag) gtag('event', name, { page_path: location.pathname }); } catch {} };
+      db.querySelector('.donbar-go').addEventListener('click', () => { ga('donate_bar_click'); show(); });
+      db.querySelector('.donbar-x').addEventListener('click', () => { ga('donate_bar_close'); set(DKEY, String(Date.now())); db.remove(); });
+    }
   }
   if (qs.has('support-preview')) return show();
   if (qs.has('nudge-preview')) return nudge();
