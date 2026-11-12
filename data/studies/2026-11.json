@@ -1,0 +1,595 @@
+{
+ "ym": "2026-11",
+ "month": "November",
+ "year": 2026,
+ "final": false,
+ "through": "2026-11-09",
+ "through_txt": "November 9, 2026",
+ "days": 9,
+ "days_in_month": 30,
+ "made": "2026-11-12 13:14",
+ "title": "The Cars Owners Complained About Most in November 2026 (So Far)",
+ "label": "November 1-9, 2026: month to date",
+ "n": 1837,
+ "per_day": 204,
+ "prev": {
+  "month": "October",
+  "n": 6568,
+  "per_day": 212,
+  "same_days_n": 2029
+ },
+ "flags": {
+  "crash": 95,
+  "fire": 31,
+  "inj": 58,
+  "deaths": 1
+ },
+ "models_n": 313,
+ "top": [
+  {
+   "name": "Ford F-Series",
+   "n": 67,
+   "prev_same": 89,
+   "top_part": "transmission & drivetrain",
+   "top_part_n": 40,
+   "top_year": 2021,
+   "top_year_n": 17,
+   "crash": 2,
+   "fire": 0,
+   "inj": 0,
+   "url": "/cars/ford-f-series/",
+   "year_url": "/cars/ford-f-series/2021/"
+  },
+  {
+   "name": "Ram pickup",
+   "n": 66,
+   "prev_same": 68,
+   "top_part": "electrical",
+   "top_part_n": 24,
+   "top_year": 2025,
+   "top_year_n": 11,
+   "crash": 4,
+   "fire": 4,
+   "inj": 3,
+   "url": "/cars/ram-pickup/",
+   "year_url": "/cars/ram-pickup/2025/"
+  },
+  {
+   "name": "Ford Escape",
+   "n": 49,
+   "prev_same": 65,
+   "top_part": "engine",
+   "top_part_n": 19,
+   "top_year": 2016,
+   "top_year_n": 12,
+   "crash": 0,
+   "fire": 0,
+   "inj": 0,
+   "url": "/cars/ford-escape/",
+   "year_url": "/cars/ford-escape/2016/"
+  },
+  {
+   "name": "Honda CR-V",
+   "n": 48,
+   "prev_same": 40,
+   "top_part": "engine",
+   "top_part_n": 10,
+   "top_year": 2026,
+   "top_year_n": 8,
+   "crash": 1,
+   "fire": 0,
+   "inj": 0,
+   "url": "/cars/honda-cr-v/",
+   "year_url": "/cars/honda-cr-v/"
+  },
+  {
+   "name": "Honda Odyssey",
+   "n": 42,
+   "prev_same": 56,
+   "top_part": "electrical",
+   "top_part_n": 18,
+   "top_year": 2025,
+   "top_year_n": 13,
+   "crash": 1,
+   "fire": 0,
+   "inj": 0,
+   "url": "/cars/honda-odyssey/",
+   "year_url": "/cars/honda-odyssey/2025/"
+  },
+  {
+   "name": "Tesla Model Y",
+   "n": 40,
+   "prev_same": 35,
+   "top_part": "electrical",
+   "top_part_n": 8,
+   "top_year": 2026,
+   "top_year_n": 14,
+   "crash": 8,
+   "fire": 0,
+   "inj": 1,
+   "url": "/cars/tesla-model-y/",
+   "year_url": "/cars/tesla-model-y/"
+  },
+  {
+   "name": "Chevrolet Silverado",
+   "n": 38,
+   "prev_same": 58,
+   "top_part": "engine",
+   "top_part_n": 20,
+   "top_year": 2023,
+   "top_year_n": 6,
+   "crash": 1,
+   "fire": 1,
+   "inj": 2,
+   "url": "/cars/chevrolet-silverado/",
+   "year_url": "/cars/chevrolet-silverado/2023/"
+  },
+  {
+   "name": "GMC Sierra",
+   "n": 36,
+   "prev_same": 50,
+   "top_part": "engine",
+   "top_part_n": 13,
+   "top_year": 2022,
+   "top_year_n": 6,
+   "crash": 0,
+   "fire": 1,
+   "inj": 0,
+   "url": "/cars/gmc-sierra/",
+   "year_url": "/cars/gmc-sierra/2022/"
+  },
+  {
+   "name": "Hyundai Santa Fe",
+   "n": 35,
+   "prev_same": 24,
+   "top_part": "engine",
+   "top_part_n": 11,
+   "top_year": 2024,
+   "top_year_n": 9,
+   "crash": 2,
+   "fire": 0,
+   "inj": 3,
+   "url": "/cars/hyundai-santa-fe/",
+   "year_url": "/cars/hyundai-santa-fe/2024/"
+  },
+  {
+   "name": "Nissan Rogue",
+   "n": 34,
+   "prev_same": 35,
+   "top_part": "engine",
+   "top_part_n": 14,
+   "top_year": 2024,
+   "top_year_n": 10,
+   "crash": 1,
+   "fire": 0,
+   "inj": 0,
+   "url": "/cars/nissan-rogue/",
+   "year_url": "/cars/nissan-rogue/2024/"
+  },
+  {
+   "name": "Jeep Grand Cherokee",
+   "n": 33,
+   "prev_same": 30,
+   "top_part": "engine",
+   "top_part_n": 10,
+   "top_year": 2014,
+   "top_year_n": 7,
+   "crash": 2,
+   "fire": 2,
+   "inj": 1,
+   "url": "/cars/jeep-grand-cherokee/",
+   "year_url": "/cars/jeep-grand-cherokee/2014/"
+  },
+  {
+   "name": "Honda Pilot",
+   "n": 31,
+   "prev_same": 29,
+   "top_part": "engine",
+   "top_part_n": 8,
+   "top_year": 2016,
+   "top_year_n": 6,
+   "crash": 2,
+   "fire": 0,
+   "inj": 1,
+   "url": "/cars/honda-pilot/",
+   "year_url": "/cars/honda-pilot/2016/"
+  },
+  {
+   "name": "Ford Explorer",
+   "n": 30,
+   "prev_same": 45,
+   "top_part": "body structure",
+   "top_part_n": 6,
+   "top_year": 2022,
+   "top_year_n": 5,
+   "crash": 2,
+   "fire": 0,
+   "inj": 3,
+   "url": "/cars/ford-explorer/",
+   "year_url": "/cars/ford-explorer/2022/"
+  },
+  {
+   "name": "Ford Edge",
+   "n": 26,
+   "prev_same": 32,
+   "top_part": "engine",
+   "top_part_n": 19,
+   "top_year": 2017,
+   "top_year_n": 7,
+   "crash": 0,
+   "fire": 0,
+   "inj": 0,
+   "url": "/cars/ford-edge/",
+   "year_url": "/cars/ford-edge/2017/"
+  },
+  {
+   "name": "Jeep Cherokee",
+   "n": 25,
+   "prev_same": 44,
+   "top_part": "transmission & drivetrain",
+   "top_part_n": 20,
+   "top_year": 2019,
+   "top_year_n": 7,
+   "crash": 0,
+   "fire": 0,
+   "inj": 0,
+   "url": "/cars/jeep-cherokee/",
+   "year_url": "/cars/jeep-cherokee/2019/"
+  },
+  {
+   "name": "Hyundai Tucson",
+   "n": 24,
+   "prev_same": 22,
+   "top_part": "engine",
+   "top_part_n": 6,
+   "top_year": 2025,
+   "top_year_n": 6,
+   "crash": 4,
+   "fire": 0,
+   "inj": 3,
+   "url": "/cars/hyundai-tucson/",
+   "year_url": "/cars/hyundai-tucson/2025/"
+  },
+  {
+   "name": "Jeep Wrangler",
+   "n": 23,
+   "prev_same": 32,
+   "top_part": "electrical",
+   "top_part_n": 12,
+   "top_year": 2024,
+   "top_year_n": 6,
+   "crash": 0,
+   "fire": 2,
+   "inj": 0,
+   "url": "/cars/jeep-wrangler/",
+   "year_url": "/cars/jeep-wrangler/2024/"
+  },
+  {
+   "name": "Chrysler Pacifica",
+   "n": 22,
+   "prev_same": 15,
+   "top_part": "engine",
+   "top_part_n": 9,
+   "top_year": 2018,
+   "top_year_n": 8,
+   "crash": 1,
+   "fire": 0,
+   "inj": 0,
+   "url": "/cars/chrysler-pacifica/",
+   "year_url": "/cars/chrysler-pacifica/2018/"
+  },
+  {
+   "name": "Kia Soul",
+   "n": 22,
+   "prev_same": 18,
+   "top_part": "engine",
+   "top_part_n": 14,
+   "top_year": 2016,
+   "top_year_n": 5,
+   "crash": 2,
+   "fire": 0,
+   "inj": 1,
+   "url": "/cars/kia-soul/",
+   "year_url": "/cars/kia-soul/2016/"
+  },
+  {
+   "name": "Honda Accord",
+   "n": 20,
+   "prev_same": 37,
+   "top_part": "engine",
+   "top_part_n": 5,
+   "top_year": 2022,
+   "top_year_n": 4,
+   "crash": 2,
+   "fire": 1,
+   "inj": 0,
+   "url": "/cars/honda-accord/",
+   "year_url": "/cars/honda-accord/2022/"
+  },
+  {
+   "name": "Toyota Tundra",
+   "n": 19,
+   "prev_same": 13,
+   "top_part": "engine",
+   "top_part_n": 10,
+   "top_year": 2024,
+   "top_year_n": 7,
+   "crash": 2,
+   "fire": 0,
+   "inj": 0,
+   "url": "/cars/toyota-tundra/",
+   "year_url": "/cars/toyota-tundra/2024/"
+  },
+  {
+   "name": "Ford Fusion",
+   "n": 18,
+   "prev_same": 27,
+   "top_part": "backup camera",
+   "top_part_n": 5,
+   "top_year": 2016,
+   "top_year_n": 7,
+   "crash": 0,
+   "fire": 0,
+   "inj": 0,
+   "url": "/cars/ford-fusion/",
+   "year_url": "/cars/ford-fusion/2016/"
+  },
+  {
+   "name": "Toyota Camry",
+   "n": 18,
+   "prev_same": 22,
+   "top_part": "transmission & drivetrain",
+   "top_part_n": 5,
+   "top_year": 2019,
+   "top_year_n": 5,
+   "crash": 3,
+   "fire": 0,
+   "inj": 1,
+   "url": "/cars/toyota-camry/",
+   "year_url": "/cars/toyota-camry/2019/"
+  },
+  {
+   "name": "Toyota RAV4",
+   "n": 18,
+   "prev_same": 11,
+   "top_part": "electrical",
+   "top_part_n": 3,
+   "top_year": 2026,
+   "top_year_n": 4,
+   "crash": 2,
+   "fire": 0,
+   "inj": 1,
+   "url": "/cars/toyota-rav4/",
+   "year_url": "/cars/toyota-rav4/"
+  },
+  {
+   "name": "Chevrolet Equinox",
+   "n": 17,
+   "prev_same": 22,
+   "top_part": "electrical",
+   "top_part_n": 6,
+   "top_year": 2026,
+   "top_year_n": 6,
+   "crash": 1,
+   "fire": 0,
+   "inj": 0,
+   "url": "/cars/chevrolet-equinox/",
+   "year_url": "/cars/chevrolet-equinox/"
+  }
+ ],
+ "risers": [
+  {
+   "name": "GMC Yukon XL",
+   "n": 15,
+   "prev_same": 7,
+   "top_part": "engine",
+   "url": "/cars/gmc-yukon-xl/"
+  }
+ ],
+ "rate": [
+  {
+   "name": "2025 Honda Odyssey",
+   "n": 13,
+   "sold": 88462,
+   "per100k": 14.7,
+   "top_part": "engine",
+   "url": "/cars/honda-odyssey/2025/"
+  },
+  {
+   "name": "2024 Hyundai Santa Fe",
+   "n": 9,
+   "sold": 119010,
+   "per100k": 7.6,
+   "top_part": "automatic emergency braking",
+   "url": "/cars/hyundai-santa-fe/2024/"
+  },
+  {
+   "name": "2024 Toyota Tundra",
+   "n": 7,
+   "sold": 159528,
+   "per100k": 4.4,
+   "top_part": "engine",
+   "url": "/cars/toyota-tundra/2024/"
+  },
+  {
+   "name": "2024 Nissan Rogue",
+   "n": 10,
+   "sold": 245724,
+   "per100k": 4.1,
+   "top_part": "visibility",
+   "url": "/cars/nissan-rogue/2024/"
+  },
+  {
+   "name": "2024 Jeep Wrangler",
+   "n": 6,
+   "sold": 151163,
+   "per100k": 4.0,
+   "top_part": "electrical",
+   "url": "/cars/jeep-wrangler/2024/"
+  },
+  {
+   "name": "2023 Nissan Rogue",
+   "n": 9,
+   "sold": 271458,
+   "per100k": 3.3,
+   "top_part": "engine",
+   "url": "/cars/nissan-rogue/2023/"
+  },
+  {
+   "name": "2025 Ram pickup",
+   "n": 11,
+   "sold": 374059,
+   "per100k": 2.9,
+   "top_part": "electrical",
+   "url": "/cars/ram-pickup/2025/"
+  },
+  {
+   "name": "2024 Hyundai Tucson",
+   "n": 6,
+   "sold": 206126,
+   "per100k": 2.9,
+   "top_part": "brakes",
+   "url": "/cars/hyundai-tucson/2024/"
+  },
+  {
+   "name": "2025 Hyundai Tucson",
+   "n": 6,
+   "sold": 234230,
+   "per100k": 2.6,
+   "top_part": "electrical",
+   "url": "/cars/hyundai-tucson/2025/"
+  },
+  {
+   "name": "2023 Jeep Grand Cherokee",
+   "n": 6,
+   "sold": 244594,
+   "per100k": 2.5,
+   "top_part": "electrical",
+   "url": "/cars/jeep-grand-cherokee/2023/"
+  }
+ ],
+ "parts": [
+  {
+   "part": "engine",
+   "n": 499,
+   "share": 27.2,
+   "prev_share": 24.3
+  },
+  {
+   "part": "electrical",
+   "n": 434,
+   "share": 23.6,
+   "prev_share": 21.9
+  },
+  {
+   "part": "transmission & drivetrain",
+   "n": 318,
+   "share": 17.3,
+   "prev_share": 16.8
+  },
+  {
+   "part": "brakes",
+   "n": 151,
+   "share": 8.2,
+   "prev_share": 8.8
+  },
+  {
+   "part": "steering",
+   "n": 134,
+   "share": 7.3,
+   "prev_share": 8.9
+  },
+  {
+   "part": "fuel or EV drive system",
+   "n": 133,
+   "share": 7.2,
+   "prev_share": 7.8
+  },
+  {
+   "part": "automatic emergency braking",
+   "n": 97,
+   "share": 5.3,
+   "prev_share": 6.9
+  },
+  {
+   "part": "body structure",
+   "n": 80,
+   "share": 4.4,
+   "prev_share": 4.9
+  },
+  {
+   "part": "backup camera",
+   "n": 75,
+   "share": 4.1,
+   "prev_share": 3.6
+  },
+  {
+   "part": "speed control",
+   "n": 69,
+   "share": 3.8,
+   "prev_share": 3.5
+  }
+ ],
+ "recalls": [
+  {
+   "id": "26V728000",
+   "date": "2026-11-02",
+   "mfr": "Hyundai Motor America",
+   "units": 37901,
+   "part": "Air Bags",
+   "risk": "Air bags and seat belt pretensioners that do not activate in a crash increases the risk of injury.",
+   "cars": [
+    "2019-2023 Hyundai Kona Electric",
+    "2019-2022 Hyundai Veloster N"
+   ],
+   "url": null
+  },
+  {
+   "id": "26V726000",
+   "date": "2026-11-02",
+   "mfr": "Ford Motor Company",
+   "units": 33578,
+   "part": "Interior Lighting",
+   "risk": "Overhead map lights that illuminate unintentionally and cannot be turned off may distract the driver or cause interior glare, increasing the risk of a crash.",
+   "cars": [
+    "2026-2027 Ford Explorer"
+   ],
+   "url": "/cars/ford-explorer/"
+  },
+  {
+   "id": "26V724000",
+   "date": "2026-11-02",
+   "mfr": "Ford Motor Company",
+   "units": 8650,
+   "part": "Electrical System",
+   "risk": "A loss of drive power, power brake assist, power steering assist, or exterior lighting can increase the risk of a crash.",
+   "cars": [
+    "2022 Ford Maverick Hybrid"
+   ],
+   "url": null
+  },
+  {
+   "id": "26V725000",
+   "date": "2026-11-02",
+   "mfr": "Ford Motor Company",
+   "units": 330,
+   "part": "Visibility",
+   "risk": "A loss of driver-side wiper function can reduce driver visibility in certain weather conditions, increasing the risk of a crash.",
+   "cars": [
+    "2026 Ford Bronco"
+   ],
+   "url": null
+  }
+ ],
+ "recalls_n": 4,
+ "recall_units": 80459,
+ "csv": "/assets/studies/2026-11/complaints-by-model-2026-11.csv",
+ "chart": "/assets/studies/2026-11/chart-2026-11.svg",
+ "findings": [
+  "NHTSA received 1,837 vehicle owner complaints from November 1 to 9, about 204 a day (October: 212 a day).",
+  "The Ford F-Series drew the most: 67 complaints, most often about its transmission & drivetrain.",
+  "The most common problem area was engine (27.2% of complaints, vs 24.3% in October).",
+  "Among newer cars, the 2025 Honda Odyssey drew the most complaints per car sold: 14.7 per 100,000 sold.",
+  "NHTSA received 4 new vehicle recalls covering 80,459 vehicles; the largest: Hyundai Motor America, 37,901 vehicles (air bags)."
+ ]
+}

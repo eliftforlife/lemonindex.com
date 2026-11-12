@@ -346,6 +346,35 @@ def fix_moji(t):
     if 'â' not in t: return t
     for rx, to in _MJ: t = rx.sub(to, t)
     return t
+# 11-12 accurate freshness (research #5): a page's date (sitemap <lastmod>, "Updated", dateModified) moves only when its content hash
+# changes. The hash skips what changes on every build without the page changing: numbered element ids (ii5101 -> ii5102 when another page
+# gains an info button), ?v= asset versions and today's date. page_dates.json: {path: {c: hash, d: date, f: [complaints, recalls,
+# investigations] on car pages, u/ud: the "N new recalls" note and its date}}. Pages whose date moved this build -> PD_NEW (IndexNow list).
+_VOLX = re.compile(r'\b((?:id|for|aria-controls|aria-labelledby|aria-describedby|data-i)=")([a-z]{1,4})\d+"|\?v=[\w.-]+')
+PD_NEW = []
+LG = {}; _LGHREF = re.compile(r'<a\b[^>]*?\shref="(/[^"#?]*)'); _LGNOIX = re.compile(r'<meta name="robots" content="[^"]*noindex')
+def _chash(body):
+    t = _VOLX.sub(lambda m: f'{m.group(1)}{m.group(2)}#"' if m.group(1) else '?v=', body).replace(TODAY, '')
+    return hashlib.md5(t.encode('utf-8')).hexdigest()[:10]
+def _car_facts(path):
+    """[complaints counted, recalls, investigations] for a /cars/ model or model-year page from the site's data, else None"""
+    m = re.match(r'^/cars/(.+?)/(?:(\d{4})/)?$', path); FY_ = globals().get('FY', {})
+    if not m or m.group(1) not in FY_ or 'X2' not in globals(): return None
+    fid = m.group(1); ys = [int(m.group(2))] if m.group(2) else [v['y'] for v in FY_[fid]['years']]
+    vs = {v['y']: v for v in FY_[fid]['years']}
+    XL_ = globals().get('XL', {}); cn = lambda y: sum(n for *_, n in (XL_.get(fid, {}).get(str(y)) or {}).get('names', [])) or (vs[y].get('n') or 0)   # every complaint the site holds for that year (extras_local), else the study count
+    return [sum(cn(y) for y in ys if y in vs), len({r.get('id') or r.get('summary', '')[:80] for y in ys for r in (extra(fid, y).get('recalls') or [])}),
+            len({i.get('id') for y in ys for i in (X2.get(fid, {}).get(str(y), {}).get('inv') or [])})]
+def _pd_mark(path, body):
+    c = _chash(body); e = PD.get(path); fx = _car_facts(path)
+    if e is None: PD[path] = e = {'c': c, 'd': TODAY}; PD_NEW.append(path)
+    elif 'c' not in e: e['c'] = c; e.pop('h', None)   # first build with content hashes: keep the page's date
+    elif e['c'] != c:
+        e['c'] = c; e['d'] = TODAY; PD_NEW.append(path)
+        if fx and e.get('f'):
+            dl = [(a - b, w) for a, b, w in zip(fx, e['f'], ('complaint', 'recall', 'investigation')) if a > b]
+            if dl: e['u'] = ', '.join(f'{n:,} new {w}{"s" * (n != 1)}' for n, w in dl); e['ud'] = TODAY
+    if fx: e['f'] = fx
 def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, vis='', canon=None):
     title, desc = fit_title(title), fit_desc(desc)
     body, desc = fix_moji(body), fix_moji(desc)
@@ -353,14 +382,16 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
     if _tm and (_tm.group(1) in TAB.ON or _tm.group(1) in globals().get('FY', {})) and 'tab_body' in globals(): body = tab_body(_tm.group(1), int(_tm.group(2)) if _tm.group(2) else None, body)
     if 'class="advp"' in body and path.startswith(('/cars/', '/motorcycles/', '/planes/')) and 'adv_body' in globals(): body = adv_body(path, body)   # 11-10: the other template
     if 'class="pg mp6"' in body and re.match(r'^/(motorcycles|supercars|planes)/[^/]+/$', path) and 'adv_body' in globals(): body = adv_body(path, body, TAB.transform_mp6)   # 11-10: motorcycle, supercar and plane pages
-    _h = hashlib.md5(body.encode('utf-8')).hexdigest()[:10]
-    if PD.get(path, {}).get('h') != _h: PD[path] = {'h': _h, 'd': TODAY}
+    _pd_mark(path, body)
     _d = PD[path]['d']; _dl = f'{_MN[int(_d[5:7]) - 1]} {int(_d[8:])}, {_d[:4]}'; _upd = ''
-    if path.startswith(('/cars/', '/motorcycles/', '/planes/', '/supercars/', '/best/', '/stats/', '/check-engine-light/', '/best-gas-mileage/', '/electric/')):
-        _upd = f'Updated <time datetime="{_d}">{_dl}</time>'; ld = list(ld or []) + [{"@context": "https://schema.org", "@type": "WebPage", "url": BASE + path, "name": title, "dateModified": _d}]
+    if path.startswith(('/cars/', '/motorcycles/', '/planes/', '/supercars/', '/best/', '/stats/', '/check-engine-light/', '/best-gas-mileage/', '/electric/', '/studies/')):
+        _un = PD[path].get('u') if PD[path].get('ud') == _d else None   # "Updated Nov 12: 1 new recall" only while that data change is the page's latest change
+        _upd = f'Updated <time datetime="{_d}">{_dl}</time>' + (f': {E(_un)}' if _un else ''); ld = list(ld or []) + [{"@context": "https://schema.org", "@type": "WebPage", "url": BASE + path, "name": title, "dateModified": _d}]
     body = auto_hero(body, vis)
     if '<table' in body: body = stack_tables(body)   # 11-10: wide tables become stacked rows on phones (site.css .stk)
     if re.fullmatch(r'/cars/[^/]+/', path) and 'SEARCH_MINI' in globals(): body += SEARCH_MINI + CODES_JS   # 11-10: engine code lookup on model pages (added after the date hash, so dates don't move)
+    _lxm = re.fullmatch(r'/cars/(.+?)/(\d{4})/', path)
+    if _lxm and 'LX_HTML' in globals(): body += LX_HTML(_lxm.group(1), int(_lxm.group(2)))   # 11-12 related links (after the date hash too)
     _shl = ''
     _sm = list(re.finditer(r'<p class="shline">.*?</p>', body, re.S))
     if _sm: _shl = _sm[-1].group(0); body = body[:_sm[-1].start()] + body[_sm[-1].end():]
@@ -384,6 +415,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <nav class="f2-col" aria-label="Data"><p class="f2-h">Data</p><a href="/method/">How the index works</a><a href="/data/">Free data</a><a href="/images/">Free images</a><a href="/vote/">Vote</a></nav>
 <nav class="f2-col" aria-label="Support"><p class="f2-h">Support</p><button class="supl" type="button">Keep Lemon ad-free</button><a href="/about/">About</a><a href="/press/">Press</a><a href="/contact/">Contact</a><a href="{YT}?sub_confirmation=1" rel="noopener">Subscribe on YouTube</a></nav></div>
 <div class="f2-bot"><span>© {TODAY[:4]} The Lemon Index</span><a href="/terms/">Terms</a><a href="/privacy/">Privacy</a><a href="/refunds/">Refunds</a><span class="f2-dis">Built from public NHTSA complaint data and published U.S. sales figures. Not affiliated with any automaker. Not a repair-cost or safety rating.</span></div></footer><script src="/assets/explorer.js?v=1110" defer></script><script src="/assets/support.js?v=1111d" defer></script><script src="/assets/imginfo.js?v=1" defer></script><script src="/assets/lookup.js?v=1112sfd" defer></script>{beacon}</body></html>'''
+    LG[path] = (set(_LGHREF.findall(doc)), bool(_LGNOIX.search(doc)), url)   # 11-12 link graph (linkgraph.py, end of build)
     f = os.path.join(OUT, path.strip('/'), 'index.html') if path.endswith('/') else os.path.join(OUT, path.strip('/'))
     os.makedirs(os.path.dirname(f), exist_ok=True)
     for _try in range(6):   # 11-09: Windows sometimes holds a just-written file for a moment (antivirus/indexer): retry instead of dying mid-build
@@ -391,6 +423,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
         except OSError:   # 11-10: Errno 22 (Invalid argument) is the same transient lock
             if _try == 5: raise
             import time; time.sleep(.5)
+    LG[path] += (os.path.getmtime(f),)   # linkgraph re-reads only pages something rewrote after this
 
 def bars(rows, mx, cls=''):
     tip = lambda n, v: f'{n}: Lemon Index {v}, {plain(v)}.'
@@ -620,14 +653,17 @@ page(STUDY, 'The Most Reliable Cars, According to 1.6 Million Owner Complaints',
          {"@context": "https://schema.org", "@type": "Article", "headline": "The Most Reliable Cars, According to 1.6 Million Owner Complaints", "datePublished": TODAY, "dateModified": TODAY, "author": {"@type": "Organization", "name": "The Lemon Index"}, "image": BASE + '/assets/og.png'}])
 
 # ---- studies index
+# 11-12 monthly data studies (research #4): data/studies/<yyyy-mm>.json from 3 Lemon Index/data/studies/make_study.py; pages by studies_month.py (exec'd after /press/)
+MST = [json.load(open(os.path.join('data/studies', _f), encoding='utf-8')) for _f in sorted((f for f in os.listdir('data/studies') if re.fullmatch(r'\d{4}-\d{2}\.json', f)), reverse=True)] if os.path.isdir('data/studies') else []
+_MST_TILES = ''.join(f'<a class="tile" href="/studies/{s["ym"]}/"><div class="tt"><p class="te">Monthly study · {E(s["label"])}</p><h2>{E(s["title"])}</h2><p class="ts">{s["n"]:,} owner complaints to NHTSA{"" if s["final"] else " so far"}.</p><span class="tl">Read the study <i>›</i></span></div><div class="tp"><img src="{s["chart"]}" alt="Chart: most owner complaints by model, {E(s["label"])}" width="720" height="472" loading="lazy"></div></a>' for s in MST[:2])
 page('/studies/', 'Car Reliability Studies: Rankings From Owner Complaints | Lemon Index', 'Every Lemon Index study: the most and least reliable cars, brands and electric cars, measured with 1.6 million NHTSA owner complaints and U.S. sales.', f'''
 <div class="pg">{phero('Studies', 'Studies.', 'Millions of public records. One clear ranking each.')}
-<section class="tiles">
+<section class="tiles">{_MST_TILES}
 <a class="tile" href="{STUDY}"><div class="tt"><p class="te">Study #1</p><h2>The most reliable cars.</h2><p class="ts">131 models. 1.6 million owner complaints.</p><span class="tl">Read the study <i>›</i></span></div><div class="tp">{pimg(mphoto('toyota-4runner'), 'Toyota 4Runner')}</div></a>
 <a class="tile" href="/electric/"><div class="tt"><p class="te">Electric cars</p><h2>The most reliable EVs.</h2><p class="ts">22 electric cars, plus fires and fuel cost.</p><span class="tl">See the ranking <i>›</i></span></div><div class="tp">{pimg(mphoto('tesla-model-s'), 'Tesla Model S')}</div></a></section>
 {pcredit(who(mphoto('toyota-4runner'), mphoto('tesla-model-s')))}
 {share_line("Which cars have the fewest problems? Free studies from 1.6 million owner complaints:")}</div>''',
-     ld=[{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Car Reliability Studies", "url": BASE + '/studies/', "hasPart": [{"@type": "Article", "headline": "The Most Reliable Cars, According to 1.6 Million Owner Complaints", "url": BASE + STUDY}]}])
+     ld=[{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Car Reliability Studies", "url": BASE + '/studies/', "hasPart": [{"@type": "Article", "headline": s['title'], "url": BASE + f'/studies/{s["ym"]}/'} for s in MST] + [{"@type": "Article", "headline": "The Most Reliable Cars, According to 1.6 Million Owner Complaints", "url": BASE + STUDY}]}])
 
 # ---- method
 # 11-10 engine code lookup: the small search box on model pages (page() appends it) + the script; full search lives in engine_pages.py
@@ -1005,6 +1041,36 @@ _nopair = [p for p in PAIRS if len(_oky(p[0]) & _oky(p[1])) < 2]
 for a, b in _nopair: PAIRS.remove((a, b)); RIVALS[a].remove(b); RIVALS[b].remove(a)
 CMPU = lambda a, b: f'/compare/{a}-vs-{b}/'
 cmpu = lambda a, b: CMPU(a, b) if (a, b) in PAIRS else CMPU(b, a)
+# 11-12 internal links (research #6): year pages linked only to their own model's years. A small "Related" list at the end of every
+# model-year page, all from the data: the nearest-year cars of the same type whose top owner complaint is the same system, one same-year
+# car of the same type with a lower Lemon Index, the model's top compare page, and that type's most-reliable list. linkgraph.py
+# (end of build) reports click depth, inbound links and orphans to 3 Lemon Index/data/linkgraph/latest.md.
+_LXSEG = {'car': ('cars', 'cars'), 'suv': ('suvs', 'SUVs'), 'truck': ('trucks', 'trucks'), 'minivan': ('minivans', 'minivans')}
+_LXIX = {}
+def LX_HTML(fid, y):
+    f = FY.get(fid); c = BYNAME.get(f['name']) if f else None
+    v = next((w for w in f['years'] if w['y'] == y), None) if f else None
+    if not (c and v): return ''
+    if not _LXIX:
+        for g in YEARS:
+            for w in g['years']:
+                if w.get('ok') and g['name'] in BYNAME: _LXIX.setdefault((BYNAME[g['name']]['seg'], w['y']), []).append((g, w))
+    seg = c['seg']; out = []; used = {fid}
+    peers = [p for yy in range(y - 2, y + 3) for p in _LXIX.get((seg, yy), []) if p[0]['id'] != fid]
+    top = NICE(v['parts'][0][0]) if v.get('parts') else ''
+    if top and top != 'other':
+        for g, w in sorted((p for p in peers if p[1].get('parts') and NICE(p[1]['parts'][0][0]) == top), key=lambda p: (abs(p[1]['y'] - y), -p[1]['n'])):
+            if g['id'] in used: continue
+            used.add(g['id']); out.append((CARU(g, w['y']), f'{w["y"]} {g["name"]}', f'top complaint is also the {top}'))
+            if len(out) == 2: break
+    if v.get('ok'):
+        for g, w in sorted((p for p in peers if p[1]['y'] == y and p[1]['li'] < v['li'] and p[0]['id'] not in used), key=lambda p: p[1]['li'])[:1]:
+            used.add(g['id']); out.append((CARU(g, y), f'{y} {g["name"]}', f'fewer complaints per car sold (Lemon Index {w["li"]})'))
+    for o in RIVALS.get(fid, [])[:1]: out.append((cmpu(fid, o), f'{f["name"]} vs {FY[o]["name"]}', 'every year side by side'))
+    if seg in _LXSEG: out.append((f'/best/most-reliable-{_LXSEG[seg][0]}/', f'Most reliable {_LXSEG[seg][1]}', 'ranked by owner complaints'))
+    if not out: return ''
+    return ('<link rel="stylesheet" href="/assets/lx.css?v=1"><nav class="lx" aria-label="Related"><h2 class="lx-h">Related</h2><ul class="lx-l">'
+            + ''.join(f'<li><a href="{u}">{E(t)}</a><span>{E(s)}</span></li>' for u, t, s in out) + '</ul></nav>')
 # ---- 11-02 year-page redesign (Elijah: "less text, bars and charts, numbers that matter, built for someone looking at their own car or one they want to buy")
 NICE = lambda p: {'service brakes, hydraulic': 'brakes', 'brakes': 'brakes', 'service brakes, electric': 'brakes (electric)', 'service brakes, air': 'brakes', 'power train': 'transmission & drivetrain',
                   'unknown or other': 'other', 'vehicle speed control': 'speed control', 'equipment': 'equipment & accessories'}.get(p.lower(), p.lower())
@@ -1871,6 +1937,7 @@ legal('/terms/', 'Terms of use', f'''<p>lemonindex.com is operated by {LEGAL_NAM
       'The terms for using lemonindex.com: where our car reliability data comes from, what it is and isn&#39;t, citing our rankings, and donations.'.replace('&#39;', "'"))
 LEGAL_URLS = ['/contact/', '/refunds/', '/privacy/', '/terms/']
 exec(open('about_pages.py', encoding='utf-8').read())   # 11-12 /about/ + /press/ (journalist tester: both were 404s)
+exec(open('studies_month.py', encoding='utf-8').read())   # 11-12 monthly data studies /studies/<yyyy-mm>/ (MST_URLS)
 
 # 10-31: electric cars (ranking, fires, cost, problems, driver-assist crashes, one page per EV)
 exec(open('electric_pages.py', encoding='utf-8').read())
@@ -1890,8 +1957,8 @@ exec(open('find_index.py', encoding='utf-8').read())   # 11-11: the search index
 json.dump(PD, open('data/page_dates.json', 'w', encoding='utf-8'), separators=(',', ':'))
 
 open(f'{OUT}/404.html', 'w', encoding='utf-8').write(open(f'{OUT}/index.html', encoding='utf-8').read().replace('<main>', '<main><div class="pg"><section class="ph"><p class="ph-e">404</p><h1>That page drove off.</h1><p class="ph-s">It may have moved. Try one of these.</p><p class="ph-404"><a class="btn" href="/cars/">Look up a car</a> <a class="btn btn-ghost" href="/brands/">Every brand</a> <a class="btn btn-ghost" href="/">Home</a></p></section></div><!--', 1).replace('</main>', '--></main>', 1))
-urls = ['/', '/rankings/', STUDY, '/studies/', '/method/', '/vin/', '/car-loan-rates/', '/vote/', '/data/', '/brands/'] + PERF_URLS + burls + purls + murls + surls + eurls + GAP_URLS + CODE_URLS + SEO_URLS + EXTRA_URLS + BMW_URLS + SCE_URLS + AE_URLS + yurls + ADV_URLS + curls + LEGAL_URLS + UXC_URLS
-open(f'{OUT}/sitemap.xml', 'w', encoding='utf-8').write('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + ''.join(f'<url><loc>{BASE}{u}</loc><lastmod>{TODAY}</lastmod></url>' for u in urls) + '</urlset>')
+urls = ['/', '/rankings/', STUDY, '/studies/', '/method/', '/vin/', '/car-loan-rates/', '/vote/', '/data/', '/brands/'] + PERF_URLS + burls + purls + murls + surls + eurls + GAP_URLS + CODE_URLS + SEO_URLS + EXTRA_URLS + BMW_URLS + SCE_URLS + AE_URLS + yurls + ADV_URLS + curls + LEGAL_URLS + UXC_URLS + MST_URLS
+open(f'{OUT}/sitemap.xml', 'w', encoding='utf-8').write('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + ''.join(f'<url><loc>{BASE}{u}</loc><lastmod>{PD.get(u, {}).get("d", TODAY)}</lastmod></url>' for u in urls) + '</urlset>')
 open(f'{OUT}/ads.txt', 'w').write(f'google.com, {ADS.replace("ca-", "")}, DIRECT, f08c47fec0942fa0\n')
 open(f'{OUT}/robots.txt', 'w').write(f'User-agent: *\nAllow: /\n\nUser-agent: GPTBot\nAllow: /\nUser-agent: ClaudeBot\nAllow: /\nUser-agent: PerplexityBot\nAllow: /\nUser-agent: Google-Extended\nAllow: /\nUser-agent: Googlebot-Image\nAllow: /\n\n# bulk dataset scrapers: the data is free at /data/ with credit instead\nUser-agent: CCBot\nDisallow: /\nUser-agent: Bytespider\nDisallow: /\nUser-agent: Diffbot\nDisallow: /\nUser-agent: Omgilibot\nDisallow: /\nUser-agent: ImagesiftBot\nDisallow: /\n\nSitemap: {BASE}/sitemap.xml\nSitemap: {BASE}/image-sitemap.xml\n')
 open(f'{OUT}/llms.txt', 'w', encoding='utf-8').write(f'# The Lemon Index\n\n> Car reliability from public data. The Lemon Index = NHTSA owner complaints in the first 3 years per 100,000 U.S. sales, vs the average car of the same model years (100 = average). It measures complaints, not crash safety.\n\n- [The Most Reliable Cars, According to 1.6 Million Owner Complaints]({BASE}{STUDY}): Toyota 4Runner 26, Lexus ES 27, Lexus brand 30, Tesla brand 322 (est.)\n- [The Most Reliable Electric Cars]({BASE}/electric/): {len(RK)} EVs by NHTSA complaints per car sold, best {best['name']} {best['li']}, plus fires, yearly cost and driver-assist crash reports\n- [Engine code lookup]({BASE}/check-engine-light/): what any OBD-II trouble code means, how serious it is, and which cars owners report it on most in NHTSA complaints\n- [Free engine illustrations]({BASE}/images/): free BMW engine illustrations, CC BY 4.0 (AI-generated, credit The Lemon Index)\n- [Every car engine]({BASE}/engines/): every engine with a page (BMW, supercar, performance, Honda Civic), searchable, YouTube owner ranks\n- [BMW engines by year]({BASE}/engines/bmw/): every BMW engine (N54, N55, B58, N63 ...) by model year: US versions and specs (EPA), owner complaints (NHTSA) and a YouTube score\n- [Supercar engines by year]({BASE}/engines/supercars/): {sum(1 for d in SCENG['engines'].values() if d.get('group', 'super') == 'super')} supercar engines (Ferrari F154, Lamborghini V10, McLaren M838T, Nissan VR38DETT ...) matched to their cars (EPA), with a YouTube owner score by model year, NHTSA recalls and automaker repair notes\n- [Performance car engines by year]({BASE}/engines/performance/): {sum(1 for d in SCENG['engines'].values() if d.get('group') == 'perf')} performance-car engines (Hellcat, Coyote, LS3, LS7, 2UR-GSE, EJ257, S65, S85 ...) matched to their cars (EPA), with a YouTube owner score by model year, NHTSA recalls and automaker repair notes\n- [Method]({BASE}/method/)\n')
@@ -1920,6 +1987,17 @@ page('/vin/', 'Free VIN Decoder and Recall Check: Look Up Any VIN | The Lemon In
 <script id="pick" type="application/json">{json.dumps(PICK, ensure_ascii=False).replace("</", "<\\/")}</script><script id="valias" type="application/json">{json.dumps(VALIAS, separators=(",", ":"))}</script><script id="vimg" type="application/json">{json.dumps(sorted(f[:-5] for f in os.listdir("assets/ai-models") if f.endswith(".webp")), separators=(",", ":"))}</script><script src="/assets/vin.js?v=1112d" defer></script></section></div>''')
 shutil.copytree('assets', f'{OUT}/assets', dirs_exist_ok=True); shutil.copy('data/survey.json', f'{OUT}/assets/survey-q.json'); shutil.copy('data/votes.json', f'{OUT}/assets/votes.json')
 print('built', len(urls), 'pages into', OUT)
+# 11-12 accurate freshness: pages whose content changed this build -> data/cache/indexnow_pending.txt (git-ignored); `py indexnow.py --pending`
+# after a push submits only those and clears the list. PD is saved again here because /vin/ is built after the first save.
+json.dump(PD, open('data/page_dates.json', 'w', encoding='utf-8'), separators=(',', ':'))
+_smset = set(urls); _chg = [u for u in dict.fromkeys(PD_NEW) if u in _smset]
+if _chg:
+    os.makedirs('data/cache', exist_ok=True)
+    with open('data/cache/indexnow_pending.txt', 'a', encoding='utf-8') as _fh: _fh.write(''.join(u + '\n' for u in _chg))
+print(f'freshness: {len(_chg)} of {len(urls)} sitemap pages changed content this build; {sum(1 for u in urls if PD.get(u, {}).get("d") == TODAY)} have lastmod {TODAY}')
+try:
+    import linkgraph; print(linkgraph.run(LG, urls, OUT))   # 11-12 click depth / inbound links / orphans -> 3 Lemon Index/data/linkgraph/latest.md
+except Exception as ex: print('linkgraph failed:', type(ex).__name__, ex)
 print('tab layout failures:', len(TAB_FAIL), TAB_FAIL[:5], '| cache hits', sum(1 for k in _TAB_NEW if k in _TAB_OLD), 'of', len(_TAB_NEW))
 try:
     with open(_TAB_CACHE + '.tmp', 'wb') as _fh: pickle.dump(_TAB_NEW, _fh, protocol=pickle.HIGHEST_PROTOCOL)

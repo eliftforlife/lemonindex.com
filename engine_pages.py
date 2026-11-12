@@ -81,7 +81,8 @@ def _code_pages():
                         '</ul><p class="yc-cap">Share of complaints naming the code whose text also mentions each problem.</p>'))
         if years:
             det.append((f'Model years that report {c} most', '<p>' + ', '.join(f'<a href="/cars/{i}/{y}/">{y} {E(nm)}</a> ({k})' for i, nm, y, k in years[:6]) + '.</p>'))
-        rel = [r for r in C if r != c and r[:4] == c[:4] and (_meaning(r) is not None and C[r]['n'] >= 5 or C[r]['n'] >= 20)][:8]
+        _rk = [r for r in C if r != c and r[:3] == c[:3] and (_meaning(r) is not None and C[r]['n'] >= 5 or C[r]['n'] >= 20)]   # 11-12 link graph: the nearest codes first (same 4-character group, then the same 3), so every code page gets linked from its neighbours (U0170 was an orphan)
+        rel = sorted(_rk, key=lambda r: (r[:4] != c[:4], abs(int('0' + re.sub(r'[^0-9A-Fa-f]', '', r[1:]), 16) - int('0' + re.sub(r'[^0-9A-Fa-f]', '', c[1:]), 16)), r))[:8]
         hero = (f'<div class="creadout"><div class="cr-code"><span class="cr-sys">{E(SYSN[c[0]].split(" (")[0])} · {"Generic" if _generic(c) else "Manufacturer"}</span><b>{c}</b></div>'
                 + (gauge(sev, w=bool(mm.get("w"))) if sev else '') + '</div>')
         body = [f'<article class="study tr2 cp2"><p class="kicker"><a href="/check-engine-light/">Check engine light</a> · Engine codes</p><h1>{c}: {E(title_bits)}</h1>',

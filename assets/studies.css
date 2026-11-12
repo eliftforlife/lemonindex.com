@@ -1,0 +1,14 @@
+/* 11-12 monthly data studies (/studies/<yyyy-mm>/, studies_month.py). Own file + ms- prefix so nothing collides with site.css. */
+.msd .ms-mtd { margin: 16px 0 0; padding: 12px 16px; border-radius: 12px; background: var(--lemon-soft, #fff6c2); font-size: 15px; line-height: 1.45; color: var(--ink, #111214); }
+.msd .ms-k { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 0 0 18px; }
+@media (min-width: 720px) { .msd .ms-k { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.msd .ms-k p { margin: 0; padding: 14px; border-radius: 14px; background: var(--soft, #f4f5f6); }
+.msd .ms-k b { display: block; font-size: 26px; letter-spacing: -.02em; }
+.msd .ms-k span { font-size: 13px; color: var(--mute, #5f6368); }
+.msd .ms-chart { display: block; width: 100%; max-width: 720px; height: auto; border: 1px solid var(--line, #e3e5e8); border-radius: 12px; }
+.msd .ms-t { width: 100%; border-collapse: collapse; font-size: 15px; }
+.msd .ms-t th, .msd .ms-t td { padding: 8px 10px 8px 0; border-bottom: 1px solid var(--line, #e3e5e8); text-align: left; vertical-align: top; }
+.msd .ms-t th { font-size: 13px; color: var(--mute, #5f6368); font-weight: 600; }
+.msd .ms-emb { margin: 6px 0 12px; padding: 12px; border-radius: 10px; background: var(--soft, #f4f5f6); font-size: 12px; white-space: pre-wrap; overflow-wrap: anywhere; }
+.msd .ms-s { display: block; margin-top: 2px; font-size: 13px; color: var(--mute, #5f6368); }
+.msd .ms-t td + td, .msd .ms-t th + th { text-align: right; white-space: nowrap; padding-left: 10px; }
