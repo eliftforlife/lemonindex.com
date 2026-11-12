@@ -7,7 +7,7 @@
  "through_txt": "November 9, 2026",
  "days": 9,
  "days_in_month": 30,
- "made": "2026-11-12 14:02",
+ "made": "2026-11-12 14:10",
  "title": "The Cars Owners Complained About Most in November 2026 (So Far)",
  "label": "November 1-9, 2026: month to date",
  "n": 1837,
@@ -46,13 +46,13 @@
    "prev_same": 68,
    "top_part": "electrical",
    "top_part_n": 24,
-   "top_year": 2025,
+   "top_year": 2016,
    "top_year_n": 11,
    "crash": 4,
    "fire": 4,
    "inj": 3,
    "url": "/cars/ram-pickup/",
-   "year_url": "/cars/ram-pickup/2025/"
+   "year_url": "/cars/ram-pickup/2016/"
   },
   {
    "name": "Ford Escape",
@@ -60,13 +60,13 @@
    "prev_same": 65,
    "top_part": "engine",
    "top_part_n": 19,
-   "top_year": 2016,
+   "top_year": 2015,
    "top_year_n": 12,
    "crash": 0,
    "fire": 0,
    "inj": 0,
    "url": "/cars/ford-escape/",
-   "year_url": "/cars/ford-escape/2016/"
+   "year_url": "/cars/ford-escape/2015/"
   },
   {
    "name": "Honda CR-V",
@@ -170,7 +170,7 @@
    "name": "Jeep Grand Cherokee",
    "n": 33,
    "prev_same": 30,
-   "top_part": "engine",
+   "top_part": "electrical",
    "top_part_n": 10,
    "top_year": 2014,
    "top_year_n": 7,
@@ -240,15 +240,15 @@
    "name": "Hyundai Tucson",
    "n": 24,
    "prev_same": 22,
-   "top_part": "engine",
+   "top_part": "brakes",
    "top_part_n": 6,
-   "top_year": 2025,
+   "top_year": 2024,
    "top_year_n": 6,
    "crash": 4,
    "fire": 0,
    "inj": 3,
    "url": "/cars/hyundai-tucson/",
-   "year_url": "/cars/hyundai-tucson/2025/"
+   "year_url": "/cars/hyundai-tucson/2024/"
   },
   {
    "name": "Jeep Wrangler",
@@ -354,13 +354,13 @@
    "prev_same": 11,
    "top_part": "electrical",
    "top_part_n": 3,
-   "top_year": 2026,
+   "top_year": 2025,
    "top_year_n": 4,
    "crash": 2,
    "fire": 0,
    "inj": 1,
    "url": "/cars/toyota-rav4/",
-   "year_url": "/cars/toyota-rav4/"
+   "year_url": "/cars/toyota-rav4/2025/"
   },
   {
    "name": "Chevrolet Equinox",

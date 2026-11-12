@@ -9,12 +9,12 @@ Chevrolet Silverado,38,58,1,1,2,engine,https://lemonindex.com/cars/chevrolet-sil
 GMC Sierra,36,50,0,1,0,engine,https://lemonindex.com/cars/gmc-sierra/
 Hyundai Santa Fe,35,24,2,0,3,engine,https://lemonindex.com/cars/hyundai-santa-fe/
 Nissan Rogue,34,35,1,0,0,engine,https://lemonindex.com/cars/nissan-rogue/
-Jeep Grand Cherokee,33,30,2,2,1,engine,https://lemonindex.com/cars/jeep-grand-cherokee/
+Jeep Grand Cherokee,33,30,2,2,1,electrical,https://lemonindex.com/cars/jeep-grand-cherokee/
 Honda Pilot,31,29,2,0,1,engine,https://lemonindex.com/cars/honda-pilot/
 Ford Explorer,30,45,2,0,3,body structure,https://lemonindex.com/cars/ford-explorer/
 Ford Edge,26,32,0,0,0,engine,https://lemonindex.com/cars/ford-edge/
 Jeep Cherokee,25,44,0,0,0,transmission & drivetrain,https://lemonindex.com/cars/jeep-cherokee/
-Hyundai Tucson,24,22,4,0,3,engine,https://lemonindex.com/cars/hyundai-tucson/
+Hyundai Tucson,24,22,4,0,3,brakes,https://lemonindex.com/cars/hyundai-tucson/
 Jeep Wrangler,23,32,0,2,0,electrical,https://lemonindex.com/cars/jeep-wrangler/
 Chrysler Pacifica,22,15,1,0,0,engine,https://lemonindex.com/cars/chrysler-pacifica/
 Kia Soul,22,18,2,0,1,engine,https://lemonindex.com/cars/kia-soul/
@@ -24,7 +24,7 @@ Ford Fusion,18,27,0,0,0,backup camera,https://lemonindex.com/cars/ford-fusion/
 Toyota Camry,18,22,3,0,1,transmission & drivetrain,https://lemonindex.com/cars/toyota-camry/
 Toyota RAV4,18,11,2,0,1,electrical,https://lemonindex.com/cars/toyota-rav4/
 Chevrolet Equinox,17,22,1,0,0,electrical,https://lemonindex.com/cars/chevrolet-equinox/
-Honda Civic,17,17,3,0,3,electrical,https://lemonindex.com/cars/honda-civic/
+Honda Civic,17,17,3,0,3,airbags,https://lemonindex.com/cars/honda-civic/
 Honda Passport,17,12,0,0,0,engine,
 Kia Sorento,17,22,0,2,0,engine,https://lemonindex.com/cars/kia-sorento/
 Kia Telluride,17,21,0,0,0,electrical,https://lemonindex.com/cars/kia-telluride/
@@ -43,7 +43,7 @@ Ford Expedition,12,17,0,0,4,seat belts,https://lemonindex.com/cars/ford-expediti
 Volkswagen Atlas,12,15,0,0,0,electrical,https://lemonindex.com/cars/volkswagen-atlas/
 BMW X5,11,8,2,1,0,backup camera,https://lemonindex.com/cars/bmw-x5/
 Chevrolet Trax,11,7,0,0,0,backup camera,https://lemonindex.com/cars/chevrolet-trax/
-Ford Bronco,11,11,0,0,0,engine,
+Ford Bronco,11,11,0,0,0,body structure,
 Honda HR-V,11,8,0,0,0,transmission & drivetrain,https://lemonindex.com/cars/honda-hr-v/
 Hyundai Elantra,10,9,1,0,1,electrical,https://lemonindex.com/cars/hyundai-elantra/
 Mazda CX-90,10,15,0,0,0,steering,
@@ -65,11 +65,11 @@ Kia Sportage,7,7,0,1,0,engine,https://lemonindex.com/cars/kia-sportage/
 Land Rover Defender,7,2,0,0,0,electrical,
 Mazda CX-5,7,8,0,0,0,engine,https://lemonindex.com/cars/mazda-cx-5/
 Subaru Crosstrek,7,6,0,2,1,engine,https://lemonindex.com/cars/subaru-crosstrek/
-Subaru Outback,7,7,0,0,0,transmission & drivetrain,https://lemonindex.com/cars/subaru-outback/
+Subaru Outback,7,7,0,0,0,electrical,https://lemonindex.com/cars/subaru-outback/
 Toyota Corolla,7,8,2,0,2,body structure,https://lemonindex.com/cars/toyota-corolla/
 Toyota Prius,7,14,0,0,0,brakes,https://lemonindex.com/cars/toyota-prius/
 Cadillac Escalade Esv,6,5,0,0,0,engine,
-Chevrolet Blazer,6,9,0,0,0,engine,
+Chevrolet Blazer,6,9,0,0,0,brakes,
 Dodge Dart,6,5,0,0,0,transmission & drivetrain,https://lemonindex.com/cars/dodge-dart/
 Ford E-350,6,0,0,0,0,engine,
 Ford Maverick,6,2,0,0,0,electrical,
@@ -84,7 +84,7 @@ Cadillac Escalade,5,9,0,0,0,engine,
 Chevrolet Trailblazer,5,8,0,0,0,engine,
 Dodge Durango,5,3,0,0,0,lights,https://lemonindex.com/cars/dodge-durango/
 Ford Bronco Sport,5,11,0,0,0,transmission & drivetrain,
-Ford Focus,5,7,0,0,0,"fuel system, gasoline",https://lemonindex.com/cars/ford-focus/
+Ford Focus,5,7,0,0,0,engine,https://lemonindex.com/cars/ford-focus/
 Ford Transit,5,3,0,1,0,electrical,
 GMC Canyon,5,3,0,0,0,engine,
 Infiniti Qx60,5,4,0,0,0,airbags,
@@ -96,12 +96,12 @@ Mazda CX-50,5,0,1,0,1,engine,
 Nissan Frontier,5,2,0,0,0,visibility,https://lemonindex.com/cars/nissan-frontier/
 Nissan Leaf,5,1,0,0,0,electrical,
 Subaru Ascent,5,2,0,0,0,equipment & accessories,https://lemonindex.com/cars/subaru-ascent/
-Toyota Sienna,5,2,0,0,0,transmission & drivetrain,https://lemonindex.com/cars/toyota-sienna/
+Toyota Sienna,5,2,0,0,0,engine,https://lemonindex.com/cars/toyota-sienna/
 Volkswagen ID.4,5,5,0,1,0,electrical,
 Volvo XC60,5,2,0,0,0,electrical,
 Alfa Romeo Stelvio,4,1,0,0,0,fuel or EV drive system,
-BMW 3 Series,4,5,0,1,0,engine,https://lemonindex.com/cars/bmw-3-series/
-Chevrolet Cruze,4,2,0,0,0,seats,https://lemonindex.com/cars/chevrolet-cruze/
+BMW 3 Series,4,5,0,1,0,electrical,https://lemonindex.com/cars/bmw-3-series/
+Chevrolet Cruze,4,2,0,0,0,airbags,https://lemonindex.com/cars/chevrolet-cruze/
 Ford E-450,4,0,0,0,0,engine,
 Ford EcoSport,4,1,0,0,0,engine,https://lemonindex.com/cars/ford-ecosport/
 Ford Mustang,4,4,0,0,0,electrical,https://lemonindex.com/cars/ford-mustang/
@@ -111,14 +111,14 @@ Hyundai IONIQ 5,4,4,0,0,0,electrical,
 Jeep Gladiator,4,1,0,0,0,steering,https://lemonindex.com/cars/jeep-gladiator/
 Kia K4,4,2,1,1,0,electrical,
 Land Rover Range Rover,4,2,0,0,0,electrical,
-Lexus Gx,4,2,0,0,0,seat belts,
+Lexus Gx,4,2,0,0,0,body structure,
 Mazda6,4,0,0,0,1,steering,https://lemonindex.com/cars/mazda6/
 Mercedes-Benz GLK/GLC,4,4,0,0,0,transmission & drivetrain,https://lemonindex.com/cars/mercedes-benz-glk/glc/
 Mercedes-Benz Glb 250,4,0,0,0,0,"doors, locks & latches",
-Nissan Kicks,4,5,0,0,0,electrical,
-Nissan Versa,4,5,1,0,0,electrical,https://lemonindex.com/cars/nissan-versa/
+Nissan Kicks,4,5,0,0,0,brakes,
+Nissan Versa,4,5,1,0,0,airbags,https://lemonindex.com/cars/nissan-versa/
 Ram Promaster,4,6,0,0,0,engine,
-Toyota 4Runner,4,3,1,0,0,visibility,https://lemonindex.com/cars/toyota-4runner/
+Toyota 4Runner,4,3,1,0,0,automatic emergency braking,https://lemonindex.com/cars/toyota-4runner/
 Toyota C-Hr,4,2,0,0,0,transmission & drivetrain,
 Toyota Sienna Hybrid,4,6,0,0,0,seats,
 Toyota Tacoma,4,13,0,0,0,wipers & visibility,https://lemonindex.com/cars/toyota-tacoma/
@@ -126,15 +126,15 @@ Acura Tlx,3,4,0,0,0,engine,
 Audi Q7,3,2,0,0,0,engine,https://lemonindex.com/cars/audi-q7/
 Audi Q8,3,0,0,0,1,electrical,
 BMW X7,3,0,1,0,0,electrical,
-Buick Enclave,3,1,0,0,0,transmission & drivetrain,
+Buick Enclave,3,1,0,0,0,brakes,
 Cadillac Lyriq,3,1,1,0,0,brakes,
-Cadillac Optiq,3,0,0,0,0,electrical,
+Cadillac Optiq,3,0,0,0,0,backup camera,
 Chevrolet Camaro,3,1,0,0,0,electrical,https://lemonindex.com/cars/chevrolet-camaro/
 Chevrolet Volt,3,3,1,0,0,electrical,https://lemonindex.com/cars/chevrolet-volt/
 Dodge Charger EV,3,0,0,0,1,electrical,
-Dodge Hornet,3,3,0,0,0,seat belts,
+Dodge Hornet,3,3,0,0,0,automatic emergency braking,
 Ford Maverick Hybrid,3,7,1,0,0,brakes,
-GMC Terrain,3,7,0,0,0,transmission & drivetrain,https://lemonindex.com/cars/gmc-terrain/
+GMC Terrain,3,7,0,0,0,automatic emergency braking,https://lemonindex.com/cars/gmc-terrain/
 Hyundai Kona,3,5,0,0,0,body structure,https://lemonindex.com/cars/hyundai-kona/
 Hyundai Palisade Hybrid,3,1,0,0,0,brakes,
 Jaguar I-Pace,3,4,0,0,0,electrical,
@@ -143,36 +143,36 @@ Jeep Wagoneer S,3,1,0,0,0,electrical,
 Kia Ev6,3,1,0,1,0,electrical,
 Land Rover Discovery,3,3,0,0,0,electrical,
 Lexus ES,3,4,0,0,0,brakes,https://lemonindex.com/cars/lexus-es/
-Lincoln Aviator,3,2,0,0,0,electrical,
+Lincoln Aviator,3,2,0,0,0,brakes,
 Lincoln Mkz,3,3,0,0,0,steering,
 Lincoln Nautilus,3,4,0,0,0,body structure,
-Mercedes-Benz C-Class,3,3,0,0,0,transmission & drivetrain,https://lemonindex.com/cars/mercedes-benz-c-class/
-Mercedes-Benz Sprinter 2500,3,1,0,0,0,lights,
+Mercedes-Benz C-Class,3,3,0,0,0,brakes,https://lemonindex.com/cars/mercedes-benz-c-class/
+Mercedes-Benz Sprinter 2500,3,1,0,0,0,body structure,
 Mitsubishi Outlander Sport,3,0,0,0,0,engine,
-Nissan Armada,3,1,1,0,0,electrical,
-Nissan Sentra,3,2,1,0,0,fuel or EV drive system,https://lemonindex.com/cars/nissan-sentra/
+Nissan Armada,3,1,1,0,0,airbags,
+Nissan Sentra,3,2,1,0,0,airbags,https://lemonindex.com/cars/nissan-sentra/
 Tesla Cybertruck,3,2,0,0,0,brakes,
-Toyota Sequoia Hybrid,3,1,1,0,1,seat belts,
+Toyota Sequoia Hybrid,3,1,1,0,1,airbags,
 Volkswagen Taos,3,5,0,0,0,airbags,
 Volvo XC90,3,4,0,0,0,electrical,
 Acura Integra,2,2,0,0,0,steering,
 Acura Zdx,2,1,1,0,1,automatic emergency braking,
-Audi A4,2,2,0,0,0,electrical,https://lemonindex.com/cars/audi-a4/
+Audi A4,2,2,0,0,0,automatic emergency braking,https://lemonindex.com/cars/audi-a4/
 BMW X1,2,1,1,0,1,seat belts,https://lemonindex.com/cars/bmw-x1/
-BMW Xm,2,0,0,0,0,suspension,
+BMW Xm,2,0,0,0,0,steering,
 Buick Lacrosse,2,0,0,0,0,electrical,
 Cadillac Vistiq,2,0,0,0,0,seats,
 Cadillac Xt5,2,4,0,0,0,automatic emergency braking,
-Cadillac Xt6,2,2,0,0,0,transmission & drivetrain,
+Cadillac Xt6,2,2,0,0,0,engine,
 Chevrolet Bolt,2,1,0,0,0,automatic emergency braking,https://lemonindex.com/cars/chevrolet-bolt/
 Dodge Charger,2,0,0,0,0,brakes,https://lemonindex.com/cars/dodge-charger/
-Dodge Grand Caravan,2,3,0,0,0,seat belts,https://lemonindex.com/cars/dodge-grand-caravan/
-Ford C-Max,2,4,0,0,0,wipers & visibility,
+Dodge Grand Caravan,2,3,0,0,0,other / i am not sure,https://lemonindex.com/cars/dodge-grand-caravan/
+Ford C-Max,2,4,0,0,0,backup camera,
 Ford Fiesta,2,1,1,0,0,backup camera,https://lemonindex.com/cars/ford-fiesta/
 Genesis Gv80,2,4,0,0,0,fuel or EV drive system,
 Honda Fit,2,3,0,0,0,electrical,https://lemonindex.com/cars/honda-fit/
 Hyundai Accent,2,1,1,0,1,airbags,https://lemonindex.com/cars/hyundai-accent/
-Hyundai Santa Cruz,2,0,0,0,0,transmission & drivetrain,
+Hyundai Santa Cruz,2,0,0,0,0,engine,
 Hyundai Venue,2,0,0,0,0,electrical,
 Infiniti Qx80,2,2,0,0,0,automatic emergency braking,
 Jeep Grand Wagoneer,2,1,1,0,0,electrical,
@@ -185,38 +185,38 @@ Lincoln Mks,2,0,0,0,0,steering,
 Lincoln Navigator,2,5,0,0,1,seat belts,
 Mazda CX-9,2,1,0,0,0,engine,https://lemonindex.com/cars/mazda-cx-9/
 Mazda3,2,1,0,0,0,transmission & drivetrain,https://lemonindex.com/cars/mazda3/
-Mercedes-Benz M/GLE,2,6,1,0,0,automatic emergency braking,https://lemonindex.com/cars/mercedes-benz-m/gle/
+Mercedes-Benz M/GLE,2,6,1,0,0,airbags,https://lemonindex.com/cars/mercedes-benz-m/gle/
 Nissan Ariya,2,1,1,0,0,electrical,
-Nissan Murano,2,2,0,0,0,fuel or EV drive system,https://lemonindex.com/cars/nissan-murano/
-Nissan Titan,2,5,0,0,0,transmission & drivetrain,
+Nissan Murano,2,2,0,0,0,electrical,https://lemonindex.com/cars/nissan-murano/
+Nissan Titan,2,5,0,0,0,airbags,
 Porsche 911,2,0,0,0,0,fuel or EV drive system,
 Ram 5500,2,0,0,1,1,electrical,
-Subaru Legacy,2,2,1,0,0,brakes,https://lemonindex.com/cars/subaru-legacy/
-Tesla Model X,2,4,0,0,0,steering,
-Toyota Fj Cruiser,2,1,0,0,0,suspension,
+Subaru Legacy,2,2,1,0,0,body structure,https://lemonindex.com/cars/subaru-legacy/
+Tesla Model X,2,4,0,0,0,automatic emergency braking,
+Toyota Fj Cruiser,2,1,0,0,0,body structure,
 Toyota RAV4 Plug-In Hybrid,2,0,1,0,1,electrical,
 Toyota Supra,2,0,0,0,0,engine,
 Toyota Venza Hybrid,2,0,0,0,0,steering,
 Unknown Unknown,2,4,1,0,1,body structure,
 Volvo S60,2,2,0,0,0,electrical,
 Volvo Xc60Mhev,2,0,0,0,0,engine,
-Acura Ilx,1,0,0,0,0,electrical,
+Acura Ilx,1,0,0,0,0,brakes,
 Audi A3,1,0,0,0,0,fuel or EV drive system,https://lemonindex.com/cars/audi-a3/
 Audi A6,1,2,0,0,0,electrical,https://lemonindex.com/cars/audi-a6/
 Audi A7,1,0,0,0,0,,
 Audi A8,1,0,0,0,0,electrical,
 Audi E-Tron,1,1,0,0,0,seat belts,
 Audi Q3,1,1,0,0,0,suspension,https://lemonindex.com/cars/audi-q3/
-Audi Q4 E-Tron,1,0,0,0,0,transmission & drivetrain,
-Audi Q6 E-Tron,1,2,0,0,0,electrical,
-Audi Q6 Sportback E-Tron,1,0,0,0,0,electrical,
+Audi Q4 E-Tron,1,0,0,0,0,fuel or EV drive system,
+Audi Q6 E-Tron,1,2,0,0,0,brakes,
+Audi Q6 Sportback E-Tron,1,0,0,0,0,automatic emergency braking,
 BMW 430I,1,2,0,0,0,engine,
 BMW 740I,1,0,0,0,0,body structure,
 BMW 760I,1,0,0,0,0,brakes,
 BMW G310R,1,0,0,0,0,brakes,
 BMW Ix Xdrive60,1,0,0,0,0,wheels,
 BMW X5 Plug-In Hybrid,1,0,0,0,0,engine,
-BMW X6,1,0,0,0,0,wheels,
+BMW X6,1,0,0,0,0,steering,
 BMW Z4,1,1,0,0,0,steering,
 Brinkley Rv Model G,1,0,0,1,0,firerelated,
 Buick Encore,1,1,0,0,0,engine,
@@ -233,26 +233,26 @@ Chevrolet Sonic,1,0,0,0,0,engine,https://lemonindex.com/cars/chevrolet-sonic/
 Chrysler 200,1,2,0,0,0,electrical,https://lemonindex.com/cars/chrysler-200/
 Chrysler 300,1,3,0,0,0,electrical,https://lemonindex.com/cars/chrysler-300/
 Dodge Challenger,1,0,0,0,0,fuel or EV drive system,https://lemonindex.com/cars/dodge-challenger/
-Dodge Journey,1,5,0,0,0,electrical,https://lemonindex.com/cars/dodge-journey/
-Entegra Accolade,1,0,0,0,0,equipment & accessories,
-Fiat 500X,1,0,0,0,0,lights,
+Dodge Journey,1,5,0,0,0,backup camera,https://lemonindex.com/cars/dodge-journey/
+Entegra Accolade,1,0,0,0,0,body structure,
+Fiat 500X,1,0,0,0,0,electrical,
 Ford Crown Victoria,1,0,0,0,0,steering,
 Forest River Cherokee,1,0,0,0,0,tires,
-Forest River Salem,1,0,0,1,0,lights,
+Forest River Salem,1,0,0,1,0,electrical,
 Freightliner Cascadia,1,1,0,0,0,automatic emergency braking,
 GMC Hummer EV SUV,1,1,0,0,0,brakes,
 Genesis G80,1,0,0,0,1,body structure,
 Genesis G90,1,0,0,0,0,airbags,
 Genesis Gv70,1,4,0,0,0,lights,
 Gillig Low Floor,1,0,1,0,1,,
-Harley-Davidson Xl1200C,1,0,0,0,0,engine,
+Harley-Davidson Xl1200C,1,0,0,0,0,brakes,
 Honda Element,1,1,1,0,0,airbags,
-Hyundai IONIQ 9,1,0,0,0,0,transmission & drivetrain,
+Hyundai IONIQ 9,1,0,0,0,0,fuel or EV drive system,
 Hyundai Veloster,1,2,1,0,1,airbags,
 Hyundai Veloster N,1,0,0,0,0,steering,
 Infiniti Ex35,1,0,1,0,0,airbags,
-Infiniti Q50,1,0,0,0,0,fuel or EV drive system,
-Infiniti Q70,1,0,0,0,0,electrical,
+Infiniti Q50,1,0,0,0,0,automatic emergency braking,
+Infiniti Q70,1,0,0,0,0,automatic emergency braking,
 Infiniti Qx50,1,2,0,0,0,engine,
 Infiniti Qx56,1,0,0,0,0,,
 Isuzu N-Series,1,0,0,0,0,brakes,
@@ -261,11 +261,11 @@ Jayco Redhawk,1,0,0,0,0,engine,
 Jeep Commander,1,0,0,0,0,wheels,
 Jeep Grand Wagoneer L,1,0,0,0,0,transmission & drivetrain,
 Jeep Patriot,1,1,0,0,0,engine,https://lemonindex.com/cars/jeep-patriot/
-Jeep Renegade,1,0,0,0,0,seat belts,https://lemonindex.com/cars/jeep-renegade/
+Jeep Renegade,1,0,0,0,0,airbags,https://lemonindex.com/cars/jeep-renegade/
 Kawasaki Ninja 500,1,0,1,0,1,wheels,
 Keystone Hideout,1,0,0,0,0,equipment & accessories,
-Kia Ev9,1,4,0,0,0,lights,
-Kia Forte,1,11,0,0,0,lights,https://lemonindex.com/cars/kia-forte/
+Kia Ev9,1,4,0,0,0,electrical,
+Kia Forte,1,11,0,0,0,electrical,https://lemonindex.com/cars/kia-forte/
 Kia Rio,1,2,0,0,0,,https://lemonindex.com/cars/kia-rio/
 Ktm 790 Adventure R,1,0,0,0,0,suspension,
 Land Rover Discovery Sport,1,0,0,0,0,,
@@ -273,44 +273,44 @@ Land Rover Range Rover Velar,1,0,0,1,0,,
 Lexus Ct,1,1,0,0,0,airbags,
 Lexus IS,1,1,0,0,0,fuel or EV drive system,
 Lexus Lx,1,0,0,0,0,engine,
-Lucid Gravity,1,0,0,0,0,electrical,
-Maserati Quattroporte,1,0,0,0,0,wheels,
-Mazda CX-30,1,1,0,0,0,transmission & drivetrain,
+Lucid Gravity,1,0,0,0,0,brakes,
+Maserati Quattroporte,1,0,0,0,0,suspension,
+Mazda CX-30,1,1,0,0,0,brakes,
 Mercedes Benz Gls 450 4Matic,1,0,0,0,0,,
-Mercedes-Benz CLA,1,0,0,0,0,engine,https://lemonindex.com/cars/mercedes-benz-cla/
+Mercedes-Benz CLA,1,0,0,0,0,brakes,https://lemonindex.com/cars/mercedes-benz-cla/
 Mercedes-Benz E-Class,1,3,1,0,1,airbags,https://lemonindex.com/cars/mercedes-benz-e-class/
 Mercedes-Benz Eqb 300 4Matic,1,1,0,0,0,electrical,
-Mercedes-Benz Eqs 580 4Matic,1,1,0,0,0,lane assist,
-Mercedes-Benz Glb 250 4Matic,1,1,0,0,0,electrical,
+Mercedes-Benz Eqs 580 4Matic,1,1,0,0,0,automatic emergency braking,
+Mercedes-Benz Glb 250 4Matic,1,1,0,0,0,automatic emergency braking,
 Mitsubishi Outlander,1,2,0,0,0,body structure,
 Newmar Dutch Star,1,0,0,0,0,engine,
 Nissan Quest,1,0,0,0,0,transmission & drivetrain,
 Peterbilt 579,1,0,0,0,1,"fuel system, diesel",
 Pleasure Way Ascent,1,0,0,0,0,electrical,
-Polestar Polestar 2,1,0,0,0,0,fuel or EV drive system,
+Polestar Polestar 2,1,0,0,0,0,brakes,
 Pontiac G6,1,2,0,0,0,steering,
-Pontiac Grand Prix,1,1,0,0,0,fuel or EV drive system,
+Pontiac Grand Prix,1,1,0,0,0,electrical,
 Pontiac Solstice,1,0,0,0,0,airbags,
 Porsche Cayenne,1,2,0,0,0,electrical,
 Porsche Macan,1,1,0,0,0,lights,https://lemonindex.com/cars/porsche-macan/
 Rivian R1S,1,1,0,0,0,"chest clip, buckle, harness",
 Rivian R1T,1,3,0,0,0,electrical,
-Scion Xb,1,0,0,0,0,suspension,
+Scion Xb,1,0,0,0,0,body structure,
 Subaru Impreza,1,3,1,0,0,airbags,https://lemonindex.com/cars/subaru-impreza/
 Thor Motor Coach Twist,1,0,0,0,0,,
 Toyota 4Runner I-Force Max Hybrid,1,0,0,0,0,body structure,
 Toyota Corolla Cross,1,0,0,0,0,,
 Toyota bZ4X,1,0,0,0,0,electrical,
-Triumph Speed 400,1,0,0,0,0,fuel or EV drive system,
+Triumph Speed 400,1,0,0,0,0,engine,
 Triumph Street Cup,1,0,0,0,0,electrical,
 Volkswagen Beetle,1,0,0,0,0,electrical,
 Volkswagen Golf,1,2,0,0,0,seat belts,https://lemonindex.com/cars/volkswagen-golf/
 Volkswagen Jetta,1,4,0,0,0,engine,https://lemonindex.com/cars/volkswagen-jetta/
 Volkswagen Tiguan Limited,1,0,1,0,0,airbags,
-Volvo C70,1,1,0,0,0,wheels,
-Volvo EX90,1,0,0,0,0,transmission & drivetrain,
+Volvo C70,1,1,0,0,0,speed control,
+Volvo EX90,1,0,0,0,0,electrical,
 Volvo S90,1,1,0,1,0,engine,
 Volvo V60,1,0,0,0,0,suspension,
-Volvo Xc40,1,1,0,0,0,steering,
+Volvo Xc40,1,1,0,0,0,automatic emergency braking,
 
 "Source: The Lemon Index (lemonindex.com/studies/2026-11/), from NHTSA owner complaints received November 1-9, 2026. Owner reports, not verified defects. CC BY 4.0."
