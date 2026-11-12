@@ -1721,3 +1721,16 @@ article.sce .sce-t ul { margin: 6px 0 8px; padding-left: 20px; } article.sce .sc
 .pg-home > .faq { max-width: 760px; margin: 56px auto 0; }
 @media (max-width: 600px) { .hchips { margin: -10px auto 22px; gap: 6px; } .hchips a { font-size: 13px; padding: 0 11px; min-height: 34px; } }
 .fsug a.fsoon.on { background: #f2f2f4; } .fsug a.fsoon b { color: #6e6e73; }   /* 11-11: a coming-soon match stays gray even when highlighted */
+
+/* 11-11 (Elijah): the tiny black donate bar at the bottom of every page, phones only; never over the menu, the donate sheet or the reminder */
+.donbar { display: none; }
+@media (max-width: 700px) {
+  .donbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; display: flex; align-items: center; justify-content: center; min-height: 44px;
+            padding: 0 44px env(safe-area-inset-bottom) 12px; background: #111; color: #fff; box-shadow: 0 -1px 0 rgba(255,255,255,.08); }
+  .donbar-go { flex: 1; min-height: 44px; padding: 0; border: 0; background: none; color: rgba(255,255,255,.86); font: inherit; font-size: 13.5px; letter-spacing: .01em; cursor: pointer; }
+  .donbar-go b { color: #ffd400; font-weight: 700; }
+  .donbar-x { position: absolute; right: 0; top: 0; width: 44px; height: 44px; border: 0; background: none; color: rgba(255,255,255,.6); font-size: 20px; line-height: 1; cursor: pointer; }
+  .donbar-go:focus-visible, .donbar-x:focus-visible { outline: 2px solid #ffd400; outline-offset: -2px; }
+  html.has-donbar body { padding-bottom: calc(44px + env(safe-area-inset-bottom)); }
+  html.gh-lock .donbar, body:has(.sup:not([hidden])) .donbar, body:has(.nud.on) .donbar { display: none; }
+}

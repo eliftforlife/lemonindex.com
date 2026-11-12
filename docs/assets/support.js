@@ -107,6 +107,19 @@
   const state = () => { let r; try { r = JSON.parse(get(RKEY) || '{}'); } catch { r = {}; } if (r.day !== day) r = { day, ms: 0, n: 0, snooze: r.snooze }; return r; };
   const save = r => set(RKEY, JSON.stringify(r));
 
+  // ---- 11-11 (Elijah: "at the very bottom a little black bar that says donate... stays across the page no matter what page you're on unless you
+  // close it. Tiny."): phones only (CSS), every page except /thanks/ (returned above) and donors (paid). x hides it for 7 days.
+  const DKEY = 'li-donbar-x', DBAR_DAYS = 7;
+  if (!paid() && Date.now() - (+get(DKEY) || 0) >= DBAR_DAYS * 864e5) {
+    const db = document.createElement('div');
+    db.className = 'donbar'; db.setAttribute('role', 'region'); db.setAttribute('aria-label', 'Support the Lemon Index');
+    db.innerHTML = '<button type="button" class="donbar-go">Keep Lemon free &amp; ad-free · <b>Donate&nbsp;›</b></button>'
+      + '<button type="button" class="donbar-x" aria-label="Close the donate bar">×</button>';
+    document.body.appendChild(db); document.documentElement.classList.add('has-donbar');
+    const ga = name => { try { if (window.gtag) gtag('event', name, { page_path: location.pathname }); } catch {} };
+    db.querySelector('.donbar-go').addEventListener('click', () => { ga('donate_bar_click'); show(); });
+    db.querySelector('.donbar-x').addEventListener('click', () => { ga('donate_bar_close'); set(DKEY, String(Date.now())); db.remove(); document.documentElement.classList.remove('has-donbar'); });
+  }
   if (qs.has('support-preview')) return show();
   if (qs.has('nudge-preview')) return nudge();
   // one clock for both: only time with the tab in front counts, so a background tab never pops anything
