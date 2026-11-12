@@ -120,3 +120,43 @@ a.er:hover { background: var(--soft); }
   .tb-modes a[aria-current] { display: none; }
   .tb-modes a { border: 1px solid var(--line); border-radius: 999px; color: var(--ink2); background: #fff; }
 }
+
+/* ---- 11-12 customer tests (Jess, Marcus, Tyler): phone tabs + year-page answers */
+/* tabs: 44 px tap targets */
+.tb-t { min-height: 44px; display: inline-flex; align-items: center; }
+/* the Normal / Advanced switch: its own small row above the tabs, never on the sticky row (it clipped "Recalls & safety") */
+.tb-mrow { display: flex; justify-content: flex-end; margin: 0 auto 6px; }
+.tb-mrow .tb-modes a { min-height: 44px; }
+/* phones: the sticky tab row sits under the sticky header while the header shows, and moves up when the header tucks away */
+@media (max-width: 767px) {
+  .tb-row { top: 48px; transition: top .3s cubic-bezier(.4, 0, .2, 1); }
+  html:has(.gh.tuck) .tb-row { top: 0; }
+  .tb-row { padding: 0 8px 0 12px; }
+  .tb-t { padding: 0 14px; }
+}
+@media (prefers-reduced-motion: reduce) { .tb-row { transition: none; } }
+/* year controls: the icon buttons keep their text labels on phones; the buttons wrap under the year switcher */
+@media (max-width: 640px) {
+  .tbl .tb-hero .tb-ctl { flex-wrap: wrap !important; justify-content: center; row-gap: 10px; }
+  .tbl .tb-hero .tb-ctl .yseg { flex: 1 1 100%; }
+  .tb-acts { flex: 1 1 100%; justify-content: center; flex-wrap: wrap; }
+  .tb-ic { width: auto; padding: 0 12px; height: 44px; }
+  .tb-ic-l { position: static; width: auto; height: auto; overflow: visible; clip: auto; }
+}
+.tb-ic { min-height: 44px; }
+/* buy verdict in the hero */
+.yverd .yvd span { color: var(--ink2, #3a3a3e); }
+.yverd.mid .yvd b { color: #a15c00; }
+/* Overview: when problems show up + questions to ask the seller */
+.ovk { display: grid; gap: clamp(20px, 3vw, 28px); margin-top: clamp(20px, 3vw, 28px); }
+.ovk .yc { max-width: 860px; width: 100%; margin: 0 auto; }
+.ymg-l, .yask-l { margin: 10px 0 8px; padding: 0; display: grid; gap: 8px; }
+.ymg-l { list-style: none; }
+.ymg-l li { display: grid; gap: 2px; padding: 10px 14px; border-radius: 14px; background: #f5f5f7; }
+.ymg-l li b { font-variant-numeric: tabular-nums; }
+.yask-l { padding-left: 1.4em; }
+.yask-l li { padding-left: 4px; line-height: 1.45; }
+/* "How serious": the average car with the same number of complaints, under each count */
+.sv .sv-b { display: block; font-size: 12px; color: var(--mute, #6e6e73); }
+/* short screens (Dan at 1366x768, Linda): a smaller car so the answer sits above the fold */
+@media (max-height: 820px) { .tbl .tb-hero .tb-img .yph img { max-height: 34vh; width: auto; max-width: 100%; } .tbl .tb-hero h1 { margin-top: 4px; } }

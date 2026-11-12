@@ -33,11 +33,15 @@ SEGMENTS = [('Cars', 'Lexus ES 28 · BMW 3 Series 37 · Hyundai Accent 42', 'Tes
             ('SUVs', 'Toyota 4Runner 27 · Porsche Macan 31 · Lexus RX 32', 'Tesla Model X 405 · Tesla Model Y 360 · Jeep Cherokee 307'),
             ('Trucks', 'Nissan Frontier 37 · Toyota Tacoma 44 · Chevrolet Silverado 53', 'Jeep Gladiator 194 · Honda Ridgeline 164 · Ram 1500 119'),
             ('Minivans', 'Toyota Sienna 53', 'Chrysler Pacifica 281 · Chrysler Town & Country 175')]
-FAQ = [('What is the Lemon Index?', 'A car\'s safety complaints filed with the U.S. government (NHTSA) per 100,000 cars sold, compared with the average car from the same model years. 100 is average, 50 means half as many complaints, 300 means three times as many.'),
+# 11-12 (Linda, Priya): ONE sentence for what the index measures, used site-wide. It counts owner complaints; it is not a crash-safety rating.
+WHAT_LI_T = ("The Lemon Index counts owner complaints filed with the U.S. government (NHTSA) in a car's first 3 years, per car sold, "
+             "against the average car of the same model years (100 = average, lower is better). It measures complaints, not crash safety.")
+WHAT_LI = WHAT_LI_T.replace("'", '&#39;')
+FAQ = [('What is the Lemon Index?', WHAT_LI_T + ' 50 means half as many complaints as the average car, 300 means three times as many.'),
        ('What is the most reliable car by owner complaints?', 'The Toyota 4Runner, with a Lemon Index of 27: about a quarter of the complaints of the average car, across 1.27 million sold (model years 2010-2022).'),
        ('Which car brand has the fewest complaints?', 'Lexus, at 30, followed by Porsche (34, small sample), Toyota (50), BMW (52) and Mercedes-Benz (54).'),
        ('Why does Tesla score so badly?', 'Most Model 3 and Model Y complaints are about forward collision avoidance (phantom braking). Tesla doesn\'t publish U.S. sales by model, so its index uses published estimates.'),
-       ('Is this the same as a repair-cost ranking?', 'No. It counts safety complaints filed with the government within 3 years of each model year. It is not a record of repair bills or out-of-warranty costs.')]
+       ('Is this the same as a repair-cost ranking?', 'No. It counts owner complaints filed with the government within 3 years of each model year. It is not a record of repair bills or out-of-warranty costs.')]
 
 # ---- all 131 models for the explorer (copied from 3 Lemon Index/video 1 most reliable/data/out, 10-22)
 PART = {'ELECTRICAL SYSTEM': 'electrical', 'POWER TRAIN': 'transmission & drivetrain', 'SERVICE BRAKES': 'brakes', 'VEHICLE SPEED CONTROL': 'speed control',
@@ -85,6 +89,22 @@ _jl = lambda p: json.load(open(p, encoding='utf-8')) if os.path.exists(p) else N
 _slg = lambda s: re.sub(r'[^a-z0-9]+', '-', s.lower().replace("'", '')).strip('-')
 SCX = _jl('data/supercars.json') or []
 EVX = (_jl('data/ev.json') or {}).get('cars', [])
+# 11-12 (Priya, Dan: "Model S 430 here, 679 there"): two windows, always labelled. The main Lemon Index scores each model's own model years
+# (data/family_rates.csv 'years') with complaints from each car's first 3 years; the EV ranking (data/ev.json) scores model years
+# EV_WIN with complaints filed by the end of the year after the model year (so brand-new EVs get a complete window).
+EV_WIN = (lambda y: f'{y[0]}–{y[1]}')((_jl('data/ev.json') or {}).get('years') or [2021, 2024])
+EVBY = {c['slug']: c for c in EVX}
+MAINBY = {c['id']: c for c in CARS}
+YRS = lambda c: c['years'].replace('-', '–')   # a model's main-score window, e.g. 2012–2020
+def two_windows(slug, here='main'):
+    """One sentence naming both scores of a car that has both, each with its window ('' if it has only one)."""
+    e, m = EVBY.get(slug), MAINBY.get(slug)
+    if not e or not m: return ''
+    a = f'Lemon Index <b>{m["li"]}</b> for model years {YRS(m)} (complaints in each car&#39;s first 3 years)'
+    b = f'EV score <b>{e["li"]}</b> for model years {e["years"].replace("-", "–")} (complaints filed by the end of the year after the model year)'
+    return (f'Two scores, two windows: {a if here == "main" else b} on this page; {b if here == "main" else a} on '
+            + (f'<a href="/electric/{slug}/">its EV page</a>' if here == 'main' else f'<a href="/cars/{slug}/">its main page</a>' if slug in {f["id"] for f in _YJ} else 'the main rankings')
+            + '. Different model years and windows, so the numbers differ.')
 PERFX = _jl('data/perf_cars.json') or []   # the performance list (another agent researches it); empty = the tab shows "Coming soon"
 if isinstance(PERFX, dict): PERFX = PERFX.get('cars', [])
 _bk = {b.lower(): b for b in PICK}
@@ -314,8 +334,20 @@ DONBAR = ('<div class="donbar" role="region" aria-label="Support the Lemon Index
 DB_JS = "try{var n=Date.now(),g=function(k){return +localStorage.getItem(k)||0};if(n-g('li-donbar-x')<6048e5||n-g('li-support-paid')<5184e6)document.documentElement.className+=' db-off'}catch(e){}"
 import base64 as _b64
 DB_HASH = 'sha256-' + _b64.b64encode(hashlib.sha256(DB_JS.encode('utf-8')).digest()).decode()
+# 11-12 (Marcus: "Iâm"): some NHTSA complaint texts lost the middle bytes of a curly quote (UTF-8 ’ read as Latin-1, then the
+# unprintable bytes dropped), leaving a lone "â". Repaired on every page before it's written, with patterns narrow enough that a real "â"
+# (Château, São) is left alone.
+_MJ = [(re.compile('â�'), '”'), (re.compile('â(?:\u0080\u0099|€™)'), '’'), (re.compile('â(?:\u0080\u009c|€œ)'), '“'),
+       (re.compile('â(?:\u0080\u009d|€\u009d)'), '”'), (re.compile('â¢'), '•'), (re.compile('â¦'), '…'),
+       (re.compile(r"(?<=[A-Za-z])â(?=(?:s|t|m|d|ll|re|ve)\b)"), '’'), (re.compile(r"(?<=[\s>(\"])â(?=[A-Za-z])"), '“'),
+       (re.compile(r"(?<=[A-Za-z.,!?])â(?=[\s<,.)])"), '”')]
+def fix_moji(t):
+    if 'â' not in t: return t
+    for rx, to in _MJ: t = rx.sub(to, t)
+    return t
 def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, vis='', canon=None):
     title, desc = fit_title(title), fit_desc(desc)
+    body, desc = fix_moji(body), fix_moji(desc)
     _tm = re.match(r'^/cars/(.+?)/(?:(\d{4})/)?$', path)   # lazy, so slash ids ('mercedes-benz-glk/glc') match too
     if _tm and (_tm.group(1) in TAB.ON or _tm.group(1) in globals().get('FY', {})) and 'tab_body' in globals(): body = tab_body(_tm.group(1), int(_tm.group(2)) if _tm.group(2) else None, body)
     if 'class="advp"' in body and path.startswith(('/cars/', '/motorcycles/', '/planes/')) and 'adv_body' in globals(): body = adv_body(path, body)   # 11-10: the other template
@@ -342,7 +374,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}{img or "/assets/og.png"}"><meta name="twitter:card" content="summary_large_image">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' '{DB_HASH}' https://static.cloudflareinsights.com https://challenges.cloudflare.com https://www.googletagmanager.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; frame-src https://challenges.cloudflare.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cloudflareinsights.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://vpic.nhtsa.dot.gov https://lemon-survey.elift08.workers.dev https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="google-adsense-account" content="{ADS}"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=1110-1112as"><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
+<link rel="stylesheet" href="/assets/site.css?v=1110-1112uxb3"><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
 <body>{'' if path.startswith('/thanks/') else DONBAR}{gh_header(path)}
 <main>{body}{end_block(path, _upd, _shl)}{'' if path == '/vote/' else ask_html(path)}</main>
 <footer class="foot f2"><div class="f2-in"><div class="f2-brand"><a class="f2-logo" href="/"><img src="/assets/icon-64.png" alt="" width="28" height="28">The Lemon Index</a>
@@ -564,15 +596,15 @@ HOME_PAGE = dict(title="Lemon Index (LemonIndex): Look Up Any Car's Problems by 
                      {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in FAQ]}])
 
 # ---- study
-page(STUDY, 'The Most Reliable Cars, According to 1.6 Million Owner Complaints', 'The most and least reliable cars and brands in the U.S., ranked by NHTSA safety complaints per 100,000 sold. Toyota 4Runner 26, Lexus 30, Tesla 322 (est.).', f'''
+page(STUDY, 'The Most Reliable Cars, According to 1.6 Million Owner Complaints', 'The most and least reliable cars and brands in the U.S., ranked by NHTSA owner complaints per 100,000 sold. Toyota 4Runner 26, Lexus 30, Tesla 322 (est.).', f'''
 <article class="study"><p class="kicker">Study #1 · {TODAY}</p><h1>The Most Reliable Cars, According to 1.6 Million Owner Complaints</h1>
 <p class="lede">The Toyota 4Runner drew about a quarter of the complaints of the average car. The Tesla Model S drew more than four times as many. Here's every number.</p><p>{share_btn("The most reliable cars, ranked by 1.6 million owner complaints. The 4Runner drew a quarter of the average car's:")}</p>
 <div class="stats"><div><b>1,607,537</b><span>complaints in NHTSA's file since 1995</span></div><div><b>{COUNTED:,}</b><span>counted: filed within 3 years of a 2010-2022 model year</span></div><div><b>131</b><span>models ranked</span></div><div><b>22</b><span>brands</span></div><div><b>2010-2022</b><span>model years</span></div></div>
-<p class="sub">How to read it: the Lemon Index compares a car's safety complaints per car sold with the average car of the same model years. <b>100 is average.</b> 26 means about a quarter of the average car's complaints; 430 means 4.3 times as many.</p>
+<p class="sub">How to read it: the Lemon Index compares a car's owner complaints per car sold with the average car of the same model years. <b>100 is average.</b> 26 means about a quarter of the average car's complaints; 430 means 4.3 times as many.</p>
 <div class="stack"><div><h2>Most reliable: the top 10</h2><div class="tw"><table><thead><tr><th>#</th><th>Model</th><th>Index</th><th>Compared with average</th><th>Sold in the U.S.</th></tr></thead><tbody>{best_rows}</tbody></table></div>
-<p class="note">What it means for you: a long-running model with a low index is the safest bet. Most of this list has been on sale, mostly unchanged, for a decade. Sold = U.S. sales across 2010-2022.</p></div>
+<p class="note">What it means for you: a long-running model with a low index is the surest bet. Most of this list has been on sale, mostly unchanged, for a decade. Sold = U.S. sales across 2010-2022.</p></div>
 <div><h2>Least reliable: the bottom 10</h2><div class="tw"><table><thead><tr><th>Model</th><th>Index</th><th>Compared with average</th><th>Top complaint (share of its complaints)</th></tr></thead><tbody>{worst_rows}</tbody></table></div>
-<p class="note">What it means for you: one part can sink a car. Check the top complaint for the exact model year before you buy. * Tesla uses published sales estimates.</p></div></div>
+<p class="note">What it means for you: one part can sink a car. Check the top complaint for the exact model year before you buy. * Tesla uses published sales estimates. Each score covers that model&#39;s own model years (shown in the table) with complaints from each car&#39;s first 3 years. The <a href="/electric/">EV ranking</a> scores model years {EV_WIN} with a shorter window, so an EV can show two numbers{(lambda m, e: f' (Tesla Model S: {m} here, {e} there)' if m and e else '')(MAINBY.get('tesla-model-s', {}).get('li'), EVBY.get('tesla-model-s', {}).get('li'))}.</p></div></div>
 <h2>Brands, best to worst</h2>{bars(BRANDS, 330, "two")}<p class="note"><a href="/cars/">Look up any of the {len(CARS)} models by year →</a></p>
 <h2>Best and worst by type</h2><div class="tw"><table><thead><tr><th>Type</th><th>Best</th><th>Worst</th></tr></thead><tbody>{seg_rows}</tbody></table></div>
 <h2>Three patterns in the data</h2>
@@ -604,25 +636,25 @@ SEARCH_MINI = ('<section class="csearch mini" aria-label="Engine code search"><f
 CODES_JS = '<script src="/assets/codes.js?v=2" defer></script>'
 def faq_ld(qa): return {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": t}} for q, _, t in qa]}
 METHOD_QA = [('Is it per car sold?', "Yes. Every score divides a car's complaints by how many were sold in the U.S. So Ford outselling Chevy doesn't make Ford look worse; a car only scores badly if it drew more complaints for each car on the road."), ("Isn't it just owners who skip maintenance?", "We only count complaints filed in a car's first 3 years, when it's nearly new and usually still under the factory warranty. That points at problems the car left the factory with, not a 15-year-old car that missed its oil changes."), ('Does it tell me how long a car will last?', "No. It measures early complaints, not lifespan. A truck can draw a lot of complaints in its first years and still run past 300,000 miles. Use it to see which years had problems, then check the car's own history."), ('Why so few complaints for a problem everyone knows about?', "Most owners never file with the government; they just go to a mechanic. So the counts are a small slice of real failures. That's fine for comparing cars, because every car is measured the same way, but don't read a count as the number of cars that broke."), ('Can you split it by engine or trim?', 'The government files list make, model and year, not the engine. Where the model name gives the engine away (BMW files the 328i and 335i separately, for example), we can split by it. Otherwise a score covers every engine sold that year.')]
-page('/method/', 'Method: How We Score Car Reliability | The Lemon Index', 'How we turn NHTSA safety complaints and U.S. sales into one reliability number per car, plus the caveats that come with it.', '''
-<div class="pg">''' + phero('How it works', 'One number per car.', 'Owner complaints per car sold, against the average car.') + '''<article class="study"><div class="hw"><div><b>1</b><h3>Count complaints</h3><p>Every safety complaint owners filed with the U.S. government (NHTSA) in the car&#39;s first 3 years.</p></div>
+page('/method/', 'Method: How We Score Car Reliability | The Lemon Index', 'How we turn NHTSA owner complaints and U.S. sales into one reliability number per car, plus the caveats that come with it.', '''
+<div class="pg">''' + phero('How it works', 'One number per car.', 'Owner complaints per car sold, against the average car.') + '''<article class="study"><div class="hw"><div><b>1</b><h3>Count complaints</h3><p>Every complaint owners filed with the U.S. government (NHTSA) in the car&#39;s first 3 years.</p></div>
 <div><b>2</b><h3>Divide by cars sold</h3><p>So a car that sold a million doesn&#39;t look worse than one that sold ten thousand.</p></div>
 <div><b>3</b><h3>Compare with the average car</h3><p>100 = average. 50 = half the complaints. 200 = double.</p></div></div>
 <div class="hwm"><div class="ym-bar"><i class="ym-avg" style="left:40%"><span>average car = 100</span></i><i class="ym-pin" style="left:12%"><b>30: great</b></i><i class="ym-pin" style="left:80%"><b>200: lemon</b></i></div><div class="ym-ends"><span>fewer complaints</span><span>more complaints</span></div></div>
 <p><a class="btn" href="/cars/">Look up your car</a></p>
-<details class="yd"><summary>The details</summary><ol class="beats"><li><b>Complaints:</b> the full NHTSA owner-complaint file (1,607,537 vehicle complaints, 1995 to October 2026).</li>
+<details class="yd"><summary>The details</summary><ol class="beats"><li><b>Complaints:</b> the full NHTSA owner-complaint file (1,607,537 vehicle complaints, 1995 to October 2026; <a href="/data/#totals">why our totals differ</a>).</li>
 <li><b>Sales:</b> U.S. sales per model per year from automakers' published figures. Tesla doesn't report by model, so we use published estimates and say so.</li>
 <li><b>Same window for every car:</b> a complaint counts only if it was filed within 3 years of the model year.</li>
 <li><b>Rate:</b> complaints per 100,000 cars sold, matched model year to sales year. When a new model's first cars sold the calendar year before its model year, those sales are counted with the first model year.</li>
 <li><b>Index:</b> each car's rate against the average car of the same model years.</li></ol></details>
-<h2>What it doesn't measure</h2><p>A complaint is a safety complaint filed with the government, not a repair record. Fleet and rental-heavy models have fewer owners filing. Luxury lessees often go straight to the dealer. Some owners file more readily than others. Read it as early-life safety complaints, not total cost of ownership.</p>
+<h2>What it doesn't measure</h2><p>It isn&#39;t a crash-safety rating: each year page shows NHTSA&#39;s crash-test stars separately. A complaint is an owner&#39;s report to the government, not a repair record. Fleet and rental-heavy models have fewer owners filing. Luxury lessees often go straight to the dealer. Some owners file more readily than others. Read it as early-life owner complaints, not total cost of ownership.</p>
 <details class="yd"><summary>Also on every car page</summary><ul><li><b>Recalls:</b> every NHTSA safety recall campaign for that model year (NHTSA recalls API).</li>
 <li><b>Crash tests:</b> NHTSA 5-star safety ratings for each body style tested (model years 2011 on).</li>
 <li><b>Fuel economy:</b> EPA combined mpg and yearly fuel cost from fueleconomy.gov, across the versions sold that year.</li>
 <li><b>When problems show up:</b> the odometer reading owners gave in their complaints. Unlike the score, this uses every complaint for the model year, because high-mileage failures come years later. Readings of 0 or over 400,000 miles are left out.</li>
 <li><b>How serious:</b> complaints in which the owner reported a crash, a fire, an injury, a death or a tow. Owners report these; NHTSA doesn&#39;t confirm the cause.</li></ul></details>
 <h2>What people ask</h2>''' + qa_fold('''<h3>Is it per car sold?</h3><p>Yes. Every score divides a car&#39;s complaints by how many were sold in the U.S. So Ford outselling Chevy doesn&#39;t make Ford look worse; a car only scores badly if it drew more complaints for each car on the road.</p><h3>Isn&#39;t it just owners who skip maintenance?</h3><p>We only count complaints filed in a car&#39;s first 3 years, when it&#39;s nearly new and usually still under the factory warranty. That points at problems the car left the factory with, not a 15-year-old car that missed its oil changes.</p><h3>Does it tell me how long a car will last?</h3><p>No. It measures early complaints, not lifespan. A truck can draw a lot of complaints in its first years and still run past 300,000 miles. Use it to see which years had problems, then check the car&#39;s own history.</p><h3>Why so few complaints for a problem everyone knows about?</h3><p>Most owners never file with the government; they just go to a mechanic. So the counts are a small slice of real failures. That&#39;s fine for comparing cars, because every car is measured the same way, but don&#39;t read a count as the number of cars that broke.</p><h3>Can you split it by engine or trim?</h3><p>The government files list make, model and year, not the engine. Where the model name gives the engine away (BMW files the 328i and 335i separately, for example), we can split by it. Otherwise a score covers every engine sold that year.</p>''') + '''<h2>Using the data</h2><p>Free to cite with a link to lemonindex.com (CC BY 4.0). <a href="/data/">Download it</a>.</p></article></div>''',
-     ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": "How We Score Car Reliability", "url": BASE + '/method/', "about": "Car reliability measured as NHTSA safety complaints per 100,000 U.S. sales"}, faq_ld([(q, '', a) for q, a in METHOD_QA])])
+     ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": "How We Score Car Reliability", "url": BASE + '/method/', "about": "Car reliability measured as NHTSA owner complaints per 100,000 U.S. sales"}, faq_ld([(q, '', a) for q, a in METHOD_QA])])
 
 # ---- model-year lookup (10-29, Elijah: "a per year / model lookup so people can look at their car's exact issues").
 # data/years.json comes from data_years.py: per family and model year the index, complaints, sold, top problem areas and up to 3 owner complaints.
@@ -646,6 +678,12 @@ XL, XA = _load('data/extras_local.json'), _load('data/extras_api.json')
 if os.path.exists('data/extras_local_new.json'): XL.update(_load('data/extras_local_new.json')); XA.update(_load('data/extras_api_new.json'))   # 11-11 new models
 for _src, _dst in (('data/extras_local_low.json', XL), ('data/extras_api_low.json', XA)):   # 11-11 the study models' low-sales years
     for _fid, _ys in _load(_src).items(): _dst.setdefault(_fid, {}).update(_ys)
+# 11-12 (Jess: "38 crashes, 4 fires" needs a baseline): how often a complaint mentions a crash / injury / fire / tow across every model year we track
+_SV = defaultdict(int)
+for _ys in XL.values():
+    for _x in _ys.values():
+        for _k, _n in ((_x or {}).get('sev') or {}).items(): _SV[_k] += _n
+SEVR = {k: _SV[k] / _SV['total'] for k in ('crash', 'injured', 'fire', 'towed')} if _SV['total'] else {}
 def extra(fid, y):
     d = dict(XL.get(fid, {}).get(str(y), {})); d.update(XA.get(fid, {}).get(str(y), {}) or {}); return d
 # ---- 11-04 YouTube videos (data_yt.py): what owners/buyers watch most, by views, with the top video for each topic. Mobile first:
@@ -847,7 +885,7 @@ def yt_note(f):
 # people search "Mercedes C-Class reliability", so the model page opens with that question, a plain answer and a 3-tile scorecard.
 # YouTube scores climb with newer model years for every car (old cars = repair videos), so each year is compared with the median
 # of every car of the SAME model year (>= 10 videos). Model rank = video-weighted average of those gaps. It measures how positively
-# owners and reviewers talk, not a failure rate, and the page says so. "Safest year" = the year complaints and YouTube agree on most.
+# owners and reviewers talk, not a failure rate, and the page says so. (11-12: the recommended year is the one with the fewest complaints, see rec_year.)
 def _yt_base():
     by = defaultdict(list)
     for d in YTS.values():
@@ -866,19 +904,12 @@ def _yt_rank():
     order = sorted(m, key=lambda k: -m[k][0])
     return {fid: (i + 1, len(order), m[fid][1]) for i, fid in enumerate(order)}
 YTR = _yt_rank()
-def safest_year(fid, sc):
-    """The scored year that complaints (lower Lemon Index) and YouTube (vs. same-age cars) rank best together; None without YouTube data."""
-    a = yt_adj(fid); both = [v for v in sc if v['y'] in a and v['li'] <= 110]   # a year with more complaints than average is never the safest
-    if len(both) < 3: return None
-    pc = {v['y']: i / (len(both) - 1) for i, v in enumerate(sorted(both, key=lambda v: v['li']))}
-    py = {v['y']: i / (len(both) - 1) for i, v in enumerate(sorted(both, key=lambda v: -a[v['y']]))}
-    return min(both, key=lambda v: (pc[v['y']] + py[v['y']], v['li']))
-def rel_answer(f, c, snm, best, bad3, sy):
+def rel_answer(f, c, snm, rec, kind, avoid):
     """('Yes.', one plain sentence) for 'Is the <car> reliable?', from complaints first, YouTube second."""
     li = c['li']
     word = 'Yes, very.' if li < 50 else 'Yes.' if li < 85 else 'About average.' if li <= 115 else 'Not really.'
     _r = YTR.get(f['id'])
-    if _r and li <= 115:   # NHTSA counts safety complaints only; when YouTube owners clearly disagree, don't oversell
+    if _r and li <= 115:   # NHTSA counts complaints only; when YouTube owners clearly disagree, don't oversell
         top, low = _r[0] <= _r[1] / 3, _r[0] > _r[1] * 2 / 3
         word = ('Mostly.' if li < 85 else 'It&#39;s mixed.') if low else ('Yes, very.' if li < 50 and top else 'Yes.' if li < 85 else 'Mostly.' if top else word)
     comp = (f'It draws {plain(li)}' if li < 90 else 'It draws about as many complaints as the average car' if li <= 110
@@ -889,23 +920,23 @@ def rel_answer(f, c, snm, best, bad3, sy):
         if rk <= n / 3: yt = (', and' if good_c else ', but') + ' YouTube owners sound happier with it than with most cars its age'
         elif rk > n * 2 / 3: yt = (', but' if good_c else ', and') + ' YouTube owners complain about it more than about most cars its age'
         else: yt = ', and YouTube owners rate it about average for its age'
-    pick = sy or best; av = sorted(v['y'] for v in bad3 if v['y'] != pick['y'])
     AND = lambda xs: ', '.join(map(str, xs[:-1])) + (' and ' if len(xs) > 1 else '') + str(xs[-1])
-    if pick['li'] > 110: tail = f'. Even its best year, <b>{pick["y"]}</b>, draws more complaints than average.'
-    else: tail = f'. {"Safest" if sy else "Best"} year: <b>{pick["y"]}</b>.'
-    if av: tail += f' Avoid <b>{AND(av)}</b>.'
+    tail = '.'
+    if rec and kind == 'least': tail = f'. No year beat the average car. The year with the fewest complaints, <b>{rec["y"]}</b>, still drew {x_avg(rec["li"])} the average.'
+    elif rec: tail = f'. Fewest complaints: <b>{rec["y"]}</b>.'
+    av = sorted(v['y'] for v in avoid if not rec or v['y'] != rec['y'])[:3] if len(scored(f)) >= LIST_MIN else []
+    if av: tail += f' Most complaints: <b>{AND(av)}</b>.'
     return word, comp + yt + tail
-def rel_top(f, c, snm, ys, sc, best, worst, bad3):
-    sy = safest_year(f['id'], sc); word, ans = rel_answer(f, c, snm, best, bad3, sy)
-    vc, vw = verdict(c['li']); tiles = [f'<div class="rs {vc}"><small>Owner complaints</small><b>{E(vw)}</b><span>Lemon Index {c["li"]} · 100 = average car</span></div>']
+def rel_top(f, c, snm, ys, sc, rec, kind, worst, avoid):
+    word, ans = rel_answer(f, c, snm, rec, kind, avoid)
+    vc, vw = verdict(c['li']); tiles = [f'<div class="rs {vc}"><small>Owner complaints</small><b>{E(vw)}</b><span>Lemon Index {c["li"]} · {E(c["years"].replace("-", "–"))} · 100 = average</span></div>']
     r = YTR.get(f['id'])
     if r:
         rk, n, vids = r; cl = 'good' if rk <= n / 3 else 'bad' if rk > n * 2 / 3 else 'mid'
         tiles.append(f'<div class="rs {cl}"><small>YouTube owners</small><b>#{rk} <i>of {n}</i></b><span>vs. cars the same age · {vids:,} videos</span></div>')
-    if sy: tiles.append(f'<a class="rs good" href="{CARU(f, sy["y"])}"><small>Safest year</small><b>{sy["y"]}</b><span>complaints and YouTube agree</span></a>')
-    elif best['li'] <= 110: tiles.append(f'<a class="rs good" href="{CARU(f, best["y"])}"><small>Best year</small><b>{best["y"]}</b><span>fewest complaints per car sold</span></a>')
-    else: tiles.append(f'<a class="rs" href="{CARU(f, best["y"])}"><small>Least bad year</small><b>{best["y"]}</b><span>{E(short(best["li"]))}</span></a>')
-    if not r: tiles.append(f'<a class="rs bad" href="{CARU(f, worst["y"])}"><small>Worst year</small><b>{worst["y"]}</b><span>{E(short(worst["li"]))}</span></a>' if worst['li'] > 110 else
+    if rec and kind == 'good': tiles.append(f'<a class="rs good rs-rec" href="{CARU(f, rec["y"])}"><small>Fewest complaints</small><b>{rec["y"]}</b><span>{E(short(rec["li"]))} · fewest per car sold</span></a>')
+    elif rec: tiles.append(f'<a class="rs rs-rec" href="{CARU(f, rec["y"])}"><small>Fewest complaints</small><b>{rec["y"]}</b><span>{E(short(rec["li"]))}: no year beat the average car</span></a>')
+    if not r: tiles.append(f'<a class="rs bad" href="{CARU(f, worst["y"])}"><small>Most complaints</small><b>{worst["y"]}</b><span>{E(short(worst["li"]))}</span></a>' if worst and worst['li'] > 110 and (not rec or worst['y'] != rec['y']) else
                            f'<div class="rs"><small>Years to avoid</small><b>None</b><span>no year far above average</span></div>')
     a = yt_adj(f['id']); last = max(v['y'] for v in sc); new = sorted((y for y in a if y > last), key=lambda y: -a[y])
     newer = (f'<p class="rs-new">Looking at a {min(new)} or newer? Those are too new for complaint data, but YouTube owners like the <a href="#years">{new[0]}</a> best.</p>'
@@ -954,7 +985,7 @@ def timeline(m, comps):
     top = ''.join(f'<li><b>{E(NICE(c[0]))}</b> complaints mostly came at <b>{c[2] // 1000}K–{c[3] // 1000}K</b> miles</li>' for c in cc)
     return (f'<section class="yc"><h2>When owners reported problems. <span class="h2s">From owner complaints to the government.</span></h2><div class="tl"><div class="tl-bar"><i class="tl-band" style="left:{P(m["p25"])};width:calc({P(m["p75"])} - {P(m["p25"])})"></i>'
             f'<i class="tl-mid" style="left:{P(m["median"])}"><b>half by {m["median"] // 1000}K</b></i></div><div class="tl-ticks">{ticks}</div></div>'
-            f'<p class="yc-cap">Most owners who filed a complaint with NHTSA had <b>{m["p25"] // 1000}K to {m["p75"] // 1000}K miles</b> on the car ({m["n"]:,} complaints listed the miles). This shows when people who had a problem reported it, not the odds that your car will have it.</p>'
+            f'<p class="yc-cap">Most owners who filed a complaint with NHTSA had <b>{m["p25"] // 1000}K to {m["p75"] // 1000}K miles</b> on the car ({m["n"]:,} of the complaints filed so far listed the miles). This shows when people who had a problem reported it, not the odds that your car will have it.</p>'
             + (f'<ul class="tl-top">{top}</ul>' if top else '') + '</section>')
 X2 = _load('data/extras2.json'); X2.update(_load('data/extras2_new.json'))   # 11-11 new models: repair notes, investigations, safety tech
 TR = _load('data/trans.json')   # transmission complaints per model-year (data_trans.py)
@@ -1002,7 +1033,140 @@ def clean_tsb(t):
     if len(t) < 12: return None
     t = t[0].upper() + t[1:]
     return (t[:95].rsplit(' ', 1)[0] + '…') if len(t) > 97 else t
-MAKER = lambda name: name.split(' ')[0].replace('Chevrolet', 'Chevy')
+MAKER = lambda name: (BYNAME[name]['brand'] if name in BYNAME else name.split(' ')[0]).replace('Chevrolet', 'Chevy')   # 11-12: the brand, not the first word ("Mazda3 sent dealers")
+# ---- 11-12 (6 customer tests, Elijah: fix them all): ONE recommended year per car, picked the same way on the model page, every year page,
+# the Q&A, the compare pages and the Overview cards. It's the year with the FEWEST OWNER COMPLAINTS per car sold (never called "safest":
+# the index counts complaints, it isn't a crash-safety rating). Pre-2010 scores are rough, so 2010+ years are used when the model has any.
+# A year is only "good" at or under the average car (110). A model with no such year gets a "least bad" year, which is never worse than
+# the model's own average. Best and avoid lists can't overlap, and both hide when fewer than 5 years are scored.
+LIST_MIN = 5
+def scored(f): return [v for v in f['years'] if v['ok'] and not v.get('early')]
+def year_pool(f):
+    sc = scored(f); p = [v for v in sc if v['y'] >= 2010]
+    return p or sc
+def model_li(f): c = BYNAME.get(f['name']); return c['li'] if c else None
+def good_years(f): return sorted([v for v in year_pool(f) if v['li'] <= 110], key=lambda v: (v['li'], -v['y']))
+def avoid_years(f):
+    """Years far above the average car AND above the model's own average (so a weak model's least-bad year never shows as one to avoid)."""
+    cut = max(110, model_li(f) or 0) if not good_years(f) else 110
+    return sorted([v for v in year_pool(f) if v['li'] > cut], key=lambda v: -v['li'])
+def rec_year(f):
+    """(year dict, 'good' | 'least') or (None, None): the one year the site recommends for this model."""
+    g = good_years(f)
+    if g: return g[0], 'good'
+    mli = model_li(f); lb = [v for v in year_pool(f) if mli is None or v['li'] <= mli]
+    return (min(lb, key=lambda v: (v['li'], -v['y'])), 'least') if lb else (None, None)
+def worst_year(f): p = year_pool(f); return max(p, key=lambda v: v['li']) if p else None
+def popular_year(f):
+    """11-12 (Jess: the CR-V page opened on 2001): the model page opens on a popular USED year: the best seller among cars 5-11 years old."""
+    ty = int(TODAY[:4]); ys = [v for v in f['years'] if v.get('sold')]
+    win = [v for v in ys if ty - 11 <= v['y'] <= ty - 5]
+    if win: return max(win, key=lambda v: v['sold'])['y']
+    pool = ys or f['years']; return min(pool, key=lambda v: (abs(v['y'] - (ty - 8)), -v['y']))['y'] if pool else None
+def ok_pick(f, v):
+    """May this year be suggested as a better buy? Good years (<= 110); for a model with no good year, years at or under the model's own average."""
+    if v['li'] <= 110: return True
+    mli = model_li(f); return not good_years(f) and mli is not None and v['li'] <= mli
+def gen_of(f, y): return ((YSL.AIY.get(f['id']) or {}).get(str(y)) or {}).get('gen')
+def near_pick(f, y):
+    """The better buy for someone looking at year y: the lowest-complaint year within 3 model years (same generation when we know it).
+    Returns (year dict, 'near') / (this year's dict, 'self') when y is already the best nearby / (model's rec year, 'model') / (None, None)."""
+    cur = next((v for v in f['years'] if v['y'] == y), None)
+    cand = [v for v in scored(f) if abs(v['y'] - y) <= 3 and ok_pick(f, v)]
+    g = gen_of(f, y); same = [v for v in cand if g and gen_of(f, v['y']) == g]
+    pool = same or cand
+    if pool:
+        b = min(pool, key=lambda v: (v['li'], abs(v['y'] - y)))
+        if cur and cur['ok'] and not cur.get('early') and b['y'] != y and cur['li'] <= b['li']: b = cur
+        if b['y'] == y: return b, 'self'
+        if not (cur and cur['ok']) or b['li'] < cur['li']: return b, 'near'
+    r, _ = rec_year(f)
+    if r and r['y'] != y and (not (cur and cur['ok']) or r['li'] < cur['li']): return r, 'model'
+    return None, None
+def x_avg(mli): return f'{mli / 100:.1f}×'.replace('.0×', '×')
+def model_context(f, v, y):
+    """'A good year of a weak model' (or the reverse), in one plain sentence; '' when the year and its model agree."""
+    mli = model_li(f)
+    if not v['ok'] or mli is None: return ''
+    if v['li'] <= 110 and mli > 130: return f'{y} is one of the better years of a model that draws {x_avg(mli)} the average car&#39;s complaints.'
+    if v['li'] > 130 and mli < 90: return f'{y} is one of the weaker years of a model that usually draws {plain(mli)}.'
+    return ''
+def buy_verdict(f, v, y):
+    """('good' | 'mid' | 'bad', 'Worth a look' | 'Shop carefully' | 'Avoid', reason) from the year's score and tier; None when unscored."""
+    if not v['ok']: return None
+    li = v['li']
+    cl, lab = ('good', 'Worth a look') if li <= 115 else ('mid', 'Shop carefully') if li < 200 else ('bad', 'Avoid')
+    why = f'It drew {"about the average car&#39;s complaints" if 90 <= li <= 110 else plain(li)}' + (' so far' if v.get('early') else ' in its first 3 years')
+    if v['parts']: why += f', most about {NICE(v["parts"][0][0])}'
+    why += '.'
+    ctx = model_context(f, v, y)
+    return cl, lab, why + (' ' + ctx if ctx else '')
+def _mgroups(lines):
+    """[(60000, t), (100000, t), (150000, u)] -> [([60000, 100000], t), ([150000], u)]: one row per distinct meaning."""
+    out = []
+    for k, t in lines:
+        if out and out[-1][1] == t: out[-1][0].append(k)
+        else: out.append(([k], t))
+    return out
+def _kl(ks): ks = [f'{k // 1000}K' for k in ks]; return ks[0] if len(ks) == 1 else ', '.join(ks[:-1]) + ' and ' + ks[-1]
+def _mi_r(n): return f'{int(round(n, -3)):,}' if n >= 10000 else f'{int(round(n, -2)):,}' if n >= 1000 else f'{int(n):,}'
+def mileage_guide(x):
+    """'Most problems on this year show up around X-Y miles' + what that means at 60K / 100K / 150K, from the mileage owners typed into
+    their complaints. None of it is a prediction for one car. Returns ((headline, [(miles, meaning)]), '') or (None, why there's no answer)."""
+    m = x.get('miles')
+    if not m: return None, 'No complaints for this year listed a mileage, so we can&#39;t say when problems show up.'
+    if m.get('n', 0) < 20: return None, f'Only {m.get("n", 0)} complaints listed a mileage: too few to say when problems show up.'
+    lo, hi = m['p25'], m['p75']
+    def at(k):
+        if k < lo: return 'still under the range where most problems showed up, so they may be ahead of it'
+        if k <= hi: return 'right in the range where most owners reported problems'
+        return 'past the range where most problems showed up: it has likely had them or dodged them, so repair records matter most'
+    head = (f'Most problems on this year showed up between <b>{_mi_r(lo)}</b> and <b>{_mi_r(hi)}</b> miles '
+            f'(the middle half of the {m["n"]:,} complaints that listed a mileage).')
+    return (head, [(k, at(k)) for k in (60000, 100000, 150000)]), ''
+# what to ask the seller about each problem area (real items only: a question appears only when that area is one of the year's top problems)
+ASKQ = [(r'transmission|power train|drivetrain', 'Any slipping, hard or late shifts, or a transmission warning light? Ask for transmission fluid service records.'),
+        (r'^engine', 'Any oil burning, leaks or check-engine lights? Ask for oil-change records.'),
+        (r'electrical', 'Do all the lights, screens and power features work? Has the battery, alternator or any wiring been replaced?'),
+        (r'brake', 'Do the brakes feel even, with no ABS or brake warning light? When were the pads and brake fluid last done?'),
+        (r'steering', 'Any steering noise, wander or power-steering warning? Has the steering rack or pump been replaced?'),
+        (r'suspension', 'Any clunks over bumps or uneven tire wear? Were struts, shocks or control arms replaced?'),
+        (r'airbag', 'Is the airbag light off, and were any airbag recalls done?'),
+        (r'fuel|ev drive', 'Any fuel smell, stalling or hard starts? On a hybrid or EV, any reduced-power warning or battery work?'),
+        (r'speed control', 'Does it accelerate and hold speed smoothly, with no surging or stalling?'),
+        (r'emergency braking|collision', 'Has it ever braked hard for no reason? Ask whether the safety-system software was updated.'),
+        (r'lane assist', 'Do the lane-keeping warnings work without false alerts?'),
+        (r'wiper|visibility', 'Do the wipers, washers, defrost and mirrors all work?'),
+        (r'lights', 'Do all the headlights, taillights and turn signals work?'),
+        (r'structure', 'Any rust or damage underneath, or doors and hatches that don&#39;t close right?'),
+        (r'seat belt', 'Do all the seat belts latch and retract?'),
+        (r'seat', 'Do the seats adjust, heat and lock in place properly?'),
+        (r'stability', 'Is the stability-control light off on a test drive?')]
+def seller_questions(f, v, y, x, x2):
+    """'Questions to ask the seller' from this year's own recalls, open investigations, top problem areas and the maker's repair notes."""
+    out = []
+    rs = sorted(x.get('recalls') or [], key=lambda r: r['date'][6:10] + r['date'][3:5] + r['date'][:2], reverse=True)
+    if rs:
+        ids = [f'{E(r["id"])} ({E(RPART(r["part"]))})' for r in rs[:3]]
+        out.append(f'Were recall{"s" if len(ids) > 1 else ""} {", ".join(ids[:-1]) + " and " + ids[-1] if len(ids) > 1 else ids[0]} done?'
+                   + (f' It has {len(rs)} recalls in all.' if len(rs) > 3 else '') + ' Ask for the dealer printout, or <a href="/vin/">check the VIN</a>.')
+    inv = [i for i in x2.get('inv', []) if i['open']]
+    if inv: out.append(f'NHTSA has an open investigation into {E((inv[0]["subject"] or inv[0]["part"]).lower().rstrip("."))}. Has this car had that problem?')
+    txt = ' '.join([s for s in (x2.get('tsb') or {}).get('top', []) if s] + [q.get('text', '') for q in v.get('quotes') or []] + [r.get('summary', '') for r in rs])
+    cvt = bool(re.search(r'\bCVT\b|continuously variable', txt, re.I))
+    seen = set()
+    for p, _ in (v.get('parts') or [])[:3]:
+        nm = NICE(p)
+        for pat, q in ASKQ:
+            if re.search(pat, nm):
+                if pat not in seen:
+                    seen.add(pat)
+                    if cvt and pat.startswith('transmission'): q = 'Any shudder, whine or slipping from the CVT? Ask for CVT fluid service records.'
+                    out.append(q)
+                break
+    tl = [c for c in (clean_tsb(z) for z in (x2.get('tsb') or {}).get('top', [])) if c]
+    if x2.get('tsb') and tl: out.append(f'{E(MAKER(f["name"]))} sent dealers {x2["tsb"]["n"]} repair notes for this car. Was this one done: &ldquo;{E(tl[0])}&rdquo;?')
+    return out[:6]
 TECH = (('esc', 'Stability control'), ('fcw', 'Collision warning'), ('ldw', 'Lane departure warning'))
 TWORD = {'Standard': ('good', 'Standard'), 'Optional': ('mid', 'Optional'), 'No': ('bad', 'Not offered')}
 # What people type into Google. NHTSA/sales lump the heavy-duty trucks in, so the page says so.
@@ -1016,8 +1180,9 @@ def year_faq(f, v, y, x, best):
         li = v['li']; word = ('Yes, it is one of the most reliable' if li < 50 else 'Yes, better than average' if li < 85 else 'About average' if li <= 115 else 'No, it is worse than average' if li < 200 else 'No, it is one of the worst')
         _pl = plain(v["li"]); a = f'{word} by government complaints. It drew {"about the average number of complaints" if _pl.lower() == "about average" else _pl} filed with NHTSA in its first 3 years, per car sold (Lemon Index {v["li"]}; 100 is average, lower is better).'
         if v.get('early'): a = f'It&#39;s too early to be sure. So far it has drawn {plain(v["li"])} per car sold, against other {y} cars after the same time on the road (early Lemon Index {v["li"]}; 100 is average).'
-        nb = [w for w in f['years'] if w['ok'] and w['y'] >= 2010]; b2 = min(nb, key=lambda w: w['li']) if nb else best   # pre-2010 scores are rough
-        if b2['y'] != y: a += f' The best {n} year by this measure{" since 2010" if nb and b2 is not best else ""} is {b2["y"]}.'
+        ctx = model_context(f, v, y)
+        if ctx: a += ' ' + ctx
+        if best['y'] != y: a += f' The {n} year with the fewest complaints per car sold{" since 2010" if best["y"] >= 2010 and f["years"][0]["y"] < 2010 else ""} is {best["y"]}.'   # 11-12: the same rec_year as everywhere else
     elif v.get('low'):
         a = (f'We can&#39;t score it: only {LOWS(v)} were sold in the U.S. in {y} (calendar-year sales), under the 20,000 we need for a fair per-car score. '
              f'Owners filed {v["n"]} complaints with NHTSA in its first 3 years.')
@@ -1035,16 +1200,18 @@ def year_faq(f, v, y, x, best):
         c = m['comb']; out.append((f'What gas mileage does the {y} {n} get?', f'{c[0] if c[0] == c[1] else f"{c[0]} to {c[1]}"} mpg combined, depending on the engine (EPA estimate).'))
     sf = x.get('safety') or {}
     if sf.get('best'): out.append((f'Is the {y} {n} safe?', f'NHTSA gave it {sf["best"]} out of 5 stars overall in its best tested version. Ratings differ by body style, and the full table is on the <a href="{CARU(f, y)}advanced/">advanced page</a>.'))
-    mi_ = x.get('miles')
-    if mi_ and mi_.get('n', 0) >= 20: out.append((f'At what mileage do {y} {n} problems start?', f'Half of the owners who gave a mileage reported the problem between {mi_["p25"]:,} and {mi_["p75"]:,} miles. The middle report was at {mi_["median"]:,} miles, from {mi_["n"]:,} complaints.'))
+    mg, why = mileage_guide(x)   # 11-12 (Jess): the range plus what it means at 60K / 100K / 150K, not "the middle report was at 4,600 miles"
+    if mg: out.append((f'At what mileage do {y} {n} problems show up?', mg[0] + ' ' + ' '.join(f'At {_kl(ks)} miles, a {y} is {t}.' for ks, t in _mgroups(mg[1])) + ' This is when owners who had a problem reported it, not a prediction for one car.'))
     if v['parts']:
         tr = next((k for p, k in v['parts'] if 'transmission' in p), None)
         out.append((f'Does the {y} {n} have transmission problems?', f'Transmission and drivetrain issues make up {tr}% of its owner complaints.' if tr else f'Transmission and drivetrain issues aren&#39;t among its top 5 complaint areas.'))
     if m and m.get('cost'):
         co = m['cost']; out.append((f'How much does the {y} {n} cost in fuel a year?', f'About ${co[0] if co[0] == co[1] else f"{co[0]} to ${co[1]}"} a year, by the EPA&#39;s current estimate.'))
     if m and m.get('engines') and not m.get('ev'): out.append((f'What engines does the {y} {n} have?', f'{", ".join(m["engines"])}.'))
-    good = sorted([w for w in f['years'] if w['ok'] and not w.get('early') and w['y'] >= 2010], key=lambda w: w['li'])
-    if len(good) >= 3 and good[0]['y'] != y: out.append((f'What {n} year is better than the {y}?', f'By owner complaints per car sold, the best recent years are {good[0]["y"]}, {good[1]["y"]} and {good[2]["y"]}.'))
+    nb, how = near_pick(f, y)   # 11-12 (Jess): a year near hers, same generation when we know it, not 2001
+    if nb and how == 'near': out.append((f'What {n} year is better than the {y}?', f'Nearby, the {nb["y"]} drew fewer owner complaints per car sold ({plain(nb["li"])}).' + (f' Across every year, {best["y"]} drew the fewest.' if best['y'] not in (y, nb['y']) else '')))
+    elif nb and how == 'model': out.append((f'What {n} year is better than the {y}?', f'No year within 3 model years of it drew fewer complaints. Across every year, {nb["y"]} drew the fewest ({plain(nb["li"])}).'))
+    elif how == 'self' and v['ok']: out.append((f'Is there a better {n} year than the {y}?', f'Not nearby: the {y} drew the fewest complaints per car sold of the {n} years within 3 model years of it.' + (f' Across every year, {best["y"]} drew the fewest.' if best['y'] != y else '')))
     return [(q, a, re.sub('<[^>]+>', '', html.unescape(a))) for q, a in out]
 def answer_box(f, v, y, x, best):
     n = E(SNM(f)); rc = x.get('recalls'); m = x.get('mpg'); bits = []
@@ -1057,7 +1224,9 @@ def answer_box(f, v, y, x, best):
     if rc is not None: bits.append(f'it has {len(rc)} recall{"s" if len(rc) != 1 else ""}')
     if m and not m.get('ev'): c = m['comb']; bits.append(f'it gets {c[0] if c[0] == c[1] else f"{c[0]} to {c[1]}"} mpg combined')
     s2 = (bits[0][0].upper() + bits[0][1:] + (', ' + ', '.join(bits[1:-1]) + (',' if len(bits) > 2 else '') + ' and ' + bits[-1] if len(bits) > 1 else '') + '.') if bits else ''
-    s3 = f' The best {n} year is {best["y"]}.' if best['y'] != y else f' It&#39;s the best {n} year we track.'
+    nb, how = near_pick(f, y); ctx = model_context(f, v, y)
+    s3 = (f' {ctx}' if ctx else '') + (f' Nearby, the {nb["y"]} drew fewer complaints.' if how == 'near' else f' The {nb["y"]} drew the fewest complaints of any {n} year.' if how == 'model' else
+                                       f' It drew the fewest complaints of any {n} year.' if best['y'] == y else '')
     return f'<p class="ans">{s1} {s2}{s3}</p>'
 # 11-03 (Elijah: "add newer car years... just have a disclaimer"): 2023-2025 are early reads
 ASOF = 'October 2026'
@@ -1067,11 +1236,10 @@ def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
     nm = E(SNM(f)); x2 = X2.get(f['id'], {}).get(str(y), {}); mkr = E(MAKER(f['name']))
     share_txt = (f'{y} {SNM(f)}: {plain(v["li"])} per car sold' if v['ok'] else f'{y} {SNM(f)}: owner complaints and recalls') + (f', {len(x["recalls"])} recalls' if x.get('recalls') else '') + '. Free report:'
     rec = x.get('recalls') or []; m = x.get('mpg'); sf = x.get('safety'); s = x.get('sev') or {}
-    if v['ok']:
-        cls, word = verdict(v['li'])
+    if v['ok']:   # 11-12 (Jess, Marcus, Linda): a plain buy verdict with its reason, and the model's context when the two disagree
+        cls, word, why = buy_verdict(f, v, y)
         if v.get('early'): word = 'Early read: ' + word[0].lower() + word[1:]
-        pl = plain(v['li']); pl = '' if pl.lower() in word.lower() else f' <span>{E(pl)}.</span>'   # no "About average. about average."
-        hero = f'<div class="yhero">{gauge(v["li"], 190)}<div class="yverd {cls}"><p><b>{word}.</b>{pl}</p>{{BW}}</div></div>'
+        hero = f'<div class="yhero">{gauge(v["li"], 190)}<div class="yverd {cls}"><p class="yvd"><b>{word}.</b> <span>{why}</span></p>{{BW}}</div></div>'
     elif v.get('low'):
         hero = (f'<div class="yhero yhero-na"><div class="yverd mid"><p><b>Complaints only.</b> <span>Too few sold to score: {LOWS(v)} in the U.S. in {y}{LOWSRC(v)}, under the 20,000 a fair per-car '
                 f'score needs. Owners filed {v["n"]:,} complaint{"" if v["n"] == 1 else "s"} in its first 3 years.</span></p>{{BW}}</div></div>')   # 11-11: in a .yhero, so the tabbed page keeps it
@@ -1089,17 +1257,25 @@ def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
              ('Fuel economy', f'{rng(m["comb"])} {"MPGe" if m.get("ev") else "mpg"}' if m else '—', 'combined, EPA'),
              (('Crash test', stars(sf['best']), 'NHTSA overall') if sf and sf.get('best') else ('Front crash', stars(x2['old']['front']), 'NHTSA, driver') if (x2.get('old') or {}).get('front') else ('Crash test', '<span class="muted">not rated</span>', 'NHTSA'))]
     tiles = ''.join(f'<div class="yt"><span class="yt-l">{l}</span><b class="yt-v">{val}</b><small>{sub}</small></div>' for l, val, sub in facts if l != 'Recalls')
-    yrs = ''.join(f'<a class="ychip {c}" href="{CARU(f, w["y"])}"><small>{lab}</small><b>{w["y"]}</b></a>' for lab, w, c in (('best year', best, 'good'), ('worst year', worst, 'bad')) if w['y'] != y)
+    nb, how = near_pick(f, y)   # 11-12 (Jess: "told me to buy a 2001"): the better buy near this year, same generation when we know it
+    _ev = next((d for d in (EVBY.get(f['id']) or {}).get('years_detail', []) if d['y'] == y), None)   # 11-12 (Dan: Bolt 2021 272 here, 376 there)
+    ev_note = (f'<p class="yc-cap">Two windows: the {y} scores {v["li"]} here (complaints in its first 3 years) and {_ev["li"]} on <a href="/electric/{f["id"]}/">its EV page</a> '
+               f'(complaints filed by the end of {y + 1}). Different windows, so the numbers differ.</p>') if _ev and v['ok'] else ''
     nav = ''.join(f'<a class="ychip" href="{CARU(f, w["y"])}"><small>{lab}</small><b>{w["y"]}</b></a>' for lab, w in (('previous', prev), ('next', nxt)) if w)
     ph = car_hero(f, y)   # 11-10 (Elijah): the year's AI illustration alone when there is one, else the nearest-year Commons photo
     # 11-03 v3 header: a year switcher (‹ 2007 · 2008 · 2009 ›) and the best / worst years as one quiet line under the verdict
     seg = (f'<a href="{CARU(f, prev["y"])}" aria-label="{prev["y"]}">‹ {prev["y"]}</a>' if prev else '') + f'<span aria-current="page">{y}</span>' + (f'<a href="{CARU(f, nxt["y"])}" aria-label="{nxt["y"]}">{nxt["y"]} ›</a>' if nxt else '')
-    bw = (lambda xs: f'<p class="ybw">{" · ".join(xs)}</p>' if xs else '')([f'{lab} <a class="{c}" href="{CARU(f, w["y"])}">{w["y"]}</a>' for lab, w, c in (('Best year', best, 'good'), ('Worst year', worst, 'bad')) if w['y'] != y])
+    bw = (lambda xs: f'<p class="ybw">{" · ".join(xs)}</p>' if xs else '')([f'{lab} <a class="{c}" href="{CARU(f, w["y"])}">{w["y"]}</a>' for lab, w, c in
+                                                                         (('Fewer complaints nearby', nb if how == 'near' else None, 'good' if nb and nb['li'] <= 110 else ''),
+                                                                          ('Fewest of any year', best, 'good' if best['li'] <= 110 else '')) if w and w['y'] != y and not (lab.startswith('Fewest') and how == 'near' and nb['y'] == best['y'])])
     parts = ''.join(f'<div class="pt"><span>{E(NICE(p))}</span><span class="bt"><i style="width:{k}%"></i></span><b>{k}%</b></div>' for p, k in v['parts'])
     probs = f'<section class="yc" id="problems"><h2>What owners complain about most. <span class="h2s">From owner complaints to the government.</span></h2><div class="pts">{parts}</div><p class="yc-cap">Share of this year&#39;s owner complaints filed with NHTSA, not the share of cars that break. One complaint can name more than one area.</p>' + (f'<p class="yc-cap"><a href="{CARU(f)}transmission/">Transmission problems in every {nm} year →</a></p>' if _tr_ok(f) else '') + '</section>' if parts else ''
     sev_items = [(s.get('crash', 0), 'crashes'), (s.get('injured', 0), 'injuries'), (s.get('fire', 0), 'fires'), (s.get('towed', 0), 'tows')]
-    sev = (f'<section class="ysev"><h2>How serious. <span class="h2s">Out of {s["total"]:,} owner complaints, owners reported:</span></h2><div class="sv">'
-           + ''.join(f'<div class="{"bad" if n else "good"}">{icon(ic)}<b>{n:,}</b><span>{lab}</span></div>' for (n, lab), ic in zip(sev_items, ('crash', 'injury', 'fire', 'tow'))) + '</div></section>') if s.get('total') else ''
+    _base = lambda k: round(s['total'] * SEVR[k]) if SEVR.get(k) else None
+    sev = (f'<section class="ysev"><h2>How serious. <span class="h2s">Out of all {s["total"]:,} owner complaints filed so far (every year since it was sold, not just the first 3), owners reported:</span></h2><div class="sv">'
+           + ''.join(f'<div class="{"bad" if n > (_base(k) or 0) * 1.25 and n else "good"}">{icon(ic)}<b>{n:,}</b><span>{lab}</span>' + (f'<small class="sv-b">average car: {_base(k):,}</small>' if _base(k) is not None else '') + '</div>'
+                     for (n, lab), ic, k in zip(sev_items, ('crash', 'injury', 'fire', 'tow'), ('crash', 'injured', 'fire', 'towed')))
+           + '</div><p class="yc-cap">&ldquo;Average car&rdquo; = what the same number of complaints would include at the rate across every model year we track. Owners report these themselves; NHTSA doesn&#39;t confirm the cause.</p></section>') if s.get('total') else ''
     if 'recalls' in x:
         rs = sorted(rec, key=lambda r: r['date'][6:10] + r['date'][3:5] + r['date'][:2], reverse=True)
         card = lambda r: f'<li><b>{E(RPART(r["part"]))}</b> <small>{E(r["date"][-4:])}</small><p>{E(rsum(r))}</p></li>'
@@ -1136,12 +1312,24 @@ def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
     kc = []
     if v['parts']: kc.append(('wrench', 'Most common problem', E(NICE(v['parts'][0][0])).capitalize(), f'{v["parts"][0][1]}% of owner complaints', '#problems'))
     if 'recalls' in x: kc.append(('warn', 'Recalls', f'{len(rec)}', 'Free fix at any dealer' if rec else 'None on record', '#recalls'))
-    if best['y'] != y: kc.append(('up', 'Better year to buy', f'{best["y"]}', E(plain(best['li'])), CARU(f, best['y'])))
-    else: kc.append(('up', 'Best year', f'{y}', f'The best {nm} year we track', CARU(f)))
+    if how in ('near', 'model'): kc.append(('up', 'Fewer complaints nearby' if how == 'near' else 'Fewest complaints', f'{nb["y"]}', E(plain(nb['li'])), CARU(f, nb['y'])))
+    elif how == 'self': kc.append(('up', 'Fewest complaints nearby', f'{y}', f'No year within 3 of it drew fewer', CARU(f)))
     if inv_open: kc.append(('warn', 'Government investigation', f'{len(inv_open)} open', 'Owners reported enough to trigger one', '#inv'))
     elif x2.get('tsb'): kc.append(('doc', f'Repair notes from {mkr}', f'{x2["tsb"]["n"]}', 'Ask a seller if they were done', '#fixes'))
     buy = (f'<section class="ybuy"><h2>Before you buy. <span class="h2s">What matters most for this car.</span></h2><div class="ybuy-g">'
            + ''.join(f'<a class="yk" href="{h}">{icon(ic)}<span class="yk-l">{lab}</span><b>{val}</b><small>{sub}</small></a>' for ic, lab, val, sub, h in kc) + '</div></section>')
+    # 11-12 (Jess, Marcus, Linda): when problems show up, in plain miles, and what to ask the seller (from this year's own recalls, problems and repair notes)
+    mg, mwhy = mileage_guide(x)
+    if mg:
+        tops = [c for c in (x.get('comps') or []) if c[4] >= 15][:2]
+        mil = (f'<section class="yc ymg" id="mileage-guide"><h2>When problems show up</h2><p>{mg[0]}</p><ul class="ymg-l">'
+               + ''.join(f'<li><b>At {_kl(ks)} miles</b> <span>{t[0].upper() + t[1:]}.</span></li>' for ks, t in _mgroups(mg[1])) + '</ul>'
+               + (f'<p class="yc-cap">By area: ' + '; '.join(f'{E(NICE(c[0]))} mostly {_mi_r(c[2])}–{_mi_r(c[3])} miles' for c in tops) + '.</p>' if tops else '')
+               + '<p class="yc-cap">This is when owners who had a problem reported it, not the odds that one car will have it.</p></section>')
+    else: mil = f'<section class="yc ymg" id="mileage-guide"><h2>When problems show up</h2><p>{mwhy}</p></section>'
+    sq = seller_questions(f, v, y, x, x2)
+    ask = (f'<section class="yc yask" id="ask-seller"><h2>Questions to ask the seller</h2><ol class="yask-l">' + ''.join(f'<li>{q}</li>' for q in sq) + '</ol>'
+           f'<p class="yc-cap">From this year&#39;s own recalls, top problems and {mkr}&#39;s repair notes. Recall repairs are free at any dealer.</p></section>') if sq else ''
     words = ''
     if qs_list:
         q0 = qs_list[0]; more = ''.join(f'<blockquote><p>{E(q["text"])}</p><cite>NHTSA complaint {q["odi"]}</cite></blockquote>' for q in qs_list[1:])
@@ -1151,17 +1339,18 @@ def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
 <article class="yp yp6"><section class="ph yph6"><div class="yh-t"><p class="ph-e"><a href="/cars/">All cars</a> · <a href="{CARU(f)}">{nm}</a></p><h1>{y} {nm}.</h1>{answer_box(f, v, y, x, best)}{'<p class="early-b">Early read</p>' if v.get('early') else ''}
 {f'<p class="yc-note">{SN[f["id"]][1]}</p>' if f["id"] in SN else ""}{hero.replace('{BW}', bw)}
 <nav class="modes" aria-label="Page mode"><a href="{CARU(f, y)}" aria-current="page">Normal</a><a href="{CARU(f, y)}advanced/">Advanced</a></nav><nav class="yswitch" aria-label="Model years"><div class="yseg">{seg}<a class="yall" href="{CARU(f)}">All years</a></div><div class="yact"><a class="btn btn-ghost" href="/compare/?c={f['id']}-{y}">Compare</a><button type="button" class="btn btn-ghost yshare" data-share="{E(share_txt)}">Share</button></div></nav></div>{f'<div class="ph-v">{ph}</div>' if ph else ''}</section>
-{buy}<div class="yts">{tiles}</div>{ytfix(f["id"], y)}{sev}{old}
-<section class="yyears noph"><div class="yy-ch"><h2>Every {nm} year. <span class="h2s">{y} is highlighted. Lower is better.</span></h2>{ybars(f, y)}</div></section>
+{buy}{mil}{ask}<div class="yts">{tiles}</div>{ytfix(f["id"], y)}{sev}{old}
+<section class="yyears noph"><div class="yy-ch"><h2>Every {nm} year. <span class="h2s">{y} is highlighted. Lower is better.</span></h2>{ybars(f, y)}</div>{ev_note}</section>
 <div class="ygrid">{probs}{timeline(x["miles"], x.get("comps") or []) if x.get("miles") else ""}{recs}{(lambda pr: f'<section class="yc">{pr}</section>' if pr else '')(price_html(f["id"], y, f["name"]))}
 {fixes}{invs}{safety}{f'<section class="yc">{crash}{fuel}</section>' if crash or fuel else ''}{YEAR_SPECS_HOOK(f['id'], y)}{words}
 {f'<section class="yc yqa"><h2>Quick answers</h2>' + qa_fold("".join(f"<h3>{E(q)}</h3><p>{a}</p>" for q, a, _ in qa)) + '</section>' if qa else ''}</div>
-<p class="yc-cap">Lemon Index = safety complaints filed with the U.S. government (NHTSA) in a car&#39;s first 3 years, per car sold, against the average car of the same model year. 100 is average; lower is better. A complaint is an owner&#39;s report, not a confirmed defect. <a href="/method/">How it works</a></p>{share_line(share_txt)}</article>'''
+<p class="yc-cap">{WHAT_LI} A complaint is an owner&#39;s report, not a confirmed defect. <a href="/method/">How it works</a></p>{share_line(share_txt)}</article>'''
 
 def yearx(fid, y): return extra(fid, y)
 for f in YEARS:
-    c = BYNAME[f['name']]; ys = f['years']; sc = [v for v in ys if v['ok'] and not v.get('early')]; best, worst = min(sc, key=lambda v: v['li']), max(sc, key=lambda v: v['li'])
-    good3 = sorted(sc, key=lambda v: v['li'])[:3]; bad3 = [v for v in sorted(sc, key=lambda v: -v['li']) if v['li'] > 110][:3]
+    c = BYNAME[f['name']]; ys = f['years']; sc = scored(f)
+    rec, kind = rec_year(f); best = rec or min(year_pool(f), key=lambda v: v['li']); kind = kind or 'least'; worst = worst_year(f)   # 11-12: one rule everywhere
+    lists = len(sc) >= LIST_MIN; good3 = good_years(f)[:3] if lists else []; bad3 = [v for v in avoid_years(f) if v['y'] != best['y']][:3] if lists else []
     def why(v):
         xx = yearx(f['id'], v['y']); bits = [plain(v['li'])]
         if v['parts']: bits.append(f'top problem: {v["parts"][0][0]}')
@@ -1170,9 +1359,14 @@ for f in YEARS:
     buy = ''.join(f'<li><a href="{CARU(f, v["y"])}"><b>{v["y"]}</b></a>: {why(v)}</li>' for v in good3)
     avoid = ''.join(f'<li><a href="{CARU(f, v["y"])}"><b>{v["y"]}</b></a>: {why(v)}</li>' for v in bad3)
     chip = lambda v, cl: f'<a class="ych {cl}" href="{CARU(f, v["y"])}"><b>{v["y"]}</b><span>{v["li"]}</span><small>{E(plain(v["li"]))}</small></a>'
-    picks = (f'<section class="bw2"><div class="bwt good"><p class="te">Best years to buy</p><h2>{good3[0]["y"]}.</h2><div class="ychs">{"".join(chip(v, "good") for v in good3)}</div></div>'
-             + (f'<div class="bwt bad"><p class="te">Years to avoid</p><h2>{bad3[0]["y"]}.</h2><div class="ychs">{"".join(chip(v, "bad") for v in bad3)}</div></div>' if bad3 else
-                f'<div class="bwt"><p class="te">Years to avoid</p><h2>None.</h2><p class="ts">No {E(f["name"])} year drew much more than the average car&#39;s complaints.</p></div>') + '</section>')
+    if not lists:   # 11-12: under 5 scored years, no best / avoid lists (the Bolt listed the same 3 years under both)
+        picks = (f'<section class="bw2"><div class="bwt"><p class="te">Fewest complaints</p><h2>{best["y"]}.</h2><p class="ts">Only {len(sc)} {E(f["name"])} year{"" if len(sc) == 1 else "s"} '
+                 f'{"has" if len(sc) == 1 else "have"} enough complaints and sales to score, too few for best and worst lists. {best["y"]} drew {E(plain(best["li"]))}.</p></div></section>')
+    else:
+        picks = (('<section class="bw2">' + (f'<div class="bwt good"><p class="te">Fewest complaints</p><h2>{good3[0]["y"]}.</h2><div class="ychs">{"".join(chip(v, "good") for v in good3)}</div></div>' if good3 else
+                  f'<div class="bwt"><p class="te">Fewest complaints</p><h2>{best["y"]}.</h2><p class="ts">No {E(f["name"])} year beat the average car. {best["y"]} drew the fewest complaints: {E(plain(best["li"]))}.</p></div>'))
+                 + (f'<div class="bwt bad"><p class="te">Most complaints</p><h2>{bad3[0]["y"]}.</h2><div class="ychs">{"".join(chip(v, "bad") for v in bad3)}</div></div>' if bad3 else
+                    f'<div class="bwt"><p class="te">Years to avoid</p><h2>None.</h2><p class="ts">No {E(f["name"])} year drew much more than the average car&#39;s complaints.</p></div>') + '</section>')
     rv = [o for o in RIVALS.get(f['id'], []) if mphoto(o)][:4]
     vcards = ''.join(f'<a class="mu" href="{cmpu(f["id"], o)}"><span class="mu-p">{pimg(mphoto(f["id"]), f["name"], "l")}{pimg(mphoto(o), FY[o]["name"], "r")}</span><b>vs {E(FY[o]["name"])}</b></a>' for o in rv)
     vs = ' · '.join(f'<a href="{cmpu(f["id"], o)}">vs {E(FY[o]["name"])}</a>' for o in RIVALS.get(f['id'], [])[:8])
@@ -1183,9 +1377,14 @@ for f in YEARS:
     rows = ''.join(f'<tr><td><a href="{CARU(f, v["y"])}">{v["y"]}</a></td><td class="num {CLS(v)}">{LIS(v)}</td><td class="pw">{PLN(v)}</td><td class="num">{v["n"]:,}</td><td>{E(v["parts"][0][0]) + f" ({v["parts"][0][1]}%)" if v["parts"] else "—"}</td>{yx(v)}</tr>' for v in ys)
     snm = SNM(f); li = c['li']
     good_word = ('Yes, it is one of the most reliable models we track' if li < 50 else 'Yes, it draws fewer complaints than the average car' if li < 85 else 'It is about average' if li <= 115 else 'Not overall: it draws more complaints than the average car')
-    mqa = [(f'Is the {snm} a good car?', f'{good_word}, by owner complaints to the government per car sold ({c["years"]}: Lemon Index {li}; 100 is average). Some years are much better than others: the best is {best["y"]} and the worst is {worst["y"]}.'),
-           (f'What are the best {snm} years to buy?', f'By owner complaints per car sold: ' + ', '.join(str(v["y"]) for v in good3) + '.'),
-           (f'What {snm} years should you stay away from?', (f'The years with the most complaints per car sold: ' + ', '.join(str(v["y"]) for v in bad3) + '.') if bad3 else f'No {snm} year drew much more than an average car&#39;s complaints.')]
+    _since = ' since 2010' if best['y'] >= 2010 and any(v['y'] < 2010 for v in sc) else ''
+    mqa = [(f'Is the {snm} a good car?', f'{good_word}, by owner complaints to the government per car sold ({c["years"]}: Lemon Index {li}; 100 is average). Some years are much better than others: '
+            f'{best["y"]} drew the fewest complaints{_since}' + (f' and {worst["y"]} the most.' if worst and worst['y'] != best['y'] else '.')),
+           (f'What are the best {snm} years to buy?', (f'By owner complaints per car sold{_since}: ' + ', '.join(str(v["y"]) for v in good3) + f'. {good3[0]["y"]} drew the fewest.') if good3 else
+            f'Only {len(sc)} {snm} years have enough data to score, so we don&#39;t list best years. {best["y"]} drew the fewest complaints ({plain(best["li"])}).' if not lists else
+            f'No {snm} year beat the average car. {best["y"]} drew the fewest complaints ({plain(best["li"])}).'),
+           (f'What {snm} years should you stay away from?', (f'The years with the most complaints per car sold{_since}: ' + ', '.join(str(v["y"]) for v in bad3) + '.') if bad3 else
+            f'Only {len(sc)} {snm} years have enough data to score, too few to single out years to avoid.' if not lists else f'No {snm} year drew much more than an average car&#39;s complaints.')]
     # 11-05 keyword map: "recalls on <car>" and "<car> problems" are big searches; answer them from our own numbers
     _rc = [(v['y'], len(extra(f['id'], v['y']).get('recalls') or [])) for v in ys if 'recalls' in extra(f['id'], v['y'])]
     if _rc and sum(n for _, n in _rc):
@@ -1197,21 +1396,21 @@ for f in YEARS:
     if _pt:
         _tp = [NICE(x) for x, _ in sorted(_pt.items(), key=lambda kv: -kv[1])[:3]]
         mqa.append((f'What are the most common {snm} problems?', f'Across every year, owners&#39; complaints to the government name {", ".join(_tp[:-1])} and {_tp[-1]} most. Some years are much worse than others: see the chart above.'))
-    rel_html, rel_tiles, rel_plain = rel_top(f, c, snm, ys, sc, best, worst, bad3)
+    rel_html, rel_tiles, rel_plain = rel_top(f, c, snm, ys, sc, best, kind, worst, avoid_years(f))
     mqa.insert(0, (f'Is the {snm} reliable?', E(rel_plain)))
     model_qa_html = '<section class="yqa"><h2>Quick answers.</h2>' + qa_fold(''.join(f'<h3>{E(q)}</h3><p>{a}</p>' for q, a in mqa)) + '</section>'
     _tt = next(t for t in (f'{snm} Reliability: Years to Avoid & Best Years', f'{snm} Reliability & Years to Avoid', f'{snm} Reliability by Year') if len(t) <= 65 or t.endswith('by Year'))
     page(CARU(f), _tt,
-         f'Is the {snm} reliable? {rel_plain.split(". ")[0].rstrip(".")}. Every year {ys[0]["y"]}–{ys[-1]["y"]} ranked by owner complaints' + (' and YouTube owner reviews' if f['id'] in YTR else '') + f'. Best: {best["y"]}. Worst: {worst["y"]}.', f'''
+         f'Is the {snm} reliable? {rel_plain.split(". ")[0].rstrip(".")}. Every year {ys[0]["y"]}–{ys[-1]["y"]} ranked by owner complaints' + (' and YouTube owner reviews' if f['id'] in YTR else '') + f'. Fewest complaints: {best["y"]}. Most: {(worst or best)["y"]}.', f'''
 <div class="pg mp6"><section class="ph yph6"><div class="yh-t"><p class="ph-e"><a href="/cars/">All cars</a> · {BRAND_A(c["brand"])} · {E(c["segName"])}</p>{rel_html}{f'<p class="yc-note">{SN[f["id"]][1]}</p>' if f["id"] in SN else ""}
-<div class="yhero">{gauge(c["li"], 190)}<div class="yverd {verdict(c["li"])[0]}"><p><b>{verdict(c["li"])[1]}.</b> <span>Whole model, {c["years"]}{"" if plain(c["li"]).lower() in verdict(c["li"])[1].lower() else ": " + E(plain(c["li"]))}.</span></p><p class="ybw">Best year <a class="good" href="{CARU(f, best["y"])}">{best["y"]}</a> · Worst year <a class="bad" href="{CARU(f, worst["y"])}">{worst["y"]}</a></p></div></div>
-<p><button type="button" class="btn btn-ghost" data-share="{E(f'Every {snm} year ranked by owner complaints. Best: {best["y"]}. Worst: {worst["y"]}. Free report:')}">Share ↗</button></p></div><div class="ph-v">{(YSL.year_slider_html(f['id'], f['name'], {v['y']: round(v['li']) for v in ys if v.get('ok') and v.get('li') is not None}, {y: sc_ for y, sc_ in YSL.yt_scores(f['id']).items() if y in yt_rankable(f, YTS.get(f['id'], {}))}, {v['y'] for v in ys}, start=(safest_year(f['id'], sc) or best)['y'], hero=True) if YSL.has(f['id']) else (YSL.model_hero_html(f['id'], f['name']) or car_hero(f, ys[-1]["y"])))}{rel_tiles}</div></section>
-<section class="yyears noph" id="years"><div class="yy-ch"><h2>Every year. <span class="h2s">Lower is better. Tap a year for its full report.</span></h2>{ybars(f)}</div>{'<p class="yc-cap">Scores before 2010 are rough: fewer owners filed complaints back then.</p>' if ys[0]["y"] < 2010 else ''}{yt_note(f)}</section>
+<div class="yhero">{gauge(c["li"], 190)}<div class="yverd {verdict(c["li"])[0]}"><p><b>{verdict(c["li"])[1]}.</b> <span>Whole model, {c["years"]}{"" if plain(c["li"]).lower() in verdict(c["li"])[1].lower() else ": " + E(plain(c["li"]))}.</span></p><p class="ybw">Fewest complaints <a class="{'good' if best['li'] <= 110 else ''}" href="{CARU(f, best["y"])}">{best["y"]}</a>{f' · Most complaints <a class="bad" href="{CARU(f, worst["y"])}">{worst["y"]}</a>' if worst and worst['y'] != best['y'] else ''}</p></div></div>
+<p><button type="button" class="btn btn-ghost" data-share="{E(f'Every {snm} year ranked by owner complaints. Fewest: {best["y"]}. Most: {(worst or best)["y"]}. Free report:')}">Share ↗</button></p></div><div class="ph-v">{(YSL.year_slider_html(f['id'], f['name'], {v['y']: round(v['li']) for v in ys if v.get('ok') and v.get('li') is not None}, {y: sc_ for y, sc_ in YSL.yt_scores(f['id']).items() if y in yt_rankable(f, YTS.get(f['id'], {}))}, {v['y'] for v in ys}, start=popular_year(f), best=best['y'], hero=True) if YSL.has(f['id']) else (YSL.model_hero_html(f['id'], f['name']) or car_hero(f, ys[-1]["y"])))}{rel_tiles}</div></section>
+<section class="yyears noph" id="years"><div class="yy-ch"><h2>Every year. <span class="h2s">Lower is better. Tap a year for its full report.</span></h2>{ybars(f)}</div>{'<p class="yc-cap">Scores before 2010 are rough: fewer owners filed complaints back then.</p>' if ys[0]["y"] < 2010 else ''}{yt_note(f)}{(lambda t: f'<p class="yc-cap">{t}</p>' if t else '')(two_windows(f['id']))}</section>
 {ytfix("model:" + f["id"])}{picks}{SPECS_HOOK(f["id"])}
 {f'<section><h2>Compare the {E(f["name"])}.</h2><div class="mus">{vcards}</div>' + (f'<p class="yc-cap">{vs}</p>' if vs else '') + '</section>' if vcards or vs else ''}
 {model_qa_html}
 <section><details class="yd"><summary>Every year in one table</summary><div class="tw"><table><thead><tr><th>Year</th><th>Index</th><th>Compared with average</th><th>Complaints</th><th>Top complaint</th><th>Recalls</th><th>Crash test</th><th>MPG</th></tr></thead><tbody>{rows}</tbody></table></div></details>
-<p class="yc-cap">Lemon Index = safety complaints filed with the government within 3 years, per car sold, against the average car of the same model year. 100 is average, lower is better. <a href="/method/">How it works</a></p>{f'<p><a class="btn" href="{CARU(f)}transmission/">{E(snm)} transmission problems by year →</a></p>' if _tr_ok(f) else ''}</section>{share_line(f'Every {snm} year ranked by owner complaints. Best: {best["y"]}. Worst: {worst["y"]}. Free report:')}</div>''',
+<p class="yc-cap">{WHAT_LI} <a href="/method/">How it works</a></p>{f'<p><a class="btn" href="{CARU(f)}transmission/">{E(snm)} transmission problems by year →</a></p>' if _tr_ok(f) else ''}</section>{share_line(f'Every {snm} year ranked by owner complaints. Fewest: {best["y"]}. Most: {(worst or best)["y"]}. Free report:')}</div>''',
          ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": f'{snm} reliability by year', "url": BASE + CARU(f)},
              faq_ld([(q, '', html.unescape(a)) for q, a in mqa]), car_ld(f, img=YSL.ai_src(f['id'], ys[-1]['y']) or (mphoto(f['id']) or {}).get('src'))])
     yurls.append(CARU(f))
@@ -1371,6 +1570,16 @@ def _ds(name, desc, url, cols):
             "isAccessibleForFree": True, "creator": {"@type": "Organization", "name": "The Lemon Index", "url": BASE}, "dateModified": TODAY, "variableMeasured": [a for a, _ in cols],
             "distribution": [{"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": BASE + url}], "isBasedOn": "https://www.nhtsa.gov/nhtsa-datasets-and-apis"}
 DATA_SHEET = '<div class="tsh">' + ''.join(f'<span>{E(c["name"])}</span><span>{c["years"].split("-")[0]}–{c["years"].split("-")[-1][-2:]}</span><b class="{"good" if c["li"] < 100 else "bad"}">{c["li"]}</b>' for c in (CARS[0], CARS[1], CARS[len(CARS) // 2], CARS[-2], CARS[-1])) + '</div>'
+# 11-12 (Priya: "five different complaint totals"): what each site-wide total covers, in one block (/data/, /stats/, linked from home + /method/)
+def totals_html():
+    t3 = sum(v['n'] for f in YEARS for v in f['years']); tr_all = sum(d.get('all') or 0 for ys in TR.values() for d in ys.values())
+    return ('<section class="yc" id="totals"><h2>Why our complaint totals differ</h2><p>Each number counts a different slice of the same government file:</p><ul>'
+            f'<li><b>1,607,537</b>: every vehicle complaint in NHTSA&#39;s file, 1995 to {ASOF}, all makes (the study and method pages).</li>'
+            f'<li><b>{_SV["total"]:,}</b>: every complaint about the {len(YEARS)} models we track, model years 2000 to 2025, filed at any time (the statistics page and the &ldquo;How serious&rdquo; counts on year pages).</li>'
+            f'<li><b>{t3:,}</b>: the same models and years, counting only complaints filed in each car&#39;s first 3 years (the complaint count on each year page and the by-year CSV).</li>'
+            f'<li><b>{COUNTED:,}</b>: first-3-year complaints for the {len(CARS)} models in the study, model years 2010 to 2022 (the home page). These set the main Lemon Index.</li>'
+            f'<li><b>{tr_all:,}</b>: every complaint filed at any time for the model years in the transmission CSV (its all_complaints column), so it runs larger than the first-3-year counts.</li></ul>'
+            f'<p class="yc-cap">EV scores use their own window: model years {EV_WIN}, complaints filed by the end of the year after the model year.</p></section>')
 page('/data/', 'Free Car Reliability Data (CSV, CC BY 4.0) | Lemon Index',
      'Download free car reliability data: the Lemon Index score, NHTSA owner complaints and transmission complaints for every model year we cover. Free to use with credit.',
      f"""<div class="pg">{phero('Free data', 'Take it. Credit us.', 'For articles, videos, apps and research. Free under CC BY 4.0.', visual=DATA_SHEET)}<article class="study">
@@ -1384,6 +1593,7 @@ page('/data/', 'Free Car Reliability Data (CSV, CC BY 4.0) | Lemon Index',
 <a class="dl" href="/data/transmission-complaints-by-year.csv" download><b>Transmission complaints by model year</b><span>{DL2[0]:,} model years · CSV · {_kb(DL2[1])}</span></a></div>
 <p class="note">Updated {TODAY}. Line 1 of each file is the credit line, starting with #. In a spreadsheet just delete that row; in code, skip comment lines (pandas: <code>comment=&#39;#&#39;</code>).</p>
 <details class="yd"><summary>What&#39;s in the files</summary><h3>Lemon Index by model year</h3>{_tbl(_cols1)}<h3>Transmission complaints by model year</h3>{_tbl(_cols2)}</details>
+{totals_html()}
 <h2>Where the numbers come from</h2><p>Owner complaints come from NHTSA, the U.S. government&#39;s vehicle safety agency, which publishes them for free. The score and the transmission matching are ours. <a href="/method/">See exactly how the index works</a>.</p>
 <p class="note">Not included: car prices, sales figures and complaint text (other sources own those). Please don&#39;t present the data as an official rating, and don&#39;t suggest we endorse you. Using it somewhere big, or want a custom cut? <a href="/contact/">Tell us</a>. We&#39;d love to see it.</p>
 </article></div><script src="/assets/data.js?v=1103" defer></script>""",
@@ -1408,7 +1618,8 @@ pick = dict(sorted((b, sorted(m)) for b, m in pick.items()))
 def mcard(n, i):
     li = BYNAME[n]['li']; ph = YSL.model_img(i) or mphoto(i)   # 11-10 (Elijah): AI illustrations replace the Wikimedia photos on the grid
     im = (f'<img src="{ph["src"]}"{rset(ph["src"], "(max-width: 600px) 45vw, 170px")} alt="{E(n)}" width="{ph["w"]}" height="{ph["h"]}" loading="lazy">' if ph else '')
-    return f'<a class="mc" data-t="r" href="/cars/{i}/"><span class="mc-p">{im}</span><b>{E(n.split(" ", 1)[1] if " " in n else n)}</b><span class="{"good" if li < 100 else "bad"}">{li}</span></a>'
+    w = f'<small class="mc-k">{YRS(BYNAME[n])} score</small>' if i in EVBY else ''   # 11-12: Bolt / Model Y also have an EV card with an EV-window score
+    return f'<a class="mc" data-t="r" href="/cars/{i}/" title="Lemon Index, model years {YRS(BYNAME[n])}"><span class="mc-p">{im}</span><b>{E(n.split(" ", 1)[1] if " " in n else n)}</b>{w}<span class="{"good" if li < 100 else "bad"}">{li}</span></a>'
 # 11-10 (Elijah): models we don't have data for yet show as gray, non-clickable "No data yet" cards with their illustration
 try: NEWM = json.load(open('data/new_models.json', encoding='utf-8'))
 except FileNotFoundError: NEWM = []
@@ -1443,8 +1654,8 @@ def sccard(c):
     return (f'<a class="mc mc-sc" data-t="s" href="/supercars/{_slg(c["name"])}/" title="Supercar: engine, fuel cost and recalls"><span class="mc-p">{_cimg(_vimg(c["name"]), c["name"])}</span>'
             f'<b>{E(_short(c["name"], c["make"]))}</b><small class="mc-k">{E(eng)}</small></a>')
 def evcard(c, dup=False):
-    return (f'<a class="mc{" mc-dup" if dup else ""}" data-t="e" href="/electric/{c["slug"]}/" title="EV score: complaints per car sold, model years {E(c["years"])}"><span class="mc-p">{_cimg(mphoto(c["slug"]), c["name"])}</span>'
-            f'<b>{E(_short(c["name"], c["name"].split(" ")[0]))}</b><span class="{"good" if c["li"] < 100 else "bad"}">{c["li"]}</span></a>')
+    return (f'<a class="mc{" mc-dup" if dup else ""}" data-t="e" href="/electric/{c["slug"]}/" title="EV score: complaints per car sold, model years {E(c["years"])}, filed by the end of the next year"><span class="mc-p">{_cimg(mphoto(c["slug"]), c["name"])}</span>'
+            f'<b>{E(_short(c["name"], c["name"].split(" ")[0]))}</b>' + (f'<small class="mc-k">EV score {E(c["years"].replace("-", "–"))}</small>' if c['slug'] in MAINBY else '') + f'<span class="{"good" if c["li"] < 100 else "bad"}">{c["li"]}</span></a>')
 def pfcard(c):
     i = perf_info(c); ph = _vimg(i['name']) or ({'src': c['img'], 'w': c.get('w', 1000), 'h': c.get('h', 600)} if c.get('img') else None)
     inner = (f'<span class="mc-p">{_cimg(ph, i["name"])}</span><b>{E(_short(i["name"], i["brand"]))}</b>' + (f'<small class="mc-k">{E(i["lead"])}</small>' if i['lead'] else ''))
@@ -1483,7 +1694,7 @@ CNOTES = (f'<div class="ctn pfh" data-for="performance" hidden><span class="pfh-
           f'<p class="pfh-s">Horsepower, engines and owner reports, from the GT500 to the Type R.{ai_note("performance cars on this tab")}</p>'
           + (f'<p class="pfh-n"><b>{_npf + _nsx} cars on the way:</b> {_npf} here, {_nsx} supercars and hypercars under <a href="/cars/?type=supercars">Supercars</a>.</p>' if _npf else '') + '</div>'
           f'<p class="ctn" data-for="supercars" hidden>Owner complaints are too rare to score supercars, so their cards lead with the engine. Cards marked Coming soon, hypercars included, are next. <a href="/supercars/">Supercar fuel costs and recalls, ranked</a></p>'
-          f'<p class="ctn" data-for="electric" hidden>EV scores count complaints filed by the end of the year after the model year. <a href="/electric/">The most reliable EVs, ranked</a></p>')
+          f'<p class="ctn" data-for="electric" hidden>EV scores cover model years {EV_WIN}, with complaints filed by the end of the year after the model year. Under All cars, an EV with its own page (Bolt, Model Y) shows the main Lemon Index for its own years instead, so its two numbers differ. <a href="/electric/">The most reliable EVs, ranked</a></p>')
 CARS_GRID = f'''<section class="cgrid">{CTABS}{HCHIPS}<h2 data-hide="p">Every model. <span class="h2s" data-hide="s p">Score in the corner: 100 is average, lower is better.</span></h2>{CNOTES}<div class="mbs">{_MW}{lst}</div><p class="ph-cr" data-hide="p">Car images: AI-generated illustrations by The Lemon Index, free under CC BY 4.0 (<a href="/images/">download</a>).</p></section>
 <style>.pfh{{max-width:560px}}.pfh h3{{font-size:clamp(28px,6.5vw,36px);letter-spacing:-.03em;margin:10px 0 6px}}.pfh-pill{{display:inline-block;padding:4px 12px;border-radius:999px;background:#ffd400;color:#17161a;font-size:12.5px;font-weight:700;letter-spacing:.02em}}.pfh-s{{margin:0 0 6px;font-size:16px}}.pfh-n{{margin:0;font-size:14px;color:#6e6e73}}.cgrid[data-tab="performance"] .mc.mc-dup:not([hidden]){{display:flex}}.cgrid .ph-cr{{margin-top:28px}}</style>'''   # 11-11: shared by /cars/ and the home page
 page('/cars/', 'Look Up Your Car: Problems by Model and Year | The Lemon Index', f'Pick your car and model year to see its owner complaints, its top problems and how it compares with every other year. {len(YEARS)} models, 2000-2025, plus {len(SCX)} supercars and {len(EVX)} electric cars.', f'''
@@ -1492,7 +1703,7 @@ page('/cars/', 'Look Up Your Car: Problems by Model and Year | The Lemon Index',
      ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": "Look up your car", "url": BASE + '/'}], canon='/')   # 11-11: same grid as the home page: one indexable copy
 # 11-11: the home page = this grid (search, the 4 tabs, every model), with the home's own title, schema, H1 and trust line
 page('/', HOME_PAGE['title'], HOME_PAGE['desc'], f'''
-<div class="pg pg-home"><div class="ph ph-f">{finder('<span class="ph-e">The Lemon Index</span>Look up any car.', 'Every model year, 2000 to 2025. Free.', foot=f'<p class="fnote">From {COUNTED:,} owner complaints filed with the U.S. government.</p>')}</div>
+<div class="pg pg-home"><div class="ph ph-f">{finder('<span class="ph-e">The Lemon Index</span>Look up any car.', 'Every model year, 2000 to 2025. Free.', foot=f'<p class="fnote">Scores from {COUNTED:,} owner complaints filed with the U.S. government in each car&#39;s first 3 years (model years 2010–2022). <a href="/data/#totals">What each total covers</a></p>')}</div>
 {CARS_GRID}
 <section class="faq"><h2>Questions</h2>{HOME_FAQ}</section></div><script src="/assets/ctabs.js?v=2" defer></script>''', ld=HOME_PAGE['ld'])
 
@@ -1525,14 +1736,14 @@ for a, b in PAIRS:
     def srow(lab, va, vb, cls):
         return f'<div class="dl">{lab}</div><div class="dv {cls[0]}">{va}</div><div class="dv {cls[1]}">{vb}</div>'
     stA = num(re.sub(r'<[^>]+>', '', fa[2]).count('★')) if '★' in fa[2] else None; stB = num(re.sub(r'<[^>]+>', '', fb[2]).count('★')) if '★' in fb[2] else None
-    bA, bB = min((ya[y] for y in ya), key=lambda v: v['li']), min((yb[y] for y in yb), key=lambda v: v['li'])
+    bA, bB = rec_year(A)[0] or min((ya[y] for y in ya), key=lambda v: v['li']), rec_year(B)[0] or min((yb[y] for y in yb), key=lambda v: v['li'])   # 11-12: the same pick as the model pages
     duel = f'<div class="duel"><div></div><div class="dh"><a href="{CARU(A)}">{E(A["name"])}</a></div><div class="dh"><a href="{CARU(B)}">{E(B["name"])}</a></div>' + \
         srow('Lemon Index<br><small>100 = average, lower is better</small>', f'<b>{ca["li"]}</b>', f'<b>{cb["li"]}</b>', better(ca['li'], cb['li'], False)) + \
         srow(f'Years with fewer complaints<br><small>{shared[0]}–{shared[-1]}</small>', f'{wa} of {len(shared)}', f'{wb} of {len(shared)}', better(wa, wb, True)) + \
         srow(f'Recalls<br><small>{shared[0]}–{shared[-1]}</small>', fa[0], fb[0], better(fa[0], fb[0], False)) + \
         srow('MPG<br><small>latest year</small>', fa[1], fb[1], better(num(fa[1]), num(fb[1]), True)) + \
         srow('Crash test<br><small>best, latest year</small>', fa[2], fb[2], better(stA, stB, True)) + \
-        srow('Best year to buy', f'<a href="{CARU(A, bA["y"])}">{bA["y"]}</a>', f'<a href="{CARU(B, bB["y"])}">{bB["y"]}</a>', ('', '')) + '</div>'
+        srow('Fewest complaints<br><small>the year each model page recommends</small>', f'<a href="{CARU(A, bA["y"])}">{bA["y"]}</a>', f'<a href="{CARU(B, bB["y"])}">{bB["y"]}</a>', ('', '')) + '</div>'
     mx = max(max(ya[y]['li'], yb[y]['li']) for y in shared)
     def _yr(y): return f'''<div class="yr"><div class="yy">{y}</div><div class="yb">
 <a class="ybar {CLS(ya[y])}{' w' if ya[y]['li'] < yb[y]['li'] else ''}" href="{CARU(A, y)}"><i style="width:{ya[y]['li'] / mx * 100:.0f}%"></i><span>{E(A["name"])} <b>{ya[y]['li']}</b></span></a>
@@ -1545,7 +1756,7 @@ for a, b in PAIRS:
 <article class="study cmpp"><p class="kicker"><a href="/cars/">All cars</a> · Compare</p><h1>{E(A["name"])} vs {E(B["name"])}: which has fewer problems?</h1>
 <div class="verdict{' tie' if close else ''}">{verdict}</div><p class="cmp-sh">{share_btn(sh_txt)}</p>
 <h2>Head to head</h2>{duel}
-<p class="sub">Lemon Index = safety complaints filed with the government within 3 years, per car sold, against the average car of the same model year. <b>100 is average, lower is better.</b> Green check = the better of the two on that line.</p>
+<p class="sub">Lemon Index = owner complaints filed with the government within 3 years, per car sold, against the average car of the same model year. <b>100 is average, lower is better.</b> It measures complaints, not crash safety. Green check = the better of the two on that line.</p>
 <h2>Year by year</h2><p class="sub">Shorter bar = fewer complaints per car sold. Tap a year for its full report.</p><div class="yrs">{yrs}</div>
 <p class="note"><a href="{CARU(A)}">Every {E(A["name"])} year</a> · <a href="{CARU(B)}">Every {E(B["name"])} year</a> · <a href="/method/">How the index works</a></p>{share_line(sh_txt, 'Know someone choosing between these two?')}</article>''', kind='article',
          ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": title, "url": BASE + CMPU(a, b)}], vis=pair(mphoto(a), mphoto(b), (A['name'], B['name'])) + pcredit(who(mphoto(a), mphoto(b))))
@@ -1619,7 +1830,7 @@ urls = ['/', '/rankings/', STUDY, '/studies/', '/method/', '/vin/', '/car-loan-r
 open(f'{OUT}/sitemap.xml', 'w', encoding='utf-8').write('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + ''.join(f'<url><loc>{BASE}{u}</loc><lastmod>{TODAY}</lastmod></url>' for u in urls) + '</urlset>')
 open(f'{OUT}/ads.txt', 'w').write(f'google.com, {ADS.replace("ca-", "")}, DIRECT, f08c47fec0942fa0\n')
 open(f'{OUT}/robots.txt', 'w').write(f'User-agent: *\nAllow: /\n\nUser-agent: GPTBot\nAllow: /\nUser-agent: ClaudeBot\nAllow: /\nUser-agent: PerplexityBot\nAllow: /\nUser-agent: Google-Extended\nAllow: /\nUser-agent: Googlebot-Image\nAllow: /\n\n# bulk dataset scrapers: the data is free at /data/ with credit instead\nUser-agent: CCBot\nDisallow: /\nUser-agent: Bytespider\nDisallow: /\nUser-agent: Diffbot\nDisallow: /\nUser-agent: Omgilibot\nDisallow: /\nUser-agent: ImagesiftBot\nDisallow: /\n\nSitemap: {BASE}/sitemap.xml\nSitemap: {BASE}/image-sitemap.xml\n')
-open(f'{OUT}/llms.txt', 'w', encoding='utf-8').write(f'# The Lemon Index\n\n> Car reliability from public data. The Lemon Index = NHTSA safety complaints per 100,000 U.S. sales, vs the average car of the same model years (100 = average).\n\n- [The Most Reliable Cars, According to 1.6 Million Owner Complaints]({BASE}{STUDY}): Toyota 4Runner 26, Lexus ES 27, Lexus brand 30, Tesla brand 322 (est.)\n- [The Most Reliable Electric Cars]({BASE}/electric/): {len(RK)} EVs by NHTSA complaints per car sold, best {best['name']} {best['li']}, plus fires, yearly cost and driver-assist crash reports\n- [Engine code lookup]({BASE}/check-engine-light/): what any OBD-II trouble code means, how serious it is, and which cars owners report it on most in NHTSA complaints\n- [Free engine illustrations]({BASE}/images/): free BMW engine illustrations, CC BY 4.0 (AI-generated, credit The Lemon Index)\n- [Every car engine]({BASE}/engines/): every engine with a page (BMW, supercar, performance, Honda Civic), searchable, YouTube owner ranks\n- [BMW engines by year]({BASE}/engines/bmw/): every BMW engine (N54, N55, B58, N63 ...) by model year: US versions and specs (EPA), owner complaints (NHTSA) and a YouTube score\n- [Supercar engines by year]({BASE}/engines/supercars/): {sum(1 for d in SCENG['engines'].values() if d.get('group', 'super') == 'super')} supercar engines (Ferrari F154, Lamborghini V10, McLaren M838T, Nissan VR38DETT ...) matched to their cars (EPA), with a YouTube owner score by model year, NHTSA recalls and automaker repair notes\n- [Performance car engines by year]({BASE}/engines/performance/): {sum(1 for d in SCENG['engines'].values() if d.get('group') == 'perf')} performance-car engines (Hellcat, Coyote, LS3, LS7, 2UR-GSE, EJ257, S65, S85 ...) matched to their cars (EPA), with a YouTube owner score by model year, NHTSA recalls and automaker repair notes\n- [Method]({BASE}/method/)\n')
+open(f'{OUT}/llms.txt', 'w', encoding='utf-8').write(f'# The Lemon Index\n\n> Car reliability from public data. The Lemon Index = NHTSA owner complaints in the first 3 years per 100,000 U.S. sales, vs the average car of the same model years (100 = average). It measures complaints, not crash safety.\n\n- [The Most Reliable Cars, According to 1.6 Million Owner Complaints]({BASE}{STUDY}): Toyota 4Runner 26, Lexus ES 27, Lexus brand 30, Tesla brand 322 (est.)\n- [The Most Reliable Electric Cars]({BASE}/electric/): {len(RK)} EVs by NHTSA complaints per car sold, best {best['name']} {best['li']}, plus fires, yearly cost and driver-assist crash reports\n- [Engine code lookup]({BASE}/check-engine-light/): what any OBD-II trouble code means, how serious it is, and which cars owners report it on most in NHTSA complaints\n- [Free engine illustrations]({BASE}/images/): free BMW engine illustrations, CC BY 4.0 (AI-generated, credit The Lemon Index)\n- [Every car engine]({BASE}/engines/): every engine with a page (BMW, supercar, performance, Honda Civic), searchable, YouTube owner ranks\n- [BMW engines by year]({BASE}/engines/bmw/): every BMW engine (N54, N55, B58, N63 ...) by model year: US versions and specs (EPA), owner complaints (NHTSA) and a YouTube score\n- [Supercar engines by year]({BASE}/engines/supercars/): {sum(1 for d in SCENG['engines'].values() if d.get('group', 'super') == 'super')} supercar engines (Ferrari F154, Lamborghini V10, McLaren M838T, Nissan VR38DETT ...) matched to their cars (EPA), with a YouTube owner score by model year, NHTSA recalls and automaker repair notes\n- [Performance car engines by year]({BASE}/engines/performance/): {sum(1 for d in SCENG['engines'].values() if d.get('group') == 'perf')} performance-car engines (Hellcat, Coyote, LS3, LS7, 2UR-GSE, EJ257, S65, S85 ...) matched to their cars (EPA), with a YouTube owner score by model year, NHTSA recalls and automaker repair notes\n- [Method]({BASE}/method/)\n')
 open(f'{OUT}/CNAME', 'w').write('lemonindex.com')
 open(f'{OUT}/google00cb28bea71f4c18.html', 'w').write('google-site-verification: google00cb28bea71f4c18.html')   # Search Console ownership (11-02); never remove
 open(f'{OUT}/' + open('.indexnow_key').read().strip() + '.txt', 'w').write(open('.indexnow_key').read().strip())   # IndexNow key (Bing/Yandex instant URL pings, 11-02)

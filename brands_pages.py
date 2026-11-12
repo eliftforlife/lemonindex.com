@@ -41,7 +41,8 @@ for b, (rk, li) in brank.items():
     def mc(c):
         p = aph(c['id']); href = car_href(c['id'])   # 11-12: /cars/ page, else the EV page, else no link (was a 404 for the Porsche Cayenne)
         tag = f'a class="mc" href="{href}"' if href else 'div class="mc"'
-        return (f'<{tag}><span class="mc-p">{pimg(p, c["name"]) if p else ""}</span><b>{E(c["name"].split(" ", 1)[1] if " " in c["name"] else c["name"])}</b>'
+        w = f'<small class="mc-k">{YRS(c)} score</small>' if c['id'] in EVBY else ''   # 11-12 (Priya): an EV's main score, labelled with its window (its EV page uses another)
+        return (f'<{tag} title="Lemon Index, model years {YRS(c)}"><span class="mc-p">{pimg(p, c["name"]) if p else ""}</span><b>{E(c["name"].split(" ", 1)[1] if " " in c["name"] else c["name"])}</b>{w}'
                 f'<span class="{"good" if c["li"] < 100 else "bad"}">{c["li"]}</span></{tag.split()[0]}>')
     best, worst = ms[0], ms[-1]
     two = '' if len(ms) < 2 else (f'<section class="tiles">'
@@ -54,9 +55,9 @@ for b, (rk, li) in brank.items():
 <p class="ybw">Best <a class="good" href="{car_href(best["id"]) or "/brands/"}">{E(best["name"])}</a>{f' · Worst <a class="bad" href="{car_href(worst["id"]) or "/brands/"}">{E(worst["name"])}</a>' if worst is not best else ''}</p></div></div></div>
 <div class="ph-v">{YSL.model_hero_html(top['id'], top['name']) if ph and ph.get('ai') else pimg(ph, top["name"]) + pcredit(who(ph))}</div></section>
 {warranty_html(b)}
-<section><h2>Every {E(b)}, ranked. <span class="h2s">Lower is better. 100 is the average car.</span></h2><div class="mbs"><div class="mb"><div class="mg">{"".join(mc(c) for c in ms)}</div></div></div></section>
+<section><h2>Every {E(b)}, ranked. <span class="h2s">Lower is better. 100 is the average car.</span></h2><div class="mbs"><div class="mb"><div class="mg">{"".join(mc(c) for c in ms)}</div></div></div>{f'<p class="yc-cap">Each score covers that model&#39;s own model years (under its name for electric models). The <a href="/electric/">EV ranking</a> scores model years {EV_WIN} with complaints filed by the end of the next year, so an EV&#39;s number there differs.</p>' if any(c['id'] in EVBY for c in ms) else ''}</section>
 {two}
-<p class="yc-cap" style="text-align:center">{"* Small sample or estimated sales. " if est else ""}Lemon Index = safety complaints filed with the U.S. government within 3 years, per car sold, against the average car. <a href="/method/">How it works</a> · <a href="/brands/">Every brand</a>{pcredit([x for c in ms for x in who(aph(c["id"]))]).replace('<p class="ph-cr">', ' ').replace('</p>', '')}</p>
+<p class="yc-cap" style="text-align:center">{"* Small sample or estimated sales. " if est else ""}{WHAT_LI} <a href="/method/">How it works</a> · <a href="/brands/">Every brand</a>{pcredit([x for c in ms for x in who(aph(c["id"]))]).replace('<p class="ph-cr">', ' ').replace('</p>', '')}</p>
 {share_line(f'Is {b} reliable? Every {b} model ranked by owner complaints. Best: {best["name"]}. Worst: {worst["name"]}. Free:' if worst is not best else f'Is {b} reliable? Every {b} model ranked by owner complaints. Free:', f'Know someone looking at a {E(b)}?')}</div>'''
     page(f'/brands/{BSLUG(b)}/', f'Is {b} Reliable? Every {b} Model Ranked by Owner Complaints | The Lemon Index',
          f'{b} ranks #{rk} of {len(brank)} brands by NHTSA owner complaints per car sold (Lemon Index {li}; 100 is average). Most reliable {b}: {best["name"]}. Least: {worst["name"]}.',

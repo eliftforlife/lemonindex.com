@@ -28,6 +28,13 @@ def _mi(n): return f'{int(n):,}'
 _MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 def _date(d):   # NHTSA recall dates here are dd/mm/yyyy
     a = d.split('/'); return f'{_MON[int(a[1]) - 1]} {a[2]}' if len(a) == 3 and a[1].isdigit() and 1 <= int(a[1]) <= 12 else E(d)
+def _sysrows(comps):
+    """11-12 (Marcus: "Brakes" listed twice): NHTSA files two brake categories that read the same in plain words; keep the bigger one."""
+    best = {}
+    for c in comps:
+        lab = NICE(c[0])
+        if lab not in best or c[4] > best[lab][4]: best[lab] = c
+    return [(lab, c) for lab, c in ((NICE(c[0]), c) for c in comps) if best[lab] is c]
 def adv_year(f, v, y, x, x2, best, worst, ys):
     nm = E(SNM(f)); mkr = E(MAKER(f['name'])); sold = v.get('sold'); rate = v['n'] / sold * 1e5 if sold else None; sc = sorted([w for w in ys if w['ok'] and not w.get('early')], key=lambda w: w['li'])
     rk = next((i + 1 for i, w in enumerate(sc) if w['y'] == y), None); facts = []
@@ -35,7 +42,7 @@ def adv_year(f, v, y, x, x2, best, worst, ys):
     facts.append(('Complaints', f'{v["n"]:,}', 'NHTSA, first 3 years'))
     if sold: facts.append(('Sold', f'{sold:,}', 'U.S. model year'))
     if rate: facts.append(('Per 100K sold', f'{rate:,.0f}', 'complaints'))
-    if rk: facts.append(('Year rank', f'#{rk} of {len(sc)}', '#1 = fewest complaints'))
+    if rk: facts.append(('Complaint rank', f'#{rk} of {len(sc)}', '#1 = fewest complaints per car sold (not the YouTube rank)'))   # 11-12 (Marcus: "#2 of 23" vs the YouTube "#15")
     tiles = '<div class="yts">' + ''.join(f'<div class="yt"><span class="yt-l">{l}</span><b class="yt-v">{a}</b><small>{b}</small></div>' for l, a, b in facts) + '</div>'
     sec = []; unique = 0
     rows = epa_rows(f, y, x)
@@ -45,7 +52,7 @@ def adv_year(f, v, y, x, x2, best, worst, ys):
     if m or comps:
         unique += 1
         head = f'<p>Half of owners who gave a mileage reported the problem between <b>{_mi(m.get("p25", 0))}</b> and <b>{_mi(m.get("p75", 0))}</b> miles. Median <b>{_mi(m.get("median", 0))}</b>, from {m.get("n", 0):,} complaints with a mileage.</p>' if m else ''
-        sec.append(f'<section class="yc" id="mileage"><h2>Failure mileage by system</h2>{head}' + (TABLE(['System', 'Median', 'Middle half', 'Complaints'], [[E(NICE(c[0])).capitalize(), _mi(c[1]), f'{_mi(c[2])}–{_mi(c[3])}', f'{c[4]:,}'] for c in comps]) if comps else '') + '<p class="yc-cap">Mileage owners typed into their NHTSA complaint, all complaints for this model year. People report some problems late, so read it as a range.</p></section>')
+        sec.append(f'<section class="yc" id="mileage"><h2>Failure mileage by system</h2>{head}' + (TABLE(['System', 'Median', 'Middle half', 'Complaints'], [[E(lab).capitalize(), _mi(c[1]), f'{_mi(c[2])}–{_mi(c[3])}', f'{c[4]:,}'] for lab, c in _sysrows(comps)]) if comps else '') + '<p class="yc-cap">Mileage owners typed into their NHTSA complaint, all complaints for this model year. People report some problems late, so read it as a range.</p></section>')
     if v.get('parts'): sec.append('<section class="yc" id="systems"><h2>Complaints by system</h2>' + TABLE(['System', 'Share of complaints'], [[E(NICE(p)).capitalize(), f'{k}%'] for p, k in v['parts']]) + '<p class="yc-cap">One complaint can name more than one system, so shares can add to more than 100%.</p></section>')
     s = x.get('sev') or {}
     if s.get('total'): sec.append('<section class="yc" id="severity"><h2>Severity, all complaints</h2>' + TABLE(['Total', 'Crashes', 'Fires', 'Injuries', 'Deaths', 'Tows'], [[f'{s["total"]:,}', s.get('crash', 0), s.get('fire', 0), s.get('injured', 0), s.get('deaths', 0), s.get('towed', 0)]]) + '<p class="yc-cap">As reported by owners to NHTSA. Not verified.</p></section>')

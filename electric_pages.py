@@ -12,9 +12,10 @@ ep = lambda c: EPART.get(c, c.lower())
 EVU = lambda c: f'/electric/{c["slug"]}/'
 ratio = lambda a, b: f'{a / b:.1f}'.replace('.0', '')
 WIN = 'filed with NHTSA by the end of the year after the model year'
-SRC_NOTE = ('Sales are Kelley Blue Book estimates for every brand (Tesla doesn\'t report U.S. sales by model). These scores use a shorter window than the main '
-            'Lemon Index (complaints filed by the end of the year after the model year), so brand-new EVs like the Cybertruck get a fair, complete window. '
-            'That\'s why a Tesla\'s score here differs a little from its main car page.')
+# 11-12 (Priya, Dan): no more "differs a little". Name both windows; each EV page also states both of its numbers (build.py two_windows).
+SRC_NOTE = ("Sales are Kelley Blue Book estimates for every brand (Tesla doesn't report U.S. sales by model). EV scores cover model years "
+            f'{EV["years"][0]}–{EV["years"][1]} and count complaints filed by the end of the year after the model year, so brand-new EVs like the Cybertruck get a complete window. '
+            "The main Lemon Index covers each model's own years and counts complaints from each car's first 3 years. Different years and windows, so an EV that has both shows two different numbers.")
 cls = lambda v: 'bad' if v > 110 else 'good'
 money = lambda v: f'${v:,.0f}'
 MON = 'Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split()
@@ -31,7 +32,7 @@ eurls = []
 rows = ''.join(f'<tr><td>{c["rank"]}</td><td><a href="{EVU(c)}">{E(c["name"])}</a><small class="muted"> {c["years"]}</small></td><td class="num {cls(c["li"])}">{c["li"]}</td>'
                f'<td class="pw">{plain(c["li"])}</td><td class="num">{c["sold"]:,}{"*" if c["small"] else ""}</td><td>{E(ep(c["issues"][0][0])) if c["issues"] else "—"}</td></tr>' for c in RK)
 EFAQ = [('What is the most reliable electric car?', f'By owner complaints per car sold, the {best["name"]} (Lemon Index {best["li"]}), then the {RK[1]["name"]} ({RK[1]["li"]}) and the {RK[2]["name"]} ({RK[2]["li"]}), model years {EV["years"][0]}-{EV["years"][1]}. 100 is the average car.'),
-        ('Are electric cars less reliable than gas cars?', f'They draw more safety complaints. Across {len(RK)} EVs, owners filed {P["ev"]["per100k"]} complaints per 100,000 cars sold, against {P["gas"]["per100k"]} for other cars of the same years: about {ev_x} times as many. Much of the gap is driver-assist systems, mostly automatic emergency braking. Without those complaints it\'s about {ev_x2} times.'),
+        ('Are electric cars less reliable than gas cars?', f'They draw more owner complaints. Across {len(RK)} EVs, owners filed {P["ev"]["per100k"]} complaints per 100,000 cars sold, against {P["gas"]["per100k"]} for other cars of the same years: about {ev_x} times as many. Much of the gap is driver-assist systems, mostly automatic emergency braking. Without those complaints it\'s about {ev_x2} times.'),
         ('Which electric car has the most problems?', f'The {worst["name"]} ({worst["li"]}), then the {RK[-2]["name"]} ({RK[-2]["li"]}) and the {RK[-3]["name"]} ({RK[-3]["li"]}). Their top complaint area: {ep(worst["issues"][0][0])}.'),
         ('Do electric cars catch fire more than gas cars?', f'Fire complaints are rare for both: {P["ev"]["fire100k"]} per 100,000 EVs sold and {P["gas"]["fire100k"]} per 100,000 other cars, in the first year or two. See the fire page for the details.'),
         ('Why does Tesla score badly?', 'Mostly one system. About 6 in 10 Model 3 and Model Y complaints are about automatic emergency braking, the car braking hard for nothing ("phantom braking"). Take those out and both rank among the best EVs.')]
@@ -44,10 +45,10 @@ topics = [('/electric/fires/', 'Do electric cars catch fire more?', f'{P["ev"]["
           ('/electric/driver-assist-crashes/', 'Autopilot and driver-assist crash reports', f'Tesla filed {SG["tesla_share"]:.0f}% of them. Here\'s why that isn\'t the whole story')]
 cards = ''.join(f'<a class="card" href="{u}"><h2>{E(h)}</h2><p>{E(s)}</p></a>' for u, h, s in topics)
 page('/electric/', 'The Most Reliable Electric Cars, Ranked by Owner Complaints | The Lemon Index',
-     f'{len(RK)} electric cars ranked by NHTSA safety complaints per car sold, model years {EV["years"][0]}-{EV["years"][1]}. Most reliable: {best["name"]}. Least: {worst["name"]}. Plus fires, yearly cost and driver-assist crashes.', f'''
+     f'{len(RK)} electric cars ranked by NHTSA owner complaints per car sold, model years {EV["years"][0]}-{EV["years"][1]}. Most reliable: {best["name"]}. Least: {worst["name"]}. Plus fires, yearly cost and driver-assist crashes.', f'''
 <div class="pg">{phero('Electric cars', 'The most reliable EVs.', f'Every one drew more complaints than the average car. The {E(best["name"])} came closest.', visual=trio([mphoto('chevrolet-bolt'), mphoto('tesla-model-s'), mphoto('tesla-model-y')], ['Chevrolet Bolt', 'Tesla Model S', 'Tesla Model Y']), credit=pcredit(who(mphoto('chevrolet-bolt'), mphoto('tesla-model-s'), mphoto('tesla-model-y'))))}<article class="study">
 <div class="stats"><div><b>{len(RK)}</b><span>electric cars ranked</span></div><div><b>{ev_x}×</b><span>the complaints of gas cars, per car sold</span></div><div><b>{best["li"]}</b><span>best: {E(best["name"])}</span></div></div>
-<p class="sub">Lower is better. <b>100 = the average car.</b> Tap any EV for its problems, recalls, range and yearly cost.</p>
+<p class="sub">Lower is better. <b>100 = the average car.</b> EV scores: model years {EV["years"][0]}–{EV["years"][1]}, complaints filed by the end of the next year. Tap any EV for its problems, recalls, range and yearly cost.</p>
 <p class="ctn"><a class="ctn-b" href="/cars/?type=electric">See them with every other car</a></p>
 <div class="evg">{evcards}</div>
 <p class="note">* Under 50,000 sold: a rough score. {E(SRC_NOTE)}</p>
@@ -55,7 +56,7 @@ page('/electric/', 'The Most Reliable Electric Cars, Ranked by Owner Complaints 
 {share_line(f'The most reliable electric cars, ranked by owner complaints. Closest to average: the {best["name"]}. Free:', 'Know someone thinking about an EV?')}
 <section class="faq"><h2>Questions</h2>{efaq}</section></article></div>''', kind='article',
      ld=[{"@context": "https://schema.org", "@type": "Dataset", "name": "Electric car reliability by NHTSA complaints per car sold", "url": BASE + '/electric/', "creator": {"@type": "Organization", "name": "The Lemon Index"},
-          "description": f"{len(RK)} electric cars, model years {EV['years'][0]}-{EV['years'][1]}, ranked by NHTSA safety complaints per U.S. sale.", "license": "https://creativecommons.org/licenses/by/4.0/", "dateModified": TODAY},
+          "description": f"{len(RK)} electric cars, model years {EV['years'][0]}-{EV['years'][1]}, ranked by NHTSA owner complaints per U.S. sale.", "license": "https://creativecommons.org/licenses/by/4.0/", "dateModified": TODAY},
          {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in EFAQ]}])
 eurls.append('/electric/')
 
@@ -145,10 +146,10 @@ for c in EVC:
     page(EVU(c), title + ' | The Lemon Index',
          f'{c["name"]}: Lemon Index {c["li"]} ({plain(c["li"])}), {rank}. Top problem: {ep(c["issues"][0][0]) if c["issues"] else "n/a"}. Recalls, fire complaints, EPA range and yearly cost.', f'''
 <article class="study tr2 ev2"><p class="kicker"><a href="/electric/">Electric cars</a> · {E(c["name"])}</p><h1>{E(c["name"])} reliability, {c["years"]}</h1>
-<p class="tra">The {E(c["name"])} drew <b>{plain(c["li"])}</b>: {rank}.{main}</p>
-<div class="trc"><div><b class="{cls(c["li"])}">{c["li"]}</b><span>Lemon Index (100 = average)</span></div><div><b>{c["per100k"]}</b><span>complaints per 100,000 sold</span></div><div><b>{c["sold"]:,}</b><span>sold, {c["years"]}{" (small sample)" if c["small"] else ""}</span></div></div>
+<p class="tra">The {E(c["name"])} drew <b>{plain(c["li"])}</b>: {rank}.{main}</p>{(lambda t: f'<p class="note">{t}</p>' if t else '')(two_windows(c['slug'], 'ev'))}
+<div class="trc"><div><b class="{cls(c["li"])}">{c["li"]}</b><span>EV score, {c["years"].replace("-", "–")} (100 = average)</span></div><div><b>{c["per100k"]}</b><span>complaints per 100,000 sold</span></div><div><b>{c["sold"]:,}</b><span>sold, {c["years"]}{" (small sample)" if c["small"] else ""}</span></div></div>
 {TAB.ASSET}{TAB._tabs([('overview', 'Overview', f'<h2>Top problems</h2><ul class="evp">{iss}</ul><p>Without driver-assist complaints: <b>{c["noadas100k"]}</b> per 100,000 sold. Fire complaints: <b>{c["fire"]}</b> ({c["fire100k"]} per 100,000; all EVs average {P["ev"]["fire100k"]}). <a href="/electric/fires/">EV fires vs gas →</a></p>'),
-                       ('years', 'Years', f'<h2>Year by year</h2><p class="note">Lemon Index per model year. 100 is the average car (thin line), lower is better.</p><div class="bars yb trb">{ybars}</div>'),
+                       ('years', 'Years', f'<h2>Year by year</h2><p class="note">EV score per model year: complaints filed by the end of the year after the model year, per car sold. 100 is the average car (thin line), lower is better.</p><div class="bars yb trb">{ybars}</div>'),
                        ('cost', 'Range & cost', cost),
                        ('recalls', 'Recalls & safety', f'<h2>Recalls</h2><p>{rec_note}.{" The newest:" if rec else ""}</p><ul class="recalls">{rec}</ul>{sg}')], f'{c["name"]} sections')}
 <p class="note">Complaints {WIN}. {E(SRC_NOTE)} Sales source: {E(c["src"])}.</p></article>''', kind='article',

@@ -109,12 +109,12 @@ def _seo_pages():
     br = sorted(csv.DictReader(open('data/brand_rates.csv', encoding='utf-8')), key=lambda r: int(r['lemon_index']))
     popular = sorted([c for c in CARS if c['sold'] >= 150000], key=lambda c: c['li'])
     cel = GAP['cel'] if GAP else []
-    S_ = [f'<b>{sev["total"]:,}</b> owner complaints are in our dataset for the {len(YEARS)} models we track by model year.', f'Owners reported <b>{sev["crash"]:,}</b> crashes, <b>{sev["fire"]:,}</b> fires, <b>{sev["injured"]:,}</b> injuries and <b>{sev["deaths"]:,}</b> deaths in those complaints. These are owner reports, not verified counts.', f'Owners reported <b>{sev["towed"]:,}</b> vehicles towed.', f'We track <b>{len(rec):,}</b> different recall campaigns across those models.',
+    S_ = [f'<b>{sev["total"]:,}</b> owner complaints are in our dataset for the {len(YEARS)} models we track, model years 2000 to 2025, filed at any time.', f'Owners reported <b>{sev["crash"]:,}</b> crashes, <b>{sev["fire"]:,}</b> fires, <b>{sev["injured"]:,}</b> injuries and <b>{sev["deaths"]:,}</b> deaths in those complaints. These are owner reports, not verified counts.', f'Owners reported <b>{sev["towed"]:,}</b> vehicles towed.', f'We track <b>{len(rec):,}</b> different recall campaigns across those models.',
           f'The most reliable brand by owner complaints is <b>{br[0]["brand"]}</b>, with a Lemon Index of {br[0]["lemon_index"]}. The highest is <b>{br[-1]["brand"]}</b> at {br[-1]["lemon_index"]}. 100 is the average car.', f'The most reliable popular model is the <b>{popular[0]["name"]}</b> at {popular[0]["li"]}. The highest is the <b>{popular[-1]["name"]}</b> at {popular[-1]["li"]}.']
     if cel: S_.append(f'The <b>{cel[0]["name"]}</b> drew the most check engine light complaints per vehicle sold, at {cel[0]["per"]:g} per 100,000.')
     lede = f'{sev["total"]:,} U.S. owner complaints to the government, broken down by system, brand and model.'
     # 11-10 v2 (design audit: a list of sentences + plain tables): big stat tiles, three simple bar charts, short source lines, the cite box kept
-    T_ = [(f'{sev["total"]:,}', 'owner complaints', f'{len(YEARS)} models, by model year'), (f'{sev["crash"]:,}', 'crashes reported', 'owner reports, not verified'),
+    T_ = [(f'{sev["total"]:,}', 'owner complaints', f'{len(YEARS)} models, model years 2000–2025, filed any time'), (f'{sev["crash"]:,}', 'crashes reported', 'owner reports, not verified'),
           (f'{sev["fire"]:,}', 'fires reported', 'owner reports'), (f'{sev["injured"]:,}', 'injuries reported', 'owner reports'),
           (f'{sev["deaths"]:,}', 'deaths reported', 'owner reports'), (f'{sev["towed"]:,}', 'cars towed', 'owner reports'), (f'{len(rec):,}', 'recall campaigns', 'across those models')]
     tiles = '<div class="stt">' + ''.join(f'<div><b>{a}</b><span>{b}</span><small>{c}</small></div>' for a, b, c in T_) + '</div>'
@@ -130,6 +130,7 @@ def _seo_pages():
             '<section class="yc"><h2>Brands, by Lemon Index</h2>' + hbar(brr, max(130, max(v for _, v, _, _ in brr)) * 1.05, 100) + '<p class="yc-cap">Complaints per car sold against the average car. 100 (the line) is average, lower is better.</p></section>'
             '<section class="yc"><h2>Popular models: best 5 and worst 5</h2>' + hbar(pmr, max(c['li'] for c in pm) * 1.05, 100) + '<p class="yc-cap">Models with 150,000 or more sold.'
             + (f' Most check engine light complaints per car sold: the {E(cel[0]["name"])} ({cel[0]["per"]:g} per 100,000).' if cel else '') + '</p></section>'
+            + totals_html() +   # 11-12 (Priya): what each site-wide total covers
             '<section class="yc stc"><h2>How to cite this</h2><p>Free to use with credit: <q>Source: The Lemon Index (lemonindex.com)</q>. Raw data on the <a href="/data/">data page</a>; method on <a href="/method/">how the index works</a>.</p></section>'
             '<p class="yc-cap">Source: NHTSA owner complaints and recalls, and published U.S. sales. Complaints are owner reports, not proof of a defect.</p></div>')
     body += share_line(f'{sev["total"]:,} car complaints to the government, broken down by brand, model and system. Free to cite:', 'Know someone who writes about cars?')

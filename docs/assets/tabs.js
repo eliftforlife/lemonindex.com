@@ -21,14 +21,22 @@ document.documentElement.classList.add('tbjs');
         for (var i = 0; i < panels.length; i++) {
           if (panels[i] === el || panels[i].contains(el)) {
             sel(i, false, false);
-            if (scroll && el !== panels[i]) setTimeout(function () { el.scrollIntoView({ block: 'start' }); }, 0);
+            if (scroll) setTimeout(function () { jump(el); }, 0);
             return true;
           }
         }
         return false;
       }
+      // 11-12 (Jess, Tyler): tapping a tab brings its content into view, just under the sticky tab row (and the header when it shows)
+      var row = root.querySelector('.tb-row'), still = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+      function jump(el) {
+        if (typeof el === 'number') el = panels[el];
+        var off = 0; if (row) { off = row.getBoundingClientRect().height + (parseFloat(getComputedStyle(row).top) || 0); }
+        var y = el.getBoundingClientRect().top + window.pageYOffset - off - 6;
+        if (Math.abs(window.pageYOffset - y) > 4) window.scrollTo({ top: Math.max(0, y), behavior: still ? 'auto' : 'smooth' });
+      }
       tabs.forEach(function (t, i) {
-        t.addEventListener('click', function () { sel(i, false, true); });
+        t.addEventListener('click', function () { sel(i, false, true); jump(i); });
         t.addEventListener('keydown', function (e) {
           var k = e.key, n = tabs.length, j = null;
           if (k === 'ArrowRight') j = (i + 1) % n; else if (k === 'ArrowLeft') j = (i - 1 + n) % n; else if (k === 'Home') j = 0; else if (k === 'End') j = n - 1;

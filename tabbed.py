@@ -11,7 +11,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 E = lambda s: html.escape(str(s), quote=True)
 LIC = 'https://creativecommons.org/licenses/by/4.0/'
 BASE = 'https://lemonindex.com'
-ASSET = '<link rel="stylesheet" href="/assets/tabs.css?v=4"><script src="/assets/tabs.js?v=1"></script>'
+ASSET = '<link rel="stylesheet" href="/assets/tabs.css?v=5"><script src="/assets/tabs.js?v=2"></script>'
 
 def engines(fid):
     p = os.path.join(HERE, 'data', f'engines_{fid}.json')
@@ -131,8 +131,8 @@ def _tabs(panels, label, extra=''):
     panels = [p for p in panels if p[2].strip()]
     bar = ''.join(f'<button class="tb-t" role="tab" id="t-{i}" aria-controls="p-{i}" data-h="{i}" aria-selected="{"true" if n == 0 else "false"}" tabindex="{0 if n == 0 else -1}">{E(t)}</button>' for n, (i, t, _) in enumerate(panels))
     body = ''.join(f'<section class="tb-p{" on" if n == 0 else ""}" role="tabpanel" id="p-{i}" aria-labelledby="t-{i}" tabindex="0">{h}</section>' for n, (i, t, h) in enumerate(panels))
-    head = f'<div class="tb-bar" role="tablist" aria-label="{E(label)}">{bar}</div>'
-    if extra: head = f'<div class="tb-row">{head}{extra}</div>'
+    head = f'<div class="tb-row"><div class="tb-bar" role="tablist" aria-label="{E(label)}">{bar}</div></div>'
+    if extra: head = f'<div class="tb-mrow">{extra}</div>' + head   # 11-12 (Jess, Marcus): the Normal / Advanced switch sits above the tab row, never over the tabs
     return f'<div class="tbx">{head}{body}</div>'
 
 # 11-10 (Elijah: "can we make this part better?"): the year page's 4 stacked control rows (year pills, big Compare/Share buttons,
@@ -144,8 +144,10 @@ _ICON = {
 }
 _svg = lambda k: f'<svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{_ICON[k]}</svg>'
 
-def _controls(sw):
-    """yswitch nav -> one compact row: '‹ prev · YEAR · next ›' plus small All years / Compare / Share icon buttons."""
+_ICON['adv'] = '<path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0"/><circle cx="16" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="18" cy="18" r="2"/>'
+def _controls(sw, modes=None):
+    """yswitch nav -> one compact row: '‹ prev · YEAR · next ›' plus labelled All years / Compare / Share buttons, and (11-12) the link to the
+    other page mode (Advanced / Normal), so the mode switch no longer rides on (and clips) the sticky tab row."""
     if not sw: return ''
     seg = sw.find(class_='yseg'); act = sw.find(class_='yact')
     if not seg: return str(sw)
@@ -159,6 +161,10 @@ def _controls(sw):
         c = act.find('a'); sh = act.find(attrs={'data-share': True})
         if c: btns.append(f'<a class="tb-ic" href="{E(c["href"])}" aria-label="Compare the {E(yr)} with other cars"><span class="tb-ic-i">{_svg("cmp")}</span><span class="tb-ic-l">Compare</span></a>')
         if sh: btns.append(f'<button class="tb-ic yshare" type="button" data-share="{E(sh["data-share"])}" aria-label="Share this report"><span class="tb-ic-i">{_svg("shr")}</span><span class="tb-ic-l">Share</span></button>')
+    other = next((a for a in (modes.find_all('a') if modes else []) if not a.get('aria-current')), None)
+    if other is not None:
+        t = other.get_text(strip=True); lab = 'Advanced data' if t == 'Advanced' else 'Normal view'
+        btns.append(f'<a class="tb-ic tb-mode" href="{E(other["href"])}"><span class="tb-ic-i">{_svg("adv")}</span><span class="tb-ic-l">{lab}</span></a>')
     return f'<nav aria-label="Model years" class="yswitch tb-ctl">{seg}<div class="tb-acts">{"".join(btns)}</div></nav>'
 
 def _modes(modes):
@@ -187,9 +193,9 @@ def transform_model(body, eng_html, short):
     links = [l for l in (pv.find_all(['link', 'script'], recursive=False) if pv else [])]
     rsc = pv.find(class_='rsc') if pv else None; rnew = pv.find(class_='rs-new') if pv else None
     short_ans = f'<p class="ans tb-ans">{_first_sentence(ans)}</p>' if ans else ''
-    sl = _s(slider).replace('>Best year<', '>Safest year<')
+    sl = _s(slider)   # 11-12: the badge says 'Fewest complaints' (year_slider.py); never 'safest'
     if not slider and pv:   # 11-10 rollout: no year images -> the model's own picture fills the same hero slot (car-image work can drop in here later)
-        fig = pv.find('figure', class_='yph'); sl = _s(fig)   # the slider opens on the site's safest year (complaints + YouTube); 'Best year' below means fewest complaints
+        fig = pv.find('figure', class_='yph'); sl = _s(fig)
     hero = (f'<section class="ph tb-hero">{_s(crumbs)}<div class="tb-img">{"".join(map(str, links))}{sl}</div>{_s(h1)}{short_ans}{_s(yhero)}{_s(share)}</section>')
     secs = [c for c in root.find_all(recursive=False) if c is not ph]
     pick = lambda pred: [c for c in secs if pred(c)]
@@ -208,11 +214,11 @@ def transform_model(body, eng_html, short):
             if h2: h2.extract()
             inner = ch.decode_contents(); ch.clear(); ch.append(BeautifulSoup(h2s + _toggle(inner, eng_html, short), 'html.parser'))
     S_ = BeautifulSoup(''.join(map(str, years + bw + cmp_ + qa + table + ([rsc] if rsc else []))), 'html.parser')
-    safest = next((a for a in S_.select('.rsc .rs') if 'Safest' in _txt(a.find('small'))), None)
+    safest = S_.select_one('.rsc .rs-rec')   # 11-12: the one recommended year (build.py rec_year)
     bars = _year_bars(BeautifulSoup('<div class="yyears">' + ''.join(map(str, years)) + '</div>', 'html.parser'))
     best_b = S_.select_one('.bw2 .bwt.good h2') or S_.select_one('.bw2 h2')
     yv = _txt(safest.find('b')) if safest else (_txt(best_b).rstrip('.') if best_b else '')
-    c_y = _ovcard('years', 'Years & engines' if eng_html else 'Every year', E(yv), ('Safest year' if safest else 'Best year to buy') if yv else '', _ovstrip(bars), go='every year')
+    c_y = _ovcard('years', 'Years & engines' if eng_html else 'Every year', E(yv), ('Fewest owner complaints' if safest or best_b else '') if yv else '', _ovstrip(bars), go='every year')
     mus = [_txt(m.find('b')) for m in S_.select('.mu')][:3]
     c_c = _ovcard('compare', 'Compare', E(mus[0]) if mus else '', ('Also ' + ', '.join(E(m.replace('vs ', '')) for m in mus[1:3])) if len(mus) > 1 else '', go='comparisons')
     nq = len(S_.select('.yqa h3')); c_q = _ovcard('questions', 'Questions', f'{nq} quick answers' if nq else '', '', _qtitles([S_]), go='questions')
@@ -298,8 +304,8 @@ def overview_cards_year(over, probs, fix, rec, yrs, qa):
                      (f'<span class="ovst">{st}<small>crash test</small></span>' if st else ''), go='recalls & safety')
     else: c3 = _ovcard('recalls', 'Recalls & safety', '')
     # 4 every year
-    bars = _year_bars(S_); by = card.get('Better year to buy') or card.get('Best year')
-    if by: c4 = _ovcard('years', 'Every year', E(_txt(by[0])), ('Better year to buy' if 'Better year to buy' in card else 'The best year we track'), _ovstrip(bars), go='every year')
+    bars = _year_bars(S_); _bk = next((k for k in ('Fewer complaints nearby', 'Fewest complaints', 'Fewest complaints nearby') if k in card), None); by = card.get(_bk) if _bk else None
+    if by: c4 = _ovcard('years', 'Every year', E(_txt(by[0])), {'Fewer complaints nearby': 'Fewer complaints, nearby year', 'Fewest complaints': 'Fewest owner complaints', 'Fewest complaints nearby': 'This year: fewest complaints nearby'}[_bk], _ovstrip(bars), go='every year')
     else: c4 = _ovcard('years', 'Every year', f'{len(bars)} years' if bars else '', 'side by side' if bars else '', _ovstrip(bars), go='every year')
     # 5 questions
     qs = S_.select('.yqa h3')
@@ -320,16 +326,17 @@ def transform_year(body, eng_html, short):
         pop = _info(re.sub(r'^Early read\.\s*', '', _txt(en))) if en is not None else ''
         pop = pop.replace('<div class="ii-pop"', '<span class="ii-pop"').replace('</div>', '</span>')
         early = BeautifulSoup(f'<p class="early-b">Early read · still collecting complaints<span class="iiw">{pop}</span></p>', 'html.parser')
-    hero = f'<section class="ph tb-hero">{_s(crumbs)}<div class="tb-img">{img}</div>{_s(h1)}{_s(early)}{_s(yhero)}{_controls(sw)}</section>'   # the gauge + verdict already say it: no answer paragraph
+    hero = f'<section class="ph tb-hero">{_s(crumbs)}<div class="tb-img">{img}</div>{_s(h1)}{_s(early)}{_s(yhero)}{_controls(sw, modes)}</section>'   # the gauge + verdict already say it: no answer paragraph
     top = [c for c in root.find_all(recursive=False) if c is not ph]
     grid = next((c for c in top if 'ygrid' in (c.get('class') or [])), None)
     items = [c for c in top if c is not grid] + (grid.find_all(recursive=False) if grid else [])
     H = lambda c: (c.find('h2').get_text(' ', strip=True) if c.find('h2') else '')
     C = lambda c: c.get('class') or []
-    over, probs, fix, rec, yrs, qa, tail = [], [], [], [], [], [], []
+    over, probs, fix, rec, yrs, qa, tail, keep = [], [], [], [], [], [], [], []
     for c in items:
         h = H(c); k = C(c)
-        if 'shline' in k or ('yc-cap' in k and c.name == 'p'): tail.append(c)
+        if c.get('id') in ('mileage-guide', 'ask-seller'): keep.append(c)   # 11-12: shown in Overview, under the preview cards
+        elif 'shline' in k or ('yc-cap' in k and c.name == 'p'): tail.append(c)
         elif 'yyears' in k: yrs.append(c)
         elif 'yqa' in k: qa.append(c)
         elif c.get('id') in ('problems',) or 'ysev' in k or h.startswith(('When owners', 'In owners', 'What owners')): probs.append(c)
@@ -358,9 +365,9 @@ def transform_year(body, eng_html, short):
     tail = [c for c in tail if not (c.name == 'p' and 'yc-cap' in (c.get('class') or []) and _txt(c).startswith('Lemon Index ='))]
     over_html = overview_cards_year(over, probs, fix, rec, yrs, qa)
     _pl = [('problems', 0, J(probs)), ('repairs', 0, J(fix)), ('recalls', 0, J(rec)), ('years', 0, J(yrs)), ('questions', 0, J(qa))]
-    over_html = _ovfilter(over_html, _pl)
+    over_html = _ovfilter(over_html, _pl) + (f'<div class="ovk">{J(keep)}</div>' if keep else '')
     tabs = _tabs([('overview', 'Overview', over_html), ('problems', 'Problems', J(probs)), ('repairs', 'Repairs & costs', J(fix)),
-                  ('recalls', 'Recalls & safety', J(rec)), ('years', 'Every year', J(yrs)), ('questions', 'Questions', J(qa))], 'Report sections', _modes(modes))
+                  ('recalls', 'Recalls & safety', J(rec)), ('years', 'Every year', J(yrs)), ('questions', 'Questions', J(qa))], 'Report sections')
     cls = ' '.join(root.get('class') or [])
     return f'{ASSET}<article class="{cls} tbl">{hero}{tabs}{J(tail)}</article>'
 

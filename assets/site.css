@@ -1797,3 +1797,6 @@ header.gh.wide .gh-sheet .gh-q .fsug a, .gh-sheet .gh-q .fsug a { display: grid;
 .abp .stt.prs span { font-size: 14px; font-weight: 600; }
 .abp .stt.prs small { font-size: 12.5px; line-height: 1.4; color: #6e6e73; }
 @media (max-width: 600px) { .abp .stt.prs { grid-template-columns: minmax(0, 1fr); } }
+/* 11-12 (Jess): image info buttons get a 44 px tap target everywhere (26 px dot + 9 px invisible margin all round) */
+.ii { width: 26px; height: 26px; }
+.ii::after { inset: -9px; }
