@@ -9,7 +9,7 @@
   // 11-11 (Elijah: one search for everything): supercars, EVs and performance cars ride along as [name, id, years, page, kind]; they open their
   // own page (no year pages), and a performance car without a page yet says "coming soon". Accents fold, so "huracan" finds the Huracán.
   const fold = s => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
-  const KIND = { sc: 'Supercar · engine, fuel cost and recalls', ev: 'Electric car · EV score and problems', perf: 'Performance car · specs, engines and problems', moto: 'Motorcycle · complaints and recalls', co: 'Owner complaints and recalls' };
+  const KIND = { sc: 'Supercar · engine, fuel cost and recalls', ev: 'Electric car · EV score and problems', perf: 'Performance car · specs, engines and problems', moto: 'Motorcycle · complaints and recalls', co: 'Owner complaints and recalls', eng: 'Engine · reliability by year' };
   const key = (n, b, al, id) => fold(n + ' ' + b + ' ' + (al || '')).replace(/[^a-z0-9 ]/g, ' ') + (AK[id] || '');
   let ALL = Object.entries(P).flatMap(([b, ms]) => ms.map(([n, id, ys, u, t]) => ({ b, n, id, ys, u: u || '/cars/' + id + '/', t: t || '', soon: t === 'perf' && !u, k: key(n, b, t === 'ev' ? 'ev electric' : '', id) })));
   // 11-11 (Elijah: "M3" found nothing): the full index of every car page and card (assets/find.json, built from the same lists as the pages,
@@ -47,7 +47,7 @@
     sug.hidden = !hits.length;
     if (hits.length && hits[0].brand) { sug.innerHTML = `<p class="fhint">${hits[0].y}: pick the brand</p><div class="fbr">` + hits.map((h, i) => `<button type="button" data-b="${h.brand}" class="${i === cur ? 'on' : ''}">${h.brand}</button>`).join('') + '</div>';
       sug.querySelectorAll('[data-b]').forEach(x => x.onclick = () => { q.value = `${hits[0].y} ${x.dataset.b} `; q.focus(); hits = find(q.value); cur = hits.length ? 0 : -1; show(); }); return; }
-    const lab = h => h.c.soon ? (h.c.t === 'nd' ? 'No data yet' : 'Coming soon') + ({ perf: ' · performance car', sc: ' · supercar', moto: ' · motorcycle' }[h.c.t] || '')
+    const lab = h => h.c.soon ? (h.c.t === 'nd' ? 'No data yet' : 'Coming soon') + ({ perf: ' · performance car', sc: ' · supercar', moto: ' · motorcycle', eng: ' · engine' }[h.c.t] || '')
       : h.c.t ? KIND[h.c.t] : h.y ? 'problems and owner complaints' : h.miss ? `no ${h.miss} in our data · every year ${h.c.ys[0]}-${h.c.ys.at(-1)}` : h.c.ys.length ? `every year ${h.c.ys[0]}-${h.c.ys.at(-1)}` : 'problems and owner complaints';
     sug.innerHTML = hits.map((h, i) => { const u = href(h.c, h.y), cl = (i === cur ? 'on' : '') + (u ? '' : ' fsoon');
       return `<a role="option" ${u ? `href="${u}"` : 'aria-disabled="true"'} class="${cl.trim()}"><b>${h.y ? h.y + ' ' : ''}${h.c.n}</b><small>${lab(h)}</small></a>`; }).join('');

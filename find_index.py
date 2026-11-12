@@ -49,6 +49,7 @@ for c in PERFX:
 for s in (globals().get('MS') or []): _fadd(s['name'], s['make'], '', 'moto', [], 'motorcycle bike ' + (s.get('search') or ''), 1)
 for m in NEWM:
     if m['slug'] not in _DUP and m['slug'] not in _EXN: _fadd(m['name'], m['make'], '', 'nd', [], '', 1)
+for r in (globals().get('AE_FIND') or []): _fadd(*r)   # 11-12 engines (all_engines.py): live engine pages + coming-soon engines
 os.makedirs(f'{OUT}/assets', exist_ok=True)   # straight into the built site: no untracked assets/find.json in the repo (it blocked the workers' auto-deploy)
 json.dump(FIND, open(f'{OUT}/assets/find.json', 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
 
@@ -70,5 +71,10 @@ for _pg in ('index.html', 'motorcycles/index.html'):
     for nm in dict.fromkeys(re.findall(r'<div class="mc[^"]*mc-nd[^"]*"[^>]*>.*?<b>(.*?)</b>', _h)):
         n_ = fold_(re.sub('<[^>]+>', '', nm))
         if n_ and not any(x == n_ or x.endswith(' ' + n_) for x in _names): _miss.append(f'soon card "{nm}" on /{_pg[:-10]}')
+_eh = open(f'{OUT}/engines/index.html', encoding='utf-8').read() if os.path.exists(f'{OUT}/engines/index.html') else ''   # 11-12: every /engines/ card is searchable
+for u in dict.fromkeys(re.findall(r'<a class="aec"[^>]*href="([^"]+)"', _eh)):
+    if html.unescape(u) not in _idx: _miss.append('engine card ' + u)
+for nm in dict.fromkeys(re.findall(r'<div class="aec aec-soon"[^>]*>.*?<b>(.*?)</b>', _eh)):
+    if not any(x.startswith(fold_(re.sub('<[^>]+>', '', nm)) + ' ') for x in _names): _miss.append(f'soon engine "{nm}"')
 if _miss: raise SystemExit(f'find index is missing {len(_miss)} page(s) - add their list to find_index.py: {_miss[:12]}')
 print('find index', len(FIND), 'entries,', sum(r[6] for r in FIND), 'coming soon; every page and card covered')

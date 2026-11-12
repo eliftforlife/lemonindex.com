@@ -1732,3 +1732,29 @@ article.sce .sce-t ul { margin: 6px 0 8px; padding-left: 20px; } article.sce .sc
   .donbar-x { position: absolute; right: 0; bottom: 0; width: 40px; height: 38px; border: 0; background: none; color: rgba(255,255,255,.6); font-size: 19px; line-height: 1; cursor: pointer; }
   .donbar-go:focus-visible, .donbar-x:focus-visible { outline: 2px solid #ffd400; outline-offset: -2px; }
 }
+/* 11-12 (Elijah: "an engine page that says all engines"): /engines/ (all_engines.py + assets/engines.js). Classes: ae* only. */
+.aeng { margin-top: 8px; }
+.aeng .aetabs { grid-template-columns: repeat(6, minmax(0, 1fr)); max-width: 860px; }
+.aes { margin: 0 0 44px; } .aes > h2 { font-size: 22px; letter-spacing: -.02em; margin: 0 0 14px; text-align: center; } .aes > h2 .h2s { display: block; margin-top: 4px; font-size: 14px; font-weight: 500; letter-spacing: 0; color: #6e6e73; }
+.aeg { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+.aec { position: relative; display: flex; flex-direction: column; gap: 4px; padding: 10px 10px 14px; border-radius: 20px; background: #f5f5f7; color: var(--ink); text-decoration: none; transition: transform .25s cubic-bezier(.2,.9,.25,1); }
+.aec[hidden] { display: none; }
+a.aec:hover { transform: translateY(-3px); }
+.aec-p { display: block; aspect-ratio: 3 / 2; border-radius: 14px; overflow: hidden; background: #fff; margin-bottom: 6px; }
+.aec-p img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.aec-ic { display: flex; align-items: center; justify-content: center; color: #b9b9bf; background: #ececef; }
+.aec-ic svg { width: 46%; height: auto; }
+.aec b { font-size: 15px; font-weight: 600; line-height: 1.25; padding: 0 4px; }
+.aec small { display: block; padding: 0 4px; font-size: 12.5px; line-height: 1.35; color: #6e6e73; }
+.aec .aec-u { color: #3c4043; }
+.aec .aec-yt { top: 16px; right: 16px; }
+.aec-soon { cursor: default; background: #f2f2f4; } .aec-soon b { color: #6e6e73; font-weight: 500; } .aec-soon .aec-u { color: #6e6e73; }
+.aec-b { position: absolute; top: 16px; right: 16px; padding: 4px 9px; border-radius: 999px; background: #fff; color: #6e6e73; font-size: 11.5px; font-weight: 600; }
+.aenone { text-align: center; color: #6e6e73; margin: 0 0 40px; }
+.aehubs { text-align: center; } .aeng .ph-cr { text-align: center; }
+@media (max-width: 600px) {
+  .aeng .aetabs { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .aeg { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .aec { padding: 8px 8px 12px; border-radius: 18px; } .aec b { font-size: 14px; } .aec small { font-size: 12px; }
+  .aec .aec-yt, .aec-b { top: 12px; right: 12px; }
+}
