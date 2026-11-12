@@ -1768,5 +1768,245 @@
 "sales_url": "https://en.wikipedia.org/wiki/Volkswagen_CC",
 "sales_kind": "calendar",
 "id": "volkswagen-cc"
+},
+{
+"name": "Dodge Stratus",
+"brand": "Dodge",
+"segment": "car",
+"years": "2000-2006",
+"sold": 754482,
+"n": 367,
+"per100k": 49,
+"expected": 675.6389241287022,
+"li": 54,
+"serious": 23,
+"worst": "2003",
+"issues": [
+[
+"engine",
+22
+],
+[
+"transmission & drivetrain",
+17
+],
+[
+"service brakes, hydraulic",
+14
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Dodge_Stratus",
+"sales_kind": "calendar",
+"id": "dodge-stratus"
+},
+{
+"name": "Acura TLX",
+"brand": "Acura",
+"segment": "car",
+"years": "2015-2021",
+"sold": 243110,
+"n": 301,
+"per100k": 124,
+"expected": 243.53167771495367,
+"li": 124,
+"serious": 9,
+"worst": "2015",
+"issues": [
+[
+"transmission & drivetrain",
+44
+],
+[
+"engine",
+17
+],
+[
+"electrical",
+15
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Acura_TLX",
+"sales_kind": "calendar",
+"id": "acura-tlx"
+},
+{
+"name": "Toyota Yaris",
+"brand": "Toyota",
+"segment": "car",
+"years": "2010-2013",
+"sold": 92008,
+"n": 40,
+"per100k": 43,
+"expected": 103.59790119310045,
+"li": 39,
+"serious": 65,
+"worst": "2010",
+"issues": [
+[
+"airbags",
+25
+],
+[
+"steering",
+10
+],
+[
+"speed control",
+10
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Toyota_Yaris",
+"sales_kind": "calendar",
+"id": "toyota-yaris"
+},
+{
+"name": "Toyota FJ Cruiser",
+"brand": "Toyota",
+"segment": "suv",
+"years": "2007-2008",
+"sold": 140083,
+"n": 295,
+"per100k": 211,
+"expected": 126.9906944803382,
+"li": 232,
+"serious": 5,
+"worst": "2007",
+"issues": [
+[
+"body structure",
+36
+],
+[
+"visibility",
+27
+],
+[
+"service brakes, hydraulic",
+18
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Toyota_FJ_Cruiser",
+"sales_kind": "calendar",
+"id": "toyota-fj-cruiser"
+},
+{
+"name": "Chevrolet Express",
+"brand": "Chevrolet",
+"segment": "van",
+"years": "2010-2021",
+"sold": 678636,
+"n": 88,
+"per100k": 13,
+"expected": 733.7094060656543,
+"li": 12,
+"serious": 19,
+"worst": "2010",
+"issues": [
+[
+"brakes",
+22
+],
+[
+"electrical",
+19
+],
+[
+"engine",
+14
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/chevrolet-express-sales-figures/",
+"sales_kind": "calendar",
+"id": "chevrolet-express"
+},
+{
+"name": "Buick Encore",
+"brand": "Buick",
+"segment": "suv",
+"years": "2013-2020",
+"sold": 552224,
+"n": 214,
+"per100k": 39,
+"expected": 570.7382407026934,
+"li": 37,
+"serious": 25,
+"worst": "2013",
+"issues": [
+[
+"engine",
+22
+],
+[
+"electrical",
+18
+],
+[
+"brakes",
+15
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Buick_Encore",
+"sales_kind": "calendar",
+"id": "buick-encore"
+},
+{
+"name": "Fiat 500",
+"brand": "Fiat",
+"segment": "car",
+"years": "2012-2015",
+"sold": 153761,
+"n": 351,
+"per100k": 228,
+"expected": 170.0587852915388,
+"li": 206,
+"serious": 15,
+"worst": "2014",
+"issues": [
+[
+"transmission & drivetrain",
+41
+],
+[
+"electrical",
+25
+],
+[
+"engine",
+15
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/fiat-500-sales-figures/",
+"sales_kind": "calendar",
+"id": "fiat-500"
+},
+{
+"name": "Ram ProMaster",
+"brand": "Ram",
+"segment": "van",
+"years": "2015-2022",
+"sold": 387130,
+"n": 262,
+"per100k": 68,
+"expected": 402.10825738194933,
+"li": 65,
+"serious": 6,
+"worst": "2015",
+"issues": [
+[
+"electrical",
+19
+],
+[
+"transmission & drivetrain",
+18
+],
+[
+"engine",
+14
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Ram_ProMaster",
+"sales_kind": "calendar",
+"id": "ram-promaster"
 }
 ]

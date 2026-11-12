@@ -2655,5 +2655,362 @@
    2011,
    2012
   ]
+ },
+ {
+  "slug": "lincoln-ls",
+  "sales": {},
+  "kind": "none",
+  "url": "",
+  "note": "no sales source",
+  "flags": [
+   "Lincoln LS: 0 scorable model years / 0 complaints -> complaints only"
+  ],
+  "complaints": 979,
+  "scored": []
+ },
+ {
+  "slug": "dodge-stratus",
+  "sales": {
+   "1998": 123303,
+   "1999": 95186,
+   "2000": 128549,
+   "2001": 110504,
+   "2002": 114056,
+   "2003": 59022,
+   "2004": 136014,
+   "2005": 104020,
+   "2006": 102317
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Dodge_Stratus",
+  "note": "col='United States'",
+  "flags": [],
+  "complaints": 976,
+  "scored": [
+   2000,
+   2001,
+   2002,
+   2003,
+   2004,
+   2005,
+   2006
+  ]
+ },
+ {
+  "slug": "acura-tlx",
+  "sales": {
+   "2014": 19127,
+   "2015": 47080,
+   "2016": 37156,
+   "2017": 34846,
+   "2018": 30468,
+   "2019": 26548,
+   "2020": 21785,
+   "2021": 26100,
+   "2022": 11508,
+   "2023": 16731,
+   "2024": 7478,
+   "2025": 8030
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Acura_TLX",
+  "note": "col='US'",
+  "flags": [
+   "Acura TLX 2014: 19,127 sold, 0 complaints in window -> sales merged into 2015"
+  ],
+  "complaints": 944,
+  "scored": [
+   2015,
+   2016,
+   2017,
+   2018,
+   2019,
+   2020,
+   2021
+  ]
+ },
+ {
+  "slug": "buick-lucerne",
+  "sales": {},
+  "kind": "none",
+  "url": "",
+  "note": "no sales source",
+  "flags": [
+   "Buick Lucerne: 0 scorable model years / 0 complaints -> complaints only"
+  ],
+  "complaints": 943,
+  "scored": []
+ },
+ {
+  "slug": "isuzu-rodeo",
+  "sales": {},
+  "kind": "none",
+  "url": "",
+  "note": "no sales source",
+  "flags": [
+   "Isuzu Rodeo: 0 scorable model years / 0 complaints -> complaints only"
+  ],
+  "complaints": 908,
+  "scored": []
+ },
+ {
+  "slug": "kia-spectra",
+  "sales": {},
+  "kind": "none",
+  "url": "",
+  "note": "no sales source",
+  "flags": [
+   "Kia Spectra: 0 scorable model years / 0 complaints -> complaints only"
+  ],
+  "complaints": 950,
+  "scored": []
+ },
+ {
+  "slug": "toyota-fj-cruiser",
+  "sales": {
+   "2006": 56225,
+   "2007": 55170,
+   "2008": 28688,
+   "2009": 11941,
+   "2010": 14959,
+   "2011": 13541,
+   "2012": 13656,
+   "2013": 13131,
+   "2014": 14718
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Toyota_FJ_Cruiser",
+  "note": "col='US'",
+  "flags": [
+   "Toyota FJ Cruiser 2006: 56,225 sold, 0 complaints in window -> sales merged into 2007"
+  ],
+  "complaints": 908,
+  "scored": [
+   2007,
+   2008
+  ]
+ },
+ {
+  "slug": "suzuki-forenza",
+  "sales": {},
+  "kind": "none",
+  "url": "",
+  "note": "no sales source",
+  "flags": [
+   "Suzuki Forenza: 0 scorable model years / 0 complaints -> complaints only"
+  ],
+  "complaints": 907,
+  "scored": []
+ },
+ {
+  "slug": "fisker-ocean",
+  "sales": {},
+  "kind": "none",
+  "url": "",
+  "note": "no sales source",
+  "flags": [
+   "Fisker Ocean: 0 scorable model years / 0 complaints -> complaints only"
+  ],
+  "complaints": 884,
+  "scored": []
+ },
+ {
+  "slug": "chevrolet-express",
+  "sales": {
+   "2005": 128585,
+   "2006": 123195,
+   "2007": 114730,
+   "2008": 86986,
+   "2009": 54293,
+   "2010": 59753,
+   "2011": 71943,
+   "2012": 76628,
+   "2013": 79087,
+   "2014": 79352,
+   "2015": 63382,
+   "2016": 68007,
+   "2017": 69164,
+   "2018": 66963,
+   "2019": 77457,
+   "2020": 55040,
+   "2021": 44357,
+   "2022": 52796,
+   "2023": 40659,
+   "2024": 44221,
+   "2025": 58578
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/chevrolet-express-sales-figures/",
+  "note": "GoodCarBadCar annual U.S. sales",
+  "flags": [
+   "Chevrolet Express 2025: 58,578 sold, 0 complaints in window -> sales merged into 2024",
+   "Chevrolet Express 2019: 77,457 sold but only 1 complaints in window -> not scored",
+   "Chevrolet Express 2020: 55,040 sold but only 4 complaints in window -> not scored",
+   "Chevrolet Express 2022: 52,796 sold but only 3 complaints in window -> not scored",
+   "Chevrolet Express 2023: 40,659 sold but only 4 complaints in window -> not scored",
+   "Chevrolet Express 2024: 102,799 sold but only 3 complaints in window -> not scored"
+  ],
+  "complaints": 841,
+  "scored": [
+   2005,
+   2006,
+   2007,
+   2008,
+   2009,
+   2010,
+   2011,
+   2012,
+   2013,
+   2014,
+   2015,
+   2016,
+   2017,
+   2018,
+   2021
+  ]
+ },
+ {
+  "slug": "buick-encore",
+  "sales": {
+   "2013": 31956,
+   "2014": 48892,
+   "2015": 67549,
+   "2016": 78565,
+   "2017": 88035,
+   "2018": 93073,
+   "2019": 102402,
+   "2020": 41752,
+   "2021": 20072,
+   "2022": 13718,
+   "2023": 5887,
+   "2024": 126
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Buick_Encore",
+  "note": "col='United States'",
+  "flags": [
+   "Buick Encore 2023: 5,887 sold, 0 complaints in window -> sales merged into 2022",
+   "Buick Encore 2024: 126 sold, 0 complaints in window (no neighbour with complaints: dropped)",
+   "Buick Encore 2021: 20,072 sold but only 4 complaints in window -> not scored"
+  ],
+  "complaints": 602,
+  "scored": [
+   2013,
+   2014,
+   2015,
+   2016,
+   2017,
+   2018,
+   2019,
+   2020
+  ]
+ },
+ {
+  "slug": "ram-promaster",
+  "sales": {
+   "2014": 18039,
+   "2015": 28345,
+   "2016": 40440,
+   "2017": 40483,
+   "2018": 46600,
+   "2019": 56409,
+   "2020": 50556,
+   "2021": 63361,
+   "2022": 60936,
+   "2023": 81663,
+   "2024": 65869,
+   "2025": 57591
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Ram_ProMaster",
+  "note": "col='US'",
+  "flags": [],
+  "complaints": 704,
+  "scored": [
+   2015,
+   2016,
+   2017,
+   2018,
+   2019,
+   2020,
+   2021,
+   2022,
+   2023,
+   2024,
+   2025
+  ]
+ },
+ {
+  "slug": "toyota-yaris",
+  "sales": {
+   "2006": 70308,
+   "2007": 84799,
+   "2008": 102328,
+   "2009": 63743,
+   "2010": 40076,
+   "2011": 32704,
+   "2012": 30590,
+   "2013": 21342,
+   "2014": 13274,
+   "2015": 16779,
+   "2016": 10872,
+   "2017": 8653,
+   "2018": 1940
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Toyota_Yaris",
+  "note": "the article's U.S. Yaris column (Toyota reported both body styles together), 2006-2018; 2019-2020 left out because the article gives one combined Yaris / Yaris iA figure",
+  "flags": [
+   "Toyota Yaris 2006: 70,308 sold, 1 complaints in window -> sales merged into 2007",
+   "Toyota Yaris 2011: 32,704 sold but only 3 complaints in window -> not scored"
+  ],
+  "complaints": 888,
+  "scored": [
+   2007,
+   2008,
+   2009,
+   2010,
+   2012,
+   2013
+  ]
+ },
+ {
+  "slug": "fiat-500",
+  "sales": {
+   "2011": 14825,
+   "2012": 43772,
+   "2013": 36375,
+   "2014": 33705,
+   "2015": 25084,
+   "2016": 15587,
+   "2017": 12685,
+   "2018": 5370,
+   "2019": 3267,
+   "2020": 674,
+   "2021": 51,
+   "2022": 340,
+   "2023": 16,
+   "2024": 970,
+   "2025": 1142
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/fiat-500-sales-figures/",
+  "note": "GoodCarBadCar annual U.S. sales",
+  "flags": [
+   "Fiat 500 2011: 14,825 sold, 0 complaints in window -> sales merged into 2012",
+   "Fiat 500 2019: 3,267 sold, 0 complaints in window -> sales merged into 2018",
+   "Fiat 500 2020: 674 sold, 0 complaints in window (no neighbour with complaints: dropped)",
+   "Fiat 500 2021: 51 sold, 0 complaints in window (no neighbour with complaints: dropped)",
+   "Fiat 500 2022: 340 sold, 0 complaints in window (no neighbour with complaints: dropped)",
+   "Fiat 500 2023: 16 sold, 0 complaints in window -> sales merged into 2024",
+   "Fiat 500 2025: 1,142 sold, 0 complaints in window -> sales merged into 2024"
+  ],
+  "complaints": 863,
+  "scored": [
+   2012,
+   2013,
+   2014,
+   2015
+  ]
  }
 ]

@@ -881,5 +881,153 @@
   "sales": {
    "wiki": "Volkswagen CC"
   }
+ },
+ "lincoln-ls": {
+  "name": "Lincoln LS",
+  "brand": "Lincoln",
+  "seg": "car",
+  "make": "LINCOLN",
+  "rx": "(LS)",
+  "sales": {}
+ },
+ "dodge-stratus": {
+  "name": "Dodge Stratus",
+  "brand": "Dodge",
+  "seg": "car",
+  "make": "DODGE",
+  "rx": "(STRATUS|STRATUS\\ COUPE)",
+  "sales": {
+   "wiki": "Dodge Stratus"
+  }
+ },
+ "acura-tlx": {
+  "name": "Acura TLX",
+  "brand": "Acura",
+  "seg": "car",
+  "make": "ACURA",
+  "rx": "(TLX|TLX\\ TYPE\\ S)",
+  "sales": {
+   "wiki": "Acura TLX"
+  }
+ },
+ "buick-lucerne": {
+  "name": "Buick Lucerne",
+  "brand": "Buick",
+  "seg": "car",
+  "make": "BUICK",
+  "rx": "(LUCERNE)",
+  "sales": {}
+ },
+ "isuzu-rodeo": {
+  "name": "Isuzu Rodeo",
+  "brand": "Isuzu",
+  "seg": "suv",
+  "make": "ISUZU",
+  "rx": "(RODEO|RODEO SPORT|RODEO SPORTS)",
+  "sales": {}
+ },
+ "toyota-yaris": {
+  "name": "Toyota Yaris",
+  "brand": "Toyota",
+  "seg": "car",
+  "make": "TOYOTA",
+  "rx": "(YARIS|YARIS H/B)",
+  "sales": {
+   "manual": {
+    "2006": 70308,
+    "2007": 84799,
+    "2008": 102328,
+    "2009": 63743,
+    "2010": 40076,
+    "2011": 32704,
+    "2012": 30590,
+    "2013": 21342,
+    "2014": 13274,
+    "2015": 16779,
+    "2016": 10872,
+    "2017": 8653,
+    "2018": 1940
+   },
+   "url": "https://en.wikipedia.org/wiki/Toyota_Yaris",
+   "note": "the article's U.S. Yaris column (Toyota reported both body styles together), 2006-2018; 2019-2020 left out because the article gives one combined Yaris / Yaris iA figure"
+  },
+  "note": "Yaris iA (a rebadged Mazda2) left out"
+ },
+ "kia-spectra": {
+  "name": "Kia Spectra",
+  "brand": "Kia",
+  "seg": "car",
+  "make": "KIA",
+  "rx": "(SPECTRA|SPECTRA5)",
+  "sales": {}
+ },
+ "toyota-fj-cruiser": {
+  "name": "Toyota FJ Cruiser",
+  "brand": "Toyota",
+  "seg": "suv",
+  "make": "TOYOTA",
+  "rx": "(FJ\\ CRUISER)",
+  "sales": {
+   "wiki": "Toyota FJ Cruiser"
+  }
+ },
+ "suzuki-forenza": {
+  "name": "Suzuki Forenza",
+  "brand": "Suzuki",
+  "seg": "car",
+  "make": "SUZUKI",
+  "rx": "(FORENZA)",
+  "sales": {}
+ },
+ "fisker-ocean": {
+  "name": "Fisker Ocean",
+  "brand": "Fisker",
+  "seg": "suv",
+  "make": "FISKER",
+  "rx": "(OCEAN)",
+  "sales": {}
+ },
+ "chevrolet-express": {
+  "name": "Chevrolet Express",
+  "brand": "Chevrolet",
+  "seg": "van",
+  "make": "CHEVROLET",
+  "rx": "(EXPRESS|EXPRESS\\ 3500|EXPRESS\\ 1500|EXPRESS\\ 2500|EXPRESS\\ CUTAWAY\\ VAN|EXPRESS\\ 4500|EXPRESS\\ CUTAWAY)",
+  "sales": {
+   "gcbc": "chevrolet-express"
+  }
+ },
+ "buick-encore": {
+  "name": "Buick Encore",
+  "brand": "Buick",
+  "seg": "suv",
+  "make": "BUICK",
+  "rx": "(ENCORE)",
+  "sales": {
+   "wiki": "Buick Encore"
+  },
+  "note": "Encore GX is a different vehicle"
+ },
+ "fiat-500": {
+  "name": "Fiat 500",
+  "brand": "Fiat",
+  "seg": "car",
+  "make": "FIAT",
+  "rx": "(500|500C|500E|500 ABARTH|500C ABARTH)",
+  "sales": {
+   "gcbc": "fiat-500"
+  },
+  "note": "GoodCarBadCar counts the Abarth and the 500e with the 500 (not the 500L or 500X), so their complaints count too"
+ },
+ "ram-promaster": {
+  "name": "Ram ProMaster",
+  "brand": "Ram",
+  "seg": "van",
+  "make": "RAM",
+  "rx": "(PROMASTER|PROMASTER 1500|PROMASTER 2500|PROMASTER 3500)",
+  "sales": {
+   "wiki": "Ram ProMaster"
+  },
+  "note": "ProMaster City (smaller van) left out"
  }
 }
