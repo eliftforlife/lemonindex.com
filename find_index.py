@@ -66,6 +66,14 @@ for m in NEWM:
 for r in (globals().get('HD_FIND') or []): _fadd(*r)   # 11-12 round 2: HD truck pages (hd_pages.py)
 for r in (globals().get('AE_FIND') or []): _fadd(*r)   # 11-12 engines (all_engines.py): live engine pages + coming-soon engines
 for r in (globals().get('UXC_FIND') or []): _fadd(*r)   # 11-12 UX test: the performance side-by-side pages (ux_c.py), e.g. "m3 vs c63"
+# 11-13 navigation test (N1, problem 5: "chevy" opened the HHR, "ford" the Edge, "toyota" the RAV4): every brand page is a search result
+# of its own, ranked above that brand's models (lookup.js kind 'br'); the name is the page's H1, so new brand pages join by themselves
+for _bp in sorted(_glob.glob(f'{OUT}/brands/*/index.html')):
+    _bs = _bp.replace('\\', '/').split('/')[-2]; _bh = re.search(r'<h1[^>]*>(.*?)</h1>', open(_bp, encoding='utf-8').read(), re.S)
+    _bn = html.unescape(re.sub(r'<[^>]+>', '', _bh.group(1))).strip() if _bh else ''
+    _bm = re.match(r'(?i)' + r'[\s-]+'.join(map(re.escape, _bs.split('-'))) + r'(?![a-z0-9])', _bn)   # the brand at the start of the H1 ("Pontiac problems ..." -> Pontiac)
+    _bn = _bm.group(0) if _bm else _bs.replace('-', ' ').title()
+    _fadd(_bn, _bn, f'/brands/{_bs}/', 'br', [], 'brand make ' + _bs.replace('-', ' '))
 for _nm, _br, _k, _al, _rx in SOON_EXTRA:
     if not any(re.search(_rx, r[0], re.I) and r[3] != 'eng' for r in FIND): _fadd(_nm, _br, '', _k, [], _al, 1)
 for _r in FIND:
@@ -88,6 +96,8 @@ for d in ('cars', 'supercars', 'electric', 'motorcycles'):
     for p_ in _glob.glob(f'{OUT}/{d}/*/index.html'):
         u = '/' + p_[len(OUT) + 1:].replace('\\', '/')[:-len('index.html')]
         if d == 'electric' and u.rstrip('/').split('/')[-1] in ('fires', 'cost', 'problems', 'driver-assist-crashes'): continue   # EV topic pages, not cars
+        with open(p_, encoding='utf-8', errors='replace') as _fh:
+            if _fh.read(30).startswith('<!doctype html><!--lx-alias'): continue   # 11-13: a redirect stub (alias_pages.py), not a page
         if u not in _idx: _miss.append(u)
 _home = open(f'{OUT}/index.html', encoding='utf-8').read()
 for u in dict.fromkeys(re.findall(r'<a class="mc[^"]*"[^>]*href="(/[^"]+)"', _home)):

@@ -58,6 +58,10 @@ def run(G, urls, out='docs', report=REPORT):
     deep = sorted((u for u in sm if depth.get(u, 0) > 3), key=lambda u: -depth[u])
     broken = sorted({l for p, (ls, *_) in G.items() for l in ls if l not in G and not FILE.search(l) and not l.startswith(('/assets/', '/data/', '/embed/'))})
     missing_sm = sorted(p for p in G if idx(p) and p not in sms and p.endswith('/') and p != '/404.html')
+    def _ondisk_noix(p):   # 11-13 (N1): pages set to noindex within a second of page() writing them (thin code + advanced pages, /thanks/)
+        try: return bool(NOIX.search(open(os.path.join(out, p.strip('/'), 'index.html'), encoding='utf-8', errors='replace').read(12000)))
+        except OSError: return False
+    missing_sm = [p for p in missing_sm if not _ondisk_noix(p)]
     low = sorted((u for u in sm if inb[u] <= 1 and u != '/'), key=lambda u: (inb[u], u))
     dd = collections.Counter(depth.get(u, -1) for u in sm)
     secs = collections.Counter('/' + u.strip('/').split('/')[0] + '/' if u != '/' else '/' for u in low)

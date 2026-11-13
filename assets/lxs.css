@@ -1,0 +1,46 @@
+/* 11-13 navigation test (problem 1: "search is hidden on every page except home"): a search button in the header bar on every page
+   (opens the menu with its search box focused) and, on screens 1024px and wider, an inline search box in the bar itself.
+   Same search as everywhere (assets/lookup.js). Prefix lxs- (Lemon search). Built by build.py's gh_header (GH_SB, GH_SD). */
+.lxs-btn { display: none; position: relative; width: 40px; height: 40px; padding: 0; border: 0; background: none; color: var(--gh-ink, #1d1d1f); cursor: pointer; border-radius: 10px; flex: none; }
+.lxs-btn svg { position: absolute; left: 11px; top: 11px; width: 18px; height: 18px; }
+.lxs-btn:hover { background: rgba(0, 0, 0, .05); }
+.lxs-btn:focus-visible { outline: 3px solid var(--lemon, #ffd400); outline-offset: 0; }
+.gh.open .lxs-btn { color: var(--gh-mute, #6e6e73); }
+.lxs-d { display: none; margin: 0 10px 0 0; }
+.lxs-db { position: relative; }
+.lxs-di { position: absolute; left: 11px; top: 50%; width: 14px; height: 14px; margin-top: -7px; color: #6e6e73; pointer-events: none; }
+.lxs-d #ghd { width: 190px; height: 34px; box-sizing: border-box; padding: 0 12px 0 31px; border: 1px solid transparent; border-radius: 999px; background: #f0f0f2;
+  font: inherit; font-size: 13.5px; color: var(--ink, #111214); transition: width .2s, background .15s, border-color .15s; -webkit-appearance: none; appearance: none; }
+.lxs-d #ghd::placeholder { color: #6e6e73; }
+.lxs-d #ghd:hover { background: #e8e8ec; }
+.lxs-d #ghd:focus { outline: none; background: #fff; border-color: var(--ink, #111214); box-shadow: 0 0 0 3px var(--lemon, #ffd400); }
+.lxs-d #ghd::-webkit-search-cancel-button { -webkit-appearance: none; }
+.lxs-d .fsug { left: auto; right: 0; width: 420px; max-width: calc(100vw - 32px); max-height: min(70vh, 560px); overflow-y: auto; top: calc(100% + 8px); text-align: left; }
+.lxs-d .fsug a { font-size: 15px; line-height: 1.3; }
+.lxs-d .fsug a b { font-weight: 700; }
+.lxs-d .fsug a small { font-size: 12.5px; }
+.lxs-d .gh-qm, .lxs-d .fmiss { position: absolute; right: 0; top: calc(100% + 6px); margin: 0; padding: 8px 12px; background: #fff; border: 1px solid var(--line, #e3e5e8); border-radius: 10px; font-size: 13px; white-space: nowrap; }
+.lxs-d .fmiss:empty { display: none; }
+/* the bar fits the box from 1200px (7 links + More + Subscribe); under that the magnifier opens the menu / More panel with its search */
+@media (min-width: 1200px) { .lxs-d { display: block; } .gh.wide .gh-in { gap: 28px; } }
+@media (max-width: 1199px) { .lxs-btn { display: block; } }
+@media (max-width: 767px) { .lxs-btn { width: 38px; margin-right: -2px; } .lxs-btn svg { left: 10px; } }
+
+/* 11-13 (problem 10): the 404 page: an open search box, the bad address turned into a search, and the top matches */
+.lxs-404 { max-width: 640px; margin: 0 auto; padding: 48px 16px 64px; }
+.lxs-404 .ph-e { margin: 0 0 6px; font-size: 13px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--mute, #5f6368); }
+.lxs-404 h1 { margin: 0 0 8px; font-size: clamp(30px, 6vw, 44px); line-height: 1.08; letter-spacing: -.02em; }
+.lxs-404 .lxs-sub { margin: 0 0 22px; color: var(--ink2, #3c4043); font-size: 17px; }
+.lxs-404 form { position: relative; }
+.lxs-404 #lxq { width: 100%; box-sizing: border-box; min-height: 52px; padding: 12px 16px; border: 1.5px solid #c7c7cc; border-radius: 14px; font: inherit; font-size: 17px; background: #fff; color: var(--ink, #111214); }
+.lxs-404 #lxq:focus { outline: 3px solid var(--lemon, #ffd400); outline-offset: 1px; border-color: var(--ink, #111214); }
+.lxs-404 .fsug { position: static; margin-top: 8px; box-shadow: none; }
+.lxs-404 .lxs-top { margin: 26px 0 0; }
+.lxs-404 .lxs-top h2 { margin: 0 0 10px; font-size: 15px; font-weight: 700; color: var(--mute, #5f6368); }
+.lxs-404 .lxs-top a { display: grid; gap: 2px; padding: 14px 16px; margin: 0 0 8px; border: 1px solid var(--line, #e3e5e8); border-radius: 14px; color: var(--ink, #111214); text-decoration: none; }
+.lxs-404 .lxs-top a:hover, .lxs-404 .lxs-top a:focus-visible { background: var(--lemon-soft, #fff6c2); border-color: var(--ink, #111214); }
+.lxs-404 .lxs-top a small { color: var(--mute, #5f6368); font-size: 13px; }
+.lxs-404 .lxs-go { margin: 18px 0 0; padding: 12px 16px; border-radius: 12px; background: #fffbe6; font-size: 15px; }
+.lxs-404 .lxs-links { display: flex; flex-wrap: wrap; gap: 8px; margin: 28px 0 0; padding: 0; list-style: none; }
+.lxs-404 .lxs-links a { display: inline-block; padding: 9px 14px; border: 1.5px solid var(--line, #e3e5e8); border-radius: 999px; color: var(--ink, #111214); text-decoration: none; font-size: 15px; font-weight: 600; }
+.lxs-404 .lxs-links a:hover { border-color: var(--ink, #111214); }

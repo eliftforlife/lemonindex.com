@@ -283,7 +283,7 @@ def gh_header(path):
                     for i, (g, us) in enumerate(grp))
     return (f'<header class="gh wide" data-tuck><div class="gh-in"><a class="gh-brand" href="/"><img src="/assets/icon-64.png" alt="" width="24" height="24">The Lemon Index</a>'
             f'<nav class="gh-links" aria-label="Main">{top}<button class="gh-more" type="button" aria-expanded="false" aria-controls="gh-sheet">More{GH_DOWN}</button></nav>'
-            f'<div class="gh-r"><a class="gh-cta" href="{YT}?sub_confirmation=1" rel="noopener">Subscribe{GH_CHEV}</a>'
+            f'<div class="gh-r">{GH_SD}{GH_SB}<a class="gh-cta" href="{YT}?sub_confirmation=1" rel="noopener">Subscribe{GH_CHEV}</a>'
             f'<button class="gh-menu" type="button" aria-label="Menu" aria-expanded="false" aria-controls="gh-sheet"><i></i><i></i></button></div></div>'
             f'<div class="gh-dim" aria-hidden="true"></div><nav class="gh-sheet" id="gh-sheet" aria-label="All pages"><div class="gh-sheet-in"><p>More from the Lemon Index</p>{GH_SEARCH}{sheet}</div></nav></header>')
 # 11-12 (Jess: "no search in the menu"): one search box at the top of the menu on every page; the same search as the home finder
@@ -291,6 +291,14 @@ def gh_header(path):
 GH_SEARCH = ('<form class="gh-q" role="search" action="/" method="get"><div class="gh-qb"><input id="ghq" name="q" type="search" autocomplete="off" '
              'placeholder="Search a car, code or question" aria-label="Search cars, engine codes and lists" enterkeyhint="search">'
              '<div id="ghqs" class="fsug" role="listbox" hidden></div></div></form>')
+# 11-13 navigation test (problem 1, "search is hidden on every non-home page"): a magnifier in the bar on every page (opens the menu with
+# the search box focused) and, from 1024px, an inline search box in the bar. Same search (lookup.js attaches #ghd too). Styles: assets/lxs.css
+_LXS_IC = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>'
+GH_SB = f'<button class="lxs-btn" type="button" aria-label="Search" aria-controls="gh-sheet">{_LXS_IC}</button>'
+GH_SD = (f'<form class="lxs-d" role="search" action="/" method="get"><div class="lxs-db">{_LXS_IC.replace("<svg ", "<svg class=\"lxs-di\" ", 1)}'
+         '<input id="ghd" name="q" type="search" autocomplete="off" placeholder="Search cars, codes, lists" aria-label="Search cars, engine codes and lists" enterkeyhint="search">'
+         '<div id="ghds" class="fsug" role="listbox" hidden></div></div></form>')
+LXS_V = '1113a'   # lxs.css + lookup.js version (N1 navigation fixes)
 def navlinks(path):
     on = lambda u: path.startswith(u) or (u == '/cars/' and path.startswith('/cars'))
     return ''.join(f'<a href="{u}"{" class=on aria-current=page" if on(u) else ""}>{t}</a>' for u, t in NAV)
@@ -332,6 +340,8 @@ SEGN = {'cars': 'Cars', 'brands': 'Brands', 'compare': 'Compare', 'electric': 'E
         'vin': 'VIN decoder', 'car-loan-rates': 'Car loan rates', 'studies': 'Studies', 'data': 'Free data', 'method': 'How it works', 'transmission': 'Transmission problems'}
 def crumbs(path, title):
     parts = [x for x in path.strip('/').split('/') if x]; items = [('The Lemon Index', BASE + '/')]; FY = globals().get('FY', {})
+    for j in range(len(parts) - 1, 0, -1):   # 11-13 (N1): a slash id ('mercedes-benz-m/gle', 'glk/glc') is one crumb, not a dead /cars/mercedes-benz-m/
+        if parts[j - 1] + '/' + parts[j] in FY: parts[j - 1:j + 1] = [parts[j - 1] + '/' + parts[j]]
     for i, x in enumerate(parts):
         u = BASE + '/' + '/'.join(parts[:i + 1]) + '/'
         nm = SEGN.get(x) or (FY[x]['name'] if x in FY else x if x.isdigit() else x.replace('-', ' ').title())
@@ -438,15 +448,16 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}{img or "/assets/og.png"}"><meta name="twitter:card" content="summary_large_image">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' '{DB_HASH}' https://static.cloudflareinsights.com https://challenges.cloudflare.com https://www.googletagmanager.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; frame-src https://challenges.cloudflare.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cloudflareinsights.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://vpic.nhtsa.dot.gov https://api.nhtsa.gov https://lemon-survey.elift08.workers.dev https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="google-adsense-account" content="{ADS}"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/lxs.css?v={LXS_V}">
 <link rel="stylesheet" href="/assets/site.css?v=1112-r2d-hd1"><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
 <body>{'' if path.startswith('/thanks/') else DONBAR}{gh_header(path)}
 <main>{body}{end_block(path, _upd, _shl)}{'' if path == '/vote/' else ask_html(path)}</main>
 <footer class="foot f2"><div class="f2-in"><div class="f2-brand"><a class="f2-logo" href="/"><img src="/assets/icon-64.png" alt="" width="28" height="28">The Lemon Index</a>
 <p>Car reliability from owner complaints to the U.S. government, per car sold. Free.</p><div class="f2-soc">{F2_SOC}</div></div>
-<nav class="f2-col" aria-label="Explore"><p class="f2-h">Explore</p><a href="/compare/">Compare cars</a><a href="/best/">Best cars</a><a href="/rankings/">Rankings</a><a href="/engines/">Every engine</a><a href="/electric/">Electric cars</a><a href="/stats/car-complaints/">Statistics</a><a href="/car-loan-rates/">Car loan rates</a></nav>
-<nav class="f2-col" aria-label="Data"><p class="f2-h">Data</p><a href="/method/">How the index works</a><a href="/data/">Free data</a><a href="/images/">Free images</a><a href="/vote/">Vote</a></nav>
+<nav class="f2-col" aria-label="Explore"><p class="f2-h">Explore</p><a href="/compare/">Compare cars</a><a href="/best/">Best cars</a><a href="/rankings/">Every car ranked</a><a href="/brands/">Brands</a><a href="/engines/">Every engine</a><a href="/electric/">Electric cars</a><a href="/stats/car-complaints/">Statistics</a><a href="/car-loan-rates/">Car loan rates</a></nav>
+<nav class="f2-col" aria-label="Tools and data"><p class="f2-h">Tools and data</p><a href="/vin/">VIN check</a><a href="/check-engine-light/">Engine codes</a><a href="/method/">How the index works</a><a href="/data/">Free data</a><a href="/images/">Free images</a><a href="/vote/">Vote</a></nav>
 <nav class="f2-col" aria-label="Support"><p class="f2-h">Support</p><button class="supl" type="button">Keep Lemon ad-free</button><a href="/about/">About</a><a href="/press/">Press</a><a href="/contact/">Contact</a><a href="{YT}?sub_confirmation=1" rel="noopener">Subscribe on YouTube</a></nav></div>
-<div class="f2-bot"><span>© {TODAY[:4]} The Lemon Index</span><a href="/terms/">Terms</a><a href="/privacy/">Privacy</a><a href="/refunds/">Refunds</a><span class="f2-dis">Built from public NHTSA complaint data and published U.S. sales figures. Not affiliated with any automaker. Not a repair-cost or safety rating.</span></div></footer><script src="/assets/explorer.js?v=1112d" defer></script><script src="/assets/support.js?v=1111d" defer></script><script src="/assets/imginfo.js?v=2" defer></script><script src="/assets/lookup.js?v=1112c3" defer></script>{beacon}</body></html>'''
+<div class="f2-bot"><span>© {TODAY[:4]} The Lemon Index</span><a href="/terms/">Terms</a><a href="/privacy/">Privacy</a><a href="/refunds/">Refunds</a><span class="f2-dis">Built from public NHTSA complaint data and published U.S. sales figures. Not affiliated with any automaker. Not a repair-cost or safety rating.</span></div></footer><script src="/assets/explorer.js?v=1112d" defer></script><script src="/assets/support.js?v=1111d" defer></script><script src="/assets/imginfo.js?v=2" defer></script><script src="/assets/lookup.js?v={LXS_V}" defer></script>{beacon}</body></html>'''
     LG[path] = (set(_LGHREF.findall(doc)), bool(_LGNOIX.search(doc)), url)   # 11-12 link graph (linkgraph.py, end of build)
     f = os.path.join(OUT, path.strip('/'), 'index.html') if path.endswith('/') else os.path.join(OUT, path.strip('/'))
     os.makedirs(os.path.dirname(f), exist_ok=True)
@@ -2194,7 +2205,26 @@ exec(open('all_engines.py', encoding='utf-8').read())   # 11-12 /engines/: every
 exec(open('find_index.py', encoding='utf-8').read())   # 11-11: the search index of every car page and card + a build check that none is missing
 json.dump(PD, open('data/page_dates.json', 'w', encoding='utf-8'), separators=(',', ':'))
 
-open(f'{OUT}/404.html', 'w', encoding='utf-8').write(open(f'{OUT}/index.html', encoding='utf-8').read().replace('<main>', '<main><div class="pg"><section class="ph"><p class="ph-e">404</p><h1>That page drove off.</h1><p class="ph-s">It may have moved. Try one of these.</p><p class="ph-404"><a class="btn" href="/cars/">Look up a car</a> <a class="btn btn-ghost" href="/brands/">Every brand</a> <a class="btn btn-ghost" href="/">Home</a></p></section></div><!--', 1).replace('</main>', '--></main>', 1))
+# 11-13 navigation test (N1, problem 10: "the 404 page has 3 buttons and no search, and loads the whole 250 KB home page"): a light page
+# (the /contact/ page's header and footer) with an open search box; assets/lx404.js turns the address into a search and opens one clear
+# match on its own (/cars/ford-f150/2015/ -> the 2015 F-150), else shows the top 3. noindex, no canonical.
+_404 = open(f'{OUT}/contact/index.html', encoding='utf-8').read()
+_404 = re.sub(r'<title>.*?</title>', '<title>Page not found | The Lemon Index</title>', _404, count=1, flags=re.S)
+_404 = re.sub(r'<meta name="description"[^>]*>', '<meta name="description" content="That page doesn&#39;t exist. Search every car, engine code and list on the Lemon Index.">', _404, count=1)
+_404 = re.sub(r'<link rel="canonical"[^>]*>', '<meta name="robots" content="noindex">', _404, count=1)
+_404 = re.sub(r'<meta property="og:url"[^>]*>', '', _404, count=1)
+_404 = re.sub(r'<script type="application/ld\+json">.*?</script>', '', _404, flags=re.S)
+_404 = _404.replace(' aria-current="page"', '')
+_404 = re.sub(r'<main>.*</main>', lambda m: (
+    '<main><div class="lxs-404"><p class="ph-e">404 · page not found</p><h1>That page drove off.</h1>'
+    '<p class="lxs-sub" id="lxsub">It may have moved. Search for it:</p>'
+    '<form class="lxs-f" role="search" action="/" method="get"><input id="lxq" name="q" type="search" autocomplete="off" placeholder="Search a car, code or question" '
+    'aria-label="Search cars, engine codes and lists" enterkeyhint="search"><div id="lxqs" class="fsug" role="listbox" hidden></div></form>'
+    '<div id="lxtop" class="lxs-top" hidden></div>'
+    '<ul class="lxs-links"><li><a href="/">Look up a car</a></li><li><a href="/brands/">Every brand</a></li><li><a href="/compare/">Compare</a></li>'
+    '<li><a href="/best/">Best cars</a></li><li><a href="/engines/">Engines</a></li><li><a href="/check-engine-light/">Engine codes</a></li></ul></div></main>'), _404, count=1, flags=re.S)
+_404 = _404.replace('</body>', f'<script src="/assets/lx404.js?v={LXS_V}" defer></script></body>', 1)
+open(f'{OUT}/404.html', 'w', encoding='utf-8').write(_404)
 urls = ['/', '/rankings/', STUDY, '/studies/', '/method/', '/vin/', '/car-loan-rates/', '/vote/', '/data/', '/brands/'] + PERF_URLS + burls + purls + murls + surls + eurls + GAP_URLS + CODE_URLS + SEO_URLS + EXTRA_URLS + BMW_URLS + SCE_URLS + AE_URLS + yurls + ADV_URLS + curls + LEGAL_URLS + UXC_URLS + MST_URLS + globals().get('HD_URLS', [])
 open(f'{OUT}/sitemap.xml', 'w', encoding='utf-8').write('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + ''.join(f'<url><loc>{BASE}{u}</loc><lastmod>{PD.get(u, {}).get("d", TODAY)}</lastmod></url>' for u in urls) + '</urlset>')
 open(f'{OUT}/ads.txt', 'w').write(f'google.com, {ADS.replace("ca-", "")}, DIRECT, f08c47fec0942fa0\n')

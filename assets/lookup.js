@@ -10,6 +10,9 @@
 // Enter opens the top match everywhere (a coming-soon one opens its vote sheet); engine sizes and engine/symptom words ("2.7", "ecoboost",
 // "oil leak", "cold start") no longer break a model + year match; truck and trim words (cummins, duramax, powerstroke, f250, 2500hd,
 // m340i) come from find_index.py's aliases.
+// 11-13 navigation test (N1): brand pages come first for a brand name ("chevy", "vw", "benz", "toyota"), a hub word ("engines") offers its
+// hub, at most 1 coming-soon match shows (last) and at most 1 match-up page unless the search says "vs", "<car> engine" never defaults
+// to a 2023+ year, and the header's own search (#ghd, 1024px+) and its magnifier (.lxs-btn) use the same matcher.
 (() => {
   const $ = id => document.getElementById(id);
   // 11-12 round 2 (Mitch: "the grey Heavy Duty row in search does nothing"): a coming-soon match opens the cards' vote sheet (soonvote.js)
@@ -23,7 +26,7 @@
   const norm = s => fold(s).replace(/&/g, ' and ').replace(/['’]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
   const words = s => norm(s).split(' ').filter(Boolean);
   // names people type that aren't the model's own words (run on the normalized text, whole words only)
-  const SYN = [[/\bchevy\b|\bchev\b/g, 'chevrolet'], [/\bvw\b|\bvolks\b|\bvolkswagon\b/g, 'volkswagen'], [/\bmerc\b|\bmb\b|\bmercedes benz\b/g, 'mercedes'],
+  const SYN = [[/\bchevy\b|\bchev\b/g, 'chevrolet'], [/\bvw\b|\bvolks\b|\bvolkswagon\b/g, 'volkswagen'], [/\bmerc\b|\bmb\b|\bmercedes benz\b|\bbenz\b/g, 'mercedes'],
     [/\bbeemer\b|\bbimmer\b|\bbeamer\b/g, 'bmw'], [/\bcaddy\b|\bcaddilac\b/g, 'cadillac'], [/\blandrover\b/g, 'land rover'], [/\brangerover\b/g, 'range rover'],
     [/\bvette\b/g, 'corvette'], [/\bstang\b/g, 'mustang'], [/\bforerunner\b|\b4 runner\b|\bfour runner\b/g, '4runner'], [/\bgrand cherokee\b/g, 'grand cherokee'],
     [/\bmazda ?(\d)\b/g, 'mazda$1'], [/\bmiata\b/g, 'miata'], [/\bf ?(150|250|350|450)\b/g, 'f$1'], [/\bmodel ?([3sxy])\b/g, 'model $1'],
@@ -96,7 +99,7 @@
   // ---- the index: the small list in the page (#pick) at once, then the full one (assets/find.json, every page and card, with a
   // build check that nothing is missing) plus find-go.json (which engine codes, transmission pages and /best/ lists exist)
   const el = $('pick'), P = el ? JSON.parse(el.textContent) : {};
-  const KIND = { sc: 'Supercar · engine, fuel cost and recalls', ev: 'Electric car · EV score and problems', perf: 'Performance car · specs, engines and problems', moto: 'Motorcycle · complaints and recalls', co: 'Owner complaints and recalls', eng: 'Engine · reliability by year' };
+  const KIND = { sc: 'Supercar · engine, fuel cost and recalls', ev: 'Electric car · EV score and problems', perf: 'Performance car · specs, engines and problems', moto: 'Motorcycle · complaints and recalls', co: 'Owner complaints and recalls', eng: 'Engine · reliability by year', br: 'Brand · every model, ranked' };
   const AK = { 'ford-f-series': 'f150 f 150', 'ram-pickup': '1500', 'chevrolet-silverado': '1500', 'gmc-sierra': '1500' };   // 11-12 round 2: 2500/3500/f250 go to the HD cards
   const mk = (n, b, u, t, ys, al, soon, pr) => { const id = (u.match(/^\/cars\/([^/]+)\/$/) || [])[1] || ''; return Object.assign(prep(n, b, (al || '') + ' ' + (AK[id] || '') + (t === 'ev' ? ' ev electric' : '')), { n, b, u, t: t || '', ys: ys || [], id, soon: !!soon, pr: pr || 0 }); };   // pr: find.json's optional search priority (11-12 r2: Silverado HD before Sierra HD)
   let ALL = Object.entries(P).flatMap(([b, ms]) => ms.map(([n, id, ys, u, t]) => mk(n, b, u || '/cars/' + id + '/', t, ys, '', t === 'perf' && !u || (t === 'moto' && !u))));
@@ -126,6 +129,7 @@
     [/\b(about|who runs|who made)\b/, () => BEST('/about/', 'About the Lemon Index', 'Who runs it and where the data comes from')],
     [/\b(method|methodology|how it works|how do you score)\b/, () => BEST('/method/', 'How the index works', 'Method')],
     [/\b(download|csv|dataset|raw data)\b/, () => BEST('/data/', 'Free data downloads', 'CSV files, free with credit')],
+    [/^\s*(all |every |car )?engines?( reliability| ranked| list)?\s*$/, () => BEST('/engines/', 'Every engine, ranked', 'Engines · reliability by year')],
     [/\b(brands?|makes?)\b/, () => BEST('/brands/', 'Every brand, ranked', 'Brands')],
     [/\b(electric|evs?)\b/, () => BEST('/electric/', 'The most reliable EVs, ranked', 'Electric')],
     [/\b(contact|email)\b/, () => BEST('/contact/', 'Contact', '')]
@@ -158,16 +162,16 @@
     let t = syn(norm(s));
     for (const [re, f] of INTENT) { const m = t.match(re); if (m) { const it = f(m, t); if (has(it.u) && !lists.some(x => x.u === it.u)) lists.push(it); t = t.replace(m[0], ' '); } }
     if (bd && has(bd.item.u)) lists.push(bd.item);
-    let prob = null, pm;   // every problem word goes; the transmission wins, then recalls
-    while ((pm = t.match(PROB))) { const k = pm[1] ? 'transmission' : pm[3] ? 'recalls' : 'problems'; if (!prob || k === 'transmission' || (k === 'recalls' && prob === 'problems')) prob = k; t = t.replace(pm[0], ' '); }
+    let prob = null, pm, pe = true;   // every problem word goes; the transmission wins, then recalls. pe: the only one was "engine(s)"
+    while ((pm = t.match(PROB))) { const k = pm[1] ? 'transmission' : pm[3] ? 'recalls' : 'problems'; if (!prob || k === 'transmission' || (k === 'recalls' && prob === 'problems')) prob = k; if (!/^engines?$/.test(pm[0].trim())) pe = false; t = t.replace(pm[0], ' '); }
     const ym = t.match(/\b(19|20)\d{2}\b/), y = ym ? +ym[0] : 0; if (ym) t = t.replace(ym[0], ' ');
     let W = words(t).filter(w => !STOP.has(w));
-    return { code, lists, prob, y, W, sz: sz.map(x => x.replace('.', '')), szd: sz, eng: /\bengines?\b/.test(fold(raw)) };
+    return { code, lists, prob, pe: !!prob && pe, y, W, sz: sz.map(x => x.replace('.', '')), szd: sz, eng: /\bengines?\b/.test(fold(raw)) };
   }
-  const KP = { '': 0, co: .3, perf: .4, ev: .4, sc: .6, nd: 0, moto: 2.5, eng: 3 };
+  const KP = { '': 0, co: .3, perf: .4, ev: .4, sc: .6, nd: 0, moto: 2.5, eng: 3, br: -1.5 };   // br: a brand page beats that brand's models
   // a prebuilt compare page ranks after the car page itself
-  const penFor = (W, y, eng) => c => (c.soon ? 100 : 0) + (c.pr || 0) + (KP[c.t] === undefined ? 1 : (c.t === 'eng' && eng ? 0 : KP[c.t])) + (y && !c.t && !c.ys.includes(y) ? 1 : 0) - (W.some(w => c.bw.includes(w)) ? .5 : 0) + (c.u.startsWith('/compare/') ? .5 : 0);
-  const isCar = c => !c.soon && c.t !== 'eng' && !!c.u && !c.u.startsWith('/compare/');
+  const penFor = (W, y, eng) => c => (c.soon ? 100 : 0) + (c.pr || 0) + (KP[c.t] === undefined ? 1 : (c.t === 'eng' && eng ? -1 : KP[c.t])) + (y && !c.t && !c.ys.includes(y) ? 1 : 0) - (W.some(w => c.bw.includes(w)) ? .5 : 0) + (c.u.startsWith('/compare/') ? .5 : 0);
+  const isCar = c => !c.soon && c.t !== 'eng' && c.t !== 'br' && !!c.u && !c.u.startsWith('/compare/');
   const dropW = (q, W) => W.filter(w => !TRIM.has(w) && !SOFT.has(w) && !q.sz.includes(w));   // versions, engine words and sizes
   // ---- 11-12 round 2 (Jake, Carlos, Liam: "civic vs corolla", "rav4 vs crv", "elantra vs civic"): one side of a comparison = its best car
   // page (never a brand alone, an engine, a version word or a coming-soon card)
@@ -204,7 +208,7 @@
     for (const p of parts) { const q = search(p); if (q.code || q.lists.length) return null; const c = resolve(q.W, q.y, q); if (!c) return null; S.push({ c, y: q.y }); }
     const y0 = (S.find(s => s.y) || {}).y || 0; S.forEach(s => { s.y = s.y || y0; });   // "2019 rav4 vs crv": both 2019
     const it = compareItem(S);
-    return it ? { items: [it, ...S.map(sideItem)] } : null;
+    return it ? { items: [it, ...S.map(sideItem)], strong: true } : null;
   }
   function find(raw) {
     const vs = versus(raw); if (vs) return vs;
@@ -214,7 +218,7 @@
       const br = [...new Set(ALL.filter(c => !c.t && c.ys.includes(y)).map(c => c.b))].sort();
       return { brands: br.map(b => ({ brand: b, y })) };
     }
-    let hits = [];
+    let hits = [], ex = [], strong = false;
     if (W.length) {
       const pen = penFor(W, y, q.eng);
       hits = rank(W, ALL, pen);
@@ -230,24 +234,45 @@
       if (!hits.some(isCar) && W.length >= 2 && W.length <= 6) {   // "civic corolla": two cars named one after the other
         for (let k = 1; k < W.length && !pair; k++) { const a = resolve(W.slice(0, k), y, q), b = a && resolve(W.slice(k), y, q); if (a && b && a !== b) pair = [a, b]; }
         const it = pair && compareItem(pair.map(c => ({ c, y })));
-        if (it) return { items: [it, ...pair.map(c => sideItem({ c, y }))] };
+        if (it) return { items: [it, ...pair.map(c => sideItem({ c, y }))] };   // a guess from two names in a row: never "strong"
       }
       // a coming-soon card that is exactly what was typed ("wrx" -> the current WRX) goes right after the first live match, not last
-      const ex = hits.filter(c => c.soon && c.t !== 'eng' && c.M && c.M === W.filter(w => !c.bw.includes(w)).join(''));
+      ex = hits.filter(c => c.soon && c.t !== 'eng' && c.M && c.M === W.filter(w => !c.bw.includes(w)).join(''));
       if (ex.length) { hits = hits.filter(c => !ex.includes(c)); hits.splice(hits.findIndex(c => !c.soon) + 1, 0, ...ex); }
+      // 11-13 (N1): one clear winner (every word exact, and the name is what was typed or it beats the next page) = "strong": the 404 page
+      // (lx404.js) opens it on its own (/cars/ford-f150/ -> the F-Series, /cars/honda/ -> the Honda brand page)
+      const live = hits.filter(c => !c.soon && c.u);
+      if (live.length && !notes && score(live[0], W, null) === 0) {
+        const mw = W.filter(w => !live[0].bw.includes(w)).join(''), s1 = live[1] ? score(live[1], W, null) : -1;
+        strong = (!!mw && live[0].M === mw) || (live[0].t === 'br' && !mw) || s1 < 0 || s1 + pen(live[1]) > pen(live[0]);
+      }
       if (!hits.length) {   // closest: the cars that match the most words
         let bestN = 0; const sc = [];
         for (const c of ALL) { let n = 0, k = 0; for (const x of W) { const v = wcost(x, c, true); if (v < 9) { n++; k += v; } } if (n) { sc.push([n, k + pen(c), c]); bestN = Math.max(bestN, n); } }
         hits = sc.filter(r => r[0] === bestN).sort((a, b) => a[1] - b[1]).map(r => r[2]); close = true;
       }
     }
+    // 11-13 navigation test (N1): coming-soon cards (no page) filled half the list: at most 1, last (the exact one typed keeps its place);
+    // match-up pages ("civic years to avoid" showed 4 Type R ones): at most 1 unless the search compares ("vs", "or", "compare")
+    // engines: at most 2 after a car match unless the search names an engine ("2016 civic" listed 4 Civic engine sections)
+    { const vsw = /\b(vs|versus|v|or|compare|compared|against)\b/.test(fold(raw)); let sn = ex.length, cn = 0, en = 0; const keep = [], late = [];
+      const ecap = !q.eng && !q.sz.length && hits[0] && hits[0].t !== 'eng' && !W.some(w => SOFT.has(w));
+      for (const c of hits) {
+        if (c.soon && !ex.includes(c)) { if (!sn++) late.push(c); continue; }
+        if (!vsw && c.u.startsWith('/compare/') && cn++) continue;
+        if (ecap && c.t === 'eng' && en++ >= 2) continue;
+        keep.push(c);
+      }
+      hits = [...keep, ...late]; }
     const top = hits.filter(c => !c.soon);
     const out = [];
     if (q.code) out.push(q.code);
     // problem words + a car: its problem page first
     const car = top.find(c => !c.t && c.ys.length) || null;
-    if (q.prob && car && !close) {
-      const old = car.ys.filter(v => v <= 2024), yy = y && car.ys.includes(y) ? y : old.length ? Math.max(...old) : car.ys[car.ys.length - 1];   // the newest year with a full year of complaints
+    // 11-13 (N1): "tacoma engine" opened the 2024 Tacoma: the word "engine" alone (no year) is not a problem search, and the default
+    // year is never 2023 or newer (those years are still partial)
+    if (q.prob && car && !close && !(q.pe && !y)) {
+      const old = car.ys.filter(v => v <= 2022), yy = y && car.ys.includes(y) ? y : old.length ? Math.max(...old) : car.ys[car.ys.length - 1];   // the newest year with a full year of complaints
       if (q.prob === 'transmission' && GO && (GO.tr || []).includes(car.id)) out.push({ u: car.u + 'transmission/', b: `${car.n} transmission problems by year`, s: 'Every year, what owners describe, transmission recalls', kind: 'go' });
       else out.push({ u: `${car.u}${yy}/#${q.prob === 'recalls' ? 'recalls' : 'problems'}`, b: `${yy} ${car.n}: ${q.prob === 'recalls' ? 'recalls' : 'what owners complain about'}`, s: q.prob === 'transmission' ? 'Problems tab · transmission and every other area' : 'Problems, recalls and owner complaints', kind: 'go' });
     }
@@ -267,7 +292,8 @@
       out.push(Object.assign(BEST('/best/', 'Best cars, by the data', 'Every ranked list'), { kind: 'pop' }));
       return { items: out, hint: `No exact match for “${raw.trim()}”. Closest:` };
     }
-    return { items: out };
+    if (!W.length && !q.prob && (q.code ? !q.lists.length : q.lists.length === 1)) strong = true;   // a code, or one list
+    return { items: out, strong: strong && !close };
   }
 
   window.LQ.find = find; window.LQ.load = load;   // for other boxes, and for testing the search cases in a console
@@ -327,6 +353,30 @@
     attach(mq, $('ghqs'), t => { msay.textContent = t || ''; });
     mf.addEventListener('submit', e => { e.preventDefault(); load().then(() => { const b = boxes.find(x => x.q === mq); b && b.go(); }); });
   }
+  // 11-13 navigation test (N1, problem 1): the bar's own search box (1024px+) and the magnifier (under 1024px: opens the menu, search focused)
+  // ... and the 404 page's box (#lxq, assets/lx404.js fills it from the address that wasn't found)
+  [['ghd', 'ghds'], ['lxq', 'lxqs']].forEach(([qi, si]) => {
+    const xq = $(qi); if (!xq || !xq.form) return;
+    const xf = xq.form, xsay = document.createElement('p'); xsay.className = 'fmiss'; xsay.setAttribute('role', 'status'); xsay.setAttribute('aria-live', 'polite');
+    xf.appendChild(xsay);
+    attach(xq, $(si), t => { xsay.textContent = t || ''; });
+    xf.addEventListener('submit', e => { e.preventDefault(); load().then(() => { const b = boxes.find(x => x.q === xq); b && b.go(); }); });
+  });
+  const dq = $('ghd');
+  if (dq) {
+    addEventListener('keydown', e => {   // "/" focuses it, like most sites' search
+      if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey || !dq.offsetParent) return;
+      const a = document.activeElement; if (a && (/^(INPUT|TEXTAREA|SELECT)$/.test(a.tagName) || a.isContentEditable)) return;
+      e.preventDefault(); dq.focus();
+    });
+  }
+  const sbtn = document.querySelector('.lxs-btn');
+  if (sbtn && mq) sbtn.addEventListener('click', e => {
+    e.stopPropagation(); load();
+    const h = sbtn.closest('.gh');
+    if (h && !h.classList.contains('open')) { const m = h.querySelector('.gh-menu'); const o = m && m.offsetParent ? m : h.querySelector('.gh-more'); if (o) o.click(); }
+    mq.focus({ preventScroll: true }); setTimeout(() => { if (document.activeElement !== mq) mq.focus({ preventScroll: true }); }, 60);
+  });
 
   if (!el) return;
   const lookForm = $('look'); if (lookForm) lookForm.addEventListener('submit', e => e.preventDefault());   // was an inline onsubmit (blocked by the CSP)
