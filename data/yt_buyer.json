@@ -21677,5 +21677,117 @@
 }
 ]
 }
+],
+"dodge-dakota": [
+{
+"sid": "dodge-dakota-g2",
+"y0": 1997,
+"y1": 2004,
+"label": "1997–2004",
+"videos": 194,
+"praise": [
+[
+"Looks",
+4
+],
+[
+"Reliability",
+4
+],
+[
+"Power",
+3
+]
+],
+"trouble": [
+[
+"Coolant leaks / water pump / overheating",
+6
+],
+[
+"Rust",
+4
+],
+[
+"Electrical / wiring / TIPM",
+3
+],
+[
+"Oil leaks (gaskets, seals, housings)",
+3
+]
+],
+"top": [
+{
+"id": "fEECTAa30kU",
+"title": "Top 5 Problems Dodge Dakota Truck 2nd Generation 1997-2004",
+"views": 903484,
+"ch": "1A Auto: Repair Tips & Secrets Only Mechanics Know"
+},
+{
+"id": "XRVQEdnei34",
+"title": "2000 Dodge Dakota idle then dying problem FIXED (Atleast my solution)",
+"views": 307830,
+"ch": "6.7CumminsWelder"
+},
+{
+"id": "nRP-CZ0_Zs8",
+"title": "2000 DODGE DAKOTA SPORT Pickup Truck Start Up, walk around and review",
+"views": 269222,
+"ch": "AutomotiveReview"
+}
+]
+},
+{
+"sid": "dodge-dakota-g3",
+"y0": 2005,
+"y1": 2011,
+"label": "2005–2011",
+"videos": 197,
+"praise": [
+[
+"Power",
+7
+],
+[
+"Reliability",
+5
+],
+[
+"Looks",
+5
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+5
+],
+[
+"Coolant leaks / water pump / overheating",
+4
+]
+],
+"top": [
+{
+"id": "cprEMuiV4pU",
+"title": "Top 5 Problems Dodge Dakota Pickup 2005-2010 3rd Generation",
+"views": 147207,
+"ch": "1A Auto: Repair Tips & Secrets Only Mechanics Know"
+},
+{
+"id": "LHMFSVG0qQY",
+"title": "Review: 2008 Dodge Dakota",
+"views": 115548,
+"ch": "MyRide on Autobytel"
+},
+{
+"id": "sp7qsAp09qk",
+"title": "2008 Dodge Dakota TRX4 Review - Kelley Blue Book",
+"views": 105710,
+"ch": "Kelley Blue Book"
+}
+]
+}
 ]
 }

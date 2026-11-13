@@ -61152,7 +61152,26 @@
      "views": 525290
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Tires",
+      {
+       "median": 350,
+       "lo": 100.0,
+       "hi": 4700.0,
+       "n": 3,
+       "videos": 3,
+       "id": "QXsf-AydOO4",
+       "t": 160,
+       "title": "2019 Chevrolet Blazer | CarGurus Test Drive Review"
+      }
+     ]
+    ]
+   }
   }
  ],
  "dodge-dakota": [
@@ -61278,6 +61297,134 @@
      "title": "2000 Dodge Dakota Quad Cab 4x4 - 5.9 Cummins Turbo Diesel(Walk Around and Start Up)",
      "channel": "Char",
      "views": 335176
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011
+   ],
+   "gen": "2005–2011 Dodge Dakota",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 5362814,
+   "topics": [
+    {
+     "name": "Steering & suspension",
+     "views": 310082,
+     "n": 9,
+     "best": {
+      "id": "lfQT_DPEnEU",
+      "title": "Replacement of Front Complete Strut Assemblies on a 2006 Dodge Dakota I SENSEN Shocks & Struts",
+      "channel": "SENSEN Shocks & Struts",
+      "views": 55607
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 192895,
+     "n": 7,
+     "best": {
+      "id": "WwkQwBuOzwI",
+      "title": "How to Replace Coolant Thermostat 2005-2010 Dodge Dakota",
+      "channel": "TRQ",
+      "views": 43507
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 135567,
+     "n": 4,
+     "best": {
+      "id": "ZdK0a9Zcb_c",
+      "title": "How to Replace Transmission Valve Body 2005-2010 Dodge Dakota",
+      "channel": "TRQ",
+      "views": 57498
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 122075,
+     "n": 4,
+     "best": {
+      "id": "OEGpNon6dfo",
+      "title": "How to Replace Starter 2005-2010 Dodge Dakota",
+      "channel": "TRQ",
+      "views": 50249
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 121664,
+     "n": 4,
+     "best": {
+      "id": "nwrfHGNI5m8",
+      "title": "How to Replace Rear Brakes 2005-2010 Dodge Dakota",
+      "channel": "TRQ",
+      "views": 60138
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 94488,
+     "n": 4,
+     "best": {
+      "id": "SI34pW-S5qQ",
+      "title": "How to Replace Speed Sensor 2005-2010 Dodge Dakota",
+      "channel": "TRQ",
+      "views": 42366
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 90646,
+     "n": 3,
+     "best": {
+      "id": "dNFtXWyJj7M",
+      "title": "Change 2005 Dodge Dakota Spark Plugs (V-6)",
+      "channel": "Jon Ernstberger",
+      "views": 65280
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 90256,
+     "n": 2,
+     "best": {
+      "id": "WTze1q1HWEo",
+      "title": "How to Replace Fuel Injector 2005-2010 Dodge Dakota 4.7L V8",
+      "channel": "TRQ",
+      "views": 55721
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "cprEMuiV4pU",
+     "title": "Top 5 Problems Dodge Dakota Pickup 2005-2010 3rd Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 147207
+    },
+    {
+     "id": "IJ3KKUPiRP8",
+     "title": "2006 Dodge Dakota Common Problems. Should you buy it?",
+     "channel": "MaxTheCarGuy",
+     "views": 32054
+    },
+    {
+     "id": "o_caxIudYLo",
+     "title": "Dodge Dakota 2008 problems.",
+     "channel": "Solomon Sgt Justin L",
+     "views": 14163
     }
    ],
    "costs": null
