@@ -60721,7 +60721,26 @@
      "views": 191673
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 90,
+       "lo": 32.0,
+       "hi": 200.0,
+       "n": 11,
+       "videos": 8,
+       "id": "g4-h5wStWMc",
+       "t": 130,
+       "title": "1999 Ford Ranger Loose Column Shifter how to fix DIY"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
