@@ -39,14 +39,28 @@ def _cls(li): return 'na' if li is None else 'bad' if li > 110 else 'good'
 
 # ------------------------------------------------------------------ year page: carousel
 def _item(c, it, role):
-    """one car in the carousel; role = 'p' (previous), 'c' (this year), 'n' (next)"""
+    """one car in the carousel; role = 'p' (previous), 'c' (this year), 'n' (next). 11-12 v2 (Elijah): the middle car has no year label
+    (the title says it); the peeking cars carry a small one and only show on wide screens."""
     if not it: return f'<span class="ycr-it ycr-{role} ycr-none" aria-hidden="true"></span>'
     img = (f'<img src="{E(it["src"])}" alt="{it["y"]} {E(c["name"])}' + (f', {E(it["gen"])}' if it.get('gen') else '') + ', illustration" width="1000" height="600" '
-           + ('fetchpriority="high" decoding="async"' if role == 'c' else 'loading="eager" decoding="async"') + '>')
-    lab = f'<span class="ycr-y"><b>{it["y"]}</b>' + (f'<small>{E(it["gen"])}</small>' if role == 'c' and it.get('gen') else '') + '</span>'
-    if role == 'c': return f'<div class="ycr-it ycr-c" aria-current="page">{img}{lab}{{INFO}}</div>'
+           + ('fetchpriority="high" decoding="async"' if role == 'c' else 'loading="lazy" decoding="async"') + '>')
+    if role == 'c': return f'<div class="ycr-it ycr-c" aria-current="page">{img}{{INFO}}</div>'
     word = 'Previous' if role == 'p' else 'Next'
-    return f'<a class="ycr-it ycr-{role}" href="{E(it["url"])}" aria-label="{word} year: the {it["y"]} {E(c["name"])} report">{img}{lab}</a>'
+    return f'<a class="ycr-it ycr-{role}" href="{E(it["url"])}" aria-label="{word} year: the {it["y"]} {E(c["name"])} report" tabindex="-1">{img}<span class="ycr-y"><b>{it["y"]}</b></span></a>'
+
+_SVG = lambda d, s=22: (f'<svg viewBox="0 0 24 24" width="{s}" height="{s}" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">'
+                        f'<path d="{"M15 5l-7 7 7 7" if d == "p" else "M9 5l7 7-7 7"}"/></svg>')
+_MORE = ('<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg>')
+
+def _nav_row(s, items):
+    """11-12 v2 (Elijah: one navigation system on phones): the page's actions (All years, Compare, Share, Advanced) leave the hero and ride
+    at the end of the sticky tab row: one item = a chip, more = a 'More' button with a small sheet. Wide screens keep the hero buttons."""
+    row = s.find(class_='tb-row')
+    if row is None or not items: return False
+    if len(items) == 1: body = f'<div class="ycn">{items[0]}</div>'
+    else: body = (f'<div class="ycn"><button type="button" class="ycn-b" aria-expanded="false" aria-controls="ycn-s">{_MORE}<span>More</span></button>'
+                  f'<div class="ycn-s" id="ycn-s" role="menu" hidden>{"".join(items)}</div></div>')
+    row.append(BeautifulSoup(body, 'html.parser')); return True
 
 def year_page(out, c, y):
     """c = context from build.py (_yc_ctx). Leaves the page as it is when this year has no picture."""
@@ -59,17 +73,34 @@ def year_page(out, c, y):
     fig = box.find('figure'); info = ''
     if fig is not None:
         b = fig.find('button', class_='ii'); p = fig.find(class_='ii-pop'); info = (str(b) if b else '') + (str(p) if p else ''); fig.decompose()
-    prev = ys[idx - 1] if idx else None; nxt = ys[idx + 1] if idx + 1 < len(ys) else None
-    prev = prev if prev and prev.get('src') else None; nxt = nxt if nxt and nxt.get('src') else None
-    arr = lambda it, d: (f'<a class="ycr-ar ycr-a{d}" href="{E(it["url"])}" aria-label="{"Previous" if d == "p" else "Next"} year: {it["y"]}" data-dir="{d}">'
-                         f'<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="{"M15 5l-7 7 7 7" if d == "p" else "M9 5l7 7-7 7"}"/></svg></a>') if it else ''
-    car = (f'<div class="ycr" style="{_ar(crop([v["src"] for v in ys if v.get("src")]))}" role="group" aria-roledescription="carousel" aria-label="{E(c["short"])} model years">'
-           f'<div class="ycr-track">{_item(c, prev, "p")}{_item(c, ys[idx], "c").replace("{INFO}", info)}{_item(c, nxt, "n")}</div>{arr(prev, "p")}{arr(nxt, "n")}</div>'
-           + ''.join(f'<link rel="prefetch" href="{E(it["url"])}">' for it in (prev, nxt) if it))
+    yp = ys[idx - 1] if idx else None; yn = ys[idx + 1] if idx + 1 < len(ys) else None   # the title arrows: the neighbouring report pages
+    prev = yp if yp and yp.get('src') else None; nxt = yn if yn and yn.get('src') else None   # the peeking cars: neighbours with a picture
+    car = (f'<div class="ycr" style="{_ar(crop([v["src"] for v in ys if v.get("src")]))}" role="group" aria-roledescription="carousel" aria-label="{E(c["short"])} model years"'
+           + (f' data-prev="{E(yp["url"])}"' if yp else '') + (f' data-next="{E(yn["url"])}"' if yn else '') + '>'
+           f'<div class="ycr-track">{_item(c, prev, "p")}{_item(c, ys[idx], "c").replace("{INFO}", info)}{_item(c, nxt, "n")}</div></div>'
+           + ''.join(f'<link rel="prefetch" href="{E(it["url"])}">' for it in (yp, yn) if it))
     box.insert(0, BeautifulSoup(ASSET + car, 'html.parser')); box['class'] = box.get('class', []) + ['ycr-box']
     hero['class'] = hero.get('class', []) + ['yc-hero']
-    seg = hero.find(class_='yseg')   # the old '‹ 2000 · 2001 · 2002 ›' row: the carousel does that now (All years / Compare / Share stay)
+    # one big title with the year arrows around it (the H1 text stays as the title template writes it)
+    h1 = hero.find('h1')
+    if h1 is not None:
+        arr = lambda it, d: (f'<a class="yct-a yct-{d}" href="{E(it["url"])}" aria-label="{"Previous" if d == "p" else "Next"} year: {it["y"]} {E(c["name"])}" rel="{"prev" if d == "p" else "next"}" data-dir="{d}">{_SVG(d)}</a>'
+                             if it else f'<span class="yct-a yct-{d} yct-x" aria-hidden="true">{_SVG(d)}</span>')
+        frag = BeautifulSoup(f'<div class="yct">{arr(yp, "p")}<span class="yct-h"></span>{arr(yn, "n")}</div>'
+                             + (f'<p class="yct-g">{E(ys[idx]["gen"])}</p>' if ys[idx].get('gen') else ''), 'html.parser')
+        yct = frag.find(class_='yct'); gl = frag.find('p', class_='yct-g')
+        h1.insert_before(yct.extract()); yct.find(class_='yct-h').replace_with(h1.extract())
+        if gl is not None: yct.insert_after(gl.extract())
+    # the verdict in one short line: band word + the top complaint area (A's band words stay as written)
+    vd = hero.select_one('.yverd p.yvd')
+    if vd is not None and vd.find('b') is not None:
+        word = vd.find('b').get_text(strip=True).rstrip('.'); top = ys[idx].get('top')
+        vd.clear(); vd.append(BeautifulSoup(f'<b>{E(word)}</b>' + (f' <span>· most complaints: {E(top)}</span>' if top else ''), 'html.parser'))
+    seg = hero.find(class_='yseg')   # the old '‹ 2000 · 2001 · 2002 ›' row: the title arrows do that now
     if seg is not None: seg.decompose()
+    acts = hero.select_one('.tb-ctl .tb-acts')
+    if acts is not None and _nav_row(s, [str(a) for a in acts.find_all(recursive=False)]):
+        hero.select_one('.tb-ctl')['class'] = hero.select_one('.tb-ctl').get('class', []) + ['ycn-wide']
     return str(s)
 
 # ------------------------------------------------------------------ model page: verdict first, year explorer, YouTube in Overview
@@ -171,6 +202,11 @@ def model_page(out, c):
         if anchor is not None: anchor.insert_after(box)
         else: hero.append(box)
     hero['class'] = hero.get('class', []) + ['yx-hero', 'yc-hero']
+    sp = hero.select_one('.yverd > p:first-child > span')   # 11-12 v2: one short verdict line; the answer above already says how many complaints
+    if sp is not None and ':' in sp.get_text(): sp.string = sp.get_text().split(':')[0].strip() + '.'
+    sh = next((b for b in hero.find_all('button', attrs={'data-share': True})), None)   # phones: Share rides at the end of the tab row
+    if sh is not None and _nav_row(s, [str(sh).replace('btn btn-ghost', 'tb-ic').replace('>Share ↗<', '><span class="tb-ic-l">Share</span><')]):
+        sh.parent['class'] = sh.parent.get('class', []) + ['ycn-wide']
     ov = s.find(id='p-overview')
     if ov is not None:
         yb = yt_block(c)

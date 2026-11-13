@@ -980,7 +980,7 @@ def _yc_ctx(fid):
     """what ycarousel.py needs about one model: every year page with its picture and score, YouTube ranks, the fix/guide videos"""
     if fid in _YC: return _YC[fid]
     f = FY[fid]; mi = (YSL.model_img(fid) or {}).get('src')
-    yrs = [{'y': v['y'], 'li': round(v['li']) if v['ok'] else None, 'url': CARU(f, v['y']), 'src': YSL.ai_src(fid, v['y']) or mi, 'gen': gen_of(f, v['y'])} for v in f['years']]
+    yrs = [{'y': v['y'], 'li': round(v['li']) if v['ok'] else None, 'url': CARU(f, v['y']), 'src': YSL.ai_src(fid, v['y']) or mi, 'gen': gen_of(f, v['y']), 'top': NICE(v['parts'][0][0]) if v.get('parts') else None} for v in f['years']]
     _YC[fid] = dict(fid=fid, name=f['name'], short=f['name'].split(' ', 1)[-1], years=yrs, yt_rank=yt_rank_map(f), ytr=YTR.get(fid), ytv=YTV.get(fid, []),
                     start=popular_year(f), url=lambda yy: CARU(f, yy))
     return _YC[fid]

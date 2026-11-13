@@ -15,20 +15,44 @@
 .ycr-p:focus-visible .ycr-y b, .ycr-n:focus-visible .ycr-y b { text-decoration: underline; }
 .ycr-y { display: flex; flex-direction: column; align-items: center; line-height: 1.1; margin-top: 2px; }
 .ycr-y b { font: 800 19px/1.1 var(--sys, Archivo, Inter, sans-serif); letter-spacing: -.02em; font-variant-numeric: tabular-nums; color: var(--mute); }
-.ycr-c .ycr-y b { font-size: 26px; color: var(--ink); }
 .ycr-p .ycr-y { align-self: flex-end; width: 50%; } .ycr-n .ycr-y { align-self: flex-start; width: 50%; }
 .ycr-p .ycr-y b, .ycr-n .ycr-y b { font-size: 22px; }
-.ycr-y small { font-size: 13px; font-weight: 600; color: var(--mute); margin-top: 2px; }
 .ycr-c .ii { position: absolute; right: 0; top: 4px; bottom: auto; }
-.ycr-ar { position: absolute; top: calc(var(--w) / var(--arn, 1.667) / 2);   /* the middle of the car picture */ z-index: 2; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%;
-  background: rgba(255,255,255,.92); color: var(--ink); box-shadow: 0 1px 2px rgba(0,0,0,.12), 0 8px 20px -10px rgba(0,0,0,.4); text-decoration: none; transform: translateY(-50%); }
-.ycr-ap { left: 10px; } .ycr-an { right: 10px; }
-.ycr-ar:hover { background: #fff; } .ycr-ar:focus-visible { outline: 2.5px solid #e9b300; outline-offset: 2px; }
 .ycr-none { visibility: hidden; }
 @media (min-width: 700px) { .ycr { --w: min(640px, calc(var(--cw) * .46)); -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
-  .ycr-ap { left: calc(50% - var(--w) / 2 - 60px); } .ycr-an { right: calc(50% - var(--w) / 2 - 60px); }
   .ycr-p, .ycr-n { transform: translateX(-50%) scale(.72); } }
-html:has(.ycr), body:has(.ycr) { overflow-x: clip; }   /* 100vw counts a desktop scrollbar until ycar.js measures it */
+html:has(.ycr), body:has(.ycr) { overflow-x: clip; }
+/* 11-12 v2 (Elijah): phones show only this year's car (no half-cut neighbours); swipe still changes the year */
+@media (max-width: 699px) { .ycr { --w: calc(var(--cw) * .86); } .ycr-p, .ycr-n { display: none; } .ycr-track { transition: transform .22s ease, opacity .22s ease; } }
+
+/* ---- one big title with the year arrows around it: '<  2016 Honda Civic reliability.  >' */
+.yct { display: flex; align-items: center; justify-content: center; gap: clamp(6px, 2vw, 22px); width: auto; max-width: 100%; margin: 6px auto 0; }
+.tbl .tb-hero.yc-hero .yct h1 { flex: 0 1 auto; font-size: clamp(34px, 4.2vw, 54px); }
+.yct h1 { margin: 0 !important; min-width: 0; }
+.yct-a { flex: none; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line); background: #fff; color: var(--ink); text-decoration: none; }
+.yct-a:hover { background: var(--soft); } .yct-a:focus-visible { outline: 2.5px solid #e9b300; outline-offset: 2px; }
+.yct-x { visibility: hidden; }
+.yct-g { margin: 4px 0 0; font-size: 14px; font-weight: 600; color: var(--mute); }
+.tbl .tb-hero.yc-hero .yvd span { color: var(--mute); }
+
+/* ---- phones: the page actions ride at the end of the sticky tab row (one navigation system); wide screens keep the hero buttons */
+.ycn { display: none; }
+@media (max-width: 699px) {
+  .ycn { display: flex; flex: none; position: relative; align-items: center; }
+  .ycn-wide { display: none !important; }
+  .ycn-b, .ycn > .tb-ic { display: inline-flex; align-items: center; gap: 6px; height: 36px; min-height: 36px; width: auto; padding: 0 12px; border-radius: 999px; border: 1px solid var(--line); background: #fff;
+    color: var(--ink); font: 600 14px/1 inherit; cursor: pointer; }
+  .ycn > .tb-ic .tb-ic-l { position: static; width: auto; height: auto; overflow: visible; clip: auto; }
+  .ycn-b[aria-expanded="true"] { background: var(--soft); }
+  .ycn-s { position: absolute; right: 0; top: calc(100% + 8px); z-index: 60; min-width: 210px; display: grid; gap: 2px; padding: 6px; background: #fff; border-radius: 16px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.08), 0 18px 40px -12px rgba(0,0,0,.35); }
+  .ycn-s[hidden] { display: none; }
+  .ycn-s .tb-ic { justify-content: flex-start; width: 100%; height: 46px; padding: 0 12px; border: 0; border-radius: 10px; background: none; font-size: 15.5px; font-weight: 600; color: var(--ink); text-decoration: none; }
+  .ycn-s .tb-ic:hover, .ycn-s .tb-ic:focus-visible { background: var(--soft); }
+  .ycn-s .tb-ic-l { position: static; width: auto; height: auto; overflow: visible; clip: auto; }
+  .tbl .tb-hero.yc-hero .yct h1 { font-size: clamp(28px, 8.4vw, 40px); }
+}
+   /* 100vw counts a desktop scrollbar until ycar.js measures it */
 @media (prefers-reduced-motion: reduce) { .ycr-track, .ycr-p, .ycr-n { transition: none; } }
 
 /* ---- model page: verdict first, then the year explorer */
