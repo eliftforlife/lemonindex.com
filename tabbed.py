@@ -60,7 +60,7 @@ def _info(txt):
     return YSL.info(txt)
 
 YTI = '<svg aria-hidden="true" viewBox="0 0 24 24" width="11" height="11"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>'
-def engine_chart(fid, name, li, yt, pages, cur=None, cls=lambda li: '', ysc=None):
+def engine_chart(fid, name, li, yt, pages, cur=None, cls=lambda li: '', ysc=None, part=()):
     """Every engine, with its image on the left and one row per model year on the right.
     li = {year: Lemon Index} (only years with enough complaints), yt = {year: YouTube rank #} (only rankable years), pages = years with a page."""
     gs = groups(fid)
@@ -82,7 +82,8 @@ def engine_chart(fid, name, li, yt, pages, cur=None, cls=lambda li: '', ysc=None
             c = (f'<span class="er-bt"><i style="width:{min(100, v / mx * 100):.1f}%"></i><em style="left:{100 / mx * 100:.1f}%"></em></span><b>{v}</b>' if v is not None else '<span class="er-bt na"></span><b class="mute"></b>')
             t = f'<b class="er-rk">#{r}</b>' if r is not None else '<b class="er-rk mute">·</b>'
             tag = 'a' if y in pages else 'div'; href = f' href="/cars/{fid}/{y}/"' if y in pages else ''
-            rows.append(f'<{tag} class="er{" " + cls(v) if v is not None else ""}{" cur" if y == cur else ""}"{href}><span class="er-y">{y}</span>{c}{t}</{tag}>')
+            pt = y in part and v is not None   # 11-12 r2: a 2023+ year is a partial score: gray, and says so
+            rows.append(f'<{tag} class="er{" na" if pt else " " + cls(v) if v is not None else ""}{" cur" if y == cur else ""}"{href}{f' title="{y}: partial score, too new"' if pt else ""}><span class="er-y">{y}{"<small> partial</small>" if pt else ""}</span>{c}{t}</{tag}>')
         img = (f'<span class="eg-im"><img src="{E(im["src"])}" alt="{E(name)} {E(g["name"])} engine illustration" width="{im["w"]}" height="{im["h"]}" loading="lazy" decoding="async">'
                + _info(f'Illustration (AI-generated) of the {E(name)} {E(g["name"])} engine, not a photo of a specific engine. Free to use under <a href="{LIC}" rel="license noopener">CC BY 4.0</a>: credit The Lemon Index (lemonindex.com). <a href="/images/">Download and credit text</a>')
                + ytb + '</span>') if im else ytb
@@ -274,7 +275,7 @@ def _year_bars(scope):
         k = b.get('class') or []; yb = b.find(class_='bn')
         if not yb: continue
         out.append((_txt(yb), 'bad' if 'bad' in k else 'good' if 'good' in k else 'na', 'cur' in k))
-    return out
+    return sorted(out, key=lambda t: t[0])   # 11-12 r2: the year list runs newest first; the overview strip stays oldest -> newest
 def overview_cards_year(over, probs, fix, rec, yrs, qa):
     """The 5 cards for a year page, from its own panels (nothing new to look up)."""
     S_ = BeautifulSoup(''.join(map(str, over + probs + fix + rec + yrs + qa)), 'html.parser')
@@ -317,7 +318,7 @@ def overview_cards_year(over, probs, fix, rec, yrs, qa):
     qs = S_.select('.yqa h3')
     c5 = _ovcard('questions', 'Questions', f'{len(qs)} quick answers' if qs else '', '', _qtitles([S_]), go='questions')
     oc = card.get('Owner complaints'); fe = card.get('Fuel economy')
-    slim = ' '.join(x for x in ((f'<span><b>{_txt(oc[0])}</b> owner complaint{"" if _txt(oc[0]).strip() == "1" else "s"}, first 3 years</span>' if oc else ''), (f'<span><b>{_txt(fe[0])}</b> combined, EPA</span>' if fe else '')) if x)
+    slim = ' '.join(x for x in ((f'<span><b>{_txt(oc[0])}</b> owner complaint{"" if _txt(oc[0]).strip() == "1" else "s"}, first 3 years' + (lambda m: f' (of all {m.group(1)} filed so far)' if m else '')(re.search(r'([\d,]+) in all', oc[1] or '')) + '</span>' if oc else ''), (f'<span><b>{_txt(fe[0])}</b> combined, EPA</span>' if fe else '')) if x)
     return f'<div class="ovg">{c1}{c2}{c3}{c4}{c5}</div>' + (f'<p class="ovslim">{slim}</p>' if slim else '')
 
 def transform_year(body, eng_html, short):
@@ -329,9 +330,9 @@ def transform_year(body, eng_html, short):
     short_ans = f'<p class="ans tb-ans">{_first_sentence(ans)}</p>' if ans else ''
     en = next((c for c in root.find_all(class_='early-n')), None)
     if early is not None:
-        pop = _info(re.sub(r'^Early read\.\s*', '', _txt(en))) if en is not None else ''
+        pop = _info(re.sub(r'^(Early read|Too new: partial score)\.\s*', '', _txt(en))) if en is not None else ''
         pop = pop.replace('<div class="ii-pop"', '<span class="ii-pop"').replace('</div>', '</span>')
-        early = BeautifulSoup(f'<p class="early-b">Early read · still collecting complaints<span class="iiw">{pop}</span></p>', 'html.parser')
+        early = BeautifulSoup(f'<p class="early-b">Too new: partial score · still collecting complaints<span class="iiw">{pop}</span></p>', 'html.parser')
     pin = yt.find(class_='pinb')   # 11-12: a pinned battery-fire recall banner stays in the hero
     hero = f'<section class="ph tb-hero">{_s(crumbs)}<div class="tb-img">{img}</div>{_s(h1)}{_s(early)}{_s(pin)}{_s(yhero)}{_controls(sw, modes)}</section>'   # the gauge + verdict already say it: no answer paragraph
     top = [c for c in root.find_all(recursive=False) if c is not ph]

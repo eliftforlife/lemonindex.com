@@ -1900,3 +1900,39 @@ a.ecard:hover { border-color: #c9ccd1; box-shadow: 0 12px 28px -18px rgba(17,18,
 .ecard-soon { opacity: .62; } .ecard-soon .ecard-i { filter: grayscale(1); }
 .ecard-s { align-self: flex-start; margin-top: 6px; font-size: 12px; font-weight: 600; color: var(--mute); border: 1px solid var(--line); border-radius: 999px; padding: 2px 9px; }
 @media (max-width: 520px) { .ecards { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; } .ecard:only-child { grid-column: 1 / -1; } .ecard-i { padding: 8px; } .ecard-t { padding: 10px 10px 12px; } .ecard-t b { font-size: 14.5px; } .ecard-t small { font-size: 12.5px; } .scs-hp b { font-size: 40px; } }
+/* ---- 11-12 round 2 UX fixes, agent A (prefix lfa-, plus the compare table's phone layout) ---- */
+/* one color per score band on the match-up bars (the check marks the year's better car; it no longer turns a worse-than-average bar green) */
+.ybar.good i { background: #bfe6cc; } .ybar.mid i, .ybar.na i, .ybar.w.mid i, .ybar.w.na i { background: #dcdde1; } .ybar.w.bad i { background: #f3b6b9; }
+.ybar span small { font-size: 12px; font-weight: 600; color: #6e6e73; margin-left: 4px; }
+.yr.lfa-pt .ybar { opacity: .75; }
+.yr.lfa-gap p { margin: 0; font-size: 14px; color: #6e6e73; }
+.yr.lfa-on { outline: 2px solid #ffd400; outline-offset: 4px; border-radius: 8px; }
+.lfa-vs { margin-top: 6px; font-size: 14px; color: #6e6e73; }
+.lfa-yp { display: flex; flex-wrap: wrap; gap: 8px 10px; align-items: center; margin: 0 0 16px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 14px; background: var(--soft); }
+.lfa-yp select { font: 600 15px Inter, system-ui, sans-serif; padding: 6px 8px; min-height: 40px; border: 1px solid var(--line); border-radius: 10px; background: #fff; color: var(--ink); }
+.lfa-yr-res { flex-basis: 100%; font-size: 15px; line-height: 1.45; }
+/* year lists: newest first; a long list on a year page scrolls inside its box to that year */
+.lfa-sc { position: relative; max-height: 560px; overflow-y: auto; overscroll-behavior: contain; padding-right: 4px; }
+.lfa-sc > .bl { position: sticky; top: 0; z-index: 2; background: #fff; }
+.lfa-leg { margin-top: 10px; }
+.er-y small { font-size: 10px; font-weight: 600; color: #6e6e73; }
+/* the YouTube rank bars are blue, so they don't read as reliability red/green (Jake) */
+.yb.yt2 .bt.ytb.up i { background: #2456e8; } .yb.yt2 .bt.ytb.dn i { background: #a9bdf2; }
+/* compare: short names (brand on its own small line), a badge that never covers the x, and 4 columns that fit a phone */
+.cx-brand { display: block; font-size: 11px; font-weight: 600; color: #6e6e73; letter-spacing: .01em; }
+.cx-h .cx-name { overflow-wrap: normal; word-break: normal; hyphens: auto; }
+.cx-h .cx-badge { margin-right: 22px; line-height: 1.25; }
+.cx-h .cx-badge small { display: block; font-size: 10px; font-weight: 600; opacity: .9; }
+.cx-v.na { color: #6e6e73; }
+.cx-rv small { white-space: nowrap; }
+@media (max-width: 600px) {
+  .cx-t[style*="--n:3"] .cx-h, .cx-t[style*="--n:4"] .cx-h { padding: 12px 6px 8px; }
+  .cx-t[style*="--n:3"] .cx-name, .cx-t[style*="--n:4"] .cx-name { font-size: 14px; padding-right: 16px; }
+  .cx-t[style*="--n:3"] .cx-sel, .cx-t[style*="--n:4"] .cx-sel { width: 100%; font-size: 14px; padding: 6px 2px 6px 6px; }
+  .cx-t[style*="--n:3"] .cx-v, .cx-t[style*="--n:4"] .cx-v { font-size: 12px; }
+  .cx-t[style*="--n:3"] .cx-rv, .cx-t[style*="--n:4"] .cx-rv { padding: 2px 6px 10px; font-size: 14px; }
+  .cx-t[style*="--n:4"] .cx-badge { font-size: 10px; padding: 3px 6px; margin-right: 14px; }
+  .cx-t[style*="--n:4"] .cx-x { right: 0; top: 2px; font-size: 20px; }
+}
+.cx-h .cx-badge { border-radius: 8px; }
+@media (max-width: 600px) { .cx-t[style*="--n:3"] .cx-rv.tx, .cx-t[style*="--n:4"] .cx-rv.tx { font-size: 12px; overflow-wrap: anywhere; } }

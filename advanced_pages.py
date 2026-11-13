@@ -42,7 +42,7 @@ def adv_year(f, v, y, x, x2, best, worst, ys):
     facts.append(('Complaints', f'{v["n"]:,}', 'NHTSA, first 3 years'))
     if sold: facts.append(('Sold', f'{sold:,}', 'U.S. model year'))
     if rate: facts.append(('Per 100K sold', f'{rate:,.0f}', 'complaints'))
-    if rk: facts.append(('Complaint rank', f'#{rk} of {len(sc)}', '#1 = fewest complaints per car sold (not the YouTube rank)'))   # 11-12 (Marcus: "#2 of 23" vs the YouTube "#15")
+    if rk: facts.append(('Complaint rank', f'#{rk} of {len(sc)}', f'among the {len(sc)} scored {nm} model years ({sc and min(w["y"] for w in sc)}–{sc and max(w["y"] for w in sc)}); #1 = fewest complaints per car sold, not the YouTube rank'))   # 11-12 r2 (Ryan: "23 of what?")   # 11-12 (Marcus: "#2 of 23" vs the YouTube "#15")
     tiles = '<div class="yts">' + ''.join(f'<div class="yt"><span class="yt-l">{l}</span><b class="yt-v">{a}</b><small>{b}</small></div>' for l, a, b in facts) + '</div>'
     sec = []; unique = 0
     rows = epa_rows(f, y, x)

@@ -44,3 +44,7 @@ figure.aim { margin: 0; position: relative; width: min(100%, 640px) } figure.aim
 @media (max-width: 640px) { .ysl-pl { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); } }
 /* short screens: the car shrinks so the answer is above the fold */
 @media (max-height: 820px) { .ysl-hero .ysl-stage { max-height: 34vh; } .ysl-hero .ysl-yr b { font-size: clamp(30px, 7vw, 52px); } }
+/* 11-12 r2: the YouTube score explains itself on tap; partial (2023+) years are gray */
+button.ysl-yt { font: inherit; background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline dotted; text-underline-offset: 3px }
+button.ysl-yt i { font-style: normal; font-size: .9em }
+.ysl-ytn { flex-basis: 100%; margin: 0; font-size: 13px; font-weight: 400; color: #6b6870; line-height: 1.4 }

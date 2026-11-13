@@ -364,7 +364,7 @@ elif UXC == 'compare':
 <details class="yd"><summary>{len(PERF_PAIRS)} performance match-ups</summary><ul class="cmp">{pl}</ul></details>
 <details class="yd"><summary>All {len(_cp)} everyday-car match-ups</summary><ul class="cmp">{cl}</ul></details></section>
 {pcredit(who(*[mphoto(x) for a, b, _ in _top[:6] for x in (a, b)], mphoto('toyota-rav4', 2019), mphoto('honda-cr-v', 2017), *[_ev(x) for a, _, b, _ in EV_TOP for x in (a, b) if _evok(x)], *[perf_img(x) for p in PERF_TOP for x in p]))}
-{share_line("Compare up to 4 cars side by side: problems, recalls, mpg, EV range and specs. Free:", 'Know someone stuck between cars?')}</div><script src="/assets/compare.js?v=1112c2" defer></script>''',
+{share_line("Compare up to 4 cars side by side: problems, recalls, mpg, EV range and specs. Free:", 'Know someone stuck between cars?')}</div><script src="/assets/compare.js?v=1112r2" defer></script>''',
          ld=[{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Car comparisons", "url": BASE + '/compare/'}])
     curls.insert(0, '/compare/')
 
@@ -379,8 +379,8 @@ elif UXC == 'data':
         if not c: return None
         e = c.get('epa') or {}
         return {'r': e.get('range'), 'c': e.get('cost'), 'e': e.get('mpg'), 'yr': e.get('year'), 'li': c['li'], 'w': c['years'], 'u': f'/electric/{slug}/'}
-    def _dflt(ys):
-        ok = [y for y, v in ys.items() if v[0] is not None]
+    def _dflt(ys):   # 11-12 r2 (Carlos, Mitch: cars defaulted to 2025): the newest fully scored year (never a partial 2023+), else the newest
+        ok = [y for y, v in ys.items() if v[0] is not None and not (len(v) > 10 and v[10])]
         return max(ok) if ok else max(ys)
     for f in YEARS:
         ys = {}
@@ -388,7 +388,7 @@ elif UXC == 'data':
             x = extra(f['id'], v['y']); m = x.get('mpg'); sf = x.get('safety')
             ys[str(v['y'])] = [v['li'] if v['ok'] else None, v['n'], len(x['recalls']) if 'recalls' in x else None, m['comb'][0] if m else None, m['comb'][1] if m else None,
                                sf.get('best') if sf else None, NICE(v['parts'][0][0]) if v['parts'] else None, (m.get('cost') or [None, None])[0] if m else None,
-                               (m.get('cost') or [None, None])[1] if m else None, 1 if m and m.get('ev') else 0]
+                               (m.get('cost') or [None, None])[1] if m else None, 1 if m and m.get('ev') else 0, 1 if v.get('early') else 0]   # [10]: 2023+ partial score
         u = f'/cars/{f["id"]}/'; e = {'i': f['id'], 'n': f['name'], 'b': BYNAME[f['name']]['brand'], 'u': u, 'k': 'ev' if f['id'] in _EVS else 'car', 'a': _al.get(u, ''), 'y': ys, 'd': _dflt(ys)}
         if f['id'] in _EVS: e['ev'] = _ev_extra(f['id'])
         CMP.append(e)
@@ -426,7 +426,7 @@ elif UXC == 'data':
         if u in _have or not _os.path.exists(f'{OUT}{u}index.html'): continue
         by = m.get('by_year') or {}; rc = m.get('recalls') or []
         ys = {y: [None, n, sum(1 for r in rc if int(y) in (r.get('years') or [])) if rc and rc[0].get('years') is not None else None, None, None, None, None, None, None, 0] for y, n in by.items()}
-        if ys: CMP.append({'i': m['id'], 'n': m['name'], 'b': m.get('brand') or m['name'].split(' ')[0], 'u': u, 'k': 'co', 'a': _al.get(u, ''), 'y': ys, 'd': max(ys)})
+        if ys: CMP.append({'i': m['id'], 'n': m['name'], 'b': m.get('brand') or m['name'].split(' ')[0], 'u': u, 'k': 'co', 'a': _al.get(u, ''), 'y': ys, 'd': max([y for y in ys if int(y) <= 2022] or ys)})   # 11-12 r2: a used-shopper year
     _os.makedirs(f'{OUT}/assets', exist_ok=True)
     _json.dump({'v': 2, 'cars': CMP}, open(f'{OUT}/assets/compare.json', 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
     print('compare.json:', len(CMP), 'cars,', sum(1 for e in CMP if e['k'] == 'perf'), 'performance,', sum(1 for e in CMP if e['k'] == 'ev'), 'electric')

@@ -4,7 +4,7 @@
 #   /brands/<brand>/    the brand's score, its models ranked as photo cards, its best and worst model, and (Ford, GM, Tesla) what the company
 #                       itself reports spending on warranty repairs and recalls per vehicle sold (SEC annual reports, 10-K).
 def _verdict(li):   # build.py's verdict() name gets reused as a string by the compare pages, so a local copy
-    return ('good', 'One of the most reliable') if li < 50 else ('good', 'Better than average') if li < 85 else ('mid', 'About average') if li <= 115 else ('bad', 'Worse than average') if li < 200 else ('bad', 'Lemon alert')
+    return ('good', 'One of the most reliable') if li < 50 else ('good', 'Better than average') if li < 85 else ('mid', 'About average') if li <= 115 else ('bad', 'Worse than average') if li < 200 else ('bad', 'Avoid')
 BSLUG = lambda b: b.lower().replace(' ', '-')
 # Warranty and recall cost booked each year (warranties issued + changes to earlier estimates, $ millions) / vehicles sold (thousands).
 # Ford: 10-K FY2025 Note 24 + "Wholesales ... Total Company"; GM: 10-K FY2025 product warranty table + wholesale vehicle sales; Tesla: 10-K FY2025 accrued

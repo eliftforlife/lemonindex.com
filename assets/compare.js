@@ -1,12 +1,12 @@
 // Compare up to 4 cars (11-02 first version; 11-12 UX test: every model, EV, performance car and supercar, up to 4, Enter adds a car).
 // Data: /assets/compare.json (built by ux_c.py) = {cars: [{i id, n name, b brand, u page, k kind (car|ev|perf|sc|co), a aliases,
-//   y {year: [index|null, complaints, recalls, mpgLo, mpgHi, stars, topProblem, costLo, costHi, isEV]}  or  g [generation specs] (perf),
+//   y {year: [index|null, complaints, recalls, mpgLo, mpgHi, stars, topProblem, costLo, costHi, isEV, partial (2023+)]}  or  g [generation specs] (perf),
 //   d default year/generation, ev {r range, c cost, e MPGe, yr, li, w, u} (EVs), w 'ev' (score = the EV page's), h note}]}
 // URL: /compare/?cars=toyota-rav4-2019,bmw-m3-g80   (?c= still works: the year pages' Compare buttons use it)
 (async () => {
   const root = document.getElementById('cmpx'); if (!root) return;
   let J;
-  try { J = await (await fetch('/assets/compare.json?v=1112c')).json(); } catch (e) { root.innerHTML = '<p class="note">Couldn&#39;t load the car list. Refresh to try again.</p>'; return; }
+  try { J = await (await fetch('/assets/compare.json?v=1112r2')).json(); } catch (e) { root.innerHTML = '<p class="note">Couldn&#39;t load the car list. Refresh to try again.</p>'; return; }
   const C = J.cars, BY = {}, MAX = 4;
   C.forEach(c => { BY[c.i] = c; });
   const IDX = C.map((_, n) => n);
@@ -19,17 +19,24 @@
     for (let k = s.length; k > 0; k--) {
       if (k < s.length && s[k] !== '-') continue;
       const id = s.slice(0, k), c = BY[id]; if (!c) continue;
-      const v = s.slice(k + 1); return [id, v && has(c, v) ? v : String(c.d)];
+      const v = s.slice(k + 1); return [id, v && has(c, v) ? v : String(c.d), !(v && has(c, v))];
     }
     return null;
   };
   const qp = new URLSearchParams(location.search);
   let cars = (qp.get('cars') || qp.get('c') || '').split(',').filter(Boolean).map(parse).filter(Boolean).slice(0, MAX);
+  // 11-12 r2: a car linked without a year takes the first car's year when it has a full score for it (never 2025 by default)
+  const y0 = cars.find(c => !c[2] && !BY[c[0]].g);
+  cars = cars.map(([i, v, guess]) => { const c = BY[i]; return [i, guess && y0 && !c.g && c.y[y0[1]] && c.y[y0[1]][0] != null && !c.y[y0[1]][10] ? y0[1] : v]; });
   const save = () => { const q = cars.map(([i, v]) => `${i}-${v}`).join(','); history.replaceState(null, '', q ? `?cars=${q}` : location.pathname); };
-  const word = li => li == null ? ['mid', 'No score'] : li < 50 ? ['good', 'One of the most reliable'] : li < 85 ? ['good', 'Better than average'] : li <= 115 ? ['mid', 'About average'] : li < 200 ? ['bad', 'Worse than average'] : ['bad', 'Lemon alert'];
+  // 11-12 r2: the site's one set of band words (build.py band()); a 2023+ year is partial, never judged
+  const word = (li, p) => li == null ? ['mid', 'No score'] : p ? ['na', 'Too new: partial score'] : li < 50 ? ['good', 'One of the most reliable'] : li < 85 ? ['good', 'Better than average'] : li <= 115 ? ['mid', 'About average'] : li < 200 ? ['bad', 'Worse than average'] : ['bad', 'Avoid'];
+  const part = r => !!(r.v && r.v[10]);
+  // short column names on phones: "RAV4 Hybrid" under a small "Toyota" (Carlos: "Toyot/a" split mid-word in 4 columns)
+  const shortN = c => c.b && c.n.startsWith(c.b + ' ') ? c.n.slice(c.b.length + 1) : c.n;
   const KIND = { car: '', ev: 'Electric', perf: 'Performance', sc: 'Supercar', co: 'Complaints only' };
   const esc = s => String(s ?? '').replace(/[&<>"]/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[ch]));
-  const rng = (a, b, u = '') => a == null ? null : (a === b || b == null ? `${a.toLocaleString()}` : `${a.toLocaleString()}–${b.toLocaleString()}`) + u;
+  const rng = (a, b, u = '') => a == null ? null : (a === b || b == null ? `${a.toLocaleString()}` : `${a.toLocaleString()}–<wbr>${b.toLocaleString()}`) + u;
   const num = s => { if (s == null) return null; const m = String(s).replace(/,/g, '').match(/[\d.]+/); return m ? +m[0] : null; };
   function find(q) {
     const s = fold(q), y = (s.match(/\b(19|20)\d{2}\b/) || [''])[0], w = s.replace(/\b(19|20)\d{2}\b/, ' ').split(' ').filter(Boolean);
@@ -40,7 +47,9 @@
     const lq = window.LQ ? LQ.pick(q.replace(/\b(19|20)\d{2}\b/, ' '), IDX, n => C[n].n + ' ' + (C[n].a || '')).map(n => C[n]) : [];
     return [[...new Set([...lq, ...hit.map(h => h.c)])].slice(0, 7), y];
   }
-  const pick = (c, y) => (y && c.y && c.y[y]) ? y : String(c.d);
+  // 11-12 r2 (Carlos, Mitch: added cars defaulted to 2025): no typed year -> the year of the car already in the table (the page's year), else the
+  // newest fully scored year (compare.json d, never a partial 2023+)
+  const pick = (c, y) => { if (y && c.y && c.y[y]) return y; const y0 = cars.length && !BY[cars[0][0]].g ? cars[0][1] : ''; return (y0 && c.y && c.y[y0] && c.y[y0][0] != null) ? y0 : String(c.d); };
   function add(id, v) { if (cars.length >= MAX || cars.some(([i, w]) => i === id && w === v)) return; cars.push([id, v]); save(); draw(true); }
   function search(box) {
     const q = box.querySelector('input'), out = box.querySelector('.cx-sug');
@@ -50,6 +59,8 @@
       out.innerHTML = hits.length ? hits.map((c, n) => `<div class="cx-hit"><b>${esc(c.n)}${KIND[c.k] ? ` <small>${KIND[c.k]}</small>` : ''}</b><select data-n="${n}" aria-label="${c.g ? 'Generation' : 'Model year'} for ${esc(c.n)}">${opts(c).map(([v, l]) => `<option value="${v}"${v === pick(c, yy) ? ' selected' : ''}>${l}</option>`).join('')}</select><button type="button" data-n="${n}">Add</button></div>`).join('')
         : (q.value.trim().length > 1 ? '<p class="cx-none">No match yet. Try the model name, like &ldquo;Camry&rdquo;, &ldquo;Model 3&rdquo; or &ldquo;M3&rdquo;.</p>' : '');
       out.querySelectorAll('button').forEach(b => b.onclick = () => { const c = hits[+b.dataset.n]; add(c.i, out.querySelector(`select[data-n="${b.dataset.n}"]`).value); });
+      // 11-12 r2 (Mitch: only "Add" was tappable): the whole row adds the car, except a tap on its year picker
+      out.querySelectorAll('.cx-hit').forEach(h => h.onclick = e => { if (e.target.closest('select, button')) return; const b = h.querySelector('button'); if (b) b.click(); });
     };
     q.oninput = show;
     q.onkeydown = e => { if (e.key === 'Enter') { e.preventDefault(); show(); if (hits[0]) { const s0 = out.querySelector('select[data-n="0"]'); add(hits[0].i, s0 ? s0.value : pick(hits[0], yy)); } } };
@@ -63,10 +74,10 @@
     const anyEV = R.some(r => r.c.ev || (r.v && r.v[9])), anyPerf = R.some(r => r.g), anyCar = R.some(r => r.v);
     // [label, note, value fn -> [text, number for the green check], higher is better?]
     const L = [];
-    if (anyCar) L.push(['Lemon Index', '100 = average car, lower is better', r => r.v ? [r.v[0] == null ? '—' : r.v[0] + (r.c.w === 'ev' ? '*' : ''), r.c.w === 'ev' ? null : r.v[0]] : ['—'], false],
-                       ['Owner complaints', 'to NHTSA, that year', r => r.v ? [r.v[1] == null ? '—' : r.v[1].toLocaleString(), null] : r.g ? [r.g.nc == null ? '—' : r.g.nc.toLocaleString(), null] : ['—'], false]);
+    if (anyCar) L.push(['Lemon Index', '100 = average car, lower is better', r => r.v ? [r.v[0] == null ? '—' : r.v[0] + (r.c.w === 'ev' ? '*' : '') + (part(r) ? ' <small>partial</small>' : ''), r.c.w === 'ev' || part(r) ? null : r.v[0]] : ['—'], false],
+                       ['Owner complaints', 'to NHTSA, first 3 years (raw count, not per car sold)', r => r.v ? [r.v[1] == null ? '—' : r.v[1].toLocaleString(), null] : r.g ? [r.g.nc == null ? '—' : r.g.nc.toLocaleString(), null] : ['—'], false]);
     if (anyPerf && !anyCar) L.push(['Owner complaints', 'to NHTSA, these years (raw count)', r => r.g ? [r.g.nc == null ? '—' : r.g.nc.toLocaleString(), null] : ['—'], false]);
-    L.push(['Recalls', 'that model year / generation', r => r.v ? [r.v[2] == null ? '—' : r.v[2], r.v[2]] : r.g ? [r.g.rc, r.g.rc] : ['—'], false]);
+    L.push(['Recalls', 'that model year / generation', r => r.v ? [r.v[2] == null ? '—' : r.v[2], r.v[2]] : r.g ? [r.g.rc, r.g.rc] : ['—'], false, true]);   // [4] true: 0 is a real value (Devin: 7 recalls beat 0)
     if (anyPerf) L.push(['Horsepower', '', r => r.g ? [r.g.hp ?? '—', r.g.hp] : ['—'], true], ['Torque', 'lb-ft', r => r.g ? [r.g.tq ?? '—', num(r.g.tq)] : ['—'], true],
                         ['0–60 mph', 'seconds', r => r.g ? [r.g.z ?? '—', num(r.g.z)] : ['—'], false], ['Top speed', '', r => r.g ? [r.g.top ?? '—', num(r.g.top)] : ['—'], true],
                         ['Weight', '', r => r.g ? [r.g.wt ?? '—', num(r.g.wt)] : ['—'], false], ['Price new', 'base, when new', r => r.g ? [r.g.p ?? '—', num(r.g.p)] : ['—'], false],
@@ -74,31 +85,35 @@
                         ['YouTube owner tone', 'out of 100', r => r.g ? [r.g.yt ?? '—', r.g.yt] : ['—'], true]);
     if (anyCar) {
       L.push([anyEV ? 'MPG / MPGe' : 'Fuel economy', 'combined, EPA', r => { if (!r.v) return ['—']; const ev = r.v[9] || r.c.ev; const s = rng(r.v[3], r.v[4]); return [s ? s + (ev ? ' MPGe' : ' mpg') : '—', ev ? null : r.v[4]]; }, true],
-             ['Fuel cost a year', anyEV ? 'gas or electricity, EPA' : 'EPA estimate', r => { if (!r.v) return ['—']; const s = rng(r.v[7], r.v[8]); return [s ? '$' + s.replace('–', '–$') : '—', r.v[7]]; }, false]);
+             ['Fuel cost a year', anyEV ? 'gas or electricity, EPA' : 'EPA estimate', r => { if (!r.v) return ['—']; const s = rng(r.v[7], r.v[8]); return [s ? '$' + s.replace('–<wbr>', '–<wbr>$') : '—', r.v[7]]; }, false]);
       if (anyEV) L.push(['EV range', 'EPA, miles', r => r.c.ev && r.c.ev.r ? [rng(r.c.ev.r[0], r.c.ev.r[1], ' mi') + (r.c.ev.yr ? ` <small>(${r.c.ev.yr})</small>` : ''), r.c.ev.r[1]] : ['—'], true]);
       L.push(['Crash test', 'NHTSA overall', r => r.v && r.v[5] ? ['<span class="st">' + '★'.repeat(r.v[5]) + '☆'.repeat(5 - r.v[5]) + '</span>', r.v[5]] : ['—'], true],
              ['Top problem', 'most-named in complaints', r => [r.v && r.v[6] ? esc(r.v[6]) : '—', null], null]);
     }
-    const best = L.map(([, , f, hi]) => { if (hi == null) return null; const xs = R.map(r => f(r)[1]).filter(x => x != null && x !== 0); if (xs.length < 2 || new Set(xs).size < 2) return null; return hi ? Math.max(...xs) : Math.min(...xs); });
-    const scored = R.filter(r => r.v && r.v[0] != null && r.c.w !== 'ev'), win = scored.length >= 2 ? scored.reduce((a, c) => c.v[0] < a.v[0] ? c : a) : null;
+    const best = L.map(([, , f, hi, zero]) => { if (hi == null) return null; const xs = R.map(r => f(r)[1]).filter(x => x != null && (zero || x !== 0)); if (xs.length < 2 || new Set(xs).size < 2) return null; return hi ? Math.max(...xs) : Math.min(...xs); });
+    const scored = R.filter(r => r.v && r.v[0] != null && r.c.w !== 'ev' && !part(r)), win = scored.length >= 2 ? scored.reduce((a, c) => c.v[0] < a.v[0] ? c : a) : null;
     const head = (r, n) => {
-      const [cl, w] = r.v ? word(r.v[0]) : ['', KIND[r.c.k]];
+      const [cl, w] = r.v ? word(r.v[0], part(r)) : ['', KIND[r.c.k]];
       const sel = `<select class="cx-sel" data-k="${n}" aria-label="${r.g ? 'Generation' : 'Model year'}">${opts(r.c).map(([v, l]) => `<option value="${v}"${v === r.key ? ' selected' : ''}>${l}</option>`).join('')}</select>`;
       const href = r.g ? r.c.u : (r.c.u.startsWith('/cars/') && r.c.y[r.key] ? `${r.c.u}${r.key}/` : r.c.u);
-      return `<div class="cx-h${win === r ? ' win' : ''}">${win === r ? '<p class="cx-badge">Fewest complaints</p>' : ''}<button class="cx-x" type="button" data-k="${n}" aria-label="Remove ${esc(r.c.n)}">×</button>
-<a class="cx-name" href="${esc(href)}">${esc(r.c.n)}</a>${sel}${r.g ? `<p class="cx-v">${esc(r.g.v)}</p>` : `<p class="cx-v ${cl}">${w}</p>`}</div>`;
+      // 11-12 r2 (Carlos, Liam: "Fewest complaints" sat on the car with MORE raw complaints): the badge names what it measures
+      return `<div class="cx-h${win === r ? ' win' : ''}"><button class="cx-x" type="button" data-k="${n}" aria-label="Remove ${esc(r.c.n)}">×</button>${win === r ? '<p class="cx-badge">Best score <small>per car sold</small></p>' : ''}
+<a class="cx-name" href="${esc(href)}" title="${esc(r.c.n)}">${shortN(r.c) !== r.c.n ? `<small class="cx-brand">${esc(r.c.b)}</small>` : ''}${esc(shortN(r.c))}</a>${sel}${r.g ? `<p class="cx-v">${esc(r.g.v)}</p>` : `<p class="cx-v ${cl}">${w}</p>`}</div>`;
     };
     const body = L.map(([lab, note, f], n) => `<div class="cx-rl">${lab}${note ? ` <small>${note}</small>` : ''}</div>` + R.map(r => { const [t, x] = f(r); return `<div class="cx-rv${best[n] != null && x === best[n] ? ' w' : ''}${L[n][3] === null ? ' tx' : ''}">${t}</div>`; }).join('')).join('');
     const notes = [];
+    if (R.some(part)) notes.push('Partial = a 2023 or newer model year: under 3 years on the road, so its score can change and it never gets the check or the badge.');
     if (R.some(r => r.c.w === 'ev')) notes.push('* EV score from the electric-car page: complaints filed by the end of the year after the model year, a shorter window than the main 3-year score, so compare it with other EV scores.');
     R.filter(r => r.c.h).forEach(r => notes.push(`${esc(r.c.n)}: ${esc(r.c.h)}`));
     if (R.some(r => r.g)) notes.push('Performance specs: the generation&#39;s headline trim (see its page for every trim and source). Complaint counts there are raw, not per car sold.');
     const addBox = cars.length < MAX ? `<div class="cx-add"><p><b>${cars.length ? `Add a car <small>(${cars.length} of ${MAX})</small>` : 'Pick up to 4 cars'}</b></p><div class="cx-box"><input type="search" enterkeyhint="go" placeholder="e.g. 2019 RAV4, Model 3, M3, Ioniq 5" aria-label="Find a car to compare" autocomplete="off"><div class="cx-sug"></div></div></div>` : `<p class="cx-full">That&#39;s 4 cars, the most at once. Remove one to add another.</p>`;
     root.innerHTML = (R.length ? `<div class="cx-t" style="--n:${R.length}"><div class="cx-corner"></div>${R.map((r, n) => head(r, n)).join('')}${body}</div>` : '') + addBox
-      + (R.length >= 2 ? `<p class="cx-cap">Green check = the best of these cars on that line. ${notes.join(' ')}</p>` : notes.length ? `<p class="cx-cap">${notes.join(' ')}</p>` : '');
+      + (R.length >= 2 ? `<p class="cx-cap">Green check = the best of these cars on that line. Best score = the lowest Lemon Index (complaints per car sold), not the fewest raw complaints. ${notes.join(' ')}</p>` : notes.length ? `<p class="cx-cap">${notes.join(' ')}</p>` : '');
     root.querySelectorAll('.cx-x').forEach(x => x.onclick = () => { cars.splice(+x.dataset.k, 1); save(); draw(); });
     root.querySelectorAll('.cx-sel').forEach(s => s.onchange = () => { cars[+s.dataset.k][1] = s.value; save(); draw(); });
-    const box = root.querySelector('.cx-add'); if (box) { search(box); if (focus) box.querySelector('input').focus(); }
+    const box = root.querySelector('.cx-add'); if (box) { search(box); if (focus) box.querySelector('input').focus({ preventScroll: true }); }
+    // 11-12 r2 (Liam: after adding a car the page sat mid-table): keep the car names in view
+    if (focus && R.length) { const t = root.querySelector('.cx-t'); if (t && t.getBoundingClientRect().top < 0) t.scrollIntoView({ block: 'start' }); }
   }
   draw();
 })();

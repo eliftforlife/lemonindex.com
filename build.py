@@ -418,7 +418,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}{img or "/assets/og.png"}"><meta name="twitter:card" content="summary_large_image">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' '{DB_HASH}' https://static.cloudflareinsights.com https://challenges.cloudflare.com https://www.googletagmanager.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; frame-src https://challenges.cloudflare.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cloudflareinsights.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://vpic.nhtsa.dot.gov https://api.nhtsa.gov https://lemon-survey.elift08.workers.dev https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="google-adsense-account" content="{ADS}"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=1112-eng1"><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
+<link rel="stylesheet" href="/assets/site.css?v=1112-r2a"><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
 <body>{'' if path.startswith('/thanks/') else DONBAR}{gh_header(path)}
 <main>{body}{end_block(path, _upd, _shl)}{'' if path == '/vote/' else ask_html(path)}</main>
 <footer class="foot f2"><div class="f2-in"><div class="f2-brand"><a class="f2-logo" href="/"><img src="/assets/icon-64.png" alt="" width="28" height="28">The Lemon Index</a>
@@ -452,7 +452,8 @@ os.makedirs(OUT, exist_ok=True)
 # ---- 11-03 redesign (Elijah: "why do Apple and Stripe look less AI-made... add all these things"): a signature score dial built from the
 # logo's gauge, a hero with real car photos, a proof row and custom line icons. Yellow stays an accent (the dial's hub, the logo).
 def gauge(li, size=220, label=True):
-    """The Lemon gauge: a speedometer from 0 to 300 (100 = the average car); green below 75, gray around average, red above 125.
+    """The Lemon gauge: a speedometer from 0 to 300 (100 = the average car); green below 85, gray around average, red above 115 (band()).
+    label=True prints the plain caption; a string (11-12 r2: "2017 Lemon Index", "All years 2010-2022") says which score this is.
     The needle swings in when the dial scrolls into view (assets/nav.js adds .in). Scores past 300 peg the needle and still print the real number."""
     cx, cy, r = 120, 118, 92
     pt = lambda v, rr=r: (cx - rr * __import__('math').cos(__import__('math').pi * min(v, 300) / 300), cy - rr * __import__('math').sin(__import__('math').pi * min(v, 300) / 300))
@@ -462,11 +463,11 @@ def gauge(li, size=220, label=True):
     ticks = ''.join(f'<line x1="{pt(v, r - 16)[0]:.1f}" y1="{pt(v, r - 16)[1]:.1f}" x2="{pt(v, r - 24 if v % 100 else r - 30)[0]:.1f}" y2="{pt(v, r - 24 if v % 100 else r - 30)[1]:.1f}" />' for v in range(0, 301, 25))
     nums = ''.join(f'<text x="{pt(v, r - 44)[0]:.1f}" y="{pt(v, r - 44)[1] + 5:.1f}">{v}</text>' for v in (0, 100, 200, 300))
     a = min(li, 300) / 300 * 180 - 90
-    cls = 'good' if li < 75 else 'bad' if li > 125 else 'mid'
+    cls = band(li)[0]   # 11-12 r2: the same bands as every verdict word (green under 85, gray 85-115, red over 115)
     return (f'<figure class="gauge {cls}" data-gauge style="--a:{a:.1f}deg;width:{size}px" aria-label="Lemon Index {li}: {E(plain(li))}">'
-            f'<svg viewBox="0 0 240 150" role="img" aria-hidden="true"><g class="g-arc" fill="none" stroke-width="16" stroke-linecap="butt">{arc(0, 74, "#1a8f4c")}{arc(76, 124, "#c9ccd1")}{arc(126, 300, "#e8141c")}</g>'
+            f'<svg viewBox="0 0 240 150" role="img" aria-hidden="true"><g class="g-arc" fill="none" stroke-width="16" stroke-linecap="butt">{arc(0, 84, "#1a8f4c")}{arc(86, 114, "#c9ccd1")}{arc(116, 300, "#e8141c")}</g>'
             f'<g class="g-tick">{ticks}</g><g class="g-num">{nums}</g><g class="g-ndl"><path d="M{cx - 4} {cy}L{cx} {cy - r + 6}L{cx + 4} {cy}Z" /><circle cx="{cx}" cy="{cy}" r="11" /><circle class="g-hub" cx="{cx}" cy="{cy}" r="5" /></g></svg>'
-            f'<figcaption><b>{li}</b>{"<span>Lemon Index · 100 = average car</span>" if label else ""}</figcaption></figure>')
+            f'<figcaption><b>{li}</b>{(f"<span>{label} · 100 = average car</span>" if isinstance(label, str) else "<span>Lemon Index · 100 = average car</span>") if label else ""}</figcaption></figure>')
 
 ICONS = {   # custom 24px line icons (stroke 1.8, round), drawn for the site 11-03
  'look': '<circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/><path d="M7.5 11.5l1-2.2h4l1 2.2v1.6h-6z"/><circle cx="8.6" cy="13.4" r=".6"/><circle cx="12.4" cy="13.4" r=".6"/>',
@@ -636,7 +637,7 @@ page('/rankings/', 'Car Reliability Rankings: Every Model and Brand, Best to Wor
 {share_line("Every car ranked by real owner complaints, best to worst. Free:")}</div>''',
      ld=[{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Car reliability rankings", "url": BASE + '/rankings/'}])
 HOME_PAGE = dict(title="Lemon Index (LemonIndex): Look Up Any Car's Problems by Year",
-                 desc="Look up any car's problems by model year, 2000 to 2025: its reliability score, top problem areas and real owner complaints, from 1.6 million complaints filed with the government. 100 is the average car.",
+                 desc=f"Look up any car's problems by model year, 2000 to 2025: its reliability score, top problem areas and real owner complaints. Scores from {COUNTED:,} owner complaints to the government. 100 is the average car.",   # 11-12 r2 (Ryan): the meta said 1.6 million while the page says {COUNTED:,}
                  ld=[{"@context": "https://schema.org", "@type": "WebSite", "name": "The Lemon Index", "alternateName": ["Lemon Index", "LemonIndex", "lemonindex", "lemonindex.com"], "url": BASE + '/'},
                      {"@context": "https://schema.org", "@type": "Organization", "name": "The Lemon Index", "alternateName": ["Lemon Index", "LemonIndex", "lemonindex.com"], "url": BASE + '/', "logo": BASE + '/assets/icon-180.png', "sameAs": [YT, TT, IG]},
                      {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in FAQ]}])
@@ -718,7 +719,17 @@ NOSALES = lambda v: (v.get('low') or {}).get('why') == 'tesla'
 NOSALES_WHY = 'Tesla doesn&#39;t report U.S. sales by model, and no estimate covers this model year on its own'
 LOWSRC = lambda v: (f' (<a href="{E(v["low"]["url"])}" rel="nofollow">sales source</a>)' if v['low'].get('url') else '')
 LIS = lambda v: v['li'] if v['ok'] else '–'
-CLS = lambda v: ('bad' if v['li'] > 110 else 'good') if v['ok'] else 'na'   # 11-11: an unscored year is gray, never green
+USD = lambda a: f'${a[0]:,}' if a[0] == a[1] else f'${a[0]:,}–${a[1]:,}'   # 11-12 r2 (Ryan: "$3050–4000"): money ranges with commas
+# 11-12 round 2 (UX test: "Worth a look" on both 106 and 46, 3 labels for one car): ONE verdict per score band, used on year pages, model
+# pages, compare, match-ups, the Years tab and brand pages (assets/compare.js and brands_pages.py mirror it). 2023+ years are partial everywhere.
+def band(li):
+    if li < 50: return 'good', 'One of the most reliable'
+    if li < 85: return 'good', 'Better than average'
+    if li <= 115: return 'mid', 'About average'
+    if li < 200: return 'bad', 'Worse than average'
+    return 'bad', 'Avoid'
+PARTIAL = 'Too new: partial score'
+CLS = lambda v: ('na' if v.get('early') else band(v['li'])[0]) if v['ok'] else 'na'   # 11-11: an unscored year is gray, never green; 11-12 r2: bands, partial = gray
 PLN = lambda v: plain(v['li']) if v['ok'] else 'complaints only, no sales figure to score' if NOSALES(v) else 'complaints only, too few sold to score' if v.get('low') else 'too few complaints to score'
 CARU = lambda f, y=None: f'/cars/{f["id"]}/' + (f'{y}/' if y else '')
 yurls = []
@@ -877,7 +888,7 @@ def specs_html(x, y, name=''):
     if m:
         u = 'MPGe' if m.get('ev') else 'mpg'
         rng = lambda a, suf='': f'{a[0]:,}{suf}' if a[0] == a[1] else f'{a[0]:,}–{a[1]:,}{suf}'
-        cost = f' About <b>${rng(m["cost"])}</b> a year in {"electricity" if m.get("ev") else "fuel"} (EPA estimate at today&#39;s prices).' if m.get('cost') else ''
+        cost = f' About <b>{USD(m["cost"])}</b> a year in {"electricity" if m.get("ev") else "fuel"} (EPA estimate at today&#39;s prices).' if m.get('cost') else ''
         eng = f' Engines: {E(", ".join(m["engines"]))}.' if m.get('engines') and not m.get('ev') else ''
         out += f'<h2>Fuel economy</h2><p><b>{rng(m["comb"])} {u}</b> combined.{cost}{eng}</p><p class="note">EPA ratings from fueleconomy.gov, across the versions sold that year.</p>'
     return out
@@ -896,8 +907,8 @@ def yt_rankable(f, sc):
     return {int(y) for y, s in sc.items() if s.get('score') is not None and (s.get('videos') or 0) >= YT_MIN and (int(y) < 2010 or int(y) in li)}
 def ybars_yt(f, cur, sc):
     mx = max(120, max(v['li'] for v in f['years'] if v['ok']) * 1.08); byy = {v['y']: v for v in f['years']}
-    ys = sorted(set(byy) | {int(y) for y in sc})
     okr = yt_rankable(f, sc)
+    ys = sorted(set(byy) | okr, reverse=True)   # 11-12 r2 (Jake: the Every year tab started at 1973): YouTube-only years show only when ranked
     got = sorted(((s['score'], s['videos'], int(y)) for y, s in sc.items() if int(y) in okr), reverse=True)
     if not got: got = [(50, 0, 0)]
     RK = {y: i + 1 for i, (_, _, y) in enumerate(got) if y}; lo, hi = got[-1][0], got[0][0]
@@ -906,14 +917,16 @@ def ybars_yt(f, cur, sc):
         # bar = score stretched over the model's own range (YouTube scores sit close to 50); the number is the rank, #1 = YouTube's favorite year
         w = 8 + 92 * (ss - lo) / max(1, hi - lo) if ss is not None else 0
         tier = '' if rk is None else (' up' if rk <= len(RK) / 3 else ' dn' if rk > len(RK) * 2 / 3 else '')
-        yt = (f'<span class="bt ytb{tier}"><i style="width:{w:.0f}%"></i></span><b class="ytn">#{rk}</b>' if ss is not None else '<span class="bt ytb"></span><b class="ytn mute">·</b>')
-        tip = f'{E(f["name"])} {y}: ' + (f'Lemon Index {v["li"]}' if v and v['ok'] else f'{v["n"]} complaints, {"no sales figure to score" if NOSALES(v) else "too few sold to score"}' if v and v.get('low') else 'no complaint score') + (f'. YouTube rank #{rk} of {len(RK)} (score {ss}, {s["videos"]:g} videos)' if ss is not None else '. Not enough YouTube or owner data yet to rank')
+        yt = (f'<span class="bt ytb{tier}"><i style="width:{w:.0f}%"></i></span><b class="ytn" title="YouTube rank {rk} of {len(RK)} {E(f['name'])} years">#{rk}</b>' if ss is not None else '<span class="bt ytb"></span><b class="ytn mute">·</b>')
+        tip = f'{E(f["name"])} {y}: ' + (f'Lemon Index {v["li"]}' + (' (partial: too new)' if v.get('early') else '') if v and v['ok'] else f'{v["n"]} complaints, {"no sales figure to score" if NOSALES(v) else "too few sold to score"}' if v and v.get('low') else 'no complaint score') + (f'. YouTube rank #{rk} of {len(RK)} (score {ss}, {s["videos"]:g} videos)' if ss is not None else '. Not enough YouTube or owner data yet to rank')
         if v:
             return (f'<a class="b {CLS(v)}{" cur" if y == cur else ""}" href="{CARU(f, y)}" data-tip="{tip}."><span class="bn">{y}</span><span class="bt"><i style="width:{min(100, v["li"] / mx * 100) if v["ok"] else 0:.1f}%"></i>'
                     f'<em style="left:{100 / mx * 100:.1f}%"></em></span><b>{LIS(v)}</b>{yt}</a>')
         return f'<div class="b old" data-tip="{tip}."><span class="bn">{y}</span><span class="bt na"></span><b class="mute">·</b>{yt}</div>'
     return (f'<div class="bars yb yt2"><div class="bl yth2" aria-hidden="true"><span></span><span>Complaints <em>lower = better</em></span><span></span><span>YouTube rank <em>#1 = favorite</em></span><span></span></div>'
-            + ''.join(row(y) for y in ys) + '</div>')
+            + ''.join(row(y) for y in ys if y in byy) + '</div>'
+            + (lambda old: f'<details class="yrs-more"><summary>Show {len(old)} older years ({old[-1]}–{old[0]}, YouTube reviews only, no complaint data)</summary><div class="bars yb yt2">{"".join(row(y) for y in old)}</div></details>' if old else '')([y for y in ys if y not in byy])
+            + BARS_LEG(f, len(RK)))
 def yt_rank_map(f):
     """{year: YouTube rank #} exactly as the year bars show it (rankable years only)."""
     sc = YTS.get(f['id']) or {}; okr = yt_rankable(f, sc)
@@ -938,7 +951,7 @@ def _tab_body(fid, y, body):
     if not f: return body
     li = {v['y']: v['li'] for v in f['years'] if v['ok']}; pages = {v['y'] for v in f['years']}
     ytr = yt_rank_map(f); _sc = YTS.get(fid) or {}
-    eng = TAB.engine_chart(fid, f['name'], li, ytr, pages, cur=y, cls=lambda v: 'bad' if v > 110 else 'good', ysc={yy: _sc[str(yy)]['score'] for yy in ytr})
+    eng = TAB.engine_chart(fid, f['name'], li, ytr, pages, cur=y, cls=lambda v: band(v)[0], ysc={yy: _sc[str(yy)]['score'] for yy in ytr}, part={v['y'] for v in f['years'] if v.get('early')})
     short = f['name'].split(' ', 1)[-1]
     k = hashlib.md5('|'.join((_TAB_SRC, fid, str(y), short, eng, body)).encode('utf-8')).hexdigest()
     if k in _TAB_OLD: _TAB_NEW[k] = _TAB_OLD[k]; return _TAB_OLD[k]
@@ -1027,15 +1040,26 @@ def rel_top(f, c, snm, ys, sc, rec, kind, worst, avoid, qn=None):
     if not r: tiles.append(f'<a class="rs bad" href="{CARU(f, worst["y"])}"><small>Most complaints</small><b>{worst["y"]}</b><span>{E(short(worst["li"]))}</span></a>' if worst and worst['li'] > 110 and (not rec or worst['y'] != rec['y']) else
                            f'<div class="rs"><small>Years to avoid</small><b>None</b><span>no year far above average</span></div>')
     a = yt_adj(f['id']); last = max(v['y'] for v in sc); new = sorted((y for y in a if y > last), key=lambda y: -a[y])
-    newer = (f'<p class="rs-new">Looking at a {min(new)} or newer? Those are too new for complaint data, but YouTube owners like the <a href="#years">{new[0]}</a> best.</p>'
+    newer = (f'<p class="rs-new">Looking at a {min(new)} or newer? Those are too new for a full complaint score (any score shown is partial, in gray), but YouTube owners like the <a href="#years">{new[0]}</a> best.</p>'
              if len(new) >= 2 else '')
     # 11-12 search titles: the H1 says "<model> reliability" (what people search); the question opens the answer line
     return (f'<h1 class="rel-h">{E(qn or snm).replace("-", "-⁠")} reliability.</h1><p class="ans rel-a"><b>Is it reliable? {word}</b> {ans}</p>', f'<div class="rsc">{"".join(tiles)}</div>{newer}', (word + ' ' + html.unescape(re.sub('<[^>]+>', '', ans))))
+# 11-12 r2 (Carlos, Liam, Jake): year lists run newest first; gray = partial (2023+) or unscored; ranks say what they rank
+def BARS_LEG(f, yt=0):
+    part = any(v.get('early') for v in f['years'])
+    return ('<p class="yc-cap lfa-leg">Newest year first. Red = worse than average, gray = about average'
+            + (', too new (2023+: a partial score, marked &ldquo;partial&rdquo;)' if part else '') + ' or too few complaints to score.'
+            + (f' <b>#1, #2…</b> = that year&#39;s YouTube rank among the {yt} {E(f["name"])} years with enough videos (#1 = the year owners and reviewers talk about most positively). It is not a reliability rank.' if yt else '') + '</p>')
+LFA_JS = '<script src="/assets/lfa.js?v=2" defer></script>'   # 11-12 r2: year lists open on the reader's year, match-up "your years"
 def ybars(f, cur=None):
+    out = _ybars(f, cur)
+    if cur is None or out.count('class="b ') < 13: return out
+    return out.replace('<div class="bars yb', f'<div data-cur="{cur}" class="lfa-sc bars yb', 1) + LFA_JS   # a long list scrolls inside its box to the page's year
+def _ybars(f, cur=None):
     if YTS.get(f['id']): return ybars_yt(f, cur, YTS[f['id']])
     mx = max(120, max(v['li'] for v in f['years'] if v['ok']) * 1.08)
     return (f'<div class="bars yb"><div class="bl" aria-hidden="true"><span></span><span class="al" style="--a:{100 / mx * 100:.1f}%">average car = 100</span><span></span></div>'
-            + ''.join(f'<a class="b {CLS(v)}{" cur" if v["y"] == cur else ""}{" early" if v.get("early") else ""}" href="{CARU(f, v["y"])}" data-tip="{E(f["name"])} {v["y"]}: ' + (f'Lemon Index {v["li"]}, {plain(v["li"])}' if v['ok'] else f'{v["n"]} complaints, {"no sales figure to score" if NOSALES(v) else "too few sold to score"}' if v.get('low') else f'only {v["n"]} complaints, too few to score') + f'."><span class="bn">{v["y"]}</span><span class="bt"><i style="width:{min(100, v["li"] / mx * 100) if v["ok"] else 0:.1f}%"></i><em style="left:{100 / mx * 100:.1f}%"></em></span><b>{LIS(v)}</b><small>{("early read · " if v.get("early") else "") + short(v["li"]) if v["ok"] else "few complaints"}</small></a>' for v in f['years']) + '</div>')
+            + ''.join(f'<a class="b {CLS(v)}{" cur" if v["y"] == cur else ""}{" early" if v.get("early") else ""}" href="{CARU(f, v["y"])}" data-tip="{E(f["name"])} {v["y"]}: ' + (f'Lemon Index {v["li"]}, {plain(v["li"])}' if v['ok'] else f'{v["n"]} complaints, {"no sales figure to score" if NOSALES(v) else "too few sold to score"}' if v.get('low') else f'only {v["n"]} complaints, too few to score') + f'."><span class="bn">{v["y"]}</span><span class="bt"><i style="width:{min(100, v["li"] / mx * 100) if v["ok"] else 0:.1f}%"></i><em style="left:{100 / mx * 100:.1f}%"></em></span><b>{LIS(v)}</b><small>{("partial · " if v.get("early") else "") + short(v["li"]) if v["ok"] else "few complaints"}</small></a>' for v in sorted(f['years'], key=lambda v: -v['y'])) + '</div>' + BARS_LEG(f))
 # 10-31 idea 5: "X vs Y" pages for the best-selling rivals in each type (people search "camry vs accord reliability").
 FY = {f['id']: f for f in YEARS}
 RIVALS = defaultdict(list); PAIRS = []
@@ -1079,7 +1103,7 @@ def LX_HTML(fid, y):
     if v.get('ok'):
         for g, w in sorted((p for p in peers if p[1]['y'] == y and p[1]['li'] < v['li'] and p[0]['id'] not in used), key=lambda p: p[1]['li'])[:1]:
             used.add(g['id']); out.append((CARU(g, y), f'{y} {g["name"]}', f'fewer complaints per car sold (Lemon Index {w["li"]})'))
-    for o in RIVALS.get(fid, [])[:1]: out.append((cmpu(fid, o), f'{f["name"]} vs {FY[o]["name"]}', 'every year side by side'))
+    for o in RIVALS.get(fid, [])[:1]: out.append((cmpu(fid, o) + f'#y{y}', f'{f["name"]} vs {FY[o]["name"]}', f'{y} and its neighbours side by side'))   # 11-12 r2: opens on this year (assets/lfa.js)
     if seg in _LXSEG: out.append((f'/best/most-reliable-{_LXSEG[seg][0]}/', f'Most reliable {_LXSEG[seg][1]}', 'ranked by owner complaints'))
     if not out: return ''
     return ('<link rel="stylesheet" href="/assets/lx.css?v=1"><nav class="lx" aria-label="Related"><h2 class="lx-h">Related</h2><ul class="lx-l">'
@@ -1088,24 +1112,19 @@ def LX_HTML(fid, y):
 NICE = lambda p: {'service brakes, hydraulic': 'brakes', 'brakes': 'brakes', 'service brakes, electric': 'brakes (electric)', 'service brakes, air': 'brakes', 'power train': 'transmission & drivetrain',
                   'unknown or other': 'other', 'vehicle speed control': 'speed control', 'equipment': 'equipment & accessories',
                   'fuel or ev drive system': 'fuel system'}.get(p.lower(), p.lower())   # 11-12 round 2 (Carlos): gas cars said "fuel or ev drive system" (scope_filter.py renames it per car first)
-def verdict(li):
-    if li < 50: return 'good', 'One of the most reliable'
-    if li < 85: return 'good', 'Better than average'
-    if li <= 115: return 'mid', 'About average'
-    if li < 200: return 'bad', 'Worse than average'
-    return 'bad', 'Lemon alert'
+def verdict(li): return band(li)
 def meter(li):
     mx = 250; pos = min(li, mx) / mx * 100
     return (f'<div class="ym" role="img" aria-label="Lemon Index {li}; the average car is 100"><div class="ym-bar"><i class="ym-avg" style="left:{100 / mx * 100:.1f}%"><span>average car</span></i>'
             f'<i class="ym-pin" style="left:{pos:.1f}%"><b>{li}{"+" if li > mx else ""}</b></i></div><div class="ym-ends"><span>fewer complaints</span><span>more complaints</span></div></div>')
-def timeline(m, comps):
+def timeline(m, comps, tot=None):
     mx = 200000; P = lambda n: f'{min(n, mx) / mx * 100:.1f}%'
     ticks = ''.join(f'<span style="left:{k / mx * 100:.0f}%">{k // 1000}K</span>' for k in (0, 50000, 100000, 150000, 200000))
     seen = set(); cc = [c for c in comps if c[4] >= 15 and not (NICE(c[0]).split(' (')[0] in seen or seen.add(NICE(c[0]).split(' (')[0]))][:3]
     top = ''.join(f'<li><b>{E(NICE(c[0]))}</b> complaints mostly came at <b>{c[2] // 1000}K–{c[3] // 1000}K</b> miles</li>' for c in cc)
     return (f'<section class="yc"><h2>When owners reported problems. <span class="h2s">From owner complaints to the government.</span></h2><div class="tl"><div class="tl-bar"><i class="tl-band" style="left:{P(m["p25"])};width:calc({P(m["p75"])} - {P(m["p25"])})"></i>'
             f'<i class="tl-mid" style="left:{P(m["median"])}"><b>half by {m["median"] // 1000}K</b></i></div><div class="tl-ticks">{ticks}</div></div>'
-            f'<p class="yc-cap">Most owners who filed a complaint with NHTSA had <b>{m["p25"] // 1000}K to {m["p75"] // 1000}K miles</b> on the car ({m["n"]:,} of the complaints filed so far listed the miles). This shows when people who had a problem reported it, not the odds that your car will have it.</p>'
+            f'<p class="yc-cap">Most owners who filed a complaint with NHTSA had <b>{m["p25"] // 1000}K to {m["p75"] // 1000}K miles</b> on the car ({m["n"]:,} of {'all ' + format(tot, ',') + ' ' if tot and tot >= m['n'] else 'the '}complaints filed so far listed the miles). This shows when people who had a problem reported it, not the odds that your car will have it.</p>'
             + (f'<ul class="tl-top">{top}</ul>' if top else '') + '</section>')
 X2 = _load('data/extras2.json'); X2.update(_load('data/extras2_new.json'))   # 11-11 new models: repair notes, investigations, safety tech
 exec(open('scope_filter.py', encoding='utf-8').read())   # 11-12 round 2 (fix B): each page keeps to its own model, years and fuel (heavy-duty/Lightning off the half-ton pages, "fuel system", bulletin quotes)
@@ -1215,10 +1234,11 @@ def model_context(f, v, y):
     if v['li'] > 130 and mli < 90: return f'{y} is one of the weaker years of a model that usually draws {plain(mli)}.'
     return ''
 def buy_verdict(f, v, y):
-    """('good' | 'mid' | 'bad', 'Worth a look' | 'Shop carefully' | 'Avoid', reason) from the year's score and tier; None when unscored."""
+    """(class, band word, reason) from the year's score; None when unscored. 11-12 r2: the band words (band()), never 'Worth a look' on a
+    worse-than-average year; a 2023+ year says it is too new and its score is partial."""
     if not v['ok']: return None
     li = v['li']
-    cl, lab = ('good', 'Worth a look') if li <= 115 else ('mid', 'Shop carefully') if li < 200 else ('bad', 'Avoid')
+    cl, lab = ('na', PARTIAL) if v.get('early') else band(li)
     why = f'It drew {"about the average car&#39;s complaints" if 90 <= li <= 110 else plain(li)}' + (' so far' if v.get('early') else ' in its first 3 years')
     if v['parts']: why += f', most about {NICE(v["parts"][0][0])}'
     why += '.'
@@ -1244,8 +1264,9 @@ def mileage_guide(x):
         if k < lo: return 'still under the range where most problems showed up, so they may be ahead of it'
         if k <= hi: return 'right in the range where most owners reported problems'
         return 'past the range where most problems showed up: it has likely had them or dodged them, so repair records matter most'
+    tot = (x.get('sev') or {}).get('total')   # 11-12 r2 (Jake: 389 vs 495 vs 1,083 unlabelled): say which slice each count is
     head = (f'Most problems on this year showed up between <b>{_mi_r(lo)}</b> and <b>{_mi_r(hi)}</b> miles '
-            f'(the middle half of the {m["n"]:,} complaints that listed a mileage).')
+            + (f'(the middle half of the {m["n"]:,} complaints, of all {tot:,} filed so far, that listed a mileage).' if tot and tot >= m['n'] else f'(the middle half of the {m["n"]:,} complaints that listed a mileage).'))
     return (head, [(k, at(k)) for k in (60000, 100000, 150000)]), ''
 # what to ask the seller about each problem area (real items only: a question appears only when that area is one of the year's top problems)
 ASKQ = [(r'transmission|power train|drivetrain', 'Any slipping, hard or late shifts, or a transmission warning light? Ask for transmission fluid service records.'),
@@ -1356,7 +1377,7 @@ def year_faq(f, v, y, x, best):
         tr = next((k for p, k in v['parts'] if 'transmission' in p), None)
         out.append((f'Does the {y} {n} have transmission problems?', f'Transmission and drivetrain issues make up {tr}% of its owner complaints.' if tr else f'Transmission and drivetrain issues aren&#39;t among its top 5 complaint areas.'))
     if m and m.get('cost'):
-        co = m['cost']; out.append((f'How much does the {y} {n} cost in fuel a year?', f'About ${co[0] if co[0] == co[1] else f"{co[0]} to ${co[1]}"} a year, by the EPA&#39;s current estimate.'))
+        co = m['cost']; out.append((f'How much does the {y} {n} cost in fuel a year?', f'About {f"${co[0]:,}" if co[0] == co[1] else f"${co[0]:,} to ${co[1]:,}"} a year, by the EPA&#39;s current estimate.'))
     if m and m.get('engines') and not m.get('ev'): out.append((f'What engines does the {y} {n} have?', f'{", ".join(m["engines"])}.'))
     nb, how = near_pick(f, y)   # 11-12 (Jess): a year near hers, same generation when we know it, not 2001
     if nb and how == 'near': out.append((f'What {n} year is better than the {y}?', f'Nearby, the {nb["y"]} drew fewer owner complaints per car sold ({plain(nb["li"])}).' + (f' Across every year, {best["y"]} drew the fewest.' if best['y'] not in (y, nb['y']) else '')))
@@ -1367,7 +1388,8 @@ def answer_box(f, v, y, x, best):
     n = E(SNM(f)); rc = x.get('recalls'); m = x.get('mpg'); bits = []
     if v['ok']:
         w = ('one of the most reliable years' if v['li'] < 50 else 'better than average' if v['li'] < 85 else 'about average' if v['li'] <= 115 else 'worse than average' if v['li'] < 200 else 'one of the worst years')
-        s1 = f'The {y} {n} is <b>{"so far " if v.get("early") else ""}{w}</b> by owner complaints: {v["n"]:,} complaints in its first 3 years and a Lemon Index of {v["li"]}, where 100 is the average car.'
+        s1 = (f'The {y} {n} is <b>too new to judge</b>: its partial score so far is {v["li"]} (100 is the average {y} car), from {v["n"]:,} owner complaints.' if v.get('early') else
+              f'The {y} {n} is <b>{w}</b> by owner complaints: {v["n"]:,} complaints in its first 3 years and a Lemon Index of {v["li"]}, where 100 is the average car.')
     elif NOSALES(v): s1 = f'The {y} {n} can&#39;t be scored ({NOSALES_WHY}): owners filed {v["n"]:,} complaints in its first 3 years.'
     elif v.get('low'): s1 = f'The {y} {n} sold too few to score ({LOWS(v)} in the U.S. in {y}, under 20,000): owners filed {v["n"]:,} complaints in its first 3 years.'
     else: s1 = f'The {y} {n} has too few complaints to score: {v["n"]:,} in its first 3 years.'
@@ -1381,7 +1403,7 @@ def answer_box(f, v, y, x, best):
     return f'<p class="ans">{s1} {s2}{s3}</p>'
 # 11-03 (Elijah: "add newer car years... just have a disclaimer"): 2023-2025 are early reads
 ASOF = 'October 2026'
-EARLY_NOTE = lambda y, nm: (f'<div class="early-n"><b>Early read.</b> The {y} {nm} hasn&#39;t finished its 3-year window yet. This counts every owner complaint filed so far '
+EARLY_NOTE = lambda y, nm: (f'<div class="early-n"><b>Too new: partial score.</b> The {y} {nm} hasn&#39;t finished its 3-year window yet. This counts every owner complaint filed so far '
                             f'(through {ASOF}) and compares it with other {y} cars, which have had the same time on the road. It can change as more owners file.</div>')
 def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
     nm = E(SNM(f)); x2 = X2.get(f['id'], {}).get(str(y), {}); mkr = E(MAKER(f['name']))
@@ -1389,8 +1411,7 @@ def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
     rec = x.get('recalls') or []; m = x.get('mpg'); sf = x.get('safety'); s = x.get('sev') or {}
     if v['ok']:   # 11-12 (Jess, Marcus, Linda): a plain buy verdict with its reason, and the model's context when the two disagree
         cls, word, why = buy_verdict(f, v, y)
-        if v.get('early'): word = 'Early read: ' + word[0].lower() + word[1:]
-        hero = f'<div class="yhero">{gauge(v["li"], 190)}<div class="yverd {cls}"><p class="yvd"><b>{word}.</b> <span>{why}</span></p>{{BW}}</div></div>'
+        hero = f'<div class="yhero">{gauge(v["li"], 190, f"{y} Lemon Index" + (" (partial)" if v.get("early") else ""))}<div class="yverd {cls}"><p class="yvd"><b>{word}.</b> <span>{why}</span></p>{{BW}}</div></div>'
     elif NOSALES(v):
         hero = (f'<div class="yhero yhero-na"><div class="yverd mid"><p><b>Complaints only.</b> <span>{NOSALES_WHY}, so there&#39;s no per-car score. '
                 f'Owners filed {v["n"]:,} complaint{"" if v["n"] == 1 else "s"} in its first 3 years.</span></p>{{BW}}</div></div>')
@@ -1407,7 +1428,7 @@ def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
                                  f'<a class="yb" href="#fixes">{x2["tsb"]["n"]} repair notes from {mkr}</a>' if x2.get('tsb') else ''] if b)
     old = (f'<div class="ybs">{badges}</div>' if badges else '') + old
     rng = lambda a: f'{a[0]}' if a[0] == a[1] else f'{a[0]}–{a[1]}'
-    facts = [('Owner complaints', f'{v["n"]:,}', 'first 3 years'), ('Recalls', f'{len(rec)}' if 'recalls' in x else '—', 'free fix at any dealer' if rec else 'none on record'),
+    facts = [('Owner complaints', f'{v["n"]:,}', 'first 3 years' + (f' · {s["total"]:,} in all, so far' if s.get('total') and s['total'] > v['n'] else '')), ('Recalls', f'{len(rec)}' if 'recalls' in x else '—', 'free fix at any dealer' if rec else 'none on record'),
              ('Fuel economy', f'{rng(m["comb"])} {"MPGe" if m.get("ev") else "mpg"}' if m else '—', 'combined, EPA'),
              (('Crash test', stars(sf['best']), 'NHTSA overall') if sf and sf.get('best') else ('Front crash', stars(x2['old']['front']), 'NHTSA, driver') if (x2.get('old') or {}).get('front') else ('Crash test', '<span class="muted">not rated</span>', 'NHTSA'))]
     tiles = ''.join(f'<div class="yt"><span class="yt-l">{l}</span><b class="yt-v">{val}</b><small>{sub}</small></div>' for l, val, sub in facts if l != 'Recalls')
@@ -1426,8 +1447,9 @@ def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
     probs = f'<section class="yc" id="problems"><h2>What owners complain about most. <span class="h2s">From owner complaints to the government.</span></h2><div class="pts">{parts}</div><p class="yc-cap">Share of this year&#39;s owner complaints filed with NHTSA, not the share of cars that break. One complaint can name more than one area.</p>' + (f'<p class="yc-cap"><a href="{CARU(f)}transmission/">Transmission problems in every {nm} year →</a></p>' if _tr_ok(f) else '') + RCQ.code_links(f['id'], y, label=f'the {SNM(f)} ({y - 2}–{min(y + 2, 2026)})') + '</section>' if parts else ''
     sev_items = [(s.get('crash', 0), 'crashes'), (s.get('injured', 0), 'injuries'), (s.get('fire', 0), 'fires'), (s.get('towed', 0), 'tows')]
     _base = lambda k: round(s['total'] * SEVR[k]) if SEVR.get(k) else None
+    _svc = lambda n, b: '' if b is None else 'bad' if n > b * 1.1 else 'good' if n < b * .9 else 'mid'   # 11-12 r2 (Ryan: Tows 109 vs 88 was green): red above the average car, green only below it
     sev = (f'<section class="ysev"><h2>How serious. <span class="h2s">Out of all {s["total"]:,} owner complaints filed so far (every year since it was sold, not just the first 3), owners reported:</span></h2><div class="sv">'
-           + ''.join(f'<div class="{"bad" if n > (_base(k) or 0) * 1.25 and n else "good"}">{icon(ic)}<b>{n:,}</b><span>{lab}</span>' + (f'<small class="sv-b">average car: {_base(k):,}</small>' if _base(k) is not None else '') + '</div>'
+           + ''.join(f'<div class="{_svc(n, _base(k))}">{icon(ic)}<b>{n:,}</b><span>{lab}</span>' + (f'<small class="sv-b">average car: {_base(k):,}</small>' if _base(k) is not None else '') + '</div>'
                      for (n, lab), ic, k in zip(sev_items, ('crash', 'injury', 'fire', 'tow'), ('crash', 'injured', 'fire', 'towed')))
            + '</div><p class="yc-cap">&ldquo;Average car&rdquo; = what the same number of complaints would include at the rate across every model year we track. Owners report these themselves; NHTSA doesn&#39;t confirm the cause.</p></section>') if s.get('total') else ''
     if 'recalls' in x:
@@ -1444,7 +1466,7 @@ def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
     if sf and sf.get('variants'):
         rows = ''.join(f'<tr><td>{E(re.sub(r"^\d{4} ", "", vv["desc"]))}</td><td>{stars(vv["overall"])}</td><td>{stars(vv["front"])}</td><td>{stars(vv["side"])}</td><td>{stars(vv["rollover"])}</td></tr>' for vv in sf['variants'])
         crash = f'<details class="yd"><summary>Crash test details</summary><div class="tw"><table><thead><tr><th>Version</th><th>Overall</th><th>Front</th><th>Side</th><th>Rollover</th></tr></thead><tbody>{rows}</tbody></table></div></details>'
-    fuel = (f'<details class="yd"><summary>Fuel cost and engines</summary><p>About <b>${rng(m["cost"])}</b> a year in {"electricity" if m.get("ev") else "fuel"} (EPA estimate).'
+    fuel = (f'<details class="yd"><summary>Fuel cost and engines</summary><p>About <b>{USD(m["cost"])}</b> a year in {"electricity" if m.get("ev") else "fuel"} (EPA estimate).'
             + (f' Engines: {E(", ".join(m["engines"]))}.' if m.get('engines') and not m.get('ev') else '') + '</p></details>') if m and m.get('cost') else ''
     fixes = ''
     tl = [c for c in (clean_tsb(z) for z in (x2.get('tsb') or {}).get('top', []) if sc_line_ok(f['id'], z)) if c]
@@ -1491,12 +1513,12 @@ def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
         words = (f'<section class="yc"><h2>In owners&#39; words</h2><blockquote><p>{E(q0["text"])}</p><cite>{y} {nm} owner · NHTSA complaint {q0["odi"]}</cite></blockquote>'
                  + (f'<details><summary>More owner reports</summary>{more}</details>' if more else '') + '</section>')
     return f'''
-<article class="yp yp6"><section class="ph yph6"><div class="yh-t"><p class="ph-e"><a href="/cars/">All cars</a> · <a href="{CARU(f)}">{nm}</a></p><h1>{y} {E(QN(f))} {YW(f).lower()}.</h1>{answer_box(f, v, y, x, best)}{'<p class="early-b">Early read</p>' if v.get('early') else ''}
+<article class="yp yp6"><section class="ph yph6"><div class="yh-t"><p class="ph-e"><a href="/cars/">All cars</a> · <a href="{CARU(f)}">{nm}</a></p><h1>{y} {E(QN(f))} {YW(f).lower()}.</h1>{answer_box(f, v, y, x, best)}{'<p class="early-b">Too new: partial score</p>' if v.get('early') else ''}
 {f'<p class="yc-note">{SN[f["id"]][1]}</p>' if f["id"] in SN else ""}{PIN_HTML(f['id'], y)}{hero.replace('{BW}', bw)}
 <nav class="modes" aria-label="Page mode"><a href="{CARU(f, y)}" aria-current="page">Normal</a><a href="{CARU(f, y)}advanced/">Advanced</a></nav><nav class="yswitch" aria-label="Model years"><div class="yseg">{seg}<a class="yall" href="{CARU(f)}">All years</a></div><div class="yact"><a class="btn btn-ghost" href="/compare/?c={f['id']}-{y}">Compare</a><button type="button" class="btn btn-ghost yshare" data-share="{E(share_txt)}">Share</button></div></nav></div>{f'<div class="ph-v">{ph}</div>' if ph else ''}</section>
 {buy}{mil}{ask}<div class="yts">{tiles}</div>{ytfix(f["id"], y)}{sev}{old}
 <section class="yyears noph"><div class="yy-ch"><h2>Every {nm} year. <span class="h2s">{y} is highlighted. Lower is better.</span></h2>{ybars(f, y)}</div>{ev_note}</section>
-<div class="ygrid">{probs}{timeline(x["miles"], x.get("comps") or []) if x.get("miles") else ""}{recs}{(lambda pr: f'<section class="yc">{pr}</section>' if pr else '')(price_html(f["id"], y, f["name"]))}
+<div class="ygrid">{probs}{timeline(x["miles"], x.get("comps") or [], (x.get("sev") or {}).get("total")) if x.get("miles") else ""}{recs}{(lambda pr: f'<section class="yc">{pr}</section>' if pr else '')(price_html(f["id"], y, f["name"]))}
 {fixes}{invs}{safety}{f'<section class="yc">{crash}{fuel}</section>' if crash or fuel else ''}{YEAR_SPECS_HOOK(f['id'], y)}{words}
 {f'<section class="yc yqa"><h2>Quick answers</h2>' + qa_fold("".join(f"<h3>{E(q)}</h3><p>{a}</p>" for q, a, _ in qa)) + '</section>' if qa else ''}</div>
 <p class="yc-cap">{WHAT_LI} A complaint is an owner&#39;s report, not a confirmed defect. <a href="/method/">How it works</a></p>{share_line(share_txt)}</article>'''
@@ -1506,7 +1528,10 @@ def yearx(fid, y): return extra(fid, y)
 for f in YEARS:
     c = BYNAME[f['name']]; ys = f['years']; sc = scored(f)
     rec, kind = rec_year(f); best = rec or min(year_pool(f), key=lambda v: v['li']); kind = kind or 'least'; worst = worst_year(f)   # 11-12: one rule everywhere
-    lists = len(sc) >= LIST_MIN; good3 = good_years(f)[:3] if lists else []; bad3 = [v for v in avoid_years(f) if v['y'] != best['y']][:3] if lists else []
+    lists = len(sc) >= LIST_MIN; good3 = good_years(f)[:3] if lists else []
+    # 11-12 r2 (Jake: "Years to stay away from" named only 2022 and missed the 2016 Civic): always the 3 years with the most complaints per car
+    # sold, each with its band word, so a worse-than-its-neighbours year shows even when it sits near the average car
+    bad3 = sorted((v for v in year_pool(f) if v['y'] != best['y'] and v not in good3), key=lambda v: -v['li'])[:3] if lists else []
     def why(v):
         xx = yearx(f['id'], v['y']); bits = [plain(v['li'])]
         if v['parts']: bits.append(f'top problem: {v["parts"][0][0]}')
@@ -1521,7 +1546,7 @@ for f in YEARS:
     else:
         picks = (('<section class="bw2">' + (f'<div class="bwt good"><p class="te">Fewest complaints</p><h2>{good3[0]["y"]}.</h2><div class="ychs">{"".join(chip(v, "good") for v in good3)}</div></div>' if good3 else
                   f'<div class="bwt"><p class="te">Fewest complaints</p><h2>{best["y"]}.</h2><p class="ts">No {E(f["name"])} year beat the average car. {best["y"]} drew the fewest complaints: {E(plain(best["li"]))}.</p></div>'))
-                 + (f'<div class="bwt bad"><p class="te">Most complaints</p><h2>{bad3[0]["y"]}.</h2><div class="ychs">{"".join(chip(v, "bad") for v in bad3)}</div></div>' if bad3 else
+                 + (f'<div class="bwt{" bad" if CLS(bad3[0]) == "bad" else ""}"><p class="te">Most complaints</p><h2>{bad3[0]["y"]}.</h2><div class="ychs">{"".join(chip(v, CLS(v)) for v in bad3)}</div></div>' if bad3 else
                     f'<div class="bwt"><p class="te">Years to avoid</p><h2>None.</h2><p class="ts">No {E(f["name"])} year drew much more than the average car&#39;s complaints.</p></div>') + '</section>')
     rv = [o for o in RIVALS.get(f['id'], []) if mphoto(o)][:4]
     vcards = ''.join(f'<a class="mu" href="{cmpu(f["id"], o)}"><span class="mu-p">{pimg(mphoto(f["id"]), f["name"], "l")}{pimg(mphoto(o), FY[o]["name"], "r")}</span><b>vs {E(FY[o]["name"])}</b></a>' for o in rv)
@@ -1532,6 +1557,13 @@ for f in YEARS:
                 f'<td class="num">{(f"{m["comb"][0]}–{m["comb"][1]}" if m["comb"][0] != m["comb"][1] else m["comb"][0]) if m else "—"}</td>')
     rows = ''.join(f'<tr><td><a href="{CARU(f, v["y"])}">{v["y"]}</a></td><td class="num {CLS(v)}">{LIS(v)}</td><td class="pw">{PLN(v)}</td><td class="num">{v["n"]:,}</td><td>{E(v["parts"][0][0]) + f" ({v["parts"][0][1]}%)" if v["parts"] else "—"}</td>{yx(v)}</tr>' for v in ys)
     snm = SNM(f); li = c['li']
+    def _avoid_ans(f, b3, since):
+        def g1(v):   # first model year of its generation (from the year illustrations' generation names), when we know it
+            g = gen_of(f, v['y']); return bool(g) and gen_of(f, v['y'] - 1) not in (None, g)
+        one = lambda v: f'{v["y"]} ({band(v["li"])[1].lower()}, Lemon Index {v["li"]}' + (', the first year of a new generation' if g1(v) else '') + ')'
+        if all(v['li'] < 85 for v in b3):
+            return f'No {snm} year stands out as bad{since}. Even the years with the most complaints per car sold beat the average car: ' + ', '.join(one(v) for v in b3) + '.'
+        return f'The 3 years with the most complaints per car sold{since}: ' + ', '.join(one(v) for v in b3) + '. 100 is the average car; lower is better.'
     good_word = ('Yes, it is one of the most reliable models we track' if li < 50 else 'Yes, it draws fewer complaints than the average car' if li < 85 else 'It is about average' if li <= 115 else 'Not overall: it draws more complaints than the average car')
     _since = ' since 2010' if best['y'] >= 2010 and any(v['y'] < 2010 for v in sc) else ''
     mqa = [(f'Is the {snm} a good car?', f'{good_word}, by owner complaints to the government per car sold ({c["years"]}: Lemon Index {li}; 100 is average). Some years are much better than others: '
@@ -1539,7 +1571,7 @@ for f in YEARS:
            (f'What are the best {snm} years to buy?', (f'By owner complaints per car sold{_since}: ' + ', '.join(str(v["y"]) for v in good3) + f'. {good3[0]["y"]} drew the fewest.') if good3 else
             f'Only {len(sc)} {snm} years have enough data to score, so we don&#39;t list best years. {best["y"]} drew the fewest complaints ({plain(best["li"])}).' if not lists else
             f'No {snm} year beat the average car. {best["y"]} drew the fewest complaints ({plain(best["li"])}).'),
-           (f'What {snm} years should you stay away from?', (f'The years with the most complaints per car sold{_since}: ' + ', '.join(str(v["y"]) for v in bad3) + '.') if bad3 else
+           (f'What {snm} years should you stay away from?', _avoid_ans(f, bad3, _since) if bad3 else
             f'Only {len(sc)} {snm} years have enough data to score, too few to single out years to avoid.' if not lists else f'No {snm} year drew much more than an average car&#39;s complaints.')]
     # 11-05 keyword map: "recalls on <car>" and "<car> problems" are big searches; answer them from our own numbers
     _rc = [(v['y'], len(extra(f['id'], v['y']).get('recalls') or [])) for v in ys if 'recalls' in extra(f['id'], v['y'])]
@@ -1562,8 +1594,8 @@ for f in YEARS:
     page(CARU(f), _tt,
          f'{qn} reliability: {_mcmp}, per car sold (Lemon Index {li}, {c["years"].replace("-", "–")}). Fewest complaints: {best["y"]}. Most: {(worst or best)["y"]}.', f'''
 <div class="pg mp6"><section class="ph yph6"><div class="yh-t"><p class="ph-e"><a href="/cars/">All cars</a> · {BRAND_A(c["brand"])} · {E(c["segName"])}</p>{rel_html}{f'<p class="yc-note">{SN[f["id"]][1]}</p>' if f["id"] in SN else ""}{PIN_HTML(f['id'])}
-<div class="yhero">{gauge(c["li"], 190)}<div class="yverd {verdict(c["li"])[0]}"><p><b>{verdict(c["li"])[1]}.</b> <span>Whole model, {c["years"]}{"" if plain(c["li"]).lower() in verdict(c["li"])[1].lower() else ": " + E(plain(c["li"]))}.</span></p><p class="ybw">Fewest complaints <a class="{'good' if best['li'] <= 110 else ''}" href="{CARU(f, best["y"])}">{best["y"]}</a>{f' · Most complaints <a class="bad" href="{CARU(f, worst["y"])}">{worst["y"]}</a>' if worst and worst['y'] != best['y'] else ''}</p></div></div>
-<p><button type="button" class="btn btn-ghost" data-share="{E(f'Every {snm} year ranked by owner complaints. Fewest: {best["y"]}. Most: {(worst or best)["y"]}. Free report:')}">Share ↗</button></p></div><div class="ph-v">{(YSL.year_slider_html(f['id'], f['name'], {v['y']: round(v['li']) for v in ys if v.get('ok') and v.get('li') is not None}, {y: sc_ for y, sc_ in YSL.yt_scores(f['id']).items() if y in yt_rankable(f, YTS.get(f['id'], {}))}, {v['y'] for v in ys}, start=popular_year(f), best=best['y'], hero=True) if YSL.has(f['id']) else (YSL.model_hero_html(f['id'], f['name']) or car_hero(f, ys[-1]["y"])))}{rel_tiles}</div></section>
+<div class="yhero">{gauge(c["li"], 190, "All years " + c["years"].replace("-", "–"))}<div class="yverd {verdict(c["li"])[0]}"><p><b>{verdict(c["li"])[1]}.</b> <span>Whole model, {c["years"]}{"" if plain(c["li"]).lower() in verdict(c["li"])[1].lower() else ": " + E(plain(c["li"]))}.</span></p><p class="ybw">Fewest complaints <a class="{'good' if best['li'] <= 110 else ''}" href="{CARU(f, best["y"])}">{best["y"]}</a>{f' · Most complaints <a class="bad" href="{CARU(f, worst["y"])}">{worst["y"]}</a>' if worst and worst['y'] != best['y'] else ''}</p></div></div>
+<p><button type="button" class="btn btn-ghost" data-share="{E(f'Every {snm} year ranked by owner complaints. Fewest: {best["y"]}. Most: {(worst or best)["y"]}. Free report:')}">Share ↗</button></p></div><div class="ph-v">{(YSL.year_slider_html(f['id'], f['name'], {v['y']: round(v['li']) for v in ys if v.get('ok') and v.get('li') is not None}, {y: sc_ for y, sc_ in YSL.yt_scores(f['id']).items() if y in yt_rankable(f, YTS.get(f['id'], {}))}, {v['y'] for v in ys}, start=popular_year(f), best=best['y'], hero=True, mli=c['li'], early={v['y'] for v in ys if v.get('early')}) if YSL.has(f['id']) else (YSL.model_hero_html(f['id'], f['name']) or car_hero(f, ys[-1]["y"])))}{rel_tiles}</div></section>
 <section class="yyears noph" id="years"><div class="yy-ch"><h2>Every year. <span class="h2s">Lower is better. Tap a year for its full report.</span></h2>{ybars(f)}</div>{'<p class="yc-cap">Scores before 2010 are rough: fewer owners filed complaints back then.</p>' if ys[0]["y"] < 2010 else ''}{yt_note(f)}{(lambda t: f'<p class="yc-cap">{t}</p>' if t else '')(two_windows(f['id']))}</section>
 {ytfix("model:" + f["id"])}{picks}{SPECS_HOOK(f["id"])}
 {f'<section><h2>Compare the {E(f["name"])}.</h2><div class="mus">{vcards}</div>' + (f'<p class="yc-cap">{vs}</p>' if vs else '') + '</section>' if vcards or vs else ''}
@@ -1584,7 +1616,7 @@ for f in YEARS:
         qa = year_faq(f, v, y, x, best); snm = SNM(f)
         _yw = YW(f); _yo = 'Reliability' if _yw == 'Problems' else 'Problems'; _ye = ' (Early Read)' if v.get('early') else ''; _yb = f'{y} {QN(f)} {_yw}'
         page(CARU(f, y), seo_title([f'{_yb}, {_yo} & Recalls{_ye}', f'{_yb} & {_yo}{_ye}', f'{_yb} & Recalls{_ye}', f'{_yb}{_ye}', _yb]),
-             (f'Early read: so far the {y} {snm} has drawn {plain(v["li"])} per car sold (NHTSA).' if v['ok'] and v.get('early') else f'The {y} {snm} drew {plain(v["li"])} per car sold (NHTSA).' if v['ok'] else f'Owners filed only {v["n"]} NHTSA complaints about the {y} {snm} in its first 3 years.')
+             (f'Too new, partial score: so far the {y} {snm} has drawn {plain(v["li"])} per car sold (NHTSA).' if v['ok'] and v.get('early') else f'The {y} {snm} drew {plain(v["li"])} per car sold (NHTSA).' if v['ok'] else f'Owners filed only {v["n"]} NHTSA complaints about the {y} {snm} in its first 3 years.')
              + (f' {nrec} recall{"s" if nrec != 1 else ""}.' if nrec else '') + (f' Top problems: {top}.' if top else '') + ' Real owner complaints and every other year.', year_body(f, v, y, x, best, worst, prev, nxt, v['quotes'], qa), kind='article', ask=(f['id'], y, f'{y} {snm}'), img=YSL.ai_src(f['id'], y) or (YSL.model_img(f['id']) or {}).get('src') or (PH.get(f['id'], {}).get(str(y)) or {}).get('src'),
              ld=[car_ld(f, y, x.get('mpg'), YSL.ai_src(f['id'], y) or (YSL.model_img(f['id']) or {}).get('src') or (PH.get(f['id'], {}).get(str(y)) or {}).get('src')), {"@context": "https://schema.org", "@type": "WebPage", "name": f'{y} {snm} problems, reliability and recalls', "url": BASE + CARU(f, y)}
                  | ({"primaryImageOfPage": {"@type": "ImageObject", "contentUrl": BASE + PH[f['id']][str(y)]['src'], "license": LIC.get(PH[f['id']][str(y)]['license'], PH[f['id']][str(y)]['page']), "acquireLicensePage": PH[f['id']][str(y)]['page'], "creditText": PH[f['id']][str(y)]['author'].split('\ufffd')[0].strip()}} if str(y) in PH.get(f['id'], {}) and not YSL.ai_src(f['id'], y) and not YSL.model_img(f['id'])
@@ -1896,7 +1928,9 @@ for a, b in PAIRS:
     ya, yb = {v['y']: v for v in A['years'] if v['ok']}, {v['y']: v for v in B['years'] if v['ok']}
     shared = sorted(set(ya) & set(yb))
     if len(shared) < 2: continue
-    wa = sum(ya[y]['li'] < yb[y]['li'] for y in shared); wb = sum(yb[y]['li'] < ya[y]['li'] for y in shared)
+    # 11-12 r2 (Carlos, Liam): 2023+ years are partial, so they show (gray, labelled) but never count toward a winner
+    full = [y for y in shared if not (ya[y].get('early') or yb[y].get('early'))] or shared
+    wa = sum(ya[y]['li'] < yb[y]['li'] for y in full); wb = sum(yb[y]['li'] < ya[y]['li'] for y in full)
     lead, trail = (A, B) if ca['li'] <= cb['li'] else (B, A)
     rows = ''.join(f'<tr><td>{y}</td><td class="num {CLS(ya[y])}"><a href="{CARU(A, y)}">{ya[y]["li"]}</a></td><td class="num {CLS(yb[y])}"><a href="{CARU(B, y)}">{yb[y]["li"]}</a></td><td>{E(A["name"] if ya[y]["li"] < yb[y]["li"] else B["name"] if yb[y]["li"] < ya[y]["li"] else "tie")}</td></tr>' for y in shared)
     def facts(F):
@@ -1912,7 +1946,7 @@ for a, b in PAIRS:
     lc_, tc_ = (ca, cb) if lead is A else (cb, ca); fewer = round((1 - lc_['li'] / max(tc_['li'], 1)) * 100)
     lw, tw_ = (wa, wb) if lead is A else (wb, wa)
     if close: verdict = f'<p class="vk">Verdict</p><p class="vw">Too close to call</p><p class="vs">Overall they drew about the same complaints per car sold ({ca["li"]} vs {cb["li"]}). Pick by model year below.</p>'
-    else: verdict = f'<p class="vk">Winner</p><p class="vw">{E(lead["name"])}</p><p class="vs">About <b>{fewer}% fewer</b> owner complaints per car sold than the {E(trail["name"])}, and fewer in <b>{lw} of {len(shared)}</b> model years both were sold.</p>'
+    else: verdict = f'<p class="vk">Winner</p><p class="vw">{E(lead["name"])}</p><p class="vs">About <b>{fewer}% fewer</b> owner complaints per car sold than the {E(trail["name"])}, and fewer in <b>{lw} of {len(full)}</b> model years both were sold ({full[0]}–{full[-1]}).</p><p class="vs lfa-vs">Overall score: {E(A["name"])} {ca["li"]}, {E(B["name"])} {cb["li"]} ({E(ca["years"].replace("-", "–"))}). Shopping certain years? Pick them under Year by year.</p>'
     num = lambda x: float(re.match(r'[\d.]+', str(x)).group()) if re.match(r'[\d.]+', str(x)) else None
     def better(x, y, high):
         if x is None or y is None or x == y: return '', ''
@@ -1923,18 +1957,33 @@ for a, b in PAIRS:
     bA, bB = rec_year(A)[0] or min((ya[y] for y in ya), key=lambda v: v['li']), rec_year(B)[0] or min((yb[y] for y in yb), key=lambda v: v['li'])   # 11-12: the same pick as the model pages
     duel = f'<div class="duel"><div></div><div class="dh"><a href="{CARU(A)}">{E(A["name"])}</a></div><div class="dh"><a href="{CARU(B)}">{E(B["name"])}</a></div>' + \
         srow('Lemon Index<br><small>100 = average, lower is better</small>', f'<b>{ca["li"]}</b>', f'<b>{cb["li"]}</b>', better(ca['li'], cb['li'], False)) + \
-        srow(f'Years with fewer complaints<br><small>{shared[0]}–{shared[-1]}</small>', f'{wa} of {len(shared)}', f'{wb} of {len(shared)}', better(wa, wb, True)) + \
+        srow(f'Years with fewer complaints<br><small>{full[0]}–{full[-1]}</small>', f'{wa} of {len(full)}', f'{wb} of {len(full)}', better(wa, wb, True)) + \
         srow(f'Recalls<br><small>{shared[0]}–{shared[-1]}</small>', fa[0], fb[0], better(fa[0], fb[0], False)) + \
         srow('MPG<br><small>latest year</small>', fa[1], fb[1], better(num(fa[1]), num(fb[1]), True)) + \
         srow('Crash test<br><small>best, latest year</small>', fa[2], fb[2], better(stA, stB, True)) + \
-        srow('Fewest complaints<br><small>the year each model page recommends</small>', f'<a href="{CARU(A, bA["y"])}">{bA["y"]}</a>', f'<a href="{CARU(B, bB["y"])}">{bB["y"]}</a>', ('', '')) + '</div>'
+        srow('Best score (per car sold)<br><small>the year each model page recommends</small>', f'<a href="{CARU(A, bA["y"])}">{bA["y"]}</a>', f'<a href="{CARU(B, bB["y"])}">{bB["y"]}</a>', ('', '')) + '</div>'
     mx = max(max(ya[y]['li'], yb[y]['li']) for y in shared)
-    def _yr(y): return f'''<div class="yr"><div class="yy">{y}</div><div class="yb">
-<a class="ybar {CLS(ya[y])}{' w' if ya[y]['li'] < yb[y]['li'] else ''}" href="{CARU(A, y)}"><i style="width:{ya[y]['li'] / mx * 100:.0f}%"></i><span>{E(A["name"])} <b>{ya[y]['li']}</b></span></a>
-<a class="ybar {CLS(yb[y])}{' w' if yb[y]['li'] < ya[y]['li'] else ''}" href="{CARU(B, y)}"><i style="width:{yb[y]['li'] / mx * 100:.0f}%"></i><span>{E(B["name"])} <b>{yb[y]['li']}</b></span></a></div></div>'''
-    # 11-10 (design audit): the 6 newest shared years show; older ones fold under one tap
-    _new = sorted(shared)[-6:]; _old = [y for y in shared if y not in _new]
-    yrs = ''.join(_yr(y) for y in shared if y in _new) + (f'<details class="yrs-more"><summary>Show {len(_old)} older years</summary>' + ''.join(_yr(y) for y in _old) + '</details>' if _old else '')
+    def _yr(y):
+        pt = y not in full; wA = not pt and ya[y]['li'] < yb[y]['li']; wB = not pt and yb[y]['li'] < ya[y]['li']
+        tag = ' <small>partial</small>' if pt else ''
+        return f'''<div class="yr{' lfa-pt' if pt else ''}" data-y="{y}" data-a="{ya[y]['li']}" data-b="{yb[y]['li']}"{' data-p="1"' if pt else ''}><div class="yy">{y}</div><div class="yb">
+<a class="ybar {CLS(ya[y])}{' w' if wA else ''}" href="{CARU(A, y)}"><i style="width:{ya[y]['li'] / mx * 100:.0f}%"></i><span>{E(A["name"])} <b>{ya[y]['li']}</b>{tag}</span></a>
+<a class="ybar {CLS(yb[y])}{' w' if wB else ''}" href="{CARU(B, y)}"><i style="width:{yb[y]['li'] / mx * 100:.0f}%"></i><span>{E(B["name"])} <b>{yb[y]['li']}</b>{tag}</span></a></div></div>'''
+    # 11-12 r2 (Carlos, Liam: "2020-25, then 2001-19, my years hidden"): every year newest first; a gap year says why it has no side-by-side
+    _fyA, _fyB = {v['y']: v for v in A['years']}, {v['y']: v for v in B['years']}
+    def _why(F, fy, yy):
+        v = fy.get(yy)
+        return f'{E(F["name"])}: no {yy} model year in our data' if not v else f'{E(F["name"])}: {E(PLN(v))}' if not v['ok'] else ''
+    def _gap(y): return f'<div class="yr lfa-gap" data-y="{y}"><div class="yy">{y}</div><p>No side-by-side for {y}. ' + '; '.join(w for w in (_why(A, _fyA, y), _why(B, _fyB, y)) if w) + '.</p></div>'
+    _all = [y for y in range(shared[-1], shared[0] - 1, -1)]
+    _cut = full[-min(8, len(full))]
+    _top = [y for y in _all if y >= _cut or (y in shared and y not in full)]   # partial years + the 8 newest full years show; older ones fold
+    _rest = [y for y in _all if y not in _top]
+    _row = lambda y: _yr(y) if y in shared else _gap(y)
+    _opt = lambda sel: ''.join(f'<option value="{y}"{" selected" if y == sel else ""}>{y}</option>' for y in sorted(full, reverse=True))
+    pick = (f'<form class="lfa-yp" data-a="{E(A["name"])}" data-b="{E(B["name"])}" aria-label="Your model years"><b>Your years:</b> <label><span class="vh">From</span><select name="f">{_opt(full[0])}</select></label> to '
+            f'<label><span class="vh">To</span><select name="t">{_opt(full[-1])}</select></label><output class="lfa-yr-res" aria-live="polite"></output></form>')
+    yrs = ''.join(_row(y) for y in _top) + (f'<details class="yrs-more"><summary>Show {len(_rest)} older years</summary>' + ''.join(_row(y) for y in _rest) + '</details>' if _rest else '')
     _ld_name = title.replace(' | Lemon Index', '')
     _lead_s, _trail_s = (_sa, _sb) if lead is A else (_sb, _sa)
     page(CMPU(a, b), title,
@@ -1946,7 +1995,7 @@ for a, b in PAIRS:
 <div class="verdict{' tie' if close else ''}">{verdict}</div><p class="cmp-sh">{share_btn(sh_txt)}</p>
 <h2>Head to head</h2>{duel}
 <p class="sub">Lemon Index = owner complaints filed with the government within 3 years, per car sold, against the average car of the same model year. <b>100 is average, lower is better.</b> It measures complaints, not crash safety. Green check = the better of the two on that line.</p>
-<h2>Year by year</h2><p class="sub">Shorter bar = fewer complaints per car sold. Tap a year for its full report.</p><div class="yrs">{yrs}</div>
+<h2 id="your-years">Year by year</h2><p class="sub">Newest first. Shorter bar = fewer complaints per car sold; the check marks the better car that year. Gray = about average{', or 2023+ (too new: a partial score that doesn&#39;t count toward the winner)' if len(full) < len(shared) else ''}. Tap a year for its full report.</p>{pick}<div class="yrs">{yrs}</div>{LFA_JS}
 <p class="note"><a href="{CARU(A)}">Every {E(A["name"])} year</a> · <a href="{CARU(B)}">Every {E(B["name"])} year</a> · <a href="/method/">How the index works</a></p>{share_line(sh_txt, 'Know someone choosing between these two?')}</article>''', kind='article',
          ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": _ld_name, "url": BASE + CMPU(a, b)}], vis=pair(mphoto(a), mphoto(b), (A['name'], B['name'])) + pcredit(who(mphoto(a), mphoto(b))))
     curls.append(CMPU(a, b))

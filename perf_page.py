@@ -294,7 +294,7 @@ def build(slug, out='docs'):
         if eph and eph.get('page') and not eph.get('ai'):   # 11-12: a real Commons photo (the S55/S58) carries its credit
             eimg += f'<p class="pf-cap">Photo: {E(eph.get("author", ""))} / <a href="{E(eph["page"])}" rel="noopener nofollow">Wikimedia Commons</a> ({E(eph.get("license", ""))})</p>'
         facts = ''.join(f'<div class="pf-f"><span>{E(k)}</span><b>{E(v)}</b></div>' for k, v, s in eng['facts'] if R(*s) == '')
-        ytl = (f'<p class="pf-eyt">{ic("play", 16)}<span>YouTube owner tone <b>{sc}</b>/100' + (f' · #{rk} of {len(eranked)} {E(short)} engines' if rk and len(eranked) > 1 else '') + '</span></p>'
+        ytl = (f'<p class="pf-eyt">{ic("play", 16)}<span>Engine&#39;s YouTube owner tone <b>{sc}</b>/100' + (f' · #{rk} of {len(eranked)} {E(short)} engines' if rk and len(eranked) > 1 else '') + f' <small>(videos about the {E(eng["name"])} in every car that uses it, so it differs from this car&#39;s own tone below)</small></span></p>'
                if sc is not None else (f'<p class="pf-eyt na">{ic("play", 16)}<span>YouTube owner tone for the {E(eng["name"])}: its study is queued; the score shows here when it lands.</span></p>' if eng.get('study') else ''))
         iss = []; gy1 = _gy1(G, g); gis = [i for i in eng['issues'] if issue_in_gen(i, g, gy1)]
         for i in gis:
@@ -339,7 +339,7 @@ def build(slug, out='docs'):
                      f'videos, their tone and what owners praise and complain about show here when it lands.</p></section>')
         else:
             ytsec = (f'<section class="pf-sec"><h2>{ic("play")} What owners say on YouTube</h2><div class="pf-ys">'
-                     + (f'<div class="pf-yb big"><b>{gs}</b><span>YouTube owner tone, out of 100' + (f' · #{grk} of {len(granked)} generations' if grk and len(granked) > 1 else '') + '</span></div>' if gs is not None else '<div class="pf-yb na"><b>–</b><span>Not enough videos for a score</span></div>')
+                     + (f'<div class="pf-yb big"><b>{gs}</b><span>This car&#39;s YouTube owner tone, out of 100' + (f' · #{grk} of {len(granked)} generations' if grk and len(granked) > 1 else '') + ' · videos about this generation only (the engine&#39;s tone above covers every car with that engine)</span></div>' if gs is not None else '<div class="pf-yb na"><b>–</b><span>Not enough videos for a score</span></div>')
                      + comp_line + '</div>'
                      + (f'<div class="pf-pc"><div><h3>Owners praise</h3>{bars(st.get("praise"), "pf-gd")}</div><div><h3>Owners complain about</h3>{bars(st.get("trouble"), "pf-bd")}</div></div>'
                         f'<p class="pf-cap">Share of the {st.get("videos", 0)} most-watched {E(who)} videos that praise or criticize each topic (a praise or trouble word near it in the title or transcript).</p>' if st else '')
