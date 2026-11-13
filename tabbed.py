@@ -183,6 +183,10 @@ def _toggle(years_html, eng_html, short):
             f'<div class="tg-v on" data-v="years">{years_html}</div><div class="tg-v" data-v="engines">{eng_html}</div></div>')
 
 def _s(x): return str(x) if x is not None else ''
+def _n3blk(yt):
+    """11-13 N3: the engine / other-version chip rows (build.py engine_uses.py) as one compact Overview block"""
+    rows = ''.join(map(str, yt.find_all(class_='n3-row')))
+    return f'<section class="yc n3-blk"><h2>Engines &amp; versions</h2>{rows}</section>' if rows else ''
 
 def transform_model(body, eng_html, short):
     s = BeautifulSoup(body, 'html.parser'); root = s.find(['div', 'article'])
@@ -199,8 +203,7 @@ def transform_model(body, eng_html, short):
         fig = pv.find('figure', class_='yph'); sl = _s(fig)
     pin = ''.join(map(str, yt.find_all(class_='pinb'))) or None   # 11-12: pinned banners (battery-fire recall, half-ton/HD) stay in the hero
     hero = (f'<section class="ph tb-hero">{_s(crumbs)}<div class="tb-img">{"".join(map(str, links))}{sl}</div>{_s(h1)}{short_ans}{_s(pin)}{_s(yhero)}{_s(share)}</section>')
-    n3 = ''.join(map(str, yt.find_all(class_='n3-row')))   # 11-13 nav fix N3: "Engines in this car" / "Other versions" / regular-model rows close the hero
-    if n3: hero = hero[:-len('</section>')] + n3 + '</section>'
+    n3 = _n3blk(yt)   # 11-13 nav fix N3 (round 2: phone tops stay short): "Engines in this car" / "Other versions" go in the Overview tab, not the hero
     secs = [c for c in root.find_all(recursive=False) if c is not ph]
     pick = lambda pred: [c for c in secs if pred(c)]
     years = pick(lambda c: c.get('id') == 'years')
@@ -229,6 +232,7 @@ def transform_model(body, eng_html, short):
     nq = len(S_.select('.yqa h3')); c_q = _ovcard('questions', 'Questions', f'{nq} quick answers' if nq else '', '', _qtitles([S_]), go='questions')
     nrow = len(S_.select('table tbody tr')); c_d = _ovcard('data', 'All the data', f'{nrow} model years' if nrow else '', 'in one table: index, complaints, recalls, mpg' if nrow else '', go='the table')
     over = f'{_s(note)}<div class="ovg ovg4">{c_y}{c_c}{c_q}{c_d}</div>' + (f'<p class="ovslim">{_txt(rnew)}</p>' if rnew else '')   # 11-10: preview cards
+    over += n3   # 11-13 N3: right after the preview cards
     over += ''.join(map(str, rest))   # 11-12: sections no tab claims (the model-level YouTube studies, e.g. the 2026 RAV4) were silently dropped since 11-10
     years = bw + years
     over = _ovfilter(over, [('years', 0, ''.join(map(str, years))), ('compare', 0, ''.join(map(str, cmp_))), ('questions', 0, ''.join(map(str, qa))), ('data', 0, ''.join(map(str, table)))]) + (f'<div class="ovk">{"".join(map(str, gh))}</div>' if gh else '')
@@ -339,8 +343,7 @@ def transform_year(body, eng_html, short):
         early = BeautifulSoup(f'<p class="early-b">Too new: partial score · still collecting complaints<span class="iiw">{pop}</span></p>', 'html.parser')
     pin = ''.join(map(str, yt.find_all(class_='pinb'))) or None   # 11-12: pinned banners (battery-fire recall, half-ton/HD) stay in the hero
     hero = f'<section class="ph tb-hero">{_s(crumbs)}<div class="tb-img">{img}</div>{_s(h1)}{_s(early)}{_s(pin)}{_s(yhero)}{_controls(sw, modes)}</section>'   # the gauge + verdict already say it: no answer paragraph
-    n3 = ''.join(map(str, yt.find_all(class_='n3-row')))   # 11-13 nav fix N3: "Engines in this car" / "Other versions" / regular-model rows close the hero
-    if n3: hero = hero[:-len('</section>')] + n3 + '</section>'
+    n3 = _n3blk(yt)   # 11-13 nav fix N3 (round 2: phone tops stay short): "Engines in this car" / "Other versions" go in the Overview tab, not the hero
     top = [c for c in root.find_all(recursive=False) if c is not ph]
     grid = next((c for c in top if 'ygrid' in (c.get('class') or [])), None)
     items = [c for c in top if c is not grid] + (grid.find_all(recursive=False) if grid else [])
@@ -379,7 +382,7 @@ def transform_year(body, eng_html, short):
     tail = [c for c in tail if not (c.name == 'p' and 'yc-cap' in (c.get('class') or []) and _txt(c).startswith('Lemon Index ='))]
     over_html = overview_cards_year(over, probs, fix, rec, yrs, qa)
     _pl = [('problems', 0, J(probs)), ('repairs', 0, J(fix)), ('recalls', 0, J(rec)), ('years', 0, J(yrs)), ('questions', 0, J(qa))]
-    over_html = _ovfilter(over_html, _pl) + (f'<div class="ovk">{J(keep)}</div>' if keep else '')
+    over_html = _ovfilter(over_html, _pl) + n3 + (f'<div class="ovk">{J(keep)}</div>' if keep else '')   # 11-13 N3: engines & versions right after the preview cards
     tabs = _tabs([('overview', 'Overview', over_html), ('problems', 'Problems', J(probs)), ('repairs', _replab(J(fix)), J(fix)),
                   ('recalls', 'Recalls & safety', J(rec)), ('years', 'Every year', J(yrs)), ('questions', 'Questions', J(qa))], 'Report sections')
     cls = ' '.join(root.get('class') or [])

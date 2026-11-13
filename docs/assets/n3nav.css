@@ -25,3 +25,6 @@
   .n3-c { flex: none; scroll-snap-align: start; max-width: 78vw; }
   .n3-c b, .n3-c small { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 }
+.n3-blk h2 { margin-bottom: 4px; }
+.n3-blk .n3-row:first-of-type { margin-top: 8px; }
+.pf > .n3-par { margin: 0 auto 18px; }

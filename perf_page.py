@@ -508,7 +508,8 @@ def standalone(slug, page_fn, out='docs'):
     mk = D['make']; mslug = re.sub(r'[^a-z0-9]+', '-', mk.lower()).strip('-')
     crumbs = (f'<p class="ph-e"><a href="/?type=performance">Performance cars</a>'
               + (f' · <a href="/brands/{mslug}/">{E(mk)}</a>' if os.path.exists(os.path.join(HERE, out, 'brands', mslug, 'index.html')) else '') + '</p>')
-    hero = f'<section class="ph tb-hero pf-hero">{crumbs}<h1>{E(D["h1"])}</h1>{P["slider"]}{PARENT_ROW(slug, D)}</section>'
+    hero = f'<section class="ph tb-hero pf-hero">{crumbs}<h1>{E(D["h1"])}</h1>{P["slider"]}</section>'
+    _par = PARENT_ROW(slug, D)   # 11-13 N3: the regular model + its years, at the top of Overview (not the hero: phone tops stay short)
     # Problems & recalls (secondary, honest about what NHTSA's model names cover)
     note = (D.get('nhtsa') or {}).get('note') or ''
     y0, y1 = min(g['y0'] for g in G), max(g['y1'] for g in G)
@@ -542,7 +543,7 @@ def standalone(slug, page_fn, out='docs'):
            + f'<p class="pf-cap">Source: NHTSA (api.nhtsa.gov). <a href="/vin/">Check a VIN</a> for open recalls on one car.</p></section>')
     qa = _qa(D, P)
     qh = '<section class="pf-sec yqa"><h2>Quick answers</h2>' + ''.join(f'<h3>{E(q)}</h3><p>{a}</p>' for q, a in qa) + '</section>'
-    over = f'<div class="pf">{P["blocks"]}{P["cmp"]}<details class="pf-sd" id="pf-sources"><summary>All sources ({len(R.order)})</summary>{R.html()}</details></div>'
+    over = f'<div class="pf">{_par}{P["blocks"]}{P["cmp"]}<details class="pf-sd" id="pf-sources"><summary>All sources ({len(R.order)})</summary>{R.html()}</details></div>'
     tabs = TAB._tabs([('overview', 'Overview', over), ('problems', 'Problems & recalls', f'<div class="pf">{rel}</div>'), ('questions', 'Questions', f'<div class="pf">{qh}</div>')], f'{short} sections')
     body = f'{TAB.ASSET}{ASSET}<script src="/assets/imginfo.js?v=2" defer></script><div class="advp tbl pfp">{hero}{tabs}</div>'
     g, v = _star(D)

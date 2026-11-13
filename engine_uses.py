@@ -14,7 +14,7 @@
 import os as _euos, json as _euj, re as _eure, glob as _eug
 if ENGU == 'hooks':
     import perf_page as _EUPP
-    EU_CSS = '<link rel="stylesheet" href="/assets/n3nav.css?v=2">'
+    EU_CSS = '<link rel="stylesheet" href="/assets/n3nav.css?v=3">'
     EU_MODELS = {f['id']: f for f in YEARS}
     EU_YRS = {f['id']: {v['y'] for v in f['years']} for f in YEARS}
     _EU_BYNAME = sorted(((f['name'], f['id']) for f in YEARS), key=lambda t: -len(t[0]))
