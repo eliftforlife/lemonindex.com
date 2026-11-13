@@ -62347,7 +62347,52 @@
      "views": 92189
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 500,
+       "lo": 400.0,
+       "hi": 1500.0,
+       "n": 16,
+       "videos": 9,
+       "id": "Uov9MScJikQ",
+       "t": 229,
+       "title": "Mini Cooper S 2004 R53 Full review Test Drive - Supercharged"
+      }
+     ],
+     [
+      "Transmission",
+      {
+       "median": 8500,
+       "lo": 8000.0,
+       "hi": 9000.0,
+       "n": 2,
+       "videos": 2,
+       "id": "k68F3QCHGyE",
+       "t": 824,
+       "title": "Why I Love the 2005 MINI Cooper S (AND YOU MIGHT TOO)"
+      }
+     ],
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 7800,
+       "lo": 7000.0,
+       "hi": 8600.0,
+       "n": 4,
+       "videos": 2,
+       "id": "ygrzwprVZZs",
+       "t": 739,
+       "title": "R53 Cooper: 20 years later everything guide"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -62475,7 +62520,26 @@
      "views": 168364
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 230,
+       "lo": 130.0,
+       "hi": 4000.0,
+       "n": 7,
+       "videos": 7,
+       "id": "unxM895c9Cw",
+       "t": 414,
+       "title": "Top 5 R56 Mini Cooper S Timing Chain Myths"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -62563,7 +62627,39 @@
      "views": 69433
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 500,
+       "lo": 350.0,
+       "hi": 650.0,
+       "n": 4,
+       "videos": 4,
+       "id": "MTZyppProO4",
+       "t": 65,
+       "title": "Unlocking Hidden Features of Your F56 Mini Coopers with Coding *Easy*"
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 3600,
+       "lo": 285.0,
+       "hi": 3800.0,
+       "n": 3,
+       "videos": 3,
+       "id": "NAvFEIUkHa8",
+       "t": 201,
+       "title": "2016 Mini Cooper - Review and Road Test"
+      }
+     ]
+    ]
+   }
   }
  ],
  "chevrolet-cavalier": [
@@ -62692,7 +62788,26 @@
      "views": 212406
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 184,
+       "lo": 35.0,
+       "hi": 320.0,
+       "n": 10,
+       "videos": 9,
+       "id": "7po7gSEPvaU",
+       "t": 111,
+       "title": "I Won a 1 Owner 1995 Chevy Cavalier for $425! How Broken is it?"
+      }
+     ]
+    ]
+   }
   }
  ],
  "ram-promaster": [
