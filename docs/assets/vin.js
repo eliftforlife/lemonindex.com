@@ -107,6 +107,9 @@ ${hit && hit.ys.includes(y) ? `<a class="btn" href="/cars/${hit.id}/${y}/">See i
   };
   // ---- 11-12 round 2 (Jake: "nothing tells a buyer to ask for the VIN, or which recall is probably still open"): no-VIN helper
   const nf = document.getElementById('vnvf'), VN = (() => { const e = document.getElementById('vnames'); try { return JSON.parse(e ? e.textContent : '{}'); } catch (x) { return {}; } })();
+  // 11-12: the VIN box on the /best/ lists (assets/cb.js) hands the VIN over in the hash (#v=...), never the query string
+  const hv = (location.hash.match(/^#v=([A-Za-z0-9]{11,17})$/) || [])[1];
+  if (hv) { f.vin.value = hv.toUpperCase(); history.replaceState(null, '', location.pathname); f.requestSubmit ? f.requestSubmit() : f.onsubmit(new Event('submit')); }
   if (nf) {
     const opt = (sel, items) => { sel.innerHTML = items.map(([v, t]) => `<option value="${esc(v)}">${esc(t)}</option>`).join(''); };
     const brands = Object.keys(PICK).filter(b => PICK[b].some(([, id, ys]) => VN[id] && ys.length)).sort();

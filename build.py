@@ -2104,82 +2104,10 @@ page('/', HOME_PAGE['title'], HOME_PAGE['desc'], f'''
 <section class="faq"><h2>Questions</h2>{HOME_FAQ}</section></div><script src="/assets/ctabs.js?v=4" defer></script>''', ld=HOME_PAGE['ld'])
 
 curls = []
+exec(open('cmp_pages.py', encoding='utf-8').read())   # 11-12 (Elijah): match-up pages rebuilt around who wins and why, years to buy, what breaks, recalls, YouTube
 for a, b in PAIRS:
-    A, B = FY[a], FY[b]; ca, cb = BYNAME[A['name']], BYNAME[B['name']]
-    ya, yb = {v['y']: v for v in A['years'] if v['ok']}, {v['y']: v for v in B['years'] if v['ok']}
-    shared = sorted(set(ya) & set(yb))
-    if len(shared) < 2: continue
-    # 11-12 r2 (Carlos, Liam): 2023+ years are partial, so they show (gray, labelled) but never count toward a winner
-    full = [y for y in shared if not (ya[y].get('early') or yb[y].get('early'))] or shared
-    wa = sum(ya[y]['li'] < yb[y]['li'] for y in full); wb = sum(yb[y]['li'] < ya[y]['li'] for y in full)
-    lead, trail = (A, B) if ca['li'] <= cb['li'] else (B, A)
-    rows = ''.join(f'<tr><td>{y}</td><td class="num {CLS(ya[y])}"><a href="{CARU(A, y)}">{ya[y]["li"]}</a></td><td class="num {CLS(yb[y])}"><a href="{CARU(B, y)}">{yb[y]["li"]}</a></td><td>{E(A["name"] if ya[y]["li"] < yb[y]["li"] else B["name"] if yb[y]["li"] < ya[y]["li"] else "tie")}</td></tr>' for y in shared)
-    def facts(F):
-        last = max(v['y'] for v in F['years']); xx = extra(F['id'], last); m, sf = xx.get('mpg'), xx.get('safety')
-        rec = sum(len(extra(F['id'], v['y']).get('recalls', [])) for v in F['years'] if v['y'] in shared)
-        return rec, (f'{m["comb"][0]}–{m["comb"][1]}' if m and m['comb'][0] != m['comb'][1] else (m['comb'][0] if m else '—')), (stars(sf['best']) if sf and sf.get('best') else '—'), last
-    fa, fb = facts(A), facts(B)
-    _sa, _sb = vs_names(A, B)   # 11-12 search titles: "camry vs accord" (59 impressions) ranked #61 under "Toyota Camry vs Honda Accord Reliability by Year"
-    title = seo_title([f'{_sa} vs {_sb}: Which Is More Reliable?', f'{_sa} vs {_sb} Reliability by Year', f'{_sa} vs {_sb} Reliability'])
-    sh_txt = f'{A["name"]} vs {B["name"]}: which has fewer problems? Free comparison from owner complaints:'
-    # 11-02 (Elijah): one clear winner up top, a 2-column scorecard that stays side by side on phones, and bars instead of a wide table
-    close = abs(ca['li'] - cb['li']) <= max(ca['li'], cb['li']) * .08
-    lc_, tc_ = (ca, cb) if lead is A else (cb, ca); fewer = round((1 - lc_['li'] / max(tc_['li'], 1)) * 100)
-    lw, tw_ = (wa, wb) if lead is A else (wb, wa)
-    if close: verdict = f'<p class="vk">Verdict</p><p class="vw">Too close to call</p><p class="vs">Overall they drew about the same complaints per car sold ({ca["li"]} vs {cb["li"]}). Pick by model year below.</p>'
-    else: verdict = f'<p class="vk">Winner</p><p class="vw">{E(lead["name"])}</p><p class="vs">About <b>{fewer}% fewer</b> owner complaints per car sold than the {E(trail["name"])}, and fewer in <b>{lw} of {len(full)}</b> model years both were sold ({full[0]}–{full[-1]}).</p><p class="vs lfa-vs">Overall score: {E(A["name"])} {ca["li"]}, {E(B["name"])} {cb["li"]} ({E(ca["years"].replace("-", "–"))}). Shopping certain years? Pick them under Year by year.</p>'
-    num = lambda x: float(re.match(r'[\d.]+', str(x)).group()) if re.match(r'[\d.]+', str(x)) else None
-    def better(x, y, high):
-        if x is None or y is None or x == y: return '', ''
-        return ('w', '') if (x > y) == high else ('', 'w')
-    def srow(lab, va, vb, cls):
-        return f'<div class="dl">{lab}</div><div class="dv {cls[0]}">{va}</div><div class="dv {cls[1]}">{vb}</div>'
-    stA = num(re.sub(r'<[^>]+>', '', fa[2]).count('★')) if '★' in fa[2] else None; stB = num(re.sub(r'<[^>]+>', '', fb[2]).count('★')) if '★' in fb[2] else None
-    bA, bB = rec_year(A)[0] or min((ya[y] for y in ya), key=lambda v: v['li']), rec_year(B)[0] or min((yb[y] for y in yb), key=lambda v: v['li'])   # 11-12: the same pick as the model pages
-    duel = f'<div class="duel"><div></div><div class="dh"><a href="{CARU(A)}">{E(A["name"])}</a></div><div class="dh"><a href="{CARU(B)}">{E(B["name"])}</a></div>' + \
-        srow('Lemon Index<br><small>100 = average, lower is better</small>', f'<b>{ca["li"]}</b>', f'<b>{cb["li"]}</b>', better(ca['li'], cb['li'], False)) + \
-        srow(f'Years with fewer complaints<br><small>{full[0]}–{full[-1]}</small>', f'{wa} of {len(full)}', f'{wb} of {len(full)}', better(wa, wb, True)) + \
-        srow(f'Recalls<br><small>{shared[0]}–{shared[-1]}</small>', fa[0], fb[0], better(fa[0], fb[0], False)) + \
-        srow('MPG<br><small>latest year</small>', fa[1], fb[1], better(num(fa[1]), num(fb[1]), True)) + \
-        srow('Crash test<br><small>best, latest year</small>', fa[2], fb[2], better(stA, stB, True)) + \
-        srow('Best score (per car sold)<br><small>the year each model page recommends</small>', f'<a href="{CARU(A, bA["y"])}">{bA["y"]}</a>', f'<a href="{CARU(B, bB["y"])}">{bB["y"]}</a>', ('', '')) + '</div>'
-    mx = max(max(ya[y]['li'], yb[y]['li']) for y in shared)
-    def _yr(y):
-        pt = y not in full; wA = not pt and ya[y]['li'] < yb[y]['li']; wB = not pt and yb[y]['li'] < ya[y]['li']
-        tag = ' <small>partial</small>' if pt else ''
-        return f'''<div class="yr{' lfa-pt' if pt else ''}" data-y="{y}" data-a="{ya[y]['li']}" data-b="{yb[y]['li']}"{' data-p="1"' if pt else ''}><div class="yy">{y}</div><div class="yb">
-<a class="ybar {CLS(ya[y])}{' w' if wA else ''}" href="{CARU(A, y)}"><i style="width:{ya[y]['li'] / mx * 100:.0f}%"></i><span>{E(A["name"])} <b>{ya[y]['li']}</b>{tag}</span></a>
-<a class="ybar {CLS(yb[y])}{' w' if wB else ''}" href="{CARU(B, y)}"><i style="width:{yb[y]['li'] / mx * 100:.0f}%"></i><span>{E(B["name"])} <b>{yb[y]['li']}</b>{tag}</span></a></div></div>'''
-    # 11-12 r2 (Carlos, Liam: "2020-25, then 2001-19, my years hidden"): every year newest first; a gap year says why it has no side-by-side
-    _fyA, _fyB = {v['y']: v for v in A['years']}, {v['y']: v for v in B['years']}
-    def _why(F, fy, yy):
-        v = fy.get(yy)
-        return f'{E(F["name"])}: no {yy} model year in our data' if not v else f'{E(F["name"])}: {E(PLN(v))}' if not v['ok'] else ''
-    def _gap(y): return f'<div class="yr lfa-gap" data-y="{y}"><div class="yy">{y}</div><p>No side-by-side for {y}. ' + '; '.join(w for w in (_why(A, _fyA, y), _why(B, _fyB, y)) if w) + '.</p></div>'
-    _all = [y for y in range(shared[-1], shared[0] - 1, -1)]
-    _cut = full[-min(8, len(full))]
-    _top = [y for y in _all if y >= _cut or (y in shared and y not in full)]   # partial years + the 8 newest full years show; older ones fold
-    _rest = [y for y in _all if y not in _top]
-    _row = lambda y: _yr(y) if y in shared else _gap(y)
-    _opt = lambda sel: ''.join(f'<option value="{y}"{" selected" if y == sel else ""}>{y}</option>' for y in sorted(full, reverse=True))
-    pick = (f'<form class="lfa-yp" data-a="{E(A["name"])}" data-b="{E(B["name"])}" aria-label="Your model years"><b>Your years:</b> <label><span class="vh">From</span><select name="f">{_opt(full[0])}</select></label> to '
-            f'<label><span class="vh">To</span><select name="t">{_opt(full[-1])}</select></label><output class="lfa-yr-res" aria-live="polite"></output></form>')
-    yrs = ''.join(_row(y) for y in _top) + (f'<details class="yrs-more"><summary>Show {len(_rest)} older years</summary>' + ''.join(_row(y) for y in _rest) + '</details>' if _rest else '')
-    _ld_name = title.replace(' | Lemon Index', '')
-    _lead_s, _trail_s = (_sa, _sb) if lead is A else (_sb, _sa)
-    page(CMPU(a, b), title,
-         f'{QN(A)} vs {QN(B)} reliability: ' + (f'about the same owner complaints per car sold (Lemon Index {ca["li"]} vs {cb["li"]}).' if close else
-         f'the {_lead_s} drew {fewer}% fewer owner complaints per car sold than the {_trail_s} (Lemon Index {lc_["li"]} vs {tc_["li"]}).')
-         + f' Every model year both were sold, {shared[0]}–{shared[-1]}, plus recalls, crash tests and MPG.', f'''
-<article class="study cmpp"><p class="kicker"><a href="/cars/">All cars</a> · Compare</p><h1>{E(_sa)} vs {E(_sb)}: which is more reliable?</h1>
-<p class="sub cmp-lede">{E(QN(A))} or {E(QN(B))}? Here is the {E(_sb)} vs {E(_sa)} question answered from owner complaints filed with the government, for every model year both were sold.</p>
-<div class="verdict{' tie' if close else ''}">{verdict}</div><p class="cmp-sh">{share_btn(sh_txt)}</p>
-<h2>Head to head</h2>{duel}
-<p class="sub">Lemon Index = owner complaints filed with the government within 3 years, per car sold, against the average car of the same model year. <b>100 is average, lower is better.</b> It measures complaints, not crash safety. Green check = the better of the two on that line.</p>
-<h2 id="your-years">Year by year</h2><p class="sub">Newest first. Shorter bar = fewer complaints per car sold; the check marks the better car that year. Gray = about average{', or 2023+ (too new: a partial score that doesn&#39;t count toward the winner)' if len(full) < len(shared) else ''}. Tap a year for its full report.</p>{pick}<div class="yrs">{yrs}</div>{LFA_JS}
-<p class="note"><a href="{CARU(A)}">Every {E(A["name"])} year</a> · <a href="{CARU(B)}">Every {E(B["name"])} year</a> · <a href="/method/">How the index works</a></p>{share_line(sh_txt, 'Know someone choosing between these two?')}</article>''', kind='article',
-         ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": _ld_name, "url": BASE + CMPU(a, b)}], vis=pair(mphoto(a), mphoto(b), (A['name'], B['name'])) + pcredit(who(mphoto(a), mphoto(b))))
-    curls.append(CMPU(a, b))
+    _u = cmp_page(a, b)
+    if _u: curls.append(_u)
 _cp = list(zip([p for p in PAIRS if CMPU(*p) in curls], curls))
 cl = ''.join(f'<li><a href="{u}">{E(FY[a]["name"])} vs {E(FY[b]["name"])}</a></li>' for (a, b), u in _cp)
 _top, _seen = [], set()   # 8 match-ups, no car twice, so it isn't all Camry
@@ -2299,7 +2227,7 @@ page('/vin/', 'Free VIN Decoder and Recall Check: Look Up Any VIN | The Lemon In
 <div id="vnvout" class="vin-recalls" aria-live="polite"></div></section>
 <p class="fnote vin-ca"><b>In Canada?</b> Recalls there are run by Transport Canada: <a href="{TC_DB}" rel="noopener nofollow" target="_blank">search Transport Canada recalls</a> or <a href="{TC_VIN}" rel="noopener nofollow" target="_blank">check a VIN on the maker&#39;s Canadian recall site</a>.</p>
 <div class="ph-v">{pimg(mphoto('toyota-camry', 2019), 'Toyota Camry')}</div>{pcredit(who(mphoto('toyota-camry', 2019)))}
-<script id="pick" type="application/json">{json.dumps(PICK, ensure_ascii=False).replace("</", "<\\/")}</script><script id="valias" type="application/json">{json.dumps(VALIAS, separators=(",", ":"))}</script><script id="vnames" type="application/json">{json.dumps(VNAMES, separators=(",", ":"))}</script><script id="vimg" type="application/json">{json.dumps(sorted(f[:-5] for f in os.listdir("assets/ai-models") if f.endswith(".webp")), separators=(",", ":"))}</script><script src="/assets/vin.js?v=1112e" defer></script></section></div>''')
+<script id="pick" type="application/json">{json.dumps(PICK, ensure_ascii=False).replace("</", "<\\/")}</script><script id="valias" type="application/json">{json.dumps(VALIAS, separators=(",", ":"))}</script><script id="vnames" type="application/json">{json.dumps(VNAMES, separators=(",", ":"))}</script><script id="vimg" type="application/json">{json.dumps(sorted(f[:-5] for f in os.listdir("assets/ai-models") if f.endswith(".webp")), separators=(",", ":"))}</script><script src="/assets/vin.js?v=1112cb" defer></script></section></div>''')
 shutil.copytree('assets', f'{OUT}/assets', dirs_exist_ok=True); shutil.copy('data/survey.json', f'{OUT}/assets/survey-q.json'); shutil.copy('data/votes.json', f'{OUT}/assets/votes.json')
 print('built', len(urls), 'pages into', OUT)
 # 11-12 accurate freshness: pages whose content changed this build -> data/cache/indexnow_pending.txt (git-ignored); `py indexnow.py --pending`

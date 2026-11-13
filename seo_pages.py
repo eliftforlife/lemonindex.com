@@ -1,6 +1,7 @@
 # Best-of and statistics pages (11-06, SEO plan). Run by build.py with exec(). Every number comes from our own data; nothing here is hand-typed.
 SEO_URLS = []
 YT_SRC = r'C:\Users\elift\Desktop\Eliftforlife youtube\3 Lemon Index\data\yt'
+exec(open('best_ui.py', encoding='utf-8').read())   # 11-12 (Elijah): shared /best/ pieces: one-line hero, tap-to-open answers, VIN box, budget cards
 exec(open('teen_page.py', encoding='utf-8').read())   # 11-12 /best/safest-cars-for-teens/ (sets TEEN_CARD for the /best/ hub below)
 # 11-12 (Linda: the under-$10K list showed "–" for the Miata and Silverado): buyer-guide names ("Chevy Silverado", "VW Golf / GTI",
 # "Ford F-150") resolve to our model, its score and its live page; a model we don't score still links its page and says why there's no score
@@ -21,6 +22,43 @@ def bu_resolve(model):
     if c: return c, car_href(c['id'])
     tk = set(re.findall(r'[a-z0-9]+', nm.lower()))
     return None, next((u for n_, u in _BU_PAGES if tk <= set(re.findall(r'[a-z0-9]+', n_.lower()))), '')
+# 11-13 v2 (Elijah: "bars or charts", best_ui.py): the most-reliable lists and the budget lists, visual first
+def rel_vis(T, W, slug):
+    PAGEID = {f['id'] for f in YEARS}
+    mx = cbx_scale([c['li'] for c in T]); mw = cbx_scale([c['li'] for c in W])
+    link = lambda c: f'<a href="/cars/{c["id"]}/">{E(c["name"])}</a>' if c['id'] in PAGEID else E(c['name'])
+    def card(i, c):
+        iss = c.get('issues') or []
+        w_ = cbx_times(c['li']); why = f'{w_[0].upper()}{w_[1:]} (model years {E(c["years"].replace("-", "–"))}).'
+        ms = cbx_meter('Complaints', c['li'], mx, c['li'], best_tier(c['li']), unit='Lemon Index')
+        if iss: ms += cbx_meter(E(iss[0][0][0].upper() + iss[0][0][1:]), iss[0][1], 100, f'{iss[0][1]}%', 'gray', avg=False, unit='of complaints')
+        return cbx_card(f'{slug}-{i}', i, best_img(c['id'], c['name']), link(c), why, ms)
+    best = (f'<section class="cbx-sec cbx-list"><h2>Fewest complaints</h2>'
+            + cbx_chart([(f'#{slug}-{i}', f'<b>{i}</b> {E(c["name"])}', c['li'], c['li'], best_tier(c['li'])) for i, c in enumerate(T, 1)], mx,
+                        'Lemon Index: shorter bar = fewer complaints per car sold. Dashed line = the average car (100). Tap a car.')
+            + '<ol class="cbx-cards">' + ''.join(card(i, c) for i, c in enumerate(T, 1)) + '</ol></section>')
+    worst = (f'<section class="cbx-sec cbx-list"><h2>Most complaints</h2>'
+             + cbx_chart([(f'/cars/{c["id"]}/' if c['id'] in PAGEID else '#', f'<b>{i}</b> {E(c["name"])}', c['li'], c['li'], best_tier(c['li'])) for i, c in enumerate(W, 1)], mw,
+                         'Lemon Index: longer bar = more complaints per car sold. Dashed line = the average car (100).', title='The other end') + '</section>')
+    return best + worst
+def bu_ylink(c, txt):
+    """11-13 (nav review): the model years the videos picked link to those year pages"""
+    F = FY.get(c['id']) if c else None
+    if not F: return E(txt)
+    have = {v['y'] for v in F['years']}
+    return re.sub(r'(?:19|20)\d\d', lambda m: f'<a href="{CARU(F, int(m.group()))}">{m.group()}</a>' if int(m.group()) in have else m.group(), E(txt))
+def bu_vis(R, d, span):
+    nv = d['videos']; mx = cbx_scale([c['li'] for _, c, _ in R if c] or [100]); mv = max(r['videos'] for r, _, _ in R) * 1.1   # bars compare the picks with each other
+    def card(i, r, c, u):
+        nm = c['name'] if c else r['model']; sp = span(r)
+        why = f'Picked in {r["videos"]} of {nv} buyer&#39;s-guide videos' + (f', most often the {bu_ylink(c, sp.split(" (")[0])} model years' if sp else '') + '. '
+        why += (cbx_times(c['li'])[0].upper() + cbx_times(c['li'])[1:] + ' (2010–2022).') if c else ('No Lemon Index yet: see its problems and recalls.' if u else 'We don&#39;t cover this model yet.')
+        ms = cbx_meter('Picked in', r['videos'], mv, f'{r["videos"]} of {nv}', 'pick', avg=False, unit='videos')
+        if c: ms += cbx_meter('Complaints', c['li'], mx, c['li'], best_tier(c['li']), unit='Lemon Index')
+        return cbx_card(f'bu-{i}', i, best_img(c['id'] if c else None, nm), f'<a href="{u}">{E(nm)}</a>' if u else E(nm), why, ms)
+    chart = cbx_chart([(f'#bu-{i}', f'<b>{i}</b> {E(c["name"] if c else r["model"])}', r['videos'], r['videos'], 'pick') for i, (r, c, u) in enumerate(R, 1)], mv,
+                      f'How many of the {nv} buyer&#39;s-guide videos picked each car. Tap a car.', avg=False)
+    return f'<section class="cbx-sec cbx-list"><h2>Most-picked</h2>{chart}<ol class="cbx-cards">' + ''.join(card(i, r, c, u) for i, (r, c, u) in enumerate(R, 1)) + '</ol></section>'
 def _seo_pages():
     PAGEID = {c['name']: c['id'] for c in CARS}; HAS = {f['id'] for f in YEARS}
     def carlink(c): return f'<a href="/cars/{c["id"]}/">{E(c["name"])}</a>' if c['id'] in HAS else E(c['name'])
@@ -35,8 +73,10 @@ def _seo_pages():
         L = sorted([c for c in CARS if c['seg'] == sg and c['sold'] >= 150000], key=lambda c: c['li']); T = L[:15]; W = L[::-1][:10]
         lede = f'The most reliable {nm} by owner complaints per vehicle sold are the {T[0]["name"]}, {T[1]["name"]} and {T[2]["name"]}. A score of 100 is the average car, and lower is better.'
         faq = [(f'What is the most reliable {nm[:-1]}?', f'By owner complaints per vehicle sold, model years 2010 to 2022, the {T[0]["name"]} ranks first with a Lemon Index of {T[0]["li"]}.'), (f'Which {nm} get the most complaints?', f'The {W[0]["name"]} and {W[1]["name"]} drew the most complaints per vehicle sold among popular {nm}.')]
-        body = (f'<div class="advp"><header class="advh1"><p class="ph-e"><a href="/best/">Best cars</a></p><h1>The most reliable {nm}, ranked.</h1><p class="ans">{E(lede)}</p></header><div class="ygrid"><section class="yc"><h2>Fewest complaints</h2>{rows(T, top)}</section><section class="yc"><h2>Most complaints</h2>{rows(W, top)}</section>'
-                '<section class="yc yqa"><h2>Quick answers</h2>' + ''.join(f'<h3>{E(q)}</h3><p>{E(a)}</p>' for q, a in faq) + '</section></div><p class="yc-cap">Lemon Index: NHTSA owner complaints filed in a model year&#39;s first 3 years, per vehicle sold, against the average car. Model years 2010 to 2022, models with 150,000 or more sold. Complaints are owner reports, not proof of a defect.</p></div>')
+        body = ('<div class="advp cb cbx">' + cbx_head(f'The most reliable {nm}, ranked.', f'Popular {nm} ranked by owner complaints per car sold, model years 2010 to 2022.')
+                + rel_vis(T, W, slug)
+                + cbx_faq([(q, f'<p>{E(a)}</p>') for q, a in faq]) + cbx_buy() + cbx_budgets()
+                + cbx_src(f'{E(lede)} Lemon Index: NHTSA owner complaints filed in a model year&#39;s first 3 years, per vehicle sold, against the average car. Model years 2010 to 2022, models with 150,000 or more sold. Complaints are owner reports, not proof of a defect.') + '</div>')
         body += share_line(f'The most reliable {nm}, ranked by owner complaints. #1 is the {T[0]["name"]}. Free list:')
         page(f'/best/most-reliable-{slug}/', f'Most Reliable {nm[0].upper() + nm[1:]}, Ranked by Owner Complaints | The Lemon Index', lede, body, ld=[faq_ld([(q, '', a) for q, a in faq])]); SEO_URLS.append(f'/best/most-reliable-{slug}/'); cards.append((f'/best/most-reliable-{slug}/', f'Most reliable {nm}'))
     for k, label in (('5k', '$5,000'), ('10k', '$10,000'), ('15k', '$15,000'), ('20k', '$20,000')):
@@ -62,14 +102,21 @@ def _seo_pages():
         safe = sorted([x for x in R if x[1] and x[1]['li'] < 100], key=lambda x: x[1]['li'])[:3]
         nm3 = [x[1]['name'] if x[1] else x[0]['model'] for x in R[:3]]
         lede = f'In {d["videos"]} YouTube videos on the best used cars under {label}, the most-picked are the {nm3[0]}, {nm3[1]} and {nm3[2]}.' + (f' Of the {len(R)} picks below, the {safe[0][1]["name"]} has the fewest owner complaints.' if safe else '')
-        body = f'<div class="advp"><header class="advh1"><p class="ph-e"><a href="/best/">Best cars</a></p><h1>Best used cars under {label}.</h1><p class="ans">{E(lede)}</p></header><div class="ygrid"><section class="yc"><h2>What buyers&#39; guides pick, with complaint scores</h2>{lis}<p class="yc-cap">Right column: the model&#39;s Lemon Index (model years 2010 to 2022), where 100 is the average car and lower is better. A dash means we don&#39;t score that model yet. &#34;Years picked most&#34; = the model-year range the most videos named for this budget; open the car for each year&#39;s own score.</p></section></div><p class="yc-cap">Picks come from {d["videos"]} YouTube videos with {d["views"] / 1e6:.1f}M views. A pick counts when the model is in the title or named in the video. These are buyer-guide picks, not prices: check the exact model year and price before you buy. Shopping for a new driver? See the <a href="/best/safest-cars-for-teens/">safest used cars for teens</a>.</p></div>'
+        faq = [(f'What are the best used cars under {label}?', lede), ('Where do these picks come from?', f'From {d["videos"]} YouTube buyer&#39;s guide videos with {d["views"] / 1e6:.1f}M views. A pick counts when the model is in the title or named in the video.'),
+               ('Does this list show prices?', 'No. These are buyer-guide picks, not prices: check the exact model year and price before you buy.')]
+        body = ('<div class="advp cb cbx">' + cbx_head(f'Best used cars under {label}.', f'The cars {d["videos"]} YouTube buyer&#39;s guides pick most, with each one&#39;s owner-complaint score.')
+                + bu_vis(R, d, span)
+                + cbx_faq([(q, f'<p>{a if q.startswith(("Where", "Does")) else E(a)}</p>') for q, a in faq]) + cbx_buy() + cbx_budgets(f'/best/used-cars-under-{k[:-1]}000/', 'Other budgets')
+                + cbx_src(f'Picks come from {d["videos"]} YouTube videos with {d["views"] / 1e6:.1f}M views. A pick counts when the model is in the title or named in the video. &#34;Years picked most&#34; = the model-year range the most videos named for this budget; open the car for each year&#39;s own score. Shopping for a new driver? See the <a href="/best/safest-cars-for-teens/">safest used cars for teens</a>.') + '</div>')
         body += share_line(f'Best used cars under {label}: what {d["videos"]} buyer guide videos pick, with complaint scores. Free:', 'Know someone shopping on a budget?')
-        page(f'/best/used-cars-under-{k[:-1]}000/', f'Best Used Cars Under {label}: What {d["videos"]} Videos Pick | The Lemon Index', lede, body); SEO_URLS.append(f'/best/used-cars-under-{k[:-1]}000/'); cards.append((f'/best/used-cars-under-{k[:-1]}000/', f'Best used cars under {label}'))
+        page(f'/best/used-cars-under-{k[:-1]}000/', f'Best Used Cars Under {label}: What {d["videos"]} Videos Pick | The Lemon Index', lede, body, ld=[faq_ld([(q, '', re.sub('<[^>]+>', '', a).replace('&#39;', "'")) for q, a in faq])]); SEO_URLS.append(f'/best/used-cars-under-{k[:-1]}000/'); cards.append((f'/best/used-cars-under-{k[:-1]}000/', f'Best used cars under {label}'))
     if GAP:
         segof = {c['id']: c['seg'] for c in CARS}; L = sorted([m for m in GAP['mpg'] if segof.get(m['id']) == 'suv'], key=lambda m: -m['comb'])[:15]
         if len(L) >= 5:
             lede = f'The best gas mileage SUVs we track are the {L[0]["name"]} at {L[0]["comb"]} mpg combined, the {L[1]["name"]} at {L[1]["comb"]} and the {L[2]["name"]} at {L[2]["comb"]}, using their best gas or hybrid version.'
-            body = ('<div class="advp"><header class="advh1"><p class="ph-e"><a href="/best/">Best cars</a></p><h1>SUVs with the best gas mileage.</h1><p class="ans">' + E(lede) + '</p></header><div class="ygrid"><section class="yc">' + mpg_rows(L) + '</section></div><p class="yc-cap">EPA mileage, best version sold 2019 to 2025, gas and hybrid only. Lemon Index covers model years 2010 to 2022, where 100 is the average car and lower is better.</p></div>')
+            body = ('<div class="advp cb cbx">' + cbx_head('SUVs with the best gas mileage.', 'EPA combined mileage, best gas or hybrid version, next to each SUV&#39;s owner-complaint score.')
+                    + '<section class="cbx-sec cbx-list"><h2>Top 15</h2>' + mpg_rows(L) + '</section>' + cbx_buy() + cbx_budgets()
+                    + cbx_src(E(lede) + ' EPA mileage, best version sold 2019 to 2025, gas and hybrid only. Lemon Index covers model years 2010 to 2022, where 100 is the average car and lower is better.') + '</div>')
             body += share_line('SUVs with the best gas mileage, next to their owner complaint scores. Free list:')
             page('/best/suvs-gas-mileage/', 'SUVs With the Best Gas Mileage, With Complaint Scores', lede, body); SEO_URLS.append('/best/suvs-gas-mileage/'); cards.append(('/best/suvs-gas-mileage/', 'SUVs with the best gas mileage'))
     # 11-10 v2: the index as photo cards, each with the #1 car of its list
