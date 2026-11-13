@@ -1015,7 +1015,7 @@ def rel_answer(f, c, snm, rec, kind, avoid):
     av = sorted(v['y'] for v in avoid if not rec or v['y'] != rec['y'])[:3] if len(scored(f)) >= LIST_MIN else []
     if av: tail += f' Most complaints: <b>{AND(av)}</b>.'
     return word, comp + yt + tail
-def rel_top(f, c, snm, ys, sc, rec, kind, worst, avoid):
+def rel_top(f, c, snm, ys, sc, rec, kind, worst, avoid, qn=None):
     word, ans = rel_answer(f, c, snm, rec, kind, avoid)
     vc, vw = verdict(c['li']); tiles = [f'<div class="rs {vc}"><small>Owner complaints</small><b>{E(vw)}</b><span>Lemon Index {c["li"]} · {E(c["years"].replace("-", "–"))} · 100 = average</span></div>']
     r = YTR.get(f['id'])
@@ -1029,7 +1029,8 @@ def rel_top(f, c, snm, ys, sc, rec, kind, worst, avoid):
     a = yt_adj(f['id']); last = max(v['y'] for v in sc); new = sorted((y for y in a if y > last), key=lambda y: -a[y])
     newer = (f'<p class="rs-new">Looking at a {min(new)} or newer? Those are too new for complaint data, but YouTube owners like the <a href="#years">{new[0]}</a> best.</p>'
              if len(new) >= 2 else '')
-    return (f'<h1 class="rel-h">Is the {E(snm).replace("-", "-⁠")} reliable?</h1><p class="ans rel-a"><b>{word}</b> {ans}</p>', f'<div class="rsc">{"".join(tiles)}</div>{newer}', (word + ' ' + html.unescape(re.sub('<[^>]+>', '', ans))))
+    # 11-12 search titles: the H1 says "<model> reliability" (what people search); the question opens the answer line
+    return (f'<h1 class="rel-h">{E(qn or snm).replace("-", "-⁠")} reliability.</h1><p class="ans rel-a"><b>Is it reliable? {word}</b> {ans}</p>', f'<div class="rsc">{"".join(tiles)}</div>{newer}', (word + ' ' + html.unescape(re.sub('<[^>]+>', '', ans))))
 def ybars(f, cur=None):
     if YTS.get(f['id']): return ybars_yt(f, cur, YTS[f['id']])
     mx = max(120, max(v['li'] for v in f['years'] if v['ok']) * 1.08)
@@ -1297,6 +1298,26 @@ for _t, _w in (('tesla-model-s', '2012–2020'), ('tesla-model-3', '2017–2020'
                        + 'scored model years use published per-year estimates (Kelley Blue Book, Wikipedia) and other years show complaints only. '
                        + f'For range, charging cost and the EV ranking, see <a href="/electric/{_t}/">the Model {_t.split("-")[-1].upper()} on our EV page</a>.'))
 SNM = lambda f: SN.get(f['id'], (f['name'],))[0]
+# 11-12 search titles (Search Console: "mercedes c class reliability" ranked #10.7 with 0 clicks under "Mercedes-Benz C-Class"):
+# titles and H1s use the spelling people search (data/search_names.json, from Keyword Planner + Search Console) and the year-page
+# word ("Problems" or "Reliability") that model's searches use more. Body text keeps the full names.
+QN = lambda f: _SNJ.get('names', {}).get(f['id']) or SNM(f)
+YW = lambda f: _SNJ.get('year_word', {}).get(f['id'], 'Problems')
+def seo_title(cands, brand=' | Lemon Index', mx=60):
+    """The first candidate that fits 60 characters; the brand goes at the end only if it still fits."""
+    for t in cands:
+        if len(t + brand) <= mx: return t + brand
+        if len(t) <= mx: return t
+    return cands[-1]
+def vs_names(A, B):
+    """Short names for 'X vs Y' ('Camry', 'Accord', the way people search it). Both keep the brand when either model name is
+    mostly a code (A4, 300, F-150) or the two short names match."""
+    def cut(F):
+        n = QN(F); nb = len(BYNAME[F['name']]['brand'].split()) if F['name'] in BYNAME else 1
+        return n.split(' ', nb)[nb] if len(n.split(' ')) > nb else n
+    a, b = cut(A), cut(B)
+    if sum(ch.isalpha() for ch in a) < 3 or sum(ch.isalpha() for ch in b) < 3 or a == b: return QN(A), QN(B)
+    return a, b
 def year_faq(f, v, y, x, best):
     """Plain questions people search, answered only from our own numbers: [(question, answer html, answer text)]."""
     n = SNM(f); out = []
@@ -1465,7 +1486,7 @@ def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
         words = (f'<section class="yc"><h2>In owners&#39; words</h2><blockquote><p>{E(q0["text"])}</p><cite>{y} {nm} owner · NHTSA complaint {q0["odi"]}</cite></blockquote>'
                  + (f'<details><summary>More owner reports</summary>{more}</details>' if more else '') + '</section>')
     return f'''
-<article class="yp yp6"><section class="ph yph6"><div class="yh-t"><p class="ph-e"><a href="/cars/">All cars</a> · <a href="{CARU(f)}">{nm}</a></p><h1>{y} {nm}.</h1>{answer_box(f, v, y, x, best)}{'<p class="early-b">Early read</p>' if v.get('early') else ''}
+<article class="yp yp6"><section class="ph yph6"><div class="yh-t"><p class="ph-e"><a href="/cars/">All cars</a> · <a href="{CARU(f)}">{nm}</a></p><h1>{y} {E(QN(f))} {YW(f).lower()}.</h1>{answer_box(f, v, y, x, best)}{'<p class="early-b">Early read</p>' if v.get('early') else ''}
 {f'<p class="yc-note">{SN[f["id"]][1]}</p>' if f["id"] in SN else ""}{PIN_HTML(f['id'], y)}{hero.replace('{BW}', bw)}
 <nav class="modes" aria-label="Page mode"><a href="{CARU(f, y)}" aria-current="page">Normal</a><a href="{CARU(f, y)}advanced/">Advanced</a></nav><nav class="yswitch" aria-label="Model years"><div class="yseg">{seg}<a class="yall" href="{CARU(f)}">All years</a></div><div class="yact"><a class="btn btn-ghost" href="/compare/?c={f['id']}-{y}">Compare</a><button type="button" class="btn btn-ghost yshare" data-share="{E(share_txt)}">Share</button></div></nav></div>{f'<div class="ph-v">{ph}</div>' if ph else ''}</section>
 {buy}{mil}{ask}<div class="yts">{tiles}</div>{ytfix(f["id"], y)}{sev}{old}
@@ -1526,12 +1547,15 @@ for f in YEARS:
     if _pt:
         _tp = [NICE(x) for x, _ in sorted(_pt.items(), key=lambda kv: -kv[1])[:3]]
         mqa.append((f'What are the most common {snm} problems?', f'Across every year, owners&#39; complaints to the government name {", ".join(_tp[:-1])} and {_tp[-1]} most. Some years are much worse than others: see the chart above.'))
-    rel_html, rel_tiles, rel_plain = rel_top(f, c, snm, ys, sc, best, kind, worst, avoid_years(f))
+    qn = QN(f); rel_html, rel_tiles, rel_plain = rel_top(f, c, snm, ys, sc, best, kind, worst, avoid_years(f), qn)
     mqa.insert(0, (f'Is the {snm} reliable?', E(rel_plain)))
     model_qa_html = '<section class="yqa"><h2>Quick answers.</h2>' + qa_fold(''.join(f'<h3>{E(q)}</h3><p>{a}</p>' for q, a in mqa)) + '</section>'
-    _tt = next(t for t in (f'{snm} Reliability: Years to Avoid & Best Years', f'{snm} Reliability & Years to Avoid', f'{snm} Reliability by Year') if len(t) <= 65 or t.endswith('by Year'))
+    # 11-12 search titles: "<model> Reliability" first ("years to avoid" is searched ~4x more than "best years": Keyword Planner), and a
+    # real number in the description
+    _tt = seo_title([f'{qn} Reliability: Years to Avoid & Best Years', f'{qn} Reliability: Best & Worst Years', f'{qn} Reliability by Year', f'{qn} Reliability'])
+    _mpl = plain(li); _mcmp = 'about as many complaints as the average car' if _mpl == 'about average' else _mpl
     page(CARU(f), _tt,
-         f'Is the {snm} reliable? {rel_plain.split(". ")[0].rstrip(".")}. Every year {ys[0]["y"]}–{ys[-1]["y"]} ranked by owner complaints' + (' and YouTube owner reviews' if f['id'] in YTR else '') + f'. Fewest complaints: {best["y"]}. Most: {(worst or best)["y"]}.', f'''
+         f'{qn} reliability: {_mcmp}, per car sold (Lemon Index {li}, {c["years"].replace("-", "–")}). Fewest complaints: {best["y"]}. Most: {(worst or best)["y"]}.', f'''
 <div class="pg mp6"><section class="ph yph6"><div class="yh-t"><p class="ph-e"><a href="/cars/">All cars</a> · {BRAND_A(c["brand"])} · {E(c["segName"])}</p>{rel_html}{f'<p class="yc-note">{SN[f["id"]][1]}</p>' if f["id"] in SN else ""}{PIN_HTML(f['id'])}
 <div class="yhero">{gauge(c["li"], 190)}<div class="yverd {verdict(c["li"])[0]}"><p><b>{verdict(c["li"])[1]}.</b> <span>Whole model, {c["years"]}{"" if plain(c["li"]).lower() in verdict(c["li"])[1].lower() else ": " + E(plain(c["li"]))}.</span></p><p class="ybw">Fewest complaints <a class="{'good' if best['li'] <= 110 else ''}" href="{CARU(f, best["y"])}">{best["y"]}</a>{f' · Most complaints <a class="bad" href="{CARU(f, worst["y"])}">{worst["y"]}</a>' if worst and worst['y'] != best['y'] else ''}</p></div></div>
 <p><button type="button" class="btn btn-ghost" data-share="{E(f'Every {snm} year ranked by owner complaints. Fewest: {best["y"]}. Most: {(worst or best)["y"]}. Free report:')}">Share ↗</button></p></div><div class="ph-v">{(YSL.year_slider_html(f['id'], f['name'], {v['y']: round(v['li']) for v in ys if v.get('ok') and v.get('li') is not None}, {y: sc_ for y, sc_ in YSL.yt_scores(f['id']).items() if y in yt_rankable(f, YTS.get(f['id'], {}))}, {v['y'] for v in ys}, start=popular_year(f), best=best['y'], hero=True) if YSL.has(f['id']) else (YSL.model_hero_html(f['id'], f['name']) or car_hero(f, ys[-1]["y"])))}{rel_tiles}</div></section>
@@ -1553,7 +1577,8 @@ for f in YEARS:
         old = '<p class="note">Older model year: fewer owners filed complaints with the government back then, and a new model&#39;s first cars often sold the year before, so treat the score as rough. The problems and owner complaints below are exactly as filed.</p>' if y < 2010 and v['ok'] else '<p class="note">Older model year: fewer owners filed complaints with the government back then. The complaints below are exactly as filed.</p>' if y < 2010 else ''
         x = extra(f['id'], y); nrec = len(x['recalls']) if 'recalls' in x else None
         qa = year_faq(f, v, y, x, best); snm = SNM(f)
-        page(CARU(f, y), f'{y} {snm} Problems, Reliability and Recalls' + (' (Early Read)' if v.get('early') else '') + ' | The Lemon Index',
+        _yw = YW(f); _yo = 'Reliability' if _yw == 'Problems' else 'Problems'; _ye = ' (Early Read)' if v.get('early') else ''; _yb = f'{y} {QN(f)} {_yw}'
+        page(CARU(f, y), seo_title([f'{_yb}, {_yo} & Recalls{_ye}', f'{_yb} & {_yo}{_ye}', f'{_yb} & Recalls{_ye}', f'{_yb}{_ye}', _yb]),
              (f'Early read: so far the {y} {snm} has drawn {plain(v["li"])} per car sold (NHTSA).' if v['ok'] and v.get('early') else f'The {y} {snm} drew {plain(v["li"])} per car sold (NHTSA).' if v['ok'] else f'Owners filed only {v["n"]} NHTSA complaints about the {y} {snm} in its first 3 years.')
              + (f' {nrec} recall{"s" if nrec != 1 else ""}.' if nrec else '') + (f' Top problems: {top}.' if top else '') + ' Real owner complaints and every other year.', year_body(f, v, y, x, best, worst, prev, nxt, v['quotes'], qa), kind='article', ask=(f['id'], y, f'{y} {snm}'), img=YSL.ai_src(f['id'], y) or (YSL.model_img(f['id']) or {}).get('src') or (PH.get(f['id'], {}).get(str(y)) or {}).get('src'),
              ld=[car_ld(f, y, x.get('mpg'), YSL.ai_src(f['id'], y) or (YSL.model_img(f['id']) or {}).get('src') or (PH.get(f['id'], {}).get(str(y)) or {}).get('src')), {"@context": "https://schema.org", "@type": "WebPage", "name": f'{y} {snm} problems, reliability and recalls', "url": BASE + CARU(f, y)}
@@ -1870,7 +1895,8 @@ for a, b in PAIRS:
         rec = sum(len(extra(F['id'], v['y']).get('recalls', [])) for v in F['years'] if v['y'] in shared)
         return rec, (f'{m["comb"][0]}–{m["comb"][1]}' if m and m['comb'][0] != m['comb'][1] else (m['comb'][0] if m else '—')), (stars(sf['best']) if sf and sf.get('best') else '—'), last
     fa, fb = facts(A), facts(B)
-    title = f'{A["name"]} vs {B["name"]} Reliability: Which Has Fewer Problems?'
+    _sa, _sb = vs_names(A, B)   # 11-12 search titles: "camry vs accord" (59 impressions) ranked #61 under "Toyota Camry vs Honda Accord Reliability by Year"
+    title = seo_title([f'{_sa} vs {_sb}: Which Is More Reliable?', f'{_sa} vs {_sb} Reliability by Year', f'{_sa} vs {_sb} Reliability'])
     sh_txt = f'{A["name"]} vs {B["name"]}: which has fewer problems? Free comparison from owner complaints:'
     # 11-02 (Elijah): one clear winner up top, a 2-column scorecard that stays side by side on phones, and bars instead of a wide table
     close = abs(ca['li'] - cb['li']) <= max(ca['li'], cb['li']) * .08
@@ -1900,15 +1926,20 @@ for a, b in PAIRS:
     # 11-10 (design audit): the 6 newest shared years show; older ones fold under one tap
     _new = sorted(shared)[-6:]; _old = [y for y in shared if y not in _new]
     yrs = ''.join(_yr(y) for y in shared if y in _new) + (f'<details class="yrs-more"><summary>Show {len(_old)} older years</summary>' + ''.join(_yr(y) for y in _old) + '</details>' if _old else '')
-    page(CMPU(a, b), title + ' | The Lemon Index',
-         f'{lead["name"]} vs {trail["name"]}: owner complaints per car sold for every model year both were sold ({shared[0]}-{shared[-1]}), plus recalls, crash tests and fuel economy.', f'''
-<article class="study cmpp"><p class="kicker"><a href="/cars/">All cars</a> · Compare</p><h1>{E(A["name"])} vs {E(B["name"])}: which has fewer problems?</h1>
+    _ld_name = title.replace(' | Lemon Index', '')
+    _lead_s, _trail_s = (_sa, _sb) if lead is A else (_sb, _sa)
+    page(CMPU(a, b), title,
+         f'{QN(A)} vs {QN(B)} reliability: ' + (f'about the same owner complaints per car sold (Lemon Index {ca["li"]} vs {cb["li"]}).' if close else
+         f'the {_lead_s} drew {fewer}% fewer owner complaints per car sold than the {_trail_s} (Lemon Index {lc_["li"]} vs {tc_["li"]}).')
+         + f' Every model year both were sold, {shared[0]}–{shared[-1]}, plus recalls, crash tests and MPG.', f'''
+<article class="study cmpp"><p class="kicker"><a href="/cars/">All cars</a> · Compare</p><h1>{E(_sa)} vs {E(_sb)}: which is more reliable?</h1>
+<p class="sub cmp-lede">{E(QN(A))} or {E(QN(B))}? Here is the {E(_sb)} vs {E(_sa)} question answered from owner complaints filed with the government, for every model year both were sold.</p>
 <div class="verdict{' tie' if close else ''}">{verdict}</div><p class="cmp-sh">{share_btn(sh_txt)}</p>
 <h2>Head to head</h2>{duel}
 <p class="sub">Lemon Index = owner complaints filed with the government within 3 years, per car sold, against the average car of the same model year. <b>100 is average, lower is better.</b> It measures complaints, not crash safety. Green check = the better of the two on that line.</p>
 <h2>Year by year</h2><p class="sub">Shorter bar = fewer complaints per car sold. Tap a year for its full report.</p><div class="yrs">{yrs}</div>
 <p class="note"><a href="{CARU(A)}">Every {E(A["name"])} year</a> · <a href="{CARU(B)}">Every {E(B["name"])} year</a> · <a href="/method/">How the index works</a></p>{share_line(sh_txt, 'Know someone choosing between these two?')}</article>''', kind='article',
-         ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": title, "url": BASE + CMPU(a, b)}], vis=pair(mphoto(a), mphoto(b), (A['name'], B['name'])) + pcredit(who(mphoto(a), mphoto(b))))
+         ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": _ld_name, "url": BASE + CMPU(a, b)}], vis=pair(mphoto(a), mphoto(b), (A['name'], B['name'])) + pcredit(who(mphoto(a), mphoto(b))))
     curls.append(CMPU(a, b))
 _cp = list(zip([p for p in PAIRS if CMPU(*p) in curls], curls))
 cl = ''.join(f'<li><a href="{u}">{E(FY[a]["name"])} vs {E(FY[b]["name"])}</a></li>' for (a, b), u in _cp)

@@ -342,9 +342,9 @@ else:
         faq = [(f'What are the most common {m["name"]} problems?', f'In owner complaints to the government, the top areas are {", ".join(p for p, _ in m["parts"][:3])}.' if m['parts'] else 'There are too few complaints to say.')]
         if codes: faq.append((f'What engines does the {m["name"]} have?', 'By model year: ' + '; '.join(f'{y}: {", ".join((BFY.get(f"{fid}|{y}") or {}).get("codes", [])) or "not confirmed"}' for y in sorted(by)[-6:]) + '. Full list in the specs table.'))
         sec.append('<section class="yc yqa"><h2>Quick answers</h2>' + ''.join(f'<h3>{E(q)}</h3><p>{E(a)}</p>' for q, a in faq) + '</section>')
-        body = (f'<div class="advp"><header class="advh1"><p class="ph-e"><a href="/cars/">All cars</a> · <a href="/brands/bmw/">BMW</a></p><h1>{nm} problems, specs and engines by year.</h1><p class="ans">{ans}</p></header>' + (lambda h: f'<div class="advimg">{h}</div>' if h else '')(YSL.model_hero_html(fid, m["name"])) +
+        body = (f'<div class="advp"><header class="advh1"><p class="ph-e"><a href="/cars/">All cars</a> · <a href="/brands/bmw/">BMW</a></p><h1>{nm} reliability: problems, specs and engines by year.</h1><p class="ans">{ans}</p></header>' + (lambda h: f'<div class="advimg">{h}</div>' if h else '')(YSL.model_hero_html(fid, m["name"])) +
                 f'<div class="ygrid">{"".join(sec)}</div>' + share_line(f'{m["name"]}: owner complaints, specs and engines by year. Free:') + '</div>')
-        page(path, f'{m["name"]} Problems, Specs & Engines by Year', _html.unescape(re.sub('<[^>]+>', '', ans)), body, ld=[faq_ld([(q, '', a) for q, a in faq])])
+        page(path, seo_title([f'{m["name"]} Reliability: Problems, Specs & Engines', f'{m["name"]} Reliability by Year', f'{m["name"]} Reliability']), _html.unescape(re.sub('<[^>]+>', '', ans)), body, ld=[faq_ld([(q, '', a) for q, a in faq])])
         if m['n'] < 20: _noindex(path)
         else: BMW_URLS.append(path)
     # ---- links in from the BMW brand page and the cars index
