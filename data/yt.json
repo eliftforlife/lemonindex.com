@@ -61344,7 +61344,26 @@
      "views": 335176
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Steering & suspension",
+      {
+       "median": 78,
+       "lo": 25.0,
+       "hi": 130.0,
+       "n": 4,
+       "videos": 3,
+       "id": "nKQUI5bVg_k",
+       "t": 807,
+       "title": "Dodge Dakota Lower Ball Joint Replacement (2001-2004)"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -61991,6 +62010,154 @@
      "title": "2020 C8 Corvette Problems - Ex-Engineer Speaks Out",
      "channel": "RevMatchTV",
      "views": 117053
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "chevrolet-express": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+   ],
+   "gen": "1996–2024 Chevrolet Express",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 16419717,
+   "topics": [
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 640875,
+     "n": 6,
+     "best": {
+      "id": "u_cT2NZDLWs",
+      "title": "How to Replace Crankshaft Position Sensor 2003-2021 Chevy Express 3500",
+      "channel": "TRQ",
+      "views": 184834
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 607306,
+     "n": 10,
+     "best": {
+      "id": "rb_WfMju8pA",
+      "title": "How to Replace Main Temperature Blend Door Actuator 2003-2021 Chevrolet Express 3500",
+      "channel": "TRQ",
+      "views": 132143
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 419817,
+     "n": 6,
+     "best": {
+      "id": "ITFD8Ll4XFA",
+      "title": "How to replace the handle on a sliding door of a 2007 Chevy Express Van",
+      "channel": "Priesty Boys",
+      "views": 175282
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 391615,
+     "n": 6,
+     "best": {
+      "id": "s3bObfuOTc8",
+      "title": "How to Replace Water Pump 2003-2021 Chevrolet Express",
+      "channel": "TRQ",
+      "views": 122102
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 373923,
+     "n": 8,
+     "best": {
+      "id": "UaM1nigz2tQ",
+      "title": "How to Replace Starter 2003-2021 Chevy Express Van 3500",
+      "channel": "TRQ",
+      "views": 102956
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 315352,
+     "n": 4,
+     "best": {
+      "id": "dWyZ9mnlQ64",
+      "title": "How to Remove Engine Access/Service Cover - Chevy Express and GMC Savana (1997-2017)",
+      "channel": "MightyMechanic",
+      "views": 201386
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 186115,
+     "n": 3,
+     "best": {
+      "id": "b8365g976wA",
+      "title": "How to Replace Upper Ball Joint 2003-2021 Chevrolet Express",
+      "channel": "TRQ",
+      "views": 65258
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 172999,
+     "n": 3,
+     "best": {
+      "id": "_WJSAxyyGGw",
+      "title": "How to Replace Fuel Pressure Regulator 2003-2021 Chevrolet Express 3500",
+      "channel": "TRQ",
+      "views": 83301
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "9d4oK_19wrM",
+     "title": "2003 CHEVY EXPRESS TURN SIGNAL PROBLEMS",
+     "channel": "Joe Dixon",
+     "views": 162364
+    },
+    {
+     "id": "ZSu7BNmTS8E",
+     "title": "Top 5 Problems Chevrolet Express 2500 Van 2003-2025 2nd Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 51578
+    },
+    {
+     "id": "83YAIfRmy4A",
+     "title": "How Reliable is a 2004 Chevrolet Express 2500 Cargo Van POV Test Drive",
+     "channel": "POV Nelson",
+     "views": 20062
     }
    ],
    "costs": null
