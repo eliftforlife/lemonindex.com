@@ -247,7 +247,7 @@ NAV = [('/cars/', 'Look up a car'), ('/brands/', 'Brands'), ('/compare/', 'Compa
 # phones get a full-screen menu. Styles/JS: assets/gh.css + gh.js (master copy in 0 HQ/Tools/site header/).
 # 11-13 (nav review #6): Trucks (the /cars/ grid's Trucks tab) in the bar; Studies and Motorcycles moved to More, Engines up from More
 NAV_TOP = [('/cars/', 'Cars'), ('/?type=trucks', 'Trucks'), ('/brands/', 'Brands'), ('/compare/', 'Compare'), ('/electric/', 'Electric'), ('/engines/', 'Engines'), ('/vin/', 'VIN check')]
-NAV_MORE = [('/best/', 'Best cars'), ('/stats/car-complaints/', 'Statistics'), ('/supercars/', 'Supercars'), ('/motorcycles/', 'Motorcycles'), ('/studies/', 'Studies'), ('/check-engine-light/', 'Engine code lookup'), ('/best-gas-mileage/', 'Gas mileage'), ('/planes/', 'Planes'), ('/car-loan-rates/', 'Loan rates'), ('/vote/', 'Vote'), ('/data/', 'Free data'), ('/method/', 'How it works')]
+NAV_MORE = [('/best/', 'Best cars'), ('/rankings/', 'Every car ranked'), ('/stats/car-complaints/', 'Statistics'), ('/supercars/', 'Supercars'), ('/motorcycles/', 'Motorcycles'), ('/studies/', 'Studies'), ('/check-engine-light/', 'Engine code lookup'), ('/best-gas-mileage/', 'Gas mileage'), ('/planes/', 'Planes'), ('/car-loan-rates/', 'Loan rates'), ('/vote/', 'Vote'), ('/data/', 'Free data'), ('/method/', 'How it works')]
 GH_CHEV = '<svg viewBox="0 0 8 8" aria-hidden="true"><path d="M2.5 1 5.5 4 2.5 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 GH_DOWN = '<svg viewBox="0 0 8 8" aria-hidden="true"><path d="M1 2.75 4 5.75 7 2.75" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 # 11-10 v2 (Elijah: "it still can look a little better"): one small monochrome line icon per main menu item (24 px grid, stroke 1.8)
@@ -278,7 +278,7 @@ def gh_header(path):
     # top-bar links (gh-x) only show where the top bar is folded away (<1024 px). Lemon-only: the styles live in site.css, not the shared gh.css.
     inbar = {u for u, _ in NAV_TOP}; lab = dict(NAV_TOP + NAV_MORE); lab['/check-engine-light/'] = 'Engine codes'
     grp = [('Look up', ['/cars/', '/?type=trucks', '/brands/', '/compare/', '/vin/', '/engines/', '/check-engine-light/']),
-           ('Explore', ['/best/', '/electric/', '/motorcycles/', '/supercars/', '/best-gas-mileage/', '/studies/', '/stats/car-complaints/']),
+           ('Explore', ['/best/', '/rankings/', '/electric/', '/motorcycles/', '/supercars/', '/best-gas-mileage/', '/studies/', '/stats/car-complaints/']),
            ('More', ['/planes/', '/car-loan-rates/', '/vote/', '/data/', '/method/'])]
     assert sorted(u for _, us in grp for u in us) == sorted(lab), 'gh menu groups miss a link'
     sheet = ''.join(f'<span class="gh-g gh-g{i}" aria-hidden="true">{g}</span>' + ''.join(f'<a class="{"gh-x " if u in inbar else ""}gh-i{i}" href="{GH_HREF.get(u, u)}"{cur(u)}>{gh_ic(u)}<span>{lab[u]}</span></a>' for u in us)
@@ -301,6 +301,7 @@ GH_SD = (f'<form class="lxs-d" role="search" action="/" method="get"><div class=
          '<input id="ghd" name="q" type="search" autocomplete="off" placeholder="Search cars, codes, lists" aria-label="Search cars, engine codes and lists" enterkeyhint="search">'
          '<div id="ghds" class="fsug" role="listbox" hidden></div></div></form>')
 LXS_V = '1113a'   # lxs.css + lookup.js version (N1 navigation fixes)
+GH_IC.setdefault('/rankings/', '<path d="M4 6h16M4 12h11M4 18h6"/>')   # 11-13 (N1, problem 12): "Every car ranked" in the menu, best to worst bars
 def navlinks(path):
     on = lambda u: path.startswith(u) or (u == '/cars/' and path.startswith('/cars'))
     return ''.join(f'<a href="{u}"{" class=on aria-current=page" if on(u) else ""}>{t}</a>' for u, t in NAV)
@@ -2228,6 +2229,7 @@ exec(open('thanks_page.py', encoding='utf-8').read())   # 11-07 donation thank-y
 import perf_page; PERF_URLS = perf_page.build_all(OUT, page)   # 11-11 performance-car pages (data/perf/<slug>.json): the M3's own page gets the slider + performance Overview; the rest get pages of their own
 exec(open('all_engines.py', encoding='utf-8').read())   # 11-12 /engines/: every engine, searchable, + one coming-soon engine per model
 exec(open('find_index.py', encoding='utf-8').read())   # 11-11: the search index of every car page and card + a build check that none is missing
+exec(open('alias_pages.py', encoding='utf-8').read())   # 11-13 (N1): redirect stubs at the addresses people type (/cars/ford-f150/, /cars/honda/, reversed match-ups)
 json.dump(PD, open('data/page_dates.json', 'w', encoding='utf-8'), separators=(',', ':'))
 
 # 11-13 navigation test (N1, problem 10: "the 404 page has 3 buttons and no search, and loads the whole 250 KB home page"): a light page
