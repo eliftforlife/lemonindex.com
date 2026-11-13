@@ -86,7 +86,7 @@ def html_block(fid, y, gen_years=None, gen_label=''):
     fewl = (f'<p class="rcq-few">Not enough reports yet for a number: {E(", ".join(f"{a} ({n})" for a, n, *_ in few[:6]))}. We show a range once 5 owners name a bill.</p>' if few else '')
     tl = ''.join(f'<li><b>{E(a)}:</b> {w} <small>(automaker note to dealers, NHTSA document {E(doc)}: “{E(line)}”)</small></li>' for a, w, doc, line in T)
     return ('<section class="yc yfx" id="costs"><h2>What repairs cost</h2>'
-            + (f'<p class="yf-s">Repair bills owners named in their complaints to the government (NHTSA), {E(span)}.</p><ul class="rcq">{rows}</ul>' if shown
+            + (f'<p class="yf-s">Repair bills owners named in their complaints to the government (NHTSA), {E(span)}, in U.S. dollars.</p><ul class="rcq">{rows}</ul>' if shown
                else f'<p class="yf-s">Not enough repair bills reported for the {E(span)} yet to show a cost.</p>')
             + (fewl if shown else '')
             + (f'<h3 class="rcq-h">What to ask the shop</h3><ul class="rcq-tips">{tl}</ul>' if tl else '')

@@ -11,7 +11,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 E = lambda s: html.escape(str(s), quote=True)
 LIC = 'https://creativecommons.org/licenses/by/4.0/'
 BASE = 'https://lemonindex.com'
-ASSET = '<link rel="stylesheet" href="/assets/tabs.css?v=5"><script src="/assets/tabs.js?v=2"></script>'
+ASSET = '<link rel="stylesheet" href="/assets/tabs.css?v=6"><script src="/assets/tabs.js?v=2"></script>'
 
 def engines(fid):
     p = os.path.join(HERE, 'data', f'engines_{fid}.json')
@@ -202,11 +202,12 @@ def transform_model(body, eng_html, short):
     secs = [c for c in root.find_all(recursive=False) if c is not ph]
     pick = lambda pred: [c for c in secs if pred(c)]
     years = pick(lambda c: c.get('id') == 'years')
+    gh = pick(lambda c: c.get('id') == 'gas-hybrid')   # 11-12 r2 (Carlos): the Gas or hybrid card shows in Overview
     bw = pick(lambda c: 'bw2' in (c.get('class') or []))
     cmp_ = pick(lambda c: c.find('h2') and c.find('h2').get_text().startswith('Compare'))
     qa = pick(lambda c: 'yqa' in (c.get('class') or []))
-    table = pick(lambda c: c.find('table') is not None and c.get('id') != 'years')
-    used = set(map(id, years + bw + cmp_ + qa + table))
+    table = pick(lambda c: c.find('table') is not None and c.get('id') not in ('years', 'gas-hybrid'))
+    used = set(map(id, years + bw + cmp_ + qa + table + gh))
     rest = [c for c in secs if id(c) not in used and 'shline' not in (c.get('class') or [])]
     tail = ''.join(str(c) for c in secs if 'shline' in (c.get('class') or []))
     if years:
@@ -227,7 +228,7 @@ def transform_model(body, eng_html, short):
     nrow = len(S_.select('table tbody tr')); c_d = _ovcard('data', 'All the data', f'{nrow} model years' if nrow else '', 'in one table: index, complaints, recalls, mpg' if nrow else '', go='the table')
     over = f'{_s(note)}<div class="ovg ovg4">{c_y}{c_c}{c_q}{c_d}</div>' + (f'<p class="ovslim">{_txt(rnew)}</p>' if rnew else '')   # 11-10: preview cards
     years = bw + years
-    over = _ovfilter(over, [('years', 0, ''.join(map(str, years))), ('compare', 0, ''.join(map(str, cmp_))), ('questions', 0, ''.join(map(str, qa))), ('data', 0, ''.join(map(str, table)))])
+    over = _ovfilter(over, [('years', 0, ''.join(map(str, years))), ('compare', 0, ''.join(map(str, cmp_))), ('questions', 0, ''.join(map(str, qa))), ('data', 0, ''.join(map(str, table)))]) + (f'<div class="ovk">{"".join(map(str, gh))}</div>' if gh else '')
     tabs = _tabs([('overview', 'Overview', over), ('years', 'Years & engines' if eng_html else 'Years', ''.join(map(str, years))), ('compare', 'Compare', ''.join(map(str, cmp_))),
                   ('questions', 'Questions', ''.join(map(str, qa))), ('data', 'All the data', ''.join(map(str, table)))], f'{short} sections')
     cls = ' '.join(root.get('class') or [])
@@ -296,7 +297,7 @@ def overview_cards_year(over, probs, fix, rec, yrs, qa):
         _mk2 = hm.group(1) if hm else ''
     mk = next((k.replace('Repair notes from ', '') for k in card if k.startswith('Repair notes')), '') or _mk2
     rq = [(_txt(li.select_one('.rcq-t span')), _txt(li.find('b')), _txt(li.select_one('.rcq-m small'))) for li in S_.select('#costs .rcq li') if li.find('b')]
-    if rq: c2 = _ovcard('repairs', 'Repairs & costs', E(rq[0][1]), f'{E(rq[0][0])}: one repair bill · {E(rq[0][2])}', (f'<span class="ovc-s2">{nnotes} repair notes{" from " + E(mk) if mk else ""}</span>' if nnotes else ''), go='repairs')
+    if rq: c2 = _ovcard('repairs', 'Repairs & costs', E(rq[0][1]), f'{E(rq[0][0])}: one repair bill, USD · {E(rq[0][2])}', (f'<span class="ovc-s2">{nnotes} repair notes{" from " + E(mk) if mk else ""}</span>' if nnotes else ''), go='repairs')
     elif costs: c2 = _ovcard('repairs', 'Repairs & costs', E(costs[0][1]), f'{E(costs[0][0])}: one repair, as owners say it', (f'<span class="ovc-s2">{nnotes} repair notes{" from " + E(mk) if mk else ""}</span>' if nnotes else ''), go='repairs')
     elif nnotes: c2 = _ovcard('repairs', 'Repairs', E(nnotes), f'repair notes{" " + E(mk) if mk else ""} sent dealers', go='repairs')
     else:
@@ -343,7 +344,7 @@ def transform_year(body, eng_html, short):
     over, probs, fix, rec, yrs, qa, tail, keep = [], [], [], [], [], [], [], []
     for c in items:
         h = H(c); k = C(c)
-        if c.get('id') in ('mileage-guide', 'ask-seller', 'hybrid'): keep.append(c)   # 11-12: shown in Overview, under the preview cards ('hybrid': the RAV4 Hybrid split, ux_c.py)
+        if c.get('id') in ('top-fails', 'mileage-guide', 'fix-or-sell', 'ask-seller', 'hybrid'): keep.append(c)   # 11-12 r2: + top 3 failures, fix or sell   # 11-12: shown in Overview, under the preview cards ('hybrid': the RAV4 Hybrid split, ux_c.py)
         elif 'shline' in k or ('yc-cap' in k and c.name == 'p'): tail.append(c)
         elif 'yyears' in k: yrs.append(c)
         elif 'yqa' in k: qa.append(c)

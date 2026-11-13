@@ -93,7 +93,9 @@
       "wiki4"
      ]
     }
-   ]
+   ],
+   "img": "/assets/ai-cars/ford-mustang-g4.webp?v=1",
+   "color": "red"
   },
   {
    "id": "s197",
@@ -250,7 +252,9 @@
       "fmf"
      ]
     }
-   ]
+   ],
+   "img": "/assets/ai-models/ford-mustang.webp?v=1",
+   "color": "deep blue"
   },
   {
    "id": "s197c",
@@ -352,7 +356,9 @@
       "wiki5"
      ]
     }
-   ]
+   ],
+   "img": "/assets/ai-models/ford-mustang.webp?v=1",
+   "color": "deep blue"
   },
   {
    "id": "s550",
@@ -504,7 +510,9 @@
       "pp2"
      ]
     }
-   ]
+   ],
+   "img": "/assets/ai-cars/ford-mustang-g6.webp?v=1",
+   "color": "dark gray"
   },
   {
    "id": "s650",
@@ -595,7 +603,9 @@
       "p24"
      ]
     }
-   ]
+   ],
+   "img": "/assets/ai-cars/ford-mustang-g7.webp?v=1",
+   "color": "blue"
   }
  ],
  "engines": {

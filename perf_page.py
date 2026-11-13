@@ -140,6 +140,16 @@ def _z(z):
     if z.get('claim') is not None: return f'{z["claim"]:.1f} s', 'maker figure'
     return None, ''
 def _hp(v): return (v.get('hp') or {}).get('v')
+def z_fallback(g, v):
+    """11-12 round 2 (Devin: the STI and Mustang GT heroes showed '–' for 0-60 while their trim cards list 4.8 s and 4.2 s): the lead trim's
+    0-60, else the quickest tested trim of the same generation. -> (value 's', label, trim name or '' when it is the lead trim)"""
+    zv, zl = _z(v.get('z60'))
+    if zv: return zv, zl, ''
+    best = None
+    for x in g['variants']:
+        xv, xl = _z(x.get('z60'))
+        if xv and (best is None or float(xv.split()[0]) < float(best[0].split()[0])): best = (xv, xl, x['name'])
+    return best or (None, '', '')
 
 def variant_card(v, R, star):
     R.open(); hp = v.get('hp') or {}; zv, zl = _z(v.get('z60'))
@@ -266,8 +276,9 @@ def build(slug, out='docs'):
         if src and pg is not None and pills:
             imgs += f'<p class="pf-pic">Pictured: the {E(G[pg]["code"])} {E(short)} ({pc["img_year"]}). <span class="pf-picn"></span></p>'
     def stats(g):
-        v = lead(g); zv, zl = _z(v.get('z60')); top = ((v.get('top') or {}).get('v') or '')
-        s = [(str(_hp(v) if _hp(v) is not None else '–'), 'horsepower'), (zv.replace(' s', '') if zv else '–', '0–60 mph, sec'), (top.replace(' mph', '') or '–', 'mph top speed')]
+        v = lead(g); zv, zl, zt = z_fallback(g, v); top = ((v.get('top') or {}).get('v') or '')
+        s = [(str(_hp(v) if _hp(v) is not None else '–'), 'horsepower'), (zv.replace(' s', '') if zv else '–', '0–60 mph, sec' + (f' ({zt})' if zt else '')), (top.replace(' mph', '') or '–', 'mph top speed')]
+        if s[2][0] == '–' and s[1][0] != '–': s = s[:2]   # 11-12 round 2: no empty "top speed" tile when we have no figure
         return (f'<div class="pf-stats{" on" if g is G[focus] else ""}" data-g="{g["id"]}"><p class="pf-sl">{E(v["name"])} <span>{E(g["code"])} · {E(v["years"])}</span></p>'
                 + ''.join(f'<div class="pf-st"><b>{E(a)}</b><span>{E(b)}</span></div>' for a, b in s) + (f'<p class="pf-tag">{E(g["tag"])}</p>' if g.get('tag') else '') + '</div>')
     info = ('<button class="ii" type="button" aria-label="Image info" aria-expanded="false" aria-controls="pf-ii">i</button><div class="ii-pop" id="pf-ii" role="note" hidden>'
@@ -460,7 +471,7 @@ def inject(slug, out='docs'):
         if m.get('name') == 'description' or m.get('property') in ('og:description',) or m.get('name') == 'twitter:description': m['content'] = desc
         if m.get('property') == 'og:title' or m.get('name') == 'twitter:title': m['content'] = t.string
     ld = f'<script type="application/ld+json">{json.dumps(R.ld(BASE + D["page"], t.string), ensure_ascii=False)}</script>'
-    s.head.append(BeautifulSoup(ASSET + ld + ('' if s.find('script', src=re.compile('imginfo')) else '<script src="/assets/imginfo.js?v=1" defer></script>'), 'html.parser'))
+    s.head.append(BeautifulSoup(ASSET + ld + ('' if s.find('script', src=re.compile('imginfo')) else '<script src="/assets/imginfo.js?v=2" defer></script>'), 'html.parser'))
     open(page, 'w', encoding='utf-8').write(str(s))
     return True
 
@@ -510,7 +521,7 @@ def standalone(slug, page_fn, out='docs'):
     qh = '<section class="pf-sec yqa"><h2>Quick answers</h2>' + ''.join(f'<h3>{E(q)}</h3><p>{a}</p>' for q, a in qa) + '</section>'
     over = f'<div class="pf">{P["blocks"]}{P["cmp"]}<details class="pf-sd" id="pf-sources"><summary>All sources ({len(R.order)})</summary>{R.html()}</details></div>'
     tabs = TAB._tabs([('overview', 'Overview', over), ('problems', 'Problems & recalls', f'<div class="pf">{rel}</div>'), ('questions', 'Questions', f'<div class="pf">{qh}</div>')], f'{short} sections')
-    body = f'{TAB.ASSET}{ASSET}<script src="/assets/imginfo.js?v=1" defer></script><div class="advp tbl pfp">{hero}{tabs}</div>'
+    body = f'{TAB.ASSET}{ASSET}<script src="/assets/imginfo.js?v=2" defer></script><div class="advp tbl pfp">{hero}{tabs}</div>'
     g, v = _star(D)
     title = f'{D["name"]}: 0-60, Horsepower, Engine, Problems'
     zv = _z(v.get('z60'))[0]

@@ -269,10 +269,10 @@ elif UXC == 'compare':
         for g in D['gens']:
             vs = g['variants']
             v = next((x for x in vs if x['id'] == D.get('star')), next((x for x in vs if x.get('star')), next((x for x in vs if not x.get('pkg') and _PP._hp(x)), vs[0])))
-            zv, zl = _PP._z(v.get('z60')); eng = D['engines'].get(g['engine']) or {}
+            zv, zl, zt = _PP.z_fallback(g, v); eng = D['engines'].get(g['engine']) or {}   # 11-12 r2 (Devin): the quickest tested trim when the lead trim has no test
             ep = eng.get('page') if eng.get('page') and _os.path.exists(f'{OUT}{eng["page"]}index.html') else ''
             yrs = range(g['y0'], g['y1'] + 1)
-            out.append(dict(id=g['id'], c=g['code'], y=g['years'], y0=g['y0'], y1=g['y1'], v=v['name'], hp=_PP._hp(v), tq=(v.get('tq') or {}).get('v'), z=zv.replace(' s', '') if zv else None, zs=zl,
+            out.append(dict(id=g['id'], c=g['code'], y=g['years'], y0=g['y0'], y1=g['y1'], v=v['name'], hp=_PP._hp(v), tq=(v.get('tq') or {}).get('v'), z=zv.replace(' s', '') if zv else None, zs=zl + (f', {zt}' if zt else ''), zt=zt,
                             top=(v.get('top') or {}).get('v'), wt=(v.get('weight') or {}).get('v'), p=(v.get('price') or {}).get('v'), pn=(v.get('price') or {}).get('note') or '',
                             e=eng.get('name') or g['engine'], ew=eng.get('what') or '', eu=ep, yt=_PP._avg(YS, g['y0'], g['y1'])[0],
                             nc=((nh.get('gens') or {}).get(g['id']) or {}).get('n'), rc=len({r['id'] for y in yrs for r in rc.get(str(y), [])})))
@@ -364,7 +364,7 @@ elif UXC == 'compare':
 <details class="yd"><summary>{len(PERF_PAIRS)} performance match-ups</summary><ul class="cmp">{pl}</ul></details>
 <details class="yd"><summary>All {len(_cp)} everyday-car match-ups</summary><ul class="cmp">{cl}</ul></details></section>
 {pcredit(who(*[mphoto(x) for a, b, _ in _top[:6] for x in (a, b)], mphoto('toyota-rav4', 2019), mphoto('honda-cr-v', 2017), *[_ev(x) for a, _, b, _ in EV_TOP for x in (a, b) if _evok(x)], *[perf_img(x) for p in PERF_TOP for x in p]))}
-{share_line("Compare up to 4 cars side by side: problems, recalls, mpg, EV range and specs. Free:", 'Know someone stuck between cars?')}</div><script src="/assets/compare.js?v=1112r2" defer></script>''',
+{share_line("Compare up to 4 cars side by side: problems, recalls, mpg, EV range and specs. Free:", 'Know someone stuck between cars?')}</div><script src="/assets/compare.js?v=1112r2d" defer></script>''',
          ld=[{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Car comparisons", "url": BASE + '/compare/'}])
     curls.insert(0, '/compare/')
 
@@ -414,7 +414,7 @@ elif UXC == 'data':
         G = perf_gens(slug)
         CMP = [e for e in CMP if e['u'] != D['page']]   # the M3's model page: the performance entry wins (it's what people compare)
         CMP.append({'i': slug, 'n': D['name'], 'b': D.get('make') or D['name'].split(' ')[0], 'u': D['page'], 'k': 'perf', 'a': _al.get(D['page'], ''),
-                    'g': [{k: g[k] for k in ('id', 'c', 'y', 'v', 'hp', 'tq', 'z', 'zs', 'top', 'wt', 'p', 'e', 'eu', 'yt', 'nc', 'rc')} for g in G], 'd': D.get('focus') or G[-1]['id']})
+                    'g': [{k: g[k] for k in ('id', 'c', 'y', 'v', 'hp', 'tq', 'z', 'zs', 'zt', 'top', 'wt', 'p', 'e', 'eu', 'yt', 'nc', 'rc')} for g in G], 'd': D.get('focus') or G[-1]['id']})
     for c in SCX:   # supercars: EPA mpg, fuel cost and recalls per model year
         ys = {str(y['y']): [None, None, len(y.get('recalls') or []), *(y.get('comb') or [None, None]), None, None, *(y.get('cost') or [None, None]), 0] for y in c['years']}
         u = f'/supercars/{_slg(c["name"])}/'
@@ -427,8 +427,12 @@ elif UXC == 'data':
         by = m.get('by_year') or {}; rc = m.get('recalls') or []
         ys = {y: [None, n, sum(1 for r in rc if int(y) in (r.get('years') or [])) if rc and rc[0].get('years') is not None else None, None, None, None, None, None, None, 0] for y, n in by.items()}
         if ys: CMP.append({'i': m['id'], 'n': m['name'], 'b': m.get('brand') or m['name'].split(' ')[0], 'u': u, 'k': 'co', 'a': _al.get(u, ''), 'y': ys, 'd': max([y for y in ys if int(y) <= 2022] or ys)})   # 11-12 r2: a used-shopper year
+    for e in CMP:   # 11-12 round 2 (Devin: the hero kept its RAV4 vs CR-V picture): each car's own picture for the compare tool's hero
+        _pi = perf_img(e['i']) if e['k'] == 'perf' else None; _mid = 'toyota-rav4' if e['i'] == 'toyota-rav4-hybrid' else e['i']
+        if _pi: e['im'] = _pi['src']
+        elif _os.path.exists(f'assets/ai-models/{_mid}.webp'): e['im'] = f'/assets/ai-models/{_mid}.webp?v=1'
     _os.makedirs(f'{OUT}/assets', exist_ok=True)
-    _json.dump({'v': 2, 'cars': CMP}, open(f'{OUT}/assets/compare.json', 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
+    _json.dump({'v': 2, 'cars': CMP, 'pages': sorted(set(curls + PERF_PAIR_URLS))}, open(f'{OUT}/assets/compare.json', 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
     print('compare.json:', len(CMP), 'cars,', sum(1 for e in CMP if e['k'] == 'perf'), 'performance,', sum(1 for e in CMP if e['k'] == 'ev'), 'electric')
     # every EV must be comparable (Dan's Model 3 / Ioniq 5 case), and every performance page: the build stops otherwise
     _cu = {e['u'] for e in CMP}
