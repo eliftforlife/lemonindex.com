@@ -3,8 +3,8 @@
 #   one-line hero (what the list ranks and how) -> the ranked list -> best by type -> quick answers as tap-to-open questions
 #   -> "Before you buy" as cards (the VIN check in its own box) -> the budget lists as photo cards -> sources, small.
 # Run by seo_pages.py with exec() before teen_page.py. Classes: cb-* (assets/cb.css). The answers stay in the HTML inside <details> for search.
-CB_ASSET = '<link rel="stylesheet" href="/assets/cb.css?v=1">'
-CB_JS = '<script src="/assets/cb.js?v=1" defer></script>'
+CB_ASSET = '<link rel="stylesheet" href="/assets/cb.css?v=2">'
+CB_JS = '<script src="/assets/cb.js?v=2" defer></script>'
 
 
 def cbx_head(h1, line):
@@ -53,7 +53,8 @@ def cbx_types(groups, rowf):
 
 
 def cbx_src(html_):
-    return f'<details class="cb-src cbx-src"><summary>Sources and method</summary><p>{html_}</p></details>'
+    # 11-13 v4: the sources sit behind a small corner button (popover), still in the HTML
+    return f'<div class="cbx-srcrow">{cb_info(html_, "Sources and method", "Sources and method")}</div>'
 
 
 # ---- 11-13 v2 (Elijah on the phone screens: "the safety screen things need better design like bars or charts ... it's a little confusing still"):
@@ -66,7 +67,7 @@ def cbx_scale(vals): return max(120, max(vals) * 1.08)
 def cbx_chart(rows, mx, cap, avg=True, title='At a glance'):
     """rows = [(href, label_html, value, value_txt, cls)]; bar length = value / mx; a dashed line at 100 (the average car) when avg"""
     line = f'<em style="left:{100 / mx * 100:.1f}%"></em>' if avg else ''
-    return (f'<div class="cbx-chart"><p class="cbx-ct"><b>{title}</b><span>{cap}</span></p>'
+    return (f'<div class="cbx-chart"><div class="cbx-ct"><b>{title}</b>{cb_info(cap, "How to read this chart")}</div>'
             + ''.join(f'<a class="cbx-cr" href="{h}"><span class="cbx-crl">{lab}</span><span class="cbx-crt"><i class="{k}" style="--w:{max(1.5, min(100, v / mx * 100)):.1f}%"></i>{line}</span><b class="{k}">{t}</b></a>'
                       for h, lab, v, t, k in rows) + '</div>')
 

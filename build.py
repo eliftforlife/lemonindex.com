@@ -1352,9 +1352,7 @@ ASKQ = [(r'transmission|power train|drivetrain', 'Any slipping, hard or late shi
 # 11-12 round 2 (Liam, Ontario): Transport Canada runs Canada's recalls; NHTSA numbers are U.S. campaigns
 TC_DB = 'https://wwwapps.tc.gc.ca/Saf-Sec-Sur/7/VRDB-BDRV/search-recherche/menu.aspx?lang=eng'
 TC_VIN = 'https://tc.canada.ca/en/road-transportation/defects-recalls-vehicles-tires-child-car-seats/find-vehicle-tire-child-car-seat-manufacturer'
-CA_RECALL = (f'<p class="yc-cap ca-note"><b>In Canada?</b> These are U.S. (NHTSA) recalls. Transport Canada runs its own, with its own numbers: '
-             f'<a href="{TC_DB}" rel="noopener nofollow" target="_blank">search Transport Canada recalls</a> or <a href="{TC_VIN}" rel="noopener nofollow" target="_blank">check a VIN on the maker&#39;s Canadian recall site</a>. '
-             'The complaints on this page come from U.S. owners; the same models sold in Canada share the same parts.</p>')
+CA_RECALL = f'<p class="yc-cap ca-note">Canada? See recalls at <a href="{TC_DB}" rel="noopener nofollow" target="_blank">Transport Canada</a></p>'   # 11-13 (Elijah): one short line, not a paragraph
 # 11-12 round 2 (Jake: A/C was the #1 repair bill, 117 owners, but no seller question asked about it): questions from the year's top
 # repair-bill areas too (repair_costs.json, the same generation window as its "What repairs cost" block)
 ASKB = {'A/C & heat': 'Does the A/C blow cold and the heat work? Ask whether the A/C compressor or condenser was replaced.',
@@ -2099,7 +2097,7 @@ page('/cars/', 'Look Up Your Car: Problems by Model and Year | The Lemon Index',
      ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": "Look up your car", "url": BASE + '/'}], canon='/')   # 11-11: same grid as the home page: one indexable copy
 # 11-11: the home page = this grid (search, the 4 tabs, every model), with the home's own title, schema, H1 and trust line
 page('/', HOME_PAGE['title'], HOME_PAGE['desc'], f'''
-<div class="pg pg-home"><div class="ph ph-f">{finder('<span class="ph-e">The Lemon Index</span>Look up any car.', 'Every model year, 2000 to 2025. Free.', foot=f'<p class="fnote">Scores from {COUNTED:,} owner complaints filed with the U.S. government in each car&#39;s first 3 years (model years 2010–2022). <a href="/data/#totals">What each total covers</a></p><p class="fnote">A &ldquo;lemon&rdquo; is American slang for a car with a lot of problems (en español: un carro con muchas fallas). In Canada? The complaints are from U.S. owners, and the same models are sold in Canada with the same parts; recalls there: <a href="{TC_DB}" rel="noopener nofollow" target="_blank">Transport Canada</a>.</p>')}</div>
+<div class="pg pg-home"><div class="ph ph-f">{finder('<span class="ph-e">The Lemon Index</span>Look up any car.', 'Every model year, 2000 to 2025. Free.', foot=f'<p class="fnote">Scores from {COUNTED:,} owner complaints filed with the U.S. government in each car&#39;s first 3 years (model years 2010–2022). <a href="/data/#totals">What each total covers</a></p><p class="fnote">Canada? See recalls at <a href="{TC_DB}" rel="noopener nofollow" target="_blank">Transport Canada</a></p>')}</div>
 {CARS_GRID}
 <section class="faq"><h2>Questions</h2>{HOME_FAQ}</section></div><script src="/assets/ctabs.js?v=4" defer></script>''', ld=HOME_PAGE['ld'])
 
@@ -2225,7 +2223,7 @@ page('/vin/', 'Free VIN Decoder and Recall Check: Look Up Any VIN | The Lemon In
 <section class="vnv" id="no-vin"><h2>No VIN yet?</h2><p class="note">Pick the car and year. You&#39;ll see every recall for it, newest first: a recall from the last 12 months has had the least time to be fixed, so it&#39;s the one most likely still open on a used car.</p>
 <form id="vnvf" class="vnv-f" autocomplete="off"><label><span>Make</span><select name="mk" aria-label="Make"></select></label><label><span>Model</span><select name="md" aria-label="Model"></select></label><label><span>Year</span><select name="y" aria-label="Year"></select></label><button class="btn" type="submit">Show recalls</button></form>
 <div id="vnvout" class="vin-recalls" aria-live="polite"></div></section>
-<p class="fnote vin-ca"><b>In Canada?</b> Recalls there are run by Transport Canada: <a href="{TC_DB}" rel="noopener nofollow" target="_blank">search Transport Canada recalls</a> or <a href="{TC_VIN}" rel="noopener nofollow" target="_blank">check a VIN on the maker&#39;s Canadian recall site</a>.</p>
+<p class="fnote vin-ca">Canada? See recalls at <a href="{TC_DB}" rel="noopener nofollow" target="_blank">Transport Canada</a></p>
 <div class="ph-v">{pimg(mphoto('toyota-camry', 2019), 'Toyota Camry')}</div>{pcredit(who(mphoto('toyota-camry', 2019)))}
 <script id="pick" type="application/json">{json.dumps(PICK, ensure_ascii=False).replace("</", "<\\/")}</script><script id="valias" type="application/json">{json.dumps(VALIAS, separators=(",", ":"))}</script><script id="vnames" type="application/json">{json.dumps(VNAMES, separators=(",", ":"))}</script><script id="vimg" type="application/json">{json.dumps(sorted(f[:-5] for f in os.listdir("assets/ai-models") if f.endswith(".webp")), separators=(",", ":"))}</script><script src="/assets/vin.js?v=1112cb" defer></script></section></div>''')
 shutil.copytree('assets', f'{OUT}/assets', dirs_exist_ok=True); shutil.copy('data/survey.json', f'{OUT}/assets/survey-q.json'); shutil.copy('data/votes.json', f'{OUT}/assets/votes.json')

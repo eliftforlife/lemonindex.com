@@ -8,7 +8,21 @@
 # The old gray lede ("Toyota Camry or Honda Civic? Here's the Civic vs Camry question ...") stays in the HTML, inside "Where this comes from".
 # Run by build.py with exec() (build.py's FY, BYNAME, extra, CARU, rec_year, good_years, avoid_years, worst_year, YTR, RCQ, TOPF ... in scope).
 # Every number is from our data files; nothing is typed by hand. Classes: cb-* (assets/cb.css, shared with the /best/ pages).
-CB_ASSET = '<link rel="stylesheet" href="/assets/cb.css?v=1">'
+CB_ASSET = '<link rel="stylesheet" href="/assets/cb.css?v=2">'
+CB_JS = '<script src="/assets/cb.js?v=2" defer></script>'   # info popovers, sticky section nav, VIN box
+# 11-13 v4 (Elijah: "the small gray text nobody reads"): explainers and sources live behind a small (i) button in each card's corner,
+# a popover that opens on tap / click (hover on desktop), Esc closes. The text stays in the HTML, so every source is still on the page.
+_CB_N = [0]
+_CB_I = ('<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round">'
+         '<circle cx="12" cy="12" r="9.3" stroke-width="1.6"/><path d="M12 11v5.6" stroke-width="2"/><path d="M12 7.6h.01" stroke-width="2.6"/></svg>')
+def cb_info(html_, label='How to read this', text=''):
+    _CB_N[0] += 1; i = f'cbi{_CB_N[0]}'
+    t = f'<span>{text}</span>' if text else ''
+    return (f'<span class="cb-inf"><button type="button" class="cb-ib{" cb-ibt" if text else ""}" aria-label="{E(label)}" aria-expanded="false" aria-controls="{i}">{_CB_I}{t}</button>'
+            f'<span class="cb-pop" id="{i}" role="note">{html_}</span></span>')
+def cb_h2(id_, title, *corner):
+    ida = f' id="{id_}"' if id_ else ''
+    return f'<div class="cb-sh2"><h2{ida}>{title}</h2><div class="cb-sha">{"".join(corner)}</div></div>'
 YBUY = _load('data/yt_buyer.json')   # 11-12 carousel agent's YouTube generation study (praise / complaints per generation); {} until it lands
 
 
@@ -95,7 +109,7 @@ def cmp_page(a, b):
     def car(F, c):
         win = (not close) and F is L
         return (f'<a class="cb-car{" cb-win" if win else ""}" href="{CARU(F)}">{img(F)}<b>{E(F["name"])}</b>'
-                f'<span class="cb-car-s">Lemon Index <i>{c["li"]}</i></span>' + ('<span class="cb-flag">Winner</span>' if win else '') + '</a>')
+                f'<span class="cb-car-s">Lemon Index <i>{c["li"]}</i></span>' + ('<span class="cb-flag">WINNER</span>' if win else '') + '</a>')
     lw, tw = (wa, wb) if aL else (wb, wa)
     lr, tr = (ra[0], rb[0]) if aL else (rb[0], ra[0])
     lwy, twy = (wA, wB) if aL else (wB, wA)
@@ -131,13 +145,15 @@ def cmp_page(a, b):
         why = f'<p class="cb-why">The {E(sL)} wins because it has</p><div class="cb-rs">{"".join(top)}</div>'
         other = (f'<p class="cb-oth"><b>Where the {E(sT)} is better:</b> ' + '; '.join(f'{lab} ({re.sub("<[^>]+>", "", big)})' for _, _, big, lab, _ in winT[:3]) + '.</p>') if winT else ''
     crd = pcredit(who(mphoto(a), mphoto(b)))
-    hero = (f'<section class="cb-hero{" cb-tie" if close else ""}"><div class="cb-cars">{car(A, ca)}<span class="cb-vs">vs</span>{car(B, cb)}</div>{why}{other}'
-            f'<div class="cb-hf">{crd}<span class="cb-sh">{share_btn(sh_txt)}</span></div></section>')
-    src = (f'<details class="cb-src"><summary>Where this comes from</summary>'
-           f'<p class="sub cmp-lede">{E(QN(A))} or {E(QN(B))}? Here is the {E(_sb)} vs {E(_sa)} question answered from owner complaints filed with the government, for every model year both were sold.</p>'
+    try: _cbh = round(600 * (1 - YC.crop([ph['src'] for ph in (mphoto(a), mphoto(b)) if ph])))   # trim the empty sky both pictures share (ycarousel.py)
+    except Exception: _cbh = 600
+    src_ = (f'<p class="sub cmp-lede">{E(QN(A))} or {E(QN(B))}? Here is the {E(_sb)} vs {E(_sa)} question answered from owner complaints filed with the government, for every model year both were sold.</p>'
            f'<p>{WHAT_LI} A year counts toward the head-to-head only when both cars have 3 full years of complaints, so 2023 and newer show as partial. '
            f'Recalls are NHTSA campaigns, counted once each. Fuel costs are the EPA&#39;s estimates (15,000 miles a year). YouTube: the most-watched owner reviews and buyer guides for each generation. '
-           f'<a href="/method/">How the index works</a></p></details>')
+           f'<a href="/method/">How the index works</a></p>')
+    hero = (f'<section class="cb-hero{" cb-tie" if close else ""}"><div class="cb-cars" style="--ar:1000 / {_cbh}">{car(A, ca)}<span class="cb-vs">VS</span>{car(B, cb)}</div>{why}{other}'
+            f'<div class="cb-hf">{cb_info(src_, "Where this data comes from", "Data sources")}<span class="cb-sh">{crd}{share_btn(sh_txt)}</span></div></section>')
+    src = ''
 
     # ---- 2. head to head: value | label | value
     def better(x, y, high):
@@ -157,24 +173,28 @@ def cmp_page(a, b):
     if fa['st'] or fb['st']: rows.append(srow('Crash test', 'NHTSA, newest model', stv(fa), stv(fb), better(fa['st'], fb['st'], True)))
     if fa['mpg'] and fb['mpg'] and fa['ev'] == fb['ev']: rows.append(srow('MPGe' if fa['ev'] else 'MPG', 'combined, newest model', mpgv(fa), mpgv(fb), better(fa['mpg'][1], fb['mpg'][1], True)))
     if fa['cost'] and fb['cost']: rows.append(srow('Fuel a year' if not (fa['ev'] and fb['ev']) else 'Electricity a year', 'EPA estimate, newest model', _cb_usd(fa['cost']), _cb_usd(fb['cost']), better(mid(fa), mid(fb), False) if _cb_apart(fa['cost'], fb['cost']) else ('', ''), ' cb-money'))
-    board = (f'<div class="cb-board"><div class="cb-row cb-bh"><div class="cb-v"><a href="{CARU(A)}">{E(_sa)}</a></div><div class="cb-l"></div><div class="cb-v"><a href="{CARU(B)}">{E(_sb)}</a></div></div>{"".join(rows)}</div>'
-             '<p class="cb-key">Lemon Index = owner complaints per car sold. 100 is the average car; lower is better. Green = the better of the two.</p>')
+    board = (f'<div class="cb-board"><div class="cb-row cb-bh"><div class="cb-v"><a href="{CARU(A)}">{E(_sa)}</a></div><div class="cb-l"></div><div class="cb-v"><a href="{CARU(B)}">{E(_sb)}</a></div></div>{"".join(rows)}</div>')
 
-    # ---- 3. years to buy / avoid (the model pages' own picks)
-    def ychip(F, v, k):
-        return f'<a class="cb-yc {k}" href="{CARU(F, v["y"])}"><b>{v["y"]}</b><span>{v["li"]}</span></a>'
+    # ---- 3. years to buy (11-13 v4, Elijah: bars instead of plain numbers): each car's 3 best and 3 worst full model years (2010+,
+    # partial 2023+ scores left out) as Lemon Index bars against the average-car line; best in brand yellow, worst in red when above average
+    _pool = {F['id']: sorted(year_pool(F), key=lambda v: (v['li'], -v['y'])) for F in (A, B)}
+    ymx = max([120] + [v['li'] * 1.04 for P in _pool.values() for v in P])
+    def ybar(F, v, k):
+        return (f'<a class="cb-yb {k}" href="{CARU(F, v["y"])}"><span class="cb-ybl">{v["y"]}</span><span class="cb-ybt"><i style="--w:{max(2, min(100, v["li"] / ymx * 100)):.1f}%"></i>'
+                f'<em style="left:{100 / ymx * 100:.1f}%"></em></span><b>{v["li"]}</b></a>')
     def buycard(F, sN):
-        g = good_years(F)[:3] or ([rec_year(F)[0]] if rec_year(F)[0] else [])
-        av = avoid_years(F)[:3]
+        P = _pool[F['id']]; best3 = P[:3]; worst3 = [v for v in sorted(P, key=lambda v: (-v['li'], -v['y'])) if v not in best3][:3]
         why_ = ''
-        if av:
-            t = ((TOPF.get(F['id']) or {}).get(str(av[0]['y'])) or {}).get('top') or []
-            if t: why_ = f'<small class="cb-yw">{av[0]["y"]}: owners name <b>{E(t[0]["t"].lower())}</b> most ({t[0]["n"]:,} complaints)</small>'
-        return (f'<div class="cb-card"><h3><a href="{CARU(F)}">{E(F["name"])}</a></h3>'
-                f'<p class="cb-k">Best bets</p><div class="cb-ycs">{"".join(ychip(F, v, "good") for v in g) or "<span class=cb-none>No year beats the average car.</span>"}</div>'
-                f'<p class="cb-k">Avoid</p><div class="cb-ycs">{"".join(ychip(F, v, "bad") for v in av) or "<span class=cb-none>No year far above average.</span>"}</div>{why_}</div>')
-    buy = (f'<h2 id="buy">Which years to buy</h2><div class="cb-two">{buycard(A, _sa)}{buycard(B, _sb)}</div>'
-           '<p class="cb-key">Number = that year&#39;s Lemon Index (2010 and newer, full years only). Tap a year for its report.</p>')
+        if worst3 and worst3[0]['li'] > 110:
+            t = ((TOPF.get(F['id']) or {}).get(str(worst3[0]['y'])) or {}).get('top') or []
+            if t: why_ = f'<p class="cb-yw">{worst3[0]["y"]}: owners name <b>{E(t[0]["t"].lower())}</b> most ({t[0]["n"]:,} complaints)</p>'
+        bests = ''.join(ybar(F, v, 'best') for v in best3) or '<span class="cb-none">Not enough scored years.</span>'
+        worsts = ('<p class="cb-k2">Most complaints</p>' + ''.join(ybar(F, v, 'bad' if v['li'] > 110 else 'mid') for v in worst3)) if worst3 else ''
+        return f'<div class="cb-card cb-buy"><h3><a href="{CARU(F)}">{E(F["name"])}</a></h3><p class="cb-k2">Fewest complaints</p>{bests}{worsts}{why_}</div>'
+    buy = (cb_h2('buy', 'Which years to buy', cb_info('Each bar is that model year&#39;s Lemon Index: owner complaints to NHTSA in its first 3 years, per car sold, against the average car of the same year. '
+                                                      'Shorter bar = fewer complaints. The dashed line is the average car (100). Model years 2010 and newer with 3 full years of complaints; '
+                                                      'partial 2023+ scores are left out. Red = worse than average. Tap a year for its full report.', 'How to read these bars'))
+           + f'<div class="cb-two">{buycard(A, _sa)}{buycard(B, _sb)}</div>')
 
     # ---- 4. year by year: one row per year, both cars side by side
     mx = max(max(ya[y]['li'], yb[y]['li']) for y in shared)
@@ -201,8 +221,10 @@ def cmp_page(a, b):
     yh = f'<div class="cb-yr cb-yh"><div class="yy"></div><div>{E(_sa)}</div><div>{E(_sb)}</div></div>'
     yrs = (f'<div class="yrs cb-yrs">{yh}' + ''.join(_row(y) for y in _top)
            + (f'<details class="yrs-more"><summary>Show {len(_rest)} older years</summary>' + ''.join(_row(y) for y in _rest) + '</details>' if _rest else '') + '</div>')
-    ybys = (f'<h2 id="your-years">Year by year</h2>{pick}{yrs}'
-            f'<p class="cb-key">Lemon Index per model year, newest first. Green = fewer complaints that year{"; 2023 and newer are partial and don&#39;t count" if len(full) < len(shared) else ""}.</p>')
+    _pt = '; 2023 and newer are partial and don&#39;t count toward the winner' if len(full) < len(shared) else ''
+    ybys = (cb_h2('your-years', 'Year by year', cb_info(f'Lemon Index per model year, newest first: owner complaints per car sold, 100 = the average car, lower is better. '
+                                                        f'Green = the car with fewer complaints that year{_pt}. Tap a year for its report.', 'How to read this'))
+            + f'{pick}{yrs}')
 
     # ---- 5. what breaks (11-13 v2, Elijah: "still a little confusing and bland"): one plain headline per car from its top complaint area,
     # the #1 problem big with an icon, #2-#3 small, then "What owners paid to fix it": the median repair cost big, the middle half small
@@ -222,18 +244,23 @@ def cmp_page(a, b):
         A_ = RCQ.areas(F['id'], y0, y1); tot = sum(x[1] for x in A_)
         bills = [x for x in A_ if x[1] >= RCQ.MIN_N][:2]
         if bills:
-            paid = (f'<p class="cb-k2 cb-bkp">What owners paid to fix it</p><p class="cb-bkx">From {tot:,} repair costs owners wrote into their complaints, {y0}–{y1} models.</p>'
+            _ex = (f'From {tot:,} repair costs owners wrote into their NHTSA complaints, {y0}–{y1} models. Typical = the middle (median) cost; '
+                   'half of owners paid within the range under it. One repair each, in U.S. dollars, not a yearly cost.')
+            paid = (f'<div class="cb-k2row"><p class="cb-k2 cb-bkp">What owners paid to fix it</p>{cb_info(_ex, "Where these costs come from")}</div>'
                     + ''.join(f'<div class="cb-bkc">{_cb_ico(ar.lower())}<span>{E(ar)}</span><b>{RCQ._r(md)}<small>typical</small></b><em>half paid {RCQ._r(lo)}–{RCQ._r(hi)}</em></div>' for ar, n, lo, md, hi, _ in bills))
         else: paid = '<p class="cb-k2 cb-bkp">What owners paid to fix it</p><p class="cb-bkx">Not enough owners wrote down what they paid yet.</p>'
         return f'<div class="cb-card cb-bk">{top_}{paid}</div>'
-    brk = (f'<h2 id="breaks">What breaks</h2><div class="cb-two">{breaks(A, ca, _sa)}{breaks(B, cb, _sb)}</div>'
-           '<p class="cb-key">Share of each car&#39;s owner complaints to NHTSA, model years 2010–2022. Costs are one repair each, in U.S. dollars, not a yearly cost.</p>')
+    brk = (cb_h2('breaks', 'What breaks', cb_info('Percent = the share of each car&#39;s owner complaints to NHTSA about that area, model years 2010–2022. One complaint can name several areas.', 'Where these numbers come from'))
+           + f'<div class="cb-two">{breaks(A, ca, _sa)}{breaks(B, cb, _sb)}</div>')
 
     # ---- 6. recalls
     def rcard2(F, r):
         return (f'<div class="cb-card cb-rc"><h3><a href="{CARU(F)}">{E(F["name"])}</a></h3><p class="cb-big">{r[0]}</p><p class="cb-k">recall campaigns, {rspan} models</p>'
                 + (f'<p class="cb-rc-s">Most for: ' + ', '.join(f'<b>{E(s)}</b> ({n})' for s, n in r[1]) + '</p>' if r[1] else '') + '</div>')
-    rec = f'<h2 id="recalls">Recalls</h2><div class="cb-two">{rcard2(A, ra)}{rcard2(B, rb)}</div><p class="cb-key">NHTSA recall campaigns for the model years both were sold, each counted once. Check a used car&#39;s open recalls with its VIN on our <a href="/vin/">VIN check</a>.</p>'
+    rec = (cb_h2('recalls', 'Recalls', '<a class="cb-cbtn" href="/vin/">VIN check</a>',
+                 cb_info(f'NHTSA recall campaigns for the {rspan} model years both cars were sold, each campaign counted once. '
+                         'Whether a recall is still open on one exact car depends on its VIN: check it on our <a href="/vin/">VIN check</a>.', 'About these recalls'))
+           + f'<div class="cb-two">{rcard2(A, ra)}{rcard2(B, rb)}</div>')
 
     # ---- 7. YouTube
     def ytcard(F):
@@ -246,8 +273,9 @@ def cmp_page(a, b):
         body_ = (f'<p class="cb-k">{E(g["label"])} · {g["videos"]} most-watched videos</p><p class="cb-k2">Praised for</p><div class="cb-tcs">{chips(g.get("praise") or [], "good")}</div>'
                  f'<p class="cb-k2">Complaints</p><div class="cb-tcs">{chips(g.get("trouble") or [], "bad")}</div>') if g else '<p class="cb-none">No generation study yet.</p>'
         return f'<div class="cb-card cb-yt"><h3><a href="{CARU(F)}">{E(F["name"])}</a></h3>{rk}{body_}</div>'
-    yt = (f'<h2 id="youtube">What YouTube owners say</h2><div class="cb-two">{ytcard(A)}{ytcard(B)}</div>'
-          '<p class="cb-key">% = share of the generation&#39;s most-watched owner reviews and buyer guides that praise or complain about it. Owner tone rank: how positively videos talk about the model vs. every model we track. Tone, not failure rates.</p>')
+    yt = (cb_h2('youtube', 'What YouTube owners say', cb_info('% = the share of the generation&#39;s most-watched owner reviews and buyer guides that praise or complain about that topic. '
+                                                             'Owner tone rank: how positively videos talk about the model vs. every model we track. It measures tone, not failure rates. Videos belong to their creators.', 'Where this comes from'))
+          + f'<div class="cb-two">{ytcard(A)}{ytcard(B)}</div>')
 
     # ---- 8. our pick
     nf = full[-min(5, len(full)):]
@@ -264,14 +292,16 @@ def cmp_page(a, b):
     if fa['cost'] and fb['cost'] and _cb_apart(fa['cost'], fb['cost']) and fa['ev'] == fb['ev']:
         P_, f_ = (A, fa) if mid(fa) < mid(fb) else (B, fb)
         pk.append(('Lowest fuel bill', E(P_['name']), f'{USD(f_["cost"])} a year (EPA, {f_["last"]})'))
-    pick_ = ('<section class="cb-pick"><h2>Our pick</h2><dl>' + ''.join(f'<div><dt>{k}</dt><dd><b>{v}</b><small>{s}</small></dd></div>' for k, v, s in pk) + '</dl></section>')
+    pick_ = ('<section class="cb-pick"><h2 id="our-pick">Our pick</h2><dl>' + ''.join(f'<div><dt>{k}</dt><dd><b>{v}</b><small>{s}</small></dd></div>' for k, v, s in pk) + '</dl></section>')
 
     # 11-13 (nav review): more match-ups with either car, so a reader can keep comparing
     _mu = [p for p in PAIRS if p != (a, b) and (a in p or b in p) and p[0] in FY and p[1] in FY][:8]
     more_ = ('<section class="cb-more"><h2>More match-ups</h2><div class="cb-mus">' + ''.join(
         f'<a href="{CMPU(*p)}">{E(vs_names(FY[p[0]], FY[p[1]])[0])} <i>vs</i> {E(vs_names(FY[p[0]], FY[p[1]])[1])}</a>' for p in _mu) + '</div></section>') if _mu else ''
-    nav = (f'<nav class="cb-jump" aria-label="On this page"><a href="#buy">Years to buy</a><a href="#your-years">Year by year</a><a href="#breaks">What breaks</a>'
-           f'<a href="#recalls">Recalls</a><a href="#youtube">YouTube</a></nav>')
+    nav = ('<nav class="cb-jump" aria-label="On this page"><div class="cb-jin">' + ''.join(f'<a href="#{h}">{t}</a>' for h, t in (
+           ('h2h', 'Head to head'), ('buy', 'Years to buy'), ('your-years', 'Year by year'), ('breaks', 'What breaks'), ('recalls', 'Recalls'), ('youtube', 'YouTube'), ('our-pick', 'Our pick'))) + '</div></nav>')
+    h2h = cb_h2('h2h', 'Head to head', cb_info('Lemon Index = owner complaints to NHTSA per car sold, against the average car of the same model years. '
+                                               '100 is the average car; lower is better. Green check = the better of the two on that line.', 'How to read this'))
     _ld_name = title.replace(' | Lemon Index', '')
     _lead_s, _trail_s = (_sa, _sb) if aL else (_sb, _sa)
     page(CMPU(a, b), title,
@@ -280,8 +310,8 @@ def cmp_page(a, b):
          + f' Every model year both were sold, {shared[0]}–{shared[-1]}, plus recalls, crash tests and MPG.', f'''
 <article class="study cmpp cb"><p class="kicker"><a href="/cars/">All cars</a> · Compare</p><h1>{E(_sa)} vs {E(_sb)}: which is more reliable?</h1>
 {CB_ASSET}{hero}{src}{nav}
-<h2>Head to head</h2>{board}
+{h2h}{board}
 {buy}{ybys}{LFA_JS}{brk}{rec}{yt}{pick_}
-{more_}<p class="note"><a href="{CARU(A)}">Every {E(A["name"])} year</a> · <a href="{CARU(B)}">Every {E(B["name"])} year</a> · <a href="/method/">How the index works</a></p>{share_line(sh_txt, 'Know someone choosing between these two?')}</article>''', kind='article',
+{more_}{CB_JS}<p class="note"><a href="{CARU(A)}">Every {E(A["name"])} year</a> · <a href="{CARU(B)}">Every {E(B["name"])} year</a> · <a href="/method/">How the index works</a></p>{share_line(sh_txt, 'Know someone choosing between these two?')}</article>''', kind='article',
          ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": _ld_name, "url": BASE + CMPU(a, b)}])
     return CMPU(a, b)
