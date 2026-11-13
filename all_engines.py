@@ -19,12 +19,12 @@ def _ae_add(url, **c):
     if url in AE_LIVE: AE_LIVE[url]['t'] |= c['t']; return
     AE_LIVE[url] = dict(url=url, **c)
 # 1. BMW engine pages (ranked the same way as /engines/bmw/)
-_ae_ytn = len(globals().get('_YTRANK') or {})
+_ae_ytn = ENG_POOL_N   # 11-12 round 2: one YouTube rank pool for every engine (supercar_engine_pages.py), so no two cards say YT #1
 for s in (globals().get('STATS') or []):
     code = s['code']; m = BENG[code]; asp = m.get('asp') or ''
     tur = 'twin-turbo' if 'twin-turbo' in asp else 'turbo' if 'turbo' in asp else ''
     _ae_add(ENG_URL(code), name=f'BMW {code}', code=code, lay=' '.join(x for x in (m['size'], m['layout'], tur) if x), yrs=s['years'], img=_ae_img(BPH.get(code)),
-            yt=(_YTRANK.get(code), _ae_ytn, 'BMW engines'), used=[BFAM.get(f, f).replace('BMW ', '') for f in s['fams']], t={'b'}, f='gas', mk='BMW', o=(0, _YTRANK.get(code, 999)))
+            yt=(_YTRANK.get(code), _ae_ytn, ENG_POOL_LBL), used=[BFAM.get(f, f).replace('BMW ', '') for f in s['fams']], t={'b'}, f='gas', mk='BMW', o=(0, _YTRANK.get(code, 999)))
 # 2. supercar + performance engine pages
 for e, d in SCENG['engines'].items():
     g = _GRP(e); tg = {'s' if g == 'super' else 'p'} | ({'b'} if d['make'] == 'BMW' else set()) | ({'h'} if d['make'] in ('Honda', 'Acura') else set())
@@ -32,6 +32,9 @@ for e, d in SCENG['engines'].items():
     _ae_add(SCE_URL(e), name=d['name'], code=d.get('code', ''), lay=f'{d["size"]} {d["layout"]}, {d["asp"]}', yrs=yrs, img=_ae_img(SCP.get(e)),
             yt=(SCE_YTRANK.get(e), SCE_NRANK.get(g, 0), GW[g]), used=[_sce_label(d, c['slug']).replace(d['make'] + ' ', '') for c in d['cars']], t=tg, f='hybrid' if 'hybrid' in (d['asp'] + d['layout'] + d['name']).lower() else 'gas', mk=d['make'],
             o=(1 if g == 'super' else 2, SCE_YTRANK.get(e, 999)))
+# 2b. engine pages built from the performance files only (engine_more.py: the EA888 from the Golf R file)
+for c in globals().get('ENG_EXTRA_CARDS') or []:
+    _ae_add(c['url'], name=c['name'], code=c['code'], lay=c['lay'], yrs=c['yrs'], img=None, yt=(ENG_POOL_RANK.get(c['url']), ENG_POOL_N, ENG_POOL_LBL), used=c['used'], t={'p'}, f='gas', mk=c['mk'], o=(2, 999))
 # 3. per-model engine lists (the Civic's, so far): each opens that model page's Engines view
 _AE_MODEL_ENG = set()
 for _p in sorted(_aeg.glob('data/engines_*.json')):
@@ -164,6 +167,7 @@ _ae_body = f'''<div class="pg"><div class="ph ph-f"><section class="finder aefin
 <section class="aes" data-s="live"><h2>Engine pages <span class="h2s">YouTube rank in the corner, where owners have posted enough videos.</span></h2><div class="aeg">{"".join(_ae_card(c, i == 0) for i, c in enumerate(_ae_live))}</div></section>
 <section class="aes" data-s="soon" data-nosnippet><h2>Coming soon <span class="h2s">One engine per model and fuel: the one EPA lists on the most model years. Pages are on the way.</span></h2><div class="aeg">{"".join(_ae_soon(mk, eng, v['models'], v['fuel']) for (mk, eng), v in _ae_soonl)}</div></section>
 <p class="aenone" hidden>No engine matches that yet. Try a code like B58 or a model like Camry.</p>
+<p class="note aehubs">Engine head-to-head: {" · ".join(f'<a href="{u}">{lab.replace(", ", " vs ").replace(" and ", " vs ")}</a>' for u, us, lab in ENG_H2H)}. YT # = YouTube rank among all {ENG_POOL_N} {ENG_POOL_LBL}.</p>
 <p class="note aehubs">Engine hubs: <a href="/engines/bmw/">BMW engines</a> · <a href="/engines/supercars/">Supercar engines</a> · <a href="/engines/performance/">Performance engines</a> · <a href="/check-engine-light/">Check engine light codes</a> (OBD-II trouble codes, a different lookup)</p>
 <p class="ph-cr">Engine images: AI-generated illustrations by The Lemon Index, free under CC BY 4.0 (<a href="/images/">download</a>), except the BMW S55 and S58 photos (Wikimedia Commons, credited on their pages). Engine sizes and cylinders: EPA (fueleconomy.gov).</p></section></div><script src="/assets/engines.js?v=3" defer></script><script src="/assets/soonvote.js?v=1" defer></script>'''
 page('/engines/', 'Every Car Engine: Reliability, Problems & YouTube Owner Ranks',

@@ -74,6 +74,34 @@ def engine_ext(url):
                     if sid in D['sources']: out['sources'][sid] = D['sources'][sid]
     return out
 
+def engine_car_totals(url):
+    """11-12 round 2 (UX test, Devin: the Mustang page said 103 S650 complaints and 15 recalls, the Coyote page 27 complaints and no recalls):
+    per performance page using the engine at `url`, the counts that page shows for the generations with this engine (every car NHTSA files
+    under the model name) -> [(short, page, nhtsa name, y0, y1, complaints, recall campaigns)]"""
+    out = []
+    for p in sorted(glob.glob(os.path.join(HERE, 'data', 'perf', '*.json'))):
+        if p.endswith('.auto.json'): continue
+        D = _load(p); A = _load(p[:-5] + '.auto.json', {}) or {}
+        codes = [c for c, e in (D.get('engines') or {}).items() if url and e.get('page') == url]
+        gs = [g for g in D.get('gens', []) if g['engine'] in codes]
+        if not gs: continue
+        y0, y1 = min(g['y0'] for g in gs), max(g['y1'] for g in gs)
+        n = sum((((A.get('nhtsa') or {}).get('gens') or {}).get(g['id']) or {}).get('n') or 0 for g in gs)
+        rc = A.get('recalls') or {}; rec = len({r['id'] for g in gs for y in range(g['y0'], g['y1'] + 1) for r in rc.get(str(y), [])})
+        out.append((D['short'], D['page'], ((D.get('nhtsa') or {}).get('models') or [''])[0].title(), y0, y1, n, rec))
+    return out
+
+def sce_counts(url, y0, y1):
+    """the engine page's own counts (data/supercar_engines.json: complaints tied to the engine by model name or the owner's words, recalls tied
+    to it) for model years y0-y1, or None when that URL isn't one of those engine pages"""
+    S = _load('data/supercar_engines.json', {}) or {}
+    for k, d in (S.get('engines') or {}).items():
+        if f'/engines/{k}/' != url: continue
+        n = sum((d['years'].get(str(y)) or {}).get('n', 0) for y in range(y0, y1 + 1))
+        r = sum(1 for x in d.get('recalls') or [] if any(y0 <= y <= y1 for y in x['years']))
+        return dict(name=d['name'], n=n, rec=r)
+    return None
+
 class Refs:
     """Numbers sources in order of first use. R(ids...) records them for the open card (and returns '' so values carry no superscripts);
     close() gives that card's 'Sources' fold; html() the full numbered list."""
@@ -263,8 +291,17 @@ def build(slug, out='docs'):
                        + (f'<p class="pf-fix">Fix: {E(i["fix"])}</p>' if i.get('fix') else '') + nline + '</li>')
         epage = next((u for u in (eng.get('page'), '/engines/performance/', '/engines/supercars/') if u and os.path.exists(os.path.join(HERE, out, u.strip('/'), 'index.html'))), '')
         elink = (f'<a class="pf-go" href="{E(epage)}">' + (f'{E(eng["name"])} engine page →' if epage == eng.get('page') else 'Performance engines →') + '</a>') if epage else ''
+        # 11-12 round 2 (UX test, Devin): the engine page counts fewer complaints and recalls than this page; say why, with both numbers
+        rcn = ''
+        scx = sce_counts(eng.get('page'), g['y0'], min(g['y1'], 2026)) if eng.get('page') else None
+        if scx and epage == eng.get('page'):
+            n_car = ga.get('n') or 0; r_car = len({r['id'] for y in range(g['y0'], g['y1'] + 1) for r in (A.get('recalls') or {}).get(str(y), [])})
+            if (scx['n'], scx['rec']) != (n_car, r_car):
+                mdl = E(((D.get('nhtsa') or {}).get('models') or [''])[0].title())
+                rcn = (f'<p class="pf-cap">Why the <a href="{E(epage)}">engine page</a> shows fewer: it counts only the {scx["n"]:,} owner complaint{"" if scx["n"] == 1 else "s"} and {scx["rec"]} recall{"" if scx["rec"] == 1 else "s"} '
+                       f'for {E(g["years"])} that name this engine or a version that only had it. This page counts all {n_car:,} complaints and {r_car} recall campaigns NHTSA files under &quot;{mdl}&quot; for those years, other engines included.</p>')
         engine = (f'<section class="pf-sec"><h2>{ic("eng")} The engine: {E(eng["name"])}</h2><div class="pf-eng' + ('' if eimg else ' pf-noimg') + '">' + (f'<div class="pf-ei">{eimg}</div>' if eimg else '') + '<div class="pf-ef">'
-                  f'<p class="pf-ew">{E(eng["what"])}</p><div class="pf-fs">{facts}</div>{ytl}{elink}</div></div>'
+                  f'<p class="pf-ew">{E(eng["what"])}</p><div class="pf-fs">{facts}</div>{ytl}{elink}{rcn}</div></div>'
                   + (f'<h3 class="pf-h3">Known issues</h3><ul class="pf-iss">{"".join(iss)}</ul>' if iss else '') + f'{R.close("Engine sources")}</section>')
         # YouTube
         gs, _ = gsc[g['id']]; grk = granked.index(g['id']) + 1 if g['id'] in granked else None

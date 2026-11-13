@@ -123,6 +123,7 @@ else:
         _v = [d['score'] for y, d in _yty(_c).items() if y in _yy and d and d.get('score') is not None]
         if _v: _YTAVG[_c] = sum(_v) / len(_v)
     _YTRANK = {c: i + 1 for i, c in enumerate(sorted(_YTAVG, key=lambda c: (-_YTAVG[c], c)))}
+    _YTRANK = {c: ENG_POOL_RANK[ENG_URL(c)] for c in _YTAVG if ENG_URL(c) in ENG_POOL_RANK}   # 11-12 round 2: one pool with every engine page (supercar_engine_pages.py)
     def _engine_page(code):
         meta = BENG[code]; yrs = BEY.get(code) or {}
         if not yrs: return None
@@ -175,7 +176,14 @@ else:
         rk = _YTRANK.get(code)
         chips = (f'<div class="trc"><div><b>{y0}–{str(y1)[-2:]}</b><span>model years</span></div>'
                  + (f'<div><b>{hp[0]}' + (f'–{hp[-1]}' if len(hp) > 1 else '') + '</b><span>hp (US)</span></div>' if hp else '')
-                 + (f'<div><b>{int(_YTAVG[code] + 0.5)}</b><span>YouTube owner tone /100 · #{rk} of {len(_YTRANK)} BMW engines</span></div>' if rk else '<div><b>–</b><span>not enough YouTube videos to rank</span></div>') + '</div>')
+                 + (f'<div><b>{int(_YTAVG[code] + 0.5)}</b><span>YouTube owner tone /100 · #{rk} of {ENG_POOL_N} {ENG_POOL_LBL}</span></div>' if rk else '<div><b>–</b><span>not enough YouTube videos to rank</span></div>') + '</div>')
+        # 11-12 round 2 (UX test, Devin: "the FAQ never says yes or no"): one verdict line from our own numbers (supercar_engine_pages.eng_verdict)
+        _iss = list(((_EXT.get(code) or {}).get('issues') or {}).values()) + [dict(t=n) for n in meta.get('notes') or []]
+        _vw, _vline, _vfaq = eng_verdict(ENG_URL(code), meta['name'], int(_YTAVG[code] + 0.5) if code in _YTAVG else None,
+                                         sum(1 for i in _iss if re.search('recall', i.get('kind', ''), re.I)), _iss)
+        _h2 = next(((u, lab) for u, us, lab in ENG_H2H if ENG_URL(code) in us), None)
+        chips += (f'<p class="note engvd"><b>{E(_vline.split(":", 1)[0])}:</b>{E(_html.unescape(_vline.split(":", 1)[1]))}'
+                  + (f' <a href="{_h2[0]}">Compare it with the {E(_h2[1])} →</a>' if _h2 else '') + '</p>')
         mxi = max([150] + [v for k, v in own.values() if k == 'b'])
         def erow(y):
             e = yrs[y]; k = own.get(int(y)); sc = yt_scores.get(int(y))
@@ -185,7 +193,10 @@ else:
             yt = (f'<span class="eg-t"><i style="width:{sc}%"></i></span><b>{sc}</b>' if sc is not None else '<span class="eg-t na"></span><b class="mute">·</b>')
             cars = ', '.join(BFAM.get(f, f).replace('BMW ', '') for f in e['models'])
             return f'<div class="egr"><span class="egy">{y}<small>{E(cars)}</small></span>{ow}{yt}</div>'
-        chart = ('<div class="egc"><div class="egh" aria-hidden="true"><span>Year</span><span>Owner complaints <em>Lemon Index, lower = better</em></span><span>YouTube tone <em>0-100, higher = better</em></span></div>'
+        # 11-12 round 2 (UX test: the B58 column said "Lemon Index, lower = better" over raw counts): say which kind the column holds
+        _olab = ('Lemon Index, lower = better; gray = raw count' if any(k == 'b' for k, _v in own.values()) and any(k == 'a' for k, _v in own.values())
+                 else 'Lemon Index, lower = better' if any(k == 'b' for k, _v in own.values()) else 'raw count, any part of the car')
+        chart = ('<div class="egc"><div class="egh" aria-hidden="true"><span>Year</span><span>Owner complaints <em>' + _olab + '</em></span><span>YouTube tone <em>0-100, higher = better</em></span></div>'
                  + ''.join(erow(y) for y in ys) + '</div>')
         sec = []
         sec.append('<h2>Reliability by year</h2>' + chart + (f'<p class="note">{yline}</p>' if yline else '') + (f'<p class="note">{agree}</p>' if agree else '')
@@ -220,7 +231,7 @@ else:
         sec.append('<section class="engv"><h2>Every US version with this engine</h2>' + _rows(['Model and version', 'Years', 'Power'], vr)
                    + f'<p class="yc-cap">Versions and years: EPA (fueleconomy.gov). Engine and power: <a href="{E(meta["src"])}" rel="noopener">Wikipedia, {E(meta["name"])}</a> (BMW ratings; US figures can differ by a few hp).</p></section>')
         faq = [(f'What cars have the {meta["name"]} engine?', f'In the US: the {models_s}, model years {y0}–{y1}. See the version table for each one.'),
-               (f'Is the {code} reliable?', (re.sub('<[^>]+>', '', bline) + ' ' if bline else '') + 'Government complaints are filed by model and year, not engine, and they cover the whole car, so none of these numbers is an engine failure rate. We only credit a number to this engine where the version name or the model year leaves no doubt. Have any used car inspected.')]
+               (f'Is the {code} reliable?', _html.unescape(_vfaq) + ' ' + (re.sub('<[^>]+>', '', bline) + ' ' if bline else '') + 'Government complaints are filed by model and year, not engine, and they cover the whole car, so none of these numbers is an engine failure rate. We only credit a number to this engine where the version name or the model year leaves no doubt. Have any used car inspected.')]
         if hp: faq.append((f'How much horsepower does the {code} make?', f'BMW rated it at {hp[0]}' + (f' to {hp[-1]}' if len(hp) > 1 else '') + ' hp in US versions, depending on the car and year.'))
         sec.append('<section class="yqa trq"><h2>Quick answers</h2>' + qa_fold(''.join(f'<h3>{E(q)}</h3><p>{E(a)}</p>' for q, a in faq)) + '</section>')
         path = ENG_URL(code)
@@ -290,7 +301,7 @@ else:
             return (f'<li class="ehc" data-rank="{rk if rk else 999}" data-own="{s["bavg"] if s["bavg"] is not None else 9999}" data-yt="{s["yt"][0] if s["yt"][0] is not None else -1}" '
                     f'data-y0="{s["y0"]}" data-y1="{s["y1"]}" data-cyl="{cyl}" data-turbo="{1 if tur else 0}" data-m="{1 if code.startswith("S") else 0}">'
                     + img + f'<span class="ehc-rk" title="Rank by owner complaints">{"#" + str(rk) if rk else "Unranked"}</span>'
-                    + (f'<span class="ytbadge ehc-yr" title="YouTube rank by tone, of {len(_ytr)} engines with enough videos">{_YTI}YT #{_ytr[code]}</span>' if code in _ytr
+                    + (f'<span class="ytbadge ehc-yr" title="YouTube rank by tone, of {ENG_POOL_N} {ENG_POOL_LBL}">{_YTI}YT #{_ytr[code]}</span>' if code in _ytr
                        else f'<span class="ytbadge ehc-yr na" title="Not enough YouTube videos to rank">{_YTI}YT –</span>')
                     + f'<h2><a class="ehc-a" href="{ENG_URL(code)}">{E(code)}</a></h2><p class="ehc-t">{E(typ)} · {E(s["years"])}</p>'
                     + main + f'<p class="ehc-yt">{yt}</p><ul class="ehc-cars" aria-label="Cars with the {E(code)}">{chips}</ul></li>')
