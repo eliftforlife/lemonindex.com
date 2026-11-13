@@ -327,6 +327,12 @@ def car_ld(f, y=None, mpg=None, img=None):
     if img: d["image"] = BASE + img
     return d
 PD = json.load(open('data/page_dates.json', encoding='utf-8')) if os.path.exists('data/page_dates.json') else {}
+# 11-12 search titles. title_overrides.json: {path: {title, query, ...}} written weekly by 0 HQ/Tools/gsc_titles.py (a Search Console
+# query at position 4-20 put first in the title; reverted automatically if the page does clearly worse after 28 days).
+# search_names.json: the spelling people search ("Mercedes C-Class"), and per model whether "<year> <model> problems" or
+# "... reliability" is searched more (Keyword Planner + Search Console; `gsc_titles.py names` regenerates it).
+TOV = json.load(open('data/title_overrides.json', encoding='utf-8')).get('pages', {}) if os.path.exists('data/title_overrides.json') else {}
+_SNJ = json.load(open('data/search_names.json', encoding='utf-8')) if os.path.exists('data/search_names.json') else {}
 _MN = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 # 11-11 (Elijah: "above the top header might be better"): the phone donate bar sits at the very top, above the header, and scrolls away with
 # the page while the header pins as usual. In the HTML (no layout jump); DB_JS hides it before paint for 7 days after x, 60 after a donation.
@@ -365,24 +371,30 @@ def _car_facts(path):
     XL_ = globals().get('XL', {}); cn = lambda y: sum(n for *_, n in (XL_.get(fid, {}).get(str(y)) or {}).get('names', [])) or (vs[y].get('n') or 0)   # every complaint the site holds for that year (extras_local), else the study count
     return [sum(cn(y) for y in ys if y in vs), len({r.get('id') or r.get('summary', '')[:80] for y in ys for r in (extra(fid, y).get('recalls') or [])}),
             len({i.get('id') for y in ys for i in (X2.get(fid, {}).get(str(y), {}).get('inv') or [])})]
-def _pd_mark(path, body):
-    c = _chash(body); e = PD.get(path); fx = _car_facts(path)
+def _pd_mark(path, body, head=''):
+    # 11-12 search titles: `head` = the <title> + meta description. A title change is a real content change (new date + IndexNow);
+    # 't' is its hash and 'td' the day the title/description last changed (gsc_titles.py never re-touches a page within 28 days of it).
+    c = _chash(body); e = PD.get(path); fx = _car_facts(path); t = hashlib.md5(head.encode('utf-8')).hexdigest()[:8] if head else None
     if e is None: PD[path] = e = {'c': c, 'd': TODAY}; PD_NEW.append(path)
     elif 'c' not in e: e['c'] = c; e.pop('h', None)   # first build with content hashes: keep the page's date
-    elif e['c'] != c:
+    elif e['c'] != c or (t and e.get('t') and e['t'] != t):
         e['c'] = c; e['d'] = TODAY; PD_NEW.append(path)
         if fx and e.get('f'):
             dl = [(a - b, w) for a, b, w in zip(fx, e['f'], ('complaint', 'recall', 'investigation')) if a > b]
             if dl: e['u'] = ', '.join(f'{n:,} new {w}{"s" * (n != 1)}' for n, w in dl); e['ud'] = TODAY
+    if t:
+        if e.get('t') and e['t'] != t: e['td'] = TODAY
+        e['t'] = t   # first build with title hashes: recorded without moving the date
     if fx: e['f'] = fx
 def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, vis='', canon=None):
+    if TOV.get(path, {}).get('title'): title = TOV[path]['title']   # 11-12: search-title test from 0 HQ/Tools/gsc_titles.py (data/title_overrides.json)
     title, desc = fit_title(title), fit_desc(desc)
     body, desc = fix_moji(body), fix_moji(desc)
     _tm = re.match(r'^/cars/(.+?)/(?:(\d{4})/)?$', path)   # lazy, so slash ids ('mercedes-benz-glk/glc') match too
     if _tm and (_tm.group(1) in TAB.ON or _tm.group(1) in globals().get('FY', {})) and 'tab_body' in globals(): body = tab_body(_tm.group(1), int(_tm.group(2)) if _tm.group(2) else None, body)
     if 'class="advp"' in body and path.startswith(('/cars/', '/motorcycles/', '/planes/')) and 'adv_body' in globals(): body = adv_body(path, body)   # 11-10: the other template
     if 'class="pg mp6"' in body and re.match(r'^/(motorcycles|supercars|planes)/[^/]+/$', path) and 'adv_body' in globals(): body = adv_body(path, body, TAB.transform_mp6)   # 11-10: motorcycle, supercar and plane pages
-    _pd_mark(path, body)
+    _pd_mark(path, body, title + '\n' + desc)
     _d = PD[path]['d']; _dl = f'{_MN[int(_d[5:7]) - 1]} {int(_d[8:])}, {_d[:4]}'; _upd = ''
     if path.startswith(('/cars/', '/motorcycles/', '/planes/', '/supercars/', '/best/', '/stats/', '/check-engine-light/', '/best-gas-mileage/', '/electric/', '/studies/')):
         _un = PD[path].get('u') if PD[path].get('ud') == _d else None   # "Updated Nov 12: 1 new recall" only while that data change is the page's latest change
