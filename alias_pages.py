@@ -43,6 +43,11 @@ for fid, nicks in _TRUCK.items():
     for nick in nicks:
         _al(f'/cars/{nick}/', f'/cars/{fid}/')
         for y in r[4]: _al(f'/cars/{nick}/{y}/', f'/cars/{fid}/{y}/')
+# 3b. a year under a performance page (/cars/subaru-wrx/2016/, a 404): the parent's year page where it holds that car (find_index.py
+# PERF_PAR, N3's parents), else the performance page itself, for every year of the version
+for _sl, (_pu, _par, _cov, _own) in (globals().get('PERF_PAR') or {}).items():
+    if not _pu.startswith('/cars/') or _pu.count('/') != 3: continue
+    for y in _own: _al(f'{_pu}{y}/', _cov.get(y) or _pu)
 # 4. match-ups typed the other way round (/compare/toyota-corolla-vs-honda-civic/)
 for d in os.listdir(f'{OUT}/compare'):
     m_ = re.fullmatch(r'(.+?)-vs-(.+)', d)

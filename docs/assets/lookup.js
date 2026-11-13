@@ -285,9 +285,10 @@
       return { u, b: (yy ? yy + ' ' : '') + c.n, s: (close ? 'Closest match · ' : '') + lab + (notes && !c.t ? ` · covers every version, ${notes} included` : ''), soon: c.soon, kind: close ? 'close' : 'car' };
     });
     // 11-13 (N1 + N3's parents): a year + a performance version ("2016 wrx", "2018 mustang gt") puts the regular model's year page first
+    // (only the years whose parent page holds that car: find_index.py's par = {page: [parent, [years]]}; 2016 WRX stays on the WRX page)
     if (y && !close && GO && GO.par && top[0] && top[0].t === 'perf' && GO.par[top[0].u]) {
-      const pc = top[0], par = ALL.find(c => c.u === GO.par[pc.u] && !c.t);
-      if (par && par.ys.includes(y)) carItems.unshift({ u: par.u + y + '/', b: `${y} ${par.n}`, s: `problems and owner complaints · the regular model the ${pc.n} is built on`, kind: 'car' });
+      const pc = top[0], pv = GO.par[pc.u], pu = Array.isArray(pv) ? pv[0] : pv, pys = Array.isArray(pv) ? pv[1] : null, par = ALL.find(c => c.u === pu && !c.t);
+      if (par && (pys ? pys.includes(y) : par.ys.includes(y))) carItems.unshift({ u: par.u + y + '/', b: `${y} ${par.n}`, s: `problems and owner complaints · the ${pc.n} counted with the ${par.n}`, kind: 'car' });
     }
     // the question lists go first when the words were a question, after the cars when a car was named too
     if (!W.length || close) out.push(...q.lists, ...carItems); else out.push(...carItems, ...q.lists);

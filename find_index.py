@@ -88,17 +88,37 @@ _dirs = lambda pat: sorted(p_.replace('\\', '/').split('/')[-2] for p_ in _glob.
 _GO = {'codes': _dirs(f'{OUT}/check-engine-light/*/index.html'),
        'tr': sorted({u.split('/')[2] for u in globals().get('turls', [])}),
        'best': sorted({'/' + p_[len(OUT) + 1:].replace('\\', '/')[:-len('index.html')] for p_ in _glob.glob(f'{OUT}/*/index.html') + _glob.glob(f'{OUT}/best/*/index.html')})}
-# 11-13 (N1 + N3): a performance version -> its regular model (perf_page.parent_of / PARENTS), so "2016 wrx" or "2018 mustang gt" puts that
-# model's year page first (lookup.js). Only parents with a live /cars/ page.
+# 11-13 (N1 + N3): a performance version -> its regular model (perf_page.parent_of / PARENTS), so "2018 mustang gt" puts that model's
+# year page first (lookup.js). Only the years whose parent page really holds that car (N3: 2015+ WRX are filed apart from the Impreza):
+# if the version's own name shows up in the parent's NHTSA model names (data/extras_local*.json, e.g. IMPREZA year 2016: "WRX"), only
+# the years where it does; a trim whose name holds the parent's model word (Mustang GT under MUSTANG) also its own years. par = {page: [parent, [years]]}
+import collections
+PERF_PAR = {}   # perf slug -> (its page, parent id, {year: parent year url}) for alias_pages.py
 try:
     import perf_page as _pp
-    _GO['par'] = {}; _live = {r[2] for r in FIND if r[2] and not r[6]}
+    _GO['par'] = {}; _live = {r[2] for r in FIND if r[2] and not r[6]}; _XLp = globals().get('XL', {})
+    _nf = lambda t: ' ' + re.sub(r'[^a-z0-9]+', ' ', str(t).lower()).strip() + ' '
     for _pf in _glob.glob('data/perf/*.json'):
         if _pf.endswith('.auto.json'): continue
         _d = json.load(open(_pf, encoding='utf-8')); _u = _d.get('page') or f'/cars/{_d["slug"]}/'
         _par = _pp.parent_of(_d) if hasattr(_pp, 'parent_of') else ''
-        if _par and _u in _live and os.path.exists(f'{OUT}/cars/{_par}/index.html'): _GO['par'][_u] = f'/cars/{_par}/'
+        if not (_par and _u in _live and os.path.exists(f'{OUT}/cars/{_par}/index.html')): continue
+        _mk = _nf(_d.get('make') or ''); _tok = _nf(_d.get('name', '')).replace(_mk, ' ', 1).strip() if _mk.strip() else _nf(_d.get('name', '')).strip()
+        _tok = re.sub(r'^(mercedes amg|mercedes benz|mercedes|amg) ', 'amg ', _tok) if _tok.startswith(('mercedes', 'amg')) else _tok
+        _named = {int(y) for y, e in (_XLp.get(_par) or {}).items() if _tok and any(f' {_tok} ' in _nf(md) for _, md, _n in e.get('names', []))}
+        _own = {y for g in _d.get('gens', []) for y in range(int(g['y0']), int(g['y1']) + 1)}
+        _pn = next((r[0] for r in FIND if r[2] == f'/cars/{_par}/'), _par)   # a trim name holds the parent's own model word (MUSTANG GT, CIVIC TYPE R):
+        _pw = [w for w in _nf(_pn).replace(_mk, ' ', 1).split() if len(w) >= 3]   # filed under the parent in every year; a separate name (WRX, M4) only where seen
+        _cnt = collections.Counter()
+        for e in (_XLp.get(_par) or {}).values():
+            for _, md, _n in e.get('names', []): _cnt[_nf(md).strip()] += _n
+        _base = _cnt.most_common(1)[0][0] if _cnt else ''   # the parent's main NHTSA name (F150, 1500, MUSTANG)
+        _trim = any(f' {w} ' in f' {_tok} ' for w in _pw) or (len(_base) >= 3 and (f' {_base} ' in f' {_tok} ' or _tok.replace(' ', '').startswith(_base.replace(' ', ''))))
+        _cov = sorted(y for y in (_named | _own if _trim else _named) if os.path.exists(f'{OUT}/cars/{_par}/{y}/index.html'))
+        _GO['par'][_u] = [f'/cars/{_par}/', _cov]
+        PERF_PAR[_d['slug']] = (_u, _par, {y: f'/cars/{_par}/{y}/' for y in _cov}, sorted(_own))
 except Exception as _ex: print('find-go parents skipped:', _ex)
+print('search parents:', len(_GO.get('par', {})), '| e.g.', {k: (v[0], v[1][:1] + v[1][-1:]) for k, v in list(_GO.get('par', {}).items())[:3]})
 json.dump(_GO, open(f'{OUT}/assets/find-go.json', 'w', encoding='utf-8'), separators=(',', ':'))
 
 # ---- the guard
