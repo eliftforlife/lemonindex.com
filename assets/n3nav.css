@@ -1,8 +1,8 @@
 /* 11-13 navigation fix N3: "Engines in this car" and "Other versions" chip rows (car pages), the regular-model row (performance, supercar
    and electric pages) and the "Everyday cars with this engine" list (engine pages). Prefix n3-. Linked from the rows themselves. */
-.n3-row { margin: 12px auto 0; max-width: 760px; text-align: left; }
+.n3-row { margin: 12px auto 0; width: 100%; max-width: min(760px, 100%); min-width: 0; box-sizing: border-box; text-align: left; }   /* the heroes are centered flex columns: never wider than them */
 .n3-h { margin: 0 0 6px; font-size: 12px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--mute, #5f6368); }
-.n3-cs { display: flex; flex-wrap: wrap; gap: 8px; }
+.n3-cs { display: flex; flex-wrap: wrap; gap: 8px; min-width: 0; max-width: 100%; }
 .n3-c { display: inline-flex; flex-direction: column; justify-content: center; min-height: 44px; box-sizing: border-box; padding: 6px 12px; border: 1px solid var(--line, #e3e5e8);
   border-radius: 12px; background: #fff; color: var(--ink, #111214); text-decoration: none; line-height: 1.25; max-width: 100%; }
 .n3-c b { font-size: 15px; font-weight: 700; }

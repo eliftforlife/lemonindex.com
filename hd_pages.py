@@ -353,7 +353,7 @@ if HDX == 'pages' and HDT:
         tl = ''.join(f'<li><a href="{HDU(t)}">{E(HDT[t]["name"])}</a>: ' + ' · '.join(f'<a href="{HDU(t, y)}">{y}</a>' for y in tys if _hd_has(t, y)) + '</li>'
                      for t, tys in trucks if t in HDT and t != 'ford-f-150')
         if tl: sec.append(f'<section class="yc" id="trucks"><h2>Trucks with this engine</h2><ul class="hd-tl">{tl}</ul></section>')
-        if f150: sec.append((globals().get('EU_CARS_HTML') or (lambda *a: ''))(path, 'Trucks with this engine'))   # 11-13 N3 (nav report 3): the F-150, each year linked
+        if f150: sec.insert(0, (globals().get('EU_CARS_HTML') or (lambda *a: ''))(path, 'Trucks with this engine'))   # 11-13 N3 (nav report 3): the F-150, each year linked, first
         if d.get('quotes'): sec.append(f'<section class="yc"><h2>In owners&#39; words</h2>{_hd_q(d["quotes"], tnames)}</section>')
         sec.append(f'<section class="yc" id="compare"><h2>Against the other {peers}</h2>' + _hd_cmp_table(grp, e)
                    + '<p class="yc-cap">Shares of each engine&#39;s own complaints, matched by VIN. They show what owners complain about, not how often trucks break.'

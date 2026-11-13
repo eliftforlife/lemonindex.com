@@ -14,7 +14,7 @@
 import os as _euos, json as _euj, re as _eure, glob as _eug
 if ENGU == 'hooks':
     import perf_page as _EUPP
-    EU_CSS = '<link rel="stylesheet" href="/assets/n3nav.css?v=1">'
+    EU_CSS = '<link rel="stylesheet" href="/assets/n3nav.css?v=2">'
     EU_MODELS = {f['id']: f for f in YEARS}
     EU_YRS = {f['id']: {v['y'] for v in f['years']} for f in YEARS}
     _EU_BYNAME = sorted(((f['name'], f['id']) for f in YEARS), key=lambda t: -len(t[0]))
@@ -105,7 +105,7 @@ if ENGU == 'hooks':
             sub = ' · '.join(x for x in (sub, _eu_span(u['years']) if y is None else '') if x)
             return f'<a class="n3-c" href="{E(url)}"><b>{E(EU_NAME[url])}</b>' + (f'<small>{E(sub)}</small>' if sub else '') + '</a>'
         srcs = sorted({s for _, u in rows for s in u['src']})
-        js = '<script src="/assets/n3nav.js?v=1" defer></script>' if any('#eng-' in url for url, _ in rows) else ''
+        js = '<script src="/assets/n3nav.js?v=2" defer></script>' if any('#eng-' in url for url, _ in rows) else ''
         return (f'<nav class="n3-row" aria-label="Engines in this car">{EU_CSS}{js}<p class="n3-h">{f"Engines in the {y} {E(mnm.split(' ', 1)[-1])}" if y else "Engines in this car"}</p><div class="n3-cs">'
                 + ''.join(chip(url, u) for url, u in rows) + (f'<a class="n3-c n3-more" href="/engines/"><b>+{more} more</b><small>every engine</small></a>' if more else '') + '</div>'
                 + f'<p class="n3-n">Engines with a page of their own, in the versions named, from {" and ".join(_EU_SRC[s] for s in srcs)}. Other versions can have other engines.</p></nav>')
