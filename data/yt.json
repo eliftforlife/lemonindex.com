@@ -61155,6 +61155,134 @@
    "costs": null
   }
  ],
+ "dodge-dakota": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004
+   ],
+   "gen": "1997–2004 Dodge Dakota",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 13322334,
+   "topics": [
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 1581041,
+     "n": 14,
+     "best": {
+      "id": "7Vhl0x_pDko",
+      "title": "Idle Air Control Valve (IAC) 2002 Dodge Dakota 3.9 Stalling",
+      "channel": "mreinsmith",
+      "views": 270967
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 878873,
+     "n": 6,
+     "best": {
+      "id": "qpg7FTMBTRU",
+      "title": "Dodge Dakota/Durango Radio/Stereo/Deck Install 2001-2004",
+      "channel": "Tony The Truck Guy",
+      "views": 332528
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 809180,
+     "n": 13,
+     "best": {
+      "id": "0ws4xLuZUAo",
+      "title": "2000 Dodge Dakota Upper Control Arm replacement tips",
+      "channel": "It's Not That Easy by Scott S",
+      "views": 118229
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 653686,
+     "n": 7,
+     "best": {
+      "id": "cUE5_4ult_M",
+      "title": "2000 Dodge Dakota Sport Water Pump Replacement V6 3.9L",
+      "channel": "Average Guys Garage",
+      "views": 181231
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 357600,
+     "n": 8,
+     "best": {
+      "id": "vmn28UEwy58",
+      "title": "1998 Dodge Dakota Heater Core Repair/Replacement, HVAC Box Removal",
+      "channel": "Eric S",
+      "views": 78671
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 349026,
+     "n": 7,
+     "best": {
+      "id": "zCNt1Z3GGPQ",
+      "title": "How To Replace Rear Brake Shoes 1997-2004 Dodge Dakota",
+      "channel": "TRQ",
+      "views": 100281
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 212161,
+     "n": 4,
+     "best": {
+      "id": "CQvIamS9gVI",
+      "title": "Dodge Dakota - Power Steering Pump Replacement (2nd Gen)",
+      "channel": "Rolando Robles",
+      "views": 66592
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 207690,
+     "n": 2,
+     "best": {
+      "id": "JSSmYrBsgfM",
+      "title": "Dodge Dakota Fuel Pump Replacement (2001-2004)",
+      "channel": "Tony The Truck Guy",
+      "views": 139222
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "fEECTAa30kU",
+     "title": "Top 5 Problems Dodge Dakota Truck 2nd Generation 1997-2004",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 903484
+    },
+    {
+     "id": "DZOqGNct4sQ",
+     "title": "2001 Dodge Dakota, Battery Problems",
+     "channel": "Pinpoint Automotive Repair",
+     "views": 33490
+    },
+    {
+     "id": "zBTDKA4d_kE",
+     "title": "2000 Dodge Dakota Quad Cab 4x4 - 5.9 Cummins Turbo Diesel(Walk Around and Start Up)",
+     "channel": "Char",
+     "views": 335176
+    }
+   ],
+   "costs": null
+  }
+ ],
  "buick-encore": [
   {
    "years": [
