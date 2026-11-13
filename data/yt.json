@@ -59598,7 +59598,52 @@
      "views": 82350
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 500,
+       "lo": 100.0,
+       "hi": 900.0,
+       "n": 11,
+       "videos": 8,
+       "id": "IIFPhBy5A5M",
+       "t": 358,
+       "title": "2nd Gen Prius: The BIG Problems You NEED To Know About (And NO ONE Talks About Them)"
+      }
+     ],
+     [
+      "Battery",
+      {
+       "median": 2000,
+       "lo": 800.0,
+       "hi": 5000.0,
+       "n": 9,
+       "videos": 6,
+       "id": "E18Tu7vBUTE",
+       "t": 776,
+       "title": "Still The BEST Used Car!?! 2nd Gen Prius Turns 20 YEARS OLD!"
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 150,
+       "lo": 100.0,
+       "hi": 200.0,
+       "n": 2,
+       "videos": 2,
+       "id": "E18Tu7vBUTE",
+       "t": 649,
+       "title": "Still The BEST Used Car!?! 2nd Gen Prius Turns 20 YEARS OLD!"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -59725,7 +59770,52 @@
      "views": 86693
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Battery",
+      {
+       "median": 900,
+       "lo": 250.0,
+       "hi": 4000.0,
+       "n": 6,
+       "videos": 6,
+       "id": "JfHRJ18RQ9s",
+       "t": 144,
+       "title": "How to Replace 12 volt battery in Toyota Prius (2010-2015)"
+      }
+     ],
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 500,
+       "lo": 100.0,
+       "hi": 1500.0,
+       "n": 14,
+       "videos": 5,
+       "id": "SeuFFVC8Cfs",
+       "t": 1483,
+       "title": "2010 Toyota Prius Review - (High Mileage Reliability?)"
+      }
+     ],
+     [
+      "Brakes",
+      {
+       "median": 2250,
+       "lo": 1500.0,
+       "hi": 3000.0,
+       "n": 4,
+       "videos": 2,
+       "id": "xA9jyrbZDWo",
+       "t": 125,
+       "title": "2010 Prius $3,000 brake job. Register complaint with nhtsa.gov Toyota’s dirty little secret 🤭"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -59831,7 +59921,52 @@
      "views": 26064
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 1250,
+       "lo": 600.0,
+       "hi": 1700.0,
+       "n": 6,
+       "videos": 5,
+       "id": "3fR1TJ2Sl2o",
+       "t": 123,
+       "title": "2018 Toyota Prius Losing Coolant & Smoking... The REAL Problem Solved(Not Engine)"
+      }
+     ],
+     [
+      "Transmission",
+      {
+       "median": 335,
+       "lo": 170.0,
+       "hi": 500.0,
+       "n": 2,
+       "videos": 2,
+       "id": "sZ9dU_u_xUY",
+       "t": 877,
+       "title": "4Th Gen 2016 Toyota Prius Review ▶️ Honest Review with 102,255 Miles After 4 Years▶️ Prius XW50"
+      }
+     ],
+     [
+      "Battery",
+      {
+       "median": 2500,
+       "lo": 2000.0,
+       "hi": 3000.0,
+       "n": 2,
+       "videos": 2,
+       "id": "fcVocuaMFvo",
+       "t": 943,
+       "title": "Used 4th Gen Prius (2016-2022) Still a Smart Buy? Common Problems & Reliability"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -59933,7 +60068,39 @@
      "views": 179722
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 1000,
+       "lo": 250.0,
+       "hi": 1000.0,
+       "n": 8,
+       "videos": 5,
+       "id": "nE9JN2atwcg",
+       "t": 114,
+       "title": "Are Older Toyota Prius Models Still a Smart Buy in 2025?"
+      }
+     ],
+     [
+      "Yearly cost to own",
+      {
+       "median": 400,
+       "lo": 337.0,
+       "hi": 1000.0,
+       "n": 3,
+       "videos": 3,
+       "id": "qj6eb_nQclY",
+       "t": 726,
+       "title": "2024 Toyota Prius vs Toyota Crown: THIS BATTLE IS ALL ABOUT THE RIDE!"
+      }
+     ]
+    ]
+   }
   }
  ],
  "jeep-liberty": [
