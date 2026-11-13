@@ -59471,7 +59471,39 @@
      "views": 42375
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 65,
+       "lo": 40.0,
+       "hi": 2000.0,
+       "n": 5,
+       "videos": 4,
+       "id": "fcWDDS7gq2c",
+       "t": 163,
+       "title": "Do I Regret Buying a 2002 Toyota Prius? 5 Year Update"
+      }
+     ],
+     [
+      "Battery",
+      {
+       "median": 875,
+       "lo": 750.0,
+       "hi": 1000.0,
+       "n": 4,
+       "videos": 4,
+       "id": "UenZ-53f0go",
+       "t": 143,
+       "title": "2001 Toyota Prius - Saved from the Scrap Yard - 22 Year Long Term Review"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -60229,7 +60261,39 @@
      "views": 289354
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 90,
+       "lo": 48.0,
+       "hi": 150.0,
+       "n": 8,
+       "videos": 6,
+       "id": "chCP0dC5zgg",
+       "t": 437,
+       "title": "⭐ 2003 Jeep Liberty 3.7 - P0304 - Cylinder 4 Misfire Detected"
+      }
+     ],
+     [
+      "Steering & suspension",
+      {
+       "median": 67,
+       "lo": 59.99,
+       "hi": 75.0,
+       "n": 2,
+       "videos": 2,
+       "id": "DdvfTFHHe8Y",
+       "t": 252,
+       "title": "How To Replace 2002-2007 Jeep Liberty Rear Upper Control Arm, Project Renegade Ep.10"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -60355,7 +60419,26 @@
      "views": 271994
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 127,
+       "lo": 50.0,
+       "hi": 200.0,
+       "n": 5,
+       "videos": 3,
+       "id": "63v6OPrf7_k",
+       "t": 52,
+       "title": "2010 Jeep Liberty Water Pump Replacement"
+      }
+     ]
+    ]
+   }
   }
  ]
 }
