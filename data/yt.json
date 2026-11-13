@@ -61475,6 +61475,270 @@
    "costs": null
   }
  ],
+ "chevrolet-corvette": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004
+   ],
+   "gen": "1997–2004 Chevrolet Corvette",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 195,
+   "views": 28741606,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 383428,
+     "n": 3,
+     "best": {
+      "id": "vOM96f3Iy6E",
+      "title": "C5 Corvette TPMS Reset",
+      "channel": "Spinolio",
+      "views": 259066
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 330138,
+     "n": 2,
+     "best": {
+      "id": "e3sh6pym5Ek",
+      "title": "2002 Chevy Corvette clutch replacement",
+      "channel": "Dave's Auto Center",
+      "views": 289165
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 134314,
+     "n": 2,
+     "best": {
+      "id": "Hk7j3URe7dM",
+      "title": "C5 Corvette A/C Issues",
+      "channel": "My Corvette Life",
+      "views": 68921
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 67164,
+     "n": 2,
+     "best": {
+      "id": "c97hEMuePXQ",
+      "title": "ONCE AND FOR ALL C5 CORVETTE FUEL GAUGE FIX!",
+      "channel": "VetOnVettes757",
+      "views": 38970
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 50024,
+     "n": 1,
+     "best": {
+      "id": "QFJjVYLH8is",
+      "title": "How to install C5 Corvette Sun Visors - Step-by-step Guide",
+      "channel": "C&S Corvettes",
+      "views": 50024
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 45467,
+     "n": 1,
+     "best": {
+      "id": "FP6i-y4SXAA",
+      "title": "Cleaning C5 Corvette Ground Points/Negatives",
+      "channel": "iDriveDaily",
+      "views": 45467
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 37277,
+     "n": 1,
+     "best": {
+      "id": "C7Di3XrAgYE",
+      "title": "Corvette C5 wheel speed sensor issues by froggy",
+      "channel": "froggy",
+      "views": 37277
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 33888,
+     "n": 1,
+     "best": {
+      "id": "iX_vqEoEfyM",
+      "title": "C5 Corvette Common Failure! EBCM Module Repair!! ABS/Traction Control Dash Light!",
+      "channel": "  Auction Car Reconditioning",
+      "views": 33888
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "SbBdsiM_U18",
+     "title": "C5 Corvette Buyers Guide (Get Informed - Then Purchase!)",
+     "channel": "Toys4Life C5",
+     "views": 404384
+    },
+    {
+     "id": "ChuqnWwyt_M",
+     "title": "C5 Corvette Buyer's Guide: Which years are the BEST?",
+     "channel": "C&S Corvettes",
+     "views": 220472
+    },
+    {
+     "id": "VHCcR-0kZNg",
+     "title": "Common Problems with the C5 Corvette - Know This Before Buying!",
+     "channel": "Brendan Buchler",
+     "views": 156615
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013
+   ],
+   "gen": "2005–2013 Chevrolet Corvette",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 198,
+   "views": 51181656,
+   "topics": [
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 178211,
+     "n": 2,
+     "best": {
+      "id": "2ZsAHhGBV0U",
+      "title": "C6 Corvette power window indexing (how to reset the windows)",
+      "channel": "Gearhead Daily",
+      "views": 104803
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 159829,
+     "n": 2,
+     "best": {
+      "id": "IEsp3n8lnok",
+      "title": "How To Fix C6 Corvette Stuck In Park Automatic Shifter Won’t Shift! Easy DIY",
+      "channel": "Sal's Garage",
+      "views": 92056
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 128146,
+     "n": 2,
+     "best": {
+      "id": "SMKF4hNIhhA",
+      "title": "C6 Corvette Won't Start Issues & Some Of The Fixes For Them",
+      "channel": "A Skilled Life! ",
+      "views": 69997
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 94926,
+     "n": 1,
+     "best": {
+      "id": "nKnQhLJ4i4A",
+      "title": "Corvette C6 Oil Change",
+      "channel": "Corvette",
+      "views": 94926
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "eKJt5LiABaw",
+     "title": "The Ultimate C6 Corvette Buyer's Guide!",
+     "channel": "Cars, Costs and Technology",
+     "views": 652292
+    },
+    {
+     "id": "eBkjv_Mul48",
+     "title": "2005-2013 Chevy Corvette C6 ULTIMATE Buyers Guide",
+     "channel": "Hakosan",
+     "views": 390186
+    },
+    {
+     "id": "j_YdeqPOK-4",
+     "title": "C6 Corvette Buyer's Guide: Which years are the best? (2005-2013)",
+     "channel": "C&S Corvettes",
+     "views": 381090
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019
+   ],
+   "gen": "2014–2019 Chevrolet Corvette",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 84872897,
+   "topics": [
+    {
+     "name": "Lifters, AFM & cam phasers",
+     "views": 94363,
+     "n": 1,
+     "best": {
+      "id": "axjL4dl4cgo",
+      "title": "All about the C7 Corvette AFM and why its a problem",
+      "channel": "C&S Corvettes",
+      "views": 94363
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "39A0ZvVxdWc",
+     "title": "The Ultimate C7 Corvette Buyer's Guide!",
+     "channel": "Cars, Costs and Technology",
+     "views": 275532
+    },
+    {
+     "id": "TdsuOaWVX4Y",
+     "title": "Daily Driving a C7 Corvette for 3 Months! (Review, Problems, Etc.)",
+     "channel": "Trawick Garage",
+     "views": 152020
+    },
+    {
+     "id": "7qi5SENZo0I",
+     "title": "Should you BUY a sale priced 2019 C7 Corvette Grand Sport or WAIT for the C8?",
+     "channel": "Raiti's Rides",
+     "views": 134085
+    }
+   ],
+   "costs": null
+  }
+ ],
  "buick-encore": [
   {
    "years": [
