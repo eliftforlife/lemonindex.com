@@ -160,3 +160,26 @@ a.er:hover { background: var(--soft); }
 .sv .sv-b { display: block; font-size: 12px; color: var(--mute, #6e6e73); }
 /* short screens (Dan at 1366x768, Linda): a smaller car so the answer sits above the fold */
 @media (max-height: 820px) { .tbl .tb-hero .tb-img .yph img { max-height: 34vh; width: auto; max-width: 100%; } .tbl .tb-hero h1 { margin-top: 4px; } }
+/* 11-12 round 2 (Ryan, Jake): a heading the sticky header + tab row would cover lands below them when a link or tab jumps to it */
+.tbl section[id], .tbl [id].yc, .tbl .tb-p, .tbl h2[id] { scroll-margin-top: calc(var(--gh-h, 52px) + 72px); }
+@media (max-width: 767px) { .tbl section[id], .tbl [id].yc, .tbl .tb-p, .tbl h2[id] { scroll-margin-top: 112px; } }
+/* 11-12 round 2: km next to miles (Liam), top 3 failures (Jake, Ryan), fix or sell (Ryan), newest recall, Canada note */
+.km { color: var(--mute, #6e6e73); font-weight: 400; white-space: nowrap; }
+.tf-l { margin: 10px 0 8px; padding: 0; list-style: none; display: grid; gap: 8px; counter-reset: tf; }
+.tf-l li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; padding: 10px 14px; border-radius: 14px; background: #f5f5f7; counter-increment: tf; }
+.tf-l li::before { content: counter(tf) "."; font-weight: 700; color: var(--mute, #6e6e73); }
+.tf-l .tf-t { flex: 1 1 calc(100% - 2em); }
+.tf-l li > span { font-size: 14px; color: var(--ink2, #3a3a3e); }
+.tf-l .tf-n { font-variant-numeric: tabular-nums; }
+.tf-l small { color: var(--mute, #6e6e73); }
+.yfs table { margin: 10px 0; }
+.yfs-b { margin: 6px 0 10px; padding-left: 1.2em; display: grid; gap: 4px; }
+.yfs-b small { color: var(--mute, #6e6e73); }
+.rtag.rnew { background: #fff1e6; color: #a14a00; }
+.ca-note { margin-top: 10px; }
+/* gas or hybrid card on the model page (Carlos) */
+.ghc table { margin: 10px 0; }
+.ghc-n { margin: 10px 0 4px; font-size: 15px; line-height: 1.45; }
+.ghc-c { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 10px 0 4px; padding: 10px 14px; border-radius: 14px; background: #f5f5f7; }
+.ghc-c input { width: 4.5em; min-height: 40px; padding: 4px 8px; font: inherit; border: 1px solid #d2d2d7; border-radius: 10px; text-align: right; }
+.ghc-c output { font-weight: 700; }

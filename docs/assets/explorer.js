@@ -13,8 +13,12 @@
   const fmt = x => (x >= 10 ? Math.round(x) : Math.round(x * 10) / 10).toString();
   const big = n => n >= 1e6 ? (n / 1e6).toFixed(2).replace(/0$/, '') + 'M' : Math.round(n / 1e3) + 'K';
   const MAX = 440;                                   // bar scale: 0..440, so 100 (average) sits at ~23%
-  const words = c => c.li < 90 ? `${fmt(100 / c.li)}× fewer complaints than average`
-    : c.li <= 110 ? 'about average' : `${fmt(c.li / 100)}× the average car's complaints`;
+  // 11-12 round 2 (Carlos): plain fractions, not "1.9× fewer" (same wording as build.py plain())
+  const frac = li => { const f = li / 100; if (f >= 0.9 && f <= 1.1) return null;
+    if (f < 1) { for (const [hi, w] of [[0.15, 'less than a sixth as many'], [0.22, 'about a fifth as many'], [0.29, 'about a quarter as many'], [0.37, 'about a third as many'], [0.45, 'a bit under half as many'],
+      [0.56, 'about half as many'], [0.63, 'a bit over half as many'], [0.71, 'about two-thirds as many'], [0.8, 'about three-quarters as many']]) if (f < hi) return w; return 'somewhat fewer'; }
+    return f < 1.35 ? 'a bit more than' : f < 1.75 ? 'about one and a half times' : f < 2.5 ? 'about twice' : `about ${Math.round(f)} times`; };
+  const words = c => { const w = frac(c.li); return !w ? 'about average' : c.li < 90 ? (w === 'somewhat fewer' ? 'somewhat fewer complaints than the average car' : `${w} complaints as the average car`) : `${w} the average car's complaints`; };
   const tip = c => `${c.name}: ${c.per100k} complaints per 100,000 sold, vs ${c.avg} for an average car of the same years. `
     + (c.li < 100 ? `About 1 complaint for every ${fmt(100 / c.li)} an average car gets.` : `About ${fmt(c.li / 100)} complaints for every 1 an average car gets.`);
   const issue = c => c.issues.length ? `${c.issues[0][0]} (${c.issues[0][1]}% of complaints)` : '—';

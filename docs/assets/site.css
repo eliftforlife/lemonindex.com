@@ -1948,3 +1948,16 @@ table.adv.hd-cmp td:first-child { white-space: normal; min-width: 9em; }
   .pg article.study.eng2 .tw table td:last-child, .pg article.study.eng2 .tw table th:last-child { display: table-cell; }
   .pg article.study.eng2 .tw table.stk td:last-child { display: flow-root; }
 }
+
+/* 11-12 round 2 (fix D): VIN page - check-digit warning, Canada box, buyer line, no-VIN recall helper */
+.vin-warn { margin: 0 0 12px; padding: 12px 14px; border-radius: 14px; background: #fff1e6; color: #6b3200; font-size: 15px; line-height: 1.45; text-align: left; }
+.vin-cabox { margin: 0 0 14px; padding: 12px 14px; border-radius: 14px; border: 2px solid #d52b1e; background: #fff; font-size: 15px; line-height: 1.45; }
+.vin-new { background: #fff1e6; color: #a14a00; }
+.vin-buy, .vin-ca { max-width: 640px; margin-left: auto; margin-right: auto; }
+.vnv { max-width: 640px; margin: 22px auto 0; text-align: left; }
+.vnv h2 { font-size: 22px; letter-spacing: -.02em; margin: 0 0 6px; }
+.vnv-f { display: flex; flex-wrap: wrap; gap: 8px; align-items: flex-end; margin: 10px 0; }
+.vnv-f label { display: grid; gap: 4px; flex: 1 1 140px; min-width: 0; font-size: 13px; font-weight: 700; color: var(--mute); }
+.vnv-f select { width: 100%; min-height: 44px; padding: 8px 10px; font: inherit; font-size: 16px; color: var(--ink); border: 1.5px solid var(--line); border-radius: 12px; background: #fff; }
+.vnv-f .btn { flex: 0 0 auto; }
+.cx-rv small.cx-zt { display: block; white-space: normal; overflow-wrap: anywhere; line-height: 1.25; font-size: 11px; }   /* 11-12 r2 (D): which trim the 0-60 is from */

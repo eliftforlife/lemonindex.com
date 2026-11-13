@@ -6,7 +6,7 @@
 (async () => {
   const root = document.getElementById('cmpx'); if (!root) return;
   let J;
-  try { J = await (await fetch('/assets/compare.json?v=1112r2')).json(); } catch (e) { root.innerHTML = '<p class="note">Couldn&#39;t load the car list. Refresh to try again.</p>'; return; }
+  try { J = await (await fetch('/assets/compare.json?v=1112r2d')).json(); } catch (e) { root.innerHTML = '<p class="note">Couldn&#39;t load the car list. Refresh to try again.</p>'; return; }
   const C = J.cars, BY = {}, MAX = 4;
   C.forEach(c => { BY[c.i] = c; });
   const IDX = C.map((_, n) => n);
@@ -69,6 +69,22 @@
     if (c.g) { const g = c.g.find(x => x.id === v) || c.g.at(-1); return { g }; }
     return { v: c.y[v] || [] };
   }
+  // 11-12 round 2 (Devin): the hero pictures follow the cars being compared, and Share sends this exact set (or its ready-made match-up
+  // page, which has its own preview) instead of the bare /compare/ page
+  const PAGES = new Set(J.pages || []), pair = document.querySelector('.ph-pair'), shb = [...document.querySelectorAll('[data-share]')];
+  const shTxt0 = shb.map(b => b.dataset.share), title0 = document.title;
+  function hero(R) {
+    const ims = pair ? [...pair.querySelectorAll('img')] : [];
+    R.filter(r => r.c.im).slice(0, 2).forEach((r, n) => { const im = ims[n]; if (!im || im.dataset.src === r.c.im) return; im.removeAttribute('srcset'); im.src = r.c.im; im.alt = r.c.n; im.dataset.src = r.c.im; });
+    const names = R.map(r => r.c.n), ids = R.map(r => r.c.i);
+    const ready = R.length === 2 ? [`/compare/${ids[0]}-vs-${ids[1]}/`, `/compare/${ids[1]}-vs-${ids[0]}/`].find(u => PAGES.has(u)) : null;
+    shb.forEach((b, n) => {
+      if (R.length < 2) { b.dataset.share = shTxt0[n]; delete b.dataset.shareUrl; return; }
+      b.dataset.share = `${names.join(' vs ')}: problems, recalls and specs side by side. Free:`;
+      b.dataset.shareUrl = ready || location.pathname + location.search;
+    });
+    document.title = R.length >= 2 ? `${names.join(' vs ')}: Compare Side by Side | The Lemon Index` : title0;
+  }
   function draw(focus) {
     const R = cars.map(([i, v]) => ({ c: BY[i], key: v, ...row(BY[i], v) }));
     const anyEV = R.some(r => r.c.ev || (r.v && r.v[9])), anyPerf = R.some(r => r.g), anyCar = R.some(r => r.v);
@@ -79,7 +95,7 @@
     if (anyPerf && !anyCar) L.push(['Owner complaints', 'to NHTSA, these years (raw count)', r => r.g ? [r.g.nc == null ? '—' : r.g.nc.toLocaleString(), null] : ['—'], false]);
     L.push(['Recalls', 'that model year / generation', r => r.v ? [r.v[2] == null ? '—' : r.v[2], r.v[2]] : r.g ? [r.g.rc, r.g.rc] : ['—'], false, true]);   // [4] true: 0 is a real value (Devin: 7 recalls beat 0)
     if (anyPerf) L.push(['Horsepower', '', r => r.g ? [r.g.hp ?? '—', r.g.hp] : ['—'], true], ['Torque', 'lb-ft', r => r.g ? [r.g.tq ?? '—', num(r.g.tq)] : ['—'], true],
-                        ['0–60 mph', 'seconds', r => r.g ? [r.g.z ?? '—', num(r.g.z)] : ['—'], false], ['Top speed', '', r => r.g ? [r.g.top ?? '—', num(r.g.top)] : ['—'], true],
+                        ['0–60 mph', 'seconds', r => r.g ? [r.g.z == null ? '—' : r.g.z + (r.g.zt ? ` <small class="cx-zt">${esc(r.g.zt)}</small>` : ''), num(r.g.z)] : ['—'], false], ['Top speed', '', r => r.g ? [r.g.top ?? '—', num(r.g.top)] : ['—'], true],
                         ['Weight', '', r => r.g ? [r.g.wt ?? '—', num(r.g.wt)] : ['—'], false], ['Price new', 'base, when new', r => r.g ? [r.g.p ?? '—', num(r.g.p)] : ['—'], false],
                         ['Engine', '', r => r.g ? [r.g.eu ? `<a href="${esc(r.g.eu)}">${esc(r.g.e)}</a>` : esc(r.g.e || '—'), null] : ['—'], null],
                         ['YouTube owner tone', 'out of 100', r => r.g ? [r.g.yt ?? '—', r.g.yt] : ['—'], true]);
@@ -90,6 +106,7 @@
       L.push(['Crash test', 'NHTSA overall', r => r.v && r.v[5] ? ['<span class="st">' + '★'.repeat(r.v[5]) + '☆'.repeat(5 - r.v[5]) + '</span>', r.v[5]] : ['—'], true],
              ['Top problem', 'most-named in complaints', r => [r.v && r.v[6] ? esc(r.v[6]) : '—', null], null]);
     }
+    if (R.length) L.splice(0, L.length, ...L.filter(([, , f]) => R.some(r => { const t = f(r)[0]; return t !== '—' && t !== '' && t != null; })));   // 11-12 r2 (Devin): no row that's empty for every car
     const best = L.map(([, , f, hi, zero]) => { if (hi == null) return null; const xs = R.map(r => f(r)[1]).filter(x => x != null && (zero || x !== 0)); if (xs.length < 2 || new Set(xs).size < 2) return null; return hi ? Math.max(...xs) : Math.min(...xs); });
     const scored = R.filter(r => r.v && r.v[0] != null && r.c.w !== 'ev' && !part(r)), win = scored.length >= 2 ? scored.reduce((a, c) => c.v[0] < a.v[0] ? c : a) : null;
     const head = (r, n) => {
@@ -105,10 +122,11 @@
     if (R.some(part)) notes.push('Partial = a 2023 or newer model year: under 3 years on the road, so its score can change and it never gets the check or the badge.');
     if (R.some(r => r.c.w === 'ev')) notes.push('* EV score from the electric-car page: complaints filed by the end of the year after the model year, a shorter window than the main 3-year score, so compare it with other EV scores.');
     R.filter(r => r.c.h).forEach(r => notes.push(`${esc(r.c.n)}: ${esc(r.c.h)}`));
-    if (R.some(r => r.g)) notes.push('Performance specs: the generation&#39;s headline trim (see its page for every trim and source). Complaint counts there are raw, not per car sold.');
+    if (R.some(r => r.g)) notes.push('Performance specs: the generation&#39;s headline trim (see its page for every trim and source); when that trim has no 0–60 test, the quickest tested trim, named under the time. Complaint counts there are raw, not per car sold.');
     const addBox = cars.length < MAX ? `<div class="cx-add"><p><b>${cars.length ? `Add a car <small>(${cars.length} of ${MAX})</small>` : 'Pick up to 4 cars'}</b></p><div class="cx-box"><input type="search" enterkeyhint="go" placeholder="e.g. 2019 RAV4, Model 3, M3, Ioniq 5" aria-label="Find a car to compare" autocomplete="off"><div class="cx-sug"></div></div></div>` : `<p class="cx-full">That&#39;s 4 cars, the most at once. Remove one to add another.</p>`;
     root.innerHTML = (R.length ? `<div class="cx-t" style="--n:${R.length}"><div class="cx-corner"></div>${R.map((r, n) => head(r, n)).join('')}${body}</div>` : '') + addBox
       + (R.length >= 2 ? `<p class="cx-cap">Green check = the best of these cars on that line. Best score = the lowest Lemon Index (complaints per car sold), not the fewest raw complaints. ${notes.join(' ')}</p>` : notes.length ? `<p class="cx-cap">${notes.join(' ')}</p>` : '');
+    hero(R);
     root.querySelectorAll('.cx-x').forEach(x => x.onclick = () => { cars.splice(+x.dataset.k, 1); save(); draw(); });
     root.querySelectorAll('.cx-sel').forEach(s => s.onchange = () => { cars[+s.dataset.k][1] = s.value; save(); draw(); });
     const box = root.querySelector('.cx-add'); if (box) { search(box); if (focus) box.querySelector('input').focus({ preventScroll: true }); }

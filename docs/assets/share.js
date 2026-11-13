@@ -3,12 +3,13 @@
 // Links carry ?utm_source=share so shares show in analytics. Any other query string is dropped, so a share never carries what someone typed.
 (() => {
   const btns = document.querySelectorAll('[data-share]'); if (!btns.length) return;
-  const url = () => { const u = new URL(location.href); u.search = ''; u.hash = ''; u.searchParams.set('utm_source', 'share'); return u.toString(); };
+  // 11-12 round 2 (Devin): a page can name what to share (data-share-url): the compare tool shares its exact set of cars, or their ready-made page
+  const url = b => { const own = b && b.dataset.shareUrl; const u = new URL(own || location.href, location.origin); if (!own) u.search = ''; u.hash = ''; u.searchParams.set('utm_source', 'share'); return u.toString(); };
   const enc = encodeURIComponent;
   let panel, opener;
   const close = () => { if (!panel || panel.hidden) return; panel.hidden = true; if (opener) opener.focus(); };
   const open = (text, from) => {
-    const u = url(), msg = `${text} ${u}`; opener = from;
+    const u = url(from), msg = `${text} ${u}`; opener = from;
     if (!panel) { panel = document.createElement('div'); panel.className = 'shr'; panel.setAttribute('role', 'dialog'); panel.setAttribute('aria-modal', 'true'); panel.setAttribute('aria-label', 'Send this to a friend'); document.body.appendChild(panel);
       panel.addEventListener('click', e => { if (e.target === panel) close(); }); document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); }); }
     const L = [['Text message', `sms:?&body=${enc(msg)}`], ['WhatsApp', `https://wa.me/?text=${enc(msg)}`], ['Facebook', `https://www.facebook.com/sharer/sharer.php?u=${enc(u)}`],
@@ -28,7 +29,7 @@
   };
   btns.forEach(b => b.addEventListener('click', async () => {
     const text = b.dataset.share;
-    if (navigator.share && matchMedia('(pointer: coarse)').matches) { try { await navigator.share({ title: document.title, text, url: url() }); return; } catch (e) { if (e && e.name === 'AbortError') return; } }
+    if (navigator.share && matchMedia('(pointer: coarse)').matches) { try { await navigator.share({ title: document.title, text, url: url(b) }); return; } catch (e) { if (e && e.name === 'AbortError') return; } }
     open(text, b);
   }));
 })();
