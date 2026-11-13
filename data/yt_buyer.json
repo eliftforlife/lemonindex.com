@@ -22355,5 +22355,58 @@
 }
 ]
 }
+],
+"ford-freestyle": [
+{
+"sid": "ford-freestyle-g1",
+"y0": 2005,
+"y1": 2007,
+"label": "2005–2007",
+"videos": 199,
+"praise": [
+[
+"Reliability",
+5
+],
+[
+"Space and practicality",
+5
+],
+[
+"Fun to drive",
+5
+],
+[
+"Power",
+4
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+4
+]
+],
+"top": [
+{
+"id": "w_YSEIhgvWc",
+"title": "Running rough misfire codes Ford Freestyle 3.0L V6 2005 2006  map sensor problem in EGR valve",
+"views": 93350,
+"ch": "Fixing cars and stuff"
+},
+{
+"id": "HsB8Y3kMcSk",
+"title": "2005 Ford Freestyle, Car Review.",
+"views": 24576,
+"ch": "AutoNetwork"
+},
+{
+"id": "cVuvmj7pxrw",
+"title": "2005 Ford Freestyle dash and gauge problem as of 9/25/12",
+"views": 20154,
+"ch": "Greg Gallegos"
+}
+]
+}
 ]
 }
