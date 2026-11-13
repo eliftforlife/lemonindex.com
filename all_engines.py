@@ -45,11 +45,14 @@ for _p in sorted(_aeg.glob('data/engines_*.json')):
         ys = d.get('years') or []
         _ae_add(f'/cars/{fid}/#eng-{d["id"]}', name=f'{mk} {d["code"]}', code=d['code'], lay=d['size'], yrs=(f'{ys[0]}–{str(ys[-1])[-2:]}' if len(ys) > 1 else str(ys[0]) if ys else ''),
                 img=_ae_img(d.get('img')), yt=(None, 0, ''), used=[short], t={'h'} if mk in ('Honda', 'Acura') else set(), f='hybrid' if re.search(r'hybrid|IMA', d.get('name', '') + ' ' + d.get('note', ''), re.I) else 'gas', mk=mk, o=(3, ys[0] if ys else 0), alias=d.get('name', ''))
+# 4. 11-12 round 2: heavy-duty diesel + F-150 engine pages and the two comparisons (hd_pages.py), tab 'Trucks & diesel'
+for _c in (globals().get('HD_AE') or []): _ae_add(**_c)
 # ---- coming soon: one engine per model and fuel (11-12, Elijah: "one engine per fuel type it was actually sold with in the US")
 # data/engine_fuels.json (data_engine_fuels.py: EPA records with their fuel type) where we have it, else the EPA engine list in the model-year data (gas).
 # A model whose engines already have pages (BMW, supercar/performance hubs) skips only its gas engine; a model with its own engine list (Civic) skips all.
 _ae_cov = {f for s in (globals().get('STATS') or []) for f in s['fams']} | set(((BS.get('versions') or {}) if 'BS' in globals() else {}).keys())
 for k, v in SCENG['cars'].items(): _ae_cov.add(k.split(':', 1)[-1])
+if globals().get('HD_AE'): _ae_cov.add('ford-f-series')   # 11-12 round 2: the F-150's engines have pages now (2.7, 3.5, 5.0)
 for d in SCENG['engines'].values():
     for c in d['cars']: _ae_cov |= {c['slug']} | ({c['perf']} if c.get('perf') else set())
 _ae_ev = {c['slug'] for c in EVX}
@@ -150,7 +153,7 @@ _ae_live = sorted(AE_LIVE.values(), key=lambda c: (c['o'], c['name']))
 _ae_soonl = sorted(AE_SOON.items(), key=lambda kv: (kv[0][0], ('gas', 'diesel', 'hybrid', 'phev', 'electric').index(kv[1]['fuel']), kv[0][1]))
 _aeN, _aeS = len(_ae_live), len(_ae_soonl)
 _ae_n = lambda t: sum(t in c['t'] for c in _ae_live)
-AE_TABS = [('all', 'All', ''), ('bmw', 'BMW', _ae_n('b')), ('supercars', 'Supercars', _ae_n('s')), ('performance', 'Performance', _ae_n('p')),
+AE_TABS = [('all', 'All', ''), ('trucks', 'Trucks & diesel', _ae_n('t')), ('bmw', 'BMW', _ae_n('b')), ('supercars', 'Supercars', _ae_n('s')), ('performance', 'Performance', _ae_n('p')),
            ('honda', 'Honda', _ae_n('h')), ('soon', 'Coming soon', _aeS)]
 _ae_tabs = ('<nav class="ctabs aetabs" aria-label="Kinds of engine">' + ''.join(
     f'<a href="/engines/{"?type=" + k if k != "all" else ""}" data-type="{k}"{" aria-current=true" if k == "all" else ""}>{t}{f" <small>{n}</small>" if n else ""}</a>'
@@ -169,7 +172,7 @@ _ae_body = f'''<div class="pg"><div class="ph ph-f"><section class="finder aefin
 <p class="aenone" hidden>No engine matches that yet. Try a code like B58 or a model like Camry.</p>
 <p class="note aehubs">Engine head-to-head: {" · ".join(f'<a href="{u}">{lab.replace(", ", " vs ").replace(" and ", " vs ")}</a>' for u, us, lab in ENG_H2H)}. YT # = YouTube rank among all {ENG_POOL_N} {ENG_POOL_LBL}.</p>
 <p class="note aehubs">Engine hubs: <a href="/engines/bmw/">BMW engines</a> · <a href="/engines/supercars/">Supercar engines</a> · <a href="/engines/performance/">Performance engines</a> · <a href="/check-engine-light/">Check engine light codes</a> (OBD-II trouble codes, a different lookup)</p>
-<p class="ph-cr">Engine images: AI-generated illustrations by The Lemon Index, free under CC BY 4.0 (<a href="/images/">download</a>), except the BMW S55 and S58 photos (Wikimedia Commons, credited on their pages). Engine sizes and cylinders: EPA (fueleconomy.gov).</p></section></div><script src="/assets/engines.js?v=4" defer></script><script src="/assets/soonvote.js?v=2" defer></script>'''
+<p class="ph-cr">Engine images: AI-generated illustrations by The Lemon Index, free under CC BY 4.0 (<a href="/images/">download</a>), except the BMW S55 and S58 photos (Wikimedia Commons, credited on their pages). Engine sizes and cylinders: EPA (fueleconomy.gov).</p></section></div><script src="/assets/engines.js?v=5" defer></script><script src="/assets/soonvote.js?v=2" defer></script>'''
 page('/engines/', 'Every Car Engine: Reliability, Problems & YouTube Owner Ranks',
      f'Search {_aeN} car engines, from the BMW B58 and N54 to the GM LS3 and Ferrari F154: owner complaints, recalls and YouTube owner ranks by model year. {_aeS} more coming soon.',
      _ae_body, ld=[{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Every car engine", "url": BASE + '/engines/',

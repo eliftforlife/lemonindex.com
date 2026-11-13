@@ -3,7 +3,7 @@
 // keeps the cards whose name, code, layout or cars start with every typed word ("honda k20", "ls3", "camry").
 (() => {
   const g = document.getElementById('aegrid'), q = document.getElementById('aeq'), cnt = document.getElementById('aen'); if (!g || !q) return;
-  const T = { all: '', bmw: 'b', supercars: 's', performance: 'p', honda: 'h', soon: 'c' };
+  const T = { all: '', trucks: 't', bmw: 'b', supercars: 's', performance: 'p', honda: 'h', soon: 'c' };
   const fold = s => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9.]+/g, ' ').replace(/ \./g, ' ').trim();
   const cards = [...g.querySelectorAll('.aec')].map(el => ({ el, f: el.dataset.f || 'gas', t: (el.dataset.t || '').split(' '), k: el.dataset.k.split(' '), soon: el.classList.contains('aec-soon') }));
   const N = cards.filter(c => !c.soon).length, S = cards.length - N;

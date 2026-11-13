@@ -153,7 +153,7 @@ def _sce_page(e):
                 + '; '.join(f'the <a href="{E(u)}">{E(sh)} page</a> counts {n:,} complaints and {rr} recall campaigns for {a}–{b}, everything NHTSA files as &quot;{E(m)}&quot;, other engines included' for sh, u, m, a, b, n, rr in _ct)
                 + f'. This page counts only the {tot:,} complaint{"" if tot == 1 else "s"} and {len(d["recalls"])} recall{"" if len(d["recalls"]) == 1 else "s"} we can tie to the {E(nm)} by model name or the owner&#39;s own words.</p>')
     # per-year chart
-    sec = []
+    sec = list((globals().get('HD_SCE') or (lambda _e: []))(e))   # 11-12 round 2: the F-150's own data first (hd_pages.py)
     mxn = max([1] + [v['n'] for v in yrs.values()])
     def carsof(y): return ', '.join(_sce_label(d, s).replace(mk + ' ', '') for s in yrs[y]['cars'])
     def row(y):

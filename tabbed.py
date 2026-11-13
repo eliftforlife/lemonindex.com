@@ -197,7 +197,7 @@ def transform_model(body, eng_html, short):
     sl = _s(slider)   # 11-12: the badge says 'Fewest complaints' (year_slider.py); never 'safest'
     if not slider and pv:   # 11-10 rollout: no year images -> the model's own picture fills the same hero slot (car-image work can drop in here later)
         fig = pv.find('figure', class_='yph'); sl = _s(fig)
-    pin = yt.find(class_='pinb')   # 11-12: a pinned battery-fire recall banner stays in the hero
+    pin = ''.join(map(str, yt.find_all(class_='pinb'))) or None   # 11-12: pinned banners (battery-fire recall, half-ton/HD) stay in the hero
     hero = (f'<section class="ph tb-hero">{_s(crumbs)}<div class="tb-img">{"".join(map(str, links))}{sl}</div>{_s(h1)}{short_ans}{_s(pin)}{_s(yhero)}{_s(share)}</section>')
     secs = [c for c in root.find_all(recursive=False) if c is not ph]
     pick = lambda pred: [c for c in secs if pred(c)]
@@ -333,7 +333,7 @@ def transform_year(body, eng_html, short):
         pop = _info(re.sub(r'^(Early read|Too new: partial score)\.\s*', '', _txt(en))) if en is not None else ''
         pop = pop.replace('<div class="ii-pop"', '<span class="ii-pop"').replace('</div>', '</span>')
         early = BeautifulSoup(f'<p class="early-b">Too new: partial score · still collecting complaints<span class="iiw">{pop}</span></p>', 'html.parser')
-    pin = yt.find(class_='pinb')   # 11-12: a pinned battery-fire recall banner stays in the hero
+    pin = ''.join(map(str, yt.find_all(class_='pinb'))) or None   # 11-12: pinned banners (battery-fire recall, half-ton/HD) stay in the hero
     hero = f'<section class="ph tb-hero">{_s(crumbs)}<div class="tb-img">{img}</div>{_s(h1)}{_s(early)}{_s(pin)}{_s(yhero)}{_controls(sw, modes)}</section>'   # the gauge + verdict already say it: no answer paragraph
     top = [c for c in root.find_all(recursive=False) if c is not ph]
     grid = next((c for c in top if 'ygrid' in (c.get('class') or [])), None)

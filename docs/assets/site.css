@@ -1936,3 +1936,15 @@ a.ecard:hover { border-color: #c9ccd1; box-shadow: 0 12px 28px -18px rgba(17,18,
 }
 .cx-h .cx-badge { border-radius: 8px; }
 @media (max-width: 600px) { .cx-t[style*="--n:3"] .cx-rv.tx, .cx-t[style*="--n:4"] .cx-rv.tx { font-size: 12px; overflow-wrap: anywhere; } }
+/* 11-12 round 2 (fix C): heavy-duty trucks + truck engines (hd_pages.py). .hdb = the half-ton banner on the F-Series / Ram / Silverado / Sierra pages */
+.pinb.hdb { border-color: rgba(17,18,20,.18); border-left-color: var(--lemon); background: var(--lemon-soft); }
+.pinb.hdb .pinb-l a { text-decoration: underline; text-underline-offset: 2px; }
+.hd-tag { display: inline-block; margin-left: 6px; font-size: 12px; font-weight: 600; color: var(--ink); background: var(--lemon-soft); border: 1px solid rgba(17,18,20,.12); border-radius: 999px; padding: 1px 8px; }
+.hd-ki { margin: 8px 0 4px; padding-left: 20px; } .hd-ki li { margin: 0 0 10px; line-height: 1.5; } .hd-ki blockquote { margin: 6px 0 0; font-size: 14px; }
+.hd-tl { margin: 6px 0; padding-left: 20px; line-height: 1.7; }
+.hd-eng td small { display: block; color: var(--mute); font-size: 12px; font-weight: 400; }
+table.adv.hd-cmp td:first-child { white-space: normal; min-width: 9em; }
+@media (max-width: 600px) {   /* the old study-page rule (.pg .study .tw table td:last-child hidden) cut the last column off every engine-page table on phones */
+  .pg article.study.eng2 .tw table td:last-child, .pg article.study.eng2 .tw table th:last-child { display: table-cell; }
+  .pg article.study.eng2 .tw table.stk td:last-child { display: flow-root; }
+}

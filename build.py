@@ -418,7 +418,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}{img or "/assets/og.png"}"><meta name="twitter:card" content="summary_large_image">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' '{DB_HASH}' https://static.cloudflareinsights.com https://challenges.cloudflare.com https://www.googletagmanager.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; frame-src https://challenges.cloudflare.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cloudflareinsights.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://vpic.nhtsa.dot.gov https://api.nhtsa.gov https://lemon-survey.elift08.workers.dev https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="google-adsense-account" content="{ADS}"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=1112-r2a"><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
+<link rel="stylesheet" href="/assets/site.css?v=1112-r2a-hd1"><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
 <body>{'' if path.startswith('/thanks/') else DONBAR}{gh_header(path)}
 <main>{body}{end_block(path, _upd, _shl)}{'' if path == '/vote/' else ask_html(path)}</main>
 <footer class="foot f2"><div class="f2-in"><div class="f2-brand"><a class="f2-logo" href="/"><img src="/assets/icon-64.png" alt="" width="28" height="28">The Lemon Index</a>
@@ -1524,6 +1524,7 @@ def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
 <p class="yc-cap">{WHAT_LI} A complaint is an owner&#39;s report, not a confirmed defect. <a href="/method/">How it works</a></p>{share_line(share_txt)}</article>'''
 
 UXC = 'hooks'; exec(open('ux_c.py', encoding='utf-8').read())   # 11-12 UX test (part C): battery-recall banners, RAV4 Hybrid, sales sources, EV YouTube, data files
+HDX = 'hooks'; exec(open('hd_pages.py', encoding='utf-8').read())   # 11-12 round 2 (fix C): half-ton banner + honest Q&A on the F-Series/Ram/Silverado/Sierra pages
 def yearx(fid, y): return extra(fid, y)
 for f in YEARS:
     c = BYNAME[f['name']]; ys = f['years']; sc = scored(f)
@@ -1827,6 +1828,7 @@ _have = {f['id'] for f in YEARS}
 NEWM = [m for m in NEWM if m['slug'] not in _have and os.path.exists(f'assets/ai-models/{m["slug"]}.webp')]
 NEWM = [m for m in NEWM if m['slug'] not in {c['slug'] for c in EVX}]   # 11-11: an EV already has its EV card on /cars/ (Ioniq 5, Leaf, ID.4, Polestar 2, EV6 showed twice)
 _EXN = _load('data/extra_models_new.json')   # 11-11 complaints-only models (no sales source yet)
+_EXN.update(globals().get('HD_EXN') or {})   # 11-12 round 2: the HD truck cards open their pages (hd_pages.py)
 _PLAN = _load('data/new_plan.json'); _DUP = {k: v['dupe_of'] for k, v in _PLAN.items() if v.get('dupe_of')}
 # 11-12 round 2 (Devin: the WRX tile opened the Impreza): a model with its own performance page (data/perf/<slug>.json, e.g. the WRX) is no longer
 # a duplicate card; its performance card (perf_cars.json) links to that page instead
@@ -2049,6 +2051,7 @@ exec(open('engine_pages.py', encoding='utf-8').read())   # 11-10 engine code sea
 exec(open('gap_pages.py', encoding='utf-8').read())   # 11-06 keyword gaps
 exec(open('seo_pages.py', encoding='utf-8').read())   # 11-06 best-of + stats pages
 exec(open('extra_pages.py', encoding='utf-8').read())   # 11-06 Taos + Pontiac
+HDX = 'pages'; exec(open('hd_pages.py', encoding='utf-8').read())   # 11-12 round 2 (fix C): HD truck + diesel engine pages, 2.7 EcoBoost, F-150 engines compared (before the engine hubs)
 exec(open('supercar_engine_pages.py', encoding='utf-8').read())   # 11-11 supercar engines hub + engine pages (before the BMW pages phase: /images/ lists their images)
 BMW_PHASE = 'pages'; exec(open('bmw_pages.py', encoding='utf-8').read())   # 11-10 BMW model pages + engine pages
 exec(open('thanks_page.py', encoding='utf-8').read())   # 11-07 donation thank-you page (noindex)
@@ -2058,7 +2061,7 @@ exec(open('find_index.py', encoding='utf-8').read())   # 11-11: the search index
 json.dump(PD, open('data/page_dates.json', 'w', encoding='utf-8'), separators=(',', ':'))
 
 open(f'{OUT}/404.html', 'w', encoding='utf-8').write(open(f'{OUT}/index.html', encoding='utf-8').read().replace('<main>', '<main><div class="pg"><section class="ph"><p class="ph-e">404</p><h1>That page drove off.</h1><p class="ph-s">It may have moved. Try one of these.</p><p class="ph-404"><a class="btn" href="/cars/">Look up a car</a> <a class="btn btn-ghost" href="/brands/">Every brand</a> <a class="btn btn-ghost" href="/">Home</a></p></section></div><!--', 1).replace('</main>', '--></main>', 1))
-urls = ['/', '/rankings/', STUDY, '/studies/', '/method/', '/vin/', '/car-loan-rates/', '/vote/', '/data/', '/brands/'] + PERF_URLS + burls + purls + murls + surls + eurls + GAP_URLS + CODE_URLS + SEO_URLS + EXTRA_URLS + BMW_URLS + SCE_URLS + AE_URLS + yurls + ADV_URLS + curls + LEGAL_URLS + UXC_URLS + MST_URLS
+urls = ['/', '/rankings/', STUDY, '/studies/', '/method/', '/vin/', '/car-loan-rates/', '/vote/', '/data/', '/brands/'] + PERF_URLS + burls + purls + murls + surls + eurls + GAP_URLS + CODE_URLS + SEO_URLS + EXTRA_URLS + BMW_URLS + SCE_URLS + AE_URLS + yurls + ADV_URLS + curls + LEGAL_URLS + UXC_URLS + MST_URLS + globals().get('HD_URLS', [])
 open(f'{OUT}/sitemap.xml', 'w', encoding='utf-8').write('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + ''.join(f'<url><loc>{BASE}{u}</loc><lastmod>{PD.get(u, {}).get("d", TODAY)}</lastmod></url>' for u in urls) + '</urlset>')
 open(f'{OUT}/ads.txt', 'w').write(f'google.com, {ADS.replace("ca-", "")}, DIRECT, f08c47fec0942fa0\n')
 open(f'{OUT}/robots.txt', 'w').write(f'User-agent: *\nAllow: /\n\nUser-agent: GPTBot\nAllow: /\nUser-agent: ClaudeBot\nAllow: /\nUser-agent: PerplexityBot\nAllow: /\nUser-agent: Google-Extended\nAllow: /\nUser-agent: Googlebot-Image\nAllow: /\n\n# bulk dataset scrapers: the data is free at /data/ with credit instead\nUser-agent: CCBot\nDisallow: /\nUser-agent: Bytespider\nDisallow: /\nUser-agent: Diffbot\nDisallow: /\nUser-agent: Omgilibot\nDisallow: /\nUser-agent: ImagesiftBot\nDisallow: /\n\nSitemap: {BASE}/sitemap.xml\nSitemap: {BASE}/image-sitemap.xml\n')

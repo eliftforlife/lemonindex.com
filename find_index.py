@@ -63,6 +63,7 @@ for c in PERFX:
 for s in (globals().get('MS') or []): _fadd(s['name'], s['make'], '', 'moto', [], 'motorcycle bike ' + (s.get('search') or ''), 1)
 for m in NEWM:
     if m['slug'] not in _DUP and m['slug'] not in _EXN: _fadd(m['name'], m['make'], '', 'nd', [], '', 1)
+for r in (globals().get('HD_FIND') or []): _fadd(*r)   # 11-12 round 2: HD truck pages (hd_pages.py)
 for r in (globals().get('AE_FIND') or []): _fadd(*r)   # 11-12 engines (all_engines.py): live engine pages + coming-soon engines
 for r in (globals().get('UXC_FIND') or []): _fadd(*r)   # 11-12 UX test: the performance side-by-side pages (ux_c.py), e.g. "m3 vs c63"
 for _nm, _br, _k, _al, _rx in SOON_EXTRA:
