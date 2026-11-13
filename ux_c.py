@@ -32,15 +32,31 @@ if UXC == 'hooks':
             if _bf(_r): BATT.setdefault(_s, {}).setdefault(_r['id'], dict(_r, years=set()))['years'] |= _ryears(_r['summary'])
     _rk = lambda r: r['date'][6:10] + r['date'][3:5] + r['date'][:2]
     def _span(ys): ys = sorted(ys); return '' if not ys else str(ys[0]) if ys[0] == ys[-1] else f'{ys[0]}–{ys[-1]}'
+    # 11-12 round 2 (Ryan, Mitch, Carlos: a battery-fire banner on the F-Series model page and every CR-V): on a gas car's pages the banner
+    # shows only on the year pages it covers, and names the version that has the battery (CR-V Hybrid, Escape plug-in hybrid ...); the
+    # F-150 Lightning's recalls live on its own EV page (scope_filter.py takes them off the F-Series)
+    def _trim(rs):
+        s = ' '.join((r.get('summary') or '') for r in rs)
+        for rx, lab in ((r'lightning', 'F-150 Lightning'), (r'plug-in hybrid|\bphev\b|\b4xe\b|energi', 'plug-in hybrid'), (r'hybrid', 'hybrid'), (r'battery electric|\bbev\b', 'electric')):
+            if _re.search(rx, s, _re.I): return lab
+        return ''
     def PIN_HTML(fid, y=None):
+        ev = fid in _EVS
+        if y is None and not ev: return ''
         rs = [r for r in (BATT.get(fid) or {}).values() if y is None or y in r['years']]
         if not rs: return ''
         rs.sort(key=_rk); ys = set().union(*[r['years'] for r in rs]); bolt = fid == 'chevrolet-bolt'
-        head = 'Battery replacement recall (fire risk): check yours by VIN' if bolt else 'High-voltage battery recall (fire risk): check yours by VIN'
+        tr = '' if ev else _trim(rs); nm = (FY.get(fid) or {}).get('name', '')
+        tl = {'hybrid': 'Hybrid', 'plug-in hybrid': 'Plug-in Hybrid', 'electric': 'EV'}.get(tr, tr)
+        ver = (f'{nm} {tl}' if not tr.startswith('F-150') else tr) if tr else f'{nm} versions with a high-voltage battery'
+        head = ('Battery replacement recall (fire risk): check yours by VIN' if bolt else 'High-voltage battery recall (fire risk): check yours by VIN' if ev
+                else f'{E(ver)} only: high-voltage battery recall (fire risk)')
         if bolt: what = (f'GM recalled the Bolt EV{" and Bolt EUV" if max(ys) >= 2022 else ""} ({_span(ys)}) because the high-voltage battery can catch fire. '
                          'The fix replaces the battery modules (on many cars the whole pack), free at any Chevy dealer. A used Bolt should have it done: ask for the paperwork.')
-        else: what = (f'{len(rs)} recall{"s" if len(rs) != 1 else ""} on this car&#39;s high-voltage battery mention a fire risk ({_span(ys)} model years). '
-                      'The repair is free at any dealer if it&#39;s still open on the car.')
+        elif ev: what = (f'{len(rs)} recall{"s" if len(rs) != 1 else ""} on this car&#39;s high-voltage battery mention{"" if len(rs) != 1 else "s"} a fire risk ({_span(ys)} model years). '
+                         'The repair is free at any dealer if it&#39;s still open on the car.')
+        else: what = (f'{len(rs)} recall{"s" if len(rs) != 1 else ""} on the high-voltage battery of the {y} {E(ver)} mention{"" if len(rs) != 1 else "s"} a fire risk. '
+                      'Gas-only versions have no high-voltage battery, so this doesn&#39;t apply to them. The repair is free at any dealer if it&#39;s still open on the car.')
         ids = ' · '.join(f'<a href="https://www.nhtsa.gov/recalls?nhtsaId={E(r["id"])}" rel="noopener nofollow" target="_blank">{E(r["id"])}</a>' for r in rs)
         return (f'<div class="pinb" role="note"><p class="pinb-h"><b>{head}</b></p><p class="pinb-t">{what}</p>'
                 f'<p class="pinb-l">NHTSA recall{"s" if len(rs) != 1 else ""}: {ids}</p><p class="pinb-a"><a class="btn" href="/vin/">Check a VIN</a> '

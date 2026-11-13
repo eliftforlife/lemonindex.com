@@ -15,9 +15,22 @@ def _fadd(name, brand, url, kind='', years=(), alias='', soon=0):
 _brand_of = lambda nm, mk=None: mk or (BYNAME.get(nm, {}).get('brand') if nm in BYNAME else nm.split(' ')[0])
 # common names people type that aren't in the model name (11-11, Elijah's list); generation codes and engines come from data/perf/*.json
 FIND_ALIAS = {'/cars/bmw-m3/': 'competition comp cs', 'ford-shelby-gt500': 'shelby gt500 mustang', 'shelby-gt500': 'shelby gt500 mustang',
-              'civic-type-r': 'type r typer', '/cars/ford-f-series/': 'f150 f 150 f250 f350 super duty', '/cars/ram-pickup/': '1500 2500 3500',
-              '/cars/chevrolet-silverado/': '1500 2500 3500', '/cars/gmc-sierra/': '1500 2500 3500',
-              '/cars/bmw-2-series/': 'm240i 230i m235i'}   # 11-12 round 2 (Devin): trim names people type
+              'civic-type-r': 'type r typer', '/cars/ford-f-series/': 'f150 f 150', '/cars/ram-pickup/': '1500',
+              '/cars/chevrolet-silverado/': '1500', '/cars/gmc-sierra/': '1500',
+              # 11-12 round 2 (Devin): trim names people type -> the model page that covers them (the M340i/340i have their own page)
+              '/cars/bmw-3-series/': '330i 330e 328i 328d 335i 320i 325i 330xi 3er',
+              '/cars/bmw-2-series/': 'm240i 240i m240 230i 228i m235i 2er'}
+# 11-12 round 2 (Mitch: "cummins", "duramax", "lml", "2500hd" offered a RAV4; "f250" went to the half-ton F-150 page): heavy-duty truck and
+# diesel words belong to the heavy-duty pages, not the half-ton ones (their 2500/3500 aliases are gone above). Matched on the NAME, so they
+# move to the real HD pages when those are built (fix C); until then the coming-soon cards take them, and search opens their vote sheet.
+HD_ALIAS = [(r'\bram\b.*(2500|3500|heavy duty|\bhd\b)', 'cummins 2500 3500 2500hd 3500hd hd heavy duty diesel'),
+            (r'super ?duty|\bf-?[234]50\b', 'powerstroke f250 f350 f450 2500 3500 super duty superduty hd heavy duty diesel'),
+            (r'silverado.*(2500|3500|heavy duty|\bhd\b)', 'duramax lb7 lly lbz lmm lml l5p 2500hd 3500hd 2500 3500 hd heavy duty diesel'),
+            (r'sierra.*(2500|3500|heavy duty|\bhd\b)', '2500hd 3500hd 2500 3500 hd heavy duty diesel')]   # the Duramax words open the Silverado HD (Mitch's list)
+# ... and where no page or card exists yet, a coming-soon card of its own (name, brand, kind, aliases, the name pattern that means it exists)
+SOON_EXTRA = [('Chevrolet Silverado HD (2500/3500)', 'Chevrolet', 'nd', '', r'silverado.*(2500|3500|heavy duty|\bhd\b)'),
+              ('GMC Sierra HD (2500/3500)', 'GMC', 'nd', '', r'sierra.*(2500|3500|heavy duty|\bhd\b)'),
+              ('Subaru WRX', 'Subaru', 'perf', 'wrx va vb fa20dit fa24 fa24dit', r'^subaru wrx(?!.*\bsti\b)')]   # Devin: the current WRX (fix D built its page: then this isn't added)
 # 1. scored models (study + new), every year with a page
 for f in YEARS: _fadd(f['name'], _brand_of(f['name']), f'/cars/{f["id"]}/', '', [v['y'] for v in f['years']], FIND_ALIAS.get(f'/cars/{f["id"]}/', ''))
 PERF_LIVE = {}   # perf slug -> its live page (a card for the same car then links there instead of saying coming soon)
@@ -52,6 +65,12 @@ for m in NEWM:
     if m['slug'] not in _DUP and m['slug'] not in _EXN: _fadd(m['name'], m['make'], '', 'nd', [], '', 1)
 for r in (globals().get('AE_FIND') or []): _fadd(*r)   # 11-12 engines (all_engines.py): live engine pages + coming-soon engines
 for r in (globals().get('UXC_FIND') or []): _fadd(*r)   # 11-12 UX test: the performance side-by-side pages (ux_c.py), e.g. "m3 vs c63"
+for _nm, _br, _k, _al, _rx in SOON_EXTRA:
+    if not any(re.search(_rx, r[0], re.I) and r[3] != 'eng' for r in FIND): _fadd(_nm, _br, '', _k, [], _al, 1)
+for _r in FIND:
+    if _r[3] == 'eng': continue
+    for _rx, _al in HD_ALIAS:
+        if re.search(_rx, _r[0], re.I): _r[5] = ' '.join(dict.fromkeys((_r[5] + ' ' + _al).split()))
 os.makedirs(f'{OUT}/assets', exist_ok=True)   # straight into the built site: no untracked assets/find.json in the repo (it blocked the workers' auto-deploy)
 json.dump(FIND, open(f'{OUT}/assets/find.json', 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
 # 11-12 (6 usability testers): where the search sends codes, problem words and questions, so it only ever links pages that exist

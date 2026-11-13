@@ -189,6 +189,20 @@ def _years_in(t):
         a = int(a); b = int(b) if b and len(b) == 4 else (a // 100 * 100 + int(b) if b else a)
         ys.update(range(a, b + 1) if a <= b <= a + 20 else [a])
     return sorted(ys)
+# 11-12 round 2 (Devin: a 2008-14 recall on the 2015-21 STI, a 2018 Mustang video among the S650's most-watched, an "oil consumption
+# (2018-2020)" card counting 2024+ complaints): an engine issue whose title (or a year range in its text) names model years outside the
+# generation, and a video whose title names other years, stay off that generation
+def _gen_ok(ys, g, y1):
+    return not ys or any(g['y0'] <= y <= y1 for y in ys)
+def issue_in_gen(i, g, y1):
+    ys = _years_in(i.get('t'))
+    if not ys:
+        ys = set()
+        for a, b in re.findall(r'\b((?:19|20)\d\d)\s*[–-]\s*((?:19|20)?\d\d)\b', i.get('x') or ''): ys.update(_years_in(f'{a}–{b}'))
+    return _gen_ok(sorted(ys), g, y1)
+def video_in_gen(title, g, y1):
+    ys = [y for y in _years_in(title) if 1980 <= y <= 2030]
+    return not ys or sum(g['y0'] <= y <= y1 for y in ys) * 2 >= len(ys)
 YF_NOTE = ('<p class="pf-yf"><span class="pf-yft">Showing the <b class="pf-yfg"></b> years only (<span class="pf-yfr"></span>).</span><span class="pf-yfx">Showing every year.</span> '
            '<button type="button" class="pf-yall" aria-pressed="false">Show every year</button></p>')
 def _gen_parts(D, A, label):
@@ -282,11 +296,11 @@ def build(slug, out='docs'):
         facts = ''.join(f'<div class="pf-f"><span>{E(k)}</span><b>{E(v)}</b></div>' for k, v, s in eng['facts'] if R(*s) == '')
         ytl = (f'<p class="pf-eyt">{ic("play", 16)}<span>YouTube owner tone <b>{sc}</b>/100' + (f' · #{rk} of {len(eranked)} {E(short)} engines' if rk and len(eranked) > 1 else '') + '</span></p>'
                if sc is not None else (f'<p class="pf-eyt na">{ic("play", 16)}<span>YouTube owner tone for the {E(eng["name"])}: its study is queued; the score shows here when it lands.</span></p>' if eng.get('study') else ''))
-        iss = []
-        for i in eng['issues']:
+        iss = []; gy1 = _gy1(G, g); gis = [i for i in eng['issues'] if issue_in_gen(i, g, gy1)]
+        for i in gis:
             R(*i.get('src', []))
             cnt = (ga.get('issues') or {}).get(i['t'])
-            nline = (f'<span class="pf-n">{cnt["n"]} owner complaint{"" if cnt["n"] == 1 else "s"} to NHTSA mention it ({E(g["years"])})</span>' if cnt and cnt['n'] else '')
+            nline = (f'<span class="pf-n">{cnt["n"]} owner complaint{"" if cnt["n"] == 1 else "s"} to NHTSA mention{"s" if cnt["n"] == 1 else ""} it ({E(g["years"])})</span>' if cnt and cnt['n'] else '')
             iss.append(f'<li><div><b>{E(i["t"])}</b><span class="pf-k">{E(i["kind"])}</span></div><p>{E(i["x"])}</p>'
                        + (f'<p class="pf-fix">Fix: {E(i["fix"])}</p>' if i.get('fix') else '') + nline + '</li>')
         epage = next((u for u in (eng.get('page'), '/engines/performance/', '/engines/supercars/') if u and os.path.exists(os.path.join(HERE, out, u.strip('/'), 'index.html'))), '')
@@ -313,7 +327,7 @@ def build(slug, out='docs'):
             return ''.join(f'<div class="pf-b {cls}"><span>{E(k)}</span><i style="--w:{round(100 * p / mx)}%"></i><b>{p}%</b></div>' for k, p in rows)
         vids = ''.join(f'<a class="pf-vid" href="https://www.youtube.com/watch?v={E(v["id"])}" rel="noopener nofollow" target="_blank">'
                        f'<img src="https://i.ytimg.com/vi/{E(v["id"])}/mqdefault.jpg" alt="" width="320" height="180" loading="lazy" decoding="async">'
-                       f'<span>{E(v["title"])}</span><small>{E(v["ch"])} · {_views(v["views"])}</small></a>' for v in (st.get('top') or [])[:3])
+                       f'<span>{E(v["title"])}</span><small>{E(v["ch"])} · {_views(v["views"])}</small></a>' for v in [v for v in (st.get('top') or []) if video_in_gen(v.get('title'), g, _gy1(G, g))][:3])
         comp_line = ''
         if g.get('comp_study'):
             cl = E(g.get('comp_label') or 'Competition')
@@ -344,10 +358,10 @@ def build(slug, out='docs'):
             hi_ = max(by, key=by.get); lo_ = min(by, key=by.get)
             if by[hi_] >= 10: buy.append(('info', f'Most owner complaints: the <b>{hi_}</b> ({by[hi_]}). Fewest: the {lo_} ({by[lo_]}). Raw counts, not per car sold' + (', for every version NHTSA files under this name.' if filed else '.')))
             elif not filed: buy.append(('buy', f'Few owner complaints so far: {sum(by.values())} to NHTSA for {g["y0"]}–{g["y1"]}.'))
-        big = [i for i in eng['issues'] if i.get('rx') and (((ga.get('issues') or {}).get(i['t']) or {}).get('n') or re.search(r'bulletin|recall|service action|warranty', i['kind'], re.I))]
+        big = [i for i in gis if i.get('rx') and (((ga.get('issues') or {}).get(i['t']) or {}).get('n') or re.search(r'bulletin|recall|service action|warranty', i['kind'], re.I))]
         for i in big[:2]:
             n_i = ((ga.get('issues') or {}).get(i['t']) or {}).get('n')
-            if n_i: buy.append(('warn', f'Budget for <b>{E(i["t"].lower())}</b>: {n_i} owner complaints mention it.' + (f' {E(i["fix"])}' if i.get('fix') else '')))
+            if n_i: buy.append(('warn', f'Budget for <b>{E(i["t"].lower())}</b>: {n_i} owner complaint{"" if n_i == 1 else "s"} mention{"s" if n_i == 1 else ""} it.' + (f' {E(i["fix"])}' if i.get('fix') else '')))
             else: buy.append(('warn', ('Recall' if re.search('recall', i['kind'], re.I) else 'Maker fix') + f': <b>{E(i["t"])}</b>.' + (f' {E(i["fix"])}' if i.get('fix') else '')))
         nrec = len({r['id'] for y in yrs for r in rc.get(str(y), [])})
         if nrec: buy.append(('warn', f'{nrec} recall campaign{"" if nrec == 1 else "s"} across {g["y0"]}–{g["y1"]}' + (' (all ' + E(D["nhtsa"]["models"][0].title()) + ' versions)' if filed else '') + '. <a href="/vin/">Check a VIN</a> before you buy.'))

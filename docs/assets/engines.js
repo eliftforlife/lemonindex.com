@@ -29,6 +29,12 @@
     e.preventDefault(); fuel = F.includes(a.dataset.fuel) ? a.dataset.fuel : 'all'; run(true);
   });
   q.addEventListener('input', () => { const had = tab !== 'all' || fuel !== 'all'; if (q.value.trim()) { tab = 'all'; fuel = 'all'; } run(had); });   // search covers every tab, like the home search
+  // 11-12 round 2 (Liam, Mitch: "Enter does nothing"): Enter opens the first engine shown (a coming-soon one opens its vote sheet)
+  q.addEventListener('keydown', e => {
+    if (e.key !== 'Enter') return; e.preventDefault();
+    const c = cards.find(x => !x.el.hidden && !x.soon) || cards.find(x => !x.el.hidden); if (!c) return;
+    if (c.soon) c.el.click(); else if (c.el.href) location.href = c.el.href;
+  });
   const p = new URLSearchParams(location.search); tab = (p.get('type') || 'all') in T ? (p.get('type') || 'all') : 'all';
   if (p.get('q')) q.value = p.get('q');
   fuel = F.includes(p.get('fuel')) ? p.get('fuel') : 'all';

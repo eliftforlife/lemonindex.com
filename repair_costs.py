@@ -41,13 +41,32 @@ _TIPW = {
     ('coverage', 'Electrical'): 'ask whether the electrical module special coverage applies. Covered repairs can be free.',
     ('software', 'Screen, radio & camera'): 'ask for the radio / screen software update first; it often fixes freezes and reboots without new parts.',
 }
+# 11-12 round 2 (Jake: the PCM tip quoted a stereo amplifier note; Liam: the Elantra's quoted a nav/audio update, the Civic's a CR-V campaign;
+# Ryan: the F-150's quoted 6.7L diesel Super Duty notes): a bulletin is quoted only when its words are about that system, it isn't
+# another model's (LINE_OK, set by build.py's scope_filter.py), and the quote isn't a bare "Dealer message - ..." title
+_AREA_KW = {'Engine': re.compile(r'engine|\bpcm\b|\becm\b|powertrain control|\boil\b|turbo|piston|misfire|stall|idle|hesitat|fuel|emission|check engine|\bmil\b|\bdtc\b|\bp0\d|cylinder|spark|knock|timing|camshaft|valve|coolant|overheat|\d\.\d\s?l\b', re.I),
+            'Transmission': re.compile(r'transmission|transaxle|\bshift|\btcm\b|\bcvt\b|\bdct\b|\bgear|clutch|torque converter|\b\d+r\d+\b|surge|\brpm\b|downshift|upshift|judder|shudder|tip-?out|reaccelerat|drivetrain', re.I),
+            'Electrical': re.compile(r'tipm|body control|\bbcm\b|fuel pump relay|module|electrical|battery|wiring|relay', re.I),
+            'Screen, radio & camera': re.compile(r'radio|screen|display|camera|audio|navigation|infotainment|uconnect|\bsync\b|bluetooth|head unit', re.I)}
+_OFF_KW = re.compile(r'radio|audio|navigation|amplifier|\bdsp\b|display|screen|bluetooth|camera|infotainment|speaker|uconnect|\bsync\b|head unit|seat|door|window|wiper|paint|airbag|seat ?belt', re.I)
+_BOILER = re.compile(r'^\W*(dealer message|service bulletin|techline summary article|technical service bulletin|tsb)\s*[-:–]\s*', re.I)
+LINE_OK = None
+def _tip_line(a, line):
+    """the bulletin line as quoted, or None when it doesn't fit the tip: boilerplate prefix off, about the area, not another system"""
+    t = _BOILER.sub('', (line or '').strip().strip('"')).strip()
+    if len(re.sub(r'[^A-Za-z]', '', re.sub(r'(?i)american honda motor co\.?,? inc\.?|\bupdate\b|\b(january|february|march|april|may|june|july|august|september|october|november|december)\b', '', t))) < 12: return None
+    if not _AREA_KW.get(a, re.compile('.')).search(t): return None
+    if a != 'Screen, radio & camera' and _OFF_KW.search(t): return None
+    return t[0].upper() + t[1:]
 def tips(fid, y, prefer=()):
     """up to 3 'what to ask the shop' lines for this model year: one per (kind, area), coverage first, the car's big problem areas first"""
     rows = _data().get(fid, {}).get('t', {}).get(str(y), [])
     seen, out = set(), []
     for k, a, doc, line in sorted(rows, key=lambda r: (r[1] not in prefer, ('coverage', 'software', 'fix').index(r[0]))):
         if (k, a) in seen or (k, a) not in _TIPW: continue
-        seen.add((k, a)); out.append((a, _TIPW[(k, a)], doc, line))
+        q = _tip_line(a, line)
+        if not q or (LINE_OK and not LINE_OK(fid, line)): continue
+        seen.add((k, a)); out.append((a, _TIPW[(k, a)], doc, q))
     return out[:3]
 
 def html_block(fid, y, gen_years=None, gen_label=''):

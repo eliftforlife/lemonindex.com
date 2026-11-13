@@ -130,7 +130,7 @@ if MO:
 <section><h2>Every model. <span class="h2s">Tap one for its problems, recalls and complaints by year.{f' Cards marked Coming soon are next ({len(MS)} bikes).' if MS else ''}</span></h2><div class="mbs">{groups}</div>{vgrid_note([m["name"] for m in MO], "motorcycles", "motorcycle")}</section>
 <section class="yc hbsec"><h2>Most recalls. <span class="h2s">NHTSA recall campaigns across the model years.</span></h2>{hub_bars([(m["name"], len(m["recalls"])) for m in rec[:10]])}</section>
 <section class="yc hbsec"><h2>Most serious complaints. <span class="h2s">Share that involved a crash, fire or injury (models with 40+ complaints).</span></h2>{hub_bars([(m["name"], m["serious"]) for m in ser[:10]], '%')}</section>
-<p class="yc-cap" style="text-align:center">There are no free U.S. sales figures by motorcycle model, so this section shows counts and shares, not a per-bike score like our cars. Source: NHTSA owner complaints and recalls.</p></div><script src="/assets/soonvote.js?v=1" defer></script>''',
+<p class="yc-cap" style="text-align:center">There are no free U.S. sales figures by motorcycle model, so this section shows counts and shares, not a per-bike score like our cars. Source: NHTSA owner complaints and recalls.</p></div><script src="/assets/soonvote.js?v=2" defer></script>''',
          ld=[{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Motorcycle problems and recalls by model", "url": BASE + '/motorcycles/'}])
     murls.insert(0, '/motorcycles/')
 print('planes pages', len(purls), 'moto pages', len(murls))

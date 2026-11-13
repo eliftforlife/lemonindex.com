@@ -2,8 +2,10 @@
 // opens a small sheet: "Vote for this one" (we build the most-voted first) and an optional email to hear when its page is live.
 // It goes through the site's existing feedback endpoint (lemon-survey Worker /feedback: page path + message + optional email), so there is
 // no new service or account. One vote per card per browser (localStorage); the Worker rate-limits by network.
+// 11-12 round 2: window.LSV.open(name, backEl) opens the same sheet from the search box (lookup.js loads this file when a page has no cards).
 (() => {
-  const cards = document.querySelectorAll('.mc-nd, .aec-soon'); if (!cards.length) return;
+  if (window.LSV) return;   // loaded twice (the page's tag + the search box)
+  const cards = document.querySelectorAll('.mc-nd, .aec-soon');
   const API = 'https://lemon-survey.elift08.workers.dev/feedback', KEY = 'soon-votes';
   let mine = {}; try { mine = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) {}
   const save = () => { try { localStorage.setItem(KEY, JSON.stringify(mine)); } catch (e) {} };
@@ -28,8 +30,8 @@
     if (!r.ok) throw new Error(r.status);
   };
   let last = null;
-  const open = c => {
-    const nm = nameOf(c), id = nm.toLowerCase(), voted = !!mine[id]; last = c;
+  const open = (c, name) => {
+    const nm = name || nameOf(c), id = nm.toLowerCase(), voted = !!mine[id]; last = c;
     const bg = document.createElement('div'); bg.className = 'sv-bg';
     bg.innerHTML = '<div class="sv-sh" role="dialog" aria-modal="true" aria-labelledby="sv-h"><h2 id="sv-h"></h2><p>Its page isn&#39;t built yet. We build the most-voted cars and engines first.</p>'
       + '<button type="button" class="sv-b sv-v"></button>'
@@ -59,6 +61,7 @@
     document.addEventListener('keydown', esc);
     document.body.appendChild(bg); v.disabled ? em.focus() : v.focus();
   };
+  window.LSV = { open: (name, back) => open(back || null, name) };
   cards.forEach(c => {
     c.classList.add('sv-on'); c.removeAttribute('aria-disabled'); c.setAttribute('role', 'button'); c.setAttribute('tabindex', '0');
     c.setAttribute('aria-haspopup', 'dialog'); c.setAttribute('aria-label', nameOf(c) + ': coming soon. Vote for it or get notified');

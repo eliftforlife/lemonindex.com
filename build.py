@@ -426,7 +426,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <nav class="f2-col" aria-label="Explore"><p class="f2-h">Explore</p><a href="/compare/">Compare cars</a><a href="/best/">Best cars</a><a href="/rankings/">Rankings</a><a href="/engines/">Every engine</a><a href="/electric/">Electric cars</a><a href="/stats/car-complaints/">Statistics</a><a href="/car-loan-rates/">Car loan rates</a></nav>
 <nav class="f2-col" aria-label="Data"><p class="f2-h">Data</p><a href="/method/">How the index works</a><a href="/data/">Free data</a><a href="/images/">Free images</a><a href="/vote/">Vote</a></nav>
 <nav class="f2-col" aria-label="Support"><p class="f2-h">Support</p><button class="supl" type="button">Keep Lemon ad-free</button><a href="/about/">About</a><a href="/press/">Press</a><a href="/contact/">Contact</a><a href="{YT}?sub_confirmation=1" rel="noopener">Subscribe on YouTube</a></nav></div>
-<div class="f2-bot"><span>© {TODAY[:4]} The Lemon Index</span><a href="/terms/">Terms</a><a href="/privacy/">Privacy</a><a href="/refunds/">Refunds</a><span class="f2-dis">Built from public NHTSA complaint data and published U.S. sales figures. Not affiliated with any automaker. Not a repair-cost or safety rating.</span></div></footer><script src="/assets/explorer.js?v=1110" defer></script><script src="/assets/support.js?v=1111d" defer></script><script src="/assets/imginfo.js?v=1" defer></script><script src="/assets/lookup.js?v=1112sfd" defer></script>{beacon}</body></html>'''
+<div class="f2-bot"><span>© {TODAY[:4]} The Lemon Index</span><a href="/terms/">Terms</a><a href="/privacy/">Privacy</a><a href="/refunds/">Refunds</a><span class="f2-dis">Built from public NHTSA complaint data and published U.S. sales figures. Not affiliated with any automaker. Not a repair-cost or safety rating.</span></div></footer><script src="/assets/explorer.js?v=1110" defer></script><script src="/assets/support.js?v=1111d" defer></script><script src="/assets/imginfo.js?v=1" defer></script><script src="/assets/lookup.js?v=1112b2" defer></script>{beacon}</body></html>'''
     LG[path] = (set(_LGHREF.findall(doc)), bool(_LGNOIX.search(doc)), url)   # 11-12 link graph (linkgraph.py, end of build)
     f = os.path.join(OUT, path.strip('/'), 'index.html') if path.endswith('/') else os.path.join(OUT, path.strip('/'))
     os.makedirs(os.path.dirname(f), exist_ok=True)
@@ -1086,7 +1086,8 @@ def LX_HTML(fid, y):
             + ''.join(f'<li><a href="{u}">{E(t)}</a><span>{E(s)}</span></li>' for u, t, s in out) + '</ul></nav>')
 # ---- 11-02 year-page redesign (Elijah: "less text, bars and charts, numbers that matter, built for someone looking at their own car or one they want to buy")
 NICE = lambda p: {'service brakes, hydraulic': 'brakes', 'brakes': 'brakes', 'service brakes, electric': 'brakes (electric)', 'service brakes, air': 'brakes', 'power train': 'transmission & drivetrain',
-                  'unknown or other': 'other', 'vehicle speed control': 'speed control', 'equipment': 'equipment & accessories'}.get(p.lower(), p.lower())
+                  'unknown or other': 'other', 'vehicle speed control': 'speed control', 'equipment': 'equipment & accessories',
+                  'fuel or ev drive system': 'fuel system'}.get(p.lower(), p.lower())   # 11-12 round 2 (Carlos): gas cars said "fuel or ev drive system" (scope_filter.py renames it per car first)
 def verdict(li):
     if li < 50: return 'good', 'One of the most reliable'
     if li < 85: return 'good', 'Better than average'
@@ -1107,6 +1108,7 @@ def timeline(m, comps):
             f'<p class="yc-cap">Most owners who filed a complaint with NHTSA had <b>{m["p25"] // 1000}K to {m["p75"] // 1000}K miles</b> on the car ({m["n"]:,} of the complaints filed so far listed the miles). This shows when people who had a problem reported it, not the odds that your car will have it.</p>'
             + (f'<ul class="tl-top">{top}</ul>' if top else '') + '</section>')
 X2 = _load('data/extras2.json'); X2.update(_load('data/extras2_new.json'))   # 11-11 new models: repair notes, investigations, safety tech
+exec(open('scope_filter.py', encoding='utf-8').read())   # 11-12 round 2 (fix B): each page keeps to its own model, years and fuel (heavy-duty/Lightning off the half-ton pages, "fuel system", bulletin quotes)
 TR = _load('data/trans.json')   # transmission complaints per model-year (data_trans.py)
 _tr_ok = lambda f: sum(1 for v in f['years'] if (TR.get(f['id'], {}).get(str(v['y'])) or {}).get('rate') is not None) >= 3   # 11-12: trans_body() builds the page only with 3+ rated years; link only then (was a 404 on the Audi Q3/A4)
 PH = _load('data/photos.json')   # exact-year Wikimedia Commons cutouts (data_photos.py), {fid: {year: {src, author, license, page, w, h}}}
@@ -1144,6 +1146,8 @@ def clean_tsb(t):
     """An automaker repair note in plain words: drop the 'HONDA:' prefix and 'Some 2017-2018 X built before ... may exhibit', fix SHOUTING, skip shop-tool notes."""
     t = t.replace('�', '').replace('…', '').strip()
     if re.search(r'(VCM|IDS|diagnostic|scan tool|procedure|labor|warranty claim|technician|dealer should|service manual|part number)', t, re.I): return None
+    t = RCQ._BOILER.sub('', t.strip('"')).strip()   # 11-12 round 2 (Jake, Liam): "Dealer message - American Honda Motor Co., Inc" says nothing
+    if re.fullmatch(r'(?i)(dealer message|service bulletin|tsb|techline summary article)?[\s-]*(american honda motor co\.?,? inc\.?)?[\s.]*', t): return None
     t = re.sub(r'^[A-Z][A-Z &-]{1,20}:\s*', '', t)
     t = re.sub(r'^.*?may (exhibit|experience|have|display|produce|develop)\s+(an?\s+|the\s+)?', '', t, flags=re.I)
     if t.isupper() or sum(c.isupper() for c in t) > len(t) * .6: t = t.lower()
@@ -1283,7 +1287,7 @@ def seller_questions(f, v, y, x, x2):
                     if cvt and pat.startswith('transmission'): q = 'Any shudder, whine or slipping from the CVT? Ask for CVT fluid service records.'
                     out.append(q)
                 break
-    tl = [c for c in (clean_tsb(z) for z in (x2.get('tsb') or {}).get('top', [])) if c]
+    tl = [c for c in (clean_tsb(z) for z in (x2.get('tsb') or {}).get('top', []) if sc_line_ok(f['id'], z)) if c]
     if x2.get('tsb') and tl: out.append(f'{E(MAKER(f["name"]))} sent dealers {x2["tsb"]["n"]} repair notes for this car. Was this one done: &ldquo;{E(tl[0])}&rdquo;?')
     return out[:6]
 TECH = (('esc', 'Stability control'), ('fcw', 'Collision warning'), ('ldw', 'Lane departure warning'))
@@ -1432,6 +1436,7 @@ def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
         recs = (f'<section class="yc" id="recalls"><h2>Recalls <span class="yc-n">{len(rs)}</span></h2>'
                 + (f'<ul class="rc">{"".join(card(r) for r in rs[:3])}</ul>' + (f'<details><summary>Show all {len(rs)} recalls</summary><ul class="rc">{"".join(card(r) for r in rs[3:])}</ul></details>' if len(rs) > 3 else '')
                    if rs else '<p>No safety recalls on record.</p>')
+                + (f'<p class="yc-cap">These are the {nm} recalls the VIN check shows. NHTSA lists {x["rec_other"]["n"]} more for the {y} {E(x["rec_other"]["who"])}, which it files next to it; they aren&#39;t counted here.</p>' if x.get('rec_other') else '')   # 11-12 round 2 (Ryan: 18 here vs 14 on the VIN check)
                 + '<p class="yc-cap">Recall repairs are free at any dealer. A recall only matters if it&#39;s still open on that exact car, so check its VIN.</p>'
                 + '<p><a class="btn" href="/vin/">Check a VIN for open recalls</a></p></section>')
     else: recs = ''
@@ -1442,7 +1447,7 @@ def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
     fuel = (f'<details class="yd"><summary>Fuel cost and engines</summary><p>About <b>${rng(m["cost"])}</b> a year in {"electricity" if m.get("ev") else "fuel"} (EPA estimate).'
             + (f' Engines: {E(", ".join(m["engines"]))}.' if m.get('engines') and not m.get('ev') else '') + '</p></details>') if m and m.get('cost') else ''
     fixes = ''
-    tl = [c for c in (clean_tsb(z) for z in (x2.get('tsb') or {}).get('top', [])) if c]
+    tl = [c for c in (clean_tsb(z) for z in (x2.get('tsb') or {}).get('top', []) if sc_line_ok(f['id'], z)) if c]
     if x2.get('tsb') and tl:
         t = dict(x2['tsb'], top=tl)
         fixes = (f'<section class="yc" id="fixes"><h2>Problems {mkr} told dealers about</h2><p class="yc-cap">{mkr} sent dealers <b>{t["n"]}</b> repair notes for this car. The ones about its biggest problems:</p>'
@@ -1873,7 +1878,7 @@ CNOTES = (f'<div class="ctn pfh" data-for="performance" hidden><span class="pfh-
           + (f'<p class="pfh-n"><b>{_npf + _nsx} cars on the way:</b> {_npf} here, {_nsx} supercars and hypercars under <a href="/cars/?type=supercars">Supercars</a>.</p>' if _npf else '') + '</div>'
           f'<p class="ctn" data-for="supercars" hidden>Owner complaints are too rare to score supercars, so their cards lead with the engine. Cards marked Coming soon, hypercars included, are next. <a href="/supercars/">Supercar fuel costs and recalls, ranked</a></p>'
           f'<p class="ctn" data-for="electric" hidden>EV scores cover model years {EV_WIN}, with complaints filed by the end of the year after the model year. Under All cars, an EV with its own page (Bolt, Model Y) shows the main Lemon Index for its own years instead, so its two numbers differ. <a href="/electric/">The most reliable EVs, ranked</a></p>')
-CARS_GRID = f'''<section class="cgrid">{CTABS}{HCHIPS}<h2 data-hide="p">Every model. <span class="h2s" data-hide="s p">Score in the corner: 100 is average, lower is better.</span></h2>{CNOTES}<div class="mbs">{_MW}{lst}</div><p class="ph-cr" data-hide="p">Car images: AI-generated illustrations by The Lemon Index, free under CC BY 4.0 (<a href="/images/">download</a>).</p></section><script src="/assets/soonvote.js?v=1" defer></script>
+CARS_GRID = f'''<section class="cgrid">{CTABS}{HCHIPS}<h2 data-hide="p">Every model. <span class="h2s" data-hide="s p">Score in the corner: 100 is average, lower is better.</span></h2>{CNOTES}<div class="mbs">{_MW}{lst}</div><p class="ph-cr" data-hide="p">Car images: AI-generated illustrations by The Lemon Index, free under CC BY 4.0 (<a href="/images/">download</a>).</p></section><script src="/assets/soonvote.js?v=2" defer></script>
 <style>.pfh{{max-width:560px}}.pfh h3{{font-size:clamp(28px,6.5vw,36px);letter-spacing:-.03em;margin:10px 0 6px}}.pfh-pill{{display:inline-block;padding:4px 12px;border-radius:999px;background:#ffd400;color:#17161a;font-size:12.5px;font-weight:700;letter-spacing:.02em}}.pfh-s{{margin:0 0 6px;font-size:16px}}.pfh-n{{margin:0;font-size:14px;color:#6e6e73}}.cgrid[data-tab="performance"] .mc.mc-dup:not([hidden]){{display:flex}}.cgrid .ph-cr{{margin-top:28px}}</style>'''   # 11-11: shared by /cars/ and the home page
 page('/cars/', 'Look Up Your Car: Problems by Model and Year | The Lemon Index', f'Pick your car and model year to see its owner complaints, its top problems and how it compares with every other year. {len(YEARS)} models, 2000-2025, plus {len(SCX)} supercars and {len(EVX)} electric cars.', f'''
 <div class="pg"><div class="ph ph-f">{finder('<span class="ph-e">Look up</span>Look up your car.', 'Every model year, 2000 to 2025. Free.')}</div>
@@ -2026,6 +2031,7 @@ for f in YEARS:
     CJ[f['id']] = [f['name'], yy]
 json.dump(CJ, open('assets/cars.json', 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
 UXC = 'data'; exec(open('ux_c.py', encoding='utf-8').read())   # 11-12 UX test: docs/assets/compare.json (every car) + chart embeds on /rankings/ and /stats/
+exec(open('search_go.py', encoding='utf-8').read())   # 11-12 round 2 (fix B): search "X vs Y" -> the compare tool (find-go.json cmp/cpg)
 page('/vin/', 'Free VIN Decoder and Recall Check: Look Up Any VIN | The Lemon Index', 'Free VIN decoder and lookup: type a 17-character VIN to see the exact year, engine and factory, then that car\'s recalls and owner complaints. From the U.S. government VIN database.', f'''
 <div class="pg"><section class="finder ph ph-f"><h1><span class="ph-e">Free VIN decoder</span>Check any VIN.</h1><p class="lede">Decode it, then see that car&#39;s recalls and problems.</p>
 <form id="vinf" class="vinf" autocomplete="off"><input name="vin" maxlength="20" placeholder="e.g. 1FTEW1EG8JKF05094" aria-label="VIN" spellcheck="false"><button class="btn" type="submit">Check</button></form>
