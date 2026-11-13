@@ -22408,5 +22408,54 @@
 }
 ]
 }
+],
+"chevrolet-hhr": [
+{
+"sid": "chevrolet-hhr-g1",
+"y0": 2006,
+"y1": 2011,
+"label": "2006–2011",
+"videos": 197,
+"praise": [
+[
+"Reliability",
+3
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+6
+],
+[
+"Rust",
+4
+],
+[
+"Battery / alternator / starter",
+3
+]
+],
+"top": [
+{
+"id": "uOpLPppyTP0",
+"title": "2006 Chevrolet HHR LT: Regular Car Reviews",
+"views": 803869,
+"ch": "Regular Car Reviews"
+},
+{
+"id": "uXMhUtxovlI",
+"title": "Top 5 Problems Chevy HHR SUV 1st Generation 2006-11",
+"views": 347033,
+"ch": "1A Auto: Repair Tips & Secrets Only Mechanics Know"
+},
+{
+"id": "L4A_4TS6M1c",
+"title": "2008 Chevrolet HHR SS Review, Walkaround, Exhaust & Test Drive",
+"views": 198591,
+"ch": "Redline Reviews"
+}
+]
+}
 ]
 }

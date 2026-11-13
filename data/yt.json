@@ -62968,6 +62968,135 @@
    }
   }
  ],
+ "chevrolet-hhr": [
+  {
+   "years": [
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011
+   ],
+   "gen": "2006–2011 Chevrolet HHR",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 6560099,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 531875,
+     "n": 7,
+     "best": {
+      "id": "eFypNSiUWHA",
+      "title": "Chevrolet HHR Car Stereo radio Removal replace 2006 - 2008 = Car Stereo HELP",
+      "channel": "Factory Car Stereo Repair",
+      "views": 369769
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 346548,
+     "n": 4,
+     "best": {
+      "id": "zcwU4Q8j0UE",
+      "title": "2009 Chevy HHR Power Steering (EZ FIX)",
+      "channel": "James LaVerdi",
+      "views": 245802
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 222168,
+     "n": 7,
+     "best": {
+      "id": "VmS3HfWxpfQ",
+      "title": "How to rechare AC on 2006 Chevy HHR",
+      "channel": "Dom B",
+      "views": 57468
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 213668,
+     "n": 10,
+     "best": {
+      "id": "KJoRFWKarEk",
+      "title": "How to Replace Front Wheel Bearing 2006-2011 Chevrolet HHR",
+      "channel": "TRQ",
+      "views": 55373
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 194457,
+     "n": 4,
+     "best": {
+      "id": "a8sdq0EaNyg",
+      "title": "2006 Chevy HHR Dash Gauges and Dash Lights Intermittent Issues",
+      "channel": "Can They Drive Garage",
+      "views": 78253
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 151134,
+     "n": 8,
+     "best": {
+      "id": "yWUPZohCaDs",
+      "title": "2006 Chevy HHR Oxygen Sensor Replacement",
+      "channel": "Klelious Davis",
+      "views": 43178
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 104294,
+     "n": 6,
+     "best": {
+      "id": "7L2V4HH8vis",
+      "title": "How to Replace Rear Brakes 2006-2011 Chevrolet HHR",
+      "channel": "TRQ",
+      "views": 36675
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 98053,
+     "n": 2,
+     "best": {
+      "id": "xW8Gqs9zaMk",
+      "title": "No Start No Crank Code 1682 2007 HHR by Scared Shiftless Rides and Wrecks",
+      "channel": "Mark Boice",
+      "views": 84770
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "uXMhUtxovlI",
+     "title": "Top 5 Problems Chevy HHR SUV 1st Generation 2006-11",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 347033
+    },
+    {
+     "id": "8S3IjFhJ4lE",
+     "title": "Chevy HHR 2006 to 2011 common problems, issues, defects and complaints",
+     "channel": "HOWSTUFFINMYCARWORKS",
+     "views": 45740
+    },
+    {
+     "id": "umOdoY-y_Ac",
+     "title": "2006 Chevy HHR Gearshift/ Transmission problems",
+     "channel": "J M",
+     "views": 37040
+    }
+   ],
+   "costs": null
+  }
+ ],
  "ram-promaster": [
   {
    "years": [
