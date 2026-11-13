@@ -238,6 +238,7 @@ def model_page(out, c):
         h = re.sub(r',\s*(and|but)\s+YouTube owners[^.<]*', '', h)
         h = re.sub(r'\s*Fewest complaints:.*$', '', h, flags=re.S)
         h = h.replace('It draws ', '').replace('It drew ', '')
+        h = re.sub(r'(</b>\s*)([a-z])', lambda m: m.group(1) + m.group(2).upper(), h, count=1)   # '... Yes.</b> About two-thirds as many ...'
         an.clear(); an.append(BeautifulSoup(h.strip(), 'html.parser'))
     _split_title(hero.find('h1')); _chips(hero)
     sh = next((b for b in hero.find_all('button', attrs={'data-share': True})), None)   # phones: Share rides at the end of the tab row

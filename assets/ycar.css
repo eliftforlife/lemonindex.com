@@ -164,3 +164,4 @@ a.yot-t:hover span { text-decoration: underline; }
   .tbl .tb-hero.yc-hero .yverd > p:first-child { font-size: 19px; line-height: 1.25; }
   .tbl .tb-hero.yx-hero .tb-img { margin-top: 30px; }
 }
+@media (max-width: 520px) { .tbl .tb-hero.yc-hero .yct-g { display: none; } }   /* phones: the search word under the title is enough; the generation shows in the Every year tab */
