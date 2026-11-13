@@ -61600,7 +61600,117 @@
      "views": 156615
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 500,
+       "lo": 150.0,
+       "hi": 1500.0,
+       "n": 40,
+       "videos": 20,
+       "id": "SIRL_-KQkBE",
+       "t": 356,
+       "title": "Building My DREAM C5 Corvette in One Episode!"
+      }
+     ],
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 1000,
+       "lo": 346.99,
+       "hi": 5000.0,
+       "n": 10,
+       "videos": 7,
+       "id": "SIRL_-KQkBE",
+       "t": 527,
+       "title": "Building My DREAM C5 Corvette in One Episode!"
+      }
+     ],
+     [
+      "Brakes",
+      {
+       "median": 264,
+       "lo": 160.0,
+       "hi": 500.0,
+       "n": 8,
+       "videos": 7,
+       "id": "E7Y2tRYj5Do",
+       "t": 185,
+       "title": "The True Cost of Owning a C5 Corvette - Is It Really THAT BAD?"
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 1750,
+       "lo": 600.0,
+       "hi": 2400.0,
+       "n": 16,
+       "videos": 6,
+       "id": "E7Y2tRYj5Do",
+       "t": 181,
+       "title": "The True Cost of Owning a C5 Corvette - Is It Really THAT BAD?"
+      }
+     ],
+     [
+      "Water pump / cooling",
+      {
+       "median": 150,
+       "lo": 50.0,
+       "hi": 600.0,
+       "n": 5,
+       "videos": 5,
+       "id": "GAN_9oFId9s",
+       "t": 863,
+       "title": "How to Replace a C5 Corvette Harmonic Balancer! (Every Single Step A-Z)"
+      }
+     ],
+     [
+      "Oil change",
+      {
+       "median": 75,
+       "lo": 45.0,
+       "hi": 200.0,
+       "n": 6,
+       "videos": 5,
+       "id": "8crb9bj4FHw",
+       "t": 89,
+       "title": "Are C5 Corvettes Reliable? (And can you daily drive them?)"
+      }
+     ],
+     [
+      "Oil leak repair",
+      {
+       "median": 50,
+       "lo": 22.0,
+       "hi": 500.0,
+       "n": 7,
+       "videos": 5,
+       "id": "j9z19NtlhiI",
+       "t": 151,
+       "title": "C5 Corvette Cam install TOTAL COST"
+      }
+     ],
+     [
+      "Yearly cost to own",
+      {
+       "median": 2200,
+       "lo": 1500.0,
+       "hi": 2500.0,
+       "n": 9,
+       "videos": 3,
+       "id": "E7Y2tRYj5Do",
+       "t": 204,
+       "title": "The True Cost of Owning a C5 Corvette - Is It Really THAT BAD?"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -61686,7 +61796,104 @@
      "views": 381090
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 882,
+       "lo": 400.0,
+       "hi": 1500.0,
+       "n": 30,
+       "videos": 19,
+       "id": "eBkjv_Mul48",
+       "t": 463,
+       "title": "2005-2013 Chevy Corvette C6 ULTIMATE Buyers Guide"
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 800,
+       "lo": 500.0,
+       "hi": 1200.0,
+       "n": 8,
+       "videos": 7,
+       "id": "3inaXKBzFV0",
+       "t": 426,
+       "title": "7 Rules When Buying A C6 Corvette \"Corvette Hop\""
+      }
+     ],
+     [
+      "Oil change",
+      {
+       "median": 72,
+       "lo": 50.0,
+       "hi": 150.0,
+       "n": 6,
+       "videos": 5,
+       "id": "CEiy49SHEis",
+       "t": 208,
+       "title": "C6 CORVETTE 1 YEAR OWNERSHIP REVIEW [DON'T MISS OUT ON ONE]"
+      }
+     ],
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 810,
+       "lo": 500.0,
+       "hi": 6000.0,
+       "n": 8,
+       "videos": 4,
+       "id": "iuK0NXFsoQA",
+       "t": 118,
+       "title": "FULL COST & BUILD OF MY 2012 C6 CORVETTE"
+      }
+     ],
+     [
+      "Transmission",
+      {
+       "median": 6000,
+       "lo": 2500.0,
+       "hi": 6000.0,
+       "n": 5,
+       "videos": 4,
+       "id": "dIP-GUN_bxQ",
+       "t": 268,
+       "title": "C6 Corvette Grand Sport Review: Do You REALLY Need the C6 Z06? | C6 Z06 vs. Grand Sport"
+      }
+     ],
+     [
+      "Steering & suspension",
+      {
+       "median": 280,
+       "lo": 60.0,
+       "hi": 500.0,
+       "n": 4,
+       "videos": 3,
+       "id": "In1yGdP3aK4",
+       "t": 754,
+       "title": "C6 Corvette Service Active Handling System Repair! (Save a Bunch of Money!)"
+      }
+     ],
+     [
+      "Battery",
+      {
+       "median": 7625,
+       "lo": 250.0,
+       "hi": 15000.0,
+       "n": 4,
+       "videos": 3,
+       "id": "e61yocSviNk",
+       "t": 393,
+       "title": "C6 Corvette 1 Year of Ownershp and 25K Miles!"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -61734,6 +61941,56 @@
      "title": "Should you BUY a sale priced 2019 C7 Corvette Grand Sport or WAIT for the C8?",
      "channel": "Raiti's Rides",
      "views": 134085
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2020–2025 Chevrolet Corvette",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 192,
+   "views": 154196046,
+   "topics": [
+    {
+     "name": "Transmission & shifter",
+     "views": 154905,
+     "n": 1,
+     "best": {
+      "id": "Qjg4Mk5CQ4A",
+      "title": "We Have to Replace the Transmission On our 2022 Corvette C8!!!",
+      "channel": "vTuned garage",
+      "views": 154905
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "tZmNUwag5eo",
+     "title": "My early problems with C8 Corvette Z06 ownership & making it sound BETTER THAN A FERRARI!",
+     "channel": "Hoovies Garage",
+     "views": 572126
+    },
+    {
+     "id": "w9ZsTOF1Pgs",
+     "title": "A C8 Corvette Now Costs LESS Than a Toyota Highlander: But Should You Buy One?",
+     "channel": "The Fast Lane Car",
+     "views": 323860
+    },
+    {
+     "id": "ic-gZvY2HpM",
+     "title": "2020 C8 Corvette Problems - Ex-Engineer Speaks Out",
+     "channel": "RevMatchTV",
+     "views": 117053
     }
    ],
    "costs": null

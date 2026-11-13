@@ -21789,5 +21789,230 @@
 }
 ]
 }
+],
+"chevrolet-corvette": [
+{
+"sid": "chevrolet-corvette-g5",
+"y0": 1997,
+"y1": 2004,
+"label": "1997–2004",
+"videos": 190,
+"praise": [
+[
+"Reliability",
+27
+],
+[
+"Power",
+22
+],
+[
+"Looks",
+21
+],
+[
+"Value for money",
+17
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+10
+],
+[
+"Coolant leaks / water pump / overheating",
+6
+],
+[
+"Oil leaks (gaskets, seals, housings)",
+5
+],
+[
+"Fuel pump / fuel system",
+4
+]
+],
+"top": [
+{
+"id": "8oAumIAs71g",
+"title": "Regular Car Reviews: 2001 Chevrolet Corvette C5",
+"views": 1069700,
+"ch": "Regular Car Reviews"
+},
+{
+"id": "Y84YiwkQKQ8",
+"title": "C4 vs C5 vs C6: Which Affordable Corvette Is THE BEST? (Owner's Review)",
+"views": 509009,
+"ch": "Retro Cars Forever"
+},
+{
+"id": "oAUlJ9Gt5SA",
+"title": "Review: 2000 Chevrolet Corvette Convertible",
+"views": 474227,
+"ch": "Matt Maran Motoring"
+}
+]
+},
+{
+"sid": "chevrolet-corvette-g6",
+"y0": 2005,
+"y1": 2013,
+"label": "2005–2013",
+"videos": 189,
+"praise": [
+[
+"Power",
+23
+],
+[
+"Reliability",
+20
+],
+[
+"Looks",
+17
+],
+[
+"Value for money",
+15
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+5
+],
+[
+"Coolant leaks / water pump / overheating",
+4
+],
+[
+"Battery / alternator / starter",
+4
+],
+[
+"Fuel pump / fuel system",
+4
+]
+],
+"top": [
+{
+"id": "9LXRHywt8bY",
+"title": "Regular Car Reviews: 2008 Chevrolet Corvette C6",
+"views": 800563,
+"ch": "Regular Car Reviews"
+},
+{
+"id": "C7IOelB64DE",
+"title": "Corvette C6 ZR1 Quick Review",
+"views": 754764,
+"ch": "Extra Throttle House"
+},
+{
+"id": "g_SrFaXQe1s",
+"title": "Corvette C6 Review",
+"views": 722699,
+"ch": "ThatDudeinBlue"
+}
+]
+},
+{
+"sid": "chevrolet-corvette-g7",
+"y0": 2014,
+"y1": 2019,
+"label": "2014–2019",
+"videos": 192,
+"praise": [
+[
+"Power",
+25
+],
+[
+"Fun to drive",
+19
+],
+[
+"Looks",
+19
+],
+[
+"Value for money",
+14
+]
+],
+"trouble": [
+[
+"Coolant leaks / water pump / overheating",
+9
+]
+],
+"top": [
+{
+"id": "wOjGZhZLeSY",
+"title": "2015 Chevrolet Corvette Z06 Review - Fast Lane Daily",
+"views": 1795051,
+"ch": "FastLaneDaily"
+},
+{
+"id": "4hZZysNq1No",
+"title": "2014 Chevrolet Corvette Stingray Z51 Start Up, Exhaust, and In Depth Review",
+"views": 1492196,
+"ch": "Saabkyle04"
+},
+{
+"id": "eYELTFLoHXc",
+"title": "Regular Car Reviews: 2014 Corvette C7 Stingray",
+"views": 947117,
+"ch": "Regular Car Reviews"
+}
+]
+},
+{
+"sid": "chevrolet-corvette-g8",
+"y0": 2020,
+"y1": 2025,
+"label": "2020–2025",
+"videos": 187,
+"praise": [
+[
+"Looks",
+36
+],
+[
+"Power",
+31
+],
+[
+"Fun to drive",
+27
+],
+[
+"Value for money",
+18
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "Dn6gmBQUTdg",
+"title": "2023 Corvette Z06 Review // The $100,000 Supercar",
+"views": 3281769,
+"ch": "Throttle House"
+},
+{
+"id": "5UQB17UWxvQ",
+"title": "2020 C8 Corvette Z51 Review // Expectation vs Reality",
+"views": 1518364,
+"ch": "Throttle House"
+},
+{
+"id": "0YyIeyl6amU",
+"title": "Is The C8 Corvette Convertible Worth $7,500 Extra? First Drive & Impressions!",
+"views": 1261985,
+"ch": "Cars, Costs and Technology"
+}
+]
+}
 ]
 }
