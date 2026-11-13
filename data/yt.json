@@ -61962,7 +61962,104 @@
      "views": 134085
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Brakes",
+      {
+       "median": 4400,
+       "lo": 2800.0,
+       "hi": 6000.0,
+       "n": 6,
+       "videos": 6,
+       "id": "Vq5HkukfCEY",
+       "t": 269,
+       "title": "C7 Corvette - Yes, it Really is That Good"
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 1700,
+       "lo": 800.0,
+       "hi": 2000.0,
+       "n": 9,
+       "videos": 6,
+       "id": "mVUFLYWJijA",
+       "t": 540,
+       "title": "2019 Corvette Grand Sport Review | From a Stingray Owner..."
+      }
+     ],
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 424,
+       "lo": 200.0,
+       "hi": 2000.0,
+       "n": 10,
+       "videos": 6,
+       "id": "xuwTqGdUY-c",
+       "t": 346,
+       "title": "7 Rules When Buying A C7 Corvette"
+      }
+     ],
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 4000,
+       "lo": 500.0,
+       "hi": 7000.0,
+       "n": 5,
+       "videos": 5,
+       "id": "1cnIc5_32L0",
+       "t": 111,
+       "title": "2015 Hennessey Chevrolet Corvette Stingray HPE650 Review - Fast Lane Daily"
+      }
+     ],
+     [
+      "Transmission",
+      {
+       "median": 1712,
+       "lo": 1700.0,
+       "hi": 1725.0,
+       "n": 2,
+       "videos": 2,
+       "id": "aIUmkWAqC9c",
+       "t": 194,
+       "title": "2016 Chevy Corvette Z06 - Review and Road Test"
+      }
+     ],
+     [
+      "Insurance",
+      {
+       "median": 1620,
+       "lo": 1560.0,
+       "hi": 1680.0,
+       "n": 2,
+       "videos": 2,
+       "id": "QF0xxSMBbb0",
+       "t": 870,
+       "title": "2019 Corvette ZR1 Review! | From a Stingray Owner..."
+      }
+     ],
+     [
+      "Oil change",
+      {
+       "median": 100,
+       "lo": 100.0,
+       "hi": 100.0,
+       "n": 2,
+       "videos": 2,
+       "id": "J9MGHbZwxn0",
+       "t": 698,
+       "title": "4 Years of C7 Corvette ZR1 Ownership! The GOOD, the BAD, and the UGLY!"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -62012,7 +62109,117 @@
      "views": 117053
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 1148,
+       "lo": 260.0,
+       "hi": 1495.0,
+       "n": 8,
+       "videos": 8,
+       "id": "u7YfAlDYMVE",
+       "t": 660,
+       "title": "What We Learned After Testing a Chevy C8 Corvette Over 40,000 Miles | Car and Driver"
+      }
+     ],
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 1100,
+       "lo": 150.0,
+       "hi": 3000.0,
+       "n": 10,
+       "videos": 8,
+       "id": "ROJphg9cLts",
+       "t": 1004,
+       "title": "How Much Does a C8 Corvette ACTUALLY Cost to Own?"
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 1800,
+       "lo": 800.0,
+       "hi": 2200.0,
+       "n": 25,
+       "videos": 7,
+       "id": "yqe6Vtxfcgs",
+       "t": 195,
+       "title": "32,000 Miles in Our C8 Corvette Stingray | What It’s Like to Live With the Mid-Engine Corvette"
+      }
+     ],
+     [
+      "Brakes",
+      {
+       "median": 512,
+       "lo": 500.0,
+       "hi": 700.0,
+       "n": 8,
+       "videos": 6,
+       "id": "Sf7S-kXy76k",
+       "t": 245,
+       "title": "The 2024 Chevrolet Corvette Convertible Is The Ultimate Topless American Sports Car"
+      }
+     ],
+     [
+      "Transmission",
+      {
+       "median": 670,
+       "lo": 540.0,
+       "hi": 800.0,
+       "n": 4,
+       "videos": 4,
+       "id": "u7YfAlDYMVE",
+       "t": 543,
+       "title": "What We Learned After Testing a Chevy C8 Corvette Over 40,000 Miles | Car and Driver"
+      }
+     ],
+     [
+      "Oil change",
+      {
+       "median": 200,
+       "lo": 150.0,
+       "hi": 600.0,
+       "n": 5,
+       "videos": 4,
+       "id": "ROJphg9cLts",
+       "t": 670,
+       "title": "How Much Does a C8 Corvette ACTUALLY Cost to Own?"
+      }
+     ],
+     [
+      "Insurance",
+      {
+       "median": 1412,
+       "lo": 1152.0,
+       "hi": 1800.0,
+       "n": 9,
+       "videos": 4,
+       "id": "vRnZ0eH_FGo",
+       "t": 563,
+       "title": "What is C8 Corvette Z06 Monthly Payment and Insurance? MY FULL SPEC"
+      }
+     ],
+     [
+      "Battery",
+      {
+       "median": 300,
+       "lo": 300.0,
+       "hi": 300.0,
+       "n": 2,
+       "videos": 2,
+       "id": "0ke-xLWCNI8",
+       "t": 496,
+       "title": "C8 Corvette Owners: Watch This BEFORE You Buy! (Costly Maintenance Nobody Talks About)"
+      }
+     ]
+    ]
+   }
   }
  ],
  "chevrolet-express": [
