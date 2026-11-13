@@ -62222,6 +62222,350 @@
    }
   }
  ],
+ "mini-cooper": [
+  {
+   "years": [
+    2002,
+    2003,
+    2004,
+    2005,
+    2006
+   ],
+   "gen": "2002–2006 Mini Cooper",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 198,
+   "views": 26533798,
+   "topics": [
+    {
+     "name": "Transmission & shifter",
+     "views": 1184473,
+     "n": 6,
+     "best": {
+      "id": "83t1MoklcIs",
+      "title": "2002-06 MINI Cooper S Clutch Replacement Part 1 of 2",
+      "channel": "Mod MINI",
+      "views": 480689
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 745874,
+     "n": 3,
+     "best": {
+      "id": "FA9QIXtBGuM",
+      "title": "MINI Cooper S Supercharger Removal & Oil Service R53 Eaton M45",
+      "channel": "Mod MINI",
+      "views": 461582
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 641098,
+     "n": 5,
+     "best": {
+      "id": "64YdOAibz_Y",
+      "title": "How to fix MINI Cooper Window Motor 2002-2006 R50 R52 R53",
+      "channel": "Mod MINI",
+      "views": 302842
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 451704,
+     "n": 5,
+     "best": {
+      "id": "XJCNh3XbJDM",
+      "title": "Replace Alternator - 2002-2006 MINI Cooper S POV",
+      "channel": "Mod MINI",
+      "views": 267369
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 307444,
+     "n": 4,
+     "best": {
+      "id": "Km4VJhOiFgE",
+      "title": "2002-06 MINI Cooper-Crank Position Sensor O-ring Replacement-mechanics eye view",
+      "channel": "Mod MINI",
+      "views": 132721
+     }
+    },
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 242802,
+     "n": 2,
+     "best": {
+      "id": "RxI5SrD1OCY",
+      "title": "How to Replace Oil Filter Housing Gasket R50/R53 MINI Cooper 2002-2006",
+      "channel": "Mod MINI",
+      "views": 151924
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 226251,
+     "n": 3,
+     "best": {
+      "id": "skt5_bs-4nQ",
+      "title": "How to Replace Torn Strut Mount - MINI Cooper 2002-2006 R50-R53",
+      "channel": "Mod MINI",
+      "views": 81961
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 186022,
+     "n": 2,
+     "best": {
+      "id": "HDbXBIcCEQU",
+      "title": "Mini Cooper S R53 Overheating FINALLY FIXED | Cooling Fan Change and Radiator Leak",
+      "channel": "Cars Exposed",
+      "views": 101798
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "F16x9aoX8IA",
+     "title": "MINI Cooper (2000 - 2006) buyers review",
+     "channel": "Autoblog",
+     "views": 233224
+    },
+    {
+     "id": "8OXKmSK_VNk",
+     "title": "Mini cooper s 2003 door opening problems",
+     "channel": "Peter Gantzhorn",
+     "views": 130748
+    },
+    {
+     "id": "OkrUBUDC5tE",
+     "title": "Mini Cooper S (R53) Buyers guide review - Avoid buying a broken R53 project (including JCW)",
+     "channel": "The Miles Driven",
+     "views": 92189
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013
+   ],
+   "gen": "2007–2013 Mini Cooper",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 33632751,
+   "topics": [
+    {
+     "name": "Timing chain & engine",
+     "views": 1077904,
+     "n": 7,
+     "best": {
+      "id": "eEYFo2AZLGs",
+      "title": "MINI R56 Timing Chain Replacement DIY (2007-2010 MINI Cooper S and 2009-2012 JCW's) N14 & N12 Engine",
+      "channel": "FCP Euro",
+      "views": 513845
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 1011391,
+     "n": 7,
+     "best": {
+      "id": "3WpqmJT_Wc0",
+      "title": "2007-2013 Mini Cooper S (R56) Battery Replacement",
+      "channel": "EricTheCarGuy",
+      "views": 298972
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 949769,
+     "n": 7,
+     "best": {
+      "id": "nhYA10RNzM8",
+      "title": "Mini Cooper R56 1.6 petrol Camshaft sensor common fault 2968 2993 2982 P0343",
+      "channel": "Mustang Motors",
+      "views": 250989
+     }
+    },
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 759993,
+     "n": 4,
+     "best": {
+      "id": "7MWiOnZxURw",
+      "title": "Mini Cooper Oil Leak Repairs (R56/N14)",
+      "channel": "EricTheCarGuy",
+      "views": 468097
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 645905,
+     "n": 4,
+     "best": {
+      "id": "KhFTyjIRaBU",
+      "title": "How to check the coolant temperature - R56 Mini Cooper hidden menu",
+      "channel": "Project Mini",
+      "views": 419655
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 638937,
+     "n": 3,
+     "best": {
+      "id": "zAFfsCZVhjw",
+      "title": "Mini Cooper S R56 High Pressure Fuel Pump Issue",
+      "channel": "welshweeks",
+      "views": 333239
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 434440,
+     "n": 2,
+     "best": {
+      "id": "4z3ouJl7NVU",
+      "title": "2011 mini cooper door panel removal",
+      "channel": "memotlaza",
+      "views": 232921
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 413119,
+     "n": 2,
+     "best": {
+      "id": "c6WJ_tAaMzw",
+      "title": "MINI Cooper (R56, R55, R57) 2007-2011 - Tire pressure monitor reset - DIY Repair",
+      "channel": "BentleyPublishers",
+      "views": 329727
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "gtsli5h3ZiE",
+     "title": "Top 5 Problems Mini Cooper Hatchback 2007-2013 2nd Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 1014845
+    },
+    {
+     "id": "BXsNSId3qY0",
+     "title": "R56 Mini Cooper S - 5 ways to make it more reliable",
+     "channel": "Bimmer Dude (AJ)",
+     "views": 424379
+    },
+    {
+     "id": "AQBX1sBhLVc",
+     "title": "Mini Cooper R56 Problems to Expect",
+     "channel": "SimpleCarGuy",
+     "views": 168364
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+   ],
+   "gen": "2014–2024 Mini Cooper",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 38712179,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 484791,
+     "n": 4,
+     "best": {
+      "id": "LFVKL1za4qI",
+      "title": "How To Reset Oil Life On 2014 - 2021 Mini Cooper - Clear Service Due Light After Oil Change",
+      "channel": "PYR Automotive ",
+      "views": 146995
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 237549,
+     "n": 2,
+     "best": {
+      "id": "TYmn_xHd8WE",
+      "title": "How To Unlock, Open & Start 2014 - 2021 Mini Cooper With Dead Remote Key Fob Battery",
+      "channel": "PYR Automotive ",
+      "views": 128840
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 158202,
+     "n": 2,
+     "best": {
+      "id": "vvLQLjTgpDo",
+      "title": "How To Reset Oil Life On 2014 - 2021 Mini Cooper / maintenance reminder reset",
+      "channel": "Oil Light Reset ",
+      "views": 94508
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 76308,
+     "n": 1,
+     "best": {
+      "id": "NvhC2jkvAE8",
+      "title": "HOW TO: Replace Shifter Solenoid/Assembly on 2014-2019 Mini Cooper F-Chassis",
+      "channel": "Gavin",
+      "views": 76308
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "ZVS3TNSu5Nw",
+     "title": "THE MINI (F55/F56/3rd gen) BUYERS GUIDE | AVOID THIS CAR until you watch this!",
+     "channel": "Scottish Car Clan",
+     "views": 242920
+    },
+    {
+     "id": "i2Etms5-sgw",
+     "title": "Should You Buy a MINI COOPER S D? (Test Drive & Review F56)",
+     "channel": "High Peak Autos",
+     "views": 160199
+    },
+    {
+     "id": "nciBsaBJKk0",
+     "title": "MINI Cooper SE / Electric (F56): 5 ANNOYING PROBLEMS After Half a Year of Ownership",
+     "channel": "Martin Karel",
+     "views": 69433
+    }
+   ],
+   "costs": null
+  }
+ ],
  "chevrolet-express": [
   {
    "years": [

@@ -22071,5 +22071,179 @@
 }
 ]
 }
+],
+"mini-cooper": [
+{
+"sid": "mini-cooper-g1",
+"y0": 2002,
+"y1": 2006,
+"label": "2002–2006",
+"videos": 185,
+"praise": [
+[
+"Fun to drive",
+15
+],
+[
+"Reliability",
+12
+],
+[
+"Power",
+9
+],
+[
+"Looks",
+8
+]
+],
+"trouble": [
+[
+"Coolant leaks / water pump / overheating",
+11
+],
+[
+"Oil leaks (gaskets, seals, housings)",
+9
+],
+[
+"Rust",
+5
+],
+[
+"Electrical / wiring / TIPM",
+5
+]
+],
+"top": [
+{
+"id": "QUhzyfb3cxg",
+"title": "Buying a used 2002-2006 MINI Cooper - things to look for  - Gen 1 R50 R53",
+"views": 1066518,
+"ch": "Mod MINI"
+},
+{
+"id": "rxzn5FwRBig",
+"title": "2005 MINI Cooper S Review",
+"views": 593287,
+"ch": "TheCarVlogger"
+},
+{
+"id": "Sd01_yQMrpk",
+"title": "2005 Mini Cooper S (R53 6-spd) Start Up, Exhaust, Test Drive, and In Depth Review",
+"views": 403259,
+"ch": "Saabkyle04"
+}
+]
+},
+{
+"sid": "mini-cooper-g2",
+"y0": 2007,
+"y1": 2013,
+"label": "2007–2013",
+"videos": 189,
+"praise": [
+[
+"Looks",
+12
+],
+[
+"Fun to drive",
+12
+],
+[
+"Power",
+9
+],
+[
+"Reliability",
+8
+]
+],
+"trouble": [
+[
+"Oil leaks (gaskets, seals, housings)",
+7
+],
+[
+"Coolant leaks / water pump / overheating",
+7
+],
+[
+"Timing chain / tensioners",
+6
+],
+[
+"Spark plugs / coils / misfire",
+5
+]
+],
+"top": [
+{
+"id": "gtsli5h3ZiE",
+"title": "Top 5 Problems Mini Cooper Hatchback 2007-2013 2nd Generation",
+"views": 1014845,
+"ch": "1A Auto: Repair Tips & Secrets Only Mechanics Know"
+},
+{
+"id": "Gm-YCfZbWZA",
+"title": "Buying a used 2007-2013 MINI Cooper - things to look for - Gen 2 R56 R55",
+"views": 926107,
+"ch": "Mod MINI"
+},
+{
+"id": "XdoCJ0j0A4Y",
+"title": "2009 Mini Cooper John Cooper Works Start Up, Exhaust, Test Drive, and In Depth Review",
+"views": 689858,
+"ch": "Saabkyle04"
+}
+]
+},
+{
+"sid": "mini-cooper-g3",
+"y0": 2014,
+"y1": 2024,
+"label": "2014–2024",
+"videos": 194,
+"praise": [
+[
+"Fun to drive",
+37
+],
+[
+"Looks",
+22
+],
+[
+"Power",
+16
+],
+[
+"Space and practicality",
+12
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "M2mRQ808gIE",
+"title": "MINI Cooper S 2021 review - better than a VW Polo GTI?",
+"views": 1628332,
+"ch": "carwow"
+},
+{
+"id": "NAvFEIUkHa8",
+"title": "2016 Mini Cooper - Review and Road Test",
+"views": 1209510,
+"ch": "Kelley Blue Book"
+},
+{
+"id": "ugNA5w0htMA",
+"title": "2016 MINI Cooper S John Cooper Works Review - XCAR",
+"views": 1022855,
+"ch": "Carfection"
+}
+]
+}
 ]
 }
