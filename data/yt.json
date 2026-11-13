@@ -62810,6 +62810,132 @@
    }
   }
  ],
+ "ford-freestyle": [
+  {
+   "years": [
+    2005,
+    2006,
+    2007
+   ],
+   "gen": "2005–2007 Ford Freestyle",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 2214244,
+   "topics": [
+    {
+     "name": "Transmission & shifter",
+     "views": 295326,
+     "n": 3,
+     "best": {
+      "id": "4PzAgDSCrfQ",
+      "title": "2007 Ford Freestyle Engine/Transmission Issue",
+      "channel": "mkm230",
+      "views": 204335
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 150928,
+     "n": 3,
+     "best": {
+      "id": "v_zIUNPL-qw",
+      "title": "2005-2007 Ford Freestyle Five Hundred Overheating: WARNING Never Use Aftermarket Water Pumps!",
+      "channel": "FordTechMakuloco",
+      "views": 96631
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 143603,
+     "n": 1,
+     "best": {
+      "id": "8CKkiQkyi9w",
+      "title": "How to Install Fuel Pump Assembly E2465M in a 2005 - 2007 Ford Freestyle",
+      "channel": "Airtex-ASC Performance Pumps",
+      "views": 143603
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 134142,
+     "n": 5,
+     "best": {
+      "id": "MAVAeJ1kKXw",
+      "title": "How to access the low side A/C port 2006 Ford Freestyle",
+      "channel": "stevenofpa",
+      "views": 53038
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 94149,
+     "n": 2,
+     "best": {
+      "id": "w_YSEIhgvWc",
+      "title": "Running rough misfire codes Ford Freestyle 3.0L V6 2005 2006 map sensor problem in EGR valve",
+      "channel": "Fixing cars and stuff",
+      "views": 93350
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 52649,
+     "n": 4,
+     "best": {
+      "id": "zCYFdZxeYpQ",
+      "title": "2007 Ford Freestyle throttle body replacement.",
+      "channel": "GenXBen77",
+      "views": 26636
+     }
+    },
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 43695,
+     "n": 1,
+     "best": {
+      "id": "4WJHpJCIwzM",
+      "title": "How to Replace Valve Cover Gaskets 2005 - 2007 Ford Fivehundred / Ford Freestyle / Mercury Montego",
+      "channel": "Dee Struggles",
+      "views": 43695
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 38289,
+     "n": 3,
+     "best": {
+      "id": "BVe5QzkvnWE",
+      "title": "How To Remove 2005-2007 Ford Freestyle Door Panel",
+      "channel": "Martin's Used Cars & Collectibles LLC",
+      "views": 22670
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "zy1F--fUrYI",
+     "title": "Ford freestyle 2007 problems",
+     "channel": "lramire3",
+     "views": 5122
+    },
+    {
+     "id": "kGr9BUpQqUw",
+     "title": "2005 Ford Freestyle electrical problems.pt.2",
+     "channel": "Robin McCracken",
+     "views": 503
+    },
+    {
+     "id": "k1tz751DpwY",
+     "title": "2005 Ford Freestyle electrical problems.",
+     "channel": "Robin McCracken",
+     "views": 469
+    }
+   ],
+   "costs": null
+  }
+ ],
  "ram-promaster": [
   {
    "years": [
@@ -62942,7 +63068,26 @@
      "views": 225891
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 67,
+       "lo": 50.0,
+       "hi": 700.0,
+       "n": 5,
+       "videos": 4,
+       "id": "gVmV0keHxSg",
+       "t": 23,
+       "title": "2021 Ram ProMaster 1500 Low Roof 136'' WB  RamPromaster.US ask for Seba!!call or text 8479103837"
+      }
+     ]
+    ]
+   }
   }
  ],
  "chevrolet-express": [
