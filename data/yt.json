@@ -60567,7 +60567,26 @@
      "views": 102342
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 700,
+       "lo": 280.0,
+       "hi": 1200.0,
+       "n": 9,
+       "videos": 5,
+       "id": "w9D4XAQQjGY",
+       "t": 293,
+       "title": "2009 Chevy Cobalt IAAI rebuild project cost breakdown"
+      }
+     ]
+    ]
+   }
   }
  ],
  "ford-ranger": [
