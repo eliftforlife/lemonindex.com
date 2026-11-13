@@ -91,6 +91,7 @@ def year_page(out, c, y):
         yct = frag.find(class_='yct'); gl = frag.find('p', class_='yct-g')
         h1.insert_before(yct.extract()); yct.find(class_='yct-h').replace_with(h1.extract())
         if gl is not None: yct.insert_after(gl.extract())
+    _split_title(hero.find('h1')); _chips(hero)
     # the verdict in one short line: band word + the top complaint area (A's band words stay as written)
     vd = hero.select_one('.yverd p.yvd')
     if vd is not None and vd.find('b') is not None:
@@ -102,6 +103,31 @@ def year_page(out, c, y):
     if acts is not None and _nav_row(s, [str(a) for a in acts.find_all(recursive=False)]):
         hero.select_one('.tb-ctl')['class'] = hero.select_one('.tb-ctl').get('class', []) + ['ycn-wide']
     return str(s)
+
+
+# ------------------------------------------------------------------ 11-12 v3 (Elijah): calmer heroes
+def _split_title(h1):
+    """'2016 Honda Civic reliability.' -> the car name big, the search word small and grey on the line under it. Same H1, same text
+    (the search-titles agent's template), only wrapped in two spans."""
+    if h1 is None or h1.find(class_='yct-big') is not None: return
+    inner = h1.decode_contents().strip()
+    if '<' in inner or ' ' not in inner: return
+    big, word = inner.rsplit(' ', 1)
+    h1.clear(); h1.append(BeautifulSoup(f'<span class="yct-big">{big}</span> <span class="yct-sw">{word}</span>', 'html.parser'))
+    h1['class'] = h1.get('class', []) + ['yct-h1']
+
+_CHIP = {'Fewest complaints': 'Fewest', 'Most complaints': 'Most', 'Fewer complaints nearby': 'Better nearby', 'Fewest of any year': 'Fewest',
+         'Fewest complaints nearby': 'Fewest nearby'}
+def _chips(hero):
+    """the 'Fewest complaints 2011 · Most complaints 2022' sentence -> two small chips"""
+    bw = hero.select_one('.yverd .ybw')
+    if bw is None or not bw.find('a'): return
+    out = []; lab = ''
+    for n in bw.children:
+        if getattr(n, 'name', None) == 'a':
+            l = re.sub(r'\s+', ' ', lab).strip(' ·'); out.append(f'<a class="yb2 {" ".join(n.get("class") or [])}" href="{E(n.get("href", "#"))}"><span>{E(_CHIP.get(l, l))}</span> <b>{E(n.get_text(strip=True))}</b></a>'); lab = ''
+        else: lab += n.get_text() if hasattr(n, 'get_text') else str(n)
+    bw.replace_with(BeautifulSoup(f'<p class="ybw yb2s">{"".join(out)}</p>', 'html.parser'))
 
 # ------------------------------------------------------------------ model page: verdict first, year explorer, YouTube in Overview
 def _explorer(c, d, best):
@@ -202,8 +228,18 @@ def model_page(out, c):
         if anchor is not None: anchor.insert_after(box)
         else: hero.append(box)
     hero['class'] = hero.get('class', []) + ['yx-hero', 'yc-hero']
-    sp = hero.select_one('.yverd > p:first-child > span')   # 11-12 v2: one short verdict line; the answer above already says how many complaints
-    if sp is not None and ':' in sp.get_text(): sp.string = sp.get_text().split(':')[0].strip() + '.'
+    vb = hero.select_one('.yverd > p:first-child')   # 11-12 v3: 'Better than average · 2010–2022' (the answer above already says how many complaints)
+    if vb is not None and vb.find('b') is not None:
+        word = vb.find('b').get_text(strip=True).rstrip('.'); yrs = re.search(r'(\d{4})\s*[-–]\s*(\d{4})', vb.get_text())
+        vb.clear(); vb.append(BeautifulSoup(f'<b>{E(word)}</b>' + (f' <span>· {yrs.group(1)}–{yrs.group(2)}</span>' if yrs else ''), 'html.parser'))
+    an = hero.find('p', class_='tb-ans')   # one short answer: 'Is it reliable? Yes. It draws 1.5x fewer complaints than average.'
+    if an is not None:
+        h = an.decode_contents()
+        h = re.sub(r',\s*(and|but)\s+YouTube owners[^.<]*', '', h)
+        h = re.sub(r'\s*Fewest complaints:.*$', '', h, flags=re.S)
+        h = h.replace('It draws ', '').replace('It drew ', '')
+        an.clear(); an.append(BeautifulSoup(h.strip(), 'html.parser'))
+    _split_title(hero.find('h1')); _chips(hero)
     sh = next((b for b in hero.find_all('button', attrs={'data-share': True})), None)   # phones: Share rides at the end of the tab row
     if sh is not None and _nav_row(s, [str(sh).replace('btn btn-ghost', 'tb-ic').replace('>Share ↗<', '><span class="tb-ic-l">Share</span><')]):
         sh.parent['class'] = sh.parent.get('class', []) + ['ycn-wide']
