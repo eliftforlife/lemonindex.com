@@ -273,6 +273,9 @@ def gh_ic(u):
             if u in GH_IC else '')
 def gh_header(path):
     cur = lambda u: ' aria-current="page"' if path.startswith(u) else ''
+    _mi = next((t for u, t in NAV_MORE if path.startswith(u) and u != '/'), None) if not any(path.startswith(u) for u, _ in NAV_TOP) else None   # 11-13 nav (N2)
+    _mi = {'Engine code lookup': 'Engine codes'}.get(_mi, _mi)
+    _mc, _ml = (' data-cur="1" style="color:var(--gh-ink);font-weight:500"', f' · {_mi}') if _mi else ('', '')
     top = ''.join(f'<a href="{GH_HREF.get(u, u)}"{cur(u)}>{t}</a>' for u, t in NAV_TOP)
     # 11-10 (Elijah: the phone menu didn't fit one screen): grouped (Look up / Explore / More) in two columns on phones; headings and the
     # top-bar links (gh-x) only show where the top bar is folded away (<1024 px). Lemon-only: the styles live in site.css, not the shared gh.css.
@@ -284,7 +287,7 @@ def gh_header(path):
     sheet = ''.join(f'<span class="gh-g gh-g{i}" aria-hidden="true">{g}</span>' + ''.join(f'<a class="{"gh-x " if u in inbar else ""}gh-i{i}" href="{GH_HREF.get(u, u)}"{cur(u)}>{gh_ic(u)}<span>{lab[u]}</span></a>' for u in us)
                     for i, (g, us) in enumerate(grp))
     return (f'<header class="gh wide" data-tuck><div class="gh-in"><a class="gh-brand" href="/"><img src="/assets/icon-64.png" alt="" width="24" height="24">The Lemon Index</a>'
-            f'<nav class="gh-links" aria-label="Main">{top}<button class="gh-more" type="button" aria-expanded="false" aria-controls="gh-sheet">More{GH_DOWN}</button></nav>'
+            f'<nav class="gh-links" aria-label="Main">{top}<button class="gh-more" type="button" aria-expanded="false" aria-controls="gh-sheet"{_mc}>More{_ml}{GH_DOWN}</button></nav>'
             f'<div class="gh-r">{GH_SD}{GH_SB}<a class="gh-cta" href="{YT}?sub_confirmation=1" rel="noopener">Subscribe{GH_CHEV}</a>'
             f'<button class="gh-menu" type="button" aria-label="Menu" aria-expanded="false" aria-controls="gh-sheet"><i></i><i></i></button></div></div>'
             f'<div class="gh-dim" aria-hidden="true"></div><nav class="gh-sheet" id="gh-sheet" aria-label="All pages"><div class="gh-sheet-in"><p>More from the Lemon Index</p>{GH_SEARCH}{sheet}</div></nav></header>')
@@ -350,6 +353,7 @@ def crumbs(path, title):
         nm = SEGN.get(x) or (FY[x]['name'] if x in FY else x if x.isdigit() else x.replace('-', ' ').title())
         if i == len(parts) - 1 and not x.isdigit() and x not in SEGN and x not in FY: nm = title.split(' | ')[0].split(':')[0]
         items.append((nm, u))
+    if 'N2_LD' in globals(): items = N2_LD(path, items)   # 11-13 nav (N2): All cars > Ford > F-150 > 2015, same as the visible crumbs
     return {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": n, "item": u} for i, (n, u) in enumerate(items)]}
 def car_ld(f, y=None, mpg=None, img=None):
     c = BYNAME.get(f['name']) or {}; brand = c.get('brand') or f['name'].split()[0]
@@ -1145,17 +1149,21 @@ def LX_HTML(fid, y):
             for w in g['years']:
                 if w.get('ok') and g['name'] in BYNAME: _LXIX.setdefault((BYNAME[g['name']]['seg'], w['y']), []).append((g, w))
     seg = c['seg']; out = []; used = {fid}
-    peers = [p for yy in range(y - 2, y + 3) for p in _LXIX.get((seg, yy), []) if p[0]['id'] != fid]
+    # 11-13 nav (N2, Civic -> BMW 5 Series, CR-V -> Audi Q3): rivals first (n2_nav.py: same type and price class, searched match-ups first),
+    # then one same-class car whose top complaint is the same system, then one same-year rival with fewer complaints per car sold
+    for o in [o for o in N2_RIVALS(fid) if (fid, o) in PAIRS or (o, fid) in PAIRS][:2]:   # 11-12 r2: opens on this year (assets/lfa.js)
+        used.add(o); out.append((cmpu(fid, o) + f'#y{y}', f'{f["name"]} vs {FY[o]["name"]}', f'{y} and its neighbours side by side'))
+    ok_rv = set(N2_RIVALS(fid)); rank = {o: i for i, o in enumerate(N2_RIVALS(fid))}
+    peers = [p for yy in range(y - 2, y + 3) for p in _LXIX.get((seg, yy), []) if p[0]['id'] != fid and p[0]['id'] in ok_rv]
     top = NICE(v['parts'][0][0]) if v.get('parts') else ''
     if top and top != 'other':
-        for g, w in sorted((p for p in peers if p[1].get('parts') and NICE(p[1]['parts'][0][0]) == top), key=lambda p: (abs(p[1]['y'] - y), -p[1]['n'])):
+        for g, w in sorted((p for p in peers if p[1].get('parts') and NICE(p[1]['parts'][0][0]) == top), key=lambda p: (abs(p[1]['y'] - y), rank[p[0]['id']])):
             if g['id'] in used: continue
             used.add(g['id']); out.append((CARU(g, w['y']), f'{w["y"]} {g["name"]}', f'top complaint is also the {top}'))
-            if len(out) == 2: break
+            break
     if v.get('ok'):
-        for g, w in sorted((p for p in peers if p[1]['y'] == y and p[1]['li'] < v['li'] and p[0]['id'] not in used), key=lambda p: p[1]['li'])[:1]:
+        for g, w in sorted((p for p in peers if p[1]['y'] == y and p[1]['li'] < v['li'] and p[0]['id'] not in used), key=lambda p: rank[p[0]['id']])[:1]:
             used.add(g['id']); out.append((CARU(g, y), f'{y} {g["name"]}', f'fewer complaints per car sold (Lemon Index {w["li"]})'))
-    for o in RIVALS.get(fid, [])[:1]: out.append((cmpu(fid, o) + f'#y{y}', f'{f["name"]} vs {FY[o]["name"]}', f'{y} and its neighbours side by side'))   # 11-12 r2: opens on this year (assets/lfa.js)
     if seg in _LXSEG: out.append((f'/best/most-reliable-{_LXSEG[seg][0]}/', f'Most reliable {_LXSEG[seg][1]}', 'ranked by owner complaints'))
     if not out: return ''
     return ('<link rel="stylesheet" href="/assets/lx.css?v=1"><nav class="lx" aria-label="Related"><h2 class="lx-h">Related</h2><ul class="lx-l">'
@@ -1561,7 +1569,7 @@ def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
                                                                          (('Fewer complaints nearby', nb if how == 'near' else None, 'good' if nb and nb['li'] <= 110 else ''),
                                                                           ('Fewest of any year', best, 'good' if best['li'] <= 110 else '')) if w and w['y'] != y and not (lab.startswith('Fewest') and how == 'near' and nb['y'] == best['y'])])
     _by = N2_BETTER(f, v, y)   # 11-13 nav (N2): 'Better years to buy' replaces the two chips; inside .yhero, so the tab layout keeps it
-    n2_hero = (hero.replace('<div class="yhero', '<div class="n2-w yhero', 1) if _by else hero).replace('{BW}', '' if _by else bw)[:-6] + N2_ASSET + _by + '</div>'
+    n2_hero = (hero.replace('<div class="yhero', '<div class="n2-w yhero', 1) if _by else hero).replace('{BW}', '' if _by else bw)[:-6] + _by + N2_PILLS(f, y) + '</div>'
     parts = ''.join(f'<div class="pt"><span>{E(NICE(p))}</span><span class="bt"><i style="width:{k}%"></i></span><b>{k}%</b></div>' for p, k in v['parts'])
     probs = f'<section class="yc" id="problems"><h2>What owners complain about most. <span class="h2s">From owner complaints to the government.</span></h2><div class="pts">{parts}</div><p class="yc-cap">Share of this year&#39;s owner complaints filed with NHTSA, not the share of cars that break. One complaint can name more than one area.</p>' + (f'<p class="yc-cap"><a href="{CARU(f)}transmission/">Transmission problems in every {nm} year →</a></p>' if _tr_ok(f) else '') + RCQ.code_links(f['id'], y, label=f'the {SNM(f)} ({y - 2}–{min(y + 2, 2026)})') + '</section>' if parts else ''
     sev_items = [(s.get('crash', 0), 'crashes'), (s.get('injured', 0), 'injuries'), (s.get('fire', 0), 'fires'), (s.get('towed', 0), 'tows')]
@@ -1633,10 +1641,10 @@ def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
         words = (f'<section class="yc"><h2>In owners&#39; words</h2><blockquote><p>{E(q0["text"])}</p><cite>{y} {nm} owner · NHTSA complaint {q0["odi"]}</cite></blockquote>'
                  + (f'<details><summary>More owner reports</summary>{more}</details>' if more else '') + '</section>')
     return f'''
-<article class="yp yp6"><section class="ph yph6"><div class="yh-t"><p class="ph-e"><a href="/cars/">All cars</a> · <a href="{CARU(f)}">{nm}</a></p><h1>{y} {E(QN(f))} {YW(f).lower()}.</h1>{answer_box(f, v, y, x, best)}{'<p class="early-b">Too new: partial score</p>' if v.get('early') else ''}
+<article class="yp yp6"><section class="ph yph6"><div class="yh-t">{N2_CRUMB(f, y)}<h1>{y} {E(QN(f))} {YW(f).lower()}.</h1>{answer_box(f, v, y, x, best)}{'<p class="early-b">Too new: partial score</p>' if v.get('early') else ''}
 {f'<p class="yc-note">{SN[f["id"]][1]}</p>' if f["id"] in SN else ""}{PIN_HTML(f['id'], y)}{n2_hero}
 <nav class="modes" aria-label="Page mode"><a href="{CARU(f, y)}" aria-current="page">Normal</a><a href="{CARU(f, y)}advanced/">Advanced</a></nav><nav class="yswitch" aria-label="Model years"><div class="yseg">{seg}<a class="yall" href="{CARU(f)}">All years</a></div><div class="yact"><a class="btn btn-ghost" href="/compare/?c={f['id']}-{y}">Compare</a><button type="button" class="btn btn-ghost yshare" data-share="{E(share_txt)}">Share</button></div></nav></div>{f'<div class="ph-v">{ph}</div>' if ph else ''}</section>
-{buy}{top_fails_html(f, y, nm)}{mil}{fix_sell_html(f, y, nm)}{ask}<div class="yts">{tiles}</div>{ytfix(f["id"], y)}{sev}{old}
+{buy}{top_fails_html(f, y, nm)}{mil}{fix_sell_html(f, y, nm)}{ask}{N2_SIMILAR(f, y)}<div class="yts">{tiles}</div>{ytfix(f["id"], y)}{sev}{old}
 <section class="yyears noph"><div class="yy-ch"><h2>Every {nm} year. <span class="h2s">{y} is highlighted. Lower is better.</span></h2>{N2_SORT}{ybars(f, y)}</div>{ev_note}</section>
 <div class="ygrid">{probs}{timeline(x["miles"], x.get("comps") or [], (x.get("sev") or {}).get("total")) if x.get("miles") else ""}{recs}{(lambda pr: f'<section class="yc">{pr}</section>' if pr else '')(price_html(f["id"], y, f["name"]))}
 {fixes}{invs}{safety}{f'<section class="yc">{crash}{fuel}</section>' if crash or fuel else ''}{YEAR_SPECS_HOOK(f['id'], y)}{words}
@@ -1743,12 +1751,12 @@ for f in YEARS:
     _mpl = plain(li); _mcmp = 'about as many complaints as the average car' if _mpl == 'about average' else _mpl
     page(CARU(f), _tt,
          f'{qn} reliability: {_mcmp}, per car sold (Lemon Index {li}, {c["years"].replace("-", "–")}). Fewest complaints: {best["y"]}. Most: {(worst or best)["y"]}.', f'''
-<div class="pg mp6"><section class="ph yph6"><div class="yh-t"><p class="ph-e"><a href="/cars/">All cars</a> · {BRAND_A(c["brand"])} · {E(c["segName"])}</p>{rel_html}{f'<p class="yc-note">{SN[f["id"]][1]}</p>' if f["id"] in SN else ""}{PIN_HTML(f['id'])}
-<div class="yhero">{gauge(c["li"], 190, "All years " + c["years"].replace("-", "–"))}<div class="yverd {verdict(c["li"])[0]}"><p><b>{verdict(c["li"])[1]}.</b> <span>Whole model, {c["years"]}{"" if plain(c["li"]).lower() in verdict(c["li"])[1].lower() else ": " + E(plain(c["li"]))}.</span></p><p class="ybw">Fewest complaints <a class="{'good' if best['li'] <= 110 else ''}" href="{CARU(f, best["y"])}">{best["y"]}</a>{f' · Most complaints <a class="bad" href="{CARU(f, worst["y"])}">{worst["y"]}</a>' if worst and worst['y'] != best['y'] else ''}</p></div>{N2_ASSET}</div>
+<div class="pg mp6"><section class="ph yph6"><div class="yh-t">{N2_CRUMB(f)}{rel_html}{f'<p class="yc-note">{SN[f["id"]][1]}</p>' if f["id"] in SN else ""}{PIN_HTML(f['id'])}
+<div class="yhero">{gauge(c["li"], 190, "All years " + c["years"].replace("-", "–"))}<div class="yverd {verdict(c["li"])[0]}"><p><b>{verdict(c["li"])[1]}.</b> <span>Whole model, {c["years"]}{"" if plain(c["li"]).lower() in verdict(c["li"])[1].lower() else ": " + E(plain(c["li"]))}.</span></p><p class="ybw">Fewest complaints <a class="{'good' if best['li'] <= 110 else ''}" href="{CARU(f, best["y"])}">{best["y"]}</a>{f' · Most complaints <a class="bad" href="{CARU(f, worst["y"])}">{worst["y"]}</a>' if worst and worst['y'] != best['y'] else ''}</p>{N2_RANK(f)}</div></div>
 <p><button type="button" class="btn btn-ghost" data-share="{E(f'Every {snm} year ranked by owner complaints. Fewest: {best["y"]}. Most: {(worst or best)["y"]}. Free report:')}">Share ↗</button></p></div><div class="ph-v">{(YSL.year_slider_html(f['id'], f['name'], {v['y']: round(v['li']) for v in ys if v.get('ok') and v.get('li') is not None}, {y: sc_ for y, sc_ in YSL.yt_scores(f['id']).items() if y in yt_rankable(f, YTS.get(f['id'], {}))}, {v['y'] for v in ys}, start=popular_year(f), best=best['y'], hero=True, mli=c['li'], early={v['y'] for v in ys if v.get('early')}) if YSL.has(f['id']) else (YSL.model_hero_html(f['id'], f['name']) or car_hero(f, ys[-1]["y"])))}{rel_tiles}</div></section>
 <section class="yyears noph" id="years"><div class="yy-ch"><h2>Every year. <span class="h2s">Lower is better. Tap a year for its full report.</span></h2>{N2_SORT}{ybars(f)}</div>{'<p class="yc-cap">Scores before 2010 are rough: fewer owners filed complaints back then.</p>' if ys[0]["y"] < 2010 else ''}{yt_note(f)}{(lambda t: f'<p class="yc-cap">{t}</p>' if t else '')(two_windows(f['id']))}</section>
 {ytfix("model:" + f["id"])}{picks}{gas_hybrid_html(f)}{SPECS_HOOK(f["id"])}
-{f'<section><h2>Compare the {E(f["name"])}.</h2><div class="mus">{vcards}</div>' + (f'<p class="yc-cap">{vs}</p>' if vs else '') + '</section>' if vcards or vs else ''}
+{f'<section><h2>Compare the {E(f["name"])}.</h2><div class="mus">{vcards}</div>' + (f'<p class="yc-cap">{vs}</p>' if vs else '') + '</section>' if vcards or vs else N2_CMP(f)}
 {model_qa_html}
 <section><details class="yd"><summary>Every year in one table</summary><div class="tw"><table><thead><tr><th>Year</th><th>Index</th><th>Compared with average</th><th>Complaints</th><th>Top complaint</th><th>Recalls</th><th>Crash test</th><th>MPG</th></tr></thead><tbody>{rows}</tbody></table></div></details>
 <p class="yc-cap">{WHAT_LI}{SALES_SRC_HTML(f)} <a href="/method/">How it works</a></p>{f'<p><a class="btn" href="{CARU(f)}transmission/">{E(snm)} transmission problems by year →</a></p>' if _tr_ok(f) else ''}</section>{share_line(f'Every {snm} year ranked by owner complaints. Fewest: {best["y"]}. Most: {(worst or best)["y"]}. Free report:')}</div>''',
@@ -2087,13 +2095,13 @@ CARS_GRID = f'''<section class="cgrid">{CTABS}{HCHIPS}<h2 data-hide="p">Every mo
 @media (max-width:600px){{.ctabs.ctb8{{gap:3px;padding:3px;border-radius:20px}}.ctabs.ctb8 a{{min-height:40px;padding:0 2px;font-size:13px;gap:3px;border-radius:17px}}.ctabs.ctb8 a small{{display:none}}}}</style>'''   # 11-11: shared by /cars/ and the home page
 page('/cars/', 'Look Up Your Car: Problems by Model and Year | The Lemon Index', f'Pick your car and model year to see its owner complaints, its top problems and how it compares with every other year. {len(YEARS)} models, 2000-2025, plus {len(SCX)} supercars and {len(EVX)} electric cars.', f'''
 <div class="pg"><div class="ph ph-f">{finder('<span class="ph-e">Look up</span>Look up your car.', 'Every model year, 2000 to 2025. Free.')}</div>
-{CARS_GRID}</div><script src="/assets/ctabs.js?v=3" defer></script>''',
+{CARS_GRID}</div><script src="/assets/ctabs.js?v=4" defer></script>''',
      ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": "Look up your car", "url": BASE + '/'}], canon='/')   # 11-11: same grid as the home page: one indexable copy
 # 11-11: the home page = this grid (search, the 4 tabs, every model), with the home's own title, schema, H1 and trust line
 page('/', HOME_PAGE['title'], HOME_PAGE['desc'], f'''
 <div class="pg pg-home"><div class="ph ph-f">{finder('<span class="ph-e">The Lemon Index</span>Look up any car.', 'Every model year, 2000 to 2025. Free.', foot=f'<p class="fnote">Scores from {COUNTED:,} owner complaints filed with the U.S. government in each car&#39;s first 3 years (model years 2010–2022). <a href="/data/#totals">What each total covers</a></p><p class="fnote">A &ldquo;lemon&rdquo; is American slang for a car with a lot of problems (en español: un carro con muchas fallas). In Canada? The complaints are from U.S. owners, and the same models are sold in Canada with the same parts; recalls there: <a href="{TC_DB}" rel="noopener nofollow" target="_blank">Transport Canada</a>.</p>')}</div>
 {CARS_GRID}
-<section class="faq"><h2>Questions</h2>{HOME_FAQ}</section></div><script src="/assets/ctabs.js?v=3" defer></script>''', ld=HOME_PAGE['ld'])
+<section class="faq"><h2>Questions</h2>{HOME_FAQ}</section></div><script src="/assets/ctabs.js?v=4" defer></script>''', ld=HOME_PAGE['ld'])
 
 curls = []
 for a, b in PAIRS:

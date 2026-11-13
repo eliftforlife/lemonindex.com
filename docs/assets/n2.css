@@ -27,3 +27,45 @@
 .n2-so button { appearance: none; border: 0; background: none; border-radius: 999px; padding: 7px 13px; font: inherit; font-size: 13.5px; font-weight: 600; color: var(--ink2, #3a3a3e); cursor: pointer; }
 .n2-so button[aria-pressed="true"] { background: #fff; color: var(--ink); box-shadow: 0 1px 2px rgba(0,0,0,.08), 0 6px 16px -10px rgba(0,0,0,.35); }
 .n2-so button:focus-visible { outline: 2.5px solid #e9b300; outline-offset: 2px; }
+
+/* ---- one breadcrumb on model + year pages: All cars › Ford › F-150 › 2015 */
+.n2-cr .n2-cs { margin: 0 7px; color: #b6b6bb; font-weight: 400; }
+.n2-cr a { color: inherit; text-decoration: underline; text-decoration-color: rgba(0,0,0,.25); text-underline-offset: 3px; }
+.n2-cr a:hover { color: var(--ink); text-decoration-color: currentColor; }
+.n2-cr [aria-current] { color: var(--mute); }
+/* ---- phones: less empty space above the crumbs (the article's 40 px top padding + the hero's) */
+@media (max-width: 699px) { article.tbl.yp6 { padding-top: 0; } }
+/* ---- phones: All years + Compare as visible pills under the hero; the More menu keeps Share and Advanced */
+.n2-pl { display: none; }
+@media (max-width: 699px) {
+  .yhero > .n2-pl { flex: 0 0 100%; order: 21; display: flex; gap: 8px; margin: 14px 0 0 !important; justify-content: flex-start; }
+  .tbl .tb-hero.yc-hero .yhero > .n2-pl, .tbl .tb-hero .yhero > .n2-pl { margin-left: 0 !important; }
+  .n2-pl a { display: inline-flex; align-items: center; gap: 7px; height: 38px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--line); background: #fff;
+    color: var(--ink); font-size: 14.5px; font-weight: 600; text-decoration: none; }
+  .n2-pl a:hover { background: var(--soft, #f5f5f7); } .n2-pl a:focus-visible { outline: 2.5px solid #e9b300; outline-offset: 2px; }
+  .n2-pl svg { color: var(--mute); }
+  .tbl:has(.n2-pl) .ycn-s a.tb-ic:not(.tb-mode) { display: none; }
+  .tbl .tb-hero .yhero:has(> .n2-pl) { flex-wrap: wrap !important; }
+  .tbl .tb-hero.yc-hero .yhero:has(> .n2-pl) > .yverd { flex: 1 1 0 !important; }
+}
+/* ---- the sticky tab row says which car this is once the title has scrolled away (n2.js adds .n2-sl and toggles .n2-on); the row's
+   margin shrinks by the label's height, so nothing under it moves */
+.n2-sl { display: none; }
+.tb-row.n2-on { flex-wrap: wrap; row-gap: 0; margin-bottom: -4px; }
+.tb-row.n2-on > .tb-bar { flex: 1 1 0; }
+.tb-row.n2-on .n2-sl { display: flex; flex: 0 0 100%; align-items: center; gap: 8px; height: 26px; padding: 4px 4px 0; margin: 0; border: 0; background: none; font: inherit;
+  font-size: 13.5px; font-weight: 700; color: var(--ink); cursor: pointer; text-align: left; min-width: 0; }
+.n2-sl span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+.n2-sl b { flex: none; padding: 1px 8px; border-radius: 999px; font-size: 12.5px; font-variant-numeric: tabular-nums; background: #f5f5f7; }
+.n2-sl b.good { background: #e6f4ea; color: #1e6b34; } .n2-sl b.bad { background: #fde8e7; color: #a3241c; } .n2-sl b.mid { color: #a15c00; }
+/* ---- 'Similar cars, same year' (end of the year page Overview) and the model page's best-list badge */
+.n2-sim { max-width: 860px; width: 100%; margin: 0 auto; }
+.n2-sim-h { font-size: 15px; margin: 0 0 8px; color: var(--ink2, #3a3a3e); }
+.n2-sim-l { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; }
+.n2-sim-l a { display: inline-flex; align-items: baseline; gap: 6px; padding: 7px 13px; border-radius: 999px; background: #f5f5f7; color: var(--ink); text-decoration: none; font-size: 14.5px; font-weight: 600; }
+.n2-sim-l a:hover { background: var(--soft, #ececf0); }
+.n2-sim-l b { font-size: 13px; font-variant-numeric: tabular-nums; } .n2-sim-l b.good { color: var(--good); } .n2-sim-l b.bad { color: var(--red); } .n2-sim-l b.mid { color: #a15c00; }
+.n2-sim-n { margin: 8px 0 0; font-size: 12.5px; color: var(--mute); }
+.n2-rk { margin: 10px 0 0 !important; }
+.n2-rk a { display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; white-space: nowrap; border-radius: 999px; background: #fff6cc; color: #5c4a00; font-size: 14px; font-weight: 700; text-decoration: none; }
+.n2-rk a:hover { background: #ffeea0; }

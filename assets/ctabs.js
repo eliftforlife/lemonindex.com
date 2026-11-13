@@ -23,6 +23,18 @@
     grid.querySelectorAll('[data-hide]').forEach(x => { x.hidden = !!t && x.dataset.hide.split(' ').includes(t); });
     const soon = grid.querySelector('.mb-soon'); if (soon) soon.hidden = !!t;
     if (push) history.replaceState(null, '', k === 'all' ? location.pathname : location.pathname + '?type=' + k);
+    hdr(k);
+  };
+  // 11-13 (nav review #7, N2): the header's own type links (Trucks, Electric, Supercars: /?type=<tab>) show as the current item when that
+  // tab is open; the page's own highlight (Cars on /cars/) comes back for the other tabs
+  const HL = [...document.querySelectorAll('header.gh .gh-links a, header.gh .gh-sheet a')].map(a => [a, a.getAttribute('aria-current'), new URL(a.href, location.href)]);
+  const hdr = k => {
+    const own = HL.some(([, , u]) => u.pathname === '/' && u.searchParams.get('type') === k);
+    HL.forEach(([a, was, u]) => {
+      const t = u.pathname === '/' ? u.searchParams.get('type') : null;
+      const on = own ? t === k : was;
+      if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+    });
   };
   nav.addEventListener('click', e => {
     const a = e.target.closest('a[data-type]'); if (!a || e.metaKey || e.ctrlKey || e.shiftKey) return;

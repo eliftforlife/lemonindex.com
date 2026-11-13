@@ -232,7 +232,7 @@ def transform_model(body, eng_html, short):
     over += ''.join(map(str, rest))   # 11-12: sections no tab claims (the model-level YouTube studies, e.g. the 2026 RAV4) were silently dropped since 11-10
     years = bw + years
     over = _ovfilter(over, [('years', 0, ''.join(map(str, years))), ('compare', 0, ''.join(map(str, cmp_))), ('questions', 0, ''.join(map(str, qa))), ('data', 0, ''.join(map(str, table)))]) + (f'<div class="ovk">{"".join(map(str, gh))}</div>' if gh else '')
-    tabs = _tabs([('overview', 'Overview', over), ('years', 'Years & engines' if eng_html else 'Years', ''.join(map(str, years))), ('compare', 'Compare', ''.join(map(str, cmp_))),
+    tabs = _tabs([('overview', 'Overview', over), ('years', 'Years & engines' if eng_html else 'Every year', ''.join(map(str, years))), ('compare', 'Compare', ''.join(map(str, cmp_))),
                   ('questions', 'Questions', ''.join(map(str, qa))), ('data', 'All the data', ''.join(map(str, table)))], f'{short} sections')
     cls = ' '.join(root.get('class') or [])
     return f'{ASSET}<div class="{cls} tbl">{hero}{tabs}{tail}</div>'
@@ -349,7 +349,7 @@ def transform_year(body, eng_html, short):
     over, probs, fix, rec, yrs, qa, tail, keep = [], [], [], [], [], [], [], []
     for c in items:
         h = H(c); k = C(c)
-        if c.get('id') in ('top-fails', 'mileage-guide', 'fix-or-sell', 'ask-seller', 'hybrid'): keep.append(c)   # 11-12 r2: + top 3 failures, fix or sell   # 11-12: shown in Overview, under the preview cards ('hybrid': the RAV4 Hybrid split, ux_c.py)
+        if c.get('id') in ('top-fails', 'mileage-guide', 'fix-or-sell', 'ask-seller', 'hybrid', 'similar'): keep.append(c)   # 11-12 r2: + top 3 failures, fix or sell   # 11-12: shown in Overview, under the preview cards ('hybrid': the RAV4 Hybrid split, ux_c.py)
         elif 'shline' in k or ('yc-cap' in k and c.name == 'p'): tail.append(c)
         elif 'yyears' in k: yrs.append(c)
         elif 'yqa' in k: qa.append(c)
@@ -389,7 +389,7 @@ def transform_year(body, eng_html, short):
 # Advanced pages). Same idea: centered hero (crumbs, image, h1, one-sentence answer, stat tiles), sections sorted into tabs, the
 # Normal / Advanced switch on the tab row. Nothing is dropped: an unknown section lands in Overview.
 _ADV = [  # (tab id, label, section ids, h2 prefixes)
-    ('years', 'Years', ('years', 'neighbors'), ('Complaints by model year', 'Nearby model years', 'Every model year')),
+    ('years', 'Every year', ('years', 'neighbors'), ('Complaints by model year', 'Nearby model years', 'Every model year')),
     ('problems', 'Problems', ('problems', 'mileage', 'systems', 'severity'), ('What owners complain', 'When problems', 'How serious', 'In owners', 'Failure mileage', 'Complaints by system', 'Severity')),
     ('repairs', 'Repairs & costs', ('diy', 'fixes', 'youtube'), ('Fixes', 'YouTube repair', 'What owners say it costs')),
     ('recalls', 'Recalls & safety', ('recalls', 'campaigns', 'investigations', 'tsb', 'tech', 'inv', 'crash'), ('Recall', 'NHTSA investigations', 'Manufacturer communications', 'Safety', 'Investigations', 'Crash')),
@@ -423,7 +423,7 @@ def _adv_sort(items, modes, short, order=None):
         yrows = [[_txt(td) for td in tr.find_all('td')] for tr in S_.select('#years tbody tr')] or [[_txt(r.find('span')), _txt(r.find('b'))] for r in _SY.select('.vyr .pt') if r.find('b')]
         worst = max(yrows, key=lambda r: float(re.sub(r'[^0-9.]', '', r[1]) or 0)) if yrows and len(yrows[0]) > 1 else None
         nv = len(S_.select('#specs .chips .chip')); nq = len(S_.select('.yqa h3, .yqa summary'))
-        cards = [_ovcard('years', 'Years', f'{len(yrows)} model years' if yrows else '', (f'Most complaints: {E(worst[0])}' if worst else ''), go='every year'),
+        cards = [_ovcard('years', 'Every year', f'{len(yrows)} model years' if yrows else '', (f'Most complaints: {E(worst[0])}' if worst else ''), go='every year'),
                  _ovcard('problems', 'Problems', E(pts[0][0].capitalize()) if pts else '', f'{pts[0][1]:.0f}% of complaints' if pts else '', _ovbars(pts) if len(pts) > 1 else ''),
                  _ovcard('recalls', 'Recalls & safety', (f'{nr} recall{"" if nr == "1" else "s"}' if nr and nr != '0' else 'No recalls') if nr else '', 'Free fix at any dealer' if nr and nr != '0' else '', go='recalls & safety')]
         if got['specs']: cards.append(_ovcard('specs', 'Specs & engines', f'{nv} engines' if nv else 'Every version', 'with power and mpg', go='specs'))

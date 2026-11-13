@@ -3,7 +3,7 @@
 #  - year pages: "Better years to buy" under the gauge: the 3 years of this generation (or within 3 model years when we don't know the
 #    generation) and the 3 of other generations with the fewest complaints per car sold, each better than this year, linked with its score.
 #  - Every year tab (year + model pages): sort the list newest first or by fewest complaints.
-N2_ASSET = '<link rel="stylesheet" href="/assets/n2.css?v=1"><script src="/assets/n2.js?v=1" defer></script>'
+N2_ASSET = '<link rel="stylesheet" href="/assets/n2.css?v=2"><script src="/assets/n2.js?v=2" defer></script>'
 
 def _n2_chip(f, w):
     return (f'<a class="n2-c {band(w["li"])[0]}" href="{CARU(f, w["y"])}" aria-label="{w["y"]} {E(f["name"])}: Lemon Index {w["li"]}">'
@@ -76,6 +76,7 @@ def N2_RIVALS(fid):
         return d is not None and o != fid and d['seg'] == c['seg'] and (d['brand'] in N2_LUX) == lux
     import math
     rv = [o for o in RIVALS.get(fid, []) if peer(o)]
+    rv += [b for (a, b), _ in sorted(_N2KW.items(), key=lambda kv: -kv[1]) if a == fid and b not in rv and peer(b)]   # searched pairs under the 1,000 PAIRS cut (4Runner vs Pilot)
     rv.sort(key=lambda o: -_N2KW.get((fid, o), 0))   # stable: searched match-ups first, then RIVALS' sales order
     rest = sorted((g['id'] for g in YEARS if g['id'] not in rv and peer(g['id'])), key=lambda o: abs(math.log(max(1, BYNAME[FY[o]['name']]['sold']) / max(1, c['sold']))))
     _N2RV[fid] = rv + rest; return _N2RV[fid]
@@ -96,7 +97,7 @@ def N2_SIMILAR(f, y):
 
 # ---- model pages (problem 11): "#3 of the most reliable SUVs" badge linking to that list, when the model is on it (seo_pages.py lists the
 # 15 best of each type with 150,000+ sold, by the model's Lemon Index)
-_N2SEG = {'car': ('cars', 'cars'), 'suv': ('suvs', 'SUVs'), 'truck': ('trucks', 'trucks'), 'minivan': ('minivans', 'minivans')}
+_N2SEG = {'car': ('cars', 'car'), 'suv': ('suvs', 'SUV'), 'truck': ('trucks', 'truck'), 'minivan': ('minivans', 'minivan')}
 def N2_RANK(f):
     c = BYNAME.get(f['name'])
     if not c or c.get('new') or c['seg'] not in _N2SEG: return ''
@@ -104,4 +105,25 @@ def N2_RANK(f):
     i = next((k for k, d in enumerate(L, 1) if d['id'] == c['id']), None)
     if not i: return ''
     slug, nm = _N2SEG[c['seg']]
-    return f'<p class="n2-rk"><a href="/best/most-reliable-{slug}/">#{i} of the most reliable {nm} <span aria-hidden="true">›</span></a></p>'
+    return (f'<p class="n2-rk"><a href="/best/most-reliable-{slug}/" aria-label="Number {i} on our list of the most reliable {nm}s">#{i} most reliable {nm}'
+            f' <span aria-hidden="true">›</span></a></p>')
+
+# ---- phones (problem 8): All years and Compare as two visible pills under the hero (the More menu keeps Share and Advanced); wide screens
+# already show the hero buttons
+_N2I = {'all': '<path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"/>', 'cmp': '<path d="M7 20V9M12 20V4M17 20v-7"/>'}
+_n2svg = lambda k: f'<svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{_N2I[k]}</svg>'
+def N2_PILLS(f, y):
+    return (f'<p class="n2-pl"><a href="{CARU(f)}">{_n2svg("all")}All {len(f["years"])} years</a>'
+            f'<a href="/compare/?c={f["id"]}-{y}">{_n2svg("cmp")}Compare</a></p>')
+
+# ---- model pages (problem 7): every model gets a Compare tab. Models without a match-up page (4Runner, Ranger, Mustang...) open the
+# compare tool with their closest rivals (N2_RIVALS)
+def N2_CMP(f):
+    rv = N2_RIVALS(f['id'])[:4]
+    if not rv: return ''
+    me = mphoto(f['id'])
+    cards = ''.join(f'<a class="mu" href="/compare/?cars={f["id"]},{o}"><span class="mu-p">{pimg(me, f["name"], "l")}{pimg(mphoto(o), FY[o]["name"], "r")}</span><b>vs {E(FY[o]["name"])}</b></a>'
+                    for o in rv if me and mphoto(o))
+    links = '' if cards else ' · '.join(f'<a href="/compare/?cars={f["id"]},{o}">vs {E(FY[o]["name"])}</a>' for o in rv) + '. '
+    return (f'<section><h2>Compare the {E(f["name"])}.</h2>' + (f'<div class="mus">{cards}</div>' if cards else '')
+            + f'<p class="yc-cap">{links}Opens the compare tool with both cars, every year side by side. <a href="/compare/?cars={f["id"]}">Compare with any car →</a></p></section>')
