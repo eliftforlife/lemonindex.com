@@ -61046,7 +61046,52 @@
      "views": 982174
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 238,
+       "lo": 65.0,
+       "hi": 1100.0,
+       "n": 14,
+       "videos": 8,
+       "id": "cGEZ9nzE5Sw",
+       "t": 226,
+       "title": "P0410 Code Fix - Secondary Air Injection Troubleshooting | Chevy Blazer GMC Jimmy S10 (1996-2005)"
+      }
+     ],
+     [
+      "Fuel pump",
+      {
+       "median": 130,
+       "lo": 40.0,
+       "hi": 388.0,
+       "n": 3,
+       "videos": 3,
+       "id": "1vbWOHJu_n8",
+       "t": 211,
+       "title": "1997 Chevy Blazer 2-Door Fuel Pump Sending unit (AC-Delco)"
+      }
+     ],
+     [
+      "Transmission",
+      {
+       "median": 2250,
+       "lo": 1500.0,
+       "hi": 3000.0,
+       "n": 2,
+       "videos": 2,
+       "id": "ZtWhHMUaiew",
+       "t": 127,
+       "title": "How to replace shift solenoid in 1999 Chevy Blazer - Fix OBD P0758 on 4L60-E GM Transmission"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
