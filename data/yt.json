@@ -62933,7 +62933,39 @@
      "views": 469
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Water pump / cooling",
+      {
+       "median": 300,
+       "lo": 300.0,
+       "hi": 800.0,
+       "n": 3,
+       "videos": 3,
+       "id": "v_zIUNPL-qw",
+       "t": 251,
+       "title": "2005-2007 Ford Freestyle Five Hundred Overheating: WARNING Never Use Aftermarket Water Pumps!"
+      }
+     ],
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 285,
+       "lo": 70.0,
+       "hi": 500.0,
+       "n": 4,
+       "videos": 3,
+       "id": "ISU9fpgAMeA",
+       "t": 857,
+       "title": "2005 Ford Freestyle Water Pump Replacement"
+      }
+     ]
+    ]
+   }
   }
  ],
  "ram-promaster": [
