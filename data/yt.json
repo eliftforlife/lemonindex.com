@@ -60814,7 +60814,26 @@
      "views": 582342
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 1000,
+       "lo": 600.0,
+       "hi": 3000.0,
+       "n": 3,
+       "videos": 3,
+       "id": "In6zFUOhWVI",
+       "t": 90,
+       "title": "2021 Ford F-150 STX vs 2021 Ford Ranger XLT! | $10,000 Difference"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -61112,6 +61131,139 @@
      "title": "2019 Chevrolet Blazer – Review & Road Test",
      "channel": "Kelley Blue Book",
      "views": 525290
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "buick-encore": [
+  {
+   "years": [
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022
+   ],
+   "gen": "2013–2022 Buick Encore",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 7679115,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 321378,
+     "n": 5,
+     "best": {
+      "id": "OEANCO-K3lQ",
+      "title": "Buick Encore Key Fob Battery Replacement (2017 - 2022)",
+      "channel": "FobBattery",
+      "views": 238784
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 207978,
+     "n": 5,
+     "best": {
+      "id": "G-BXs6KQ1XU",
+      "title": "How to Change Oil on 2018-2021 Buick Encore",
+      "channel": "Daniel Fliman",
+      "views": 138646
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 196323,
+     "n": 6,
+     "best": {
+      "id": "2iN_EbiFhvY",
+      "title": "2012-2018 Buick Encore cabin air filter replacement",
+      "channel": "TruckNerd",
+      "views": 87431
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 157461,
+     "n": 4,
+     "best": {
+      "id": "tZN-h_Ai9QQ",
+      "title": "Buick Encore Thermostat Change 2013 - 2016",
+      "channel": "G Mans World",
+      "views": 64570
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 156011,
+     "n": 7,
+     "best": {
+      "id": "WpwjUPg9BM0",
+      "title": "2017 Buick Encore “Shakes, Sputters & RPM Surges” P0131, P0137, P0171, P2270 DTC FIX",
+      "channel": "v8pontiacvent",
+      "views": 38057
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 89791,
+     "n": 3,
+     "best": {
+      "id": "aufMPCSfIhQ",
+      "title": "2015 Buick Encore Rear Brake Pad Change",
+      "channel": "Pilot View Productions",
+      "views": 33241
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 81827,
+     "n": 3,
+     "best": {
+      "id": "5gGgljjf2Ts",
+      "title": "2017-2019 BUICK ENCORE 1.4L Turbo - Bad Spark Plugs & Coil Packs",
+      "channel": "Pro Tips Plus",
+      "views": 39790
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 81289,
+     "n": 1,
+     "best": {
+      "id": "YCEhMZfCitM",
+      "title": "The Fast and Easy Way To Service The Transmission On A 2015 Buick Encore with a Ecotec 1.4",
+      "channel": "Hot Rod Dave",
+      "views": 81289
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "P4CM5oqNi1k",
+     "title": "Top 5 Problems Buick Encore SUV 2013-2022 1st Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 108653
+    },
+    {
+     "id": "kAIbquVyo3k",
+     "title": "Should you buy a used 2013-2016 Buick Encore/Chevy Trax? The honest truth you need to hear.",
+     "channel": "Another Lap",
+     "views": 36332
+    },
+    {
+     "id": "nT9LQTmDNkM",
+     "title": "Review of My 2019 Buick Encore, Reliability & Recalls",
+     "channel": "Witchauto",
+     "views": 30748
     }
    ],
    "costs": null
