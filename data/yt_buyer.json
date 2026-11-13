@@ -22302,5 +22302,58 @@
 }
 ]
 }
+],
+"ram-promaster": [
+{
+"sid": "ram-promaster-g1",
+"y0": 2014,
+"y1": 2025,
+"label": "2014–2025",
+"videos": 199,
+"praise": [
+[
+"Space and practicality",
+14
+],
+[
+"Looks",
+8
+],
+[
+"Reliability",
+7
+],
+[
+"Power",
+7
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+5
+]
+],
+"top": [
+{
+"id": "B25Ys0JDlVM",
+"title": "2014 Ram Promaster Commercial / Conversion Van Start Up, Test Drive, and In Depth Review",
+"views": 484863,
+"ch": "Saabkyle04"
+},
+{
+"id": "VeSaGQmxYok",
+"title": "WHAT A WEIRD CAR! 2024 RAM PROMASTER Review",
+"views": 274120,
+"ch": "TheStraightPipes"
+},
+{
+"id": "l6TSUeyowRw",
+"title": "2014 RAM ProMaster Commercial Cargo Van Review and Road Test",
+"views": 225891,
+"ch": "Auto Buyers Guide | Alex on Autos"
+}
+]
+}
 ]
 }

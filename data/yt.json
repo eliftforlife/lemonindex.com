@@ -62695,6 +62695,141 @@
    "costs": null
   }
  ],
+ "ram-promaster": [
+  {
+   "years": [
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2014–2025 Ram ProMaster",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 7426505,
+   "topics": [
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 230882,
+     "n": 5,
+     "best": {
+      "id": "X2eS77Tgdvs",
+      "title": "2014-2016 Ram Promaster outside mirror bulb replacement",
+      "channel": "MotorCity Mechanic",
+      "views": 119709
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 153713,
+     "n": 6,
+     "best": {
+      "id": "q_G1TkitUck",
+      "title": "Replace the AC and Radiator Fans on a 2014-2018 Dodge RAM 2500 Promaster",
+      "channel": "How to Automotive",
+      "views": 62589
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 132202,
+     "n": 8,
+     "best": {
+      "id": "roYra2kfdqM",
+      "title": "Ram promaster 2016-2022 radio stop working rear camera not working￼ Easy fix",
+      "channel": "Mechanic 3-D",
+      "views": 33696
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 115356,
+     "n": 3,
+     "best": {
+      "id": "JhF3jpbCHCs",
+      "title": "2014 RAM promaster 2500 won’t start and stuck key",
+      "channel": "RPMgarage",
+      "views": 98817
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 89474,
+     "n": 2,
+     "best": {
+      "id": "URsMWAxlsqw",
+      "title": "2015 Ram ProMaster | Water in Fuel Warning Light",
+      "channel": "Mopar",
+      "views": 79023
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 41865,
+     "n": 2,
+     "best": {
+      "id": "UAT7khPIPRk",
+      "title": "2014-2023 Ram ProMaster Brake Light Bulb Replacement",
+      "channel": "Homeowner Repair",
+      "views": 35076
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 27195,
+     "n": 2,
+     "best": {
+      "id": "FonMPS8WR6Q",
+      "title": "Step by Step Guide: Replace Your Van Mirror: Ram ProMaster 2018 - Present",
+      "channel": "Korey Kelly - OffGrid Travel",
+      "views": 17606
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 23999,
+     "n": 1,
+     "best": {
+      "id": "KBZxBdydu3I",
+      "title": "2019 Promaster P0731 code and Transmission Stuck in limp mode",
+      "channel": "Dallas Auto Diag",
+      "views": 23999
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "B25Ys0JDlVM",
+     "title": "2014 Ram Promaster Commercial / Conversion Van Start Up, Test Drive, and In Depth Review",
+     "channel": "Saabkyle04",
+     "views": 484863
+    },
+    {
+     "id": "VeSaGQmxYok",
+     "title": "WHAT A WEIRD CAR! 2024 RAM PROMASTER Review",
+     "channel": "TheStraightPipes",
+     "views": 274120
+    },
+    {
+     "id": "l6TSUeyowRw",
+     "title": "2014 RAM ProMaster Commercial Cargo Van Review and Road Test",
+     "channel": "Auto Buyers Guide | Alex on Autos",
+     "views": 225891
+    }
+   ],
+   "costs": null
+  }
+ ],
  "chevrolet-express": [
   {
    "years": [
