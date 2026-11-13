@@ -69,7 +69,9 @@ for r in (globals().get('UXC_FIND') or []): _fadd(*r)   # 11-12 UX test: the per
 # 11-13 navigation test (N1, problem 5: "chevy" opened the HHR, "ford" the Edge, "toyota" the RAV4): every brand page is a search result
 # of its own, ranked above that brand's models (lookup.js kind 'br'); the name is the page's H1, so new brand pages join by themselves
 for _bp in sorted(_glob.glob(f'{OUT}/brands/*/index.html')):
-    _bs = _bp.replace('\\', '/').split('/')[-2]; _bh = re.search(r'<h1[^>]*>(.*?)</h1>', open(_bp, encoding='utf-8').read(), re.S)
+    _bt = open(_bp, encoding='utf-8').read()
+    if _bt.startswith('<!doctype html><!--lx-alias'): continue   # a redirect stub (alias_pages.py: /brands/chevy/), not a brand page
+    _bs = _bp.replace('\\', '/').split('/')[-2]; _bh = re.search(r'<h1[^>]*>(.*?)</h1>', _bt, re.S)
     _bn = html.unescape(re.sub(r'<[^>]+>', '', _bh.group(1))).strip() if _bh else ''
     _bm = re.match(r'(?i)' + r'[\s-]+'.join(map(re.escape, _bs.split('-'))) + r'(?![a-z0-9])', _bn)   # the brand at the start of the H1 ("Pontiac problems ..." -> Pontiac)
     _bn = _bm.group(0) if _bm else _bs.replace('-', ' ').title()
