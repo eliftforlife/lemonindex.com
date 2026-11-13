@@ -1,0 +1,238 @@
+{
+ "built": "2026-11-12",
+ "nhtsa": {
+  "by_year": {
+   "2002": 427,
+   "2003": 60,
+   "2004": 42,
+   "2005": 19,
+   "2006": 14,
+   "2008": 65,
+   "2009": 47,
+   "2010": 1,
+   "2011": 4,
+   "2012": 2,
+   "2013": 7,
+   "2014": 6,
+   "2015": 54,
+   "2016": 31,
+   "2017": 53,
+   "2018": 43,
+   "2019": 30,
+   "2020": 18,
+   "2021": 13,
+   "2022": 25,
+   "2023": 9,
+   "2024": 14,
+   "2025": 3,
+   "2026": 1
+  },
+  "gens": {
+   "va": {
+    "n": 242,
+    "issues": {
+     "Intake-valve carbon buildup": {
+      "n": 0,
+      "ex": []
+     },
+     "Oil level and oil consumption": {
+      "n": 2,
+      "ex": [
+       "11385687",
+       "11492009"
+      ]
+     },
+     "Turbo air intake duct recall (2015–2016)": {
+      "n": 1,
+      "ex": [
+       "11395420"
+      ]
+     }
+    },
+    "parts": [
+     [
+      "Engine",
+      69
+     ],
+     [
+      "Electrical system",
+      62
+     ],
+     [
+      "Power train",
+      51
+     ],
+     [
+      "Unknown or other",
+      33
+     ],
+     [
+      "Fuel/propulsion system",
+      20
+     ],
+     [
+      "Steering",
+      20
+     ]
+    ]
+   },
+   "vb": {
+    "n": 51,
+    "issues": {},
+    "parts": [
+     [
+      "Engine",
+      18
+     ],
+     [
+      "Unknown or other",
+      13
+     ],
+     [
+      "Power train",
+      8
+     ],
+     [
+      "Electrical system",
+      5
+     ],
+     [
+      "Forward collision avoidance",
+      4
+     ],
+     [
+      "Air bags",
+      4
+     ]
+    ]
+   }
+  },
+  "parts": [
+   [
+    "Engine",
+    87
+   ],
+   [
+    "Electrical system",
+    67
+   ],
+   [
+    "Power train",
+    59
+   ],
+   [
+    "Unknown or other",
+    46
+   ],
+   [
+    "Fuel/propulsion system",
+    21
+   ],
+   [
+    "Steering",
+    20
+   ]
+  ]
+ },
+ "recalls": {
+  "2015": [
+   {
+    "id": "17V625000",
+    "part": "ELECTRICAL SYSTEM:WIRING",
+    "summary": "Subaru of America, Inc. (Subaru) is recalling certain 2015 WRX and WRX/STI vehicles, equipped with an optional factory-installed subwoofer in the trunk.  Items in the trunk may cause the subwoofer wiring to contact the subwoofer metal frame, possibly resulting in an electrical short."
+   },
+   {
+    "id": "16V162000",
+    "part": "ENGINE AND ENGINE COOLING:ENGINE:GASOLINE:TURBO/SUPERCHARGER",
+    "summary": "Subaru of America, Inc. (Subaru) is recalling certain model year 2015-2016 WRX vehicles manufactured April 10, 2015, to October 21, 2015, and Forester 2.0XT vehicles manufactured April 10, 2015, to October 20, 2015.  The turbocharger air intake duct may crack and possibly result in an engine stall."
+   },
+   {
+    "id": "22V522000",
+    "part": "EXTERIOR LIGHTING:BACK UP LIGHTS:SWITCH",
+    "summary": "Subaru of America, Inc. (Subaru) is recalling certain 2015-2021 WRX vehicles.  The backup light switch may corrode and become inoperative, which can result in the backup lights not illuminating and the rearview camera image not displaying when the vehicle is in reverse."
+   }
+  ],
+  "2016": [
+   {
+    "id": "15V366000",
+    "part": "FORWARD COLLISION AVOIDANCE: CRASH IMMINENT BRAKING",
+    "summary": "Subaru of America, Inc. (Subaru) is recalling certain model year 2015 Legacy vehicles manufactured March 10, 2014, to April 16, 2015, Outback vehicles manufactured February 24, 2014, to April 16, 2015, Impreza vehicles manufactured September 9, 2014, to April 14, 2015, XV Crosstrek vehicles manufactured October 16, 2014, to April 15, 2015, and 2016 WRX vehicles manufactured March 23, 2015, and equ"
+   },
+   {
+    "id": "16V162000",
+    "part": "ENGINE AND ENGINE COOLING:ENGINE:GASOLINE:TURBO/SUPERCHARGER",
+    "summary": "Subaru of America, Inc. (Subaru) is recalling certain model year 2015-2016 WRX vehicles manufactured April 10, 2015, to October 21, 2015, and Forester 2.0XT vehicles manufactured April 10, 2015, to October 20, 2015.  The turbocharger air intake duct may crack and possibly result in an engine stall."
+   },
+   {
+    "id": "22V522000",
+    "part": "EXTERIOR LIGHTING:BACK UP LIGHTS:SWITCH",
+    "summary": "Subaru of America, Inc. (Subaru) is recalling certain 2015-2021 WRX vehicles.  The backup light switch may corrode and become inoperative, which can result in the backup lights not illuminating and the rearview camera image not displaying when the vehicle is in reverse."
+   }
+  ],
+  "2017": [
+   {
+    "id": "22V522000",
+    "part": "EXTERIOR LIGHTING:BACK UP LIGHTS:SWITCH",
+    "summary": "Subaru of America, Inc. (Subaru) is recalling certain 2015-2021 WRX vehicles.  The backup light switch may corrode and become inoperative, which can result in the backup lights not illuminating and the rearview camera image not displaying when the vehicle is in reverse."
+   }
+  ],
+  "2018": [
+   {
+    "id": "21V587000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+    "summary": "Subaru of America, Inc. (Subaru) is recalling certain 2019-2020 Ascent, 2018 Forester, 2018-2020 Impreza, Legacy, Outback, 2018-2019 BRZ, WRX, and Toyota 86 vehicles.  The low-pressure fuel pump inside the fuel tank may fail."
+   },
+   {
+    "id": "22V522000",
+    "part": "EXTERIOR LIGHTING:BACK UP LIGHTS:SWITCH",
+    "summary": "Subaru of America, Inc. (Subaru) is recalling certain 2015-2021 WRX vehicles.  The backup light switch may corrode and become inoperative, which can result in the backup lights not illuminating and the rearview camera image not displaying when the vehicle is in reverse."
+   }
+  ],
+  "2019": [
+   {
+    "id": "21V587000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+    "summary": "Subaru of America, Inc. (Subaru) is recalling certain 2019-2020 Ascent, 2018 Forester, 2018-2020 Impreza, Legacy, Outback, 2018-2019 BRZ, WRX, and Toyota 86 vehicles.  The low-pressure fuel pump inside the fuel tank may fail."
+   },
+   {
+    "id": "22V522000",
+    "part": "EXTERIOR LIGHTING:BACK UP LIGHTS:SWITCH",
+    "summary": "Subaru of America, Inc. (Subaru) is recalling certain 2015-2021 WRX vehicles.  The backup light switch may corrode and become inoperative, which can result in the backup lights not illuminating and the rearview camera image not displaying when the vehicle is in reverse."
+   }
+  ],
+  "2020": [
+   {
+    "id": "22V522000",
+    "part": "EXTERIOR LIGHTING:BACK UP LIGHTS:SWITCH",
+    "summary": "Subaru of America, Inc. (Subaru) is recalling certain 2015-2021 WRX vehicles.  The backup light switch may corrode and become inoperative, which can result in the backup lights not illuminating and the rearview camera image not displaying when the vehicle is in reverse."
+   }
+  ],
+  "2021": [
+   {
+    "id": "22V522000",
+    "part": "EXTERIOR LIGHTING:BACK UP LIGHTS:SWITCH",
+    "summary": "Subaru of America, Inc. (Subaru) is recalling certain 2015-2021 WRX vehicles.  The backup light switch may corrode and become inoperative, which can result in the backup lights not illuminating and the rearview camera image not displaying when the vehicle is in reverse."
+   }
+  ],
+  "2022": [
+   {
+    "id": "23V016000",
+    "part": "EQUIPMENT:OTHER:OWNERS/SERVICE/OTHER MANUAL",
+    "summary": "Subaru of America, Inc. (Subaru) is recalling certain 2022 WRX vehicles equipped with the \"Eyesight\" feature.  The owner's manual may contain incorrect instructions for adjusting the sensitivity of the High Beam Assist function.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 108, \"Lamps, Reflective Devices, and Associated Equipment.\""
+   }
+  ],
+  "2023": [
+   {
+    "id": "23V754000",
+    "part": "POWER TRAIN:DRIVELINE:DRIVESHAFT",
+    "summary": "Subaru of America, Inc. (Subaru) is recalling certain 2024 Crosstrek, Impreza, 2023-2024 Forester, and 2023 WRX vehicles.  The front driveshaft assemblies' outer race may develop cracks and break."
+   }
+  ],
+  "2024": [],
+  "2025": []
+ },
+ "yt": {
+  "car-subaru-wrx": null
+ },
+ "scores": {}
+}

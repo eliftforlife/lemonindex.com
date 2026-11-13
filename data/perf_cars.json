@@ -15,6 +15,21 @@
   "img_color": "Zandvoort Blue"
  },
  {
+  "slug": "bmw-m340i",
+  "name": "BMW M340i",
+  "search": "BMW M340i (incl. 340i, M340i xDrive, 3 Series B58)",
+  "make": "BMW",
+  "group": "A",
+  "years": "2016-2018, 2020-",
+  "body": "sedan",
+  "engine": "3.0L turbo inline-6 (B58)",
+  "img": "/assets/ai-models/bmw-3-series.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "img_year": 2020,
+  "img_color": "dark gray"
+ },
+ {
   "slug": "bmw-m4",
   "name": "BMW M4",
   "search": "BMW M4 (incl. Competition, CS)",
@@ -1153,6 +1168,21 @@
   "h": 600,
   "img_year": 2021,
   "img_color": "Performance Red Pearl"
+ },
+ {
+  "slug": "subaru-wrx",
+  "name": "Subaru WRX",
+  "search": "Subaru WRX (VA, VB, FA20DIT, FA24, WRX TR, tS)",
+  "make": "Subaru",
+  "group": "A",
+  "years": "2015-",
+  "body": "sedan",
+  "engine": "2.0L / 2.4L turbo flat-4",
+  "img": "/assets/ai-cars/subaru-wrx-g5.webp?v=1",
+  "w": 1000,
+  "h": 600,
+  "img_year": 2022,
+  "img_color": "gray"
  },
  {
   "slug": "wrx-sti",

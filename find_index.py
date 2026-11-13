@@ -16,7 +16,8 @@ _brand_of = lambda nm, mk=None: mk or (BYNAME.get(nm, {}).get('brand') if nm in 
 # common names people type that aren't in the model name (11-11, Elijah's list); generation codes and engines come from data/perf/*.json
 FIND_ALIAS = {'/cars/bmw-m3/': 'competition comp cs', 'ford-shelby-gt500': 'shelby gt500 mustang', 'shelby-gt500': 'shelby gt500 mustang',
               'civic-type-r': 'type r typer', '/cars/ford-f-series/': 'f150 f 150 f250 f350 super duty', '/cars/ram-pickup/': '1500 2500 3500',
-              '/cars/chevrolet-silverado/': '1500 2500 3500', '/cars/gmc-sierra/': '1500 2500 3500'}
+              '/cars/chevrolet-silverado/': '1500 2500 3500', '/cars/gmc-sierra/': '1500 2500 3500',
+              '/cars/bmw-2-series/': 'm240i 230i m235i'}   # 11-12 round 2 (Devin): trim names people type
 # 1. scored models (study + new), every year with a page
 for f in YEARS: _fadd(f['name'], _brand_of(f['name']), f'/cars/{f["id"]}/', '', [v['y'] for v in f['years']], FIND_ALIAS.get(f'/cars/{f["id"]}/', ''))
 PERF_LIVE = {}   # perf slug -> its live page (a card for the same car then links there instead of saying coming soon)

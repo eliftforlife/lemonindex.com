@@ -469,6 +469,24 @@ def standalone(slug, page_fn, out='docs'):
     page_fn(D['page'], title, desc, body, ld=ld, img=(pc.get('img') or '').split('?')[0] or None)
     return D['page']
 
+def link_parent(slug, out='docs'):
+    """11-12 round 2 (Devin: "the 3 Series page never mentions the M340i"; the WRX tile opened the Impreza): a performance version that has
+    its own page gets one line at the top of its base model's Overview (data/perf/<slug>.json `parent`), with the featured trim's sourced hp
+    and 0-60"""
+    D = _load(f'data/perf/{slug}.json') or {}
+    if not D.get('parent'): return False
+    pg = os.path.join(HERE, out, D['parent'].strip('/'), 'index.html')
+    if not os.path.exists(pg): return False
+    s = BeautifulSoup(open(pg, encoding='utf-8').read(), 'html.parser'); ov = s.find('section', id='p-overview')
+    if not ov or ov.find(class_='pf-par'): return False
+    g, v = _star(D); zv, zl = _z(v.get('z60'))
+    nums = ' and '.join(x for x in ((f'makes {_hp(v)} hp' if _hp(v) else ''), (f'runs 0–60 in {zv} ({zl})' if zv else '')) if x)
+    who = v['name'] if v['name'].startswith(D['make']) else f'{D["make"]} {v["name"]}'
+    ov.insert(0, BeautifulSoup(f'<p class="ovslim pf-par">Performance version: <a href="{E(D["page"])}">{E(D["name"])} →</a>'
+                               + (f' The {E(g["code"])} {E(who)} {E(nums)}.' if nums else '') + '</p>', 'html.parser'))
+    open(pg, 'w', encoding='utf-8').write(str(s))
+    return True
+
 def build_all(out='docs', page_fn=None):
     done, urls = [], []
     for p in sorted(glob.glob(os.path.join(HERE, 'data', 'perf', '*.json'))):
@@ -483,6 +501,9 @@ def build_all(out='docs', page_fn=None):
                 if u: done.append(slug); urls.append(u)
         except Exception as e:
             import traceback; print('perf page failed', slug, repr(e)); traceback.print_exc()
+    for slug in done:
+        try: link_parent(slug, out)
+        except Exception as e: print('perf parent link failed', slug, repr(e))
     print('perf pages:', done)
     return urls
 

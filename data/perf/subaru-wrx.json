@@ -1,0 +1,531 @@
+{
+ "slug": "subaru-wrx",
+ "name": "Subaru WRX",
+ "short": "WRX",
+ "make": "Subaru",
+ "page": "/cars/subaru-wrx/",
+ "parent": "/cars/subaru-impreza/",
+ "focus": "vb",
+ "star": "vb-22",
+ "h1": "Subaru WRX: performance, engines and what owners say",
+ "nhtsa": {
+  "make": "SUBARU",
+  "models": [
+   "WRX",
+   "IMPREZA WRX"
+  ],
+  "note": "NHTSA files the regular WRX and most 2015–2021 STIs under the same name, WRX, so the 2015–2021 counts and recalls here include the STI (also counted on our WRX STI page). There was no STI after 2021, so 2022-on counts are the WRX alone."
+ },
+ "topics_extra": {
+  "Carbon buildup": "carbon (build ?up|deposits?)|walnut blast",
+  "Oil consumption": "oil consumption|burning oil|using oil",
+  "Wastegate rattle": "wastegate",
+  "Clutch / gearbox": "\\bclutch\\b|synchros?|grinds? (into|in)",
+  "CVT / SPT": "\\bcvt\\b|lineartronic|\\bspt\\b"
+ },
+ "gens": [
+  {
+   "id": "va",
+   "code": "VA",
+   "years": "2015–2021",
+   "y0": 2015,
+   "y1": 2021,
+   "engine": "FA20F",
+   "body": "Sedan",
+   "img": "/assets/ai-cars/subaru-wrx-g4.webp?v=1",
+   "color": "white",
+   "tag": "First WRX with the 2.0 direct-injection turbo: 268 hp, 6-speed manual or CVT.",
+   "variants": [
+    {
+     "id": "va-15",
+     "name": "WRX (6-speed manual)",
+     "years": "2015–2021",
+     "hp": {
+      "v": 268,
+      "src": [
+       "w15d",
+       "s21p"
+      ],
+      "note": "at 5,600 rpm"
+     },
+     "tq": {
+      "v": 258,
+      "src": [
+       "w15d"
+      ],
+      "note": "lb-ft at 2,000–5,200 rpm"
+     },
+     "z60": {
+      "v": 4.8,
+      "who": "Car and Driver",
+      "src": [
+       "z60w"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual, all-wheel drive",
+      "src": [
+       "w15d",
+       "s21p"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$26,295",
+      "src": [
+       "s15p"
+      ],
+      "note": "2015 base WRX, plus $795 destination; 2021: $27,495 plus $925"
+     }
+    },
+    {
+     "id": "va-15c",
+     "name": "WRX Premium / Limited (CVT)",
+     "years": "2015–2021",
+     "hp": {
+      "v": 268,
+      "src": [
+       "w15d",
+       "s21p"
+      ],
+      "note": "at 5,600 rpm"
+     },
+     "tq": {
+      "v": 258,
+      "src": [
+       "w15d"
+      ],
+      "note": "lb-ft at 2,000–5,200 rpm"
+     },
+     "z60": {
+      "v": 5.5,
+      "who": "Car and Driver",
+      "src": [
+       "z60w"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "Sport Lineartronic CVT with manual mode, all-wheel drive",
+      "src": [
+       "w15d",
+       "s15p",
+       "s21p"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$29,695",
+      "src": [
+       "s15p"
+      ],
+      "note": "2015 Premium CVT, plus $795 destination; 2021 Limited CVT: $33,995 plus $925"
+     },
+     "what": "The two-pedal WRX: Subaru calls its CVT the Sport Lineartronic.",
+     "what_src": [
+      "w15d"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vb",
+   "code": "VB",
+   "years": "2022–",
+   "y0": 2022,
+   "y1": 2025,
+   "engine": "FA24F",
+   "body": "Sedan",
+   "img": "/assets/ai-cars/subaru-wrx-g5.webp?v=1",
+   "color": "gray",
+   "tag": "Bigger 2.4 turbo: 271 hp and the same 258 lb-ft.",
+   "variants": [
+    {
+     "id": "vb-22",
+     "name": "WRX (6-speed manual)",
+     "years": "2022–",
+     "star": true,
+     "hp": {
+      "v": 271,
+      "src": [
+       "w22p",
+       "w25p"
+      ],
+      "note": "at 5,600 rpm"
+     },
+     "tq": {
+      "v": 258,
+      "src": [
+       "w22p"
+      ],
+      "note": "lb-ft at 2,000–5,200 rpm"
+     },
+     "z60": {
+      "v": 5.5,
+      "who": "Car and Driver",
+      "src": [
+       "z60w"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual, all-wheel drive",
+      "src": [
+       "w22p"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$29,105",
+      "src": [
+       "w22p"
+      ],
+      "note": "2022 base WRX, before destination. 2025 starts at the Premium: $35,750 plus $1,170"
+     },
+     "what": "0–60 tested on a 2022 WRX Limited with the manual.",
+     "what_src": [
+      "z60w"
+     ]
+    },
+    {
+     "id": "vb-gt",
+     "name": "WRX GT (SPT automatic)",
+     "years": "2022–",
+     "hp": {
+      "v": 271,
+      "src": [
+       "w22p"
+      ],
+      "note": "at 5,600 rpm"
+     },
+     "tq": {
+      "v": 258,
+      "src": [
+       "w22p"
+      ],
+      "note": "lb-ft at 2,000–5,200 rpm"
+     },
+     "z60": {
+      "v": 5.4,
+      "who": "Car and Driver",
+      "src": [
+       "z60w"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "Subaru Performance Transmission (SPT), all-wheel drive",
+      "src": [
+       "w22p"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$41,895",
+      "src": [
+       "w22p"
+      ],
+      "note": "2022, before destination; 2025: $45,705 plus $1,170"
+     },
+     "what": "The SPT automatic is standard on the GT and optional on the other trims.",
+     "what_src": [
+      "w22p",
+      "w25p"
+     ]
+    },
+    {
+     "id": "vb-tr",
+     "name": "WRX TR",
+     "years": "2024–",
+     "hp": {
+      "v": 271,
+      "src": [
+       "w24tr"
+      ],
+      "note": "at 5,600 rpm"
+     },
+     "tq": {
+      "v": 258,
+      "src": [
+       "w24tr"
+      ],
+      "note": "lb-ft at 2,000–5,200 rpm"
+     },
+     "z60": {
+      "v": 5.6,
+      "who": "Car and Driver",
+      "src": [
+       "z60w"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual only, all-wheel drive",
+      "src": [
+       "w24p"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$41,655",
+      "src": [
+       "w24p"
+      ],
+      "note": "2024, plus $1,120 destination"
+     },
+     "what": "Brembo brakes (6-piston front), firmer springs, recalibrated steering, 19-inch wheels on Potenza S007s, Recaro seats, no moonroof.",
+     "what_src": [
+      "w24tr"
+     ]
+    },
+    {
+     "id": "vb-ts",
+     "name": "WRX tS",
+     "years": "2025–",
+     "hp": {
+      "v": 271,
+      "src": [
+       "w25p"
+      ],
+      "note": ""
+     },
+     "z60": {
+      "v": 5.6,
+      "who": "Car and Driver",
+      "src": [
+       "z60w"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual only, all-wheel drive",
+      "src": [
+       "w25p"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$45,705",
+      "src": [
+       "w25p"
+      ],
+      "note": "2025, plus $1,170 destination"
+     },
+     "what": "STI-tuned electronically controlled dampers, uprated Brembo brakes, 19-inch wheels, 12.3-inch digital gauges.",
+     "what_src": [
+      "w25p"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "FA20F": {
+   "name": "Subaru FA20F (FA20DIT)",
+   "what": "2.0-liter flat-4, turbo, direct injection",
+   "study": "",
+   "page": "",
+   "yt": [
+    "scy",
+    ""
+   ],
+   "facts": [
+    [
+     "Output",
+     "268 hp at 5,600 rpm, 258 lb-ft at 2,000–5,200 rpm",
+     [
+      "w15d"
+     ]
+    ],
+    [
+     "Turbo",
+     "Twin-scroll turbo, 15.9 psi peak boost",
+     [
+      "w15d"
+     ]
+    ],
+    [
+     "Redline",
+     "6,700 rpm (U.S. WRX)",
+     [
+      "wfa"
+     ]
+    ],
+    [
+     "Bore x stroke",
+     "86 x 86 mm, 10.6:1 compression",
+     [
+      "wfa"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Intake-valve carbon buildup",
+     "kind": "Tuning shop",
+     "rx": "carbon (build ?up|deposits?)|walnut blast",
+     "x": "Direct injection means fuel never washes the backs of the intake valves, so oil-vapor deposits build up. Symptoms: rough idle, cold-start misfire, hesitation.",
+     "fix": "Physical cleaning (walnut blasting) once an inspection confirms deposits; fuel additives don’t reach the valves.",
+     "src": [
+      "tt20"
+     ]
+    },
+    {
+     "t": "Oil level and oil consumption",
+     "kind": "Tuning shop",
+     "rx": "oil consumption|burning oil|using oil|low oil",
+     "x": "The engine holds relatively little oil, so leaks, PCV faults, turbo seal wear or worn rings drop the level faster. Check the dipstick often.",
+     "fix": "",
+     "src": [
+      "tt20"
+     ]
+    },
+    {
+     "t": "Turbo air intake duct recall (2015–2016)",
+     "kind": "Recall",
+     "rx": "intake duct|air duct",
+     "x": "On WRXs built April to October 2015, the turbocharger air intake duct may crack, which can stall the engine.",
+     "fix": "Dealer inspects the duct and replaces it for free, depending on its lot number (NHTSA 16V-162, Subaru WTA-62).",
+     "src": [
+      "r16"
+     ]
+    }
+   ]
+  },
+  "FA24F": {
+   "name": "Subaru FA24F 2.4 turbo",
+   "what": "2.4-liter flat-4, turbo, direct injection",
+   "study": "",
+   "page": "",
+   "yt": [
+    "scy",
+    ""
+   ],
+   "facts": [
+    [
+     "Output",
+     "271 hp at 5,600 rpm, 258 lb-ft at 2,000–5,200 rpm",
+     [
+      "w22p",
+      "w24tr"
+     ]
+    ],
+    [
+     "Bore x stroke",
+     "94 x 86 mm, 10.6:1 compression",
+     [
+      "wfa"
+     ]
+    ],
+    [
+     "Construction",
+     "Aluminum block and heads",
+     [
+      "wfa"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "No engine recall",
+     "kind": "Recall",
+     "rx": "",
+     "x": "NHTSA lists no engine recall for the 2022–2025 WRX. Its recalls cover an owner’s-manual error (2022) and front driveshafts (2023).",
+     "fix": "",
+     "src": [
+      "nrw"
+     ]
+    }
+   ]
+  }
+ },
+ "compare": [
+  {
+   "slug": "wrx-sti",
+   "name": "Subaru WRX STI"
+  },
+  {
+   "slug": "golf-r",
+   "name": "Volkswagen Golf R"
+  },
+  {
+   "slug": "civic-type-r",
+   "name": "Honda Civic Type R"
+  },
+  {
+   "slug": "subaru-brz",
+   "name": "Subaru BRZ"
+  }
+ ],
+ "sources": {
+  "w15d": {
+   "t": "Subaru of America: 2015 Subaru WRX debuts a new level of performance (Dec 2013)",
+   "u": "https://media.subaru.com/pressrelease/513/2015-subaru-wrx-debuts-new-level-performance",
+   "k": "Subaru"
+  },
+  "s15p": {
+   "t": "Subaru of America: Pricing on all-new 2015 WRX and WRX STI sedans (Feb 2014)",
+   "u": "https://media.subaru.com/pressrelease/573/1/subaru-announces-pricing-all-new-2015-wrx-wrx",
+   "k": "Subaru"
+  },
+  "s21p": {
+   "t": "Subaru of America: Pricing for 2021 WRX and WRX STI (Dec 2020)",
+   "u": "https://media.subaru.com/pressrelease/1674/subaru-announces-pricing-2021-wrx-wrx-sti-performance",
+   "k": "Subaru"
+  },
+  "w22p": {
+   "t": "Subaru of America: Subaru announces pricing on all-new 2022 WRX (Feb 2022)",
+   "u": "https://media.subaru.com/pressrelease/1869/1/subaru-announces-pricing-all-new-2022-wrx",
+   "k": "Subaru"
+  },
+  "w24tr": {
+   "t": "Subaru of America: New performance-focused 2024 Subaru WRX TR debuts (Oct 2023)",
+   "u": "https://media.subaru.com/pressrelease/2103/1/new-performance-focused-2024-subaru-wrx-tr-debuts",
+   "k": "Subaru"
+  },
+  "w24p": {
+   "t": "Subaru of America: Subaru announces pricing on 2024 WRX (Dec 2023)",
+   "u": "https://media.subaru.com/pressrelease/2130/1/subaru-announces-pricing-2024-wrx",
+   "k": "Subaru"
+  },
+  "w25p": {
+   "t": "Subaru of America: Subaru announces pricing on 2025 WRX (Nov 2024)",
+   "u": "https://media.subaru.com/pressrelease/2252/1/subaru-announces-pricing-2025-wrx",
+   "k": "Subaru"
+  },
+  "z60w": {
+   "t": "0-60specs.com: Subaru WRX / WRX STI 0-60 runs by magazine (Car and Driver, MotorTrend, Road & Track, MotorWeek)",
+   "u": "https://www.0-60specs.com/subaru/wrx-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "wfa": {
+   "t": "Wikipedia: Subaru FA engine (FA20F / FA20DIT, FA24F)",
+   "u": "https://en.wikipedia.org/wiki/Subaru_FA_engine",
+   "k": "Wikipedia (fallback)"
+  },
+  "r16": {
+   "t": "NHTSA recall 16V-162: 2015–2016 WRX turbocharger air intake duct (Apr 2016)",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=16V162000",
+   "k": "Recall"
+  },
+  "nrw": {
+   "t": "NHTSA recalls for the 2022–2025 Subaru WRX (api.nhtsa.gov recallsByVehicle)",
+   "u": "https://api.nhtsa.gov/recalls/recallsByVehicle?make=SUBARU&model=WRX&modelYear=2022",
+   "k": "NHTSA"
+  },
+  "tt20": {
+   "t": "ThinkTuning: FA20DIT common problems (Aug 2026)",
+   "u": "https://thinktuning.com/fa20dit-common-problems/",
+   "k": "tuning shop"
+  }
+ },
+ "yt_study": "car-subaru-wrx",
+ "img": "/assets/ai-cars/subaru-wrx-g5.webp?v=1"
+}

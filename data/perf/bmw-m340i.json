@@ -1,0 +1,395 @@
+{
+ "slug": "bmw-m340i",
+ "name": "BMW M340i / 340i",
+ "short": "340i",
+ "make": "BMW",
+ "page": "/cars/bmw-m340i/",
+ "parent": "/cars/bmw-3-series/",
+ "focus": "g20",
+ "star": "g20-r",
+ "h1": "BMW M340i and 340i: performance, engine and what owners say",
+ "nhtsa": {
+  "make": "BMW",
+  "models": [
+   "M340I",
+   "340I"
+  ],
+  "note": "Counted from the complaints owners filed under M340i or 340i (most 3 Series complaints just say \"3 Series\" and can’t be split by engine, so these counts are low). NHTSA’s recall lookup has no separate 340i listing for 2016–2018; check a VIN for those cars."
+ },
+ "topics_extra": {
+  "Oil filter housing": "oil filter housing",
+  "Coolant leaks": "coolant (leak|loss)|losing coolant|water pump",
+  "Valve cover / PCV": "valve cover|\\bpcv\\b"
+ },
+ "gens": [
+  {
+   "id": "f30",
+   "code": "F30",
+   "years": "2016–2018",
+   "y0": 2016,
+   "y1": 2018,
+   "engine": "B58",
+   "body": "Sedan",
+   "img": "/assets/ai-cars/bmw-3-series-g6.webp?v=1",
+   "color": "white",
+   "tag": "The first B58 car: the 340i replaced the 335i, and a manual was still offered.",
+   "variants": [
+    {
+     "id": "f30-r",
+     "name": "340i",
+     "years": "2016–2018",
+     "hp": {
+      "v": 320,
+      "src": [
+       "ma15"
+      ],
+      "note": ""
+     },
+     "tq": {
+      "v": 330,
+      "src": [
+       "ma15"
+      ],
+      "note": "lb-ft"
+     },
+     "z60": {
+      "v": 4.8,
+      "who": "Car and Driver",
+      "src": [
+       "z60f"
+      ],
+      "claim": 4.8,
+      "csrc": [
+       "ma15"
+      ]
+     },
+     "trans": {
+      "v": "8-speed automatic or 6-speed manual, rear-wheel drive",
+      "src": [
+       "ma15",
+       "z60f"
+      ],
+      "note": ""
+     }
+    },
+    {
+     "id": "f30-x",
+     "name": "340i xDrive",
+     "years": "2016–2018",
+     "hp": {
+      "v": 320,
+      "src": [
+       "ma15"
+      ],
+      "note": ""
+     },
+     "tq": {
+      "v": 330,
+      "src": [
+       "ma15"
+      ],
+      "note": "lb-ft"
+     },
+     "z60": {
+      "v": 4.9,
+      "who": "Car and Driver",
+      "src": [
+       "z60f"
+      ],
+      "claim": 4.6,
+      "csrc": [
+       "ma15"
+      ]
+     },
+     "trans": {
+      "v": "8-speed automatic or 6-speed manual, all-wheel drive",
+      "src": [
+       "ma15",
+       "z60f"
+      ],
+      "note": ""
+     }
+    }
+   ]
+  },
+  {
+   "id": "g20",
+   "code": "G20",
+   "years": "2020–",
+   "y0": 2020,
+   "y1": 2025,
+   "engine": "B58",
+   "body": "Sedan",
+   "img": "/assets/ai-models/bmw-3-series.webp?v=1",
+   "color": "dark gray",
+   "tag": "382 hp from the same B58 six, automatic only. The fastest 3 Series below the M3.",
+   "variants": [
+    {
+     "id": "g20-r",
+     "name": "M340i",
+     "years": "2020–",
+     "star": true,
+     "hp": {
+      "v": 382,
+      "src": [
+       "b20"
+      ],
+      "note": ""
+     },
+     "tq": {
+      "v": 369,
+      "src": [
+       "b20"
+      ],
+      "note": "lb-ft"
+     },
+     "z60": {
+      "v": 3.8,
+      "who": "Car and Driver",
+      "src": [
+       "z60g"
+      ],
+      "claim": 4.4,
+      "csrc": [
+       "b20"
+      ]
+     },
+     "top": {
+      "v": "130 mph",
+      "src": [
+       "b20"
+      ],
+      "note": "155 mph with performance tires"
+     },
+     "trans": {
+      "v": "8-speed Sport Steptronic automatic, rear-wheel drive",
+      "src": [
+       "b20"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,849 lb",
+      "src": [
+       "b20"
+      ],
+      "note": "2020"
+     },
+     "price": {
+      "v": "$54,000",
+      "src": [
+       "b20"
+      ],
+      "note": "2020, plus $995 destination"
+     }
+    },
+    {
+     "id": "g20-x",
+     "name": "M340i xDrive",
+     "years": "2020–",
+     "hp": {
+      "v": 382,
+      "src": [
+       "b20"
+      ],
+      "note": ""
+     },
+     "tq": {
+      "v": 369,
+      "src": [
+       "b20"
+      ],
+      "note": "lb-ft"
+     },
+     "z60": {
+      "v": 3.7,
+      "who": "Car and Driver",
+      "src": [
+       "z60g"
+      ],
+      "claim": 4.2,
+      "csrc": [
+       "b20"
+      ]
+     },
+     "top": {
+      "v": "130 mph",
+      "src": [
+       "b20"
+      ],
+      "note": "155 mph with performance tires"
+     },
+     "trans": {
+      "v": "8-speed Sport Steptronic automatic, all-wheel drive",
+      "src": [
+       "b20"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,968 lb",
+      "src": [
+       "b20"
+      ],
+      "note": "2020"
+     },
+     "price": {
+      "v": "$56,000",
+      "src": [
+       "b20"
+      ],
+      "note": "2020, plus $995 destination"
+     },
+     "what": "0–60 tested on a 2023 M340i xDrive.",
+     "what_src": [
+      "z60g"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "B58": {
+   "name": "BMW B58",
+   "what": "3.0-liter inline-6, turbo",
+   "study": "",
+   "page": "/engines/bmw-b58/",
+   "yt": [
+    "bmw",
+    "B58"
+   ],
+   "facts": [
+    [
+     "Output",
+     "320 hp (340i) to 382 hp (M340i)",
+     [
+      "ma15",
+      "b20"
+     ]
+    ],
+    [
+     "Redline",
+     "7,000 rpm",
+     [
+      "wb58"
+     ]
+    ],
+    [
+     "Block",
+     "Closed-deck aluminum",
+     [
+      "fcp",
+      "wb58"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Brake-assist recall (engine software, 2020)",
+     "kind": "Recall",
+     "rx": "brake assist|vacuum pump|brake booster",
+     "x": "On some 2020 M340i and M340i xDrive cars, the engine software could cut brake assist during engine start. Full mechanical braking stays available.",
+     "fix": "Dealer updates the engine software for free (NHTSA 21V-598).",
+     "src": [
+      "r21"
+     ]
+    },
+    {
+     "t": "Oil filter housing leaks",
+     "kind": "Parts seller",
+     "rx": "oil filter housing|ofh gasket",
+     "x": "The plastic housing and its gaskets can warp with heat and leak oil or coolant, often around 60,000–100,000 miles.",
+     "fix": "Replace the housing and gaskets.",
+     "src": [
+      "fcp"
+     ]
+    },
+    {
+     "t": "Coolant loss",
+     "kind": "Owner-reported",
+     "rx": "coolant (leak|loss)|losing coolant|water pump",
+     "x": "Owners report coolant leaks. A parts seller names the water pump seal and the heat management module as common sources.",
+     "fix": "",
+     "src": [
+      "sg58",
+      "fcp"
+     ]
+    },
+    {
+     "t": "Valve cover and PCV",
+     "kind": "Owner-reported",
+     "rx": "valve cover|\\bpcv\\b|oil separator",
+     "x": "Valve cover gasket leaks and PCV valve faults are the most-reported B58 problems on owner forums, per SlashGear.",
+     "fix": "",
+     "src": [
+      "sg58",
+      "fcp"
+     ]
+    }
+   ]
+  }
+ },
+ "compare": [
+  {
+   "slug": "bmw-m3",
+   "name": "BMW M3"
+  },
+  {
+   "slug": "gr-supra",
+   "name": "Toyota GR Supra"
+  },
+  {
+   "slug": "kia-stinger-gt",
+   "name": "Kia Stinger GT"
+  },
+  {
+   "slug": "genesis-g70-33t",
+   "name": "Genesis G70 3.3T"
+  }
+ ],
+ "sources": {
+  "b20": {
+   "t": "BMW of North America: The all-new 2020 BMW M340i and M340i xDrive sedans (Nov 2018)",
+   "u": "https://newsroom.bmwgroup.com/americas/the-all-new-2020-bmw-m340i-and-m340i-xdrive-sedans",
+   "k": "BMW"
+  },
+  "ma15": {
+   "t": "Motor Authority: 2016 BMW 3-Series benefits from significant updates under the skin (May 2015)",
+   "u": "https://www.motorauthority.com/news/1029296_2016-bmw-3-series-benefits-from-significant-updates-the-skin-video",
+   "k": "outlet"
+  },
+  "z60g": {
+   "t": "0-60specs.com: BMW M340i 0-60 runs by magazine (Car and Driver, MotorTrend)",
+   "u": "https://www.0-60specs.com/bmw/m340i-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "z60f": {
+   "t": "0-60specs.com: BMW 340i 0-60 runs by magazine (Car and Driver, MotorTrend, Road & Track)",
+   "u": "https://www.0-60specs.com/bmw/340i-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "r21": {
+   "t": "NHTSA recall 21V-598: 2020 M340i / M340i xDrive and other B58 cars, loss of brake assist at engine start (Sep 2021)",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=21V598000",
+   "k": "Recall"
+  },
+  "wb58": {
+   "t": "Wikipedia: BMW B58",
+   "u": "https://en.wikipedia.org/wiki/BMW_B58",
+   "k": "Wikipedia (fallback)"
+  },
+  "fcp": {
+   "t": "FCP Euro: BMW B58 engine parts and common problems",
+   "u": "https://www.fcpeuro.com/BMW-parts/b58-engine/",
+   "k": "parts seller"
+  },
+  "sg58": {
+   "t": "SlashGear: Common problems with BMW's B58 engines, according to owners (Oct 2024)",
+   "u": "https://www.slashgear.com/1678547/bmw-b58-engine-common-problems-issues",
+   "k": "outlet"
+  }
+ },
+ "yt_study": "car-bmw-m340i",
+ "yt_model": "",
+ "img": "/assets/ai-models/bmw-3-series.webp?v=1"
+}

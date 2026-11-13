@@ -1791,6 +1791,10 @@ NEWM = [m for m in NEWM if m['slug'] not in _have and os.path.exists(f'assets/ai
 NEWM = [m for m in NEWM if m['slug'] not in {c['slug'] for c in EVX}]   # 11-11: an EV already has its EV card on /cars/ (Ioniq 5, Leaf, ID.4, Polestar 2, EV6 showed twice)
 _EXN = _load('data/extra_models_new.json')   # 11-11 complaints-only models (no sales source yet)
 _PLAN = _load('data/new_plan.json'); _DUP = {k: v['dupe_of'] for k, v in _PLAN.items() if v.get('dupe_of')}
+# 11-12 round 2 (Devin: the WRX tile opened the Impreza): a model with its own performance page (data/perf/<slug>.json, e.g. the WRX) is no longer
+# a duplicate card; its performance card (perf_cars.json) links to that page instead
+_DUP = {k: v for k, v in _DUP.items() if not os.path.exists(f'data/perf/{k}.json')}
+NEWM = [m for m in NEWM if not os.path.exists(f'data/perf/{m["slug"]}.json')]
 _ID = {c['id']: c for c in CARS + CARS_NEW}
 def ndcard(m):
     nm = m['name']; short = nm.split(' ', 1)[1] if nm.startswith(m['make'] + ' ') else nm

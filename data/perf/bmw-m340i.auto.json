@@ -1,0 +1,256 @@
+{
+ "built": "2026-11-12",
+ "nhtsa": {
+  "by_year": {
+   "2016": 6,
+   "2017": 5,
+   "2018": 3,
+   "2020": 57,
+   "2021": 11,
+   "2022": 7,
+   "2023": 3,
+   "2024": 2
+  },
+  "gens": {
+   "f30": {
+    "n": 14,
+    "issues": {
+     "Brake-assist recall (engine software, 2020)": {
+      "n": 0,
+      "ex": []
+     },
+     "Oil filter housing leaks": {
+      "n": 1,
+      "ex": [
+       "11687594"
+      ]
+     },
+     "Coolant loss": {
+      "n": 0,
+      "ex": []
+     },
+     "Valve cover and PCV": {
+      "n": 0,
+      "ex": []
+     }
+    },
+    "parts": [
+     [
+      "Engine",
+      4
+     ],
+     [
+      "Unknown or other",
+      4
+     ],
+     [
+      "Electrical system",
+      3
+     ],
+     [
+      "Wheels",
+      2
+     ],
+     [
+      "Service brakes",
+      1
+     ],
+     [
+      "Air bags",
+      1
+     ]
+    ]
+   },
+   "g20": {
+    "n": 80,
+    "issues": {
+     "Brake-assist recall (engine software, 2020)": {
+      "n": 1,
+      "ex": [
+       "11491782"
+      ]
+     },
+     "Oil filter housing leaks": {
+      "n": 0,
+      "ex": []
+     },
+     "Coolant loss": {
+      "n": 2,
+      "ex": [
+       "11648018",
+       "11656393"
+      ]
+     },
+     "Valve cover and PCV": {
+      "n": 3,
+      "ex": [
+       "11553343",
+       "11553344"
+      ]
+     }
+    },
+    "parts": [
+     [
+      "Engine",
+      51
+     ],
+     [
+      "Unknown or other",
+      12
+     ],
+     [
+      "Electrical system",
+      10
+     ],
+     [
+      "Power train",
+      6
+     ],
+     [
+      "Fuel/propulsion system",
+      4
+     ],
+     [
+      "Engine and engine cooling",
+      4
+     ]
+    ]
+   }
+  },
+  "parts": [
+   [
+    "Engine",
+    55
+   ],
+   [
+    "Unknown or other",
+    16
+   ],
+   [
+    "Electrical system",
+    13
+   ],
+   [
+    "Power train",
+    6
+   ],
+   [
+    "Fuel/propulsion system",
+    5
+   ],
+   [
+    "Service brakes",
+    4
+   ]
+  ]
+ },
+ "recalls": {
+  "2016": [],
+  "2017": [],
+  "2018": [],
+  "2020": [
+   {
+    "id": "19V600000",
+    "part": "SEATS",
+    "summary": "BMW of North America, LLC (BMW) is recalling one 2020 M340i and one M340i xDrive vehicle.  Due to improper welding, the rear center headrest may fold in the event of a rear impact crash."
+   },
+   {
+    "id": "21V096000",
+    "part": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2019-2021 X3 sDrive30i, X3 xDrive30i, X3 M40i, X3M, X4 xDrive30i, X4 M40i, M550i, X4M, X5 sDrive40i, X5 xDrive40i, X5 xDrive50i, X5M, X5 M50i, X7 xDrive40i, X7 xDrive50i, X7 M50i, Alpina XB7, 330i, 330i xDrive, M340i, M340i xDrive, and 8 Series Coupe, Convertible and Grand Coupe, 840i, 840i xDrive, M850i xDrive, M8, 2020-2021 530e, 530e xDrive, "
+   },
+   {
+    "id": "19V684000",
+    "part": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2018 540d, 2018-2020 530i, 530i xDrive, 540i, 540i xDrive, M550i xDrive, M5, 530e, 530e xDrive, X3 sDrive, X3 xDrive, X3 M40i, X3 M, and 2019-2020 X4 xDrive, X4 M40i, X4 M, X7 xDrive, X7 M50i, 740Li, 740Li xDrive, 750Li, 750Li xDrive, 8 Series Convertible and Coupe 840i, 840i xDrive, M850i xDrive, X5 sDrive, X5 xDrive, X5 M50i, X6 xDrive, X6 M50"
+   },
+   {
+    "id": "19V755000",
+    "part": "STRUCTURE:BODY:TRUNK LID",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2020 330i, 330i xDrive and M340i vehicles.  The interior trunk release cable may have been improperly installed, preventing the opening of the trunk from the inside.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 401, \"Internal Trunk Release.\""
+   },
+   {
+    "id": "20V164000",
+    "part": "SEAT BELTS:FRONT:BUCKLE ASSEMBLY",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2020 X3 xDrive30e, X4 xDrive30i, X4 M40i, X4M, 330i, 330i xDrive, M340i, 840i Gran Coupe, 840i xDrive Gran Coupe, M850i xDrive Gran Coupe, M8 Gran Coupe, X3 sDrive30i, X3 xDrive30i, X3 M40i, X3M, and 840i xDrive Convertible vehicles.  The sensors in the front seat belt buckles may inaccurately detect a belted occupant as unbelted, possibly causi"
+   },
+   {
+    "id": "20V355000",
+    "part": "STEERING:LINKAGES:TIE ROD ASSEMBLY",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2019 Z4 sDrive30i, 2019-2020 330i xDrive, M340i and M340i xDrive, 2020 X3M and X4M, and Toyota Supra vehicles.  In certain driving conditions, such as high temperatures and rough road surfaces, a steering gear tie rod may become damaged, possibly resulting in a fractured tie rod."
+   },
+   {
+    "id": "21V598000",
+    "part": "ENGINE",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2020 M340i, M340i xDrive, 540i, 540i xDrive, X3 M40i, 2020-2021 X4 M40i, 745Le xDrive, 2019-2021 Z4 M40i, and 2020-2021 Toyota Supra vehicles.  During engine start, the engine management software may cause loss of braking assist.  Full mechanical braking (without assist) remains available."
+   },
+   {
+    "id": "23V211000",
+    "part": "SEATS",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2019-2021 330i, 330i xDrive, M340i xDrive, 2020-2021 X3 sDrive30i, X3 xDrive30i, X3 M40i, X3M, 2021 X3 xDrive30e, X4 xDrive30i, and X4M vehicles.  The seat frame may not have been welded properly to the seat rails."
+   },
+   {
+    "id": "23V584000",
+    "part": "SEAT BELTS",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2019-2022 330i, 330i xDrive, M340i, 2022 430i Coupe, 2021-2022 430i, M440i Convertible, and 2020-2022 228i xDrive Gran Coupe vehicles.  The receiver audio module control unit software may fail to properly generate audible seat belt warnings to the driver to fasten their seat belt.  As such, these vehicles fail to comply with the requirements of "
+   },
+   {
+    "id": "24V576000",
+    "part": "ELECTRICAL SYSTEM:STARTER ASSEMBLY",
+    "summary": "BMW of North America, LLC is recalling certain 2019-2020 X5, X7, 2020 3 Series Sedan, X6, 2020-2021 7 Series Sedan, 2020 8 Series Convertible, 8 Series Coupe, and 2020 8 Series Gran Coupe vehicles.  Please see the recall report for the complete list of models.  In the event the starter motor fails, repeated attempts to start the vehicle can cause the starter motor to overheat from an electrical ov"
+   }
+  ],
+  "2021": [
+   {
+    "id": "21V554000",
+    "part": "SEAT BELTS",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2021 2 Series (230i, 230i xDrive, M240i, M240i xDrive), 330e, 330e Xdrive, 4 Series Coupe (430i, 430i xDrive, M440i xDrive) M4 Coupe, M4 Competition Coupe, BMW 4 Series Convertible (430i, M440i), BMW X1 sDrive28i, xDrive28i, 2 Series Gran Coupe (228i, 228i xDrive, M235i xDrive), M2 Competition Coupe, 330i, 330i xDrive, M340i, M340i xDrive, M3, M"
+   },
+   {
+    "id": "20V761000",
+    "part": "ELECTRICAL SYSTEM:12V/24V/48V BATTERY",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2021 M340i xDrive, M440i xDrive Coupe, 530i, 530i xDrive, 540i, 540i xDrive, 740Li, 740Li xDrive, 840i Gran Coupe, 840i xDrive Gran Coupe, X5 sDrive40i, X5 xDrive40i, X6 sDrive40i, X6 xDrive40i, and X7 xDrive40i vehicles.  The connection between the 48-Volt battery and the starter-generator may not have been assembled properly, which can cause i"
+   },
+   {
+    "id": "21V096000",
+    "part": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2019-2021 X3 sDrive30i, X3 xDrive30i, X3 M40i, X3M, X4 xDrive30i, X4 M40i, M550i, X4M, X5 sDrive40i, X5 xDrive40i, X5 xDrive50i, X5M, X5 M50i, X7 xDrive40i, X7 xDrive50i, X7 M50i, Alpina XB7, 330i, 330i xDrive, M340i, M340i xDrive, and 8 Series Coupe, Convertible and Grand Coupe, 840i, 840i xDrive, M850i xDrive, M8, 2020-2021 530e, 530e xDrive, "
+   },
+   {
+    "id": "21V298000",
+    "part": "SEAT BELTS:FRONT:BUCKLE ASSEMBLY",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2021 330i, 330i xDrive, M340i, M3, and 330e xDrive vehicles.   The bolt securing the seat belt assembly to the frame was not tightened to specification."
+   },
+   {
+    "id": "23V211000",
+    "part": "SEATS",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2019-2021 330i, 330i xDrive, M340i xDrive, 2020-2021 X3 sDrive30i, X3 xDrive30i, X3 M40i, X3M, 2021 X3 xDrive30e, X4 xDrive30i, and X4M vehicles.  The seat frame may not have been welded properly to the seat rails."
+   },
+   {
+    "id": "23V584000",
+    "part": "SEAT BELTS",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2019-2022 330i, 330i xDrive, M340i, 2022 430i Coupe, 2021-2022 430i, M440i Convertible, and 2020-2022 228i xDrive Gran Coupe vehicles.  The receiver audio module control unit software may fail to properly generate audible seat belt warnings to the driver to fasten their seat belt.  As such, these vehicles fail to comply with the requirements of "
+   }
+  ],
+  "2022": [
+   {
+    "id": "23V584000",
+    "part": "SEAT BELTS",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2019-2022 330i, 330i xDrive, M340i, 2022 430i Coupe, 2021-2022 430i, M440i Convertible, and 2020-2022 228i xDrive Gran Coupe vehicles.  The receiver audio module control unit software may fail to properly generate audible seat belt warnings to the driver to fasten their seat belt.  As such, these vehicles fail to comply with the requirements of "
+   }
+  ],
+  "2023": [
+   {
+    "id": "23V118000",
+    "part": "ELECTRICAL SYSTEM:BODY CONTROL MODULE:SOFTWARE",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2023 330i, 330i xDrive, M340i, M340i xDrive, M3, 330e, 330e xDrive, 430i Convertible, 430i xDrive, M440i, 2022-2023 430i, 430i xDrive, M440i xDrive, i4 eDrive40, and i4 M50 vehicles.  During a service visit, a replacement electronic control unit (ECU) may have been installed with incorrect programming, which can cause the automatic door locking "
+   }
+  ],
+  "2024": [],
+  "2025": []
+ },
+ "yt": {
+  "car-bmw-m340i": null
+ },
+ "scores": {}
+}
