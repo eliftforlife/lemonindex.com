@@ -21586,5 +21586,96 @@
 }
 ]
 }
+],
+"chevrolet-blazer": [
+{
+"sid": "chevrolet-blazer-g2",
+"y0": 1995,
+"y1": 2005,
+"label": "1995–2005",
+"videos": 195,
+"praise": [
+[
+"Reliability",
+6
+]
+],
+"trouble": [
+[
+"Fuel pump / fuel system",
+6
+],
+[
+"Electrical / wiring / TIPM",
+3
+]
+],
+"top": [
+{
+"id": "a-skkubsUJE",
+"title": "Regular Car Reviews: 1999 Chevy Blazer",
+"views": 982174,
+"ch": "Regular Car Reviews"
+},
+{
+"id": "PH15OMfBc-M",
+"title": "1999 Chevrolet Blazer V6 EXECUTIVE Review - A TOTAL BEAST!!! Flagship Car",
+"views": 537004,
+"ch": "Carro Chefe"
+},
+{
+"id": "ifDfbdPCSig",
+"title": "List of Problems! MINT Condition S-10 Blazer 4.3 4x4",
+"views": 146964,
+"ch": "Rainman Ray's Repairs"
+}
+]
+},
+{
+"sid": "chevrolet-blazer-g3",
+"y0": 2019,
+"y1": 2025,
+"label": "2019–2025",
+"videos": 199,
+"praise": [
+[
+"Looks",
+28
+],
+[
+"Power",
+16
+],
+[
+"Fun to drive",
+14
+],
+[
+"Tech and features",
+10
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "yVq9nEdgabk",
+"title": "2019 Chevrolet Blazer – Review & Road Test",
+"views": 525290,
+"ch": "Kelley Blue Book"
+},
+{
+"id": "mSJxpMcO4t0",
+"title": "2024 Chevy Blazer EV Full Review: Electric Muscle SUV",
+"views": 441867,
+"ch": "Doug DeMuro"
+},
+{
+"id": "f6c4WD5jXaQ",
+"title": "Review: 2019 Chevy Blazer RS AWD",
+"views": 364902,
+"ch": "Matt Maran Motoring"
+}
+]
+}
 ]
 }

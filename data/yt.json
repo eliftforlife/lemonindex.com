@@ -60860,6 +60860,260 @@
      "views": 4793
     }
    ],
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Tires",
+      {
+       "median": 1350,
+       "lo": 1200.0,
+       "hi": 1500.0,
+       "n": 2,
+       "videos": 2,
+       "id": "YhxPoS6yWKc",
+       "t": 243,
+       "title": "2025 Ford Ranger Raptor - 16 THINGS YOU SHOULD KNOW"
+      }
+     ]
+    ]
+   }
+  }
+ ],
+ "chevrolet-blazer": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005
+   ],
+   "gen": "1995–2005 Chevrolet Blazer",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 194,
+   "views": 14375622,
+   "topics": [
+    {
+     "name": "Cooling system",
+     "views": 826729,
+     "n": 6,
+     "best": {
+      "id": "BHBoQAkIVP0",
+      "title": "1996-2005 CHEVY BLAZER 4.3 V6 VORTEC P0128 COOLANT TEMP BELOW THRESHOLD AND HOW TO FIX",
+      "channel": "THEMOWERMEDIC1",
+      "views": 227275
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 566352,
+     "n": 3,
+     "best": {
+      "id": "jzWhkSEIGBs",
+      "title": "1994 to 2003 Chevy S 10 GMC S 15 Blazer and Jimmy Door Hinge Pin Replacement",
+      "channel": "HOWSTUFFINMYCARWORKS",
+      "views": 428036
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 449287,
+     "n": 10,
+     "best": {
+      "id": "bCcueO4ALxQ",
+      "title": "How to Replace Fuel Pump Chevrolet S-10 Blazer 1993-2004 - Full Tutorial!",
+      "channel": "2CarPros",
+      "views": 134643
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 393015,
+     "n": 3,
+     "best": {
+      "id": "ZtWhHMUaiew",
+      "title": "How to replace shift solenoid in 1999 Chevy Blazer - Fix OBD P0758 on 4L60-E GM Transmission",
+      "channel": "CareyHolzman",
+      "views": 278603
+     }
+    },
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 197885,
+     "n": 1,
+     "best": {
+      "id": "Y8Ogd5voIYs",
+      "title": "Chevy 4.3l v6 oil leak issue 2001 Xtreme Blazer",
+      "channel": "SXSBrothers",
+      "views": 197885
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 172136,
+     "n": 2,
+     "best": {
+      "id": "3epN-RWiDdA",
+      "title": "2001 Chevrolet Blazer 4x4 fix",
+      "channel": "NyxSilence",
+      "views": 132348
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 155011,
+     "n": 2,
+     "best": {
+      "id": "S-Li7uOK6Lo",
+      "title": "1994 to 2003 Chevy S 10, GMC S 15, Blazer and Jimmy Left Front Fender Replacement guide",
+      "channel": "HOWSTUFFINMYCARWORKS",
+      "views": 144259
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 121587,
+     "n": 3,
+     "best": {
+      "id": "Z2moNQC81Mc",
+      "title": "How to Replace 2000 Chevy Blazer Brake Caliper GMC Jimmy Bravada DIY S10 Brake Caliper Replacement",
+      "channel": "Mark Jenkins",
+      "views": 89583
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "ifDfbdPCSig",
+     "title": "List of Problems! MINT Condition S-10 Blazer 4.3 4x4",
+     "channel": "Rainman Ray's Repairs",
+     "views": 146964
+    },
+    {
+     "id": "Nsp7y4viTK4",
+     "title": "2000 chevy blazer 4x4 problems",
+     "channel": "zachary moore",
+     "views": 28895
+    },
+    {
+     "id": "a-skkubsUJE",
+     "title": "Regular Car Reviews: 1999 Chevy Blazer",
+     "channel": "Regular Car Reviews",
+     "views": 982174
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2019–2025 Chevrolet Blazer",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 19675440,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 521687,
+     "n": 8,
+     "best": {
+      "id": "fVulMTsdaZk",
+      "title": "2019 - 2024 Chevy Blazer - How to Unlock & Start With Dead Or Bad Remote Key Fob Battery - Chevrolet",
+      "channel": "PYR Automotive ",
+      "views": 144721
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 107435,
+     "n": 2,
+     "best": {
+      "id": "oN__pRMijaw",
+      "title": "2019 - 2021 Chevy Blazer Cabin Air filter - How To Change Remove Replace - A/C AC Filter Location",
+      "channel": "PYR Automotive ",
+      "views": 67602
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 85532,
+     "n": 2,
+     "best": {
+      "id": "yWgSTDO-lkQ",
+      "title": "2020 Blazer P0128 Code Issues Replace Coolant Temp Sensor",
+      "channel": "James Foster LS3 TA",
+      "views": 47644
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 84422,
+     "n": 1,
+     "best": {
+      "id": "IjZ3DJJA9Pw",
+      "title": "2018-2023 Chevy Traverse/Blazer/GMC Acadia/Buick Enclave 9 speed transmission service",
+      "channel": "SteeveGMTECH",
+      "views": 84422
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 84112,
+     "n": 1,
+     "best": {
+      "id": "UW-ZM-oJAbs",
+      "title": "2019-2024 Blazer Garage Door Programming (How to)",
+      "channel": "The Snyds",
+      "views": 84112
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 46941,
+     "n": 1,
+     "best": {
+      "id": "kjGx4Qe3Ctk",
+      "title": "Chevrolet Blazer Oil Change (2019-2025) — Full Step-by-Step DIY Guide!",
+      "channel": "Wrenching Mafia",
+      "views": 46941
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "51BSoA5Ob-U",
+     "title": "Should You Buy a 2025 Chevy Blazer EV SS? Thorough Review By A Mechanic",
+     "channel": "The Car Care Nut Reviews",
+     "views": 100950
+    },
+    {
+     "id": "mG0tIFSRn3c",
+     "title": "Should you BUY a 2024 Chevrolet Blazer RS EV Rear Wheel Drive for BETTER range?",
+     "channel": "Raiti's Rides",
+     "views": 24122
+    },
+    {
+     "id": "yVq9nEdgabk",
+     "title": "2019 Chevrolet Blazer – Review & Road Test",
+     "channel": "Kelley Blue Book",
+     "views": 525290
+    }
+   ],
    "costs": null
   }
  ]
