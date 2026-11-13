@@ -227,6 +227,7 @@ def transform_model(body, eng_html, short):
     nq = len(S_.select('.yqa h3')); c_q = _ovcard('questions', 'Questions', f'{nq} quick answers' if nq else '', '', _qtitles([S_]), go='questions')
     nrow = len(S_.select('table tbody tr')); c_d = _ovcard('data', 'All the data', f'{nrow} model years' if nrow else '', 'in one table: index, complaints, recalls, mpg' if nrow else '', go='the table')
     over = f'{_s(note)}<div class="ovg ovg4">{c_y}{c_c}{c_q}{c_d}</div>' + (f'<p class="ovslim">{_txt(rnew)}</p>' if rnew else '')   # 11-10: preview cards
+    over += ''.join(map(str, rest))   # 11-12: sections no tab claims (the model-level YouTube studies, e.g. the 2026 RAV4) were silently dropped since 11-10
     years = bw + years
     over = _ovfilter(over, [('years', 0, ''.join(map(str, years))), ('compare', 0, ''.join(map(str, cmp_))), ('questions', 0, ''.join(map(str, qa))), ('data', 0, ''.join(map(str, table)))]) + (f'<div class="ovk">{"".join(map(str, gh))}</div>' if gh else '')
     tabs = _tabs([('overview', 'Overview', over), ('years', 'Years & engines' if eng_html else 'Years', ''.join(map(str, years))), ('compare', 'Compare', ''.join(map(str, cmp_))),

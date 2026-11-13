@@ -963,9 +963,27 @@ except Exception: _TAB_OLD = {}
 _TAB_NEW = {}
 def tab_body(fid, y, body):
     """11-10: re-arrange a model/year page into the tabbed layout (tabbed.py); any page it can't parse keeps the old layout."""
-    try: return _tab_body(fid, y, body)
+    try: out = _tab_body(fid, y, body)
     except Exception as ex:
         TAB_FAIL.append(f'{fid}/{y or ""}: {type(ex).__name__} {ex}'); return body
+    if fid not in FY: return out
+    try:   # 11-12 carousel + year explorer + YouTube Overview (ycarousel.py), cached like the tab layout
+        c = _yc_ctx(fid); k = hashlib.md5('|'.join(('yc', _YC_SRC, fid, str(y), out, json.dumps({a: b for a, b in c.items() if a != 'url'}, sort_keys=True, default=str),
+                                                      json.dumps(YC.YB.get(fid)))).encode('utf-8')).hexdigest()
+        if k in _TAB_OLD: _TAB_NEW[k] = _TAB_OLD[k]; return _TAB_OLD[k]
+        r = YC.model_page(out, c) if y is None else YC.year_page(out, c, y); _TAB_NEW[k] = r; return r
+    except Exception as ex:
+        TAB_FAIL.append(f'ycarousel {fid}/{y or ""}: {type(ex).__name__} {ex}'); return out
+import ycarousel as YC
+_YC = {}; _YC_SRC = hashlib.md5(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'ycarousel.py'), 'rb').read()).hexdigest()
+def _yc_ctx(fid):
+    """what ycarousel.py needs about one model: every year page with its picture and score, YouTube ranks, the fix/guide videos"""
+    if fid in _YC: return _YC[fid]
+    f = FY[fid]; mi = (YSL.model_img(fid) or {}).get('src')
+    yrs = [{'y': v['y'], 'li': round(v['li']) if v['ok'] else None, 'url': CARU(f, v['y']), 'src': YSL.ai_src(fid, v['y']) or mi, 'gen': gen_of(f, v['y'])} for v in f['years']]
+    _YC[fid] = dict(fid=fid, name=f['name'], short=f['name'].split(' ', 1)[-1], years=yrs, yt_rank=yt_rank_map(f), ytr=YTR.get(fid), ytv=YTV.get(fid, []),
+                    start=popular_year(f), url=lambda yy: CARU(f, yy))
+    return _YC[fid]
 def _tab_body(fid, y, body):
     f = FY.get(fid)
     if not f: return body

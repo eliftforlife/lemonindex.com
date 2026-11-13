@@ -31,7 +31,10 @@ STUDIES = [  # study, page key, years (year pages only), what it covers, kind, n
 ]
 import sys as _s; _s.path.insert(0, SRC)
 from more_studies import SITE as _SITE   # 11-06 batch: top-search models + Taos + Pontiac
-_HAVE = {f['id'] for f in json.load(open('data/years.json', encoding='utf-8'))}
+# 11-12: the models added since 11-11 live in data/years_new.json (Jeep Liberty, Toyota Prius, Acura TL ...): they get fix cards and buyer
+# guides too as soon as their generations are pulled (before, only data/years.json models did, so their YouTube sections never appeared)
+_YALL = json.load(open('data/years.json', encoding='utf-8')) + (json.load(open('data/years_new.json', encoding='utf-8')) if os.path.exists('data/years_new.json') else [])
+_HAVE = {f['id'] for f in _YALL}
 for _sid, _fid, _a, _b, _lab in _SITE:
     if _fid in _HAVE: STUDIES.append((_sid, _fid, Y(max(_a, 2000), _b), _lab, 'repair', 'generation'))
     else: STUDIES.append((_sid, 'model:' + _fid, None, _lab, 'repair', ''))
@@ -42,7 +45,7 @@ _cwd = os.getcwd(); import auto_gens as _AG; os.chdir(_cwd)   # auto_gens moves 
 _COV = {}
 for _st in STUDIES:
     if _st[2]: _COV.setdefault(_st[1], set()).update(_st[2])
-_NAMES = {f['id']: f['name'] for f in json.load(open('data/years.json', encoding='utf-8'))}
+_NAMES = {f['id']: f['name'] for f in _YALL}
 _PRE = {'honda-civic': 'civic', 'ford-f-series': 'f150'}   # pulled by hand before auto_gens, under shorter folder names
 AUTO = {}
 for _fid, (_nm, _rx, _G) in _AG.T.items():
