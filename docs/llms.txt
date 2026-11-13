@@ -3,7 +3,7 @@
 > Car reliability from public data. The Lemon Index = NHTSA owner complaints in the first 3 years per 100,000 U.S. sales, vs the average car of the same model years (100 = average). It measures complaints, not crash safety.
 
 - [The Most Reliable Cars, According to 1.6 Million Owner Complaints](https://lemonindex.com/studies/most-reliable-cars/): Toyota 4Runner 26, Lexus ES 27, Lexus brand 30, Tesla brand 322 (est.)
-- [The Most Reliable Electric Cars](https://lemonindex.com/electric/): 22 EVs by NHTSA complaints per car sold, best Tesla Model 3 203, plus fires, yearly cost and driver-assist crash reports
+- [The Most Reliable Electric Cars](https://lemonindex.com/electric/): 22 EVs by NHTSA complaints per car sold, best Volvo XC90 58, plus fires, yearly cost and driver-assist crash reports
 - [Engine code lookup](https://lemonindex.com/check-engine-light/): what any OBD-II trouble code means, how serious it is, and which cars owners report it on most in NHTSA complaints
 - [Free engine illustrations](https://lemonindex.com/images/): free BMW engine illustrations, CC BY 4.0 (AI-generated, credit The Lemon Index)
 - [Every car engine](https://lemonindex.com/engines/): every engine with a page (BMW, supercar, performance, Honda Civic), searchable, YouTube owner ranks
