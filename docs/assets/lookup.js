@@ -98,7 +98,7 @@
   const el = $('pick'), P = el ? JSON.parse(el.textContent) : {};
   const KIND = { sc: 'Supercar · engine, fuel cost and recalls', ev: 'Electric car · EV score and problems', perf: 'Performance car · specs, engines and problems', moto: 'Motorcycle · complaints and recalls', co: 'Owner complaints and recalls', eng: 'Engine · reliability by year' };
   const AK = { 'ford-f-series': 'f150 f 150', 'ram-pickup': '1500', 'chevrolet-silverado': '1500', 'gmc-sierra': '1500' };   // 11-12 round 2: 2500/3500/f250 go to the HD cards
-  const mk = (n, b, u, t, ys, al, soon) => { const id = (u.match(/^\/cars\/([^/]+)\/$/) || [])[1] || ''; return Object.assign(prep(n, b, (al || '') + ' ' + (AK[id] || '') + (t === 'ev' ? ' ev electric' : '')), { n, b, u, t: t || '', ys: ys || [], id, soon: !!soon }); };
+  const mk = (n, b, u, t, ys, al, soon, pr) => { const id = (u.match(/^\/cars\/([^/]+)\/$/) || [])[1] || ''; return Object.assign(prep(n, b, (al || '') + ' ' + (AK[id] || '') + (t === 'ev' ? ' ev electric' : '')), { n, b, u, t: t || '', ys: ys || [], id, soon: !!soon, pr: pr || 0 }); };   // pr: find.json's optional search priority (11-12 r2: Silverado HD before Sierra HD)
   let ALL = Object.entries(P).flatMap(([b, ms]) => ms.map(([n, id, ys, u, t]) => mk(n, b, u || '/cars/' + id + '/', t, ys, '', t === 'perf' && !u || (t === 'moto' && !u))));
   let GO = null, loading = null;
   const FU = (el && el.dataset.find) || '/assets/find.json';
@@ -166,7 +166,7 @@
   }
   const KP = { '': 0, co: .3, perf: .4, ev: .4, sc: .6, nd: 0, moto: 2.5, eng: 3 };
   // a prebuilt compare page ranks after the car page itself
-  const penFor = (W, y, eng) => c => (c.soon ? 100 : 0) + (KP[c.t] === undefined ? 1 : (c.t === 'eng' && eng ? 0 : KP[c.t])) + (y && !c.t && !c.ys.includes(y) ? 1 : 0) - (W.some(w => c.bw.includes(w)) ? .5 : 0) + (c.u.startsWith('/compare/') ? .5 : 0);
+  const penFor = (W, y, eng) => c => (c.soon ? 100 : 0) + (c.pr || 0) + (KP[c.t] === undefined ? 1 : (c.t === 'eng' && eng ? 0 : KP[c.t])) + (y && !c.t && !c.ys.includes(y) ? 1 : 0) - (W.some(w => c.bw.includes(w)) ? .5 : 0) + (c.u.startsWith('/compare/') ? .5 : 0);
   const isCar = c => !c.soon && c.t !== 'eng' && !!c.u && !c.u.startsWith('/compare/');
   const dropW = (q, W) => W.filter(w => !TRIM.has(w) && !SOFT.has(w) && !q.sz.includes(w));   // versions, engine words and sizes
   // ---- 11-12 round 2 (Jake, Carlos, Liam: "civic vs corolla", "rav4 vs crv", "elantra vs civic"): one side of a comparison = its best car
@@ -177,7 +177,7 @@
     let h = rank(W, ALL, pen).filter(isCar);
     if (!h.length) { const W2 = dropW(q, W); if (W2.length && W2.length < W.length) h = rank(W2, ALL, pen).filter(isCar); }
     const c = h[0];
-    return c && W.some(w => /[a-z]/.test(w) && !c.bw.includes(w)) ? c : null;
+    return c && W.some(w => (/[a-z]/.test(w) || w.length >= 3) && !c.bw.includes(w)) ? c : null;   // "ram 2500": the 2500 is more than the brand
   }
   // "Compare A vs B →": the prebuilt match-up page when there's one and no year was typed, else the compare tool with those cars (any pair)
   function compareItem(S) {
@@ -218,7 +218,9 @@
     if (W.length) {
       const pen = penFor(W, y, q.eng);
       hits = rank(W, ALL, pen);
-      if (!hits.some(isCar)) {   // "rav4 hybrid": the RAV4 page covers the hybrid, and the line says so
+      // 11-12 round 2 (fix C): a size + engine name with no year ("6.0 powerstroke") opens the live engine page that matches every word
+      const engHit = !y && q.sz.length && hits.some(c => c.t === 'eng' && !c.soon);
+      if (!hits.some(isCar) && !engHit) {   // "rav4 hybrid": the RAV4 page covers the hybrid, and the line says so
         // 11-12 round 2 (Ryan: "2016 f150 2.7 ecoboost" showed BMW engines): engine sizes and engine words drop the same way, so the car
         // ranks first and the engine pages that match every word follow it
         const W2 = dropW(q, W);

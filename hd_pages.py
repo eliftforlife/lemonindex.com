@@ -96,7 +96,7 @@ if HDX == 'hooks':
     HD_EXN = {t: True for t in HDT if t != 'ford-f-150'}
 
 if HDX == 'pages' and HDT:
-    HD_URLS, HD_AE, HD_FIND = [], [], []
+    HD_URLS, HD_AE, HD_FIND, HD_CMP = [], [], [], []
     _hdE = lambda s: E(_hh.unescape(str(s)))
     _hd_pct = lambda k, n: round(k / n * 100) if n else 0
     _HD_SRC = HDJ.get('src') or {}
@@ -137,10 +137,13 @@ if HDX == 'pages' and HDT:
     _HD_TYPE = {'ford-super-duty': 'Ford', 'ram-heavy-duty': 'Ram', 'chevrolet-silverado-hd': 'Chevrolet', 'gmc-sierra-hd': 'GMC'}
     _HD_LINE = {'ford-super-duty': 'ford-f-series', 'ram-heavy-duty': 'ram-pickup', 'chevrolet-silverado-hd': 'chevrolet-silverado', 'gmc-sierra-hd': 'gmc-sierra'}
     _HD_SHORT = {'ford-super-duty': 'Super Duty', 'ram-heavy-duty': 'Ram 2500/3500', 'chevrolet-silverado-hd': 'Silverado HD', 'gmc-sierra-hd': 'Sierra HD'}
-    _HD_ALIAS = {'ford-super-duty': 'f250 f 250 f-250 f350 f 350 f-350 super duty superduty powerstroke power stroke 7.3 6.0 6.4 6.7 diesel',
-                 'ram-heavy-duty': 'ram 2500 ram 3500 2500 3500 heavy duty hd cummins 5.9 6.7 diesel',
+    # 11-12 round 2 follow-up (live search test): no engine sizes on the trucks ("6.0 powerstroke" opens the 6.0 page), the Duramax codes on
+    # the Silverado HD only (the Sierra HD's shorter name won every tie), and a small search priority (HD_PRI) so "2500hd" opens the Silverado HD
+    _HD_ALIAS = {'ford-super-duty': 'f250 f 250 f-250 f350 f 350 f-350 super duty superduty powerstroke power stroke diesel',
+                 'ram-heavy-duty': 'ram 2500 ram 3500 2500 3500 heavy duty hd cummins diesel',
                  'chevrolet-silverado-hd': 'silverado 2500 silverado 3500 2500hd 3500hd 2500 hd 3500 hd duramax lb7 lly lbz lmm lml l5p diesel',
-                 'gmc-sierra-hd': 'sierra 2500 sierra 3500 2500hd 3500hd 2500 hd 3500 hd duramax lb7 lly lbz lmm lml l5p diesel'}
+                 'gmc-sierra-hd': 'sierra 2500 sierra 3500 2500hd 3500hd 2500 hd 3500 hd diesel'}
+    HD_PRI = {'ford-super-duty': 0, 'ram-heavy-duty': .1, 'chevrolet-silverado-hd': 0, 'gmc-sierra-hd': .1}
     def _hd_engmix(yd):
         """[(slug, label, fuel, n, pct)] for one model year, labels for the cards"""
         return [tuple(x) for x in yd['eng']]
@@ -206,7 +209,10 @@ if HDX == 'pages' and HDT:
                 + f'<div class="ygrid">{eng_sec}{years_sec}{prob}{mil}{ser}{rec}{qa}</div>{lnk}<p class="yc-cap">{_HD_WHY} {_HD_HOW} Source: {E(_HD_SRC.get("complaints", "NHTSA"))}; {E(_HD_SRC.get("vin", ""))}; {E(_HD_SRC.get("recalls", ""))}.</p></div>')
         page(HDU(t), f'{nm} Problems by Year and Engine', _hh.unescape(_hre.sub('<[^>]+>', '', ans)), body, ld=[faq_ld([(q, '', _hh.unescape(_hre.sub('<[^>]+>', '', a))) for q, a in faq])])
         HD_URLS.append(HDU(t))
-        HD_FIND.append((nm, mk, HDU(t), 'co', ys, _HD_ALIAS.get(t, ''), 0))
+        HD_FIND.append((nm, mk, HDU(t), '', ys, _HD_ALIAS.get(t, ''), 0, HD_PRI.get(t, 0)))   # kind '': a typed year opens that year's page
+        # the compare tool (ux_c.py appends HD_CMP to compare.json): complaints in each truck's first 3 years and recalls, never a score
+        HD_CMP.append({'i': t, 'n': nm, 'b': mk, 'u': HDU(t), 'k': 'co', 'a': 'duramax lb7 lly lbz lmm lml l5p diesel' if t == 'chevrolet-silverado-hd' else _HD_ALIAS.get(t, ''),   # short: the compare box breaks ties by name + alias length
+                       'y': {str(y): [None, Y[y]['n3'], len(Y[y]['recalls']), None, None, None, None, None, None, 0] for y in ys}, 'd': str(max([y for y in ys if y <= 2022] or ys))})
         # ---- year pages
         for i, y in enumerate(ys):
             v = Y[y]; prv, nxt = (ys[i - 1] if i else None), (ys[i + 1] if i + 1 < len(ys) else None)
@@ -372,6 +378,7 @@ if HDX == 'pages' and HDT:
         al = {'cummins-59': 'cummins 5.9 24v 24 valve ram diesel', 'cummins-67': 'cummins 6.7 ram diesel', 'ford-ecoboost-27': '2.7 ecoboost 2.7l f150 f-150 nano',
               'powerstroke-73': 'powerstroke power stroke 7.3 f250 f350 diesel', 'powerstroke-60': 'powerstroke power stroke 6.0 f250 f350 diesel',
               'powerstroke-64': 'powerstroke power stroke 6.4 f250 f350 diesel', 'powerstroke-67': 'powerstroke power stroke 6.7 f250 f350 diesel scorpion'}.get(e, f'duramax {d["code"].lower()} 6.6 silverado sierra 2500hd 3500hd diesel')
+        al += ' ' + d['lay'].split(' ')[0].replace('.', '')   # "6.0" is read as "60" by the site search
         HD_AE.append(dict(url=path, name=nm, code=d['code'], lay=d['lay'], yrs=f'{y0}–{str(y1)[-2:]}', img=None, yt=(None, 0, ''), used=[HDT[t]['name'] if t in HDT else 'Ford F-150' for t, _ in trucks],
                           t={'t'}, f=d['fuel'], mk={'GM': 'Chevrolet', 'Ram': 'Ram'}.get(d['maker'], d['maker']), o=(-1, 2, -es), alias=al))
     for _e in HD_DIESEL + ['ford-ecoboost-27']:

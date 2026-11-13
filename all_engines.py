@@ -136,7 +136,7 @@ def _ae_card(c, eager=False):
     rk, n, grp = c['yt']
     yt = f'<span class="ytbadge aec-yt" title="YouTube rank by owner tone, of {n} {E(grp)} with enough videos">{_AE_YT}YT #{rk}</span>' if rk else ''
     im = im.replace('</span>', _ae_ftag(c['f']) + '</span>', 1) if c['img'] else im.replace('</svg></span>', '</svg>' + _ae_ftag(c['f']) + '</span>', 1)
-    return (f'<a class="aec" data-t="{" ".join(sorted(c["t"]))}" data-f="{_FG(c["f"])}" data-k="{E(k)}" href="{E(c["url"])}">{im}{yt}<b>{E(c["name"])}</b>'
+    return (f'<a class="aec" data-t="{" ".join(sorted(c["t"]))}" data-f="{_FG(c["f"])}" data-k="{E(k)}" data-yr="{E(c["yrs"])}" href="{E(c["url"])}">{im}{yt}<b>{E(c["name"])}</b>'
             f'<small class="aec-l">{E(c["lay"])}{" · " + E(c["yrs"]) if c["yrs"] else ""}</small><small class="aec-u">{E(_ae_used(c["used"]))}</small></a>')
 # 11-12: AI factory-cover illustrations for the coming-soon engines (data/engine_soon_images.json, key = brand + engine without "(...)")
 AE_SOON_IMG = _load('data/engine_soon_images.json')
@@ -172,7 +172,7 @@ _ae_body = f'''<div class="pg"><div class="ph ph-f"><section class="finder aefin
 <p class="aenone" hidden>No engine matches that yet. Try a code like B58 or a model like Camry.</p>
 <p class="note aehubs">Engine head-to-head: {" · ".join(f'<a href="{u}">{lab.replace(", ", " vs ").replace(" and ", " vs ")}</a>' for u, us, lab in ENG_H2H)}. YT # = YouTube rank among all {ENG_POOL_N} {ENG_POOL_LBL}.</p>
 <p class="note aehubs">Engine hubs: <a href="/engines/bmw/">BMW engines</a> · <a href="/engines/supercars/">Supercar engines</a> · <a href="/engines/performance/">Performance engines</a> · <a href="/check-engine-light/">Check engine light codes</a> (OBD-II trouble codes, a different lookup)</p>
-<p class="ph-cr">Engine images: AI-generated illustrations by The Lemon Index, free under CC BY 4.0 (<a href="/images/">download</a>), except the BMW S55 and S58 photos (Wikimedia Commons, credited on their pages). Engine sizes and cylinders: EPA (fueleconomy.gov).</p></section></div><script src="/assets/engines.js?v=5" defer></script><script src="/assets/soonvote.js?v=2" defer></script>'''
+<p class="ph-cr">Engine images: AI-generated illustrations by The Lemon Index, free under CC BY 4.0 (<a href="/images/">download</a>), except the BMW S55 and S58 photos (Wikimedia Commons, credited on their pages). Engine sizes and cylinders: EPA (fueleconomy.gov).</p></section></div><script src="/assets/engines.js?v=6" defer></script><script src="/assets/soonvote.js?v=2" defer></script>'''
 page('/engines/', 'Every Car Engine: Reliability, Problems & YouTube Owner Ranks',
      f'Search {_aeN} car engines, from the BMW B58 and N54 to the GM LS3 and Ferrari F154: owner complaints, recalls and YouTube owner ranks by model year. {_aeS} more coming soon.',
      _ae_body, ld=[{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Every car engine", "url": BASE + '/engines/',

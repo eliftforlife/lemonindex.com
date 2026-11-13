@@ -5,12 +5,18 @@
   const g = document.getElementById('aegrid'), q = document.getElementById('aeq'), cnt = document.getElementById('aen'); if (!g || !q) return;
   const T = { all: '', trucks: 't', bmw: 'b', supercars: 's', performance: 'p', honda: 'h', soon: 'c' };
   const fold = s => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9.]+/g, ' ').replace(/ \./g, ' ').trim();
-  const cards = [...g.querySelectorAll('.aec')].map(el => ({ el, f: el.dataset.f || 'gas', t: (el.dataset.t || '').split(' '), k: el.dataset.k.split(' '), soon: el.classList.contains('aec-soon') }));
+  // 11-12 round 2 (fix C): data-yr "2003–07" -> [2003, 2007], so a typed year ("2017 f250") keeps only the engines built that year
+  const span = t => { const m = String(t || '').match(/(\d{4})(?:\D+(\d{2,4}))?/); if (!m) return null; const a = +m[1]; let b = m[2] ? +m[2] : a; if (b < 100) b += Math.floor(a / 100) * 100; return [a, b]; };
+  const cards = [...g.querySelectorAll('.aec')].map(el => ({ el, f: el.dataset.f || 'gas', t: (el.dataset.t || '').split(' '), k: el.dataset.k.split(' '), soon: el.classList.contains('aec-soon'), yr: span(el.dataset.yr) }));
   const N = cards.filter(c => !c.soon).length, S = cards.length - N;
   let tab = 'all', fuel = 'all';   // 11-12: + the fuel selector (?fuel=gas|diesel|hybrid|electric), combined with the tab
   const run = push => {
-    const t = T[tab], w = fold(q.value).split(' ').filter(Boolean); let n = 0, s = 0;
-    cards.forEach(c => { const on = (!t || c.t.includes(t)) && (fuel === 'all' || c.f === fuel) && w.every(x => c.k.some(k => k.startsWith(x))); c.el.hidden = !on; if (on) c.soon ? s++ : n++; });
+    // "ram 2500 vs f250": either side; a 4-digit year filters by the years the engine was built
+    const raw = fold(q.value), ym = raw.match(/\b(19|20)\d{2}\b/), yy = ym ? +ym[0] : 0;
+    const sides = raw.replace(/\b(19|20)\d{2}\b/g, ' ').split(/\s(?:vs|versus|or|v)\s/).map(x => x.split(' ').filter(Boolean)).filter(x => x.length);
+    const w = sides.flat(), t = T[tab]; let n = 0, s = 0;
+    cards.forEach(c => { const on = (!t || c.t.includes(t)) && (fuel === 'all' || c.f === fuel) && (!sides.length || sides.some(ws => ws.every(x => c.k.some(k => k.startsWith(x)))))
+      && (!yy || !c.yr || (c.yr[0] <= yy && yy <= c.yr[1])); c.el.hidden = !on; if (on) c.soon ? s++ : n++; });
     g.querySelectorAll('.aes').forEach(sec => { sec.hidden = !sec.querySelector('.aec:not([hidden])'); });
     g.querySelector('.aenone').hidden = n + s > 0;
     g.querySelectorAll('.aetabs a[data-type]').forEach(a => { if (a.dataset.type === tab) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); });

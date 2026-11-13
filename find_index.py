@@ -7,11 +7,11 @@
 # in the index, or the build stops (and says what's missing).
 import glob as _glob
 FIND, _seen = [], {}
-def _fadd(name, brand, url, kind='', years=(), alias='', soon=0):
+def _fadd(name, brand, url, kind='', years=(), alias='', soon=0, pri=0):
     key = url or ('soon:' + name.lower())
     if key in _seen:   # same page from two lists: merge the aliases
         r = FIND[_seen[key]]; r[5] = ' '.join(dict.fromkeys((r[5] + ' ' + alias).split())); return
-    _seen[key] = len(FIND); FIND.append([name, brand, url, kind, sorted(set(int(y) for y in years)), alias.strip(), soon])
+    _seen[key] = len(FIND); FIND.append([name, brand, url, kind, sorted(set(int(y) for y in years)), alias.strip(), soon] + ([pri] if pri else []))   # 8th: search priority (hd_pages.py)
 _brand_of = lambda nm, mk=None: mk or (BYNAME.get(nm, {}).get('brand') if nm in BYNAME else nm.split(' ')[0])
 # common names people type that aren't in the model name (11-11, Elijah's list); generation codes and engines come from data/perf/*.json
 FIND_ALIAS = {'/cars/bmw-m3/': 'competition comp cs', 'ford-shelby-gt500': 'shelby gt500 mustang', 'shelby-gt500': 'shelby gt500 mustang',

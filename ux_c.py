@@ -427,6 +427,8 @@ elif UXC == 'data':
         by = m.get('by_year') or {}; rc = m.get('recalls') or []
         ys = {y: [None, n, sum(1 for r in rc if int(y) in (r.get('years') or [])) if rc and rc[0].get('years') is not None else None, None, None, None, None, None, None, 0] for y, n in by.items()}
         if ys: CMP.append({'i': m['id'], 'n': m['name'], 'b': m.get('brand') or m['name'].split(' ')[0], 'u': u, 'k': 'co', 'a': _al.get(u, ''), 'y': ys, 'd': max([y for y in ys if int(y) <= 2022] or ys)})   # 11-12 r2: a used-shopper year
+    for _e in (globals().get('HD_CMP') or []):   # 11-12 round 2 (fix C): the heavy-duty trucks (hd_pages.py), complaints-only like the rows above
+        if _e['u'] not in _have: CMP.append(_e)
     for e in CMP:   # 11-12 round 2 (Devin: the hero kept its RAV4 vs CR-V picture): each car's own picture for the compare tool's hero
         _pi = perf_img(e['i']) if e['k'] == 'perf' else None; _mid = 'toyota-rav4' if e['i'] == 'toyota-rav4-hybrid' else e['i']
         if _pi: e['im'] = _pi['src']
