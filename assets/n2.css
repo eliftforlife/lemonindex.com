@@ -1,0 +1,29 @@
+/* 11-13 navigation (N2, n2_nav.py): "Better years to buy" under the year page gauge, the Every year sort switch. Uses site.css tokens. */
+.tbl .tb-hero .yhero.n2-w, .tbl .tb-hero.yc-hero .yhero.n2-w, .yph6 .yhero.n2-w { flex-wrap: wrap !important; }
+.yhero.n2-w > .n2-by { flex: 0 0 100%; order: 20; }
+.n2-by { display: grid; gap: 7px; width: 100%; max-width: 460px; margin: 16px auto 0 !important; text-align: left; }
+.n2-by-h { margin: 0; font-size: 13.5px; font-weight: 700; color: var(--ink2, #3a3a3e); }
+.n2-by1 .n2-by-h { font-weight: 600; color: var(--good); }
+.n2-by-r { display: flex; align-items: center; gap: 10px; }
+.n2-by-l { flex: 0 0 104px; font-size: 12.5px; line-height: 1.2; color: var(--mute); }
+.n2-by-cs { display: flex; flex-wrap: wrap; gap: 6px; min-width: 0; }
+.n2-c { display: inline-flex; align-items: baseline; gap: 5px; padding: 5px 10px; border-radius: 999px; background: #f5f5f7; color: var(--ink); text-decoration: none; font-size: 14.5px; line-height: 1.2; }
+.n2-c b { font-weight: 700; font-variant-numeric: tabular-nums; }
+.n2-c span { font-size: 12.5px; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--mute); }
+.n2-c.good span { color: var(--good); } .n2-c.mid span { color: #a15c00; } .n2-c.bad span { color: var(--red); }
+.n2-c:hover { background: var(--soft, #ececf0); } .n2-c:focus-visible { outline: 2.5px solid #e9b300; outline-offset: 2px; }
+@media (max-width: 520px) {
+  .tbl .tb-hero.yc-hero .yhero.n2-w > .yverd { flex: 1 1 0 !important; }
+  .n2-by { margin-top: 14px !important; max-width: none; gap: 6px; }
+  .n2-by-r { gap: 6px; }
+  .n2-by-l { flex-basis: 78px; font-size: 12px; }
+  .n2-by-cs { flex-wrap: nowrap; gap: 4px; }
+  .n2-c { padding: 5px 8px; gap: 4px; font-size: 14px; }
+  .n2-c span { font-size: 12px; }
+}
+/* the Every year list: newest first (the HTML order) or fewest complaints first */
+.n2-so { display: inline-flex; gap: 3px; padding: 3px; margin: 0 0 12px; border-radius: 999px; background: #f5f5f7; }
+.n2-so[hidden] { display: none; }
+.n2-so button { appearance: none; border: 0; background: none; border-radius: 999px; padding: 7px 13px; font: inherit; font-size: 13.5px; font-weight: 600; color: var(--ink2, #3a3a3e); cursor: pointer; }
+.n2-so button[aria-pressed="true"] { background: #fff; color: var(--ink); box-shadow: 0 1px 2px rgba(0,0,0,.08), 0 6px 16px -10px rgba(0,0,0,.35); }
+.n2-so button:focus-visible { outline: 2.5px solid #e9b300; outline-offset: 2px; }
