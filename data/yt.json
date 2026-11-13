@@ -60440,5 +60440,134 @@
     ]
    }
   }
+ ],
+ "chevrolet-cobalt": [
+  {
+   "years": [
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010
+   ],
+   "gen": "2005–2010 Chevrolet Cobalt",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 13390590,
+   "topics": [
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 832369,
+     "n": 13,
+     "best": {
+      "id": "ozKRbUx5TS0",
+      "title": "2009 Chevy Cobalt Camshaft Position Sensor Error Code and Replacement",
+      "channel": "Weekend Automotive",
+      "views": 168661
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 606838,
+     "n": 9,
+     "best": {
+      "id": "2CWq-dIlk9Q",
+      "title": "How to Replace Starter 2005-2010 Chevy Cobalt",
+      "channel": "TRQ",
+      "views": 120465
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 458163,
+     "n": 6,
+     "best": {
+      "id": "x3V5XSROANk",
+      "title": "OIL CHANGE (2005-2010 CHEVY COBALT 2.2L)",
+      "channel": "BARRICADE GARAGE",
+      "views": 219226
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 360593,
+     "n": 5,
+     "best": {
+      "id": "7Od_yiteh2A",
+      "title": "How to Replace Cabin Air Filter 2007 Chevrolet Cobalt | AQ1085",
+      "channel": "Filterheads",
+      "views": 127737
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 340647,
+     "n": 5,
+     "best": {
+      "id": "-8-SVJNml3s",
+      "title": "2006-08 Chevy Cobalt Transmission Control Module FIX - UPDATED*",
+      "channel": "Zach Tyler",
+      "views": 165602
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 258007,
+     "n": 3,
+     "best": {
+      "id": "qktNyi7ZRI4",
+      "title": "Fuel filter replacement 2006 Chevrolet Cobalt LS Install Remove Replace How to change",
+      "channel": "Fixing cars and stuff",
+      "views": 116962
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 257107,
+     "n": 5,
+     "best": {
+      "id": "11fm7dU46Fw",
+      "title": "2007 cobalt -The solution for lock symbol won't start problem",
+      "channel": "Random but Lively",
+      "views": 120461
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 231349,
+     "n": 3,
+     "best": {
+      "id": "FR6yqvByUzg",
+      "title": "2006 Chevy Cobalt 2.2L Timing Chain Replacement",
+      "channel": "Joseph Vollmar",
+      "views": 98421
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "P07IpgX923c",
+     "title": "Top 5 Problems Chevy Cobalt Coupe 1st Generation 2005-10",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 274593
+    },
+    {
+     "id": "mxa7aZHriaY",
+     "title": "2006 Chevy Cobalt AC Problems",
+     "channel": "Gearmo Auto",
+     "views": 120221
+    },
+    {
+     "id": "BULS4bM0AN4",
+     "title": "2005 Chevy Cobalt Electrical Problems *Fixed* See Description",
+     "channel": "jacobaaron11",
+     "views": 102342
+    }
+   ],
+   "costs": null
+  }
  ]
 }

@@ -21364,5 +21364,70 @@
 }
 ]
 }
+],
+"chevrolet-cobalt": [
+{
+"sid": "chevrolet-cobalt-g1",
+"y0": 2005,
+"y1": 2010,
+"label": "2005–2010",
+"videos": 198,
+"praise": [
+[
+"Power",
+7
+],
+[
+"Reliability",
+6
+],
+[
+"Fun to drive",
+4
+],
+[
+"Looks",
+3
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+8
+],
+[
+"Battery / alternator / starter",
+4
+],
+[
+"No start / key / anti-theft",
+4
+],
+[
+"Spark plugs / coils / misfire",
+3
+]
+],
+"top": [
+{
+"id": "HvPuzie1GEM",
+"title": "Regular Car Reviews: 2009 Chevrolet Cobalt XFE",
+"views": 635608,
+"ch": "Regular Car Reviews"
+},
+{
+"id": "EzQZbGp14ro",
+"title": "2006-08 Chevy Cobalt, Pontiac G5 TCM FIX! Easy! BCM Problem, Connection issue",
+"views": 615515,
+"ch": "Zach Tyler"
+},
+{
+"id": "IClYJVCOGIk",
+"title": "2010 Chevrolet Cobalt SS Turbocharged Coupe Start Up, Exhaust, and In Depth Review",
+"views": 496322,
+"ch": "Saabkyle04"
+}
+]
+}
 ]
 }
