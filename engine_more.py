@@ -47,15 +47,16 @@ def _perf_only_page(url, name, make):
     chips = (f'<div class="trc"><div><b>{y0}–{str(y1)[-2:]}</b><span>model years covered</span></div>'
              + (f'<div><b>{hp[0]}' + (f'–{hp[-1]}' if len(hp) > 1 else '') + '</b><span>hp (factory)</span></div>' if hp else '')
              + '<div><b>–</b><span>no YouTube study yet</span></div></div>')
-    ans1 = (f'{E(make)}&#39;s 2.0-liter turbocharged inline-4. This page covers the versions we have sourced so far: the {E(", ".join(cars))}, model years {y0}–{y1}. '
-            'The engine is used in other cars too; those aren&#39;t covered here yet.')
+    what = F[0][3].get('what') or ''
+    ans1 = (f'{E(make)}&#39;s {E(what)}. This page covers the versions we have sourced so far: the {E(", ".join(cars))}, model years {y0}–{y1}. '
+            + ('The engine is used in other cars too; those aren&#39;t covered here yet.' if ENG_PERF_ONLY[url][2] else ''))
     issl = ''.join(f'<li><b>{E(i["t"])}</b> <small>({E(i["kind"])})</small>. {E(i["x"])}' + (f' <b>Fix:</b> {E(i["fix"])}' if i.get('fix') else '')
                    + (f' <small>{i["n"]} owner complaint{"" if i["n"] == 1 else "s"} to NHTSA mention it ({E(", ".join(i["where"]))}).</small>' if i['n'] else '') + '</li>' for i in iss)
     tbl = ('<div class="tw"><table class="adv"><thead><tr><th>Car</th><th>Years</th><th>Owner complaints</th><th>Recall campaigns</th><th>NHTSA files it as</th></tr></thead><tbody>'
            + ''.join('<tr>' + ''.join(f'<td>{c}</td>' for c in r) + '</tr>' for r in rows) + '</tbody></table></div>')
     h2h = next(((u, lab) for u, us, lab in ENG_H2H if url in us), None)
     srcl = ' · '.join(f'<a href="{E(u)}" rel="noopener nofollow">{E(t)}</a>' for u, t in srcs.items())
-    faq = [(f'What cars have the {name} engine?', f'On this site so far: the {", ".join(cars)}, model years {y0}–{y1}. It is used in other cars we haven&#39;t covered yet.'),
+    faq = [(f'What cars have the {name} engine?', f'On this site so far: the {", ".join(cars)}, model years {y0}–{y1}.' + (' It is used in other cars we haven&#39;t covered yet.' if ENG_PERF_ONLY[url][2] else '')),
            (f'Is the {name} reliable?', vfaq + ' Owner complaints are filed by car, not engine, and cover the whole car, so none of these numbers is an engine failure rate.')]
     if hp: faq.append((f'How much horsepower does the {name} make?', f'{hp[0]}' + (f' to {hp[-1]}' if len(hp) > 1 else '') + ' hp in the versions on this page (factory figures).'))
     faq = [(q, html.unescape(a)) for q, a in faq]
@@ -66,17 +67,17 @@ def _perf_only_page(url, name, make):
             + f'<section class="yc"><h2>Owner complaints and recalls</h2><p>Counts for the cars on this page, from NHTSA. They cover every part of the car, not only the engine.</p>{tbl}</section>'
             + f'<section class="yc"><h2>Specs by generation</h2>{gsec}</section>'
             + '<section class="yc"><h2>What we don&#39;t have yet</h2><ul><li>A YouTube owner study for this engine (and for the ' + E(', '.join(cars)) + '): not pulled yet, so there&#39;s no YouTube tone or rank.</li>'
-              '<li>The engine&#39;s other cars: only the versions above are sourced so far.</li></ul></section>'
+              + ('<li>The engine&#39;s other cars: only the versions above are sourced so far.</li>' if ENG_PERF_ONLY[url][2] else '') + '</ul></section>'
             + '<section class="yqa trq"><h2>Quick answers</h2>' + qa_fold(''.join(f'<h3>{E(q)}</h3><p>{E(a)}</p>' for q, a in faq)) + '</section>'
             + (f'<p class="yc-cap">Sources: {srcl}. Complaints and recalls: NHTSA (api.nhtsa.gov).</p>' if srcl else '') + '</article>')
     title = f'{name} Engine: Known Problems, Recalls & Specs'
     desc = html.unescape(f'The {name} in the {", ".join(cars)} ({y0}-{y1}): {len(iss)} known issues with sources, owner complaints and recalls by generation, and specs. Every number sourced.')
     page(url, title, desc, body, ld=[faq_ld([(q, '', a) for q, a in faq])])
     ENG_MORE_URLS.append(url)
-    ENG_EXTRA_CARDS.append(dict(url=url, name=name, code=re.sub(r'^\w+ ', '', name).split(' ')[0], lay='2.0 L inline-4, turbo', yrs=f'{y0}–{str(y1)[-2:]}', mk=make, used=[c.replace(make + ' ', '').replace('Volkswagen ', '') for c in cars]))
+    ENG_EXTRA_CARDS.append(dict(url=url, name=name, code=re.sub(r'^\w+ ', '', name).split(' ')[0], lay=what, yrs=f'{y0}–{str(y1)[-2:]}', mk=make, used=[c.replace(make + ' ', '').replace('Volkswagen ', '') for c in cars]))
     return url
 
-for _u, (_n, _m) in ENG_PERF_ONLY.items():
+for _u, (_n, _m, _o) in ENG_PERF_ONLY.items():
     try: _perf_only_page(_u, _n, _m)
     except Exception as _ex: print('perf engine page failed', _u, repr(_ex))
 
@@ -104,7 +105,7 @@ def _eng_sum(url):
         if sce == 'subaru-fa': s['note'] = 'The non-turbo FA20/FA24 in the BRZ and GR86. The WRX&#39;s turbo FA24 has no engine page yet.'
     elif url in ENG_PERF_ONLY:
         F = _pe_files(url); gs = [g for D, A, c, e in F for g in D['gens'] if g['engine'] == c]
-        s.update(name=ENG_PERF_ONLY[url][0], lay='2.0 L inline-4, turbo', years=f'{min(g["y0"] for g in gs)}–{max(g["y1"] for g in gs)}' if gs else '', hp=sorted(x.get('hp') or []),
+        s.update(name=ENG_PERF_ONLY[url][0], lay=(F[0][3].get('what') or '') if F else '', years=f'{min(g["y0"] for g in gs)}–{max(g["y1"] for g in gs)}' if gs else '', hp=sorted(x.get('hp') or []),
                  cars=list(dict.fromkeys(D['short'] for D, *_ in F)), note='Covers the Golf R versions only so far.' if 'ea888' in url else '')
     else:
         s.update(name=url.strip('/').split('/')[-1], lay='', years='', hp=[], cars=[], note='No engine page yet.')
