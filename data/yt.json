@@ -60569,5 +60569,140 @@
    ],
    "costs": null
   }
+ ],
+ "ford-ranger": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011
+   ],
+   "gen": "1998–2011 Ford Ranger",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 26987090,
+   "topics": [
+    {
+     "name": "Transmission & shifter",
+     "views": 930417,
+     "n": 7,
+     "best": {
+      "id": "AC8lhIcKzXQ",
+      "title": "How To Change Manual Transmission Fluid 1988-2011 Ford Ranger | M5OD-R1 Transmission",
+      "channel": "Midwest Garage",
+      "views": 284888
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 788221,
+     "n": 8,
+     "best": {
+      "id": "FW0lz6z2DJw",
+      "title": "How to Install Fuel Pump E2263S in 1999 Ford Ranger and 1998-1999 Mazda 84000 Cab Plus Pickup",
+      "channel": "Airtex-ASC Performance Pumps",
+      "views": 182291
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 483384,
+     "n": 5,
+     "best": {
+      "id": "c_ZPmvxFHxY",
+      "title": "How To Replace Lower Ball Joint 1998-2011 Ford Ranger",
+      "channel": "TRQ",
+      "views": 180348
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 414719,
+     "n": 6,
+     "best": {
+      "id": "7diy1pxfDwA",
+      "title": "1999 Ford Ranger Vacuum Leak Diagnosis and Repair",
+      "channel": "TOM2RN",
+      "views": 168817
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 372658,
+     "n": 4,
+     "best": {
+      "id": "zh1VAlvXW_4",
+      "title": "How to Replace Front Exterior Door Handle 1998-2011 Ford Ranger",
+      "channel": "TRQ",
+      "views": 161226
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 364434,
+     "n": 1,
+     "best": {
+      "id": "o3TO2cF23YI",
+      "title": "1998 Ford Ranger Rear Differential Noise Diagnosis",
+      "channel": "White Rabbit",
+      "views": 364434
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 356113,
+     "n": 3,
+     "best": {
+      "id": "_ynXyyFN_tY",
+      "title": "2003 Ford Ranger gets MAJOR maintenance and repairs",
+      "channel": "Wally’s Workin’",
+      "views": 172840
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 354967,
+     "n": 4,
+     "best": {
+      "id": "Kw9M8QGk0Qw",
+      "title": "1998–2011 Ford Ranger Front Suspension Rebuild | Complete DIY Guide",
+      "channel": "Hank's Garage",
+      "views": 109461
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "AFsAdp0okOk",
+     "title": "Top 5 Problems Ford Ranger Truck 3rd Generation 1998-2012",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 760008
+    },
+    {
+     "id": "fELUyrKY1U4",
+     "title": "1998-2011 Ford Ranger Buyer's Guide (Common Problems, Options, Specs)",
+     "channel": "Useful Vids",
+     "views": 400237
+    },
+    {
+     "id": "7U7zK0tegBE",
+     "title": "Top Common Engine Problems 1998-2011 Ford Ranger Truck",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 191673
+    }
+   ],
+   "costs": null
+  }
  ]
 }
