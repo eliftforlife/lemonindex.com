@@ -1,4 +1,4 @@
-# The Lemon Index (lemonindex.com). License: CC BY 4.0, free to use with credit: "Source: The Lemon Index (lemonindex.com)". Updated 2026-11-12
+# The Lemon Index (lemonindex.com). License: CC BY 4.0, free to use with credit: "Source: The Lemon Index (lemonindex.com)". Updated 2026-11-13
 # Counts: every scored model year 2015-2025 (20,000+ sold), worst first. nhtsa_complaints = filed within 3 years of the model year (2023-2025: through Oct 2026).
 rank,family_id,model,model_year,lemon_index,nhtsa_complaints,top_problem,early_read,page
 1,chevrolet-volt,Chevrolet Volt,2017,856,196,electrical,,https://lemonindex.com/cars/chevrolet-volt/2017/
