@@ -87,7 +87,7 @@ def engine_chart(fid, name, li, yt, pages, cur=None, cls=lambda li: '', ysc=None
         img = (f'<span class="eg-im"><img src="{E(im["src"])}" alt="{E(name)} {E(g["name"])} engine illustration" width="{im["w"]}" height="{im["h"]}" loading="lazy" decoding="async">'
                + _info(f'Illustration (AI-generated) of the {E(name)} {E(g["name"])} engine, not a photo of a specific engine. Free to use under <a href="{LIC}" rel="license noopener">CC BY 4.0</a>: credit The Lemon Index (lemonindex.com). <a href="/images/">Download and credit text</a>')
                + ytb + '</span>') if im else ytb
-        out.append(f'<div class="eg">{img}<div class="eg-n"><b>{E(g["name"])}</b><small>{E(g["code"])}</small><small>{_span(g["years"])}</small></div><div class="eg-r">{"".join(rows)}</div></div>')
+        out.append(f'<div class="eg"{f' id="eng-{E(g["id"])}"' if g.get("id") else ""}>{img}<div class="eg-n"><b>{E(g["name"])}</b><small>{E(g["code"])}</small><small>{_span(g["years"])}</small></div><div class="eg-r">{"".join(rows)}</div></div>')
     src = sorted({s for g in gs for s in g.get('src', [])})
     links = ' · '.join(f'<a href="{E(s)}" rel="noopener">{"EPA fueleconomy.gov" if "fueleconomy" in s else "Wikipedia: " + s.rsplit("/", 1)[1].replace("_", " ")}</a>' for s in src)
     return (f'<div class="engc"><div class="engc-h" aria-hidden="true"><span>Engine</span><span>Year</span><span>Complaints <em>lower = better</em></span><span>YouTube rank <em>#1 = favorite</em></span></div>'
@@ -199,6 +199,8 @@ def transform_model(body, eng_html, short):
         fig = pv.find('figure', class_='yph'); sl = _s(fig)
     pin = ''.join(map(str, yt.find_all(class_='pinb'))) or None   # 11-12: pinned banners (battery-fire recall, half-ton/HD) stay in the hero
     hero = (f'<section class="ph tb-hero">{_s(crumbs)}<div class="tb-img">{"".join(map(str, links))}{sl}</div>{_s(h1)}{short_ans}{_s(pin)}{_s(yhero)}{_s(share)}</section>')
+    n3 = ''.join(map(str, yt.find_all(class_='n3-row')))   # 11-13 nav fix N3: "Engines in this car" / "Other versions" / regular-model rows close the hero
+    if n3: hero = hero[:-len('</section>')] + n3 + '</section>'
     secs = [c for c in root.find_all(recursive=False) if c is not ph]
     pick = lambda pred: [c for c in secs if pred(c)]
     years = pick(lambda c: c.get('id') == 'years')
@@ -337,6 +339,8 @@ def transform_year(body, eng_html, short):
         early = BeautifulSoup(f'<p class="early-b">Too new: partial score · still collecting complaints<span class="iiw">{pop}</span></p>', 'html.parser')
     pin = ''.join(map(str, yt.find_all(class_='pinb'))) or None   # 11-12: pinned banners (battery-fire recall, half-ton/HD) stay in the hero
     hero = f'<section class="ph tb-hero">{_s(crumbs)}<div class="tb-img">{img}</div>{_s(h1)}{_s(early)}{_s(pin)}{_s(yhero)}{_controls(sw, modes)}</section>'   # the gauge + verdict already say it: no answer paragraph
+    n3 = ''.join(map(str, yt.find_all(class_='n3-row')))   # 11-13 nav fix N3: "Engines in this car" / "Other versions" / regular-model rows close the hero
+    if n3: hero = hero[:-len('</section>')] + n3 + '</section>'
     top = [c for c in root.find_all(recursive=False) if c is not ph]
     grid = next((c for c in top if 'ygrid' in (c.get('class') or [])), None)
     items = [c for c in top if c is not grid] + (grid.find_all(recursive=False) if grid else [])
@@ -464,6 +468,8 @@ def transform_mp6(body, short):
     yts = root.find('div', class_='yts', recursive=False)
     hero = (f'<section class="ph tb-hero">{_s(crumbs)}' + (f'<div class="tb-img">{pv.decode_contents()}</div>' if pv else '')
             + f'{_s(h1)}' + (f'<p class="ans tb-ans">{sub.decode_contents()}</p>' if sub else '') + f'{_s(yts)}</section>')
+    n3 = ''.join(map(str, yt.find_all(class_='n3-row')))   # 11-13 nav fix N3: "Engines in this car" / "Other versions" / regular-model rows close the hero
+    if n3: hero = hero[:-len('</section>')] + n3 + '</section>'
     items = [c for c in root.find_all(recursive=False) if c not in (ph, yts)]
     tabs, tail = _adv_sort(items, modes, short); J = lambda xs: ''.join(map(str, xs))
     cls = ' '.join(root.get('class') or [])

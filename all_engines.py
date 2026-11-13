@@ -47,6 +47,16 @@ for _p in sorted(_aeg.glob('data/engines_*.json')):
                 img=_ae_img(d.get('img')), yt=(None, 0, ''), used=[short], t={'h'} if mk in ('Honda', 'Acura') else set(), f='hybrid' if re.search(r'hybrid|IMA', d.get('name', '') + ' ' + d.get('note', ''), re.I) else 'gas', mk=mk, o=(3, ys[0] if ys else 0), alias=d.get('name', ''))
 # 4. 11-12 round 2: heavy-duty diesel + F-150 engine pages and the two comparisons (hd_pages.py), tab 'Trucks & diesel'
 for _c in (globals().get('HD_AE') or []): _ae_add(**_c)
+# 11-13 N3 (nav report 3: "list mainstream cars first in Used in"): the everyday /cars/ models from ENGINE_USES lead each card's list, so the
+# 3.5 EcoBoost card says F-150 before GT and searching "camry" finds the 2GR-FE
+for _u, _c in AE_LIVE.items():
+    _new, _front = [], []
+    for _fid, _nm, _ys, _vs in (globals().get('EU_CARS') or (lambda u: []))(_u.split('#')[0]):
+        _lab = 'F-150' if _fid == 'ford-f-series' else _short(_nm, BYNAME[_nm]['brand'] if _nm in BYNAME else _nm.split(' ')[0])
+        _hit = [x for x in _c['used'] if _lab.lower() in x.lower()]
+        if _hit: _front += [x for x in _hit if x not in _front]
+        elif _lab not in _new: _new.append(_lab)
+    _c['used'] = _new + _front + [x for x in _c['used'] if x not in _front]
 # ---- coming soon: one engine per model and fuel (11-12, Elijah: "one engine per fuel type it was actually sold with in the US")
 # data/engine_fuels.json (data_engine_fuels.py: EPA records with their fuel type) where we have it, else the EPA engine list in the model-year data (gas).
 # A model whose engines already have pages (BMW, supercar/performance hubs) skips only its gas engine; a model with its own engine list (Civic) skips all.

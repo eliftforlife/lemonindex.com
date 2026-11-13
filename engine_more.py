@@ -64,6 +64,7 @@ def _perf_only_page(url, name, make):
             f'<h1>{E(name)} engine: known problems and recalls</h1><p class="tra">{ans1}</p>{chips}'
             f'<p class="note engvd"><b>{E(vline.split(":", 1)[0])}:</b>{E(html.unescape(vline.split(":", 1)[1]))}' + (f' <a href="{h2h[0]}">Compare it with the {E(h2h[1])} →</a>' if h2h else '') + '</p>'
             + (f'<section class="yc engk"><h2>Known issues on record</h2><ul>{issl}</ul></section>' if issl else '')
+            + (globals().get('EU_CARS_HTML') or (lambda *a: ''))(url)   # 11-13 N3 (nav report 3): the regular models (Golf for the Golf R), each year linked
             + f'<section class="yc"><h2>Owner complaints and recalls</h2><p>Counts for the cars on this page, from NHTSA. They cover every part of the car, not only the engine.</p>{tbl}</section>'
             + f'<section class="yc"><h2>Specs by generation</h2>{gsec}</section>'
             + '<section class="yc"><h2>What we don&#39;t have yet</h2><ul><li>A YouTube owner study for this engine (and for the ' + E(', '.join(cars)) + '): not pulled yet, so there&#39;s no YouTube tone or rank.</li>'

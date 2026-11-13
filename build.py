@@ -1645,6 +1645,7 @@ def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
 UXC = 'hooks'; exec(open('ux_c.py', encoding='utf-8').read())   # 11-12 UX test (part C): battery-recall banners, RAV4 Hybrid, sales sources, EV YouTube, data files
 HDX = 'hooks'; exec(open('hd_pages.py', encoding='utf-8').read())   # 11-12 round 2 (fix C): half-ton banner + honest Q&A on the F-Series/Ram/Silverado/Sierra pages
 exec(open('n2_nav.py', encoding='utf-8').read())   # 11-13 navigation (N2): better years strip, year sort, model/year wayfinding
+ENGU = 'hooks'; exec(open('engine_uses.py', encoding='utf-8').read())   # 11-13 nav fix N3: ENGINE_USES, "Engines in this car" + other-versions chips (wraps PIN_HTML), engine pages link back
 def yearx(fid, y): return extra(fid, y)
 # ---- 11-12 round 2 (Carlos: "rav4 hybrid" opened a RAV4 page that never said what the hybrid saves): a Gas or hybrid card on the model page
 # of every model sold both ways (data_hybrid_split.py: EPA mpg and yearly fuel cost per version), with a commute line (assets/commute.js)

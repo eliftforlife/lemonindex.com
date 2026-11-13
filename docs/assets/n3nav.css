@@ -1,0 +1,27 @@
+/* 11-13 navigation fix N3: "Engines in this car" and "Other versions" chip rows (car pages), the regular-model row (performance, supercar
+   and electric pages) and the "Everyday cars with this engine" list (engine pages). Prefix n3-. Linked from the rows themselves. */
+.n3-row { margin: 12px auto 0; max-width: 760px; text-align: left; }
+.n3-h { margin: 0 0 6px; font-size: 12px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--mute, #5f6368); }
+.n3-cs { display: flex; flex-wrap: wrap; gap: 8px; }
+.n3-c { display: inline-flex; flex-direction: column; justify-content: center; min-height: 44px; box-sizing: border-box; padding: 6px 12px; border: 1px solid var(--line, #e3e5e8);
+  border-radius: 12px; background: #fff; color: var(--ink, #111214); text-decoration: none; line-height: 1.25; max-width: 100%; }
+.n3-c b { font-size: 15px; font-weight: 700; }
+.n3-c small { font-size: 12px; color: var(--mute, #5f6368); }
+.n3-c:hover, .n3-c:focus-visible { border-color: var(--ink, #111214); }
+.n3-more { background: var(--soft, #f4f5f6); }
+.n3-n { margin: 6px 0 0; font-size: 12px; line-height: 1.45; color: var(--mute, #5f6368); }
+.n3-ys { display: inline-flex; flex-wrap: wrap; gap: 4px 6px; }
+.n3-y { display: inline-block; min-width: 44px; padding: 3px 0; text-align: center; font-variant-numeric: tabular-nums; }
+.n3-par { margin-top: 14px; }
+.n3-cmp { margin: 12px 0 0; }
+.n3-eng .n3-ml { list-style: none; padding: 0; margin: 0; }
+.n3-eng .n3-ml li { padding: 10px 0; border-top: 1px solid var(--line, #e3e5e8); }
+.n3-eng .n3-ml li:first-child { border-top: 0; }
+.n3-eng .n3-m { font-weight: 700; margin-right: 6px; }
+.n3-eng .n3-ys { display: flex; margin-top: 4px; }
+@media (max-width: 700px) {
+  .n3-cs { flex-wrap: nowrap; overflow-x: auto; scroll-snap-type: x proximity; -webkit-overflow-scrolling: touch; padding-bottom: 4px; scrollbar-width: none; }
+  .n3-cs::-webkit-scrollbar { display: none; }
+  .n3-c { flex: none; scroll-snap-align: start; max-width: 78vw; }
+  .n3-c b, .n3-c small { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+}

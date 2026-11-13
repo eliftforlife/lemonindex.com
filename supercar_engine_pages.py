@@ -130,6 +130,7 @@ def _sce_rec_li(r):
 WHY = {'super': 'Supercars sell in small numbers, so we show YouTube, recalls and the automaker&#39;s repair notes instead.',
        'perf': 'Performance versions are mostly filed under their base model (a Shelby GT500 is filed as a Mustang), so we only count complaints whose model name or the owner&#39;s own words tie them to this engine, and lead with YouTube, recalls and the automaker&#39;s repair notes.'}
 SCE_EXTERNAL = {'bmw-s65'}   # 11-11: built by the BMW M3 flagship work in the BMW engine design; the hub links to it, no second page here
+_EU_PARENT_OF = lambda c: (globals().get('EU_PARENT') or (lambda *a: None))(c['slug'], c['name'], c.get('perf') or '')
 def _sce_page(e):
     d = SCENG['engines'][e]; path = SCE_URL(e); yrs = d['years']; ys = sorted(yrs, key=int); y0, y1 = int(ys[0]), int(ys[-1])
     yts, ytavg = _sce_yt(e); rk = SCE_YTRANK.get(e); nm = d['name']; mk = d['make']; g = _GRP(e)
@@ -138,6 +139,8 @@ def _sce_page(e):
     yb = max(yts, key=yts.get) if len(yts) >= 2 and len(set(yts.values())) > 1 else None
     ans1 = (f'{E(mk)}&#39;s {E(d["size"])} {E(d["asp"])} {E(d["layout"])} in the {E(cars_s)}, model years {y0}' + (f'–{y1}' if y1 != y0 else '') + '.'
             + (f' YouTube likes the <b>{yb}</b> best.' if yb else ''))
+    _eux = [(fid, nm_) for fid, nm_, _ys, _vs in (globals().get('EU_CARS') or (lambda u: []))(path) if not any(_EU_PARENT_OF(c) == fid for c in d['cars'])]
+    if _eux: ans1 += ' Also in the ' + ', '.join(f'<a href="/cars/{fid}/">{"Ford F-150" if fid == "ford-f-series" else E(nm_)}</a>' for fid, nm_ in _eux[:4]) + (' and more' if len(_eux) > 4 else '') + ' (below).'
     chips = (f'<div class="trc"><div><b>{y0}' + (f'–{str(y1)[-2:]}' if y1 != y0 else '') + '</b><span>model years</span></div>'
              + f'<div><b>{_sce_hp(d)}</b><span>hp (factory)</span></div>'
              + (f'<div><b>#{rk}</b><span>YouTube rank of {SCE_NRANK[g]} {GW[g]}</span></div>' if rk else '<div><b>–</b><span>YouTube rank coming</span></div>') + '</div>')
@@ -154,13 +157,18 @@ def _sce_page(e):
                 + f'. This page counts only the {tot:,} complaint{"" if tot == 1 else "s"} and {len(d["recalls"])} recall{"" if len(d["recalls"]) == 1 else "s"} we can tie to the {E(nm)} by model name or the owner&#39;s own words.</p>')
     # per-year chart
     sec = list((globals().get('HD_SCE') or (lambda _e: []))(e))   # 11-12 round 2: the F-150's own data first (hd_pages.py)
+    sec.append((globals().get('EU_CARS_HTML') or (lambda *a: ''))(path))   # 11-13 N3: the everyday /cars/ models with it, each year linked
     mxn = max([1] + [v['n'] for v in yrs.values()])
     def carsof(y): return ', '.join(_sce_label(d, s).replace(mk + ' ', '') for s in yrs[y]['cars'])
+    _eun = {c['slug']: c for c in d['cars']}
+    def carsof_h(y):   # 11-13 N3 (nav report 3): each name links its regular model's year page when there is one
+        _u = lambda s: (globals().get('EU_YEAR_URL') or (lambda *a: ''))(s, (_eun.get(s) or {}).get('name', ''), (_eun.get(s) or {}).get('perf') or '', y)
+        return ', '.join((f'<a href="{_u(s)}">{E(_sce_label(d, s).replace(mk + " ", ""))}</a>' if _u(s) else E(_sce_label(d, s).replace(mk + ' ', ''))) for s in yrs[y]['cars'])
     def row(y):
         sc = yts.get(int(y)); n = yrs[y]['n']
         yt = (f'<span class="eg-t"><i style="width:{sc}%"></i></span><b>{sc}</b>' if sc is not None else '<span class="eg-t na"></span><b class="mute">·</b>')
         ow = (f'<span class="eg-o"><i style="width:{n / mxn * 100:.0f}%"></i></span><b>{n:,}</b>' if n else '<span class="eg-o na"></span><b class="mute">0</b>') if d['chart'] else ''
-        return f'<div class="egr"><span class="egy">{y}<small>{E(carsof(y))}</small></span>{ow}{yt}</div>'
+        return f'<div class="egr"><span class="egy">{y}<small>{carsof_h(y)}</small></span>{ow}{yt}</div>'
     nc = '' if d['chart'] else (f'<p class="note sce-nc"><b>Not enough complaints to chart.</b> Owners filed {tot:,} complaint{"" if tot == 1 else "s"} with the government that we can tie to this engine&#39;s cars, {y0}–{y1}, about any part of the car. '
                                  + WHY[g] + '</p>' if tot else
                                  f'<p class="note sce-nc"><b>Not enough complaints to chart.</b> We found no government complaints we can tie to this engine&#39;s cars. ' + WHY[g] + '</p>')
@@ -177,7 +185,7 @@ def _sce_page(e):
     for y in ys:
         sc = yts.get(int(y)); vd = ((SCY.get(e) or {}).get('years') or {}).get(y) or {}
         rc = sum(1 for r in d['recalls'] if int(y) in r['years'])
-        rows.append([y, E(carsof(y)), f'{yrs[y]["n"]:,}', (f'<b>{sc}</b> <small>({vd.get("videos", 0)} videos)</small>' if sc is not None else '<small>not enough videos yet</small>'), str(rc)])
+        rows.append([y, carsof_h(y), f'{yrs[y]["n"]:,}', (f'<b>{sc}</b> <small>({vd.get("videos", 0)} videos)</small>' if sc is not None else '<small>not enough videos yet</small>'), str(rc)])
     _tbl = lambda head, R: '<div class="tw"><table class="adv"><thead><tr>' + ''.join(f'<th>{h}</th>' for h in head) + '</tr></thead><tbody>' + ''.join('<tr>' + ''.join(f'<td>{c}</td>' for c in r) + '</tr>' for r in R) + '</tbody></table></div>'
     sec.append('<h2>Reliability by year</h2>' + nc + _gap + chart + (f'<p class="note">{yline}</p>' if yline else '')
                + '<details class="trm"><summary>How we count: owner complaints only where the car&#39;s name and year leave no doubt; YouTube tone from videos that name this engine or its cars. <span>How we count</span></summary>'
@@ -215,7 +223,9 @@ def _sce_page(e):
         vs = sorted({v for y in ys for v in yrs[y]['cars'].get(c['slug'], [])})
         yl = c['years']; cn = SC_NAME.get(c['slug'], c['name'])
         hr = _car_href(c)
-        vr.append([(f'<a href="{hr}">{E(cn)}</a>' if hr else E(cn)) + f' <small>{E(", ".join(vs[:6]))}{" ..." if len(vs) > 6 else ""}</small>',
+        _pf = _EU_PARENT_OF(c)
+        vr.append([(f'<a href="{hr}">{E(cn)}</a>' if hr else E(cn)) + f' <small>{E(", ".join(vs[:6]))}{" ..." if len(vs) > 6 else ""}</small>'
+                   + (f' <small>· <a href="/cars/{_pf}/">{E(EU_MODELS[_pf]["name"])}, every year</a></small>' if _pf else ''),
                    f'{min(yl)}–{str(max(yl))[-2:]}' if len(yl) > 1 else str(yl[0])])
     srcs = ' · '.join(f'<a href="{E(s["url"])}" rel="noopener">{E(s["title"])}</a>' for s in d['src'])
     sec.append('<section class="engv"><h2>Every US version with this engine</h2>' + _tbl(['Car and versions', 'Years'], vr)

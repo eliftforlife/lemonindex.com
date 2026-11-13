@@ -31,6 +31,29 @@ def _load(p, d=None):
     p = os.path.join(HERE, p)
     return json.load(open(p, encoding='utf-8')) if os.path.exists(p) else d
 
+# 11-13 navigation fix N3 (report problem 4: "Mustang GT and Mustang don't link each other"): every performance page's regular model
+# (/cars/<id>/), by name: the model line it is a version of. data/perf/<slug>.json `parent` (a URL) wins. build.py's engine_uses.py turns it
+# into two-way chips: the parent's model and year pages list the performance versions, and the performance page links its parent and years.
+PARENTS = {'mustang-gt': 'ford-mustang', 'shelby-gt350': 'ford-mustang', 'shelby-gt500': 'ford-mustang', 'mustang-mach-1': 'ford-mustang',
+           'mustang-dark-horse': 'ford-mustang', 'mustang-boss-302': 'ford-mustang', 'svt-cobra': 'ford-mustang', 'mustang-gtd': 'ford-mustang',
+           'camaro-ss': 'chevrolet-camaro', 'camaro-zl1': 'chevrolet-camaro', 'camaro-z28': 'chevrolet-camaro',
+           'challenger-392': 'dodge-challenger', 'challenger-hellcat': 'dodge-challenger', 'challenger-demon': 'dodge-challenger',
+           'charger-392': 'dodge-charger', 'charger-hellcat': 'dodge-charger', 'durango-srt': 'dodge-durango', 'trackhawk': 'jeep-grand-cherokee',
+           'grand-cherokee-srt': 'jeep-grand-cherokee', 'wrangler-392': 'jeep-wrangler', 'chrysler-300-srt8': 'chrysler-300', 'neon-srt4': 'dodge-neon',
+           'ram-trx': 'ram-pickup', 'ram-srt10': 'ram-pickup', 'f150-raptor': 'ford-f-series', 'f150-raptor-r': 'ford-f-series', 'svt-lightning': 'ford-f-series',
+           'bronco-raptor': 'ford-bronco', 'focus-rs': 'ford-focus', 'focus-st': 'ford-focus', 'fiesta-st': 'ford-fiesta', 'cobalt-ss': 'chevrolet-cobalt',
+           'trailblazer-ss': 'chevrolet-trailblazer', 'cts-v': 'cadillac-cts', 'escalade-v': 'cadillac-escalade', 'civic-type-r': 'honda-civic',
+           'golf-r': 'volkswagen-golf', 'vw-r32': 'volkswagen-golf', 'lancer-evolution': 'mitsubishi-lancer', 'mazdaspeed3': 'mazda3',
+           'elantra-n': 'hyundai-elantra', 'veloster-n': 'hyundai-veloster', 'gr-corolla': 'toyota-corolla', 'lexus-is-f': 'lexus-is', 'lexus-is-500': 'lexus-is',
+           'tlx-type-s': 'acura-tlx', 'amg-c63': 'mercedes-benz-c-class', 'amg-e63': 'mercedes-benz-e-class', 'amg-e55': 'mercedes-benz-e-class',
+           'amg-gle63': 'mercedes-benz-m/gle', 'amg-cla45': 'mercedes-benz-cla', 'bmw-m3': 'bmw-3-series', 'bmw-m340i': 'bmw-3-series', 'bmw-m4': 'bmw-4-series',
+           'bmw-m5': 'bmw-5-series', 'bmw-x3-m': 'bmw-x3', 'bmw-x5-m': 'bmw-x5', 'audi-s4': 'audi-a4', 'audi-rs3': 'audi-a3', 'audi-rs6': 'audi-a6',
+           'subaru-wrx': 'subaru-impreza', 'wrx-sti': 'subaru-impreza', 'macan-gts-turbo': 'porsche-macan'}
+def parent_of(D):
+    """a performance page's regular model id ('' if none)"""
+    p = (D.get('parent') or '').strip('/').split('/')
+    return '/'.join(p[1:]) if len(p) > 1 and p[0] == 'cars' else PARENTS.get(D.get('slug', ''), '')
+
 def _avg(d, y0, y1):
     s = [v['score'] for y, v in (d or {}).items() if y0 <= int(y) <= y1 and v and v.get('score') is not None]
     return (int(sum(s) / len(s) + 0.5), len(s)) if s else (None, 0)   # 11-12: half-up, the same rounding as the engine pages
@@ -485,7 +508,7 @@ def standalone(slug, page_fn, out='docs'):
     mk = D['make']; mslug = re.sub(r'[^a-z0-9]+', '-', mk.lower()).strip('-')
     crumbs = (f'<p class="ph-e"><a href="/?type=performance">Performance cars</a>'
               + (f' · <a href="/brands/{mslug}/">{E(mk)}</a>' if os.path.exists(os.path.join(HERE, out, 'brands', mslug, 'index.html')) else '') + '</p>')
-    hero = f'<section class="ph tb-hero pf-hero">{crumbs}<h1>{E(D["h1"])}</h1>{P["slider"]}</section>'
+    hero = f'<section class="ph tb-hero pf-hero">{crumbs}<h1>{E(D["h1"])}</h1>{P["slider"]}{PARENT_ROW(slug, D)}</section>'
     # Problems & recalls (secondary, honest about what NHTSA's model names cover)
     note = (D.get('nhtsa') or {}).get('note') or ''
     y0, y1 = min(g['y0'] for g in G), max(g['y1'] for g in G)
@@ -530,6 +553,8 @@ def standalone(slug, page_fn, out='docs'):
     ld = [R.ld(url, title), {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": re.sub('<[^>]+>', '', a).replace('&#39;', "'")}} for q, a in qa]}]
     page_fn(D['page'], title, desc, body, ld=ld, img=(pc.get('img') or '').split('?')[0] or None)
     return D['page']
+
+PARENT_ROW = lambda slug, D: ''   # 11-13 N3: set by build.py's engine_uses.py (the regular model + its year pages + sibling versions)
 
 def link_parent(slug, out='docs'):
     """11-12 round 2 (Devin: "the 3 Series page never mentions the M340i"; the WRX tile opened the Impreza): a performance version that has

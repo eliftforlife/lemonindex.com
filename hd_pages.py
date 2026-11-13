@@ -333,7 +333,7 @@ if HDX == 'pages' and HDT:
         es, fs = _hd_comp_share(d['comps'], 'engine'), _hd_comp_share(d['comps'], 'fuel system')
         grp = _hd_group(e); rank = sorted([o for o in grp if o in HDE], key=lambda o: -_hd_comp_share(HDE[o]['comps'], 'engine')).index(e) + 1
         ngrp = len([o for o in grp if o in HDE]); peers = 'F-150 engines' if f150 else 'diesel truck engine generations'
-        ans1 = (f'The {E(d["lay"])} in the {E(tnames)}, model years {y0}–{y1}. Owners filed <b>{d["n"]:,} complaints</b> about trucks with it (matched by VIN); '
+        ans1 = (f'The {E(d["lay"])} in the {E(tnames).replace("Ford F-150", '<a href="/cars/ford-f-series/">Ford F-150</a>', 1) if f150 else E(tnames)}, model years {y0}–{y1}. Owners filed <b>{d["n"]:,} complaints</b> about trucks with it (matched by VIN); '
                 f'<b>{es}%</b> name the engine, #{rank} of the {ngrp} {peers} we track (1 = the most).')
         chips = (f'<div class="trc"><div><b>{y0}–{str(y1)[-2:]}</b><span>model years</span></div><div><b>{d["n"]:,}</b><span>owner complaints</span></div>'
                  f'<div><b>{es}%</b><span>name the engine</span></div><div><b>{len(d["recalls"])}</b><span>recalls name it</span></div></div>')
@@ -353,6 +353,7 @@ if HDX == 'pages' and HDT:
         tl = ''.join(f'<li><a href="{HDU(t)}">{E(HDT[t]["name"])}</a>: ' + ' · '.join(f'<a href="{HDU(t, y)}">{y}</a>' for y in tys if _hd_has(t, y)) + '</li>'
                      for t, tys in trucks if t in HDT and t != 'ford-f-150')
         if tl: sec.append(f'<section class="yc" id="trucks"><h2>Trucks with this engine</h2><ul class="hd-tl">{tl}</ul></section>')
+        if f150: sec.append((globals().get('EU_CARS_HTML') or (lambda *a: ''))(path, 'Trucks with this engine'))   # 11-13 N3 (nav report 3): the F-150, each year linked
         if d.get('quotes'): sec.append(f'<section class="yc"><h2>In owners&#39; words</h2>{_hd_q(d["quotes"], tnames)}</section>')
         sec.append(f'<section class="yc" id="compare"><h2>Against the other {peers}</h2>' + _hd_cmp_table(grp, e)
                    + '<p class="yc-cap">Shares of each engine&#39;s own complaints, matched by VIN. They show what owners complain about, not how often trucks break.'
