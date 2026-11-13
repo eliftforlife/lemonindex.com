@@ -284,6 +284,11 @@
         : c.t ? KIND[c.t] : yy ? 'problems and owner complaints' : miss ? `no ${miss} in our data · every year ${c.ys[0]}-${c.ys.at(-1)}` : c.ys.length ? `every year ${c.ys[0]}-${c.ys.at(-1)}` : 'problems and owner complaints';
       return { u, b: (yy ? yy + ' ' : '') + c.n, s: (close ? 'Closest match · ' : '') + lab + (notes && !c.t ? ` · covers every version, ${notes} included` : ''), soon: c.soon, kind: close ? 'close' : 'car' };
     });
+    // 11-13 (N1 + N3's parents): a year + a performance version ("2016 wrx", "2018 mustang gt") puts the regular model's year page first
+    if (y && !close && GO && GO.par && top[0] && top[0].t === 'perf' && GO.par[top[0].u]) {
+      const pc = top[0], par = ALL.find(c => c.u === GO.par[pc.u] && !c.t);
+      if (par && par.ys.includes(y)) carItems.unshift({ u: par.u + y + '/', b: `${y} ${par.n}`, s: `problems and owner complaints · the regular model the ${pc.n} is built on`, kind: 'car' });
+    }
     // the question lists go first when the words were a question, after the cars when a car was named too
     if (!W.length || close) out.push(...q.lists, ...carItems); else out.push(...carItems, ...q.lists);
     if (!out.length || out.every(x => x.kind === 'close')) {

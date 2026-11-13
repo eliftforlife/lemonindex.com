@@ -88,6 +88,17 @@ _dirs = lambda pat: sorted(p_.replace('\\', '/').split('/')[-2] for p_ in _glob.
 _GO = {'codes': _dirs(f'{OUT}/check-engine-light/*/index.html'),
        'tr': sorted({u.split('/')[2] for u in globals().get('turls', [])}),
        'best': sorted({'/' + p_[len(OUT) + 1:].replace('\\', '/')[:-len('index.html')] for p_ in _glob.glob(f'{OUT}/*/index.html') + _glob.glob(f'{OUT}/best/*/index.html')})}
+# 11-13 (N1 + N3): a performance version -> its regular model (perf_page.parent_of / PARENTS), so "2016 wrx" or "2018 mustang gt" puts that
+# model's year page first (lookup.js). Only parents with a live /cars/ page.
+try:
+    import perf_page as _pp
+    _GO['par'] = {}; _live = {r[2] for r in FIND if r[2] and not r[6]}
+    for _pf in _glob.glob('data/perf/*.json'):
+        if _pf.endswith('.auto.json'): continue
+        _d = json.load(open(_pf, encoding='utf-8')); _u = _d.get('page') or f'/cars/{_d["slug"]}/'
+        _par = _pp.parent_of(_d) if hasattr(_pp, 'parent_of') else ''
+        if _par and _u in _live and os.path.exists(f'{OUT}/cars/{_par}/index.html'): _GO['par'][_u] = f'/cars/{_par}/'
+except Exception as _ex: print('find-go parents skipped:', _ex)
 json.dump(_GO, open(f'{OUT}/assets/find-go.json', 'w', encoding='utf-8'), separators=(',', ':'))
 
 # ---- the guard

@@ -9,7 +9,7 @@
 .lxs-d { display: none; margin: 0 10px 0 0; }
 .lxs-db { position: relative; }
 .lxs-di { position: absolute; left: 11px; top: 50%; width: 14px; height: 14px; margin-top: -7px; color: #6e6e73; pointer-events: none; }
-.lxs-d #ghd { width: 190px; height: 34px; box-sizing: border-box; padding: 0 12px 0 31px; border: 1px solid transparent; border-radius: 999px; background: #f0f0f2;
+.lxs-d #ghd { width: 220px; height: 34px; box-sizing: border-box; padding: 0 12px 0 31px; border: 1px solid transparent; border-radius: 999px; background: #f0f0f2;
   font: inherit; font-size: 13.5px; color: var(--ink, #111214); transition: width .2s, background .15s, border-color .15s; -webkit-appearance: none; appearance: none; }
 .lxs-d #ghd::placeholder { color: #6e6e73; }
 .lxs-d #ghd:hover { background: #e8e8ec; }
