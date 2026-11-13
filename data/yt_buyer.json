@@ -21429,5 +21429,162 @@
 }
 ]
 }
+],
+"ford-ranger": [
+{
+"sid": "ford-ranger-g3",
+"y0": 1998,
+"y1": 2011,
+"label": "1998–2011",
+"videos": 196,
+"praise": [
+[
+"Looks",
+8
+],
+[
+"Reliability",
+6
+],
+[
+"Power",
+5
+],
+[
+"Fun to drive",
+5
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+6
+],
+[
+"Coolant leaks / water pump / overheating",
+4
+],
+[
+"Fuel pump / fuel system",
+4
+],
+[
+"Rust",
+3
+]
+],
+"top": [
+{
+"id": "L_TQo3yDkVo",
+"title": "2007 Ford Ranger V6: Regular Car Reviews",
+"views": 1015833,
+"ch": "Regular Car Reviews"
+},
+{
+"id": "AFsAdp0okOk",
+"title": "Top 5 Problems Ford Ranger Truck 3rd Generation 1998-2012",
+"views": 760008,
+"ch": "1A Auto: Repair Tips & Secrets Only Mechanics Know"
+},
+{
+"id": "ccqxGUipXQs",
+"title": "Watch This Before Buying a Ford Ranger 1998-2012",
+"views": 677659,
+"ch": "AutoMotivate"
+}
+]
+},
+{
+"sid": "ford-ranger-g4",
+"y0": 2019,
+"y1": 2023,
+"label": "2019–2023",
+"videos": 197,
+"praise": [
+[
+"Power",
+21
+],
+[
+"Looks",
+19
+],
+[
+"Fun to drive",
+14
+],
+[
+"Reliability",
+11
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "DdF-9yYpphQ",
+"title": "🚨 DESTROYED ENGINE 🚨 On a 2021 Ford Ranger, Wet Belt Catastrophe at 109K Miles! - The Car Edition",
+"views": 1844213,
+"ch": "The Car Edition Ltd"
+},
+{
+"id": "6Ky_0IhVKUg",
+"title": "2023 Ford Ranger Raptor (inc. 0-100) detailed review: The toughest ute/bakkie/truck on sale!",
+"views": 1259584,
+"ch": "CarExpert"
+},
+{
+"id": "h50GjQtCyI8",
+"title": "2020 Ford Ranger Raptor review",
+"views": 1241060,
+"ch": "Drive.com.au"
+}
+]
+},
+{
+"sid": "ford-ranger-g5",
+"y0": 2024,
+"y1": 2025,
+"label": "2024–2025",
+"videos": 190,
+"praise": [
+[
+"Power",
+25
+],
+[
+"Looks",
+21
+],
+[
+"Reliability",
+16
+],
+[
+"Fun to drive",
+15
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "U-zoe7eMHZM",
+"title": "2024 Ford Ranger Raptor Quick Review",
+"views": 604422,
+"ch": "Extra Throttle House"
+},
+{
+"id": "p5Dmq-V0bbg",
+"title": "Is The Baby Raptor is Better Than F150? // 2024 Ford Ranger Review",
+"views": 375683,
+"ch": "Sarah -n- Tuned"
+},
+{
+"id": "VqK_fhW_0Rk",
+"title": "2024 Ford Ranger Raptor - Brutally Honest 1-Year Ownership Review",
+"views": 352150,
+"ch": "TheTopher"
+}
+]
+}
 ]
 }

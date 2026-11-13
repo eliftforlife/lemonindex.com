@@ -60722,6 +60722,145 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023
+   ],
+   "gen": "2019–2023 Ford Ranger",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 48147096,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 638430,
+     "n": 2,
+     "best": {
+      "id": "DayNJuybk90",
+      "title": "SHOP FAILED! 2019 Ford Ranger 2.3L Ecoboost Engine Died @104K Miles With TERRIBLE Maintenance!",
+      "channel": "I Do Cars",
+      "views": 587183
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 212059,
+     "n": 1,
+     "best": {
+      "id": "_m_rKtSKjr0",
+      "title": "Wet Belt SNAPPED At Just 56,000 Miles 😱 2021 Ford Ranger Wildtrack Engine Repair - The Car Edition",
+      "channel": "The Car Edition Ltd",
+      "views": 212059
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 183227,
+     "n": 1,
+     "best": {
+      "id": "s1rBuftx-lk",
+      "title": "2023 Ford Ranger: Have they fixed the 10R80 10sp transmission? | Auto Expert John Cadogan",
+      "channel": "Auto Expert John Cadogan",
+      "views": 183227
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 74984,
+     "n": 1,
+     "best": {
+      "id": "nRdABerFHfM",
+      "title": "2019 - 2023 Ford Ranger No Key Detected - How to Start With Dead, Bad, Broken Smart Key Fob",
+      "channel": "PYR Automotive ",
+      "views": 74984
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 50189,
+     "n": 1,
+     "best": {
+      "id": "K0WBB65ytMM",
+      "title": "2019 - 2023 Ford Ranger How to replace the cabin air filter / 2020 2021 2022",
+      "channel": "Oil Light Reset ",
+      "views": 50189
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "EPsqu170mCw",
+     "title": "Ford Ranger buyers guide (2011-2022) Avoid buying a broken Ranger (2.0/2.2TDCI/3.2TDCI/2.3 Ecoboost)",
+     "channel": "The Miles Driven",
+     "views": 97334
+    },
+    {
+     "id": "h50GjQtCyI8",
+     "title": "2020 Ford Ranger Raptor review",
+     "channel": "Drive.com.au",
+     "views": 1241060
+    },
+    {
+     "id": "6gzFEqn3w2E",
+     "title": "2019 Ford Ranger - Review & Road Test",
+     "channel": "Kelley Blue Book",
+     "views": 582342
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2024,
+    2025
+   ],
+   "gen": "2024–2025 Ford Ranger",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 189,
+   "views": 12728248,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 10288,
+     "n": 1,
+     "best": {
+      "id": "MORvQ6w_Umk",
+      "title": "First Oil Change for my 2025 Ford Ranger.",
+      "channel": "My Torino (my73Torino)",
+      "views": 10288
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "ygzc-sstDfM",
+     "title": "2024 Ford Ranger Sport NextGen | Fix or Repair Daily? | Reliable ba? | Owners Review",
+     "channel": "RoadTrip with Me",
+     "views": 50612
+    },
+    {
+     "id": "j84T5xkPZ1s",
+     "title": "5th Gen Ford Ranger Common Problems",
+     "channel": "LRT Outpost",
+     "views": 26541
+    },
+    {
+     "id": "b7JfNFeManc",
+     "title": "The 2024 Ford Ranger Lariat: A Buyer's Guide",
+     "channel": "SparkPlug TV",
+     "views": 4793
+    }
+   ],
+   "costs": null
   }
  ]
 }
