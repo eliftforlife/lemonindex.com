@@ -62566,6 +62566,135 @@
    "costs": null
   }
  ],
+ "chevrolet-cavalier": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005
+   ],
+   "gen": "1995–2005 Chevrolet Cavalier",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 11092276,
+   "topics": [
+    {
+     "name": "Cooling system",
+     "views": 838262,
+     "n": 9,
+     "best": {
+      "id": "WzNyk1lja2M",
+      "title": "2002 Cavalier Water Pump Replacement (Part 1) - EricTheCarGuy",
+      "channel": "EricTheCarGuy",
+      "views": 260270
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 621916,
+     "n": 10,
+     "best": {
+      "id": "Lhd0vd8pdBU",
+      "title": "Fuel Pump & Fuel Filter Replacement Chevrolet Cavalier 1995-2005",
+      "channel": "2CarPros",
+      "views": 159265
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 585364,
+     "n": 9,
+     "best": {
+      "id": "PIum7mS077U",
+      "title": "1995 - 2005 Chevy Cavalier Radio Install",
+      "channel": "Provo Beast Audio Installation",
+      "views": 290904
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 467861,
+     "n": 7,
+     "best": {
+      "id": "mC_cbqQJwmE",
+      "title": "2003 04 05 Chevrolet Cavalier & Pontiac Sunfire Broken Auto Transmission Shift Cable Bushing Repair",
+      "channel": "DrShock",
+      "views": 146963
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 390773,
+     "n": 5,
+     "best": {
+      "id": "lXvdgE24H3Q",
+      "title": "1997 Cavalier Z24 2.4 Twin Cam Water Pump and Timing Chain Replacement Part 1 Classic G-Body Garage",
+      "channel": "Classic GBody Garage",
+      "views": 137412
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 378464,
+     "n": 4,
+     "best": {
+      "id": "2YCfPaHa7V0",
+      "title": "2002 chevy cavalier . pontiac sunfire remove ignition lock cylinder",
+      "channel": "Silent Mechanic",
+      "views": 205238
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 252304,
+     "n": 6,
+     "best": {
+      "id": "HcdDoF-gBCw",
+      "title": "Combination switch replacement Turn signal switch Chevrolet Cavalier 2002 Pontaic Sunfire",
+      "channel": "Fixing cars and stuff",
+      "views": 101656
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 247143,
+     "n": 2,
+     "best": {
+      "id": "w-Yiibx3b4s",
+      "title": "2002 Chevy Cavalier Power Window Repair - EricTheCarGuy",
+      "channel": "EricTheCarGuy",
+      "views": 236616
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "uOHvzlnRnMw",
+     "title": "1996 Cavalier Problems....We Have No Brakes",
+     "channel": "TechMaster2133",
+     "views": 9976
+    },
+    {
+     "id": "mAKdyOUas8k",
+     "title": "Regular Car Reviews: 1996 Chevrolet Cavalier Z24",
+     "channel": "Regular Car Reviews",
+     "views": 915618
+    },
+    {
+     "id": "RFnyBcnCrsM",
+     "title": "MotorWeek | Retro Review: '95 Chevrolet Cavalier",
+     "channel": "MotorWeek",
+     "views": 212406
+    }
+   ],
+   "costs": null
+  }
+ ],
  "chevrolet-express": [
   {
    "years": [

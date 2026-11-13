@@ -22245,5 +22245,62 @@
 }
 ]
 }
+],
+"chevrolet-cavalier": [
+{
+"sid": "chevrolet-cavalier-g3",
+"y0": 1995,
+"y1": 2005,
+"label": "1995–2005",
+"videos": 197,
+"praise": [
+[
+"Reliability",
+6
+],
+[
+"Looks",
+5
+]
+],
+"trouble": [
+[
+"Coolant leaks / water pump / overheating",
+6
+],
+[
+"Electrical / wiring / TIPM",
+5
+],
+[
+"Rust",
+5
+],
+[
+"Fuel pump / fuel system",
+4
+]
+],
+"top": [
+{
+"id": "mAKdyOUas8k",
+"title": "Regular Car Reviews: 1996 Chevrolet Cavalier Z24",
+"views": 915618,
+"ch": "Regular Car Reviews"
+},
+{
+"id": "RFnyBcnCrsM",
+"title": "MotorWeek | Retro Review: '95 Chevrolet Cavalier",
+"views": 212406,
+"ch": "MotorWeek"
+},
+{
+"id": "ZNYcZm672r8",
+"title": "Watch This BEFORE You Buy a 3rd Gen Chevy Cavalier Z24 (1995-2005)",
+"views": 91835,
+"ch": "Mr Random Reviews"
+}
+]
+}
 ]
 }
