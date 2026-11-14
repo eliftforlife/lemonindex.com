@@ -65264,7 +65264,26 @@
      "views": 168171
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 800,
+       "lo": 800.0,
+       "hi": 5000.0,
+       "n": 5,
+       "videos": 5,
+       "id": "QZm5Okcc6sg",
+       "t": 222,
+       "title": "2020 Volvo XC60 | Polestar Engineered | Steve Hammes"
+      }
+     ]
+    ]
+   }
   }
  ],
  "ram-promaster": [
@@ -66500,7 +66519,26 @@
      "views": 149249
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 700,
+       "lo": 20.0,
+       "hi": 1000.0,
+       "n": 3,
+       "videos": 3,
+       "id": "dzO75-M_Yy4",
+       "t": 336,
+       "title": "Wheelchair/Mobility 2007 Chevrolet Uplander (0237), 208k miles, $6,900"
+      }
+     ]
+    ]
+   }
   }
  ],
  "ford-transit-connect": [
