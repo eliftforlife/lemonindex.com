@@ -28284,5 +28284,53 @@
 }
 ]
 }
+],
+"fisker-ocean": [
+{
+"sid": "fisker-ocean-g1",
+"y0": 2023,
+"y1": 2024,
+"label": "2023–2024",
+"videos": 61,
+"praise": [
+[
+"Looks",
+10
+],
+[
+"Reliability",
+7
+],
+[
+"Fun to drive",
+7
+],
+[
+"Comfort and ride",
+5
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "mGV5OlVWwgY",
+"title": "2023 Fisker Ocean review: super-stylish electric SUV with a couple of tricks up its sleeve...",
+"views": 146829,
+"ch": "Auto Express"
+},
+{
+"id": "GZXmdxzq6qw",
+"title": "FIRST DRIVE: 2024 Fisker Ocean: is Fisker’s electric SUV worth the wait? | Electrifying",
+"views": 121079,
+"ch": "Electrifying"
+},
+{
+"id": "BFeSbq9koQI",
+"title": "2023 Fisker Ocean Early Review | Consumer Reports",
+"views": 78522,
+"ch": "Consumer Reports"
+}
+]
+}
 ]
 }
