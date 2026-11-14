@@ -28431,5 +28431,91 @@
 }
 ]
 }
+],
+"kia-spectra": [
+{
+"sid": "kia-spectra-g1",
+"y0": 2000,
+"y1": 2004,
+"label": "2000–2004",
+"videos": 199,
+"praise": [
+[
+"Reliability",
+7
+],
+[
+"Fun to drive",
+5
+],
+[
+"Power",
+4
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "8mEK0UklDZM",
+"title": "2003 Kia Spectra: Regular Car Reviews",
+"views": 542046,
+"ch": "Regular Car Reviews"
+},
+{
+"id": "VGtHbBNH8gU",
+"title": "SOLD 2004 Kia Spectra EX 55K Miles Meticulous Motors Inc Florida For Sale",
+"views": 28867,
+"ch": "MeticulousMotors"
+},
+{
+"id": "Sdaw4Z1a7KA",
+"title": "2002 Kia Spectra - Known Problemsd",
+"views": 19507,
+"ch": "rod holum"
+}
+]
+},
+{
+"sid": "kia-spectra-g2",
+"y0": 2005,
+"y1": 2009,
+"label": "2005–2009",
+"videos": 197,
+"praise": [
+[
+"Looks",
+5
+],
+[
+"Reliability",
+4
+],
+[
+"Fun to drive",
+3
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "P91Y34trNgI",
+"title": "KIA Spectra (2008). The real truth, look before you buy.",
+"views": 142415,
+"ch": "VIN channel"
+},
+{
+"id": "o5RJK_A0Q9Q",
+"title": "2007 Kia Spectra EX **One Owner, Locally Owned** Stock #PK5454",
+"views": 66868,
+"ch": "rontonkinkia"
+},
+{
+"id": "FQFWprSEl0c",
+"title": "Review: 2005 Kia Spectra 5",
+"views": 57221,
+"ch": "MyRide on Autobytel"
+}
+]
+}
 ]
 }

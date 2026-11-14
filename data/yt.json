@@ -64536,7 +64536,26 @@
      "views": 60212
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 300,
+       "lo": 120.0,
+       "hi": 1000.0,
+       "n": 3,
+       "videos": 3,
+       "id": "-1BV35NtgSo",
+       "t": 112,
+       "title": "How to replace change Headlight bulb in 2007-2015 Mitsubishi Lancer"
+      }
+     ]
+    ]
+   }
   }
  ],
  "fiat-500": [
