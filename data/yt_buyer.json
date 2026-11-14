@@ -28188,5 +28188,53 @@
 }
 ]
 }
+],
+"mazda-rx-8": [
+{
+"sid": "mazda-rx-8-g1",
+"y0": 2004,
+"y1": 2011,
+"label": "2004–2011",
+"videos": 198,
+"praise": [
+[
+"Fun to drive",
+16
+],
+[
+"Power",
+11
+],
+[
+"Reliability",
+11
+],
+[
+"Looks",
+8
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "ffu0chtm-CY",
+"title": "Regular Car Reviews: 2006 Mazda RX-8",
+"views": 1808368,
+"ch": "Regular Car Reviews"
+},
+{
+"id": "DQ75NwIhl20",
+"title": "2004 Mazda RX-8 6MT Review, Walkaround, Exhaust & Test Drive",
+"views": 673562,
+"ch": "Redline Reviews"
+},
+{
+"id": "xVTkf-PuU5s",
+"title": "Review: 2004 Mazda RX-8",
+"views": 668860,
+"ch": "Matt Maran Motoring"
+}
+]
+}
 ]
 }
