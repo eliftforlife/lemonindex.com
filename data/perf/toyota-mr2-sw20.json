@@ -17,10 +17,10 @@
  },
  "us": {
   "sold": true,
-  "x": "Sold new in the US for model years 1991 to 1995, as the non-turbo MR2 (2.2-liter 5S-FE) and the MR2 Turbo (2.0-liter 3S-GTE). Canada lost it after 1993. Japan kept building it until August 1999. Toyota sold 33,111 in the US and Canada from 1990 to 1995.",
+  "x": "Sold new in the US for model years 1991 to 1995, as the non-turbo MR2 (2.2-liter 5S-FE) and the MR2 Turbo (2.0-liter 3S-GTE). Canadian sales ended after 1993. Japan kept building it until August 1999.",
   "src": [
-   "hag",
-   "wpm"
+   "wpm",
+   "cg"
   ]
  },
  "fame": [
@@ -36,11 +36,11 @@
   {
    "t": "Snap oversteer",
    "k": "Name",
-   "x": "Early cars could snap into oversteer when the driver lifted off mid-corner, and the first Turbo earned the nickname widow maker. Toyota revised the rear suspension and went from 14-inch to 15-inch wheels for 1993, which helped a lot.",
+   "x": "The SW20 is known for snap oversteer, and CarThrottle says it was called the widow maker. For 1993 Toyota revised the rear suspension, with longer rear toe links and wider 15-inch tires, to cut rear-end breakaway in hard corners.",
    "src": [
-    "hag",
+    "wpm",
     "ct9",
-    "wpm"
+    "cg"
    ]
   },
   {
@@ -55,10 +55,9 @@
   {
    "t": "A tuner’s car",
    "k": "Tuning",
-   "x": "The 3S-GTE takes more boost well. CarThrottle says the stock turbo and internals handle roughly 280 to 300 bhp on 1 bar, and a fully built engine about 350 to 400 bhp. Hagerty calls the MR2 such a tunable car that keeping them stock would be almost tragic.",
+   "x": "The 3S-GTE takes more boost well. CarThrottle says the stock turbo can give roughly 280 to 300 bhp on a safe 1 bar of boost, and a fully built engine about 350 to 400 bhp.",
    "src": [
-    "ct9",
-    "hag"
+    "ct9"
    ]
   }
  ],
@@ -95,7 +94,6 @@
      "hp": {
       "v": 200,
       "src": [
-       "hag",
        "wps",
        "cg"
       ],
@@ -104,7 +102,6 @@
      "tq": {
       "v": 200,
       "src": [
-       "hag",
        "wps",
        "cg"
       ],
@@ -135,7 +132,7 @@
        "ctt",
        "wpm"
       ],
-      "note": "manual only, stronger E153 gearbox; limited-slip differential from 1993 (optional per Hagerty, standard on US cars per CarThrottle)"
+      "note": "manual only, with a stronger gearbox than the non-turbo car; a viscous limited-slip differential from 1993 (an option per Wikipedia, standard on 1993-on US cars per CarThrottle)"
      },
      "weight": {
       "v": "2,734 lb",
@@ -151,10 +148,9 @@
       ],
       "note": "1991 base; $29,238 by 1995"
      },
-     "what": "The 3S-GTE turbo with a side-mounted intercooler, manual only. 1993 brought the revised rear suspension, 15-inch wheels and bigger brakes; 1994 brought new taillights and a smaller wing.",
+     "what": "The 3S-GTE turbo with an air-to-air intercooler, manual only. 1993 brought the revised rear suspension, 15-inch wheels and bigger brakes; 1994 brought round taillights and a one-piece rear wing.",
      "what_src": [
-      "wps",
-      "hag",
+      "wpm",
       "cg"
      ]
     },
@@ -166,19 +162,18 @@
      "hp": {
       "v": 130,
       "src": [
-       "hag",
        "wps",
        "cg"
       ],
       "note": "at 5,400 rpm, 1991–92; 135 hp from 1993"
      },
      "tq": {
-      "v": 145,
+      "v": 144,
       "src": [
-       "hag",
-       "wps"
+       "wps",
+       "cg"
       ],
-      "note": "lb-ft; Wikipedia gives 144 lb-ft at 4,400 rpm for 1991–92"
+      "note": "lb-ft at 4,400 rpm, 1991–92; 145 lb-ft from 1993 (Wikipedia; Consumer Guide lists 140–145)"
      },
      "z60": {
       "v": 8.5,
@@ -203,9 +198,9 @@
       ],
       "note": "1991 non-turbo"
      },
-     "what": "A 2.2-liter non-turbo four with its torque low down; Hagerty says there was little point revving it to its 6,250 rpm limit. Turbo cars now sell for about double.",
+     "what": "A 2.2-liter twin-cam four shared with the Celica GT and GT-S. It was the only MR2 you could get with an automatic (4-speed); the Turbo was manual only.",
      "what_src": [
-      "hag"
+      "cg"
      ]
     },
     {
@@ -266,8 +261,7 @@
      "Output",
      "200 hp at 6,000 rpm, 200 lb-ft at 3,200 rpm in the US MR2 Turbo; 245 PS (242 hp) in later Japanese MR2s",
      [
-      "wps",
-      "hag"
+      "wps"
      ]
     ],
     [
@@ -354,10 +348,9 @@
    "facts": [
     [
      "Layout",
-     "Inline-4, DOHC, mounted behind the driver",
+     "Inline-4, DOHC 16-valve, mounted transversely behind the cockpit",
      [
-      "cg",
-      "hag"
+      "cg"
      ]
     ],
     [
@@ -365,7 +358,6 @@
      "130 hp at 5,400 rpm (1991–92), 135 hp at 5,400 rpm (1993–95); 144–145 lb-ft at 4,400 rpm",
      [
       "wps",
-      "hag",
       "cg"
      ]
     ],
@@ -380,7 +372,7 @@
      "Used in",
      "US MR2 (non-turbo), 1991–1995",
      [
-      "hag",
+      "wpm",
       "cg"
      ]
     ]
@@ -425,11 +417,6 @@
    "t": "Wikipedia: 1998 All Japan Grand Touring Car Championship",
    "u": "https://en.wikipedia.org/wiki/1998_All_Japan_Grand_Touring_Car_Championship",
    "k": "Wikipedia"
-  },
-  "hag": {
-   "t": "Hagerty: Your handy 1991–95 Toyota MR2 (MKII) buyer’s guide (Bryan Gerould, Oct 2022)",
-   "u": "https://www.hagerty.com/media/buying-and-selling/1991-95-toyota-mr2-mkii-buyers-guide/",
-   "k": "outlet"
   },
   "ctt": {
    "t": "CarThrottle: Used car buying guide: 2nd generation Toyota MR2 Turbo (updated Oct 2024)",
