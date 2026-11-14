@@ -1,0 +1,432 @@
+{
+ "slug": "nissan-silvia-s15",
+ "name": "Nissan Silvia (S15)",
+ "short": "Silvia",
+ "make": "Nissan",
+ "page": "/jdm/nissan-silvia-s15/",
+ "jdm": true,
+ "focus": "s15",
+ "star": "s15-specr",
+ "h1": "Nissan Silvia S15: specs, SR20DET engine and what owners say",
+ "us": {
+  "sold": false,
+  "x": "Never sold new in the US. Nissan sold the S15 new in Japan, Australia and New Zealand (as the 200SX there) and Indonesia; US cars are grey imports. Each car becomes legal to import under the 25-year rule once it is 25 years old by its month of build. S15s were built from January 1999 to August 2002, so the first ones qualified in January 2024 and the last ones qualify in 2027.",
+  "src": [
+   "wpsil",
+   "drive34",
+   "jal25"
+  ]
+ },
+ "fame": [
+  {
+   "t": "D1 Grand Prix",
+   "k": "Drifting",
+   "x": "The S15 is the most successful car in Japan’s D1 Grand Prix drift series. Wikipedia’s list of champions shows S15 drivers winning 12 titles from 2001 to 2022, including the very first, with 8 different drivers.",
+   "src": [
+    "wpd1",
+    "wpsil"
+   ]
+  },
+  {
+   "t": "The Fast and the Furious: Tokyo Drift",
+   "k": "Film",
+   "x": "Han lends Sean his S15, and Sean wrecks it in his first race against Takashi. Its engine and parts then go into the Mustang for the final race, and Sean ends the film in an S15 Spec-R. Top Gear Netherlands calls the film car the “Mona Lisa” of the drift world.",
+   "src": [
+    "wptd",
+    "tgnl"
+   ]
+  },
+  {
+   "t": "The last Silvia",
+   "k": "Name",
+   "x": "Nissan stopped building the S platform in August 2002, as it cut down its many platforms. The S15 was the final Silvia.",
+   "src": [
+    "wpsil"
+   ]
+  },
+  {
+   "t": "Initial D",
+   "k": "Anime",
+   "x": "S15 Silvia Spec-Rs show up in Initial D, driven by Hiroya Okuyama and by the “Two Guys From Tokyo”.",
+   "src": [
+    "ctid"
+   ]
+  }
+ ],
+ "related": [
+  {
+   "u": "/jdm/nissan-240sx-s14/",
+   "t": "Nissan 240SX S14 (the US car before it)"
+  },
+  {
+   "u": "/engines/nissan-ka24de/",
+   "t": "The US 240SX’s engine, the KA24DE"
+  }
+ ],
+ "topics_extra": {
+  "Turbo / oil smoke": "white smoke|blue smoke|burn(s|ing)? oil|turbo (failure|failed|blew|blown|whine|noise)",
+  "Start-up rattle": "rattle (on|at) (cold )?start|start-?up rattle|\\bvtc\\b|\\bvvt\\b|cam (gear|sprocket)",
+  "Exhaust / turbo gasket leaks": "manifold (leak|crack)|exhaust leak|turbo gasket",
+  "Clutch / gearbox": "\\bclutch\\b|synchros?|grind(s|ing)? (into|in)? ?gear|gearbox (noise|whine)",
+  "Modified / drift cars": "drift tax|roll ?cage|\\bmodified\\b|bigger turbo|aftermarket ecu",
+  "Rust": "\\brust(ed|ing|y)?\\b|body filler|wheel ?arch"
+ },
+ "gens": [
+  {
+   "id": "s15",
+   "code": "S15",
+   "years": "1999–2002",
+   "y0": 1999,
+   "y1": 2002,
+   "engine": "SR20DET",
+   "body": "Coupe",
+   "tag": "2.0-liter SR20DET turbo inline-4, 250 PS (247 hp), 6-speed, rear-drive. Japan, Australia and New Zealand.",
+   "variants": [
+    {
+     "id": "s15-specs",
+     "name": "Silvia Spec-S",
+     "years": "1999–2002",
+     "engine": "SR20DE",
+     "hp": {
+      "v": 163,
+      "src": [
+       "wpsil",
+       "guls"
+      ],
+      "note": "165 PS at 6,400 rpm, no turbo (JDM)"
+     },
+     "tq": {
+      "v": 142,
+      "src": [
+       "guls"
+      ],
+      "note": "lb-ft at 4,800 rpm (192 Nm, 19.6 kgm; converted from Nm, JDM)"
+     },
+     "trans": {
+      "v": "5-speed manual or 4-speed automatic, rear-drive",
+      "src": [
+       "wpsil",
+       "mfs15"
+      ],
+      "note": "open differential; a viscous limited-slip was optional"
+     },
+     "weight": {
+      "v": "1,200 kg (2,646 lb)",
+      "src": [
+       "guls",
+       "wpsil"
+      ],
+      "note": "5-speed manual, JDM"
+     },
+     "price": {
+      "v": "¥1,770,000",
+      "src": [
+       "guls",
+       "mfs15"
+      ],
+      "note": "Japan, January 1999, 5-speed manual"
+     },
+     "what": "The base car, with the non-turbo SR20DE.",
+     "what_src": [
+      "wpsil"
+     ]
+    },
+    {
+     "id": "s15-specr",
+     "name": "Silvia Spec-R",
+     "years": "1999–2002",
+     "star": true,
+     "hp": {
+      "v": 247,
+      "src": [
+       "wpsil",
+       "gulr"
+      ],
+      "note": "250 PS at 6,400 rpm, 6-speed manual car (JDM)"
+     },
+     "tq": {
+      "v": 203,
+      "src": [
+       "wpsil",
+       "gulr"
+      ],
+      "note": "lb-ft at 4,800 rpm (275 Nm, JDM)"
+     },
+     "trans": {
+      "v": "6-speed manual or 4-speed automatic, rear-drive",
+      "src": [
+       "wpsil",
+       "mfs15"
+      ],
+      "note": "helical limited-slip differential"
+     },
+     "weight": {
+      "v": "1,240 kg (2,734 lb)",
+      "src": [
+       "gulr"
+      ],
+      "note": "6-speed manual, JDM"
+     },
+     "price": {
+      "v": "¥2,390,000",
+      "src": [
+       "gulr",
+       "mfs15"
+      ],
+      "note": "Japan, January 1999, 6-speed manual"
+     },
+     "what": "The turbo car: the SR20DET with a ball-bearing turbo, a 6-speed manual and a helical limited-slip differential. An Aero version added a big rear wing, side skirts and new bumpers.",
+     "what_src": [
+      "wpsil"
+     ]
+    },
+    {
+     "id": "s15-varietta",
+     "name": "Silvia Varietta",
+     "years": "2000–2002",
+     "engine": "SR20DE",
+     "trans": {
+      "v": "5-speed manual or 4-speed automatic, rear-drive",
+      "src": [
+       "mfs15"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "¥2,800,000",
+      "src": [
+       "mfs15"
+      ],
+      "note": "Japan, July 2000, 5-speed manual"
+     },
+     "what": "A convertible with a folding hardtop, built by Autech on the Spec-S with the non-turbo engine. Only 1,143 were built.",
+     "what_src": [
+      "wpsil"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "SR20DET": {
+   "name": "Nissan SR20DET",
+   "what": "2.0-liter inline-4, turbo",
+   "study": "nissan-sr20det",
+   "page": "/engines/nissan-sr20det/",
+   "yt": [
+    "scy",
+    "nissan-sr20det"
+   ],
+   "facts": [
+    [
+     "Layout",
+     "Inline-4, DOHC 16-valve, aluminum block with steel sleeves, aluminum head, timing chain",
+     [
+      "wpsr"
+     ]
+    ],
+    [
+     "Output",
+     "250 PS (247 hp) at 6,400 rpm, 275 Nm (203 lb-ft) at 4,800 rpm in the S15 Spec-R",
+     [
+      "wpsil",
+      "gulr"
+     ]
+    ],
+    [
+     "Bore x stroke",
+     "86 x 86 mm, 1,998 cc",
+     [
+      "wpsr"
+     ]
+    ],
+    [
+     "Turbo",
+     "One turbo; the S15 got a ball-bearing unit, which lifted output to 250 PS",
+     [
+      "wpsil"
+     ]
+    ],
+    [
+     "Compression",
+     "8.5:1 in the S15 Spec-R",
+     [
+      "gulr"
+     ]
+    ],
+    [
+     "Used in",
+     "Silvia from the S13 in 1991 to the S15 in 2002",
+     [
+      "wpsr"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Camshaft wear from skipped oil changes",
+     "kind": "Outlet report",
+     "rx": "cam(shaft)? (wear|worn)|worn cam(shaft)?s?|cam lobes?|sludge",
+     "x": "Auto Express says the SR20DET can wear its camshafts fast when oil changes have been skipped. CarsGuide says to look under the oil filler cap for sludge, and to check that the oil on the dipstick is clean.",
+     "fix": "",
+     "src": [
+      "ae200",
+      "cg200"
+     ]
+    },
+    {
+     "t": "Rattle on start-up",
+     "kind": "Outlet report",
+     "rx": "rattle (on|at) (cold )?start|start-?up rattle|\\bvtc\\b|\\bvvt\\b",
+     "x": "Auto Express says a rattle on start-up can mean the variable valve timing system is worn. It wrote this about the S14 200SX, which used the same SR20DET.",
+     "fix": "",
+     "src": [
+      "ae200"
+     ]
+    },
+    {
+     "t": "Turbo gasket and exhaust manifold leaks",
+     "kind": "Outlet report",
+     "rx": "manifold (leak|crack)|exhaust leak|turbo gasket|blown gasket",
+     "x": "Auto Express says blown turbo gaskets are common and make the car very noisy at idle, and that exhaust manifolds are a weak point that can leak.",
+     "fix": "",
+     "src": [
+      "ae200"
+     ]
+    },
+    {
+     "t": "Turbo burning oil",
+     "kind": "Outlet report",
+     "rx": "white smoke|blue smoke|burn(s|ing)? oil|turbo (failure|failed|blew|blown|seal)",
+     "x": "Retro Rides says white exhaust smoke means the turbo is burning oil. Auto Express adds that many of these turbos are now old, and CarsGuide warns that owners often fit bigger turbos and new electronics, so take care with modified cars.",
+     "fix": "",
+     "src": [
+      "rr15",
+      "ae200",
+      "cg200"
+     ]
+    }
+   ],
+   "photo": {
+    "src": "/assets/engines/nissan-sr20det-2-0-l-inline-4-turbo-engine.webp",
+    "w": 1200,
+    "h": 1080,
+    "ai": true
+   }
+  },
+  "SR20DE": {
+   "name": "Nissan SR20DE",
+   "what": "2.0-liter inline-4, no turbo",
+   "yt": [
+    "scy",
+    ""
+   ],
+   "facts": [
+    [
+     "Layout",
+     "Inline-4, DOHC 16-valve, aluminum block and head, timing chain",
+     [
+      "wpsr"
+     ]
+    ],
+    [
+     "Output",
+     "165 PS (163 hp) at 6,400 rpm, 192 Nm (142 lb-ft) at 4,800 rpm in the S15 Spec-S",
+     [
+      "wpsil",
+      "guls"
+     ]
+    ],
+    [
+     "Bore x stroke",
+     "86 x 86 mm, 1,998 cc",
+     [
+      "wpsr"
+     ]
+    ],
+    [
+     "Compression",
+     "10.0:1 in the S15 Spec-S",
+     [
+      "guls"
+     ]
+    ]
+   ],
+   "issues": []
+  }
+ },
+ "compare": [],
+ "sources": {
+  "wpsil": {
+   "t": "Wikipedia: Nissan Silvia",
+   "u": "https://en.wikipedia.org/wiki/Nissan_Silvia",
+   "k": "Wikipedia"
+  },
+  "wpsr": {
+   "t": "Wikipedia: Nissan SR engine",
+   "u": "https://en.wikipedia.org/wiki/Nissan_SR_engine",
+   "k": "Wikipedia"
+  },
+  "wpd1": {
+   "t": "Wikipedia: D1 Grand Prix (list of champions)",
+   "u": "https://en.wikipedia.org/wiki/D1_Grand_Prix",
+   "k": "Wikipedia"
+  },
+  "wptd": {
+   "t": "Wikipedia: The Fast and the Furious: Tokyo Drift",
+   "u": "https://en.wikipedia.org/wiki/The_Fast_and_the_Furious:_Tokyo_Drift",
+   "k": "Wikipedia"
+  },
+  "gulr": {
+   "t": "Gulliver (221616.com) new-car catalog: Nissan Silvia Spec R, S15 (Jan 1999), maker specifications",
+   "u": "https://221616.com/catalog/nissan/silvia/199901_200211/1502079/",
+   "k": "catalog"
+  },
+  "guls": {
+   "t": "Gulliver (221616.com) new-car catalog: Nissan Silvia Spec S, S15 (Jan 1999), maker specifications",
+   "u": "https://221616.com/catalog/nissan/silvia/199901_200211/1502003/",
+   "k": "catalog"
+  },
+  "mfs15": {
+   "t": "Motor-Fan catalog: Nissan Silvia, every grade and price (1999–2002)",
+   "u": "https://car.motor-fan.jp/catalog/NISSAN/10151016",
+   "k": "catalog"
+  },
+  "cg200": {
+   "t": "CarsGuide: Used Nissan 200SX review: 1996-2003 (Graham Smith, Jan 2009)",
+   "u": "https://www.carsguide.com.au/car-reviews/used-car-review-nissan-200sx-1996-2003-13314",
+   "k": "outlet"
+  },
+  "ae200": {
+   "t": "Auto Express: Nissan 200SX/Silvia S14 buying guide and review, 1995-2000 (Auto Express team, Nov 2018)",
+   "u": "https://www.autoexpress.co.uk/nissan/104944/nissan-200sxsilvia-s14-buying-guide-and-review-1995-2000",
+   "k": "outlet"
+  },
+  "rr15": {
+   "t": "Retro Rides: Top tips for buying a used Nissan Silvia S13-S15, 1988-2002 (Cliff Chambers, Aug 2025)",
+   "u": "https://retrorides.com.au/?p=10596",
+   "k": "outlet"
+  },
+  "tgnl": {
+   "t": "Top Gear Netherlands: Nissan Silvia S15 ‘Mona Lisa’ te koop (Mattijn Nederend, May 2019)",
+   "u": "https://topgear.nl/autonieuws/nissan-silvia-s15-mona-lisa-te-koop",
+   "k": "outlet"
+  },
+  "ctid": {
+   "t": "Car Throttle: Every car from Initial D, and our top 10 ranked (Ryan Hirons, Feb 2025)",
+   "u": "https://www.carthrottle.com/news/every-car-initial-d-and-our-top-10-ranked",
+   "k": "outlet"
+  },
+  "jal25": {
+   "t": "Jalopnik: The 25-year import rule’s history is more complicated than you think (Mercedes Streeter, Jan 2022)",
+   "u": "https://jalopnik.com/the-25-year-import-rules-history-is-more-complicated-th-1848322467",
+   "k": "outlet"
+  },
+  "drive34": {
+   "t": "The Drive: The R34 Nissan Skyline GT-R is finally legal for U.S. import in January (Nico DeMattia, Dec 2023)",
+   "u": "https://www.thedrive.com/news/brace-yourselves-r34-nissan-skyline-gt-rs-become-legal-to-import-next-year",
+   "k": "outlet"
+  }
+ },
+ "yt_study": "car-nissan-silvia-s15"
+}

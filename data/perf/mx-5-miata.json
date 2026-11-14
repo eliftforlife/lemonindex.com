@@ -26,6 +26,162 @@
  },
  "gens": [
   {
+   "id": "na",
+   "code": "NA",
+   "years": "1990–1997",
+   "y0": 1990,
+   "y1": 1997,
+   "engine": "B6ZE",
+   "yt_study": "car-mx-5-miata-na",
+   "body": "Roadster",
+   "tag": "1.6 four (116 hp) for 1990–93, 1.8 four (128–133 hp) for 1994–97. Pop-up headlights.",
+   "variants": [
+    {
+     "id": "na-90",
+     "name": "MX-5 Miata 1.6",
+     "years": "1990–1993",
+     "hp": {
+      "v": 116,
+      "src": [
+       "cg",
+       "wmx5"
+      ],
+      "note": "at 6,500 rpm; 105 hp with the automatic"
+     },
+     "tq": {
+      "v": 100,
+      "src": [
+       "cg",
+       "wna"
+      ],
+      "note": "lb-ft at 5,500 rpm"
+     },
+     "z60": {
+      "v": 9.2,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "5-speed manual, rear-drive",
+      "src": [
+       "cg",
+       "wna"
+      ],
+      "note": "4-speed automatic added late in the 1990 model year"
+     },
+     "weight": {
+      "v": "2,160 lb",
+      "src": [
+       "wna"
+      ],
+      "note": "980 kg without options"
+     },
+     "price": {
+      "v": "$13,995",
+      "src": [
+       "wna"
+      ],
+      "note": "1990 US base list price"
+     },
+     "what": "The original Miata: a 1.6 twin-cam four, pop-up headlights and a body that Wikipedia says used the Lotus Elan as a design benchmark.",
+     "what_src": [
+      "wna",
+      "wmx5"
+     ]
+    },
+    {
+     "id": "na-94",
+     "name": "MX-5 Miata 1.8",
+     "years": "1994–1997",
+     "engine": "BPZE",
+     "hp": {
+      "v": 128,
+      "src": [
+       "cg",
+       "wna"
+      ],
+      "note": "at 6,500 rpm, 1994–95; 133 hp from 1996"
+     },
+     "tq": {
+      "v": 110,
+      "src": [
+       "cg"
+      ],
+      "note": "lb-ft, 1994–95; 114 lb-ft from 1996"
+     },
+     "z60": {
+      "v": 8.8,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "5-speed manual, rear-drive",
+      "src": [
+       "cg",
+       "wna"
+      ],
+      "note": "4-speed automatic optional, with electronic shift control from 1994"
+     },
+     "weight": {
+      "v": "2,183 lb",
+      "src": [
+       "wna"
+      ],
+      "note": "990 kg base weight"
+     },
+     "what": "A bigger 1.8 engine and extra bracing; dual air bags came the same year. The 1996 update added 5 hp and 4 lb-ft.",
+     "what_src": [
+      "wna",
+      "huk",
+      "cg"
+     ]
+    },
+    {
+     "id": "na-r",
+     "name": "MX-5 Miata R Package",
+     "years": "1994–1997",
+     "pkg": "na-94",
+     "engine": "BPZE",
+     "hp": {
+      "v": 128,
+      "src": [
+       "cg"
+      ],
+      "note": "1994–95; 133 hp from 1996"
+     },
+     "z60": {
+      "v": 8.2,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "5-speed manual, rear-drive",
+      "src": [
+       "cg",
+       "wna"
+      ],
+      "note": ""
+     },
+     "what": "Bilstein shocks, stiffer anti-roll bars and a Torsen limited-slip differential. Wikipedia counts 1,841 US cars.",
+     "what_src": [
+      "wna"
+     ]
+    }
+   ]
+  },
+  {
    "id": "nb",
    "code": "NB",
    "years": "2000–2005",
@@ -501,6 +657,173 @@
   }
  ],
  "engines": {
+  "B6ZE": {
+   "name": "Mazda B6ZE 1.6",
+   "what": "1.6-liter inline-4",
+   "yt": [
+    "scy",
+    ""
+   ],
+   "facts": [
+    [
+     "Layout",
+     "Inline-4, DOHC 16-valve, 1,598 cc",
+     [
+      "huk",
+      "webcg"
+     ]
+    ],
+    [
+     "Output",
+     "116 hp, 100 lb-ft (US manual); 105 hp automatic; 120 PS in Japan",
+     [
+      "cg",
+      "webcg"
+     ]
+    ],
+    [
+     "Rev peaks",
+     "Peak power at 6,500 rpm, peak torque at 5,500 rpm",
+     [
+      "wna",
+      "webcg"
+     ]
+    ],
+    [
+     "Light parts",
+     "Lightened crankshaft and flywheel, finned aluminum oil pan",
+     [
+      "wna"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Short-nose crankshaft (1990–1991)",
+     "kind": "Outlet report",
+     "rx": "short[- ]?nose|keyway|crank(shaft)? (pulley|key|bolt)|pulley wobble",
+     "x": "Gear Patrol says 1990 and 1991 cars have a short crankshaft nose whose keyway can wear over time. Hagerty UK says these early cars have four slots in the bottom pulley instead of eight, and if its bolt was tightened wrong the pulley can work loose and damage the crank.",
+     "fix": "",
+     "src": [
+      "gp",
+      "huk"
+     ]
+    },
+    {
+     "t": "Lifter tick",
+     "kind": "Outlet report",
+     "rx": "lifters?|lash adjusters?|tick(ing)?|tapping",
+     "x": "Consumer Guide lists ticking from the top of 1990–1993 engines, blamed on the hydraulic lash adjusters and poor oil flow through them.",
+     "fix": "Consumer Guide says redesigned parts are available.",
+     "src": [
+      "cg"
+     ]
+    },
+    {
+     "t": "Timing belt tensioner",
+     "kind": "Outlet report",
+     "rx": "timing belt|tensioner",
+     "x": "Consumer Guide says a revised, stronger timing belt tensioner pulley replaces the original on 1990–1994 cars.",
+     "fix": "Fit the revised tensioner pulley.",
+     "src": [
+      "cg"
+     ]
+    },
+    {
+     "t": "Rust",
+     "kind": "Outlet report",
+     "rx": "\\brust(ed|ing|y)?\\b|rockers?|sills?",
+     "x": "Hagerty UK says rust shows first at the bottom of the rear wings, then the sills, rear arches and floor. Gear Patrol points to the rear rockers, where drains clog.",
+     "fix": "",
+     "src": [
+      "huk",
+      "gp"
+     ]
+    }
+   ]
+  },
+  "BPZE": {
+   "name": "Mazda BP-ZE 1.8",
+   "what": "1.8-liter inline-4",
+   "yt": [
+    "scy",
+    ""
+   ],
+   "facts": [
+    [
+     "Layout",
+     "Inline-4, DOHC 16-valve, 1,839 cc",
+     [
+      "huk"
+     ]
+    ],
+    [
+     "Output",
+     "128 hp, 110 lb-ft (1994–95); 133 hp, 114 lb-ft from 1996",
+     [
+      "cg"
+     ]
+    ],
+    [
+     "Rev peak",
+     "Peak power at 6,500 rpm",
+     [
+      "cg",
+      "wna"
+     ]
+    ],
+    [
+     "Flywheel",
+     "A lighter flywheel came with Japan’s August 1995 facelift",
+     [
+      "mzc"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Cam angle sensor oil leak",
+     "kind": "Outlet report",
+     "rx": "cam(shaft)? angle sensor|\\bcas\\b|oil leak",
+     "x": "Hagerty UK says the oil leak to worry about on the 1.8 comes from the camshaft angle sensor, and the drip can rot a heater hose.",
+     "fix": "",
+     "src": [
+      "huk"
+     ]
+    },
+    {
+     "t": "Timing belt tensioner (1994)",
+     "kind": "Outlet report",
+     "rx": "timing belt|tensioner",
+     "x": "Consumer Guide says a revised, stronger timing belt tensioner pulley replaces the original on 1990–1994 cars.",
+     "fix": "Fit the revised tensioner pulley.",
+     "src": [
+      "cg"
+     ]
+    },
+    {
+     "t": "Air bag recall (1995)",
+     "kind": "Recall",
+     "rx": "air ?bags?",
+     "x": "Consumer Guide lists a recall for 1995 cars: the air bag could go off after a minor hit to the underside of the car.",
+     "fix": "",
+     "src": [
+      "cg"
+     ]
+    },
+    {
+     "t": "Rust",
+     "kind": "Outlet report",
+     "rx": "\\brust(ed|ing|y)?\\b|rockers?|sills?",
+     "x": "Hagerty UK says rust shows first at the bottom of the rear wings, then the sills, rear arches and floor. Gear Patrol points to the rear rockers, where drains clog.",
+     "fix": "",
+     "src": [
+      "huk",
+      "gp"
+     ]
+    }
+   ]
+  },
   "BP": {
    "name": "Mazda BP 1.8",
    "what": "1.8-liter inline-4 (turbo in the Mazdaspeed)",
@@ -744,6 +1067,101 @@
    "name": "Lotus Elise / Exige"
   }
  ],
+ "fame": [
+  {
+   "t": "Guinness World Records",
+   "k": "Records",
+   "x": "In May 2000, with 531,890 built, Guinness World Records certified the MX-5 as the world’s best-selling two-seat sports car. The NA started that run: 431,506 were made from 1989 to 1997.",
+   "src": [
+    "mzn11",
+    "wmx5",
+    "wna"
+   ]
+  },
+  {
+   "t": "Spec Miata",
+   "k": "Racing",
+   "x": "Spec Miata began as an SCCA regional class for 1990–1997 cars in 1999 and became a national class in 2006. Mazda says it quickly became the most popular class in SCCA.",
+   "src": [
+    "wspec",
+    "mms"
+   ]
+  },
+  {
+   "t": "Eunos Roadster",
+   "k": "Name",
+   "x": "In Japan the NA was not badged as a Mazda. It went on sale on September 1, 1989 as the Eunos Roadster, through Mazda’s Eunos dealer brand.",
+   "src": [
+    "wna",
+    "mzc",
+    "huk"
+   ]
+  }
+ ],
+ "jdm_card": {
+  "gen": "na",
+  "star": "na-90"
+ },
+ "jdm_versions": [
+  {
+   "id": "eunos",
+   "name": "Eunos Roadster",
+   "market": "Japan",
+   "years": "1989",
+   "engine": "B6ZE",
+   "price": {
+    "v": "¥1,700,000",
+    "src": [
+     "mzc"
+    ],
+    "note": "September 1989 launch price"
+   },
+   "what": "The Japanese launch car, sold by Mazda’s Eunos dealer brand with the 1.6.",
+   "what_src": [
+    "mzc",
+    "wna"
+   ]
+  },
+  {
+   "id": "eunos-v",
+   "name": "Eunos Roadster V Special",
+   "market": "Japan",
+   "years": "1990",
+   "engine": "B6ZE",
+   "hp": {
+    "v": 118,
+    "src": [
+     "webcg"
+    ],
+    "note": "120 PS (118 hp) at 6,500 rpm; torque 14.0 kg-m at 5,500 rpm (JDM)"
+   },
+   "trans": {
+    "v": "5-speed manual, rear-drive",
+    "src": [
+     "webcg"
+    ],
+    "note": ""
+   },
+   "weight": {
+    "v": "950 kg",
+    "src": [
+     "webcg"
+    ],
+    "note": "JDM"
+   },
+   "price": {
+    "v": "¥2,185,660",
+    "src": [
+     "webcg"
+    ],
+    "note": "August 1990, with 3% consumption tax"
+   },
+   "what": "Green paint, tan interior, leather seats and a Nardi wood steering wheel and shift knob.",
+   "what_src": [
+    "mzc"
+   ]
+  }
+ ],
  "sources": {
   "m05r2": {
    "t": "Mazda USA: 2005 Mazda MX-5 Miata, the undisputed champion (Sep 2004)",
@@ -889,6 +1307,56 @@
    "t": "NHTSA owner complaints and recalls",
    "u": "https://www.nhtsa.gov/recalls",
    "k": "NHTSA"
+  },
+  "cg": {
+   "t": "Consumer Guide: 1990-98 Mazda Miata (Tom Appel, Jul 2014)",
+   "u": "https://consumerguide.com/used/1990-98-mazda-miata",
+   "k": "outlet"
+  },
+  "wna": {
+   "t": "Wikipedia: Mazda MX-5 (NA)",
+   "u": "https://en.wikipedia.org/wiki/Mazda_MX-5_(NA)",
+   "k": "Wikipedia"
+  },
+  "wmx5": {
+   "t": "Wikipedia: Mazda MX-5",
+   "u": "https://en.wikipedia.org/wiki/Mazda_MX-5",
+   "k": "Wikipedia"
+  },
+  "huk": {
+   "t": "Hagerty UK: Buying guide: Mazda MX-5 Mk1 (1989–1998) (John Simister, Apr 2021)",
+   "u": "https://www.hagerty.co.uk/articles/buyers-guide-mazda-mx-5-mk1-1989-1998/",
+   "k": "outlet"
+  },
+  "gp": {
+   "t": "Gear Patrol: Everything you need to know before buying the original Mazda Miata (Andrew Connor, Sep 2018)",
+   "u": "https://www.gearpatrol.com/cars/a490674/na-mazda-mx-5-miata-guide/",
+   "k": "outlet"
+  },
+  "mzn11": {
+   "t": "Mazda: 900,000th Mazda MX-5 to set new Guinness World Record (Feb 2011)",
+   "u": "https://newsroom.mazda.com/en/publicity/release/2011/201102/110204a.html",
+   "k": "Mazda"
+  },
+  "mzc": {
+   "t": "Mazda: MX-5 chronology (Mazda Spirit)",
+   "u": "https://www2.mazda.com/en/stories/craftmanship/mx-5/chronology/",
+   "k": "Mazda"
+  },
+  "mms": {
+   "t": "Mazda Motorsports: SCCA club racing",
+   "u": "https://www.mazdamotorsports.com/race-mazdas-2/club-racing/scca/",
+   "k": "Mazda"
+  },
+  "wspec": {
+   "t": "Wikipedia: Spec Miata",
+   "u": "https://en.wikipedia.org/wiki/Spec_Miata",
+   "k": "Wikipedia"
+  },
+  "webcg": {
+   "t": "webCG: Eunos Roadster V Special / Mazda Roadster RS RHT road test, with 1990 spec sheet (Shigeharu Kumakura, Apr 2013)",
+   "u": "https://www.webcg.net/articles/-/27967",
+   "k": "outlet"
   }
  },
  "yt_study": "car-mx-5-miata",

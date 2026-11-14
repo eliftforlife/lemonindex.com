@@ -1,5 +1,5 @@
 {
- "built": "2026-11-11",
+ "built": "2026-11-14",
  "nhtsa": {
   "by_year": {
    "1990": 28,
@@ -38,9 +38,65 @@
    "2023": 7,
    "2024": 5,
    "2025": 3,
-   "2026": 1
+   "2026": 2
   },
   "gens": {
+   "na": {
+    "n": 167,
+    "issues": {
+     "Short-nose crankshaft (1990–1991)": {
+      "n": 1,
+      "ex": [
+       "736703"
+      ]
+     },
+     "Lifter tick": {
+      "n": 1,
+      "ex": [
+       "823638"
+      ]
+     },
+     "Timing belt tensioner": {
+      "n": 3,
+      "ex": [
+       "531339",
+       "717720"
+      ]
+     },
+     "Rust": {
+      "n": 1,
+      "ex": [
+       "558347"
+      ]
+     }
+    },
+    "parts": [
+     [
+      "Air bags",
+      70
+     ],
+     [
+      "Seat belts",
+      15
+     ],
+     [
+      "Electrical system",
+      13
+     ],
+     [
+      "Engine and engine cooling",
+      11
+     ],
+     [
+      "Tires",
+      9
+     ],
+     [
+      "Power train",
+      8
+     ]
+    ]
+   },
    "nb": {
     "n": 97,
     "issues": {
@@ -180,50 +236,69 @@
   },
   "parts": [
    [
+    "Air bags",
+    97
+   ],
+   [
     "Power train",
+    50
+   ],
+   [
+    "Electrical system",
     42
    ],
    [
     "Structure",
-    33
-   ],
-   [
-    "Electrical system",
-    29
-   ],
-   [
-    "Air bags",
-    27
+    40
    ],
    [
     "Unknown or other",
-    23
+    28
    ],
    [
-    "Exterior lighting",
-    13
+    "Seat belts",
+    25
    ]
   ]
  },
  "recalls": {
+  "1990": [],
+  "1991": [],
+  "1992": [],
+  "1993": [],
+  "1994": [],
+  "1995": [],
+  "1996": [],
+  "1997": [],
   "2000": [],
   "2001": [],
   "2002": [],
   "2003": [],
   "2004": [],
   "2005": [],
+  "2006": [],
+  "2007": [],
   "2008": [],
+  "2009": [],
   "2010": [],
+  "2011": [],
+  "2012": [],
   "2013": [],
   "2014": [],
   "2015": [],
+  "2016": [],
+  "2017": [],
+  "2018": [],
   "2019": [],
+  "2020": [],
   "2021": [],
   "2022": [],
   "2023": [],
+  "2024": [],
   "2025": []
  },
  "yt": {
+  "car-mx-5-miata-na": null,
   "car-mx-5-miata": {
    "videos": 192,
    "praise": [
@@ -343,5 +418,869 @@
    ]
   }
  },
- "scores": {}
+ "scores": {
+  "car-mx-5-miata": {
+   "years": {
+    "2000": {
+     "score": null,
+     "weight": 2.5,
+     "videos": 11,
+     "named": 2,
+     "top": [
+      {
+       "id": "uTXQ8s8xhz4",
+       "title": "Form and Function!-CLEAN NB Miata Review!",
+       "views": 512313
+      },
+      {
+       "id": "DVCPFd3XxmU",
+       "title": "10 Tips For Buying YOUR Perfect Miata | Mazda MX5 Miata Buying Advice [NA and NB]",
+       "views": 279088
+      },
+      {
+       "id": "FhB0d_0RHPc",
+       "title": "Mazdaspeed MX-5 Miata Review - The Only Turbo Miata",
+       "views": 267483
+      }
+     ]
+    },
+    "2001": {
+     "score": 48,
+     "weight": 3.5,
+     "videos": 12,
+     "named": 3,
+     "top": [
+      {
+       "id": "uTXQ8s8xhz4",
+       "title": "Form and Function!-CLEAN NB Miata Review!",
+       "views": 512313
+      },
+      {
+       "id": "DVCPFd3XxmU",
+       "title": "10 Tips For Buying YOUR Perfect Miata | Mazda MX5 Miata Buying Advice [NA and NB]",
+       "views": 279088
+      },
+      {
+       "id": "FhB0d_0RHPc",
+       "title": "Mazdaspeed MX-5 Miata Review - The Only Turbo Miata",
+       "views": 267483
+      }
+     ]
+    },
+    "2002": {
+     "score": null,
+     "weight": 1.5,
+     "videos": 10,
+     "named": 1,
+     "top": [
+      {
+       "id": "uTXQ8s8xhz4",
+       "title": "Form and Function!-CLEAN NB Miata Review!",
+       "views": 512313
+      },
+      {
+       "id": "DVCPFd3XxmU",
+       "title": "10 Tips For Buying YOUR Perfect Miata | Mazda MX5 Miata Buying Advice [NA and NB]",
+       "views": 279088
+      },
+      {
+       "id": "FhB0d_0RHPc",
+       "title": "Mazdaspeed MX-5 Miata Review - The Only Turbo Miata",
+       "views": 267483
+      }
+     ]
+    },
+    "2003": {
+     "score": null,
+     "weight": 1.5,
+     "videos": 10,
+     "named": 1,
+     "top": [
+      {
+       "id": "uTXQ8s8xhz4",
+       "title": "Form and Function!-CLEAN NB Miata Review!",
+       "views": 512313
+      },
+      {
+       "id": "DVCPFd3XxmU",
+       "title": "10 Tips For Buying YOUR Perfect Miata | Mazda MX5 Miata Buying Advice [NA and NB]",
+       "views": 279088
+      },
+      {
+       "id": "FhB0d_0RHPc",
+       "title": "Mazdaspeed MX-5 Miata Review - The Only Turbo Miata",
+       "views": 267483
+      }
+     ]
+    },
+    "2004": {
+     "score": null,
+     "weight": 1.5,
+     "videos": 10,
+     "named": 1,
+     "top": [
+      {
+       "id": "uTXQ8s8xhz4",
+       "title": "Form and Function!-CLEAN NB Miata Review!",
+       "views": 512313
+      },
+      {
+       "id": "DVCPFd3XxmU",
+       "title": "10 Tips For Buying YOUR Perfect Miata | Mazda MX5 Miata Buying Advice [NA and NB]",
+       "views": 279088
+      },
+      {
+       "id": "FhB0d_0RHPc",
+       "title": "Mazdaspeed MX-5 Miata Review - The Only Turbo Miata",
+       "views": 267483
+      }
+     ]
+    },
+    "2005": {
+     "score": null,
+     "weight": 1.7,
+     "videos": 12,
+     "named": 3,
+     "top": [
+      {
+       "id": "uTXQ8s8xhz4",
+       "title": "Form and Function!-CLEAN NB Miata Review!",
+       "views": 512313
+      },
+      {
+       "id": "DVCPFd3XxmU",
+       "title": "10 Tips For Buying YOUR Perfect Miata | Mazda MX5 Miata Buying Advice [NA and NB]",
+       "views": 279088
+      },
+      {
+       "id": "FhB0d_0RHPc",
+       "title": "Mazdaspeed MX-5 Miata Review - The Only Turbo Miata",
+       "views": 267483
+      }
+     ]
+    },
+    "2006": {
+     "score": null,
+     "weight": 2.5,
+     "videos": 17,
+     "named": 3,
+     "top": [
+      {
+       "id": "YeU2xgjjL6E",
+       "title": "Here's Why the NC Mazda Miata Is Better Than You Think",
+       "views": 1053769
+      },
+      {
+       "id": "pRyztx6H0dg",
+       "title": "2006 Mazda MX5 NC: Regular Car Reviews",
+       "views": 480136
+      },
+      {
+       "id": "bslB_4JIKs0",
+       "title": "Mazda Miata Documentaries NC | EP4 Forcing Change",
+       "views": 437370
+      }
+     ]
+    },
+    "2007": {
+     "score": 60,
+     "weight": 3.5,
+     "videos": 18,
+     "named": 4,
+     "top": [
+      {
+       "id": "YeU2xgjjL6E",
+       "title": "Here's Why the NC Mazda Miata Is Better Than You Think",
+       "views": 1053769
+      },
+      {
+       "id": "bslB_4JIKs0",
+       "title": "Mazda Miata Documentaries NC | EP4 Forcing Change",
+       "views": 437370
+      },
+      {
+       "id": "8kzx2yXQliU",
+       "title": "The Mazda Miata NC is the best Miata ever made",
+       "views": 312543
+      }
+     ]
+    },
+    "2008": {
+     "score": null,
+     "weight": 2.5,
+     "videos": 17,
+     "named": 3,
+     "top": [
+      {
+       "id": "YeU2xgjjL6E",
+       "title": "Here's Why the NC Mazda Miata Is Better Than You Think",
+       "views": 1053769
+      },
+      {
+       "id": "bslB_4JIKs0",
+       "title": "Mazda Miata Documentaries NC | EP4 Forcing Change",
+       "views": 437370
+      },
+      {
+       "id": "8kzx2yXQliU",
+       "title": "The Mazda Miata NC is the best Miata ever made",
+       "views": 312543
+      }
+     ]
+    },
+    "2009": {
+     "score": null,
+     "weight": 2.5,
+     "videos": 17,
+     "named": 3,
+     "top": [
+      {
+       "id": "YeU2xgjjL6E",
+       "title": "Here's Why the NC Mazda Miata Is Better Than You Think",
+       "views": 1053769
+      },
+      {
+       "id": "bslB_4JIKs0",
+       "title": "Mazda Miata Documentaries NC | EP4 Forcing Change",
+       "views": 437370
+      },
+      {
+       "id": "8kzx2yXQliU",
+       "title": "The Mazda Miata NC is the best Miata ever made",
+       "views": 312543
+      }
+     ]
+    },
+    "2010": {
+     "score": null,
+     "weight": 1.5,
+     "videos": 16,
+     "named": 2,
+     "top": [
+      {
+       "id": "YeU2xgjjL6E",
+       "title": "Here's Why the NC Mazda Miata Is Better Than You Think",
+       "views": 1053769
+      },
+      {
+       "id": "bslB_4JIKs0",
+       "title": "Mazda Miata Documentaries NC | EP4 Forcing Change",
+       "views": 437370
+      },
+      {
+       "id": "8kzx2yXQliU",
+       "title": "The Mazda Miata NC is the best Miata ever made",
+       "views": 312543
+      }
+     ]
+    },
+    "2011": {
+     "score": null,
+     "weight": 2.5,
+     "videos": 17,
+     "named": 3,
+     "top": [
+      {
+       "id": "YeU2xgjjL6E",
+       "title": "Here's Why the NC Mazda Miata Is Better Than You Think",
+       "views": 1053769
+      },
+      {
+       "id": "bslB_4JIKs0",
+       "title": "Mazda Miata Documentaries NC | EP4 Forcing Change",
+       "views": 437370
+      },
+      {
+       "id": "8kzx2yXQliU",
+       "title": "The Mazda Miata NC is the best Miata ever made",
+       "views": 312543
+      }
+     ]
+    },
+    "2012": {
+     "score": 58,
+     "weight": 4.5,
+     "videos": 19,
+     "named": 5,
+     "top": [
+      {
+       "id": "YeU2xgjjL6E",
+       "title": "Here's Why the NC Mazda Miata Is Better Than You Think",
+       "views": 1053769
+      },
+      {
+       "id": "bslB_4JIKs0",
+       "title": "Mazda Miata Documentaries NC | EP4 Forcing Change",
+       "views": 437370
+      },
+      {
+       "id": "8kzx2yXQliU",
+       "title": "The Mazda Miata NC is the best Miata ever made",
+       "views": 312543
+      }
+     ]
+    },
+    "2013": {
+     "score": null,
+     "weight": 2.5,
+     "videos": 17,
+     "named": 3,
+     "top": [
+      {
+       "id": "YeU2xgjjL6E",
+       "title": "Here's Why the NC Mazda Miata Is Better Than You Think",
+       "views": 1053769
+      },
+      {
+       "id": "bslB_4JIKs0",
+       "title": "Mazda Miata Documentaries NC | EP4 Forcing Change",
+       "views": 437370
+      },
+      {
+       "id": "8kzx2yXQliU",
+       "title": "The Mazda Miata NC is the best Miata ever made",
+       "views": 312543
+      }
+     ]
+    },
+    "2014": {
+     "score": null,
+     "weight": 2.0,
+     "videos": 17,
+     "named": 3,
+     "top": [
+      {
+       "id": "YeU2xgjjL6E",
+       "title": "Here's Why the NC Mazda Miata Is Better Than You Think",
+       "views": 1053769
+      },
+      {
+       "id": "bslB_4JIKs0",
+       "title": "Mazda Miata Documentaries NC | EP4 Forcing Change",
+       "views": 437370
+      },
+      {
+       "id": "VqpWnxpI5o4",
+       "title": "2014 / 2015 Mazda MX-5 Miata Grand Touring Start Up, Exhaust, Test Drive, and In Depth Review",
+       "views": 325030
+      }
+     ]
+    },
+    "2015": {
+     "score": 54,
+     "weight": 3.0,
+     "videos": 18,
+     "named": 4,
+     "top": [
+      {
+       "id": "YeU2xgjjL6E",
+       "title": "Here's Why the NC Mazda Miata Is Better Than You Think",
+       "views": 1053769
+      },
+      {
+       "id": "bslB_4JIKs0",
+       "title": "Mazda Miata Documentaries NC | EP4 Forcing Change",
+       "views": 437370
+      },
+      {
+       "id": "VqpWnxpI5o4",
+       "title": "2014 / 2015 Mazda MX-5 Miata Grand Touring Start Up, Exhaust, Test Drive, and In Depth Review",
+       "views": 325030
+      }
+     ]
+    },
+    "2016": {
+     "score": 61,
+     "weight": 8.3,
+     "videos": 21,
+     "named": 7,
+     "top": [
+      {
+       "id": "e-1fG3UYVWs",
+       "title": "GR86 vs MX5 RF (ND2) - Is Miata Always the answer? | Everyday Driver TV Season 10",
+       "views": 961066
+      },
+      {
+       "id": "-vektlaHd8A",
+       "title": "2016 Mazda MX-5 ND: Regular Car Reviews",
+       "views": 683088
+      },
+      {
+       "id": "5CA8BzgbE-A",
+       "title": "Mazda Miata ND2 | Already a Classic Car",
+       "views": 485283
+      }
+     ]
+    },
+    "2017": {
+     "score": 60,
+     "weight": 3.3,
+     "videos": 16,
+     "named": 2,
+     "top": [
+      {
+       "id": "e-1fG3UYVWs",
+       "title": "GR86 vs MX5 RF (ND2) - Is Miata Always the answer? | Everyday Driver TV Season 10",
+       "views": 961066
+      },
+      {
+       "id": "5CA8BzgbE-A",
+       "title": "Mazda Miata ND2 | Already a Classic Car",
+       "views": 485283
+      },
+      {
+       "id": "J0j9HK4iiL0",
+       "title": "The World's First Gay Car Review | Mazda Miata MX-5 | ND Manual 7-years In The Making | Is It True?",
+       "views": 446386
+      }
+     ]
+    },
+    "2018": {
+     "score": null,
+     "weight": 2.8,
+     "videos": 16,
+     "named": 2,
+     "top": [
+      {
+       "id": "e-1fG3UYVWs",
+       "title": "GR86 vs MX5 RF (ND2) - Is Miata Always the answer? | Everyday Driver TV Season 10",
+       "views": 961066
+      },
+      {
+       "id": "LWcGJTd1fI4",
+       "title": "2019 Mazda MX-5 Miata Review - Here's What's New VS 2018 Miata",
+       "views": 788469
+      },
+      {
+       "id": "FzCgMlsMHY0",
+       "title": "2018 Mazda MX-5 Miata RF Review - The Best Looking Miata",
+       "views": 703012
+      }
+     ]
+    },
+    "2019": {
+     "score": 66,
+     "weight": 7.8,
+     "videos": 21,
+     "named": 7,
+     "top": [
+      {
+       "id": "hJUltR6UYSo",
+       "title": "Here's Why the 2019 Mazda MX-5 Miata Is the Best Miata Yet",
+       "views": 3726512
+      },
+      {
+       "id": "e-1fG3UYVWs",
+       "title": "GR86 vs MX5 RF (ND2) - Is Miata Always the answer? | Everyday Driver TV Season 10",
+       "views": 961066
+      },
+      {
+       "id": "LWcGJTd1fI4",
+       "title": "2019 Mazda MX-5 Miata Review - Here's What's New VS 2018 Miata",
+       "views": 788469
+      }
+     ]
+    },
+    "2020": {
+     "score": 61,
+     "weight": 6.3,
+     "videos": 19,
+     "named": 5,
+     "top": [
+      {
+       "id": "e-1fG3UYVWs",
+       "title": "GR86 vs MX5 RF (ND2) - Is Miata Always the answer? | Everyday Driver TV Season 10",
+       "views": 961066
+      },
+      {
+       "id": "5CA8BzgbE-A",
+       "title": "Mazda Miata ND2 | Already a Classic Car",
+       "views": 485283
+      },
+      {
+       "id": "J0j9HK4iiL0",
+       "title": "The World's First Gay Car Review | Mazda Miata MX-5 | ND Manual 7-years In The Making | Is It True?",
+       "views": 446386
+      }
+     ]
+    },
+    "2021": {
+     "score": null,
+     "weight": 1.3,
+     "videos": 14,
+     "named": 0,
+     "top": [
+      {
+       "id": "e-1fG3UYVWs",
+       "title": "GR86 vs MX5 RF (ND2) - Is Miata Always the answer? | Everyday Driver TV Season 10",
+       "views": 961066
+      },
+      {
+       "id": "5CA8BzgbE-A",
+       "title": "Mazda Miata ND2 | Already a Classic Car",
+       "views": 485283
+      },
+      {
+       "id": "J0j9HK4iiL0",
+       "title": "The World's First Gay Car Review | Mazda Miata MX-5 | ND Manual 7-years In The Making | Is It True?",
+       "views": 446386
+      }
+     ]
+    },
+    "2022": {
+     "score": null,
+     "weight": 2.3,
+     "videos": 15,
+     "named": 1,
+     "top": [
+      {
+       "id": "e-1fG3UYVWs",
+       "title": "GR86 vs MX5 RF (ND2) - Is Miata Always the answer? | Everyday Driver TV Season 10",
+       "views": 961066
+      },
+      {
+       "id": "5CA8BzgbE-A",
+       "title": "Mazda Miata ND2 | Already a Classic Car",
+       "views": 485283
+      },
+      {
+       "id": "J0j9HK4iiL0",
+       "title": "The World's First Gay Car Review | Mazda Miata MX-5 | ND Manual 7-years In The Making | Is It True?",
+       "views": 446386
+      }
+     ]
+    },
+    "2023": {
+     "score": 61,
+     "weight": 3.3,
+     "videos": 16,
+     "named": 2,
+     "top": [
+      {
+       "id": "e-1fG3UYVWs",
+       "title": "GR86 vs MX5 RF (ND2) - Is Miata Always the answer? | Everyday Driver TV Season 10",
+       "views": 961066
+      },
+      {
+       "id": "5CA8BzgbE-A",
+       "title": "Mazda Miata ND2 | Already a Classic Car",
+       "views": 485283
+      },
+      {
+       "id": "J0j9HK4iiL0",
+       "title": "The World's First Gay Car Review | Mazda Miata MX-5 | ND Manual 7-years In The Making | Is It True?",
+       "views": 446386
+      }
+     ]
+    },
+    "2024": {
+     "score": 59,
+     "weight": 10.3,
+     "videos": 23,
+     "named": 9,
+     "top": [
+      {
+       "id": "uH_JcnrkElY",
+       "title": "2024 Refreshed Mazda MX-5 Review // More Perfecter",
+       "views": 2049902
+      },
+      {
+       "id": "e-1fG3UYVWs",
+       "title": "GR86 vs MX5 RF (ND2) - Is Miata Always the answer? | Everyday Driver TV Season 10",
+       "views": 961066
+      },
+      {
+       "id": "2rR_SK7yjhk",
+       "title": "What It's Like to Live with a 2024 Mazda MX-5 Miata (POV)",
+       "views": 568210
+      }
+     ]
+    },
+    "2025": {
+     "score": 59,
+     "weight": 9.3,
+     "videos": 22,
+     "named": 8,
+     "top": [
+      {
+       "id": "e-1fG3UYVWs",
+       "title": "GR86 vs MX5 RF (ND2) - Is Miata Always the answer? | Everyday Driver TV Season 10",
+       "views": 961066
+      },
+      {
+       "id": "5CA8BzgbE-A",
+       "title": "Mazda Miata ND2 | Already a Classic Car",
+       "views": 485283
+      },
+      {
+       "id": "J0j9HK4iiL0",
+       "title": "The World's First Gay Car Review | Mazda Miata MX-5 | ND Manual 7-years In The Making | Is It True?",
+       "views": 446386
+      }
+     ]
+    }
+   },
+   "videos": 95,
+   "pulled": 200
+  },
+  "mazda-skyactiv-g20": {
+   "years": {
+    "2016": {
+     "score": 53,
+     "weight": 10.9,
+     "videos": 69,
+     "named": 8,
+     "top": [
+      {
+       "id": "e-1fG3UYVWs",
+       "title": "GR86 vs MX5 RF (ND2) - Is Miata Always the answer? | Everyday Driver TV Season 10",
+       "views": 961066
+      },
+      {
+       "id": "5CA8BzgbE-A",
+       "title": "Mazda Miata ND2 | Already a Classic Car",
+       "views": 485290
+      },
+      {
+       "id": "J0j9HK4iiL0",
+       "title": "The World's First Gay Car Review | Mazda Miata MX-5 | ND Manual 7-years In The Making | Is It True?",
+       "views": 446397
+      }
+     ]
+    },
+    "2017": {
+     "score": 50,
+     "weight": 5.9,
+     "videos": 64,
+     "named": 3,
+     "top": [
+      {
+       "id": "e-1fG3UYVWs",
+       "title": "GR86 vs MX5 RF (ND2) - Is Miata Always the answer? | Everyday Driver TV Season 10",
+       "views": 961066
+      },
+      {
+       "id": "5CA8BzgbE-A",
+       "title": "Mazda Miata ND2 | Already a Classic Car",
+       "views": 485290
+      },
+      {
+       "id": "J0j9HK4iiL0",
+       "title": "The World's First Gay Car Review | Mazda Miata MX-5 | ND Manual 7-years In The Making | Is It True?",
+       "views": 446397
+      }
+     ]
+    },
+    "2018": {
+     "score": 50,
+     "weight": 5.9,
+     "videos": 64,
+     "named": 3,
+     "top": [
+      {
+       "id": "e-1fG3UYVWs",
+       "title": "GR86 vs MX5 RF (ND2) - Is Miata Always the answer? | Everyday Driver TV Season 10",
+       "views": 961066
+      },
+      {
+       "id": "5CA8BzgbE-A",
+       "title": "Mazda Miata ND2 | Already a Classic Car",
+       "views": 485290
+      },
+      {
+       "id": "J0j9HK4iiL0",
+       "title": "The World's First Gay Car Review | Mazda Miata MX-5 | ND Manual 7-years In The Making | Is It True?",
+       "views": 446397
+      }
+     ]
+    },
+    "2019": {
+     "score": 50,
+     "weight": 6.1,
+     "videos": 65,
+     "named": 4,
+     "top": [
+      {
+       "id": "e-1fG3UYVWs",
+       "title": "GR86 vs MX5 RF (ND2) - Is Miata Always the answer? | Everyday Driver TV Season 10",
+       "views": 961066
+      },
+      {
+       "id": "5CA8BzgbE-A",
+       "title": "Mazda Miata ND2 | Already a Classic Car",
+       "views": 485290
+      },
+      {
+       "id": "J0j9HK4iiL0",
+       "title": "The World's First Gay Car Review | Mazda Miata MX-5 | ND Manual 7-years In The Making | Is It True?",
+       "views": 446397
+      }
+     ]
+    },
+    "2020": {
+     "score": 50,
+     "weight": 6.1,
+     "videos": 65,
+     "named": 4,
+     "top": [
+      {
+       "id": "e-1fG3UYVWs",
+       "title": "GR86 vs MX5 RF (ND2) - Is Miata Always the answer? | Everyday Driver TV Season 10",
+       "views": 961066
+      },
+      {
+       "id": "5CA8BzgbE-A",
+       "title": "Mazda Miata ND2 | Already a Classic Car",
+       "views": 485290
+      },
+      {
+       "id": "J0j9HK4iiL0",
+       "title": "The World's First Gay Car Review | Mazda Miata MX-5 | ND Manual 7-years In The Making | Is It True?",
+       "views": 446397
+      }
+     ]
+    },
+    "2021": {
+     "score": 51,
+     "weight": 7.1,
+     "videos": 66,
+     "named": 5,
+     "top": [
+      {
+       "id": "e-1fG3UYVWs",
+       "title": "GR86 vs MX5 RF (ND2) - Is Miata Always the answer? | Everyday Driver TV Season 10",
+       "views": 961066
+      },
+      {
+       "id": "5CA8BzgbE-A",
+       "title": "Mazda Miata ND2 | Already a Classic Car",
+       "views": 485290
+      },
+      {
+       "id": "J0j9HK4iiL0",
+       "title": "The World's First Gay Car Review | Mazda Miata MX-5 | ND Manual 7-years In The Making | Is It True?",
+       "views": 446397
+      }
+     ]
+    },
+    "2022": {
+     "score": 49,
+     "weight": 8.1,
+     "videos": 67,
+     "named": 6,
+     "top": [
+      {
+       "id": "e-1fG3UYVWs",
+       "title": "GR86 vs MX5 RF (ND2) - Is Miata Always the answer? | Everyday Driver TV Season 10",
+       "views": 961066
+      },
+      {
+       "id": "5CA8BzgbE-A",
+       "title": "Mazda Miata ND2 | Already a Classic Car",
+       "views": 485290
+      },
+      {
+       "id": "J0j9HK4iiL0",
+       "title": "The World's First Gay Car Review | Mazda Miata MX-5 | ND Manual 7-years In The Making | Is It True?",
+       "views": 446397
+      }
+     ]
+    },
+    "2023": {
+     "score": 47,
+     "weight": 9.1,
+     "videos": 68,
+     "named": 7,
+     "top": [
+      {
+       "id": "e-1fG3UYVWs",
+       "title": "GR86 vs MX5 RF (ND2) - Is Miata Always the answer? | Everyday Driver TV Season 10",
+       "views": 961066
+      },
+      {
+       "id": "5CA8BzgbE-A",
+       "title": "Mazda Miata ND2 | Already a Classic Car",
+       "views": 485290
+      },
+      {
+       "id": "J0j9HK4iiL0",
+       "title": "The World's First Gay Car Review | Mazda Miata MX-5 | ND Manual 7-years In The Making | Is It True?",
+       "views": 446397
+      }
+     ]
+    },
+    "2024": {
+     "score": 50,
+     "weight": 5.9,
+     "videos": 64,
+     "named": 3,
+     "top": [
+      {
+       "id": "e-1fG3UYVWs",
+       "title": "GR86 vs MX5 RF (ND2) - Is Miata Always the answer? | Everyday Driver TV Season 10",
+       "views": 961066
+      },
+      {
+       "id": "5CA8BzgbE-A",
+       "title": "Mazda Miata ND2 | Already a Classic Car",
+       "views": 485290
+      },
+      {
+       "id": "J0j9HK4iiL0",
+       "title": "The World's First Gay Car Review | Mazda Miata MX-5 | ND Manual 7-years In The Making | Is It True?",
+       "views": 446397
+      }
+     ]
+    },
+    "2025": {
+     "score": 51,
+     "weight": 5.6,
+     "videos": 62,
+     "named": 1,
+     "top": [
+      {
+       "id": "e-1fG3UYVWs",
+       "title": "GR86 vs MX5 RF (ND2) - Is Miata Always the answer? | Everyday Driver TV Season 10",
+       "views": 961066
+      },
+      {
+       "id": "5CA8BzgbE-A",
+       "title": "Mazda Miata ND2 | Already a Classic Car",
+       "views": 485290
+      },
+      {
+       "id": "J0j9HK4iiL0",
+       "title": "The World's First Gay Car Review | Mazda Miata MX-5 | ND Manual 7-years In The Making | Is It True?",
+       "views": 446397
+      }
+     ]
+    },
+    "2026": {
+     "score": 50,
+     "weight": 5.5,
+     "videos": 61,
+     "named": 0,
+     "top": [
+      {
+       "id": "e-1fG3UYVWs",
+       "title": "GR86 vs MX5 RF (ND2) - Is Miata Always the answer? | Everyday Driver TV Season 10",
+       "views": 961066
+      },
+      {
+       "id": "5CA8BzgbE-A",
+       "title": "Mazda Miata ND2 | Already a Classic Car",
+       "views": 485290
+      },
+      {
+       "id": "J0j9HK4iiL0",
+       "title": "The World's First Gay Car Review | Mazda Miata MX-5 | ND Manual 7-years In The Making | Is It True?",
+       "views": 446397
+      }
+     ]
+    }
+   },
+   "videos": 76,
+   "pulled": 85
+  }
+ }
 }

@@ -494,5 +494,53 @@
   "ai": true,
   "title": "VW / Audi 2.0 TSI (EA888) engine, 2.0 L inline-4 turbo (illustration)",
   "bytes": 148090
+ },
+ "nissan-sr20det": {
+  "src": "/assets/engines/nissan-sr20det-2-0-l-inline-4-turbo-engine.webp",
+  "w": 1200,
+  "h": 1080,
+  "ai": true,
+  "title": "Nissan SR20DET 2.0 turbo engine, 2.0 L inline-4 turbo (illustration)",
+  "bytes": 121628
+ },
+ "toyota-4a-ge": {
+  "src": "/assets/engines/toyota-4a-ge-1-6-l-inline-4-engine.webp",
+  "w": 1200,
+  "h": 1199,
+  "ai": true,
+  "title": "Toyota 4A-GE 1.6 twin-cam 16-valve engine, 1.6 L inline-4 (illustration)",
+  "bytes": 130584
+ },
+ "toyota-3s-gte": {
+  "src": "/assets/engines/toyota-3s-gte-2-0-l-inline-4-turbo-engine.webp",
+  "w": 1200,
+  "h": 1146,
+  "ai": true,
+  "title": "Toyota 3S-GTE 2.0 turbo engine, 2.0 L inline-4 turbo (illustration)",
+  "bytes": 141112
+ },
+ "nissan-vg30dett": {
+  "src": "/assets/engines/nissan-vg30dett-3-0-l-v6-twin-turbo-engine.webp",
+  "w": 1200,
+  "h": 938,
+  "ai": true,
+  "title": "Nissan VG30DETT 3.0 twin-turbo V6 engine, 3.0 L V6 twin-turbo (illustration)",
+  "bytes": 122832
+ },
+ "honda-b16b": {
+  "src": "/assets/engines/honda-b16b-1-6-l-inline-4-engine.webp",
+  "w": 1200,
+  "h": 1153,
+  "ai": true,
+  "title": "Honda B16B 1.6 DOHC VTEC engine, 1.6 L inline-4 (illustration)",
+  "bytes": 146158
+ },
+ "toyota-1jz-gte": {
+  "src": "/assets/engines/toyota-1jz-gte-2-5-l-inline-6-turbo-engine.webp",
+  "w": 1200,
+  "h": 1194,
+  "ai": true,
+  "title": "Toyota 1JZ-GTE 2.5 turbo engine, 2.5 L inline-6 turbo (illustration)",
+  "bytes": 145420
  }
 }

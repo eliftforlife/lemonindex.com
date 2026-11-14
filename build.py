@@ -121,10 +121,10 @@ def perf_info(c):
     """A performance car's id, brand, page ('' until it has one) and the line its card leads with (hp, 0-60, else the engine)."""
     nm = c.get('name') or f"{c.get('make', '')} {c.get('model', '')}".strip(); mk = c.get('make') or c.get('brand') or nm.split(' ')[0]
     hp = c.get('hp'); z = c.get('zero60') or c.get('0-60') or c.get('zero_to_60'); eng = c.get('engine') or ''
-    _pid = c.get('slug') or _slg(nm); _pd = _jl(f'data/perf/{_pid}.json') or {}   # 11-11: a car with a performance page (perf_page.py) is live, not coming soon
+    _pid = c.get('slug') or _slg(nm); _pd = _jl(f'data/perf/{c.get("perf") or _pid}.json') or {}   # 11-11: a car with a performance page (perf_page.py) is live, not coming soon; 11-14: `perf` = a JDM card's US page file
     if _pd and not hp:   # its card leads with the featured trim's sourced hp and 0-60 (magazine test, else the maker's figure)
         try:
-            import perf_page as _PP; _g, _v = _PP._star(_pd); hp = _PP._hp(_v); _zz = _PP._z(_v.get('z60'))[0]; z = _zz.replace(' s', '') if _zz else z
+            import perf_page as _PP; _g, _v = (_PP.card_star if c.get('perf') else _PP._star)(_pd); hp = _PP._hp(_v); _zz = _PP._z(_v.get('z60'))[0]; z = _zz.replace(' s', '') if _zz else z
         except Exception: pass
     lead = ' · '.join(x for x in ((f'{hp:,} hp' if isinstance(hp, (int, float)) else str(hp) + ' hp') if hp else '', f'0–60 {z} s' if z else '') if x) or eng
     return dict(id=_pid, name=nm, brand=_brandof(mk), url=c.get('url') or _pd.get('page') or '', lead=lead)
@@ -2045,7 +2045,7 @@ def pfcard(c):
     t = 's' if c.get('group') in ('B', 'C') else 'j' if c.get('group') == 'J' else 'p'   # 11-11: the list's supercars (B) and hypercars (C) join the Supercars tab; 11-13: JDM film cars (J) the JDM tab
     if c.get('slug') in JDM_ALSO: t += ' j'   # 11-13: a performance car that is also a JDM film car (the S2000) shows on both tabs
     t += {'pickup': ' tk', 'SUV': ' sv'}.get(c.get('body'), '')   # 11-13: the Raptor and TRX on the Trucks tab, the Trackhawk on SUVs (sports cars stay off the Cars tab)
-    if i['url']: return f'<a class="mc mc-sc" data-t="{t}" href="{E(i["url"])}">{inner}</a>'
+    if i['url']: return f'<a class="mc mc-sc{" mc-dup" if c.get("perf") else ""}" data-t="{t}" href="{E(i["url"])}">{inner}</a>'   # 11-14: a JDM card for a US page's generation shows on the JDM tab only
     nd = 'Hypercar · coming soon' if c.get('group') == 'C' else 'Coming soon'
     return f'<div class="mc mc-nd mc-sc" data-t="{t}" aria-disabled="true" title="{nd}">{inner}<span class="nd">{nd}</span></div>'
 JDM_ALSO = {'honda-s2000'}   # 11-13 JDM: performance pages that are also Fast & Furious film cars (data/perf/<slug>.json `films`)
@@ -2097,7 +2097,7 @@ CNOTES = (f'<div class="ctn pfh" data-for="performance" hidden><span class="pfh-
           f'<p class="ctn" data-for="supercars" hidden>Owner complaints are too rare to score supercars, so their cards lead with the engine. Cards marked Coming soon, hypercars included, are next. <a href="/supercars/">Supercar fuel costs and recalls, ranked</a></p>'
           + ''.join(f'<p class="ctn" data-for="{k}" hidden>{_nseg[g]} {w}{x}. <a href="/best/most-reliable-{k}/">The most reliable {k if k != "suvs" else "SUVs"}, ranked</a></p>'
                     for k, g, w, x in (('trucks', 'tk', 'trucks', ', from the Tacoma to the HD pickups and the Raptor'), ('suvs', 'sv', 'SUVs', ''), ('cars', 'cr', 'sedans, hatchbacks and other cars', '. Sports cars are under Performance'), ('minivans', 'mv', 'minivans and vans', '')))
-          + f'<p class="ctn" data-for="jdm" hidden>The Japanese hero cars of The Fast and the Furious (2001) and 2 Fast 2 Furious (2003): specs, the engine and, where they were sold in the US, owner complaints and recalls. <a href="/jdm/">Every JDM film car and its engine</a></p>'
+          + f'<p class="ctn" data-for="jdm" hidden>The Japanese hero cars of The Fast and the Furious (2001) and 2 Fast 2 Furious (2003), plus JDM legends like the AE86, R32 GT-R and Silvia S15: specs, the engine and, where they were sold in the US, owner complaints and recalls. <a href="/jdm/">Every JDM car and its engine</a></p>'
           + f'<p class="ctn" data-for="electric" hidden>EV scores cover model years {EV_WIN}, with complaints filed by the end of the year after the model year. Under All cars, an EV with its own page (Bolt, Model Y) shows the main Lemon Index for its own years instead, so its two numbers differ. <a href="/electric/">The most reliable EVs, ranked</a></p>')
 CARS_GRID = f'''<section class="cgrid">{CTABS}{HCHIPS}<h2 data-hide="p j">Every model. <span class="h2s" data-hide="s p j">Score in the corner: 100 is average, lower is better.</span></h2>{CNOTES}<div class="mbs">{_MW}{lst}</div><p class="ph-cr" data-hide="p">Car images: AI-generated illustrations by The Lemon Index, free under CC BY 4.0 (<a href="/images/">download</a>).</p></section><script src="/assets/soonvote.js?v=2" defer></script>
 <style>.pfh{{max-width:560px}}.pfh h3{{font-size:clamp(28px,6.5vw,36px);letter-spacing:-.03em;margin:10px 0 6px}}.pfh-pill{{display:inline-block;padding:4px 12px;border-radius:999px;background:#ffd400;color:#17161a;font-size:12.5px;font-weight:700;letter-spacing:.02em}}.pfh-s{{margin:0 0 6px;font-size:16px}}.pfh-n{{margin:0;font-size:14px;color:#6e6e73}}.cgrid[data-tab="performance"] .mc.mc-dup:not([hidden]){{display:flex}}.cgrid .ph-cr{{margin-top:28px}}

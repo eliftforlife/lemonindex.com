@@ -1,0 +1,115 @@
+{
+ "built": "2026-11-14",
+ "nhtsa": {
+  "by_year": {
+   "1991": 12,
+   "1992": 1,
+   "1993": 4,
+   "2000": 4,
+   "2001": 2,
+   "2002": 6,
+   "2003": 6,
+   "2004": 2,
+   "2005": 1
+  },
+  "gens": {
+   "sw20": {
+    "n": 17,
+    "issues": {
+     "Turbo heat and oil coking": {
+      "n": 0,
+      "ex": []
+     },
+     "Cooling system and overheating": {
+      "n": 0,
+      "ex": []
+     },
+     "Oil leaks": {
+      "n": 0,
+      "ex": []
+     },
+     "Catalyst in the downpipe": {
+      "n": 0,
+      "ex": []
+     }
+    },
+    "parts": [
+     [
+      "Air bags",
+      4
+     ],
+     [
+      "Engine and engine cooling",
+      3
+     ],
+     [
+      "Steering",
+      3
+     ],
+     [
+      "Latches/locks/linkages",
+      2
+     ],
+     [
+      "Tires",
+      2
+     ],
+     [
+      "Vehicle speed control",
+      1
+     ]
+    ]
+   }
+  },
+  "parts": [
+   [
+    "Air bags",
+    4
+   ],
+   [
+    "Engine and engine cooling",
+    3
+   ],
+   [
+    "Steering",
+    3
+   ],
+   [
+    "Latches/locks/linkages",
+    2
+   ],
+   [
+    "Tires",
+    2
+   ],
+   [
+    "Vehicle speed control",
+    1
+   ]
+  ]
+ },
+ "recalls": {
+  "1991": [
+   {
+    "id": "91V223000",
+    "part": "AIR BAGS",
+    "summary": "THE DRIVER'S OCCUPANT PROTECTION SYSTEM (STEERING WHEEL AND AIR BAG) EXCEEDS THE 60G THORAX CRITERION IN NHTSA CRASH TESTS."
+   }
+  ],
+  "1992": [
+   {
+    "id": "91V223000",
+    "part": "AIR BAGS",
+    "summary": "THE DRIVER'S OCCUPANT PROTECTION SYSTEM (STEERING WHEEL AND AIR BAG) EXCEEDS THE 60G THORAX CRITERION IN NHTSA CRASH TESTS."
+   }
+  ],
+  "1993": [],
+  "1994": [],
+  "1995": []
+ },
+ "yt": {
+  "car-toyota-mr2-sw20": null,
+  "toyota-3s-gte": null
+ },
+ "scores": {}
+}

@@ -119,6 +119,7 @@ for c in SCX:
 # the Civic list); otherwise the perf list's engine line, plus the newest engine name from that file when it has one (codes from our data only)
 _ae_codes = {x.strip().upper() for c in AE_LIVE.values() for x in re.split(r'[/,]', c['code']) if x.strip()}
 for c in PERFX:
+    if c.get('perf'): continue   # 11-14: a JDM card for a generation of a US page (that page's own entry covers its engines)
     i = perf_info(c); eng = c.get('engine'); pe = ((_jl(f'data/perf/{i["id"]}.json') or {}).get('engines') or {})
     if any(v.get('page') for v in pe.values()) or any(k.upper() in _ae_codes for k in pe): _ae_cov.add(i['id']); continue
     if not eng: continue

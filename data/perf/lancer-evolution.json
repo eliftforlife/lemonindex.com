@@ -241,6 +241,7 @@
    "y0": 2006,
    "y1": 2006,
    "engine": "4G63T",
+   "yt_study": "car-lancer-evolution-ix",
    "body": "Sedan",
    "tag": "One U.S. year. MIVEC lifts it to 286 hp; RS, IX and MR trims.",
    "variants": [
@@ -838,8 +839,200 @@
    "t": "NHTSA owner complaints and recalls",
    "u": "https://www.nhtsa.gov/recalls",
    "k": "NHTSA"
+  },
+  "wtm": {
+   "t": "Wikipedia: Tommi Mäkinen",
+   "u": "https://en.wikipedia.org/wiki/Tommi_M%C3%A4kinen",
+   "k": "Wikipedia"
+  },
+  "wevo": {
+   "t": "Wikipedia: Mitsubishi Lancer Evolution (Evolution IX, Japanese trims)",
+   "u": "https://en.wikipedia.org/wiki/Mitsubishi_Lancer_Evolution",
+   "k": "Wikipedia"
+  },
+  "wid": {
+   "t": "Wikipedia: Initial D",
+   "u": "https://en.wikipedia.org/wiki/Initial_D",
+   "k": "Wikipedia"
+  },
+  "ctid": {
+   "t": "Car Throttle: Every Car From Initial D, And Our Top 10 Ranked (Ryan Hirons, Feb 2025)",
+   "u": "https://www.carthrottle.com/news/every-car-initial-d-and-our-top-10-ranked",
+   "k": "outlet"
+  },
+  "jriv": {
+   "t": "Jalopnik: Subaru Impreza WRX And STI VS. Mitsubishi Lancer Evolution: Who Ya Got? (Patrick George, Jun 2019)",
+   "u": "https://jalopnik.com/subaru-impreza-wrx-and-sti-vs-mitsubishi-lancer-evolut-1835789921/",
+   "k": "outlet"
+  },
+  "mwcmp": {
+   "t": "MotorWeek: 2004 Subaru Impreza WRX STi vs. 2003 Mitsubishi Lancer Evolution (Episode 2240)",
+   "u": "https://motorweek.org/road_tests/comparison_tests/2004_subaru_impreza_wrx_sti_vs_2003_mitsubishi_lancer_evolution/",
+   "k": "outlet"
+  },
+  "pmtd": {
+   "t": "Petersen Automotive Museum: 2005 Mitsubishi Lancer Evolution IX \"Evil-R\", The Fast and the Furious: Tokyo Drift (2006)",
+   "u": "https://petersen.org/pages/petersen-vehicle/copy-of-1963-chevrolet-corvette-grand-sport-custom-picture-vehicle-by-mongoose-motorsports",
+   "k": "outlet"
+  },
+  "wtd": {
+   "t": "Wikipedia: The Fast and the Furious: Tokyo Drift",
+   "u": "https://en.wikipedia.org/wiki/The_Fast_and_the_Furious:_Tokyo_Drift",
+   "k": "Wikipedia"
+  },
+  "g9gsr": {
+   "t": "Gulliver catalog: Mitsubishi Lancer GSR Evolution IX (GH-CT9A, Mar 2005) specifications",
+   "u": "https://221616.com/catalog/mitsubishi/lancer/200102_200806/10026561/",
+   "k": "Japanese catalog"
+  },
+  "g9mr": {
+   "t": "Gulliver catalog: Mitsubishi Lancer GSR Evolution IX MR (GH-CT9A, Aug 2006) specifications",
+   "u": "https://221616.com/catalog/mitsubishi/lancer/200102_200806/10035874/",
+   "k": "Japanese catalog"
   }
  },
  "yt_study": "car-lancer-evolution",
- "img": "/assets/ai-perf/lancer-evolution.webp?v=1"
+ "img": "/assets/ai-perf/lancer-evolution.webp?v=1",
+ "jdm_card": {
+  "gen": "ct9a-ix",
+  "star": "ix-mr"
+ },
+ "fame": [
+  {
+   "t": "Tommi Mäkinen's four titles",
+   "k": "Racing",
+   "x": "Tommi Mäkinen won the World Rally drivers' title four years in a row, 1996 to 1999, every time in a Lancer Evolution (the Evo III through Evo VI). He also helped Mitsubishi win the 1998 makers' title. A road-going Evo VI was later named after him.",
+   "src": [
+    "wtm",
+    "wevo"
+   ]
+  },
+  {
+   "t": "Initial D",
+   "k": "Anime",
+   "x": "In Initial D, Takumi faces the Emperors, a team that only drives Lancer Evolutions. Their leader, Kyoichi Sudo, beats him in an Evo III when Takumi's engine blows. Another Emperor driver, Seiji Iwaki, races an Evo IV.",
+   "src": [
+    "wid",
+    "ctid"
+   ]
+  },
+  {
+   "t": "Evo vs. STI",
+   "k": "Racing",
+   "x": "The Evo and the Subaru Impreza WRX STI both started as rally homologation cars, and they have been compared ever since. MotorWeek tested a 2003 Evo against a 2004 STI and said it had never tested two cars this close to equal.",
+   "src": [
+    "jriv",
+    "mwcmp",
+    "wevo"
+   ]
+  },
+  {
+   "t": "Tokyo Drift",
+   "k": "Film",
+   "x": "The Petersen Automotive Museum shows an Evo IX built by APR Performance as the model for the drift car Han gives Sean in The Fast and the Furious: Tokyo Drift (2006). Wikipedia's plot summary calls Sean's practice car an Evo VIII.",
+   "src": [
+    "pmtd",
+    "wtd"
+   ],
+   "unsure": true
+  }
+ ],
+ "jdm_versions": [
+  {
+   "id": "jdm-ix-gsr",
+   "name": "Lancer GSR Evolution IX (Japan)",
+   "years": "2005–2006",
+   "market": "Japan",
+   "engine_name": "4G63 MIVEC 2.0-liter turbo inline-4",
+   "hp": {
+    "v": 276,
+    "src": [
+     "g9gsr",
+     "wevo"
+    ],
+    "note": "280 PS at 6,500 rpm, the Japanese 280 PS limit"
+   },
+   "tq": {
+    "v": 295,
+    "src": [
+     "g9gsr"
+    ],
+    "note": "lb-ft at 3,000 rpm (400 N·m, 40.8 kgf·m in the catalog, converted)"
+   },
+   "trans": {
+    "v": "6-speed manual, all-wheel drive",
+    "src": [
+     "g9gsr"
+    ],
+    "note": ""
+   },
+   "weight": {
+    "v": "1,410 kg",
+    "src": [
+     "g9gsr"
+    ],
+    "note": "curb weight in Japan's catalog, about 3,109 lb"
+   },
+   "price": {
+    "v": "¥3,570,000",
+    "src": [
+     "g9gsr"
+    ],
+    "note": "new in Japan, tax included"
+   },
+   "what": "Japan's top Evo IX trim, on sale from March 2005: a 6-speed gearbox and Bilstein shocks. Japan also got the lighter, rally-focused RS and the GT.",
+   "what_src": [
+    "g9gsr",
+    "wevo"
+   ]
+  },
+  {
+   "id": "jdm-ix-mr",
+   "name": "Lancer GSR Evolution IX MR (Japan)",
+   "years": "2006–2007",
+   "market": "Japan",
+   "engine_name": "4G63 MIVEC 2.0-liter turbo inline-4",
+   "hp": {
+    "v": 276,
+    "src": [
+     "g9mr",
+     "wevo"
+    ],
+    "note": "280 PS at 6,500 rpm, the Japanese 280 PS limit"
+   },
+   "tq": {
+    "v": 295,
+    "src": [
+     "g9mr"
+    ],
+    "note": "lb-ft at 3,000 rpm (400 N·m, 40.8 kgf·m in the catalog, converted)"
+   },
+   "trans": {
+    "v": "6-speed manual, all-wheel drive",
+    "src": [
+     "g9mr"
+    ],
+    "note": ""
+   },
+   "weight": {
+    "v": "1,420 kg",
+    "src": [
+     "g9mr"
+    ],
+    "note": "curb weight in Japan's catalog, about 3,131 lb"
+   },
+   "price": {
+    "v": "¥3,623,000",
+    "src": [
+     "g9mr"
+    ],
+    "note": "new in Japan, tax included (the catalog's model list shows ¥3,622,000)"
+   },
+   "what": "The final Evo IX version in Japan, sold from August 2006 to March 2007, as an MR GSR and an MR RS.",
+   "what_src": [
+    "g9mr",
+    "wevo"
+   ]
+  }
+ ]
 }

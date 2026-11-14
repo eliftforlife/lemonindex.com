@@ -1,0 +1,353 @@
+{
+ "slug": "honda-civic-type-r-ek9",
+ "name": "Honda Civic Type R (EK9)",
+ "short": "Civic Type R",
+ "make": "Honda",
+ "page": "/jdm/honda-civic-type-r-ek9/",
+ "jdm": true,
+ "focus": "ek9",
+ "star": "ek9-r",
+ "h1": "Honda Civic Type R EK9 (1997–2000): specs, B16B VTEC engine and what owners say",
+ "us": {
+  "sold": false,
+  "x": "Never sold new in the US; the EK9 was sold only in Japan. A car becomes legal to import under the 25-year rule once it is 25 years old from its date of manufacture, so the first EK9s (on sale from August 1997) began to qualify in 2022.",
+  "src": [
+   "wpctr",
+   "cfr",
+   "jbs25",
+   "mb22"
+  ]
+ },
+ "fame": [
+  {
+   "t": "The first Civic Type R",
+   "k": "Name",
+   "x": "Launched in Japan in August 1997, the EK9 was the first Civic to wear the Type R badge. Every Civic Type R since traces back to it.",
+   "src": [
+    "wpctr",
+    "evo",
+    "hagu"
+   ]
+  },
+  {
+   "t": "Initial D",
+   "k": "Anime",
+   "x": "In Initial D, Daiki Ninomiya of the Todo School drives an EK9 Civic Type R. The school’s Spoon Sports EK9 is the pride of its Honda fleet.",
+   "src": [
+    "ct-id"
+   ]
+  },
+  {
+   "t": "114 bhp per liter, no turbo",
+   "k": "Records",
+   "x": "The 1.6-liter B16B makes 185 PS, about 114 bhp per liter by evo’s count. Wikipedia calls it one of the highest outputs per liter of all time for an engine without a turbo or supercharger.",
+   "src": [
+    "evo",
+    "wpctr"
+   ]
+  },
+  {
+   "t": "A race car for the road",
+   "k": "Name",
+   "x": "Honda gave it a hand-ported engine, a seam-welded body for stiffness, a helical limited-slip differential, red Recaro seats and a titanium gear knob. Its signature color is Championship White.",
+   "src": [
+    "hagu",
+    "jal26",
+    "evo",
+    "wpctr"
+   ]
+  },
+  {
+   "t": "Gran Turismo",
+   "k": "Games",
+   "x": "Hagerty UK says the EK9 name stands tall with Gran Turismo fans.",
+   "src": [
+    "hagu"
+   ],
+   "unsure": true
+  }
+ ],
+ "related": [
+  {
+   "u": "/cars/civic-type-r/",
+   "t": "Honda Civic Type R (FK8 and FL5, sold in the US)"
+  },
+  {
+   "u": "/cars/honda-civic/",
+   "t": "Honda Civic"
+  },
+  {
+   "u": "/jdm/acura-integra-gs-r/",
+   "t": "Acura Integra GS-R and Type R (DC2)"
+  },
+  {
+   "u": "/engines/honda-b18c/",
+   "t": "Honda B18C, the bigger engine the B16B is based on"
+  }
+ ],
+ "topics_extra": {
+  "Oil burning": "oil consumption|burn(s|ing)? oil|using oil|blue smoke",
+  "Timing belt": "timing belt|water pump",
+  "VTEC not engaging": "vtec (not|won.?t|doesn.?t) (engag|kick)|vtec solenoid|vtec pressure switch",
+  "Gearbox / synchros": "synchros?|grind(s|ing)? (into|in)? ?(2nd|second|3rd|third|gear)|pops? out of gear",
+  "Rust": "\\brust(ed|ing|y)?\\b|wheel ?arch|boot floor",
+  "Theft / swapped parts": "\\bstolen\\b|\\btheft\\b|steal|gear ?knob|engine swap|swapped"
+ },
+ "gens": [
+  {
+   "id": "ek9",
+   "code": "EK9",
+   "years": "1997–2000",
+   "y0": 1997,
+   "y1": 2000,
+   "engine": "B16B",
+   "body": "3-door hatchback",
+   "tag": "1.6-liter B16B DOHC VTEC, 185 PS (182 hp) at 8,200 rpm and an 8,400 rpm redline, 5-speed manual, front-drive. Japan only.",
+   "variants": [
+    {
+     "id": "ek9-r",
+     "name": "Civic Type R",
+     "years": "1997–2000",
+     "star": true,
+     "hp": {
+      "v": 182,
+      "src": [
+       "wpctr",
+       "wpb",
+       "evo"
+      ],
+      "note": "185 PS at 8,200 rpm (JDM)"
+     },
+     "tq": {
+      "v": 118,
+      "src": [
+       "wpctr",
+       "wpb",
+       "evo"
+      ],
+      "note": "lb-ft at 7,500 rpm (160 Nm, JDM)"
+     },
+     "top": {
+      "v": "140 mph",
+      "src": [
+       "wpctr",
+       "evo"
+      ],
+      "note": "225 km/h per Wikipedia; evo estimates 135 mph"
+     },
+     "trans": {
+      "v": "5-speed manual, front-drive",
+      "src": [
+       "wpctr",
+       "jbs"
+      ],
+      "note": "close ratios, helical limited-slip differential"
+     },
+     "weight": {
+      "v": "1,070 kg (2,359 lb)",
+      "src": [
+       "jbs",
+       "wpctr"
+      ],
+      "note": "with power steering, ABS and airbag, from Honda’s 1997 launch table; evo gives 1,040 kg"
+     },
+     "what": "A hand-ported B16B, a seam-welded body, a helical limited-slip differential, Recaro seats and a titanium gear knob. Honda says the body was 35% stiffer than a normal Civic’s. A facelift came in September 1998, and about 16,000 EK9s were built in all.",
+     "what_src": [
+      "wpctr",
+      "hagu",
+      "jbs",
+      "jal26"
+     ]
+    },
+    {
+     "id": "ek9-rx",
+     "name": "Civic Type R x",
+     "years": "1999–2000",
+     "hp": {
+      "v": 182,
+      "src": [
+       "wpb",
+       "wpctr"
+      ],
+      "note": "185 PS at 8,200 rpm (JDM), same B16B"
+     },
+     "tq": {
+      "v": 118,
+      "src": [
+       "wpb",
+       "wpctr"
+      ],
+      "note": "lb-ft at 7,500 rpm (160 Nm, JDM)"
+     },
+     "trans": {
+      "v": "5-speed manual, front-drive",
+      "src": [
+       "wpctr",
+       "jbs"
+      ],
+      "note": "helical limited-slip differential"
+     },
+     "what": "The last EK9, from December 1999, with more comfort kit: a CD player, power windows, auto air conditioning, keyless entry, aluminum pedals and a carbon-look center panel.",
+     "what_src": [
+      "wpctr",
+      "jbs"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "B16B": {
+   "name": "Honda B16B",
+   "what": "1.6-liter inline-4, DOHC VTEC, naturally aspirated",
+   "study": "honda-b16b",
+   "page": "/engines/honda-b16b/",
+   "yt": [
+    "scy",
+    "honda-b16b"
+   ],
+   "facts": [
+    [
+     "Layout",
+     "Inline-4, DOHC with VTEC, belt-driven cams; VTEC switches over at 6,100 rpm",
+     [
+      "wpb",
+      "jbs"
+     ]
+    ],
+    [
+     "Output",
+     "185 PS (182 hp) at 8,200 rpm, 160 Nm (118 lb-ft) at 7,500 rpm",
+     [
+      "wpb",
+      "wpctr"
+     ]
+    ],
+    [
+     "Bore x stroke",
+     "81 x 77.4 mm, 1,595 cc, 10.8:1 compression",
+     [
+      "wpb",
+      "jbs"
+     ]
+    ],
+    [
+     "Redline",
+     "8,400 rpm (rev limit 8,600 rpm)",
+     [
+      "wpb",
+      "evo"
+     ]
+    ],
+    [
+     "Output per liter",
+     "About 114 bhp per liter, with no turbo",
+     [
+      "evo"
+     ]
+    ],
+    [
+     "Build",
+     "Hand-ported; uses the taller Integra Type R block, in effect a short-stroke B18C Type R engine",
+     [
+      "wpb",
+      "wpctr"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Oil use and blue smoke",
+     "kind": "Outlet report",
+     "rx": "oil consumption|burn(s|ing)? oil|using oil|blue smoke|smok(e|ing) from (the )?(tail|exhaust)",
+     "x": "evo says some EK9s had a hunger for oil that not all owners kept up with, and to treat puffs of blue smoke as a sign the engine needs serious care. JDM Buy Sell suggests a compression or leak-down test.",
+     "fix": "",
+     "src": [
+      "evo",
+      "jbs"
+     ]
+    },
+    {
+     "t": "Timing belt history",
+     "kind": "Outlet report",
+     "rx": "timing belt|water pump",
+     "x": "The B16B has belt-driven cams. JDM Buy Sell’s buyer’s guide says to ask for dated proof of the last belt change and have a mechanic inspect the car.",
+     "fix": "",
+     "src": [
+      "jbs"
+     ]
+    },
+    {
+     "t": "Swapped or wrong engine",
+     "kind": "Outlet report",
+     "rx": "engine swap|swapped|not (the )?original engine|wrong engine|\\bb16a\\b|\\bb18",
+     "x": "JDM Buy Sell says to confirm the chassis code reads EK9, the engine is a real B16B and the car still has its helical limited-slip differential.",
+     "fix": "",
+     "src": [
+      "jbs"
+     ]
+    }
+   ],
+   "photo": {
+    "src": "/assets/engines/honda-b16b-1-6-l-inline-4-engine.webp",
+    "w": 1200,
+    "h": 1153,
+    "ai": true
+   }
+  }
+ },
+ "compare": [],
+ "sources": {
+  "wpctr": {
+   "t": "Wikipedia: Honda Civic Type R",
+   "u": "https://en.wikipedia.org/wiki/Honda_Civic_Type_R",
+   "k": "Wikipedia"
+  },
+  "wpb": {
+   "t": "Wikipedia: Honda B engine",
+   "u": "https://en.wikipedia.org/wiki/Honda_B_engine",
+   "k": "Wikipedia"
+  },
+  "evo": {
+   "t": "evo: Honda Civic Type R (EK9, 1997-2000) review (Richard Meaden, Apr 2026)",
+   "u": "https://www.evo.co.uk/honda/civic-type-r/208642/honda-civic-type-r-ek9-1997-2000-review-1990s-jdm-icon-makes-a-peugeot",
+   "k": "outlet"
+  },
+  "hagu": {
+   "t": "Hagerty UK: How Hollywood turned the Civic into a legend (Dan Bevis, Aug 2025)",
+   "u": "https://www.hagerty.co.uk/articles/how-hollywood-turned-the-civic-into-a-legend/",
+   "k": "outlet"
+  },
+  "jbs": {
+   "t": "JDM Buy Sell: Honda Civic Type R EK9 buyer’s guide (Christopher Weydert, updated Oct 2026)",
+   "u": "https://www.jdmbuysell.com/learn/honda/civic/ek9/",
+   "k": "outlet"
+  },
+  "jal26": {
+   "t": "Jalopnik: 9 of the most popular Japanese performance cars to import (Josh West, Oct 2026)",
+   "u": "https://www.jalopnik.com/2298828/most-popular-japanese-performance-cars-to-import/",
+   "k": "outlet"
+  },
+  "ct-id": {
+   "t": "CarThrottle: Every car from Initial D, and our top 10 ranked (Ryan Hirons, Feb 2025)",
+   "u": "https://www.carthrottle.com/news/every-car-initial-d-and-our-top-10-ranked",
+   "k": "outlet"
+  },
+  "mb22": {
+   "t": "MotorBiscuit: The EK9 Honda Civic Type R is finally legal to import (Chase Bierenkoven, Jan 2022)",
+   "u": "https://www.motorbiscuit.com/honda-civic-type-r-and-top-3-jdm-euro-cars-import-2022",
+   "k": "outlet"
+  },
+  "jbs25": {
+   "t": "JDM Buy Sell: The US 25-year import rule (import guide, checked Oct 2026)",
+   "u": "https://www.jdmbuysell.com/learn/topics/25-year-rule/",
+   "k": "outlet"
+  },
+  "cfr": {
+   "t": "49 CFR 591.5(i): vehicles 25 or more years old (Cornell LII)",
+   "u": "https://www.law.cornell.edu/cfr/text/49/591.5",
+   "k": "outlet"
+  }
+ },
+ "yt_study": "car-honda-civic-type-r-ek9"
+}

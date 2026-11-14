@@ -86,8 +86,8 @@ def nhtsa(D):
     """complaints per model year, and per generation how many complaints mention each engine issue (with 2 example complaint ids)"""
     if not os.path.exists(DB) or not D.get('nhtsa'): return None   # 11-13 JDM: a car never sold new in the US has no NHTSA name
     c = sqlite3.connect(DB); n = D['nhtsa']
-    q = f"select odino, year, max(descr), group_concat(comp, '|') from rows where make=? and model in ({','.join('?' * len(n['models']))}) and year between 1990 and 2026 group by odino"
-    allr = c.execute(q, [n['make']] + n['models']).fetchall()
+    q = f"select odino, year, max(descr), group_concat(comp, '|') from rows where make=? and model in ({','.join('?' * len(n['models']))}) and year between ? and 2026 group by odino"
+    allr = c.execute(q, [n['make']] + n['models'] + [min([1990] + [g['y0'] for g in D['gens']])]).fetchall()   # 11-14: the AE86 starts in 1984
     rows = [(o, y, d) for o, y, d, _ in allr]
     by_year = collections.Counter(y for _, y, _ in rows)
     inyrs = lambda y: any(g['y0'] <= y <= g['y1'] for g in D['gens'])

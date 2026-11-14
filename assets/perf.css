@@ -207,3 +207,5 @@ a.pf-c:hover { box-shadow: 0 10px 24px -16px rgba(0,0,0,.3); }
 .pf-pic { position: absolute; left: 6px; bottom: 6px; margin: 0; padding: 3px 10px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 12px; color: var(--ink2); max-width: calc(100% - 52px); }
 .pfjs .pf-pic { display: none; }
 .pfjs .pf-pic.on { display: block; }
+
+.pf-k.pf-uns { margin-left: 6px; background: #fff1b8; color: #5c4a00; }

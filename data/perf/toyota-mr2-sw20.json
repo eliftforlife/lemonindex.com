@@ -1,0 +1,466 @@
+{
+ "slug": "toyota-mr2-sw20",
+ "name": "Toyota MR2 (SW20)",
+ "short": "MR2",
+ "make": "Toyota",
+ "page": "/jdm/toyota-mr2-sw20/",
+ "jdm": true,
+ "focus": "sw20",
+ "star": "sw20-turbo",
+ "h1": "Toyota MR2 SW20 (1991–1995): specs, 3S-GTE turbo engine and what owners say",
+ "nhtsa": {
+  "make": "TOYOTA",
+  "models": [
+   "MR2"
+  ],
+  "note": "NHTSA files every MR2 under MR2, so the 1991–1995 counts cover both the non-turbo car and the Turbo, hardtop and T-top alike."
+ },
+ "us": {
+  "sold": true,
+  "x": "Sold new in the US for model years 1991 to 1995, as the non-turbo MR2 (2.2-liter 5S-FE) and the MR2 Turbo (2.0-liter 3S-GTE). Canada lost it after 1993. Japan kept building it until August 1999. Toyota sold 33,111 in the US and Canada from 1990 to 1995.",
+  "src": [
+   "hag",
+   "wpm"
+  ]
+ },
+ "fame": [
+  {
+   "t": "The poor man’s Ferrari",
+   "k": "Name",
+   "x": "With its mid-engine layout and looks often compared to the Ferrari 348, the SW20 was nicknamed the baby Ferrari or poor man’s Ferrari.",
+   "src": [
+    "wpm",
+    "sg"
+   ]
+  },
+  {
+   "t": "Snap oversteer",
+   "k": "Name",
+   "x": "Early cars could snap into oversteer when the driver lifted off mid-corner, and the first Turbo earned the nickname widow maker. Toyota revised the rear suspension and went from 14-inch to 15-inch wheels for 1993, which helped a lot.",
+   "src": [
+    "hag",
+    "ct9",
+    "wpm"
+   ]
+  },
+  {
+   "t": "JGTC GT300 record season",
+   "k": "Racing",
+   "x": "In 1998 the #25 Team Taisan Jr. with Tsuchiya MR2 won the Japanese GT Championship’s GT300 drivers’ and teams’ titles, winning a record five of the six races held. An MR2 won both GT300 titles again in 1999.",
+   "src": [
+    "wp98",
+    "wpm"
+   ]
+  },
+  {
+   "t": "A tuner’s car",
+   "k": "Tuning",
+   "x": "The 3S-GTE takes more boost well. CarThrottle says the stock turbo and internals handle roughly 280 to 300 bhp on 1 bar, and a fully built engine about 350 to 400 bhp. Hagerty calls the MR2 such a tunable car that keeping them stock would be almost tragic.",
+   "src": [
+    "ct9",
+    "hag"
+   ]
+  }
+ ],
+ "related": [
+  {
+   "u": "/jdm/toyota-supra-mk4/",
+   "t": "Toyota Supra Mk4, its bigger sibling"
+  }
+ ],
+ "topics_extra": {
+  "Snap oversteer / spins": "snap oversteer|oversteer|spun (out|around)|spin(ning)? out|swap(ped)? ends",
+  "Gearbox synchros": "synchros?|grind(s|ing)? (into|in)? ?(2nd|second|3rd|third|gear)|crunch(y|es)? (shift|into)",
+  "T-top leaks": "t-?tops?|t-?bars?|roof (leak|seal)|leak(s|ing)? (through|from) the roof",
+  "Rust": "\\brust(ed|ing|y)?\\b|\\bsills?\\b",
+  "Turbo": "turbo (failure|failed|blew|blown|seal|smok)|boost (leak|problem)|wastegate",
+  "Cooling / overheating": "overheat|coolant (leak|hose)|heater hose|hose from hell|radiator"
+ },
+ "gens": [
+  {
+   "id": "sw20",
+   "code": "SW20 (W20)",
+   "years": "1991–1995",
+   "y0": 1991,
+   "y1": 1995,
+   "engine": "3S-GTE",
+   "body": "2-seat coupe (hardtop or T-top)",
+   "tag": "Mid-engine, rear-drive. 2.0-liter 3S-GTE turbo with 200 hp in the US Turbo; 2.2-liter 5S-FE in the base car. US 1991–1995; Japan built it until August 1999.",
+   "variants": [
+    {
+     "id": "sw20-turbo",
+     "name": "MR2 Turbo (US)",
+     "years": "1991–1995",
+     "star": true,
+     "hp": {
+      "v": 200,
+      "src": [
+       "hag",
+       "wps",
+       "cg"
+      ],
+      "note": "at 6,000 rpm"
+     },
+     "tq": {
+      "v": 200,
+      "src": [
+       "hag",
+       "wps",
+       "cg"
+      ],
+      "note": "lb-ft at 3,200 rpm; CarThrottle says 203 lb-ft"
+     },
+     "z60": {
+      "v": 6.3,
+      "who": "Car and Driver (1992)",
+      "src": [
+       "z60"
+      ],
+      "claim": 6.2,
+      "csrc": [
+       "ctt"
+      ]
+     },
+     "top": {
+      "v": "147 mph",
+      "src": [
+       "ctt"
+      ],
+      "note": "Toyota figure, per CarThrottle"
+     },
+     "trans": {
+      "v": "5-speed manual, rear-drive",
+      "src": [
+       "cg",
+       "ctt",
+       "wpm"
+      ],
+      "note": "manual only, stronger E153 gearbox; limited-slip differential from 1993 (optional per Hagerty, standard on US cars per CarThrottle)"
+     },
+     "weight": {
+      "v": "2,734 lb",
+      "src": [
+       "ctt"
+      ],
+      "note": "per CarThrottle"
+     },
+     "price": {
+      "v": "$20,278",
+      "src": [
+       "ctt"
+      ],
+      "note": "1991 base; $29,238 by 1995"
+     },
+     "what": "The 3S-GTE turbo with a side-mounted intercooler, manual only. 1993 brought the revised rear suspension, 15-inch wheels and bigger brakes; 1994 brought new taillights and a smaller wing.",
+     "what_src": [
+      "wps",
+      "hag",
+      "cg"
+     ]
+    },
+    {
+     "id": "sw20-base",
+     "name": "MR2 (US, non-turbo)",
+     "years": "1991–1995",
+     "engine": "5S-FE",
+     "hp": {
+      "v": 130,
+      "src": [
+       "hag",
+       "wps",
+       "cg"
+      ],
+      "note": "at 5,400 rpm, 1991–92; 135 hp from 1993"
+     },
+     "tq": {
+      "v": 145,
+      "src": [
+       "hag",
+       "wps"
+      ],
+      "note": "lb-ft; Wikipedia gives 144 lb-ft at 4,400 rpm for 1991–92"
+     },
+     "z60": {
+      "v": 8.5,
+      "who": "Consumer Guide (manual)",
+      "src": [
+       "cg"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "5-speed manual or 4-speed automatic, rear-drive",
+      "src": [
+       "cg"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "1,179 kg (2,599 lb)",
+      "src": [
+       "wpm"
+      ],
+      "note": "1991 non-turbo"
+     },
+     "what": "A 2.2-liter non-turbo four with its torque low down; Hagerty says there was little point revving it to its 6,250 rpm limit. Turbo cars now sell for about double.",
+     "what_src": [
+      "hag"
+     ]
+    },
+    {
+     "id": "sw20-gts-jdm",
+     "name": "MR2 GT-S (Japan)",
+     "years": "1989–1999",
+     "hp": {
+      "v": 242,
+      "src": [
+       "wpm",
+       "wps",
+       "ctt"
+      ],
+      "note": "245 PS at 6,000 rpm from Rev 3 (late 1993); early cars 221–225 PS depending on the source (JDM)"
+     },
+     "trans": {
+      "v": "5-speed manual, rear-drive",
+      "src": [
+       "wpm"
+      ],
+      "note": "manual only"
+     },
+     "weight": {
+      "v": "1,250 kg (2,755 lb)",
+      "src": [
+       "wpm"
+      ],
+      "note": "1993 Turbo GT-S hardtop"
+     },
+     "what": "Japan’s turbo model. From Rev 3 (late 1993) its 3S-GTE got bigger 550cc injectors in place of 440cc and was rated 245 PS. Never sold new in the US.",
+     "what_src": [
+      "wpm",
+      "ct9"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "3S-GTE": {
+   "name": "Toyota 3S-GTE",
+   "what": "2.0-liter inline-4, DOHC 16-valve, turbocharged and intercooled",
+   "study": "toyota-3s-gte",
+   "page": "/engines/toyota-3s-gte/",
+   "yt": [
+    "scy",
+    "toyota-3s-gte"
+   ],
+   "facts": [
+    [
+     "Layout",
+     "Inline-4, DOHC 16-valve, air-to-air intercooler (side-mounted in the MR2)",
+     [
+      "wps"
+     ]
+    ],
+    [
+     "Output",
+     "200 hp at 6,000 rpm, 200 lb-ft at 3,200 rpm in the US MR2 Turbo; 245 PS (242 hp) in later Japanese MR2s",
+     [
+      "wps",
+      "hag"
+     ]
+    ],
+    [
+     "Size",
+     "1,998 cc, 86 x 86 mm bore x stroke, 8.8:1 compression (1990–93)",
+     [
+      "wps"
+     ]
+    ],
+    [
+     "Turbo",
+     "CT26 with a twin-entry turbine housing; a revised CT20b from the 1994 model year",
+     [
+      "wps",
+      "ctt"
+     ]
+    ],
+    [
+     "Timing belt",
+     "Non-interference; CarThrottle says change the belt about every 60,000 miles",
+     [
+      "ctt"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Turbo heat and oil coking",
+     "kind": "Outlet report",
+     "rx": "turbo (failure|failed|blew|blown|seal|smok)|smok(e|ing) (under|on) boost|blue smoke|white smoke|coking|turbo timer",
+     "x": "CarThrottle calls the turbo a major sore point: engine-bay heat shortens its life, and non-synthetic oil can coke the turbo bearing. Its buyer’s guides say to check for blue or white smoke at start-up and under boost, and smoke from the dipstick tube.",
+     "fix": "Use synthetic oil and idle about three minutes after hard driving, as Toyota recommends.",
+     "src": [
+      "ctt",
+      "ct9"
+     ]
+    },
+    {
+     "t": "Cooling system and overheating",
+     "kind": "Outlet report",
+     "rx": "overheat|coolant (leak|hose)|heater hose|hose from hell|head gasket|air (pocket|in the (cooling|coolant))",
+     "x": "CarThrottle says the long cooling system is hard to bleed, and trapped air can cause overheating and a blown head gasket. A coolant hose near the exhaust manifold, nicknamed the hose from hell, can burst around 100,000 miles, and overheating on boost can point to a cracked block.",
+     "fix": "Have the coolant flushed and bled by someone who knows the car.",
+     "src": [
+      "ctt",
+      "ct9"
+     ]
+    },
+    {
+     "t": "Oil leaks",
+     "kind": "Outlet report",
+     "rx": "oil leak|cam cover|valve cover|distributor (o-?ring|seal)|alternator",
+     "x": "CarThrottle names the cam cover, distributor O-rings and head gasket as common oil leaks, and says a leak can kill the alternator, which is hard to reach in the tight engine bay.",
+     "fix": "",
+     "src": [
+      "ct9"
+     ]
+    },
+    {
+     "t": "Catalyst in the downpipe",
+     "kind": "Outlet report",
+     "rx": "catalytic|downpipe|\\bcat\\b (fail|clog|rattl)",
+     "x": "On the MR2 Turbo the catalyst is built into the turbo downpipe, and CarThrottle says long high-speed running can damage it.",
+     "fix": "",
+     "src": [
+      "ctt"
+     ]
+    }
+   ],
+   "photo": {
+    "src": "/assets/engines/toyota-3s-gte-2-0-l-inline-4-turbo-engine.webp",
+    "w": 1200,
+    "h": 1146,
+    "ai": true
+   }
+  },
+  "5S-FE": {
+   "name": "Toyota 5S-FE",
+   "what": "2.2-liter inline-4, DOHC, naturally aspirated",
+   "yt": [
+    "scy",
+    ""
+   ],
+   "facts": [
+    [
+     "Layout",
+     "Inline-4, DOHC, mounted behind the driver",
+     [
+      "cg",
+      "hag"
+     ]
+    ],
+    [
+     "Output",
+     "130 hp at 5,400 rpm (1991–92), 135 hp at 5,400 rpm (1993–95); 144–145 lb-ft at 4,400 rpm",
+     [
+      "wps",
+      "hag",
+      "cg"
+     ]
+    ],
+    [
+     "Size",
+     "2,164 cc",
+     [
+      "wps"
+     ]
+    ],
+    [
+     "Used in",
+     "US MR2 (non-turbo), 1991–1995",
+     [
+      "hag",
+      "cg"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Oil leaks",
+     "kind": "Outlet report",
+     "rx": "oil leak|cam cover|valve cover|distributor (o-?ring|seal)|alternator",
+     "x": "CarThrottle names the cam cover, distributor O-rings and head gasket as common SW20 oil leaks, and says a leak can kill the alternator.",
+     "fix": "",
+     "src": [
+      "ct9"
+     ]
+    },
+    {
+     "t": "Cracked heater hoses",
+     "kind": "Outlet report",
+     "rx": "heater hose|coolant (leak|hose)|overheat",
+     "x": "CarThrottle says the copper heater pipes that run over the fuel tank tend to crack at their brackets, and replacing them means dropping the fuel tank.",
+     "fix": "",
+     "src": [
+      "ct9"
+     ]
+    }
+   ]
+  }
+ },
+ "compare": [],
+ "sources": {
+  "wpm": {
+   "t": "Wikipedia: Toyota MR2",
+   "u": "https://en.wikipedia.org/wiki/Toyota_MR2",
+   "k": "Wikipedia"
+  },
+  "wps": {
+   "t": "Wikipedia: Toyota S engine",
+   "u": "https://en.wikipedia.org/wiki/Toyota_S_engine",
+   "k": "Wikipedia"
+  },
+  "wp98": {
+   "t": "Wikipedia: 1998 All Japan Grand Touring Car Championship",
+   "u": "https://en.wikipedia.org/wiki/1998_All_Japan_Grand_Touring_Car_Championship",
+   "k": "Wikipedia"
+  },
+  "hag": {
+   "t": "Hagerty: Your handy 1991–95 Toyota MR2 (MKII) buyer’s guide (Bryan Gerould, Oct 2022)",
+   "u": "https://www.hagerty.com/media/buying-and-selling/1991-95-toyota-mr2-mkii-buyers-guide/",
+   "k": "outlet"
+  },
+  "ctt": {
+   "t": "CarThrottle: Used car buying guide: 2nd generation Toyota MR2 Turbo (updated Oct 2024)",
+   "u": "https://www.carthrottle.com/news/used-car-buying-guide-2nd-generation-toyota-mr2-turbo",
+   "k": "outlet"
+  },
+  "ct9": {
+   "t": "CarThrottle: 9 things you need to know before buying an SW20 Toyota MR2 (Matt Robinson, updated Oct 2024)",
+   "u": "https://www.carthrottle.com/news/9-things-you-need-know-buying-sw20-toyota-mr2",
+   "k": "outlet"
+  },
+  "cg": {
+   "t": "Consumer Guide: 1991–95 Toyota MR2 used car review",
+   "u": "https://consumerguide.com/used/1991-95-toyota-mr2/",
+   "k": "outlet"
+  },
+  "z60": {
+   "t": "0-60specs.com: Toyota MR2 0-60 runs by magazine (Car and Driver, MotorWeek, Motor Trend)",
+   "u": "https://www.0-60specs.com/toyota/mr2-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "sg": {
+   "t": "SlashGear: This car is called the poor man’s Ferrari (Olivia Richman, May 2026)",
+   "u": "https://www.slashgear.com/2167863/poor-mans-ferrari-toyota-mr2-sw-20/",
+   "k": "outlet"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-toyota-mr2-sw20"
+}

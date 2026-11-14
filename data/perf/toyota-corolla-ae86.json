@@ -1,0 +1,471 @@
+{
+ "slug": "toyota-corolla-ae86",
+ "name": "Toyota Corolla AE86 (Levin / Trueno)",
+ "short": "AE86",
+ "make": "Toyota",
+ "page": "/jdm/toyota-corolla-ae86/",
+ "jdm": true,
+ "focus": "ae86",
+ "star": "ae86-gts",
+ "h1": "Toyota Corolla AE86 (Levin / Sprinter Trueno): specs, 4A-GE engine and what owners say",
+ "nhtsa": {
+  "make": "TOYOTA",
+  "models": [
+   "COROLLA"
+  ],
+  "note": "NHTSA files every Corolla under COROLLA, front-drive sedans, hatchbacks and wagons included, so these counts cover all 1984–1987 Corollas, not just the rear-drive AE86 coupe and liftback."
+ },
+ "us": {
+  "sold": true,
+  "x": "Sold new in the US as the rear-drive Corolla Sport coupe and liftback for model years 1984 to 1987. The SR5 had the single-cam 4A-C from the start. The twin-cam GT-S, the US version of the Levin and Trueno, arrived for the 1985 model year. Japan built the AE86 from May 1983 to July 1987.",
+  "src": [
+   "auwm",
+   "wp86",
+   "jdmbs"
+  ]
+ },
+ "fame": [
+  {
+   "t": "Initial D",
+   "k": "Anime",
+   "x": "In the Initial D manga (1995–2013) and anime, Takumi Fujiwara drives his father’s AE86 Sprinter Trueno GT-APEX on early-morning tofu deliveries, then races it on mountain passes. The series kept the car famous with a new generation of fans.",
+   "src": [
+    "wpinitd",
+    "wp86",
+    "auwm"
+   ]
+  },
+  {
+   "t": "The Drift King",
+   "k": "Drifting",
+   "x": "Keiichi Tsuchiya learned car control on Japan’s mountain passes in an AE86 Sprinter Trueno and became known as the Drift King. He helped turn drifting into a real motorsport and was a consultant on Initial D. In 2002, Katsuhiro Ueo won the D1 Grand Prix title in an AE86.",
+   "src": [
+    "evo",
+    "wptsu",
+    "wpinitd",
+    "wp86"
+   ]
+  },
+  {
+   "t": "Touring car titles",
+   "k": "Racing",
+   "x": "Chris Hodgetts won the British Saloon Car Championship in an AE86 in 1986 and again in 1987. The AE86 also won the 1986 European Touring Car Championship manufacturers’ title in its class.",
+   "src": [
+    "evo",
+    "wp86"
+   ]
+  },
+  {
+   "t": "The 86 name",
+   "k": "Name",
+   "x": "Toyota says the 86 and GR86 are named in tribute to the AE86, called the hachi-roku (8-6) in Japan and the Corolla GT-S in the US.",
+   "src": [
+    "tpr"
+   ]
+  }
+ ],
+ "related": [
+  {
+   "u": "/cars/gr86/",
+   "t": "Toyota GR86, named after the AE86"
+  },
+  {
+   "u": "/cars/toyota-corolla/",
+   "t": "Toyota Corolla (all years)"
+  },
+  {
+   "u": "/jdm/toyota-supra-mk4/",
+   "t": "Toyota Supra Mk4"
+  }
+ ],
+ "topics_extra": {
+  "Rust": "\\brust(ed|ing|y)?\\b|sills?|spare wheel well|sunroof",
+  "Head gasket": "head gasket|milky oil|coolant (in|into) (the )?oil",
+  "Timing belt": "timing belt|cam belt",
+  "Oil leaks": "oil leak|valve cover gasket|cam cover",
+  "Limited-slip / rear axle": "\\blsd\\b|limited.slip|differential|rear axle",
+  "Engine swap": "engine swap|\\bswap(ped)?\\b|ae85"
+ },
+ "gens": [
+  {
+   "id": "ae86",
+   "code": "AE86",
+   "years": "1984–1987",
+   "y0": 1984,
+   "y1": 1987,
+   "engine": "4A-GE",
+   "body": "2-door coupe / 3-door liftback",
+   "tag": "1.6-liter 4A-GE twin-cam, 112 hp in the US GT-S (130 PS in Japan), 5-speed manual, rear-drive. Built in Japan May 1983 to July 1987.",
+   "variants": [
+    {
+     "id": "ae86-gts",
+     "name": "Corolla GT-S (US)",
+     "years": "1985–1987",
+     "star": true,
+     "hp": {
+      "v": 112,
+      "src": [
+       "wp86",
+       "auwm",
+       "wpa"
+      ],
+      "note": "at 6,600 rpm (SAE net)"
+     },
+     "tq": {
+      "v": 97,
+      "src": [
+       "wp86",
+       "auwm"
+      ],
+      "note": "lb-ft at 4,800 rpm"
+     },
+     "trans": {
+      "v": "5-speed manual, rear-drive",
+      "src": [
+       "wp86",
+       "jdmbs"
+      ],
+      "note": "limited-slip differential was an option on twin-cam manual cars"
+     },
+     "weight": {
+      "v": "about 2,350 lb",
+      "src": [
+       "auwm"
+      ],
+      "note": "Ate Up With Motor; Wikipedia lists about 2,200–2,300 lb for the US GT-S and SR5"
+     },
+     "price": {
+      "v": "$9,298",
+      "src": [
+       "auwm"
+      ],
+      "note": "two-door coupe; three-door liftback $9,538"
+     },
+     "what": "The US twin-cam car. Its 4A-GE used an airflow meter instead of Japan’s pressure-sensor injection, and it was rated 112 hp against 130 PS in Japan.",
+     "what_src": [
+      "wpa",
+      "jdmbs",
+      "auwm"
+     ]
+    },
+    {
+     "id": "ae86-gtapex",
+     "name": "Levin / Sprinter Trueno GT-APEX (Japan)",
+     "years": "1983–1987",
+     "hp": {
+      "v": 128,
+      "src": [
+       "wpa",
+       "wp86",
+       "gw"
+      ],
+      "note": "130 PS at 6,600 rpm (gross, JDM)"
+     },
+     "tq": {
+      "v": 110,
+      "src": [
+       "wp86",
+       "gw",
+       "jdmbs"
+      ],
+      "note": "lb-ft at 5,200 rpm (149 Nm, JDM)"
+     },
+     "trans": {
+      "v": "5-speed manual, rear-drive",
+      "src": [
+       "jdmbs",
+       "wp86"
+      ],
+      "note": "a 4-speed automatic was added in May 1985; limited-slip differential optional"
+     },
+     "weight": {
+      "v": "940 kg (2,070 lb)",
+      "src": [
+       "auwm"
+      ],
+      "note": "Trueno GT-APEX, JDM; JDM Buy Sell lists 960 kg for a Levin GT-APEX three-door"
+     },
+     "what": "Japan’s top trim, sold as the Corolla Levin (fixed headlights) or Sprinter Trueno (pop-up headlights), as a 2-door coupe or 3-door liftback. Takumi’s car in Initial D is a Trueno GT-APEX.",
+     "what_src": [
+      "wp86",
+      "gw"
+     ]
+    },
+    {
+     "id": "ae86-gt-uk",
+     "name": "Corolla GT (UK)",
+     "years": "1983–1987",
+     "hp": {
+      "v": 123,
+      "src": [
+       "evo"
+      ],
+      "note": "bhp at 6,600 rpm (UK car)"
+     },
+     "tq": {
+      "v": 107,
+      "src": [
+       "evo"
+      ],
+      "note": "lb-ft at 5,200 rpm"
+     },
+     "top": {
+      "v": "122 mph",
+      "src": [
+       "evo",
+       "gw"
+      ],
+      "note": ""
+     },
+     "trans": {
+      "v": "5-speed manual, rear-drive",
+      "src": [
+       "gw"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "970 kg (2,138 lb)",
+      "src": [
+       "evo",
+       "gw"
+      ],
+      "note": "kerb"
+     },
+     "price": {
+      "v": "£8,799",
+      "src": [
+       "evo"
+      ],
+      "note": "UK, new"
+     },
+     "what": "The European twin-cam car, sold in the UK and Ireland as a liftback only. evo quotes 0-62 mph in 8.3 seconds.",
+     "what_src": [
+      "gw",
+      "evo"
+     ]
+    },
+    {
+     "id": "ae86-sr5",
+     "name": "Corolla SR5 (US)",
+     "years": "1984–1987",
+     "engine": "4A-C",
+     "hp": {
+      "v": 70,
+      "src": [
+       "auwm",
+       "wp86"
+      ],
+      "note": "SAE net at launch; 74 hp from 1986, per Ate Up With Motor (Wikipedia’s year split differs)"
+     },
+     "tq": {
+      "v": 85,
+      "src": [
+       "wp86"
+      ],
+      "note": "lb-ft early cars; 86 lb-ft at 2,800 rpm later"
+     },
+     "what": "The same rear-drive coupe and liftback with a carbureted single-cam, 8-valve 4A-C instead of the twin-cam. The GT-S cost about $1,200 to $1,300 more.",
+     "what_src": [
+      "auwm",
+      "wpa"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "4A-GE": {
+   "name": "Toyota 4A-GE",
+   "what": "1.6-liter inline-4, DOHC 16-valve, naturally aspirated",
+   "study": "toyota-4a-ge",
+   "page": "/engines/toyota-4a-ge/",
+   "yt": [
+    "scy",
+    "toyota-4a-ge"
+   ],
+   "facts": [
+    [
+     "Layout",
+     "Inline-4, DOHC 16-valve, cams driven by a timing belt, forged crankshaft",
+     [
+      "wpa"
+     ]
+    ],
+    [
+     "Output",
+     "112 hp at 6,600 rpm, 97 lb-ft at 4,800 rpm in the US GT-S; 130 PS (128 hp) at 6,600 rpm in Japan",
+     [
+      "wp86",
+      "auwm",
+      "wpa"
+     ]
+    ],
+    [
+     "Size",
+     "1,587 cc, 81 x 77 mm bore x stroke, 9.4:1 compression",
+     [
+      "wpa"
+     ]
+    ],
+    [
+     "Induction",
+     "Fuel injection with T-VIS, butterfly valves in the intake runners that open at about 4,200 rpm; airflow meter on US cars, pressure (MAP) sensor in Japan",
+     [
+      "wpa"
+     ]
+    ],
+    [
+     "Parts today",
+     "Toyota’s GR Heritage Parts program has remade some AE86 parts, including new cylinder blocks and heads",
+     [
+      "gw"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Head gasket",
+     "kind": "Outlet report",
+     "rx": "head gasket|milky oil|coolant (in|into) (the )?oil|white smoke",
+     "x": "DSPORT magazine says the 4A-GE’s head gaskets are prone to failure. Goodwood’s buyer’s guide still calls the twin-cam mechanically tough.",
+     "fix": "",
+     "src": [
+      "dsport",
+      "gw"
+     ]
+    },
+    {
+     "t": "Timing belt history",
+     "kind": "Outlet report",
+     "rx": "timing belt|cam belt",
+     "x": "Both camshafts are driven by a timing belt. JDM Buy Sell’s buyer’s guide says to ask for dated belt records and to treat the belt as due if there are none.",
+     "fix": "Replace the timing belt if there are no dated records.",
+     "src": [
+      "jdmbs",
+      "wpa"
+     ]
+    },
+    {
+     "t": "Fake or swapped twin-cams",
+     "kind": "Outlet report",
+     "rx": "engine swap|\\bswap(ped)?\\b|ae85|not (the )?original engine",
+     "x": "Goodwood warns about single-cam AE85s passed off as twin-cam AE86s, especially when bought unseen from an importer. JDM Buy Sell says a 4A-GE fitted to an AE85 does not make it an AE86, so check the chassis code and papers against the engine.",
+     "fix": "",
+     "src": [
+      "gw",
+      "jdmbs"
+     ]
+    }
+   ],
+   "photo": {
+    "src": "/assets/engines/toyota-4a-ge-1-6-l-inline-4-engine.webp",
+    "w": 1200,
+    "h": 1199,
+    "ai": true
+   }
+  },
+  "4A-C": {
+   "name": "Toyota 4A-C",
+   "what": "1.6-liter inline-4, SOHC 8-valve, carbureted",
+   "yt": [
+    "scy",
+    ""
+   ],
+   "facts": [
+    [
+     "Layout",
+     "Inline-4, SOHC 8-valve, carburetor",
+     [
+      "wpa",
+      "auwm"
+     ]
+    ],
+    [
+     "Output",
+     "70 hp SAE net at launch, 74 hp from 1986",
+     [
+      "auwm",
+      "wp86"
+     ]
+    ],
+    [
+     "Size",
+     "1,587 cc, 81 x 77 mm bore x stroke, 9.0:1 compression",
+     [
+      "wpa",
+      "wp86"
+     ]
+    ],
+    [
+     "Used in",
+     "US Corolla SR5 (and DX), 1984–1987",
+     [
+      "wp86",
+      "auwm"
+     ]
+    ]
+   ],
+   "issues": []
+  }
+ },
+ "compare": [],
+ "sources": {
+  "wp86": {
+   "t": "Wikipedia: Toyota AE86",
+   "u": "https://en.wikipedia.org/wiki/Toyota_AE86",
+   "k": "Wikipedia"
+  },
+  "wpa": {
+   "t": "Wikipedia: Toyota A engine",
+   "u": "https://en.wikipedia.org/wiki/Toyota_A_engine",
+   "k": "Wikipedia"
+  },
+  "wpinitd": {
+   "t": "Wikipedia: Initial D",
+   "u": "https://en.wikipedia.org/wiki/Initial_D",
+   "k": "Wikipedia"
+  },
+  "wptsu": {
+   "t": "Wikipedia: Keiichi Tsuchiya",
+   "u": "https://en.wikipedia.org/wiki/Keiichi_Tsuchiya",
+   "k": "Wikipedia"
+  },
+  "auwm": {
+   "t": "Ate Up With Motor: Thunder and Lightning, Part 2: The AE86 Toyota Corolla Levin/Sprinter Trueno",
+   "u": "https://ateupwithmotor.com/model-histories/ae86-corolla-levin-sprinter-trueno/view-all",
+   "k": "outlet"
+  },
+  "evo": {
+   "t": "evo: Toyota Corolla AE86: review, history, prices and specs (John Barker, Jul 2020)",
+   "u": "https://www.evo.co.uk/toyota/corolla/ae86",
+   "k": "outlet"
+  },
+  "gw": {
+   "t": "Goodwood Classic Solutions: Toyota Corolla AE86 buyer’s guide (Rachel Roberts, Jan 2026)",
+   "u": "https://insurance.goodwood.com/buyers-guide/toyota-corolla-ae86/",
+   "k": "outlet"
+  },
+  "dsport": {
+   "t": "DSPORT: Five Worst Engines, Overhyped and Underengineered (Mar 2016)",
+   "u": "https://dsportmag.com/the-scene/five-worst-engines-overhyped-and-underengineered/2/",
+   "k": "outlet"
+  },
+  "jdmbs": {
+   "t": "JDM Buy Sell: Toyota AE86 buyer’s guide",
+   "u": "https://www.jdmbuysell.com/learn/toyota/ae86/",
+   "k": "outlet"
+  },
+  "tpr": {
+   "t": "Toyota: Drivers Rejoice! Toyota Debuts All New GR 86 (Jun 2, 2021)",
+   "u": "https://pressroom.toyota.com/?p=66500",
+   "k": "Toyota"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-toyota-corolla-ae86"
+}

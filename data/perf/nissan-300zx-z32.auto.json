@@ -1,0 +1,111 @@
+{
+ "built": "2026-11-14",
+ "nhtsa": {
+  "by_year": {
+   "1990": 19,
+   "1991": 12,
+   "1992": 3,
+   "1993": 12,
+   "1994": 4,
+   "1995": 4,
+   "1996": 2
+  },
+  "gens": {
+   "z32": {
+    "n": 56,
+    "issues": {
+     "Turbo failure, and the engine comes out to fix it": {
+      "n": 0,
+      "ex": []
+     },
+     "Fuel injectors and misfires": {
+      "n": 8,
+      "ex": [
+       "529836",
+       "705382"
+      ]
+     },
+     "Timing belt": {
+      "n": 1,
+      "ex": [
+       "541401"
+      ]
+     },
+     "Heat, wiring and old hoses": {
+      "n": 2,
+      "ex": [
+       "10296632",
+       "534689"
+      ]
+     }
+    },
+    "parts": [
+     [
+      "Power train",
+      17
+     ],
+     [
+      "Fuel system, gasoline",
+      10
+     ],
+     [
+      "Engine and engine cooling",
+      10
+     ],
+     [
+      "Electrical system",
+      7
+     ],
+     [
+      "Service brakes, hydraulic",
+      5
+     ],
+     [
+      "Air bags",
+      4
+     ]
+    ]
+   }
+  },
+  "parts": [
+   [
+    "Power train",
+    17
+   ],
+   [
+    "Fuel system, gasoline",
+    10
+   ],
+   [
+    "Engine and engine cooling",
+    10
+   ],
+   [
+    "Electrical system",
+    7
+   ],
+   [
+    "Service brakes, hydraulic",
+    5
+   ],
+   [
+    "Air bags",
+    4
+   ]
+  ]
+ },
+ "recalls": {
+  "1990": [],
+  "1991": [],
+  "1992": [],
+  "1993": [],
+  "1994": [],
+  "1995": [],
+  "1996": []
+ },
+ "yt": {
+  "car-nissan-300zx-z32": null,
+  "nissan-vg30dett": null
+ },
+ "scores": {}
+}

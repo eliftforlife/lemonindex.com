@@ -25,7 +25,7 @@ from bs4 import BeautifulSoup
 HERE = os.path.dirname(os.path.abspath(__file__))
 BASE = 'https://lemonindex.com'
 E = lambda s: html.escape(str(s), quote=True)
-V = '3'   # perf.css / perf.js version (11-12: generation filter)
+V = '4'   # perf.css / perf.js version (11-12: generation filter; 11-14: #g-<id> opens that generation)
 ASSET = f'<link rel="stylesheet" href="/assets/perf.css?v={V}"><script src="/assets/perf.js?v={V}" defer></script>'
 def _load(p, d=None):
     p = os.path.join(HERE, p)
@@ -361,7 +361,7 @@ def build(slug, out='docs'):
                   + (f'<h3 class="pf-h3">Known issues</h3><ul class="pf-iss">{"".join(iss)}</ul>' if iss else '') + f'{R.close("Engine sources")}</section>')
         # YouTube
         gs, _ = gsc[g['id']]; grk = granked.index(g['id']) + 1 if g['id'] in granked else None
-        st = yt.get(g.get('yt_study') or D.get('yt_study') or '') or {}
+        st = yt.get(g.get('yt_study') or '') or yt.get(D.get('yt_study') or '') or {}   # 11-14: a generation study (Miata NA, Evo IX) falls back to the car's until it lands
         comp_sc = _avg((SCY.get(g.get('comp_study')) or {}).get('years'), g['y0'], g['y1'])[0] if g.get('comp_study') else None
         def bars(rows, cls):
             if not rows: return '<p class="pf-none">Nothing stands out.</p>'
@@ -425,6 +425,13 @@ def build(slug, out='docs'):
     cmp_sec = f'<section class="pf-sec"><h2>{ic("vs")} Compare the {E(short)}</h2><div class="pf-cmp">{chips}</div></section>' if chips else ''
     return dict(D=D, A=A, slider=slider, blocks=''.join(blocks), cmp=cmp_sec, R=R, esc=esc, G=G, focus=focus, lead=lead, YS=YS)
 
+def card_star(D):
+    """11-14 JDM legends: the generation and trim a JDM card features (data/perf/<slug>.json `jdm_card`: {gen, star}), else the page's own star"""
+    jc = D.get('jdm_card') or {}
+    g = next((x for x in D['gens'] if x['id'] == jc.get('gen')), None)
+    if not g: return _star(D)
+    return g, next((x for x in g['variants'] if x['id'] == jc.get('star')), g['variants'][0])
+
 def _star(D):
     g = next(x for x in D['gens'] if x['id'] == D.get('focus')) if any(x['id'] == D.get('focus') for x in D['gens']) else D['gens'][-1]
     v = next((x for x in g['variants'] if x['id'] == D.get('star')), next((x for x in g['variants'] if x.get('star')), g['variants'][0]))
@@ -435,20 +442,37 @@ def _star(D):
 # (links to the site's /cars/ model and year pages). Shown at the top of Overview. Cars never sold new in the US have no `nhtsa` key: their
 # page has no Problems tab and says why, instead of showing zeros.
 _FI = '<path d="M4 5h16v14H4z"/><path d="M4 9h16M8 5v4M12 5v4M16 5v4"/>'
+_FAME = '<path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/>'
+# 11-14 JDM legends (Elijah: "add 10 more of the most popular JDM cars"): `fame` = why the car is famous (racing, drifting, anime, games,
+# records), plain text with sources, `unsure` items labeled; `jdm_versions` = Japan-market versions a US page doesn't cover (variant cards).
 def films_html(D, R):
     fl, us, rel = D.get('films') or [], D.get('us') or {}, [r for r in D.get('related') or [] if r.get('u')]
-    if not (fl or us or rel): return ''
-    R.open(); li = ''
+    fm, jv = D.get('fame') or [], D.get('jdm_versions') or []
+    if not (fl or us or rel or fm or jv): return ''
+    R.open(); li = fli = ''
     for f in fl:
         R(*f.get('src', [])); li += f'<li><b>{E(f["film"])}</b><span class="pf-k">{E(f.get("who", ""))}</span><p>{E(f["x"])}</p></li>'
-    out = (f'<section class="pf-sec pf-films"><h2><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round">{_FI}</svg> In the films</h2>'
-           + (f'<ul class="pf-iss">{li}</ul>' if li else '') )
+    for f in fm:
+        R(*f.get('src', []))
+        fli += (f'<li><b>{E(f["t"])}</b><span class="pf-k">{E(f.get("k", ""))}</span>' + ('<span class="pf-k pf-uns">Not fully confirmed</span>' if f.get('unsure') else '')
+                + f'<p>{E(f["x"])}</p></li>')
+    svg = lambda d: f'<svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round">{d}</svg>'
+    if fl: out = f'<section class="pf-sec pf-films"><h2>{svg(_FI)} In the films</h2>' + f'<ul class="pf-iss">{li}</ul>' + (f'<h3 class="pf-h3">Why it&#39;s famous</h3><ul class="pf-iss">{fli}</ul>' if fli else '')
+    else: out = f'<section class="pf-sec pf-films pf-fame"><h2>{svg(_FAME)} Why it&#39;s famous</h2>' + (f'<ul class="pf-iss">{fli}</ul>' if fli else '')
+    if jv:
+        cards = ''
+        for v in jv:
+            w = dict(v); w['what'] = ' '.join(x for x in ((v.get('engine_name') or '') and f'{v["engine_name"]}.', v.get('what') or '') if x)
+            cards += variant_card(w, R, False)
+        out += f'<h3 class="pf-h3">Japan-market versions</h3><p class="pf-dek">Sold new in Japan only. Each card lists its own sources.</p><div class="pf-vs">{cards}</div>'
     if us.get('x'):
         R(*us.get('src', []))
         out += f'<p class="pf-li">{ic("shield" if us.get("sold") else "info", 18)}<span><b>{"Sold new in the US" if us.get("sold") else "Never sold new in the US"}.</b> {E(us["x"])}</span></p>'
     if rel: out += '<p class="pf-li">' + ic('vs', 18) + '<span>On this site: ' + ' · '.join(f'<a href="{E(r["u"])}">{E(r["t"])}</a>' for r in rel) + '</span></p>'
-    out += (f'<p class="pf-cap">Film facts are plain text from the sources listed: no film stills, logos or likenesses. The picture above is an AI illustration of a stock car, not the film car. <a href="/jdm/">Every JDM film car</a></p>'
-            if D.get('jdm') else '') + R.close() + '</section>'
+    if D.get('jdm') and fl: cap = 'Film facts are plain text from the sources listed: no film stills, logos or likenesses. The picture above is an AI illustration of a stock car, not the film car. <a href="/jdm/">Every JDM car</a>'
+    elif fm: cap = 'Plain text from the sources listed: no race photos, anime stills, logos or likenesses. Items marked &quot;Not fully confirmed&quot; rest on one weaker source. <a href="/jdm/">Every JDM car</a>'
+    else: cap = ''
+    out += (f'<p class="pf-cap">{cap}</p>' if cap else '') + R.close() + '</section>'
     return out
 
 def _qa(D, P):
@@ -467,6 +491,8 @@ def _qa(D, P):
                                  + '. That&#39;s the tone of the most-watched videos about each engine, praise words against trouble words.'))
     if D.get('films'):   # 11-13 JDM: which film, whose car
         out.append((f'Which Fast and Furious movie is the {D["short"]} in?', ' '.join(f'{f["film"]}: {f["x"]}' for f in D['films'])))
+    if D.get('fame'):   # 11-14 JDM legends
+        out.append((f'Why is the {D["short"] if D.get("jdm") else D["name"]} famous?', ' '.join(f'{f["t"]}: {f["x"]}' for f in D['fame'][:3] if not f.get('unsure'))))
     if D.get('us'): out.append((f'Was the {D["name"]} sold in the US?', ('Yes. ' if D['us'].get('sold') else 'No. ') + D['us'].get('x', '')))
     return out
 
@@ -490,7 +516,7 @@ def inject(slug, out='docs'):
     no_li = (f'<p class="pf-li">{ic("shield", 18)}<span>No Lemon Index for the {E(short)}: the index is complaints per car sold, and we don&#39;t have U.S. sales by year for it. '
              f'The counts below are raw owner complaints to NHTSA.</span></p>')
     rel = f'<section class="pf-sec pf-rel"><h2>{ic("shield")} Reliability</h2>{no_li}{old}</section>'
-    ov.clear(); ov.append(BeautifulSoup(f'<div class="pf">{P["blocks"]}{rel}{P["cmp"]}<details class="pf-sd" id="pf-sources"><summary>All sources ({len(R.order)})</summary>{R.html()}</details></div>', 'html.parser'))
+    ov.clear(); ov.append(BeautifulSoup(f'<div class="pf">{P["blocks"]}{films_html(D, R)}{rel}{P["cmp"]}<details class="pf-sd" id="pf-sources"><summary>All sources ({len(R.order)})</summary>{R.html()}</details></div>', 'html.parser'))
     qa = s.find('section', class_='yqa')
     if qa: qa.append(BeautifulSoup(''.join(f'<h3>{E(q)}</h3><p>{a}</p>' for q, a in _qa(D, P)), 'html.parser'))
     if len(D['gens']) > 1:   # 11-12: the other tabs follow the generation picker (see _gy1)
@@ -539,7 +565,7 @@ def standalone(slug, page_fn, out='docs'):
     D, A, R = P['D'], P['A'], P['R']; short = D['short']; G = D['gens']; nh = A.get('nhtsa') or {}; rc = A.get('recalls') or {}
     pc = perf_list().get(slug) or {}
     mk = D['make']; mslug = re.sub(r'[^a-z0-9]+', '-', mk.lower()).strip('-')
-    crumbs = (f'<p class="ph-e">' + ('<a href="/jdm/">JDM</a> · <a href="/?type=jdm">Fast &amp; Furious cars</a>' if D.get('jdm') else '<a href="/?type=performance">Performance cars</a>')
+    crumbs = (f'<p class="ph-e">' + (('<a href="/jdm/">JDM</a> · <a href="/?type=jdm">' + ('Fast &amp; Furious cars' if D.get('films') else 'JDM legends') + '</a>') if D.get('jdm') else '<a href="/?type=performance">Performance cars</a>')
               + (f' · <a href="/brands/{mslug}/">{E(mk)}</a>' if os.path.exists(os.path.join(HERE, out, 'brands', mslug, 'index.html')) else '') + '</p>')
     hero = f'<section class="ph tb-hero pf-hero">{crumbs}<h1>{E(D["h1"])}</h1>{P["slider"]}</section>'
     _par = PARENT_ROW(slug, D)   # 11-13 N3: the regular model + its years, at the top of Overview (not the hero: phone tops stay short)
@@ -576,7 +602,8 @@ def standalone(slug, page_fn, out='docs'):
            + f'<p class="pf-cap">Source: NHTSA (api.nhtsa.gov). <a href="/vin/">Check a VIN</a> for open recalls on one car.</p></section>')
     qa = _qa(D, P)
     qh = '<section class="pf-sec yqa"><h2>Quick answers</h2>' + ''.join(f'<h3>{E(q)}</h3><p>{a}</p>' for q, a in qa) + '</section>'
-    over = f'<div class="pf">{_par}{films_html(D, R)}{P["blocks"]}{P["cmp"]}<details class="pf-sd" id="pf-sources"><summary>All sources ({len(R.order)})</summary>{R.html()}</details></div>'
+    _fh = films_html(D, R)   # 11-14: a JDM page leads with its films / fame; a US performance page (the Miata NA) has it after the generations
+    over = f'<div class="pf">{_par}{_fh if D.get("jdm") else ""}{P["blocks"]}{"" if D.get("jdm") else _fh}{P["cmp"]}<details class="pf-sd" id="pf-sources"><summary>All sources ({len(R.order)})</summary>{R.html()}</details></div>'
     tabs = TAB._tabs([('overview', 'Overview', over)] + ([('problems', 'Problems & recalls', f'<div class="pf">{rel}</div>')] if D.get('nhtsa') else [])   # 11-13 JDM: never sold new in the US = no NHTSA data, no tab
                      + [('questions', 'Questions', f'<div class="pf">{qh}</div>')], f'{short} sections')
     body = f'{TAB.ASSET}{ASSET}<script src="/assets/imginfo.js?v=2" defer></script><div class="advp tbl pfp">{hero}{tabs}</div>'
@@ -585,9 +612,10 @@ def standalone(slug, page_fn, out='docs'):
     zv = _z(v.get('z60'))[0]
     desc = (f'{D["name"]}: the {v["name"]} makes {_hp(v)} hp' + (f' and runs 0-60 in {zv}' if zv else '') + '. Engines, known issues, YouTube owner verdicts, complaints and recalls, every number sourced.')
     if D.get('jdm'):   # 11-13 JDM film cars: the film in the description; never-US cars don't promise complaints
-        title = f'{D["name"]}: Specs, Engine and Fast & Furious Car' if len(D['name']) < 34 else f'{D["name"]}: Specs, Engine, Film Car'
+        if D.get('films'): title = f'{D["name"]}: Specs, Engine and Fast & Furious Car' if len(D['name']) < 34 else f'{D["name"]}: Specs, Engine, Film Car'
+        else: title = f'{D["name"]}: Specs, Engine, Problems' if D.get('nhtsa') else f'{D["name"]}: Specs, Engine, Known Issues'   # 11-14 JDM legends
         desc = (f'{D["name"]}' + (f', {D["films"][0]["who"]}&#39;s car in {D["films"][0]["film"]}' if D.get('films') else '') + f': the {v["name"]} makes {_hp(v)} hp'
-                + (f' and runs 0-60 in {zv}' if zv else '') + '. Specs, the engine, known issues' + (', owner complaints and recalls' if D.get('nhtsa') else ' and US import status') + ', every number sourced.').replace('&#39;', "'")
+                + (f' and runs 0-60 in {zv}' if zv else '') + '. Specs, the engine, known issues' + (', owner complaints and recalls' if D.get('nhtsa') else ' and US import status') + (', why it&#39;s famous' if D.get('fame') and not D.get('films') else '') + ', every number sourced.').replace('&#39;', "'")
     url = BASE + D['page']
     ld = [R.ld(url, title), {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": re.sub('<[^>]+>', '', a).replace('&#39;', "'")}} for q, a in qa]}]
     page_fn(D['page'], title, desc, body, ld=ld, img=(pc.get('img') or '').split('?')[0] or None)

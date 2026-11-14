@@ -8,29 +8,37 @@ JDM_URLS = []
 def _jdm_hub():
     import perf_page as _JP
     C = {}
-    for s in _JDM.CARS:
+    for s in _JDM.ALL:   # 11-14: + the JDM legends
         D = _JP._load(f'data/perf/{s}.json'); A = _JP._load(f'data/perf/{s}.auto.json', {}) or {}
         if not D or not _JP.real_page(D['page'], OUT): continue
         C[s] = (D, A)
     if not C: return
     PL = _JP.perf_list()
+    gens_of = lambda D: [_JP.card_star(D)[0]] if D.get('jdm_card') else D['gens']   # 11-14: a legend on a US page counts only its JDM generation
+    twin_name = lambda s, D: next((c['name'] for c in PL.values() if c.get('perf') == s), D['name']) if D.get('jdm_card') else D['name']   # 11-14: the JDM card's own name ("Mitsubishi Lancer Evolution IX")
+    href = lambda D: D['page'] + (f'#g-{D["jdm_card"]["gen"]}' if D.get('jdm_card') else '')
     def card(s, film):
-        D, A = C[s]; g, v = _JP._star(D); hp = _JP._hp(v); zv = _JP._z(v.get('z60'))[0]
-        who = [f['who'] for f in D.get('films') or [] if f['film'] == film]
+        D, A = C[s]; g, v = _JP.card_star(D); hp = _JP._hp(v); zv = _JP._z(v.get('z60'))[0]
+        who = [f['who'] for f in D.get('films') or [] if f['film'] == film] if film else [f['t'] for f in (D.get('fame') or []) if not f.get('unsure')][:2]
         img = (PL.get(s) or {}).get('img') or D.get('img') or ''
+        if D.get('jdm_card'): img = next((c.get('img') for c in PL.values() if c.get('perf') == s), img)   # the JDM generation's own picture
         eng = D['engines'][g['engine']]
         nums = ' · '.join(x for x in (f'{hp} hp' if hp else '', f'0–60 {zv}' if zv else '') if x)
-        return (f'<a class="jdm-c" href="{E(D["page"])}"><span class="jdm-p">' + (f'<img src="{E(img)}"{rset(img.split("?")[0], "(max-width: 600px) 92vw, 300px")} alt="{E(D["name"])}, AI illustration" width="1000" height="600" loading="lazy" decoding="async">' if img else '')
-                + f'</span><b>{E(D["name"])}</b><small class="jdm-w">{E(", ".join(who))}</small><small>{E(eng["name"])}' + (f' · {E(nums)}' if nums else '') + '</small>'
+        nm = twin_name(s, D)
+        return (f'<a class="jdm-c" href="{E(href(D))}"><span class="jdm-p">' + (f'<img src="{E(img)}"{rset(img.split("?")[0], "(max-width: 600px) 92vw, 300px")} alt="{E(nm)}, AI illustration" width="1000" height="600" loading="lazy" decoding="async">' if img else '')
+                + f'</span><b>{E(nm)}</b><small class="jdm-w">{E((", " if film else " · ").join(who))}</small><small>{E(eng["name"])}' + (f' · {E(nums)}' if nums else '') + '</small>'
                 + ('' if (D.get('us') or {}).get('sold', True) else '<span class="jdm-t">Never sold new in the US</span>') + '</a>')
     films = ''.join(f'<section class="jdm-f"><h2>{E(film)}</h2><div class="jdm-g">{"".join(card(s, film) for s in ss if s in C)}</div></section>' for film, ss in _JDM.FILMS)
+    LG = [s for s in _JDM.LEGENDS if s in C]
+    legends = (f'<section class="jdm-f" id="legends"><h2>JDM legends</h2><p class="jdm-sub">The most famous Japanese performance cars outside the films: drift, rally and touring-car winners, and Initial D stars. '
+               f'Cars that were sold in the US and already have a page here open on that page, at the right generation.</p><div class="jdm-g">{"".join(card(s, None) for s in LG)}</div></section>') if LG else ''
     # engines: one row per engine page, the cars that use it here, the factory output range from the car files
     rows = {}
     for s, (D, A) in C.items():
-        for gg in D['gens']:
+        for gg in gens_of(D):
             e = D['engines'][gg['engine']]; u = e.get('page') or ''
             r = rows.setdefault(u or e['name'], dict(u=u, name=_JDM.ENGINES.get(u, (None,))[0] or _JDM.SHARED.get(u) or e['name'], what=e.get('what', ''), cars=[], hp=set()))
-            r['cars'].append((D['page'], f'{gg["code"]} {D["short"]}' if len(D['gens']) > 1 or D['short'] in ('Skyline GT-R',) else D['short']))
+            r['cars'].append((href(D), f'{gg["code"]} {D["short"]}' if len(D['gens']) > 1 or D['short'] in ('Skyline GT-R',) else D['short']))
             for vv in gg['variants']:
                 if isinstance(_JP._hp(vv), (int, float)) and vv.get('engine', gg['engine']) == gg['engine']: r['hp'].add(int(_JP._hp(vv)))   # a trim with another engine (variant `engine`) stays out
     def erow(r):
@@ -38,34 +46,39 @@ def _jdm_hub():
         hp = sorted(r['hp']); hpt = (f'{hp[0]}' + (f'–{hp[-1]}' if len(hp) > 1 else '') + ' hp') if hp else '–'
         cars = ', '.join(f'<a href="{E(u)}">{E(t)}</a>' for u, t in dict.fromkeys(r['cars']))
         return (f'<tr><td>' + (f'<a href="{E(r["u"])}"><b>{E(r["name"])}</b></a>' if live else f'<b>{E(r["name"])}</b>') + f'<small>{E(r["what"])}</small></td><td>{hpt}</td><td>{cars}</td></tr>')
-    etab = ('<div class="tw"><table class="adv jdm-e"><thead><tr><th>Engine</th><th>Factory output</th><th>JDM film cars with it</th></tr></thead><tbody>'
+    etab = ('<div class="tw"><table class="adv jdm-e"><thead><tr><th>Engine</th><th>Factory output</th><th>JDM cars with it</th></tr></thead><tbody>'
             + ''.join(erow(r) for r in sorted(rows.values(), key=lambda r: -max(r['hp'] or {0}))) + '</tbody></table></div>')
     # sold in the US? complaints and recalls for the film generation's model years (every version NHTSA files under that name)
     def urow(s):
-        D, A = C[s]; us = D.get('us') or {}; y0 = min(g['y0'] for g in D['gens']); y1 = max(g['y1'] for g in D['gens'])
-        if not D.get('nhtsa'): return f'<tr><td><a href="{E(D["page"])}">{E(D["name"])}</a></td><td>No</td><td>–</td><td>–</td></tr>'
-        n = sum((((A.get('nhtsa') or {}).get('gens') or {}).get(g['id']) or {}).get('n') or 0 for g in D['gens'])
+        D, A = C[s]; us = D.get('us') or {}; GG = gens_of(D); y0 = min(g['y0'] for g in GG); y1 = max(g['y1'] for g in GG)
+        nm = twin_name(s, D)
+        if not D.get('nhtsa'): return f'<tr><td><a href="{E(href(D))}">{E(nm)}</a></td><td>No</td><td>–</td><td>–</td></tr>'
+        n = sum((((A.get('nhtsa') or {}).get('gens') or {}).get(g['id']) or {}).get('n') or 0 for g in GG)
         rc = len({r['id'] for y in range(y0, y1 + 1) for r in (A.get('recalls') or {}).get(str(y), [])})
-        return f'<tr><td><a href="{E(D["page"])}">{E(D["name"])}</a></td><td>{y0}–{y1}</td><td>{n:,}</td><td>{rc}</td></tr>'
+        return f'<tr><td><a href="{E(href(D))}">{E(nm)}</a></td><td>{y0}–{y1}</td><td>{n:,}</td><td>{rc}</td></tr>'
     utab = ('<div class="tw"><table class="adv"><thead><tr><th>Car</th><th>Sold new in the US</th><th>Owner complaints</th><th>Recall campaigns</th></tr></thead><tbody>'
             + ''.join(urow(s) for s in C) + '</tbody></table></div>'
-            '<p class="note">Owner complaints and recalls: NHTSA (api.nhtsa.gov), for those model years and every version NHTSA files under the model name (all Civics of 1993–1995, not only coupes). '
+            '<p class="note">Owner complaints and recalls: NHTSA (api.nhtsa.gov), for those model years and every version NHTSA files under the model name (all Civics of 1993–1995, not only coupes; all 1984–1987 Corollas, not only the AE86). '
             'They are raw counts, not a Lemon Index: we don&#39;t have sales by year for these cars. Each car page shows what the complaints are about.</p>')
     never = [C[s][0] for s in C if not (C[s][0].get('us') or {}).get('sold', True)]
     faq = [('Which Japanese cars are in The Fast and the Furious?', 'In the 2001 film: ' + ', '.join(f'{f["who"]}: {C[s][0]["name"]}' for s in _JDM.FILMS[0][1] if s in C for f in C[s][0].get('films') or [] if f['film'] == _JDM.FILMS[0][0]) + '.'),
            ('Which Japanese cars are in 2 Fast 2 Furious?', 'In the 2003 film: ' + ', '.join(f'{f["who"]}: {C[s][0]["name"]}' for s in _JDM.FILMS[1][1] if s in C for f in C[s][0].get('films') or [] if f['film'] == _JDM.FILMS[1][0]) + '.')]
     if never: faq.append(('Which of these cars were never sold in the US?', ' '.join(f'{D["name"]}: {D["us"]["x"]}' for D in never)))
+    idc = [C[s][0] for s in LG if any('initial d' in f['t'].lower() and not f.get('unsure') for f in C[s][0].get('fame') or [])]   # 11-14 JDM legends
+    if idc: faq.append(('Which JDM cars on this page are in Initial D?', 'The ' + ', '.join(D['name'] for D in idc) + '. Each car\'s page says who drives it, with the source.'))
+    usl = [D for D in (C[s][0] for s in LG) if D.get('nhtsa')]
+    if usl: faq.append(('Which JDM legends were sold new in the US?', ' '.join(f'{D["name"]}: model years {min(g["y0"] for g in gens_of(D))}–{max(g["y1"] for g in gens_of(D))}.' for D in usl) + ' The others were sold new in Japan only and can be imported once they are 25 years old.'))
     sup = C.get('toyota-supra-mk4')
     if sup:
         g, v = _JP._star(sup[0]); e = sup[0]['engines'][g['engine']]
         faq.append(('What engine does the Fast and Furious Supra have?', f'The Mk IV Supra Turbo was built with the {e["name"]}, a {e["what"]}, rated {_JP._hp(v)} hp in the US. The film cars were modified; our numbers are for the stock car.'))
-    body = (f'<div class="pg jdm"><section class="ph"><p class="ph-e"><a href="/?type=jdm">Cars · JDM</a></p><h1>JDM cars of The Fast and the Furious</h1>'
-            f'<p class="ph-s">The Japanese hero cars of the first two films, as they left the factory: specs, the engine, and, where they were sold new in the US, owner complaints and recalls. '
+    body = (f'<div class="pg jdm"><section class="ph"><p class="ph-e"><a href="/?type=jdm">Cars · JDM</a></p><h1>JDM cars: the Fast &amp; Furious cars and the legends</h1>'
+            f'<p class="ph-s">The Japanese hero cars of the first two films and {len(LG)} more JDM legends, as they left the factory: specs, the engine, why they&#39;re famous and, where they were sold new in the US, owner complaints and recalls. '
             f'Every number is sourced on the car&#39;s page.{ai_note("JDM cars on this page")}</p></section>'
-            f'{films}<section class="jdm-f"><h2>The engines</h2>{etab}</section>'
+            f'<nav class="jdm-j" aria-label="On this page"><a href="#legends">JDM legends ↓</a></nav>{films}{legends}<section class="jdm-f"><h2>The engines</h2>{etab}</section>'
             f'<section class="jdm-f"><h2>Were they sold in the US?</h2>{utab}</section>'
             f'<section class="faq"><h2>Questions</h2>' + ''.join(f'<h3>{E(q)}</h3><p>{E(a)}</p>' for q, a in faq) + '</section>'
-            '<p class="note">Film facts are plain text from the sources on each car page: no film stills, logos or likenesses. The pictures are AI illustrations of stock cars, not the film cars.</p></div>'
+            '<p class="note">Film, racing and anime facts are plain text from the sources on each car page: no film or anime stills, logos or likenesses. The pictures are AI illustrations of stock cars, not the film or race cars.</p></div>'
             '<style>.jdm .jdm-f{margin:34px 0}.jdm .jdm-f h2{font-size:clamp(22px,4.6vw,28px);letter-spacing:-.02em;margin:0 0 14px}'
             '.jdm-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,260px));justify-content:center;gap:12px}.jdm .jdm-f>h2{text-align:center}.jdm .faq h3{margin-top:24px}'
             '.jdm-c{display:flex;flex-direction:column;gap:4px;padding:14px 14px 16px;border-radius:20px;background:#f5f5f7;color:var(--ink);text-decoration:none;transition:transform .25s cubic-bezier(.2,.9,.25,1)}'
@@ -73,11 +86,11 @@ def _jdm_hub():
             '.jdm-p img{max-width:100%;max-height:128px;width:auto;height:auto;filter:drop-shadow(0 8px 8px rgba(0,0,0,.12))}'
             '.jdm-c b{font-size:16px;line-height:1.25}.jdm-c small{font-size:13.5px;color:#6e6e73;line-height:1.35}.jdm-c .jdm-w{color:var(--ink);font-weight:500}'
             '.jdm-t{align-self:flex-start;margin-top:6px;padding:2px 9px;border-radius:999px;background:#ffd400;color:#17161a;font-size:12px;font-weight:600}'
-            '.jdm-e td small{display:block;color:#6e6e73;font-size:13px}'
+            '.jdm-e td small{display:block;color:#6e6e73;font-size:13px}.jdm-sub{max-width:640px;margin:-6px auto 16px;text-align:center;color:#6e6e73;font-size:15px}.jdm-j{text-align:center;margin:18px 0 0}.jdm-j a{display:inline-block;padding:6px 14px;border-radius:999px;background:#f5f5f7;color:var(--ink);text-decoration:none;font-size:14px;font-weight:500}'
             '@media (max-width:600px){.jdm-g{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.jdm-c{padding:10px 10px 12px}.jdm-p{height:78px}.jdm-p img{max-height:78px}.jdm-c b{font-size:14.5px}.jdm-c small{font-size:12.5px}}</style>')
-    title = 'JDM Cars of The Fast and the Furious: Specs, Engines, Problems'
-    desc = f'The Japanese cars of The Fast and the Furious (2001) and 2 Fast 2 Furious (2003): {len(C)} cars from the Supra and RX-7 to the R34 GT-R, their engines, US sales and owner complaints. Every number sourced.'
-    ld = [faq_ld([(q, '', a) for q, a in faq]), {"@context": "https://schema.org", "@type": "CollectionPage", "name": "JDM cars of The Fast and the Furious", "url": BASE + '/jdm/',
+    title = 'JDM Cars: Fast & Furious Cars and JDM Legends, Specs, Engines'
+    desc = f'{len(C)} JDM cars: the Fast and Furious Supra, RX-7 and R34 GT-R, plus legends like the AE86, R32 GT-R, Silvia S15 and Evo. Specs, engines, why they are famous, US sales and owner complaints. Every number sourced.'
+    ld = [faq_ld([(q, '', a) for q, a in faq]), {"@context": "https://schema.org", "@type": "CollectionPage", "name": "JDM cars: the Fast & Furious cars and the legends", "url": BASE + '/jdm/',
           "hasPart": [{"@type": "WebPage", "name": C[s][0]['name'], "url": BASE + C[s][0]['page']} for s in C]}]
     page('/jdm/', title, desc, body, ld=ld, img=((PL.get('toyota-supra-mk4') or {}).get('img') or '').split('?')[0] or None)
     JDM_URLS.append('/jdm/')

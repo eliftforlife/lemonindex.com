@@ -1,0 +1,145 @@
+{
+ "built": "2026-11-14",
+ "nhtsa": {
+  "by_year": {
+   "1984": 6,
+   "1985": 3,
+   "1986": 3,
+   "1987": 14,
+   "1988": 26,
+   "1989": 23,
+   "1990": 27,
+   "1991": 71,
+   "1992": 63,
+   "1993": 130,
+   "1994": 172,
+   "1995": 176,
+   "1996": 129,
+   "1997": 135,
+   "1998": 225,
+   "1999": 155,
+   "2000": 145,
+   "2001": 133,
+   "2002": 117,
+   "2003": 721,
+   "2004": 477,
+   "2005": 854,
+   "2006": 840,
+   "2007": 836,
+   "2008": 314,
+   "2009": 1459,
+   "2010": 1244,
+   "2011": 585,
+   "2012": 446,
+   "2013": 201,
+   "2014": 271,
+   "2015": 221,
+   "2016": 216,
+   "2017": 178,
+   "2018": 136,
+   "2019": 206,
+   "2020": 314,
+   "2021": 188,
+   "2022": 103,
+   "2023": 74,
+   "2024": 66,
+   "2025": 32,
+   "2026": 19
+  },
+  "gens": {
+   "ae86": {
+    "n": 26,
+    "issues": {
+     "Head gasket": {
+      "n": 1,
+      "ex": [
+       "10070361"
+      ]
+     },
+     "Timing belt history": {
+      "n": 0,
+      "ex": []
+     },
+     "Fake or swapped twin-cams": {
+      "n": 0,
+      "ex": []
+     }
+    },
+    "parts": [
+     [
+      "Seat belts",
+      9
+     ],
+     [
+      "Vehicle speed control",
+      4
+     ],
+     [
+      "Electrical system",
+      3
+     ],
+     [
+      "Power train",
+      3
+     ],
+     [
+      "Exterior lighting",
+      2
+     ],
+     [
+      "Visibility",
+      2
+     ]
+    ]
+   }
+  },
+  "parts": [
+   [
+    "Seat belts",
+    9
+   ],
+   [
+    "Vehicle speed control",
+    4
+   ],
+   [
+    "Electrical system",
+    3
+   ],
+   [
+    "Power train",
+    3
+   ],
+   [
+    "Exterior lighting",
+    2
+   ],
+   [
+    "Visibility",
+    2
+   ]
+  ]
+ },
+ "recalls": {
+  "1984": [
+   {
+    "id": "83V133000",
+    "part": "ELECTRICAL SYSTEM:ALTERNATOR/GENERATOR/REGULATOR",
+    "summary": "VOLTAGE REGULATOR WHICH CONTROLS THE AMOUNT OF FLOW IN THE ELECTRICAL SYSTEM BETWEEN THE BATTERY AND THE ALTERNATOR, MAY HAVE MANUFACTURING ERRORS IN AN INTEGRATED CIRCUIT. THE REGULATOR MAY OVERCHARGE THE BATTERY."
+   },
+   {
+    "id": "90V040000",
+    "part": "VEHICLE SPEED CONTROL",
+    "summary": "CRUISE CONTROL COMPUTER MALFUNCTION COULD OCCUR UPON SHUTTING OFF THE CONTROL AFTER CONTINUOUS USE FOLLOWED BY COLD AMBIENT TEMPERATURES."
+   }
+  ],
+  "1985": [],
+  "1986": [],
+  "1987": []
+ },
+ "yt": {
+  "car-toyota-corolla-ae86": null,
+  "toyota-4a-ge": null
+ },
+ "scores": {}
+}

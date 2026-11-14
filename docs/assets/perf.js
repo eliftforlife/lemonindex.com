@@ -56,7 +56,9 @@
     });
     // preload the other cars once the page is idle
     setTimeout(function () { cars.forEach(function (im) { im.removeAttribute('loading'); }); }, 1500);
-    show(+root.getAttribute('data-focus') || 0);
+    // 11-14 JDM legends: a link to #g-<generation id> (the /jdm/ card for the GD STI, the Evo IX, the NA Miata) opens that generation
+    var hg = (location.hash.match(/^#g-([\w-]+)$/) || [])[1], hb = hg && document.querySelector('.pf-g[data-g="' + hg + '"]');
+    show(hb ? +hb.getAttribute('data-i') : (+root.getAttribute('data-focus') || 0));
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();

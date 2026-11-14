@@ -33,6 +33,7 @@
    "y0": 2004,
    "y1": 2007,
    "engine": "EJ257",
+   "yt_study": "car-wrx-sti-gd",
    "body": "Sedan",
    "tag": "The first U.S. STI. 300 hp, 6-speed manual, adjustable center diff.",
    "variants": [
@@ -799,8 +800,266 @@
    "t": "NHTSA owner complaints and recalls",
    "u": "https://www.nhtsa.gov/recalls",
    "k": "NHTSA"
+  },
+  "wsrt": {
+   "t": "Wikipedia: Subaru World Rally Team",
+   "u": "https://en.wikipedia.org/wiki/Subaru_World_Rally_Team",
+   "k": "Wikipedia"
+  },
+  "wgc8": {
+   "t": "Wikipedia: Subaru Impreza (first generation) (WRX STi versions, 22B STi, WRC titles)",
+   "u": "https://en.wikipedia.org/wiki/Subaru_Impreza_(first_generation)",
+   "k": "Wikipedia"
+  },
+  "wsti": {
+   "t": "Wikipedia: Subaru Impreza WRX STI (Subaru Tecnica International)",
+   "u": "https://en.wikipedia.org/wiki/Subaru_Impreza_WRX_STI",
+   "k": "Wikipedia"
+  },
+  "wej2": {
+   "t": "Wikipedia: Subaru EJ engine (EJ207, EJ22G)",
+   "u": "https://en.wikipedia.org/wiki/Subaru_EJ_engine",
+   "k": "Wikipedia"
+  },
+  "jbg": {
+   "t": "Jalopnik: The Blue And Gold Subaru Rally Cars You Love Owe Their Style To A Cigarette Company (Amber DaSilva, Nov 2024)",
+   "u": "https://jalopnik.com/the-blue-and-gold-subaru-rally-cars-you-love-owe-their-1851708882",
+   "k": "outlet"
+  },
+  "wid": {
+   "t": "Wikipedia: Initial D",
+   "u": "https://en.wikipedia.org/wiki/Initial_D",
+   "k": "Wikipedia"
+  },
+  "ctid": {
+   "t": "Car Throttle: Every Car From Initial D, And Our Top 10 Ranked (Ryan Hirons, Feb 2025)",
+   "u": "https://www.carthrottle.com/news/every-car-initial-d-and-our-top-10-ranked",
+   "k": "outlet"
+  },
+  "wcmr": {
+   "t": "Wikipedia: Colin McRae Rally (video game)",
+   "u": "https://en.wikipedia.org/wiki/Colin_McRae_Rally_(video_game)",
+   "k": "Wikipedia"
+  },
+  "td22b": {
+   "t": "The Drive: The Subaru Impreza 22B is Now Legal in the US, But It's Still Expensive (Lewin Day, Mar 2023)",
+   "u": "https://www.thedrive.com/news/subaru-22b-is-now-legal-in-the-us-still-expensive",
+   "k": "outlet"
+  },
+  "gv6": {
+   "t": "Gulliver catalog: Subaru Impreza WRX STi Version VI (GF-GC8, Sep 1999) specifications",
+   "u": "https://221616.com/catalog/subaru/impreza/199211_200706/4501121/",
+   "k": "Japanese catalog"
+  },
+  "g22b": {
+   "t": "Gulliver catalog: Subaru Impreza 22B-STi Version (E-GC8 kai, Mar 1998) specifications",
+   "u": "https://221616.com/catalog/subaru/impreza/199211_200706/4501993/",
+   "k": "Japanese catalog"
+  },
+  "ggdb": {
+   "t": "Gulliver catalog: Subaru Impreza WRX STI (GH-GDB, Jun 2006) specifications",
+   "u": "https://221616.com/catalog/subaru/impreza/199211_200706/10034659/",
+   "k": "Japanese catalog"
   }
  },
  "yt_study": "car-wrx-sti",
- "img": "/assets/ai-perf/wrx-sti.webp?v=1"
+ "img": "/assets/ai-perf/wrx-sti.webp?v=1",
+ "jdm_card": {
+  "gen": "gd",
+  "star": "gd-04"
+ },
+ "fame": [
+  {
+   "t": "World Rally champion",
+   "k": "Racing",
+   "x": "Subaru won the World Rally Championship makers' title three years in a row, 1995 to 1997, with the Impreza. Colin McRae won the drivers' title in 1995, Richard Burns in 2001 and Petter Solberg in 2003.",
+   "src": [
+    "wsrt",
+    "wgc8"
+   ]
+  },
+  {
+   "t": "Blue paint, gold wheels",
+   "k": "Racing",
+   "x": "The rally team's blue and yellow look came from its sponsor, State Express 555, starting in 1993. That blue became World Rally Blue, and a blue STI on gold wheels still points back to those rally cars.",
+   "src": [
+    "wsrt",
+    "jbg"
+   ]
+  },
+  {
+   "t": "The STI name",
+   "k": "Name",
+   "x": "STI stands for Subaru Tecnica International, the motorsport arm Subaru set up in 1988. The first Impreza with the STi badge went on sale in Japan in 1994 as a rally homologation car.",
+   "src": [
+    "wsti",
+    "wgc8"
+   ]
+  },
+  {
+   "t": "Initial D",
+   "k": "Anime",
+   "x": "In Initial D, Takumi's father Bunta drives an Impreza WRX STI and beats him, which pushes Takumi to learn how four-wheel drive behaves. Car Throttle lists Bunta's car as a WRX STI Type R Version V coupe.",
+   "src": [
+    "wid",
+    "ctid"
+   ]
+  },
+  {
+   "t": "Colin McRae Rally",
+   "k": "Games",
+   "x": "Colin McRae's Impreza was on the cover of the first Colin McRae Rally game (1998), the start of a long-running rally game series.",
+   "src": [
+    "wcmr"
+   ]
+  }
+ ],
+ "jdm_versions": [
+  {
+   "id": "jdm-gc8-v6",
+   "name": "Impreza WRX STi Version VI (GC8)",
+   "years": "1999–2000",
+   "market": "Japan",
+   "engine_name": "EJ207 2.0-liter turbo flat-4",
+   "hp": {
+    "v": 276,
+    "src": [
+     "gv6",
+     "wgc8"
+    ],
+    "note": "280 PS at 6,500 rpm, the Japanese 280 PS limit"
+   },
+   "tq": {
+    "v": 260,
+    "src": [
+     "gv6"
+    ],
+    "note": "lb-ft at 4,000 rpm (353 N·m, 36 kgf·m in the catalog, converted)"
+   },
+   "trans": {
+    "v": "5-speed manual, all-wheel drive",
+    "src": [
+     "gv6"
+    ],
+    "note": ""
+   },
+   "weight": {
+    "v": "1,270 kg",
+    "src": [
+     "gv6"
+    ],
+    "note": "curb weight in Japan's catalog, about 2,800 lb"
+   },
+   "price": {
+    "v": "¥2,919,000",
+    "src": [
+     "gv6"
+    ],
+    "note": "new in Japan, tax included"
+   },
+   "what": "The last first-generation STi sedan, sold only in Japan from September 1999. Its mechanical specs match Version V, which brought in the EJ207 engine.",
+   "what_src": [
+    "gv6",
+    "wgc8",
+    "wej2"
+   ]
+  },
+  {
+   "id": "jdm-22b",
+   "name": "Impreza 22B STi",
+   "years": "1998",
+   "market": "Japan",
+   "engine_name": "EJ22G 2.2-liter turbo flat-4",
+   "hp": {
+    "v": 276,
+    "src": [
+     "wgc8",
+     "wej2",
+     "g22b"
+    ],
+    "note": "280 PS at 6,000 rpm"
+   },
+   "tq": {
+    "v": 268,
+    "src": [
+     "wgc8",
+     "wej2"
+    ],
+    "note": "lb-ft at 3,200 rpm (363 N·m)"
+   },
+   "trans": {
+    "v": "5-speed manual, all-wheel drive",
+    "src": [
+     "g22b"
+    ],
+    "note": ""
+   },
+   "weight": {
+    "v": "1,270 kg",
+    "src": [
+     "g22b"
+    ],
+    "note": "curb weight in Japan's catalog, about 2,800 lb"
+   },
+   "price": {
+    "v": "¥5,000,000",
+    "src": [
+     "g22b"
+    ],
+    "note": "new in Japan, tax included"
+   },
+   "what": "A two-door, wide-body STi built March to August 1998 to mark Subaru's third straight World Rally makers' title. 400 were built for Japan, plus 24 for export, and the Japanese cars sold out within 30 minutes to 48 hours. Its body is about 3 inches wider than a normal Impreza.",
+   "what_src": [
+    "wgc8",
+    "td22b"
+   ]
+  },
+  {
+   "id": "jdm-gdb-06",
+   "name": "Impreza WRX STI (GDB, Japan)",
+   "years": "2006–2007",
+   "market": "Japan",
+   "engine_name": "EJ207 2.0-liter turbo flat-4",
+   "hp": {
+    "v": 276,
+    "src": [
+     "ggdb"
+    ],
+    "note": "280 PS at 6,400 rpm (converted from PS)"
+   },
+   "tq": {
+    "v": 311,
+    "src": [
+     "ggdb"
+    ],
+    "note": "lb-ft at 4,400 rpm (422 N·m, 43 kgf·m in the catalog, converted)"
+   },
+   "trans": {
+    "v": "6-speed manual, all-wheel drive",
+    "src": [
+     "ggdb"
+    ],
+    "note": ""
+   },
+   "weight": {
+    "v": "1,460 kg",
+    "src": [
+     "ggdb"
+    ],
+    "note": "curb weight in Japan's catalog, about 3,219 lb"
+   },
+   "price": {
+    "v": "¥3,402,000",
+    "src": [
+     "ggdb"
+    ],
+    "note": "new in Japan, tax included"
+   },
+   "what": "Japan's version of the same GD car kept a 2.0-liter engine, rated at the 280 PS limit, where U.S. cars got a 2.5-liter.",
+   "what_src": [
+    "ggdb",
+    "wej2"
+   ]
+  }
+ ]
 }
