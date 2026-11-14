@@ -64792,7 +64792,26 @@
      "views": 45290
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 400,
+       "lo": 300.0,
+       "hi": 800.0,
+       "n": 5,
+       "videos": 2,
+       "id": "9MVBpd_s5a8",
+       "t": 572,
+       "title": "2006 Mitsubishi Montero ABS Brake Hydro-booster"
+      }
+     ]
+    ]
+   }
   }
  ],
  "nissan-350z": [
@@ -70867,7 +70886,26 @@
      "views": 342550
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 800,
+       "lo": 350.0,
+       "hi": 1000.0,
+       "n": 5,
+       "videos": 3,
+       "id": "yFR2B34veEg",
+       "t": 48,
+       "title": "We bought a new car! | 2016 Cadillac ATS-V"
+      }
+     ]
+    ]
+   }
   }
  ],
  "lincoln-mks": [
@@ -71449,7 +71487,39 @@
      "views": 10402
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 500,
+       "lo": 200.0,
+       "hi": 1000.0,
+       "n": 5,
+       "videos": 4,
+       "id": "sfcP4MhAZG8",
+       "t": 158,
+       "title": "2003 HUMMER H2 PROBLEMS"
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 341,
+       "lo": 300.0,
+       "hi": 382.0,
+       "n": 2,
+       "videos": 2,
+       "id": "vTYv_CK2DVk",
+       "t": 168,
+       "title": "2003 HUMMER H2 RARE Yellow/Wheat Walk-around Presentation at Louis Frank Motorcars in HD"
+      }
+     ]
+    ]
+   }
   }
  ],
  "chevrolet-captiva": [
