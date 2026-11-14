@@ -196,7 +196,7 @@ if UXC == 'hooks':
                 ('score_model_years', 'The model years the whole-model score covers'), ('lemon_index', 'Owner complaints per car sold, 100 = the average car of the same model years. Lower is better.'),
                 ('nhtsa_complaints_3yr', 'NHTSA owner complaints filed within 3 years of each model year, summed over score_model_years'),
                 ('complaints_per_100k_sold', 'nhtsa_complaints_3yr per 100,000 sold'), ('average_car_per_100k', 'The average car of the same model years, per 100,000 sold'),
-                ('study_rank', 'Rank in the published study of 131 models (blank = added later, scored the same way)'), ('sales_note', '"estimate" = the maker doesn&#39;t report U.S. sales by model (Tesla, Porsche)'),
+                ('study_rank', f'Rank in the published study of {len(CARS)} models (blank = added later, scored the same way)'), ('sales_note', '"estimate" = the maker doesn&#39;t report U.S. sales by model (Tesla, Porsche)'),
                 ('page', 'The model&#39;s page'), ('sales_source', 'Where the U.S. sales figures come from (we don&#39;t republish the figures)')]
         n, b = csv_write(f'{OUT}/data/lemon-index-by-model.csv', [a for a, _ in cols], rows,
                          note='Counts: nhtsa_complaints_3yr = NHTSA owner complaints filed within 3 years of each model year, summed over score_model_years. Not a safety rating.')
