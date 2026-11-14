@@ -64181,7 +64181,26 @@
      "views": 139216
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 400,
+       "lo": 300.0,
+       "hi": 800.0,
+       "n": 5,
+       "videos": 4,
+       "id": "xOdCxQ2JS8k",
+       "t": 16,
+       "title": "How to replace alternator on 2003 Hyundai Tiburon"
+      }
+     ]
+    ]
+   }
   }
  ],
  "oldsmobile-bravada": [
