@@ -63927,6 +63927,233 @@
    "costs": null
   }
  ],
+ "oldsmobile-bravada": [
+  {
+   "years": [
+    2000,
+    2001
+   ],
+   "gen": "1996–2001 Oldsmobile Bravada",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 1468721,
+   "topics": [
+    {
+     "name": "Cooling system",
+     "views": 49150,
+     "n": 1,
+     "best": {
+      "id": "fxZj_X7vcFo",
+      "title": "How to Replace a Water Pump (1996-2004 Chevy Blazer, Chevy S10, Oldsmobile Bravada, GMC Jimmy)",
+      "channel": "R&K Adventures",
+      "views": 49150
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 16993,
+     "n": 2,
+     "best": {
+      "id": "UNIkb_H-Icg",
+      "title": "How to program a Oldsmobile Bravada remote key fob 1998 - 2004",
+      "channel": "PYR Automotive ",
+      "views": 14450
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 16446,
+     "n": 1,
+     "best": {
+      "id": "enUgMbu_p30",
+      "title": "'96 Oldsmobile Bravada Fuel Pump Replacement | Know Your Parts",
+      "channel": "Know Your Parts",
+      "views": 16446
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 5963,
+     "n": 1,
+     "best": {
+      "id": "WUzq4-6Q1KM",
+      "title": "Dash warning lights problem. 2000 oldsmobile bravada",
+      "channel": "Chris ",
+      "views": 5963
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 3512,
+     "n": 2,
+     "best": {
+      "id": "RB0RRuzKZRY",
+      "title": "Repairing The Brakes On The 1998 Oldsmobile Bravada",
+      "channel": "lexmarks567",
+      "views": 3217
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 72,
+     "n": 1,
+     "best": {
+      "id": "Xx4q5T8gmVE",
+      "title": "2001 Oldsmobile Bravada - Roberts Auto Services LLC",
+      "channel": "robertsautoservices1",
+      "views": 72
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "8UA-zQSkZIc",
+     "title": "1999 Oldsmobile Bravada: Regular Car Reviews",
+     "channel": "Regular Car Reviews",
+     "views": 741902
+    },
+    {
+     "id": "J2ASyjMH2ho",
+     "title": "2001 Oldsmobile Bravada SmartTrack Start Up, Exhaust, and In Depth Review",
+     "channel": "Saabkyle04",
+     "views": 261173
+    },
+    {
+     "id": "caNO-7f4oS4",
+     "title": "1997 Olds Bravada SUV Oldsmobile Interior Video Review",
+     "channel": "Cereal Marshmallows",
+     "views": 25527
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2002,
+    2003,
+    2004
+   ],
+   "gen": "2002–2004 Oldsmobile Bravada",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 305646,
+   "topics": [
+    {
+     "name": "Cooling system",
+     "views": 49150,
+     "n": 1,
+     "best": {
+      "id": "fxZj_X7vcFo",
+      "title": "How to Replace a Water Pump (1996-2004 Chevy Blazer, Chevy S10, Oldsmobile Bravada, GMC Jimmy)",
+      "channel": "R&K Adventures",
+      "views": 49150
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 19256,
+     "n": 1,
+     "best": {
+      "id": "E_77EcjJJ88",
+      "title": "The easiest way to fix your 2002+ Oldsmobile Bravada shift cable! Kit includes replacement bushing.",
+      "channel": "Ascension Engineering",
+      "views": 19256
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 14450,
+     "n": 1,
+     "best": {
+      "id": "UNIkb_H-Icg",
+      "title": "How to program a Oldsmobile Bravada remote key fob 1998 - 2004",
+      "channel": "PYR Automotive ",
+      "views": 14450
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 9876,
+     "n": 1,
+     "best": {
+      "id": "8DW0dj8Vr_8",
+      "title": "2002 Bravada ( Trailblazer Envoy ) Fuel Tank Pressure Sensor Replacement P0452",
+      "channel": "Smash Engineering",
+      "views": 9876
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 3206,
+     "n": 1,
+     "best": {
+      "id": "HAp7xIdsV_k",
+      "title": "2003 Oldsmobile Bravada oil change",
+      "channel": "Carl’s Garage",
+      "views": 3206
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 2603,
+     "n": 1,
+     "best": {
+      "id": "X8tyRbRrtr0",
+      "title": "2003 Bravada Trailblazer front brake pad and rotor replacement",
+      "channel": "Carl’s Garage",
+      "views": 2603
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 2431,
+     "n": 1,
+     "best": {
+      "id": "zO7c1sbgqlc",
+      "title": "No Crank No Start Issue on A 2004 Oldsmobile Bravada....Has Power, Engine Won't Crank....Solved",
+      "channel": "Peter L",
+      "views": 2431
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 516,
+     "n": 1,
+     "best": {
+      "id": "hvQNboLGB4U",
+      "title": "2002 Oldsmobile Bravada stripped transfer case fill plug removal",
+      "channel": "Scott Monter",
+      "views": 516
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "6SQyPBn4ozw",
+     "title": "Cold Start 2002 Oldsmobile Bravada Smart Trak + my review is I like these cars",
+     "channel": "Captain Namco ",
+     "views": 3778
+    },
+    {
+     "id": "YNWk_Rty2Jk",
+     "title": "The LAST Oldsmobile! Incredible SURVIVOR! 2002 Oldsmobile Bravada AWD SUV with 84k miles. For sale.",
+     "channel": "EUROASIAN Bob",
+     "views": 3353
+    },
+    {
+     "id": "a_kQkJc5NlI",
+     "title": "Virtual Video Walk around of a silver 2002 Oldsmobile Bravada",
+     "channel": "Issaquah Chev",
+     "views": 2747
+    }
+   ],
+   "costs": null
+  }
+ ],
  "hyundai-azera": [
   {
    "years": [

@@ -27970,5 +27970,83 @@
 }
 ]
 }
+],
+"oldsmobile-bravada": [
+{
+"sid": "oldsmobile-bravada-g2",
+"y0": 1996,
+"y1": 2001,
+"label": "1996–2001",
+"videos": 200,
+"praise": [
+[
+"Reliability",
+8
+],
+[
+"Power",
+4
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "8UA-zQSkZIc",
+"title": "1999 Oldsmobile Bravada: Regular Car Reviews",
+"views": 741902,
+"ch": "Regular Car Reviews"
+},
+{
+"id": "J2ASyjMH2ho",
+"title": "2001 Oldsmobile Bravada SmartTrack Start Up, Exhaust, and In Depth Review",
+"views": 261173,
+"ch": "Saabkyle04"
+},
+{
+"id": "caNO-7f4oS4",
+"title": "1997 Olds Bravada SUV Oldsmobile Interior Video Review",
+"views": 25527,
+"ch": "Cereal Marshmallows"
+}
+]
+},
+{
+"sid": "oldsmobile-bravada-g3",
+"y0": 2002,
+"y1": 2004,
+"label": "2002–2004",
+"videos": 200,
+"praise": [
+[
+"Power",
+6
+],
+[
+"Reliability",
+5
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "6SQyPBn4ozw",
+"title": "Cold Start 2002 Oldsmobile Bravada Smart Trak + my review is I like these cars",
+"views": 3778,
+"ch": "Captain Namco "
+},
+{
+"id": "YNWk_Rty2Jk",
+"title": "The LAST Oldsmobile! Incredible SURVIVOR! 2002 Oldsmobile Bravada AWD SUV with 84k miles. For sale.",
+"views": 3353,
+"ch": "EUROASIAN Bob"
+},
+{
+"id": "U-TUvBO2X_A",
+"title": "2002 Oldsmobile Bravada Tour & Review of it",
+"views": 487,
+"ch": "Yousif R."
+}
+]
+}
 ]
 }
