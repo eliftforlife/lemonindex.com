@@ -28236,5 +28236,53 @@
 }
 ]
 }
+],
+"chrysler-300m": [
+{
+"sid": "chrysler-300m-g1",
+"y0": 1999,
+"y1": 2004,
+"label": "1999–2004",
+"videos": 198,
+"praise": [
+[
+"Power",
+8
+],
+[
+"Reliability",
+8
+],
+[
+"Looks",
+6
+],
+[
+"Fun to drive",
+5
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "jAZsIGXWr38",
+"title": "EXCELLENT AND PROBLEMATIC! CHRYSLER 300M 1999, WITH ME FOR 16 YEARS! 4K",
+"views": 75222,
+"ch": "agbadolato"
+},
+{
+"id": "bEgfyAW-ghc",
+"title": "1999 Chrysler 300m Review",
+"views": 26830,
+"ch": "CarGenes"
+},
+{
+"id": "03d01IXxxIo",
+"title": "1999 CHRYSLER 300M 300 M - OFFICIAL REVIEW",
+"views": 16324,
+"ch": "Keith Explores The Internet"
+}
+]
+}
 ]
 }

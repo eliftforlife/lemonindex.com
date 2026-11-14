@@ -63965,6 +63965,134 @@
    }
   }
  ],
+ "chrysler-300m": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004
+   ],
+   "gen": "1999–2004 Chrysler 300M",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 2705020,
+   "topics": [
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 177837,
+     "n": 5,
+     "best": {
+      "id": "P2OECvk57Tw",
+      "title": "How To Replace (fix) the Mode Door Actuator on a 2000 Chrysler 300m Air Vents for free",
+      "channel": "jbe313",
+      "views": 86484
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 94488,
+     "n": 4,
+     "best": {
+      "id": "sLJTJ0e7r3g",
+      "title": "2004 Chrysler 300m 3.5 V6 PO172 & overheats while driving but not at idle case study",
+      "channel": "Brick Auto LLC",
+      "views": 59757
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 65479,
+     "n": 2,
+     "best": {
+      "id": "J-4i3GerNA4",
+      "title": "Starter replacement for 1999 Chrysler 300m",
+      "channel": "The Shade Tree Fix-it Man",
+      "views": 56158
+     }
+    },
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 49832,
+     "n": 1,
+     "best": {
+      "id": "qMVxtMU9yQc",
+      "title": "Intake Manifold Gaskets Replacement: Part 1 [2000 Chrysler 300M]",
+      "channel": "MattsMotorz",
+      "views": 49832
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 36264,
+     "n": 1,
+     "best": {
+      "id": "tlD-G7IS-uk",
+      "title": "Fuel Pump Replacement: Part 1 [2000 Chrysler 300M]",
+      "channel": "MattsMotorz",
+      "views": 36264
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 28226,
+     "n": 1,
+     "best": {
+      "id": "cEhQED6H0fE",
+      "title": "2000 Chrysler 300m output speed sensor change.",
+      "channel": "Adam Mcdonnough",
+      "views": 28226
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 23025,
+     "n": 1,
+     "best": {
+      "id": "byY1ieyN4Z4",
+      "title": "2001 Chrysler 300M misfire cyl 6 Part 2 the fix",
+      "channel": "Maic Salazar Diagnostics",
+      "views": 23025
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 22186,
+     "n": 2,
+     "best": {
+      "id": "LJMN1RjSjaM",
+      "title": "2001 Chrysler 300M inner tie rod bushing replacement, Pt 1",
+      "channel": "The Shade Tree Fix-it Man",
+      "views": 19701
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "bEgfyAW-ghc",
+     "title": "1999 Chrysler 300m Review",
+     "channel": "CarGenes",
+     "views": 26830
+    },
+    {
+     "id": "03d01IXxxIo",
+     "title": "1999 CHRYSLER 300M 300 M - OFFICIAL REVIEW",
+     "channel": "Keith Explores The Internet",
+     "views": 16324
+    },
+    {
+     "id": "MGQHkfFkmsI",
+     "title": "2002 Chrysler 300M - Review, Specs",
+     "channel": "fotoautos",
+     "views": 9115
+    }
+   ],
+   "costs": null
+  }
+ ],
  "mitsubishi-lancer": [
   {
    "years": [
@@ -64353,7 +64481,26 @@
      "views": 54664
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Transmission",
+      {
+       "median": 1000,
+       "lo": 795.0,
+       "hi": 3500.0,
+       "n": 3,
+       "videos": 3,
+       "id": "Nw5SkUlQOaU",
+       "t": 1264,
+       "title": "2019 Fiat 500 Abarth – Who Ya Callin' Cute?"
+      }
+     ]
+    ]
+   }
   }
  ],
  "toyota-yaris": [
@@ -64610,7 +64757,26 @@
      "views": 317396
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 500,
+       "lo": 500.0,
+       "hi": 1200.0,
+       "n": 3,
+       "videos": 3,
+       "id": "xpGdNrTwMPg",
+       "t": 77,
+       "title": "2017 Toyota Yaris iA | CarGurus Test Drive Review"
+      }
+     ]
+    ]
+   }
   }
  ],
  "mazda-protege": [
