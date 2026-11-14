@@ -27875,5 +27875,100 @@
 }
 ]
 }
+],
+"hyundai-azera": [
+{
+"sid": "hyundai-azera-g1",
+"y0": 2006,
+"y1": 2011,
+"label": "2006–2011",
+"videos": 196,
+"praise": [
+[
+"Reliability",
+11
+],
+[
+"Looks",
+6
+],
+[
+"Power",
+4
+],
+[
+"Comfort and ride",
+4
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "EMISZ98j9S8",
+"title": "2009 Hyundai Azera Review - A V6 at a Budget Car Price!",
+"views": 821809,
+"ch": "Carro Chefe"
+},
+{
+"id": "_REyNu7df9c",
+"title": "2011 Hyundai Azera - Is it still worth it?",
+"views": 264113,
+"ch": "Turma do Carro"
+},
+{
+"id": "sY2SmBvy3ls",
+"title": "Hyundai Sonata / Azera Ignition Switch REPLACEMENT  2006-2010  starter problem key switch faulty",
+"views": 156116,
+"ch": "NoNonsenseKnowHow"
+}
+]
+},
+{
+"sid": "hyundai-azera-g2",
+"y0": 2012,
+"y1": 2017,
+"label": "2012–2017",
+"videos": 200,
+"praise": [
+[
+"Reliability",
+8
+],
+[
+"Looks",
+6
+],
+[
+"Power",
+4
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+3
+]
+],
+"top": [
+{
+"id": "E2Kuz6_1OIg",
+"title": "2015 Hyundai Azera V6 Review - Used Cars",
+"views": 1946843,
+"ch": "Carro Chefe"
+},
+{
+"id": "-p66G5wD4pc",
+"title": "2013 HYUNDAI AZERA V6 REVIEW - BE VERY CAREFUL BEFORE BUYING ONE! THE DREAM CAN TURN INTO A NIGHT...",
+"views": 422916,
+"ch": "Carro Chefe"
+},
+{
+"id": "9JE0xqJl_FY",
+"title": "2015 Hyundai Azera Limited Start Up, Road Test, and In Depth Review",
+"views": 414732,
+"ch": "Saabkyle04"
+}
+]
+}
 ]
 }

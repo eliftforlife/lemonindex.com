@@ -64054,6 +64054,122 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017
+   ],
+   "gen": "2012–2017 Hyundai Azera",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 9465776,
+   "topics": [
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 30247,
+     "n": 3,
+     "best": {
+      "id": "uDdnLgh-opQ",
+      "title": "2014 Hyundai Azera Limited 3.3 Oil Pressure Switch Replacement",
+      "channel": "Mr. Law Jones",
+      "views": 16811
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 22066,
+     "n": 2,
+     "best": {
+      "id": "hspq2cC6fjM",
+      "title": "Hyundai Azera Key Fob Battery Replacement (2015 - 2017)",
+      "channel": "FobBattery",
+      "views": 16426
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 20905,
+     "n": 1,
+     "best": {
+      "id": "-wv6vkGVYrQ",
+      "title": "2014 Hyundai Azera Limited 3.3 GDI V6 Spark Plug Replacement",
+      "channel": "Mr. Law Jones",
+      "views": 20905
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 12127,
+     "n": 3,
+     "best": {
+      "id": "sIjf8LYBtDU",
+      "title": "Diagnosing A No Start on a 2014 HYUNDAI AZERA...Wont Crank...Clicks...Solved...",
+      "channel": "Peter L",
+      "views": 6223
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 11428,
+     "n": 1,
+     "best": {
+      "id": "xF3lj5B7XUg",
+      "title": "Hyundai Recall for 2005 to 2013 Azera, Grandeur, Sonata for abs fault",
+      "channel": "Arvind Deo",
+      "views": 11428
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 8553,
+     "n": 1,
+     "best": {
+      "id": "RMV9-q9SUZc",
+      "title": "How To Replace A Hyundai Azera Window Regulator (2012-2017 Models) - Driver's Side Front",
+      "channel": "Power Up Auto",
+      "views": 8553
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 4171,
+     "n": 2,
+     "best": {
+      "id": "gKVeMjvVSpI",
+      "title": "2012-2017 Hyundai Azera Radiator Replacement Guide",
+      "channel": "D/I/Y Diagnostics N Repair",
+      "views": 2971
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "E2Kuz6_1OIg",
+     "title": "2015 Hyundai Azera V6 Review - Used Cars",
+     "channel": "Carro Chefe",
+     "views": 1946843
+    },
+    {
+     "id": "-p66G5wD4pc",
+     "title": "2013 HYUNDAI AZERA V6 REVIEW - BE VERY CAREFUL BEFORE BUYING ONE! THE DREAM CAN TURN INTO A NIGHT...",
+     "channel": "Carro Chefe",
+     "views": 422916
+    },
+    {
+     "id": "9JE0xqJl_FY",
+     "title": "2015 Hyundai Azera Limited Start Up, Road Test, and In Depth Review",
+     "channel": "Saabkyle04",
+     "views": 414732
+    }
+   ],
+   "costs": null
   }
  ],
  "mercedes-benz-sprinter": [
