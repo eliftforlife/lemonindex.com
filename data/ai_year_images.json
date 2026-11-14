@@ -586,157 +586,157 @@
    "gen": "1st generation (GMT800)"
   },
   "2003": {
-   "src": "/assets/ai-cars/chevrolet-silverado-g1.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-silverado-2003.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "light gold metallic",
    "gen": "1st generation (GMT800)"
   },
   "2004": {
-   "src": "/assets/ai-cars/chevrolet-silverado-g1.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-silverado-2004.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "black",
    "gen": "1st generation (GMT800)"
   },
   "2005": {
-   "src": "/assets/ai-cars/chevrolet-silverado-g1.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-silverado-2005.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark red metallic",
    "gen": "1st generation (GMT800)"
   },
   "2006": {
-   "src": "/assets/ai-cars/chevrolet-silverado-g1.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-silverado-2006.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "red",
    "gen": "1st generation (GMT800)"
   },
   "2007": {
-   "src": "/assets/ai-models/chevrolet-silverado.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-silverado-2007.webp?v=1",
    "w": 1000,
    "h": 600,
    "color": "white",
    "gen": "2nd generation (GMT900)"
   },
   "2008": {
-   "src": "/assets/ai-models/chevrolet-silverado.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-silverado-2008.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark blue metallic",
    "gen": "2nd generation (GMT900)"
   },
   "2009": {
-   "src": "/assets/ai-models/chevrolet-silverado.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-silverado-2009.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "silver metallic",
    "gen": "2nd generation (GMT900)"
   },
   "2010": {
-   "src": "/assets/ai-models/chevrolet-silverado.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-silverado-2010.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark gray metallic",
    "gen": "2nd generation (GMT900)"
   },
   "2011": {
-   "src": "/assets/ai-models/chevrolet-silverado.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-silverado-2011.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "medium blue metallic",
    "gen": "2nd generation (GMT900)"
   },
   "2012": {
-   "src": "/assets/ai-models/chevrolet-silverado.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-silverado-2012.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "black",
    "gen": "2nd generation (GMT900)"
   },
   "2013": {
-   "src": "/assets/ai-models/chevrolet-silverado.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-silverado-2013.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "red",
    "gen": "2nd generation (GMT900)"
   },
   "2014": {
-   "src": "/assets/ai-cars/chevrolet-silverado-g3.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-silverado-2014.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "brown metallic",
    "gen": "3rd generation (K2XX)"
   },
   "2015": {
-   "src": "/assets/ai-cars/chevrolet-silverado-g3.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-silverado-2015.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "silver metallic",
    "gen": "3rd generation (K2XX)"
   },
   "2016": {
-   "src": "/assets/ai-cars/chevrolet-silverado-g3.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-silverado-2016.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "dark blue metallic",
    "gen": "3rd generation (K2XX)"
   },
   "2017": {
-   "src": "/assets/ai-cars/chevrolet-silverado-g3.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-silverado-2017.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "white",
    "gen": "3rd generation (K2XX)"
   },
   "2018": {
-   "src": "/assets/ai-cars/chevrolet-silverado-g3.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-silverado-2018.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "dark gray metallic",
    "gen": "3rd generation (K2XX)"
   },
   "2019": {
-   "src": "/assets/ai-cars/chevrolet-silverado-g4.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-silverado-2019.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "red",
+   "color": "medium blue metallic",
    "gen": "4th generation (T1XX)"
   },
   "2020": {
-   "src": "/assets/ai-cars/chevrolet-silverado-g4.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-silverado-2020.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "red",
+   "color": "dark gray metallic",
    "gen": "4th generation (T1XX)"
   },
   "2021": {
-   "src": "/assets/ai-cars/chevrolet-silverado-g4.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-silverado-2021.webp?v=1",
    "w": 1000,
    "h": 600,
    "color": "red",
    "gen": "4th generation (T1XX)"
   },
   "2022": {
-   "src": "/assets/ai-cars/chevrolet-silverado-g4.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-silverado-2022.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "red",
+   "color": "dark green metallic",
    "gen": "4th generation (T1XX)"
   },
   "2023": {
-   "src": "/assets/ai-cars/chevrolet-silverado-g4.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-silverado-2023.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "red",
+   "color": "black",
    "gen": "4th generation (T1XX)"
   },
   "2024": {
-   "src": "/assets/ai-cars/chevrolet-silverado-g4.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-silverado-2024.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "red",
+   "color": "silver metallic",
    "gen": "4th generation (T1XX)"
   },
   "2025": {
@@ -1117,101 +1117,101 @@
  },
  "toyota-tacoma": {
   "2000": {
-   "src": "/assets/ai-models/toyota-tacoma.webp?v=1",
+   "src": "/assets/ai-cars/toyota-tacoma-2000.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "dark red metallic",
    "gen": "1st generation"
   },
   "2001": {
-   "src": "/assets/ai-models/toyota-tacoma.webp?v=1",
+   "src": "/assets/ai-cars/toyota-tacoma-2001.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "red",
    "gen": "1st generation"
   },
   "2002": {
-   "src": "/assets/ai-models/toyota-tacoma.webp?v=1",
+   "src": "/assets/ai-cars/toyota-tacoma-2002.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "white",
    "gen": "1st generation"
   },
   "2003": {
-   "src": "/assets/ai-models/toyota-tacoma.webp?v=1",
+   "src": "/assets/ai-cars/toyota-tacoma-2003.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "dark blue metallic",
    "gen": "1st generation"
   },
   "2004": {
-   "src": "/assets/ai-models/toyota-tacoma.webp?v=1",
+   "src": "/assets/ai-cars/toyota-tacoma-2004.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "silver metallic",
    "gen": "1st generation"
   },
   "2005": {
-   "src": "/assets/ai-cars/toyota-tacoma-g2.webp?v=1",
+   "src": "/assets/ai-cars/toyota-tacoma-2005.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark gray metallic",
    "gen": "2nd generation"
   },
   "2006": {
-   "src": "/assets/ai-cars/toyota-tacoma-g2.webp?v=1",
+   "src": "/assets/ai-cars/toyota-tacoma-2006.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "light gold metallic",
    "gen": "2nd generation"
   },
   "2007": {
-   "src": "/assets/ai-cars/toyota-tacoma-g2.webp?v=1",
+   "src": "/assets/ai-cars/toyota-tacoma-2007.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "black",
    "gen": "2nd generation"
   },
   "2008": {
-   "src": "/assets/ai-cars/toyota-tacoma-g2.webp?v=1",
+   "src": "/assets/ai-cars/toyota-tacoma-2008.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark red metallic",
    "gen": "2nd generation"
   },
   "2009": {
-   "src": "/assets/ai-cars/toyota-tacoma-g2.webp?v=1",
+   "src": "/assets/ai-cars/toyota-tacoma-2009.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "red",
    "gen": "2nd generation"
   },
   "2010": {
-   "src": "/assets/ai-cars/toyota-tacoma-g2.webp?v=1",
+   "src": "/assets/ai-cars/toyota-tacoma-2010.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "silver metallic",
    "gen": "2nd generation"
   },
   "2011": {
-   "src": "/assets/ai-cars/toyota-tacoma-g2.webp?v=1",
+   "src": "/assets/ai-cars/toyota-tacoma-2011.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark blue metallic",
    "gen": "2nd generation"
   },
   "2012": {
-   "src": "/assets/ai-cars/toyota-tacoma-g2.webp?v=1",
+   "src": "/assets/ai-cars/toyota-tacoma-2012.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "white",
    "gen": "2nd generation"
   },
   "2013": {
-   "src": "/assets/ai-cars/toyota-tacoma-g2.webp?v=1",
+   "src": "/assets/ai-cars/toyota-tacoma-2013.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark gray metallic",
    "gen": "2nd generation"
   },
   "2014": {
@@ -1222,80 +1222,80 @@
    "gen": "2nd generation"
   },
   "2015": {
-   "src": "/assets/ai-cars/toyota-tacoma-g2.webp?v=1",
+   "src": "/assets/ai-cars/toyota-tacoma-2015.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "black",
    "gen": "2nd generation"
   },
   "2016": {
-   "src": "/assets/ai-cars/toyota-tacoma-g3.webp?v=1",
+   "src": "/assets/ai-cars/toyota-tacoma-2016.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "red",
    "gen": "3rd generation"
   },
   "2017": {
-   "src": "/assets/ai-cars/toyota-tacoma-g3.webp?v=1",
+   "src": "/assets/ai-cars/toyota-tacoma-2017.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "brown metallic",
    "gen": "3rd generation"
   },
   "2018": {
-   "src": "/assets/ai-cars/toyota-tacoma-g3.webp?v=1",
+   "src": "/assets/ai-cars/toyota-tacoma-2018.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "silver metallic",
    "gen": "3rd generation"
   },
   "2019": {
-   "src": "/assets/ai-cars/toyota-tacoma-g3.webp?v=1",
+   "src": "/assets/ai-cars/toyota-tacoma-2019.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "dark blue metallic",
    "gen": "3rd generation"
   },
   "2020": {
-   "src": "/assets/ai-cars/toyota-tacoma-g3.webp?v=1",
+   "src": "/assets/ai-cars/toyota-tacoma-2020.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "white",
    "gen": "3rd generation"
   },
   "2021": {
-   "src": "/assets/ai-cars/toyota-tacoma-g3.webp?v=1",
+   "src": "/assets/ai-cars/toyota-tacoma-2021.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "medium blue metallic",
    "gen": "3rd generation"
   },
   "2022": {
-   "src": "/assets/ai-cars/toyota-tacoma-g3.webp?v=1",
+   "src": "/assets/ai-cars/toyota-tacoma-2022.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "light gray",
    "gen": "3rd generation"
   },
   "2023": {
-   "src": "/assets/ai-cars/toyota-tacoma-g3.webp?v=1",
+   "src": "/assets/ai-cars/toyota-tacoma-2023.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "dark gray metallic",
    "gen": "3rd generation"
   },
   "2024": {
-   "src": "/assets/ai-cars/toyota-tacoma-g4.webp?v=1",
+   "src": "/assets/ai-cars/toyota-tacoma-2024.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "red",
    "gen": "4th generation"
   },
   "2025": {
-   "src": "/assets/ai-cars/toyota-tacoma-g4.webp?v=1",
+   "src": "/assets/ai-cars/toyota-tacoma-2025.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark green metallic",
    "gen": "4th generation"
   }
  },
@@ -1913,112 +1913,112 @@
  },
  "ford-escape": {
   "2001": {
-   "src": "/assets/ai-cars/ford-escape-g1.webp?v=1",
+   "src": "/assets/ai-cars/ford-escape-2001.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "dark red metallic",
    "gen": "1st generation"
   },
   "2002": {
-   "src": "/assets/ai-cars/ford-escape-g1.webp?v=1",
+   "src": "/assets/ai-cars/ford-escape-2002.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "red",
    "gen": "1st generation"
   },
   "2003": {
-   "src": "/assets/ai-cars/ford-escape-g1.webp?v=1",
+   "src": "/assets/ai-cars/ford-escape-2003.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "white",
    "gen": "1st generation"
   },
   "2004": {
-   "src": "/assets/ai-cars/ford-escape-g1.webp?v=1",
+   "src": "/assets/ai-cars/ford-escape-2004.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "dark blue metallic",
    "gen": "1st generation"
   },
   "2005": {
-   "src": "/assets/ai-cars/ford-escape-g1.webp?v=1",
+   "src": "/assets/ai-cars/ford-escape-2005.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "silver metallic",
    "gen": "1st generation"
   },
   "2006": {
-   "src": "/assets/ai-cars/ford-escape-g1.webp?v=1",
+   "src": "/assets/ai-cars/ford-escape-2006.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "dark gray metallic",
    "gen": "1st generation"
   },
   "2007": {
-   "src": "/assets/ai-cars/ford-escape-g1.webp?v=1",
+   "src": "/assets/ai-cars/ford-escape-2007.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "light gold metallic",
    "gen": "1st generation"
   },
   "2008": {
-   "src": "/assets/ai-cars/ford-escape-g2.webp?v=1",
+   "src": "/assets/ai-cars/ford-escape-2008.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "black",
    "gen": "2nd generation"
   },
   "2009": {
-   "src": "/assets/ai-cars/ford-escape-g2.webp?v=1",
+   "src": "/assets/ai-cars/ford-escape-2009.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark red metallic",
    "gen": "2nd generation"
   },
   "2010": {
-   "src": "/assets/ai-cars/ford-escape-g2.webp?v=1",
+   "src": "/assets/ai-cars/ford-escape-2010.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "brown metallic",
    "gen": "2nd generation"
   },
   "2011": {
-   "src": "/assets/ai-cars/ford-escape-g2.webp?v=1",
+   "src": "/assets/ai-cars/ford-escape-2011.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "silver metallic",
    "gen": "2nd generation"
   },
   "2012": {
-   "src": "/assets/ai-cars/ford-escape-g2.webp?v=1",
+   "src": "/assets/ai-cars/ford-escape-2012.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark blue metallic",
    "gen": "2nd generation"
   },
   "2013": {
-   "src": "/assets/ai-models/ford-escape.webp?v=1",
+   "src": "/assets/ai-cars/ford-escape-2013.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "white",
    "gen": "3rd generation"
   },
   "2014": {
-   "src": "/assets/ai-models/ford-escape.webp?v=1",
+   "src": "/assets/ai-cars/ford-escape-2014.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "dark gray metallic",
    "gen": "3rd generation"
   },
   "2015": {
-   "src": "/assets/ai-models/ford-escape.webp?v=1",
+   "src": "/assets/ai-cars/ford-escape-2015.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "medium blue metallic",
    "gen": "3rd generation"
   },
   "2016": {
-   "src": "/assets/ai-models/ford-escape.webp?v=1",
+   "src": "/assets/ai-cars/ford-escape-2016.webp?v=1",
    "w": 1000,
    "h": 600,
    "color": "black",
@@ -2807,73 +2807,73 @@
  },
  "jeep-cherokee": {
   "2014": {
-   "src": "/assets/ai-models/jeep-cherokee.webp?v=1",
+   "src": "/assets/ai-cars/jeep-cherokee-2014.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "dark gray metallic",
    "gen": "5th generation (KL)"
   },
   "2015": {
-   "src": "/assets/ai-models/jeep-cherokee.webp?v=1",
+   "src": "/assets/ai-cars/jeep-cherokee-2015.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "medium blue metallic",
    "gen": "5th generation (KL)"
   },
   "2016": {
-   "src": "/assets/ai-models/jeep-cherokee.webp?v=1",
+   "src": "/assets/ai-cars/jeep-cherokee-2016.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "black",
    "gen": "5th generation (KL)"
   },
   "2017": {
-   "src": "/assets/ai-models/jeep-cherokee.webp?v=1",
+   "src": "/assets/ai-cars/jeep-cherokee-2017.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "red",
    "gen": "5th generation (KL)"
   },
   "2018": {
-   "src": "/assets/ai-models/jeep-cherokee.webp?v=1",
+   "src": "/assets/ai-cars/jeep-cherokee-2018.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "brown metallic",
    "gen": "5th generation (KL)"
   },
   "2019": {
-   "src": "/assets/ai-models/jeep-cherokee.webp?v=1",
+   "src": "/assets/ai-cars/jeep-cherokee-2019.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "silver metallic",
    "gen": "5th generation (KL)"
   },
   "2020": {
-   "src": "/assets/ai-models/jeep-cherokee.webp?v=1",
+   "src": "/assets/ai-cars/jeep-cherokee-2020.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "light gray",
    "gen": "5th generation (KL)"
   },
   "2021": {
-   "src": "/assets/ai-models/jeep-cherokee.webp?v=1",
+   "src": "/assets/ai-cars/jeep-cherokee-2021.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "white",
    "gen": "5th generation (KL)"
   },
   "2022": {
-   "src": "/assets/ai-models/jeep-cherokee.webp?v=1",
+   "src": "/assets/ai-cars/jeep-cherokee-2022.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "medium blue metallic",
    "gen": "5th generation (KL)"
   },
   "2023": {
-   "src": "/assets/ai-models/jeep-cherokee.webp?v=1",
+   "src": "/assets/ai-cars/jeep-cherokee-2023.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "light gray",
    "gen": "5th generation (KL)"
   }
  },
@@ -2886,178 +2886,178 @@
    "gen": "2nd generation (TJ)"
   },
   "2001": {
-   "src": "/assets/ai-cars/jeep-wrangler-g2.webp?v=1",
+   "src": "/assets/ai-cars/jeep-wrangler-2001.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "red",
+   "color": "dark gray metallic",
    "gen": "2nd generation (TJ)"
   },
   "2002": {
-   "src": "/assets/ai-cars/jeep-wrangler-g2.webp?v=1",
+   "src": "/assets/ai-cars/jeep-wrangler-2002.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "red",
+   "color": "light gold metallic",
    "gen": "2nd generation (TJ)"
   },
   "2003": {
-   "src": "/assets/ai-cars/jeep-wrangler-g2.webp?v=1",
+   "src": "/assets/ai-cars/jeep-wrangler-2003.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "red",
+   "color": "black",
    "gen": "2nd generation (TJ)"
   },
   "2004": {
-   "src": "/assets/ai-cars/jeep-wrangler-g2.webp?v=1",
+   "src": "/assets/ai-cars/jeep-wrangler-2004.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "red",
+   "color": "dark red metallic",
    "gen": "2nd generation (TJ)"
   },
   "2005": {
-   "src": "/assets/ai-cars/jeep-wrangler-g2.webp?v=1",
+   "src": "/assets/ai-cars/jeep-wrangler-2005.webp?v=1",
    "w": 1000,
    "h": 600,
    "color": "red",
    "gen": "2nd generation (TJ)"
   },
   "2006": {
-   "src": "/assets/ai-cars/jeep-wrangler-g2.webp?v=1",
+   "src": "/assets/ai-cars/jeep-wrangler-2006.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "red",
+   "color": "white",
    "gen": "2nd generation (TJ)"
   },
   "2007": {
-   "src": "/assets/ai-models/jeep-wrangler.webp?v=1",
+   "src": "/assets/ai-cars/jeep-wrangler-2007.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "dark blue metallic",
    "gen": "3rd generation (JK)"
   },
   "2008": {
-   "src": "/assets/ai-models/jeep-wrangler.webp?v=1",
+   "src": "/assets/ai-cars/jeep-wrangler-2008.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "silver metallic",
    "gen": "3rd generation (JK)"
   },
   "2009": {
-   "src": "/assets/ai-models/jeep-wrangler.webp?v=1",
+   "src": "/assets/ai-cars/jeep-wrangler-2009.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "dark gray metallic",
    "gen": "3rd generation (JK)"
   },
   "2010": {
-   "src": "/assets/ai-models/jeep-wrangler.webp?v=1",
+   "src": "/assets/ai-cars/jeep-wrangler-2010.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "medium blue metallic",
    "gen": "3rd generation (JK)"
   },
   "2011": {
-   "src": "/assets/ai-models/jeep-wrangler.webp?v=1",
-   "w": 1000,
-   "h": 600,
-   "color": "dark gray",
-   "gen": "3rd generation (JK)"
-  },
-  "2012": {
-   "src": "/assets/ai-models/jeep-wrangler.webp?v=1",
-   "w": 1000,
-   "h": 600,
-   "color": "dark gray",
-   "gen": "3rd generation (JK)"
-  },
-  "2013": {
-   "src": "/assets/ai-models/jeep-wrangler.webp?v=1",
-   "w": 1000,
-   "h": 600,
-   "color": "dark gray",
-   "gen": "3rd generation (JK)"
-  },
-  "2014": {
-   "src": "/assets/ai-models/jeep-wrangler.webp?v=1",
-   "w": 1000,
-   "h": 600,
-   "color": "dark gray",
-   "gen": "3rd generation (JK)"
-  },
-  "2015": {
-   "src": "/assets/ai-models/jeep-wrangler.webp?v=1",
-   "w": 1000,
-   "h": 600,
-   "color": "dark gray",
-   "gen": "3rd generation (JK)"
-  },
-  "2016": {
-   "src": "/assets/ai-models/jeep-wrangler.webp?v=1",
-   "w": 1000,
-   "h": 600,
-   "color": "dark gray",
-   "gen": "3rd generation (JK)"
-  },
-  "2017": {
-   "src": "/assets/ai-models/jeep-wrangler.webp?v=1",
-   "w": 1000,
-   "h": 600,
-   "color": "dark gray",
-   "gen": "3rd generation (JK)"
-  },
-  "2018": {
-   "src": "/assets/ai-cars/jeep-wrangler-g4.webp?v=1",
+   "src": "/assets/ai-cars/jeep-wrangler-2011.webp?v=1",
    "w": 1000,
    "h": 600,
    "color": "black",
+   "gen": "3rd generation (JK)"
+  },
+  "2012": {
+   "src": "/assets/ai-cars/jeep-wrangler-2012.webp?v=1",
+   "w": 1000,
+   "h": 600,
+   "color": "red",
+   "gen": "3rd generation (JK)"
+  },
+  "2013": {
+   "src": "/assets/ai-cars/jeep-wrangler-2013.webp?v=1",
+   "w": 1000,
+   "h": 600,
+   "color": "brown metallic",
+   "gen": "3rd generation (JK)"
+  },
+  "2014": {
+   "src": "/assets/ai-cars/jeep-wrangler-2014.webp?v=1",
+   "w": 1000,
+   "h": 600,
+   "color": "silver metallic",
+   "gen": "3rd generation (JK)"
+  },
+  "2015": {
+   "src": "/assets/ai-cars/jeep-wrangler-2015.webp?v=1",
+   "w": 1000,
+   "h": 600,
+   "color": "dark blue metallic",
+   "gen": "3rd generation (JK)"
+  },
+  "2016": {
+   "src": "/assets/ai-cars/jeep-wrangler-2016.webp?v=1",
+   "w": 1000,
+   "h": 600,
+   "color": "white",
+   "gen": "3rd generation (JK)"
+  },
+  "2017": {
+   "src": "/assets/ai-cars/jeep-wrangler-2017.webp?v=1",
+   "w": 1000,
+   "h": 600,
+   "color": "dark gray metallic",
+   "gen": "3rd generation (JK)"
+  },
+  "2018": {
+   "src": "/assets/ai-cars/jeep-wrangler-2018.webp?v=1",
+   "w": 1000,
+   "h": 600,
+   "color": "medium blue metallic",
    "gen": "4th generation (JL)"
   },
   "2019": {
-   "src": "/assets/ai-cars/jeep-wrangler-g4.webp?v=1",
+   "src": "/assets/ai-cars/jeep-wrangler-2019.webp?v=1",
    "w": 1000,
    "h": 600,
    "color": "black",
    "gen": "4th generation (JL)"
   },
   "2020": {
-   "src": "/assets/ai-cars/jeep-wrangler-g4.webp?v=1",
+   "src": "/assets/ai-cars/jeep-wrangler-2020.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "red",
    "gen": "4th generation (JL)"
   },
   "2021": {
-   "src": "/assets/ai-cars/jeep-wrangler-g4.webp?v=1",
+   "src": "/assets/ai-cars/jeep-wrangler-2021.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "dark green metallic",
    "gen": "4th generation (JL)"
   },
   "2022": {
-   "src": "/assets/ai-cars/jeep-wrangler-g4.webp?v=1",
+   "src": "/assets/ai-cars/jeep-wrangler-2022.webp?v=1",
    "w": 1000,
    "h": 600,
    "color": "black",
    "gen": "4th generation (JL)"
   },
   "2023": {
-   "src": "/assets/ai-cars/jeep-wrangler-g4.webp?v=1",
+   "src": "/assets/ai-cars/jeep-wrangler-2023.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "silver metallic",
    "gen": "4th generation (JL)"
   },
   "2024": {
-   "src": "/assets/ai-cars/jeep-wrangler-g4.webp?v=1",
+   "src": "/assets/ai-cars/jeep-wrangler-2024.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "white",
    "gen": "4th generation (JL)"
   },
   "2025": {
-   "src": "/assets/ai-cars/jeep-wrangler-g4.webp?v=1",
+   "src": "/assets/ai-cars/jeep-wrangler-2025.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "medium blue metallic",
    "gen": "4th generation (JL)"
   }
  },
@@ -4855,17 +4855,17 @@
    "gen": "2nd generation (XA20)"
   },
   "2002": {
-   "src": "/assets/ai-cars/toyota-rav4-g2.webp?v=1",
+   "src": "/assets/ai-cars/toyota-rav4-2002.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark red metallic",
    "gen": "2nd generation (XA20)"
   },
   "2003": {
-   "src": "/assets/ai-cars/toyota-rav4-g2.webp?v=1",
+   "src": "/assets/ai-cars/toyota-rav4-2003.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "red",
    "gen": "2nd generation (XA20)"
   },
   "2004": {
@@ -4876,38 +4876,38 @@
    "gen": "2nd generation (XA20)"
   },
   "2005": {
-   "src": "/assets/ai-cars/toyota-rav4-g2.webp?v=1",
+   "src": "/assets/ai-cars/toyota-rav4-2005.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark blue metallic",
    "gen": "2nd generation (XA20)"
   },
   "2006": {
-   "src": "/assets/ai-cars/toyota-rav4-g3.webp?v=1",
+   "src": "/assets/ai-cars/toyota-rav4-2006.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "silver metallic",
    "gen": "3rd generation (XA30)"
   },
   "2007": {
-   "src": "/assets/ai-cars/toyota-rav4-g3.webp?v=1",
+   "src": "/assets/ai-cars/toyota-rav4-2007.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark gray metallic",
    "gen": "3rd generation (XA30)"
   },
   "2008": {
-   "src": "/assets/ai-cars/toyota-rav4-g3.webp?v=1",
+   "src": "/assets/ai-cars/toyota-rav4-2008.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "light gold metallic",
    "gen": "3rd generation (XA30)"
   },
   "2009": {
-   "src": "/assets/ai-cars/toyota-rav4-g3.webp?v=1",
+   "src": "/assets/ai-cars/toyota-rav4-2009.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "black",
    "gen": "3rd generation (XA30)"
   },
   "2010": {
@@ -4918,108 +4918,108 @@
    "gen": "3rd generation (XA30)"
   },
   "2011": {
-   "src": "/assets/ai-cars/toyota-rav4-g3.webp?v=1",
+   "src": "/assets/ai-cars/toyota-rav4-2011.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "brown metallic",
    "gen": "3rd generation (XA30)"
   },
   "2012": {
-   "src": "/assets/ai-cars/toyota-rav4-g3.webp?v=1",
+   "src": "/assets/ai-cars/toyota-rav4-2012.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "silver metallic",
    "gen": "3rd generation (XA30)"
   },
   "2013": {
-   "src": "/assets/ai-cars/toyota-rav4-g4.webp?v=1",
+   "src": "/assets/ai-cars/toyota-rav4-2013.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark blue metallic",
    "gen": "4th generation (XA40)"
   },
   "2014": {
-   "src": "/assets/ai-cars/toyota-rav4-g4.webp?v=1",
+   "src": "/assets/ai-cars/toyota-rav4-2014.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "white",
    "gen": "4th generation (XA40)"
   },
   "2015": {
-   "src": "/assets/ai-cars/toyota-rav4-g4.webp?v=1",
+   "src": "/assets/ai-cars/toyota-rav4-2015.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark gray metallic",
    "gen": "4th generation (XA40)"
   },
   "2016": {
-   "src": "/assets/ai-cars/toyota-rav4-g4.webp?v=1",
+   "src": "/assets/ai-cars/toyota-rav4-2016.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "medium blue metallic",
    "gen": "4th generation (XA40)"
   },
   "2017": {
-   "src": "/assets/ai-cars/toyota-rav4-g4.webp?v=1",
-   "w": 1000,
-   "h": 600,
-   "color": "silver",
-   "gen": "4th generation (XA40)"
-  },
-  "2018": {
-   "src": "/assets/ai-cars/toyota-rav4-g4.webp?v=1",
-   "w": 1000,
-   "h": 600,
-   "color": "silver",
-   "gen": "4th generation (XA40)"
-  },
-  "2019": {
-   "src": "/assets/ai-models/toyota-rav4.webp?v=1",
+   "src": "/assets/ai-cars/toyota-rav4-2017.webp?v=1",
    "w": 1000,
    "h": 600,
    "color": "black",
+   "gen": "4th generation (XA40)"
+  },
+  "2018": {
+   "src": "/assets/ai-cars/toyota-rav4-2018.webp?v=1",
+   "w": 1000,
+   "h": 600,
+   "color": "red",
+   "gen": "4th generation (XA40)"
+  },
+  "2019": {
+   "src": "/assets/ai-cars/toyota-rav4-2019.webp?v=1",
+   "w": 1000,
+   "h": 600,
+   "color": "brown metallic",
    "gen": "5th generation (XA50)"
   },
   "2020": {
-   "src": "/assets/ai-models/toyota-rav4.webp?v=1",
+   "src": "/assets/ai-cars/toyota-rav4-2020.webp?v=1",
    "w": 1000,
    "h": 600,
    "color": "black",
    "gen": "5th generation (XA50)"
   },
   "2021": {
-   "src": "/assets/ai-models/toyota-rav4.webp?v=1",
+   "src": "/assets/ai-cars/toyota-rav4-2021.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "silver metallic",
    "gen": "5th generation (XA50)"
   },
   "2022": {
-   "src": "/assets/ai-models/toyota-rav4.webp?v=1",
+   "src": "/assets/ai-cars/toyota-rav4-2022.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "white",
    "gen": "5th generation (XA50)"
   },
   "2023": {
-   "src": "/assets/ai-models/toyota-rav4.webp?v=1",
+   "src": "/assets/ai-cars/toyota-rav4-2023.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "medium blue metallic",
    "gen": "5th generation (XA50)"
   },
   "2024": {
-   "src": "/assets/ai-models/toyota-rav4.webp?v=1",
+   "src": "/assets/ai-cars/toyota-rav4-2024.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "light gray",
    "gen": "5th generation (XA50)"
   },
   "2025": {
-   "src": "/assets/ai-models/toyota-rav4.webp?v=1",
+   "src": "/assets/ai-cars/toyota-rav4-2025.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "dark gray metallic",
    "gen": "5th generation (XA50)"
   }
  },
@@ -5379,38 +5379,38 @@
  },
  "honda-cr-v": {
   "2000": {
-   "src": "/assets/ai-models/honda-cr-v.webp?v=1",
+   "src": "/assets/ai-cars/honda-cr-v-2000.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "red",
    "gen": "1st generation"
   },
   "2001": {
-   "src": "/assets/ai-models/honda-cr-v.webp?v=1",
+   "src": "/assets/ai-cars/honda-cr-v-2001.webp?v=1",
    "w": 1000,
    "h": 600,
    "color": "white",
    "gen": "1st generation"
   },
   "2002": {
-   "src": "/assets/ai-cars/honda-cr-v-g2.webp?v=1",
+   "src": "/assets/ai-cars/honda-cr-v-2002.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark blue",
+   "color": "dark blue metallic",
    "gen": "2nd generation"
   },
   "2003": {
-   "src": "/assets/ai-cars/honda-cr-v-g2.webp?v=1",
+   "src": "/assets/ai-cars/honda-cr-v-2003.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark blue",
+   "color": "silver metallic",
    "gen": "2nd generation"
   },
   "2004": {
-   "src": "/assets/ai-cars/honda-cr-v-g2.webp?v=1",
+   "src": "/assets/ai-cars/honda-cr-v-2004.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark blue",
+   "color": "dark gray metallic",
    "gen": "2nd generation"
   },
   "2005": {
@@ -5428,136 +5428,136 @@
    "gen": "2nd generation"
   },
   "2007": {
-   "src": "/assets/ai-cars/honda-cr-v-g3.webp?v=1",
+   "src": "/assets/ai-cars/honda-cr-v-2007.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark red metallic",
    "gen": "3rd generation"
   },
   "2008": {
-   "src": "/assets/ai-cars/honda-cr-v-g3.webp?v=1",
+   "src": "/assets/ai-cars/honda-cr-v-2008.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "red",
    "gen": "3rd generation"
   },
   "2009": {
-   "src": "/assets/ai-cars/honda-cr-v-g3.webp?v=1",
+   "src": "/assets/ai-cars/honda-cr-v-2009.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "white",
    "gen": "3rd generation"
   },
   "2010": {
-   "src": "/assets/ai-cars/honda-cr-v-g3.webp?v=1",
+   "src": "/assets/ai-cars/honda-cr-v-2010.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark blue metallic",
    "gen": "3rd generation"
   },
   "2011": {
-   "src": "/assets/ai-cars/honda-cr-v-g3.webp?v=1",
+   "src": "/assets/ai-cars/honda-cr-v-2011.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "white",
    "gen": "3rd generation"
   },
   "2012": {
-   "src": "/assets/ai-cars/honda-cr-v-g4.webp?v=1",
+   "src": "/assets/ai-cars/honda-cr-v-2012.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark gray metallic",
    "gen": "4th generation"
   },
   "2013": {
-   "src": "/assets/ai-cars/honda-cr-v-g4.webp?v=1",
+   "src": "/assets/ai-cars/honda-cr-v-2013.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "medium blue metallic",
    "gen": "4th generation"
   },
   "2014": {
-   "src": "/assets/ai-cars/honda-cr-v-g4.webp?v=1",
+   "src": "/assets/ai-cars/honda-cr-v-2014.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "black",
    "gen": "4th generation"
   },
   "2015": {
-   "src": "/assets/ai-cars/honda-cr-v-g4.webp?v=1",
+   "src": "/assets/ai-cars/honda-cr-v-2015.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "red",
    "gen": "4th generation"
   },
   "2016": {
-   "src": "/assets/ai-cars/honda-cr-v-g4.webp?v=1",
+   "src": "/assets/ai-cars/honda-cr-v-2016.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "brown metallic",
    "gen": "4th generation"
   },
   "2017": {
-   "src": "/assets/ai-cars/honda-cr-v-g5.webp?v=1",
+   "src": "/assets/ai-cars/honda-cr-v-2017.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "silver metallic",
    "gen": "5th generation"
   },
   "2018": {
-   "src": "/assets/ai-cars/honda-cr-v-g5.webp?v=1",
+   "src": "/assets/ai-cars/honda-cr-v-2018.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "dark blue metallic",
    "gen": "5th generation"
   },
   "2019": {
-   "src": "/assets/ai-cars/honda-cr-v-g5.webp?v=1",
+   "src": "/assets/ai-cars/honda-cr-v-2019.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "white",
    "gen": "5th generation"
   },
   "2020": {
-   "src": "/assets/ai-cars/honda-cr-v-g5.webp?v=1",
+   "src": "/assets/ai-cars/honda-cr-v-2020.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "medium blue metallic",
    "gen": "5th generation"
   },
   "2021": {
-   "src": "/assets/ai-cars/honda-cr-v-g5.webp?v=1",
+   "src": "/assets/ai-cars/honda-cr-v-2021.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "light gray",
    "gen": "5th generation"
   },
   "2022": {
-   "src": "/assets/ai-cars/honda-cr-v-g5.webp?v=1",
+   "src": "/assets/ai-cars/honda-cr-v-2022.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "dark gray metallic",
    "gen": "5th generation"
   },
   "2023": {
-   "src": "/assets/ai-cars/honda-cr-v-g6.webp?v=1",
+   "src": "/assets/ai-cars/honda-cr-v-2023.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark blue",
+   "color": "red",
    "gen": "6th generation"
   },
   "2024": {
-   "src": "/assets/ai-cars/honda-cr-v-g6.webp?v=1",
+   "src": "/assets/ai-cars/honda-cr-v-2024.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark blue",
+   "color": "dark green metallic",
    "gen": "6th generation"
   },
   "2025": {
-   "src": "/assets/ai-cars/honda-cr-v-g6.webp?v=1",
+   "src": "/assets/ai-cars/honda-cr-v-2025.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark blue",
+   "color": "black",
    "gen": "6th generation"
   }
  },
@@ -8383,94 +8383,94 @@
  },
  "toyota-camry": {
   "2000": {
-   "src": "/assets/ai-cars/toyota-camry-g4.webp?v=1",
-   "w": 1000,
-   "h": 600,
-   "color": "silver",
-   "gen": "4th generation (XV20)"
-  },
-  "2001": {
-   "src": "/assets/ai-cars/toyota-camry-g4.webp?v=1",
-   "w": 1000,
-   "h": 600,
-   "color": "silver",
-   "gen": "4th generation (XV20)"
-  },
-  "2002": {
-   "src": "/assets/ai-cars/toyota-camry-g5.webp?v=1",
-   "w": 1000,
-   "h": 600,
-   "color": "beige",
-   "gen": "5th generation (XV30)"
-  },
-  "2003": {
-   "src": "/assets/ai-cars/toyota-camry-g5.webp?v=1",
-   "w": 1000,
-   "h": 600,
-   "color": "beige",
-   "gen": "5th generation (XV30)"
-  },
-  "2004": {
-   "src": "/assets/ai-cars/toyota-camry-g5.webp?v=1",
-   "w": 1000,
-   "h": 600,
-   "color": "beige",
-   "gen": "5th generation (XV30)"
-  },
-  "2005": {
-   "src": "/assets/ai-cars/toyota-camry-g5.webp?v=1",
-   "w": 1000,
-   "h": 600,
-   "color": "beige",
-   "gen": "5th generation (XV30)"
-  },
-  "2006": {
-   "src": "/assets/ai-cars/toyota-camry-g5.webp?v=1",
-   "w": 1000,
-   "h": 600,
-   "color": "beige",
-   "gen": "5th generation (XV30)"
-  },
-  "2007": {
-   "src": "/assets/ai-cars/toyota-camry-g6.webp?v=1",
-   "w": 1000,
-   "h": 600,
-   "color": "dark gray",
-   "gen": "6th generation (XV40)"
-  },
-  "2008": {
-   "src": "/assets/ai-cars/toyota-camry-g6.webp?v=1",
-   "w": 1000,
-   "h": 600,
-   "color": "dark gray",
-   "gen": "6th generation (XV40)"
-  },
-  "2009": {
-   "src": "/assets/ai-cars/toyota-camry-g6.webp?v=1",
-   "w": 1000,
-   "h": 600,
-   "color": "dark gray",
-   "gen": "6th generation (XV40)"
-  },
-  "2010": {
-   "src": "/assets/ai-cars/toyota-camry-g6.webp?v=1",
-   "w": 1000,
-   "h": 600,
-   "color": "dark gray",
-   "gen": "6th generation (XV40)"
-  },
-  "2011": {
-   "src": "/assets/ai-cars/toyota-camry-g6.webp?v=1",
-   "w": 1000,
-   "h": 600,
-   "color": "dark gray",
-   "gen": "6th generation (XV40)"
-  },
-  "2012": {
-   "src": "/assets/ai-cars/toyota-camry-g7.webp?v=1",
+   "src": "/assets/ai-cars/toyota-camry-2000.webp?v=1",
    "w": 1000,
    "h": 600,
    "color": "white",
+   "gen": "4th generation (XV20)"
+  },
+  "2001": {
+   "src": "/assets/ai-cars/toyota-camry-2001.webp?v=1",
+   "w": 1000,
+   "h": 600,
+   "color": "dark blue metallic",
+   "gen": "4th generation (XV20)"
+  },
+  "2002": {
+   "src": "/assets/ai-cars/toyota-camry-2002.webp?v=1",
+   "w": 1000,
+   "h": 600,
+   "color": "silver metallic",
+   "gen": "5th generation (XV30)"
+  },
+  "2003": {
+   "src": "/assets/ai-cars/toyota-camry-2003.webp?v=1",
+   "w": 1000,
+   "h": 600,
+   "color": "dark gray metallic",
+   "gen": "5th generation (XV30)"
+  },
+  "2004": {
+   "src": "/assets/ai-cars/toyota-camry-2004.webp?v=1",
+   "w": 1000,
+   "h": 600,
+   "color": "light gold metallic",
+   "gen": "5th generation (XV30)"
+  },
+  "2005": {
+   "src": "/assets/ai-cars/toyota-camry-2005.webp?v=1",
+   "w": 1000,
+   "h": 600,
+   "color": "black",
+   "gen": "5th generation (XV30)"
+  },
+  "2006": {
+   "src": "/assets/ai-cars/toyota-camry-2006.webp?v=1",
+   "w": 1000,
+   "h": 600,
+   "color": "dark red metallic",
+   "gen": "5th generation (XV30)"
+  },
+  "2007": {
+   "src": "/assets/ai-cars/toyota-camry-2007.webp?v=1",
+   "w": 1000,
+   "h": 600,
+   "color": "red",
+   "gen": "6th generation (XV40)"
+  },
+  "2008": {
+   "src": "/assets/ai-cars/toyota-camry-2008.webp?v=1",
+   "w": 1000,
+   "h": 600,
+   "color": "white",
+   "gen": "6th generation (XV40)"
+  },
+  "2009": {
+   "src": "/assets/ai-cars/toyota-camry-2009.webp?v=1",
+   "w": 1000,
+   "h": 600,
+   "color": "dark blue metallic",
+   "gen": "6th generation (XV40)"
+  },
+  "2010": {
+   "src": "/assets/ai-cars/toyota-camry-2010.webp?v=1",
+   "w": 1000,
+   "h": 600,
+   "color": "white",
+   "gen": "6th generation (XV40)"
+  },
+  "2011": {
+   "src": "/assets/ai-cars/toyota-camry-2011.webp?v=1",
+   "w": 1000,
+   "h": 600,
+   "color": "dark gray metallic",
+   "gen": "6th generation (XV40)"
+  },
+  "2012": {
+   "src": "/assets/ai-cars/toyota-camry-2012.webp?v=1",
+   "w": 1000,
+   "h": 600,
+   "color": "medium blue metallic",
    "gen": "7th generation (XV50)"
   },
   "2013": {
@@ -8481,208 +8481,208 @@
    "gen": "7th generation (XV50)"
   },
   "2014": {
-   "src": "/assets/ai-cars/toyota-camry-g7.webp?v=1",
+   "src": "/assets/ai-cars/toyota-camry-2014.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "red",
    "gen": "7th generation (XV50)"
   },
   "2015": {
-   "src": "/assets/ai-cars/toyota-camry-g7.webp?v=1",
+   "src": "/assets/ai-cars/toyota-camry-2015.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "brown metallic",
    "gen": "7th generation (XV50)"
   },
   "2016": {
-   "src": "/assets/ai-cars/toyota-camry-g7.webp?v=1",
+   "src": "/assets/ai-cars/toyota-camry-2016.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "silver metallic",
    "gen": "7th generation (XV50)"
   },
   "2017": {
-   "src": "/assets/ai-cars/toyota-camry-g7.webp?v=1",
+   "src": "/assets/ai-cars/toyota-camry-2017.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark blue metallic",
    "gen": "7th generation (XV50)"
   },
   "2018": {
-   "src": "/assets/ai-models/toyota-camry.webp?v=1",
+   "src": "/assets/ai-cars/toyota-camry-2018.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "white",
    "gen": "8th generation (XV70)"
   },
   "2019": {
-   "src": "/assets/ai-models/toyota-camry.webp?v=1",
+   "src": "/assets/ai-cars/toyota-camry-2019.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark gray metallic",
    "gen": "8th generation (XV70)"
   },
   "2020": {
-   "src": "/assets/ai-models/toyota-camry.webp?v=1",
+   "src": "/assets/ai-cars/toyota-camry-2020.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "light gray",
    "gen": "8th generation (XV70)"
   },
   "2021": {
-   "src": "/assets/ai-models/toyota-camry.webp?v=1",
+   "src": "/assets/ai-cars/toyota-camry-2021.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark gray metallic",
    "gen": "8th generation (XV70)"
   },
   "2022": {
-   "src": "/assets/ai-models/toyota-camry.webp?v=1",
+   "src": "/assets/ai-cars/toyota-camry-2022.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "red",
    "gen": "8th generation (XV70)"
   },
   "2023": {
-   "src": "/assets/ai-models/toyota-camry.webp?v=1",
+   "src": "/assets/ai-cars/toyota-camry-2023.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark green metallic",
    "gen": "8th generation (XV70)"
   },
   "2024": {
-   "src": "/assets/ai-models/toyota-camry.webp?v=1",
+   "src": "/assets/ai-cars/toyota-camry-2024.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "black",
    "gen": "8th generation (XV70)"
   },
   "2025": {
-   "src": "/assets/ai-cars/toyota-camry-g9.webp?v=1",
+   "src": "/assets/ai-cars/toyota-camry-2025.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "silver metallic",
    "gen": "9th generation (XV80)"
   }
  },
  "toyota-corolla": {
   "2000": {
-   "src": "/assets/ai-models/toyota-corolla.webp?v=1",
+   "src": "/assets/ai-cars/toyota-corolla-2000.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "red",
    "gen": "8th generation (E110)"
   },
   "2001": {
-   "src": "/assets/ai-models/toyota-corolla.webp?v=1",
+   "src": "/assets/ai-cars/toyota-corolla-2001.webp?v=1",
    "w": 1000,
    "h": 600,
    "color": "white",
    "gen": "8th generation (E110)"
   },
   "2002": {
-   "src": "/assets/ai-models/toyota-corolla.webp?v=1",
+   "src": "/assets/ai-cars/toyota-corolla-2002.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark blue metallic",
    "gen": "8th generation (E110)"
   },
   "2003": {
-   "src": "/assets/ai-cars/toyota-corolla-g9.webp?v=1",
+   "src": "/assets/ai-cars/toyota-corolla-2003.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "silver metallic",
    "gen": "9th generation (E130)"
   },
   "2004": {
-   "src": "/assets/ai-cars/toyota-corolla-g9.webp?v=1",
+   "src": "/assets/ai-cars/toyota-corolla-2004.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark gray metallic",
    "gen": "9th generation (E130)"
   },
   "2005": {
-   "src": "/assets/ai-cars/toyota-corolla-g9.webp?v=1",
+   "src": "/assets/ai-cars/toyota-corolla-2005.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "light gold metallic",
    "gen": "9th generation (E130)"
   },
   "2006": {
-   "src": "/assets/ai-cars/toyota-corolla-g9.webp?v=1",
+   "src": "/assets/ai-cars/toyota-corolla-2006.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "black",
    "gen": "9th generation (E130)"
   },
   "2007": {
-   "src": "/assets/ai-cars/toyota-corolla-g9.webp?v=1",
+   "src": "/assets/ai-cars/toyota-corolla-2007.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark red metallic",
    "gen": "9th generation (E130)"
   },
   "2008": {
-   "src": "/assets/ai-cars/toyota-corolla-g9.webp?v=1",
+   "src": "/assets/ai-cars/toyota-corolla-2008.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "red",
    "gen": "9th generation (E130)"
   },
   "2009": {
-   "src": "/assets/ai-cars/toyota-corolla-g10.webp?v=1",
+   "src": "/assets/ai-cars/toyota-corolla-2009.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "white",
    "gen": "10th generation (E140)"
   },
   "2010": {
-   "src": "/assets/ai-cars/toyota-corolla-g10.webp?v=1",
+   "src": "/assets/ai-cars/toyota-corolla-2010.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "dark blue metallic",
    "gen": "10th generation (E140)"
   },
   "2011": {
-   "src": "/assets/ai-cars/toyota-corolla-g10.webp?v=1",
+   "src": "/assets/ai-cars/toyota-corolla-2011.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "white",
    "gen": "10th generation (E140)"
   },
   "2012": {
-   "src": "/assets/ai-cars/toyota-corolla-g10.webp?v=1",
+   "src": "/assets/ai-cars/toyota-corolla-2012.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "dark gray metallic",
    "gen": "10th generation (E140)"
   },
   "2013": {
-   "src": "/assets/ai-cars/toyota-corolla-g10.webp?v=1",
+   "src": "/assets/ai-cars/toyota-corolla-2013.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "medium blue metallic",
    "gen": "10th generation (E140)"
   },
   "2014": {
-   "src": "/assets/ai-cars/toyota-corolla-g11.webp?v=1",
+   "src": "/assets/ai-cars/toyota-corolla-2014.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "black",
    "gen": "11th generation (E170)"
   },
   "2015": {
-   "src": "/assets/ai-cars/toyota-corolla-g11.webp?v=1",
+   "src": "/assets/ai-cars/toyota-corolla-2015.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "red",
    "gen": "11th generation (E170)"
   },
   "2016": {
-   "src": "/assets/ai-cars/toyota-corolla-g11.webp?v=1",
+   "src": "/assets/ai-cars/toyota-corolla-2016.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "brown metallic",
    "gen": "11th generation (E170)"
   },
   "2017": {
@@ -8707,45 +8707,45 @@
    "gen": "11th generation (E170)"
   },
   "2020": {
-   "src": "/assets/ai-cars/toyota-corolla-g12.webp?v=1",
+   "src": "/assets/ai-cars/toyota-corolla-2020.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "medium blue metallic",
    "gen": "12th generation (E210)"
   },
   "2021": {
-   "src": "/assets/ai-cars/toyota-corolla-g12.webp?v=1",
+   "src": "/assets/ai-cars/toyota-corolla-2021.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "light gray",
    "gen": "12th generation (E210)"
   },
   "2022": {
-   "src": "/assets/ai-cars/toyota-corolla-g12.webp?v=1",
+   "src": "/assets/ai-cars/toyota-corolla-2022.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark gray metallic",
    "gen": "12th generation (E210)"
   },
   "2023": {
-   "src": "/assets/ai-cars/toyota-corolla-g12.webp?v=1",
+   "src": "/assets/ai-cars/toyota-corolla-2023.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "red",
    "gen": "12th generation (E210)"
   },
   "2024": {
-   "src": "/assets/ai-cars/toyota-corolla-g12.webp?v=1",
+   "src": "/assets/ai-cars/toyota-corolla-2024.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark green metallic",
    "gen": "12th generation (E210)"
   },
   "2025": {
-   "src": "/assets/ai-cars/toyota-corolla-g12.webp?v=1",
+   "src": "/assets/ai-cars/toyota-corolla-2025.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "black",
    "gen": "12th generation (E210)"
   }
  },
@@ -8893,185 +8893,185 @@
  },
  "honda-accord": {
   "2000": {
-   "src": "/assets/ai-cars/honda-accord-g6.webp?v=1",
+   "src": "/assets/ai-cars/honda-accord-2000.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark green",
+   "color": "white",
    "gen": "6th generation"
   },
   "2001": {
-   "src": "/assets/ai-cars/honda-accord-g6.webp?v=1",
+   "src": "/assets/ai-cars/honda-accord-2001.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark green",
+   "color": "dark blue metallic",
    "gen": "6th generation"
   },
   "2002": {
-   "src": "/assets/ai-cars/honda-accord-g6.webp?v=1",
+   "src": "/assets/ai-cars/honda-accord-2002.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark green",
+   "color": "silver metallic",
    "gen": "6th generation"
   },
   "2003": {
-   "src": "/assets/ai-cars/honda-accord-g7.webp?v=1",
+   "src": "/assets/ai-cars/honda-accord-2003.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark gray metallic",
    "gen": "7th generation"
   },
   "2004": {
-   "src": "/assets/ai-cars/honda-accord-g7.webp?v=1",
+   "src": "/assets/ai-cars/honda-accord-2004.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "light gold metallic",
    "gen": "7th generation"
   },
   "2005": {
-   "src": "/assets/ai-cars/honda-accord-g7.webp?v=1",
+   "src": "/assets/ai-cars/honda-accord-2005.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "black",
    "gen": "7th generation"
   },
   "2006": {
-   "src": "/assets/ai-cars/honda-accord-g7.webp?v=1",
+   "src": "/assets/ai-cars/honda-accord-2006.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark red metallic",
    "gen": "7th generation"
   },
   "2007": {
-   "src": "/assets/ai-cars/honda-accord-g7.webp?v=1",
+   "src": "/assets/ai-cars/honda-accord-2007.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "red",
    "gen": "7th generation"
   },
   "2008": {
-   "src": "/assets/ai-models/honda-accord.webp?v=1",
+   "src": "/assets/ai-cars/honda-accord-2008.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "white",
    "gen": "8th generation"
   },
   "2009": {
-   "src": "/assets/ai-models/honda-accord.webp?v=1",
+   "src": "/assets/ai-cars/honda-accord-2009.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "dark blue metallic",
    "gen": "8th generation"
   },
   "2010": {
-   "src": "/assets/ai-models/honda-accord.webp?v=1",
+   "src": "/assets/ai-cars/honda-accord-2010.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "white",
    "gen": "8th generation"
   },
   "2011": {
-   "src": "/assets/ai-models/honda-accord.webp?v=1",
+   "src": "/assets/ai-cars/honda-accord-2011.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "dark gray metallic",
    "gen": "8th generation"
   },
   "2012": {
-   "src": "/assets/ai-models/honda-accord.webp?v=1",
+   "src": "/assets/ai-cars/honda-accord-2012.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "medium blue metallic",
    "gen": "8th generation"
   },
   "2013": {
-   "src": "/assets/ai-cars/honda-accord-g9.webp?v=1",
+   "src": "/assets/ai-cars/honda-accord-2013.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "black",
    "gen": "9th generation"
   },
   "2014": {
-   "src": "/assets/ai-cars/honda-accord-g9.webp?v=1",
+   "src": "/assets/ai-cars/honda-accord-2014.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "red",
    "gen": "9th generation"
   },
   "2015": {
-   "src": "/assets/ai-cars/honda-accord-g9.webp?v=1",
+   "src": "/assets/ai-cars/honda-accord-2015.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "brown metallic",
    "gen": "9th generation"
   },
   "2016": {
-   "src": "/assets/ai-cars/honda-accord-g9.webp?v=1",
+   "src": "/assets/ai-cars/honda-accord-2016.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "silver metallic",
    "gen": "9th generation"
   },
   "2017": {
-   "src": "/assets/ai-cars/honda-accord-g9.webp?v=1",
+   "src": "/assets/ai-cars/honda-accord-2017.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark blue metallic",
    "gen": "9th generation"
   },
   "2018": {
-   "src": "/assets/ai-cars/honda-accord-g10.webp?v=1",
+   "src": "/assets/ai-cars/honda-accord-2018.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "white",
    "gen": "10th generation"
   },
   "2019": {
-   "src": "/assets/ai-cars/honda-accord-g10.webp?v=1",
+   "src": "/assets/ai-cars/honda-accord-2019.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "dark gray metallic",
    "gen": "10th generation"
   },
   "2020": {
-   "src": "/assets/ai-cars/honda-accord-g10.webp?v=1",
+   "src": "/assets/ai-cars/honda-accord-2020.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "light gray",
    "gen": "10th generation"
   },
   "2021": {
-   "src": "/assets/ai-cars/honda-accord-g10.webp?v=1",
+   "src": "/assets/ai-cars/honda-accord-2021.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "dark gray metallic",
    "gen": "10th generation"
   },
   "2022": {
-   "src": "/assets/ai-cars/honda-accord-g10.webp?v=1",
+   "src": "/assets/ai-cars/honda-accord-2022.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "red",
    "gen": "10th generation"
   },
   "2023": {
-   "src": "/assets/ai-cars/honda-accord-g11.webp?v=1",
+   "src": "/assets/ai-cars/honda-accord-2023.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "blue",
+   "color": "dark green metallic",
    "gen": "11th generation"
   },
   "2024": {
-   "src": "/assets/ai-cars/honda-accord-g11.webp?v=1",
+   "src": "/assets/ai-cars/honda-accord-2024.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "blue",
+   "color": "black",
    "gen": "11th generation"
   },
   "2025": {
-   "src": "/assets/ai-cars/honda-accord-g11.webp?v=1",
+   "src": "/assets/ai-cars/honda-accord-2025.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "blue",
+   "color": "silver metallic",
    "gen": "11th generation"
   }
  },
