@@ -28143,5 +28143,50 @@
 }
 ]
 }
+],
+"volkswagen-routan": [
+{
+"sid": "volkswagen-routan-g1",
+"y0": 2009,
+"y1": 2014,
+"label": "2009–2014",
+"videos": 200,
+"praise": [
+[
+"Reliability",
+5
+],
+[
+"Space and practicality",
+3
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+3
+]
+],
+"top": [
+{
+"id": "OiKnp-7B6u4",
+"title": "2009 Volkswagen Routan Review - Kelley Blue Book",
+"views": 115712,
+"ch": "Kelley Blue Book"
+},
+{
+"id": "C1xBKpME9vE",
+"title": "2012 Volkswagen Routan SE Review and Test Drive by Bill - Auto Europa Naples",
+"views": 53675,
+"ch": "Curious Cars"
+},
+{
+"id": "USSnak1mkR0",
+"title": "2011 Volkswagen Routan one minute quick review",
+"views": 49103,
+"ch": "The Fast Lane Car"
+}
+]
+}
 ]
 }
