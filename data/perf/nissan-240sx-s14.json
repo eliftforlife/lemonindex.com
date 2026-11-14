@@ -20,8 +20,7 @@
   "x": "Sold new in the US for model years 1995-1998. US cars had the 2.4-liter KA24DE, not the Japanese Silvia’s SR20DET turbo.",
   "src": [
    "wp240",
-   "fe240",
-   "hag240"
+   "fe240"
   ]
  },
  "films": [
@@ -244,9 +243,10 @@
     ],
     [
      "Japan’s Silvia",
-     "The Japanese S14 Silvia got the SR20DET 2.0 turbo instead, 217 hp",
+     "The Japanese S14 Silvia K's got the SR20DET 2.0 turbo instead, 220 PS (217 hp)",
      [
-      "hag240"
+      "wpsil",
+      "wp240"
      ]
     ]
    ],
@@ -255,20 +255,22 @@
      "t": "Rust",
      "kind": "Outlet report",
      "rx": "\\brust(ed|ing|y)?\\b|frame rails?",
-     "x": "Hagerty says to check for rust by the rear spoiler, trunk, wheel wells and frame rails.",
+     "x": "Auto Express, writing about the same S14 body sold in the UK as the 200SX, says to check the front and rear wheel arches, the wheel wells and suspension struts, the sills and the floorpan for rust.",
      "fix": "",
      "src": [
-      "hag240"
+      "ax200"
      ]
     },
     {
      "t": "Modified and crashed cars",
      "kind": "Outlet report",
      "rx": "drift tax|salvage|rebuilt title|\\bmodified\\b",
-     "x": "Hagerty says 64 percent of the S14 insurance quotes it sees are flagged as modified, and clean, uncrashed cars are hard to find and expensive.",
+     "x": "Auto Express says unmodified S14s are hard to find and accident damage is a real possibility. The Drive says bone-stock 240SXs were already hard to find by the mid-2000s, and Wikipedia says drifting demand has pushed S-chassis prices up (the \"drift tax\").",
      "fix": "",
      "src": [
-      "hag240"
+      "ax200",
+      "drive240",
+      "wp240"
      ]
     },
     {
@@ -312,6 +314,11 @@
    "u": "https://en.wikipedia.org/wiki/Nissan_KA_engine",
    "k": "Wikipedia"
   },
+  "wpsil": {
+   "t": "Wikipedia: Nissan Silvia",
+   "u": "https://en.wikipedia.org/wiki/Nissan_Silvia",
+   "k": "Wikipedia"
+  },
   "fe240": {
    "t": "fueleconomy.gov: Nissan 240SX 1995-1998",
    "u": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=1995&year2=1998&make=Nissan&baseModel=240SX&srchtyp=ymm",
@@ -327,9 +334,9 @@
    "u": "https://consumerguide.com/used/1995-98-nissan-240sx",
    "k": "outlet"
   },
-  "hag240": {
-   "t": "Hagerty: How the Nissan Silvia (240SX) went from humble coupe to drift king (Adam Wilcox, Apr 2020)",
-   "u": "https://www.hagerty.com/media/car-profiles/how-the-nissan-silvia-240sx-went-from-humble-coupe-to-drift-king/",
+  "ax200": {
+   "t": "Auto Express: Nissan 200SX/Silvia S14 buying guide and review, 1995-2000 (Auto Express, Nov 2018)",
+   "u": "https://www.autoexpress.co.uk/nissan/104944/nissan-200sxsilvia-s14-buying-guide-and-review-1995-2000",
    "k": "outlet"
   },
   "z60240": {

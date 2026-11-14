@@ -21,7 +21,7 @@
   "x": "Sold new in the US as the Acura NSX for the 1991 to 2005 model years.",
   "src": [
    "feg",
-   "hag2"
+   "wnsx"
   ]
  },
  "films": [
@@ -70,8 +70,7 @@
      "hp": {
       "v": 270,
       "src": [
-       "hn91",
-       "hag1"
+       "hn91"
       ],
       "note": "at 7,100 rpm"
      },
@@ -120,8 +119,7 @@
      "hp": {
       "v": 252,
       "src": [
-       "hn91",
-       "hag1"
+       "hn91"
       ],
       "note": "at 6,600 rpm"
      },
@@ -204,10 +202,9 @@
      "trans": {
       "v": "6-speed manual, rear-drive",
       "src": [
-       "hn98",
-       "hag2"
+       "hn98"
       ],
-      "note": "limited-slip added for 1997"
+      "note": ""
      },
      "weight": {
       "v": "3,066 lb",
@@ -216,10 +213,11 @@
       ],
       "note": "1998 coupe; NSX-T 3,160 lb"
      },
-     "what": "Engine grew to 3.2 liters: 20 more hp and 15 more lb-ft, a sixth gear, bigger brakes and a limited-slip diff.",
+     "what": "Manual cars got a 3.2-liter engine: 20 more hp and 14 more lb-ft, a sixth gear and bigger brake rotors.",
      "what_src": [
-      "hag2",
-      "hn98"
+      "hn98",
+      "hn91",
+      "wnsx"
      ]
     },
     {
@@ -252,10 +250,9 @@
      "top": {
       "v": "175 mph",
       "src": [
-       "hag2",
        "wnsx"
       ],
-      "note": "Acura figure"
+      "note": ""
      },
      "trans": {
       "v": "6-speed manual, rear-drive",
@@ -274,13 +271,12 @@
      "price": {
       "v": "about $90,000",
       "src": [
-       "hag2"
+       "cars02"
       ],
-      "note": "2002"
+      "note": "2002 base price"
      },
      "what": "Fixed xenon headlights replace the pop-ups, stiffer springs, a thicker anti-roll bar and wider rear tires. Targa only in the US.",
      "what_src": [
-      "hag2",
       "wnsx"
      ]
     },
@@ -328,8 +324,7 @@
      },
      "what": "Keeps the 3.0-liter C30A; the 3.2 came only with the manual.",
      "what_src": [
-      "hn98",
-      "hag2"
+      "hn98"
      ],
      "engine": "C30A"
     }
@@ -389,41 +384,21 @@
      "t": "Timing belt (interference engine)",
      "kind": "Outlet report",
      "rx": "timing belt",
-     "x": "Hagerty says the belt needs replacing every 90,000 miles. The C engines are interference designs, so a snapped belt can let valves hit pistons.",
+     "x": "The C engines are interference designs, so a snapped timing belt can let valves hit pistons. autoTRADER.ca says to change the belt before it fails, and to budget for one if you can't confirm when it was last done.",
      "fix": "Replace the timing belt on schedule.",
      "src": [
-      "hag1",
-      "wc"
+      "wc",
+      "atca"
      ]
     },
     {
      "t": "Gearbox snap ring (1991–1992)",
      "kind": "Outlet report",
      "rx": "snap ?ring|countershaft",
-     "x": "Hagerty says some 1991–1992 five-speed cars had bad transmission countershaft snap rings. Ask for proof it was fixed.",
-     "fix": "Replace the snap ring.",
-     "src": [
-      "hag1"
-     ]
-    },
-    {
-     "t": "Early ABS unit",
-     "kind": "Outlet report",
-     "rx": "\\babs\\b",
-     "x": "Hagerty says some early cars had problems with the ABS control unit.",
+     "x": "autoTRADER.ca says some 1991–1992 cars may have a defective transmission case design that can let the snap ring fail; a gearbox that pops out of gear on its own is one sign. A mechanic can check the transmission number to see if a car is at risk.",
      "fix": "",
      "src": [
-      "hag1"
-     ]
-    },
-    {
-     "t": "Coolant reservoir leaks",
-     "kind": "Outlet report",
-     "rx": "coolant (reservoir|tank|leak)|expansion tank",
-     "x": "Hagerty says the coolant reservoirs had some leak issues.",
-     "fix": "",
-     "src": [
-      "hag1"
+      "atca"
      ]
     }
    ],
@@ -489,11 +464,11 @@
      "t": "Timing belt (interference engine)",
      "kind": "Outlet report",
      "rx": "timing belt",
-     "x": "The C engines are interference designs, so a snapped timing belt can let valves hit pistons. Hagerty gives a 90,000-mile belt interval for the earlier cars.",
+     "x": "The C engines are interference designs, so a snapped timing belt can let valves hit pistons. autoTRADER.ca says to change the belt before it fails, and to budget for one if you can't confirm when it was last done.",
      "fix": "Replace the timing belt on schedule.",
      "src": [
       "wc",
-      "hag1"
+      "atca"
      ]
     }
    ],
@@ -522,19 +497,19 @@
    "u": "https://hondanews.com/en-US/releases/release-1fdf9c06789eb65adc31ea004c34c37e-2005-acura-nsx-specifications",
    "k": "Honda"
   },
-  "hag1": {
-   "t": "Hagerty: Buyer's guide, 1991-96 Acura NSX (Stefan Lombard, Jul 2012)",
-   "u": "https://www.hagerty.com/media/car-profiles/buyers-guide-199196-acura-nsx/",
-   "k": "outlet"
-  },
-  "hag2": {
-   "t": "Hagerty: Acura's 1997-2005 NSX may have plateaued, but its future is secure (Andrew Newton, Oct 2020)",
-   "u": "https://www.hagerty.com/media/buying-and-selling/acuras-1997-2005-nsx-may-have-plateaued-but-its-future-is-secure/",
-   "k": "outlet"
-  },
   "sg": {
    "t": "SlashGear: What did an OG NSX cost new in 1991, and what's one worth today? (Travis Langness, Aug 2025)",
    "u": "https://www.slashgear.com/1573086/honda-nsx-acura-original-cost-what-its-worth-today",
+   "k": "outlet"
+  },
+  "cars02": {
+   "t": "Cars.com: 2002 Acura NSX (research page and expert review)",
+   "u": "https://www.cars.com/research/acura-nsx-2002",
+   "k": "outlet"
+  },
+  "atca": {
+   "t": "autoTRADER.ca: Used Vehicle Review: Acura NSX, 1990-2005 (Justin Pritchard, May 2015)",
+   "u": "https://www.autotrader.ca/editorial/expert-reviews/acura/nsx/used-vehicle-review-acura-nsx-1990-2005/",
    "k": "outlet"
   },
   "wnsx": {

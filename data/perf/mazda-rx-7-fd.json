@@ -17,10 +17,12 @@
  },
  "us": {
   "sold": true,
-  "x": "Sold new in the US for the 1993 to 1995 model years, about 13,900 cars. Later Japanese-market FDs (built to 2002) can be imported once they are 25 years old.",
+  "x": "Sold new in the US for the 1993 to 1995 model years; fewer than 14,000 were sold here. Japanese-market FDs were built until 2002 and can be imported once they are 25 years old.",
   "src": [
-   "hag",
-   "feg"
+   "wrx7",
+   "scm",
+   "feg",
+   "wgrey"
   ]
  },
  "films": [
@@ -77,7 +79,6 @@
      "hp": {
       "v": 255,
       "src": [
-       "hag",
        "scm"
       ],
       "note": "at 6,500 rpm"
@@ -85,7 +86,6 @@
      "tq": {
       "v": 217,
       "src": [
-       "hag",
        "scm"
       ],
       "note": "lb-ft at 5,000 rpm"
@@ -110,21 +110,21 @@
       "v": "5-speed manual, rear-drive",
       "src": [
        "wrx7",
-       "hag"
+       "scm"
       ],
       "note": "4-speed automatic optional on base and Touring; limited-slip standard"
      },
      "weight": {
       "v": "2,800 lb",
       "src": [
-       "hag",
        "scm"
       ],
       "note": "curb, approximate"
      },
-     "what": "Limited-slip differential, tape player and cloth seats; cruise control and leather were options.",
+     "what": "The no-frills version, still with the limited-slip differential; a 4-speed automatic was optional.",
      "what_src": [
-      "hag"
+      "scm",
+      "wrx7"
      ]
     },
     {
@@ -134,14 +134,14 @@
      "hp": {
       "v": 255,
       "src": [
-       "hag"
+       "scm"
       ],
       "note": "at 6,500 rpm"
      },
      "tq": {
       "v": 217,
       "src": [
-       "hag"
+       "scm"
       ],
       "note": "lb-ft at 5,000 rpm"
      },
@@ -159,10 +159,10 @@
       ],
       "note": ""
      },
-     "what": "Leather, cruise control, sunroof, fog lights, rear wiper and the Bose Wave stereo. The PEP package took its place for 1995.",
+     "what": "Leather, a glass sunroof, fog lights, a rear wiper and the Bose Acoustic Wave stereo with CD player. The PEP package took its place for 1995.",
      "what_src": [
-      "hag",
-      "wrx7"
+      "wrx7",
+      "scm"
      ]
     },
     {
@@ -172,14 +172,14 @@
      "hp": {
       "v": 255,
       "src": [
-       "hag"
+       "scm"
       ],
       "note": "at 6,500 rpm"
      },
      "tq": {
       "v": 217,
       "src": [
-       "hag"
+       "scm"
       ],
       "note": "lb-ft at 5,000 rpm"
      },
@@ -193,14 +193,14 @@
      "trans": {
       "v": "5-speed manual, rear-drive",
       "src": [
-       "wrx7",
-       "hag"
+       "wrx7"
       ],
       "note": "no automatic"
      },
-     "what": "R1 for 1993, R2 for 1994-95: stiffer springs, Bilstein shocks, strut bar, extra oil cooling, front lip and rear wing, no sunroof or cruise. Just over 2,600 sold in the US.",
+     "what": "R1 for 1993, R2 for 1994-95: stiffer springs, Bilstein shocks, a front strut brace, an extra oil cooler, a front lip and rear wing, and no cruise control.",
      "what_src": [
-      "hag",
+      "wrx7",
+      "scm",
       "dl93"
      ]
     }
@@ -230,7 +230,6 @@
      "Output",
      "255 hp at 6,500 rpm, 217 lb-ft at 5,000 rpm (US)",
      [
-      "hag",
       "scm"
      ]
     ],
@@ -238,22 +237,24 @@
      "Redline",
      "8,000 rpm",
      [
-      "hag"
+      "scm",
+      "dl93"
      ]
     ],
     [
      "Turbos",
      "Sequential: one turbo at low rpm, the second joins around 4,500 rpm; boost about 10 psi",
      [
-      "hag",
-      "wrx7"
+      "wrx7",
+      "ph"
      ]
     ],
     [
      "Oil",
-     "Burns oil by design; a metering pump feeds oil into the engine",
+     "Burns oil by design; PistonHeads says a quarter of a litre per 1,000 miles is normal",
      [
-      "hag"
+      "dl93",
+      "ph"
      ]
     ]
    ],
@@ -262,21 +263,19 @@
      "t": "Apex and side seals (low compression)",
      "kind": "Outlet report",
      "rx": "apex seals?|side seals?|low compression|compression test|engine rebuild",
-     "x": "A rotary-shop owner told Hagerty that compression shows how worn the engine is. Below 85 psi a rebuild may be close, often from a leaking side seal or a broken apex seal. PistonHeads gives the same advice.",
+     "x": "PistonHeads says a compression test shows whether the apex and side seals are wearing out. Readings of 7 to 8 bar are good; lower is a concern, and a low reading means a rebuild is likely.",
      "fix": "Rebuild the engine.",
      "src": [
-      "hag",
       "ph"
      ]
     },
     {
      "t": "Vacuum hoses (the rat's nest)",
-     "kind": "Owner-reported",
+     "kind": "Outlet report",
      "rx": "rat'?s ?nest|vacuum (hose|line)s?",
-     "x": "Engine bay heat hardens the many vacuum hoses that run the sequential turbos. Owners interviewed by Hagerty and Driving Line replaced all of them.",
-     "fix": "Replace the vacuum hoses with heat-resistant ones.",
+     "x": "The sequential turbos are run by a rat's nest of 67 vacuum hoses, says Driving Line. Sports Car Market says engine heat made the hoses shrivel up and fail.",
+     "fix": "Replace the vacuum hoses with strong synthetic rubber ones.",
      "src": [
-      "hag",
       "dl93",
       "scm"
      ]
@@ -285,21 +284,10 @@
      "t": "Coolant seals and air separator tank",
      "kind": "Outlet report",
      "rx": "coolant seals?|air separat|steam|overheat(s|ing)?",
-     "x": "PistonHeads says steam from the exhaust at start-up points to coolant seals going brittle with heat. The plastic air separator tank can crack and dump the coolant.",
+     "x": "PistonHeads says steam from the exhaust at start-up points to coolant seals going brittle with age and heat. The air separator tank can split and leak coolant.",
      "fix": "",
      "src": [
-      "ph",
-      "hag"
-     ]
-    },
-    {
-     "t": "Brittle wiring harness",
-     "kind": "Outlet report",
-     "rx": "wiring harness|brittle wir|intermittent electric",
-     "x": "The rotary-shop owner Hagerty spoke to says the engine harness dries out and can cause intermittent electrical faults.",
-     "fix": "",
-     "src": [
-      "hag"
+      "ph"
      ]
     }
    ]
@@ -307,11 +295,6 @@
  },
  "compare": [],
  "sources": {
-  "hag": {
-   "t": "Hagerty: Your definitive Mazda RX-7 FD buyer's guide (Benjamin Hunting, May 2018)",
-   "u": "https://www.hagerty.com/media/buying-and-selling/fd-mazda-rx-7-buyers-guide/",
-   "k": "outlet"
-  },
   "scm": {
    "t": "Sports Car Market: 1993-95 Mazda RX-7 (Stefan Lombard, Feb 2005)",
    "u": "https://www.sportscarmarket.com/profile/1993-95-mazda-rx-7",
@@ -371,6 +354,11 @@
    "t": "NHTSA owner complaints and recalls",
    "u": "https://www.nhtsa.gov/recalls",
    "k": "NHTSA"
+  },
+  "wgrey": {
+   "t": "Wikipedia: Grey import vehicle",
+   "u": "https://en.wikipedia.org/wiki/Grey_import_vehicle",
+   "k": "Wikipedia"
   }
  },
  "yt_study": "car-mazda-rx-7-fd"

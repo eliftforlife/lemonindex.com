@@ -256,8 +256,7 @@
      },
      "what": "Drive-by-wire throttle and stability control (VSA) added for 2006.",
      "what_src": [
-      "h06sum",
-      "hag"
+      "h06sum"
      ]
     },
     {
@@ -381,26 +380,6 @@
      "src": [
       "ph",
       "sg"
-     ]
-    },
-    {
-     "t": "Early oiling (banjo bolts)",
-     "kind": "Outlet report",
-     "rx": "banjo bolts?",
-     "x": "Honda updated the oil banjo bolts in mid-2002 for better engine oiling. Hagerty says later engines are thought to be a bit more durable.",
-     "fix": "",
-     "src": [
-      "hag"
-     ]
-    },
-    {
-     "t": "Cracked valve retainers",
-     "kind": "Outlet report",
-     "rx": "valve retainers?",
-     "x": "Hagerty says valve retainers can occasionally crack. It is not a widespread pattern.",
-     "fix": "",
-     "src": [
-      "hag"
      ]
     }
    ]
@@ -568,11 +547,6 @@
    "t": "0-60specs.com: Honda S2000 0-60 runs by magazine (Car and Driver, MotorTrend, Road & Track)",
    "u": "https://www.0-60specs.com/honda-s2000-0-60-times/",
    "k": "magazine tests, aggregated"
-  },
-  "hag": {
-   "t": "Hagerty: Your handy 2000–09 Honda S2000 buyer’s guide (Rob Sass, Jan 2025)",
-   "u": "https://www.hagerty.com/media/market-trends/hagerty-insider/your-handy-2000-09-honda-s2000-buyers-guide/",
-   "k": "outlet"
   },
   "sg": {
    "t": "SlashGear: 12 things you should know before buying a Honda S2000 (Mar 2023)",

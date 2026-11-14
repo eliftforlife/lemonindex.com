@@ -10,9 +10,11 @@
  "h1": "Nissan Skyline GT-R R33 (BCNR33): specs, RB26 engine and what owners say",
  "us": {
   "sold": false,
-  "x": "Never sold new in the US. R33 GT-Rs became legal to import under the 25-year rule from January 2020, each car once it is 25 years old by its month of build.",
+  "x": "Never sold new in the US. Each car becomes legal to import under the 25-year rule once it is 25 years old by its month of build. The R33 GT-R went on sale in Japan in January 1995, so the first cars qualified in January 2020.",
   "src": [
-   "hag33"
+   "jal19",
+   "drive34",
+   "wpgtr"
   ]
  },
  "films": [
@@ -61,8 +63,7 @@
      "hp": {
       "v": 276,
       "src": [
-       "nh33",
-       "hag33"
+       "nh33"
       ],
       "note": "280 PS at 6,800 rpm, Japan’s gentlemen’s agreement figure (JDM)"
      },
@@ -108,8 +109,7 @@
      "hp": {
       "v": 276,
       "src": [
-       "nh33",
-       "hag33"
+       "nh33"
       ],
       "note": "280 PS at 6,800 rpm, Japan’s gentlemen’s agreement figure (JDM)"
      },
@@ -140,8 +140,8 @@
      },
      "what": "Stiffer suspension, the ATTESA E-TS Pro all-wheel-drive system and an active rear differential.",
      "what_src": [
-      "hag33",
-      "wpgtr"
+      "wpgtr",
+      "hagu33"
      ]
     },
     {
@@ -151,8 +151,7 @@
      "hp": {
       "v": 276,
       "src": [
-       "nh33",
-       "hag33"
+       "nh33"
       ],
       "note": "280 PS at 6,800 rpm, Japan’s gentlemen’s agreement figure (JDM)"
      },
@@ -171,9 +170,8 @@
       ],
       "note": ""
      },
-     "what": "A cosmetic Le Mans edition in Champion Blue. 188 built: 86 GT-R and 102 V-spec.",
+     "what": "A Le Mans edition in Champion Blue with a carbon fibre rear wing. 188 built: 86 GT-R and 102 V-spec.",
      "what_src": [
-      "hag33",
       "wpgtr"
      ]
     },
@@ -185,7 +183,7 @@
       "v": 400,
       "src": [
        "wpgtr",
-       "hag33"
+       "hagu33"
       ],
       "note": "NISMO figure (405 PS) from a bored and stroked RB26, the RB-X GT2; Hagerty UK quotes 395 bhp"
      },
@@ -213,8 +211,7 @@
      },
      "what": "NISMO’s special with a bigger engine. NISMO planned 100, but only 44 were built.",
      "what_src": [
-      "wpgtr",
-      "hag33"
+      "wpgtr"
      ]
     }
    ]
@@ -331,11 +328,6 @@
    "u": "https://www.nissan-global.com/EN/HERITAGE_COLLECTION/346_skyline_gt-r_nurburgring.html",
    "k": "Nissan"
   },
-  "hag33": {
-   "t": "Hagerty: Get an R33 Skyline GT-R while they’re still hot enough to handle (Greg Ingold, Mar 2021)",
-   "u": "https://www.hagerty.com/media/market-trends/valuation/get-an-r33-skyline-gt-r-while-theyre-still-hot-enough-to-handle/",
-   "k": "outlet"
-  },
   "hagu33": {
    "t": "Hagerty UK: Nissan Skyline GT-R R33 buyer’s guide (Alisdair Suttie, Sep 2025)",
    "u": "https://www.hagerty.co.uk/articles/nissan-skyline-buyers-guide/",
@@ -354,6 +346,16 @@
   "ma33": {
    "t": "Motor Authority: The story behind Leo’s Nissan Skyline R33 GT-R from \"The Fast and the Furious\" (Sean Szymkowski, Oct 2019)",
    "u": "https://www.motorauthority.com/news/1124181_the-story-behind-leo-s-nissan-skyline-r33-gt-r-from-the-fast-and-the-furious",
+   "k": "outlet"
+  },
+  "drive34": {
+   "t": "The Drive: The R34 Nissan Skyline GT-R is finally legal for U.S. import in January (Nico DeMattia, Dec 2023)",
+   "u": "https://www.thedrive.com/news/brace-yourselves-r34-nissan-skyline-gt-rs-become-legal-to-import-next-year",
+   "k": "outlet"
+  },
+  "jal19": {
+   "t": "Jalopnik: Japan wants you to stop buying all its Skyline GT-Rs (Ken Saito, Nov 2019)",
+   "u": "https://www.jalopnik.com/japan-wants-you-to-stop-buying-all-its-skyline-gt-rs-1831320174/",
    "k": "outlet"
   }
  },

@@ -22,12 +22,11 @@
   {
    "film": "2 Fast 2 Furious (2003)",
    "who": "Brian O'Conner",
-   "x": "Brian O'Conner's lime-green Evo VII, which US Customs gives him for the undercover job; both Mitsubishis turn out to be GPS-tagged. The Evo was not yet sold in the US, so Mitsubishi supplied four cars to the production.",
+   "x": "Brian O'Conner's lime-green Evo VII, handed to him for the undercover job by Customs agent Monica Fuentes; both Mitsubishis turn out to be GPS-tagged. The Evo VII was never sold in the US, and Mitsubishi supplied four of them to the production.",
    "src": [
     "wp2f2f",
-    "hag21",
     "m1evo",
-    "dl15"
+    "ma2f2f"
    ]
   }
  ],
@@ -333,9 +332,9 @@
    "u": "https://en.wikipedia.org/wiki/2_Fast_2_Furious",
    "k": "Wikipedia"
   },
-  "hag21": {
-   "t": "Hagerty: 19 of the coolest cars in the Fast and Furious franchise (Priscilla Page, Jun 2021)",
-   "u": "https://www.hagerty.com/media/entertainment/19-coolest-cars-fast-and-furious-franchise/",
+  "ma2f2f": {
+   "t": "Motor Authority: Deep dive: Brian's Mitsubishi Evo VII from \"2 Fast 2 Furious\" (Stephen Edelstein, Feb 2020)",
+   "u": "https://www.motorauthority.com/news/1127192_deep-dive-brian-s-mitsubishi-evo-vii-from-2-fast-2-furious",
    "k": "outlet"
   },
   "m1evo": {

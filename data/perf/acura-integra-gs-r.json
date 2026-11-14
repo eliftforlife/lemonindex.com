@@ -21,7 +21,7 @@
   "src": [
    "ac-her",
    "ac-tl",
-   "hag"
+   "wpi"
   ]
  },
  "films": [
@@ -165,18 +165,17 @@
       "v": "5-speed manual, front-drive",
       "src": [
        "h00rpt",
-       "h97r",
-       "hag"
+       "h97r"
       ],
       "note": "close ratios, helical limited-slip differential"
      },
      "weight": {
-      "v": "2,643 lb",
+      "v": "2,560 lb",
       "src": [
-       "hag",
+       "wtr",
        "ac-her"
       ],
-      "note": "Hagerty; Acura says 33 lb lighter than a GS-R"
+      "note": "1997 US car; 2,639 lb by 2001. Acura says 33 lb lighter than a GS-R"
      },
      "price": {
       "v": "$23,100",
@@ -185,12 +184,12 @@
       ],
       "note": "1997"
      },
-     "what": "Its own hand-built B18C5 engine (ported head, 10.6:1 compression), a seam-welded body and a limited-slip front differential. About 2,600 were sold in North America each year.",
+     "what": "Its own hand-built B18C5 engine (ported head, 10.6:1 compression), a seam-welded body and a limited-slip front differential. US production was 320 cars for 1997, 1,000 for 1998, 1,350 for 2000 and 1,158 for 2001.",
      "what_src": [
       "ac-her",
       "h00rpt",
-      "hag",
-      "wpb"
+      "wpb",
+      "wtr"
      ]
     }
    ]
@@ -236,8 +235,7 @@
      "8,000 rpm",
      [
       "h94spec",
-      "h01spec",
-      "hag"
+      "h01spec"
      ]
     ],
     [
@@ -251,33 +249,13 @@
    ],
    "issues": [
     {
-     "t": "Oil burning on hard-driven cars",
-     "kind": "Outlet report",
-     "rx": "oil consumption|burn(s|ing)? oil|using oil|blue smoke|smok(e|ing) from (the )?(tail|exhaust)",
-     "x": "Hagerty's buyer's guide says many of these high-revving engines were driven hard and can burn oil. Look for tailpipe smoke after a long idle and check the dipstick.",
-     "fix": "",
-     "src": [
-      "hag"
-     ]
-    },
-    {
-     "t": "Timing belt and water pump",
-     "kind": "Outlet report",
-     "rx": "timing belt|water pump",
-     "x": "The owners and experts in Hagerty's buyer's guide say the timing belt and water pump should be replaced together every 90,000 miles.",
-     "fix": "Replace the timing belt and water pump together at 90,000 miles.",
-     "src": [
-      "hag"
-     ]
-    },
-    {
      "t": "Theft and swapped engines",
      "kind": "Outlet report",
      "rx": "\\bstolen\\b|\\btheft\\b|steal|engine swap|swapped",
-     "x": "For a time the 1999 Integra was the most stolen car in America, per Hagerty, and the 1994 Integra was eighth on the NICB's 2010 list. Some GS-R and Type R cars have had their VTEC engines stolen or swapped for non-VTEC ones.",
+     "x": "CCC Information Services named the 1999 Integra coupe the most-stolen vehicle in the US for 2004, and the 1994 Integra was eighth on the NICB's 2010 list. The Associated Press reported that thieves were likely after the fast engines, which can be fitted into other Hondas.",
      "fix": "",
      "src": [
-      "hag",
+      "nbc05",
       "nicb10"
      ]
     }
@@ -310,15 +288,14 @@
      "Redline",
      "8,400 rpm",
      [
-      "hag"
+      "wpb"
      ]
     ],
     [
      "Compression",
      "10.6:1",
      [
-      "h00rpt",
-      "hag"
+      "h00rpt"
      ]
     ],
     [
@@ -342,30 +319,20 @@
      "t": "Oil burning on hard-driven cars",
      "kind": "Outlet report",
      "rx": "oil consumption|burn(s|ing)? oil|using oil|blue smoke|smok(e|ing) from (the )?(tail|exhaust)",
-     "x": "Hagerty's buyer's guide says many of these high-revving engines were driven hard and can burn oil. Look for tailpipe smoke after a long idle and check the dipstick.",
+     "x": "Octane's buying guide says the Type R engine likes to burn oil even when healthy, so check the level often. Heavy exhaust smoke points to abuse and worn piston rings.",
      "fix": "",
      "src": [
-      "hag"
-     ]
-    },
-    {
-     "t": "Timing belt and water pump",
-     "kind": "Outlet report",
-     "rx": "timing belt|water pump",
-     "x": "The owners and experts in Hagerty's buyer's guide say the timing belt and water pump should be replaced together every 90,000 miles.",
-     "fix": "Replace the timing belt and water pump together at 90,000 miles.",
-     "src": [
-      "hag"
+      "oct24"
      ]
     },
     {
      "t": "Theft and swapped engines",
      "kind": "Outlet report",
      "rx": "\\bstolen\\b|\\btheft\\b|steal|engine swap|swapped",
-     "x": "For a time the 1999 Integra was the most stolen car in America, per Hagerty, and the 1994 Integra was eighth on the NICB's 2010 list. Some GS-R and Type R cars have had their VTEC engines stolen or swapped for non-VTEC ones.",
+     "x": "CCC Information Services named the 1999 Integra coupe the most-stolen vehicle in the US for 2004, and the 1994 Integra was eighth on the NICB's 2010 list. The Associated Press reported that thieves were likely after the fast engines, which can be fitted into other Hondas.",
      "fix": "",
      "src": [
-      "hag",
+      "nbc05",
       "nicb10"
      ]
     }
@@ -455,11 +422,6 @@
    "u": "https://www.0-60specs.com/acura-integra-0-60-times/",
    "k": "magazine tests, aggregated"
   },
-  "hag": {
-   "t": "Hagerty: Your handy 1997–2001 (DC2) Acura Integra Type R buyer’s guide (Craig Fitzgerald, Jun 23, 2023)",
-   "u": "https://www.hagerty.com/media/buying-and-selling/your-handy-1997-01-acura-integra-type-r-buyers-guide/",
-   "k": "outlet"
-  },
   "wpi": {
    "t": "Wikipedia: Acura Integra",
    "u": "https://en.wikipedia.org/wiki/Acura_Integra",
@@ -479,6 +441,21 @@
    "t": "NHTSA owner complaints and recalls",
    "u": "https://www.nhtsa.gov/recalls",
    "k": "NHTSA"
+  },
+  "wtr": {
+   "t": "Wikipedia: Honda Type R",
+   "u": "https://en.wikipedia.org/wiki/Honda_Type_R",
+   "k": "Wikipedia"
+  },
+  "nbc05": {
+   "t": "NBC News: Acura Integra tops most-stolen vehicle list (The Associated Press, Jul 2005)",
+   "u": "https://www.nbcnews.com/news/amp/wbna8620904",
+   "k": "outlet"
+  },
+  "oct24": {
+   "t": "Octane: Honda Integra Type R (DC2) buying guide, history and review (Matthew Hayward, Jul 2024)",
+   "u": "https://www.octane-magazine.com/articles/buying-guides/honda-integra-type-r-dc2-buying-guide-history-and-review/",
+   "k": "outlet"
   }
  },
  "yt_study": "car-acura-integra-gs-r"
