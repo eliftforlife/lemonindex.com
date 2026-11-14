@@ -113,7 +113,7 @@ def N2_RANK(f):
 _N2I = {'all': '<path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"/>', 'cmp': '<path d="M7 20V9M12 20V4M17 20v-7"/>'}
 _n2svg = lambda k: f'<svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{_N2I[k]}</svg>'
 def N2_PILLS(f, y):
-    return (f'<p class="n2-pl"><a href="{CARU(f)}">{_n2svg("all")}All {len(f["years"])} years</a>'
+    return (f'<p class="n2-pl"><a href="{CARU(f)}#years">{_n2svg("all")}All {len(f["years"])} years</a>'   # 11-13 NQ: opens the model page's Every year tab
             f'<a href="/compare/?c={f["id"]}-{y}">{_n2svg("cmp")}Compare</a></p>')
 
 # ---- model pages (problem 7): every model gets a Compare tab. Models without a match-up page (4Runner, Ranger, Mustang...) open the

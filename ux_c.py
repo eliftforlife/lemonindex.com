@@ -235,7 +235,7 @@ if UXC == 'hooks':
         tr = ''.join(f'<tr><td class="num">{i}</td><td><a href="{CARU(f, v["y"])}">{v["y"]} {E(f["name"])}</a>{" <small class=muted>early read</small>" if v.get("early") else ""}</td>'
                      f'<td class="num bad">{v["li"]:,}</td><td class="num">{v["n"]:,}</td><td>{E(v["parts"][0][0]) if v["parts"] else "—"}</td></tr>' for i, (f, v) in enumerate(top, 1))
         w = top[0]
-        body = (f'<article class="study"><p class="kicker"><a href="/rankings/">Rankings</a> · Worst model years</p><h1>The worst car model years, {WY0}–{WY1}</h1>'
+        body = (f'<article class="study"><p class="kicker"><a href="/rankings/">Every car ranked</a> · Worst model years</p><h1>The worst car model years, {WY0}–{WY1}</h1>'
                 f'<p class="lede">Of {len(rs):,} scored model years from {WY0} to {WY1}, the <b>{w[1]["y"]} {E(w[0]["name"])}</b> drew the most owner complaints per car sold: a Lemon Index of {w[1]["li"]:,}, '
                 f'about {w[1]["li"] / 100:.0f} times the average car of that year.</p>'
                 f'<p class="sub">Lemon Index = NHTSA owner complaints filed in a car&#39;s first 3 years, per car sold, against the average car of the same model year. <b>100 is average.</b> '

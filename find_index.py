@@ -82,6 +82,13 @@ for _r in FIND:
     if _r[3] == 'eng': continue
     for _rx, _al in HD_ALIAS:
         if re.search(_rx, _r[0], re.I): _r[5] = ' '.join(dict.fromkeys((_r[5] + ' ' + _al).split()))
+# 11-13 navigation re-review (NQ, problem 4: "chevy" never showed the Silverado, "ford" never the F-150): a 9th field = the model's U.S. sales
+# rank (CARS + CARS_NEW 'sold', 1 = most sold), so equally good matches list best sellers first (lookup.js); the 8th (priority) becomes 0 if unset
+_SR = {f'/cars/{c["id"]}/': i for i, c in enumerate(sorted((c for c in CARS + CARS_NEW if c.get('sold')), key=lambda c: -c['sold']), 1)}
+for _r in FIND:
+    if _r[2] in _SR and _r[3] in ('', 'co'):
+        if len(_r) < 8: _r.append(0)
+        _r.append(_SR[_r[2]])
 os.makedirs(f'{OUT}/assets', exist_ok=True)   # straight into the built site: no untracked assets/find.json in the repo (it blocked the workers' auto-deploy)
 json.dump(FIND, open(f'{OUT}/assets/find.json', 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
 # 11-12 (6 usability testers): where the search sends codes, problem words and questions, so it only ever links pages that exist

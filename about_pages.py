@@ -43,7 +43,7 @@ def _about_pages():
              + sec('Downloads', '<ul class="ab-l"><li><a href="/data/">Data downloads</a>: scores and complaints by model year, transmission complaints (CSV, CC BY 4.0).</li>'
                    '<li><a href="/images/">Free images</a>: our car and engine illustrations (CC BY 4.0).</li>'
                    '<li>Logo: <a href="/assets/icon-512.png">512 px PNG</a> · social card: <a href="/assets/og.png">og.png</a>.</li>'
-                   '<li><a href="/rankings/">Rankings</a> and <a href="/stats/car-complaints/">statistics</a> pages to link to.</li></ul>')
+                   '<li><a href="/rankings/">Every car ranked</a> and <a href="/stats/car-complaints/">statistics</a> pages to link to.</li></ul>')
              + sec('What the score is, and isn&#39;t', '<p>Owner complaints to NHTSA filed within 3 years of each model year, per car sold, against the average car of the same model years (100 = average, lower is better). '
                    'Complaints are owners&#39; reports, not confirmed defects, and most owners never file one, so read scores as a comparison between cars, not a failure rate. It is not a repair-cost or a safety rating.</p>')
              + '</div></div>')

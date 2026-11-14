@@ -52,6 +52,13 @@ for _sl, (_pu, _par, _cov, _own) in (globals().get('PERF_PAR') or {}).items():
 for d in os.listdir(f'{OUT}/compare'):
     m_ = re.fullmatch(r'(.+?)-vs-(.+)', d)
     if m_ and _is_real(f'/compare/{d}/'): _al(f'/compare/{m_.group(2)}-vs-{m_.group(1)}/', f'/compare/{d}/')
+# 5. 11-13 navigation re-review (NQ, problem 1: /trucks/ opened the diesel engines page, /suvs/ and /best/suv/ were 404s): body types ->
+# that tab of the car grid (/?type=, built by build.py's CTABS, always there) and "best <type>" -> the matching /best/ list
+for _nqb, _nqk in (('trucks', 'trucks'), ('truck', 'trucks'), ('pickups', 'trucks'), ('suvs', 'suvs'), ('suv', 'suvs'), ('crossovers', 'suvs'),
+                 ('minivans', 'minivans'), ('minivan', 'minivans'), ('vans', 'minivans'), ('sedans', 'cars'), ('sedan', 'cars'), ('hatchbacks', 'cars')):
+    _nqa = f'/{_nqb}/'
+    if _nqa not in _ALIAS and not _is_real(_nqa) and f'data-type="{_nqk}"' in open(f'{OUT}/index.html', encoding='utf-8').read(): _ALIAS[_nqa] = f'/?type={_nqk}'
+    if _nqk != 'cars': _al(f'/best/{_nqb}/', f'/best/most-reliable-{_nqk}/'); _al(f'/best/most-reliable-{_nqb}/', f'/best/most-reliable-{_nqk}/')
 for a, tgt in _ALIAS.items():
     os.makedirs(f'{OUT}{a}', exist_ok=True)
     with open(f'{OUT}{a}index.html', 'w', encoding='utf-8') as fh:

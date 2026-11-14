@@ -43,8 +43,8 @@ for _p in sorted(_aeg.glob('data/engines_*.json')):
     _AE_MODEL_ENG.add(fid); mk = BYNAME[fam['name']]['brand']; short = _short(fam['name'], mk)
     for d in json.load(open(_p, encoding='utf-8')):
         ys = d.get('years') or []
-        _ae_add(f'/cars/{fid}/#eng-{d["id"]}', name=f'{mk} {d["code"]}', code=d['code'], lay=d['size'], yrs=(f'{ys[0]}–{str(ys[-1])[-2:]}' if len(ys) > 1 else str(ys[0]) if ys else ''),
-                img=_ae_img(d.get('img')), yt=(None, 0, ''), used=[short], t={'h'} if mk in ('Honda', 'Acura') else set(), f='hybrid' if re.search(r'hybrid|IMA', d.get('name', '') + ' ' + d.get('note', ''), re.I) else 'gas', mk=mk, o=(3, ys[0] if ys else 0), alias=d.get('name', ''))
+        _ae_add(f'/cars/{fid}/#eng-{d["id"]}', name=d['code'] if d['code'].startswith(mk + ' ') else f'{mk} {d["code"]}', code=d['code'], lay=d['size'], yrs=(f'{ys[0]}–{str(ys[-1])[-2:]}' if len(ys) > 1 else str(ys[0]) if ys else ''),   # 11-13 NQ: not "Honda Honda IMA"
+                img=_ae_img(d.get('img')), yt=(None, 0, ''), used=[short], t={'h'} if mk in ('Honda', 'Acura') else set(), f='hybrid' if re.search(r'hybrid|IMA', d.get('name', '') + ' ' + d.get('note', ''), re.I) else 'gas', mk=mk, o=(3, ys[0] if ys else 0), alias=d.get('name', ''), ylist=sorted(int(y) for y in ys))
 # 4. 11-12 round 2: heavy-duty diesel + F-150 engine pages and the two comparisons (hd_pages.py), tab 'Trucks & diesel'
 for _c in (globals().get('HD_AE') or []): _ae_add(**_c)
 # 11-13 N3 (nav report 3: "list mainstream cars first in Used in"): the everyday /cars/ models from ENGINE_USES lead each card's list, so the
@@ -189,7 +189,16 @@ page('/engines/', 'Every Car Engine: Reliability, Problems & YouTube Owner Ranks
                     "hasPart": [{"@type": "WebPage", "name": c['name'], "url": BASE + c['url']} for c in _ae_live if '#' not in c['url']]}])
 AE_URLS.append('/engines/')
 # search index rows: [name, brand, url, kind, years, aliases, soon]
-for c in _ae_live: AE_FIND.append((c['name'] + ' engine', c['mk'], c['url'], 'eng', (), ' '.join([c['code'], c.get('alias', ''), 'engine', AE_FL[c['f']].lower()] + c['used']), 0))
+# 11-13 navigation re-review (NQ, "silverado 2014" offered Duramax engines from other years): each live engine's model years (from its card's
+# own years line, e.g. "2011–16", "2017–" = still sold), so the search shows an engine only for a year it was sold in
+def _ae_years(t):
+    ys = set()
+    for m in re.finditer(r'((?:19|20)\d\d)(\s*[–-]\s*((?:19|20)?\d\d)?)?', html.unescape(str(t or ''))):
+        a = int(m.group(1)); b = m.group(3)
+        b = (int(b) if len(b) == 4 else a // 100 * 100 + int(b) + (100 if a // 100 * 100 + int(b) < a else 0)) if b else (int(TODAY[:4]) + 1 if m.group(2) else a)
+        if a <= b <= a + 60: ys.update(range(a, b + 1))
+    return sorted(ys)
+for c in _ae_live: AE_FIND.append((c['name'] + ' engine', c['mk'], c['url'], 'eng', c.get('ylist') or _ae_years(c.get('yrs')), ' '.join([c['code'], c.get('alias', ''), 'engine', AE_FL[c['f']].lower()] + c['used']), 0))
 for (mk, eng), v in _ae_soonl:
     ms = v['models']; AE_FIND.append((f'{mk} {eng} engine ({", ".join(ms[:3])}{"…" if len(ms) > 3 else ""})', mk, '', 'eng', (), ' '.join(ms + ['engine', AE_FL[v['fuel']].lower()]), 1))
 print('all engines page:', _aeN, 'live,', _aeS, 'coming soon,', len({m[0] for m in _ae_models}), 'models | soon by fuel:', {g: sum(_FG(v['fuel']) == g for v in AE_SOON.values()) for g in ('gas', 'diesel', 'hybrid', 'electric')})

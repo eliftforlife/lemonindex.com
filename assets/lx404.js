@@ -23,7 +23,7 @@
     }
     if (!top) return;
     const sg = document.getElementById('lxqs'); if (sg) sg.hidden = true;   // the box's own list opens again when it's tapped or typed in
-    top.innerHTML = `<h2>${r.hint ? 'Closest matches' : 'Did you mean'}</h2>` + items.map(h => `<a href="${esc(h.u)}"><b>${esc(h.b)}</b><small>${esc(h.s || '')}</small></a>`).join('');
+    top.innerHTML = `<h2>${r.pop ? 'Popular cars' : r.hint ? 'Closest matches' : 'Did you mean'}</h2>` + items.map(h => `<a href="${esc(h.u)}"><b>${esc(h.b)}</b><small>${esc(h.s || '')}</small></a>`).join('');
     top.hidden = false;
   });
 })();

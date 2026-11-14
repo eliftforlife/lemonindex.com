@@ -62,6 +62,9 @@ def run(G, urls, out='docs', report=REPORT):
         try: return bool(NOIX.search(open(os.path.join(out, p.strip('/'), 'index.html'), encoding='utf-8', errors='replace').read(12000)))
         except OSError: return False
     missing_sm = [p for p in missing_sm if not _ondisk_noix(p)]
+    # 11-13 (NQ, nav re-review #14): the other direction too, so the sitemap and the index rules always agree: sitemap pages that are
+    # noindex or canonical to another page (should be none; noindex brand, code and advanced pages stay out by design)
+    noix_sm = [u for u in sm if u in G and u.endswith('/') and not idx(u)]
     low = sorted((u for u in sm if inb[u] <= 1 and u != '/'), key=lambda u: (inb[u], u))
     dd = collections.Counter(depth.get(u, -1) for u in sm)
     secs = collections.Counter('/' + u.strip('/').split('/')[0] + '/' if u != '/' else '/' for u in low)
@@ -75,7 +78,7 @@ def run(G, urls, out='docs', report=REPORT):
          f'- **Deeper than 3 clicks:** {len(deep)}', f'- **Orphans** (sitemap pages no other page links to): {len(orph)}',
          f'- **Sitemap pages not reachable from /:** {len(unreach)}', f'- **Weakly linked** (1 inbound link or none): {len(low)}' + (' (' + ', '.join(f'{k} {v}' for k, v in secs.most_common(8)) + ')' if low else ''),
          f'- **Median inbound links per sitemap page:** {med}', f'- **Internal links to pages that don\'t exist:** {len(broken)}',
-         f'- **Indexable pages missing from the sitemap:** {len(missing_sm)}', '']
+         f'- **Indexable pages missing from the sitemap:** {len(missing_sm)}', f'- **Sitemap pages that are noindex or canonical elsewhere:** {len(noix_sm)}', '']
     def lst(title, items, fmt, n=60):
         if not items: return
         L.extend([f'## {title}', ''] + [fmt(u) for u in items[:n]] + ([f'- ... and {len(items) - n} more (latest.json)'] if len(items) > n else []) + [''])
@@ -85,14 +88,15 @@ def run(G, urls, out='docs', report=REPORT):
     lst('Broken internal links', broken, lambda u: f'- {u} (linked from {len(src[u])} pages, e.g. {src[u][0]})')
     lst('Weakly linked pages', low, lambda u: f'- {u}: {inb[u]} inbound' + (f' (from {src[u][0]})' if src[u] else ''))
     lst('Indexable pages missing from the sitemap', missing_sm, lambda u: f'- {u}')
+    lst('Sitemap pages that are noindex or canonical elsewhere', noix_sm, lambda u: f'- {u}')
     os.makedirs(report, exist_ok=True)
     open(os.path.join(report, 'latest.md'), 'w', encoding='utf-8').write('\n'.join(L) + '\n')
     json.dump({'at': now, 'pages': len(sm), 'depth': dict(sorted((str(k), v) for k, v in dd.items())), 'orphans': orph, 'deep': {u: depth[u] for u in deep}, 'unreachable': unreach,
-               'broken': broken, 'weak': {u: inb[u] for u in low}, 'missing_from_sitemap': missing_sm, 'median_inbound': med,
+               'broken': broken, 'weak': {u: inb[u] for u in low}, 'missing_from_sitemap': missing_sm, 'noindex_in_sitemap': noix_sm, 'median_inbound': med,
                'inbound': {u: inb[u] for u in sm}, 'depth_by_page': {u: depth.get(u) for u in sm}},
               open(os.path.join(report, 'latest.json'), 'w', encoding='utf-8'), separators=(',', ':'))
     return (f'linkgraph: {len(sm)} pages ({reread} re-read from disk), depth<=3 {sum(v for k, v in dd.items() if 0 <= k <= 3)}, deeper {len(deep)}, orphans {len(orph)}, '
-            f'unreachable {len(unreach)}, weak {len(low)}, broken {len(broken)}, median inbound {med} -> {report}\\latest.md')
+            f'unreachable {len(unreach)}, sitemap/index mismatches {len(missing_sm)}+{len(noix_sm)}, weak {len(low)}, broken {len(broken)}, median inbound {med} -> {report}\\latest.md')
 
 
 if __name__ == '__main__':

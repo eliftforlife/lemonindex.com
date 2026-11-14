@@ -247,7 +247,7 @@ NAV = [('/cars/', 'Look up a car'), ('/brands/', 'Brands'), ('/compare/', 'Compa
 # phones get a full-screen menu. Styles/JS: assets/gh.css + gh.js (master copy in 0 HQ/Tools/site header/).
 # 11-13 (nav review #6): Trucks (the /cars/ grid's Trucks tab) in the bar; Studies and Motorcycles moved to More, Engines up from More
 NAV_TOP = [('/cars/', 'Cars'), ('/?type=trucks', 'Trucks'), ('/brands/', 'Brands'), ('/compare/', 'Compare'), ('/electric/', 'Electric'), ('/engines/', 'Engines'), ('/vin/', 'VIN check')]
-NAV_MORE = [('/best/', 'Best cars'), ('/rankings/', 'Cars ranked'), ('/stats/car-complaints/', 'Statistics'), ('/supercars/', 'Supercars'), ('/motorcycles/', 'Motorcycles'), ('/studies/', 'Studies'), ('/check-engine-light/', 'Engine code lookup'), ('/best-gas-mileage/', 'Gas mileage'), ('/planes/', 'Planes'), ('/car-loan-rates/', 'Loan rates'), ('/vote/', 'Vote'), ('/data/', 'Free data'), ('/method/', 'How it works')]
+NAV_MORE = [('/best/', 'Best cars'), ('/rankings/', 'Every car ranked'), ('/stats/car-complaints/', 'Statistics'), ('/supercars/', 'Supercars'), ('/motorcycles/', 'Motorcycles'), ('/studies/', 'Studies'), ('/check-engine-light/', 'Engine code lookup'), ('/best-gas-mileage/', 'Gas mileage'), ('/planes/', 'Planes'), ('/car-loan-rates/', 'Loan rates'), ('/vote/', 'Vote'), ('/data/', 'Free data'), ('/method/', 'How it works')]
 GH_CHEV = '<svg viewBox="0 0 8 8" aria-hidden="true"><path d="M2.5 1 5.5 4 2.5 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 GH_DOWN = '<svg viewBox="0 0 8 8" aria-hidden="true"><path d="M1 2.75 4 5.75 7 2.75" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 # 11-10 v2 (Elijah: "it still can look a little better"): one small monochrome line icon per main menu item (24 px grid, stroke 1.8)
@@ -303,7 +303,7 @@ GH_SB = f'<button class="lxs-btn" type="button" aria-label="Search" aria-control
 GH_SD = (f'<form class="lxs-d" role="search" action="/" method="get"><div class="lxs-db">{_LXS_IC.replace("<svg ", "<svg class=\"lxs-di\" ", 1)}'
          '<input id="ghd" name="q" type="search" autocomplete="off" placeholder="Search cars, codes, lists" aria-label="Search cars, engine codes and lists" enterkeyhint="search">'
          '<div id="ghds" class="fsug" role="listbox" hidden></div></div></form>')
-LXS_V = '1113c'   # lxs.css + lookup.js version (N1 navigation fixes)
+LXS_V = '1113nq'   # lxs.css + lookup.js version (N1 navigation fixes)
 GH_IC.setdefault('/rankings/', '<path d="M4 6h16M4 12h11M4 18h6"/>')   # 11-13 (N1, problem 12): "Every car ranked" in the menu, best to worst bars
 def navlinks(path):
     on = lambda u: path.startswith(u) or (u == '/cars/' and path.startswith('/cars'))
@@ -665,7 +665,7 @@ def pop_checks(n=28):
 HOME_FAQ = faq
 page('/rankings/', 'Car Reliability Rankings: Every Model and Brand, Best to Worst | The Lemon Index',
      f'Every car model and brand ranked by owner complaints per car sold, best to worst: {len(CARS)} models, model years 2010-2022. 100 is the average car; lower is better.', f'''
-<div class="pg">{phero('Rankings', 'Every car, best to worst.', 'Owner complaints filed with the U.S. government, per car sold. 100 is the average car.')}</div>
+<div class="pg">{phero('Every car ranked', 'Every car, best to worst.', 'Owner complaints filed with the U.S. government, per car sold. 100 is the average car.')}</div>
 <div class="home"><section class="hread"><h2>100 is the average car. <span class="h2s">Lower is better.</span></h2>
 <div class="scale"><div class="sbar"><i style="left:{min(96, best4["li"] / 3.5):.1f}%" title="{E(best4["name"])}, {best4["li"]}"></i></div><div class="sl"><span>25 · ¼ the complaints</span><span>100 · average</span><span class="bad">300 · 3×</span></div></div></section>
 {tiles()}
@@ -1446,6 +1446,16 @@ for _t, _w in (('tesla-model-s', '2012–2020'), ('tesla-model-3', '2017–2020'
                        + 'scored model years use published per-year estimates (Kelley Blue Book, Wikipedia) and other years show complaints only. '
                        + f'For range, charging cost and the EV ranking, see <a href="/electric/{_t}/">the Model {_t.split("-")[-1].upper()} on our EV page</a>.'))
 SNM = lambda f: SN.get(f['id'], (f['name'],))[0]
+# 11-13 navigation re-review (NQ, problem 9: "2016 wrx" opens an Impreza page that never mentions the WRX): where the NHTSA model names counted
+# in a year (data/extras_local.json 'names') include a version with its own page, the year page says how many of that year's complaints name it
+GROUPED = {'subaru-impreza': ('WRX', r'\b(WRX|STI)\b', 'the WRX or WRX STI', '/cars/subaru-wrx/')}
+def GROUP_NOTE(f, y):
+    g = GROUPED.get(f['id']); nm = (((XL.get(f['id']) or {}).get(str(y))) or {}).get('names') or [] if g else []
+    k = sum(n for _, md, n in nm if re.search(g[1], md, re.I)) if nm else 0
+    if not k: return ''
+    lk = f' <a href="{g[3]}">The {g[0]}&#39;s own page</a>' if os.path.exists(f'{OUT}{g[3]}index.html') else ''
+    return (f'<p class="yc-note yc-grp">Includes the {g[0]}: {k:,} of the {sum(n for *_, n in nm):,} complaints owners filed about the {y} model year name {g[2]} (NHTSA model names), '
+            f'and this page counts them with the {E(f["name"])}.{lk}</p>')
 # 11-12 search titles (Search Console: "mercedes c class reliability" ranked #10.7 with 0 clicks under "Mercedes-Benz C-Class"):
 # titles and H1s use the spelling people search (data/search_names.json, from Keyword Planner + Search Console) and the year-page
 # word ("Problems" or "Reliability") that model's searches use more. Body text keeps the full names.
@@ -1640,7 +1650,7 @@ def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
                  + (f'<details><summary>More owner reports</summary>{more}</details>' if more else '') + '</section>')
     return f'''
 <article class="yp yp6"><section class="ph yph6"><div class="yh-t">{N2_CRUMB(f, y)}<h1>{y} {E(QN(f))} {YW(f).lower()}.</h1>{answer_box(f, v, y, x, best)}{'<p class="early-b">Too new: partial score</p>' if v.get('early') else ''}
-{f'<p class="yc-note">{SN[f["id"]][1]}</p>' if f["id"] in SN else ""}{PIN_HTML(f['id'], y)}{n2_hero}
+{f'<p class="yc-note">{SN[f["id"]][1]}</p>' if f["id"] in SN else ""}{GROUP_NOTE(f, y)}{PIN_HTML(f['id'], y)}{n2_hero}
 <nav class="modes" aria-label="Page mode"><a href="{CARU(f, y)}" aria-current="page">Normal</a><a href="{CARU(f, y)}advanced/">Advanced</a></nav><nav class="yswitch" aria-label="Model years"><div class="yseg">{seg}<a class="yall" href="{CARU(f)}">All years</a></div><div class="yact"><a class="btn btn-ghost" href="/compare/?c={f['id']}-{y}">Compare</a><button type="button" class="btn btn-ghost yshare" data-share="{E(share_txt)}">Share</button></div></nav></div>{f'<div class="ph-v">{ph}</div>' if ph else ''}</section>
 {buy}{top_fails_html(f, y, nm)}{mil}{fix_sell_html(f, y, nm)}{ask}{N2_SIMILAR(f, y)}<div class="yts">{tiles}</div>{ytfix(f["id"], y)}{sev}{old}
 <section class="yyears noph"><div class="yy-ch"><h2>Every {nm} year. <span class="h2s">{y} is highlighted. Lower is better.</span></h2>{N2_SORT}{ybars(f, y)}</div>{ev_note}</section>
@@ -2073,11 +2083,11 @@ _nev = len(EVX); _npf = sum(c.get('group', 'A') == 'A' for c in PERFX); _nsc = l
 # 11-13 (nav review #6): Trucks / SUVs / Cars / Minivans tabs from each card's body type (the count = cards that tab shows: no Electric-tab twins, no "No data yet")
 _nseg = {g: sum(1 for cl, t in re.findall(r'<(?:a|div) class="mc([^"]*)" data-t="([^"]*)"', lst) if g in t.split() and 'mc-dup' not in cl and 'mc-nd' not in cl) for g in ('tk', 'sv', 'cr', 'mv')}
 CTABS = ('<nav class="ctabs ctb8" aria-label="Kinds of car">' + ''.join(f'<a href="{u}" data-type="{k}"{" aria-current=true" if k == "all" else ""}>{t}{f" <small>{n}</small>" if n else ""}</a>' for u, k, t, n in (
-    ('/', 'all', 'All cars', ''), ('/?type=trucks', 'trucks', 'Trucks', _nseg['tk']), ('/?type=suvs', 'suvs', 'SUVs', _nseg['sv']), ('/?type=cars', 'cars', 'Cars', _nseg['cr']),
+    ('/', 'all', 'All cars', ''), ('/?type=trucks', 'trucks', 'Trucks', _nseg['tk']), ('/?type=suvs', 'suvs', 'SUVs', _nseg['sv']), ('/?type=cars', 'cars', 'Sedans &amp; hatchbacks', _nseg['cr']),
     ('/?type=minivans', 'minivans', 'Minivans', _nseg['mv']), ('/?type=performance', 'performance', 'Performance', _npf or 'soon'),
     ('/?type=supercars', 'supercars', 'Supercars', _nsc), ('/?type=electric', 'electric', 'Electric', _nev))) + '</nav>')
 # 11-11: one slim row of other ways in, right under the tabs (replaces the home's 3 pill buttons and its big compare box)
-HCHIPS = ('<nav class="hchips" aria-label="More ways in"><a href="/compare/">Compare up to 4 cars</a><a href="/rankings/">Rankings</a>'
+HCHIPS = ('<nav class="hchips" aria-label="More ways in"><a href="/compare/">Compare up to 4 cars</a><a href="/rankings/">Every car ranked</a>'
           '<a href="/best/safest-cars-for-teens/">Safest for teens</a><a href="/motorcycles/">Motorcycles</a></nav>')
 _nsx = sum(c.get('group') in ('B', 'C') for c in PERFX)   # 11-11 (Elijah: tidy the Performance tab): a real tab header instead of one plain sentence
 CNOTES = (f'<div class="ctn pfh" data-for="performance" hidden><span class="pfh-pill">Coming soon</span><h3>Performance cars</h3>'
@@ -2085,11 +2095,11 @@ CNOTES = (f'<div class="ctn pfh" data-for="performance" hidden><span class="pfh-
           + (f'<p class="pfh-n"><b>{_npf + _nsx} cars on the way:</b> {_npf} here, {_nsx} supercars and hypercars under <a href="/cars/?type=supercars">Supercars</a>.</p>' if _npf else '') + '</div>'
           f'<p class="ctn" data-for="supercars" hidden>Owner complaints are too rare to score supercars, so their cards lead with the engine. Cards marked Coming soon, hypercars included, are next. <a href="/supercars/">Supercar fuel costs and recalls, ranked</a></p>'
           + ''.join(f'<p class="ctn" data-for="{k}" hidden>{_nseg[g]} {w}{x}. <a href="/best/most-reliable-{k}/">The most reliable {k if k != "suvs" else "SUVs"}, ranked</a></p>'
-                    for k, g, w, x in (('trucks', 'tk', 'trucks', ', from the Tacoma to the HD pickups and the Raptor'), ('suvs', 'sv', 'SUVs', ''), ('cars', 'cr', 'cars', '. Sports cars are under Performance'), ('minivans', 'mv', 'minivans and vans', '')))
+                    for k, g, w, x in (('trucks', 'tk', 'trucks', ', from the Tacoma to the HD pickups and the Raptor'), ('suvs', 'sv', 'SUVs', ''), ('cars', 'cr', 'sedans, hatchbacks and other cars', '. Sports cars are under Performance'), ('minivans', 'mv', 'minivans and vans', '')))
           + f'<p class="ctn" data-for="electric" hidden>EV scores cover model years {EV_WIN}, with complaints filed by the end of the year after the model year. Under All cars, an EV with its own page (Bolt, Model Y) shows the main Lemon Index for its own years instead, so its two numbers differ. <a href="/electric/">The most reliable EVs, ranked</a></p>')
 CARS_GRID = f'''<section class="cgrid">{CTABS}{HCHIPS}<h2 data-hide="p">Every model. <span class="h2s" data-hide="s p">Score in the corner: 100 is average, lower is better.</span></h2>{CNOTES}<div class="mbs">{_MW}{lst}</div><p class="ph-cr" data-hide="p">Car images: AI-generated illustrations by The Lemon Index, free under CC BY 4.0 (<a href="/images/">download</a>).</p></section><script src="/assets/soonvote.js?v=2" defer></script>
 <style>.pfh{{max-width:560px}}.pfh h3{{font-size:clamp(28px,6.5vw,36px);letter-spacing:-.03em;margin:10px 0 6px}}.pfh-pill{{display:inline-block;padding:4px 12px;border-radius:999px;background:#ffd400;color:#17161a;font-size:12.5px;font-weight:700;letter-spacing:.02em}}.pfh-s{{margin:0 0 6px;font-size:16px}}.pfh-n{{margin:0;font-size:14px;color:#6e6e73}}.cgrid[data-tab="performance"] .mc.mc-dup:not([hidden]){{display:flex}}.cgrid .ph-cr{{margin-top:28px}}
-.ctabs.ctb8{{grid-template-columns:repeat(4,minmax(0,1fr));max-width:720px;border-radius:24px;scroll-margin-top:72px}}.ctabs.ctb8 a{{border-radius:20px}}
+.ctabs.ctb8{{grid-template-columns:repeat(4,minmax(0,1fr));max-width:720px;border-radius:24px;scroll-margin-top:72px}}.ctabs.ctb8 a{{border-radius:20px}}.ctabs.ctb8 a[data-type=cars]{{white-space:normal;text-align:center;line-height:1.12}}
 @media (max-width:600px){{.ctabs.ctb8{{gap:3px;padding:3px;border-radius:20px}}.ctabs.ctb8 a{{min-height:40px;padding:0 2px;font-size:13px;gap:3px;border-radius:17px}}.ctabs.ctb8 a small{{display:none}}}}</style>'''   # 11-11: shared by /cars/ and the home page
 page('/cars/', 'Look Up Your Car: Problems by Model and Year | The Lemon Index', f'Pick your car and model year to see its owner complaints, its top problems and how it compares with every other year. {len(YEARS)} models, 2000-2025, plus {len(SCX)} supercars and {len(EVX)} electric cars.', f'''
 <div class="pg"><div class="ph ph-f">{finder('<span class="ph-e">Look up</span>Look up your car.', 'Every model year, 2000 to 2025. Free.')}</div>

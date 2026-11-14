@@ -10,6 +10,9 @@
 // Enter opens the top match everywhere (a coming-soon one opens its vote sheet); engine sizes and engine/symptom words ("2.7", "ecoboost",
 // "oil leak", "cold start") no longer break a model + year match; truck and trim words (cummins, duramax, powerstroke, f250, 2500hd,
 // m340i) come from find_index.py's aliases.
+// 11-13 navigation re-review (NQ): body types ("suv", "trucks", "minivans", "sedans") open that tab of the car grid (/?type=), a brand's
+// models list best sellers first ("chevy" -> Silverado, Equinox), engines follow the year typed and the car matched ("type r 2019" no longer
+// lists a Jaguar V8), engine sections of a car page say so, and a search with no match lists "Popular cars".
 // 11-13 navigation test (N1): brand pages come first for a brand name ("chevy", "vw", "benz", "toyota"), a hub word ("engines") offers its
 // hub, at most 1 coming-soon match shows (last) and at most 1 match-up page unless the search says "vs", "<car> engine" never defaults
 // to a 2023+ year, and the header's own search (#ghd, 1024px+) and its magnifier (.lxs-btn) use the same matcher.
@@ -37,6 +40,8 @@
   const STOP = new Set('the a an my for of and to in on is are was vs versus which what whats should i buy buying good bad used year years car cars most reliable reliability review reviews rating ratings score scores worth it any how do does with price prices cost better worse or km kms kilometers kilometres miles mi'.split(' '));
   // engine words: dropped like TRIM when the full words match no car, so "2016 f150 2.7 ecoboost" still opens the 2016 F-150 page
   const SOFT = new Set('ecoboost coyote hemi ecotec vortec triton modular boxer pentastar skyactiv vtec tdi tsi tfsi gdi gtdi dohc sohc liter litre liters litres cyl cylinder cylinders i4 i6 v10 twin supercharged supercharger motor'.split(' '));
+  // 11-13 (NQ): body-type words: "toyota suv" / "ram truck" match the cars without them
+  const BODYW = new Set('suv suvs crossover crossovers truck trucks pickup pickups minivan minivans van vans sedan sedans hatchback hatchbacks'.split(' '));
   const osa = (a, b) => {   // edit distance with swapped letters counting as one edit ("rouge" -> "rogue" = 1)
     const d = []; for (let i = 0; i <= a.length; i++) d.push([i]); for (let j = 1; j <= b.length; j++) d[0][j] = j;
     for (let i = 1; i <= a.length; i++) for (let j = 1; j <= b.length; j++) {
@@ -82,7 +87,7 @@
     const fz = new Set(W.filter(x => !L.some(e => wcost(x, e) < 9)));
     const out = [];
     for (const e of L) { const s = score(e, W, fz); if (s >= 0) out.push([s + (pen ? pen(e) : 0), e]); }
-    return out.sort((a, b) => a[0] - b[0] || (a[1].n || '').length - (b[1].n || '').length || String(a[1].n).localeCompare(String(b[1].n))).map(x => x[1]);
+    return out.sort((a, b) => a[0] - b[0] || (a[1].pp || 1e4) - (b[1].pp || 1e4) || (a[1].n || '').length - (b[1].n || '').length || String(a[1].n).localeCompare(String(b[1].n))).map(x => x[1]);
   };
   // /compare/ and any other box: LQ.pick("crv", ids, id => name) -> the ids that match, best first
   const cache = new WeakMap();
@@ -100,8 +105,16 @@
   // build check that nothing is missing) plus find-go.json (which engine codes, transmission pages and /best/ lists exist)
   const el = $('pick'), P = el ? JSON.parse(el.textContent) : {};
   const KIND = { sc: 'Supercar · engine, fuel cost and recalls', ev: 'Electric car · EV score and problems', perf: 'Performance car · specs, engines and problems', moto: 'Motorcycle · complaints and recalls', co: 'Owner complaints and recalls', eng: 'Engine · reliability by year', br: 'Brand · every model, ranked' };
+  // 11-13 (NQ, "Honda ED/EJ results are mislabeled"): an engine that is a section of a car page, and a match-up page, say what they are
+  const yspan = ys => ys.length ? ` · ${ys[0]}${ys.length > 1 ? '–' + ys.at(-1) : ''}` : '';
+  const kindOf = c => {
+    if (c.u.startsWith('/compare/')) return 'Match-up · every year side by side';
+    if (c.t === 'eng' && /#eng-/.test(c.u)) { const pu = c.u.split('#')[0], pc = ALL.find(x => x.u === pu && !x.t); return `Engine · a section of the ${pc ? pc.n : 'model'} page${yspan(c.ys)}`; }
+    if (c.t === 'eng') return KIND.eng + yspan(c.ys);
+    return KIND[c.t];
+  };
   const AK = { 'ford-f-series': 'f150 f 150', 'ram-pickup': '1500', 'chevrolet-silverado': '1500', 'gmc-sierra': '1500' };   // 11-12 round 2: 2500/3500/f250 go to the HD cards
-  const mk = (n, b, u, t, ys, al, soon, pr) => { const id = (u.match(/^\/cars\/([^/]+)\/$/) || [])[1] || ''; return Object.assign(prep(n, b, (al || '') + ' ' + (AK[id] || '') + (t === 'ev' ? ' ev electric' : '')), { n, b, u, t: t || '', ys: ys || [], id, soon: !!soon, pr: pr || 0 }); };   // pr: find.json's optional search priority (11-12 r2: Silverado HD before Sierra HD)
+  const mk = (n, b, u, t, ys, al, soon, pr, pp) => { const id = (u.match(/^\/cars\/([^/]+)\/$/) || [])[1] || ''; return Object.assign(prep(n, b, (al || '') + ' ' + (AK[id] || '') + (t === 'ev' ? ' ev electric' : '')), { n, b, u, t: t || '', ys: ys || [], id, soon: !!soon, pr: pr || 0, pp: pp || 0 }); };   // pp (11-13 NQ): find.json's sales rank, 1 = most sold   // pr: find.json's optional search priority (11-12 r2: Silverado HD before Sierra HD)
   let ALL = Object.entries(P).flatMap(([b, ms]) => ms.map(([n, id, ys, u, t]) => mk(n, b, u || '/cars/' + id + '/', t, ys, '', t === 'perf' && !u || (t === 'moto' && !u))));
   let GO = null, loading = null;
   const FU = (el && el.dataset.find) || '/assets/find.json';
@@ -112,16 +125,21 @@
 
   // ---- what the words ask for besides a car
   const BEST = (u, b, s) => ({ u, b, s: s || 'Ranked list', kind: 'list' });
-  const has = u => !GO || !GO.best || GO.best.includes(u);
+  const has = u => u.startsWith('/?type=') || !GO || !GO.best || GO.best.includes(u);
   const INTENT = [
     [/\b(teen(ager)?s?|first (car|time driver)s?|new drivers?|student drivers?|young drivers?|(for )?(my )?(daughter|son|kid)s?|16 ?(year|yr) ?olds?)\b/, () => BEST('/best/safest-cars-for-teens/', 'Safest used cars for teens', 'Crash-test stars + fewest complaints, by model year')],
     [/\b(safe(st|ty)?|crash (test|rating)s?)\b/, () => BEST('/best/safest-cars-for-teens/', 'Safest used cars, by model year', 'NHTSA crash-test stars + fewest complaints')],
     [/\b(most |least )?(reliable|reliability|dependable|best|top( \d+)?|good|great|recommended)\b.*\b(suv|suvs|crossovers?|trucks?|pickups?|minivans?|vans?|sedans?|cars|car|vehicles?)\b|\b(suv|suvs|crossovers?|trucks?|pickups?|minivans?|sedans?)\b.*\b(reliable|reliability|best|top)\b/, m => {
       const t = m[0]; const s = /suv|crossover/.test(t) ? 'suvs' : /truck|pickup/.test(t) ? 'trucks' : /van/.test(t) ? 'minivans' : 'cars';
-      return /least/.test(t) ? BEST('/rankings/', 'Every car, best to worst', 'Rankings') : BEST(`/best/most-reliable-${s}/`, `Most reliable ${s === 'suvs' ? 'SUVs' : s}`, 'Ranked by owner complaints per car sold'); }],
+      return /least/.test(t) ? BEST('/rankings/', 'Every car ranked', 'Best to worst, by owner complaints per car sold') : BEST(`/best/most-reliable-${s}/`, `Most reliable ${s === 'suvs' ? 'SUVs' : s}`, 'Ranked by owner complaints per car sold'); }],
     [/^\s*(the )?(most reliable|reliable|dependable)( cars?| vehicles?)?\s*$/, () => BEST('/best/most-reliable-cars/', 'Most reliable cars', 'Ranked by owner complaints per car sold')],
     [/\b(mpg|gas mileage|fuel (economy|efficient)|good on gas|best mileage)\b/, (m, s) => /\bsuv/.test(s) ? BEST('/best/suvs-gas-mileage/', 'SUVs with the best gas mileage') : BEST('/best-gas-mileage/', 'Best gas mileage, with complaint scores')],
-    [/\b(worst|lemons?|avoid|least reliable|unreliable|rankings?|ranked)\b/, () => BEST('/rankings/', 'Every car, best to worst', 'Rankings')],
+    [/\b(worst|lemons?|avoid|least reliable|unreliable|rankings?|ranked)\b/, () => BEST('/rankings/', 'Every car ranked', 'Best to worst, by owner complaints per car sold')],
+    // 11-13 (NQ, "suv" and "minivan" found nothing, "trucks" the diesel engines page): a body type alone opens that tab of the car grid
+    [/^\s*(?:(?:all|every|used|the|best|popular|list of|show me)\s+)*(suvs?|crossovers?|trucks?|pickups?(?: trucks?)?|minivans?|vans?|sedans?(?: (?:and|&) hatchbacks?)?|hatchbacks?)(?:\s+(?:list|for sale|ranked|page))?\s*$/, m => {
+      const w = m[1], k = /suv|crossover/.test(w) ? 'suvs' : /truck|pickup/.test(w) ? 'trucks' : /van/.test(w) ? 'minivans' : 'cars';
+      const lab = { suvs: 'SUVs', trucks: 'Trucks', minivans: 'Minivans', cars: 'Sedans & hatchbacks' }[k];
+      return BEST(`/?type=${k}`, { suvs: 'Every SUV', trucks: 'Every truck', minivans: 'Every minivan and van', cars: 'Every sedan and hatchback' }[k] + ', scored', `${lab} tab · every model with its Lemon Index`); }],
     [/\b(check engine( light)?|engine light|cel|obd ?2?|engine codes?|error codes?|codes?)\b/, () => BEST('/check-engine-light/', 'Engine code lookup', 'What a check engine light code means')],
     [/\b(vin|recall check|check recalls?)\b/, () => BEST('/vin/', 'VIN check', 'Decode a VIN, then see its recalls')],
     [/\b(compare|comparison)\b/, () => BEST('/compare/', 'Compare cars side by side', 'Compare')],
@@ -172,11 +190,11 @@
   // a prebuilt compare page ranks after the car page itself
   const penFor = (W, y, eng) => c => (c.soon ? 100 : 0) + (c.pr || 0) + (KP[c.t] === undefined ? 1 : (c.t === 'eng' && eng ? -1 : KP[c.t])) + (y && !c.t && !c.ys.includes(y) ? 1 : 0) - (W.some(w => c.bw.includes(w)) ? .5 : 0) + (c.u.startsWith('/compare/') ? .5 : 0);
   const isCar = c => !c.soon && c.t !== 'eng' && c.t !== 'br' && !!c.u && !c.u.startsWith('/compare/');
-  const dropW = (q, W) => W.filter(w => !TRIM.has(w) && !SOFT.has(w) && !q.sz.includes(w));   // versions, engine words and sizes
+  const dropW = (q, W) => W.filter(w => !TRIM.has(w) && !SOFT.has(w) && !BODYW.has(w) && !q.sz.includes(w));   // versions, engine words and sizes
   // ---- 11-12 round 2 (Jake, Carlos, Liam: "civic vs corolla", "rav4 vs crv", "elantra vs civic"): one side of a comparison = its best car
   // page (never a brand alone, an engine, a version word or a coming-soon card)
   function resolve(W, y, q) {
-    if (!W.some(w => /[a-z]/.test(w) && !TRIM.has(w) && !SOFT.has(w))) return null;
+    if (!W.some(w => /[a-z]/.test(w) && !TRIM.has(w) && !SOFT.has(w) && !BODYW.has(w))) return null;
     const pen = penFor(W, y, false);
     let h = rank(W, ALL, pen).filter(isCar);
     if (!h.length) { const W2 = dropW(q, W); if (W2.length && W2.length < W.length) h = rank(W2, ALL, pen).filter(isCar); }
@@ -198,7 +216,7 @@
   const sideItem = s => {
     const yy = s.y && !s.c.t && s.c.ys.includes(s.y) ? s.y : 0;
     return { u: yy ? s.c.u + yy + '/' : s.c.u, b: (yy ? yy + ' ' : '') + s.c.n, kind: 'car',
-             s: s.c.t ? KIND[s.c.t] : yy ? 'problems and owner complaints' : s.c.ys.length ? `every year ${s.c.ys[0]}-${s.c.ys.at(-1)}` : 'problems and owner complaints' };
+             s: s.c.t ? kindOf(s.c) : yy ? 'problems and owner complaints' : s.c.ys.length ? `every year ${s.c.ys[0]}-${s.c.ys.at(-1)}` : 'problems and owner complaints' };
   };
   const VS = /\s+(?:vs\.?|v\.?|versus|or|and|&|compared (?:to|with)|against)\s+/;
   function versus(raw) {
@@ -229,7 +247,7 @@
         // ranks first and the engine pages that match every word follow it
         const W2 = dropW(q, W);
         if (W2.length && W2.length < W.length) { const h2 = rank(W2, ALL, penFor(W2, y, q.eng)); const good = h2.some(isCar) ? isCar : c => c.soon && c.t !== 'eng';   // a live car, else a coming-soon card ("6.0 powerstroke")
-        if (h2.some(good)) { const g2 = h2.filter(good); hits = [...g2, ...hits.filter(c => !g2.includes(c)), ...h2.filter(c => !good(c) && !hits.includes(c))]; notes = W.filter(w => !W2.includes(w)).map(w => q.szd[q.sz.indexOf(w)] || w).join(' '); } }
+        if (h2.some(good)) { const g2 = h2.filter(good); hits = [...g2, ...hits.filter(c => !g2.includes(c)), ...h2.filter(c => !good(c) && !hits.includes(c))]; notes = W.filter(w => !W2.includes(w) && !BODYW.has(w)).map(w => q.szd[q.sz.indexOf(w)] || w).join(' '); } }
       }
       if (!hits.some(isCar) && W.length >= 2 && W.length <= 6) {   // "civic corolla": two cars named one after the other
         for (let k = 1; k < W.length && !pair; k++) { const a = resolve(W.slice(0, k), y, q), b = a && resolve(W.slice(k), y, q); if (a && b && a !== b) pair = [a, b]; }
@@ -255,14 +273,20 @@
     // 11-13 navigation test (N1): coming-soon cards (no page) filled half the list: at most 1, last (the exact one typed keeps its place);
     // match-up pages ("civic years to avoid" showed 4 Type R ones): at most 1 unless the search compares ("vs", "or", "compare")
     // engines: at most 2 after a car match unless the search names an engine ("2016 civic" listed 4 Civic engine sections)
-    { const vsw = /\b(vs|versus|v|or|compare|compared|against)\b/.test(fold(raw)); let sn = ex.length, cn = 0, en = 0; const keep = [], late = [];
+    // 11-13 (NQ, "type r 2019" listed a Jaguar V8, "silverado 2014" Duramax years that don't fit): an engine with known years shows only when
+    // it covers the year typed; under a car match, only the engines that name that car, newest first ("civic" lists its 2016+ engines, not the 1973 ED)
+    { const vsw = /\b(vs|versus|v|or|compare|compared|against)\b/.test(fold(raw)); let sn = ex.length, cn = 0; const keep = [], late = [], engs = [];
       const ecap = !q.eng && !q.sz.length && hits[0] && hits[0].t !== 'eng' && !W.some(w => SOFT.has(w));
+      const c0 = ecap && hits[0].t !== 'br' && !hits[0].soon ? hits[0] : null, root = c0 ? words(c0.n).filter(w => !c0.bw.includes(w))[0] : '';
+      const near = c => !root || c.T.some(t => t.startsWith(root));   // names the matched car ("f150" for the F-Series, "civic" for the Type R)
       for (const c of hits) {
-        if (c.soon && !ex.includes(c)) { if (!sn++) late.push(c); continue; }
+        if (c.t === 'eng' && y && c.ys.length && !c.ys.includes(y)) continue;
+        if (c.soon && !ex.includes(c)) { if (near(c) && !sn++) late.push(c); continue; }   // ... a coming-soon card too (no Jaguar F-Type R under "type r")
         if (!vsw && c.u.startsWith('/compare/') && cn++) continue;
-        if (ecap && c.t === 'eng' && en++ >= 2) continue;
+        if (ecap && c.t === 'eng') { if (near(c)) engs.push(c); continue; }
         keep.push(c);
       }
+      if (engs.length) keep.splice(keep.findIndex(c => c.u.startsWith('/compare/')) + 1 || keep.length, 0, ...engs.sort((a, b) => (b.ys.at(-1) || 0) - (a.ys.at(-1) || 0)).slice(0, 2));
       hits = [...keep, ...late]; }
     const top = hits.filter(c => !c.soon);
     const out = [];
@@ -281,7 +305,7 @@
       const yy = y && !c.t && !c.soon && c.ys.includes(y) ? y : 0, miss = y && !c.t && !c.soon && !c.ys.includes(y) ? y : 0;
       const u = c.soon ? '' : yy ? c.u + yy + '/' : c.u;
       const lab = c.soon ? (c.t === 'nd' ? 'No data yet' : 'Coming soon') + ({ perf: ' · performance car', sc: ' · supercar', moto: ' · motorcycle', eng: ' · engine' }[c.t] || '') + ' · tap to vote for it'
-        : c.t ? KIND[c.t] : yy ? 'problems and owner complaints' : miss ? `no ${miss} in our data · every year ${c.ys[0]}-${c.ys.at(-1)}` : c.ys.length ? `every year ${c.ys[0]}-${c.ys.at(-1)}` : 'problems and owner complaints';
+        : c.t || c.u.startsWith('/compare/') ? kindOf(c) : yy ? 'problems and owner complaints' : miss ? `no ${miss} in our data · every year ${c.ys[0]}-${c.ys.at(-1)}` : c.ys.length ? `every year ${c.ys[0]}-${c.ys.at(-1)}` : 'problems and owner complaints';
       return { u, b: (yy ? yy + ' ' : '') + c.n, s: (close ? 'Closest match · ' : '') + lab + (notes && !c.t ? ` · covers every version, ${notes} included` : ''), soon: c.soon, kind: close ? 'close' : 'car' };
     });
     // 11-13 (N1 + N3's parents): a year + a performance version ("2016 wrx", "2018 mustang gt") puts the regular model's year page first
@@ -294,9 +318,10 @@
     if (!W.length || close) out.push(...q.lists, ...carItems); else out.push(...carItems, ...q.lists);
     if (!out.length || out.every(x => x.kind === 'close')) {
       const pop = ['/cars/honda-cr-v/', '/cars/toyota-rav4/', '/cars/honda-civic/', '/cars/ford-f-series/', '/cars/toyota-camry/'];
-      if (!out.length) out.push(...ALL.filter(c => pop.includes(c.u) && !c.t).map(c => ({ u: c.u, b: c.n, s: 'Popular · every year', kind: 'pop' })));
+      const none = !out.length;   // 11-13 (NQ): nothing matched at all -> say so and list the popular cars (never "closest" for unrelated cars)
+      if (none) out.push(...ALL.filter(c => pop.includes(c.u) && !c.t).map(c => ({ u: c.u, b: c.n, s: 'Popular · every year', kind: 'pop' })));
       out.push(Object.assign(BEST('/best/', 'Best cars, by the data', 'Every ranked list'), { kind: 'pop' }));
-      return { items: out, hint: `No exact match for “${raw.trim()}”. Closest:` };
+      return { items: out, hint: none ? `No match for “${raw.trim()}”. Popular cars:` : `No exact match for “${raw.trim()}”. Closest:`, pop: none };
     }
     if (!W.length && !q.prob && (q.code ? !q.lists.length : q.lists.length === 1)) strong = true;   // a code, or one list
     return { items: out, strong: strong && !close };
