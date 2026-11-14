@@ -62347,7 +62347,26 @@
      "views": 235119
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 800,
+       "lo": 60.0,
+       "hi": 900.0,
+       "n": 5,
+       "videos": 4,
+       "id": "QSdTvmnFiV8",
+       "t": 2054,
+       "title": "2003 Chevrolet S10 ZR2 Fuel Pump Replacement 4.3L V6"
+      }
+     ]
+    ]
+   }
   }
  ],
  "mini-cooper": [
@@ -63518,7 +63537,26 @@
      "views": 4087
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 1300,
+       "lo": 300.0,
+       "hi": 3500.0,
+       "n": 6,
+       "videos": 4,
+       "id": "tQRpm2fO0oo",
+       "t": 49,
+       "title": "2004 Cadillac srx No crank no start no engine light(1)"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -63646,7 +63684,26 @@
      "views": 12089
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 300,
+       "lo": 250.0,
+       "hi": 300.0,
+       "n": 5,
+       "videos": 5,
+       "id": "fr4-_TdVsBc",
+       "t": 198,
+       "title": "2011 Cadillac SRX 2.8L Turbo ABS & StabiliTrak Fix – Broken Wheel Bearing Encoder Ring"
+      }
+     ]
+    ]
+   }
   }
  ],
  "mercedes-benz-sprinter": [
@@ -64293,7 +64350,52 @@
      "views": 29370
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Transmission",
+      {
+       "median": 4000,
+       "lo": 1230.0,
+       "hi": 5100.0,
+       "n": 3,
+       "videos": 3,
+       "id": "n1d8CdUmq-c",
+       "t": 315,
+       "title": "The 2008 Acura TSX is a Good Bargain Sports Sedan"
+      }
+     ],
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 742,
+       "lo": 684.0,
+       "hi": 800.0,
+       "n": 4,
+       "videos": 3,
+       "id": "rm4eSPTRSYE",
+       "t": 391,
+       "title": "2005 Acura TSX Manual Transmission 180,000 Miles Things to Fix - Problems & Issues"
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 250,
+       "lo": 240.0,
+       "hi": 1000.0,
+       "n": 5,
+       "videos": 3,
+       "id": "82RL59T9Vqc",
+       "t": 767,
+       "title": "How To Build An Acura TSX 1st Gen"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -64420,7 +64522,52 @@
      "views": 273510
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 85,
+       "lo": 40.0,
+       "hi": 200.0,
+       "n": 12,
+       "videos": 7,
+       "id": "dNZrh_G7TWo",
+       "t": 675,
+       "title": "2009-2014 Acura TSX Reliability & Common Problems - Full Buyer's Guide"
+      }
+     ],
+     [
+      "Oil change",
+      {
+       "median": 45,
+       "lo": 27.0,
+       "hi": 800.0,
+       "n": 3,
+       "videos": 3,
+       "id": "Ihh6h5nZxVw",
+       "t": 245,
+       "title": "2008 Acura TSX CL9 vs 2009 TSX CU2 POV Test Drive"
+      }
+     ],
+     [
+      "Steering & suspension",
+      {
+       "median": 1400,
+       "lo": 1000.0,
+       "hi": 1800.0,
+       "n": 4,
+       "videos": 2,
+       "id": "dNZrh_G7TWo",
+       "t": 1198,
+       "title": "2009-2014 Acura TSX Reliability & Common Problems - Full Buyer's Guide"
+      }
+     ]
+    ]
+   }
   }
  ],
  "mitsubishi-montero": [
@@ -64635,7 +64782,39 @@
      "views": 234
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 1000,
+       "lo": 400.0,
+       "hi": 4045.0,
+       "n": 10,
+       "videos": 5,
+       "id": "hSvZufsYIWE",
+       "t": 45,
+       "title": "Nissan Dealer Says: \"Needs a BCM!\"...or Does It? (NATS-Immobilizer: No-Start P1610-P1614; '06 350Z)"
+      }
+     ],
+     [
+      "Brakes",
+      {
+       "median": 100,
+       "lo": 70.0,
+       "hi": 400.0,
+       "n": 6,
+       "videos": 3,
+       "id": "FT2RYy15YnQ",
+       "t": 2501,
+       "title": "1st Gen Xterra - 350z Brembo BBK Upgrade!!"
+      }
+     ]
+    ]
+   }
   }
  ],
  "mazda-mpv": [
@@ -64765,7 +64944,26 @@
      "views": 20241
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 90,
+       "lo": 70.0,
+       "hi": 195.0,
+       "n": 7,
+       "videos": 4,
+       "id": "8KiDqRJuJJo",
+       "t": 130,
+       "title": "2001 Mazda MPV radiator cooling fan replacement"
+      }
+     ]
+    ]
+   }
   }
  ],
  "volvo-xc60": [
@@ -65403,7 +65601,26 @@
      "views": 144295
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 80,
+       "lo": 80.0,
+       "hi": 80.0,
+       "n": 2,
+       "videos": 2,
+       "id": "fN_vz4cVYlg",
+       "t": 100,
+       "title": "Diagnose Height Sensor Problem - Range Rover Sport or LR3 (2005-2009)"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -65503,7 +65720,39 @@
      "views": 134885
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Brakes",
+      {
+       "median": 10000,
+       "lo": 9000.0,
+       "hi": 10000.0,
+       "n": 3,
+       "videos": 3,
+       "id": "E0fe2tzBl-Y",
+       "t": 157,
+       "title": "2024 Range Rover Sport SV Quick Review"
+      }
+     ],
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 3000,
+       "lo": 3000.0,
+       "hi": 3000.0,
+       "n": 2,
+       "videos": 2,
+       "id": "6rkFIv0l-GA",
+       "t": 1782,
+       "title": "The 2025 Range Rover Sport SE Is A Well-Rounded SUV With Near Perfect Road Manners"
+      }
+     ]
+    ]
+   }
   }
  ],
  "buick-encore": [
@@ -65895,7 +66144,26 @@
      "views": 276538
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 170,
+       "lo": 150.0,
+       "hi": 1300.0,
+       "n": 3,
+       "videos": 3,
+       "id": "sDd5v4gGkJc",
+       "t": 821,
+       "title": "2013 - 2020 Infiniti JX35 QX60 | Review and What to LOOK for when buying one"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -65976,7 +66244,39 @@
      "views": 20187
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 6500,
+       "lo": 6000.0,
+       "hi": 7000.0,
+       "n": 4,
+       "videos": 3,
+       "id": "ffrzgkvhQBA",
+       "t": 41,
+       "title": "2023 Infiniti QX60 Autograph has One Big Problem /  Full Specs & Test Drive"
+      }
+     ],
+     [
+      "Oil change",
+      {
+       "median": 55,
+       "lo": 50.0,
+       "hi": 60.0,
+       "n": 4,
+       "videos": 2,
+       "id": "HBHVFHhJtSE",
+       "t": 930,
+       "title": "2024 Infiniti QX60 Why I would BUY it AGAIN :All Specs & Test Drive"
+      }
+     ]
+    ]
+   }
   }
  ],
  "chevrolet-uplander": [
@@ -66231,7 +66531,26 @@
      "views": 32263
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 250,
+       "lo": 40.0,
+       "hi": 300.0,
+       "n": 3,
+       "videos": 3,
+       "id": "vHO7xKOTc0A",
+       "t": 486,
+       "title": "Van Tour - 2012 Ford Transit Connect"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -67328,7 +67647,39 @@
      "views": 447571
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 750,
+       "lo": 96.0,
+       "hi": 1200.0,
+       "n": 8,
+       "videos": 6,
+       "id": "S4QQZJ5sa9k",
+       "t": 286,
+       "title": "2008 Cadillac DTS Upgrades"
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 400,
+       "lo": 400.0,
+       "hi": 400.0,
+       "n": 2,
+       "videos": 2,
+       "id": "JBwxzS1wmfY",
+       "t": 491,
+       "title": "For Sale 2008 Cadillac DTS Sedan 20 Inch Chrome Wheels with Vogue tires"
+      }
+     ]
+    ]
+   }
   }
  ],
  "nissan-kicks": [
@@ -68539,7 +68890,26 @@
      "views": 27453
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 750,
+       "lo": 300.0,
+       "hi": 2700.0,
+       "n": 14,
+       "videos": 5,
+       "id": "SPXo3MSLHmk",
+       "t": 722,
+       "title": "I Bought a RAINBOW EDITION 2020 Infiniti Q50 From Copart to Rebuild"
+      }
+     ]
+    ]
+   }
   }
  ],
  "nissan-juke": [
@@ -68669,7 +69039,26 @@
      "views": 53524
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 300,
+       "lo": 72.0,
+       "hi": 600.0,
+       "n": 6,
+       "videos": 3,
+       "id": "uS8d-wRWtMs",
+       "t": 1081,
+       "title": "DOA!  Why did the CAR WIZARD purchase a dead '12 Nissan Juke? Can it be fixed? Missus NOT impressed!"
+      }
+     ]
+    ]
+   }
   }
  ],
  "mitsubishi-outlander-sport": [
@@ -68924,7 +69313,26 @@
      "views": 284959
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 800,
+       "lo": 300.0,
+       "hi": 3500.0,
+       "n": 12,
+       "videos": 4,
+       "id": "yYzpbk3j_ek",
+       "t": 394,
+       "title": "2006=2010 Infiniti M35=Nissan No Crank No Starter Key fob Not Detected Anti=Theft Sistem Reset=Part1"
+      }
+     ]
+    ]
+   }
   }
  ],
  "toyota-venza": [
@@ -69390,7 +69798,26 @@
      "views": 300786
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 600,
+       "lo": 80.0,
+       "hi": 700.0,
+       "n": 3,
+       "videos": 3,
+       "id": "aOscZ622Fsg",
+       "t": 519,
+       "title": "2010 Infiniti FX35: Owner’s Review after daily driving it for 10 years"
+      }
+     ]
+    ]
+   }
   }
  ],
  "buick-verano": [
@@ -69519,7 +69946,26 @@
      "views": 144604
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 440,
+       "lo": 100.0,
+       "hi": 2900.0,
+       "n": 3,
+       "videos": 3,
+       "id": "JawPG2S6iHk",
+       "t": 202,
+       "title": "Retirement Project of the Day - 2014 Buick Verano Camshaft Intake & Exhaust Solenoid Replacement"
+      }
+     ]
+    ]
+   }
   }
  ],
  "cadillac-sts": [
@@ -69649,7 +70095,26 @@
      "views": 219668
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 180,
+       "lo": 60.0,
+       "hi": 300.0,
+       "n": 4,
+       "videos": 3,
+       "id": "b9-eRDPrXCo",
+       "t": 836,
+       "title": "Important Things  To Know Before Getting A Cadillac STS V8/V6 (2005 - 2011)"
+      }
+     ]
+    ]
+   }
   }
  ],
  "mazda-mazda5": [
@@ -70291,7 +70756,26 @@
      "views": 85734
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 284,
+       "lo": 25.0,
+       "hi": 300.0,
+       "n": 6,
+       "videos": 4,
+       "id": "ATePXP86_Pw",
+       "t": 344,
+       "title": "Lincoln MKS Climate Control Panel Removal 2013-2016"
+      }
+     ]
+    ]
+   }
   }
  ],
  "ford-c-max": [
@@ -70831,7 +71315,26 @@
      "views": 7805
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 275,
+       "lo": 130.0,
+       "hi": 500.0,
+       "n": 7,
+       "videos": 5,
+       "id": "TBHn7noyktY",
+       "t": 898,
+       "title": "No Start Diagnosis 2012 CHEVY CAPTIVA Won't Crank...Clicks...Fixed..."
+      }
+     ]
+    ]
+   }
   }
  ],
  "jaguar-x-type": [
@@ -71091,7 +71594,26 @@
      "views": 604586
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Transmission",
+      {
+       "median": 1050,
+       "lo": 1000.0,
+       "hi": 1100.0,
+       "n": 2,
+       "videos": 2,
+       "id": "yxyVn8jHbr4",
+       "t": 72,
+       "title": "2010 SX4 Sedan LE Walk Around"
+      }
+     ]
+    ]
+   }
   }
  ],
  "cadillac-xt5": [
