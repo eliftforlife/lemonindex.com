@@ -62222,6 +62222,134 @@
    }
   }
  ],
+ "chevrolet-s-10": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004
+   ],
+   "gen": "1994–2004 Chevrolet S-10",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 17558984,
+   "topics": [
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 1138652,
+     "n": 9,
+     "best": {
+      "id": "uzIjKTn7yrQ",
+      "title": "2003 Chevrolet S10 ABS Wheel Sensor Replacement",
+      "channel": "uxwbill",
+      "views": 208408
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 997005,
+     "n": 10,
+     "best": {
+      "id": "8mimijJca1Q",
+      "title": "How to Replace Fuel Injector 1994-2004 Chevy S-10",
+      "channel": "TRQ",
+      "views": 246953
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 972604,
+     "n": 10,
+     "best": {
+      "id": "cgB9XssaNiw",
+      "title": "How to Replace Door Hinge Pin and Bushing 1994-2004 Chevy S-10",
+      "channel": "TRQ",
+      "views": 269469
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 514367,
+     "n": 5,
+     "best": {
+      "id": "UwqggihXHFE",
+      "title": "How to Replace Starter Chevy S-10 1994-2004",
+      "channel": "TRQ",
+      "views": 292558
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 488060,
+     "n": 4,
+     "best": {
+      "id": "MjCO6Rzli90",
+      "title": "How to Replace Ignition Lock Cylinder 1994-2004 Chevy S-10",
+      "channel": "TRQ",
+      "views": 284397
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 381436,
+     "n": 6,
+     "best": {
+      "id": "XFyODNDpRBg",
+      "title": "How to Replace Brake Light Switch 1994-2004 Chevy S-10",
+      "channel": "TRQ",
+      "views": 197066
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 351646,
+     "n": 5,
+     "best": {
+      "id": "lWJVI_OCuvc",
+      "title": "How to Replace Water Pump 1994-2004 Chevy S-10",
+      "channel": "TRQ",
+      "views": 124282
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 284360,
+     "n": 4,
+     "best": {
+      "id": "8ni2Plz2OoU",
+      "title": "How to Remove a 4l60e Transmission from 2001 Chevy S10 2wd",
+      "channel": "ThatAccordGuy",
+      "views": 134414
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "kOfadeGt6hc",
+     "title": "Top 5 Problems Chevy S-10 ZR2 Truck 2nd Generation 1994-04",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 775894
+    },
+    {
+     "id": "Ul_fokgsQDY",
+     "title": "Top 5 Problems Chevy S-10 Truck 2nd Generation 1994-2004",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 271594
+    },
+    {
+     "id": "CmfgCOxW6XA",
+     "title": "Chevy S10 2nd Gen Buyers Guide 1994-2004 (Exterior, Interior, Specs, Common Issues)",
+     "channel": "Useful Vids",
+     "views": 235119
+    }
+   ],
+   "costs": null
+  }
+ ],
  "mini-cooper": [
   {
    "years": [
@@ -63521,6 +63649,1330 @@
    "costs": null
   }
  ],
+ "mercedes-benz-sprinter": [
+  {
+   "years": [
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018
+   ],
+   "gen": "2007–2018 Mercedes-Benz Sprinter",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 19753873,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 741125,
+     "n": 3,
+     "best": {
+      "id": "mTcHQXllYTg",
+      "title": "Oil reset Mercedes sprinter 2012",
+      "channel": "Paul Zhukotansky",
+      "views": 427168
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 694408,
+     "n": 8,
+     "best": {
+      "id": "PuRgKsTKWfg",
+      "title": "Mercedes Sprinter Fuel Filter Change 2014",
+      "channel": "Mercedes Sprinter DIY",
+      "views": 192516
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 535466,
+     "n": 8,
+     "best": {
+      "id": "1evctL0Pu-w",
+      "title": "2011 Mercedes Sprinter battery replacement ( under the floorboard )",
+      "channel": "JMMJ Productions",
+      "views": 163571
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 259742,
+     "n": 3,
+     "best": {
+      "id": "cpdJCWlJ_Rg",
+      "title": "2013 Mercedes Sprinter EGR valve cleaning procedure, do every 15,000-20,000 mi, stops coughing",
+      "channel": "WyattsSaab",
+      "views": 155993
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 177810,
+     "n": 2,
+     "best": {
+      "id": "3z6STwp3vmE",
+      "title": "MERCEDES SPRINTER 2012 | NO START | ELECTRONIC STEERING LOCK | BYPASS EMULATOR | DIAGNOSTICS",
+      "channel": "VEPROFESSIONALS",
+      "views": 99125
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 160257,
+     "n": 4,
+     "best": {
+      "id": "JsowiK95kGI",
+      "title": "How to FIX Your Blower Motor (Sprinter Van 2007-2018)",
+      "channel": "Drift Overland",
+      "views": 91556
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 100201,
+     "n": 3,
+     "best": {
+      "id": "NuYnyJx4XrI",
+      "title": "2013 Mercedes Sprinter Code P2047 Adblue Metering Valve Has An Electrical Fault Or An Open Circuit",
+      "channel": "KIT'S Auto and Truck Repair",
+      "views": 67063
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 86920,
+     "n": 2,
+     "best": {
+      "id": "8ii15Oz40EU",
+      "title": "2007 - 2017 Dodge Mercedes Sprinter door panel & Speaker removal",
+      "channel": "vexas",
+      "views": 48161
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "q6ciUFlfomw",
+     "title": "2017 Sprinter intermittent starting problems",
+     "channel": "Robert Mailloux",
+     "views": 25879
+    },
+    {
+     "id": "J5P73tgpnt4",
+     "title": "The last reliable Sprinter built by Mercedes? | A 2009 Mercedes Sprinter Camper Review and POV Drive",
+     "channel": "OttoEx",
+     "views": 15195
+    },
+    {
+     "id": "K49cDCS8Oyk",
+     "title": "Sprinter van 2011 problems : coolant color, belt tensioner and oil leak",
+     "channel": "Sprinter HQ 4 Shops",
+     "views": 15010
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2019–2025 Mercedes-Benz Sprinter",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 29717574,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 293949,
+     "n": 6,
+     "best": {
+      "id": "FQ8df_cgbdI",
+      "title": "2021+ Mercedes Sprinter Oil Reset (Big Dash Screen)",
+      "channel": "Huey866",
+      "views": 141276
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 288624,
+     "n": 2,
+     "best": {
+      "id": "76D066ro0LI",
+      "title": "2019+ sprinter reset service light 👍",
+      "channel": "Ultimate D I Y",
+      "views": 275488
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 125778,
+     "n": 4,
+     "best": {
+      "id": "fd2h4g80SGs",
+      "title": "Fuel filter replacement on a 2020 Mercedes Sprinter 3.0L V6 diesel OM642 [Service B]",
+      "channel": "Out of Ipswich",
+      "views": 40429
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 81666,
+     "n": 2,
+     "best": {
+      "id": "E2vwbotCF9Q",
+      "title": "2019 Mercedes Sprinter Heater Blowing Cold Air DIY repair",
+      "channel": "MERCEDES SPRINTER TECH | VAN LIFE | ",
+      "views": 61068
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 49812,
+     "n": 3,
+     "best": {
+      "id": "lJVy0Ai-L8E",
+      "title": "2019 - 2023 Mercedes Benz Sprinter Passenger Van 2500 3.0 VS30 - Replacing Front Brake Pads & Rotors",
+      "channel": "Dan the Fix it Man",
+      "views": 24040
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 42920,
+     "n": 1,
+     "best": {
+      "id": "rblAImX9Z3g",
+      "title": "How to: Mercedes Sprinter V6 Diesel EGR Valve Cleaning (2019-2022).",
+      "channel": "I Am A Travel Addict",
+      "views": 42920
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 35604,
+     "n": 2,
+     "best": {
+      "id": "n-D_LkpObOA",
+      "title": "2019+ Sprinter 907 Battery Replacement",
+      "channel": "Huey866",
+      "views": 18862
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 15521,
+     "n": 1,
+     "best": {
+      "id": "Qd5Y8uCNKNM",
+      "title": "Mercedes-Benz | Sprinter 2024 | How To Adjust The Seat And Steering Wheel",
+      "channel": "Mercedes-Benz Vans",
+      "views": 15521
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "eycTTHdtplc",
+     "title": "2019 Mercedes-Benz Sprinter Van Expert Buyer Review: Watch This Before You Buy One!",
+     "channel": "The Fast Lane Truck",
+     "views": 526480
+    },
+    {
+     "id": "TqOEYWTSz74",
+     "title": "Should you buy a 4x4 2022 Mercedes Sprinter?",
+     "channel": "ILoveProperty",
+     "views": 30425
+    },
+    {
+     "id": "WvZc5STdlPI",
+     "title": "2024 Mercedes Sprinter VIP Luxury KING VAN - Full Review Interior Exterior",
+     "channel": "MercBenzKing",
+     "views": 3146586
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "scion-tc": [
+  {
+   "years": [
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010
+   ],
+   "gen": "2005–2010 Scion tC",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 12665514,
+   "topics": [
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 294477,
+     "n": 5,
+     "best": {
+      "id": "xjFskeezk-I",
+      "title": "How to reset power windows and hatch back of a 2005 Scion tC",
+      "channel": "Jane P.",
+      "views": 129548
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 237612,
+     "n": 4,
+     "best": {
+      "id": "gtSlG_oEwiY",
+      "title": "How to Replace Alternator in a Scion TC 2004-2010",
+      "channel": "Fixbook",
+      "views": 101923
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 211218,
+     "n": 6,
+     "best": {
+      "id": "ZfqzvHT_118",
+      "title": "How to Replace Cabin Air Filter 2006 Scion tC | AQ1072",
+      "channel": "Filterheads",
+      "views": 105230
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 199817,
+     "n": 4,
+     "best": {
+      "id": "DksiQ1qhLZk",
+      "title": "2005-2010 Scion TC wheel bearing replacement",
+      "channel": "Helping Hand Auto Repair",
+      "views": 110550
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 198838,
+     "n": 4,
+     "best": {
+      "id": "3BdROrs0U4M",
+      "title": "2005 - 2010 Scion tC LED brake light replacement",
+      "channel": "Gearmo Auto",
+      "views": 80721
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 136035,
+     "n": 2,
+     "best": {
+      "id": "Tklf2mYSR4A",
+      "title": "How to Change Your Oil - 2006 Scion tC - Toyota 2AZ-FE engine [Oil Change Procedure]",
+      "channel": "James Fix It!",
+      "views": 71498
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 113632,
+     "n": 3,
+     "best": {
+      "id": "fRyhqmiIUjs",
+      "title": "Scion tC Fuel pump removal easy 2004 - 2010",
+      "channel": "Fix it Felix",
+      "views": 75092
+     }
+    },
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 113415,
+     "n": 4,
+     "best": {
+      "id": "wgS70WbDDvs",
+      "title": "How To Change The Valve Cover Gasket On A 2005-2010 Scion TC",
+      "channel": "How to Automotive",
+      "views": 95809
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "ZPZIH48tU7M",
+     "title": "2009 Scion tC Sunroof Problems and fixes",
+     "channel": "Dallas Auto Diag",
+     "views": 40664
+    },
+    {
+     "id": "aajt98pj0Do",
+     "title": "2005 Scion tC poor idle problems please help",
+     "channel": "Sabastian Kimball",
+     "views": 14903
+    },
+    {
+     "id": "re11zIfMIwA",
+     "title": "2007 Scion tC Hatchback 2-door Coupe \"gas saver, reliable\" “CARFAX” - $3,999 Chula Vista",
+     "channel": "Broadway Auto Group",
+     "views": 5704
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016
+   ],
+   "gen": "2011–2016 Scion tC",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 8470241,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 93592,
+     "n": 3,
+     "best": {
+      "id": "ED-pajYuLf0",
+      "title": "2012 Scion tc 2.5L oil and filter change. See note.",
+      "channel": "Randy Templeton",
+      "views": 40651
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 81006,
+     "n": 4,
+     "best": {
+      "id": "Ze9y5kFVb2o",
+      "title": "2011-2016 Scion TC Transmission Oil And Filter Change DIY",
+      "channel": "Built for Speed",
+      "views": 45908
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 51623,
+     "n": 3,
+     "best": {
+      "id": "WLm2al6zHw0",
+      "title": "2013 Scion TC a/c not working. Nightmare diagnostic.",
+      "channel": "G Auto Repair",
+      "views": 28750
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 36031,
+     "n": 3,
+     "best": {
+      "id": "RlRlMHFx2EU",
+      "title": "2011-2016 Scion TC Gen 2 Spark Plug change (with part numbers and torque specs)",
+      "channel": "BrunerTuner",
+      "views": 13670
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 30306,
+     "n": 1,
+     "best": {
+      "id": "48ZMEDVOQw8",
+      "title": "2011 SCION TC WON'T CRANK, WON'T START issue.....one click....fixed!",
+      "channel": "Peter L",
+      "views": 30306
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 28135,
+     "n": 1,
+     "best": {
+      "id": "PmkEv4YcyYc",
+      "title": "How to reset the maintenance light on a 2011-2016 Scion tC",
+      "channel": "JT43",
+      "views": 28135
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 23714,
+     "n": 1,
+     "best": {
+      "id": "jaOQCU32W18",
+      "title": "2014 Scion TC Carbon fiber hood wrap DIY instructions",
+      "channel": "Carlos David Falconi",
+      "views": 23714
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 15881,
+     "n": 1,
+     "best": {
+      "id": "hGutREaJRLA",
+      "title": "2012 Scion tc door panel removal.",
+      "channel": "Randy Templeton",
+      "views": 15881
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "9XUtiuAVZ4Q",
+     "title": "2011–2016 Scion tC Defects, Inspections, and Common Problems",
+     "channel": "HOWSTUFFINMYCARWORKS",
+     "views": 20172
+    },
+    {
+     "id": "RYLdZCygQnM",
+     "title": "Scion tC AT20 2nd gen 2011 to 2016 common problems, issues, defects, recalls and complaints",
+     "channel": "HOWSTUFFINMYCARWORKS",
+     "views": 15981
+    },
+    {
+     "id": "KJ1dIdTNSGk",
+     "title": "Review: 2013 Scion tC",
+     "channel": "Matt Maran Motoring",
+     "views": 232126
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "acura-tsx": [
+  {
+   "years": [
+    2004,
+    2005,
+    2006,
+    2007,
+    2008
+   ],
+   "gen": "2004–2008 Acura TSX",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 7230927,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 459390,
+     "n": 7,
+     "best": {
+      "id": "9pZDV1hNjuc",
+      "title": "How to Reset the Oil Life on a Acura TSX 2004-2008",
+      "channel": "ThePeoplesGarage",
+      "views": 263972
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 295219,
+     "n": 12,
+     "best": {
+      "id": "FJSdM84u-n8",
+      "title": "2004 Acura TSX Radio Not Working Fix!!",
+      "channel": "K Mon",
+      "views": 61371
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 187469,
+     "n": 7,
+     "best": {
+      "id": "3OesZqwZGus",
+      "title": "DISCUSSION: Replace Timing Chain Tensioner on 2005 Acura TSX",
+      "channel": "Chavez DIY",
+      "views": 54933
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 174597,
+     "n": 3,
+     "best": {
+      "id": "NWkbJp6MK7Q",
+      "title": "2005 Acura TSX 535,000 Miles Transmission Removal, Replace Torque Converter, Rear Main & Axle Seals",
+      "channel": "Clymers Carport",
+      "views": 96582
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 174215,
+     "n": 4,
+     "best": {
+      "id": "lL47eIQURKc",
+      "title": "How to replace AC Evaporator and AC Expansion Valve on 2007 Acura TSX DIY instructions",
+      "channel": "Daddicated",
+      "views": 86422
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 173416,
+     "n": 3,
+     "best": {
+      "id": "kXCtb7z_JRk",
+      "title": "Oil light reset on 2004-2005 TSX",
+      "channel": "Colin Chiero",
+      "views": 78421
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 135170,
+     "n": 3,
+     "best": {
+      "id": "6PGqgP6FGM4",
+      "title": "How to Replace Front Wheel Bearing on 2005 Acura TSX",
+      "channel": "Chavez DIY",
+      "views": 73443
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 119828,
+     "n": 3,
+     "best": {
+      "id": "TgyxiWFxiFA",
+      "title": "How to: Replace Rear Brakes: Caliper, Rotor, Brake Pads - Acura TSX 2006",
+      "channel": "6th Gear Garage",
+      "views": 95368
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "puyUx84uKVw",
+     "title": "Is It As Reliable As You Think? ACURA TSX 2004-2008 1st Gen",
+     "channel": "AutoMotivate",
+     "views": 122324
+    },
+    {
+     "id": "bCY8htwXY0o",
+     "title": "2005 Acura TSX 6-Spd 190,000 Miles Problems & Issues | Should I Sell My Car?",
+     "channel": "Echizen32k Media",
+     "views": 75472
+    },
+    {
+     "id": "rm4eSPTRSYE",
+     "title": "2005 Acura TSX Manual Transmission 180,000 Miles Things to Fix - Problems & Issues",
+     "channel": "Echizen32k Media",
+     "views": 29370
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014
+   ],
+   "gen": "2009–2014 Acura TSX",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 6211321,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 361533,
+     "n": 12,
+     "best": {
+      "id": "pQJeQJ4zgmM",
+      "title": "2009 2010 2011 2012 2013 Acura TSX Radio Upgrade - Double Din Install - Radio Receiver Installation",
+      "channel": "Acura Audio Garage",
+      "views": 68556
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 140894,
+     "n": 4,
+     "best": {
+      "id": "0_a8Jv4A_QY",
+      "title": "Quick Acura TSX Oil Change: 2009- 2014 2nd Generation TSX",
+      "channel": "Blu-TSX",
+      "views": 104044
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 129913,
+     "n": 7,
+     "best": {
+      "id": "ES8hqXAaP7o",
+      "title": "Acura tsx 2010 fail abs vsa brake system check transmission what to resolve your problem here",
+      "channel": "scoobydjj",
+      "views": 40753
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 128189,
+     "n": 2,
+     "best": {
+      "id": "lnxwscO3MtY",
+      "title": "2009-2014 Acura TSX Cabin Air Filter Replacement -EricTheCarGuy",
+      "channel": "EricTheCarGuy",
+      "views": 64387
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 34829,
+     "n": 1,
+     "best": {
+      "id": "ZTfnmDVNQeQ",
+      "title": "Acura TSX Replace Spark Plugs 2009 - 2014",
+      "channel": "Blu-TSX",
+      "views": 34829
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 26653,
+     "n": 1,
+     "best": {
+      "id": "POlcvHrlj1w",
+      "title": "How To Change Tailight Brake Bulb | Acura TSX (2009-2014) - EASY DIY",
+      "channel": "SkyShadow Media",
+      "views": 26653
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 17728,
+     "n": 2,
+     "best": {
+      "id": "JvUHEpSAqoY",
+      "title": "how to fix 2010 2014 Acura TSX VSA system, cilinder misfire ,code p0341,code p1009",
+      "channel": "willbekabbin",
+      "views": 9191
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 17092,
+     "n": 1,
+     "best": {
+      "id": "24Pd6jz9RwU",
+      "title": "2009 Acura TSX Fuel Injector Replacement (Vivration on D and N Issue)",
+      "channel": "Healthy Criticism Game Reviews",
+      "views": 17092
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "dNZrh_G7TWo",
+     "title": "2009-2014 Acura TSX Reliability & Common Problems - Full Buyer's Guide",
+     "channel": "Discerning Cars",
+     "views": 79101
+    },
+    {
+     "id": "ehamVOi2fCw",
+     "title": "2010 Acura TSX POV Test Drive Should You buy Acura TL or TSX",
+     "channel": "POV Nelson",
+     "views": 19377
+    },
+    {
+     "id": "OstQO7qhJbA",
+     "title": "2013 Acura TSX Review, Walkaround, Exhaust, & Test Drive",
+     "channel": "Redline Reviews",
+     "views": 273510
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "mitsubishi-montero": [
+  {
+   "years": [
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006
+   ],
+   "gen": "2001–2006 Mitsubishi Montero",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 3934041,
+   "topics": [
+    {
+     "name": "Brakes & ABS",
+     "views": 209393,
+     "n": 4,
+     "best": {
+      "id": "O2OYFunNIzs",
+      "title": "2001'Mitsubishi Montero 4x4 anti lock brake problem",
+      "channel": "BuyThis&That",
+      "views": 91325
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 153620,
+     "n": 2,
+     "best": {
+      "id": "OIF58WURjh4",
+      "title": "How to Remove Radio / CD Changer from 2004 Mitsubishi Montero for Repair",
+      "channel": "HiTechElectronic",
+      "views": 148125
+     }
+    },
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 98232,
+     "n": 4,
+     "best": {
+      "id": "PVigjtYRqls",
+      "title": "2001 Mitsubishi Montero rear cam cap oil leak o ring 3.5L Install Remove Replace How to",
+      "channel": "Fixing cars and stuff",
+      "views": 81392
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 71975,
+     "n": 3,
+     "best": {
+      "id": "XKDjUfVYqfg",
+      "title": "Timing Belt and Water Pump Replacement on my 2004 Mitsubishi Montero.",
+      "channel": "The Mitsubishi Montero Channel ",
+      "views": 36809
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 61210,
+     "n": 1,
+     "best": {
+      "id": "F6w-mGcdhG4",
+      "title": "2003 Montero Fuel Pump Replacement",
+      "channel": "Wawa Iki",
+      "views": 61210
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 53843,
+     "n": 2,
+     "best": {
+      "id": "akRRhAuR9-o",
+      "title": "2001 MITSUBISHI MONTERO LIMITED, 3.5 HOW TO IDENTIFY A ENGINE NOISE, MOST COMMON PROBLEM IN THIS PA",
+      "channel": "BARVIZON",
+      "views": 45060
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 19059,
+     "n": 3,
+     "best": {
+      "id": "H7lzn7YhNXM",
+      "title": "2001-2006 Gen3 Mitsubishi Montero Interior Door Panel Card Removal, Pajero Shogun NM NP",
+      "channel": "Luso Overland",
+      "views": 9201
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 15236,
+     "n": 1,
+     "best": {
+      "id": "KfRhMdvrQeM",
+      "title": "Gen3 Mitsubishi Montero HEATER CORE Replacement - Pajero Shogun 2001-2006",
+      "channel": "Luso Overland",
+      "views": 15236
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "XEx_oPyznjU",
+     "title": "Mitsubishi MONTERO 3rd Generation.Mk3,V60(Pejero, Shogun), Full Sinhala Review by MRJ inspire",
+     "channel": "MRJ inspire",
+     "views": 78272
+    },
+    {
+     "id": "BlmrqAWoZuU",
+     "title": "2003 Montero Limited Walkaround",
+     "channel": "Showcase Mitsubishi",
+     "views": 64645
+    },
+    {
+     "id": "omWODyyhosg",
+     "title": "2006 Montero Limited walkaround",
+     "channel": "Showcase Mitsubishi",
+     "views": 45290
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "nissan-350z": [
+  {
+   "years": [
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009
+   ],
+   "gen": "2003–2009 Nissan 350Z",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 8496322,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 111195,
+     "n": 2,
+     "best": {
+      "id": "ZoW32j-aJ8s",
+      "title": "2003 Nissan 350z Starter Motor Replacement - Full Walkthrough",
+      "channel": "Khan XO",
+      "views": 67538
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 84206,
+     "n": 1,
+     "best": {
+      "id": "tNnRJM6oEqU",
+      "title": "How to fix U1000 U1001 on Infiniti G35 Nissan 350Z 2003-2007 DYI ECM communication to transmission",
+      "channel": "Less Expensive fix",
+      "views": 84206
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 49898,
+     "n": 1,
+     "best": {
+      "id": "xqiJ4y2o_6w",
+      "title": "2005 Nissan 350z Roadster Slip Light Issue",
+      "channel": "zackis",
+      "views": 49898
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 23300,
+     "n": 1,
+     "best": {
+      "id": "3VIQ2_udY7k",
+      "title": "Tips for Window Regulator Replacement - Nissan 350Z 1st Gen",
+      "channel": "Lenny Ilyashov (Lenny)",
+      "views": 23300
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "cupHpyJI2bs",
+     "title": "2004 nissan 350z idle problems",
+     "channel": "Alex Susma",
+     "views": 3344
+    },
+    {
+     "id": "mKYUeY-Lxzw",
+     "title": "Nissan 350Z 2002 to 2008 common problems, issues, defects and complaints",
+     "channel": "HOWSTUFFINMYCARWORKS",
+     "views": 1452
+    },
+    {
+     "id": "VG92pNzT9Yw",
+     "title": "Nissan 350Z (2003-2009) Buyer's Guide/Specs/Options/Prices | Watch This Before Buying!",
+     "channel": "Statomotive",
+     "views": 234
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "mazda-mpv": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006
+   ],
+   "gen": "2000–2006 Mazda MPV",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 4000179,
+   "topics": [
+    {
+     "name": "Transmission & shifter",
+     "views": 336157,
+     "n": 5,
+     "best": {
+      "id": "cHp4U3Hv-bI",
+      "title": "Transmission range sensor problem 2000 Mazda mpv lx",
+      "channel": "NewYorker in Connecticut ",
+      "views": 132157
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 303860,
+     "n": 4,
+     "best": {
+      "id": "kblzMLRJrok",
+      "title": "Low beam head light bulb replace 2000-2006 Mazda Mpv",
+      "channel": "NewYorker in Connecticut ",
+      "views": 218985
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 292977,
+     "n": 7,
+     "best": {
+      "id": "mIWWeon8Wrs",
+      "title": "Mass air flow sensor (MAF) how to remove or clean,2000 mazda mpv",
+      "channel": "NewYorker in Connecticut ",
+      "views": 82475
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 176314,
+     "n": 5,
+     "best": {
+      "id": "8KiDqRJuJJo",
+      "title": "2001 Mazda MPV radiator cooling fan replacement",
+      "channel": "Chris Lewis",
+      "views": 40359
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 158995,
+     "n": 3,
+     "best": {
+      "id": "oGluWiGxq5Q",
+      "title": "Bolts through the window! Mazda MPV 2005 Window Regulator Broken",
+      "channel": "Rainman Ray's Repairs",
+      "views": 153867
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 131771,
+     "n": 5,
+     "best": {
+      "id": "BC8MhiIjcG8",
+      "title": "Starter motor replace 2000 Mazda MPV",
+      "channel": "NewYorker in Connecticut ",
+      "views": 70105
+     }
+    },
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 72968,
+     "n": 2,
+     "best": {
+      "id": "UKC6rhp8C9Q",
+      "title": "How to Replace the Spark Plugs and Valve Cover Gaskets on a 2005 Mazda MPV",
+      "channel": "How to Automotive",
+      "views": 72270
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 65348,
+     "n": 5,
+     "best": {
+      "id": "Q5T9uRVGd3w",
+      "title": "2005 Mazda MPV Removing/Replacing Blower Motor",
+      "channel": "Greg's DIY Garage",
+      "views": 31285
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "AAS78xyuG_Q",
+     "title": "2005 Mazda MPV 7 Seater Family Wagon ** Cash4Cars ** ** SOLD **",
+     "channel": "Cash4CarsNZ",
+     "views": 20610
+    },
+    {
+     "id": "bTeUFQ3OXJU",
+     "title": "Used 2000 Mazda MPV for sale at Honda Cars of Bellevue...an Omaha Honda Dealer!",
+     "channel": "Honda Cars of Bellevue",
+     "views": 20545
+    },
+    {
+     "id": "D8UmfrQ0Fww",
+     "title": "Used 2005 Mazda MPV ES for sale at Honda Cars of Bellevue...an Omaha Honda Dealer!",
+     "channel": "Honda Cars of Bellevue",
+     "views": 20241
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "volvo-xc60": [
+  {
+   "years": [
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017
+   ],
+   "gen": "2010–2017 Volvo XC60",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 23956171,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 566478,
+     "n": 3,
+     "best": {
+      "id": "Klh6ryCz1mo",
+      "title": "2017 Volvo XC60 Maintenance Light Reset",
+      "channel": "The G Automotive And More",
+      "views": 287020
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 459490,
+     "n": 7,
+     "best": {
+      "id": "ygW6BkQeqJE",
+      "title": "Volvo Maintenance Required Message Reset Quick! 2012 XC60 steps in description, easy!",
+      "channel": "Forrest Blank",
+      "views": 137499
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 438868,
+     "n": 4,
+     "best": {
+      "id": "smq3YRNgiF4",
+      "title": "2009 - 2015 Volvo XC60 Remote Key Fob Battery Change - How To Remove Replace XC 60 Key Batteries",
+      "channel": "PYR Automotive ",
+      "views": 325765
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 222151,
+     "n": 3,
+     "best": {
+      "id": "pO4azsEDCeU",
+      "title": "How to Replace Cabin Air Filter 2016 Volvo XC60 | AQ1176C",
+      "channel": "Filterheads",
+      "views": 114127
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 121364,
+     "n": 2,
+     "best": {
+      "id": "lVxYt414GJg",
+      "title": "Volvo XC60 (2008-2017) How to replace a brake light Bulb / Globe",
+      "channel": "Jay B",
+      "views": 65689
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 121267,
+     "n": 2,
+     "best": {
+      "id": "SMzLas9vXEo",
+      "title": "Volvo XC60 Front Strut Replacement DIY (2010-2016 Volvo P3 XC60, T5, T6, R-Design)",
+      "channel": "FCP Euro",
+      "views": 68623
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 50210,
+     "n": 1,
+     "best": {
+      "id": "jqbEF-rZPd4",
+      "title": "2011 Volvo XC60 won't start",
+      "channel": "BrunswickIndustrial",
+      "views": 50210
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 46311,
+     "n": 2,
+     "best": {
+      "id": "2pmScdrbQnA",
+      "title": "GUIDE. 2012 Volvo XC60 DIY full service, including service message reset.",
+      "channel": "Mike the mechanic",
+      "views": 25930
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "35642myPRnQ",
+     "title": "Volvo XC60 SUV 2014 review - Carbuyer",
+     "channel": "Carbuyer",
+     "views": 1038905
+    },
+    {
+     "id": "8ktu6twO8IA",
+     "title": "Volvo XC60 SUV (2008-2013) review - CarBuyer",
+     "channel": "Carbuyer",
+     "views": 689969
+    },
+    {
+     "id": "3vb33Ach7kA",
+     "title": "🤞 🇸🇪 Used Volvo S60 XC60 XC70 Reliability | Most Common Problems Faults and Issues | 2008 - 2017 |",
+     "channel": "MechAdventures",
+     "views": 294607
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2018–2025 Volvo XC60",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 38313887,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 718669,
+     "n": 3,
+     "best": {
+      "id": "4bvPFU6AHKA",
+      "title": "2018 Volvo S60 V60 Maintenance Reminder Reset 2017 2016 xc60 s90 v70",
+      "channel": "Oil Light Reset ",
+      "views": 575672
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 397341,
+     "n": 1,
+     "best": {
+      "id": "UHDB60SESys",
+      "title": "2018-2020 Volvo S60 Maintenance Light Reset. 2017-2020 Volvo XC90/XC60/S90/V90/ maintenance reset",
+      "channel": "JJ Banuelos",
+      "views": 397341
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 357456,
+     "n": 1,
+     "best": {
+      "id": "LYygrjTrxtU",
+      "title": "2018 - 2021 Volvo XC60 Remote Key Fob Battery Replacement - How To Change Or Replace Key Batteries",
+      "channel": "PYR Automotive ",
+      "views": 357456
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "o9l58Q17EfY",
+     "title": "Volvo P3 Buyer's Guide - 2008-2018 (S60, V60, XC60, S80, V70, XC70) - Models, Engines, & Options",
+     "channel": "FCP Euro",
+     "views": 260934
+    },
+    {
+     "id": "U9cWTI4gPww",
+     "title": "2018–2026 Volvo XC60: A Complete Reliability Guide",
+     "channel": "The Long Last Expert",
+     "views": 230866
+    },
+    {
+     "id": "62Mjvs5A0Is",
+     "title": "Volvo XC60 buyers guide Gen 2 (2017-2025) Avoid buying a broken Volvo XC60 (Cheap D4 D5 T5 T6 T8)",
+     "channel": "The Miles Driven",
+     "views": 168171
+    }
+   ],
+   "costs": null
+  }
+ ],
  "ram-promaster": [
   {
    "years": [
@@ -63823,6 +65275,237 @@
    "costs": null
   }
  ],
+ "land-rover-range-rover-sport": [
+  {
+   "years": [
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013
+   ],
+   "gen": "2006–2013 Land Rover Range Rover Sport",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 22543755,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 589888,
+     "n": 5,
+     "best": {
+      "id": "qH2K88XFH4c",
+      "title": "How To Check Oil Level On A Range Rover Sport (2005-2012)",
+      "channel": "How to Automotive",
+      "views": 238693
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 306613,
+     "n": 2,
+     "best": {
+      "id": "ipzjoeLZnq8",
+      "title": "Replace Height Sensor - Range Rover Sport or LR3 (2005-2009)",
+      "channel": "Hazy",
+      "views": 215068
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 141850,
+     "n": 1,
+     "best": {
+      "id": "9K_ZFfRbMxw",
+      "title": "RESTRICTED PERFORMANCE **Range Rover Sport** Warning Light on in Dash - L320 2005-2013 – WHAT IS IT?",
+      "channel": "Al S",
+      "views": 141850
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 121385,
+     "n": 1,
+     "best": {
+      "id": "umZo8cST7E0",
+      "title": "Spark Plug Service on Range Rover Sport Supercharged 2006-2009",
+      "channel": "Atlantic British",
+      "views": 121385
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 77243,
+     "n": 1,
+     "best": {
+      "id": "Z2GYdt-Qqt0",
+      "title": "How to Reset Windows and Sunroof | 2013 Range Rover Sport L320",
+      "channel": "Technical Mechanical",
+      "views": 77243
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 63924,
+     "n": 1,
+     "best": {
+      "id": "ENM-gCaXYf8",
+      "title": "HOW TO FIX NO HEAT ,NO A/C ,BLOWER MOTOR ISSUES|2008 Land Rover Range Rover Sport!",
+      "channel": "First Automotive Channel",
+      "views": 63924
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 45865,
+     "n": 2,
+     "best": {
+      "id": "meLM-RrHoUY",
+      "title": "2010 - 2013 Range Rover Sport L320 Radio Repair LR3",
+      "channel": "Engine Informant",
+      "views": 25970
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 25534,
+     "n": 1,
+     "best": {
+      "id": "3aX-Wr2MgdQ",
+      "title": "Fixing Transmission Limp Mode on my 2006 Range Rover Sport HSE: How Long Will the Repair Last?",
+      "channel": "Land Rover Range Rover Sport DIY",
+      "views": 25534
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "A2lax8Oht3Q",
+     "title": "Range Rover Sport SUV 2005 - 2013 review - CarBuyer",
+     "channel": "Carbuyer",
+     "views": 790631
+    },
+    {
+     "id": "3Uk21E2iD7Q",
+     "title": "Should You Buy a Used RANGE ROVER SPORT? (Test Drive & Review 2010 HSE TDV6)",
+     "channel": "High Peak Autos",
+     "views": 657102
+    },
+    {
+     "id": "VIsPkRxpDBA",
+     "title": "Used Range Rover Sport Buyer guide 2013-2022 (L494) Reliability and common problems",
+     "channel": "The Miles Driven",
+     "views": 144295
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022
+   ],
+   "gen": "2014–2022 Land Rover Range Rover Sport",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 67339986,
+   "topics": [
+    {
+     "name": "Transmission & shifter",
+     "views": 94837,
+     "n": 1,
+     "best": {
+      "id": "_qYVXExi8AI",
+      "title": "2016 Range Rover Sport Shifter Button Failure and Repair",
+      "channel": "Jason Elder",
+      "views": 94837
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "uz-XHAB1oJU",
+     "title": "SHOULD YOU BUY A \"HIGH MILEAGE\" RANGE ROVER SPORT? 2014 L494 3.0 SDV6",
+     "channel": "Haych Drives",
+     "views": 297068
+    },
+    {
+     "id": "VIsPkRxpDBA",
+     "title": "Used Range Rover Sport Buyer guide 2013-2022 (L494) Reliability and common problems",
+     "channel": "The Miles Driven",
+     "views": 144295
+    },
+    {
+     "id": "VVdFd1abYhY",
+     "title": "Should you buy a Used Range Rover? | Used 2016 Range Rover Sport Full Review",
+     "channel": "hellcatguy",
+     "views": 75198
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2023–2025 Land Rover Range Rover Sport",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 43597096,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 8974,
+     "n": 1,
+     "best": {
+      "id": "A-AyCHqEKQE",
+      "title": "How to Change the Gauge Cluster Layout | 2025 Range Rover Sport",
+      "channel": "Danny Drives",
+      "views": 8974
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "MGIoQze5aMQ",
+     "title": "2023 Range Rover Sport Review. Should you buy this instead of the Range Rover & save £20,000?",
+     "channel": "Harry's garage",
+     "views": 569995
+    },
+    {
+     "id": "02tiQmzzeV0",
+     "title": "All-New 2023 Range Rover Sport review // Has reliability improved?",
+     "channel": "Motormouth",
+     "views": 210294
+    },
+    {
+     "id": "0qx9YXrYHH4",
+     "title": "LESS THAN £20K!! - SHOULD YOU BUY A RANGE ROVER SPORT IN 2024? THINGS YOU NEED TO KNOW",
+     "channel": "Greg and Craigs Garage",
+     "views": 134885
+    }
+   ],
+   "costs": null
+  }
+ ],
  "buick-encore": [
   {
    "years": [
@@ -63951,6 +65634,5410 @@
      "title": "Review of My 2019 Buick Encore, Reliability & Recalls",
      "channel": "Witchauto",
      "views": 30748
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "lincoln-mkc": [
+  {
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019
+   ],
+   "gen": "2015–2019 Lincoln MKC",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 4193574,
+   "topics": [
+    {
+     "name": "Brakes & ABS",
+     "views": 127081,
+     "n": 2,
+     "best": {
+      "id": "Ie4lvnkK6GY",
+      "title": "How to Put Lincoln MKC MKT MKZ Parking Brake in Maintenance Mode 2017 Others before brake change",
+      "channel": "Al Young Cuda",
+      "views": 71883
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 66018,
+     "n": 2,
+     "best": {
+      "id": "L5cCZMorqHE",
+      "title": "How to Replace Head Light 2015-2019 Lincoln MKC",
+      "channel": "TRQ",
+      "views": 45832
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 57212,
+     "n": 2,
+     "best": {
+      "id": "Q9qF8VGrWRI",
+      "title": "How To Replace The Air Filter On Lincoln MKC 2015-2019 Change, Install Ford Escape Engine Air Intake",
+      "channel": "WorkingWithWimberley",
+      "views": 37980
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 32177,
+     "n": 2,
+     "best": {
+      "id": "1qXQV1OIwxQ",
+      "title": "How to Replace Outside Mirror 2015-2019 Lincoln MKC",
+      "channel": "TRQ",
+      "views": 24133
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 31730,
+     "n": 2,
+     "best": {
+      "id": "-r8ydkAay9Q",
+      "title": "How to Replace Rear Shock 2015-2019 Lincoln MKC",
+      "channel": "TRQ",
+      "views": 24449
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 28151,
+     "n": 2,
+     "best": {
+      "id": "vPkhZr0niQ0",
+      "title": "2016 Lincoln MKC Battery Replacement",
+      "channel": "midwestman78",
+      "views": 24352
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 22382,
+     "n": 2,
+     "best": {
+      "id": "-lpEoiAMJWA",
+      "title": "2018 Lincoln MKC Purge Valve and CV Axle Replacement (Part 1)",
+      "channel": "Dan's Auto Diagnostics And Repair",
+      "views": 20023
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 9138,
+     "n": 3,
+     "best": {
+      "id": "ge_P5wUYX7g",
+      "title": "How to Open the Hood on a Lincoln MKC (2015–2019) 🔧 Step-by-Step Guide",
+      "channel": "Clay Auto",
+      "views": 5004
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "3QVytybT1xE",
+     "title": "2015 Lincoln MKC Common Problems and Recalls. Should you buy it?",
+     "channel": "MaxTheCarGuy",
+     "views": 27254
+    },
+    {
+     "id": "PH0CEY8Lr7w",
+     "title": "2017 Lincoln MKC - Review and Road Test",
+     "channel": "Kelley Blue Book",
+     "views": 310255
+    },
+    {
+     "id": "bSclzRCO6AA",
+     "title": "2015 Lincoln MKC First Drive Review in TFL 4K: Is Lincoln Back?",
+     "channel": "The Fast Lane Car",
+     "views": 138488
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "infiniti-qx60": [
+  {
+   "years": [
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ],
+   "gen": "2013–2020 Infiniti QX60",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 9164617,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 172213,
+     "n": 6,
+     "best": {
+      "id": "9kCtTAzGeNk",
+      "title": "2016 INFINITI QX60 HEV- Key Remote Battery Replacement",
+      "channel": "INFINITI USA",
+      "views": 50288
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 131032,
+     "n": 2,
+     "best": {
+      "id": "mlXdXW0dTTg",
+      "title": "Infiniti QX60 Cabin Air Filter Replacement ( 2014 2015 2016 2017 2018 2019 2020 2021 )",
+      "channel": "Undercar Experts",
+      "views": 117946
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 95645,
+     "n": 2,
+     "best": {
+      "id": "es6f74e-q1Y",
+      "title": "2013-2020 Infiniti QX60 3.5L spark plug replacement.",
+      "channel": "Rust Belt Auto",
+      "views": 78617
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 79465,
+     "n": 2,
+     "best": {
+      "id": "hemvVx9eP5U",
+      "title": "Reset Oil Life on Your 2016-2020 Infiniti QX60 FAST!",
+      "channel": "Axtuo Ax",
+      "views": 58018
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 26947,
+     "n": 1,
+     "best": {
+      "id": "JJ95V8BQQg0",
+      "title": "How to replace your 2013-2021 Infiniti QX60 side view mirror | ReveMoto",
+      "channel": "ReveMoto - Pre-Painted Auto Body Parts",
+      "views": 26947
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 23847,
+     "n": 2,
+     "best": {
+      "id": "9Nlb9FjYT1s",
+      "title": "2020 Infiniti QX60 CVT Transmission Fluid Change DIY",
+      "channel": "Murray's Mobile Mechanic",
+      "views": 12673
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 15619,
+     "n": 1,
+     "best": {
+      "id": "7FIBf-OjYHk",
+      "title": "2014 Infiniti Qx60 Transfer Case 3.5l making noise and leaking fluid warranty inspection Karcheckz",
+      "channel": "Karcheckz Atlanta Inspections",
+      "views": 15619
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 12457,
+     "n": 1,
+     "best": {
+      "id": "ld1fOnmNQ4o",
+      "title": "2020 infinity qx60 with a misfire p0302. dealer quoted a $27k engine!!!",
+      "channel": "G Auto Repair",
+      "views": 12457
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "uJjn6AXfS8o",
+     "title": "2019 Infiniti QX60 Problems, Pros and Cons. Should you buy it?",
+     "channel": "MaxTheCarGuy",
+     "views": 25818
+    },
+    {
+     "id": "at2W9O3Rt5c",
+     "title": "how to troubleshoot headlight problems - 2014 Infiniti qx60 - ballast replacement",
+     "channel": "the markitos",
+     "views": 15528
+    },
+    {
+     "id": "dzeP_jx__OM",
+     "title": "2015 Audi Allroad vs Infiniti QX60 Mashup Snowy AWD Review in TFL4K",
+     "channel": "The Fast Lane Car",
+     "views": 276538
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2022–2025 Infiniti QX60",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 7487649,
+   "topics": [
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 12200,
+     "n": 1,
+     "best": {
+      "id": "-kd41VanrZE",
+      "title": "How To Remove/Replace 2022-2025 Infiniti QX60 Cabin Air Filter.",
+      "channel": "Rich Ideates",
+      "views": 12200
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 6658,
+     "n": 1,
+     "best": {
+      "id": "uMRmU9B69YA",
+      "title": "2023 INFINITI QX60 - Intelligent Key Remote Battery Replacement",
+      "channel": "INFINITI USA",
+      "views": 6658
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 6435,
+     "n": 1,
+     "best": {
+      "id": "NUUb2ZTCyqY",
+      "title": "Brake Replacement Made EASY on 2013-2025 Infiniti QX60!",
+      "channel": "Axtuo Ax",
+      "views": 6435
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 5954,
+     "n": 1,
+     "best": {
+      "id": "3BDTXPXXunc",
+      "title": "What changed in the 2025 INFINITI QX60 SENSORY?",
+      "channel": "Vagabond Builds",
+      "views": 5954
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "pDudhsrzH3s",
+     "title": "2024 Infiniti QX60 Autograph -- Should you Buy THIS or the Acura MDX??",
+     "channel": "Car Confections",
+     "views": 135379
+    },
+    {
+     "id": "fe5qrsRS4rw",
+     "title": "2022 Nissan Pathfinder vs 2022 Infiniti QX60 Which One Should You Buy?",
+     "channel": "Cars Unlocked",
+     "views": 45046
+    },
+    {
+     "id": "3PVqJM2OJV8",
+     "title": "Infiniti's Mastered Luxury Design! 2022 Infiniti QX60 REVIEW | Buyer's Guide | MotorTrend",
+     "channel": "MotorTrend Channel",
+     "views": 20187
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "chevrolet-uplander": [
+  {
+   "years": [
+    2005,
+    2006,
+    2007,
+    2008,
+    2009
+   ],
+   "gen": "2005–2009 Chevrolet Uplander",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 3741828,
+   "topics": [
+    {
+     "name": "Transmission & shifter",
+     "views": 194756,
+     "n": 5,
+     "best": {
+      "id": "eDeVKhnt1Gs",
+      "title": "2008 Chevrolet Uplander Transmission Flush",
+      "channel": "Don Smith",
+      "views": 90081
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 189406,
+     "n": 11,
+     "best": {
+      "id": "ZkPNe4jmpZ4",
+      "title": "Brief 2007 Chevy Uplander Info with ABS issue",
+      "channel": "Turbo231",
+      "views": 95196
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 150902,
+     "n": 10,
+     "best": {
+      "id": "Zf6Hrgtbb2g",
+      "title": "2005 uplander battery replacement and diag for charging system alternator test",
+      "channel": "D Sweet Designs",
+      "views": 33069
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 148098,
+     "n": 5,
+     "best": {
+      "id": "gSbrpaIrGUk",
+      "title": "2005 Chevy Uplander 3.5L bad water pump.",
+      "channel": "Fixers Automotive",
+      "views": 59895
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 105235,
+     "n": 5,
+     "best": {
+      "id": "-XLVb5dX8FY",
+      "title": "2005 Chevy Uplander Strut Replacement",
+      "channel": "travisgrindal",
+      "views": 59558
+     }
+    },
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 81937,
+     "n": 3,
+     "best": {
+      "id": "VX7FQ4zztAs",
+      "title": "Fix It Right! :: Intake Manifold Gaskets - 2005 Chevy Uplander 3 5L :: Part ONE",
+      "channel": "OneSourceAutomotive",
+      "views": 55702
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 52035,
+     "n": 3,
+     "best": {
+      "id": "VfAIXXXBuyA",
+      "title": "2007 Chev Uplander Door Lock Repair - Doors won't Lock",
+      "channel": "imabushwacker",
+      "views": 27782
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 45787,
+     "n": 3,
+     "best": {
+      "id": "xw4x2AM2K2c",
+      "title": "2006 Uplander 3.5L Electrical Problem - Dans",
+      "channel": "Dan Woods",
+      "views": 28864
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "rXwCgyK7kis",
+     "title": "2008 Uplander Power Sliding Door problems",
+     "channel": "Don Smith",
+     "views": 66056
+    },
+    {
+     "id": "wgeFQHgUVbM",
+     "title": "2005-09 Chev Uplander Headlamp Change and a few other problems along the way!!!!",
+     "channel": "Quebec Garage",
+     "views": 3020
+    },
+    {
+     "id": "Hv507krevSg",
+     "title": "2008 Chevrolet Uplander LT Review, Start up and Walkaround",
+     "channel": "Justins Car Reviews",
+     "views": 149249
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "ford-transit-connect": [
+  {
+   "years": [
+    2010,
+    2011,
+    2012,
+    2013
+   ],
+   "gen": "2010–2013 Ford Transit Connect",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 7468341,
+   "topics": [
+    {
+     "name": "Transmission & shifter",
+     "views": 239289,
+     "n": 6,
+     "best": {
+      "id": "RwC-UyXqVww",
+      "title": "How to Replace Transmission Shift Solenoid 2010-2013 Ford Transit Connect",
+      "channel": "TRQ",
+      "views": 146621
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 159058,
+     "n": 6,
+     "best": {
+      "id": "6VOWP1ul2kY",
+      "title": "How to Replace Lower Ball Joint 2010-2013 Ford Transit Connect",
+      "channel": "TRQ",
+      "views": 41038
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 157141,
+     "n": 4,
+     "best": {
+      "id": "n9fwXiJmAFA",
+      "title": "How to Replace Cylinder Temperature Sensor 2010-2013 Ford Transit Connect",
+      "channel": "TRQ",
+      "views": 88774
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 145633,
+     "n": 4,
+     "best": {
+      "id": "GtdWi1GY4nU",
+      "title": "How to Replace Rear Brake Drum and Shoes 2010-2013 Ford Transit Connect",
+      "channel": "TRQ",
+      "views": 78836
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 134477,
+     "n": 6,
+     "best": {
+      "id": "xgyYNbx_JyQ",
+      "title": "How to Replace Blower Motor Resistor 2010-2013 Ford Transit Connect",
+      "channel": "TRQ",
+      "views": 42470
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 130781,
+     "n": 4,
+     "best": {
+      "id": "_iLKNm8_CUw",
+      "title": "How to Replace Starter 2010-2013 Ford Transit Connect",
+      "channel": "TRQ",
+      "views": 60050
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 126113,
+     "n": 3,
+     "best": {
+      "id": "OEa-S6R_G8U",
+      "title": "How to Replace Front Driver's Side CV Axle 2010-2013 Ford Transit Connect",
+      "channel": "TRQ",
+      "views": 76529
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 99368,
+     "n": 2,
+     "best": {
+      "id": "vtG1SywJvHk",
+      "title": "How to Replace Drive Belt Component Kit 2010-2013 Ford Transit Connect 2.0L",
+      "channel": "TRQ",
+      "views": 97251
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "XLJ3fo2HpNk",
+     "title": "Top 5 Problems Ford Transit Connect Van 2010-2013 1st Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 366156
+    },
+    {
+     "id": "rwKTQnPNw38",
+     "title": "Ford Transit Connect Review & Buyers' Guide 2011",
+     "channel": "VansA2Z",
+     "views": 47997
+    },
+    {
+     "id": "Iz8O4gtIzR4",
+     "title": "2010-2013 Ford Transit Connect transmission problems",
+     "channel": "Angelo handyman",
+     "views": 32263
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023
+   ],
+   "gen": "2014–2023 Ford Transit Connect",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 9380714,
+   "topics": [
+    {
+     "name": "Transmission & shifter",
+     "views": 136352,
+     "n": 5,
+     "best": {
+      "id": "IJ_85pJX-ZM",
+      "title": "How to drain and refill transmission fluid on a 2020 Ford Transit Connect (the small Ford Transit)",
+      "channel": "In Your Driveway Auto",
+      "views": 55462
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 116179,
+     "n": 4,
+     "best": {
+      "id": "HqDai1rGUwY",
+      "title": "2016 Ford Transit Connect battery replacement in under 9 minutes!",
+      "channel": "About a van",
+      "views": 43367
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 65981,
+     "n": 3,
+     "best": {
+      "id": "lwUsbjgeQS4",
+      "title": "2014-2019 Ford Transit Connect Cargo XLT LWB Upfit - HVAC, plumber, electrician service truck",
+      "channel": "Fox Air And Heat Inc",
+      "views": 47727
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 62285,
+     "n": 1,
+     "best": {
+      "id": "O_BuAxVr8Ls",
+      "title": "Ford Transit connect service light reset 2021 model",
+      "channel": "Kennedy’s garage",
+      "views": 62285
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 50462,
+     "n": 3,
+     "best": {
+      "id": "z5UhNf5PcfQ",
+      "title": "2017 Ford Transit Connect drivers door latch replacement",
+      "channel": "TCCustoms",
+      "views": 21711
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 43700,
+     "n": 3,
+     "best": {
+      "id": "BE06lHU1Y7c",
+      "title": "2014 + FORD TRANSIT CONNECT STRUT ASSEMBLY REPLACEMENT",
+      "channel": "PANDYDIY",
+      "views": 23561
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 42028,
+     "n": 2,
+     "best": {
+      "id": "3Nxb8BL-h0M",
+      "title": "2019 Ford Transit Connect rear brake pads and rotors replacement",
+      "channel": "Jabo The Mechanic",
+      "views": 34770
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 30159,
+     "n": 2,
+     "best": {
+      "id": "49uc1nc5DRE",
+      "title": "2019 & 2020 Ford Transit Connect Oil Change 2.0L",
+      "channel": "Bent and Broken",
+      "views": 22282
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "KIGvfmciE44",
+     "title": "Ford Transit Connect Recalls and Problems | 2nd Generation, 2014-2023 [Buyers + Owners BEWARE]",
+     "channel": "CashedOutCars",
+     "views": 114287
+    },
+    {
+     "id": "MaaDYrLNPzc",
+     "title": "2022 Ford Transit Connect Wagon XLT Buyers Guide and Info",
+     "channel": "INFINITI of Tacoma at Fife",
+     "views": 24645
+    },
+    {
+     "id": "PcB1WORs9NI",
+     "title": "2015 Ram ProMaster City vs Ford Transit Connect vs Nissan NV200 Matchup Van Review",
+     "channel": "The Fast Lane Truck",
+     "views": 512092
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "kia-seltos": [
+  {
+   "years": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2021–2025 Kia Seltos",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 24653873,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 161632,
+     "n": 2,
+     "best": {
+      "id": "b47WaKZFE7s",
+      "title": "CK - 2021 KIA Seltos - How To Emergency Start When Smart Fob Battery Dies!",
+      "channel": "Cardinal Kia",
+      "views": 87459
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 83683,
+     "n": 1,
+     "best": {
+      "id": "sjsYPrA0Y7E",
+      "title": "First Oil Change in the TE VIDEOS Garage | 2022 Kia Seltos (Finally…)",
+      "channel": "TE VIDEOS",
+      "views": 83683
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 32973,
+     "n": 1,
+     "best": {
+      "id": "59lYvPOcb74",
+      "title": "CK - 2022 Kia Seltos - How To Use Your Electronic Parking Brake w/ Auto Hold!",
+      "channel": "Cardinal Kia",
+      "views": 32973
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "MtvPwDKU0BU",
+     "title": "Most IRRITATING Things About KIA SELTOS 2023 | PROBLEMS | RJ Rishi Kapoor #kia #seltos #cars",
+     "channel": "Paisa Tera Baap Dega",
+     "views": 88775
+    },
+    {
+     "id": "SpoWNiBFT1I",
+     "title": "Kia Seltos X-Line 2025: Should you buy one? | #MotorIncView",
+     "channel": "MotorInc",
+     "views": 43393
+    },
+    {
+     "id": "65ZqHvnZV4g",
+     "title": "2023 Kia Seltos Facelift Exterior & Interior Walkaround",
+     "channel": "The Mount",
+     "views": 2694757
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "toyota-c-hr": [
+  {
+   "years": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022
+   ],
+   "gen": "2018–2022 Toyota C-HR",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 198,
+   "views": 33736943,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 302435,
+     "n": 3,
+     "best": {
+      "id": "veN852K_BiA",
+      "title": "Reset Oil Life on Your 2018-2025 Toyota C-HR in SECONDS!",
+      "channel": "Axtuo Ax",
+      "views": 129926
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 201746,
+     "n": 1,
+     "best": {
+      "id": "dWXvMSSoLqg",
+      "title": "Reset The Maintenance Required Light 2017-2020 Toyota C-HR",
+      "channel": "Jimthecarguy",
+      "views": 201746
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 150565,
+     "n": 4,
+     "best": {
+      "id": "B7LfZfs4blY",
+      "title": "Check Charging System And Install Battery 2018 Toyota CHR",
+      "channel": "Jimthecarguy",
+      "views": 61339
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 130441,
+     "n": 2,
+     "best": {
+      "id": "2wXgsKA9Z2A",
+      "title": "How To Enter & Exit Service Brake Mode 2018 Toyota C-HR",
+      "channel": "Jimthecarguy",
+      "views": 110296
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 126746,
+     "n": 4,
+     "best": {
+      "id": "gl_XoWwPehI",
+      "title": "CHR Transmission Fluid | Part 1 | Toyota 2021 How to replace | 30,000 miles",
+      "channel": "CHR MAINTENANCE",
+      "views": 55402
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 34229,
+     "n": 1,
+     "best": {
+      "id": "hw98QP7Fddc",
+      "title": "2020 Toyota CHR Front Door Trim Removal",
+      "channel": "Tintopia Window Tinting",
+      "views": 34229
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "ZqeZQ_p9WcI",
+     "title": "Should you BUY the updated 2020 Toyota C-HR?",
+     "channel": "Raiti's Rides",
+     "views": 400123
+    },
+    {
+     "id": "OwH5V_vK6ms",
+     "title": "2021 Nissan Kicks vs 2021 Toyota CHR Which One Should You Buy?",
+     "channel": "Cars Unlocked",
+     "views": 75080
+    },
+    {
+     "id": "mZi3gP3A_lc",
+     "title": "2021 Toyota C-HR Video Review: MotorTrend Buyer's Guide",
+     "channel": "MotorTrend Channel",
+     "views": 54534
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "infiniti-g37": [
+  {
+   "years": [
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013
+   ],
+   "gen": "2008–2013 Infiniti G37",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 11012047,
+   "topics": [
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 336285,
+     "n": 3,
+     "best": {
+      "id": "L7zogXmU46Q",
+      "title": "2008-2013 Infiniti G37 S No start problem solve",
+      "channel": "Ainoy S",
+      "views": 310602
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 300321,
+     "n": 4,
+     "best": {
+      "id": "HhW6PNN9Jag",
+      "title": "How to Reset ECU on 2008-2013 Infiniti G37 M37 FX37",
+      "channel": "clark xiong",
+      "views": 251433
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 261469,
+     "n": 3,
+     "best": {
+      "id": "bSibvysJ_4g",
+      "title": "Infiniti G37 2008-2013 Oil and Filter Light Reset",
+      "channel": "Skelton and Co.",
+      "views": 98479
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 247317,
+     "n": 4,
+     "best": {
+      "id": "T8eKZVQOpN8",
+      "title": "2008-2009-2010-2011-2012-2013 Infiniti G37 water pump replacement and timing marks",
+      "channel": "Fatih Bdr",
+      "views": 157525
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 134084,
+     "n": 3,
+     "best": {
+      "id": "J5cjSnrXrGc",
+      "title": "How To Get Your Infiniti 2010 G37 Out Of ParK If Battery Is Dead or The Vehicle Want Start",
+      "channel": "Welding and stuff",
+      "views": 62665
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 75491,
+     "n": 5,
+     "best": {
+      "id": "TEkAPh6qAEw",
+      "title": "How to Replace Cabin Air Filter 2008-2013 INFINITI G37",
+      "channel": "TRQ",
+      "views": 28730
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 46516,
+     "n": 2,
+     "best": {
+      "id": "urwC9JCx72g",
+      "title": "How to Replace Camshaft Position Sensor 2008-2013 INFINITI G37",
+      "channel": "TRQ",
+      "views": 27268
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 41735,
+     "n": 1,
+     "best": {
+      "id": "eN0Zo6REFNM",
+      "title": "How to Replace Spark Plugs 2008-2013 INFINITI G37 3.7L V6",
+      "channel": "TRQ",
+      "views": 41735
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "W11UzEu3m2Y",
+     "title": "Top 5 Problems Infiniti G37 Sedan 2008-2013 4th Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 71479
+    },
+    {
+     "id": "GtbbteJSqQk",
+     "title": "2008 INFINITI G37 Coupe 6 Speed Buyers Guide and Demo Drive!!",
+     "channel": "INFINITI of Tacoma at Fife",
+     "views": 28068
+    },
+    {
+     "id": "m5nkc-TVKw8",
+     "title": "2013 INFINITI G37 Convertible Buyers Guide and Info",
+     "channel": "INFINITI of Tacoma at Fife",
+     "views": 18341
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "land-rover-discovery": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004
+   ],
+   "gen": "1999–2004 Land Rover Discovery",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 4830150,
+   "topics": [
+    {
+     "name": "Timing chain & engine",
+     "views": 211864,
+     "n": 1,
+     "best": {
+      "id": "h_TCZ9P_QFM",
+      "title": "Buying a used Land Rover Discovery 3, 4 - LR3, LR4 (L319) 2004-2016 Buying guide with common issues",
+      "channel": "different car review",
+      "views": 211864
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 158826,
+     "n": 2,
+     "best": {
+      "id": "fmzyynPOs-E",
+      "title": "How to Service the cooling system on the Land Rover Discovery 2004 to 2009",
+      "channel": "Haynes Manuals",
+      "views": 134452
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 51358,
+     "n": 3,
+     "best": {
+      "id": "5l4pfS7QgP0",
+      "title": "2004 Land Rover Discovery II how to free unstick rear door latch",
+      "channel": "Randy's Laboratory",
+      "views": 26758
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 30160,
+     "n": 2,
+     "best": {
+      "id": "iW3KPWgnOek",
+      "title": "2000 Land Rover Discovery II - Replacing Alternator, Flashing Odometer",
+      "channel": "This Week With Cars",
+      "views": 24313
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 25201,
+     "n": 3,
+     "best": {
+      "id": "RboXw5ujFDI",
+      "title": "2004 Land Rover Discovery - Coolant Leak",
+      "channel": "Bob Maucher",
+      "views": 19745
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 7820,
+     "n": 1,
+     "best": {
+      "id": "vz8U-nDqU5k",
+      "title": "1999 Land Rover Discovery high idle, vacuum leaks",
+      "channel": "popeyonsote",
+      "views": 7820
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 1277,
+     "n": 1,
+     "best": {
+      "id": "dmh1zUXeUHg",
+      "title": "How to Add Transmission Fluid on Land Rover Discovery 2 1999 2000 2001 2002 2003 2004 ZF 4HP22/24",
+      "channel": "Auto Repair Guys",
+      "views": 1277
+     }
+    },
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 561,
+     "n": 1,
+     "best": {
+      "id": "93PKKCjKim0",
+      "title": "Fixing the Oil Leak on the 2003 Land Rover Discovery 2… Definitely Concerning",
+      "channel": "Rio Penn-Grice",
+      "views": 561
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "-gayaP2bdxg",
+     "title": "How can such a simple repair cause huge problems on this '99 Land Rover Discovery? CAR WIZARD knows",
+     "channel": "Car Wizard",
+     "views": 350386
+    },
+    {
+     "id": "jrjBdGIIbAk",
+     "title": "2000 Land Rover Discovery Series II V8 SE7 Review & Test Drive",
+     "channel": "Auto Ad Builder",
+     "views": 183235
+    },
+    {
+     "id": "WjysgcdL6rg",
+     "title": "Watch This Before Buying a Land Rover LR3 2004-2009",
+     "channel": "AutoMotivate",
+     "views": 160706
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2005,
+    2006,
+    2007,
+    2008,
+    2009
+   ],
+   "gen": "2005–2009 Land Rover Discovery",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 197,
+   "views": 14859446,
+   "topics": [
+    {
+     "name": "Steering & suspension",
+     "views": 1350698,
+     "n": 11,
+     "best": {
+      "id": "rVT4KKjOo4c",
+      "title": "Land Rover Discovery 3 & 4 Air Suspension fault & relay replacement LR3 / LR4",
+      "channel": "powerfulukltd",
+      "views": 480719
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 457521,
+     "n": 6,
+     "best": {
+      "id": "ipzjoeLZnq8",
+      "title": "Replace Height Sensor - Range Rover Sport or LR3 (2005-2009)",
+      "channel": "Hazy",
+      "views": 215025
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 167914,
+     "n": 5,
+     "best": {
+      "id": "awZzcE-LwRc",
+      "title": "Land Rover LR3 Complete Transmission Service 6HP26 - Ep. 3",
+      "channel": "Waffle Square",
+      "views": 109445
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 165601,
+     "n": 3,
+     "best": {
+      "id": "fmzyynPOs-E",
+      "title": "How to Service the cooling system on the Land Rover Discovery 2004 to 2009",
+      "channel": "Haynes Manuals",
+      "views": 134452
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 118618,
+     "n": 2,
+     "best": {
+      "id": "izr2tYdf9co",
+      "title": "This Simple Trick Saved Me $$ HUNDREDS $$ - Land Rover LR3 Door Lock 5 Min Repair! (Not Clickbait!)",
+      "channel": "Addicted Motors",
+      "views": 104859
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 107504,
+     "n": 3,
+     "best": {
+      "id": "-dPaFnFw2zc",
+      "title": "DISCOVERY 3 / LR3: Radio volume not working, silent or broken? This Land Rover hack costs nothing!",
+      "channel": "Weekend Warrior",
+      "views": 78531
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 96954,
+     "n": 3,
+     "best": {
+      "id": "s0DEsPNO034",
+      "title": "Long Cranking fixed - Fixed Fuel Pump - Land Rover LR3 / S5-E31",
+      "channel": "LR TIME",
+      "views": 73713
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 83629,
+     "n": 1,
+     "best": {
+      "id": "slEQgnqjiWw",
+      "title": "2006 Land Rover lr3 transmission fault and all dash lights on fix problem also a no start",
+      "channel": "Emanuel Estupinan",
+      "views": 83629
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "1o3suMRXUgI",
+     "title": "Should You Buy a LAND ROVER DISCOVERY 3? (LR3 TEST DRIVE & REVIEW)",
+     "channel": "High Peak Autos",
+     "views": 860883
+    },
+    {
+     "id": "LWKdJ1rAljg",
+     "title": "Discovery LR3 - 3 Main Problems",
+     "channel": "RSW Solutions",
+     "views": 466058
+    },
+    {
+     "id": "VGP0zkf_nUw",
+     "title": "Land Rover Discovery 3 / LR3 - Typical Problems And Why We Love It / S1-Ep2",
+     "channel": "LR TIME",
+     "views": 174528
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016
+   ],
+   "gen": "2010–2016 Land Rover Discovery",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 198,
+   "views": 15823584,
+   "topics": [
+    {
+     "name": "Timing chain & engine",
+     "views": 382272,
+     "n": 6,
+     "best": {
+      "id": "h_TCZ9P_QFM",
+      "title": "Buying a used Land Rover Discovery 3, 4 - LR3, LR4 (L319) 2004-2016 Buying guide with common issues",
+      "channel": "different car review",
+      "views": 211864
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 257576,
+     "n": 1,
+     "best": {
+      "id": "9XCJ6BU-Z9o",
+      "title": "How to (and not to) check oil level on Land Rover Discovery 4 LR4",
+      "channel": "powerfulukltd",
+      "views": 257576
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 100424,
+     "n": 3,
+     "best": {
+      "id": "vj9cWabg2TM",
+      "title": "2015 Landrover LR4 Battery Problem",
+      "channel": "Ozzy's Auto Repair",
+      "views": 41930
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 70535,
+     "n": 2,
+     "best": {
+      "id": "flS3T_Vm3y8",
+      "title": "Land Rover LR4 Coolant Leak Repair",
+      "channel": "Dell-de-Lall",
+      "views": 59846
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 43994,
+     "n": 2,
+     "best": {
+      "id": "P4U1Rfkgt4w",
+      "title": "Air Suspension Problem? Try This CHEAP Fix! Land Rover Discovery 4 / LR4",
+      "channel": "notthatkindofachannel",
+      "views": 38946
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 16120,
+     "n": 1,
+     "best": {
+      "id": "W4jFV2QVW2Q",
+      "title": "How Changing Transfer Case Fluid Can Save Your LR4",
+      "channel": "notthatkindofachannel",
+      "views": 16120
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 7888,
+     "n": 1,
+     "best": {
+      "id": "tap0ZvuZw7c",
+      "title": "Range rover, LR3 and LR4 brake, ABS, transmission, warning lights suspension drops. Free solution.",
+      "channel": "Land Rover",
+      "views": 7888
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "b0oG1Da7kK0",
+     "title": "How to diagnose central locking problems on a Land Rover Discovery 3/4 LR3 LR4",
+     "channel": "powerfulukltd",
+     "views": 189828
+    },
+    {
+     "id": "MyBWYzL1KUA",
+     "title": "Is It REALLY That Bad? Land Rover LR4 Ultimate Buyers Guide!",
+     "channel": "The Fast Lane Car",
+     "views": 68914
+    },
+    {
+     "id": "KRr44sPjVCI",
+     "title": "LR4 Timing Chain Problems - The Land Rover Achilles Heel",
+     "channel": "Lost Cause Ranch",
+     "views": 66939
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2017–2025 Land Rover Discovery",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 18501225,
+   "topics": [
+    {
+     "name": "Brakes & ABS",
+     "views": 112724,
+     "n": 2,
+     "best": {
+      "id": "YPZZFx6XcRM",
+      "title": "2017 Land Rover Discovery Electronic parking brake maintenance mode.",
+      "channel": "The Offroading Mechanic",
+      "views": 82393
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 28792,
+     "n": 1,
+     "best": {
+      "id": "1TcMtxdrOdA",
+      "title": "How To Replace Land Rover Discovery Key Fob Battery 2015 - 2018 Change Discovery Remote Batteries",
+      "channel": "PYR Automotive ",
+      "views": 28792
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 17902,
+     "n": 1,
+     "best": {
+      "id": "Eh9K2tgt03Y",
+      "title": "2017–2021 Land Rover Discovery Low Coolant Light Fix — Quick, No-Tools Check!",
+      "channel": "Green Castle Garage",
+      "views": 17902
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "I9dPkcGJEKM",
+     "title": "Should You Buy a Land Rover DISCOVERY 5? (Test Drive & Review 2019 3.0SDV6)",
+     "channel": "High Peak Autos",
+     "views": 512544
+    },
+    {
+     "id": "RY67VXU3T04",
+     "title": "Land Rover Discovery 5 Buyer’s Guide (2017-2025) Common faults and reliability (LR Disco 5)",
+     "channel": "The Miles Driven",
+     "views": 97614
+    },
+    {
+     "id": "icjs76DhxvY",
+     "title": "Should you buy a 3.0 SDV6 Land Rover Discovery 5? (2017 HSE Model, Test Drive & Review)",
+     "channel": "James of Condor",
+     "views": 28348
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "cadillac-dts": [
+  {
+   "years": [
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011
+   ],
+   "gen": "2006–2011 Cadillac DTS",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 6788556,
+   "topics": [
+    {
+     "name": "Cooling system",
+     "views": 169762,
+     "n": 4,
+     "best": {
+      "id": "OO6LnxstK3Q",
+      "title": "2008 Cadillac dts water pump removal SPOILER ALERT ITS A NIGHTMARE",
+      "channel": "Watch Jeremy Work",
+      "views": 84468
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 167569,
+     "n": 5,
+     "best": {
+      "id": "hJsnb3DCr8Y",
+      "title": "2006-2011 Cadillac DTS repair service suspension message",
+      "channel": "home Donald Trump all day",
+      "views": 64513
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 144176,
+     "n": 3,
+     "best": {
+      "id": "0crymvHKKBg",
+      "title": "2006 Cadillac DTS - How to replace spark plugs",
+      "channel": "Froztinc",
+      "views": 72852
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 105209,
+     "n": 2,
+     "best": {
+      "id": "opOfNsdHA2g",
+      "title": "How to Replace Temperature Blend Door Actuator 2006-2011 Cadillac DTS",
+      "channel": "TRQ",
+      "views": 61140
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 100694,
+     "n": 5,
+     "best": {
+      "id": "FTreY6b4KmQ",
+      "title": "How to Replace Bank 1 Sensor 1 Upstream O2 Oxygen Sensor 2006-2011 Cadillac DTS",
+      "channel": "TRQ",
+      "views": 47480
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 76608,
+     "n": 4,
+     "best": {
+      "id": "RCE-wtB-bnI",
+      "title": "How to Replace High Mount Third Brake Light 2006-2011 Cadillac DTS",
+      "channel": "TRQ",
+      "views": 23624
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 74113,
+     "n": 3,
+     "best": {
+      "id": "45zF7ztLskU",
+      "title": "How To Replace Window Regulator 2006-2011 Cadillac DTS",
+      "channel": "TRQ",
+      "views": 31782
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 54487,
+     "n": 2,
+     "best": {
+      "id": "LHcVsfKakik",
+      "title": "How to Replace Serpentine Belt Tensioner 2006-2011 Cadillac DTS",
+      "channel": "TRQ",
+      "views": 29003
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "S9YZ7kGOz6Y",
+     "title": "Top 5 Problems Cadillac DTS Sedan 1st Generation 2006-2011",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 277885
+    },
+    {
+     "id": "ZjrhTdxCZI4",
+     "title": "2007 CADILLAC DTS 4.6L (LD8), CRUISE CONTROL PROBLEMS (VERY EASY)",
+     "channel": "PAULY'S AUTO",
+     "views": 9365
+    },
+    {
+     "id": "Cj66N_OhJf8",
+     "title": "2011 Cadillac DTS Hearse (Halloween Special) Start Up, Exhaust, and In Depth Review",
+     "channel": "Saabkyle04",
+     "views": 447571
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "nissan-kicks": [
+  {
+   "years": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+   ],
+   "gen": "2018–2024 Nissan Kicks",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 15872018,
+   "topics": [
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 128102,
+     "n": 2,
+     "best": {
+      "id": "ILvwmiWaP-g",
+      "title": "Nissan Kicks (2018-2024): Cabin Air Filter Replacement. Air Flow Direction Explained!",
+      "channel": "Morozov Automotive",
+      "views": 67943
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 113888,
+     "n": 2,
+     "best": {
+      "id": "5nM2Y0DRVzQ",
+      "title": "2018 - 2021 Nissan Kicks Key Fob Battery Replacement - How To Replace Change Kicks Remote Batteries",
+      "channel": "PYR Automotive ",
+      "views": 95348
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 69093,
+     "n": 1,
+     "best": {
+      "id": "hKd-qh-oeoc",
+      "title": "How to Change Transmission Fluid/Filter 2019-2021 Nissan Kicks/Cars without Transmission dipstick",
+      "channel": "AliMECH",
+      "views": 69093
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 35508,
+     "n": 1,
+     "best": {
+      "id": "v3TGNL36jRQ",
+      "title": "How to change Engine OIL on 2021 Nissan Kicks/How to reset scheduled maintenance on Nissan Kicks",
+      "channel": "AliMECH",
+      "views": 35508
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 29917,
+     "n": 1,
+     "best": {
+      "id": "pAZN3_leFxM",
+      "title": "Clean or Replace MAF Sensor on Nissan Kicks (2018-2024) | Fix Stalling & Rough Idle",
+      "channel": "Espanglish Garage",
+      "views": 29917
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 29642,
+     "n": 1,
+     "best": {
+      "id": "wHdq2DAVBWc",
+      "title": "2018 Nissan Kicks Won't Crank no start Issue...1 Click...Fixed...",
+      "channel": "Peter L",
+      "views": 29642
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "OwH5V_vK6ms",
+     "title": "2021 Nissan Kicks vs 2021 Toyota CHR Which One Should You Buy?",
+     "channel": "Cars Unlocked",
+     "views": 75080
+    },
+    {
+     "id": "S1tnXzG_zp0",
+     "title": "2020 Nissan Kicks E-Power Review : Kicks Ass or Ass-Kicked? - CarBuyer.com.sg Singapore",
+     "channel": "CarBuyer Singapore",
+     "views": 63157
+    },
+    {
+     "id": "O-8LEJCb0R4",
+     "title": "2023 Nissan Kicks Review | Behind the Wheel",
+     "channel": "AutoDeal.com.ph",
+     "views": 682365
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2025
+   ],
+   "gen": "2025 Nissan Kicks",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 129,
+   "views": 5886611,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 10374,
+     "n": 1,
+     "best": {
+      "id": "HrdsehdcCmk",
+      "title": "2025 Nissan kicks sr oil change",
+      "channel": "small engine guys",
+      "views": 10374
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 3015,
+     "n": 2,
+     "best": {
+      "id": "yteKseUl49I",
+      "title": "2025-2027 Nissan Kicks Cabin Air Filter Replacement | Filter Location & DIY Install",
+      "channel": "Oil Light Reset ",
+      "views": 2666
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 600,
+     "n": 1,
+     "best": {
+      "id": "pDGGHtSsFhw",
+      "title": "2021 to 2025 Nissan kicks cylinder 2 MisFire replace ignition coil $50",
+      "channel": "RB The Mechanic",
+      "views": 600
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 135,
+     "n": 1,
+     "best": {
+      "id": "xDSRLzguNdQ",
+      "title": "Nissan Kicks 2nd Gen (2025-Up) Roof Rack Cross Bars | Bare Roof & Flush Rail Showcase",
+      "channel": "Roof Rack Rail",
+      "views": 135
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "ztWmYr7wCfk",
+     "title": "Should You Buy a 2025 Nissan Kicks? Thorough Review By A Mechanic",
+     "channel": "The Car Care Nut Reviews",
+     "views": 357353
+    },
+    {
+     "id": "gOFiWNfp2QE",
+     "title": "2025 Nissan Kicks S vs 2025 Nissan Kicks SV Comparison | Which one Should you Buy?",
+     "channel": "Cars Unlocked",
+     "views": 85584
+    },
+    {
+     "id": "K3RuUZkrz4Y",
+     "title": "2025 Nissan Kicks vs Nissan Kicks Play Review and Comparison WHICH ONE SHOULD YOU BUY?",
+     "channel": "Cars Unlocked",
+     "views": 43684
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "honda-insight": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006
+   ],
+   "gen": "2000–2006 Honda Insight",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 179,
+   "views": 1569692,
+   "topics": [
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 39521,
+     "n": 6,
+     "best": {
+      "id": "fpvs4pOZdfs",
+      "title": "2001 Honda Insight O2 sensor and P1166 P1167 fix",
+      "channel": "JRobling",
+      "views": 22186
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 37194,
+     "n": 4,
+     "best": {
+      "id": "eLm4efPSQaU",
+      "title": "Honda Insight '00-06 Replacing Coolant Air Burp [_ANNOTATIONS_ VERSION - use Incognito in CHROME]",
+      "channel": "rollthefilmutube",
+      "views": 32987
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 20125,
+     "n": 3,
+     "best": {
+      "id": "04tY0yflL1k",
+      "title": "HONDA INSIGHT HYBRID BATTERY REPAIR RECONDITION REMOVAL INSTALLATION IMA LIGHT 2001 DEEP DISCHARGE",
+      "channel": "Jesse Hoff",
+      "views": 11179
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 13068,
+     "n": 1,
+     "best": {
+      "id": "n9AKp699NT4",
+      "title": "Honda Insight Gen1, 2000-2006, Maintenance Light Reset",
+      "channel": "Scott Kulbeck",
+      "views": 13068
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 11718,
+     "n": 3,
+     "best": {
+      "id": "cEUIZglM9YQ",
+      "title": "How To Rebuild and Repair 2000-2006 Honda Insight 5 Speed Transmission - Modify Synchronyzers",
+      "channel": "Fetch A Wrench",
+      "views": 9145
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 6217,
+     "n": 1,
+     "best": {
+      "id": "uUT5ZkaZVbA",
+      "title": "eBay ECM and Immobilizer bypass into my 2000 Honda Insight IMA Hybrid trying to fix IMMO Misfire",
+      "channel": "Ben Huttash",
+      "views": 6217
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 5669,
+     "n": 1,
+     "best": {
+      "id": "qJF_Nlrm4c4",
+      "title": "2001 Honda Insight spark plug change",
+      "channel": "JRobling",
+      "views": 5669
+     }
+    },
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 3575,
+     "n": 1,
+     "best": {
+      "id": "Bm7gtBovBNM",
+      "title": "2001 Honda Insight new valve cover gasket, clean vtec solenoid, and cam chain tensioner",
+      "channel": "JRobling",
+      "views": 3575
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "f91FzLrY99c",
+     "title": "Battery Problems First Generation Honda Insight 2000-2006 The Mechanic Installed the Cells Backwards",
+     "channel": "Ben Huttash",
+     "views": 2919
+    },
+    {
+     "id": "94pTidwUcDg",
+     "title": "Removing the transmission from a 2001 Honda Insight that I JUST bought. Problems with disassembly! 🙄",
+     "channel": "MikeTheMechanic123",
+     "views": 289
+    },
+    {
+     "id": "cwtTW0n_LEE",
+     "title": "2001 Honda Insight-more MPG problems, original injectors 44 MPG, wrong injectors, 70 MPG???",
+     "channel": "MikeTheMechanic123",
+     "views": 78
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2010,
+    2011,
+    2012,
+    2013,
+    2014
+   ],
+   "gen": "2010–2014 Honda Insight",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 5147850,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 256018,
+     "n": 5,
+     "best": {
+      "id": "B7VnNSssjB4",
+      "title": "Honda Insight TPMS Light Won't Turn Off? Try This (2010 to 2014)",
+      "channel": "RANDOMFIX",
+      "views": 143726
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 238808,
+     "n": 6,
+     "best": {
+      "id": "12I7HxUJho4",
+      "title": "2010-2014 Honda Insight Oil Change",
+      "channel": "NutzAboutBolts",
+      "views": 118136
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 113030,
+     "n": 2,
+     "best": {
+      "id": "CzNcwCsSJSk",
+      "title": "how to remove 2010-2014 Honda Insight radio",
+      "channel": "JJsCarAudio101",
+      "views": 68190
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 93345,
+     "n": 4,
+     "best": {
+      "id": "WhcPFaM9TlM",
+      "title": "2010-2014 Honda Insight Cabin air filter remove and install",
+      "channel": "NutzAboutBolts",
+      "views": 51920
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 22967,
+     "n": 2,
+     "best": {
+      "id": "EkgSVT0SuZ0",
+      "title": "2010-2014 Honda Insight Transmission Fluid Drain and fill plus in line filter change",
+      "channel": "Shane Cordwainer",
+      "views": 16606
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 16853,
+     "n": 2,
+     "best": {
+      "id": "SVMeAB_4NgI",
+      "title": "How to Replace Side Mirror Honda Insight (2009–2014)",
+      "channel": "DaringBeefcake",
+      "views": 16785
+     }
+    },
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 10607,
+     "n": 1,
+     "best": {
+      "id": "f5PezzzJkVA",
+      "title": "Engine Oil Leak 2011 Honda Insight",
+      "channel": "mpopov69",
+      "views": 10607
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 10303,
+     "n": 2,
+     "best": {
+      "id": "DjMe8QyMg5o",
+      "title": "How To Remove Lower Control Arm Honda Insight Hybrid Gen II 2009-2014 | Front Suspension Ball Joint",
+      "channel": "EyeOnAiman",
+      "views": 7193
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "Pcx92P5a8oc",
+     "title": "2013 Honda Insight EX Review: Best Budget Hybrid You Can Buy Now!",
+     "channel": "UsedCarsTV",
+     "views": 235248
+    },
+    {
+     "id": "pyupFo96n7g",
+     "title": "2010 Honda Insight Review",
+     "channel": "MPGomatic",
+     "views": 220495
+    },
+    {
+     "id": "cn9uA4mg_ho",
+     "title": "Honda Insight 2010 Review",
+     "channel": "imac2001",
+     "views": 127398
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2019,
+    2020,
+    2021,
+    2022
+   ],
+   "gen": "2019–2022 Honda Insight",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 8501729,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 64013,
+     "n": 3,
+     "best": {
+      "id": "QqJPB3zi6UQ",
+      "title": "Honda Insight (2019-present) - New 12-Volt Battery Install",
+      "channel": "The Battery Shop",
+      "views": 49708
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 46650,
+     "n": 4,
+     "best": {
+      "id": "TtpkPS2hwxg",
+      "title": "2019-2022 Honda Insight Oil Change (how to)",
+      "channel": "The Snyds",
+      "views": 22504
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 19080,
+     "n": 2,
+     "best": {
+      "id": "TyH72JcfJsI",
+      "title": "22 Honda Insight Cabin Air Filter Replacement How To 2022",
+      "channel": "Karrs Kars",
+      "views": 9837
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 17244,
+     "n": 2,
+     "best": {
+      "id": "tgHBP1DGD_w",
+      "title": "2019 Honda Insight Transmission Fluid Change",
+      "channel": "Chuck Tries",
+      "views": 12440
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 5593,
+     "n": 1,
+     "best": {
+      "id": "FrEb9S6nDWY",
+      "title": "2021 Honda insight oil light reset",
+      "channel": "LT BE KIND",
+      "views": 5593
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "_pwyC62ZdZI",
+     "title": "2020 Honda Accord Hybrid Vs. 2020 Honda Insight – Which Hybrid Should You Buy??",
+     "channel": "Drive On Reviews",
+     "views": 65596
+    },
+    {
+     "id": "YRBSs6tbwQg",
+     "title": "2019 HONDA INSIGHT: A perfect blend of reliability, style and fuel economy!",
+     "channel": "0-60 MOTORING TV",
+     "views": 14996
+    },
+    {
+     "id": "wkTCO0o-Gns",
+     "title": "2019 Honda Insight - Review & Road Test",
+     "channel": "Kelley Blue Book",
+     "views": 504383
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "lincoln-aviator": [
+  {
+   "years": [
+    2003,
+    2004,
+    2005
+   ],
+   "gen": "2003–2005 Lincoln Aviator",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 1543596,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 58298,
+     "n": 2,
+     "best": {
+      "id": "HvFKSvNha-s",
+      "title": "The Old Ones are Easier | 2005 Lincoln Aviator No-Tool Light Change",
+      "channel": "SVTPerformance",
+      "views": 36607
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 40657,
+     "n": 1,
+     "best": {
+      "id": "CGLoyLSIHsE",
+      "title": "2002 - 2005 Lincoln Aviator replacing the fuel filter.",
+      "channel": "rick padi",
+      "views": 40657
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 31437,
+     "n": 3,
+     "best": {
+      "id": "OwNI8Ubbenw",
+      "title": "2005 Lincoln aviator overheating",
+      "channel": "Jared miller",
+      "views": 27367
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 18287,
+     "n": 2,
+     "best": {
+      "id": "gi8ecHo-fGc",
+      "title": "2003 Lincoln Aviator Transmission Removal do to Burned Clutches Part 1",
+      "channel": "Ralf's Automotive Diagnostics & Repair",
+      "views": 17204
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 11330,
+     "n": 1,
+     "best": {
+      "id": "3nsSWYWZ5TA",
+      "title": "2003 LINCOLN AVIATOR NO CRANK NO START ISSUE...CLICKS...SOLVED...",
+      "channel": "Peter L",
+      "views": 11330
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 9953,
+     "n": 1,
+     "best": {
+      "id": "tHLc_gbpqv4",
+      "title": "Spark Plug replacement 2005 Lincoln Aviator 4.6L",
+      "channel": "DJ Ron The Mechanic",
+      "views": 9953
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 6854,
+     "n": 1,
+     "best": {
+      "id": "sHYN1nZDfhc",
+      "title": "2003 Lincoln Aviator Misfire Fixed",
+      "channel": "CRANK UP MOBILE",
+      "views": 6854
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 2212,
+     "n": 1,
+     "best": {
+      "id": "E5-OU6Wwnys",
+      "title": "Shift Cable Bushing Replacement 2003-2005 Lincoln Aviator",
+      "channel": "D/I/Y Diagnostics N Repair",
+      "views": 2212
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "jebqm-9FIp0",
+     "title": "2005 Lincoln Aviator Review, Walkaround, Start Up, Test Drive",
+     "channel": "Redline Reviews",
+     "views": 144346
+    },
+    {
+     "id": "zSWabDOj974",
+     "title": "2003 LINCOLN AVIATOR LUXURY EDITION Start Up, Walk Around Tour And Review",
+     "channel": "AutomotiveReview",
+     "views": 45936
+    },
+    {
+     "id": "xDJW-SF2g-E",
+     "title": "2003 Lincoln Aviator Premium 4X4|Walk Around Video|In Depth Review",
+     "channel": "Neighborhood Car Reviews",
+     "views": 42322
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2020–2025 Lincoln Aviator",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 17037367,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 460132,
+     "n": 1,
+     "best": {
+      "id": "1CUR_Q04Gls",
+      "title": "The 2020 Lincoln Aviator Resets The Bar With These Amazing Features and One That Blew Us Away!",
+      "channel": "The Fast Lane Car",
+      "views": 460132
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 54630,
+     "n": 1,
+     "best": {
+      "id": "Ye1bHwXuZzc",
+      "title": "Ford Explorer & Lincoln Aviator (2020 - present) - New Battery Install",
+      "channel": "The Battery Shop",
+      "views": 54630
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 16743,
+     "n": 1,
+     "best": {
+      "id": "VmTzl3ZyVqU",
+      "title": "2021 Lincoln Aviator Cabin Air Filter Replace How To 22 21",
+      "channel": "Karrs Kars",
+      "views": 16743
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "Jmb4kJb-pXU",
+     "title": "2025 Lincoln Aviator Review | Should You Buy?",
+     "channel": "UsedCarsTV",
+     "views": 72007
+    },
+    {
+     "id": "UQqj7qcSCvk",
+     "title": "2022 Lincoln Aviator Problems and Reliability - Should you buy?",
+     "channel": "car PROblems",
+     "views": 31842
+    },
+    {
+     "id": "i8Crc3k5EeA",
+     "title": "2020 Lincoln Aviator Problems and Recalls. Should you buy it?",
+     "channel": "MaxTheCarGuy",
+     "views": 24041
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "volvo-s40": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004
+   ],
+   "gen": "2000–2004 Volvo S40",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 3913846,
+   "topics": [
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 249028,
+     "n": 2,
+     "best": {
+      "id": "6DY5cBmc-lc",
+      "title": "2003 Volvo S40 Fuel Filter Replacement",
+      "channel": "Tom K",
+      "views": 140736
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 192648,
+     "n": 4,
+     "best": {
+      "id": "XHh1H2wGmrk",
+      "title": "2001 Volvo S40 1.9T Quick Drive, 0-75 @ 3/4 Throttle ( After Tuneup ) - 153K",
+      "channel": "Intechdude300",
+      "views": 86526
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 109055,
+     "n": 2,
+     "best": {
+      "id": "pd3K9r0IgY4",
+      "title": "2000 thru 2011- and Newer Volvo S40 Serpentine Belt Replacement Step By Step $save$",
+      "channel": "Zero Fuel Required",
+      "views": 69634
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 107123,
+     "n": 4,
+     "best": {
+      "id": "cV4109YIw5k",
+      "title": "How to Replace the Front Struts on a 2004 Volvo S40",
+      "channel": "How to Automotive",
+      "views": 48189
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 76798,
+     "n": 2,
+     "best": {
+      "id": "2ObggZSy8J8",
+      "title": "Tutorial: Change Thermostat and Coolant on a 2000 Volvo S40",
+      "channel": "nukem384",
+      "views": 45667
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 52535,
+     "n": 1,
+     "best": {
+      "id": "U2_67xPkyW0",
+      "title": "2002 Volvo S40 Fixing fan blower motor resistor So EASY!",
+      "channel": "Tundra Guy",
+      "views": 52535
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 35584,
+     "n": 2,
+     "best": {
+      "id": "96uBkxwwVAo",
+      "title": "2001 Volvo S40 A/c Compressor fuse issue (fixed)",
+      "channel": "Olfen O",
+      "views": 26679
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 32423,
+     "n": 1,
+     "best": {
+      "id": "OyAr00CHAHU",
+      "title": "How to Replace Front Passenger's Side CV Axle 2004-12 Volvo S40",
+      "channel": "TRQ",
+      "views": 32423
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "ZYfx0efrfT4",
+     "title": "Volvo S40 / V50 buyers guide (2004-2012) Avoid buying a broken Volvo (reliability 1.8 2.0D D4 D5 T5)",
+     "channel": "The Miles Driven",
+     "views": 119673
+    },
+    {
+     "id": "X0jwgXzFETk",
+     "title": "2004 Volvo s40 starting problems",
+     "channel": "Luis300zx",
+     "views": 40336
+    },
+    {
+     "id": "tfHp0EFb9ts",
+     "title": "Volvo Idle Problems 2002 S40",
+     "channel": "Property Preservation HUB",
+     "views": 31406
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011
+   ],
+   "gen": "2004–2011 Volvo S40",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 10860004,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 687108,
+     "n": 5,
+     "best": {
+      "id": "d0ncBXrA46s",
+      "title": "How to remove Radio / CD Changer / from Volvo S40 2006 for repair.",
+      "channel": "HiTechElectronic",
+      "views": 221678
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 546045,
+     "n": 2,
+     "best": {
+      "id": "wGhRKWqI0Q4",
+      "title": "2005, 2006, 2007, 2008 Volvo S40 Maintenance Light Reset (Book Maintenance Service Required)",
+      "channel": "Skyhook Studios",
+      "views": 539954
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 438948,
+     "n": 3,
+     "best": {
+      "id": "ctPfma_TZ70",
+      "title": "How to Replace Cabin Air Filter 2008 Volvo S40 | AQ1101",
+      "channel": "Filterheads",
+      "views": 387842
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 383444,
+     "n": 3,
+     "best": {
+      "id": "Y4We7wbtwbI",
+      "title": "Volvo P1 Timing Belt and Water Pump Replacement DIY - (C30, C70, S40, & V50) 2005-2013* RNC Engine",
+      "channel": "FCP Euro",
+      "views": 367023
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 223298,
+     "n": 6,
+     "best": {
+      "id": "ELEXJHRXhwE",
+      "title": "How To Replace Lower Control Arm 2005-2012 Volvo S40",
+      "channel": "TRQ",
+      "views": 52559
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 125787,
+     "n": 3,
+     "best": {
+      "id": "YUjGfbImVbk",
+      "title": "2006 Volvo s40 Oil Change",
+      "channel": "Rich Ryan",
+      "views": 108701
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 98684,
+     "n": 3,
+     "best": {
+      "id": "_lihHpWPrhM",
+      "title": "How To Replace Axle Shaft 2005-2012 Volvo S40",
+      "channel": "TRQ",
+      "views": 57836
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 94029,
+     "n": 2,
+     "best": {
+      "id": "8Sj_oyqHepo",
+      "title": "Complete Clutch and Transmission Replacement - P1 2007 Volvo S40 2.4i M56 FWD",
+      "channel": "Out Of Scope",
+      "views": 66232
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "i-JYVwGtywY",
+     "title": "Top 5 Problems Volvo S40 Sedan 2nd Generation 2005-2012",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 278935
+    },
+    {
+     "id": "ZYfx0efrfT4",
+     "title": "Volvo S40 / V50 buyers guide (2004-2012) Avoid buying a broken Volvo (reliability 1.8 2.0D D4 D5 T5)",
+     "channel": "The Miles Driven",
+     "views": 119673
+    },
+    {
+     "id": "X0jwgXzFETk",
+     "title": "2004 Volvo s40 starting problems",
+     "channel": "Luis300zx",
+     "views": 40336
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "infiniti-q50": [
+  {
+   "years": [
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+   ],
+   "gen": "2014–2024 Infiniti Q50",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 21311916,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 220287,
+     "n": 2,
+     "best": {
+      "id": "vzDmW8Tlh80",
+      "title": "2016 Infiniti Q50 oil maintenance light reset",
+      "channel": "Mannys garage",
+      "views": 138051
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 195597,
+     "n": 2,
+     "best": {
+      "id": "GuF20REe8Wg",
+      "title": "How To Reset Flat Tire Warning On The Infiniti Q50 (2014-2021)",
+      "channel": "Vehicle Freak",
+      "views": 160427
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 112251,
+     "n": 3,
+     "best": {
+      "id": "NNI4lE00VXo",
+      "title": "2016 - 2019 Infiniti Q50 Key Fob Battery Replacement - How To Replace Change Q50 Remote Batteries",
+      "channel": "PYR Automotive ",
+      "views": 65713
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 66962,
+     "n": 1,
+     "best": {
+      "id": "BqpU0aGrNCI",
+      "title": "2015 Infiniti Q50 output shaft speed sensor remove and replace.",
+      "channel": "Quick repair guy",
+      "views": 66962
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 53777,
+     "n": 1,
+     "best": {
+      "id": "bDERuSeLoPM",
+      "title": "😩ABS FAULT 2014-2021 Infiniti Q50 | AWD Error code | Chassis Control System Error?",
+      "channel": "IMPROPER NOVICE",
+      "views": 53777
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 34148,
+     "n": 1,
+     "best": {
+      "id": "DwGEM6oh1sI",
+      "title": "Diagnosing a No Start on a 2017 Infiniti Q50...Won't Crank...1 Click...Fixed...",
+      "channel": "Peter L",
+      "views": 34148
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 22562,
+     "n": 1,
+     "best": {
+      "id": "sqzGPPkrlSM",
+      "title": "2014-2015 Q50 Heater Hose Easy fix & upgraded Silicone Radiator Hoses",
+      "channel": "CRTFD Garage ",
+      "views": 22562
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 19157,
+     "n": 1,
+     "best": {
+      "id": "JTsSvV0FrNM",
+      "title": "2015 Infiniti Q50 A/C Compressor not coming on Diag/FIX w Variable Power Injector! P0533",
+      "channel": "Global Commerce CA",
+      "views": 19157
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "yiz9brVKoR8",
+     "title": "Infiniti Q50 saloon 2014 review - Carbuyer",
+     "channel": "Carbuyer",
+     "views": 300090
+    },
+    {
+     "id": "g8dct-BgoyU",
+     "title": "2020 Infiniti Q50 Red Sport 400 - Should You Buy It?",
+     "channel": "Car Coach Reports",
+     "views": 76200
+    },
+    {
+     "id": "bPdfkxCOG8g",
+     "title": "2018 Infiniti Q50 Sport AWD Review: Reliable Luxury",
+     "channel": "APOnCars",
+     "views": 27453
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "nissan-juke": [
+  {
+   "years": [
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017
+   ],
+   "gen": "2011–2017 Nissan Juke",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 24163497,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 298323,
+     "n": 3,
+     "best": {
+      "id": "goFpBiZMLV4",
+      "title": "Nissan Juke radio removal 2014 model.",
+      "channel": "MAS Audio",
+      "views": 214893
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 230607,
+     "n": 4,
+     "best": {
+      "id": "MwgljQUFKKo",
+      "title": "Nissan Juke Front CV Axle Replacement Passenger Side 2011 2012 2013 2014 2015 2016 2017 How to Guide",
+      "channel": "Pancake Breakfast",
+      "views": 68956
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 209568,
+     "n": 4,
+     "best": {
+      "id": "sXQpTG6Vmjk",
+      "title": "2014 Nissan Juke blower motor replacement",
+      "channel": "JC Cook",
+      "views": 93677
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 163240,
+     "n": 2,
+     "best": {
+      "id": "RKoRGLcSJfk",
+      "title": "Nissan Juke 2014 service light/interval reset procedure",
+      "channel": "Ismail R",
+      "views": 135086
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 141079,
+     "n": 3,
+     "best": {
+      "id": "ewnhiWsqcXM",
+      "title": "2012 NISSAN JUKE Won't Crank...Only Clicks...No Start Issue...Fixed...",
+      "channel": "Peter L",
+      "views": 62031
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 126718,
+     "n": 2,
+     "best": {
+      "id": "OJzkmLOfdTo",
+      "title": "Nissan Juke Brake Pads and Rotor Replacement - 2011-2017 - How To",
+      "channel": "Chad Williams",
+      "views": 86903
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 84296,
+     "n": 1,
+     "best": {
+      "id": "1gwz0RxVmmk",
+      "title": "2014 Nissan Juke Overheating issue solved",
+      "channel": "Eddie's Customs & Restorations",
+      "views": 84296
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 54471,
+     "n": 2,
+     "best": {
+      "id": "seg_jPbBqD0",
+      "title": "How to Replace Front Lower Control Arms with Ball Joint 2011-2017 Nissan Juke",
+      "channel": "TRQ",
+      "views": 35378
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "VfEuW2LRa_A",
+     "title": "Nissan Juke SUV (2011-2014) review - CarBuyer",
+     "channel": "Carbuyer",
+     "views": 920118
+    },
+    {
+     "id": "23DINwD33rA",
+     "title": "Nissan Juke SUV 2014 review - Carbuyer",
+     "channel": "Carbuyer",
+     "views": 716930
+    },
+    {
+     "id": "r0GyuKwg0C0",
+     "title": "Should you buy a Nissan Juke Nismo RS? Test drive and review (2015)",
+     "channel": "Shifting Metal",
+     "views": 53524
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "mitsubishi-outlander-sport": [
+  {
+   "years": [
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2011–2025 Mitsubishi Outlander Sport",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 8892126,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 629853,
+     "n": 3,
+     "best": {
+      "id": "DNG-Lf6fm70",
+      "title": "How to reset oil light: 2011-Present Mitsubishi Outlander Sport",
+      "channel": "Uncharted Adventures WV",
+      "views": 492778
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 344516,
+     "n": 7,
+     "best": {
+      "id": "Wh96PYfnYF0",
+      "title": "2019 Mitsubishi Outlander Sport No Crank - Battery Light On - Towed In Diagnosis",
+      "channel": "South Main Auto LLC",
+      "views": 127654
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 102322,
+     "n": 2,
+     "best": {
+      "id": "gH9eDZP2nUQ",
+      "title": "How to: Change the Oil on a Mitsubishi Outlander Sport (2015)",
+      "channel": "LittleFixersClub",
+      "views": 86547
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 44543,
+     "n": 2,
+     "best": {
+      "id": "js5ZYBeZpLs",
+      "title": "2011 Mitsubishi Outlander Sport A/C Not Working",
+      "channel": "Al Young Cuda",
+      "views": 32148
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 42616,
+     "n": 2,
+     "best": {
+      "id": "C6GEVg23HqY",
+      "title": "2013 MITSUBISHI OUTLANDER SPORT | MOTOR MOUNTS & TRANSMISSION MOUNTS REPAIR | Howto/Diy",
+      "channel": "The PullUpKing 👨🏾‍🔧",
+      "views": 23968
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 11583,
+     "n": 1,
+     "best": {
+      "id": "IY0iC0Tu3Lw",
+      "title": "2014 Mitsubishi Outlander Sport. Recall. Alert. Crank no start. Attention! Fuel pump recalls!",
+      "channel": "TS Mobile Mechanic",
+      "views": 11583
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 8935,
+     "n": 1,
+     "best": {
+      "id": "ykbPNRv1MeQ",
+      "title": "2011–2020 Mitsubishi Outlander Sport CV Axle Replacement DIY",
+      "channel": "Kevins Mobile Automotive Repair ",
+      "views": 8935
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "aOY5ep3_uFE",
+     "title": "Is the 2021 Mitsubishi Outlander Sport Reliable?",
+     "channel": "Rogan's Rated Car",
+     "views": 45526
+    },
+    {
+     "id": "E1Dcg8Nx1y4",
+     "title": "2013 Mitsubishi Outlander Sport blower motor problems",
+     "channel": "Driveway Mechanic",
+     "views": 17043
+    },
+    {
+     "id": "O0rRt6leyzI",
+     "title": "2012 Mitsubishi Outlander Sport SE AWD Premium Start Up, Exhaust, Test Drive, and In Depth Review",
+     "channel": "Saabkyle04",
+     "views": 401452
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "infiniti-m35": [
+  {
+   "years": [
+    2006,
+    2007,
+    2008,
+    2009,
+    2010
+   ],
+   "gen": "2006–2010 Infiniti M35",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 3581888,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 61855,
+     "n": 3,
+     "best": {
+      "id": "_Lm81B2_ObY",
+      "title": "How To Replace A 2006 - 2010 Infiniti M35 Key Fob Battery",
+      "channel": "Key Fob King",
+      "views": 35985
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 43050,
+     "n": 2,
+     "best": {
+      "id": "6r55Fk7ufcI",
+      "title": "2006 Infiniti M35 With misfire FIXED!!!",
+      "channel": "Parts shooter",
+      "views": 41160
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 38945,
+     "n": 3,
+     "best": {
+      "id": "SIKNrJGvhTA",
+      "title": "[Very Easy] Cabin Air Filter Replacement. Infiniti M35, M45. 2006-2010",
+      "channel": "EdBwoy",
+      "views": 21406
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 35446,
+     "n": 1,
+     "best": {
+      "id": "-YgbplobohY",
+      "title": "Infiniti M45 Front Lower Control Arm. 2006-2010. Bad balljoints, torn bushings",
+      "channel": "EdBwoy",
+      "views": 35446
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 13302,
+     "n": 1,
+     "best": {
+      "id": "PG2WDbb645M",
+      "title": "2010 INFINITI M35 NO CRANK NO START ISSUE...1 CLICK FIXED...",
+      "channel": "Peter L",
+      "views": 13302
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 9346,
+     "n": 1,
+     "best": {
+      "id": "bixNc1n9aFk",
+      "title": "2006-2010 Infiniti M35 o2 Sensor Removal",
+      "channel": "David Perez",
+      "views": 9346
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 8734,
+     "n": 4,
+     "best": {
+      "id": "p_IPMEW-U-o",
+      "title": "2006-2010 Infiniti M35 Thermostat Replacement",
+      "channel": "David Perez",
+      "views": 5393
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 1717,
+     "n": 1,
+     "best": {
+      "id": "ELZYlW181ng",
+      "title": "2008 INFINITY M35 OIL CHANGE",
+      "channel": "Mystery Garage",
+      "views": 1717
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "EtJflEDRHds",
+     "title": "Is the 2007 Infiniti M35x Reliable After 261,000 Miles? Full Review",
+     "channel": "Auto Zoom",
+     "views": 4200
+    },
+    {
+     "id": "LBXvUhr5l84",
+     "title": "2007 Infiniti M35x: Regular Car Reviews",
+     "channel": "Regular Car Reviews",
+     "views": 344282
+    },
+    {
+     "id": "GE7S_eCA-Uw",
+     "title": "Roadfly.com - 2007 Infiniti M45 Car Review",
+     "channel": "RoadflyTV",
+     "views": 284959
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "toyota-venza": [
+  {
+   "years": [
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015
+   ],
+   "gen": "2009–2015 Toyota Venza",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 8538279,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 265683,
+     "n": 1,
+     "best": {
+      "id": "p2Vd7aKU-po",
+      "title": "HOW TO RESET 2009-2015 TOYOTA VENZA MAINTENANCE REQUIRED LIGHT ENGINE OIL RESET",
+      "channel": "George Melnik",
+      "views": 265683
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 123953,
+     "n": 1,
+     "best": {
+      "id": "TDRxih1L9do",
+      "title": "2013 Toyota Venza Oil Change High Definition!!",
+      "channel": "Johnathan's World",
+      "views": 123953
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 81595,
+     "n": 4,
+     "best": {
+      "id": "h7n0-_Yncdg",
+      "title": "Replacing the struts in a 2010 Toyota Venza",
+      "channel": "Lab Coat Paul",
+      "views": 60934
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 75586,
+     "n": 3,
+     "best": {
+      "id": "-8hJLu53UHQ",
+      "title": "Toyota Parking Brake Not Working Grabbing or Clicking Properly Venza Model 2012 and Other Models",
+      "channel": "Al Young Cuda",
+      "views": 38841
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 68114,
+     "n": 3,
+     "best": {
+      "id": "VHZ_0Zht4g0",
+      "title": "2012 Toyota Venza 3.5 V6 Spark Plug Change remove and replace",
+      "channel": "Al Young Cuda",
+      "views": 55486
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 46357,
+     "n": 1,
+     "best": {
+      "id": "CzLtg1vhWew",
+      "title": "Misfire MYSTERY...Intermittent P0301? ('12 Toyota Venza 4-Cyl, 160k miles)",
+      "channel": "Pine Hollow Auto Diagnostics",
+      "views": 46357
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 46283,
+     "n": 2,
+     "best": {
+      "id": "JansHL0HBcE",
+      "title": "How to replace Blower Motor 2009–2015 Toyota Venza, Camry, Sienna, RAV4",
+      "channel": "Vue Auto",
+      "views": 26918
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 38991,
+     "n": 1,
+     "best": {
+      "id": "1NonHMnAe3I",
+      "title": "2012 Toyota Venza Limited 3.5 V6 belt change",
+      "channel": "Al Young Cuda",
+      "views": 38991
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "XvcuN26lALU",
+     "title": "Toyota Venza (Gen1, 2009–2015) - Common problems, Reliability, Pros and Cons",
+     "channel": "MaxTheCarGuy",
+     "views": 129118
+    },
+    {
+     "id": "VVSgOlhQA2s",
+     "title": "Toyota Venza TRUE COST! (2008 - 2015) | Cost of maintenance, Spare Parts & Common problems",
+     "channel": "234 DRIVE",
+     "views": 23329
+    },
+    {
+     "id": "8rJ0sTTD_-Q",
+     "title": "2015 Toyota Venza should you buy it in 2022?",
+     "channel": "Nazarettos",
+     "views": 14038
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2021,
+    2022,
+    2023,
+    2024
+   ],
+   "gen": "2021–2024 Toyota Venza",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 15384904,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 84340,
+     "n": 1,
+     "best": {
+      "id": "XbSve7JDIBo",
+      "title": "2021 Toyota Venza Limited - CarTech Infotainment How To",
+      "channel": "Two Guys and a Ride",
+      "views": 84340
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 51155,
+     "n": 3,
+     "best": {
+      "id": "X83fWA_ADjE",
+      "title": "Toyota Venza Cabin Air Filter Replacement ( 2021 2022 )",
+      "channel": "Undercar Experts",
+      "views": 31023
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 32415,
+     "n": 2,
+     "best": {
+      "id": "XWWriJ6mVEI",
+      "title": "Oil Change: 2021 Toyota Venza",
+      "channel": "Adrian Navarrette",
+      "views": 25838
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 28366,
+     "n": 1,
+     "best": {
+      "id": "QX-grkTdwFc",
+      "title": "How to reset a maintenance light on a 2021 toyota venza",
+      "channel": "Ponyo Tran",
+      "views": 28366
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "cyEyeQw9fdg",
+     "title": "2022 Toyota Venza VS Toyota RAV4 Hybrid | Which Hybrid SUV Should You Buy?",
+     "channel": "Car Help Corner",
+     "views": 152580
+    },
+    {
+     "id": "HU8DBXC-3bA",
+     "title": "2023 Toyota Venza VS Lexus NX 350h || Which Hybrid SUV Should You Buy?",
+     "channel": "Car Help Corner",
+     "views": 146261
+    },
+    {
+     "id": "JeQoH9kS1TM",
+     "title": "2021 Toyota Venza Review! | MotorTrend Buyer's Guide",
+     "channel": "MotorTrend Channel",
+     "views": 27250
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "infiniti-fx35": [
+  {
+   "years": [
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008
+   ],
+   "gen": "2003–2008 Infiniti FX35",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 5254577,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 185546,
+     "n": 5,
+     "best": {
+      "id": "9Dev_16m5FQ",
+      "title": "2004 Infiniti FX35 Custom Radio Install",
+      "channel": "AvenueSound Li",
+      "views": 106596
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 163098,
+     "n": 2,
+     "best": {
+      "id": "ayO9Up0Fx6U",
+      "title": "Infiniti FX35 camshaft position sensor replace 2003 to 2008 p0340",
+      "channel": "Fix it Felix",
+      "views": 151510
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 109110,
+     "n": 2,
+     "best": {
+      "id": "hlhArYsO9yc",
+      "title": "2004 Infiniti FX35 FX45 oil service reset tire pressure warning reset",
+      "channel": "armand salloum",
+      "views": 103529
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 65849,
+     "n": 3,
+     "best": {
+      "id": "pbXlJ3a5c_w",
+      "title": "Diagnosing engine noise and replacing the belts on a 2008 Infiniti FX35",
+      "channel": "Jimthecarguy",
+      "views": 51361
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 63103,
+     "n": 2,
+     "best": {
+      "id": "BkQanUYm0X4",
+      "title": "2008 INFINITI FX35 NO CRANK NO START VIDEO DIY...CLICKS...FIXED...",
+      "channel": "Peter L",
+      "views": 33220
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 54341,
+     "n": 2,
+     "best": {
+      "id": "9FVMX1KFM50",
+      "title": "Infiniti 2008+ EX35 FX35 FX50 QX50 QX56 QX60 QX70 QX80 How to Install Door Handle",
+      "channel": "JasmineFatherGarage4k",
+      "views": 32516
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 46746,
+     "n": 2,
+     "best": {
+      "id": "KNv2IiLxzGg",
+      "title": "How to Replace Cabin Air Filter 2008 Infiniti FX35 | AQ1087",
+      "channel": "Filterheads",
+      "views": 37518
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 40486,
+     "n": 5,
+     "best": {
+      "id": "XAAZjtjrKAk",
+      "title": "How to Replace Front Wheel Bearing & Hub Assemblies 2003-2008 Infiniti FX35",
+      "channel": "TRQ",
+      "views": 16562
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "7mzU1VLOu3k",
+     "title": "2005 fx35 problems",
+     "channel": "Nick",
+     "views": 3832
+    },
+    {
+     "id": "vV42lGJgHiQ",
+     "title": "2003 FX45 (Part 2). Back to normal like nothing happened. Is anyone else having problems like this.",
+     "channel": "Terry Lee Horne Jr",
+     "views": 327
+    },
+    {
+     "id": "58pwihReZjc",
+     "title": "2006 Infinity FX35 AWD Review. How is it holding up over the years",
+     "channel": "Paul's Take",
+     "views": 104730
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2009,
+    2010,
+    2011,
+    2012,
+    2013
+   ],
+   "gen": "2009–2013 Infiniti FX35",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 5564369,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 73084,
+     "n": 4,
+     "best": {
+      "id": "uGfrz__rw2w",
+      "title": "How to Reset Oil Change Light Reset Infiniti FX35 2009 2010 2011 2012",
+      "channel": "Auto Repair Champs",
+      "views": 42131
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 62452,
+     "n": 2,
+     "best": {
+      "id": "BYrNWqWtkBI",
+      "title": "How to Remove Radio / Navigation / Display from Infiniti FX35 2012 for Repair.",
+      "channel": "HiTechElectronic",
+      "views": 58264
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 57854,
+     "n": 3,
+     "best": {
+      "id": "LRZtqeJSCe8",
+      "title": "Infiniti FX35 | Rear Brake Pads DIY | 2009-2012",
+      "channel": "In The Garage DIY",
+      "views": 32623
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 56423,
+     "n": 1,
+     "best": {
+      "id": "qedWnuu0p6E",
+      "title": "Infiniti FX35 - Oil Change DIY - 2009-2012",
+      "channel": "In The Garage DIY",
+      "views": 56423
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 38956,
+     "n": 3,
+     "best": {
+      "id": "RZrxatBVNlc",
+      "title": "How To Replace Infiniti FX35 2nd gen Wheel Bearing Hub #badwheelbearing",
+      "channel": "TR Rehab",
+      "views": 19395
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 23341,
+     "n": 1,
+     "best": {
+      "id": "IMVKIFAgwtA",
+      "title": "Infiniti FX35 2nd Gen Crankshaft Position Sensor Removal and Camshaft Position Sensor Locations",
+      "channel": "TR Rehab",
+      "views": 23341
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 21181,
+     "n": 2,
+     "best": {
+      "id": "jMfs45c-5-g",
+      "title": "DIY Cabin Air Filter Change - 2nd Gen INFINITI FX35 / FX37 / QX70",
+      "channel": "GQ37",
+      "views": 13619
+     }
+    },
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 6871,
+     "n": 1,
+     "best": {
+      "id": "8jSRe6oEMK4",
+      "title": "2010 INFINITI FX35 Valve Cover Gasket Replacement | VQ35HR | Infiniti Nissan | 350Z",
+      "channel": "Visual Postcards with Mark",
+      "views": 6871
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "UxWWW3HB1kE",
+     "title": "2013 Lexus RX 350 vs Mercedes-Benz GLK vs Infiniti FX37 0-60 $53K Mashup Review",
+     "channel": "The Fast Lane Car",
+     "views": 639866
+    },
+    {
+     "id": "_k15Qizgh4c",
+     "title": "2012 Infiniti FX35 Drive and Review",
+     "channel": "The Fast Lane Car",
+     "views": 315418
+    },
+    {
+     "id": "7PKTrWgx3bI",
+     "title": "2009 Infiniti FX35 Review, Walkaround, Exhaust, Test Drive",
+     "channel": "Redline Reviews",
+     "views": 300786
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "buick-verano": [
+  {
+   "years": [
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017
+   ],
+   "gen": "2012–2017 Buick Verano",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 4557713,
+   "topics": [
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 183414,
+     "n": 5,
+     "best": {
+      "id": "7l98vs1rdls",
+      "title": "How to replace a 2015 Buick Verano cabin air filter",
+      "channel": "Aaron Cano",
+      "views": 144517
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 142880,
+     "n": 3,
+     "best": {
+      "id": "sIct7ZipeSY",
+      "title": "How To Change Oil 2014 Buick Verano 2.4 Ecotec 2012-2017",
+      "channel": "FixIT",
+      "views": 100015
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 122302,
+     "n": 4,
+     "best": {
+      "id": "JRA4-XvEOR0",
+      "title": "Buick Verano Shifter knob replacement 2014 1 min straight to the point.",
+      "channel": "Taylorb47",
+      "views": 63648
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 115087,
+     "n": 3,
+     "best": {
+      "id": "7pMhsWBcMv4",
+      "title": "Buick Verano - How to Replace / Remove the Battery (2012-2017)",
+      "channel": "QuiteAlright",
+      "views": 86185
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 45692,
+     "n": 3,
+     "best": {
+      "id": "hLSz7irDeBg",
+      "title": "2015 Buick Verano Throttlebody Service",
+      "channel": "Rick Frausto",
+      "views": 29584
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 36848,
+     "n": 1,
+     "best": {
+      "id": "0cXymbjnmN8",
+      "title": "2015 Buick Verano Won't Start...Has Power But Engine Won't Crank...Just Clicks...Fixed...",
+      "channel": "Peter L",
+      "views": 36848
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 30721,
+     "n": 1,
+     "best": {
+      "id": "dVIBkmRLTW4",
+      "title": "2014 Buick Verano fuel pump replacement",
+      "channel": "StanFixCars",
+      "views": 30721
+     }
+    },
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 28645,
+     "n": 1,
+     "best": {
+      "id": "qTQ2089Huw0",
+      "title": "How to change valve cover gasket on 2012-2018 Buick Verano 2.4L",
+      "channel": "Master Tech",
+      "views": 28645
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "LYKbD3cJggE",
+     "title": "Buick Verano 2012 - 2017 common problems, issues, defects and complaints",
+     "channel": "HOWSTUFFINMYCARWORKS",
+     "views": 104706
+    },
+    {
+     "id": "1GGgIS9oBbk",
+     "title": "2013 Dodge Dart vs Buick Verano vs Chrysler 200 0-60 MPH Starter Sedan Mashup Review",
+     "channel": "The Fast Lane Car",
+     "views": 215924
+    },
+    {
+     "id": "w7IbCJJ7aJA",
+     "title": "2015 Buick Verano FWD: A Nice Little Car. Real world review and test",
+     "channel": "Gallup Journey Test Drives",
+     "views": 144604
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "cadillac-sts": [
+  {
+   "years": [
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011
+   ],
+   "gen": "2005–2011 Cadillac STS",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 5120913,
+   "topics": [
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 145683,
+     "n": 4,
+     "best": {
+      "id": "Ud5XzxmrklI",
+      "title": "2006 Cadillac STS door handle micro switch repair",
+      "channel": "NoNonsenseKnowHow",
+      "views": 93782
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 87213,
+     "n": 3,
+     "best": {
+      "id": "2fq_hxwarH0",
+      "title": "2005 - 2011 Cadillac STS Console removal and shifter repair",
+      "channel": "Camaro Mods Channel ",
+      "views": 70187
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 78436,
+     "n": 2,
+     "best": {
+      "id": "kF6_atKEB54",
+      "title": "2006 Cadillac STS 4 POWER STEERING PUMP REPLACEMENT",
+      "channel": "slow_restoration",
+      "views": 52675
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 47793,
+     "n": 1,
+     "best": {
+      "id": "w9dzn-7qzyE",
+      "title": "2005 Cadillac STS front end rattle strut replacement",
+      "channel": "JasonDoesDIY",
+      "views": 47793
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 42135,
+     "n": 3,
+     "best": {
+      "id": "xl1UuQyHjFU",
+      "title": "2005-2011 Cadillac STS - How to Start Vehicle with a Dead Key Fob Battery",
+      "channel": "YOUCANIC",
+      "views": 32076
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 29589,
+     "n": 2,
+     "best": {
+      "id": "ImketoY7LlI",
+      "title": "2005-2011 3.6L V6 Cadillac STS - Oil Change and Oil Filter Replacement",
+      "channel": "YOUCANIC",
+      "views": 17807
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 26620,
+     "n": 2,
+     "best": {
+      "id": "cKM7HIZExsw",
+      "title": "DIAGNOSING A NO START 2007 CADILLAC STS WON'T CRANK...CLICKS...SOLVED...",
+      "channel": "Peter L",
+      "views": 16673
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 26605,
+     "n": 2,
+     "best": {
+      "id": "-7E8SCR-FNY",
+      "title": "How to Replace Cabin Air Filter 2006 Cadillac STS | AQ1042",
+      "channel": "Filterheads",
+      "views": 16208
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "eLDHk-ph7kk",
+     "title": "Top 5 Problems Cadillac STS Sedan 1st Generation 2005-11",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 173777
+    },
+    {
+     "id": "sH9pzyens4c",
+     "title": "Cadillac sts 2007 computer problems",
+     "channel": "Kyle M",
+     "views": 75970
+    },
+    {
+     "id": "4INxCEHZN5E",
+     "title": "2008 Cadillac STS Review - Kelley Blue Book",
+     "channel": "Kelley Blue Book",
+     "views": 219668
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "mazda-mazda5": [
+  {
+   "years": [
+    2006,
+    2007,
+    2008,
+    2009,
+    2010
+   ],
+   "gen": "2006–2010 Mazda5",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 185,
+   "views": 5409062,
+   "topics": [
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 546015,
+     "n": 3,
+     "best": {
+      "id": "pyK_-uLvtCM",
+      "title": "How to Replace Cabin Air Filter 2009 Mazda 5 | AQ1116",
+      "channel": "Filterheads",
+      "views": 431910
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 303413,
+     "n": 3,
+     "best": {
+      "id": "uo2zS8ys324",
+      "title": "Mazda 5 Key Fob Battery Replacement 2006 - 2015 - EASY DIY",
+      "channel": "Key Fob Rob",
+      "views": 267556
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 94380,
+     "n": 2,
+     "best": {
+      "id": "dQmMtwEgX3c",
+      "title": "2009 Mazda 5 serpentine belt replacement using zip tie!",
+      "channel": "Photomikes Garage",
+      "views": 91965
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 84987,
+     "n": 2,
+     "best": {
+      "id": "p9d9-r0N2P4",
+      "title": "2006 Mazda 5 intake manifold / PCV valve removal and installation￼ pt.1",
+      "channel": "Dadsautosideshop",
+      "views": 48262
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 72869,
+     "n": 4,
+     "best": {
+      "id": "FdQiHm0ldN8",
+      "title": "2007 Mazda 5 Automatic transmission removal and installation",
+      "channel": "Car MechaNick",
+      "views": 39072
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 65707,
+     "n": 1,
+     "best": {
+      "id": "_ir5rr6JHmo",
+      "title": "Spark plug replacement Mazda 5 2.3L 2008 -2013 tune up Mazda5 Mazda3",
+      "channel": "Fixing cars and stuff",
+      "views": 65707
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 32991,
+     "n": 2,
+     "best": {
+      "id": "kmGdBPgFghs",
+      "title": "HOW TO CHANGE CV AXLE ASSEMBLY 2006 MAZDA 5 (BONUS: HOW TO DIAGNOSE FAILING CONTROL ARM BUSHINGS)",
+      "channel": "Everyday Projects",
+      "views": 19019
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 21552,
+     "n": 1,
+     "best": {
+      "id": "6S-4AO6aBDg",
+      "title": "Mazda 5 front brake replacement 2008-2011",
+      "channel": "Carl’s Garage",
+      "views": 21552
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "403mumgMKaA",
+     "title": "Top 3 Problems with the Mazda5 (2010–2018) | Common Issues & What to Look For",
+     "channel": "Clay Auto",
+     "views": 4920
+    },
+    {
+     "id": "Du0DBKBt248",
+     "title": "Darn! 2009 Mazda 5 transmission problems returned after about 50 miles of driving. Fix failure!",
+     "channel": "John Hermann",
+     "views": 197
+    },
+    {
+     "id": "fmWHl8SFYdk",
+     "title": "Top 3 Mazda5 Problems: What Goes Wrong on 2010–2018 Models?",
+     "channel": "Clay Auto",
+     "views": 38
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2012,
+    2013,
+    2014,
+    2015
+   ],
+   "gen": "2012–2015 Mazda5",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 120,
+   "views": 4137773,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 267568,
+     "n": 1,
+     "best": {
+      "id": "uo2zS8ys324",
+      "title": "Mazda 5 Key Fob Battery Replacement 2006 - 2015 - EASY DIY",
+      "channel": "Key Fob Rob",
+      "views": 267568
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 96290,
+     "n": 2,
+     "best": {
+      "id": "Wlj_wGq5mds",
+      "title": "2012 Mazda 5 sliding door roller replacement",
+      "channel": "sigor2011",
+      "views": 77645
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 92954,
+     "n": 3,
+     "best": {
+      "id": "_ir5rr6JHmo",
+      "title": "Spark plug replacement Mazda 5 2.3L 2008 -2013 tune up Mazda5 Mazda3",
+      "channel": "Fixing cars and stuff",
+      "views": 65707
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 92647,
+     "n": 1,
+     "best": {
+      "id": "_wCpi23GhaU",
+      "title": "Mazda 5 2012 Cabin Air Filter Replacement | AQ1116",
+      "channel": "Filterheads",
+      "views": 92647
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 77737,
+     "n": 1,
+     "best": {
+      "id": "JiQyl90xlrw",
+      "title": "How To Replace Your Radiator on the 2004-2013 Mazda 5",
+      "channel": "AutoMotivate",
+      "views": 77737
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 61742,
+     "n": 3,
+     "best": {
+      "id": "cZv6DHovAZc",
+      "title": "2012 - 2017 Mazda 5 Left Front Axle Replacement",
+      "channel": "sigor2011",
+      "views": 40472
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 54876,
+     "n": 3,
+     "best": {
+      "id": "toSoeW1xRt0",
+      "title": "2012 Mazda5 oil change",
+      "channel": "chicagoted",
+      "views": 30411
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 47974,
+     "n": 1,
+     "best": {
+      "id": "O2fPAyRCuTk",
+      "title": "2012 - 2017 Mazda 5 serpentine belt replacement",
+      "channel": "sigor2011",
+      "views": 47974
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "NH9B7ofiLNc",
+     "title": "2012 Mazda5 Grand Touring Start Up, Exhaust, In Depth Review, and Test Drive",
+     "channel": "Saabkyle04",
+     "views": 352701
+    },
+    {
+     "id": "ym4zgR3TQdc",
+     "title": "2014 Mazda5 Minivan Test Drive Video Review",
+     "channel": "UsedCarsTV",
+     "views": 217692
+    },
+    {
+     "id": "06qN_MVIvFo",
+     "title": "Mazda 5 review (2010 to 2015) | What Car?",
+     "channel": "What Car?",
+     "views": 151289
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "chevrolet-tracker": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004
+   ],
+   "gen": "1999–2004 Chevrolet Tracker",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 2143876,
+   "topics": [
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 84709,
+     "n": 4,
+     "best": {
+      "id": "lqvIPp14Gds",
+      "title": "How to Replace Cabin Air Filter 2001 Chevrolet Tracker | AQ1056",
+      "channel": "Filterheads",
+      "views": 75498
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 58005,
+     "n": 4,
+     "best": {
+      "id": "o-gv-dMcE6o",
+      "title": "2000 Chevy Tracker (Suzuki Vitara) Fuel Pump; easy way to get to and change",
+      "channel": "Christian Pritchett",
+      "views": 39535
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 53877,
+     "n": 4,
+     "best": {
+      "id": "T88uwyJFCkY",
+      "title": "1999 Chevrolet Chevy Tracker Alternator Repair TIPS",
+      "channel": "Johnson REVIEW & FIX-IT Team",
+      "views": 20965
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 51834,
+     "n": 1,
+     "best": {
+      "id": "f52NthCe45k",
+      "title": "2003 Chevy Tracker Rear Brakes (Shoes) and Brake line Replacement",
+      "channel": "TheDestructve",
+      "views": 51834
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 50950,
+     "n": 1,
+     "best": {
+      "id": "KUvCu7ZCshQ",
+      "title": "2000 Chevy Tracker Camshaft Sensor No Start Once Hot Stalling Sputtering Fix",
+      "channel": "geostomp",
+      "views": 50950
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 43231,
+     "n": 4,
+     "best": {
+      "id": "1QEz88bLHhg",
+      "title": "How to: Replace a Drive belt, Water Pump and Thermostat 2002 Chevrolet Chevy Tracker ZR2 (3-in-1)",
+      "channel": "How2Helen",
+      "views": 31443
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 31668,
+     "n": 6,
+     "best": {
+      "id": "6weSwBPo1q4",
+      "title": "2001 Chevy Tracker 2.5L V6 Oil Change",
+      "channel": "cdogg",
+      "views": 10858
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 22811,
+     "n": 1,
+     "best": {
+      "id": "DJM1IAG6zy0",
+      "title": "2000 Chevy tracker stalling/camshaft position sensor replacement",
+      "channel": "Chris Straus",
+      "views": 22811
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "AkZdfttJPe4",
+     "title": "2004 Chevrolet Tracker ZR-2: Regular Car Reviews",
+     "channel": "Regular Car Reviews",
+     "views": 205521
+    },
+    {
+     "id": "jGnl21z6NWg",
+     "title": "2002 Chevrolet Tracker 4WD - 4Cyl. - 5 Speed Trans. - 4 Wheel Drive - 205K - SOLD - Malibu Motors",
+     "channel": "Malibu Motors Victoria",
+     "views": 41422
+    },
+    {
+     "id": "5LkHo6B19JE",
+     "title": "2002 Chevy Tracker 4x4 V6 Review!!!",
+     "channel": "Motor Mike Media",
+     "views": 30661
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "cadillac-ats": [
+  {
+   "years": [
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019
+   ],
+   "gen": "2013–2019 Cadillac ATS",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 14441353,
+   "topics": [
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 188645,
+     "n": 3,
+     "best": {
+      "id": "YBMYxjJ8dNo",
+      "title": "2014 Cadillac ATS 2.0T Blend Door Actuator Replacement",
+      "channel": "Russell Beermann",
+      "views": 72078
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 177278,
+     "n": 4,
+     "best": {
+      "id": "Qtf6eRhToyg",
+      "title": "How to: Restart a Blacked out Radio on a 2013 Cadillac ATS if touch screen is not working",
+      "channel": "GEORGE LOPEZ HOW TO DO IT YOUR SELF",
+      "views": 100406
+     }
+    },
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 86293,
+     "n": 3,
+     "best": {
+      "id": "k_HHe-AYKMA",
+      "title": "2014 CADILLAC ATS4 2.0 TURBO | VALVE COVER GASKET REPLACEMENT | OIL LEAK | Howto/Diy",
+      "channel": "The PullUpKing 👨🏾‍🔧",
+      "views": 56748
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 75405,
+     "n": 3,
+     "best": {
+      "id": "yPSr9zMR2EI",
+      "title": "Remove TCM Transmission Control module Install unlocked TCM on 2018 Cadillac ATS 2 0T",
+      "channel": "Boost Them All BTA",
+      "views": 38668
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 74697,
+     "n": 3,
+     "best": {
+      "id": "1xGa3hPER9E",
+      "title": "2013-2019 Cadillac ATS 2.0T Coolant Leak - EASY FIX",
+      "channel": "Jeff Lyle",
+      "views": 31755
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 72472,
+     "n": 2,
+     "best": {
+      "id": "9j2gbQU4_88",
+      "title": "2013-2018 Cadillac ATS 2.0T - P0171 Vacuum Leak - EASY FIX",
+      "channel": "Jeff Lyle",
+      "views": 37199
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 56164,
+     "n": 1,
+     "best": {
+      "id": "ZvJAB0XHkmc",
+      "title": "2013 Cadillac ATS Suspension Clunk Repair (Sway Bar Link/Tie Rod End) (Mini Projects Ep.8)",
+      "channel": "Fuzzy Dice Projects",
+      "views": 56164
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 50766,
+     "n": 1,
+     "best": {
+      "id": "Y0WEUs4CpfQ",
+      "title": "2013-19 Cadillac ATS temperature door blend actuator replacement - PASSENGER side",
+      "channel": "Oscar Benitez",
+      "views": 50766
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "C8vo_0r_HA0",
+     "title": "2013 Cadillac ATS Premium (3.6 & 2.0T) Start Up, Exhaust, and In Depth Review",
+     "channel": "Saabkyle04",
+     "views": 559895
+    },
+    {
+     "id": "4cWcAcfsK4Q",
+     "title": "Review: 2017 Cadillac ATS-V (Manual)",
+     "channel": "Matt Maran Motoring",
+     "views": 432187
+    },
+    {
+     "id": "TVpaTsYX7Yk",
+     "title": "2016 Cadillac ATS-V Coupe 6MT: Regular Car Reviews",
+     "channel": "Regular Car Reviews",
+     "views": 342550
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "lincoln-mks": [
+  {
+   "years": [
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016
+   ],
+   "gen": "2009–2016 Lincoln MKS",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 4835954,
+   "topics": [
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 97034,
+     "n": 5,
+     "best": {
+      "id": "3UHsxFVxlwY",
+      "title": "How to replace Temperature Blend Door Actuator - RH | Lincoln MKS 2013",
+      "channel": "LuisMBuildz",
+      "views": 44907
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 75785,
+     "n": 4,
+     "best": {
+      "id": "NoyPLirrN1I",
+      "title": "How to Remove Radio / Navigation / CD Player from Lincoln MKS 2009 for Repair.",
+      "channel": "HiTechElectronic",
+      "views": 25124
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 67805,
+     "n": 3,
+     "best": {
+      "id": "HowhJ88xEbE",
+      "title": "Replacing the crank shaft position sensor / crank sensor on a 2013 Lincoln MKS 3.7l",
+      "channel": "WrenchTheory501",
+      "views": 30371
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 59495,
+     "n": 1,
+     "best": {
+      "id": "Q6dZot6fGlw",
+      "title": "2014 Lincoln MKS Transmission Service",
+      "channel": "massey706",
+      "views": 59495
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 51137,
+     "n": 3,
+     "best": {
+      "id": "nFm3bLV2c-w",
+      "title": "2013 Lincoln MKS fuel control module replacement Cranks but won't start quick fix!",
+      "channel": "Jeff Mollan",
+      "views": 24283
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 46550,
+     "n": 3,
+     "best": {
+      "id": "z9M1QyTam6k",
+      "title": "Lincoln MKS - Oil Light Reset / Set to 100% (2009 - 2012)",
+      "channel": "QuiteAlright",
+      "views": 24749
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 38874,
+     "n": 3,
+     "best": {
+      "id": "YfmC9zaTecA",
+      "title": "2011 Lincoln MKS Lower Control Arm & Sway Bar Link Replacement",
+      "channel": "Anything Auto",
+      "views": 32502
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 34045,
+     "n": 2,
+     "best": {
+      "id": "RaFg7U7Jfeg",
+      "title": "How To Find Lincoln MKS 2009 door code location",
+      "channel": "FoSeven",
+      "views": 30057
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "2I19m5RuEUo",
+     "title": "The Snob Magazines Reviews the 2013 Lincoln MKS",
+     "channel": "Jeff's Auto",
+     "views": 128141
+    },
+    {
+     "id": "IdAOk0Kxmhg",
+     "title": "2014 Lincoln MKS Test Drive and Review",
+     "channel": "Vehicle Virgins",
+     "views": 95561
+    },
+    {
+     "id": "BHvkBnVdeR4",
+     "title": "2013 Lincoln MKS Review - Interesting, or just a curiosity?",
+     "channel": "AutoGuide.com",
+     "views": 85734
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "ford-c-max": [
+  {
+   "years": [
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018
+   ],
+   "gen": "2013–2018 Ford C-Max",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 8353768,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 419990,
+     "n": 7,
+     "best": {
+      "id": "i8nWmfeppOg",
+      "title": "How to replace 12V battery in Ford C-Max Energi 2013-2016",
+      "channel": "Chris P",
+      "views": 185462
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 321005,
+     "n": 6,
+     "best": {
+      "id": "8ksjV4Ovpzs",
+      "title": "How to reset \"ENGINE MALFUNCTION SERVICE NOW\" warning message on 2013 Ford Auto C-Max 2L TDCi Diesal",
+      "channel": "Mera channel",
+      "views": 173587
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 275565,
+     "n": 2,
+     "best": {
+      "id": "4dSuy2MJ6-0",
+      "title": "Ford C-Max Cabin Air Filter Replacement ( 2013 2014 2015 2016 2017 2018 )",
+      "channel": "Undercar Experts",
+      "views": 151303
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 73541,
+     "n": 1,
+     "best": {
+      "id": "1mIB2Df1Teg",
+      "title": "2015 Ford C-Max Hybrid Energy Plug-in Won't Start Lots of Surprises",
+      "channel": "AK Auto Repair Автоэлектрик Диагност",
+      "views": 73541
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 41978,
+     "n": 1,
+     "best": {
+      "id": "6E67v_cd9Kc",
+      "title": "2017 Ford Grand CMax service light reset",
+      "channel": "DIYDaly",
+      "views": 41978
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 3647,
+     "n": 2,
+     "best": {
+      "id": "ZKMR7mZbLtU",
+      "title": "How to Add Coolant in a Ford C-Max (2013–2018)",
+      "channel": "Clay Auto",
+      "views": 2983
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "I18IKmKiCOk",
+     "title": "2016 Ford C-MAX vs Grand C-MAX new Facelift MPV FULL REVIEW test driven - Autogefühl",
+     "channel": "Autogefühl",
+     "views": 315314
+    },
+    {
+     "id": "TAAGoO-8CgQ",
+     "title": "2016 Ford C-MAX Hybrid - Review and Road Test",
+     "channel": "Kelley Blue Book",
+     "views": 213846
+    },
+    {
+     "id": "ATqf96oZDJI",
+     "title": "Ford C-Max 2015 review | TELEGRAPH CARS",
+     "channel": "Telegraph Cars",
+     "views": 211545
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "kia-niro": [
+  {
+   "years": [
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022
+   ],
+   "gen": "2017–2022 Kia Niro",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 14369823,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 399419,
+     "n": 5,
+     "best": {
+      "id": "EqR5UNprPAo",
+      "title": "i’m 2020 Kia Niro Hybrid - hatchback, crossover? With battery & electric most practical clean car?",
+      "channel": "Asian Petrolhead",
+      "views": 269297
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 47573,
+     "n": 1,
+     "best": {
+      "id": "9ucCS_g3oY4",
+      "title": "2018 Kia Niro Hybrid Won’t Start? How to Jump Start It Safely",
+      "channel": "Roadside Guy",
+      "views": 47573
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 43779,
+     "n": 2,
+     "best": {
+      "id": "fGX-nhPreck",
+      "title": "CK | 2022 Kia Niro EV | How To Change Your Ambient Lighting!",
+      "channel": "Cardinal Kia",
+      "views": 27919
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 36236,
+     "n": 2,
+     "best": {
+      "id": "OgYzv4qwttM",
+      "title": "Replace Kia Niro Cabin Air Filter - 2017 - 2022 - Lickity Split!",
+      "channel": "Tech Angel",
+      "views": 21884
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 21737,
+     "n": 1,
+     "best": {
+      "id": "BOAMjpJsCD4",
+      "title": "2016-2021 Kia Niro Hybrid LX Oil & Filter Change 1.6L",
+      "channel": "Swan Can Fix It",
+      "views": 21737
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "VLnEaaog8h0",
+     "title": "2019 Kia Niro Hybrid Facelift Review - CarBuyer Singapore",
+     "channel": "CarBuyer Singapore",
+     "views": 18641
+    },
+    {
+     "id": "fwDp9Dddi9o",
+     "title": "Should you buy this BASE MODEL? | 2022 Kia Niro Hybrid Review 4K",
+     "channel": "ProductReview Cars",
+     "views": 16795
+    },
+    {
+     "id": "m4OrOc_sXrU",
+     "title": "Kia e-Niro SUV 2020 in-depth review | carwow Reviews",
+     "channel": "carwow",
+     "views": 1324914
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2023–2025 Kia Niro",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 8660224,
+   "topics": [
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 50803,
+     "n": 2,
+     "best": {
+      "id": "TLawE0togtE",
+      "title": "All-New 2023 Kia Niro EV | How To Use Your Charging Port Door!",
+      "channel": "Cardinal Kia",
+      "views": 35202
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 42980,
+     "n": 2,
+     "best": {
+      "id": "BB68cY_nMgM",
+      "title": "2022 - 2025 KIA NIRO Key Fob Battery Replacement - How To Change Replace Niro Remote Batteries DIY",
+      "channel": "PYR Automotive ",
+      "views": 36714
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 11485,
+     "n": 2,
+     "best": {
+      "id": "9MPQRh1s7Ck",
+      "title": "Kia Niro 2024 Electronic parking brake issue",
+      "channel": "Chris I",
+      "views": 7577
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 9625,
+     "n": 1,
+     "best": {
+      "id": "ZgtqBcTEMZY",
+      "title": "2024 Kia Niro EV | How To Use Your Front & Rear Parking Sensors!",
+      "channel": "Cardinal Kia",
+      "views": 9625
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "jCQsSKDOibY",
+     "title": "2023 Kia Niro (183hp) - Sound & Visual Review!",
+     "channel": "Visual Car Reviews",
+     "views": 1384797
+    },
+    {
+     "id": "oqBpJ3HFByQ",
+     "title": "2024 Kia Niro Review - IT TAUGHT THE COROLLA CROSS A LESSON!",
+     "channel": "Carro Chefe",
+     "views": 233913
+    },
+    {
+     "id": "OiVuZOmptZI",
+     "title": "2023 Kia Niro EV review – we drive NEW e-Niro electric car! | What Car?",
+     "channel": "What Car?",
+     "views": 217117
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "hummer-h2": [
+  {
+   "years": [
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009
+   ],
+   "gen": "2003–2009 Hummer H2",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 20383815,
+   "topics": [
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 126856,
+     "n": 3,
+     "best": {
+      "id": "XlANNSbFOGA",
+      "title": "2003 2004 2005 2006 2007 hummer resistor repair. Fan not blowing on hummer h2 both Ac and heat fan",
+      "channel": "Vito Mirra",
+      "views": 62084
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 101066,
+     "n": 2,
+     "best": {
+      "id": "pDSgVeaCVfI",
+      "title": "How to program A Hummer H2 remote key fob 2003 - 2007",
+      "channel": "PYR Automotive ",
+      "views": 91403
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 78454,
+     "n": 2,
+     "best": {
+      "id": "cAWnawlEZCs",
+      "title": "Wheel bearing hub assembly replacement Hummer H2 2005 GMC Cheverolet 2001-2007",
+      "channel": "Fixing cars and stuff",
+      "views": 52064
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 34666,
+     "n": 1,
+     "best": {
+      "id": "A_oPL90NiXs",
+      "title": "How to use 2007 Hummer H2 4x4 and rear lock",
+      "channel": "4x4 Rides",
+      "views": 34666
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 34508,
+     "n": 2,
+     "best": {
+      "id": "91wytuL8Pfo",
+      "title": "2003 HUMMER H2 6.0L - ENGINE MISFIRE DIAGNOSIS",
+      "channel": "Super Mario Diagnostics",
+      "views": 24336
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 29029,
+     "n": 1,
+     "best": {
+      "id": "HUqbbBQoaaE",
+      "title": "How to Change Engine Oil & Filter on HUMMER H2 | 2006 H2 HUMMER",
+      "channel": "Easy Steps",
+      "views": 29029
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 27585,
+     "n": 2,
+     "best": {
+      "id": "w85a8CKVb4M",
+      "title": "Hummer H2 Rear Window Regulator Replacement & Repair. 2003-2009 Hummer H2 2003-2009 Rear",
+      "channel": "Power Up Auto",
+      "views": 20615
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 16511,
+     "n": 1,
+     "best": {
+      "id": "YvyGwXNTZr4",
+      "title": "2003 Hummer H2 Gas Tank Removal Fuel Pump/Sending Unit Replacement Part 1",
+      "channel": "Patrick Murphy",
+      "views": 16511
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "i9hqHtVrUSg",
+     "title": "Hummer H2 2003 to 2009 common problems, issues, defects and complaints",
+     "channel": "HOWSTUFFINMYCARWORKS",
+     "views": 22801
+    },
+    {
+     "id": "sfcP4MhAZG8",
+     "title": "2003 HUMMER H2 PROBLEMS",
+     "channel": "Lifeissimple",
+     "views": 21245
+    },
+    {
+     "id": "AlZ2aJlhgbI",
+     "title": "2003 hummer h2 problems",
+     "channel": "Felix Rosario",
+     "views": 10402
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "chevrolet-captiva": [
+  {
+   "years": [
+    2012,
+    2013,
+    2014,
+    2015
+   ],
+   "gen": "2012–2015 Chevrolet Captiva",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 4650662,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 202265,
+     "n": 2,
+     "best": {
+      "id": "JrnfY_F4nMU",
+      "title": "Reset Oil Mainteance Light - 2011 to 2014 Chevy Captiva",
+      "channel": "PickleTech Productions",
+      "views": 197032
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 122064,
+     "n": 3,
+     "best": {
+      "id": "BUwe433LXSk",
+      "title": "2013 Chevy Captiva Transmission Fluid Change - CAMBIO DEL LIQUIDO DE LA TRANSMISION .",
+      "channel": "Guido G F",
+      "views": 91188
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 121230,
+     "n": 6,
+     "best": {
+      "id": "7va7IQ0B3ac",
+      "title": "2012-2015 chevy captiva sport radio removal",
+      "channel": "JPtheinstallguy",
+      "views": 55184
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 76263,
+     "n": 1,
+     "best": {
+      "id": "PIH67yHNQIU",
+      "title": "2014 Chevrolet Captiva Radiator Replacement",
+      "channel": "Oscar Cisneros",
+      "views": 76263
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 75142,
+     "n": 1,
+     "best": {
+      "id": "z4yoEnizoJY",
+      "title": "How to Replace Cabin Air Filter 2014 Chevrolet Captiva | AQ1144",
+      "channel": "Filterheads",
+      "views": 75142
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 30032,
+     "n": 2,
+     "best": {
+      "id": "Aa2YcDb-E78",
+      "title": "2013 Captiva timing chain failure",
+      "channel": "Jake",
+      "views": 23092
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 26875,
+     "n": 1,
+     "best": {
+      "id": "TBHn7noyktY",
+      "title": "No Start Diagnosis 2012 CHEVY CAPTIVA Won't Crank...Clicks...Fixed...",
+      "channel": "Peter L",
+      "views": 26875
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 25372,
+     "n": 3,
+     "best": {
+      "id": "HslZeI3lFpo",
+      "title": "Oil filter removal 2014 chevy captiva 2.4 engine, socket needed",
+      "channel": "FDT Motors",
+      "views": 20270
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "UlL-psNtMFM",
+     "title": "Chevrolet Captiva 2011 - 2012 PROBLEMS",
+     "channel": "Fahrudin Golos",
+     "views": 178836
+    },
+    {
+     "id": "EHfbbQe-iqw",
+     "title": "2013 Chevy Captiva KEY STUCK & electrical problems ...EASY FIX !!!",
+     "channel": "iiGotDaGrenade-",
+     "views": 13594
+    },
+    {
+     "id": "yptEgw5ok7Q",
+     "title": "Chevrolet Captiva LTZ 2014 or Holden Captiva 7 3.0L V6 All problems ! Full Review",
+     "channel": "SNG Garage Eng",
+     "views": 7805
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "jaguar-x-type": [
+  {
+   "years": [
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008
+   ],
+   "gen": "2002–2008 Jaguar X-Type",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 183,
+   "views": 2866369,
+   "topics": [
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 105486,
+     "n": 3,
+     "best": {
+      "id": "hILhxe-ihxk",
+      "title": "2004 Jaguar X-Type How to refill the A/C",
+      "channel": "Marinedad10672107",
+      "views": 75614
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 105250,
+     "n": 2,
+     "best": {
+      "id": "xeFQPd6y4Xw",
+      "title": "2004 Jaguar X-Type throttle body replacement",
+      "channel": "Marinedad10672107",
+      "views": 54415
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 42611,
+     "n": 2,
+     "best": {
+      "id": "JYIbhip0Cbg",
+      "title": "⭐ 2003 Jaguar X-type - 2.5 - P0302 - Cylinder 2 Misfire Detected",
+      "channel": "Online Auto Repair Videos",
+      "views": 24956
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 41945,
+     "n": 1,
+     "best": {
+      "id": "elWFgmPGa3I",
+      "title": "2004 Jaguar X-Type fuel filter replacement",
+      "channel": "Marinedad10672107",
+      "views": 41945
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 28277,
+     "n": 1,
+     "best": {
+      "id": "dhaQmdXS-iY",
+      "title": "2005 Jaguar X-Type 3.0 V6 AWD Clutch replacement",
+      "channel": "Jeremy's Car Repair",
+      "views": 28277
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 10260,
+     "n": 3,
+     "best": {
+      "id": "0ybAfOLvzFM",
+      "title": "2002 Jaguar Xtype Inertia Switch reset after suddenly died.",
+      "channel": "Dr. G aka Marc Gottlieb DDS",
+      "views": 7094
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 3603,
+     "n": 1,
+     "best": {
+      "id": "BxKzksZXmuY",
+      "title": "2002 Jaguar X-Type - Trunk (aka boot) Strut Replacement",
+      "channel": "TofuRobots",
+      "views": 3603
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 584,
+     "n": 1,
+     "best": {
+      "id": "nj8vpM-mWKk",
+      "title": "2002 Jaguar X-Type | Ignition Lock Rebuilding & Repairing | Fixing Key Turning Issues",
+      "channel": "TheKeySpecialist",
+      "views": 584
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "PaAPEpbxxzc",
+     "title": "Should You Buy a JAGUAR X-TYPE? (Test Drive & Review 2008 2.0D)",
+     "channel": "High Peak Autos",
+     "views": 209409
+    },
+    {
+     "id": "tU81QPf5URk",
+     "title": "2002 Jaguar X-type electrical problems.",
+     "channel": "Robin McQueen",
+     "views": 141182
+    },
+    {
+     "id": "q5fwB10RqUs",
+     "title": "2002-2008 Jaguar X-Type Ownership Review: Is it Reliable?",
+     "channel": "CarCareKiosk",
+     "views": 7041
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "suzuki-sx4": [
+  {
+   "years": [
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013
+   ],
+   "gen": "2007–2013 Suzuki SX4",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 7919306,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 483989,
+     "n": 5,
+     "best": {
+      "id": "Yo2hJym2Ihw",
+      "title": "2009 Suzuki SX4: DIY Oil Change How-To Video",
+      "channel": "Dan Edmunds",
+      "views": 346233
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 288504,
+     "n": 3,
+     "best": {
+      "id": "zoVUz0jXjc0",
+      "title": "How to Replace Cabin Air Filter 2010 Suzuki SX4 | AQ1112",
+      "channel": "Filterheads",
+      "views": 270040
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 67914,
+     "n": 4,
+     "best": {
+      "id": "kQG38e2Se0g",
+      "title": "Suzuki SX4 - RADIO REMOVAL / REPLACEMENT (2006 - 2013)",
+      "channel": "QuiteAlright",
+      "views": 30820
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 67871,
+     "n": 4,
+     "best": {
+      "id": "ykvAsfOn_U4",
+      "title": "How to remove Front Door Panel Suzuki SX4 2008-2014",
+      "channel": "repairED",
+      "views": 28415
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 9077,
+     "n": 1,
+     "best": {
+      "id": "fbeohqmJesI",
+      "title": "2010 Suzuki SX4 Crank/No Start After Two(2) Engine Swap. P0335 Crank Shaft Sensor Malfunction",
+      "channel": "DJ AUTOMOTIVE ",
+      "views": 9077
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 8773,
+     "n": 1,
+     "best": {
+      "id": "hCAG-oeIqno",
+      "title": "2008 Suzuki SX4 Front Brake Pad Replacement",
+      "channel": "Bob Kovacs",
+      "views": 8773
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 6138,
+     "n": 1,
+     "best": {
+      "id": "jRtEB_aFOcU",
+      "title": "How to Manage Automatic Gearbox in Suzuki SX4 II ( 2013 – 2021 ) | Drive With Automatic Gearbox",
+      "channel": "HardReset_info CARs",
+      "views": 6138
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 1898,
+     "n": 1,
+     "best": {
+      "id": "WY9GizgVe6c",
+      "title": "2012 (12) Suzuki SX4 2.0 DDIS SZ5 4X4 5Dr in Galactic Grey. 68k Miles. 10 Services. Local Car. £4750",
+      "channel": "Ted Torques",
+      "views": 1898
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "d4PUUQxLdOM",
+     "title": "Suzuki SX4 2006-2010 | WHAT TO LOOK FOR | should you buy one??",
+     "channel": "Car and Driving - Car Reviews",
+     "views": 84274
+    },
+    {
+     "id": "LwQeCbfrAEw",
+     "title": "2007-2013 Suzuki SX4 Ownership Review: Practical and Reliable?",
+     "channel": "CarCareKiosk",
+     "views": 28945
+    },
+    {
+     "id": "WHfgcJK_KSk",
+     "title": "2011 Suzuki SX4 Off-road Review & Drive",
+     "channel": "The Fast Lane Car",
+     "views": 604586
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "cadillac-xt5": [
+  {
+   "years": [
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2017–2025 Cadillac XT5",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 8951979,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 269635,
+     "n": 6,
+     "best": {
+      "id": "B1vmOcwdhQs",
+      "title": "2017-2022 Cadillac XT5 TPMS Reset",
+      "channel": "ToolBox Tipz",
+      "views": 112583
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 223003,
+     "n": 5,
+     "best": {
+      "id": "9-Fjfr1Bwe0",
+      "title": "2017-2021 Cadillac XT5 Engine Air Filter & Cabin Filter Replacement Guide",
+      "channel": "David Waltermyer",
+      "views": 88674
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 117155,
+     "n": 6,
+     "best": {
+      "id": "nLqM27LAdJU",
+      "title": "How To Start A 2017 - 2021 Cadillac XT5 With No Remote Detected - XT 5 Dead Key Fob Not Working",
+      "channel": "PYR Automotive ",
+      "views": 50967
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 111230,
+     "n": 2,
+     "best": {
+      "id": "EWybEu8W88s",
+      "title": "Cadillac XT5 Cabin Air Filter Replacement ( 2017 2018 2019 2020 2021 2022 )",
+      "channel": "Undercar Experts",
+      "views": 71672
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 101411,
+     "n": 1,
+     "best": {
+      "id": "Bgv3XPEAGDs",
+      "title": "2017-2023 Cadillac XT5 P0128 “Steering assist reduced, drive with care” Thermostat replacement FIX",
+      "channel": "NutzAboutBolts",
+      "views": 101411
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 31420,
+     "n": 1,
+     "best": {
+      "id": "UISDQ7ypujw",
+      "title": "2017 cadillac xt5 coolant temp sensor replacement",
+      "channel": "Autotech mobile mechanic ",
+      "views": 31420
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 10256,
+     "n": 1,
+     "best": {
+      "id": "nllhwnTJxoY",
+      "title": "Troubleshooting A No start 2019 Cadillac XT5 Won't Crank or Start...Clicks...Fixed...",
+      "channel": "Peter L",
+      "views": 10256
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "7Hz9gJcunc8",
+     "title": "2024 Cadillac XT5 -- Should you Buy this V-6 Caddy over a Lexus RX??",
+     "channel": "Car Confections",
+     "views": 78032
+    },
+    {
+     "id": "RuuH4yZHkag",
+     "title": "2017 Cadillac XT5 Problems and Recalls. Should you buy it?",
+     "channel": "OBD Insights",
+     "views": 44708
+    },
+    {
+     "id": "UixKhYzBfHQ",
+     "title": "5 Reasons Why You Should Buy A 2022 Cadillac XT5 - Quick Buyer's Guide",
+     "channel": "Boston Auto Blog",
+     "views": 39126
     }
    ],
    "costs": null
