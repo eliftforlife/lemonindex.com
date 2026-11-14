@@ -83,6 +83,8 @@ if ENGU == 'hooks':
         for _e, _t in _es.items():
             _d = _EU_SC['engines'].get(_e)
             if _d: _eu_add(f'/engines/{_EU_SLUG.get(_e, _e)}/', _fid, _t['years'], _t['code'], 'tsb', _EU_MK.sub('', _d['name']))
+    # 7. everyday engines matched by VIN (vin_engine_pages.py, data/vin_engines.json): model years with 3+ VIN-matched owner complaints
+    for _url, _fid, _ys, _nm in globals().get('VE_USE') or []: _eu_add(_url, _fid, _ys, '', 'vin', _nm)
     CAR_ENG = {}
     for _url, _cs in ENGINE_USES.items():
         for _fid, _u in _cs.items(): CAR_ENG.setdefault(_fid, {})[_url] = _u

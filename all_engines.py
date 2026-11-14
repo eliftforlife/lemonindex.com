@@ -17,6 +17,7 @@ AE_LIVE = {}   # url -> card dict (a page listed by two hubs, e.g. the S62 on th
 def _ae_add(url, **c):
     if not os.path.exists(os.path.join(OUT, url.split('#')[0].strip('/'), 'index.html')): return
     if url in AE_LIVE: AE_LIVE[url]['t'] |= c['t']; return
+    if not c['yt'][0] and ENG_POOL_RANK.get(url): c['yt'] = (ENG_POOL_RANK[url], ENG_POOL_N, ENG_POOL_LBL)   # 11-13: every engine in the one YouTube pool shows its rank
     AE_LIVE[url] = dict(url=url, **c)
 # 1. BMW engine pages (ranked the same way as /engines/bmw/)
 _ae_ytn = ENG_POOL_N   # 11-12 round 2: one YouTube rank pool for every engine (supercar_engine_pages.py), so no two cards say YT #1
@@ -47,6 +48,8 @@ for _p in sorted(_aeg.glob('data/engines_*.json')):
                 img=_ae_img(d.get('img')), yt=(None, 0, ''), used=[short], t={'h'} if mk in ('Honda', 'Acura') else set(), f='hybrid' if re.search(r'hybrid|IMA', d.get('name', '') + ' ' + d.get('note', ''), re.I) else 'gas', mk=mk, o=(3, ys[0] if ys else 0), alias=d.get('name', ''), ylist=sorted(int(y) for y in ys))
 # 4. 11-12 round 2: heavy-duty diesel + F-150 engine pages and the two comparisons (hd_pages.py), tab 'Trucks & diesel'
 for _c in (globals().get('HD_AE') or []): _ae_add(**_c)
+# 4b. 11-13: everyday engines matched by VIN (vin_engine_pages.py: 2GR-FKS, GM 5.3 / 6.2, Pentastar, HEMI ...)
+for _c in (globals().get('VE_AE') or []): _ae_add(**_c)
 # 11-13 N3 (nav report 3: "list mainstream cars first in Used in"): the everyday /cars/ models from ENGINE_USES lead each card's list, so the
 # 3.5 EcoBoost card says F-150 before GT and searching "camry" finds the 2GR-FE
 for _u, _c in AE_LIVE.items():
@@ -96,6 +99,7 @@ def _ae_model(fid, nm, mk, engs):
     mk = {'Ssc': 'SSC'}.get(mk, mk)
     for eng, fu in engs:
         if not eng or (fid, _FG(fu)) in _ae_seen or (fu == 'gas' and fid in _ae_cov): continue
+        if any(f == fu and eng.startswith(t) for t, f in (globals().get('VE_COVER') or {}).get(fid, ())): continue   # 11-13: a VIN-matched engine page covers it (vin_engine_pages.py)
         _ae_seen.add((fid, _FG(fu))); _ae_models.append((fid, nm, mk, eng, fu))
 for f in YEARS: _ae_model(f['id'], f['name'], BYNAME[f['name']]['brand'], _ae_fuels(f['id'], [v['y'] for v in f['years']]))
 for m in list(_load('data/extra_models.json').values()) + list(_load('data/extra_models_new.json').values()):

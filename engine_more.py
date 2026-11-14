@@ -46,7 +46,7 @@ def _perf_only_page(url, name, make):
     rk = ENG_POOL_RANK.get(url)
     chips = (f'<div class="trc"><div><b>{y0}–{str(y1)[-2:]}</b><span>model years covered</span></div>'
              + (f'<div><b>{hp[0]}' + (f'–{hp[-1]}' if len(hp) > 1 else '') + '</b><span>hp (factory)</span></div>' if hp else '')
-             + '<div><b>–</b><span>no YouTube study yet</span></div></div>')
+             + (f'<div><b>{int(ENG_POOL[url] + 0.5)}</b><span>YouTube owner tone /100 · #{rk} of {ENG_POOL_N}</span></div></div>' if url in ENG_POOL and rk else '<div><b>–</b><span>no YouTube study yet</span></div></div>'))
     what = F[0][3].get('what') or ''
     ans1 = (f'{E(make)}&#39;s {E(what)}. This page covers the versions we have sourced so far: the {E(", ".join(cars))}, model years {y0}–{y1}. '
             + ('The engine is used in other cars too; those aren&#39;t covered here yet.' if ENG_PERF_ONLY[url][2] else ''))
@@ -65,9 +65,11 @@ def _perf_only_page(url, name, make):
             f'<p class="note engvd"><b>{E(vline.split(":", 1)[0])}:</b>{E(html.unescape(vline.split(":", 1)[1]))}' + (f' <a href="{h2h[0]}">Compare it with the {E(h2h[1])} →</a>' if h2h else '') + '</p>'
             + (f'<section class="yc engk"><h2>Known issues on record</h2><ul>{issl}</ul></section>' if issl else '')
             + (globals().get('EU_CARS_HTML') or (lambda *a: ''))(url)   # 11-13 N3 (nav report 3): the regular models (Golf for the Golf R), each year linked
+            + (globals().get('VE_YT_SEC') or (lambda _u: ''))(url)   # 11-13: YouTube owner tone once its study is scored
+            + ''.join((globals().get('VE_SCE') or (lambda _p: []))(url))   # 11-13: the everyday cars' VIN-matched complaints (vin_engine_pages.py)
             + f'<section class="yc"><h2>Owner complaints and recalls</h2><p>Counts for the cars on this page, from NHTSA. They cover every part of the car, not only the engine.</p>{tbl}</section>'
             + f'<section class="yc"><h2>Specs by generation</h2>{gsec}</section>'
-            + '<section class="yc"><h2>What we don&#39;t have yet</h2><ul><li>A YouTube owner study for this engine (and for the ' + E(', '.join(cars)) + '): not pulled yet, so there&#39;s no YouTube tone or rank.</li>'
+            + '<section class="yc"><h2>What we don&#39;t have yet</h2><ul>' + ('' if url in ENG_POOL else '<li>A YouTube owner study for this engine (and for the ' + E(', '.join(cars)) + '): not pulled yet, so there&#39;s no YouTube tone or rank.</li>')
               + ('<li>The engine&#39;s other cars: only the versions above are sourced so far.</li>' if ENG_PERF_ONLY[url][2] else '') + '</ul></section>'
             + '<section class="yqa trq"><h2>Quick answers</h2>' + qa_fold(''.join(f'<h3>{E(q)}</h3><p>{E(a)}</p>' for q, a in faq)) + '</section>'
             + (f'<p class="yc-cap">Sources: {srcl}. Complaints and recalls: NHTSA (api.nhtsa.gov).</p>' if srcl else '') + '</article>')

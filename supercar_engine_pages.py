@@ -56,6 +56,7 @@ for _c in BENG:
     if _v: ENG_POOL[ENG_URL(_c)] = sum(_v) / len(_v)
 for _e, _a in _SCAVG.items():
     if _e not in {'bmw-s65'}: ENG_POOL.setdefault(SCE_URL(_e), _a)   # = SCE_EXTERNAL below: the BMW engine page owns that URL
+for _u, _a in (globals().get('VE_YTAVG') or {}).items(): ENG_POOL.setdefault(_u, _a)   # 11-13: the everyday / diesel / EA888 engine studies (vin_engine_pages.py)
 ENG_POOL_RANK = {u: i + 1 for i, u in enumerate(sorted(ENG_POOL, key=lambda u: (-ENG_POOL[u], u)))}
 ENG_POOL_N = len(ENG_POOL_RANK)
 ENG_POOL_LBL = 'engines with a YouTube study'
@@ -176,6 +177,7 @@ def _sce_page(e):
                 + f'. This page counts only the {tot:,} complaint{"" if tot == 1 else "s"} and {len(d["recalls"])} recall{"" if len(d["recalls"]) == 1 else "s"} we can tie to the {E(nm)} by model name or the owner&#39;s own words.</p>')
     # per-year chart
     sec = list((globals().get('HD_SCE') or (lambda _e: []))(e))   # 11-12 round 2: the F-150's own data first (hd_pages.py)
+    sec += (globals().get('VE_SCE') or (lambda _p: []))(path)   # 11-13: the everyday cars' VIN-matched complaints (vin_engine_pages.py)
     sec.append((globals().get('EU_CARS_HTML') or (lambda *a: ''))(path))   # 11-13 N3: the everyday /cars/ models with it, each year linked
     mxn = max([1] + [v['n'] for v in yrs.values()])
     def carsof(y): return ', '.join(_sce_label(d, s).replace(mk + ' ', '') for s in yrs[y]['cars'])

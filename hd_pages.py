@@ -339,6 +339,7 @@ if HDX == 'pages' and HDT:
                  f'<div><b>{es}%</b><span>name the engine</span></div><div><b>{len(d["recalls"])}</b><span>recalls name it</span></div></div>')
         sec = []
         sec.append(_hd_known_html(e))
+        sec.append((globals().get('VE_YT_SEC') or (lambda _u: ''))(path))   # 11-13: YouTube owner tone once its study is scored (vin_engine_pages.py)
         sec.append('<h2>Owner complaints by model year</h2>' + _hd_eng_years_chart(e)
                    + '<p class="note">Counts of complaints filed so far. Older trucks have had longer to collect them, and popular years draw more because more were sold: '
                      'no one reports sales by engine, so there&#39;s no per-truck rate. Compare the shares below instead.</p>')

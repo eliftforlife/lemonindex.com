@@ -1655,6 +1655,7 @@ def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
 UXC = 'hooks'; exec(open('ux_c.py', encoding='utf-8').read())   # 11-12 UX test (part C): battery-recall banners, RAV4 Hybrid, sales sources, EV YouTube, data files
 HDX = 'hooks'; exec(open('hd_pages.py', encoding='utf-8').read())   # 11-12 round 2 (fix C): half-ton banner + honest Q&A on the F-Series/Ram/Silverado/Sierra pages
 exec(open('n2_nav.py', encoding='utf-8').read())   # 11-13 navigation (N2): better years strip, year sort, model/year wayfinding
+VEX = 'hooks'; exec(open('vin_engine_pages.py', encoding='utf-8').read())   # 11-13 everyday engines matched by VIN: VE_USE for ENGINE_USES (before engine_uses.py)
 ENGU = 'hooks'; exec(open('engine_uses.py', encoding='utf-8').read())   # 11-13 nav fix N3: ENGINE_USES, "Engines in this car" + other-versions chips (wraps PIN_HTML), engine pages link back
 def yearx(fid, y): return extra(fid, y)
 # ---- 11-12 round 2 (Carlos: "rav4 hybrid" opened a RAV4 page that never said what the hybrid saves): a Gas or hybrid card on the model page
@@ -2161,6 +2162,7 @@ exec(open('seo_pages.py', encoding='utf-8').read())   # 11-06 best-of + stats pa
 exec(open('extra_pages.py', encoding='utf-8').read())   # 11-06 Taos + Pontiac
 HDX = 'pages'; exec(open('hd_pages.py', encoding='utf-8').read())   # 11-12 round 2 (fix C): HD truck + diesel engine pages, 2.7 EcoBoost, F-150 engines compared (before the engine hubs)
 exec(open('supercar_engine_pages.py', encoding='utf-8').read())   # 11-11 supercar engines hub + engine pages (before the BMW pages phase: /images/ lists their images)
+VEX = 'pages'; exec(open('vin_engine_pages.py', encoding='utf-8').read())   # 11-13 everyday engine pages matched by VIN (2GR-FKS, GM 5.3/6.2, Pentastar ...), in the YouTube rank pool
 BMW_PHASE = 'pages'; exec(open('bmw_pages.py', encoding='utf-8').read())   # 11-10 BMW model pages + engine pages
 exec(open('thanks_page.py', encoding='utf-8').read())   # 11-07 donation thank-you page (noindex)
 import perf_page; PERF_URLS = perf_page.build_all(OUT, page)   # 11-11 performance-car pages (data/perf/<slug>.json): the M3's own page gets the slider + performance Overview; the rest get pages of their own
@@ -2189,7 +2191,7 @@ _404 = re.sub(r'<main>.*</main>', lambda m: (
     '<li><a href="/best/">Best cars</a></li><li><a href="/engines/">Engines</a></li><li><a href="/check-engine-light/">Engine codes</a></li></ul></div></main>'), _404, count=1, flags=re.S)
 _404 = _404.replace('</body>', f'<script src="/assets/lx404.js?v={LXS_V}" defer></script></body>', 1)
 open(f'{OUT}/404.html', 'w', encoding='utf-8').write(_404)
-urls = ['/', '/rankings/', STUDY, '/studies/', '/method/', '/vin/', '/car-loan-rates/', '/vote/', '/data/', '/brands/'] + PERF_URLS + burls + purls + murls + surls + eurls + GAP_URLS + CODE_URLS + SEO_URLS + EXTRA_URLS + BMW_URLS + SCE_URLS + AE_URLS + yurls + ADV_URLS + curls + LEGAL_URLS + UXC_URLS + MST_URLS + globals().get('HD_URLS', [])
+urls = ['/', '/rankings/', STUDY, '/studies/', '/method/', '/vin/', '/car-loan-rates/', '/vote/', '/data/', '/brands/'] + PERF_URLS + burls + purls + murls + surls + eurls + GAP_URLS + CODE_URLS + SEO_URLS + EXTRA_URLS + BMW_URLS + SCE_URLS + AE_URLS + yurls + ADV_URLS + curls + LEGAL_URLS + UXC_URLS + MST_URLS + globals().get('HD_URLS', []) + globals().get('VE_URLS', [])
 open(f'{OUT}/sitemap.xml', 'w', encoding='utf-8').write('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + ''.join(f'<url><loc>{BASE}{u}</loc><lastmod>{PD.get(u, {}).get("d", TODAY)}</lastmod></url>' for u in urls) + '</urlset>')
 open(f'{OUT}/ads.txt', 'w').write(f'google.com, {ADS.replace("ca-", "")}, DIRECT, f08c47fec0942fa0\n')
 open(f'{OUT}/robots.txt', 'w').write(f'User-agent: *\nAllow: /\n\nUser-agent: GPTBot\nAllow: /\nUser-agent: ClaudeBot\nAllow: /\nUser-agent: PerplexityBot\nAllow: /\nUser-agent: Google-Extended\nAllow: /\nUser-agent: Googlebot-Image\nAllow: /\n\n# bulk dataset scrapers: the data is free at /data/ with credit instead\nUser-agent: CCBot\nDisallow: /\nUser-agent: Bytespider\nDisallow: /\nUser-agent: Diffbot\nDisallow: /\nUser-agent: Omgilibot\nDisallow: /\nUser-agent: ImagesiftBot\nDisallow: /\n\nSitemap: {BASE}/sitemap.xml\nSitemap: {BASE}/image-sitemap.xml\n')
