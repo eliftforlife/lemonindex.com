@@ -381,185 +381,185 @@
  },
  "ford-f-series": {
   "2000": {
-   "src": "/assets/ai-cars/ford-f-series-g10.webp?v=1",
+   "src": "/assets/ai-cars/ford-f-series-2000.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark green",
+   "color": "bright red",
    "gen": "10th generation"
   },
   "2001": {
-   "src": "/assets/ai-cars/ford-f-series-g10.webp?v=1",
+   "src": "/assets/ai-cars/ford-f-series-2001.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark green",
+   "color": "white",
    "gen": "10th generation"
   },
   "2002": {
-   "src": "/assets/ai-cars/ford-f-series-g10.webp?v=1",
+   "src": "/assets/ai-cars/ford-f-series-2002.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark green",
+   "color": "dark blue metallic",
    "gen": "10th generation"
   },
   "2003": {
-   "src": "/assets/ai-cars/ford-f-series-g10.webp?v=1",
+   "src": "/assets/ai-cars/ford-f-series-2003.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark green",
+   "color": "silver metallic",
    "gen": "10th generation"
   },
   "2004": {
-   "src": "/assets/ai-models/ford-f-series.webp?v=1",
+   "src": "/assets/ai-cars/ford-f-series-2004.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark red metallic",
    "gen": "11th generation"
   },
   "2005": {
-   "src": "/assets/ai-models/ford-f-series.webp?v=1",
+   "src": "/assets/ai-cars/ford-f-series-2005.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "black",
    "gen": "11th generation"
   },
   "2006": {
-   "src": "/assets/ai-models/ford-f-series.webp?v=1",
+   "src": "/assets/ai-cars/ford-f-series-2006.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "white",
    "gen": "11th generation"
   },
   "2007": {
-   "src": "/assets/ai-models/ford-f-series.webp?v=1",
+   "src": "/assets/ai-cars/ford-f-series-2007.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark blue metallic",
    "gen": "11th generation"
   },
   "2008": {
-   "src": "/assets/ai-models/ford-f-series.webp?v=1",
+   "src": "/assets/ai-cars/ford-f-series-2008.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark gray metallic",
    "gen": "11th generation"
   },
   "2009": {
-   "src": "/assets/ai-cars/ford-f-series-g12.webp?v=1",
+   "src": "/assets/ai-cars/ford-f-series-2009.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark red metallic",
    "gen": "12th generation"
   },
   "2010": {
-   "src": "/assets/ai-cars/ford-f-series-g12.webp?v=1",
+   "src": "/assets/ai-cars/ford-f-series-2010.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "black",
    "gen": "12th generation"
   },
   "2011": {
-   "src": "/assets/ai-cars/ford-f-series-g12.webp?v=1",
+   "src": "/assets/ai-cars/ford-f-series-2011.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "silver metallic",
    "gen": "12th generation"
   },
   "2012": {
-   "src": "/assets/ai-cars/ford-f-series-g12.webp?v=1",
+   "src": "/assets/ai-cars/ford-f-series-2012.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark blue metallic",
    "gen": "12th generation"
   },
   "2013": {
-   "src": "/assets/ai-cars/ford-f-series-g12.webp?v=1",
+   "src": "/assets/ai-cars/ford-f-series-2013.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "ruby red metallic",
    "gen": "12th generation"
   },
   "2014": {
-   "src": "/assets/ai-cars/ford-f-series-g12.webp?v=1",
+   "src": "/assets/ai-cars/ford-f-series-2014.webp?v=1",
    "w": 1000,
    "h": 600,
    "color": "white",
    "gen": "12th generation"
   },
   "2015": {
-   "src": "/assets/ai-cars/ford-f-series-g13.webp?v=1",
+   "src": "/assets/ai-cars/ford-f-series-2015.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "medium blue metallic",
    "gen": "13th generation"
   },
   "2016": {
-   "src": "/assets/ai-cars/ford-f-series-g13.webp?v=1",
+   "src": "/assets/ai-cars/ford-f-series-2016.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "white",
    "gen": "13th generation"
   },
   "2017": {
-   "src": "/assets/ai-cars/ford-f-series-g13.webp?v=1",
+   "src": "/assets/ai-cars/ford-f-series-2017.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "silver metallic",
    "gen": "13th generation"
   },
   "2018": {
-   "src": "/assets/ai-cars/ford-f-series-g13.webp?v=1",
+   "src": "/assets/ai-cars/ford-f-series-2018.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "ruby red metallic",
    "gen": "13th generation"
   },
   "2019": {
-   "src": "/assets/ai-cars/ford-f-series-g13.webp?v=1",
+   "src": "/assets/ai-cars/ford-f-series-2019.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "black",
    "gen": "13th generation"
   },
   "2020": {
-   "src": "/assets/ai-cars/ford-f-series-g13.webp?v=1",
+   "src": "/assets/ai-cars/ford-f-series-2020.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "dark gray metallic",
    "gen": "13th generation"
   },
   "2021": {
-   "src": "/assets/ai-cars/ford-f-series-g14.webp?v=1",
+   "src": "/assets/ai-cars/ford-f-series-2021.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "silver metallic",
    "gen": "14th generation"
   },
   "2022": {
-   "src": "/assets/ai-cars/ford-f-series-g14.webp?v=1",
+   "src": "/assets/ai-cars/ford-f-series-2022.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark blue metallic",
    "gen": "14th generation"
   },
   "2023": {
-   "src": "/assets/ai-cars/ford-f-series-g14.webp?v=1",
+   "src": "/assets/ai-cars/ford-f-series-2023.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "red",
    "gen": "14th generation"
   },
   "2024": {
-   "src": "/assets/ai-cars/ford-f-series-g14.webp?v=1",
+   "src": "/assets/ai-cars/ford-f-series-2024.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "white",
    "gen": "14th generation"
   },
   "2025": {
-   "src": "/assets/ai-cars/ford-f-series-g14.webp?v=1",
+   "src": "/assets/ai-cars/ford-f-series-2025.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark gray metallic",
    "gen": "14th generation"
   }
  },
