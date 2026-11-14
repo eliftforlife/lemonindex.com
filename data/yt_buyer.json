@@ -27685,5 +27685,96 @@
 }
 ]
 }
+],
+"cadillac-srx": [
+{
+"sid": "cadillac-srx-g1",
+"y0": 2004,
+"y1": 2009,
+"label": "2004–2009",
+"videos": 200,
+"praise": [
+[
+"Looks",
+4
+],
+[
+"Power",
+4
+]
+],
+"trouble": [
+[
+"Battery / alternator / starter",
+4
+]
+],
+"top": [
+{
+"id": "Ml9h5dddtug",
+"title": "WORST ENGINE EVER!? - 2006 Cadillac SRX High Miles Review!!",
+"views": 99437,
+"ch": "TopLineRacer"
+},
+{
+"id": "5j3_0scz-2Q",
+"title": "2005 Cadillac SRX - Detailed Review and Test Drive of the First Generation SRX",
+"views": 80555,
+"ch": "LCR 🚗 Luxury Car Report"
+},
+{
+"id": "U8ZsVw7g6Ac",
+"title": "Review: 2007 Cadillac SRX V8",
+"views": 72925,
+"ch": "MyRide on Autobytel"
+}
+]
+},
+{
+"sid": "cadillac-srx-g2",
+"y0": 2010,
+"y1": 2016,
+"label": "2010–2016",
+"videos": 200,
+"praise": [
+[
+"Fun to drive",
+6
+],
+[
+"Looks",
+4
+],
+[
+"Power",
+4
+],
+[
+"Reliability",
+3
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "VZStadOSMDc",
+"title": "Top 5 Problems Cadillac SRX SUV 2nd Gen 2010-15",
+"views": 574633,
+"ch": "1A Auto: Repair Tips & Secrets Only Mechanics Know"
+},
+{
+"id": "kb80hVC-59E",
+"title": "2011 Cadillac SRX Performance Collection Start Up, Engine, and In Depth Tour/Review",
+"views": 442563,
+"ch": "Saabkyle04"
+},
+{
+"id": "kSpQ7JhtzIk",
+"title": "2013 Cadillac SRX vs Lexus RX 350 F-Sport 0-60 MPH Mile High Mashup Review",
+"views": 234184,
+"ch": "The Fast Lane Car"
+}
+]
+}
 ]
 }
