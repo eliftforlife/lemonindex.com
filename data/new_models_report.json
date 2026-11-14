@@ -3012,5 +3012,2667 @@
    2014,
    2015
   ]
+ },
+ {
+  "slug": "acura-cl",
+  "sales": {
+   "1996": 16740,
+   "1997": 28939,
+   "1998": 26644,
+   "1999": 20968,
+   "2000": 24677,
+   "2001": 18993,
+   "2002": 12072,
+   "2003": 6593,
+   "2004": 283
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Acura_CL",
+  "note": "Wikipedia U.S. sales table (col='Total US sales'), citing the automaker's releases",
+  "flags": [
+   "Acura CL 2004: 283 sold, 0 complaints in window -> sales merged into 2003",
+   "Acura CL: 1 scorable model years / 7 complaints -> complaints only"
+  ],
+  "complaints": 400,
+  "scored": [
+   2000
+  ]
+ },
+ {
+  "slug": "acura-integra",
+  "sales": {
+   "1999": 26184,
+   "2000": 25975,
+   "2001": 13376,
+   "2022": 13027,
+   "2023": 32090,
+   "2024": 24398,
+   "2025": 20178
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Acura_Integra",
+  "note": "Wikipedia U.S. sales table (col='US'), citing the automaker's releases",
+  "flags": [
+   "Acura Integra 2022: 13,027 sold, 0 complaints in window -> sales merged into 2023",
+   "Acura Integra: 1 scorable model years / 9 complaints -> complaints only"
+  ],
+  "complaints": 310,
+  "scored": [
+   2000,
+   2023,
+   2024,
+   2025
+  ]
+ },
+ {
+  "slug": "acura-rl",
+  "sales": {
+   "1996": 15848,
+   "1997": 16004,
+   "1998": 15024,
+   "1999": 13366,
+   "2000": 14827,
+   "2001": 10723,
+   "2002": 9392,
+   "2003": 6829,
+   "2004": 8753,
+   "2005": 17572,
+   "2006": 11501,
+   "2007": 6262,
+   "2008": 4517,
+   "2009": 2043,
+   "2010": 2037,
+   "2011": 1096,
+   "2012": 379
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Acura_RL",
+  "note": "Wikipedia U.S. sales table (col='Total US sales'), citing the automaker's releases; RL only (the later RLX is a different model)",
+  "flags": [
+   "Acura RL 2003: 6,829 sold, 0 complaints in window -> sales merged into 2004",
+   "Acura RL 2011: 1,096 sold, 0 complaints in window -> sales merged into 2012",
+   "Acura RL: 0 scorable model years / 0 complaints -> complaints only"
+  ],
+  "complaints": 346,
+  "scored": []
+ },
+ {
+  "slug": "acura-tsx",
+  "sales": {
+   "2003": 18932,
+   "2004": 30365,
+   "2005": 34856,
+   "2006": 38035,
+   "2007": 33037,
+   "2008": 31998,
+   "2009": 28650,
+   "2010": 31950,
+   "2011": 27725,
+   "2012": 24631,
+   "2013": 15508,
+   "2014": 5647
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Acura_TSX",
+  "note": "Wikipedia U.S. sales table (col='US sales (sedan)'), citing the automaker's releases; sedan sales; the 2011-2014 Sport Wagon is left out of both sales and complaints",
+  "flags": [
+   "Acura TSX 2003: 18,932 sold, 0 complaints in window -> sales merged into 2004",
+   "Acura TSX 2011: 27,725 sold, 1 complaints in window -> sales merged into 2012",
+   "Acura TSX 2007: 33,037 sold but only 2 complaints in window -> not scored"
+  ],
+  "complaints": 671,
+  "scored": [
+   2004,
+   2005,
+   2006,
+   2008,
+   2009,
+   2010,
+   2012
+  ]
+ },
+ {
+  "slug": "audi-a5",
+  "sales": {
+   "2007": 625,
+   "2008": 6282,
+   "2009": 9800,
+   "2010": 16379,
+   "2011": 15385,
+   "2012": 17270,
+   "2013": 18664,
+   "2014": 16640,
+   "2015": 12934,
+   "2016": 8354,
+   "2017": 21301,
+   "2018": 25972,
+   "2019": 23023,
+   "2020": 18827,
+   "2021": 17128,
+   "2022": 18349,
+   "2023": 23807,
+   "2024": 24636,
+   "2025": 16776
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/audi-a5-sales-figures/",
+  "note": "GoodCarBadCar U.S. calendar-year sales table; A5 coupe, cabriolet and Sportback",
+  "flags": [
+   "Audi A5 2007: 625 sold, 0 complaints in window (no neighbour with complaints: dropped)",
+   "Audi A5 2008: 6,282 sold, 0 complaints in window -> sales merged into 2009",
+   "Audi A5 2012: 17,270 sold, 0 complaints in window -> sales merged into 2013",
+   "Audi A5 2017: 21,301 sold but only 2 complaints in window -> not scored",
+   "Audi A5: 3 scorable model years / 29 complaints -> complaints only"
+  ],
+  "complaints": 377,
+  "scored": [
+   2013,
+   2018,
+   2019,
+   2023,
+   2024
+  ]
+ },
+ {
+  "slug": "audi-tt",
+  "sales": {
+   "2005": 2822,
+   "2006": 954,
+   "2007": 4355,
+   "2008": 4486,
+   "2009": 1935,
+   "2010": 1531,
+   "2011": 2236,
+   "2012": 2226,
+   "2013": 2053,
+   "2014": 1166,
+   "2015": 1167,
+   "2016": 3044,
+   "2017": 2294,
+   "2018": 1289,
+   "2019": 1324,
+   "2020": 832,
+   "2021": 987,
+   "2022": 461,
+   "2023": 725,
+   "2024": 39
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/audi-tt-sales-figures/",
+  "note": "GoodCarBadCar U.S. calendar-year sales table",
+  "flags": [
+   "Audi TT 2005: 2,822 sold, 0 complaints in window -> sales merged into 2006",
+   "Audi TT 2007: 4,355 sold, 0 complaints in window -> sales merged into 2008",
+   "Audi TT 2010: 1,531 sold, 0 complaints in window -> sales merged into 2009",
+   "Audi TT 2011: 2,236 sold, 0 complaints in window (no neighbour with complaints: dropped)",
+   "Audi TT 2012: 2,226 sold, 0 complaints in window (no neighbour with complaints: dropped)",
+   "Audi TT 2013: 2,053 sold, 0 complaints in window (no neighbour with complaints: dropped)",
+   "Audi TT 2014: 1,166 sold, 0 complaints in window (no neighbour with complaints: dropped)",
+   "Audi TT 2015: 1,167 sold, 0 complaints in window -> sales merged into 2016",
+   "Audi TT 2017: 2,294 sold, 0 complaints in window -> sales merged into 2018",
+   "Audi TT 2019: 1,324 sold, 0 complaints in window -> sales merged into 2018",
+   "Audi TT 2020: 832 sold, 0 complaints in window (no neighbour with complaints: dropped)",
+   "Audi TT 2021: 987 sold, 0 complaints in window (no neighbour with complaints: dropped)",
+   "Audi TT 2022: 461 sold, 0 complaints in window (no neighbour with complaints: dropped)",
+   "Audi TT 2023: 725 sold, 0 complaints in window (no neighbour with complaints: dropped)",
+   "Audi TT 2024: 39 sold, 0 complaints in window (no neighbour with complaints: dropped)",
+   "Audi TT: 0 scorable model years / 0 complaints -> complaints only"
+  ],
+  "complaints": 330,
+  "scored": []
+ },
+ {
+  "slug": "buick-century",
+  "sales": {
+   "1999": 157035,
+   "2000": 143085,
+   "2001": 142157,
+   "2002": 163739,
+   "2003": 94279,
+   "2004": 67264,
+   "2005": 6504
+  },
+  "kind": "calendar",
+  "url": "https://www.sec.gov/Archives/edgar/data/40730/000004073002000002/december01sales-prod8k010302.txt",
+  "note": "GM monthly sales reports filed with the SEC (8-K), 'Century' line",
+  "flags": [],
+  "complaints": 677,
+  "scored": [
+   2000,
+   2001,
+   2002,
+   2003,
+   2004
+  ]
+ },
+ {
+  "slug": "buick-rainier",
+  "sales": {
+   "2003": 4797,
+   "2004": 24134,
+   "2005": 15271,
+   "2006": 12691,
+   "2007": 4819,
+   "2008": 117
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Buick_Rainier",
+  "note": "Wikipedia U.S. sales table (col='US Sales'), citing the automaker's releases",
+  "flags": [
+   "Buick Rainier 2003: 4,797 sold, 0 complaints in window -> sales merged into 2004",
+   "Buick Rainier 2008: 117 sold, 0 complaints in window -> sales merged into 2007",
+   "Buick Rainier: 1 scorable model years / 33 complaints -> complaints only"
+  ],
+  "complaints": 391,
+  "scored": [
+   2004
+  ]
+ },
+ {
+  "slug": "buick-verano",
+  "sales": {
+   "2011": 261,
+   "2012": 41042,
+   "2013": 45527,
+   "2014": 43743,
+   "2015": 31886,
+   "2016": 30277,
+   "2017": 4277
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/buick-verano-sales-figures/",
+  "note": "GoodCarBadCar U.S. calendar-year sales table",
+  "flags": [
+   "Buick Verano 2011: 261 sold, 0 complaints in window -> sales merged into 2012"
+  ],
+  "complaints": 441,
+  "scored": [
+   2012,
+   2013,
+   2014,
+   2015,
+   2016
+  ]
+ },
+ {
+  "slug": "cadillac-ats",
+  "sales": {
+   "2012": 7008,
+   "2013": 38319,
+   "2014": 29890,
+   "2015": 26873,
+   "2016": 21505,
+   "2017": 13100,
+   "2018": 10859,
+   "2019": 1134,
+   "2020": 116
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Cadillac_ATS",
+  "note": "Wikipedia U.S. sales table (col='United States'), citing the automaker's releases",
+  "flags": [
+   "Cadillac ATS 2012: 7,008 sold, 0 complaints in window -> sales merged into 2013",
+   "Cadillac ATS 2020: 116 sold, 0 complaints in window -> sales merged into 2019"
+  ],
+  "complaints": 388,
+  "scored": [
+   2013,
+   2014,
+   2015,
+   2016
+  ]
+ },
+ {
+  "slug": "cadillac-dts",
+  "sales": {
+   "2005": 23322,
+   "2006": 58224,
+   "2007": 51469,
+   "2008": 30479,
+   "2009": 17330,
+   "2010": 18640,
+   "2011": 11589
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/cadillac-dts-sales-figures-usa-canada/",
+  "note": "GoodCarBadCar U.S. table; 2005-2010 match GM's SEC sales filings; DTS line only (GM reported the DeVille separately)",
+  "flags": [
+   "Cadillac DTS 2005: 23,322 sold, 0 complaints in window -> sales merged into 2006"
+  ],
+  "complaints": 527,
+  "scored": [
+   2006,
+   2007,
+   2008
+  ]
+ },
+ {
+  "slug": "cadillac-sts",
+  "sales": {
+   "2004": 9484,
+   "2005": 33497,
+   "2006": 25676,
+   "2007": 20873,
+   "2008": 14790,
+   "2009": 6037,
+   "2010": 4473,
+   "2011": 3338,
+   "2012": 164
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Cadillac_STS",
+  "note": "Wikipedia U.S. sales table (col='U.S'), citing the automaker's releases",
+  "flags": [
+   "Cadillac STS 2012: 164 sold, 0 complaints in window -> sales merged into 2011"
+  ],
+  "complaints": 414,
+  "scored": [
+   2005,
+   2006,
+   2007
+  ]
+ },
+ {
+  "slug": "cadillac-xt5",
+  "sales": {
+   "2016": 39485,
+   "2017": 68312,
+   "2018": 60565,
+   "2019": 49879,
+   "2020": 35223,
+   "2021": 28380,
+   "2022": 27340,
+   "2023": 26808,
+   "2024": 26432,
+   "2025": 24702
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Cadillac_XT5",
+  "note": "Wikipedia U.S. sales table (col='United States'), citing the automaker's releases",
+  "flags": [
+   "Cadillac XT5 2016: 39,485 sold, 0 complaints in window -> sales merged into 2017"
+  ],
+  "complaints": 314,
+  "scored": [
+   2017,
+   2018,
+   2019,
+   2020,
+   2021,
+   2022,
+   2023,
+   2024,
+   2025
+  ]
+ },
+ {
+  "slug": "chevrolet-astro",
+  "sales": {
+   "1999": 102427,
+   "2000": 92585,
+   "2001": 59395,
+   "2002": 50616,
+   "2003": 40123,
+   "2004": 34564,
+   "2005": 19215,
+   "2006": 386,
+   "2007": 25
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/chevrolet-astro-sales-figures/",
+  "note": "GoodCarBadCar U.S. calendar-year sales table",
+  "flags": [
+   "Chevrolet Astro 2006: 386 sold, 0 complaints in window -> sales merged into 2005",
+   "Chevrolet Astro 2007: 25 sold, 0 complaints in window (no neighbour with complaints: dropped)",
+   "Chevrolet Astro 2004: 34,564 sold but only 4 complaints in window -> not scored"
+  ],
+  "complaints": 419,
+  "scored": [
+   2000,
+   2001,
+   2002,
+   2003
+  ]
+ },
+ {
+  "slug": "chevrolet-captiva",
+  "sales": {
+   "2011": 7038,
+   "2012": 36935,
+   "2013": 47600,
+   "2014": 35368,
+   "2015": 55,
+   "2016": 2
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/chevrolet-captiva-sport-sales-figures/",
+  "note": "GoodCarBadCar U.S. calendar-year sales table; the U.S. Captiva Sport",
+  "flags": [
+   "Chevrolet Captiva 2016: 2 sold, 0 complaints in window -> sales merged into 2015"
+  ],
+  "complaints": 410,
+  "scored": [
+   2012,
+   2013,
+   2014
+  ]
+ },
+ {
+  "slug": "chevrolet-s-10",
+  "sales": {
+   "1995": 207193,
+   "1996": 190178,
+   "1997": 192314,
+   "1998": 228093,
+   "1999": 233669,
+   "2000": 211587,
+   "2001": 162181,
+   "2002": 150992,
+   "2003": 136573,
+   "2004": 10014
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/chevrolet-s10-sales-figures/",
+  "note": "GoodCarBadCar U.S. calendar-year sales table; through 2004, when the U.S. S-10 ended",
+  "flags": [],
+  "complaints": 1197,
+  "scored": [
+   2000,
+   2001,
+   2002,
+   2003
+  ]
+ },
+ {
+  "slug": "chevrolet-tracker",
+  "sales": {
+   "1999": 40024,
+   "2000": 48020,
+   "2001": 52368,
+   "2002": 42212,
+   "2003": 35123,
+   "2004": 14898
+  },
+  "kind": "calendar",
+  "url": "https://www.sec.gov/Archives/edgar/data/40730/000004073002000002/december01sales-prod8k010302.txt",
+  "note": "GM monthly sales reports filed with the SEC (8-K), 'Tracker' line, all body styles",
+  "flags": [],
+  "complaints": 335,
+  "scored": [
+   2000,
+   2001,
+   2002,
+   2003
+  ]
+ },
+ {
+  "slug": "chevrolet-uplander",
+  "sales": {
+   "2004": 3948,
+   "2005": 72980,
+   "2006": 58699,
+   "2007": 69885,
+   "2008": 40456,
+   "2009": 1758
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Chevrolet_Uplander",
+  "note": "Wikipedia U.S. sales table (col='US'), citing the automaker's releases",
+  "flags": [
+   "Chevrolet Uplander 2004: 3,948 sold, 0 complaints in window -> sales merged into 2005",
+   "Chevrolet Uplander 2009: 1,758 sold, 0 complaints in window -> sales merged into 2008"
+  ],
+  "complaints": 584,
+  "scored": [
+   2005,
+   2006,
+   2007,
+   2008
+  ]
+ },
+ {
+  "slug": "chrysler-300m",
+  "sales": {
+   "1999": 55966,
+   "2000": 50682,
+   "2001": 36583,
+   "2002": 32375,
+   "2003": 24910
+  },
+  "kind": "calendar",
+  "url": "https://www.theautochannel.com/news/2004/01/05/175827.html",
+  "note": "Chrysler Group U.S. year-end sales releases, '300M' line; 2004 left out: Chrysler reported the 300M together with the new 300 that year",
+  "flags": [],
+  "complaints": 518,
+  "scored": [
+   2000,
+   2001,
+   2002,
+   2003
+  ]
+ },
+ {
+  "slug": "chrysler-concorde",
+  "sales": {
+   "1997": 38772,
+   "1998": 64912,
+   "1999": 59855,
+   "2000": 50206,
+   "2001": 32331,
+   "2002": 31611,
+   "2003": 28519,
+   "2004": 4223,
+   "2005": 210
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/chrysler-concorde-sales-figures/",
+  "note": "GoodCarBadCar U.S. calendar-year sales table",
+  "flags": [
+   "Chrysler Concorde 2005: 210 sold, 0 complaints in window -> sales merged into 2004"
+  ],
+  "complaints": 544,
+  "scored": [
+   2000,
+   2001,
+   2002,
+   2003
+  ]
+ },
+ {
+  "slug": "chrysler-crossfire",
+  "sales": {
+   "2003": 4021,
+   "2004": 14969,
+   "2005": 14665,
+   "2006": 8216,
+   "2007": 8774,
+   "2008": 2021
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/chrysler-crossfire-sales-figures-usa-canada/",
+  "note": "GoodCarBadCar U.S. table; every year matches a Chrysler year-end release; coupe and roadster",
+  "flags": [
+   "Chrysler Crossfire 2003: 4,021 sold, 0 complaints in window -> sales merged into 2004",
+   "Chrysler Crossfire 2007: 8,774 sold, 0 complaints in window -> sales merged into 2006",
+   "Chrysler Crossfire 2008: 2,021 sold, 0 complaints in window (no neighbour with complaints: dropped)",
+   "Chrysler Crossfire: 0 scorable model years / 0 complaints -> complaints only"
+  ],
+  "complaints": 708,
+  "scored": []
+ },
+ {
+  "slug": "ford-c-max",
+  "sales": {
+   "2012": 13309,
+   "2013": 35210,
+   "2014": 27595,
+   "2015": 21768,
+   "2016": 19834,
+   "2017": 18390,
+   "2018": 6683
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/ford-cmax-sales-figures/",
+  "note": "GoodCarBadCar U.S. calendar-year sales table; C-Max Hybrid and Energi plug-in",
+  "flags": [
+   "Ford C-Max 2012: 13,309 sold, 0 complaints in window -> sales merged into 2013"
+  ],
+  "complaints": 512,
+  "scored": [
+   2013,
+   2014,
+   2015
+  ]
+ },
+ {
+  "slug": "ford-e-series",
+  "sales": {
+   "1999": 202024,
+   "2000": 187027,
+   "2001": 159565,
+   "2002": 165085,
+   "2003": 161721,
+   "2004": 171017,
+   "2005": 179543,
+   "2006": 180457,
+   "2007": 168722,
+   "2008": 124596,
+   "2009": 85735,
+   "2010": 108258,
+   "2011": 116874,
+   "2012": 122423,
+   "2013": 125356,
+   "2014": 103263,
+   "2015": 50788,
+   "2016": 54245,
+   "2017": 53304,
+   "2018": 47936,
+   "2019": 45063,
+   "2020": 37001,
+   "2021": 37122,
+   "2022": 32150,
+   "2023": 42957
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Ford_E-Series",
+  "note": "Wikipedia U.S. sales table (col='US sales'), citing the automaker's releases; Ford's own U.S. figure for the whole E-Series line (vans, wagons, cutaways and stripped chassis)",
+  "flags": [
+   "Ford E-Series 2020: 37,001 sold, 1 complaints in window -> sales merged into 2021"
+  ],
+  "complaints": 1582,
+  "scored": [
+   2000,
+   2001,
+   2002,
+   2003,
+   2004,
+   2005,
+   2006,
+   2007,
+   2008,
+   2009,
+   2010,
+   2011,
+   2012,
+   2013,
+   2014,
+   2015,
+   2016,
+   2017,
+   2018,
+   2019,
+   2021,
+   2022,
+   2023
+  ]
+ },
+ {
+  "slug": "ford-transit-connect",
+  "sales": {
+   "2009": 8834,
+   "2010": 27405,
+   "2011": 31914,
+   "2012": 37521,
+   "2013": 39703,
+   "2014": 43210,
+   "2015": 52221,
+   "2016": 43232,
+   "2017": 34473,
+   "2018": 31923,
+   "2019": 41598,
+   "2020": 34596,
+   "2021": 26112,
+   "2022": 25140,
+   "2023": 18050
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Ford_Transit_Connect",
+  "note": "Wikipedia U.S. sales table (col='U.S.'), citing the automaker's releases",
+  "flags": [
+   "Ford Transit Connect 2009: 8,834 sold, 0 complaints in window -> sales merged into 2010",
+   "Ford Transit Connect 2021: 26,112 sold but only 4 complaints in window -> not scored",
+   "Ford Transit Connect 2022: 25,140 sold but only 4 complaints in window -> not scored"
+  ],
+  "complaints": 575,
+  "scored": [
+   2010,
+   2011,
+   2012,
+   2013,
+   2014,
+   2015,
+   2016,
+   2017,
+   2018,
+   2019,
+   2020
+  ]
+ },
+ {
+  "slug": "gmc-jimmy",
+  "sales": {
+   "1995": 71807,
+   "1996": 77838,
+   "1997": 75817,
+   "1998": 72301,
+   "1999": 79375,
+   "2000": 79489,
+   "2001": 30825,
+   "2002": 964
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/gmc-jimmy-sales-figures/",
+  "note": "GoodCarBadCar U.S. calendar-year sales table",
+  "flags": [
+   "GMC Jimmy 2002: 964 sold, 0 complaints in window -> sales merged into 2001"
+  ],
+  "complaints": 317,
+  "scored": [
+   2000,
+   2001
+  ]
+ },
+ {
+  "slug": "gmc-sonoma",
+  "sales": {
+   "1996": 44629,
+   "1997": 41714,
+   "1998": 54819,
+   "1999": 57992,
+   "2000": 51093,
+   "2001": 42062,
+   "2002": 41100,
+   "2003": 35040,
+   "2004": 3303,
+   "2005": 65
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/gmc-sonoma-sales-figures/",
+  "note": "GoodCarBadCar U.S. calendar-year sales table",
+  "flags": [
+   "GMC Sonoma 2004: 3,303 sold, 0 complaints in window -> sales merged into 2003",
+   "GMC Sonoma 2005: 65 sold, 0 complaints in window (no neighbour with complaints: dropped)"
+  ],
+  "complaints": 323,
+  "scored": [
+   2000,
+   2001,
+   2002,
+   2003
+  ]
+ },
+ {
+  "slug": "honda-insight",
+  "sales": {
+   "1999": 17,
+   "2000": 3788,
+   "2001": 4726,
+   "2002": 2216,
+   "2003": 1168,
+   "2004": 583,
+   "2005": 666,
+   "2006": 722,
+   "2007": 3,
+   "2009": 20572,
+   "2010": 20962,
+   "2011": 15549,
+   "2012": 5846,
+   "2013": 4802,
+   "2014": 3965,
+   "2015": 1458,
+   "2016": 67,
+   "2017": 3,
+   "2018": 12513,
+   "2019": 23686,
+   "2020": 15932,
+   "2021": 18685,
+   "2022": 7628,
+   "2023": 1
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/honda-insight-sales-figures/",
+  "note": "GoodCarBadCar U.S. calendar-year sales table",
+  "flags": [
+   "Honda Insight 2004: 583 sold, 0 complaints in window -> sales merged into 2005",
+   "Honda Insight 2007: 3 sold, 0 complaints in window -> sales merged into 2006",
+   "Honda Insight 2009: 20,572 sold, 0 complaints in window -> sales merged into 2010",
+   "Honda Insight 2015: 1,458 sold, 0 complaints in window -> sales merged into 2014",
+   "Honda Insight 2016: 67 sold, 0 complaints in window (no neighbour with complaints: dropped)",
+   "Honda Insight 2017: 3 sold, 0 complaints in window (no neighbour with complaints: dropped)",
+   "Honda Insight 2018: 12,513 sold, 0 complaints in window -> sales merged into 2019",
+   "Honda Insight 2023: 1 sold, 0 complaints in window -> sales merged into 2022"
+  ],
+  "complaints": 519,
+  "scored": [
+   2010,
+   2019
+  ]
+ },
+ {
+  "slug": "hyundai-azera",
+  "sales": {
+   "2005": 17645,
+   "2006": 26833,
+   "2007": 21948,
+   "2008": 14461,
+   "2009": 3808,
+   "2010": 3051,
+   "2011": 1524,
+   "2012": 8431,
+   "2013": 11221,
+   "2014": 7232,
+   "2015": 5539,
+   "2016": 4942,
+   "2017": 3060,
+   "2018": 628
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Hyundai_Azera",
+  "note": "Wikipedia U.S. sales table (col='United States'), citing the automaker's releases; from 2005, when the Azera replaced the XG",
+  "flags": [
+   "Hyundai Azera 2005: 17,645 sold, 0 complaints in window -> sales merged into 2006",
+   "Hyundai Azera 2010: 3,051 sold, 1 complaints in window -> sales merged into 2011",
+   "Hyundai Azera 2016: 4,942 sold, 1 complaints in window -> sales merged into 2017",
+   "Hyundai Azera 2018: 628 sold, 0 complaints in window -> sales merged into 2017"
+  ],
+  "complaints": 713,
+  "scored": [
+   2006,
+   2007
+  ]
+ },
+ {
+  "slug": "hyundai-tiburon",
+  "sales": {
+   "1996": 341,
+   "1997": 9391,
+   "1998": 8341,
+   "1999": 9641,
+   "2000": 15237,
+   "2001": 19176,
+   "2002": 19963,
+   "2003": 21242,
+   "2004": 20125,
+   "2005": 20600,
+   "2006": 17382,
+   "2007": 14073,
+   "2008": 9111,
+   "2009": 8587
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Hyundai_Tiburon",
+  "note": "Wikipedia U.S. sales table (col='U.S.'), citing the automaker's releases",
+  "flags": [
+   "Hyundai Tiburon 2002: 19,963 sold, 2 complaints in window -> sales merged into 2003",
+   "Hyundai Tiburon 2009: 8,587 sold, 0 complaints in window -> sales merged into 2008"
+  ],
+  "complaints": 674,
+  "scored": [
+   2003,
+   2004,
+   2005
+  ]
+ },
+ {
+  "slug": "hyundai-veracruz",
+  "sales": {
+   "2007": 12589,
+   "2008": 11004,
+   "2009": 10210,
+   "2010": 8741,
+   "2011": 9146,
+   "2012": 8232,
+   "2013": 175,
+   "2014": 1
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/hyundai-veracruz-sales-figures/",
+  "note": "GoodCarBadCar U.S. calendar-year sales table",
+  "flags": [
+   "Hyundai Veracruz 2013: 175 sold, 0 complaints in window -> sales merged into 2012",
+   "Hyundai Veracruz 2014: 1 sold, 0 complaints in window (no neighbour with complaints: dropped)",
+   "Hyundai Veracruz: 0 scorable model years / 0 complaints -> complaints only"
+  ],
+  "complaints": 662,
+  "scored": []
+ },
+ {
+  "slug": "infiniti-fx35",
+  "sales": {
+   "2003": 27637,
+   "2004": 30964,
+   "2005": 28786,
+   "2006": 22653,
+   "2007": 20723,
+   "2008": 12670,
+   "2009": 11024,
+   "2010": 10420,
+   "2011": 9939,
+   "2012": 10424,
+   "2013": 6380,
+   "2014": 5213,
+   "2015": 557
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/infiniti-fx-sales-figures/",
+  "note": "GoodCarBadCar U.S. calendar-year sales table; the whole FX line (FX35, FX45, FX37, FX50), as Infiniti reports it",
+  "flags": [
+   "Infiniti FX35 2014: 5,213 sold, 0 complaints in window -> sales merged into 2013",
+   "Infiniti FX35 2015: 557 sold, 0 complaints in window (no neighbour with complaints: dropped)",
+   "Infiniti FX35 2006: 22,653 sold but only 2 complaints in window -> not scored"
+  ],
+  "complaints": 533,
+  "scored": [
+   2003,
+   2004,
+   2005,
+   2007
+  ]
+ },
+ {
+  "slug": "infiniti-g37",
+  "sales": {
+   "2009": 47174,
+   "2010": 58143,
+   "2011": 58246,
+   "2012": 59844,
+   "2013": 40062
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/infiniti-g-sales-figures/",
+  "note": "GoodCarBadCar U.S. table for the Infiniti G line; the G line as Infiniti reports it: G37 and G25, 2009-2013 (earlier years mix in the G35 and are left out)",
+  "flags": [],
+  "complaints": 568,
+  "scored": [
+   2009,
+   2010,
+   2011,
+   2012,
+   2013
+  ]
+ },
+ {
+  "slug": "infiniti-m35",
+  "sales": {
+   "2005": 24000,
+   "2006": 25658,
+   "2007": 21884,
+   "2008": 15618,
+   "2009": 8501,
+   "2010": 14618,
+   "2011": 10818,
+   "2012": 9130,
+   "2013": 5283
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Infiniti_M35",
+  "note": "Wikipedia U.S. sales table (col='U.S. Sales'), citing the automaker's releases; the whole M line (M35, M45, M37, M56, M35h), as Infiniti reports it",
+  "flags": [
+   "Infiniti M35 2005: 24,000 sold, 0 complaints in window -> sales merged into 2006"
+  ],
+  "complaints": 857,
+  "scored": [
+   2006,
+   2007
+  ]
+ },
+ {
+  "slug": "infiniti-q50",
+  "sales": {
+   "2013": 17816,
+   "2014": 36899,
+   "2015": 43874,
+   "2016": 44007,
+   "2017": 40739,
+   "2018": 34763,
+   "2019": 25987,
+   "2020": 16533,
+   "2021": 13896,
+   "2022": 4781,
+   "2023": 6201,
+   "2024": 5428,
+   "2025": 529
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Infiniti_Q50",
+  "note": "Wikipedia U.S. sales table (col='US'), citing the automaker's releases",
+  "flags": [
+   "Infiniti Q50 2013: 17,816 sold, 0 complaints in window -> sales merged into 2014",
+   "Infiniti Q50 2020: 16,533 sold, 1 complaints in window -> sales merged into 2019",
+   "Infiniti Q50 2024: 5,428 sold, 0 complaints in window -> sales merged into 2023",
+   "Infiniti Q50 2025: 529 sold, 0 complaints in window (no neighbour with complaints: dropped)"
+  ],
+  "complaints": 516,
+  "scored": [
+   2014,
+   2015,
+   2016,
+   2017,
+   2018,
+   2019
+  ]
+ },
+ {
+  "slug": "infiniti-qx56",
+  "sales": {
+   "2004": 13136,
+   "2005": 14711,
+   "2006": 11694,
+   "2007": 12288,
+   "2008": 7657,
+   "2009": 6440,
+   "2010": 11918,
+   "2011": 13428,
+   "2012": 15310,
+   "2013": 13148
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Infiniti_QX56",
+  "note": "Wikipedia U.S. sales table (col='U.S.'), citing the automaker's releases; QX56 years only (the QX80 from 2014 is left out)",
+  "flags": [
+   "Infiniti QX56 2007: 12,288 sold, 1 complaints in window -> sales merged into 2008",
+   "Infiniti QX56 2009: 6,440 sold, 0 complaints in window -> sales merged into 2010",
+   "Infiniti QX56: 0 scorable model years / 0 complaints -> complaints only"
+  ],
+  "complaints": 541,
+  "scored": []
+ },
+ {
+  "slug": "infiniti-qx60",
+  "sales": {
+   "2012": 21674,
+   "2013": 31602,
+   "2014": 31192,
+   "2015": 41770,
+   "2016": 42120,
+   "2017": 40444,
+   "2018": 47370,
+   "2019": 43162,
+   "2020": 22880,
+   "2021": 5829,
+   "2022": 16573,
+   "2023": 29383,
+   "2024": 27808,
+   "2025": 30538
+  },
+  "kind": "calendar",
+  "url": "https://usa.nissannews.com/en-US/releases/nissan-group-reports-december-2018-and-2018-calendar-year-u-s-sales",
+  "note": "Nissan Group U.S. year-end releases (QX60, called JX35 for 2013); 2012-2013 GoodCarBadCar's JX table; 2021+ Wikipedia",
+  "flags": [
+   "Infiniti QX60 2012: 21,674 sold, 0 complaints in window -> sales merged into 2013",
+   "Infiniti QX60 2021: 5,829 sold, 0 complaints in window -> sales merged into 2022"
+  ],
+  "complaints": 917,
+  "scored": [
+   2013,
+   2014,
+   2015,
+   2016,
+   2017,
+   2018,
+   2019,
+   2020,
+   2022,
+   2023,
+   2024,
+   2025
+  ]
+ },
+ {
+  "slug": "jaguar-s-type",
+  "sales": {
+   "1999": 15541,
+   "2000": 24507,
+   "2001": 19548,
+   "2002": 15965,
+   "2003": 14876,
+   "2004": 10975,
+   "2005": 8897,
+   "2006": 5875,
+   "2007": 3524,
+   "2008": 817
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/jaguar-s-type-sales-figures-usa-canada/",
+  "note": "GoodCarBadCar U.S. calendar-year sales table",
+  "flags": [
+   "Jaguar S-Type 2007: 3,524 sold, 0 complaints in window -> sales merged into 2008",
+   "Jaguar S-Type: 1 scorable model years / 44 complaints -> complaints only"
+  ],
+  "complaints": 483,
+  "scored": [
+   2000
+  ]
+ },
+ {
+  "slug": "jaguar-x-type",
+  "sales": {
+   "2001": 9765,
+   "2002": 33018,
+   "2003": 26772,
+   "2004": 21542,
+   "2005": 10941,
+   "2006": 5214,
+   "2007": 3198,
+   "2008": 410
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/jaguar-x-type-sales-figures-usa-canada/",
+  "note": "GoodCarBadCar U.S. calendar-year sales table",
+  "flags": [
+   "Jaguar X-Type 2001: 9,765 sold, 0 complaints in window -> sales merged into 2002",
+   "Jaguar X-Type 2008: 410 sold, 0 complaints in window -> sales merged into 2007"
+  ],
+  "complaints": 315,
+  "scored": [
+   2002,
+   2003,
+   2004
+  ]
+ },
+ {
+  "slug": "jaguar-xf",
+  "sales": {
+   "2008": 5270,
+   "2009": 7445,
+   "2010": 6925,
+   "2011": 5372,
+   "2012": 5526,
+   "2013": 7922,
+   "2014": 5880,
+   "2015": 5933,
+   "2016": 6665,
+   "2017": 4541,
+   "2018": 2208,
+   "2019": 1236,
+   "2020": 748,
+   "2021": 1183,
+   "2022": 809,
+   "2023": 934,
+   "2024": 1156,
+   "2025": 730
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/jaguar-xf-sales-figures/",
+  "note": "GoodCarBadCar U.S. calendar-year sales table",
+  "flags": [
+   "Jaguar XF 2008: 5,270 sold, 0 complaints in window -> sales merged into 2009",
+   "Jaguar XF 2019: 1,236 sold, 0 complaints in window -> sales merged into 2018",
+   "Jaguar XF 2020: 748 sold, 0 complaints in window (no neighbour with complaints: dropped)",
+   "Jaguar XF 2021: 1,183 sold, 0 complaints in window -> sales merged into 2022",
+   "Jaguar XF 2025: 730 sold, 0 complaints in window -> sales merged into 2024",
+   "Jaguar XF: 0 scorable model years / 0 complaints -> complaints only"
+  ],
+  "complaints": 396,
+  "scored": []
+ },
+ {
+  "slug": "jeep-wagoneer",
+  "sales": {
+   "2021": 5349,
+   "2022": 36219,
+   "2023": 29149,
+   "2024": 43125,
+   "2025": 39907
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Jeep_Wagoneer_(WS)",
+  "note": "Wikipedia U.S. sales table (col='United States Wagoneer'), citing the automaker's releases; Wagoneer only (the Grand Wagoneer and the electric Wagoneer S have their own sales)",
+  "flags": [
+   "Jeep Wagoneer 2021: 5,349 sold, 0 complaints in window -> sales merged into 2022",
+   "Jeep Wagoneer: 1 scorable model years / 154 complaints -> complaints only"
+  ],
+  "complaints": 416,
+  "scored": [
+   2022,
+   2023,
+   2024,
+   2025
+  ]
+ },
+ {
+  "slug": "kia-niro",
+  "sales": {
+   "2017": 27237,
+   "2018": 28232,
+   "2019": 24467,
+   "2020": 17434,
+   "2021": 26192,
+   "2022": 28744,
+   "2023": 36300,
+   "2024": 30094,
+   "2025": 31182
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Kia_Niro",
+  "note": "Wikipedia U.S. sales table (col='U.S.'), citing the automaker's releases; all Niro versions (hybrid, plug-in, EV), as Kia reports them",
+  "flags": [],
+  "complaints": 532,
+  "scored": [
+   2017,
+   2018,
+   2019,
+   2021,
+   2022,
+   2023,
+   2024,
+   2025
+  ]
+ },
+ {
+  "slug": "kia-seltos",
+  "sales": {
+   "2020": 46280,
+   "2021": 51368,
+   "2022": 45711,
+   "2023": 60053,
+   "2024": 59958,
+   "2025": 56798
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Kia_Seltos",
+  "note": "Wikipedia U.S. sales table (col='U.S.'), citing the automaker's releases",
+  "flags": [
+   "Kia Seltos 2020: 46,280 sold, 0 complaints in window -> sales merged into 2021"
+  ],
+  "complaints": 569,
+  "scored": [
+   2021,
+   2022,
+   2023,
+   2024,
+   2025
+  ]
+ },
+ {
+  "slug": "kia-sephia",
+  "sales": {
+   "1999": 82211,
+   "2000": 67893,
+   "2001": 49016
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/kia-sephia-sales-figures/",
+  "note": "GoodCarBadCar U.S. calendar-year sales table",
+  "flags": [],
+  "complaints": 379,
+  "scored": [
+   2000,
+   2001
+  ]
+ },
+ {
+  "slug": "lincoln-aviator",
+  "sales": {
+   "2002": 1856,
+   "2003": 29517,
+   "2004": 23644,
+   "2005": 15873,
+   "2006": 1711,
+   "2019": 8323,
+   "2020": 23080,
+   "2021": 20924,
+   "2022": 21977,
+   "2023": 15551,
+   "2024": 25235,
+   "2025": 24373
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Lincoln_Aviator",
+  "note": "Wikipedia U.S. sales table (col='US'), citing the automaker's releases",
+  "flags": [
+   "Lincoln Aviator 2002: 1,856 sold, 0 complaints in window -> sales merged into 2003",
+   "Lincoln Aviator 2006: 1,711 sold, 0 complaints in window -> sales merged into 2005",
+   "Lincoln Aviator 2019: 8,323 sold, 0 complaints in window -> sales merged into 2020"
+  ],
+  "complaints": 530,
+  "scored": [
+   2003,
+   2004,
+   2020,
+   2021,
+   2022,
+   2024,
+   2025
+  ]
+ },
+ {
+  "slug": "lincoln-mkc",
+  "sales": {
+   "2014": 13077,
+   "2015": 24590,
+   "2016": 25562,
+   "2017": 27048,
+   "2018": 26241,
+   "2019": 25815
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Lincoln_MKC",
+  "note": "Wikipedia U.S. sales table (col='United States'), citing the automaker's releases",
+  "flags": [
+   "Lincoln MKC 2014: 13,077 sold, 0 complaints in window -> sales merged into 2015"
+  ],
+  "complaints": 610,
+  "scored": [
+   2015,
+   2016,
+   2017,
+   2018,
+   2019
+  ]
+ },
+ {
+  "slug": "lincoln-mks",
+  "sales": {
+   "2008": 12982,
+   "2009": 17174,
+   "2010": 14417,
+   "2011": 12217,
+   "2012": 12524,
+   "2013": 10793,
+   "2014": 8160,
+   "2015": 6877,
+   "2016": 4950,
+   "2017": 153
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/lincoln-mks-sales-figures/",
+  "note": "GoodCarBadCar U.S. calendar-year sales table",
+  "flags": [
+   "Lincoln MKS 2008: 12,982 sold, 0 complaints in window -> sales merged into 2009",
+   "Lincoln MKS 2012: 12,524 sold, 3 complaints in window -> sales merged into 2013",
+   "Lincoln MKS 2017: 153 sold, 0 complaints in window -> sales merged into 2016"
+  ],
+  "complaints": 376,
+  "scored": [
+   2009,
+   2013
+  ]
+ },
+ {
+  "slug": "mazda-626",
+  "sales": {
+   "1999": 60498,
+   "2000": 45275,
+   "2001": 27599,
+   "2002": 11646,
+   "2003": 329
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/mazda-626-sales-figures/",
+  "note": "GoodCarBadCar U.S. calendar-year sales table",
+  "flags": [],
+  "complaints": 500,
+  "scored": [
+   2000,
+   2001
+  ]
+ },
+ {
+  "slug": "mazda-cx-90",
+  "sales": {
+   "2023": 30821,
+   "2024": 54676,
+   "2025": 55156
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Mazda_CX-90",
+  "note": "Wikipedia U.S. sales table (col='Mazda CX-90 U.S.'), citing the automaker's releases",
+  "flags": [
+   "Mazda CX-90 2023: 30,821 sold, 0 complaints in window -> sales merged into 2024",
+   "Mazda CX-90: 0 scorable model years / 0 complaints -> complaints only"
+  ],
+  "complaints": 527,
+  "scored": [
+   2024,
+   2025
+  ]
+ },
+ {
+  "slug": "mazda-mpv",
+  "sales": {
+   "1999": 16055,
+   "2000": 35600,
+   "2001": 32181,
+   "2002": 34403,
+   "2003": 30689,
+   "2004": 24860,
+   "2005": 17634,
+   "2006": 11600
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/mazda-mpv-sales-figures/",
+  "note": "GoodCarBadCar U.S. calendar-year sales table",
+  "flags": [],
+  "complaints": 575,
+  "scored": [
+   2000,
+   2001,
+   2002,
+   2003,
+   2004
+  ]
+ },
+ {
+  "slug": "mazda-protege",
+  "sales": {
+   "1999": 65242,
+   "2000": 62851,
+   "2001": 78688,
+   "2002": 83367,
+   "2003": 68788,
+   "2004": 6371,
+   "2005": 2
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/mazda-protege-sales-figures/",
+  "note": "GoodCarBadCar U.S. calendar-year sales table",
+  "flags": [
+   "Mazda Protege 2004: 6,371 sold, 0 complaints in window -> sales merged into 2003",
+   "Mazda Protege 2005: 2 sold, 0 complaints in window (no neighbour with complaints: dropped)"
+  ],
+  "complaints": 371,
+  "scored": [
+   2000,
+   2001,
+   2002,
+   2003
+  ]
+ },
+ {
+  "slug": "mazda-rx-8",
+  "sales": {
+   "2003": 12346,
+   "2004": 23690,
+   "2005": 14673,
+   "2006": 9343,
+   "2007": 5767,
+   "2008": 3368,
+   "2009": 2217,
+   "2010": 1134,
+   "2011": 759,
+   "2012": 80
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/mazda-rx-8-sales-figures/",
+  "note": "GoodCarBadCar U.S. calendar-year sales table",
+  "flags": [
+   "Mazda RX-8 2003: 12,346 sold, 0 complaints in window -> sales merged into 2004",
+   "Mazda RX-8 2008: 3,368 sold, 0 complaints in window -> sales merged into 2009",
+   "Mazda RX-8 2012: 80 sold, 0 complaints in window -> sales merged into 2011",
+   "Mazda RX-8: 1 scorable model years / 79 complaints -> complaints only"
+  ],
+  "complaints": 784,
+  "scored": [
+   2004
+  ]
+ },
+ {
+  "slug": "mazda-mazda5",
+  "sales": {
+   "2005": 4761,
+   "2006": 17109,
+   "2007": 13718,
+   "2008": 22021,
+   "2009": 18488,
+   "2010": 15683,
+   "2011": 19155,
+   "2012": 14640,
+   "2013": 13884,
+   "2014": 11613,
+   "2015": 8609,
+   "2016": 375
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/mazda-5-sales-figures/",
+  "note": "GoodCarBadCar U.S. calendar-year sales table",
+  "flags": [
+   "Mazda5 2005: 4,761 sold, 0 complaints in window -> sales merged into 2006",
+   "Mazda5 2011: 19,155 sold, 0 complaints in window -> sales merged into 2012",
+   "Mazda5 2015: 8,609 sold, 2 complaints in window -> sales merged into 2016"
+  ],
+  "complaints": 412,
+  "scored": [
+   2006,
+   2008,
+   2012
+  ]
+ },
+ {
+  "slug": "mercedes-benz-sprinter",
+  "sales": {
+   "2010": 8559,
+   "2011": 16577,
+   "2012": 20929,
+   "2013": 21816,
+   "2014": 25745,
+   "2015": 28519,
+   "2016": 28320,
+   "2017": 27415,
+   "2018": 29787,
+   "2019": 29757,
+   "2020": 37513,
+   "2021": 40534,
+   "2022": 46533,
+   "2023": 46229,
+   "2024": 43425,
+   "2025": 38460
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/mercedes-benz-sprinter-sales-figures/",
+  "note": "GoodCarBadCar U.S. calendar-year sales table; Mercedes-Benz-badged Sprinters from 2010 (earlier U.S. Sprinters were sold as Dodge and Freightliner)",
+  "flags": [
+   "Mercedes-Benz Sprinter 2012: 20,929 sold but only 2 complaints in window -> not scored",
+   "Mercedes-Benz Sprinter 2025: 38,460 sold but only 4 complaints in window -> not scored"
+  ],
+  "complaints": 760,
+  "scored": [
+   2013,
+   2014,
+   2015,
+   2016,
+   2017,
+   2018,
+   2019,
+   2020,
+   2021,
+   2022,
+   2023,
+   2024
+  ]
+ },
+ {
+  "slug": "mitsubishi-diamante",
+  "sales": {
+   "2003": 9174,
+   "2004": 4379
+  },
+  "kind": "calendar",
+  "url": "https://www.theautochannel.com/news/2005/01/04/313725.html",
+  "note": "Mitsubishi Motors North America year-end release; 1997-2002 not found in a citable source",
+  "flags": [
+   "Mitsubishi Diamante 2004: 4,379 sold, 0 complaints in window -> sales merged into 2003",
+   "Mitsubishi Diamante: 0 scorable model years / 0 complaints -> complaints only"
+  ],
+  "complaints": 311,
+  "scored": []
+ },
+ {
+  "slug": "mitsubishi-galant",
+  "sales": {
+   "1999": 74782,
+   "2000": 96452,
+   "2001": 93878,
+   "2002": 97343,
+   "2003": 65141,
+   "2004": 43491,
+   "2005": 33976,
+   "2006": 27673,
+   "2007": 26491,
+   "2008": 26941,
+   "2009": 11740,
+   "2010": 11492,
+   "2011": 15631,
+   "2012": 12991,
+   "2013": 1441
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/mitsubishi-galant-sales-figures/",
+  "note": "GoodCarBadCar U.S. calendar-year sales table",
+  "flags": [
+   "Mitsubishi Galant 2008: 26,941 sold, 1 complaints in window -> sales merged into 2009",
+   "Mitsubishi Galant 2013: 1,441 sold, 0 complaints in window -> sales merged into 2012"
+  ],
+  "complaints": 720,
+  "scored": [
+   2000,
+   2001,
+   2002,
+   2003,
+   2004,
+   2005,
+   2006,
+   2007,
+   2009
+  ]
+ },
+ {
+  "slug": "mitsubishi-montero",
+  "sales": {
+   "2000": 21578,
+   "2001": 24802,
+   "2003": 8839,
+   "2004": 5181,
+   "2005": 2778,
+   "2006": 1609
+  },
+  "kind": "calendar",
+  "url": "https://www.theautochannel.com/news/2005/01/04/313725.html",
+  "note": "Mitsubishi Motors North America year-end releases (Montero only, not the Montero Sport); 2005-2006 GoodCarBadCar; 2002 not found in a citable source",
+  "flags": [],
+  "complaints": 376,
+  "scored": [
+   2000,
+   2001
+  ]
+ },
+ {
+  "slug": "mitsubishi-outlander-sport",
+  "sales": {
+   "2010": 1690,
+   "2011": 16443,
+   "2012": 18091,
+   "2013": 24951,
+   "2014": 31054,
+   "2015": 36966,
+   "2016": 33067,
+   "2017": 33160,
+   "2018": 39153,
+   "2019": 33644,
+   "2020": 28836,
+   "2021": 34216,
+   "2022": 16373,
+   "2023": 15015,
+   "2024": 15125,
+   "2025": 20480
+  },
+  "kind": "calendar",
+  "url": "https://media.mitsubishicars.com/releases/mitsubishi-motors-reports-best-annual-sales-since-2007",
+  "note": "Mitsubishi Motors North America year-end releases (2017-2025); GoodCarBadCar U.S. table (2010-2016)",
+  "flags": [
+   "Mitsubishi Outlander Sport 2010: 1,690 sold, 0 complaints in window -> sales merged into 2011",
+   "Mitsubishi Outlander Sport 2025: 20,480 sold but only 1 complaints in window -> not scored"
+  ],
+  "complaints": 479,
+  "scored": [
+   2013,
+   2014,
+   2015,
+   2016,
+   2017,
+   2018,
+   2019,
+   2020,
+   2021
+  ]
+ },
+ {
+  "slug": "nissan-350z",
+  "sales": {
+   "2002": 13253,
+   "2003": 36728,
+   "2004": 30690,
+   "2005": 27278,
+   "2006": 24635,
+   "2007": 18957,
+   "2008": 10337
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Nissan_350Z",
+  "note": "Wikipedia U.S. sales table (col='U.S. Sales'), citing the automaker's releases",
+  "flags": [
+   "Nissan 350Z 2002: 13,253 sold, 0 complaints in window -> sales merged into 2003"
+  ],
+  "complaints": 657,
+  "scored": [
+   2003,
+   2004,
+   2005,
+   2006
+  ]
+ },
+ {
+  "slug": "nissan-370z",
+  "sales": {
+   "2009": 13117,
+   "2010": 10215,
+   "2011": 7328,
+   "2012": 7338,
+   "2013": 6561,
+   "2014": 7199,
+   "2015": 7391,
+   "2016": 5913,
+   "2017": 4614,
+   "2018": 3468,
+   "2019": 2384,
+   "2020": 1954
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Nissan_370Z",
+  "note": "Wikipedia U.S. sales table (col='U.S.'), citing the automaker's releases",
+  "flags": [
+   "Nissan 370Z 2020: 1,954 sold, 0 complaints in window -> sales merged into 2019",
+   "Nissan 370Z: 0 scorable model years / 0 complaints -> complaints only"
+  ],
+  "complaints": 361,
+  "scored": []
+ },
+ {
+  "slug": "nissan-juke",
+  "sales": {
+   "2010": 8639,
+   "2011": 35886,
+   "2012": 36358,
+   "2013": 38157,
+   "2014": 38184,
+   "2015": 27121,
+   "2016": 19577,
+   "2017": 10157,
+   "2018": 731
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Nissan_Juke",
+  "note": "Wikipedia U.S. sales table (col='U.S.'), citing the automaker's releases",
+  "flags": [
+   "Nissan Juke 2010: 8,639 sold, 0 complaints in window -> sales merged into 2011",
+   "Nissan Juke 2018: 731 sold, 0 complaints in window -> sales merged into 2017"
+  ],
+  "complaints": 478,
+  "scored": [
+   2011,
+   2012,
+   2013,
+   2014,
+   2015
+  ]
+ },
+ {
+  "slug": "nissan-kicks",
+  "sales": {
+   "2018": 23312,
+   "2019": 58193,
+   "2020": 58858,
+   "2021": 82960,
+   "2022": 54879,
+   "2023": 66820,
+   "2024": 77356,
+   "2025": 103575
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Nissan_Kicks",
+  "note": "Wikipedia U.S. sales table (col='U.S.'), citing the automaker's releases",
+  "flags": [],
+  "complaints": 524,
+  "scored": [
+   2018,
+   2019,
+   2020,
+   2021,
+   2022,
+   2023,
+   2024,
+   2025
+  ]
+ },
+ {
+  "slug": "porsche-cayenne",
+  "sales": {
+   "2005": 13607,
+   "2006": 10569,
+   "2007": 12547,
+   "2008": 11216,
+   "2009": 7735,
+   "2010": 7793,
+   "2011": 12978,
+   "2012": 15545,
+   "2013": 18507,
+   "2014": 16205,
+   "2015": 16474,
+   "2016": 15383,
+   "2017": 13203,
+   "2018": 11106,
+   "2019": 19001,
+   "2020": 18092,
+   "2021": 21048,
+   "2022": 21194,
+   "2023": 20288,
+   "2024": 20808,
+   "2025": 17729
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/porsche-cayenne-sales-figures/",
+  "note": "GoodCarBadCar U.S. calendar-year sales table",
+  "flags": [
+   "Porsche Cayenne 2007: 12,547 sold, 0 complaints in window -> sales merged into 2008",
+   "Porsche Cayenne 2010: 7,793 sold, 0 complaints in window -> sales merged into 2011",
+   "Porsche Cayenne 2022: 21,194 sold, 0 complaints in window -> sales merged into 2023",
+   "Porsche Cayenne 2008: 23,763 sold but only 3 complaints in window -> not scored",
+   "Porsche Cayenne: 2 scorable model years / 16 complaints -> complaints only"
+  ],
+  "complaints": 665,
+  "scored": [
+   2011,
+   2021,
+   2023,
+   2024
+  ]
+ },
+ {
+  "slug": "saturn-sl",
+  "sales": {
+   "1999": 207977,
+   "2000": 177355,
+   "2001": 162110,
+   "2002": 117533
+  },
+  "kind": "calendar",
+  "url": "https://www.sec.gov/Archives/edgar/data/40730/000004073002000002/december01sales-prod8k010302.txt",
+  "note": "GM's SEC sales filings, one 'Saturn S Series' line; GM reported the SL sedan, SC coupe and SW wagon as one S-Series line, so all three are counted together",
+  "flags": [],
+  "complaints": 539,
+  "scored": [
+   2000,
+   2001,
+   2002
+  ]
+ },
+ {
+  "slug": "saturn-sky",
+  "sales": {
+   "2006": 8671,
+   "2007": 11263,
+   "2008": 9162,
+   "2009": 3399,
+   "2010": 179
+  },
+  "kind": "calendar",
+  "url": "https://www.sec.gov/Archives/edgar/data/40730/000004073008000001/0000040730-08-000001.txt",
+  "note": "GM's SEC sales filings; 2010 GoodCarBadCar",
+  "flags": [
+   "Saturn Sky 2006: 8,671 sold, 0 complaints in window -> sales merged into 2007",
+   "Saturn Sky 2009: 3,399 sold, 2 complaints in window -> sales merged into 2008",
+   "Saturn Sky 2010: 179 sold, 0 complaints in window -> sales merged into 2009",
+   "Saturn Sky: 0 scorable model years / 0 complaints -> complaints only"
+  ],
+  "complaints": 516,
+  "scored": []
+ },
+ {
+  "slug": "scion-tc",
+  "sales": {
+   "2004": 28062,
+   "2005": 74415,
+   "2006": 79125,
+   "2007": 63852,
+   "2008": 40980,
+   "2009": 17998,
+   "2010": 15204,
+   "2011": 22433,
+   "2012": 22666,
+   "2013": 19094,
+   "2014": 17947,
+   "2015": 16459,
+   "2016": 9336
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Scion_tC",
+  "note": "Wikipedia U.S. sales table (col='US Sales'), citing the automaker's releases",
+  "flags": [
+   "Scion tC 2004: 28,062 sold, 0 complaints in window -> sales merged into 2005",
+   "Scion tC 2012: 22,666 sold but only 4 complaints in window -> not scored"
+  ],
+  "complaints": 693,
+  "scored": [
+   2005,
+   2006,
+   2007,
+   2008,
+   2011
+  ]
+ },
+ {
+  "slug": "toyota-c-hr",
+  "sales": {
+   "2017": 25755,
+   "2018": 49642,
+   "2019": 48930,
+   "2020": 42936,
+   "2021": 35707,
+   "2022": 12141,
+   "2023": 777
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Toyota_C-HR",
+  "note": "Wikipedia U.S. sales table (col='U.S.'), citing the automaker's releases",
+  "flags": [
+   "Toyota C-HR 2017: 25,755 sold, 0 complaints in window -> sales merged into 2018",
+   "Toyota C-HR 2023: 777 sold, 0 complaints in window -> sales merged into 2022"
+  ],
+  "complaints": 552,
+  "scored": [
+   2018,
+   2019,
+   2020,
+   2021
+  ]
+ },
+ {
+  "slug": "toyota-grand-highlander",
+  "sales": {
+   "2023": 48036,
+   "2024": 71721,
+   "2025": 136801
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Toyota_Grand_Highlander",
+  "note": "Wikipedia U.S. sales table (col='United States Overall'), citing the automaker's releases",
+  "flags": [
+   "Toyota Grand Highlander 2023: 48,036 sold, 0 complaints in window -> sales merged into 2024",
+   "Toyota Grand Highlander: 0 scorable model years / 0 complaints -> complaints only"
+  ],
+  "complaints": 330,
+  "scored": [
+   2024,
+   2025
+  ]
+ },
+ {
+  "slug": "toyota-venza",
+  "sales": {
+   "2008": 1474,
+   "2009": 54410,
+   "2010": 47321,
+   "2011": 38904,
+   "2012": 43095,
+   "2013": 35846,
+   "2014": 29991,
+   "2015": 21351,
+   "2016": 589,
+   "2020": 13073,
+   "2021": 61988,
+   "2022": 33683,
+   "2023": 29907,
+   "2024": 32086,
+   "2025": 707
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Toyota_Venza",
+  "note": "Wikipedia U.S. sales table (col='US'), citing the automaker's releases",
+  "flags": [
+   "Toyota Venza 2008: 1,474 sold, 0 complaints in window -> sales merged into 2009",
+   "Toyota Venza 2016: 589 sold, 0 complaints in window -> sales merged into 2015",
+   "Toyota Venza 2020: 13,073 sold, 0 complaints in window -> sales merged into 2021",
+   "Toyota Venza 2025: 707 sold, 0 complaints in window -> sales merged into 2024"
+  ],
+  "complaints": 732,
+  "scored": [
+   2009,
+   2010,
+   2011,
+   2012,
+   2013,
+   2014,
+   2015,
+   2021,
+   2022,
+   2023,
+   2024
+  ]
+ },
+ {
+  "slug": "volkswagen-eos",
+  "sales": {
+   "2006": 3394,
+   "2007": 12744,
+   "2008": 12837,
+   "2009": 7204,
+   "2010": 6690,
+   "2011": 7533,
+   "2012": 6214,
+   "2013": 4178,
+   "2014": 3411,
+   "2015": 2993,
+   "2016": 387,
+   "2017": 1
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/volkswagen-eos-sales-figures/",
+  "note": "GoodCarBadCar U.S. calendar-year sales table",
+  "flags": [
+   "Volkswagen Eos 2006: 3,394 sold, 0 complaints in window -> sales merged into 2007",
+   "Volkswagen Eos 2015: 2,993 sold, 0 complaints in window -> sales merged into 2014",
+   "Volkswagen Eos 2016: 387 sold, 0 complaints in window (no neighbour with complaints: dropped)",
+   "Volkswagen Eos 2017: 1 sold, 0 complaints in window (no neighbour with complaints: dropped)",
+   "Volkswagen Eos: 0 scorable model years / 0 complaints -> complaints only"
+  ],
+  "complaints": 426,
+  "scored": []
+ },
+ {
+  "slug": "volkswagen-routan",
+  "sales": {
+   "2008": 3387,
+   "2009": 14681,
+   "2010": 15961,
+   "2011": 12473,
+   "2012": 10484,
+   "2013": 2109,
+   "2014": 1103
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/volkswagen-routan-sales-figures/",
+  "note": "GoodCarBadCar U.S. calendar-year sales table",
+  "flags": [
+   "Volkswagen Routan 2008: 3,387 sold, 0 complaints in window -> sales merged into 2009",
+   "Volkswagen Routan: 0 scorable model years / 0 complaints -> complaints only"
+  ],
+  "complaints": 784,
+  "scored": []
+ },
+ {
+  "slug": "volkswagen-touareg",
+  "sales": {
+   "2004": 27706,
+   "2005": 18050,
+   "2006": 10163,
+   "2007": 8812,
+   "2008": 6754,
+   "2009": 4392,
+   "2010": 4713,
+   "2011": 7535,
+   "2012": 10553,
+   "2013": 8233,
+   "2014": 6961,
+   "2015": 7037,
+   "2016": 4223,
+   "2017": 3545,
+   "2018": 2022,
+   "2019": 160
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/volkswagen-touareg-sales-figures/",
+  "note": "GoodCarBadCar U.S. calendar-year sales table",
+  "flags": [
+   "Volkswagen Touareg 2007: 8,812 sold, 1 complaints in window -> sales merged into 2008",
+   "Volkswagen Touareg 2018: 2,022 sold, 0 complaints in window -> sales merged into 2017",
+   "Volkswagen Touareg 2019: 160 sold, 0 complaints in window (no neighbour with complaints: dropped)",
+   "Volkswagen Touareg: 1 scorable model years / 129 complaints -> complaints only"
+  ],
+  "complaints": 646,
+  "scored": [
+   2004
+  ]
+ },
+ {
+  "slug": "volvo-s40",
+  "sales": {
+   "2002": 15383,
+   "2003": 13058,
+   "2004": 24248,
+   "2005": 24411,
+   "2006": 24729,
+   "2007": 18215,
+   "2008": 9686,
+   "2009": 7956,
+   "2010": 5623,
+   "2011": 2984,
+   "2012": 51
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/volvo-s40-sales-figures/",
+  "note": "GoodCarBadCar U.S. calendar-year sales table",
+  "flags": [
+   "Volvo S40 2010: 5,623 sold, 0 complaints in window -> sales merged into 2011",
+   "Volvo S40 2012: 51 sold, 0 complaints in window -> sales merged into 2011"
+  ],
+  "complaints": 506,
+  "scored": [
+   2004,
+   2005,
+   2006
+  ]
+ },
+ {
+  "slug": "volvo-s80",
+  "sales": {
+   "1999": 33549,
+   "2000": 28995,
+   "2001": 20425,
+   "2002": 15359,
+   "2003": 14650,
+   "2004": 13394,
+   "2005": 10189,
+   "2006": 5473,
+   "2007": 12354,
+   "2008": 11037,
+   "2009": 8331,
+   "2010": 7224,
+   "2011": 4735,
+   "2012": 3276,
+   "2013": 1935,
+   "2014": 1753,
+   "2015": 1887,
+   "2016": 646
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/volvo-80-series-sales-figures/",
+  "note": "Volvo Cars of North America year-end releases where published, else GoodCarBadCar's U.S. table",
+  "flags": [],
+  "complaints": 755,
+  "scored": [
+   2000,
+   2001
+  ]
+ },
+ {
+  "slug": "volvo-v70",
+  "sales": {
+   "2000": 16436,
+   "2001": 14796,
+   "2002": 10863,
+   "2003": 11772,
+   "2004": 10489,
+   "2005": 7394,
+   "2006": 5604,
+   "2007": 3769,
+   "2008": 3224,
+   "2009": 1816,
+   "2010": 895
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/volvo-v70-sales-figures/",
+  "note": "Volvo Cars of North America releases (2001-2006), GoodCarBadCar's U.S. table otherwise; the V70 wagon without the XC (counted under the XC70)",
+  "flags": [
+   "Volvo V70 2008: 3,224 sold, 0 complaints in window -> sales merged into 2009",
+   "Volvo V70: 0 scorable model years / 0 complaints -> complaints only"
+  ],
+  "complaints": 574,
+  "scored": []
+ },
+ {
+  "slug": "volvo-xc60",
+  "sales": {
+   "2009": 9262,
+   "2010": 12030,
+   "2011": 12932,
+   "2012": 19139,
+   "2013": 19766,
+   "2014": 19276,
+   "2015": 26134,
+   "2016": 20452,
+   "2017": 22516,
+   "2018": 32689,
+   "2019": 30578,
+   "2020": 32078,
+   "2021": 41582,
+   "2022": 36181,
+   "2023": 39702,
+   "2024": 38892,
+   "2025": 41105
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Volvo_XC60",
+  "note": "Wikipedia U.S. sales table (col='United States'), citing the automaker's releases",
+  "flags": [
+   "Volvo XC60 2009: 9,262 sold, 0 complaints in window -> sales merged into 2010"
+  ],
+  "complaints": 663,
+  "scored": [
+   2010,
+   2015,
+   2016,
+   2017,
+   2018,
+   2019,
+   2020,
+   2021,
+   2022,
+   2023,
+   2024,
+   2025
+  ]
+ },
+ {
+  "slug": "volvo-xc70",
+  "sales": {
+   "1999": 14108,
+   "2000": 15506,
+   "2001": 24305,
+   "2002": 19818,
+   "2003": 17185,
+   "2004": 16066,
+   "2005": 13998,
+   "2006": 13136,
+   "2007": 12630,
+   "2008": 9490,
+   "2009": 5825,
+   "2010": 6626,
+   "2011": 6016,
+   "2012": 5513,
+   "2013": 4882,
+   "2014": 5093,
+   "2015": 5118,
+   "2016": 5425
+  },
+  "kind": "calendar",
+  "url": "https://www.carfigures.com/us-market-brand/volvo/xc70",
+  "note": "Volvo Cars of North America releases where published, else carfigures' U.S. table; including the 2000-2002 V70 XC (Cross Country), its earlier name",
+  "flags": [
+   "Volvo XC70: 1 scorable model years / 12 complaints -> complaints only"
+  ],
+  "complaints": 719,
+  "scored": [
+   2001
+  ]
+ },
+ {
+  "slug": "daewoo-lanos",
+  "sales": {
+   "1998": 388,
+   "1999": 9321,
+   "2000": 25170,
+   "2001": 15619,
+   "2002": 7459
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/daewoo-lanos-sales-figures/",
+  "note": "GoodCarBadCar U.S. calendar-year sales table",
+  "flags": [
+   "Daewoo Lanos: 1 scorable model years / 47 complaints -> complaints only"
+  ],
+  "complaints": 368,
+  "scored": [
+   2000
+  ]
+ },
+ {
+  "slug": "daewoo-leganza",
+  "sales": {
+   "1998": 1331,
+   "1999": 12913,
+   "2000": 21717,
+   "2001": 18347,
+   "2002": 4334
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/daewoo-leganza-sales-figures/",
+  "note": "GoodCarBadCar U.S. calendar-year sales table",
+  "flags": [
+   "Daewoo Leganza: 1 scorable model years / 26 complaints -> complaints only"
+  ],
+  "complaints": 366,
+  "scored": [
+   2000
+  ]
+ },
+ {
+  "slug": "daewoo-nubira",
+  "sales": {
+   "1997": 5272,
+   "1998": 10519,
+   "1999": 7832,
+   "2000": 5615,
+   "2001": 2505,
+   "2002": 1302,
+   "2003": 327
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/daewoo-nubira-sales-figures/",
+  "note": "GoodCarBadCar U.S. calendar-year sales table",
+  "flags": [
+   "Daewoo Nubira 2003: 327 sold, 0 complaints in window -> sales merged into 2002",
+   "Daewoo Nubira: 0 scorable model years / 0 complaints -> complaints only"
+  ],
+  "complaints": 429,
+  "scored": []
+ },
+ {
+  "slug": "hummer-h2",
+  "sales": {
+   "2002": 18861,
+   "2003": 34529,
+   "2004": 28898,
+   "2005": 23213,
+   "2006": 17107,
+   "2007": 12431,
+   "2008": 6095,
+   "2009": 1513
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/hummer-h2-sales-figures-usa-canada/",
+  "note": "GM's monthly sales releases (H2 SUV + SUT), 2003 GoodCarBadCar",
+  "flags": [
+   "Hummer H2 2002: 18,861 sold, 0 complaints in window -> sales merged into 2003"
+  ],
+  "complaints": 343,
+  "scored": [
+   2003,
+   2004,
+   2005
+  ]
+ },
+ {
+  "slug": "hummer-h3",
+  "sales": {
+   "2005": 33140,
+   "2006": 54052,
+   "2007": 43430,
+   "2008": 21373,
+   "2009": 7533,
+   "2010": 3683
+  },
+  "kind": "calendar",
+  "url": "https://www.theautochannel.com/news/2006/01/05/205609.html",
+  "note": "GM's sales releases (H3 + H3T pickup); 2010 GoodCarBadCar",
+  "flags": [
+   "Hummer H3 2005: 33,140 sold, 0 complaints in window -> sales merged into 2006"
+  ],
+  "complaints": 802,
+  "scored": [
+   2006,
+   2007,
+   2008
+  ]
+ },
+ {
+  "slug": "land-rover-defender",
+  "sales": {
+   "2020": 9100,
+   "2021": 19080,
+   "2022": 15733,
+   "2023": 21212,
+   "2024": 27707,
+   "2025": 28389
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/land-rover-defender-sales-figures/",
+  "note": "GoodCarBadCar U.S. calendar-year sales table",
+  "flags": [
+   "Land Rover Defender: 0 scorable model years / 0 complaints -> complaints only"
+  ],
+  "complaints": 323,
+  "scored": [
+   2023,
+   2024,
+   2025
+  ]
+ },
+ {
+  "slug": "land-rover-freelander",
+  "sales": {
+   "2001": 1329,
+   "2002": 15021,
+   "2003": 9529,
+   "2004": 5430,
+   "2005": 2141,
+   "2006": 42
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/land-rover-freelander-sales-figures/",
+  "note": "GoodCarBadCar U.S. calendar-year sales table",
+  "flags": [
+   "Land Rover Freelander 2006: 42 sold, 0 complaints in window -> sales merged into 2005",
+   "Land Rover Freelander: 0 scorable model years / 0 complaints -> complaints only"
+  ],
+  "complaints": 455,
+  "scored": []
+ },
+ {
+  "slug": "land-rover-range-rover-evoque",
+  "sales": {
+   "2011": 1423,
+   "2012": 8901,
+   "2013": 11405,
+   "2014": 12440,
+   "2015": 14583,
+   "2016": 11076,
+   "2017": 11979,
+   "2018": 9917,
+   "2019": 11529,
+   "2020": 10510,
+   "2021": 7181
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/land-rover-range-rover-evoque-sales/",
+  "note": "GoodCarBadCar U.S. table (2013 matches the JLR North America release); 2022+ left out: JLR stopped publishing U.S. sales by model",
+  "flags": [
+   "Land Rover Range Rover Evoque 2011: 1,423 sold, 0 complaints in window -> sales merged into 2012",
+   "Land Rover Range Rover Evoque: 0 scorable model years / 0 complaints -> complaints only"
+  ],
+  "complaints": 394,
+  "scored": []
+ },
+ {
+  "slug": "land-rover-range-rover-sport",
+  "sales": {
+   "2005": 10441,
+   "2006": 18757,
+   "2007": 16989,
+   "2008": 8340,
+   "2009": 9269,
+   "2010": 12347,
+   "2011": 15375,
+   "2012": 16491,
+   "2013": 15976,
+   "2014": 17897,
+   "2015": 21459,
+   "2016": 21612,
+   "2017": 19153,
+   "2018": 24282,
+   "2019": 25768,
+   "2020": 20053,
+   "2021": 21341
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/land-rover-range-rover-sport-sales/",
+  "note": "GoodCarBadCar U.S. calendar-year sales table; 2022+ left out: JLR stopped publishing U.S. sales by model and the published tables disagree",
+  "flags": [
+   "Land Rover Range Rover Sport 2005: 10,441 sold, 0 complaints in window -> sales merged into 2006",
+   "Land Rover Range Rover Sport 2009: 9,269 sold, 0 complaints in window -> sales merged into 2010",
+   "Land Rover Range Rover Sport 2021: 21,341 sold but only 3 complaints in window -> not scored"
+  ],
+  "complaints": 651,
+  "scored": [
+   2006,
+   2010,
+   2015,
+   2016,
+   2018,
+   2019,
+   2020
+  ]
+ },
+ {
+  "slug": "mercury-cougar",
+  "sales": {
+   "1998": 35465,
+   "1999": 56831,
+   "2000": 40343,
+   "2001": 29487,
+   "2002": 19345
+  },
+  "kind": "calendar",
+  "url": "https://www.theautochannel.com/news/press/date/20010103/press033466.html",
+  "note": "Ford's U.S. year-end sales releases",
+  "flags": [],
+  "complaints": 388,
+  "scored": [
+   2000,
+   2001
+  ]
+ },
+ {
+  "slug": "mercury-monterey",
+  "sales": {
+   "2003": 2213,
+   "2004": 17407,
+   "2005": 8166,
+   "2006": 4467,
+   "2007": 700
+  },
+  "kind": "calendar",
+  "url": "https://www.theautochannel.com/news/2007/01/03/032840.html",
+  "note": "Ford's U.S. year-end sales releases",
+  "flags": [
+   "Mercury Monterey 2003: 2,213 sold, 0 complaints in window -> sales merged into 2004",
+   "Mercury Monterey: 0 scorable model years / 0 complaints -> complaints only"
+  ],
+  "complaints": 453,
+  "scored": []
+ },
+ {
+  "slug": "oldsmobile-bravada",
+  "sales": {
+   "1999": 29258,
+   "2000": 31194,
+   "2001": 23867,
+   "2002": 14337,
+   "2003": 8052,
+   "2004": 1973
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Oldsmobile_Bravada",
+  "note": "Wikipedia U.S. sales table, citing the GM U.S. Data Book",
+  "flags": [],
+  "complaints": 386,
+  "scored": [
+   2000,
+   2001
+  ]
+ },
+ {
+  "slug": "oldsmobile-intrigue",
+  "sales": {
+   "1999": 90057,
+   "2000": 64109,
+   "2001": 39395,
+   "2002": 15015
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Oldsmobile_Intrigue",
+  "note": "Wikipedia U.S. sales table, citing the GM U.S. Data Book",
+  "flags": [],
+  "complaints": 372,
+  "scored": [
+   2000,
+   2001
+  ]
+ },
+ {
+  "slug": "saab-9-5",
+  "sales": {
+   "1999": 16778,
+   "2001": 19182,
+   "2002": 17306,
+   "2003": 13839,
+   "2004": 9049,
+   "2005": 6023,
+   "2006": 4992,
+   "2007": 4357,
+   "2008": 2538,
+   "2009": 1034,
+   "2010": 862,
+   "2011": 1490
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/saab-9-5-sales-figures/",
+  "note": "GoodCarBadCar U.S. table (matches GM's releases); 1999 Saab Cars USA; 2000 not found in a citable source",
+  "flags": [
+   "Saab 9-5 2005: 6,023 sold, 0 complaints in window -> sales merged into 2006",
+   "Saab 9-5 2009: 1,034 sold, 0 complaints in window -> sales merged into 2010",
+   "Saab 9-5: 0 scorable model years / 0 complaints -> complaints only"
+  ],
+  "complaints": 438,
+  "scored": []
+ },
+ {
+  "slug": "smart-fortwo",
+  "sales": {
+   "2008": 21146,
+   "2009": 14595,
+   "2010": 5927,
+   "2011": 5348,
+   "2012": 10009,
+   "2013": 9264,
+   "2014": 10381,
+   "2015": 7484,
+   "2016": 6211,
+   "2017": 3071,
+   "2018": 1276,
+   "2019": 605
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/smart-fortwo-sales-figure/",
+  "note": "GoodCarBadCar U.S. table (smart sold only the fortwo in the U.S.); gas and electric fortwo",
+  "flags": [
+   "Smart fortwo 2019: 605 sold, 0 complaints in window -> sales merged into 2018",
+   "Smart fortwo: 1 scorable model years / 49 complaints -> complaints only"
+  ],
+  "complaints": 407,
+  "scored": [
+   2008
+  ]
+ },
+ {
+  "slug": "suzuki-grand-vitara",
+  "sales": {
+   "2002": 18089,
+   "2003": 13337,
+   "2004": 8336,
+   "2005": 8624,
+   "2006": 26931,
+   "2007": 19538,
+   "2008": 11936,
+   "2009": 7565,
+   "2010": 4478,
+   "2011": 4980,
+   "2012": 4954,
+   "2013": 838
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/suzuki-grand-vitara-sales-figures/",
+  "note": "GoodCarBadCar U.S. calendar-year sales table; the Grand Vitara only (the XL-7 is left out)",
+  "flags": [
+   "Suzuki Grand Vitara 2005: 8,624 sold, 1 complaints in window -> sales merged into 2006",
+   "Suzuki Grand Vitara 2013: 838 sold, 0 complaints in window -> sales merged into 2012",
+   "Suzuki Grand Vitara: 1 scorable model years / 36 complaints -> complaints only"
+  ],
+  "complaints": 531,
+  "scored": [
+   2006
+  ]
+ },
+ {
+  "slug": "suzuki-sx4",
+  "sales": {
+   "2007": 16740,
+   "2008": 29563,
+   "2009": 20713,
+   "2010": 11606,
+   "2011": 12519,
+   "2012": 12860,
+   "2013": 2859
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/suzuki-sx4-sales-figures/",
+  "note": "GoodCarBadCar U.S. calendar-year sales table; from 2007, the SX4 launch (earlier rows of the table are its predecessor)",
+  "flags": [],
+  "complaints": 312,
+  "scored": [
+   2008,
+   2009
+  ]
+ },
+ {
+  "slug": "land-rover-discovery",
+  "sales": {
+   "1999": 21931,
+   "2000": 20861,
+   "2001": 20104,
+   "2002": 17417,
+   "2003": 17420,
+   "2006": 16931,
+   "2007": 11039,
+   "2008": 3072,
+   "2009": 2607,
+   "2010": 7122,
+   "2011": 7970,
+   "2012": 7316,
+   "2013": 7093,
+   "2014": 4679,
+   "2015": 9031,
+   "2016": 10772,
+   "2017": 6398,
+   "2018": 9842,
+   "2019": 9184,
+   "2020": 5811,
+   "2021": 4398,
+   "2022": 1488,
+   "2023": 2416,
+   "2024": 3312,
+   "2025": 3410
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/land-rover-lr4-sales-figures/",
+  "note": "GoodCarBadCar U.S. tables: the Discovery line (Discovery, LR4, Discovery 5) plus the LR3 page (https://www.goodcarbadcar.net/land-rover-lr3-sales-figures/), added together where both sold; the Discovery line in the U.S.: Discovery I/II, LR3 (Discovery 3), LR4 (Discovery 4) and the Discovery from 2017; the smaller Discovery Sport is not included; 2004 and 2005 left out: those calendar years mix the old Discovery and the new LR3, which can't be split by model year",
+  "flags": [
+   "Land Rover Discovery 2009: 2,607 sold, 0 complaints in window -> sales merged into 2010",
+   "Land Rover Discovery 2025: 3,410 sold, 0 complaints in window -> sales merged into 2024"
+  ],
+  "complaints": 837,
+  "scored": [
+   2000,
+   2001
+  ]
  }
 ]

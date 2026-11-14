@@ -2008,5 +2008,1805 @@
 "sales_url": "https://en.wikipedia.org/wiki/Ram_ProMaster",
 "sales_kind": "calendar",
 "id": "ram-promaster"
+},
+{
+"name": "Acura TSX",
+"brand": "Acura",
+"segment": "car",
+"years": "2004-2012",
+"sold": 267142,
+"n": 156,
+"per100k": 58,
+"expected": 236.8986963840727,
+"li": 66,
+"serious": 17,
+"worst": "2009",
+"issues": [
+[
+"service brakes, hydraulic",
+19
+],
+[
+"seats",
+15
+],
+[
+"engine",
+12
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Acura_TSX",
+"sales_kind": "calendar",
+"id": "acura-tsx"
+},
+{
+"name": "Buick Century",
+"brand": "Buick",
+"segment": "car",
+"years": "2000-2004",
+"sold": 610524,
+"n": 259,
+"per100k": 42,
+"expected": 609.5816463821651,
+"li": 42,
+"serious": 15,
+"worst": "2000",
+"issues": [
+[
+"service brakes, hydraulic",
+17
+],
+[
+"engine",
+14
+],
+[
+"lights",
+11
+]
+],
+"sales_url": "https://www.sec.gov/Archives/edgar/data/40730/000004073002000002/december01sales-prod8k010302.txt",
+"sales_kind": "calendar",
+"id": "buick-century"
+},
+{
+"name": "Buick Verano",
+"brand": "Buick",
+"segment": "car",
+"years": "2012-2016",
+"sold": 192736,
+"n": 159,
+"per100k": 82,
+"expected": 210.71920508962964,
+"li": 75,
+"serious": 11,
+"worst": "2016",
+"issues": [
+[
+"electrical",
+25
+],
+[
+"engine",
+20
+],
+[
+"airbags",
+16
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/buick-verano-sales-figures/",
+"sales_kind": "calendar",
+"id": "buick-verano"
+},
+{
+"name": "Cadillac ATS",
+"brand": "Cadillac",
+"segment": "car",
+"years": "2013-2016",
+"sold": 123595,
+"n": 127,
+"per100k": 103,
+"expected": 136.63045996592808,
+"li": 93,
+"serious": 20,
+"worst": "2013",
+"issues": [
+[
+"engine",
+35
+],
+[
+"transmission & drivetrain",
+23
+],
+[
+"electrical",
+21
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Cadillac_ATS",
+"sales_kind": "calendar",
+"id": "cadillac-ats"
+},
+{
+"name": "Cadillac DTS",
+"brand": "Cadillac",
+"segment": "car",
+"years": "2006-2008",
+"sold": 163494,
+"n": 78,
+"per100k": 48,
+"expected": 127.20039401467875,
+"li": 61,
+"serious": 22,
+"worst": "2006",
+"issues": [
+[
+"electrical",
+22
+],
+[
+"lights",
+15
+],
+[
+"speed control",
+15
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/cadillac-dts-sales-figures-usa-canada/",
+"sales_kind": "calendar",
+"id": "cadillac-dts"
+},
+{
+"name": "Cadillac STS",
+"brand": "Cadillac",
+"segment": "car",
+"years": "2005-2007",
+"sold": 80046,
+"n": 68,
+"per100k": 85,
+"expected": 57.83358777311605,
+"li": 118,
+"serious": 34,
+"worst": "2006",
+"issues": [
+[
+"electrical",
+25
+],
+[
+"airbags",
+16
+],
+[
+"transmission & drivetrain",
+12
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Cadillac_STS",
+"sales_kind": "calendar",
+"id": "cadillac-sts"
+},
+{
+"name": "Cadillac XT5",
+"brand": "Cadillac",
+"segment": "suv",
+"years": "2017-2022",
+"sold": 309184,
+"n": 122,
+"per100k": 39,
+"expected": 322.30112276918953,
+"li": 38,
+"serious": 9,
+"worst": "2017",
+"issues": [
+[
+"engine",
+16
+],
+[
+"transmission & drivetrain",
+16
+],
+[
+"brakes",
+15
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Cadillac_XT5",
+"sales_kind": "calendar",
+"id": "cadillac-xt5"
+},
+{
+"name": "Chevrolet Astro",
+"brand": "Chevrolet",
+"segment": "minivan",
+"years": "2000-2003",
+"sold": 242719,
+"n": 220,
+"per100k": 91,
+"expected": 249.46875721127003,
+"li": 88,
+"serious": 22,
+"worst": "2003",
+"issues": [
+[
+"service brakes, hydraulic",
+34
+],
+[
+"transmission & drivetrain",
+13
+],
+[
+"electrical",
+12
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/chevrolet-astro-sales-figures/",
+"sales_kind": "calendar",
+"id": "chevrolet-astro"
+},
+{
+"name": "Chevrolet Captiva",
+"brand": "Chevrolet",
+"segment": "suv",
+"years": "2012-2014",
+"sold": 119903,
+"n": 74,
+"per100k": 62,
+"expected": 137.57773486873305,
+"li": 54,
+"serious": 14,
+"worst": "2014",
+"issues": [
+[
+"electrical",
+46
+],
+[
+"engine",
+12
+],
+[
+"transmission & drivetrain",
+8
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/chevrolet-captiva-sport-sales-figures/",
+"sales_kind": "calendar",
+"id": "chevrolet-captiva"
+},
+{
+"name": "Chevrolet S-10",
+"brand": "Chevrolet",
+"segment": "truck",
+"years": "2000-2003",
+"sold": 661333,
+"n": 579,
+"per100k": 88,
+"expected": 670.6699340962068,
+"li": 86,
+"serious": 21,
+"worst": "2000",
+"issues": [
+[
+"service brakes, hydraulic",
+21
+],
+[
+"body structure",
+12
+],
+[
+"transmission & drivetrain",
+12
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/chevrolet-s10-sales-figures/",
+"sales_kind": "calendar",
+"id": "chevrolet-s-10"
+},
+{
+"name": "Chevrolet Tracker",
+"brand": "Chevrolet",
+"segment": "suv",
+"years": "2000-2003",
+"sold": 177723,
+"n": 124,
+"per100k": 70,
+"expected": 180.15320087949945,
+"li": 69,
+"serious": 44,
+"worst": "2003",
+"issues": [
+[
+"engine",
+21
+],
+[
+"service brakes, hydraulic",
+17
+],
+[
+"airbags",
+16
+]
+],
+"sales_url": "https://www.sec.gov/Archives/edgar/data/40730/000004073002000002/december01sales-prod8k010302.txt",
+"sales_kind": "calendar",
+"id": "chevrolet-tracker"
+},
+{
+"name": "Chevrolet Uplander",
+"brand": "Chevrolet",
+"segment": "minivan",
+"years": "2005-2008",
+"sold": 247726,
+"n": 260,
+"per100k": 105,
+"expected": 193.96051032307443,
+"li": 134,
+"serious": 10,
+"worst": "2006",
+"issues": [
+[
+"electrical",
+28
+],
+[
+"doors, locks & latches",
+24
+],
+[
+"body structure",
+21
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Chevrolet_Uplander",
+"sales_kind": "calendar",
+"id": "chevrolet-uplander"
+},
+{
+"name": "Chrysler 300M",
+"brand": "Chrysler",
+"segment": "car",
+"years": "2000-2003",
+"sold": 144550,
+"n": 172,
+"per100k": 119,
+"expected": 148.02981963184783,
+"li": 116,
+"serious": 20,
+"worst": "2000",
+"issues": [
+[
+"steering",
+17
+],
+[
+"airbags",
+12
+],
+[
+"electrical",
+10
+]
+],
+"sales_url": "https://www.theautochannel.com/news/2004/01/05/175827.html",
+"sales_kind": "calendar",
+"id": "chrysler-300m"
+},
+{
+"name": "Chrysler Concorde",
+"brand": "Chrysler",
+"segment": "car",
+"years": "2000-2003",
+"sold": 142667,
+"n": 150,
+"per100k": 105,
+"expected": 145.15808222552226,
+"li": 103,
+"serious": 9,
+"worst": "2000",
+"issues": [
+[
+"engine",
+38
+],
+[
+"airbags",
+9
+],
+[
+"body structure",
+9
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/chrysler-concorde-sales-figures/",
+"sales_kind": "calendar",
+"id": "chrysler-concorde"
+},
+{
+"name": "Ford C-Max",
+"brand": "Ford",
+"segment": "car",
+"years": "2013-2015",
+"sold": 97882,
+"n": 92,
+"per100k": 94,
+"expected": 111.39146940411015,
+"li": 83,
+"serious": 18,
+"worst": "2014",
+"issues": [
+[
+"electrical",
+38
+],
+[
+"transmission & drivetrain",
+16
+],
+[
+"steering",
+14
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/ford-cmax-sales-figures/",
+"sales_kind": "calendar",
+"id": "ford-c-max"
+},
+{
+"name": "Ford E-Series",
+"brand": "Ford",
+"segment": "van",
+"years": "2010-2022",
+"sold": 933783,
+"n": 239,
+"per100k": 26,
+"expected": 1025.5928231448313,
+"li": 23,
+"serious": 10,
+"worst": "2021",
+"issues": [
+[
+"steering",
+26
+],
+[
+"brakes",
+14
+],
+[
+"engine",
+12
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Ford_E-Series",
+"sales_kind": "calendar",
+"id": "ford-e-series"
+},
+{
+"name": "Ford Transit Connect",
+"brand": "Ford",
+"segment": "van",
+"years": "2010-2020",
+"sold": 426630,
+"n": 183,
+"per100k": 43,
+"expected": 454.2665450747534,
+"li": 40,
+"serious": 8,
+"worst": "2014",
+"issues": [
+[
+"engine",
+14
+],
+[
+"body structure",
+13
+],
+[
+"transmission & drivetrain",
+13
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Ford_Transit_Connect",
+"sales_kind": "calendar",
+"id": "ford-transit-connect"
+},
+{
+"name": "GMC Jimmy",
+"brand": "GMC",
+"segment": "suv",
+"years": "2000-2001",
+"sold": 111278,
+"n": 137,
+"per100k": 123,
+"expected": 121.48945225822331,
+"li": 113,
+"serious": 12,
+"worst": "2001",
+"issues": [
+[
+"suspension",
+26
+],
+[
+"transmission & drivetrain",
+18
+],
+[
+"lights",
+15
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/gmc-jimmy-sales-figures/",
+"sales_kind": "calendar",
+"id": "gmc-jimmy"
+},
+{
+"name": "GMC Sonoma",
+"brand": "GMC",
+"segment": "truck",
+"years": "2000-2003",
+"sold": 172598,
+"n": 160,
+"per100k": 93,
+"expected": 174.11765468984203,
+"li": 92,
+"serious": 19,
+"worst": "2000",
+"issues": [
+[
+"service brakes, hydraulic",
+31
+],
+[
+"transmission & drivetrain",
+11
+],
+[
+"body structure",
+11
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/gmc-sonoma-sales-figures/",
+"sales_kind": "calendar",
+"id": "gmc-sonoma"
+},
+{
+"name": "Honda Insight",
+"brand": "Honda",
+"segment": "car",
+"years": "2010-2019",
+"sold": 77733,
+"n": 75,
+"per100k": 96,
+"expected": 82.58530907846833,
+"li": 91,
+"serious": 29,
+"worst": "2019",
+"issues": [
+[
+"electrical",
+17
+],
+[
+"automatic emergency braking",
+13
+],
+[
+"airbags",
+12
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/honda-insight-sales-figures/",
+"sales_kind": "calendar",
+"id": "honda-insight"
+},
+{
+"name": "Hyundai Azera",
+"brand": "Hyundai",
+"segment": "car",
+"years": "2006-2007",
+"sold": 66426,
+"n": 68,
+"per100k": 102,
+"expected": 47.46220507978521,
+"li": 143,
+"serious": 7,
+"worst": "2006",
+"issues": [
+[
+"lights",
+32
+],
+[
+"airbags",
+24
+],
+[
+"speed control",
+10
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Hyundai_Azera",
+"sales_kind": "calendar",
+"id": "hyundai-azera"
+},
+{
+"name": "Hyundai Tiburon",
+"brand": "Hyundai",
+"segment": "car",
+"years": "2003-2005",
+"sold": 81930,
+"n": 240,
+"per100k": 293,
+"expected": 64.91367400179064,
+"li": 370,
+"serious": 20,
+"worst": "2003",
+"issues": [
+[
+"transmission & drivetrain",
+67
+],
+[
+"airbags",
+18
+],
+[
+"electrical",
+5
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Hyundai_Tiburon",
+"sales_kind": "calendar",
+"id": "hyundai-tiburon"
+},
+{
+"name": "Infiniti FX35",
+"brand": "Infiniti",
+"segment": "suv",
+"years": "2003-2007",
+"sold": 108110,
+"n": 62,
+"per100k": 57,
+"expected": 87.08409082358968,
+"li": 71,
+"serious": 5,
+"worst": "2004",
+"issues": [
+[
+"service brakes, hydraulic",
+24
+],
+[
+"lights",
+13
+],
+[
+"transmission & drivetrain",
+11
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/infiniti-fx-sales-figures/",
+"sales_kind": "calendar",
+"id": "infiniti-fx35"
+},
+{
+"name": "Infiniti G37",
+"brand": "Infiniti",
+"segment": "car",
+"years": "2010-2013",
+"sold": 216295,
+"n": 60,
+"per100k": 28,
+"expected": 247.1707587741277,
+"li": 24,
+"serious": 30,
+"worst": "2011",
+"issues": [
+[
+"speed control",
+27
+],
+[
+"airbags",
+22
+],
+[
+"transmission & drivetrain",
+17
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/infiniti-g-sales-figures/",
+"sales_kind": "calendar",
+"id": "infiniti-g37"
+},
+{
+"name": "Infiniti M35",
+"brand": "Infiniti",
+"segment": "car",
+"years": "2006-2007",
+"sold": 71542,
+"n": 58,
+"per100k": 81,
+"expected": 50.67255703557191,
+"li": 114,
+"serious": 10,
+"worst": "2006",
+"issues": [
+[
+"steering",
+47
+],
+[
+"tires",
+14
+],
+[
+"electrical",
+12
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Infiniti_M35",
+"sales_kind": "calendar",
+"id": "infiniti-m35"
+},
+{
+"name": "Infiniti Q50",
+"brand": "Infiniti",
+"segment": "car",
+"years": "2014-2019",
+"sold": 260618,
+"n": 210,
+"per100k": 81,
+"expected": 269.3807255599151,
+"li": 78,
+"serious": 20,
+"worst": "2014",
+"issues": [
+[
+"steering",
+36
+],
+[
+"electrical",
+19
+],
+[
+"brakes",
+12
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Infiniti_Q50",
+"sales_kind": "calendar",
+"id": "infiniti-q50"
+},
+{
+"name": "Infiniti QX60",
+"brand": "Infiniti",
+"segment": "suv",
+"years": "2013-2022",
+"sold": 344616,
+"n": 307,
+"per100k": 89,
+"expected": 367.99743087254103,
+"li": 83,
+"serious": 12,
+"worst": "2013",
+"issues": [
+[
+"airbags",
+34
+],
+[
+"transmission & drivetrain",
+15
+],
+[
+"electrical",
+14
+]
+],
+"sales_url": "https://usa.nissannews.com/en-US/releases/nissan-group-reports-december-2018-and-2018-calendar-year-u-s-sales",
+"sales_kind": "calendar",
+"id": "infiniti-qx60"
+},
+{
+"name": "Jaguar X-Type",
+"brand": "Jaguar",
+"segment": "car",
+"years": "2002-2004",
+"sold": 91097,
+"n": 112,
+"per100k": 123,
+"expected": 83.74177982225929,
+"li": 134,
+"serious": 30,
+"worst": "2004",
+"issues": [
+[
+"transmission & drivetrain",
+24
+],
+[
+"tires",
+21
+],
+[
+"speed control",
+13
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/jaguar-x-type-sales-figures-usa-canada/",
+"sales_kind": "calendar",
+"id": "jaguar-x-type"
+},
+{
+"name": "Kia Niro",
+"brand": "Kia",
+"segment": "suv",
+"years": "2017-2022",
+"sold": 134872,
+"n": 149,
+"per100k": 110,
+"expected": 143.55918880584528,
+"li": 104,
+"serious": 19,
+"worst": "2022",
+"issues": [
+[
+"transmission & drivetrain",
+27
+],
+[
+"electrical",
+19
+],
+[
+"brakes",
+13
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Kia_Niro",
+"sales_kind": "calendar",
+"id": "kia-niro"
+},
+{
+"name": "Kia Seltos",
+"brand": "Kia",
+"segment": "suv",
+"years": "2021-2022",
+"sold": 143359,
+"n": 211,
+"per100k": 147,
+"expected": 151.48577262452193,
+"li": 139,
+"serious": 8,
+"worst": "2021",
+"issues": [
+[
+"engine",
+53
+],
+[
+"transmission & drivetrain",
+20
+],
+[
+"electrical",
+16
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Kia_Seltos",
+"sales_kind": "calendar",
+"id": "kia-seltos"
+},
+{
+"name": "Kia Sephia",
+"brand": "Kia",
+"segment": "car",
+"years": "2000-2001",
+"sold": 116909,
+"n": 282,
+"per100k": 241,
+"expected": 126.92765357675107,
+"li": 222,
+"serious": 27,
+"worst": "2000",
+"issues": [
+[
+"service brakes, hydraulic",
+30
+],
+[
+"engine",
+22
+],
+[
+"transmission & drivetrain",
+20
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/kia-sephia-sales-figures/",
+"sales_kind": "calendar",
+"id": "kia-sephia"
+},
+{
+"name": "Lincoln Aviator",
+"brand": "Lincoln",
+"segment": "suv",
+"years": "2020-2022",
+"sold": 74304,
+"n": 122,
+"per100k": 164,
+"expected": 77.97901473110429,
+"li": 156,
+"serious": 9,
+"worst": "2020",
+"issues": [
+[
+"electrical",
+30
+],
+[
+"backup camera",
+20
+],
+[
+"engine",
+12
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Lincoln_Aviator",
+"sales_kind": "calendar",
+"id": "lincoln-aviator"
+},
+{
+"name": "Lincoln MKC",
+"brand": "Lincoln",
+"segment": "suv",
+"years": "2015-2019",
+"sold": 142333,
+"n": 71,
+"per100k": 50,
+"expected": 144.2126695070479,
+"li": 49,
+"serious": 24,
+"worst": "2015",
+"issues": [
+[
+"engine",
+20
+],
+[
+"electrical",
+17
+],
+[
+"transmission & drivetrain",
+13
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Lincoln_MKC",
+"sales_kind": "calendar",
+"id": "lincoln-mkc"
+},
+{
+"name": "Lincoln MKS",
+"brand": "Lincoln",
+"segment": "car",
+"years": "2009-2013",
+"sold": 53473,
+"n": 46,
+"per100k": 86,
+"expected": 52.90333138465334,
+"li": 87,
+"serious": 13,
+"worst": "2013",
+"issues": [
+[
+"service brakes, hydraulic",
+24
+],
+[
+"engine",
+20
+],
+[
+"seats",
+15
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/lincoln-mks-sales-figures/",
+"sales_kind": "calendar",
+"id": "lincoln-mks"
+},
+{
+"name": "Mazda 626",
+"brand": "Mazda",
+"segment": "car",
+"years": "2000-2001",
+"sold": 72874,
+"n": 109,
+"per100k": 150,
+"expected": 79.25324793572226,
+"li": 138,
+"serious": 19,
+"worst": "2001",
+"issues": [
+[
+"transmission & drivetrain",
+51
+],
+[
+"engine",
+20
+],
+[
+"airbags",
+13
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/mazda-626-sales-figures/",
+"sales_kind": "calendar",
+"id": "mazda-626"
+},
+{
+"name": "Mazda MPV",
+"brand": "Mazda",
+"segment": "minivan",
+"years": "2000-2004",
+"sold": 157733,
+"n": 239,
+"per100k": 152,
+"expected": 154.62636495635476,
+"li": 155,
+"serious": 21,
+"worst": "2003",
+"issues": [
+[
+"transmission & drivetrain",
+23
+],
+[
+"engine",
+21
+],
+[
+"body structure",
+8
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/mazda-mpv-sales-figures/",
+"sales_kind": "calendar",
+"id": "mazda-mpv"
+},
+{
+"name": "Mazda Protege",
+"brand": "Mazda",
+"segment": "car",
+"years": "2000-2003",
+"sold": 300065,
+"n": 192,
+"per100k": 64,
+"expected": 298.9689546883217,
+"li": 64,
+"serious": 41,
+"worst": "2000",
+"issues": [
+[
+"transmission & drivetrain",
+23
+],
+[
+"airbags",
+22
+],
+[
+"engine",
+14
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/mazda-protege-sales-figures/",
+"sales_kind": "calendar",
+"id": "mazda-protege"
+},
+{
+"name": "Mazda5",
+"brand": "Mazda",
+"segment": "minivan",
+"years": "2006-2012",
+"sold": 77686,
+"n": 96,
+"per100k": 124,
+"expected": 72.32726936768913,
+"li": 133,
+"serious": 14,
+"worst": "2006",
+"issues": [
+[
+"steering",
+34
+],
+[
+"tires",
+25
+],
+[
+"suspension",
+19
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/mazda-5-sales-figures/",
+"sales_kind": "calendar",
+"id": "mazda-mazda5"
+},
+{
+"name": "Mercedes-Benz Sprinter",
+"brand": "Mercedes-Benz",
+"segment": "van",
+"years": "2013-2022",
+"sold": 315939,
+"n": 358,
+"per100k": 113,
+"expected": 334.63811722045097,
+"li": 107,
+"serious": 11,
+"worst": "2019",
+"issues": [
+[
+"electrical",
+17
+],
+[
+"transmission & drivetrain",
+15
+],
+[
+"automatic emergency braking",
+14
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/mercedes-benz-sprinter-sales-figures/",
+"sales_kind": "calendar",
+"id": "mercedes-benz-sprinter"
+},
+{
+"name": "Mitsubishi Galant",
+"brand": "Mitsubishi",
+"segment": "car",
+"years": "2000-2009",
+"sold": 523126,
+"n": 291,
+"per100k": 56,
+"expected": 490.78748680576496,
+"li": 59,
+"serious": 45,
+"worst": "2001",
+"issues": [
+[
+"service brakes, hydraulic",
+32
+],
+[
+"airbags",
+19
+],
+[
+"electrical",
+12
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/mitsubishi-galant-sales-figures/",
+"sales_kind": "calendar",
+"id": "mitsubishi-galant"
+},
+{
+"name": "Mitsubishi Montero",
+"brand": "Mitsubishi",
+"segment": "suv",
+"years": "2000-2001",
+"sold": 46380,
+"n": 105,
+"per100k": 226,
+"expected": 50.11125065343715,
+"li": 210,
+"serious": 26,
+"worst": "2001",
+"issues": [
+[
+"engine",
+19
+],
+[
+"service brakes, hydraulic",
+18
+],
+[
+"transmission & drivetrain",
+13
+]
+],
+"sales_url": "https://www.theautochannel.com/news/2005/01/04/313725.html",
+"sales_kind": "calendar",
+"id": "mitsubishi-montero"
+},
+{
+"name": "Mitsubishi Outlander Sport",
+"brand": "Mitsubishi",
+"segment": "suv",
+"years": "2013-2021",
+"sold": 295047,
+"n": 153,
+"per100k": 52,
+"expected": 304.5377413520801,
+"li": 50,
+"serious": 14,
+"worst": "2015",
+"issues": [
+[
+"transmission & drivetrain",
+32
+],
+[
+"engine",
+25
+],
+[
+"electrical",
+22
+]
+],
+"sales_url": "https://media.mitsubishicars.com/releases/mitsubishi-motors-reports-best-annual-sales-since-2007",
+"sales_kind": "calendar",
+"id": "mitsubishi-outlander-sport"
+},
+{
+"name": "Nissan 350Z",
+"brand": "Nissan",
+"segment": "car",
+"years": "2003-2006",
+"sold": 132584,
+"n": 334,
+"per100k": 252,
+"expected": 101.20293764663205,
+"li": 330,
+"serious": 6,
+"worst": "2003",
+"issues": [
+[
+"suspension",
+42
+],
+[
+"tires",
+31
+],
+[
+"transmission & drivetrain",
+12
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Nissan_350Z",
+"sales_kind": "calendar",
+"id": "nissan-350z"
+},
+{
+"name": "Nissan Juke",
+"brand": "Nissan",
+"segment": "suv",
+"years": "2011-2015",
+"sold": 184345,
+"n": 125,
+"per100k": 68,
+"expected": 207.72680155904445,
+"li": 60,
+"serious": 20,
+"worst": "2011",
+"issues": [
+[
+"engine",
+32
+],
+[
+"electrical",
+17
+],
+[
+"fuel or EV drive system",
+13
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Nissan_Juke",
+"sales_kind": "calendar",
+"id": "nissan-juke"
+},
+{
+"name": "Nissan Kicks",
+"brand": "Nissan",
+"segment": "suv",
+"years": "2018-2022",
+"sold": 278202,
+"n": 195,
+"per100k": 70,
+"expected": 288.2928157577108,
+"li": 68,
+"serious": 10,
+"worst": "2018",
+"issues": [
+[
+"automatic emergency braking",
+28
+],
+[
+"engine",
+19
+],
+[
+"electrical",
+18
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Nissan_Kicks",
+"sales_kind": "calendar",
+"id": "nissan-kicks"
+},
+{
+"name": "Saturn SL",
+"brand": "Saturn",
+"segment": "car",
+"years": "2000-2002",
+"sold": 456998,
+"n": 253,
+"per100k": 55,
+"expected": 487.50315281115843,
+"li": 52,
+"serious": 30,
+"worst": "2002",
+"issues": [
+[
+"engine",
+17
+],
+[
+"electrical",
+16
+],
+[
+"transmission & drivetrain",
+16
+]
+],
+"sales_url": "https://www.sec.gov/Archives/edgar/data/40730/000004073002000002/december01sales-prod8k010302.txt",
+"sales_kind": "calendar",
+"id": "saturn-sl"
+},
+{
+"name": "Scion tC",
+"brand": "Scion",
+"segment": "car",
+"years": "2005-2011",
+"sold": 308867,
+"n": 230,
+"per100k": 74,
+"expected": 244.5025300118909,
+"li": 94,
+"serious": 40,
+"worst": "2005",
+"issues": [
+[
+"visibility",
+37
+],
+[
+"airbags",
+14
+],
+[
+"body structure",
+14
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Scion_tC",
+"sales_kind": "calendar",
+"id": "scion-tc"
+},
+{
+"name": "Toyota C-HR",
+"brand": "Toyota",
+"segment": "suv",
+"years": "2018-2021",
+"sold": 202970,
+"n": 92,
+"per100k": 45,
+"expected": 202.08037204122303,
+"li": 46,
+"serious": 25,
+"worst": "2018",
+"issues": [
+[
+"electrical",
+28
+],
+[
+"transmission & drivetrain",
+22
+],
+[
+"brakes",
+17
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Toyota_C-HR",
+"sales_kind": "calendar",
+"id": "toyota-c-hr"
+},
+{
+"name": "Toyota Venza",
+"brand": "Toyota",
+"segment": "suv",
+"years": "2010-2022",
+"sold": 325841,
+"n": 308,
+"per100k": 95,
+"expected": 358.2342316448006,
+"li": 86,
+"serious": 23,
+"worst": "2021",
+"issues": [
+[
+"wipers & visibility",
+27
+],
+[
+"speed control",
+12
+],
+[
+"brakes",
+10
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Toyota_Venza",
+"sales_kind": "calendar",
+"id": "toyota-venza"
+},
+{
+"name": "Volvo S40",
+"brand": "Volvo",
+"segment": "car",
+"years": "2004-2006",
+"sold": 73388,
+"n": 57,
+"per100k": 78,
+"expected": 53.11816918888226,
+"li": 107,
+"serious": 11,
+"worst": "2005",
+"issues": [
+[
+"electrical",
+28
+],
+[
+"engine",
+23
+],
+[
+"service brakes, hydraulic",
+23
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/volvo-s40-sales-figures/",
+"sales_kind": "calendar",
+"id": "volvo-s40"
+},
+{
+"name": "Volvo S80",
+"brand": "Volvo",
+"segment": "car",
+"years": "2000-2001",
+"sold": 49420,
+"n": 90,
+"per100k": 182,
+"expected": 53.668512627592804,
+"li": 168,
+"serious": 13,
+"worst": "2000",
+"issues": [
+[
+"engine",
+22
+],
+[
+"suspension",
+17
+],
+[
+"transmission & drivetrain",
+14
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/volvo-80-series-sales-figures/",
+"sales_kind": "calendar",
+"id": "volvo-s80"
+},
+{
+"name": "Volvo XC60",
+"brand": "Volvo",
+"segment": "suv",
+"years": "2010-2022",
+"sold": 263502,
+"n": 178,
+"per100k": 68,
+"expected": 274.0926921362392,
+"li": 65,
+"serious": 17,
+"worst": "2022",
+"issues": [
+[
+"electrical",
+30
+],
+[
+"brakes",
+16
+],
+[
+"automatic emergency braking",
+13
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Volvo_XC60",
+"sales_kind": "calendar",
+"id": "volvo-xc60"
+},
+{
+"name": "Hummer H2",
+"brand": "Hummer",
+"segment": "suv",
+"years": "2003-2005",
+"sold": 105501,
+"n": 63,
+"per100k": 60,
+"expected": 84.10298405947948,
+"li": 75,
+"serious": 33,
+"worst": "2003",
+"issues": [
+[
+"steering",
+27
+],
+[
+"visibility",
+17
+],
+[
+"body structure",
+14
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/hummer-h2-sales-figures-usa-canada/",
+"sales_kind": "calendar",
+"id": "hummer-h2"
+},
+{
+"name": "Hummer H3",
+"brand": "Hummer",
+"segment": "suv",
+"years": "2006-2008",
+"sold": 151995,
+"n": 105,
+"per100k": 69,
+"expected": 114.61349875691563,
+"li": 92,
+"serious": 26,
+"worst": "2006",
+"issues": [
+[
+"airbags",
+17
+],
+[
+"service brakes, hydraulic",
+14
+],
+[
+"body structure",
+12
+]
+],
+"sales_url": "https://www.theautochannel.com/news/2006/01/05/205609.html",
+"sales_kind": "calendar",
+"id": "hummer-h3"
+},
+{
+"name": "Land Rover Discovery",
+"brand": "Land Rover",
+"segment": "suv",
+"years": "2000-2001",
+"sold": 40965,
+"n": 40,
+"per100k": 98,
+"expected": 44.34249285623753,
+"li": 90,
+"serious": 62,
+"worst": "2000",
+"issues": [
+[
+"service brakes, hydraulic",
+18
+],
+[
+"engine",
+15
+],
+[
+"transmission & drivetrain",
+15
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/land-rover-lr4-sales-figures/",
+"sales_kind": "calendar",
+"id": "land-rover-discovery"
+},
+{
+"name": "Land Rover Range Rover Sport",
+"brand": "Land Rover",
+"segment": "suv",
+"years": "2010-2020",
+"sold": 134790,
+"n": 56,
+"per100k": 42,
+"expected": 136.73466131761091,
+"li": 41,
+"serious": 16,
+"worst": "2020",
+"issues": [
+[
+"electrical",
+32
+],
+[
+"engine",
+21
+],
+[
+"speed control",
+12
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/land-rover-range-rover-sport-sales/",
+"sales_kind": "calendar",
+"id": "land-rover-range-rover-sport"
+},
+{
+"name": "Mercury Cougar",
+"brand": "Mercury",
+"segment": "car",
+"years": "2000-2001",
+"sold": 69830,
+"n": 138,
+"per100k": 198,
+"expected": 75.80463997635943,
+"li": 182,
+"serious": 22,
+"worst": "2000",
+"issues": [
+[
+"electrical",
+26
+],
+[
+"fuel system, gasoline",
+17
+],
+[
+"engine",
+15
+]
+],
+"sales_url": "https://www.theautochannel.com/news/press/date/20010103/press033466.html",
+"sales_kind": "calendar",
+"id": "mercury-cougar"
+},
+{
+"name": "Oldsmobile Bravada",
+"brand": "Oldsmobile",
+"segment": "suv",
+"years": "2000-2001",
+"sold": 55061,
+"n": 64,
+"per100k": 116,
+"expected": 59.74400128255765,
+"li": 107,
+"serious": 14,
+"worst": "2000",
+"issues": [
+[
+"electrical",
+20
+],
+[
+"lights",
+19
+],
+[
+"transmission & drivetrain",
+17
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Oldsmobile_Bravada",
+"sales_kind": "calendar",
+"id": "oldsmobile-bravada"
+},
+{
+"name": "Oldsmobile Intrigue",
+"brand": "Oldsmobile",
+"segment": "car",
+"years": "2000-2001",
+"sold": 103504,
+"n": 142,
+"per100k": 137,
+"expected": 112.55564616638478,
+"li": 126,
+"serious": 6,
+"worst": "2000",
+"issues": [
+[
+"lights",
+39
+],
+[
+"electrical",
+25
+],
+[
+"engine",
+15
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Oldsmobile_Intrigue",
+"sales_kind": "calendar",
+"id": "oldsmobile-intrigue"
+},
+{
+"name": "Suzuki SX4",
+"brand": "Suzuki",
+"segment": "car",
+"years": "2008-2009",
+"sold": 50276,
+"n": 62,
+"per100k": 123,
+"expected": 46.004860332068226,
+"li": 135,
+"serious": 21,
+"worst": "2009",
+"issues": [
+[
+"airbags",
+66
+],
+[
+"seats",
+10
+],
+[
+"electrical",
+10
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/suzuki-sx4-sales-figures/",
+"sales_kind": "calendar",
+"id": "suzuki-sx4"
 }
 ]

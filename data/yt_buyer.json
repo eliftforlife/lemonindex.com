@@ -22573,5 +22573,5117 @@
 }
 ]
 }
+],
+"acura-cl": [
+{
+"sid": "acura-cl-g2",
+"y0": 2001,
+"y1": 2003,
+"label": "2001–2003",
+"videos": 176,
+"praise": [
+[
+"Reliability",
+12
+],
+[
+"Power",
+11
+],
+[
+"Looks",
+7
+],
+[
+"Fun to drive",
+3
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "Zfk9Mqu6X98",
+"title": "Why the 2002 Acura CL Type-S is Rare (and Should You Buy One?) - One Take",
+"views": 88658,
+"ch": "TheSmokingTire"
+},
+{
+"id": "iIcELAF3Z1c",
+"title": "2001 Acura CL Type-S Review - The Forgotten Sport Luxury Coupe!",
+"views": 29681,
+"ch": "Shooting Cars"
+},
+{
+"id": "Ay74rLT2jSw",
+"title": "2000-2003 Acura CL Apple CarPlay ATOTO X10 Headunit Install & Review!",
+"views": 6832,
+"ch": "Bern on Cars"
+}
+]
+}
+],
+"acura-integra": [
+{
+"sid": "acura-integra-g3",
+"y0": 1994,
+"y1": 2001,
+"label": "1994–2001",
+"videos": 193,
+"praise": [
+[
+"Fun to drive",
+15
+],
+[
+"Looks",
+14
+],
+[
+"Reliability",
+12
+],
+[
+"Power",
+12
+]
+],
+"trouble": [
+[
+"Coolant leaks / water pump / overheating",
+4
+],
+[
+"Rust",
+3
+],
+[
+"Oil leaks (gaskets, seals, housings)",
+3
+]
+],
+"top": [
+{
+"id": "vsFt_zvgLVQ",
+"title": "Honda Integra Type R DC2 Review by Top Gear 1998",
+"views": 603482,
+"ch": "miroshi"
+},
+{
+"id": "Axu120qc9Pw",
+"title": "1997 Acura Integra Type-R: Regular Car Reviews",
+"views": 491840,
+"ch": "Regular Car Reviews"
+},
+{
+"id": "H2ncEJBeDFM",
+"title": "1994 Acura Integra GS- R | Retro Review",
+"views": 156066,
+"ch": "MotorWeek"
+}
+]
+},
+{
+"sid": "acura-integra-g5",
+"y0": 2023,
+"y1": 2025,
+"label": "2023–2025",
+"videos": 190,
+"praise": [
+[
+"Looks",
+35
+],
+[
+"Fun to drive",
+34
+],
+[
+"Power",
+26
+],
+[
+"Space and practicality",
+24
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "_yxZkWNciEM",
+"title": "2023 Acura Integra Review // The $40,000 Question",
+"views": 1281325,
+"ch": "Throttle House"
+},
+{
+"id": "qtPokzl2AfM",
+"title": "PERFECT! 2024 Acura Integra Type S Review",
+"views": 897746,
+"ch": "TheStraightPipes"
+},
+{
+"id": "n3-Yd_pKymc",
+"title": "2023 Acura Integra vs Honda Civic Si - Worth the $10k Difference?",
+"views": 717379,
+"ch": "TheStraightPipes"
+}
+]
+}
+],
+"acura-rl": [
+{
+"sid": "acura-rl-g1",
+"y0": 1996,
+"y1": 2004,
+"label": "1996–2004",
+"videos": 200,
+"praise": [
+[
+"Power",
+7
+],
+[
+"Reliability",
+6
+],
+[
+"Looks",
+3
+],
+[
+"Fun to drive",
+3
+]
+],
+"trouble": [
+[
+"Battery / alternator / starter",
+4
+],
+[
+"Coolant leaks / water pump / overheating",
+3
+],
+[
+"Electrical / wiring / TIPM",
+3
+]
+],
+"top": [
+{
+"id": "mR1CpfSO-bs",
+"title": "2000 Acura RL Start Up and Review 3.5 L V6",
+"views": 121214,
+"ch": "Camerons Car Reviews"
+},
+{
+"id": "N3f8xL-KVjw",
+"title": "2002 Acura RL 3.5 cooling fans not working problem solved",
+"views": 15055,
+"ch": "Auto Surgeon52"
+},
+{
+"id": "DyPdQCM_1yY",
+"title": "Reviews Acura RL 2004",
+"views": 5078,
+"ch": "Car Reviews"
+}
+]
+},
+{
+"sid": "acura-rl-g2",
+"y0": 2005,
+"y1": 2012,
+"label": "2005–2012",
+"videos": 197,
+"praise": [
+[
+"Fun to drive",
+7
+],
+[
+"Power",
+6
+],
+[
+"Reliability",
+6
+],
+[
+"Looks",
+6
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "h1P-3B_E1-I",
+"title": "2005 ACURA RL SH-AWD -  SUPER HANDLING ALL WHEEL DRIVE - REVIEW / TECHNOLOGICAL DREAM !  AWESOME CAR",
+"views": 99810,
+"ch": "Caltac03"
+},
+{
+"id": "8I3AtsyEz7Y",
+"title": "Honda Legend 2008 KB1 / Acura RL | Let's walk through review!",
+"views": 72894,
+"ch": "Sebastian Forssman"
+},
+{
+"id": "zvKlH3AiDsg",
+"title": "2009 Acura RL Review - Kelley Blue Book",
+"views": 67940,
+"ch": "Kelley Blue Book"
+}
+]
+}
+],
+"acura-tsx": [
+{
+"sid": "acura-tsx-g1",
+"y0": 2004,
+"y1": 2008,
+"label": "2004–2008",
+"videos": 192,
+"praise": [
+[
+"Reliability",
+18
+],
+[
+"Looks",
+11
+],
+[
+"Power",
+10
+],
+[
+"Fun to drive",
+10
+]
+],
+"trouble": [
+[
+"Battery / alternator / starter",
+4
+],
+[
+"Rust",
+4
+],
+[
+"Electrical / wiring / TIPM",
+3
+]
+],
+"top": [
+{
+"id": "JfKRttM0hU8",
+"title": "2007 Acura TSX Review, Walk Around, Start Up & Rev, Test Drive",
+"views": 159564,
+"ch": "xoquixxoqafxo"
+},
+{
+"id": "NhG9wRcmZc0",
+"title": "2006 Acura TSX Review - 1st Generation 2004-2008 CL9",
+"views": 132601,
+"ch": "6th Gear Garage"
+},
+{
+"id": "puyUx84uKVw",
+"title": "Is It As Reliable As You Think? ACURA TSX 2004-2008 1st Gen",
+"views": 122324,
+"ch": "AutoMotivate"
+}
+]
+},
+{
+"sid": "acura-tsx-g2",
+"y0": 2009,
+"y1": 2014,
+"label": "2009–2014",
+"videos": 199,
+"praise": [
+[
+"Fun to drive",
+12
+],
+[
+"Reliability",
+12
+],
+[
+"Space and practicality",
+7
+],
+[
+"Looks",
+7
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "OstQO7qhJbA",
+"title": "2013 Acura TSX Review, Walkaround, Exhaust, & Test Drive",
+"views": 273510,
+"ch": "Redline Reviews"
+},
+{
+"id": "XyVsY0UZurk",
+"title": "2013 Acura TSX Review",
+"views": 145579,
+"ch": "AutoGuide.com"
+},
+{
+"id": "e4rotYRk_HM",
+"title": "2010 Acura TSX Tech Review, Start Up & Rev, Walk Around, Quick Drive",
+"views": 129768,
+"ch": "xoquixxoqafxo"
+}
+]
+}
+],
+"audi-a5": [
+{
+"sid": "audi-a5-g1",
+"y0": 2008,
+"y1": 2017,
+"label": "2008–2017",
+"videos": 195,
+"praise": [
+[
+"Looks",
+15
+],
+[
+"Fun to drive",
+11
+],
+[
+"Power",
+9
+],
+[
+"Reliability",
+8
+]
+],
+"trouble": [
+[
+"Timing chain / tensioners",
+3
+]
+],
+"top": [
+{
+"id": "RZU6O88zPqs",
+"title": "Buying a used Audi A5 - 2007-2016, Common Issues, Buying advice / guide",
+"views": 1183077,
+"ch": "different car review"
+},
+{
+"id": "Ir9bWOIJ66k",
+"title": "Audi A5 Sportback S Line 2015, 2016 In Depth Review Interior Exterior",
+"views": 846985,
+"ch": "Alaatin61"
+},
+{
+"id": "N5qSLXW1GcU",
+"title": "2013 Audi A5 vs Infiniti G37 Coupe 0-60 MPH Mile High Mashup Review",
+"views": 704863,
+"ch": "The Fast Lane Car"
+}
+]
+},
+{
+"sid": "audi-a5-g2",
+"y0": 2018,
+"y1": 2025,
+"label": "2018–2025",
+"videos": 192,
+"praise": [
+[
+"Looks",
+22
+],
+[
+"Power",
+15
+],
+[
+"Fun to drive",
+12
+],
+[
+"Space and practicality",
+11
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "yPXBIgGHOn4",
+"title": "Audi A5 Sportback 2018 in-depth review | Mat Watson Reviews",
+"views": 2121096,
+"ch": "carwow"
+},
+{
+"id": "cCartBwP5L4",
+"title": "2025 Audi S5 Review // Full Of Surprises",
+"views": 1185078,
+"ch": "Throttle House"
+},
+{
+"id": "VnGeOmrXH6A",
+"title": "Audi A5 Coupe 2018 in-depth review | Mat Watson Reviews",
+"views": 1034422,
+"ch": "carwow"
+}
+]
+}
+],
+"audi-tt": [
+{
+"sid": "audi-tt-g1",
+"y0": 2000,
+"y1": 2006,
+"label": "2000–2006",
+"videos": 192,
+"praise": [
+[
+"Looks",
+9
+],
+[
+"Power",
+8
+],
+[
+"Reliability",
+8
+],
+[
+"Fun to drive",
+7
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "C0uDVCP2XuA",
+"title": "Regular Car Reviews: 2002 Audi TT Quattro",
+"views": 862785,
+"ch": "Regular Car Reviews"
+},
+{
+"id": "Ahr5pK_YS_w",
+"title": "Audi TT mk2 review (2006-2014) - Carbuyer",
+"views": 644379,
+"ch": "Carbuyer"
+},
+{
+"id": "7avIpwXp3Uw",
+"title": "Buying a used Audi TT (8J) - 2006-2014, Common Issues, Buying advice with Common Issues",
+"views": 493546,
+"ch": "different car review"
+}
+]
+},
+{
+"sid": "audi-tt-g2",
+"y0": 2008,
+"y1": 2015,
+"label": "2008–2015",
+"videos": 192,
+"praise": [
+[
+"Fun to drive",
+21
+],
+[
+"Looks",
+20
+],
+[
+"Power",
+13
+],
+[
+"Space and practicality",
+4
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "Ahr5pK_YS_w",
+"title": "Audi TT mk2 review (2006-2014) - Carbuyer",
+"views": 644379,
+"ch": "Carbuyer"
+},
+{
+"id": "Ykc70R6NNj8",
+"title": "Audi TT RS 2012 Test Drive & Car Review - RoadflyTV with Charlie Romero",
+"views": 528903,
+"ch": "RoadflyTV"
+},
+{
+"id": "7avIpwXp3Uw",
+"title": "Buying a used Audi TT (8J) - 2006-2014, Common Issues, Buying advice with Common Issues",
+"views": 493546,
+"ch": "different car review"
+}
+]
+},
+{
+"sid": "audi-tt-g3",
+"y0": 2016,
+"y1": 2023,
+"label": "2016–2023",
+"videos": 189,
+"praise": [
+[
+"Fun to drive",
+24
+],
+[
+"Looks",
+22
+],
+[
+"Power",
+17
+],
+[
+"Space and practicality",
+8
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "ZbqV_LmbhYE",
+"title": "Audi TT RS 2020 review – see why it's a baby R8 for half the money!",
+"views": 2542552,
+"ch": "carwow"
+},
+{
+"id": "6hxI8L7n2No",
+"title": "Ford Mustang vs Audi TT vs BMW M235i Coupes 2017 review | Head2Head",
+"views": 1650203,
+"ch": "carwow"
+},
+{
+"id": "5UCcOvoabm8",
+"title": "Audi TT Coupe 2018 review | Mat Watson Reviews",
+"views": 1193441,
+"ch": "carwow"
+}
+]
+}
+],
+"buick-rainier": [
+{
+"sid": "buick-rainier-g1",
+"y0": 2004,
+"y1": 2007,
+"label": "2004–2007",
+"videos": 200,
+"praise": [
+[
+"Power",
+10
+],
+[
+"Reliability",
+8
+],
+[
+"Fun to drive",
+5
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "MPsVvCIiLAY",
+"title": "Review: 2004 Buick Rainier",
+"views": 35254,
+"ch": "MyRide on Autobytel"
+},
+{
+"id": "oe1mf7jxpLM",
+"title": "2006 Buick Rainier CXL Review - More Important Than You Might Think...",
+"views": 17242,
+"ch": "Shooting Cars"
+},
+{
+"id": "l1mLlGs2Sdo",
+"title": "2005 BUICK RAINIER CXL AWD WALK AROUND REVIEW FOND DU LAC SOLD! 9J98A",
+"views": 10601,
+"ch": "Summit Auto 4K Reviews"
+}
+]
+}
+],
+"buick-verano": [
+{
+"sid": "buick-verano-g1",
+"y0": 2012,
+"y1": 2017,
+"label": "2012–2017",
+"videos": 198,
+"praise": [
+[
+"Looks",
+6
+],
+[
+"Power",
+5
+],
+[
+"Space and practicality",
+3
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "1GGgIS9oBbk",
+"title": "2013 Dodge Dart vs Buick Verano vs Chrysler 200 0-60 MPH Starter Sedan Mashup Review",
+"views": 215924,
+"ch": "The Fast Lane Car"
+},
+{
+"id": "w7IbCJJ7aJA",
+"title": "2015 Buick Verano FWD: A Nice Little Car.  Real world review and test",
+"views": 144604,
+"ch": "Gallup Journey Test Drives"
+},
+{
+"id": "qWIMC8bu20M",
+"title": "2014 Buick Verano Turbo Drive and Review",
+"views": 142853,
+"ch": "The Fast Lane Car"
+}
+]
+}
+],
+"cadillac-ats": [
+{
+"sid": "cadillac-ats-g1",
+"y0": 2013,
+"y1": 2019,
+"label": "2013–2019",
+"videos": 193,
+"praise": [
+[
+"Fun to drive",
+17
+],
+[
+"Looks",
+16
+],
+[
+"Power",
+11
+],
+[
+"Space and practicality",
+8
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "C8vo_0r_HA0",
+"title": "2013 Cadillac ATS Premium (3.6 & 2.0T) Start Up, Exhaust, and In Depth Review",
+"views": 559895,
+"ch": "Saabkyle04"
+},
+{
+"id": "4cWcAcfsK4Q",
+"title": "Review: 2017 Cadillac ATS-V (Manual)",
+"views": 432187,
+"ch": "Matt Maran Motoring"
+},
+{
+"id": "TVpaTsYX7Yk",
+"title": "2016 Cadillac ATS-V Coupe 6MT: Regular Car Reviews",
+"views": 342550,
+"ch": "Regular Car Reviews"
+}
+]
+}
+],
+"cadillac-dts": [
+{
+"sid": "cadillac-dts-g1",
+"y0": 2006,
+"y1": 2011,
+"label": "2006–2011",
+"videos": 200,
+"praise": [
+[
+"Looks",
+10
+],
+[
+"Space and practicality",
+6
+],
+[
+"Fun to drive",
+5
+],
+[
+"Reliability",
+4
+]
+],
+"trouble": [
+[
+"Coolant leaks / water pump / overheating",
+5
+],
+[
+"Electrical / wiring / TIPM",
+5
+],
+[
+"Battery / alternator / starter",
+4
+],
+[
+"Oil leaks (gaskets, seals, housings)",
+4
+]
+],
+"top": [
+{
+"id": "Cj66N_OhJf8",
+"title": "2011 Cadillac DTS Hearse (Halloween Special) Start Up, Exhaust, and In Depth Review",
+"views": 447571,
+"ch": "Saabkyle04"
+},
+{
+"id": "S9YZ7kGOz6Y",
+"title": "Top 5 Problems Cadillac DTS Sedan 1st Generation 2006-2011",
+"views": 277885,
+"ch": "1A Auto: Repair Tips & Secrets Only Mechanics Know"
+},
+{
+"id": "56uFauaVHcY",
+"title": "2008 Cadillac DTS Review: The End of an Era",
+"views": 166127,
+"ch": "JW Reviews"
+}
+]
+}
+],
+"cadillac-sts": [
+{
+"sid": "cadillac-sts-g1",
+"y0": 2005,
+"y1": 2011,
+"label": "2005–2011",
+"videos": 194,
+"praise": [
+[
+"Power",
+5
+],
+[
+"Reliability",
+4
+],
+[
+"Looks",
+4
+],
+[
+"Fun to drive",
+4
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+4
+]
+],
+"top": [
+{
+"id": "4INxCEHZN5E",
+"title": "2008 Cadillac STS Review - Kelley Blue Book",
+"views": 219668,
+"ch": "Kelley Blue Book"
+},
+{
+"id": "eLDHk-ph7kk",
+"title": "Top 5 Problems Cadillac STS Sedan 1st Generation 2005-11",
+"views": 173777,
+"ch": "1A Auto: Repair Tips & Secrets Only Mechanics Know"
+},
+{
+"id": "nReq8GwS9GM",
+"title": "2005 Cadillac STS CTS DeVille all cars blender motor actuator problem fix",
+"views": 76358,
+"ch": "Ali"
+}
+]
+}
+],
+"cadillac-xt5": [
+{
+"sid": "cadillac-xt5-g1",
+"y0": 2017,
+"y1": 2025,
+"label": "2017–2025",
+"videos": 200,
+"praise": [
+[
+"Looks",
+15
+],
+[
+"Fun to drive",
+12
+],
+[
+"Power",
+10
+],
+[
+"Comfort and ride",
+8
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "TgxURt-B2LM",
+"title": "2017 Cadillac XT5 – Redline: Review",
+"views": 490756,
+"ch": "Redline Reviews"
+},
+{
+"id": "3NBbSbya3PU",
+"title": "2017 Cadillac XT5 - Review and Road Test",
+"views": 287392,
+"ch": "Kelley Blue Book"
+},
+{
+"id": "mGKRP7K7e14",
+"title": "2019 Cadillac XT5: FULL REVIEW + DRIVE | Is Caddy's Bread Winner Better Than RX??",
+"views": 232751,
+"ch": "Car Confections"
+}
+]
+}
+],
+"chevrolet-captiva": [
+{
+"sid": "chevrolet-captiva-g1",
+"y0": 2012,
+"y1": 2015,
+"label": "2012–2015",
+"videos": 200,
+"praise": [
+[
+"Power",
+6
+],
+[
+"Fun to drive",
+4
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+6
+]
+],
+"top": [
+{
+"id": "UlL-psNtMFM",
+"title": "Chevrolet Captiva 2011 - 2012 PROBLEMS",
+"views": 178836,
+"ch": "Fahrudin Golos"
+},
+{
+"id": "NA--Ni7uhHY",
+"title": "2012 Chevrolet Captiva Sport Review",
+"views": 135863,
+"ch": "Auto Buyers Guide | Alex on Autos"
+},
+{
+"id": "v-lN6fYeHHQ",
+"title": "2012 Chevrolet Captiva | Comprehensive Review | Autocar India",
+"views": 133660,
+"ch": "Autocar India"
+}
+]
+}
+],
+"chevrolet-s-10": [
+{
+"sid": "chevrolet-s-10-g2",
+"y0": 1994,
+"y1": 2004,
+"label": "1994–2004",
+"videos": 192,
+"praise": [
+[
+"Reliability",
+4
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+5
+],
+[
+"Fuel pump / fuel system",
+5
+],
+[
+"Coolant leaks / water pump / overheating",
+4
+]
+],
+"top": [
+{
+"id": "kOfadeGt6hc",
+"title": "Top 5 Problems Chevy S-10 ZR2 Truck 2nd Generation 1994-04",
+"views": 775894,
+"ch": "1A Auto: Repair Tips & Secrets Only Mechanics Know"
+},
+{
+"id": "CDM1QsaIwhY",
+"title": "2003 Chevrolet S-10 Xtreme V6 Start Up, Exhaust, and In Depth Review",
+"views": 437504,
+"ch": "Saabkyle04"
+},
+{
+"id": "Ul_fokgsQDY",
+"title": "Top 5 Problems Chevy S-10 Truck 2nd Generation 1994-2004",
+"views": 271594,
+"ch": "1A Auto: Repair Tips & Secrets Only Mechanics Know"
+}
+]
+}
+],
+"chevrolet-tracker": [
+{
+"sid": "chevrolet-tracker-g2",
+"y0": 1999,
+"y1": 2004,
+"label": "1999–2004",
+"videos": 197,
+"praise": [
+[
+"Reliability",
+6
+],
+[
+"Power",
+4
+]
+],
+"trouble": [
+[
+"Coolant leaks / water pump / overheating",
+6
+]
+],
+"top": [
+{
+"id": "AkZdfttJPe4",
+"title": "2004 Chevrolet Tracker ZR-2: Regular Car Reviews",
+"views": 205521,
+"ch": "Regular Car Reviews"
+},
+{
+"id": "YIM2WMtQYSU",
+"title": "2000 Chevrolet Tracker PROBLEM SOLVED!",
+"views": 136167,
+"ch": "Beau Ferchaud"
+},
+{
+"id": "5LkHo6B19JE",
+"title": "2002 Chevy Tracker 4x4 V6 Review!!!",
+"views": 30661,
+"ch": "Motor Mike Media"
+}
+]
+}
+],
+"chevrolet-uplander": [
+{
+"sid": "chevrolet-uplander-g1",
+"y0": 2005,
+"y1": 2009,
+"label": "2005–2009",
+"videos": 198,
+"praise": [
+[
+"Power",
+4
+],
+[
+"Reliability",
+3
+]
+],
+"trouble": [
+[
+"Coolant leaks / water pump / overheating",
+4
+],
+[
+"Electrical / wiring / TIPM",
+3
+]
+],
+"top": [
+{
+"id": "Hv507krevSg",
+"title": "2008 Chevrolet Uplander LT Review, Start up and Walkaround",
+"views": 149249,
+"ch": "Justins Car Reviews"
+},
+{
+"id": "rXwCgyK7kis",
+"title": "2008 Uplander Power Sliding Door problems",
+"views": 66056,
+"ch": "Don Smith"
+},
+{
+"id": "VM__p89jDRg",
+"title": "2007 Chevy uplander no start problem fixed",
+"views": 29801,
+"ch": "Autofix mobile mechanic "
+}
+]
+}
+],
+"chrysler-crossfire": [
+{
+"sid": "chrysler-crossfire-g1",
+"y0": 2004,
+"y1": 2008,
+"label": "2004–2008",
+"videos": 197,
+"praise": [
+[
+"Looks",
+11
+],
+[
+"Reliability",
+6
+],
+[
+"Fun to drive",
+6
+],
+[
+"Power",
+4
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "saOSPVN-whI",
+"title": "2004 Chrysler Crossfire Start Up, Exhaust, and In Depth Review",
+"views": 404888,
+"ch": "Saabkyle04"
+},
+{
+"id": "Ge6hqZRBwm4",
+"title": "Review: 2005 Chrysler Crossfire",
+"views": 400584,
+"ch": "Matt Maran Motoring"
+},
+{
+"id": "tD4mIq9xHdw",
+"title": "2008 Chrysler Crossfire Limited Coupe Review and Test Drive by Bill - Auto Europa Naples",
+"views": 130048,
+"ch": "Curious Cars"
+}
+]
+}
+],
+"ford-c-max": [
+{
+"sid": "ford-c-max-g1",
+"y0": 2013,
+"y1": 2018,
+"label": "2013–2018",
+"videos": 199,
+"praise": [
+[
+"Power",
+9
+],
+[
+"Reliability",
+8
+],
+[
+"Space and practicality",
+7
+],
+[
+"Fun to drive",
+6
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "I18IKmKiCOk",
+"title": "2016 Ford C-MAX vs Grand C-MAX new Facelift MPV FULL REVIEW test driven - Autogefühl",
+"views": 315314,
+"ch": "Autogefühl"
+},
+{
+"id": "TAAGoO-8CgQ",
+"title": "2016 Ford C-MAX Hybrid - Review and Road Test",
+"views": 213846,
+"ch": "Kelley Blue Book"
+},
+{
+"id": "ATqf96oZDJI",
+"title": "Ford C-Max 2015 review | TELEGRAPH CARS",
+"views": 211545,
+"ch": "Telegraph Cars"
+}
+]
+}
+],
+"ford-transit-connect": [
+{
+"sid": "ford-transit-connect-g1",
+"y0": 2010,
+"y1": 2013,
+"label": "2010–2013",
+"videos": 200,
+"praise": [
+[
+"Space and practicality",
+4
+],
+[
+"Reliability",
+4
+],
+[
+"Looks",
+3
+],
+[
+"Power",
+3
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+5
+]
+],
+"top": [
+{
+"id": "XLJ3fo2HpNk",
+"title": "Top 5 Problems Ford Transit Connect Van 2010-2013 1st Generation",
+"views": 366156,
+"ch": "1A Auto: Repair Tips & Secrets Only Mechanics Know"
+},
+{
+"id": "t_hzgb7z2O8",
+"title": "2010 Ford Transit Connect Review - Kelley Blue Book",
+"views": 218963,
+"ch": "Kelley Blue Book"
+},
+{
+"id": "XzU7WUd0x1w",
+"title": "2013 Ford Transit Connect Review - The Van Ford LIED About!",
+"views": 134674,
+"ch": "Shooting Cars"
+}
+]
+},
+{
+"sid": "ford-transit-connect-g2",
+"y0": 2014,
+"y1": 2023,
+"label": "2014–2023",
+"videos": 198,
+"praise": [
+[
+"Space and practicality",
+13
+],
+[
+"Looks",
+8
+],
+[
+"Power",
+6
+],
+[
+"Fuel economy",
+5
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+3
+],
+[
+"Battery / alternator / starter",
+3
+]
+],
+"top": [
+{
+"id": "PcB1WORs9NI",
+"title": "2015 Ram ProMaster City vs Ford Transit Connect vs Nissan NV200 Matchup Van Review",
+"views": 512092,
+"ch": "The Fast Lane Truck"
+},
+{
+"id": "ButClfS6o_I",
+"title": "2016 Ford Transit Connect LWB: Like driving an IMAX!  Full Review and Test Drive",
+"views": 351032,
+"ch": "Gallup Journey Test Drives"
+},
+{
+"id": "Sp2wmeJ6xTY",
+"title": "2014 Ford Transit Connect   What's New? Review Test Drive and Walkaround",
+"views": 234219,
+"ch": "TCcustoms"
+}
+]
+}
+],
+"honda-insight": [
+{
+"sid": "honda-insight-g1",
+"y0": 2000,
+"y1": 2006,
+"label": "2000–2006",
+"videos": 177,
+"praise": [
+[
+"Reliability",
+9
+],
+[
+"Power",
+6
+],
+[
+"Fuel economy",
+5
+],
+[
+"Looks",
+5
+]
+],
+"trouble": [
+[
+"Oil leaks (gaskets, seals, housings)",
+4
+]
+],
+"top": [
+{
+"id": "YGplJaMkH_s",
+"title": "2000 Honda Insight G1: Regular Car Reviews",
+"views": 387520,
+"ch": "Regular Car Reviews"
+},
+{
+"id": "EzG2bQK2Ygs",
+"title": "2000 Honda Insight | Retro Review",
+"views": 117730,
+"ch": "MotorWeek"
+},
+{
+"id": "qbY1bkAmkZc",
+"title": "S4 E43. 2000 Honda Insight.  What was Honda thinking when they made these cars?   nine month review",
+"views": 51836,
+"ch": "Robot Cantina"
+}
+]
+},
+{
+"sid": "honda-insight-g2",
+"y0": 2010,
+"y1": 2014,
+"label": "2010–2014",
+"videos": 200,
+"praise": [
+[
+"Reliability",
+8
+],
+[
+"Fun to drive",
+4
+],
+[
+"Fuel economy",
+4
+],
+[
+"Power",
+4
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "Pcx92P5a8oc",
+"title": "2013 Honda Insight EX Review: Best Budget Hybrid You Can Buy Now!",
+"views": 235248,
+"ch": "UsedCarsTV"
+},
+{
+"id": "pyupFo96n7g",
+"title": "2010 Honda Insight Review",
+"views": 220495,
+"ch": "MPGomatic"
+},
+{
+"id": "cn9uA4mg_ho",
+"title": "Honda Insight 2010 Review",
+"views": 127398,
+"ch": "imac2001"
+}
+]
+},
+{
+"sid": "honda-insight-g3",
+"y0": 2019,
+"y1": 2022,
+"label": "2019–2022",
+"videos": 200,
+"praise": [
+[
+"Looks",
+18
+],
+[
+"Fuel economy",
+16
+],
+[
+"Fun to drive",
+14
+],
+[
+"Power",
+12
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "wkTCO0o-Gns",
+"title": "2019 Honda Insight - Review & Road Test",
+"views": 504383,
+"ch": "Kelley Blue Book"
+},
+{
+"id": "waKe6uh3wZ4",
+"title": "2019 Honda Insight Review - First Drive",
+"views": 224891,
+"ch": "Auto Buyers Guide | Alex on Autos"
+},
+{
+"id": "ph0ncVc0T5A",
+"title": "2022 Honda Insight Review | 55 MPG's!",
+"views": 202871,
+"ch": "Gold Pony"
+}
+]
+}
+],
+"hyundai-veracruz": [
+{
+"sid": "hyundai-veracruz-g1",
+"y0": 2007,
+"y1": 2012,
+"label": "2007–2012",
+"videos": 200,
+"praise": [
+[
+"Reliability",
+6
+],
+[
+"Power",
+4
+],
+[
+"Space and practicality",
+4
+],
+[
+"Fun to drive",
+4
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "v24GWOdJiC8",
+"title": "2010 Hyundai Veracruz V6 Review - ONE OF THE BEST SUVS I'VE EVER DRIVEN!",
+"views": 714826,
+"ch": "Carro Chefe"
+},
+{
+"id": "yQrat6FuHbE",
+"title": "2007 Hyundai Veracruz Review - Kelley Blue Book",
+"views": 98848,
+"ch": "Kelley Blue Book"
+},
+{
+"id": "7k6yJcgJgGo",
+"title": "Review: 2007 Hyundai Veracruz",
+"views": 31773,
+"ch": "MyRide on Autobytel"
+}
+]
+}
+],
+"infiniti-fx35": [
+{
+"sid": "infiniti-fx35-g1",
+"y0": 2003,
+"y1": 2008,
+"label": "2003–2008",
+"videos": 199,
+"praise": [
+[
+"Power",
+11
+],
+[
+"Looks",
+10
+],
+[
+"Reliability",
+8
+],
+[
+"Fun to drive",
+7
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+3
+]
+],
+"top": [
+{
+"id": "58pwihReZjc",
+"title": "2006 Infinity FX35 AWD Review. How is it holding up over the years",
+"views": 104730,
+"ch": "Paul's Take"
+},
+{
+"id": "O1OqqWbWWeQ",
+"title": "2007 Infiniti FX35 Review, Infiniti. Infiniti vs ... FX35 acceleration",
+"views": 82193,
+"ch": "OverDrive"
+},
+{
+"id": "0rUaNc21rJY",
+"title": "Why the 2003 Infiniti FX45 under $6000 is a genuinely amazing buy",
+"views": 72358,
+"ch": "The Fast Lane with Joe Tunney"
+}
+]
+},
+{
+"sid": "infiniti-fx35-g2",
+"y0": 2009,
+"y1": 2013,
+"label": "2009–2013",
+"videos": 200,
+"praise": [
+[
+"Fun to drive",
+13
+],
+[
+"Looks",
+12
+],
+[
+"Power",
+8
+],
+[
+"Reliability",
+5
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "UxWWW3HB1kE",
+"title": "2013 Lexus RX 350 vs Mercedes-Benz GLK vs Infiniti FX37 0-60 $53K Mashup Review",
+"views": 639866,
+"ch": "The Fast Lane Car"
+},
+{
+"id": "_k15Qizgh4c",
+"title": "2012 Infiniti FX35 Drive and Review",
+"views": 315418,
+"ch": "The Fast Lane Car"
+},
+{
+"id": "7PKTrWgx3bI",
+"title": "2009 Infiniti FX35 Review, Walkaround, Exhaust, Test Drive",
+"views": 300786,
+"ch": "Redline Reviews"
+}
+]
+}
+],
+"infiniti-g37": [
+{
+"sid": "infiniti-g37-g1",
+"y0": 2008,
+"y1": 2013,
+"label": "2008–2013",
+"videos": 198,
+"praise": [
+[
+"Fun to drive",
+15
+],
+[
+"Power",
+15
+],
+[
+"Looks",
+10
+],
+[
+"Reliability",
+7
+]
+],
+"trouble": [
+[
+"No start / key / anti-theft",
+3
+],
+[
+"Electrical / wiring / TIPM",
+3
+]
+],
+"top": [
+{
+"id": "N5qSLXW1GcU",
+"title": "2013 Audi A5 vs Infiniti G37 Coupe 0-60 MPH Mile High Mashup Review",
+"views": 704872,
+"ch": "The Fast Lane Car"
+},
+{
+"id": "n_JDowiuNqc",
+"title": "Watch This Before Buying an Infiniti G37 V36 2007-2013",
+"views": 420531,
+"ch": "AutoMotivate"
+},
+{
+"id": "raQ54u3D2LE",
+"title": "2013 Infiniti G37 vs Audi S5 vs Volvo S60 0-60 MPH Mile High Mashup Review",
+"views": 403722,
+"ch": "The Fast Lane Car"
+}
+]
+}
+],
+"infiniti-m35": [
+{
+"sid": "infiniti-m35-g1",
+"y0": 2006,
+"y1": 2010,
+"label": "2006–2010",
+"videos": 199,
+"praise": [
+[
+"Reliability",
+14
+],
+[
+"Looks",
+14
+],
+[
+"Power",
+7
+],
+[
+"Fun to drive",
+6
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "LBXvUhr5l84",
+"title": "2007 Infiniti M35x: Regular Car Reviews",
+"views": 344282,
+"ch": "Regular Car Reviews"
+},
+{
+"id": "GE7S_eCA-Uw",
+"title": "Roadfly.com - 2007 Infiniti M45 Car Review",
+"views": 284959,
+"ch": "RoadflyTV"
+},
+{
+"id": "x_c88zT6KhI",
+"title": "2007 Infiniti M35x Walkaround, Exhaust, Review, Test Drive",
+"views": 225386,
+"ch": "Redline Reviews"
+}
+]
+}
+],
+"infiniti-q50": [
+{
+"sid": "infiniti-q50-g1",
+"y0": 2014,
+"y1": 2024,
+"label": "2014–2024",
+"videos": 194,
+"praise": [
+[
+"Power",
+21
+],
+[
+"Fun to drive",
+20
+],
+[
+"Looks",
+19
+],
+[
+"Reliability",
+10
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "fwr_Asq8I_4",
+"title": "2018 Infiniti Q50 Red Sport AWD – Redline: Review",
+"views": 1330612,
+"ch": "Redline Reviews"
+},
+{
+"id": "0XRjDppMtvs",
+"title": "2014 Infiniti Q50 Review",
+"views": 870004,
+"ch": "AutoGuide.com"
+},
+{
+"id": "lJg65TLzE7o",
+"title": "2015 Infiniti Q50 – Redline: Review",
+"views": 704315,
+"ch": "Redline Reviews"
+}
+]
+}
+],
+"infiniti-qx56": [
+{
+"sid": "infiniti-qx56-g1",
+"y0": 2004,
+"y1": 2010,
+"label": "2004–2010",
+"videos": 200,
+"praise": [
+[
+"Looks",
+7
+],
+[
+"Power",
+6
+],
+[
+"Reliability",
+6
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "RgDow6xOKc0",
+"title": "Review: 2008 Infiniti QX56",
+"views": 196847,
+"ch": "MyRide on Autobytel"
+},
+{
+"id": "F9YIe-fpB74",
+"title": "Car Tech  2010 Infiniti QX56 2WD review",
+"views": 72885,
+"ch": "fullyOwned"
+},
+{
+"id": "0BdAmEjqExk",
+"title": "Infiniti QX56 Review | 2004-2010 | 1st Gen",
+"views": 71618,
+"ch": "Driven Companion"
+}
+]
+},
+{
+"sid": "infiniti-qx56-g2",
+"y0": 2011,
+"y1": 2013,
+"label": "2011–2013",
+"videos": 200,
+"praise": [
+[
+"Power",
+8
+],
+[
+"Looks",
+6
+],
+[
+"Space and practicality",
+6
+],
+[
+"Reliability",
+5
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "W3ZeYX5uMU4",
+"title": "2011 Infiniti QX56 AWD Start Up, Exterior/ Interior Review",
+"views": 488084,
+"ch": "The Driveway Auto Reviews"
+},
+{
+"id": "DFVYalL4JqE",
+"title": "Roadfly.com - 2011 Infiniti QX56 Road Test and Review",
+"views": 326042,
+"ch": "RoadflyTV"
+},
+{
+"id": "8lQPOfyQ-ss",
+"title": "2012 Porsche Cayenne S vs Infiniti QX56 Off-Road Muddy Mashup Review",
+"views": 214362,
+"ch": "The Fast Lane Car"
+}
+]
+}
+],
+"infiniti-qx60": [
+{
+"sid": "infiniti-qx60-g1",
+"y0": 2013,
+"y1": 2020,
+"label": "2013–2020",
+"videos": 200,
+"praise": [
+[
+"Fun to drive",
+7
+],
+[
+"Looks",
+6
+],
+[
+"Power",
+6
+],
+[
+"Comfort and ride",
+5
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "dzeP_jx__OM",
+"title": "2015 Audi Allroad vs Infiniti QX60 Mashup Snowy AWD Review in TFL4K",
+"views": 276538,
+"ch": "The Fast Lane Car"
+},
+{
+"id": "-bNDG9mND8E",
+"title": "2017 Infiniti QX60 - Review and Road Test",
+"views": 275354,
+"ch": "Kelley Blue Book"
+},
+{
+"id": "FKFNVAEVMHA",
+"title": "2018 Infiniti QX60 – Redline: Review",
+"views": 274635,
+"ch": "Redline Reviews"
+}
+]
+},
+{
+"sid": "infiniti-qx60-g2",
+"y0": 2022,
+"y1": 2025,
+"label": "2022–2025",
+"videos": 199,
+"praise": [
+[
+"Looks",
+20
+],
+[
+"Power",
+15
+],
+[
+"Space and practicality",
+13
+],
+[
+"Fun to drive",
+13
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "hoTthF_VLxU",
+"title": "2022 Infiniti QX60 vs Genesis GV80 - Worth the $15k Difference?",
+"views": 439576,
+"ch": "TheStraightPipes"
+},
+{
+"id": "c961HILT5Y0",
+"title": "Is the ALL NEW 2022 Infiniti QX60  a midsize luxury WORTH the PRICE?",
+"views": 324646,
+"ch": "Raiti's Rides"
+},
+{
+"id": "XGIPkOpgk-k",
+"title": "Is the 2023 Acura MDX Tech a BETTER luxury SUV to buy than an Infiniti QX60?",
+"views": 221391,
+"ch": "Raiti's Rides"
+}
+]
+}
+],
+"jaguar-s-type": [
+{
+"sid": "jaguar-s-type-g1",
+"y0": 2000,
+"y1": 2008,
+"label": "2000–2008",
+"videos": 200,
+"praise": [
+[
+"Looks",
+7
+],
+[
+"Reliability",
+6
+],
+[
+"Power",
+5
+],
+[
+"Fun to drive",
+4
+]
+],
+"trouble": [
+[
+"Coolant leaks / water pump / overheating",
+4
+]
+],
+"top": [
+{
+"id": "Ucb95VVpy50",
+"title": "Huge repair bill, unneeded parts & not fixed! CAR WIZARD finds the real problem on '01 Jaguar S-Type",
+"views": 595908,
+"ch": "Car Wizard"
+},
+{
+"id": "iYfc9YmOEp0",
+"title": "Buying a used Jaguar S-type - 1999-2007, Buying advice with Common Issues",
+"views": 309048,
+"ch": "different car review"
+},
+{
+"id": "mLGX0ZPNLLg",
+"title": "Jaguar S-Type vs Rover 75 Review (2000)",
+"views": 180002,
+"ch": "Men and Motors"
+}
+]
+}
+],
+"jaguar-x-type": [
+{
+"sid": "jaguar-x-type-g1",
+"y0": 2002,
+"y1": 2008,
+"label": "2002–2008",
+"videos": 182,
+"praise": [
+[
+"Reliability",
+11
+],
+[
+"Power",
+7
+],
+[
+"Fun to drive",
+7
+],
+[
+"Looks",
+6
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "GHhkaV3c_mc",
+"title": "2005 Jaguar X-Type AWD: Regular Car Reviews",
+"views": 248569,
+"ch": "Regular Car Reviews"
+},
+{
+"id": "3Y0RHK1uA9Y",
+"title": "2002-2008 Jaguar X-Type Pre-Owned Vehicle Review - WheelsTV",
+"views": 233572,
+"ch": "Wild About Wheels"
+},
+{
+"id": "PaAPEpbxxzc",
+"title": "Should You Buy a JAGUAR X-TYPE? (Test Drive & Review 2008 2.0D)",
+"views": 209409,
+"ch": "High Peak Autos"
+}
+]
+}
+],
+"jaguar-xf": [
+{
+"sid": "jaguar-xf-g1",
+"y0": 2009,
+"y1": 2015,
+"label": "2009–2015",
+"videos": 195,
+"praise": [
+[
+"Looks",
+12
+],
+[
+"Fun to drive",
+9
+],
+[
+"Reliability",
+9
+],
+[
+"Power",
+7
+]
+],
+"trouble": [
+[
+"Coolant leaks / water pump / overheating",
+4
+]
+],
+"top": [
+{
+"id": "hMrJorGVMOE",
+"title": "Jaguar XF saloon 2007 - 2011 review - CarBuyer",
+"views": 565881,
+"ch": "Carbuyer"
+},
+{
+"id": "MqXLsT0pu6A",
+"title": "2013 Lexus GS350 vs Jaguar XF Mashup Review: And the best sport luxury sedan is...?",
+"views": 339229,
+"ch": "The Fast Lane Car"
+},
+{
+"id": "fNrlqzil-KM",
+"title": "Buying a used Jaguar XF (X250) - 2008-2015, Buying advice with Common Issues",
+"views": 303749,
+"ch": "different car review"
+}
+]
+},
+{
+"sid": "jaguar-xf-g2",
+"y0": 2016,
+"y1": 2024,
+"label": "2016–2024",
+"videos": 198,
+"praise": [
+[
+"Looks",
+18
+],
+[
+"Fun to drive",
+13
+],
+[
+"Power",
+10
+],
+[
+"Space and practicality",
+9
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "pvARONMgfkY",
+"title": "Jaguar XF 2018 saloon in-depth review | Mat Watson Reviews",
+"views": 1260694,
+"ch": "carwow"
+},
+{
+"id": "0xKMQyhgURk",
+"title": "Volvo S90 vs Jaguar XF vs Ford Mondeo Vignale 2017 review | Head2head",
+"views": 570858,
+"ch": "carwow"
+},
+{
+"id": "GUPruG2i9yY",
+"title": "2017 Jaguar XF - Review and Road Test",
+"views": 502480,
+"ch": "Kelley Blue Book"
+}
+]
+}
+],
+"jeep-wagoneer": [
+{
+"sid": "jeep-wagoneer-g1",
+"y0": 2022,
+"y1": 2025,
+"label": "2022–2025",
+"videos": 198,
+"praise": [
+[
+"Power",
+22
+],
+[
+"Looks",
+22
+],
+[
+"Space and practicality",
+18
+],
+[
+"Comfort and ride",
+14
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "y6CCBN4BKQs",
+"title": "RIP ESCALADE! 2022 Jeep Grand Wagoneer Review",
+"views": 670056,
+"ch": "TheStraightPipes"
+},
+{
+"id": "SKHxUjSLbrs",
+"title": "TWIN TURBO HURRICANE HEARSE! 2023 Jeep Grand Wagoneer L Review",
+"views": 377437,
+"ch": "TheStraightPipes"
+},
+{
+"id": "1tmCSbxntpw",
+"title": "2022 Jeep Grand Wagoneer Obsidian - POV Review",
+"views": 321819,
+"ch": "TheTopher"
+}
+]
+}
+],
+"kia-niro": [
+{
+"sid": "kia-niro-g1",
+"y0": 2017,
+"y1": 2022,
+"label": "2017–2022",
+"videos": 197,
+"praise": [
+[
+"Looks",
+16
+],
+[
+"Fun to drive",
+13
+],
+[
+"Power",
+13
+],
+[
+"Space and practicality",
+12
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "m4OrOc_sXrU",
+"title": "Kia e-Niro SUV 2020 in-depth review | carwow Reviews",
+"views": 1324914,
+"ch": "carwow"
+},
+{
+"id": "vBVnxowGJsI",
+"title": "Kia Niro hybrid 2018 in-depth review | carwow Reviews",
+"views": 1049920,
+"ch": "carwow"
+},
+{
+"id": "Hows0GQz9SU",
+"title": "Toyota Prius vs Hyundai Ioniq vs Kia Niro 2018 review – what's the best hybrid? | Head2Head",
+"views": 912106,
+"ch": "carwow"
+}
+]
+},
+{
+"sid": "kia-niro-g2",
+"y0": 2023,
+"y1": 2025,
+"label": "2023–2025",
+"videos": 200,
+"praise": [
+[
+"Looks",
+22
+],
+[
+"Space and practicality",
+14
+],
+[
+"Power",
+14
+],
+[
+"Fuel economy",
+13
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "cyTtVpButAg",
+"title": "2023 Kia Niro Hybrid HEV – Test drive with detailed review",
+"views": 255195,
+"ch": "CarSceneKorea"
+},
+{
+"id": "oqBpJ3HFByQ",
+"title": "2024 Kia Niro Review - IT TAUGHT THE COROLLA CROSS A LESSON!",
+"views": 233913,
+"ch": "Carro Chefe"
+},
+{
+"id": "OiVuZOmptZI",
+"title": "2023 Kia Niro EV review – we drive NEW e-Niro electric car! | What Car?",
+"views": 217117,
+"ch": "What Car?"
+}
+]
+}
+],
+"kia-seltos": [
+{
+"sid": "kia-seltos-g1",
+"y0": 2021,
+"y1": 2025,
+"label": "2021–2025",
+"videos": 199,
+"praise": [
+[
+"Looks",
+21
+],
+[
+"Fun to drive",
+18
+],
+[
+"Tech and features",
+18
+],
+[
+"Space and practicality",
+16
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "vNPzlfdn0Fo",
+"title": "2023 Kia Seltos Facelift review - Small changes add up | First Drive | Autocar India",
+"views": 699945,
+"ch": "Autocar India"
+},
+{
+"id": "evaIgeWK5OE",
+"title": "The All-New 2021 Kia Seltos Packs a Punch! | Detailed Review",
+"views": 697981,
+"ch": "Prime Autotainment"
+},
+{
+"id": "jGgyKOIA2SE",
+"title": "2021 Kia Seltos AWD Turbo Crossover Review and Offroad Test",
+"views": 392433,
+"ch": "Driving Sports TV"
+}
+]
+}
+],
+"lincoln-aviator": [
+{
+"sid": "lincoln-aviator-g1",
+"y0": 2003,
+"y1": 2005,
+"label": "2003–2005",
+"videos": 200,
+"praise": [
+[
+"Power",
+8
+],
+[
+"Reliability",
+6
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "jebqm-9FIp0",
+"title": "2005 Lincoln Aviator Review, Walkaround, Start Up, Test Drive",
+"views": 144346,
+"ch": "Redline Reviews"
+},
+{
+"id": "zSWabDOj974",
+"title": "2003 LINCOLN AVIATOR LUXURY EDITION Start Up, Walk Around Tour And Review",
+"views": 45936,
+"ch": "AutomotiveReview"
+},
+{
+"id": "xDJW-SF2g-E",
+"title": "2003 Lincoln Aviator Premium 4X4|Walk Around Video|In Depth Review",
+"views": 42322,
+"ch": "Neighborhood Car Reviews"
+}
+]
+},
+{
+"sid": "lincoln-aviator-g2",
+"y0": 2020,
+"y1": 2025,
+"label": "2020–2025",
+"videos": 198,
+"praise": [
+[
+"Looks",
+35
+],
+[
+"Power",
+23
+],
+[
+"Fun to drive",
+17
+],
+[
+"Tech and features",
+14
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "wb1UYAIwdFM",
+"title": "2020 Lincoln Aviator Review - American Luxury Done Right",
+"views": 885111,
+"ch": "TheStraightPipes"
+},
+{
+"id": "o1t6arNfjEE",
+"title": "2020 Lincoln Aviator Black Label Luxury Night Review & Drive",
+"views": 491582,
+"ch": "Prime Autotainment"
+},
+{
+"id": "no5x3_dppwc",
+"title": "2020 Lincoln Aviator Reserve AWD - POV Review",
+"views": 316353,
+"ch": "TheTopher"
+}
+]
+}
+],
+"lincoln-mkc": [
+{
+"sid": "lincoln-mkc-g1",
+"y0": 2015,
+"y1": 2019,
+"label": "2015–2019",
+"videos": 198,
+"praise": [
+[
+"Looks",
+11
+],
+[
+"Power",
+8
+],
+[
+"Fun to drive",
+7
+],
+[
+"Space and practicality",
+7
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "PH0CEY8Lr7w",
+"title": "2017 Lincoln MKC - Review and Road Test",
+"views": 310255,
+"ch": "Kelley Blue Book"
+},
+{
+"id": "bSclzRCO6AA",
+"title": "2015 Lincoln MKC First Drive Review in TFL 4K: Is Lincoln Back?",
+"views": 138488,
+"ch": "The Fast Lane Car"
+},
+{
+"id": "hmGg457I3SU",
+"title": "2015 Lincoln MKC Car Review",
+"views": 108307,
+"ch": "Driven Car Reviews With Tom Voelk"
+}
+]
+}
+],
+"lincoln-mks": [
+{
+"sid": "lincoln-mks-g1",
+"y0": 2009,
+"y1": 2016,
+"label": "2009–2016",
+"videos": 198,
+"praise": [
+[
+"Power",
+4
+],
+[
+"Comfort and ride",
+4
+],
+[
+"Fun to drive",
+4
+],
+[
+"Reliability",
+4
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+3
+]
+],
+"top": [
+{
+"id": "2I19m5RuEUo",
+"title": "The Snob Magazines Reviews the 2013 Lincoln MKS",
+"views": 128141,
+"ch": "Jeff's Auto"
+},
+{
+"id": "IdAOk0Kxmhg",
+"title": "2014 Lincoln MKS Test Drive and Review",
+"views": 95561,
+"ch": "Vehicle Virgins"
+},
+{
+"id": "BHvkBnVdeR4",
+"title": "2013 Lincoln MKS Review - Interesting, or just a curiosity?",
+"views": 85734,
+"ch": "AutoGuide.com"
+}
+]
+}
+],
+"mazda-cx-90": [
+{
+"sid": "mazda-cx-90-g1",
+"y0": 2024,
+"y1": 2025,
+"label": "2024–2025",
+"videos": 193,
+"praise": [
+[
+"Looks",
+25
+],
+[
+"Space and practicality",
+19
+],
+[
+"Fun to drive",
+17
+],
+[
+"Power",
+15
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "QDyfm1PhaiU",
+"title": "2024 Mazda CX-90 vs Hyundai Palisade - Worth the $10k Difference?",
+"views": 1151293,
+"ch": "TheStraightPipes"
+},
+{
+"id": "Dral93gmVkM",
+"title": "Should You Buy a 2024 Mazda CX-90 Inline 6? A Mechanic’s Review",
+"views": 876551,
+"ch": "The Car Care Nut Reviews"
+},
+{
+"id": "s9TVPsM7qpc",
+"title": "FUEL EFFICIENT! 2024 Mazda CX-90 PHEV Review",
+"views": 400979,
+"ch": "TheStraightPipes"
+}
+]
+}
+],
+"mazda-mpv": [
+{
+"sid": "mazda-mpv-g2",
+"y0": 2000,
+"y1": 2006,
+"label": "2000–2006",
+"videos": 200,
+"praise": [
+[
+"Reliability",
+4
+]
+],
+"trouble": [
+[
+"Coolant leaks / water pump / overheating",
+3
+]
+],
+"top": [
+{
+"id": "cHp4U3Hv-bI",
+"title": "Transmission range sensor problem 2000 Mazda mpv lx",
+"views": 132157,
+"ch": "NewYorker in Connecticut "
+},
+{
+"id": "3nL_KyhW8AU",
+"title": "Mazda MPV 2000: Radiator Replacement - Part I [Problem, Diagnosis, Radiator removal]",
+"views": 38050,
+"ch": "nAnDo kOsMiK pRoDuKtIoNs"
+},
+{
+"id": "EBQ3jppP0s8",
+"title": "Mazda MPV 2003 heating problem",
+"views": 19857,
+"ch": "Gazawi Vlogs"
+}
+]
+}
+],
+"mazda-mazda5": [
+{
+"sid": "mazda-mazda5-g1",
+"y0": 2006,
+"y1": 2010,
+"label": "2006–2010",
+"videos": 185,
+"praise": [
+[
+"Reliability",
+10
+],
+[
+"Fun to drive",
+8
+],
+[
+"Space and practicality",
+7
+],
+[
+"Looks",
+5
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "A9Riwm8sP-0",
+"title": "2006-2010 Mazda5 Review | Consumer Reports",
+"views": 635382,
+"ch": "Consumer Reports"
+},
+{
+"id": "r2vRd4FDg-c",
+"title": "2006 Mazda5 Review - Kelley Blue Book",
+"views": 334001,
+"ch": "Kelley Blue Book"
+},
+{
+"id": "dHXcTd8ne_U",
+"title": "MAZDA 5 2008 | Review",
+"views": 164546,
+"ch": "Coche a Mano"
+}
+]
+},
+{
+"sid": "mazda-mazda5-g2",
+"y0": 2012,
+"y1": 2015,
+"label": "2012–2015",
+"videos": 120,
+"praise": [
+[
+"Space and practicality",
+12
+],
+[
+"Fun to drive",
+11
+],
+[
+"Reliability",
+5
+],
+[
+"Comfort and ride",
+5
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "NH9B7ofiLNc",
+"title": "2012 Mazda5 Grand Touring Start Up, Exhaust, In Depth Review, and Test Drive",
+"views": 352701,
+"ch": "Saabkyle04"
+},
+{
+"id": "ym4zgR3TQdc",
+"title": "2014 Mazda5 Minivan Test Drive Video Review",
+"views": 217692,
+"ch": "UsedCarsTV"
+},
+{
+"id": "06qN_MVIvFo",
+"title": "Mazda 5 review (2010 to 2015) | What Car?",
+"views": 151289,
+"ch": "What Car?"
+}
+]
+}
+],
+"mercedes-benz-sprinter": [
+{
+"sid": "mercedes-benz-sprinter-g2",
+"y0": 2007,
+"y1": 2018,
+"label": "2007–2018",
+"videos": 198,
+"praise": [
+[
+"Reliability",
+5
+],
+[
+"Space and practicality",
+4
+],
+[
+"Comfort and ride",
+3
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+3
+]
+],
+"top": [
+{
+"id": "Z7sUN_NFZnk",
+"title": "2015 Mercedes-Benz Sprinter 4X4 Van Off & On-Road Review",
+"views": 399610,
+"ch": "The Fast Lane Truck"
+},
+{
+"id": "GTtB9eWnXD0",
+"title": "2013 Mercedes Sprinter ESP Test: Stunning Obstacle Avoidance Demo",
+"views": 299087,
+"ch": "UsedCarsTV"
+},
+{
+"id": "GT1PN5OhgUI",
+"title": "2018 Winnebago Revel Review | 4x4 4 Season Short Sprinter Camper Van",
+"views": 137373,
+"ch": "Neil Balthaser"
+}
+]
+},
+{
+"sid": "mercedes-benz-sprinter-g3",
+"y0": 2019,
+"y1": 2025,
+"label": "2019–2025",
+"videos": 197,
+"praise": [
+[
+"Power",
+14
+],
+[
+"Looks",
+14
+],
+[
+"Space and practicality",
+8
+],
+[
+"Comfort and ride",
+8
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "WvZc5STdlPI",
+"title": "2024 Mercedes Sprinter VIP Luxury KING VAN - Full Review Interior Exterior",
+"views": 3146586,
+"ch": "MercBenzKing"
+},
+{
+"id": "GjM6JuNnPqE",
+"title": "2022 Mercedes Sprinter VIP Playstation 5 KING VAN - NEW Full Review Interior Exterior",
+"views": 2171864,
+"ch": "MercBenzKing"
+},
+{
+"id": "dPNvOum3kJI",
+"title": "2023 Mercedes Sprinter VIP Luxury KING VAN - NEW Full Review Interior Exterior",
+"views": 1021525,
+"ch": "MercBenzKing"
+}
+]
+}
+],
+"mitsubishi-diamante": [
+{
+"sid": "mitsubishi-diamante-g3",
+"y0": 1997,
+"y1": 2004,
+"label": "1997–2004",
+"videos": 200,
+"praise": [
+[
+"Reliability",
+13
+],
+[
+"Power",
+6
+],
+[
+"Fun to drive",
+4
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "9pNnD-bxg-A",
+"title": "2002 Mitsubishi Diamante VR-X Review/Look Part 1",
+"views": 25995,
+"ch": "TypicalB18"
+},
+{
+"id": "VHIQ3fNgtXw",
+"title": "1997 Mitsubishi Diamante LS | Retro Review",
+"views": 20434,
+"ch": "MotorWeek"
+},
+{
+"id": "6DFo4Rpd6s0",
+"title": "2002 Mitsubishi Diamante Review - Another Attempt At Luxury",
+"views": 16090,
+"ch": "Shooting Cars"
+}
+]
+}
+],
+"mitsubishi-montero": [
+{
+"sid": "mitsubishi-montero-g3",
+"y0": 2001,
+"y1": 2006,
+"label": "2001–2006",
+"videos": 199,
+"praise": [
+[
+"Power",
+8
+],
+[
+"Reliability",
+8
+],
+[
+"Fun to drive",
+5
+],
+[
+"Looks",
+4
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "UigCanw9kAk",
+"title": "Mitsubishi Pajero Montero Gen 3 2001 3.2 DID Dieselpump problem",
+"views": 151117,
+"ch": "Hydraulic Nanny"
+},
+{
+"id": "O2OYFunNIzs",
+"title": "2001'Mitsubishi Montero 4x4 anti lock brake problem",
+"views": 91325,
+"ch": "BuyThis&That"
+},
+{
+"id": "XEx_oPyznjU",
+"title": "Mitsubishi MONTERO 3rd Generation.Mk3,V60(Pejero, Shogun), Full Sinhala Review by MRJ inspire",
+"views": 78272,
+"ch": "MRJ inspire"
+}
+]
+}
+],
+"mitsubishi-outlander-sport": [
+{
+"sid": "mitsubishi-outlander-sport-g1",
+"y0": 2011,
+"y1": 2025,
+"label": "2011–2025",
+"videos": 200,
+"praise": [
+[
+"Looks",
+13
+],
+[
+"Reliability",
+11
+],
+[
+"Fun to drive",
+8
+],
+[
+"Power",
+7
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "O0rRt6leyzI",
+"title": "2012 Mitsubishi Outlander Sport SE AWD Premium Start Up, Exhaust, Test Drive, and In Depth Review",
+"views": 401452,
+"ch": "Saabkyle04"
+},
+{
+"id": "Tes5y8EEmdo",
+"title": "2014 Mitsubishi Outlander Sport Snowy Off-Road Review & Misadventure",
+"views": 338106,
+"ch": "The Fast Lane Car"
+},
+{
+"id": "SdGppyuWgqo",
+"title": "2013 Mitsubishi Outlander Sport – Redline: Review",
+"views": 196219,
+"ch": "Redline Reviews"
+}
+]
+}
+],
+"nissan-350z": [
+{
+"sid": "nissan-350z-g1",
+"y0": 2003,
+"y1": 2009,
+"label": "2003–2009",
+"videos": 194,
+"praise": [
+[
+"Power",
+19
+],
+[
+"Fun to drive",
+13
+],
+[
+"Looks",
+13
+],
+[
+"Reliability",
+12
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "HHXbyjHR2oU",
+"title": "Review: 2006 Nissan 350Z (Manual)",
+"views": 1522946,
+"ch": "Matt Maran Motoring"
+},
+{
+"id": "gXn2zjRLS04",
+"title": "2003 Nissan 350Z Review - The JDM Mustang",
+"views": 192736,
+"ch": "Realistick"
+},
+{
+"id": "qD70Hja5szo",
+"title": "Review: 2005 Nissan 350Z",
+"views": 163369,
+"ch": "MyRide on Autobytel"
+}
+]
+}
+],
+"nissan-370z": [
+{
+"sid": "nissan-370z-g1",
+"y0": 2009,
+"y1": 2020,
+"label": "2009–2020",
+"videos": 194,
+"praise": [
+[
+"Fun to drive",
+21
+],
+[
+"Power",
+16
+],
+[
+"Looks",
+15
+],
+[
+"Reliability",
+8
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "_bUOcS4qe8k",
+"title": "2020 Nissan 370Z Nismo 6-Speed Manual - POV Review",
+"views": 1429385,
+"ch": "TheTopher"
+},
+{
+"id": "UoHO9VFIeXA",
+"title": "2019 Nissan 370z NISMO Review - When Old is Good",
+"views": 1257079,
+"ch": "TheStraightPipes"
+},
+{
+"id": "qx7d_Agr65M",
+"title": "Review: 2013 Nissan 370Z (Manual)",
+"views": 1078345,
+"ch": "Matt Maran Motoring"
+}
+]
+}
+],
+"nissan-juke": [
+{
+"sid": "nissan-juke-g1",
+"y0": 2011,
+"y1": 2017,
+"label": "2011–2017",
+"videos": 198,
+"praise": [
+[
+"Fun to drive",
+12
+],
+[
+"Looks",
+8
+],
+[
+"Power",
+7
+],
+[
+"Space and practicality",
+5
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "VfEuW2LRa_A",
+"title": "Nissan Juke SUV (2011-2014) review - CarBuyer",
+"views": 920118,
+"ch": "Carbuyer"
+},
+{
+"id": "23DINwD33rA",
+"title": "Nissan Juke SUV 2014 review - Carbuyer",
+"views": 716930,
+"ch": "Carbuyer"
+},
+{
+"id": "xDyHA1yX4Nw",
+"title": "2017 Nissan JUKE Features, Options, and Review",
+"views": 580322,
+"ch": "DPCcars"
+}
+]
+}
+],
+"nissan-kicks": [
+{
+"sid": "nissan-kicks-g1",
+"y0": 2018,
+"y1": 2024,
+"label": "2018–2024",
+"videos": 200,
+"praise": [
+[
+"Fun to drive",
+18
+],
+[
+"Looks",
+14
+],
+[
+"Space and practicality",
+14
+],
+[
+"Tech and features",
+12
+]
+],
+"trouble": [
+[
+"CVT / transmission shudder",
+3
+]
+],
+"top": [
+{
+"id": "O-8LEJCb0R4",
+"title": "2023 Nissan Kicks Review | Behind the Wheel",
+"views": 682365,
+"ch": "AutoDeal.com.ph"
+},
+{
+"id": "adh_3NZf2XA",
+"title": "2019 Nissan Kicks - Review & Road Test",
+"views": 576754,
+"ch": "Kelley Blue Book"
+},
+{
+"id": "mge0ZJyXloA",
+"title": "Full Review: 2020 Nissan Kicks SR",
+"views": 269368,
+"ch": "Prime Autotainment"
+}
+]
+},
+{
+"sid": "nissan-kicks-g2",
+"y0": 2025,
+"y1": 2025,
+"label": "2025",
+"videos": 129,
+"praise": [
+[
+"Looks",
+20
+],
+[
+"Reliability",
+15
+],
+[
+"Space and practicality",
+12
+],
+[
+"Value for money",
+11
+]
+],
+"trouble": [
+[
+"CVT / transmission shudder",
+6
+]
+],
+"top": [
+{
+"id": "94zY2bcgly8",
+"title": "All-New 2025 Nissan Kicks® Subcompact SUV | Walkaround & Review",
+"views": 604868,
+"ch": "Nissan USA"
+},
+{
+"id": "ztWmYr7wCfk",
+"title": "Should You Buy a 2025 Nissan Kicks? Thorough Review By A Mechanic",
+"views": 357353,
+"ch": "The Car Care Nut Reviews"
+},
+{
+"id": "ASiIFUafkf0",
+"title": "Is the 2025 Nissan Kicks SR the BEST new SUV to BUY?",
+"views": 155632,
+"ch": "Raiti's Rides"
+}
+]
+}
+],
+"porsche-cayenne": [
+{
+"sid": "porsche-cayenne-g1",
+"y0": 2003,
+"y1": 2010,
+"label": "2003–2010",
+"videos": 194,
+"praise": [
+[
+"Reliability",
+13
+],
+[
+"Looks",
+11
+],
+[
+"Fun to drive",
+10
+],
+[
+"Power",
+10
+]
+],
+"trouble": [
+[
+"Coolant leaks / water pump / overheating",
+4
+],
+[
+"Spark plugs / coils / misfire",
+3
+]
+],
+"top": [
+{
+"id": "sEGlZGeW_YM",
+"title": "Why You Should Buy a Used Porsche Cayenne Now! (First Generation 955/957 Review)",
+"views": 479752,
+"ch": "Car Fanatic"
+},
+{
+"id": "hFGlMasVGPw",
+"title": "Porsche Cayenne Buyer's Guide - 955/957 - (2003-2010) Models, Trims, Engines & More",
+"views": 447664,
+"ch": "FCP Euro"
+},
+{
+"id": "mmOE0ZL2IAA",
+"title": "Buying a used Porsche Cayenne - 2002-2010, Common Issues, Engine types, SK titulky / Magyar felirat",
+"views": 348125,
+"ch": "different car review"
+}
+]
+},
+{
+"sid": "porsche-cayenne-g2",
+"y0": 2011,
+"y1": 2018,
+"label": "2011–2018",
+"videos": 192,
+"praise": [
+[
+"Fun to drive",
+17
+],
+[
+"Power",
+14
+],
+[
+"Looks",
+14
+],
+[
+"Comfort and ride",
+7
+]
+],
+"trouble": [
+[
+"Coolant leaks / water pump / overheating",
+4
+]
+],
+"top": [
+{
+"id": "ko5C82Iwcxg",
+"title": "2013 Porsche Cayenne GTS Test Drive & Review",
+"views": 1095749,
+"ch": "Rosenthal Automotive"
+},
+{
+"id": "Tzuuv7yhzfc",
+"title": "2017 Porsche Cayenne - Review and Road Test",
+"views": 815492,
+"ch": "Kelley Blue Book"
+},
+{
+"id": "Y7-YjYYPOAU",
+"title": "Porsche Cayenne Problems & Things That Will Break (2011 - 2018 Models)",
+"views": 812559,
+"ch": "Driven By Satch"
+}
+]
+},
+{
+"sid": "porsche-cayenne-g3",
+"y0": 2019,
+"y1": 2025,
+"label": "2019–2025",
+"videos": 179,
+"praise": [
+[
+"Looks",
+27
+],
+[
+"Fun to drive",
+26
+],
+[
+"Power",
+23
+],
+[
+"Comfort and ride",
+15
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "R1TYDlhWyeg",
+"title": "Porsche Cayenne Coupe SUV 2020 in-depth review | carwow Reviews",
+"views": 2919827,
+"ch": "carwow"
+},
+{
+"id": "o73frAVfd7E",
+"title": "Porsche Cayenne 2019 SUV in-depth review | carwow Reviews",
+"views": 2347665,
+"ch": "carwow"
+},
+{
+"id": "6MTJ2fX5IZw",
+"title": "2024 Porsche Cayenne S vs The Cheapest V8 Cayenne You Can Buy",
+"views": 1770288,
+"ch": "Throttle House"
+}
+]
+}
+],
+"saturn-sky": [
+{
+"sid": "saturn-sky-g1",
+"y0": 2007,
+"y1": 2009,
+"label": "2007–2009",
+"videos": 197,
+"praise": [
+[
+"Looks",
+7
+],
+[
+"Fun to drive",
+7
+],
+[
+"Power",
+5
+],
+[
+"Reliability",
+5
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "2OtB70FnrrQ",
+"title": "2008 Saturn SKY Review - Kelley Blue Book",
+"views": 129428,
+"ch": "Kelley Blue Book"
+},
+{
+"id": "_YokGk-rdpc",
+"title": "2008 Saturn Sky Redline // Review",
+"views": 122862,
+"ch": "The Dutch Texan"
+},
+{
+"id": "gj3DZSJQsK8",
+"title": "2007 Saturn Sky Review",
+"views": 103046,
+"ch": "Automobile Magazine"
+}
+]
+}
+],
+"scion-tc": [
+{
+"sid": "scion-tc-g1",
+"y0": 2005,
+"y1": 2010,
+"label": "2005–2010",
+"videos": 190,
+"praise": [
+[
+"Reliability",
+14
+],
+[
+"Looks",
+9
+],
+[
+"Fun to drive",
+9
+],
+[
+"Power",
+4
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+5
+],
+[
+"Coolant leaks / water pump / overheating",
+4
+]
+],
+"top": [
+{
+"id": "xmB-tVkdR4o",
+"title": "2010 Scion tC: Regular Car Reviews",
+"views": 446599,
+"ch": "Regular Car Reviews"
+},
+{
+"id": "Uau2Iws_Ujs",
+"title": "SCION TC 2006 Car Review 👈",
+"views": 111746,
+"ch": "New Day Videos"
+},
+{
+"id": "FYXUPuIQ_AU",
+"title": "Review: 2005 Scion tC",
+"views": 90965,
+"ch": "MyRide on Autobytel"
+}
+]
+},
+{
+"sid": "scion-tc-g2",
+"y0": 2011,
+"y1": 2016,
+"label": "2011–2016",
+"videos": 192,
+"praise": [
+[
+"Looks",
+14
+],
+[
+"Fun to drive",
+11
+],
+[
+"Reliability",
+10
+],
+[
+"Space and practicality",
+7
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "KJ1dIdTNSGk",
+"title": "Review: 2013 Scion tC",
+"views": 232126,
+"ch": "Matt Maran Motoring"
+},
+{
+"id": "FS48lMrb7L0",
+"title": "2014 Scion tC Review and Road Test",
+"views": 231497,
+"ch": "Auto Buyers Guide | Alex on Autos"
+},
+{
+"id": "HBgsglfkLSY",
+"title": "2011 Scion tC Review, Walkaround, Exhaust, & Test Drive",
+"views": 206160,
+"ch": "Redline Reviews"
+}
+]
+}
+],
+"toyota-c-hr": [
+{
+"sid": "toyota-c-hr-g1",
+"y0": 2018,
+"y1": 2022,
+"label": "2018–2022",
+"videos": 198,
+"praise": [
+[
+"Looks",
+23
+],
+[
+"Reliability",
+16
+],
+[
+"Fun to drive",
+16
+],
+[
+"Space and practicality",
+10
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "t-NmJQbMEIg",
+"title": "Toyota C-HR SUV 2018 in-depth review | Mat Watson Reviews",
+"views": 2914429,
+"ch": "carwow"
+},
+{
+"id": "nvgi-_nwi2I",
+"title": "Style over substance? Toyota C-HR 2020 review",
+"views": 2689092,
+"ch": "carwow"
+},
+{
+"id": "1NnCGHZEhuI",
+"title": "Toyota C-HR 2019 Hybrid | Expert Review: Price, Specs & Features | PakWheels",
+"views": 1142388,
+"ch": "PakWheels.com"
+}
+]
+}
+],
+"toyota-grand-highlander": [
+{
+"sid": "toyota-grand-highlander-g1",
+"y0": 2024,
+"y1": 2025,
+"label": "2024–2025",
+"videos": 199,
+"praise": [
+[
+"Reliability",
+22
+],
+[
+"Space and practicality",
+22
+],
+[
+"Power",
+15
+],
+[
+"Fuel economy",
+15
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "OYbi3iTk8Sc",
+"title": "Should You Buy A 2024 Toyota Grand Highlander? Back To Basics Toyota",
+"views": 1109014,
+"ch": "The Car Care Nut"
+},
+{
+"id": "IRsicy30ZYk",
+"title": "Toyota Grand Highlander (2025) - Review & Interior Tour!",
+"views": 446990,
+"ch": "MEDCARS"
+},
+{
+"id": "R9Df7C4o1rk",
+"title": "2024 Toyota Grand Highlander Review",
+"views": 382308,
+"ch": "UsedCarsTV"
+}
+]
+}
+],
+"toyota-venza": [
+{
+"sid": "toyota-venza-g1",
+"y0": 2009,
+"y1": 2015,
+"label": "2009–2015",
+"videos": 200,
+"praise": [
+[
+"Reliability",
+10
+],
+[
+"Space and practicality",
+8
+],
+[
+"Power",
+8
+],
+[
+"Looks",
+8
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "6CvjaxfAun8",
+"title": "2015 Toyota Venza XLE Full Review, Start Up, Interior, Exterior",
+"views": 369878,
+"ch": "HappyRider2011"
+},
+{
+"id": "M6l7jZHr7Q0",
+"title": "2013 Toyota Venza Drive & Review",
+"views": 264278,
+"ch": "The Fast Lane Car"
+},
+{
+"id": "tP6RHgwl6NE",
+"title": "2013 Toyota Venza Limited Drive Review and Road Test",
+"views": 243504,
+"ch": "Auto Buyers Guide | Alex on Autos"
+}
+]
+},
+{
+"sid": "toyota-venza-g2",
+"y0": 2021,
+"y1": 2024,
+"label": "2021–2024",
+"videos": 200,
+"praise": [
+[
+"Looks",
+20
+],
+[
+"Comfort and ride",
+15
+],
+[
+"Power",
+15
+],
+[
+"Reliability",
+14
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "B4gdNaeGkEY",
+"title": "2021 Toyota Venza Limited - POV Review",
+"views": 469391,
+"ch": "TheTopher"
+},
+{
+"id": "m3TZje_AK64",
+"title": "2022 Toyota Venza | Long Term Conclusions",
+"views": 465471,
+"ch": "savagegeese"
+},
+{
+"id": "QVVwhiy3ceQ",
+"title": "2021 Toyota Venza | Review & Road Test",
+"views": 411365,
+"ch": "Kelley Blue Book"
+}
+]
+}
+],
+"volkswagen-eos": [
+{
+"sid": "volkswagen-eos-g1",
+"y0": 2007,
+"y1": 2016,
+"label": "2007–2016",
+"videos": 198,
+"praise": [
+[
+"Looks",
+7
+],
+[
+"Power",
+6
+],
+[
+"Space and practicality",
+5
+],
+[
+"Fun to drive",
+4
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "MtbTt5ufQNA",
+"title": "RoadflyTV - 2008 Volkswagen EOS Convertible Car Review",
+"views": 411127,
+"ch": "RoadflyTV"
+},
+{
+"id": "pVUZBCegWm4",
+"title": "2007 Volkswagen Eos Review",
+"views": 181246,
+"ch": "TECHCARZ"
+},
+{
+"id": "5Psqj6nyO-w",
+"title": "2007 Volkswagen Eos Review Test Drive by CarReviewsAndNews",
+"views": 123073,
+"ch": "carreviews"
+}
+]
+}
+],
+"volkswagen-touareg": [
+{
+"sid": "volkswagen-touareg-g1",
+"y0": 2004,
+"y1": 2010,
+"label": "2004–2010",
+"videos": 197,
+"praise": [
+[
+"Power",
+8
+],
+[
+"Reliability",
+7
+],
+[
+"Comfort and ride",
+6
+],
+[
+"Looks",
+4
+]
+],
+"trouble": [
+[
+"Heat / A/C / blend door",
+3
+]
+],
+"top": [
+{
+"id": "_VVIi56nO_k",
+"title": "Buying a used Volkswagen Touareg II (7P) - 2010-2018, Buying advice with Common Issues",
+"views": 373798,
+"ch": "different car review"
+},
+{
+"id": "e3OViQKw4wA",
+"title": "Buying a used VW Touareg - 2002-2010, Common Issues, Engine types",
+"views": 332885,
+"ch": "different car review"
+},
+{
+"id": "fEz2VIm2SvM",
+"title": "2004 VW Touareg Owner's VHS: Driving your Touareg",
+"views": 277099,
+"ch": "compu85"
+}
+]
+},
+{
+"sid": "volkswagen-touareg-g2",
+"y0": 2011,
+"y1": 2017,
+"label": "2011–2017",
+"videos": 192,
+"praise": [
+[
+"Looks",
+7
+],
+[
+"Fun to drive",
+7
+],
+[
+"Power",
+6
+],
+[
+"Comfort and ride",
+4
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "dMEkO1SdV3c",
+"title": "All-new VW Touareg 3 Preview 2017 as Volkswagen T-Prime Concept GTE",
+"views": 1132932,
+"ch": "Autogefühl"
+},
+{
+"id": "TeYsrSoRx4I",
+"title": "2011 Touareg V8 R Line Review - The Top of the Line SUV",
+"views": 469771,
+"ch": "Carro Chefe"
+},
+{
+"id": "rF4arcLdeJg",
+"title": "Volkswagen Touareg 2016 In Depth Review Interior Exterior",
+"views": 438824,
+"ch": "Alaatin61"
+}
+]
+}
+],
+"volvo-s40": [
+{
+"sid": "volvo-s40-g1",
+"y0": 2000,
+"y1": 2004,
+"label": "2000–2004",
+"videos": 199,
+"praise": [
+[
+"Reliability",
+9
+],
+[
+"Looks",
+4
+]
+],
+"trouble": [
+[
+"Oil leaks (gaskets, seals, housings)",
+4
+],
+[
+"Coolant leaks / water pump / overheating",
+4
+],
+[
+"Spark plugs / coils / misfire",
+3
+]
+],
+"top": [
+{
+"id": "V3PI19yhfhM",
+"title": "Volvo S40 review (2004 to 2007) | What Car?",
+"views": 399156,
+"ch": "What Car?"
+},
+{
+"id": "ZYfx0efrfT4",
+"title": "Volvo S40 / V50 buyers guide (2004-2012) Avoid buying a broken Volvo (reliability 1.8 2.0D D4 D5 T5)",
+"views": 119673,
+"ch": "The Miles Driven"
+},
+{
+"id": "-QjNDPInCCw",
+"title": "Volvo s40 2.0D 2004.5 2nd gen. starting problem! [SOLVED]",
+"views": 70903,
+"ch": "johnnn"
+}
+]
+},
+{
+"sid": "volvo-s40-g2",
+"y0": 2004,
+"y1": 2011,
+"label": "2004–2011",
+"videos": 198,
+"praise": [
+[
+"Reliability",
+11
+],
+[
+"Power",
+7
+],
+[
+"Looks",
+6
+],
+[
+"Comfort and ride",
+4
+]
+],
+"trouble": [
+[
+"Oil leaks (gaskets, seals, housings)",
+4
+]
+],
+"top": [
+{
+"id": "V3PI19yhfhM",
+"title": "Volvo S40 review (2004 to 2007) | What Car?",
+"views": 399156,
+"ch": "What Car?"
+},
+{
+"id": "4KEOs836I9U",
+"title": "2006 Volvo S40 Review by Auto123.com",
+"views": 314170,
+"ch": "auto123"
+},
+{
+"id": "nNR922RPuN0",
+"title": "2011 Volvo S40 Review - Volvo of Tempe",
+"views": 295382,
+"ch": "VolvoofTempe"
+}
+]
+}
+],
+"volvo-xc60": [
+{
+"sid": "volvo-xc60-g1",
+"y0": 2010,
+"y1": 2017,
+"label": "2010–2017",
+"videos": 194,
+"praise": [
+[
+"Looks",
+14
+],
+[
+"Power",
+12
+],
+[
+"Space and practicality",
+10
+],
+[
+"Reliability",
+9
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+4
+]
+],
+"top": [
+{
+"id": "35642myPRnQ",
+"title": "Volvo XC60 SUV 2014 review - Carbuyer",
+"views": 1038905,
+"ch": "Carbuyer"
+},
+{
+"id": "8ktu6twO8IA",
+"title": "Volvo XC60 SUV (2008-2013) review - CarBuyer",
+"views": 689969,
+"ch": "Carbuyer"
+},
+{
+"id": "YKVn1AZVoXU",
+"title": "Volvo XC60 (2017) | Why buy it… and why not?",
+"views": 456281,
+"ch": "Motor1 Italia"
+}
+]
+},
+{
+"sid": "volvo-xc60-g2",
+"y0": 2018,
+"y1": 2025,
+"label": "2018–2025",
+"videos": 196,
+"praise": [
+[
+"Looks",
+28
+],
+[
+"Power",
+19
+],
+[
+"Comfort and ride",
+18
+],
+[
+"Fun to drive",
+15
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "C9pZ_9KO3_A",
+"title": "Volvo XC60 SUV 2020 in-depth review | carwow Reviews",
+"views": 1469549,
+"ch": "carwow"
+},
+{
+"id": "iRYDYrj3Bfw",
+"title": "Volvo XC60 SUV 2018 review | Mat Watson Reviews",
+"views": 1330939,
+"ch": "carwow"
+},
+{
+"id": "mp19BvpU_rk",
+"title": "2020 Volvo XC60: FULL REVIEW | R-Design Gets UPDATED for 2020!",
+"views": 518875,
+"ch": "Car Confections"
+}
+]
+}
+],
+"daewoo-lanos": [
+{
+"sid": "daewoo-lanos-g1",
+"y0": 1999,
+"y1": 2002,
+"label": "1999–2002",
+"videos": 117,
+"praise": [
+[
+"Reliability",
+7
+],
+[
+"Fun to drive",
+4
+],
+[
+"Power",
+3
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "H8saUd8EQ-w",
+"title": "1999 Daewoo Lanos FULL REVIEW!!",
+"views": 60784,
+"ch": "Threadcar"
+},
+{
+"id": "fK2G1VPWxBQ",
+"title": "2002 Daewoo Lanos - Reliable Auto Sales - Las Vegas, NV 89104",
+"views": 7233,
+"ch": "reliableautosales100"
+},
+{
+"id": "yAlg72vt51Y",
+"title": "(SOLD) Automatic Cars 3D Hatch Daewoo Lanos 2000 Review",
+"views": 6131,
+"ch": "UVS"
+}
+]
+}
+],
+"daewoo-leganza": [
+{
+"sid": "daewoo-leganza-g1",
+"y0": 1999,
+"y1": 2002,
+"label": "1999–2002",
+"videos": 101,
+"praise": [],
+"trouble": [],
+"top": [
+{
+"id": "_aCzPgWCiwg",
+"title": "Daewoo Leganza Review (2000)",
+"views": 46130,
+"ch": "Men and Motors"
+},
+{
+"id": "Kw8utK_vAYE",
+"title": "Interior Review of the Daewoo Leganza. A Luxury Car for Its Time. Daewoo Leganza 2.0 1999",
+"views": 6416,
+"ch": "Сам себе мастер.  "
+},
+{
+"id": "L3x3guBOiiQ",
+"title": "No Budget Reviews: 2002 Daewoo Leganza 2.0 CDX Automatic (V100) - Lloyd Vehicle Consulting",
+"views": 5272,
+"ch": "Lloyd Vehicle Consulting"
+}
+]
+}
+],
+"daewoo-nubira": [
+{
+"sid": "daewoo-nubira-g1",
+"y0": 1999,
+"y1": 2002,
+"label": "1999–2002",
+"videos": 111,
+"praise": [],
+"trouble": [],
+"top": [
+{
+"id": "TvwNAF99XYs",
+"title": "1999 Daewoo Nubira Review",
+"views": 105728,
+"ch": "Men and Motors"
+},
+{
+"id": "ZFUOoY9Ztn4",
+"title": "2000 Daewoo Nubira - Road Test & Review",
+"views": 37215,
+"ch": "Men and Motors"
+},
+{
+"id": "qYjMkj1rUtI",
+"title": "2001 Daewoo Nubira CDX Sedan Review",
+"views": 31767,
+"ch": "Auto Ad Builder"
+}
+]
+}
+],
+"hummer-h2": [
+{
+"sid": "hummer-h2-g1",
+"y0": 2003,
+"y1": 2009,
+"label": "2003–2009",
+"videos": 196,
+"praise": [
+[
+"Power",
+8
+],
+[
+"Looks",
+7
+],
+[
+"Reliability",
+5
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+3
+]
+],
+"top": [
+{
+"id": "19ba4mIHh18",
+"title": "2009 Hummer H2 Sedona Metallic Black Chrome Edition Start Up, Exhaust, and In Depth Review",
+"views": 458139,
+"ch": "Saabkyle04"
+},
+{
+"id": "Y-w8xRaV_a0",
+"title": "2009 Hummer H2 Review - Kelley Blue Book",
+"views": 282026,
+"ch": "Kelley Blue Book"
+},
+{
+"id": "P15LjVAedOc",
+"title": "Review: 2007 Hummer H2",
+"views": 274966,
+"ch": "MyRide on Autobytel"
+}
+]
+}
+],
+"land-rover-defender": [
+{
+"sid": "land-rover-defender-g2",
+"y0": 2020,
+"y1": 2025,
+"label": "2020–2025",
+"videos": 196,
+"praise": [
+[
+"Looks",
+27
+],
+[
+"Power",
+18
+],
+[
+"Reliability",
+17
+],
+[
+"Space and practicality",
+16
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "e1r3Ce3129w",
+"title": "Land Rover Defender 2021 in-depth on and off-road REVIEW",
+"views": 4437999,
+"ch": "carwow"
+},
+{
+"id": "jHu8VJkR9Ag",
+"title": "2021 Land Rover Defender 110 P400 real-world review. Is it really that good?",
+"views": 1653799,
+"ch": "Harry's garage"
+},
+{
+"id": "RKQmQXNYgGs",
+"title": "CUTE! 2023 Land Rover Defender 90 V8 Review",
+"views": 1211640,
+"ch": "TheStraightPipes"
+}
+]
+}
+],
+"land-rover-discovery": [
+{
+"sid": "land-rover-discovery-g2",
+"y0": 1999,
+"y1": 2004,
+"label": "1999–2004",
+"videos": 198,
+"praise": [
+[
+"Reliability",
+7
+],
+[
+"Looks",
+7
+],
+[
+"Power",
+6
+]
+],
+"trouble": [
+[
+"Rust",
+5
+],
+[
+"Battery / alternator / starter",
+4
+],
+[
+"Electrical / wiring / TIPM",
+4
+],
+[
+"Coolant leaks / water pump / overheating",
+3
+]
+],
+"top": [
+{
+"id": "-gayaP2bdxg",
+"title": "How can such a simple repair cause huge problems on this '99 Land Rover Discovery? CAR WIZARD knows",
+"views": 350386,
+"ch": "Car Wizard"
+},
+{
+"id": "h_TCZ9P_QFM",
+"title": "Buying a used Land Rover Discovery 3, 4 - LR3, LR4 (L319) 2004-2016 Buying guide with common issues",
+"views": 211864,
+"ch": "different car review"
+},
+{
+"id": "jrjBdGIIbAk",
+"title": "2000 Land Rover Discovery Series II V8 SE7 Review & Test Drive",
+"views": 183235,
+"ch": "Auto Ad Builder"
+}
+]
+},
+{
+"sid": "land-rover-discovery-g3",
+"y0": 2005,
+"y1": 2009,
+"label": "2005–2009",
+"videos": 197,
+"praise": [
+[
+"Reliability",
+21
+],
+[
+"Looks",
+11
+],
+[
+"Space and practicality",
+9
+],
+[
+"Power",
+7
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+8
+],
+[
+"Steering / wobble / front end",
+6
+],
+[
+"Coolant leaks / water pump / overheating",
+5
+],
+[
+"Rust",
+4
+]
+],
+"top": [
+{
+"id": "1o3suMRXUgI",
+"title": "Should You Buy a LAND ROVER DISCOVERY 3? (LR3 TEST DRIVE & REVIEW)",
+"views": 860883,
+"ch": "High Peak Autos"
+},
+{
+"id": "LWKdJ1rAljg",
+"title": "Discovery LR3 - 3 Main Problems",
+"views": 466058,
+"ch": "RSW Solutions"
+},
+{
+"id": "m2BKYyYOzAw",
+"title": "Land Rover LR3 Air Suspension Broken? Try This Before Buying Parts",
+"views": 254108,
+"ch": "oxmanagain"
+}
+]
+},
+{
+"sid": "land-rover-discovery-g4",
+"y0": 2010,
+"y1": 2016,
+"label": "2010–2016",
+"videos": 196,
+"praise": [
+[
+"Reliability",
+14
+],
+[
+"Power",
+9
+],
+[
+"Looks",
+5
+],
+[
+"Space and practicality",
+5
+]
+],
+"trouble": [
+[
+"Timing chain / tensioners",
+7
+],
+[
+"Electrical / wiring / TIPM",
+5
+],
+[
+"Coolant leaks / water pump / overheating",
+4
+],
+[
+"Oil dilution / oil burning",
+3
+]
+],
+"top": [
+{
+"id": "0Ae2LhImqlI",
+"title": "2012 Land Rover LR4 vs Jeep Grand Cherokee Off-Road Mashup Review",
+"views": 880129,
+"ch": "The Fast Lane Car"
+},
+{
+"id": "Jukxt3FGf2k",
+"title": "2016 Land Rover LR4 HSE Lux (Discovery) Start Up, Road Test, and In Depth Review",
+"views": 821974,
+"ch": "Saabkyle04"
+},
+{
+"id": "qQMgUN-dY4Q",
+"title": "2014 Land Rover Discovery car review",
+"views": 585189,
+"ch": "Autotrader"
+}
+]
+},
+{
+"sid": "land-rover-discovery-g5",
+"y0": 2017,
+"y1": 2025,
+"label": "2017–2025",
+"videos": 196,
+"praise": [
+[
+"Power",
+18
+],
+[
+"Space and practicality",
+17
+],
+[
+"Looks",
+16
+],
+[
+"Comfort and ride",
+14
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "LvArN_3qSIg",
+"title": "Land Rover Discovery 2018 SUV in-depth review | Mat Watson Reviews",
+"views": 2132627,
+"ch": "carwow"
+},
+{
+"id": "_hEPriIj8g8",
+"title": "2019 Land Rover Discovery - FULL REVIEW!!",
+"views": 1225036,
+"ch": "MEDCARS"
+},
+{
+"id": "of2NwNATPHY",
+"title": "2019 Land Rover Discovery detailed review: On-road, off-road, and towing too!",
+"views": 572513,
+"ch": "Drive.com.au"
+}
+]
+}
+],
+"land-rover-freelander": [
+{
+"sid": "land-rover-freelander-g1",
+"y0": 2002,
+"y1": 2005,
+"label": "2002–2005",
+"videos": 200,
+"praise": [
+[
+"Reliability",
+14
+],
+[
+"Power",
+12
+],
+[
+"Fun to drive",
+10
+],
+[
+"Space and practicality",
+3
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "lpzVcKgyVQE",
+"title": "2004 LAND ROVER FREELANDER TD4 2.0 DIESEL 4X4 SUV VIDEO REVIEW",
+"views": 231576,
+"ch": "Keith Explores The Internet"
+},
+{
+"id": "sjT7c-8MyPU",
+"title": "2003 LAND ROVER FREELANDER VIDEO REVIEW",
+"views": 119794,
+"ch": "Keith Explores The Internet"
+},
+{
+"id": "oOvhf3xD6DA",
+"title": "2003 LANDROVER FREELANDER TD4 SUV REVIEW",
+"views": 28740,
+"ch": "KIRBYCOMMERCIALS"
+}
+]
+}
+],
+"land-rover-range-rover-evoque": [
+{
+"sid": "land-rover-range-rover-evoque-g1",
+"y0": 2012,
+"y1": 2019,
+"label": "2012–2019",
+"videos": 198,
+"praise": [
+[
+"Looks",
+15
+],
+[
+"Fun to drive",
+9
+],
+[
+"Space and practicality",
+7
+],
+[
+"Reliability",
+6
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "hTchQseKwO4",
+"title": "2016 Range Rover Evoque Full Review, Start Up, Exhaust",
+"views": 1481293,
+"ch": "HappyRider2011"
+},
+{
+"id": "dmUNQ14nXsc",
+"title": "Range Rover Evoque SUV 2013 review - Carbuyer",
+"views": 1325676,
+"ch": "Carbuyer"
+},
+{
+"id": "IBS8d_niFRg",
+"title": "Mercedes GLC vs Range Rover Evoque vs BMW X3 SUV 2017 review | Head2Head",
+"views": 1320153,
+"ch": "carwow"
+}
+]
+},
+{
+"sid": "land-rover-range-rover-evoque-g2",
+"y0": 2020,
+"y1": 2025,
+"label": "2020–2025",
+"videos": 196,
+"praise": [
+[
+"Looks",
+17
+],
+[
+"Fun to drive",
+13
+],
+[
+"Space and practicality",
+11
+],
+[
+"Comfort and ride",
+9
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "QQLoc0CUyX0",
+"title": "Range Rover Evoque SUV 2020 in-depth review on and off-road! | carwow reviews",
+"views": 2917623,
+"ch": "carwow"
+},
+{
+"id": "iAMf2L87yUc",
+"title": "Range Rover EVOQUE 2022 - FIRST LOOK & visual REVIEW (R-Dynamic SE)",
+"views": 1346901,
+"ch": "crospotter13"
+},
+{
+"id": "U39LNMNpXvM",
+"title": "2021 Range Rover Evoque vs Volvo XC40 review – what's the best family SUV? | What Car?",
+"views": 959835,
+"ch": "What Car?"
+}
+]
+}
+],
+"land-rover-range-rover-sport": [
+{
+"sid": "land-rover-range-rover-sport-g1",
+"y0": 2006,
+"y1": 2013,
+"label": "2006–2013",
+"videos": 200,
+"praise": [
+[
+"Reliability",
+10
+],
+[
+"Looks",
+10
+],
+[
+"Power",
+8
+],
+[
+"Comfort and ride",
+5
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "tGiG2R-jOW0",
+"title": "2012 Range Rover Sport vs Evoque Colorado snow-worthy Mashup Review",
+"views": 1144751,
+"ch": "The Fast Lane Car"
+},
+{
+"id": "A2lax8Oht3Q",
+"title": "Range Rover Sport SUV 2005 - 2013 review - CarBuyer",
+"views": 790631,
+"ch": "Carbuyer"
+},
+{
+"id": "3Uk21E2iD7Q",
+"title": "Should You Buy a Used RANGE ROVER SPORT? (Test Drive & Review 2010 HSE TDV6)",
+"views": 657102,
+"ch": "High Peak Autos"
+}
+]
+},
+{
+"sid": "land-rover-range-rover-sport-g2",
+"y0": 2014,
+"y1": 2022,
+"label": "2014–2022",
+"videos": 195,
+"praise": [
+[
+"Looks",
+22
+],
+[
+"Fun to drive",
+16
+],
+[
+"Power",
+15
+],
+[
+"Comfort and ride",
+9
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "-YO55FBiBYc",
+"title": "Range Rover Sport SUV 2019 in-depth review | carwow",
+"views": 3686371,
+"ch": "carwow"
+},
+{
+"id": "W_OTTD7F8vI",
+"title": "Range Rover Sport 2014 Review",
+"views": 1516544,
+"ch": "RecombuCars"
+},
+{
+"id": "qMjE-PYA_ds",
+"title": "2018 Range Rover Sport SVR Review - The BEST sounding SUV",
+"views": 1246660,
+"ch": "TheStraightPipes"
+}
+]
+},
+{
+"sid": "land-rover-range-rover-sport-g3",
+"y0": 2023,
+"y1": 2025,
+"label": "2023–2025",
+"videos": 196,
+"praise": [
+[
+"Looks",
+29
+],
+[
+"Fun to drive",
+21
+],
+[
+"Power",
+18
+],
+[
+"Comfort and ride",
+18
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "bgweBYIRqzw",
+"title": "NEW 2023 Range Rover Sport Review",
+"views": 1621553,
+"ch": "Automotive Pixel"
+},
+{
+"id": "nwlQhBN_QiQ",
+"title": "2023 Range Rover Sport Quick Review // Serious Class",
+"views": 1138753,
+"ch": "Extra Throttle House"
+},
+{
+"id": "rW-mdlgPeWw",
+"title": "2023 Range Rover Sport - FULL VISUAL REVIEW!",
+"views": 748161,
+"ch": "MEDCARS"
+}
+]
+}
+],
+"mercury-monterey": [
+{
+"sid": "mercury-monterey-g1",
+"y0": 2004,
+"y1": 2007,
+"label": "2004–2007",
+"videos": 200,
+"praise": [
+[
+"Reliability",
+12
+],
+[
+"Power",
+10
+],
+[
+"Fun to drive",
+6
+],
+[
+"Looks",
+4
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "aZIO3Sktweo",
+"title": "2005 Mercury Monterey Premier Review - A Forgotten Luxury Minivan!",
+"views": 16582,
+"ch": "Shooting Cars"
+},
+{
+"id": "AByp3RzSLts",
+"title": "2005 MERCURY MONTEREY CONVENIENCE *2 Owner* (NO RESERVE)",
+"views": 166,
+"ch": "TopGear Auto Auction"
+},
+{
+"id": "okKqpzbkm5c",
+"title": "2004 Mercury Monterey 82k miles",
+"views": 96,
+"ch": "LowMileCars COM"
+}
+]
+}
+],
+"saab-9-5": [
+{
+"sid": "saab-9-5-g1",
+"y0": 1999,
+"y1": 2009,
+"label": "1999–2009",
+"videos": 197,
+"praise": [
+[
+"Reliability",
+10
+],
+[
+"Power",
+10
+],
+[
+"Fun to drive",
+9
+],
+[
+"Looks",
+7
+]
+],
+"trouble": [
+[
+"Oil leaks (gaskets, seals, housings)",
+4
+]
+],
+"top": [
+{
+"id": "JfLUtLaiV4g",
+"title": "Solving 2001 Saab 9-5 ABS/TCS/CEL Problem -EricTheCarGuy",
+"views": 205116,
+"ch": "EricTheCarGuy"
+},
+{
+"id": "FDg4IZgiXzo",
+"title": "2007 Saab 9-5 SportCombi: Regular Car Reviews",
+"views": 106747,
+"ch": "Regular Car Reviews"
+},
+{
+"id": "7NOBOWx2KRM",
+"title": "Review: 2006 Saab 9-5",
+"views": 105023,
+"ch": "MyRide on Autobytel"
+}
+]
+},
+{
+"sid": "saab-9-5-g2",
+"y0": 2010,
+"y1": 2011,
+"label": "2010–2011",
+"videos": 116,
+"praise": [
+[
+"Looks",
+9
+],
+[
+"Power",
+7
+],
+[
+"Fun to drive",
+5
+],
+[
+"Space and practicality",
+4
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "uJkY34qMevo",
+"title": "2011 All-New Saab 9-5 Review",
+"views": 192064,
+"ch": "0-100ro"
+},
+{
+"id": "FOqfTeid9sw",
+"title": "Saab 9-5 review 2010",
+"views": 191892,
+"ch": "Autoblog"
+},
+{
+"id": "-ONQBmLQ2CI",
+"title": "2010 Saab 9-5 Review - Kelley Blue Book",
+"views": 139422,
+"ch": "Kelley Blue Book"
+}
+]
+}
+],
+"smart-fortwo": [
+{
+"sid": "smart-fortwo-g2",
+"y0": 2008,
+"y1": 2015,
+"label": "2008–2015",
+"videos": 181,
+"praise": [
+[
+"Fun to drive",
+8
+],
+[
+"Reliability",
+7
+],
+[
+"Power",
+6
+],
+[
+"Looks",
+6
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "PHJf7dKiXZI",
+"title": "2009 Smart Fortwo Passion Coupe Start Up, Exhaust, In Depth Review, and Test Drive",
+"views": 1605843,
+"ch": "Saabkyle04"
+},
+{
+"id": "_jEnasxtONY",
+"title": "Smart ForTwo 2015 review | TELEGRAPH CARS",
+"views": 204055,
+"ch": "Telegraph Cars"
+},
+{
+"id": "R44EOSclsMI",
+"title": "Thinking of Buying a Smart ForTwo 451 (2008-2015)?",
+"views": 178856,
+"ch": "PB Garage"
+}
+]
+},
+{
+"sid": "smart-fortwo-g3",
+"y0": 2016,
+"y1": 2019,
+"label": "2016–2019",
+"videos": 197,
+"praise": [
+[
+"Fun to drive",
+10
+],
+[
+"Power",
+6
+],
+[
+"Space and practicality",
+5
+],
+[
+"Looks",
+3
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "RmxdXtrMvY8",
+"title": "smart fortwo | 2014 - 2017 | In-depth review",
+"views": 334458,
+"ch": "CSCondeMotor"
+},
+{
+"id": "kP-mHfoxwEY",
+"title": "2018 Smart Fortwo EQ Electric Cabriolet Review - The Ideal City Car",
+"views": 293416,
+"ch": "TheStraightPipes"
+},
+{
+"id": "2Xa8JwjjQVE",
+"title": "smart fortwo 2016 Review | TestDriveNow",
+"views": 207132,
+"ch": "Steve Hammes New Car Reviews"
+}
+]
+}
+],
+"suzuki-grand-vitara": [
+{
+"sid": "suzuki-grand-vitara-g1",
+"y0": 1999,
+"y1": 2005,
+"label": "1999–2005",
+"videos": 199,
+"praise": [
+[
+"Reliability",
+11
+],
+[
+"Fun to drive",
+6
+],
+[
+"Power",
+6
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "EQNMVv1iQBk",
+"title": "PROS and CONS Suzuki Grand Vitara 2005 - 2014 [ 2025 Review ]",
+"views": 113166,
+"ch": "Motor En Detalles"
+},
+{
+"id": "eREsXg3oUhs",
+"title": "2004 Suzuki Grand Vitara Review | CarsIreland.ie",
+"views": 95268,
+"ch": "CarsIreland.ie"
+},
+{
+"id": "j8J9LyUUMro",
+"title": "2000 Suzuki Grand Vitara long term wrap up Sport Truck Connection Archive road tests",
+"views": 41484,
+"ch": "Sport Truck Connection Archive"
+}
+]
+},
+{
+"sid": "suzuki-grand-vitara-g2",
+"y0": 2006,
+"y1": 2013,
+"label": "2006–2013",
+"videos": 200,
+"praise": [
+[
+"Reliability",
+7
+],
+[
+"Looks",
+4
+],
+[
+"Space and practicality",
+3
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "zxvI5mw63EI",
+"title": "2013 Suzuki Grand Vitara: Behind the Scenes of a TFLcar Off-Road Review",
+"views": 383085,
+"ch": "The Fast Lane Car"
+},
+{
+"id": "yLXtVH7Hx7o",
+"title": "2012 Suzuki Grand Vitara Review and Drive",
+"views": 334313,
+"ch": "The Fast Lane Car"
+},
+{
+"id": "2QPPifJaAfg",
+"title": "Review of the 2009 Suzuki Grand Vitara",
+"views": 270538,
+"ch": "OrchEnt"
+}
+]
+}
+],
+"suzuki-sx4": [
+{
+"sid": "suzuki-sx4-g1",
+"y0": 2007,
+"y1": 2013,
+"label": "2007–2013",
+"videos": 199,
+"praise": [
+[
+"Reliability",
+10
+],
+[
+"Fun to drive",
+8
+],
+[
+"Power",
+7
+],
+[
+"Space and practicality",
+6
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "WHfgcJK_KSk",
+"title": "2011 Suzuki SX4 Off-road Review & Drive",
+"views": 604586,
+"ch": "The Fast Lane Car"
+},
+{
+"id": "AmYp9gyQDfg",
+"title": "2007 Suzuki SX4 Review - Kelley Blue Book",
+"views": 287658,
+"ch": "Kelley Blue Book"
+},
+{
+"id": "4dYoD4GN0tI",
+"title": "2011 Maruti SX4 Diesel | Comprehensive Review | Autocar India",
+"views": 173144,
+"ch": "Autocar India"
+}
+]
+}
 ]
 }

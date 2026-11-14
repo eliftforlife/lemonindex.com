@@ -56,6 +56,7 @@ def gens():
     """{fid: [(sid, first year, last year)]} for every site model with generation pulls on disk (same sources as data_yt.py)."""
     have = [f['id'] for f in json.load(open(os.path.join(HERE, 'data', 'years.json'), encoding='utf-8'))]
     if os.path.exists(os.path.join(HERE, 'data', 'years_new.json')): have += [f['id'] for f in json.load(open(os.path.join(HERE, 'data', 'years_new.json'), encoding='utf-8'))]
+    if os.path.exists(os.path.join(HERE, 'data', 'extra_models_new.json')): have += list(json.load(open(os.path.join(HERE, 'data', 'extra_models_new.json'), encoding='utf-8')))   # 11-13: complaints-only models' YouTube pages
     sys.path.insert(0, SRC); cwd = os.getcwd()
     import auto_gens as AG; os.chdir(cwd)
     out = {}

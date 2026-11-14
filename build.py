@@ -1997,6 +1997,7 @@ NEWM = [m for m in NEWM if m['slug'] not in {c['slug'] for c in EVX}]   # 11-11:
 _EXN = _load('data/extra_models_new.json')   # 11-11 complaints-only models (no sales source yet)
 _EXN.update(globals().get('HD_EXN') or {})   # 11-12 round 2: the HD truck cards open their pages (hd_pages.py)
 _PLAN = _load('data/new_plan.json'); _DUP = {k: v['dupe_of'] for k, v in _PLAN.items() if v.get('dupe_of')}
+for _k, _v in _PLAN.items(): SEG_EXN.setdefault(_k, _v.get('seg'))   # 11-13: complaints-only models from the plan get their body-type tab
 # 11-12 round 2 (Devin: the WRX tile opened the Impreza): a model with its own performance page (data/perf/<slug>.json, e.g. the WRX) is no longer
 # a duplicate card; its performance card (perf_cars.json) links to that page instead
 _DUP = {k: v for k, v in _DUP.items() if not os.path.exists(f'data/perf/{k}.json')}
@@ -2009,6 +2010,8 @@ def ndcard(m):
         t = _ID[_DUP[m['slug']]]
         return f'<a class="mc" data-t="r {SEGT.get(t["seg"], "")}" href="/cars/{t["id"]}/" title="Counted with the {E(t["name"])}">{img}<b>{E(short)}</b><span class="{"good" if t["li"] < 100 else "bad"}">{t["li"]}</span></a>'
     if m['slug'] in _EXN:
+        if m['slug'] in YTS:   # 11-13 (Elijah): no Lemon Index yet, but a YouTube study: the card says so
+            return f'<a class="mc mc-co" data-t="r {SEGT.get(SEG_EXN.get(m["slug"]), "")}" href="/cars/{m["slug"]}/" title="No Lemon Index yet: YouTube owners + complaint counts">{img}<b>{E(short)}</b><span class="nd">YouTube score</span></a>'
         return f'<a class="mc mc-co" data-t="r {SEGT.get(SEG_EXN.get(m["slug"]), "")}" href="/cars/{m["slug"]}/" title="Owner complaints, no sales figures yet">{img}<b>{E(short)}</b><span class="nd">Complaints only</span></a>'
     return (f'<div class="mc mc-nd" data-t="r" aria-disabled="true" title="No data yet"><span class="mc-p"><img src="/assets/ai-models/{m["slug"]}.webp?v=1" alt="{E(nm)}" width="1000" height="600" loading="lazy"></span>'
             f'<b>{E(short)}</b><span class="nd">No data yet</span></div>')
