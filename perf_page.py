@@ -202,12 +202,19 @@ def perf_list():
         d = _load('data/perf_cars.json', []) or []
         _PERF = {c['slug']: c for c in (d.get('cars', []) if isinstance(d, dict) else d)}
     return _PERF
+# 11-13 nav QB (report v2 #5: 35 compare chips went through redirect stubs): a page counts only when it is a real page, not one of
+# alias_pages.py's redirect stubs (they start with ALIAS_MARK and stay in docs/ from the last build)
+def real_page(u, out='docs'):
+    p = os.path.join(HERE, out, u.split('#')[0].strip('/'), 'index.html')
+    if not os.path.exists(p): return False
+    with open(p, encoding='utf-8', errors='replace') as fh: return not fh.read(40).startswith('<!doctype html><!--lx-alias-->')
+
 def perf_url(slug, out='docs'):
     """the page a performance car lives at once it has one ('' = coming soon)"""
     D = _load(f'data/perf/{slug}.json')
     if D and D.get('page'): return D['page']
     for u in (f'/cars/{slug}/', f'/performance/{slug}/', f'/supercars/{slug}/'):
-        if os.path.exists(os.path.join(HERE, out, u.strip('/'), 'index.html')): return u
+        if real_page(u, out): return u
     return ''
 
 # ---- 11-12 (UX test, Tyler: "the G80 tab shows 2008 data"): the Years, Problems, Recalls and Specs tabs follow the generation picker.
@@ -408,7 +415,7 @@ def build(slug, out='docs'):
     for c in D.get('compare', []):
         u = None; cs = PERF_ALIAS.get(c['slug'], c['slug'])   # 11-12: the M3 file's chip slugs name the cars differently (mercedes-amg-c63 = amg-c63)
         for x in (f'/compare/{slug}-vs-{cs}/', f'/compare/{cs}-vs-{slug}/'):
-            if os.path.exists(os.path.join(HERE, out, x.strip('/'), 'index.html')): u = x; break
+            if real_page(x, out): u = x; break
         u = u or perf_url(cs, out) or None
         img = c.get('img') or (PL.get(cs) or {}).get('img') or ''
         chips += ((f'<a class="pf-c" href="{E(u)}">' if u else '<div class="pf-c soon">') + (f'<img src="{E(img)}" alt="" width="1000" height="600" loading="lazy" decoding="async">' if img else '')

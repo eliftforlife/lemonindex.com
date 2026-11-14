@@ -66,25 +66,82 @@ _N2KW = {}
 for _a, _b, _v, _ in (json.load(open('data/kw_pairs.json', encoding='utf-8')) if os.path.exists('data/kw_pairs.json') else []):
     _N2KW[(_a, _b)] = _N2KW[(_b, _a)] = _v
 _N2RV = {}
+# 11-13 nav QB (report v2 #7: the Wrangler's rivals were the RAV4, CR-V and Rogue; the Corvette's the Genesis and Fiat 500): body-type
+# classes, so a car's rivals are the cars it's really shopped against. Each class: (name, members in rival order, guests, fallback classes).
+# A guest shows as a rival for the class's cars but keeps its own home class (the Gladiator is a midsize pickup, the Grand Cherokee a
+# midsize SUV). Only /cars/ models; an id not on the site is skipped.
+N2_CLASSES = [
+    ('offroad', ['jeep-wrangler', 'toyota-4runner', 'ford-bronco', 'toyota-fj-cruiser', 'nissan-xterra'], ['jeep-gladiator', 'jeep-grand-cherokee'], []),
+    ('sport', ['ford-mustang', 'chevrolet-camaro', 'dodge-challenger', 'chevrolet-corvette'], [], []),
+    ('green', ['toyota-prius', 'chevrolet-volt', 'chevrolet-bolt'], ['tesla-model-3'], ['compact']),
+    ('sub', ['honda-fit', 'toyota-yaris', 'nissan-versa', 'hyundai-accent', 'kia-rio', 'ford-fiesta', 'chevrolet-sonic', 'chevrolet-aveo', 'chevrolet-spark',
+             'mini-cooper', 'fiat-500', 'scion-xb'], [], ['compact']),
+    ('compact', ['honda-civic', 'toyota-corolla', 'hyundai-elantra', 'nissan-sentra', 'mazda3', 'volkswagen-jetta', 'kia-forte', 'subaru-impreza', 'ford-focus',
+                 'chevrolet-cruze', 'volkswagen-golf', 'dodge-dart', 'mitsubishi-lancer', 'chevrolet-cobalt', 'hyundai-veloster', 'dodge-caliber', 'chevrolet-hhr',
+                 'dodge-neon', 'chevrolet-cavalier'], [], ['mid', 'sub']),
+    ('mid', ['toyota-camry', 'honda-accord', 'nissan-altima', 'hyundai-sonata', 'kia-optima', 'ford-fusion', 'chevrolet-malibu', 'mazda6', 'subaru-legacy',
+             'volkswagen-passat', 'chrysler-200', 'buick-regal', 'dodge-avenger', 'volkswagen-cc', 'dodge-stratus'], [], ['large', 'compact']),
+    ('large', ['toyota-avalon', 'chevrolet-impala', 'nissan-maxima', 'chrysler-300', 'dodge-charger', 'ford-taurus', 'buick-lacrosse', 'hyundai-genesis',
+               'ford-crown-victoria'], [], ['mid']),
+    ('luxc', ['bmw-3-series', 'mercedes-benz-c-class', 'audi-a4', 'lexus-is', 'cadillac-cts', 'acura-tlx', 'tesla-model-3', 'mercedes-benz-cla', 'audi-a3',
+              'volvo-s60', 'lincoln-mkz', 'acura-tl'], [], ['luxl']),
+    ('luxl', ['lexus-es', 'bmw-5-series', 'mercedes-benz-e-class', 'audi-a6', 'tesla-model-s', 'lexus-ls', 'cadillac-deville'], [], ['luxc']),
+    ('subsuv', ['honda-hr-v', 'subaru-crosstrek', 'hyundai-kona', 'kia-soul', 'jeep-renegade', 'chevrolet-trax', 'buick-encore', 'ford-ecosport', 'jeep-compass',
+                'jeep-patriot'], [], ['compsuv']),
+    ('compsuv', ['toyota-rav4', 'honda-cr-v', 'nissan-rogue', 'ford-escape', 'chevrolet-equinox', 'mazda-cx-5', 'hyundai-tucson', 'kia-sportage', 'subaru-forester',
+                 'subaru-outback', 'volkswagen-tiguan', 'jeep-cherokee', 'gmc-terrain', 'mitsubishi-outlander', 'ford-bronco-sport', 'jeep-liberty', 'honda-element',
+                 'mazda-tribute', 'saturn-vue', 'dodge-nitro'], [], ['subsuv', 'midsuv']),
+    ('midsuv', ['jeep-grand-cherokee', 'ford-edge', 'nissan-murano', 'hyundai-santa-fe', 'kia-sorento', 'honda-passport', 'chevrolet-blazer', 'dodge-journey',
+                'mazda-cx-7', 'gmc-envoy'], ['toyota-4runner'], ['row3', 'compsuv']),
+    ('row3', ['toyota-highlander', 'honda-pilot', 'ford-explorer', 'chevrolet-traverse', 'kia-telluride', 'hyundai-palisade', 'subaru-ascent', 'volkswagen-atlas',
+              'nissan-pathfinder', 'dodge-durango', 'mazda-cx-9', 'gmc-acadia', 'buick-enclave', 'ford-flex', 'ford-freestyle', 'buick-rendezvous', 'jeep-commander'],
+     ['toyota-4runner'], ['midsuv', 'fullsuv']),
+    ('fullsuv', ['chevrolet-tahoe', 'ford-expedition', 'chevrolet-suburban', 'gmc-yukon', 'toyota-sequoia', 'gmc-yukon-xl', 'nissan-armada'], [], ['row3']),
+    ('luxsuvc', ['acura-rdx', 'bmw-x3', 'mercedes-benz-glk/glc', 'audi-q5', 'porsche-macan', 'tesla-model-y', 'cadillac-srx', 'bmw-x1', 'audi-q3',
+                 'mercedes-benz-gla'], [], ['luxsuvm']),
+    ('luxsuvm', ['lexus-rx', 'acura-mdx', 'bmw-x5', 'mercedes-benz-m/gle', 'audi-q7', 'volvo-xc90', 'lincoln-mkx', 'tesla-model-x'], [], ['luxsuvc', 'luxsuvl']),
+    ('luxsuvl', ['cadillac-escalade', 'lincoln-navigator'], [], ['luxsuvm']),
+    ('midtruck', ['toyota-tacoma', 'chevrolet-colorado', 'ford-ranger', 'nissan-frontier', 'jeep-gladiator', 'gmc-canyon', 'honda-ridgeline', 'dodge-dakota'], [], ['fulltruck']),
+    ('fulltruck', ['ford-f-series', 'chevrolet-silverado', 'ram-pickup', 'gmc-sierra', 'toyota-tundra', 'nissan-titan', 'chevrolet-avalanche'], [], ['midtruck']),
+]
+N2_CLS, N2_CLM = {}, {}
+for _n, _ms, _gs, _fb in N2_CLASSES:
+    N2_CLM[_n] = ([m for m in _ms + _gs if m in FY], _fb)
+    for _m in _ms: N2_CLS.setdefault(_m, _n)
+_N2ODD = {m for n in ('offroad', 'sport', 'green') for m in N2_CLM[n][0] if N2_CLS.get(m) == n}   # never a sales-closeness filler for another class
 def N2_RIVALS(fid):
     if fid in _N2RV: return _N2RV[fid]
     f = FY.get(fid); c = BYNAME.get(f['name']) if f else None
     if not c: _N2RV[fid] = []; return []
-    lux = c['brand'] in N2_LUX
+    lux = c['brand'] in N2_LUX; cl = N2_CLS.get(fid)
     def peer(o):
         g = FY.get(o); d = BYNAME.get(g['name']) if g else None
         return d is not None and o != fid and d['seg'] == c['seg'] and (d['brand'] in N2_LUX) == lux
     import math
+    close = lambda o: abs(math.log(max(1, BYNAME[FY[o]['name']]['sold']) / max(1, c['sold'])))
     rv = [o for o in RIVALS.get(fid, []) if peer(o)]
     rv += [b for (a, b), _ in sorted(_N2KW.items(), key=lambda kv: -kv[1]) if a == fid and b not in rv and peer(b)]   # searched pairs under the 1,000 PAIRS cut (4Runner vs Pilot)
     rv.sort(key=lambda o: -_N2KW.get((fid, o), 0))   # stable: searched match-ups first, then RIVALS' sales order
-    rest = sorted((g['id'] for g in YEARS if g['id'] not in rv and peer(g['id'])), key=lambda o: abs(math.log(max(1, BYNAME[FY[o]['name']]['sold']) / max(1, c['sold']))))
+    if cl:   # QB: its own class first (searched match-ups first, then the class order), then other searched match-ups (4Runner vs Pilot),
+        # then the fallback classes by U.S. sales. The best-seller pairs across classes (Wrangler vs RAV4) no longer count as rivals.
+        out = sorted((o for o in N2_CLM[cl][0] if o != fid), key=lambda o: -_N2KW.get((fid, o), 0))
+        out += [o for o in rv if o not in out and o not in _N2ODD and _N2KW.get((fid, o), 0) > 0]
+        for fb in N2_CLM[cl][1]: out += sorted((o for o in N2_CLM[fb][0] if o != fid and o not in out and o in _N2BID), key=close)
+        _N2RV[fid] = out; return out
+    rest = sorted((g['id'] for g in YEARS if g['id'] not in rv and peer(g['id']) and g['id'] not in _N2ODD), key=close)
     _N2RV[fid] = rv + rest; return _N2RV[fid]
+_N2BID = {g['id'] for g in YEARS if g['name'] in BYNAME}
 
+def N2_LXCMP(fid):
+    """QB (report v2 #6): the rivals whose match-up page the Related list links (up to 2 of the 6 closest rivals that have one). The
+    'Similar cars' line skips them, so no car shows in both."""
+    return [o for o in N2_RIVALS(fid)[:6] if (fid, o) in PAIRS or (o, fid) in PAIRS][:2]
 def N2_SIMILAR(f, y):
-    """'Similar cars' line at the end of a year page's Overview: the same model year of up to 3 rivals, with their Lemon Index."""
-    out = []
+    """'Similar cars' line right under a year page's Overview cards: the same model year of up to 3 rivals, with their Lemon Index
+    (the 2 with a match-up page are in Related instead)."""
+    out = []; skip = set(N2_LXCMP(f['id']))
     for o in N2_RIVALS(f['id']):
+        if o in skip: continue
         w = next((w for w in FY[o]['years'] if w['y'] == y), None)
         if not w: continue
         g = FY[o]; _, sh = _n2_names(g)

@@ -139,7 +139,7 @@ else:
             if yts is not None: yt_scores[int(y)] = yts
             models = '<br>'.join(f'{_fam_link(f)} <small>{E(", ".join(ms))}</small>' for f, ms in e['models'].items())
             txt = e['c']; parts = ', '.join(f'{E(p)}' for p, _ in e['parts'][:3]) or '—'
-            yp = next((f for f in e['models'] if os.path.exists(os.path.join(OUT, 'cars', f, str(y), 'index.html'))), None)   # only link year pages that were built
+            yp = next((f for f in e['models'] if _PP.real_page(f'/cars/{f}/{y}/', OUT)), None)   # only link year pages that were built (11-13 QB: not a redirect stub, e.g. /cars/bmw-m3/2016/)
             rows.append([f'<a href="/cars/{yp}/{y}/">{y}</a>' if yp else y, models, cell, f'{txt:,}' if txt else '0', ytc, parts])
         # best / most-complaint years, from like-for-like numbers only
         bline = ''

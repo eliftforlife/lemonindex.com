@@ -423,6 +423,12 @@ def _pd_mark(path, body, head=''):
         if e.get('t') and e['t'] != t: e['td'] = TODAY
         e['t'] = t   # first build with title hashes: recorded without moving the date
     if fx: e['f'] = fx
+# 11-13 QB: year_slider.info() numbers its popovers with one counter for the whole build, so adding an (i) anywhere shifted the ids (and
+# so the content-hash dates and IndexNow pings) of thousands of unrelated pages. page() renumbers them per page, in order of appearance.
+_IIRE = re.compile(r'\b(id|aria-controls)="(ii[a-z]?\d+)"')
+def _ii_stable(s, pre='ii'):
+    m = {}
+    return _IIRE.sub(lambda x: f'{x.group(1)}="{pre}{m.setdefault(x.group(2), len(m) + 1)}"', s)
 def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, vis='', canon=None):
     if TOV.get(path, {}).get('title'): title = TOV[path]['title']   # 11-12: search-title test from 0 HQ/Tools/gsc_titles.py (data/title_overrides.json)
     title, desc = fit_title(title), fit_desc(desc)
@@ -431,6 +437,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
     if _tm and (_tm.group(1) in TAB.ON or _tm.group(1) in globals().get('FY', {})) and 'tab_body' in globals(): body = tab_body(_tm.group(1), int(_tm.group(2)) if _tm.group(2) else None, body)
     if 'class="advp"' in body and path.startswith(('/cars/', '/motorcycles/', '/planes/')) and 'adv_body' in globals(): body = adv_body(path, body)   # 11-10: the other template
     if 'class="pg mp6"' in body and re.match(r'^/(motorcycles|supercars|planes)/[^/]+/$', path) and 'adv_body' in globals(): body = adv_body(path, body, TAB.transform_mp6)   # 11-10: motorcycle, supercar and plane pages
+    body = _ii_stable(body, 'iib')   # 11-13 QB: image-info ids numbered per page, so a new (i) elsewhere doesn't redate thousands of pages
     _pd_mark(path, body, title + '\n' + desc)
     _d = PD[path]['d']; _dl = f'{_MN[int(_d[5:7]) - 1]} {int(_d[8:])}, {_d[:4]}'; _upd = ''
     if path.startswith(('/cars/', '/motorcycles/', '/planes/', '/supercars/', '/best/', '/stats/', '/check-engine-light/', '/best-gas-mileage/', '/electric/', '/studies/')):
@@ -465,6 +472,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <nav class="f2-col" aria-label="Tools and data"><p class="f2-h">Tools and data</p><a href="/vin/">VIN check</a><a href="/check-engine-light/">Engine codes</a><a href="/method/">How the index works</a><a href="/data/">Free data</a><a href="/images/">Free images</a><a href="/vote/">Vote</a></nav>
 <nav class="f2-col" aria-label="Support"><p class="f2-h">Support</p><button class="supl" type="button">Keep Lemon ad-free</button><a href="/about/">About</a><a href="/press/">Press</a><a href="/contact/">Contact</a><a href="{YT}?sub_confirmation=1" rel="noopener">Subscribe on YouTube</a></nav></div>
 <div class="f2-bot"><span>© {TODAY[:4]} The Lemon Index</span><a href="/terms/">Terms</a><a href="/privacy/">Privacy</a><a href="/refunds/">Refunds</a><span class="f2-dis">Built from public NHTSA complaint data and published U.S. sales figures. Not affiliated with any automaker. Not a repair-cost or safety rating.</span></div></footer><script src="/assets/explorer.js?v=1112d" defer></script><script src="/assets/support.js?v=1111d" defer></script><script src="/assets/imginfo.js?v=2" defer></script><script src="/assets/lookup.js?v={LXS_V}" defer></script>{beacon}</body></html>'''
+    doc = _ii_stable(doc)
     LG[path] = (set(_LGHREF.findall(doc)), bool(_LGNOIX.search(doc)), url)   # 11-12 link graph (linkgraph.py, end of build)
     f = os.path.join(OUT, path.strip('/'), 'index.html') if path.endswith('/') else os.path.join(OUT, path.strip('/'))
     os.makedirs(os.path.dirname(f), exist_ok=True)
@@ -1144,26 +1152,11 @@ def LX_HTML(fid, y):
     f = FY.get(fid); c = BYNAME.get(f['name']) if f else None
     v = next((w for w in f['years'] if w['y'] == y), None) if f else None
     if not (c and v): return ''
-    if not _LXIX:
-        for g in YEARS:
-            for w in g['years']:
-                if w.get('ok') and g['name'] in BYNAME: _LXIX.setdefault((BYNAME[g['name']]['seg'], w['y']), []).append((g, w))
-    seg = c['seg']; out = []; used = {fid}
-    # 11-13 nav (N2, Civic -> BMW 5 Series, CR-V -> Audi Q3): rivals first (n2_nav.py: same type and price class, searched match-ups first),
-    # then one same-class car whose top complaint is the same system, then one same-year rival with fewer complaints per car sold
-    for o in [o for o in N2_RIVALS(fid) if (fid, o) in PAIRS or (o, fid) in PAIRS][:2]:   # 11-12 r2: opens on this year (assets/lfa.js)
-        used.add(o); out.append((cmpu(fid, o) + f'#y{y}', f'{f["name"]} vs {FY[o]["name"]}', f'{y} and its neighbours side by side'))
-    ok_rv = set(N2_RIVALS(fid)); rank = {o: i for i, o in enumerate(N2_RIVALS(fid))}
-    peers = [p for yy in range(y - 2, y + 3) for p in _LXIX.get((seg, yy), []) if p[0]['id'] != fid and p[0]['id'] in ok_rv]
-    top = NICE(v['parts'][0][0]) if v.get('parts') else ''
-    if top and top != 'other':
-        for g, w in sorted((p for p in peers if p[1].get('parts') and NICE(p[1]['parts'][0][0]) == top), key=lambda p: (abs(p[1]['y'] - y), rank[p[0]['id']])):
-            if g['id'] in used: continue
-            used.add(g['id']); out.append((CARU(g, w['y']), f'{w["y"]} {g["name"]}', f'top complaint is also the {top}'))
-            break
-    if v.get('ok'):
-        for g, w in sorted((p for p in peers if p[1]['y'] == y and p[1]['li'] < v['li'] and p[0]['id'] not in used), key=lambda p: rank[p[0]['id']])[:1]:
-            used.add(g['id']); out.append((CARU(g, y), f'{y} {g["name"]}', f'fewer complaints per car sold (Lemon Index {w["li"]})'))
+    seg = c['seg']; out = []
+    # 11-13 nav QB (report v2 #6: Similar and Related repeated the same cars): Related = match-up pages + the type's best list only; the
+    # same-year rival cars are in 'Similar cars, same year' under the Overview cards (n2_nav.py N2_SIMILAR, which skips these rivals)
+    for o in N2_LXCMP(fid):   # 11-12 r2: opens on this year (assets/lfa.js)
+        out.append((cmpu(fid, o) + f'#y{y}', f'{f["name"]} vs {FY[o]["name"]}', f'{y} and its neighbours side by side'))
     if seg in _LXSEG: out.append((f'/best/most-reliable-{_LXSEG[seg][0]}/', f'Most reliable {_LXSEG[seg][1]}', 'ranked by owner complaints'))
     if not out: return ''
     return ('<link rel="stylesheet" href="/assets/lx.css?v=1"><nav class="lx" aria-label="Related"><h2 class="lx-h">Related</h2><ul class="lx-l">'
@@ -1652,7 +1645,7 @@ def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
 <article class="yp yp6"><section class="ph yph6"><div class="yh-t">{N2_CRUMB(f, y)}<h1>{y} {E(QN(f))} {YW(f).lower()}.</h1>{answer_box(f, v, y, x, best)}{'<p class="early-b">Too new: partial score</p>' if v.get('early') else ''}
 {f'<p class="yc-note">{SN[f["id"]][1]}</p>' if f["id"] in SN else ""}{GROUP_NOTE(f, y)}{PIN_HTML(f['id'], y)}{n2_hero}
 <nav class="modes" aria-label="Page mode"><a href="{CARU(f, y)}" aria-current="page">Normal</a><a href="{CARU(f, y)}advanced/">Advanced</a></nav><nav class="yswitch" aria-label="Model years"><div class="yseg">{seg}<a class="yall" href="{CARU(f)}">All years</a></div><div class="yact"><a class="btn btn-ghost" href="/compare/?c={f['id']}-{y}">Compare</a><button type="button" class="btn btn-ghost yshare" data-share="{E(share_txt)}">Share</button></div></nav></div>{f'<div class="ph-v">{ph}</div>' if ph else ''}</section>
-{buy}{top_fails_html(f, y, nm)}{mil}{fix_sell_html(f, y, nm)}{ask}{N2_SIMILAR(f, y)}<div class="yts">{tiles}</div>{ytfix(f["id"], y)}{sev}{old}
+{buy}{N2_SIMILAR(f, y)}{top_fails_html(f, y, nm)}{mil}{fix_sell_html(f, y, nm)}{ask}<div class="yts">{tiles}</div>{ytfix(f["id"], y)}{sev}{old}
 <section class="yyears noph"><div class="yy-ch"><h2>Every {nm} year. <span class="h2s">{y} is highlighted. Lower is better.</span></h2>{N2_SORT}{ybars(f, y)}</div>{ev_note}</section>
 <div class="ygrid">{probs}{timeline(x["miles"], x.get("comps") or [], (x.get("sev") or {}).get("total")) if x.get("miles") else ""}{recs}{(lambda pr: f'<section class="yc">{pr}</section>' if pr else '')(price_html(f["id"], y, f["name"]))}
 {fixes}{invs}{safety}{f'<section class="yc">{crash}{fuel}</section>' if crash or fuel else ''}{YEAR_SPECS_HOOK(f['id'], y)}{words}

@@ -182,7 +182,7 @@ if HDX == 'pages' and HDT:
         prob = f'<section class="yc" id="problems"><h2>What owners complain about</h2>' + _hd_bars([(p, k) for p, k, _ in T['comps']]) + '<p class="yc-cap">Share of complaints that name each area (one complaint can name several).</p></section>'
         mil = f'<section class="yc" id="mileage"><h2>When problems show up</h2><p>{_hd_miles(T["miles"])}</p></section>' if T.get('miles') else ''
         ser = f'<section class="yc" id="severity"><h2>How serious</h2>{_hd_ser(T["ser"], T["n"])}<p class="yc-cap">As reported by owners to NHTSA, not verified.</p></section>'
-        allrec = sorted({r for y in ys for r in Y[y]['recalls']}, key=lambda i: (HDR[i]['date'][6:10] + HDR[i]['date'][3:5] + HDR[i]['date'][:2]) if i in HDR else '', reverse=True)
+        allrec = sorted({r for y in ys for r in Y[y]['recalls']}, key=lambda i: ((HDR[i]['date'][6:10] + HDR[i]['date'][3:5] + HDR[i]['date'][:2]) if i in HDR else '', i), reverse=True)   # 11-13 QB: + the campaign id, so same-day recalls keep one order (was set order: the page changed every build)
         allrec = [HDR[i] for i in allrec if i in HDR]
         rec = (f'<section class="yc" id="recalls"><h2>Recalls <span class="yc-n">{len(allrec)}</span></h2><p>Across {ys[0]}–{ys[-1]}. Newest first; each year&#39;s page lists its own.</p><ul class="advr">'
                + ''.join(_hd_rec_li(r, _hd_rec_tag(r)) for r in allrec[:6]) + '</ul>'

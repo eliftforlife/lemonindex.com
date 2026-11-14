@@ -383,7 +383,8 @@ def transform_year(body, eng_html, short):
     tail = [c for c in tail if not (c.name == 'p' and 'yc-cap' in (c.get('class') or []) and _txt(c).startswith('Lemon Index ='))]
     over_html = overview_cards_year(over, probs, fix, rec, yrs, qa)
     _pl = [('problems', 0, J(probs)), ('repairs', 0, J(fix)), ('recalls', 0, J(rec)), ('years', 0, J(yrs)), ('questions', 0, J(qa))]
-    over_html = _ovfilter(over_html, _pl) + n3 + (f'<div class="ovk">{J(keep)}</div>' if keep else '')   # 11-13 N3: engines & versions right after the preview cards
+    sim = [c for c in keep if c.get('id') == 'similar']; keep = [c for c in keep if c.get('id') != 'similar']   # 11-13 nav QB (report v2 #6): 'Similar cars, same year' right under the cards
+    over_html = _ovfilter(over_html, _pl) + J(sim) + n3 + (f'<div class="ovk">{J(keep)}</div>' if keep else '')   # 11-13 N3: engines & versions right after the preview cards
     tabs = _tabs([('overview', 'Overview', over_html), ('problems', 'Problems', J(probs)), ('repairs', _replab(J(fix)), J(fix)),
                   ('recalls', 'Recalls & safety', J(rec)), ('years', 'Every year', J(yrs)), ('questions', 'Questions', J(qa))], 'Report sections')
     cls = ' '.join(root.get('class') or [])

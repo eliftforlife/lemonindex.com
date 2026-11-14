@@ -140,9 +140,28 @@ def _sce_page(e):
     ans1 = (f'{E(mk)}&#39;s {E(d["size"])} {E(d["asp"])} {E(d["layout"])} in the {E(cars_s)}, model years {y0}' + (f'–{y1}' if y1 != y0 else '') + '.'
             + (f' YouTube likes the <b>{yb}</b> best.' if yb else ''))
     _eux = [(fid, nm_) for fid, nm_, _ys, _vs in (globals().get('EU_CARS') or (lambda u: []))(path) if not any(_EU_PARENT_OF(c) == fid for c in d['cars'])]
-    if _eux: ans1 += ' Also in the ' + ', '.join(f'<a href="/cars/{fid}/">{"Ford F-150" if fid == "ford-f-series" else E(nm_)}</a>' for fid, nm_ in _eux[:4]) + (' and more' if len(_eux) > 4 else '') + ' (below).'
-    chips = (f'<div class="trc"><div><b>{y0}' + (f'–{str(y1)[-2:]}' if y1 != y0 else '') + '</b><span>model years</span></div>'
-             + f'<div><b>{_sce_hp(d)}</b><span>hp (factory)</span></div>'
+    # 11-13 nav QB (report v2 #3: the 2GR page read like a Lotus page): a supercar-hub engine that is also in everyday /cars/ models is
+    # mostly used in those (supercars sell in the hundreds or low thousands a year; the 2GR's Camry, RAV4, Highlander... and the 3.5
+    # EcoBoost's F-150 sell in the millions), so its page is filed under Engines > its maker, opens on those cars (best sellers first, with
+    # the years our data has) and shows one of them instead of the supercar-branded illustration
+    _main = g == 'super' and bool(_eux)
+    _hpw, _ylo, _yhi, mfig = '', y0, y1, ''
+    if _main:
+        _mu = sorted(((fid, nm_, set(ENGINE_USES[path][fid]['years']), ENGINE_USES[path][fid]['src']) for fid, nm_ in _eux),
+                     key=lambda r: -(BYNAME.get(r[1]) or {}).get('sold', 0))
+        _mn = lambda fid, nm_: 'F-150' if fid == 'ford-f-series' else nm_[len(mk) + 1:] if nm_.startswith(mk + ' ') else nm_
+        _my = sorted(set().union(*(r[2] for r in _mu))); _ms = sorted(set().union(*(r[3] for r in _mu)))
+        _ylo, _yhi = min(_my[0], y0), max(_my[-1], y1); _hpw = f', {E(_sce_cars_txt(d))}'
+        _cl = [f'<a href="/cars/{fid}/">{E(_mn(fid, nm_))}</a>' for fid, nm_, _y, _s in _mu]
+        _asp = '' if ' or ' in d['asp'] else E(d['asp']) + ' '   # "naturally aspirated or supercharged": the supercharger is the Lotus's
+        ans1 = (f'{E(mk)}&#39;s {E(d["size"])} {_asp}{E(d["layout"])} in the ' + (', '.join(_cl[:-1]) + ' and ' + _cl[-1] if len(_cl) > 1 else _cl[0])
+                + f', model years {_my[0]}–{_my[-1]} (from {" and ".join(_EU_SRC[s].replace(" (NHTSA)", ", via NHTSA") for s in _ms)}), and in the {E(_sce_cars_txt(d))}, {y0}' + (f'–{y1}' if y1 != y0 else '') + '.')
+        for fid, nm_, _y, _s in _mu:   # the best seller with an illustration of one of its years with this engine (year_slider.py)
+            _iy = [y for y in sorted(_y, reverse=True) if YSL.ai_src(fid, y)]
+            if _iy: mfig = YSL.ai_year_html(fid, _iy[0], 'Ford F-150' if fid == 'ford-f-series' else nm_, hero=True); break
+    elif _eux: ans1 += ' Also in the ' + ', '.join(f'<a href="/cars/{fid}/">{"Ford F-150" if fid == "ford-f-series" else E(nm_)}</a>' for fid, nm_ in _eux[:4]) + (' and more' if len(_eux) > 4 else '') + ' (below).'
+    chips = (f'<div class="trc"><div><b>{_ylo}' + (f'–{str(_yhi)[-2:]}' if _yhi != _ylo else '') + '</b><span>model years</span></div>'
+             + f'<div><b>{_sce_hp(d)}</b><span>hp (factory{_hpw})</span></div>'
              + (f'<div><b>#{rk}</b><span>YouTube rank of {SCE_NRANK[g]} {GW[g]}</span></div>' if rk else '<div><b>–</b><span>YouTube rank coming</span></div>') + '</div>')
     # 11-12 round 2 (UX test, Devin): a one-line verdict from our own numbers, the performance pages' known issues for this engine, and why
     # the car pages show more complaints and recalls than this page
@@ -237,15 +256,15 @@ def _sce_page(e):
             + (f'Its cars had {len(R)} recalls ({ne} about the engine, fuel or powertrain). ' if R else '') + 'Have any used car inspected.'),
            (f'How much horsepower does the {nm} make?', f'{_sce_hp(d)} hp in factory figures, depending on the car' + (f' ({d["hp_note"]})' if d.get('hp_note') else '') + '.')]
     sec.append('<section class="yqa trq"><h2>Quick answers</h2>' + qa_fold(''.join(f'<h3>{E(q)}</h3><p>{E(_shtml.unescape(a))}</p>' for q, a in faq)) + '</section>')
-    ph = SCP.get(e); fig = ''
+    ph = None if mfig else SCP.get(e); fig = mfig   # QB: an everyday engine shows its best seller, not the supercar-branded illustration
     if ph:
         alt = f'Illustration of the {E(nm)} {E(d["size"])} {E(d["layout"])} engine'
         fig = (f'<figure class="engph"><img src="{E(ph["src"])}"{rset(ph["src"], "(max-width: 700px) 100vw, 680px")} width="{ph["w"]}" height="{ph["h"]}" alt="{alt}" loading="eager">' + YSL.info(_SCE_AI) + '</figure>')
-    body = (f'<article class="study tr2 eng2 sce"><p class="kicker">' + ('<a href="/engines/supercars/">Supercar engines</a> · <a href="/supercars/">Supercars</a>' if g == 'super' else '<a href="/engines/performance/">Performance engines</a> · <a href="/cars/?type=performance">Performance cars</a>') + '</p>'
+    body = (f'<article class="study tr2 eng2 sce"><p class="kicker">' + (f'<a href="/engines/">Engines</a> › <a href="/engines/?q={E(mk.lower())}">{E(mk)} engines</a>' if _main else '<a href="/engines/supercars/">Supercar engines</a> · <a href="/supercars/">Supercars</a>' if g == 'super' else '<a href="/engines/performance/">Performance engines</a> · <a href="/cars/?type=performance">Performance cars</a>') + '</p>'
             + f'<h1>{E(nm)} engine reliability by year</h1><p class="tra">{ans1} <button type="button" class="shl" data-share="{E(f"{nm} engine reliability, year by year. Free:")}">Share ↗</button></p>{chips}'
             + ''.join(sec) + '</article>')
     title = next(t_ for t_ in (f'{nm} Engine Reliability by Year, Specs & Cars', f'{nm} Engine: Reliability by Year & Specs', f'{nm} Engine Reliability', f'{nm} Engine') if len(t_) <= 65)
-    desc = (f'The {_shtml.unescape(nm)} ({_shtml.unescape(d["size"])} {d["asp"]} {d["layout"]}) in the {_sce_cars_txt(d)}, {y0}-{y1}: YouTube owner score by year, '
+    desc = (f'The {_shtml.unescape(nm)} ({_shtml.unescape(d["size"])} {d["asp"]} {d["layout"]}) in the ' + (', '.join('Ford F-150' if fid == 'ford-f-series' else nm_ for fid, nm_, _y, _s in _mu[:4]) + f' and {_sce_cars_txt(d)}, {_ylo}-{_yhi}' if _main else f'{_sce_cars_txt(d)}, {y0}-{y1}') + ': YouTube owner score by year, '
             f'{len(R)} recalls, {t["n"]} repair notes and every US version.')
     ld = [faq_ld([(q, '', _shtml.unescape(a)) for q, a in faq])]
     if ph:
