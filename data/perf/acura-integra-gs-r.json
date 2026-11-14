@@ -1,0 +1,485 @@
+{
+ "slug": "acura-integra-gs-r",
+ "name": "Acura Integra GS-R (third generation)",
+ "short": "Integra",
+ "make": "Acura",
+ "page": "/jdm/acura-integra-gs-r/",
+ "jdm": true,
+ "focus": "dc2",
+ "star": "dc2-gsr",
+ "h1": "Acura Integra GS-R (DC2, 1994–2001): specs, B18C VTEC engine and what owners say",
+ "nhtsa": {
+  "make": "ACURA",
+  "models": [
+   "INTEGRA"
+  ],
+  "note": "NHTSA files every Integra under INTEGRA, so these counts include the LS, GS, RS and Type R and both body styles, not just the GS-R."
+ },
+ "us": {
+  "sold": true,
+  "x": "Sold new in the US for model years 1994 to 2001. The Type R was sold for 1997 and 1998 and again for 2000 and 2001.",
+  "src": [
+   "ac-her",
+   "ac-tl",
+   "hag"
+  ]
+ },
+ "films": [
+  {
+   "film": "The Fast and the Furious (2001)",
+   "who": "Edwin",
+   "x": "Edwin races Brian and Dom in the film's opening street race in a 1996 Integra GS-R. It was the production's number one hero car, rented from the customizer who built it.",
+   "src": [
+    "pet-edwin",
+    "ma-edwin",
+    "ac-her"
+   ]
+  },
+  {
+   "film": "The Fast and the Furious (2001)",
+   "who": "Mia Toretto",
+   "x": "Mia drives a blue 1994 Integra sedan with a Japanese-market front end and takes Brian out in it after a dinner date to show off her driving. Reports differ on the trim: some call it a GS-R, CarThrottle says it was a lower-spec LS.",
+   "src": [
+    "cb-mia",
+    "ct-mia",
+    "dl-ff"
+   ]
+  }
+ ],
+ "related": [
+  {
+   "u": "/cars/acura-integra/",
+   "t": "Acura Integra (2023 on)"
+  }
+ ],
+ "topics_extra": {
+  "Oil burning": "oil consumption|burn(s|ing)? oil|using oil|blue smoke",
+  "Timing belt": "timing belt|water pump",
+  "Theft": "\\bstolen\\b|\\btheft\\b|steal",
+  "Gearbox / synchros": "synchros?|grind(s|ing)? (into|in)? ?(2nd|second|3rd|third|gear)|pops? out of gear",
+  "Rust": "\\brust(ed|ing|y)?\\b",
+  "VTEC not engaging": "vtec (not|won.?t|doesn.?t) (engag|kick)|vtec solenoid|vtec pressure switch"
+ },
+ "gens": [
+  {
+   "id": "dc2",
+   "code": "DC2",
+   "years": "1994–2001",
+   "y0": 1994,
+   "y1": 2001,
+   "engine": "B18C1",
+   "body": "3-door coupe / 4-door sedan",
+   "tag": "1.8-liter B18C1 DOHC VTEC, 170 hp at 7,600 rpm and an 8,000 rpm redline. Type R: 195 hp.",
+   "variants": [
+    {
+     "id": "dc2-gsr",
+     "name": "Integra GS-R",
+     "years": "1994–2001",
+     "star": true,
+     "hp": {
+      "v": 170,
+      "src": [
+       "h94spec",
+       "h01spec",
+       "ac-her"
+      ],
+      "note": "at 7,600 rpm"
+     },
+     "tq": {
+      "v": 128,
+      "src": [
+       "h94spec",
+       "h01spec"
+      ],
+      "note": "lb-ft at 6,200 rpm"
+     },
+     "z60": {
+      "v": 6.9,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "5-speed manual, front-drive",
+      "src": [
+       "h94spec",
+       "h01spec",
+       "wpi"
+      ],
+      "note": "close ratios"
+     },
+     "weight": {
+      "v": "2,667 lb",
+      "src": [
+       "h94spec"
+      ],
+      "note": "1994 coupe; sedan 2,765 lb"
+     },
+     "price": {
+      "v": "$19,440",
+      "src": [
+       "tac94c",
+       "tac94s"
+      ],
+      "note": "1994 coupe base; sedan $19,980"
+     },
+     "what": "The VTEC engine with an 8,000 rpm redline, offered as a coupe and, for the first time, a sedan.",
+     "what_src": [
+      "h94spec",
+      "ac-tl"
+     ]
+    },
+    {
+     "id": "dc2-r",
+     "name": "Integra Type R",
+     "years": "1997–1998, 2000–2001",
+     "hp": {
+      "v": 195,
+      "src": [
+       "h00rpt",
+       "ac-her"
+      ],
+      "note": "at 8,000 rpm"
+     },
+     "tq": {
+      "v": 130,
+      "src": [
+       "h00rpt",
+       "ac-her"
+      ],
+      "note": "lb-ft at 7,300 rpm"
+     },
+     "z60": {
+      "v": 6.6,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "5-speed manual, front-drive",
+      "src": [
+       "h00rpt",
+       "h97r",
+       "hag"
+      ],
+      "note": "close ratios, helical limited-slip differential"
+     },
+     "weight": {
+      "v": "2,643 lb",
+      "src": [
+       "hag",
+       "ac-her"
+      ],
+      "note": "Hagerty; Acura says 33 lb lighter than a GS-R"
+     },
+     "price": {
+      "v": "$23,100",
+      "src": [
+       "ac-her"
+      ],
+      "note": "1997"
+     },
+     "what": "Its own hand-built B18C5 engine (ported head, 10.6:1 compression), a seam-welded body and a limited-slip front differential. About 2,600 were sold in North America each year.",
+     "what_src": [
+      "ac-her",
+      "h00rpt",
+      "hag",
+      "wpb"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "B18C1": {
+   "name": "Honda B18C1",
+   "what": "1.8-liter inline-4, DOHC VTEC, naturally aspirated",
+   "study": "honda-b18c",
+   "page": "/engines/honda-b18c/",
+   "yt": [
+    "scy",
+    "honda-b18c"
+   ],
+   "facts": [
+    [
+     "Layout",
+     "Inline-4, DOHC 16-valve with VTEC",
+     [
+      "h94spec",
+      "h98spec"
+     ]
+    ],
+    [
+     "Output",
+     "170 hp at 7,600 rpm, 128 lb-ft at 6,200 rpm",
+     [
+      "h94spec",
+      "h01spec"
+     ]
+    ],
+    [
+     "Size",
+     "1,797 cc, 81 x 87.2 mm bore x stroke",
+     [
+      "h94spec",
+      "h01spec"
+     ]
+    ],
+    [
+     "Redline",
+     "8,000 rpm",
+     [
+      "h94spec",
+      "h01spec",
+      "hag"
+     ]
+    ],
+    [
+     "Compression",
+     "10.0:1",
+     [
+      "h94spec",
+      "h01spec"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Oil burning on hard-driven cars",
+     "kind": "Outlet report",
+     "rx": "oil consumption|burn(s|ing)? oil|using oil|blue smoke|smok(e|ing) from (the )?(tail|exhaust)",
+     "x": "Hagerty's buyer's guide says many of these high-revving engines were driven hard and can burn oil. Look for tailpipe smoke after a long idle and check the dipstick.",
+     "fix": "",
+     "src": [
+      "hag"
+     ]
+    },
+    {
+     "t": "Timing belt and water pump",
+     "kind": "Outlet report",
+     "rx": "timing belt|water pump",
+     "x": "The owners and experts in Hagerty's buyer's guide say the timing belt and water pump should be replaced together every 90,000 miles.",
+     "fix": "Replace the timing belt and water pump together at 90,000 miles.",
+     "src": [
+      "hag"
+     ]
+    },
+    {
+     "t": "Theft and swapped engines",
+     "kind": "Outlet report",
+     "rx": "\\bstolen\\b|\\btheft\\b|steal|engine swap|swapped",
+     "x": "For a time the 1999 Integra was the most stolen car in America, per Hagerty, and the 1994 Integra was eighth on the NICB's 2010 list. Some GS-R and Type R cars have had their VTEC engines stolen or swapped for non-VTEC ones.",
+     "fix": "",
+     "src": [
+      "hag",
+      "nicb10"
+     ]
+    }
+   ],
+   "photo": {
+    "src": "/assets/engines/honda-b18c-1-8-l-inline-4-engine.webp",
+    "w": 1200,
+    "h": 1211,
+    "ai": true
+   }
+  },
+  "B18C5": {
+   "name": "Honda B18C5",
+   "what": "1.8-liter inline-4, DOHC VTEC, hand-built (Type R)",
+   "study": "honda-b18c",
+   "page": "/engines/honda-b18c/",
+   "yt": [
+    "scy",
+    "honda-b18c"
+   ],
+   "facts": [
+    [
+     "Output",
+     "195 hp at 8,000 rpm, 130 lb-ft at 7,300 rpm",
+     [
+      "h00rpt"
+     ]
+    ],
+    [
+     "Redline",
+     "8,400 rpm",
+     [
+      "hag"
+     ]
+    ],
+    [
+     "Compression",
+     "10.6:1",
+     [
+      "h00rpt",
+      "hag"
+     ]
+    ],
+    [
+     "Build",
+     "Hand-built, intake and exhaust ports polished by hand",
+     [
+      "ac-her",
+      "h00rpt"
+     ]
+    ],
+    [
+     "Size",
+     "1,797 cc, 81 x 87.2 mm bore x stroke",
+     [
+      "wpb"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Oil burning on hard-driven cars",
+     "kind": "Outlet report",
+     "rx": "oil consumption|burn(s|ing)? oil|using oil|blue smoke|smok(e|ing) from (the )?(tail|exhaust)",
+     "x": "Hagerty's buyer's guide says many of these high-revving engines were driven hard and can burn oil. Look for tailpipe smoke after a long idle and check the dipstick.",
+     "fix": "",
+     "src": [
+      "hag"
+     ]
+    },
+    {
+     "t": "Timing belt and water pump",
+     "kind": "Outlet report",
+     "rx": "timing belt|water pump",
+     "x": "The owners and experts in Hagerty's buyer's guide say the timing belt and water pump should be replaced together every 90,000 miles.",
+     "fix": "Replace the timing belt and water pump together at 90,000 miles.",
+     "src": [
+      "hag"
+     ]
+    },
+    {
+     "t": "Theft and swapped engines",
+     "kind": "Outlet report",
+     "rx": "\\bstolen\\b|\\btheft\\b|steal|engine swap|swapped",
+     "x": "For a time the 1999 Integra was the most stolen car in America, per Hagerty, and the 1994 Integra was eighth on the NICB's 2010 list. Some GS-R and Type R cars have had their VTEC engines stolen or swapped for non-VTEC ones.",
+     "fix": "",
+     "src": [
+      "hag",
+      "nicb10"
+     ]
+    }
+   ],
+   "photo": {
+    "src": "/assets/engines/honda-b18c-1-8-l-inline-4-engine.webp",
+    "w": 1200,
+    "h": 1211,
+    "ai": true
+   }
+  }
+ },
+ "compare": [],
+ "sources": {
+  "pet-edwin": {
+   "t": "Petersen Automotive Museum: 1996 Acura Integra GS-R, The Fast and The Furious (2001)",
+   "u": "https://petersen.org/pages/petersen-vehicle/copy-of-copy-of-1963-chevrolet-corvette-grand-sport-custom-picture-vehicle-by-mongoose-motorsports",
+   "k": "outlet"
+  },
+  "ma-edwin": {
+   "t": "Motor Authority: Deep dive: Edwin's Acura Integra GS-R from The Fast and the Furious (Sean Szymkowski, Feb 2, 2020)",
+   "u": "https://www.motorauthority.com/news/1124330_deep-dive-edwin-s-acura-integra-gs-r-from-the-fast-and-the-furious",
+   "k": "outlet"
+  },
+  "dl-ff": {
+   "t": "Driving Line: The cars that introduced us to the Fast & Furious family (Philip Cheng, Apr 11, 2017)",
+   "u": "https://www.drivingline.com/articles/the-cars-that-introduced-us-to-the-fast-furious-family/",
+   "k": "outlet"
+  },
+  "ct-mia": {
+   "t": "CarThrottle: Mia Toretto ties the knot with Fast and Furious themed wedding (Charlie Harvey, updated Oct 10, 2024)",
+   "u": "https://www.carthrottle.com/news/mia-toretto-ties-knot-fast-and-furious-themed-wedding",
+   "k": "outlet"
+  },
+  "cb-mia": {
+   "t": "CarBuzz: Mia Toretto gets married in her 1994 Acura Integra (Sep 9, 2022)",
+   "u": "https://carbuzz.com/news/mia-toretto-gets-married-in-her-1994-acura-integra",
+   "k": "outlet"
+  },
+  "ac-her": {
+   "t": "Acura: Acura Integra heritage and milestones (Aug 13, 2021)",
+   "u": "https://acuranews.com/en-US/releases/acura-integra-heritage-and-milestones",
+   "k": "Acura"
+  },
+  "ac-tl": {
+   "t": "Acura: Acura Integra timeline and milestones (Apr 11, 2023)",
+   "u": "https://acuranews.com/en-US/releases/acura-integra-timeline-and-milestones",
+   "k": "Acura"
+  },
+  "h94spec": {
+   "t": "Acura: 1994 Acura Integra specifications (Nov 29, 1993)",
+   "u": "https://acuranews.com/en-US/releases/release-bb9bc17e55dea0697a6de8004c34ca1f-1994-acura-integra-specifications",
+   "k": "Acura"
+  },
+  "h98spec": {
+   "t": "Acura: 1998 Acura Integra specifications (Apr 29, 1997)",
+   "u": "https://hondanews.com/en-US/releases/release-25be7a7ab7e8ff73a28066004c34c967-1998-acura-integra-specifications",
+   "k": "Acura"
+  },
+  "h01spec": {
+   "t": "Acura: 2001 Acura Integra specifications (Jan 3, 2001)",
+   "u": "https://hondanews.com/en-US/releases/release-eeea4d9b6f582c23005184004c34c8a7-2001-acura-integra-specifications",
+   "k": "Acura"
+  },
+  "h97r": {
+   "t": "Acura: 1997 Acura Integra Type R introduction (Aug 22, 1996)",
+   "u": "https://hondanews.com/en-US/releases/release-60d8ae6f7e9de0fb2bf85e004c34c9a8-1997-acura-integra-type-r-introduction",
+   "k": "Acura"
+  },
+  "h00rpt": {
+   "t": "Acura: 2000 Acura Integra Type R powertrain (Apr 10, 1999)",
+   "u": "https://hondanews.com/en-US/releases/release-60c2e7e09e2fb7c5be99c9004c34c93e-2000-acura-integra-type-r-powertrain",
+   "k": "Acura"
+  },
+  "tac94c": {
+   "t": "The Auto Channel: 1994 Acura Integra GS-R Sport Coupe review (Bill Russ)",
+   "u": "https://www.theautochannel.com/vehicles/new/reviews/wk9349.html",
+   "k": "outlet"
+  },
+  "tac94s": {
+   "t": "The Auto Channel: 1994 Acura Integra GS-R Sports Sedan review (Bill Russ)",
+   "u": "https://theautochannel.com/vehicles/new/reviews/wk9410.html",
+   "k": "outlet"
+  },
+  "z60": {
+   "t": "0-60specs.com: Acura Integra 0-60 runs by magazine (Car and Driver, MotorTrend, Road & Track)",
+   "u": "https://www.0-60specs.com/acura-integra-0-60-times/",
+   "k": "magazine tests, aggregated"
+  },
+  "hag": {
+   "t": "Hagerty: Your handy 1997–2001 (DC2) Acura Integra Type R buyer’s guide (Craig Fitzgerald, Jun 23, 2023)",
+   "u": "https://www.hagerty.com/media/buying-and-selling/your-handy-1997-01-acura-integra-type-r-buyers-guide/",
+   "k": "outlet"
+  },
+  "wpi": {
+   "t": "Wikipedia: Acura Integra",
+   "u": "https://en.wikipedia.org/wiki/Acura_Integra",
+   "k": "Wikipedia"
+  },
+  "wpb": {
+   "t": "Wikipedia: Honda B engine",
+   "u": "https://en.wikipedia.org/wiki/Honda_B_engine",
+   "k": "Wikipedia"
+  },
+  "nicb10": {
+   "t": "Insurance Journal: Top 10 most stolen vehicles in U.S. (NICB 2010 data, Aug 3, 2011)",
+   "u": "https://www.insurancejournal.com/news/national/2011/08/03/209303.htm",
+   "k": "outlet"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-acura-integra-gs-r"
+}

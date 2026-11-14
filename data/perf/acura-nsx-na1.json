@@ -1,0 +1,577 @@
+{
+ "slug": "acura-nsx-na1",
+ "name": "Acura NSX (first generation)",
+ "short": "NSX",
+ "make": "Acura",
+ "page": "/jdm/acura-nsx-na1/",
+ "jdm": true,
+ "focus": "na2",
+ "star": "na2-97",
+ "h1": "Acura NSX (NA1/NA2): specs, VTEC V6 and what owners say",
+ "nhtsa": {
+  "make": "ACURA",
+  "models": [
+   "NSX",
+   "NSX-T"
+  ],
+  "note": "NHTSA files some cars under NSX-T (the targa). Its model list has no NSX for several years (1993, 1995-2000, 2004), so those show no data."
+ },
+ "us": {
+  "sold": true,
+  "x": "Sold new in the US as the Acura NSX for the 1991 to 2005 model years.",
+  "src": [
+   "feg",
+   "hag2"
+  ]
+ },
+ "films": [
+  {
+   "film": "2 Fast 2 Furious (2003)",
+   "who": "Tej Parker",
+   "x": "Tej Parker's car in the film is a first-generation NSX.",
+   "src": [
+    "dlfam",
+    "cx"
+   ]
+  }
+ ],
+ "related": [
+  {
+   "u": "/supercars/acura-nsx/",
+   "t": "Acura NSX, second generation (2017-2022)"
+  },
+  {
+   "u": "/engines/honda-c30a-c32b/",
+   "t": "Its engine"
+  }
+ ],
+ "topics_extra": {
+  "Timing belt": "timing belt",
+  "Gearbox snap ring": "snap ?ring|countershaft",
+  "Coolant tank": "coolant (reservoir|tank|leak)|expansion tank",
+  "ABS unit": "\\babs\\b",
+  "Aluminum body repair": "alumin(i)?um (body|panel|repair)|body repair"
+ },
+ "gens": [
+  {
+   "id": "na1",
+   "code": "NA1",
+   "years": "1991–1996",
+   "y0": 1991,
+   "y1": 1996,
+   "engine": "C30A",
+   "body": "Coupe; targa (NSX-T) from 1995",
+   "tag": "3.0-liter C30A V6 with VTEC and titanium rods, 270 hp, 8,000 rpm redline.",
+   "variants": [
+    {
+     "id": "na1-mt",
+     "name": "NSX",
+     "years": "1991–1996",
+     "hp": {
+      "v": 270,
+      "src": [
+       "hn91",
+       "hag1"
+      ],
+      "note": "at 7,100 rpm"
+     },
+     "tq": {
+      "v": 210,
+      "src": [
+       "hn91"
+      ],
+      "note": "lb-ft at 5,300 rpm"
+     },
+     "z60": {
+      "v": 5.2,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "5-speed manual, rear-drive",
+      "src": [
+       "hn91"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,010 lb",
+      "src": [
+       "hn91"
+      ],
+      "note": "1991 coupe, 1,365 kg"
+     },
+     "price": {
+      "v": "about $60,000",
+      "src": [
+       "sg"
+      ],
+      "note": "1991 starting price"
+     }
+    },
+    {
+     "id": "na1-at",
+     "name": "NSX automatic",
+     "years": "1991–1996",
+     "hp": {
+      "v": 252,
+      "src": [
+       "hn91",
+       "hag1"
+      ],
+      "note": "at 6,600 rpm"
+     },
+     "tq": {
+      "v": 210,
+      "src": [
+       "hn91"
+      ],
+      "note": "lb-ft at 5,300 rpm"
+     },
+     "z60": {
+      "v": 5.8,
+      "who": "MotorTrend",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "4-speed automatic, rear-drive",
+      "src": [
+       "hn91"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,098 lb",
+      "src": [
+       "hn91"
+      ],
+      "note": "1991 coupe, 1,405 kg"
+     },
+     "what": "Milder cam timing for the automatic: 252 hp and a 7,500 rpm redline.",
+     "what_src": [
+      "hn91",
+      "wc"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "na2",
+   "code": "NA2",
+   "years": "1997–2005",
+   "y0": 1997,
+   "y1": 2005,
+   "engine": "C32B",
+   "body": "Coupe or targa (NSX-T); targa only in the US from 2002",
+   "tag": "3.2-liter C32B V6, 290 hp, 6-speed manual. Fixed xenon headlights from 2002.",
+   "variants": [
+    {
+     "id": "na2-97",
+     "name": "NSX",
+     "years": "1997–2001",
+     "star": true,
+     "hp": {
+      "v": 290,
+      "src": [
+       "hn98"
+      ],
+      "note": "at 7,100 rpm"
+     },
+     "tq": {
+      "v": 224,
+      "src": [
+       "hn98"
+      ],
+      "note": "lb-ft at 5,500 rpm"
+     },
+     "z60": {
+      "v": 4.8,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual, rear-drive",
+      "src": [
+       "hn98",
+       "hag2"
+      ],
+      "note": "limited-slip added for 1997"
+     },
+     "weight": {
+      "v": "3,066 lb",
+      "src": [
+       "hn98"
+      ],
+      "note": "1998 coupe; NSX-T 3,160 lb"
+     },
+     "what": "Engine grew to 3.2 liters: 20 more hp and 15 more lb-ft, a sixth gear, bigger brakes and a limited-slip diff.",
+     "what_src": [
+      "hag2",
+      "hn98"
+     ]
+    },
+    {
+     "id": "na2-02",
+     "name": "NSX",
+     "years": "2002–2005",
+     "hp": {
+      "v": 290,
+      "src": [
+       "hn05"
+      ],
+      "note": "at 7,100 rpm"
+     },
+     "tq": {
+      "v": 224,
+      "src": [
+       "hn05"
+      ],
+      "note": "lb-ft at 5,500 rpm"
+     },
+     "z60": {
+      "v": 5.0,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "top": {
+      "v": "175 mph",
+      "src": [
+       "hag2",
+       "wnsx"
+      ],
+      "note": "Acura figure"
+     },
+     "trans": {
+      "v": "6-speed manual, rear-drive",
+      "src": [
+       "hn05"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,153 lb",
+      "src": [
+       "hn05"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "about $90,000",
+      "src": [
+       "hag2"
+      ],
+      "note": "2002"
+     },
+     "what": "Fixed xenon headlights replace the pop-ups, stiffer springs, a thicker anti-roll bar and wider rear tires. Targa only in the US.",
+     "what_src": [
+      "hag2",
+      "wnsx"
+     ]
+    },
+    {
+     "id": "na2-at",
+     "name": "NSX automatic",
+     "years": "1997–2005",
+     "hp": {
+      "v": 252,
+      "src": [
+       "hn98",
+       "hn05"
+      ],
+      "note": "at 6,600 rpm, 3.0-liter C30A"
+     },
+     "tq": {
+      "v": 210,
+      "src": [
+       "hn98",
+       "hn05"
+      ],
+      "note": "lb-ft at 5,300 rpm"
+     },
+     "z60": {
+      "v": null,
+      "who": "",
+      "src": [],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "4-speed automatic, rear-drive",
+      "src": [
+       "hn98",
+       "hn05"
+      ],
+      "note": "SportShift"
+     },
+     "weight": {
+      "v": "3,110 lb",
+      "src": [
+       "hn98"
+      ],
+      "note": "1998 coupe"
+     },
+     "what": "Keeps the 3.0-liter C30A; the 3.2 came only with the manual.",
+     "what_src": [
+      "hn98",
+      "hag2"
+     ],
+     "engine": "C30A"
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "C30A": {
+   "name": "Honda C30A",
+   "what": "3.0-liter V6, VTEC, naturally aspirated",
+   "study": "honda-c30a-c32b",
+   "page": "/engines/honda-c30a-c32b/",
+   "yt": [
+    "scy",
+    "honda-c30a-c32b"
+   ],
+   "facts": [
+    [
+     "Layout",
+     "V6, DOHC 24-valve, VTEC, aluminum block with cast-iron liners",
+     [
+      "hn91"
+     ]
+    ],
+    [
+     "Output",
+     "270 hp at 7,100 rpm, 210 lb-ft (manual); 252 hp automatic",
+     [
+      "hn91"
+     ]
+    ],
+    [
+     "Bore x stroke",
+     "90 x 78 mm, 2,977 cc",
+     [
+      "hn91",
+      "wc"
+     ]
+    ],
+    [
+     "Connecting rods",
+     "Titanium",
+     [
+      "hn91"
+     ]
+    ],
+    [
+     "Redline",
+     "8,000 rpm (manual), 7,500 rpm (automatic)",
+     [
+      "hn91"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Timing belt (interference engine)",
+     "kind": "Outlet report",
+     "rx": "timing belt",
+     "x": "Hagerty says the belt needs replacing every 90,000 miles. The C engines are interference designs, so a snapped belt can let valves hit pistons.",
+     "fix": "Replace the timing belt on schedule.",
+     "src": [
+      "hag1",
+      "wc"
+     ]
+    },
+    {
+     "t": "Gearbox snap ring (1991–1992)",
+     "kind": "Outlet report",
+     "rx": "snap ?ring|countershaft",
+     "x": "Hagerty says some 1991–1992 five-speed cars had bad transmission countershaft snap rings. Ask for proof it was fixed.",
+     "fix": "Replace the snap ring.",
+     "src": [
+      "hag1"
+     ]
+    },
+    {
+     "t": "Early ABS unit",
+     "kind": "Outlet report",
+     "rx": "\\babs\\b",
+     "x": "Hagerty says some early cars had problems with the ABS control unit.",
+     "fix": "",
+     "src": [
+      "hag1"
+     ]
+    },
+    {
+     "t": "Coolant reservoir leaks",
+     "kind": "Outlet report",
+     "rx": "coolant (reservoir|tank|leak)|expansion tank",
+     "x": "Hagerty says the coolant reservoirs had some leak issues.",
+     "fix": "",
+     "src": [
+      "hag1"
+     ]
+    }
+   ],
+   "photo": {
+    "src": "/assets/engines/honda-c30a-c32b-3-2-l-v6-engine.webp",
+    "w": 1200,
+    "h": 1034,
+    "ai": true
+   }
+  },
+  "C32B": {
+   "name": "Honda C32B",
+   "what": "3.2-liter V6, VTEC, naturally aspirated",
+   "study": "honda-c30a-c32b",
+   "page": "/engines/honda-c30a-c32b/",
+   "yt": [
+    "scy",
+    "honda-c30a-c32b"
+   ],
+   "facts": [
+    [
+     "Output",
+     "290 hp at 7,100 rpm, 224 lb-ft at 5,500 rpm",
+     [
+      "hn98",
+      "hn05"
+     ]
+    ],
+    [
+     "Bore x stroke",
+     "93 x 78 mm, 3,179 cc",
+     [
+      "hn98",
+      "wc"
+     ]
+    ],
+    [
+     "Cylinders",
+     "FRM liners in an aluminum block",
+     [
+      "hn98",
+      "wc"
+     ]
+    ],
+    [
+     "Redline",
+     "8,000 rpm",
+     [
+      "hn98"
+     ]
+    ],
+    [
+     "Gearbox",
+     "6-speed manual only",
+     [
+      "hn98",
+      "wc"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Timing belt (interference engine)",
+     "kind": "Outlet report",
+     "rx": "timing belt",
+     "x": "The C engines are interference designs, so a snapped timing belt can let valves hit pistons. Hagerty gives a 90,000-mile belt interval for the earlier cars.",
+     "fix": "Replace the timing belt on schedule.",
+     "src": [
+      "wc",
+      "hag1"
+     ]
+    }
+   ],
+   "photo": {
+    "src": "/assets/engines/honda-c30a-c32b-3-2-l-v6-engine.webp",
+    "w": 1200,
+    "h": 1034,
+    "ai": true
+   }
+  }
+ },
+ "compare": [],
+ "sources": {
+  "hn91": {
+   "t": "Honda: 1991 Acura NSX specifications (Jun 1990)",
+   "u": "https://hondanews.com/en-US/releases/release-ff6633ebcc698302413a3d004c34ca74-1991-acura-nsx-specifications",
+   "k": "Honda"
+  },
+  "hn98": {
+   "t": "Honda: 1998 Acura NSX specifications (Apr 1997)",
+   "u": "https://hondanews.com/en-US/releases/release-a1d9fc2d0b2003addd2b73004c34c981-1998-acura-nsx-specifications",
+   "k": "Honda"
+  },
+  "hn05": {
+   "t": "Honda: 2005 Acura NSX specifications (Sep 2004)",
+   "u": "https://hondanews.com/en-US/releases/release-1fdf9c06789eb65adc31ea004c34c37e-2005-acura-nsx-specifications",
+   "k": "Honda"
+  },
+  "hag1": {
+   "t": "Hagerty: Buyer's guide, 1991-96 Acura NSX (Stefan Lombard, Jul 2012)",
+   "u": "https://www.hagerty.com/media/car-profiles/buyers-guide-199196-acura-nsx/",
+   "k": "outlet"
+  },
+  "hag2": {
+   "t": "Hagerty: Acura's 1997-2005 NSX may have plateaued, but its future is secure (Andrew Newton, Oct 2020)",
+   "u": "https://www.hagerty.com/media/buying-and-selling/acuras-1997-2005-nsx-may-have-plateaued-but-its-future-is-secure/",
+   "k": "outlet"
+  },
+  "sg": {
+   "t": "SlashGear: What did an OG NSX cost new in 1991, and what's one worth today? (Travis Langness, Aug 2025)",
+   "u": "https://www.slashgear.com/1573086/honda-nsx-acura-original-cost-what-its-worth-today",
+   "k": "outlet"
+  },
+  "wnsx": {
+   "t": "Wikipedia: Honda NSX (first generation)",
+   "u": "https://en.wikipedia.org/wiki/Honda_NSX_(first_generation)",
+   "k": "Wikipedia"
+  },
+  "wc": {
+   "t": "Wikipedia: Honda C engine",
+   "u": "https://en.wikipedia.org/wiki/Honda_C_engine",
+   "k": "Wikipedia"
+  },
+  "feg": {
+   "t": "fueleconomy.gov: 1991-2005 Acura NSX listings (EPA)",
+   "u": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=1990&year2=2006&make=Acura&baseModel=NSX&srchtyp=ymm&pageno=1&rowLimit=50",
+   "k": "EPA"
+  },
+  "z60": {
+   "t": "0-60specs.com: Acura NSX 0-60 runs by magazine (Car and Driver, MotorTrend)",
+   "u": "https://www.0-60specs.com/acura-nsx-0-60-times/",
+   "k": "magazine tests, aggregated"
+  },
+  "dlfam": {
+   "t": "Driving Line: The cars that introduced us to the Fast & Furious family (Philip Cheng, Apr 2017)",
+   "u": "https://www.drivingline.com/articles/the-cars-that-introduced-us-to-the-fast-furious-family/",
+   "k": "outlet"
+  },
+  "cx": {
+   "t": "Complex: The complete history of every important car in the Fast & Furious franchise (May 2013)",
+   "u": "https://www.complex.com/sports/a/janaki-jitchotvisut/complete-history-fast-and-furious-cars",
+   "k": "outlet"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-acura-nsx-na1"
+}

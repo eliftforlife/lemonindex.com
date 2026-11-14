@@ -1,0 +1,437 @@
+{
+ "slug": "nissan-skyline-gt-r-r34",
+ "name": "Nissan Skyline GT-R (R34)",
+ "short": "Skyline GT-R",
+ "make": "Nissan",
+ "page": "/jdm/nissan-skyline-gt-r-r34/",
+ "jdm": true,
+ "focus": "bnr34",
+ "star": "r34-vspec",
+ "h1": "Nissan Skyline GT-R R34 (BNR34): specs, RB26 engine and what owners say",
+ "us": {
+  "sold": false,
+  "x": "Never sold new in the US. The first R34 GT-Rs became legal to import under the 25-year rule in January 2024, each car once it is 25 years old by its month of build. Before that, a few came in under the Show or Display exemption.",
+  "src": [
+   "drive34",
+   "drive34b"
+  ]
+ },
+ "films": [
+  {
+   "film": "2 Fast 2 Furious (2003)",
+   "who": "Brian O'Conner",
+   "x": "Brian O'Conner's silver R34 GT-R with blue stripes, which he races in the film's opening street race. The hero car was a real GT-R lent by the film's technical advisor.",
+   "src": [
+    "wp2f2f",
+    "jal34",
+    "ma34"
+   ]
+  }
+ ],
+ "related": [
+  {
+   "u": "/jdm/nissan-skyline-gt-r-r33/",
+   "t": "Skyline GT-R R33"
+  },
+  {
+   "u": "/supercars/nissan-gt-r/",
+   "t": "Nissan GT-R (R35, sold in the US)"
+  }
+ ],
+ "topics_extra": {
+  "Turbos": "ceramic|turbo (failure|failed|blew|blown|whine|noise)|turbine wheel",
+  "Coil packs / misfire": "coil ?packs?|misfir",
+  "ATTESA all-wheel drive": "attesa|awd (fault|light|pump)|4wd (light|fault)",
+  "Gearbox": "synchros?|grind(s|ing)? (into|in)? ?(gear|first|second|2nd|1st)|pops? out of (gear|first|1st)",
+  "HICAS rear steer": "hicas",
+  "Rust": "\\brust(ed|ing|y)?\\b|strut tops?"
+ },
+ "gens": [
+  {
+   "id": "bnr34",
+   "code": "R34 (BNR34)",
+   "years": "1999–2002",
+   "y0": 1999,
+   "y1": 2002,
+   "engine": "RB26DETT",
+   "body": "Coupe",
+   "tag": "2.6-liter twin-turbo RB26DETT, 280 PS (276 hp), 6-speed Getrag, all-wheel drive. Japan only.",
+   "variants": [
+    {
+     "id": "r34-gtr",
+     "name": "Skyline GT-R",
+     "years": "1999–2002",
+     "hp": {
+      "v": 276,
+      "src": [
+       "nh34",
+       "ph34"
+      ],
+      "note": "280 PS at 6,800 rpm, Japan’s gentlemen’s agreement figure (JDM)"
+     },
+     "tq": {
+      "v": 289,
+      "src": [
+       "nh34",
+       "ph34"
+      ],
+      "note": "lb-ft at 4,400 rpm (392 Nm, JDM)"
+     },
+     "z60": {
+      "v": null,
+      "who": "",
+      "src": [],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual, all-wheel drive",
+      "src": [
+       "wpgtr"
+      ],
+      "note": "Getrag; ATTESA E-TS with a mechanical rear differential"
+     },
+     "weight": {
+      "v": "1,560 kg (3,439 lb)",
+      "src": [
+       "wpgtr",
+       "ph34"
+      ],
+      "note": "curb, JDM"
+     }
+    },
+    {
+     "id": "r34-vspec",
+     "name": "Skyline GT-R V-spec",
+     "years": "1999–2000",
+     "star": true,
+     "hp": {
+      "v": 276,
+      "src": [
+       "nh34",
+       "ph34"
+      ],
+      "note": "280 PS at 6,800 rpm, Japan’s gentlemen’s agreement figure (JDM)"
+     },
+     "tq": {
+      "v": 289,
+      "src": [
+       "nh34",
+       "ph34"
+      ],
+      "note": "lb-ft at 4,400 rpm (392 Nm, JDM)"
+     },
+     "z60": {
+      "v": null,
+      "who": "",
+      "src": [],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual, all-wheel drive",
+      "src": [
+       "wpgtr"
+      ],
+      "note": "Getrag; ATTESA E-TS Pro with an active rear limited-slip differential"
+     },
+     "what": "Its own aero parts, tuned suspension and the ATTESA E-TS Pro system with an active rear limited-slip differential.",
+     "what_src": [
+      "nh34",
+      "wpgtr"
+     ]
+    },
+    {
+     "id": "r34-vspec2",
+     "name": "Skyline GT-R V-spec II",
+     "years": "2000–2002",
+     "hp": {
+      "v": 276,
+      "src": [
+       "nh34",
+       "ph34"
+      ],
+      "note": "280 PS at 6,800 rpm, Japan’s gentlemen’s agreement figure (JDM)"
+     },
+     "tq": {
+      "v": 289,
+      "src": [
+       "nh34",
+       "ph34"
+      ],
+      "note": "lb-ft at 4,400 rpm (392 Nm, JDM)"
+     },
+     "z60": {
+      "v": null,
+      "who": "",
+      "src": [],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual, all-wheel drive",
+      "src": [
+       "wpgtr"
+      ],
+      "note": "Getrag; ATTESA E-TS Pro"
+     },
+     "weight": {
+      "v": "1,560 kg (3,439 lb)",
+      "src": [
+       "nh34"
+      ],
+      "note": "curb, JDM"
+     },
+     "what": "Replaced the V-spec in October 2000: carbon hood with a NACA duct, aluminum pedals and stiffer suspension.",
+     "what_src": [
+      "nh34",
+      "wpgtr"
+     ]
+    },
+    {
+     "id": "r34-mspec",
+     "name": "Skyline GT-R M-spec",
+     "years": "2001–2002",
+     "hp": {
+      "v": 276,
+      "src": [
+       "nh34",
+       "ph34"
+      ],
+      "note": "280 PS at 6,800 rpm, Japan’s gentlemen’s agreement figure (JDM)"
+     },
+     "tq": {
+      "v": 289,
+      "src": [
+       "nh34",
+       "ph34"
+      ],
+      "note": "lb-ft at 4,400 rpm (392 Nm, JDM)"
+     },
+     "z60": {
+      "v": null,
+      "who": "",
+      "src": [],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual, all-wheel drive",
+      "src": [
+       "wpgtr"
+      ],
+      "note": ""
+     },
+     "what": "Based on the V-spec II, with \"ripple control\" dampers, a revised suspension setup and a leather interior with heated front seats.",
+     "what_src": [
+      "wpgtr"
+     ]
+    },
+    {
+     "id": "r34-nur",
+     "name": "Skyline GT-R Nür (V-spec II Nür, M-spec Nür)",
+     "years": "2002",
+     "hp": {
+      "v": 276,
+      "src": [
+       "nh34n",
+       "wpgtr"
+      ],
+      "note": "280 PS advertised (JDM)"
+     },
+     "tq": {
+      "v": 289,
+      "src": [
+       "nh34n"
+      ],
+      "note": "lb-ft at 4,400 rpm (392 Nm, JDM)"
+     },
+     "z60": {
+      "v": null,
+      "who": "",
+      "src": [],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual, all-wheel drive",
+      "src": [
+       "wpgtr"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "1,580 kg (3,483 lb)",
+      "src": [
+       "nh34n"
+      ],
+      "note": "M-spec Nür, curb"
+     },
+     "what": "The last R34s, built in 2002: an N1-based engine with balanced pistons and rods, and a gold cam cover. Wikipedia counts 1,003 built.",
+     "what_src": [
+      "nh34n",
+      "wpgtr"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "RB26DETT": {
+   "name": "Nissan RB26DETT",
+   "what": "2.6-liter inline-6, twin-turbo",
+   "study": "nissan-rb26dett",
+   "page": "/engines/nissan-rb26dett/",
+   "yt": [
+    "scy",
+    "nissan-rb26dett"
+   ],
+   "facts": [
+    [
+     "Layout",
+     "Inline-6, DOHC 24-valve, iron block, aluminum head, belt-driven cams",
+     [
+      "wprb"
+     ]
+    ],
+    [
+     "Output",
+     "280 PS (276 hp) at 6,800 rpm, 392 Nm (289 lb-ft) at 4,400 rpm in the R34",
+     [
+      "nh34"
+     ]
+    ],
+    [
+     "Bore x stroke",
+     "86 x 73.7 mm, 2,568 cc",
+     [
+      "wprb"
+     ]
+    ],
+    [
+     "Turbos",
+     "Two turbos in parallel with ceramic turbine wheels; the R34 got ball-bearing units",
+     [
+      "wprb"
+     ]
+    ],
+    [
+     "Throttles",
+     "Six individual throttle bodies instead of one",
+     [
+      "wprb"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Coil packs and misfires",
+     "kind": "Outlet report",
+     "rx": "coil ?packs?|misfir",
+     "x": "PistonHeads lists failing coil packs as an R34 weak spot, and names plugs, coil packs and airflow meters as the usual causes of poor running on the R33.",
+     "fix": "",
+     "src": [
+      "ph34",
+      "ph33"
+     ]
+    },
+    {
+     "t": "Split vacuum lines",
+     "kind": "Outlet report",
+     "rx": "vacuum (line|hose|leak)s?|boost leak",
+     "x": "PistonHeads lists splitting vacuum lines as one of the R34 engine weak spots.",
+     "fix": "Replace the vacuum lines.",
+     "src": [
+      "ph34"
+     ]
+    },
+    {
+     "t": "Ceramic turbine wheels",
+     "kind": "Outlet report",
+     "rx": "ceramic|turbine wheel|turbo (failure|failed|blew|blown|shaft)|turbo (whine|noise)",
+     "x": "The stock turbos have ceramic turbine wheels, which Wikipedia says are weak at high boost. PistonHeads warns that overspinning a turbo can break the wheel off its shaft, and that a noisy turbo points to worn bearings.",
+     "fix": "",
+     "src": [
+      "wprb",
+      "ph33"
+     ]
+    },
+    {
+     "t": "Oil pushed past the turbos",
+     "kind": "Outlet report",
+     "rx": "crankcase pressure|oil (in|into) (the )?intake|blow-?by|oil starvation|spun (a )?bearings?|spinning bearings?",
+     "x": "PistonHeads says crankcase pressure can push oil past the turbos into the intake, and too much oil in the head can starve the sump and spin a bearing. It says to change the oil at least every 6,000 miles.",
+     "fix": "",
+     "src": [
+      "ph33"
+     ]
+    }
+   ],
+   "photo": {
+    "src": "/assets/engines/nissan-rb26dett-2-6-l-inline-6-twin-turbo-engine.webp",
+    "w": 1200,
+    "h": 1072,
+    "ai": true
+   }
+  }
+ },
+ "compare": [],
+ "sources": {
+  "wpgtr": {
+   "t": "Wikipedia: Nissan Skyline GT-R",
+   "u": "https://en.wikipedia.org/wiki/Nissan_Skyline_GT-R",
+   "k": "Wikipedia"
+  },
+  "wprb": {
+   "t": "Wikipedia: Nissan RB engine",
+   "u": "https://en.wikipedia.org/wiki/Nissan_RB_engine",
+   "k": "Wikipedia"
+  },
+  "nh34": {
+   "t": "Nissan Heritage Collection: Skyline GT-R V·spec II (2000, BNR34) specifications",
+   "u": "https://www.nissan-global.com/EN/HERITAGE_COLLECTION/280_skyline_gt-r_v-spec_ii.html",
+   "k": "Nissan"
+  },
+  "nh34n": {
+   "t": "Nissan Heritage Collection: Skyline GT-R M·spec Nür (BNR34) specifications",
+   "u": "https://www.nissan-global.com/EN/HERITAGE_COLLECTION/306_skyline_gt-r_m-spec_nur.html",
+   "k": "Nissan"
+  },
+  "ph34": {
+   "t": "PistonHeads: Nissan Skyline GT-R R34 PH used buying guide (Tony Middlehurst, Mar 2020)",
+   "u": "https://www.pistonheads.com/news/ph-buying-guides/nissan-skyline-gt-r-r34--ph-used-buying-guide/42101",
+   "k": "outlet"
+  },
+  "ph33": {
+   "t": "PistonHeads: Nissan Skyline GT-R (R33) PH used buying guide (Tony Middlehurst, Jun 2023)",
+   "u": "https://www.pistonheads.com/news/ph-buying-guides/nissan-skyline-gt-r--ph-used-buying-guide/47311",
+   "k": "outlet"
+  },
+  "drive34": {
+   "t": "The Drive: The R34 Nissan Skyline GT-R is finally legal for U.S. import in January (Nico DeMattia, Dec 2023)",
+   "u": "https://www.thedrive.com/news/brace-yourselves-r34-nissan-skyline-gt-rs-become-legal-to-import-next-year",
+   "k": "outlet"
+  },
+  "drive34b": {
+   "t": "The Drive: Nissan Skyline R34s are legal to import starting today, but hold your horses (May 2023)",
+   "u": "https://www.thedrive.com/news/nissan-skyline-r34s-are-legal-to-import-starting-today-but-hold-your-horses",
+   "k": "outlet"
+  },
+  "wp2f2f": {
+   "t": "Wikipedia: 2 Fast 2 Furious",
+   "u": "https://en.wikipedia.org/wiki/2_Fast_2_Furious",
+   "k": "Wikipedia"
+  },
+  "jal34": {
+   "t": "Jalopnik: All of the Skylines used in 2 Fast 2 Furious were real GT-Rs (Kristen Lee, Sep 2019)",
+   "u": "https://jalopnik.com/all-of-the-skylines-used-in-2-fast-2-furious-were-real-1837745039",
+   "k": "outlet"
+  },
+  "ma34": {
+   "t": "Motor Authority: Brian’s Nissan Skyline R34 GT-R was almost a Dodge Neon SRT-4 in \"2 Fast 2 Furious\" (Sean Szymkowski, Dec 2019)",
+   "u": "https://www.motorauthority.com/news/1124257_brian-s-nissan-skyline-r34-gt-r-was-almost-a-dodge-neon-srt-4-in-2-fast-2-furious",
+   "k": "outlet"
+  }
+ },
+ "yt_study": "car-nissan-skyline-gt-r-r34"
+}

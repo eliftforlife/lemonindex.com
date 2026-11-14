@@ -1,0 +1,308 @@
+{
+ "slug": "honda-civic-coupe-ej",
+ "name": "Honda Civic Coupe (fifth generation)",
+ "short": "Civic Coupe",
+ "make": "Honda",
+ "page": "/jdm/honda-civic-coupe-ej/",
+ "jdm": true,
+ "focus": "ej",
+ "star": "ej-ex",
+ "h1": "Honda Civic Coupe (EJ, 1993–1995): specs, D16Z6 VTEC engine and what owners say",
+ "nhtsa": {
+  "make": "HONDA",
+  "models": [
+   "CIVIC"
+  ],
+  "note": "NHTSA files every Civic under CIVIC, so these counts include the hatchback and sedan of the same years, not just the coupe."
+ },
+ "us": {
+  "sold": true,
+  "x": "Sold new in the US for model years 1993 to 1995. The coupe body came a year after the rest of this Civic generation, which started in 1992.",
+  "src": [
+   "wp5",
+   "dl-coupe"
+  ]
+ },
+ "films": [
+  {
+   "film": "The Fast and the Furious (2001)",
+   "who": "Dom Toretto's crew",
+   "x": "Three black Civic coupes with body kits and neon underglow hijack semi-trucks on the highway. The production built seven look-alike cars, all painted the factory black of the 1994 model.",
+   "src": [
+    "ff-wiki01",
+    "ma-civic",
+    "jal-civic"
+   ]
+  },
+  {
+   "film": "2 Fast 2 Furious (2003)",
+   "who": "Reused film cars",
+   "x": "Six of the first film's Civics came back for the sequel with new paint and body kits.",
+   "src": [
+    "ma-civic",
+    "jal-civic"
+   ]
+  }
+ ],
+ "related": [
+  {
+   "u": "/cars/honda-civic/",
+   "t": "Honda Civic, 2000 on"
+  },
+  {
+   "u": "/cars/civic-type-r/",
+   "t": "Civic Type R"
+  }
+ ],
+ "topics_extra": {
+  "Rust": "\\brust(ed|ing|y)?\\b",
+  "Main relay": "main relay|hot no.?start",
+  "Distributor": "distributor|ignitor|igniter",
+  "Timing belt": "timing belt",
+  "Theft": "\\bstolen\\b|\\btheft\\b|steal",
+  "Shifter cable": "shift(er)? cable|shifter clip"
+ },
+ "gens": [
+  {
+   "id": "ej",
+   "code": "EJ",
+   "years": "1993–1995",
+   "y0": 1993,
+   "y1": 1995,
+   "engine": "D16Z6",
+   "body": "Coupe",
+   "tag": "1.6-liter D16Z6 SOHC VTEC, 125 hp in the EX coupe.",
+   "variants": [
+    {
+     "id": "ej-dx",
+     "name": "Civic DX Coupe",
+     "years": "1993–1995",
+     "hp": {
+      "v": 102,
+      "src": [
+       "wpd",
+       "wp5"
+      ],
+      "note": "at 5,900 rpm"
+     },
+     "tq": {
+      "v": 98,
+      "src": [
+       "wpd",
+       "wp5"
+      ],
+      "note": "lb-ft at 5,000 rpm"
+     },
+     "z60": {
+      "v": null,
+      "who": "",
+      "src": [],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "5-speed manual or 4-speed automatic, front-drive",
+      "src": [
+       "wp5",
+       "fe"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "2,231 lb",
+      "src": [
+       "wp5"
+      ],
+      "note": "1994–1995 manual; 2,224 lb for 1993"
+     },
+     "what": "Uses the 1.5-liter D15B7, a 16-valve SOHC engine without VTEC, not the D16Z6.",
+     "what_src": [
+      "wp5",
+      "wpd"
+     ],
+     "engine": "D15B7"
+    },
+    {
+     "id": "ej-ex",
+     "name": "Civic EX Coupe",
+     "years": "1993–1995",
+     "star": true,
+     "hp": {
+      "v": 125,
+      "src": [
+       "wpd",
+       "wp5",
+       "dl-coupe"
+      ],
+      "note": "at 6,600 rpm"
+     },
+     "tq": {
+      "v": 106,
+      "src": [
+       "wpd"
+      ],
+      "note": "lb-ft at 5,200 rpm"
+     },
+     "z60": {
+      "v": null,
+      "who": "",
+      "src": [],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "5-speed manual or 4-speed automatic, front-drive",
+      "src": [
+       "wp5",
+       "fe"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "2,520 lb",
+      "src": [
+       "wp5"
+      ],
+      "note": "1994–1995 manual; 2,390 lb for 1993"
+     },
+     "what": "The VTEC engine and many of the Si hatchback's features, in a coupe with a separate trunk.",
+     "what_src": [
+      "dl-coupe"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "D16Z6": {
+   "name": "Honda D16Z6",
+   "what": "1.6-liter inline-4, SOHC VTEC, naturally aspirated",
+   "study": "honda-d16z6",
+   "page": "/engines/honda-d16z6/",
+   "yt": [
+    "scy",
+    "honda-d16z6"
+   ],
+   "facts": [
+    [
+     "Layout",
+     "Inline-4, SOHC 16-valve with VTEC",
+     [
+      "wpd",
+      "dl-coupe"
+     ]
+    ],
+    [
+     "Output",
+     "125 hp at 6,600 rpm, 106 lb-ft at 5,200 rpm",
+     [
+      "wpd"
+     ]
+    ],
+    [
+     "Size",
+     "1,590 cc, 75 x 90 mm bore x stroke",
+     [
+      "wpd"
+     ]
+    ],
+    [
+     "VTEC",
+     "Switches to the high-lift cam at about 4,800 rpm",
+     [
+      "wpd"
+     ]
+    ],
+    [
+     "Redline",
+     "7,200 rpm",
+     [
+      "wpd"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Theft target",
+     "kind": "Outlet report",
+     "rx": "\\bstolen\\b|\\btheft\\b|steal",
+     "x": "The NICB's count of cars stolen in 2010 put the 1995 Honda Civic second in the US. That count covers every Civic body style.",
+     "fix": "",
+     "src": [
+      "nicb10"
+     ]
+    },
+    {
+     "t": "Automatic shifter clip (recall)",
+     "kind": "Recall",
+     "rx": "shift(er)? cable|shifter clip|wrong gear",
+     "x": "Honda recalled 1992 to 1994 Civics with the automatic gearbox because a clip on the shift cable could come off, so the lever could show the wrong gear. Dealers fitted a better clip.",
+     "fix": "Check that recall 94V063000 was done.",
+     "src": [
+      "r94v063"
+     ]
+    }
+   ],
+   "photo": {
+    "src": "/assets/engines/honda-d16z6-1-6-l-inline-4-engine.webp",
+    "w": 1200,
+    "h": 1093,
+    "ai": true
+   }
+  }
+ },
+ "compare": [],
+ "sources": {
+  "ff-wiki01": {
+   "t": "Wikipedia: The Fast and the Furious (2001 film)",
+   "u": "https://en.wikipedia.org/wiki/The_Fast_and_the_Furious_(2001_film)",
+   "k": "Wikipedia"
+  },
+  "ma-civic": {
+   "t": "Motor Authority: Deep dive: Heist Honda Civic from The Fast and the Furious (Byron Hurd, Feb 9, 2020)",
+   "u": "https://www.motorauthority.com/news/1124587_deep-dive-heist-honda-civic-from-the-fast-and-the-furious",
+   "k": "outlet"
+  },
+  "jal-civic": {
+   "t": "Jalopnik: The most realistic cars in Fast and Furious were the three black Civics (Andrew P. Collins, Aug 13, 2019)",
+   "u": "https://jalopnik.com/the-most-realistic-cars-in-fast-and-furious-were-the-th-1837177126",
+   "k": "outlet"
+  },
+  "dl-coupe": {
+   "t": "Driving Line: Remembering the Civic Coupe (Andy Carter, Jul 18, 2020)",
+   "u": "https://www.drivingline.com/articles/remembering-the-civic-coupe/",
+   "k": "outlet"
+  },
+  "wp5": {
+   "t": "Wikipedia: Honda Civic (fifth generation)",
+   "u": "https://en.wikipedia.org/wiki/Honda_Civic_(fifth_generation)",
+   "k": "Wikipedia"
+  },
+  "wpd": {
+   "t": "Wikipedia: Honda D engine",
+   "u": "https://en.wikipedia.org/wiki/Honda_D_engine",
+   "k": "Wikipedia"
+  },
+  "fe": {
+   "t": "fueleconomy.gov: 1993–1995 Honda Civic (EPA)",
+   "u": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=1993&year2=1995&make=Honda&baseModel=Civic&srchtyp=ymm&rowLimit=100",
+   "k": "EPA"
+  },
+  "r94v063": {
+   "t": "NHTSA recall 94V063000: automatic transmission shift cable clip (Honda, Oct 1994)",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=94V063000",
+   "k": "Recall"
+  },
+  "nicb10": {
+   "t": "Insurance Journal: Top 10 most stolen vehicles in U.S. (NICB 2010 data, Aug 3, 2011)",
+   "u": "https://www.insurancejournal.com/news/national/2011/08/03/209303.htm",
+   "k": "outlet"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-honda-civic-coupe-ej"
+}

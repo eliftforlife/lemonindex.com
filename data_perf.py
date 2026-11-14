@@ -84,7 +84,7 @@ def yt_all(D):
 
 def nhtsa(D):
     """complaints per model year, and per generation how many complaints mention each engine issue (with 2 example complaint ids)"""
-    if not os.path.exists(DB): return None
+    if not os.path.exists(DB) or not D.get('nhtsa'): return None   # 11-13 JDM: a car never sold new in the US has no NHTSA name
     c = sqlite3.connect(DB); n = D['nhtsa']
     q = f"select odino, year, max(descr), group_concat(comp, '|') from rows where make=? and model in ({','.join('?' * len(n['models']))}) and year between 1990 and 2026 group by odino"
     allr = c.execute(q, [n['make']] + n['models']).fetchall()
@@ -110,6 +110,7 @@ def nhtsa(D):
 
 def recalls(D):
     """NHTSA recalls per model year (each campaign once per year), cached"""
+    if not D.get('nhtsa'): return {}   # 11-13 JDM: never sold new in the US
     cp = os.path.join(HERE, 'data', 'cache', f'perf_recalls_{D["slug"]}.json'); cache = _load(cp, {})
     out = {}
     for gd in D['gens']:
@@ -143,4 +144,4 @@ if __name__ == '__main__':
         D = car(slug)
         A = dict(built=time.strftime('%Y-%m-%d'), nhtsa=nhtsa(D), recalls=recalls(D), yt=yt_all(D), scores=scores(D))
         json.dump(A, open(os.path.join(HERE, 'data', 'perf', f'{slug}.auto.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
-        print(slug, 'complaints', sum(A['nhtsa']['by_year'].values()), 'recall-years', len(A['recalls']), 'studies', {k: (v or {}).get('videos') for k, v in A['yt'].items()})
+        print(slug, 'complaints', sum((A['nhtsa'] or {}).get('by_year', {}).values()), 'recall-years', len(A['recalls']), 'studies', {k: (v or {}).get('videos') for k, v in A['yt'].items()})

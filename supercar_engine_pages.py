@@ -68,6 +68,7 @@ GW = {'super': ENG_POOL_LBL, 'perf': ENG_POOL_LBL}
 # engine head-to-heads: (url, [engine page urls], "the other engines" label). The FA24 slot uses the WRX's turbo FA24 page once a performance
 # file links one, else the BRZ/GR86 FA20/FA24 page (the page says which).
 ENG_PERF_ONLY = {'/engines/vw-ea888/': ('VW EA888 2.0 TSI', 'Volkswagen', True), '/engines/subaru-fa24f/': ('Subaru FA24F 2.4 turbo', 'Subaru', False)}   # (name, make, used in cars not covered yet)
+import jdm as _JDM; ENG_PERF_ONLY.update({_u: _v[:3] for _u, _v in _JDM.ENGINES.items()})   # 11-13 JDM section: the film cars' engines (2JZ, RB26DETT, 13B-REW ...)
 def _fa24_url():
     for _p in sorted(glob.glob('data/perf/*.json')):
         if _p.endswith('.auto.json'): continue

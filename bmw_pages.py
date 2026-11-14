@@ -390,6 +390,8 @@ else:
             L = [card(v['src'], v['w'], v['h'], f'{v["year"]} {v["name"]} illustration', f'{v["year"]} {v["name"]}', v['page'], 'Page') for _fam, v in sorted(_AIV.items(), key=lambda kv: kv[1]['name']) if v['category'] == _c]
             if L: groups.append((_c + 's', _t, L))
         _PF = [c for c in (json.load(open('data/perf_cars.json', encoding='utf-8')) if os.path.exists('data/perf_cars.json') else []) if isinstance(c, dict) and c.get('img')]   # 11-11 coming-soon performance cars
+        _JD = [c for c in _PF if c.get('group') == 'J']; _PF = [c for c in _PF if c.get('group') != 'J']   # 11-13 JDM film cars: their own group, linking their pages
+        if _JD: groups.append(('jdm', 'JDM cars of The Fast and the Furious', [card(c['img'], c.get('w', 1000), c.get('h', 600), f'{c["img_year"]} {c["name"]} illustration', c['name'], '/jdm/' + c['slug'] + '/', 'Page') for c in _JD]))
         if _PF: groups.append(('performance', 'Performance cars, supercars and hypercars', [card(c['img'], c.get('w', 1000), c.get('h', 600), f'{c["name"]} illustration', c['name'], '/cars/?type=' + ('supercars' if c.get('group') in ('B', 'C') else 'performance'), 'Cars page (coming soon)') for c in _PF]))
         _MS = [c for c in (json.load(open('data/moto_soon.json', encoding='utf-8')) if os.path.exists('data/moto_soon.json') else []) if c.get('img')]   # 11-11 coming-soon motorcycles
         if _MS: groups.append(('motorcycles-soon', 'Motorcycles (coming soon)', [card(c['img'], c['w'], c['h'], f'{c["name"]} illustration', c['name'], '/motorcycles/', 'Motorcycles page (coming soon)') for c in _MS]))

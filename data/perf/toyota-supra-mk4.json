@@ -1,0 +1,428 @@
+{
+ "slug": "toyota-supra-mk4",
+ "name": "Toyota Supra (Mk IV)",
+ "short": "Supra",
+ "make": "Toyota",
+ "page": "/jdm/toyota-supra-mk4/",
+ "jdm": true,
+ "focus": "a80",
+ "star": "a80-turbo",
+ "h1": "Toyota Supra Mk IV (A80): specs, 2JZ engine and what owners say",
+ "nhtsa": {
+  "make": "TOYOTA",
+  "models": [
+   "SUPRA"
+  ],
+  "note": "NHTSA files every Supra under SUPRA, so these counts include the non-turbo cars. Its model list has no 1996 Supra."
+ },
+ "us": {
+  "sold": true,
+  "x": "Sold new in the US for the 1993 to 1998 model years. The Turbo was not sold in California-emissions states for 1998.",
+  "src": [
+   "tp45",
+   "tchron",
+   "feg"
+  ]
+ },
+ "films": [
+  {
+   "film": "The Fast and the Furious (2001)",
+   "who": "Brian O'Conner",
+   "x": "Brian brings a run-down orange 1994 Supra to Dom's garage, the crew rebuilds it, and at the end he hands Dom the keys.",
+   "src": [
+    "wff",
+    "drive"
+   ]
+  },
+  {
+   "film": "2 Fast 2 Furious (2003)",
+   "who": "Slap Jack",
+   "x": "Slap Jack drives a gold Supra Turbo. It is the same car Brian had in the first film, redone for the sequel.",
+   "src": [
+    "w2f",
+    "drive"
+   ]
+  }
+ ],
+ "related": [
+  {
+   "u": "/cars/gr-supra/",
+   "t": "Toyota GR Supra (2020 on)"
+  }
+ ],
+ "topics_extra": {
+  "Head gasket": "head gaskets?|white smoke|overheat(s|ing)?",
+  "Sequential turbos": "sequential|second(ary)? turbo|boost (leak|cut|drop)",
+  "Rear differential": "\\bdiff(erential)?\\b|clunk|clonk",
+  "Getrag gearbox": "v160|v161|getrag|synchros?",
+  "Rust": "\\brust(ed|ing|y)?\\b",
+  "Targa roof": "targa|roof rattle"
+ },
+ "gens": [
+  {
+   "id": "a80",
+   "code": "A80",
+   "years": "1993–1998",
+   "y0": 1993,
+   "y1": 1998,
+   "engine": "2JZ-GTE",
+   "body": "Liftback coupe or targa",
+   "tag": "3.0-liter twin-turbo 2JZ-GTE, 320 hp (US Turbo). Non-turbo 2JZ-GE, 220 hp.",
+   "variants": [
+    {
+     "id": "a80-base",
+     "name": "Supra",
+     "years": "1993–1998",
+     "hp": {
+      "v": 220,
+      "src": [
+       "tp45",
+       "ac94"
+      ],
+      "note": "at 5,800 rpm, 2JZ-GE; 225 hp for 1998 with VVT-i"
+     },
+     "tq": {
+      "v": 209,
+      "src": [
+       "tp45"
+      ],
+      "note": "lb-ft; a 1994 Auto Channel test lists 210 lb-ft at 4,800 rpm"
+     },
+     "z60": {
+      "v": 6.2,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "5-speed manual or 4-speed automatic, rear-drive",
+      "src": [
+       "tp45",
+       "feg"
+      ],
+      "note": "EPA lists no manual non-turbo car for 1998"
+     },
+     "weight": {
+      "v": "3,260 lb",
+      "src": [
+       "ac94"
+      ],
+      "note": "1993-94 car, 5-speed manual"
+     },
+     "price": {
+      "v": "$33,900",
+      "src": [
+       "ac94"
+      ],
+      "note": "non-turbo base price in a 1993-94 review"
+     },
+     "what": "Naturally aspirated 3.0-liter 2JZ-GE. Toyota added VVT-i for 1998, worth 5 hp.",
+     "what_src": [
+      "tchron",
+      "wjz"
+     ]
+    },
+    {
+     "id": "a80-turbo",
+     "name": "Supra Turbo",
+     "years": "1993–1998",
+     "star": true,
+     "hp": {
+      "v": 320,
+      "src": [
+       "tp45",
+       "ac97"
+      ],
+      "note": "at 5,600 rpm"
+     },
+     "tq": {
+      "v": 315,
+      "src": [
+       "tp45",
+       "ac97"
+      ],
+      "note": "lb-ft at 4,000 rpm"
+     },
+     "z60": {
+      "v": 4.6,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "top": {
+      "v": "155 mph",
+      "src": [
+       "tchron"
+      ],
+      "note": "electronically limited"
+     },
+     "trans": {
+      "v": "6-speed manual or 4-speed automatic, rear-drive",
+      "src": [
+       "tchron",
+       "tp45",
+       "wsupra"
+      ],
+      "note": "Getrag/Toyota V160 six-speed; Turbo was automatic-only for 1996"
+     },
+     "weight": {
+      "v": "3,532 lb",
+      "src": [
+       "ac97"
+      ],
+      "note": "1997 Turbo, 6-speed manual"
+     },
+     "price": {
+      "v": "$39,900",
+      "src": [
+       "ac97"
+      ],
+      "note": "1997 Turbo MSRP; $40,767 as tested"
+     },
+     "what": "Sequential twin turbos and an intercooler on the 2JZ-GTE, plus the six-speed manual, Toyota's first.",
+     "what_src": [
+      "wjz",
+      "tp45"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "2JZ-GTE": {
+   "name": "Toyota 2JZ-GTE",
+   "what": "3.0-liter inline-6, sequential twin-turbo",
+   "study": "toyota-2jz",
+   "page": "/engines/toyota-2jz/",
+   "yt": [
+    "scy",
+    "toyota-2jz"
+   ],
+   "facts": [
+    [
+     "Layout",
+     "Inline-6, DOHC 24-valve, iron block, aluminum head",
+     [
+      "wjz"
+     ]
+    ],
+    [
+     "Output",
+     "320 hp, 315 lb-ft (US)",
+     [
+      "tp45",
+      "ac97"
+     ]
+    ],
+    [
+     "Bore x stroke",
+     "86 x 86 mm, 2,997 cc",
+     [
+      "wjz"
+     ]
+    ],
+    [
+     "Turbos",
+     "Sequential twin turbos made with Hitachi; US and European cars got CT12B units with stainless steel parts",
+     [
+      "wjz"
+     ]
+    ],
+    [
+     "Strength",
+     "Autocar's specialist says the bottom end is good for over 500 bhp",
+     [
+      "autocar"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Head gasket",
+     "kind": "Outlet report",
+     "rx": "head gaskets?|white smoke|coolant loss|overheat",
+     "x": "The RAC calls blown head gaskets an early Supra bugbear. Signs are slow coolant loss, gurgling behind the dash and a temperature that climbs on hard runs.",
+     "fix": "Replace the head gasket.",
+     "src": [
+      "rac"
+     ]
+    },
+    {
+     "t": "Turbo smoke",
+     "kind": "Outlet report",
+     "rx": "white smoke|blue smoke|turbo seals?|smok(e|ing) (from|out)",
+     "x": "The RAC rates the turbos as fairly tough but says to walk away from a car blowing white smoke from the exhaust.",
+     "fix": "",
+     "src": [
+      "rac"
+     ]
+    },
+    {
+     "t": "Rear differential noise",
+     "kind": "Outlet report",
+     "rx": "\\bdiff(erential)?\\b.*(whin|clunk|clonk)|clunk|clonk",
+     "x": "Autocar says the diff is very strong but could clonk even when new, mostly going from reverse into first. A whine under load is the bad sign.",
+     "fix": "",
+     "src": [
+      "autocar"
+     ]
+    },
+    {
+     "t": "Tailgate rust",
+     "kind": "Outlet report",
+     "rx": "\\brust(ed|ing|y)?\\b|tailgate",
+     "x": "Autocar says the base of the tailgate, just below the rear window, is where Mk IV bodies rust.",
+     "fix": "",
+     "src": [
+      "autocar"
+     ]
+    }
+   ],
+   "photo": {
+    "src": "/assets/engines/toyota-2jz-3-0-l-inline-6-twin-turbo-engine.webp",
+    "w": 1200,
+    "h": 997,
+    "ai": true
+   }
+  },
+  "2JZ-GE": {
+   "name": "Toyota 2JZ-GE",
+   "what": "3.0-liter inline-6, naturally aspirated",
+   "study": "toyota-2jz",
+   "page": "/engines/toyota-2jz/",
+   "yt": [
+    "scy",
+    "toyota-2jz"
+   ],
+   "facts": [
+    [
+     "Layout",
+     "Inline-6, DOHC 24-valve, iron block, aluminum head",
+     [
+      "wjz"
+     ]
+    ],
+    [
+     "Output",
+     "220 hp, 209 lb-ft (US Supra)",
+     [
+      "tp45"
+     ]
+    ],
+    [
+     "Bore x stroke",
+     "86 x 86 mm, 2,997 cc, same as the 2JZ-GTE",
+     [
+      "wjz"
+     ]
+    ],
+    [
+     "VVT-i",
+     "Added for the 1998 US model year, 225 hp",
+     [
+      "tchron",
+      "wjz"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Tailgate rust",
+     "kind": "Outlet report",
+     "rx": "\\brust(ed|ing|y)?\\b|tailgate",
+     "x": "Autocar says the base of the tailgate, just below the rear window, is where Mk IV bodies rust.",
+     "fix": "",
+     "src": [
+      "autocar"
+     ]
+    }
+   ],
+   "photo": {
+    "src": "/assets/engines/toyota-2jz-3-0-l-inline-6-twin-turbo-engine.webp",
+    "w": 1200,
+    "h": 997,
+    "ai": true
+   }
+  }
+ },
+ "compare": [],
+ "sources": {
+  "tp45": {
+   "t": "Toyota: 2024 GR Supra celebrates 45 years of legendary power (Toyota USA newsroom)",
+   "u": "https://pressroom.toyota.com/2024-gr-supra-celebrates-45-years-of-legendary-power/",
+   "k": "Toyota"
+  },
+  "tchron": {
+   "t": "Toyota: Supra series chronology (Toyota USA newsroom)",
+   "u": "https://pressroom.toyota.com/supra-chronology/",
+   "k": "Toyota"
+  },
+  "feg": {
+   "t": "fueleconomy.gov: 1993-1998 Toyota Supra listings (EPA)",
+   "u": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=1993&year2=1998&make=Toyota&baseModel=Supra&srchtyp=ymm&pageno=1&rowLimit=50",
+   "k": "EPA"
+  },
+  "ac94": {
+   "t": "The Auto Channel: Toyota Supra (1994) review, non-turbo (Bill Russ)",
+   "u": "https://www.theautochannel.com/vehicles/new/reviews/wk9339.html",
+   "k": "outlet"
+  },
+  "ac97": {
+   "t": "The Auto Channel: 1997 Toyota Supra Turbo review (Tom Hagin)",
+   "u": "https://www.theautochannel.com/vehicles/new/reviews/1997/solo9728.html",
+   "k": "outlet"
+  },
+  "z60": {
+   "t": "0-60specs.com: Toyota Supra 0-60 runs by magazine (Car and Driver, MotorTrend, Road & Track)",
+   "u": "https://www.0-60specs.com/toyota-supra-0-60-times/",
+   "k": "magazine tests, aggregated"
+  },
+  "wsupra": {
+   "t": "Wikipedia: Toyota Supra",
+   "u": "https://en.wikipedia.org/wiki/Toyota_Supra",
+   "k": "Wikipedia"
+  },
+  "wjz": {
+   "t": "Wikipedia: Toyota JZ engine",
+   "u": "https://en.wikipedia.org/wiki/Toyota_JZ_engine",
+   "k": "Wikipedia"
+  },
+  "rac": {
+   "t": "RAC: Toyota Supra (1993-1996) used car review (Andy Enright, Nov 2005)",
+   "u": "https://www.rac.co.uk/drive/car-reviews/toyota/supra/supra-1993-1996/",
+   "k": "outlet"
+  },
+  "autocar": {
+   "t": "Autocar: Toyota Supra buying guide (Oct 2009)",
+   "u": "https://www.autocar.co.uk/car-news/motoring/toyota-supra-buying-guide",
+   "k": "outlet"
+  },
+  "drive": {
+   "t": "The Drive: Fast & Furious 1994 Toyota Supra rakes in $550,000 at Barrett-Jackson auction (Kristin V. Shaw, Jun 2021)",
+   "u": "https://www.thedrive.com/news/41182/fast-furious-1994-toyota-supra-rakes-in-550000-at-barrett-jackson-auction",
+   "k": "outlet"
+  },
+  "wff": {
+   "t": "Wikipedia: The Fast and the Furious (2001 film)",
+   "u": "https://en.wikipedia.org/wiki/The_Fast_and_the_Furious_(2001_film)",
+   "k": "Wikipedia"
+  },
+  "w2f": {
+   "t": "Wikipedia: 2 Fast 2 Furious",
+   "u": "https://en.wikipedia.org/wiki/2_Fast_2_Furious",
+   "k": "Wikipedia"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-toyota-supra-mk4"
+}

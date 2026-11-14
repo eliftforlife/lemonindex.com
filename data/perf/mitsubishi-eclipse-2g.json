@@ -1,0 +1,498 @@
+{
+ "slug": "mitsubishi-eclipse-2g",
+ "name": "Mitsubishi Eclipse (2nd gen)",
+ "short": "Eclipse",
+ "make": "Mitsubishi",
+ "page": "/jdm/mitsubishi-eclipse-2g/",
+ "jdm": true,
+ "focus": "d3x",
+ "star": "gsx",
+ "h1": "Mitsubishi Eclipse 2G (1995-1999): specs, 4G63T and 420A engines and what owners say",
+ "nhtsa": {
+  "make": "MITSUBISHI",
+  "models": [
+   "ECLIPSE",
+   "ECLIPSE SPYDER"
+  ],
+  "note": "NHTSA files almost every 1995-1999 Eclipse, convertibles included, under ECLIPSE (its ECLIPSE SPYDER listing has recalls but no complaints for these years). The counts mix non-turbo RS/GS cars with the turbo GS-T and GSX."
+ },
+ "us": {
+  "sold": true,
+  "x": "Sold new in the US for model years 1995-1999. It was built at Diamond-Star Motors in Normal, Illinois.",
+  "src": [
+   "wecl",
+   "fe2g",
+   "russ99"
+  ]
+ },
+ "films": [
+  {
+   "film": "The Fast and the Furious (2001)",
+   "who": "Brian O'Conner",
+   "x": "Brian O'Conner's green 1995 Eclipse RS, his first race car in the series. It falls apart when he overuses nitrous racing Dom, who wins it, and Johnny Tran's crew later shoots it up and destroys it. The film car had the non-turbo Chrysler 420A engine, not the GS-T or GSX turbo.",
+   "src": [
+    "wpff",
+    "hag21",
+    "drive19"
+   ]
+  }
+ ],
+ "related": [
+  {
+   "u": "/cars/mitsubishi-eclipse/",
+   "t": "Mitsubishi Eclipse, later years"
+  },
+  {
+   "u": "/jdm/mitsubishi-eclipse-spyder-gts/",
+   "t": "Roman's Eclipse Spyder (2 Fast 2 Furious)"
+  }
+ ],
+ "topics_extra": {
+  "Crank walk": "crank ?walk|walking crank|thrust (bearing|washer)",
+  "Transfer case": "transfer case|t-?case",
+  "Timing belt": "timing belt|balance(r)? (shaft )?belt|tensioner",
+  "Head gasket / oil leak": "head gasket|oil leak",
+  "Turbo / boost": "boost leak|turbo(charger)? (fail|blew|blown|leak|smok)",
+  "Clutch": "\\bclutch\\b"
+ },
+ "gens": [
+  {
+   "id": "d3x",
+   "code": "2G (D31A–D39A)",
+   "years": "1995–1999",
+   "y0": 1995,
+   "y1": 1999,
+   "engine": "4G63T",
+   "body": "Coupe / convertible (Spyder)",
+   "tag": "Built in Illinois. 140 hp Chrysler 420A in the RS and GS; 210 hp 4G63T turbo in the GS-T and the all-wheel-drive GSX.",
+   "variants": [
+    {
+     "id": "rs-gs",
+     "name": "Eclipse RS / GS",
+     "years": "1995–1999",
+     "hp": {
+      "v": 140,
+      "src": [
+       "wecl",
+       "hagin98",
+       "wneon"
+      ],
+      "note": "at 6,500 rpm; Chrysler 420A 2.0, no turbo"
+     },
+     "tq": {
+      "v": 130,
+      "src": [
+       "wecl",
+       "wneon"
+      ],
+      "note": "lb-ft at 4,800 rpm"
+     },
+     "z60": {
+      "v": 9.0,
+      "who": "Motor Trend (1995 GS)",
+      "src": [
+       "z60e"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "5-speed manual or 4-speed automatic, front-drive",
+      "src": [
+       "fe2g"
+      ],
+      "note": ""
+     },
+     "what": "The non-turbo trims. Brian's film car was an RS with this engine.",
+     "what_src": [
+      "wecl",
+      "drive19",
+      "wpff"
+     ],
+     "engine": "420A"
+    },
+    {
+     "id": "gst",
+     "name": "Eclipse GS-T",
+     "years": "1995–1999",
+     "hp": {
+      "v": 210,
+      "src": [
+       "hagin98",
+       "wecl"
+      ],
+      "note": "at 6,000 rpm"
+     },
+     "tq": {
+      "v": 214,
+      "src": [
+       "hagin98",
+       "wecl"
+      ],
+      "note": "lb-ft at 3,000 rpm"
+     },
+     "z60": {
+      "v": 6.4,
+      "who": "Motor Trend (1995)",
+      "src": [
+       "z60e"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "5-speed manual or 4-speed automatic, front-drive",
+      "src": [
+       "fe2g"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,079 lb",
+      "src": [
+       "hagin98"
+      ],
+      "note": "1998, curb"
+     },
+     "price": {
+      "v": "$21,960",
+      "src": [
+       "hagin98"
+      ],
+      "note": "1998 MSRP"
+     },
+     "what": "4G63T turbo engine with front-wheel drive.",
+     "what_src": [
+      "wecl",
+      "fe2g"
+     ]
+    },
+    {
+     "id": "gsx",
+     "name": "Eclipse GSX",
+     "years": "1995–1999",
+     "star": true,
+     "hp": {
+      "v": 210,
+      "src": [
+       "russ99",
+       "wecl"
+      ],
+      "note": "at 6,000 rpm"
+     },
+     "tq": {
+      "v": 214,
+      "src": [
+       "russ99",
+       "wecl"
+      ],
+      "note": "lb-ft at 3,000 rpm"
+     },
+     "z60": {
+      "v": 6.4,
+      "who": "Motor Trend (1996)",
+      "src": [
+       "z60e"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "5-speed manual or 4-speed automatic, all-wheel drive",
+      "src": [
+       "fe2g",
+       "wecl"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,157 lb",
+      "src": [
+       "russ99"
+      ],
+      "note": "1999, curb"
+     },
+     "price": {
+      "v": "$26,550",
+      "src": [
+       "russ99"
+      ],
+      "note": "1999 base price"
+     },
+     "what": "The only all-wheel-drive Eclipse of this generation, with the 4G63T turbo.",
+     "what_src": [
+      "wecl"
+     ]
+    },
+    {
+     "id": "spyder-gst",
+     "name": "Eclipse Spyder GS-T",
+     "years": "1996–1999",
+     "hp": {
+      "v": 210,
+      "src": [
+       "wecl"
+      ],
+      "note": "same 4G63T as the GS-T coupe"
+     },
+     "tq": {
+      "v": 214,
+      "src": [
+       "wecl"
+      ],
+      "note": "lb-ft"
+     },
+     "z60": {
+      "v": 6.9,
+      "who": "Motor Trend (1996)",
+      "src": [
+       "z60e"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "5-speed manual or 4-speed automatic, front-drive",
+      "src": [
+       "fe2g"
+      ],
+      "note": ""
+     },
+     "what": "Convertible version of the GS-T, added for 1996. A Spyder GS used a 2.4-liter non-turbo four.",
+     "what_src": [
+      "wecl",
+      "fe2g"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "4G63T": {
+   "name": "Mitsubishi 4G63T",
+   "what": "2.0-liter inline-4, turbo",
+   "study": "mitsubishi-4g63t",
+   "page": "/engines/mitsubishi-4g63t/",
+   "yt": [
+    "scy",
+    "mitsubishi-4g63t"
+   ],
+   "facts": [
+    [
+     "Layout",
+     "Inline-4, DOHC 16-valve, turbocharged",
+     [
+      "russ99",
+      "hagin98"
+     ]
+    ],
+    [
+     "Output",
+     "210 hp at 6,000 rpm, 214 lb-ft at 3,000 rpm",
+     [
+      "russ99",
+      "hagin98"
+     ]
+    ],
+    [
+     "Bore x stroke",
+     "85.0 x 88.0 mm, 2.0 liters",
+     [
+      "w4g6"
+     ]
+    ],
+    [
+     "Used in",
+     "GS-T, GSX and Spyder GS-T, 1995-1999",
+     [
+      "wecl",
+      "fe2g"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Crank walk",
+     "kind": "Owner-reported (NHTSA)",
+     "rx": "crank ?walk|walking crank|thrust (bearing|washer)",
+     "x": "Twelve NHTSA complaints on 1995-1998 Eclipses describe crank walk, where the crankshaft moves back and forth and wears the thrust bearing. Owners report failed crank sensors, stalling and engine replacement, and some say mechanics called it common.",
+     "fix": "",
+     "src": [
+      "nc95",
+      "nc97",
+      "nc98"
+     ]
+    },
+    {
+     "t": "Transfer case lockup recall",
+     "kind": "Recall",
+     "rx": "transfer case|t-?case",
+     "x": "On all-wheel-drive Eclipses from 1990-1998, the transfer case can lock up from too little oil, which can cause a loss of control. NHTSA also has 39 owner complaints about transfer case leaks or lockups on 1995-1999 cars.",
+     "fix": "Dealer checks the oil level and leaks, and replaces a worn transfer case (NHTSA 98V-069).",
+     "src": [
+      "r98",
+      "nc95",
+      "nc98"
+     ]
+    },
+    {
+     "t": "Timing belt failure",
+     "kind": "Owner-reported (NHTSA)",
+     "rx": "timing belt|balance(r)? (shaft )?belt|tensioner",
+     "x": "Ten complaints on 1995-1999 Eclipses describe a timing belt or tensioner failing. Several say it wrecked the valves or the top half of the engine. The complaints do not always say which engine the car had.",
+     "fix": "",
+     "src": [
+      "nc95",
+      "nc96",
+      "nc97"
+     ]
+    }
+   ]
+  },
+  "420A": {
+   "name": "Chrysler 420A",
+   "what": "2.0-liter inline-4, no turbo",
+   "study": "chrysler-420a",
+   "page": "",
+   "yt": [
+    "scy",
+    "chrysler-420a"
+   ],
+   "facts": [
+    [
+     "Layout",
+     "Inline-4, DOHC 16-valve",
+     [
+      "wneon"
+     ]
+    ],
+    [
+     "Output",
+     "140 hp at 6,500 rpm, 130 lb-ft at 4,800 rpm",
+     [
+      "wneon",
+      "wecl"
+     ]
+    ],
+    [
+     "Bore x stroke",
+     "87.5 x 83.0 mm, 1,996 cc, 9.6:1",
+     [
+      "wneon"
+     ]
+    ],
+    [
+     "Used in",
+     "Eclipse RS and GS, 1995-1999",
+     [
+      "wecl",
+      "russ99"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Head gasket oil leaks",
+     "kind": "Outlet report",
+     "rx": "head gasket|oil leak",
+     "x": "Chrysler's 2.0 engines built until late 1999 leaked oil at the head gasket because a head bolt hole was drilled too shallow; a thicker steel gasket fixed it in 1998. NHTSA has 36 head gasket complaints on 1995-1999 Eclipses, mostly oil leaks, though they do not always name the engine.",
+     "fix": "",
+     "src": [
+      "wneon",
+      "nc96",
+      "nc99"
+     ]
+    }
+   ]
+  }
+ },
+ "compare": [],
+ "sources": {
+  "wecl": {
+   "t": "Wikipedia: Mitsubishi Eclipse (second generation)",
+   "u": "https://en.wikipedia.org/wiki/Mitsubishi_Eclipse",
+   "k": "Wikipedia"
+  },
+  "w4g6": {
+   "t": "Wikipedia: Mitsubishi 4G6 engine (4G63 bore and stroke)",
+   "u": "https://en.wikipedia.org/wiki/Mitsubishi_4G6_engine",
+   "k": "Wikipedia"
+  },
+  "wneon": {
+   "t": "Wikipedia: Chrysler Neon engine (2.0 and 420A)",
+   "u": "https://en.wikipedia.org/wiki/Chrysler_Neon_engine",
+   "k": "Wikipedia"
+  },
+  "fe2g": {
+   "t": "fueleconomy.gov: Mitsubishi Eclipse and Eclipse Convertible 1995-1999",
+   "u": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=1995&year2=1999&make=Mitsubishi&baseModel=Eclipse&srchtyp=ymm",
+   "k": "EPA"
+  },
+  "russ99": {
+   "t": "The Auto Channel: 1999 Mitsubishi Eclipse GSX review and specifications (Carey Russ)",
+   "u": "https://www.theautochannel.com/vehicles/new/reviews/1999/russ9847.html",
+   "k": "magazine test"
+  },
+  "hagin98": {
+   "t": "The Auto Channel: 1998 Mitsubishi Eclipse GS-T review and specifications (Matt/Bob Hagin)",
+   "u": "https://www.theautochannel.com/vehicles/new/reviews/1998/gap9832.html",
+   "k": "magazine test"
+  },
+  "z60e": {
+   "t": "0-60specs.com: Mitsubishi Eclipse 0-60 runs by magazine (Motor Trend, MotorWeek, Car and Driver)",
+   "u": "https://www.0-60specs.com/mitsubishi/eclipse-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "drive19": {
+   "t": "The Drive: This website lists the real specs and build sheets for the Fast and the Furious movie cars (James Gilboy, Jul 2019)",
+   "u": "https://www.thedrive.com/news/29060/this-website-lists-the-real-specs-and-build-sheets-for-the-fast-and-the-furious-movie-cars",
+   "k": "outlet"
+  },
+  "wpff": {
+   "t": "Wikipedia: The Fast and the Furious (2001 film)",
+   "u": "https://en.wikipedia.org/wiki/The_Fast_and_the_Furious_(2001_film)",
+   "k": "Wikipedia"
+  },
+  "hag21": {
+   "t": "Hagerty: 19 of the coolest cars in the Fast and Furious franchise (Priscilla Page, Jun 2021)",
+   "u": "https://www.hagerty.com/media/entertainment/19-coolest-cars-fast-and-furious-franchise/",
+   "k": "outlet"
+  },
+  "r98": {
+   "t": "NHTSA recall 98V-069: transfer case lockup, 1990-1998 Mitsubishi Eclipse",
+   "u": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=98V069001",
+   "k": "Recall"
+  },
+  "nc95": {
+   "t": "NHTSA complaints: 1995 Mitsubishi Eclipse",
+   "u": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=MITSUBISHI&model=ECLIPSE&modelYear=1995",
+   "k": "NHTSA owner complaints"
+  },
+  "nc96": {
+   "t": "NHTSA complaints: 1996 Mitsubishi Eclipse",
+   "u": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=MITSUBISHI&model=ECLIPSE&modelYear=1996",
+   "k": "NHTSA owner complaints"
+  },
+  "nc97": {
+   "t": "NHTSA complaints: 1997 Mitsubishi Eclipse",
+   "u": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=MITSUBISHI&model=ECLIPSE&modelYear=1997",
+   "k": "NHTSA owner complaints"
+  },
+  "nc98": {
+   "t": "NHTSA complaints: 1998 Mitsubishi Eclipse",
+   "u": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=MITSUBISHI&model=ECLIPSE&modelYear=1998",
+   "k": "NHTSA owner complaints"
+  },
+  "nc99": {
+   "t": "NHTSA complaints: 1999 Mitsubishi Eclipse",
+   "u": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=MITSUBISHI&model=ECLIPSE&modelYear=1999",
+   "k": "NHTSA owner complaints"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-mitsubishi-eclipse-2g"
+}

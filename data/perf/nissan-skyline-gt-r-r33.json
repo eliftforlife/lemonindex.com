@@ -1,0 +1,361 @@
+{
+ "slug": "nissan-skyline-gt-r-r33",
+ "name": "Nissan Skyline GT-R (R33)",
+ "short": "Skyline GT-R",
+ "make": "Nissan",
+ "page": "/jdm/nissan-skyline-gt-r-r33/",
+ "jdm": true,
+ "focus": "bcnr33",
+ "star": "r33-vspec",
+ "h1": "Nissan Skyline GT-R R33 (BCNR33): specs, RB26 engine and what owners say",
+ "us": {
+  "sold": false,
+  "x": "Never sold new in the US. R33 GT-Rs became legal to import under the 25-year rule from January 2020, each car once it is 25 years old by its month of build.",
+  "src": [
+   "hag33"
+  ]
+ },
+ "films": [
+  {
+   "film": "The Fast and the Furious (2001)",
+   "who": "Leon",
+   "x": "Leon, one of Dom’s crew, drives a bright yellow R33 GT-R. The film car started out white with black graphics, and years later it was seized and crushed in a VIN-tampering case.",
+   "src": [
+    "ma33"
+   ]
+  }
+ ],
+ "related": [
+  {
+   "u": "/jdm/nissan-skyline-gt-r-r34/",
+   "t": "Skyline GT-R R34"
+  },
+  {
+   "u": "/supercars/nissan-gt-r/",
+   "t": "Nissan GT-R (R35, sold in the US)"
+  }
+ ],
+ "topics_extra": {
+  "Turbos": "ceramic|turbo (failure|failed|blew|blown|whine|noise)|turbine wheel",
+  "Coil packs / misfire": "coil ?packs?|misfir",
+  "ATTESA all-wheel drive": "attesa|awd (fault|light|pump)|4wd (light|fault)",
+  "Gearbox": "synchros?|grind(s|ing)? (into|in)? ?(gear|first|second|2nd|1st)|pops? out of (gear|first|1st)",
+  "HICAS rear steer": "hicas",
+  "Rust": "\\brust(ed|ing|y)?\\b|strut tops?"
+ },
+ "gens": [
+  {
+   "id": "bcnr33",
+   "code": "R33 (BCNR33)",
+   "years": "1995–1998",
+   "y0": 1995,
+   "y1": 1998,
+   "engine": "RB26DETT",
+   "body": "Coupe",
+   "tag": "2.6-liter twin-turbo RB26DETT, 280 PS (276 hp), 5-speed, all-wheel drive. Japan only.",
+   "variants": [
+    {
+     "id": "r33-gtr",
+     "name": "Skyline GT-R",
+     "years": "1995–1998",
+     "hp": {
+      "v": 276,
+      "src": [
+       "nh33",
+       "hag33"
+      ],
+      "note": "280 PS at 6,800 rpm, Japan’s gentlemen’s agreement figure (JDM)"
+     },
+     "tq": {
+      "v": 271,
+      "src": [
+       "nh33",
+       "ph33"
+      ],
+      "note": "lb-ft at 4,400 rpm (368 Nm, JDM)"
+     },
+     "z60": {
+      "v": 5.1,
+      "who": "Motor Trend",
+      "src": [
+       "z60gtr"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "5-speed manual, all-wheel drive",
+      "src": [
+       "wpgtr",
+       "hagu33"
+      ],
+      "note": "ATTESA E-TS; the Pro system was optional"
+     },
+     "weight": {
+      "v": "1,530 kg (3,373 lb)",
+      "src": [
+       "nh33",
+       "ph33"
+      ],
+      "note": "curb, JDM; Wikipedia gives 1,540 kg for the base car"
+     }
+    },
+    {
+     "id": "r33-vspec",
+     "name": "Skyline GT-R V-spec",
+     "years": "1995–1998",
+     "star": true,
+     "hp": {
+      "v": 276,
+      "src": [
+       "nh33",
+       "hag33"
+      ],
+      "note": "280 PS at 6,800 rpm, Japan’s gentlemen’s agreement figure (JDM)"
+     },
+     "tq": {
+      "v": 271,
+      "src": [
+       "nh33",
+       "ph33"
+      ],
+      "note": "lb-ft at 4,400 rpm (368 Nm, JDM)"
+     },
+     "z60": {
+      "v": 5.3,
+      "who": "Car and Driver",
+      "src": [
+       "z60gtr"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "5-speed manual, all-wheel drive",
+      "src": [
+       "wpgtr",
+       "hagu33"
+      ],
+      "note": "ATTESA E-TS Pro with an active rear differential"
+     },
+     "what": "Stiffer suspension, the ATTESA E-TS Pro all-wheel-drive system and an active rear differential.",
+     "what_src": [
+      "hag33",
+      "wpgtr"
+     ]
+    },
+    {
+     "id": "r33-lm",
+     "name": "Skyline GT-R LM Limited",
+     "years": "1996",
+     "hp": {
+      "v": 276,
+      "src": [
+       "nh33",
+       "hag33"
+      ],
+      "note": "280 PS at 6,800 rpm, Japan’s gentlemen’s agreement figure (JDM)"
+     },
+     "tq": {
+      "v": 271,
+      "src": [
+       "nh33",
+       "ph33"
+      ],
+      "note": "lb-ft at 4,400 rpm (368 Nm, JDM)"
+     },
+     "trans": {
+      "v": "5-speed manual, all-wheel drive",
+      "src": [
+       "wpgtr"
+      ],
+      "note": ""
+     },
+     "what": "A cosmetic Le Mans edition in Champion Blue. 188 built: 86 GT-R and 102 V-spec.",
+     "what_src": [
+      "hag33",
+      "wpgtr"
+     ]
+    },
+    {
+     "id": "r33-400r",
+     "name": "NISMO 400R",
+     "years": "1995–1998",
+     "hp": {
+      "v": 400,
+      "src": [
+       "wpgtr",
+       "hag33"
+      ],
+      "note": "NISMO figure (405 PS) from a bored and stroked RB26, the RB-X GT2; Hagerty UK quotes 395 bhp"
+     },
+     "tq": {
+      "v": 347,
+      "src": [
+       "wpgtr"
+      ],
+      "note": "lb-ft (470 Nm)"
+     },
+     "top": {
+      "v": "over 186 mph",
+      "src": [
+       "wpgtr",
+       "hagu33"
+      ],
+      "note": "over 300 km/h"
+     },
+     "trans": {
+      "v": "5-speed manual, all-wheel drive",
+      "src": [
+       "wpgtr"
+      ],
+      "note": ""
+     },
+     "what": "NISMO’s special with a bigger engine. NISMO planned 100, but only 44 were built.",
+     "what_src": [
+      "wpgtr",
+      "hag33"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "RB26DETT": {
+   "name": "Nissan RB26DETT",
+   "what": "2.6-liter inline-6, twin-turbo",
+   "study": "nissan-rb26dett",
+   "page": "/engines/nissan-rb26dett/",
+   "yt": [
+    "scy",
+    "nissan-rb26dett"
+   ],
+   "facts": [
+    [
+     "Layout",
+     "Inline-6, DOHC 24-valve, iron block, aluminum head, belt-driven cams",
+     [
+      "wprb"
+     ]
+    ],
+    [
+     "Output",
+     "280 PS (276 hp) at 6,800 rpm, 368 Nm (271 lb-ft) at 4,400 rpm in the R33",
+     [
+      "nh33"
+     ]
+    ],
+    [
+     "Bore x stroke",
+     "86 x 73.7 mm, 2,568 cc",
+     [
+      "wprb"
+     ]
+    ],
+    [
+     "Turbos",
+     "Two turbos in parallel with ceramic turbine wheels; the R34 got ball-bearing units",
+     [
+      "wprb"
+     ]
+    ],
+    [
+     "Throttles",
+     "Six individual throttle bodies instead of one",
+     [
+      "wprb"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Ceramic turbine wheels",
+     "kind": "Outlet report",
+     "rx": "ceramic|turbine wheel|turbo (failure|failed|blew|blown|shaft)|turbo (whine|noise)",
+     "x": "The stock turbos have ceramic turbine wheels, which Wikipedia says are weak at high boost. PistonHeads warns that overspinning a turbo can break the wheel off its shaft, and that a noisy turbo points to worn bearings.",
+     "fix": "",
+     "src": [
+      "wprb",
+      "ph33"
+     ]
+    },
+    {
+     "t": "Oil pushed past the turbos",
+     "kind": "Outlet report",
+     "rx": "crankcase pressure|oil (in|into) (the )?intake|blow-?by|oil starvation|spun (a )?bearings?|spinning bearings?",
+     "x": "PistonHeads says crankcase pressure can push oil past the turbos into the intake, and too much oil in the head can starve the sump and spin a bearing. It says to change the oil at least every 6,000 miles.",
+     "fix": "",
+     "src": [
+      "ph33"
+     ]
+    },
+    {
+     "t": "Coil packs and misfires",
+     "kind": "Outlet report",
+     "rx": "coil ?packs?|misfir",
+     "x": "PistonHeads lists failing coil packs as an R34 weak spot, and names plugs, coil packs and airflow meters as the usual causes of poor running on the R33.",
+     "fix": "",
+     "src": [
+      "ph34",
+      "ph33"
+     ]
+    }
+   ],
+   "photo": {
+    "src": "/assets/engines/nissan-rb26dett-2-6-l-inline-6-twin-turbo-engine.webp",
+    "w": 1200,
+    "h": 1072,
+    "ai": true
+   }
+  }
+ },
+ "compare": [],
+ "sources": {
+  "wpgtr": {
+   "t": "Wikipedia: Nissan Skyline GT-R",
+   "u": "https://en.wikipedia.org/wiki/Nissan_Skyline_GT-R",
+   "k": "Wikipedia"
+  },
+  "wprb": {
+   "t": "Wikipedia: Nissan RB engine",
+   "u": "https://en.wikipedia.org/wiki/Nissan_RB_engine",
+   "k": "Wikipedia"
+  },
+  "z60gtr": {
+   "t": "0-60specs.com: Nissan Skyline GT-R 0-60 runs by magazine (Motor Trend, Car and Driver)",
+   "u": "https://www.0-60specs.com/nissan/skyline-gt-r-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "nh33": {
+   "t": "Nissan Heritage Collection: Skyline GT-R Nürburgring Time Attack (BCNR33) specifications",
+   "u": "https://www.nissan-global.com/EN/HERITAGE_COLLECTION/346_skyline_gt-r_nurburgring.html",
+   "k": "Nissan"
+  },
+  "hag33": {
+   "t": "Hagerty: Get an R33 Skyline GT-R while they’re still hot enough to handle (Greg Ingold, Mar 2021)",
+   "u": "https://www.hagerty.com/media/market-trends/valuation/get-an-r33-skyline-gt-r-while-theyre-still-hot-enough-to-handle/",
+   "k": "outlet"
+  },
+  "hagu33": {
+   "t": "Hagerty UK: Nissan Skyline GT-R R33 buyer’s guide (Alisdair Suttie, Sep 2025)",
+   "u": "https://www.hagerty.co.uk/articles/nissan-skyline-buyers-guide/",
+   "k": "outlet"
+  },
+  "ph33": {
+   "t": "PistonHeads: Nissan Skyline GT-R (R33) PH used buying guide (Tony Middlehurst, Jun 2023)",
+   "u": "https://www.pistonheads.com/news/ph-buying-guides/nissan-skyline-gt-r--ph-used-buying-guide/47311",
+   "k": "outlet"
+  },
+  "ph34": {
+   "t": "PistonHeads: Nissan Skyline GT-R R34 PH used buying guide (Tony Middlehurst, Mar 2020)",
+   "u": "https://www.pistonheads.com/news/ph-buying-guides/nissan-skyline-gt-r-r34--ph-used-buying-guide/42101",
+   "k": "outlet"
+  },
+  "ma33": {
+   "t": "Motor Authority: The story behind Leo’s Nissan Skyline R33 GT-R from \"The Fast and the Furious\" (Sean Szymkowski, Oct 2019)",
+   "u": "https://www.motorauthority.com/news/1124181_the-story-behind-leo-s-nissan-skyline-r33-gt-r-from-the-fast-and-the-furious",
+   "k": "outlet"
+  }
+ },
+ "yt_study": "car-nissan-skyline-gt-r-r33"
+}

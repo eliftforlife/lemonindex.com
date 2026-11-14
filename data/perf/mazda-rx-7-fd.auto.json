@@ -1,0 +1,159 @@
+{
+ "built": "2026-11-13",
+ "nhtsa": {
+  "by_year": {
+   "1990": 28,
+   "1991": 22,
+   "1993": 82,
+   "1994": 18,
+   "1995": 2
+  },
+  "gens": {
+   "fd": {
+    "n": 102,
+    "issues": {
+     "Apex and side seals (low compression)": {
+      "n": 3,
+      "ex": [
+       "10018854",
+       "556889"
+      ]
+     },
+     "Vacuum hoses (the rat's nest)": {
+      "n": 2,
+      "ex": [
+       "488451",
+       "526865"
+      ]
+     },
+     "Coolant seals and air separator tank": {
+      "n": 5,
+      "ex": [
+       "10459235",
+       "505980"
+      ]
+     },
+     "Brittle wiring harness": {
+      "n": 0,
+      "ex": []
+     }
+    },
+    "parts": [
+     [
+      "Engine and engine cooling",
+      43
+     ],
+     [
+      "Fuel system, gasoline",
+      22
+     ],
+     [
+      "Electrical system",
+      19
+     ],
+     [
+      "Unknown or other",
+      4
+     ],
+     [
+      "Power train",
+      4
+     ],
+     [
+      "Air bags",
+      3
+     ]
+    ]
+   }
+  },
+  "parts": [
+   [
+    "Engine and engine cooling",
+    43
+   ],
+   [
+    "Fuel system, gasoline",
+    22
+   ],
+   [
+    "Electrical system",
+    19
+   ],
+   [
+    "Unknown or other",
+    4
+   ],
+   [
+    "Power train",
+    4
+   ],
+   [
+    "Air bags",
+    3
+   ]
+  ]
+ },
+ "recalls": {
+  "1993": [
+   {
+    "id": "00E069000",
+    "part": "LATCHES/LOCKS/LINKAGES:HOOD:LATCH",
+    "summary": "EQUIPMENT DESCRIPTION:  MAZDA SPEED RESINOUS HOODS, DESIGNED AND SOLD AS ACCESSORY PARTS FOR MODEL YEAR 1992-1995 RX7 VEHICLES, MANUFACTURED BETWEEN JUNE 1, 1997, THROUGH SEPTEMBER 19, 2000."
+   },
+   {
+    "id": "94V094000",
+    "part": "ENGINE AND ENGINE COOLING:COOLING SYSTEM",
+    "summary": "THE RADIATOR CAP PRESSURE RELIEF VALVE RELEASE PRESSURE IS SET TOO HIGH. THIS CAN CAUSE THE COOLANT TO REACH TEMPERATURES THAT EXCEED THE THERMAL DESIGN LIMITS OF SOME COMPONENTS OF THE COOLANT SYSTEM. SHOULD THIS OCCUR, ENGINE COOLANT CAN LEAK COLLECT ON TOP OF THE ENGINE."
+   },
+   {
+    "id": "96V149000",
+    "part": "SERVICE BRAKES, HYDRAULIC:POWER ASSIST:VACUUM:HOSES, LINES/PIPING, AND FITTINGS",
+    "summary": "OIL MIST CONTAINED IN THE ENGINE INTAKE AIR CAN COLLECT OVER TIME IN THE BRAKE VACUUM CHECK VALVE PREVENTING THE CHECK VALVE FROM OPENING AT THE SPECIFIED PRESSURE REDUCING POWER ASSIST TO THE BRAKES."
+   },
+   {
+    "id": "95V069000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:HOSES, LINES/PIPING, AND FITTINGS",
+    "summary": "RESIDUAL ENGINE HEAT CAN CAUSE PREMATURE DETERIORATION OF THE FUEL HOSE CAUSING THE HOSE TO LEAK. ALSO, REMOVING AND REINSTALLING THE DETERIORATED FUEL HOSES INCREASES THE LIKELIHOOD OF A LEAK."
+   }
+  ],
+  "1994": [
+   {
+    "id": "00E069000",
+    "part": "LATCHES/LOCKS/LINKAGES:HOOD:LATCH",
+    "summary": "EQUIPMENT DESCRIPTION:  MAZDA SPEED RESINOUS HOODS, DESIGNED AND SOLD AS ACCESSORY PARTS FOR MODEL YEAR 1992-1995 RX7 VEHICLES, MANUFACTURED BETWEEN JUNE 1, 1997, THROUGH SEPTEMBER 19, 2000."
+   },
+   {
+    "id": "94V094000",
+    "part": "ENGINE AND ENGINE COOLING:COOLING SYSTEM",
+    "summary": "THE RADIATOR CAP PRESSURE RELIEF VALVE RELEASE PRESSURE IS SET TOO HIGH. THIS CAN CAUSE THE COOLANT TO REACH TEMPERATURES THAT EXCEED THE THERMAL DESIGN LIMITS OF SOME COMPONENTS OF THE COOLANT SYSTEM. SHOULD THIS OCCUR, ENGINE COOLANT CAN LEAK COLLECT ON TOP OF THE ENGINE."
+   },
+   {
+    "id": "95V069000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:HOSES, LINES/PIPING, AND FITTINGS",
+    "summary": "RESIDUAL ENGINE HEAT CAN CAUSE PREMATURE DETERIORATION OF THE FUEL HOSE CAUSING THE HOSE TO LEAK. ALSO, REMOVING AND REINSTALLING THE DETERIORATED FUEL HOSES INCREASES THE LIKELIHOOD OF A LEAK."
+   },
+   {
+    "id": "96V149000",
+    "part": "SERVICE BRAKES, HYDRAULIC:POWER ASSIST:VACUUM:HOSES, LINES/PIPING, AND FITTINGS",
+    "summary": "OIL MIST CONTAINED IN THE ENGINE INTAKE AIR CAN COLLECT OVER TIME IN THE BRAKE VACUUM CHECK VALVE PREVENTING THE CHECK VALVE FROM OPENING AT THE SPECIFIED PRESSURE REDUCING POWER ASSIST TO THE BRAKES."
+   }
+  ],
+  "1995": [
+   {
+    "id": "00E069000",
+    "part": "LATCHES/LOCKS/LINKAGES:HOOD:LATCH",
+    "summary": "EQUIPMENT DESCRIPTION:  MAZDA SPEED RESINOUS HOODS, DESIGNED AND SOLD AS ACCESSORY PARTS FOR MODEL YEAR 1992-1995 RX7 VEHICLES, MANUFACTURED BETWEEN JUNE 1, 1997, THROUGH SEPTEMBER 19, 2000."
+   },
+   {
+    "id": "96V149000",
+    "part": "SERVICE BRAKES, HYDRAULIC:POWER ASSIST:VACUUM:HOSES, LINES/PIPING, AND FITTINGS",
+    "summary": "OIL MIST CONTAINED IN THE ENGINE INTAKE AIR CAN COLLECT OVER TIME IN THE BRAKE VACUUM CHECK VALVE PREVENTING THE CHECK VALVE FROM OPENING AT THE SPECIFIED PRESSURE REDUCING POWER ASSIST TO THE BRAKES."
+   }
+  ]
+ },
+ "yt": {
+  "car-mazda-rx-7-fd": null,
+  "mazda-13b-rew": null
+ },
+ "scores": {}
+}

@@ -1,0 +1,138 @@
+{
+ "built": "2026-11-13",
+ "nhtsa": {
+  "by_year": {
+   "1991": 4,
+   "1992": 2,
+   "1994": 1,
+   "2001": 1,
+   "2005": 1,
+   "2017": 6,
+   "2019": 1,
+   "2021": 1
+  },
+  "gens": {
+   "na1": {
+    "n": 7,
+    "issues": {
+     "Timing belt (interference engine)": {
+      "n": 0,
+      "ex": []
+     },
+     "Gearbox snap ring (1991–1992)": {
+      "n": 1,
+      "ex": [
+       "11187059"
+      ]
+     },
+     "Early ABS unit": {
+      "n": 3,
+      "ex": [
+       "501181",
+       "544562"
+      ]
+     },
+     "Coolant reservoir leaks": {
+      "n": 0,
+      "ex": []
+     }
+    },
+    "parts": [
+     [
+      "Service brakes, hydraulic",
+      3
+     ],
+     [
+      "Tires",
+      2
+     ],
+     [
+      "Power train",
+      1
+     ],
+     [
+      "Engine and engine cooling",
+      1
+     ]
+    ]
+   },
+   "na2": {
+    "n": 2,
+    "issues": {
+     "Timing belt (interference engine)": {
+      "n": 0,
+      "ex": []
+     }
+    },
+    "parts": [
+     [
+      "Structure",
+      1
+     ],
+     [
+      "Engine and engine cooling",
+      1
+     ],
+     [
+      "Seat belts",
+      1
+     ]
+    ]
+   }
+  },
+  "parts": [
+   [
+    "Service brakes, hydraulic",
+    3
+   ],
+   [
+    "Tires",
+    2
+   ],
+   [
+    "Engine and engine cooling",
+    2
+   ],
+   [
+    "Structure",
+    1
+   ],
+   [
+    "Power train",
+    1
+   ],
+   [
+    "Seat belts",
+    1
+   ]
+  ]
+ },
+ "recalls": {
+  "1991": [
+   {
+    "id": "95V103001",
+    "part": "SEAT BELTS:FRONT:BUCKLE ASSEMBLY",
+    "summary": "THE FRONT SAFETY BELT BUCKLE RELEASE BUTTONS CAN BREAK. THESE RED PLASTIC RELEASE BUTTONS ARE MARKED \"PRESS.\" IF A BUTTON BREAKS, PIECES CAN FALL INTO THE BUCKLE ASSEMBLY CAUSING THE BUCKLE TO OPERATE IMPROPERLY."
+   }
+  ],
+  "1992": [],
+  "1993": [],
+  "1994": [],
+  "1995": [],
+  "1996": [],
+  "1997": [],
+  "1998": [],
+  "1999": [],
+  "2000": [],
+  "2001": [],
+  "2002": [],
+  "2003": [],
+  "2004": [],
+  "2005": []
+ },
+ "yt": {
+  "car-acura-nsx-na1": null,
+  "honda-c30a-c32b": null
+ },
+ "scores": {}
+}

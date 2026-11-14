@@ -1,0 +1,445 @@
+{
+ "slug": "mitsubishi-eclipse-spyder-gts",
+ "name": "Mitsubishi Eclipse Spyder GTS",
+ "short": "Eclipse Spyder",
+ "make": "Mitsubishi",
+ "page": "/jdm/mitsubishi-eclipse-spyder-gts/",
+ "jdm": true,
+ "focus": "d5x-spyder",
+ "star": "gts",
+ "h1": "Mitsubishi Eclipse Spyder GTS (2003-2005): specs, 6G72 V6 and what owners say",
+ "nhtsa": {
+  "make": "MITSUBISHI",
+  "models": [
+   "ECLIPSE SPYDER"
+  ],
+  "note": "Counts cover every 2001-2005 Spyder: the 4-cylinder GS and the V6 GT and GTS. The 3G Eclipse coupe is filed separately under ECLIPSE."
+ },
+ "us": {
+  "sold": true,
+  "x": "Sold new in the US. The third-generation Spyder covers model years 2001-2005, and the GTS was offered for 2003-2005.",
+  "src": [
+   "fesp",
+   "wecl",
+   "m03sp",
+   "m05idx"
+  ]
+ },
+ "films": [
+  {
+   "film": "2 Fast 2 Furious (2003)",
+   "who": "Roman Pearce",
+   "x": "Roman Pearce's purple Eclipse Spyder, one of two GPS-tagged Mitsubishis that agents hand Brian and Roman for the undercover job. Wikipedia lists it as a 2003 GTS; Jalopnik says the film cars were 2001 Spyders with the 200 hp V6.",
+   "src": [
+    "wp2f2f",
+    "jal19"
+   ]
+  }
+ ],
+ "related": [
+  {
+   "u": "/cars/mitsubishi-eclipse/",
+   "t": "Mitsubishi Eclipse, later years"
+  },
+  {
+   "u": "/jdm/mitsubishi-eclipse-2g/",
+   "t": "Brian's 2G Eclipse (The Fast and the Furious)"
+  }
+ ],
+ "topics_extra": {
+  "Automatic transmission": "transmission (fail|slip)|slipping|won'?t shift|limp mode",
+  "Convertible top": "convertible top|soft top|top (won'?t|motor|leak)",
+  "Timing belt": "timing belt|tensioner",
+  "Fuel leak": "fuel (leak|smell|odor)|gas smell",
+  "Clutch": "\\bclutch\\b"
+ },
+ "gens": [
+  {
+   "id": "d5x-spyder",
+   "code": "3G Spyder (D5xA)",
+   "years": "2001–2005",
+   "y0": 2001,
+   "y1": 2005,
+   "engine": "6G72",
+   "body": "Convertible",
+   "tag": "3.0-liter V6 in the GT and GTS, 210 hp from 2003; the GS has a 2.4-liter four.",
+   "variants": [
+    {
+     "id": "gts",
+     "name": "Eclipse Spyder GTS",
+     "years": "2003–2005",
+     "star": true,
+     "hp": {
+      "v": 210,
+      "src": [
+       "m03sp",
+       "m04sp"
+      ],
+      "note": "at 5,750 rpm"
+     },
+     "tq": {
+      "v": 205,
+      "src": [
+       "m03sp",
+       "m04sp"
+      ],
+      "note": "lb-ft at 3,750 rpm"
+     },
+     "trans": {
+      "v": "5-speed manual or 4-speed Sportronic automatic, front-drive",
+      "src": [
+       "m04sp",
+       "fesp"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,329 lb",
+      "src": [
+       "m03sp",
+       "m04sp"
+      ],
+      "note": "curb, manual; 3,395 lb automatic (2004)"
+     },
+     "what": "Top Spyder: the V6 plus leather seats, a 6-CD stereo, ABS with brake-force distribution and side air bags as standard.",
+     "what_src": [
+      "m04sp"
+     ]
+    },
+    {
+     "id": "gt-03",
+     "name": "Eclipse Spyder GT",
+     "years": "2003–2005",
+     "hp": {
+      "v": 210,
+      "src": [
+       "m03sp",
+       "m04sp"
+      ],
+      "note": "at 5,750 rpm"
+     },
+     "tq": {
+      "v": 205,
+      "src": [
+       "m03sp",
+       "m04sp"
+      ],
+      "note": "lb-ft at 3,750 rpm"
+     },
+     "trans": {
+      "v": "5-speed manual or 4-speed Sportronic automatic, front-drive",
+      "src": [
+       "m04sp"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,296 lb",
+      "src": [
+       "m03sp",
+       "m04sp"
+      ],
+      "note": "curb, manual"
+     },
+     "what": "Same V6 as the GTS with fewer standard features.",
+     "what_src": [
+      "m04sp"
+     ]
+    },
+    {
+     "id": "gt-01",
+     "name": "Eclipse Spyder GT",
+     "years": "2001–2002",
+     "hp": {
+      "v": 200,
+      "src": [
+       "m02sp",
+       "wecl"
+      ],
+      "note": "at 5,500 rpm"
+     },
+     "tq": {
+      "v": 205,
+      "src": [
+       "m02sp"
+      ],
+      "note": "lb-ft at 4,000 rpm"
+     },
+     "z60": {
+      "v": 8.2,
+      "who": "Car and Driver (2001)",
+      "src": [
+       "z60e"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "5-speed manual or 4-speed Sportronic automatic, front-drive",
+      "src": [
+       "m02sp",
+       "fesp"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,241 lb",
+      "src": [
+       "m02sp"
+      ],
+      "note": "curb, manual (2002)"
+     },
+     "what": "The first V6 Spyder of this generation, 10 hp down on the 2003 cars.",
+     "what_src": [
+      "m02sp",
+      "m03sp"
+     ]
+    },
+    {
+     "id": "gs",
+     "name": "Eclipse Spyder GS",
+     "years": "2001–2005",
+     "hp": {
+      "v": 147,
+      "src": [
+       "m02sp",
+       "m03sp"
+      ],
+      "note": "at 5,500 rpm; 2.4-liter inline-4, not the V6"
+     },
+     "tq": {
+      "v": 158,
+      "src": [
+       "m02sp",
+       "m03sp"
+      ],
+      "note": "lb-ft at 4,000 rpm"
+     },
+     "trans": {
+      "v": "5-speed manual or 4-speed Sportronic automatic, front-drive",
+      "src": [
+       "m03sp"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,097 lb",
+      "src": [
+       "m03sp"
+      ],
+      "note": "curb, manual (2003)"
+     },
+     "what": "Base Spyder with a 2.4-liter SOHC four instead of the V6.",
+     "what_src": [
+      "m03sp"
+     ],
+     "engine": "4G64"
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "6G72": {
+   "name": "Mitsubishi 6G72",
+   "what": "3.0-liter V6, no turbo",
+   "study": "mitsubishi-6g72",
+   "page": "/engines/mitsubishi-6g72/",
+   "yt": [
+    "scy",
+    "mitsubishi-6g72"
+   ],
+   "facts": [
+    [
+     "Layout",
+     "V6, SOHC 24-valve, cast-iron block, aluminum heads",
+     [
+      "m03sp",
+      "m04sp"
+     ]
+    ],
+    [
+     "Output",
+     "210 hp at 5,750 rpm, 205 lb-ft at 3,750 rpm (2003-2005)",
+     [
+      "m03sp",
+      "m04sp"
+     ]
+    ],
+    [
+     "Earlier output",
+     "200 hp at 5,500 rpm, 205 lb-ft at 4,000 rpm (2001-2002)",
+     [
+      "m02sp"
+     ]
+    ],
+    [
+     "Bore x stroke",
+     "91.1 x 76.0 mm; 10.0:1 compression (9.0:1 before 2003)",
+     [
+      "m03sp",
+      "m02sp",
+      "w6g7"
+     ]
+    ],
+    [
+     "Redline",
+     "6,200 rpm",
+     [
+      "m03sp"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Fuel return hose recall",
+     "kind": "Recall",
+     "rx": "fuel (leak|smell|odor)|gas smell|fuel pump",
+     "x": "On some 2003-2004 Eclipses, Spyders and Galants, a restricted fitting on the fuel pump can build too much fuel pressure and make the return hose leak. Leaking fuel near an ignition source can start a fire. A second 2004 recall covered a badly molded fitting.",
+     "fix": "Dealer checks fuel pressure and modifies the pump (NHTSA 03V-442), or replaces the pump (NHTSA 04V-312).",
+     "src": [
+      "r03",
+      "r04"
+     ]
+    },
+    {
+     "t": "Crank sensor wiring recall (2001)",
+     "kind": "Recall",
+     "rx": "crank(shaft)? (position )?sensor|stall",
+     "x": "On some 2001 Eclipses, Spyders and Galants, the crankshaft position sensor harness can rub on a heat shield and short out. The engine can then die while driving.",
+     "fix": "Dealer re-routes the harness for free (NHTSA 00V-299).",
+     "src": [
+      "r00"
+     ]
+    },
+    {
+     "t": "Transmission cooler hose recall (2001)",
+     "kind": "Recall",
+     "rx": "transmission (fluid|leak)|cooler hose",
+     "x": "On 2001 Spyders with automatics (and 2000-2001 Eclipses and 1999-2001 Galants), a badly made transmission cooler hose can leak fluid. Fluid on the exhaust can smoke.",
+     "fix": "Dealer replaces the cooler hose assembly (NHTSA 01V-011).",
+     "src": [
+      "r01"
+     ]
+    },
+    {
+     "t": "No engine failure pattern",
+     "kind": "Owner-reported (NHTSA)",
+     "rx": "",
+     "x": "NHTSA has 79 owner complaints on 2001-2005 Spyders. Most are about the body, wheels, tires and air bags; only a handful mention the engine.",
+     "fix": "",
+     "src": [
+      "ncs02",
+      "ncs03",
+      "ncs04",
+      "ncs05"
+     ]
+    }
+   ],
+   "photo": {
+    "src": "/assets/engines/mitsubishi-6g72-3-0-l-v6-engine.webp",
+    "w": 1200,
+    "h": 1086,
+    "ai": true
+   }
+  }
+ },
+ "compare": [],
+ "sources": {
+  "wecl": {
+   "t": "Wikipedia: Mitsubishi Eclipse (third generation)",
+   "u": "https://en.wikipedia.org/wiki/Mitsubishi_Eclipse",
+   "k": "Wikipedia"
+  },
+  "w6g7": {
+   "t": "Wikipedia: Mitsubishi 6G7 engine (6G72)",
+   "u": "https://en.wikipedia.org/wiki/Mitsubishi_6G7_engine",
+   "k": "Wikipedia"
+  },
+  "fesp": {
+   "t": "fueleconomy.gov: Mitsubishi Eclipse Spyder 2001-2005",
+   "u": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=2001&year2=2005&make=Mitsubishi&baseModel=Eclipse&srchtyp=ymm",
+   "k": "EPA"
+  },
+  "m02sp": {
+   "t": "Mitsubishi Motors North America: 2002 Eclipse Spyder GS / GT specifications (archived Apr 2002)",
+   "u": "https://web.archive.org/web/20020417112631/http://mitsubishicars.com:80/eclipsespyder/specs.html",
+   "k": "Mitsubishi (archived)"
+  },
+  "m03sp": {
+   "t": "Mitsubishi Motors North America: 2003 Eclipse Spyder GS / GT / GTS specifications (archived Jun 2003)",
+   "u": "https://web.archive.org/web/20030608161455/http://www.mitsubishicars.com:80/eclipsespyder/specs.html",
+   "k": "Mitsubishi (archived)"
+  },
+  "m04sp": {
+   "t": "Mitsubishi Motors North America: 2004 Eclipse Spyder GS / GT / GTS features and specifications (archived Oct 2004)",
+   "u": "https://web.archive.org/web/20041026122045/http://www.mitsubishicars.com:80/MMSA/jsp/eclipsespyder/features_specs.jsp?t=all",
+   "k": "Mitsubishi (archived)"
+  },
+  "m05idx": {
+   "t": "Mitsubishi Motors North America: Eclipse Spyder GT and GTS overview (archived Jun 2005)",
+   "u": "https://web.archive.org/web/20050629001058/http://www.mitsubishicars.com:80/eclipsespyder/index.html",
+   "k": "Mitsubishi (archived)"
+  },
+  "z60e": {
+   "t": "0-60specs.com: Mitsubishi Eclipse 0-60 runs by magazine (Car and Driver 2001 Spyder GT V6)",
+   "u": "https://www.0-60specs.com/mitsubishi/eclipse-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "wp2f2f": {
+   "t": "Wikipedia: 2 Fast 2 Furious",
+   "u": "https://en.wikipedia.org/wiki/2_Fast_2_Furious",
+   "k": "Wikipedia"
+  },
+  "jal19": {
+   "t": "Jalopnik: The Mitsubishi Eclipse Spyder from 2 Fast 2 Furious has a fascinating origin story (Patrick George, Nov 2019)",
+   "u": "https://jalopnik.com/the-mitsubishi-eclipse-spyder-from-2-fast-2-furious-has-1840014205",
+   "k": "outlet"
+  },
+  "r00": {
+   "t": "NHTSA recall 00V-299: crankshaft position sensor harness, 2001 Eclipse, Eclipse Spyder and Galant",
+   "u": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=00V299001",
+   "k": "Recall"
+  },
+  "r01": {
+   "t": "NHTSA recall 01V-011: automatic transmission cooler hose, 1999-2001 Galant, 2000-2001 Eclipse, 2001 Eclipse Spyder",
+   "u": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=01V011001",
+   "k": "Recall"
+  },
+  "r03": {
+   "t": "NHTSA recall 03V-442: fuel return hose fitting, 2003-2004 Eclipse and Eclipse Spyder, 2003 Galant (Dec 2003)",
+   "u": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=03V442000",
+   "k": "Recall"
+  },
+  "r04": {
+   "t": "NHTSA recall 04V-312: fuel return hose fitting molding, 2004 Eclipse and Eclipse Spyder (Jul 2004)",
+   "u": "https://api.nhtsa.gov/recalls/campaignNumber?campaignNumber=04V312000",
+   "k": "Recall"
+  },
+  "ncs02": {
+   "t": "NHTSA complaints: 2002 Mitsubishi Eclipse Spyder",
+   "u": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=MITSUBISHI&model=ECLIPSE%20SPYDER&modelYear=2002",
+   "k": "NHTSA owner complaints"
+  },
+  "ncs03": {
+   "t": "NHTSA complaints: 2003 Mitsubishi Eclipse Spyder",
+   "u": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=MITSUBISHI&model=ECLIPSE%20SPYDER&modelYear=2003",
+   "k": "NHTSA owner complaints"
+  },
+  "ncs04": {
+   "t": "NHTSA complaints: 2004 Mitsubishi Eclipse Spyder",
+   "u": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=MITSUBISHI&model=ECLIPSE%20SPYDER&modelYear=2004",
+   "k": "NHTSA owner complaints"
+  },
+  "ncs05": {
+   "t": "NHTSA complaints: 2005 Mitsubishi Eclipse Spyder",
+   "u": "https://api.nhtsa.gov/complaints/complaintsByVehicle?make=MITSUBISHI&model=ECLIPSE%20SPYDER&modelYear=2005",
+   "k": "NHTSA owner complaints"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-mitsubishi-eclipse-spyder-gts"
+}

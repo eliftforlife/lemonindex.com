@@ -1,0 +1,377 @@
+{
+ "slug": "mazda-rx-7-fd",
+ "name": "Mazda RX-7 (FD)",
+ "short": "RX-7",
+ "make": "Mazda",
+ "page": "/jdm/mazda-rx-7-fd/",
+ "jdm": true,
+ "focus": "fd",
+ "star": "fd-base",
+ "h1": "Mazda RX-7 FD (third generation): specs, 13B rotary and what owners say",
+ "nhtsa": {
+  "make": "MAZDA",
+  "models": [
+   "RX-7"
+  ],
+  "note": "NHTSA's complaint and recall model list only has the RX-7 for the 1993 model year, so 1994 and 1995 cars may show no data."
+ },
+ "us": {
+  "sold": true,
+  "x": "Sold new in the US for the 1993 to 1995 model years, about 13,900 cars. Later Japanese-market FDs (built to 2002) can be imported once they are 25 years old.",
+  "src": [
+   "hag",
+   "feg"
+  ]
+ },
+ "films": [
+  {
+   "film": "The Fast and the Furious (2001)",
+   "who": "Dominic Toretto",
+   "x": "Dom drives a red 1993 RX-7 to the opening street race. The film used a privately owned car, repainted red so it would stand out.",
+   "src": [
+    "wff",
+    "pet",
+    "ma"
+   ]
+  },
+  {
+   "film": "2 Fast 2 Furious (2003)",
+   "who": "Orange Julius",
+   "x": "Orange Julius races an orange RX-7. One of the first film's RX-7s was reused for it with a new body kit and graphics.",
+   "src": [
+    "w2f",
+    "ma"
+   ]
+  }
+ ],
+ "related": [
+  {
+   "u": "/cars/mazda-rx-8/",
+   "t": "Mazda RX-8, the next rotary"
+  }
+ ],
+ "topics_extra": {
+  "Apex seals / compression": "apex seals?|side seals?|low compression|compression test|engine rebuild",
+  "Vacuum hoses": "rat'?s ?nest|vacuum (hose|line)s?",
+  "Sequential turbos": "sequential|second(ary)? turbo|boost (drop|spike|creep)",
+  "Overheating / coolant": "overheat(s|ing)?|coolant seals?|air separat|steam",
+  "Oil use": "burn(s|ing)? oil|oil (metering|injection)|premix|two.?stroke oil",
+  "Wiring harness": "wiring harness|brittle wir"
+ },
+ "gens": [
+  {
+   "id": "fd",
+   "code": "FD (FD3S)",
+   "years": "1993–1995",
+   "y0": 1993,
+   "y1": 1995,
+   "engine": "13B-REW",
+   "body": "Coupe",
+   "tag": "1.3-liter twin-rotor 13B-REW, sequential twin turbos, 255 hp, 8,000 rpm redline.",
+   "variants": [
+    {
+     "id": "fd-base",
+     "name": "RX-7",
+     "years": "1993–1995",
+     "star": true,
+     "hp": {
+      "v": 255,
+      "src": [
+       "hag",
+       "scm"
+      ],
+      "note": "at 6,500 rpm"
+     },
+     "tq": {
+      "v": 217,
+      "src": [
+       "hag",
+       "scm"
+      ],
+      "note": "lb-ft at 5,000 rpm"
+     },
+     "z60": {
+      "v": 5.3,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "top": {
+      "v": "159 mph",
+      "src": [
+       "scm"
+      ],
+      "note": ""
+     },
+     "trans": {
+      "v": "5-speed manual, rear-drive",
+      "src": [
+       "wrx7",
+       "hag"
+      ],
+      "note": "4-speed automatic optional on base and Touring; limited-slip standard"
+     },
+     "weight": {
+      "v": "2,800 lb",
+      "src": [
+       "hag",
+       "scm"
+      ],
+      "note": "curb, approximate"
+     },
+     "what": "Limited-slip differential, tape player and cloth seats; cruise control and leather were options.",
+     "what_src": [
+      "hag"
+     ]
+    },
+    {
+     "id": "fd-touring",
+     "name": "RX-7 Touring",
+     "years": "1993–1994",
+     "hp": {
+      "v": 255,
+      "src": [
+       "hag"
+      ],
+      "note": "at 6,500 rpm"
+     },
+     "tq": {
+      "v": 217,
+      "src": [
+       "hag"
+      ],
+      "note": "lb-ft at 5,000 rpm"
+     },
+     "z60": {
+      "v": null,
+      "who": "",
+      "src": [],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "5-speed manual or 4-speed automatic, rear-drive",
+      "src": [
+       "wrx7"
+      ],
+      "note": ""
+     },
+     "what": "Leather, cruise control, sunroof, fog lights, rear wiper and the Bose Wave stereo. The PEP package took its place for 1995.",
+     "what_src": [
+      "hag",
+      "wrx7"
+     ]
+    },
+    {
+     "id": "fd-r",
+     "name": "RX-7 R1 / R2",
+     "years": "1993–1995",
+     "hp": {
+      "v": 255,
+      "src": [
+       "hag"
+      ],
+      "note": "at 6,500 rpm"
+     },
+     "tq": {
+      "v": 217,
+      "src": [
+       "hag"
+      ],
+      "note": "lb-ft at 5,000 rpm"
+     },
+     "z60": {
+      "v": null,
+      "who": "",
+      "src": [],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "5-speed manual, rear-drive",
+      "src": [
+       "wrx7",
+       "hag"
+      ],
+      "note": "no automatic"
+     },
+     "what": "R1 for 1993, R2 for 1994-95: stiffer springs, Bilstein shocks, strut bar, extra oil cooling, front lip and rear wing, no sunroof or cruise. Just over 2,600 sold in the US.",
+     "what_src": [
+      "hag",
+      "dl93"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "13B-REW": {
+   "name": "Mazda 13B-REW",
+   "what": "1.3-liter twin-rotor Wankel, sequential twin-turbo",
+   "study": "mazda-13b-rew",
+   "page": "/engines/mazda-13b-rew/",
+   "yt": [
+    "scy",
+    "mazda-13b-rew"
+   ],
+   "facts": [
+    [
+     "Layout",
+     "Twin-rotor Wankel rotary, 1,308 cc",
+     [
+      "wrx7",
+      "wwank"
+     ]
+    ],
+    [
+     "Output",
+     "255 hp at 6,500 rpm, 217 lb-ft at 5,000 rpm (US)",
+     [
+      "hag",
+      "scm"
+     ]
+    ],
+    [
+     "Redline",
+     "8,000 rpm",
+     [
+      "hag"
+     ]
+    ],
+    [
+     "Turbos",
+     "Sequential: one turbo at low rpm, the second joins around 4,500 rpm; boost about 10 psi",
+     [
+      "hag",
+      "wrx7"
+     ]
+    ],
+    [
+     "Oil",
+     "Burns oil by design; a metering pump feeds oil into the engine",
+     [
+      "hag"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Apex and side seals (low compression)",
+     "kind": "Outlet report",
+     "rx": "apex seals?|side seals?|low compression|compression test|engine rebuild",
+     "x": "A rotary-shop owner told Hagerty that compression shows how worn the engine is. Below 85 psi a rebuild may be close, often from a leaking side seal or a broken apex seal. PistonHeads gives the same advice.",
+     "fix": "Rebuild the engine.",
+     "src": [
+      "hag",
+      "ph"
+     ]
+    },
+    {
+     "t": "Vacuum hoses (the rat's nest)",
+     "kind": "Owner-reported",
+     "rx": "rat'?s ?nest|vacuum (hose|line)s?",
+     "x": "Engine bay heat hardens the many vacuum hoses that run the sequential turbos. Owners interviewed by Hagerty and Driving Line replaced all of them.",
+     "fix": "Replace the vacuum hoses with heat-resistant ones.",
+     "src": [
+      "hag",
+      "dl93",
+      "scm"
+     ]
+    },
+    {
+     "t": "Coolant seals and air separator tank",
+     "kind": "Outlet report",
+     "rx": "coolant seals?|air separat|steam|overheat(s|ing)?",
+     "x": "PistonHeads says steam from the exhaust at start-up points to coolant seals going brittle with heat. The plastic air separator tank can crack and dump the coolant.",
+     "fix": "",
+     "src": [
+      "ph",
+      "hag"
+     ]
+    },
+    {
+     "t": "Brittle wiring harness",
+     "kind": "Outlet report",
+     "rx": "wiring harness|brittle wir|intermittent electric",
+     "x": "The rotary-shop owner Hagerty spoke to says the engine harness dries out and can cause intermittent electrical faults.",
+     "fix": "",
+     "src": [
+      "hag"
+     ]
+    }
+   ]
+  }
+ },
+ "compare": [],
+ "sources": {
+  "hag": {
+   "t": "Hagerty: Your definitive Mazda RX-7 FD buyer's guide (Benjamin Hunting, May 2018)",
+   "u": "https://www.hagerty.com/media/buying-and-selling/fd-mazda-rx-7-buyers-guide/",
+   "k": "outlet"
+  },
+  "scm": {
+   "t": "Sports Car Market: 1993-95 Mazda RX-7 (Stefan Lombard, Feb 2005)",
+   "u": "https://www.sportscarmarket.com/profile/1993-95-mazda-rx-7",
+   "k": "outlet"
+  },
+  "ph": {
+   "t": "PistonHeads: Mazda RX-7 buying guide, powertrain (Oct 2017)",
+   "u": "https://www.pistonheads.com/news/ph-buying-guide-contents/mazda-rx-7-buying-guide-powertrain/36920",
+   "k": "outlet"
+  },
+  "dl93": {
+   "t": "Driving Line: Looking back, driving a bone-stock 1993 Mazda RX-7 R1 (Benjamin Hunting, Sep 2018)",
+   "u": "https://www.drivingline.com/articles/looking-back-driving-a-bone-stock-1993-mazda-rx-7-r1/",
+   "k": "outlet"
+  },
+  "wrx7": {
+   "t": "Wikipedia: Mazda RX-7",
+   "u": "https://en.wikipedia.org/wiki/Mazda_RX-7",
+   "k": "Wikipedia"
+  },
+  "wwank": {
+   "t": "Wikipedia: Mazda Wankel engine",
+   "u": "https://en.wikipedia.org/wiki/Mazda_Wankel_engine",
+   "k": "Wikipedia"
+  },
+  "feg": {
+   "t": "fueleconomy.gov: 1993-1995 Mazda RX-7 listings (EPA)",
+   "u": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=1992&year2=1997&make=Mazda&baseModel=RX-7&srchtyp=ymm&pageno=1&rowLimit=50",
+   "k": "EPA"
+  },
+  "z60": {
+   "t": "0-60specs.com: Mazda RX-7 0-60 runs by magazine (Car and Driver, MotorTrend)",
+   "u": "https://www.0-60specs.com/mazda-rx-7-0-60-times/",
+   "k": "magazine tests, aggregated"
+  },
+  "ma": {
+   "t": "Motor Authority: Deep dive, Dominic Toretto's Mazda RX-7 from The Fast and the Furious (Stephen Edelstein, Jun 2020)",
+   "u": "https://www.motorauthority.com/news/1128392_deep-dive-dominic-toretto-s-mazda-rx-7-from-the-fast-and-the-furious",
+   "k": "outlet"
+  },
+  "pet": {
+   "t": "Petersen Automotive Museum: 1993 Mazda RX-7",
+   "u": "https://petersen.org/pages/petersen-vehicle/1993-mazda-rx-7",
+   "k": "museum"
+  },
+  "wff": {
+   "t": "Wikipedia: The Fast and the Furious (2001 film)",
+   "u": "https://en.wikipedia.org/wiki/The_Fast_and_the_Furious_(2001_film)",
+   "k": "Wikipedia"
+  },
+  "w2f": {
+   "t": "Wikipedia: 2 Fast 2 Furious",
+   "u": "https://en.wikipedia.org/wiki/2_Fast_2_Furious",
+   "k": "Wikipedia"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-mazda-rx-7-fd"
+}

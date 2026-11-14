@@ -156,6 +156,7 @@ if VEX == 'hooks':
     VE_YT = {e: u for e, u in VE_URL.items() if not VEE[e].get('page')}
     VE_YT.update({k: f'/engines/{k}/' for k in ('ford-powerstroke-73', 'ford-powerstroke-60', 'ford-powerstroke-64', 'ford-powerstroke-67', 'cummins-59', 'cummins-67', 'duramax-lb7',
                                                  'duramax-lly', 'duramax-lbz', 'duramax-lmm', 'duramax-lml', 'duramax-l5p', 'ford-ecoboost-27', 'subaru-fa24f', 'vw-ea888')})
+    import jdm as _JDM; VE_YT.update(_JDM.YT)   # 11-13 JDM engine pages (engine_studies_jdm.py)
     VE_YTAVG, VE_YTD = {}, {}
     for _k, _u in VE_YT.items():
         _ys = (_VSY.get(_k) or {}).get('years') or {}

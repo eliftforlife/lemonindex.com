@@ -39,7 +39,7 @@ def _perf_only_page(url, name, make):
         facts = ''.join(f'<li><b>{E(k)}:</b> {E(v)}</li>' for k, v, _s in e.get('facts') or [])
         gsec += f'<h3>{E(e["name"].replace(" (" + D["short"] + ")", ""))}: {E(g["code"])} {E(D["short"])}, {E(g["years"])}</h3><ul>{facts}</ul>'
         filed = ' / '.join(m.title() for m in (D.get('nhtsa') or {}).get('models') or [])
-        rows.append([f'<a href="{E(D["page"])}">{E(g["code"])} {E(D["short"])}</a>', E(g['years']), f'{ga.get("n", 0):,}', str(rec), E(filed)])
+        rows.append([f'<a href="{E(D["page"])}">{E(g["code"])} {E(D["short"])}</a>', E(g['years'])] + ([f'{ga.get("n", 0):,}', str(rec), E(filed)] if D.get('nhtsa') else ['–', '–', 'Never sold new in the US']))   # 11-13 JDM: no NHTSA data, not zeros
     for i in iss:
         for D, *_ in F: S(i.get('src') or [], D)
     _w, vline, vfaq = eng_verdict(url, name, None, sum(1 for i in iss if re.search('recall', i['kind'], re.I)), iss)
@@ -60,21 +60,23 @@ def _perf_only_page(url, name, make):
            (f'Is the {name} reliable?', vfaq + ' Owner complaints are filed by car, not engine, and cover the whole car, so none of these numbers is an engine failure rate.')]
     if hp: faq.append((f'How much horsepower does the {name} make?', f'{hp[0]}' + (f' to {hp[-1]}' if len(hp) > 1 else '') + ' hp in the versions on this page (factory figures).'))
     faq = [(q, html.unescape(a)) for q, a in faq]
-    body = (f'<article class="study tr2 eng2 sce"><p class="kicker"><a href="/engines/performance/">Performance engines</a> · <a href="/engines/">Every engine</a></p>'
+    _jd = url in _JDM.ENGINES; _nous = all(not D.get('nhtsa') for D, *_ in F)   # 11-13 JDM engines: kicker, and no US data for the Skyline's RB26
+    body = (f'<article class="study tr2 eng2 sce"><p class="kicker">' + ('<a href="/jdm/">JDM</a>' if _jd else '<a href="/engines/performance/">Performance engines</a>') + ' · <a href="/engines/">Every engine</a></p>'
             f'<h1>{E(name)} engine: known problems and recalls</h1><p class="tra">{ans1}</p>{chips}'
             f'<p class="note engvd"><b>{E(vline.split(":", 1)[0])}:</b>{E(html.unescape(vline.split(":", 1)[1]))}' + (f' <a href="{h2h[0]}">Compare it with the {E(h2h[1])} →</a>' if h2h else '') + '</p>'
             + (f'<section class="yc engk"><h2>Known issues on record</h2><ul>{issl}</ul></section>' if issl else '')
             + (globals().get('EU_CARS_HTML') or (lambda *a: ''))(url)   # 11-13 N3 (nav report 3): the regular models (Golf for the Golf R), each year linked
             + (globals().get('VE_YT_SEC') or (lambda _u: ''))(url)   # 11-13: YouTube owner tone once its study is scored
             + ''.join((globals().get('VE_SCE') or (lambda _p: []))(url))   # 11-13: the everyday cars' VIN-matched complaints (vin_engine_pages.py)
-            + f'<section class="yc"><h2>Owner complaints and recalls</h2><p>Counts for the cars on this page, from NHTSA. They cover every part of the car, not only the engine.</p>{tbl}</section>'
+            + (f'<section class="yc"><h2>Owner complaints and recalls</h2><p>The cars on this page were never sold new in the US, so NHTSA has no owner complaints or recalls for them.</p>{tbl}</section>' if _nous else
+               f'<section class="yc"><h2>Owner complaints and recalls</h2><p>Counts for the cars on this page, from NHTSA. They cover every part of the car, not only the engine.</p>{tbl}</section>')
             + f'<section class="yc"><h2>Specs by generation</h2>{gsec}</section>'
             + '<section class="yc"><h2>What we don&#39;t have yet</h2><ul>' + ('' if url in ENG_POOL else '<li>A YouTube owner study for this engine (and for the ' + E(', '.join(cars)) + '): not pulled yet, so there&#39;s no YouTube tone or rank.</li>')
               + ('<li>The engine&#39;s other cars: only the versions above are sourced so far.</li>' if ENG_PERF_ONLY[url][2] else '') + '</ul></section>'
             + '<section class="yqa trq"><h2>Quick answers</h2>' + qa_fold(''.join(f'<h3>{E(q)}</h3><p>{E(a)}</p>' for q, a in faq)) + '</section>'
             + (f'<p class="yc-cap">Sources: {srcl}. Complaints and recalls: NHTSA (api.nhtsa.gov).</p>' if srcl else '') + '</article>')
-    title = f'{name} Engine: Known Problems, Recalls & Specs'
-    desc = html.unescape(f'The {name} in the {", ".join(cars)} ({y0}-{y1}): {len(iss)} known issues with sources, owner complaints and recalls by generation, and specs. Every number sourced.')
+    title = f'{name} Engine: Known Problems, Recalls & Specs' if not _nous else f'{name} Engine: Specs, Known Problems and Cars'
+    desc = html.unescape(f'The {name} in the {", ".join(cars)} ({y0}-{y1}): {len(iss)} known issues with sources, ' + ('specs and US import status' if _nous else 'owner complaints and recalls by generation, and specs') + '. Every number sourced.')
     _aie = globals().get('aie_vis')   # 11-13 AI engine illustration when there is one (ai_engine_photos.py)
     page(url, title, desc, body, ld=[faq_ld([(q, '', a) for q, a in faq])] + (aie_ld(url) if _aie else []), vis=_aie(url, html.unescape(name), html.unescape(what)) if _aie else '')
     ENG_MORE_URLS.append(url)

@@ -6,5 +6,69 @@
   "ai": true,
   "title": "Chrysler 2.4 Tigershark engine, 2.4 L inline-4, MultiAir (illustration)",
   "bytes": 148966
+ },
+ "toyota-2jz": {
+  "src": "/assets/engines/toyota-2jz-3-0-l-inline-6-twin-turbo-engine.webp",
+  "w": 1200,
+  "h": 997,
+  "ai": true,
+  "title": "Toyota 2JZ-GTE 3.0 twin-turbo engine, 3.0 L inline-6 twin-turbo (illustration)",
+  "bytes": 137210
+ },
+ "nissan-rb26dett": {
+  "src": "/assets/engines/nissan-rb26dett-2-6-l-inline-6-twin-turbo-engine.webp",
+  "w": 1200,
+  "h": 1072,
+  "ai": true,
+  "title": "Nissan RB26DETT 2.6 twin-turbo engine, 2.6 L inline-6 twin-turbo (illustration)",
+  "bytes": 127886
+ },
+ "honda-c30a-c32b": {
+  "src": "/assets/engines/honda-c30a-c32b-3-2-l-v6-engine.webp",
+  "w": 1200,
+  "h": 1034,
+  "ai": true,
+  "title": "Honda C32B 3.2 V6 (NSX) engine, 3.2 L V6 (illustration)",
+  "bytes": 127392
+ },
+ "honda-b18c": {
+  "src": "/assets/engines/honda-b18c-1-8-l-inline-4-engine.webp",
+  "w": 1200,
+  "h": 1211,
+  "ai": true,
+  "title": "Honda B18C1 1.8 DOHC VTEC engine, 1.8 L inline-4 (illustration)",
+  "bytes": 136124
+ },
+ "nissan-ka24de": {
+  "src": "/assets/engines/nissan-ka24de-2-4-l-inline-4-engine.webp",
+  "w": 1200,
+  "h": 1184,
+  "ai": true,
+  "title": "Nissan KA24DE 2.4 engine, 2.4 L inline-4 (illustration)",
+  "bytes": 141198
+ },
+ "mitsubishi-6g72": {
+  "src": "/assets/engines/mitsubishi-6g72-3-0-l-v6-engine.webp",
+  "w": 1200,
+  "h": 1086,
+  "ai": true,
+  "title": "Mitsubishi 6G72 3.0 V6 engine, 3.0 L V6 (illustration)",
+  "bytes": 148384
+ },
+ "nissan-vq30de": {
+  "src": "/assets/engines/nissan-vq30de-3-0-l-v6-engine.webp",
+  "w": 1200,
+  "h": 1144,
+  "ai": true,
+  "title": "Nissan VQ30DE 3.0 V6 engine, 3.0 L V6 (illustration)",
+  "bytes": 145230
+ },
+ "honda-d16z6": {
+  "src": "/assets/engines/honda-d16z6-1-6-l-inline-4-engine.webp",
+  "w": 1200,
+  "h": 1093,
+  "ai": true,
+  "title": "Honda D16Z6 1.6 SOHC VTEC engine, 1.6 L inline-4 (illustration)",
+  "bytes": 136448
  }
 }

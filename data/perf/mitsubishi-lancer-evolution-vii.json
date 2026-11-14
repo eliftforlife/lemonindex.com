@@ -1,0 +1,353 @@
+{
+ "slug": "mitsubishi-lancer-evolution-vii",
+ "name": "Mitsubishi Lancer Evolution VII",
+ "short": "Evo VII",
+ "make": "Mitsubishi",
+ "page": "/jdm/mitsubishi-lancer-evolution-vii/",
+ "jdm": true,
+ "focus": "ct9a-vii",
+ "star": "gsr",
+ "h1": "Mitsubishi Lancer Evolution VII (CT9A): specs, 4G63T engine and what owners say",
+ "us": {
+  "sold": false,
+  "x": "Never sold new in the US; the US got its first Evo, the Evo VIII, in 2003. Cars become legal to import under the 25-year rule once 25 years old by build month, so the first Evo VIIs (on sale in Japan from February 2001) qualify from early 2026.",
+  "src": [
+   "wevo",
+   "ct26",
+   "sg26",
+   "mfgsr"
+  ]
+ },
+ "films": [
+  {
+   "film": "2 Fast 2 Furious (2003)",
+   "who": "Brian O'Conner",
+   "x": "Brian O'Conner's lime-green Evo VII, which US Customs gives him for the undercover job; both Mitsubishis turn out to be GPS-tagged. The Evo was not yet sold in the US, so Mitsubishi supplied four cars to the production.",
+   "src": [
+    "wp2f2f",
+    "hag21",
+    "m1evo",
+    "dl15"
+   ]
+  }
+ ],
+ "related": [
+  {
+   "u": "/cars/lancer-evolution/",
+   "t": "Lancer Evolution VIII to X, sold in the US"
+  }
+ ],
+ "topics_extra": {
+  "AYC / ACD": "\\bayc\\b|\\bacd\\b|active center diff|yaw control",
+  "Clutch / gearbox": "\\bclutch\\b|synchros?|grind(s|ing)? (into )?gear",
+  "Turbo / boost": "boost (leak|creep|spike|cut)|fuel cut|turbo (fail|lag|blown)",
+  "Timing belt": "timing belt|balance (shaft )?belt",
+  "Rust": "\\brust(ed|ing|y)?\\b",
+  "Importing": "\\bimport(ed|ing)?\\b|25.?year|right.?hand drive"
+ },
+ "gens": [
+  {
+   "id": "ct9a-vii",
+   "code": "CT9A (Evo VII)",
+   "years": "2001–2003",
+   "y0": 2001,
+   "y1": 2003,
+   "engine": "4G63T",
+   "body": "Sedan",
+   "tag": "Japan only. 280 PS (276 hp) 4G63T turbo, all-wheel drive with a new active center differential.",
+   "variants": [
+    {
+     "id": "gsr",
+     "name": "Lancer Evolution VII GSR",
+     "years": "2001–2003",
+     "star": true,
+     "hp": {
+      "v": 276,
+      "src": [
+       "mfgsr",
+       "wevo"
+      ],
+      "note": "280 PS (206 kW) at 6,500 rpm, JDM; Japan's gentlemen's agreement figure"
+     },
+     "tq": {
+      "v": 282,
+      "src": [
+       "mfgsr",
+       "wevo"
+      ],
+      "note": "lb-ft at 3,500 rpm (383 Nm, JDM)"
+     },
+     "z60": {
+      "v": 5.9,
+      "who": "MotorTrend",
+      "src": [
+       "z60evo"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "5-speed manual, all-wheel drive",
+      "src": [
+       "mfgsr",
+       "wevo"
+      ],
+      "note": "active center differential"
+     },
+     "weight": {
+      "v": "3,086 lb",
+      "src": [
+       "mfgsr"
+      ],
+      "note": "1,400 kg, Japanese catalog"
+     },
+     "price": {
+      "v": "¥3,000,000",
+      "src": [
+       "mfgsr"
+      ],
+      "note": "Japan, February 2001"
+     },
+     "what": "Active Yaw Control, Brembo brakes and a Momo wheel on top of the new active center differential.",
+     "what_src": [
+      "wevo"
+     ]
+    },
+    {
+     "id": "rs",
+     "name": "Lancer Evolution VII RS",
+     "years": "2001–2003",
+     "hp": {
+      "v": 276,
+      "src": [
+       "mfrs"
+      ],
+      "note": "280 PS (206 kW) at 6,500 rpm, JDM"
+     },
+     "tq": {
+      "v": 282,
+      "src": [
+       "mfrs"
+      ],
+      "note": "lb-ft at 3,500 rpm (383 Nm, JDM)"
+     },
+     "trans": {
+      "v": "5-speed manual, all-wheel drive",
+      "src": [
+       "mfrs"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "2,910 lb",
+      "src": [
+       "mfrs"
+      ],
+      "note": "1,320 kg, Japanese catalog"
+     },
+     "price": {
+      "v": "¥2,520,000",
+      "src": [
+       "mfrs"
+      ],
+      "note": "Japan, February 2001"
+     },
+     "what": "Stripped rally base car: steel wheels, 15-inch tires, 80 kg lighter than the GSR. AYC was optional.",
+     "what_src": [
+      "wevo",
+      "mfrs",
+      "mfgsr"
+     ]
+    },
+    {
+     "id": "gt-a",
+     "name": "Lancer Evolution VII GT-A",
+     "years": "2002–2003",
+     "hp": {
+      "v": 268,
+      "src": [
+       "mfgta",
+       "wevo"
+      ],
+      "note": "272 PS (200 kW) at 6,500 rpm, JDM"
+     },
+     "tq": {
+      "v": 253,
+      "src": [
+       "mfgta",
+       "wevo"
+      ],
+      "note": "lb-ft at 3,000 rpm (343 Nm, JDM)"
+     },
+     "trans": {
+      "v": "5-speed automatic, all-wheel drive",
+      "src": [
+       "mfgta",
+       "wevo"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,263 lb",
+      "src": [
+       "mfgta"
+      ],
+      "note": "1,480 kg, Japanese catalog"
+     },
+     "price": {
+      "v": "¥3,300,000",
+      "src": [
+       "mfgta",
+       "wevo"
+      ],
+      "note": "Japan, launched early 2002"
+     },
+     "what": "Automatic grand tourer version, slightly detuned.",
+     "what_src": [
+      "wevo",
+      "mfgta"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "4G63T": {
+   "name": "Mitsubishi 4G63T",
+   "what": "2.0-liter inline-4, turbo",
+   "study": "mitsubishi-4g63t",
+   "page": "/engines/mitsubishi-4g63t/",
+   "yt": [
+    "scy",
+    "mitsubishi-4g63t"
+   ],
+   "facts": [
+    [
+     "Layout",
+     "Inline-4, DOHC 16-valve, turbo with intercooler",
+     [
+      "mfgsr"
+     ]
+    ],
+    [
+     "Output",
+     "280 PS (276 hp) at 6,500 rpm, 383 Nm (282 lb-ft) at 3,500 rpm",
+     [
+      "mfgsr",
+      "wevo"
+     ]
+    ],
+    [
+     "Bore x stroke",
+     "85.0 x 88.0 mm, 1,997 cc, 8.8:1",
+     [
+      "mfgsr"
+     ]
+    ],
+    [
+     "GT-A automatic",
+     "272 PS (268 hp), 343 Nm (253 lb-ft)",
+     [
+      "mfgta"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Turned-up boost on modified cars",
+     "kind": "Outlet report",
+     "rx": "boost|fuel cut|turbo hose",
+     "x": "RAC's used Evo VII guide says to look for aftermarket fuel cuts or cable ties around the turbo hoses, signs the boost has been raised. It calls the engine itself untemperamental.",
+     "fix": "",
+     "src": [
+      "rac05"
+     ]
+    },
+    {
+     "t": "AYC needs the dealer tool",
+     "kind": "Outlet report",
+     "rx": "\\bayc\\b|yaw control|mut.?ii",
+     "x": "Most Evo VIIs have Active Yaw Control, and RAC says servicing it needs Mitsubishi's MUT-II diagnostic tool, so a specialist is the safer bet.",
+     "fix": "",
+     "src": [
+      "rac05"
+     ]
+    },
+    {
+     "t": "Grey-import checks",
+     "kind": "Outlet report",
+     "rx": "speed limiter|restrictor|\\bimport",
+     "x": "RAC says Japanese-market cars need the 112 mph speed limiter removed, an mph speedometer and odometer, a rear fog light and proper underseal. It also says any trim can be dressed up as another, so check RS and GSR identity.",
+     "fix": "",
+     "src": [
+      "rac05"
+     ]
+    }
+   ]
+  }
+ },
+ "compare": [],
+ "sources": {
+  "mfgsr": {
+   "t": "Motor-Fan catalog: Mitsubishi Lancer GSR Evolution VII (GH-CT9A, Feb 2001) specifications",
+   "u": "https://car.motor-fan.jp/catalog/model/lancer/grade/4007286",
+   "k": "Japanese catalog"
+  },
+  "mfrs": {
+   "t": "Motor-Fan catalog: Mitsubishi Lancer RS Evolution VII (GH-CT9A, Feb 2001) specifications",
+   "u": "https://car.motor-fan.jp/catalog/model/lancer/grade/4007287",
+   "k": "Japanese catalog"
+  },
+  "mfgta": {
+   "t": "Motor-Fan catalog: Mitsubishi Lancer Evolution VII GT-A (GH-CT9A, Feb 2002) specifications",
+   "u": "https://car.motor-fan.jp/catalog/model/lancer/grade/4007599",
+   "k": "Japanese catalog"
+  },
+  "wevo": {
+   "t": "Wikipedia: Mitsubishi Lancer Evolution (Evolution VII)",
+   "u": "https://en.wikipedia.org/wiki/Mitsubishi_Lancer_Evolution",
+   "k": "Wikipedia"
+  },
+  "rac05": {
+   "t": "RAC: Mitsubishi Lancer Evo VII (2001-2003) used car review (Andy Enright, Oct 2005)",
+   "u": "https://www.rac.co.uk/drive/car-reviews/mitsubishi/i/lancer-evo-vii-2001-2003/",
+   "k": "outlet"
+  },
+  "z60evo": {
+   "t": "0-60specs.com: Mitsubishi Lancer Evolution 0-60 runs by magazine (2002 Evo VII, Motor Trend)",
+   "u": "https://www.0-60specs.com/mitsubishi/lancer-evolution-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "ct26": {
+   "t": "CarThrottle: 10 cool cars to import to the USA in 2026 (Mike Bartholomew, Dec 2025)",
+   "u": "https://www.carthrottle.com/news/10-cool-cars-import-usa-2026",
+   "k": "outlet"
+  },
+  "sg26": {
+   "t": "SlashGear: 5 of the coolest JDM cars you'll be able to import from Japan in 2026 (Aidan Eckhardt, Jan 2026)",
+   "u": "https://www.slashgear.com/2069181/jdm-cars-coolest-cars-import-from-japan-2026",
+   "k": "outlet"
+  },
+  "wp2f2f": {
+   "t": "Wikipedia: 2 Fast 2 Furious",
+   "u": "https://en.wikipedia.org/wiki/2_Fast_2_Furious",
+   "k": "Wikipedia"
+  },
+  "hag21": {
+   "t": "Hagerty: 19 of the coolest cars in the Fast and Furious franchise (Priscilla Page, Jun 2021)",
+   "u": "https://www.hagerty.com/media/entertainment/19-coolest-cars-fast-and-furious-franchise/",
+   "k": "outlet"
+  },
+  "m1evo": {
+   "t": "Motor1: Paul Walker's Mitsubishi Evo from 2 Fast 2 Furious available on eBay (Jun 2013)",
+   "u": "https://www.motor1.com/news/39632/paul-walkers-mitsubishi-evo-from-2-fast-2-furious-available-on-ebay/",
+   "k": "outlet"
+  },
+  "dl15": {
+   "t": "Driving Line: Top 10 iconic cars from Fast and Furious (Apr 2015)",
+   "u": "https://www.drivingline.com/articles/top-10-iconic-cars-from-fast-and-furious/",
+   "k": "outlet"
+  }
+ },
+ "yt_study": "car-mitsubishi-lancer-evolution-vii"
+}

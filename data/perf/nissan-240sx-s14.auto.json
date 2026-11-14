@@ -1,0 +1,110 @@
+{
+ "built": "2026-11-13",
+ "nhtsa": {
+  "by_year": {
+   "1990": 43,
+   "1991": 9,
+   "1992": 7,
+   "1993": 10,
+   "1994": 2,
+   "1995": 60,
+   "1996": 8,
+   "1997": 6,
+   "1998": 1
+  },
+  "gens": {
+   "s14": {
+    "n": 75,
+    "issues": {
+     "Rust": {
+      "n": 0,
+      "ex": []
+     },
+     "Modified and crashed cars": {
+      "n": 0,
+      "ex": []
+     },
+     "A/C compressor seal leaks (1995–1996)": {
+      "n": 1,
+      "ex": [
+       "10015816"
+      ]
+     },
+     "Overheating from trapped air (1995)": {
+      "n": 0,
+      "ex": []
+     }
+    },
+    "parts": [
+     [
+      "Air bags",
+      18
+     ],
+     [
+      "Fuel system, gasoline",
+      17
+     ],
+     [
+      "Fuel/propulsion system",
+      8
+     ],
+     [
+      "Service brakes, hydraulic",
+      8
+     ],
+     [
+      "Tires",
+      6
+     ],
+     [
+      "Electrical system",
+      4
+     ]
+    ]
+   }
+  },
+  "parts": [
+   [
+    "Air bags",
+    18
+   ],
+   [
+    "Fuel system, gasoline",
+    17
+   ],
+   [
+    "Fuel/propulsion system",
+    8
+   ],
+   [
+    "Service brakes, hydraulic",
+    8
+   ],
+   [
+    "Tires",
+    6
+   ],
+   [
+    "Electrical system",
+    4
+   ]
+  ]
+ },
+ "recalls": {
+  "1995": [
+   {
+    "id": "94V135000",
+    "part": "SERVICE BRAKES, HYDRAULIC:BRAKE FLUID LOW WARNING: LAMP",
+    "summary": "THE INSTRUMENT PANEL BRAKE WARNING LIGHT WILL NOT ILLUMINATE WHEN THE BRAKE FLUID LEVEL IN THE MASTER CYLINDER DROPS SUFFICIENTLY TO ACTIVATE THE LOW LEVEL SWITCH DUE TO AN IMPROPERLY WIRED DIODE, REQUIRED BY FMVSS NO. 105, \"HYDRAULIC BRAKE SYSTEMS.\""
+   }
+  ],
+  "1996": [],
+  "1997": [],
+  "1998": []
+ },
+ "yt": {
+  "car-nissan-240sx-s14": null,
+  "nissan-ka24de": null
+ },
+ "scores": {}
+}

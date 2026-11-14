@@ -1,0 +1,383 @@
+{
+ "slug": "nissan-maxima-a32",
+ "name": "Nissan Maxima (A32)",
+ "short": "Maxima",
+ "make": "Nissan",
+ "page": "/jdm/nissan-maxima-a32/",
+ "jdm": true,
+ "focus": "a32",
+ "star": "a32-se",
+ "h1": "Nissan Maxima A32 (1995–1999): specs, VQ30DE engine and what owners say",
+ "nhtsa": {
+  "make": "NISSAN",
+  "models": [
+   "MAXIMA"
+  ],
+  "note": "NHTSA files every Maxima generation under MAXIMA; these counts are the A32 model years 1995-1999 only."
+ },
+ "us": {
+  "sold": true,
+  "x": "Sold new in the US for model years 1995-1999.",
+  "src": [
+   "wpmax",
+   "femax"
+  ]
+ },
+ "films": [
+  {
+   "film": "The Fast and the Furious (2001)",
+   "who": "Vince",
+   "x": "Vince’s blue fourth-generation Maxima. It was the technical advisor’s own car, with a supercharger that took it from 190 to about 260 hp.",
+   "src": [
+    "mamax",
+    "jalmax",
+    "dl"
+   ]
+  }
+ ],
+ "related": [
+  {
+   "u": "/cars/nissan-maxima/",
+   "t": "Nissan Maxima, 2000 on"
+  }
+ ],
+ "topics_extra": {
+  "Timing chain noise": "timing chain|chain (rattle|noise|tensioner)",
+  "Knock / ping": "\\bknock(ing)?\\b|\\bping(ing)?\\b",
+  "Wiring harness": "wiring harness|broken wires?",
+  "Automatic transmission": "transmission (slip|problem|failure)|slipp(ing|s)|shift solenoid",
+  "Rear brake groan": "parking brake|rear brakes? (groan|noise|rattle)",
+  "Motor mounts": "motor mounts?|engine mounts?"
+ },
+ "gens": [
+  {
+   "id": "a32",
+   "code": "A32",
+   "years": "1995–1999",
+   "y0": 1995,
+   "y1": 1999,
+   "engine": "VQ30DE",
+   "body": "Sedan",
+   "tag": "3.0-liter VQ30DE V6, 190 hp, front-drive. Restyled for 1997.",
+   "variants": [
+    {
+     "id": "a32-gxe",
+     "name": "Maxima GXE",
+     "years": "1995–1999",
+     "hp": {
+      "v": 190,
+      "src": [
+       "acmax",
+       "wpmax",
+       "cgmax"
+      ],
+      "note": "at 5,600 rpm"
+     },
+     "tq": {
+      "v": 205,
+      "src": [
+       "acmax",
+       "wpmax",
+       "cgmax"
+      ],
+      "note": "lb-ft at 4,000 rpm"
+     },
+     "z60": {
+      "v": 7.6,
+      "who": "Motor Trend",
+      "src": [
+       "z60max"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "5-speed manual or 4-speed automatic, front-drive",
+      "src": [
+       "wpmax",
+       "a123"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$18,100",
+      "src": [
+       "mw95"
+      ],
+      "note": "1995"
+     },
+     "what": "The base sedan.",
+     "what_src": [
+      "cgmax"
+     ]
+    },
+    {
+     "id": "a32-se",
+     "name": "Maxima SE",
+     "years": "1995–1999",
+     "star": true,
+     "hp": {
+      "v": 190,
+      "src": [
+       "acmax",
+       "wpmax",
+       "cgmax"
+      ],
+      "note": "at 5,600 rpm"
+     },
+     "tq": {
+      "v": 205,
+      "src": [
+       "acmax",
+       "wpmax",
+       "cgmax"
+      ],
+      "note": "lb-ft at 4,000 rpm"
+     },
+     "z60": {
+      "v": 6.6,
+      "who": "Motor Trend",
+      "src": [
+       "z60max"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "5-speed manual or 4-speed automatic, front-drive",
+      "src": [
+       "wpmax",
+       "a123"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,010 lb",
+      "src": [
+       "acmax"
+      ],
+      "note": "1995 SE, 5-speed, curb"
+     },
+     "price": {
+      "v": "$21,599",
+      "src": [
+       "acmax",
+       "mw95"
+      ],
+      "note": "1995 base per The Auto Channel; MotorWeek put the SE around $19,200"
+     },
+     "what": "The sporty trim: firmer suspension and a rear spoiler. A Car and Driver 10Best pick for 1995 and 1996.",
+     "what_src": [
+      "cgmax",
+      "wpmax"
+     ]
+    },
+    {
+     "id": "a32-gle",
+     "name": "Maxima GLE",
+     "years": "1995–1999",
+     "hp": {
+      "v": 190,
+      "src": [
+       "acmax",
+       "wpmax",
+       "cgmax"
+      ],
+      "note": "at 5,600 rpm"
+     },
+     "tq": {
+      "v": 205,
+      "src": [
+       "acmax",
+       "wpmax",
+       "cgmax"
+      ],
+      "note": "lb-ft at 4,000 rpm"
+     },
+     "trans": {
+      "v": "4-speed automatic, front-drive",
+      "src": [
+       "cgmax",
+       "a123"
+      ],
+      "note": "automatic only"
+     },
+     "price": {
+      "v": "about $21,000",
+      "src": [
+       "mw95"
+      ],
+      "note": "1995, MotorWeek"
+     },
+     "what": "The luxury trim, with a Bose stereo standard. Automatic only.",
+     "what_src": [
+      "wpmax",
+      "cgmax"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "VQ30DE": {
+   "name": "Nissan VQ30DE",
+   "what": "3.0-liter V6, DOHC, naturally aspirated",
+   "study": "nissan-vq30de",
+   "page": "/engines/nissan-vq30de/",
+   "yt": [
+    "scy",
+    "nissan-vq30de"
+   ],
+   "facts": [
+    [
+     "Layout",
+     "V6, DOHC 24-valve, aluminum block and heads",
+     [
+      "wpvq"
+     ]
+    ],
+    [
+     "Output",
+     "190 hp at 5,600 rpm, 205 lb-ft at 4,000 rpm (US Maxima)",
+     [
+      "acmax",
+      "wpvq"
+     ]
+    ],
+    [
+     "Bore x stroke",
+     "93 x 73.3 mm, 2,988 cc",
+     [
+      "wpvq"
+     ]
+    ],
+    [
+     "Compression",
+     "10.0:1",
+     [
+      "wpvq"
+     ]
+    ],
+    [
+     "Awards",
+     "On Ward’s 10 Best Engines list every year from 1995 through 2001",
+     [
+      "wpvq"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Timing chain noise (1995–1996)",
+     "kind": "Outlet report",
+     "rx": "timing chain|chain (rattle|noise|tensioner)",
+     "x": "Consumer Guide says noise from the front of the engine on 1995 and 1996 cars can come from too much play in the timing chain.",
+     "fix": "A new chain tensioner and chain guide.",
+     "src": [
+      "cgmax"
+     ]
+    },
+    {
+     "t": "Spark knock (1995–1997)",
+     "kind": "Outlet report",
+     "rx": "\\bknock(ing)?\\b|\\bping(ing)?\\b|detonation",
+     "x": "Consumer Guide says spark knock or ping on 1995-97 cars can come from a faulty engine computer.",
+     "fix": "",
+     "src": [
+      "cgmax"
+     ]
+    },
+    {
+     "t": "Broken engine wiring (1995–1997)",
+     "kind": "Outlet report",
+     "rx": "wiring harness|broken wires?|harness",
+     "x": "Consumer Guide traces no-starts, rough running and no A/C on 1995-97 cars to broken wires where the engine harness bends near the right strut tower.",
+     "fix": "",
+     "src": [
+      "cgmax"
+     ]
+    },
+    {
+     "t": "Automatic transmission slipping (1997)",
+     "kind": "Outlet report",
+     "rx": "transmission (slip|problem|failure)|slipp(ing|s)|shift solenoid",
+     "x": "Consumer Guide says the original shift solenoids in 1997 automatics allowed slipping and early wear.",
+     "fix": "",
+     "src": [
+      "cgmax"
+     ]
+    }
+   ],
+   "photo": {
+    "src": "/assets/engines/nissan-vq30de-3-0-l-v6-engine.webp",
+    "w": 1200,
+    "h": 1144,
+    "ai": true
+   }
+  }
+ },
+ "compare": [],
+ "sources": {
+  "wpmax": {
+   "t": "Wikipedia: Nissan Maxima",
+   "u": "https://en.wikipedia.org/wiki/Nissan_Maxima",
+   "k": "Wikipedia"
+  },
+  "wpvq": {
+   "t": "Wikipedia: Nissan VQ engine",
+   "u": "https://en.wikipedia.org/wiki/Nissan_VQ_engine",
+   "k": "Wikipedia"
+  },
+  "femax": {
+   "t": "fueleconomy.gov: Nissan Maxima 1995-2000",
+   "u": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=1995&year2=2000&make=Nissan&baseModel=Maxima&srchtyp=ymm",
+   "k": "EPA"
+  },
+  "acmax": {
+   "t": "The Auto Channel: 1995 Nissan Maxima SE sport sedan (Bill Russ, road test with spec sheet)",
+   "u": "https://www.theautochannel.com/vehicles/new/reviews/wk9507.html",
+   "k": "outlet"
+  },
+  "mw95": {
+   "t": "MotorWeek: 1995 Nissan Maxima road test",
+   "u": "https://www.motorweek.org/reviews/road_tests/1995_nissan_maxima/",
+   "k": "outlet"
+  },
+  "cgmax": {
+   "t": "Consumer Guide: 1995-99 Nissan Maxima (used car review, trouble spots)",
+   "u": "https://consumerguide.com/used/1995-99-nissan-maxima",
+   "k": "outlet"
+  },
+  "a123": {
+   "t": "Auto123: Pre-owned 1995-1999 Nissan Maxima (Mathieu St-Pierre, Feb 2006)",
+   "u": "https://www.auto123.com/en/news/pre-owned-1995-1999-nissan-maxima/54685/",
+   "k": "outlet"
+  },
+  "z60max": {
+   "t": "0-60specs.com: Nissan Maxima 0-60 runs by magazine (Motor Trend, MotorWeek)",
+   "u": "https://www.0-60specs.com/nissan/maxima-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "dl": {
+   "t": "Driving Line: The cars that introduced us to the Fast & Furious family (Philip Cheng, Apr 2017)",
+   "u": "https://www.drivingline.com/articles/the-cars-that-introduced-us-to-the-fast-furious-family/",
+   "k": "outlet"
+  },
+  "mamax": {
+   "t": "Motor Authority: Deep dive: Vince’s Nissan Maxima from \"The Fast and the Furious\" (Sean Szymkowski, Jan 2020)",
+   "u": "https://www.motorauthority.com/news/1124309_deep-dive-vince-s-nissan-maxima-from-the-fast-and-the-furious",
+   "k": "outlet"
+  },
+  "jalmax": {
+   "t": "Jalopnik: Here’s the backstory on that blue Maxima from The Fast and the Furious (Andrew P. Collins, Jul 2019)",
+   "u": "https://jalopnik.com/heres-the-backstory-on-that-blue-maxima-from-the-fast-a-1836558304",
+   "k": "outlet"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-nissan-maxima-a32"
+}

@@ -1,0 +1,122 @@
+{
+ "built": "2026-11-13",
+ "nhtsa": {
+  "by_year": {
+   "1990": 4,
+   "1991": 6,
+   "1993": 2,
+   "1994": 7,
+   "1995": 1,
+   "1997": 1,
+   "1998": 1,
+   "2020": 17,
+   "2021": 21,
+   "2022": 1,
+   "2023": 5,
+   "2024": 1,
+   "2025": 2
+  },
+  "gens": {
+   "a80": {
+    "n": 12,
+    "issues": {
+     "Head gasket": {
+      "n": 1,
+      "ex": [
+       "8012503"
+      ]
+     },
+     "Turbo smoke": {
+      "n": 0,
+      "ex": []
+     },
+     "Rear differential noise": {
+      "n": 0,
+      "ex": []
+     },
+     "Tailgate rust": {
+      "n": 0,
+      "ex": []
+     }
+    },
+    "parts": [
+     [
+      "Tires",
+      3
+     ],
+     [
+      "Vehicle speed control",
+      2
+     ],
+     [
+      "Steering",
+      2
+     ],
+     [
+      "Air bags",
+      2
+     ],
+     [
+      "Engine and engine cooling",
+      2
+     ],
+     [
+      "Power train",
+      1
+     ]
+    ]
+   }
+  },
+  "parts": [
+   [
+    "Tires",
+    3
+   ],
+   [
+    "Vehicle speed control",
+    2
+   ],
+   [
+    "Steering",
+    2
+   ],
+   [
+    "Air bags",
+    2
+   ],
+   [
+    "Engine and engine cooling",
+    2
+   ],
+   [
+    "Power train",
+    1
+   ]
+  ]
+ },
+ "recalls": {
+  "1993": [],
+  "1994": [],
+  "1995": [],
+  "1996": [],
+  "1997": [
+   {
+    "id": "20V033000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "Toyota Motor Engineering & Manufacturing  (Toyota) is recalling certain 1998-2000 RAV4, 1998-1999 RAV4 EV and Celica and 1997-1998 Supra vehicles.  These vehicles were equipped with Non-Azide Driver air bag Inflators (NADI) and do not contain phase stabilized ammonium nitrate (PSAN) propellant.  Due to a manufacturing issue, the NADI inflators may absorb moisture, causing the inflators to rupture "
+   }
+  ],
+  "1998": [
+   {
+    "id": "20V033000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "Toyota Motor Engineering & Manufacturing  (Toyota) is recalling certain 1998-2000 RAV4, 1998-1999 RAV4 EV and Celica and 1997-1998 Supra vehicles.  These vehicles were equipped with Non-Azide Driver air bag Inflators (NADI) and do not contain phase stabilized ammonium nitrate (PSAN) propellant.  Due to a manufacturing issue, the NADI inflators may absorb moisture, causing the inflators to rupture "
+   }
+  ]
+ },
+ "yt": {
+  "car-toyota-supra-mk4": null,
+  "toyota-2jz": null
+ },
+ "scores": {}
+}

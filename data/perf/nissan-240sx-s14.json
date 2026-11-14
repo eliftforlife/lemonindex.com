@@ -1,0 +1,362 @@
+{
+ "slug": "nissan-240sx-s14",
+ "name": "Nissan 240SX (S14)",
+ "short": "240SX",
+ "make": "Nissan",
+ "page": "/jdm/nissan-240sx-s14/",
+ "jdm": true,
+ "focus": "s14",
+ "star": "s14-se",
+ "h1": "Nissan 240SX S14: specs, KA24DE engine and what owners say",
+ "nhtsa": {
+  "make": "NISSAN",
+  "models": [
+   "240SX"
+  ],
+  "note": "NHTSA files every 240SX under 240SX; these counts are the S14 model years 1995-1998 only."
+ },
+ "us": {
+  "sold": true,
+  "x": "Sold new in the US for model years 1995-1998. US cars had the 2.4-liter KA24DE, not the Japanese Silvia’s SR20DET turbo.",
+  "src": [
+   "wp240",
+   "fe240",
+   "hag240"
+  ]
+ },
+ "films": [
+  {
+   "film": "The Fast and the Furious (2001)",
+   "who": "Letty",
+   "x": "Letty’s 1997 240SX, painted purple (it looks magenta on screen). It runs in the Race Wars drag race, and the film cars had SR20DET engines swapped in.",
+   "src": [
+    "dl",
+    "pet240",
+    "m1letty"
+   ]
+  }
+ ],
+ "related": [
+  {
+   "u": "/engines/nissan-ka24de/",
+   "t": "Its engine, the KA24DE"
+  }
+ ],
+ "topics_extra": {
+  "Timing chain rattle": "timing chain|chain (guide|rattle)|rattle (on|at) (cold )?start",
+  "Rust": "\\brust(ed|ing|y)?\\b|frame rails?",
+  "Overheating": "overheat",
+  "A/C": "\\ba/?c\\b|air condition",
+  "Clutch / gearbox": "\\bclutch\\b|synchros?|grind(s|ing)? (into|in)? ?gear",
+  "Engine swap": "sr20 ?swap|\\bswap(ped)?\\b"
+ },
+ "gens": [
+  {
+   "id": "s14",
+   "code": "S14",
+   "years": "1995–1998",
+   "y0": 1995,
+   "y1": 1998,
+   "engine": "KA24DE",
+   "body": "Coupe",
+   "tag": "2.4-liter KA24DE inline-4, 155 hp, rear-drive. Restyled for 1997.",
+   "variants": [
+    {
+     "id": "s14-base",
+     "name": "240SX",
+     "years": "1995–1998",
+     "hp": {
+      "v": 155,
+      "src": [
+       "wpka",
+       "drive240",
+       "cg240"
+      ],
+      "note": "at 5,600 rpm"
+     },
+     "tq": {
+      "v": 160,
+      "src": [
+       "wpka",
+       "drive240",
+       "cg240"
+      ],
+      "note": "lb-ft at 4,400 rpm"
+     },
+     "z60": {
+      "v": 10.0,
+      "who": "Consumer Guide (automatic)",
+      "src": [
+       "cg240"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "5-speed manual or 4-speed automatic, rear-drive",
+      "src": [
+       "wp240",
+       "fe240"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$16,999",
+      "src": [
+       "drive240"
+      ],
+      "note": "1995 base"
+     },
+     "what": "4-lug 15-inch wheels, softer suspension and no rear sway bar. ABS and a limited-slip differential were options.",
+     "what_src": [
+      "wp240"
+     ]
+    },
+    {
+     "id": "s14-se",
+     "name": "240SX SE",
+     "years": "1995–1998",
+     "star": true,
+     "hp": {
+      "v": 155,
+      "src": [
+       "wpka",
+       "drive240",
+       "cg240"
+      ],
+      "note": "at 5,600 rpm"
+     },
+     "tq": {
+      "v": 160,
+      "src": [
+       "wpka",
+       "drive240",
+       "cg240"
+      ],
+      "note": "lb-ft at 4,400 rpm"
+     },
+     "z60": {
+      "v": 8.3,
+      "who": "Motor Trend",
+      "src": [
+       "z60240"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "5-speed manual or 4-speed automatic, rear-drive",
+      "src": [
+       "wp240",
+       "fe240"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$20,679",
+      "src": [
+       "drive240"
+      ],
+      "note": "1995 SE"
+     },
+     "what": "5-lug 16-inch alloy wheels, stiffer suspension and a rear sway bar.",
+     "what_src": [
+      "wp240"
+     ]
+    },
+    {
+     "id": "s14-le",
+     "name": "240SX LE",
+     "years": "1997–1998",
+     "hp": {
+      "v": 155,
+      "src": [
+       "wpka",
+       "drive240",
+       "cg240"
+      ],
+      "note": "at 5,600 rpm"
+     },
+     "tq": {
+      "v": 160,
+      "src": [
+       "wpka",
+       "drive240",
+       "cg240"
+      ],
+      "note": "lb-ft at 4,400 rpm"
+     },
+     "trans": {
+      "v": "5-speed manual or 4-speed automatic, rear-drive",
+      "src": [
+       "wp240",
+       "fe240"
+      ],
+      "note": ""
+     },
+     "what": "Joined in mid-1997: an SE with leather seats, keyless entry, an anti-theft system and a CD player.",
+     "what_src": [
+      "wp240",
+      "cg240"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "KA24DE": {
+   "name": "Nissan KA24DE",
+   "what": "2.4-liter inline-4, DOHC, naturally aspirated",
+   "study": "nissan-ka24de",
+   "page": "/engines/nissan-ka24de/",
+   "yt": [
+    "scy",
+    "nissan-ka24de"
+   ],
+   "facts": [
+    [
+     "Layout",
+     "Inline-4, DOHC 16-valve, iron block, aluminum head, timing chain",
+     [
+      "wpka"
+     ]
+    ],
+    [
+     "Output",
+     "155 hp at 5,600 rpm, 160 lb-ft at 4,400 rpm",
+     [
+      "wpka"
+     ]
+    ],
+    [
+     "Bore x stroke",
+     "89 x 96 mm, 2,389 cc",
+     [
+      "wpka"
+     ]
+    ],
+    [
+     "Compression",
+     "9.5:1 in the 240SX",
+     [
+      "wpka"
+     ]
+    ],
+    [
+     "Japan’s Silvia",
+     "The Japanese S14 Silvia got the SR20DET 2.0 turbo instead, 217 hp",
+     [
+      "hag240"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Rust",
+     "kind": "Outlet report",
+     "rx": "\\brust(ed|ing|y)?\\b|frame rails?",
+     "x": "Hagerty says to check for rust by the rear spoiler, trunk, wheel wells and frame rails.",
+     "fix": "",
+     "src": [
+      "hag240"
+     ]
+    },
+    {
+     "t": "Modified and crashed cars",
+     "kind": "Outlet report",
+     "rx": "drift tax|salvage|rebuilt title|\\bmodified\\b",
+     "x": "Hagerty says 64 percent of the S14 insurance quotes it sees are flagged as modified, and clean, uncrashed cars are hard to find and expensive.",
+     "fix": "",
+     "src": [
+      "hag240"
+     ]
+    },
+    {
+     "t": "A/C compressor seal leaks (1995–1996)",
+     "kind": "Outlet report",
+     "rx": "\\ba/?c\\b|air condition|compressor",
+     "x": "Consumer Guide says the A/C compressor joint seals tend to leak on 1995 and 1996 cars, which weakens the A/C.",
+     "fix": "",
+     "src": [
+      "cg240"
+     ]
+    },
+    {
+     "t": "Overheating from trapped air (1995)",
+     "kind": "Outlet report",
+     "rx": "overheat|air pocket|burp(ing)? the (cooling|coolant)",
+     "x": "Consumer Guide says a 1995 engine can overheat if air trapped in the cooling system is not bled out.",
+     "fix": "Bleed the cooling system.",
+     "src": [
+      "cg240"
+     ]
+    }
+   ],
+   "photo": {
+    "src": "/assets/engines/nissan-ka24de-2-4-l-inline-4-engine.webp",
+    "w": 1200,
+    "h": 1184,
+    "ai": true
+   }
+  }
+ },
+ "compare": [],
+ "sources": {
+  "wp240": {
+   "t": "Wikipedia: Nissan 240SX",
+   "u": "https://en.wikipedia.org/wiki/Nissan_240SX",
+   "k": "Wikipedia"
+  },
+  "wpka": {
+   "t": "Wikipedia: Nissan KA engine",
+   "u": "https://en.wikipedia.org/wiki/Nissan_KA_engine",
+   "k": "Wikipedia"
+  },
+  "fe240": {
+   "t": "fueleconomy.gov: Nissan 240SX 1995-1998",
+   "u": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&path=1&year1=1995&year2=1998&make=Nissan&baseModel=240SX&srchtyp=ymm",
+   "k": "EPA"
+  },
+  "drive240": {
+   "t": "The Drive: Before it was a drift missile, the 1995 Nissan 240SX was aimed at single professional women (Máté Petrány, Jan 2021)",
+   "u": "https://www.thedrive.com/news/39001/before-it-was-a-drift-missile-the-1995-nissan-240sx-was-aimed-at-single-professional-women",
+   "k": "outlet"
+  },
+  "cg240": {
+   "t": "Consumer Guide: 1995-98 Nissan 240SX (used car review, trouble spots)",
+   "u": "https://consumerguide.com/used/1995-98-nissan-240sx",
+   "k": "outlet"
+  },
+  "hag240": {
+   "t": "Hagerty: How the Nissan Silvia (240SX) went from humble coupe to drift king (Adam Wilcox, Apr 2020)",
+   "u": "https://www.hagerty.com/media/car-profiles/how-the-nissan-silvia-240sx-went-from-humble-coupe-to-drift-king/",
+   "k": "outlet"
+  },
+  "z60240": {
+   "t": "0-60specs.com: Nissan 240SX 0-60 runs by magazine (Motor Trend)",
+   "u": "https://www.0-60specs.com/nissan/240sx-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "dl": {
+   "t": "Driving Line: The cars that introduced us to the Fast & Furious family (Philip Cheng, Apr 2017)",
+   "u": "https://www.drivingline.com/articles/the-cars-that-introduced-us-to-the-fast-furious-family/",
+   "k": "outlet"
+  },
+  "pet240": {
+   "t": "Petersen Automotive Museum: 1997 Nissan 240SX (The Fast and the Furious)",
+   "u": "https://petersen.org/pages/petersen-vehicle/1997-nissan-240-sx",
+   "k": "museum"
+  },
+  "m1letty": {
+   "t": "Motor1: Letty’s 240SX from The Fast and the Furious was stripped and crushed (Christopher Smith, Feb 2024)",
+   "u": "https://www.motor1.com/news/709766/letty-240sx-first-fast-furious-stripped-crushed/",
+   "k": "outlet"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-nissan-240sx-s14"
+}

@@ -40,7 +40,7 @@ for pf in _glob.glob('data/perf/*.json'):
     d = json.load(open(pf, encoding='utf-8')); u = d.get('page') or f'/cars/{d["slug"]}/'
     if not os.path.exists(f'{OUT}{u}index.html'): continue
     PERF_LIVE[d['slug']] = u
-    al = ' '.join([g.get('code', '') for g in d.get('gens', [])] + list((d.get('engines') or {}).keys()) + [FIND_ALIAS.get(u, '')])
+    al = ' '.join([g.get('code', '') for g in d.get('gens', [])] + list((d.get('engines') or {}).keys()) + [FIND_ALIAS.get(u, '')] + (['jdm fast furious'] if d.get('jdm') or d.get('films') else []))   # 11-13 JDM film cars
     _fadd(d['name'], d.get('make') or _brand_of(d['name']), u, 'perf', [y for g in d.get('gens', []) for y in range(g['y0'], g['y1'] + 1)], al)
 # 2. complaints-only models (new ones, Pontiac, Taos...) and the BMW-only model pages
 _XM = _load('data/extra_models.json'); _XM.update(_load('data/extra_models_new.json'))   # the same lists extra_pages.py builds from

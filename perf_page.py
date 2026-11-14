@@ -86,7 +86,7 @@ def engine_ext(url):
             out['cars'].append((D['short'], D['page'], ', '.join(g['code'] for g in gs)))
             for g in gs:
                 for v in g['variants']:
-                    if isinstance(_hp(v), (int, float)): out['hp'].add(int(_hp(v)))
+                    if isinstance(_hp(v), (int, float)) and v.get('engine', g['engine']) == g['engine']: out['hp'].add(int(_hp(v)))   # 11-13 JDM: a trim with another engine (variant `engine`, e.g. the Eclipse RS's 420A) stays out
             for i in e.get('issues') or []:
                 if i['t'].lower().startswith('no known pattern'): continue
                 it = out['issues'].setdefault(i['t'], dict(i, n=0, where=[]))
@@ -309,6 +309,7 @@ def build(slug, out='docs'):
         v = lead(g); zv, zl, zt = z_fallback(g, v); top = ((v.get('top') or {}).get('v') or '')
         s = [(str(_hp(v) if _hp(v) is not None else '–'), 'horsepower'), (zv.replace(' s', '') if zv else '–', '0–60 mph, sec' + (f' ({zt})' if zt else '')), (top.replace(' mph', '') or '–', 'mph top speed')]
         if s[2][0] == '–' and s[1][0] != '–': s = s[:2]   # 11-12 round 2: no empty "top speed" tile when we have no figure
+        if D.get('jdm'): s = [x for x in s if x[0] != '–'] or s   # 11-13 JDM: no dash tiles (no stock 0-60 test exists for the R34)
         return (f'<div class="pf-stats{" on" if g is G[focus] else ""}" data-g="{g["id"]}"><p class="pf-sl">{E(v["name"])} <span>{E(g["code"])} · {E(v["years"])}</span></p>'
                 + ''.join(f'<div class="pf-st"><b>{E(a)}</b><span>{E(b)}</span></div>' for a, b in s) + (f'<p class="pf-tag">{E(g["tag"])}</p>' if g.get('tag') else '') + '</div>')
     info = ('<button class="ii" type="button" aria-label="Image info" aria-expanded="false" aria-controls="pf-ii">i</button><div class="ii-pop" id="pf-ii" role="note" hidden>'
@@ -407,6 +408,7 @@ def build(slug, out='docs'):
         nrec = len({r['id'] for y in yrs for r in rc.get(str(y), [])})
         if nrec: buy.append(('warn', f'{nrec} recall campaign{"" if nrec == 1 else "s"} across {g["y0"]}–{g["y1"]}' + (' (all ' + E(D["nhtsa"]["models"][0].title()) + ' versions)' if filed else '') + '. <a href="/vin/">Check a VIN</a> before you buy.'))
         buy.append(('info', f'Repair costs: we don&#39;t have owner-reported repair costs for the {E(short)} yet.'))
+        if D.get('us') and not D['us'].get('sold'): buy.append(('info', f'Never sold new in the US, so NHTSA has no owner complaints or recalls for the {E(short)}. Imports: check the car&#39;s history and paperwork before you buy.'))   # 11-13 JDM
         buysec = (f'<section class="pf-sec"><h2>{ic("buy")} Should you buy ' + (f'a {E(g["code"])} {E(short)}' if pills else f'a {E(short)}') + '?</h2><ul class="pf-buy">'
                   + ''.join(f'<li class="pf-l-{k}">{ic(k, 18)}<span>{t}</span></li>' for k, t in buy) + f'</ul>{R.close()}</section>')
         blocks.append(f'<div class="pf-g{" on" if gi == focus else ""}" data-g="{g["id"]}" data-i="{gi}"><p class="pf-gh">{E(g["code"])} {E(short)} · {E(g["years"])}</p>{perf}{engine}{ytsec}{buysec}</div>')
@@ -428,6 +430,27 @@ def _star(D):
     v = next((x for x in g['variants'] if x['id'] == D.get('star')), next((x for x in g['variants'] if x.get('star')), g['variants'][0]))
     return g, v
 
+# 11-13 JDM section (Elijah: "add jdm section ... the fast and furious main cars from 1 and 2 ... kinda like supercar or performance cars"):
+# data/perf/<slug>.json can carry `films` (which film, whose car, plain text, sourced), `us` (sold new in the US or not, sourced) and `related`
+# (links to the site's /cars/ model and year pages). Shown at the top of Overview. Cars never sold new in the US have no `nhtsa` key: their
+# page has no Problems tab and says why, instead of showing zeros.
+_FI = '<path d="M4 5h16v14H4z"/><path d="M4 9h16M8 5v4M12 5v4M16 5v4"/>'
+def films_html(D, R):
+    fl, us, rel = D.get('films') or [], D.get('us') or {}, [r for r in D.get('related') or [] if r.get('u')]
+    if not (fl or us or rel): return ''
+    R.open(); li = ''
+    for f in fl:
+        R(*f.get('src', [])); li += f'<li><b>{E(f["film"])}</b><span class="pf-k">{E(f.get("who", ""))}</span><p>{E(f["x"])}</p></li>'
+    out = (f'<section class="pf-sec pf-films"><h2><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round">{_FI}</svg> In the films</h2>'
+           + (f'<ul class="pf-iss">{li}</ul>' if li else '') )
+    if us.get('x'):
+        R(*us.get('src', []))
+        out += f'<p class="pf-li">{ic("shield" if us.get("sold") else "info", 18)}<span><b>{"Sold new in the US" if us.get("sold") else "Never sold new in the US"}.</b> {E(us["x"])}</span></p>'
+    if rel: out += '<p class="pf-li">' + ic('vs', 18) + '<span>On this site: ' + ' · '.join(f'<a href="{E(r["u"])}">{E(r["t"])}</a>' for r in rel) + '</span></p>'
+    out += (f'<p class="pf-cap">Film facts are plain text from the sources listed: no film stills, logos or likenesses. The picture above is an AI illustration of a stock car, not the film car. <a href="/jdm/">Every JDM film car</a></p>'
+            if D.get('jdm') else '') + R.close() + '</section>'
+    return out
+
 def _qa(D, P):
     """3 short answers from the same data (also the FAQPage schema on standalone pages)"""
     g, v = _star(D); zv, zl = _z(v.get('z60')); out = []
@@ -442,6 +465,9 @@ def _qa(D, P):
     sc = [(c, P['esc'][c][0]) for c in D['engines'] if P['esc'][c][0] is not None]
     if len(sc) >= 2: out.append((f'Which {D["name"]} engine do YouTube owners like most?', ', '.join(f'{D["engines"][c]["name"]} {s}/100' for c, s in sorted(sc, key=lambda x: -x[1]))
                                  + '. That&#39;s the tone of the most-watched videos about each engine, praise words against trouble words.'))
+    if D.get('films'):   # 11-13 JDM: which film, whose car
+        out.append((f'Which Fast and Furious movie is the {D["short"]} in?', ' '.join(f'{f["film"]}: {f["x"]}' for f in D['films'])))
+    if D.get('us'): out.append((f'Was the {D["name"]} sold in the US?', ('Yes. ' if D['us'].get('sold') else 'No. ') + D['us'].get('x', '')))
     return out
 
 def inject(slug, out='docs'):
@@ -513,7 +539,7 @@ def standalone(slug, page_fn, out='docs'):
     D, A, R = P['D'], P['A'], P['R']; short = D['short']; G = D['gens']; nh = A.get('nhtsa') or {}; rc = A.get('recalls') or {}
     pc = perf_list().get(slug) or {}
     mk = D['make']; mslug = re.sub(r'[^a-z0-9]+', '-', mk.lower()).strip('-')
-    crumbs = (f'<p class="ph-e"><a href="/?type=performance">Performance cars</a>'
+    crumbs = (f'<p class="ph-e">' + ('<a href="/jdm/">JDM</a> · <a href="/?type=jdm">Fast &amp; Furious cars</a>' if D.get('jdm') else '<a href="/?type=performance">Performance cars</a>')
               + (f' · <a href="/brands/{mslug}/">{E(mk)}</a>' if os.path.exists(os.path.join(HERE, out, 'brands', mslug, 'index.html')) else '') + '</p>')
     hero = f'<section class="ph tb-hero pf-hero">{crumbs}<h1>{E(D["h1"])}</h1>{P["slider"]}</section>'
     _par = PARENT_ROW(slug, D)   # 11-13 N3: the regular model + its years, at the top of Overview (not the hero: phone tops stay short)
@@ -550,13 +576,18 @@ def standalone(slug, page_fn, out='docs'):
            + f'<p class="pf-cap">Source: NHTSA (api.nhtsa.gov). <a href="/vin/">Check a VIN</a> for open recalls on one car.</p></section>')
     qa = _qa(D, P)
     qh = '<section class="pf-sec yqa"><h2>Quick answers</h2>' + ''.join(f'<h3>{E(q)}</h3><p>{a}</p>' for q, a in qa) + '</section>'
-    over = f'<div class="pf">{_par}{P["blocks"]}{P["cmp"]}<details class="pf-sd" id="pf-sources"><summary>All sources ({len(R.order)})</summary>{R.html()}</details></div>'
-    tabs = TAB._tabs([('overview', 'Overview', over), ('problems', 'Problems & recalls', f'<div class="pf">{rel}</div>'), ('questions', 'Questions', f'<div class="pf">{qh}</div>')], f'{short} sections')
+    over = f'<div class="pf">{_par}{films_html(D, R)}{P["blocks"]}{P["cmp"]}<details class="pf-sd" id="pf-sources"><summary>All sources ({len(R.order)})</summary>{R.html()}</details></div>'
+    tabs = TAB._tabs([('overview', 'Overview', over)] + ([('problems', 'Problems & recalls', f'<div class="pf">{rel}</div>')] if D.get('nhtsa') else [])   # 11-13 JDM: never sold new in the US = no NHTSA data, no tab
+                     + [('questions', 'Questions', f'<div class="pf">{qh}</div>')], f'{short} sections')
     body = f'{TAB.ASSET}{ASSET}<script src="/assets/imginfo.js?v=2" defer></script><div class="advp tbl pfp">{hero}{tabs}</div>'
     g, v = _star(D)
     title = f'{D["name"]}: 0-60, Horsepower, Engine, Problems'
     zv = _z(v.get('z60'))[0]
     desc = (f'{D["name"]}: the {v["name"]} makes {_hp(v)} hp' + (f' and runs 0-60 in {zv}' if zv else '') + '. Engines, known issues, YouTube owner verdicts, complaints and recalls, every number sourced.')
+    if D.get('jdm'):   # 11-13 JDM film cars: the film in the description; never-US cars don't promise complaints
+        title = f'{D["name"]}: Specs, Engine and Fast & Furious Car' if len(D['name']) < 34 else f'{D["name"]}: Specs, Engine, Film Car'
+        desc = (f'{D["name"]}' + (f', {D["films"][0]["who"]}&#39;s car in {D["films"][0]["film"]}' if D.get('films') else '') + f': the {v["name"]} makes {_hp(v)} hp'
+                + (f' and runs 0-60 in {zv}' if zv else '') + '. Specs, the engine, known issues' + (', owner complaints and recalls' if D.get('nhtsa') else ' and US import status') + ', every number sourced.').replace('&#39;', "'")
     url = BASE + D['page']
     ld = [R.ld(url, title), {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": re.sub('<[^>]+>', '', a).replace('&#39;', "'")}} for q, a in qa]}]
     page_fn(D['page'], title, desc, body, ld=ld, img=(pc.get('img') or '').split('?')[0] or None)

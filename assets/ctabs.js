@@ -4,7 +4,7 @@
 // its kind (r s e p); the body tabs skip the Electric-tab twins (mc-dup) and the gray "No data yet" cards.
 (() => {
   const nav = document.querySelector('.ctabs'), grid = document.querySelector('.cgrid'); if (!nav || !grid) return;
-  const T = { all: '', trucks: 'tk', suvs: 'sv', cars: 'cr', minivans: 'mv', performance: 'p', supercars: 's', electric: 'e' };
+  const T = { all: '', trucks: 'tk', suvs: 'sv', cars: 'cr', minivans: 'mv', performance: 'p', supercars: 's', electric: 'e', jdm: 'j' };   // 11-13: JDM film cars
   const BODY = { tk: 1, sv: 1, cr: 1, mv: 1 };
   const set = (k, push) => {
     if (!(k in T)) k = 'all';
