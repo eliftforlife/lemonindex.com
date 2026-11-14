@@ -64289,7 +64289,26 @@
      "views": 9115
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 200,
+       "lo": 100.0,
+       "hi": 300.0,
+       "n": 2,
+       "videos": 2,
+       "id": "pUg-OWJFlWw",
+       "t": 294,
+       "title": "2002 Chrysler 300M – Luxury Sedan 4D Deal #chrysler300m #usedsedan  #luxurydrive"
+      }
+     ]
+    ]
+   }
   }
  ],
  "mitsubishi-lancer": [
