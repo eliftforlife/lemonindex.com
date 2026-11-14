@@ -64114,7 +64114,39 @@
      "views": 5704
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 80,
+       "lo": 60.0,
+       "hi": 100.0,
+       "n": 2,
+       "videos": 2,
+       "id": "DksiQ1qhLZk",
+       "t": 716,
+       "title": "2005-2010 Scion TC wheel bearing replacement"
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 1100,
+       "lo": 1100.0,
+       "hi": 1500.0,
+       "n": 3,
+       "videos": 2,
+       "id": "eVU0D4ruaWw",
+       "t": 193,
+       "title": "IAA Auction cars 2007 Scion Tc Runs & Drives??😱 For $1100?!!"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -64241,7 +64273,52 @@
      "views": 232126
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 47,
+       "lo": 30.0,
+       "hi": 60.0,
+       "n": 6,
+       "videos": 6,
+       "id": "GSz6osXdh38",
+       "t": 848,
+       "title": "Scion TC 2nd Generation Review-10 years later"
+      }
+     ],
+     [
+      "Transmission",
+      {
+       "median": 2500,
+       "lo": 1965.0,
+       "hi": 3000.0,
+       "n": 7,
+       "videos": 4,
+       "id": "FS48lMrb7L0",
+       "t": 67,
+       "title": "2014 Scion tC Review and Road Test"
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 980,
+       "lo": 500.0,
+       "hi": 1725.0,
+       "n": 3,
+       "videos": 3,
+       "id": "byAqygZRHok",
+       "t": 326,
+       "title": "EVERY modification I’ve done to my 2011 Scion tC"
+      }
+     ]
+    ]
+   }
   }
  ],
  "acura-tsx": [
@@ -70293,7 +70370,26 @@
      "views": 38
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 500,
+       "lo": 225.0,
+       "hi": 600.0,
+       "n": 3,
+       "videos": 2,
+       "id": "ZSu70iUVPSY",
+       "t": 224,
+       "title": "Cost Reveal | 2008 Mazda 5"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -70418,7 +70514,26 @@
      "views": 151289
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 2350,
+       "lo": 700.0,
+       "hi": 4000.0,
+       "n": 4,
+       "videos": 3,
+       "id": "9RkwCeS4bPo",
+       "t": 704,
+       "title": "2012 Mazda5 Sport: Regular Car Reviews"
+      }
+     ]
+    ]
+   }
   }
  ],
  "chevrolet-tracker": [
