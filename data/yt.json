@@ -67085,7 +67085,26 @@
      "views": 18341
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 650,
+       "lo": 200.0,
+       "hi": 3000.0,
+       "n": 6,
+       "videos": 3,
+       "id": "M-WP5qCRXA8",
+       "t": 743,
+       "title": "2011 INFINITI G37 RWD Sedan with Sport Package Demo Drive and Buyers Guide"
+      }
+     ]
+    ]
+   }
   }
  ],
  "land-rover-discovery": [
