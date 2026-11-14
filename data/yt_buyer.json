@@ -22457,5 +22457,121 @@
 }
 ]
 }
+],
+"dodge-neon": [
+{
+"sid": "dodge-neon-g1",
+"y0": 1995,
+"y1": 1999,
+"label": "1995–1999",
+"videos": 185,
+"praise": [
+[
+"Reliability",
+9
+],
+[
+"Fun to drive",
+6
+],
+[
+"Power",
+5
+],
+[
+"Looks",
+3
+]
+],
+"trouble": [
+[
+"Oil leaks (gaskets, seals, housings)",
+4
+]
+],
+"top": [
+{
+"id": "T8hReuWG9UU",
+"title": "1998 Dodge Neon Highline: Regular Car Reviews",
+"views": 337288,
+"ch": "Regular Car Reviews"
+},
+{
+"id": "xwh3XM1Nl4k",
+"title": "1997 Dodge Neon no start, crank sensor problems",
+"views": 219456,
+"ch": "ScannerDanner"
+},
+{
+"id": "sh7hZfhxQ-Q",
+"title": "MotorWeek | Retro Review: 1998 Dodge Neon R/T",
+"views": 151713,
+"ch": "MotorWeek"
+}
+]
+},
+{
+"sid": "dodge-neon-g2",
+"y0": 2000,
+"y1": 2005,
+"label": "2000–2005",
+"videos": 195,
+"praise": [
+[
+"Looks",
+6
+],
+[
+"Reliability",
+5
+],
+[
+"Fun to drive",
+5
+],
+[
+"Space and practicality",
+3
+]
+],
+"trouble": [
+[
+"Coolant leaks / water pump / overheating",
+5
+],
+[
+"Electrical / wiring / TIPM",
+5
+],
+[
+"Transmission (shifting, fluid)",
+4
+],
+[
+"Battery / alternator / starter",
+4
+]
+],
+"top": [
+{
+"id": "o1Zw0eUCl2g",
+"title": "Regular Car Reviews: 2003 Dodge Neon SRT-4",
+"views": 1111306,
+"ch": "Regular Car Reviews"
+},
+{
+"id": "AN9rhDLBdT4",
+"title": "2004 Dodge Neon: Is it worth buying in 2020?",
+"views": 259709,
+"ch": "Testers"
+},
+{
+"id": "qZLxLfUSj50",
+"title": "2000 Dodge Neon: Is it worth buying in 2021?",
+"views": 132117,
+"ch": "AutoemocionMX"
+}
+]
+}
 ]
 }

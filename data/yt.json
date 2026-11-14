@@ -63097,6 +63097,135 @@
    "costs": null
   }
  ],
+ "dodge-neon": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005
+   ],
+   "gen": "2000–2005 Dodge Neon",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 6886323,
+   "topics": [
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 296253,
+     "n": 3,
+     "best": {
+      "id": "C3axRFZeW24",
+      "title": "How to Replace the Fuel Filter / Pressure Regulator on a 2003 Dodge Neon (2000 - 2005)",
+      "channel": "HVAC Mechanic ",
+      "views": 141766
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 255184,
+     "n": 10,
+     "best": {
+      "id": "A7HYygmSVrQ",
+      "title": "How to check and add transmission fluid on a 2003 Dodge Neon (2000 - 2005)",
+      "channel": "HVAC Mechanic ",
+      "views": 85373
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 169704,
+     "n": 6,
+     "best": {
+      "id": "z8u3OpayY5s",
+      "title": "2002 Dodge Neon Evaporator & Heater Core Replacement",
+      "channel": "AJ1Overdrive",
+      "views": 70923
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 137050,
+     "n": 4,
+     "best": {
+      "id": "sKHGPXDShIo",
+      "title": "2002 Dodge Neon Poor IDLE Faulty PCV Valve Oil in Intake How to Fix",
+      "channel": "Alexey Gavrilov",
+      "views": 109018
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 113126,
+     "n": 3,
+     "best": {
+      "id": "99ggm2UxbIU",
+      "title": "2004 Dodge Neon thermostat replace",
+      "channel": "84crx",
+      "views": 62114
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 80708,
+     "n": 3,
+     "best": {
+      "id": "3pDPniHMGFY",
+      "title": "2003 Dodge Neon 2.0 Wont Start or Crank",
+      "channel": "Al Young Cuda",
+      "views": 62209
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 70728,
+     "n": 3,
+     "best": {
+      "id": "1tKj7akalIA",
+      "title": "how to change spark plugs for a 2005 dodge neon",
+      "channel": "wingdan84",
+      "views": 52356
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 67116,
+     "n": 7,
+     "best": {
+      "id": "miOxYJi_wM8",
+      "title": "Dodge Neon SRT4 Starter Removal & Install (2003-2005)",
+      "channel": "AutoFun",
+      "views": 16791
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "UpQxACO3gCc",
+     "title": "Dodge Neon 2.0, 2005 problems with dashboard",
+     "channel": "Radek David",
+     "views": 2355
+    },
+    {
+     "id": "o1Zw0eUCl2g",
+     "title": "Regular Car Reviews: 2003 Dodge Neon SRT-4",
+     "channel": "Regular Car Reviews",
+     "views": 1111306
+    },
+    {
+     "id": "B-nNQaBPG4k",
+     "title": "2002 Dodge Neon - Review",
+     "channel": "MauKapranos",
+     "views": 116199
+    }
+   ],
+   "costs": null
+  }
+ ],
  "ram-promaster": [
   {
    "years": [
