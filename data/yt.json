@@ -63264,6 +63264,263 @@
    }
   }
  ],
+ "cadillac-srx": [
+  {
+   "years": [
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009
+   ],
+   "gen": "2004–2009 Cadillac SRX",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 2680908,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 138947,
+     "n": 4,
+     "best": {
+      "id": "E7aicg_MVZ0",
+      "title": "2004 Cadillac SRX no starter action all of a sudden? how to check starter",
+      "channel": "DSMerkonmyface",
+      "views": 71478
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 77850,
+     "n": 3,
+     "best": {
+      "id": "IkhFeQ0u4ts",
+      "title": "2004 CADILLAC SRX How to Replace Head Gaskets www.royalauto-service.com",
+      "channel": "Royal Auto",
+      "views": 62809
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 67943,
+     "n": 1,
+     "best": {
+      "id": "l80I6oW31Eo",
+      "title": "How to Replace A/C Temperature actuators on 2007 Cadillac srx",
+      "channel": "DiscoverTheLifeStyle",
+      "views": 67943
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 49362,
+     "n": 3,
+     "best": {
+      "id": "uTZoQLdVZAs",
+      "title": "2004 Cadillac SRX Cranks But Won't Start Problem ....Fixed...",
+      "channel": "Peter L",
+      "views": 22932
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 31947,
+     "n": 2,
+     "best": {
+      "id": "BSvPhZl9H-s",
+      "title": "HOW TO RESET 2004 - 2009 CADILLAC SRX",
+      "channel": "DimasCarTech",
+      "views": 22638
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 15762,
+     "n": 2,
+     "best": {
+      "id": "jgyFgfXwF0g",
+      "title": "How to: Replace Throttle Body w TPS Sensor 2004 Cadillac SRX ( P2135 P2119 code)",
+      "channel": "How2Helen",
+      "views": 9909
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 11734,
+     "n": 1,
+     "best": {
+      "id": "LmHy5w_G_rQ",
+      "title": "Cadillac SRX 2005 P0202/P0302 injector ECM issue.",
+      "channel": "Christopher Kleman",
+      "views": 11734
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 7565,
+     "n": 2,
+     "best": {
+      "id": "dgdelXJBQEc",
+      "title": "2008 CADILLAC SRX: TRANSMISSION PROBLEM, DRIVESHAFT PROBLEM, RUSTED BOLTS AND MULTIPLE OIL LEAKS!",
+      "channel": "THIS IS YOUR TRANSMISSION",
+      "views": 5393
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "lMhQdUtrHwY",
+     "title": "2007 Cadillac srx alternator problems",
+     "channel": "Livin429",
+     "views": 26711
+    },
+    {
+     "id": "DpZRCzQGFjc",
+     "title": "Problems 2004 Cadillac SRX",
+     "channel": "Economy 9015",
+     "views": 13143
+    },
+    {
+     "id": "7H12W-IvKUU",
+     "title": "2005 cadillac srx starter problems",
+     "channel": "Jose Enrique Melendez",
+     "views": 4087
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016
+   ],
+   "gen": "2010–2016 Cadillac SRX",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 10837323,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 444217,
+     "n": 8,
+     "best": {
+      "id": "90R80s7VD5Y",
+      "title": "Cadillac SRX Dead Battery Replacement 2010 2011 2012 2013 2014 2015 2016",
+      "channel": "Fintech Repair Shop",
+      "views": 123362
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 329621,
+     "n": 7,
+     "best": {
+      "id": "97_F5jHZYqQ",
+      "title": "How To Replace Rear Brakes 2010-2016 Cadillac SRX",
+      "channel": "TRQ",
+      "views": 71619
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 261832,
+     "n": 5,
+     "best": {
+      "id": "OQkFKpqDG4U",
+      "title": "2010-2016 Cadillac SRX Cabin AND Engine Filter Replacement Guide!",
+      "channel": "David Waltermyer",
+      "views": 76650
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 236613,
+     "n": 2,
+     "best": {
+      "id": "_LkQYQBDLR4",
+      "title": "FAILED Order of Operations! DON\"T SPLIT JOBS! 2015 Cadillac SRX 4 Leaking Axle Seal",
+      "channel": "Rainman Ray's Repairs",
+      "views": 204450
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 218751,
+     "n": 4,
+     "best": {
+      "id": "romWey2wo4o",
+      "title": "2012-2016 Cadillac SRX Transmission Fluid Change DIY",
+      "channel": "cookiehead2",
+      "views": 81156
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 210995,
+     "n": 6,
+     "best": {
+      "id": "05nOYUB7w7w",
+      "title": "How to Replace Crankshaft Position Sensor 2010-2016 Cadillac SRX",
+      "channel": "TRQ",
+      "views": 62083
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 141839,
+     "n": 5,
+     "best": {
+      "id": "T2lhpOAfdik",
+      "title": "How to Replace Front Strut Assembly 2010-2016 Cadillac SRX",
+      "channel": "TRQ",
+      "views": 44423
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 113453,
+     "n": 4,
+     "best": {
+      "id": "HJeffwE3oGA",
+      "title": "2010 2011 Cadillac srx sun roof drain quick fix.meineke cinnaminson",
+      "channel": "Anthony Nastasi  ",
+      "views": 47971
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "VZStadOSMDc",
+     "title": "Top 5 Problems Cadillac SRX SUV 2nd Gen 2010-15",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 574633
+    },
+    {
+     "id": "-4Kubmk-xBs",
+     "title": "Cadillac SRX 2nd Gen 2010 to 2015 problems, defects, issues, recalls and complaints",
+     "channel": "HOWSTUFFINMYCARWORKS",
+     "views": 38919
+    },
+    {
+     "id": "b_sjte5nl9g",
+     "title": "2016 Cadillac SRX Problems and Recall",
+     "channel": "MaxTheCarGuy",
+     "views": 12089
+    }
+   ],
+   "costs": null
+  }
+ ],
  "ram-promaster": [
   {
    "years": [
