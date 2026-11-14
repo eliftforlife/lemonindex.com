@@ -63965,6 +63965,947 @@
    }
   }
  ],
+ "mitsubishi-lancer": [
+  {
+   "years": [
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007
+   ],
+   "gen": "2002–2007 Mitsubishi Lancer",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 20531594,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 572442,
+     "n": 2,
+     "best": {
+      "id": "qtAay4CMbE0",
+      "title": "Mitsubishi Lancer 2007-2017 service light reset",
+      "channel": "AutoMotiv8ed",
+      "views": 549744
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 309476,
+     "n": 4,
+     "best": {
+      "id": "fvCH4wAWEt0",
+      "title": "Wheel Bearing Replacement - Part 1 [2002 Mitsubishi Lancer]",
+      "channel": "MattsMotorz",
+      "views": 225538
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 294259,
+     "n": 3,
+     "best": {
+      "id": "O9iFf84i6qQ",
+      "title": "How to replace ignition coils, Spark Plugs and wires 2002 Mitsubishi Lancer",
+      "channel": "Micah G Robinson",
+      "views": 165796
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 284062,
+     "n": 2,
+     "best": {
+      "id": "zySquzvCrlg",
+      "title": "AC, Power steering, Serpentine belt replacement Mitsubishi Lancer ES 2005",
+      "channel": "em7th",
+      "views": 202877
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 220485,
+     "n": 5,
+     "best": {
+      "id": "J3TeXuBqWJI",
+      "title": "Mitsubishi Lancer - EGR Repair & Cleaning - 2007-2015",
+      "channel": "MINUTE DIY VIDEOS",
+      "views": 106530
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 151467,
+     "n": 4,
+     "best": {
+      "id": "d-MYzSC5GBQ",
+      "title": "Mitsubishi Lancer 2003 ES - Quick Auto Transmission Fluid Change",
+      "channel": "Kong Chang",
+      "views": 73972
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 135528,
+     "n": 3,
+     "best": {
+      "id": "a0itsZxhI1k",
+      "title": "How to Replace Rotor and Brake Pads on a 2004 Mitsubishi Lancer ES",
+      "channel": "USMCDragonGunner",
+      "views": 79396
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 128358,
+     "n": 2,
+     "best": {
+      "id": "uR9nw9FctsY",
+      "title": "How to do the Lancer coolant bypass mod - 2002 Mitsubishi Lancer",
+      "channel": "Micah G Robinson",
+      "views": 70291
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "XvVoFjwDlKQ",
+     "title": "Mitsubishi lancer 2003 problems",
+     "channel": "Marlon _",
+     "views": 38873
+    },
+    {
+     "id": "W_vi-lS6f9M",
+     "title": "Regular Car Reviews: 2006 Mitsubishi Lancer Evolution MR",
+     "channel": "Regular Car Reviews",
+     "views": 1015574
+    },
+    {
+     "id": "hp2Ny__W-iU",
+     "title": "Review: 2006 Mitsubishi Lancer Evolution IX MR",
+     "channel": "Matt Maran Motoring",
+     "views": 630451
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017
+   ],
+   "gen": "2008–2017 Mitsubishi Lancer",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 37444464,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 708289,
+     "n": 3,
+     "best": {
+      "id": "qtAay4CMbE0",
+      "title": "Mitsubishi Lancer 2007-2017 service light reset",
+      "channel": "AutoMotiv8ed",
+      "views": 549730
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 283586,
+     "n": 5,
+     "best": {
+      "id": "J3TeXuBqWJI",
+      "title": "Mitsubishi Lancer - EGR Repair & Cleaning - 2007-2015",
+      "channel": "MINUTE DIY VIDEOS",
+      "views": 106530
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 260389,
+     "n": 4,
+     "best": {
+      "id": "T_4d2VyIBCM",
+      "title": "2008-2011 Mitsubishi Lancer Starter Motor Replacement (How to DIY)",
+      "channel": "Valley Mobile Automotive",
+      "views": 93310
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 252658,
+     "n": 3,
+     "best": {
+      "id": "NDKgmqEC6Zc",
+      "title": "ACT Clutch Install: 2008 - 2017 Mitsubishi Lancer 2.0L and 2009 - 2017 Lancer 2.4L",
+      "channel": "Advanced Clutch",
+      "views": 132819
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 136753,
+     "n": 2,
+     "best": {
+      "id": "Uz9TK7i3N1w",
+      "title": "2012 Mitsubishi Lancer Thermostat Replacement",
+      "channel": "Kendor Farms",
+      "views": 78686
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 76598,
+     "n": 1,
+     "best": {
+      "id": "VdhqSgPbLkM",
+      "title": "Mitsubishi No start Issue 2009 Lancer Won't Crank...Clicks...Fixed...",
+      "channel": "Peter L",
+      "views": 76598
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 45351,
+     "n": 1,
+     "best": {
+      "id": "PDCG5SMi3YM",
+      "title": "2013 Mitsubishi lancer ES brake shoes replacement",
+      "channel": "Salgadation Jr",
+      "views": 45351
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 41194,
+     "n": 1,
+     "best": {
+      "id": "xi1KPdGtRhg",
+      "title": "Change Fuel Filter / Fuel Pump - Mitsubishi Lancer 2007-2015 / Proton Inspira.",
+      "channel": "MYAutoDIY",
+      "views": 41194
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "kEzU51Ak838",
+     "title": "Is the 2013 Lancer CVT any good? Positives and chronic problems.",
+     "channel": "Carros do Xenão",
+     "views": 239288
+    },
+    {
+     "id": "w7_wGwsY9r8",
+     "title": "Top 5 Problems Mitsubishi Lancer Sedan 2008-2017 2nd Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 106847
+    },
+    {
+     "id": "PFP6T6VEj24",
+     "title": "2009 Mitsubishi Lancer GTS CVT Hill Climb Problems",
+     "channel": "DuffmasterFresh",
+     "views": 60212
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "fiat-500": [
+  {
+   "years": [
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019
+   ],
+   "gen": "2012–2019 Fiat 500",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 21549968,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 146519,
+     "n": 1,
+     "best": {
+      "id": "zNIaj5Bxr44",
+      "title": "Battery Replacement on Fiat 500 2008 2009 2010 2011 2012 2013 2014 2015 2016",
+      "channel": "World Mechanics",
+      "views": 146519
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 91768,
+     "n": 1,
+     "best": {
+      "id": "Cgmy3xLytP0",
+      "title": "How to Turn Daylight Running Lights OFF on Fiat 500 2008 2009 2010 2011 2012 2013 2014 2015 2016",
+      "channel": "World Mechanics",
+      "views": 91768
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 89973,
+     "n": 3,
+     "best": {
+      "id": "n5hMHkObYKU",
+      "title": "Fiat 500 (2004 - 2012) - Service the cooling system",
+      "channel": "Haynes Manuals",
+      "views": 58166
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 88079,
+     "n": 3,
+     "best": {
+      "id": "ueUOKA4CFpg",
+      "title": "2012-15 Fiat 500 Automatic Transmission Fluid Change/Adding Fluid EASY Tutorial (don't waste time)",
+      "channel": "6yap2",
+      "views": 44143
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 81987,
+     "n": 3,
+     "best": {
+      "id": "VrxMIS_P1Tc",
+      "title": "How to Replace Front Brake Pads & Rotors on a Fiat 500 (2012-2019)",
+      "channel": "Brake The Bank Garage",
+      "views": 39320
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 66853,
+     "n": 2,
+     "best": {
+      "id": "mo14912GMEQ",
+      "title": "Fiat 500 - Cabin Air Filter Replacement - 2012-2019",
+      "channel": "MINUTE DIY VIDEOS",
+      "views": 55109
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 64604,
+     "n": 1,
+     "best": {
+      "id": "MG6VqjJU4UI",
+      "title": "2012 Fiat 500 Misfire Diagnosis and Fix - P0202 P0302",
+      "channel": "Super Mario Diagnostics",
+      "views": 64604
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 38257,
+     "n": 1,
+     "best": {
+      "id": "o4lsCDvZAZ0",
+      "title": "No Start 2012 Fiat 500 | Easy Fix",
+      "channel": "Journey Along With Shannon",
+      "views": 38257
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "-Iz3DRfgYTM",
+     "title": "Fiat 500 Abarth hatchback 2014 review - Carbuyer",
+     "channel": "Carbuyer",
+     "views": 645713
+    },
+    {
+     "id": "oKeVx1HYtnQ",
+     "title": "Fiat 500 hatchback 2015 review - Carbuyer",
+     "channel": "Carbuyer",
+     "views": 354712
+    },
+    {
+     "id": "-NSm3oWLKPw",
+     "title": "2012 fiat 500 sport hatchback lock problems",
+     "channel": "gpfreak1",
+     "views": 54664
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "toyota-yaris": [
+  {
+   "years": [
+    2007,
+    2008,
+    2009,
+    2010,
+    2011
+   ],
+   "gen": "2007–2011 Toyota Yaris",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 16008430,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 501376,
+     "n": 4,
+     "best": {
+      "id": "tWdE5JAcV5c",
+      "title": "Oil Change 2008 Toyota Yaris",
+      "channel": "Channel 1",
+      "views": 219520
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 344625,
+     "n": 4,
+     "best": {
+      "id": "B8EzgkgE25M",
+      "title": "How To Change a SERPENTINE BELT On A 2007 Toyota Yaris!!!",
+      "channel": "Driven Daily Gaming",
+      "views": 137953
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 332624,
+     "n": 4,
+     "best": {
+      "id": "ypf2JWRTL4Y",
+      "title": "2007 TOYOTA YARIS LOW IDLE DIAG & FIX(battery light on)",
+      "channel": "Super Mario Diagnostics",
+      "views": 176935
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 247770,
+     "n": 2,
+     "best": {
+      "id": "TM_zrBNWSsA",
+      "title": "Replacing Roof Drip Molding (2007 Toyota Yaris)",
+      "channel": "burrheadjr",
+      "views": 238531
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 148525,
+     "n": 3,
+     "best": {
+      "id": "CZQxU3wZ01g",
+      "title": "2007-2019 Toyota Yaris CV Axle Replacement How-To",
+      "channel": "Blue Collar Garage",
+      "views": 95318
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 137954,
+     "n": 3,
+     "best": {
+      "id": "J22xWE_yw7c",
+      "title": "HOW TO: Change 2007-2014 Toyota Yaris Front Control Arms",
+      "channel": "BG Garage",
+      "views": 67903
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 120974,
+     "n": 1,
+     "best": {
+      "id": "wy6IPya2al0",
+      "title": "Step-by-Step Guide: Toyota Yaris 2008 Head Unit & Reverse Camera Upgrade Installation",
+      "channel": "WLF Customs ",
+      "views": 120974
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 73514,
+     "n": 1,
+     "best": {
+      "id": "3Dl8jZg9AHU",
+      "title": "2007 Toyota yaris no start diy",
+      "channel": "Nova Scotia Guy",
+      "views": 73514
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "U4WXWwuuaIo",
+     "title": "Toyota Yaris hatchback 2006 - 2011 review - CarBuyer",
+     "channel": "Carbuyer",
+     "views": 778923
+    },
+    {
+     "id": "PPKms_RfSeg",
+     "title": "Toyota Yaris MK3 (2011-2020) - Buyer's Guide - Go On, Treat Yourself",
+     "channel": "Mid Life Motors",
+     "views": 113946
+    },
+    {
+     "id": "mP3v9nvhSy8",
+     "title": "When cars were small, reliable, affordable // 2010 Toyota Yaris Review",
+     "channel": "Kirk Kreifels",
+     "views": 49680
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019
+   ],
+   "gen": "2012–2019 Toyota Yaris",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 19499996,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 260562,
+     "n": 4,
+     "best": {
+      "id": "yg4kaU0gqYM",
+      "title": "Toyota Yaris TPMS Reset - How to Turn Off Tire Pressure Light (2018)",
+      "channel": "Luke Mods",
+      "views": 140880
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 257990,
+     "n": 4,
+     "best": {
+      "id": "CXgPgYC3qGQ",
+      "title": "How to Reset Required Maintenance on a 2013 Toyota Yaris",
+      "channel": "Carlos Altamirano",
+      "views": 129416
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 245410,
+     "n": 2,
+     "best": {
+      "id": "dFKSEisixfU",
+      "title": "How To Clean (MAF) Mass Air Flow sensor 2006-2019 Toyota Yaris",
+      "channel": "Channel 1",
+      "views": 213302
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 95276,
+     "n": 1,
+     "best": {
+      "id": "dMxcL-HoeiE",
+      "title": "2013 Toyota Yaris change key battery HOW TO",
+      "channel": "The Car Key Man",
+      "views": 95276
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 76333,
+     "n": 1,
+     "best": {
+      "id": "vNNa7uXVtgU",
+      "title": "2017 Toyota Yaris How to replace cabin air Filter / Maintenance",
+      "channel": "Oil Light Reset ",
+      "views": 76333
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 67906,
+     "n": 1,
+     "best": {
+      "id": "J22xWE_yw7c",
+      "title": "HOW TO: Change 2007-2014 Toyota Yaris Front Control Arms",
+      "channel": "BG Garage",
+      "views": 67906
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 55434,
+     "n": 1,
+     "best": {
+      "id": "MflJKLhm2So",
+      "title": "How to remove the door panel Toyota Yaris 2013",
+      "channel": "DFC Garage",
+      "views": 55434
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 36130,
+     "n": 2,
+     "best": {
+      "id": "B76e9nmUUgc",
+      "title": "2016 - 2022 Toyota Yaris / Mazda 2 Front brake pads replacement",
+      "channel": "Brian Balatbat",
+      "views": 18646
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "C2KwWiJ_Q10",
+     "title": "2018 Toyota Yaris LE Review - Cheap, Reliable Transportation!",
+     "channel": "Shooting Cars",
+     "views": 39100
+    },
+    {
+     "id": "UyApeXHi_-8",
+     "title": "2014 Toyota Vios / Yaris Sedan FULL REVIEW (Interior, Exterior, Exhaust, Engine)",
+     "channel": "PatrickReyesTV",
+     "views": 453882
+    },
+    {
+     "id": "MnACEQ8Z5X0",
+     "title": "Toyota Yaris 2017 (ENG) - Test Drive and Review",
+     "channel": "Marek Drives in English",
+     "views": 317396
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "mazda-protege": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003
+   ],
+   "gen": "1999–2003 Mazda Protege",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 5602332,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 596580,
+     "n": 5,
+     "best": {
+      "id": "2uIdrcal-Ic",
+      "title": "1999-2003 Mazda Protege Alternator and Belt Install How-To",
+      "channel": "Back Forty Off Road",
+      "views": 414269
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 419004,
+     "n": 5,
+     "best": {
+      "id": "Y2EVZ01eEwU",
+      "title": "Timing belt replacement 1998 - 2003 Mazda Protege DOHC 1.6L water pump Install Remove Replace",
+      "channel": "Fixing cars and stuff",
+      "views": 368511
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 402468,
+     "n": 6,
+     "best": {
+      "id": "I21T7Tcez3o",
+      "title": "1999-01 Mazda Protege 1.6L timing belt service part 3 of 3",
+      "channel": "Tyler's Neighborhood Garage",
+      "views": 134389
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 167851,
+     "n": 7,
+     "best": {
+      "id": "lhCqaq-TzY8",
+      "title": "2001 Mazda Protege EGR removal, clean and change (P0401 error code)",
+      "channel": "David The Fixer of Things (Just ask Dave)",
+      "views": 106767
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 113192,
+     "n": 1,
+     "best": {
+      "id": "31AHEKHjQ1U",
+      "title": "P0421 Check Engine Light Fix \"2001 Mazda protege 2.0 ES\" (make not important!)",
+      "channel": "Derrick P",
+      "views": 113192
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 109168,
+     "n": 3,
+     "best": {
+      "id": "GcwE0mylFhM",
+      "title": "How-To Replace Front Struts on Most Cars : 2001 Mazda Protege Example",
+      "channel": "Johnnysshop",
+      "views": 66378
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 89617,
+     "n": 2,
+     "best": {
+      "id": "_JNKr8cDa4E",
+      "title": "1999 Mazda Protege 1.6L engine Spark Plug and Spark Plug Boot Replacement",
+      "channel": "ColonelJolack",
+      "views": 77762
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 76000,
+     "n": 4,
+     "best": {
+      "id": "VPBOA0PEenc",
+      "title": "2000 Mazda Protege ES Oil and Oil Filter Change - 1.8L or 1.6L",
+      "channel": "Khan XO",
+      "views": 36630
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "t1oAb3MUw3U",
+     "title": "2002 MAZDA PROTEGE 5 start up, walk around and review",
+     "channel": "AutomotiveReview",
+     "views": 108941
+    },
+    {
+     "id": "y2i6JhsR3Q4",
+     "title": "SOLD 2002 Mazda Protege5 72K Miles Mint 5 Speed Meticulous Motors Inc Fl For Sale",
+     "channel": "MeticulousMotors",
+     "views": 31306
+    },
+    {
+     "id": "THnSI-sDJac",
+     "title": "SOLD 2003 Mazda Protege ES 2.0 5-Speed Manual Meticulous Motors Inc Florida For Sale",
+     "channel": "MeticulousMotors",
+     "views": 30352
+    }
+   ],
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 150,
+       "lo": 42.0,
+       "hi": 300.0,
+       "n": 3,
+       "videos": 3,
+       "id": "GcwE0mylFhM",
+       "t": 1332,
+       "title": "How-To Replace Front Struts on Most Cars : 2001 Mazda Protege Example"
+      }
+     ]
+    ]
+   }
+  }
+ ],
+ "hummer-h3": [
+  {
+   "years": [
+    2006,
+    2007,
+    2008,
+    2009,
+    2010
+   ],
+   "gen": "2006–2010 Hummer H3",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 8505249,
+   "topics": [
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 221785,
+     "n": 4,
+     "best": {
+      "id": "PnAs3GC89A8",
+      "title": "How to Use Four-Wheel Drive 4X4 Control System on Hummer H3 Adventure Package 2009-2010",
+      "channel": "Newroad",
+      "views": 190303
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 99824,
+     "n": 3,
+     "best": {
+      "id": "ronjKt8hxsQ",
+      "title": "2005 - 2010 Hummer H3 Radio Install",
+      "channel": "Provo Beast Audio Installation",
+      "views": 86831
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 81139,
+     "n": 4,
+     "best": {
+      "id": "zWuNIGU6g4E",
+      "title": "Change Engine Oil and Filter 2006-10 Hummer H3 Removing Shield Guards – Resetting Change Oil Warning",
+      "channel": "John C RV",
+      "views": 44597
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 60514,
+     "n": 1,
+     "best": {
+      "id": "oFCPeqPKGNU",
+      "title": "2008 Hummer H3 Misfire Case Study (Part 4) Leak down test revisited",
+      "channel": "ScannerDanner",
+      "views": 60514
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 57366,
+     "n": 1,
+     "best": {
+      "id": "7ytbQ2OpjwI",
+      "title": "2008 Hummer H3 no crank no start fix",
+      "channel": "Nestor Auto Repair",
+      "views": 57366
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 44403,
+     "n": 5,
+     "best": {
+      "id": "KbZSVVz6Wbk",
+      "title": "Front Differential Bushing Replacement | 2007 H3 Hummer 3.7L (Chevy Colorado - GMC Canyon)",
+      "channel": "John C RV",
+      "views": 21910
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 36762,
+     "n": 2,
+     "best": {
+      "id": "cRTDiPpBVbI",
+      "title": "2008 HUMMER H3 Transmission replacement made easy. DIY Hummer H3 Transmission. (4L60)",
+      "channel": "TheGrayMechanic",
+      "views": 21042
+     }
+    },
+    {
+     "name": "Lifters, AFM & cam phasers",
+     "views": 32092,
+     "n": 1,
+     "best": {
+      "id": "EMJgUs9LSBA",
+      "title": "HOW TO REPLACE a HVAC BLEND DOOR ACTUATOR | 2007 Hummer H3 - Ticking noise in Dash",
+      "channel": "John C RV",
+      "views": 32092
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "EB45qOk-C-4",
+     "title": "Hummer H3 2006 to 2010 common problems, issues, recalls, defects and complaints",
+     "channel": "HOWSTUFFINMYCARWORKS",
+     "views": 80894
+    },
+    {
+     "id": "c5wH9bYy5gs",
+     "title": "Top 5 Problems Hummer H3 SUV 2006-2010 1st Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 49976
+    },
+    {
+     "id": "Oktr0TLvuc8",
+     "title": "2008 hummer h3 3.7L oil pressure problems",
+     "channel": "whatz next",
+     "views": 19012
+    }
+   ],
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 1700,
+       "lo": 200.0,
+       "hi": 2000.0,
+       "n": 5,
+       "videos": 5,
+       "id": "vWY-PelY92E",
+       "t": 53,
+       "title": "Review: 2006 Hummer H3"
+      }
+     ]
+    ]
+   }
+  }
+ ],
  "ford-transit": [
   {
    "years": [
@@ -64096,7 +65037,26 @@
      "views": 1123096
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 198,
+       "lo": 150.0,
+       "hi": 245.0,
+       "n": 2,
+       "videos": 2,
+       "id": "Q2qd5AfCpK8",
+       "t": 1048,
+       "title": "2015 Ford Transit 250 ABS, Traction control, Hill start assist repair"
+      }
+     ]
+    ]
+   }
   }
  ],
  "hyundai-tiburon": [
