@@ -66798,7 +66798,26 @@
      "views": 160706
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 1150,
+       "lo": 800.0,
+       "hi": 1500.0,
+       "n": 2,
+       "videos": 2,
+       "id": "iW3KPWgnOek",
+       "t": 48,
+       "title": "2000 Land Rover Discovery II - Replacing Alternator, Flashing Odometer"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -66924,7 +66943,26 @@
      "views": 174528
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 200,
+       "lo": 60.0,
+       "hi": 600.0,
+       "n": 7,
+       "videos": 6,
+       "id": "RqRHzqTRa9Q",
+       "t": 226,
+       "title": "Best LR3 Overlanding Vehicle in the World (Part 1 - Interior)"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
