@@ -63094,7 +63094,26 @@
      "views": 37040
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 275,
+       "lo": 250.0,
+       "hi": 300.0,
+       "n": 4,
+       "videos": 4,
+       "id": "uOpLPppyTP0",
+       "t": 135,
+       "title": "2006 Chevrolet HHR LT: Regular Car Reviews"
+      }
+     ]
+    ]
+   }
   }
  ],
  "dodge-neon": [
@@ -63223,7 +63242,26 @@
      "views": 116199
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 200,
+       "lo": 75.0,
+       "hi": 399.0,
+       "n": 6,
+       "videos": 6,
+       "id": "vVfB8junpSg",
+       "t": 451,
+       "title": "⭐ 2001 Dodge Neon - Idles Up And Down - How To Fix A Surging Idle"
+      }
+     ]
+    ]
+   }
   }
  ],
  "ram-promaster": [
