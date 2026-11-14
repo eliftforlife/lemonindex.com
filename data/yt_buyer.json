@@ -28517,5 +28517,53 @@
 }
 ]
 }
+],
+"suzuki-forenza": [
+{
+"sid": "suzuki-forenza-g1",
+"y0": 2004,
+"y1": 2008,
+"label": "2004–2008",
+"videos": 200,
+"praise": [
+[
+"Power",
+6
+],
+[
+"Fun to drive",
+6
+],
+[
+"Reliability",
+6
+],
+[
+"Value for money",
+3
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "bFSi2y4H0CA",
+"title": "Review: 2007 Suzuki Forenza",
+"views": 71228,
+"ch": "MyRide on Autobytel"
+},
+{
+"id": "Ut4JhyLs0oQ",
+"title": "Troubleshooting a problem with a 2007 Suzuki Forenza that wouldn't turn on.",
+"views": 27778,
+"ch": "Mario's Cars Servicio Automotriz"
+},
+{
+"id": "3DWz6gTnbpE",
+"title": "Cold start problem Suzuki Forenza 2007",
+"views": 26450,
+"ch": "Mario's Cars Servicio Automotriz"
+}
+]
+}
 ]
 }
