@@ -71029,7 +71029,26 @@
      "views": 1324914
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 1984,
+       "lo": 1638.0,
+       "hi": 2329.0,
+       "n": 4,
+       "videos": 3,
+       "id": "hfhJ67j4-5c",
+       "t": 7,
+       "title": "Kia Niro Heat Exchanger Bypass (2017-2022)"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
