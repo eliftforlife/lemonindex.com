@@ -68065,7 +68065,39 @@
      "views": 78
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Battery",
+      {
+       "median": 1100,
+       "lo": 624.0,
+       "hi": 2500.0,
+       "n": 7,
+       "videos": 6,
+       "id": "TeJltkT38Ks",
+       "t": 62,
+       "title": "RBbatteries Grid Charger Install for 2001 Honda Insight"
+      }
+     ],
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 2000,
+       "lo": 2000.0,
+       "hi": 2000.0,
+       "n": 2,
+       "videos": 2,
+       "id": "YGplJaMkH_s",
+       "t": 381,
+       "title": "2000 Honda Insight G1: Regular Car Reviews"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
