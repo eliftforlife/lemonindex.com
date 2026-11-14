@@ -64129,7 +64129,39 @@
      "views": 23128
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Tires",
+      {
+       "median": 900,
+       "lo": 800.0,
+       "hi": 1000.0,
+       "n": 4,
+       "videos": 3,
+       "id": "0LXaOH_aUSk",
+       "t": 775,
+       "title": "Sport sedan skirmish | 2021 Acura TLX Type S vs 2021 Lexus IS 350 F SPORT"
+      }
+     ],
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 450,
+       "lo": 400.0,
+       "hi": 800.0,
+       "n": 3,
+       "videos": 2,
+       "id": "DB6CIi0ZJ70",
+       "t": 455,
+       "title": "The 2021 Acura TLX Type S Is a Shockingly Sporty Sedan from Acura"
+      }
+     ]
+    ]
+   }
   }
  ],
  "chrysler-300m": [
