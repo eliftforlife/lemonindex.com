@@ -64055,6 +64055,133 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008
+   ],
+   "gen": "2003–2008 Hyundai Tiburon",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 4286212,
+   "topics": [
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 96320,
+     "n": 4,
+     "best": {
+      "id": "q6J9OGWvdfQ",
+      "title": "Changing Spark Plugs 2006 Hyundai Tiburon 2.7L V6",
+      "channel": "xcountrycowboy",
+      "views": 81699
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 82954,
+     "n": 3,
+     "best": {
+      "id": "mQV6Tli-1D0",
+      "title": "How to Replace Cabin Air Filter 2007 Hyundai Tiburon | AQ1053",
+      "channel": "Filterheads",
+      "views": 80517
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 78122,
+     "n": 1,
+     "best": {
+      "id": "kyTkaD8n8B0",
+      "title": "Rear brake pad replacement 2008 Hyundai Tiburon Rotors Install Remove Replace",
+      "channel": "Fixing cars and stuff",
+      "views": 78122
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 62535,
+     "n": 5,
+     "best": {
+      "id": "xOdCxQ2JS8k",
+      "title": "How to replace alternator on 2003 Hyundai Tiburon",
+      "channel": "Adam Hamrick",
+      "views": 48134
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 50335,
+     "n": 3,
+     "best": {
+      "id": "5-mGQOLgf4A",
+      "title": "Transmission service 2008 Hyundai Tiburon.Fluid Replacement",
+      "channel": "Fixing cars and stuff",
+      "views": 32722
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 49598,
+     "n": 3,
+     "best": {
+      "id": "NB70zJ7rvF0",
+      "title": "How to Install an Intake on a 2008 Hyundai Tiburon",
+      "channel": "JulioTRD",
+      "views": 36177
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 33849,
+     "n": 2,
+     "best": {
+      "id": "2VWZx7oKGfU",
+      "title": "2003 Hyundai Elantra, Hyundai Tiburon GT radiator replacement",
+      "channel": "Lets Fix IT",
+      "views": 31357
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 31849,
+     "n": 5,
+     "best": {
+      "id": "1PJKBGfbVa8",
+      "title": "2003-2008 HYUNDAI TIBURON INSIDE DOOR HANDLE REPLACEMENT TUTORIAL",
+      "channel": "Gearmo Auto",
+      "views": 13964
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "e--WNpZgKOE",
+     "title": "Hyundai Tiburon GT v6 2003 starting problems",
+     "channel": "Homie Jesus",
+     "views": 15772
+    },
+    {
+     "id": "RIWhH6AzM28",
+     "title": "2008 Hyundai Tiburon VS 2010 Genesis Coupe In Depth Review and Comparison, Start Up, and Exhausts",
+     "channel": "Saabkyle04",
+     "views": 435129
+    },
+    {
+     "id": "CQCHgthkn2o",
+     "title": "Top Gear -- Hyundai Coupe (Tiburon) 2003 review",
+     "channel": "Clarksonian",
+     "views": 139216
+    }
+   ],
+   "costs": null
   }
  ],
  "oldsmobile-bravada": [
@@ -64410,7 +64537,39 @@
      "views": 540
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 500,
+       "lo": 300.0,
+       "hi": 900.0,
+       "n": 7,
+       "videos": 5,
+       "id": "sv8irudmtnc",
+       "t": 1707,
+       "title": "Hyundai Azera G1 (2008-2011): Buying guide - versions, options and chronic problems."
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 500,
+       "lo": 492.0,
+       "hi": 800.0,
+       "n": 3,
+       "videos": 2,
+       "id": "dlAQTFUA3ek",
+       "t": 331,
+       "title": "My new ride! 2009 Hyundai Azera Limited pov test drive walk around freeway cheap beater!"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
