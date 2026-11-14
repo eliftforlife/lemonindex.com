@@ -28332,5 +28332,104 @@
 }
 ]
 }
+],
+"acura-tlx": [
+{
+"sid": "acura-tlx-g1",
+"y0": 2015,
+"y1": 2020,
+"label": "2015–2020",
+"videos": 198,
+"praise": [
+[
+"Fun to drive",
+25
+],
+[
+"Reliability",
+16
+],
+[
+"Looks",
+15
+],
+[
+"Power",
+14
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+3
+]
+],
+"top": [
+{
+"id": "GSVOE07d3Dw",
+"title": "2018 Acura TLX A-Spec SH-AWD – Redline: Review",
+"views": 1050717,
+"ch": "Redline Reviews"
+},
+{
+"id": "XMImrCF4uNc",
+"title": "2015 Acura TLX V6 – Redline: Review",
+"views": 741625,
+"ch": "Redline Reviews"
+},
+{
+"id": "L3TGdquT2gQ",
+"title": "2018 Acura TLX V6 SH-AWD A Spec Review - SUPER HANDLING!",
+"views": 608146,
+"ch": "TheStraightPipes"
+}
+]
+},
+{
+"sid": "acura-tlx-g2",
+"y0": 2021,
+"y1": 2025,
+"label": "2021–2025",
+"videos": 188,
+"praise": [
+[
+"Fun to drive",
+39
+],
+[
+"Looks",
+31
+],
+[
+"Power",
+24
+],
+[
+"Reliability",
+18
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "FmOzv32o8Tk",
+"title": "2021 Acura TLX Type S Review // Priced To Fight",
+"views": 1064048,
+"ch": "Throttle House"
+},
+{
+"id": "qUak6mmETjU",
+"title": "2021 Acura TLX Review // Don’t Buy That Mercedes, Yet.",
+"views": 792731,
+"ch": "Throttle House"
+},
+{
+"id": "9Z8UiyLhYpM",
+"title": "2024 Acura TLX Type S Review - Criminally Underrated",
+"views": 553077,
+"ch": "TheStraightPipes"
+}
+]
+}
 ]
 }

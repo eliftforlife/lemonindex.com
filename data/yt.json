@@ -63965,6 +63965,173 @@
    }
   }
  ],
+ "acura-tlx": [
+  {
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ],
+   "gen": "2015–2020 Acura TLX",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 17986319,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 233676,
+     "n": 4,
+     "best": {
+      "id": "Q3n22chhh3w",
+      "title": "How to reset maintenance required light, oil life reset on a 2015-2020 Acura TLX",
+      "channel": "George Melnik",
+      "views": 126366
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 187438,
+     "n": 4,
+     "best": {
+      "id": "Qf-9k6kwmYE",
+      "title": "Acura TLX Oil Life Reset 2015 2016 2017",
+      "channel": "Oil Light Reset ",
+      "views": 67604
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 93413,
+     "n": 1,
+     "best": {
+      "id": "XWwn1qvG9xs",
+      "title": "Acura TLX 2015 electrical issue, not battery, car won't start/wont crank",
+      "channel": "FlyingDoctorC",
+      "views": 93413
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 75077,
+     "n": 3,
+     "best": {
+      "id": "pBXmB8VI-V4",
+      "title": "Acura No Start 2016 TLX Won't Crank...Clicks...Solved...",
+      "channel": "Peter L",
+      "views": 31273
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 54641,
+     "n": 1,
+     "best": {
+      "id": "Kts1XKu6PmY",
+      "title": "2016 Acura MDX dangerous issue for 9 speed auto transmission ...TLX and Honda Pilots too!!!",
+      "channel": "Rob Daman",
+      "views": 54641
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 16529,
+     "n": 1,
+     "best": {
+      "id": "8DE7PiN7bvc",
+      "title": "2015 Acura TLX - Rear Steering Problem! Diag & Fix!",
+      "channel": "Advanced Level Diagnostics",
+      "views": 16529
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "auXhL9hDk_U",
+     "title": "2016 Acura TLX PROBLEMS",
+     "channel": "Mike Chandler",
+     "views": 79794
+    },
+    {
+     "id": "lSvIyawCLMg",
+     "title": "2015-2020 Acura TLX Buyer’s Guide - Reliability & Common Problems",
+     "channel": "Discerning Cars",
+     "views": 72697
+    },
+    {
+     "id": "jcCIxJhISZU",
+     "title": "2015 Acura TLX V6 Review - Should You Buy One?",
+     "channel": "Masry Motors",
+     "views": 37344
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2021–2025 Acura TLX",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 24512377,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 11859,
+     "n": 1,
+     "best": {
+      "id": "6AkfbPGUdyw",
+      "title": "2021 Acura TLX Infotainment Overview: No Touchscreen, No Problem",
+      "channel": "CarScoops",
+      "views": 11859
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 10811,
+     "n": 1,
+     "best": {
+      "id": "fn8HYw67Y2s",
+      "title": "Acura TLX 2021-2025 Oil Change Secrets REVEALED!",
+      "channel": "Axtuo Ax",
+      "views": 10811
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "tHH1HV3iv6g",
+     "title": "The 2025 Acura TLX Type S is the MOST reliable AWD performance sedan!",
+     "channel": "Raiti's Rides",
+     "views": 225753
+    },
+    {
+     "id": "3expstlZzqc",
+     "title": "Should you BUY the 2021 Acura TLX A-Spec or WAIT for the Type S?",
+     "channel": "Raiti's Rides",
+     "views": 154626
+    },
+    {
+     "id": "LZOoNmYblQM",
+     "title": "ALL THE PROBLEMS MY 2023 ACURA TLX TYPE S HAS HAD SO FAR.....",
+     "channel": "TLX MAL",
+     "views": 23128
+    }
+   ],
+   "costs": null
+  }
+ ],
  "chrysler-300m": [
   {
    "years": [
