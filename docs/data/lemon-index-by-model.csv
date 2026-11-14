@@ -1,4 +1,4 @@
-# The Lemon Index (lemonindex.com). License: CC BY 4.0, free to use with credit: "Source: The Lemon Index (lemonindex.com)". Updated 2026-11-13
+# The Lemon Index (lemonindex.com). License: CC BY 4.0, free to use with credit: "Source: The Lemon Index (lemonindex.com)". Updated 2026-11-14
 # Counts: nhtsa_complaints_3yr = NHTSA owner complaints filed within 3 years of each model year, summed over score_model_years. Not a safety rating.
 family_id,model,brand,segment,score_model_years,lemon_index,nhtsa_complaints_3yr,complaints_per_100k_sold,average_car_per_100k,study_rank,sales_note,page,sales_source
 toyota-4runner,Toyota 4Runner,Toyota,SUV,2010-2022,26,352,28,104,1,,https://lemonindex.com/cars/toyota-4runner/,https://en.wikipedia.org/wiki/Toyota_4Runner

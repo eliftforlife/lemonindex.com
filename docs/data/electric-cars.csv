@@ -1,4 +1,4 @@
-# The Lemon Index (lemonindex.com). License: CC BY 4.0, free to use with credit: "Source: The Lemon Index (lemonindex.com)". Updated 2026-11-13
+# The Lemon Index (lemonindex.com). License: CC BY 4.0, free to use with credit: "Source: The Lemon Index (lemonindex.com)". Updated 2026-11-14
 # Counts: the EV window = complaints filed with NHTSA by the end of the year after the model year (model years 2021-2024), so it differs from the main 3-year score in lemon-index-by-model.csv.
 slug,model,model_years,ev_lemon_index,ev_rank,nhtsa_complaints,complaints_per_100k_sold,complaints_without_driver_assist_per_100k,fire_complaints,recalls,recalls_mentioning_fire,epa_range_low,epa_range_high,mpge_low,mpge_high,yearly_charging_cost_low,yearly_charging_cost_high,epa_model_year,main_lemon_index,page,sales_source
 nissan-leaf,Nissan Leaf,2021-2024,128,1,30,67,47,0,5,1,149,212,109,111,700,700,2025,,https://lemonindex.com/electric/nissan-leaf/,Kelley Blue Book EV sales reports (estimates)
