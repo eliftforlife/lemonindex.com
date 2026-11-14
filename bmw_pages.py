@@ -377,6 +377,7 @@ else:
         groups = []
         groups.append(('engines', 'BMW engines', [card(ph['src'], ph['w'], ph['h'], ph['title'], ph['title'], p_, 'Engine page') for p_, ph in ours]))
         if globals().get('SCE_IMGS'): groups.append(('supercar-engines', 'Supercar and performance engines', [card(ph['src'], ph['w'], ph['h'], ph['title'], ph['title'], p_, 'Engine page') for p_, ph in SCE_IMGS]))   # 11-11 (supercar_engine_pages.py)
+        if globals().get('AIE_IMGS'): groups.append(('everyday-engines', 'Everyday, truck and diesel engines', [card(ph['src'], ph['w'], ph['h'], ph['title'], ph['title'], p_, 'Engine page') for p_, ph in AIE_IMGS]))   # 11-13 (ai_engine_photos.py)
         _ES = json.load(open('data/engine_soon_images.json', encoding='utf-8')) if os.path.exists('data/engine_soon_images.json') else {}   # 11-12 /engines/ coming-soon engines
         if _ES: groups.append(('engines-coming-soon', 'More engines (pages coming soon)', [card(ph['src'], ph['w'], ph['h'], ph['title'], ph['title'], '/engines/?type=soon', 'All engines') for _k, ph in sorted(_ES.items())]))
         _pages = {f['id'] for f in YEARS}
@@ -423,7 +424,7 @@ else:
                 f'<p class="cf-none imgnone" hidden>No image matches.</p>{secs}' + (f'<section class="yc imgsec">{TAB.images_cards()}</section>' if TAB.images_cards() else '') +
                 '<p class="yc-cap">Engine photos on our engine pages that come from Wikimedia Commons are not ours: they keep their authors&#39; own licenses, linked under each photo.</p></div>'
                 '<script src="/assets/imgpage.js?v=1" defer></script>')
-        page('/images/', 'Free Car & Engine Illustrations (CC BY 4.0) | Lemon Index', lede, body, ld=[img_ld(p.split('bmw-')[1].strip('/').upper(), ph) for p, ph in ours] + [dict(img_ld('', ph), name=ph['title'], description=ph['title'] + '. AI-generated illustration, not a photo of a specific engine.') for p, ph in globals().get('SCE_IMGS', [])])
+        page('/images/', 'Free Car & Engine Illustrations (CC BY 4.0) | Lemon Index', lede, body, ld=[img_ld(p.split('bmw-')[1].strip('/').upper(), ph) for p, ph in ours] + [dict(img_ld('', ph), name=ph['title'], description=ph['title'] + '. AI-generated illustration, not a photo of a specific engine.') for p, ph in list(globals().get('SCE_IMGS', [])) + list(globals().get('AIE_IMGS', []))])
         BMW_URLS.append('/images/')
     # ---- image sitemap (listed in robots.txt by build.py)
     _PFS = [c for c in (json.load(open('data/perf_cars.json', encoding='utf-8')) if os.path.exists('data/perf_cars.json') else []) if isinstance(c, dict) and c.get('img')]   # 11-11: the coming-soon performance cards on /cars/
@@ -439,9 +440,9 @@ else:
                   for _f, m in YSL.AIM.items() if m.get('page') and _f not in {f['id'] for f in YEARS})
         + ''.join(f'<url><loc>{BASE}{v["page"]}</loc><image:image><image:loc>{BASE}{E(v["src"])}</image:loc></image:image></url>'
                   for v in (json.load(open('data/ai_vehicle_images.json', encoding='utf-8')) if os.path.exists('data/ai_vehicle_images.json') else {}).values())
-        + ''.join(f'<url><loc>{BASE}{p}</loc><image:image><image:loc>{BASE}{E(ph["src"])}</image:loc></image:image></url>' for p, ph in globals().get('SCE_IMGS', []))   # 11-11 supercar engines
+        + ''.join(f'<url><loc>{BASE}{p}</loc><image:image><image:loc>{BASE}{E(ph["src"])}</image:loc></image:image></url>' for p, ph in list(globals().get('SCE_IMGS', [])) + list(globals().get('AIE_IMGS', [])))   # 11-11 supercar engines, 11-13 everyday engines
         + (f'<url><loc>{BASE}/cars/</loc>' + ''.join(f'<image:image><image:loc>{BASE}{E(c["img"])}</image:loc></image:image>' for c in _PFS) + '</url>' if _PFS else '')
         + (lambda _M: f'<url><loc>{BASE}/motorcycles/</loc>' + ''.join(f'<image:image><image:loc>{BASE}{E(c["img"])}</image:loc></image:image>' for c in _M) + '</url>' if _M else '')([c for c in (json.load(open('data/moto_soon.json', encoding='utf-8')) if os.path.exists('data/moto_soon.json') else []) if c.get('img')])
-        + (''.join(f'<url><loc>{BASE}/images/</loc>' + ''.join(f'<image:image><image:loc>{BASE}{E(ph["src"])}</image:loc></image:image>' for _, ph in ours + list(globals().get('SCE_IMGS', []))) + '</url>' for _ in [0]) if ours else '')
+        + (''.join(f'<url><loc>{BASE}/images/</loc>' + ''.join(f'<image:image><image:loc>{BASE}{E(ph["src"])}</image:loc></image:image>' for _, ph in ours + list(globals().get('SCE_IMGS', [])) + list(globals().get('AIE_IMGS', []))) + '</url>' for _ in [0]) if ours else '')
         + '</urlset>')
     print('bmw pages', len(BMW_URLS), 'engines', len(ENG_OK), 'engine images', len(IMG_PAGES), 'ours (CC BY)', len(ours))

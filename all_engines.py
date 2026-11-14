@@ -17,6 +17,7 @@ AE_LIVE = {}   # url -> card dict (a page listed by two hubs, e.g. the S62 on th
 def _ae_add(url, **c):
     if not os.path.exists(os.path.join(OUT, url.split('#')[0].strip('/'), 'index.html')): return
     if url in AE_LIVE: AE_LIVE[url]['t'] |= c['t']; return
+    if not c.get('img') and (globals().get('AIE') or {}).get(url.strip('/').split('/')[-1]): c['img'] = _ae_img(AIE[url.strip('/').split('/')[-1]])   # 11-13 AI engine illustrations
     if not c['yt'][0] and ENG_POOL_RANK.get(url): c['yt'] = (ENG_POOL_RANK[url], ENG_POOL_N, ENG_POOL_LBL)   # 11-13: every engine in the one YouTube pool shows its rank
     AE_LIVE[url] = dict(url=url, **c)
 # 1. BMW engine pages (ranked the same way as /engines/bmw/)

@@ -14,6 +14,7 @@ SCENG = _load('data/supercar_engines.json') if os.path.exists('data/supercar_eng
 SCY = dict(_load('data/supercar_engine_yt_snapshot.json') if os.path.exists('data/supercar_engine_yt_snapshot.json') else {})
 SCY.update(_load('data/supercar_engine_yt.json') if os.path.exists('data/supercar_engine_yt.json') else {})
 SCP = _load('data/supercar_engine_photos.json') if os.path.exists('data/supercar_engine_photos.json') else {}
+SCP.update({_k: _v for _k, _v in (globals().get('AIE') or {}).items() if _k not in SCP and _k in SCENG['engines']})   # 11-13 AI engine illustrations
 SCE_URLS, SCE_IMGS = [], []
 SCE_SLUG = {'rr-n73': 'rolls-royce-n73', 'rr-n74': 'rolls-royce-n74'}
 SCE_URL = lambda e: f'/engines/{SCE_SLUG.get(e, e)}/'

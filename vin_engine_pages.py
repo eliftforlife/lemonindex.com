@@ -24,6 +24,7 @@ if VEX == 'hooks':
 
 if VEX == 'hooks':
     VE_URLS, VE_AE, VE_COVER = [], [], {}
+    if 'AIE' not in globals(): exec(open('ai_engine_photos.py', encoding='utf-8').read())   # 11-13 AI engine illustrations (data/ai_engine_photos.json)
     _vE = lambda s: E(_vh.unescape(str(s)))
     _VSRC = VEJ.get('src') or {}
     _VW = VEJ.get('words') or {}
@@ -214,7 +215,7 @@ if VEX == 'hooks':
         title = f'{_vh.unescape(nm)} Problems & Reliability by Year'
         desc = (f'{_vh.unescape(nm)} ({d["lay"]}), {y0}-{y1}: {d["n"]:,} owner complaints matched by VIN in the {", ".join(cars[:4])}{" and more" if len(cars) > 4 else ""}, {es}% name the engine. '
                 f'Problems by year and {len(rr)} recalls that name it.')
-        page(path, title, desc, body, ld=[faq_ld([(q, '', _vh.unescape(a)) for q, a in faq])])
+        page(path, title, desc, body, ld=[faq_ld([(q, '', _vh.unescape(a)) for q, a in faq])] + aie_ld(path), vis=aie_vis(path, _vh.unescape(nm), d['lay']))
         VE_URLS.append(path)
         al = (d.get('alias') or '') + ' ' + d['lay'].split(' ')[0].replace('.', '')
         mk = {'GM': 'Chevrolet'}.get(d['maker'], d['maker'])

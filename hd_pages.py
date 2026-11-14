@@ -97,6 +97,7 @@ if HDX == 'hooks':
 
 if HDX == 'pages' and HDT:
     HD_URLS, HD_AE, HD_FIND, HD_CMP = [], [], [], []
+    if 'AIE' not in globals(): exec(open('ai_engine_photos.py', encoding='utf-8').read())   # 11-13 AI engine illustrations (data/ai_engine_photos.json)
     _hdE = lambda s: E(_hh.unescape(str(s)))
     _hd_pct = lambda k, n: round(k / n * 100) if n else 0
     _HD_SRC = HDJ.get('src') or {}
@@ -375,7 +376,7 @@ if HDX == 'pages' and HDT:
         title = f'{nm} Problems & Reliability by Year'
         desc = (f'{_hh.unescape(nm)} ({d["lay"]}), {y0}-{y1}: {d["n"]:,} owner complaints matched by VIN, {es}% name the engine. '
                 f'Problems by year, what owners report, and {len(rr)} recalls that name it.')
-        page(path, title, desc, body, ld=[faq_ld([(q, '', _hh.unescape(a)) for q, a in faq])])
+        page(path, title, desc, body, ld=[faq_ld([(q, '', _hh.unescape(a)) for q, a in faq])] + aie_ld(path), vis=aie_vis(path, _hh.unescape(nm), d['lay']))
         HD_URLS.append(path)
         al = {'cummins-59': 'cummins 5.9 24v 24 valve ram diesel', 'cummins-67': 'cummins 6.7 ram diesel', 'ford-ecoboost-27': '2.7 ecoboost 2.7l f150 f-150 nano',
               'powerstroke-73': 'powerstroke power stroke 7.3 f250 f350 diesel', 'powerstroke-60': 'powerstroke power stroke 6.0 f250 f350 diesel',

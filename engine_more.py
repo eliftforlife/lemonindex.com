@@ -75,7 +75,8 @@ def _perf_only_page(url, name, make):
             + (f'<p class="yc-cap">Sources: {srcl}. Complaints and recalls: NHTSA (api.nhtsa.gov).</p>' if srcl else '') + '</article>')
     title = f'{name} Engine: Known Problems, Recalls & Specs'
     desc = html.unescape(f'The {name} in the {", ".join(cars)} ({y0}-{y1}): {len(iss)} known issues with sources, owner complaints and recalls by generation, and specs. Every number sourced.')
-    page(url, title, desc, body, ld=[faq_ld([(q, '', a) for q, a in faq])])
+    _aie = globals().get('aie_vis')   # 11-13 AI engine illustration when there is one (ai_engine_photos.py)
+    page(url, title, desc, body, ld=[faq_ld([(q, '', a) for q, a in faq])] + (aie_ld(url) if _aie else []), vis=_aie(url, html.unescape(name), html.unescape(what)) if _aie else '')
     ENG_MORE_URLS.append(url)
     ENG_EXTRA_CARDS.append(dict(url=url, name=name, code=re.sub(r'^\w+ ', '', name).split(' ')[0], lay=what, yrs=f'{y0}–{str(y1)[-2:]}', mk=make, used=[c.replace(make + ' ', '').replace('Volkswagen ', '') for c in cars]))
     return url
