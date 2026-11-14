@@ -63838,7 +63838,26 @@
      "views": 191831
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 40,
+       "lo": 20.0,
+       "hi": 50.0,
+       "n": 5,
+       "videos": 4,
+       "id": "qrFFBe7JKxA",
+       "t": 258,
+       "title": "Lifted 2010 Nissan Titan SE"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -63922,6 +63941,117 @@
      "title": "2024 Nissan Titan Most Reliable NEW Half-Ton Truck? 0% for 60 months! Why Not?",
      "channel": "The Car Guy Online",
      "views": 85796
+    }
+   ],
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 200,
+       "lo": 80.0,
+       "hi": 300.0,
+       "n": 6,
+       "videos": 5,
+       "id": "SZHhGl8RaWc",
+       "t": 1798,
+       "title": "2019 Nissan Titan Front Lower Ball Joint Replacement - Shop Story Time Included"
+      }
+     ]
+    ]
+   }
+  }
+ ],
+ "hyundai-tiburon": [
+  {
+   "years": [
+    2000,
+    2001
+   ],
+   "gen": "1997–2001 Hyundai Tiburon",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 666161,
+   "topics": [
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 8400,
+     "n": 2,
+     "best": {
+      "id": "Zq-7exo7MOw",
+      "title": "DIY HOW TO REPLACE VALVE COVER GASKET 2001 HYUNDAI TIBURON",
+      "channel": "SOCAL GATES",
+      "views": 6841
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 8073,
+     "n": 2,
+     "best": {
+      "id": "c3nUTAx27Zs",
+      "title": "1997 HYUNDAI TIBURON No Crank, Engine Won't Start...Clicks....Fixed...",
+      "channel": "Peter L",
+      "views": 4123
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 3992,
+     "n": 1,
+     "best": {
+      "id": "sPAyKGlVxCs",
+      "title": "2001-2006 Hyundai Tiburon GT Purchase Inspection and Spark Plug Replacement!",
+      "channel": "GridEngine",
+      "views": 3992
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 2024,
+     "n": 1,
+     "best": {
+      "id": "b4jNbTyl0VQ",
+      "title": "2001 Hyundai Tiburon Vacuum Leak",
+      "channel": "flounders",
+      "views": 2024
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 1176,
+     "n": 1,
+     "best": {
+      "id": "dwC-_8VT9Nc",
+      "title": "How To Replace Hyundai Tiburon Key Fob Battery 1997 1998 1999 2000",
+      "channel": "Key Fob King",
+      "views": 1176
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "LF_3OY4fiw4",
+     "title": "2001 tiburon idle problems",
+     "channel": "xkatie Kronicx",
+     "views": 2155
+    },
+    {
+     "id": "PyZitlLkuTE",
+     "title": "1997 Hyundai Tiburon FX | Retro Review",
+     "channel": "MotorWeek",
+     "views": 53556
+    },
+    {
+     "id": "_bthHjZcHN8",
+     "title": "2001 Hyundai Tiburon RD2 Walkaround",
+     "channel": "LMW Autosport",
+     "views": 27429
     }
    ],
    "costs": null
@@ -64396,7 +64526,26 @@
      "views": 414732
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 316,
+       "lo": 233.0,
+       "hi": 400.0,
+       "n": 4,
+       "videos": 3,
+       "id": "7TD15ULeAOg",
+       "t": 60,
+       "title": "2014 Hyundai Azera Limited Front Turn Signal Bulb Replacement Part 1"
+      }
+     ]
+    ]
+   }
   }
  ],
  "mercedes-benz-sprinter": [
