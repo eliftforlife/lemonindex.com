@@ -67041,7 +67041,52 @@
      "views": 66939
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 340,
+       "lo": 49.0,
+       "hi": 1500.0,
+       "n": 12,
+       "videos": 7,
+       "id": "XaWlGtANpDc",
+       "t": 467,
+       "title": "NOBODY Wanted This Broken Land Rover LR4... So I BOUGHT It For $1,000"
+      }
+     ],
+     [
+      "Timing chain",
+      {
+       "median": 5250,
+       "lo": 4500.0,
+       "hi": 6000.0,
+       "n": 4,
+       "videos": 2,
+       "id": "MyBWYzL1KUA",
+       "t": 303,
+       "title": "Is It REALLY That Bad? Land Rover LR4 Ultimate Buyers Guide!"
+      }
+     ],
+     [
+      "Transmission",
+      {
+       "median": 700,
+       "lo": 500.0,
+       "hi": 700.0,
+       "n": 3,
+       "videos": 2,
+       "id": "WSWlxYhojak",
+       "t": 1025,
+       "title": "What I Look For When Buying A Land Rover LR4 5.0 V8"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
