@@ -190,7 +190,7 @@ if VEX == 'hooks':
         sec.append('<h2>Owner complaints by model year</h2>' + _v_years_chart(e)
                    + '<p class="note">Counts of complaints filed so far. Older cars have had longer to collect them, and popular cars draw more because more were sold: '
                      'no one reports sales by engine, so there&#39;s no per-car rate. Compare the shares below instead.</p>')
-        sec.append(f'<section class="yc" id="cars"><h2>By car</h2>{_v_cars_table(e)}<p class="yc-cap">&ldquo;Name the engine&rdquo; = the share of that car&#39;s VIN-matched complaints that list the engine as a problem area.</p></section>')
+        sec.append(f'<section class="yc" id="bycar"><h2>By car</h2>{_v_cars_table(e)}<p class="yc-cap">&ldquo;Name the engine&rdquo; = the share of that car&#39;s VIN-matched complaints that list the engine as a problem area.</p></section>')
         sec.append(f'<section class="yc" id="problems"><h2>What owners complain about</h2>' + _v_bars([(p, k) for p, k, _ in d['comps']]) + '<p class="yc-cap">Share of this engine&#39;s complaints that name each area (one complaint can name several).</p></section>')
         sec.append(_v_words(e))
         if d.get('miles'): sec.append(f'<section class="yc" id="mileage"><h2>When problems show up</h2><p>{_v_miles(d["miles"])}</p></section>')
