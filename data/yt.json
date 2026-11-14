@@ -63965,6 +63965,140 @@
    }
   }
  ],
+ "ford-transit": [
+  {
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2015–2025 Ford Transit",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 35814356,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 710052,
+     "n": 6,
+     "best": {
+      "id": "gmC6uX9FBz4",
+      "title": "Ford Transit | Radio removal 2015-2019",
+      "channel": "Enfig",
+      "views": 307812
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 669224,
+     "n": 5,
+     "best": {
+      "id": "InGy3Mfl_y4",
+      "title": "6 must-know maintenance tips for the Ford Transit 2013 to 2018",
+      "channel": "Haynes Manuals",
+      "views": 294423
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 450615,
+     "n": 5,
+     "best": {
+      "id": "5yg9DoYH_9w",
+      "title": "2016 Ford Transit - How to Replace Rear Brake Pads - DIY",
+      "channel": "Dan the Fix it Man",
+      "views": 133345
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 377547,
+     "n": 1,
+     "best": {
+      "id": "V2Rv3Hpfysw",
+      "title": "Urgent Timing Belt (Wet Belt) Replacement | 2019 Ford Transit at 66K Miles | The Car Edition",
+      "channel": "The Car Edition Ltd",
+      "views": 377547
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 336178,
+     "n": 3,
+     "best": {
+      "id": "h2H2PeBMCbo",
+      "title": "2015-2019 FORD TRANSIT VAN OIL CHANGE REQUIRED SERVICE LIGHT RESET - DIY",
+      "channel": "Dan the Fix it Man",
+      "views": 167285
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 276800,
+     "n": 4,
+     "best": {
+      "id": "5gJlPbXGYGw",
+      "title": "How to Change the Transmission Fluid for 2015/2021 Ford Transit 250 350",
+      "channel": "Less Expensive fix",
+      "views": 78658
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 159055,
+     "n": 2,
+     "best": {
+      "id": "pP8yQ0Ov6MI",
+      "title": "2015 Ford Transit Mirror Replacement",
+      "channel": "Andrew Derr",
+      "views": 115907
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 134294,
+     "n": 2,
+     "best": {
+      "id": "swpfU356yAM",
+      "title": "[2/3] Ford Transit Not Starting - Fuel Pump Control Module Fix! 2015 Ford Transit Van 350 3.7L- Rd.↓",
+      "channel": "Our Family - Life Solutions",
+      "views": 82004
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "dZIaZs_pG4A",
+     "title": "2015-2025 Ford Transit review, 5 major problems, Ford will not. Ford Transit 15 passenger review",
+     "channel": "repairvehicle",
+     "views": 437761
+    },
+    {
+     "id": "Z841WxIgJ7A",
+     "title": "Top 5 Problems Ford Transit 250 Van 2015-2025 5th Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 50444
+    },
+    {
+     "id": "kF1ft5EjtTc",
+     "title": "2016 Ford Transit T-150 Explorer Conversion Van Walkaround",
+     "channel": "Peoria Ford Commercial Fleet",
+     "views": 1123096
+    }
+   ],
+   "costs": null
+  }
+ ],
  "hyundai-tiburon": [
   {
    "years": [
