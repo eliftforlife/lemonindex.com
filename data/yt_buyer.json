@@ -28048,5 +28048,100 @@
 }
 ]
 }
+],
+"hyundai-tiburon": [
+{
+"sid": "hyundai-tiburon-g1",
+"y0": 1997,
+"y1": 2001,
+"label": "1997–2001",
+"videos": 197,
+"praise": [
+[
+"Reliability",
+5
+],
+[
+"Fun to drive",
+4
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+4
+],
+[
+"No start / key / anti-theft",
+3
+]
+],
+"top": [
+{
+"id": "PyZitlLkuTE",
+"title": "1997 Hyundai Tiburon FX | Retro Review",
+"views": 53556,
+"ch": "MotorWeek"
+},
+{
+"id": "68cL2gOazNc",
+"title": "01 TIBURON STILL GOOD 20 YEARS LATER? 2001 Hyundai Tiburon Review, The Best Cheap Sports Car Review",
+"views": 26622,
+"ch": "Grumpy Monkey Garage"
+},
+{
+"id": "3wCNogWbqvk",
+"title": "1997 Hyundai Tiburon Review - A Forgotten Sporty Coupe!",
+"views": 17234,
+"ch": "Shooting Cars"
+}
+]
+},
+{
+"sid": "hyundai-tiburon-g2",
+"y0": 2003,
+"y1": 2008,
+"label": "2003–2008",
+"videos": 197,
+"praise": [
+[
+"Reliability",
+5
+],
+[
+"Looks",
+5
+],
+[
+"Power",
+4
+],
+[
+"Fun to drive",
+3
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "RIWhH6AzM28",
+"title": "2008 Hyundai Tiburon VS 2010 Genesis Coupe In Depth Review and Comparison, Start Up, and Exhausts",
+"views": 435129,
+"ch": "Saabkyle04"
+},
+{
+"id": "CQCHgthkn2o",
+"title": "Top Gear -- Hyundai Coupe (Tiburon) 2003 review",
+"views": 139216,
+"ch": "Clarksonian"
+},
+{
+"id": "At4hnW2jFWE",
+"title": "2004 Hyundai Tiburon GT: Regular Car Reviews",
+"views": 133014,
+"ch": "Regular Car Reviews"
+}
+]
+}
 ]
 }
