@@ -67353,7 +67353,26 @@
      "views": 682365
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Brakes",
+      {
+       "median": 23500,
+       "lo": 20000.0,
+       "hi": 27000.0,
+       "n": 2,
+       "videos": 2,
+       "id": "Y-2hPnSpB5A",
+       "t": 93,
+       "title": "The 2021 Nissan Kicks Is Budget Transportation Done Right. Just Not Fast."
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -67431,7 +67450,39 @@
      "views": 43684
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Tires",
+      {
+       "median": 180,
+       "lo": 180.0,
+       "hi": 180.0,
+       "n": 4,
+       "videos": 4,
+       "id": "ztWmYr7wCfk",
+       "t": 739,
+       "title": "Should You Buy a 2025 Nissan Kicks? Thorough Review By A Mechanic"
+      }
+     ],
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 538,
+       "lo": 425.0,
+       "hi": 650.0,
+       "n": 2,
+       "videos": 2,
+       "id": "uLxmAcinuCM",
+       "t": 211,
+       "title": "My Week with the 2025 Nissan Kicks AWD"
+      }
+     ]
+    ]
+   }
   }
  ],
  "honda-insight": [
@@ -68105,7 +68156,26 @@
      "views": 31406
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 90,
+       "lo": 60.0,
+       "hi": 120.0,
+       "n": 4,
+       "videos": 3,
+       "id": "U2_67xPkyW0",
+       "t": 453,
+       "title": "2002 Volvo S40 Fixing fan blower motor resistor So EASY!"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -68233,7 +68303,26 @@
      "views": 40336
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 82,
+       "lo": 30.0,
+       "hi": 120.0,
+       "n": 3,
+       "videos": 3,
+       "id": "h14VubhorvI",
+       "t": 349,
+       "title": "Volvo s40 2004.5 2005 2006 2.4i dtc code p0190 fuel rail pressure sensor replacement"
+      }
+     ]
+    ]
+   }
   }
  ],
  "infiniti-q50": [
