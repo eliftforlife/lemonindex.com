@@ -65190,7 +65190,26 @@
      "views": 294607
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 300,
+       "lo": 68.0,
+       "hi": 1000.0,
+       "n": 7,
+       "videos": 3,
+       "id": "3vb33Ach7kA",
+       "t": 93,
+       "title": "🤞 🇸🇪 Used Volvo S60 XC60 XC70 Reliability | Most Common Problems Faults and Issues | 2008 - 2017 |"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
