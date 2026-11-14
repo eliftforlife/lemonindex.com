@@ -27776,5 +27776,104 @@
 }
 ]
 }
+],
+"nissan-titan": [
+{
+"sid": "nissan-titan-g1",
+"y0": 2004,
+"y1": 2015,
+"label": "2004–2015",
+"videos": 193,
+"praise": [
+[
+"Reliability",
+7
+],
+[
+"Looks",
+6
+],
+[
+"Power",
+5
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+5
+],
+[
+"Battery / alternator / starter",
+5
+]
+],
+"top": [
+{
+"id": "QPM12QYtMd8",
+"title": "Top 5 Problems Nissan Titan Truck 1st Generation 2004-2015",
+"views": 579076,
+"ch": "1A Auto: Repair Tips & Secrets Only Mechanics Know"
+},
+{
+"id": "RF4jiWhHcxU",
+"title": "2014 Nissan Titan PRO 4X Off-Road Drive and Review",
+"views": 227330,
+"ch": "The Fast Lane Truck"
+},
+{
+"id": "2VFdZeEyGnA",
+"title": "2004-2015 Nissan Titan Buyer's Guide (A60 Common Problems, Specs and Info)",
+"views": 201325,
+"ch": "Useful Vids"
+}
+]
+},
+{
+"sid": "nissan-titan-g2",
+"y0": 2016,
+"y1": 2024,
+"label": "2016–2024",
+"videos": 196,
+"praise": [
+[
+"Reliability",
+24
+],
+[
+"Power",
+20
+],
+[
+"Looks",
+16
+],
+[
+"Fun to drive",
+11
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "LHsu3W-iNJk",
+"title": "2016 Nissan Titan XD Diesel takes on the Extreme Ike Gauntlet Towing Review",
+"views": 583529,
+"ch": "The Fast Lane Truck"
+},
+{
+"id": "0Ef12rLRJDw",
+"title": "2016 Nissan Titan XD Cummins Turbo Diesel TECH REVIEW – WORLD PREMIERE",
+"views": 543452,
+"ch": "MotoManTV"
+},
+{
+"id": "zVDoo5fiLCg",
+"title": "2016 Nissan Titan XD Gas V8 vs Diesel V8 vs Super Ike Gauntlet Review: Battle of the Titans",
+"views": 501774,
+"ch": "The Fast Lane Truck"
+}
+]
+}
 ]
 }

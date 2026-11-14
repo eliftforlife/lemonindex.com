@@ -63706,6 +63706,356 @@
    }
   }
  ],
+ "nissan-titan": [
+  {
+   "years": [
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015
+   ],
+   "gen": "2004–2015 Nissan Titan",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 11824919,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 830800,
+     "n": 8,
+     "best": {
+      "id": "H0CVBj1pM58",
+      "title": "Nissan Titan Starter Replacement: 2003-2015",
+      "channel": "How to Automotive",
+      "views": 283402
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 550708,
+     "n": 9,
+     "best": {
+      "id": "9Uxmeek9Hgw",
+      "title": "Oct 2, 2015 2010 Nissan titan heater problem",
+      "channel": "chris",
+      "views": 167348
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 343352,
+     "n": 7,
+     "best": {
+      "id": "ChhUMwy5JD0",
+      "title": "How to Replace Front Wheel Bearing & Hub Assembly 2004-2015 Nissan Titan",
+      "channel": "TRQ",
+      "views": 100737
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 338280,
+     "n": 3,
+     "best": {
+      "id": "kbHVN9-HksI",
+      "title": "How to Replace Crankshaft Position Sensor 2004-2015 Nissan Titan",
+      "channel": "TRQ",
+      "views": 166842
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 231416,
+     "n": 4,
+     "best": {
+      "id": "tE-drMenoh4",
+      "title": "Nissan Titan Rear Differential Fluild Service 2004+ (Tips and Tricks)",
+      "channel": "Aaron Hines",
+      "views": 112097
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 196900,
+     "n": 3,
+     "best": {
+      "id": "9yUBLQTAcHM",
+      "title": "How to Replace Spark Plugs on a 2004/2005 Nissan Titan",
+      "channel": "How to Automotive",
+      "views": 118866
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 194079,
+     "n": 3,
+     "best": {
+      "id": "iz4TfygNs94",
+      "title": "How to Replace Fuel Pump 2004-2015 Nissan Titan",
+      "channel": "TRQ",
+      "views": 98538
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 181094,
+     "n": 3,
+     "best": {
+      "id": "g9b5gClNtZI",
+      "title": "How to Replace Radiator 2004-2015 Nissan Titan",
+      "channel": "TRQ",
+      "views": 96502
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "QPM12QYtMd8",
+     "title": "Top 5 Problems Nissan Titan Truck 1st Generation 2004-2015",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 579076
+    },
+    {
+     "id": "2VFdZeEyGnA",
+     "title": "2004-2015 Nissan Titan Buyer's Guide (A60 Common Problems, Specs and Info)",
+     "channel": "Useful Vids",
+     "views": 201325
+    },
+    {
+     "id": "-7gSyYnZ1uo",
+     "title": "👉 BE CAREFUL BEFORE BUYING a Nissan TITAN 2004 to 2015 (COMMON PROBLEMS)",
+     "channel": "Fer Garage",
+     "views": 191831
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+   ],
+   "gen": "2016–2024 Nissan Titan",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 19862953,
+   "topics": [
+    {
+     "name": "Steering & suspension",
+     "views": 122523,
+     "n": 1,
+     "best": {
+      "id": "SZHhGl8RaWc",
+      "title": "2019 Nissan Titan Front Lower Ball Joint Replacement - Shop Story Time Included",
+      "channel": "South Main Auto LLC",
+      "views": 122523
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 121903,
+     "n": 2,
+     "best": {
+      "id": "T5b7oCNIvK0",
+      "title": "How to refill transmission on 2017 Nissan Titan (Gas)",
+      "channel": "BearLeAMechanic",
+      "views": 62861
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 90376,
+     "n": 1,
+     "best": {
+      "id": "vXMfHGhIs7w",
+      "title": "2016 & UP NISSAN TITAN / TITAN DIESEL CABIN AIR FILTER REPLACEMENT",
+      "channel": "John the Mechanic",
+      "views": 90376
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 33796,
+     "n": 1,
+     "best": {
+      "id": "ghoiWMTUU8M",
+      "title": "2017 - 2019 Nissan Titan - How To Reset Oil Life After Oil Change DIY",
+      "channel": "PYR Automotive ",
+      "views": 33796
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "hXl80oxbOoY",
+     "title": "2024 Nissan Titan Pro4X - 6 Month Owners Review - Should You Buy the Final Titan?",
+     "channel": "Videozar",
+     "views": 158768
+    },
+    {
+     "id": "wmgjjm8oEb0",
+     "title": "2023 Nissan Titan SV: The Only Reliable Pickup Truck Left On The Market",
+     "channel": "Ben Hardy",
+     "views": 86274
+    },
+    {
+     "id": "2O_D3RUPI0g",
+     "title": "2024 Nissan Titan Most Reliable NEW Half-Ton Truck? 0% for 60 months! Why Not?",
+     "channel": "The Car Guy Online",
+     "views": 85796
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "hyundai-azera": [
+  {
+   "years": [
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011
+   ],
+   "gen": "2006–2011 Hyundai Azera",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 5488576,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 202036,
+     "n": 8,
+     "best": {
+      "id": "sY2SmBvy3ls",
+      "title": "Hyundai Sonata / Azera Ignition Switch REPLACEMENT 2006-2010 starter problem key switch faulty",
+      "channel": "NoNonsenseKnowHow",
+      "views": 156116
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 60535,
+     "n": 2,
+     "best": {
+      "id": "FiLlhJqSHvA",
+      "title": "2006 2007 2008 Hyundai Azera Key Not Working, Ignition Lock Cylinder Repair / Replace",
+      "channel": "AllHandsMechanic",
+      "views": 50712
+     }
+    },
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 41508,
+     "n": 2,
+     "best": {
+      "id": "23i5YvMUmIQ",
+      "title": "Oil Cooler Leak & Knock Sensor Location - 2007 Hyundai Azera 3.8",
+      "channel": "JamesonDIY",
+      "views": 38524
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 28252,
+     "n": 2,
+     "best": {
+      "id": "IGenVFs9Vao",
+      "title": "Basic oil change on a 2007 Hyundai Azera 3.8L V6",
+      "channel": "Project [HOONDAI]",
+      "views": 15199
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 27168,
+     "n": 1,
+     "best": {
+      "id": "GQjF8z-uG54",
+      "title": "Azera 2011 - Problem with CVVT or chain tensioners?",
+      "channel": "GARAGEM DO AZERA",
+      "views": 27168
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 15841,
+     "n": 2,
+     "best": {
+      "id": "BvMl0msYVZU",
+      "title": "Hyundai Azera 2008 3.8. How to Locate the coolant temperature sensor on Hyundai Azera 2008.",
+      "channel": "Cesar Santacruz",
+      "views": 11250
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 15697,
+     "n": 1,
+     "best": {
+      "id": "TjGs1WscS-o",
+      "title": "DTC P0890 TCM POWER INPUT LOW. Hyundai azera 2010,transmission stuck in 3rd,no shifting,shift shock",
+      "channel": "Paulo Jazon Bandal",
+      "views": 15697
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 13825,
+     "n": 1,
+     "best": {
+      "id": "QQ5R1JI-whg",
+      "title": "2006 Hyundai Azera V6 3.8 Power Steering Pump Replacement #cgfix #powersteering #hyundai #mobilemech",
+      "channel": "CGFIX",
+      "views": 13825
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "5vB2P4PDGII",
+     "title": "Chronic Problems and Negative Points of the 2011 Hyundai Azera.",
+     "channel": "Motoresdosul",
+     "views": 15295
+    },
+    {
+     "id": "mxRAxl7SHfw",
+     "title": "2010 Azera: Problems for the V6 - Hydrolock",
+     "channel": "Denis Injetcar",
+     "views": 5010
+    },
+    {
+     "id": "sv8irudmtnc",
+     "title": "Hyundai Azera G1 (2008-2011): Buying guide - versions, options and chronic problems.",
+     "channel": "Entusiastas Virtuais",
+     "views": 540
+    }
+   ],
+   "costs": null
+  }
+ ],
  "mercedes-benz-sprinter": [
   {
    "years": [
