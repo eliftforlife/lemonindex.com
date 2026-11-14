@@ -70,5 +70,429 @@
   "ai": true,
   "title": "Honda D16Z6 1.6 SOHC VTEC engine, 1.6 L inline-4 (illustration)",
   "bytes": 136448
+ },
+ "chrysler-36-pentastar": {
+  "src": "/assets/engines/chrysler-36-pentastar-3-6-l-v6-engine.webp",
+  "w": 1200,
+  "h": 1124,
+  "ai": true,
+  "title": "Chrysler 3.6 Pentastar V6 engine, 3.6 L V6 (illustration)",
+  "bytes": 148266
+ },
+ "chrysler-57-hemi": {
+  "src": "/assets/engines/chrysler-57-hemi-5-7-l-v8-engine.webp",
+  "w": 1200,
+  "h": 1071,
+  "ai": true,
+  "title": "Chrysler 5.7 HEMI V8 engine, 5.7 L V8 (illustration)",
+  "bytes": 149640
+ },
+ "cummins-59": {
+  "src": "/assets/engines/cummins-59-5-9-l-inline-6-turbo-diesel-engine.webp",
+  "w": 1200,
+  "h": 1033,
+  "ai": true,
+  "title": "Cummins 5.9 (Ram) engine, 5.9 L inline-6 turbo diesel (illustration)",
+  "bytes": 146116
+ },
+ "cummins-67": {
+  "src": "/assets/engines/cummins-67-6-7-l-inline-6-turbo-diesel-engine.webp",
+  "w": 1200,
+  "h": 1060,
+  "ai": true,
+  "title": "Cummins 6.7 (Ram) engine, 6.7 L inline-6 turbo diesel (illustration)",
+  "bytes": 141984
+ },
+ "duramax-l5p": {
+  "src": "/assets/engines/duramax-l5p-6-6-l-v8-turbo-diesel-engine.webp",
+  "w": 1200,
+  "h": 991,
+  "ai": true,
+  "title": "Duramax L5P engine, 6.6 L V8 turbo diesel (illustration)",
+  "bytes": 138024
+ },
+ "duramax-lb7": {
+  "src": "/assets/engines/duramax-lb7-6-6-l-v8-turbo-diesel-engine.webp",
+  "w": 1200,
+  "h": 1075,
+  "ai": true,
+  "title": "Duramax LB7 engine, 6.6 L V8 turbo diesel (illustration)",
+  "bytes": 126324
+ },
+ "duramax-lbz": {
+  "src": "/assets/engines/duramax-lbz-6-6-l-v8-turbo-diesel-engine.webp",
+  "w": 1200,
+  "h": 1075,
+  "ai": true,
+  "title": "Duramax LBZ engine, 6.6 L V8 turbo diesel (illustration)",
+  "bytes": 146452
+ },
+ "duramax-lly": {
+  "src": "/assets/engines/duramax-lly-6-6-l-v8-turbo-diesel-engine.webp",
+  "w": 1200,
+  "h": 1063,
+  "ai": true,
+  "title": "Duramax LLY engine, 6.6 L V8 turbo diesel (illustration)",
+  "bytes": 146506
+ },
+ "duramax-lml": {
+  "src": "/assets/engines/duramax-lml-6-6-l-v8-turbo-diesel-engine.webp",
+  "w": 1200,
+  "h": 1010,
+  "ai": true,
+  "title": "Duramax LML engine, 6.6 L V8 turbo diesel (illustration)",
+  "bytes": 141756
+ },
+ "duramax-lmm": {
+  "src": "/assets/engines/duramax-lmm-6-6-l-v8-turbo-diesel-engine.webp",
+  "w": 1200,
+  "h": 1019,
+  "ai": true,
+  "title": "Duramax LMM engine, 6.6 L V8 turbo diesel (illustration)",
+  "bytes": 127178
+ },
+ "ford-35-cyclone": {
+  "src": "/assets/engines/ford-35-cyclone-3-5-l-v6-non-turbo-engine.webp",
+  "w": 1200,
+  "h": 1151,
+  "ai": true,
+  "title": "Ford 3.5 Duratec / Cyclone V6 engine, 3.5 L V6, non-turbo (illustration)",
+  "bytes": 144024
+ },
+ "ford-54-triton": {
+  "src": "/assets/engines/ford-54-triton-5-4-l-v8-3-valves-per-cylinder-engine.webp",
+  "w": 1200,
+  "h": 1069,
+  "ai": true,
+  "title": "Ford 5.4 Triton V8 (3-valve) engine, 5.4 L V8, 3 valves per cylinder (illustration)",
+  "bytes": 129442
+ },
+ "ford-ecoboost-15": {
+  "src": "/assets/engines/ford-ecoboost-15-1-5-l-inline-4-turbo-engine.webp",
+  "w": 1200,
+  "h": 1254,
+  "ai": true,
+  "title": "Ford 1.5 EcoBoost engine, 1.5 L inline-4 turbo (illustration)",
+  "bytes": 149314
+ },
+ "ford-ecoboost-20": {
+  "src": "/assets/engines/ford-ecoboost-20-2-0-l-inline-4-turbo-engine.webp",
+  "w": 1200,
+  "h": 1244,
+  "ai": true,
+  "title": "Ford 2.0 EcoBoost engine, 2.0 L inline-4 turbo (illustration)",
+  "bytes": 134214
+ },
+ "ford-ecoboost-23": {
+  "src": "/assets/engines/ford-ecoboost-23-2-3-l-inline-4-turbo-engine.webp",
+  "w": 1200,
+  "h": 1201,
+  "ai": true,
+  "title": "Ford 2.3 EcoBoost engine, 2.3 L inline-4 turbo (illustration)",
+  "bytes": 146182
+ },
+ "ford-ecoboost-27": {
+  "src": "/assets/engines/ford-ecoboost-27-2-7-l-v6-twin-turbo-engine.webp",
+  "w": 1200,
+  "h": 1014,
+  "ai": true,
+  "title": "Ford 2.7 EcoBoost engine, 2.7 L V6 twin-turbo (illustration)",
+  "bytes": 141244
+ },
+ "ford-powerstroke-60": {
+  "src": "/assets/engines/ford-powerstroke-60-6-0-l-v8-turbo-diesel-engine.webp",
+  "w": 1200,
+  "h": 995,
+  "ai": true,
+  "title": "Ford 6.0 Power Stroke engine, 6.0 L V8 turbo diesel (illustration)",
+  "bytes": 126824
+ },
+ "ford-powerstroke-64": {
+  "src": "/assets/engines/ford-powerstroke-64-6-4-l-v8-twin-turbo-diesel-engine.webp",
+  "w": 1200,
+  "h": 838,
+  "ai": true,
+  "title": "Ford 6.4 Power Stroke engine, 6.4 L V8 twin-turbo diesel (illustration)",
+  "bytes": 134990
+ },
+ "ford-powerstroke-67": {
+  "src": "/assets/engines/ford-powerstroke-67-6-7-l-v8-turbo-diesel-engine.webp",
+  "w": 1200,
+  "h": 1050,
+  "ai": true,
+  "title": "Ford 6.7 Power Stroke engine, 6.7 L V8 turbo diesel (illustration)",
+  "bytes": 146126
+ },
+ "ford-powerstroke-73": {
+  "src": "/assets/engines/ford-powerstroke-73-7-3-l-v8-turbo-diesel-engine.webp",
+  "w": 1200,
+  "h": 1119,
+  "ai": true,
+  "title": "Ford 7.3 Power Stroke engine, 7.3 L V8 turbo diesel (illustration)",
+  "bytes": 130856
+ },
+ "gm-14-turbo": {
+  "src": "/assets/engines/gm-14-turbo-1-4-l-inline-4-turbo-engine.webp",
+  "w": 1200,
+  "h": 1174,
+  "ai": true,
+  "title": "GM 1.4 Turbo (LUJ / LUV / LE2) engine, 1.4 L inline-4 turbo (illustration)",
+  "bytes": 131500
+ },
+ "gm-15-turbo": {
+  "src": "/assets/engines/gm-15-turbo-1-5-l-inline-4-turbo-engine.webp",
+  "w": 1200,
+  "h": 1109,
+  "ai": true,
+  "title": "GM 1.5 Turbo (LFV / LYX) engine, 1.5 L inline-4 turbo (illustration)",
+  "bytes": 133988
+ },
+ "gm-24-ecotec": {
+  "src": "/assets/engines/gm-24-ecotec-2-4-l-inline-4-direct-injection-engine.webp",
+  "w": 1200,
+  "h": 1219,
+  "ai": true,
+  "title": "GM 2.4 Ecotec (LAF / LEA) engine, 2.4 L inline-4, direct injection (illustration)",
+  "bytes": 131334
+ },
+ "gm-27-turbo": {
+  "src": "/assets/engines/gm-27-turbo-2-7-l-inline-4-turbo-engine.webp",
+  "w": 1200,
+  "h": 1010,
+  "ai": true,
+  "title": "GM 2.7 Turbo (L3B) engine, 2.7 L inline-4 turbo (illustration)",
+  "bytes": 136214
+ },
+ "gm-36-v6": {
+  "src": "/assets/engines/gm-36-v6-3-6-l-v6-direct-injection-engine.webp",
+  "w": 1200,
+  "h": 1182,
+  "ai": true,
+  "title": "GM 3.6 V6 (LLT / LFX / LGX) engine, 3.6 L V6, direct injection (illustration)",
+  "bytes": 140338
+ },
+ "gm-48-vortec": {
+  "src": "/assets/engines/gm-48-vortec-4-8-l-v8-engine.webp",
+  "w": 1200,
+  "h": 1161,
+  "ai": true,
+  "title": "GM 4.8 Vortec V8 engine, 4.8 L V8 (illustration)",
+  "bytes": 140222
+ },
+ "gm-53-gen4": {
+  "src": "/assets/engines/gm-53-gen4-5-3-l-v8-engine.webp",
+  "w": 1200,
+  "h": 1059,
+  "ai": true,
+  "title": "GM 5.3 V8 (Vortec, 2007–13) engine, 5.3 L V8 (illustration)",
+  "bytes": 130014
+ },
+ "gm-53-gen5": {
+  "src": "/assets/engines/gm-53-gen5-5-3-l-v8-direct-injection-engine.webp",
+  "w": 1200,
+  "h": 1121,
+  "ai": true,
+  "title": "GM 5.3 V8 (L83 / L84) engine, 5.3 L V8, direct injection (illustration)",
+  "bytes": 131322
+ },
+ "gm-62-gen5": {
+  "src": "/assets/engines/gm-62-gen5-6-2-l-v8-direct-injection-engine.webp",
+  "w": 1200,
+  "h": 1130,
+  "ai": true,
+  "title": "GM 6.2 V8 (L86 / L87) engine, 6.2 L V8, direct injection (illustration)",
+  "bytes": 119558
+ },
+ "gm-lt5": {
+  "src": "/assets/engines/gm-lt5-6-2-l-90-degree-v8-pushrod-supercharged-engine.webp",
+  "w": 1200,
+  "h": 1211,
+  "ai": true,
+  "title": "GM LT5 engine, 6.2 L 90 degree V8, pushrod supercharged (illustration)",
+  "bytes": 128322
+ },
+ "honda-15t": {
+  "src": "/assets/engines/honda-15t-1-5-l-inline-4-turbo-engine.webp",
+  "w": 1200,
+  "h": 1119,
+  "ai": true,
+  "title": "Honda 1.5 Turbo (L15B7) engine, 1.5 L inline-4 turbo (illustration)",
+  "bytes": 127702
+ },
+ "honda-j35": {
+  "src": "/assets/engines/honda-j35-3-5-l-v6-vtec-engine.webp",
+  "w": 1200,
+  "h": 1088,
+  "ai": true,
+  "title": "Honda J35 3.5 V6 engine, 3.5 L V6, VTEC (illustration)",
+  "bytes": 145372
+ },
+ "honda-k24": {
+  "src": "/assets/engines/honda-k24-2-4-l-inline-4-engine.webp",
+  "w": 1200,
+  "h": 1280,
+  "ai": true,
+  "title": "Honda K24 2.4 engine, 2.4 L inline-4 (illustration)",
+  "bytes": 132076
+ },
+ "hyundai-lambda2-33": {
+  "src": "/assets/engines/hyundai-lambda2-33-3-3-l-v6-engine.webp",
+  "w": 1200,
+  "h": 1133,
+  "ai": true,
+  "title": "Hyundai / Kia 3.3 V6 (Lambda II) engine, 3.3 L V6 (illustration)",
+  "bytes": 136572
+ },
+ "hyundai-lambda2-38": {
+  "src": "/assets/engines/hyundai-lambda2-38-3-8-l-v6-engine.webp",
+  "w": 1200,
+  "h": 1138,
+  "ai": true,
+  "title": "Hyundai / Kia 3.8 V6 (Lambda II) engine, 3.8 L V6 (illustration)",
+  "bytes": 137914
+ },
+ "hyundai-theta2-24": {
+  "src": "/assets/engines/hyundai-theta2-24-2-4-l-inline-4-engine.webp",
+  "w": 1200,
+  "h": 1334,
+  "ai": true,
+  "title": "Hyundai / Kia 2.4 Theta II engine, 2.4 L inline-4 (illustration)",
+  "bytes": 139046
+ },
+ "jeep-38-v6": {
+  "src": "/assets/engines/jeep-38-v6-3-8-l-v6-pushrod-engine.webp",
+  "w": 1200,
+  "h": 1068,
+  "ai": true,
+  "title": "Chrysler 3.8 V6 (EGH) engine, 3.8 L V6, pushrod (illustration)",
+  "bytes": 131980
+ },
+ "maserati-nettuno": {
+  "src": "/assets/engines/maserati-nettuno-3-0-l-90-degree-v6-twin-turbo-engine.webp",
+  "w": 1200,
+  "h": 1011,
+  "ai": true,
+  "title": "Maserati Nettuno 3.0 twin-turbo V6 engine, 3.0 L 90 degree V6 twin-turbo (illustration)",
+  "bytes": 137588
+ },
+ "mazda-skyactiv-25": {
+  "src": "/assets/engines/mazda-skyactiv-25-2-5-l-inline-4-engine.webp",
+  "w": 1200,
+  "h": 1197,
+  "ai": true,
+  "title": "Mazda Skyactiv-G 2.5 engine, 2.5 L inline-4 (illustration)",
+  "bytes": 132986
+ },
+ "nissan-qr25": {
+  "src": "/assets/engines/nissan-qr25-2-5-l-inline-4-engine.webp",
+  "w": 1200,
+  "h": 1273,
+  "ai": true,
+  "title": "Nissan QR25DE 2.5 engine, 2.5 L inline-4 (illustration)",
+  "bytes": 136664
+ },
+ "nissan-vq35": {
+  "src": "/assets/engines/nissan-vq35-3-5-l-v6-engine.webp",
+  "w": 1200,
+  "h": 1113,
+  "ai": true,
+  "title": "Nissan VQ35 3.5 V6 engine, 3.5 L V6 (illustration)",
+  "bytes": 134764
+ },
+ "porsche-ma1-gt3": {
+  "src": "/assets/engines/porsche-ma1-gt3-3-8-l-and-4-0-l-flat-6-naturally-aspirated-engine.webp",
+  "w": 1200,
+  "h": 657,
+  "ai": true,
+  "title": "Porsche GT3 flat-6 (MA1) engine, 3.8 L and 4.0 L flat-6 naturally aspirated (illustration)",
+  "bytes": 116426
+ },
+ "ram-30-ecodiesel": {
+  "src": "/assets/engines/ram-30-ecodiesel-3-0-l-v6-turbo-diesel-engine.webp",
+  "w": 1200,
+  "h": 1171,
+  "ai": true,
+  "title": "Ram / Jeep 3.0 EcoDiesel V6 engine, 3.0 L V6 turbo diesel (illustration)",
+  "bytes": 140256
+ },
+ "subaru-fa24f": {
+  "src": "/assets/engines/subaru-fa24f-2-4-l-flat-4-turbo-engine.webp",
+  "w": 1200,
+  "h": 664,
+  "ai": true,
+  "title": "Subaru FA24F 2.4 turbo boxer engine, 2.4 L flat-4 turbo (illustration)",
+  "bytes": 108760
+ },
+ "subaru-fb20": {
+  "src": "/assets/engines/subaru-fb20-2-0-l-flat-4-engine.webp",
+  "w": 1200,
+  "h": 658,
+  "ai": true,
+  "title": "Subaru FB20 2.0 boxer engine, 2.0 L flat-4 (illustration)",
+  "bytes": 103972
+ },
+ "subaru-fb25": {
+  "src": "/assets/engines/subaru-fb25-2-5-l-flat-4-engine.webp",
+  "w": 1200,
+  "h": 633,
+  "ai": true,
+  "title": "Subaru FB25 2.5 boxer engine, 2.5 L flat-4 (illustration)",
+  "bytes": 96058
+ },
+ "toyota-1gr-fe": {
+  "src": "/assets/engines/toyota-1gr-fe-4-0-l-v6-engine.webp",
+  "w": 1200,
+  "h": 1102,
+  "ai": true,
+  "title": "Toyota 1GR-FE 4.0 V6 engine, 4.0 L V6 (illustration)",
+  "bytes": 131784
+ },
+ "toyota-2ar-fe": {
+  "src": "/assets/engines/toyota-2ar-fe-2-5-l-inline-4-engine.webp",
+  "w": 1200,
+  "h": 1209,
+  "ai": true,
+  "title": "Toyota 2AR-FE 2.5 engine, 2.5 L inline-4 (illustration)",
+  "bytes": 132628
+ },
+ "toyota-2az-fe": {
+  "src": "/assets/engines/toyota-2az-fe-2-4-l-inline-4-engine.webp",
+  "w": 1200,
+  "h": 1248,
+  "ai": true,
+  "title": "Toyota 2AZ-FE 2.4 engine, 2.4 L inline-4 (illustration)",
+  "bytes": 135968
+ },
+ "toyota-2gr-fks": {
+  "src": "/assets/engines/toyota-2gr-fks-3-5-l-v6-direct-port-injection-engine.webp",
+  "w": 1200,
+  "h": 1089,
+  "ai": true,
+  "title": "Toyota 2GR-FKS 3.5 V6 engine, 3.5 L V6, direct + port injection (illustration)",
+  "bytes": 135708
+ },
+ "toyota-3ur-fe": {
+  "src": "/assets/engines/toyota-3ur-fe-5-7-l-v8-engine.webp",
+  "w": 1200,
+  "h": 1151,
+  "ai": true,
+  "title": "Toyota 3UR-FE 5.7 V8 engine, 5.7 L V8 (illustration)",
+  "bytes": 135412
+ },
+ "toyota-a25a": {
+  "src": "/assets/engines/toyota-a25a-2-5-l-inline-4-engine.webp",
+  "w": 1200,
+  "h": 1208,
+  "ai": true,
+  "title": "Toyota A25A 2.5 (Dynamic Force) engine, 2.5 L inline-4 (illustration)",
+  "bytes": 149896
+ },
+ "vw-ea888": {
+  "src": "/assets/engines/vw-ea888-2-0-l-inline-4-turbo-engine.webp",
+  "w": 1200,
+  "h": 1142,
+  "ai": true,
+  "title": "VW / Audi 2.0 TSI (EA888) engine, 2.0 L inline-4 turbo (illustration)",
+  "bytes": 148090
  }
 }

@@ -749,150 +749,150 @@
  },
  "ram-pickup": {
   "2000": {
-   "src": "/assets/ai-cars/ram-pickup-g2.webp?v=1",
+   "src": "/assets/ai-cars/ram-pickup-2000.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "red",
+   "color": "dark red metallic",
    "gen": "2nd generation"
   },
   "2001": {
-   "src": "/assets/ai-cars/ram-pickup-g2.webp?v=1",
+   "src": "/assets/ai-cars/ram-pickup-2001.webp?v=1",
    "w": 1000,
    "h": 600,
    "color": "red",
    "gen": "2nd generation"
   },
   "2002": {
-   "src": "/assets/ai-models/ram-pickup.webp?v=1",
+   "src": "/assets/ai-cars/ram-pickup-2002.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "white",
    "gen": "3rd generation"
   },
   "2003": {
-   "src": "/assets/ai-models/ram-pickup.webp?v=1",
+   "src": "/assets/ai-cars/ram-pickup-2003.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "dark blue metallic",
    "gen": "3rd generation"
   },
   "2004": {
-   "src": "/assets/ai-models/ram-pickup.webp?v=1",
+   "src": "/assets/ai-cars/ram-pickup-2004.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "silver metallic",
    "gen": "3rd generation"
   },
   "2005": {
-   "src": "/assets/ai-models/ram-pickup.webp?v=1",
+   "src": "/assets/ai-cars/ram-pickup-2005.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "dark gray metallic",
    "gen": "3rd generation"
   },
   "2006": {
-   "src": "/assets/ai-models/ram-pickup.webp?v=1",
+   "src": "/assets/ai-cars/ram-pickup-2006.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "light gold metallic",
    "gen": "3rd generation"
   },
   "2007": {
-   "src": "/assets/ai-models/ram-pickup.webp?v=1",
+   "src": "/assets/ai-cars/ram-pickup-2007.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "black",
    "gen": "3rd generation"
   },
   "2008": {
-   "src": "/assets/ai-models/ram-pickup.webp?v=1",
+   "src": "/assets/ai-cars/ram-pickup-2008.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "dark red metallic",
    "gen": "3rd generation"
   },
   "2009": {
-   "src": "/assets/ai-cars/ram-pickup-g4.webp?v=1",
+   "src": "/assets/ai-cars/ram-pickup-2009.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "red",
    "gen": "4th generation"
   },
   "2010": {
-   "src": "/assets/ai-cars/ram-pickup-g4.webp?v=1",
+   "src": "/assets/ai-cars/ram-pickup-2010.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "silver metallic",
    "gen": "4th generation"
   },
   "2011": {
-   "src": "/assets/ai-cars/ram-pickup-g4.webp?v=1",
+   "src": "/assets/ai-cars/ram-pickup-2011.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark blue metallic",
    "gen": "4th generation"
   },
   "2012": {
-   "src": "/assets/ai-cars/ram-pickup-g4.webp?v=1",
+   "src": "/assets/ai-cars/ram-pickup-2012.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "white",
    "gen": "4th generation"
   },
   "2013": {
-   "src": "/assets/ai-cars/ram-pickup-g4.webp?v=1",
+   "src": "/assets/ai-cars/ram-pickup-2013.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark gray metallic",
    "gen": "4th generation"
   },
   "2014": {
-   "src": "/assets/ai-cars/ram-pickup-g4.webp?v=1",
+   "src": "/assets/ai-cars/ram-pickup-2014.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "medium blue metallic",
    "gen": "4th generation"
   },
   "2015": {
-   "src": "/assets/ai-cars/ram-pickup-g4.webp?v=1",
+   "src": "/assets/ai-cars/ram-pickup-2015.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "black",
    "gen": "4th generation"
   },
   "2016": {
-   "src": "/assets/ai-cars/ram-pickup-g4.webp?v=1",
+   "src": "/assets/ai-cars/ram-pickup-2016.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "red",
    "gen": "4th generation"
   },
   "2017": {
-   "src": "/assets/ai-cars/ram-pickup-g4.webp?v=1",
+   "src": "/assets/ai-cars/ram-pickup-2017.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "brown metallic",
    "gen": "4th generation"
   },
   "2018": {
-   "src": "/assets/ai-cars/ram-pickup-g4.webp?v=1",
+   "src": "/assets/ai-cars/ram-pickup-2018.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "silver metallic",
    "gen": "4th generation"
   },
   "2019": {
-   "src": "/assets/ai-cars/ram-pickup-g5.webp?v=1",
+   "src": "/assets/ai-cars/ram-pickup-2019.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark blue",
+   "color": "dark blue metallic",
    "gen": "5th generation"
   },
   "2020": {
-   "src": "/assets/ai-cars/ram-pickup-g5.webp?v=1",
+   "src": "/assets/ai-cars/ram-pickup-2020.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark blue",
+   "color": "white",
    "gen": "5th generation"
   },
   "2021": {
@@ -2025,250 +2025,250 @@
    "gen": "3rd generation"
   },
   "2017": {
-   "src": "/assets/ai-models/ford-escape.webp?v=1",
+   "src": "/assets/ai-cars/ford-escape-2017.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "red",
    "gen": "3rd generation"
   },
   "2018": {
-   "src": "/assets/ai-models/ford-escape.webp?v=1",
+   "src": "/assets/ai-cars/ford-escape-2018.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "brown metallic",
    "gen": "3rd generation"
   },
   "2019": {
-   "src": "/assets/ai-models/ford-escape.webp?v=1",
+   "src": "/assets/ai-cars/ford-escape-2019.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "silver metallic",
    "gen": "3rd generation"
   },
   "2020": {
-   "src": "/assets/ai-cars/ford-escape-g4.webp?v=1",
+   "src": "/assets/ai-cars/ford-escape-2020.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "blue",
+   "color": "light gray",
    "gen": "4th generation"
   },
   "2021": {
-   "src": "/assets/ai-cars/ford-escape-g4.webp?v=1",
+   "src": "/assets/ai-cars/ford-escape-2021.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "blue",
+   "color": "white",
    "gen": "4th generation"
   },
   "2022": {
-   "src": "/assets/ai-cars/ford-escape-g4.webp?v=1",
+   "src": "/assets/ai-cars/ford-escape-2022.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "blue",
+   "color": "medium blue metallic",
    "gen": "4th generation"
   },
   "2023": {
-   "src": "/assets/ai-cars/ford-escape-g4.webp?v=1",
+   "src": "/assets/ai-cars/ford-escape-2023.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "blue",
+   "color": "light gray",
    "gen": "4th generation"
   },
   "2024": {
-   "src": "/assets/ai-cars/ford-escape-g4.webp?v=1",
+   "src": "/assets/ai-cars/ford-escape-2024.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "blue",
+   "color": "dark gray metallic",
    "gen": "4th generation"
   },
   "2025": {
-   "src": "/assets/ai-cars/ford-escape-g4.webp?v=1",
+   "src": "/assets/ai-cars/ford-escape-2025.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "blue",
+   "color": "red",
    "gen": "4th generation"
   }
  },
  "ford-explorer": {
   "2000": {
-   "src": "/assets/ai-cars/ford-explorer-g2.webp?v=1",
+   "src": "/assets/ai-cars/ford-explorer-2000.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark green",
+   "color": "dark gray metallic",
    "gen": "2nd generation"
   },
   "2001": {
-   "src": "/assets/ai-cars/ford-explorer-g2.webp?v=1",
+   "src": "/assets/ai-cars/ford-explorer-2001.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark green",
+   "color": "light gold metallic",
    "gen": "2nd generation"
   },
   "2002": {
-   "src": "/assets/ai-cars/ford-explorer-g3.webp?v=1",
+   "src": "/assets/ai-cars/ford-explorer-2002.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark blue",
+   "color": "black",
    "gen": "3rd generation"
   },
   "2003": {
-   "src": "/assets/ai-cars/ford-explorer-g3.webp?v=1",
+   "src": "/assets/ai-cars/ford-explorer-2003.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark blue",
+   "color": "dark red metallic",
    "gen": "3rd generation"
   },
   "2004": {
-   "src": "/assets/ai-cars/ford-explorer-g3.webp?v=1",
+   "src": "/assets/ai-cars/ford-explorer-2004.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark blue",
+   "color": "red",
    "gen": "3rd generation"
   },
   "2005": {
-   "src": "/assets/ai-cars/ford-explorer-g3.webp?v=1",
+   "src": "/assets/ai-cars/ford-explorer-2005.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark blue",
+   "color": "white",
    "gen": "3rd generation"
   },
   "2006": {
-   "src": "/assets/ai-models/ford-explorer.webp?v=1",
+   "src": "/assets/ai-cars/ford-explorer-2006.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "dark blue metallic",
    "gen": "4th generation"
   },
   "2007": {
-   "src": "/assets/ai-models/ford-explorer.webp?v=1",
+   "src": "/assets/ai-cars/ford-explorer-2007.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "silver metallic",
    "gen": "4th generation"
   },
   "2008": {
-   "src": "/assets/ai-models/ford-explorer.webp?v=1",
+   "src": "/assets/ai-cars/ford-explorer-2008.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "dark gray metallic",
    "gen": "4th generation"
   },
   "2009": {
-   "src": "/assets/ai-models/ford-explorer.webp?v=1",
+   "src": "/assets/ai-cars/ford-explorer-2009.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "light gold metallic",
    "gen": "4th generation"
   },
   "2010": {
-   "src": "/assets/ai-models/ford-explorer.webp?v=1",
+   "src": "/assets/ai-cars/ford-explorer-2010.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "black",
    "gen": "4th generation"
   },
   "2011": {
-   "src": "/assets/ai-cars/ford-explorer-g5.webp?v=1",
+   "src": "/assets/ai-cars/ford-explorer-2011.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "red",
    "gen": "5th generation"
   },
   "2012": {
-   "src": "/assets/ai-cars/ford-explorer-g5.webp?v=1",
+   "src": "/assets/ai-cars/ford-explorer-2012.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "brown metallic",
    "gen": "5th generation"
   },
   "2013": {
-   "src": "/assets/ai-cars/ford-explorer-g5.webp?v=1",
+   "src": "/assets/ai-cars/ford-explorer-2013.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "silver metallic",
    "gen": "5th generation"
   },
   "2014": {
-   "src": "/assets/ai-cars/ford-explorer-g5.webp?v=1",
+   "src": "/assets/ai-cars/ford-explorer-2014.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark blue metallic",
    "gen": "5th generation"
   },
   "2015": {
-   "src": "/assets/ai-cars/ford-explorer-g5.webp?v=1",
+   "src": "/assets/ai-cars/ford-explorer-2015.webp?v=1",
    "w": 1000,
    "h": 600,
    "color": "white",
    "gen": "5th generation"
   },
   "2016": {
-   "src": "/assets/ai-cars/ford-explorer-g5.webp?v=1",
+   "src": "/assets/ai-cars/ford-explorer-2016.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark gray metallic",
    "gen": "5th generation"
   },
   "2017": {
-   "src": "/assets/ai-cars/ford-explorer-g5.webp?v=1",
+   "src": "/assets/ai-cars/ford-explorer-2017.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "medium blue metallic",
    "gen": "5th generation"
   },
   "2018": {
-   "src": "/assets/ai-cars/ford-explorer-g5.webp?v=1",
+   "src": "/assets/ai-cars/ford-explorer-2018.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "black",
    "gen": "5th generation"
   },
   "2019": {
-   "src": "/assets/ai-cars/ford-explorer-g5.webp?v=1",
+   "src": "/assets/ai-cars/ford-explorer-2019.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "red",
    "gen": "5th generation"
   },
   "2020": {
-   "src": "/assets/ai-cars/ford-explorer-g6.webp?v=1",
+   "src": "/assets/ai-cars/ford-explorer-2020.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark blue",
+   "color": "dark green metallic",
    "gen": "6th generation"
   },
   "2021": {
-   "src": "/assets/ai-cars/ford-explorer-g6.webp?v=1",
+   "src": "/assets/ai-cars/ford-explorer-2021.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark blue",
+   "color": "black",
    "gen": "6th generation"
   },
   "2022": {
-   "src": "/assets/ai-cars/ford-explorer-g6.webp?v=1",
+   "src": "/assets/ai-cars/ford-explorer-2022.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark blue",
+   "color": "silver metallic",
    "gen": "6th generation"
   },
   "2023": {
-   "src": "/assets/ai-cars/ford-explorer-g6.webp?v=1",
+   "src": "/assets/ai-cars/ford-explorer-2023.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark blue",
+   "color": "white",
    "gen": "6th generation"
   },
   "2024": {
-   "src": "/assets/ai-cars/ford-explorer-g6.webp?v=1",
+   "src": "/assets/ai-cars/ford-explorer-2024.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark blue",
+   "color": "medium blue metallic",
    "gen": "6th generation"
   },
   "2025": {
-   "src": "/assets/ai-cars/ford-explorer-g6.webp?v=1",
+   "src": "/assets/ai-cars/ford-explorer-2025.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark blue",
+   "color": "light gray",
    "gen": "6th generation"
   }
  },
@@ -2623,182 +2623,182 @@
  },
  "jeep-grand-cherokee": {
   "2000": {
-   "src": "/assets/ai-cars/jeep-grand-cherokee-g2.webp?v=1",
+   "src": "/assets/ai-cars/jeep-grand-cherokee-2000.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark blue metallic",
    "gen": "2nd generation (WJ)"
   },
   "2001": {
-   "src": "/assets/ai-cars/jeep-grand-cherokee-g2.webp?v=1",
+   "src": "/assets/ai-cars/jeep-grand-cherokee-2001.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "silver metallic",
    "gen": "2nd generation (WJ)"
   },
   "2002": {
-   "src": "/assets/ai-cars/jeep-grand-cherokee-g2.webp?v=1",
+   "src": "/assets/ai-cars/jeep-grand-cherokee-2002.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark gray metallic",
    "gen": "2nd generation (WJ)"
   },
   "2003": {
-   "src": "/assets/ai-cars/jeep-grand-cherokee-g2.webp?v=1",
+   "src": "/assets/ai-cars/jeep-grand-cherokee-2003.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "light gold metallic",
    "gen": "2nd generation (WJ)"
   },
   "2004": {
-   "src": "/assets/ai-cars/jeep-grand-cherokee-g2.webp?v=1",
+   "src": "/assets/ai-cars/jeep-grand-cherokee-2004.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "black",
    "gen": "2nd generation (WJ)"
   },
   "2005": {
-   "src": "/assets/ai-models/jeep-grand-cherokee.webp?v=1",
+   "src": "/assets/ai-cars/jeep-grand-cherokee-2005.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "dark red metallic",
    "gen": "3rd generation (WK)"
   },
   "2006": {
-   "src": "/assets/ai-models/jeep-grand-cherokee.webp?v=1",
+   "src": "/assets/ai-cars/jeep-grand-cherokee-2006.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "red",
    "gen": "3rd generation (WK)"
   },
   "2007": {
-   "src": "/assets/ai-models/jeep-grand-cherokee.webp?v=1",
+   "src": "/assets/ai-cars/jeep-grand-cherokee-2007.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "white",
    "gen": "3rd generation (WK)"
   },
   "2008": {
-   "src": "/assets/ai-models/jeep-grand-cherokee.webp?v=1",
+   "src": "/assets/ai-cars/jeep-grand-cherokee-2008.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "dark blue metallic",
    "gen": "3rd generation (WK)"
   },
   "2009": {
-   "src": "/assets/ai-models/jeep-grand-cherokee.webp?v=1",
+   "src": "/assets/ai-cars/jeep-grand-cherokee-2009.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "silver metallic",
    "gen": "3rd generation (WK)"
   },
   "2010": {
-   "src": "/assets/ai-models/jeep-grand-cherokee.webp?v=1",
+   "src": "/assets/ai-cars/jeep-grand-cherokee-2010.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "dark gray metallic",
    "gen": "3rd generation (WK)"
   },
   "2011": {
-   "src": "/assets/ai-cars/jeep-grand-cherokee-g4.webp?v=1",
+   "src": "/assets/ai-cars/jeep-grand-cherokee-2011.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "medium blue metallic",
    "gen": "4th generation (WK2)"
   },
   "2012": {
-   "src": "/assets/ai-cars/jeep-grand-cherokee-g4.webp?v=1",
+   "src": "/assets/ai-cars/jeep-grand-cherokee-2012.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "black",
    "gen": "4th generation (WK2)"
   },
   "2013": {
-   "src": "/assets/ai-cars/jeep-grand-cherokee-g4.webp?v=1",
+   "src": "/assets/ai-cars/jeep-grand-cherokee-2013.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "red",
    "gen": "4th generation (WK2)"
   },
   "2014": {
-   "src": "/assets/ai-cars/jeep-grand-cherokee-g4.webp?v=1",
+   "src": "/assets/ai-cars/jeep-grand-cherokee-2014.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "brown metallic",
    "gen": "4th generation (WK2)"
   },
   "2015": {
-   "src": "/assets/ai-cars/jeep-grand-cherokee-g4.webp?v=1",
+   "src": "/assets/ai-cars/jeep-grand-cherokee-2015.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "silver metallic",
    "gen": "4th generation (WK2)"
   },
   "2016": {
-   "src": "/assets/ai-cars/jeep-grand-cherokee-g4.webp?v=1",
+   "src": "/assets/ai-cars/jeep-grand-cherokee-2016.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "dark blue metallic",
    "gen": "4th generation (WK2)"
   },
   "2017": {
-   "src": "/assets/ai-cars/jeep-grand-cherokee-g4.webp?v=1",
+   "src": "/assets/ai-cars/jeep-grand-cherokee-2017.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "white",
    "gen": "4th generation (WK2)"
   },
   "2018": {
-   "src": "/assets/ai-cars/jeep-grand-cherokee-g4.webp?v=1",
+   "src": "/assets/ai-cars/jeep-grand-cherokee-2018.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "dark gray metallic",
    "gen": "4th generation (WK2)"
   },
   "2019": {
-   "src": "/assets/ai-cars/jeep-grand-cherokee-g4.webp?v=1",
+   "src": "/assets/ai-cars/jeep-grand-cherokee-2019.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "medium blue metallic",
    "gen": "4th generation (WK2)"
   },
   "2020": {
-   "src": "/assets/ai-cars/jeep-grand-cherokee-g4.webp?v=1",
+   "src": "/assets/ai-cars/jeep-grand-cherokee-2020.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "dark gray metallic",
    "gen": "4th generation (WK2)"
   },
   "2021": {
-   "src": "/assets/ai-cars/jeep-grand-cherokee-g4.webp?v=1",
+   "src": "/assets/ai-cars/jeep-grand-cherokee-2021.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "red",
    "gen": "4th generation (WK2)"
   },
   "2022": {
-   "src": "/assets/ai-cars/jeep-grand-cherokee-g5.webp?v=1",
+   "src": "/assets/ai-cars/jeep-grand-cherokee-2022.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark green metallic",
    "gen": "5th generation (WL)"
   },
   "2023": {
-   "src": "/assets/ai-cars/jeep-grand-cherokee-g5.webp?v=1",
+   "src": "/assets/ai-cars/jeep-grand-cherokee-2023.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "black",
    "gen": "5th generation (WL)"
   },
   "2024": {
-   "src": "/assets/ai-cars/jeep-grand-cherokee-g5.webp?v=1",
+   "src": "/assets/ai-cars/jeep-grand-cherokee-2024.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "silver metallic",
    "gen": "5th generation (WL)"
   },
   "2025": {
-   "src": "/assets/ai-cars/jeep-grand-cherokee-g5.webp?v=1",
+   "src": "/assets/ai-cars/jeep-grand-cherokee-2025.webp?v=1",
    "w": 1000,
    "h": 600,
    "color": "white",
@@ -5563,164 +5563,164 @@
  },
  "honda-pilot": {
   "2003": {
-   "src": "/assets/ai-models/honda-pilot.webp?v=1",
+   "src": "/assets/ai-cars/honda-pilot-2003.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "light gold metallic",
    "gen": "1st generation"
   },
   "2004": {
-   "src": "/assets/ai-models/honda-pilot.webp?v=1",
+   "src": "/assets/ai-cars/honda-pilot-2004.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "black",
    "gen": "1st generation"
   },
   "2005": {
-   "src": "/assets/ai-models/honda-pilot.webp?v=1",
+   "src": "/assets/ai-cars/honda-pilot-2005.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "dark red metallic",
    "gen": "1st generation"
   },
   "2006": {
-   "src": "/assets/ai-models/honda-pilot.webp?v=1",
+   "src": "/assets/ai-cars/honda-pilot-2006.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "red",
    "gen": "1st generation"
   },
   "2007": {
-   "src": "/assets/ai-models/honda-pilot.webp?v=1",
-   "w": 1000,
-   "h": 600,
-   "color": "dark red",
-   "gen": "1st generation"
-  },
-  "2008": {
-   "src": "/assets/ai-models/honda-pilot.webp?v=1",
-   "w": 1000,
-   "h": 600,
-   "color": "dark red",
-   "gen": "1st generation"
-  },
-  "2009": {
-   "src": "/assets/ai-cars/honda-pilot-g2.webp?v=1",
-   "w": 1000,
-   "h": 600,
-   "color": "dark gray",
-   "gen": "2nd generation"
-  },
-  "2010": {
-   "src": "/assets/ai-cars/honda-pilot-g2.webp?v=1",
-   "w": 1000,
-   "h": 600,
-   "color": "dark gray",
-   "gen": "2nd generation"
-  },
-  "2011": {
-   "src": "/assets/ai-cars/honda-pilot-g2.webp?v=1",
-   "w": 1000,
-   "h": 600,
-   "color": "dark gray",
-   "gen": "2nd generation"
-  },
-  "2012": {
-   "src": "/assets/ai-cars/honda-pilot-g2.webp?v=1",
-   "w": 1000,
-   "h": 600,
-   "color": "dark gray",
-   "gen": "2nd generation"
-  },
-  "2013": {
-   "src": "/assets/ai-cars/honda-pilot-g2.webp?v=1",
-   "w": 1000,
-   "h": 600,
-   "color": "dark gray",
-   "gen": "2nd generation"
-  },
-  "2014": {
-   "src": "/assets/ai-cars/honda-pilot-g2.webp?v=1",
-   "w": 1000,
-   "h": 600,
-   "color": "dark gray",
-   "gen": "2nd generation"
-  },
-  "2015": {
-   "src": "/assets/ai-cars/honda-pilot-g2.webp?v=1",
-   "w": 1000,
-   "h": 600,
-   "color": "dark gray",
-   "gen": "2nd generation"
-  },
-  "2016": {
-   "src": "/assets/ai-cars/honda-pilot-g3.webp?v=1",
+   "src": "/assets/ai-cars/honda-pilot-2007.webp?v=1",
    "w": 1000,
    "h": 600,
    "color": "white",
+   "gen": "1st generation"
+  },
+  "2008": {
+   "src": "/assets/ai-cars/honda-pilot-2008.webp?v=1",
+   "w": 1000,
+   "h": 600,
+   "color": "dark blue metallic",
+   "gen": "1st generation"
+  },
+  "2009": {
+   "src": "/assets/ai-cars/honda-pilot-2009.webp?v=1",
+   "w": 1000,
+   "h": 600,
+   "color": "silver metallic",
+   "gen": "2nd generation"
+  },
+  "2010": {
+   "src": "/assets/ai-cars/honda-pilot-2010.webp?v=1",
+   "w": 1000,
+   "h": 600,
+   "color": "dark gray metallic",
+   "gen": "2nd generation"
+  },
+  "2011": {
+   "src": "/assets/ai-cars/honda-pilot-2011.webp?v=1",
+   "w": 1000,
+   "h": 600,
+   "color": "medium blue metallic",
+   "gen": "2nd generation"
+  },
+  "2012": {
+   "src": "/assets/ai-cars/honda-pilot-2012.webp?v=1",
+   "w": 1000,
+   "h": 600,
+   "color": "black",
+   "gen": "2nd generation"
+  },
+  "2013": {
+   "src": "/assets/ai-cars/honda-pilot-2013.webp?v=1",
+   "w": 1000,
+   "h": 600,
+   "color": "red",
+   "gen": "2nd generation"
+  },
+  "2014": {
+   "src": "/assets/ai-cars/honda-pilot-2014.webp?v=1",
+   "w": 1000,
+   "h": 600,
+   "color": "brown metallic",
+   "gen": "2nd generation"
+  },
+  "2015": {
+   "src": "/assets/ai-cars/honda-pilot-2015.webp?v=1",
+   "w": 1000,
+   "h": 600,
+   "color": "silver metallic",
+   "gen": "2nd generation"
+  },
+  "2016": {
+   "src": "/assets/ai-cars/honda-pilot-2016.webp?v=1",
+   "w": 1000,
+   "h": 600,
+   "color": "dark blue metallic",
    "gen": "3rd generation"
   },
   "2017": {
-   "src": "/assets/ai-cars/honda-pilot-g3.webp?v=1",
+   "src": "/assets/ai-cars/honda-pilot-2017.webp?v=1",
    "w": 1000,
    "h": 600,
    "color": "white",
    "gen": "3rd generation"
   },
   "2018": {
-   "src": "/assets/ai-cars/honda-pilot-g3.webp?v=1",
+   "src": "/assets/ai-cars/honda-pilot-2018.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark gray metallic",
    "gen": "3rd generation"
   },
   "2019": {
-   "src": "/assets/ai-cars/honda-pilot-g3.webp?v=1",
+   "src": "/assets/ai-cars/honda-pilot-2019.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "medium blue metallic",
    "gen": "3rd generation"
   },
   "2020": {
-   "src": "/assets/ai-cars/honda-pilot-g3.webp?v=1",
+   "src": "/assets/ai-cars/honda-pilot-2020.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark gray metallic",
    "gen": "3rd generation"
   },
   "2021": {
-   "src": "/assets/ai-cars/honda-pilot-g3.webp?v=1",
+   "src": "/assets/ai-cars/honda-pilot-2021.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "red",
    "gen": "3rd generation"
   },
   "2022": {
-   "src": "/assets/ai-cars/honda-pilot-g3.webp?v=1",
+   "src": "/assets/ai-cars/honda-pilot-2022.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark green metallic",
    "gen": "3rd generation"
   },
   "2023": {
-   "src": "/assets/ai-cars/honda-pilot-g4.webp?v=1",
+   "src": "/assets/ai-cars/honda-pilot-2023.webp?v=1",
    "w": 1000,
    "h": 600,
    "color": "black",
    "gen": "4th generation"
   },
   "2024": {
-   "src": "/assets/ai-cars/honda-pilot-g4.webp?v=1",
+   "src": "/assets/ai-cars/honda-pilot-2024.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "silver metallic",
    "gen": "4th generation"
   },
   "2025": {
-   "src": "/assets/ai-cars/honda-pilot-g4.webp?v=1",
+   "src": "/assets/ai-cars/honda-pilot-2025.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "white",
    "gen": "4th generation"
   }
  },
@@ -9277,73 +9277,73 @@
  },
  "ford-focus": {
   "2001": {
-   "src": "/assets/ai-cars/ford-focus-g1.webp?v=1",
+   "src": "/assets/ai-cars/ford-focus-2001.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "light gold metallic",
    "gen": "1st generation"
   },
   "2002": {
-   "src": "/assets/ai-cars/ford-focus-g1.webp?v=1",
+   "src": "/assets/ai-cars/ford-focus-2002.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "black",
    "gen": "1st generation"
   },
   "2004": {
-   "src": "/assets/ai-cars/ford-focus-g1.webp?v=1",
+   "src": "/assets/ai-cars/ford-focus-2004.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "red",
    "gen": "1st generation"
   },
   "2006": {
-   "src": "/assets/ai-cars/ford-focus-g1.webp?v=1",
+   "src": "/assets/ai-cars/ford-focus-2006.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "dark blue metallic",
    "gen": "1st generation"
   },
   "2008": {
-   "src": "/assets/ai-models/ford-focus.webp?v=1",
+   "src": "/assets/ai-cars/ford-focus-2008.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "dark gray metallic",
    "gen": "2nd generation"
   },
   "2009": {
-   "src": "/assets/ai-models/ford-focus.webp?v=1",
+   "src": "/assets/ai-cars/ford-focus-2009.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "light gold metallic",
    "gen": "2nd generation"
   },
   "2010": {
-   "src": "/assets/ai-models/ford-focus.webp?v=1",
+   "src": "/assets/ai-cars/ford-focus-2010.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "black",
    "gen": "2nd generation"
   },
   "2011": {
-   "src": "/assets/ai-models/ford-focus.webp?v=1",
+   "src": "/assets/ai-cars/ford-focus-2011.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "red",
    "gen": "2nd generation"
   },
   "2012": {
-   "src": "/assets/ai-cars/ford-focus-g3.webp?v=1",
+   "src": "/assets/ai-cars/ford-focus-2012.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark blue",
+   "color": "brown metallic",
    "gen": "3rd generation"
   },
   "2013": {
-   "src": "/assets/ai-cars/ford-focus-g3.webp?v=1",
+   "src": "/assets/ai-cars/ford-focus-2013.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark blue",
+   "color": "silver metallic",
    "gen": "3rd generation"
   },
   "2014": {
@@ -9354,124 +9354,124 @@
    "gen": "3rd generation"
   },
   "2015": {
-   "src": "/assets/ai-cars/ford-focus-g3.webp?v=1",
+   "src": "/assets/ai-cars/ford-focus-2015.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark blue",
+   "color": "white",
    "gen": "3rd generation"
   },
   "2016": {
-   "src": "/assets/ai-cars/ford-focus-g3.webp?v=1",
+   "src": "/assets/ai-cars/ford-focus-2016.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark blue",
+   "color": "dark gray metallic",
    "gen": "3rd generation"
   },
   "2017": {
-   "src": "/assets/ai-cars/ford-focus-g3.webp?v=1",
+   "src": "/assets/ai-cars/ford-focus-2017.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark blue",
+   "color": "medium blue metallic",
    "gen": "3rd generation"
   },
   "2018": {
-   "src": "/assets/ai-cars/ford-focus-g3.webp?v=1",
+   "src": "/assets/ai-cars/ford-focus-2018.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark blue",
+   "color": "black",
    "gen": "3rd generation"
   }
  },
  "ford-mustang": {
   "2000": {
-   "src": "/assets/ai-cars/ford-mustang-g4.webp?v=1",
+   "src": "/assets/ai-cars/ford-mustang-2000.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "red",
+   "color": "dark blue metallic",
    "gen": "4th generation (SN95)"
   },
   "2001": {
-   "src": "/assets/ai-cars/ford-mustang-g4.webp?v=1",
+   "src": "/assets/ai-cars/ford-mustang-2001.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "red",
+   "color": "silver metallic",
    "gen": "4th generation (SN95)"
   },
   "2002": {
-   "src": "/assets/ai-cars/ford-mustang-g4.webp?v=1",
+   "src": "/assets/ai-cars/ford-mustang-2002.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "red",
+   "color": "dark gray metallic",
    "gen": "4th generation (SN95)"
   },
   "2003": {
-   "src": "/assets/ai-cars/ford-mustang-g4.webp?v=1",
+   "src": "/assets/ai-cars/ford-mustang-2003.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "red",
+   "color": "light gold metallic",
    "gen": "4th generation (SN95)"
   },
   "2004": {
-   "src": "/assets/ai-cars/ford-mustang-g4.webp?v=1",
+   "src": "/assets/ai-cars/ford-mustang-2004.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "red",
+   "color": "black",
    "gen": "4th generation (SN95)"
   },
   "2005": {
-   "src": "/assets/ai-models/ford-mustang.webp?v=1",
+   "src": "/assets/ai-cars/ford-mustang-2005.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "deep blue",
+   "color": "dark red metallic",
    "gen": "5th generation (S197)"
   },
   "2006": {
-   "src": "/assets/ai-models/ford-mustang.webp?v=1",
+   "src": "/assets/ai-cars/ford-mustang-2006.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "deep blue",
+   "color": "red",
    "gen": "5th generation (S197)"
   },
   "2007": {
-   "src": "/assets/ai-models/ford-mustang.webp?v=1",
+   "src": "/assets/ai-cars/ford-mustang-2007.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "deep blue",
+   "color": "white",
    "gen": "5th generation (S197)"
   },
   "2008": {
-   "src": "/assets/ai-models/ford-mustang.webp?v=1",
+   "src": "/assets/ai-cars/ford-mustang-2008.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "deep blue",
+   "color": "dark blue metallic",
    "gen": "5th generation (S197)"
   },
   "2009": {
-   "src": "/assets/ai-models/ford-mustang.webp?v=1",
+   "src": "/assets/ai-cars/ford-mustang-2009.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "deep blue",
+   "color": "silver metallic",
    "gen": "5th generation (S197)"
   },
   "2010": {
-   "src": "/assets/ai-models/ford-mustang.webp?v=1",
+   "src": "/assets/ai-cars/ford-mustang-2010.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "deep blue",
+   "color": "dark gray metallic",
    "gen": "5th generation (S197)"
   },
   "2011": {
-   "src": "/assets/ai-models/ford-mustang.webp?v=1",
+   "src": "/assets/ai-cars/ford-mustang-2011.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "deep blue",
+   "color": "medium blue metallic",
    "gen": "5th generation (S197)"
   },
   "2012": {
-   "src": "/assets/ai-models/ford-mustang.webp?v=1",
+   "src": "/assets/ai-cars/ford-mustang-2012.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "deep blue",
+   "color": "black",
    "gen": "5th generation (S197)"
   },
   "2013": {
@@ -9482,87 +9482,87 @@
    "gen": "5th generation (S197)"
   },
   "2014": {
-   "src": "/assets/ai-models/ford-mustang.webp?v=1",
+   "src": "/assets/ai-cars/ford-mustang-2014.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "deep blue",
+   "color": "brown metallic",
    "gen": "5th generation (S197)"
   },
   "2015": {
-   "src": "/assets/ai-cars/ford-mustang-g6.webp?v=1",
+   "src": "/assets/ai-cars/ford-mustang-2015.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "silver metallic",
    "gen": "6th generation (S550)"
   },
   "2016": {
-   "src": "/assets/ai-cars/ford-mustang-g6.webp?v=1",
+   "src": "/assets/ai-cars/ford-mustang-2016.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "dark blue metallic",
    "gen": "6th generation (S550)"
   },
   "2017": {
-   "src": "/assets/ai-cars/ford-mustang-g6.webp?v=1",
+   "src": "/assets/ai-cars/ford-mustang-2017.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "white",
    "gen": "6th generation (S550)"
   },
   "2018": {
-   "src": "/assets/ai-cars/ford-mustang-g6.webp?v=1",
+   "src": "/assets/ai-cars/ford-mustang-2018.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "dark gray metallic",
    "gen": "6th generation (S550)"
   },
   "2019": {
-   "src": "/assets/ai-cars/ford-mustang-g6.webp?v=1",
+   "src": "/assets/ai-cars/ford-mustang-2019.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "medium blue metallic",
    "gen": "6th generation (S550)"
   },
   "2020": {
-   "src": "/assets/ai-cars/ford-mustang-g6.webp?v=1",
+   "src": "/assets/ai-cars/ford-mustang-2020.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "dark gray metallic",
    "gen": "6th generation (S550)"
   },
   "2021": {
-   "src": "/assets/ai-cars/ford-mustang-g6.webp?v=1",
+   "src": "/assets/ai-cars/ford-mustang-2021.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "red",
    "gen": "6th generation (S550)"
   },
   "2022": {
-   "src": "/assets/ai-cars/ford-mustang-g6.webp?v=1",
+   "src": "/assets/ai-cars/ford-mustang-2022.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "dark green metallic",
    "gen": "6th generation (S550)"
   },
   "2023": {
-   "src": "/assets/ai-cars/ford-mustang-g6.webp?v=1",
+   "src": "/assets/ai-cars/ford-mustang-2023.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "black",
    "gen": "6th generation (S550)"
   },
   "2024": {
-   "src": "/assets/ai-cars/ford-mustang-g7.webp?v=1",
+   "src": "/assets/ai-cars/ford-mustang-2024.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "blue",
+   "color": "silver metallic",
    "gen": "7th generation (S650)"
   },
   "2025": {
-   "src": "/assets/ai-cars/ford-mustang-g7.webp?v=1",
+   "src": "/assets/ai-cars/ford-mustang-2025.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "blue",
+   "color": "white",
    "gen": "7th generation (S650)"
   }
  },
@@ -10010,243 +10010,243 @@
  },
  "chevrolet-impala": {
   "2000": {
-   "src": "/assets/ai-cars/chevrolet-impala-g8.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-impala-2000.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "red",
    "gen": "8th generation"
   },
   "2001": {
-   "src": "/assets/ai-cars/chevrolet-impala-g8.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-impala-2001.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "white",
    "gen": "8th generation"
   },
   "2002": {
-   "src": "/assets/ai-cars/chevrolet-impala-g8.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-impala-2002.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "dark blue metallic",
    "gen": "8th generation"
   },
   "2003": {
-   "src": "/assets/ai-cars/chevrolet-impala-g8.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-impala-2003.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "silver metallic",
    "gen": "8th generation"
   },
   "2004": {
-   "src": "/assets/ai-cars/chevrolet-impala-g8.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-impala-2004.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "dark gray metallic",
    "gen": "8th generation"
   },
   "2005": {
-   "src": "/assets/ai-cars/chevrolet-impala-g8.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-impala-2005.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "light gold metallic",
    "gen": "8th generation"
   },
   "2006": {
-   "src": "/assets/ai-cars/chevrolet-impala-g9.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-impala-2006.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "black",
    "gen": "9th generation"
   },
   "2007": {
-   "src": "/assets/ai-cars/chevrolet-impala-g9.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-impala-2007.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark red metallic",
    "gen": "9th generation"
   },
   "2008": {
-   "src": "/assets/ai-cars/chevrolet-impala-g9.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-impala-2008.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "red",
    "gen": "9th generation"
   },
   "2009": {
-   "src": "/assets/ai-cars/chevrolet-impala-g9.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-impala-2009.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "white",
    "gen": "9th generation"
   },
   "2010": {
-   "src": "/assets/ai-cars/chevrolet-impala-g9.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-impala-2010.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark blue metallic",
    "gen": "9th generation"
   },
   "2011": {
-   "src": "/assets/ai-cars/chevrolet-impala-g9.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-impala-2011.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "white",
    "gen": "9th generation"
   },
   "2012": {
-   "src": "/assets/ai-cars/chevrolet-impala-g9.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-impala-2012.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark gray metallic",
    "gen": "9th generation"
   },
   "2013": {
-   "src": "/assets/ai-cars/chevrolet-impala-g9.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-impala-2013.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "medium blue metallic",
    "gen": "9th generation"
   },
   "2014": {
-   "src": "/assets/ai-models/chevrolet-impala.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-impala-2014.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "black",
    "gen": "10th generation"
   },
   "2015": {
-   "src": "/assets/ai-models/chevrolet-impala.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-impala-2015.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "red",
    "gen": "10th generation"
   },
   "2016": {
-   "src": "/assets/ai-models/chevrolet-impala.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-impala-2016.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "brown metallic",
    "gen": "10th generation"
   },
   "2017": {
-   "src": "/assets/ai-models/chevrolet-impala.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-impala-2017.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "silver metallic",
    "gen": "10th generation"
   },
   "2018": {
-   "src": "/assets/ai-models/chevrolet-impala.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-impala-2018.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "dark blue metallic",
    "gen": "10th generation"
   },
   "2019": {
-   "src": "/assets/ai-models/chevrolet-impala.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-impala-2019.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "white",
    "gen": "10th generation"
   }
  },
  "chevrolet-camaro": {
   "2010": {
-   "src": "/assets/ai-cars/chevrolet-camaro-g5.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-camaro-2010.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "red",
+   "color": "white",
    "gen": "5th generation"
   },
   "2011": {
-   "src": "/assets/ai-cars/chevrolet-camaro-g5.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-camaro-2011.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "red",
+   "color": "dark gray metallic",
    "gen": "5th generation"
   },
   "2012": {
-   "src": "/assets/ai-cars/chevrolet-camaro-g5.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-camaro-2012.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "red",
+   "color": "medium blue metallic",
    "gen": "5th generation"
   },
   "2013": {
-   "src": "/assets/ai-cars/chevrolet-camaro-g5.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-camaro-2013.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "red",
+   "color": "black",
    "gen": "5th generation"
   },
   "2014": {
-   "src": "/assets/ai-cars/chevrolet-camaro-g5.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-camaro-2014.webp?v=1",
    "w": 1000,
    "h": 600,
    "color": "red",
    "gen": "5th generation"
   },
   "2015": {
-   "src": "/assets/ai-cars/chevrolet-camaro-g5.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-camaro-2015.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "red",
+   "color": "brown metallic",
    "gen": "5th generation"
   },
   "2016": {
-   "src": "/assets/ai-models/chevrolet-camaro.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-camaro-2016.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "silver metallic",
    "gen": "6th generation"
   },
   "2017": {
-   "src": "/assets/ai-models/chevrolet-camaro.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-camaro-2017.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark blue metallic",
    "gen": "6th generation"
   },
   "2018": {
-   "src": "/assets/ai-models/chevrolet-camaro.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-camaro-2018.webp?v=1",
    "w": 1000,
    "h": 600,
    "color": "white",
    "gen": "6th generation"
   },
   "2019": {
-   "src": "/assets/ai-models/chevrolet-camaro.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-camaro-2019.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark gray metallic",
    "gen": "6th generation"
   },
   "2020": {
-   "src": "/assets/ai-models/chevrolet-camaro.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-camaro-2020.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "light gray",
    "gen": "6th generation"
   },
   "2021": {
-   "src": "/assets/ai-models/chevrolet-camaro.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-camaro-2021.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark gray metallic",
    "gen": "6th generation"
   },
   "2022": {
-   "src": "/assets/ai-models/chevrolet-camaro.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-camaro-2022.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "red",
    "gen": "6th generation"
   },
   "2023": {
-   "src": "/assets/ai-models/chevrolet-camaro.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-camaro-2023.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark green metallic",
    "gen": "6th generation"
   }
  },
