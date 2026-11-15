@@ -1,0 +1,37 @@
+/* 11-14 growth plan 2D-1: /repair-cost/ pages (repair_cost_pages.py). Prefix rcp-. */
+.rcp-read { display: grid; gap: 16px; padding: 22px; margin: 6px auto 0; max-width: 560px; border-radius: 22px; background: var(--ink, #1d1d1f); color: #fff; text-align: left; }
+.rcp-big span { display: block; font-size: 14px; font-weight: 600; color: #c9ccd1; }
+.rcp-big b { display: block; font-weight: 800; font-size: clamp(52px, 13vw, 88px); line-height: 1.02; letter-spacing: -.02em; color: var(--lemon, #ffd400); font-variant-numeric: tabular-nums; }
+.rcp-big small { display: block; font-size: 14px; color: #c9ccd1; margin-top: 2px; }
+.rcp-read-h { max-width: 420px; }
+.rcp-track { position: relative; display: block; height: 12px; border-radius: 6px; background: rgba(255, 255, 255, .16); }
+.rcp-track i { position: absolute; top: 0; bottom: 0; border-radius: 6px; background: var(--lemon, #ffd400); }
+.rcp-track em { position: absolute; top: -4px; width: 3px; height: 20px; margin-left: -1px; border-radius: 2px; background: #fff; }
+.rcp-ax { display: flex; justify-content: space-between; gap: 8px; margin-top: 8px; font-size: 12.5px; color: #c9ccd1; font-variant-numeric: tabular-nums; }
+.rcp-ax small:nth-child(2) { color: #fff; font-weight: 600; text-align: center; }
+.rcp-ans { text-align: left; font-size: 15.5px; line-height: 1.5; max-width: 72ch; margin: 10px auto 4px; }
+.rcp-hist, .rcp-yr, .rcp-tf, .rcp-more { list-style: none; padding: 0; margin: 8px 0; }
+.rcp-hist li { display: grid; grid-template-columns: 116px minmax(0, 1fr) 44px; align-items: center; gap: 10px; padding: 6px 0; font-size: 14.5px; }
+.rcp-hb { display: block; height: 12px; border-radius: 6px; background: #f0f0f2; overflow: hidden; }
+.rcp-hb i { display: block; height: 100%; border-radius: 6px; background: var(--ink, #1d1d1f); }
+.rcp-hist b { text-align: right; font-variant-numeric: tabular-nums; }
+.rcp-yr li, .rcp-tf li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 12px; padding: 10px 0; border-bottom: 1px solid var(--line, #d2d2d7); font-size: 15px; }
+.rcp-yr li b { font-variant-numeric: tabular-nums; }
+.rcp-yr li > small, .rcp-tf li > small { grid-column: 1 / -1; color: #6e6e73; font-size: 13px; }
+.rcp-tf li span { color: #3c4043; font-variant-numeric: tabular-nums; }
+.rcp-eng, .rcp-codes { line-height: 1.9; }
+.rcp-eng small { color: #6e6e73; }
+.rcp-more li { padding: 6px 0; }
+.rcp-h3 { margin-top: 18px; font-size: 17px; }
+.rcp-t { width: 100%; border-collapse: collapse; font-size: 14.5px; font-variant-numeric: tabular-nums; }
+.rcp-t th, .rcp-t td { text-align: left; padding: 9px 8px; border-bottom: 1px solid var(--line, #d2d2d7); }
+.rcp-t th { font-size: 13px; font-weight: 600; color: #6e6e73; }
+.rcp-grid { margin-top: 10px; }
+.rcp-c { padding-left: 14px; }
+.rcp-c::before { display: none; }
+.rcp-c span { font-weight: 600; color: var(--ink, #1d1d1f); }
+@media (max-width: 520px) {
+  .rcp-read { padding: 18px; border-radius: 18px; }
+  .rcp-hist li { grid-template-columns: 96px minmax(0, 1fr) 40px; font-size: 13.5px; }
+  .rcp-ax { font-size: 11.5px; }
+}
