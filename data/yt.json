@@ -63965,6 +63965,132 @@
    }
   }
  ],
+ "scion-xb": [
+  {
+   "years": [
+    2004,
+    2005,
+    2006
+   ],
+   "gen": "2004–2006 Scion xB",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 2945020,
+   "topics": [
+    {
+     "name": "Steering & suspension",
+     "views": 140204,
+     "n": 9,
+     "best": {
+      "id": "n6e0wd054Iw",
+      "title": "How To Replace Front Lower Control Arm with Ball Joint 2004-2006 Scion xB",
+      "channel": "TRQ",
+      "views": 29474
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 117175,
+     "n": 5,
+     "best": {
+      "id": "8KWjwrWwd_g",
+      "title": "2006 Scion xB check engine light code p 0441",
+      "channel": "The Other Guy",
+      "views": 99724
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 85906,
+     "n": 7,
+     "best": {
+      "id": "dnRqtf5QBYY",
+      "title": "Having an issue with my AC in 2005 Scion XB. Compressor works fine, full freon but no cold air.",
+      "channel": "Steven Bradley",
+      "views": 45451
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 84081,
+     "n": 5,
+     "best": {
+      "id": "d6dxTLhX7kk",
+      "title": "2006 Scion xB starter removal how to",
+      "channel": "Cyrus Andrews",
+      "views": 38413
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 78644,
+     "n": 4,
+     "best": {
+      "id": "z8uoiZiNSzI",
+      "title": "How to Replace Rear Brakes 2004-2006 Scion xB",
+      "channel": "TRQ",
+      "views": 43093
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 70024,
+     "n": 4,
+     "best": {
+      "id": "McHOJun3NC4",
+      "title": "How to Replace Engine Water Pump 2004-2006 Scion xB",
+      "channel": "TRQ",
+      "views": 34043
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 69443,
+     "n": 7,
+     "best": {
+      "id": "ahNQBfA13u8",
+      "title": "How to Replace Driver Window Regulator 2004-2006 Scion xB",
+      "channel": "TRQ",
+      "views": 23085
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 68091,
+     "n": 3,
+     "best": {
+      "id": "K6cP04kNnn4",
+      "title": "Camshaft sensor replacement 2004 2005 2006 Scion xB",
+      "channel": "Justin",
+      "views": 40800
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "6KFUsz8oMZ0",
+     "title": "Top 5 Problems Scion xB Hatchback 2004-2006 1st Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 175894
+    },
+    {
+     "id": "Z-tyPdSFO6w",
+     "title": "My 2005 Scion xb gauges are having problems",
+     "channel": "TudyD",
+     "views": 460
+    },
+    {
+     "id": "H341YFTEhXQ",
+     "title": "2006 Scion xB Review - Scion's BEST Car!",
+     "channel": "Shooting Cars",
+     "views": 93081
+    }
+   ],
+   "costs": null
+  }
+ ],
  "gmc-sonoma": [
   {
    "years": [
@@ -64200,7 +64326,26 @@
      "views": 313569
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 60,
+       "lo": 50.0,
+       "hi": 200.0,
+       "n": 3,
+       "videos": 3,
+       "id": "krve5lIWdvw",
+       "t": 647,
+       "title": "2013+ VW CC HID xenon headlight bulb replacement"
+      }
+     ]
+    ]
+   }
   }
  ],
  "volvo-s80": [
