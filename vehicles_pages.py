@@ -172,8 +172,8 @@ def mav_auto(b):
         elif w.get('mixed'): lines.append(w['mixed'])
         elif w.get('theme'): lines.append(f'{w["theme"][1]} of {n} mention {w["theme"][0]}.')
         elif w.get('comp'): lines.append(f'Top system: {w["comp"][0]} ({w["comp"][1]} of {n}).')
-        ev = [x for x in ((f'{w["crash"]} reported a crash' if w['crash'] else ''), (f'{w["fire"]} a fire' if w['fire'] else '')) if x]
-        if ev: lines.append(' and '.join(ev).capitalize() + '.')
+        ev = [x for x in ((f'{w["crash"]} a crash' if w['crash'] else ''), (f'{w["fire"]} a fire' if w['fire'] else '')) if x]
+        if ev: lines.append(ev[0].split(' ', 1)[0] + ' reported ' + ' and '.join([ev[0].split(' ', 1)[1]] + ev[1:]) + '.')
         if w['y'] >= NOWY - 1: lines.append(f'The {w["y"]} is still new, so its count can grow.')
         rc = ''.join(f'<li><b>Recall {E(i)}</b> ({E(R[i]["part"].lower())}): {E(mav_sum(R[i]))}</li>' for i in w['recalls'][:2] if i in R)
         cards += (f'<div class="mav-y"><header><b class="mav-yr">{w["y"]}</b><span class="mav-n">{n} complaints</span></header>'

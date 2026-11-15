@@ -432,7 +432,8 @@ def _adv_sort(items, modes, short, order=None):
         cards = [_ovcard('years', 'Every year', f'{len(yrows)} model years' if yrows else '', (f'Most complaints: {E(worst[0])}' if worst else ''), go='every year'),
                  _ovcard('problems', 'Problems', E(pts[0][0].capitalize()) if pts else '', f'{pts[0][1]:.0f}% of complaints' if pts else '', _ovbars(pts) if len(pts) > 1 else ''),
                  _ovcard('recalls', 'Recalls & safety', (f'{nr} recall{"" if nr == "1" else "s"}' if nr and nr != '0' else 'No recalls') if nr else '', 'Free fix at any dealer' if nr and nr != '0' else '', go='recalls & safety')]
-        if got['specs']: cards.append(_ovcard('specs', 'Specs & engines', f'{nv} engines' if nv else 'Every version', 'with power and mpg', go='specs'))
+        _spt = S_.select_one('#specs').get_text(' ') if S_.select_one('#specs') else ''   # 11-14: motorcycle spec cards have no mpg
+        if got['specs']: cards.append(_ovcard('specs', 'Specs & engines', f'{nv} engines' if nv else 'Every version', 'power, weight, seat height and price' if 'Seat height' in _spt else 'with power and mpg', go='specs'))
         if got['questions']: cards.append(_ovcard('questions', 'Questions', f'{nq} quick answers' if nq else '', '', _qtitles([S_]), go='questions'))
         panels = [('overview', 'Overview', f'<div class="ovg{" ovg4" if len(cards) == 4 else ""}">' + ''.join(cards) + '</div>')] + panels[1:]
     if yav: panels[0] = (panels[0][0], panels[0][1], J(yav) + panels[0][2])
