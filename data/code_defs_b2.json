@@ -1,0 +1,4110 @@
+[
+ {
+  "code": "C1256",
+  "makes": [
+   "Toyota",
+   "Lexus",
+   "Scion"
+  ],
+  "t": "Accumulator Low Pressure",
+  "m": "The brake computer saw that the stored hydraulic pressure that powers the brakes stayed too low. The brake warning light comes on, a buzzer may sound, and the brake pedal can feel different.",
+  "c": [
+   "Internal leak in the brake actuator / accumulator assembly",
+   "Worn brake booster pump motor that can't build pressure",
+   "Faulty accumulator pressure sensor inside the actuator"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "brakes/ABS",
+  "src": [
+   "https://attachments.priuschat.com/attachment-files/2017/06/126976_c1256.pdf",
+   "https://attachments.priuschat.com/attachment-files/2024/08/255782_2006_PRIUS_RM_-_Blink_Codes_ABS_VTC_ECB.pdf"
+  ],
+  "conf": "high",
+  "note": "Toyota repair manual pages for the 2004 and 2006 Prius (electronically controlled brake system). The same code shows up on other Toyota/Lexus hybrids with this brake system (Highlander Hybrid, Camry Hybrid), but the sources here only cover Prius. The manual says very frequent braking can set it without any fault. It often appears together with C1252.",
+  "alt": false
+ },
+ {
+  "code": "C1252",
+  "makes": [
+   "Toyota",
+   "Lexus",
+   "Scion"
+  ],
+  "t": "Brake Booster Pump Motor on Time Abnormally Long",
+  "m": "The pump that pressurizes the brake system ran much longer than it should, which usually means pressure is leaking away. Brake and ABS warning lights come on.",
+  "c": [
+   "Internal leak in the brake actuator / booster assembly",
+   "Worn brake booster pump motor",
+   "Low brake fluid or air in the system"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "brakes/ABS",
+  "src": [
+   "https://attachments.priuschat.com/attachment-files/2024/08/255782_2006_PRIUS_RM_-_Blink_Codes_ABS_VTC_ECB.pdf",
+   "https://www.purefjcruiser.com/docs/2007%20Toyota%20FJ%20Cruiser%20Repair%20Manual/Brake%20Control/Vehicle%20Stability%20Control%20System/0280012.pdf"
+  ],
+  "conf": "high",
+  "note": "Same title in the 2006 Prius and 2007 FJ Cruiser Toyota manuals. On the Prius the only listed trouble area is the brake actuator assembly. The Chrysler/Jeep complaints with this code use a different, unconfirmed meaning.",
+  "alt": false
+ },
+ {
+  "code": "C1253",
+  "makes": [
+   "Toyota",
+   "Lexus",
+   "Scion"
+  ],
+  "t": "Hydro Booster Pump Motor Relay Malfunction",
+  "m": "The brake computer found a problem with the relay that switches the brake pressure pump on and off. Brake and ABS warning lights come on, and power-assisted braking can be reduced.",
+  "c": [
+   "Failed ABS motor relay (ABS MTR or ABS MTR 2)",
+   "Wiring or connector fault in the pump relay circuit",
+   "Faulty brake actuator assembly"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "brakes/ABS",
+  "src": [
+   "https://attachments.priuschat.com/attachment-files/2024/08/255782_2006_PRIUS_RM_-_Blink_Codes_ABS_VTC_ECB.pdf",
+   "https://www.purefjcruiser.com/docs/2007%20Toyota%20FJ%20Cruiser%20Repair%20Manual/Brake%20Control/Vehicle%20Stability%20Control%20System/0280012.pdf"
+  ],
+  "conf": "high",
+  "note": "Title from the 2006 Prius and 2007 FJ Cruiser Toyota manuals. On the Prius it is often set along with C1252/C1256 when the pump is overworked by a leaking actuator.",
+  "alt": false
+ },
+ {
+  "code": "B0111",
+  "makes": [
+   "Toyota",
+   "Lexus",
+   "Scion"
+  ],
+  "t": "Open in Side Squib RH Circuit",
+  "m": "The airbag computer found a broken circuit to the right-side (passenger side) seat airbag igniter. The airbag light stays on, and that side airbag may not deploy in a crash.",
+  "c": [
+   "Damaged or loose floor wiring harness / connector under the right front seat",
+   "Faulty right side airbag assembly",
+   "Faulty airbag sensor (control) module"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "airbag",
+  "src": [
+   "https://lc100e.github.io/pdf/rm/rm970e/m_di_0490.pdf",
+   "https://carcomplaints.com/Toyota/Sienna/2004/tsbs/tsb-t-sb-0069-12-rev.shtml"
+  ],
+  "conf": "high",
+  "note": "Title from a Toyota Land Cruiser repair manual page (same Toyota SRS code). Toyota bulletin T-SB-0069-12 covers 2004-2009 Sienna with the airbag light on and B0111 and/or B0116, fixed by repairing the floor harness and side airbag squib circuit.",
+  "alt": false
+ },
+ {
+  "code": "C1247",
+  "makes": [
+   "Toyota",
+   "Lexus",
+   "Scion"
+  ],
+  "t": "Stroke Sensor Malfunction",
+  "m": "The brake/stability computer got a bad signal from the sensor that measures how far the brake pedal is pressed. ABS, brake and VSC warning lights can come on.",
+  "c": [
+   "Faulty brake pedal stroke sensor or wrong sensor adjustment",
+   "Wiring or connector problem at the sensor",
+   "Skid control computer software logic (Sequoia bulletin fix)"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "brakes/ABS",
+  "src": [
+   "https://attachments.priuschat.com/attachment-files/2024/08/255782_2006_PRIUS_RM_-_Blink_Codes_ABS_VTC_ECB.pdf",
+   "https://static.nhtsa.gov/odi/inv/2008/INRD-PE08072-36830.pdf",
+   "https://www.iatn.net/techmail/summaries/2014/08/C1247-dtc.html"
+  ],
+  "conf": "high",
+  "note": "Toyota title from the 2006 Prius manual. Toyota TSB BR006-06 (in the NHTSA file) covers 2003-2005 Sequoia with brake/ABS/VSC lights on and C1247 and/or C1310 stored with no problem found; the fix is a skid control computer software change. That bulletin's data list includes a pedal stroke value, and an iATN case on a 2005 Sequoia also lists C1247 as a stroke sensor fault.",
+  "alt": false
+ },
+ {
+  "code": "C1223",
+  "makes": [
+   "Toyota",
+   "Lexus",
+   "Scion"
+  ],
+  "t": "ABS Control System Malfunction",
+  "m": "The stability control (VSC) system turned itself off because the ABS side of the brake computer reported a fault. VSC/TRAC and ABS warning lights come on; it usually points to another ABS code.",
+  "c": [
+   "Another stored ABS fault, such as a wheel speed sensor or pump problem",
+   "Low battery or charging voltage",
+   "Wiring problem in the ABS system"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "stability",
+  "src": [
+   "https://www.purefjcruiser.com/docs/2007%20Toyota%20FJ%20Cruiser%20Repair%20Manual/Brake%20Control/Vehicle%20Stability%20Control%20System/0280012.pdf",
+   "https://www.iatn.net/techmail/summaries/2022/03/C1223-dtc.html"
+  ],
+  "conf": "high",
+  "note": "Title from the Toyota VSC trouble code chart (2007 FJ Cruiser manual). An iATN case on a 2005 Sequoia lists it as an ABS control system fault. Fix the other ABS codes first.",
+  "alt": false
+ },
+ {
+  "code": "B1650",
+  "makes": [
+   "Subaru"
+  ],
+  "t": "Occupant Classification System Malfunction",
+  "m": "The airbag computer got a fault from the passenger-seat sensor that decides whether someone is sitting there. The airbag light comes on and the front passenger airbag may be switched off even with an adult in the seat.",
+  "c": [
+   "Liquid spilled on the passenger seat or high humidity reaching the sensor mat",
+   "Loose or poor contact in the seat sensor (ODS) harness",
+   "Faulty seat sensor mat or occupant detection module"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "airbag",
+  "src": [
+   "https://static.nhtsa.gov/odi/tsbs/2017/MC-10138780-9999.pdf",
+   "https://static.nhtsa.gov/odi/tsbs/2017/MC-10131667-9999.pdf",
+   "https://static.nhtsa.gov/odi/rcl/2019/RCRIT-19V701-0743.pdf"
+  ],
+  "conf": "high",
+  "note": "Subaru bulletin 07-108-16R covers 2014-2018 Forester. Recall WUM-98 / NHTSA 19V-701 (2015-2018 Forester built Jan 2015 to Aug 2017) replaces the passenger seat ODS sensor mat harness for free. Often set together with B1760. The few Toyota/Lexus/Genesis complaints with this code were not confirmed.",
+  "alt": false
+ },
+ {
+  "code": "C1241",
+  "makes": [
+   "Toyota",
+   "Lexus",
+   "Scion"
+  ],
+  "t": "Low or High Battery Voltage (Brake/Stability Computer)",
+  "m": "The brake/ABS computer saw its supply voltage go too low (or too high). ABS, brake and stability warning lights come on until the voltage is normal again.",
+  "c": [
+   "Weak 12-volt battery or poor battery terminals",
+   "Charging system problem",
+   "Blown fuse, bad relay or wiring in the ABS power supply"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "brakes/ABS",
+  "src": [
+   "https://attachments.priuschat.com/attachment-files/2024/08/255782_2006_PRIUS_RM_-_Blink_Codes_ABS_VTC_ECB.pdf",
+   "https://www.purefjcruiser.com/docs/2007%20Toyota%20FJ%20Cruiser%20Repair%20Manual/Brake%20Control/Vehicle%20Stability%20Control%20System/0280012.pdf"
+  ],
+  "conf": "high",
+  "note": "The FJ Cruiser chart says 'Low Battery Positive Voltage'; the 2006 Prius chart adds 'or Abnormally High Battery Positive Voltage'.",
+  "alt": false
+ },
+ {
+  "code": "B1801",
+  "makes": [
+   "Toyota",
+   "Lexus",
+   "Scion"
+  ],
+  "t": "Open in Driver Side Squib Circuit",
+  "m": "The airbag computer found a broken circuit to the driver's front airbag igniter in the steering wheel. The airbag light stays on and the driver airbag may not deploy in a crash.",
+  "c": [
+   "Worn or broken spiral cable (clock spring) in the steering column",
+   "Faulty steering wheel airbag (steering pad)",
+   "Wiring or connector fault, or a faulty airbag sensor module"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "airbag",
+  "src": [
+   "https://www.purefjcruiser.com/docs/2007%20Toyota%20FJ%20Cruiser%20Repair%20Manual/Supplemental%20Restraint%20System/Airbag%20System/0340027.pdf"
+  ],
+  "conf": "high",
+  "note": "Title from the 2007 FJ Cruiser Toyota manual; it lists the circuit as the airbag sensor, spiral cable and steering pad. Older Toyota models number driver-squib codes differently (B0100-B0103), so this applies to roughly mid-2000s and newer Toyotas.",
+  "alt": false
+ },
+ {
+  "code": "B1760",
+  "makes": [
+   "Subaru"
+  ],
+  "t": "Occupant Detection Sensor Mat Abnormal",
+  "m": "The passenger-seat occupant sensor mat reported a fault, so the car can't reliably tell who is sitting there. The airbag light comes on and the front passenger airbag may be switched off.",
+  "c": [
+   "Liquid or rain water soaked into the passenger seat cushion",
+   "Poor contact in the seat sensor mat harness connector",
+   "Faulty sensor mat or seat cushion assembly"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "airbag",
+  "src": [
+   "https://static.nhtsa.gov/odi/tsbs/2017/MC-10131667-9999.pdf",
+   "https://static.nhtsa.gov/odi/tsbs/2017/MC-10138780-9999.pdf",
+   "https://static.nhtsa.gov/odi/rcl/2019/RCRIT-19V701-0743.pdf"
+  ],
+  "conf": "high",
+  "note": "Subaru bulletin 07-108-16R: 2014-2018 Forester. Recall WUM-98 / 19V-701 covers 2015-2018 Forester ODS harness replacement. Usually paired with airbag code B1650.",
+  "alt": false
+ },
+ {
+  "code": "P1604",
+  "makes": [
+   "Toyota",
+   "Lexus",
+   "Scion"
+  ],
+  "t": "Startability Malfunction",
+  "m": "The engine computer recorded that the engine took too long to start or wouldn't start normally. Drivers notice long cranking or a hard start, with the check engine light on.",
+  "c": [
+   "Weak fuel pump or low fuel pressure",
+   "Engine computer software (Toyota bulletin update on some trucks)",
+   "Ignition, air intake or sensor faults that make starting hard"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "engine",
+  "src": [
+   "https://static.nhtsa.gov/odi/tsbs/2020/MC-10171454-9999.pdf"
+  ],
+  "conf": "high",
+  "note": "Toyota TSB T-SB-0166-19 lists 'DTC P1604 (Startability Malfunction)' for 2009-2018 Sequoia and 2009-2019 Tundra with the 3UR-FBE flex-fuel 5.7L, which may crank long and also set lean/rich codes. The title is used across many 2005+ Toyota engines.",
+  "alt": false
+ },
+ {
+  "code": "C1203",
+  "makes": [
+   "Toyota",
+   "Lexus",
+   "Scion"
+  ],
+  "t": "ECM Communication Circuit Malfunction",
+  "m": "The brake/stability computer isn't getting proper messages from the engine computer, so stability control shuts off. The VSC/TRAC warning lights come on.",
+  "c": [
+   "Communication fault between the engine computer and skid control computer",
+   "Software/logic issue fixed by a Toyota bulletin (2003 Sequoia)",
+   "Wrong or mismatched replacement computer installed"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "stability",
+  "src": [
+   "https://attachments.priuschat.com/attachment-files/2024/08/255782_2006_PRIUS_RM_-_Blink_Codes_ABS_VTC_ECB.pdf",
+   "https://www.purefjcruiser.com/docs/2007%20Toyota%20FJ%20Cruiser%20Repair%20Manual/Brake%20Control/Vehicle%20Stability%20Control%20System/0280012.pdf",
+   "https://static.nhtsa.gov/odi/inv/2008/INRD-PE08072-36830.pdf"
+  ],
+  "conf": "high",
+  "note": "Toyota TSB BR002-03 (in the NHTSA file): some 2003 Sequoias get the VSC light with C1203; the fix is a revised translate computer.",
+  "alt": false
+ },
+ {
+  "code": "B1861",
+  "makes": [
+   "Toyota",
+   "Lexus",
+   "Scion"
+  ],
+  "t": "Open in Driver Side Knee Airbag Squib Circuit",
+  "m": "The airbag computer found a broken circuit to the driver's knee airbag under the dashboard. The airbag light stays on and the knee airbag may not deploy in a crash.",
+  "c": [
+   "Damaged wire in the instrument panel harness to the knee airbag",
+   "Loose knee airbag connector",
+   "Faulty knee airbag or airbag sensor module"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "airbag",
+  "src": [
+   "https://static.nhtsa.gov/odi/tsbs/2019/MC-10155240-9999.pdf"
+  ],
+  "conf": "high",
+  "note": "Lexus bulletin L-SB-0007-19 (replaces L-SB-0167-08): 2006-2008 IS250/IS350 and 2008 IS F; the repair is a wire harness repair kit, covered by the Lexus restraint warranty (72 months / 70,000 miles).",
+  "alt": false
+ },
+ {
+  "code": "P1603",
+  "makes": [
+   "Toyota",
+   "Lexus",
+   "Scion"
+  ],
+  "t": "Engine Stall History",
+  "m": "The engine computer recorded that the engine stalled by itself while the key/power was still on. It is a record of a stall, not proof that one part has failed.",
+  "c": [
+   "Fuel delivery problem (weak pump, low fuel)",
+   "Carbon buildup or air intake problems causing a rough idle",
+   "Engine computer software or wet/corroded engine computer connectors"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "engine",
+  "src": [
+   "https://www.iatn.net/techmail/summaries/2019/07/P1603-dtc.html",
+   "https://theautoinsiderblog.com/toyota-p1603/",
+   "https://static.nhtsa.gov/odi/tsbs/2022/MC-10224140-9999.pdf"
+  ],
+  "conf": "medium",
+  "note": "The title comes from an iATN case on a 2013 Camry and a repair blog, not an official Toyota page that loaded. Toyota campaign 22TC07 (2020 Corolla, low-speed stall fixed by an engine computer update) says that stall can leave P1603 in history. Toyota bulletins also list P1603 with P1604/P1605 (2012-2013 Scion iQ carbon buildup; Highlander connector corrosion T-SB-0072-19).",
+  "alt": false
+ },
+ {
+  "code": "P1121",
+  "makes": [
+   "Toyota",
+   "Lexus",
+   "Scion"
+  ],
+  "t": "Coolant Flow Control Valve Position Sensor Circuit Stuck",
+  "m": "On the 2nd-gen Prius, the engine computer saw the coolant valve for the hot-coolant storage tank not moving when told to. The check engine light comes on; warm-up and heater performance can suffer.",
+  "c": [
+   "Stuck or failed coolant (water) valve",
+   "Clogged cooling passages or dirty coolant",
+   "Faulty valve position sensor or engine computer"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "engine",
+  "src": [
+   "https://attachments.priuschat.com/attachment-files/2020/10/195150_DTC_P1121.pdf"
+  ],
+  "conf": "high",
+  "note": "Toyota Prius repair manual page (2004-2009 Prius with Coolant Heat Storage). The manual notes the 'coolant flow control valve' title actually refers to the water valve. On other Toyota engines without that system the code may mean something else; the one Suzuki and one Ford complaint were not checked.",
+  "alt": false
+ },
+ {
+  "code": "B0116",
+  "makes": [
+   "Toyota",
+   "Lexus",
+   "Scion"
+  ],
+  "t": "Open in Side Squib LH Circuit",
+  "m": "The airbag computer found a broken circuit to the left-side (driver side) seat airbag igniter. The airbag light stays on and that side airbag may not deploy in a crash.",
+  "c": [
+   "Damaged or loose floor wiring harness / connector under the left front seat",
+   "Faulty left side airbag assembly",
+   "Faulty airbag sensor (control) module"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "airbag",
+  "src": [
+   "https://lc100e.github.io/pdf/rm/rm970e/m_di_0503.pdf",
+   "https://carcomplaints.com/Toyota/Sienna/2004/tsbs/tsb-t-sb-0069-12-rev.shtml"
+  ],
+  "conf": "high",
+  "note": "Title from a Toyota Land Cruiser repair manual page. Toyota bulletin T-SB-0069-12: 2004-2009 Sienna with the airbag light on and B0111 and/or B0116, repaired at the floor harness / side airbag squib circuit.",
+  "alt": false
+ },
+ {
+  "code": "C1231",
+  "makes": [
+   "Toyota",
+   "Lexus",
+   "Scion"
+  ],
+  "t": "Steering Angle Sensor Circuit Malfunction",
+  "m": "The stability control computer got a bad or uncalibrated signal from the sensor that reads which way the steering wheel is turned. VSC/TRAC lights come on and stability control may act wrongly or switch off.",
+  "c": [
+   "Steering angle sensor not calibrated (center point not stored)",
+   "Faulty steering angle sensor or its wiring",
+   "Skid control computer software (2003 Sequoia recall/bulletin)"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "stability",
+  "src": [
+   "https://attachments.priuschat.com/attachment-files/2024/08/255782_2006_PRIUS_RM_-_Blink_Codes_ABS_VTC_ECB.pdf",
+   "https://www.purefjcruiser.com/docs/2007%20Toyota%20FJ%20Cruiser%20Repair%20Manual/Brake%20Control/Vehicle%20Stability%20Control%20System/0280012.pdf",
+   "https://static.nhtsa.gov/odi/rcl/2010/RCRIT-10V176-4161.pdf"
+  ],
+  "conf": "high",
+  "note": "Recall 10V-176 (2003 Sequoia): the skid control computer may not store the steering sensor's center point, so VSC can kick in at about 9 mph after pulling away and slow acceleration. The fix is a reflash or new skid control computer. Toyota TSB BR003-03 also covers 2003 Sequoia with C1231.",
+  "alt": false
+ },
+ {
+  "code": "C1201",
+  "makes": [
+   "Toyota",
+   "Lexus",
+   "Scion"
+  ],
+  "t": "Engine Control System Malfunction",
+  "m": "The stability control system turned off because the engine computer reported its own fault. VSC/TRAC lights come on along with the check engine light; fix the engine code first.",
+  "c": [
+   "Any stored engine fault (check engine light code)",
+   "Engine computer problem",
+   "Wiring between the engine and skid control computers"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "stability",
+  "src": [
+   "https://www.purefjcruiser.com/docs/2007%20Toyota%20FJ%20Cruiser%20Repair%20Manual/Brake%20Control/Vehicle%20Stability%20Control%20System/0280012.pdf"
+  ],
+  "conf": "high",
+  "note": "Title from the Toyota VSC trouble code chart (2007 FJ Cruiser manual).",
+  "alt": false
+ },
+ {
+  "code": "C0063",
+  "makes": [
+   "Can-Am"
+  ],
+  "t": "Yaw Rate Sensor Fault",
+  "m": "The vehicle stability system on a Can-Am Spyder or Ryker got a bad signal from the sensor that measures how fast the vehicle is turning. Stability and traction control can shut off and the vehicle may go into limp mode.",
+  "c": [
+   "Steering angle sensor zero point not learned or lost",
+   "Excess play in the front steering/suspension parts",
+   "Wiring or connector problem, or low battery voltage"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "stability",
+  "src": [
+   "https://static.nhtsa.gov/odi/tsbs/2020/MC-10181946-0001.pdf",
+   "https://www.spyderlovers.com/threads/2016-f3-t-sm6-with-codes-c0063-and-c006c-any-suggestions.165216/latest"
+  ],
+  "conf": "medium",
+  "note": "BRP tech tip 137209 (NHTSA file) for the Ryker lists C0063 with C0052 and C006C as stability faults under the title 'Yaw Rate - SAS Sensor Faults', caused by loose front steering parts or a steering angle sensor zero that wasn't learned at the factory. A Spyder owner thread identifies C0063 as the yaw rate code, and the dealer fixed it with a steering angle sensor reset.",
+  "alt": false
+ },
+ {
+  "code": "U3000",
+  "makes": [
+   "Honda",
+   "Acura"
+  ],
+  "t": "Control Module Internal Failure (Airbag Unit)",
+  "m": "A control module reports an internal failure. On the Hondas most named in complaints it is stored by the airbag (SRS) unit, so the airbag light comes on and the passenger airbag indicator can stay off.",
+  "c": [
+   "Faulty front passenger seat weight sensor (2020-22 Odyssey/Pilot/Passport recall)",
+   "Internal fault in the SRS unit or another module",
+   "Weak 12V battery causing module glitches"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "airbag",
+  "src": [
+   "https://static.nhtsa.gov/odi/rcl/2023/RCRIT-23V858-0066.pdf"
+  ],
+  "conf": "high",
+  "note": "Honda Service Bulletin 24-020 (safety recall, 2020-22 Odyssey): DTC U3000-49 = 'Internal Failure of the SRS Unit', tied to seat weight sensors that can crack/short. The same seat-weight-sensor campaign also covers 2020-21 Passport and 2020-22 Pilot (recall 24V064). On other Hondas U3000 can be stored by a different module; read which module and suffix.",
+  "alt": false
+ },
+ {
+  "code": "U3000",
+  "makes": [
+   "Ford",
+   "Lincoln",
+   "Mercury"
+  ],
+  "t": "Control Module Internal Failure",
+  "m": "One of the car's computer modules has flagged a fault inside itself. The letters after the colon and the module that stored it (for example steering, cruise/radar or the hybrid DC/DC converter) tell you which feature is affected, and that feature may switch off with a dash warning.",
+  "c": [
+   "Low or weak 12V battery, or a voltage dip at start-up",
+   "Module software that needs a Ford update or reset routine",
+   "A blown high-current fuse feeding the module (some hybrids)",
+   "A failed module (only after software and power are ruled out)"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "network",
+  "src": [
+   "https://static.nhtsa.gov/odi/tsbs/2019/MC-10156575-0001.pdf",
+   "https://static.nhtsa.gov/odi/tsbs/2019/MC-10160887-0001.pdf",
+   "https://static.nhtsa.gov/odi/inv/2012/INRD-PE12017-56148P.pdf"
+  ],
+  "conf": "high",
+  "note": "Generic 'control module' code; what it affects depends on the module. Ford SSMs: 2016-2019 Edge, 2017-2019 Continental/F-Super Duty, 2016-2018 MKX, 2019 Nautilus set it in the steering effort control module (fix = IDS reset); 2017-2019 F-Super Duty set it in the cruise control module, often from low battery voltage. Ford EPAS DTC list in NHTSA PE12-017 gives root 'Control Module', :49 'Internal Electronic Failure'. Safety depends on module (steering assist on some).",
+  "alt": true
+ },
+ {
+  "code": "B1448",
+  "makes": [
+   "Hyundai",
+   "Kia"
+  ],
+  "t": "Passenger Occupant Sensor Mat Defect",
+  "m": "The airbag computer sees a fault in the sensor mat under the front passenger seat cushion that decides whether an adult, child or nobody is sitting there. The airbag light comes on and the passenger airbag may not be set correctly.",
+  "c": [
+   "Failed passenger seat occupant sensor mat",
+   "Damaged or loose wiring/connector under the passenger seat",
+   "Liquid spilled on the seat or electronics placed on the cushion (can set it temporarily)"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "airbag",
+  "src": [
+   "https://www.vehicleservicepros.com/tsbs/article/53092983/temporary-airbag-warning-on-kia-models-2011-11-01"
+  ],
+  "conf": "high",
+  "note": "Definition from a Kia TSB covering 2011+ Sorento (XM), 2009-10 Optima (MG) and 2010+ Rio (JB) with the electric-field occupant classification sensor. Hyundai Sonata owner reports describe the same 'OCS mat defect' reading. Generic code sites list B1448 as a wiper code, which does not apply to Hyundai/Kia.",
+  "alt": false
+ },
+ {
+  "code": "B1018",
+  "makes": [
+   "Nissan",
+   "Infiniti"
+  ],
+  "t": "Occupant Sensor Control Unit Failure",
+  "m": "The airbag system found a fault in the front passenger seat occupant sensing parts (the weight/occupant sensor or its control unit). The airbag light comes on or flashes and the passenger airbag status may be wrong.",
+  "c": [
+   "Failed occupant sensor or sensor mat in the passenger seat cushion",
+   "Failed occupant sensor control unit",
+   "Loose connector or bad ground in the seat wiring",
+   "Objects pushed under the seat damaging wiring"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "airbag",
+  "src": [
+   "https://static.nhtsa.gov/odi/inv/2019/INRD-PE19015-79574.pdf",
+   "https://automotivetechinfo.com/wp-content/uploads/2016/09/Nissan-Supplemental-Restraint-Systems-SRS.pdf"
+  ],
+  "conf": "high",
+  "note": "Nissan Tech Line reports filed in NHTSA PE19-015 give the definition; fixes included replacing the passenger seat cushion/frame or OCS unit. Nissan TechNews article says on the 2012 Altima B1018 points to the OCS sensor mat.",
+  "alt": false
+ },
+ {
+  "code": "B0020",
+  "makes": [
+   "Nissan",
+   "Infiniti"
+  ],
+  "t": "Front Left Side Air Bag Module Circuit",
+  "m": "The airbag computer found an open or short in the wiring to the driver-side front seat side airbag. The airbag light stays on and that side airbag may not deploy.",
+  "c": [
+   "Loose or corroded connector under the driver seat",
+   "Damaged seat wiring harness",
+   "Failed driver-side seat side airbag module",
+   "Faulty airbag diagnosis sensor unit (rare)"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "airbag",
+  "src": [
+   "https://b17.nisentra.com/b0020_side_airbag_module_lh-1042.html"
+  ],
+  "conf": "high",
+  "note": "Definition from the Nissan Sentra (B17) service manual; Nissan uses the same SRS code numbering across recent models, and Altima owner reports of B0020 involved the seat/side airbag. Confirm the exact suffix (-13 open etc.) for the model year.",
+  "alt": false
+ },
+ {
+  "code": "B0020",
+  "makes": [
+   "Chrysler",
+   "Dodge",
+   "Jeep",
+   "Ram",
+   "Fiat"
+  ],
+  "t": "Left Side Seat Air Bag Squib 1 Circuit Open",
+  "m": "The airbag computer sees an open circuit to the left (driver) front seat side airbag. The airbag light comes on and that side airbag may not deploy.",
+  "c": [
+   "Poor connection in the seat-to-body connector under the seat",
+   "Damaged seat wiring",
+   "Failed seat side airbag"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "airbag",
+  "src": [
+   "https://static.nhtsa.gov/odi/tsbs/2020/MC-10183086-9999.pdf"
+  ],
+  "conf": "high",
+  "note": "Extra family (Chrysler had 5 complaints). FCA TSB 10-001-20 for 2014-2017 Jeep Cherokee and 2015-2017 Chrysler 200 with front seat side airbags; fix may be a jumper harness in the seat.",
+  "alt": true
+ },
+ {
+  "code": "C1179",
+  "makes": [
+   "Nissan",
+   "Infiniti"
+  ],
+  "t": "ABS Delta Stroke Sensor Fault",
+  "m": "The ABS/brake control unit sees a bad signal from the delta stroke sensor that measures brake pedal travel on the active brake booster. Brake, ABS and stability warning lights come on and brake assist features may be limited.",
+  "c": [
+   "Failed delta stroke sensor (built into the brake booster)",
+   "Open or shorted wiring between the sensor and ABS unit",
+   "Corroded or loose connectors",
+   "ABS actuator/control unit fault or outdated software"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "brakes/ABS",
+  "src": [
+   "https://nissan-gt-r-wordzz.blogspot.com/2018/03/c1179-c1179-abs-delta-s-sen-ng.html"
+  ],
+  "conf": "medium",
+  "note": "Source is a blog reproducing the Nissan Armada (VK56DE) service manual C-code page. Applies to models with the active brake booster (Armada, Titan, QX56, mainly mid-2000s). obdadvisor (same meaning) returned 403 and was dropped.",
+  "alt": false
+ },
+ {
+  "code": "P1778",
+  "makes": [
+   "Nissan",
+   "Infiniti"
+  ],
+  "t": "CVT Step Motor Function",
+  "m": "The transmission computer sees that the CVT is not changing ratio the way it commanded through the step motor. The check engine light comes on and the car may feel sluggish or slow to speed up.",
+  "c": [
+   "Failed or sticking CVT step motor",
+   "Problem in the CVT control valve body",
+   "Wiring or connector fault to the step motor",
+   "Transmission computer needing a software update"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "transmission",
+  "src": [
+   "https://static.nhtsa.gov/odi/tsbs/2013/MC-10192260-9999.pdf"
+  ],
+  "conf": "high",
+  "note": "Nissan bulletin for 2010 Maxima, Murano and V6 Altima: MIL on with DTC P1778 (STEP MOTOR); repair = control valve replacement and TCM reprogram. Exact wording varies by CVT type.",
+  "alt": false
+ },
+ {
+  "code": "B00A0",
+  "makes": [
+   "Nissan",
+   "Infiniti"
+  ],
+  "t": "Occupant Detection Sensor Unit",
+  "m": "The front passenger occupant classification system (the seat sensor that tells the airbag who is sitting there) has a fault. The airbag light comes on and the passenger airbag status may be wrong.",
+  "c": [
+   "OCS needs a zero-point reset after seat work",
+   "Failed OCS control unit or seat sensor",
+   "Wiring or low voltage to the OCS unit",
+   "Items on the seat or seat damage"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "airbag",
+  "src": [
+   "https://static.nhtsa.gov/odi/tsbs/2023/MC-10234044-0001.pdf"
+  ],
+  "conf": "high",
+  "note": "Nissan NTB19-071C covers DTC B00A0-00 (Occupant Detection Sensor Unit) on many 2009-2023 Nissans (Altima, Rogue, Murano, Sentra, Armada, Titan, etc.). Sub-codes (-02, -04, -22) narrow the fault.",
+  "alt": false
+ },
+ {
+  "code": "B1706",
+  "makes": [
+   "Hyundai",
+   "Kia"
+  ],
+  "t": "Passenger Buckle Pretensioner Resistance High",
+  "m": "The airbag computer reads too much resistance in the circuit of the passenger seat belt buckle pretensioner (the charge that pulls the belt tight in a crash). The airbag light comes on.",
+  "c": [
+   "Loose or poorly mating connector under the passenger seat",
+   "Worn or faulty passenger seat belt buckle assembly",
+   "Corroded terminals"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "airbag",
+  "src": [
+   "https://static.nhtsa.gov/odi/inv/2014/INRD-PE14023-60063P.PDF"
+  ],
+  "conf": "high",
+  "note": "From Hyundai's response in NHTSA investigation PE14-023 (2006-2008 Sonata, dual pretensioner system). Hyundai TSB 15-BE-002 covers B1701/B1706 on 2006-2008 Sonata; Hyundai announced a warranty extension. 2009+ Sonata dropped buckle pretensioners.",
+  "alt": false
+ },
+ {
+  "code": "U1000",
+  "makes": [
+   "Nissan",
+   "Infiniti"
+  ],
+  "t": "CAN Communication Circuit",
+  "m": "A module stopped hearing (or sending) expected messages on the car's CAN data network. Warning lights and features run by that module can drop out, often several at once.",
+  "c": [
+   "Open or shorted CAN wiring or a loose connector",
+   "A module unplugged during a repair",
+   "Low battery voltage or bad ground",
+   "A failed module dragging the network down"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "network",
+  "src": [
+   "https://static.nhtsa.gov/odi/tsbs/2022/MC-10208946-0001.pdf"
+  ],
+  "conf": "high",
+  "note": "Nissan NTB13-027C (2005-2022 Nissan vehicles): U1000 = missing CAN communications (ECM not OBD-related, or any other ECU). Nissan says to diagnose U1000/U1001/U1002/U1010 before other codes. GM uses U1000 differently.",
+  "alt": false
+ },
+ {
+  "code": "U3003",
+  "makes": [
+   "Ford",
+   "Lincoln",
+   "Mercury"
+  ],
+  "t": "Control Module Battery Voltage",
+  "m": "A module saw supply voltage outside its normal range, usually too low. Features run by that module (stability control, steering assist, hybrid 12V charging) can switch off or show warnings until voltage recovers.",
+  "c": [
+   "Weak or discharged 12V battery",
+   "Charging system problem",
+   "Loose or corroded battery cables or grounds",
+   "Open 300A high-current fuse on some hybrids (DC/DC converter)"
+  ],
+  "s": 1,
+  "w": 0,
+  "sys": "body/electrical",
+  "src": [
+   "https://static.nhtsa.gov/odi/inv/2012/INRD-PE12017-56148P.pdf",
+   "https://static.nhtsa.gov/odi/tsbs/2024/MC-10249424-0001.pdf"
+  ],
+  "conf": "high",
+  "note": "Ford EPAS DTC list in NHTSA PE12-017: U3003-16 Battery Voltage Circuit Voltage Below Threshold (set under ~9V), -17 Above Threshold. Ford SSM 52201: 2020-2023 Escape, 2021-2023 Corsair, 2022-2023 Maverick hybrids with U3003:62 in the DC/DC converter from an open fuse.",
+  "alt": false
+ },
+ {
+  "code": "P1327",
+  "makes": [
+   "Hyundai",
+   "Kia"
+  ],
+  "t": "Piston Noise Detection",
+  "m": "The engine computer's piston ring noise sensing software heard vibration that points to damage on the piston oil rings. The check engine light comes on and Kia's fix is often a replacement engine.",
+  "c": [
+   "Piston oil ring damage and cylinder wall wear in the 2.0L Nu MPI engine",
+   "Engine oil consumption from ring damage",
+   "Rarely a sensing fault, which is why the software update is done first"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "engine",
+  "src": [
+   "https://static.nhtsa.gov/odi/tsbs/2022/MC-10210219-0001.pdf",
+   "https://static.nhtsa.gov/odi/rcl/2021/RCRIT-21V259-7637.pdf"
+  ],
+  "conf": "high",
+  "note": "Confirmed for 2020-2021 Kia Soul (SK3) and 2021 Seltos (SP2) 2.0L Nu MPI under safety recall SC209 (NHTSA 21V259): software adds this DTC; Kia SC209Y replaces the long block if it sets. Older Hyundai/Kia engines may use P1327 for something else; not confirmed. Not the same as P1326 (KSDS bearing wear).",
+  "alt": false
+ },
+ {
+  "code": "P1320",
+  "makes": [
+   "Nissan",
+   "Infiniti"
+  ],
+  "t": "Ignition Signal Primary Circuit",
+  "m": "The engine computer is not getting the expected signal back from the ignition coil primary circuit, so it thinks one or more cylinders did not fire properly. The check engine light comes on, often with misfires or spark knock.",
+  "c": [
+   "Failed ignition coil (often with a built-in power transistor)",
+   "Wiring or connector fault in a coil circuit",
+   "Crank or cam sensor problems disturbing the ignition trigger",
+   "Engine computer fault (rare)"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "engine",
+  "src": [
+   "https://www.carcomplaints.com/Nissan/Maxima/2000/tsbs/tsb-ntb01059.shtml",
+   "https://www.iatn.net/techmail/summaries/2006/08/P1320-dtc.html"
+  ],
+  "conf": "medium",
+  "note": "Nissan TSB NTB01-059 (2000-01 Maxima) covers MIL on with DTC P1320 and/or spark knock due to ignition coils; title from iATN (Nissan Maxima/Pickup cases). The NHTSA copy of the TSB is not posted; manual-site copies were unreachable.",
+  "alt": false
+ },
+ {
+  "code": "B1382",
+  "makes": [
+   "Hyundai",
+   "Kia"
+  ],
+  "t": "Side Airbag Front Passenger Resistance Too High",
+  "m": "The airbag computer reads too much resistance in the circuit of the passenger front seat side airbag. The airbag light comes on and that side airbag may not deploy.",
+  "c": [
+   "Loose or high-resistance side airbag connector under the passenger seat",
+   "Damaged seat wiring",
+   "Failed seat side airbag module"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "airbag",
+  "src": [
+   "https://static.nhtsa.gov/odi/tsbs/2022/MC-10217680-0001.pdf"
+  ],
+  "conf": "high",
+  "note": "Kia TSB ELE 259 (warranty extension WTY025) for 2017-2018 Sedona built 3/2016-12/2017: fix is reseating the seat side airbag connector. Generic sites list B1382 as an oil-change reset code, which does not apply.",
+  "alt": false
+ },
+ {
+  "code": "B1764",
+  "makes": [
+   "Kia",
+   "Hyundai"
+  ],
+  "t": "Passenger Occupant Sensor Mat Defect",
+  "m": "The airbag system found a fault in the front passenger seat occupant detection pad. The airbag light comes on and the passenger airbag may not be set correctly.",
+  "c": [
+   "Failed passenger seat occupant detection sensor pad",
+   "Wiring or connector fault to the pad",
+   "Liquid or electronics on the seat cushion (temporary)"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "airbag",
+  "src": [
+   "https://static.nhtsa.gov/odi/tsbs/2025/MC-11025768-0001.pdf",
+   "https://www.vehicleservicepros.com/tsbs/article/53092983/temporary-airbag-warning-on-kia-models-2011-11-01"
+  ],
+  "conf": "high",
+  "note": "Kia TSB BOD 205: 2011-2013 Sorento (XMa) with B1763/B1764/B1765 gets a passenger seat ODS sensor pad replacement (2014-15 use B149000-series codes). Kia TSB description: 'BodySense MAT Defect'.",
+  "alt": false
+ },
+ {
+  "code": "B1346",
+  "makes": [
+   "Hyundai",
+   "Kia"
+  ],
+  "t": "Driver Airbag Resistance Too High (Stage 1)",
+  "m": "The airbag computer reads too much resistance in the first-stage circuit of the steering wheel airbag. The airbag light stays on and the driver airbag may not deploy.",
+  "c": [
+   "Worn or broken clock spring behind the steering wheel",
+   "Loose or corroded driver airbag connector",
+   "Failed driver airbag module"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "airbag",
+  "src": [
+   "https://static.nhtsa.gov/odi/tsbs/2024/MC-11011945-0001.pdf",
+   "https://static.nhtsa.gov/odi/inv/2019/INRD-EA19001-11274.pdf"
+  ],
+  "conf": "high",
+  "note": "Kia TSB ELE 108 (WTY003): 2011-2015 Sorento clock spring warranty extended to 15 years/unlimited miles. Hyundai/Kia DTC chart in NHTSA EA19-001 sets it at squib resistance about 6.7 ohms or more.",
+  "alt": false
+ },
+ {
+  "code": "B1378",
+  "makes": [
+   "Hyundai",
+   "Kia"
+  ],
+  "t": "Side Airbag Front Driver Resistance Too High",
+  "m": "The airbag computer reads too much resistance in the circuit of the driver front seat side airbag. The airbag light comes on and that side airbag may not deploy.",
+  "c": [
+   "Loose or high-resistance side airbag connector under the driver seat",
+   "Damaged seat wiring",
+   "Failed seat side airbag module"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "airbag",
+  "src": [
+   "https://static.nhtsa.gov/odi/tsbs/2022/MC-10217680-0001.pdf"
+  ],
+  "conf": "high",
+  "note": "Kia TSB ELE 259 (WTY025) for 2017-2018 Sedona. One older Kia Spectra manual snippet labels B1378 'too low'; the Kia TSB says 'too high'.",
+  "alt": false
+ },
+ {
+  "code": "B0001",
+  "makes": [
+   "Honda",
+   "Acura"
+  ],
+  "t": "Driver Airbag Stage 1 Inflator Circuit",
+  "m": "The airbag computer found a problem in the circuit to the first-stage inflator of the steering wheel airbag (open, high or low resistance, or shorted). The airbag light comes on and the driver airbag may not deploy.",
+  "c": [
+   "Failed driver airbag module",
+   "Worn or damaged clock spring (cable reel)",
+   "Corroded or damaged airbag connector pins"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "airbag",
+  "src": [
+   "https://static.nhtsa.gov/odi/tsbs/2016/SB-10083593-2280.pdf",
+   "https://static.nhtsa.gov/odi/tsbs/2023/MC-10242209-0001.pdf"
+  ],
+  "conf": "high",
+  "note": "Honda TSB: 2012-2014 Civic with B0001-13 (2013MY) = driver's airbag first inflator, fix = replace driver airbag. Honda 2023 HR-V/CR-V notice: B0001-12 short to power, -13 open/increased resistance, -1A decreased resistance in the driver's airbag primary inflator.",
+  "alt": false
+ },
+ {
+  "code": "C1513",
+  "makes": [
+   "Hyundai",
+   "Kia"
+  ],
+  "t": "Brake Switch Error",
+  "m": "The stability/ABS computer sees a brake pedal switch signal that does not make sense, for example the brake lights stay on when the pedal is released. The ESC or traction light comes on and the brake lights may stay lit.",
+  "c": [
+   "Worn or missing brake pedal stopper pad",
+   "Faulty or mis-adjusted brake light switch",
+   "Wiring fault at the switch"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "brakes/ABS",
+  "src": [
+   "https://static.nhtsa.gov/odi/tsbs/2016/SB-10074326-0699.pdf",
+   "https://www.iatn.net/techmail/summaries/2012/05/C1513-dtc.html"
+  ],
+  "conf": "high",
+  "note": "Hyundai TSB 16-01-007 (recall campaign 136, 2011-2012 Sonata YF): a crumbling pedal stopper pad can keep the stop lamp switch on; the code may set during the repair. Also seen on 2007 Tucson. Check the VIN for open recalls.",
+  "alt": false
+ },
+ {
+  "code": "B1481",
+  "makes": [
+   "Hyundai",
+   "Kia"
+  ],
+  "t": "Driver Airbag Resistance Too High (Stage 2)",
+  "m": "The airbag computer reads too much resistance in the second-stage circuit of the steering wheel airbag. The airbag light stays on and the driver airbag may not work properly.",
+  "c": [
+   "Worn or broken clock spring",
+   "Loose or corroded driver airbag connector",
+   "Failed driver airbag module"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "airbag",
+  "src": [
+   "https://static.nhtsa.gov/odi/tsbs/2024/MC-11011945-0001.pdf"
+  ],
+  "conf": "high",
+  "note": "Kia TSB ELE 108 (WTY003) lists B1481/B148100 for the 2011-2015 Sorento clock spring warranty extension; Kia also has a 2012-2013 Rio clock spring TSB for B1346/B1481.",
+  "alt": false
+ },
+ {
+  "code": "B0028",
+  "makes": [
+   "Chrysler",
+   "Dodge",
+   "Jeep",
+   "Ram",
+   "Fiat"
+  ],
+  "t": "Right Side Seat Air Bag Squib 1 Circuit Open",
+  "m": "The airbag computer sees an open circuit to the right (passenger) front seat side airbag. The airbag light comes on and that side airbag may not deploy.",
+  "c": [
+   "Poor connection in the seat-to-body connector under the seat",
+   "Damaged seat wiring",
+   "Failed seat side airbag"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "airbag",
+  "src": [
+   "https://static.nhtsa.gov/odi/tsbs/2020/MC-10183086-9999.pdf"
+  ],
+  "conf": "high",
+  "note": "FCA TSB 10-001-20 for 2014-2017 Jeep Cherokee and 2015-2017 Chrysler 200 with front seat side airbags (fix may be a jumper harness). Ram-specific confirmation not found.",
+  "alt": false
+ },
+ {
+  "code": "B0028",
+  "makes": [
+   "Nissan",
+   "Infiniti"
+  ],
+  "t": "Front Right Side Air Bag Module Circuit",
+  "m": "The airbag computer found an open or short in the wiring to the passenger-side front seat side airbag. The airbag light stays on and that side airbag may not deploy.",
+  "c": [
+   "Loose or corroded connector under the passenger seat",
+   "Damaged seat wiring harness",
+   "Failed passenger-side seat side airbag module"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "airbag",
+  "src": [
+   "https://b17.nisentra.com/b0028_side_airbag_module_rh-1044.html"
+  ],
+  "conf": "high",
+  "note": "Nissan Sentra (B17) service manual; the suffix (-13 open, etc.) narrows the fault.",
+  "alt": true
+ },
+ {
+  "code": "P1750",
+  "makes": [
+   "Honda",
+   "Acura"
+  ],
+  "t": "A/T Clutch Pressure Control Solenoid Hydraulic Problem",
+  "m": "The transmission computer sees that gear clutch pressure is not behaving as commanded, pointing to a mechanical or hydraulic problem in the automatic transmission. Shifts can slip, flare or feel harsh, and the check engine light comes on.",
+  "c": [
+   "Clogged screens or sticking clutch pressure control (linear) solenoids",
+   "Low, old or dirty transmission fluid",
+   "Valve body or internal transmission wear",
+   "Transmission computer fault (rare)"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "transmission",
+  "src": [
+   "https://www.2carpros.com/questions/error-code-and-transmission-slipping",
+   "https://ericthecarguy.com/hondaacura-p1600-to-p1895-obd-ii"
+  ],
+  "conf": "medium",
+  "note": "Forum post quoting the Honda/Acura DTC procedure (2003 Acura TL) plus a Honda/Acura code list. Older 5-speed Honda/Acura automatics. On Toyota/Lexus P1750 is an unrelated brake code.",
+  "alt": false
+ },
+ {
+  "code": "B1701",
+  "makes": [
+   "Hyundai",
+   "Kia"
+  ],
+  "t": "Driver Seat Belt Buckle Pretensioner Resistance High",
+  "m": "The airbag computer reads too much resistance in the driver seat belt buckle pretensioner circuit. The airbag light comes on.",
+  "c": [
+   "Loose or poorly mating connector under the driver seat",
+   "Worn or faulty driver seat belt buckle assembly",
+   "Corroded terminals"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "airbag",
+  "src": [
+   "https://static.nhtsa.gov/odi/inv/2014/INRD-PE14023-60063P.PDF"
+  ],
+  "conf": "high",
+  "note": "From Hyundai's response in NHTSA PE14-023 (2006-2008 Sonata). Hyundai TSB 15-BE-002 covers B1701/B1706; Hyundai announced a warranty extension. Hyundai told NHTSA the retractor pretensioner still works if the buckle one has high resistance.",
+  "alt": false
+ },
+ {
+  "code": "B1054",
+  "makes": [
+   "Nissan",
+   "Infiniti"
+  ],
+  "t": "Driver Air Bag Stage 2 Circuit Open",
+  "m": "The airbag computer sees an open circuit in the second-stage circuit of the steering wheel airbag. The airbag light stays on and the driver airbag may not work properly.",
+  "c": [
+   "Worn or broken spiral cable (clock spring)",
+   "Damaged driver airbag wiring or connector",
+   "Failed driver airbag module",
+   "Airbag diagnosis sensor unit fault (rare)"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "airbag",
+  "src": [
+   "https://automotivetechinfo.com/wp-content/uploads/2016/09/Nissan-Supplemental-Restraint-Systems-SRS.pdf"
+  ],
+  "conf": "high",
+  "note": "Nissan TechNews SRS article: on the 2012 Altima B1054 means an open in the driver's air bag stage 2 circuit; all driver airbag DTCs B1049-B1052 and B1054-B1057 call for a spiral cable check. Generic sites give conflicting meanings.",
+  "alt": false
+ },
+ {
+  "code": "C1130",
+  "makes": [
+   "Nissan",
+   "Infiniti"
+  ],
+  "t": "Engine Signal",
+  "m": "The ABS/stability computer is not getting a valid signal from the engine computer. ABS/VDC/traction lights can come on and features like intelligent cruise and emergency braking may switch off.",
+  "c": [
+   "An engine fault that already set its own P-code",
+   "Engine computer signal or CAN message missing",
+   "Wiring or network fault between the engine and ABS computers"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "brakes/ABS",
+  "src": [
+   "https://static.nhtsa.gov/odi/tsbs/2016/MC-10119264-9999.pdf"
+  ],
+  "conf": "high",
+  "note": "Infiniti BR16-005/ITB16-047 (2012-2017 G37, Q50, Q60, Q70, QX50, QX60, QX70, etc.): fix engine P-codes first, then clear C1130. Nissan has a matching bulletin NTB16-116 (Altima, Juke, NV200, Maxima, Rogue).",
+  "alt": false
+ },
+ {
+  "code": "C1A16",
+  "makes": [
+   "Nissan",
+   "Infiniti"
+  ],
+  "t": "Front Radar Sensor Blocked",
+  "m": "The front radar sensor in the bumper cannot see clearly, so intelligent cruise control and automatic emergency braking switch off and a 'front radar obstruction' or 'front sensor blocked' message shows.",
+  "c": [
+   "Dirt, snow, ice or a stain on the radar cover",
+   "Something mounted in front of the sensor (plate frame, bra, damage)",
+   "Radar sensor out of alignment",
+   "Faulty radar sensor (only after the above)"
+  ],
+  "s": 1,
+  "w": 0,
+  "sys": "stability",
+  "src": [
+   "https://static.nhtsa.gov/odi/tsbs/2023/MC-10238339-0001.pdf"
+  ],
+  "conf": "high",
+  "note": "Nissan NTB19-033E (all Nissans with ICC distance sensor): if C1A16/C1A16-97 or C2582 is the only DTC, check for obstruction and do sensor alignment; don't replace the sensor first. Safety marked 'brakes' because automatic emergency braking is disabled.",
+  "alt": false
+ },
+ {
+  "code": "B2278",
+  "makes": [
+   "Ford",
+   "Lincoln",
+   "Mercury"
+  ],
+  "t": "Steering Shaft Torque Sensor Fault",
+  "m": "The power steering computer has found a problem with the torque sensor that measures how hard you turn the wheel, so it drops into manual steering mode. The driver suddenly feels heavy steering, usually with a warning light or message.",
+  "c": [
+   "Noisy or failing steering torque sensor",
+   "Power steering module software that needs the recall update",
+   "Wiring or connector problem at the steering column sensor"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "steering",
+  "src": [
+   "https://static.nhtsa.gov/odi/inv/2015/INCLA-DP15001-9888.PDF"
+  ],
+  "conf": "high",
+  "note": "NHTSA DP15-001 closing resume: on 2008-2011 Ford Escape / Mercury Mariner with electric power steering (recall 14V-284, Ford 14S05), dealers replace the torque sensor when B2278 is stored. NHTSA describes it as a torque sensor fault; the exact Ford title wording comes from secondary sources (Ford TSB 14-0016 not loaded). Mazda B2278 (2 complaints) not covered.",
+  "alt": false
+ },
+ {
+  "code": "B1342",
+  "makes": [
+   "Ford",
+   "Lincoln",
+   "Mercury"
+  ],
+  "t": "ECU Is Faulted",
+  "m": "A control module has run a self-check and found a fault inside itself. Which module depends on the car; on 2008-2011 Escape/Mariner it is usually the electric power steering module, and the driver may lose power steering assist.",
+  "c": [
+   "Internal failure of the module that stored the code",
+   "On 2008-2011 Escape/Mariner: failed power steering control module (fixed by replacing the steering column)",
+   "Low or unstable supply voltage to the module"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "body/electrical",
+  "src": [
+   "https://cdn.shopify.com/s/files/1/0067/5813/7919/files/Ford_Master_DTC_List.pdf",
+   "https://static.nhtsa.gov/odi/inv/2015/INCLA-DP15001-9888.PDF"
+  ],
+  "conf": "high",
+  "note": "Source is Ford Motor Company's 'OBD-II Diagnostic Trouble Code Definitions' list (rev. Oct 17, 2007), hosted as a PDF on a third-party store CDN; text extracted from the PDF. Ford's list gives B1342 as 'ECU Is Faulted' (also 'GEM Defective' in the generic electronic module section). NHTSA DP15-001 says B1342 on 2008-2011 Escape/Mariner points to the power steering control module, repaired by column replacement. Safety 'steering' applies to the Escape EPAS case; on other Fords it can be a non-steering module.",
+  "alt": false
+ },
+ {
+  "code": "P1702",
+  "makes": [
+   "Ford",
+   "Lincoln",
+   "Mercury"
+  ],
+  "t": "Transmission Range Sensor Circuit Intermittent",
+  "m": "The engine/transmission computer saw the gear-position (PRNDL) sensor signal drop out or jump around for a moment. Drivers may notice harsh or wrong shifts, a flashing O/D light, or starting trouble in Park/Neutral.",
+  "c": [
+   "Worn or misadjusted transmission range sensor",
+   "Loose or corroded connector at the range sensor",
+   "Damaged wiring between the sensor and the computer"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "transmission",
+  "src": [
+   "https://cdn.shopify.com/s/files/1/0067/5813/7919/files/Ford_Master_DTC_List.pdf"
+  ],
+  "conf": "high",
+  "note": "Source is Ford Motor Company's 'OBD-II Diagnostic Trouble Code Definitions' list (rev. Oct 17, 2007), hosted as a PDF on a third-party store CDN; text extracted from the PDF. Ford's list marks it with the O/D cancel light flashing on gas and diesel applications. obd-codes.com's Ford list only says 'Transmission system problems'.",
+  "alt": false
+ },
+ {
+  "code": "C200D",
+  "makes": [
+   "Ford",
+   "Lincoln",
+   "Mercury"
+  ],
+  "t": "Motor Rotation Angle Sensor",
+  "m": "The electric power steering module found that the sensor reading the steering motor's position has failed. Power assist is removed, so the steering turns heavy and a warning shows on the dash.",
+  "c": [
+   "Failed motor position sensor inside the electric steering gear",
+   "Internal fault in the power steering assembly"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "steering",
+  "src": [
+   "https://static.nhtsa.gov/odi/inv/2012/INRD-PE12017-56148P.pdf"
+  ],
+  "conf": "high",
+  "note": "Source is Ford's power steering control module DTC specification filed in NHTSA investigation PE12-017 (2011-2013 Ford Explorer electric power steering): C200D-49 'Motor Rotation Angle Sensor Internal Electronic Failure'; the spec says assist is removed and the gear should be replaced if the code returns. Complaint data are mostly Ford Fusion; the spec document itself is for the Explorer system.",
+  "alt": false
+ },
+ {
+  "code": "B141B",
+  "makes": [
+   "Ford",
+   "Lincoln",
+   "Mercury"
+  ],
+  "t": "Second-Row Left Inflatable Seat Belt Circuit Fault",
+  "m": "The airbag computer found a problem in the wiring to the left (driver-side) second-row inflatable seat belt, so it turns on the airbag warning light. That belt's airbag may not deploy in a crash until it is fixed.",
+  "c": [
+   "Worn or broken wires in the second-row seat harness (often from folding the seat)",
+   "Damaged connector at the base of the left second-row seat",
+   "Faulty inflatable seat belt assembly"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "airbag",
+  "src": [
+   "https://static.nhtsa.gov/odi/tsbs/2022/MC-10206858-0001.pdf",
+   "https://static.nhtsa.gov/odi/tsbs/2022/MC-10214127-0001.pdf",
+   "https://www.carcomplaints.com/Ford/Explorer/2015/tsbs/tsb-15-0113.shtml"
+  ],
+  "conf": "high",
+  "note": "2014-2016 Ford Explorer with second-row inflatable seat belts. Ford Customer Satisfaction Program 21B11 (NHTSA-hosted) says B141B is the left wiring harness and B141C the right; the airbag light comes from a worn or damaged connection to the rear inflatable belt. Ford TSB 15-0113 covers the same codes. The title is descriptive; the exact Ford DTC title text was not shown.",
+  "alt": false
+ },
+ {
+  "code": "C1277",
+  "makes": [
+   "Ford",
+   "Lincoln",
+   "Mercury"
+  ],
+  "t": "Steering Wheel Angle Sensor Fault",
+  "m": "The ABS/stability computer lost a good steering-wheel angle signal. Stability and traction control are switched off and warning lights come on; on 2010-era Fusions it often shows up alongside a power steering fault.",
+  "c": [
+   "Faulty steering wheel angle sensor or its wiring",
+   "Electric power steering fault that stops the steering signals (Fusion)",
+   "Steering parts out of spec, such as worn front lower control arms (Fusion)"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "stability",
+  "src": [
+   "https://static.nhtsa.gov/odi/inv/2017/INRD-EA17004-10132.pdf"
+  ],
+  "conf": "medium",
+  "note": "NHTSA EA17-004 file (Ford internal emails, 2010 Ford Fusion / Mercury Milan electric power steering) names C1277 as the 'Steering Wheel Angle' ABS code that sets with C1963 when the steering friction code P07AE removes signals; Ford traced that to aft front lower control arms out of spec. The commonly quoted Ford title 'Steering Wheel Angle 1 and 2 Circuit Failure' was seen only in search snippets, not on a loaded page.",
+  "alt": false
+ },
+ {
+  "code": "C1963",
+  "makes": [
+   "Ford",
+   "Lincoln",
+   "Mercury"
+  ],
+  "t": "Stability Control Inhibit Warning",
+  "m": "The ABS module has switched off stability control because a signal it needs (often steering angle) is missing or bad. The traction/stability warning light comes on; normal braking still works.",
+  "c": [
+   "Steering angle sensor or steering signal fault (often set together with C1277)",
+   "Electric power steering fault removing steering data",
+   "Network/communication faults to the ABS module"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "stability",
+  "src": [
+   "https://motor.com/wp-content/uploads/Trouble-Shooter-Dec-2013.pdf",
+   "https://static.nhtsa.gov/odi/inv/2017/INRD-EA17004-10132.pdf"
+  ],
+  "conf": "high",
+  "note": "MOTOR magazine Trouble Shooter (Dec 2013) shows a 2011 Ford F-150 ABS module reading 'C1963 stability control inhibit warning'. NHTSA EA17-004 (2010 Fusion) links it to stability control, set together with C1277 when the steering code P07AE is present. It is usually a secondary code: fix the code that caused it first.",
+  "alt": false
+ },
+ {
+  "code": "P1744",
+  "makes": [
+   "Ford",
+   "Lincoln",
+   "Mercury"
+  ],
+  "t": "Torque Converter Clutch Solenoid Circuit Performance",
+  "m": "The computer commanded the torque converter lockup clutch, but engine and transmission speeds show it is not applying or holding as expected. Drivers may feel shudder, slipping at cruise, or higher RPM and worse fuel economy; the check engine light comes on.",
+  "c": [
+   "Worn or sticking torque converter clutch",
+   "Faulty TCC solenoid or valve body problem",
+   "Low or degraded transmission fluid",
+   "Wiring problem to the TCC solenoid"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "transmission",
+  "src": [
+   "https://cdn.shopify.com/s/files/1/0067/5813/7919/files/Ford_Master_DTC_List.pdf"
+  ],
+  "conf": "high",
+  "note": "Source is Ford Motor Company's 'OBD-II Diagnostic Trouble Code Definitions' list (rev. Oct 17, 2007), hosted as a PDF on a third-party store CDN; text extracted from the PDF. Ford lists it as a MIL code that also flashes the O/D cancel light on gas and diesel applications. obd-codes.com's Ford list words it 'Torque Converter Clutch System Stuck in Off Position'. Mazda/Kia complaints not covered.",
+  "alt": false
+ },
+ {
+  "code": "P144A",
+  "makes": [
+   "Ford",
+   "Lincoln",
+   "Mercury"
+  ],
+  "t": "Evaporative Emission System Purge Vapor Line Restricted/Blocked",
+  "m": "The computer found that fuel vapor is not flowing through the purge line from the charcoal canister to the engine as expected. The check engine light comes on; some owners also notice rough running or hard starting after refueling.",
+  "c": [
+   "Stuck or failing canister purge valve",
+   "Kinked, blocked or collapsed purge hose",
+   "Clogged charcoal canister"
+  ],
+  "s": 1,
+  "w": 0,
+  "sys": "fuel/emissions",
+  "src": [
+   "https://cdn.shopify.com/s/files/1/0067/5813/7919/files/Ford_Master_DTC_List.pdf"
+  ],
+  "conf": "high",
+  "note": "Source is Ford Motor Company's 'OBD-II Diagnostic Trouble Code Definitions' list (rev. Oct 17, 2007), hosted as a PDF on a third-party store CDN; text extracted from the PDF. Listed as a MIL code for Ford gas engines. Complaint data are mostly Ford Focus.",
+  "alt": false
+ },
+ {
+  "code": "B141C",
+  "makes": [
+   "Ford",
+   "Lincoln",
+   "Mercury"
+  ],
+  "t": "Second-Row Right Inflatable Seat Belt Circuit Fault",
+  "m": "The airbag computer found a problem in the wiring to the right (passenger-side) second-row inflatable seat belt, so it turns on the airbag warning light. That belt's airbag may not deploy in a crash until it is fixed.",
+  "c": [
+   "Worn or broken wires in the second-row seat harness (often from folding the seat)",
+   "Damaged connector at the base of the right second-row seat",
+   "Faulty inflatable seat belt assembly"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "airbag",
+  "src": [
+   "https://static.nhtsa.gov/odi/tsbs/2022/MC-10206858-0001.pdf",
+   "https://static.nhtsa.gov/odi/tsbs/2022/MC-10214127-0001.pdf",
+   "https://www.carcomplaints.com/Ford/Explorer/2015/tsbs/tsb-15-0113.shtml"
+  ],
+  "conf": "high",
+  "note": "2014-2016 Ford Explorer with second-row inflatable seat belts. Ford Customer Satisfaction Program 21B11 says B141C is the right wiring harness (B141B the left). Ford TSB 15-0113 covers the same codes. Title is descriptive; the exact Ford DTC title text was not shown.",
+  "alt": false
+ },
+ {
+  "code": "C1B00",
+  "makes": [
+   "Ford",
+   "Lincoln",
+   "Mercury"
+  ],
+  "t": "Steering Angle Sensor",
+  "m": "The power steering (or active steering) module got a steering angle reading that is erratic or does not agree with its other sensors. Depending on the sub-code, power assist may be cut to manual steering, or stability and lane features are limited, with a warning on the dash.",
+  "c": [
+   "Faulty steering angle sensor or electric steering gear",
+   "Steering wheel or column misaligned after service",
+   "Wiring or connector fault to the sensor",
+   "Software that needs an update"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "steering",
+  "src": [
+   "https://static.nhtsa.gov/odi/inv/2012/INRD-PE12017-56148P.pdf",
+   "https://motor.com/wp-content/uploads/Trouble-Shooter-Dec-2013.pdf",
+   "https://static.nhtsa.gov/odi/tsbs/2016/SB-10095966-2532.pdf"
+  ],
+  "conf": "high",
+  "note": "Ford PSCM spec in NHTSA PE12-017 (2011-2013 Explorer): C1B00-2F 'Steering Angle Sensor Signal Erratic' (assist kept) and C1B00-62 'Steering Angle Sensor Signal Compare Failure' (assist removed, replace gear if it returns). MOTOR magazine shows it on a 2011 F-150 PSCM. Ford TSB 16-2066 (2016 Edge / Lincoln MKX with adaptive steering) fixes C1B00 in the steering effort control module by replacing the steering wheel. Also stored by the ABS module on 2010 Fusion (NHTSA EA17-004).",
+  "alt": false
+ },
+ {
+  "code": "P1921",
+  "makes": [
+   "Ford",
+   "Lincoln",
+   "Mercury"
+  ],
+  "t": "Transmission Range Signal",
+  "m": "A module reported a problem with the gear-selector (PRNDL) position signal it receives. Drivers may see shifting problems, a wrong gear display, or starting issues.",
+  "c": [
+   "Faulty transmission range sensor",
+   "Wiring or connector problem on the range signal circuit",
+   "Communication problem between the transmission and engine modules"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "transmission",
+  "src": [
+   "https://cdn.shopify.com/s/files/1/0067/5813/7919/files/Ford_Master_DTC_List.pdf"
+  ],
+  "conf": "medium",
+  "note": "Source is Ford Motor Company's 'OBD-II Diagnostic Trouble Code Definitions' list (rev. Oct 17, 2007), hosted as a PDF on a third-party store CDN; text extracted from the PDF. Ford's list shows it only in one application column (marked 'T', apparently a standalone transmission module), not on regular gas PCMs; complaint data are mostly F-Series. Hyundai/Kia not covered.",
+  "alt": false
+ },
+ {
+  "code": "P1500",
+  "makes": [
+   "Ford",
+   "Lincoln",
+   "Mercury"
+  ],
+  "t": "Vehicle Speed Sensor",
+  "m": "The engine computer saw a problem with the vehicle speed signal. The speedometer, cruise control or shifting may act up, and the check engine light may come on.",
+  "c": [
+   "Faulty vehicle speed sensor",
+   "Damaged wiring or connector to the speed sensor",
+   "Problem in the module that supplies the speed signal"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "transmission",
+  "src": [
+   "https://cdn.shopify.com/s/files/1/0067/5813/7919/files/Ford_Master_DTC_List.pdf"
+  ],
+  "conf": "high",
+  "note": "Source is Ford Motor Company's 'OBD-II Diagnostic Trouble Code Definitions' list (rev. Oct 17, 2007), hosted as a PDF on a third-party store CDN; text extracted from the PDF. obd-codes.com's Ford list words P1500 as 'Vehicle Speed Sensor Intermittent', which Ford's own list assigns to P1502.",
+  "alt": false
+ },
+ {
+  "code": "U2011",
+  "makes": [
+   "Ford",
+   "Lincoln",
+   "Mercury"
+  ],
+  "t": "Power Steering Motor Fault",
+  "m": "On Ford electric power steering, the steering module found a fault with the assist motor's electronics or its signals. Power assist is removed, so steering turns heavy and a warning appears.",
+  "c": [
+   "Failed power steering assist motor or its electronics",
+   "Internal fault in the electric steering gear",
+   "Low or unstable battery voltage"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "steering",
+  "src": [
+   "https://static.nhtsa.gov/odi/inv/2012/INRD-PE12017-56148P.pdf"
+  ],
+  "conf": "medium",
+  "note": "Ford PSCM DTC spec in NHTSA PE12-017 (2011-2013 Ford Explorer electric power steering): U2011-49 'Motor Internal Electronic Failure' and U2011-61 'Motor Signal Calculation Failure'; assist is removed and the gear is replaced if it returns. Confirmed only for the power steering module; another Ford module could use U2011 for its own motor. No model has 10+ complaints.",
+  "alt": false
+ },
+ {
+  "code": "C1235",
+  "makes": [
+   "Ford",
+   "Lincoln",
+   "Mercury"
+  ],
+  "t": "Right Rear Wheel Speed Sensor Signal Missing",
+  "m": "The ABS module is not getting a signal from the right rear wheel speed sensor. The ABS and traction control lights come on and those systems are switched off; normal brakes still work.",
+  "c": [
+   "Failed right rear wheel speed sensor",
+   "Corroded or broken wiring between the ABS module and the sensor",
+   "Damaged tone ring or wrong sensor gap"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "brakes/ABS",
+  "src": [
+   "https://www.alldata.com/ca/en/ford-e150-abs-and-trac-warning-lamps-on"
+  ],
+  "conf": "high",
+  "note": "ALLDATA repair case for a 2011 Ford E-150 defines C1235 as 'Right Rear (RR) Wheel Speed Sensor (WSS) Signal Missing'; the fix there was corroded wiring in the rear axle loom. A YouCanic Ford ABS article (loaded) instead lists C1235 as 'ABS Hydraulic Control Unit Valve #2 Failure', which conflicts and was not used. Hyundai C1235 not covered.",
+  "alt": false
+ },
+ {
+  "code": "C0631",
+  "makes": [
+   "Ford",
+   "Lincoln",
+   "Mercury"
+  ],
+  "t": "AWD Front Axle Disconnect Fault",
+  "m": "On some AWD Explorers and Aviators, the computer found a problem with the front axle disconnect unit that connects and disconnects the front wheels. The wrench (powertrain) light comes on and AWD may not work properly.",
+  "c": [
+   "Faulty front axle disconnect actuator / intermediate shaft",
+   "Wiring or connector problem at the disconnect actuator"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "transmission",
+  "src": [
+   "https://static.nhtsa.gov/odi/tsbs/2023/MC-10234127-0002.pdf",
+   "https://static.nhtsa.gov/odi/tsbs/2025/MC-11022389-0001.pdf"
+  ],
+  "conf": "medium",
+  "note": "Ford TSB 23-2114 and its replacement 25-2373 (NHTSA-hosted): 2020-2021 Explorer / Lincoln Aviator AWD built on or before 30-Aug-2021 may show the wrench light with C00A6 and/or C0631 due to the front axle disconnect actuator/intermediate shaft; the fix replaces it with a revised intermediate shaft. The TSBs give the cause, not Ford's formal code title, so the title here is descriptive. Complaint data are Explorer (11).",
+  "alt": false
+ },
+ {
+  "code": "C0020",
+  "makes": [
+   "Ram",
+   "Dodge",
+   "Jeep",
+   "Chrysler"
+  ],
+  "t": "ABS Pump Motor Control Circuit",
+  "m": "The ABS module saw an electrical fault in the motor that runs the ABS pump. The ABS (and usually traction/stability) warning lights come on and anti-lock braking is switched off until it is fixed.",
+  "c": [
+   "Worn or sticking ABS pump motor inside the hydraulic control unit (HCU)",
+   "Faulty ABS control module (ECU) if a new HCU does not clear it",
+   "Wiring or connector problem at the ABS unit"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "brakes/ABS",
+  "src": [
+   "https://static.nhtsa.gov/odi/tsbs/2020/MC-10175691-9999.pdf"
+  ],
+  "conf": "high",
+  "note": "FCA STAR case S2005000004 (2020): replace the HCU first, then the ABS module only if C0020-01 returns. Related FCA documents cover 2012-2018 Ram heavy-duty trucks (DJ/D2/DP/DD/DF/DX). On Mazda and Ford C0020 is also an ABS pump motor code, but this entry is for Stellantis.",
+  "alt": false
+ },
+ {
+  "code": "C2200",
+  "makes": [
+   "Jeep",
+   "Ram",
+   "Dodge",
+   "Chrysler"
+  ],
+  "t": "Anti-Lock Brake Module Internal",
+  "m": "The ABS control module found a fault inside itself during its self-checks. The ABS, traction/stability and often brake warning lights come on and those systems are turned off.",
+  "c": [
+   "Failed ABS control module electronics",
+   "Corroded or loose ABS module connector or poor ground",
+   "Brake fluid leaking into the electric parking-brake caliper wiring (C2200-48 case)"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "brakes/ABS",
+  "src": [
+   "https://static.nhtsa.gov/odi/tsbs/2020/MC-10175660-9999.pdf"
+  ],
+  "conf": "high",
+  "note": "FCA STAR case S1908000074 (2020) covers C2200-48 'Supervision Software Failure'; it first checks rear caliper/EPB connectors for brake fluid, then the ABS connector, before replacing parts. Very common on Jeep Wrangler JK and Ram trucks per complaints.",
+  "alt": false
+ },
+ {
+  "code": "C14A7",
+  "makes": [
+   "Jeep"
+  ],
+  "t": "AWD Power Transfer Unit Motor Blocked",
+  "m": "The all-wheel-drive computer commanded the power transfer unit (PTU) motor to move but it was blocked or did not move as expected. The driver sees a Service 4WD light or an 'AWD System Service Required' message and AWD/4WD may stop working.",
+  "c": [
+   "Sticking or failed PTU (front axle disconnect) actuator motor",
+   "Binding inside the power transfer unit",
+   "Software that needs an update per the bulletin"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "transmission",
+  "src": [
+   "https://www.carcomplaints.com/Jeep/Cherokee/2017/tsbs/index.shtml"
+  ],
+  "conf": "high",
+  "note": "Jeep Cherokee (KL) TSB S1721000016 (NHTSA 10247452, Oct 2023) names DTC C14A7-97. Despite being a C code, this is a driveline/AWD fault, not a brake fault.",
+  "alt": false
+ },
+ {
+  "code": "P129F",
+  "makes": [
+   "Chevrolet",
+   "GMC",
+   "Buick",
+   "Cadillac"
+  ],
+  "t": "Fuel Pump Power Control Module Fuel Pump Speed Signal Incorrect",
+  "m": "The engine computer is getting a wrong fuel pump speed report from the module that powers the fuel pump. Drivers report a check engine light, crank-no-start, stalling or rough running; some see the pump or electrical items stay on after shut-off.",
+  "c": [
+   "Internal short in the K111 fuel pump driver / fuel pump power control module",
+   "Wrong software in a replacement fuel pump control module",
+   "Fuel pump or wiring fault (often set with P023F)"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "fuel/emissions",
+  "src": [
+   "https://static.nhtsa.gov/odi/tsbs/2025/MC-11019378-0001.pdf",
+   "https://gm-techlink.com/?p=21416"
+  ],
+  "conf": "high",
+  "note": "GM bulletin 24-NA-139 (2025) covers many 2020-2024 GM models incl. Equinox 2021-23, Terrain 2021-24, Silverado/Sierra 1500 2022-24; fix is replacing the K111 module when P129F and/or P023F are set. TechLink says the module is covered by the 8 yr/80k federal emissions warranty.",
+  "alt": false
+ },
+ {
+  "code": "C0545",
+  "makes": [
+   "Chevrolet",
+   "GMC",
+   "Pontiac",
+   "Saturn",
+   "Buick",
+   "Cadillac"
+  ],
+  "t": "Power Steering Torque Sensor / Assist Fault",
+  "m": "The electric power steering computer found a problem with the signal that measures how hard the driver is turning the wheel. It shows a Service Power Steering message and steering assist can be reduced or lost, making the wheel heavy.",
+  "c": [
+   "Failed steering torque sensor or steering column/gear assembly",
+   "Internal interference inside the electric steering gear (2020-21 GM SUVs)",
+   "Low battery voltage at start-up",
+   "Power steering module needing a software update or torque sensor calibration"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "steering",
+  "src": [
+   "https://static.nhtsa.gov/odi/tsbs/2021/MC-10194089-9999.pdf",
+   "https://static.nhtsa.gov/odi/tsbs/2015/MC-10139425-9999.pdf",
+   "https://static.nhtsa.gov/odi/tsbs/2013/MC-10112722-9999.pdf"
+  ],
+  "conf": "medium",
+  "note": "GM bulletins (20-NA-215, 09-02-36-001A for 2009 Malibu/G6/Aura, PIC5791 for 2013 ATS) confirm C0545 is set in the PSCM with loss of steering assist, but none prints the exact GM title; the 'steering wheel torque input' wording comes from repair forums. Malibu and Colorado/Canyon are the most-complained models.",
+  "alt": false
+ },
+ {
+  "code": "B0081",
+  "makes": [
+   "Chevrolet",
+   "GMC",
+   "Pontiac",
+   "Saturn",
+   "Buick",
+   "Cadillac"
+  ],
+  "t": "Passenger Presence System",
+  "m": "The airbag system found a fault with the passenger seat sensor that decides whether the front passenger airbag should be on or off. The airbag warning light comes on and the passenger airbag may be switched off.",
+  "c": [
+   "Passenger seat connector not fully seated or loose terminals",
+   "Communication fault between the seat sensor module and the airbag module",
+   "Failed seat sensor mat or module needing calibration or replacement"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "airbag",
+  "src": [
+   "https://www.vehicleservicepros.com/tsbs/article/53090938/dtc-b0081-diagnosis-2017-03-20"
+  ],
+  "conf": "high",
+  "note": "GM TSB reprint covers 2009-2013 Avalanche, Silverado, Suburban, Tahoe, Sierra, Yukon; says most cases are a communication fault from a connector not fully seated, so module replacement is often not needed.",
+  "alt": false
+ },
+ {
+  "code": "P1098",
+  "makes": [
+   "Chevrolet",
+   "GMC",
+   "Cadillac",
+   "Buick"
+  ],
+  "t": "Engine Coolant Control Valve Fault",
+  "m": "The engine computer found the electric coolant control valve is not working right. The check engine light comes on and the cooling fans may run hard or keep running after the engine is shut off.",
+  "c": [
+   "Failed or sticking engine coolant control/flow valve",
+   "Contaminated or corroded electrical connection at the valve",
+   "Engine computer software that needs an update"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "engine",
+  "src": [
+   "https://static.nhtsa.gov/odi/tsbs/2019/MC-10165884-9999.pdf",
+   "https://cadillacvnet.com/knowledge-base/print.php?id=52",
+   "https://gm-techlink.com/?p=21463"
+  ],
+  "conf": "medium",
+  "note": "GM PIP5675 (2019-20 Silverado/Sierra 1500 2.7L, XT4 2.0L) ties P1098 to replacing the coolant flow control valve; PIP5777 points to valve connector contamination on many 2019-21 GM 1.3/2.0/2.7L models. GM TechLink lists P1098 as 'Engine Oil Temperature Sensor 1 Circuit High Voltage' on the 1.3L (Encore GX/Trailblazer) yet still blames the coolant valve, so the official title differs by engine; GM Special Coverage N252508341 extends valve coverage on 2021-22 Silverado/Sierra 1500 3.0L diesel (LM2).",
+  "alt": false
+ },
+ {
+  "code": "P1101",
+  "makes": [
+   "Chevrolet",
+   "GMC",
+   "Buick",
+   "Cadillac"
+  ],
+  "t": "Intake Air Flow System Performance",
+  "m": "The engine computer compared airflow from its sensors with what it expected and they don't agree, usually from an air leak after the mass airflow sensor. The check engine light comes on and the engine may go into reduced power.",
+  "c": [
+   "Charge air cooler outlet tube come loose from the throttle body (1.5L turbo)",
+   "Intake leak from a cracked or loose duct, hose or clamp",
+   "Dirty or faulty mass airflow sensor"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "engine",
+  "src": [
+   "https://gm-techlink.com/?p=17061"
+  ],
+  "conf": "high",
+  "note": "GM TechLink: 2018-2022 Malibu, Equinox and Terrain with the 1.5L turbo (LFV/LYX) can set P1101 with P0101, P0172, P0299, P0506 when the CAC outlet tube separates from the throttle body.",
+  "alt": false
+ },
+ {
+  "code": "P1682",
+  "makes": [
+   "Chevrolet",
+   "GMC",
+   "Buick"
+  ],
+  "t": "Ignition 1 Switch Circuit 2",
+  "m": "The engine computer gets two ignition-on power feeds and found they don't match. Drivers can see stalling, a reduced engine power message, misfire-like running and several warning lights.",
+  "c": [
+   "Poor terminal tension or corrosion at the underhood fuse block (terminal 51, X3 connector on Traverse/Acadia/Enclave)",
+   "Loose connection in the underhood electrical center",
+   "Ignition switch or ignition feed wiring fault (less common)"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "body/electrical",
+  "src": [
+   "https://static.nhtsa.gov/odi/tsbs/2019/MC-10170495-9999.pdf",
+   "https://www.iatn.net/techmail/summaries/2015/11/P1682-dtc.html"
+  ],
+  "conf": "high",
+  "note": "GM bulletin 19-NA-276: 2013-2017 Enclave and Traverse, 2013-2016 Acadia, 2017 Acadia Limited, stall/reduced power with P1682 and/or P0689; fix is inspecting and replacing terminal 51 in the X50A underhood fuse block. Title from iATN technician summary.",
+  "alt": false
+ },
+ {
+  "code": "P1E00",
+  "makes": [
+   "Chevrolet"
+  ],
+  "t": "Hybrid Control Module Requested Check Engine Light",
+  "m": "This is a 'messenger' code: the Volt's hybrid control module found a fault and asked the engine computer to turn on the check engine light. The real problem is in a separate hybrid/charging code; GM's bulletin links it to charges that were cut short or interrupted.",
+  "c": [
+   "Charging was interrupted (power loss, brown-out, or unplug/re-plug of the charge cord)",
+   "Charging station (EVSE) compatibility issue",
+   "Another stored hybrid or high-voltage code (e.g. P0D3E) that needs its own diagnosis"
+  ],
+  "s": 1,
+  "w": 0,
+  "sys": "hybrid/EV",
+  "src": [
+   "https://static.nhtsa.gov/odi/tsbs/2015/SB-10052068-9056.pdf",
+   "https://vehicleservicepros.com/tsbs/article/53090858/confused-volt-2017-06-19"
+  ],
+  "conf": "medium",
+  "note": "GM PI PIC5803B: 2011-2013 Volt (and 2014 Spark EV) set P1E00 in the ECM with P0D3E in the hybrid module after an incomplete or interrupted charge; MIL clears after 3 full charges if those are the only codes. The exact SI title was not on a page that loaded; the 'requested MIL' wording is from tech-forum summaries, the behavior is from GM.",
+  "alt": false
+ },
+ {
+  "code": "B1B02",
+  "makes": [
+   "Jeep",
+   "Chrysler",
+   "Dodge"
+  ],
+  "t": "Driver Airbag Squib 1 Circuit Open",
+  "m": "The airbag computer sees a broken (open) circuit to the driver's front airbag. The airbag light comes on and the driver airbag may not deploy in a crash.",
+  "c": [
+   "Failed clockspring in the steering column",
+   "Loose or damaged connector at the steering wheel airbag",
+   "Broken wiring between the airbag module and the steering column"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "airbag",
+  "src": [
+   "https://www.quadratec.com/c/reference/jeep-wrangler-jk-diagnostic-codes-and-how-check-them"
+  ],
+  "conf": "high",
+  "note": "From a Jeep Wrangler JK (2007-2018) code list; B1B00/B1B01 are the low/high versions of the same circuit. Causes are general airbag-circuit causes, not from a Jeep bulletin.",
+  "alt": false
+ },
+ {
+  "code": "B0014",
+  "makes": [
+   "Chevrolet",
+   "GMC",
+   "Cadillac"
+  ],
+  "t": "Driver Seat Side Air Bag Deployment Loop",
+  "m": "The airbag computer sees a wiring fault (open, short, or wrong resistance) in the circuit to the side airbag built into the driver's seat. The airbag light comes on and that airbag may not deploy.",
+  "c": [
+   "Loose or rubbing airbag connector under the driver's seat",
+   "Harness stress from seat movement",
+   "Aftermarket USB/phone charger interference (GM trucks/SUVs)",
+   "Failed seat side airbag"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "airbag",
+  "src": [
+   "https://static.nhtsa.gov/odi/tsbs/2015/MC-10201110-9999.pdf",
+   "https://static.nhtsa.gov/odi/inv/2021/INRD-PE21010-15966.pdf"
+  ],
+  "conf": "high",
+  "note": "GM bulletin 15-NA-072 (2014-15 Spark EV) names B0014-04 'Driver Seat Side Air Bag Deployment Loop Open'. GM PIT5564B lists B0014 with other deployment-loop codes on 2007-2019 Silverado/Sierra/Tahoe/Suburban/Yukon/Escalade, where it can be set by a phone charger in the 12 V outlet. Which airbag loop B0014 names may differ on older GM models.",
+  "alt": false
+ },
+ {
+  "code": "B0074",
+  "makes": [
+   "Chevrolet",
+   "Buick",
+   "Saturn"
+  ],
+  "t": "Passenger Presence Sensor Circuit Malfunction",
+  "m": "The passenger seat sensor that tells the airbag system if someone is sitting there has a circuit fault. The airbag warning message comes on and the passenger airbag may be turned off.",
+  "c": [
+   "Seat sensor mat connector loose or disengaged over time",
+   "Open or high resistance in the seat sensor pad",
+   "Failed passenger presence sensor/module"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "airbag",
+  "src": [
+   "https://static.nhtsa.gov/odi/tsbs/2019/MC-10155049-9999.pdf",
+   "https://www.carcomplaints.com/Buick/Verano/2012/tsb/tsb-16-na-145.shtml"
+  ],
+  "conf": "high",
+  "note": "GM bulletin 17-NA-010 (2014-2018 Impala): B0074 set in the Passenger Presence Module, fix is reconnecting/securing the sensor mat. Buick TSB 16-NA-145 (2012 Verano) replaces the passenger presence sensor.",
+  "alt": false
+ },
+ {
+  "code": "C121C",
+  "makes": [
+   "Chrysler",
+   "Jeep",
+   "Dodge"
+  ],
+  "t": "Torque Request Signal Denied",
+  "m": "The ABS/stability computer asked the engine computer to cut power (for traction or stability control) and the request was refused. Stability/traction lights may come on; owners also report hesitation or stalling, usually because of an underlying engine fault or software mismatch.",
+  "c": [
+   "Engine computer (PCM) software that conflicts with ABS module software",
+   "Another engine fault stopping the PCM from accepting torque requests",
+   "Can set during very heavy load driving"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "stability",
+  "src": [
+   "https://www.carcomplaints.com/Chrysler/Pacifica/2017/tsb/tsb-1805716.shtml"
+  ],
+  "conf": "high",
+  "note": "FCA TSB 1805716, NHTSA 10228115 (2017 Pacifica 3.6L) stores C121C in the ABS module and fixes it by reflashing the PCM. Set in the ABS module but usually caused on the engine side.",
+  "alt": false
+ },
+ {
+  "code": "B2960",
+  "makes": [
+   "Chevrolet",
+   "Saturn",
+   "Pontiac",
+   "Oldsmobile",
+   "GMC"
+  ],
+  "t": "Security System Sensor Data Incorrect but Valid",
+  "m": "The anti-theft (Passlock) system got an ignition key/lock signal it didn't expect, so it blocks starting. The car may not crank or may start and stall, and the security light flashes.",
+  "c": [
+   "Worn ignition switch / lock cylinder Passlock sensor contact",
+   "Poor connection at the body control module",
+   "Wiring fault in the Passlock sensor circuit",
+   "Theft system needing a relearn"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "body/electrical",
+  "src": [
+   "https://www.iatn.net/techmail/summaries/2011/05/B2960-dtc.html",
+   "https://static.nhtsa.gov/odi/rcl/2014/RCORRD-14V047-9056.pdf"
+  ],
+  "conf": "high",
+  "note": "GM recall-related bulletin for 2006-2007 Saturn ION: intermittent no crank/no start, security light flashes, B2960 and/or B3033 in the BCM; fix is a new ignition switch plus the 30-minute theft relearn. Mostly older (late 1990s-2000s) GM Passlock cars; Isuzu complaints are GM-built trucks.",
+  "alt": false
+ },
+ {
+  "code": "B1325",
+  "makes": [
+   "Chevrolet",
+   "GMC"
+  ],
+  "t": "Device Power 1 Circuit Voltage",
+  "m": "A control module saw its main power supply voltage go too low or too high. It usually points to a battery, charging or ground problem, and can come with flickering electronics, warning lights or a no-start.",
+  "c": [
+   "Weak or failing 12-volt battery",
+   "Corroded battery terminals or bad ground",
+   "Charging system (alternator) fault"
+  ],
+  "s": 1,
+  "w": 0,
+  "sys": "body/electrical",
+  "src": [
+   "https://www.iatn.net/techmail/summaries/2018/08/B1325-dtc.html",
+   "https://www.vehicleservicepros.com/tsbs/article/53091651/gm-sir-mil-2018-03-05"
+  ],
+  "conf": "high",
+  "note": "GM TSB reprint (2007-2013 Avalanche/Silverado/Suburban/Tahoe/Escalade/Sierra/Yukon): low battery voltage can set B1325 and/or B1000 in the passenger presence module; fix the voltage cause and don't replace the module for history codes.",
+  "alt": false
+ },
+ {
+  "code": "C0561",
+  "makes": [
+   "Chevrolet",
+   "Pontiac",
+   "Saturn",
+   "Buick",
+   "Cadillac",
+   "GMC"
+  ],
+  "t": "System Disabled Information Stored",
+  "m": "This is an information code: the brake/stability computer turned off stability and traction control because it saw a problem somewhere else. A 'Service StabiliTrak' or traction warning shows; the real cause is in another stored code.",
+  "c": [
+   "Another fault such as a wheel speed sensor, throttle or engine code",
+   "Invalid or missing data from another module on the network",
+   "Low system voltage"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "stability",
+  "src": [
+   "https://static.nhtsa.gov/odi/tsbs/2013/MC-10112699-9999.pdf"
+  ],
+  "conf": "high",
+  "note": "Title from GM PI PIC4740D DTC table (Cadillac ATS/CTS/SRX/STS). Fix the other stored codes first; it is not usually a bad brake module.",
+  "alt": false
+ },
+ {
+  "code": "B0022",
+  "makes": [
+   "Chevrolet",
+   "Buick",
+   "GMC"
+  ],
+  "t": "Air Bag Deployment Loop Fault",
+  "m": "The airbag computer sees a wiring or resistance fault in one of the circuits that fire an airbag or seat-belt tensioner. The airbag light comes on and that part may not deploy.",
+  "c": [
+   "Loose, corroded or damaged airbag connector",
+   "Wiring rubbed or pinched (often under a seat or in the steering column)",
+   "Aftermarket phone/USB charger interference on some GM trucks",
+   "Failed airbag or pretensioner"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "airbag",
+  "src": [
+   "https://static.nhtsa.gov/odi/inv/2021/INRD-PE21010-15966.pdf"
+  ],
+  "conf": "medium",
+  "note": "GM PIT5564B confirms B0022 is an SIR deployment-loop code with high/low loop-resistance symptoms on 2007-2019 GM full-size trucks and SUVs. The exact loop (driver frontal stage vs. a seat-belt pretensioner) differs between GM generations and no loaded page named it, so the site text should stay general.",
+  "alt": false
+ },
+ {
+  "code": "U1110",
+  "makes": [
+   "Jeep"
+  ],
+  "t": "Lost Vehicle Speed Message",
+  "m": "A module stopped receiving the vehicle speed message it expects over the vehicle network. Speed-based features (speedometer, cruise, shifting, stability) can act up and warning lights may come on.",
+  "c": [
+   "Wheel speed or ABS module fault upstream",
+   "Network (CAN bus) wiring or connector problem",
+   "Module that sends the speed signal not communicating"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "network",
+  "src": [
+   "https://www.quadratec.com/c/reference/jeep-wrangler-jk-diagnostic-codes-and-how-check-them"
+  ],
+  "conf": "medium",
+  "note": "From a Jeep Wrangler JK (2007-2018) code list (retailer reproduction of Chrysler codes); not checked on other Chrysler models.",
+  "alt": false
+ },
+ {
+  "code": "P1811",
+  "makes": [
+   "Chevrolet",
+   "Buick",
+   "Saturn",
+   "Pontiac",
+   "Oldsmobile"
+  ],
+  "t": "Maximum Adapt and Long Shift",
+  "m": "The transmission computer saw shifts taking too long and has run out of room to adjust for it. It raises line pressure to protect the clutches, so shifts become harsh or firm.",
+  "c": [
+   "Transmission computer needing an updated calibration (4T65 bulletin)",
+   "Worn clutches or a failing pressure control solenoid",
+   "Low or worn-out transmission fluid"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "transmission",
+  "src": [
+   "https://www.grandprixforums.com/1997-2007-4-speed-automatic-4t65e-4t65e-hd-/82503-fix-for-p1811-post1118722.html",
+   "https://www.iatn.net/techmail/summaries/2008/07/P1811-dtc.html"
+  ],
+  "conf": "medium",
+  "note": "Forum post quotes GM bulletin 'Intermittent Harsh Upshifts or Downshifts, DTC P1811 (Maximum Adapt and Long Shift) (Reprogram TCM)' for 4T65 cars: 2005-08 LaCrosse/Allure 3.6L, 2007 Terraza, 2007-09 Uplander, 2007-09 Montana, 2007 Relay. Mostly 4T65-E automatic transaxles.",
+  "alt": false
+ },
+ {
+  "code": "C0460",
+  "makes": [
+   "Chevrolet",
+   "Pontiac",
+   "Buick",
+   "Saturn",
+   "GMC",
+   "Cadillac"
+  ],
+  "t": "Steering Angle Sensor Fault",
+  "m": "The computer that uses the steering wheel angle (power steering or stability control) found the angle reading is wrong or off-center. Drivers may see a Service ESC / Steering Assist Reduced message, stability control acting at odd times, or poor steering return.",
+  "c": [
+   "Steering angle sensor not centered/calibrated after an alignment or repair",
+   "Power steering or brake module software needing an update",
+   "Internal fault in the electric steering gear (some 2020-21 GM SUVs)",
+   "Wiring short near the sensor harness"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "steering",
+  "src": [
+   "https://static.nhtsa.gov/odi/tsbs/2017/MC-10137646-9999.pdf",
+   "https://www.vehicleservicepros.com/tsbs/article/53090978/steering-angle-reprogram-2017-10-23",
+   "https://static.nhtsa.gov/odi/tsbs/2021/MC-10194089-9999.pdf"
+  ],
+  "conf": "medium",
+  "note": "GM bulletins tie C0460 to the steering angle sensor: 17-NA-148 (2017 Bolt EV, C0460 5A), 2011 HHR ESC bulletin (recalibrate sensor), 20-NA-215 (C0460-58 with C0545, replace steering gear). Exact GM SI title not printed on a loaded page.",
+  "alt": false
+ },
+ {
+  "code": "C0242",
+  "makes": [
+   "Chevrolet",
+   "Cadillac"
+  ],
+  "t": "ECM/PCM Indicated Traction Control Malfunction",
+  "m": "The engine computer told the brake module it can't carry out traction control (it can't cut engine power when asked). Traction control turns off and its warning light comes on; the root cause is usually an engine fault.",
+  "c": [
+   "Engine fault stored in the ECM/PCM (throttle body, sensor or misfire)",
+   "Communication problem between the engine and brake modules",
+   "Loose pin in the transmission/engine connector (Cadillac case)"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "stability",
+  "src": [
+   "https://static.nhtsa.gov/odi/tsbs/2013/MC-10112699-9999.pdf",
+   "https://www.iatn.net/techmail/summaries/2019/06/C0242-dtc.html"
+  ],
+  "conf": "high",
+  "note": "GM PI PIC4740D lists 'C0242 ECM Indicated TCS Malfunction'; iATN (2011 Silverado 3500HD) uses 'PCM indicated Traction Control System malfunction'. Check engine codes first.",
+  "alt": false
+ },
+ {
+  "code": "U1120",
+  "makes": [
+   "Jeep"
+  ],
+  "t": "Lost Wheel Distance Message",
+  "m": "A module stopped receiving the wheel distance (wheel rotation) message it expects over the vehicle network. Odometer, speed-based features and stability systems may misbehave and warning lights can come on.",
+  "c": [
+   "ABS module or wheel speed sensor fault upstream",
+   "Network (CAN bus) wiring or connector problem",
+   "Sending module not communicating"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "network",
+  "src": [
+   "https://www.quadratec.com/c/reference/jeep-wrangler-jk-diagnostic-codes-and-how-check-them"
+  ],
+  "conf": "medium",
+  "note": "From a Jeep Wrangler JK (2007-2018) code list; not checked on other Chrysler models.",
+  "alt": false
+ },
+ {
+  "code": "B0092",
+  "makes": [
+   "Saturn",
+   "Cadillac",
+   "Buick"
+  ],
+  "t": "Passenger Presence System Performance",
+  "m": "On GM vehicles the passenger seat sensing system isn't working correctly, so the airbag computer can't tell if someone is in the seat. The airbag light comes on and the passenger airbag may be turned off.",
+  "c": [
+   "Failed passenger seat sensor/module or cushion",
+   "Wet passenger seat cushion",
+   "Broken wires or loose connector under the passenger seat"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "airbag",
+  "src": [
+   "https://www.iatn.net/forums/2/329600/05-cadillac-cts-v-b0092",
+   "https://m.carcomplaints.com/Buick/LaCrosse/2007/tsbs/tsb-4697.shtml"
+  ],
+  "conf": "medium",
+  "note": "Title from iATN (2005 Cadillac CTS-V); Buick TSB 4697 (2007 LaCrosse) covers the airbag light with B0077, B0078 or B0092. On Chrysler/Ram and other makes B0092 is a left side impact sensor code instead, so this meaning is GM-only.",
+  "alt": false
+ },
+ {
+  "code": "C0040",
+  "makes": [
+   "Chevrolet"
+  ],
+  "t": "Right Front Wheel Speed Sensor Circuit",
+  "m": "The ABS module sees a bad or missing signal from the right front wheel speed sensor. ABS, traction and stability lights come on and those systems are switched off.",
+  "c": [
+   "Failed right front wheel speed sensor",
+   "Damaged or corroded sensor wiring or connector",
+   "Damaged or dirty tone ring / hub bearing"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "brakes/ABS",
+  "src": [
+   "https://static.nhtsa.gov/odi/tsbs/2019/MC-10165139-9999.pdf"
+  ],
+  "conf": "high",
+  "note": "GM Engineering Information for 2019-2020 Malibu and Impala lists C0040 Right Front Wheel Speed Sensor Circuit (with C0035/C0045/C0055).",
+  "alt": false
+ },
+ {
+  "code": "C0800",
+  "makes": [
+   "Chevrolet",
+   "GMC"
+  ],
+  "t": "Control Module Power Circuit Voltage",
+  "m": "A chassis control module saw its supply voltage go out of range. On GM trucks it shows up with low power steering assist, stalling, blank gauges/radio and many other network codes.",
+  "c": [
+   "Poor body control module ground (G218 on 2014-16 GM full-size trucks/SUVs)",
+   "Shorted battery cable at the starter",
+   "Weak battery or charging problem"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "body/electrical",
+  "src": [
+   "https://static.nhtsa.gov/odi/tsbs/2016/SB-10083324-5448.pdf",
+   "https://obdadvisor.com/codes/c0800/"
+  ],
+  "conf": "medium",
+  "note": "GM PI PIT5405B (2014-16 Silverado/Sierra/Tahoe/Suburban/Yukon/Escalade) lists C0800 among DTCs caused by a poor G218 ground or shorted starter cable. GM's exact title wasn't printed on a GM page; the 'control module power circuit' wording is from an aftermarket code site.",
+  "alt": false
+ },
+ {
+  "code": "U1412",
+  "makes": [
+   "Jeep"
+  ],
+  "t": "Implausible Vehicle Speed Signal Received",
+  "m": "A module received a vehicle speed signal over the network that doesn't make sense. Speedometer, cruise, shifting or stability features can act up and warning lights may come on.",
+  "c": [
+   "Faulty wheel speed sensor or ABS module sending bad speed data",
+   "Wrong tire size or module configuration",
+   "Network wiring or connector problem"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "network",
+  "src": [
+   "https://www.quadratec.com/c/reference/jeep-wrangler-jk-diagnostic-codes-and-how-check-them"
+  ],
+  "conf": "medium",
+  "note": "From a Jeep Wrangler JK (2007-2018) code list; not checked on Ram specifically.",
+  "alt": false
+ },
+ {
+  "code": "C056D",
+  "makes": [
+   "Chevrolet",
+   "GMC",
+   "Buick",
+   "Cadillac"
+  ],
+  "t": "Chassis Control Module Internal Fault",
+  "m": "A chassis computer (power steering, brake/ABS or park brake) found a fault inside itself or in a part it directly drives. Depending on the vehicle you see Service Power Steering with heavy steering, or a Service Parking Brake message with park-brake and ABS lights.",
+  "c": [
+   "Faulty power steering assist motor (2016-2018 Colorado/Canyon)",
+   "High resistance in the electric park brake actuator or its wiring (many 2017-2022 GM SUVs/trucks)",
+   "Failed control module"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "brakes/ABS",
+  "src": [
+   "https://static.nhtsa.gov/odi/tsbs/2019/MC-10154633-9999.pdf",
+   "https://static.nhtsa.gov/odi/tsbs/2022/MC-10227670-9999.pdf"
+  ],
+  "conf": "medium",
+  "note": "GM 16-NA-065 (2016-18 Colorado/Canyon): C056D with loss of steering assist, replace the assist motor; GM PIT5662G (2017-22 Acadia/XT5/XT6/Blazer/Traverse/Enclave/Silverado-Sierra 1500): C056D with park brake warnings from EPB actuator/circuit resistance. GM's exact title was not printed; 'system' depends on the module, so it could also be 'steering'.",
+  "alt": false
+ },
+ {
+  "code": "B101D",
+  "makes": [
+   "Chevrolet"
+  ],
+  "t": "Electronic Control Unit Hardware",
+  "m": "The passenger presence (seat sensing) module reports an internal hardware fault. The airbag warning message comes on and the passenger airbag may be turned off.",
+  "c": [
+   "Passenger seat sensor mat loose or disengaged",
+   "Failed passenger presence module",
+   "Loose under-seat connector"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "airbag",
+  "src": [
+   "https://static.nhtsa.gov/odi/tsbs/2019/MC-10155049-9999.pdf"
+  ],
+  "conf": "high",
+  "note": "GM bulletin 17-NA-010 (2014-2018 Impala): B101D set in the Passenger Presence Module, caused by the sensor mat coming loose with seat use. B101D is a generic GM 'module hardware' code, so on other GM vehicles it can come from a different module.",
+  "alt": false
+ },
+ {
+  "code": "U2603",
+  "makes": [
+   "Chevrolet"
+  ],
+  "t": "Lost Communication With Battery Interface Module 1",
+  "m": "The Volt's main battery computer lost contact with one of the small modules that watch the high-voltage battery cells. The check engine light comes on and the car may not start.",
+  "c": [
+   "Internal fault in the battery energy control module",
+   "12-volt battery voltage problems",
+   "Wiring to the battery interface modules"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "hybrid/EV",
+  "src": [
+   "https://static.nhtsa.gov/odi/inv/2023/INRD-PE23022-15911.pdf"
+  ],
+  "conf": "high",
+  "note": "GM bulletin 18-NA-261 (2016-2018 Volt): U2603-U2606 and U2617-U2624 with no-start/MIL; cause is the battery energy control module, fix is replace and reprogram it. Filed in NHTSA investigation PE23-022.",
+  "alt": false
+ },
+ {
+  "code": "U2624",
+  "makes": [
+   "Chevrolet"
+  ],
+  "t": "Lost Communication With Battery Interface Module 12",
+  "m": "The Volt's main battery computer lost contact with battery cell monitoring module 12. The check engine light comes on and the car may not start.",
+  "c": [
+   "Internal fault in the battery energy control module",
+   "12-volt battery voltage problems",
+   "Wiring to the battery interface modules"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "hybrid/EV",
+  "src": [
+   "https://static.nhtsa.gov/odi/inv/2023/INRD-PE23022-15911.pdf"
+  ],
+  "conf": "high",
+  "note": "GM bulletin 18-NA-261, 2016-2018 Volt; same fix as U2603 (replace/reprogram the battery energy control module).",
+  "alt": false
+ },
+ {
+  "code": "U2622",
+  "makes": [
+   "Chevrolet"
+  ],
+  "t": "Lost Communication With Battery Interface Module 10",
+  "m": "The Volt's main battery computer lost contact with battery cell monitoring module 10. The check engine light comes on and the car may not start.",
+  "c": [
+   "Internal fault in the battery energy control module",
+   "12-volt battery voltage problems",
+   "Wiring to the battery interface modules"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "hybrid/EV",
+  "src": [
+   "https://static.nhtsa.gov/odi/inv/2023/INRD-PE23022-15911.pdf"
+  ],
+  "conf": "high",
+  "note": "GM bulletin 18-NA-261, 2016-2018 Volt; same fix as U2603 (replace/reprogram the battery energy control module).",
+  "alt": false
+ },
+ {
+  "code": "P25A2",
+  "makes": [],
+  "t": "Brake System Control Module A Requested MIL Illumination",
+  "m": "The brake (ABS) control module found a fault of its own and asked the engine computer to turn on the check engine light. This code is a messenger: the real problem is in a brake-module code stored alongside it.",
+  "c": [
+   "A fault stored in the ABS/brake module (wheel speed sensor, pump, valve)",
+   "Low battery or charging voltage",
+   "Wiring or connector problems at the brake module",
+   "Brake module or software fault (less common)"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "brakes/ABS",
+  "src": [
+   "https://www.kbb.com/obd-ii/p25a2/"
+  ],
+  "conf": "high",
+  "note": "obd-codes.com has no page (404). Read the brake module's own codes to find the cause.",
+  "alt": false
+ },
+ {
+  "code": "P0A43",
+  "makes": [],
+  "t": "Drive Motor A Position Sensor Circuit Intermittent",
+  "m": "On a hybrid or EV, the sensor that tells the computer exactly where the electric drive motor's rotor is sent a signal that cut in and out. The hybrid system may light warnings, limit power or shut down drive.",
+  "c": [
+   "Loose or corroded connector at the motor position sensor (resolver)",
+   "Damaged wiring between the sensor and the inverter/control module",
+   "Failing position sensor in the drive motor",
+   "Inverter or hybrid control module fault"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "hybrid/EV",
+  "src": [
+   "https://recallcheck.net/obd/p0a43"
+  ],
+  "conf": "high",
+  "note": "obd-codes.com and kbb.com have no usable page. Title matches mycarly, obdguide and partsavatar listings seen in search. Hybrid/EV only (Chrysler complaints are Pacifica Hybrid).",
+  "alt": false
+ },
+ {
+  "code": "P008A",
+  "makes": [],
+  "t": "Low Pressure Fuel System Pressure - Too Low",
+  "m": "The computer saw that the low-pressure side of the fuel system (the in-tank pump feeding the high-pressure pump) is not delivering enough pressure. Expect weak power, hesitation, hard starts or stalling.",
+  "c": [
+   "Weak or failing in-tank (low-pressure) fuel pump",
+   "Clogged fuel filter or restricted fuel line",
+   "Fuel leak",
+   "Faulty fuel pressure sensor or pump control module"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "fuel/emissions",
+  "src": [
+   "https://www.obd-codes.com/p008a"
+  ],
+  "conf": "high",
+  "note": "obd-codes.com frames it mainly as a diesel code, but it also sets on gasoline direct-injection engines (the Alfa Romeo and Ford complaints are gasoline GDI).",
+  "alt": false
+ },
+ {
+  "code": "P07A3",
+  "makes": [],
+  "t": "Transmission Friction Element A Stuck On",
+  "m": "In an automatic transmission, clutch/friction element A is staying applied when the computer wants it released. Shifts can be harsh, the car can feel like it is binding, or the transmission may go into limp mode.",
+  "c": [
+   "Low, old or contaminated transmission fluid",
+   "Stuck valve or solenoid in the valve body",
+   "Worn or damaged internal clutch parts",
+   "Wiring or transmission control module fault"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "transmission",
+  "src": [
+   "https://www.obd-codes.com/p07a3"
+  ],
+  "conf": "high",
+  "note": "Which physical clutch is 'A' depends on the transmission; check the service manual.",
+  "alt": false
+ },
+ {
+  "code": "P07F7",
+  "makes": [],
+  "t": "Gear 10 Incorrect Ratio",
+  "m": "In 10th gear, the transmission's input and output speeds don't match the ratio 10th gear should give, so the transmission is slipping or not fully in that gear. Drivers notice slipping, flare or harsh/late shifts at highway speed.",
+  "c": [
+   "Low or degraded transmission fluid",
+   "Worn or slipping clutch pack used in 10th gear",
+   "Internal hydraulic leak or valve body problem",
+   "Faulty shift solenoid or speed sensor"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "transmission",
+  "src": [
+   "https://recallcheck.net/obd/p07f7"
+  ],
+  "conf": "high",
+  "note": "Only on 10-speed automatics (Ford 10R60/10R80, GM 10L80/10L90). Title matches au7o/obdguide listings seen in search; obd-codes.com has no page.",
+  "alt": false
+ },
+ {
+  "code": "P090C",
+  "makes": [],
+  "t": "Clutch B Actuator Control Circuit Low",
+  "m": "On an automated manual or dual-clutch transmission, the computer sees voltage that is too low in the circuit that drives the actuator for clutch B. The car may not shift, stall when stopping, get stuck in a gear or go into limp mode.",
+  "c": [
+   "Failed clutch B actuator motor or solenoid",
+   "Damaged wiring or connector, or a short to ground",
+   "Blown fuse or poor module ground",
+   "Transmission control module fault (less common)"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "transmission",
+  "src": [
+   "https://www.kbb.com/obd-ii/p090c/"
+  ],
+  "conf": "high",
+  "note": "Dual-clutch/automated manual transmissions only (Ford complaints are the PowerShift DPS6 in Focus/Fiesta). obd-codes.com has no page.",
+  "alt": false
+ },
+ {
+  "code": "P26A3",
+  "makes": [],
+  "t": "Engine Coolant Bypass Valve A Range/Performance",
+  "m": "The electronically controlled coolant valve (thermostat-style control valve) isn't moving to or reporting the position the computer asks for. The engine may warm up slowly, run too cool or hot, or give poor heater output.",
+  "c": [
+   "Failing coolant control valve (Subaru calls it the thermo control valve)",
+   "Coolant vapor or leaks damaging the valve's sensor",
+   "Wiring or connector problem at the valve",
+   "Low coolant or air in the cooling system"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "engine",
+  "src": [
+   "https://recallcheck.net/obd/p26a3"
+  ],
+  "conf": "high",
+  "note": "Title matches an NHTSA-posted TSB and other listings seen in search. Subaru covers this valve on 2019-21 Forester, 2020-21 Legacy/Outback, 2021 Crosstrek (TSB 09-80-21, extended warranty reported). obd-codes.com has no page.",
+  "alt": false
+ },
+ {
+  "code": "P07E6",
+  "makes": [],
+  "t": "Stuck in Park",
+  "m": "The computer commanded the transmission out of Park but sensed it never left Park (the park lock stayed engaged). The vehicle may refuse to move or shift out of Park.",
+  "c": [
+   "Faulty electronic park lock actuator or park pawl motor",
+   "Park position sensor or wiring fault",
+   "Valve body or internal park mechanism problem",
+   "Low battery voltage or module software issue"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "transmission",
+  "src": [
+   "https://recallcheck.net/obd/p07e6"
+  ],
+  "conf": "high",
+  "note": "Mostly on shift-by-wire vehicles. Title matches mycarly; Ford TSBs found in search tie it to the park lock actuator (2023-24 Escape hybrid), park pawl motor (2024-25 Mach-E) and valve body (2025-26 Maverick/Escape/Bronco Sport). obd-codes.com has no page.",
+  "alt": false
+ },
+ {
+  "code": "P26B7",
+  "makes": [],
+  "t": "Engine Coolant Bypass Valve C Control Circuit/Open",
+  "m": "The computer found a broken (open) circuit to coolant bypass valve C, so it can't control that valve. The engine may warm slowly, run at an unstable temperature or, in bad cases, overheat.",
+  "c": [
+   "Failed coolant bypass valve/solenoid",
+   "Broken wire or loose connector at the valve",
+   "Corroded connector pins",
+   "Engine computer driver fault (rare)"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "engine",
+  "src": [
+   "https://recallcheck.net/obd/p26b7"
+  ],
+  "conf": "high",
+  "note": "Title matches mycarly and a Ford Fiesta service manual page seen in search. Mostly Ford 1.6L EcoBoost (2013+ Escape, Fiesta ST); a Ford TSB for the 2013 Escape 1.6L replaces the bypass valve. obd-codes.com has no page.",
+  "alt": false
+ },
+ {
+  "code": "P0E15",
+  "makes": [],
+  "t": "Hybrid/EV Battery Pack Coolant Heater A Control Performance",
+  "m": "On a plug-in hybrid or EV, the electric heater that warms the coolant (and battery) isn't doing what the computer commands. Cabin heat or battery warming can suffer, and some vehicles may have start or charging trouble in the cold.",
+  "c": [
+   "Failed high-voltage coolant heater",
+   "Wiring, connector or communication (LIN) fault to the heater",
+   "Low coolant level",
+   "Hybrid control software issue (Chrysler has issued flash updates)"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "hybrid/EV",
+  "src": [
+   "https://recallcheck.net/obd/p0e15"
+  ],
+  "conf": "high",
+  "note": "Plug-in hybrid/EV only. Chrysler Pacifica Hybrid and Jeep 4xe TSBs found in search reference P0E15-00 and the HV coolant heater. obd-codes.com has no page.",
+  "alt": false
+ },
+ {
+  "code": "P07AE",
+  "makes": [],
+  "t": "Transmission Friction Element G Performance/Stuck Off",
+  "m": "In an automatic transmission, clutch/friction element G isn't gripping when it should (slipping or not applying). Drivers notice slipping, flares, harsh or missed shifts.",
+  "c": [
+   "Low or contaminated transmission fluid",
+   "Worn clutch pack or leaking seals",
+   "Sticking valve or solenoid in the valve body",
+   "Wiring or transmission control module fault"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "transmission",
+  "src": [
+   "https://www.obd-codes.com/p07ae"
+  ],
+  "conf": "high",
+  "note": "Only on transmissions with 7 or more friction elements (e.g. Ford/GM 10-speed). Which clutch is 'G' depends on the transmission.",
+  "alt": false
+ },
+ {
+  "code": "P0481",
+  "makes": [],
+  "t": "Cooling Fan 2 Control Circuit",
+  "m": "The computer commanded the second radiator cooling fan (or its relay) but the circuit didn't respond as expected, so that fan may not run. The engine can run hot in traffic or at idle, and A/C may cool poorly.",
+  "c": [
+   "Failed fan relay or fan control module",
+   "Failed cooling fan motor",
+   "Open or shorted wiring, blown fuse or bad connector",
+   "Engine computer fault (rare)"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "engine",
+  "src": [
+   "https://www.obd-codes.com/p0481"
+  ],
+  "conf": "high",
+  "note": "Sources disagree on wording: obd-codes.com and older lists say 'Cooling Fan Relay 2 Control Circuit'; current J2012 and an NHTSA-posted TSB use 'Fan 2 Control Circuit'. Same fault either way.",
+  "alt": false
+ },
+ {
+  "code": "P20BA",
+  "makes": [],
+  "t": "Reductant Heater A Control Circuit Performance",
+  "m": "On a diesel with DEF (diesel exhaust fluid), the heater that keeps the DEF from freezing isn't performing as commanded. The emissions system can be disabled, and after a while the truck may limit speed or power.",
+  "c": [
+   "Failed DEF tank heater (often part of the tank/pump assembly)",
+   "Damaged wiring or connector in the heater circuit",
+   "Faulty DEF temperature sensor",
+   "SCR control module fault or software"
+  ],
+  "s": 1,
+  "w": 0,
+  "sys": "fuel/emissions",
+  "src": [
+   "https://www.obd-codes.com/p20ba"
+  ],
+  "conf": "high",
+  "note": "Diesel SCR/DEF systems only.",
+  "alt": false
+ },
+ {
+  "code": "P2681",
+  "makes": [],
+  "t": "Engine Coolant Bypass Valve A Control Circuit/Open",
+  "m": "The computer found a broken (open) circuit to coolant bypass valve A, so it can't control coolant flow through that valve. Warm-up, heater output and engine temperature can be affected.",
+  "c": [
+   "Failed coolant bypass/flow control valve",
+   "Broken wire or unplugged/corroded connector",
+   "Blown fuse in the valve circuit",
+   "Engine computer driver fault (rare)"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "engine",
+  "src": [
+   "https://recallcheck.net/obd/p2681"
+  ],
+  "conf": "high",
+  "note": "Title matches partsavatar, obd2-diagnostico and other listings seen in search (some omit the 'A'). On Toyota it is most reported on the RAV4 (M20A/A25A engines with an electric coolant valve). obd-codes.com has no page.",
+  "alt": false
+ },
+ {
+  "code": "P0A78",
+  "makes": [],
+  "t": "Drive Motor A Inverter Performance",
+  "m": "On a hybrid or EV, the inverter that powers the main electric drive motor reported a fault (for example overheating or a power transistor problem). The hybrid system warning comes on and the car may lose power or shut down drive.",
+  "c": [
+   "Failed inverter/power module (often replaced as an assembly)",
+   "Inverter cooling problem (pump, low coolant)",
+   "High-voltage wiring or connector fault",
+   "Hybrid control software issue"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "hybrid/EV",
+  "src": [
+   "https://recallcheck.net/obd/p0a78"
+  ],
+  "conf": "high",
+  "note": "Hybrid/EV only. Title matches partsavatar and Lexus/GM service data seen in search; Toyota Prius inverter recalls involve this code. obd-codes.com and kbb.com have no usable page.",
+  "alt": false
+ },
+ {
+  "code": "P0887",
+  "makes": [],
+  "t": "TCM Power Relay Control Circuit High",
+  "m": "The computer sees too-high voltage in the circuit that switches the transmission control module's power relay. The transmission may shift erratically or go into limp mode, and traction control or ABS can switch off.",
+  "c": [
+   "Faulty TCM power relay",
+   "Wiring short to power in the relay control circuit",
+   "Blown fuse or fusible link",
+   "Transmission or engine control module fault"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "transmission",
+  "src": [
+   "https://www.obd-codes.com/p0887"
+  ],
+  "conf": "high",
+  "note": "",
+  "alt": false
+ },
+ {
+  "code": "P023F",
+  "makes": [],
+  "t": "Fuel Pump Secondary Circuit Open",
+  "m": "The computer watches a feedback wire on the fuel pump's power feed and found it reading wrong when the pump should be off. The fuel pump may keep running with the key off, which can drain the battery.",
+  "c": [
+   "Stuck or faulty fuel pump relay",
+   "Wiring short to voltage in the pump supply or feedback circuit",
+   "Fuel pump control module or engine computer driver fault"
+  ],
+  "s": 1,
+  "w": 0,
+  "sys": "fuel/emissions",
+  "src": [
+   "https://www.obd-codes.com/p023f"
+  ],
+  "conf": "high",
+  "note": "",
+  "alt": false
+ },
+ {
+  "code": "P2419",
+  "makes": [],
+  "t": "Evaporative Emission System Switching Valve Control Circuit Low",
+  "m": "The computer saw low voltage in the circuit for the EVAP leak-check switching valve, so the fuel vapor leak test can't run. There are usually no driving symptoms, just the check engine light.",
+  "c": [
+   "Faulty leak detection pump / canister pump module (most common)",
+   "Wiring short to ground or bad connector",
+   "Damaged EVAP canister or hoses",
+   "Engine computer fault (rare)"
+  ],
+  "s": 1,
+  "w": 0,
+  "sys": "fuel/emissions",
+  "src": [
+   "https://www.kbb.com/obd-ii/p2419/"
+  ],
+  "conf": "high",
+  "note": "kbb.com words it 'EVAP System Switching Valve Control Circuit Low'. On Toyota/Lexus/Scion the switching valve is inside the canister pump module. obd-codes.com has no page.",
+  "alt": false
+ },
+ {
+  "code": "P00AF",
+  "makes": [],
+  "t": "Turbocharger/Supercharger Boost Control A Module Performance",
+  "m": "The module or actuator that controls turbo boost (often the electronic actuator on a variable-geometry turbo) isn't working as expected. Boost can be wrong, so the engine may lose power and go into a reduced-power mode.",
+  "c": [
+   "Failed electronic turbo actuator / boost control module",
+   "Sticking turbo vanes from soot buildup",
+   "Wiring, connector or ground problems",
+   "Engine computer fault (rare)"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "engine",
+  "src": [
+   "https://www.obd-codes.com/p00af"
+  ],
+  "conf": "high",
+  "note": "Mostly diesels with variable-geometry turbos (e.g. Ram diesel).",
+  "alt": false
+ },
+ {
+  "code": "P20EE",
+  "makes": [],
+  "t": "SCR NOx Catalyst Efficiency Below Threshold Bank 1",
+  "m": "On a diesel, the SCR catalyst that uses DEF to cut NOx isn't cleaning the exhaust as well as it should. Often the only sign is the warning light, but the truck may later limit speed or power.",
+  "c": [
+   "Poor-quality, diluted or contaminated DEF",
+   "Clogged or faulty DEF injector/doser or pump",
+   "Faulty NOx or exhaust temperature sensor",
+   "Worn or contaminated SCR catalyst, or an exhaust leak"
+  ],
+  "s": 1,
+  "w": 0,
+  "sys": "fuel/emissions",
+  "src": [
+   "https://www.obd-codes.com/p20ee"
+  ],
+  "conf": "high",
+  "note": "Diesel SCR/DEF systems only.",
+  "alt": false
+ },
+ {
+  "code": "P2832",
+  "makes": [],
+  "t": "Shift Fork A Position Circuit Range/Performance",
+  "m": "In an automated manual or dual-clutch transmission, the sensor reading for shift fork A is out of the expected range, so the computer can't be sure which gear is selected. Expect hesitation, harsh or missed shifts, or the car refusing to go into some gears.",
+  "c": [
+   "Failing transmission control module (has its own position sensors on Ford DPS6)",
+   "Worn or broken internal shift drum/fork stop",
+   "Wiring, connector or ground problem",
+   "Shift motor fault"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "transmission",
+  "src": [
+   "https://recallcheck.net/obd/p2832"
+  ],
+  "conf": "high",
+  "note": "Dual-clutch/automated manual transmissions only (Ford complaints are the PowerShift DPS6 in Focus/Fiesta). Title matches go-parts and forum listings seen in search. obd-codes.com has no page.",
+  "alt": false
+ },
+ {
+  "code": "P26CB",
+  "makes": [],
+  "t": "Engine Coolant Pump Performance/Stuck Off",
+  "m": "The electric water pump isn't running or isn't pumping at the speed the computer commands. Coolant may not circulate properly, so the engine can overheat.",
+  "c": [
+   "Failed electric water pump (common on newer Toyota 2.5L engines)",
+   "Wiring, relay or fuse problem in the pump circuit",
+   "Low coolant or air trapped in the system",
+   "Engine computer fault (rare)"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "engine",
+  "src": [
+   "https://recallcheck.net/obd/p26cb"
+  ],
+  "conf": "high",
+  "note": "Only on engines with an electric coolant pump. Title matches mycarly; a Toyota bulletin in search calls the P26CB-71 subtype 'Electric Water Pump Speed Stuck' (Toyota A25A engines, e.g. 2018+ Camry, 2019+ RAV4). obd-codes.com has no page.",
+  "alt": false
+ },
+ {
+  "code": "P0471",
+  "makes": [],
+  "t": "Exhaust Pressure Sensor A Circuit Range/Performance",
+  "m": "The exhaust pressure sensor's reading doesn't match what the computer expects (for example compared with intake and air pressure at key-on). Power can drop and diesel particulate filter cleaning may not run.",
+  "c": [
+   "Blocked or cracked tube between the exhaust and the sensor",
+   "Faulty exhaust pressure sensor",
+   "Air intake, EGR or charge-air leaks",
+   "Engine computer fault (rare)"
+  ],
+  "s": 1,
+  "w": 0,
+  "sys": "fuel/emissions",
+  "src": [
+   "https://www.obd-codes.com/p0471"
+  ],
+  "conf": "high",
+  "note": "obd-codes.com uses the older wording 'Exhaust Pressure Sensor Range/Performance'; current J2012 adds 'A Circuit'. Mostly diesels/turbo engines; Kia/Hyundai/Dodge complaint makes are a bit unusual since few US models are diesel.",
+  "alt": false
+ },
+ {
+  "code": "P2872",
+  "makes": [],
+  "t": "Clutch A Stuck Engaged",
+  "m": "In a dual-clutch or automated manual transmission, clutch A stays engaged when the computer wants it released. The car can lurch, stall when stopping, shudder or refuse to shift.",
+  "c": [
+   "Worn or contaminated clutch (fluid leak onto it)",
+   "Faulty clutch A actuator or release mechanism",
+   "Clutch not adapted/relearned after service",
+   "Transmission control module fault"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "transmission",
+  "src": [
+   "https://recallcheck.net/obd/p2872"
+  ],
+  "conf": "high",
+  "note": "Dual-clutch/automated manual only (Ford complaints are the PowerShift DPS6; on it clutch A drives the odd gears). Title matches mycarly and kbb listings seen in search. obd-codes.com has no page.",
+  "alt": false
+ },
+ {
+  "code": "P07A5",
+  "makes": [],
+  "t": "Transmission Friction Element B Stuck On",
+  "m": "In an automatic transmission, clutch/friction element B stays applied when the computer wants it released. Shifts can be harsh or binding, and the transmission may go into limp mode.",
+  "c": [
+   "Low, old or contaminated transmission fluid",
+   "Stuck valve or solenoid in the valve body",
+   "Worn or damaged internal clutch parts",
+   "Wiring or transmission control module fault"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "transmission",
+  "src": [
+   "https://www.obd-codes.com/p07a5"
+  ],
+  "conf": "high",
+  "note": "Which physical clutch is 'B' depends on the transmission.",
+  "alt": false
+ },
+ {
+  "code": "P0240",
+  "makes": [],
+  "t": "Turbocharger/Supercharger Boost Sensor B Circuit Range/Performance",
+  "m": "The second boost pressure sensor's reading doesn't make sense compared with what the computer expects, often showing more boost than commanded. The computer cuts power to protect the engine.",
+  "c": [
+   "Faulty boost pressure sensor B",
+   "Leaking, pinched or cracked boost or vacuum hoses",
+   "Faulty wastegate control solenoid or stuck wastegate",
+   "Wiring problem or engine computer fault"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "engine",
+  "src": [
+   "https://www.obd-codes.com/p0240"
+  ],
+  "conf": "high",
+  "note": "obd-codes.com titles it 'Turbocharger Boost Sensor B Range/Performance'; current J2012 wording includes 'Turbocharger/Supercharger ... Circuit'. Turbocharged/supercharged engines only.",
+  "alt": false
+ },
+ {
+  "code": "P0AC4",
+  "makes": [],
+  "t": "Hybrid/EV Powertrain Control Module Requested MIL Illumination",
+  "m": "The hybrid/EV control module found a fault of its own and asked the engine computer to turn on the check engine light. The real problem is in another code stored in the hybrid system, which can range from minor to serious.",
+  "c": [
+   "A fault stored in the hybrid/EV module (battery, cooling, motor, charging)",
+   "High-voltage battery temperature or voltage problem",
+   "Battery cooling fan, sensor or coolant problem",
+   "Wiring or connector fault"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "hybrid/EV",
+  "src": [
+   "https://www.kbb.com/obd-ii/p0ac4/"
+  ],
+  "conf": "high",
+  "note": "Hybrid/EV only (Chevrolet complaints likely Volt/Bolt). Read the hybrid module's own codes to find the cause. obd-codes.com has no page.",
+  "alt": false
+ },
+ {
+  "code": "P287B",
+  "makes": [],
+  "t": "Shift Fork A Calibration Not Learned",
+  "m": "The transmission computer doesn't have a valid learned position for shift fork A, usually after a repair or module replacement, or because the learn keeps failing. Shifting can be rough or some gears may not engage.",
+  "c": [
+   "Shift fork learn/adaptation not run after a repair or module swap",
+   "Learn fails because of a faulty transmission control module",
+   "Worn internal shift parts (e.g. shift drum stop)",
+   "Shift motor or position sensor fault"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "transmission",
+  "src": [
+   "https://recallcheck.net/obd/p287b"
+  ],
+  "conf": "high",
+  "note": "Dual-clutch/automated manual only (Ford PowerShift DPS6). Title matches mycarly and IATN listings seen in search. obd-codes.com has no page.",
+  "alt": false
+ },
+ {
+  "code": "P076F",
+  "makes": [],
+  "t": "Gear 7 Incorrect Ratio",
+  "m": "In 7th gear, the transmission's input and output speeds don't match the ratio 7th gear should give, so it is slipping or not fully in that gear. Drivers notice slipping, flares, or delayed or missing 7th-gear shifts.",
+  "c": [
+   "Low or dirty transmission fluid",
+   "Worn clutch pack or internal leak",
+   "Faulty shift solenoid or valve body problem",
+   "Faulty speed sensor or transmission control module"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "transmission",
+  "src": [
+   "https://www.obd-codes.com/p076f"
+  ],
+  "conf": "high",
+  "note": "Only on transmissions with 7+ forward gears (e.g. Ford 10R80, ZF/Chrysler 8-speed).",
+  "alt": false
+ },
+ {
+  "code": "P032F",
+  "makes": [],
+  "t": "Combustion Engine Producing Insufficient Torque",
+  "m": "On a hybrid or mild-hybrid, the computer decided the gas engine is making less torque than it should for the commands it's getting. The vehicle may feel down on power, idle roughly or rely more on the electric side.",
+  "c": [
+   "Misfire, low compression or other engine mechanical problem",
+   "Fuel delivery problem (weak pump, clogged injectors)",
+   "Air intake leak or faulty airflow/pressure sensor",
+   "Software or sensor fault in the hybrid torque calculation"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "engine",
+  "src": [
+   "https://recallcheck.net/obd/p032f"
+  ],
+  "conf": "medium",
+  "note": "Only one loading source states the title (recallcheck.net, spelled 'Insufficent'); a diag.net forum thread on a 2023 Accord Hybrid gives the same meaning. Appears on hybrid/mild-hybrid powertrains (e.g. Jeep/Ram eTorque or 4xe, Ford hybrids). obd-codes.com has no page.",
+  "alt": false
+ },
+ {
+  "code": "P2732",
+  "makes": [],
+  "t": "Pressure Control Solenoid F Performance/Stuck Off",
+  "m": "Transmission pressure control solenoid F isn't working right or is stuck off, so hydraulic pressure for some shifts is wrong. Expect slipping, harsh or late shifts, or limp mode.",
+  "c": [
+   "Faulty pressure control solenoid F",
+   "Dirty or low transmission fluid, clogged filter",
+   "Valve body problem or restricted fluid passages",
+   "Wiring, connector or control module fault"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "transmission",
+  "src": [
+   "https://www.obd-codes.com/p2732"
+  ],
+  "conf": "high",
+  "note": "",
+  "alt": false
+ },
+ {
+  "code": "P0A3F",
+  "makes": [],
+  "t": "Drive Motor A Position Sensor Circuit",
+  "m": "On a hybrid or EV, the circuit for the sensor that tracks the electric drive motor's rotor position has a fault. The hybrid system warning comes on and the car may lose power or refuse to drive.",
+  "c": [
+   "Faulty motor position sensor (resolver)",
+   "Open, shorted or corroded wiring or connector",
+   "Inverter or hybrid control module fault",
+   "Software needing an update"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "hybrid/EV",
+  "src": [
+   "https://recallcheck.net/obd/p0a3f"
+  ],
+  "conf": "high",
+  "note": "Hybrid/EV only. Title matches repairpal and partsavatar listings seen in search (one site calls it 'Range/Performance', which is a different code). obd-codes.com has no page.",
+  "alt": false
+ },
+ {
+  "code": "P2837",
+  "makes": [],
+  "t": "Shift Fork B Position Circuit Range/Performance",
+  "m": "In an automated manual or dual-clutch transmission, the sensor reading for shift fork B is out of the expected range, so the computer can't confirm the gear position. Expect harsh or missed shifts, or some gears not engaging.",
+  "c": [
+   "Failing transmission control module (has its own position sensors on Ford DPS6)",
+   "Worn or broken internal shift drum/fork stop",
+   "Wiring, connector or ground problem",
+   "Shift motor fault"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "transmission",
+  "src": [
+   "https://recallcheck.net/obd/p2837"
+  ],
+  "conf": "high",
+  "note": "Dual-clutch/automated manual only (Ford PowerShift DPS6). Title matches go-parts listings seen in search. obd-codes.com has no page.",
+  "alt": false
+ },
+ {
+  "code": "P2583",
+  "makes": [],
+  "t": "Cruise Control Front Distance Range Sensor Single Sensor or Center",
+  "m": "The front radar (or single center distance sensor) used by adaptive cruise control reported a fault or an implausible reading. Adaptive cruise, and often collision-warning or auto-braking features, turn off until it's fixed.",
+  "c": [
+   "Dirt, snow or ice covering the radar sensor",
+   "Radar knocked out of alignment (minor bump, bumper repair)",
+   "Faulty radar unit",
+   "Wiring or connector problem"
+  ],
+  "s": 1,
+  "w": 0,
+  "sys": "body/electrical",
+  "src": [
+   "https://recallcheck.net/obd/p2583"
+  ],
+  "conf": "high",
+  "note": "Title matches partsavatar and repairpal listings seen in search. Driver-assist (adaptive cruise) code, not an engine fault; any radar replacement or bumper work needs calibration. obd-codes.com has no page.",
+  "alt": false
+ },
+ {
+  "code": "P20B9",
+  "makes": [],
+  "t": "Reductant Heater A Control Circuit/Open",
+  "m": "On a diesel with DEF, the computer found a broken (open) circuit to the heater that keeps the DEF from freezing. The emissions system may be disabled and the truck may eventually limit speed or power.",
+  "c": [
+   "Failed DEF heater (often part of the tank/pump assembly)",
+   "Broken wire or bad connector in the heater circuit",
+   "Blown fuse or relay in the heater circuit",
+   "SCR control module fault"
+  ],
+  "s": 1,
+  "w": 0,
+  "sys": "fuel/emissions",
+  "src": [
+   "https://www.obd-codes.com/p20b9"
+  ],
+  "conf": "high",
+  "note": "Diesel SCR/DEF systems only (Chevrolet/GMC complaints likely Duramax).",
+  "alt": false
+ },
+ {
+  "code": "P0002",
+  "makes": [],
+  "t": "Fuel Volume Regulator Control Circuit Range/Performance",
+  "m": "The circuit for the valve that regulates how much fuel the high-pressure pump delivers is reading out of range. Fuel pressure can be wrong, causing hard starts, no-start, stalling or reduced power.",
+  "c": [
+   "Faulty fuel volume regulator (metering) valve",
+   "Wiring short, open or corroded connector",
+   "High-pressure fuel pump problem",
+   "Engine computer fault (rare)"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "fuel/emissions",
+  "src": [
+   "https://www.obd-codes.com/p0002"
+  ],
+  "conf": "high",
+  "note": "Mainly common-rail diesels and gasoline direct-injection engines (Mercedes complaints likely BlueTEC diesels).",
+  "alt": false
+ },
+ {
+  "code": "P083B",
+  "makes": [],
+  "t": "Transmission Fluid Pressure Sensor/Switch G Circuit Range/Performance",
+  "m": "The transmission fluid pressure sensor or switch 'G' is reporting values the computer doesn't expect. Shift quality changes, and the transmission may go into limp mode (starting in 2nd or 3rd gear).",
+  "c": [
+   "Failed transmission fluid pressure sensor/switch",
+   "Open or shorted wiring in the sensor circuit",
+   "Internal hydraulic problem (leak, valve body)",
+   "Transmission control module fault (rare)"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "transmission",
+  "src": [
+   "https://www.obd-codes.com/p083b"
+  ],
+  "conf": "high",
+  "note": "",
+  "alt": false
+ },
+ {
+  "code": "P018B",
+  "makes": [],
+  "t": "Fuel Pressure Sensor B Circuit Range/Performance",
+  "m": "The second fuel pressure sensor's reading doesn't make sense to the computer. The engine may be hard to start, not start, or run poorly.",
+  "c": [
+   "Faulty fuel pressure sensor B",
+   "Real fuel delivery problem (weak pump, clogged filter)",
+   "Damaged wiring or loose connector",
+   "Engine computer fault (rare)"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "fuel/emissions",
+  "src": [
+   "https://www.obd-codes.com/p018b"
+  ],
+  "conf": "high",
+  "note": "Which sensor is 'B' (low- or high-pressure side) depends on the engine.",
+  "alt": false
+ },
+ {
+  "code": "P084A",
+  "makes": [],
+  "t": "Transmission Fluid Pressure Sensor/Switch H Circuit",
+  "m": "The circuit for transmission fluid pressure sensor or switch 'H' has an electrical fault. Shift quality changes and the transmission may go into limp mode.",
+  "c": [
+   "Failed pressure sensor/switch H",
+   "Open or short in the sensor wiring",
+   "Internal transmission problem affecting the sensor",
+   "Transmission control module fault (rare)"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "transmission",
+  "src": [
+   "https://www.obd-codes.com/p084a"
+  ],
+  "conf": "high",
+  "note": "Mitsubishi complaints likely relate to its CVT.",
+  "alt": false
+ },
+ {
+  "code": "P287A",
+  "makes": [],
+  "t": "Clutch B Stuck Engaged",
+  "m": "In a dual-clutch or automated manual transmission, clutch B stays engaged when the computer wants it released. The car can lurch, shudder, stall when stopping or refuse to shift.",
+  "c": [
+   "Worn or contaminated clutch (fluid leak onto it)",
+   "Faulty clutch B actuator or release mechanism",
+   "Clutch not adapted/relearned after service",
+   "Transmission control module fault"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "transmission",
+  "src": [
+   "https://recallcheck.net/obd/p287a"
+  ],
+  "conf": "high",
+  "note": "Dual-clutch/automated manual only (Ford PowerShift DPS6; clutch B drives the even gears and reverse). Title matches mycarly and obdguide listings seen in search. obd-codes.com has no page.",
+  "alt": false
+ },
+ {
+  "code": "P2682",
+  "makes": [],
+  "t": "Engine Coolant Bypass Valve A Control Circuit Low",
+  "m": "The computer sees too-low voltage (often a short to ground) in the circuit that controls coolant bypass valve A. The engine may warm slowly, run at the wrong temperature or give weak heat.",
+  "c": [
+   "Failed coolant control valve (Subaru thermo control valve)",
+   "Coolant vapor getting into the valve's electronics",
+   "Wiring short to ground or damaged connector",
+   "Engine computer fault (rare)"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "engine",
+  "src": [
+   "https://recallcheck.net/obd/p2682"
+  ],
+  "conf": "high",
+  "note": "Title matches partsavatar listing seen in search. Subaru TSB 09-80-21 (P2682 and P26Ax, thermo control valve design change) covers 2019-21 Forester, 2020-21 Legacy/Outback, 2021 Crosstrek. obd-codes.com has no page.",
+  "alt": false
+ },
+ {
+  "code": "P26A5",
+  "makes": [],
+  "t": "Engine Coolant Bypass Valve A Position Sensor Circuit Range/Performance",
+  "m": "The position sensor inside coolant bypass valve A is giving readings the computer doesn't expect. Engine temperature control can be off, with slow warm-up or weak heat.",
+  "c": [
+   "Failed coolant control valve or its built-in position sensor",
+   "Coolant vapor or leaks damaging the sensor",
+   "Wiring or connector problem",
+   "Engine computer fault (rare)"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "engine",
+  "src": [
+   "https://recallcheck.net/obd/p26a5"
+  ],
+  "conf": "high",
+  "note": "On Subaru it is part of the thermo control valve failures covered by TSB 09-80-21 (2019-21 Forester, 2020-21 Legacy/Outback, 2021 Crosstrek). One Q&A site calls it a heater valve code; Subaru sources tie it to the thermo control valve. obd-codes.com has no page.",
+  "alt": false
+ },
+ {
+  "code": "P0792",
+  "makes": [],
+  "t": "Intermediate Shaft Speed Sensor A Circuit Range/Performance",
+  "m": "The speed sensor on the transmission's intermediate shaft is giving readings that don't fit what the computer expects. Shifting can become harsh or erratic and the transmission may go into a backup mode.",
+  "c": [
+   "Faulty intermediate shaft speed sensor",
+   "Wiring or connector problem to the sensor",
+   "Low or dirty transmission fluid",
+   "Transmission or engine control module fault"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "transmission",
+  "src": [
+   "https://www.obd-codes.com/p0792"
+  ],
+  "conf": "high",
+  "note": "",
+  "alt": false
+ },
+ {
+  "code": "P2831",
+  "makes": [],
+  "t": "Shift Fork A Position Circuit",
+  "m": "In an automated manual or dual-clutch transmission, the computer found an electrical fault in the position circuit for shift fork A (the fork for the odd gears on Ford's DPS6). Gears may not engage, shifting can be erratic or the car may not move.",
+  "c": [
+   "Failing transmission control module (houses the position sensors on Ford DPS6)",
+   "Wiring, connector or ground problem",
+   "Shift motor fault",
+   "Internal shift mechanism damage"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "transmission",
+  "src": [
+   "https://recallcheck.net/obd/p2831"
+  ],
+  "conf": "high",
+  "note": "Dual-clutch/automated manual only (Ford PowerShift DPS6). Title matches go-parts and forum listings seen in search. obd-codes.com has no page.",
+  "alt": false
+ },
+ {
+  "code": "P07E4",
+  "makes": [],
+  "t": "Unable to Engage Park",
+  "m": "The transmission computer commanded Park but could not confirm that the transmission actually went into Park. The driver may see a warning to shift to Park or set the parking brake, and the car may not stay put on its own.",
+  "c": [
+   "Fault in the park mechanism or park actuator",
+   "Park position sensor or wiring fault",
+   "Low or dirty transmission fluid",
+   "Transmission control module fault"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "transmission",
+  "src": [
+   "https://www.mycarly.com/obd-codes/p07e4-unable-to-engage-park/"
+  ],
+  "conf": "medium",
+  "note": "obd-codes.com has no page for this code (404). Carly states the title but gives no causes; causes above are general. Some auto-generated sites list unrelated meanings (camshaft, O2 sensor); ignore those.",
+  "alt": false
+ },
+ {
+  "code": "P2017",
+  "makes": [],
+  "t": "Intake Manifold Runner Position Sensor/Switch Circuit High Bank 1",
+  "m": "The engine computer sees a voltage that is too high from the sensor that reports where the intake runner flaps are, on bank 1. The driver may notice the check engine light, a little less power and worse fuel economy.",
+  "c": [
+   "Failed intake runner position sensor or actuator",
+   "Wiring or connector fault in the sensor circuit",
+   "Faulty runner control relay (if fitted)",
+   "Engine computer fault (rare)"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "engine",
+  "src": [
+   "https://www.obd-codes.com/p2017"
+  ],
+  "conf": "high",
+  "note": "",
+  "alt": false
+ },
+ {
+  "code": "P025A",
+  "makes": [],
+  "t": "Fuel Pump Module A Control Circuit/Open",
+  "m": "The engine computer found a break or fault in the circuit it uses to control the fuel pump module. The car may be hard to start, stall, run weakly, or not start at all.",
+  "c": [
+   "Failed fuel pump or fuel pump module",
+   "Broken or damaged wiring to the pump module",
+   "Corroded or loose connector",
+   "Engine control module fault"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "fuel/emissions",
+  "src": [
+   "https://www.obd-codes.com/p025a"
+  ],
+  "conf": "high",
+  "note": "obd-codes.com writes the title without the 'A'; newer SAE lists include the 'A'.",
+  "alt": false
+ },
+ {
+  "code": "P2638",
+  "makes": [],
+  "t": "Torque Management Feedback Signal A Range/Performance",
+  "m": "The engine and transmission computers share a signal about how much torque the engine is making, and that signal does not make sense. Shifts can feel wrong or harsh, and the car may go into a reduced-power mode.",
+  "c": [
+   "Wiring fault between the engine and transmission computers",
+   "Engine control module fault or old software",
+   "Transmission control module fault"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "transmission",
+  "src": [
+   "https://repairpal.com/obd-ii-code-p2638"
+  ],
+  "conf": "high",
+  "note": "obd-codes.com has no page for this code (404).",
+  "alt": false
+ },
+ {
+  "code": "P073E",
+  "makes": [],
+  "t": "Unable to Engage Reverse",
+  "m": "The transmission was asked to go into Reverse but the computer could not confirm that it did. The car may not back up, or the transmission may go into a limited limp mode.",
+  "c": [
+   "Low, dirty or wrong transmission fluid",
+   "Faulty shift solenoid",
+   "Blocked hydraulic passage in the transmission",
+   "Wiring, connector or transmission computer fault"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "transmission",
+  "src": [
+   "https://www.obd-codes.com/p073e"
+  ],
+  "conf": "high",
+  "note": "",
+  "alt": false
+ },
+ {
+  "code": "P016F",
+  "makes": [],
+  "t": "Closed Loop Fuel Pressure Control At Limit - Pressure Too Low",
+  "m": "The engine computer has pushed its fuel pressure control as far as it can go and the pressure is still lower than it wants. The engine may lose power, run poorly, or stall.",
+  "c": [
+   "Weak or failing fuel pump",
+   "Clogged fuel filter",
+   "Fuel leak or faulty pressure regulator",
+   "Faulty fuel pressure sensor reading low"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "fuel/emissions",
+  "src": [
+   "https://www.mycarly.com/obd-codes/p016f-closed-loop-fuel-pressure-control-at-limit-pressure-too-low/"
+  ],
+  "conf": "high",
+  "note": "obd-codes.com has no page (404). Search results also show an NHTSA TSB (static.nhtsa.gov/odi/tsbs/2022/MC-10213671-0001.pdf) using the same title for 2018-2020 common rail diesels; not opened. One auto-generated site calls it a pressure sensor circuit fault, which disagrees and looks unreliable.",
+  "alt": false
+ },
+ {
+  "code": "P2859",
+  "makes": [],
+  "t": "Clutch A Pressure Disengagement Performance",
+  "m": "The transmission computer saw that the hydraulic pressure on clutch A did not drop the way it should when that clutch was released. Shifts may feel off, and the check engine light comes on.",
+  "c": [
+   "Faulty clutch pressure control solenoid",
+   "Low transmission fluid",
+   "Valve body or hydraulic pressure problem",
+   "Wiring or connector fault"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "transmission",
+  "src": [
+   "https://www.kbb.com/obd-ii/p2859/"
+  ],
+  "conf": "high",
+  "note": "obd-codes.com has no page (404). Some sites add '/Too Low' to the end of the title.",
+  "alt": false
+ },
+ {
+  "code": "P00FF",
+  "makes": [],
+  "t": "Body Control Module Requested MIL Illumination",
+  "m": "The body control module asked the engine computer to turn on the check engine light because it found a fault of its own. The light itself is the main symptom; the real problem is stored in the body control module.",
+  "c": [
+   "A fault stored in the body control module",
+   "Body control module wiring or software issue",
+   "Communication problem between the body and engine computers"
+  ],
+  "s": 1,
+  "w": 0,
+  "sys": "body/electrical",
+  "src": [
+   "https://www.mycarly.com/obd-codes/p00ff-body-control-module-requested-mil-illumination/"
+  ],
+  "conf": "medium",
+  "note": "Only one loading source (Carly) states this title; obd-codes.com has no page (404). Causes are general, since Carly lists none. Unusual for a generic P0 code: scan the body control module for its own codes.",
+  "alt": false
+ },
+ {
+  "code": "P26A6",
+  "makes": [],
+  "t": "Engine Coolant Bypass Valve A Position Sensor Circuit Low",
+  "m": "The engine computer sees a voltage that is too low from the sensor that reports the position of the coolant bypass (coolant control) valve. The check engine light comes on, and engine warm-up or heat control may not work right.",
+  "c": [
+   "Failed coolant bypass valve or its internal position sensor",
+   "Broken internal gear in the coolant valve",
+   "Wiring short or open in the sensor circuit",
+   "Poor connector contact"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "engine",
+  "src": [
+   "https://static.nhtsa.gov/odi/tsbs/2023/MC-10243239-9999.pdf"
+  ],
+  "conf": "high",
+  "note": "Source is Stellantis TSB 07-009-23 (2022-2023 Ram 1500 3.6L, cracked gear in the 3-way coolant valve; fix = replace valve). The TSB writes the title without 'A'. obd-codes.com has no page (404). The complaints are mostly Subaru, which uses a similar electric coolant control valve.",
+  "alt": false
+ },
+ {
+  "code": "P01F0",
+  "makes": [],
+  "t": "Coolant Temperature Relapsed Below Diagnostic Monitoring Temperature",
+  "m": "The engine warmed up enough for its self-tests, then the coolant temperature dropped back below that level. Often the only sign is the check engine light, sometimes with a weak heater.",
+  "c": [
+   "Thermostat stuck open",
+   "Faulty coolant temperature sensor",
+   "Cooling fan running when it should not",
+   "Very cold weather or short trips"
+  ],
+  "s": 1,
+  "w": 0,
+  "sys": "engine",
+  "src": [
+   "https://www.kbb.com/obd-ii/p01f0"
+  ],
+  "conf": "high",
+  "note": "obd-codes.com has no page (404).",
+  "alt": false
+ },
+ {
+  "code": "P0688",
+  "makes": [],
+  "t": "ECM/PCM Power Relay Sense Circuit Open",
+  "m": "The engine computer checks that its main power relay is feeding it voltage, and that check circuit reads open. The car may be slow to start or not start, and some electrical items may stop working.",
+  "c": [
+   "Failed engine computer power relay",
+   "Blown fuse or fusible link",
+   "Open or shorted wire between the relay and the computer"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "body/electrical",
+  "src": [
+   "https://www.obd-codes.com/p0688"
+  ],
+  "conf": "high",
+  "note": "",
+  "alt": false
+ },
+ {
+  "code": "P2562",
+  "makes": [],
+  "t": "Turbocharger Boost Control Position Sensor Circuit",
+  "m": "The engine computer found a problem in the circuit of the sensor that reports where the turbo's boost control (wastegate or vane) is. The engine may feel weak or hesitate, and fuel economy can drop.",
+  "c": [
+   "Failed boost control position sensor",
+   "Open or shorted signal wire",
+   "Lost power or ground at the sensor",
+   "Engine computer fault (rare)"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "engine",
+  "src": [
+   "https://www.obd-codes.com/p2562"
+  ],
+  "conf": "high",
+  "note": "obd-codes.com shortens 'Turbocharger' to 'Turbo'. Newer SAE lists use 'Turbocharger/Supercharger Boost Control A Position Sensor Circuit'.",
+  "alt": false
+ },
+ {
+  "code": "P207F",
+  "makes": [],
+  "t": "Reductant Quality Performance",
+  "m": "On a diesel, the computer decided the diesel exhaust fluid (DEF) is not cleaning the exhaust the way good fluid should. Emissions rise and, if not fixed, the truck may limit its speed or power.",
+  "c": [
+   "Contaminated, diluted or old DEF",
+   "Faulty DEF injector",
+   "Failing SCR catalyst",
+   "Faulty DEF quality sensor or NOx sensor"
+  ],
+  "s": 1,
+  "w": 0,
+  "sys": "fuel/emissions",
+  "src": [
+   "https://repairpal.com/obd-ii-code-p207f",
+   "https://www.kbb.com/obd-ii/p207f/"
+  ],
+  "conf": "high",
+  "note": "obd-codes.com has no page (404). Diesel only.",
+  "alt": false
+ },
+ {
+  "code": "P205C",
+  "makes": [],
+  "t": "Reductant Tank Temperature Sensor Circuit Low",
+  "m": "On a diesel, the sensor that reads the temperature of the diesel exhaust fluid tank is sending a voltage that is too low. The exhaust cleaning system may not work right and the check engine light comes on.",
+  "c": [
+   "Failed DEF tank temperature sensor",
+   "Shorted or open sensor wiring",
+   "SCR control module or engine computer fault"
+  ],
+  "s": 1,
+  "w": 0,
+  "sys": "fuel/emissions",
+  "src": [
+   "https://www.obd-codes.com/p205c"
+  ],
+  "conf": "high",
+  "note": "Diesel only.",
+  "alt": false
+ },
+ {
+  "code": "P203B",
+  "makes": [],
+  "t": "Reductant Level Sensor Circuit Range/Performance",
+  "m": "On a diesel, the reading from the diesel exhaust fluid level sensor does not make sense. The DEF gauge may be wrong or show low fluid when the tank is full.",
+  "c": [
+   "Failed DEF level sensor",
+   "Float or level arm stuck",
+   "Wrong fluid in the DEF tank",
+   "Wiring short or connector fault"
+  ],
+  "s": 1,
+  "w": 0,
+  "sys": "fuel/emissions",
+  "src": [
+   "https://www.obd-codes.com/p203b"
+  ],
+  "conf": "high",
+  "note": "Diesel only.",
+  "alt": false
+ },
+ {
+  "code": "P2565",
+  "makes": [],
+  "t": "Turbocharger Boost Control Position Sensor Circuit High",
+  "m": "The sensor that reports where the turbo's boost control is sits at a voltage that is too high. The engine may feel weak or hesitate, and fuel economy can drop.",
+  "c": [
+   "Failed boost control position sensor (most common)",
+   "Signal wire shorted to voltage",
+   "Open ground at the sensor",
+   "Engine computer fault (rare)"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "engine",
+  "src": [
+   "https://www.obd-codes.com/p2565"
+  ],
+  "conf": "high",
+  "note": "obd-codes.com shortens 'Turbocharger' to 'Turbo'. Newer SAE lists use 'Turbocharger/Supercharger Boost Control A Position Sensor Circuit High'.",
+  "alt": false
+ },
+ {
+  "code": "P2813",
+  "makes": [],
+  "t": "Pressure Control Solenoid G Control Circuit Range/Performance",
+  "m": "The transmission computer sees that pressure control solenoid G is not working the way it commands. Shifts may slip or feel harsh, and the transmission may go into limp mode or run hot.",
+  "c": [
+   "Failed pressure control solenoid G",
+   "Dirty or low transmission fluid, or clogged filter",
+   "Valve body fault",
+   "Wiring or connector damage"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "transmission",
+  "src": [
+   "https://www.obd-codes.com/p2813",
+   "https://repairpal.com/obd-ii-code-p2813-pressure-control-solenoid-g-control-circuit-range-performance"
+  ],
+  "conf": "high",
+  "note": "Search results say Nissan CVT manuals call solenoid G the 'select solenoid'; not checked on a Nissan source.",
+  "alt": false
+ },
+ {
+  "code": "P050F",
+  "makes": [],
+  "t": "Brake Assist Vacuum Too Low",
+  "m": "The computer sees too little vacuum in the brake booster, which helps you press the brake pedal. The pedal can feel hard and take more effort to stop the car.",
+  "c": [
+   "Leaking brake booster",
+   "Cracked or loose vacuum hose",
+   "Faulty one-way check valve or brake vacuum sensor",
+   "Low engine vacuum or failing vacuum pump"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "brakes/ABS",
+  "src": [
+   "https://www.obd-codes.com/p050f"
+  ],
+  "conf": "high",
+  "note": "",
+  "alt": false
+ },
+ {
+  "code": "P0A1E",
+  "makes": [],
+  "t": "Starter/Generator Control Module",
+  "m": "On a hybrid, the computer found a fault in the module that runs the motor-generator used to start the engine and charge the battery. The hybrid system may shut down or not work.",
+  "c": [
+   "Failed starter/generator control module",
+   "Module software needs an update",
+   "Wiring or connector fault"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "hybrid/EV",
+  "src": [
+   "https://repairpal.com/obd-ii-code-p0a1e"
+  ],
+  "conf": "high",
+  "note": "obd-codes.com has no page (404). Hybrid/electrified vehicles only. Newer SAE lists may add 'A' to the title.",
+  "alt": false
+ },
+ {
+  "code": "P04FB",
+  "makes": [],
+  "t": "Crankcase Ventilation Hose Connection Pressure Sensor Performance",
+  "m": "The computer uses a pressure sensor to check that the crankcase vent hose is connected and working, and that sensor's reading does not make sense. Usually only the check engine light comes on.",
+  "c": [
+   "Water or ice from condensation in the sensor or hose (cold, short trips)",
+   "Failed crankcase pressure sensor",
+   "Disconnected, split or blocked vent hose",
+   "Sensor wiring or connector fault"
+  ],
+  "s": 1,
+  "w": 0,
+  "sys": "engine",
+  "src": [
+   "https://gm-techlink.com/?p=16023"
+  ],
+  "conf": "high",
+  "note": "GM TechLink article covers some 2019 CT6; 2019-2022 XT4; 2020-2022 CT4, CT5, XT5, XT6, Blazer, Acadia; 2021-2022 Envision with the 2.0L turbo (RPO LSY). Fix often = thaw and dry the sensor and hose. obd-codes.com has no page (404); obdguide uses 'Crankcase Ventilation Hose Connection Sensor Range/Performance'.",
+  "alt": false
+ },
+ {
+  "code": "P07F6",
+  "makes": [],
+  "t": "Gear 9 Incorrect Ratio",
+  "m": "In 9th gear, the transmission's input and output speeds do not match the ratio 9th gear should give, so the computer thinks it is slipping or in the wrong gear. The driver may feel slipping, flare or harsh shifts.",
+  "c": [
+   "Low or contaminated transmission fluid",
+   "Worn clutches for 9th gear",
+   "Faulty shift solenoid or valve body",
+   "Faulty transmission speed sensor"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "transmission",
+  "src": [
+   "https://www.mycarly.com/obd-codes/p07f6-gear-9-incorrect-ratio/"
+  ],
+  "conf": "high",
+  "note": "Applies to 9- and 10-speed automatics. obd-codes.com has no page (404).",
+  "alt": false
+ },
+ {
+  "code": "P0A7A",
+  "makes": [],
+  "t": "Generator Inverter Performance",
+  "m": "On a hybrid, the computer found that the inverter that controls the generator is not working as it should. The high-voltage hybrid system may shut down.",
+  "c": [
+   "Failed inverter/converter assembly",
+   "High-voltage control module fault",
+   "Wiring or connector fault",
+   "Inverter cooling problem"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "hybrid/EV",
+  "src": [
+   "https://repairpal.com/obd-ii-code-p0a7a-generator-inverter-performance"
+  ],
+  "conf": "high",
+  "note": "obd-codes.com has no page (404). Hybrid vehicles only.",
+  "alt": false
+ },
+ {
+  "code": "P2285",
+  "makes": [],
+  "t": "Injector Control Pressure Sensor Circuit Low",
+  "m": "On engines that use oil pressure to fire the injectors (mainly diesels), the sensor that reads that oil pressure reads too low. The engine may be hard to start or not start.",
+  "c": [
+   "Failed injector control pressure (ICP) sensor",
+   "Low oil level or oil pump problem",
+   "Damaged wiring, bad ground or corroded connector",
+   "Blown fuse or engine computer fault"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "fuel/emissions",
+  "src": [
+   "https://www.obd-codes.com/p2285"
+  ],
+  "conf": "high",
+  "note": "Mostly Ford Power Stroke and other oil-actuated injector diesels.",
+  "alt": false
+ },
+ {
+  "code": "P0A3E",
+  "makes": [],
+  "t": "Generator Inverter Over Temperature",
+  "m": "On a hybrid, the inverter that controls the generator is running too hot. The hybrid system may cut power to protect itself.",
+  "c": [
+   "Low coolant in the inverter cooling loop",
+   "Failed inverter coolant pump",
+   "Clogged radiator or bad cooling fan",
+   "Failed inverter/converter assembly"
+  ],
+  "s": 3,
+  "w": 0,
+  "sys": "hybrid/EV",
+  "src": [
+   "https://repairpal.com/obd-ii-code-p0a3e"
+  ],
+  "conf": "high",
+  "note": "obd-codes.com has no page (404). Hybrid vehicles only.",
+  "alt": false
+ },
+ {
+  "code": "P0007",
+  "makes": [],
+  "t": "Fuel Shutoff Valve A Control Circuit High",
+  "m": "The computer sees a voltage that is too high in the circuit that controls fuel shutoff valve A. The check engine light comes on; other symptoms depend on the engine.",
+  "c": [
+   "Wiring shorted to voltage in the valve control circuit",
+   "Failed fuel shutoff valve",
+   "Connector fault",
+   "Engine computer fault"
+  ],
+  "s": 1,
+  "w": 0,
+  "sys": "fuel/emissions",
+  "src": [
+   "https://www.obd-codes.com/p0007"
+  ],
+  "conf": "high",
+  "note": "obd-codes.com notes there is little detailed information on this code; causes are general circuit causes.",
+  "alt": false
+ },
+ {
+  "code": "P2187",
+  "makes": [],
+  "t": "System Too Lean at Idle Bank 1",
+  "m": "At idle, the engine on bank 1 is getting too much air for the fuel it gets. The idle may be rough, the engine can misfire, and it may be hard to start when hot.",
+  "c": [
+   "Vacuum or intake air leak (hoses, brake booster line, PCV)",
+   "Dirty or faulty mass airflow sensor",
+   "Weak fuel pump, clogged filter or bad regulator",
+   "Leaking EVAP purge valve or exhaust leak before the O2 sensor"
+  ],
+  "s": 1,
+  "w": 0,
+  "sys": "fuel/emissions",
+  "src": [
+   "https://www.obd-codes.com/p2187"
+  ],
+  "conf": "high",
+  "note": "",
+  "alt": false
+ },
+ {
+  "code": "P26AB",
+  "makes": [],
+  "t": "Engine Coolant Bypass Valve A Stuck Open",
+  "m": "The coolant bypass (coolant control) valve is stuck open and does not move when the computer commands it. The engine and transmission may not hold the right temperature, and the check engine light comes on.",
+  "c": [
+   "Failed coolant bypass valve",
+   "Engine computer software needs an update",
+   "Poor electrical connection at the valve",
+   "Ground wire problem"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "engine",
+  "src": [
+   "https://www.kbb.com/obd-ii/p26ab/"
+  ],
+  "conf": "high",
+  "note": "KBB writes 'Stuck/Open'. obd-codes.com has no page (404). Related Ram 3.6L coolant valve TSB: static.nhtsa.gov/odi/tsbs/2023/MC-10243239-9999.pdf (lists P26A3/P26A6/P2681, not P26AB).",
+  "alt": false
+ },
+ {
+  "code": "P0270",
+  "makes": [],
+  "t": "Cylinder 4 Injector A Circuit Low",
+  "m": "The computer sees a voltage that is too low in the circuit for the fuel injector on cylinder 4. The engine may run rough, lose power and use more fuel.",
+  "c": [
+   "Faulty fuel injector",
+   "Open or short in the injector wiring",
+   "Loose or corroded connector",
+   "Clogged injector"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "engine",
+  "src": [
+   "https://www.obd-codes.com/p0270"
+  ],
+  "conf": "high",
+  "note": "obd-codes.com uses the older title without 'A'.",
+  "alt": false
+ },
+ {
+  "code": "P0793",
+  "makes": [],
+  "t": "Intermediate Shaft Speed Sensor A Circuit No Signal",
+  "m": "The transmission computer gets no signal from the sensor that measures the speed of the intermediate shaft. Shifts may be harsh, and other warning lights or limp mode may follow.",
+  "c": [
+   "Failed intermediate shaft speed sensor",
+   "Wiring or connector fault",
+   "Low or dirty transmission fluid",
+   "Transmission computer fault"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "transmission",
+  "src": [
+   "https://www.obd-codes.com/p0793"
+  ],
+  "conf": "high",
+  "note": "",
+  "alt": false
+ },
+ {
+  "code": "P05A0",
+  "makes": [],
+  "t": "Active Grille Air Shutter A Stuck On",
+  "m": "The movable shutters in the front grille that open and close to manage airflow are stuck and not moving as commanded. The check engine light comes on; warm-up can be slower, and in hot driving the engine may get less cooling air.",
+  "c": [
+   "Broken or jammed grille shutter",
+   "Failed shutter motor (actuator)",
+   "Ice, snow or debris blocking the shutters",
+   "Wiring or connector fault"
+  ],
+  "s": 1,
+  "w": 0,
+  "sys": "engine",
+  "src": [
+   "https://www.mycarly.com/obd-codes/p05a0-active-grill-air-shutter-'a'-stuck-on/"
+  ],
+  "conf": "high",
+  "note": "Carly spells it 'Grill'. obd-codes.com has no page (404).",
+  "alt": false
+ },
+ {
+  "code": "P07B4",
+  "makes": [],
+  "t": "Transmission Park Position Sensor/Switch A Circuit High",
+  "m": "The sensor that tells the computer the transmission is in Park is sending a voltage that is too high. The car may not start, may be hard to shift out of Park, or the starter may work in the wrong gear.",
+  "c": [
+   "Failed park position sensor or switch",
+   "Damaged wiring",
+   "Corroded or loose connector",
+   "Engine or transmission computer fault"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "transmission",
+  "src": [
+   "https://www.obd-codes.com/p07b4"
+  ],
+  "conf": "high",
+  "note": "",
+  "alt": false
+ },
+ {
+  "code": "P073F",
+  "makes": [],
+  "t": "Unable to Engage Gear 1",
+  "m": "The transmission was asked to go into 1st gear but the computer could not confirm that it did. The car may pull away weakly, go into limp mode or limit its speed.",
+  "c": [
+   "Low, dirty or wrong transmission fluid",
+   "Faulty shift solenoid",
+   "Blocked hydraulic passage",
+   "Wiring, connector or transmission computer fault"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "transmission",
+  "src": [
+   "https://www.obd-codes.com/p073f"
+  ],
+  "conf": "high",
+  "note": "",
+  "alt": false
+ },
+ {
+  "code": "P04F0",
+  "makes": [],
+  "t": "EVAP System High Load Purge Line A Performance",
+  "m": "The fuel vapor system has a separate purge line used when a turbo engine is under boost, and the computer found that line is not working right. Usually only the check engine light comes on, sometimes with a fuel smell.",
+  "c": [
+   "Cracked, disconnected or blocked purge line",
+   "Faulty purge valve or check valve",
+   "Damaged ejector (venturi) in the purge line",
+   "Loose fuel cap or other EVAP leak"
+  ],
+  "s": 1,
+  "w": 0,
+  "sys": "fuel/emissions",
+  "src": [
+   "https://www.kbb.com/obd-ii/p04f0/"
+  ],
+  "conf": "high",
+  "note": "Sources disagree on wording: KBB and obdguide use 'High Load Purge Line A Performance'; Carly uses 'High Pressure Purge Line Performance'. Same meaning. obd-codes.com has no page (404).",
+  "alt": false
+ },
+ {
+  "code": "P018C",
+  "makes": [],
+  "t": "Fuel Pressure Sensor B Circuit Low",
+  "m": "The second fuel pressure sensor (sensor B) is sending a voltage that is too low. The engine may be hard to start, not start, or feel weak.",
+  "c": [
+   "Failed fuel pressure sensor B",
+   "Low fuel pressure from a weak pump or clogged filter",
+   "Wiring short or open",
+   "Engine computer fault"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "fuel/emissions",
+  "src": [
+   "https://www.obd-codes.com/p018c"
+  ],
+  "conf": "high",
+  "note": "",
+  "alt": false
+ },
+ {
+  "code": "P0AE1",
+  "makes": [],
+  "t": "Hybrid Battery Precharge Contactor Circuit",
+  "m": "On a hybrid or EV, the computer found a fault with the precharge contactor, a relay that eases high voltage on gently before the main battery relays close. The car may not go into Ready mode or the hybrid system may shut off.",
+  "c": [
+   "Failed precharge contactor or its resistor",
+   "Weak 12-volt battery",
+   "High-voltage control module fault",
+   "Wiring or connector fault"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "hybrid/EV",
+  "src": [
+   "https://repairpal.com/obd-ii-code-p0ae1"
+  ],
+  "conf": "high",
+  "note": "obd-codes.com has no page (404). Newer SAE lists use 'Hybrid/EV Battery Precharge Contactor Circuit'.",
+  "alt": false
+ },
+ {
+  "code": "P0B24",
+  "makes": [],
+  "t": "Hybrid/EV Battery A Voltage Unstable",
+  "m": "The high-voltage battery's voltage is jumping around more than it should. Power may be limited, fuel economy may drop, and the hybrid system may shut down.",
+  "c": [
+   "Weak or failing battery cells",
+   "Cell balancing problem",
+   "Battery control module fault",
+   "Loose or corroded high-voltage connection or wiring"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "hybrid/EV",
+  "src": [
+   "https://www.mycarly.com/obd-codes/p0b24-hybridev-battery-'a'-voltage-unstable/"
+  ],
+  "conf": "high",
+  "note": "obd-codes.com has no page (404). Hybrid/EV only.",
+  "alt": false
+ },
+ {
+  "code": "P0689",
+  "makes": [],
+  "t": "ECM/PCM Power Relay Sense Circuit Low",
+  "m": "The circuit the engine computer uses to check its main power relay reads too low. The car may be slow to start or not start, and some electrical items may not work.",
+  "c": [
+   "Failed engine computer power relay",
+   "Blown fuse or fusible link",
+   "Open or shorted wire between the relay and the computer"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "body/electrical",
+  "src": [
+   "https://www.obd-codes.com/p0689"
+  ],
+  "conf": "high",
+  "note": "",
+  "alt": false
+ },
+ {
+  "code": "P2C7A",
+  "makes": [],
+  "t": "NOx Catalyst Efficiency Below Threshold Bank 1 Catalyst 2",
+  "m": "On a diesel, the computer found that the second exhaust catalyst (the SCR catalyst that uses DEF) is not removing enough NOx. The check engine light comes on and emissions are higher.",
+  "c": [
+   "Engine computer software issue (fixed by an update on some trucks)",
+   "Low or poor-quality DEF",
+   "Faulty NOx sensor",
+   "DEF crystal deposits or a worn SCR catalyst"
+  ],
+  "s": 1,
+  "w": 0,
+  "sys": "fuel/emissions",
+  "src": [
+   "https://static.nhtsa.gov/odi/tsbs/2022/MC-10228191-0001.pdf"
+  ],
+  "conf": "high",
+  "note": "Source is GM bulletin 22-NA-243 (2022 Silverado/Sierra 1500 3.0L diesel, RPO J22): cause = software, fix = ECM update plus NOx sensor and reductant loading resets. obdguide adds 'SCR' to the title. A forum post says older code lists show P2C7A as reserved, so older scanners may not name it. obd-codes.com has no page (404).",
+  "alt": false
+ },
+ {
+  "code": "P0BBE",
+  "makes": [],
+  "t": "Hybrid/EV Battery Pack Voltage Variation",
+  "m": "The voltage differs too much between the sections of the high-voltage battery pack. Fuel economy and electric range may drop, and the hybrid system may limit power.",
+  "c": [
+   "Weak or failing battery cells or modules",
+   "Cell balancing problem",
+   "Battery control module fault",
+   "Bad high-voltage connection or wiring"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "hybrid/EV",
+  "src": [
+   "https://repairpal.com/obd-ii-code-p0bbe"
+  ],
+  "conf": "high",
+  "note": "RepairPal writes 'Hybrid Battery Pack Voltage Variation'; Carly uses 'Hybrid/EV'. obd-codes.com has no page (404). Plug-in hybrid/EV only (complaints are Chrysler Pacifica Hybrid and Jeep 4xe).",
+  "alt": false
+ },
+ {
+  "code": "P2291",
+  "makes": [],
+  "t": "Injector Control Pressure Too Low - Engine Cranking",
+  "m": "While the engine is cranking, the oil pressure used to fire the injectors (mainly on diesels) is too low, so the engine may not start. Smoke or odd engine noises can also show up.",
+  "c": [
+   "Low engine oil level or oil pressure",
+   "Leak in the high-pressure oil system",
+   "Faulty injection pressure regulator or sensor",
+   "Open or shorted control wiring"
+  ],
+  "s": 2,
+  "w": 1,
+  "sys": "fuel/emissions",
+  "src": [
+   "https://www.obd-codes.com/p2291"
+  ],
+  "conf": "high",
+  "note": "Mostly Ford Power Stroke and other oil-actuated injector diesels.",
+  "alt": false
+ },
+ {
+  "code": "P2713",
+  "makes": [],
+  "t": "Pressure Control Solenoid D",
+  "m": "The transmission computer found a fault with pressure control solenoid D, which sets hydraulic pressure for shifting. Shifts may slip or feel harsh, and the transmission may go into limp mode or run hot.",
+  "c": [
+   "Failed pressure control solenoid D",
+   "Dirty fluid or clogged filter",
+   "Valve body or pump problem",
+   "Wiring or connector damage"
+  ],
+  "s": 2,
+  "w": 0,
+  "sys": "transmission",
+  "src": [
+   "https://www.obd-codes.com/p2713"
+  ],
+  "conf": "high",
+  "note": "obd-codes.com adds 'Malfunction' to the title (older style); the SAE base title is just 'Pressure Control Solenoid D'.",
+  "alt": false
+ }
+]

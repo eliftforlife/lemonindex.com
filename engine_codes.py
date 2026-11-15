@@ -20,7 +20,7 @@ for f in YR:
 CODE = re.compile(r'\b([PBCU][0-3][0-9A-F]{3})\b')
 # 11-10 review: vehicle model names that look like codes (Chevy/GMC C1500-C3500 pickups, Mazda B-series pickups, Dodge B-vans).
 # Measured on the complaint text: 50-95% of these sat right after a year or a make, so they name trucks, not trouble codes.
-NOT_CODES = {'C1500', 'C2500', 'C3500', 'B1500', 'B2000', 'B2200', 'B2300', 'B2500', 'B2600', 'B3000', 'B3500', 'B150E', 'B250E', 'B350E'}
+NOT_CODES = {'C1500', 'C2500', 'C3500', 'B1500', 'B2000', 'B2200', 'B2300', 'B2500', 'B2600', 'B3000', 'B3500', 'B150E', 'B250E', 'B350E', 'P100D'}   # 11-15: P100D is a Tesla Model S/X trim, not a code
 # Short themes in our own words, matched on the owner's text (counted, never quoted)
 THEMES = [('stalls or shuts off', r'\bstall|shut(s|ting)? off|shut down|died while|engine died|cut(s)? off'),
           ('loses power or goes into limp mode', r'loss of power|lost power|loses power|limp mode|reduced power|no power|lack of power|hesitat'),

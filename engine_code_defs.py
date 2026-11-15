@@ -394,6 +394,36 @@ MAKE = {
                   c=['Worn TCC regulator or isolator valve bore', 'Failing TCC solenoid', 'Worn torque converter clutch', 'Old or burnt fluid']),
 }
 
+# --- 11-15 batch 2 (growth plan 2A-5): meanings checked per code, rows in data/code_defs_b2.json ----------------------------------
+# Each row names the page it was checked on (src) and how firmly (conf). Generic codes: the SAE J2012 title confirmed on a code
+# reference; manufacturer codes (and B0/C0/U0 codes, which carmakers use their own way): confirmed for that make or brand family on an
+# automaker bulletin, NHTSA file, service-manual page or a code list that states the make. Explanations and causes are our own words.
+# Codes we could not confirm stay unexplained (their pages and model pages stay noindex). MAKE_ALT holds a second carmaker's meaning
+# for the same code (U3000: Honda airbag unit vs Ford modules), used where the complaint's make matches.
+import json as _j, os as _o
+B2 = _j.load(open(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)), 'data', 'code_defs_b2.json'), encoding='utf-8'))
+B2_STOP = set(); MAKE_ALT = {}
+for _r in B2:
+    if _r['code'] in D or (_r['code'] in MAKE and not _r['alt']): continue   # never override a batch-1 meaning
+    if _r['makes']:
+        _x = dict(makes=_r['makes'], t=_r['t'], s=_r['s'], m=_r['m'], c=_r['c'])
+        if _r['w']: _x['w'] = 1
+        if _r['alt']: MAKE_ALT.setdefault(_r['code'], []).append(_x)
+        else: MAKE[_r['code']] = _x
+    else:
+        add(_r['code'], _r['t'], _r['m'], _r['s'], _r['c'])
+        if _r['w']: D[_r['code']]['w'] = 1
+        if _r['s'] == 3: B2_STOP.add(_r['code'])
+
+def meaning_for(code, make=None):
+    """the meaning that applies to this make (None: the main one); mk=True when it's a carmaker's meaning"""
+    if code in MAKE:
+        for x in [MAKE[code]] + MAKE_ALT.get(code, []):
+            if make is None or any(make.lower() == m.lower() for m in x['makes']): return dict(x, mk=True)
+        return None
+    if code in D: return dict(D[code], mk=False)
+    return None
+
 SEV = {1: ('Drive on, get it checked', 'You can usually keep driving. Have the code read at your next service or within a few weeks.'),
        2: ('Get it fixed soon', 'A few more days of normal driving is usually OK, but waiting can turn a small repair into a bigger one or a breakdown.'),
        3: ('Stop and fix now', 'Don\'t put it off. This can affect safety, stall the car or cause expensive damage.')}
@@ -402,7 +432,7 @@ SEV = {1: ('Drive on, get it checked', 'You can usually keep driving. Have the c
 # braking/ABS/stability, airbags, steering assist, high-voltage hybrid safety, and throttle stuck open (unintended acceleration).
 # Every other former level-3 code becomes "fix soon" with a watch-for-symptoms warning (w=1).
 STOP_KEEP = {'P0217', 'P0218', 'P0524', 'P06DD', 'P0556', 'P0A0A', 'P0AA6', 'P0A93', 'P2111', 'P2172', 'P2173',
-             'U0121', 'U0122', 'U0129', 'U0131', 'U0151'}
+             'U0121', 'U0122', 'U0129', 'U0131', 'U0151'} | B2_STOP
 SOFTENED = sorted(k for k, v in D.items() if v['s'] == 3 and k not in STOP_KEEP)
 for k in SOFTENED: D[k]['s'] = 2; D[k]['w'] = 1
 SEV_W = ('Fix soon', 'Book a shop visit this week. Stop driving if the car slips, shakes, overheats or warns you.')

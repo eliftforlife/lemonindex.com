@@ -20,10 +20,37 @@ def _nomean(c):
     return (f'{SYSN[c[0]].split(" (")[0]} code', f'{c} is a {SYSW[c[0]]} code from the standard list, but carmakers often use these codes their own way, so its exact meaning depends on the make.',
         f'{c} is in the standard {SYSW[c[0]]} code range, but carmakers often define {SYSW[c[0]]} codes their own way, so the same code can point to different problems on different brands.')
 
-def _meaning(c):
-    if c in ECD.MAKE: return dict(ECD.MAKE[c], mk=True)
-    if c in ECD.D: return dict(ECD.D[c], mk=False)
-    return None
+def _meaning(c): return ECD.meaning_for(c)
+
+# 11-15 growth 2A-5: code pages link the symptom pages (/symptoms/, growth 2C). Built later in the same run, so decide from the data:
+# a symptom page exists for every symptom with 200+ complaints (symptom_pages.py SYM_MIN). Two ways a code links a symptom:
+# (1) the symptom page lists this code (same rule as symptom_pages._sy_codes: 5+ complaints and 2x as common as in symptom complaints overall),
+# (2) the owner-described problem on this page ("stalls or shuts off" ...) has its own symptom page.
+_csp = _ilu.spec_from_file_location('symptom_defs', 'symptom_defs.py'); _CSYD = _ilu.module_from_spec(_csp); _csp.loader.exec_module(_CSYD)
+_CSY = _load('data/symptoms.json') if os.path.exists('data/symptoms.json') else {}
+_CSY_LIVE = {k for k, v in (_CSY.get('symptoms') or {}).items() if k in _CSYD.P and v['n'] >= 200}
+_C2S = {}
+for _k, _v in (_CSY.get('symptoms') or {}).items():
+    if _k not in _CSY_LIVE: continue
+    for _c, _n in _v['codes']:
+        if _n >= 5 and _n / _v['n'] >= 2 * _CSY['codes_all'].get(_c, _n) / _CSY['with_symptom']:
+            _C2S.setdefault(_c, []).append((_n / _v['n'] / (_CSY['codes_all'].get(_c, _n) / _CSY['with_symptom']), _k))
+T2S = {'stalls or shuts off': 'car-stalls-while-driving', 'loses power or goes into limp mode': 'car-loses-power-while-driving',
+       'shakes, runs rough or misfires': 'engine-misfire', "won't start or hard to start": 'car-wont-start', 'flashing check engine light': 'check-engine-light-flashing',
+       'transmission slips or shifts hard': 'transmission-slipping', 'uses or leaks oil': 'car-burning-oil', 'overheats': 'engine-overheating',
+       'fuel smell or fuel leak': 'gas-smell', 'rattles or knocks': 'engine-knocking', 'brakes or ABS act up': 'abs-light-on',
+       'warning lights and electrical faults': 'dashboard-warning-lights-on'}
+def sym_url(t): return f'/symptoms/{T2S[t]}/' if T2S.get(t) in _CSY_LIVE else None
+def code_symptoms(c, th):
+    """symptom page ids for a code: the ones whose page lists it first (by lift), then the owner-described problems"""
+    ks = [k for _, k in sorted(_C2S.get(c, []), reverse=True)]
+    for t, _ in th:
+        k = T2S.get(t)
+        if k in _CSY_LIVE and k not in ks: ks.append(k)
+    return ks[:6]
+def sym_row(c, ks):
+    if not ks: return ''
+    return (f'<p><b>Symptoms owners describe with {c}:</b> ' + ' · '.join(f'<a href="/symptoms/{k}/">{E(_CSYD.P[k][0])}</a>' for k in ks) + '</p>')
 
 def gauge(s, small=False, w=False):
     # half-circle gauge, needle at drive-on / soon / now. Lemon yellow -> red.
@@ -69,7 +96,9 @@ def _code_pages():
                         + f'</span><b>{E(nm)}</b><span class="cpn">{k:,}</span></a>' for i, nm, k in models[:8])
         det = []
         if mm:
-            det.append((f'What {c} means', f'<p>{E(mm["m"])}</p>' + (f'<p class="yc-cap">This meaning applies to {E(", ".join(mm["makes"]))}. On other makes {c} can mean something different.</p>' if mm['mk'] else '')))
+            _alt = ECD.MAKE_ALT.get(c, []) if mm['mk'] else []
+            det.append((f'What {c} means', f'<p>{E(mm["m"])}</p>' + (f'<p class="yc-cap">This meaning applies to {E(", ".join(mm["makes"]))}. On other makes {c} can mean something different.</p>' if mm['mk'] else '')
+                        + ''.join(f'<p><b>On {E(", ".join(a["makes"]))}:</b> {E(a["t"])}. {E(a["m"])}</p>' for a in _alt)))
             det.append((f'Can I drive with {c}?', f'<p><b>{E(st[0])}.</b> {E(st[1])}</p>' +
                         (f'<p>{_pct(th[0][1], v["n"])}% of the owner complaints that name {c} also say the car {E(th[0][0])}. A complaint can describe more than one problem, so this doesn&#39;t prove the code caused it.</p>' if th else '') +
                         (f'<p>{_pct(v["towed"], v["n"])}% of those owners said the car had to be towed.</p>' if v['towed'] >= 5 and _pct(v['towed'], v['n']) >= 5 else '')))
@@ -78,7 +107,7 @@ def _code_pages():
             det.append((f'What {c} means', f'<p>{_nomean(c)[2]} We haven&#39;t verified its meaning yet. A dealer or a scanner with the maker&#39;s software can tell you exactly what it means on your car.</p>'
                         '<p>Owners who reported it drive: ' + ', '.join(f'{E(m)} ({k})' for m, k in v['makes'][:4]) + '.</p>'))
         if th:
-            det.append(('What owners describe', '<ul class="fx">' + ''.join(f'<li>{E(t[0].upper() + t[1:])}: {_pct(k, v["n"])}% of complaints</li>' for t, k in th) +
+            det.append(('What owners describe', '<ul class="fx">' + ''.join(f'<li>' + (f'<a href="{sym_url(t)}">{E(t[0].upper() + t[1:])}</a>' if sym_url(t) else E(t[0].upper() + t[1:])) + f': {_pct(k, v["n"])}% of complaints</li>' for t, k in th) +
                         '</ul><p class="yc-cap">Share of complaints naming the code whose text also mentions each problem.</p>'))
         if years:
             det.append((f'Model years that report {c} most', '<p>' + ', '.join(f'<a href="/cars/{i}/{y}/">{y} {E(nm)}</a> ({k})' for i, nm, y, k in years[:6]) + '.</p>'))
@@ -95,8 +124,9 @@ def _code_pages():
                         + (f' Tap a model for its years, mileage and what owners say fixed it.</p><p class="cpx"><b>{c} by model:</b> ' + ' · '.join(f'<a href="{CM_URL(c, o["fid"])}">{c} {E(FY[o["fid"]]["name"])}</a> ({o["n"]})' for o in _cmn) if _cmn else '') + '</p>')
         _tr = c[:3] in ('P07', 'P08', 'P09') or bool(re.search(r'transmission|shift|gear|torque converter|cvt|clutch', title_bits, re.I))
         _tl = [(i, nm) for i, nm, k in models[:8] if _tr and os.path.exists(os.path.join(OUT, 'cars', i, 'transmission', 'index.html'))]
-        if years or _tl:
-            body.append('<div class="cpx">' + (f'<p><b>Years owners report it on most:</b> ' + ' · '.join(f'<a href="/cars/{i}/{y}/">{y} {E(nm)}</a>' for i, nm, y, k in years[:6]) + '</p>' if years else '')
+        _sk = code_symptoms(c, th)
+        if years or _tl or _sk:
+            body.append('<div class="cpx">' + sym_row(c, _sk) + (f'<p><b>Years owners report it on most:</b> ' + ' · '.join(f'<a href="/cars/{i}/{y}/">{y} {E(nm)}</a>' for i, nm, y, k in years[:6]) + '</p>' if years else '')
                         + (f'<p><b>Transmission problems by year:</b> ' + ' · '.join(f'<a href="/cars/{i}/transmission/">{E(nm)}</a>' for i, nm in _tl[:6]) + '</p>' if _tl else '') + '</div>')
         body.append('<h2>The details</h2>' + ''.join(f'<details class="cpd"><summary>{q}</summary>{h}</details>' for q, h in det))
         if rel: body.append('<h2>Related codes</h2><p class="crel">' + ' '.join(f'<a href="/check-engine-light/{r.lower()}/">{r}</a>' for r in rel) + '</p>')

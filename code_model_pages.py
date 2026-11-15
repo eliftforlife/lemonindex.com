@@ -16,10 +16,7 @@ if CMP == 'hooks':
     CM_MIN = 10
     CM_MS = lambda fid: fid.replace('/', '-')   # one URL segment, like the repair cost pages
     CM_URL = lambda c, fid: f'/check-engine-light/{c.lower()}/{CM_MS(fid)}/'
-    def _cm_mean(c):
-        if c in _CMECD.MAKE: return dict(_CMECD.MAKE[c], mk=True)
-        if c in _CMECD.D: return dict(_CMECD.D[c], mk=False)
-        return None
+    def _cm_mean(c, make=None): return _CMECD.meaning_for(c, make)   # 11-15 (2A-5): a make's own meaning where the code has two (U3000)
     def _cm_codepage(c):
         """the same rule engine_pages.py uses to build a code page"""
         v = _CME['codes'].get(c)
@@ -42,7 +39,7 @@ if CMP == 'hooks':
         xs = CM_BY_MODEL(fid)
         if not xs: return ''
         nm = FY[fid]['name']
-        chip = lambda x: (f'<a class="n3-c" href="{CM_URL(x["code"], fid)}"><b>{x["code"]}</b><small>' + (E(_cm_short((_cm_mean(x["code"]) or {}).get('t', ''))) + ' · ' if _cm_mean(x['code']) else '')
+        chip = lambda x: (f'<a class="n3-c" href="{CM_URL(x["code"], fid)}"><b>{x["code"]}</b><small>' + (E(_cm_short((_cm_mean(x["code"], x["mk"]) or {}).get('t', ''))) + ' · ' if _cm_mean(x['code'], x['mk']) else '')
                           + f'{x["n"]} complaints</small></a>')
         return ((EU_CSS if 'EU_CSS' in globals() else '') + f'<nav class="n3-row cmx-row" aria-label="Engine codes {E(nm)} owners report" data-mc="{",".join(x["code"] for x in xs)}" data-mf="{E(CM_MS(fid))}" data-mn="{E(nm)}">'
                 f'<p class="n3-h">Engine codes {E(nm)} owners report most</p><div class="n3-cs">' + ''.join(chip(x) for x in xs[:8]) + '</div>'
@@ -74,6 +71,7 @@ if CMP == 'pages':
             'transmission slips or shifts hard': 'transmission-slipping', 'uses or leaks oil': 'car-burning-oil', 'overheats': 'engine-overheating',
             'fuel smell or fuel leak': 'gas-smell', 'rattles or knocks': 'engine-knocking', 'brakes or ABS act up': 'abs-light-on',
             'warning lights and electrical faults': 'dashboard-warning-lights-on'}
+    _sym_k_ok = lambda k: _HAS(f'/symptoms/{k}/') or _cmos.path.exists(_cmos.path.join(OUT, 'symptoms', k, 'index.html'))   # 11-15 (2A-5)
     _sym = lambda t: (lambda u: u if (_HAS(u) or _cmos.path.exists(_cmos.path.join(OUT, u.strip('/'), 'index.html'))) else None)(f'/symptoms/{_T2S[t]}/') if t in _T2S else None
     # NHTSA complaint components and recall parts, in the same few systems
     _SYS = [('engine', 'engine'), ('fuel', 'fuel'), ('propulsion', 'fuel'), ('power train', 'powertrain'), ('brake', 'brakes'), ('electrical', 'electrical'),
@@ -109,8 +107,7 @@ if CMP == 'pages':
         cpath = f'/check-engine-light/{c.lower()}/'
         if not _HAS(cpath): print('code x model: skipped, no code page', c, fid); continue
         f = FY[fid]; nm = f['name']; n = x['n']; path = CM_URL(c, fid)
-        mm = _meaning(c); applies = bool(mm) and (not mm['mk'] or any(x['mk'].lower() == m.lower() for m in mm.get('makes') or []))
-        if mm and not applies: mm = None   # a carmaker's meaning for another make doesn't apply here
+        mm = ECD.meaning_for(c, x['mk'])   # None when the only checked meaning is another carmaker's (it doesn't apply here)
         st = ECD.sev_text(mm) if mm else None
         title_bits = mm['t'] if mm else _nomean(c)[0]
         mean1 = (E(_cmre.split(r'(?<=[.!?])\s', mm['m'].strip(), 1)[0]) if mm else _nomean(c)[1])
@@ -171,7 +168,9 @@ if CMP == 'pages':
             li = ''.join(f'<li><span>' + (f'<a href="{_sym(t)}">{E(t[0].upper() + t[1:])}</a>' if _sym(t) else E(t[0].upper() + t[1:])) + f'</span><b>{_pct(k, n)}%</b><small>{k} of {n} complaints</small></li>' for t, k in th)
             body.append(f'<h2>Symptoms owners describe with {c}</h2>'
                         + (f'<p>{_pct(cel, n)}% of these complaints say the check engine light came on.' + (f' {_pct(x["towed"], n)}% say the {E(nm)} had to be towed.' if x['towed'] >= 3 and _pct(x['towed'], n) >= 5 else '') + '</p>' if cel else '')
-                        + (f'<ul class="rcp-yr cmx-s">{li}</ul><p class="yc-cap">Share of the complaints naming {c} whose text also describes each problem. A complaint can describe more than one.</p>' if th else ''))
+                        + (f'<ul class="rcp-yr cmx-s">{li}</ul><p class="yc-cap">Share of the complaints naming {c} whose text also describes each problem. A complaint can describe more than one.</p>' if th else '')
+                        + (lambda ks: f'<p class="cmx-n">Symptom guides: ' + ' · '.join(f'<a href="/symptoms/{k}/">{E(_CSYD.P[k][0])}</a>' for k in ks) + '</p>' if ks else '')(
+                            [k for k in code_symptoms(c, []) if _sym_k_ok(k) and f"/symptoms/{k}/" not in {_sym(t) for t, _ in th}]))
         if co:
             body.append(f'<h2>Codes owners report with it</h2><p class="crel">' + ' '.join(
                 (f'<a href="{CM_URL(k, fid)}">{k}</a>' if (k, fid) in CM_OK() and _HAS(f'/check-engine-light/{k.lower()}/') else f'<a href="/check-engine-light/{k.lower()}/">{k}</a>' if _HAS(f'/check-engine-light/{k.lower()}/') else f'<span class="cmx-c">{k}</span>')

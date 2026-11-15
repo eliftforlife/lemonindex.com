@@ -21,7 +21,7 @@ for f in YR:
         for mk, md, n in (x.get('names') or []):
             if n >= 2: key[(mk, md, int(y))] = f['id']
 CODE = re.compile(r'\b([PBCU][0-3][0-9A-F]{3})\b')
-NOT_CODES = {'C1500', 'C2500', 'C3500', 'B1500', 'B2000', 'B2200', 'B2300', 'B2500', 'B2600', 'B3000', 'B3500', 'B150E', 'B250E', 'B350E'}
+NOT_CODES = {'C1500', 'C2500', 'C3500', 'B1500', 'B2000', 'B2200', 'B2300', 'B2500', 'B2600', 'B3000', 'B3500', 'B150E', 'B250E', 'B350E', 'P100D'}   # 11-15: P100D is a Tesla Model S/X trim, not a code
 # symptoms in our own words (engine_codes.py THEMES, so a model page and its code page describe them the same way)
 THEMES = [('stalls or shuts off', r'\bstall|shut(s|ting)? off|shut down|died while|engine died|cut(s)? off'),
           ('loses power or goes into limp mode', r'loss of power|lost power|loses power|limp mode|reduced power|no power|lack of power|hesitat'),
