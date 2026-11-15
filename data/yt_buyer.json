@@ -28841,5 +28841,70 @@
 }
 ]
 }
+],
+"buick-lucerne": [
+{
+"sid": "buick-lucerne-g1",
+"y0": 2006,
+"y1": 2011,
+"label": "2006–2011",
+"videos": 199,
+"praise": [
+[
+"Reliability",
+9
+],
+[
+"Power",
+6
+],
+[
+"Fun to drive",
+4
+],
+[
+"Value for money",
+4
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+9
+],
+[
+"Fuel pump / fuel system",
+4
+],
+[
+"Coolant leaks / water pump / overheating",
+3
+],
+[
+"Battery / alternator / starter",
+3
+]
+],
+"top": [
+{
+"id": "y-sJoT1URLM",
+"title": "2008 Buick Lucerne Super (4.6L NHP V8) Start Up, Exhaust, and In Depth Review",
+"views": 239300,
+"ch": "Saabkyle04"
+},
+{
+"id": "uRDXJdocLL8",
+"title": "2008 Buick Lucerne Review - Kelley Blue Book",
+"views": 78430,
+"ch": "Kelley Blue Book"
+},
+{
+"id": "N36P2n7cHb4",
+"title": "2008 Buick Lucerne Super Review - The Forgotten V8 Performance Sedan!",
+"views": 61874,
+"ch": "Shooting Cars"
+}
+]
+}
 ]
 }
