@@ -90,21 +90,26 @@ function confirmMail(row) {
       `You got this because someone entered this address for recall alerts on lemonindex.com.<br>${esc(ADDRESS)}`),
     text: `Confirm recall alerts for the ${name}\n\nOpen this link to start: ${link}\n\nWe check NHTSA's recall list every week and email you only when a new recall is added for this model year.\nDidn't ask for this? Ignore this email and nothing else will be sent. The link works for 7 days.\n\n${ADDRESS}` };
 }
-const sentence = s => { s = String(s || '').replace(/\s+/g, ' ').trim(); return s.length > 420 ? s.slice(0, 400).replace(/\s\S*$/, '') + '…' : s; };
+const sentence = (s, n = 320) => { s = String(s || '').replace(/\s+/g, ' ').trim(); return s.length > n ? s.slice(0, n - 20).replace(/\s\S*$/, '') + '…' : s; };
+// the defect in plain words: drop NHTSA's "X is recalling certain 2013-2023 ... vehicles." opener (same idea as rsum() in build.py)
+const defect = s => { s = String(s || '').replace(/\s+/g, ' ').trim(); const t = s.replace(/^.*?\brecalling\b.*?\b(vehicles|trucks|pick-ups|pickups|cars|SUVs|equipment|tires|seats|motorcycles)\b(?:[^.]|\.(?=\d))*?(?<!\bCo)(?<!\bInc)\.(?!\d)\s*/i, ''); return sentence(t.length >= 25 ? t : s); };
+const first = s => sentence((String(s || '').replace(/\s+/g, ' ').trim().match(/^.*?[a-z)]\.(?=\s|$)/) || [String(s || '')])[0], 220);
+const MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const usDate = d => { const m = String(d || '').match(/^(\d{2})\/(\d{2})\/(\d{4})/); return m ? `${MON[+m[2] - 1]} ${+m[1]}, ${m[3]}` : ''; };
 function recallMail(row, recs) {
   const names = JSON.parse(row.car), name = carName(row.y, names, row.fid), page = carUrl(row.y, row.fid), un = `${SITE}/alerts/#u=${row.utok}`;
   const part = p => p.toLowerCase().replace(/\b\w/, c => c.toUpperCase());
   const subject = recs.length === 1 ? `New recall: ${name} (${part(recs[0].part).slice(0, 40)})` : `${recs.length} new recalls: ${name}`;
   const items = recs.map(r => `<div style="border-top:1px solid #e5e5ea;padding:16px 0 4px"><p style="margin:0 0 4px;font-weight:700">${esc(part(r.part))}</p>
-<p style="margin:0 0 8px;font-size:13px;color:#6e6e73">NHTSA campaign <a href="https://www.nhtsa.gov/recalls?nhtsaId=${esc(r.id)}" style="color:#0066cc">${esc(r.id)}</a>${r.date ? ' · received ' + esc(r.date) : ''}</p>
-<p style="margin:0 0 8px">${esc(sentence(r.summary))}</p>${r.remedy ? `<p style="margin:0 0 8px"><b>Free fix:</b> ${esc(sentence(r.remedy))}</p>` : ''}</div>`).join('');
+<p style="margin:0 0 8px;font-size:13px;color:#6e6e73">NHTSA campaign <a href="https://www.nhtsa.gov/recalls?nhtsaId=${esc(r.id)}" style="color:#0066cc">${esc(r.id)}</a>${usDate(r.date) ? ' · issued ' + esc(usDate(r.date)) : ''}</p>
+<p style="margin:0 0 8px">${esc(defect(r.summary))}</p>${r.remedy ? `<p style="margin:0 0 8px"><b>Free fix:</b> ${esc(first(r.remedy))}</p>` : ''}</div>`).join('');
   return { to: row.email, unsub: row.utok, subject,
     html: shell(`<h1 style="margin:0 0 10px;font-size:22px;line-height:1.25">${recs.length === 1 ? 'A new recall' : recs.length + ' new recalls'} for the ${esc(name)}</h1>
 <p style="margin:0 0 6px">NHTSA added ${recs.length === 1 ? 'this safety recall' : 'these safety recalls'} for the ${esc(name)}. A recall can cover some or all cars of a model year, so check whether it&#39;s open on yours with its VIN. Recall repairs are free at any dealer.</p>${items}
 ${btn('https://www.nhtsa.gov/recalls', 'Check your VIN at nhtsa.gov')}<p style="margin:10px 0 0;font-size:15px"><a href="${esc(page)}" style="color:#0066cc">Every recall and problem for the ${esc(name)} on Lemon Index</a> · <a href="${esc(nhtsaUrl(row.y, names))}" style="color:#0066cc">NHTSA&#39;s page for it</a></p>`,
       `You get this because you asked for recall alerts for the ${esc(name)} on lemonindex.com. <a href="${esc(un)}" style="color:#6e6e73">Unsubscribe</a> (one click, deletes your email).<br>${esc(ADDRESS)}`),
     text: `${recs.length === 1 ? 'A new recall' : recs.length + ' new recalls'} for the ${name}\n\nNHTSA added ${recs.length === 1 ? 'this safety recall' : 'these safety recalls'}. A recall can cover some or all cars of a model year, so check whether it's open on yours with its VIN at https://www.nhtsa.gov/recalls. Recall repairs are free at any dealer.\n\n`
-      + recs.map(r => `${part(r.part)} (NHTSA ${r.id}${r.date ? ', received ' + r.date : ''})\n${sentence(r.summary)}${r.remedy ? '\nFree fix: ' + sentence(r.remedy) : ''}\nhttps://www.nhtsa.gov/recalls?nhtsaId=${r.id}`).join('\n\n')
+      + recs.map(r => `${part(r.part)} (NHTSA ${r.id}${usDate(r.date) ? ', issued ' + usDate(r.date) : ''})\n${defect(r.summary)}${r.remedy ? '\nFree fix: ' + first(r.remedy) : ''}\nhttps://www.nhtsa.gov/recalls?nhtsaId=${r.id}`).join('\n\n')
       + `\n\nOn Lemon Index: ${page}\n\nUnsubscribe (deletes your email): ${un}\n${ADDRESS}` };
 }
 
