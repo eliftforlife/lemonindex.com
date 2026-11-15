@@ -64088,7 +64088,26 @@
      "views": 93081
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 210,
+       "lo": 120.0,
+       "hi": 300.0,
+       "n": 4,
+       "videos": 4,
+       "id": "dhiYaAeHBlk",
+       "t": 93,
+       "title": "How to replace crankshaft position sensor for scion xB (2003-2006)"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -64217,7 +64236,26 @@
      "views": 13548
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 50,
+       "lo": 45.0,
+       "hi": 50.0,
+       "n": 5,
+       "videos": 4,
+       "id": "9FvGwbAsL5Q",
+       "t": 200,
+       "title": "2008 SCION XB: HOW TO REPLACE the POWER STEERING ECM"
+      }
+     ]
+    ]
+   }
   }
  ],
  "gmc-sonoma": [
