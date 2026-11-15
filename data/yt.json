@@ -64089,6 +64089,135 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015
+   ],
+   "gen": "2008–2015 Scion xB",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 5840042,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 206438,
+     "n": 9,
+     "best": {
+      "id": "gV0fJ8FlrgQ",
+      "title": "Fusible Link, 2010 Scion xB, Remove Replace, Main Alternator Fuse, Disassemble Fuse Relay Box, Block",
+      "channel": "Bryce Drennan",
+      "views": 75780
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 125006,
+     "n": 4,
+     "best": {
+      "id": "LB0oEk6k9Eo",
+      "title": "How to Check the Automatic Transmission Oil Level on a 2009 Scion XB",
+      "channel": "Elecktro fe2",
+      "views": 43223
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 86558,
+     "n": 4,
+     "best": {
+      "id": "uGOJ1COaviM",
+      "title": "2009 SCION XB SPARK PLUG CHANGE/MAINTENANCE",
+      "channel": "High Island DIY",
+      "views": 34645
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 68191,
+     "n": 3,
+     "best": {
+      "id": "JgyzLHcz8Us",
+      "title": "2008-2015 Scion XB Rear Brakes Pads and Rotor Replacement DIY",
+      "channel": "Valley Mobile Automotive",
+      "views": 29274
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 68057,
+     "n": 5,
+     "best": {
+      "id": "t7bcAUry7Rs",
+      "title": "How to replace head light bulb on scion xB 2008 and more",
+      "channel": "RB The Mechanic",
+      "views": 21762
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 65298,
+     "n": 2,
+     "best": {
+      "id": "9FvGwbAsL5Q",
+      "title": "2008 SCION XB: HOW TO REPLACE the POWER STEERING ECM",
+      "channel": "Amanita Recording",
+      "views": 52430
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 64435,
+     "n": 3,
+     "best": {
+      "id": "t3hh3wQYkr8",
+      "title": "How to Replace Cabin Air Filter 2009 Scion xB | AQ1102",
+      "channel": "Filterheads",
+      "views": 51349
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 40822,
+     "n": 5,
+     "best": {
+      "id": "j4yp4zLnCEo",
+      "title": "Scion xB idler and tensioner pulley removal tips (2nd gen) 2008-2015",
+      "channel": "swish",
+      "views": 12698
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "aHt-6foqseA",
+     "title": "Scion XB 2nd gen 2008 to 2015 common problems, defects, issues, recalls and complaints",
+     "channel": "HOWSTUFFINMYCARWORKS",
+     "views": 64827
+    },
+    {
+     "id": "_SoRfDWzMHw",
+     "title": "Overview of the 2012 Scion XB, Reliability, & Recalls.",
+     "channel": "Witchauto",
+     "views": 21711
+    },
+    {
+     "id": "Xbkkc-oE_2I",
+     "title": "Top 5 Problems Scion xB Hatchback 2008-2015 2nd Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 13548
+    }
+   ],
+   "costs": null
   }
  ],
  "gmc-sonoma": [
