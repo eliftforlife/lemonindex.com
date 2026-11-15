@@ -159,7 +159,8 @@ def _seo_pages():
     popular = sorted([c for c in CARS if c['sold'] >= 150000], key=lambda c: c['li'])
     cel = GAP['cel'] if GAP else []
     # the most complained-about model years: the /rankings/worst-years/ list (Lemon Index per car sold, model years WY0-WY1)
-    WYR = worst_years(); wy = [t for t in WYR if not t[1].get('early')][:10]; WYF = max(t[1]['y'] for t in wy)   # full 3-year windows only (2023+ are early reads)
+    WYR = worst_years(); WYX = [t for t in WYR if not t[1].get('early')]; wy = WYX[:10]
+    WYF = max(t[1]['y'] for t in WYX)   # the last model year with a full 3-year complaint window (2023+ are early reads), from the data
     # complaints per 100,000 sold by model year, 2010-2022 (each year's first 3 years of complaints, every model with a sales figure)
     TY = list(range(2010, 2023)); tn = defaultdict(int); ts = defaultdict(int)
     for f in YEARS:
