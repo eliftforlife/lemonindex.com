@@ -64149,6 +64149,134 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014
+   ],
+   "gen": "2008–2014 Dodge Avenger",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 12681605,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 1374561,
+     "n": 17,
+     "best": {
+      "id": "gZ7jaFkb21M",
+      "title": "2008 Dodge Avenger alternator noise and how to change it.",
+      "channel": "Michael Thornberry",
+      "views": 293123
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 784640,
+     "n": 13,
+     "best": {
+      "id": "7-AVox03g1w",
+      "title": "FIX CODE P2004 & P2017 W/ WD40 & CARB CLEANER 2009 DODGE AVENGER INTAKE MANIFOLD RUNNERS STUCK OPEN",
+      "channel": "OLDSKOOL TRIED & TESTED",
+      "views": 256397
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 506449,
+     "n": 9,
+     "best": {
+      "id": "5cAyHaG4E6A",
+      "title": "How To Replace A Heater Core- 2012 Dodge Avenger",
+      "channel": "AutoMotivate",
+      "views": 109042
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 478786,
+     "n": 7,
+     "best": {
+      "id": "87iGcjVVzuk",
+      "title": "How to Replace the thermostat on the Dodge Avenger 2008 - 2014",
+      "channel": "Haynes Manuals",
+      "views": 215963
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 478565,
+     "n": 5,
+     "best": {
+      "id": "OKhsHZQy3YY",
+      "title": "2012 Dodge Avenger power window problem fixed !",
+      "channel": "EddieG",
+      "views": 126530
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 332762,
+     "n": 4,
+     "best": {
+      "id": "r_q3YdpyqB8",
+      "title": "How to Service the cooling system on the Dodge Avenger 2008 - 2014",
+      "channel": "Haynes Manuals",
+      "views": 150461
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 136152,
+     "n": 3,
+     "best": {
+      "id": "Stgzcy_DapI",
+      "title": "2013 Dodge Avenger Air bag light fix",
+      "channel": "Anthony Nibblins",
+      "views": 55198
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 132817,
+     "n": 2,
+     "best": {
+      "id": "a3m2Nmnnovk",
+      "title": "2008 Dodge Avenger Won't Start Intermittently (Easy Fix)",
+      "channel": "iMightFixit",
+      "views": 117779
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "WcjM_QTNzLg",
+     "title": "Top 5 Problems Dodge Avenger Sedan 2nd Generation 2008-2014",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 354285
+    },
+    {
+     "id": "chlIno4KY3Y",
+     "title": "2014 Dodge Avenger Heater Problems FIX",
+     "channel": "Romi's DIY Projects",
+     "views": 135216
+    },
+    {
+     "id": "v0HpkrJJ0Eo",
+     "title": "Dodge Avenger 2nd gen 2008 to 2014 common problems, issues, defects and complaints",
+     "channel": "HOWSTUFFINMYCARWORKS",
+     "views": 22735
+    }
+   ],
+   "costs": null
   }
  ],
  "mercury-cougar": [

@@ -29440,5 +29440,112 @@
 }
 ]
 }
+],
+"dodge-avenger": [
+{
+"sid": "dodge-avenger-g1",
+"y0": 1995,
+"y1": 2000,
+"label": "1995–2000",
+"videos": 196,
+"praise": [
+[
+"Reliability",
+8
+],
+[
+"Power",
+6
+],
+[
+"Fun to drive",
+5
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "jCwDWsqu6lg",
+"title": "The 2000 Dodge Avenger Returns: Attempt to Start and Drive w/ Underlying Idling Issues",
+"views": 121764,
+"ch": "Saabkyle04"
+},
+{
+"id": "BnOn4IPcYSY",
+"title": "1995 Dodge Avenger | Retro Review",
+"views": 51300,
+"ch": "MotorWeek"
+},
+{
+"id": "updwDro0R2U",
+"title": "MW 1994 Spy Shots The 1995 Chrysler Sebring Coupe and Dodge Avenger | Retro Review",
+"views": 649,
+"ch": "Josucarsnews"
+}
+]
+},
+{
+"sid": "dodge-avenger-g2",
+"y0": 2008,
+"y1": 2014,
+"label": "2008–2014",
+"videos": 200,
+"praise": [
+[
+"Reliability",
+12
+],
+[
+"Power",
+7
+],
+[
+"Looks",
+4
+],
+[
+"Comfort and ride",
+4
+]
+],
+"trouble": [
+[
+"Coolant leaks / water pump / overheating",
+8
+],
+[
+"Battery / alternator / starter",
+4
+],
+[
+"Heat / A/C / blend door",
+4
+],
+[
+"Electrical / wiring / TIPM",
+3
+]
+],
+"top": [
+{
+"id": "WcjM_QTNzLg",
+"title": "Top 5 Problems Dodge Avenger Sedan 2nd Generation 2008-2014",
+"views": 354285,
+"ch": "1A Auto: Repair Tips & Secrets Only Mechanics Know"
+},
+{
+"id": "u3AopLUzK-o",
+"title": "Dodge Avenger 2008 review",
+"views": 259854,
+"ch": "JUAN AQUINO"
+},
+{
+"id": "FPyj_Ip6W1M",
+"title": "2012 Dodge Avenger R/T Start Up, Exterior/ Interior Review",
+"views": 206117,
+"ch": "The Driveway Auto Reviews"
+}
+]
+}
 ]
 }
