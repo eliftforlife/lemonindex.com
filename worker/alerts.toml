@@ -1,0 +1,31 @@
+# lemon-alerts Worker (11-14, growth plan 4a): recall alert emails for lemonindex.com.
+# Deploy from this folder: py make_alerts.py && npx.cmd --yes wrangler deploy -c alerts.toml
+# Secrets (never in this file): RESEND_KEY, SALT, optional TURNSTILE_SECRET. Sending stays off until SEND_ENABLED = "1".
+name = "lemon-alerts"
+main = "alerts_worker.dist.js"
+compatibility_date = "2026-11-03"
+workers_dev = true
+preview_urls = false
+
+[vars]
+SEND_ENABLED = "0"                                  # "1" once lemonindex.com is verified in Resend
+FROM = "Lemon Index <recalls@lemonindex.com>"
+REPLY_TO = "hello@elijahwestbrook.com"
+DAILY_CAP = "80"                                    # Resend free plan: 100 emails a day for the whole account (curbdibs alerts share it)
+
+[[d1_databases]]
+binding = "DB"
+database_name = "lemon-alerts"
+database_id = "9bcb44eb-886b-4bec-8d12-228fa40ace2b"
+
+# per-IP limit on every POST: counted at the edge, nothing stored
+[[ratelimits]]
+name = "RL"
+namespace_id = "1114"
+
+  [ratelimits.simple]
+  limit = 5
+  period = 60
+
+[triggers]
+crons = ["*/15 * * * *"]

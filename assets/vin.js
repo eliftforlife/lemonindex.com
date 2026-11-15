@@ -77,6 +77,9 @@
         : '<p>NHTSA lists no recalls for this make, model and year.</p>')
       + (boxId ? `<p class="vin-open"><b>Is a recall still open on the car you&#39;re looking at?</b> Only its VIN can say. Ask the seller for it and check it above, or at <a href="https://www.nhtsa.gov/recalls" rel="noopener" target="_blank">nhtsa.gov/recalls</a>. Recall repairs are free, even on a used car. In Canada: ${tcLinks.replace('this VIN', 'a VIN')}.</p>`
         : `<p class="vin-open"><b>Is a recall still open on this exact car?</b> Only the VIN can say. Confirm it free at <a href="https://www.nhtsa.gov/recalls" rel="noopener" target="_blank">nhtsa.gov/recalls</a> (type this VIN) or ask any ${esc(cap(r.Make))} dealer. Recall repairs are free, even on a used car.${ca ? '' : ` In Canada: ${tcLinks}.`}</p>`);
+    // 11-14 growth 4a: recall alert signup for this year/make/model (assets/ralert.js). Only the decoded year, make and model go, never the VIN.
+    box.insertAdjacentHTML('beforeend', `<div class="rla" data-ra="${esc(JSON.stringify({ y, n: [[String(r.Make).toUpperCase(), String(r.Model).toUpperCase()]], f: r.fid || '', l: label }))}"></div>`);
+    if (window.LXRA) window.LXRA.scan();
     return { total: rows.length, other };
   }
   // ---- 11-14 VIN report helpers
@@ -185,6 +188,7 @@
       if (hit && VI.has(hit.id)) { pic.removeAttribute('srcset'); pic.src = `/assets/ai-models/${hit.id}.webp?v=1`; pic.alt = hit.n; picBox.hidden = false; }
       else picBox.hidden = true;
     }
+    r.fid = hit ? hit.id : '';
     const rc = await recalls(r, y, car, label, null, ca);
     if (run !== RUN) return;
     const rb = document.getElementById('vr-rc'), rs = document.getElementById('vr-rcs');
@@ -206,7 +210,7 @@
     nf.onsubmit = e => {
       e.preventDefault(); const c = ALL.find(c => c.id === nf.md.value), y = +nf.y.value; if (!c || !y || !VN[c.id]) return;
       const box = document.getElementById('vnvout'); box.innerHTML = '<p>Looking up recalls…</p>';
-      recalls({ Make: VN[c.id][0], Model: VN[c.id][1] }, y, {}, `${y} ${c.n}`, 'vnvout', '')
+      recalls({ Make: VN[c.id][0], Model: VN[c.id][1], fid: c.id }, y, {}, `${y} ${c.n}`, 'vnvout', '')
         .then(() => { if (c.ys.includes(y)) box.insertAdjacentHTML('beforeend', `<p class="note"><a href="/cars/${c.id}/${y}/">The ${y} ${esc(c.n)}: problems, repair costs and questions to ask the seller →</a></p>`); });
     };
   }
