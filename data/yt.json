@@ -63965,6 +63965,134 @@
    }
   }
  ],
+ "gmc-sonoma": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004
+   ],
+   "gen": "1994–2004 GMC Sonoma",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 3734316,
+   "topics": [
+    {
+     "name": "Transmission & shifter",
+     "views": 313352,
+     "n": 3,
+     "best": {
+      "id": "m8W4RwVU-Xs",
+      "title": "2001 GMC Sonoma Manual Transmission Fluid Replacement -EricTheCarGuy",
+      "channel": "EricTheCarGuy",
+      "views": 155860
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 262242,
+     "n": 4,
+     "best": {
+      "id": "wd7iw46pfTw",
+      "title": "How to Replace Fuel Pump 1998 - 2003 Chevy S10 GMC Sonoma (Easiest Method)",
+      "channel": "Dustin T",
+      "views": 228979
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 190306,
+     "n": 2,
+     "best": {
+      "id": "F_gBK3z_lIQ",
+      "title": "1994-2003 Chevy S10/GMC Sonoma Down Stream o2 Sensor Replacement",
+      "channel": "VGAPR Garage",
+      "views": 152078
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 126222,
+     "n": 7,
+     "best": {
+      "id": "rGZnVinoa-I",
+      "title": "1999 GMC sonoma s10 2.2L thermostat change",
+      "channel": "Jabo The Mechanic",
+      "views": 33112
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 56240,
+     "n": 1,
+     "best": {
+      "id": "vmioRTLbE9k",
+      "title": "2000 GMC Sonoma | 1994 - 2004 S10 2.2L Tune Up | Spark Plugs, Coils, and Wires Replacement Install",
+      "channel": "Daniel Pace",
+      "views": 56240
+     }
+    },
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 38784,
+     "n": 2,
+     "best": {
+      "id": "e-oSNmPrwN8",
+      "title": "1998 GMC Sonoma (Chevy s10 pickup Blazer) 4x4, 4.3 engine w/oil leak - oil pan gasket replacement",
+      "channel": "87astrot",
+      "views": 25894
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 37588,
+     "n": 2,
+     "best": {
+      "id": "ft2EjJcyg-c",
+      "title": "Driveshaft Center Bearing Install - The 1999 GMC Sonoma Project",
+      "channel": "Rick Bolt",
+      "views": 36298
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 36343,
+     "n": 3,
+     "best": {
+      "id": "Fd4S2UKX4p4",
+      "title": "1997 GMC sonoma extreme door sag door hinge repair",
+      "channel": "Simplicity Jim",
+      "views": 18732
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "Tr169D-KcaI",
+     "title": "1994 Chevy S10 / GMC Sonoma | Retro Review",
+     "channel": "MotorWeek",
+     "views": 122267
+    },
+    {
+     "id": "rLWSYJ0CfpM",
+     "title": "1997 GMC S10 SONOMA V8 TUNE PORT STEPSIDE PICKUP (SOLD)",
+     "channel": "RICKS1CLASSICS",
+     "views": 60489
+    },
+    {
+     "id": "5A9O0r6effg",
+     "title": "1999 GMC Sonoma Start Up, Review and Full Tour",
+     "channel": "EliYourCarGuy",
+     "views": 28366
+    }
+   ],
+   "costs": null
+  }
+ ],
  "volkswagen-cc": [
   {
    "years": [

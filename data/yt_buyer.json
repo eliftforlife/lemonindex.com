@@ -29093,5 +29093,54 @@
 }
 ]
 }
+],
+"gmc-sonoma": [
+{
+"sid": "gmc-sonoma-g2",
+"y0": 1994,
+"y1": 2004,
+"label": "1994–2004",
+"videos": 196,
+"praise": [
+[
+"Looks",
+7
+],
+[
+"Reliability",
+3
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+4
+],
+[
+"Fuel pump / fuel system",
+3
+]
+],
+"top": [
+{
+"id": "Tr169D-KcaI",
+"title": "1994 Chevy S10 / GMC Sonoma | Retro Review",
+"views": 122267,
+"ch": "MotorWeek"
+},
+{
+"id": "4CMPp1R3xOs",
+"title": "HACKED...By Owner?? ('98 GMC Sonoma: EGR Fault P0404-P0405)",
+"views": 38228,
+"ch": "Pine Hollow Auto Diagnostics"
+},
+{
+"id": "5A9O0r6effg",
+"title": "1999 GMC Sonoma Start Up, Review and Full Tour",
+"views": 28366,
+"ch": "EliYourCarGuy"
+}
+]
+}
 ]
 }
