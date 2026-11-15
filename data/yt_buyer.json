@@ -29289,5 +29289,50 @@
 }
 ]
 }
+],
+"ford-five-hundred": [
+{
+"sid": "ford-five-hundred-g1",
+"y0": 2005,
+"y1": 2007,
+"label": "2005–2007",
+"videos": 199,
+"praise": [
+[
+"Reliability",
+7
+],
+[
+"Space and practicality",
+4
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+3
+]
+],
+"top": [
+{
+"id": "kun5DnR_ZqU",
+"title": "2005 - 2007 Ford Five Hundred Throttle Body Problems",
+"views": 134203,
+"ch": "DIY Auto Homeschool"
+},
+{
+"id": "Vj1tKME6cn8",
+"title": "Review: 2005 Ford Five Hundred",
+"views": 82339,
+"ch": "MyRide on Autobytel"
+},
+{
+"id": "oAuq2Od6Rpc",
+"title": "Review: 2005 Ford Five Hundred Limited",
+"views": 81389,
+"ch": "MyRide on Autobytel"
+}
+]
+}
 ]
 }
