@@ -28788,5 +28788,58 @@
 }
 ]
 }
+],
+"volvo-v70": [
+{
+"sid": "volvo-v70-g2",
+"y0": 2001,
+"y1": 2007,
+"label": "2001–2007",
+"videos": 199,
+"praise": [
+[
+"Power",
+14
+],
+[
+"Reliability",
+11
+],
+[
+"Comfort and ride",
+6
+],
+[
+"Looks",
+6
+]
+],
+"trouble": [
+[
+"Fuel pump / fuel system",
+3
+]
+],
+"top": [
+{
+"id": "WF9In7vGbeA",
+"title": "2002-2006 Volvo S60 S80 V70 XC70 XC90 Dash Cluster DIM Problems",
+"views": 209406,
+"ch": "Automotive Circuit Solutions"
+},
+{
+"id": "9ChxJZBIAX4",
+"title": "Top 5 Problems Volvo V70 XC Wagon 2001-2007 2nd Generation",
+"views": 198730,
+"ch": "1A Auto: Repair Tips & Secrets Only Mechanics Know"
+},
+{
+"id": "YNrEE51xgeM",
+"title": "Volvo V70 MY-2007-2016  buying advice",
+"views": 196657,
+"ch": "Autoblog"
+}
+]
+}
 ]
 }
