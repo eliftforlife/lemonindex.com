@@ -3,6 +3,8 @@
   var q = document.getElementById('cs-q'), out = document.getElementById('cs-out'), form = q && q.form;
   if (!q || !out) return;
   var data = null, loading = null;
+  // 11-14 growth 2A-x: on a model page, codes that have their own <code>/<model>/ page (CM_ROW's data-mc)
+  var mcEl = document.querySelector('[data-mc]'), mc = mcEl ? { codes: mcEl.getAttribute('data-mc').split(','), slug: mcEl.getAttribute('data-mf'), name: mcEl.getAttribute('data-mn') } : null;
   var SYS = { P: 'Powertrain (engine and transmission)', B: 'Body (airbags, seats, lights, locks)', C: 'Chassis (brakes, steering, suspension)', U: 'Network (how the car’s computers talk to each other)' };
   var SEV = { 1: ['Drive on, get it checked', 'You can usually keep driving. Get the code checked when you can.'],
               2: ['Get it fixed soon', 'Fix it soon. Waiting can lead to a bigger repair or a breakdown.'],
@@ -11,7 +13,7 @@
   function st(x) { return x.w ? SEVW : SEV[x.s]; }
   function load() {
     if (data) return Promise.resolve(data);
-    if (!loading) loading = fetch('/assets/codes.json?v=2').then(function (r) { return r.json(); }).then(function (j) { data = j; return j; });
+    if (!loading) loading = fetch('/assets/codes.json?v=3').then(function (r) { return r.json(); }).then(function (j) { data = j; return j; });
     return loading;
   }
   function esc(s) { var d = document.createElement('div'); d.textContent = s == null ? '' : String(s); return d.innerHTML; }
@@ -55,6 +57,7 @@
              (x.top && x.top.length ? ', most on the ' + x.top.map(function (t) { return '<a href="/cars/' + t[0] + '/">' + esc(t[1]) + '</a> (' + t[2] + ')'; }).join(', ') + '.' :
               (x.mk && x.mk.length ? ', mostly on ' + esc(x.mk.join(', ')) + '.' : '.')) + '</p>';
       }
+      if (mc && mc.codes.indexOf(c) >= 0) h += '<a class="cs-go" href="/check-engine-light/' + c.toLowerCase() + '/' + mc.slug + '/">' + c + ' on the ' + esc(mc.name) + ': years, mileage, fixes →</a>';
       if (x && x.p) h += '<a class="cs-go" href="/check-engine-light/' + c.toLowerCase() + '/">Full ' + c + ' page →</a>';
       out.innerHTML = h + '</div>';
     }).catch(function () { out.innerHTML = '<div class="cs-card cs-bad"><p>Couldn’t load the code list. Check your connection and try again.</p></div>'; });

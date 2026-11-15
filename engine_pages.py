@@ -64,7 +64,8 @@ def _code_pages():
         fix = ((mm['c'][0] + ('. Then: ' + '; '.join(x[:1].lower() + x[1:] for x in mm['c'][1:3]) if len(mm['c']) > 1 else '') + '.') if mm else 'Have a shop read it with the maker&#39;s own scan tool first.')   # 11-12: the checks in order, not a "fix"
         mean1 = (E(re.split(r'(?<=[.!?])\s', mm['m'].strip(), 1)[0]) if mm else _nomean(c)[1])   # the plain-English first sentence (the title repeats the h1)
         sevt = (f'<b>{E(st[0])}.</b> {E(st[1])}' if sev else 'Depends on what it means on your make. Get it read before a long drive.')
-        cards = ''.join(f'<a class="mc cpc" href="/cars/{i}/"><span class="mc-p">' + (lambda ph: f'<img src="{ph["src"]}" alt="{E(nm)}" width="{ph["w"]}" height="{ph["h"]}" loading="lazy" decoding="async">' if ph else '')(aph(i))
+        _cmx = {o['fid'] for o in CM_BY_CODE(c)} if 'CM_BY_CODE' in globals() else set()   # 11-14 growth 2A-x: a model with its own <code>/<model>/ page links there
+        cards = ''.join(f'<a class="mc cpc" href="{CM_URL(c, i) if i in _cmx else f"/cars/{i}/"}"><span class="mc-p">' + (lambda ph: f'<img src="{ph["src"]}" alt="{E(nm)}" width="{ph["w"]}" height="{ph["h"]}" loading="lazy" decoding="async">' if ph else '')(aph(i))
                         + f'</span><b>{E(nm)}</b><span class="cpn">{k:,}</span></a>' for i, nm, k in models[:8])
         det = []
         if mm:
@@ -89,7 +90,9 @@ def _code_pages():
                 f'<div class="cpa"><div><span>What it means</span><p>{mean1}</p></div><div><span>How serious</span><p>{sevt}</p></div><div><span>Where a shop starts</span><p>{E(fix) if mm else fix}</p></div></div>',
                 f'<p class="cpm">Owners named {c} in <b>{v["n"]:,}</b> complaints to the U.S. government' + (f', most often on the {E(topm)}.' if topm else '.') + '</p>']
         if cards:
-            body.append(f'<h2>Cars owners report it on</h2><div class="mbs"><div class="mb"><div class="mg cpg">{cards}</div></div></div><p class="note">Complaints that name {c}, by model. Raw counts, not a failure rate: popular models get more complaints.</p>')
+            _cmn = [o for o in CM_BY_CODE(c)] if _cmx else []
+            body.append(f'<h2>{"Models that report it most" if _cmx else "Cars owners report it on"}</h2><div class="mbs"><div class="mb"><div class="mg cpg">{cards}</div></div></div><p class="note">Complaints that name {c}, by model. Raw counts, not a failure rate: popular models get more complaints.'
+                        + (f' Tap a model for its years, mileage and what owners say fixed it.</p><p class="cpx"><b>{c} by model:</b> ' + ' · '.join(f'<a href="{CM_URL(c, o["fid"])}">{c} {E(FY[o["fid"]]["name"])}</a> ({o["n"]})' for o in _cmn) if _cmn else '') + '</p>')
         _tr = c[:3] in ('P07', 'P08', 'P09') or bool(re.search(r'transmission|shift|gear|torque converter|cvt|clutch', title_bits, re.I))
         _tl = [(i, nm) for i, nm, k in models[:8] if _tr and os.path.exists(os.path.join(OUT, 'cars', i, 'transmission', 'index.html'))]
         if years or _tl:

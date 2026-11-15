@@ -451,7 +451,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
     body = auto_hero(body, vis)
     if '<table' in body: body = stack_tables(body)   # 11-10: wide tables become stacked rows on phones (site.css .stk)
     if re.fullmatch(r'/cars/[^/]+/', path) and 'RC_ROW' in globals(): body += RC_ROW(path[6:-1])   # 11-14 growth 2D-1: this model's repair cost pages
-    if re.fullmatch(r'/cars/[^/]+/', path) and 'SEARCH_MINI' in globals(): body += SEARCH_MINI + CODES_JS   # 11-10: engine code lookup on model pages (added after the date hash, so dates don't move)
+    if re.fullmatch(r'/cars/[^/]+/', path) and 'SEARCH_MINI' in globals(): body += SEARCH_MINI + (CM_ROW(path[6:-1]) if 'CM_ROW' in globals() else '') + CODES_JS   # 11-10: engine code lookup on model pages (added after the date hash, so dates don't move)
     _lxm = re.fullmatch(r'/cars/(.+?)/(\d{4})/', path)
     if _lxm and 'LX_HTML' in globals(): body += LX_HTML(_lxm.group(1), int(_lxm.group(2)))   # 11-12 related links (after the date hash too)
     _shl = ''
@@ -735,7 +735,7 @@ page('/studies/', 'Car Reliability Studies: Rankings From Owner Complaints | Lem
 SEARCH_MINI = ('<section class="csearch mini" aria-label="Engine code search"><form class="cs-f" action="/check-engine-light/" method="get" role="search">'
                '<label for="cs-q">Check engine light on? Look up the code</label><div class="cs-row"><input id="cs-q" name="code" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="8" placeholder="P0420">'
                '<button type="submit">Look it up</button></div></form><div class="cs-out" id="cs-out" aria-live="polite"></div></section>')
-CODES_JS = '<script src="/assets/codes.js?v=2" defer></script>'
+CODES_JS = '<script src="/assets/codes.js?v=3" defer></script>'
 def faq_ld(qa): return {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": t}} for q, _, t in qa]}
 METHOD_QA = [('Is it per car sold?', "Yes. Every score divides a car's complaints by how many were sold in the U.S. So Ford outselling Chevy doesn't make Ford look worse; a car only scores badly if it drew more complaints for each car on the road."), ("Isn't it just owners who skip maintenance?", "We only count complaints filed in a car's first 3 years, when it's nearly new and usually still under the factory warranty. That points at problems the car left the factory with, not a 15-year-old car that missed its oil changes."), ('Does it tell me how long a car will last?', "No. It measures early complaints, not lifespan. A truck can draw a lot of complaints in its first years and still run past 300,000 miles. Use it to see which years had problems, then check the car's own history."), ('Why so few complaints for a problem everyone knows about?', "Most owners never file with the government; they just go to a mechanic. So the counts are a small slice of real failures. That's fine for comparing cars, because every car is measured the same way, but don't read a count as the number of cars that broke."), ('Can you split it by engine or trim?', 'The government files list make, model and year, not the engine. Where the model name gives the engine away (BMW files the 328i and 335i separately, for example), we can split by it. Otherwise a score covers every engine sold that year.')]
 page('/method/', 'Method: How We Score Car Reliability | The Lemon Index', 'How we turn NHTSA owner complaints and U.S. sales into one reliability number per car, plus the caveats that come with it.', '''
@@ -1667,6 +1667,7 @@ VEX = 'hooks'; exec(open('vin_engine_pages.py', encoding='utf-8').read())   # 11
 EMBX = 'hooks'; exec(open('embed_pages.py', encoding='utf-8').read())   # 11-14 growth plan 5b: "Embed this chart" on model + year pages (EMX_BTN)
 ENGU = 'hooks'; exec(open('engine_uses.py', encoding='utf-8').read())   # 11-13 nav fix N3: ENGINE_USES, "Engines in this car" + other-versions chips (wraps PIN_HTML), engine pages link back
 RCP = 'hooks'; exec(open('repair_cost_pages.py', encoding='utf-8').read())   # 11-14 growth 2D-1: repair cost data + the links car pages show (RC_ROW, RC_LINKS)
+CMP = 'hooks'; exec(open('code_model_pages.py', encoding='utf-8').read())   # 11-14 growth 2A-x: which model x engine code pages exist (CM_OK) + the model page chips (CM_ROW)
 def yearx(fid, y): return extra(fid, y)
 # ---- 11-12 round 2 (Carlos: "rav4 hybrid" opened a RAV4 page that never said what the hybrid saves): a Gas or hybrid card on the model page
 # of every model sold both ways (data_hybrid_split.py: EPA mpg and yearly fuel cost per version), with a commute line (assets/commute.js)
@@ -2189,6 +2190,7 @@ exec(open('jdm_pages.py', encoding='utf-8').read())   # 11-13 JDM section: the /
 exec(open('all_engines.py', encoding='utf-8').read())   # 11-12 /engines/: every engine, searchable, + one coming-soon engine per model
 exec(open('find_index.py', encoding='utf-8').read())   # 11-11: the search index of every car page and card + a build check that none is missing
 RCP = 'pages'; exec(open('repair_cost_pages.py', encoding='utf-8').read())   # 11-14 growth 2D-1: /repair-cost/ hub, repair pages, model x repair pages (5+ owner reports)
+CMP = 'pages'; exec(open('code_model_pages.py', encoding='utf-8').read())   # 11-14 growth 2A-x: /check-engine-light/<code>/<model>/ where 10+ owner complaints on that model name the code
 exec(open('alias_pages.py', encoding='utf-8').read())   # 11-13 (N1): redirect stubs at the addresses people type (/cars/ford-f150/, /cars/honda/, reversed match-ups)
 json.dump(PD, open('data/page_dates.json', 'w', encoding='utf-8'), separators=(',', ':'))
 
@@ -2212,7 +2214,7 @@ _404 = re.sub(r'<main>.*</main>', lambda m: (
     '<li><a href="/best/">Best cars</a></li><li><a href="/engines/">Engines</a></li><li><a href="/check-engine-light/">Engine codes</a></li></ul></div></main>'), _404, count=1, flags=re.S)
 _404 = _404.replace('</body>', f'<script src="/assets/lx404.js?v={LXS_V}" defer></script></body>', 1)
 open(f'{OUT}/404.html', 'w', encoding='utf-8').write(_404)
-urls = ['/', '/rankings/', STUDY, '/studies/', '/method/', '/vin/', '/car-loan-rates/', '/vote/', '/data/', '/brands/'] + PERF_URLS + JDM_URLS + burls + purls + murls + surls + eurls + GAP_URLS + CODE_URLS + SEO_URLS + EXTRA_URLS + BMW_URLS + SCE_URLS + AE_URLS + yurls + ADV_URLS + curls + LEGAL_URLS + UXC_URLS + MST_URLS + globals().get('HD_URLS', []) + globals().get('VE_URLS', []) + globals().get('RC_URLS', [])
+urls = ['/', '/rankings/', STUDY, '/studies/', '/method/', '/vin/', '/car-loan-rates/', '/vote/', '/data/', '/brands/'] + PERF_URLS + JDM_URLS + burls + purls + murls + surls + eurls + GAP_URLS + CODE_URLS + SEO_URLS + EXTRA_URLS + BMW_URLS + SCE_URLS + AE_URLS + yurls + ADV_URLS + curls + LEGAL_URLS + UXC_URLS + MST_URLS + globals().get('HD_URLS', []) + globals().get('VE_URLS', []) + globals().get('RC_URLS', []) + globals().get('CM_URLS', [])
 open(f'{OUT}/sitemap.xml', 'w', encoding='utf-8').write('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + ''.join(f'<url><loc>{BASE}{u}</loc><lastmod>{PD.get(u, {}).get("d", TODAY)}</lastmod></url>' for u in urls) + '</urlset>')
 open(f'{OUT}/ads.txt', 'w').write(f'google.com, {ADS.replace("ca-", "")}, DIRECT, f08c47fec0942fa0\n')
 open(f'{OUT}/robots.txt', 'w').write(f'User-agent: *\nAllow: /\n\nUser-agent: GPTBot\nAllow: /\nUser-agent: ClaudeBot\nAllow: /\nUser-agent: PerplexityBot\nAllow: /\nUser-agent: Google-Extended\nAllow: /\nUser-agent: Googlebot-Image\nAllow: /\n\n# bulk dataset scrapers: the data is free at /data/ with credit instead\nUser-agent: CCBot\nDisallow: /\nUser-agent: Bytespider\nDisallow: /\nUser-agent: Diffbot\nDisallow: /\nUser-agent: Omgilibot\nDisallow: /\nUser-agent: ImagesiftBot\nDisallow: /\n\nSitemap: {BASE}/sitemap.xml\nSitemap: {BASE}/image-sitemap.xml\n')

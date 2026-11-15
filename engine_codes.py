@@ -5,7 +5,12 @@
 import collections, json, os, re, sqlite3, statistics, sys
 sys.stdout.reconfigure(encoding='utf-8')
 DB = r'C:\Users\elift\Desktop\Eliftforlife youtube\3 Lemon Index\data\complaints.db'
-YR = json.load(open('data/years.json', encoding='utf-8')); XL = json.load(open('data/extras_local.json', encoding='utf-8'))
+_L = lambda p: json.load(open(p, encoding='utf-8')) if os.path.exists(p) else None
+# 11-14 (growth 2A-x): every model the site has year pages for (new, low-sales and Tesla years too), the same mapping code_models.py uses
+YR = _L('data/years.json') + (_L('data/years_new.json') or []) + (_L('data/years_tesla.json') or [])
+XL = {}
+for _p in ('data/extras_local.json', 'data/extras_local_new.json', 'data/extras_local_low.json', 'data/extras_local_tesla.json'):
+    for _fid, _ys in (_L(_p) or {}).items(): XL.setdefault(_fid, {}).update(_ys)
 NAME = {f['id']: f['name'] for f in YR}
 key = {}   # (NHTSA make, model, year) -> our model id, same mapping as data_gap.py
 for f in YR:
