@@ -1,0 +1,32 @@
+/* Recall alert signup (11-14, growth plan 4a; assets/ralert.js). Own prefix: rla-. Apple-calm neutrals like the feedback box. */
+.rla { margin: 22px 0 6px; min-height: 132px; }
+.rla-f { display: flex; gap: 14px; align-items: flex-start; background: #f5f5f7; border-radius: 18px; padding: 18px 18px 16px; max-width: 640px; box-sizing: border-box; }
+.rla-ic { flex: none; width: 40px; height: 40px; border-radius: 50%; background: #fff; color: #1d1d1f; display: grid; place-items: center; box-shadow: 0 1px 2px rgba(0,0,0,.06); }
+.rla-b { flex: 1; min-width: 0; }
+.rla-h { margin: 2px 0 12px; font-size: 17px; line-height: 1.35; font-weight: 700; color: #1d1d1f; letter-spacing: -.01em; }
+.rla-row { display: flex; gap: 8px; flex-wrap: wrap; }
+.rla-e, .rla-y { font: inherit; font-size: 16px; color: #1d1d1f; background: #fff; border: 1px solid #d2d2d7; border-radius: 12px; padding: 11px 13px; box-sizing: border-box; min-width: 0; }
+.rla-e { flex: 1 1 200px; }
+.rla-y { flex: 0 0 auto; padding-right: 28px; }
+.rla-e:focus, .rla-y:focus { outline: 2px solid #1d1d1f; outline-offset: 1px; border-color: #1d1d1f; }
+.rla-go { flex: 0 0 auto; font: inherit; font-weight: 700; font-size: 16px; color: #fff; background: #1d1d1f; border: 0; border-radius: 999px; padding: 11px 22px; cursor: pointer; }
+.rla-go:hover { background: #000; } .rla-go:disabled { opacity: .5; cursor: default; } .rla-go:focus-visible { outline: 3px solid var(--lemon, #ffd400); outline-offset: 2px; }
+.rla-hpw { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.rla-ts:not(:empty) { margin-top: 10px; }
+.rla-fine { margin: 10px 0 0; font-size: 13px; line-height: 1.45; color: #6e6e73; }
+.rla-fine a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.rla-st { margin: 10px 0 0; font-size: 15px; line-height: 1.45; color: #1d1d1f; } .rla-st:empty { display: none; } .rla-st.bad { color: var(--red, #d1121a); } .rla-st:focus { outline: none; }
+.rla-f.sent .rla-in { display: none; } .rla-f.sent .rla-st { margin-top: 0; }
+@media (max-width: 480px) {
+  .rla-f { padding: 16px 14px 14px; gap: 12px; }
+  .rla-ic { width: 34px; height: 34px; }
+  .rla-go { flex: 1 1 100%; }
+  .rla-y { flex: 0 0 auto; }
+}
+/* /alerts/ page */
+.rla-page { max-width: 640px; margin: 0 auto; padding: 8px 0 40px; }
+.rla-page h2 { font-size: clamp(22px, 3vw, 28px); letter-spacing: -.02em; margin: 0 0 10px; }
+.rla-out { background: #f5f5f7; border-radius: 18px; padding: 22px 20px; }
+/* model pages: the box sits under the tabs (appended after the page's date hash) */
+.rla-sec { max-width: 760px; margin: 28px auto 0; }
+.rla-sec .rla { margin: 0; }
