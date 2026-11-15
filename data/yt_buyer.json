@@ -29142,5 +29142,53 @@
 }
 ]
 }
+],
+"honda-prologue": [
+{
+"sid": "honda-prologue-g1",
+"y0": 2024,
+"y1": 2025,
+"label": "2024–2025",
+"videos": 128,
+"praise": [
+[
+"Looks",
+22
+],
+[
+"Fun to drive",
+13
+],
+[
+"Space and practicality",
+13
+],
+[
+"Tech and features",
+11
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "zyXxCpW9Gqw",
+"title": "Should You Buy a 2025 Honda Prologue? Thorough Review By A Mechanic",
+"views": 199029,
+"ch": "The Car Care Nut Reviews"
+},
+{
+"id": "VAtFIfejid0",
+"title": "2024 Honda Prologue Review - Chevy Blazer in a Blazer (with Apple CarPlay)",
+"views": 140184,
+"ch": "TheStraightPipes"
+},
+{
+"id": "RopjMcCxJEU",
+"title": "Is the 2024 Honda Prologue a new SUV that is WORTH the RISK?",
+"views": 110974,
+"ch": "Raiti's Rides"
+}
+]
+}
 ]
 }
