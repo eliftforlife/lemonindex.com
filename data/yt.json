@@ -64092,7 +64092,26 @@
      "views": 19485
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 2350,
+       "lo": 2000.0,
+       "hi": 2700.0,
+       "n": 4,
+       "videos": 2,
+       "id": "ux23KB5GUQM",
+       "t": 179,
+       "title": "First Generation 2004 Volvo S80 2.5T SR Review! | 5 Cylinder 208 Hp"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -64223,7 +64242,26 @@
      "views": 49213
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 52,
+       "lo": 25.0,
+       "hi": 80.0,
+       "n": 4,
+       "videos": 3,
+       "id": "Ah1_fe5qCb4",
+       "t": 208,
+       "title": "2010 Volvo S80 3.2L PCV Valve Replacement DIY - Fix that Squealing Noise!"
+      }
+     ]
+    ]
+   }
   }
  ],
  "toyota-fj-cruiser": [
