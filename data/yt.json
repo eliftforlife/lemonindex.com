@@ -63965,6 +63965,116 @@
    }
   }
  ],
+ "volkswagen-cc": [
+  {
+   "years": [
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017
+   ],
+   "gen": "2009–2017 Volkswagen CC",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 19451897,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 487769,
+     "n": 4,
+     "best": {
+      "id": "99G4B9qg1QU",
+      "title": "How to fix the \"Adaptive front lighting system (AFS) failure\" error message on a 2013+ VW CC",
+      "channel": "Chris Miller",
+      "views": 385074
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 371769,
+     "n": 5,
+     "best": {
+      "id": "cOBICIKOIas",
+      "title": "Radio install VW CC 2009-2015",
+      "channel": "Enfig",
+      "views": 153408
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 174381,
+     "n": 4,
+     "best": {
+      "id": "uM586T08gnM",
+      "title": "2012 Volkswagen CC 2.0 TSI Engine: Thermostat Replacement",
+      "channel": "Bryan Fagerstrom",
+      "views": 140980
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 146805,
+     "n": 4,
+     "best": {
+      "id": "b7Nwip3trfs",
+      "title": "2012 Volkswagen CC Sport Oil Change",
+      "channel": "Dude's Do It Yourself",
+      "views": 64205
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 111425,
+     "n": 1,
+     "best": {
+      "id": "DXpoG5Socew",
+      "title": "VW Passat CC 2010 EPB reset. Parking brake error see owner's manual.",
+      "channel": "Alec Ovchinnikov",
+      "views": 111425
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 41207,
+     "n": 1,
+     "best": {
+      "id": "FzNNGd-_KAo",
+      "title": "2010 vw cc/passat code p0070 ambient temp sensor fault fixed!!",
+      "channel": "Kwame1",
+      "views": 41207
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "CmQfrjBWGKo",
+     "title": "Should You Buy a VW PASSAT CC? (Test Drive & Review 2013 CC 2.0TDI)",
+     "channel": "High Peak Autos",
+     "views": 242257
+    },
+    {
+     "id": "SqlNwG66OAA",
+     "title": "2009 Volkswagen Passat CC Review by Ron Doron",
+     "channel": "thedriversseat",
+     "views": 646908
+    },
+    {
+     "id": "SaoR86fqFuQ",
+     "title": "VW CC 2013 review - Car Keys",
+     "channel": "Car Keys UK",
+     "views": 313569
+    }
+   ],
+   "costs": null
+  }
+ ],
  "volvo-s80": [
   {
    "years": [

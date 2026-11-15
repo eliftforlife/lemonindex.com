@@ -29045,5 +29045,53 @@
 }
 ]
 }
+],
+"volkswagen-cc": [
+{
+"sid": "volkswagen-cc-g1",
+"y0": 2009,
+"y1": 2017,
+"label": "2009–2017",
+"videos": 195,
+"praise": [
+[
+"Looks",
+9
+],
+[
+"Space and practicality",
+7
+],
+[
+"Power",
+7
+],
+[
+"Fun to drive",
+6
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "SqlNwG66OAA",
+"title": "2009 Volkswagen Passat CC Review by Ron Doron",
+"views": 646908,
+"ch": "thedriversseat"
+},
+{
+"id": "SaoR86fqFuQ",
+"title": "VW CC 2013 review - Car Keys",
+"views": 313569,
+"ch": "Car Keys UK"
+},
+{
+"id": "SFY6Wx_55Yw",
+"title": "Buying a used Volkswagen Passat CC - 2008-2016, Buying advice with Common Issues",
+"views": 306696,
+"ch": "different car review"
+}
+]
+}
 ]
 }
