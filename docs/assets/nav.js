@@ -17,3 +17,6 @@
     b.addEventListener('click', () => { const open = box.hidden; box.hidden = !open; b.setAttribute('aria-expanded', String(open)); });
   });
 })();
+// 11-14 growth plan 4d: saved cars ("My cars", browser storage only): the Save buttons, the header count and the /saved/ page
+(() => { if (document.querySelector('script[src^="/assets/saved.js"]')) return;
+  const s = document.createElement('script'); s.src = '/assets/saved.js?v=1'; s.defer = true; document.head.appendChild(s); })();
