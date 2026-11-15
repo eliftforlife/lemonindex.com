@@ -122,7 +122,7 @@
       + (Y && Y.n != null ? `<div><small>Complaints</small><b>${num(Y.n)}</b><span>to NHTSA ${Y.early ? 'so far' : 'in its first 3 years'}${Y.all > Y.n ? ` (${num(Y.all)} in all)` : ''}</span></div>` : `<div><small>Complaints</small><b class="mute">No data yet</b><span>NHTSA</span></div>`)
       + (Y && Y.yt ? `<div><small>YouTube rank</small><b>#${Y.yt[0]}</b><span>of ${Y.yt[1]} ${esc(short)} years in reviews</span></div>` : `<div><small>YouTube rank</small><b class="mute">No data yet</b><span>too few videos to rank</span></div>`)
       + `</div>${risks}<p class="vr-src">From NHTSA owner complaints and recalls, U.S. sales and YouTube reviews for the ${y} model year. It isn&#39;t this car&#39;s history (accidents, owners, title or service). lemonindex.com</p>`
-      + `<div class="vr-act"><button type="button" class="btn vr-share">Share this report</button>${yu ? `<a class="btn btn-ghost" href="${esc(yu)}">${Y ? `Full ${y} ${esc(short)} page` : `Every ${esc(short)} year`} →</a>` : ''}<span class="vr-msg" role="status"></span></div></article>`;
+      + `<div class="vr-act"><button type="button" class="btn vr-share">Share this report</button>${D && Y ? `<button type="button" class="btn btn-ghost lsv-b lsv-bt vr-save" data-lsv-id="${esc(D.id)}" data-lsv-y="${esc(y)}" data-lsv-n="${esc(D.name)}"${VI.has(D.id) ? ` data-lsv-img="/assets/ai-models/${esc(D.id)}.webp?v=1"` : ''}><svg class="lsv-h" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5s-7.5-4.6-9.2-9.4C1.7 7.9 3.6 4.5 7 4.5c2 0 3.7 1.1 5 3 1.3-1.9 3-3 5-3 3.4 0 5.3 3.4 4.2 6.6-1.7 4.8-9.2 9.4-9.2 9.4z"/></svg><span class="lsv-l">Save</span></button>` : ''}${yu ? `<a class="btn btn-ghost" href="${esc(yu)}">${Y ? `Full ${y} ${esc(short)} page` : `Every ${esc(short)} year`} →</a>` : ''}<span class="vr-msg" role="status"></span></div></article>`;
   };
   // share: the phone's share sheet (Web Share API), else copy the link, else show it selected. The VIN rides in the hash, never the query string.
   async function share(btn, vin, text) {
@@ -178,6 +178,7 @@
       + `<section class="vr-sec vr-td"><h2>What to check on a test drive</h2>${Y && Y.td.length ? `<p class="note">One check for each of the ${y} ${esc(short)}&#39;s top complaint areas in NHTSA owner complaints, biggest first. A mechanic&#39;s inspection still matters most.</p>` : ''}${td}</section>`
       + `<section class="vin-recalls" id="vinrc" aria-live="polite"><p>Looking up recalls…</p></section>`;
     requestAnimationFrame(() => requestAnimationFrame(() => out.querySelectorAll('[data-vrg]').forEach(g => g.classList.add('in'))));
+    if (window.LSAVE) LSAVE.sync(out);   // 11-14 growth 4d: the Save button (saved.js) shows whether this model year is already saved
     const sb = out.querySelector('.vr-share');
     if (sb) sb.onclick = () => share(sb, vin, `${label}: ${Y && Y.ok ? `${Y.word} (Lemon Index ${Y.li})` : 'model-year report'}. Free VIN report:`);
     if (pic && picBox) {   // the picture follows the decoded model (our AI illustration of it), or goes away
