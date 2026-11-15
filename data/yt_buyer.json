@@ -29190,5 +29190,104 @@
 }
 ]
 }
+],
+"scion-xb": [
+{
+"sid": "scion-xb-g1",
+"y0": 2004,
+"y1": 2006,
+"label": "2004–2006",
+"videos": 198,
+"praise": [
+[
+"Reliability",
+10
+],
+[
+"Fun to drive",
+6
+],
+[
+"Fuel economy",
+4
+],
+[
+"Space and practicality",
+4
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "6KFUsz8oMZ0",
+"title": "Top 5 Problems Scion xB Hatchback 2004-2006 1st Generation",
+"views": 175894,
+"ch": "1A Auto: Repair Tips & Secrets Only Mechanics Know"
+},
+{
+"id": "H341YFTEhXQ",
+"title": "2006 Scion xB Review - Scion's BEST Car!",
+"views": 93081,
+"ch": "Shooting Cars"
+},
+{
+"id": "FcY5tiXIUDM",
+"title": "2004 Scion xB Manual Review, Walk Around, Start Up & Rev, Test Drive",
+"views": 89862,
+"ch": "xoquixxoqafxo"
+}
+]
+},
+{
+"sid": "scion-xb-g2",
+"y0": 2008,
+"y1": 2015,
+"label": "2008–2015",
+"videos": 196,
+"praise": [
+[
+"Reliability",
+11
+],
+[
+"Space and practicality",
+6
+],
+[
+"Power",
+5
+],
+[
+"Looks",
+4
+]
+],
+"trouble": [
+[
+"Spark plugs / coils / misfire",
+3
+]
+],
+"top": [
+{
+"id": "IqVJKPUVcLw",
+"title": "Regular Car Reviews: 2008 Scion Xb",
+"views": 591495,
+"ch": "Regular Car Reviews"
+},
+{
+"id": "GpH0vMlft9I",
+"title": "2008 Scion xB Review - Kelley Blue Book",
+"views": 133441,
+"ch": "Kelley Blue Book"
+},
+{
+"id": "FaeHq3iPhLI",
+"title": "2014 Scion xb Real Owner Review",
+"views": 90563,
+"ch": "Bates Photography"
+}
+]
+}
 ]
 }
