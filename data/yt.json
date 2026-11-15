@@ -64093,6 +64093,190 @@
    "costs": null
   }
  ],
+ "dodge-avenger": [
+  {
+   "years": [
+    2000
+   ],
+   "gen": "1995–2000 Dodge Avenger",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 1038179,
+   "topics": [
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 587,
+     "n": 1,
+     "best": {
+      "id": "S52NasSdgfU",
+      "title": "2000 Dodge Avenger passenger CV Axle removal",
+      "channel": "Biss Bros",
+      "views": 587
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 502,
+     "n": 1,
+     "best": {
+      "id": "MQl08OdHzNk",
+      "title": "How To Replace Dodge Avenger Key Fob Battery 1995 1996 1997 1998 1999 2000",
+      "channel": "Key Fob King",
+      "views": 502
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "BnOn4IPcYSY",
+     "title": "1995 Dodge Avenger | Retro Review",
+     "channel": "MotorWeek",
+     "views": 51300
+    },
+    {
+     "id": "-LQXpBHN6Aw",
+     "title": "SOLD 1997 Dodge Avenger DOHC Meticulous Motors Inc Florida For Sale",
+     "channel": "MeticulousMotors",
+     "views": 7669
+    },
+    {
+     "id": "Jzbh-psAUfk",
+     "title": "1998 DODGE AVENGER ES COUPE SOLD!!",
+     "channel": "Ricks Auto Sales",
+     "views": 1247
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "mercury-cougar": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002
+   ],
+   "gen": "1999–2002 Mercury Cougar",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 1427598,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 54992,
+     "n": 1,
+     "best": {
+      "id": "ChhXv6sZbQE",
+      "title": "1999 - 2000 Mercury Cougar Alternator Replacement and Wire test part 1",
+      "channel": "We do it all",
+      "views": 54992
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 13807,
+     "n": 1,
+     "best": {
+      "id": "ev3PPDUsMhs",
+      "title": "Fuel Pump/ Hanger Replacement on a Mercury Cougar 2002",
+      "channel": "Amy Sahadi",
+      "views": 13807
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 11995,
+     "n": 2,
+     "best": {
+      "id": "043A87nHFqI",
+      "title": "Troubleshooting A no Start Issue on A 2002 Mercury Cougar...Solved...",
+      "channel": "Peter L",
+      "views": 7468
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 4663,
+     "n": 1,
+     "best": {
+      "id": "iJmJA7eSmf4",
+      "title": "How to Replace Cabin Air Filter 2001 Mercury Cougar",
+      "channel": "Filterheads",
+      "views": 4663
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 2243,
+     "n": 1,
+     "best": {
+      "id": "4c1_BjzTd8I",
+      "title": "HOW TO REPLACE your '99-'02 Mercury Cougar MIRRORS.",
+      "channel": "Alecte_",
+      "views": 2243
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 1623,
+     "n": 1,
+     "best": {
+      "id": "NqXb0i72w5Y",
+      "title": "1999-2000 Mercury Cougar - 2.5 - Spark Plugs And Ignition Wires Replacement #mercurycougar",
+      "channel": "Online Auto Repair Videos",
+      "views": 1623
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 1620,
+     "n": 3,
+     "best": {
+      "id": "5FvfG2hlJLE",
+      "title": "Installing NEW rear sway bar links. on my 2002 Mercury Cougar!",
+      "channel": "Alecte_",
+      "views": 1094
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 1094,
+     "n": 1,
+     "best": {
+      "id": "rUg-DkjWzqE",
+      "title": "Clutch Replacement - 1999 Mercury Cougar 2.5L V6",
+      "channel": "John Andrews",
+      "views": 1094
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "UrX1hl_x-78",
+     "title": "2000 Mercury Cougar V6 Engine Problems",
+     "channel": "DavitoxKiLLA",
+     "views": 2654
+    },
+    {
+     "id": "8VgMdOybkz8",
+     "title": "MotorWeek | Retro Review: 1999 Mercury Cougar",
+     "channel": "MotorWeek",
+     "views": 196097
+    },
+    {
+     "id": "SeMnyRBKLoE",
+     "title": "2001 Mercury Cougar Zn Coupe - Walk Around",
+     "channel": "BlueHillAcres",
+     "views": 55017
+    }
+   ],
+   "costs": null
+  }
+ ],
  "scion-xb": [
   {
    "years": [

@@ -29387,5 +29387,58 @@
 }
 ]
 }
+],
+"mercury-cougar": [
+{
+"sid": "mercury-cougar-g8",
+"y0": 1999,
+"y1": 2002,
+"label": "1999–2002",
+"videos": 198,
+"praise": [
+[
+"Reliability",
+7
+],
+[
+"Power",
+5
+],
+[
+"Fun to drive",
+5
+],
+[
+"Looks",
+3
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+3
+]
+],
+"top": [
+{
+"id": "8VgMdOybkz8",
+"title": "MotorWeek | Retro Review: 1999 Mercury Cougar",
+"views": 196097,
+"ch": "MotorWeek"
+},
+{
+"id": "m4OpqSw0AbY",
+"title": "The World's Worst Cougar?? $300 1999 Mercury Cougar Review",
+"views": 2787,
+"ch": "Big Hoss Garage"
+},
+{
+"id": "UrX1hl_x-78",
+"title": "2000 Mercury Cougar V6 Engine Problems",
+"views": 2654,
+"ch": "DavitoxKiLLA"
+}
+]
+}
 ]
 }
