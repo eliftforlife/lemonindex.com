@@ -64093,7 +64093,39 @@
      "views": 851997
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 925,
+       "lo": 50.0,
+       "hi": 2000.0,
+       "n": 6,
+       "videos": 3,
+       "id": "GxWjgwfGUJ4",
+       "t": 693,
+       "title": "Hoovies' Cheap 2007 Toyota FJ Cruiser Needs Thousands to Fix!"
+      }
+     ],
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 1400,
+       "lo": 800.0,
+       "hi": 2000.0,
+       "n": 2,
+       "videos": 2,
+       "id": "PLxEf1rmMPo",
+       "t": 625,
+       "title": "My Used Toyota 2013 FJ Cruiser Review 1 Year Later - Issues, Mods and Fixes"
+      }
+     ]
+    ]
+   }
   }
  ],
  "acura-tlx": [
