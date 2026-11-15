@@ -398,7 +398,9 @@ def fix_moji(t):
 _VOLX = re.compile(r'\b((?:id|for|aria-controls|aria-labelledby|aria-describedby|data-i)=")([a-z]{1,4})\d+"|\?v=[\w.-]+')
 PD_NEW = []
 LG = {}; _LGHREF = re.compile(r'<a\b[^>]*?\shref="(/[^"#?]*)'); _LGNOIX = re.compile(r'<meta name="robots" content="[^"]*noindex')
+_EMXRE = re.compile(r'<details class="emx">.*?</details>', re.S)   # 11-14 5b: the "Embed this chart" panel isn't page content (no new dates)
 def _chash(body):
+    body = _EMXRE.sub('', body)
     t = _VOLX.sub(lambda m: f'{m.group(1)}{m.group(2)}#"' if m.group(1) else '?v=', body).replace(TODAY, '')
     return hashlib.md5(t.encode('utf-8')).hexdigest()[:10]
 def _car_facts(path):
@@ -442,6 +444,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
     body = _ii_stable(body, 'iib')   # 11-13 QB: image-info ids numbered per page, so a new (i) elsewhere doesn't redate thousands of pages
     _pd_mark(path, body, title + '\n' + desc)
     _d = PD[path]['d']; _dl = f'{_MN[int(_d[5:7]) - 1]} {int(_d[8:])}, {_d[:4]}'; _upd = ''
+    body = body.replace('%%PD_DATE%%', _dl).replace('%%PD_ISO%%', _d)   # 11-14 5c: the page's own content-hash date (stats citation, Dataset dateModified)
     if path.startswith(('/cars/', '/motorcycles/', '/planes/', '/supercars/', '/best/', '/stats/', '/check-engine-light/', '/best-gas-mileage/', '/electric/', '/studies/', '/repair-cost/')):
         _un = PD[path].get('u') if PD[path].get('ud') == _d else None   # "Updated Nov 12: 1 new recall" only while that data change is the page's latest change
         _upd = f'Updated <time datetime="{_d}">{_dl}</time>' + (f': {E(_un)}' if _un else ''); ld = list(ld or []) + [{"@context": "https://schema.org", "@type": "WebPage", "url": BASE + path, "name": title, "dateModified": _d}]
@@ -455,7 +458,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
     _sm = list(re.finditer(r'<p class="shline">.*?</p>', body, re.S))
     if _sm: _shl = _sm[-1].group(0); body = body[:_sm[-1].start()] + body[_sm[-1].end():]
     url = BASE + (canon or path); ld = list(ld or []) + [crumbs(path, title)]
-    lds = ''.join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in (ld or []))
+    lds = ''.join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in (ld or [])).replace('%%PD_ISO%%', _d)
     beacon = f"<script defer src=\"https://static.cloudflareinsights.com/beacon.min.js\" data-cf-beacon='{{\"token\": \"{CF}\"}}'></script>" if CF else ''
     if GA: beacon += f'<script src="/assets/ga.js?v=3" data-ga="{GA}" defer></script>'
     if ADS and path not in ('/thanks/',): beacon += f'<script src="/assets/ads.js?v=1" data-ads="{ADS}" defer></script>'   # 11-09: ga.js loads gtag.js (180 KB) after the page has loaded
@@ -1651,7 +1654,7 @@ def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
 {f'<p class="yc-note">{SN[f["id"]][1]}</p>' if f["id"] in SN else ""}{GROUP_NOTE(f, y)}{PIN_HTML(f['id'], y)}{n2_hero}
 <nav class="modes" aria-label="Page mode"><a href="{CARU(f, y)}" aria-current="page">Normal</a><a href="{CARU(f, y)}advanced/">Advanced</a></nav><nav class="yswitch" aria-label="Model years"><div class="yseg">{seg}<a class="yall" href="{CARU(f)}">All years</a></div><div class="yact"><a class="btn btn-ghost" href="/compare/?c={f['id']}-{y}">Compare</a><button type="button" class="btn btn-ghost yshare" data-share="{E(share_txt)}">Share</button></div></nav></div>{f'<div class="ph-v">{ph}</div>' if ph else ''}</section>
 {buy}{N2_SIMILAR(f, y)}{top_fails_html(f, y, nm)}{mil}{fix_sell_html(f, y, nm)}{ask}<div class="yts">{tiles}</div>{ytfix(f["id"], y)}{sev}{old}
-<section class="yyears noph"><div class="yy-ch"><h2>Every {nm} year. <span class="h2s">{y} is highlighted. Lower is better.</span></h2>{N2_SORT}{ybars(f, y)}</div>{ev_note}</section>
+<section class="yyears noph"><div class="yy-ch"><h2>Every {nm} year. <span class="h2s">{y} is highlighted. Lower is better.</span></h2>{N2_SORT}{ybars(f, y)}{EMX_BTN(f, y)}</div>{ev_note}</section>
 <div class="ygrid">{probs}{timeline(x["miles"], x.get("comps") or [], (x.get("sev") or {}).get("total")) if x.get("miles") else ""}{recs}{(lambda pr: f'<section class="yc">{pr}</section>' if pr else '')(price_html(f["id"], y, f["name"]))}
 {fixes}{invs}{safety}{f'<section class="yc">{crash}{fuel}</section>' if crash or fuel else ''}{YEAR_SPECS_HOOK(f['id'], y)}{words}
 {f'<section class="yc yqa"><h2>Quick answers</h2>' + qa_fold("".join(f"<h3>{E(q)}</h3><p>{a}</p>" for q, a, _ in qa)) + '</section>' if qa else ''}</div>
@@ -1661,6 +1664,7 @@ UXC = 'hooks'; exec(open('ux_c.py', encoding='utf-8').read())   # 11-12 UX test 
 HDX = 'hooks'; exec(open('hd_pages.py', encoding='utf-8').read())   # 11-12 round 2 (fix C): half-ton banner + honest Q&A on the F-Series/Ram/Silverado/Sierra pages
 exec(open('n2_nav.py', encoding='utf-8').read())   # 11-13 navigation (N2): better years strip, year sort, model/year wayfinding
 VEX = 'hooks'; exec(open('vin_engine_pages.py', encoding='utf-8').read())   # 11-13 everyday engines matched by VIN: VE_USE for ENGINE_USES (before engine_uses.py)
+EMBX = 'hooks'; exec(open('embed_pages.py', encoding='utf-8').read())   # 11-14 growth plan 5b: "Embed this chart" on model + year pages (EMX_BTN)
 ENGU = 'hooks'; exec(open('engine_uses.py', encoding='utf-8').read())   # 11-13 nav fix N3: ENGINE_USES, "Engines in this car" + other-versions chips (wraps PIN_HTML), engine pages link back
 RCP = 'hooks'; exec(open('repair_cost_pages.py', encoding='utf-8').read())   # 11-14 growth 2D-1: repair cost data + the links car pages show (RC_ROW, RC_LINKS)
 def yearx(fid, y): return extra(fid, y)
@@ -1762,7 +1766,7 @@ for f in YEARS:
 <div class="pg mp6"><section class="ph yph6"><div class="yh-t">{N2_CRUMB(f)}{rel_html}{f'<p class="yc-note">{SN[f["id"]][1]}</p>' if f["id"] in SN else ""}{PIN_HTML(f['id'])}
 <div class="yhero">{gauge(c["li"], 190, "All years " + c["years"].replace("-", "–"))}<div class="yverd {verdict(c["li"])[0]}"><p><b>{verdict(c["li"])[1]}.</b> <span>Whole model, {c["years"]}{"" if plain(c["li"]).lower() in verdict(c["li"])[1].lower() else ": " + E(plain(c["li"]))}.</span></p><p class="ybw">Fewest complaints <a class="{'good' if best['li'] <= 110 else ''}" href="{CARU(f, best["y"])}">{best["y"]}</a>{f' · Most complaints <a class="bad" href="{CARU(f, worst["y"])}">{worst["y"]}</a>' if worst and worst['y'] != best['y'] else ''}</p>{N2_RANK(f)}</div></div>
 <p><button type="button" class="btn btn-ghost" data-share="{E(f'Every {snm} year ranked by owner complaints. Fewest: {best["y"]}. Most: {(worst or best)["y"]}. Free report:')}">Share ↗</button></p></div><div class="ph-v">{(YSL.year_slider_html(f['id'], f['name'], {v['y']: round(v['li']) for v in ys if v.get('ok') and v.get('li') is not None}, {y: sc_ for y, sc_ in YSL.yt_scores(f['id']).items() if y in yt_rankable(f, YTS.get(f['id'], {}))}, {v['y'] for v in ys}, start=popular_year(f), best=best['y'], hero=True, mli=c['li'], early={v['y'] for v in ys if v.get('early')}) if YSL.has(f['id']) else (YSL.model_hero_html(f['id'], f['name']) or car_hero(f, ys[-1]["y"])))}{rel_tiles}</div></section>
-<section class="yyears noph" id="years"><div class="yy-ch"><h2>Every year. <span class="h2s">Lower is better. Tap a year for its full report.</span></h2>{N2_SORT}{ybars(f)}</div>{'<p class="yc-cap">Scores before 2010 are rough: fewer owners filed complaints back then.</p>' if ys[0]["y"] < 2010 else ''}{yt_note(f)}{(lambda t: f'<p class="yc-cap">{t}</p>' if t else '')(two_windows(f['id']))}</section>
+<section class="yyears noph" id="years"><div class="yy-ch"><h2>Every year. <span class="h2s">Lower is better. Tap a year for its full report.</span></h2>{N2_SORT}{ybars(f)}{EMX_BTN(f)}</div>{'<p class="yc-cap">Scores before 2010 are rough: fewer owners filed complaints back then.</p>' if ys[0]["y"] < 2010 else ''}{yt_note(f)}{(lambda t: f'<p class="yc-cap">{t}</p>' if t else '')(two_windows(f['id']))}</section>
 {ytfix("model:" + f["id"])}{picks}{gas_hybrid_html(f)}{SPECS_HOOK(f["id"])}
 {f'<section><h2>Compare the {E(f["name"])}.</h2><div class="mus">{vcards}</div>' + (f'<p class="yc-cap">{vs}</p>' if vs else '') + '</section>' if vcards or vs else N2_CMP(f)}
 {model_qa_html}
@@ -2172,6 +2176,7 @@ exec(open('advanced_pages.py', encoding='utf-8').read())   # 11-06 advanced mode
 exec(open('engine_pages.py', encoding='utf-8').read())   # 11-10 engine code search + code pages (before gap_pages: the hub lists them)
 exec(open('gap_pages.py', encoding='utf-8').read())   # 11-06 keyword gaps
 exec(open('seo_pages.py', encoding='utf-8').read())   # 11-06 best-of + stats pages
+EMBX = 'pages'; exec(open('embed_pages.py', encoding='utf-8').read())   # 11-14 growth plan 5b: /embed/cars/<model>/ + the /embed/ how-to
 exec(open('extra_pages.py', encoding='utf-8').read())   # 11-06 Taos + Pontiac
 HDX = 'pages'; exec(open('hd_pages.py', encoding='utf-8').read())   # 11-12 round 2 (fix C): HD truck + diesel engine pages, 2.7 EcoBoost, F-150 engines compared (before the engine hubs)
 exec(open('supercar_engine_pages.py', encoding='utf-8').read())   # 11-11 supercar engines hub + engine pages (before the BMW pages phase: /images/ lists their images)
@@ -2212,6 +2217,7 @@ open(f'{OUT}/sitemap.xml', 'w', encoding='utf-8').write('<?xml version="1.0" enc
 open(f'{OUT}/ads.txt', 'w').write(f'google.com, {ADS.replace("ca-", "")}, DIRECT, f08c47fec0942fa0\n')
 open(f'{OUT}/robots.txt', 'w').write(f'User-agent: *\nAllow: /\n\nUser-agent: GPTBot\nAllow: /\nUser-agent: ClaudeBot\nAllow: /\nUser-agent: PerplexityBot\nAllow: /\nUser-agent: Google-Extended\nAllow: /\nUser-agent: Googlebot-Image\nAllow: /\n\n# bulk dataset scrapers: the data is free at /data/ with credit instead\nUser-agent: CCBot\nDisallow: /\nUser-agent: Bytespider\nDisallow: /\nUser-agent: Diffbot\nDisallow: /\nUser-agent: Omgilibot\nDisallow: /\nUser-agent: ImagesiftBot\nDisallow: /\n\nSitemap: {BASE}/sitemap.xml\nSitemap: {BASE}/image-sitemap.xml\n')
 open(f'{OUT}/llms.txt', 'w', encoding='utf-8').write(f'# The Lemon Index\n\n> Car reliability from public data. The Lemon Index = NHTSA owner complaints in the first 3 years per 100,000 U.S. sales, vs the average car of the same model years (100 = average). It measures complaints, not crash safety.\n\n- [The Most Reliable Cars, According to 1.6 Million Owner Complaints]({BASE}{STUDY}): Toyota 4Runner 26, Lexus ES 27, Lexus brand 30, Tesla brand 322 (est.)\n- [The Most Reliable Electric Cars]({BASE}/electric/): {len(RK)} EVs by NHTSA complaints per car sold, best {best['name']} {best['li']}, plus fires, yearly cost and driver-assist crash reports\n- [Engine code lookup]({BASE}/check-engine-light/): what any OBD-II trouble code means, how serious it is, and which cars owners report it on most in NHTSA complaints\n- [Free engine illustrations]({BASE}/images/): free BMW engine illustrations, CC BY 4.0 (AI-generated, credit The Lemon Index)\n- [Every car engine]({BASE}/engines/): every engine with a page (BMW, supercar, performance, Honda Civic), searchable, YouTube owner ranks\n- [BMW engines by year]({BASE}/engines/bmw/): every BMW engine (N54, N55, B58, N63 ...) by model year: US versions and specs (EPA), owner complaints (NHTSA) and a YouTube score\n- [Supercar engines by year]({BASE}/engines/supercars/): {sum(1 for d in SCENG['engines'].values() if d.get('group', 'super') == 'super')} supercar engines (Ferrari F154, Lamborghini V10, McLaren M838T, Nissan VR38DETT ...) matched to their cars (EPA), with a YouTube owner score by model year, NHTSA recalls and automaker repair notes\n- [Performance car engines by year]({BASE}/engines/performance/): {sum(1 for d in SCENG['engines'].values() if d.get('group') == 'perf')} performance-car engines (Hellcat, Coyote, LS3, LS7, 2UR-GSE, EJ257, S65, S85 ...) matched to their cars (EPA), with a YouTube owner score by model year, NHTSA recalls and automaker repair notes\n- [Car repair costs]({BASE}/repair-cost/): what owners reported paying for {len(globals().get("RC_HUBS") or [])} repairs (transmission, engine, water pump, timing chain ...), from repair bills in NHTSA complaints and amounts said in YouTube videos, with sample sizes, per model where 5+ owners reported\n- [Method]({BASE}/method/)\n')
+open(f'{OUT}/llms.txt', 'a', encoding='utf-8').write(STATS_LLM + f'- [Embed a car reliability chart]({BASE}/embed/): free iframe charts of owner complaints by model year for every scored model, credit built in (CC BY 4.0)' + chr(10))   # 11-14 5b/5c
 open(f'{OUT}/CNAME', 'w').write('lemonindex.com')
 open(f'{OUT}/google00cb28bea71f4c18.html', 'w').write('google-site-verification: google00cb28bea71f4c18.html')   # Search Console ownership (11-02); never remove
 open(f'{OUT}/' + open('.indexnow_key').read().strip() + '.txt', 'w').write(open('.indexnow_key').read().strip())   # IndexNow key (Bing/Yandex instant URL pings, 11-02)

@@ -39,11 +39,13 @@ def _about_pages():
              f'<section class="yc"><h2>The key numbers, and what each one counts</h2>{tiles}<p class="yc-cap">Brands: {E(bb)} has the lowest brand score and {E(bw)} the highest (<a href="/brands/">every brand</a>). The complaint totals differ because each counts a different set of complaints; cite the one that matches your story.</p></section>'
              '<div class="ygrid">'
              + sec('How to cite', f'<p>Credit line: <q>Source: The Lemon Index (lemonindex.com)</q>, with a link. For a score, name the model, its model years and the date, e.g. <q>a Lemon Index of {ex["li"]} for the {ex["years"].replace("-", " to ")} {E(ex["name"])} (100 = average car)</q>.</p>'
+                   '<p>The headline numbers, with a ready-made citation: <a href="/stats/car-complaints/">car complaint statistics</a>.</p>'
                    '<p>Method and its limits: <a href="/method/">how the index works</a>. The study behind the rankings: <a href="/studies/most-reliable-cars/">The Most Reliable Cars, According to 1.6 Million Owner Complaints</a>.</p>')
              + sec('Downloads', '<ul class="ab-l"><li><a href="/data/">Data downloads</a>: scores and complaints by model year, transmission complaints (CSV, CC BY 4.0).</li>'
                    '<li><a href="/images/">Free images</a>: our car and engine illustrations (CC BY 4.0).</li>'
                    '<li>Logo: <a href="/assets/icon-512.png">512 px PNG</a> · social card: <a href="/assets/og.png">og.png</a>.</li>'
-                   '<li><a href="/rankings/">Every car ranked</a> and <a href="/stats/car-complaints/">statistics</a> pages to link to.</li></ul>')
+                   '<li><a href="/rankings/">Every car ranked</a> and <a href="/stats/car-complaints/">statistics</a> pages to link to.</li>'
+                   '<li><a href="/embed/">Embeddable charts</a>: any model&#39;s complaints by model year, one line of code, credit built in.</li></ul>')
              + sec('What the score is, and isn&#39;t', '<p>Owner complaints to NHTSA filed within 3 years of each model year, per car sold, against the average car of the same model years (100 = average, lower is better). '
                    'Complaints are owners&#39; reports, not confirmed defects, and most owners never file one, so read scores as a comparison between cars, not a failure rate. It is not a repair-cost or a safety rating.</p>')
              + '</div></div>')
