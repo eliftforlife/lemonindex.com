@@ -28996,5 +28996,54 @@
 }
 ]
 }
+],
+"lincoln-ls": [
+{
+"sid": "lincoln-ls-g1",
+"y0": 2000,
+"y1": 2006,
+"label": "2000–2006",
+"videos": 190,
+"praise": [
+[
+"Power",
+5
+],
+[
+"Looks",
+4
+],
+[
+"Reliability",
+4
+]
+],
+"trouble": [
+[
+"Coolant leaks / water pump / overheating",
+4
+]
+],
+"top": [
+{
+"id": "N8LxXIpnX2U",
+"title": "2003 Lincoln LS V8, Review, Walkaround, Start Up, Test Drive",
+"views": 146114,
+"ch": "Redline Reviews"
+},
+{
+"id": "kYlJ3LrdkVk",
+"title": "Here's why the Lincoln LS V8 Sport was $40,000 in 2005 ( Test Drive & Review )",
+"views": 67186,
+"ch": "CCV TV"
+},
+{
+"id": "CfBcxGfwSvY",
+"title": "Lincoln LS Review | 2000-2006",
+"views": 47968,
+"ch": "Driven Companion"
+}
+]
+}
 ]
 }
