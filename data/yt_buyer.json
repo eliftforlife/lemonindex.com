@@ -28906,5 +28906,95 @@
 }
 ]
 }
+],
+"volvo-s80": [
+{
+"sid": "volvo-s80-g1",
+"y0": 1999,
+"y1": 2006,
+"label": "1999–2006",
+"videos": 198,
+"praise": [
+[
+"Reliability",
+10
+],
+[
+"Power",
+5
+],
+[
+"Comfort and ride",
+3
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "WF9In7vGbeA",
+"title": "2002-2006 Volvo S60 S80 V70 XC70 XC90 Dash Cluster DIM Problems",
+"views": 209406,
+"ch": "Automotive Circuit Solutions"
+},
+{
+"id": "Gf-WDUyT31s",
+"title": "Volvo S80 (2006-2016) buying advice",
+"views": 205229,
+"ch": "Autoblog"
+},
+{
+"id": "h4_AxxRZ6L8",
+"title": "2000 Volvo S80 T6 Start Up and Review 2.8 L 6-Cylinder Twin-Turbo",
+"views": 113993,
+"ch": "Camerons Car Reviews"
+}
+]
+},
+{
+"sid": "volvo-s80-g2",
+"y0": 2007,
+"y1": 2016,
+"label": "2007–2016",
+"videos": 197,
+"praise": [
+[
+"Reliability",
+11
+],
+[
+"Looks",
+10
+],
+[
+"Power",
+7
+],
+[
+"Comfort and ride",
+7
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "o9l58Q17EfY",
+"title": "Volvo P3 Buyer's Guide - 2008-2018 (S60, V60, XC60, S80, V70, XC70) - Models, Engines, & Options",
+"views": 261220,
+"ch": "FCP Euro"
+},
+{
+"id": "Gf-WDUyT31s",
+"title": "Volvo S80 (2006-2016) buying advice",
+"views": 205229,
+"ch": "Autoblog"
+},
+{
+"id": "KdGtMj0_GjA",
+"title": "2008 Volvo S80 Review - Kelley Blue Book",
+"views": 168188,
+"ch": "Kelley Blue Book"
+}
+]
+}
 ]
 }

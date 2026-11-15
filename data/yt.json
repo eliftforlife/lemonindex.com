@@ -64093,6 +64093,137 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016
+   ],
+   "gen": "2007–2016 Volvo S80",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 8532717,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 337000,
+     "n": 4,
+     "best": {
+      "id": "g5f4wXk7r_E",
+      "title": "How to fix *ENGINE SYSTEM SERVICE REQUIRED* on your Volvo!! Code 097! - 2009 Volvo S80 D5",
+      "channel": "DriveLife",
+      "views": 226629
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 133109,
+     "n": 5,
+     "best": {
+      "id": "dgaUHDGMx_k",
+      "title": "How to remove 2008 Volvo S80 DIC a/c radio display",
+      "channel": "Cielus Robotics",
+      "views": 66233
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 115955,
+     "n": 1,
+     "best": {
+      "id": "-uDPD5IuiHs",
+      "title": "Volvo S60 Suspension Diagnostic & Maintenance Guide (2007-2018 Volvo P3 S80, P3 S60, P3 V60 & More)",
+      "channel": "FCP Euro",
+      "views": 115955
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 113870,
+     "n": 1,
+     "best": {
+      "id": "ExK6KC1rJFc",
+      "title": "How to replace xenon light bulb in Volvo 2007-2015 S80 XC70 XC90 V70",
+      "channel": "Million Mile Car",
+      "views": 113870
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 82509,
+     "n": 4,
+     "best": {
+      "id": "5vBGP_5c8Zc",
+      "title": "How to Replace Cabin Air Filter 2007 Volvo S80 | AQ1176C",
+      "channel": "Filterheads",
+      "views": 35716
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 16499,
+     "n": 1,
+     "best": {
+      "id": "1ApOBo5IQC8",
+      "title": "Volvo V70 XC70 S80 Electrical issues / Door locks / Power loss 2007-2016 P3 platform",
+      "channel": "Peppermint",
+      "views": 16499
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 9571,
+     "n": 2,
+     "best": {
+      "id": "bYzXOknL29M",
+      "title": "HOW TO DO VOLVO S80 2010 FULL TRANSMISSION SERVICE, PAN REMOVAL AND GASKET REPLACEMENT #gasket",
+      "channel": "All About Cars - Basics",
+      "views": 6490
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 6301,
+     "n": 1,
+     "best": {
+      "id": "8tzbN7yL9RA",
+      "title": "2010 Volvo S80 overheating problem and solution. No leaks. 3.2L inline 6. XC60",
+      "channel": "DE Euroworks",
+      "views": 6301
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "o9l58Q17EfY",
+     "title": "Volvo P3 Buyer's Guide - 2008-2018 (S60, V60, XC60, S80, V70, XC70) - Models, Engines, & Options",
+     "channel": "FCP Euro",
+     "views": 261220
+    },
+    {
+     "id": "-r5h59mBbuc",
+     "title": "Volvo S80 buyers guide (2007-2016) Avoid buying a broken Volvo (S80 Gen 2)",
+     "channel": "The Miles Driven",
+     "views": 51201
+    },
+    {
+     "id": "mnB0OHwQw_s",
+     "title": "Volvo S80 MK2 2006-2015 | should you buy one?? | full REVIEW...",
+     "channel": "Car and Driving - Car Reviews",
+     "views": 49213
+    }
+   ],
+   "costs": null
   }
  ],
  "toyota-fj-cruiser": [
