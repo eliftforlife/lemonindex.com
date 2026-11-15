@@ -26,6 +26,47 @@ def RA_HOOK(path, body):
         except Exception: y0 = None
         return body + f'<section class="rla-sec" id="recall-alerts">{_ra_box({"m": f["name"], "f": f["id"], "ys": ys, "y0": y0 if str(y0) in ys else max(map(int, ys))})}</section>' + RA_ASSETS
     if path == '/vin/': return body + RA_ASSETS
+    if path.startswith('/recalls/'): return _ra_recalls(path, body)
+    return body
+# 11-15 growth 4c (chunk reports: "add the recall-alert box to the /recalls/ pages"): the hub gets the box after its make/model/year picker
+# shows a car's recalls (assets/rc.js), a model page (/recalls/<make>/<model>/) a year picker, a make page (/recalls/<make>/) a model + year
+# picker (its scored models). Both go inside the "Is one open on your ...?" section. Like the car pages: after the date hash, no redates.
+def _ra_model(f):
+    ys = {str(v['y']): _ra_names(f['id'], v['y']) for v in f['years']}; ys = {k: v for k, v in ys.items() if v}
+    if not ys: return None
+    try: y0 = popular_year(f)
+    except Exception: y0 = None
+    return {'m': f['name'], 'f': f['id'], 'ys': ys, 'y0': y0 if str(y0) in ys else max(map(int, ys))}
+def _ra_in_open(body, box):
+    i = body.find('class="yc rcx-open"'); j = body.find('</section>', i) if i >= 0 else -1
+    return body[:j] + box + RA_ASSETS + body[j:] if j >= 0 else body
+def _ra_recalls(path, body):
+    if path == '/recalls/': return body + RA_ASSETS
+    R = globals().get('_RCL') or {}
+    if not R: return body
+    parts = path.strip('/').split('/')
+    if len(parts) == 3:
+        m = next((m for m in R['M'].values() if m.get('url') == path), None)
+        d = _ra_model(FY[m['id']]) if m and m['kind'] == 'y' and m['id'] in FY else None
+        return _ra_in_open(body, _ra_box(d)) if d else body
+    if len(parts) == 2:
+        b = next((b for b in R['B'].values() if b['mk'] == parts[1]), None)
+        if not b: return body
+        ms = []
+        for m in sorted(b['models'], key=lambda m: m['short']):
+            d = _ra_model(FY[m['id']]) if m['kind'] == 'y' and m['id'] in FY else None
+            if not d: continue
+            cnt = {}
+            for v in d['ys'].values(): k = json.dumps(v); cnt[k] = cnt.get(k, 0) + 1
+            n = json.loads(max(cnt, key=cnt.get))
+            o = {'m': d['m'], 'f': d['f'], 'n': n, 'ys': sorted(map(int, d['ys']), reverse=True), 'y0': d['y0']}
+            x = {k: v for k, v in d['ys'].items() if v != n}
+            if x: o['x'] = x
+            ms.append(o)
+        if not ms: return body
+        top = max(b['models'], key=lambda m: (m['n'], m['name']))   # the make's most-recalled model first in the list
+        ms.sort(key=lambda o: (o['f'] != top['id'], o['m']))
+        return _ra_in_open(body, _ra_box({'mk': b['name'], 'ms': ms}))
     return body
 RA_PRIVACY = ('<h2 id="recall-alerts">Recall alerts</h2><p>If you sign up for recall alerts, we store your email address, the model year, make and model you picked '
               '(never a VIN: on the VIN check we keep only the year, make and model it decodes to), a confirm code and an unsubscribe code, and the NHTSA recall '

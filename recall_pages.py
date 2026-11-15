@@ -70,6 +70,14 @@ if RCLP == 'hooks':
             b['n'] = len(b['recs']); b['thin'] = len(b['models']) < 2 or b['n'] < RCL_MAKE_MIN
         _RCL.update(M=M, B=B); return _RCL
     def RCL_LINK(path, body):
+        bm = _rclre.fullmatch(r'/brands/([^/]+)/', path)
+        if bm:   # 11-15 growth 4c: each brand page links its make's recall page, right under the hero (after the date hash: no redate)
+            b = next((b for b in _rcl_data()['B'].values() if b['mk'] == bm.group(1)), None)
+            i = body.find('</section>')
+            if not b or i < 0 or f'/recalls/{b["mk"]}/' in body: return body
+            ln = (f'<p class="yc-cap rcx-bl" style="text-align:center;margin:14px 0 0"><a href="/recalls/{b["mk"]}/"><b>{E(b["name"])} recalls</b>: '
+                  f'all {b["n"]:,} NHTSA recall campaigns, by model and year →</a></p>')
+            return body[:i + 10] + ln + body[i + 10:]
         mm = _rclre.match(r'^/cars/(.+?)/(?:(\d{4})/)?$', path)
         if not mm or ('id="recalls"' not in body and 'recalls does the' not in body): return body
         m = _rcl_data()['M'].get(mm.group(1))
@@ -89,7 +97,7 @@ if RCLP == 'hooks':
 
 if RCLP == 'pages':
     RCL = _rcl_data(); RCL_URLS = []; _rcl_noix = []
-    _RCLCSS = '<link rel="stylesheet" href="/assets/rcx.css?v=3"><script src="/assets/rc.js?v=2" defer></script>'
+    _RCLCSS = '<link rel="stylesheet" href="/assets/rcx.css?v=3"><script src="/assets/rc.js?v=3" defer></script>'
     def _rcl_noindex(path):
         _f = _rclos.path.join(OUT, path.strip('/'), 'index.html'); _s = open(_f, encoding='utf-8').read()
         if 'name="robots"' not in _s: open(_f, 'w', encoding='utf-8').write(_s.replace('<link rel="canonical"', '<meta name="robots" content="noindex,follow"><link rel="canonical"', 1))
@@ -207,7 +215,7 @@ if RCLP == 'pages':
              body, ld=[_rcl_ld(qa)])
         if b['thin']: _rcl_noindex(path)
         else: RCL_URLS.append(path)
-    # /brands/ pages link to /recalls/<make>/ only through the hub and car pages for now; brand pages keep their own content.
+    # /brands/<make>/ pages link here from under their hero (RCL_LINK, 11-15 growth 4c).
 
     # ---- hub
     AR = {}

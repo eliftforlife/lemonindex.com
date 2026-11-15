@@ -98,6 +98,12 @@ _dirs = lambda pat: sorted(p_.replace('\\', '/').split('/')[-2] for p_ in _glob.
 _GO = {'codes': _dirs(f'{OUT}/check-engine-light/*/index.html'),
        'tr': sorted({u.split('/')[2] for u in globals().get('turls', [])}),
        'best': sorted({'/' + p_[len(OUT) + 1:].replace('\\', '/')[:-len('index.html')] for p_ in _glob.glob(f'{OUT}/*/index.html') + _glob.glob(f'{OUT}/best/*/index.html')})}
+# 11-15 growth 4c (chunk reports: typing "shakes when braking" found nothing): every symptom page, [slug, its name] (the <title> up to the colon).
+# lookup.js matches the slug's words (stemmed: shakes/shaking/shake) and lists the symptom page.
+_GO['sym'] = []
+for _sp in sorted(_glob.glob(f'{OUT}/symptoms/*/index.html')):
+    _sid = _sp.replace('\\', '/').split('/')[-2]; _tm = re.search(r'<title>([^<:|]+)', open(_sp, encoding='utf-8').read(4000))
+    if _tm: _GO['sym'].append([_sid, html.unescape(_tm.group(1)).strip()])
 # 11-13 (N1 + N3): a performance version -> its regular model (perf_page.parent_of / PARENTS), so "2018 mustang gt" puts that model's
 # year page first (lookup.js). Only the years whose parent page really holds that car (N3: 2015+ WRX are filed apart from the Impreza):
 # if the version's own name shows up in the parent's NHTSA model names (data/extras_local*.json, e.g. IMPREZA year 2016: "WRX"), only

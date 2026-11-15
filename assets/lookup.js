@@ -163,6 +163,28 @@
   // 11-12 round 2 (Ryan: "f150 2.7 oil leak", "rough cold start f150"): symptom words count as problem words too
   const PROB = /\b(transmissions?|tranny|cvt|gearbox|shifting|hard shifts?|slipping)\b|\b(problems?|issues?|complaints?|defects?|engine|brakes?|electrical|airbags?|steering|suspension|ac|air conditioning|battery|stalling|stalls|rust|leak(?:s|ing)?|oil|cold starts?|rough (?:idle|idling|start|starts|running)|rough|idle|rattles?|rattling|start ?up|misfires?|misfiring|knock(?:s|ing)?|tick(?:s|ing)?|noises?|smoke|smoking|overheat(?:s|ing)?|vibrat\w*|shudder\w*|whine|hesitat\w*|timing chains?|cam phasers?|phasers?|water pumps?|head gaskets?|coolant|won t start|no start|hard start\w*)\b|\b(recalls?)\b/;
   const CODE = /\b([pbcu]) ?-?([0-3][0-9a-f]{3})\b/;
+  // 11-15 (growth 4c, chunk reports: "shakes when braking" found nothing): the symptom pages (find-go.json sym: [[slug, name]]). A page
+  // matches when every word of its slug is in the search, compared by stem (shakes / shaking / shake, brakes / braking); the page with the
+  // most words wins ("won't start clicking" -> the clicking page, not "car won't start").
+  const SY_STOP = new Set('car cars vehicle engine my the a an is it its at to when while in on of by from and or but one just not goes go into keeps inside under'.split(' '));
+  const SY_W = { idling: 'idle', idles: 'idle', vibrates: 'shake', vibrating: 'shake', vibration: 'shake', vibrations: 'shake', vibrate: 'shake', shaky: 'shake', wobbly: 'wobble',
+    dead: 'die', died: 'die', dies: 'die', dying: 'die', acceleration: 'accelerate', hesitation: 'hesitate', squeaking: 'squeak', squeal: 'squeak', squeals: 'squeak', squealing: 'squeak',
+    doesnt: 'wont', batteries: 'battery', own: 'itself', freeway: 'highway', brakeing: 'braking', breaking: 'braking', breaks: 'brakes' };
+  const sstem = w => {
+    let x = SY_W[w] || w;
+    if (x.length > 4 && /(ing|ed)$/.test(x)) x = x.replace(/(ing|ed)$/, ''); else if (x.length > 3 && /[^s]s$/.test(x)) x = x.slice(0, -1);
+    if (x.length > 4) x = x.replace(/[ey]$/, '');
+    return x.length > 3 ? x.replace(/([b-df-hj-np-tv-z])\1$/, '$1') : x;
+  };
+  let SYK = null;
+  const symptom = t => {
+    if (!GO || !GO.sym || !GO.sym.length) return null;
+    if (!SYK) SYK = GO.sym.map(([id, nm]) => ({ id, nm, k: new Set(id.split('-').filter(w => !SY_STOP.has(w)).map(sstem)) }));
+    const have = new Set(words(t).map(sstem));
+    let best = null;
+    for (const e of SYK) if (e.k.size && [...e.k].every(k => have.has(k)) && (!best || e.k.size > best.k.size)) best = e;
+    return best && { u: `/symptoms/${best.id}/`, b: best.nm, s: 'Car symptom · causes, how serious, the cars that get it most', kind: 'list', k: best.k };
+  };
 
   function search(raw) {
     let s = fold(raw).replace(/([a-z])((?:19|20)\d{2})\b/g, '$1 $2');
@@ -178,10 +200,12 @@
     s = s.replace(/\b(\d)\.(\d)\s*(?:l|liters?|litres?|t)?\b/g, (m, a, b) => { sz.push(a + '.' + b); return ` ${a}${b} `; });
     const bd = budget(s); if (bd) s = s.replace(bd.m, ' ');
     let t = syn(norm(s));
+    const sy = symptom(t);   // 11-15 (growth 4c): read before the problem words take "noise", "leak", "brakes" out of the text
     for (const [re, f] of INTENT) { const m = t.match(re); if (m) { const it = f(m, t); if (has(it.u) && !lists.some(x => x.u === it.u)) lists.push(it); t = t.replace(m[0], ' '); } }
     if (bd && has(bd.item.u)) lists.push(bd.item);
     let prob = null, pm, pe = true;   // every problem word goes; the transmission wins, then recalls. pe: the only one was "engine(s)"
     while ((pm = t.match(PROB))) { const k = pm[1] ? 'transmission' : pm[3] ? 'recalls' : 'problems'; if (!prob || k === 'transmission' || (k === 'recalls' && prob === 'problems')) prob = k; if (!/^engines?$/.test(pm[0].trim())) pe = false; t = t.replace(pm[0], ' '); }
+    if (sy) { lists.unshift(sy); t = words(t).filter(w => !sy.k.has(sstem(w)) && !SY_STOP.has(w)).join(' '); }   // its words aren't a car name
     const ym = t.match(/\b(19|20)\d{2}\b/), y = ym ? +ym[0] : 0; if (ym) t = t.replace(ym[0], ' ');
     let W = words(t).filter(w => !STOP.has(w));
     return { code, lists, prob, pe: !!prob && pe, y, W, sz: sz.map(x => x.replace('.', '')), szd: sz, eng: /\bengines?\b/.test(fold(raw)) };
