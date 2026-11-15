@@ -3,6 +3,10 @@
 // straight from NHTSA's free recalls API (api.nhtsa.gov allows lemonindex.com), each tagged against the decoded engine and fuel
 // ("3.0L diesel only" on a 3.6L gas car = probably not this car). NHTSA has no free public open-recall-by-VIN API, so the page says how to
 // confirm one is still open: the VIN lookup at nhtsa.gov/recalls or any dealer. The picture switches to the decoded model (it was a Camry).
+// 11-14 (growth plan 1a + 1c): a VIN report. After the decode, /assets/vr/<model id>.json (vin_report.py) gives that model year's Lemon
+// score and verdict, top complaint areas, counts, YouTube rank, engine pages and a test-drive list built only from its top complaint areas.
+// The report card on top is made to be screenshotted and shared: its link is /vin/#v=<VIN> (the hash never reaches a server; it's cleared on load).
+// Wording rule: "this model-year's record", never "this car's record": we can't see one car's history.
 (() => {
   const f = document.getElementById('vinf'); if (!f) return;
   const out = document.getElementById('vinout'), PICK = JSON.parse(document.getElementById('pick').textContent);
@@ -56,7 +60,7 @@
     const box = document.getElementById(boxId || 'vinrc'); if (!box) return;
     let res;
     try { res = (await (await fetch(`https://api.nhtsa.gov/recalls/recallsByVehicle?make=${encodeURIComponent(r.Make)}&model=${encodeURIComponent(r.Model)}&modelYear=${y}`)).json()).results || []; }
-    catch (e) { box.innerHTML = '<p class="vin-err">Couldn&#39;t load the recall list from NHTSA just now. Check the VIN at <a href="https://www.nhtsa.gov/recalls" rel="noopener" target="_blank">nhtsa.gov/recalls</a>.</p>'; return; }
+    catch (e) { box.innerHTML = '<p class="vin-err">Couldn&#39;t load the recall list from NHTSA just now. Check the VIN at <a href="https://www.nhtsa.gov/recalls" rel="noopener" target="_blank">nhtsa.gov/recalls</a>.</p>'; return null; }
     const seen = new Set();
     const rows = res.filter(x => x.NHTSACampaignNumber && !seen.has(x.NHTSACampaignNumber) && seen.add(x.NHTSACampaignNumber))
       .map(x => { const tag = rtag(x.Summary); return { x, tag, fit: fits(tag, car), d: (x.ReportReceivedDate || '').match(/(\d{4})/) }; })
@@ -73,9 +77,65 @@
         : '<p>NHTSA lists no recalls for this make, model and year.</p>')
       + (boxId ? `<p class="vin-open"><b>Is a recall still open on the car you&#39;re looking at?</b> Only its VIN can say. Ask the seller for it and check it above, or at <a href="https://www.nhtsa.gov/recalls" rel="noopener" target="_blank">nhtsa.gov/recalls</a>. Recall repairs are free, even on a used car. In Canada: ${tcLinks.replace('this VIN', 'a VIN')}.</p>`
         : `<p class="vin-open"><b>Is a recall still open on this exact car?</b> Only the VIN can say. Confirm it free at <a href="https://www.nhtsa.gov/recalls" rel="noopener" target="_blank">nhtsa.gov/recalls</a> (type this VIN) or ask any ${esc(cap(r.Make))} dealer. Recall repairs are free, even on a used car.${ca ? '' : ` In Canada: ${tcLinks}.`}</p>`);
+    return { total: rows.length, other };
+  }
+  // ---- 11-14 VIN report helpers
+  let RUN = 0;
+  const num = n => n == null ? '' : Number(n).toLocaleString('en-US');
+  // one line per verdict band (build.py band()): what the model year's record says about buying one. Never a claim about this one car.
+  const BUY = { 'One of the most reliable': 'A strong pick, as model years go. Still have a mechanic check this one.',
+    'Better than average': 'A good bet, as model years go. Still have a mechanic check this one.',
+    'About average': 'An average model year: buy on this car&#39;s condition and service records.',
+    'Worse than average': 'Only with proof the problem areas below were fixed, and a mechanic&#39;s check.',
+    'Avoid': 'We&#39;d pass, unless records show the problem areas below were already fixed.',
+    'Too new: partial score': 'Too new to call: its score covers less than 3 years of complaints so far.' };
+  // the site's Lemon gauge (build.py gauge()), drawn here because the report is built in the browser
+  const gauge = (li, lab) => {
+    const cx = 120, cy = 118, r = 92, t = v => Math.PI * Math.min(v, 300) / 300, P = (v, rr = r) => [cx - rr * Math.cos(t(v)), cy - rr * Math.sin(t(v))], n1 = n => n.toFixed(1);
+    const arc = (a, b, col) => { const [x1, y1] = P(a), [x2, y2] = P(b); return `<path d="M${n1(x1)} ${n1(y1)}A${r} ${r} 0 0 1 ${n1(x2)} ${n1(y2)}" stroke="${col}" />`; };
+    let ticks = '', nums = '';
+    for (let v = 0; v <= 300; v += 25) { const [a1, b1] = P(v, r - 16), [a2, b2] = P(v, v % 100 ? r - 24 : r - 30); ticks += `<line x1="${n1(a1)}" y1="${n1(b1)}" x2="${n1(a2)}" y2="${n1(b2)}" />`; }
+    for (const v of [0, 100, 200, 300]) { const [a, b] = P(v, r - 44); nums += `<text x="${n1(a)}" y="${n1(b + 5)}">${v}</text>`; }
+    const cls = li < 85 ? 'good' : li <= 115 ? 'mid' : 'bad';
+    return `<figure class="gauge ${cls}" data-vrg style="--a:${n1(Math.min(li, 300) / 300 * 180 - 90)}deg" aria-label="Lemon Index ${li}"><svg viewBox="0 0 240 150" role="img" aria-hidden="true">`
+      + `<g class="g-arc" fill="none" stroke-width="16" stroke-linecap="butt">${arc(0, 84, '#1a8f4c')}${arc(86, 114, '#c9ccd1')}${arc(116, 300, '#e8141c')}</g><g class="g-tick">${ticks}</g><g class="g-num">${nums}</g>`
+      + `<g class="g-ndl"><path d="M${cx - 4} ${cy}L${cx} ${cy - r + 6}L${cx + 4} ${cy}Z" /><circle cx="${cx}" cy="${cy}" r="11" /><circle class="g-hub" cx="${cx}" cy="${cy}" r="5" /></g></svg>`
+      + `<figcaption><b>${li}</b><span>${esc(lab)} · 100 = average car</span></figcaption></figure>`;
+  };
+  const cap1 = s => (s || '').charAt(0).toUpperCase() + (s || '').slice(1);
+  const NOREC = 'No model-year record to go on yet: judge it on this car&#39;s condition, service records and a mechanic&#39;s check.';
+  // 1c: the report card, one screen made for screenshots and sharing
+  const card = (label, sub, Y, D, y, short) => {
+    let top, buy;
+    if (Y && Y.ok) { top = gauge(Y.li, `${y} Lemon Index${Y.early ? ' (partial)' : ''}`) + `<div class="vr-v"><p class="vr-w ${Y.cls}">${esc(Y.word)}.</p><p class="vr-why">${Y.why || ''}</p></div>`; buy = BUY[Y.word] || ''; }
+    else if (Y) { top = `<div class="vr-nos"><b>–</b>No score</div><div class="vr-v"><p class="vr-w na">No score yet.</p><p class="vr-why">${esc(cap1(Y.pln))}.</p></div>`; buy = 'No score for this model year, so judge it on this car&#39;s condition, service records and a mechanic&#39;s check.'; }
+    else if (D) { const ys = Object.keys(D.years); top = `<div class="vr-v"><p class="vr-w na">No data yet for the ${y}.</p><p class="vr-why">We have the ${esc(D.name)} for ${ys[0]} to ${ys[ys.length - 1]}.</p></div>`; buy = NOREC; }
+    else { top = `<div class="vr-v"><p class="vr-w na">No data yet.</p><p class="vr-why">We don&#39;t score the ${esc(label)} yet. Its recalls are below.</p></div>`; buy = NOREC; }
+    const P = Y && Y.parts && Y.parts.length ? Y.parts : null, mx = P ? Math.max(...P.map(p => p[1])) : 1;
+    const risks = P ? `<p class="vr-h">Biggest risks for the ${y} <small class="vr-none">· share of its owner complaints</small></p><ol class="vr-risks">${P.map(([nm, pct]) => `<li><b>${esc(nm)}</b><em>${pct}%</em><span class="vr-bar"><i style="width:${Math.max(4, pct / mx * 100).toFixed(0)}%"></i></span></li>`).join('')}</ol>`
+      : `<p class="vr-h">Biggest risks</p><p class="vr-none">No data yet: too few owner complaints for this model year.</p>`;
+    const yu = Y && D ? `${D.url}${y}/` : D ? D.url : '';
+    return `<article class="vr-card" aria-label="Model-year report card"><p class="vr-k"><img src="/assets/icon-64.png" alt="" width="18" height="18">Lemon Index · this model year&#39;s record</p>`
+      + `<h2 class="vr-t">${esc(label)}${sub ? `<span>${esc(sub)}</span>` : ''}</h2><div class="vr-top">${top}</div>`
+      + `<p class="vr-buy"><b>Should you buy one?</b>${buy}</p>`
+      + `<div class="vr-stats"><div><small>Recalls</small><b id="vr-rc">…</b><span id="vr-rcs">NHTSA, ${y}</span></div>`
+      + (Y && Y.n != null ? `<div><small>Complaints</small><b>${num(Y.n)}</b><span>to NHTSA ${Y.early ? 'so far' : 'in its first 3 years'}${Y.all > Y.n ? ` (${num(Y.all)} in all)` : ''}</span></div>` : `<div><small>Complaints</small><b class="mute">No data yet</b><span>NHTSA</span></div>`)
+      + (Y && Y.yt ? `<div><small>YouTube rank</small><b>#${Y.yt[0]}</b><span>of ${Y.yt[1]} ${esc(short)} years in reviews</span></div>` : `<div><small>YouTube rank</small><b class="mute">No data yet</b><span>too few videos to rank</span></div>`)
+      + `</div>${risks}<p class="vr-src">From NHTSA owner complaints and recalls, U.S. sales and YouTube reviews for the ${y} model year. It isn&#39;t this car&#39;s history (accidents, owners, title or service). lemonindex.com</p>`
+      + `<div class="vr-act"><button type="button" class="btn vr-share">Share this report</button>${yu ? `<a class="btn btn-ghost" href="${esc(yu)}">${Y ? `Full ${y} ${esc(short)} page` : `Every ${esc(short)} year`} →</a>` : ''}<span class="vr-msg" role="status"></span></div></article>`;
+  };
+  // share: the phone's share sheet (Web Share API), else copy the link, else show it selected. The VIN rides in the hash, never the query string.
+  async function share(btn, vin, text) {
+    const url = `${location.origin}/vin/?utm_source=share#v=${vin}`, box = btn.parentNode, msg = box.querySelector('.vr-msg');
+    if (navigator.share && matchMedia('(pointer: coarse)').matches) { try { await navigator.share({ title: document.title, text, url }); return; } catch (e) { if (e && e.name === 'AbortError') return; } }
+    try { await navigator.clipboard.writeText(url); msg.textContent = 'Link copied ✓'; return; } catch (x) { /* no clipboard: show it */ }
+    let i = box.querySelector('.vr-cp');
+    if (!i) { i = document.createElement('input'); i.className = 'vr-cp'; i.readOnly = true; i.setAttribute('aria-label', 'Link to this report'); box.appendChild(i); }
+    i.value = url; i.focus(); i.select(); msg.textContent = 'Copy this link';
   }
   f.onsubmit = async e => {
     e.preventDefault();
+    const run = ++RUN;
     const vin = nz(f.vin.value);
     if (vin.length !== 17) { out.innerHTML = '<p class="vin-err">A VIN is 17 letters and numbers. It&#39;s on the driver-side dashboard (look through the windshield) and on your registration or insurance card.</p>'; return; }
     const bad = !checkOk(vin);
@@ -83,6 +143,7 @@
     let r;
     try { r = (await (await fetch(`https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinValues/${vin}?format=json`)).json()).Results[0]; }
     catch (err) { out.innerHTML = '<p class="vin-err">Couldn&#39;t reach the government VIN service. Try again in a minute.</p>'; return; }
+    if (run !== RUN) return;
     if (!r || !r.Make) { out.innerHTML = '<p class="vin-err">That VIN didn&#39;t decode. Double-check it (no letters I, O or Q).</p>'; return; }
     const mk = nz(r.Make), md = nz(r.Model), y = +r.ModelYear;
     const byAlias = VA[mk + '|' + md] && ALL.find(c => c.id === VA[mk + '|' + md]);
@@ -91,25 +152,50 @@
     const label = `${r.ModelYear} ${cap(r.Make)} ${r.Model}`;
     const rows = [['Car', `${label}${r.Trim ? ' ' + r.Trim : ''}`], ['Engine', eng], ['Drive', r.DriveType], ['Body', r.BodyClass], ['Built in', [r.PlantCity, r.PlantCountry].filter(Boolean).join(', ').toLowerCase().replace(/\b\w/g, c => c.toUpperCase()).replace('(Usa)', '(USA)')]].filter(x => x[1]);
     const warn = bad ? `<p class="vin-warn"><b>Check this VIN for a typo.</b> Its 9th character (${esc(vin[8])}) doesn&#39;t match the check digit the other 16 add up to, so one character is probably mistyped. Compare it with the VIN on the car itself. (Cars built for sale outside North America can skip the check digit.)</p>` : '';
-    out.innerHTML = warn + `<div class="vin-card"><dl>${rows.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join('')}</dl>
-${hit && hit.ys.includes(y) ? `<a class="btn" href="/cars/${hit.id}/${y}/">See its problems and repair costs →</a>` : hit ? `<a class="btn" href="/cars/${hit.id}/">See every ${esc(hit.n)} year →</a>` : '<p class="note">We don&#39;t cover this model yet.</p>'}</div>
-<section class="vin-recalls" id="vinrc" aria-live="polite"><p>Looking up recalls…</p></section>`;
-    if (pic && picBox) {   // the picture follows the decoded model (our AI illustration of it), or goes away
-      if (hit && VI.has(hit.id)) { pic.removeAttribute('srcset'); pic.src = `/assets/ai-models/${hit.id}.webp?v=1`; pic.alt = hit.n; picBox.hidden = false; }
-      else picBox.hidden = true;
-    }
     const ft = r.FuelTypePrimary || '';
     const fuel = /diesel/i.test(ft) ? 'diesel' : /electric/i.test(ft) && !r.DisplacementL ? 'electric' : ft ? 'gas' : null;
     const car = { fuel, l: r.DisplacementL ? Math.round(+r.DisplacementL * 10) / 10 : null, elec: ft ? (r.ElectrificationLevel || '') : undefined,
                   desc: [r.DisplacementL && `${(+r.DisplacementL).toFixed(1)}L`, fuel === 'gas' ? 'gas' : fuel, 'engine'].filter(Boolean).join(' ') };
     const ca = /^2/.test(vin) || /canada/i.test(r.PlantCountry || '') ? vin : '';
-    recalls(r, y, car, label, null, ca);
+    // 11-14: the model-year report (vin_report.py -> /assets/vr/<id>.json)
+    out.innerHTML = warn + '<p>Loading the model-year report…</p>';
+    let D = null;
+    if (hit) { try { const res = await fetch(`/assets/vr/${hit.id.replace(/\//g, '_')}.json`); if (res.ok) D = await res.json(); } catch (x) { D = null; } }
+    if (run !== RUN) return;
+    const Y = D && D.years[String(y)];
+    const short = D ? D.name.replace(/^\S+\s/, '') : cap(r.Model);
+    const sub = [r.Trim, eng.replace(/ gasoline$/, ' gas')].filter(Boolean).join(' · ');
+    const disp = car.l ? car.l.toFixed(1) : null, ENG = Y ? Y.eng || [] : [];
+    const em = disp ? ENG.filter(x => x[2] === disp) : [];
+    const engRow = em.length ? [em.length > 1 ? `Engine pages (${disp}L)` : 'Engine page', em] : (!disp && ENG.length ? [`Engines in the ${y}`, ENG] : null);
+    const dl = rows.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join('')
+      + (engRow ? `<dt>${esc(engRow[0])}</dt><dd><ul class="vr-eng">${engRow[1].map(([n, u]) => `<li><a href="${esc(u)}">${esc(n)} →</a></li>`).join('')}</ul></dd>` : '');
+    const td = !Y ? `<p class="vr-none">No data yet for this model year.</p>`
+      : Y.td.length ? `<ol>${Y.td.map(([lab, pct, txt, mi]) => `<li><b>${esc(lab)}</b> <small>· ${pct}% of complaints${mi ? ` · owners&#39; median ${num(mi)} miles` : ''}</small><p>${esc(txt)}</p></li>`).join('')}</ol>`
+      : `<p class="vr-none">No data yet: too few owner complaints for the ${y} to say which areas to check.</p>`;
+    out.innerHTML = warn + card(label, sub, Y, D, y, short)
+      + `<section class="vr-sec"><h2>The car</h2><div class="vin-card"><dl>${dl}</dl>${hit && !D ? `<a class="btn" href="/cars/${hit.id}/">See every ${esc(hit.n)} year →</a>` : hit ? '' : '<p class="note">We don&#39;t cover this model yet, so there&#39;s no model-year score. Its recalls are below.</p>'}</div></section>`
+      + `<section class="vr-sec vr-td"><h2>What to check on a test drive</h2>${Y && Y.td.length ? `<p class="note">One check for each of the ${y} ${esc(short)}&#39;s top complaint areas in NHTSA owner complaints, biggest first. A mechanic&#39;s inspection still matters most.</p>` : ''}${td}</section>`
+      + `<section class="vin-recalls" id="vinrc" aria-live="polite"><p>Looking up recalls…</p></section>`;
+    requestAnimationFrame(() => requestAnimationFrame(() => out.querySelectorAll('[data-vrg]').forEach(g => g.classList.add('in'))));
+    const sb = out.querySelector('.vr-share');
+    if (sb) sb.onclick = () => share(sb, vin, `${label}: ${Y && Y.ok ? `${Y.word} (Lemon Index ${Y.li})` : 'model-year report'}. Free VIN report:`);
+    if (pic && picBox) {   // the picture follows the decoded model (our AI illustration of it), or goes away
+      if (hit && VI.has(hit.id)) { pic.removeAttribute('srcset'); pic.src = `/assets/ai-models/${hit.id}.webp?v=1`; pic.alt = hit.n; picBox.hidden = false; }
+      else picBox.hidden = true;
+    }
+    const rc = await recalls(r, y, car, label, null, ca);
+    if (run !== RUN) return;
+    const rb = document.getElementById('vr-rc'), rs = document.getElementById('vr-rcs');
+    if (rb && rc) { rb.textContent = rc.other ? rc.total - rc.other : rc.total; rs.textContent = rc.other ? `of ${rc.total} for the ${y}; the rest cover other engines` : `NHTSA, every ${y} ${short}`; }
+    else if (rb && Y && Y.rc != null) { rb.textContent = Y.rc; rs.textContent = `NHTSA, ${y} (our last update)`; }
+    else if (rb) { rb.textContent = '–'; rb.classList.add('mute'); rs.textContent = 'NHTSA didn\'t answer just now'; }
   };
   // ---- 11-12 round 2 (Jake: "nothing tells a buyer to ask for the VIN, or which recall is probably still open"): no-VIN helper
   const nf = document.getElementById('vnvf'), VN = (() => { const e = document.getElementById('vnames'); try { return JSON.parse(e ? e.textContent : '{}'); } catch (x) { return {}; } })();
   // 11-12: the VIN box on the /best/ lists (assets/cb.js) hands the VIN over in the hash (#v=...), never the query string
   const hv = (location.hash.match(/^#v=([A-Za-z0-9]{11,17})$/) || [])[1];
-  if (hv) { f.vin.value = hv.toUpperCase(); history.replaceState(null, '', location.pathname); f.requestSubmit ? f.requestSubmit() : f.onsubmit(new Event('submit')); }
+  if (hv) { f.vin.value = hv.toUpperCase(); history.replaceState(null, '', location.pathname + location.search); f.requestSubmit ? f.requestSubmit() : f.onsubmit(new Event('submit')); }
   if (nf) {
     const opt = (sel, items) => { sel.innerHTML = items.map(([v, t]) => `<option value="${esc(v)}">${esc(t)}</option>`).join(''); };
     const brands = Object.keys(PICK).filter(b => PICK[b].some(([, id, ys]) => VN[id] && ys.length)).sort();

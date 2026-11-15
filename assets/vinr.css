@@ -1,0 +1,60 @@
+/* 11-14 VIN report (growth plan 1a + 1c): report card, details, test-drive list and the page's search text. Prefix vr- (assets/vin.js). */
+.vinout { max-width: 640px; margin-left: auto; margin-right: auto; text-align: left; }
+.vr-card { position: relative; border: 1px solid var(--line); border-radius: 22px; padding: 20px 20px 16px; background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,.04), 0 10px 30px rgba(0,0,0,.06); }
+.vr-k { margin: 0 0 4px; font-size: 13px; font-weight: 600; color: var(--mute); display: flex; align-items: center; gap: 8px; }
+.vr-k img { width: 18px; height: 18px; }
+.vr-t { margin: 0; font-size: clamp(24px, 4vw, 30px); line-height: 1.15; letter-spacing: -.02em; font-weight: 800; }
+.vr-t span { display: block; font-size: 15px; font-weight: 600; color: var(--mute); letter-spacing: 0; margin-top: 4px; }
+.vr-top { display: flex; align-items: center; gap: 16px; margin: 14px 0 6px; }
+.vr-top .gauge { width: 168px !important; transform: none; margin: 0; flex: none; }
+.vr-v { flex: 1; min-width: 0; }
+.vr-w { margin: 0; font-size: 22px; font-weight: 800; letter-spacing: -.02em; line-height: 1.2; }
+.vr-w.good { color: var(--good); } .vr-w.bad { color: var(--red); } .vr-w.na { color: var(--mute); }
+.vr-why { margin: 6px 0 0; font-size: 15px; line-height: 1.45; color: var(--ink2); }
+.vr-nos { width: 150px; flex: none; aspect-ratio: 1.4; border-radius: 16px; background: var(--soft); display: grid; place-content: center; text-align: center; color: var(--mute); font-weight: 700; font-size: 14px; padding: 8px; }
+.vr-nos b { display: block; font-size: 26px; color: var(--ink2); }
+.vr-buy { margin: 12px 0 0; padding: 12px 14px; border-radius: 14px; background: var(--soft); font-size: 15px; line-height: 1.45; }
+.vr-buy b { display: block; font-size: 13px; color: var(--mute); margin-bottom: 2px; }
+.vr-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 12px 0 0; }
+.vr-stats > div { border: 1px solid var(--line); border-radius: 14px; padding: 10px 12px; min-width: 0; }
+.vr-stats small { display: block; font-size: 12px; font-weight: 600; color: var(--mute); }
+.vr-stats b { display: block; font-size: 24px; font-weight: 800; letter-spacing: -.02em; line-height: 1.2; font-variant-numeric: tabular-nums; }
+.vr-stats b.mute { font-size: 15px; color: var(--mute); padding: 5px 0 3px; }
+.vr-stats span { display: block; font-size: 12px; color: var(--mute); line-height: 1.3; }
+.vr-h { margin: 16px 0 8px; font-size: 15px; font-weight: 700; }
+.vr-risks { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; counter-reset: vr; }
+.vr-risks li { display: grid; grid-template-columns: 22px minmax(0, 1fr) 46px; align-items: center; gap: 4px 8px; counter-increment: vr; }
+.vr-risks li::before { content: counter(vr); width: 22px; height: 22px; border-radius: 50%; background: var(--ink); color: #fff; font-size: 12px; font-weight: 700; display: grid; place-content: center; }
+.vr-risks b { font-size: 15px; } .vr-risks b::first-letter { text-transform: uppercase; }
+.vr-risks em { font-style: normal; font-weight: 700; text-align: right; font-variant-numeric: tabular-nums; }
+.vr-risks .vr-bar { grid-column: 2 / 4; height: 6px; border-radius: 3px; background: var(--soft); overflow: hidden; }
+.vr-risks .vr-bar i { display: block; height: 100%; background: var(--red); border-radius: 3px; }
+.vr-src { margin: 14px 0 0; font-size: 12px; color: var(--mute); line-height: 1.4; }
+.vr-act { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 0; }
+.vr-act .btn { margin: 0; }
+.vr-msg { font-size: 13px; font-weight: 600; color: var(--good); align-self: center; }
+.vr-cp { flex: 1 1 100%; font: 14px Inter, system-ui, sans-serif; padding: 8px 10px; border: 1px solid var(--line); border-radius: 10px; }
+.vr-sec { margin: 22px 0 0; }
+.vr-sec > h2 { font-size: 22px; letter-spacing: -.02em; margin: 0 0 6px; }
+.vr-sec .vin-card { margin-top: 10px; }
+.vr-eng { margin: 0; padding: 0; list-style: none; }
+.vr-eng a { font-weight: 700; }
+.vr-td ol { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 10px; }
+.vr-td li { border: 1px solid var(--line); border-left: 5px solid var(--lemon); border-radius: 12px; padding: 10px 14px; font-size: 15px; }
+.vr-td li p { margin: 4px 0 0; color: var(--ink2); line-height: 1.45; }
+.vr-td li small { color: var(--mute); font-weight: 600; }
+.vr-none { color: var(--mute); }
+.vr-seo, .pg > section.vr-seo { max-width: 720px; margin: 56px auto 0; text-align: left; }
+.vr-seo h2 { font-size: 24px; letter-spacing: -.02em; margin: 28px 0 8px; }
+.vr-seo h3 { font-size: 18px; margin: 18px 0 6px; }
+.vr-seo p, .vr-list { font-size: 16px; line-height: 1.55; color: var(--ink2); }
+.vr-list { padding-left: 20px; } .vr-list li { margin: 4px 0; }
+@media (max-width: 520px) {
+  .vr-card { padding: 16px 14px 14px; border-radius: 18px; }
+  .vr-top { flex-direction: column; align-items: stretch; gap: 6px; }
+  .vr-top .gauge { width: 190px !important; align-self: center; }
+  .vr-nos { align-self: center; }
+  .vr-w { text-align: center; } .vr-why { text-align: center; }
+  .vr-stats { gap: 6px; } .vr-stats > div { padding: 8px 9px; } .vr-stats b { font-size: 20px; }
+}
+@media print { .vr-act { display: none; } }
