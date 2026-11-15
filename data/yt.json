@@ -64090,7 +64090,26 @@
      "views": 4265
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 95,
+       "lo": 60.0,
+       "hi": 130.0,
+       "n": 4,
+       "videos": 4,
+       "id": "YH5y-WRcH7k",
+       "t": 385,
+       "title": "Rear brake pad replacement Jeep Commander 2005 - 2010 pads rotor Cherokee Install Remove Replace"
+      }
+     ]
+    ]
+   }
   }
  ],
  "dodge-avenger": [
