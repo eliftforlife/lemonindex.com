@@ -29334,5 +29334,58 @@
 }
 ]
 }
+],
+"jeep-commander": [
+{
+"sid": "jeep-commander-g1",
+"y0": 2006,
+"y1": 2010,
+"label": "2006–2010",
+"videos": 197,
+"praise": [
+[
+"Reliability",
+6
+],
+[
+"Looks",
+5
+],
+[
+"Space and practicality",
+4
+],
+[
+"Power",
+3
+]
+],
+"trouble": [
+[
+"Battery / alternator / starter",
+3
+]
+],
+"top": [
+{
+"id": "wqNqabuGOYk",
+"title": "2006 Jeep Commander: Regular Car Reviews",
+"views": 389106,
+"ch": "Regular Car Reviews"
+},
+{
+"id": "6LwGzXR1NOQ",
+"title": "2009 Jeep Commander Limited | Full Tour, Review & Start-up",
+"views": 154045,
+"ch": "ThinkOutsideTheCube"
+},
+{
+"id": "YYMLg00SMIg",
+"title": "2007 Jeep Commander Do you have Ignition problems? HELP is here!!!",
+"views": 113598,
+"ch": "BrokenWrench"
+}
+]
+}
 ]
 }

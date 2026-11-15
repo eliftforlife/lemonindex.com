@@ -63965,6 +63965,134 @@
    }
   }
  ],
+ "jeep-commander": [
+  {
+   "years": [
+    2006,
+    2007,
+    2008,
+    2009,
+    2010
+   ],
+   "gen": "2006–2010 Jeep Commander",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 5892491,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 404426,
+     "n": 4,
+     "best": {
+      "id": "pRl-OF2gHrk",
+      "title": "Perform service reset Jeep Commander 2006",
+      "channel": "Fixing cars and stuff",
+      "views": 374203
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 170926,
+     "n": 7,
+     "best": {
+      "id": "9LADpq-_mz8",
+      "title": "2006 - 2010 Jeep Commander Radio Install",
+      "channel": "Provo Beast Audio Installation",
+      "views": 81829
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 139206,
+     "n": 4,
+     "best": {
+      "id": "gj9vJ4qxsGM",
+      "title": "jeep commander 2006 light dash climate control stopped working changing interior lights",
+      "channel": "Lukasz Sobieski",
+      "views": 77427
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 25861,
+     "n": 3,
+     "best": {
+      "id": "Bm9sXmOb6ak",
+      "title": "Front Struts/ Shock Replacement On Jeep Grand Cherokee, Jeep Commander 2005-2010",
+      "channel": "MotorCarNut",
+      "views": 18491
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 25655,
+     "n": 2,
+     "best": {
+      "id": "IvaBhSGaawo",
+      "title": "Diagnosing A No Start 2010 Jeep Commander Won't Crank...Clicks...Solved...",
+      "channel": "Peter L",
+      "views": 21380
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 23644,
+     "n": 1,
+     "best": {
+      "id": "nN1MURqBupc",
+      "title": "How To Change Front and Rear Brake Pads 2008 Jeep Commander Back to Basics Auto Repair Series",
+      "channel": "Matt Ryce",
+      "views": 23644
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 21950,
+     "n": 2,
+     "best": {
+      "id": "uxKYMN6uahw",
+      "title": "Jeep Commander 2008 Serpentine Belt Replacement",
+      "channel": "The Mind of Jared",
+      "views": 18285
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 10282,
+     "n": 2,
+     "best": {
+      "id": "_ANZdpOmdd0",
+      "title": "Replace water pump on 2006 Jeep Commander, 4.7-V8",
+      "channel": "James Leigh, Wood an Steel",
+      "views": 7101
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "YYMLg00SMIg",
+     "title": "2007 Jeep Commander Do you have Ignition problems? HELP is here!!!",
+     "channel": "BrokenWrench",
+     "views": 113598
+    },
+    {
+     "id": "bVUcUkuJDGQ",
+     "title": "Jeep commander 2007 AC problems",
+     "channel": "Luis Talavera",
+     "views": 9038
+    },
+    {
+     "id": "698lZN46or0",
+     "title": "2008 jeep commander neutral bypass ignition problems",
+     "channel": "repo man",
+     "views": 4265
+    }
+   ],
+   "costs": null
+  }
+ ],
  "scion-xb": [
   {
    "years": [
