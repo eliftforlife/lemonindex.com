@@ -10,4 +10,5 @@
 - [BMW engines by year](https://lemonindex.com/engines/bmw/): every BMW engine (N54, N55, B58, N63 ...) by model year: US versions and specs (EPA), owner complaints (NHTSA) and a YouTube score
 - [Supercar engines by year](https://lemonindex.com/engines/supercars/): 39 supercar engines (Ferrari F154, Lamborghini V10, McLaren M838T, Nissan VR38DETT ...) matched to their cars (EPA), with a YouTube owner score by model year, NHTSA recalls and automaker repair notes
 - [Performance car engines by year](https://lemonindex.com/engines/performance/): 48 performance-car engines (Hellcat, Coyote, LS3, LS7, 2UR-GSE, EJ257, S65, S85 ...) matched to their cars (EPA), with a YouTube owner score by model year, NHTSA recalls and automaker repair notes
+- [Car repair costs](https://lemonindex.com/repair-cost/): what owners reported paying for 69 repairs (transmission, engine, water pump, timing chain ...), from repair bills in NHTSA complaints and amounts said in YouTube videos, with sample sizes, per model where 5+ owners reported
 - [Method](https://lemonindex.com/method/)
