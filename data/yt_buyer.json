@@ -28565,5 +28565,58 @@
 }
 ]
 }
+],
+"toyota-fj-cruiser": [
+{
+"sid": "toyota-fj-cruiser-g1",
+"y0": 2007,
+"y1": 2014,
+"label": "2007–2014",
+"videos": 195,
+"praise": [
+[
+"Looks",
+14
+],
+[
+"Reliability",
+13
+],
+[
+"Power",
+9
+],
+[
+"Space and practicality",
+5
+]
+],
+"trouble": [
+[
+"Rust",
+5
+]
+],
+"top": [
+{
+"id": "PA23qLvl79k",
+"title": "Regular Car Reviews: 2012 Toyota FJ Cruiser",
+"views": 851997,
+"ch": "Regular Car Reviews"
+},
+{
+"id": "EpJ6sQDq2AE",
+"title": "2012 Toyota FJ Cruiser Test Drive & SUV Video Review",
+"views": 579381,
+"ch": "UsedCarsTV"
+},
+{
+"id": "E4tn-td_VzA",
+"title": "2007 Toyota FJ Cruiser Review - Kelley Blue Book",
+"views": 501433,
+"ch": "Kelley Blue Book"
+}
+]
+}
 ]
 }

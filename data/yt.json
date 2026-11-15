@@ -63965,6 +63965,137 @@
    }
   }
  ],
+ "toyota-fj-cruiser": [
+  {
+   "years": [
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014
+   ],
+   "gen": "2007–2014 Toyota FJ Cruiser",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 14831327,
+   "topics": [
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 99387,
+     "n": 1,
+     "best": {
+      "id": "DgUWK9hNXYk",
+      "title": "How to Engage the Rear Locking Differential on a 2014 Toyota FJ Cruiser by Loving Toyota Scion",
+      "channel": "Loving Toyota",
+      "views": 99387
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 69291,
+     "n": 2,
+     "best": {
+      "id": "B4MUGe5GEHs",
+      "title": "How To Program A Toyota FJ Cruiser Remote Key Fob 2007 - 2008 DIY Tutorial",
+      "channel": "PYR Automotive ",
+      "views": 40651
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 19787,
+     "n": 5,
+     "best": {
+      "id": "FhsBCSSam0w",
+      "title": "2007 Toyota FJ Cruiser Troubleshooting a Brake Issue",
+      "channel": "S & A Auto Repair",
+      "views": 7548
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 18114,
+     "n": 2,
+     "best": {
+      "id": "r2gB7v0SzUw",
+      "title": "(2009 TOYOTA FJ CRUISER) No Start Problem...Dead....Not Cranking...DIY Troubleshooting...Solved...",
+      "channel": "Peter L",
+      "views": 10179
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 10115,
+     "n": 1,
+     "best": {
+      "id": "nPH1sTEq960",
+      "title": "2007-2014 Toyota FJ Cruiser Transmission Cooler Kit Install Guide",
+      "channel": "Mishimoto Automotive",
+      "views": 10115
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 9920,
+     "n": 2,
+     "best": {
+      "id": "pP9BwBGt1WI",
+      "title": "P0101 Toyota Tacoma 4Runner FJ Cruiser | Mass Air Flow Sensor | 4.0L V6 1GR-FE | 2003 - 2009",
+      "channel": "BundysGarage",
+      "views": 8196
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 9459,
+     "n": 1,
+     "best": {
+      "id": "9qi6IkoT38k",
+      "title": "2007 Toyota FJ Cruiser Coolant Leak.",
+      "channel": "JoMammaSmurf",
+      "views": 9459
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 3311,
+     "n": 1,
+     "best": {
+      "id": "PkZVGWGJUTU",
+      "title": "How to Replace Spark Plugs 2007-2014 Toyota FJ Cruiser 4.0L V6",
+      "channel": "TRQ",
+      "views": 3311
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "f_Yo2g9KICs",
+     "title": "Should You Buy a TOYOTA FJ CRUISER? (Test Drive & Review 2012 4.0 V6)",
+     "channel": "High Peak Autos",
+     "views": 184773
+    },
+    {
+     "id": "HRDoiDg7pwg",
+     "title": "How Reliable is a 2007 Toyota FJ Cruiser 200,000 Miles POV Test Drive",
+     "channel": "POV Nelson",
+     "views": 31099
+    },
+    {
+     "id": "PA23qLvl79k",
+     "title": "Regular Car Reviews: 2012 Toyota FJ Cruiser",
+     "channel": "Regular Car Reviews",
+     "views": 851997
+    }
+   ],
+   "costs": null
+  }
+ ],
  "acura-tlx": [
   {
    "years": [
