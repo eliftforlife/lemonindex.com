@@ -28618,5 +28618,175 @@
 }
 ]
 }
+],
+"land-rover-range-rover": [
+{
+"sid": "land-rover-range-rover-g3",
+"y0": 2003,
+"y1": 2012,
+"label": "2003–2012",
+"videos": 197,
+"praise": [
+[
+"Reliability",
+22
+],
+[
+"Looks",
+15
+],
+[
+"Power",
+9
+],
+[
+"Fun to drive",
+7
+]
+],
+"trouble": [
+[
+"Timing chain / tensioners",
+5
+],
+[
+"Electrical / wiring / TIPM",
+5
+],
+[
+"Battery / alternator / starter",
+5
+],
+[
+"Rust",
+4
+]
+],
+"top": [
+{
+"id": "LS54AJSadT4",
+"title": "L322 Range Rover TDV8 long-term update. Is this peak Range Rover?",
+"views": 3011682,
+"ch": "Harry's garage"
+},
+{
+"id": "gl51reRXxgE",
+"title": "Range Rover real-world review and buyer's guide L322 TDV8",
+"views": 1280945,
+"ch": "Harry's garage"
+},
+{
+"id": "WyxH082CF6k",
+"title": "Top Gear Range Rover L322 Launch Review 2002",
+"views": 1103078,
+"ch": "RANGE ROVER OWNER"
+}
+]
+},
+{
+"sid": "land-rover-range-rover-g4",
+"y0": 2013,
+"y1": 2021,
+"label": "2013–2021",
+"videos": 199,
+"praise": [
+[
+"Reliability",
+21
+],
+[
+"Looks",
+15
+],
+[
+"Power",
+13
+],
+[
+"Comfort and ride",
+11
+]
+],
+"trouble": [
+[
+"Oil leaks (gaskets, seals, housings)",
+6
+],
+[
+"Electrical / wiring / TIPM",
+3
+],
+[
+"Coolant leaks / water pump / overheating",
+3
+]
+],
+"top": [
+{
+"id": "CGXEv06QOyQ",
+"title": "Here's Why the 2018 Range Rover Is Worth $125,000",
+"views": 4097053,
+"ch": "Doug DeMuro"
+},
+{
+"id": "yqwDbWVqcXQ",
+"title": "2014 Range Rover Supercharged Autobiography Start Up, Exhaust, and In Depth Review",
+"views": 2371861,
+"ch": "Saabkyle04"
+},
+{
+"id": "XR8HgjEsVgA",
+"title": "New Range Rover 2021 review: is it the ultimate luxury SUV?",
+"views": 2069025,
+"ch": "carwow"
+}
+]
+},
+{
+"sid": "land-rover-range-rover-g5",
+"y0": 2022,
+"y1": 2025,
+"label": "2022–2025",
+"videos": 198,
+"praise": [
+[
+"Looks",
+22
+],
+[
+"Fun to drive",
+14
+],
+[
+"Power",
+12
+],
+[
+"Comfort and ride",
+12
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "iTdciT6QfJ4",
+"title": "New Range Rover 2022: EXCLUSIVE in-depth review!",
+"views": 4538659,
+"ch": "carwow"
+},
+{
+"id": "dj39hqm4xBk",
+"title": "2023 Range Rover Full Review: $250,000 Ultra-Luxury SUV",
+"views": 2672966,
+"ch": "Doug DeMuro"
+},
+{
+"id": "bKn1jX8Jadc",
+"title": "2023 Land Rover Range Rover - Full Visual Review (King of the City)",
+"views": 2361090,
+"ch": "MEDCARS"
+}
+]
+}
 ]
 }
