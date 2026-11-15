@@ -63965,6 +63965,136 @@
    }
   }
  ],
+ "volvo-s80": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006
+   ],
+   "gen": "1999–2006 Volvo S80",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 4460620,
+   "topics": [
+    {
+     "name": "Transmission & shifter",
+     "views": 193023,
+     "n": 3,
+     "best": {
+      "id": "0bnjbmUXFVQ",
+      "title": "1999 Volvo S80 T6 Transmission fluid, filter,gasket change.",
+      "channel": "volvosweden",
+      "views": 173529
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 149730,
+     "n": 1,
+     "best": {
+      "id": "VA4SV1h80MY",
+      "title": "1999 Volvo S80 ABS Module Removal and installation",
+      "channel": "volvosweden",
+      "views": 149730
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 119236,
+     "n": 2,
+     "best": {
+      "id": "ZmQYcua3_80",
+      "title": "1999 Volvo S80 T6 Steering Wheel and airbag Removal and Installation How To",
+      "channel": "volvosweden",
+      "views": 81334
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 67371,
+     "n": 2,
+     "best": {
+      "id": "OlZEIYnXqfM",
+      "title": "Gauge Cluster (DIM) Repair 2004 Volvo XC90 S60 S80 XC70 V70",
+      "channel": "Automotive Circuit Solutions",
+      "views": 53015
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 49248,
+     "n": 1,
+     "best": {
+      "id": "MlfETGTA4Mg",
+      "title": "9499432 Interior rear view mirror replacement P2 models - Volvo S60, S80, V70 & XC70 (1999-2009)",
+      "channel": "Nordicar Classic Volvo Parts",
+      "views": 49248
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 49223,
+     "n": 2,
+     "best": {
+      "id": "xaU8NIFFOUU",
+      "title": "1999 Volvo S80 T6 Engine Oil Change",
+      "channel": "volvosweden",
+      "views": 34500
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 38386,
+     "n": 1,
+     "best": {
+      "id": "6sRJqCCuyl8",
+      "title": "Alternator replacement 2000 Volvo S80 2.9L Install Remove Replace",
+      "channel": "Fixing cars and stuff",
+      "views": 38386
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 13488,
+     "n": 1,
+     "best": {
+      "id": "yd9zDpo4few",
+      "title": "How to Replace Cabin Air Filter 2004 Volvo S80 | AQ1067C",
+      "channel": "Filterheads",
+      "views": 13488
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "WF9In7vGbeA",
+     "title": "2002-2006 Volvo S60 S80 V70 XC70 XC90 Dash Cluster DIM Problems",
+     "channel": "Automotive Circuit Solutions",
+     "views": 209406
+    },
+    {
+     "id": "mnB0OHwQw_s",
+     "title": "Volvo S80 MK2 2006-2015 | should you buy one?? | full REVIEW...",
+     "channel": "Car and Driving - Car Reviews",
+     "views": 49213
+    },
+    {
+     "id": "48RUFwwPqRs",
+     "title": "Should You Buy a Volvo S80 (2004)? Join Us For a Thrilling Road Test With Stunning Drone Footage!",
+     "channel": "Tariq TV Productions",
+     "views": 19485
+    }
+   ],
+   "costs": null
+  }
+ ],
  "toyota-fj-cruiser": [
   {
    "years": [
