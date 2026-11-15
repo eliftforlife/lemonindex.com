@@ -1,0 +1,1373 @@
+{
+"harley-davidson-street-glide": {
+"bike": "Street Glide",
+"models": "FLHX, FLHXS, FLHXSE and the other Street Glide codes",
+"chart": [
+[
+2006,
+4
+],
+[
+2007,
+20
+],
+[
+2008,
+29
+],
+[
+2009,
+29
+],
+[
+2010,
+28
+],
+[
+2011,
+23
+],
+[
+2012,
+18
+],
+[
+2013,
+8
+],
+[
+2014,
+27
+],
+[
+2015,
+11
+],
+[
+2016,
+12
+],
+[
+2017,
+18
+],
+[
+2018,
+14
+],
+[
+2019,
+7
+],
+[
+2020,
+4
+],
+[
+2021,
+2
+],
+[
+2022,
+2
+],
+[
+2023,
+6
+],
+[
+2024,
+13
+]
+],
+"years": [
+{
+"y": 2008,
+"n": 29,
+"note": "Brakes are the top complaint (8).",
+"recalls": [
+{
+"id": "18V076000",
+"plain": "If old brake fluid leaves deposits, a valve in the ABS unit can stick and reduce braking (2008-2011 Touring bikes with ABS).",
+"years": [
+2008,
+2011
+],
+"part": "SERVICE BRAKES, HYDRAULIC",
+"summary": "Harley-Davidson Motor Company (Harley-Davidson) is recalling all 2008-2011 Touring, CVO Touring and VSRC motorcycles equipped with anti-lock brakes (ABS), including Road King (FLHR), Road King Police (EFI) (FLHP), Road King Police (EFI) (FLHPE), Electra Glide Standard Police (EFI) (FLHTP), Electra Glide Classic (EFI) (FLHTC), Electra Glide Ultra Classic (EFI) (FLHTCU) and Street Glide (EFI) (FLHX), 2008 VROD (VRSCAWA), CVO Road King 4 (FLHRSE4), Night Rod (VRSCDA), CVO Ultra Classic 3 (FLHTCUSE3), Night Rod Special (VRSCDXA), 2008-2010 Road King Classic (EFI) (FLHRC), 2008-2009 Road Glide (EFI) (FLTR) and Electra Glide Standard (EFI) (FLHT), 2009-2010 V-Rod (VRSCAW), 2009 CVO Ultra Classic (FLHTCUSE4) and CVO Road Glide 3 (FLTRSE3), 2009-2011 Night Rod Special (VRSCDX) and V-Rod Muscle (VRSCF), 2010 CVO Ultra Classic 5 (FLHTCUSE5) and CVO Street Glide (FLHXSE), 2010-2011 Electra Glide Ultra Limited (FLHTK) and Road Glide Custom (FLTRX), 2011 Road Glide Ultra 103 (FLTRU103), Street Glide 103 (FLHX103), Road King Classic 103 (FLHRC103), CVO Ultra Classic 6 (FLHTCUSE6), CVO Road Glide Ultra (FLTRUSE), Road Glide Custom 103 (FLTRX103), and CVO Street Glide 2 (FLHXSE2) motorcycles. Deposits may form on components within the brake system if the DOT 4 brake fluid is not replaced for a prolonged period of time beyond the 2-year maintenance schedule specified in the Owners Manual.",
+"consequence": "These deposits may cause a valve within the ABS Hydraulic Control Unit to stick, reducing braking ability and increasing the risk of a crash."
+},
+{
+"id": "08V357000",
+"plain": "The fuel filter shell can crack and drop fuel pressure, so the engine can stall or not start (2008 Touring bikes).",
+"years": [
+2008,
+2008
+],
+"part": "FUEL SYSTEM, GASOLINE",
+"summary": "HARLEY DAVIDSON IS RECALLING 47,579 MY 2008 FLHP, FLHPE, FLHR, FLHRC, FLHRSE4, FLHT, FLHTC, FLHTCU, FLHTCUSE3, FLHTP, FLHX, AND FLTR MOTORCYCLES. THESE MOTORCYCLES MAY EXPERIENCE A CRACKING OF THE FUEL FILTER SHELL LEADING TO LOSS OF FUEL PRESSURE. THIS LOSS OF FUEL PRESSURE CAN CAUSE DIMINISHED PERFORMANCE AND, IN SOME CASES, MAY CAUSE AN ENGINE STALL OR A NO-START CONDITION.",
+"consequence": "THIS CONDITION COULD LEAD TO A CRASH WHICH COULD CAUSE INJURY OR DEATH TO THE RIDER."
+}
+]
+},
+{
+"y": 2009,
+"n": 29,
+"note": "Electrical is the top complaint.",
+"recalls": [
+{
+"id": "18V076000",
+"plain": "If old brake fluid leaves deposits, a valve in the ABS unit can stick and reduce braking (2008-2011 Touring bikes with ABS).",
+"years": [
+2008,
+2011
+],
+"part": "SERVICE BRAKES, HYDRAULIC",
+"summary": "Harley-Davidson Motor Company (Harley-Davidson) is recalling all 2008-2011 Touring, CVO Touring and VSRC motorcycles equipped with anti-lock brakes (ABS), including Road King (FLHR), Road King Police (EFI) (FLHP), Road King Police (EFI) (FLHPE), Electra Glide Standard Police (EFI) (FLHTP), Electra Glide Classic (EFI) (FLHTC), Electra Glide Ultra Classic (EFI) (FLHTCU) and Street Glide (EFI) (FLHX), 2008 VROD (VRSCAWA), CVO Road King 4 (FLHRSE4), Night Rod (VRSCDA), CVO Ultra Classic 3 (FLHTCUSE3), Night Rod Special (VRSCDXA), 2008-2010 Road King Classic (EFI) (FLHRC), 2008-2009 Road Glide (EFI) (FLTR) and Electra Glide Standard (EFI) (FLHT), 2009-2010 V-Rod (VRSCAW), 2009 CVO Ultra Classic (FLHTCUSE4) and CVO Road Glide 3 (FLTRSE3), 2009-2011 Night Rod Special (VRSCDX) and V-Rod Muscle (VRSCF), 2010 CVO Ultra Classic 5 (FLHTCUSE5) and CVO Street Glide (FLHXSE), 2010-2011 Electra Glide Ultra Limited (FLHTK) and Road Glide Custom (FLTRX), 2011 Road Glide Ultra 103 (FLTRU103), Street Glide 103 (FLHX103), Road King Classic 103 (FLHRC103), CVO Ultra Classic 6 (FLHTCUSE6), CVO Road Glide Ultra (FLTRUSE), Road Glide Custom 103 (FLTRX103), and CVO Street Glide 2 (FLHXSE2) motorcycles. Deposits may form on components within the brake system if the DOT 4 brake fluid is not replaced for a prolonged period of time beyond the 2-year maintenance schedule specified in the Owners Manual.",
+"consequence": "These deposits may cause a valve within the ABS Hydraulic Control Unit to stick, reducing braking ability and increasing the risk of a crash."
+}
+]
+},
+{
+"y": 2010,
+"n": 28,
+"note": "Brakes are the top complaint (14).",
+"recalls": [
+{
+"id": "18V076000",
+"plain": "If old brake fluid leaves deposits, a valve in the ABS unit can stick and reduce braking (2008-2011 Touring bikes with ABS).",
+"years": [
+2008,
+2011
+],
+"part": "SERVICE BRAKES, HYDRAULIC",
+"summary": "Harley-Davidson Motor Company (Harley-Davidson) is recalling all 2008-2011 Touring, CVO Touring and VSRC motorcycles equipped with anti-lock brakes (ABS), including Road King (FLHR), Road King Police (EFI) (FLHP), Road King Police (EFI) (FLHPE), Electra Glide Standard Police (EFI) (FLHTP), Electra Glide Classic (EFI) (FLHTC), Electra Glide Ultra Classic (EFI) (FLHTCU) and Street Glide (EFI) (FLHX), 2008 VROD (VRSCAWA), CVO Road King 4 (FLHRSE4), Night Rod (VRSCDA), CVO Ultra Classic 3 (FLHTCUSE3), Night Rod Special (VRSCDXA), 2008-2010 Road King Classic (EFI) (FLHRC), 2008-2009 Road Glide (EFI) (FLTR) and Electra Glide Standard (EFI) (FLHT), 2009-2010 V-Rod (VRSCAW), 2009 CVO Ultra Classic (FLHTCUSE4) and CVO Road Glide 3 (FLTRSE3), 2009-2011 Night Rod Special (VRSCDX) and V-Rod Muscle (VRSCF), 2010 CVO Ultra Classic 5 (FLHTCUSE5) and CVO Street Glide (FLHXSE), 2010-2011 Electra Glide Ultra Limited (FLHTK) and Road Glide Custom (FLTRX), 2011 Road Glide Ultra 103 (FLTRU103), Street Glide 103 (FLHX103), Road King Classic 103 (FLHRC103), CVO Ultra Classic 6 (FLHTCUSE6), CVO Road Glide Ultra (FLTRUSE), Road Glide Custom 103 (FLTRX103), and CVO Street Glide 2 (FLHXSE2) motorcycles. Deposits may form on components within the brake system if the DOT 4 brake fluid is not replaced for a prolonged period of time beyond the 2-year maintenance schedule specified in the Owners Manual.",
+"consequence": "These deposits may cause a valve within the ABS Hydraulic Control Unit to stick, reducing braking ability and increasing the risk of a crash."
+}
+]
+},
+{
+"y": 2014,
+"n": 27,
+"note": "Three clutch recalls on this year.",
+"recalls": [
+{
+"id": "13V515000",
+"plain": "Air in the clutch system or a wrong clutch release plate can keep the clutch from disengaging.",
+"years": [
+2014,
+2014
+],
+"part": "POWER TRAIN",
+"summary": "Harley-Davidson Motor Company (Harley-Davidson) is recalling certain model year 2014 FLHTCU, FLHTK, FLHTP, FLHX, FLHXS, FLHTKSE, and FLHRSE motorcycles manufactured May 3, 2013, through October 14, 2013. The clutch master cylinder may allow air into the clutch system. Additionally, the motorcycles may have been assembled with an incorrect clutch release plate. Either condition may prevent the clutch from disengaging.",
+"consequence": "If the clutch does not disengage, the rider may have difficulty slowing or stopping the motorcycle, increasing the risk of a crash."
+},
+{
+"id": "14V537000",
+"plain": "A part in the clutch master cylinder can fail, so the clutch may not stay disengaged and the bike can creep forward.",
+"years": [
+2014,
+2014
+],
+"part": "POWER TRAIN",
+"summary": "Harley-Davidson Motor Company (Harley-Davidson) is recalling certain model year 2014 Electra Glide Ultra Classic (FLHTCU), Ultra Limited (FLHTK), Police Electra Glide (FLHTP), Street Glide Special (FLHXS), Street Glide (FLHX), Tri Glide Ultra (FLHTCUTG), CVO Limited (FLHTKSE), CVO Road King (FLHRSE), CVO Breakout (FXSBSE), Electra Glide Ultra Classic Twin Cooled (FLHTCUTC), Ultra Limited Shrine (FLHTK SHRINE), Street Glide Shrine (FLHX SHRINE), and CVO Softail Deluxe (FLSTNSE). In the affected motorcycles, a component in the clutch master cylinder may fail, reducing the pressure available to keep the clutch disengaged.",
+"consequence": "If the clutch does not remain disengaged, the motorcycle may creep forward while the rider intends to be stopped, increasing the risk of a crash."
+},
+{
+"id": "15V216000",
+"plain": "The clutch master cylinder may not disengage the clutch, especially after the bike sits parked for a while.",
+"years": [
+2014,
+2015
+],
+"part": "POWER TRAIN",
+"summary": "Harley-Davidson Motor Company (Harley-Davidson) notified the agency on April 9, 2015, that they are recalling certain model year 2014-2015 Electra Glide Ultra Classic (FLHTCU), Electra Glide Ultra Classic - Twin Cooled (FLHTCU TC), Ultra Limited (FLHTK), Police Electra Glide (FLHTP), Street Glide (FLHX), Street Glide Special (FLHXS), CVO Street Glide (FLHXSE), 2015 Electra Glide Ultra Classic Low (FLHTCUL), Ultra Limited Low (FLHTKL), Electra Glide Ultra Classic Low - Twin Cooled (FLHTCUL TC), Road Glide Special (FLTRXS), Road Glide (FLTRX), and 2014 CVO Road King (FLHRSE) motorcycles. On July 31, 2015, Harley-Davidson expanded the recall to cover an additional 61,065 motorcycles. In the affected motorcycles, the clutch master cylinder may lose the ability to generate enough lift to disengage the clutch, especially if the motorcycle has been parked for an extended period of time.",
+"consequence": "When the engine is running and the motorcycle is in gear, if the clutch cannot be fully disengaged, the motorcycle may move unexpectedly, increasing the risk of a crash."
+}
+]
+}
+],
+"after": "Since 2019, no Street Glide year drew more than 13.",
+"total": 275,
+"photo": {
+"src": "/assets/v/moto/real/street-glide.webp",
+"w": 900,
+"h": 600,
+"title": "Paris - Salon de la moto 2011 - Harley-Davidson - FLHX Street Glide - 001",
+"author": "Thesupermat",
+"license": "CC BY-SA 3.0",
+"license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+"page": "https://commons.wikimedia.org/wiki/File:Paris_-_Salon_de_la_moto_2011_-_Harley-Davidson_-_FLHX_Street_Glide_-_001.jpg"
+}
+},
+"harley-davidson-sportster": {
+"bike": "Sportster",
+"models": "every XL 883 and XL 1200 code, Iron 883 included",
+"chart": [
+[
+2005,
+21
+],
+[
+2006,
+17
+],
+[
+2007,
+16
+],
+[
+2008,
+5
+],
+[
+2009,
+4
+],
+[
+2010,
+2
+],
+[
+2011,
+0
+],
+[
+2012,
+6
+],
+[
+2013,
+1
+],
+[
+2014,
+9
+],
+[
+2015,
+2
+],
+[
+2016,
+6
+],
+[
+2017,
+2
+],
+[
+2018,
+0
+],
+[
+2019,
+2
+],
+[
+2020,
+1
+],
+[
+2021,
+3
+],
+[
+2022,
+1
+],
+[
+2023,
+0
+],
+[
+2024,
+0
+]
+],
+"years": [
+{
+"y": 2005,
+"n": 21,
+"note": "",
+"recalls": [
+{
+"id": "04V607000",
+"plain": "The fuel valve ON and RESERVE positions may be reversed, so the bike can run dry with no reserve.",
+"years": [
+2005,
+2005
+],
+"part": "FUEL SYSTEM, GASOLINE",
+"summary": "CERTAIN MOTORCYCLES MAY HAVE BEEN PRODUCED WITH DEFECTIVE FUEL SHUT-OFF VALVES. THE FUNCTIONALITY OF THE 'ON' POSITION AND THE 'RESERVE' POSITION OF THE VALVE MAY HAVE BEEN REVERSED.",
+"consequence": "IF THE BIKE WERE OPERATING WITH THE VALVE IN THE 'ON' POSITION, THE BIKE COULD RUN OUT OF FUEL, THE EXPECTED FUEL RESERVE WILL NOT BE AVAILABLE. THIS COULD LEAD TO THE DRIVER RUNNING OUT OF GAS WITHOUT WARNING, INCREASING THE RISK OF A CRASH."
+}
+]
+},
+{
+"y": 2006,
+"n": 17,
+"note": "",
+"recalls": []
+},
+{
+"y": 2007,
+"n": 16,
+"note": "Electrical is the top complaint (8 of 16).",
+"recalls": [
+{
+"id": "06V476000",
+"plain": "The voltage regulator can catch the front fender and make the bike hard to steer.",
+"years": [
+2007,
+2007
+],
+"part": "ELECTRICAL SYSTEM",
+"summary": "ON CERTAIN MOTORCYCLES, AS A RESULT OF A GREATER BODY THICKNESS THAN USED IN PREVIOUS MODEL YEARS, THE VOLTAGE REGULATOR MAY CONTACT THE FRONT FENDER UNDER CERTAIN CONDITIONS. IN SOME CASES THIS CONTACT MAY ALLOW THE FRONT FENDER TO CATCH ON THE TOP SIDE OF THE REGULATOR BODY WHICH COULD IMPEDE THE OPERATOR'S ABILITY TO STEER THE VEHICLE.",
+"consequence": "THIS COULD RESULT IN A CRASH WHICH COULD CAUSE INJURY OR DEATH TO THE RIDER."
+}
+]
+}
+],
+"after": "From 2008 on, no Sportster year drew more than 9.",
+"total": 98,
+"photo": {
+"src": "/assets/v/moto/real/sportster.webp",
+"w": 900,
+"h": 675,
+"title": "Harley-Davidson Sportster 883",
+"author": "Nacho from Oviedo",
+"license": "CC BY 2.0",
+"license_url": "https://creativecommons.org/licenses/by/2.0",
+"page": "https://commons.wikimedia.org/wiki/File:Harley-Davidson_Sportster_883.jpg"
+}
+},
+"harley-davidson-street-500-750": {
+"bike": "Street 750",
+"models": "XG750 and XG750A",
+"chart": [
+[
+2015,
+79
+],
+[
+2016,
+6
+],
+[
+2017,
+7
+],
+[
+2018,
+3
+],
+[
+2019,
+0
+],
+[
+2020,
+0
+],
+[
+2021,
+0
+],
+[
+2022,
+0
+],
+[
+2023,
+0
+],
+[
+2024,
+0
+]
+],
+"years": [
+{
+"y": 2015,
+"n": 79,
+"note": "Its first year. 58 of 79 list the fuel system: owners say it stalls or surges, often when the tank runs low.",
+"recalls": [
+{
+"id": "15V474000",
+"plain": "A poor seal at the fuel pump inlet can interrupt the fuel supply: a hesitation, then power comes back abruptly.",
+"years": [
+2015,
+2015
+],
+"part": "FUEL SYSTEM, GASOLINE",
+"summary": "Harley-Davidson Motor Company (Harley-Davidson) is recalling certain model year 2015 XG500 motorcycles manufactured January 20, 2014, to July 7, 2015, and XG750 motorcycles manufactured May 12, 2014, to July 7, 2015. The fuel pump modules on these motorcycles have a poor seal at the fuel pump inlet.",
+"consequence": "If there is a poor seal at the fuel pump inlet it can cause interruption to the fuel supply, possibly causing a brief hesitation with the abrupt restoration of power. This abrupt restoration of power can lead to loss of control, increasing the risk of a crash."
+}
+]
+}
+],
+"after": "The 2016 to 2018 drew 6, 7 and 3, but 2016-2019 Street 750s were recalled for brake calipers that can corrode and drag (18V927000).",
+"total": 95,
+"photo": {
+"src": "/assets/v/moto/real/street-750.webp",
+"w": 900,
+"h": 600,
+"title": "2014 Harley-Davidson Street 750 side view",
+"author": "Ryan Urlacher",
+"license": "CC BY 2.0",
+"license_url": "https://creativecommons.org/licenses/by/2.0",
+"page": "https://commons.wikimedia.org/wiki/File:2014_Harley-Davidson_Street_750_side_view.jpg"
+}
+},
+"kawasaki-ninja-300-400-650": {
+"bike": "Ninja 300 / 400",
+"models": "Ninja 300 (EX300) and Ninja 400 (EX400); not the 250, 500 or 650",
+"chart": [
+[
+2013,
+56
+],
+[
+2014,
+2
+],
+[
+2015,
+1
+],
+[
+2016,
+0
+],
+[
+2017,
+0
+],
+[
+2018,
+0
+],
+[
+2019,
+1
+],
+[
+2020,
+0
+],
+[
+2021,
+2
+],
+[
+2022,
+1
+],
+[
+2023,
+0
+],
+[
+2024,
+0
+]
+],
+"years": [
+{
+"y": 2013,
+"n": 56,
+"note": "The first Ninja 300. 44 of 56 describe the engine stalling, mostly while slowing down.",
+"recalls": [
+{
+"id": "13V328000",
+"plain": "An engine computer (ECU) setting can make the bike stall while slowing down.",
+"years": [
+2013,
+2013
+],
+"part": "ELECTRICAL SYSTEM",
+"summary": "Kawasaki Motors Corp. is recalling certain model year 2013 Ninja 300 and 300 ABS motorcycles manufactured July 16, 2012, through April 27, 2013. Due to an improper setting in the Electronic Control Unit (ECU), the motorcycle may stall under deceleration.",
+"consequence": "A stall under deceleration increases the risk of a crash."
+}
+]
+}
+],
+"after": "After 2013, no year drew more than 3. Some 2021 Ninja 400s were recalled for the cam chain tensioner (20V774000).",
+"total": 63,
+"photo": {
+"src": "/assets/v/moto/real/ninja-300.webp",
+"w": 900,
+"h": 593,
+"title": "2013 Kawasaki Ninja 300 Seattle Motorcycle Show",
+"author": "Dennis Bratland",
+"license": "CC BY-SA 3.0",
+"license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+"page": "https://commons.wikimedia.org/wiki/File:2013_Kawasaki_Ninja_300_Seattle_Motorcycle_Show.jpg"
+}
+},
+"yamaha-yzf-r1": {
+"bike": "YZF-R1",
+"models": "YZF-R1, R1M and R1S codes",
+"chart": [
+[
+2005,
+9
+],
+[
+2006,
+10
+],
+[
+2007,
+90
+],
+[
+2008,
+3
+],
+[
+2009,
+2
+],
+[
+2010,
+0
+],
+[
+2011,
+2
+],
+[
+2012,
+0
+],
+[
+2013,
+0
+],
+[
+2014,
+1
+],
+[
+2015,
+13
+],
+[
+2016,
+0
+],
+[
+2017,
+0
+],
+[
+2018,
+0
+],
+[
+2019,
+0
+],
+[
+2020,
+1
+],
+[
+2021,
+0
+],
+[
+2022,
+0
+],
+[
+2023,
+0
+],
+[
+2024,
+0
+]
+],
+"years": [
+{
+"y": 2007,
+"n": 90,
+"note": "75 of 90 mention second gear: the bike lags, then surges. No recall covers it.",
+"recalls": []
+},
+{
+"y": 2015,
+"n": 13,
+"note": "The redesigned R1.",
+"recalls": [
+{
+"id": "15V802000",
+"plain": "Transmission gears can fail and lock up.",
+"years": [
+2015,
+2015
+],
+"part": "POWER TRAIN",
+"summary": "Yamaha Motor Corporation, USA (Yamaha) is recalling certain model year 2015 YZFR1, YZFR1C, YZFR1MF and YZFR1MFC motorcycles manufactured August 1, 2014, to June 1, 2015. The affected motorcycles have transmission gears that may fail.",
+"consequence": "If the gears fail, the transmission may lock up, resulting in a loss of vehicle control, thereby increasing the risk of a crash."
+}
+]
+}
+],
+"after": "Most other years drew 10 or fewer.",
+"total": 131,
+"photo": {
+"src": "/assets/v/moto/real/r1.webp",
+"w": 900,
+"h": 745,
+"title": "YAMAHA YZF-R1 2007TMS",
+"author": "PekePON",
+"license": "CC BY-SA 3.0",
+"license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+"page": "https://commons.wikimedia.org/wiki/File:YAMAHA_YZF-R1_2007TMS.jpg"
+}
+},
+"honda-gold-wing": {
+"bike": "Gold Wing",
+"models": "GL1800 codes; not the Valkyrie",
+"chart": [
+[
+2005,
+18
+],
+[
+2006,
+22
+],
+[
+2007,
+20
+],
+[
+2008,
+49
+],
+[
+2009,
+2
+],
+[
+2010,
+24
+],
+[
+2012,
+31
+],
+[
+2013,
+22
+],
+[
+2014,
+9
+],
+[
+2015,
+9
+],
+[
+2016,
+5
+],
+[
+2018,
+34
+],
+[
+2019,
+6
+],
+[
+2020,
+1
+],
+[
+2021,
+7
+],
+[
+2022,
+1
+],
+[
+2023,
+2
+],
+[
+2024,
+3
+]
+],
+"years": [
+{
+"y": 2008,
+"n": 49,
+"note": "Brakes are the top complaint (12): the rear brakes drag or lock.",
+"recalls": [
+{
+"id": "15V700000",
+"plain": "The rear brake can drag after it is released, and long rides with it dragging can get hot enough to start a fire (2001-2010 and 2012-2015).",
+"years": [
+2005,
+2015
+],
+"part": "SERVICE BRAKES, HYDRAULIC",
+"summary": "American Honda Motor Co., Inc. (Honda) is recalling certain model year 2001-2010 and 2012-2015 GL1800, 2001-2005 GL1800A and 2013-2015 GL1800B motorcycles. The rear brakes of the affected motorcycles may drag after the brakes are released.",
+"consequence": "A rear brake that drags may increase the risk of a vehicle crash. Additionally, extended riding with the rear brake dragging could generate enough heat to result in a fire."
+},
+{
+"id": "11V567000",
+"plain": "The linked brakes' secondary master cylinder can make the rear brake drag.",
+"years": [
+2005,
+2012
+],
+"part": "SERVICE BRAKES, HYDRAULIC",
+"summary": "HONDA IS RECALLING CERTAIN MODEL YEAR 2001-2010, AND MODEL YEAR 2012 GL1800 GOLDWING MOTORCYCLES. UNDER CERTAIN CONDITIONS, THERE IS A POSSIBILITY THAT THE COMBINED BRAKING SYSTEM'S SECONDARY MASTER CYLINDER MAY CAUSE THE REAR BRAKE TO DRAG.",
+"consequence": "UNEXPECTED BRAKING INCREASES THE RISK OF A CRASH, AND RIDING THE MOTORCYCLE WITH THE REAR BRAKE DRAGGING MAY GENERATE ENOUGH HEAT TO CAUSE THE REAR BRAKE TO CATCH FIRE."
+}
+]
+},
+{
+"y": 2012,
+"n": 31,
+"note": "20 of 31 describe a stumble at low speed.",
+"recalls": []
+},
+{
+"y": 2018,
+"n": 34,
+"note": "The first year of the new Gold Wing.",
+"recalls": [
+{
+"id": "24V820000",
+"plain": "The primary drive gear bolt can break, stalling the engine and locking the rear wheel (2018-2021).",
+"years": [
+2018,
+2021
+],
+"part": "ENGINE AND ENGINE COOLING",
+"summary": "Honda (American Honda Motor Co.) is recalling certain 2018-2021 GL1800 Goldwing motorcycles. The primary drive gear bolt on the crankshaft may break, which can result in an engine stall and lock up the rear wheel.",
+"consequence": "An engine stall and rear wheel lockup can increase the risk of a crash or injury."
+},
+{
+"id": "24V113000",
+"plain": "Fuel pump impellers can deform and the pump can fail, stalling the engine (2018-2024).",
+"years": [
+2018,
+2024
+],
+"part": "FUEL SYSTEM, GASOLINE",
+"summary": "Honda (American Honda Motor Co.) is recalling certain 2018-2024 GL1800 (Goldwing), CBR600RR, and 2018-2019 CBR1000RR motorcycles. The fuel pump impellers may have been improperly molded, which can cause them to deform and result in fuel pump failure.",
+"consequence": "Fuel pump failure can cause an engine stall while driving, increasing the risk of a crash."
+}
+]
+}
+],
+"after": "There was no 2011 or 2017 Gold Wing in the US.",
+"total": 265,
+"photo": {
+"src": "/assets/v/moto/real/gold-wing.webp",
+"w": 900,
+"h": 675,
+"title": "Honda Gold Wing GL1800 White",
+"author": "Midnight Runner",
+"license": "CC BY-SA 3.0",
+"license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+"page": "https://commons.wikimedia.org/wiki/File:Honda_Gold_Wing_GL1800_White.jpg"
+}
+},
+"harley-davidson-road-king": {
+"bike": "Road King",
+"models": "FLHR, FLHRC, FLHRCI, FLHRS and the other Road King codes",
+"chart": [
+[
+2005,
+6
+],
+[
+2006,
+12
+],
+[
+2007,
+25
+],
+[
+2008,
+30
+],
+[
+2009,
+23
+],
+[
+2010,
+7
+],
+[
+2011,
+15
+],
+[
+2012,
+4
+],
+[
+2013,
+6
+],
+[
+2014,
+5
+],
+[
+2015,
+2
+],
+[
+2016,
+0
+],
+[
+2017,
+5
+],
+[
+2018,
+7
+],
+[
+2019,
+2
+],
+[
+2020,
+1
+],
+[
+2021,
+0
+],
+[
+2022,
+0
+],
+[
+2023,
+0
+],
+[
+2024,
+0
+]
+],
+"years": [
+{
+"y": 2008,
+"n": 30,
+"note": "15 of 30 describe throttle, power-loss or cruise control problems.",
+"recalls": [
+{
+"id": "08V357000",
+"plain": "The fuel filter shell can crack and drop fuel pressure, so the engine can stall or not start (2008 Touring bikes).",
+"years": [
+2008,
+2008
+],
+"part": "FUEL SYSTEM, GASOLINE",
+"summary": "HARLEY DAVIDSON IS RECALLING 47,579 MY 2008 FLHP, FLHPE, FLHR, FLHRC, FLHRSE4, FLHT, FLHTC, FLHTCU, FLHTCUSE3, FLHTP, FLHX, AND FLTR MOTORCYCLES. THESE MOTORCYCLES MAY EXPERIENCE A CRACKING OF THE FUEL FILTER SHELL LEADING TO LOSS OF FUEL PRESSURE. THIS LOSS OF FUEL PRESSURE CAN CAUSE DIMINISHED PERFORMANCE AND, IN SOME CASES, MAY CAUSE AN ENGINE STALL OR A NO-START CONDITION.",
+"consequence": "THIS CONDITION COULD LEAD TO A CRASH WHICH COULD CAUSE INJURY OR DEATH TO THE RIDER."
+},
+{
+"id": "18V076000",
+"plain": "If old brake fluid leaves deposits, a valve in the ABS unit can stick and reduce braking (2008-2011 Touring bikes with ABS).",
+"years": [
+2008,
+2011
+],
+"part": "SERVICE BRAKES, HYDRAULIC",
+"summary": "Harley-Davidson Motor Company (Harley-Davidson) is recalling all 2008-2011 Touring, CVO Touring and VSRC motorcycles equipped with anti-lock brakes (ABS), including Road King (FLHR), Road King Police (EFI) (FLHP), Road King Police (EFI) (FLHPE), Electra Glide Standard Police (EFI) (FLHTP), Electra Glide Classic (EFI) (FLHTC), Electra Glide Ultra Classic (EFI) (FLHTCU) and Street Glide (EFI) (FLHX), 2008 VROD (VRSCAWA), CVO Road King 4 (FLHRSE4), Night Rod (VRSCDA), CVO Ultra Classic 3 (FLHTCUSE3), Night Rod Special (VRSCDXA), 2008-2010 Road King Classic (EFI) (FLHRC), 2008-2009 Road Glide (EFI) (FLTR) and Electra Glide Standard (EFI) (FLHT), 2009-2010 V-Rod (VRSCAW), 2009 CVO Ultra Classic (FLHTCUSE4) and CVO Road Glide 3 (FLTRSE3), 2009-2011 Night Rod Special (VRSCDX) and V-Rod Muscle (VRSCF), 2010 CVO Ultra Classic 5 (FLHTCUSE5) and CVO Street Glide (FLHXSE), 2010-2011 Electra Glide Ultra Limited (FLHTK) and Road Glide Custom (FLTRX), 2011 Road Glide Ultra 103 (FLTRU103), Street Glide 103 (FLHX103), Road King Classic 103 (FLHRC103), CVO Ultra Classic 6 (FLHTCUSE6), CVO Road Glide Ultra (FLTRUSE), Road Glide Custom 103 (FLTRX103), and CVO Street Glide 2 (FLHXSE2) motorcycles. Deposits may form on components within the brake system if the DOT 4 brake fluid is not replaced for a prolonged period of time beyond the 2-year maintenance schedule specified in the Owners Manual.",
+"consequence": "These deposits may cause a valve within the ABS Hydraulic Control Unit to stick, reducing braking ability and increasing the risk of a crash."
+}
+]
+},
+{
+"y": 2007,
+"n": 25,
+"note": "Engine and power train lead (7 each).",
+"recalls": []
+},
+{
+"y": 2009,
+"n": 23,
+"note": "Brakes are the top complaint (9).",
+"recalls": [
+{
+"id": "18V076000",
+"plain": "If old brake fluid leaves deposits, a valve in the ABS unit can stick and reduce braking (2008-2011 Touring bikes with ABS).",
+"years": [
+2008,
+2011
+],
+"part": "SERVICE BRAKES, HYDRAULIC",
+"summary": "Harley-Davidson Motor Company (Harley-Davidson) is recalling all 2008-2011 Touring, CVO Touring and VSRC motorcycles equipped with anti-lock brakes (ABS), including Road King (FLHR), Road King Police (EFI) (FLHP), Road King Police (EFI) (FLHPE), Electra Glide Standard Police (EFI) (FLHTP), Electra Glide Classic (EFI) (FLHTC), Electra Glide Ultra Classic (EFI) (FLHTCU) and Street Glide (EFI) (FLHX), 2008 VROD (VRSCAWA), CVO Road King 4 (FLHRSE4), Night Rod (VRSCDA), CVO Ultra Classic 3 (FLHTCUSE3), Night Rod Special (VRSCDXA), 2008-2010 Road King Classic (EFI) (FLHRC), 2008-2009 Road Glide (EFI) (FLTR) and Electra Glide Standard (EFI) (FLHT), 2009-2010 V-Rod (VRSCAW), 2009 CVO Ultra Classic (FLHTCUSE4) and CVO Road Glide 3 (FLTRSE3), 2009-2011 Night Rod Special (VRSCDX) and V-Rod Muscle (VRSCF), 2010 CVO Ultra Classic 5 (FLHTCUSE5) and CVO Street Glide (FLHXSE), 2010-2011 Electra Glide Ultra Limited (FLHTK) and Road Glide Custom (FLTRX), 2011 Road Glide Ultra 103 (FLTRU103), Street Glide 103 (FLHX103), Road King Classic 103 (FLHRC103), CVO Ultra Classic 6 (FLHTCUSE6), CVO Road Glide Ultra (FLTRUSE), Road Glide Custom 103 (FLTRX103), and CVO Street Glide 2 (FLHXSE2) motorcycles. Deposits may form on components within the brake system if the DOT 4 brake fluid is not replaced for a prolonged period of time beyond the 2-year maintenance schedule specified in the Owners Manual.",
+"consequence": "These deposits may cause a valve within the ABS Hydraulic Control Unit to stick, reducing braking ability and increasing the risk of a crash."
+}
+]
+}
+],
+"after": "After 2011, no Road King year drew more than 7.",
+"total": 150,
+"photo": {
+"src": "/assets/v/moto/real/road-king.webp",
+"w": 900,
+"h": 600,
+"title": "Harley-Davidson Road King Custom 2006",
+"author": "Nitot",
+"license": "CC BY-SA 3.0",
+"license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+"page": "https://commons.wikimedia.org/wiki/File:Harley-Davidson_Road_King_Custom_2006.jpg"
+}
+},
+"bmw-gs-r1200-r1250gs": {
+"bike": "R 1200 GS / R 1250 GS",
+"models": "R 1200 GS, GS Adventure, R 1250 GS and GS Adventure",
+"chart": [
+[
+2005,
+51
+],
+[
+2006,
+14
+],
+[
+2007,
+65
+],
+[
+2008,
+50
+],
+[
+2009,
+37
+],
+[
+2010,
+15
+],
+[
+2011,
+7
+],
+[
+2012,
+13
+],
+[
+2013,
+11
+],
+[
+2014,
+16
+],
+[
+2015,
+14
+],
+[
+2016,
+12
+],
+[
+2017,
+10
+],
+[
+2018,
+5
+],
+[
+2019,
+19
+],
+[
+2020,
+8
+],
+[
+2021,
+1
+],
+[
+2022,
+3
+],
+[
+2023,
+2
+],
+[
+2024,
+0
+]
+],
+"years": [
+{
+"y": 2007,
+"n": 65,
+"note": "42 of 65 are about fuel, 20 about a cracked fuel pump flange leaking gas.",
+"recalls": [
+{
+"id": "13V617000",
+"plain": "The fuel pump flange can crack and leak fuel, a fire risk (2005-2011 R models).",
+"years": [
+2005,
+2011
+],
+"part": "FUEL SYSTEM, GASOLINE",
+"summary": "BMW of North America, LLC (BMW) is recalling certain model year 2005-2011 model year R-model motorcycles, model year 2005-2012 K-model motorcycles, model year 2010-2011 S 1000 model motorcycles, and model year 2006-2010 HP2 motorcycles. In the affected motorcycles, the fuel pump flange (and the auxiliary fuel pump flange if equipped) could develop cracks and leak fuel.",
+"consequence": "A fuel leak in the presence of an ignition source may result in a fire."
+},
+{
+"id": "20V471000",
+"plain": "A follow-up to 13V617000: on bikes that got the support-ring fix, the flange can still crack and leak fuel.",
+"years": [
+2005,
+2011
+],
+"part": "FUEL SYSTEM, GASOLINE",
+"summary": "BMW of North America, LLC (BMW) is recalling certain 2009-2011 K1300 (S, GT), 2010-2011 S1000 RR, 2005-2011 R1200 (GS, GS Adventure, R, RT, S, ST), 2006-2010 HP2 (Enduro, Megamoto, Sport), 2005-2008 K1200 (R, R Sport, S, GT), and 2012 K1600 (GT, GTL) motorcycles that were repaired under recall 13V-617 with the support ring remedy and where the fuel pump was not replaced at a later date. This recall involves the fuel pump, and also the auxiliary fuel pump as applicable. The affected motorcycles have a fuel pump flange that may crack, possibly resulting in a fuel leak while the engine is running.",
+"consequence": "A fuel leak in the presence of an ignition source can increase the risk of a fire."
+}
+]
+},
+{
+"y": 2005,
+"n": 51,
+"note": "Final drive (16) and fuel (13) lead.",
+"recalls": [
+{
+"id": "13V617000",
+"plain": "The fuel pump flange can crack and leak fuel, a fire risk (2005-2011 R models).",
+"years": [
+2005,
+2011
+],
+"part": "FUEL SYSTEM, GASOLINE",
+"summary": "BMW of North America, LLC (BMW) is recalling certain model year 2005-2011 model year R-model motorcycles, model year 2005-2012 K-model motorcycles, model year 2010-2011 S 1000 model motorcycles, and model year 2006-2010 HP2 motorcycles. In the affected motorcycles, the fuel pump flange (and the auxiliary fuel pump flange if equipped) could develop cracks and leak fuel.",
+"consequence": "A fuel leak in the presence of an ignition source may result in a fire."
+}
+]
+},
+{
+"y": 2008,
+"n": 50,
+"note": "35 mention fuel.",
+"recalls": [
+{
+"id": "13V617000",
+"plain": "The fuel pump flange can crack and leak fuel, a fire risk (2005-2011 R models).",
+"years": [
+2005,
+2011
+],
+"part": "FUEL SYSTEM, GASOLINE",
+"summary": "BMW of North America, LLC (BMW) is recalling certain model year 2005-2011 model year R-model motorcycles, model year 2005-2012 K-model motorcycles, model year 2010-2011 S 1000 model motorcycles, and model year 2006-2010 HP2 motorcycles. In the affected motorcycles, the fuel pump flange (and the auxiliary fuel pump flange if equipped) could develop cracks and leak fuel.",
+"consequence": "A fuel leak in the presence of an ignition source may result in a fire."
+}
+]
+},
+{
+"y": 2009,
+"n": 37,
+"note": "Fuel system is the top complaint (19).",
+"recalls": [
+{
+"id": "13V617000",
+"plain": "The fuel pump flange can crack and leak fuel, a fire risk (2005-2011 R models).",
+"years": [
+2005,
+2011
+],
+"part": "FUEL SYSTEM, GASOLINE",
+"summary": "BMW of North America, LLC (BMW) is recalling certain model year 2005-2011 model year R-model motorcycles, model year 2005-2012 K-model motorcycles, model year 2010-2011 S 1000 model motorcycles, and model year 2006-2010 HP2 motorcycles. In the affected motorcycles, the fuel pump flange (and the auxiliary fuel pump flange if equipped) could develop cracks and leak fuel.",
+"consequence": "A fuel leak in the presence of an ignition source may result in a fire."
+}
+]
+}
+],
+"after": "From 2010 on, no year drew more than 19.",
+"total": 353,
+"photo": {
+"src": "/assets/v/moto/real/r1200gs.webp",
+"w": 900,
+"h": 675,
+"title": "R1200GS 2004",
+"author": "Gsmonkey",
+"license": "CC BY 3.0",
+"license_url": "https://creativecommons.org/licenses/by/3.0",
+"page": "https://commons.wikimedia.org/wiki/File:R1200GS_2004.jpg"
+}
+},
+"suzuki-gsx-r": {
+"bike": "GSX-R600 / GSX-R750",
+"models": "GSX-R600 and GSX-R750 codes; not the GSX-R1000",
+"chart": [
+[
+2005,
+9
+],
+[
+2006,
+51
+],
+[
+2007,
+73
+],
+[
+2008,
+6
+],
+[
+2009,
+1
+],
+[
+2010,
+0
+],
+[
+2011,
+0
+],
+[
+2012,
+0
+],
+[
+2013,
+1
+],
+[
+2014,
+1
+],
+[
+2015,
+0
+],
+[
+2016,
+0
+],
+[
+2017,
+0
+],
+[
+2018,
+0
+],
+[
+2019,
+0
+],
+[
+2020,
+0
+],
+[
+2021,
+0
+],
+[
+2022,
+0
+],
+[
+2023,
+0
+],
+[
+2024,
+0
+]
+],
+"years": [
+{
+"y": 2007,
+"n": 73,
+"note": "More than half (39 of 73) mention the throttle, and 8 report a fire, most tied to the charging system.",
+"recalls": [
+{
+"id": "13V449000",
+"plain": "Corrosion inside the front brake master cylinder can reduce front braking (2004-2013 GSX-R600 and GSX-R750).",
+"years": [
+2005,
+2013
+],
+"part": "SERVICE BRAKES",
+"summary": "Suzuki Motor of America, Inc. (Suzuki) is recalling certain model year 2004-2013 GSX-R600 and GSX-R750, and model year 2005-2013 GSX-R1000 motorcycles. In combination with older brake fluid, corrosion of the brake piston inside of the front brake master cylinder generates gas that may result in a reduction of fluid pressure transmission to the front brake.",
+"consequence": "As a result, front braking power may be reduced increasing the risk of a crash."
+}
+]
+},
+{
+"y": 2006,
+"n": 51,
+"note": "29 of 51 mention the same jerky throttle.",
+"recalls": [
+{
+"id": "13V449000",
+"plain": "Corrosion inside the front brake master cylinder can reduce front braking (2004-2013 GSX-R600 and GSX-R750).",
+"years": [
+2005,
+2013
+],
+"part": "SERVICE BRAKES",
+"summary": "Suzuki Motor of America, Inc. (Suzuki) is recalling certain model year 2004-2013 GSX-R600 and GSX-R750, and model year 2005-2013 GSX-R1000 motorcycles. In combination with older brake fluid, corrosion of the brake piston inside of the front brake master cylinder generates gas that may result in a reduction of fluid pressure transmission to the front brake.",
+"consequence": "As a result, front braking power may be reduced increasing the risk of a crash."
+}
+]
+}
+],
+"after": "From 2009 on, no year drew more than 1. The 2007 drew more complaints than every other year since 2005 combined.",
+"total": 142,
+"photo": {
+"src": "/assets/v/moto/real/gsx-r600-750.webp",
+"w": 900,
+"h": 638,
+"title": "2006 gsxr750",
+"author": "Maoisn (en.wikipedia)",
+"license": "CC BY-SA 3.0",
+"license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+"page": "https://commons.wikimedia.org/wiki/File:2006_gsxr750.jpg"
+}
+},
+"kawasaki-klr650": {
+"bike": "KLR650",
+"models": "KLR650 codes",
+"chart": [
+[
+2005,
+1
+],
+[
+2006,
+1
+],
+[
+2007,
+3
+],
+[
+2008,
+116
+],
+[
+2009,
+6
+],
+[
+2010,
+0
+],
+[
+2011,
+0
+],
+[
+2012,
+0
+],
+[
+2013,
+0
+],
+[
+2014,
+0
+],
+[
+2015,
+0
+],
+[
+2016,
+0
+],
+[
+2017,
+1
+],
+[
+2018,
+0
+],
+[
+2022,
+1
+],
+[
+2023,
+16
+],
+[
+2024,
+1
+]
+],
+"years": [
+{
+"y": 2008,
+"n": 116,
+"note": "The first of the redesigned KLR. 84 of 116 say the turn signals fell off, some onto the hot exhaust.",
+"recalls": [
+{
+"id": "07V244000",
+"plain": "The side stand spring pin may not be fully welded and can fall out, letting the stand drop while riding.",
+"years": [
+2008,
+2008
+],
+"part": "STRUCTURE",
+"summary": "ON CERTAIN MOTORCYCLES, THE SPRING RETAINING PIN ON THE FRAME MAY NOT HAVE BEEN COMPLETELY WELDED IN PLACE AND COULD FALL OUT, ALLOWING THE SIDESTAND TO DROP INTO THE \"PARKING\" POSITION.",
+"consequence": "IF THIS OCCURRED WHILE THE VEHICLE WAS IN MOTION, A CRASH COULD OCCUR."
+}
+]
+},
+{
+"y": 2023,
+"n": 16,
+"note": "All 16 are about the steering, often catching at low speed.",
+"recalls": []
+}
+],
+"after": "Most other years have no complaints on file. There was no 2019-2021 KLR650 in the US.",
+"total": 146,
+"photo": {
+"src": "/assets/v/moto/real/klr650.webp",
+"w": 900,
+"h": 541,
+"title": "2009 black Kawasaki KLR 650",
+"author": "Carsamar",
+"license": "CC BY-SA 4.0",
+"license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+"page": "https://commons.wikimedia.org/wiki/File:2009_black_Kawasaki_KLR_650.jpg"
+}
+}
+}

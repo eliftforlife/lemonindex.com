@@ -105,6 +105,15 @@ def _build_v():
         if m.get('parts'): secs.append(_sec('systems', 'Complaints by system', ['System', 'Share of complaints'], [[E(str(p[0])).capitalize(), f'{p[1]}%'] for p in m['parts']]))
         adv_table_page(a, n, f'{m["name"]} Complaint Data by Year and System | Advanced Data', f'{m["name"]} raw NHTSA data: {m["n"]} complaints by model year and system, crashes, fires and injuries.', f'{E(m["name"])}. Advanced data.', f'<a href="/motorcycles/">Motorcycles</a> · <a href="{n}">{E(m["name"])}</a>',
                        [('Complaints', f'{int(m["n"]):,}', 'NHTSA'), ('Crashes', m.get('crash', 0), 'reported'), ('Fires', m.get('fire', 0), 'reported'), ('Injuries', m.get('injured', 0), 'reported'), ('Median miles', f'{int(m["miles"]):,}' if m.get('miles') else '–', 'at complaint')], secs)
+    for m in (_load('data/moto_bikes.json') or []):   # 11-14: the bike pages (vehicles_pages.py)
+        n = f'/motorcycles/{m["slug"]}/'; a = n + 'advanced/'
+        secs = [_sec('years', 'Complaints by model year', ['Model year', 'Complaints', 'Crashes', 'Fires', 'Injured', 'Recall campaigns'],
+                     [[y, v['n'], v['crash'], v['fire'], v['injured'], len(v['recalls'])] for y, v in sorted(m['years'].items())])]
+        secs.append(_sec('systems', 'Complaints by system', ['System', 'Share of complaints'], [[E(str(p[0])).capitalize(), f'{p[1]}%'] for p in m['parts']]))
+        secs.append(_sec('campaigns', 'Recall campaigns', ['Campaign', 'Filed', 'System', 'Model years'], [[E(r['id']), E(r['date']), E(r['part'].title()), E(', '.join(map(str, r['years'])))] for r in m['recalls']],
+                         'NHTSA recall campaigns found for the model names owners filed, by model year (api.nhtsa.gov). Equipment campaigns are left out.'))
+        adv_table_page(a, n, f'{m["name"]} Complaint Data by Year and System | Advanced Data', f'{m["name"]} raw NHTSA data: {m["n"]} complaints by model year and system, crashes, fires, injuries and recall campaigns.', f'{E(m["name"])}. Advanced data.', f'<a href="/motorcycles/">Motorcycles</a> · <a href="{n}">{E(m["name"])}</a>',
+                       [('Complaints', f'{int(m["n"]):,}', 'NHTSA'), ('Crashes', m.get('crash', 0), 'reported'), ('Fires', m.get('fire', 0), 'reported'), ('Injuries', m.get('injured', 0), 'reported'), ('Median miles', f'{int(m["miles"]):,}' if m.get('miles') else '–', 'at complaint')], secs)
     for pl in _load('data/planes.json'):
         slug = slugify(pl['name']); n = f'/planes/{slug}/'; a = n + 'advanced/'
         secs = [_sec('years', 'Accidents by year', ['Year', 'Accidents'], [[y, c] for y, c in sorted(pl.get('by_year', {}).items())])] if pl.get('by_year') else []

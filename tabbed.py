@@ -404,6 +404,7 @@ _ADV = [  # (tab id, label, section ids, h2 prefixes)
 def _adv_sort(items, modes, short, order=None):
     """Sections -> (tab bar + panels, tail items), by section id / h2 (see _ADV)."""
     H = lambda c: (c.find('h2').get_text(' ', strip=True) if c.find('h2') else '')
+    yav = [c for c in items if 'yav' in (c.get('class') or [])]; items = [c for c in items if c not in yav]   # 11-14: "years to avoid" leads the Overview tab
     got = {t[0]: [] for t in _ADV}; over, tail = [], []
     for c in items:
         k = c.get('class') or []; h = H(c); cid = c.get('id') or ''
@@ -434,6 +435,7 @@ def _adv_sort(items, modes, short, order=None):
         if got['specs']: cards.append(_ovcard('specs', 'Specs & engines', f'{nv} engines' if nv else 'Every version', 'with power and mpg', go='specs'))
         if got['questions']: cards.append(_ovcard('questions', 'Questions', f'{nq} quick answers' if nq else '', '', _qtitles([S_]), go='questions'))
         panels = [('overview', 'Overview', f'<div class="ovg{" ovg4" if len(cards) == 4 else ""}">' + ''.join(cards) + '</div>')] + panels[1:]
+    if yav: panels[0] = (panels[0][0], panels[0][1], J(yav) + panels[0][2])
     tabs = _tabs(panels, f'{short} sections', _modes(modes))
     return tabs, tail
 

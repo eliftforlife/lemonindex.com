@@ -135,7 +135,8 @@ for c in EVX:
 for c in PERFX:
     i = perf_info(c); PICK_ALL.setdefault(i['brand'], []).append([c.get('search') or i['name'], i['id'], [], i['url'], 'perf'])   # 11-11: full name keeps the trim aliases searchable
 for _m in (_jl('data/moto.json') or []): PICK_ALL.setdefault(_brandof(_m['brand']), []).append([_m['name'], 'moto-' + _slg(_m['name']), [], f"/motorcycles/{_slg(_m['name'])}/", 'moto'])   # 11-11: motorcycles in the one search
-for _m in (_jl('data/moto_soon.json') or []): PICK_ALL.setdefault(_brandof(_m['make']), []).append([_m.get('search') or _m['name'], 'moto-' + _m['slug'], [], '', 'moto'])
+for _m in (_jl('data/moto_bikes.json') or []): PICK_ALL.setdefault(_brandof(_m['brand']), []).append([_m['name'], 'moto-' + _m['slug'], [], f"/motorcycles/{_m['slug']}/", 'moto'])   # 11-14: bike pages
+for _m in [x for x in (_jl('data/moto_soon.json') or []) if x['slug'] not in {b['slug'] for b in (_jl('data/moto_bikes.json') or [])}]: PICK_ALL.setdefault(_brandof(_m['make']), []).append([_m.get('search') or _m['name'], 'moto-' + _m['slug'], [], '', 'moto'])
 PICK_ALL = dict(sorted((b, sorted(m)) for b, m in PICK_ALL.items()))
 def finder(h='Look up any car', sub='Every model year, 2000 to 2025. Free.', foot=''):
     """10-29 (Elijah): the first thing on the page is an easy car filter. Type "2016 pilot", or pick brand, model, year (assets/lookup.js)."""

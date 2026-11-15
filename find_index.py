@@ -56,6 +56,7 @@ for c in SCX: _fadd(c['name'], c['make'], f'/supercars/{_slg(c["name"])}/', 'sc'
 for c in EVX: _fadd(c['name'], _brandof(c['make']), f'/electric/{c["slug"]}/', 'ev', _evyears(c), 'ev electric')
 # 6. motorcycles: pages, then the coming-soon bikes
 for m in (globals().get('MO') or []): _fadd(m['name'], m['name'].split(' ')[0], f'/motorcycles/{slugify(m["name"])}/', 'moto', range(m['years'][0], m['years'][1] + 1) if m.get('years') else (), 'motorcycle bike')
+for m in (globals().get('MB') or []): _fadd(m['name'], m['brand'], f'/motorcycles/{m["slug"]}/', 'moto', [int(y) for y in m['by_year']], 'motorcycle bike years to avoid ' + ' '.join(m.get('names', [])[:3]).lower())   # 11-14 bike pages
 # 7. coming soon: performance cars, supercars/hypercars still to come, bikes, and the "No data yet" models (shown grayed out, never a link)
 for c in PERFX:
     i = perf_info(c); g = c.get('group', 'A'); u = i['url'] or PERF_LIVE.get(i['id'], '')
