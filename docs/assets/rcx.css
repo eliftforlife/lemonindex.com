@@ -1,0 +1,40 @@
+/* Recall check pages (11-14, growth plan 2B-1): /recalls/, /recalls/<make>/, /recalls/<make>/<model>/. Prefix rcx-. */
+.rcx .rcx-st { max-width: 760px; margin: 22px auto 0; text-align: left; }
+.rcx .rcx-st span { display: block; margin-top: 2px; font-size: 14px; line-height: 1.35; }
+.rcx .ph .rcx-vf { margin-top: 18px; }
+.rcx .yc .rcx-vf { margin: 14px 0 0; }
+.rcx .rcx-vf { flex-wrap: wrap; }
+.rcx .rcx-vf input { font-size: 16px; }
+.rcx-msg { flex-basis: 100%; margin: 4px 0 0; font-size: 14px; color: #b3121a; }
+.rcx-bars { list-style: none; margin: 14px 0 0; padding: 0; display: grid; gap: 10px; max-width: 760px; }
+.rcx-bars li { display: grid; grid-template-columns: minmax(84px, 170px) 1fr 3.2em; grid-template-areas: "l b n" ". s s"; align-items: center; column-gap: 12px; font-size: 15px; }
+.rcx-bl { grid-area: l; font-weight: 600; overflow-wrap: anywhere; }
+.rcx-bl a { color: inherit; }
+.rcx-bb { grid-area: b; height: 10px; border-radius: 999px; background: #f5f5f7; overflow: hidden; }
+.rcx-bb i { display: block; height: 100%; border-radius: inherit; background: #1d1d1f; }
+.rcx-bars b { grid-area: n; text-align: right; font-variant-numeric: tabular-nums; }
+.rcx-bars small { grid-area: s; color: #6e6e73; font-size: 13px; }
+.rcx .rc li > small { color: #6e6e73; }
+.rcx .rcx-m { font-size: 13px; color: #6e6e73; }
+.rcx .rcx-m a { color: inherit; }
+.rcx-more { margin-top: 12px; }
+.rcx-more summary { cursor: pointer; font-weight: 600; padding: 8px 0; }
+.rcx-more .rc { margin-top: 10px; }
+.rcx-open p { max-width: 72ch; }
+.rcx-chips { margin-top: 12px; }
+.rcx-chips .chip small { color: #6e6e73; font-size: 12px; margin-left: 4px; }
+.rcx-rh { font-size: 20px; margin: 18px 0 4px; letter-spacing: -.02em; }
+.rcx-warn .rc li { border-left-color: #b3121a; }
+.rcx-l a { font-weight: 600; }
+@media (max-width: 600px) {
+  .rcx-bars li { grid-template-columns: minmax(70px, 34%) 1fr 2.6em; column-gap: 8px; font-size: 14px; }
+  .rcx .rcx-st { grid-template-columns: 1fr 1fr; }
+  .rcx .rcx-st b { font-size: 24px; }
+}
+/* make + model heroes use the brand pages' .yph6 header: on phones it's a centered flex column with ordered children */
+.yph6 .rcx-st { order: 4; width: 100%; }
+.yph6 .rcx-vf { order: 6; width: 100%; }
+.yph6 .rcx-vf + .fnote { order: 8; }
+@media (min-width: 900px) { .yph6 .rcx-vf + .fnote { text-align: left; } }
+.rcx .yc h2 .h2s { flex-basis: 100%; }
+.yph6 .rcx-st { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 520px; }

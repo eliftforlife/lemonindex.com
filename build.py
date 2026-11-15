@@ -248,7 +248,7 @@ NAV = [('/cars/', 'Look up a car'), ('/brands/', 'Brands'), ('/compare/', 'Compa
 # phones get a full-screen menu. Styles/JS: assets/gh.css + gh.js (master copy in 0 HQ/Tools/site header/).
 # 11-13 (nav review #6): Trucks (the /cars/ grid's Trucks tab) in the bar; Studies and Motorcycles moved to More, Engines up from More
 NAV_TOP = [('/cars/', 'Cars'), ('/?type=trucks', 'Trucks'), ('/brands/', 'Brands'), ('/compare/', 'Compare'), ('/electric/', 'Electric'), ('/engines/', 'Engines'), ('/vin/', 'VIN check')]
-NAV_MORE = [('/best/', 'Best cars'), ('/rankings/', 'Every car ranked'), ('/stats/car-complaints/', 'Statistics'), ('/supercars/', 'Supercars'), ('/jdm/', 'JDM'), ('/motorcycles/', 'Motorcycles'), ('/studies/', 'Studies'), ('/check-engine-light/', 'Engine code lookup'), ('/symptoms/', 'Car symptoms'), ('/best-gas-mileage/', 'Gas mileage'), ('/planes/', 'Planes'), ('/car-loan-rates/', 'Loan rates'), ('/vote/', 'Vote'), ('/data/', 'Free data'), ('/method/', 'How it works')]
+NAV_MORE = [('/recalls/', 'Recall check'), ('/best/', 'Best cars'), ('/rankings/', 'Every car ranked'), ('/stats/car-complaints/', 'Statistics'), ('/supercars/', 'Supercars'), ('/jdm/', 'JDM'), ('/motorcycles/', 'Motorcycles'), ('/studies/', 'Studies'), ('/check-engine-light/', 'Engine code lookup'), ('/symptoms/', 'Car symptoms'), ('/best-gas-mileage/', 'Gas mileage'), ('/planes/', 'Planes'), ('/car-loan-rates/', 'Loan rates'), ('/vote/', 'Vote'), ('/data/', 'Free data'), ('/method/', 'How it works')]
 GH_CHEV = '<svg viewBox="0 0 8 8" aria-hidden="true"><path d="M2.5 1 5.5 4 2.5 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 GH_DOWN = '<svg viewBox="0 0 8 8" aria-hidden="true"><path d="M1 2.75 4 5.75 7 2.75" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 # 11-10 v2 (Elijah: "it still can look a little better"): one small monochrome line icon per main menu item (24 px grid, stroke 1.8)
@@ -257,6 +257,7 @@ GH_IC = {'/cars/': '<path d="M4 16v-4l2.2-5h11.6L20 12v4z"/><path d="M4 12h16"/>
          '/brands/': '<path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/>',
          '/compare/': '<path d="M8 20V9M16 20V4M4 20h16"/>',
          '/vin/': '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 9v6M10 9v6M13.5 9v6M17 9v6"/>',
+         '/recalls/': '<path d="M12 3.5 21.5 20h-19z"/><path d="M12 10v4.5M12 17.2v.3"/>',
          '/check-engine-light/': '<path d="M4 10h2V8h5v2h3l2 2h2v-2h2v6h-2v-2h-2l-2 3H8l-2-2H4z"/>',
          '/symptoms/': '<path d="M3 12h4l2-5 4 10 2-5h6"/>',
          '/engines/': '<path d="M6 9h9l2 2h2V9h2v7h-2v-2h-2l-2 3H8l-2-2z"/><path d="M9 9V6h4v3M3 12v3"/>',
@@ -277,13 +278,13 @@ def gh_ic(u):
 def gh_header(path):
     cur = lambda u: ' aria-current="page"' if path.startswith(u) else ''
     _mi = next((t for u, t in NAV_MORE if path.startswith(u) and u != '/'), None) if not any(path.startswith(u) for u, _ in NAV_TOP) else None   # 11-13 nav (N2)
-    _mi = {'Engine code lookup': 'Engine codes'}.get(_mi, _mi)
+    _mi = {'Engine code lookup': 'Engine codes', 'Recall check': 'Recalls'}.get(_mi, _mi)
     _mc, _ml = (' data-cur="1" style="color:var(--gh-ink);font-weight:500"', f' · {_mi}') if _mi else ('', '')
     top = ''.join(f'<a href="{GH_HREF.get(u, u)}"{cur(u)}>{t}</a>' for u, t in NAV_TOP)
     # 11-10 (Elijah: the phone menu didn't fit one screen): grouped (Look up / Explore / More) in two columns on phones; headings and the
     # top-bar links (gh-x) only show where the top bar is folded away (<1024 px). Lemon-only: the styles live in site.css, not the shared gh.css.
     inbar = {u for u, _ in NAV_TOP}; lab = dict(NAV_TOP + NAV_MORE); lab['/check-engine-light/'] = 'Engine codes'
-    grp = [('Look up', ['/cars/', '/?type=trucks', '/brands/', '/compare/', '/vin/', '/engines/', '/check-engine-light/', '/symptoms/']),
+    grp = [('Look up', ['/cars/', '/?type=trucks', '/brands/', '/compare/', '/vin/', '/recalls/', '/engines/', '/check-engine-light/', '/symptoms/']),
            ('Explore', ['/best/', '/rankings/', '/electric/', '/motorcycles/', '/supercars/', '/jdm/', '/best-gas-mileage/', '/studies/', '/stats/car-complaints/']),   # 11-13 JDM section
            ('More', ['/planes/', '/car-loan-rates/', '/vote/', '/data/', '/method/'])]
     assert sorted(u for _, us in grp for u in us) == sorted(lab), 'gh menu groups miss a link'
@@ -346,7 +347,7 @@ def auto_hero(body, vis=''):
     i = body.rfind('</article>'); return body[:i] + '</article></div>' + body[i + len('</article>'):]
 # 11-05 schema: breadcrumbs on every page (Home > Cars > Honda Civic > 2016) so Google and AI tools see where a page sits
 SEGN = {'cars': 'Cars', 'brands': 'Brands', 'compare': 'Compare', 'electric': 'Electric', 'motorcycles': 'Motorcycles', 'planes': 'Planes', 'supercars': 'Supercars',
-        'vin': 'VIN decoder', 'car-loan-rates': 'Car loan rates', 'studies': 'Studies', 'data': 'Free data', 'method': 'How it works', 'transmission': 'Transmission problems', 'repair-cost': 'Repair costs'}
+        'vin': 'VIN decoder', 'recalls': 'Recall check', 'car-loan-rates': 'Car loan rates', 'studies': 'Studies', 'data': 'Free data', 'method': 'How it works', 'transmission': 'Transmission problems', 'repair-cost': 'Repair costs'}
 def crumbs(path, title):
     parts = [x for x in path.strip('/').split('/') if x]; items = [('The Lemon Index', BASE + '/')]; FY = globals().get('FY', {})
     for j in range(len(parts) - 1, 0, -1):   # 11-13 (N1): a slash id ('mercedes-benz-m/gle', 'glk/glc') is one crumb, not a dead /cars/mercedes-benz-m/
@@ -444,6 +445,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
     if 'class="pg mp6"' in body and re.match(r'^/(motorcycles|supercars|planes)/[^/]+/$', path) and 'adv_body' in globals(): body = adv_body(path, body, TAB.transform_mp6)   # 11-10: motorcycle, supercar and plane pages
     body = _ii_stable(body, 'iib')   # 11-13 QB: image-info ids numbered per page, so a new (i) elsewhere doesn't redate thousands of pages
     _pd_mark(path, body, title + '\n' + desc)
+    if 'RCL_LINK' in globals(): body = RCL_LINK(path, body)   # 11-14 growth 2B-1: links to the /recalls/ pages, after the date hash (a link alone doesn't redate a page)
     _d = PD[path]['d']; _dl = f'{_MN[int(_d[5:7]) - 1]} {int(_d[8:])}, {_d[:4]}'; _upd = ''
     body = body.replace('%%PD_DATE%%', _dl).replace('%%PD_ISO%%', _d)   # 11-14 5c: the page's own content-hash date (stats citation, Dataset dateModified)
     if path.startswith(('/cars/', '/motorcycles/', '/planes/', '/supercars/', '/best/', '/stats/', '/check-engine-light/', '/symptoms/', '/best-gas-mileage/', '/electric/', '/studies/', '/repair-cost/')):
@@ -477,7 +479,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <footer class="foot f2"><div class="f2-in"><div class="f2-brand"><a class="f2-logo" href="/"><img src="/assets/icon-64.png" alt="" width="28" height="28">The Lemon Index</a>
 <p>Car reliability from owner complaints to the U.S. government, per car sold. Free.</p><div class="f2-soc">{F2_SOC}</div></div>
 <nav class="f2-col" aria-label="Explore"><p class="f2-h">Explore</p><a href="/compare/">Compare cars</a><a href="/best/">Best cars</a><a href="/rankings/">Every car ranked</a><a href="/brands/">Brands</a><a href="/engines/">Every engine</a><a href="/electric/">Electric cars</a><a href="/stats/car-complaints/">Statistics</a><a href="/car-loan-rates/">Car loan rates</a></nav>
-<nav class="f2-col" aria-label="Tools and data"><p class="f2-h">Tools and data</p><a href="/vin/">VIN check</a><a href="/check-engine-light/">Engine codes</a><a href="/symptoms/">Car symptoms</a><a href="/method/">How the index works</a><a href="/data/">Free data</a><a href="/images/">Free images</a><a href="/vote/">Vote</a></nav>
+<nav class="f2-col" aria-label="Tools and data"><p class="f2-h">Tools and data</p><a href="/vin/">VIN check</a><a href="/recalls/">Recall check</a><a href="/check-engine-light/">Engine codes</a><a href="/symptoms/">Car symptoms</a><a href="/method/">How the index works</a><a href="/data/">Free data</a><a href="/images/">Free images</a><a href="/vote/">Vote</a></nav>
 <nav class="f2-col" aria-label="Support"><p class="f2-h">Support</p><button class="supl" type="button">Keep Lemon ad-free</button><a href="/about/">About</a><a href="/press/">Press</a><a href="/contact/">Contact</a><a href="{YT}?sub_confirmation=1" rel="noopener">Subscribe on YouTube</a></nav></div>
 <div class="f2-bot"><span>© {TODAY[:4]} The Lemon Index</span><a href="/terms/">Terms</a><a href="/privacy/">Privacy</a><a href="/refunds/">Refunds</a><span class="f2-dis">Built from public NHTSA complaint data and published U.S. sales figures. Not affiliated with any automaker. Not a repair-cost or safety rating.</span></div></footer><script src="/assets/explorer.js?v=1112d" defer></script><script src="/assets/support.js?v=1111d" defer></script><script src="/assets/imginfo.js?v=2" defer></script><script src="/assets/lookup.js?v={LXS_V}" defer></script>{beacon}</body></html>'''
     doc = _ii_stable(doc)
@@ -1669,6 +1671,7 @@ exec(open('n2_nav.py', encoding='utf-8').read())   # 11-13 navigation (N2): bett
 VEX = 'hooks'; exec(open('vin_engine_pages.py', encoding='utf-8').read())   # 11-13 everyday engines matched by VIN: VE_USE for ENGINE_USES (before engine_uses.py)
 EMBX = 'hooks'; exec(open('embed_pages.py', encoding='utf-8').read())   # 11-14 growth plan 5b: "Embed this chart" on model + year pages (EMX_BTN)
 ENGU = 'hooks'; exec(open('engine_uses.py', encoding='utf-8').read())   # 11-13 nav fix N3: ENGINE_USES, "Engines in this car" + other-versions chips (wraps PIN_HTML), engine pages link back
+RCLP = 'hooks'; exec(open('recall_pages.py', encoding='utf-8').read())   # 11-14 growth plan 2B-1: recall check pages; RCL_LINK adds their links to car pages (after the date hash)
 RCP = 'hooks'; exec(open('repair_cost_pages.py', encoding='utf-8').read())   # 11-14 growth 2D-1: repair cost data + the links car pages show (RC_ROW, RC_LINKS)
 CMP = 'hooks'; exec(open('code_model_pages.py', encoding='utf-8').read())   # 11-14 growth 2A-x: which model x engine code pages exist (CM_OK) + the model page chips (CM_ROW)
 def yearx(fid, y): return extra(fid, y)
@@ -2220,7 +2223,8 @@ _404 = re.sub(r'<main>.*</main>', lambda m: (
     '<li><a href="/best/">Best cars</a></li><li><a href="/engines/">Engines</a></li><li><a href="/check-engine-light/">Engine codes</a></li></ul></div></main>'), _404, count=1, flags=re.S)
 _404 = _404.replace('</body>', f'<script src="/assets/lx404.js?v={LXS_V}" defer></script></body>', 1)
 open(f'{OUT}/404.html', 'w', encoding='utf-8').write(_404)
-urls = ['/', '/rankings/', STUDY, '/studies/', '/method/', '/vin/', '/car-loan-rates/', '/vote/', '/data/', '/brands/'] + PERF_URLS + JDM_URLS + burls + purls + murls + surls + eurls + GAP_URLS + CODE_URLS + globals().get('SYM_URLS', []) + SEO_URLS + EXTRA_URLS + BMW_URLS + SCE_URLS + AE_URLS + yurls + ADV_URLS + curls + LEGAL_URLS + UXC_URLS + MST_URLS + globals().get('HD_URLS', []) + globals().get('VE_URLS', []) + globals().get('RC_URLS', []) + globals().get('CM_URLS', [])
+RCLP = 'pages'; exec(open('recall_pages.py', encoding='utf-8').read())   # 11-14 growth plan 2B-1: /recalls/ hub, make and model recall pages (RCL_URLS)
+urls = ['/', '/rankings/', STUDY, '/studies/', '/method/', '/vin/', '/car-loan-rates/', '/vote/', '/data/', '/brands/'] + PERF_URLS + JDM_URLS + burls + purls + murls + surls + eurls + GAP_URLS + CODE_URLS + globals().get('SYM_URLS', []) + SEO_URLS + EXTRA_URLS + BMW_URLS + SCE_URLS + AE_URLS + yurls + ADV_URLS + curls + LEGAL_URLS + UXC_URLS + MST_URLS + globals().get('HD_URLS', []) + globals().get('VE_URLS', []) + globals().get('RC_URLS', []) + globals().get('CM_URLS', []) + globals().get('RCL_URLS', [])
 open(f'{OUT}/sitemap.xml', 'w', encoding='utf-8').write('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + ''.join(f'<url><loc>{BASE}{u}</loc><lastmod>{PD.get(u, {}).get("d", TODAY)}</lastmod></url>' for u in urls) + '</urlset>')
 open(f'{OUT}/ads.txt', 'w').write(f'google.com, {ADS.replace("ca-", "")}, DIRECT, f08c47fec0942fa0\n')
 open(f'{OUT}/robots.txt', 'w').write(f'User-agent: *\nAllow: /\n\nUser-agent: GPTBot\nAllow: /\nUser-agent: ClaudeBot\nAllow: /\nUser-agent: PerplexityBot\nAllow: /\nUser-agent: Google-Extended\nAllow: /\nUser-agent: Googlebot-Image\nAllow: /\n\n# bulk dataset scrapers: the data is free at /data/ with credit instead\nUser-agent: CCBot\nDisallow: /\nUser-agent: Bytespider\nDisallow: /\nUser-agent: Diffbot\nDisallow: /\nUser-agent: Omgilibot\nDisallow: /\nUser-agent: ImagesiftBot\nDisallow: /\n\nSitemap: {BASE}/sitemap.xml\nSitemap: {BASE}/image-sitemap.xml\n')
@@ -2259,7 +2263,7 @@ page('/vin/', 'Free VIN Decoder and Recall Check: Look Up Any VIN | The Lemon In
 <section class="vnv" id="no-vin"><h2>No VIN yet?</h2><p class="note">Pick the car and year. You&#39;ll see every recall for it, newest first: a recall from the last 12 months has had the least time to be fixed, so it&#39;s the one most likely still open on a used car.</p>
 <form id="vnvf" class="vnv-f" autocomplete="off"><label><span>Make</span><select name="mk" aria-label="Make"></select></label><label><span>Model</span><select name="md" aria-label="Model"></select></label><label><span>Year</span><select name="y" aria-label="Year"></select></label><button class="btn" type="submit">Show recalls</button></form>
 <div id="vnvout" class="vin-recalls" aria-live="polite"></div></section>
-<p class="fnote vin-ca">Canada? See recalls at <a href="{TC_DB}" rel="noopener nofollow" target="_blank">Transport Canada</a></p>
+<p class="fnote vin-ca">Canada? See recalls at <a href="{TC_DB}" rel="noopener nofollow" target="_blank">Transport Canada</a> · <a href="/recalls/">Recalls by make and model</a></p>
 <div class="ph-v">{pimg(mphoto('toyota-camry', 2019), 'Toyota Camry')}</div>{pcredit(who(mphoto('toyota-camry', 2019)))}
 <script id="pick" type="application/json">{json.dumps(PICK, ensure_ascii=False).replace("</", "<\\/")}</script><script id="valias" type="application/json">{json.dumps(VALIAS, separators=(",", ":"))}</script><script id="vnames" type="application/json">{json.dumps(VNAMES, separators=(",", ":"))}</script><script id="vimg" type="application/json">{json.dumps(sorted(f[:-5] for f in os.listdir("assets/ai-models") if f.endswith(".webp")), separators=(",", ":"))}</script><script src="/assets/vin.js?v=1114svra" defer></script></section>{VR_SEO}</div>''', ld=[faq_ld(VR_FAQ), {"@context": "https://schema.org", "@type": "WebApplication", "name": "Free VIN check and model-year report", "url": BASE + '/vin/', "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Decode a VIN with NHTSA vPIC, then see that model year's Lemon Index score, top complaint areas, NHTSA recalls and a test-drive checklist. Not a vehicle history report."}])
 shutil.copytree('assets', f'{OUT}/assets', dirs_exist_ok=True); print('vin report model years:', vr_write(f'{OUT}/assets/vr')); shutil.copy('data/survey.json', f'{OUT}/assets/survey-q.json'); shutil.copy('data/votes.json', f'{OUT}/assets/votes.json')
