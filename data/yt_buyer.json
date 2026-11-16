@@ -32155,5 +32155,141 @@
 }
 ]
 }
+],
+"buick-regal": [
+{
+"sid": "buick-regal-g5",
+"y0": 1997,
+"y1": 2004,
+"label": "1997–2004",
+"videos": 195,
+"praise": [
+[
+"Power",
+6
+],
+[
+"Reliability",
+5
+],
+[
+"Looks",
+3
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "4Eo0hC6_NUg",
+"title": "2000 Buick Regal GS: Regular Car Reviews",
+"views": 588420,
+"ch": "Regular Car Reviews"
+},
+{
+"id": "HvQjVtSf1YA",
+"title": "2003 Buick Regal GS Review",
+"views": 54279,
+"ch": "Sadm1"
+},
+{
+"id": "lCHcNSSB0zE",
+"title": "2000 Buick Regal GS Supercharged Review",
+"views": 47132,
+"ch": "Car Reviews by KJ"
+}
+]
+},
+{
+"sid": "buick-regal-g6",
+"y0": 2011,
+"y1": 2017,
+"label": "2011–2017",
+"videos": 194,
+"praise": [
+[
+"Fun to drive",
+16
+],
+[
+"Power",
+9
+],
+[
+"Looks",
+9
+],
+[
+"Space and practicality",
+5
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "JRsHSULIr90",
+"title": "2015 Buick Regal GS AWD (Opel Insignia) Start Up, Road Test, and In Depth Review",
+"views": 229949,
+"ch": "Saabkyle04"
+},
+{
+"id": "GB8y_Gi63gQ",
+"title": "2015 Buick Regal GS 0-60 MPH Performance Review: A Pontiac by any other name...",
+"views": 222341,
+"ch": "The Fast Lane Car"
+},
+{
+"id": "jhySq22SEZs",
+"title": "2011 Buick Regal CXL Turbo In Depth Review, Start Up/Test Drive, and Overview of Features",
+"views": 169324,
+"ch": "Saabkyle04"
+}
+]
+},
+{
+"sid": "buick-regal-g7",
+"y0": 2018,
+"y1": 2020,
+"label": "2018–2020",
+"videos": 199,
+"praise": [
+[
+"Looks",
+13
+],
+[
+"Comfort and ride",
+9
+],
+[
+"Power",
+9
+],
+[
+"Space and practicality",
+9
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "bjBoahPG8Vs",
+"title": "2019 Buick Regal TourX: Regular Car Reviews",
+"views": 395698,
+"ch": "Regular Car Reviews"
+},
+{
+"id": "wb1sY98tjmY",
+"title": "2018 Buick Regal Sportback AWD – Redline: Review",
+"views": 288036,
+"ch": "Redline Reviews"
+},
+{
+"id": "8ZDQTXEVgLc",
+"title": "2018 Buick Regal TourX – Redline: Review",
+"views": 197065,
+"ch": "Redline Reviews"
+}
+]
+}
 ]
 }

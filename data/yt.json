@@ -66640,6 +66640,268 @@
      "views": 47132
     }
    ],
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 328,
+       "lo": 150.0,
+       "hi": 1271.0,
+       "n": 15,
+       "videos": 4,
+       "id": "sF74_ABSdFo",
+       "t": 366,
+       "title": "A Customer Demanded To Return This Cheap Buick Regal, Even Though We Spent over $2000 Fixing It!"
+      }
+     ],
+     [
+      "Brakes",
+      {
+       "median": 212,
+       "lo": 150.0,
+       "hi": 275.0,
+       "n": 2,
+       "videos": 2,
+       "id": "B0vbmngP-OU",
+       "t": 803,
+       "title": "1997-2004 Buick Regal front rotor replacement"
+      }
+     ]
+    ]
+   }
+  },
+  {
+   "years": [
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017
+   ],
+   "gen": "2011–2017 Buick Regal",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 6797883,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 117609,
+     "n": 2,
+     "best": {
+      "id": "MiaoisDK9r8",
+      "title": "2011-2017 Buick Regal Tail Light Housing Removal",
+      "channel": "CarCareKiosk",
+      "views": 62355
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 102917,
+     "n": 2,
+     "best": {
+      "id": "sDEpkbQcRgY",
+      "title": "2011-2017 Buick Regal P0016, P0017 - Timing Chain Replacement.",
+      "channel": "Automotive Insight",
+      "views": 72209
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 97676,
+     "n": 5,
+     "best": {
+      "id": "iCR-nSZOCyA",
+      "title": "How to Replace Cabin Air Filter 2013 Buick Regal | AQ1164",
+      "channel": "Filterheads",
+      "views": 38653
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 78831,
+     "n": 3,
+     "best": {
+      "id": "jLNfZJZO-kw",
+      "title": "How To Program your Key Fob: 2012 Buick Regal GS with start/stop",
+      "channel": "GSxSS",
+      "views": 62797
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 35385,
+     "n": 2,
+     "best": {
+      "id": "L0x9BU3o9Jc",
+      "title": "2012-2018 Buick Regal 2.0T Fwd Transmission Flush",
+      "channel": "Thecarhospital",
+      "views": 25611
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 20404,
+     "n": 1,
+     "best": {
+      "id": "W7cwQq66E_A",
+      "title": "2012 2013 Buick Regal GS Verano Regal T Oil Change 2.0T LHU 3W1B",
+      "channel": "3 Wheels & A Block",
+      "views": 20404
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 18777,
+     "n": 1,
+     "best": {
+      "id": "EPXCtxKadgk",
+      "title": "2016 BUICK REGAL Has Power But Engine Won't Crank-Won't Start...Click.Sound...Solved...",
+      "channel": "Peter L",
+      "views": 18777
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 16193,
+     "n": 1,
+     "best": {
+      "id": "B8-R0RIWp6o",
+      "title": "2011-2017 Buick Regal Front Brake Pad & Rotor Replacement 1.6 2.0 2.4 CXL Turbo GS 1.6T 2.0T",
+      "channel": "WorkingWithWimberley",
+      "views": 16193
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "JRsHSULIr90",
+     "title": "2015 Buick Regal GS AWD (Opel Insignia) Start Up, Road Test, and In Depth Review",
+     "channel": "Saabkyle04",
+     "views": 229949
+    },
+    {
+     "id": "GB8y_Gi63gQ",
+     "title": "2015 Buick Regal GS 0-60 MPH Performance Review: A Pontiac by any other name...",
+     "channel": "The Fast Lane Car",
+     "views": 222341
+    },
+    {
+     "id": "jhySq22SEZs",
+     "title": "2011 Buick Regal CXL Turbo In Depth Review, Start Up/Test Drive, and Overview of Features",
+     "channel": "Saabkyle04",
+     "views": 169324
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2018,
+    2019,
+    2020
+   ],
+   "gen": "2018–2020 Buick Regal",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 5041613,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 25901,
+     "n": 3,
+     "best": {
+      "id": "oOo-A8-Iz1g",
+      "title": "Open and Start 2018 and later Buick Regal models with a dead key fob battery.",
+      "channel": "DashboardSymbols.com",
+      "views": 20249
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 25611,
+     "n": 1,
+     "best": {
+      "id": "L0x9BU3o9Jc",
+      "title": "2012-2018 Buick Regal 2.0T Fwd Transmission Flush",
+      "channel": "Thecarhospital",
+      "views": 25611
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 6225,
+     "n": 3,
+     "best": {
+      "id": "phiNYAXiCwM",
+      "title": "How to service the rear differential (and PTU) on a 2018-2020 Buick regal GS",
+      "channel": "Ryan Jenkins",
+      "views": 2451
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 6156,
+     "n": 1,
+     "best": {
+      "id": "2uQVDIa1U2o",
+      "title": "How to Replace Cabin Air Filter 2019 Buick Regal Tourx AQ1223C",
+      "channel": "Filterheads",
+      "views": 6156
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 2913,
+     "n": 1,
+     "best": {
+      "id": "VGIj_aqxesA",
+      "title": "2018-2020 Opel Insignia B/ Buick Regal TourX Gauge Cluster Removal",
+      "channel": "Dark4est Imagery",
+      "views": 2913
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 1041,
+     "n": 1,
+     "best": {
+      "id": "vAwR7GFMi6k",
+      "title": "2019 Buick Regal Front Brake Pad Replacement (With Flush)",
+      "channel": "ScribnerMechanics",
+      "views": 1041
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "f--iU8WqTis",
+     "title": "2018 Buick Regal TourX | How reliable is Buick Regal? | Full Review",
+     "channel": "Jioni Drive",
+     "views": 12602
+    },
+    {
+     "id": "Cfd6TLa7xD0",
+     "title": "2018 Buick Regal Sportback Essence Buyers Guide and Info",
+     "channel": "INFINITI of Tacoma at Fife",
+     "views": 3099
+    },
+    {
+     "id": "bjBoahPG8Vs",
+     "title": "2019 Buick Regal TourX: Regular Car Reviews",
+     "channel": "Regular Car Reviews",
+     "views": 395698
+    }
+   ],
    "costs": null
   }
  ],
@@ -66995,7 +67257,78 @@
      "views": 204117
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 450,
+       "lo": 300.0,
+       "hi": 1480.0,
+       "n": 12,
+       "videos": 6,
+       "id": "oh0ZxMqQJxU",
+       "t": 115,
+       "title": "Buying a used Lexus IS (XE20) - 2005-2013, Buying advice with Common Issues"
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 184,
+       "lo": 164.0,
+       "hi": 203.0,
+       "n": 4,
+       "videos": 3,
+       "id": "nFGAs7rhnes",
+       "t": 432,
+       "title": "2008 Lexus IS250 Purchase Review"
+      }
+     ],
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 2030,
+       "lo": 500.0,
+       "hi": 12000.0,
+       "n": 11,
+       "videos": 3,
+       "id": "oy_x9pjjS1E",
+       "t": 936,
+       "title": "How To Build A Lexus IS250/350 2nd Gen"
+      }
+     ],
+     [
+      "Transmission",
+      {
+       "median": 1750,
+       "lo": 1200.0,
+       "hi": 2301.0,
+       "n": 2,
+       "videos": 2,
+       "id": "lNdsX3jdwiQ",
+       "t": 281,
+       "title": "2006 Lexus IS 350 Review - Kelley Blue Book"
+      }
+     ],
+     [
+      "Brakes",
+      {
+       "median": 2750,
+       "lo": 2000.0,
+       "hi": 3500.0,
+       "n": 4,
+       "videos": 2,
+       "id": "3xk3LqpZhnQ",
+       "t": 183,
+       "title": "Top 10 Problems of is250  Model 2006 to 2015 || watch before you buy one"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -67051,7 +67384,39 @@
      "views": 229336
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 216,
+       "lo": 86.0,
+       "hi": 400.0,
+       "n": 3,
+       "videos": 3,
+       "id": "55Qj4OIn3z0",
+       "t": 2216,
+       "title": "I Bought this 2014 LEXUS IS 350 FSPORT From Copart For just $5,000?!"
+      }
+     ],
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 750,
+       "lo": 500.0,
+       "hi": 1000.0,
+       "n": 2,
+       "videos": 2,
+       "id": "_LWDg4vx1X0",
+       "t": 1360,
+       "title": "2015 Lexus IS250 AWD – Redline: Review"
+      }
+     ]
+    ]
+   }
   }
  ],
  "hyundai-veloster": [
