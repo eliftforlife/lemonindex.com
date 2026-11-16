@@ -33402,5 +33402,163 @@
 }
 ]
 }
+],
+"cadillac-cts": [
+{
+"sid": "cadillac-cts-g1",
+"y0": 2003,
+"y1": 2007,
+"label": "2003–2007",
+"videos": 194,
+"praise": [
+[
+"Power",
+8
+],
+[
+"Reliability",
+5
+],
+[
+"Fun to drive",
+5
+],
+[
+"Looks",
+4
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+5
+],
+[
+"Battery / alternator / starter",
+3
+],
+[
+"Transmission (shifting, fluid)",
+3
+]
+],
+"top": [
+{
+"id": "lLITMgqZLNA",
+"title": "Regular Car Reviews: 2003 Cadillac CTS V6",
+"views": 494156,
+"ch": "Regular Car Reviews"
+},
+{
+"id": "PAWNefRgBM0",
+"title": "Top 5 Problems Cadillac CTS Sedan 1st Generation 2003-07",
+"views": 339083,
+"ch": "1A Auto: Repair Tips & Secrets Only Mechanics Know"
+},
+{
+"id": "lO4hl1TPec4",
+"title": "2005 Cadillac CTS-V 6MT: Regular Car Reviews",
+"views": 271572,
+"ch": "Regular Car Reviews"
+}
+]
+},
+{
+"sid": "cadillac-cts-g2",
+"y0": 2008,
+"y1": 2013,
+"label": "2008–2013",
+"videos": 190,
+"praise": [
+[
+"Looks",
+12
+],
+[
+"Power",
+9
+],
+[
+"Fun to drive",
+7
+],
+[
+"Reliability",
+6
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+3
+]
+],
+"top": [
+{
+"id": "fvCvH53s1QY",
+"title": "Top 5 Problems Cadillac CTS Sedan 2nd Generation 2008-14",
+"views": 764062,
+"ch": "1A Auto: Repair Tips & Secrets Only Mechanics Know"
+},
+{
+"id": "Bc97pCKUgIw",
+"title": "Roadfly.com - 2011 Cadillac CTS-V Coupe Road Test & Review",
+"views": 539331,
+"ch": "RoadflyTV"
+},
+{
+"id": "DxTQMu9m9Ts",
+"title": "2012 Cadillac CTS-V Sport Wagon Start Up, Exhaust, and In Depth Review",
+"views": 360169,
+"ch": "Saabkyle04"
+}
+]
+},
+{
+"sid": "cadillac-cts-g3",
+"y0": 2014,
+"y1": 2019,
+"label": "2014–2019",
+"videos": 191,
+"praise": [
+[
+"Looks",
+16
+],
+[
+"Fun to drive",
+16
+],
+[
+"Power",
+14
+],
+[
+"Comfort and ride",
+8
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "KtwrUUixaAQ",
+"title": "Review: 2016 Cadillac CTS-V",
+"views": 1293663,
+"ch": "Matt Maran Motoring"
+},
+{
+"id": "DHb90THYkhU",
+"title": "2014 Cadillac CTS V-Sport Start Up, Test Drive, Exhaust, and In Depth Review",
+"views": 919402,
+"ch": "Saabkyle04"
+},
+{
+"id": "_UY2AjHPCCM",
+"title": "2017 Cadillac CTS-V – Redline: Review",
+"views": 870051,
+"ch": "Redline Reviews"
+}
+]
+}
 ]
 }

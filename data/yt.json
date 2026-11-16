@@ -68089,6 +68089,111 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019
+   ],
+   "gen": "2014–2019 Cadillac CTS",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 28092378,
+   "topics": [
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 142337,
+     "n": 3,
+     "best": {
+      "id": "TM8DmgG8_0M",
+      "title": "Cadillac CTS or ATS Cabin Air Filter Replacement | 3rd Gen 2014-2019 CTS",
+      "channel": "Jet Fuel Only",
+      "views": 66699
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 101466,
+     "n": 2,
+     "best": {
+      "id": "MI0AUMe_TTg",
+      "title": "2014-2019 Cadillac CTS 3.6 Oil Change",
+      "channel": "Joel Dufkis",
+      "views": 53568
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 51753,
+     "n": 2,
+     "best": {
+      "id": "w8SkvhRW9_Y",
+      "title": "Cadillac CTS Transmission Service - Pan, Fluid & Filter 2008-2015",
+      "channel": "GTSam",
+      "views": 31151
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 41394,
+     "n": 2,
+     "best": {
+      "id": "WcFoXqJ1HfM",
+      "title": "Cadillac CTS Door Panel Removal | 3rd Gen 2014-2019",
+      "channel": "Jet Fuel Only",
+      "views": 27176
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 26978,
+     "n": 1,
+     "best": {
+      "id": "I0Q9fY2WkxE",
+      "title": "Easily Change Spark Plugs In 2014-2019 Cadillac CTS 3.6L (With Part Links)",
+      "channel": "stollo770",
+      "views": 26978
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 15028,
+     "n": 1,
+     "best": {
+      "id": "ErJWoK6cgME",
+      "title": "2014 Cadillac CTS 4 cylinder oil change and oil light maintenance reset",
+      "channel": "Jabo The Mechanic",
+      "views": 15028
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "E_0AdAAtjT8",
+     "title": "So you want to buy a Cadillac CTS-V | V2 | 2009 - 2015 Sedan | Walk Around | Buyers Guide",
+     "channel": "Octane Slain",
+     "views": 282631
+    },
+    {
+     "id": "xDx1abcQqLs",
+     "title": "10 Common Problems Of A Cadillac CTS (2008-2019). Used Cadillac CTS Reliability",
+     "channel": "MaxTheCarGuy",
+     "views": 252288
+    },
+    {
+     "id": "XhS-SlBplf0",
+     "title": "Cadillac CTS 3rd Generation From 2014 to 2019 Common Problems and Complaints",
+     "channel": "HOWSTUFFINMYCARWORKS",
+     "views": 15446
+    }
+   ],
+   "costs": null
   }
  ],
  "mitsubishi-galant": [
