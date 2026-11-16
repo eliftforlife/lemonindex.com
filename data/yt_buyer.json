@@ -30094,5 +30094,70 @@
 }
 ]
 }
+],
+"ford-excursion": [
+{
+"sid": "ford-excursion-g1",
+"y0": 2000,
+"y1": 2005,
+"label": "2000–2005",
+"videos": 195,
+"praise": [
+[
+"Power",
+13
+],
+[
+"Reliability",
+12
+],
+[
+"Looks",
+7
+],
+[
+"Fun to drive",
+5
+]
+],
+"trouble": [
+[
+"Rust",
+6
+],
+[
+"Electrical / wiring / TIPM",
+5
+],
+[
+"Fuel pump / fuel system",
+4
+],
+[
+"Oil leaks (gaskets, seals, housings)",
+4
+]
+],
+"top": [
+{
+"id": "5j749bra-qE",
+"title": "Review of 2005 Eddie Bauer Excursion Diesel~12\" Rise Industries Lift~40\" Tires~24000 Miles",
+"views": 301273,
+"ch": "WeBe Autos Ltd."
+},
+{
+"id": "F3dbY0VNovo",
+"title": "2000 Ford Excursion | Retro Review",
+"views": 139504,
+"ch": "MotorWeek"
+},
+{
+"id": "nm76S8WgNHM",
+"title": "2000-2005 Ford Excursion | Review and What To LOOK for When Buying One",
+"views": 138243,
+"ch": "Miguel's Garage"
+}
+]
+}
 ]
 }

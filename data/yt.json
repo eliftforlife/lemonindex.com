@@ -65027,6 +65027,272 @@
    "costs": null
   }
  ],
+ "toyota-sequoia": [
+  {
+   "years": [
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007
+   ],
+   "gen": "2001–2007 Toyota Sequoia",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 197,
+   "views": 9013011,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 619133,
+     "n": 4,
+     "best": {
+      "id": "HpsHhNOaDes",
+      "title": "How to program a Toyota Sequoia remote key fob 2001 - 2013",
+      "channel": "PYR Automotive ",
+      "views": 283206
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 355207,
+     "n": 11,
+     "best": {
+      "id": "KfKsaxzbT1I",
+      "title": "How To Read VSC Codes Toyota Sequoia Tundra 2001-2007 Stability Control ABS",
+      "channel": "Karrs Kars",
+      "views": 113394
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 350833,
+     "n": 7,
+     "best": {
+      "id": "5dDakuQD_yc",
+      "title": "Replacing the door latch mechanism and actuator on a 2004 Toyota Sequoia",
+      "channel": "Everyman Gear",
+      "views": 125061
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 217735,
+     "n": 4,
+     "best": {
+      "id": "8-iQOnwYvXM",
+      "title": "How to Replace Lower Ball Joints on a 2000-2007 Toyota Sequoia/Tundra",
+      "channel": "Jack Fletcher",
+      "views": 73989
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 149614,
+     "n": 3,
+     "best": {
+      "id": "uOsa29BNRDc",
+      "title": "2001-2007 Toyota Sequoia / Tundra Water Pump & Timing Belt Replacement V8 4.7L 2UZ-FE Engine Part 1",
+      "channel": "Oscar's-Autorepair",
+      "views": 70541
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 144044,
+     "n": 2,
+     "best": {
+      "id": "L1soAiCIlbo",
+      "title": "2001 to 2006 Toyota Sequoia Throttle Body Remove and Clean",
+      "channel": "John Slavinski",
+      "views": 84824
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 141646,
+     "n": 3,
+     "best": {
+      "id": "674zH1FNVsM",
+      "title": "Diagnosing the VSC OFF, VSC TRAC & CEL lights on a Toyota Sequoia 1st Gen",
+      "channel": "Cliffjumper",
+      "views": 107872
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 113203,
+     "n": 1,
+     "best": {
+      "id": "GEoOp51oipw",
+      "title": "How to change Automatic Transmission Fluid - 2001 Toyota Sequoia",
+      "channel": "Innova Electronics",
+      "views": 113203
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "mxE_v9fHsRA",
+     "title": "Top 5 Problems Toyota Sequoia SUV 1st Generation 2001-07",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 312084
+    },
+    {
+     "id": "cPfQcIXmFiU",
+     "title": "2000-2006 Toyota Tundra Reliability And Toyota Sequoia Reliability",
+     "channel": "Nathans Porsche Workshop",
+     "views": 222154
+    },
+    {
+     "id": "Tag3H6hfJtQ",
+     "title": "Here's 10 Weird Things Every Sequoia Owner Needs to Know | 1st Gen Toyota Sequoia Problems",
+     "channel": "The Fraziers",
+     "views": 190815
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022
+   ],
+   "gen": "2008–2022 Toyota Sequoia",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 198,
+   "views": 18423223,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 334755,
+     "n": 2,
+     "best": {
+      "id": "HpsHhNOaDes",
+      "title": "How to program a Toyota Sequoia remote key fob 2001 - 2013",
+      "channel": "PYR Automotive ",
+      "views": 283206
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 295744,
+     "n": 2,
+     "best": {
+      "id": "sUM04GGCfwY",
+      "title": "How to reset maintenance required light Toyota Tundra and Sequoia 2000-2015",
+      "channel": "Flying Wheels",
+      "views": 276112
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 146674,
+     "n": 1,
+     "best": {
+      "id": "NX3WRAPJ0Aw",
+      "title": "TOYOTA TUNDRA & SEQUOIA Transmission Fluid Change (Drain and Fill) EASY! 2008 - 2020 & 2021",
+      "channel": "Check It Out !!!",
+      "views": 146674
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 116358,
+     "n": 1,
+     "best": {
+      "id": "Vt7DJpU_0eM",
+      "title": "2008-2020 Toyota Sequoia/Tundra GX460 oil change and filter, Amsoil oil, 1st option",
+      "channel": "repairvehicle",
+      "views": 116358
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 69704,
+     "n": 2,
+     "best": {
+      "id": "wZgCvCAFZzs",
+      "title": "2008-2018 Toyota Sequoia air suspension repair part 3",
+      "channel": "repairvehicle",
+      "views": 53519
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 51500,
+     "n": 2,
+     "best": {
+      "id": "KTuVonrqh0U",
+      "title": "TOYOTA SEQUOIA REAR DOOR HANDLE REPAIR 2008-2018",
+      "channel": "nick shin",
+      "views": 34020
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 34140,
+     "n": 1,
+     "best": {
+      "id": "26TvD8bN3nA",
+      "title": "How To Replace Water Pump 5.7 Toyota Tundra Sequoia LX570 2007-2021",
+      "channel": "Donny The Late Model Tech",
+      "views": 34140
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 20935,
+     "n": 1,
+     "best": {
+      "id": "IUfF1EtbNFQ",
+      "title": "2008 Toyota Sequoia won't crank won't start issue fixed!",
+      "channel": "Peter L",
+      "views": 20935
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "8DQivtpJozQ",
+     "title": "2008 Toyota Sequoia - Long-Term Reliability, 0-60, Aging Design... etc.",
+     "channel": "Not-So-Handy Car Guy",
+     "views": 212307
+    },
+    {
+     "id": "RUnMX8rrk4g",
+     "title": "The MOST RELIABLE SUV Ever Made. 2nd GEN Toyota Sequoia",
+     "channel": "The Car Guy Online",
+     "views": 90056
+    },
+    {
+     "id": "KgVZtJYGaZA",
+     "title": "2018/19 Toyota Sequoia Platinum - Ol’ Reliable",
+     "channel": "Bern on Cars",
+     "views": 51073
+    }
+   ],
+   "costs": null
+  }
+ ],
  "oldsmobile-intrigue": [
   {
    "years": [
@@ -65139,7 +65405,26 @@
      "views": 4578
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 80,
+       "lo": 67.0,
+       "hi": 730.0,
+       "n": 5,
+       "videos": 4,
+       "id": "LJTRNr5ve5E",
+       "t": 480,
+       "title": "2000 Oldsmobile Intrigue Overheating Problem Solved | Se Calienta"
+      }
+     ]
+    ]
+   }
   }
  ],
  "mazda-cx-7": [
@@ -65396,7 +65681,26 @@
      "views": 7796
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 400,
+       "lo": 150.0,
+       "hi": 400.0,
+       "n": 5,
+       "videos": 5,
+       "id": "SCGCXEG6WQ0",
+       "t": 579,
+       "title": "Copart Buy 2008 Dodge Nitro Runs Rough"
+      }
+     ]
+    ]
+   }
   }
  ],
  "mercury-cougar": [
