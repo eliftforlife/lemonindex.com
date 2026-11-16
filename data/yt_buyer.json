@@ -31888,5 +31888,175 @@
 }
 ]
 }
+],
+"lexus-is": [
+{
+"sid": "lexus-is-g1",
+"y0": 2001,
+"y1": 2005,
+"label": "2001–2005",
+"videos": 112,
+"praise": [
+[
+"Reliability",
+19
+],
+[
+"Looks",
+18
+],
+[
+"Fun to drive",
+12
+],
+[
+"Power",
+12
+]
+],
+"trouble": [
+[
+"Oil leaks (gaskets, seals, housings)",
+6
+],
+[
+"Spark plugs / coils / misfire",
+4
+],
+[
+"Coolant leaks / water pump / overheating",
+4
+]
+],
+"top": [
+{
+"id": "lz7YO_urCHI",
+"title": "2003 Lexus IS300: Regular Car Reviews",
+"views": 281907,
+"ch": "Regular Car Reviews"
+},
+{
+"id": "14LeWJemMoE",
+"title": "2001 Lexus IS300 Review, Walkaround, Exhaust, Test Drive",
+"views": 231931,
+"ch": "Redline Reviews"
+},
+{
+"id": "oh0ZxMqQJxU",
+"title": "Buying a used Lexus IS (XE20) - 2005-2013, Buying advice with Common Issues",
+"views": 217697,
+"ch": "different car review"
+}
+]
+},
+{
+"sid": "lexus-is-g2",
+"y0": 2006,
+"y1": 2013,
+"label": "2006–2013",
+"videos": 195,
+"praise": [
+[
+"Reliability",
+28
+],
+[
+"Looks",
+19
+],
+[
+"Fun to drive",
+17
+],
+[
+"Power",
+16
+]
+],
+"trouble": [
+[
+"Battery / alternator / starter",
+4
+],
+[
+"Oil leaks (gaskets, seals, housings)",
+4
+],
+[
+"Coolant leaks / water pump / overheating",
+4
+],
+[
+"No start / key / anti-theft",
+3
+]
+],
+"top": [
+{
+"id": "huSNXJgH358",
+"title": "2007 Lexus IS350: Regular Car Reviews",
+"views": 747438,
+"ch": "Regular Car Reviews"
+},
+{
+"id": "M4YOnpwaQEE",
+"title": "Lexus IS saloon 2006 - 2013 review - CarBuyer",
+"views": 653618,
+"ch": "Carbuyer"
+},
+{
+"id": "ZH4riwaJW2Y",
+"title": "2008 Lexus IS250 AWD Walkaround, Exhaust, Review, Test Drive",
+"views": 597874,
+"ch": "Redline Reviews"
+}
+]
+},
+{
+"sid": "lexus-is-g3",
+"y0": 2014,
+"y1": 2025,
+"label": "2014–2025",
+"videos": 192,
+"praise": [
+[
+"Fun to drive",
+44
+],
+[
+"Reliability",
+38
+],
+[
+"Looks",
+37
+],
+[
+"Power",
+27
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "5f_19BCNpx0",
+"title": "2022 Lexus IS 500 Review // Old School Cool",
+"views": 2757763,
+"ch": "Throttle House"
+},
+{
+"id": "uSLaSEqsuwc",
+"title": "2025 Lexus IS 500 Review // The V8 Time Capsule",
+"views": 993118,
+"ch": "Throttle House"
+},
+{
+"id": "kPNeMaZFiwg",
+"title": "STRIKING! 2021 Lexus IS350 F Sport Review",
+"views": 828413,
+"ch": "TheStraightPipes"
+}
+]
+}
 ]
 }

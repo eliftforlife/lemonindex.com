@@ -66482,6 +66482,191 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013
+   ],
+   "gen": "2006–2013 Lexus IS",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 27186323,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 442213,
+     "n": 6,
+     "best": {
+      "id": "HEpETGArHnw",
+      "title": "Lexus 2007-10 Radio/Volume Control Quick Fix (Is250)",
+      "channel": "Z Skratch",
+      "views": 147166
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 277338,
+     "n": 2,
+     "best": {
+      "id": "6QZpBYAB6oo",
+      "title": "Fixing Check Engine Light and SVC Light on a 2006 Lexus IS250",
+      "channel": "Leek_ee ",
+      "views": 204599
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 182639,
+     "n": 1,
+     "best": {
+      "id": "L1iKyjgOths",
+      "title": "2009 Lexus IS250 Door Locks - How to program",
+      "channel": "tarynesstudio",
+      "views": 182639
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 19563,
+     "n": 1,
+     "best": {
+      "id": "UacqsJ1-C9Y",
+      "title": "How to Replace Front Left CV Axle 2006-2015 Lexus IS250",
+      "channel": "TRQ",
+      "views": 19563
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 18148,
+     "n": 1,
+     "best": {
+      "id": "PVj-5T_PBZo",
+      "title": "How to Replace Spark Plugs 2006-2015 Lexus IS250",
+      "channel": "TRQ",
+      "views": 18148
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 16008,
+     "n": 1,
+     "best": {
+      "id": "RPfhNMsZF8g",
+      "title": "How to Change Engine Oil 2006-2015 Lexus IS250 2.5L V6",
+      "channel": "TRQ",
+      "views": 16008
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 11556,
+     "n": 1,
+     "best": {
+      "id": "oKEr6pqDHs4",
+      "title": "How to Replace Camshaft Position Sensor 2006-2015 Lexus IS250",
+      "channel": "TRQ",
+      "views": 11556
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 7539,
+     "n": 1,
+     "best": {
+      "id": "F3Z4hoo0hiY",
+      "title": "How to Replace Front Lower Ball Joint 2006-2015 Lexus IS250",
+      "channel": "TRQ",
+      "views": 7539
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "M4YOnpwaQEE",
+     "title": "Lexus IS saloon 2006 - 2013 review - CarBuyer",
+     "channel": "Carbuyer",
+     "views": 653618
+    },
+    {
+     "id": "RUzFmUThFf0",
+     "title": "2008 Lexus ISF Review - Reliable V8 Monster",
+     "channel": "TheStraightPipes",
+     "views": 477606
+    },
+    {
+     "id": "8QDacm0LHXo",
+     "title": "2006 Lexus IS350 & IS250 Long Term Reliability Update & Review! Over 300,000km!",
+     "channel": "Sonduren Fanarredha",
+     "views": 204117
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2014–2025 Lexus IS",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 51358842,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 75105,
+     "n": 1,
+     "best": {
+      "id": "WHXq8TH2KZE",
+      "title": "Lexus IS350 (2016) - New Battery Install",
+      "channel": "The Battery Shop",
+      "views": 75105
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "Dj0eTjnrinE",
+     "title": "2021 Lexus IS300 AWD Quick Review // So You Want Reliability, Eh?",
+     "channel": "Extra Throttle House",
+     "views": 562272
+    },
+    {
+     "id": "XwlDPNDn9dY",
+     "title": "Should you buy a Lexus IS in 2022? Full Technicial Tour and Review",
+     "channel": "The Car Care Nut",
+     "views": 321661
+    },
+    {
+     "id": "ZkCZvmIDaD4",
+     "title": "The 2025 Lexus IS 350 F Sport is the MOST reliable compact luxury sport sedan",
+     "channel": "Raiti's Rides",
+     "views": 229336
+    }
+   ],
+   "costs": null
   }
  ],
  "hyundai-veloster": [
