@@ -65872,6 +65872,224 @@
    "costs": null
   }
  ],
+ "dodge-stratus": [
+  {
+   "years": [
+    2000
+   ],
+   "gen": "1995–2000 Dodge Stratus",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 1252113,
+   "topics": [
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 203657,
+     "n": 1,
+     "best": {
+      "id": "oBRFXwSiXIg",
+      "title": "1997 Dodge Stratus Camshaft Position Sensor (CMP) and Oxygen Sensor Failure | Omar VW",
+      "channel": "Omar VW",
+      "views": 203657
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 32074,
+     "n": 2,
+     "best": {
+      "id": "YdsoH5uXhac",
+      "title": "2000 dodge stratus starter problem fix 2.4",
+      "channel": "Martin Hardyman",
+      "views": 28766
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 28070,
+     "n": 1,
+     "best": {
+      "id": "pPq3fpTTo0c",
+      "title": "2000 Dodge Stratus AC/Heater Temperature Control Fix",
+      "channel": "Terry Johnson",
+      "views": 28070
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 10943,
+     "n": 1,
+     "best": {
+      "id": "Gr3bJtDEaFY",
+      "title": "How2 fix horn 'button' Dodge Stratus(1st Gen'97) DIY",
+      "channel": "lee isenberg",
+      "views": 10943
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 8151,
+     "n": 1,
+     "best": {
+      "id": "kgO6TnnPmbY",
+      "title": "How2 Fix Dodge Stratus 2000-2005, & Challenger(1st Gen 70'-74') oil sending units.",
+      "channel": "lee isenberg",
+      "views": 8151
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "GrXBN8_Ymd4",
+     "title": "1997 Dodge Stratus: ENGINE PROBLEMS",
+     "channel": "Skylar Hying",
+     "views": 18329
+    },
+    {
+     "id": "0e5kLc7faho",
+     "title": "1999 Dodge Stratus Craigslist Review",
+     "channel": "GloryBoy94",
+     "views": 5982
+    },
+    {
+     "id": "z2Djz5OVD_I",
+     "title": "1999 DODGE STRATUS SOLD!!",
+     "channel": "Ricks Auto Sales",
+     "views": 4731
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006
+   ],
+   "gen": "2001–2006 Dodge Stratus",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 3955925,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 290776,
+     "n": 9,
+     "best": {
+      "id": "5cyR1RJV_5E",
+      "title": "Alternator replacement Dodge Stratus 2001 - 2006 2.4L Sebring Install Replace Remove",
+      "channel": "Fixing cars and stuff",
+      "views": 192977
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 225805,
+     "n": 4,
+     "best": {
+      "id": "jymfIpLPhN8",
+      "title": "2004 Dodge Stratus 2.4 Cam position sensor replacement",
+      "channel": "autorepair101",
+      "views": 172607
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 90095,
+     "n": 3,
+     "best": {
+      "id": "FEwWGbVL4L0",
+      "title": "Dodge Stratus Front Door Panel Removal and Replacement 2001- 2006 Chrysler Sebring Door Panel",
+      "channel": "World Mechanics",
+      "views": 83532
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 84232,
+     "n": 5,
+     "best": {
+      "id": "8f0YmSC1hQY",
+      "title": "2003 dodge stratus water pump leaking/replacement",
+      "channel": "July River",
+      "views": 66032
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 58100,
+     "n": 3,
+     "best": {
+      "id": "UfnCt0XIOgo",
+      "title": "Dodge Stratus Oil Change 2.4 Engine 2001- 2006 Chrysler Sebring Oil Change 2.4",
+      "channel": "Chad Williams",
+      "views": 44323
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 54212,
+     "n": 3,
+     "best": {
+      "id": "5HCymZMQgtk",
+      "title": "Dodge Stratus / Sebring 2.4 Second Generation Ignition Coil Removal and Replacement 2000 - 2006",
+      "channel": "World Mechanics",
+      "views": 38728
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 49897,
+     "n": 2,
+     "best": {
+      "id": "l4eE8USWLjQ",
+      "title": "Transmission Control Module (TCM) Replacement 2001-2006 Sebring-Stratus!",
+      "channel": "DC Auto Enhancement",
+      "views": 35357
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 26465,
+     "n": 3,
+     "best": {
+      "id": "vyZkwSTQ9OA",
+      "title": "2003 Dodge Stratus Front Lower Control Arm Replacement",
+      "channel": "Hoopties Garage",
+      "views": 20972
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "iVbXLfWj_G4",
+     "title": "Mobile Mechanic Tips 25: 2006 Dodge Stratus Will Not Start Problems",
+     "channel": "CarHelpOut Mobile Mechanic Pre Purchase Inspection",
+     "views": 25192
+    },
+    {
+     "id": "Is-nZWR8Y6E",
+     "title": "Problems with a 2004 Dodge Stratus",
+     "channel": "Matthew Miller",
+     "views": 6139
+    },
+    {
+     "id": "Q_e8cihMDqg",
+     "title": "Dodge Stratus SE (2001-2006): The Avenger's Inspiration | Review in Spanish",
+     "channel": "Javi ACV ",
+     "views": 102724
+    }
+   ],
+   "costs": null
+  }
+ ],
  "honda-element": [
   {
    "years": [

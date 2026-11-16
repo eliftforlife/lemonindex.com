@@ -31300,5 +31300,108 @@
 }
 ]
 }
+],
+"dodge-stratus": [
+{
+"sid": "dodge-stratus-g1",
+"y0": 1995,
+"y1": 2000,
+"label": "1995–2000",
+"videos": 200,
+"praise": [
+[
+"Reliability",
+7
+],
+[
+"Fun to drive",
+6
+],
+[
+"Looks",
+4
+],
+[
+"Power",
+4
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "bpyLB7Zsvvw",
+"title": "REASONS TO BUY A DODGE STRATUS | 1996-2006",
+"views": 123340,
+"ch": "Wolf-Car"
+},
+{
+"id": "IW-TBPzApjo",
+"title": "9 REASONS to BUY a 1996 - 2006 DODGE STRATUS [ Full Explanation ]",
+"views": 57849,
+"ch": "Motor En Detalles"
+},
+{
+"id": "YdsoH5uXhac",
+"title": "2000 dodge stratus starter problem fix 2.4",
+"views": 28766,
+"ch": "Martin Hardyman"
+}
+]
+},
+{
+"sid": "dodge-stratus-g2",
+"y0": 2001,
+"y1": 2006,
+"label": "2001–2006",
+"videos": 199,
+"praise": [
+[
+"Reliability",
+6
+],
+[
+"Space and practicality",
+4
+],
+[
+"Fun to drive",
+3
+]
+],
+"trouble": [
+[
+"Coolant leaks / water pump / overheating",
+7
+],
+[
+"Electrical / wiring / TIPM",
+5
+],
+[
+"Battery / alternator / starter",
+3
+]
+],
+"top": [
+{
+"id": "Q_e8cihMDqg",
+"title": "Dodge Stratus SE (2001-2006): The Avenger's Inspiration | Review in Spanish",
+"views": 102724,
+"ch": "Javi ACV "
+},
+{
+"id": "IW-TBPzApjo",
+"title": "9 REASONS to BUY a 1996 - 2006 DODGE STRATUS [ Full Explanation ]",
+"views": 57849,
+"ch": "Motor En Detalles"
+},
+{
+"id": "iVbXLfWj_G4",
+"title": "Mobile Mechanic Tips 25: 2006 Dodge Stratus Will Not Start Problems",
+"views": 25192,
+"ch": "CarHelpOut Mobile Mechanic Pre Purchase Inspection"
+}
+]
+}
 ]
 }
