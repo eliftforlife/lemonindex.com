@@ -29547,5 +29547,154 @@
 }
 ]
 }
+],
+"acura-tl": [
+{
+"sid": "acura-tl-g2",
+"y0": 1999,
+"y1": 2003,
+"label": "1999–2003",
+"videos": 197,
+"praise": [
+[
+"Power",
+10
+],
+[
+"Reliability",
+7
+],
+[
+"Looks",
+6
+],
+[
+"Fun to drive",
+4
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "zyZe_B8vtZY",
+"title": "'99 ACURA TL 3.2 rough idle problem. Reason: bad IACV (idle air control valve)",
+"views": 136444,
+"ch": "tigerpause444"
+},
+{
+"id": "GokM9plKUeE",
+"title": "2000 Acura TL Start Up and Review 3.2 L V6",
+"views": 93486,
+"ch": "Camerons Car Reviews"
+},
+{
+"id": "KNYYh5Cw32Q",
+"title": "2003 Acura TL 3.2.  Quarter million miles Owner review test drive pov 0-60 like subscribe thx!",
+"views": 88689,
+"ch": "Joes Golden Garage"
+}
+]
+},
+{
+"sid": "acura-tl-g3",
+"y0": 2004,
+"y1": 2008,
+"label": "2004–2008",
+"videos": 192,
+"praise": [
+[
+"Reliability",
+19
+],
+[
+"Looks",
+18
+],
+[
+"Power",
+12
+],
+[
+"Fun to drive",
+10
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+4
+],
+[
+"Transmission (shifting, fluid)",
+4
+]
+],
+"top": [
+{
+"id": "wUefN15fVEw",
+"title": "2008 Acura TL Review, Walkaround, Exhaust & Test Drive",
+"views": 451062,
+"ch": "Redline Reviews"
+},
+{
+"id": "acUpNzEZubw",
+"title": "Review: 2007 Acura TL Type-S",
+"views": 325434,
+"ch": "MyRide on Autobytel"
+},
+{
+"id": "IohwYflmdow",
+"title": "2004 Acura TL Review, Walkaround, Start Up, Test Drive",
+"views": 290183,
+"ch": "Redline Reviews"
+}
+]
+},
+{
+"sid": "acura-tl-g4",
+"y0": 2009,
+"y1": 2014,
+"label": "2009–2014",
+"videos": 199,
+"praise": [
+[
+"Fun to drive",
+14
+],
+[
+"Looks",
+11
+],
+[
+"Reliability",
+11
+],
+[
+"Power",
+10
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "T3GYKNxoxH4",
+"title": "2013 Acura TL SH-AWD Review, Walkaround, Exhaust, Test Drive",
+"views": 607925,
+"ch": "Redline Reviews"
+},
+{
+"id": "jLuuDfsO74g",
+"title": "2010 Acura TL Tech Review, Walkaround, Exhaust, Test Drive",
+"views": 301878,
+"ch": "Redline Reviews"
+},
+{
+"id": "AOoW8_f0ACI",
+"title": "2009 Acura TL Review - Kelley Blue Book",
+"views": 259429,
+"ch": "Kelley Blue Book"
+}
+]
+}
 ]
 }

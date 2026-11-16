@@ -64298,6 +64298,386 @@
    "costs": null
   }
  ],
+ "acura-tl": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003
+   ],
+   "gen": "1999–2003 Acura TL",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 5136875,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 463034,
+     "n": 8,
+     "best": {
+      "id": "7PPyaN2fs30",
+      "title": "How to change replace install radio navigation screen 1999 2000 2001 2002 2003 Acura TL Replacement",
+      "channel": "AH Parts Dismantlers",
+      "views": 240079
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 318185,
+     "n": 2,
+     "best": {
+      "id": "jmi7bJ7eOXk",
+      "title": "How to reset Maintenance Required light 2000 2003 Acura 3.2 TL Type S",
+      "channel": "Alexey Gavrilov",
+      "views": 273738
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 214176,
+     "n": 4,
+     "best": {
+      "id": "hh5APvQZoKk",
+      "title": "How to Replace the Transmission Oil Filter on a 2000 Acura TL 3.2L VTEC",
+      "channel": "Ratchets And Wrenches",
+      "views": 175972
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 156144,
+     "n": 3,
+     "best": {
+      "id": "zyZe_B8vtZY",
+      "title": "'99 ACURA TL 3.2 rough idle problem. Reason: bad IACV (idle air control valve)",
+      "channel": "tigerpause444",
+      "views": 136444
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 142684,
+     "n": 3,
+     "best": {
+      "id": "Wv6b79Eeqvo",
+      "title": "How to Replace Cabin Air Filter 2003 Acura TL | AQ1007",
+      "channel": "Filterheads",
+      "views": 121309
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 100199,
+     "n": 3,
+     "best": {
+      "id": "heSUqSx_OfM",
+      "title": "2000 Acura TL oil change,1999 to 2003",
+      "channel": "NewYorker in Connecticut ",
+      "views": 51749
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 93690,
+     "n": 3,
+     "best": {
+      "id": "Hy_UP70CHv0",
+      "title": "How to Replace Leaking High Pressure Power Steering Line - 2002 Acura TL-S",
+      "channel": "Car Repairs Made Simple",
+      "views": 69754
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 62060,
+     "n": 2,
+     "best": {
+      "id": "4ShyYYuUbfE",
+      "title": "How to Diagnose & Replace a Front Wheel Bearing - 2002 Acura TL-S -- Honda Accord",
+      "channel": "Car Repairs Made Simple",
+      "views": 61648
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "C1wmyImaFTk",
+     "title": "Ten Problems with the 1999-2003 Acura TL CL",
+     "channel": "Ty MacWalters",
+     "views": 32061
+    },
+    {
+     "id": "tcOHAfgAOLE",
+     "title": "2003 Acura TL 3.2 Type-S navigation mechanical problem for sale by Rebuiltcars",
+     "channel": "Rebuiltcars Used Auto Parts",
+     "views": 1201
+    },
+    {
+     "id": "qQpMBipkA5A",
+     "title": "2000 Acura TL transmission problems. Swap Part 1",
+     "channel": "Liza Adventures",
+     "views": 927
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2004,
+    2005,
+    2006,
+    2007,
+    2008
+   ],
+   "gen": "2004–2008 Acura TL",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 13877133,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 825651,
+     "n": 7,
+     "best": {
+      "id": "9raPOZLARto",
+      "title": "2004 2005 2006 2007 2008 Acura TL Radio Install Double Din Aftermarket Stereo DIY",
+      "channel": "Mobile Max Car Audio",
+      "views": 270010
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 353704,
+     "n": 4,
+     "best": {
+      "id": "MMuSAbzQhic",
+      "title": "Oil Change & Filter Replacement Acura TL 2004-2008",
+      "channel": "2CarPros",
+      "views": 175758
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 265018,
+     "n": 3,
+     "best": {
+      "id": "gMGpzJKb7uI",
+      "title": "Front Brake Pads & Rotor Replacement Acura TL 2004-2008",
+      "channel": "2CarPros",
+      "views": 223587
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 236375,
+     "n": 7,
+     "best": {
+      "id": "RJvsiqPA3Xk",
+      "title": "How to Replace Front Lower Ball Joint 2004-2008 Acura TL",
+      "channel": "TRQ",
+      "views": 89590
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 181276,
+     "n": 2,
+     "best": {
+      "id": "id6uKQ9Vdro",
+      "title": "Radiator, Thermostat, and Hoses Replacement on a 2004-2008 Acura TL",
+      "channel": "How to Automotive",
+      "views": 169759
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 139131,
+     "n": 4,
+     "best": {
+      "id": "9kMKYvNEHl4",
+      "title": "How to Replace Power Steering Pump 2004-2008 Acura TL",
+      "channel": "TRQ",
+      "views": 67495
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 120547,
+     "n": 3,
+     "best": {
+      "id": "jWd4nJjHi2k",
+      "title": "2004 Acura tl automatic transmission fluid change and filter",
+      "channel": "Just another Mechanic",
+      "views": 66846
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 102672,
+     "n": 3,
+     "best": {
+      "id": "SAiW6LbxX-s",
+      "title": "How to Replace Power Window Motor and Regulator 2004-2008 Acura TL",
+      "channel": "TRQ",
+      "views": 44341
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "4ki4eQ4a3Os",
+     "title": "Top 5 Problems Acura TL Sedan 3rd Generation 2004-08",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 198080
+    },
+    {
+     "id": "EYiU898XgE0",
+     "title": "2008 Acura TL Reliability and Problems (3rd generation)",
+     "channel": "Born to Drive ™",
+     "views": 157076
+    },
+    {
+     "id": "5HU2fzt70Is",
+     "title": "Acura TL 2005 electronic problems",
+     "channel": "Laceiba",
+     "views": 39087
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014
+   ],
+   "gen": "2009–2014 Acura TL",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 9903555,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 332942,
+     "n": 2,
+     "best": {
+      "id": "b3KhwnFpZPc",
+      "title": "How to reset the service light on Acura TL 09 , 2010 , 2011 , 2012",
+      "channel": "Vehix411 KARMAN AUTO",
+      "views": 325265
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 319066,
+     "n": 10,
+     "best": {
+      "id": "iRzbGvbEteg",
+      "title": "Acura TL Key Fob Battery Replacement (2009 - 2014)",
+      "channel": "FobBattery",
+      "views": 57829
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 152017,
+     "n": 5,
+     "best": {
+      "id": "nKAd11PoTQs",
+      "title": "Brake Job: Acura TL 4th generation, Front and Rear Brake Pad Replacement",
+      "channel": "Kris Kasprzak",
+      "views": 63520
+     }
+    },
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 110391,
+     "n": 2,
+     "best": {
+      "id": "j7b6tDg7keY",
+      "title": "How To: Replace The Valve Cover Gasket On A 2009-2014 Acura Tl With 3.5l Engine",
+      "channel": "How to Automotive",
+      "views": 89663
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 76528,
+     "n": 1,
+     "best": {
+      "id": "l9H0iGfe4kE",
+      "title": "2009–2014 Acura TL Transmission Fluid & Filter Change | Fix Cold Start Gurgle",
+      "channel": "MODS FOREVER",
+      "views": 76528
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 65546,
+     "n": 1,
+     "best": {
+      "id": "SG0DcAFdF7o",
+      "title": "2009 - 2014 Acura TL - How To Replace the Timing Belt - DIY - Part 1 Removal.",
+      "channel": "Huu N Wheels",
+      "views": 65546
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 55630,
+     "n": 1,
+     "best": {
+      "id": "IkEoHu5BY_0",
+      "title": "Reset Maintenance Minder 2010 Acura TL",
+      "channel": "Kris Kasprzak",
+      "views": 55630
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 48629,
+     "n": 1,
+     "best": {
+      "id": "R6q1SqlYDE0",
+      "title": "Easy add wireless CarPlay Android Auto to Acura TL 2009 2010 2011 | Install Guide | VLine VL2 HON2",
+      "channel": "GROM Audio",
+      "views": 48629
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "ehamVOi2fCw",
+     "title": "2010 Acura TSX POV Test Drive Should You buy Acura TL or TSX",
+     "channel": "POV Nelson",
+     "views": 19390
+    },
+    {
+     "id": "T3GYKNxoxH4",
+     "title": "2013 Acura TL SH-AWD Review, Walkaround, Exhaust, Test Drive",
+     "channel": "Redline Reviews",
+     "views": 607925
+    },
+    {
+     "id": "jLuuDfsO74g",
+     "title": "2010 Acura TL Tech Review, Walkaround, Exhaust, Test Drive",
+     "channel": "Redline Reviews",
+     "views": 301878
+    }
+   ],
+   "costs": null
+  }
+ ],
  "mercury-cougar": [
   {
    "years": [
