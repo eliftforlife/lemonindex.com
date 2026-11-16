@@ -65742,6 +65742,134 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013
+   ],
+   "gen": "2007–2013 Chevrolet Avalanche",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 7030336,
+   "topics": [
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 361124,
+     "n": 8,
+     "best": {
+      "id": "KAmQ212HFig",
+      "title": "2008 Chevy Avalanche throttle body cleaning!",
+      "channel": "Schuyler Olivier",
+      "views": 136442
+     }
+    },
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 183052,
+     "n": 2,
+     "best": {
+      "id": "dTTRcv01p3A",
+      "title": "Oil Leak Turned AVALANCHE! 2012 Chevrolet Avalanche 5.3 4X4 Pt2",
+      "channel": "Rainman Ray's Repairs",
+      "views": 150532
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 109924,
+     "n": 2,
+     "best": {
+      "id": "Vkw6gHhJFus",
+      "title": "Reset Change Oil Light - 2010 to 2013 Chevy Avalanche",
+      "channel": "PickleTech Productions",
+      "views": 104558
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 100213,
+     "n": 4,
+     "best": {
+      "id": "Wa8qP7Wd_bk",
+      "title": "How to program Chevrolet Avalanche remote key fob 2007 - 2010",
+      "channel": "PYR Automotive ",
+      "views": 82243
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 70618,
+     "n": 3,
+     "best": {
+      "id": "1Uh8GfDjbXU",
+      "title": "2007 Chevrolet Avalanche Truck How To Fix Blower Motor No Air Issue Part 2",
+      "channel": "Viper Joe's Garage LLC",
+      "views": 45344
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 47897,
+     "n": 3,
+     "best": {
+      "id": "QsZTWbZCJik",
+      "title": "How to Replace 2007-13 Chevrolet Avalanche Door Latch Actuator and Integrated Latch",
+      "channel": "TRQ",
+      "views": 34638
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 47252,
+     "n": 2,
+     "best": {
+      "id": "w4yp-uNnrfo",
+      "title": "How To Replace Spark Plugs 2007-13 Chevy Avalanche",
+      "channel": "TRQ",
+      "views": 38947
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 39360,
+     "n": 2,
+     "best": {
+      "id": "NIA_jHf_4Vw",
+      "title": "2007-2013 (2007) Chevy Avalanche 5.3l No Start , Long Cranks- Diagnose U0100",
+      "channel": "Average Driveway Mechanic",
+      "views": 20527
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "SKXUVrpD__8",
+     "title": "Top 5 Problems Chevy Avalanche Truck 2nd Generation 2007-13",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 334291
+    },
+    {
+     "id": "MdbEFn6se6Y",
+     "title": "2007 Chevy Avalanche 5.3 AFM lifter replacement problems",
+     "channel": "Motor Oil & Beer",
+     "views": 12654
+    },
+    {
+     "id": "g4PrGsL6vW4",
+     "title": "2012 Chevy Avalanche 1500 Review & Test Drive | Muscle Truck Power!",
+     "channel": "UsedCarsTV",
+     "views": 188703
+    }
+   ],
+   "costs": null
   }
  ],
  "honda-element": [

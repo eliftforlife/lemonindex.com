@@ -31204,5 +31204,101 @@
 }
 ]
 }
+],
+"chevrolet-avalanche": [
+{
+"sid": "chevrolet-avalanche-g1",
+"y0": 2002,
+"y1": 2006,
+"label": "2002–2006",
+"videos": 199,
+"praise": [
+[
+"Looks",
+7
+],
+[
+"Space and practicality",
+4
+],
+[
+"Reliability",
+4
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+4
+]
+],
+"top": [
+{
+"id": "bC_1grRYils",
+"title": "2003 Chevrolet Avalanche Z71 Start Up, Custom Exhaust, Test Drive, and In Depth Review",
+"views": 569383,
+"ch": "Saabkyle04"
+},
+{
+"id": "nwjKf8fqgwY",
+"title": "Top 5 Problems Chevy Avalanche Truck 1st Generation 2002-06",
+"views": 533752,
+"ch": "1A Auto: Repair Tips & Secrets Only Mechanics Know"
+},
+{
+"id": "6gIRsHa-mys",
+"title": "2002 Chevy Avalanche and '02 Best Truck Award | Retro Review",
+"views": 170909,
+"ch": "MotorWeek"
+}
+]
+},
+{
+"sid": "chevrolet-avalanche-g2",
+"y0": 2007,
+"y1": 2013,
+"label": "2007–2013",
+"videos": 195,
+"praise": [
+[
+"Looks",
+5
+],
+[
+"Reliability",
+4
+],
+[
+"Space and practicality",
+3
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+3
+]
+],
+"top": [
+{
+"id": "SKXUVrpD__8",
+"title": "Top 5 Problems Chevy Avalanche Truck 2nd Generation 2007-13",
+"views": 334291,
+"ch": "1A Auto: Repair Tips & Secrets Only Mechanics Know"
+},
+{
+"id": "g4PrGsL6vW4",
+"title": "2012 Chevy Avalanche 1500 Review & Test Drive | Muscle Truck Power!",
+"views": 188703,
+"ch": "UsedCarsTV"
+},
+{
+"id": "d62kaH4E6mo",
+"title": "Review | 2007 - 2013 Chevrolet Avalanche  - The Best Pickup Truck",
+"views": 184701,
+"ch": "Garage Denali"
+}
+]
+}
 ]
 }
