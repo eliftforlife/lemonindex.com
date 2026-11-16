@@ -30722,5 +30722,58 @@
 }
 ]
 }
+],
+"buick-rendezvous": [
+{
+"sid": "buick-rendezvous-g1",
+"y0": 2002,
+"y1": 2007,
+"label": "2002–2007",
+"videos": 200,
+"praise": [
+[
+"Reliability",
+6
+],
+[
+"Power",
+6
+],
+[
+"Comfort and ride",
+3
+],
+[
+"Fun to drive",
+3
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+4
+]
+],
+"top": [
+{
+"id": "yDJRbUa51nI",
+"title": "Unwanted ABS Activation Diagnosis - 2005 Buick Rendezvous Anti-lock Brake System Problems",
+"views": 91478,
+"ch": "The Car Doctor"
+},
+{
+"id": "nYqMWdGvt0Q",
+"title": "2007 Buick Rendezvous Electrical Problem",
+"views": 56522,
+"ch": "Brian Kerkan"
+},
+{
+"id": "rsOWDR_nJEg",
+"title": "2006 Buick Rendezvous No staring key problem",
+"views": 20030,
+"ch": "Best Car Fixes"
+}
+]
+}
 ]
 }

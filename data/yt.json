@@ -65597,6 +65597,135 @@
    "costs": null
   }
  ],
+ "buick-rendezvous": [
+  {
+   "years": [
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007
+   ],
+   "gen": "2002–2007 Buick Rendezvous",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 2510477,
+   "topics": [
+    {
+     "name": "Cooling system",
+     "views": 240925,
+     "n": 4,
+     "best": {
+      "id": "zAvc57dT7kU",
+      "title": "How to replace a Thermostat in a 2005 Buick Rendezvous",
+      "channel": "Mind Blown Productions",
+      "views": 123447
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 133380,
+     "n": 6,
+     "best": {
+      "id": "EZTvjU2gwQ8",
+      "title": "How To: Replace A Starter In A 2005 Buick Rendezvous",
+      "channel": "MintHillBilly DIY",
+      "views": 100243
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 84127,
+     "n": 4,
+     "best": {
+      "id": "nYqMWdGvt0Q",
+      "title": "2007 Buick Rendezvous Electrical Problem",
+      "channel": "Brian Kerkan",
+      "views": 56522
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 71244,
+     "n": 1,
+     "best": {
+      "id": "PmOBFFKoKzs",
+      "title": "2003 Buick Rendezvous GM 3.4 Coil Pack and Spark Plug Removal",
+      "channel": "The Engine Ninja",
+      "views": 71244
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 70935,
+     "n": 3,
+     "best": {
+      "id": "YBjLjaMq8Js",
+      "title": "2003 Buick Rendezvous transmission filter replacement",
+      "channel": "autorepair101",
+      "views": 66963
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 55375,
+     "n": 3,
+     "best": {
+      "id": "Dpl4-8RfZbI",
+      "title": "2006 Buick Rendezvous EGR Replacement",
+      "channel": "Charles Peck (QPat47)",
+      "views": 23745
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 47743,
+     "n": 1,
+     "best": {
+      "id": "zj3ZHkTqwKk",
+      "title": "Power Steering Pump Removal/ 3.4L V6(2002-07 Buick Rendezvous)",
+      "channel": "Grime Time Garage",
+      "views": 47743
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 46788,
+     "n": 2,
+     "best": {
+      "id": "3HO27R1JizE",
+      "title": "how to replace front struts on a 2003 buick rendezvous",
+      "channel": "autorepair101",
+      "views": 32400
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "yDJRbUa51nI",
+     "title": "Unwanted ABS Activation Diagnosis - 2005 Buick Rendezvous Anti-lock Brake System Problems",
+     "channel": "The Car Doctor",
+     "views": 91478
+    },
+    {
+     "id": "56kBwwuThcs",
+     "title": "*SOLD* 2007 Buick Rendezvous CXL 3.6 Walkaround, Start up, Tour and Overview",
+     "channel": "Jakeman21642",
+     "views": 48654
+    },
+    {
+     "id": "qQ7GDf0HcdU",
+     "title": "Autoline's 2007 Buick Rendezvous CX Walk Around Review Test Drive",
+     "channel": "Autoline Preowned",
+     "views": 18570
+    }
+   ],
+   "costs": null
+  }
+ ],
  "ford-bronco": [
   {
    "years": [
