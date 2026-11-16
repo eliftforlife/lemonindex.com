@@ -67070,6 +67070,130 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2008,
+    2009,
+    2010
+   ],
+   "gen": "2008–2010 Saturn Vue",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 1892542,
+   "topics": [
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 183111,
+     "n": 8,
+     "best": {
+      "id": "co7zmpmhPZI",
+      "title": "How to Replace Cabin Air Filter 2010 Saturn VUE | AQ1144",
+      "channel": "Filterheads",
+      "views": 77579
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 33963,
+     "n": 3,
+     "best": {
+      "id": "SLXefcBovao",
+      "title": "2009 Saturn Vue 2.4 overheating coolant temp sensor",
+      "channel": "Richierock1",
+      "views": 14579
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 30254,
+     "n": 3,
+     "best": {
+      "id": "k_HyI1Yx9HA",
+      "title": "HOW TO REPLACE Front BRAKES (PADS and ROTORS) | SATURN VUE 2008",
+      "channel": "John C RV",
+      "views": 23767
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 25783,
+     "n": 1,
+     "best": {
+      "id": "JiUOQEWKESQ",
+      "title": "2008 Saturn Vue steering wheel air bag removal",
+      "channel": "AUTEK",
+      "views": 25783
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 22721,
+     "n": 2,
+     "best": {
+      "id": "Bt1ShRlnAaU",
+      "title": "2009 SATURN VUE (6T70/6T75 TRANSMISSION) DELAYED ENGAGEMENTS, PRESSURE CODES",
+      "channel": "THIS IS YOUR TRANSMISSION",
+      "views": 20996
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 20650,
+     "n": 2,
+     "best": {
+      "id": "2c10DBno6OA",
+      "title": "Radiator Fans not turning on 2008 Saturn Vue Fix",
+      "channel": "Sick Performance Shop",
+      "views": 15649
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 14368,
+     "n": 1,
+     "best": {
+      "id": "OvEcaioohrU",
+      "title": "Shift Cable Bushing Repair Saturn Vue 2008 quick fix 🛠️",
+      "channel": "John C RV",
+      "views": 14368
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 10348,
+     "n": 2,
+     "best": {
+      "id": "Z1OJxnQtsn8",
+      "title": "2009 Saturn Vue how to fix Service Stabilitrak",
+      "channel": "becanaril1",
+      "views": 9609
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "IO7joCGIT9c",
+     "title": "2009 Saturn Vue Computer Problems",
+     "channel": "Daniel Lynch",
+     "views": 48671
+    },
+    {
+     "id": "ruV_oV8VARA",
+     "title": "2008 Saturn Vue starting problems",
+     "channel": "D S",
+     "views": 20186
+    },
+    {
+     "id": "X_pDBPjRN4A",
+     "title": "2008 Saturn Vue Review - Kelley Blue Book",
+     "channel": "Kelley Blue Book",
+     "views": 163753
+    }
+   ],
+   "costs": null
   }
  ],
  "mitsubishi-outlander": [
@@ -67322,6 +67446,135 @@
      "title": "Top 5 Problems Mitsubishi Outlander SUV 2007-2013 2nd Generation",
      "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
      "views": 250379
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021
+   ],
+   "gen": "2014–2021 Mitsubishi Outlander",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 16115029,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 943166,
+     "n": 4,
+     "best": {
+      "id": "msEENtKodDI",
+      "title": "Mitsubishi Outlander Service Warning Reset 2016 - Present - How To DIY",
+      "channel": "Gerard Burke",
+      "views": 676901
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 78679,
+     "n": 1,
+     "best": {
+      "id": "BbWWHb4umwU",
+      "title": "How to reset Maintenance Light on Mitsubishi Outlander 2013 to 2017",
+      "channel": "RB The Mechanic",
+      "views": 78679
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 66020,
+     "n": 3,
+     "best": {
+      "id": "WwL49oMZATE",
+      "title": "2019 Outlander PHEV Heater Issue / Filter",
+      "channel": "brendon wallace",
+      "views": 30484
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 50325,
+     "n": 2,
+     "best": {
+      "id": "8ZQwSjuxvtQ",
+      "title": "How to change 2014+ Mitsubishi Outlander GT (V6) transmission fluid",
+      "channel": "pasta1298",
+      "views": 37331
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 39068,
+     "n": 2,
+     "best": {
+      "id": "WeYqHW4n2pw",
+      "title": "2013-2021 Mitsubishi Outlander : How to Remove the Radio",
+      "channel": "Carnivauto",
+      "views": 22388
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 32224,
+     "n": 1,
+     "best": {
+      "id": "W-HDJNI9mIY",
+      "title": "MITSUBISHI No Start...2016 OUTLANDER...Won't Crank...Clicks...Fixed...",
+      "channel": "Peter L",
+      "views": 32224
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 29075,
+     "n": 1,
+     "best": {
+      "id": "78Gzcv_9JZI",
+      "title": "2013-2018 Mitsu outlander window reset",
+      "channel": "The Halo121",
+      "views": 29075
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 28462,
+     "n": 1,
+     "best": {
+      "id": "wmHETf0hyp4",
+      "title": "Complete Rear Brake Pads Rotors Replacement 2017 Mitsubishi Outlander | Fix it Angel",
+      "channel": "Fix It Angel",
+      "views": 28462
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "e1Xwt0hCI4o",
+     "title": "Mitsubishi Outlander PHEV 2014 review - Carbuyer",
+     "channel": "Carbuyer",
+     "views": 498026
+    },
+    {
+     "id": "VUQ62vNzsIA",
+     "title": "Should You Buy a MITSUBISHI Outlander PHEV? (Test Drive & Review 2016 2.0 GX4h)",
+     "channel": "High Peak Autos",
+     "views": 258557
+    },
+    {
+     "id": "KF-Of8NKIgU",
+     "title": "Mitsubishi Outlander 2013 to 2021 Common problems, defects, recalls and complaints",
+     "channel": "HOWSTUFFINMYCARWORKS",
+     "views": 61265
     }
    ],
    "costs": null

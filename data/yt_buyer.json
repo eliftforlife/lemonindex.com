@@ -32291,5 +32291,100 @@
 }
 ]
 }
+],
+"saturn-vue": [
+{
+"sid": "saturn-vue-g1",
+"y0": 2002,
+"y1": 2007,
+"label": "2002–2007",
+"videos": 199,
+"praise": [
+[
+"Reliability",
+8
+],
+[
+"Power",
+7
+],
+[
+"Space and practicality",
+4
+]
+],
+"trouble": [
+[
+"Oil leaks (gaskets, seals, housings)",
+4
+],
+[
+"Battery / alternator / starter",
+3
+],
+[
+"Rust",
+3
+]
+],
+"top": [
+{
+"id": "ZaW-_Z46UiU",
+"title": "2006 SATURN VUE Start Up Walk Around And Review",
+"views": 56632,
+"ch": "AutomotiveReview"
+},
+{
+"id": "US2Xyp8aK-s",
+"title": "2002 Saturn Vue Dash Display Issues",
+"views": 47218,
+"ch": "Douglas Wright, DC"
+},
+{
+"id": "Aw_xFFMsosU",
+"title": "Review: 2006 Saturn Vue",
+"views": 46313,
+"ch": "MyRide on Autobytel"
+}
+]
+},
+{
+"sid": "saturn-vue-g2",
+"y0": 2008,
+"y1": 2010,
+"label": "2008–2010",
+"videos": 200,
+"praise": [
+[
+"Power",
+4
+],
+[
+"Reliability",
+4
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "X_pDBPjRN4A",
+"title": "2008 Saturn Vue Review - Kelley Blue Book",
+"views": 163753,
+"ch": "Kelley Blue Book"
+},
+{
+"id": "wRm4-KK5KJE",
+"title": "2008 Saturn Vue - Drive Line Review - CAR and DRIVER",
+"views": 79463,
+"ch": "Car and Driver"
+},
+{
+"id": "QExRpOxUGak",
+"title": "2008 Saturn Vue key stuck in ignition problem.  Read description to see how I fixed it for free!",
+"views": 55491,
+"ch": "Ian Peters"
+}
+]
+}
 ]
 }
