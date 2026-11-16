@@ -29853,5 +29853,150 @@
 }
 ]
 }
+],
+"mercury-sable": [
+{
+"sid": "mercury-sable-g3",
+"y0": 1996,
+"y1": 1999,
+"label": "1996–1999",
+"videos": 200,
+"praise": [
+[
+"Reliability",
+10
+],
+[
+"Power",
+9
+],
+[
+"Fun to drive",
+6
+],
+[
+"Looks",
+4
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "Xdqoi0zORuU",
+"title": "1999 Mercury Sable GS|Walk Around Video|In Depth Review|Test Drive",
+"views": 28638,
+"ch": "Neighborhood Car Reviews"
+},
+{
+"id": "JiqvZT2yI8I",
+"title": "1996 Mercury Sable GS Wagon Review",
+"views": 3147,
+"ch": "EliYourCarGuy"
+},
+{
+"id": "WbOxVEVg1Io",
+"title": "C4215 1999 MERCURY SABLE GS with 64,000 1 Owner Miles + warranty",
+"views": 2315,
+"ch": "Jerry Stowers"
+}
+]
+},
+{
+"sid": "mercury-sable-g4",
+"y0": 2000,
+"y1": 2005,
+"label": "2000–2005",
+"videos": 198,
+"praise": [
+[
+"Reliability",
+10
+],
+[
+"Power",
+4
+],
+[
+"Looks",
+4
+],
+[
+"Space and practicality",
+4
+]
+],
+"trouble": [
+[
+"Battery / alternator / starter",
+5
+],
+[
+"Coolant leaks / water pump / overheating",
+5
+],
+[
+"Electrical / wiring / TIPM",
+3
+]
+],
+"top": [
+{
+"id": "DkiwXXfYMTs",
+"title": "Regular Car Reviews: 2002 Mercury Sable",
+"views": 537671,
+"ch": "Regular Car Reviews"
+},
+{
+"id": "SmVUJ9wieQs",
+"title": "'05 Mercury Sable: Scrap or Worth Fixing? | Winching & PD Calls",
+"views": 50065,
+"ch": "Everything Autos"
+},
+{
+"id": "_0bQeNStN6E",
+"title": "2000-2005 Mercury Sable-2000-2007 Ford Taurus Troubleshooting no start problem when battery is good",
+"views": 20864,
+"ch": "A1fixitguy "
+}
+]
+},
+{
+"sid": "mercury-sable-g5",
+"y0": 2008,
+"y1": 2009,
+"label": "2008–2009",
+"videos": 137,
+"praise": [
+[
+"Reliability",
+15
+],
+[
+"Power",
+4
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "-jURyyMiPKw",
+"title": "2009 Mercury Sable Premier only 42k miles at Gresham Ford",
+"views": 1808,
+"ch": "twojoebob1"
+},
+{
+"id": "rUob8zj-I8k",
+"title": "Troubleshooting A No Crank no start problem- 2009 Mercury Sable -Solved...",
+"views": 1343,
+"ch": "Peter L"
+},
+{
+"id": "QEJTxm4WSWc",
+"title": "2009 Mercury sable premier Review✅ Test drive👍 Ford Taurus🤦‍♀️",
+"views": 104,
+"ch": "Auto Kronicles"
+}
+]
+}
 ]
 }
