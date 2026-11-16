@@ -31697,5 +31697,53 @@
 }
 ]
 }
+],
+"mercury-milan": [
+{
+"sid": "mercury-milan-g1",
+"y0": 2006,
+"y1": 2011,
+"label": "2006–2011",
+"videos": 198,
+"praise": [
+[
+"Power",
+6
+],
+[
+"Looks",
+6
+],
+[
+"Reliability",
+6
+],
+[
+"Fun to drive",
+4
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "Cvgj8oGJ2Pg",
+"title": "2008 Mercury Milan Review - Kelley Blue Book",
+"views": 55404,
+"ch": "Kelley Blue Book"
+},
+{
+"id": "S0Kou_xAd5c",
+"title": "2010 Mercury Milan Review - The Loss Of Mediocre",
+"views": 42941,
+"ch": "Shooting Cars"
+},
+{
+"id": "5w-DSpbPcm0",
+"title": "2008 Mercury Milan Premier AWD Startup and Review",
+"views": 39958,
+"ch": "benvw1999"
+}
+]
+}
 ]
 }
