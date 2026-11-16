@@ -30046,5 +30046,53 @@
 }
 ]
 }
+],
+"oldsmobile-intrigue": [
+{
+"sid": "oldsmobile-intrigue-g1",
+"y0": 1998,
+"y1": 2002,
+"label": "1998–2002",
+"videos": 200,
+"praise": [
+[
+"Reliability",
+18
+],
+[
+"Power",
+12
+],
+[
+"Fun to drive",
+11
+],
+[
+"Space and practicality",
+4
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "LJTRNr5ve5E",
+"title": "2000 Oldsmobile Intrigue Overheating Problem Solved | Se Calienta",
+"views": 42488,
+"ch": "Daniel “Rescue Moving Services” Rescue Movers"
+},
+{
+"id": "uF7lf9_Cnzc",
+"title": "2000 Oldsmobile Intrigue GLS Review - The Car That SHOULD HAVE Saved Oldsmobile!",
+"views": 24602,
+"ch": "Shooting Cars"
+},
+{
+"id": "mM_xSTEbkRU",
+"title": "2002 oldsmobile intrigue oil filter change.  problems solved!",
+"views": 16710,
+"ch": "Dennis Reinier (Denny boy)"
+}
+]
+}
 ]
 }

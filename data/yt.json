@@ -65027,6 +65027,121 @@
    "costs": null
   }
  ],
+ "oldsmobile-intrigue": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002
+   ],
+   "gen": "1998–2002 Oldsmobile Intrigue",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 584702,
+   "topics": [
+    {
+     "name": "Cooling system",
+     "views": 51580,
+     "n": 2,
+     "best": {
+      "id": "LJTRNr5ve5E",
+      "title": "2000 Oldsmobile Intrigue Overheating Problem Solved | Se Calienta",
+      "channel": "Daniel “Rescue Moving Services” Rescue Movers",
+      "views": 42488
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 34120,
+     "n": 2,
+     "best": {
+      "id": "0TrFHItwEqM",
+      "title": "How to Replace Cabin Air Filter 1998 Oldsmobile Intrigue | AQ1001",
+      "channel": "Filterheads",
+      "views": 23798
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 21065,
+     "n": 4,
+     "best": {
+      "id": "PVvrqzvL2Pc",
+      "title": "2000 Oldsmobile Intrigue - How to remove and test the starter",
+      "channel": "Daniel “Rescue Moving Services” Rescue Movers",
+      "views": 14276
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 19996,
+     "n": 1,
+     "best": {
+      "id": "7g2RJ23ReiM",
+      "title": "Changing spark plugs on a 2002 oldsmobile intrigue.",
+      "channel": "Jordan Scheurer",
+      "views": 19996
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 12268,
+     "n": 1,
+     "best": {
+      "id": "U586exgJAUw",
+      "title": "Rear Strut Replacement for 1999 oldsmobile intrigue 3.5L",
+      "channel": "Epic Garage",
+      "views": 12268
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 11664,
+     "n": 1,
+     "best": {
+      "id": "tFcQLqkQNUU",
+      "title": "2001 Oldsmobile Intrigue ABS Light/Blinker Light diagnosis",
+      "channel": "Matt Shaughnessy",
+      "views": 11664
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 10847,
+     "n": 1,
+     "best": {
+      "id": "iQxH-Suj6yI",
+      "title": "2000 Oldsmobile Intrigue how to change the crankshaft sensor.",
+      "channel": "Técnico Hernandez",
+      "views": 10847
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "mM_xSTEbkRU",
+     "title": "2002 oldsmobile intrigue oil filter change. problems solved!",
+     "channel": "Dennis Reinier (Denny boy)",
+     "views": 16710
+    },
+    {
+     "id": "sWAPVMrlJyc",
+     "title": "CAR PROBLEMS!!!! 2001 Oldsmobile intrigue",
+     "channel": "John Homicide",
+     "views": 9437
+    },
+    {
+     "id": "h7vKAX-6Z3k",
+     "title": "HELP! Car problems (2001 Oldsmobile intrigue)",
+     "channel": "Keith Walker",
+     "views": 4578
+    }
+   ],
+   "costs": null
+  }
+ ],
  "mazda-cx-7": [
   {
    "years": [
