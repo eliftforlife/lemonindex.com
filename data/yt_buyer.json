@@ -30566,5 +30566,113 @@
 }
 ]
 }
+],
+"mercury-grand-marquis": [
+{
+"sid": "mercury-grand-marquis-g3",
+"y0": 1998,
+"y1": 2002,
+"label": "1998–2002",
+"videos": 197,
+"praise": [
+[
+"Reliability",
+11
+],
+[
+"Power",
+7
+],
+[
+"Looks",
+6
+],
+[
+"Space and practicality",
+4
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+3
+],
+[
+"Rust",
+3
+]
+],
+"top": [
+{
+"id": "UVptuS9v0s4",
+"title": "2002 Grand Marquis or Crown Victoria problem  electric power",
+"views": 73159,
+"ch": "Falcon-Q8 ss"
+},
+{
+"id": "NxjBbiZSIBU",
+"title": "2000 Mercury Grand Marquis Review",
+"views": 56143,
+"ch": "Shooting Cars"
+},
+{
+"id": "_3js9F76trM",
+"title": "2001 Mercury Grand Marquis 54k Miles $5,995 RARE TRIM for Sale by Specialty Motor Cars",
+"views": 34242,
+"ch": "Specialty Motor Cars"
+}
+]
+},
+{
+"sid": "mercury-grand-marquis-g4",
+"y0": 2003,
+"y1": 2011,
+"label": "2003–2011",
+"videos": 196,
+"praise": [
+[
+"Looks",
+9
+],
+[
+"Reliability",
+9
+],
+[
+"Space and practicality",
+7
+],
+[
+"Power",
+5
+]
+],
+"trouble": [
+[
+"Steering / wobble / front end",
+3
+]
+],
+"top": [
+{
+"id": "CWh-0ZLcLUI",
+"title": "Watch This BEFORE You Buy a Mercury Grand Marquis (2003-2011)",
+"views": 405357,
+"ch": "Mr Random Reviews"
+},
+{
+"id": "_-76X7HozLQ",
+"title": "Why I'm SO PROUD To Daily Drive A 2003 Mercury...Reviewing Papa Slim's Grand Marquis!",
+"views": 174208,
+"ch": "Saabkyle04"
+},
+{
+"id": "5wSdAJ25Ork",
+"title": "Top 5 Problems Mercury Grand Marquis 2003-2011 5th Generation",
+"views": 152831,
+"ch": "1A Auto: Repair Tips & Secrets Only Mechanics Know"
+}
+]
+}
 ]
 }
