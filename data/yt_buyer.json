@@ -33162,5 +33162,45 @@
 }
 ]
 }
+],
+"saturn-outlook": [
+{
+"sid": "saturn-outlook-g1",
+"y0": 2007,
+"y1": 2010,
+"label": "2007–2010",
+"videos": 200,
+"praise": [
+[
+"Power",
+4
+],
+[
+"Space and practicality",
+4
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "TGqZyxXfhG0",
+"title": "2008 Saturn Outlook Review - Kelley Blue Book",
+"views": 73935,
+"ch": "Kelley Blue Book"
+},
+{
+"id": "gCzKK2HcSrE",
+"title": "2007 saturn outlook driver window problems fix",
+"views": 39694,
+"ch": "Ali"
+},
+{
+"id": "IMIDGVs_4X0",
+"title": "2008 Saturn OutLook XE Review Charleston Car Videos SC",
+"views": 35845,
+"ch": "CCV TV"
+}
+]
+}
 ]
 }
