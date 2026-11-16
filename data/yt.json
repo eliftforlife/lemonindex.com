@@ -66133,7 +66133,26 @@
      "views": 209456
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 200,
+       "lo": 50.0,
+       "hi": 400.0,
+       "n": 8,
+       "videos": 5,
+       "id": "3vb33Ach7kA",
+       "t": 93,
+       "title": "🤞 🇸🇪 Used Volvo S60 XC60 XC70 Reliability | Most Common Problems Faults and Issues | 2008 - 2017 |"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -66262,7 +66281,39 @@
      "views": 93066
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 250,
+       "lo": 190.0,
+       "hi": 426.0,
+       "n": 9,
+       "videos": 3,
+       "id": "3vb33Ach7kA",
+       "t": 93,
+       "title": "🤞 🇸🇪 Used Volvo S60 XC60 XC70 Reliability | Most Common Problems Faults and Issues | 2008 - 2017 |"
+      }
+     ],
+     [
+      "Steering & suspension",
+      {
+       "median": 60,
+       "lo": 60.0,
+       "hi": 80.0,
+       "n": 5,
+       "videos": 2,
+       "id": "3vb33Ach7kA",
+       "t": 430,
+       "title": "🤞 🇸🇪 Used Volvo S60 XC60 XC70 Reliability | Most Common Problems Faults and Issues | 2008 - 2017 |"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -66334,7 +66385,39 @@
      "views": 17621
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Steering & suspension",
+      {
+       "median": 722,
+       "lo": 695.0,
+       "hi": 750.0,
+       "n": 2,
+       "videos": 2,
+       "id": "t56eC4pbcRM",
+       "t": 447,
+       "title": "2023 Volvo S60 Recharge — My Ultimate Daily Driver"
+      }
+     ],
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 800,
+       "lo": 800.0,
+       "hi": 800.0,
+       "n": 2,
+       "videos": 2,
+       "id": "huigVaas1O0",
+       "t": 154,
+       "title": "The 2019 Volvo S60 Will Entice You Away from German Cars for 3 Reasons..."
+      }
+     ]
+    ]
+   }
   }
  ],
  "hyundai-genesis": [
@@ -66452,7 +66535,39 @@
      "views": 582379
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 400,
+       "lo": 200.0,
+       "hi": 550.0,
+       "n": 3,
+       "videos": 3,
+       "id": "7bQMLVcUlzo",
+       "t": 498,
+       "title": "2010 Hyundai Genesis Coupe 2.0T - POV test drive"
+      }
+     ],
+     [
+      "Brakes",
+      {
+       "median": 14000,
+       "lo": 8000.0,
+       "hi": 20000.0,
+       "n": 2,
+       "videos": 2,
+       "id": "Pk1fPMPyz6E",
+       "t": 685,
+       "title": "2012 Hyundai Genesis Sedan R-Spec Review"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
