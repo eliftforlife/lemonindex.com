@@ -67718,7 +67718,52 @@
      "views": 1581305
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 3000,
+       "lo": 1800.0,
+       "hi": 5000.0,
+       "n": 3,
+       "videos": 3,
+       "id": "ZVAI74LrqWw",
+       "t": 250,
+       "title": "2025 Cadillac Escalade vs. Lincoln Navigator vs. Jeep Grand Wagoneer: Pure Michigan Comparison Test"
+      }
+     ],
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 126,
+       "lo": 105.0,
+       "hi": 7500.0,
+       "n": 3,
+       "videos": 3,
+       "id": "RqCwAwIj-cM",
+       "t": 2049,
+       "title": "What It's Like to Live with a 2025 Cadillac Escalade V (POV)"
+      }
+     ],
+     [
+      "Insurance",
+      {
+       "median": 3379,
+       "lo": 2944.0,
+       "hi": 3814.0,
+       "n": 2,
+       "videos": 2,
+       "id": "7UY6Znh_nSI",
+       "t": 121,
+       "title": "Cadillac Escalade 2025 | Cost To Own Breakdown | Can You Afford it?"
+      }
+     ]
+    ]
+   }
   }
  ],
  "lincoln-navigator": [
