@@ -33202,5 +33202,45 @@
 }
 ]
 }
+],
+"isuzu-rodeo": [
+{
+"sid": "isuzu-rodeo-g2",
+"y0": 1998,
+"y1": 2004,
+"label": "1998–2004",
+"videos": 199,
+"praise": [
+[
+"Reliability",
+7
+],
+[
+"Power",
+4
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "Q14tXIvtq3E",
+"title": "2002 Isuzu Rodeo Start Up and Review 3.2 L V6",
+"views": 178107,
+"ch": "Camerons Car Reviews"
+},
+{
+"id": "IeUg-AwiUyE",
+"title": "2001 Isuzu rodeo shifting problem",
+"views": 101872,
+"ch": "Chase1248"
+},
+{
+"id": "22nszz4hMk8",
+"title": "2003 Isuzu Rodeo Review & Intro: Meet The New ineptechs Project Truck",
+"views": 76657,
+"ch": "ineptechs"
+}
+]
+}
 ]
 }
