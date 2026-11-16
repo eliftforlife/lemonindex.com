@@ -32609,5 +32609,202 @@
 }
 ]
 }
+],
+"lincoln-navigator": [
+{
+"sid": "lincoln-navigator-g1",
+"y0": 1998,
+"y1": 2002,
+"label": "1998–2002",
+"videos": 200,
+"praise": [
+[
+"Reliability",
+4
+],
+[
+"Space and practicality",
+3
+],
+[
+"Power",
+3
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+4
+]
+],
+"top": [
+{
+"id": "FLotXtLay8Y",
+"title": "1999 Lincoln Navigator Rear Suspension Problem",
+"views": 160023,
+"ch": "Blvdautorepair"
+},
+{
+"id": "MfMHD1JEXFI",
+"title": "1999 Lincoln Navigator Starting issues, what could it be?",
+"views": 68398,
+"ch": "Iseekoutthetruth"
+},
+{
+"id": "714Zww3IMv4",
+"title": "Top 5 Problems Lincoln Navigator SUV 1998-2002 1st Generation",
+"views": 57918,
+"ch": "1A Auto: Repair Tips & Secrets Only Mechanics Know"
+}
+]
+},
+{
+"sid": "lincoln-navigator-g2",
+"y0": 2003,
+"y1": 2006,
+"label": "2003–2006",
+"videos": 200,
+"praise": [
+[
+"Looks",
+6
+],
+[
+"Power",
+5
+],
+[
+"Reliability",
+4
+],
+[
+"Space and practicality",
+3
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+8
+]
+],
+"top": [
+{
+"id": "b685t4eEw2s",
+"title": "Review: 2004 Lincoln Navigator",
+"views": 153108,
+"ch": "MyRide on Autobytel"
+},
+{
+"id": "vNJLTLCuHGA",
+"title": "2004 Lincoln Navigator Review",
+"views": 142496,
+"ch": "TheCarVlogger"
+},
+{
+"id": "cgNKx9iM0Uc",
+"title": "2004 Lincoln Navigator Review",
+"views": 85010,
+"ch": "Grayson's Garage"
+}
+]
+},
+{
+"sid": "lincoln-navigator-g3",
+"y0": 2007,
+"y1": 2017,
+"label": "2007–2017",
+"videos": 198,
+"praise": [
+[
+"Looks",
+9
+],
+[
+"Power",
+9
+],
+[
+"Space and practicality",
+5
+],
+[
+"Reliability",
+5
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+5
+]
+],
+"top": [
+{
+"id": "vvFVz_XfD7U",
+"title": "2011 Lincoln Navigator Limited Edition Start Up, Exterior/ Interior Review",
+"views": 426523,
+"ch": "The Driveway Auto Reviews"
+},
+{
+"id": "UoaJGh7MwuI",
+"title": "2008 Lincoln Navigator Review - Kelley Blue Book",
+"views": 285034,
+"ch": "Kelley Blue Book"
+},
+{
+"id": "xIDQhrU3j4E",
+"title": "Roadfly.com - 2007 Lincoln Navigator L Car Review",
+"views": 230422,
+"ch": "RoadflyTV"
+}
+]
+},
+{
+"sid": "lincoln-navigator-g4",
+"y0": 2018,
+"y1": 2024,
+"label": "2018–2024",
+"videos": 198,
+"praise": [
+[
+"Looks",
+27
+],
+[
+"Power",
+18
+],
+[
+"Comfort and ride",
+15
+],
+[
+"Space and practicality",
+13
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "mUSv8b-V5I4",
+"title": "Here’s Why the 2018 Lincoln Navigator is Worth $100,000",
+"views": 4669745,
+"ch": "Doug DeMuro"
+},
+{
+"id": "W_EFDw3fO-k",
+"title": "2018 Lincoln Navigator Review | Test Drive | Edmunds",
+"views": 671779,
+"ch": "Edmunds Cars"
+},
+{
+"id": "uATWxyxeHto",
+"title": "2018 Lincoln Navigator Review - Luxurious Land Yacht",
+"views": 657392,
+"ch": "TheStraightPipes"
+}
+]
+}
 ]
 }

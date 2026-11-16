@@ -66838,7 +66838,39 @@
      "views": 169324
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 75,
+       "lo": 40.0,
+       "hi": 300.0,
+       "n": 6,
+       "videos": 5,
+       "id": "JRsHSULIr90",
+       "t": 692,
+       "title": "2015 Buick Regal GS AWD (Opel Insignia) Start Up, Road Test, and In Depth Review"
+      }
+     ],
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 1000,
+       "lo": 1000.0,
+       "hi": 1000.0,
+       "n": 4,
+       "videos": 3,
+       "id": "Zb2Yhn_1yZ0",
+       "t": 1053,
+       "title": "2015 Buick Regal GS – Redline: Review"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -67322,6 +67354,135 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014
+   ],
+   "gen": "2007–2014 Cadillac Escalade",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 18621435,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 408173,
+     "n": 3,
+     "best": {
+      "id": "jQEoiIDq18s",
+      "title": "Chevy Tahoe Suburban GMC Yukon XL with Escalade Tail Lights Conversion How-To Install LED 2007-2014",
+      "channel": "WorkingWithWimberley",
+      "views": 309403
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 269726,
+     "n": 4,
+     "best": {
+      "id": "cAztOHvU0vI",
+      "title": "100k Mile Service Cadillac Escalade SUV 3rd Generation 2007-14",
+      "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+      "views": 106861
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 249111,
+     "n": 5,
+     "best": {
+      "id": "LdIeFkby2Aw",
+      "title": "How To Replace Air Shock 2007-2014 Cadillac Escalade",
+      "channel": "TRQ",
+      "views": 103517
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 232414,
+     "n": 3,
+     "best": {
+      "id": "34kg1MbTVVQ",
+      "title": "Oil pressure senor quick fix p0523 (2012 escalade)",
+      "channel": "Rags To Wrenches",
+      "views": 168035
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 144816,
+     "n": 4,
+     "best": {
+      "id": "ChvFm4kfkmw",
+      "title": "How to program a Cadillac Escalade remote key fob 2007 - 2010",
+      "channel": "PYR Automotive ",
+      "views": 69568
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 136873,
+     "n": 1,
+     "best": {
+      "id": "FbNhgz-JIWo",
+      "title": "2008 escalade no crank no start condition solved easy!!!! Fixed!!@!",
+      "channel": "jayjayltz",
+      "views": 136873
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 83274,
+     "n": 1,
+     "best": {
+      "id": "n2-GePNQhS8",
+      "title": "How To Replace Steering Rack & Pinion 2007-2014 Cadillac Escalade",
+      "channel": "TRQ",
+      "views": 83274
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 55936,
+     "n": 2,
+     "best": {
+      "id": "WV4W6JT9K_o",
+      "title": "How to Replace Rear Brakes 2007-2014 Cadillac Escalade",
+      "channel": "TRQ",
+      "views": 35726
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "K7_XgpFecPQ",
+     "title": "Top 5 Problems: Cadillac Escalade SUV 3rd Gen 2007-14",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 653182
+    },
+    {
+     "id": "ARuyGRndvq8",
+     "title": "2007 CADILLAC ESCALADE PROBLEMS (WATCH BEFORE YOU BUY!)",
+     "channel": "HILLYARD'S RIM LIONS",
+     "views": 94844
+    },
+    {
+     "id": "WooBRs8jZ6o",
+     "title": "Suspension problems with 2007-2014 Escalade: Replacing Z95 front struts in Cadillac, GMC, Chevy",
+     "channel": "Street Riders Customs",
+     "views": 87394
+    }
+   ],
+   "costs": null
   }
  ],
  "lincoln-navigator": [
@@ -67570,6 +67731,244 @@
      "title": "Review: 2004 Lincoln Navigator",
      "channel": "MyRide on Autobytel",
      "views": 153108
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017
+   ],
+   "gen": "2007–2017 Lincoln Navigator",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 9086763,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 111949,
+     "n": 5,
+     "best": {
+      "id": "kKF_DUpXCRM",
+      "title": "How to Remove 2007-2017 Lincoln Navigator - Ford Expedition Radio/Navigation removal",
+      "channel": "Iroc lsx",
+      "views": 81017
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 97093,
+     "n": 3,
+     "best": {
+      "id": "wu4IlqZwjYc",
+      "title": "Navigator and Expedition 2007 to 2013 Suspension Conversion Kit Installation By Strutmasters",
+      "channel": "Strutmasters",
+      "views": 58672
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 71317,
+     "n": 3,
+     "best": {
+      "id": "Me24UnUZdGw",
+      "title": "2015 Lincoln Navigator Blend Door Actuator Replacement",
+      "channel": "WhitetailGarage",
+      "views": 28911
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 67998,
+     "n": 2,
+     "best": {
+      "id": "U002pJiNETI",
+      "title": "How to change fuel pump, and fuel filter in 2008 Lincoln Navigator",
+      "channel": "Solid Ground Staging",
+      "views": 60144
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 62662,
+     "n": 3,
+     "best": {
+      "id": "02a_QDQqH3U",
+      "title": "2007 up Navigator Expedition power window How to relearn auto up feature",
+      "channel": "Daryl Turcott",
+      "views": 40819
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 31908,
+     "n": 1,
+     "best": {
+      "id": "1QDwpTIktKs",
+      "title": "Lincoln Navigator - Replace Tail Light | Reverse / Turn / Brake Light Bulb (2007-2014)",
+      "channel": "QuiteAlright",
+      "views": 31908
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 25372,
+     "n": 1,
+     "best": {
+      "id": "ILNL8yFz1V0",
+      "title": "Lincoln Navigator - Reset / Clear TPMS Tire Pressure Light (2007 - 2014)",
+      "channel": "QuiteAlright",
+      "views": 25372
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 16749,
+     "n": 2,
+     "best": {
+      "id": "1C0fY2mpcLM",
+      "title": "Lincoln No Start Video...2008 Navigator Won't Crank...DIY....Diagnosis...Solved",
+      "channel": "Peter L",
+      "views": 11834
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "koqxesB8wIo",
+     "title": "2007 Lincoln Navigator All-Wheel Tranny Fluid Change Noted Problems and Solutions (See Text!!)",
+     "channel": "Nicholas Turk",
+     "views": 31840
+    },
+    {
+     "id": "1Y0iA-MhCsY",
+     "title": "2008 Lincoln Navigator 5.4 won't start ⚡️transmission problems⚡️🧐🧐🧐",
+     "channel": "Pete Auto Electric",
+     "views": 9626
+    },
+    {
+     "id": "eSPkVGWv1Xw",
+     "title": "All the Problems Under the Hood of My 2015 Lincoln Navigator (Ford Expedition)",
+     "channel": "J2 Review",
+     "views": 8227
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+   ],
+   "gen": "2018–2024 Lincoln Navigator",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 33060522,
+   "topics": [
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 80905,
+     "n": 1,
+     "best": {
+      "id": "06XYNNVOzOQ",
+      "title": "2018 - 2021 Lincoln Navigator Cabin Air Filter - How To Change Remove Replace A/C AC Filter Location",
+      "channel": "PYR Automotive ",
+      "views": 80905
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 68932,
+     "n": 1,
+     "best": {
+      "id": "IalcW3HOt4Q",
+      "title": "How To Reset Oil Life On 2018 - 2021 Lincoln Navigator - Oil Change Service Interval Light Reset",
+      "channel": "PYR Automotive ",
+      "views": 68932
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 49693,
+     "n": 2,
+     "best": {
+      "id": "rclP4BbO7oo",
+      "title": "2019 Lincoln Navigator - Brake Maintenance Mode and Some F150s",
+      "channel": "Ford Boss Me - Auto / Politics / Family   ",
+      "views": 36415
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 30808,
+     "n": 1,
+     "best": {
+      "id": "VG7SeiaQbeY",
+      "title": "How to Unlock & Start 2018 - 2021 Lincoln Navigator With A Dead Remote Key Fob Battery",
+      "channel": "PYR Automotive ",
+      "views": 30808
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 25950,
+     "n": 1,
+     "best": {
+      "id": "OFfKlnYh_jo",
+      "title": "How To | Shift to Four Wheel Drive (4WD) on 2020 Lincoln Navigator 4x4 with Jonathan Sewell Sells",
+      "channel": "Jonathan Sewell",
+      "views": 25950
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 19291,
+     "n": 1,
+     "best": {
+      "id": "JMkrFF-A0mE",
+      "title": "2022 Up Expedition Navigator Sunroof Reset/Initialization Procedure",
+      "channel": "Seal of Perfection: Sunroof & Leak Specialists",
+      "views": 19291
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "6R5kZC6b8H0",
+     "title": "2018 Lincoln Navigator Problems and Recalls. Should you buy it?",
+     "channel": "car PROblems",
+     "views": 19441
+    },
+    {
+     "id": "lOTlYOfXg-Q",
+     "title": "2024 Grand Wagoner vs Lincoln Navigator: Which Luxury SUV Should You Buy? | TestDrive Showdown",
+     "channel": "PRN_TestDrive",
+     "views": 17732
+    },
+    {
+     "id": "bW8jK8-wiJY",
+     "title": "Lincoln's Best Vehicle? 2022 Lincoln Navigator | Buyer's Guide | MotorTrend",
+     "channel": "MotorTrend Channel",
+     "views": 13127
     }
    ],
    "costs": null
