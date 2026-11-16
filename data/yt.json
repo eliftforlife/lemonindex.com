@@ -65173,7 +65173,39 @@
      "views": 190815
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 50,
+       "lo": 25.0,
+       "hi": 159.0,
+       "n": 11,
+       "videos": 8,
+       "id": "XHLxumu_LTA",
+       "t": 755,
+       "title": "2001 Toyota Sequoia 4x4 Owners Review (3 Reliability Issues)"
+      }
+     ],
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 800,
+       "lo": 130.0,
+       "hi": 1200.0,
+       "n": 5,
+       "videos": 4,
+       "id": "qJapVvaUo60",
+       "t": 123,
+       "title": "Wheel Spacers and Bilstein 5100s For The 2005 Toyota Sequoia! *Best Budget Options*"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -65635,7 +65667,65 @@
      "views": 77950
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Steering & suspension",
+      {
+       "median": 348,
+       "lo": 295.0,
+       "hi": 400.0,
+       "n": 4,
+       "videos": 4,
+       "id": "CcGv7tB6qH4",
+       "t": 196,
+       "title": "6th GEN BRONCO BUILT FOR OVERLANDING || The Walk Around You've Been Asking For"
+      }
+     ],
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 995,
+       "lo": 400.0,
+       "hi": 1995.0,
+       "n": 5,
+       "videos": 3,
+       "id": "O-c3sJUTumg",
+       "t": 1299,
+       "title": "Every 2025 Bronco in One Video - Trims & Options Explained"
+      }
+     ],
+     [
+      "Transmission",
+      {
+       "median": 2492,
+       "lo": 1495.0,
+       "hi": 3490.0,
+       "n": 2,
+       "videos": 2,
+       "id": "O-c3sJUTumg",
+       "t": 118,
+       "title": "Every 2025 Bronco in One Video - Trims & Options Explained"
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 775,
+       "lo": 520.0,
+       "hi": 1500.0,
+       "n": 3,
+       "videos": 2,
+       "id": "JW5c5N-qDmM",
+       "t": 138,
+       "title": "2025 Ford Bronco Badlands Sasquatch: TEST DRIVE+FULL REVIEW"
+      }
+     ]
+    ]
+   }
   }
  ],
  "oldsmobile-intrigue": [
