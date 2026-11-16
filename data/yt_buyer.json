@@ -30775,5 +30775,125 @@
 }
 ]
 }
+],
+"buick-lesabre": [
+{
+"sid": "buick-lesabre-g8",
+"y0": 1992,
+"y1": 1999,
+"label": "1992–1999",
+"videos": 200,
+"praise": [
+[
+"Reliability",
+13
+],
+[
+"Power",
+9
+],
+[
+"Looks",
+7
+],
+[
+"Comfort and ride",
+6
+]
+],
+"trouble": [
+[
+"Rust",
+5
+],
+[
+"Oil leaks (gaskets, seals, housings)",
+3
+],
+[
+"Coolant leaks / water pump / overheating",
+3
+],
+[
+"Fuel pump / fuel system",
+3
+]
+],
+"top": [
+{
+"id": "6LkPtdRTLus",
+"title": "Top 5 Problems Buick LeSabre Sedan 8th Generation 2000-05",
+"views": 383629,
+"ch": "1A Auto: Repair Tips & Secrets Only Mechanics Know"
+},
+{
+"id": "7_-yCS3IvUY",
+"title": "1997 Buick LeSabre & Park Avenue | Retro Review",
+"views": 65694,
+"ch": "MotorWeek"
+},
+{
+"id": "D0-ZVTrXho4",
+"title": "1992 Buick LeSabre 1 Owner 83,000 Orig Miles 3800 3.8 L V6 Olds GM MPG Car CHEAP",
+"views": 55197,
+"ch": "Cereal Marshmallows"
+}
+]
+},
+{
+"sid": "buick-lesabre-g9",
+"y0": 2000,
+"y1": 2005,
+"label": "2000–2005",
+"videos": 200,
+"praise": [
+[
+"Reliability",
+15
+],
+[
+"Power",
+12
+],
+[
+"Looks",
+8
+],
+[
+"Comfort and ride",
+6
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+5
+],
+[
+"Oil leaks (gaskets, seals, housings)",
+3
+]
+],
+"top": [
+{
+"id": "6LkPtdRTLus",
+"title": "Top 5 Problems Buick LeSabre Sedan 8th Generation 2000-05",
+"views": 383629,
+"ch": "1A Auto: Repair Tips & Secrets Only Mechanics Know"
+},
+{
+"id": "E32Xe1kSpcI",
+"title": "2005 Buick LeSabre Custom: Regular Car Reviews",
+"views": 152627,
+"ch": "Regular Car Reviews"
+},
+{
+"id": "tT_k2ckHxsA",
+"title": "2001 Buick lesabre update and problems",
+"views": 76263,
+"ch": "Castro's yard"
+}
+]
+}
 ]
 }

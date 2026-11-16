@@ -65594,6 +65594,143 @@
      "views": 46866
     }
    ],
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 60,
+       "lo": 40.0,
+       "hi": 200.0,
+       "n": 10,
+       "videos": 9,
+       "id": "SDcjQsONRy4",
+       "t": 8,
+       "title": "Un LS Swapping My 2006 GMC Envoy!"
+      }
+     ]
+    ]
+   }
+  }
+ ],
+ "hyundai-genesis": [
+  {
+   "years": [
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014
+   ],
+   "gen": "2009–2014 Hyundai Genesis",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 20081215,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 130632,
+     "n": 5,
+     "best": {
+      "id": "0-b7DDLQFCg",
+      "title": "2013 Hyundai Genesis 3.8L starter replacement. Starter clicks, no start",
+      "channel": "G Auto Repair",
+      "views": 39637
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 91882,
+     "n": 2,
+     "best": {
+      "id": "j7388r8e8Mo",
+      "title": "Hyundai Genesis 2012 3.8L: Engine Oil Change",
+      "channel": "AfzaMoto",
+      "views": 78897
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 69909,
+     "n": 1,
+     "best": {
+      "id": "42caDUZnK8Q",
+      "title": "Hyundai A/C Blend Door Actuator Replacement Guide - 2010 Hyundai Genesis Sedan Driver side",
+      "channel": "Driver's Therapy",
+      "views": 69909
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 39671,
+     "n": 1,
+     "best": {
+      "id": "zC1x2l-G2Eo",
+      "title": "2009-2014 Hyundai Genesis: How to Change Cabin Air Filter in Under 3 Minutes (Save $30!)",
+      "channel": "Edward in TX",
+      "views": 39671
+     }
+    },
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 23579,
+     "n": 1,
+     "best": {
+      "id": "VR11hiWYSps",
+      "title": "2013-2017 Hyundai Genesis Coupe 2.0T [Oil Cooler Replacement]",
+      "channel": "Brian Balatbat",
+      "views": 23579
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 16150,
+     "n": 1,
+     "best": {
+      "id": "5qtYySXHfrc",
+      "title": "How to replace spark plugs on a 2010 Hyundai Genesis sedan 4.6",
+      "channel": "Budget Fixes",
+      "views": 16150
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 14869,
+     "n": 1,
+     "best": {
+      "id": "m9wyhCK1r6o",
+      "title": "2009 Hyundai Genesis brake recall fix",
+      "channel": "Scott Kamp",
+      "views": 14869
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "-ZATJ2fCWJc",
+     "title": "2009-2014 Hyundai Genesis Buyers Guide | 6 Year Ownership *150,000+ Miles*",
+     "channel": "Xtalgic",
+     "views": 99039
+    },
+    {
+     "id": "WcZ5sU1V1Lc",
+     "title": "Review: 2014 Hyundai Genesis 2.0T Coupe",
+     "channel": "Matt Maran Motoring",
+     "views": 927013
+    },
+    {
+     "id": "Qg4sUrF-o_M",
+     "title": "2013 Hyundai Genesis Coupe Test Drive & Car Review",
+     "channel": "UsedCarsTV",
+     "views": 582379
+    }
+   ],
    "costs": null
   }
  ],
