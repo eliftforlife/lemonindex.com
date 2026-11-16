@@ -33242,5 +33242,53 @@
 }
 ]
 }
+],
+"ford-bronco-sport": [
+{
+"sid": "ford-bronco-sport-g1",
+"y0": 2021,
+"y1": 2025,
+"label": "2021–2025",
+"videos": 198,
+"praise": [
+[
+"Looks",
+32
+],
+[
+"Power",
+23
+],
+[
+"Space and practicality",
+19
+],
+[
+"Fun to drive",
+18
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "e1L3TRGhaO0",
+"title": "2021 Ford Bronco Sport Badlands Review // Big Name, Small Price",
+"views": 730331,
+"ch": "Throttle House"
+},
+{
+"id": "Q0mEIn_hN_M",
+"title": "2021 Ford Bronco Sport: Off-Road, Snow and Overlanding Review",
+"views": 651473,
+"ch": "Driving Sports TV"
+},
+{
+"id": "lwBWHDaacz8",
+"title": "Is the ALL NEW 2021 Ford Bronco Sport Big Bend worth it?",
+"views": 534796,
+"ch": "Raiti's Rides"
+}
+]
+}
 ]
 }

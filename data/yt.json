@@ -67836,6 +67836,101 @@
    }
   }
  ],
+ "ford-bronco-sport": [
+  {
+   "years": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2021–2025 Ford Bronco Sport",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 16313395,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 73453,
+     "n": 1,
+     "best": {
+      "id": "y1sUpWq-HEY",
+      "title": "2021 Ford Bronco Sport Tail Light Removal",
+      "channel": "BuddyTy",
+      "views": 73453
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 27314,
+     "n": 1,
+     "best": {
+      "id": "gXf-DJs-108",
+      "title": "2021 Ford Bronco Sport/ 2020-2022 Escape Rear Brake Noise When Backing Up",
+      "channel": "The G Automotive And More",
+      "views": 27314
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 15239,
+     "n": 1,
+     "best": {
+      "id": "W8VmB5CcFDo",
+      "title": "2021 Ford Bronco Sport cabin air filter replacement / location / service 2022",
+      "channel": "Oil Light Reset ",
+      "views": 15239
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 12128,
+     "n": 1,
+     "best": {
+      "id": "XYLUzlPI7_Y",
+      "title": "2021 Ford Bronco Sport 1.5L 10k miles, CV Axle Leaking, Rear Shock Leaking, Chattering On Slow Turns",
+      "channel": "Ford Boss Me - Auto / Politics / Family   ",
+      "views": 12128
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 12095,
+     "n": 1,
+     "best": {
+      "id": "mk6_6_Ptvz8",
+      "title": "LOSS OF COOLANT!! 2021-2024 Bronco Sport 1.5 Liter. How to Fix It.",
+      "channel": "Bearded Ford Tech",
+      "views": 12095
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "IQcedeSLTWA",
+     "title": "Should You Buy A 2022 Ford Bronco Sport?!",
+     "channel": "Tariq Samuels",
+     "views": 26860
+    },
+    {
+     "id": "G-9w_lEAGc4",
+     "title": "Is the Bronco Back? 2021 Ford Bronco Sport Big Bend REVIEW | MotorTrend Buyer's Guide",
+     "channel": "MotorTrend Channel",
+     "views": 19939
+    },
+    {
+     "id": "116bkbDS0S8",
+     "title": "Should you buy a NEW Ford Bronco Sport? | 2022 Ford Bronco Sport BASE Review",
+     "channel": "Norris Holmes",
+     "views": 15624
+    }
+   ],
+   "costs": null
+  }
+ ],
  "lincoln-navigator": [
   {
    "years": [
