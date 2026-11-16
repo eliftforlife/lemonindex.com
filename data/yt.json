@@ -64441,7 +64441,26 @@
      "views": 927
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 200,
+       "lo": 65.0,
+       "hi": 400.0,
+       "n": 9,
+       "videos": 9,
+       "id": "C1wmyImaFTk",
+       "t": 514,
+       "title": "Ten Problems with the 1999-2003 Acura TL CL"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -64567,7 +64586,26 @@
      "views": 39087
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 140,
+       "lo": 60.0,
+       "hi": 380.0,
+       "n": 14,
+       "videos": 9,
+       "id": "EYiU898XgE0",
+       "t": 66,
+       "title": "2008 Acura TL Reliability and Problems (3rd generation)"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -65080,7 +65118,26 @@
      "views": 55017
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 80,
+       "lo": 80.0,
+       "hi": 80.0,
+       "n": 2,
+       "videos": 2,
+       "id": "VGVKZCK59zM",
+       "t": 387,
+       "title": "6000 mile review : 2000 mercury cougar"
+      }
+     ]
+    ]
+   }
   }
  ],
  "scion-xb": [
