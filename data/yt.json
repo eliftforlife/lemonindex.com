@@ -65370,6 +65370,79 @@
    "costs": null
   }
  ],
+ "ford-bronco": [
+  {
+   "years": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2021–2025 Ford Bronco",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 49253562,
+   "topics": [
+    {
+     "name": "Transmission & shifter",
+     "views": 70593,
+     "n": 1,
+     "best": {
+      "id": "Ghy8o3xNUzM",
+      "title": "2025 FORD 10spd Transmission RECALL w/NextGen Engineer. F-150, Bronco, Ranger, Explorer, Mustang",
+      "channel": "The Car Guy Online",
+      "views": 70593
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 40220,
+     "n": 1,
+     "best": {
+      "id": "pcztnBJFezo",
+      "title": "2022 Ford Bronco 2.7L Oil Change (How To)",
+      "channel": "McMahan's Garage",
+      "views": 40220
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 21982,
+     "n": 1,
+     "best": {
+      "id": "FCaCV3oSNW8",
+      "title": "2021 Ford Bronco hard top build issues",
+      "channel": "All Terrain Nation",
+      "views": 21982
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "327mEL8T01c",
+     "title": "2023 Ford Bronco Buyers Guide",
+     "channel": "Auto Buyers Guide | Alex on Autos",
+     "views": 362160
+    },
+    {
+     "id": "YZJObiFk7-Y",
+     "title": "Ford Bronco 50k Mile Owner Review & Common Problems (2021-2024)",
+     "channel": "Realistick",
+     "views": 336725
+    },
+    {
+     "id": "xQBUtDYQQBU",
+     "title": "Ford Bronco Review | Should You Buy a 2021–2026 Ford Bronco?",
+     "channel": "CarMax",
+     "views": 77950
+    }
+   ],
+   "costs": null
+  }
+ ],
  "oldsmobile-intrigue": [
   {
    "years": [

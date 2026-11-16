@@ -30369,5 +30369,58 @@
 }
 ]
 }
+],
+"ford-bronco": [
+{
+"sid": "ford-bronco-g6",
+"y0": 2021,
+"y1": 2025,
+"label": "2021–2025",
+"videos": 199,
+"praise": [
+[
+"Looks",
+32
+],
+[
+"Power",
+20
+],
+[
+"Fun to drive",
+16
+],
+[
+"Reliability",
+11
+]
+],
+"trouble": [
+[
+"Steering / wobble / front end",
+3
+]
+],
+"top": [
+{
+"id": "XoXg6DZmJmA",
+"title": "RIP JEEP! 2021 Ford Bronco Review",
+"views": 2076691,
+"ch": "TheStraightPipes"
+},
+{
+"id": "SlJoCmSpFJ8",
+"title": "2023 Bronco Raptor Review // Thomas Gets Stuck, James Breaks It",
+"views": 1431274,
+"ch": "Throttle House"
+},
+{
+"id": "JPC9QvutPV4",
+"title": "2023 Ford Bronco Raptor Full Review: Bronco on Steroids",
+"views": 1306296,
+"ch": "Doug DeMuro"
+}
+]
+}
 ]
 }
