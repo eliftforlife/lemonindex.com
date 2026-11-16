@@ -67647,7 +67647,26 @@
      "views": 43924
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 960,
+       "lo": 150.0,
+       "hi": 2764.0,
+       "n": 11,
+       "videos": 5,
+       "id": "folggsqb8oM",
+       "t": 1416,
+       "title": "I Bought a 2015 Cadillac Escalade From Copart for $7,000!"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [

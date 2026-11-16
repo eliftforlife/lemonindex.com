@@ -33109,5 +33109,58 @@
 }
 ]
 }
+],
+"infiniti-g35": [
+{
+"sid": "infiniti-g35-g1",
+"y0": 2003,
+"y1": 2008,
+"label": "2003–2008",
+"videos": 194,
+"praise": [
+[
+"Power",
+18
+],
+[
+"Reliability",
+12
+],
+[
+"Fun to drive",
+12
+],
+[
+"Looks",
+9
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+6
+]
+],
+"top": [
+{
+"id": "btXomfmQPe8",
+"title": "Nissan 350Z / Infiniti G35 2003-2008 Buyer's Guide / Used Car Guide | AnthonyJ350",
+"views": 730698,
+"ch": "AnthonyJ350"
+},
+{
+"id": "BC2ZcmN2nwA",
+"title": "Review: 2005 Infiniti G35 Coupe (Automatic)",
+"views": 527111,
+"ch": "Matt Maran Motoring"
+},
+{
+"id": "etmBBMm1Gk0",
+"title": "Watch This Before Buying an Infiniti G35 2003-2008",
+"views": 293778,
+"ch": "AutoMotivate"
+}
+]
+}
 ]
 }
