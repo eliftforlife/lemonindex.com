@@ -66258,7 +66258,26 @@
      "views": 23584
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 350,
+       "lo": 300.0,
+       "hi": 400.0,
+       "n": 4,
+       "videos": 3,
+       "id": "CRfygKLf5WY",
+       "t": 414,
+       "title": "2009 Buick Enclave Purge Valve Replacement"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -66924,6 +66943,135 @@
    "costs": null
   }
  ],
+ "saturn-vue": [
+  {
+   "years": [
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007
+   ],
+   "gen": "2002–2007 Saturn Vue",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 5239807,
+   "topics": [
+    {
+     "name": "Transmission & shifter",
+     "views": 720431,
+     "n": 8,
+     "best": {
+      "id": "D7bgOjIRMMw",
+      "title": "Transmission Fluid Replacement 2002-2007 V6 Saturn Vue",
+      "channel": "2CarPros",
+      "views": 453810
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 297574,
+     "n": 6,
+     "best": {
+      "id": "pUjVBoNogek",
+      "title": "How to Replace Cabin Air Filter 2005 Saturn VUE | AQ1047",
+      "channel": "Filterheads",
+      "views": 127291
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 273756,
+     "n": 7,
+     "best": {
+      "id": "kEsCrMugfEw",
+      "title": "Alternator replacement Saturn Vue 2002 2003 3.0L V6 Install Remove Replace",
+      "channel": "Fixing cars and stuff",
+      "views": 116152
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 241120,
+     "n": 9,
+     "best": {
+      "id": "bPbFJcjXO5A",
+      "title": "How to Replace Your Struts 2006 Saturn Vue 04-07",
+      "channel": "Michael Borquez",
+      "views": 81691
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 204330,
+     "n": 2,
+     "best": {
+      "id": "TMWizr37l80",
+      "title": "Serpentine Belt Replacement on a 2002-2007 Saturn Vue V6",
+      "channel": "2CarPros",
+      "views": 195615
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 174464,
+     "n": 3,
+     "best": {
+      "id": "i5_-_Q0Mosk",
+      "title": "Front Brake Pads & Rotor Replacement 2002-2007 Saturn Vue",
+      "channel": "2CarPros",
+      "views": 157993
+     }
+    },
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 156901,
+     "n": 2,
+     "best": {
+      "id": "zqBFvAR73Ao",
+      "title": "Saturn vue 2002 3.0 v-6 Thermostat removal, Intake, valve cover gaskets and spark plugs",
+      "channel": "Christopher Jackson",
+      "views": 149457
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 154892,
+     "n": 5,
+     "best": {
+      "id": "A0LaBCqz5N8",
+      "title": "Tool needed for water pump change 2004 Saturn Vue",
+      "channel": "Sappers House",
+      "views": 64086
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "tUIOFD5WEZ8",
+     "title": "2004 Saturn Vue Problems: GM Ignition Recall",
+     "channel": "IntoWeapons",
+     "views": 36375
+    },
+    {
+     "id": "U7eIkv7dAck",
+     "title": "2002-2007 Saturn Vue Frame Rust Problems - SEE DESCRIPTION",
+     "channel": "Jon Noonfelt",
+     "views": 12311
+    },
+    {
+     "id": "DY7P4b9q4dA",
+     "title": "2002 Saturn vue problems high Rpm low mph",
+     "channel": "MaGangz",
+     "views": 2993
+    }
+   ],
+   "costs": null
+  }
+ ],
  "mitsubishi-outlander": [
   {
    "years": [
@@ -67046,6 +67194,134 @@
      "title": "Mitsubishi Outlander II (2006-2012) problems and weak points",
      "channel": "Check Engine",
      "views": 368
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013
+   ],
+   "gen": "2007–2013 Mitsubishi Outlander",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 12283113,
+   "topics": [
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 258329,
+     "n": 7,
+     "best": {
+      "id": "MjzLaZK8aok",
+      "title": "⫷ Mitsubishi │ Outlander │ 2013 - 2019 │ Cabin Air Filter Remove & Replace ⫸",
+      "channel": "Scotties Hobbies",
+      "views": 120264
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 247162,
+     "n": 4,
+     "best": {
+      "id": "gDWBXTCxC_c",
+      "title": "How to Replace Wheel Bearing 2007-2013 Mitsubishi Outlander",
+      "channel": "TRQ",
+      "views": 95500
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 212450,
+     "n": 4,
+     "best": {
+      "id": "s2NL8rLEhC8",
+      "title": "2007 - 2011 Mitsubishi Outlander Service Light Reset",
+      "channel": "Daryl Lewis",
+      "views": 112272
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 181161,
+     "n": 5,
+     "best": {
+      "id": "zCjoUZKcI_E",
+      "title": "How to Replace Emergency Brake Shoes and Hardware 2007-2013 Mitsubishi Outlander",
+      "channel": "TRQ",
+      "views": 53639
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 120956,
+     "n": 3,
+     "best": {
+      "id": "SPBA4sjdUpg",
+      "title": "2011 Mitsubishi Outlander Transmission Replacement!",
+      "channel": "Kay Auto",
+      "views": 43381
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 106997,
+     "n": 3,
+     "best": {
+      "id": "Zuz9zmDE6mo",
+      "title": "2009 Mitsubishi Outlander 3.0 V6 Spark Plug Replacement",
+      "channel": "Shawn Singh",
+      "views": 66421
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 93210,
+     "n": 2,
+     "best": {
+      "id": "OQ266w0iZy0",
+      "title": "How to Replace Radiator 2007-2013 Mitsubishi Outlander",
+      "channel": "TRQ",
+      "views": 75569
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 84647,
+     "n": 3,
+     "best": {
+      "id": "leu47rdrJuk",
+      "title": "How to Replace Driver Exterior Door Handle 2007-2013 Mitsubishi Outlander",
+      "channel": "TRQ",
+      "views": 30174
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "c0pC0AHUjJM",
+     "title": "Mitsubishi Outlander SUV 2007 - 2013 review - CarBuyer",
+     "channel": "Carbuyer",
+     "views": 647392
+    },
+    {
+     "id": "m-gnoa3JG5A",
+     "title": "Mitsubishi Outlander SUV 2013 review - CarBuyer",
+     "channel": "Carbuyer",
+     "views": 430293
+    },
+    {
+     "id": "H-pUA60rqDw",
+     "title": "Top 5 Problems Mitsubishi Outlander SUV 2007-2013 2nd Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 250379
     }
    ],
    "costs": null
