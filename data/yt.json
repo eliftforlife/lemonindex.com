@@ -66515,6 +66515,265 @@
    "costs": null
   }
  ],
+ "buick-regal": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004
+   ],
+   "gen": "1997–2004 Buick Regal",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 3386444,
+   "topics": [
+    {
+     "name": "Death wobble & steering",
+     "views": 237627,
+     "n": 2,
+     "best": {
+      "id": "Mpf4jX9zDgU",
+      "title": "Power steering pump replacement - 2000 Buick Regal 3800 II (3.8L)",
+      "channel": "Grease Monkey Fever",
+      "views": 227191
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 155854,
+     "n": 3,
+     "best": {
+      "id": "VmYsUjk0KDY",
+      "title": "2003 buick regal LS fuel pressure regulator leaking and change!",
+      "channel": "King Quad Rules",
+      "views": 92489
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 95417,
+     "n": 2,
+     "best": {
+      "id": "YP3dPXiSUa4",
+      "title": "Radiator transmission line removal for 2000 Buick Regal... and for most W body vehicles.",
+      "channel": "digablesoul",
+      "views": 85525
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 60054,
+     "n": 3,
+     "best": {
+      "id": "eZVtTjAEmqo",
+      "title": "Buick Regal Century 1997-2004 Dead Odometer Display | How To Remove Gauge Cluster IPC For Repair",
+      "channel": "Automotive Circuit Solutions",
+      "views": 48446
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 55725,
+     "n": 4,
+     "best": {
+      "id": "ejlgus4QP4I",
+      "title": "How to setup key fob in a 2002 buick regal",
+      "channel": "Gonzo",
+      "views": 40705
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 38869,
+     "n": 4,
+     "best": {
+      "id": "-NSRmOhzWUA",
+      "title": "1997-2003 Buick Regal window regulator replacement.",
+      "channel": "jeremy rowe",
+      "views": 13939
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 38400,
+     "n": 2,
+     "best": {
+      "id": "asb7qUcNCSY",
+      "title": "Buick No Start Problem...2004 Buick Regal Won't Crank...Solved...",
+      "channel": "Peter L",
+      "views": 24560
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 21298,
+     "n": 2,
+     "best": {
+      "id": "aYo20CmOJuE",
+      "title": "Idler pulley, belt removal for Buick 3800, 1997- 2003 Buick Regal",
+      "channel": "jeremy rowe",
+      "views": 18191
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "4Eo0hC6_NUg",
+     "title": "2000 Buick Regal GS: Regular Car Reviews",
+     "channel": "Regular Car Reviews",
+     "views": 588420
+    },
+    {
+     "id": "HvQjVtSf1YA",
+     "title": "2003 Buick Regal GS Review",
+     "channel": "Sadm1",
+     "views": 54279
+    },
+    {
+     "id": "lCHcNSSB0zE",
+     "title": "2000 Buick Regal GS Supercharged Review",
+     "channel": "Car Reviews by KJ",
+     "views": 47132
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "chevrolet-aveo": [
+  {
+   "years": [
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011
+   ],
+   "gen": "2004–2011 Chevrolet Aveo",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 10450391,
+   "topics": [
+    {
+     "name": "Cooling system",
+     "views": 626074,
+     "n": 17,
+     "best": {
+      "id": "6aq7XPhEmic",
+      "title": "2004-2007 Aveo Timing belt & Water Pump Replacement. DIY Setup Install TENSION wTORQUE",
+      "channel": "David Morrow (SAM Time)",
+      "views": 80964
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 591005,
+     "n": 9,
+     "best": {
+      "id": "HpaAzB90t5U",
+      "title": "Chevrolet Aveo 2006 Timing belt replacement",
+      "channel": "Spade Of All Trades",
+      "views": 244390
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 356146,
+     "n": 10,
+     "best": {
+      "id": "ToUB7fo8RB0",
+      "title": "PO 340 code replace Camshaft sensor Chevy Aveo 2007 part one of two",
+      "channel": "Tyger K",
+      "views": 108308
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 282149,
+     "n": 7,
+     "best": {
+      "id": "aV2IxKCijrQ",
+      "title": "Front strut replacement 2004 - 2011 Chevrolet Aveo LS Daewoo struts Install Remove Replace",
+      "channel": "Fixing cars and stuff",
+      "views": 154338
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 259832,
+     "n": 4,
+     "best": {
+      "id": "XrTS3M2OIyc",
+      "title": "2009 Chevy Aveo head gasket replacement Part 1",
+      "channel": "thomasautobody",
+      "views": 176630
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 204626,
+     "n": 5,
+     "best": {
+      "id": "g_aTHxg7Sug",
+      "title": "How to add/recharge AC 134A freon 2011 Chevy Aveo LT",
+      "channel": "NewYorkerInCT",
+      "views": 107650
+     }
+    },
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 203371,
+     "n": 6,
+     "best": {
+      "id": "lTY17bq6LkM",
+      "title": "2006 Chevy AVEO Valve Cover Gasket DIY",
+      "channel": "Joe's Car Smarts-NY",
+      "views": 97764
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 189451,
+     "n": 3,
+     "best": {
+      "id": "2pZOFESaDlQ",
+      "title": "2008 Chevy Aveo Tail Light Replacement",
+      "channel": "Shane Valdez",
+      "views": 124171
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "gSkESZxbKEc",
+     "title": "Chevrolet AVEO 2011 Starting Problems",
+     "channel": "angel pineda",
+     "views": 99535
+    },
+    {
+     "id": "i6AxqKoRhPs",
+     "title": "The Same Old Aveo Problems, Talking About the 2004 Chevrolet Aveo #aveo #chevrolet",
+     "channel": "Bob Hafiz Tri Raksa",
+     "views": 19835
+    },
+    {
+     "id": "PPTKondMFjs",
+     "title": "2004 CHEVY AVEO No Crank No Start Problems...1 Click...Fixed...",
+     "channel": "Peter L",
+     "views": 17039
+    }
+   ],
+   "costs": null
+  }
+ ],
  "lexus-is": [
   {
    "years": [

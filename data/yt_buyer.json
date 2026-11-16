@@ -32102,5 +32102,58 @@
 }
 ]
 }
+],
+"chevrolet-aveo": [
+{
+"sid": "chevrolet-aveo-g1",
+"y0": 2004,
+"y1": 2011,
+"label": "2004–2011",
+"videos": 199,
+"praise": [
+[
+"Power",
+4
+],
+[
+"Fun to drive",
+4
+],
+[
+"Reliability",
+3
+]
+],
+"trouble": [
+[
+"Coolant leaks / water pump / overheating",
+6
+],
+[
+"Oil leaks (gaskets, seals, housings)",
+4
+]
+],
+"top": [
+{
+"id": "_7QqJocEdAg",
+"title": "Review: 2007 Chevrolet Aveo LT",
+"views": 260714,
+"ch": "MyRide on Autobytel"
+},
+{
+"id": "HEqlE3igtOg",
+"title": "Review Chevrolet Aveo A/T 2004. Part1. Kelebihan & Kekurangan. Fitur, Eksterior & Interior.",
+"views": 246954,
+"ch": "Mas Wahid"
+},
+{
+"id": "ifwWwaDjQbY",
+"title": "Chevrolet Aveo LT 1.6 VGIS T250 2006 | Real-life review",
+"views": 238894,
+"ch": "Namaste Car"
+}
+]
+}
 ]
 }
