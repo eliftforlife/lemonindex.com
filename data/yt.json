@@ -65741,7 +65741,26 @@
      "views": 16983
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 150,
+       "lo": 50.0,
+       "hi": 1000.0,
+       "n": 7,
+       "videos": 4,
+       "id": "ncEdIdGpw_Q",
+       "t": 331,
+       "title": "2003 Chevy Avalanche Z66"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
