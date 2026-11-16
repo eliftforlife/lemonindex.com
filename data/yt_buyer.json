@@ -32573,5 +32573,41 @@
 }
 ]
 }
+],
+"chevrolet-venture": [
+{
+"sid": "chevrolet-venture-g1",
+"y0": 1997,
+"y1": 2005,
+"label": "1997–2005",
+"videos": 199,
+"praise": [
+[
+"Reliability",
+4
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "y52oF161uF4",
+"title": "SOLD 2000 Chevrolet Venture LS WB 98K Miles Meticulous Motors Inc Florida LOOK",
+"views": 116663,
+"ch": "MeticulousMotors"
+},
+{
+"id": "ZiJRWaYsUcE",
+"title": "2004 Chevy Venture, Affordable, Clean & Reliable",
+"views": 49432,
+"ch": "Sweet Project Cars"
+},
+{
+"id": "TwMkum6PBlo",
+"title": "2000 Chevrolet Venture For Sale ONE OWNER - LOW MILES!",
+"views": 33654,
+"ch": "eNetAutos"
+}
+]
+}
 ]
 }
