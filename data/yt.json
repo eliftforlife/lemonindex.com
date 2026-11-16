@@ -67969,7 +67969,26 @@
      "views": 153108
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 60,
+       "lo": 20.0,
+       "hi": 180.0,
+       "n": 3,
+       "videos": 3,
+       "id": "K-jzYTKuTvg",
+       "t": 882,
+       "title": "1 of 2 How to Diagnose stalling or shuttering Navigator, Aviator , 2004-2006 + Symptoms"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -68101,7 +68120,26 @@
      "views": 8227
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 225,
+       "lo": 75.0,
+       "hi": 1600.0,
+       "n": 10,
+       "videos": 8,
+       "id": "IxBH0WFy3wY",
+       "t": 112,
+       "title": "Lincoln Navigator - Air Suspension Leak? Coil Spring Conversion - Step by Step - DIY (2007-2014)"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [

@@ -33010,5 +33010,104 @@
 }
 ]
 }
+],
+"saab-9-3": [
+{
+"sid": "saab-9-3-g1",
+"y0": 1999,
+"y1": 2002,
+"label": "1999–2002",
+"videos": 159,
+"praise": [
+[
+"Reliability",
+7
+],
+[
+"Looks",
+6
+],
+[
+"Power",
+5
+],
+[
+"Fun to drive",
+4
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "l3t-MQS-PYk",
+"title": "More Problems With the 2000 Saab 9-3 (Smoking, Test Drive, etc.)",
+"views": 193870,
+"ch": "Saabkyle04"
+},
+{
+"id": "mRlt2Hinrr8",
+"title": "2002 Saab 9-3 Viggen Convertible: Start Up, Test Drive & In Depth Review",
+"views": 129568,
+"ch": "Saabkyle04"
+},
+{
+"id": "OgixD2Uu6cU",
+"title": "1999 Saab 9-3 Viggen Review",
+"views": 57003,
+"ch": "Men and Motors"
+}
+]
+},
+{
+"sid": "saab-9-3-g2",
+"y0": 2003,
+"y1": 2011,
+"label": "2003–2011",
+"videos": 194,
+"praise": [
+[
+"Looks",
+8
+],
+[
+"Reliability",
+6
+],
+[
+"Fun to drive",
+6
+],
+[
+"Power",
+5
+]
+],
+"trouble": [
+[
+"Oil leaks (gaskets, seals, housings)",
+4
+]
+],
+"top": [
+{
+"id": "bVeEJRFb_8k",
+"title": "2008 Saab 9-3 Review - Kelley Blue Book",
+"views": 480651,
+"ch": "Kelley Blue Book"
+},
+{
+"id": "40KYmYb-NaM",
+"title": "Review: 2008 Saab 9-3 Turbo X",
+"views": 256003,
+"ch": "MyRide on Autobytel"
+},
+{
+"id": "YH_mVPIqXf4",
+"title": "2006 Saab 9-3 Aero // REVIEW",
+"views": 222838,
+"ch": "The Dutch Texan"
+}
+]
+}
 ]
 }
