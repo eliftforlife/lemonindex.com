@@ -30674,5 +30674,53 @@
 }
 ]
 }
+],
+"ford-maverick": [
+{
+"sid": "ford-maverick-g1",
+"y0": 2022,
+"y1": 2025,
+"label": "2022–2025",
+"videos": 200,
+"praise": [
+[
+"Looks",
+22
+],
+[
+"Power",
+16
+],
+[
+"Reliability",
+16
+],
+[
+"Value for money",
+14
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "ocHFC03Wmbw",
+"title": "2022 Ford Maverick Full Review: an Affordable, Practical Pickup Truck",
+"views": 1980830,
+"ch": "Doug DeMuro"
+},
+{
+"id": "ZmcQX8DGdTI",
+"title": "AMAZING! 2022 Ford Maverick Review",
+"views": 812621,
+"ch": "TheStraightPipes"
+},
+{
+"id": "hzfhZPw_gmg",
+"title": "I bought a 2022 Ford Maverick Lariat AWD! (Review and Off-Road Test)",
+"views": 743525,
+"ch": "Driving Sports TV"
+}
+]
+}
 ]
 }
