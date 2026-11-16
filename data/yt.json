@@ -64678,6 +64678,266 @@
    "costs": null
   }
  ],
+ "nissan-xterra": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004
+   ],
+   "gen": "2000–2004 Nissan Xterra",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 6142425,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 651720,
+     "n": 12,
+     "best": {
+      "id": "yNFVBXEUQ4A",
+      "title": "How to replace the starter on a 2003 Nissan Xterra",
+      "channel": "Jimthecarguy",
+      "views": 220216
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 260759,
+     "n": 7,
+     "best": {
+      "id": "tTt8SKS6vOU",
+      "title": "2002 Nissan Xterra SE // NA - Resetting Service Engine Soon light.",
+      "channel": "Pricedownmall",
+      "views": 161142
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 158874,
+     "n": 4,
+     "best": {
+      "id": "Mlo2lP2VkiE",
+      "title": "2002-2004 Nissan Xterra brake light switch fix",
+      "channel": "David Malott",
+      "views": 137011
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 113225,
+     "n": 2,
+     "best": {
+      "id": "oVhExUmU2ic",
+      "title": "Spark Plug Removal and Installation 2004 Nissan Xterra 3.3L V6 PART 1",
+      "channel": "Grant Varvil",
+      "views": 107552
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 111072,
+     "n": 4,
+     "best": {
+      "id": "90BPcTDvut4",
+      "title": "2002 Nissan Xterra VG33E Rebuild Step by Step Part 7 - A/C Belt Removal",
+      "channel": "Michio Makes",
+      "views": 41930
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 99093,
+     "n": 1,
+     "best": {
+      "id": "9-B0m1SQW9A",
+      "title": "2002 4x4 Xterra 3.3 Transmission Removal and Fixing a Massive oil leak",
+      "channel": "Fixing With Passion",
+      "views": 99093
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 84916,
+     "n": 3,
+     "best": {
+      "id": "3Dyc-rR2FV4",
+      "title": "2002 NISSAN XTERRA No Crank, No Start Problem...One Click...Solved...",
+      "channel": "Peter L",
+      "views": 37395
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 79027,
+     "n": 5,
+     "best": {
+      "id": "Q4N0RXO3qDY",
+      "title": "2002 Nissan Xterra 3.3 P0335 - SOLVED - NOT the crankshaft position sensor",
+      "channel": "Alpha Mobile Repair",
+      "views": 44018
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "Fq14x5-LIsg",
+     "title": "2003 Nissan Xterra 3.3L common problems and diagnose with MaxiSys",
+     "channel": "Mike M",
+     "views": 274652
+    },
+    {
+     "id": "H82IzcSeiB4",
+     "title": "2002 Nissan Xterra VG33E Rebuild Step by Step Part 72 - Driver's Head On!...with problems",
+     "channel": "Michio Makes",
+     "views": 5713
+    },
+    {
+     "id": "L9gq0Xiixd4",
+     "title": "2004 Nissan Xterra super smooth and reliable!",
+     "channel": "Austin Auto Planet LLC",
+     "views": 3131
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015
+   ],
+   "gen": "2005–2015 Nissan Xterra",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 10318351,
+   "topics": [
+    {
+     "name": "Transmission & shifter",
+     "views": 304967,
+     "n": 7,
+     "best": {
+      "id": "5OHu9tadY4Q",
+      "title": "2013 Nissan XTerra Automatic Transmission oil change",
+      "channel": "caveman joe",
+      "views": 92149
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 275275,
+     "n": 3,
+     "best": {
+      "id": "BUyBYJUt2L8",
+      "title": "2006 Nissan Xterra How to Remove Stereo Radio DIY dash frontier",
+      "channel": "Del Rey Customs",
+      "views": 130408
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 149648,
+     "n": 3,
+     "best": {
+      "id": "7D5Atu59J8k",
+      "title": "How to Replace Struts for a Nissan Frontier/Xterra (2008-2014)",
+      "channel": "Mcgurr Entertainment",
+      "views": 83035
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 145122,
+     "n": 1,
+     "best": {
+      "id": "Az_RRynnb7U",
+      "title": "How to Replace the Spark Plugs on a 2005 Nissan Xterra",
+      "channel": "Ry the car guy",
+      "views": 145122
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 130987,
+     "n": 4,
+     "best": {
+      "id": "0i8h_GLdMig",
+      "title": "2005+ Nissan Xterra/Frontier/Pathfinder Heater Core Replacement",
+      "channel": "Adam Glynn",
+      "views": 84687
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 129057,
+     "n": 4,
+     "best": {
+      "id": "4kVp55tQXAc",
+      "title": "How to Flush Power Steering Fluid for a Nissan Frontier/Pathfinder/Xterra (2005-2014)",
+      "channel": "Mcgurr Entertainment",
+      "views": 49556
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 119444,
+     "n": 5,
+     "best": {
+      "id": "RKMg6Cydtjs",
+      "title": "CRANK and CAMSHAFT POSITION SENSORS Replacement... 2006 Nissan Xterra Offroad",
+      "channel": "Moe's Garage",
+      "views": 69373
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 111377,
+     "n": 5,
+     "best": {
+      "id": "RoHUFwTbh2M",
+      "title": "How to reset Service Engine soon Light on a 2006 Nissan Xterra.....",
+      "channel": "Peter L",
+      "views": 39632
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "2BrLV6oSgew",
+     "title": "Top 5 Problems Nissan Xterra SUV 2nd Generation 2005-15",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 331076
+    },
+    {
+     "id": "tIrfr8KqrxY",
+     "title": "Nissan Xterra (2nd Gen) - How Reliable Are They? (Review, 0-60, Off Road, Overlanding, Top Problems)",
+     "channel": "Not-So-Handy Car Guy",
+     "views": 175330
+    },
+    {
+     "id": "xncOQidEg34",
+     "title": "Top Common Engine Problems 2005-2015 Nissan Xterra SUV",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 32556
+    }
+   ],
+   "costs": null
+  }
+ ],
  "mercury-cougar": [
   {
    "years": [

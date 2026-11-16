@@ -29696,5 +29696,117 @@
 }
 ]
 }
+],
+"nissan-xterra": [
+{
+"sid": "nissan-xterra-g1",
+"y0": 2000,
+"y1": 2004,
+"label": "2000–2004",
+"videos": 199,
+"praise": [
+[
+"Looks",
+5
+],
+[
+"Reliability",
+4
+],
+[
+"Power",
+3
+]
+],
+"trouble": [
+[
+"Battery / alternator / starter",
+5
+],
+[
+"Spark plugs / coils / misfire",
+4
+],
+[
+"Oil leaks (gaskets, seals, housings)",
+4
+],
+[
+"Coolant leaks / water pump / overheating",
+4
+]
+],
+"top": [
+{
+"id": "Fq14x5-LIsg",
+"title": "2003 Nissan Xterra 3.3L common problems and diagnose with MaxiSys",
+"views": 274652,
+"ch": "Mike M"
+},
+{
+"id": "cAJ132YFtGQ",
+"title": "2003 Nissan Xterra XE V6 Start Up, Engine & Review",
+"views": 107037,
+"ch": "firealarm421"
+},
+{
+"id": "HvK2IusTA48",
+"title": "2000 Xterra Review at 225000 miles",
+"views": 76979,
+"ch": "With Matt"
+}
+]
+},
+{
+"sid": "nissan-xterra-g2",
+"y0": 2005,
+"y1": 2015,
+"label": "2005–2015",
+"videos": 200,
+"praise": [
+[
+"Reliability",
+7
+],
+[
+"Looks",
+6
+],
+[
+"Power",
+5
+]
+],
+"trouble": [
+[
+"Coolant leaks / water pump / overheating",
+6
+],
+[
+"Rust",
+3
+]
+],
+"top": [
+{
+"id": "OuJEznZ5UFA",
+"title": "2013 Nissan Xterra PRO-4X Muddy Off-Road Colorado Review (Part 1)",
+"views": 546398,
+"ch": "The Fast Lane Car"
+},
+{
+"id": "eSAkwJvwr5U",
+"title": "2015 Nissan Xterra PRO-4X Review, Walkaround, Exhaust, & Test Drive",
+"views": 443891,
+"ch": "Redline Reviews"
+},
+{
+"id": "2BrLV6oSgew",
+"title": "Top 5 Problems Nissan Xterra SUV 2nd Generation 2005-15",
+"views": 331076,
+"ch": "1A Auto: Repair Tips & Secrets Only Mechanics Know"
+}
+]
+}
 ]
 }
