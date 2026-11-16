@@ -67836,6 +67836,261 @@
    }
   }
  ],
+ "cadillac-cts": [
+  {
+   "years": [
+    2003,
+    2004,
+    2005,
+    2006,
+    2007
+   ],
+   "gen": "2003–2007 Cadillac CTS",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 7716271,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 477757,
+     "n": 9,
+     "best": {
+      "id": "ZzMYbP7PEcY",
+      "title": "2005 Cadillac CTS repair fix service charging system problem power cable not alternator or battery",
+      "channel": "CCX Videos",
+      "views": 91511
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 279605,
+     "n": 9,
+     "best": {
+      "id": "Pdt70Mu9oWQ",
+      "title": "2005 Cadillac CTS Transmission Problem",
+      "channel": "KY Home Garage",
+      "views": 82691
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 228785,
+     "n": 2,
+     "best": {
+      "id": "K4Vlb_lBxRo",
+      "title": "HD - 2006 Cadillac CTS 3.6L - Spark Plug Replacement",
+      "channel": "GhostInTheShell3000",
+      "views": 165976
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 214723,
+     "n": 5,
+     "best": {
+      "id": "55pl95BX5p4",
+      "title": "HOW TO RESET ECM ON 2007 CADILLAC CTS",
+      "channel": "Kevin Nadeau",
+      "views": 189044
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 213191,
+     "n": 3,
+     "best": {
+      "id": "l3qiQKlo2i0",
+      "title": "2003-2007 Cadillac CTS no crank, no start issue SOLVED for less than $40.",
+      "channel": "Jake Stansberry",
+      "views": 136236
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 144957,
+     "n": 3,
+     "best": {
+      "id": "CO_G_87kKD4",
+      "title": "How to Replace Cabin Air Filter 2007 Cadillac CTS | AQ1042",
+      "channel": "Filterheads",
+      "views": 133704
+     }
+    },
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 103426,
+     "n": 1,
+     "best": {
+      "id": "4CHOzYYnkT4",
+      "title": "▶️Cadillac CTS Valve Cover And Intake Gasket Repair 2003-2004🔧",
+      "channel": "Nthefastlane",
+      "views": 103426
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 85767,
+     "n": 2,
+     "best": {
+      "id": "k6AKpYOccf0",
+      "title": "2005 Cadillac CTS, engine knock noise found",
+      "channel": "Bana penarol2014",
+      "views": 48123
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "PAWNefRgBM0",
+     "title": "Top 5 Problems Cadillac CTS Sedan 1st Generation 2003-07",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 339083
+    },
+    {
+     "id": "M1xnIya8EqY",
+     "title": "2004 CTS-V Review and Ultimate Buyers Guide",
+     "channel": "BigKleib34",
+     "views": 92336
+    },
+    {
+     "id": "S_yM3kwF2sk",
+     "title": "Should You Buy a CTS-V 1?? 1ST Gen CTS-V Review",
+     "channel": "Harry's Lemons",
+     "views": 21110
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "mitsubishi-galant": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003
+   ],
+   "gen": "1999–2003 Mitsubishi Galant",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 5601225,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 304700,
+     "n": 10,
+     "best": {
+      "id": "KPkyhT6SVmg",
+      "title": "DIY 2001 MITSUBISHI GALANT 2.4L STARTER REPLACEMENT",
+      "channel": "XRDanL",
+      "views": 149156
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 209369,
+     "n": 5,
+     "best": {
+      "id": "cZGyIRbrTPc",
+      "title": "Replacing 02 sensor (downstream) 2003 Mitsubishi Galant",
+      "channel": "Quetzachapin",
+      "views": 83584
+     }
+    },
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 141740,
+     "n": 1,
+     "best": {
+      "id": "D1dm9rmono0",
+      "title": "changing valve cover gasket on 2000 mitsubishi galant SOHC 4g64",
+      "channel": "dcitmf",
+      "views": 141740
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 126188,
+     "n": 4,
+     "best": {
+      "id": "nHpajrEvzb8",
+      "title": "2001 mitsubishi galant timing belt installation",
+      "channel": "julian #1automecanic",
+      "views": 90885
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 78841,
+     "n": 3,
+     "best": {
+      "id": "M7gvL13c2LI",
+      "title": "Replacing Spark plugs on a 2001 MITSUBISHI GALANT GLX SE 2000CC.wmv",
+      "channel": "Donald Bain",
+      "views": 66590
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 50694,
+     "n": 3,
+     "best": {
+      "id": "9Gys9uJ9k0I",
+      "title": "2003 Mitsubishi Galant thermostat replaced",
+      "channel": "Djwasi420",
+      "views": 24995
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 29735,
+     "n": 1,
+     "best": {
+      "id": "1_LTv_Xcbrs",
+      "title": "How to clean out Transmission Fluid Pan (Oil Pan) 2001 Mitsubishi Galant ES",
+      "channel": "beatsbydrdrereview",
+      "views": 29735
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 21556,
+     "n": 3,
+     "best": {
+      "id": "aj5yfYZ43A0",
+      "title": "Front brake pad replacement 2001 Mitsubishi Galant caliper rotor Install Remove Replace How to",
+      "channel": "Fixing cars and stuff",
+      "views": 16878
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "mRV6emzYJ5s",
+     "title": "2002 Mitsubishi Galant Power Window/Locks/Window Switch Problems & Rant.",
+     "channel": "AustralianCroc",
+     "views": 8085
+    },
+    {
+     "id": "QPw-5u-pV5Q",
+     "title": "Mitsubishi Galant reliable??? *2002",
+     "channel": "AustralianCroc",
+     "views": 1400
+    },
+    {
+     "id": "xMrv4sTmQds",
+     "title": "Review de Carro: Mitsubishi Galant VR V6 2001",
+     "channel": "carro de review",
+     "views": 80460
+    }
+   ],
+   "costs": null
+  }
+ ],
  "ford-bronco-sport": [
   {
    "years": [
@@ -67928,7 +68183,26 @@
      "views": 15624
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 4000,
+       "lo": 715.0,
+       "hi": 10000.0,
+       "n": 3,
+       "videos": 3,
+       "id": "CvwP3vFAaw8",
+       "t": 492,
+       "title": "Ford Dealer Missed CRITICAL Issue on this '21 Bronco Sport"
+      }
+     ]
+    ]
+   }
   }
  ],
  "lincoln-navigator": [
