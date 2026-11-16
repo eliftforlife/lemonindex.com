@@ -65732,6 +65732,107 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2015,
+    2016
+   ],
+   "gen": "2015–2016 Hyundai Genesis",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 169,
+   "views": 13522265,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 92937,
+     "n": 4,
+     "best": {
+      "id": "5vsVnZFGgUI",
+      "title": "2015 - 2018 Hyundai Genesis/Genesis G80 Ultimate package Radio reset",
+      "channel": "Danon Henton",
+      "views": 39509
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 36330,
+     "n": 2,
+     "best": {
+      "id": "TW0nghiyieQ",
+      "title": "2015 Hyundai Genesis No Start Click Fix",
+      "channel": "James Williams",
+      "views": 28373
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 30104,
+     "n": 1,
+     "best": {
+      "id": "ZasEuINVmSs",
+      "title": "Oil Change Guide 2015-16 Hyundai Genesis Sedan 3.8L V6 | Genesis G80 2017-2020",
+      "channel": "GennayDIY",
+      "views": 30104
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 17830,
+     "n": 2,
+     "best": {
+      "id": "Qk0_iA-gYjE",
+      "title": "2016 Hyundai Genesis service reminder reset",
+      "channel": "Automotive Service Reset Procedures",
+      "views": 16212
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 8597,
+     "n": 1,
+     "best": {
+      "id": "-VkE559g8co",
+      "title": "How to: Remove A/C Compressor 2016 Hyundai Genesis 3.8L",
+      "channel": "GEORGE LOPEZ HOW TO DO IT YOUR SELF",
+      "views": 8597
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 7799,
+     "n": 1,
+     "best": {
+      "id": "Zl43PzbTIBY",
+      "title": "2016 Hyundai Genesis Ultimate -Starting Issue, All Warning Lights Showing & Can't Drive** 2nd Video",
+      "channel": "ATL Sal",
+      "views": 7799
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "5vB026xNHZg",
+     "title": "2015 Hyundai Genesis Reliability Update",
+     "channel": "Papse",
+     "views": 12841
+    },
+    {
+     "id": "qdj0ZAwRtfc",
+     "title": "2015 Hyundai Genesis 3.8 H-Trac Start Up, Test Drive, and In Depth Review",
+     "channel": "Saabkyle04",
+     "views": 1048299
+    },
+    {
+     "id": "eoIrXBRSErc",
+     "title": "2015 Hyundai Genesis 3.8 Test Drive Video Review",
+     "channel": "UsedCarsTV",
+     "views": 706847
+    }
+   ],
+   "costs": null
   }
  ],
  "buick-rendezvous": [

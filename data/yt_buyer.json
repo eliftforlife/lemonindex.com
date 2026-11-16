@@ -30895,5 +30895,104 @@
 }
 ]
 }
+],
+"hyundai-genesis": [
+{
+"sid": "hyundai-genesis-g1",
+"y0": 2009,
+"y1": 2014,
+"label": "2009–2014",
+"videos": 191,
+"praise": [
+[
+"Looks",
+9
+],
+[
+"Power",
+8
+],
+[
+"Fun to drive",
+6
+],
+[
+"Value for money",
+5
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "WcZ5sU1V1Lc",
+"title": "Review: 2014 Hyundai Genesis 2.0T Coupe",
+"views": 927013,
+"ch": "Matt Maran Motoring"
+},
+{
+"id": "Qg4sUrF-o_M",
+"title": "2013 Hyundai Genesis Coupe Test Drive & Car Review",
+"views": 582379,
+"ch": "UsedCarsTV"
+},
+{
+"id": "on0t__s_Eqc",
+"title": "2010 Hyundai Genesis Coupe 3.8 Grand Touring Start Up, Exhaust, and In Depth Review",
+"views": 517061,
+"ch": "Saabkyle04"
+}
+]
+},
+{
+"sid": "hyundai-genesis-g2",
+"y0": 2015,
+"y1": 2016,
+"label": "2015–2016",
+"videos": 167,
+"praise": [
+[
+"Looks",
+11
+],
+[
+"Fun to drive",
+10
+],
+[
+"Power",
+8
+],
+[
+"Comfort and ride",
+7
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+4
+]
+],
+"top": [
+{
+"id": "qdj0ZAwRtfc",
+"title": "2015 Hyundai Genesis 3.8 H-Trac Start Up, Test Drive, and In Depth Review",
+"views": 1048299,
+"ch": "Saabkyle04"
+},
+{
+"id": "eoIrXBRSErc",
+"title": "2015 Hyundai Genesis 3.8 Test Drive Video Review",
+"views": 706847,
+"ch": "UsedCarsTV"
+},
+{
+"id": "uR_rzjMNG9o",
+"title": "2015 Hyundai Genesis 3.8 – Redline: Review",
+"views": 657049,
+"ch": "Redline Reviews"
+}
+]
+}
 ]
 }
