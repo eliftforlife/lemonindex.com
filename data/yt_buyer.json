@@ -30422,5 +30422,58 @@
 }
 ]
 }
+],
+"gmc-envoy": [
+{
+"sid": "gmc-envoy-g2",
+"y0": 2002,
+"y1": 2009,
+"label": "2002–2009",
+"videos": 195,
+"praise": [
+[
+"Power",
+6
+],
+[
+"Looks",
+4
+],
+[
+"Reliability",
+4
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+7
+],
+[
+"Fuel pump / fuel system",
+3
+]
+],
+"top": [
+{
+"id": "KgSpDbzPwdA",
+"title": "Top 5 Problems GMC Envoy SUV 2nd Generation 2002-2009",
+"views": 487409,
+"ch": "1A Auto: Repair Tips & Secrets Only Mechanics Know"
+},
+{
+"id": "iOnLfS2Ax3E",
+"title": "2004 GMC Envoy XUV (5.3L V8) - Start Up, Road Test & In Depth Review",
+"views": 307900,
+"ch": "Saabkyle04"
+},
+{
+"id": "bnFUtdstUZs",
+"title": "2005 GMC Envoy Full Tour, Start-up, & Review",
+"views": 114933,
+"ch": "ThinkOutsideTheCube"
+}
+]
+}
 ]
 }
