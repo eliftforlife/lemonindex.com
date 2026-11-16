@@ -33290,5 +33290,117 @@
 }
 ]
 }
+],
+"mitsubishi-galant": [
+{
+"sid": "mitsubishi-galant-g8",
+"y0": 1999,
+"y1": 2003,
+"label": "1999–2003",
+"videos": 195,
+"praise": [
+[
+"Power",
+8
+],
+[
+"Reliability",
+8
+],
+[
+"Fun to drive",
+5
+],
+[
+"Looks",
+4
+]
+],
+"trouble": [
+[
+"Battery / alternator / starter",
+4
+],
+[
+"Electrical / wiring / TIPM",
+4
+]
+],
+"top": [
+{
+"id": "xMrv4sTmQds",
+"title": "Review de Carro: Mitsubishi Galant VR V6 2001",
+"views": 80460,
+"ch": "carro de review"
+},
+{
+"id": "WgzOhl8-Ibk",
+"title": "1999 Mitsubishi Galant LS | Retro Review",
+"views": 69652,
+"ch": "MotorWeek"
+},
+{
+"id": "9HaacqHRA5s",
+"title": "MITSUBISHI GALANT 8TH GEN FULL CAR REVIEW!!!",
+"views": 54856,
+"ch": "reechpotato"
+}
+]
+},
+{
+"sid": "mitsubishi-galant-g9",
+"y0": 2004,
+"y1": 2012,
+"label": "2004–2012",
+"videos": 197,
+"praise": [
+[
+"Reliability",
+7
+],
+[
+"Fun to drive",
+4
+],
+[
+"Power",
+4
+],
+[
+"Fuel economy",
+4
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+4
+],
+[
+"Battery / alternator / starter",
+3
+]
+],
+"top": [
+{
+"id": "1mI0_1zaFGA",
+"title": "He got this for $300 - 2007 Mitsubushi Galant Car Review",
+"views": 26638,
+"ch": "Horse Man Sam"
+},
+{
+"id": "lByEcqXoDbY",
+"title": "2009 Mitsubishi Galant Sport Review",
+"views": 23768,
+"ch": "MPGomatic"
+},
+{
+"id": "dRdBrV8Ss7g",
+"title": "2004-2009 Mitsubishi Galant Pre-Owned Vehicle Review",
+"views": 22489,
+"ch": "WheelsTV Test Drives"
+}
+]
+}
 ]
 }

@@ -67962,6 +67962,133 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013
+   ],
+   "gen": "2008–2013 Cadillac CTS",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 20047603,
+   "topics": [
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 291975,
+     "n": 3,
+     "best": {
+      "id": "3mFNcsSXeWE",
+      "title": "Cadillac CTS Door Handle Repair (Micro Switches Replacement, 2nd Gen)",
+      "channel": "David Waltermyer",
+      "views": 238723
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 258348,
+     "n": 4,
+     "best": {
+      "id": "SWpsFsj_v1M",
+      "title": "2nd Generation (2008-2014) Cadillac CTS Blend Door Actuator Replacement Guide (Repair & Fix!)",
+      "channel": "David Waltermyer",
+      "views": 124362
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 246081,
+     "n": 3,
+     "best": {
+      "id": "1v9-nT6nmk4",
+      "title": "Reset Oil Life Cadillac CTS 2008 - 2013 change oil 100% reminder how to turn off oil indicator",
+      "channel": "YourSelf",
+      "views": 153078
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 219937,
+     "n": 4,
+     "best": {
+      "id": "NC7EhWn547c",
+      "title": "How to replace oil pressure switch in 2009 Cadillac Cts",
+      "channel": "TNT Overhaul",
+      "views": 79946
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 148589,
+     "n": 4,
+     "best": {
+      "id": "DdD9vENcTKQ",
+      "title": "How to replace alternator in a 2009 Cadillac cts",
+      "channel": "TNT Overhaul",
+      "views": 65609
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 103637,
+     "n": 2,
+     "best": {
+      "id": "aXYBVXaHCho",
+      "title": "How To ReCharge AC Cadillac CTS DIY 2008 2009 2010 2011 2012 2013 08 09 10 11 12 13",
+      "channel": "Dirt Road Auto Repair",
+      "views": 86383
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 100153,
+     "n": 2,
+     "best": {
+      "id": "vh64-JeOB7E",
+      "title": "How To Replace Rear Brake Pads & Rotors 2008-13 Cadillac CTS",
+      "channel": "TRQ",
+      "views": 64254
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 25522,
+     "n": 1,
+     "best": {
+      "id": "VzrudoCGKzo",
+      "title": "2012 CADILLAC CTS No Start No Crank...DIY Diagnosing...Clicks..Solved...",
+      "channel": "Peter L",
+      "views": 25522
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "fvCvH53s1QY",
+     "title": "Top 5 Problems Cadillac CTS Sedan 2nd Generation 2008-14",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 764062
+    },
+    {
+     "id": "E_0AdAAtjT8",
+     "title": "So you want to buy a Cadillac CTS-V | V2 | 2009 - 2015 Sedan | Walk Around | Buyers Guide",
+     "channel": "Octane Slain",
+     "views": 282631
+    },
+    {
+     "id": "xDx1abcQqLs",
+     "title": "10 Common Problems Of A Cadillac CTS (2008-2019). Used Cadillac CTS Reliability",
+     "channel": "MaxTheCarGuy",
+     "views": 252288
+    }
+   ],
+   "costs": null
   }
  ],
  "mitsubishi-galant": [
@@ -68086,6 +68213,136 @@
      "title": "Review de Carro: Mitsubishi Galant VR V6 2001",
      "channel": "carro de review",
      "views": 80460
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012
+   ],
+   "gen": "2004–2012 Mitsubishi Galant",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 3551276,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 496989,
+     "n": 14,
+     "best": {
+      "id": "0z7RxQdB_7Q",
+      "title": "DIY: (2004 - 2012) 2005 Mitsubishi Galant 2.4L, How to Replace Starter",
+      "channel": "#CatholicHandyman",
+      "views": 211153
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 65430,
+     "n": 2,
+     "best": {
+      "id": "HVGWSi6wq5o",
+      "title": "2005/2010 How to Change Automatic Transmission Fluid for Mitsubishi Galant 2.4 L ATF",
+      "channel": "Less Expensive fix",
+      "views": 37549
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 58848,
+     "n": 2,
+     "best": {
+      "id": "XHTYQcDpW8Q",
+      "title": "CV-AXLE REPLACENT (2004-2012 MITSUBISHI GALANT)",
+      "channel": "BARRICADE GARAGE",
+      "views": 41063
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 54618,
+     "n": 2,
+     "best": {
+      "id": "ZEq9M8LRqhM",
+      "title": "OIL CHANGE (2009 MITSUBISHI GALANT)",
+      "channel": "BARRICADE GARAGE",
+      "views": 48438
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 38167,
+     "n": 3,
+     "best": {
+      "id": "u7t30nW7ni4",
+      "title": "2006 Mitsubishi Galant - Diagnosing No A/C",
+      "channel": "Online Auto Repair Videos",
+      "views": 30326
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 36168,
+     "n": 3,
+     "best": {
+      "id": "fn5pfQhqMXc",
+      "title": "2005 Mitsubishi Galant 2.4 Lean codes CHECK fuel injectors O-rings!!! P0171 & P0174",
+      "channel": "freestyleflowful",
+      "views": 20467
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 33426,
+     "n": 2,
+     "best": {
+      "id": "mXZx7doBka4",
+      "title": "2004 Mitsubishi Galant Cranks No Start Diagnosis (P0340 Camshaft Position Sensor)",
+      "channel": "Asian Mechanic Guy",
+      "views": 21595
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 27514,
+     "n": 1,
+     "best": {
+      "id": "JN6khg8bCu4",
+      "title": "SWAY BAR LINK REPLACEMENT (2004-2012 MITSUBISHI GALANT)",
+      "channel": "BARRICADE GARAGE",
+      "views": 27514
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "J5w3tyqhUpc",
+     "title": "Mobile Mechanic Tips 28: 2007 Mitsubishi Galant Will Not Start Starter Solenoid Problems",
+     "channel": "CarHelpOut Mobile Mechanic Pre Purchase Inspection",
+     "views": 12527
+    },
+    {
+     "id": "1mI0_1zaFGA",
+     "title": "He got this for $300 - 2007 Mitsubushi Galant Car Review",
+     "channel": "Horse Man Sam",
+     "views": 26638
+    },
+    {
+     "id": "lByEcqXoDbY",
+     "title": "2009 Mitsubishi Galant Sport Review",
+     "channel": "MPGomatic",
+     "views": 23768
     }
    ],
    "costs": null
