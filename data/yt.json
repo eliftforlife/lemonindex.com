@@ -66386,7 +66386,26 @@
      "views": 7672
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 1200,
+       "lo": 1000.0,
+       "hi": 1400.0,
+       "n": 4,
+       "videos": 2,
+       "id": "q-DWmgPUS1w",
+       "t": 499,
+       "title": "2018 Buick Enclave | CarGurus Test Drive Review"
+      }
+     ]
+    ]
+   }
   }
  ],
  "mazda-626": [
@@ -66900,6 +66919,133 @@
      "title": "2019 Buick Regal TourX: Regular Car Reviews",
      "channel": "Regular Car Reviews",
      "views": 395698
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "mitsubishi-outlander": [
+  {
+   "years": [
+    2003,
+    2004,
+    2005,
+    2006
+   ],
+   "gen": "2003–2006 Mitsubishi Outlander",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 198,
+   "views": 1654830,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 159651,
+     "n": 3,
+     "best": {
+      "id": "GYFQe9Mio5I",
+      "title": "Radio change in Mitsubishi Outlander 2005",
+      "channel": "tausif304",
+      "views": 118958
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 63134,
+     "n": 3,
+     "best": {
+      "id": "oCd3WZI7sn8",
+      "title": "How to replace the EGR Vacuum Solenoid on a 2003 Mitsubishi Outlander (4G64 Engine) (P0456 Code)",
+      "channel": "Full Bore",
+      "views": 30524
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 45548,
+     "n": 1,
+     "best": {
+      "id": "n6iO4KR88AI",
+      "title": "2003 Mitsubishi Outlander Heat/AC knob repair",
+      "channel": "greed71",
+      "views": 45548
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 27155,
+     "n": 1,
+     "best": {
+      "id": "_XHVcb4qqN0",
+      "title": "Repairing 2003 Mitsubushi Outlander timing belt snap disaster",
+      "channel": "2stroketurbo",
+      "views": 27155
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 20220,
+     "n": 1,
+     "best": {
+      "id": "Zv1FD946jDg",
+      "title": "How to replace a Radiator on a 2003 - 2006 Mitsubishi Outlander (A step by step Tutorial)",
+      "channel": "Full Bore",
+      "views": 20220
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 8848,
+     "n": 1,
+     "best": {
+      "id": "QyyY9qxqB0o",
+      "title": "2003-2006 Outlander Left Front Window Regulator Repair",
+      "channel": "Power Up Auto",
+      "views": 8848
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 4958,
+     "n": 1,
+     "best": {
+      "id": "CMbVtNo7NCs",
+      "title": "2004 outlander spark plug issue Oil in the cylinder",
+      "channel": "Hellcat Redeye -G",
+      "views": 4958
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 3170,
+     "n": 1,
+     "best": {
+      "id": "4hed-XTgFXU",
+      "title": "How to replace the rear struts on a 2003 - 2006 FWD Mitsubishi Outlander",
+      "channel": "Full Bore",
+      "views": 3170
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "65D2-RcB_F4",
+     "title": "Cheap SUV Motoring: 2003-2006 Mitsubishi Outlander Buyer's Guide",
+     "channel": "Turn 6 Garage",
+     "views": 13861
+    },
+    {
+     "id": "Te61jYrLSfY",
+     "title": "2003 Mitsubishi Outlander - AC and Blower Problems",
+     "channel": "Long Leaf Acres and DMR",
+     "views": 8548
+    },
+    {
+     "id": "pI_ON6eiY7M",
+     "title": "Mitsubishi Outlander II (2006-2012) problems and weak points",
+     "channel": "Check Engine",
+     "views": 368
     }
    ],
    "costs": null
