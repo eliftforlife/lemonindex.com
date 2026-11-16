@@ -66128,6 +66128,139 @@
    }
   }
  ],
+ "buick-enclave": [
+  {
+   "years": [
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017
+   ],
+   "gen": "2008–2017 Buick Enclave",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 12497414,
+   "topics": [
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 728322,
+     "n": 8,
+     "best": {
+      "id": "61grYGWi31k",
+      "title": "2008 buick enclave service stabilitrak Solved & P0171, P0174 SOLVED",
+      "channel": "David",
+      "views": 237302
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 664264,
+     "n": 12,
+     "best": {
+      "id": "kTQrqglHVW4",
+      "title": "How to program a Buick Enclave remote key fob 2008 - 2010",
+      "channel": "PYR Automotive ",
+      "views": 137482
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 282576,
+     "n": 5,
+     "best": {
+      "id": "FNsHqXa74dc",
+      "title": "How to Replace Thermostat Housing 2008-2017 Buick Enclave",
+      "channel": "TRQ",
+      "views": 92802
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 234851,
+     "n": 7,
+     "best": {
+      "id": "tPZjdbEmaVU",
+      "title": "Buick Enclave Cabin Air Filter Replacement ( 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 )",
+      "channel": "Undercar Experts",
+      "views": 49683
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 226757,
+     "n": 2,
+     "best": {
+      "id": "6d1sIxpzf9M",
+      "title": "How To Replace Power Steering Pump 2008-2017 Buick Enclave",
+      "channel": "TRQ",
+      "views": 195282
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 187939,
+     "n": 1,
+     "best": {
+      "id": "a22nHTcJ1KM",
+      "title": "2012 Buick Enclave Misfire Diagnosis | Beyond Coils & Plugs",
+      "channel": "South Main Auto LLC",
+      "views": 187939
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 173280,
+     "n": 2,
+     "best": {
+      "id": "2eB8StqAozE",
+      "title": "2010 GMC Buick Enclave Spark Plugs Replacement",
+      "channel": "Daniel “Rescue Moving Services” Rescue Movers",
+      "views": 141666
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 167579,
+     "n": 4,
+     "best": {
+      "id": "TRxC3SZSC-Q",
+      "title": "Major Transmission Issues - 2009 Buick Enclave",
+      "channel": "Import Car Enthusiast",
+      "views": 70132
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "sCq91yc6h-Q",
+     "title": "Top 5 Problems Buick Enclave SUV 1st Generation 2008-17",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 655344
+    },
+    {
+     "id": "UW6pyWp2uKo",
+     "title": "2017 Buick Enclave Blind Spot Detection Problems And Multiple Modules Off Line",
+     "channel": "Phillip Bailey",
+     "views": 33201
+    },
+    {
+     "id": "e2ItpASGJrA",
+     "title": "Buick enclave 1st generation 2008 to 2017 common problems, issues, defects and complaints",
+     "channel": "HOWSTUFFINMYCARWORKS",
+     "views": 23584
+    }
+   ],
+   "costs": null
+  }
+ ],
  "hyundai-veloster": [
   {
    "years": [
@@ -66254,7 +66387,26 @@
      "views": 1266309
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 60,
+       "lo": 20.0,
+       "hi": 500.0,
+       "n": 3,
+       "videos": 3,
+       "id": "XL-w12RW0tQ",
+       "t": 454,
+       "title": "My Modified 2016 Hyundai Veloster!"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -66302,7 +66454,26 @@
      "views": 707621
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Transmission",
+      {
+       "median": 1250,
+       "lo": 1000.0,
+       "hi": 1500.0,
+       "n": 4,
+       "videos": 3,
+       "id": "WayWtBXz6u4",
+       "t": 459,
+       "title": "Dying Breed of Sports Cars | 2022 Hyundai Veloster N Winter Review"
+      }
+     ]
+    ]
+   }
   }
  ],
  "honda-element": [
