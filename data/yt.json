@@ -67196,6 +67196,385 @@
    "costs": null
   }
  ],
+ "cadillac-escalade": [
+  {
+   "years": [
+    2002,
+    2003,
+    2004,
+    2005,
+    2006
+   ],
+   "gen": "2002–2006 Cadillac Escalade",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 5801704,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 376615,
+     "n": 6,
+     "best": {
+      "id": "wJ2KuE_BzRU",
+      "title": "1999 - 2006 Cadillac Escalade Boss Touch Screen Stereo Install",
+      "channel": "Provo Beast Audio Installation",
+      "views": 209663
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 334100,
+     "n": 5,
+     "best": {
+      "id": "DPQfw6jm-AY",
+      "title": "Aftermarket Stereo Installation Double Din Cadillac Escalade 2005 Bose & Steering Wheel Controls",
+      "channel": "Tahoe Steve",
+      "views": 264204
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 206968,
+     "n": 2,
+     "best": {
+      "id": "7RQ8u_vwZmE",
+      "title": "2002-2006 Cadillac Escalade fuel filter replacement",
+      "channel": "NutzAboutBolts",
+      "views": 180415
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 128868,
+     "n": 4,
+     "best": {
+      "id": "K41uM0tZ0sk",
+      "title": "Spyder Auto How to Install: 2002-2003 Cadillac Escalade Headlight with LED Halo & Light Strip",
+      "channel": "Spyder Auto",
+      "views": 88957
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 113631,
+     "n": 3,
+     "best": {
+      "id": "W1e8nJE6-5w",
+      "title": "2002-2006 Cadillac Escalade oil change",
+      "channel": "NutzAboutBolts",
+      "views": 100639
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 104789,
+     "n": 5,
+     "best": {
+      "id": "6mYU-oA5cEE",
+      "title": "2002 Escalade A/C high side service port valve replacement",
+      "channel": "HTP jay",
+      "views": 33975
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 82515,
+     "n": 2,
+     "best": {
+      "id": "xbTKTC9PIo8",
+      "title": "Service Ride Control - C0660 - 2006 Cadillac Escalade ESV - Air Ride Suspension Compressor Pump",
+      "channel": "Just-Fix-in Garage",
+      "views": 62261
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 69348,
+     "n": 2,
+     "best": {
+      "id": "-vg52h3EBvI",
+      "title": "2004 Cadillac Escalade Won't Start or Crank Over | How to Fix a Car That Cranks or Doesn't Start",
+      "channel": "Valley Mobile Automotive",
+      "views": 61558
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "Qlh0ssb3zQA",
+     "title": "Top 5 Problems Cadillac Escalade SUV 2nd Generation 2002-06",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 270699
+    },
+    {
+     "id": "5qBC6J1kH1o",
+     "title": "2004 Escalade turn signal problems",
+     "channel": "Roger Decker",
+     "views": 5557
+    },
+    {
+     "id": "er_E25hE4VE",
+     "title": "2006 Cadillac Escalade \"Collectors Edition\" AKA The Best Generation FOR SALE by Specialty Motor Cars",
+     "channel": "Specialty Motor Cars",
+     "views": 96534
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "lincoln-navigator": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002
+   ],
+   "gen": "1998–2002 Lincoln Navigator",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 3533520,
+   "topics": [
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 329985,
+     "n": 4,
+     "best": {
+      "id": "yctAwEkrRX8",
+      "title": "How to Install Fuel Pump E2297S 1999 - 2002 Ford Expedition & 1999 Lincoln Navigator",
+      "channel": "Airtex-ASC Performance Pumps",
+      "views": 253495
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 227050,
+     "n": 6,
+     "best": {
+      "id": "FLotXtLay8Y",
+      "title": "1999 Lincoln Navigator Rear Suspension Problem",
+      "channel": "Blvdautorepair",
+      "views": 160023
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 82200,
+     "n": 7,
+     "best": {
+      "id": "v7xWBAUAHZ4",
+      "title": "How to Replace Upstream 02 Oxygen Sensor 1998-2002 Lincoln Navigator",
+      "channel": "TRQ",
+      "views": 22068
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 48362,
+     "n": 3,
+     "best": {
+      "id": "7gLfZaCRb7w",
+      "title": "Repairing Rear Door Release on 2001 Lincoln Navigator",
+      "channel": "Tommy Minor",
+      "views": 39598
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 27964,
+     "n": 6,
+     "best": {
+      "id": "CjfNCQq1LHw",
+      "title": "How to Replace Front Brakes 1998-2002 Lincoln Navigator",
+      "channel": "TRQ",
+      "views": 10353
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 19967,
+     "n": 4,
+     "best": {
+      "id": "DAsChsWHHQU",
+      "title": "Bypass Dash Heater Core 2002 Lincoln Navigator DIY 3/4\" to 5/8 Hose Adapter",
+      "channel": "Snap-off",
+      "views": 9964
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 18330,
+     "n": 1,
+     "best": {
+      "id": "_sCCQVVI_OE",
+      "title": "How to Replace Ignition Coil 1998-2002 Lincoln Navigator",
+      "channel": "TRQ",
+      "views": 18330
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 17729,
+     "n": 5,
+     "best": {
+      "id": "Yhvz9NJE6Qk",
+      "title": "How to program remote control key fob on a 2001 Lincoln Navigator",
+      "channel": "stevenofpa",
+      "views": 6009
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "714Zww3IMv4",
+     "title": "Top 5 Problems Lincoln Navigator SUV 1998-2002 1st Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 57918
+    },
+    {
+     "id": "qAinMg0Biog",
+     "title": "2001 LINCOLN Navigator - Reliable Auto Sales - Las Vegas, NV 89104",
+     "channel": "reliableautosales100",
+     "views": 874
+    },
+    {
+     "id": "1tf8rDh5dac",
+     "title": "2001 Lincoln Navigator 4WD|Walk Around Video|In Depth Review|Test Drive",
+     "channel": "Neighborhood Car Reviews",
+     "views": 50570
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2003,
+    2004,
+    2005,
+    2006
+   ],
+   "gen": "2003–2006 Lincoln Navigator",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 5483629,
+   "topics": [
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 308371,
+     "n": 5,
+     "best": {
+      "id": "iJiOTUqe060",
+      "title": "Lincoln Navigator EGR Valve Replacement & Upper Intake Removal 2003",
+      "channel": "Steven Ford",
+      "views": 146618
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 258542,
+     "n": 7,
+     "best": {
+      "id": "NbG2uSPML94",
+      "title": "Changing the fuel filter on a 2004 Lincoln Navigator",
+      "channel": "Breunig_Design1",
+      "views": 99213
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 242816,
+     "n": 5,
+     "best": {
+      "id": "rF6YbWr8mWk",
+      "title": "2004 Lincoln Navigator / Aviator Shifter is Stuck - Won't move from Park or move",
+      "channel": "The Human Swiss Army Knife",
+      "views": 184203
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 199331,
+     "n": 1,
+     "best": {
+      "id": "rCF3U9pfxIw",
+      "title": "Ignition Coil & Spark Plug Replacement - 2003 Lincoln Navigator",
+      "channel": "Steven Ford",
+      "views": 199331
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 179801,
+     "n": 2,
+     "best": {
+      "id": "DTyROVWnmP8",
+      "title": "2003-2006 Lincoln Navigator Power Door Locks Inoperative: Quick Diagnostic Methods",
+      "channel": "FordTechMakuloco",
+      "views": 167272
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 171447,
+     "n": 6,
+     "best": {
+      "id": "y57fEFApP18",
+      "title": "12 Volt Fuse Lincoln Navigator (2003-2013) - OBD Port Not Working Fix",
+      "channel": "Wheels Tips!",
+      "views": 69106
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 125768,
+     "n": 5,
+     "best": {
+      "id": "SykRsn253I8",
+      "title": "2003 Navigator Lots not working , suspension, door locks , clock, climate control",
+      "channel": "New Level Auto",
+      "views": 42029
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 71952,
+     "n": 3,
+     "best": {
+      "id": "oTfaoXIyXq0",
+      "title": "2002-2004 Lincoln Navigator 5.4 Thermostat removal - Code p0128",
+      "channel": "Falcon's Garage",
+      "views": 62447
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "ENhw575wfoo",
+     "title": "IMPORTANT Tech Tip For 2003 To 2006 Lincoln Navigator And Ford Expedition Conversion Kit Buyers",
+     "channel": "Strutmasters",
+     "views": 3871
+    },
+    {
+     "id": "PNYL4c9K5x4",
+     "title": "2006 lincoln navigator electrical problems fix easy....",
+     "channel": "David Cerda",
+     "views": 1960
+    },
+    {
+     "id": "b685t4eEw2s",
+     "title": "Review: 2004 Lincoln Navigator",
+     "channel": "MyRide on Autobytel",
+     "views": 153108
+    }
+   ],
+   "costs": null
+  }
+ ],
  "mitsubishi-outlander": [
   {
    "years": [
@@ -67320,7 +67699,26 @@
      "views": 368
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 400,
+       "lo": 400.0,
+       "hi": 400.0,
+       "n": 2,
+       "videos": 2,
+       "id": "GejnPErKRV0",
+       "t": 20,
+       "title": "2004 Mitsubishi Outlander"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -67658,7 +68056,26 @@
      "views": 2847198
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 600,
+       "lo": 490.0,
+       "hi": 6000.0,
+       "n": 3,
+       "videos": 3,
+       "id": "-9mYFjvPeiY",
+       "t": 215,
+       "title": "Let’s talk price! 2023 Outlander SE Black Edition Upgrade!"
+      }
+     ]
+    ]
+   }
   }
  ],
  "chevrolet-aveo": [
@@ -67789,7 +68206,26 @@
      "views": 17039
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 75,
+       "lo": 33.0,
+       "hi": 250.0,
+       "n": 7,
+       "videos": 7,
+       "id": "XY60qyH1DHY",
+       "t": 649,
+       "title": "2009 aveo 5 tps issue/ how to fix"
+      }
+     ]
+    ]
+   }
   }
  ],
  "lexus-is": [
