@@ -31781,5 +31781,112 @@
 }
 ]
 }
+],
+"buick-enclave": [
+{
+"sid": "buick-enclave-g1",
+"y0": 2008,
+"y1": 2017,
+"label": "2008–2017",
+"videos": 199,
+"praise": [
+[
+"Power",
+11
+],
+[
+"Comfort and ride",
+5
+],
+[
+"Space and practicality",
+5
+],
+[
+"Looks",
+5
+]
+],
+"trouble": [
+[
+"Battery / alternator / starter",
+4
+],
+[
+"Coolant leaks / water pump / overheating",
+3
+],
+[
+"Electrical / wiring / TIPM",
+3
+]
+],
+"top": [
+{
+"id": "sCq91yc6h-Q",
+"title": "Top 5 Problems Buick Enclave SUV 1st Generation 2008-17",
+"views": 655344,
+"ch": "1A Auto: Repair Tips & Secrets Only Mechanics Know"
+},
+{
+"id": "CBN6mGga0L8",
+"title": "2010 Buick Enclave CXL Start Up, Test Drive, and Review",
+"views": 400005,
+"ch": "Saabkyle04"
+},
+{
+"id": "aAdDnRnXDz8",
+"title": "2014 Buick Enclave Review and Road Test",
+"views": 235041,
+"ch": "Auto Buyers Guide | Alex on Autos"
+}
+]
+},
+{
+"sid": "buick-enclave-g2",
+"y0": 2018,
+"y1": 2024,
+"label": "2018–2024",
+"videos": 200,
+"praise": [
+[
+"Looks",
+15
+],
+[
+"Space and practicality",
+14
+],
+[
+"Fun to drive",
+12
+],
+[
+"Comfort and ride",
+8
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "jLhgoJ2cfmU",
+"title": "2019 Buick Enclave - Review & Road Test",
+"views": 208339,
+"ch": "Kelley Blue Book"
+},
+{
+"id": "Jqpe-UA60X8",
+"title": "2018/2019 Buick Enclave Avenir | REVIEW • Car Seats Installed • Test Drive",
+"views": 165948,
+"ch": "kateschwanke"
+},
+{
+"id": "ILXsKDPFC8o",
+"title": "2018 Buick Enclave Review and Road Test - In 4K!",
+"views": 161032,
+"ch": "Auto Buyers Guide | Alex on Autos"
+}
+]
+}
 ]
 }

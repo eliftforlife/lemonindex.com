@@ -66259,6 +66259,229 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+   ],
+   "gen": "2018–2024 Buick Enclave",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 5371303,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 244078,
+     "n": 5,
+     "best": {
+      "id": "eW8KGQEutqc",
+      "title": "Buick Enclave Key Fob Battery Replacement (2018 - 2021)",
+      "channel": "FobBattery",
+      "views": 83621
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 191157,
+     "n": 3,
+     "best": {
+      "id": "4CMOUnGispc",
+      "title": "Change GM 3.6 9T65 Transmission Fluid | 2018-2024 Buick Enclave, Chevy Traverse Transmission Issues",
+      "channel": "TeamDIYNow",
+      "views": 71015
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 118759,
+     "n": 3,
+     "best": {
+      "id": "azaokorzukQ",
+      "title": "Buick Enclave Cabin Air Filter Replacement ( 2018 2019 2020 2021 2022 )",
+      "channel": "Undercar Experts",
+      "views": 70361
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 83942,
+     "n": 4,
+     "best": {
+      "id": "3E8NPGd21ws",
+      "title": "2018+ Buick Enclave - Set Parking Brakes to Service Mode - Manual and Scanner",
+      "channel": "YOUCANIC",
+      "views": 46320
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 54242,
+     "n": 2,
+     "best": {
+      "id": "gauI3NO9Hm0",
+      "title": "2018-2023 Buick Enclave Oil Change DIY",
+      "channel": "YOUCANIC",
+      "views": 39375
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 29759,
+     "n": 1,
+     "best": {
+      "id": "NFAV_qP1SPE",
+      "title": "2018+ Buick Enclave - How to Check & Add Engine Coolant",
+      "channel": "YOUCANIC",
+      "views": 29759
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 16261,
+     "n": 1,
+     "best": {
+      "id": "cwHRqlyJdQw",
+      "title": "2018-2023 Buick Enclave Tail Light Replacement",
+      "channel": "YOUCANIC",
+      "views": 16261
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 11416,
+     "n": 1,
+     "best": {
+      "id": "dbjTBmg26M8",
+      "title": "Buick Enclave Spark Plug Change 2018-2024 (Part 1) - Bank 2 Plugs",
+      "channel": "Kevin's Way Works",
+      "views": 11416
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "pCEN1V2RnUE",
+     "title": "Buick Enclave 2nd Gen 2018 to 2022 common problems, issues, defects, recalls and complaints",
+     "channel": "HOWSTUFFINMYCARWORKS",
+     "views": 32848
+    },
+    {
+     "id": "0Lk0_wQeq54",
+     "title": "2019 Buick Enclave Problems and Reliability. Should you buy it?",
+     "channel": "OBD Insights",
+     "views": 14901
+    },
+    {
+     "id": "8RelnDVu6Ps",
+     "title": "2018-2022 Buick Enclave: Defects, Faults, Recalls, and Common Problems",
+     "channel": "HOWSTUFFINMYCARWORKS",
+     "views": 7672
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "lexus-is": [
+  {
+   "years": [
+    2001,
+    2002,
+    2003,
+    2004,
+    2005
+   ],
+   "gen": "2001–2005 Lexus IS",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 116,
+   "views": 4611832,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 76443,
+     "n": 1,
+     "best": {
+      "id": "z5fihNhgsy8",
+      "title": "2001 Lexus IS300 Radio Install & Dash Removal - Stinger Elev8, 8-inch Touchscreen",
+      "channel": "Stinger",
+      "views": 76443
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 71638,
+     "n": 1,
+     "best": {
+      "id": "t8_a3zUtdB0",
+      "title": "How To Replace The Radiator And Thermostat On A 1999-2005 Lexus IS 300: A Step-By-Step Guide",
+      "channel": "How to Automotive",
+      "views": 71638
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 11781,
+     "n": 1,
+     "best": {
+      "id": "k2AF_hKV3S0",
+      "title": "Diagnosing And Replacing The Brake Booster On My Lexus Is300 (2001-2005) Step-By-Step",
+      "channel": "Rich With Rick",
+      "views": 11781
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 8402,
+     "n": 1,
+     "best": {
+      "id": "HgxhAGXY2rU",
+      "title": "Lexus IS300 2001-2005 | How to reset Maintenance Required light #lexus #is300",
+      "channel": "Silver SS Motoring",
+      "views": 8402
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 50,
+     "n": 1,
+     "best": {
+      "id": "YL1KBMuJyFg",
+      "title": "2005 Lexus Is300 4 Door Sedan Replacement Parts Car Parting Out #20-026-3 Fix your car OEM",
+      "channel": "AH Parts Dismantlers",
+      "views": 50
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "mtxoUg0zthw",
+     "title": "2001-2005 Lexus IS300 Buyer's Guide (Common Problems, Options, Engine)",
+     "channel": "Useful Vids",
+     "views": 40245
+    },
+    {
+     "id": "_sZgnXotSsI",
+     "title": "Top 5 Problems Lexus IS 250 Sedan 2005-2016 2nd Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 25047
+    },
+    {
+     "id": "KR__yfnq06E",
+     "title": "Lexus IS 200 Problems | Weaknesses of the Used Lexus IS200 1999 - 2005",
+     "channel": "MasterCarsPro",
+     "views": 10286
+    }
+   ],
+   "costs": null
   }
  ],
  "hyundai-veloster": [
