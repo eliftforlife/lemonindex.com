@@ -31403,5 +31403,108 @@
 }
 ]
 }
+],
+"volkswagen-beetle": [
+{
+"sid": "volkswagen-beetle-g1",
+"y0": 1998,
+"y1": 2010,
+"label": "1998–2010",
+"videos": 198,
+"praise": [
+[
+"Reliability",
+7
+],
+[
+"Looks",
+6
+],
+[
+"Power",
+5
+],
+[
+"Fun to drive",
+4
+]
+],
+"trouble": [
+[
+"Coolant leaks / water pump / overheating",
+4
+],
+[
+"Electrical / wiring / TIPM",
+3
+]
+],
+"top": [
+{
+"id": "mnw-9Utk54g",
+"title": "Top 5 Problems Volkswagen New Beetle Coupe 1998-2010 1st Generation",
+"views": 465892,
+"ch": "1A Auto: Repair Tips & Secrets Only Mechanics Know"
+},
+{
+"id": "kkLiE-oImrI",
+"title": "Review: 2007 Volkswagen New Beetle",
+"views": 180811,
+"ch": "MyRide on Autobytel"
+},
+{
+"id": "vkREqXEoVFw",
+"title": "Should You Buy a VW BEETLE? (Test Drive & Review 2012 Volkswagen New Beetle)",
+"views": 160231,
+"ch": "High Peak Autos"
+}
+]
+},
+{
+"sid": "volkswagen-beetle-g2",
+"y0": 2012,
+"y1": 2019,
+"label": "2012–2019",
+"videos": 197,
+"praise": [
+[
+"Fun to drive",
+13
+],
+[
+"Looks",
+10
+],
+[
+"Power",
+10
+],
+[
+"Reliability",
+6
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "SJC0xtWn0kY",
+"title": "Volkswagen Beetle Cabriolet (convertible) 2013 review - CarBuyer",
+"views": 460620,
+"ch": "Carbuyer"
+},
+{
+"id": "oRiGKtwoAG0",
+"title": "2015 VW Beetle R-Line - Review & Test Drive",
+"views": 349238,
+"ch": "Engineering Explained"
+},
+{
+"id": "b6ItvGl2AqM",
+"title": "VW Beetle Turbo 2012 Test Drive & Car Review by RoadflyTV with Emme Hall",
+"views": 342147,
+"ch": "RoadflyTV"
+}
+]
+}
 ]
 }
