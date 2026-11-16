@@ -30159,5 +30159,162 @@
 }
 ]
 }
+],
+"toyota-sequoia": [
+{
+"sid": "toyota-sequoia-g1",
+"y0": 2001,
+"y1": 2007,
+"label": "2001–2007",
+"videos": 199,
+"praise": [
+[
+"Reliability",
+21
+],
+[
+"Looks",
+11
+],
+[
+"Power",
+9
+],
+[
+"Space and practicality",
+9
+]
+],
+"trouble": [
+[
+"Rust",
+9
+],
+[
+"Steering / wobble / front end",
+7
+],
+[
+"Coolant leaks / water pump / overheating",
+7
+],
+[
+"Oil leaks (gaskets, seals, housings)",
+5
+]
+],
+"top": [
+{
+"id": "lbgsAqZ5ghk",
+"title": "Is 400K miles the end of the road for this '02 Toyota Sequoia? See the CAR WIZARD's inspection",
+"views": 353467,
+"ch": "Car Wizard"
+},
+{
+"id": "mxE_v9fHsRA",
+"title": "Top 5 Problems Toyota Sequoia SUV 1st Generation 2001-07",
+"views": 312084,
+"ch": "1A Auto: Repair Tips & Secrets Only Mechanics Know"
+},
+{
+"id": "cPfQcIXmFiU",
+"title": "2000-2006 Toyota Tundra Reliability And Toyota Sequoia Reliability",
+"views": 222154,
+"ch": "Nathans Porsche Workshop"
+}
+]
+},
+{
+"sid": "toyota-sequoia-g2",
+"y0": 2008,
+"y1": 2022,
+"label": "2008–2022",
+"videos": 199,
+"praise": [
+[
+"Reliability",
+18
+],
+[
+"Space and practicality",
+14
+],
+[
+"Power",
+11
+],
+[
+"Looks",
+10
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "ojp_mM6UZGY",
+"title": "2015 Toyota Sequoia Platinum 4WD Start Up, Exhaust, and In Depth Review",
+"views": 729307,
+"ch": "Saabkyle04"
+},
+{
+"id": "C9ClIMO6UE8",
+"title": "2012 Toyota Sequoia Test Drive & SUV Video Review",
+"views": 479039,
+"ch": "UsedCarsTV"
+},
+{
+"id": "zp1r7L1UT_M",
+"title": "2019 Toyota Sequoia Platinum full feature review and first look.",
+"views": 351402,
+"ch": "Michael Linterman"
+}
+]
+},
+{
+"sid": "toyota-sequoia-g3",
+"y0": 2023,
+"y1": 2025,
+"label": "2023–2025",
+"videos": 200,
+"praise": [
+[
+"Power",
+28
+],
+[
+"Looks",
+28
+],
+[
+"Space and practicality",
+26
+],
+[
+"Reliability",
+24
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "oCk7BJzvCmE",
+"title": "Should You Buy a 2023 Toyota Sequoia? In Depth Review By a Mechanic",
+"views": 701459,
+"ch": "The Car Care Nut"
+},
+{
+"id": "8NbujML5ibk",
+"title": "2023 Toyota Sequoia TRD PRO Review and Snow Adventure",
+"views": 591050,
+"ch": "Driving Sports TV"
+},
+{
+"id": "j3Zomv68MFU",
+"title": "2023 Toyota Sequoia TRD PRO Review and Off-Road Test",
+"views": 515702,
+"ch": "Driving Sports TV"
+}
+]
+}
 ]
 }
