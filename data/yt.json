@@ -65024,7 +65024,26 @@
      "views": 32556
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 250,
+       "lo": 90.0,
+       "hi": 1500.0,
+       "n": 5,
+       "videos": 5,
+       "id": "3Ib4DmoJaag",
+       "t": 684,
+       "title": "Everything you need to know before buying a Nissan Xterra 2nd Gen | Car-addiction"
+      }
+     ]
+    ]
+   }
   }
  ],
  "toyota-sequoia": [
@@ -65288,6 +65307,64 @@
      "title": "2018/19 Toyota Sequoia Platinum - Ol’ Reliable",
      "channel": "Bern on Cars",
      "views": 51073
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2023–2025 Toyota Sequoia",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 36663120,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 11698,
+     "n": 1,
+     "best": {
+      "id": "S_oYmqADUfM",
+      "title": "How & When To Replace Hybrid Battery Fan Filter On Your Toyota Sequoia 2023-2025",
+      "channel": "Donny The Late Model Tech",
+      "views": 11698
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 5404,
+     "n": 1,
+     "best": {
+      "id": "X5DdTMBEpo4",
+      "title": "How to Change Your Oil in a 3rd Gen Toyota Sequoia TRD Pro, and Add the Proper Fumoto Valve!",
+      "channel": "NitroZ18 Fishing",
+      "views": 5404
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "oCk7BJzvCmE",
+     "title": "Should You Buy a 2023 Toyota Sequoia? In Depth Review By a Mechanic",
+     "channel": "The Car Care Nut",
+     "views": 701459
+    },
+    {
+     "id": "MhOc5T2J4rA",
+     "title": "Should you buy a Toyota Sequoia? Or wait for the 2023 model?",
+     "channel": "The Car Care Nut",
+     "views": 176629
+    },
+    {
+     "id": "8NbujML5ibk",
+     "title": "2023 Toyota Sequoia TRD PRO Review and Snow Adventure",
+     "channel": "Driving Sports TV",
+     "views": 591050
     }
    ],
    "costs": null
