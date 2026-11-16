@@ -30316,5 +30316,58 @@
 }
 ]
 }
+],
+"dodge-magnum": [
+{
+"sid": "dodge-magnum-g1",
+"y0": 2005,
+"y1": 2008,
+"label": "2005–2008",
+"videos": 197,
+"praise": [
+[
+"Power",
+7
+],
+[
+"Looks",
+5
+],
+[
+"Reliability",
+4
+]
+],
+"trouble": [
+[
+"Coolant leaks / water pump / overheating",
+5
+],
+[
+"Electrical / wiring / TIPM",
+3
+]
+],
+"top": [
+{
+"id": "BIdy3HIwZis",
+"title": "2008-2011 Chrysler 300, Dodge Charger, and Dodge Magnum starter relay issues",
+"views": 292622,
+"ch": "MotorCity Mechanic"
+},
+{
+"id": "BWCvfHic1hg",
+"title": "2006 Dodge Magnum SRT-8 Review",
+"views": 188260,
+"ch": "WebRidesTV"
+},
+{
+"id": "EFZV9ekcuv8",
+"title": "2005 Dodge Magnum HEMI 5.7L. The highs and lows of buying a 2005 Dodge Magnum",
+"views": 147763,
+"ch": "AtomicCarReview - RU"
+}
+]
+}
 ]
 }
