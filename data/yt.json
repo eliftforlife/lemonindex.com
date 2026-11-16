@@ -64995,6 +64995,134 @@
    "costs": null
   }
  ],
+ "dodge-nitro": [
+  {
+   "years": [
+    2007,
+    2008,
+    2009,
+    2010,
+    2011
+   ],
+   "gen": "2007–2011 Dodge Nitro",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 7154460,
+   "topics": [
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 403988,
+     "n": 6,
+     "best": {
+      "id": "Xyo7Y3ZiJqY",
+      "title": "How to Replace Cabin Air Filter 2010 Dodge Nitro | AQ1131",
+      "channel": "Filterheads",
+      "views": 211626
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 201327,
+     "n": 3,
+     "best": {
+      "id": "XDLjDgRFRbw",
+      "title": "Oil Change & Filter Replacement Dodge Nitro 2007-2012",
+      "channel": "2CarPros",
+      "views": 174224
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 138779,
+     "n": 4,
+     "best": {
+      "id": "a8EZWKc25zc",
+      "title": "2007 Dodge Nitro wont start ~ one possible solution",
+      "channel": "Kai's Youtube Account",
+      "views": 60755
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 133787,
+     "n": 3,
+     "best": {
+      "id": "NSwg9gIt2iI",
+      "title": "2007-2012 Dodge Nitro 3.7L Spark plug replacement",
+      "channel": "MechDjango",
+      "views": 81895
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 98577,
+     "n": 3,
+     "best": {
+      "id": "_yEX-DHrQxQ",
+      "title": "Thermostat replacement 2008 Dodge Nitro 4.0L V6 intake manifold removal",
+      "channel": "Fixing cars and stuff",
+      "views": 47229
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 72240,
+     "n": 3,
+     "best": {
+      "id": "eyKJo8qXHfg",
+      "title": "How To Replace 42RLE Transmission Valve Body Shift Solenoid Jeep Liberty Dodge Nitro 2008 2014 Hard",
+      "channel": "The World as Seen by Tom",
+      "views": 61386
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 35473,
+     "n": 4,
+     "best": {
+      "id": "pJmJNwxVfWw",
+      "title": "2007 Dodge nitro Overheating solutions",
+      "channel": "Kredit Keys",
+      "views": 22492
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 33723,
+     "n": 5,
+     "best": {
+      "id": "wpSRnVDZyh4",
+      "title": "Diagnosing the fuel pump, fuel pump wiring 2007 Dodge Nitro",
+      "channel": "2012nugget",
+      "views": 12869
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "kogdTdQHTqc",
+     "title": "2008 Dodge Nitro, problema de encendido, ( Won't start problems )",
+     "channel": "Rios Mechanic Shop Llc,",
+     "views": 115156
+    },
+    {
+     "id": "UG1XVfw1atc",
+     "title": "Dodge Nitro SUVs 2007 to 2012 Frequent and common problems, issues, defects, recalls and complaints",
+     "channel": "HOWSTUFFINMYCARWORKS",
+     "views": 40567
+    },
+    {
+     "id": "TNEOoub6GW0",
+     "title": "2007 Dodge Nitro R/T Problems",
+     "channel": "Unsupervised",
+     "views": 7796
+    }
+   ],
+   "costs": null
+  }
+ ],
  "mercury-cougar": [
   {
    "years": [

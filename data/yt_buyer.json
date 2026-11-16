@@ -29808,5 +29808,50 @@
 }
 ]
 }
+],
+"dodge-nitro": [
+{
+"sid": "dodge-nitro-g1",
+"y0": 2007,
+"y1": 2011,
+"label": "2007–2011",
+"videos": 199,
+"praise": [
+[
+"Looks",
+5
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+5
+],
+[
+"Coolant leaks / water pump / overheating",
+4
+]
+],
+"top": [
+{
+"id": "cArrrbfK2Ok",
+"title": "Regular Car Reviews: 2009 Dodge Nitro SLT",
+"views": 509492,
+"ch": "Regular Car Reviews"
+},
+{
+"id": "7Pw5AbZZMKk",
+"title": "Roadfly.com - 2007 Dodge Nitro Review",
+"views": 308678,
+"ch": "RoadflyTV"
+},
+{
+"id": "0LNjpZLL9_E",
+"title": "2009 Dodge Nitro Video Review",
+"views": 220535,
+"ch": "Cars.com"
+}
+]
+}
 ]
 }
