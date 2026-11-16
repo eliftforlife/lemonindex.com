@@ -31506,5 +31506,99 @@
 }
 ]
 }
+],
+"hyundai-veloster": [
+{
+"sid": "hyundai-veloster-g1",
+"y0": 2012,
+"y1": 2017,
+"label": "2012–2017",
+"videos": 192,
+"praise": [
+[
+"Fun to drive",
+16
+],
+[
+"Looks",
+11
+],
+[
+"Power",
+10
+],
+[
+"Space and practicality",
+4
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "2vVOA21n2hA",
+"title": "2013 Hyundai Veloster Turbo Start Up, Exhaust, and In Depth Review",
+"views": 1266309,
+"ch": "Saabkyle04"
+},
+{
+"id": "LUggzyAm9aM",
+"title": "Hyundai Veloster 2012 Test Drive & Car Review by RoadflyTV with Emme Hall",
+"views": 1214083,
+"ch": "RoadflyTV"
+},
+{
+"id": "lJUEyiqrowQ",
+"title": "Regular Car Reviews: 2013 Hyundai Veloster Turbo",
+"views": 941463,
+"ch": "Regular Car Reviews"
+}
+]
+},
+{
+"sid": "hyundai-veloster-g2",
+"y0": 2019,
+"y1": 2022,
+"label": "2019–2022",
+"videos": 194,
+"praise": [
+[
+"Fun to drive",
+35
+],
+[
+"Looks",
+24
+],
+[
+"Power",
+20
+],
+[
+"Value for money",
+10
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "xaV8Cy_tcEU",
+"title": "2019 Hyundai Veloster N Review - GTI Killer? Yes. Type R Killer? Maybe...",
+"views": 807184,
+"ch": "TheStraightPipes"
+},
+{
+"id": "PrIRQSbNI78",
+"title": "2019 Hyundai Veloster Turbo Review - Much Improved",
+"views": 707621,
+"ch": "TheStraightPipes"
+},
+{
+"id": "2DL7cAsCR6s",
+"title": "EASY TO GO FAST! 2022 Hyundai Veloster N DCT Review",
+"views": 695921,
+"ch": "TheStraightPipes"
+}
+]
+}
 ]
 }

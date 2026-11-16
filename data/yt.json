@@ -66087,6 +66087,202 @@
      "views": 102724
     }
    ],
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 100,
+       "lo": 100.0,
+       "hi": 4000.0,
+       "n": 5,
+       "videos": 5,
+       "id": "wWhM4MbCfqA",
+       "t": 592,
+       "title": "2005 Dodge Stratus for sale"
+      }
+     ]
+    ]
+   }
+  }
+ ],
+ "hyundai-veloster": [
+  {
+   "years": [
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017
+   ],
+   "gen": "2012–2017 Hyundai Veloster",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 16788007,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 123565,
+     "n": 2,
+     "best": {
+      "id": "gKgQcv0uQIg",
+      "title": "Hyundai Veloster Key Fob Battery Replacement (2012 - 2017)",
+      "channel": "FobBattery",
+      "views": 102784
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 88127,
+     "n": 2,
+     "best": {
+      "id": "wjHr1i_naLU",
+      "title": "ABS & TRACTION LIGHT FIXED FAST & EASY ON A 2013 HYUNDAI VELOSTER, SONATA, ELANTRA, OPTIMA, FORTE",
+      "channel": "Hidalgo Motors Co TV",
+      "views": 74325
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 74454,
+     "n": 3,
+     "best": {
+      "id": "7FKRsm7pGsI",
+      "title": "No Crank Won't Start Problem- 2016 HYUNDAI VELOSTER- One Click, Fixed...",
+      "channel": "Peter L",
+      "views": 34636
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 70442,
+     "n": 3,
+     "best": {
+      "id": "SDt_aFSrKeE",
+      "title": "2013 Hyundai Veloster turbo bad ac switch problem solve",
+      "channel": "Ainoy S",
+      "views": 54845
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 69424,
+     "n": 3,
+     "best": {
+      "id": "VnHThIelgQg",
+      "title": "How to Fix an Engine Knocking Noise on a 2012 Hyundai Veloster (Episode 1)",
+      "channel": "PIBRACING CHANNEL",
+      "views": 42563
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 57295,
+     "n": 3,
+     "best": {
+      "id": "-n-qr7oMCqU",
+      "title": "2017 Veloster Double Clutch Trans issues Diag & Fix",
+      "channel": "DTech Engineering",
+      "views": 35273
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 46205,
+     "n": 1,
+     "best": {
+      "id": "k2fsL73JQ1E",
+      "title": "Spark Plug and Coil Replacement for 2013 Hyundai Veloster Turbo",
+      "channel": "baldassassin1",
+      "views": 46205
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 39937,
+     "n": 2,
+     "best": {
+      "id": "PaQWkhj6g4U",
+      "title": "2012 Veloster Knock Sensor Quick Replacement Without Removing Intake | Repair your own car in 20 min",
+      "channel": "Xlr8 Auto",
+      "views": 20801
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "3xMfl8P0Kjg",
+     "title": "2016 Hyundai Veloster Rally Edition Shifter Problems | Autoblog Short Cuts",
+     "channel": "Autoblog",
+     "views": 19345
+    },
+    {
+     "id": "S84hX3kFWyk",
+     "title": "Problems with my 2013 Veloster",
+     "channel": "Patrick Riplinger",
+     "views": 17548
+    },
+    {
+     "id": "2vVOA21n2hA",
+     "title": "2013 Hyundai Veloster Turbo Start Up, Exhaust, and In Depth Review",
+     "channel": "Saabkyle04",
+     "views": 1266309
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2019,
+    2020,
+    2021,
+    2022
+   ],
+   "gen": "2019–2022 Hyundai Veloster",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 16924031,
+   "topics": [
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 5445,
+     "n": 1,
+     "best": {
+      "id": "0VRYss8TaXY",
+      "title": "2019 Hyundai Veloster Door Panel Removal",
+      "channel": "drpanelpopper",
+      "views": 5445
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "npVk2JJgdy0",
+     "title": "Hyundai Veloster BIG Problems (2nd Gen)",
+     "channel": "BTECH AUTOMOTIVE",
+     "views": 13597
+    },
+    {
+     "id": "xaV8Cy_tcEU",
+     "title": "2019 Hyundai Veloster N Review - GTI Killer? Yes. Type R Killer? Maybe...",
+     "channel": "TheStraightPipes",
+     "views": 807184
+    },
+    {
+     "id": "PrIRQSbNI78",
+     "title": "2019 Hyundai Veloster Turbo Review - Much Improved",
+     "channel": "TheStraightPipes",
+     "views": 707621
+    }
+   ],
    "costs": null
   }
  ],
