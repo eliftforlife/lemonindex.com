@@ -31600,5 +31600,41 @@
 }
 ]
 }
+],
+"ford-freestar": [
+{
+"sid": "ford-freestar-g1",
+"y0": 2004,
+"y1": 2007,
+"label": "2004–2007",
+"videos": 200,
+"praise": [
+[
+"Reliability",
+3
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "l6NPCFBmpcE",
+"title": "2006 Ford Freestar Review",
+"views": 44513,
+"ch": "Shooting Cars"
+},
+{
+"id": "X9gsCm5567c",
+"title": "Review for  2004 Ford Freestar SEL family mini van 3rd row seat leather",
+"views": 18754,
+"ch": "Cars-Global"
+},
+{
+"id": "Ovikrbpu07k",
+"title": "2007 Ford Freestar SEL 4.2L Review & Test Drive",
+"views": 15467,
+"ch": "Intechdude300"
+}
+]
+}
 ]
 }
