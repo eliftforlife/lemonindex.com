@@ -66389,6 +66389,132 @@
    "costs": null
   }
  ],
+ "mazda-626": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002
+   ],
+   "gen": "1998–2002 Mazda 626",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 1899605,
+   "topics": [
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 115658,
+     "n": 4,
+     "best": {
+      "id": "EL0QExap-cs",
+      "title": "1998,1999, 2000, 2001, 2002 Mazda 626 Fuel pump replacement! Part 1",
+      "channel": "AnythingAuto",
+      "views": 108454
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 108433,
+     "n": 4,
+     "best": {
+      "id": "ZmfLCc5QB-E",
+      "title": "How to Replace the Alternator on a 2002 Mazda 626 2.3L",
+      "channel": "The Feesher",
+      "views": 68186
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 56431,
+     "n": 2,
+     "best": {
+      "id": "3vXYmhAg4pw",
+      "title": "2001 Mazda 626 2.0L petrol EGR valve removal & cleaning",
+      "channel": "TC Tony Clarke",
+      "views": 54691
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 50812,
+     "n": 1,
+     "best": {
+      "id": "shbDNvV0_Cg",
+      "title": "2001 Mazda 626 driving belts replacement",
+      "channel": "Alexey Gavrilov",
+      "views": 50812
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 47024,
+     "n": 4,
+     "best": {
+      "id": "5ccR-_2QO6w",
+      "title": "2002 Mazda 626 thermostat replacement",
+      "channel": "Andy Anderson",
+      "views": 24915
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 4275,
+     "n": 1,
+     "best": {
+      "id": "4s8letg5Llo",
+      "title": "Diagnosing A No Start..2002 Mazda 626 Engine Won't Crank...Solved...",
+      "channel": "Peter L",
+      "views": 4275
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 3393,
+     "n": 1,
+     "best": {
+      "id": "AZGODuvFYOE",
+      "title": "Oil Change on 2001 Mazda 626",
+      "channel": "Car DIY",
+      "views": 3393
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 1514,
+     "n": 1,
+     "best": {
+      "id": "Z73DpB_l-Mk",
+      "title": "2000 Mazda 626 2.0l P1746 Pressure Control Solenoid A Transmission Fault Code? Not The Transmission?",
+      "channel": "Robert Dotterer (Dotterer's Auto Service)",
+      "views": 1514
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "fpyQ3_UB7JQ",
+     "title": "Mazda 626 GF 1.8 1998 Review and Test Drive",
+     "channel": "Встретимся на дороге / #тачкотоксикоз",
+     "views": 79412
+    },
+    {
+     "id": "9gni43gxowc",
+     "title": "Mazda 626 GT Review (2000)",
+     "channel": "Men and Motors",
+     "views": 44682
+    },
+    {
+     "id": "VXXJDzMjOG4",
+     "title": "SOLD 2002 Mazda 626 LX Meticulous Motors Inc For Sale LOOK!",
+     "channel": "MeticulousMotors",
+     "views": 26291
+    }
+   ],
+   "costs": null
+  }
+ ],
  "lexus-is": [
   {
    "years": [

@@ -32058,5 +32058,49 @@
 }
 ]
 }
+],
+"mazda-626": [
+{
+"sid": "mazda-626-g5",
+"y0": 1998,
+"y1": 2002,
+"label": "1998–2002",
+"videos": 198,
+"praise": [
+[
+"Power",
+7
+],
+[
+"Reliability",
+6
+],
+[
+"Fun to drive",
+5
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "fpyQ3_UB7JQ",
+"title": "Mazda 626 GF 1.8 1998 Review and Test Drive",
+"views": 79412,
+"ch": "Встретимся на дороге / #тачкотоксикоз"
+},
+{
+"id": "9gni43gxowc",
+"title": "Mazda 626 GT Review (2000)",
+"views": 44682,
+"ch": "Men and Motors"
+},
+{
+"id": "IUfG2N7DliY",
+"title": "MY MAACO PAINT JOB REVIEW | 1998 MAZDA 626 LX!",
+"views": 15853,
+"ch": "Shawn Locklear"
+}
+]
+}
 ]
 }
