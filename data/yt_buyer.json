@@ -29998,5 +29998,53 @@
 }
 ]
 }
+],
+"mazda-cx-7": [
+{
+"sid": "mazda-cx-7-g1",
+"y0": 2007,
+"y1": 2012,
+"label": "2007–2012",
+"videos": 200,
+"praise": [
+[
+"Fun to drive",
+7
+],
+[
+"Looks",
+5
+],
+[
+"Reliability",
+4
+],
+[
+"Space and practicality",
+4
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "hRPEgpbyAFU",
+"title": "2010 Mazda CX-7 - Drive Time review | TestDriveNow",
+"views": 248007,
+"ch": "Steve Hammes New Car Reviews"
+},
+{
+"id": "3W2RvuUnB6o",
+"title": "Ahead of Its Time | 2011 Mazda CX-7 Review",
+"views": 145509,
+"ch": "Kirk Kreifels"
+},
+{
+"id": "B_3P_i9v2Sg",
+"title": "2011 Mazda CX-7 | an average guy's review",
+"views": 140328,
+"ch": "average guy tested"
+}
+]
+}
 ]
 }

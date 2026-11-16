@@ -65027,6 +65027,135 @@
    "costs": null
   }
  ],
+ "mazda-cx-7": [
+  {
+   "years": [
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012
+   ],
+   "gen": "2007–2012 Mazda CX-7",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 5719489,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 247868,
+     "n": 6,
+     "best": {
+      "id": "cFOqQ399LJ0",
+      "title": "2008 Mazda CX-7 Alternator Replacement - Part 1",
+      "channel": "Hawaii4Ewa",
+      "views": 86554
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 111307,
+     "n": 3,
+     "best": {
+      "id": "0vp9F5gon18",
+      "title": "How to Replace Cabin Air Filter 2007 Mazda CX-7 | AQ1138",
+      "channel": "Filterheads",
+      "views": 94950
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 77482,
+     "n": 3,
+     "best": {
+      "id": "UXXAu3Wggl0",
+      "title": "How to Check Oil and Fluids in Mazda CX-7 CX7 2007-2012",
+      "channel": "repairED",
+      "views": 43940
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 58509,
+     "n": 1,
+     "best": {
+      "id": "tvtfm_3k1bI",
+      "title": "Mazda CX-7 Fuel pump replacement ( 2007 to 2012 )",
+      "channel": "Fix it Felix",
+      "views": 58509
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 49434,
+     "n": 4,
+     "best": {
+      "id": "Td9uoCpuLM8",
+      "title": "How to change Camshaft Position Sensor 2007 Mazda Cx7",
+      "channel": "Dave Whitman",
+      "views": 18962
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 31321,
+     "n": 2,
+     "best": {
+      "id": "J9R2BQgHxJ0",
+      "title": "2010 Mazda CX-7 Transmission Fluid + Filter Change",
+      "channel": "deadbugdoug",
+      "views": 27845
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 24672,
+     "n": 1,
+     "best": {
+      "id": "3Spdhrqr6L8",
+      "title": "Thermostat replacement on a 2011 Mazda CX-7",
+      "channel": "MAPAUTO",
+      "views": 24672
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 24663,
+     "n": 1,
+     "best": {
+      "id": "PVs5hgtyrNs",
+      "title": "MAZDA CX-7 REAR SHOCKS How To REPLACE 2007-2012 replacement change",
+      "channel": "NoNonsenseKnowHow",
+      "views": 24663
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "oSF9wkJaXpk",
+     "title": "2009 Mazda CX-7 timing chain fix problems",
+     "channel": "Salvador Perez",
+     "views": 67966
+    },
+    {
+     "id": "hRPEgpbyAFU",
+     "title": "2010 Mazda CX-7 - Drive Time review | TestDriveNow",
+     "channel": "Steve Hammes New Car Reviews",
+     "views": 248007
+    },
+    {
+     "id": "3W2RvuUnB6o",
+     "title": "Ahead of Its Time | 2011 Mazda CX-7 Review",
+     "channel": "Kirk Kreifels",
+     "views": 145509
+    }
+   ],
+   "costs": null
+  }
+ ],
  "dodge-nitro": [
   {
    "years": [
