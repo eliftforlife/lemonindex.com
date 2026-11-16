@@ -31139,5 +31139,70 @@
 }
 ]
 }
+],
+"honda-element": [
+{
+"sid": "honda-element-g1",
+"y0": 2003,
+"y1": 2011,
+"label": "2003–2011",
+"videos": 200,
+"praise": [
+[
+"Reliability",
+13
+],
+[
+"Power",
+8
+],
+[
+"Looks",
+7
+],
+[
+"Space and practicality",
+5
+]
+],
+"trouble": [
+[
+"Battery / alternator / starter",
+5
+],
+[
+"Electrical / wiring / TIPM",
+4
+],
+[
+"Coolant leaks / water pump / overheating",
+4
+],
+[
+"Oil leaks (gaskets, seals, housings)",
+3
+]
+],
+"top": [
+{
+"id": "Kqp86DJK0FY",
+"title": "2007 Honda Element 5MT: Regular Car Reviews",
+"views": 503483,
+"ch": "Regular Car Reviews"
+},
+{
+"id": "pMiRef4FeMc",
+"title": "Top 5 Problems Honda Element SUV 1st Generation 2003-2011",
+"views": 497354,
+"ch": "1A Auto: Repair Tips & Secrets Only Mechanics Know"
+},
+{
+"id": "077a94SCOEI",
+"title": "2003-2008 Honda Element Review - WheelsTV",
+"views": 261917,
+"ch": "Wild About Wheels"
+}
+]
+}
 ]
 }

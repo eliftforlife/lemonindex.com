@@ -65616,6 +65616,266 @@
    }
   }
  ],
+ "chevrolet-avalanche": [
+  {
+   "years": [
+    2002,
+    2003,
+    2004,
+    2005,
+    2006
+   ],
+   "gen": "2002–2006 Chevrolet Avalanche",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 7433116,
+   "topics": [
+    {
+     "name": "Brakes & ABS",
+     "views": 285091,
+     "n": 6,
+     "best": {
+      "id": "GghMEUY-XvM",
+      "title": "Rear Brakes & Rotor Replacement Chevy Avalanche 2000-2006 (Rear Brakes Chevy Silverado & GMC Sierra)",
+      "channel": "Backyard Chevy",
+      "views": 147105
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 275566,
+     "n": 9,
+     "best": {
+      "id": "tPfKqwOYniE",
+      "title": "How to program a Chevrolet Avalanche remote key fob 2002 - 2006",
+      "channel": "PYR Automotive ",
+      "views": 76550
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 190943,
+     "n": 5,
+     "best": {
+      "id": "8mf6O-infQo",
+      "title": "How to Replace Door Pins & Bushings 2002-06 Chevy Avalanche",
+      "channel": "TRQ",
+      "views": 62343
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 177731,
+     "n": 5,
+     "best": {
+      "id": "6pYdVYjS8h4",
+      "title": "How to Install: Derale Dyno-Cool Tube-Fin Transmission Cooler Kit on your 2005 Chevrolet Avalanche",
+      "channel": "etrailer",
+      "views": 110814
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 155089,
+     "n": 2,
+     "best": {
+      "id": "N1lr0qxHl94",
+      "title": "How to install the Fuel Pump E3556M in 2002-2003 Chevrolet Avalanche, Surburban GMC Yukon",
+      "channel": "Airtex-ASC Performance Pumps",
+      "views": 143543
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 115030,
+     "n": 3,
+     "best": {
+      "id": "lhFfHNP97_Q",
+      "title": "2003 Chevy Avalanche Door Speaker Install",
+      "channel": "Unspecified",
+      "views": 44921
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 85965,
+     "n": 4,
+     "best": {
+      "id": "HbXR2ZoNdBM",
+      "title": "How To Replace Front Axle 2002-06 Chevy Avalanche",
+      "channel": "TRQ",
+      "views": 36029
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 54750,
+     "n": 2,
+     "best": {
+      "id": "eGPYMrXfNU0",
+      "title": "How to clean Throttle Body - 2002 Chevy Avalanche",
+      "channel": "Innova Electronics",
+      "views": 31583
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "nwjKf8fqgwY",
+     "title": "Top 5 Problems Chevy Avalanche Truck 1st Generation 2002-06",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 533752
+    },
+    {
+     "id": "uitgC8bNIiY",
+     "title": "Chevy Avalanche 1st Gen 2002 to 2006 common problems, issues, defects and complaints",
+     "channel": "HOWSTUFFINMYCARWORKS",
+     "views": 20954
+    },
+    {
+     "id": "JuQO09FTMKQ",
+     "title": "2003 Chevrolet Avalanche Spare Tire Problems",
+     "channel": "Bruce Johnson",
+     "views": 16983
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "honda-element": [
+  {
+   "years": [
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011
+   ],
+   "gen": "2003–2011 Honda Element",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 8461391,
+   "topics": [
+    {
+     "name": "Death wobble & steering",
+     "views": 479263,
+     "n": 3,
+     "best": {
+      "id": "GYosZGby0-I",
+      "title": "Front End Noise, 2003 Honda Element Stabilizer Links - EricTheCarGuy",
+      "channel": "EricTheCarGuy",
+      "views": 438077
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 373369,
+     "n": 4,
+     "best": {
+      "id": "z0vWv2Jwn3A",
+      "title": "2004 Honda Element/CRV Thermostat Replacement",
+      "channel": "EricTheCarGuy",
+      "views": 288320
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 272882,
+     "n": 11,
+     "best": {
+      "id": "uVS5VYDoCsc",
+      "title": "2004 Honda Element AC Fuse, AC Relay Replacement & Testing",
+      "channel": "Lehew",
+      "views": 62538
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 185439,
+     "n": 5,
+     "best": {
+      "id": "Zbdn9Anlm9k",
+      "title": "2003-2009 Honda Element Cabin Air Filter Replacement -EricTheCarGuy",
+      "channel": "EricTheCarGuy",
+      "views": 77700
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 154475,
+     "n": 4,
+     "best": {
+      "id": "u9mnXwQ9-Zs",
+      "title": "How to Replace Crankshaft Position Sensor 2003-2011 Honda Element",
+      "channel": "TRQ",
+      "views": 117952
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 149539,
+     "n": 3,
+     "best": {
+      "id": "A8hiQ9PhNBs",
+      "title": "Honda Element ATF Automatic Transmission Fluid Service (2003-2011)",
+      "channel": "Big Dog50001 Automotive",
+      "views": 71779
+     }
+    },
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 129644,
+     "n": 2,
+     "best": {
+      "id": "sRuqcU3g4gc",
+      "title": "How to replace VTEC Gasket and Spool Valve Filter on a Honda Element 2003-2011",
+      "channel": "Mend and Make",
+      "views": 71699
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 122843,
+     "n": 5,
+     "best": {
+      "id": "mjuHQh6SU6M",
+      "title": "How to Replace Rear Wheel Bearing 2003-2011 Honda Element",
+      "channel": "TRQ",
+      "views": 39611
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "pMiRef4FeMc",
+     "title": "Top 5 Problems Honda Element SUV 1st Generation 2003-2011",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 497354
+    },
+    {
+     "id": "xWmEkEz1ww0",
+     "title": "2003 to 2011 Honda Element Features and Buyers Guide.",
+     "channel": "HMNLT",
+     "views": 225911
+    },
+    {
+     "id": "Zxld_18kgG8",
+     "title": "2003 to 2011 Honda Element buyers guide - the ultimate daily driver",
+     "channel": "HMNLT",
+     "views": 100927
+    }
+   ],
+   "costs": null
+  }
+ ],
  "volvo-s60": [
   {
    "years": [
