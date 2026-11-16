@@ -65616,6 +65616,339 @@
    }
   }
  ],
+ "volvo-s60": [
+  {
+   "years": [
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009
+   ],
+   "gen": "2001–2009 Volvo S60",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 7881773,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 311257,
+     "n": 7,
+     "best": {
+      "id": "cuEprePQbA8",
+      "title": "Volvo S60 XC70 Radio removal HU-650 850 2005-2009",
+      "channel": "Peppermint",
+      "views": 203316
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 224154,
+     "n": 4,
+     "best": {
+      "id": "eB0vVKE24is",
+      "title": "Volvo S60 XC90 P0089 code poor acceleration no power stall high fuel pressure - FPS PEM 2003-2009",
+      "channel": "Peppermint",
+      "views": 72758
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 212182,
+     "n": 1,
+     "best": {
+      "id": "pA10J38BBG0",
+      "title": "Buying a used Volvo S60, V70 (P2) - 2000-2009, Buying guide with Common Issues",
+      "channel": "different car review",
+      "views": 212182
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 203523,
+     "n": 4,
+     "best": {
+      "id": "c2ZcowAW7ts",
+      "title": "2008 Volvo s60 driver side light replacement",
+      "channel": "Jerk of All Trades",
+      "views": 117785
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 182968,
+     "n": 5,
+     "best": {
+      "id": "qdFvXMxZPDc",
+      "title": "Volvo S60 Cabin Air Filter DIY 2001-2009",
+      "channel": "eEuroparts.com",
+      "views": 163990
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 75564,
+     "n": 7,
+     "best": {
+      "id": "Ifx5z8hQqEI",
+      "title": "2005 Volvo S60 Brake Booster Switch/Valve Replacement",
+      "channel": "Raul Romo SD",
+      "views": 28920
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 43526,
+     "n": 8,
+     "best": {
+      "id": "8rnRwGxAK8k",
+      "title": "How to Replace Front Strut & Spring Assemblies 2001-2009 Volvo S60",
+      "channel": "TRQ",
+      "views": 6859
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 43452,
+     "n": 1,
+     "best": {
+      "id": "Jd7JNhUrD1g",
+      "title": "Volvo S60 XC70 Door Handle Won't work - Fix 2001-2009 see description for part number",
+      "channel": "Peppermint",
+      "views": 43452
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "3vb33Ach7kA",
+     "title": "🤞 🇸🇪 Used Volvo S60 XC60 XC70 Reliability | Most Common Problems Faults and Issues | 2008 - 2017 |",
+     "channel": "MechAdventures",
+     "views": 294685
+    },
+    {
+     "id": "o9l58Q17EfY",
+     "title": "Volvo P3 Buyer's Guide - 2008-2018 (S60, V60, XC60, S80, V70, XC70) - Models, Engines, & Options",
+     "channel": "FCP Euro",
+     "views": 261440
+    },
+    {
+     "id": "WF9In7vGbeA",
+     "title": "2002-2006 Volvo S60 S80 V70 XC70 XC90 Dash Cluster DIM Problems",
+     "channel": "Automotive Circuit Solutions",
+     "views": 209456
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018
+   ],
+   "gen": "2011–2018 Volvo S60",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 17746916,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 1071351,
+     "n": 7,
+     "best": {
+      "id": "4bvPFU6AHKA",
+      "title": "2018 Volvo S60 V60 Maintenance Reminder Reset 2017 2016 xc60 s90 v70",
+      "channel": "Oil Light Reset ",
+      "views": 576059
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 778552,
+     "n": 5,
+     "best": {
+      "id": "UHDB60SESys",
+      "title": "2018-2020 Volvo S60 Maintenance Light Reset. 2017-2020 Volvo XC90/XC60/S90/V90/ maintenance reset",
+      "channel": "JJ Banuelos",
+      "views": 397574
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 285804,
+     "n": 3,
+     "best": {
+      "id": "fMpkGybGHiY",
+      "title": "2011-2017 Volvo S60 door panel removal",
+      "channel": "TintGuy101 Ed",
+      "views": 182019
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 130784,
+     "n": 1,
+     "best": {
+      "id": "n6f34CcHipc",
+      "title": "VOLVO S60 2.0 D4 2015 EGR VALVE PROBLEM AND HOW TO FIX IT . FAULT CODE IS P04D900",
+      "channel": "Kes",
+      "views": 130784
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 116010,
+     "n": 1,
+     "best": {
+      "id": "-uDPD5IuiHs",
+      "title": "Volvo S60 Suspension Diagnostic & Maintenance Guide (2007-2018 Volvo P3 S80, P3 S60, P3 V60 & More)",
+      "channel": "FCP Euro",
+      "views": 116010
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 101973,
+     "n": 1,
+     "best": {
+      "id": "Y97a3EBgMGM",
+      "title": "Volvo S60 Water Pump & Thermostat Replacement DIY (2015-2019 Volvo P3 - S80, V70, XC70, XC60, & V60)",
+      "channel": "FCP Euro",
+      "views": 101973
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 98498,
+     "n": 2,
+     "best": {
+      "id": "JwPtZxb-0vA",
+      "title": "How to Replace Front Brakes 2011-2018 Volvo S60",
+      "channel": "TRQ",
+      "views": 51890
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 86141,
+     "n": 2,
+     "best": {
+      "id": "FvgBjXrZ0n8",
+      "title": "How to Replace Front Strut & Spring Assemblies 2011-2018 Volvo S60",
+      "channel": "TRQ",
+      "views": 58546
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "3vb33Ach7kA",
+     "title": "🤞 🇸🇪 Used Volvo S60 XC60 XC70 Reliability | Most Common Problems Faults and Issues | 2008 - 2017 |",
+     "channel": "MechAdventures",
+     "views": 294685
+    },
+    {
+     "id": "o9l58Q17EfY",
+     "title": "Volvo P3 Buyer's Guide - 2008-2018 (S60, V60, XC60, S80, V70, XC70) - Models, Engines, & Options",
+     "channel": "FCP Euro",
+     "views": 261452
+    },
+    {
+     "id": "R2Sh_OQtXuA",
+     "title": "Volvo S60/V60 Buyers Guide (2018-2025) Common faults and Reliability (S60 or V60)",
+     "channel": "The Miles Driven",
+     "views": 93066
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+   ],
+   "gen": "2019–2024 Volvo S60",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 21886044,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 397574,
+     "n": 1,
+     "best": {
+      "id": "UHDB60SESys",
+      "title": "2018-2020 Volvo S60 Maintenance Light Reset. 2017-2020 Volvo XC90/XC60/S90/V90/ maintenance reset",
+      "channel": "JJ Banuelos",
+      "views": 397574
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 74458,
+     "n": 2,
+     "best": {
+      "id": "SVs4RJnG78w",
+      "title": "How To Reset Your Service Reminder On Your 2018-2022 Volvo S60",
+      "channel": "Wrenching Mafia",
+      "views": 62058
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 32215,
+     "n": 1,
+     "best": {
+      "id": "_wGQrSImMN8",
+      "title": "How To Remove Door Panels On A 2019 Volvo S60",
+      "channel": "Window Tint Warriors",
+      "views": 32215
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "tc9rNEWdIVQ",
+     "title": "Volvo S60 saloon 2020 in-depth review - Carbuyer",
+     "channel": "Carbuyer",
+     "views": 394391
+    },
+    {
+     "id": "aVs-aLS2CNU",
+     "title": "5 Reasons Why You Should Buy A 2021 Volvo S60 Inscription T6 - Quick Buyer's Guide",
+     "channel": "Boston Auto Blog",
+     "views": 62202
+    },
+    {
+     "id": "w8sY2WotaG8",
+     "title": "2021 Volvo S60 T5 R-Design - Should You Buy The 2021 Model Or 2022?",
+     "channel": "Vehicle Visionary",
+     "views": 17621
+    }
+   ],
+   "costs": null
+  }
+ ],
  "hyundai-genesis": [
   {
    "years": [

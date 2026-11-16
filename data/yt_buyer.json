@@ -30994,5 +30994,150 @@
 }
 ]
 }
+],
+"volvo-s60": [
+{
+"sid": "volvo-s60-g1",
+"y0": 2001,
+"y1": 2009,
+"label": "2001–2009",
+"videos": 200,
+"praise": [
+[
+"Reliability",
+12
+],
+[
+"Power",
+10
+],
+[
+"Looks",
+6
+],
+[
+"Fun to drive",
+4
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+3
+]
+],
+"top": [
+{
+"id": "3vb33Ach7kA",
+"title": "🤞 🇸🇪 Used Volvo S60 XC60 XC70 Reliability | Most Common Problems Faults and Issues | 2008 - 2017 |",
+"views": 294685,
+"ch": "MechAdventures"
+},
+{
+"id": "o9l58Q17EfY",
+"title": "Volvo P3 Buyer's Guide - 2008-2018 (S60, V60, XC60, S80, V70, XC70) - Models, Engines, & Options",
+"views": 261440,
+"ch": "FCP Euro"
+},
+{
+"id": "gS3bawaBMMk",
+"title": "3 quick things to check when buying a used Volvo S60 XC90 2001-2009",
+"views": 232550,
+"ch": "Peppermint"
+}
+]
+},
+{
+"sid": "volvo-s60-g2",
+"y0": 2011,
+"y1": 2018,
+"label": "2011–2018",
+"videos": 192,
+"praise": [
+[
+"Looks",
+14
+],
+[
+"Power",
+12
+],
+[
+"Fun to drive",
+10
+],
+[
+"Comfort and ride",
+9
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "GsA9cOUux3w",
+"title": "Volvo S60 2014 - Review",
+"views": 447478,
+"ch": "CarTell.tv"
+},
+{
+"id": "raQ54u3D2LE",
+"title": "2013 Infiniti G37 vs Audi S5 vs Volvo S60 0-60 MPH Mile High Mashup Review",
+"views": 403731,
+"ch": "The Fast Lane Car"
+},
+{
+"id": "3vb33Ach7kA",
+"title": "🤞 🇸🇪 Used Volvo S60 XC60 XC70 Reliability | Most Common Problems Faults and Issues | 2008 - 2017 |",
+"views": 294685,
+"ch": "MechAdventures"
+}
+]
+},
+{
+"sid": "volvo-s60-g3",
+"y0": 2019,
+"y1": 2024,
+"label": "2019–2024",
+"videos": 188,
+"praise": [
+[
+"Looks",
+30
+],
+[
+"Fun to drive",
+21
+],
+[
+"Power",
+18
+],
+[
+"Comfort and ride",
+16
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "LITgyNZv0K8",
+"title": "2020 Volvo S60 Polestar Engineered Review - Twincharged Hybrid Performance",
+"views": 1067209,
+"ch": "TheStraightPipes"
+},
+{
+"id": "QsI_Et-AqPc",
+"title": "2021 Volvo S60 review - Comfort zone | First Drive | Autocar India",
+"views": 801791,
+"ch": "Autocar India"
+},
+{
+"id": "nYJrWzoQcII",
+"title": "2019 Volvo S60 T6 R-Design - POV Review",
+"views": 672880,
+"ch": "TheTopher"
+}
+]
+}
 ]
 }
