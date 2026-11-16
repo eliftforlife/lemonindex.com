@@ -65309,7 +65309,26 @@
      "views": 51073
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 1200,
+       "lo": 500.0,
+       "hi": 2500.0,
+       "n": 17,
+       "videos": 5,
+       "id": "oCADCNcqqh0",
+       "t": 39,
+       "title": "Top 10 Problems of Toyota Sequoia 2nd Gen 2008-2022 || watch before you buy one"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -65367,7 +65386,52 @@
      "views": 591050
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Yearly cost to own",
+      {
+       "median": 642,
+       "lo": 640.0,
+       "hi": 5000.0,
+       "n": 3,
+       "videos": 3,
+       "id": "x6lijq49kr0",
+       "t": 166,
+       "title": "Toyota Sequoia 2024 | Cost to Own | Financial Analysis"
+      }
+     ],
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 2200,
+       "lo": 2000.0,
+       "hi": 3200.0,
+       "n": 3,
+       "videos": 2,
+       "id": "ZrKafz8t8lg",
+       "t": 7,
+       "title": "POV Review: Why I Drive a $2K 200k Mile Toyota Sequoia in 2024"
+      }
+     ],
+     [
+      "Insurance",
+      {
+       "median": 1746,
+       "lo": 1536.0,
+       "hi": 1956.0,
+       "n": 2,
+       "videos": 2,
+       "id": "x6lijq49kr0",
+       "t": 136,
+       "title": "Toyota Sequoia 2024 | Cost to Own | Financial Analysis"
+      }
+     ]
+    ]
+   }
   }
  ],
  "gmc-envoy": [

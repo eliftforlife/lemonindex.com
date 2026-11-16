@@ -30475,5 +30475,96 @@
 }
 ]
 }
+],
+"toyota-matrix": [
+{
+"sid": "toyota-matrix-g1",
+"y0": 2003,
+"y1": 2008,
+"label": "2003–2008",
+"videos": 200,
+"praise": [
+[
+"Reliability",
+15
+],
+[
+"Looks",
+9
+],
+[
+"Fun to drive",
+6
+],
+[
+"Power",
+6
+]
+],
+"trouble": [
+[
+"Oil leaks (gaskets, seals, housings)",
+4
+]
+],
+"top": [
+{
+"id": "kAqJoK0u0I4",
+"title": "2003 Toyota Matrix XRS: Regular Car Reviews",
+"views": 552138,
+"ch": "Regular Car Reviews"
+},
+{
+"id": "v8vbE2Xlvgc",
+"title": "Top 5 Problems Toyota Matrix Hatchback 1st Generation  2003-08",
+"views": 379594,
+"ch": "1A Auto: Repair Tips & Secrets Only Mechanics Know"
+},
+{
+"id": "6af7K0DgIcA",
+"title": "Review: Toyota Matrix 2005",
+"views": 127269,
+"ch": "AsQkcom"
+}
+]
+},
+{
+"sid": "toyota-matrix-g2",
+"y0": 2009,
+"y1": 2013,
+"label": "2009–2013",
+"videos": 189,
+"praise": [
+[
+"Reliability",
+6
+],
+[
+"Fun to drive",
+3
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "59tQPPVWBVM",
+"title": "2010 Toyota Matrix XR Review, Start Up and Walkaround",
+"views": 269139,
+"ch": "Justins Car Reviews"
+},
+{
+"id": "Fjm0hy9lLt0",
+"title": "2009 Toyota Matrix Review - Kelley Blue Book",
+"views": 177017,
+"ch": "Kelley Blue Book"
+},
+{
+"id": "C19zP5j4xKA",
+"title": "2012 Toyota Matrix Test Drive & Car Video Review",
+"views": 115389,
+"ch": "UsedCarsTV"
+}
+]
+}
 ]
 }
