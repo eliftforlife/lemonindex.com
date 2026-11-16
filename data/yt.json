@@ -67578,6 +67578,87 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2022–2025 Mitsubishi Outlander",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 20926413,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 210776,
+     "n": 3,
+     "best": {
+      "id": "c-hOyAPKMiA",
+      "title": "Mitsubishi Outlander Key Fob Battery Replacement 2022 - 2024 How To Change Replace Remote Batteries",
+      "channel": "PYR Automotive ",
+      "views": 86031
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 60915,
+     "n": 1,
+     "best": {
+      "id": "h1ScaIv2vEU",
+      "title": "2022+ Mitsubishi Outlander Oil Reminder Reset",
+      "channel": "SkellyGrog",
+      "views": 60915
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 32596,
+     "n": 1,
+     "best": {
+      "id": "DulVED-OtUo",
+      "title": "2022 Outlander Carbon Fiber installation upgrade hit installation!",
+      "channel": "Mr. Mitsubishi",
+      "views": 32596
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 20663,
+     "n": 1,
+     "best": {
+      "id": "iZJsequQk5c",
+      "title": "How to Use the 2024 Mitsubishi Outlander & Plug-in Hybrid Liftgate Kick Sensor",
+      "channel": "Mitsubishi Motors North America",
+      "views": 20663
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "ZUyp_YEZMo0",
+     "title": "Are These Reliable? // 2025 Mitsubishi Outlander Review",
+     "channel": "Sarah -n- Tuned",
+     "views": 249103
+    },
+    {
+     "id": "GcD-nTVMAXI",
+     "title": "5 Reasons Why You Should Buy A 2022 Mitsubishi Outlander - Quick Buyer's Guide",
+     "channel": "Boston Auto Blog",
+     "views": 103183
+    },
+    {
+     "id": "b8RQS-_I9Fw",
+     "title": "2024 Mitsubishi Outlander - Sound and Visual Review",
+     "channel": "ORGCars",
+     "views": 2847198
+    }
+   ],
+   "costs": null
   }
  ],
  "chevrolet-aveo": [

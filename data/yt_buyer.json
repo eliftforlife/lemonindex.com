@@ -32386,5 +32386,192 @@
 }
 ]
 }
+],
+"mitsubishi-outlander": [
+{
+"sid": "mitsubishi-outlander-g1",
+"y0": 2003,
+"y1": 2006,
+"label": "2003–2006",
+"videos": 199,
+"praise": [
+[
+"Reliability",
+10
+],
+[
+"Power",
+7
+],
+[
+"Fun to drive",
+4
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+4
+]
+],
+"top": [
+{
+"id": "93kH_NJ_aEI",
+"title": "2004 Mitsubishi Outlander - spanish review review en espanol  HD",
+"views": 114175,
+"ch": "KG- R!"
+},
+{
+"id": "xUGNTbyXx_E",
+"title": "2005 Mitsubishi Outlander LS ZF Auto 4x4 Review - B4960",
+"views": 43865,
+"ch": "BerwickCity"
+},
+{
+"id": "HJFgGIitgyE",
+"title": "Mitsubishi Outlander 1st Generation: How to Choose the Best Engine and Avoid Rust?",
+"views": 18051,
+"ch": "ЭКСПЕРТЫ ГАРАЖЕЙ"
+}
+]
+},
+{
+"sid": "mitsubishi-outlander-g2",
+"y0": 2007,
+"y1": 2013,
+"label": "2007–2013",
+"videos": 200,
+"praise": [
+[
+"Power",
+6
+],
+[
+"Reliability",
+6
+],
+[
+"Fun to drive",
+4
+],
+[
+"Looks",
+4
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "c0pC0AHUjJM",
+"title": "Mitsubishi Outlander SUV 2007 - 2013 review - CarBuyer",
+"views": 647392,
+"ch": "Carbuyer"
+},
+{
+"id": "nt6bz9_g8Sc",
+"title": "2010 Subaru Outback vs Mitsubishi  Outlander off-road review",
+"views": 583029,
+"ch": "The Fast Lane Car"
+},
+{
+"id": "m-gnoa3JG5A",
+"title": "Mitsubishi Outlander SUV 2013 review - CarBuyer",
+"views": 430293,
+"ch": "Carbuyer"
+}
+]
+},
+{
+"sid": "mitsubishi-outlander-g3",
+"y0": 2014,
+"y1": 2021,
+"label": "2014–2021",
+"videos": 196,
+"praise": [
+[
+"Fun to drive",
+9
+],
+[
+"Power",
+9
+],
+[
+"Space and practicality",
+8
+],
+[
+"Comfort and ride",
+7
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "e1Xwt0hCI4o",
+"title": "Mitsubishi Outlander PHEV 2014 review - Carbuyer",
+"views": 498026,
+"ch": "Carbuyer"
+},
+{
+"id": "-D2obMHziNQ",
+"title": "2016 Mitsubishi Outlander S-AWC - Review & Offroad Performance",
+"views": 369556,
+"ch": "Engineering Explained"
+},
+{
+"id": "UjrhanuYjUE",
+"title": "2019 Mitsubishi Outlander PHEV Review - Plug In Hybrid SUV",
+"views": 361710,
+"ch": "TheStraightPipes"
+}
+]
+},
+{
+"sid": "mitsubishi-outlander-g4",
+"y0": 2022,
+"y1": 2025,
+"label": "2022–2025",
+"videos": 200,
+"praise": [
+[
+"Looks",
+20
+],
+[
+"Fun to drive",
+18
+],
+[
+"Power",
+17
+],
+[
+"Comfort and ride",
+11
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "b8RQS-_I9Fw",
+"title": "2024 Mitsubishi Outlander - Sound and Visual Review",
+"views": 2847198,
+"ch": "ORGCars"
+},
+{
+"id": "hCRGryegur4",
+"title": "2022 Mitsubishi Outlander Review -  WHAT YOU NEED TO KNOW  PT1",
+"views": 964362,
+"ch": "Everyday Reviews"
+},
+{
+"id": "naSwUnZ4Sdg",
+"title": "Is the ALL NEW 2022 Mitsubishi Outlander the improved SUV you should buy?",
+"views": 604668,
+"ch": "Raiti's Rides"
+}
+]
+}
 ]
 }
