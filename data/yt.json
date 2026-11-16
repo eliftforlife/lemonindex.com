@@ -67391,7 +67391,39 @@
      "views": 96534
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 325,
+       "lo": 90.0,
+       "hi": 525.0,
+       "n": 10,
+       "videos": 8,
+       "id": "qz3AciPe54o",
+       "t": 404,
+       "title": "AMAZING! 2006 Cadillac Escalade 64k miles ONE OWNER for Sale by Specialty Motor Cars"
+      }
+     ],
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 1000,
+       "lo": 795.0,
+       "hi": 1688.0,
+       "n": 3,
+       "videos": 3,
+       "id": "pmdHcmZYFzw",
+       "t": 564,
+       "title": "2004 Cadillac Escalade 6.0L AWD: Start Up, Test Drive & In Depth Review"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -67520,7 +67552,26 @@
      "views": 87394
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 1575,
+       "lo": 150.0,
+       "hi": 3000.0,
+       "n": 4,
+       "videos": 3,
+       "id": "DAMUnchtJxo",
+       "t": 23,
+       "title": "Fixing 2007-2014 Cadillac Escalade shift cable bushing"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
