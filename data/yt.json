@@ -67101,7 +67101,26 @@
      "views": 2993
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 125,
+       "lo": 40.0,
+       "hi": 156.0,
+       "n": 6,
+       "videos": 6,
+       "id": "ToggQtf4kJs",
+       "t": 95,
+       "title": "Saturn vue 2003 BCM mounting & removal"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -67225,7 +67244,26 @@
      "views": 163753
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 300,
+       "lo": 200.0,
+       "hi": 2700.0,
+       "n": 7,
+       "videos": 3,
+       "id": "QExRpOxUGak",
+       "t": 129,
+       "title": "2008 Saturn Vue key stuck in ignition problem.  Read description to see how I fixed it for free!"
+      }
+     ]
+    ]
+   }
   }
  ],
  "cadillac-escalade": [
@@ -67480,6 +67518,133 @@
      "title": "Suspension problems with 2007-2014 Escalade: Replacing Z95 front struts in Cadillac, GMC, Chevy",
      "channel": "Street Riders Customs",
      "views": 87394
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ],
+   "gen": "2015–2020 Cadillac Escalade",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 31122607,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 249194,
+     "n": 4,
+     "best": {
+      "id": "lC1l3GM7sHM",
+      "title": "2016 CADILLAC ESCALADE TPMS RESET PROCEDURE (EASY)",
+      "channel": "HILLYARD'S RIM LIONS",
+      "views": 151120
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 207118,
+     "n": 4,
+     "best": {
+      "id": "0u9Hu5tJUYo",
+      "title": "How To Start A 2015 - 2020 Cadillac Escalade With No Remote Detected - Dead Key Fob Battery Starting",
+      "channel": "PYR Automotive ",
+      "views": 78038
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 127886,
+     "n": 2,
+     "best": {
+      "id": "WoIys8jcJ2E",
+      "title": "2015-2017 Cadillac Escalade Automatic transmission fluid change",
+      "channel": "ThatShortGuy",
+      "views": 112268
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 107655,
+     "n": 1,
+     "best": {
+      "id": "XrlER0YyAPY",
+      "title": "How to Replace Front Shock & Spring Assembly 2015-2020 Cadillac Escalade",
+      "channel": "TRQ",
+      "views": 107655
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 94936,
+     "n": 2,
+     "best": {
+      "id": "UrqhwtA_-1o",
+      "title": "Fixing Your Cadillac Escalade's Cue Screen: A Step-by-step Guide For 2015-2020 Models",
+      "channel": "Easy Steps",
+      "views": 81152
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 69757,
+     "n": 2,
+     "best": {
+      "id": "OrQD9dXRemE",
+      "title": "2015-2020 Escalade Tahoe Denali cooling fan won’t turn off? LS 6.2 Coolant temp sensor replacement",
+      "channel": "Rob Nolli’s adventures (Tips,Tricks and Trips)",
+      "views": 49906
+     }
+    },
+    {
+     "name": "Lifters, AFM & cam phasers",
+     "views": 68478,
+     "n": 1,
+     "best": {
+      "id": "5V_2aX8DRvs",
+      "title": "2015-2023 Cadillac Escalade Nocking Noice / How to fix Lifter Tick (tacking engine apart)",
+      "channel": "Mechanic Mode",
+      "views": 68478
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 64124,
+     "n": 2,
+     "best": {
+      "id": "H6H27u7qcIs",
+      "title": "2015 CADILLAC ESCALADE Won't Crank, No Start...One click...Fixed...",
+      "channel": "Peter L",
+      "views": 36819
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "kdLckhBGutM",
+     "title": "Top 5 Problems Cadillac Escalade SUV 4th Generation 2015-20",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 393015
+    },
+    {
+     "id": "kUVgp0mkKBA",
+     "title": "Top 5 Problems with the Cadillac Escalade (4th Generation 2015-2020)",
+     "channel": "Alex The Car Doctor",
+     "views": 45934
+    },
+    {
+     "id": "FFue2LMLykc",
+     "title": "OWNER REVIEWS! CADILLAC ESCALADE 2015 - 2020 TOP PROBLEMS RELIABILITY PROBLEMS MAINTENANCE",
+     "channel": "Mufassi",
+     "views": 43924
     }
    ],
    "costs": null
