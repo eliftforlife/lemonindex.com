@@ -31636,5 +31636,66 @@
 }
 ]
 }
+],
+"chrysler-pt-cruiser": [
+{
+"sid": "chrysler-pt-cruiser-g1",
+"y0": 2001,
+"y1": 2010,
+"label": "2001–2010",
+"videos": 198,
+"praise": [
+[
+"Looks",
+6
+],
+[
+"Reliability",
+5
+],
+[
+"Power",
+5
+],
+[
+"Comfort and ride",
+4
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+5
+],
+[
+"Coolant leaks / water pump / overheating",
+4
+],
+[
+"Battery / alternator / starter",
+3
+]
+],
+"top": [
+{
+"id": "hoxqtnI4I4c",
+"title": "2004 Chrysler PT Cruiser: Regular Car Reviews",
+"views": 1327283,
+"ch": "Regular Car Reviews"
+},
+{
+"id": "OhbYh3v_VFk",
+"title": "2006 PT Cruiser Overheating ISSUES...!!!",
+"views": 169783,
+"ch": "Bob Pfirrman II"
+},
+{
+"id": "qovA65UehTU",
+"title": "2002 PT Cruiser shift shifter cable problem no reverse manual transmission stick shift",
+"views": 138449,
+"ch": "Justin “JnJShiffler”"
+}
+]
+}
 ]
 }
