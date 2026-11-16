@@ -67648,6 +67648,77 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2021–2025 Cadillac Escalade",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 110364176,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 141892,
+     "n": 1,
+     "best": {
+      "id": "JnJIOYAr2Is",
+      "title": "2021 - 2024 Cadillac Escalade Remote Key Fob Battery Change - How To Remove Replace Key Batteries",
+      "channel": "PYR Automotive ",
+      "views": 141892
+     }
+    },
+    {
+     "name": "Lifters, AFM & cam phasers",
+     "views": 68478,
+     "n": 1,
+     "best": {
+      "id": "5V_2aX8DRvs",
+      "title": "2015-2023 Cadillac Escalade Nocking Noice / How to fix Lifter Tick (tacking engine apart)",
+      "channel": "Mechanic Mode",
+      "views": 68478
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 63427,
+     "n": 1,
+     "best": {
+      "id": "nP80UAGdxPY",
+      "title": "Brake Job Goes WRONG? Electronic Parking Brake FAIL!! ('21 Cadillac Escalade)",
+      "channel": "Pine Hollow Auto Diagnostics",
+      "views": 63427
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "5oiq1yp_zhI",
+     "title": "RIP HELLCAT, AMG & ALPINA! The $180,000 2023 Cadillac Escalade V Review",
+     "channel": "TheStraightPipes",
+     "views": 3074169
+    },
+    {
+     "id": "JJPnWt_5sMY",
+     "title": "2025 Cadillac Escalade V Review // Total Domination",
+     "channel": "Throttle House",
+     "views": 1717368
+    },
+    {
+     "id": "XeMSp8fbAGU",
+     "title": "2021 Cadillac Escalade Review // The $100,000 Benchmark For Ballers",
+     "channel": "Throttle House",
+     "views": 1581305
+    }
+   ],
+   "costs": null
   }
  ],
  "lincoln-navigator": [

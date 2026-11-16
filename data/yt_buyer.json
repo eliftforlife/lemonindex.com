@@ -32806,5 +32806,209 @@
 }
 ]
 }
+],
+"cadillac-escalade": [
+{
+"sid": "cadillac-escalade-g2",
+"y0": 2002,
+"y1": 2006,
+"label": "2002–2006",
+"videos": 193,
+"praise": [
+[
+"Looks",
+10
+],
+[
+"Reliability",
+6
+],
+[
+"Power",
+6
+],
+[
+"Fun to drive",
+4
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+3
+]
+],
+"top": [
+{
+"id": "Qlh0ssb3zQA",
+"title": "Top 5 Problems Cadillac Escalade SUV 2nd Generation 2002-06",
+"views": 270699,
+"ch": "1A Auto: Repair Tips & Secrets Only Mechanics Know"
+},
+{
+"id": "U9eHY8aUuws",
+"title": "2005 Cadillac Escalade review",
+"views": 71650,
+"ch": "LIberty Auto PLaza"
+},
+{
+"id": "pmdHcmZYFzw",
+"title": "2004 Cadillac Escalade 6.0L AWD: Start Up, Test Drive & In Depth Review",
+"views": 63445,
+"ch": "Saabkyle04"
+}
+]
+},
+{
+"sid": "cadillac-escalade-g3",
+"y0": 2007,
+"y1": 2014,
+"label": "2007–2014",
+"videos": 198,
+"praise": [
+[
+"Looks",
+6
+],
+[
+"Power",
+5
+],
+[
+"Reliability",
+4
+],
+[
+"Fun to drive",
+4
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "TNu9bxxu9Rg",
+"title": "2012 Cadillac Escalade Platinum Collection Start Up, Exhaust, and In Depth Review",
+"views": 926171,
+"ch": "Saabkyle04"
+},
+{
+"id": "K7_XgpFecPQ",
+"title": "Top 5 Problems: Cadillac Escalade SUV 3rd Gen 2007-14",
+"views": 653182,
+"ch": "1A Auto: Repair Tips & Secrets Only Mechanics Know"
+},
+{
+"id": "LDe15_cIxeU",
+"title": "2007 Cadillac Escalade Review - Kelley Blue Book",
+"views": 585811,
+"ch": "Kelley Blue Book"
+}
+]
+},
+{
+"sid": "cadillac-escalade-g4",
+"y0": 2015,
+"y1": 2020,
+"label": "2015–2020",
+"videos": 200,
+"praise": [
+[
+"Looks",
+10
+],
+[
+"Comfort and ride",
+9
+],
+[
+"Fun to drive",
+8
+],
+[
+"Power",
+8
+]
+],
+"trouble": [
+[
+"Battery / alternator / starter",
+4
+],
+[
+"Lifters / AFM / cam phasers / Hemi tick",
+3
+],
+[
+"Electrical / wiring / TIPM",
+3
+]
+],
+"top": [
+{
+"id": "ra9ldEmcaqI",
+"title": "2015 Cadillac Escalade / ESV Start Up, Road Test, and In Depth Review",
+"views": 1409467,
+"ch": "Saabkyle04"
+},
+{
+"id": "VtR-thD1nCY",
+"title": "2015 Cadillac Escalade - Review in Detail, Start up, Exhaust Sound, and Test Drive",
+"views": 843257,
+"ch": "Motorcar File"
+},
+{
+"id": "kQwr0iKuRVs",
+"title": "2019 Cadillac Escalade Premium Luxury Sport Edition Walkaround Review and Features",
+"views": 838020,
+"ch": "Joshua McDonald - Automotive"
+}
+]
+},
+{
+"sid": "cadillac-escalade-g5",
+"y0": 2021,
+"y1": 2025,
+"label": "2021–2025",
+"videos": 199,
+"praise": [
+[
+"Looks",
+31
+],
+[
+"Space and practicality",
+23
+],
+[
+"Power",
+17
+],
+[
+"Fun to drive",
+15
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "5oiq1yp_zhI",
+"title": "RIP HELLCAT, AMG & ALPINA! The $180,000 2023 Cadillac Escalade V Review",
+"views": 3074169,
+"ch": "TheStraightPipes"
+},
+{
+"id": "JJPnWt_5sMY",
+"title": "2025 Cadillac Escalade V Review // Total Domination",
+"views": 1717368,
+"ch": "Throttle House"
+},
+{
+"id": "XeMSp8fbAGU",
+"title": "2021 Cadillac Escalade Review // The $100,000 Benchmark For Ballers",
+"views": 1581305,
+"ch": "Throttle House"
+}
+]
+}
 ]
 }
