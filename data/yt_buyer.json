@@ -31745,5 +31745,41 @@
 }
 ]
 }
+],
+"mercury-mariner": [
+{
+"sid": "mercury-mariner-g1",
+"y0": 2005,
+"y1": 2011,
+"label": "2005–2011",
+"videos": 199,
+"praise": [
+[
+"Reliability",
+6
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "l5xlb5GVqcw",
+"title": "2008 Mercury Mariner: Regular Car Reviews",
+"views": 333704,
+"ch": "Regular Car Reviews"
+},
+{
+"id": "qgJALkIS0PE",
+"title": "WARNING!!! Ford Escape, Mercury Mariner, and Mazda Tribute owners of 2009 or newer vehicles.",
+"views": 166473,
+"ch": "Joseph Vollmar"
+},
+{
+"id": "v-Cj3xsQDYI",
+"title": "Top 5 Problems Mercury Mariner SUV 2nd Gen 2008-11",
+"views": 140353,
+"ch": "1A Auto: Repair Tips & Secrets Only Mechanics Know"
+}
+]
+}
 ]
 }
