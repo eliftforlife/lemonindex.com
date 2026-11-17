@@ -70252,7 +70252,39 @@
      "views": 11195
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 150,
+       "lo": 60.0,
+       "hi": 300.0,
+       "n": 9,
+       "videos": 6,
+       "id": "5XAsxo7NOC8",
+       "t": 165,
+       "title": "2004 Nissan Armada SE, 4x4, 5.6 V8, leather 3rd row, P-roof, NICE!!!"
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 700,
+       "lo": 300.0,
+       "hi": 1200.0,
+       "n": 7,
+       "videos": 4,
+       "id": "rxsPDcB0_9w",
+       "t": 125,
+       "title": "2008 Nissan Armada - Suspension Relay"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
