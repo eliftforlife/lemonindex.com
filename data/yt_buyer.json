@@ -35277,5 +35277,58 @@
 }
 ]
 }
+],
+"oldsmobile-alero": [
+{
+"sid": "oldsmobile-alero-g1",
+"y0": 1999,
+"y1": 2004,
+"label": "1999–2004",
+"videos": 197,
+"praise": [
+[
+"Reliability",
+8
+],
+[
+"Power",
+7
+],
+[
+"Fun to drive",
+6
+],
+[
+"Looks",
+4
+]
+],
+"trouble": [
+[
+"Coolant leaks / water pump / overheating",
+3
+]
+],
+"top": [
+{
+"id": "52aqI9fxh2k",
+"title": "MotorWeek | Retro Review:  2000 Olds Alero 5-Speed",
+"views": 80717,
+"ch": "MotorWeek"
+},
+{
+"id": "wCgcYGpUSTg",
+"title": "Problems with 2001 Oldsmobile Alero Security System",
+"views": 50243,
+"ch": "Ace Jacobo"
+},
+{
+"id": "AnxW-krr0B0",
+"title": "2001 Olds Alero Starting Problem.",
+"views": 38164,
+"ch": "Ace Jacobo"
+}
+]
+}
 ]
 }

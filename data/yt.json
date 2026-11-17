@@ -69725,7 +69725,26 @@
      "views": 58476
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 200,
+       "lo": 60.0,
+       "hi": 1500.0,
+       "n": 3,
+       "videos": 3,
+       "id": "Vn1lwgFDPLI",
+       "t": 67,
+       "title": "Custom Painted Car Grill: 2007 Lincoln MKZ"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -69854,7 +69873,26 @@
      "views": 28793
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 152,
+       "lo": 53.0,
+       "hi": 390.0,
+       "n": 10,
+       "videos": 5,
+       "id": "w2quEhyKdNM",
+       "t": 360,
+       "title": "2013-2016 Lincoln MKZ Battery Draw Issues and Power Trunk Lid Inoperative: Quick Diagnostics Tips!"
+      }
+     ]
+    ]
+   }
   }
  ],
  "audi-a6": [
