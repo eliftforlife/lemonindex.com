@@ -35154,5 +35154,41 @@
 }
 ]
 }
+],
+"kia-sephia": [
+{
+"sid": "kia-sephia-g2",
+"y0": 1998,
+"y1": 2001,
+"label": "1998–2001",
+"videos": 148,
+"praise": [
+[
+"Reliability",
+5
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "BG87eJi6YiI",
+"title": "Review Timor S515i 1.5 DOHC (KIA Sephia) 1999 dan Test Drive - CarVlog Indonesia - CarVlog#15",
+"views": 258613,
+"ch": "Ardhian Singgih"
+},
+{
+"id": "oDlePX76_uE",
+"title": "Mis-firing 1998 Kia Sephia running rough problem 4 cylinder engine and problem found",
+"views": 8793,
+"ch": "Todd Mac"
+},
+{
+"id": "Ug1leGgADFs",
+"title": "Skuy Car Review KIA SEPHIA 2000 - KIA Timor S51i",
+"views": 3845,
+"ch": "balbalan dewe"
+}
+]
+}
 ]
 }

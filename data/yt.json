@@ -69485,6 +69485,120 @@
    "costs": null
   }
  ],
+ "kia-sephia": [
+  {
+   "years": [
+    2000,
+    2001
+   ],
+   "gen": "1998–2001 Kia Sephia",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 148,
+   "views": 1060962,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 175225,
+     "n": 3,
+     "best": {
+      "id": "qgrUigvc3-o",
+      "title": "How to change a starter on Kia Sephia 1999,2000,2001,2002",
+      "channel": "lilie555",
+      "views": 92025
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 117691,
+     "n": 1,
+     "best": {
+      "id": "vhhQCJFUMVA",
+      "title": "2000 Kia Sephia P0171 System Too Lean Bank 1",
+      "channel": "Johnson's Gee-rage",
+      "views": 117691
+     }
+    },
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 64323,
+     "n": 2,
+     "best": {
+      "id": "u8a_ILqceeM",
+      "title": "(Just Follow Along) 2001 Kia Sephia Valve/Rocker Cover Gasket Repair/Replacement",
+      "channel": "bsfatboy",
+      "views": 58305
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 58669,
+     "n": 1,
+     "best": {
+      "id": "QDGM7gfsXpA",
+      "title": "2000 Kia Sephia Door Handle Replacement",
+      "channel": "Johnson's Gee-rage",
+      "views": 58669
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 58402,
+     "n": 1,
+     "best": {
+      "id": "U2a65wp2PYA",
+      "title": "How to change a belt on Kia Sephia 2000",
+      "channel": "lilie555",
+      "views": 58402
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 12125,
+     "n": 1,
+     "best": {
+      "id": "AIupT-Xs1ng",
+      "title": "DIAGNOSTICS OF FUEL PUMP ON A 2001 KIA SEPHIA (HARD STARTING)",
+      "channel": "Alex Castellanos",
+      "views": 12125
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 7537,
+     "n": 1,
+     "best": {
+      "id": "gDOkm4gwigk",
+      "title": "2001 Kia Sephia Blower Motor Resistor Replacement",
+      "channel": "Eggcleaver",
+      "views": 7537
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "yHycA2DmFvk",
+     "title": "Kia sephia engine misfire problems 2000 yars How to repair misfire plug",
+     "channel": "AMILA WOTV",
+     "views": 342
+    },
+    {
+     "id": "BG87eJi6YiI",
+     "title": "Review Timor S515i 1.5 DOHC (KIA Sephia) 1999 dan Test Drive - CarVlog Indonesia - CarVlog#15",
+     "channel": "Ardhian Singgih",
+     "views": 258613
+    },
+    {
+     "id": "OYea7TeQ74I",
+     "title": "2001 Kia Sephia For Sale Columbus, Zanesville, Newark, OH Coughlin Newark K2503A",
+     "channel": "Coughlin Newark",
+     "views": 5912
+    }
+   ],
+   "costs": null
+  }
+ ],
  "lincoln-mkz": [
   {
    "years": [
