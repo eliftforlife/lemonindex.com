@@ -2,14 +2,21 @@
 // view, what search engines read); a tab only hides the others, and the address becomes /cars/?type=<tab> so the view can be shared.
 // 11-13 (nav review #6): body-type tabs too (Trucks / SUVs / Cars / Minivans). A card's data-t carries its body type (tk sv cr mv) next to
 // its kind (r s e p); the body tabs skip the Electric-tab twins (mc-dup) and the gray "No data yet" cards.
+// 11-17 (Elijah's sketch): the home page has big photo cards (.hk, above the grid) instead of the text tabs. A card filters the grid the same
+// way and scrolls to it; the grid's .hkon line names the open kind and links back to every car.
 (() => {
-  const nav = document.querySelector('.ctabs'), grid = document.querySelector('.cgrid'); if (!nav || !grid) return;
+  const grid = document.querySelector('.cgrid'), navs = [...document.querySelectorAll('.ctabs, .hk, .hkon')]; if (!navs.length || !grid) return;
+  const nav = navs[0], bar = grid.querySelector('.hkon'), cards = document.querySelector('.hk');
   const T = { all: '', trucks: 'tk', suvs: 'sv', cars: 'cr', minivans: 'mv', performance: 'p', supercars: 's', electric: 'e', jdm: 'j' };   // 11-13: JDM film cars
   const BODY = { tk: 1, sv: 1, cr: 1, mv: 1 };
   const set = (k, push) => {
     if (!(k in T)) k = 'all';
     const t = T[k]; grid.dataset.tab = k;
-    nav.querySelectorAll('a[data-type]').forEach(a => { if (a.dataset.type === k) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); });
+    navs.forEach(n => n.querySelectorAll('a[data-type]').forEach(a => { if (a.dataset.type === k) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); }));
+    if (bar) {
+      const c = cards && cards.querySelector(`a[data-type="${k}"]`);
+      bar.hidden = k === 'all'; bar.querySelector('[data-hkname]').textContent = c ? c.dataset.name : '';
+    }
     grid.querySelectorAll('.mb').forEach(mb => {
       let n = 0;
       mb.querySelectorAll('.mc').forEach(c => {
@@ -36,12 +43,14 @@
       if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
     });
   };
-  nav.addEventListener('click', e => {
+  const to = bar || nav;   // where a filtered view opens: the grid's own line on the home page, the tabs on /cars/
+  navs.forEach(n => n.addEventListener('click', e => {
     const a = e.target.closest('a[data-type]'); if (!a || e.metaKey || e.ctrlKey || e.shiftKey) return;
     e.preventDefault(); set(a.dataset.type, true);
-  });
+    if (n === cards) (a.dataset.type === 'all' ? grid : to).scrollIntoView({ block: 'start', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+  }));
   const k0 = new URLSearchParams(location.search).get('type') || location.hash.slice(1) || 'all';
   set(k0, false);
   // 11-13: a shared tab link (the menu's Trucks, Electric, Supercars) opens at the tabs, not at the search box above them
-  if (k0 in T && k0 !== 'all' && !location.hash) requestAnimationFrame(() => nav.scrollIntoView({ block: 'start' }));
+  if (k0 in T && k0 !== 'all' && !location.hash) requestAnimationFrame(() => to.scrollIntoView({ block: 'start' }));
 })();

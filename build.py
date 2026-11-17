@@ -2125,13 +2125,54 @@ CARS_GRID = f'''<section class="cgrid">{CTABS}{HCHIPS}<h2 data-hide="p j">Every 
 @media (max-width:600px){{.ctabs.ctb8{{gap:3px;padding:3px;border-radius:20px}}.ctabs.ctb8 a{{min-height:40px;padding:0 2px;font-size:13px;gap:3px;border-radius:17px}}.ctabs.ctb8 a small{{display:none}}}}</style>'''   # 11-11: shared by /cars/ and the home page
 page('/cars/', 'Look Up Your Car: Problems by Model and Year | The Lemon Index', f'Pick your car and model year to see its owner complaints, its top problems and how it compares with every other year. {len(YEARS)} models, 2000-2025, plus {len(SCX)} supercars and {len(EVX)} electric cars.', f'''
 <div class="pg"><div class="ph ph-f">{finder('<span class="ph-e">Look up</span>Look up your car.', 'Every model year, 2000 to 2025. Free.')}</div>
-{CARS_GRID}</div><script src="/assets/ctabs.js?v=5" defer></script>''',
+{CARS_GRID}</div><script src="/assets/ctabs.js?v=6" defer></script>''',
      ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": "Look up your car", "url": BASE + '/'}], canon='/')   # 11-11: same grid as the home page: one indexable copy
+# 11-17 (Elijah's sketch): on the home page the text tabs become big photo cards right under the search, one kind of car per card, the name
+# on one side and a car on the other, alternating sides. No page-view data per tab yet (Cloudflare/GA4 signed out), so JDM, SUVs, Trucks
+# lead as in his sketch; the rest follow by how many cars they hold, All cars last. A card filters the grid below (assets/ctabs.js) and
+# scrolls to it; its href is the same /?type= link the tabs use, so it works as a plain link too. /cars/ keeps the text tabs.
+_nall = sum(1 for cl in re.findall(r'<(?:a|div) class="mc([^"]*)" data-t=', lst) if 'mc-dup' not in cl)   # = the cards All cars shows
+_cnt = lambda n, w: f'{n} {w}' if isinstance(n, int) and n else 'Coming soon'
+# (type, card name, full name for the grid's line, image, alt, count, unit)
+_HK = [('jdm', 'JDM', 'JDM', 'ai-jdm/toyota-supra-mk4', 'Toyota Supra (1993–2002)', _njd, 'cars'),
+       ('suvs', 'SUVs', 'SUVs', 'ai-models/toyota-4runner', 'Toyota 4Runner', _nseg['sv'], 'models'),
+       ('trucks', 'Trucks', 'Trucks', 'ai-models/toyota-tacoma', 'Toyota Tacoma', _nseg['tk'], 'models')]
+_HK += sorted([('cars', 'Sedans', 'Sedans & hatchbacks', 'ai-models/honda-civic', 'Honda Civic', _nseg['cr'], 'models'),
+               ('minivans', 'Minivans', 'Minivans', 'ai-models/honda-odyssey', 'Honda Odyssey', _nseg['mv'], 'models'),
+               ('performance', 'Performance', 'Performance', 'ai-perf/shelby-gt500', 'Ford Mustang Shelby GT500', _npf, 'cars'),
+               ('supercars', 'Supercars', 'Supercars', 'ai-vehicles/ferrari-488-gtb', 'Ferrari 488 GTB', _nsc, 'cars'),
+               ('electric', 'Electric', 'Electric', 'ai-models/tesla-model-y', 'Tesla Model Y', _nev, 'cars')],
+              key=lambda r: -(r[5] if isinstance(r[5], int) else 0))
+_HK.append(('all', 'All cars', 'All cars', 'ai-models/toyota-camry', 'Toyota Camry', _nall, 'cars, A to Z'))
+def _hkcard(i, k, name, full, img, alt, n, unit):
+    src = f'/assets/{img}.webp'
+    return (f'<a class="hk-c{" hk-r" if i % 2 else ""}" href="{"/" if k == "all" else "/?type=" + k}" data-type="{k}" data-name="{E(full)}"><span class="hk-t"><b>{E(name)}</b><small>{E(_cnt(n, unit))}</small></span>'
+            f'<span class="hk-p"><img src="{src}"{rset(src, "(max-width: 639px) 46vw, 300px")} alt="{E(alt)}, AI illustration" width="1000" height="600"'
+            f'{"" if i < 3 else " loading=" + chr(34) + "lazy" + chr(34)} decoding="async"></span></a>')
+HKCARDS = ('<nav class="hk" id="kinds" aria-label="Kinds of car">' + ''.join(_hkcard(i, *r) for i, r in enumerate(_HK)) + '</nav>'
+           '<style>.hk{display:grid;grid-template-columns:1fr;gap:10px;max-width:1120px;margin:22px auto 0;scroll-margin-top:72px;text-align:left}'
+           '.hk-c{display:flex;align-items:center;gap:8px;height:116px;padding:0 6px 0 20px;border-radius:22px;background:#f5f5f7;color:#1d1d1f;text-decoration:none;overflow:hidden;transition:background .2s ease}'
+           '.hk-t{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:4px}'
+           '.hk-t b{font-size:clamp(22px,6.4vw,30px);font-weight:800;letter-spacing:-.025em;line-height:1.02}'
+           '.hk-t small{font-size:14px;font-weight:600;color:#6e6e73;font-variant-numeric:tabular-nums}'
+           '.hk-p{flex:0 0 47%;height:100%;display:flex;align-items:center;justify-content:flex-end}'
+           '.hk-p img{display:block;width:100%;height:100%;object-fit:contain;transition:transform .35s cubic-bezier(.2,.7,.2,1)}'
+           '.hk-c:hover{background:#ececf0}.hk-c:hover img{transform:translateX(-5px) scale(1.03)}'
+           '.hk-c:focus-visible{outline:2px solid #1d1d1f;outline-offset:2px}'
+           '.hk-c[aria-current]:not([data-type=all]){box-shadow:inset 0 0 0 2px #1d1d1f}.hk-c[aria-current]:not([data-type=all]) .hk-t b{box-shadow:inset 0 -.16em 0 #ffd400}'
+           '@media (max-width:639px){.hk-c.hk-r{flex-direction:row-reverse;padding:0 20px 0 6px}.hk-r .hk-t{align-items:flex-end;text-align:right}.hk-r .hk-p{justify-content:flex-start}.hk-r:hover img{transform:translateX(5px) scale(1.03)}}'
+           '@media (min-width:640px){.hk{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.hk-c{height:150px;padding:0 10px 0 28px}.hk-t b{font-size:32px}'
+           '.hk-c:last-child:nth-child(odd){grid-column:1/-1}.hk-c:last-child:nth-child(odd) .hk-p{flex-basis:32%}}'
+           '@media (min-width:1000px){.hk{gap:16px}.hk-c{height:184px;padding:0 16px 0 36px;border-radius:26px}.hk-t b{font-size:42px}.hk-t small{font-size:15px}}'
+           '@media (prefers-reduced-motion:reduce){.hk-c,.hk-p img{transition:none}.hk-c:hover img{transform:none}}'
+           '.hkon{display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;gap:6px 16px;margin:0 0 18px;scroll-margin-top:72px;font-size:15px;color:#6e6e73}.hkon[hidden]{display:none}'
+           '.hkon b{font-size:24px;font-weight:800;letter-spacing:-.02em;color:#1d1d1f}.hkon a{color:#1d1d1f;font-weight:600}</style>')
+HKBAR = '<p class="hkon" hidden><b data-hkname></b><a href="/" data-type="all">Show every car</a><a href="#kinds">Other kinds of car</a></p>'
 # 11-11: the home page = this grid (search, the 4 tabs, every model), with the home's own title, schema, H1 and trust line
 page('/', HOME_PAGE['title'], HOME_PAGE['desc'], f'''
-<div class="pg pg-home"><div class="ph ph-f">{finder('<span class="ph-e">The Lemon Index</span>Look up any car.', 'Every model year, 2000 to 2025. Free.', foot=f'<p class="fnote">Scores from {COUNTED:,} owner complaints filed with the U.S. government in each car&#39;s first 3 years (model years 2010–2022). <a href="/data/#totals">What each total covers</a></p><p class="fnote">Canada? See recalls at <a href="{TC_DB}" rel="noopener nofollow" target="_blank">Transport Canada</a></p>')}</div>
-{CARS_GRID}
-<section class="faq"><h2>Questions</h2>{HOME_FAQ}</section></div><script src="/assets/ctabs.js?v=5" defer></script>''', ld=HOME_PAGE['ld'])
+<div class="pg pg-home"><div class="ph ph-f">{finder('<span class="ph-e">The Lemon Index</span>Look up any car.', 'Every model year, 2000 to 2025. Free.', foot=f'<p class="fnote">From {COUNTED:,} owner complaints. <a href="/data/#totals">How it works</a></p>')}{HKCARDS}</div>
+{CARS_GRID.replace(CTABS, HKBAR, 1)}
+<section class="faq"><h2>Questions</h2>{HOME_FAQ}</section></div><script src="/assets/ctabs.js?v=6" defer></script>''', ld=HOME_PAGE['ld'])
 
 curls = []
 exec(open('cmp_pages.py', encoding='utf-8').read())   # 11-12 (Elijah): match-up pages rebuilt around who wins and why, years to buy, what breaks, recalls, YouTube
