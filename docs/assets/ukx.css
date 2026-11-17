@@ -1,0 +1,95 @@
+/* UK MOT pass rate pages (11-15, growth plan 3B-3): /uk/ and /uk/<make>-<model>/. Prefix ukx-. */
+.ukx .ukx-st { max-width: 760px; margin: 22px auto 0; text-align: left; }
+.ukx .ukx-st span { display: block; margin-top: 2px; font-size: 14px; line-height: 1.35; }
+.yph6 .ukx-st { order: 4; width: 100%; grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 560px; }
+.ukx .ukx-up { color: #1a7f37; }
+.ukx .ukx-dn { color: #b3121a; }
+.ukx .yc h2 .h2s { flex-basis: 100%; }
+.ukx .yc p { max-width: 72ch; }
+.ukx-cap { color: #6e6e73; font-size: 13px; line-height: 1.45; margin-top: 10px; max-width: 72ch; }
+.ukx-cap a { color: inherit; }
+
+/* pass rate by year: the model's bar, the same-age average as a tick */
+.ukx-yr { list-style: none; margin: 16px 0 0; padding: 0; display: grid; gap: 12px; max-width: 760px; }
+.ukx-yr li { display: grid; grid-template-columns: 3.4em 1fr 4.6em; grid-template-areas: "l b n" ". s s"; align-items: center; column-gap: 12px; font-size: 15px; }
+.ukx-yl { grid-area: l; font-weight: 600; font-variant-numeric: tabular-nums; }
+.ukx-yb { grid-area: b; position: relative; height: 12px; border-radius: 999px; background: #f5f5f7; }
+.ukx-yb i { display: block; height: 100%; border-radius: inherit; background: #1d1d1f; }
+.ukx-yb i.ukx-bad { background: #b3121a; }
+.ukx-yb i.ukx-good { background: #1a7f37; }
+.ukx-yb em { position: absolute; top: -4px; bottom: -4px; width: 2px; margin-left: -1px; background: #6e6e73; border-radius: 1px; }
+.ukx-yr b { grid-area: n; text-align: right; font-variant-numeric: tabular-nums; }
+.ukx-yr small { grid-area: s; color: #6e6e73; font-size: 13px; margin-top: 2px; }
+.ukx-key { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 13px; color: #6e6e73; margin: 6px 0 0; }
+.ukx-key span::before { content: ""; display: inline-block; vertical-align: middle; margin-right: 6px; }
+.ukx-key .k1::before { width: 18px; height: 8px; border-radius: 4px; background: #1d1d1f; }
+.ukx-key .k2::before { width: 2px; height: 14px; background: #6e6e73; }
+
+/* failure areas: this model vs same-age cars */
+.ukx-ar { list-style: none; margin: 14px 0 0; padding: 0; display: grid; gap: 12px; max-width: 760px; }
+.ukx-ar li { display: grid; grid-template-columns: minmax(96px, 230px) 1fr 3.6em; grid-template-areas: "l b n" ". s s"; align-items: center; column-gap: 12px; font-size: 15px; }
+.ukx-ar .ukx-al { grid-area: l; font-weight: 600; }
+.ukx-ar .ukx-ab { grid-area: b; position: relative; height: 10px; border-radius: 999px; background: #f5f5f7; }
+.ukx-ar .ukx-ab i { display: block; height: 100%; border-radius: inherit; background: #1d1d1f; }
+.ukx-ar .ukx-ab em { position: absolute; top: -4px; bottom: -4px; width: 2px; margin-left: -1px; background: #6e6e73; }
+.ukx-ar b { grid-area: n; text-align: right; font-variant-numeric: tabular-nums; }
+.ukx-ar small { grid-area: s; color: #6e6e73; font-size: 13px; }
+
+.ukx-items { margin: 14px 0 0; padding: 0; list-style: none; display: grid; gap: 10px; max-width: 760px; }
+.ukx-items li { padding: 12px 14px; background: #f5f5f7; border-radius: 12px; }
+.ukx-items b { display: block; font-weight: 600; }
+.ukx-items small { color: #6e6e73; font-size: 13px; }
+
+/* years to look for / be careful with */
+.ukx-pick { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; max-width: 760px; margin-top: 14px; }
+.ukx-pick > div { border-radius: 14px; padding: 16px 18px; background: #f5f5f7; border-left: 4px solid #6e6e73; }
+.ukx-pick .ukx-pg { border-left-color: #1a7f37; }
+.ukx-pick .ukx-pb { border-left-color: #b3121a; }
+.ukx-pick h3 { margin: 0 0 8px; font-size: 17px; }
+.ukx-pick ul { margin: 0; padding-left: 18px; }
+.ukx-pick li { margin: 4px 0; }
+
+/* hub: best / worst lists and the sortable table */
+.ukx-bw { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin-top: 14px; }
+.ukx-bw ol { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+.ukx-bw li { display: flex; justify-content: space-between; gap: 10px; padding: 10px 14px; background: #f5f5f7; border-radius: 12px; font-size: 15px; }
+.ukx-bw li a { font-weight: 600; color: inherit; }
+.ukx-bw li b { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.ukx-bw h3 { font-size: 17px; margin: 0 0 8px; }
+.ukx-tools { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 14px 0 10px; }
+.ukx-tools input, .ukx-tools select { font: inherit; font-size: 16px; padding: 10px 14px; border: 1px solid #d2d2d7; border-radius: 999px; background: #fff; color: #1d1d1f; }
+.ukx-tools input { flex: 1 1 220px; min-width: 0; }
+.ukx-tw { overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; }
+table.ukx-t { width: 100%; border-collapse: collapse; font-size: 15px; font-variant-numeric: tabular-nums; }
+table.ukx-t th, table.ukx-t td { padding: 9px 10px; border-bottom: 1px solid #ececf0; text-align: right; white-space: nowrap; }
+table.ukx-t th:first-child, table.ukx-t td:first-child { text-align: left; white-space: normal; }
+table.ukx-t th { font-size: 13px; font-weight: 600; color: #6e6e73; position: sticky; top: 0; background: #fff; }
+table.ukx-t th button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+table.ukx-t th button::after { content: " \2195"; opacity: .45; }
+table.ukx-t th[aria-sort=ascending] button::after { content: " \2191"; opacity: 1; }
+table.ukx-t th[aria-sort=descending] button::after { content: " \2193"; opacity: 1; }
+table.ukx-t td a { font-weight: 600; color: inherit; }
+table.ukx-t td small { color: #6e6e73; font-size: 12px; margin-left: 4px; }
+.ukx-none { color: #6e6e73; }
+.ukx-age { list-style: none; margin: 14px 0 0; padding: 0; display: grid; grid-template-columns: repeat(18, minmax(0, 1fr)); gap: 4px; align-items: end; height: 170px; max-width: 760px; }
+.ukx-age li { display: flex; flex-direction: column; justify-content: flex-end; align-items: center; height: 100%; font-size: 11px; color: #6e6e73; }
+.ukx-age li i { display: block; width: 100%; border-radius: 4px 4px 0 0; background: #1d1d1f; }
+.ukx-age li span { margin-top: 4px; }
+.ukx-age li b { font-size: 11px; color: #1d1d1f; font-weight: 600; margin-bottom: 3px; }
+.ukx-src { margin-top: 28px; padding-top: 16px; border-top: 1px solid rgba(0,0,0,.08); }
+@media (max-width: 600px) {
+  .ukx-yr li { grid-template-columns: 3em 1fr 4.2em; column-gap: 8px; font-size: 14px; }
+  .ukx-ar li { grid-template-columns: minmax(80px, 38%) 1fr 3.2em; column-gap: 8px; font-size: 14px; }
+  .ukx .ukx-st b { font-size: 24px; }
+  table.ukx-t { font-size: 14px; }
+  table.ukx-t th, table.ukx-t td { padding: 8px 6px; }
+  table.ukx-t .ukx-hm { display: none; }
+  .ukx-age { height: 140px; gap: 2px; }
+  .ukx-age li b { display: none; }
+  .ukx-age li span { font-size: 9px; }
+}
+.ukx-ch a { font-family: inherit; font-weight: 600; }
+.ukx .ph .ukx-st { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+@media (max-width: 600px) { .ukx .ph .ukx-st { grid-template-columns: 1fr 1fr; } }
+.ukx-tw { max-height: min(70vh, 720px); overflow: auto; border: 1px solid #ececf0; border-radius: 14px; }
+table.ukx-t th { z-index: 1; }
