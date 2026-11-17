@@ -88990,7 +88990,39 @@
      "views": 769271
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 1400,
+       "lo": 75.0,
+       "hi": 3685.0,
+       "n": 3,
+       "videos": 3,
+       "id": "xNIkJdLTv0U",
+       "t": 245,
+       "title": "Regular Car Reviews: 2004 Acura RSX"
+      }
+     ],
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 1350,
+       "lo": 1200.0,
+       "hi": 1500.0,
+       "n": 2,
+       "videos": 2,
+       "id": "pPAyGu7nhVc",
+       "t": 244,
+       "title": "Luis's 2003 RSX TYPE S"
+      }
+     ]
+    ]
+   }
   }
  ]
 }
