@@ -67961,7 +67961,26 @@
      "views": 21110
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Transmission",
+      {
+       "median": 2000,
+       "lo": 1500.0,
+       "hi": 2500.0,
+       "n": 4,
+       "videos": 3,
+       "id": "lBvM-xITUxc",
+       "t": 292,
+       "title": "Buy or Bye: 2004–2007 Cadillac CTS-V Gen 1 — 400HP LS6/LS2 Manual-Only Sedan, \"Four-Door Z06,\" BUY!"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -69260,7 +69279,26 @@
      "views": 23768
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 80,
+       "lo": 70.0,
+       "hi": 90.0,
+       "n": 4,
+       "videos": 4,
+       "id": "GKrxdiGZH1Q",
+       "t": 2651,
+       "title": "⭐ 2009 Mitsubishi Galant Ralliart - 3.8 - Cranks Sometimes But Still No Start"
+      }
+     ]
+    ]
+   }
   }
  ],
  "ford-bronco-sport": [
