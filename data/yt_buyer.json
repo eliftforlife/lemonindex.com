@@ -35190,5 +35190,92 @@
 }
 ]
 }
+],
+"mercury-mountaineer": [
+{
+"sid": "mercury-mountaineer-g2",
+"y0": 2002,
+"y1": 2005,
+"label": "2002–2005",
+"videos": 199,
+"praise": [
+[
+"Reliability",
+6
+],
+[
+"Power",
+4
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "ybCH5BHSd4I",
+"title": "How to diagnose a charging system problem  2005 Mercury Mountaineer",
+"views": 35402,
+"ch": "Jimthecarguy"
+},
+{
+"id": "zrjclBlgIBQ",
+"title": "2003 Mercury Mountaineer Binding Problem",
+"views": 22373,
+"ch": "Foreign Auto Services"
+},
+{
+"id": "tqyPvqsYXf4",
+"title": "4K Review 2005 Mercury Mountaineer Virtual Test-Drive & Walk-around",
+"views": 17134,
+"ch": "Cars-Global"
+}
+]
+},
+{
+"sid": "mercury-mountaineer-g3",
+"y0": 2006,
+"y1": 2010,
+"label": "2006–2010",
+"videos": 200,
+"praise": [
+[
+"Looks",
+4
+],
+[
+"Power",
+4
+],
+[
+"Reliability",
+4
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+3
+]
+],
+"top": [
+{
+"id": "a8mEaqVstnE",
+"title": "Top 5 Problems Mercury Mountaineer SUV 3rd Generation 2006-10",
+"views": 109705,
+"ch": "1A Auto: Repair Tips & Secrets Only Mechanics Know"
+},
+{
+"id": "hwpnp640gg8",
+"title": "High Mileage 2006 Mercury Mountaineer aka Ford Explorer review, what to expect.",
+"views": 46716,
+"ch": "repairED"
+},
+{
+"id": "brm2KeiS-L8",
+"title": "2008 Mercury Mountaineer Premier Edition - Intermittent Starting Problem Video 1",
+"views": 21752,
+"ch": "reemislopez"
+}
+]
+}
 ]
 }
