@@ -35378,5 +35378,167 @@
 }
 ]
 }
+],
+"mitsubishi-eclipse": [
+{
+"sid": "mitsubishi-eclipse-g2",
+"y0": 1995,
+"y1": 1999,
+"label": "1995–1999",
+"videos": 184,
+"praise": [
+[
+"Power",
+11
+],
+[
+"Looks",
+10
+],
+[
+"Reliability",
+10
+],
+[
+"Fun to drive",
+8
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+3
+],
+[
+"Oil leaks (gaskets, seals, housings)",
+3
+]
+],
+"top": [
+{
+"id": "z68gwJDugQ4",
+"title": "MotorWeek | Retro Review: '95 Mitsubishi Eclipse",
+"views": 244821,
+"ch": "MotorWeek"
+},
+{
+"id": "logbbCzkmeA",
+"title": "Is the 1997 Mitsubishi Eclipse GSX a BARGAIN Lancer EVO to BUY?",
+"views": 186591,
+"ch": "Raiti's Rides"
+},
+{
+"id": "UtRoE0LMmCA",
+"title": "1997 Mitsubishi Eclipse Turbo Walkaround In Depth Review",
+"views": 53385,
+"ch": "RAJ REVIEWS"
+}
+]
+},
+{
+"sid": "mitsubishi-eclipse-g3",
+"y0": 2000,
+"y1": 2005,
+"label": "2000–2005",
+"videos": 196,
+"praise": [
+[
+"Looks",
+8
+],
+[
+"Reliability",
+6
+],
+[
+"Power",
+5
+],
+[
+"Fun to drive",
+4
+]
+],
+"trouble": [
+[
+"Battery / alternator / starter",
+4
+],
+[
+"Electrical / wiring / TIPM",
+4
+],
+[
+"Rust",
+3
+]
+],
+"top": [
+{
+"id": "hsiCICnEfU8",
+"title": "2000 Mitsubishi Eclipse | Retro Review",
+"views": 65612,
+"ch": "MotorWeek"
+},
+{
+"id": "d98xjLgZbwk",
+"title": "Reasons to Buy a Mitsubishi Eclipse 3G | 2000-2005",
+"views": 62283,
+"ch": "Wolf-Car"
+},
+{
+"id": "vNQN_xhIEeg",
+"title": "Mitsubishi Eclipse GT 2001 review",
+"views": 55081,
+"ch": "MrVman858"
+}
+]
+},
+{
+"sid": "mitsubishi-eclipse-g4",
+"y0": 2006,
+"y1": 2012,
+"label": "2006–2012",
+"videos": 199,
+"praise": [
+[
+"Looks",
+9
+],
+[
+"Power",
+8
+],
+[
+"Fun to drive",
+6
+],
+[
+"Reliability",
+6
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "QCDizQBZugY",
+"title": "Review: 2008 Mitsubishi Eclipse GT V6 (Manual)",
+"views": 282722,
+"ch": "Matt Maran Motoring"
+},
+{
+"id": "4ElUDt65F-g",
+"title": "Review: 2006 Mitsubishi Eclipse",
+"views": 150974,
+"ch": "MyRide on Autobytel"
+},
+{
+"id": "4U45eQBWm2w",
+"title": "2009 Mitsubishi Eclipse Review - No Show No Go",
+"views": 126516,
+"ch": "TheStraightPipes"
+}
+]
+}
 ]
 }

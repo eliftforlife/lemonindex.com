@@ -69657,6 +69657,99 @@
    "costs": null
   }
  ],
+ "nissan-quest": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002
+   ],
+   "gen": "1999–2002 Nissan Quest",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 155,
+   "views": 297780,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 27073,
+     "n": 2,
+     "best": {
+      "id": "FKG7bgo4biE",
+      "title": "Oil Change & Filter Replacement Nissan Quest 1998-2002",
+      "channel": "2CarPros",
+      "views": 26831
+     }
+    },
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 9593,
+     "n": 1,
+     "best": {
+      "id": "7piGyRBQb9Y",
+      "title": "2001 NISSAN QUEST REAR VALVE COVER REMOVAL",
+      "channel": "DA TRUTH",
+      "views": 9593
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 6715,
+     "n": 2,
+     "best": {
+      "id": "clRQGqYzbxU",
+      "title": "How to reset Service Engine soon Light on a 1999 Nissan Quest.....",
+      "channel": "Peter L",
+      "views": 3635
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 2986,
+     "n": 1,
+     "best": {
+      "id": "FozXF26M-fg",
+      "title": "2002 NISSAN QUEST Crank No Start Troubleshooting...DIY repair Fixed...",
+      "channel": "Peter L",
+      "views": 2986
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 2949,
+     "n": 2,
+     "best": {
+      "id": "zMU32eALjCA",
+      "title": "1993-2002 Nissan Quest Starter Replacement",
+      "channel": "2 The Rescue Auto",
+      "views": 1977
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "keXVCIC9EtE",
+     "title": "SOLD 2002 Nissan Quest GXE 99K Miles Meticulous Motors Inc Florida For Sale",
+     "channel": "MeticulousMotors",
+     "views": 9119
+    },
+    {
+     "id": "ytKsSUw60YU",
+     "title": "2002 Nissan Quest SE 1 owner 84k miles video overview and walk around.",
+     "channel": "Direct Auto Outlet",
+     "views": 3798
+    },
+    {
+     "id": "wXQQAYtH1go",
+     "title": "2001 Nissan Quest Junkyard Review",
+     "channel": "Cahlager",
+     "views": 2164
+    }
+   ],
+   "costs": null
+  }
+ ],
  "kia-sephia": [
   {
    "years": [
