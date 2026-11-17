@@ -68766,7 +68766,26 @@
      "views": 3732
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 400,
+       "lo": 300.0,
+       "hi": 400.0,
+       "n": 3,
+       "videos": 3,
+       "id": "KO-2hBP1SWk",
+       "t": 210,
+       "title": "Do I regret buying a Mazda Tribute 2005?"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -68891,7 +68910,26 @@
      "views": 1681
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 295,
+       "lo": 290.0,
+       "hi": 300.0,
+       "n": 4,
+       "videos": 3,
+       "id": "YStyt1ryy-c",
+       "t": 426,
+       "title": "2008 Mazda Tribute Fuel Filler Neck"
+      }
+     ]
+    ]
+   }
   }
  ],
  "ford-crown-victoria": [
@@ -69026,7 +69064,26 @@
      "views": 1202265
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 115,
+       "lo": 30.0,
+       "hi": 200.0,
+       "n": 4,
+       "videos": 4,
+       "id": "Cq0slojkhPw",
+       "t": 302,
+       "title": "Why I bought an EX Police Interceptor 2008 Crown Victoria - Review"
+      }
+     ]
+    ]
+   }
   }
  ],
  "chrysler-concorde": [
