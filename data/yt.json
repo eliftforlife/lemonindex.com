@@ -69676,6 +69676,135 @@
    }
   }
  ],
+ "gmc-jimmy": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005
+   ],
+   "gen": "1995–2005 GMC Jimmy",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 2573956,
+   "topics": [
+    {
+     "name": "Cooling system",
+     "views": 124123,
+     "n": 2,
+     "best": {
+      "id": "KEvL4oioEcQ",
+      "title": "DIY 1998 GMC Jimmy Radiator Replacement",
+      "channel": "Larry Waters Sr",
+      "views": 74910
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 90568,
+     "n": 4,
+     "best": {
+      "id": "dkt2Zes1j_U",
+      "title": "I won this 1998 GMC Jimmy 4x4 for $925 from IAA! You Won't Believe it!",
+      "channel": "Auto Auction Rebuilds",
+      "views": 73003
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 83697,
+     "n": 1,
+     "best": {
+      "id": "Z-0EmXVuE_4",
+      "title": "How to: Replace Flashing Relay On A 1997-2001 GMC Jimmy, Chevy Blazer, Oldsmobile Sonoma",
+      "channel": "JB",
+      "views": 83697
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 50167,
+     "n": 2,
+     "best": {
+      "id": "20eXp01GPds",
+      "title": "1998 GMC Jimmy Blazer Upper Control Arm Replacement",
+      "channel": "Al Young Cuda",
+      "views": 34829
+     }
+    },
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 37373,
+     "n": 2,
+     "best": {
+      "id": "sEPt1WLkYow",
+      "title": "2000 GMC Jimmy Oil Cooler Line Replacement 4x4 4.3L",
+      "channel": "The Driveway Grease Monkey",
+      "views": 24534
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 33668,
+     "n": 1,
+     "best": {
+      "id": "UGEo48LB4ss",
+      "title": "2000 GMC Jimmy oil change",
+      "channel": "MichiganbornJoe",
+      "views": 33668
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 26957,
+     "n": 1,
+     "best": {
+      "id": "Qaff03fzEn8",
+      "title": "1995 GMC Jimmy Rear Window Retainer Clip Repair",
+      "channel": "McCart VehicleAccessories",
+      "views": 26957
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 16104,
+     "n": 3,
+     "best": {
+      "id": "4bTBl274QCk",
+      "title": "How to program a GMC Jimmy remote key fob 1998 - 2004",
+      "channel": "PYR Automotive ",
+      "views": 13475
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "lAjbAzWQ0cw",
+     "title": "Solving Cold Start Problems 1999 GMC Jimmy -EricTheCarGuy",
+     "channel": "EricTheCarGuy",
+     "views": 431190
+    },
+    {
+     "id": "0vBDgadV4Ys",
+     "title": "1995 Chevy Blazer and GMC Jimmy | Retro Review",
+     "channel": "MotorWeek",
+     "views": 83987
+    },
+    {
+     "id": "QylmU8a0aUI",
+     "title": "1999 GMC Jimmy SLT 4X4 - Walkaround and Start-up",
+     "channel": "Zachary Beland",
+     "views": 31472
+    }
+   ],
+   "costs": null
+  }
+ ],
  "nissan-quest": [
   {
    "years": [

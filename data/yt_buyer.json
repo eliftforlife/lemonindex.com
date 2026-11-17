@@ -35676,5 +35676,46 @@
 }
 ]
 }
+],
+"gmc-jimmy": [
+{
+"sid": "gmc-jimmy-g2",
+"y0": 1995,
+"y1": 2005,
+"label": "1995–2005",
+"videos": 199,
+"praise": [
+[
+"Reliability",
+6
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+4
+]
+],
+"top": [
+{
+"id": "lAjbAzWQ0cw",
+"title": "Solving Cold Start Problems 1999 GMC Jimmy -EricTheCarGuy",
+"views": 431190,
+"ch": "EricTheCarGuy"
+},
+{
+"id": "0vBDgadV4Ys",
+"title": "1995 Chevy Blazer and GMC Jimmy | Retro Review",
+"views": 83987,
+"ch": "MotorWeek"
+},
+{
+"id": "UI_QZJ0tdwk",
+"title": "2000 GMC Jimmy review",
+"views": 28231,
+"ch": "mr.nrudd 19"
+}
+]
+}
 ]
 }
