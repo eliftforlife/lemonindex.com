@@ -68088,7 +68088,26 @@
      "views": 252288
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 900,
+       "lo": 55.0,
+       "hi": 1200.0,
+       "n": 7,
+       "videos": 4,
+       "id": "JQECVjaKnLM",
+       "t": 961,
+       "title": "2nd Gen Cadillac CTS V Coupes are A Reliable Supercharged LS Performance Car Will Make Owners MONEY"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -68193,7 +68212,39 @@
      "views": 15446
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 1350,
+       "lo": 800.0,
+       "hi": 3000.0,
+       "n": 12,
+       "videos": 6,
+       "id": "NoBjzk70z4c",
+       "t": 355,
+       "title": "Buy or Bye: 2014–2019 Cadillac CTS — Twin-Turbo V6 Vsport Sleeper for $25K Used!"
+      }
+     ],
+     [
+      "Brakes",
+      {
+       "median": 9000,
+       "lo": 595.0,
+       "hi": 9000.0,
+       "n": 3,
+       "videos": 3,
+       "id": "wx8jG-DbIhw",
+       "t": 206,
+       "title": "2016 Cadillac CTS-V: Almost Everything You Ever Wanted to Know"
+      }
+     ]
+    ]
+   }
   }
  ],
  "buick-lacrosse": [
@@ -68321,7 +68372,26 @@
      "views": 45152
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 160,
+       "lo": 150.0,
+       "hi": 200.0,
+       "n": 3,
+       "videos": 3,
+       "id": "_K0GsuCnqPg",
+       "t": 85,
+       "title": "secondary air injection fault code on a 2009 Buick LaCrosse or similar p0411 after replacing  pump"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -68449,7 +68519,26 @@
      "views": 15954
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 90,
+       "lo": 40.0,
+       "hi": 120.0,
+       "n": 5,
+       "videos": 3,
+       "id": "dcOB5KtEgb8",
+       "t": 1609,
+       "title": "2015 Buick LaCrosse - Review"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -68527,6 +68616,138 @@
      "title": "2017 Buick LaCrosse Premium Road Test & In Depth Review",
      "channel": "Saabkyle04",
      "views": 193338
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "lincoln-mkx": [
+  {
+   "years": [
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015
+   ],
+   "gen": "2007–2015 Lincoln MKX",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 5382768,
+   "topics": [
+    {
+     "name": "Brakes & ABS",
+     "views": 521390,
+     "n": 9,
+     "best": {
+      "id": "hrEXB79dYOA",
+      "title": "Lincoln MKX/Ford Edge Rear Brake Pad and Rotor Replacement 2013 (2011-2015 Similar)",
+      "channel": "Big Dog50001 Automotive",
+      "views": 152825
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 368075,
+     "n": 8,
+     "best": {
+      "id": "seqtS8yxqbI",
+      "title": "2011 - 2015 Lincoln MKX No Key Detected - How to Start With Dead, Bad, Broken Smart Key Fob",
+      "channel": "PYR Automotive ",
+      "views": 159119
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 195097,
+     "n": 6,
+     "best": {
+      "id": "SHv07Q8Ol-E",
+      "title": "How to Change a Lincoln MKX Cabin Air Filter 2007 - 2015 DIY Remove / Replace Tutorial",
+      "channel": "PYR Automotive ",
+      "views": 65548
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 189029,
+     "n": 1,
+     "best": {
+      "id": "YjAyejPlt7k",
+      "title": "2007-2014 FORD EDGE/LINCOLN MKX SUNROOF GUIDE REPAIR SERVICE.",
+      "channel": "DonJoseNetwork",
+      "views": 189029
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 106962,
+     "n": 3,
+     "best": {
+      "id": "aDLkZ34Zuf4",
+      "title": "2011 - 2015 Lincoln MKX Oil Life Reset - How To Reset - Change Engine Oil Soon - Oil Change Required",
+      "channel": "PYR Automotive ",
+      "views": 86558
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 102232,
+     "n": 4,
+     "best": {
+      "id": "Vz267Ko3We0",
+      "title": "2007-2018 Ford Edge/Lincoln MKX Spark Plug Replacement How-To",
+      "channel": "Blue Collar Garage",
+      "views": 62230
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 89555,
+     "n": 2,
+     "best": {
+      "id": "kHAFjyf7MOA",
+      "title": "How To Find Keypad Door Code Ford Edge Lincoln MKX 2007 - 2014 DIY Keyless Entry Location Retrieve",
+      "channel": "PYR Automotive ",
+      "views": 63103
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 59360,
+     "n": 2,
+     "best": {
+      "id": "vj6KVWJvx5o",
+      "title": "2012 Lincoln MKX Power steering fluid change at 100K miles",
+      "channel": "MACTFORDEDGE",
+      "views": 38104
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "2kkV07DYU-4",
+     "title": "2008 Lincoln MKX Transmission Problems",
+     "channel": "Alan Sharp",
+     "views": 79053
+    },
+    {
+     "id": "vQs9YybQLCg",
+     "title": "2008 Lincoln MKX Review - Kelley Blue Book",
+     "channel": "Kelley Blue Book",
+     "views": 134559
+    },
+    {
+     "id": "5_97n4cRtFs",
+     "title": "2013 Lincoln MKX Start up, Walkaround and Vehicle Tour",
+     "channel": "Justins Car Reviews",
+     "views": 124038
     }
    ],
    "costs": null
