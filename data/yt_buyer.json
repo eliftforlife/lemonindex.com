@@ -34071,5 +34071,99 @@
 }
 ]
 }
+],
+"volvo-xc90": [
+{
+"sid": "volvo-xc90-g1",
+"y0": 2003,
+"y1": 2014,
+"label": "2003–2014",
+"videos": 199,
+"praise": [
+[
+"Reliability",
+13
+],
+[
+"Looks",
+11
+],
+[
+"Power",
+7
+],
+[
+"Space and practicality",
+6
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "_WhDcsEBjV4",
+"title": "Buying a used Volvo XC90 - 2002-2014, Buying advice with Common Issues",
+"views": 354209,
+"ch": "different car review"
+},
+{
+"id": "lKR1RXRG31w",
+"title": "Volvo XC90 review (2002 to 2014) | What Car?",
+"views": 351300,
+"ch": "What Car?"
+},
+{
+"id": "4B1X1vTc4Zo",
+"title": "2003 to 2014 Volvo XC90 Buyers guide - How to buy the right one",
+"views": 337640,
+"ch": "HMNLT"
+}
+]
+},
+{
+"sid": "volvo-xc90-g2",
+"y0": 2016,
+"y1": 2025,
+"label": "2016–2025",
+"videos": 193,
+"praise": [
+[
+"Looks",
+32
+],
+[
+"Power",
+22
+],
+[
+"Comfort and ride",
+18
+],
+[
+"Space and practicality",
+17
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "oZJSn_2tmp8",
+"title": "Volvo XC90 SUV 2020 in-depth review | carwow Reviews",
+"views": 2516498,
+"ch": "carwow"
+},
+{
+"id": "iA-yTbUyPcc",
+"title": "2017 Volvo XC90 - Review and Road Test",
+"views": 1824963,
+"ch": "Kelley Blue Book"
+},
+{
+"id": "LpUL9it2G_M",
+"title": "2016 Volvo XC90 T6 R-Design Start Up, Test Drive, and In Depth Review",
+"views": 1691713,
+"ch": "Saabkyle04"
+}
+]
+}
 ]
 }

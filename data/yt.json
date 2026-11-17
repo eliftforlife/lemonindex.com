@@ -68640,6 +68640,239 @@
    "costs": null
   }
  ],
+ "volvo-xc90": [
+  {
+   "years": [
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014
+   ],
+   "gen": "2003–2014 Volvo XC90",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 12415309,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 470644,
+     "n": 4,
+     "best": {
+      "id": "Fz02Q68X1dQ",
+      "title": "How to reset the maintenance required light on a 2010 Volvo XC90",
+      "channel": "Jimthecarguy",
+      "views": 345683
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 458782,
+     "n": 6,
+     "best": {
+      "id": "2x9cufzCXmo",
+      "title": "2007 Volvo XC90 3.2 Alternator Removal/Install/Fix Gear and Belt driven style",
+      "channel": "Midknight Mechanics",
+      "views": 144772
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 277735,
+     "n": 8,
+     "best": {
+      "id": "yq2g4fjgZCk",
+      "title": "2004 Volvo XC90 2.5T FWD Engine Oil Change",
+      "channel": "TheTexasCoder",
+      "views": 138195
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 258863,
+     "n": 3,
+     "best": {
+      "id": "jKfpTlktrPA",
+      "title": "Replacing The Radiator On A 2002-2014 Volvo XC90 With 2.5l Turbo Engine",
+      "channel": "How to Automotive",
+      "views": 151410
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 142578,
+     "n": 2,
+     "best": {
+      "id": "bI96VZpr2TE",
+      "title": "2004 Volvo XC90 2.5T Spark Plug Replacement",
+      "channel": "TheTexasCoder",
+      "views": 125941
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 126544,
+     "n": 4,
+     "best": {
+      "id": "SWL1UAUwrds",
+      "title": "Transmission Failure in my 2007 Volvo XC90 V8 Sport.",
+      "channel": "David Bello",
+      "views": 41284
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 111495,
+     "n": 1,
+     "best": {
+      "id": "VQE9B3WkcPI",
+      "title": "How to Replace 2006 Volvo XC90 Front Brake Pads",
+      "channel": "DIY Fixer",
+      "views": 111495
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 83546,
+     "n": 2,
+     "best": {
+      "id": "M3-hm1ccbq4",
+      "title": "Volvo XC90 Cabin Air Filter Replacement DIY (2003-2014 P2 Volvo XC90 V8, T5, T6, 3.2 SI6)",
+      "channel": "FCP Euro",
+      "views": 58692
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "4B1X1vTc4Zo",
+     "title": "2003 to 2014 Volvo XC90 Buyers guide - How to buy the right one",
+     "channel": "HMNLT",
+     "views": 337640
+    },
+    {
+     "id": "NtKSZXHVrrc",
+     "title": "Volvo XC90 buyers guide Gen 1 (2003-2014) Avoid buying a broken Volvo XC90 (Cheap 3.2 D5 T5 T6 V8)",
+     "channel": "The Miles Driven",
+     "views": 276498
+    },
+    {
+     "id": "WF9In7vGbeA",
+     "title": "2002-2006 Volvo S60 S80 V70 XC70 XC90 Dash Cluster DIM Problems",
+     "channel": "Automotive Circuit Solutions",
+     "views": 209518
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2016–2025 Volvo XC90",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 118940434,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 159094,
+     "n": 2,
+     "best": {
+      "id": "5qf0O4hvuxE",
+      "title": "2016 - 2022 Volvo XC90 Key Fob Battery Replacement - How To Replace Or Change XC90 Remote Batteries",
+      "channel": "PYR Automotive ",
+      "views": 96296
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 111829,
+     "n": 1,
+     "best": {
+      "id": "faIsoEGkE0Q",
+      "title": "Volvo XC90 Cabin Air Filter Replacement (2016-2021 SPA Volvo XC90 T5 Momentum, T6 Inscription, T8)",
+      "channel": "FCP Euro",
+      "views": 111829
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 98022,
+     "n": 1,
+     "best": {
+      "id": "Iak_-xKZU1s",
+      "title": "Volvo XC90 Timing Belt Replacement DIY (2016-Present Volvo VEP Engine, SPA XC90, XC60, V60, V90, P5)",
+      "channel": "FCP Euro",
+      "views": 98022
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 69934,
+     "n": 1,
+     "best": {
+      "id": "MDCYVGdG09M",
+      "title": "2016 Volvo xc90 loud whistle P0171",
+      "channel": "69nitronova",
+      "views": 69934
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 60363,
+     "n": 1,
+     "best": {
+      "id": "ma6vKCbz4zA",
+      "title": "Volvo XC90 Spark Plug & Ignition Coil Replacement DIY (2016-2021 SPA Volvo XC90 T5 Momentum, T6, T8)",
+      "channel": "FCP Euro",
+      "views": 60363
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "bHVXcsTYBms",
+     "title": "Should You Buy a VOLVO XC90? (MK2 2017 R Design 2.0D)",
+     "channel": "High Peak Autos",
+     "views": 331726
+    },
+    {
+     "id": "omcisrjRBfg",
+     "title": "Should You Buy a 2025 Volvo XC90? Thorough Review By A Mechanic",
+     "channel": "The Car Care Nut Reviews",
+     "views": 249333
+    },
+    {
+     "id": "8y1O67aOc0A",
+     "title": "Volvo XC90 buyers guide Gen 2 (2015-2024) Avoid buying a broken XC90 (XC90 reliability D5/T6/T8)",
+     "channel": "The Miles Driven",
+     "views": 124168
+    }
+   ],
+   "costs": null
+  }
+ ],
  "gmc-canyon": [
   {
    "years": [
