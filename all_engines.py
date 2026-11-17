@@ -188,11 +188,12 @@ def _ae_yeng(fid):
 if os.environ.get('AE_DUMP'):   # 11-17: `AE_DUMP=<file> py build.py --only /engines/` writes the coming-soon cards with their model ids and years
     json.dump([dict(key=_AE_KEY(mk, eng), mk=mk, eng=eng, fuel=v['fuel'], models=v['models'], fids=[dict(fid=f, name=n, fuel=fu, yeng=_ae_yeng(f)) for f, n, fu in v['fids']])
                for (mk, eng), v in AE_SOON.items()], QM._REAL_OPEN(os.environ['AE_DUMP'], 'w', encoding='utf-8'), ensure_ascii=False, indent=0)   # past quick mode's write gate
-_AE_AI = ('Illustration (AI-generated) in the style of a factory press photo, not a photo of a specific engine; brand names and logos belong to their owners. '
-          'Free to use under <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener license">CC BY 4.0</a>: credit The Lemon Index (lemonindex.com). <a href="/images/">Download and credit text</a>')
 def _ae_soon(mk, eng, models, fu):
     k = _AEF(' '.join([mk, eng, AE_FL[fu]] + models)); ph = AE_SOON_IMG.get(_AE_KEY(mk, eng)); im = _ae_img(ph)
-    pic = (f'<span class="aec-p"><img src="{E(im[0])}" width="{im[1]}" height="{im[2]}" alt="{E(mk)} {E(eng)} engine (illustration)" loading="lazy" decoding="async">{YSL.info(_AE_AI)}{_ae_ftag(fu)}</span>'
+    # 11-17: the AI picture when the daily image run has made one ('3 Lemon Index/car images test/year images/engine_run.py soon', shipped by
+    # year_deploy.py), else the outline icon. No (i) button per card (its popup was clipped by .aec-p's overflow, and 240 copies of one text):
+    # the credit line under the grid says the engine images are AI illustrations under CC BY 4.0, as for the live cards' AI pictures.
+    pic = (f'<span class="aec-p"><img src="{E(im[0])}" width="{im[1]}" height="{im[2]}" alt="{E(mk)} {E(eng)}{'' if fu == 'electric' else ' engine'} (illustration)" loading="lazy" decoding="async">{_ae_ftag(fu)}</span>'
            if im else f'<span class="aec-p aec-ic">{_AE_IC}{_ae_ftag(fu)}</span>')
     rk = ENG_POOL_RANK.get('soon:' + _AE_KEY(mk, eng))   # 11-17: its YouTube study (engine_soon_yt.json, scored from its cars' videos) is in the one rank pool
     yt = (f'<span class="ytbadge aec-yt" title="YouTube rank by owner tone, of {ENG_POOL_N} {E(ENG_POOL_LBL)}: from YouTube videos about the cars it was the engine in">{_AE_YT}YT #{rk}</span>'
