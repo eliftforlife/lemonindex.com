@@ -33847,5 +33847,137 @@
 }
 ]
 }
+],
+"gmc-canyon": [
+{
+"sid": "gmc-canyon-g1",
+"y0": 2004,
+"y1": 2012,
+"label": "2004–2012",
+"videos": 199,
+"praise": [
+[
+"Looks",
+4
+],
+[
+"Reliability",
+3
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "Ynbz9paS2rE",
+"title": "Top 5 Problems GMC Canyon Truck 1st Generation 2004-12",
+"views": 305095,
+"ch": "1A Auto: Repair Tips & Secrets Only Mechanics Know"
+},
+{
+"id": "Bh4O94jI9Y8",
+"title": "Watch This Before Buying a Chevrolet Colorado  2004-2012 (GMC Canyon)",
+"views": 261425,
+"ch": "AutoMotivate"
+},
+{
+"id": "WIha_fj1LUc",
+"title": "Chevrolet Colorado y GMC Canyon modelos 2004 al 2012 defectos, revisiones y problemas comunes",
+"views": 100993,
+"ch": "HOWSTUFFINMYCARWORKS"
+}
+]
+},
+{
+"sid": "gmc-canyon-g2",
+"y0": 2015,
+"y1": 2022,
+"label": "2015–2022",
+"videos": 197,
+"praise": [
+[
+"Power",
+13
+],
+[
+"Looks",
+11
+],
+[
+"Reliability",
+7
+],
+[
+"Fun to drive",
+5
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "QOJW8Uz-UxU",
+"title": "2015 GMC Canyon SLE All Terrain Start Up, Road Test, and In Depth Review",
+"views": 464923,
+"ch": "Saabkyle04"
+},
+{
+"id": "Lp0UBUwdT_A",
+"title": "2016 Chevy Colorado and GMC Canyon - Review and Road Test",
+"views": 371576,
+"ch": "Kelley Blue Book"
+},
+{
+"id": "Xh1DWhtO0nE",
+"title": "2016 GMC Canyon Duramax Diesel vs Ford F-150 5.0L 0-60 MPH & Towing MPG Mashup Review",
+"views": 369519,
+"ch": "The Fast Lane Truck"
+}
+]
+},
+{
+"sid": "gmc-canyon-g3",
+"y0": 2023,
+"y1": 2025,
+"label": "2023–2025",
+"videos": 191,
+"praise": [
+[
+"Looks",
+29
+],
+[
+"Power",
+21
+],
+[
+"Reliability",
+12
+],
+[
+"Fun to drive",
+10
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "lgaYshfCUCw",
+"title": "AMERICAN🇺🇸! 2024 GMC Canyon AT4X Review",
+"views": 296577,
+"ch": "TheStraightPipes"
+},
+{
+"id": "h4TFbfQYz4o",
+"title": "Is the 2023 GMC Canyon Denali the BEST new luxury truck to BUY?",
+"views": 246822,
+"ch": "Raiti's Rides"
+},
+{
+"id": "PeWQ6lyhQVg",
+"title": "EVERY Trim Level of The All New 2023 GMC Canyon In One Video - Watch This Expert Buyer's Guide!",
+"views": 236526,
+"ch": "The Fast Lane Truck"
+}
+]
+}
 ]
 }

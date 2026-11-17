@@ -68640,6 +68640,358 @@
    "costs": null
   }
  ],
+ "gmc-canyon": [
+  {
+   "years": [
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012
+   ],
+   "gen": "2004–2012 GMC Canyon",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 3447374,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 244349,
+     "n": 8,
+     "best": {
+      "id": "_ztiWx7qYYQ",
+      "title": "The fast way to replace a starter on 1st Generation GMC Canyon or Chevy Colorado",
+      "channel": "⚙️Homie Hektor⚙️",
+      "views": 106118
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 215554,
+     "n": 1,
+     "best": {
+      "id": "k0jtrOY9lMY",
+      "title": "Chevy Colorado & GMC Canyon Oil Life Reset 2004-2015",
+      "channel": "Backyard Chevy",
+      "views": 215554
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 188086,
+     "n": 1,
+     "best": {
+      "id": "S23c1fH-7LA",
+      "title": "Chevy Colorado Front Brakes and Rotor Replacement 2004-2008 | How to Replace GMC Canyon Brakes",
+      "channel": "Backyard Chevy",
+      "views": 188086
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 151017,
+     "n": 3,
+     "best": {
+      "id": "4tmfKwuXbd8",
+      "title": "How to Replace Spark Plugs Chevy Colorado & GMC Canyon 2004-2012",
+      "channel": "Backyard Chevy",
+      "views": 145520
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 148249,
+     "n": 2,
+     "best": {
+      "id": "4Q-q_TxK5vE",
+      "title": "Replacing the fuel pump in a 2004-2012 Chevy Colorado or GMC Canyon",
+      "channel": "Adam Davenport",
+      "views": 143214
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 142157,
+     "n": 4,
+     "best": {
+      "id": "8GTdsXGKr8Y",
+      "title": "Throttle Body Cleaning Take 2 - 2004 GMC Canyon",
+      "channel": "I am Ken Ross",
+      "views": 89603
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 123199,
+     "n": 6,
+     "best": {
+      "id": "qgZKQM9OP6g",
+      "title": "Installing an aftermarket cabin air filter in a 2004-2012 GMC Canyon or Chevy Colorado",
+      "channel": "Adam Davenport",
+      "views": 66867
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 34463,
+     "n": 1,
+     "best": {
+      "id": "UHZ2u7jr5tg",
+      "title": "2008 GMC Canyon/ Chev Colorado 4x4 problem SOLVED!!!",
+      "channel": "Ryan B",
+      "views": 34463
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "Ynbz9paS2rE",
+     "title": "Top 5 Problems GMC Canyon Truck 1st Generation 2004-12",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 305095
+    },
+    {
+     "id": "IdOGvMZ_CJ8",
+     "title": "Chevy Colorado and GMC Canyon 2004 to 2012 common problems, issues, defects, recalls and complaints",
+     "channel": "HOWSTUFFINMYCARWORKS",
+     "views": 24306
+    },
+    {
+     "id": "Bh4O94jI9Y8",
+     "title": "Watch This Before Buying a Chevrolet Colorado 2004-2012 (GMC Canyon)",
+     "channel": "AutoMotivate",
+     "views": 261425
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022
+   ],
+   "gen": "2015–2022 GMC Canyon",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 13695754,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 342463,
+     "n": 3,
+     "best": {
+      "id": "lmRcVkH6mp0",
+      "title": "[HOW TO] Change Engine Oil on a 2015-2022 V6 Chevy Colorado / GMC Canyon (The Best on YT)",
+      "channel": "Fondupot's Garage",
+      "views": 284892
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 228547,
+     "n": 2,
+     "best": {
+      "id": "bjKnVjXaGOo",
+      "title": "[HOW TO] 8L45 - 8 Speed Transmission Fluid & Filter Change for 2017-2022 Chevy Colorado & GMC Canyon",
+      "channel": "Fondupot's Garage",
+      "views": 201652
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 222805,
+     "n": 1,
+     "best": {
+      "id": "YW1zchs7UPo",
+      "title": "'16 GMC Canyon: Cranks Over But Won't Start",
+      "channel": "South Main Auto LLC",
+      "views": 222805
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 208121,
+     "n": 3,
+     "best": {
+      "id": "eV2kFjkRHHs",
+      "title": "GMC Canyon Cabin Air Filter Replacement ( 2015 2016 2017 2018 2019 2020 2021 2022 )",
+      "channel": "Undercar Experts",
+      "views": 100186
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 107556,
+     "n": 1,
+     "best": {
+      "id": "iZQgTVIug60",
+      "title": "2015-2020 Chevy colorado/GMC Canyon front brakes replacement",
+      "channel": "SteeveGMTECH",
+      "views": 107556
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 107395,
+     "n": 2,
+     "best": {
+      "id": "eoToaHExYSQ",
+      "title": "Replace Spark Plugs, Coils, & Remove Air Intake Manifold 2015-2022 2nd Gen Chevy Colorado GMC Canyon",
+      "channel": "Wild Frontier Garage",
+      "views": 81214
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 89281,
+     "n": 2,
+     "best": {
+      "id": "B25tomjauE4",
+      "title": "2019 GMC Canyon temperature gauge stuck on cold and fan stays on",
+      "channel": "Carlos Reviews All",
+      "views": 61698
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 69722,
+     "n": 2,
+     "best": {
+      "id": "74mT8tqzvkI",
+      "title": "2015-2022 GMC Canyon/ Chevy Colorado Battery Replacement",
+      "channel": "Doing Dave Stuff",
+      "views": 36171
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "FxxAB0uKpDg",
+     "title": "Chevrolet Colorado & GMC Canyon 2015 to 2022 common problems, issues, defects, recalls & complaints",
+     "channel": "HOWSTUFFINMYCARWORKS",
+     "views": 63468
+    },
+    {
+     "id": "d7upwha1GnA",
+     "title": "2021 GMC Canyon AT4 REVIEW | MotorTrend Buyer's Guide",
+     "channel": "MotorTrend Channel",
+     "views": 23249
+    },
+    {
+     "id": "oBwRPJWEfwc",
+     "title": "2019 GMC Canyon Problems and Reliability. Should you buy it?",
+     "channel": "car PROblems",
+     "views": 14394
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2023–2025 GMC Canyon",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 194,
+   "views": 8140592,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 79857,
+     "n": 4,
+     "best": {
+      "id": "NQu30h5im4g",
+      "title": "Chevy Colorado / GMC Canyon Oil Change FULL SERVICE (2023 and UP)",
+      "channel": "Jason Explains Things",
+      "views": 68611
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 12672,
+     "n": 1,
+     "best": {
+      "id": "ivFzsRs-rzM",
+      "title": "How to Set Your Trip Odometer on Your 2024 GMC Canyon : 3rd Generation Canyon",
+      "channel": "Caleb Redd",
+      "views": 12672
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 7535,
+     "n": 1,
+     "best": {
+      "id": "ebqORoY2TKU",
+      "title": "2024 GMC Canyon AT4 Drive mode graphics quit appearing on the infotainment screen, and how to fix it",
+      "channel": "AllTruckeredoutADV",
+      "views": 7535
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 2986,
+     "n": 1,
+     "best": {
+      "id": "XHnzEAdmVlg",
+      "title": "2025 and 2026 GMC Canyon And Sierra Transmission Repair Needed ASAP",
+      "channel": "Jason Samko",
+      "views": 2986
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 742,
+     "n": 1,
+     "best": {
+      "id": "cx6G07m3i9A",
+      "title": "2025 GMC Canyon Cluster Display & Dashboard Warning Lights Guide",
+      "channel": "Auto User Guide",
+      "views": 742
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "PeWQ6lyhQVg",
+     "title": "EVERY Trim Level of The All New 2023 GMC Canyon In One Video - Watch This Expert Buyer's Guide!",
+     "channel": "The Fast Lane Truck",
+     "views": 236526
+    },
+    {
+     "id": "mvVfgzSMWVE",
+     "title": "1,000 miles of ownership: 2025 GMC Canyon Problems, Issues, Likes and WORKAROUNDS!",
+     "channel": "RoadReality",
+     "views": 57865
+    },
+    {
+     "id": "095SCV13LfY",
+     "title": "Raving Reviewer. Known Problems of the 2023-2024 Chevy Colorado and GMC Canyon!",
+     "channel": "JC316",
+     "views": 7809
+    }
+   ],
+   "costs": null
+  }
+ ],
  "lincoln-mkx": [
   {
    "years": [
