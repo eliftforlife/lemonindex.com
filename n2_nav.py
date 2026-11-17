@@ -3,7 +3,7 @@
 #  - year pages: "Better years to buy" under the gauge: the 3 years of this generation (or within 3 model years when we don't know the
 #    generation) and the 3 of other generations with the fewest complaints per car sold, each better than this year, linked with its score.
 #  - Every year tab (year + model pages): sort the list newest first or by fewest complaints.
-N2_ASSET = '<link rel="stylesheet" href="/assets/n2.css?v=2"><script src="/assets/n2.js?v=2" defer></script>'
+N2_ASSET = '<link rel="stylesheet" href="/assets/n2.css?v=3"><script src="/assets/n2.js?v=2" defer></script>'
 
 def _n2_chip(f, w):
     return (f'<a class="n2-c {band(w["li"])[0]}" href="{CARU(f, w["y"])}" aria-label="{w["y"]} {E(f["name"])}: Lemon Index {w["li"]}">'

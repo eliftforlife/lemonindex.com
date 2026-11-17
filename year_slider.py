@@ -41,6 +41,10 @@ except FileNotFoundError: pass
 for _sl, _fl in (('mercedes-benz-glk/glc', 'mercedes-benz-glk-glc'), ('mercedes-benz-m/gle', 'mercedes-benz-m-gle')):
     if _sl not in AIM and _fl in AIM: AIM[_sl] = AIM[_fl]
 def model_img(fid): return AIM.get(fid)
+# 11-17: year pages where every fallback picture is the wrong generation (no image beats the wrong one): data/ai_no_image.json {model id: [years]}
+try: NOIMG = {(k, int(y)) for k, ys in json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data', 'ai_no_image.json'), encoding='utf-8')).items() for y in ys}
+except FileNotFoundError: NOIMG = set()
+def no_img(fid, y): return (fid, int(y)) in NOIMG
 def model_info_text(fid):
     m = AIM[fid]
     return (f'Illustration (AI-generated) of a {m["year"]} {E(m["name"])}. Free to use under <a href="{LIC}" rel="license noopener">CC BY 4.0</a>: '

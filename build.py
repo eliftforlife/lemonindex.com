@@ -1016,7 +1016,7 @@ def _yc_ctx(fid):
     """what ycarousel.py needs about one model: every year page with its picture and score, YouTube ranks, the fix/guide videos"""
     if fid in _YC: return _YC[fid]
     f = FY[fid]; mi = (YSL.model_img(fid) or {}).get('src')
-    yrs = [{'y': v['y'], 'li': round(v['li']) if v['ok'] else None, 'url': CARU(f, v['y']), 'src': YSL.ai_src(fid, v['y']) or mi, 'gen': gen_of(f, v['y']), 'top': NICE(v['parts'][0][0]) if v.get('parts') else None} for v in f['years']]
+    yrs = [{'y': v['y'], 'li': round(v['li']) if v['ok'] else None, 'url': CARU(f, v['y']), 'src': YSL.ai_src(fid, v['y']) or (None if YSL.no_img(fid, v['y']) else mi), 'gen': gen_of(f, v['y']), 'top': NICE(v['parts'][0][0]) if v.get('parts') else None} for v in f['years']]
     _YC[fid] = dict(fid=fid, name=f['name'], short=f['name'].split(' ', 1)[-1], years=yrs, yt_rank=yt_rank_map(f), ytr=YTR.get(fid), ytv=YTV.get(fid, []),
                     start=popular_year(f), url=lambda yy: CARU(f, yy))
     return _YC[fid]
@@ -1226,6 +1226,7 @@ def year_photo(f, y):
     return (f'<figure class="yph"><img src="{ph["src"]}"{rset(ph["src"], SZ_ONE)} alt="{E(nm)}" width="{ph["w"]}" height="{ph["h"]}" fetchpriority="high">'
             + YSL.info(f'{note}{pcap(ph, who)} ({lic_h})') + '</figure>')
 def car_hero(f, y):   # 11-10 (Elijah): "if a car has an AI image, remove the wiki image"
+    if YSL.no_img(f['id'], y): return ''   # 11-17: listed in data/ai_no_image.json
     return YSL.ai_year_html(f['id'], y, f['name'], hero=True) or year_photo(f, y)
 def clean_tsb(t):
     """An automaker repair note in plain words: drop the 'HONDA:' prefix and 'Some 2017-2018 X built before ... may exhibit', fix SHOUTING, skip shop-tool notes."""
@@ -1792,12 +1793,13 @@ for f in YEARS:
         x = extra(f['id'], y); nrec = len(x['recalls']) if 'recalls' in x else None
         qa = year_faq(f, v, y, x, best); snm = SNM(f)
         _yw = YW(f); _yo = 'Reliability' if _yw == 'Problems' else 'Problems'; _ye = ' (Early Read)' if v.get('early') else ''; _yb = f'{y} {QN(f)} {_yw}'
+        _ni = YSL.no_img(f['id'], y); _mimg = None if _ni else YSL.model_img(f['id']); _ph = {} if _ni else PH.get(f['id'], {})   # 11-17: data/ai_no_image.json
         page(CARU(f, y), seo_title([f'{_yb}, {_yo} & Recalls{_ye}', f'{_yb} & {_yo}{_ye}', f'{_yb} & Recalls{_ye}', f'{_yb}{_ye}', _yb]),
              (f'Too new, partial score: so far the {y} {snm} has drawn {plain(v["li"])} per car sold (NHTSA).' if v['ok'] and v.get('early') else f'The {y} {snm} drew {plain(v["li"])} per car sold (NHTSA).' if v['ok'] else f'Owners filed only {v["n"]} NHTSA complaints about the {y} {snm} in its first 3 years.')
-             + (f' {nrec} recall{"s" if nrec != 1 else ""}.' if nrec else '') + (f' Top problems: {top}.' if top else '') + ' Real owner complaints and every other year.', year_body(f, v, y, x, best, worst, prev, nxt, v['quotes'], qa), kind='article', ask=(f['id'], y, f'{y} {snm}'), img=YSL.ai_src(f['id'], y) or (YSL.model_img(f['id']) or {}).get('src') or (PH.get(f['id'], {}).get(str(y)) or {}).get('src'),
-             ld=[car_ld(f, y, x.get('mpg'), YSL.ai_src(f['id'], y) or (YSL.model_img(f['id']) or {}).get('src') or (PH.get(f['id'], {}).get(str(y)) or {}).get('src')), {"@context": "https://schema.org", "@type": "WebPage", "name": f'{y} {snm} problems, reliability and recalls', "url": BASE + CARU(f, y)}
-                 | ({"primaryImageOfPage": {"@type": "ImageObject", "contentUrl": BASE + PH[f['id']][str(y)]['src'], "license": LIC.get(PH[f['id']][str(y)]['license'], PH[f['id']][str(y)]['page']), "acquireLicensePage": PH[f['id']][str(y)]['page'], "creditText": PH[f['id']][str(y)]['author'].split('\ufffd')[0].strip()}} if str(y) in PH.get(f['id'], {}) and not YSL.ai_src(f['id'], y) and not YSL.model_img(f['id'])
-                    else {"primaryImageOfPage": {"@type": "ImageObject", "contentUrl": BASE + (YSL.ai_src(f['id'], y) or YSL.model_img(f['id'])['src']), "license": YSL.LIC, "acquireLicensePage": BASE + '/images/', "creditText": "The Lemon Index"}} if YSL.ai_src(f['id'], y) or YSL.model_img(f['id']) else {})] + ([faq_ld(qa)] if qa else []))
+             + (f' {nrec} recall{"s" if nrec != 1 else ""}.' if nrec else '') + (f' Top problems: {top}.' if top else '') + ' Real owner complaints and every other year.', year_body(f, v, y, x, best, worst, prev, nxt, v['quotes'], qa), kind='article', ask=(f['id'], y, f'{y} {snm}'), img=YSL.ai_src(f['id'], y) or (_mimg or {}).get('src') or (_ph.get(str(y)) or {}).get('src'),
+             ld=[car_ld(f, y, x.get('mpg'), YSL.ai_src(f['id'], y) or (_mimg or {}).get('src') or (_ph.get(str(y)) or {}).get('src')), {"@context": "https://schema.org", "@type": "WebPage", "name": f'{y} {snm} problems, reliability and recalls', "url": BASE + CARU(f, y)}
+                 | ({"primaryImageOfPage": {"@type": "ImageObject", "contentUrl": BASE + PH[f['id']][str(y)]['src'], "license": LIC.get(PH[f['id']][str(y)]['license'], PH[f['id']][str(y)]['page']), "acquireLicensePage": PH[f['id']][str(y)]['page'], "creditText": PH[f['id']][str(y)]['author'].split('\ufffd')[0].strip()}} if str(y) in _ph and not YSL.ai_src(f['id'], y) and not _mimg
+                    else {"primaryImageOfPage": {"@type": "ImageObject", "contentUrl": BASE + (YSL.ai_src(f['id'], y) or _mimg['src']), "license": YSL.LIC, "acquireLicensePage": BASE + '/images/', "creditText": "The Lemon Index"}} if YSL.ai_src(f['id'], y) or _mimg else {})] + ([faq_ld(qa)] if qa else []))
         yurls.append(CARU(f, y))
 # ---- transmission pages (11-02): data/trans.json from data_trans.py
 def sent_case(t):

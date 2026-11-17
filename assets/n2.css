@@ -45,7 +45,7 @@
   .n2-pl a:hover { background: var(--soft, #f5f5f7); } .n2-pl a:focus-visible { outline: 2.5px solid #e9b300; outline-offset: 2px; }
   .n2-pl svg { color: var(--mute); }
   .tbl:has(.n2-pl) .ycn-s a.tb-ic:not(.tb-mode) { display: none; }
-  .tbl .tb-hero .yhero:has(> .n2-pl) { flex-wrap: wrap !important; }
+  .tbl .tb-hero .yhero:has(> .n2-pl), .tbl .tb-hero.yc-hero .yhero:has(> .n2-pl) { flex-wrap: wrap !important; }   /* 11-17: beats ycar.css nowrap (the verdict was squeezed to one word per line) */
   .tbl .tb-hero.yc-hero .yhero:has(> .n2-pl) > .yverd { flex: 1 1 0 !important; }
 }
 /* ---- the sticky tab row says which car this is once the title has scrolled away (n2.js adds .n2-sl and toggles .n2-on); the row's
