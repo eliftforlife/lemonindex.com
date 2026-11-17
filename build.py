@@ -9,6 +9,7 @@ from collections import defaultdict
 import year_slider as YSL   # 11-10: AI year illustrations + 'every year' slider (data/ai_year_images.json)
 import tabbed as TAB   # 11-10 (Elijah, Civic first): centered hero + tabs + Years/Engines chart for the models in TAB.ON
 OUT = 'docs'; TODAY = datetime.date.today().isoformat(); BASE = 'https://lemonindex.com'
+import quick_mode as QM; QM.setup(OUT)   # 11-17 quick mode: `py build.py --only / /cars/honda-civic/ model:<id> ...` writes only those pages (quick_mode.py)
 E = lambda s: html.escape(str(s), quote=True)
 YT, TT, IG = 'https://www.youtube.com/@lemonindex', 'https://www.tiktok.com/@lemonindex', 'https://www.instagram.com/lemonindex/'
 # 11-10 footer social icons (monochrome line icons)
@@ -439,6 +440,7 @@ def _ii_stable(s, pre='ii'):
     m = {}
     return _IIRE.sub(lambda x: f'{x.group(1)}="{pre}{m.setdefault(x.group(2), len(m) + 1)}"', s)
 def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, vis='', canon=None):
+    if QM.ON and not QM.want(path): LG.setdefault(path, ()); return   # 11-17 quick mode: a page outside --only keeps its file and page_dates.json entry; LG still lists it ("built this build" checks)
     if TOV.get(path, {}).get('title'): title = TOV[path]['title']   # 11-12: search-title test from 0 HQ/Tools/gsc_titles.py (data/title_overrides.json)
     title, desc = fit_title(title), fit_desc(desc)
     body, desc = fix_moji(body), fix_moji(desc)
@@ -447,6 +449,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
     if 'class="advp"' in body and path.startswith(('/cars/', '/motorcycles/', '/planes/')) and 'adv_body' in globals(): body = adv_body(path, body)   # 11-10: the other template
     if 'class="pg mp6"' in body and re.match(r'^/(motorcycles|supercars|planes)/[^/]+/$', path) and 'adv_body' in globals(): body = adv_body(path, body, TAB.transform_mp6)   # 11-10: motorcycle, supercar and plane pages
     body = _ii_stable(body, 'iib')   # 11-13 QB: image-info ids numbered per page, so a new (i) elsewhere doesn't redate thousands of pages
+    if QM.ON: QM.page_new(path, path in PD)
     _pd_mark(path, body, title + '\n' + desc)
     if 'RCL_LINK' in globals(): body = RCL_LINK(path, body)   # 11-14 growth 2B-1: links to the /recalls/ pages, after the date hash (a link alone doesn't redate a page)
     _d = PD[path]['d']; _dl = f'{_MN[int(_d[5:7]) - 1]} {int(_d[8:])}, {_d[:4]}'; _upd = ''
@@ -2322,7 +2325,7 @@ page('/vin/', 'Free VIN Decoder and Recall Check: Look Up Any VIN | The Lemon In
 <p class="fnote vin-ca">Canada? See recalls at <a href="{TC_DB}" rel="noopener nofollow" target="_blank">Transport Canada</a> · <a href="/recalls/">Recalls by make and model</a></p>
 <div class="ph-v">{pimg(mphoto('toyota-camry', 2019), 'Toyota Camry')}</div>{pcredit(who(mphoto('toyota-camry', 2019)))}
 <script id="pick" type="application/json">{json.dumps(PICK, ensure_ascii=False).replace("</", "<\\/")}</script><script id="valias" type="application/json">{json.dumps(VALIAS, separators=(",", ":"))}</script><script id="vnames" type="application/json">{json.dumps(VNAMES, separators=(",", ":"))}</script><script id="vimg" type="application/json">{json.dumps(sorted(f[:-5] for f in os.listdir("assets/ai-models") if f.endswith(".webp")), separators=(",", ":"))}</script><script src="/assets/vin.js?v=1114svra" defer></script></section>{VR_SEO}</div>''', ld=[faq_ld(VR_FAQ), {"@context": "https://schema.org", "@type": "WebApplication", "name": "Free VIN check and model-year report", "url": BASE + '/vin/', "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Decode a VIN with NHTSA vPIC, then see that model year's Lemon Index score, top complaint areas, NHTSA recalls and a test-drive checklist. Not a vehicle history report."}])
-shutil.copytree('assets', f'{OUT}/assets', dirs_exist_ok=True); print('vin report model years:', vr_write(f'{OUT}/assets/vr')); shutil.copy('data/survey.json', f'{OUT}/assets/survey-q.json'); shutil.copy('data/votes.json', f'{OUT}/assets/votes.json')
+QM.copy_assets('assets', f'{OUT}/assets') if QM.ON else shutil.copytree('assets', f'{OUT}/assets', dirs_exist_ok=True); print('vin report model years:', vr_write(f'{OUT}/assets/vr')); shutil.copy('data/survey.json', f'{OUT}/assets/survey-q.json'); shutil.copy('data/votes.json', f'{OUT}/assets/votes.json')
 print('built', len(urls), 'pages into', OUT)
 # 11-12 accurate freshness: pages whose content changed this build -> data/cache/indexnow_pending.txt (git-ignored); `py indexnow.py --pending`
 # after a push submits only those and clears the list. PD is saved again here because /vin/ is built after the first save.
@@ -2332,11 +2335,14 @@ if _chg:
     os.makedirs('data/cache', exist_ok=True)
     with open('data/cache/indexnow_pending.txt', 'a', encoding='utf-8') as _fh: _fh.write(''.join(u + '\n' for u in _chg))
 print(f'freshness: {len(_chg)} of {len(urls)} sitemap pages changed content this build; {sum(1 for u in urls if PD.get(u, {}).get("d") == TODAY)} have lastmod {TODAY}')
-try:
-    import linkgraph; print(linkgraph.run(LG, urls, OUT))   # 11-12 click depth / inbound links / orphans -> 3 Lemon Index/data/linkgraph/latest.md
-except Exception as ex: print('linkgraph failed:', type(ex).__name__, ex)
+if not QM.ON:   # 11-17: in quick mode LG has no links for the pages it skipped, so the link graph report would be wrong: skipped
+    try:
+        import linkgraph; print(linkgraph.run(LG, urls, OUT))   # 11-12 click depth / inbound links / orphans -> 3 Lemon Index/data/linkgraph/latest.md
+    except Exception as ex: print('linkgraph failed:', type(ex).__name__, ex)
 print('tab layout failures:', len(TAB_FAIL), TAB_FAIL[:5], '| cache hits', sum(1 for k in _TAB_NEW if k in _TAB_OLD), 'of', len(_TAB_NEW))
-try:
-    with open(_TAB_CACHE + '.tmp', 'wb') as _fh: pickle.dump(_TAB_NEW, _fh, protocol=pickle.HIGHEST_PROTOCOL)
-    os.replace(_TAB_CACHE + '.tmp', _TAB_CACHE)
-except Exception as ex: print('tab cache not saved:', ex)
+if not QM.ON:   # 11-17: a quick build saw only its own pages; saving would empty the shared tab cache
+    try:
+        with open(_TAB_CACHE + '.tmp', 'wb') as _fh: pickle.dump(_TAB_NEW, _fh, protocol=pickle.HIGHEST_PROTOCOL)
+        os.replace(_TAB_CACHE + '.tmp', _TAB_CACHE)
+    except Exception as ex: print('tab cache not saved:', ex)
+QM.finish()   # 11-17 quick mode summary (exit 3 if files outside --only would have changed)

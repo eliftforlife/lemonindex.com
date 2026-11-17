@@ -641,6 +641,11 @@ def link_parent(slug, out='docs'):
     open(pg, 'w', encoding='utf-8').write(str(s))
     return True
 
+def _skip(D):
+    """11-17: build.py --only (quick_mode.py) and this car's page is outside it"""
+    import quick_mode as QM
+    return QM.ON and not QM.want(D['page'])
+
 def build_all(out='docs', page_fn=None):
     done, urls = [], []
     for p in sorted(glob.glob(os.path.join(HERE, 'data', 'perf', '*.json'))):
@@ -649,8 +654,10 @@ def build_all(out='docs', page_fn=None):
         try:
             D = _load(f'data/perf/{slug}.json')
             if D.get('mode') == 'inject' or (not page_fn and os.path.exists(os.path.join(HERE, out, D['page'].strip('/'), 'index.html'))):
+                if page_fn and _skip(D): done.append(slug); continue   # 11-17 quick mode: page not rebuilt, so nothing to inject into
                 if inject(slug, out): done.append(slug)
             elif page_fn:
+                if _skip(D): done.append(slug); urls.append(D['page']); continue   # 11-17 quick mode: same URL list, no ~1.5 s build per car
                 u = standalone(slug, page_fn, out)
                 if u: done.append(slug); urls.append(u)
         except Exception as e:
