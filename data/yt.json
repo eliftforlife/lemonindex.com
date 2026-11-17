@@ -89019,6 +89019,133 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006
+   ],
+   "gen": "2001–2006 Lexus LS",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 6184360,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 123762,
+     "n": 2,
+     "best": {
+      "id": "--Bmm3x0vd8",
+      "title": "How To Replace The Starter On A 2000-2006 Lexus LS430",
+      "channel": "How to Automotive",
+      "views": 121541
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 106684,
+     "n": 5,
+     "best": {
+      "id": "h_0RokxKSc0",
+      "title": "Lexus LS430, 2001 - Troubleshooting: Check Engine Light & OBD2 Codes [P0171, P0174] (DIY ~$100)",
+      "channel": "FunkyMechanic",
+      "views": 46856
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 59863,
+     "n": 2,
+     "best": {
+      "id": "5h0DsFOdEH8",
+      "title": "How to Change the Oil on a 2001-06 Lexus LS430",
+      "channel": "Garvens Garage",
+      "views": 57909
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 58378,
+     "n": 2,
+     "best": {
+      "id": "elkDQKh6si4",
+      "title": "FIXED MY 2002 LEXUS LS430 POWER FOLDING SIDE MIRROR FOR $2 ( mirror gear stripped)",
+      "channel": "Pete’s Carport",
+      "views": 49710
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 57656,
+     "n": 1,
+     "best": {
+      "id": "x8X5WfcO3B0",
+      "title": "2001 Lexus LS430 - Lower Control Arm & Ball Joint Replacement",
+      "channel": "JustSomeGuy",
+      "views": 57656
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 33799,
+     "n": 2,
+     "best": {
+      "id": "HAVhDtBK1OQ",
+      "title": "2002 LEXUS LS 430 NOT ENGAGING INTO DRIVE WHEN COLD TRANSMISSION ISSUE FIXED",
+      "channel": "Pete’s Carport",
+      "views": 25612
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 23149,
+     "n": 2,
+     "best": {
+      "id": "n4QZd_qwsTk",
+      "title": "2002 LEXUS LS430 No Start, Won't Crank....1 Click...Fixed...",
+      "channel": "Peter L",
+      "views": 13480
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 18405,
+     "n": 2,
+     "best": {
+      "id": "nfvF3XMFRnM",
+      "title": "Maintenance Light Reset 2005 Lexus LS430",
+      "channel": "Crutchfield Automotive",
+      "views": 16069
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "JgBcuqWYn2s",
+     "title": "The 3rd Generation Lexus LS like this 2005 LS 430 is the Japanese Mercedes-Benz W140 - But Reliable",
+     "channel": "Curious Cars",
+     "views": 158895
+    },
+    {
+     "id": "J25O4rPqSWQ",
+     "title": "2001-2006 Lexus LS430 Common Problems: Should You Buy Used",
+     "channel": "car PROblems",
+     "views": 39955
+    },
+    {
+     "id": "OztKeAd-0e8",
+     "title": "Lexus LS430 Comparison: 2003 vs 2005 — Which Year Should You Buy? (Pre-Facelift vs. Facelift)",
+     "channel": "Samuel Dunn",
+     "views": 11422
+    }
+   ],
+   "costs": null
   }
  ],
  "acura-rsx": [
