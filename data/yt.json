@@ -69894,6 +69894,134 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017
+   ],
+   "gen": "2011–2017 Nissan Quest",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 4670167,
+   "topics": [
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 61887,
+     "n": 5,
+     "best": {
+      "id": "HOHqp3o2qz8",
+      "title": "How to Replace Cabin Air Filter 2012 Nissan Quest | AQ1140C",
+      "channel": "Filterheads",
+      "views": 26304
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 61168,
+     "n": 5,
+     "best": {
+      "id": "QJuXls2dhtk",
+      "title": "2011-2017 Nissan Quest How to Remove MAF Sensor",
+      "channel": "YOUCANIC",
+      "views": 21262
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 46508,
+     "n": 6,
+     "best": {
+      "id": "a3F6ff0Uy7M",
+      "title": "2012 NISSAN QUEST RADIO Installation 3-4",
+      "channel": "NachoYouTubeChannel",
+      "views": 20419
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 45222,
+     "n": 3,
+     "best": {
+      "id": "bN4qAZ_FfFE",
+      "title": "2012 Nissan Quest 3.5 Cómo cambiar las bujías (How to Change Spark Plugs)",
+      "channel": "Jose Mechanics",
+      "views": 31930
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 44625,
+     "n": 3,
+     "best": {
+      "id": "6DT5tbsxVDY",
+      "title": "2011-2017 Nissan Quest Oil Service Reminder Reset Instructions",
+      "channel": "YOUCANIC",
+      "views": 32259
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 34968,
+     "n": 1,
+     "best": {
+      "id": "uTW65LXMy4w",
+      "title": "CVT Transmission Service/Fluid & Filter Replacement 2015 NISSAN QUEST",
+      "channel": "MrBee Handyman Specialist",
+      "views": 34968
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 34559,
+     "n": 5,
+     "best": {
+      "id": "wSAAJ4NT84I",
+      "title": "How to Replace Front Lower Control Arms 2011-2017 Nissan Quest",
+      "channel": "TRQ",
+      "views": 11957
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 32401,
+     "n": 6,
+     "best": {
+      "id": "jdIzG-Vv9LU",
+      "title": "How to Replace Brake Master Cylinder 2011-2017 Nissan Quest",
+      "channel": "TRQ",
+      "views": 8953
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "bJSdizHZaqA",
+     "title": "Top 5 Problems Nissan Quest Minivan 2011-2017 4th Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 55027
+    },
+    {
+     "id": "3ZiaJRX84bI",
+     "title": "2016 Nissan Quest - Review and Road Test",
+     "channel": "Kelley Blue Book",
+     "views": 222642
+    },
+    {
+     "id": "DbBabOKGhPc",
+     "title": "2016 Nissan Quest Features Review",
+     "channel": "Don Franklin",
+     "views": 131247
+    }
+   ],
+   "costs": null
   }
  ],
  "kia-sephia": [

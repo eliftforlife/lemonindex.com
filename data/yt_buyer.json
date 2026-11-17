@@ -35540,5 +35540,141 @@
 }
 ]
 }
+],
+"nissan-quest": [
+{
+"sid": "nissan-quest-g2",
+"y0": 1999,
+"y1": 2002,
+"label": "1999–2002",
+"videos": 155,
+"praise": [
+[
+"Reliability",
+14
+],
+[
+"Fun to drive",
+6
+],
+[
+"Power",
+6
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "keXVCIC9EtE",
+"title": "SOLD 2002 Nissan Quest GXE 99K Miles Meticulous Motors Inc Florida For Sale",
+"views": 9119,
+"ch": "MeticulousMotors"
+},
+{
+"id": "ytKsSUw60YU",
+"title": "2002 Nissan Quest SE 1 owner 84k miles video overview and walk around.",
+"views": 3798,
+"ch": "Direct Auto Outlet"
+},
+{
+"id": "wXQQAYtH1go",
+"title": "2001 Nissan Quest Junkyard Review",
+"views": 2164,
+"ch": "Cahlager"
+}
+]
+},
+{
+"sid": "nissan-quest-g3",
+"y0": 2004,
+"y1": 2009,
+"label": "2004–2009",
+"videos": 200,
+"praise": [
+[
+"Power",
+6
+],
+[
+"Looks",
+5
+],
+[
+"Space and practicality",
+5
+],
+[
+"Reliability",
+4
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "5IK-c7KZYHA",
+"title": "Review: 2005 Nissan Quest",
+"views": 82764,
+"ch": "MyRide on Autobytel"
+},
+{
+"id": "CX2O4RsxCsI",
+"title": "FOR SALE 2008 NISSAN QUEST 3.5 SE ONE OWNER!!! STK# P6194 www.lcford.com",
+"views": 68890,
+"ch": "LANCE CUNNINGHAM FORD"
+},
+{
+"id": "rX8EeYLwZJI",
+"title": "2009 Nissan Quest Review - Kelley Blue Book",
+"views": 56313,
+"ch": "Kelley Blue Book"
+}
+]
+},
+{
+"sid": "nissan-quest-g4",
+"y0": 2011,
+"y1": 2017,
+"label": "2011–2017",
+"videos": 200,
+"praise": [
+[
+"Power",
+6
+],
+[
+"Space and practicality",
+5
+],
+[
+"Looks",
+5
+],
+[
+"Comfort and ride",
+4
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "3ZiaJRX84bI",
+"title": "2016 Nissan Quest - Review and Road Test",
+"views": 222642,
+"ch": "Kelley Blue Book"
+},
+{
+"id": "DbBabOKGhPc",
+"title": "2016 Nissan Quest Features Review",
+"views": 131247,
+"ch": "Don Franklin"
+},
+{
+"id": "h-S3NvUx1qE",
+"title": "2010-2015 Nissan Quest review - The Good Bad and the Ugly",
+"views": 107392,
+"ch": "YourCarAngel"
+}
+]
+}
 ]
 }
