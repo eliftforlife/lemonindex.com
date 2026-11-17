@@ -50,7 +50,23 @@
   // 11-12 r2 (Carlos, Mitch: added cars defaulted to 2025): no typed year -> the year of the car already in the table (the page's year), else the
   // newest fully scored year (compare.json d, never a partial 2023+)
   const pick = (c, y) => { if (y && c.y && c.y[y]) return y; const y0 = cars.length && !BY[cars[0][0]].g ? cars[0][1] : ''; return (y0 && c.y && c.y[y0] && c.y[y0][0] != null) ? y0 : String(c.d); };
-  function add(id, v) { if (cars.length >= MAX || cars.some(([i, w]) => i === id && w === v)) return; cars.push([id, v]); save(); draw(true); }
+  function add(id, v, quiet) { if (cars.length >= MAX || cars.some(([i, w]) => i === id && w === v)) return; cars.push([id, v]); save(); draw(!quiet); }
+  // 11-15 growth 4d: "Add from My cars": the cars saved with the Save buttons (localStorage li-saved, assets/saved.js), one tap each.
+  // A saved model year keeps its year, a saved model the year picked on /saved/ (else the usual default), a performance car its generation.
+  function myCars() {
+    let a = []; try { a = JSON.parse(localStorage.getItem('li-saved') || '[]'); } catch (e) { return []; }
+    const out = [], seen = new Set();
+    for (const x of Array.isArray(a) ? a : []) {
+      if (!x || typeof x.id !== 'string') continue;
+      const id = x.u ? x.c : x.id, c = id && BY[id]; if (!c) continue;   // motorcycles aren't in the tool
+      const v = c.g ? (x.sg && has(c, x.sg) ? x.sg : String(c.d)) : (x.y && c.y[x.y] ? String(x.y) : x.sy && c.y[x.sy] ? String(x.sy) : pick(c, ''));
+      if (seen.has(id + '|' + v) || cars.some(([i, w]) => i === id && w === v)) continue;
+      seen.add(id + '|' + v);
+      const g = c.g && c.g.find(z => z.id === v);
+      out.push([id, v, c.g ? `${c.n}${g ? ` (${g.c})` : ''}` : `${v} ${c.n}`]);
+    }
+    return out;
+  }
   function search(box) {
     const q = box.querySelector('input'), out = box.querySelector('.cx-sug');
     let hits = [], yy = '';
@@ -123,10 +139,13 @@
     if (R.some(r => r.c.w === 'ev')) notes.push('* EV score from the electric-car page: complaints filed by the end of the year after the model year, a shorter window than the main 3-year score, so compare it with other EV scores.');
     R.filter(r => r.c.h).forEach(r => notes.push(`${esc(r.c.n)}: ${esc(r.c.h)}`));
     if (R.some(r => r.g)) notes.push('Performance specs: the generation&#39;s headline trim (see its page for every trim and source); when that trim has no 0–60 test, the quickest tested trim, named under the time. Complaint counts there are raw, not per car sold.');
-    const addBox = cars.length < MAX ? `<div class="cx-add"><p><b>${cars.length ? `Add a car <small>(${cars.length} of ${MAX})</small>` : 'Pick up to 4 cars'}</b></p><div class="cx-box"><input type="search" enterkeyhint="go" placeholder="e.g. 2019 RAV4, Model 3, M3, Ioniq 5" aria-label="Find a car to compare" autocomplete="off"><div class="cx-sug"></div></div></div>` : `<p class="cx-full">That&#39;s 4 cars, the most at once. Remove one to add another.</p>`;
+    const my = cars.length < MAX ? myCars() : [];
+    const myRow = my.length ? `<div class="lsv-cm"><p class="lsv-cm-h"><b>Add from My cars</b><a href="/saved/">See all</a></p><div class="lsv-cm-l">${my.slice(0, 12).map(([, , l], n) => `<button type="button" class="lsv-cm-b" data-my="${n}" aria-label="Add the ${esc(l)} to the comparison">+ ${esc(l)}</button>`).join('')}</div></div>` : '';
+    const addBox = cars.length < MAX ? `<div class="cx-add"><p><b>${cars.length ? `Add a car <small>(${cars.length} of ${MAX})</small>` : 'Pick up to 4 cars'}</b></p>${myRow}<div class="cx-box"><input type="search" enterkeyhint="go" placeholder="e.g. 2019 RAV4, Model 3, M3, Ioniq 5" aria-label="Find a car to compare" autocomplete="off"><div class="cx-sug"></div></div></div>` : `<p class="cx-full">That&#39;s 4 cars, the most at once. Remove one to add another.</p>`;
     root.innerHTML = (R.length ? `<div class="cx-t" style="--n:${R.length}"><div class="cx-corner"></div>${R.map((r, n) => head(r, n)).join('')}${body}</div>` : '') + addBox
       + (R.length >= 2 ? `<p class="cx-cap">Green check = the best of these cars on that line. Best score = the lowest Lemon Index (complaints per car sold), not the fewest raw complaints. ${notes.join(' ')}</p>` : notes.length ? `<p class="cx-cap">${notes.join(' ')}</p>` : '');
     hero(R);
+    root.querySelectorAll('.lsv-cm-b').forEach(b => b.onclick = () => { const m = my[+b.dataset.my]; if (m) add(m[0], m[1], true); });
     root.querySelectorAll('.cx-x').forEach(x => x.onclick = () => { cars.splice(+x.dataset.k, 1); save(); draw(); });
     root.querySelectorAll('.cx-sel').forEach(s => s.onchange = () => { cars[+s.dataset.k][1] = s.value; save(); draw(); });
     const box = root.querySelector('.cx-add'); if (box) { search(box); if (focus) box.querySelector('input').focus({ preventScroll: true }); }

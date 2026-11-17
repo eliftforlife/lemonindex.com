@@ -364,7 +364,7 @@ elif UXC == 'compare':
 <details class="yd"><summary>{len(PERF_PAIRS)} performance match-ups</summary><ul class="cmp">{pl}</ul></details>
 <details class="yd"><summary>All {len(_cp)} everyday-car match-ups</summary><ul class="cmp">{cl}</ul></details></section>
 {pcredit(who(*[mphoto(x) for a, b, _ in _top[:6] for x in (a, b)], mphoto('toyota-rav4', 2019), mphoto('honda-cr-v', 2017), *[_ev(x) for a, _, b, _ in EV_TOP for x in (a, b) if _evok(x)], *[perf_img(x) for p in PERF_TOP for x in p]))}
-{share_line("Compare up to 4 cars side by side: problems, recalls, mpg, EV range and specs. Free:", 'Know someone stuck between cars?')}</div><script src="/assets/compare.js?v=1112r2d" defer></script>''',
+{share_line("Compare up to 4 cars side by side: problems, recalls, mpg, EV range and specs. Free:", 'Know someone stuck between cars?')}</div><script src="/assets/compare.js?v=1115s" defer></script>''',
          ld=[{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Car comparisons", "url": BASE + '/compare/'}])
     curls.insert(0, '/compare/')
 

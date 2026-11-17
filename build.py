@@ -2259,6 +2259,7 @@ for f in YEARS:
     CJ[f['id']] = [f['name'], yy]
 json.dump(CJ, open('assets/cars.json', 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
 UXC = 'data'; exec(open('ux_c.py', encoding='utf-8').read())   # 11-12 UX test: docs/assets/compare.json (every car) + chart embeds on /rankings/ and /stats/
+SVX_WRITE()   # 11-15 growth 4d: docs/assets/saved-x.json, the Save button + /saved/ data for pages with no vr file (saved_page.py)
 exec(open('search_go.py', encoding='utf-8').read())   # 11-12 round 2 (fix B): search "X vs Y" -> the compare tool (find-go.json cmp/cpg)
 exec(open('vin_report.py', encoding='utf-8').read())   # 11-14 growth plan 1a/1c: VIN report data (docs/assets/vr/) + the page's search text and FAQ
 page('/vin/', 'Free VIN Decoder and Recall Check: Look Up Any VIN | The Lemon Index', 'Free VIN decoder and lookup: type a 17-character VIN to see the exact year, engine and factory, then that car\'s recalls and owner complaints. From the U.S. government VIN database.', f'''

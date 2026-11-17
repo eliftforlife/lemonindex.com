@@ -61,7 +61,8 @@ def vr_write(out_dir):
             parts = [[NICE(p), k] for p, k in (v.get('parts') or [])[:3]]
             ys[str(y)] = dict(li=v.get('li'), ok=bool(v['ok']), early=bool(v.get('early')), cls=CLS(v), word=bv[1] if bv else None, why=bv[2] if bv else None,
                               pln=PLN(v), n=v.get('n'), all=(x.get('sev') or {}).get('total'), parts=parts, rc=len(x['recalls']) if 'recalls' in x else None,
-                              yt=[rk[y], len(rk)] if y in rk else None, eng=eng, td=_vr_td(v.get('parts') or [], x.get('comps')))
+                              yt=[rk[y], len(rk)] if y in rk else None, eng=eng, td=_vr_td(v.get('parts') or [], x.get('comps')),
+                              nm=_ra_names(f['id'], y) if '_ra_names' in globals() else None)   # 11-15 4d: NHTSA make/model names for the /saved/ recall-alert signup (same as the year page's box)
             tot += 1
         d = dict(id=f['id'], name=f['name'], url=CARU(f), ytn=len(rk), years=ys)
         with open(_vros.path.join(out_dir, f['id'].replace('/', '_') + '.json'), 'w', encoding='utf-8') as fh: _vrj.dump(d, fh, ensure_ascii=False, separators=(',', ':'))
