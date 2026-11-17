@@ -34923,5 +34923,133 @@
 }
 ]
 }
+],
+"cadillac-deville": [
+{
+"sid": "cadillac-deville-g7",
+"y0": 1994,
+"y1": 1999,
+"label": "1994–1999",
+"videos": 200,
+"praise": [
+[
+"Looks",
+8
+],
+[
+"Power",
+7
+],
+[
+"Reliability",
+6
+],
+[
+"Space and practicality",
+4
+]
+],
+"trouble": [
+[
+"Coolant leaks / water pump / overheating",
+4
+],
+[
+"Battery / alternator / starter",
+3
+],
+[
+"Oil leaks (gaskets, seals, housings)",
+3
+],
+[
+"Electrical / wiring / TIPM",
+3
+]
+],
+"top": [
+{
+"id": "0Nt8sUFodso",
+"title": "SOLD 1999 Cadillac Deville Roadster 34k miles for sale by Specialty Motor Cars Continental kit E&G",
+"views": 69555,
+"ch": "Specialty Motor Cars"
+},
+{
+"id": "mLS-XqX0Xb8",
+"title": "Cadillac (US) - 1997 Cadillac DeVille - Owners Guide (1996)",
+"views": 66041,
+"ch": "ROVR"
+},
+{
+"id": "3gA8YTJtuRY",
+"title": "1998 Cadillac Deville Start Up and Review 4.6 L V8",
+"views": 57760,
+"ch": "Camerons Car Reviews"
+}
+]
+},
+{
+"sid": "cadillac-deville-g8",
+"y0": 2000,
+"y1": 2005,
+"label": "2000–2005",
+"videos": 199,
+"praise": [
+[
+"Looks",
+10
+],
+[
+"Power",
+5
+],
+[
+"Reliability",
+5
+],
+[
+"Space and practicality",
+5
+]
+],
+"trouble": [
+[
+"Coolant leaks / water pump / overheating",
+7
+],
+[
+"Electrical / wiring / TIPM",
+6
+],
+[
+"Spark plugs / coils / misfire",
+3
+],
+[
+"Battery / alternator / starter",
+3
+]
+],
+"top": [
+{
+"id": "LL_gxgpFTFM",
+"title": "2005 Cadillac DeVille DHS: Regular Car Reviews",
+"views": 180229,
+"ch": "Regular Car Reviews"
+},
+{
+"id": "vO6I6TovGzs",
+"title": "2002 Cadillac Deville Start Up, Tour, Review",
+"views": 116568,
+"ch": "Jakeman21642"
+},
+{
+"id": "VSs-pPBL08M",
+"title": "2004 Cadillac Deville Review - SKIDZ TV",
+"views": 94173,
+"ch": "SkidzTelevision"
+}
+]
+}
 ]
 }

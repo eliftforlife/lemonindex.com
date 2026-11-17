@@ -69356,6 +69356,264 @@
    "costs": null
   }
  ],
+ "cadillac-deville": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005
+   ],
+   "gen": "2000–2005 Cadillac DeVille",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 5508362,
+   "topics": [
+    {
+     "name": "Cooling system",
+     "views": 416957,
+     "n": 6,
+     "best": {
+      "id": "vIU6c5Qv_Dc",
+      "title": "Thermostat replacement 2002 Cadillac Deville 4.6L V8 Install Remove Replace",
+      "channel": "Fixing cars and stuff",
+      "views": 286216
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 161346,
+     "n": 4,
+     "best": {
+      "id": "-unmtJHcTvQ",
+      "title": "2002 Cadillac Deville DHS 4.6L Northstar blown head gasket removal without removing engine",
+      "channel": "2002 Deville",
+      "views": 138344
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 146754,
+     "n": 4,
+     "best": {
+      "id": "4fgkOa8k374",
+      "title": "2002 Cadillac deville 4.6L NorthStar Alternator replacement part # 1",
+      "channel": "Halfasleep10001",
+      "views": 57860
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 146664,
+     "n": 3,
+     "best": {
+      "id": "nc-GAB-14oM",
+      "title": "2000 Cadillac Deville mode door actuator replacement.",
+      "channel": "Joseph Cousin",
+      "views": 124930
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 113201,
+     "n": 4,
+     "best": {
+      "id": "1pHKXEA2QO0",
+      "title": "2002 Cadillac Deville - Ignition Lock Problem Repaired!",
+      "channel": "TheKeySpecialist",
+      "views": 42251
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 112622,
+     "n": 5,
+     "best": {
+      "id": "qgWG-E-5Ag0",
+      "title": "2000 Cadillac DeVille 32 valve North Star A/C Compressor removal",
+      "channel": "JC-z",
+      "views": 50027
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 64976,
+     "n": 2,
+     "best": {
+      "id": "Rb9F0xKst9o",
+      "title": "How to Manually Release the Emergency Brake on A 2000 Cadillac Deville",
+      "channel": "Angela Willis",
+      "views": 59733
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 60317,
+     "n": 2,
+     "best": {
+      "id": "AnUoWSY6gmQ",
+      "title": "2005 Cadillac Deville rear air shocks replacement",
+      "channel": "Hoopties Garage",
+      "views": 43420
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "Is252ijoEOM",
+     "title": "How 2 start Cadillac deville when Theiflockout is activated 2003@ Ignition switch problems",
+     "channel": "terrance langston",
+     "views": 22398
+    },
+    {
+     "id": "-aoYh3tnWL8",
+     "title": "1997 to 2001 Cadillac Seville/Deville problems",
+     "channel": "kid hicks",
+     "views": 8835
+    },
+    {
+     "id": "LL_gxgpFTFM",
+     "title": "2005 Cadillac DeVille DHS: Regular Car Reviews",
+     "channel": "Regular Car Reviews",
+     "views": 180229
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "lincoln-mkz": [
+  {
+   "years": [
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012
+   ],
+   "gen": "2007–2012 Lincoln MKZ",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 2737584,
+   "topics": [
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 83023,
+     "n": 3,
+     "best": {
+      "id": "e3GuvHbMmYQ",
+      "title": "How to Replace Cabin Air Filter 2012 Lincoln MKZ | AQ1148",
+      "channel": "Filterheads",
+      "views": 51060
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 79276,
+     "n": 8,
+     "best": {
+      "id": "Mdh_-Xw2eUs",
+      "title": "DIY: How to Replace Broken Interior Door Handle for $10 | Lincoln MKZ 2006-2012",
+      "channel": "DIY Inspired † Lewis Brantner",
+      "views": 24564
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 56675,
+     "n": 5,
+     "best": {
+      "id": "kasxyD89FlU",
+      "title": "Pro Tip - 2008 Lincoln MKZ 3.5L thermostat Replacement - Makes For An Easy Job - Overheating",
+      "channel": "Ford Boss Me - Auto / Politics / Family   ",
+      "views": 36268
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 44176,
+     "n": 2,
+     "best": {
+      "id": "B-WScxn-r6I",
+      "title": "No Start Issues...2007 Lincoln MKZ Won't Start....Clicks...DIY...Fixed...",
+      "channel": "Peter L",
+      "views": 23100
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 43460,
+     "n": 3,
+     "best": {
+      "id": "euchw7Gy3sI",
+      "title": "Replace Brakes on Your 2007-2012 Lincoln MKZ TODAY!",
+      "channel": "Axtuo Ax",
+      "views": 41140
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 22933,
+     "n": 2,
+     "best": {
+      "id": "3eRbjQNMX6A",
+      "title": "2012 Lincoln MKZ Hybrid - Oil Life Reset",
+      "channel": "Automotive Service Reset Procedures",
+      "views": 16113
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 16928,
+     "n": 1,
+     "best": {
+      "id": "9Yvh2tJLnrc",
+      "title": "lincoln mkz spark plug replacement 2007 2008 2009",
+      "channel": "the occasional mechanic",
+      "views": 16928
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 12377,
+     "n": 1,
+     "best": {
+      "id": "dvMUCezMWWw",
+      "title": "2012 Lincoln MKZ Evap Temp Sensor Fix",
+      "channel": "Toby's Auto",
+      "views": 12377
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "_sKFUMyB1GU",
+     "title": "Car Tech 2010 Lincoln MKZ review",
+     "channel": "fullyOwned",
+     "views": 110507
+    },
+    {
+     "id": "SkaoUHxhgYc",
+     "title": "2008 Lincoln MKZ Review - Kelley Blue Book",
+     "channel": "Kelley Blue Book",
+     "views": 80859
+    },
+    {
+     "id": "sZ75g-Y0TdA",
+     "title": "2012 Lincoln MKZ AWD Start up, Walkaround and Vehicle Tour",
+     "channel": "Justins Car Reviews",
+     "views": 58476
+    }
+   ],
+   "costs": null
+  }
+ ],
  "audi-a6": [
   {
    "years": [
