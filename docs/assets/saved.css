@@ -1,4 +1,4 @@
-/* 11-14 growth plan 4d: saved cars (assets/saved.js). Prefix lsv- (".sv" is taken by tabs.css). Loaded by saved.js on every page. */
+/* 11-14 growth plan 4d: saved cars (assets/saved.js). Prefix lsv- (".sv" is taken by tabs.css). Loaded by saved.js on every page (v=2 since 11-15). */
 /* the Save button: same shape as the Share button beside it; the heart fills once saved */
 .lsv-b .lsv-h { flex: none; transition: transform .18s ease; }
 .lsv-b.on .lsv-h { fill: var(--red, #d1121a); stroke: var(--red, #d1121a); }
@@ -76,3 +76,21 @@
 .lsv-clr { margin-left: 4px; padding: 0; font-size: inherit; }
 .lsv-src { margin: 24px auto 0; max-width: 72ch; font-size: 14px; line-height: 1.5; color: var(--mute, #6e6e73); text-align: center; }
 .lsv-src a { color: inherit; }
+/* 11-15: the bar's two buttons, the recall-email panel, the kind label and the cards with no compare */
+.lsv-btns { display: flex; flex-wrap: wrap; gap: 10px; }
+.lsv-rab { min-height: 46px; }
+.lsv-rap { margin: 0 0 20px; }
+.lsv-rap .rla { margin: 0; min-height: 0; }
+.lsv-rap .rla-f { max-width: none; }
+.lsv-kd { margin: 0 0 -4px; font-size: 12px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--mute, #6e6e73); }
+.lsv-w small { font-size: 13px; font-weight: 600; color: var(--mute, #6e6e73); }
+.lsv-nocmp { font-size: 14px; color: var(--mute, #6e6e73); min-height: 40px; display: inline-flex; align-items: center; }
+@media (max-width: 480px) { .lsv-btns, .lsv-btns .btn { width: 100%; } .lsv-btns .btn { justify-content: center; box-sizing: border-box; } }
+/* the compare tool (assets/compare.js): "Add from My cars", one tap per saved car */
+.lsv-cm { margin: 0 0 12px; }
+.lsv-cm-h { margin: 0 0 8px; font-size: 15px; display: flex; align-items: baseline; gap: 10px; }
+.lsv-cm-h a { font-size: 14px; font-weight: 600; color: #0066cc; text-decoration: none; }
+.lsv-cm-l { display: flex; flex-wrap: wrap; gap: 8px; }
+.lsv-cm-b { font: inherit; font-size: 14px; font-weight: 600; color: var(--ink, #1d1d1f); background: #fff; border: 1px solid var(--line, #d2d2d7); border-radius: 999px; padding: 8px 14px; min-height: 40px; cursor: pointer; text-align: left; max-width: 100%; }
+.lsv-cm-b:hover { border-color: var(--ink, #1d1d1f); }
+.lsv-cm-b:focus-visible { outline: 2px solid var(--ink, #1d1d1f); outline-offset: 2px; }
