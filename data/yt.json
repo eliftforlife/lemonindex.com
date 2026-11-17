@@ -68196,6 +68196,342 @@
    "costs": null
   }
  ],
+ "buick-lacrosse": [
+  {
+   "years": [
+    2005,
+    2006,
+    2007,
+    2008,
+    2009
+   ],
+   "gen": "2005–2009 Buick LaCrosse",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 4232907,
+   "topics": [
+    {
+     "name": "Transmission & shifter",
+     "views": 260974,
+     "n": 3,
+     "best": {
+      "id": "IIl09WBAuOo",
+      "title": "Buick LaCrosse (2005 - 2013) - Service the transmission",
+      "channel": "Haynes Manuals",
+      "views": 133919
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 228746,
+     "n": 7,
+     "best": {
+      "id": "8NprPSv4maY",
+      "title": "Buick LaCrosse (2005 - 2013) - Replace the starter motor",
+      "channel": "Haynes Manuals",
+      "views": 130758
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 228317,
+     "n": 5,
+     "best": {
+      "id": "Xx7Tzb3qSWI",
+      "title": "Buick LaCrosse (2005 - 2013) - Replace the thermostat",
+      "channel": "Haynes Manuals",
+      "views": 135844
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 153443,
+     "n": 2,
+     "best": {
+      "id": "aj-3B_oj8CY",
+      "title": "Buick LaCrosse (2005 - 2013) - Replace the fuel pump",
+      "channel": "Haynes Manuals",
+      "views": 143786
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 138870,
+     "n": 8,
+     "best": {
+      "id": "m_TmijrOzsg",
+      "title": "Buick LaCrosse (2005 - 2013) - Replace the rear brake pads",
+      "channel": "Haynes Manuals",
+      "views": 45893
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 138428,
+     "n": 2,
+     "best": {
+      "id": "NlK741_t0Ao",
+      "title": "Buick LaCrosse (2005 - 2013) - Service the cooling system",
+      "channel": "Haynes Manuals",
+      "views": 127471
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 119784,
+     "n": 4,
+     "best": {
+      "id": "63omVPki2bM",
+      "title": "Buick LaCrosse (2005 - 2013) - Replace the oxygen sensor",
+      "channel": "Haynes Manuals",
+      "views": 66791
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 111936,
+     "n": 4,
+     "best": {
+      "id": "74AGNqY7Mm8",
+      "title": "2006 Buick Lacrosse PCM Theft Deterrent Fix",
+      "channel": "EyeCanFixThat!",
+      "views": 36670
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "EEsuXh3fGSo",
+     "title": "2009 Buick Lacrosse No Crank No Start 2 Problems!",
+     "channel": "Hands On Auto Training",
+     "views": 29577
+    },
+    {
+     "id": "7mZAvX1sn1A",
+     "title": "2008 Buick LaCrosse Super (5.3L V8) Start Up, Exhaust, and In Depth Review",
+     "channel": "Saabkyle04",
+     "views": 342228
+    },
+    {
+     "id": "Sw_6MruXz4w",
+     "title": "2005 Buick LaCrosse CXL Review - Holding On To The Good 'Ol Days",
+     "channel": "Shooting Cars",
+     "views": 45152
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016
+   ],
+   "gen": "2010–2016 Buick LaCrosse",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 8646868,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 485513,
+     "n": 8,
+     "best": {
+      "id": "nMP4rbTYjko",
+      "title": "Open and start Buick LaCrosse 2014-15 keyless start models with a dead key fob.",
+      "channel": "DashboardSymbols.com",
+      "views": 132333
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 257866,
+     "n": 5,
+     "best": {
+      "id": "-LhCvrYFn6U",
+      "title": "How to Replace Cabin Air Filter 2010 Buick LaCrosse | AQ1164C",
+      "channel": "Filterheads",
+      "views": 176576
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 216146,
+     "n": 5,
+     "best": {
+      "id": "Xx7Tzb3qSWI",
+      "title": "Buick LaCrosse (2005 - 2013) - Replace the thermostat",
+      "channel": "Haynes Manuals",
+      "views": 135844
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 165639,
+     "n": 4,
+     "best": {
+      "id": "fz_ENsKIN5Q",
+      "title": "How To Replace Oxygen (O2) Sensor 2010-16 Buick LaCrosse",
+      "channel": "TRQ",
+      "views": 91064
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 164875,
+     "n": 4,
+     "best": {
+      "id": "V1fGYUqJ_U0",
+      "title": "How To Replace Spark Plugs 2010-16 Buick Lacrosse",
+      "channel": "TRQ",
+      "views": 108191
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 127471,
+     "n": 1,
+     "best": {
+      "id": "NlK741_t0Ao",
+      "title": "Buick LaCrosse (2005 - 2013) - Service the cooling system",
+      "channel": "Haynes Manuals",
+      "views": 127471
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 110406,
+     "n": 2,
+     "best": {
+      "id": "q72IGKkQnj4",
+      "title": "2012 Buick LaCrosse Hybrid P0A90 Fix! Easy Repair for Common Belt Squeal & Check Engine Light",
+      "channel": "South Main Auto LLC",
+      "views": 87869
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 106110,
+     "n": 4,
+     "best": {
+      "id": "6mHhr8uOFCQ",
+      "title": "How To Replace Rear Shocks 2010-16 Buick LaCrosse",
+      "channel": "TRQ",
+      "views": 42449
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "Tk6_ZOEE3HI",
+     "title": "Top 5 Problems Buick LaCrosse Sedan 2nd Generation 2010-16",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 473413
+    },
+    {
+     "id": "m5Uy8zTQq-k",
+     "title": "Buick LaCrosse 2nd Gen 2010 to 2016 common problems, issues, defects and complaints",
+     "channel": "HOWSTUFFINMYCARWORKS",
+     "views": 35449
+    },
+    {
+     "id": "rPeIk6q7EcA",
+     "title": "2012 Buick Lacrosse with E Assist Transmission Problems at 32 MPH",
+     "channel": "Dan DeBoer",
+     "views": 15954
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2017,
+    2018,
+    2019
+   ],
+   "gen": "2017–2019 Buick LaCrosse",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 3355382,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 32135,
+     "n": 2,
+     "best": {
+      "id": "As8YQagNpnI",
+      "title": "2017 - 19 Buick LaCrosse Battery change (AC Delco 94RAGM) - EZ but pay attention!!",
+      "channel": "One and Done DIY",
+      "views": 24102
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 9227,
+     "n": 1,
+     "best": {
+      "id": "meTs7xrm6yI",
+      "title": "2017 - 2019 Buick LaCrosse How to Oil Change & Reset Oil Life",
+      "channel": "Axtuo Ax",
+      "views": 9227
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 387,
+     "n": 1,
+     "best": {
+      "id": "ySGgltpSgGM",
+      "title": "2017 Buick Lacrosse spark plugs and coils replacement",
+      "channel": "Alton Campbell ",
+      "views": 387
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 26,
+     "n": 1,
+     "best": {
+      "id": "_Z4qkuNu-p8",
+      "title": "2017 Buick lacrosse thermostat replacement",
+      "channel": "Bobby",
+      "views": 26
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "6_Afhn3SMC4",
+     "title": "2017 Buick Lacrosse - Review and Road Test",
+     "channel": "Kelley Blue Book",
+     "views": 210303
+    },
+    {
+     "id": "BZWm1JTfexw",
+     "title": "2017 Buick Lacrosse – Redline: Review",
+     "channel": "Redline Reviews",
+     "views": 206579
+    },
+    {
+     "id": "4NbA57qMric",
+     "title": "2017 Buick LaCrosse Premium Road Test & In Depth Review",
+     "channel": "Saabkyle04",
+     "views": 193338
+    }
+   ],
+   "costs": null
+  }
+ ],
  "mitsubishi-galant": [
   {
    "years": [

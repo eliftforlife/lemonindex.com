@@ -33560,5 +33560,150 @@
 }
 ]
 }
+],
+"buick-lacrosse": [
+{
+"sid": "buick-lacrosse-g1",
+"y0": 2005,
+"y1": 2009,
+"label": "2005–2009",
+"videos": 199,
+"praise": [
+[
+"Reliability",
+17
+],
+[
+"Power",
+8
+],
+[
+"Comfort and ride",
+7
+],
+[
+"Looks",
+6
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+5
+],
+[
+"Coolant leaks / water pump / overheating",
+4
+]
+],
+"top": [
+{
+"id": "7mZAvX1sn1A",
+"title": "2008 Buick LaCrosse Super (5.3L V8) Start Up, Exhaust, and In Depth Review",
+"views": 342228,
+"ch": "Saabkyle04"
+},
+{
+"id": "Sw_6MruXz4w",
+"title": "2005 Buick LaCrosse CXL Review - Holding On To The Good 'Ol Days",
+"views": 45152,
+"ch": "Shooting Cars"
+},
+{
+"id": "QSwXn_eSEWk",
+"title": "2006 Buick Lacrosse CXL Full Tour, Startup, and Review",
+"views": 44496,
+"ch": "NECarReviews"
+}
+]
+},
+{
+"sid": "buick-lacrosse-g2",
+"y0": 2010,
+"y1": 2016,
+"label": "2010–2016",
+"videos": 200,
+"praise": [
+[
+"Power",
+6
+],
+[
+"Looks",
+4
+],
+[
+"Comfort and ride",
+4
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "Tk6_ZOEE3HI",
+"title": "Top 5 Problems Buick LaCrosse Sedan 2nd Generation 2010-16",
+"views": 473413,
+"ch": "1A Auto: Repair Tips & Secrets Only Mechanics Know"
+},
+{
+"id": "xuBOjPk29TQ",
+"title": "2010 Buick LaCrosse CXS 3.6 In Depth Review, Start Up, Engine, and Overview of Features",
+"views": 229784,
+"ch": "Saabkyle04"
+},
+{
+"id": "O06g-jeoY98",
+"title": "2014 Buick LaCrosse Review: Everything You Ever Wanted to Know",
+"views": 192122,
+"ch": "The Fast Lane Car"
+}
+]
+},
+{
+"sid": "buick-lacrosse-g3",
+"y0": 2017,
+"y1": 2019,
+"label": "2017–2019",
+"videos": 200,
+"praise": [
+[
+"Looks",
+8
+],
+[
+"Fun to drive",
+6
+],
+[
+"Tech and features",
+5
+],
+[
+"Comfort and ride",
+5
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "6_Afhn3SMC4",
+"title": "2017 Buick Lacrosse - Review and Road Test",
+"views": 210303,
+"ch": "Kelley Blue Book"
+},
+{
+"id": "BZWm1JTfexw",
+"title": "2017 Buick Lacrosse – Redline: Review",
+"views": 206579,
+"ch": "Redline Reviews"
+},
+{
+"id": "4NbA57qMric",
+"title": "2017 Buick LaCrosse Premium Road Test & In Depth Review",
+"views": 193338,
+"ch": "Saabkyle04"
+}
+]
+}
 ]
 }
