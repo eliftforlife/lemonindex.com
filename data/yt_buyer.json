@@ -34165,5 +34165,97 @@
 }
 ]
 }
+],
+"chevrolet-monte-carlo": [
+{
+"sid": "chevrolet-monte-carlo-g6",
+"y0": 2000,
+"y1": 2005,
+"label": "2000–2005",
+"videos": 198,
+"praise": [
+[
+"Reliability",
+10
+],
+[
+"Looks",
+4
+],
+[
+"Fun to drive",
+4
+],
+[
+"Power",
+3
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+3
+]
+],
+"top": [
+{
+"id": "zdqRC9TeryA",
+"title": "2004 Chevrolet Monte Carlo SS Dale Earnhardt Jr. Special Edition: Regular Car Reviews",
+"views": 360894,
+"ch": "Regular Car Reviews"
+},
+{
+"id": "PQ_SxKAeqfc",
+"title": "Watch This BEFORE You Buy a Chevy Monte Carlo SS (6th Gen 2000-2007)",
+"views": 303020,
+"ch": "Mr Random Reviews"
+},
+{
+"id": "8pXfeToCpK0",
+"title": "2000 Chevrolet Monte Carlo SS | Retro Review",
+"views": 95016,
+"ch": "MotorWeek"
+}
+]
+},
+{
+"sid": "chevrolet-monte-carlo-g7",
+"y0": 2006,
+"y1": 2007,
+"label": "2006–2007",
+"videos": 125,
+"praise": [
+[
+"Space and practicality",
+3
+]
+],
+"trouble": [
+[
+"Rust",
+4
+]
+],
+"top": [
+{
+"id": "PQ_SxKAeqfc",
+"title": "Watch This BEFORE You Buy a Chevy Monte Carlo SS (6th Gen 2000-2007)",
+"views": 303030,
+"ch": "Mr Random Reviews"
+},
+{
+"id": "3rCXk_XxSPo",
+"title": "2007 Chevrolet Monte Carlo SS Review",
+"views": 146145,
+"ch": "631CarReviews"
+},
+{
+"id": "PGPoLLLTw7s",
+"title": "2007 Monte Carlo SS Cold Air Intake Quick Review",
+"views": 47573,
+"ch": "631CarReviews"
+}
+]
+}
 ]
 }
