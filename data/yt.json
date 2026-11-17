@@ -69654,7 +69654,26 @@
      "views": 9832
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 350,
+       "lo": 300.0,
+       "hi": 400.0,
+       "n": 4,
+       "videos": 3,
+       "id": "uBlZKFy1vvE",
+       "t": 898,
+       "title": "Diagnosing A No Start 2009 Ford Flex Won't Crank...Clicks...Solved..."
+      }
+     ]
+    ]
+   }
   }
  ],
  "nissan-quest": [
@@ -69745,6 +69764,133 @@
      "title": "2001 Nissan Quest Junkyard Review",
      "channel": "Cahlager",
      "views": 2164
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009
+   ],
+   "gen": "2004–2009 Nissan Quest",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 6160439,
+   "topics": [
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 1328376,
+     "n": 9,
+     "best": {
+      "id": "_zWJV-05qng",
+      "title": "Replace Nissan 3.5L V6 Camshaft Position Sensor - TCS / SLIP Light - P0345 Code | 2004 Nissan Quest",
+      "channel": "dial2fast",
+      "views": 830450
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 192838,
+     "n": 2,
+     "best": {
+      "id": "9L6K155B_ys",
+      "title": "Changing Drive Belts on Nissan Quest 2006",
+      "channel": "Roluardo",
+      "views": 157096
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 155234,
+     "n": 5,
+     "best": {
+      "id": "A-bMoTFkhJQ",
+      "title": "2006 Nissan Quest Odometer Fix",
+      "channel": "Roluardo",
+      "views": 98527
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 136506,
+     "n": 3,
+     "best": {
+      "id": "7E6Vt0s2Fpo",
+      "title": "Nissan 3.5L V6 Oil Change 2004 - 2009 Nissan Quest",
+      "channel": "dial2fast",
+      "views": 120830
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 124090,
+     "n": 3,
+     "best": {
+      "id": "mJ_505g80ms",
+      "title": "How to Replace Cabin Air Filter 2007 Nissan Quest | AQ1137",
+      "channel": "Filterheads",
+      "views": 77493
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 111954,
+     "n": 1,
+     "best": {
+      "id": "tNCczESD2Lo",
+      "title": "2006 Nissan Quest Spark Plugs + PCV Valve Replacement",
+      "channel": "Roluardo",
+      "views": 111954
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 88934,
+     "n": 4,
+     "best": {
+      "id": "HGzBrSzxt_I",
+      "title": "2008 nissan quest change front strut",
+      "channel": "Chris Swain",
+      "views": 44236
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 65898,
+     "n": 2,
+     "best": {
+      "id": "1beeaflViWM",
+      "title": "Code P0300 Random Misfire Detected, 2007 Nissan Quest 3.5. Fixed!",
+      "channel": "Gabriel Auto Technician",
+      "views": 63812
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "uEH47WzU2lQ",
+     "title": "2006 Nissan Quest horn problems",
+     "channel": "Marchena pluz",
+     "views": 11093
+    },
+    {
+     "id": "4KaX73lVF9s",
+     "title": "Folding Seats of my 2006 Nissan Quest SE-L Mint Condition & Fully Loaded For Sale",
+     "channel": "mybestcarcom",
+     "views": 89753
+    },
+    {
+     "id": "Vl8fCos0wCc",
+     "title": "Inside Condition of my 2006 Nissan Quest SE-L Mint Condition & Fully Loaded For Sale",
+     "channel": "mybestcarcom",
+     "views": 88361
     }
    ],
    "costs": null
