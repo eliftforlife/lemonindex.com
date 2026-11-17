@@ -65616,6 +65616,135 @@
    }
   }
  ],
+ "buick-lesabre": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005
+   ],
+   "gen": "2000–2005 Buick LeSabre",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 6941484,
+   "topics": [
+    {
+     "name": "Steering & suspension",
+     "views": 530127,
+     "n": 11,
+     "best": {
+      "id": "VxHSXIayTJU",
+      "title": "2000 Buick Lesabre Rear Level ride Shock replacement",
+      "channel": "Michael Paladini",
+      "views": 94927
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 433136,
+     "n": 6,
+     "best": {
+      "id": "u4UaAZhKv2A",
+      "title": "2000-2005 Buick LeSabre: Replacing the cabin air filter",
+      "channel": "AKJeeper",
+      "views": 95498
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 327013,
+     "n": 6,
+     "best": {
+      "id": "E7IhMQCURL8",
+      "title": "How To Replace Crankshaft Position Sensor 2000-2005 Buick LeSabre",
+      "channel": "TRQ",
+      "views": 128902
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 320691,
+     "n": 4,
+     "best": {
+      "id": "BoVWAzG1FtA",
+      "title": "Fuel filter replacement 2004 Buick Lesabre How to change gas filter",
+      "channel": "Fixing cars and stuff",
+      "views": 124679
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 190538,
+     "n": 2,
+     "best": {
+      "id": "XHRr0LsM4q8",
+      "title": "2004 Buick LeSabre 4T65E transmission removal",
+      "channel": "Alex Wittich",
+      "views": 149775
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 164414,
+     "n": 5,
+     "best": {
+      "id": "NxY0zOkvHoA",
+      "title": "How to Replace Spark Plug Wires 2000-2005 Buick LeSabre",
+      "channel": "TRQ",
+      "views": 51992
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 159530,
+     "n": 2,
+     "best": {
+      "id": "T_ToZDQZjOg",
+      "title": "2004 Buick Lesabre click no start EASY FIX!!",
+      "channel": "JasonDoesDIY",
+      "views": 149309
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 138507,
+     "n": 5,
+     "best": {
+      "id": "eDlNmKWnxyk",
+      "title": "How to Replace Front Window Regulator 2000-2005 Buick LeSabre",
+      "channel": "TRQ",
+      "views": 51547
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "6LkPtdRTLus",
+     "title": "Top 5 Problems Buick LeSabre Sedan 8th Generation 2000-05",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 383629
+    },
+    {
+     "id": "tT_k2ckHxsA",
+     "title": "2001 Buick lesabre update and problems",
+     "channel": "Castro's yard",
+     "views": 76263
+    },
+    {
+     "id": "W54-S8wYezw",
+     "title": "2003 Buick LeSabre transmission problems???",
+     "channel": "Oswaldo Lopez",
+     "views": 8086
+    }
+   ],
+   "costs": null
+  }
+ ],
  "chevrolet-avalanche": [
   {
    "years": [
@@ -69805,6 +69934,154 @@
    "costs": null
   }
  ],
+ "chevrolet-astro": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005
+   ],
+   "gen": "1995–2005 Chevrolet Astro",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 6083208,
+   "topics": [
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 325136,
+     "n": 5,
+     "best": {
+      "id": "1gTeTifFV0Y",
+      "title": "Astro Van Fuel Pump Replacement - 1996-2005 (GMC Safari) - 4 MINUTE DIY VIDEO",
+      "channel": "MINUTE DIY VIDEOS",
+      "views": 148074
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 253983,
+     "n": 6,
+     "best": {
+      "id": "RC_eQdUiilU",
+      "title": "Crank's No Start Chevy 4.3 Astro van No Start-Fix Year 2000",
+      "channel": "The Traveling Prospector ",
+      "views": 141870
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 221058,
+     "n": 10,
+     "best": {
+      "id": "KTIY8J0zeGc",
+      "title": "Chevy Astro Van - Starter Replacement - 1996-2005",
+      "channel": "MINUTE DIY VIDEOS",
+      "views": 97210
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 147232,
+     "n": 4,
+     "best": {
+      "id": "e3wPBZiydGs",
+      "title": "Front Shock Replacement 1995-2005 GMC Safari (Chevrolet Astro Van) | Fix It Friday",
+      "channel": "Revit Auto",
+      "views": 92540
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 110419,
+     "n": 7,
+     "best": {
+      "id": "be3WpmcdNQo",
+      "title": "1995-2005 Chevy Astro Rear Door Check FIX! - Widespread Astro/Safari Issue!",
+      "channel": "EliYourCarGuy",
+      "views": 33324
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 71351,
+     "n": 4,
+     "best": {
+      "id": "z_scPBoiIuI",
+      "title": "Chevy Astro Van Brake Fluid Flush (Replacement) - 1996-2005 - (GMC Safari) 2 MINUTE DIY VIDEO",
+      "channel": "MINUTE DIY VIDEOS",
+      "views": 43880
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 45491,
+     "n": 3,
+     "best": {
+      "id": "ExE6B8v1Id0",
+      "title": "Replace 2000 Chevy Astro Ambient Temp Sensor",
+      "channel": "Turbo",
+      "views": 26417
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 30905,
+     "n": 3,
+     "best": {
+      "id": "7O9Xo69bCao",
+      "title": "2005 Chevy Astro Van AC comes out of Derost only, AC Mode Issue - Solved!",
+      "channel": "Miles Stewart",
+      "views": 12715
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "ZT4zrzFbobE",
+     "title": "Is It As Reliable As You Think? Chevrolet Astro Van/GMC Safari 1985-2005",
+     "channel": "AutoMotivate",
+     "views": 227729
+    },
+    {
+     "id": "puDK5gXB70M",
+     "title": "2000 Chevrolet Astro Conversion Van For Sale Dealer Dayton Troy Piqua Sidney Ohio | CP13818AT",
+     "channel": "Paul Sherry Chrysler Jeep Dodge Ram",
+     "views": 154524
+    },
+    {
+     "id": "X0zF5y4OiZg",
+     "title": "1995 Chevrolet Astro Van Day Van Custom 4.3 For Sale SDSC Specialist Cars Cambridge",
+     "channel": "Carrot Town Garage",
+     "views": 126923
+    }
+   ],
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 500,
+       "lo": 100.0,
+       "hi": 500.0,
+       "n": 5,
+       "videos": 5,
+       "id": "PK-m-9OdaSc",
+       "t": 549,
+       "title": "My 2004 chevy astro van walk-through"
+      }
+     ]
+    ]
+   }
+  }
+ ],
  "nissan-quest": [
   {
    "years": [
@@ -70022,7 +70299,26 @@
      "views": 88361
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 70,
+       "lo": 40.0,
+       "hi": 100.0,
+       "n": 4,
+       "videos": 4,
+       "id": "ex_HVPm9yps",
+       "t": 427,
+       "title": "Nissan Exhaust Rattle Buzzing Noise Fix - 2004 Nissan Quest"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -77189,6 +77485,135 @@
      ]
     ]
    }
+  }
+ ],
+ "buick-lucerne": [
+  {
+   "years": [
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011
+   ],
+   "gen": "2006–2011 Buick Lucerne",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 4371333,
+   "topics": [
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 260776,
+     "n": 7,
+     "best": {
+      "id": "vK8iGNL2mQM",
+      "title": "How to Replace the Fuel Pump on a 2009 Buick Lucerne",
+      "channel": "How to Automotive",
+      "views": 141388
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 175180,
+     "n": 5,
+     "best": {
+      "id": "3aL4ohK_1II",
+      "title": "2011 BUICK LUCERNE WINDOW REGULATOR REPLACEMENT",
+      "channel": "C Farmer",
+      "views": 66499
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 171888,
+     "n": 7,
+     "best": {
+      "id": "6i8mVyUSZ5M",
+      "title": "How to Replace Cabin Air Filter 2006 Buick Lucerne | AQ1103",
+      "channel": "Filterheads",
+      "views": 64618
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 108668,
+     "n": 4,
+     "best": {
+      "id": "m6UcCmOiMPs",
+      "title": "Buick Lucerne -2006 to 2011- Front & Back Brake Pad Change!",
+      "channel": "Flashback502",
+      "views": 52385
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 82980,
+     "n": 4,
+     "best": {
+      "id": "kH94iNCN2XE",
+      "title": "Stalling 2007 Buick Lucerne Electric Throttle (all makes)",
+      "channel": "Wrench Sense",
+      "views": 29796
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 73602,
+     "n": 5,
+     "best": {
+      "id": "lbOAVt1wnCI",
+      "title": "2006-2008 Buick Lucerne - 3.8 - Radiator Replacement #buicklucerne",
+      "channel": "Online Auto Repair Videos",
+      "views": 23788
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 47439,
+     "n": 3,
+     "best": {
+      "id": "bIPy4JYuJcI",
+      "title": "2009 buick Lucerne,Pontiac. Impala. Malibu easy way to remove the starter",
+      "channel": "1Wayfix",
+      "views": 23566
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 42689,
+     "n": 4,
+     "best": {
+      "id": "Sno7WATXLyA",
+      "title": "Crank No Start ICM Diagnostic & Fix 2006-2008 Buick Lucerne 3.8L",
+      "channel": "Tech28",
+      "views": 24221
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "YIAIERL8e2c",
+     "title": "Buick Lucerne 100,000 miles mark update Problems. Wahoo. 3800 series 3 engine 4T65-E 2008",
+     "channel": "Vintage Stuff",
+     "views": 33095
+    },
+    {
+     "id": "2SnvVauoRtk",
+     "title": "2008 Buick Lucerne Car 3800 series engine Transmission Problems V6 CXL Hard Shifting",
+     "channel": "Vintage Stuff",
+     "views": 28569
+    },
+    {
+     "id": "mRG6__OWSGY",
+     "title": "2007 Buick Lucerne Heater Problems",
+     "channel": "Dyna1955",
+     "views": 27347
+    }
+   ],
+   "costs": null
   }
  ],
  "toyota-fj-cruiser": [
