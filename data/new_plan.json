@@ -432,9 +432,40 @@
   "make": "LEXUS",
   "rx": "(LS|LS ?[0-9]{3}[A-Z]*|LS HYBRID)",
   "sales": {
-   "gcbc": "lexus-ls"
+   "manual": {
+    "1999": 16357,
+    "2000": 15871,
+    "2001": 31110,
+    "2002": 26261,
+    "2003": 23895,
+    "2004": 32272,
+    "2005": 26043,
+    "2006": 19546,
+    "2007": 35226,
+    "2008": 20255,
+    "2009": 11334,
+    "2010": 12275,
+    "2011": 9568,
+    "2012": 8345,
+    "2013": 10727,
+    "2014": 8559,
+    "2015": 7165,
+    "2016": 5514,
+    "2017": 4094,
+    "2018": 9302,
+    "2019": 5528,
+    "2020": 3617,
+    "2021": 3739,
+    "2022": 2679,
+    "2023": 2237,
+    "2024": 2163,
+    "2025": 1082
+   },
+   "url": "https://en.wikipedia.org/wiki/Lexus_LS",
+   "kind": "calendar",
+   "note": "Wikipedia U.S. sales table (col='US'), each row citing Lexus/Toyota year-end sales releases or Dawson 2004; replaces the GoodCarBadCar table (which starts in 2005) so the 2000 LS 400 and 2001-2004 LS 430 can be scored"
   },
-  "note": "site feedback request 11-11 (LS 400/430/460/500)"
+  "note": "site feedback requests 11-10/11-11 (LS 400/430/460/500); 11-17: sales from 1999 so every LS model year since 2000 is covered"
  },
  "mitsubishi-outlander": {
   "name": "Mitsubishi Outlander",
@@ -3418,5 +3449,27 @@
    "kind": "calendar",
    "note": "GoodCarBadCar U.S. calendar-year sales table; from 2007, the SX4 launch (earlier rows of the table are its predecessor)"
   }
+ },
+ "acura-rsx": {
+  "name": "Acura RSX",
+  "brand": "Acura",
+  "seg": "car",
+  "make": "ACURA",
+  "rx": "RSX( TYPE[ -]?S)?",
+  "sales": {
+   "manual": {
+    "2001": 16401,
+    "2002": 30117,
+    "2003": 24292,
+    "2004": 21940,
+    "2005": 20809,
+    "2006": 16996
+   },
+   "url": "https://en.wikipedia.org/wiki/Honda_Integra_(fourth_generation)",
+   "kind": "calendar",
+   "note": "Wikipedia U.S. sales table for the Acura RSX (col='US'), citing Honda's newsroom; RSX and RSX Type-S together"
+  },
+  "note": "site feedback requests 11-10 + 11-14 (2002-2006 RSX and RSX Type S)",
+  "first": 2002
  }
 }

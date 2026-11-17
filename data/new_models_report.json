@@ -1246,46 +1246,6 @@
   ]
  },
  {
-  "slug": "lexus-ls",
-  "sales": {
-   "2005": 26043,
-   "2006": 19546,
-   "2007": 35226,
-   "2008": 20255,
-   "2009": 11334,
-   "2010": 11675,
-   "2011": 9568,
-   "2012": 8344,
-   "2013": 10727,
-   "2014": 8559,
-   "2015": 7165,
-   "2016": 5514,
-   "2017": 4094,
-   "2018": 9301,
-   "2019": 5528,
-   "2020": 3650,
-   "2021": 3739,
-   "2022": 2679,
-   "2023": 2237,
-   "2024": 2163,
-   "2025": 1082
-  },
-  "kind": "calendar",
-  "url": "https://www.goodcarbadcar.net/lexus-ls-sales-figures/",
-  "note": "GoodCarBadCar annual U.S. sales",
-  "flags": [
-   "Lexus LS 2020: 3,650 sold, 0 complaints in window -> sales merged into 2021",
-   "Lexus LS 2022: 2,679 sold, 0 complaints in window -> sales merged into 2023",
-   "Lexus LS 2024: 2,163 sold, 0 complaints in window -> sales merged into 2025"
-  ],
-  "complaints": 643,
-  "scored": [
-   2005,
-   2007,
-   2008
-  ]
- },
- {
   "slug": "mitsubishi-outlander",
   "sales": {
    "2002": 11346,
@@ -5708,6 +5668,80 @@
    2009,
    2010,
    2011
+  ]
+ },
+ {
+  "slug": "lexus-ls",
+  "sales": {
+   "1999": 16357,
+   "2000": 15871,
+   "2001": 31110,
+   "2002": 26261,
+   "2003": 23895,
+   "2004": 32272,
+   "2005": 26043,
+   "2006": 19546,
+   "2007": 35226,
+   "2008": 20255,
+   "2009": 11334,
+   "2010": 12275,
+   "2011": 9568,
+   "2012": 8345,
+   "2013": 10727,
+   "2014": 8559,
+   "2015": 7165,
+   "2016": 5514,
+   "2017": 4094,
+   "2018": 9302,
+   "2019": 5528,
+   "2020": 3617,
+   "2021": 3739,
+   "2022": 2679,
+   "2023": 2237,
+   "2024": 2163,
+   "2025": 1082
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Lexus_LS",
+  "note": "Wikipedia U.S. sales table (col='US'), each row citing Lexus/Toyota year-end sales releases or Dawson 2004; replaces the GoodCarBadCar table (which starts in 2005) so the 2000 LS 400 and 2001-2004 LS 430 can be scored",
+  "flags": [
+   "Lexus LS 2020: 3,617 sold, 0 complaints in window -> sales merged into 2021",
+   "Lexus LS 2022: 2,679 sold, 0 complaints in window -> sales merged into 2023",
+   "Lexus LS 2024: 2,163 sold, 0 complaints in window -> sales merged into 2025"
+  ],
+  "complaints": 646,
+  "scored": [
+   2001,
+   2002,
+   2003,
+   2004,
+   2005,
+   2007,
+   2008
+  ]
+ },
+ {
+  "slug": "acura-rsx",
+  "sales": {
+   "2001": 16401,
+   "2002": 30117,
+   "2003": 24292,
+   "2004": 21940,
+   "2005": 20809,
+   "2006": 16996
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Honda_Integra_(fourth_generation)",
+  "note": "Wikipedia U.S. sales table for the Acura RSX (col='US'), citing Honda's newsroom; RSX and RSX Type-S together",
+  "flags": [
+   "Acura RSX 2001: 16,401 sold, 2 complaints in window -> sales merged into 2002"
+  ],
+  "complaints": 178,
+  "scored": [
+   2002,
+   2003,
+   2004,
+   2005
   ]
  }
 ]

@@ -112,7 +112,7 @@ def run(slug, p):
     blended = mysales.blend(sold, into, cs) if kind == 'calendar' else sold
     years, xl, years_all = [], {}, []
     med = sorted(win[y] for y in sold if win[y]) or [0]; med = med[len(med) // 2]
-    for y in range(Y0, Y1 + 1):
+    for y in range(max(Y0, p.get('first', Y0)), Y1 + 1):   # 11-17: `first` = first U.S. model year (RSX: 2002)
         n = win[y]
         if not allc[y]: continue
         s = sold.get(y); li = None

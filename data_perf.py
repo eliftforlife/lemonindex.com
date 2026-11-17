@@ -88,6 +88,8 @@ def nhtsa(D):
     c = sqlite3.connect(DB); n = D['nhtsa']
     q = f"select odino, year, max(descr), group_concat(comp, '|') from rows where make=? and model in ({','.join('?' * len(n['models']))}) and year between ? and 2026 group by odino"
     allr = c.execute(q, [n['make']] + n['models'] + [min([1990] + [g['y0'] for g in D['gens']])]).fetchall()   # 11-14: the AE86 starts in 1984
+    # 11-17: a shared NHTSA name (GS F under GS, IS 500 under IS, Integra Type S under Integra): nhtsa.from starts the count at the car's own first year
+    if n.get('from'): allr = [r for r in allr if r[1] >= n['from']]
     rows = [(o, y, d) for o, y, d, _ in allr]
     by_year = collections.Counter(y for _, y, _ in rows)
     inyrs = lambda y: any(g['y0'] <= y <= g['y1'] for g in D['gens'])

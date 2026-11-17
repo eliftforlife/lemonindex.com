@@ -117,6 +117,20 @@ if ENGU == 'hooks':
         _fid = _EUPP.parent_of(_D)
         if _fid in EU_MODELS and _D.get('page') and _D['page'] != f'/cars/{_fid}/':
             EU_KIDS.setdefault(_fid, []).append((_D['name'].split(' ', 1)[-1], _D['page'], {y for g in _D.get('gens') or [] for y in range(g['y0'], g['y1'] + 1)}, 'perf'))
+    # 11-17 (visitor requests): complaints-only models (data/extra_models*.json, no Lemon Index) get the same chips with their performance / JDM pages
+    _EU_XN = {}
+    for _xf in ('data/extra_models.json', 'data/extra_models_new.json'):
+        if _euos.path.exists(_xf): _EU_XN.update(_load(_xf))
+    EU_XKIDS = {}
+    for _s, _D in EU_PERF.items():
+        _fid = _EUPP.parent_of(_D)
+        if _fid in _EU_XN and _fid not in EU_MODELS and _D.get('page') and _D['page'] != f'/cars/{_fid}/':
+            EU_XKIDS.setdefault(_fid, []).append((_D['name'].split(' ', 1)[-1], _D['page'], 'JDM' if _D.get('jdm') else 'Performance'))
+    def EU_XKIDS_ROW(fid, here=''):
+        ks = [k for k in EU_XKIDS.get(fid) or [] if k[1] != here]
+        if not ks: return ''
+        return (f'<nav class="n3-row n3-kids" aria-label="Other versions of this car">{EU_CSS}<p class="n3-h">Other versions</p><div class="n3-cs">'
+                + ''.join(f'<a class="n3-c" href="{E(u)}"><b>{E(lab)}</b><small>{kd}</small></a>' for lab, u, kd in ks) + '</div></nav>')
     EU_SC_PARENT = {}
     for _c in SCX:
         _fid = EU_PARENT(_slg(_c['name']), _c['name'])
@@ -145,6 +159,10 @@ if ENGU == 'hooks':
                 + (f'<p class="n3-n">Year pages: <span class="n3-ys">{yc}</span></p>' if yc else '') + '</nav>')
     def _eu_perf_row(slug, D):   # perf_page.standalone() calls this in its hero
         fid = _EUPP.parent_of(D)
+        if fid in EU_XKIDS and fid not in EU_MODELS:   # 11-17: a complaints-only regular model (the Integra) and the sibling versions
+            sib = [k for k in EU_XKIDS[fid] if k[1] != D.get('page', '')]
+            return (f'<nav class="n3-row n3-par" aria-label="Regular model">{EU_CSS}<p class="n3-h">Regular model</p><div class="n3-cs"><a class="n3-c" href="/cars/{E(fid)}/"><b>{E(_EU_XN[fid]["name"])}</b><small>every year, owner complaints</small></a>'
+                    + ''.join(f'<a class="n3-c" href="{E(u)}"><b>{E(lab)}</b><small>{kd}</small></a>' for lab, u, kd in sib[:4]) + '</div></nav>')
         return EU_PARENT_ROW(fid, D.get('page', ''), {y for g in D.get('gens') or [] for y in range(g['y0'], g['y1'] + 1)}) if fid in EU_MODELS else ''
     _EUPP.PARENT_ROW = _eu_perf_row
     def EU_SC_ROW(slug):

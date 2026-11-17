@@ -1,0 +1,212 @@
+{
+ "slug": "lexus-is-500",
+ "name": "Lexus IS 500 F Sport Performance",
+ "short": "IS 500",
+ "make": "Lexus",
+ "page": "/cars/lexus-is-500/",
+ "focus": "xe30",
+ "star": "is500",
+ "h1": "Lexus IS 500 F Sport Performance: performance, engine and what owners say",
+ "nhtsa": {
+  "make": "LEXUS",
+  "models": [
+   "IS 500",
+   "IS"
+  ],
+  "note": "NHTSA has no separate IS 500 name in its complaint files. IS 500 owners file under IS, which also covers the IS 300 and IS 350, so these counts include those versions.",
+  "from": 2022
+ },
+ "topics_extra": {
+  "Fuel pump": "fuel pump",
+  "Brake vibration": "brakes? (vibrat|shudder|judder|pulsat)|warped rotors?",
+  "Infotainment / screen": "touch ?screen|infotainment|screen (freez|black)|carplay"
+ },
+ "gens": [
+  {
+   "id": "xe30",
+   "code": "XE30",
+   "years": "2022–",
+   "y0": 2022,
+   "y1": 2025,
+   "engine": "2UR-GSE",
+   "body": "Sedan",
+   "tag": "The IS with the 472 hp V8; rear-drive, 8-speed automatic, Torsen limited-slip differential.",
+   "variants": [
+    {
+     "id": "is500",
+     "name": "IS 500 F Sport Performance",
+     "years": "2022–",
+     "star": true,
+     "hp": {
+      "v": 472,
+      "src": [
+       "lx21"
+      ],
+      "note": "at 7,100 rpm"
+     },
+     "tq": {
+      "v": 395,
+      "src": [
+       "lx21"
+      ],
+      "note": "lb-ft at 4,800 rpm"
+     },
+     "z60": {
+      "v": 4.3,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 4.4,
+      "csrc": [
+       "lx21"
+      ]
+     },
+     "trans": {
+      "v": "8-speed automatic (Sport Direct Shift), rear-drive",
+      "src": [
+       "lx21"
+      ],
+      "note": "Torsen limited-slip differential standard"
+     },
+     "weight": {
+      "v": "3,891 lb",
+      "src": [
+       "lx21"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$56,500",
+      "src": [
+       "lx21p"
+      ],
+      "note": "2022 starting MSRP, plus destination"
+     },
+     "what": "Standard Dynamic Handling Package: adaptive suspension, Torsen limited-slip differential, 14.0-inch front brake rotors.",
+     "what_src": [
+      "lx21"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "2UR-GSE": {
+   "name": "Lexus 2UR-GSE",
+   "what": "5.0-liter V-8, naturally aspirated",
+   "study": "toyota-2ur-gse",
+   "page": "/engines/toyota-2ur-gse/",
+   "yt": [
+    "scy",
+    "toyota-2ur-gse"
+   ],
+   "facts": [
+    [
+     "Output",
+     "472 hp / 395 lb-ft in the IS 500",
+     [
+      "lx21"
+     ]
+    ],
+    [
+     "Redline",
+     "7,300 rpm",
+     [
+      "k19"
+     ]
+    ],
+    [
+     "Valvetrain",
+     "Titanium intake and exhaust valves, forged connecting rods",
+     [
+      "k19",
+      "l15"
+     ]
+    ],
+    [
+     "Fuel",
+     "Direct plus port injection (D-4S), 12.3:1 compression",
+     [
+      "s15",
+      "k19"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "In-tank fuel pump recall",
+     "kind": "Recall",
+     "rx": "low.?pressure (fuel )?pump|fuel pump|stall(ed|s|ing)? (while|when) driving|engine (shut|cut) off|limp mode",
+     "x": "NHTSA recall 26V-222 covers 2015–2022 Lexus RC, 2016–2020 GS and 2022 IS vehicles: the low-pressure fuel pump in the tank may fail, which can stall the engine.",
+     "fix": "Dealer replaces the fuel pump for free (NHTSA 26V-222). Check your VIN at nhtsa.gov/recalls.",
+     "src": [
+      "r26"
+     ]
+    }
+   ]
+  }
+ },
+ "compare": [
+  {
+   "slug": "bmw-m340i",
+   "name": "BMW M340i"
+  },
+  {
+   "slug": "audi-s4",
+   "name": "Audi S4"
+  },
+  {
+   "slug": "kia-stinger-gt",
+   "name": "Kia Stinger GT"
+  },
+  {
+   "slug": "lexus-is-f",
+   "name": "Lexus IS F"
+  }
+ ],
+ "sources": {
+  "lx21": {
+   "t": "Lexus USA: 2022 Lexus IS 500 F SPORT Performance, the IS sports sedan unleashed (Feb 2021)",
+   "u": "https://pressroom.lexus.com/2022-lexus-is-500-f-sport-performance-the-is-sports-sedan-unleashed/",
+   "k": "Lexus"
+  },
+  "lx21p": {
+   "t": "Lexus USA: 2022 Lexus IS 500, a new breed of F SPORT Performance (pricing)",
+   "u": "https://pressroom.lexus.com/2022-lexus-is-500-a-new-breed-of-f-sport-performance/",
+   "k": "Lexus"
+  },
+  "l15": {
+   "t": "Lexus USA: The F strikes again, Lexus unleashes the 2015 RC F (Sep 2014), the same 2UR-GSE V8",
+   "u": "https://pressroom.lexus.com/releases/2015+lexus+rc+f+product+news.htm",
+   "k": "Lexus"
+  },
+  "s15": {
+   "t": "Lexus USA: 2015 RC F product information (PDF), the same 2UR-GSE V8",
+   "u": "https://s3.amazonaws.com/toyota-cms-media/toyota-pdfs/2015_RC_F_Product_Information.pdf",
+   "k": "Lexus"
+  },
+  "k19": {
+   "t": "Lexus USA: 2019 RC F press kit (PDF), the same 2UR-GSE V8",
+   "u": "https://lexus-cms-media.s3.us-east-2.amazonaws.com/wp-content/uploads/2019/06/2019lexusrcfpresskit.pdf",
+   "k": "Lexus"
+  },
+  "z60": {
+   "t": "0-60specs.com: Lexus IS 500 F Sport Performance 0-60 runs by magazine (Car and Driver, MotorTrend, MotorWeek)",
+   "u": "https://www.0-60specs.com/lexus/is-500-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "r26": {
+   "t": "NHTSA recall 26V-222: low-pressure fuel pump, 2015-2022 Lexus RC, 2016-2020 GS, 2022 IS (Apr 2026)",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=26V222",
+   "k": "Recall"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-lexus-is-500",
+ "img": "/assets/ai-perf/lexus-is-500.webp?v=2"
+}

@@ -1,0 +1,93 @@
+{
+ "built": "2026-11-17",
+ "nhtsa": {
+  "by_year": {
+   "2024": 64,
+   "2025": 13,
+   "2026": 3
+  },
+  "gens": {
+   "int5": {
+    "n": 77,
+    "issues": {},
+    "parts": [
+     [
+      "Steering",
+      59
+     ],
+     [
+      "Forward collision avoidance",
+      4
+     ],
+     [
+      "Unknown or other",
+      3
+     ],
+     [
+      "Electrical system",
+      2
+     ],
+     [
+      "Air bags",
+      2
+     ],
+     [
+      "Engine",
+      2
+     ]
+    ]
+   }
+  },
+  "parts": [
+   [
+    "Steering",
+    59
+   ],
+   [
+    "Forward collision avoidance",
+    4
+   ],
+   [
+    "Unknown or other",
+    3
+   ],
+   [
+    "Electrical system",
+    2
+   ],
+   [
+    "Air bags",
+    2
+   ],
+   [
+    "Engine",
+    2
+   ]
+  ]
+ },
+ "recalls": {
+  "2024": [
+   {
+    "id": "24V744000",
+    "part": "STEERING",
+    "summary": "Honda (American Honda Motor Co.) is recalling certain 2023-2025 Acura Integra, Civic Type R, CR-V Hybrid, CR-V, HR-V, 2022-2025 Civic, Civic Hatchback, 2024-2025 Acura Integra Type S, 2025 CR-V Fuel Cell EV, Civic Hybrid, and Civic Hatchback Hybrid vehicles.  The steering gearbox assembly may have been manufactured incorrectly, which can cause excessive internal friction and lead to difficulty ste"
+   },
+   {
+    "id": "24V859000",
+    "part": "SEATS:CRITICAL FASTENERS",
+    "summary": "Honda (American Honda Motor Co.) is recalling certain 2023-2024 Honda Accord, Accord Hybrid, Civic Sedan, Civic Hatchback, Pilot, and 2024 HR-V, Acura Integra and Acura Integra Type S vehicles.  The driver's seat cushion frame may not have been tightened properly, which can result in an unsecured seat.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety St"
+   }
+  ],
+  "2025": [
+   {
+    "id": "24V744000",
+    "part": "STEERING",
+    "summary": "Honda (American Honda Motor Co.) is recalling certain 2023-2025 Acura Integra, Civic Type R, CR-V Hybrid, CR-V, HR-V, 2022-2025 Civic, Civic Hatchback, 2024-2025 Acura Integra Type S, 2025 CR-V Fuel Cell EV, Civic Hybrid, and Civic Hatchback Hybrid vehicles.  The steering gearbox assembly may have been manufactured incorrectly, which can cause excessive internal friction and lead to difficulty ste"
+   }
+  ]
+ },
+ "yt": {
+  "car-integra-type-s": null
+ },
+ "scores": {}
+}

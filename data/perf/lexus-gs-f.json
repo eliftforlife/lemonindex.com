@@ -1,0 +1,225 @@
+{
+ "slug": "lexus-gs-f",
+ "name": "Lexus GS F",
+ "short": "GS F",
+ "make": "Lexus",
+ "page": "/cars/lexus-gs-f/",
+ "focus": "url10",
+ "star": "gsf",
+ "h1": "Lexus GS F: performance, engines and what owners say",
+ "nhtsa": {
+  "make": "LEXUS",
+  "models": [
+   "GS F",
+   "GS"
+  ],
+  "note": "NHTSA has no separate GS F name in its complaint files. GS F owners file under GS, which also covers the GS 350, GS 200t / 300 and GS 450h, so these counts include those versions.",
+  "from": 2016
+ },
+ "topics_extra": {
+  "Fuel pump": "fuel pump|\\bhpfp\\b",
+  "Torque vectoring diff": "torque vectoring|\\btvd\\b",
+  "Brake vibration": "brakes? (vibrat|shudder|judder|pulsat)|warped rotors?",
+  "Infotainment / touchpad": "touch ?pad|remote touch|infotainment|screen (freez|black)"
+ },
+ "gens": [
+  {
+   "id": "url10",
+   "code": "GS (4th gen)",
+   "years": "2016–2020",
+   "y0": 2016,
+   "y1": 2020,
+   "engine": "2UR-GSE",
+   "body": "Sedan",
+   "tag": "467 hp V8 five-seat sport sedan; rear-drive, 8-speed automatic, torque vectoring differential.",
+   "variants": [
+    {
+     "id": "gsf",
+     "name": "GS F",
+     "years": "2016–2020",
+     "star": true,
+     "hp": {
+      "v": 467,
+      "src": [
+       "lc15",
+       "lx16"
+      ],
+      "note": "at 7,100 rpm"
+     },
+     "tq": {
+      "v": 389,
+      "src": [
+       "lc15",
+       "lx16"
+      ],
+      "note": "lb-ft"
+     },
+     "z60": {
+      "v": 4.4,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "8-speed automatic (Sport Direct Shift), rear-drive",
+      "src": [
+       "lx16"
+      ],
+      "note": "Torque Vectoring Differential (TVD)"
+     },
+     "what": "2017 added Linear Adaptive Variable Suspension; the V8 output stayed the same.",
+     "what_src": [
+      "lx17"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "2UR-GSE": {
+   "name": "Lexus 2UR-GSE",
+   "what": "5.0-liter V-8, naturally aspirated",
+   "study": "toyota-2ur-gse",
+   "page": "/engines/toyota-2ur-gse/",
+   "yt": [
+    "scy",
+    "toyota-2ur-gse"
+   ],
+   "facts": [
+    [
+     "Output",
+     "467 hp / 389 lb-ft in the GS F",
+     [
+      "lc15",
+      "lx16"
+     ]
+    ],
+    [
+     "Redline",
+     "7,300 rpm",
+     [
+      "k19"
+     ]
+    ],
+    [
+     "Valvetrain",
+     "Titanium intake and exhaust valves, forged connecting rods",
+     [
+      "k19",
+      "l15"
+     ]
+    ],
+    [
+     "Fuel",
+     "Direct plus port injection (D-4S), 12.3:1 compression",
+     [
+      "s15",
+      "k19"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "High-pressure fuel pump recall",
+     "kind": "Recall",
+     "rx": "high.?pressure (fuel )?pump|fuel leak|(smell|odor) of (gas|fuel)|(gas|fuel) (smell|odor)",
+     "x": "On some 2016–2018 GS Fs (and 2015–2018 RC Fs, 2018 LC 500s), a damper in one of the two high-pressure fuel pumps could crack the pump cover and leak fuel.",
+     "fix": "Dealer replaces the high-pressure fuel pumps for free (NHTSA 18V-107).",
+     "src": [
+      "r18"
+     ]
+    },
+    {
+     "t": "In-tank fuel pump recall",
+     "kind": "Recall",
+     "rx": "low.?pressure (fuel )?pump|fuel pump|stall(ed|s|ing)? (while|when) driving|engine (shut|cut) off|limp mode",
+     "x": "NHTSA recall 26V-222 covers 2015–2022 Lexus RC, 2016–2020 GS and 2022 IS vehicles: the low-pressure fuel pump in the tank may fail, which can stall the engine.",
+     "fix": "Dealer replaces the fuel pump for free (NHTSA 26V-222). Check your VIN at nhtsa.gov/recalls.",
+     "src": [
+      "r26"
+     ]
+    }
+   ]
+  }
+ },
+ "compare": [
+  {
+   "slug": "amg-e63",
+   "name": "Mercedes-AMG E63"
+  },
+  {
+   "slug": "cts-v",
+   "name": "Cadillac CTS-V"
+  },
+  {
+   "slug": "lexus-rc-f",
+   "name": "Lexus RC F"
+  },
+  {
+   "slug": "lexus-is-f",
+   "name": "Lexus IS F"
+  }
+ ],
+ "sources": {
+  "lx16": {
+   "t": "Lexus USA: 2016 Lexus GS F performance sedan offers a dynamic ride, luxurious comfort for five",
+   "u": "https://pressroom.lexus.com/2016-lexus-gs-f-debut/",
+   "k": "Lexus"
+  },
+  "lc15": {
+   "t": "Lexus Canada: The 2016 Lexus GS F, fast, fun and form at its finest (Oct 2015)",
+   "u": "https://media.lexus.ca/releases/the-2016-lexus-gs-f:-fast-fun-and-form-at-its-finest",
+   "k": "Lexus"
+  },
+  "lx17": {
+   "t": "Lexus USA: 2017 Lexus GS F rips around track in pure Lexus luxury",
+   "u": "https://pressroom.lexus.com/?p=54077",
+   "k": "Lexus"
+  },
+  "l15": {
+   "t": "Lexus USA: The F strikes again, Lexus unleashes the 2015 RC F (Sep 2014), the same 2UR-GSE V8",
+   "u": "https://pressroom.lexus.com/releases/2015+lexus+rc+f+product+news.htm",
+   "k": "Lexus"
+  },
+  "s15": {
+   "t": "Lexus USA: 2015 RC F product information (PDF), the same 2UR-GSE V8",
+   "u": "https://s3.amazonaws.com/toyota-cms-media/toyota-pdfs/2015_RC_F_Product_Information.pdf",
+   "k": "Lexus"
+  },
+  "k19": {
+   "t": "Lexus USA: 2019 RC F press kit (PDF), the same 2UR-GSE V8",
+   "u": "https://lexus-cms-media.s3.us-east-2.amazonaws.com/wp-content/uploads/2019/06/2019lexusrcfpresskit.pdf",
+   "k": "Lexus"
+  },
+  "z60": {
+   "t": "0-60specs.com: Lexus GS F 0-60 runs by magazine (Car and Driver, MotorTrend, MotorWeek)",
+   "u": "https://www.0-60specs.com/index.php/lexus/gs-f-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "r18": {
+   "t": "NHTSA recall 18V-107: 2UR-GSE high-pressure fuel pumps, 2016-2018 GS F, 2018 LC 500, 2015-2018 RC F (Feb 2018)",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=18V107",
+   "k": "Recall"
+  },
+  "r26": {
+   "t": "NHTSA recall 26V-222: low-pressure fuel pump, 2015-2022 Lexus RC, 2016-2020 GS, 2022 IS (Apr 2026)",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=26V222",
+   "k": "Recall"
+  },
+  "wgs": {
+   "t": "Wikipedia: Lexus GS",
+   "u": "https://en.wikipedia.org/wiki/Lexus_GS",
+   "k": "Wikipedia (fallback, model years only)"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-lexus-gs-f",
+ "img": "/assets/ai-perf/lexus-gs-f.webp?v=2"
+}

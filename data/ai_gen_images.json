@@ -2852,5 +2852,14 @@
 "dark blue",
 "5th generation (XF50)"
 ]
+],
+"acura-rsx": [
+[
+2002,
+2006,
+"/assets/ai-models/acura-rsx.webp?v=1",
+"silver",
+"1st generation (DC5)"
+]
 ]
 }

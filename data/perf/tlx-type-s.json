@@ -1,0 +1,184 @@
+{
+ "slug": "tlx-type-s",
+ "name": "Acura TLX Type S",
+ "short": "TLX Type S",
+ "make": "Acura",
+ "page": "/cars/tlx-type-s/",
+ "parent": "/cars/acura-tlx/",
+ "focus": "tlx2",
+ "star": "tlxs",
+ "h1": "Acura TLX Type S: performance, engine and what owners say",
+ "nhtsa": {
+  "make": "ACURA",
+  "models": [
+   "TLX TYPE S"
+  ],
+  "note": "NHTSA lists the Type S as its own model, but some owners (and most 2024–2025 complaints so far) file it under TLX, so these counts can run low.",
+  "from": 2021
+ },
+ "topics_extra": {
+  "Engine stall / power loss": "stall(s|ed|ing)?|loss of power|reduced power|limp mode",
+  "Transmission": "10.?speed|transmission|shift(s|ing)? (hard|rough|harsh)|jerk",
+  "Infotainment / touchpad": "touch ?pad|true touchpad|infotainment|screen (freez|black)|carplay"
+ },
+ "gens": [
+  {
+   "id": "tlx2",
+   "code": "2nd-gen",
+   "years": "2021–2025",
+   "y0": 2021,
+   "y1": 2025,
+   "engine": "J30AC",
+   "body": "Sedan",
+   "tag": "355 hp turbo V6, 10-speed automatic and torque-vectoring SH-AWD.",
+   "variants": [
+    {
+     "id": "tlxs",
+     "name": "TLX Type S",
+     "years": "2021–2025",
+     "star": true,
+     "hp": {
+      "v": 355,
+      "src": [
+       "a21s"
+      ],
+      "note": "at 5,500 rpm"
+     },
+     "tq": {
+      "v": 354,
+      "src": [
+       "a21s"
+      ],
+      "note": "lb-ft at 1,400–5,000 rpm"
+     },
+     "z60": {
+      "v": 4.9,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "10-speed automatic, SH-AWD",
+      "src": [
+       "a21s"
+      ],
+      "note": "torque-vectoring all-wheel drive"
+     },
+     "weight": {
+      "v": "4,200–4,221 lb",
+      "src": [
+       "a21s"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$52,300",
+      "src": [
+       "a21p"
+      ],
+      "note": "2021, plus $1,025 destination; $53,100 with the Performance Wheel & Tire package"
+     },
+     "what": "First TLX Type S; Acura brought the Type S name back for 2021 after 13 years.",
+     "what_src": [
+      "a21k"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "J30AC": {
+   "name": "Acura J30AC",
+   "what": "3.0-liter V6, turbo",
+   "study": "honda-j30ac",
+   "page": "/engines/honda-j30ac/",
+   "yt": [
+    "scy",
+    "honda-j30ac"
+   ],
+   "facts": [
+    [
+     "Output",
+     "355 hp at 5,500 rpm, 354 lb-ft at 1,400–5,000 rpm",
+     [
+      "a21s"
+     ]
+    ],
+    [
+     "Build",
+     "Aluminum block, DOHC 24 valves, direct injection, one twin-scroll turbo",
+     [
+      "a21s"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Fuel injection software recall",
+     "kind": "Recall",
+     "rx": "stall(s|ed|ing)?|loss of (motive )?power|reduced power|limp mode",
+     "x": "On 2021–2025 TLX Type S (and 2022–2025 MDX Type S, 2023–2025 Pilot), a software error in the fuel injection computer may stall the engine or cut power.",
+     "fix": "Dealer reprograms the fuel injection computer (FI-ECU) for free (NHTSA 25V-031).",
+     "src": [
+      "r25"
+     ]
+    }
+   ]
+  }
+ },
+ "compare": [
+  {
+   "slug": "kia-stinger-gt",
+   "name": "Kia Stinger GT"
+  },
+  {
+   "slug": "genesis-g70-33t",
+   "name": "Genesis G70 3.3T"
+  },
+  {
+   "slug": "bmw-m340i",
+   "name": "BMW M340i"
+  },
+  {
+   "slug": "lexus-is-500",
+   "name": "Lexus IS 500"
+  }
+ ],
+ "sources": {
+  "a21s": {
+   "t": "Acura: 2021 TLX specifications & features (May 2021)",
+   "u": "https://acuranews.com/en-US/releases/release-53541be6030b25a47a2899aba1119170-2021-tlx-specifications-features-5202021",
+   "k": "Acura"
+  },
+  "a21p": {
+   "t": "Acura: Highly anticipated 2021 Acura TLX Type S to arrive at dealerships mid-June (pricing)",
+   "u": "https://acuranews.com/en-US/releases/highly-anticipated-2021-acura-tlx-type-s-to-arrive-at-dealerships-mid-june",
+   "k": "Acura"
+  },
+  "a21k": {
+   "t": "Acura: 2021 TLX Type S kicks off Acura’s Year of Type S",
+   "u": "https://acuranews.com/en-US/releases/2021-tlx-type-s-kicks-off-acuras-year-of-type-s",
+   "k": "Acura"
+  },
+  "z60": {
+   "t": "0-60specs.com: Acura TLX Type S 0-60 runs by magazine (Car and Driver, MotorTrend, MotorWeek)",
+   "u": "https://www.0-60specs.com/acura/tlx-type-s-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "r25": {
+   "t": "NHTSA recall 25V-031: FI-ECU software, 2021-2025 TLX Type S, 2022-2025 MDX Type S, 2023-2025 Pilot (Jan 2025)",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=25V031",
+   "k": "Recall"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-tlx-type-s",
+ "img": "/assets/ai-perf/tlx-type-s.webp?v=2"
+}

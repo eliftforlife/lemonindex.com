@@ -1246,5 +1246,11 @@
 "name": "Land Rover Defender",
 "make": "Land Rover",
 "year": 2022
+},
+{
+"slug": "acura-rsx",
+"name": "Acura RSX",
+"make": "Acura",
+"year": 2005
 }
 ]

@@ -1,0 +1,600 @@
+{
+ "built": "2026-11-17",
+ "nhtsa": {
+  "by_year": {
+   "2016": 5,
+   "2017": 1,
+   "2018": 3,
+   "2019": 1
+  },
+  "gens": {
+   "url10": {
+    "n": 10,
+    "issues": {
+     "High-pressure fuel pump recall": {
+      "n": 0,
+      "ex": []
+     },
+     "In-tank fuel pump recall": {
+      "n": 1,
+      "ex": [
+       "11734307"
+      ]
+     }
+    },
+    "parts": [
+     [
+      "Unknown or other",
+      4
+     ],
+     [
+      "Steering",
+      3
+     ],
+     [
+      "Visibility",
+      1
+     ],
+     [
+      "Lane departure",
+      1
+     ],
+     [
+      "Structure",
+      1
+     ],
+     [
+      "Fuel/propulsion system",
+      1
+     ]
+    ]
+   }
+  },
+  "parts": [
+   [
+    "Unknown or other",
+    4
+   ],
+   [
+    "Steering",
+    3
+   ],
+   [
+    "Visibility",
+    1
+   ],
+   [
+    "Lane departure",
+    1
+   ],
+   [
+    "Structure",
+    1
+   ],
+   [
+    "Fuel/propulsion system",
+    1
+   ]
+  ]
+ },
+ "recalls": {
+  "2016": [
+   {
+    "id": "18V107000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+    "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2016-2018 Lexus GS F, 2018 LC500, and 2015-2018 Lexus RC F vehicles, equipped with 5.0L V8 2UR-GSE engines with two high pressure fuel pumps.  Specific operating conditions may result in damage to the pulsation damper in one of the high pressure fuel pumps, possibly causing a fatigue crack in the fuel pump cover."
+   }
+  ],
+  "2017": [
+   {
+    "id": "18V107000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+    "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2016-2018 Lexus GS F, 2018 LC500, and 2015-2018 Lexus RC F vehicles, equipped with 5.0L V8 2UR-GSE engines with two high pressure fuel pumps.  Specific operating conditions may result in damage to the pulsation damper in one of the high pressure fuel pumps, possibly causing a fatigue crack in the fuel pump cover."
+   }
+  ],
+  "2018": [
+   {
+    "id": "18V107000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+    "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2016-2018 Lexus GS F, 2018 LC500, and 2015-2018 Lexus RC F vehicles, equipped with 5.0L V8 2UR-GSE engines with two high pressure fuel pumps.  Specific operating conditions may result in damage to the pulsation damper in one of the high pressure fuel pumps, possibly causing a fatigue crack in the fuel pump cover."
+   }
+  ],
+  "2019": [],
+  "2020": []
+ },
+ "yt": {
+  "car-lexus-gs-f": null,
+  "toyota-2ur-gse": {
+   "videos": 189,
+   "praise": [
+    [
+     "Looks",
+     39
+    ],
+    [
+     "Everyday comfort",
+     26
+    ],
+    [
+     "Power and acceleration",
+     26
+    ],
+    [
+     "Handling and steering",
+     22
+    ]
+   ],
+   "trouble": [
+    [
+     "Infotainment / touchpad",
+     8
+    ]
+   ],
+   "top": [
+    {
+     "id": "giIP0XdT7SA",
+     "title": "Here's Why the 2018 Lexus LC500 Costs $100,000",
+     "views": 6117689,
+     "ch": "Doug DeMuro"
+    },
+    {
+     "id": "5f_19BCNpx0",
+     "title": "2022 Lexus IS 500 Review // Old School Cool",
+     "views": 2756239,
+     "ch": "Throttle House"
+    },
+    {
+     "id": "POwlxj9cBEo",
+     "title": "2021 Lexus LC500 Review // A Ridiculously Underrated $100,000 Masterclass",
+     "views": 2684810,
+     "ch": "Throttle House"
+    }
+   ]
+  }
+ },
+ "scores": {
+  "toyota-2ur-gse": {
+   "years": {
+    "2008": {
+     "score": 61,
+     "weight": 6.0,
+     "videos": 30,
+     "named": 3,
+     "top": [
+      {
+       "id": "1qF6OPHDB14",
+       "title": "439.500 KM Old Lexus IS F STILL GOT IT! / Nürburgring Drive",
+       "views": 1038351
+      },
+      {
+       "id": "8qF_5uNAjPM",
+       "title": "SHOCKING the Owner with His Lexus IS F! // Nürburgring",
+       "views": 610686
+      },
+      {
+       "id": "RbH-calvsVQ",
+       "title": "(USE20) LEXUS IS F フル加速 | V8エンジン 2UR-GSEの咆哮【エンジン始動 & 巡航回転数】",
+       "views": 567883
+      }
+     ]
+    },
+    "2009": {
+     "score": 54,
+     "weight": 3.5,
+     "videos": 27,
+     "named": 0,
+     "top": [
+      {
+       "id": "1qF6OPHDB14",
+       "title": "439.500 KM Old Lexus IS F STILL GOT IT! / Nürburgring Drive",
+       "views": 1038351
+      },
+      {
+       "id": "8qF_5uNAjPM",
+       "title": "SHOCKING the Owner with His Lexus IS F! // Nürburgring",
+       "views": 610686
+      },
+      {
+       "id": "RbH-calvsVQ",
+       "title": "(USE20) LEXUS IS F フル加速 | V8エンジン 2UR-GSEの咆哮【エンジン始動 & 巡航回転数】",
+       "views": 567883
+      }
+     ]
+    },
+    "2010": {
+     "score": 52,
+     "weight": 4.5,
+     "videos": 28,
+     "named": 1,
+     "top": [
+      {
+       "id": "1qF6OPHDB14",
+       "title": "439.500 KM Old Lexus IS F STILL GOT IT! / Nürburgring Drive",
+       "views": 1038351
+      },
+      {
+       "id": "8qF_5uNAjPM",
+       "title": "SHOCKING the Owner with His Lexus IS F! // Nürburgring",
+       "views": 610686
+      },
+      {
+       "id": "RbH-calvsVQ",
+       "title": "(USE20) LEXUS IS F フル加速 | V8エンジン 2UR-GSEの咆哮【エンジン始動 & 巡航回転数】",
+       "views": 567883
+      }
+     ]
+    },
+    "2011": {
+     "score": 57,
+     "weight": 4.5,
+     "videos": 28,
+     "named": 1,
+     "top": [
+      {
+       "id": "1qF6OPHDB14",
+       "title": "439.500 KM Old Lexus IS F STILL GOT IT! / Nürburgring Drive",
+       "views": 1038351
+      },
+      {
+       "id": "8qF_5uNAjPM",
+       "title": "SHOCKING the Owner with His Lexus IS F! // Nürburgring",
+       "views": 610686
+      },
+      {
+       "id": "RbH-calvsVQ",
+       "title": "(USE20) LEXUS IS F フル加速 | V8エンジン 2UR-GSEの咆哮【エンジン始動 & 巡航回転数】",
+       "views": 567883
+      }
+     ]
+    },
+    "2012": {
+     "score": 54,
+     "weight": 3.5,
+     "videos": 27,
+     "named": 0,
+     "top": [
+      {
+       "id": "1qF6OPHDB14",
+       "title": "439.500 KM Old Lexus IS F STILL GOT IT! / Nürburgring Drive",
+       "views": 1038351
+      },
+      {
+       "id": "8qF_5uNAjPM",
+       "title": "SHOCKING the Owner with His Lexus IS F! // Nürburgring",
+       "views": 610686
+      },
+      {
+       "id": "RbH-calvsVQ",
+       "title": "(USE20) LEXUS IS F フル加速 | V8エンジン 2UR-GSEの咆哮【エンジン始動 & 巡航回転数】",
+       "views": 567883
+      }
+     ]
+    },
+    "2013": {
+     "score": 52,
+     "weight": 4.5,
+     "videos": 28,
+     "named": 1,
+     "top": [
+      {
+       "id": "1qF6OPHDB14",
+       "title": "439.500 KM Old Lexus IS F STILL GOT IT! / Nürburgring Drive",
+       "views": 1038351
+      },
+      {
+       "id": "8qF_5uNAjPM",
+       "title": "SHOCKING the Owner with His Lexus IS F! // Nürburgring",
+       "views": 610686
+      },
+      {
+       "id": "RbH-calvsVQ",
+       "title": "(USE20) LEXUS IS F フル加速 | V8エンジン 2UR-GSEの咆哮【エンジン始動 & 巡航回転数】",
+       "views": 567883
+      }
+     ]
+    },
+    "2014": {
+     "score": 54,
+     "weight": 3.5,
+     "videos": 27,
+     "named": 0,
+     "top": [
+      {
+       "id": "1qF6OPHDB14",
+       "title": "439.500 KM Old Lexus IS F STILL GOT IT! / Nürburgring Drive",
+       "views": 1038351
+      },
+      {
+       "id": "8qF_5uNAjPM",
+       "title": "SHOCKING the Owner with His Lexus IS F! // Nürburgring",
+       "views": 610686
+      },
+      {
+       "id": "RbH-calvsVQ",
+       "title": "(USE20) LEXUS IS F フル加速 | V8エンジン 2UR-GSEの咆哮【エンジン始動 & 巡航回転数】",
+       "views": 567883
+      }
+     ]
+    },
+    "2015": {
+     "score": null,
+     "weight": 1.5,
+     "videos": 18,
+     "named": 0,
+     "top": [
+      {
+       "id": "99j4RkO7iC0",
+       "title": "INSANE looking Lexus RCF! Fully murdered out!",
+       "views": 2128357
+      },
+      {
+       "id": "RXJm4DcbuXg",
+       "title": "Chris Harris on Cars | Lexus RCF Road & Track Test",
+       "views": 579385
+      },
+      {
+       "id": "RbH-calvsVQ",
+       "title": "(USE20) LEXUS IS F フル加速 | V8エンジン 2UR-GSEの咆哮【エンジン始動 & 巡航回転数】",
+       "views": 567883
+      }
+     ]
+    },
+    "2016": {
+     "score": 65,
+     "weight": 11.5,
+     "videos": 40,
+     "named": 8,
+     "top": [
+      {
+       "id": "99j4RkO7iC0",
+       "title": "INSANE looking Lexus RCF! Fully murdered out!",
+       "views": 2128357
+      },
+      {
+       "id": "sIHQfqwLYys",
+       "title": "Lexus GS F vs BMW M5 | Chris Harris Drives | Top Gear",
+       "views": 1587647
+      },
+      {
+       "id": "bbuQ_xrUZfY",
+       "title": "The Lexus GS F is a Reliable V8 Burnout Machine",
+       "views": 758140
+      }
+     ]
+    },
+    "2017": {
+     "score": 61,
+     "weight": 9.5,
+     "videos": 38,
+     "named": 6,
+     "top": [
+      {
+       "id": "99j4RkO7iC0",
+       "title": "INSANE looking Lexus RCF! Fully murdered out!",
+       "views": 2128357
+      },
+      {
+       "id": "sIHQfqwLYys",
+       "title": "Lexus GS F vs BMW M5 | Chris Harris Drives | Top Gear",
+       "views": 1587647
+      },
+      {
+       "id": "bbuQ_xrUZfY",
+       "title": "The Lexus GS F is a Reliable V8 Burnout Machine",
+       "views": 758140
+      }
+     ]
+    },
+    "2018": {
+     "score": 61,
+     "weight": 18.0,
+     "videos": 74,
+     "named": 11,
+     "top": [
+      {
+       "id": "giIP0XdT7SA",
+       "title": "Here's Why the 2018 Lexus LC500 Costs $100,000",
+       "views": 6117689
+      },
+      {
+       "id": "99j4RkO7iC0",
+       "title": "INSANE looking Lexus RCF! Fully murdered out!",
+       "views": 2128357
+      },
+      {
+       "id": "sIHQfqwLYys",
+       "title": "Lexus GS F vs BMW M5 | Chris Harris Drives | Top Gear",
+       "views": 1587647
+      }
+     ]
+    },
+    "2019": {
+     "score": 62,
+     "weight": 16.0,
+     "videos": 72,
+     "named": 9,
+     "top": [
+      {
+       "id": "99j4RkO7iC0",
+       "title": "INSANE looking Lexus RCF! Fully murdered out!",
+       "views": 2128357
+      },
+      {
+       "id": "sIHQfqwLYys",
+       "title": "Lexus GS F vs BMW M5 | Chris Harris Drives | Top Gear",
+       "views": 1587647
+      },
+      {
+       "id": "pC85hPGpqIw",
+       "title": "Five Reasons You'll Regret Not Buying The Lexus LC500",
+       "views": 787050
+      }
+     ]
+    },
+    "2020": {
+     "score": 63,
+     "weight": 16.0,
+     "videos": 72,
+     "named": 9,
+     "top": [
+      {
+       "id": "99j4RkO7iC0",
+       "title": "INSANE looking Lexus RCF! Fully murdered out!",
+       "views": 2128357
+      },
+      {
+       "id": "sIHQfqwLYys",
+       "title": "Lexus GS F vs BMW M5 | Chris Harris Drives | Top Gear",
+       "views": 1587647
+      },
+      {
+       "id": "vh_Z7zpLjhA",
+       "title": "The 2020 Lexus GS-F Is a Bad New Car, But a Great Used One",
+       "views": 1414282
+      }
+     ]
+    },
+    "2021": {
+     "score": 65,
+     "weight": 12.0,
+     "videos": 56,
+     "named": 7,
+     "top": [
+      {
+       "id": "POwlxj9cBEo",
+       "title": "2021 Lexus LC500 Review // A Ridiculously Underrated $100,000 Masterclass",
+       "views": 2684810
+      },
+      {
+       "id": "99j4RkO7iC0",
+       "title": "INSANE looking Lexus RCF! Fully murdered out!",
+       "views": 2128357
+      },
+      {
+       "id": "5xaZ8ah8OF0",
+       "title": "Lexus LC500 Convertible 2021 review - see why it’s worth £90,000!",
+       "views": 1865837
+      }
+     ]
+    },
+    "2022": {
+     "score": 62,
+     "weight": 15.8,
+     "videos": 68,
+     "named": 9,
+     "top": [
+      {
+       "id": "5f_19BCNpx0",
+       "title": "2022 Lexus IS 500 Review // Old School Cool",
+       "views": 2756239
+      },
+      {
+       "id": "99j4RkO7iC0",
+       "title": "INSANE looking Lexus RCF! Fully murdered out!",
+       "views": 2128357
+      },
+      {
+       "id": "O_wPT592t2c",
+       "title": "The 2022 Lexus IS500 Is a V8 Old-School Sport Sedan",
+       "views": 1299691
+      }
+     ]
+    },
+    "2023": {
+     "score": 65,
+     "weight": 15.3,
+     "videos": 67,
+     "named": 8,
+     "top": [
+      {
+       "id": "99j4RkO7iC0",
+       "title": "INSANE looking Lexus RCF! Fully murdered out!",
+       "views": 2128357
+      },
+      {
+       "id": "pC85hPGpqIw",
+       "title": "Five Reasons You'll Regret Not Buying The Lexus LC500",
+       "views": 787050
+      },
+      {
+       "id": "ge_I1upPPwY",
+       "title": "We Rebuilt A Wrecked Lexus LC500 Into A $100,000 Show Car",
+       "views": 754949
+      }
+     ]
+    },
+    "2024": {
+     "score": 63,
+     "weight": 20.3,
+     "videos": 72,
+     "named": 13,
+     "top": [
+      {
+       "id": "99j4RkO7iC0",
+       "title": "INSANE looking Lexus RCF! Fully murdered out!",
+       "views": 2128357
+      },
+      {
+       "id": "2HPszF7iwYw",
+       "title": "2024 Lexus LC500 Quick Review",
+       "views": 1123857
+      },
+      {
+       "id": "wA3AmChbDU0",
+       "title": "Here's Why the 2024 Lexus LC 500 Is Absolutely a Future Classic",
+       "views": 977060
+      }
+     ]
+    },
+    "2025": {
+     "score": 61,
+     "weight": 14.3,
+     "videos": 66,
+     "named": 7,
+     "top": [
+      {
+       "id": "99j4RkO7iC0",
+       "title": "INSANE looking Lexus RCF! Fully murdered out!",
+       "views": 2128357
+      },
+      {
+       "id": "a7ryZcitWOc",
+       "title": "2025 Lexus IS 500 vs BMW M340i // Which is the Best Luxury Sports Sedan for $60K?",
+       "views": 1219033
+      },
+      {
+       "id": "uSLaSEqsuwc",
+       "title": "2025 Lexus IS 500 Review // The V8 Time Capsule",
+       "views": 988270
+      }
+     ]
+    },
+    "2026": {
+     "score": 60,
+     "weight": 6.6,
+     "videos": 37,
+     "named": 3,
+     "top": [
+      {
+       "id": "zJWVu4i75sg",
+       "title": "2026 Lexus LC500 vs Porsche 911 // Thunder Meets Lightning",
+       "views": 1461413
+      },
+      {
+       "id": "pC85hPGpqIw",
+       "title": "Five Reasons You'll Regret Not Buying The Lexus LC500",
+       "views": 787050
+      },
+      {
+       "id": "ge_I1upPPwY",
+       "title": "We Rebuilt A Wrecked Lexus LC500 Into A $100,000 Show Car",
+       "views": 754949
+      }
+     ]
+    }
+   },
+   "videos": 187,
+   "pulled": 200
+  }
+ }
+}

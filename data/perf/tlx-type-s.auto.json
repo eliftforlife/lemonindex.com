@@ -1,0 +1,313 @@
+{
+ "built": "2026-11-17",
+ "nhtsa": {
+  "by_year": {
+   "2021": 32,
+   "2022": 9,
+   "2023": 8
+  },
+  "gens": {
+   "tlx2": {
+    "n": 49,
+    "issues": {
+     "Fuel injection software recall": {
+      "n": 5,
+      "ex": [
+       "11662805",
+       "11664265"
+      ]
+     }
+    },
+    "parts": [
+     [
+      "Power train",
+      44
+     ],
+     [
+      "Engine",
+      4
+     ],
+     [
+      "Unknown or other",
+      2
+     ],
+     [
+      "Electrical system",
+      2
+     ],
+     [
+      "Wheels",
+      1
+     ],
+     [
+      "Suspension",
+      1
+     ]
+    ]
+   }
+  },
+  "parts": [
+   [
+    "Power train",
+    44
+   ],
+   [
+    "Engine",
+    4
+   ],
+   [
+    "Unknown or other",
+    2
+   ],
+   [
+    "Electrical system",
+    2
+   ],
+   [
+    "Wheels",
+    1
+   ],
+   [
+    "Suspension",
+    1
+   ]
+  ]
+ },
+ "recalls": {
+  "2021": [
+   {
+    "id": "25V031000",
+    "part": "FUEL SYSTEM, GASOLINE:FUEL INJECTION SYSTEM",
+    "summary": "Honda (American Honda Motor Co.) is recalling certain 2022-2025 Acura MDX Type-S, 2023-2025 Honda Pilot, and 2021-2025 Acura TLX Type-S vehicles.  A software error in the fuel injection electronic control unit (FI-ECU) may cause an engine stall or a loss of power."
+   }
+  ],
+  "2022": [
+   {
+    "id": "25V031000",
+    "part": "FUEL SYSTEM, GASOLINE:FUEL INJECTION SYSTEM",
+    "summary": "Honda (American Honda Motor Co.) is recalling certain 2022-2025 Acura MDX Type-S, 2023-2025 Honda Pilot, and 2021-2025 Acura TLX Type-S vehicles.  A software error in the fuel injection electronic control unit (FI-ECU) may cause an engine stall or a loss of power."
+   }
+  ],
+  "2023": [
+   {
+    "id": "25V031000",
+    "part": "FUEL SYSTEM, GASOLINE:FUEL INJECTION SYSTEM",
+    "summary": "Honda (American Honda Motor Co.) is recalling certain 2022-2025 Acura MDX Type-S, 2023-2025 Honda Pilot, and 2021-2025 Acura TLX Type-S vehicles.  A software error in the fuel injection electronic control unit (FI-ECU) may cause an engine stall or a loss of power."
+   }
+  ],
+  "2024": [
+   {
+    "id": "25V031000",
+    "part": "FUEL SYSTEM, GASOLINE:FUEL INJECTION SYSTEM",
+    "summary": "Honda (American Honda Motor Co.) is recalling certain 2022-2025 Acura MDX Type-S, 2023-2025 Honda Pilot, and 2021-2025 Acura TLX Type-S vehicles.  A software error in the fuel injection electronic control unit (FI-ECU) may cause an engine stall or a loss of power."
+   }
+  ],
+  "2025": [
+   {
+    "id": "25V031000",
+    "part": "FUEL SYSTEM, GASOLINE:FUEL INJECTION SYSTEM",
+    "summary": "Honda (American Honda Motor Co.) is recalling certain 2022-2025 Acura MDX Type-S, 2023-2025 Honda Pilot, and 2021-2025 Acura TLX Type-S vehicles.  A software error in the fuel injection electronic control unit (FI-ECU) may cause an engine stall or a loss of power."
+   }
+  ]
+ },
+ "yt": {
+  "car-tlx-type-s": null,
+  "honda-j30ac": {
+   "videos": 194,
+   "praise": [
+    [
+     "Looks",
+     29
+    ],
+    [
+     "Handling and steering",
+     25
+    ],
+    [
+     "Power and acceleration",
+     22
+    ],
+    [
+     "Everyday comfort",
+     19
+    ]
+   ],
+   "trouble": [
+    [
+     "Transmission",
+     10
+    ],
+    [
+     "Infotainment / touchpad",
+     9
+    ]
+   ],
+   "top": [
+    {
+     "id": "DB6CIi0ZJ70",
+     "title": "The 2021 Acura TLX Type S Is a Shockingly Sporty Sedan from Acura",
+     "views": 1587553,
+     "ch": "Doug DeMuro"
+    },
+    {
+     "id": "FmOzv32o8Tk",
+     "title": "2021 Acura TLX Type S Review // Priced To Fight",
+     "views": 1063792,
+     "ch": "Throttle House"
+    },
+    {
+     "id": "XWpDDm0WhGE",
+     "title": "2024 Acura TLX Type S Review // Refreshed and REJUDGED",
+     "views": 926518,
+     "ch": "Throttle House"
+    }
+   ]
+  }
+ },
+ "scores": {
+  "honda-j30ac": {
+   "years": {
+    "2021": {
+     "score": 60,
+     "weight": 34.7,
+     "videos": 65,
+     "named": 28,
+     "top": [
+      {
+       "id": "DB6CIi0ZJ70",
+       "title": "The 2021 Acura TLX Type S Is a Shockingly Sporty Sedan from Acura",
+       "views": 1587553
+      },
+      {
+       "id": "FmOzv32o8Tk",
+       "title": "2021 Acura TLX Type S Review // Priced To Fight",
+       "views": 1063792
+      },
+      {
+       "id": "-jphoGYq1tI",
+       "title": "2021 Acura TLX Type S - POV First Impressions",
+       "views": 428497
+      }
+     ]
+    },
+    "2022": {
+     "score": 59,
+     "weight": 25.7,
+     "videos": 72,
+     "named": 17,
+     "top": [
+      {
+       "id": "Vgx5y5k_Q9o",
+       "title": "2022 Acura TLX Type S | Back From the Dead",
+       "views": 606640
+      },
+      {
+       "id": "XRW6L-uHCS8",
+       "title": "The 2022 Acura MDX Type S Is the Sporty SUV You Weren't Expecting",
+       "views": 422178
+      },
+      {
+       "id": "FcfCz2995gk",
+       "title": "Should You Buy The Latest Acura MDX Type S? A Mechanic's Review",
+       "views": 321245
+      }
+     ]
+    },
+    "2023": {
+     "score": 56,
+     "weight": 29.7,
+     "videos": 77,
+     "named": 22,
+     "top": [
+      {
+       "id": "OHhpyX0qLe0",
+       "title": "DYNAMIC COMFY 3 ROW! 2023 Acura MDX Type S Review",
+       "views": 436796
+      },
+      {
+       "id": "FcfCz2995gk",
+       "title": "Should You Buy The Latest Acura MDX Type S? A Mechanic's Review",
+       "views": 321245
+      },
+      {
+       "id": "lHinUQtOt88",
+       "title": "Acura MDX Type S | Long Term Conclusion",
+       "views": 264940
+      }
+     ]
+    },
+    "2024": {
+     "score": 62,
+     "weight": 37.4,
+     "videos": 84,
+     "named": 29,
+     "top": [
+      {
+       "id": "XWpDDm0WhGE",
+       "title": "2024 Acura TLX Type S Review // Refreshed and REJUDGED",
+       "views": 926518
+      },
+      {
+       "id": "tVvny7bG8ws",
+       "title": "2024 Acura TLX Type S - POV Driving Impressions",
+       "views": 741377
+      },
+      {
+       "id": "9Z8UiyLhYpM",
+       "title": "2024 Acura TLX Type S Review - Criminally Underrated",
+       "views": 552481
+      }
+     ]
+    },
+    "2025": {
+     "score": 60,
+     "weight": 32.4,
+     "videos": 78,
+     "named": 23,
+     "top": [
+      {
+       "id": "IJCD6UlmN_s",
+       "title": "THEY FIXED IT! 2025 Acura MDX Type S Review",
+       "views": 369283
+      },
+      {
+       "id": "FcfCz2995gk",
+       "title": "Should You Buy The Latest Acura MDX Type S? A Mechanic's Review",
+       "views": 321245
+      },
+      {
+       "id": "QcwPb0KNfSs",
+       "title": "Absolute Grip Monster! // 2025 Acura TLX Type S Review",
+       "views": 282440
+      }
+     ]
+    },
+    "2026": {
+     "score": 62,
+     "weight": 31.0,
+     "videos": 47,
+     "named": 29,
+     "top": [
+      {
+       "id": "FcfCz2995gk",
+       "title": "Should You Buy The Latest Acura MDX Type S? A Mechanic's Review",
+       "views": 321245
+      },
+      {
+       "id": "lHinUQtOt88",
+       "title": "Acura MDX Type S | Long Term Conclusion",
+       "views": 264940
+      },
+      {
+       "id": "PulslPKGk88",
+       "title": "Acura MDX Type S | Best Thing They Make",
+       "views": 233999
+      }
+     ]
+    }
+   },
+   "videos": 191,
+   "pulled": 200
+  }
+ }
+}

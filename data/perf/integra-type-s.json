@@ -1,0 +1,171 @@
+{
+ "slug": "integra-type-s",
+ "name": "Acura Integra Type S",
+ "short": "Integra Type S",
+ "make": "Acura",
+ "page": "/cars/integra-type-s/",
+ "parent": "/cars/acura-integra/",
+ "focus": "int5",
+ "star": "ints",
+ "h1": "Acura Integra Type S: performance, engine and what owners say",
+ "nhtsa": {
+  "make": "ACURA",
+  "models": [
+   "INTEGRA TYPE S",
+   "INTEGRA"
+  ],
+  "note": "NHTSA’s complaint files list the Type S under Integra, so these counts include every 2024–2025 Integra, not just the Type S. Recalls are the Type S’s own.",
+  "from": 2024
+ },
+ "topics_extra": {
+  "Clutch / gearbox": "clutch|shifter|grind(s|ing)?|synchro",
+  "Overheating on track": "overheat(s|ed|ing)?|limp mode|coolant temp|oil temp",
+  "Infotainment / screen": "touch ?screen|infotainment|screen (freez|black)|carplay"
+ },
+ "gens": [
+  {
+   "id": "int5",
+   "code": "5th-gen",
+   "years": "2024–",
+   "y0": 2024,
+   "y1": 2025,
+   "engine": "K20C1",
+   "body": "Liftback",
+   "tag": "The Civic Type R engine at 320 hp, manual only, 2.8 inches wider than the regular Integra.",
+   "variants": [
+    {
+     "id": "ints",
+     "name": "Integra Type S",
+     "years": "2024–",
+     "star": true,
+     "hp": {
+      "v": 320,
+      "src": [
+       "a24k"
+      ],
+      "note": "at 6,500 rpm"
+     },
+     "tq": {
+      "v": 310,
+      "src": [
+       "a24k"
+      ],
+      "note": "lb-ft at 2,600–4,000 rpm"
+     },
+     "z60": {
+      "v": 5.1,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "6-speed manual, front-drive",
+      "src": [
+       "a24k"
+      ],
+      "note": "rev-matching, helical limited-slip differential"
+     },
+     "weight": {
+      "v": "3,219 lb",
+      "src": [
+       "a24k"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$50,800",
+      "src": [
+       "a24p"
+      ],
+      "note": "2024, plus $1,195 destination ($51,995 total)"
+     },
+     "what": "Brembo four-piston front calipers on 13.8-inch two-piece rotors, adaptive dampers, a wider track.",
+     "what_src": [
+      "a24k"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "K20C1": {
+   "name": "Honda K20C1",
+   "what": "2.0-liter inline-4, turbo",
+   "study": "",
+   "page": "",
+   "yt": [
+    "scy",
+    ""
+   ],
+   "facts": [
+    [
+     "Output",
+     "320 hp at 6,500 rpm, 310 lb-ft at 2,600–4,000 rpm",
+     [
+      "a24k"
+     ]
+    ],
+    [
+     "Redline",
+     "7,000 rpm",
+     [
+      "a24k"
+     ]
+    ],
+    [
+     "Built",
+     "Honda’s Anna, Ohio engine plant",
+     [
+      "a24k"
+     ]
+    ]
+   ],
+   "issues": []
+  }
+ },
+ "compare": [
+  {
+   "slug": "civic-type-r",
+   "name": "Honda Civic Type R"
+  },
+  {
+   "slug": "gr-corolla",
+   "name": "Toyota GR Corolla"
+  },
+  {
+   "slug": "golf-r",
+   "name": "Volkswagen Golf R"
+  },
+  {
+   "slug": "elantra-n",
+   "name": "Hyundai Elantra N"
+  }
+ ],
+ "sources": {
+  "a24k": {
+   "t": "Acura: 2024 Integra Type S press kit (Jun 2023)",
+   "u": "https://acuranews.com/en-US/releases/release-13f25e90cfe47cd58453f1f7100e339f-2024-integra-type-s-press-kit",
+   "k": "Acura"
+  },
+  "a24p": {
+   "t": "Acura: 2024 Acura Integra Type S pricing announced (May 2023)",
+   "u": "https://acuranews.com/en-US/releases/2024-acura-integra-type-s-pricing-announced-first-production-units-available-for-pre-order-may-11",
+   "k": "Acura"
+  },
+  "z60": {
+   "t": "0-60specs.com: Acura Integra Type S 0-60 runs by magazine (Car and Driver, MotorTrend, MotorWeek)",
+   "u": "https://www.0-60specs.com/acura/integra-type-s-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  }
+ },
+ "yt_study": "car-integra-type-s",
+ "img": "/assets/ai-perf/integra-type-s.webp?v=2"
+}

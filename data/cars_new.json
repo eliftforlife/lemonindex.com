@@ -963,29 +963,29 @@
 "name": "Lexus LS",
 "brand": "Lexus",
 "segment": "car",
-"years": "2005-2008",
-"sold": 81524,
-"n": 54,
-"per100k": 66,
-"expected": 69.279557637261,
-"li": 78,
-"serious": 24,
+"years": "2001-2008",
+"sold": 195062,
+"n": 92,
+"per100k": 47,
+"expected": 175.9165345639194,
+"li": 52,
+"serious": 27,
 "worst": "2008",
 "issues": [
 [
-"engine",
-19
-],
-[
-"transmission & drivetrain",
-17
-],
-[
 "speed control",
+14
+],
+[
+"tires",
 13
+],
+[
+"engine",
+12
 ]
 ],
-"sales_url": "https://www.goodcarbadcar.net/lexus-ls-sales-figures/",
+"sales_url": "https://en.wikipedia.org/wiki/Lexus_LS",
 "sales_kind": "calendar",
 "id": "lexus-ls"
 },
@@ -3868,5 +3868,35 @@
 "sales_url": "https://en.wikipedia.org/wiki/Buick_Lucerne",
 "sales_kind": "calendar",
 "id": "buick-lucerne"
+},
+{
+"name": "Acura RSX",
+"brand": "Acura",
+"segment": "car",
+"years": "2002-2005",
+"sold": 113559,
+"n": 94,
+"per100k": 83,
+"expected": 100.27045497628211,
+"li": 94,
+"serious": 26,
+"worst": "2005",
+"issues": [
+[
+"transmission & drivetrain",
+26
+],
+[
+"engine",
+20
+],
+[
+"airbags",
+17
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Honda_Integra_(fourth_generation)",
+"sales_kind": "calendar",
+"id": "acura-rsx"
 }
 ]

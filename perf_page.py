@@ -353,7 +353,7 @@ def build(slug, out='docs'):
         if scx and epage == eng.get('page'):
             n_car = ga.get('n') or 0; r_car = len({r['id'] for y in range(g['y0'], g['y1'] + 1) for r in (A.get('recalls') or {}).get(str(y), [])})
             if (scx['n'], scx['rec']) != (n_car, r_car):
-                mdl = E(((D.get('nhtsa') or {}).get('models') or [''])[0].title())
+                mdl = '&quot; or &quot;'.join(E(m_.title()) for m_ in ((D.get('nhtsa') or {}).get('models') or ['']))   # 11-17: every name counted
                 rcn = (f'<p class="pf-cap">Why the <a href="{E(epage)}">engine page</a> shows fewer: it counts only the {scx["n"]:,} owner complaint{"" if scx["n"] == 1 else "s"} and {scx["rec"]} recall{"" if scx["rec"] == 1 else "s"} '
                        f'for {E(g["years"])} that name this engine or a version that only had it. This page counts all {n_car:,} complaints and {r_car} recall campaigns NHTSA files under &quot;{mdl}&quot; for those years, other engines included.</p>')
         engine = (f'<section class="pf-sec"><h2>{ic("eng")} The engine: {E(eng["name"])}</h2><div class="pf-eng' + ('' if eimg else ' pf-noimg') + '">' + (f'<div class="pf-ei">{eimg}</div>' if eimg else '') + '<div class="pf-ef">'

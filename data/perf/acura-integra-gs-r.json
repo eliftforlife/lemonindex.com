@@ -4,6 +4,7 @@
  "short": "Integra",
  "make": "Acura",
  "page": "/jdm/acura-integra-gs-r/",
+ "parent": "/cars/acura-integra/",
  "jdm": true,
  "focus": "dc2",
  "star": "dc2-gsr",

@@ -507,7 +507,7 @@
 "https://en.wikipedia.org/wiki/Lincoln_MKZ"
 ],
 "lexus-ls": [
-"https://www.goodcarbadcar.net/lexus-ls-sales-figures/"
+"https://en.wikipedia.org/wiki/Lexus_LS"
 ],
 "mitsubishi-outlander": [
 "https://en.wikipedia.org/wiki/Mitsubishi_Outlander"
@@ -793,5 +793,8 @@
 ],
 "buick-lucerne": [
 "https://en.wikipedia.org/wiki/Buick_Lucerne"
+],
+"acura-rsx": [
+"https://en.wikipedia.org/wiki/Honda_Integra_(fourth_generation)"
 ]
 }
