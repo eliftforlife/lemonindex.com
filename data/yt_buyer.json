@@ -35051,5 +35051,108 @@
 }
 ]
 }
+],
+"lincoln-mkz": [
+{
+"sid": "lincoln-mkz-g1",
+"y0": 2007,
+"y1": 2012,
+"label": "2007–2012",
+"videos": 200,
+"praise": [
+[
+"Looks",
+6
+],
+[
+"Power",
+5
+],
+[
+"Reliability",
+4
+],
+[
+"Comfort and ride",
+4
+]
+],
+"trouble": [
+[
+"Coolant leaks / water pump / overheating",
+4
+],
+[
+"Electrical / wiring / TIPM",
+4
+]
+],
+"top": [
+{
+"id": "HWfi8GExpXI",
+"title": "Rough Ride on 2012 Lincoln MKZ. CAR WIZARD shows how to isolate problem. Also Ford 3.5L V6 warning!",
+"views": 209449,
+"ch": "Car Wizard"
+},
+{
+"id": "_sKFUMyB1GU",
+"title": "Car Tech 2010 Lincoln MKZ review",
+"views": 110507,
+"ch": "fullyOwned"
+},
+{
+"id": "SkaoUHxhgYc",
+"title": "2008 Lincoln MKZ Review - Kelley Blue Book",
+"views": 80859,
+"ch": "Kelley Blue Book"
+}
+]
+},
+{
+"sid": "lincoln-mkz-g2",
+"y0": 2013,
+"y1": 2020,
+"label": "2013–2020",
+"videos": 198,
+"praise": [
+[
+"Fun to drive",
+12
+],
+[
+"Looks",
+11
+],
+[
+"Comfort and ride",
+9
+],
+[
+"Power",
+8
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "4e-D95yr6jc",
+"title": "2016 Lincoln MKZ - Review and Road Test",
+"views": 308876,
+"ch": "Kelley Blue Book"
+},
+{
+"id": "-jwW6GZA3d4",
+"title": "2017 Lincoln MKZ 2.0T Start Up, Full Tour and Review",
+"views": 295363,
+"ch": "EliYourCarGuy"
+},
+{
+"id": "yoMdSeJYYwI",
+"title": "The New 2013 Lincoln MKZ-Start Up And In Depth Review-Long McArthur Ford-Salina KS-67401!!",
+"views": 270254,
+"ch": "J.R. Batchelor"
+}
+]
+}
 ]
 }

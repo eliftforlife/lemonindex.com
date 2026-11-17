@@ -69612,6 +69612,135 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
+   ],
+   "gen": "2013–2020 Lincoln MKZ",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 11524840,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 227497,
+     "n": 3,
+     "best": {
+      "id": "w2quEhyKdNM",
+      "title": "2013-2016 Lincoln MKZ Battery Draw Issues and Power Trunk Lid Inoperative: Quick Diagnostics Tips!",
+      "channel": "FordTechMakuloco",
+      "views": 114757
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 168704,
+     "n": 2,
+     "best": {
+      "id": "dPaB4TPGk9c",
+      "title": "Lincoln MKZ Cabin Air Filter Replacement ( 2013 2014 2015 2016 2017 2018 2019 2020 )",
+      "channel": "Undercar Experts",
+      "views": 108406
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 93934,
+     "n": 2,
+     "best": {
+      "id": "uCEUWPh2wXI",
+      "title": "2013-2018 Lincoln MKZ / Ford Fusion Rear Shock Replacement",
+      "channel": "Joel Dufkis",
+      "views": 85400
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 90177,
+     "n": 2,
+     "best": {
+      "id": "Ie4lvnkK6GY",
+      "title": "How to Put Lincoln MKC MKT MKZ Parking Brake in Maintenance Mode 2017 Others before brake change",
+      "channel": "Al Young Cuda",
+      "views": 72049
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 57171,
+     "n": 1,
+     "best": {
+      "id": "pFci48XCOs4",
+      "title": "Where is the Door Code For 2013, 2014, 2015, 2016 Lincoln MKZ Location",
+      "channel": "Brett's Reviews and Summit Auto 4K Reviews",
+      "views": 57171
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 29361,
+     "n": 1,
+     "best": {
+      "id": "7QdgX0KKdlM",
+      "title": "How to Replace 2017 Lincoln MKZ 2.0t Spark Plugs and Ignition coils",
+      "channel": "X",
+      "views": 29361
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 15176,
+     "n": 1,
+     "best": {
+      "id": "qioeP_72tx8",
+      "title": "2013 Lincoln MKZ Oil Life Reset",
+      "channel": "The G Automotive And More",
+      "views": 15176
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 11786,
+     "n": 1,
+     "best": {
+      "id": "ldKJKGkdef4",
+      "title": "2018 Lincoln MKZ Won't Start/ Car Won't Crank/ Just Clicks....Solved",
+      "channel": "Peter L",
+      "views": 11786
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "VmD1Vf0ecXM",
+     "title": "Common Problems with a Lincoln MKZ | 2013-2020",
+     "channel": "321verykind AUTOS",
+     "views": 190370
+    },
+    {
+     "id": "_uA7UFhGqgo",
+     "title": "Common Problems with a 2017-2020 Lincoln MKZ",
+     "channel": "321verykind AUTOS",
+     "views": 118896
+    },
+    {
+     "id": "xjUoqFtK9so",
+     "title": "The Most Reliable Engines on the Lincoln MKZ | 2013-2020",
+     "channel": "321verykind AUTOS",
+     "views": 28793
+    }
+   ],
+   "costs": null
   }
  ],
  "audi-a6": [
