@@ -70362,6 +70362,135 @@
    "costs": null
   }
  ],
+ "dodge-caliber": [
+  {
+   "years": [
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012
+   ],
+   "gen": "2007–2012 Dodge Caliber",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 10200317,
+   "topics": [
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 528739,
+     "n": 9,
+     "best": {
+      "id": "H2mca_9t5w8",
+      "title": "How to remove throttle body from 2010 Dodge Caliber sxt (easy)",
+      "channel": "Charlie do it all",
+      "views": 185255
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 292665,
+     "n": 4,
+     "best": {
+      "id": "iErhG4vsFTA",
+      "title": "Why My Car Won't start - 2007 Dodge Caliber",
+      "channel": "Billie Grant",
+      "views": 196978
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 203834,
+     "n": 8,
+     "best": {
+      "id": "vWwXwvww9ww",
+      "title": "How To Replace Cabin Air Filter 2007-12 Dodge Caliber",
+      "channel": "TRQ",
+      "views": 55665
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 186661,
+     "n": 2,
+     "best": {
+      "id": "wCyK3v8AMK8",
+      "title": "2008 dodge caliber lowr ball joint replacement.avi",
+      "channel": "ShawnCFarm",
+      "views": 115553
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 180190,
+     "n": 5,
+     "best": {
+      "id": "jprjfuE8gUM",
+      "title": "Dodge Caliber 2007 SXT 2.0L Automatic - Electrical Problem",
+      "channel": "Ghislain Thibeault",
+      "views": 58788
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 168252,
+     "n": 10,
+     "best": {
+      "id": "X1TbTHfyo2A",
+      "title": "Replacing starter motor on Dodge Caliber or Avenger 2007 and more",
+      "channel": "RB The Mechanic",
+      "views": 32654
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 139803,
+     "n": 2,
+     "best": {
+      "id": "Ls4hRcDpjNo",
+      "title": "CV Axle Shaft Replacement on Dodge Caliber 2007 - 2012",
+      "channel": "World Mechanics",
+      "views": 125055
+     }
+    },
+    {
+     "name": "Starter, alternator & belts",
+     "views": 135965,
+     "n": 2,
+     "best": {
+      "id": "riQTKED9bHg",
+      "title": "2012 DODGE CALIBER SERPENTINE BELT REPLACEMENT",
+      "channel": "Cecil's Page",
+      "views": 129822
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "GvhtB6feoJo",
+     "title": "Top 5 Problems Dodge Caliber Hatchback 1st Generation 2007-2012",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 417019
+    },
+    {
+     "id": "YA1YStcA-T0",
+     "title": "2010 Dodge Caliber SXT (CVT 2.0L) PROBLEMS",
+     "channel": "dctenterprises7",
+     "views": 117844
+    },
+    {
+     "id": "hTY14OFcXXk",
+     "title": "2010 dodge caliber headlight problems",
+     "channel": "justin Mullins",
+     "views": 29297
+    }
+   ],
+   "costs": null
+  }
+ ],
  "nissan-quest": [
   {
    "years": [

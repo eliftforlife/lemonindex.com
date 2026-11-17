@@ -35917,5 +35917,62 @@
 }
 ]
 }
+],
+"dodge-caliber": [
+{
+"sid": "dodge-caliber-g1",
+"y0": 2007,
+"y1": 2012,
+"label": "2007–2012",
+"videos": 198,
+"praise": [
+[
+"Space and practicality",
+5
+],
+[
+"Power",
+5
+],
+[
+"Looks",
+4
+],
+[
+"Fun to drive",
+3
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+5
+],
+[
+"CVT / transmission shudder",
+4
+]
+],
+"top": [
+{
+"id": "YtXrGOSDiZE",
+"title": "Review: 2007 Dodge Caliber",
+"views": 533310,
+"ch": "MyRide on Autobytel"
+},
+{
+"id": "USuFxzg5x_g",
+"title": "2007 Dodge Caliber: Regular Car Reviews",
+"views": 489675,
+"ch": "Regular Car Reviews"
+},
+{
+"id": "GvhtB6feoJo",
+"title": "Top 5 Problems Dodge Caliber Hatchback 1st Generation 2007-2012",
+"views": 417019,
+"ch": "1A Auto: Repair Tips & Secrets Only Mechanics Know"
+}
+]
+}
 ]
 }
