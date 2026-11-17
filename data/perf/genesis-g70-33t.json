@@ -1,0 +1,464 @@
+{
+ "slug": "genesis-g70-33t",
+ "name": "Genesis G70 3.3T",
+ "short": "G70 3.3T",
+ "make": "Genesis",
+ "page": "/cars/genesis-g70-33t/",
+ "focus": "ik2",
+ "star": "ik2-33t",
+ "h1": "Genesis G70 3.3T: performance, engine and what owners say",
+ "topics_extra": {
+  "Turbo oil leak": "oil feed|turbo oil (line|pipe|leak)|turbo.{0,20}oil leak|oil leak.{0,20}turbo",
+  "Carbon buildup": "carbon (build ?up|deposits)|walnut blast",
+  "Misfires / spark plugs": "misfires?|spark plugs?|ignition coils?",
+  "Brakes": "brembo|brake (pads?|rotors?|squeal|wear)",
+  "Fuel pump": "fuel pump|\\bhpfp\\b"
+ },
+ "gens": [
+  {
+   "id": "ik",
+   "code": "IK",
+   "years": "2019–2021",
+   "y0": 2019,
+   "y1": 2021,
+   "engine": "G6DP",
+   "body": "Sedan",
+   "color": "Havana Red",
+   "tag": "Twin-turbo V6, 365 hp, 8-speed automatic only. The manual was a 2.0T option.",
+   "variants": [
+    {
+     "id": "ik-33t",
+     "name": "G70 3.3T",
+     "years": "2019–2021",
+     "hp": {
+      "v": 365,
+      "src": [
+       "g18ny",
+       "g18dp",
+       "ma18"
+      ],
+      "note": ""
+     },
+     "tq": {
+      "v": 376,
+      "src": [
+       "g18ny",
+       "g18dp"
+      ],
+      "note": "lb-ft"
+     },
+     "z60": {
+      "v": 4.4,
+      "who": "Car and Driver",
+      "src": [
+       "z60g"
+      ],
+      "claim": 4.5,
+      "csrc": [
+       "g18dp"
+      ]
+     },
+     "top": {
+      "v": "168 mph",
+      "src": [
+       "wpg"
+      ],
+      "note": "on summer tires; 149 mph on all-season tires"
+     },
+     "trans": {
+      "v": "8-speed automatic, rear-wheel drive",
+      "src": [
+       "g18dp",
+       "g18ny"
+      ],
+      "note": "mechanical limited-slip differential standard on the 3.3T RWD"
+     },
+     "price": {
+      "v": "$43,750",
+      "src": [
+       "ma18"
+      ],
+      "note": "2019 3.3T Advanced RWD, plus $995 destination; Elite, Prestige and Sport cost more"
+     },
+     "what": "Advanced, Elite, Prestige and Sport trims share the V6. Brembo brakes and an electronically controlled suspension were options.",
+     "what_src": [
+      "g18dp",
+      "ma18"
+     ]
+    },
+    {
+     "id": "ik-33t-awd",
+     "name": "G70 3.3T AWD",
+     "years": "2019–2021",
+     "hp": {
+      "v": 365,
+      "src": [
+       "g18ny",
+       "g18dp",
+       "ma18"
+      ],
+      "note": ""
+     },
+     "tq": {
+      "v": 376,
+      "src": [
+       "g18ny",
+       "g18dp"
+      ],
+      "note": "lb-ft"
+     },
+     "z60": {
+      "v": 4.8,
+      "who": "MotorTrend",
+      "src": [
+       "z60g"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "8-speed automatic, all-wheel drive",
+      "src": [
+       "g18ny",
+       "g19my"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$45,750",
+      "src": [
+       "ma18"
+      ],
+      "note": "2019 3.3T Advanced: $43,750 plus the $2,000 AWD option, plus $995 destination"
+     },
+     "what": "Same V6. Genesis quoted its 4.5-second 0-60 time for the rear-drive car only.",
+     "what_src": [
+      "g18dp"
+     ]
+    }
+   ],
+   "img": "/assets/perf/genesis-g70-33t-ik.webp?v=1"
+  },
+  {
+   "id": "ik2",
+   "code": "IK facelift",
+   "years": "2022–",
+   "y0": 2022,
+   "y1": 2026,
+   "engine": "G6DP",
+   "body": "Sedan",
+   "color": "Melbourne Gray",
+   "tag": "Facelift for 2022 with a new face and tail. Same 365-hp V6 and 8-speed automatic.",
+   "variants": [
+    {
+     "id": "ik2-33t",
+     "name": "G70 3.3T",
+     "years": "2022–",
+     "star": true,
+     "hp": {
+      "v": 365,
+      "src": [
+       "g22p",
+       "ma21",
+       "ma23"
+      ],
+      "note": ""
+     },
+     "tq": {
+      "v": 376,
+      "src": [
+       "g22p",
+       "ma21"
+      ],
+      "note": "lb-ft"
+     },
+     "z60": {
+      "v": 4.5,
+      "who": "Car and Driver",
+      "src": [
+       "z60g"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "top": {
+      "v": "168 mph",
+      "src": [
+       "wpg"
+      ],
+      "note": "on summer tires; 149 mph on all-season tires"
+     },
+     "trans": {
+      "v": "8-speed automatic, rear-wheel drive",
+      "src": [
+       "ma21",
+       "g22p"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$42,100",
+      "src": [
+       "g22p",
+       "ma23"
+      ],
+      "note": "2022 3.3T Standard RWD, plus $1,045 freight; for 2024 the 3.3T starts at $51,145 (Sport Advanced RWD)"
+     },
+     "what": "The Sport Prestige package adds Brembo brakes and a limited-slip rear differential.",
+     "what_src": [
+      "ma21",
+      "ma23"
+     ]
+    },
+    {
+     "id": "ik2-33t-awd",
+     "name": "G70 3.3T AWD",
+     "years": "2022–",
+     "hp": {
+      "v": 365,
+      "src": [
+       "g22p",
+       "ma21",
+       "ma23"
+      ],
+      "note": ""
+     },
+     "tq": {
+      "v": 376,
+      "src": [
+       "g22p",
+       "ma21"
+      ],
+      "note": "lb-ft"
+     },
+     "z60": {
+      "v": 4.5,
+      "who": "Car and Driver",
+      "src": [
+       "z60g"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "8-speed automatic, all-wheel drive",
+      "src": [
+       "g22p"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$44,200",
+      "src": [
+       "g22p"
+      ],
+      "note": "2022 3.3T Standard AWD, plus $1,045 freight"
+     }
+    },
+    {
+     "id": "ik2-le",
+     "name": "G70 3.3T Launch Edition",
+     "years": "2022",
+     "pkg": "ik2-33t",
+     "price": {
+      "v": "$52,500",
+      "src": [
+       "g22p"
+      ],
+      "note": "RWD, plus $1,045 freight; $54,500 AWD"
+     },
+     "what": "Matte Verbier White or Melbourne Gray paint, light 19-inch wheels and a black and red cabin. Motor Authority reported 500 cars.",
+     "what_src": [
+      "g22p",
+      "ma21le"
+     ]
+    }
+   ],
+   "img": "/assets/perf/genesis-g70-33t-ik2.webp?v=1"
+  }
+ ],
+ "engines": {
+  "G6DP": {
+   "name": "Hyundai Lambda II 3.3 T-GDI (G6DP)",
+   "what": "3.3-liter V6, twin-turbo",
+   "study": "hyundai-g6dp",
+   "page": "/engines/hyundai-g6dp/",
+   "yt": [
+    "scy",
+    "hyundai-g6dp"
+   ],
+   "facts": [
+    [
+     "Output",
+     "365–368 hp, 376 lb-ft",
+     [
+      "k18p",
+      "k22ov"
+     ]
+    ],
+    [
+     "Size",
+     "3,342 cc, 92.0 x 83.8 mm, 10.0:1 compression",
+     [
+      "k18s"
+     ]
+    ],
+    [
+     "Build",
+     "Aluminum block and heads, direct injection, 24 valves",
+     [
+      "k18s"
+     ]
+    ],
+    [
+     "Award",
+     "Wards 10 Best Engines, 2018",
+     [
+      "k18w"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Turbo oil feed line recall",
+     "kind": "Recall",
+     "rx": "oil feed|turbo oil (line|pipe|leak)|turbo.{0,20}oil leak|oil leak.{0,20}turbo",
+     "x": "On 2018–2023 Stingers and 2019–2020 K900s with the 3.3T, the left turbo oil feed pipe and hose can wear out and leak oil onto hot parts, a fire risk.",
+     "fix": "Dealer replaces the left turbo oil feed pipe and hose for free (NHTSA 24V169, Kia SC300).",
+     "src": [
+      "r24"
+     ]
+    },
+    {
+     "t": "Intake valve carbon",
+     "kind": "Parts seller",
+     "rx": "carbon (build ?up|deposits)|walnut blast|dirty intake valves?",
+     "x": "Direct injection never washes the intake valves, so carbon builds up. A parts seller writing about this engine in the Genesis G70 plans for cleaning at 60,000–80,000 miles.",
+     "fix": "Walnut-blast the intake valves.",
+     "src": [
+      "tp"
+     ]
+    },
+    {
+     "t": "Timing chain tensioner (disputed)",
+     "kind": "Owner-reported",
+     "rx": "timing chain|chain tensioner",
+     "x": "Forum posts blame timing chain tensioners, but the same parts seller says no widespread defect is documented. Treat it as unconfirmed.",
+     "fix": "",
+     "src": [
+      "tp"
+     ]
+    }
+   ]
+  }
+ },
+ "sources": {
+  "g18ny": {
+   "t": "Genesis Motor America: Genesis premieres the 2019 G70 at the New York International Auto Show (Mar 2018)",
+   "u": "https://newsroom.genesis.com/genesis-premieres-the-2019-g70--at-the-new-york-international-auto-show",
+   "k": "Genesis"
+  },
+  "g18dp": {
+   "t": "Genesis Motor America: 2019 Genesis G70: Designed to Perform (Jun 2018, PR Newswire)",
+   "u": "https://www.prnewswire.com/news-releases/2019-genesis-g70-designed-to-perform-300664201.html",
+   "k": "Genesis"
+  },
+  "g19my": {
+   "t": "Genesis Motor America: Genesis announces 2019 model year updates and pricing (Oct 2018, PR Newswire)",
+   "u": "https://www.prnewswire.com/news-releases/genesis-announces-2019-model-year-updates-and-pricing-300738142.html",
+   "k": "Genesis"
+  },
+  "g22p": {
+   "t": "Genesis Motor America: Genesis reveals U.S. pricing for newly redesigned 2022 G70 (Apr 2021, PR Newswire)",
+   "u": "https://www.prnewswire.com/news-releases/genesis-reveals-us-pricing-for-newly-redesigned-2022-g70-301281311.html",
+   "k": "Genesis"
+  },
+  "ma18": {
+   "t": "Motor Authority: 2019 Genesis G70 pricing starts at $35,895 (Sep 2018)",
+   "u": "https://www.motorauthority.com/news/1118881_2019-genesis-g70-pricing-starts-at-35895",
+   "k": "Motor Authority"
+  },
+  "ma21le": {
+   "t": "Motor Authority: 2022 Genesis G70 Launch Edition limited to 500 units (May 2021)",
+   "u": "https://www.motorauthority.com/news/1132202_2022-genesis-g70-launch-edition-limited-to-500-units",
+   "k": "Motor Authority"
+  },
+  "ma21": {
+   "t": "Motor Authority: First drive review: 2022 Genesis G70 (Sep 2021)",
+   "u": "https://www.motorauthority.com/news/1116023_2022-genesis-g70-price-specs-review-photos-info",
+   "k": "Motor Authority"
+  },
+  "ma23": {
+   "t": "Motor Authority: 2024 Genesis G70 starts at $42,695 (Dec 2023)",
+   "u": "https://www.motorauthority.com/news/1141832_2024-genesis-g70-price",
+   "k": "Motor Authority"
+  },
+  "z60g": {
+   "t": "0-60specs.com: Genesis G70 0-60 runs by magazine (Car and Driver, MotorTrend, MotorWeek, Road & Track)",
+   "u": "https://www.0-60specs.com/genesis/g70-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "wpg": {
+   "t": "Wikipedia: Genesis G70 (first generation, top speed and model years)",
+   "u": "https://en.wikipedia.org/wiki/Genesis_G70",
+   "k": "Wikipedia (fallback)"
+  },
+  "k18p": {
+   "t": "Kia Motors America announces 2018 Stinger pricing (Nov 2017)",
+   "u": "https://www.kiamedia.com/us/en/media/pressreleases/13175/kia-motors-america-announces-2018-stinger-pricing",
+   "k": "Kia"
+  },
+  "k22ov": {
+   "t": "Kia America: 2022 Stinger overview (Mar 2021)",
+   "u": "https://www.kiamedia.com/us/en/media/pressreleases/17205/2022-stinger-overview",
+   "k": "Kia"
+  },
+  "k18s": {
+   "t": "KiaMedia: 2018 Stinger specifications",
+   "u": "https://www.kiamedia.com/us/en/models/stinger/2018/specifications",
+   "k": "Kia"
+  },
+  "k18w": {
+   "t": "Kia Motors America: 2018 Stinger named to Wards 10 Best Engines list (Dec 2017)",
+   "u": "https://www.kiamedia.com/us/en/media/pressreleases/13342/all-new-2018-kia-stinger-named-to-wards-10-best-engines-list",
+   "k": "Kia"
+  },
+  "r24": {
+   "t": "NHTSA recall 24V169: 3.3T left turbo oil feed pipe may leak (2018–2023 Stinger, 2019–2020 K900)",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=24V169000",
+   "k": "Recall"
+  },
+  "tp": {
+   "t": "ThreePiece: every Genesis G70 common failure (same 3.3T engine, 2026)",
+   "u": "https://www.threepiece.us/blog/every-genesis-g70-common-failure-and-how-to-fix-them/",
+   "k": "parts seller"
+  }
+ },
+ "yt_study": "car-genesis-g70-33t",
+ "yt_model": "",
+ "nhtsa": {
+  "make": "GENESIS",
+  "models": [
+   "G70"
+  ],
+  "note": "NHTSA files every G70 under G70, so these counts include the 2.0T and 2.5T four-cylinder cars."
+ },
+ "compare": [
+  {
+   "slug": "kia-stinger-gt",
+   "name": "Kia Stinger GT"
+  },
+  {
+   "slug": "bmw-m340i",
+   "name": "BMW M340i"
+  },
+  {
+   "slug": "audi-s4",
+   "name": "Audi S4"
+  },
+  {
+   "slug": "lexus-rc-f",
+   "name": "Lexus RC F"
+  }
+ ]
+}

@@ -1,0 +1,553 @@
+{
+ "built": "2026-11-17",
+ "nhtsa": {
+  "by_year": {
+   "2014": 5,
+   "2015": 2,
+   "2016": 6,
+   "2021": 4
+  },
+  "gens": {
+   "c7": {
+    "n": 13,
+    "issues": {
+     "Turbo oil strainer recall (2014–2017)": {
+      "n": 7,
+      "ex": [
+       "11218437",
+       "11218822"
+      ]
+     },
+     "Oil consumption on early cars": {
+      "n": 0,
+      "ex": []
+     },
+     "Turbo oil feed line leaks": {
+      "n": 0,
+      "ex": []
+     },
+     "Coolant leaks": {
+      "n": 0,
+      "ex": []
+     }
+    },
+    "parts": [
+     [
+      "Engine",
+      9
+     ],
+     [
+      "Unknown or other",
+      1
+     ],
+     [
+      "Air bags",
+      1
+     ],
+     [
+      "Vehicle speed control",
+      1
+     ],
+     [
+      "Fuel/propulsion system",
+      1
+     ],
+     [
+      "Electrical system",
+      1
+     ]
+    ]
+   },
+   "c8": {
+    "n": 4,
+    "issues": {
+     "Cylinder bore crack recall (2021)": {
+      "n": 0,
+      "ex": []
+     },
+     "Cylinder-on-demand solenoids": {
+      "n": 0,
+      "ex": []
+     },
+     "Water pump and thermostat": {
+      "n": 1,
+      "ex": [
+       "11691071"
+      ]
+     }
+    },
+    "parts": [
+     [
+      "Electrical system",
+      2
+     ],
+     [
+      "Unknown or other",
+      1
+     ],
+     [
+      "Engine",
+      1
+     ],
+     [
+      "Power train",
+      1
+     ],
+     [
+      "Vehicle speed control",
+      1
+     ]
+    ]
+   }
+  },
+  "parts": [
+   [
+    "Engine",
+    10
+   ],
+   [
+    "Electrical system",
+    3
+   ],
+   [
+    "Unknown or other",
+    2
+   ],
+   [
+    "Vehicle speed control",
+    2
+   ],
+   [
+    "Air bags",
+    1
+   ],
+   [
+    "Fuel/propulsion system",
+    1
+   ]
+  ]
+ },
+ "recalls": {
+  "2014": [],
+  "2015": [],
+  "2016": [],
+  "2017": [],
+  "2018": [],
+  "2021": [
+   {
+    "id": "25V201000",
+    "part": "ELECTRICAL SYSTEM: INSTRUMENT CLUSTER/PANEL",
+    "summary": "Volkswagen Group of America, Inc. (Audi) is recalling certain 2021 SQ8, A6 SEDAN, A7, A8, Q7, Q8, RS6 Avant, RS7, RSQ8, S6 SEDAN, S7, S8, A6 Allroad, and SQ7 vehicles.  Due to a software error, the instrument panel display may fail."
+   },
+   {
+    "id": "25V900000",
+    "part": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+    "summary": "Volkswagen Group of America, Inc. (Audi) is recalling certain 2019-2026 vehicles. Please see the recall report for a complete list of models. A software error may prevent the rearview camera image from displaying as intended.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 111, \"Rear Visibility.\""
+   }
+  ],
+  "2022": [
+   {
+    "id": "25V900000",
+    "part": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+    "summary": "Volkswagen Group of America, Inc. (Audi) is recalling certain 2019-2026 vehicles. Please see the recall report for a complete list of models. A software error may prevent the rearview camera image from displaying as intended.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 111, \"Rear Visibility.\""
+   }
+  ],
+  "2023": [
+   {
+    "id": "25V900000",
+    "part": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+    "summary": "Volkswagen Group of America, Inc. (Audi) is recalling certain 2019-2026 vehicles. Please see the recall report for a complete list of models. A software error may prevent the rearview camera image from displaying as intended.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 111, \"Rear Visibility.\""
+   }
+  ],
+  "2024": [
+   {
+    "id": "25V900000",
+    "part": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+    "summary": "Volkswagen Group of America, Inc. (Audi) is recalling certain 2019-2026 vehicles. Please see the recall report for a complete list of models. A software error may prevent the rearview camera image from displaying as intended.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 111, \"Rear Visibility.\""
+   }
+  ],
+  "2025": [
+   {
+    "id": "25V900000",
+    "part": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+    "summary": "Volkswagen Group of America, Inc. (Audi) is recalling certain 2019-2026 vehicles. Please see the recall report for a complete list of models. A software error may prevent the rearview camera image from displaying as intended.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 111, \"Rear Visibility.\""
+   }
+  ],
+  "2026": [
+   {
+    "id": "25V900000",
+    "part": "BACK OVER PREVENTION: SENSING SYSTEM: CAMERA",
+    "summary": "Volkswagen Group of America, Inc. (Audi) is recalling certain 2019-2026 vehicles. Please see the recall report for a complete list of models. A software error may prevent the rearview camera image from displaying as intended.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 111, \"Rear Visibility.\""
+   }
+  ]
+ },
+ "yt": {
+  "car-audi-rs7": null,
+  "audi-ea824": {
+   "videos": 143,
+   "praise": [
+    [
+     "Looks",
+     8
+    ],
+    [
+     "Interior and seats",
+     6
+    ]
+   ],
+   "trouble": [],
+   "top": [
+    {
+     "id": "4CU5m0jd6gw",
+     "title": "2022 Bentley Continental GT V8 [ 4.0l V8 542 bhp ] | POV Test Drive",
+     "views": 437040,
+     "ch": "Auto POV Drive"
+    },
+    {
+     "id": "Ljo131g74bk",
+     "title": "Hypermiling a 2013 Bentley Continental GT V8 - CAR and DRIVER",
+     "views": 327863,
+     "ch": "Car and Driver"
+    },
+    {
+     "id": "YLroraAwHMU",
+     "title": "' 2016 Bentley Continental GT V8 ' Test Drive & Review - TheGetawayer",
+     "views": 283574,
+     "ch": "TheGetawayer"
+    }
+   ]
+  },
+  "vw-ea825": {
+   "videos": 187,
+   "praise": [
+    [
+     "Looks",
+     19
+    ],
+    [
+     "Power and acceleration",
+     14
+    ],
+    [
+     "Interior and seats",
+     14
+    ],
+    [
+     "Everyday comfort",
+     13
+    ]
+   ],
+   "trouble": [],
+   "top": [
+    {
+     "id": "sNPhsK9gh7k",
+     "title": "2023 Lamborghini Urus S - POV Test Drive (Binaural Audio)",
+     "views": 2778182,
+     "ch": "Winding Road Magazine"
+    },
+    {
+     "id": "_wxaYP0Nx4k",
+     "title": "Lamborghini Urus review - 0-60mph, 1/4-mile and Brake Test!",
+     "views": 2763165,
+     "ch": "carwow"
+    },
+    {
+     "id": "9qeAiZRN0Gc",
+     "title": "Audi RSQ8 Performance: A Lamborghini Urus for HALF the Price?",
+     "views": 2600083,
+     "ch": "carwow"
+    }
+   ]
+  }
+ },
+ "scores": {
+  "audi-ea824": {
+   "years": {
+    "2013": {
+     "score": 51,
+     "weight": 8.2,
+     "videos": 9,
+     "named": 9,
+     "top": [
+      {
+       "id": "Ljo131g74bk",
+       "title": "Hypermiling a 2013 Bentley Continental GT V8 - CAR and DRIVER",
+       "views": 327863
+      },
+      {
+       "id": "RBvV7aiJ4Xk",
+       "title": "2013 Bentley Continental GTC 4.0 V8 Twin Turbo - Affordable Prestige Cars",
+       "views": 41746
+      },
+      {
+       "id": "bsQu6D7dDXk",
+       "title": "Road Test: 2013 Bentley Continental GT V8",
+       "views": 38057
+      }
+     ]
+    },
+    "2014": {
+     "score": 53,
+     "weight": 5.2,
+     "videos": 6,
+     "named": 6,
+     "top": [
+      {
+       "id": "ZwGmFToE2jg",
+       "title": "2014 Bentley Continental 4 0 GT V8 S Auto 4WD Euro 5 2dr GV64XON | Review And Test Drive",
+       "views": 16192
+      },
+      {
+       "id": "NIbBFoqtwFk",
+       "title": "Bentley Continental GT Buyers guide (2011-2018) Common problem with the Continental GT (W12 / V8)",
+       "views": 13391
+      },
+      {
+       "id": "aFPHANxngRI",
+       "title": "First Look: 2014 Bentley Continental GT V8 S",
+       "views": 9126
+      }
+     ]
+    },
+    "2015": {
+     "score": 53,
+     "weight": 33.2,
+     "videos": 34,
+     "named": 17,
+     "top": [
+      {
+       "id": "ZcTSNSfqoKI",
+       "title": "2015 Bentley Continental GT3-R - Start Up, Exhaust & In Depth Review",
+       "views": 217349
+      },
+      {
+       "id": "cb4wdVtNAzw",
+       "title": "2015 Bentley Continental GT V8 S Convertible Review",
+       "views": 104149
+      },
+      {
+       "id": "sy5jPtBBEtE",
+       "title": "The Bentley Continental GT3-R was Crewe's Most Extreme Car... Was it Also Their Best?",
+       "views": 53053
+      }
+     ]
+    },
+    "2016": {
+     "score": 55,
+     "weight": 9.2,
+     "videos": 10,
+     "named": 10,
+     "top": [
+      {
+       "id": "YLroraAwHMU",
+       "title": "' 2016 Bentley Continental GT V8 ' Test Drive & Review - TheGetawayer",
+       "views": 283574
+      },
+      {
+       "id": "NIbBFoqtwFk",
+       "title": "Bentley Continental GT Buyers guide (2011-2018) Common problem with the Continental GT (W12 / V8)",
+       "views": 13391
+      },
+      {
+       "id": "fouC1bdPYr4",
+       "title": "2016 66 Bentley Continental GTC 4.0 V8 S Convertible (Mulliner)",
+       "views": 9950
+      }
+     ]
+    },
+    "2017": {
+     "score": 52,
+     "weight": 5.2,
+     "videos": 6,
+     "named": 6,
+     "top": [
+      {
+       "id": "ROe0IqTBa_k",
+       "title": "2017 Bentley Continental GT 4.0 V8 S - Start up, exhaust, and full vehicle tour",
+       "views": 21565
+      },
+      {
+       "id": "-kXI7hdXVwI",
+       "title": "2017 Bentley Continental GT V8 S Review",
+       "views": 16527
+      },
+      {
+       "id": "NIbBFoqtwFk",
+       "title": "Bentley Continental GT Buyers guide (2011-2018) Common problem with the Continental GT (W12 / V8)",
+       "views": 13391
+      }
+     ]
+    }
+   },
+   "videos": 61,
+   "pulled": 145
+  },
+  "vw-ea825": {
+   "years": {
+    "2019": {
+     "score": 53,
+     "weight": 27.4,
+     "videos": 124,
+     "named": 9,
+     "top": [
+      {
+       "id": "_wxaYP0Nx4k",
+       "title": "Lamborghini Urus review - 0-60mph, 1/4-mile and Brake Test!",
+       "views": 2763165
+      },
+      {
+       "id": "9qeAiZRN0Gc",
+       "title": "Audi RSQ8 Performance: A Lamborghini Urus for HALF the Price?",
+       "views": 2600083
+      },
+      {
+       "id": "0Kjsuo7vCbo",
+       "title": "2019 Lamborghini Urus Review // Why It's Worth $300,000",
+       "views": 1977279
+      }
+     ]
+    },
+    "2020": {
+     "score": 55,
+     "weight": 31.2,
+     "videos": 129,
+     "named": 14,
+     "top": [
+      {
+       "id": "_wxaYP0Nx4k",
+       "title": "Lamborghini Urus review - 0-60mph, 1/4-mile and Brake Test!",
+       "views": 2763165
+      },
+      {
+       "id": "9qeAiZRN0Gc",
+       "title": "Audi RSQ8 Performance: A Lamborghini Urus for HALF the Price?",
+       "views": 2600083
+      },
+      {
+       "id": "iNu0vH5wia4",
+       "title": "Living with a $250,000 Lamborghini Urus!!",
+       "views": 1693897
+      }
+     ]
+    },
+    "2021": {
+     "score": 54,
+     "weight": 27.7,
+     "videos": 125,
+     "named": 10,
+     "top": [
+      {
+       "id": "_wxaYP0Nx4k",
+       "title": "Lamborghini Urus review - 0-60mph, 1/4-mile and Brake Test!",
+       "views": 2763165
+      },
+      {
+       "id": "9qeAiZRN0Gc",
+       "title": "Audi RSQ8 Performance: A Lamborghini Urus for HALF the Price?",
+       "views": 2600083
+      },
+      {
+       "id": "JreWaKikcyk",
+       "title": "The 2021 Lamborghini Urus is Your Daily Driver with a Dark Side (POV Drive Review)",
+       "views": 2587947
+      }
+     ]
+    },
+    "2022": {
+     "score": 51,
+     "weight": 20.2,
+     "videos": 117,
+     "named": 2,
+     "top": [
+      {
+       "id": "_wxaYP0Nx4k",
+       "title": "Lamborghini Urus review - 0-60mph, 1/4-mile and Brake Test!",
+       "views": 2763165
+      },
+      {
+       "id": "9qeAiZRN0Gc",
+       "title": "Audi RSQ8 Performance: A Lamborghini Urus for HALF the Price?",
+       "views": 2600083
+      },
+      {
+       "id": "iNu0vH5wia4",
+       "title": "Living with a $250,000 Lamborghini Urus!!",
+       "views": 1693897
+      }
+     ]
+    },
+    "2023": {
+     "score": 54,
+     "weight": 25.2,
+     "videos": 122,
+     "named": 7,
+     "top": [
+      {
+       "id": "sNPhsK9gh7k",
+       "title": "2023 Lamborghini Urus S - POV Test Drive (Binaural Audio)",
+       "views": 2778182
+      },
+      {
+       "id": "_wxaYP0Nx4k",
+       "title": "Lamborghini Urus review - 0-60mph, 1/4-mile and Brake Test!",
+       "views": 2763165
+      },
+      {
+       "id": "9qeAiZRN0Gc",
+       "title": "Audi RSQ8 Performance: A Lamborghini Urus for HALF the Price?",
+       "views": 2600083
+      }
+     ]
+    },
+    "2024": {
+     "score": 56,
+     "weight": 22.9,
+     "videos": 119,
+     "named": 4,
+     "top": [
+      {
+       "id": "_wxaYP0Nx4k",
+       "title": "Lamborghini Urus review - 0-60mph, 1/4-mile and Brake Test!",
+       "views": 2763165
+      },
+      {
+       "id": "9qeAiZRN0Gc",
+       "title": "Audi RSQ8 Performance: A Lamborghini Urus for HALF the Price?",
+       "views": 2600083
+      },
+      {
+       "id": "iNu0vH5wia4",
+       "title": "Living with a $250,000 Lamborghini Urus!!",
+       "views": 1693897
+      }
+     ]
+    },
+    "2025": {
+     "score": null,
+     "weight": 1.4,
+     "videos": 10,
+     "named": 0,
+     "top": [
+      {
+       "id": "sXTbn4QDtSU",
+       "title": "Should You Buy a Bentley Bentayga V8 and Save £30k?! | TEST DRIVE",
+       "views": 122853
+      },
+      {
+       "id": "5Ktw5cjXq2Y",
+       "title": "EA824 vs EA825: Comparing Two Generations of the Audi / Porsche 4.0 TFSI Engine",
+       "views": 13315
+      },
+      {
+       "id": "mGc-v1FlXQM",
+       "title": "Audi EA825 4.0T Engine Tips: Repair Complete, Removal Tricks, Insights SQ7, RS6, RS7, RSQ8, and Urus",
+       "views": 11126
+      }
+     ]
+    }
+   },
+   "videos": 156,
+   "pulled": 200
+  }
+ }
+}

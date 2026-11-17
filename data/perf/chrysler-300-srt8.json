@@ -1,0 +1,404 @@
+{
+ "slug": "chrysler-300-srt8",
+ "name": "Chrysler 300C SRT8 / 300 SRT",
+ "short": "300 SRT8",
+ "make": "Chrysler",
+ "page": "/cars/chrysler-300-srt8/",
+ "focus": "ld",
+ "star": "ld-srt8",
+ "h1": "Chrysler 300C SRT8 / 300 SRT: performance, engines and what owners say",
+ "topics_extra": {
+  "HEMI tick / lifters": "hemi tick|lifters?|ticking|tick(ing)? noise",
+  "Camshaft": "cam(shaft)? (failure|wipe|wiped|lobe|damage)",
+  "Brakes": "brembo|brake (pads?|rotors?|squeal|wear)",
+  "Uconnect screen": "uconnect|touch ?screen|delaminat",
+  "Transmission": "transmission (slip|slipping|shudder|delay|failure)|harsh shift|w5a580|nag1"
+ },
+ "gens": [
+  {
+   "id": "lx",
+   "code": "LX",
+   "years": "2005–2010",
+   "y0": 2005,
+   "y1": 2010,
+   "engine": "hemi61",
+   "body": "Sedan",
+   "color": "Inferno Red Crystal Pearl",
+   "tag": "6.1 HEMI sedan, 425 hp, 5-speed automatic, rear-drive.",
+   "variants": [
+    {
+     "id": "lx-srt8",
+     "name": "300C SRT8",
+     "years": "2005–2010",
+     "hp": {
+      "v": 425,
+      "src": [
+       "wp300"
+      ],
+      "note": "at 6,200 rpm"
+     },
+     "tq": {
+      "v": 420,
+      "src": [
+       "wp300"
+      ],
+      "note": "lb-ft at 4,800 rpm"
+     },
+     "z60": {
+      "v": 4.7,
+      "who": "Car and Driver",
+      "src": [
+       "z60c"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "trans": {
+      "v": "5-speed automatic, rear-drive",
+      "src": [
+       "fe05",
+       "fe10"
+      ],
+      "note": ""
+     },
+     "what": "Tested 0-60 is from a 2005 car. The EPA lists the 6.1 V8 every year from 2005 to 2010.",
+     "what_src": [
+      "z60c",
+      "fe05",
+      "fe10"
+     ]
+    }
+   ],
+   "img": "/assets/perf/chrysler-300-srt8-lx.webp?v=1"
+  },
+  {
+   "id": "ld",
+   "code": "LD",
+   "years": "2012–2014",
+   "y0": 2012,
+   "y1": 2014,
+   "engine": "392",
+   "body": "Sedan",
+   "color": "Billet Silver Metallic",
+   "tag": "New 6.4 (392) HEMI, 470 hp, still a 5-speed automatic. No 2011 car; gone from the US after 2014.",
+   "variants": [
+    {
+     "id": "ld-srt8",
+     "name": "300 SRT8",
+     "years": "2012–2014",
+     "star": true,
+     "hp": {
+      "v": 470,
+      "src": [
+       "wp300",
+       "ma11fd"
+      ],
+      "note": "at 6,000 rpm"
+     },
+     "tq": {
+      "v": 470,
+      "src": [
+       "wp300",
+       "ma11fd"
+      ],
+      "note": "lb-ft at 4,300 rpm"
+     },
+     "z60": {
+      "v": 4.3,
+      "who": "MotorTrend",
+      "src": [
+       "z60c"
+      ],
+      "claim": null,
+      "csrc": []
+     },
+     "top": {
+      "v": "175 mph",
+      "src": [
+       "ma11p",
+       "ma11fd"
+      ],
+      "note": "maker claim"
+     },
+     "trans": {
+      "v": "5-speed automatic, rear-drive",
+      "src": [
+       "fe12",
+       "fe14",
+       "ma11fd"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$47,995",
+      "src": [
+       "ma11p"
+      ],
+      "note": "2012 launch price as reported; the report does not say if destination is included"
+     },
+     "what": "Adaptive dampers, four-piston Brembo brakes at all four wheels, 20-inch forged wheels and an active exhaust. There was no 2011 SRT8: the EPA lists only V6 and 5.7 V8 300s that year.",
+     "what_src": [
+      "ma11p",
+      "ma11fd",
+      "fe11"
+     ]
+    },
+    {
+     "id": "ld-core",
+     "name": "300 SRT8 Core",
+     "years": "2013–2014",
+     "pkg": "ld-srt8",
+     "price": {
+      "v": "$44,990",
+      "src": [
+       "ma13core"
+      ],
+      "note": "2013, includes destination"
+     },
+     "what": "Cheaper SRT8 with less luxury trim. Black-pocket 20-inch wheels and red or black Brembo calipers.",
+     "what_src": [
+      "ma13core"
+     ]
+    }
+   ],
+   "img": "/assets/perf/chrysler-300-srt8-ld.webp?v=1"
+  }
+ ],
+ "engines": {
+  "hemi61": {
+   "name": "6.1 SRT8 HEMI",
+   "what": "6.1-liter V-8",
+   "study": "chrysler-61-hemi",
+   "page": "/engines/chrysler-61-hemi/",
+   "yt": [
+    "scy",
+    "chrysler-61-hemi"
+   ],
+   "facts": [
+    [
+     "Rev limit",
+     "6,400 rpm (electronically limited)",
+     [
+      "sp06"
+     ]
+    ],
+    [
+     "Output",
+     "425 hp at 6,200 rpm, 420 lb-ft at 4,800 rpm",
+     [
+      "sp06",
+      "p06"
+     ]
+    ],
+    [
+     "Build",
+     "Cast-iron block with cross-bolted mains, aluminum hemi heads, 10.3:1 compression",
+     [
+      "sp06"
+     ]
+    ],
+    [
+     "Cylinder deactivation",
+     "None; oil jets cool the pistons (Wikipedia)",
+     [
+      "wph"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "No engine failure pattern found",
+     "kind": "Owner-reported",
+     "rx": "",
+     "x": "The sources checked here document no recurring 6.1 HEMI failure in the 300. Any recall for these model years is listed under Problems & recalls.",
+     "fix": "",
+     "src": [
+      "nhtsa"
+     ]
+    }
+   ]
+  },
+  "392": {
+   "name": "392 HEMI 6.4",
+   "what": "6.4-liter V-8",
+   "study": "chrysler-392",
+   "page": "/engines/chrysler-392/",
+   "yt": [
+    "scy",
+    "chrysler-392"
+   ],
+   "facts": [
+    [
+     "Rev limit",
+     "6,400 rpm (electronically limited)",
+     [
+      "s12spec",
+      "c15spec"
+     ]
+    ],
+    [
+     "Output",
+     "470–485 hp, 470–475 lb-ft",
+     [
+      "s12spec",
+      "c15spec"
+     ]
+    ],
+    [
+     "Valvetrain",
+     "Pushrod, 16 valves, sodium-filled exhaust and hollow-stem intake valves",
+     [
+      "c15spec"
+     ]
+    ],
+    [
+     "Build",
+     "Cast-iron block with cross-bolted mains, aluminum hemi heads, 10.9:1 compression; Fuel Saver four-cylinder mode",
+     [
+      "s12spec",
+      "c15spec"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Lifter and camshaft failure (\"HEMI tick\")",
+     "kind": "Owner-reported",
+     "rx": "hemi tick|lifters?|cam(shaft)? (failure|wipe|wiped|lobe)|ticking|tick(ing)? noise",
+     "x": "Owners report a tick from failed roller lifters that then wear the camshaft. SlashGear links most cases to the cylinder-deactivation (MDS) lifters and low oil flow.",
+     "fix": "Replacing the lifters and camshaft fixes it; on-time oil changes with the right oil help prevent it.",
+     "src": [
+      "sg24"
+     ]
+    },
+    {
+     "t": "No engine failure pattern found",
+     "kind": "Owner-reported",
+     "rx": "",
+     "x": "The sources checked here document no recurring 6.4 HEMI failure in the 300. Any recall for these model years is listed under Problems & recalls.",
+     "fix": "",
+     "src": [
+      "nhtsa"
+     ]
+    }
+   ]
+  }
+ },
+ "sources": {
+  "wp300": {
+   "t": "Wikipedia: Chrysler 300 (SRT8 output figures and US model years)",
+   "u": "https://en.wikipedia.org/wiki/Chrysler_300",
+   "k": "Wikipedia (fallback)"
+  },
+  "fe05": {
+   "t": "fueleconomy.gov: 2005 Chrysler 300C/SRT-8, 6.1 L V8, 5-speed automatic",
+   "u": "https://www.fueleconomy.gov/feg/noframes/21601.shtml",
+   "k": "EPA"
+  },
+  "fe10": {
+   "t": "fueleconomy.gov: 2010 Chrysler 300/SRT-8 engine options (6.1 L V8, 5-speed automatic)",
+   "u": "https://fueleconomy.gov/m/m.do?action=getMenuOptions&year=2010&make=Chrysler&model=300/SRT-8",
+   "k": "EPA"
+  },
+  "fe11": {
+   "t": "fueleconomy.gov: 2011 Chrysler 300 engine options (3.6 V6 and 5.7 V8 only, no SRT8)",
+   "u": "https://fueleconomy.gov/m/m.do?action=getMenuOptions&year=2011&make=Chrysler&model=300",
+   "k": "EPA"
+  },
+  "fe12": {
+   "t": "fueleconomy.gov: 2012 Chrysler 300 SRT8, 6.4 L V8, 5-speed automatic",
+   "u": "https://fueleconomy.gov/m/m.do?action=getMenuOptions&year=2012&make=Chrysler&model=300%20SRT8",
+   "k": "EPA"
+  },
+  "fe14": {
+   "t": "fueleconomy.gov: 2014 Chrysler 300 SRT8, 6.4 L V8, 5-speed automatic",
+   "u": "https://www.fueleconomy.gov/feg/noframes/34296.shtml",
+   "k": "EPA"
+  },
+  "ma11p": {
+   "t": "Motor Authority: 2012 Chrysler 300 SRT8 priced from $47,995 (Jul 2011)",
+   "u": "https://www.motorauthority.com/news/1063212_2012-chrysler-300-srt8-priced-from-47995",
+   "k": "Motor Authority"
+  },
+  "ma11fd": {
+   "t": "Motor Authority: 2012 Chrysler 300 SRT8 first drive (Jul 2011)",
+   "u": "https://www.motorauthority.com/news/1063194_2012-chrysler-300-srt8-first-drive",
+   "k": "Motor Authority"
+  },
+  "ma13core": {
+   "t": "Motor Authority: SRT adds 'Core' performance models to its catalog (Feb 2013)",
+   "u": "https://www.motorauthority.com/news/1082193_srt-adds-core-performance-models-to-its-catalog",
+   "k": "Motor Authority"
+  },
+  "z60c": {
+   "t": "0-60specs.com: Chrysler 300 0-60 runs by magazine (Car and Driver, MotorTrend, MotorWeek, Road & Track)",
+   "u": "https://www.0-60specs.com/chrysler/300-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "sp06": {
+   "t": "DaimlerChrysler: 2006 Dodge Charger SRT8 preliminary specifications (PDF)",
+   "u": "https://media.stellantisnorthamerica.com/view-spec.do?id=904",
+   "k": "Dodge"
+  },
+  "p06": {
+   "t": "DaimlerChrysler: Dodge announces pricing for all-new 2006 Charger SRT8 (Aug 2005)",
+   "u": "https://media.stellantisnorthamerica.com/newsrelease.do?id=1551",
+   "k": "Dodge"
+  },
+  "wph": {
+   "t": "Wikipedia: Chrysler Hemi engine (6.1 and 6.4 sections)",
+   "u": "https://en.wikipedia.org/wiki/Chrysler_Hemi_engine",
+   "k": "Wikipedia"
+  },
+  "nhtsa": {
+   "t": "NHTSA owner complaints and recalls",
+   "u": "https://www.nhtsa.gov/recalls",
+   "k": "NHTSA"
+  },
+  "s12spec": {
+   "t": "Chrysler: 2012 Dodge Charger SRT8 specifications (PDF)",
+   "u": "https://media.stellantisnorthamerica.com/view-spec.do?id=11138",
+   "k": "Dodge"
+  },
+  "c15spec": {
+   "t": "FCA US: 2015 Dodge Charger specifications (PDF)",
+   "u": "https://media.stellantisnorthamerica.com/view-spec.do?id=15578",
+   "k": "Dodge"
+  },
+  "sg24": {
+   "t": "SlashGear: How reliable are 6.4L HEMI engines? Here's what owners have to say (Sep 2024)",
+   "u": "https://www.slashgear.com/1656386/6-4-hemi-engine-reliability-owner-reviews",
+   "k": "outlet, summarizing owner reports"
+  }
+ },
+ "yt_study": "car-chrysler-300-srt8",
+ "yt_model": "",
+ "nhtsa": {
+  "make": "CHRYSLER",
+  "models": [
+   "300",
+   "300C",
+   "SRT8"
+  ],
+  "note": "NHTSA files the 300C SRT8 and 300 SRT8 under 300 or 300C, so these counts are every 300 of these years, V6 and 5.7 V8 cars included."
+ },
+ "compare": [
+  {
+   "slug": "charger-392",
+   "name": "Dodge Charger SRT8 / 392"
+  },
+  {
+   "slug": "challenger-392",
+   "name": "Dodge Challenger 392"
+  },
+  {
+   "slug": "cts-v",
+   "name": "Cadillac CTS-V"
+  },
+  {
+   "slug": "durango-srt",
+   "name": "Dodge Durango SRT"
+  }
+ ],
+ "parent": "/cars/chrysler-300/"
+}

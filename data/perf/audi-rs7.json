@@ -1,0 +1,557 @@
+{
+ "slug": "audi-rs7",
+ "name": "Audi RS 7",
+ "short": "RS 7",
+ "make": "Audi",
+ "page": "/cars/audi-rs7/",
+ "focus": "c8",
+ "star": "c8-perf",
+ "h1": "Audi RS 7: performance, engines and what owners say",
+ "topics_extra": {
+  "Turbo oil strainer": "oil strainer|oil screen|turbo(charger)? (failure|bearing|whine|noise)",
+  "Oil consumption": "oil consumption|burn(s|ing)? oil|adding oil|low oil",
+  "Coolant leaks": "coolant (leak|loss)|losing coolant|water pump|thermostat",
+  "Cylinder deactivation": "cylinder (on demand|deactivation)|\\bcod\\b"
+ },
+ "gens": [
+  {
+   "id": "c7",
+   "code": "C7",
+   "years": "2014–2018",
+   "y0": 2014,
+   "y1": 2018,
+   "engine": "ea824",
+   "body": "Sportback (5-door liftback)",
+   "color": "Daytona Gray",
+   "tag": "The first RS 7: a twin-turbo V-8 with 560 hp, and 605 hp in the later performance model.",
+   "variants": [
+    {
+     "id": "c7",
+     "name": "RS 7",
+     "years": "2014–2018",
+     "hp": {
+      "v": 560,
+      "src": [
+       "ma14",
+       "ma16p",
+       "awp13"
+      ],
+      "note": "at 5,700–6,700 rpm"
+     },
+     "tq": {
+      "v": 516,
+      "src": [
+       "ma16p",
+       "awp13"
+      ],
+      "note": "lb-ft (700 Nm) at 1,750–5,500 rpm"
+     },
+     "z60": {
+      "v": 3.4,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 3.7,
+      "csrc": [
+       "ma14"
+      ]
+     },
+     "top": {
+      "v": "174 mph",
+      "src": [
+       "ma14",
+       "ma16p"
+      ],
+      "note": "limited; 190 mph with the Dynamic package"
+     },
+     "trans": {
+      "v": "8-speed Tiptronic automatic, all-wheel drive",
+      "src": [
+       "awp13",
+       "ma16p",
+       "fe14"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$104,900",
+      "src": [
+       "ma14"
+      ],
+      "note": "2014, plus $895 destination"
+     }
+    },
+    {
+     "id": "c7-perf",
+     "name": "RS 7 performance",
+     "years": "2016–2018",
+     "hp": {
+      "v": 605,
+      "src": [
+       "ma16"
+      ],
+      "note": ""
+     },
+     "tq": {
+      "v": 516,
+      "src": [
+       "ma16"
+      ],
+      "note": "lb-ft; 553 lb-ft on overboost"
+     },
+     "z60": {
+      "v": 3.2,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ]
+     },
+     "top": {
+      "v": "189.5 mph",
+      "src": [
+       "ma16"
+      ],
+      "note": "limited, standard"
+     },
+     "trans": {
+      "v": "8-speed automatic, all-wheel drive",
+      "src": [
+       "ma16"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$129,000",
+      "src": [
+       "ma16"
+      ],
+      "note": "2016, plus $925 destination"
+     },
+     "what": "0–60 tested on a 2017 RS 7 performance.",
+     "what_src": [
+      "z60"
+     ]
+    }
+   ],
+   "img": "/assets/perf/audi-rs7-c7.webp?v=1"
+  },
+  {
+   "id": "c8",
+   "code": "C8",
+   "years": "2021–",
+   "y0": 2021,
+   "y1": 2026,
+   "engine": "ea825",
+   "body": "Sportback (5-door liftback)",
+   "color": "Nardo Gray",
+   "tag": "Wider body, a mild-hybrid twin-turbo V-8 and up to 621 hp.",
+   "variants": [
+    {
+     "id": "c8",
+     "name": "RS 7",
+     "years": "2021–2023",
+     "hp": {
+      "v": 591,
+      "src": [
+       "cc21",
+       "ma21"
+      ],
+      "note": ""
+     },
+     "tq": {
+      "v": 590,
+      "src": [
+       "cc21",
+       "ma21"
+      ],
+      "note": "lb-ft"
+     },
+     "z60": {
+      "v": 3.0,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 3.5,
+      "csrc": [
+       "cc21"
+      ]
+     },
+     "top": {
+      "v": "155 mph",
+      "src": [
+       "cc21",
+       "ma21"
+      ],
+      "note": "limited; 190 mph with the optional carbon-ceramic brakes"
+     },
+     "trans": {
+      "v": "8-speed Tiptronic automatic, all-wheel drive",
+      "src": [
+       "cc21"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "4,938 lb",
+      "src": [
+       "ma21"
+      ],
+      "note": "Motor Authority first drive"
+     },
+     "price": {
+      "v": "$114,000",
+      "src": [
+       "cc21"
+      ],
+      "note": "2021, plus $995 destination"
+     }
+    },
+    {
+     "id": "c8-perf",
+     "name": "RS 7 performance",
+     "years": "2024–",
+     "star": true,
+     "hp": {
+      "v": 621,
+      "src": [
+       "ma22",
+       "ma24"
+      ],
+      "note": ""
+     },
+     "tq": {
+      "v": 627,
+      "src": [
+       "ma22"
+      ],
+      "note": "lb-ft"
+     },
+     "z60": {
+      "v": 2.9,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 3.3,
+      "csrc": [
+       "ma24"
+      ]
+     },
+     "top": {
+      "v": "155 mph",
+      "src": [
+       "ma24",
+       "ma22"
+      ],
+      "note": "limited in the U.S. pricing story; Audi's reveal listed 174 mph with the RS Dynamic package and 190 mph with Dynamic plus"
+     },
+     "trans": {
+      "v": "8-speed automatic, all-wheel drive",
+      "src": [
+       "ma24",
+       "ma22"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "4,552 lb",
+      "src": [
+       "ma22"
+      ],
+      "note": "reveal figure (Nov 2022)"
+     },
+     "price": {
+      "v": "$127,800",
+      "src": [
+       "ma24"
+      ],
+      "note": "2024, plus $1,095 destination"
+     },
+     "what": "0–60 tested on a 2025 RS 7 performance.",
+     "what_src": [
+      "z60"
+     ]
+    }
+   ],
+   "img": "/assets/perf/audi-rs7-c8.webp?v=1"
+  }
+ ],
+ "engines": {
+  "ea824": {
+   "name": "Audi 4.0 TFSI V8 (EA824)",
+   "what": "4.0-liter V-8, twin-turbo",
+   "study": "audi-ea824",
+   "page": "/engines/audi-ea824/",
+   "yt": [
+    "scy",
+    "audi-ea824"
+   ],
+   "facts": [
+    [
+     "Output",
+     "560 hp (RS 7) to 605 hp (RS 7 performance)",
+     [
+      "ma14",
+      "ma16"
+     ]
+    ],
+    [
+     "Torque",
+     "516 lb-ft; 553 lb-ft on overboost in the performance",
+     [
+      "ma16p",
+      "ma16"
+     ]
+    ],
+    [
+     "Turbos",
+     "Two twin-scroll turbos inside the V, up to 1.2 bar of boost",
+     [
+      "awp13"
+     ]
+    ],
+    [
+     "Cylinder on demand",
+     "Shuts off cylinders 2, 3, 5 and 8 at light load",
+     [
+      "awp13"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Turbo oil strainer recall (2014–2017)",
+     "kind": "Recall",
+     "rx": "oil strainer|oil screen|turbo(charger)? (failure|bearing|whine|noise)",
+     "x": "A strainer in the turbo oil supply can clog. The turbo bearings then run short of oil and wear, and the turbo can fail and stall the engine.",
+     "fix": "Dealer replaces the strainer and changes the oil for free (NHTSA 22V-178, Audi 21H7).",
+     "src": [
+      "r22",
+      "sg26"
+     ]
+    },
+    {
+     "t": "Oil consumption on early cars",
+     "kind": "Parts seller",
+     "rx": "oil consumption|burn(s|ing)? oil|adding oil|low oil",
+     "x": "A parts seller says cars built before mid-2014 are the ones most known to use oil. Some owners add a quart every 1,000–1,500 miles at higher mileage.",
+     "fix": "Check the oil level before buying and ask how often it was topped up.",
+     "src": [
+      "eprs7"
+     ]
+    },
+    {
+     "t": "Turbo oil feed line leaks",
+     "kind": "Parts seller",
+     "rx": "oil (feed )?line|banjo|turbo (oil )?leak|oil leak",
+     "x": "The same seller lists seeping turbo oil feed lines and seals, usually around 60,000–100,000 miles.",
+     "fix": "Replace the lines if they seep, before the turbos run short of oil.",
+     "src": [
+      "eprs7"
+     ]
+    },
+    {
+     "t": "Coolant leaks",
+     "kind": "Outlet + parts seller",
+     "rx": "coolant (leak|loss)|losing coolant|water pump|thermostat",
+     "x": "SlashGear lists coolant leaks on this V-8. A parts seller says the plastic water pump and thermostat housings crack with age on the same engine in the RS 6.",
+     "fix": "",
+     "src": [
+      "sg26",
+      "epp6"
+     ]
+    }
+   ]
+  },
+  "ea825": {
+   "name": "VW Group 4.0 TFSI V8 (EA825)",
+   "what": "4.0-liter V-8, twin-turbo, 48-volt mild hybrid",
+   "study": "vw-ea825",
+   "page": "/engines/vw-ea825/",
+   "yt": [
+    "scy",
+    "vw-ea825"
+   ],
+   "facts": [
+    [
+     "Output",
+     "591 hp (2021) to 621 hp (performance, 2024–)",
+     [
+      "cc21",
+      "ma24"
+     ]
+    ],
+    [
+     "Torque",
+     "590 lb-ft; 627 lb-ft in the performance",
+     [
+      "cc21",
+      "ma22"
+     ]
+    ],
+    [
+     "Mild hybrid",
+     "48-volt belt starter-generator; can coast engine-off at 55–160 km/h (about 34–99 mph)",
+     [
+      "amc23"
+     ]
+    ],
+    [
+     "Turbos",
+     "Two twin-scroll turbos inside the V; cylinders 2, 3, 5 and 8 shut off at light load",
+     [
+      "amc23"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Cylinder bore crack recall (2021)",
+     "kind": "Recall",
+     "rx": "cylinder (bore|wall)|bore crack|cracked (block|cylinder)",
+     "x": "On a small number of 2021 cars (15 units across five Audi models), cracks could form in a cylinder bore. That can lead to an oil leak, a stall or a fire.",
+     "fix": "Dealer replaces the engine for free (NHTSA 21V-339, Audi 10G9).",
+     "src": [
+      "r21"
+     ]
+    },
+    {
+     "t": "Cylinder-on-demand solenoids",
+     "kind": "Parts seller",
+     "rx": "cylinder (on demand|deactivation)|\\bcod\\b|solenoid|misfire",
+     "x": "A parts seller lists failing cylinder deactivation solenoids, with misfires or a check-engine light, around 50,000–90,000 miles.",
+     "fix": "Replace the solenoids.",
+     "src": [
+      "ep825"
+     ]
+    },
+    {
+     "t": "Water pump and thermostat",
+     "kind": "Parts seller",
+     "rx": "coolant (leak|loss)|losing coolant|water pump|thermostat|overheat",
+     "x": "The same seller lists coolant loss and leaks at the thermostat housing or water pump, around 70,000–100,000 miles.",
+     "fix": "The seller suggests replacing the thermostat and water pump together.",
+     "src": [
+      "ep825"
+     ]
+    }
+   ]
+  }
+ },
+ "sources": {
+  "ma14": {
+   "t": "Motor Authority: 2014 Audi RS 7 priced from $105,795 (Jul 2013)",
+   "u": "https://www.motorauthority.com/news/1085901_2014-audi-rs-7-priced-from-105795",
+   "k": "outlet"
+  },
+  "ma16p": {
+   "t": "Motor Authority: 2016 Audi RS 7 preview (Jun 2014)",
+   "u": "https://www.motorauthority.com/news/1092433_2015-audi-rs-7-preview",
+   "k": "outlet"
+  },
+  "ma16": {
+   "t": "Motor Authority: Audi prices 2016 S8 plus from $115,825, RS 7 performance from $129,925 (Nov 2015)",
+   "u": "https://www.motorauthority.com/news/1100930_audi-prices-2016-s8-plus-from-115825-rs-7-performance-from-129925",
+   "k": "outlet"
+  },
+  "awp13": {
+   "t": "Audi press release: Elegance in the extreme, the new Audi RS 7 Sportback (Jan 2013, via Automotive World)",
+   "u": "https://www.automotiveworld.com/news-releases/elegance-in-the-extreme-the-new-audi-rs-7-sportback/",
+   "k": "Audi"
+  },
+  "fe14": {
+   "t": "fueleconomy.gov: 2014 Audi RS 7",
+   "u": "https://www.fueleconomy.gov/feg/bymodel/2014_Audi_RS_7.shtml",
+   "k": "EPA"
+  },
+  "cc21": {
+   "t": "Audi of America: 2021 Audi RS 7 pricing (Mar 2020, via conceptcarz)",
+   "u": "https://www.conceptcarz.com/a36290/2021-audi-rs-7-pricing.aspx",
+   "k": "Audi"
+  },
+  "ma21": {
+   "t": "Motor Authority: First drive review, 2021 Audi RS 7 Sportback (Apr 2021)",
+   "u": "https://www.motorauthority.com/news/1124939_2021-audi-rs-7-sportback-price-specs-review-photos-info",
+   "k": "outlet"
+  },
+  "ma22": {
+   "t": "Motor Authority: 2024 Audi RS 6 Avant performance and RS 7 Sportback performance revealed (Nov 2022)",
+   "u": "https://www.motorauthority.com/news/1137978_2024-audi-rs-6-avant-performance-rs-7-sportback-performance-revealed",
+   "k": "outlet"
+  },
+  "ma24": {
+   "t": "Motor Authority: Audi adds more powerful versions of its RS 6 and RS 7, pricing (Jun 2023)",
+   "u": "https://www.motorauthority.com/news/1140061_2024-audi-rs-6-performance-rs-7-performance-price",
+   "k": "outlet"
+  },
+  "amc23": {
+   "t": "Audi MediaCenter: RS 7 Sportback and RS 7 Sportback performance, engine (Jun 2023)",
+   "u": "https://www.audi.com/en/the-new-audi-rs-7-sportback-high-performance-at-its-most-beautiful-12082/engine-12090",
+   "k": "Audi"
+  },
+  "z60": {
+   "t": "0-60specs.com: Audi RS 7 0-60 runs by magazine (Car and Driver, MotorTrend, Road & Track)",
+   "u": "https://www.0-60specs.com/audi-rs7-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "r22": {
+   "t": "NHTSA recall 22V-178: 2014–2017 RS 7 and other 4.0 TFSI Audis, clogged turbo oil strainer (Mar 2022)",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=22V178000",
+   "k": "Recall"
+  },
+  "r21": {
+   "t": "NHTSA recall 21V-339: 2021 RS 7 and other 4.0 TFSI Audis, cracked cylinder bore (May 2021)",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=21V339000",
+   "k": "Recall"
+  },
+  "sg26": {
+   "t": "SlashGear: 6 Audi engines you should steer clear of (Jul 2026)",
+   "u": "https://www.slashgear.com/2210206/audi-engines-to-steer-clear-of/",
+   "k": "outlet"
+  },
+  "eprs7": {
+   "t": "Euro Premium Parts: Audi RS7 C7 reliability guide (Oct 2026)",
+   "u": "https://europremiumparts.com/blogs/audi-buying-guides/audi-rs7-4g-reliability-guide-everything-you-need-to-know-before-buying",
+   "k": "parts seller"
+  },
+  "epp6": {
+   "t": "Euro Premium Parts: used Audi RS6 C7 reliability guide (Dec 2025)",
+   "u": "https://europremiumparts.com/en-gb/blogs/audi-buying-guides/used-audi-rs6-c7-reliability-how-definitive-guide",
+   "k": "parts seller"
+  },
+  "ep825": {
+   "t": "Euro Premium Parts: Audi EA825 engine guide, reliability and common problems (Nov 2026)",
+   "u": "https://europremiumparts.com/en-au/blogs/audi-buying-guides/audi-ea825-engine-guide-reliability-common-problems-tuning-potential",
+   "k": "parts seller"
+  }
+ },
+ "yt_study": "car-audi-rs7",
+ "yt_model": "",
+ "nhtsa": {
+  "make": "AUDI",
+  "models": [
+   "RS 7"
+  ],
+  "note": "Counted from the complaints owners filed under RS 7. NHTSA files RS 7 recalls under the A7, so the recall list here can be empty; check a VIN for open recalls."
+ },
+ "compare": [
+  {
+   "slug": "audi-rs5",
+   "name": "Audi RS 5"
+  },
+  {
+   "slug": "cts-v",
+   "name": "Cadillac CTS-V"
+  },
+  {
+   "slug": "ct5-v-blackwing",
+   "name": "Cadillac CT5-V Blackwing"
+  },
+  {
+   "slug": "amg-c63",
+   "name": "Mercedes-AMG C63"
+  }
+ ]
+}

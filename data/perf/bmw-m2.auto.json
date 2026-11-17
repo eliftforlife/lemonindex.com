@@ -1,0 +1,626 @@
+{
+ "built": "2026-11-17",
+ "nhtsa": {
+  "by_year": {
+   "2016": 5,
+   "2017": 17,
+   "2018": 3,
+   "2020": 2,
+   "2021": 1,
+   "2023": 1,
+   "2024": 1
+  },
+  "gens": {
+   "f87": {
+    "n": 25,
+    "issues": {
+     "Cracked charge pipe": {
+      "n": 2,
+      "ex": [
+       "11432414",
+       "11563376"
+      ]
+     },
+     "Electric water pump": {
+      "n": 0,
+      "ex": []
+     },
+     "Oil leaks from gaskets": {
+      "n": 0,
+      "ex": []
+     },
+     "High-pressure fuel pump": {
+      "n": 0,
+      "ex": []
+     }
+    },
+    "parts": [
+     [
+      "Exterior lighting",
+      21
+     ],
+     [
+      "Engine",
+      2
+     ],
+     [
+      "Electrical system",
+      1
+     ],
+     [
+      "Unknown or other",
+      1
+     ],
+     [
+      "Visibility/wiper",
+      1
+     ],
+     [
+      "Power train",
+      1
+     ]
+    ]
+   },
+   "f87c": {
+    "n": 3,
+    "issues": {
+     "Crank hub": {
+      "n": 0,
+      "ex": []
+     },
+     "Oil leaks": {
+      "n": 0,
+      "ex": []
+     },
+     "Carbon buildup": {
+      "n": 0,
+      "ex": []
+     }
+    },
+    "parts": [
+     [
+      "Unknown or other",
+      1
+     ],
+     [
+      "Suspension",
+      1
+     ],
+     [
+      "Engine",
+      1
+     ]
+    ]
+   },
+   "g87": {
+    "n": 2,
+    "issues": {
+     "Oil use": {
+      "n": 0,
+      "ex": []
+     }
+    },
+    "parts": [
+     [
+      "Parking brake",
+      1
+     ],
+     [
+      "Power train",
+      1
+     ]
+    ]
+   }
+  },
+  "parts": [
+   [
+    "Exterior lighting",
+    21
+   ],
+   [
+    "Engine",
+    3
+   ],
+   [
+    "Unknown or other",
+    2
+   ],
+   [
+    "Suspension",
+    2
+   ],
+   [
+    "Power train",
+    2
+   ],
+   [
+    "Electrical system",
+    1
+   ]
+  ]
+ },
+ "recalls": {
+  "2016": [
+   {
+    "id": "16V653000",
+    "part": "STRUCTURE:FRAME AND MEMBERS",
+    "summary": "BMW North America, LLC (BMW) is recalling certain model year 2016 BMW M2 Coupe vehicles, 2015-2017 M3 Sedan vehicles and 2015-2016 M4 Coupe and M4 Convertible vehicles.  During servicing of the rear differential for a prior service action, the rear sub-frame bolts may have been reused instead of being replaced.  Reuse of the existing bolts may cause the bolts to loosen."
+   }
+  ],
+  "2017": [],
+  "2018": [
+   {
+    "id": "17V719000",
+    "part": "ELECTRICAL SYSTEM: INSTRUMENT CLUSTER/PANEL",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2018 230i, 230i xDrive, M240i, M240i xDrive, M2, and X3 xDrive 30i SAV vehicles.  These vehicles may have an error in the software for the instrument panel, causing the display to not properly illuminate.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 101, \"Control and Displa"
+   }
+  ],
+  "2019": [
+   {
+    "id": "19V352000",
+    "part": "AIR BAGS:KNEE BOLSTER",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2019-2020 230i, 230i xDrive, M240i, M240i xDrive, M2 Competition Coupe, 430i, 430i xDrive, 440i, 440i xDrive, M4, and 2019 330i xDrive Sportswagon vehicles.  The driver and passenger knee air bag assemblies may have been improperly folded and assembled."
+   }
+  ],
+  "2020": [
+   {
+    "id": "19V352000",
+    "part": "AIR BAGS:KNEE BOLSTER",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2019-2020 230i, 230i xDrive, M240i, M240i xDrive, M2 Competition Coupe, 430i, 430i xDrive, 440i, 440i xDrive, M4, and 2019 330i xDrive Sportswagon vehicles.  The driver and passenger knee air bag assemblies may have been improperly folded and assembled."
+   },
+   {
+    "id": "20V666000",
+    "part": "FUEL SYSTEM, GASOLINE:FUEL INJECTION SYSTEM",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2020-2021 M2 Coupe and 2020 M4 Coupe vehicles.  Fuel injectors may have been installed without a damping component which is used to reduce vibration.  If a damping component is not present, vibration will increase at the connection between the fuel line and the fuel rail, which over time, can result in damage at the connection."
+   }
+  ],
+  "2021": [
+   {
+    "id": "21V554000",
+    "part": "SEAT BELTS",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2021 2 Series (230i, 230i xDrive, M240i, M240i xDrive), 330e, 330e Xdrive, 4 Series Coupe (430i, 430i xDrive, M440i xDrive) M4 Coupe, M4 Competition Coupe, BMW 4 Series Convertible (430i, M440i), BMW X1 sDrive28i, xDrive28i, 2 Series Gran Coupe (228i, 228i xDrive, M235i xDrive), M2 Competition Coupe, 330i, 330i xDrive, M340i, M340i xDrive, M3, M"
+   },
+   {
+    "id": "20V666000",
+    "part": "FUEL SYSTEM, GASOLINE:FUEL INJECTION SYSTEM",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2020-2021 M2 Coupe and 2020 M4 Coupe vehicles.  Fuel injectors may have been installed without a damping component which is used to reduce vibration.  If a damping component is not present, vibration will increase at the connection between the fuel line and the fuel rail, which over time, can result in damage at the connection."
+   }
+  ],
+  "2023": [
+   {
+    "id": "23V099000",
+    "part": "VISIBILITY:POWER WINDOW DEVICES AND CONTROLS",
+    "summary": "BMW of North Americal, LLC (BMW) is recalling certain 2023 8 Series Coupe (840i, 840i xDrive, M850i xDrive, M8), 8 Series Convertible (840i, 840i xDrive, M850i xDrive, M8), 8 Series Gran Coupe (840i, 840i xDrive, M850i xDrive, M8, Alpine B8 xDrive), 2 Series Coupe (230i, 230i xDrive, M240i xDrive, M2), and 2022-2023 Z4 sDrive30i, Z4 M40i vehicles.  When the digital key is removed from the vehicle,"
+   }
+  ],
+  "2024": [],
+  "2025": [],
+  "2026": []
+ },
+ "yt": {
+  "car-bmw-m2": null,
+  "bmw-s55": {
+   "videos": 187,
+   "praise": [
+    [
+     "Looks",
+     28
+    ],
+    [
+     "Power and acceleration",
+     19
+    ],
+    [
+     "Handling and steering",
+     17
+    ],
+    [
+     "Everyday comfort",
+     15
+    ]
+   ],
+   "trouble": [
+    [
+     "Crank hub",
+     20
+    ],
+    [
+     "Oil leaks (gaskets, seals, housings)",
+     9
+    ],
+    [
+     "Oil leaks",
+     7
+    ],
+    [
+     "DCT gearbox",
+     5
+    ]
+   ],
+   "top": [
+    {
+     "id": "CuiujPC8cmo",
+     "title": "2021 Toyota Supra meets the BMW M2 CS: the Mk4's real successor | Jason Cammisa on the Icons Ep. 01",
+     "views": 4015066,
+     "ch": "Hagerty"
+    },
+    {
+     "id": "XbB_USZCLDc",
+     "title": "2021 Mustang Mach 1 vs BMW M2 CS vs Honda Civic Type R LE // Battle Of The Special Editions",
+     "views": 1813602,
+     "ch": "Throttle House"
+    },
+    {
+     "id": "lX-s8QXago8",
+     "title": "2019 BMW M2 Competition Review - The Best BMW M Car",
+     "views": 1550662,
+     "ch": "TheStraightPipes"
+    }
+   ]
+  },
+  "bmw-s58": {
+   "videos": 176,
+   "praise": [
+    [
+     "Looks",
+     32
+    ],
+    [
+     "Everyday comfort",
+     23
+    ],
+    [
+     "Handling and steering",
+     21
+    ],
+    [
+     "Power and acceleration",
+     21
+    ]
+   ],
+   "trouble": [
+    [
+     "Coolant leaks / water pump / overheating",
+     6
+    ],
+    [
+     "Oil leaks (gaskets, seals, housings)",
+     5
+    ]
+   ],
+   "top": [
+    {
+     "id": "u3EiY7sQWr4",
+     "title": "The Definitive Review: M3 Competition feat G82 M4 and E30 M3 — Jason Cammisa on the Icons — Ep. 03",
+     "views": 3021303,
+     "ch": "Hagerty"
+    },
+    {
+     "id": "gDmpq-EdlX8",
+     "title": "2020 BMW X3M Competition Review - The M3 of SUV's",
+     "views": 1030204,
+     "ch": "TheStraightPipes"
+    },
+    {
+     "id": "IMUKUIW-MVs",
+     "title": "BMW X3M & X4M review on road and track - see how quick the next M3's engine is to 60mph!",
+     "views": 982173,
+     "ch": "carwow"
+    }
+   ]
+  }
+ },
+ "scores": {
+  "bmw-s55": {
+   "years": {
+    "2015": {
+     "score": 49,
+     "weight": 21.2,
+     "videos": 112,
+     "named": 3,
+     "top": [
+      {
+       "id": "-rhX3lGFvQM",
+       "title": "Restoring a 100,000 km BMW M4 F82 ZCP | Complete Maintenance & Overhaul Guide",
+       "views": 1381301
+      },
+      {
+       "id": "vqGX7Y0GZXE",
+       "title": "Chris Harris on Cars | BMW F80 M3 - Full Road & Track Test",
+       "views": 963128
+      },
+      {
+       "id": "JAzWTqPP_sg",
+       "title": "Watch this before buying a used BMW M3 or M4 (F80, F82, F83 - what to look for)",
+       "views": 833163
+      }
+     ]
+    },
+    "2016": {
+     "score": 47,
+     "weight": 22.2,
+     "videos": 113,
+     "named": 4,
+     "top": [
+      {
+       "id": "-rhX3lGFvQM",
+       "title": "Restoring a 100,000 km BMW M4 F82 ZCP | Complete Maintenance & Overhaul Guide",
+       "views": 1381301
+      },
+      {
+       "id": "vqGX7Y0GZXE",
+       "title": "Chris Harris on Cars | BMW F80 M3 - Full Road & Track Test",
+       "views": 963128
+      },
+      {
+       "id": "JAzWTqPP_sg",
+       "title": "Watch this before buying a used BMW M3 or M4 (F80, F82, F83 - what to look for)",
+       "views": 833163
+      }
+     ]
+    },
+    "2017": {
+     "score": 49,
+     "weight": 21.2,
+     "videos": 112,
+     "named": 3,
+     "top": [
+      {
+       "id": "-rhX3lGFvQM",
+       "title": "Restoring a 100,000 km BMW M4 F82 ZCP | Complete Maintenance & Overhaul Guide",
+       "views": 1381301
+      },
+      {
+       "id": "vqGX7Y0GZXE",
+       "title": "Chris Harris on Cars | BMW F80 M3 - Full Road & Track Test",
+       "views": 963128
+      },
+      {
+       "id": "JAzWTqPP_sg",
+       "title": "Watch this before buying a used BMW M3 or M4 (F80, F82, F83 - what to look for)",
+       "views": 833163
+      }
+     ]
+    },
+    "2018": {
+     "score": 50,
+     "weight": 24.2,
+     "videos": 115,
+     "named": 6,
+     "top": [
+      {
+       "id": "-rhX3lGFvQM",
+       "title": "Restoring a 100,000 km BMW M4 F82 ZCP | Complete Maintenance & Overhaul Guide",
+       "views": 1381301
+      },
+      {
+       "id": "vqGX7Y0GZXE",
+       "title": "Chris Harris on Cars | BMW F80 M3 - Full Road & Track Test",
+       "views": 963128
+      },
+      {
+       "id": "JAzWTqPP_sg",
+       "title": "Watch this before buying a used BMW M3 or M4 (F80, F82, F83 - what to look for)",
+       "views": 833163
+      }
+     ]
+    },
+    "2019": {
+     "score": 51,
+     "weight": 26.1,
+     "videos": 100,
+     "named": 10,
+     "top": [
+      {
+       "id": "lX-s8QXago8",
+       "title": "2019 BMW M2 Competition Review - The Best BMW M Car",
+       "views": 1550662
+      },
+      {
+       "id": "-rhX3lGFvQM",
+       "title": "Restoring a 100,000 km BMW M4 F82 ZCP | Complete Maintenance & Overhaul Guide",
+       "views": 1381301
+      },
+      {
+       "id": "JAzWTqPP_sg",
+       "title": "Watch this before buying a used BMW M3 or M4 (F80, F82, F83 - what to look for)",
+       "views": 833163
+      }
+     ]
+    },
+    "2020": {
+     "score": 55,
+     "weight": 35.6,
+     "videos": 110,
+     "named": 7,
+     "top": [
+      {
+       "id": "-rhX3lGFvQM",
+       "title": "Restoring a 100,000 km BMW M4 F82 ZCP | Complete Maintenance & Overhaul Guide",
+       "views": 1381301
+      },
+      {
+       "id": "9njxVfJJSHE",
+       "title": "Chris Harris Drives His BMW M2 CS",
+       "views": 1148318
+      },
+      {
+       "id": "JAzWTqPP_sg",
+       "title": "Watch this before buying a used BMW M3 or M4 (F80, F82, F83 - what to look for)",
+       "views": 833163
+      }
+     ]
+    },
+    "2021": {
+     "score": 48,
+     "weight": 17.5,
+     "videos": 71,
+     "named": 5,
+     "top": [
+      {
+       "id": "C5_8Vm0fGtA",
+       "title": "BMW M2 vs M2 Competition: Which Should You Buy?",
+       "views": 344091
+      },
+      {
+       "id": "C9CUkonyIZs",
+       "title": "BMW M2 CS on-road review. Worth the £23k premium over the M2 Competition?",
+       "views": 316469
+      },
+      {
+       "id": "pKqx6ZhasJw",
+       "title": "This BMW Engine is FINALLY Toyota Level Reliable (N54/N55/S55/B58)",
+       "views": 316003
+      }
+     ]
+    }
+   },
+   "videos": 168,
+   "pulled": 200
+  },
+  "bmw-s58": {
+   "years": {
+    "2020": {
+     "score": 56,
+     "weight": 21.7,
+     "videos": 65,
+     "named": 13,
+     "top": [
+      {
+       "id": "gDmpq-EdlX8",
+       "title": "2020 BMW X3M Competition Review - The M3 of SUV's",
+       "views": 1030204
+      },
+      {
+       "id": "IMUKUIW-MVs",
+       "title": "BMW X3M & X4M review on road and track - see how quick the next M3's engine is to 60mph!",
+       "views": 982173
+      },
+      {
+       "id": "nzwsdBdFxmI",
+       "title": "$100,000 M3 SUV! BMW X3M Competition Review",
+       "views": 919654
+      }
+     ]
+    },
+    "2021": {
+     "score": 56,
+     "weight": 25.5,
+     "videos": 116,
+     "named": 5,
+     "top": [
+      {
+       "id": "u3EiY7sQWr4",
+       "title": "The Definitive Review: M3 Competition feat G82 M4 and E30 M3 — Jason Cammisa on the Icons — Ep. 03",
+       "views": 3021303
+      },
+      {
+       "id": "IMUKUIW-MVs",
+       "title": "BMW X3M & X4M review on road and track - see how quick the next M3's engine is to 60mph!",
+       "views": 982173
+      },
+      {
+       "id": "nzwsdBdFxmI",
+       "title": "$100,000 M3 SUV! BMW X3M Competition Review",
+       "views": 919654
+      }
+     ]
+    },
+    "2022": {
+     "score": 59,
+     "weight": 31.5,
+     "videos": 122,
+     "named": 11,
+     "top": [
+      {
+       "id": "u3EiY7sQWr4",
+       "title": "The Definitive Review: M3 Competition feat G82 M4 and E30 M3 — Jason Cammisa on the Icons — Ep. 03",
+       "views": 3021303
+      },
+      {
+       "id": "IMUKUIW-MVs",
+       "title": "BMW X3M & X4M review on road and track - see how quick the next M3's engine is to 60mph!",
+       "views": 982173
+      },
+      {
+       "id": "nzwsdBdFxmI",
+       "title": "$100,000 M3 SUV! BMW X3M Competition Review",
+       "views": 919654
+      }
+     ]
+    },
+    "2023": {
+     "score": 54,
+     "weight": 31.8,
+     "videos": 135,
+     "named": 5,
+     "top": [
+      {
+       "id": "u3EiY7sQWr4",
+       "title": "The Definitive Review: M3 Competition feat G82 M4 and E30 M3 — Jason Cammisa on the Icons — Ep. 03",
+       "views": 3021303
+      },
+      {
+       "id": "IMUKUIW-MVs",
+       "title": "BMW X3M & X4M review on road and track - see how quick the next M3's engine is to 60mph!",
+       "views": 982173
+      },
+      {
+       "id": "nzwsdBdFxmI",
+       "title": "$100,000 M3 SUV! BMW X3M Competition Review",
+       "views": 919654
+      }
+     ]
+    },
+    "2024": {
+     "score": 54,
+     "weight": 31.8,
+     "videos": 135,
+     "named": 5,
+     "top": [
+      {
+       "id": "u3EiY7sQWr4",
+       "title": "The Definitive Review: M3 Competition feat G82 M4 and E30 M3 — Jason Cammisa on the Icons — Ep. 03",
+       "views": 3021303
+      },
+      {
+       "id": "IMUKUIW-MVs",
+       "title": "BMW X3M & X4M review on road and track - see how quick the next M3's engine is to 60mph!",
+       "views": 982173
+      },
+      {
+       "id": "nzwsdBdFxmI",
+       "title": "$100,000 M3 SUV! BMW X3M Competition Review",
+       "views": 919654
+      }
+     ]
+    },
+    "2025": {
+     "score": 56,
+     "weight": 31.8,
+     "videos": 135,
+     "named": 5,
+     "top": [
+      {
+       "id": "u3EiY7sQWr4",
+       "title": "The Definitive Review: M3 Competition feat G82 M4 and E30 M3 — Jason Cammisa on the Icons — Ep. 03",
+       "views": 3021303
+      },
+      {
+       "id": "IMUKUIW-MVs",
+       "title": "BMW X3M & X4M review on road and track - see how quick the next M3's engine is to 60mph!",
+       "views": 982173
+      },
+      {
+       "id": "nzwsdBdFxmI",
+       "title": "$100,000 M3 SUV! BMW X3M Competition Review",
+       "views": 919654
+      }
+     ]
+    }
+   },
+   "videos": 174,
+   "pulled": 200
+  }
+ }
+}

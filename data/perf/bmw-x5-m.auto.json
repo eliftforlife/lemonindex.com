@@ -1,0 +1,294 @@
+{
+ "built": "2026-11-17",
+ "nhtsa": {
+  "by_year": {
+   "2012": 5
+  },
+  "gens": {
+   "e70": {
+    "n": 5,
+    "issues": {
+     "Valve stem seals and oil use": {
+      "n": 0,
+      "ex": []
+     },
+     "Turbo failures": {
+      "n": 0,
+      "ex": []
+     },
+     "Rod bearing wear": {
+      "n": 1,
+      "ex": [
+       "11133442"
+      ]
+     },
+     "Auxiliary water pump recall (2010–2012)": {
+      "n": 2,
+      "ex": [
+       "11101463",
+       "11130534"
+      ]
+     }
+    },
+    "parts": [
+     [
+      "Engine",
+      4
+     ],
+     [
+      "Electrical system",
+      1
+     ]
+    ]
+   },
+   "f85": {
+    "n": 0,
+    "issues": {
+     "Valve stem seals and oil use": {
+      "n": 0,
+      "ex": []
+     },
+     "Turbo failures": {
+      "n": 0,
+      "ex": []
+     },
+     "Rod bearing wear": {
+      "n": 0,
+      "ex": []
+     },
+     "Auxiliary water pump recall (2010–2012)": {
+      "n": 0,
+      "ex": []
+     }
+    },
+    "parts": []
+   },
+   "f95": {
+    "n": 0,
+    "issues": {
+     "Valve stem seals and oil use": {
+      "n": 0,
+      "ex": []
+     },
+     "Turbo failures": {
+      "n": 0,
+      "ex": []
+     },
+     "Rod bearing wear": {
+      "n": 0,
+      "ex": []
+     },
+     "Auxiliary water pump recall (2010–2012)": {
+      "n": 0,
+      "ex": []
+     }
+    },
+    "parts": []
+   },
+   "f95lci": {
+    "n": 0,
+    "issues": {},
+    "parts": []
+   }
+  },
+  "parts": [
+   [
+    "Engine",
+    4
+   ],
+   [
+    "Electrical system",
+    1
+   ]
+  ]
+ },
+ "recalls": {
+  "2010": [
+   {
+    "id": "18V248000",
+    "part": "ENGINE AND ENGINE COOLING:ENGINE:GASOLINE:TURBO/SUPERCHARGER",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2011-2012 BMW 550i, 550i xDrive, 550i Gran Turismo, 550i Gran Turismo xDrive, 750i, 750Li, 750i xDrive, 750Li xDrive, 760Li, X5 xDrive50i, X5 M, X6 xDrive50i, X6 M, ActiveHybrid7, MINI Cooper S Convertible, John Cooper Works (JCW) Convertible, Cooper S Countryman, Cooper S Countryman ALL4, Cooper S, JCW, Cooper S Clubman, JCW Clubman, Cooper S R"
+   }
+  ],
+  "2011": [
+   {
+    "id": "18V248000",
+    "part": "ENGINE AND ENGINE COOLING:ENGINE:GASOLINE:TURBO/SUPERCHARGER",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2011-2012 BMW 550i, 550i xDrive, 550i Gran Turismo, 550i Gran Turismo xDrive, 750i, 750Li, 750i xDrive, 750Li xDrive, 760Li, X5 xDrive50i, X5 M, X6 xDrive50i, X6 M, ActiveHybrid7, MINI Cooper S Convertible, John Cooper Works (JCW) Convertible, Cooper S Countryman, Cooper S Countryman ALL4, Cooper S, JCW, Cooper S Clubman, JCW Clubman, Cooper S R"
+   }
+  ],
+  "2012": [
+   {
+    "id": "18V248000",
+    "part": "ENGINE AND ENGINE COOLING:ENGINE:GASOLINE:TURBO/SUPERCHARGER",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2011-2012 BMW 550i, 550i xDrive, 550i Gran Turismo, 550i Gran Turismo xDrive, 750i, 750Li, 750i xDrive, 750Li xDrive, 760Li, X5 xDrive50i, X5 M, X6 xDrive50i, X6 M, ActiveHybrid7, MINI Cooper S Convertible, John Cooper Works (JCW) Convertible, Cooper S Countryman, Cooper S Countryman ALL4, Cooper S, JCW, Cooper S Clubman, JCW Clubman, Cooper S R"
+   }
+  ],
+  "2013": [],
+  "2014": [],
+  "2015": [],
+  "2016": [],
+  "2017": [],
+  "2018": [
+   {
+    "id": "17V727000",
+    "part": "SUSPENSION",
+    "summary": "BMW of North America, LLC (BMW) is recalling certain 2018 BMW X5 SAV, X5 M SAV, X6 SAV, and X6 M SAV vehicles.  Bolts that secure the front suspension may not have been properly tightened."
+   }
+  ],
+  "2019": [],
+  "2020": [],
+  "2021": [],
+  "2022": [],
+  "2023": [],
+  "2024": [],
+  "2025": [],
+  "2026": []
+ },
+ "yt": {
+  "car-bmw-x5-m": null,
+  "bmw-s63": null,
+  "bmw-s68": {
+   "videos": 175,
+   "praise": [
+    [
+     "Looks",
+     27
+    ],
+    [
+     "Power and acceleration",
+     14
+    ],
+    [
+     "Interior and seats",
+     12
+    ],
+    [
+     "Everyday comfort",
+     12
+    ]
+   ],
+   "trouble": [],
+   "top": [
+    {
+     "id": "xmOSb5SbRZ8",
+     "title": "New BMW XM (2024) - Wild Luxury SUV by Renegade Design",
+     "views": 2689604,
+     "ch": "RoCars"
+    },
+    {
+     "id": "23SwN6tiXWI",
+     "title": "2023 BMW XM - BMW's Most Expensive Powerful SUV!",
+     "views": 2204251,
+     "ch": "MEDCARS"
+    },
+    {
+     "id": "xalL0sR2F9o",
+     "title": "2023 BMW XM Review // The Most Overpriced Car Of The Decade",
+     "views": 1746077,
+     "ch": "Throttle House"
+    }
+   ]
+  }
+ },
+ "scores": {
+  "bmw-s68": {
+   "years": {
+    "2023": {
+     "score": 56,
+     "weight": 41.5,
+     "videos": 94,
+     "named": 24,
+     "top": [
+      {
+       "id": "23SwN6tiXWI",
+       "title": "2023 BMW XM - BMW's Most Expensive Powerful SUV!",
+       "views": 2204251
+      },
+      {
+       "id": "xalL0sR2F9o",
+       "title": "2023 BMW XM Review // The Most Overpriced Car Of The Decade",
+       "views": 1746077
+      },
+      {
+       "id": "_UjdSZfh7_I",
+       "title": "The 2023 BMW XM Is a Controversial $160,000 Fast Luxury SUV",
+       "views": 946815
+      }
+     ]
+    },
+    "2024": {
+     "score": 53,
+     "weight": 35.5,
+     "videos": 88,
+     "named": 18,
+     "top": [
+      {
+       "id": "xmOSb5SbRZ8",
+       "title": "New BMW XM (2024) - Wild Luxury SUV by Renegade Design",
+       "views": 2689604
+      },
+      {
+       "id": "Q0JXN__wX_A",
+       "title": "Original BMW X5 Designer ROASTS The BMW XM!!",
+       "views": 924744
+      },
+      {
+       "id": "i6tJLKJGeVw",
+       "title": "NEW BMW XM (653 hp) - POV drive & full walkaround!",
+       "views": 828193
+      }
+     ]
+    },
+    "2025": {
+     "score": 55,
+     "weight": 54.5,
+     "videos": 120,
+     "named": 25,
+     "top": [
+      {
+       "id": "CLecdI8ibP4",
+       "title": "BMW M5 G90 - Fast But Very Heavy, Not As Fun As Before | Faisal Khan",
+       "views": 1147278
+      },
+      {
+       "id": "Q0JXN__wX_A",
+       "title": "Original BMW X5 Designer ROASTS The BMW XM!!",
+       "views": 924744
+      },
+      {
+       "id": "i6tJLKJGeVw",
+       "title": "NEW BMW XM (653 hp) - POV drive & full walkaround!",
+       "views": 828193
+      }
+     ]
+    },
+    "2026": {
+     "score": 56,
+     "weight": 48.5,
+     "videos": 114,
+     "named": 19,
+     "top": [
+      {
+       "id": "CLecdI8ibP4",
+       "title": "BMW M5 G90 - Fast But Very Heavy, Not As Fun As Before | Faisal Khan",
+       "views": 1147278
+      },
+      {
+       "id": "Q0JXN__wX_A",
+       "title": "Original BMW X5 Designer ROASTS The BMW XM!!",
+       "views": 924744
+      },
+      {
+       "id": "i6tJLKJGeVw",
+       "title": "NEW BMW XM (653 hp) - POV drive & full walkaround!",
+       "views": 828193
+      }
+     ]
+    }
+   },
+   "videos": 180,
+   "pulled": 200
+  }
+ }
+}

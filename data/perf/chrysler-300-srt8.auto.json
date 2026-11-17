@@ -1,0 +1,1038 @@
+{
+ "built": "2026-11-17",
+ "nhtsa": {
+  "by_year": {
+   "2004": 2,
+   "2005": 1113,
+   "2006": 1705,
+   "2007": 610,
+   "2008": 745,
+   "2009": 94,
+   "2010": 133,
+   "2011": 225,
+   "2012": 442,
+   "2013": 341,
+   "2014": 248,
+   "2015": 111,
+   "2016": 83,
+   "2017": 86,
+   "2018": 153,
+   "2019": 61,
+   "2020": 9,
+   "2021": 21,
+   "2022": 5,
+   "2023": 6
+  },
+  "gens": {
+   "lx": {
+    "n": 4400,
+    "issues": {},
+    "parts": [
+     [
+      "Air bags",
+      1006
+     ],
+     [
+      "Electrical system",
+      922
+     ],
+     [
+      "Power train",
+      875
+     ],
+     [
+      "Engine",
+      678
+     ],
+     [
+      "Fuel/propulsion system",
+      455
+     ],
+     [
+      "Fuel system, gasoline",
+      336
+     ]
+    ]
+   },
+   "ld": {
+    "n": 1031,
+    "issues": {
+     "Lifter and camshaft failure (\"HEMI tick\")": {
+      "n": 12,
+      "ex": [
+       "10479634",
+       "10519299"
+      ]
+     }
+    },
+    "parts": [
+     [
+      "Electrical system",
+      448
+     ],
+     [
+      "Power train",
+      215
+     ],
+     [
+      "Air bags",
+      135
+     ],
+     [
+      "Engine",
+      128
+     ],
+     [
+      "Unknown or other",
+      76
+     ],
+     [
+      "Service brakes",
+      58
+     ]
+    ]
+   }
+  },
+  "parts": [
+   [
+    "Electrical system",
+    1370
+   ],
+   [
+    "Air bags",
+    1141
+   ],
+   [
+    "Power train",
+    1090
+   ],
+   [
+    "Engine",
+    806
+   ],
+   [
+    "Fuel/propulsion system",
+    487
+   ],
+   [
+    "Fuel system, gasoline",
+    338
+   ]
+  ]
+ },
+ "recalls": {
+  "2005": [
+   {
+    "id": "16V352000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Chrysler (FCA US LLC) expanded the affected population to include 73,712 2005-2009 RAM 2500 trucks produced at the St. Louis North Assembly Plant.  With this change, Chrysler is recalling certain model year 2004-2008 RAM 1500, 2005-2009 RAM 2500, 2006-2009 RAM 3500, 2007-2010 RAM 3500 Cab Chassis, 2008-2010 RAM 4500 and 5500 Cab Chassis, 2004-2009 Dodge Durango, 2007-2009 Chrysler Aspen, 2007-2012"
+   },
+   {
+    "id": "14V770000",
+    "part": "AIR BAGS",
+    "summary": "Chrysler Group LLC (Chrysler) is recalling certain model year 2004-2005 Dodge Ram 1500, 2500, and 3500, 2004-2005 Dodge Durango, 2005 Dodge Dakota, 2005 Dodge Magnum and 2005 Chrysler 300, 300C and 300 SRT8 vehicles originally sold, or ever registered, in geographic locations associated with high absolute humidity.  Specifically, vehicles sold, or ever registered, in Alabama, Florida, Georgia, Haw"
+   },
+   {
+    "id": "15V313000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "Chrysler (FCA US LLC) is recalling certain model year 2005-2009 Dodge Ram 2500, 2004-2008 Dodge Ram 1500 and Durango, 2006-2009 Dodge Ram 3500, 2008-2010 Dodge Ram 4500 and 5500, 2007-2008 Chrysler Aspen, 2005-2010 Chrysler 300, 300C, 300S, and SRT8, 2006-2010 Dodge Charger, 2005-2008 Magnum, 2005-2011 Dodge Dakota, and 2006-2009 Mitsubishi Raider vehicles.  The affected vehicles are equipped with"
+   },
+   {
+    "id": "05V460000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION",
+    "summary": "ON CERTAIN PICKUP TRUCKS, SPORT UTILITY AND PASSENGER VEHICLES EQUIPPED WITH 42RLE AUTOMATIC TRANSMISSIONS, THE CUP PLUG THAT RETAINS THE PARK PAWL ANCHOR SHAFT MAY BE IMPROPERLY INSTALLED.  IF THE SHAFT MOVES OUT OF POSITION, THE VEHICLE MAY NOT BE ABLE TO ACHIEVE 'PARK' POSITION."
+   },
+   {
+    "id": "04V335000",
+    "part": "SEAT BELTS:FRONT",
+    "summary": "ON CERTAIN PASSENGER VEHICLES, THE FRONT SHOULDER BELT ADJUSTABLE TURNING LOOP (ATL) BOLTS MAY NOT HAVE BEEN PROPERLY TIGHTENED."
+   },
+   {
+    "id": "04V334000",
+    "part": "ELECTRICAL SYSTEM:12V/24V/48V BATTERY:CABLES",
+    "summary": "ON CERTAIN PASSENGER VEHICLES, THE BATTERY CABLE FASTENERS AT THE BULKHEAD STUD MAY NOT HAVE BEEN PROPERLY TIGHTENED."
+   },
+   {
+    "id": "04V333000",
+    "part": "SEAT BELTS:REAR/OTHER",
+    "summary": "ON CERTAIN PASSENGER VEHICLES, A SPOT WELDING OPERATION FOR THE REAR FLOORPAN REINFORCEMENT MAY NOT HAVE BEEN PERFORMED."
+   }
+  ],
+  "2006": [
+   {
+    "id": "16V352000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Chrysler (FCA US LLC) expanded the affected population to include 73,712 2005-2009 RAM 2500 trucks produced at the St. Louis North Assembly Plant.  With this change, Chrysler is recalling certain model year 2004-2008 RAM 1500, 2005-2009 RAM 2500, 2006-2009 RAM 3500, 2007-2010 RAM 3500 Cab Chassis, 2008-2010 RAM 4500 and 5500 Cab Chassis, 2004-2009 Dodge Durango, 2007-2009 Chrysler Aspen, 2007-2012"
+   },
+   {
+    "id": "15V313000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "Chrysler (FCA US LLC) is recalling certain model year 2005-2009 Dodge Ram 2500, 2004-2008 Dodge Ram 1500 and Durango, 2006-2009 Dodge Ram 3500, 2008-2010 Dodge Ram 4500 and 5500, 2007-2008 Chrysler Aspen, 2005-2010 Chrysler 300, 300C, 300S, and SRT8, 2006-2010 Dodge Charger, 2005-2008 Magnum, 2005-2011 Dodge Dakota, and 2006-2009 Mitsubishi Raider vehicles.  The affected vehicles are equipped with"
+   },
+   {
+    "id": "06V149000",
+    "part": "SERVICE BRAKES, HYDRAULIC",
+    "summary": "CERTAIN PASSENGER VEHICLES EQUIPPED WITH 2.7 LITER ENGINES AND MK25E BRAKING SYSTEMS MAY EXHIBIT INADEQUATE CLEARANCE BETWEEN THE REAR BRAKE TUBES AND THE EXHAUST GAS RECIRCULATION TUBE.  CONTACT BETWEEN THE BRAKE TUBES AND EXHAUST GAS RECIRCULATION TUBE OVER AN EXTENDED PERIOD OF TIME MAY CAUSE THE BRAKE TUBES TO WEAR THROUGH AND CAUSE A BRAKE FLUID LEAK."
+   },
+   {
+    "id": "05V460000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION",
+    "summary": "ON CERTAIN PICKUP TRUCKS, SPORT UTILITY AND PASSENGER VEHICLES EQUIPPED WITH 42RLE AUTOMATIC TRANSMISSIONS, THE CUP PLUG THAT RETAINS THE PARK PAWL ANCHOR SHAFT MAY BE IMPROPERLY INSTALLED.  IF THE SHAFT MOVES OUT OF POSITION, THE VEHICLE MAY NOT BE ABLE TO ACHIEVE 'PARK' POSITION."
+   }
+  ],
+  "2007": [
+   {
+    "id": "16V352000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Chrysler (FCA US LLC) expanded the affected population to include 73,712 2005-2009 RAM 2500 trucks produced at the St. Louis North Assembly Plant.  With this change, Chrysler is recalling certain model year 2004-2008 RAM 1500, 2005-2009 RAM 2500, 2006-2009 RAM 3500, 2007-2010 RAM 3500 Cab Chassis, 2008-2010 RAM 4500 and 5500 Cab Chassis, 2004-2009 Dodge Durango, 2007-2009 Chrysler Aspen, 2007-2012"
+   },
+   {
+    "id": "15V313000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "Chrysler (FCA US LLC) is recalling certain model year 2005-2009 Dodge Ram 2500, 2004-2008 Dodge Ram 1500 and Durango, 2006-2009 Dodge Ram 3500, 2008-2010 Dodge Ram 4500 and 5500, 2007-2008 Chrysler Aspen, 2005-2010 Chrysler 300, 300C, 300S, and SRT8, 2006-2010 Dodge Charger, 2005-2008 Magnum, 2005-2011 Dodge Dakota, and 2006-2009 Mitsubishi Raider vehicles.  The affected vehicles are equipped with"
+   },
+   {
+    "id": "06V341000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION",
+    "summary": "ON CERTAIN PASSENGER AND SPORT UTILITY VEHICLES AND PICKUP TRUCKS EQUIPPED WITH AUTOMATIC TRANSMISSIONS, THE SOFTWARE PROGRAMMED INTO THE POWERTRAIN CONTROL MODULE CAN CAUSE A MOMENTARY LOCK UP OF THE DRIVE WHEELS IF THE VEHICLE IS TRAVELING OVER 40 MPH AND THE OPERATOR SHIFTS FROM DRIVE TO NEUTRAL AND BACK TO DRIVE."
+   },
+   {
+    "id": "06V493000",
+    "part": "SERVICE BRAKES, HYDRAULIC:ANTILOCK/TRACTION CONTROL/ELECTRONIC LIMITED SLIP:CONTROL UNIT/MODULE",
+    "summary": "ON CERTAIN VEHICLES, THE ANTILOCK BRAKE SYSTEM (ABS) CONTROL MODULE SOFTWARE MAY CAUSE THE REAR BRAKES TO LOCK UP DURING CERTAIN BRAKING CONDITIONS."
+   }
+  ],
+  "2008": [
+   {
+    "id": "16V352000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Chrysler (FCA US LLC) expanded the affected population to include 73,712 2005-2009 RAM 2500 trucks produced at the St. Louis North Assembly Plant.  With this change, Chrysler is recalling certain model year 2004-2008 RAM 1500, 2005-2009 RAM 2500, 2006-2009 RAM 3500, 2007-2010 RAM 3500 Cab Chassis, 2008-2010 RAM 4500 and 5500 Cab Chassis, 2004-2009 Dodge Durango, 2007-2009 Chrysler Aspen, 2007-2012"
+   },
+   {
+    "id": "14V567000",
+    "part": "ELECTRICAL SYSTEM:IGNITION",
+    "summary": "Chrysler Group LLC (Chrysler) is recalling certain model year 2008 Chrysler 300 vehicles manufactured May 31, 2007, to May 12, 2008, Dodge Magnum vehicles manufactured May 23, 2007, to May 12, 2008, Dodge Charger vehicles manufactured May 24, 2007, to May 12, 2008, Jeep Commander vehicles manufactured April 3, 2007, to May 12, 2008, and Jeep Grand Cherokee vehicles manufactured March 21, 2007, to "
+   },
+   {
+    "id": "15V313000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "Chrysler (FCA US LLC) is recalling certain model year 2005-2009 Dodge Ram 2500, 2004-2008 Dodge Ram 1500 and Durango, 2006-2009 Dodge Ram 3500, 2008-2010 Dodge Ram 4500 and 5500, 2007-2008 Chrysler Aspen, 2005-2010 Chrysler 300, 300C, 300S, and SRT8, 2006-2010 Dodge Charger, 2005-2008 Magnum, 2005-2011 Dodge Dakota, and 2006-2009 Mitsubishi Raider vehicles.  The affected vehicles are equipped with"
+   },
+   {
+    "id": "08V295000",
+    "part": "POWER TRAIN:AXLE HUBS",
+    "summary": "CHRYSLER IS RECALLING 5,509 MY 2008 300,  DODGE MAGNUM, AND CHARGER VEHICLES.  THE TORQUE RETENTION CRIMP FEATURE WAS MISSED DURING THE MANUFACTURE OF ONE LOT OF REAR AXLE HUB NUTS.  THIS COULD CAUSE THE NUTS TO LOOSEN AND ALLOW THE HALFSHAFT TO DISENGAGE FROM THE WHEEL HUB."
+   }
+  ],
+  "2009": [
+   {
+    "id": "18V021000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Chrysler (FCA US LLC) is recalling certain 2009-2013 Jeep Wrangler, Chrysler 300, Dodge Challenger and Dodge Charger vehicles, and 2009-2011 Dodge Dakota vehicles sold, or ever registered, in the states of Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas, Puerto Rico, American Samoa, Guam, the Northern Mariana Islands (Saipan), and the U.S. Virgin Island"
+   },
+   {
+    "id": "15V313000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "Chrysler (FCA US LLC) is recalling certain model year 2005-2009 Dodge Ram 2500, 2004-2008 Dodge Ram 1500 and Durango, 2006-2009 Dodge Ram 3500, 2008-2010 Dodge Ram 4500 and 5500, 2007-2008 Chrysler Aspen, 2005-2010 Chrysler 300, 300C, 300S, and SRT8, 2006-2010 Dodge Charger, 2005-2008 Magnum, 2005-2011 Dodge Dakota, and 2006-2009 Mitsubishi Raider vehicles.  The affected vehicles are equipped with"
+   },
+   {
+    "id": "16V352000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Chrysler (FCA US LLC) expanded the affected population to include 73,712 2005-2009 RAM 2500 trucks produced at the St. Louis North Assembly Plant.  With this change, Chrysler is recalling certain model year 2004-2008 RAM 1500, 2005-2009 RAM 2500, 2006-2009 RAM 3500, 2007-2010 RAM 3500 Cab Chassis, 2008-2010 RAM 4500 and 5500 Cab Chassis, 2004-2009 Dodge Durango, 2007-2009 Chrysler Aspen, 2007-2012"
+   },
+   {
+    "id": "08V642000",
+    "part": "TIRES:PRESSURE MONITORING AND REGULATING SYSTEMS",
+    "summary": "CHRYSLER IS RECALLING 175 MY 2009 DODGE CHARGER, CHALLENGER, AND CHRYSLER 300 VEHICLES.  THE TIRE PRESSURE MONITOR (TPM) SENSORS MAY NOT TRANSMIT THE ACTUAL TIRE PRESSURE.  THIS COULD RESULT IN THE DRIVER NOT BEING AWARE OF LOW TIRE PRESSURE."
+   },
+   {
+    "id": "09V420000",
+    "part": "WHEELS:LUGS/NUTS/BOLTS/STUDS",
+    "summary": "CHRYSLER IS RECALLING CERTAIN MODEL YEAR 2009 THROUGH 2010 PASSENGER VEHICLES EQUIPPED WITH REAR WHEEL DRIVE.  THESE VEHICLES MAY HAVE BEEN BUILT WITHOUT A FRONT WHEEL SPINDLE NUT."
+   }
+  ],
+  "2010": [
+   {
+    "id": "19V018000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Chrysler (FCA US LLC) is recalling certain 2010 Dodge Ram 3500, Ram 4500/5500, 2010-2011 Dodge Dakota, 2010-2014 Dodge Challenger, 2010-2015 Dodge Challenger, Chrysler 300, and 2010-2016 Jeep Wrangler vehicles.  Upon deployment of the driver's frontal air bag, excessive internal pressure may cause the inflator to explode."
+   },
+   {
+    "id": "18V021000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Chrysler (FCA US LLC) is recalling certain 2009-2013 Jeep Wrangler, Chrysler 300, Dodge Challenger and Dodge Charger vehicles, and 2009-2011 Dodge Dakota vehicles sold, or ever registered, in the states of Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas, Puerto Rico, American Samoa, Guam, the Northern Mariana Islands (Saipan), and the U.S. Virgin Island"
+   },
+   {
+    "id": "16V352000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Chrysler (FCA US LLC) expanded the affected population to include 73,712 2005-2009 RAM 2500 trucks produced at the St. Louis North Assembly Plant.  With this change, Chrysler is recalling certain model year 2004-2008 RAM 1500, 2005-2009 RAM 2500, 2006-2009 RAM 3500, 2007-2010 RAM 3500 Cab Chassis, 2008-2010 RAM 4500 and 5500 Cab Chassis, 2004-2009 Dodge Durango, 2007-2009 Chrysler Aspen, 2007-2012"
+   },
+   {
+    "id": "15V313000",
+    "part": "AIR BAGS:FRONTAL:DRIVER SIDE:INFLATOR MODULE",
+    "summary": "Chrysler (FCA US LLC) is recalling certain model year 2005-2009 Dodge Ram 2500, 2004-2008 Dodge Ram 1500 and Durango, 2006-2009 Dodge Ram 3500, 2008-2010 Dodge Ram 4500 and 5500, 2007-2008 Chrysler Aspen, 2005-2010 Chrysler 300, 300C, 300S, and SRT8, 2006-2010 Dodge Charger, 2005-2008 Magnum, 2005-2011 Dodge Dakota, and 2006-2009 Mitsubishi Raider vehicles.  The affected vehicles are equipped with"
+   },
+   {
+    "id": "10V200000",
+    "part": "ELECTRICAL SYSTEM:IGNITION:MODULE",
+    "summary": "CHRYSLER IS RECALLING CERTAIN MODEL YEAR 2010 CHRYSLER 300, DODGE CHALLENGER, CHARGER, JEEP COMMANDER, GRAND CHEROKEE AND DODGE RAM VEHICLES.  THESE VEHICLES MAY HAVE BEEN BUILT WITH A WIRELESS IGNITION NODE (WIN) MODULE EXHIBITING A BINDING CONDITION OF THE SOLENOID LATCH."
+   },
+   {
+    "id": "10V475000",
+    "part": "STEERING:ELECTRIC POWER ASSIST SYSTEM",
+    "summary": "CHRYSLER IS RECALLING CERTAIN MODEL YEAR 2010 CHRYSLER SEBRING, 300, CHARGER (LX) AND DODGE CHALLENGER (LC), AVENGER (JS), AND JOURNEY (JC), AS WELL AS MODEL YEAR 2011 DODGE RAM LIGHT DUTY PICKUP (DS) VEHICLES.  SOME OF THESE VEHICLES MAY EXPERIENCE A SEPARATION AT THE CRIMPED END OF THE POWER STEERING PRESSURE HOSE ASSEMBLY."
+   },
+   {
+    "id": "09V420000",
+    "part": "WHEELS:LUGS/NUTS/BOLTS/STUDS",
+    "summary": "CHRYSLER IS RECALLING CERTAIN MODEL YEAR 2009 THROUGH 2010 PASSENGER VEHICLES EQUIPPED WITH REAR WHEEL DRIVE.  THESE VEHICLES MAY HAVE BEEN BUILT WITHOUT A FRONT WHEEL SPINDLE NUT."
+   }
+  ],
+  "2012": [
+   {
+    "id": "19V018000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Chrysler (FCA US LLC) is recalling certain 2010 Dodge Ram 3500, Ram 4500/5500, 2010-2011 Dodge Dakota, 2010-2014 Dodge Challenger, 2010-2015 Dodge Challenger, Chrysler 300, and 2010-2016 Jeep Wrangler vehicles.  Upon deployment of the driver's frontal air bag, excessive internal pressure may cause the inflator to explode."
+   },
+   {
+    "id": "17V435000",
+    "part": "ELECTRICAL SYSTEM:ALTERNATOR/GENERATOR/REGULATOR",
+    "summary": "Chrysler (FCA US LLC) is recalling certain model year 2011-2014 Dodge Challenger, Dodge Charger, Chrysler 300, Dodge Durango, and 2012-2014 Jeep Grand Cherokee vehicles.  The affected vehicles have electro-hydraulic power steering (EHPS) and are equipped with a 5.7L or a 3.6L engine and a 160, 180 or 220 amp alternator.  In the affected vehicles, the alternator may suddenly fail."
+   },
+   {
+    "id": "16V240000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION:CONTROL MODULE (TCM/PCM/TECM)",
+    "summary": "Chrysler (FCA US LLC) is recalling certain model year 2012-2014 Dodge Charger and Chrysler 300 vehicles manufactured February 15, 2011, to November 27, 2014, and 2014-2015 Jeep Grand Cherokee vehicles manufactured July 16, 2012, to December 22, 2015.  The affected vehicles, equipped with an eight-speed automatic transmission and a monostable gear selector, may not adequately warn the driver when d"
+   },
+   {
+    "id": "18V021000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Chrysler (FCA US LLC) is recalling certain 2009-2013 Jeep Wrangler, Chrysler 300, Dodge Challenger and Dodge Charger vehicles, and 2009-2011 Dodge Dakota vehicles sold, or ever registered, in the states of Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas, Puerto Rico, American Samoa, Guam, the Northern Mariana Islands (Saipan), and the U.S. Virgin Island"
+   },
+   {
+    "id": "16V352000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Chrysler (FCA US LLC) expanded the affected population to include 73,712 2005-2009 RAM 2500 trucks produced at the St. Louis North Assembly Plant.  With this change, Chrysler is recalling certain model year 2004-2008 RAM 1500, 2005-2009 RAM 2500, 2006-2009 RAM 3500, 2007-2010 RAM 3500 Cab Chassis, 2008-2010 RAM 4500 and 5500 Cab Chassis, 2004-2009 Dodge Durango, 2007-2009 Chrysler Aspen, 2007-2012"
+   },
+   {
+    "id": "12V004000",
+    "part": "TIRES:PRESSURE MONITORING AND REGULATING SYSTEMS",
+    "summary": "CHRYSLER IS RECALLING CERTAIN MODEL YEAR 2012 DODGE CHARGER SRT8 AND THE CHRYSLER 300 SRT8 VEHICLES MANUFACTURED FROM MAY 2, 2011, THROUGH NOVEMBER 17, 2011,  FOR FAILING TO COMPLY WITH THE REQUIREMENTS OF FEDERAL MOTOR VEHICLE SAFETY STANDARD NUMBER 138, \"TIRE PRESSURE MONITORING SYSTEM\" (TPMS).  AS BUILT, THE TPMS DOES NOT WARN THE DRIVER WHEN A TIRE IS 25 PERCENT BELOW THE RECOMMENDED PRESSURE."
+   },
+   {
+    "id": "13V118000",
+    "part": "AIR BAGS",
+    "summary": "Chrysler Group LLC (Chrysler) is recalling certain model year 2011-2012 Chrysler 300, Dodge Challenger, and Dodge Charger vehicles manufactured April 11, 2011, through December 14, 2011.  The affected vehicles may have improperly sized terminal crimps on the seat side-airbag wiring harness which may cause the seat side-airbags to malfunction and illuminate the airbag warning light."
+   },
+   {
+    "id": "14V634000",
+    "part": "ELECTRICAL SYSTEM:ALTERNATOR/GENERATOR/REGULATOR",
+    "summary": "Chrysler Group LLC (Chrysler) is recalling certain model year 2011-2014 Chrysler 300, Dodge Charger, Challenger, and Durango; and 2012-2014 Jeep Grand Cherokee vehicles manufactured April 22, 2010, to January 2, 2014, and equipped with a 3.6L engine and a 160 amp alternator.  In the affected vehicles, the alternator may suddenly fail."
+   },
+   {
+    "id": "12V197000",
+    "part": "SERVICE BRAKES, AIR:ANTILOCK:CONTROL UNIT/MODULE",
+    "summary": "CHRYSLER IS RECALLING CERTAIN MODEL YEAR 2011 AND 2012 300 AND DODGE CHARGER VEHICLES.  THESE VEHICLES MAY LOSE ABS/ESC SYSTEM FUNCTION DUE TO AN OVERHEATED POWER DISTRIBUTION CENTER."
+   }
+  ],
+  "2013": [
+   {
+    "id": "19V018000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Chrysler (FCA US LLC) is recalling certain 2010 Dodge Ram 3500, Ram 4500/5500, 2010-2011 Dodge Dakota, 2010-2014 Dodge Challenger, 2010-2015 Dodge Challenger, Chrysler 300, and 2010-2016 Jeep Wrangler vehicles.  Upon deployment of the driver's frontal air bag, excessive internal pressure may cause the inflator to explode."
+   },
+   {
+    "id": "17V435000",
+    "part": "ELECTRICAL SYSTEM:ALTERNATOR/GENERATOR/REGULATOR",
+    "summary": "Chrysler (FCA US LLC) is recalling certain model year 2011-2014 Dodge Challenger, Dodge Charger, Chrysler 300, Dodge Durango, and 2012-2014 Jeep Grand Cherokee vehicles.  The affected vehicles have electro-hydraulic power steering (EHPS) and are equipped with a 5.7L or a 3.6L engine and a 160, 180 or 220 amp alternator.  In the affected vehicles, the alternator may suddenly fail."
+   },
+   {
+    "id": "18V021000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Chrysler (FCA US LLC) is recalling certain 2009-2013 Jeep Wrangler, Chrysler 300, Dodge Challenger and Dodge Charger vehicles, and 2009-2011 Dodge Dakota vehicles sold, or ever registered, in the states of Alabama, California, Florida, Georgia, Hawaii, Louisiana, Mississippi, South Carolina, Texas, Puerto Rico, American Samoa, Guam, the Northern Mariana Islands (Saipan), and the U.S. Virgin Island"
+   },
+   {
+    "id": "16V240000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION:CONTROL MODULE (TCM/PCM/TECM)",
+    "summary": "Chrysler (FCA US LLC) is recalling certain model year 2012-2014 Dodge Charger and Chrysler 300 vehicles manufactured February 15, 2011, to November 27, 2014, and 2014-2015 Jeep Grand Cherokee vehicles manufactured July 16, 2012, to December 22, 2015.  The affected vehicles, equipped with an eight-speed automatic transmission and a monostable gear selector, may not adequately warn the driver when d"
+   },
+   {
+    "id": "13V610000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION",
+    "summary": "Chrysler Group LLC (Chrysler) is recalling certain model year 2013 Chrysler 300 AWD, Dodge Charger AWD, and Dodge Ram 1500 4x4 vehicles equipped with ZF all wheel drive (\"AWD\") 8HP45 transmissions.  In the affected vehicles, the transmission output shaft may fracture."
+   },
+   {
+    "id": "14V634000",
+    "part": "ELECTRICAL SYSTEM:ALTERNATOR/GENERATOR/REGULATOR",
+    "summary": "Chrysler Group LLC (Chrysler) is recalling certain model year 2011-2014 Chrysler 300, Dodge Charger, Challenger, and Durango; and 2012-2014 Jeep Grand Cherokee vehicles manufactured April 22, 2010, to January 2, 2014, and equipped with a 3.6L engine and a 160 amp alternator.  In the affected vehicles, the alternator may suddenly fail."
+   }
+  ],
+  "2014": [
+   {
+    "id": "19V018000",
+    "part": "AIR BAGS:FRONTAL:PASSENGER SIDE:INFLATOR MODULE",
+    "summary": "Chrysler (FCA US LLC) is recalling certain 2010 Dodge Ram 3500, Ram 4500/5500, 2010-2011 Dodge Dakota, 2010-2014 Dodge Challenger, 2010-2015 Dodge Challenger, Chrysler 300, and 2010-2016 Jeep Wrangler vehicles.  Upon deployment of the driver's frontal air bag, excessive internal pressure may cause the inflator to explode."
+   },
+   {
+    "id": "18E053000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION:CONTROL MODULE (TCM/PCM/TECM)",
+    "summary": "Chrysler (FCA US LLC) is recalling certain Mopar Stage 1 Kit Performance Packages Powertrain Control Modules (PCM) Part Numbers P5160023, P5160025, and Demon Crate PCM Part Number 68412287AA.  The PCMs are being recalled to address a defect that could prevent the cruise control system from disengaging.  If, when using cruise control, there is a short circuit within the vehicle's wiring, the driver"
+   },
+   {
+    "id": "18V332000",
+    "part": "ELECTRICAL SYSTEM:WIRING",
+    "summary": "Chrysler (FCA US LLC) is recalling certain 2014-2018 Dodge Journey, Charger and Durango, RAM 2500, 3500, 3500 Cab Chassis (more than 10,000lb), 4500 Cab Chassis and 5500 Cab Chassis, Jeep Cherokee and Grand Cherokee and Chrysler 300, 2014-2019 RAM 1500, 2015-2018 Dodge Challenger, 2015-2017 Chrysler 200, 2016-2018 RAM 3500 Cab Chassis (less than 10,000 lb), 2017-2018 Chrysler Pacifica and 2018 Jee"
+   },
+   {
+    "id": "17V435000",
+    "part": "ELECTRICAL SYSTEM:ALTERNATOR/GENERATOR/REGULATOR",
+    "summary": "Chrysler (FCA US LLC) is recalling certain model year 2011-2014 Dodge Challenger, Dodge Charger, Chrysler 300, Dodge Durango, and 2012-2014 Jeep Grand Cherokee vehicles.  The affected vehicles have electro-hydraulic power steering (EHPS) and are equipped with a 5.7L or a 3.6L engine and a 160, 180 or 220 amp alternator.  In the affected vehicles, the alternator may suddenly fail."
+   },
+   {
+    "id": "17V097000",
+    "part": "POWER TRAIN:AXLE ASSEMBLY:AXLE SHAFT",
+    "summary": "Chrysler (FCA US LLC) is recalling certain 2014-2017 Dodge Charger and Chrysler 300 vehicles equipped with all-wheel drive (AWD).  The front driveshaft bolts may loosen and allow the front driveshaft to disconnect, potentially causing a loss of motive power."
+   },
+   {
+    "id": "17V741000",
+    "part": "ELECTRICAL SYSTEM:ALTERNATOR/GENERATOR/REGULATOR",
+    "summary": "Chrysler (FCA US LLC) is recalling certain 2014 Dodge Challenger, Charger, Durango, Chrysler 300, and Jeep Grand Cherokee vehicles equipped with a 3.6L engine and a 160 amp alternator.  In the affected vehicles, the alternator may suddenly fail."
+   },
+   {
+    "id": "16V240000",
+    "part": "POWER TRAIN:AUTOMATIC TRANSMISSION:CONTROL MODULE (TCM/PCM/TECM)",
+    "summary": "Chrysler (FCA US LLC) is recalling certain model year 2012-2014 Dodge Charger and Chrysler 300 vehicles manufactured February 15, 2011, to November 27, 2014, and 2014-2015 Jeep Grand Cherokee vehicles manufactured July 16, 2012, to December 22, 2015.  The affected vehicles, equipped with an eight-speed automatic transmission and a monostable gear selector, may not adequately warn the driver when d"
+   },
+   {
+    "id": "14V634000",
+    "part": "ELECTRICAL SYSTEM:ALTERNATOR/GENERATOR/REGULATOR",
+    "summary": "Chrysler Group LLC (Chrysler) is recalling certain model year 2011-2014 Chrysler 300, Dodge Charger, Challenger, and Durango; and 2012-2014 Jeep Grand Cherokee vehicles manufactured April 22, 2010, to January 2, 2014, and equipped with a 3.6L engine and a 160 amp alternator.  In the affected vehicles, the alternator may suddenly fail."
+   }
+  ]
+ },
+ "yt": {
+  "car-chrysler-300-srt8": null,
+  "chrysler-61-hemi": {
+   "videos": 182,
+   "praise": [
+    [
+     "Power and acceleration",
+     12
+    ],
+    [
+     "Looks",
+     12
+    ],
+    [
+     "Interior and seats",
+     8
+    ]
+   ],
+   "trouble": [
+    [
+     "HEMI tick / lifters",
+     8
+    ],
+    [
+     "Lifters / AFM / cam phasers / Hemi tick",
+     8
+    ],
+    [
+     "Coolant leaks / water pump / overheating",
+     5
+    ]
+   ],
+   "top": [
+    {
+     "id": "7VFsaL3skrI",
+     "title": "Audi R8 V10 VS Jeep grand cherokee  SRT8",
+     "views": 2402253,
+     "ch": "jon jon"
+    },
+    {
+     "id": "iqFOWynWWpI",
+     "title": "The Jeep Grand Cherokee SRT8 Is a Fast SUV Icon",
+     "views": 996773,
+     "ch": "Doug DeMuro"
+    },
+    {
+     "id": "wTQDb7VEUZ4",
+     "title": "2013 Dodge Challenger SRT8 392 Review and Road Test (manual transmission)",
+     "views": 790508,
+     "ch": "Auto Buyers Guide | Alex on Autos"
+    }
+   ]
+  },
+  "chrysler-392": {
+   "videos": 189,
+   "praise": [
+    [
+     "Looks",
+     21
+    ],
+    [
+     "Power and acceleration",
+     19
+    ],
+    [
+     "Everyday comfort",
+     15
+    ],
+    [
+     "Handling and steering",
+     14
+    ]
+   ],
+   "trouble": [
+    [
+     "HEMI tick / lifters",
+     6
+    ],
+    [
+     "Lifters / AFM / cam phasers / Hemi tick",
+     6
+    ]
+   ],
+   "top": [
+    {
+     "id": "UYVRkU16bb8",
+     "title": "Differences Between The SRT 392 & Scat Pack Dodge Charger",
+     "views": 2384023,
+     "ch": "RP Productions"
+    },
+    {
+     "id": "KV6XDHsuU1w",
+     "title": "2025 Dodge Charger Scat Pack Review // One Big Problem",
+     "views": 1906855,
+     "ch": "Throttle House"
+    },
+    {
+     "id": "hSZ4RYm1kTI",
+     "title": "Blown & Injected vintage 392 HEMI - Start Up",
+     "views": 1548324,
+     "ch": "Kenton McKay"
+    }
+   ]
+  }
+ },
+ "scores": {
+  "chrysler-61-hemi": {
+   "years": {
+    "2005": {
+     "score": 51,
+     "weight": 8.7,
+     "videos": 42,
+     "named": 3,
+     "top": [
+      {
+       "id": "QvRPqF-f-3M",
+       "title": "Building a Cheap Hellcat - Supercharged 6.1 Hemi Challenger SRT8",
+       "views": 181968
+      },
+      {
+       "id": "_4ruIpAcYN4",
+       "title": "Chrysler 300 SRT8 - History, Major Flaws, & Why It Got Cancelled in the US Market (2005-2014)",
+       "views": 137753
+      },
+      {
+       "id": "i3E_ghKH-1E",
+       "title": "How much faster is a 6.4 Hemi vs 6.1 Hemi? Charger SRT8 vs Scatpack 392! (19 YEAR OLD RACES ME!!!)",
+       "views": 120493
+      }
+     ]
+    },
+    "2006": {
+     "score": 50,
+     "weight": 20.4,
+     "videos": 56,
+     "named": 17,
+     "top": [
+      {
+       "id": "bKh20wjcN-Q",
+       "title": "2006-2010 Used Dodge Charger SE, SXT, R/T, SRT8 Buying Guide - Should you buy this car?",
+       "views": 220212
+      },
+      {
+       "id": "un-0oEonrSE",
+       "title": "2006 Dodge Charger SRT-8 | Retro Review",
+       "views": 190563
+      },
+      {
+       "id": "QvRPqF-f-3M",
+       "title": "Building a Cheap Hellcat - Supercharged 6.1 Hemi Challenger SRT8",
+       "views": 181968
+      }
+     ]
+    },
+    "2007": {
+     "score": 47,
+     "weight": 12.4,
+     "videos": 48,
+     "named": 9,
+     "top": [
+      {
+       "id": "bKh20wjcN-Q",
+       "title": "2006-2010 Used Dodge Charger SE, SXT, R/T, SRT8 Buying Guide - Should you buy this car?",
+       "views": 220212
+      },
+      {
+       "id": "QvRPqF-f-3M",
+       "title": "Building a Cheap Hellcat - Supercharged 6.1 Hemi Challenger SRT8",
+       "views": 181968
+      },
+      {
+       "id": "_4ruIpAcYN4",
+       "title": "Chrysler 300 SRT8 - History, Major Flaws, & Why It Got Cancelled in the US Market (2005-2014)",
+       "views": 137753
+      }
+     ]
+    },
+    "2008": {
+     "score": 52,
+     "weight": 20.4,
+     "videos": 56,
+     "named": 17,
+     "top": [
+      {
+       "id": "cRIqRicttv4",
+       "title": "Regular Car Reviews: 2008 Dodge Challenger SRT-8",
+       "views": 607562
+      },
+      {
+       "id": "a4qF21yVIKk",
+       "title": "2008 Dodge Challenger SRT8 | World's 1st Test of Dodge's New Muscle Car | Edmunds.com",
+       "views": 496181
+      },
+      {
+       "id": "bKh20wjcN-Q",
+       "title": "2006-2010 Used Dodge Charger SE, SXT, R/T, SRT8 Buying Guide - Should you buy this car?",
+       "views": 220212
+      }
+     ]
+    },
+    "2009": {
+     "score": 53,
+     "weight": 17.1,
+     "videos": 52,
+     "named": 13,
+     "top": [
+      {
+       "id": "bKh20wjcN-Q",
+       "title": "2006-2010 Used Dodge Charger SE, SXT, R/T, SRT8 Buying Guide - Should you buy this car?",
+       "views": 220212
+      },
+      {
+       "id": "QvRPqF-f-3M",
+       "title": "Building a Cheap Hellcat - Supercharged 6.1 Hemi Challenger SRT8",
+       "views": 181968
+      },
+      {
+       "id": "_4ruIpAcYN4",
+       "title": "Chrysler 300 SRT8 - History, Major Flaws, & Why It Got Cancelled in the US Market (2005-2014)",
+       "views": 137753
+      }
+     ]
+    },
+    "2010": {
+     "score": 47,
+     "weight": 22.1,
+     "videos": 57,
+     "named": 18,
+     "top": [
+      {
+       "id": "TNqFgkJeDfg",
+       "title": "Making a  2010 Dodge Challenger SRT8 Outperform a 2015 Challenger Hellcat - Detroit Muscle S3, E11",
+       "views": 770639
+      },
+      {
+       "id": "bKh20wjcN-Q",
+       "title": "2006-2010 Used Dodge Charger SE, SXT, R/T, SRT8 Buying Guide - Should you buy this car?",
+       "views": 220212
+      },
+      {
+       "id": "5jBFtixT0K8",
+       "title": "2010 SRT8 300C 0-172 MPH",
+       "views": 186120
+      }
+     ]
+    }
+   },
+   "videos": 101,
+   "pulled": 200
+  },
+  "chrysler-392": {
+   "years": {
+    "2011": {
+     "score": 51,
+     "weight": 6.7,
+     "videos": 107,
+     "named": 0,
+     "top": [
+      {
+       "id": "UYVRkU16bb8",
+       "title": "Differences Between The SRT 392 & Scat Pack Dodge Charger",
+       "views": 2384023
+      },
+      {
+       "id": "hSZ4RYm1kTI",
+       "title": "Blown & Injected vintage 392 HEMI - Start Up",
+       "views": 1548324
+      },
+      {
+       "id": "74N5NvKHZfk",
+       "title": "I Bought A CHEAP Challenger Scat Pack Listed A NO START & Fixed It For $200! Then, I Found Videos...",
+       "views": 1458080
+      }
+     ]
+    },
+    "2012": {
+     "score": 52,
+     "weight": 8.5,
+     "videos": 125,
+     "named": 0,
+     "top": [
+      {
+       "id": "UYVRkU16bb8",
+       "title": "Differences Between The SRT 392 & Scat Pack Dodge Charger",
+       "views": 2384023
+      },
+      {
+       "id": "hSZ4RYm1kTI",
+       "title": "Blown & Injected vintage 392 HEMI - Start Up",
+       "views": 1548324
+      },
+      {
+       "id": "74N5NvKHZfk",
+       "title": "I Bought A CHEAP Challenger Scat Pack Listed A NO START & Fixed It For $200! Then, I Found Videos...",
+       "views": 1458080
+      }
+     ]
+    },
+    "2013": {
+     "score": 52,
+     "weight": 8.5,
+     "videos": 125,
+     "named": 0,
+     "top": [
+      {
+       "id": "UYVRkU16bb8",
+       "title": "Differences Between The SRT 392 & Scat Pack Dodge Charger",
+       "views": 2384023
+      },
+      {
+       "id": "hSZ4RYm1kTI",
+       "title": "Blown & Injected vintage 392 HEMI - Start Up",
+       "views": 1548324
+      },
+      {
+       "id": "74N5NvKHZfk",
+       "title": "I Bought A CHEAP Challenger Scat Pack Listed A NO START & Fixed It For $200! Then, I Found Videos...",
+       "views": 1458080
+      }
+     ]
+    },
+    "2014": {
+     "score": 55,
+     "weight": 12.0,
+     "videos": 129,
+     "named": 4,
+     "top": [
+      {
+       "id": "UYVRkU16bb8",
+       "title": "Differences Between The SRT 392 & Scat Pack Dodge Charger",
+       "views": 2384023
+      },
+      {
+       "id": "hSZ4RYm1kTI",
+       "title": "Blown & Injected vintage 392 HEMI - Start Up",
+       "views": 1548324
+      },
+      {
+       "id": "74N5NvKHZfk",
+       "title": "I Bought A CHEAP Challenger Scat Pack Listed A NO START & Fixed It For $200! Then, I Found Videos...",
+       "views": 1458080
+      }
+     ]
+    },
+    "2015": {
+     "score": 51,
+     "weight": 13.0,
+     "videos": 130,
+     "named": 5,
+     "top": [
+      {
+       "id": "UYVRkU16bb8",
+       "title": "Differences Between The SRT 392 & Scat Pack Dodge Charger",
+       "views": 2384023
+      },
+      {
+       "id": "hSZ4RYm1kTI",
+       "title": "Blown & Injected vintage 392 HEMI - Start Up",
+       "views": 1548324
+      },
+      {
+       "id": "74N5NvKHZfk",
+       "title": "I Bought A CHEAP Challenger Scat Pack Listed A NO START & Fixed It For $200! Then, I Found Videos...",
+       "views": 1458080
+      }
+     ]
+    },
+    "2016": {
+     "score": 48,
+     "weight": 9.5,
+     "videos": 126,
+     "named": 1,
+     "top": [
+      {
+       "id": "UYVRkU16bb8",
+       "title": "Differences Between The SRT 392 & Scat Pack Dodge Charger",
+       "views": 2384023
+      },
+      {
+       "id": "hSZ4RYm1kTI",
+       "title": "Blown & Injected vintage 392 HEMI - Start Up",
+       "views": 1548324
+      },
+      {
+       "id": "74N5NvKHZfk",
+       "title": "I Bought A CHEAP Challenger Scat Pack Listed A NO START & Fixed It For $200! Then, I Found Videos...",
+       "views": 1458080
+      }
+     ]
+    },
+    "2017": {
+     "score": 53,
+     "weight": 12.5,
+     "videos": 130,
+     "named": 5,
+     "top": [
+      {
+       "id": "UYVRkU16bb8",
+       "title": "Differences Between The SRT 392 & Scat Pack Dodge Charger",
+       "views": 2384023
+      },
+      {
+       "id": "hSZ4RYm1kTI",
+       "title": "Blown & Injected vintage 392 HEMI - Start Up",
+       "views": 1548324
+      },
+      {
+       "id": "74N5NvKHZfk",
+       "title": "I Bought A CHEAP Challenger Scat Pack Listed A NO START & Fixed It For $200! Then, I Found Videos...",
+       "views": 1458080
+      }
+     ]
+    },
+    "2018": {
+     "score": 53,
+     "weight": 14.0,
+     "videos": 131,
+     "named": 6,
+     "top": [
+      {
+       "id": "UYVRkU16bb8",
+       "title": "Differences Between The SRT 392 & Scat Pack Dodge Charger",
+       "views": 2384023
+      },
+      {
+       "id": "hSZ4RYm1kTI",
+       "title": "Blown & Injected vintage 392 HEMI - Start Up",
+       "views": 1548324
+      },
+      {
+       "id": "74N5NvKHZfk",
+       "title": "I Bought A CHEAP Challenger Scat Pack Listed A NO START & Fixed It For $200! Then, I Found Videos...",
+       "views": 1458080
+      }
+     ]
+    },
+    "2019": {
+     "score": 57,
+     "weight": 13.8,
+     "videos": 131,
+     "named": 6,
+     "top": [
+      {
+       "id": "UYVRkU16bb8",
+       "title": "Differences Between The SRT 392 & Scat Pack Dodge Charger",
+       "views": 2384023
+      },
+      {
+       "id": "hSZ4RYm1kTI",
+       "title": "Blown & Injected vintage 392 HEMI - Start Up",
+       "views": 1548324
+      },
+      {
+       "id": "74N5NvKHZfk",
+       "title": "I Bought A CHEAP Challenger Scat Pack Listed A NO START & Fixed It For $200! Then, I Found Videos...",
+       "views": 1458080
+      }
+     ]
+    },
+    "2020": {
+     "score": 59,
+     "weight": 18.8,
+     "videos": 136,
+     "named": 11,
+     "top": [
+      {
+       "id": "UYVRkU16bb8",
+       "title": "Differences Between The SRT 392 & Scat Pack Dodge Charger",
+       "views": 2384023
+      },
+      {
+       "id": "hSZ4RYm1kTI",
+       "title": "Blown & Injected vintage 392 HEMI - Start Up",
+       "views": 1548324
+      },
+      {
+       "id": "6I1X6KyEmWQ",
+       "title": "2020 Dodge Challenger R/T Scat Pack WIDEBODY Review // The Sweet Spot",
+       "views": 1489823
+      }
+     ]
+    },
+    "2021": {
+     "score": 49,
+     "weight": 10.3,
+     "videos": 128,
+     "named": 3,
+     "top": [
+      {
+       "id": "UYVRkU16bb8",
+       "title": "Differences Between The SRT 392 & Scat Pack Dodge Charger",
+       "views": 2384023
+      },
+      {
+       "id": "hSZ4RYm1kTI",
+       "title": "Blown & Injected vintage 392 HEMI - Start Up",
+       "views": 1548324
+      },
+      {
+       "id": "74N5NvKHZfk",
+       "title": "I Bought A CHEAP Challenger Scat Pack Listed A NO START & Fixed It For $200! Then, I Found Videos...",
+       "views": 1458080
+      }
+     ]
+    },
+    "2022": {
+     "score": 53,
+     "weight": 10.7,
+     "videos": 111,
+     "named": 4,
+     "top": [
+      {
+       "id": "UYVRkU16bb8",
+       "title": "Differences Between The SRT 392 & Scat Pack Dodge Charger",
+       "views": 2384023
+      },
+      {
+       "id": "hSZ4RYm1kTI",
+       "title": "Blown & Injected vintage 392 HEMI - Start Up",
+       "views": 1548324
+      },
+      {
+       "id": "74N5NvKHZfk",
+       "title": "I Bought A CHEAP Challenger Scat Pack Listed A NO START & Fixed It For $200! Then, I Found Videos...",
+       "views": 1458080
+      }
+     ]
+    },
+    "2023": {
+     "score": 54,
+     "weight": 9.7,
+     "videos": 110,
+     "named": 3,
+     "top": [
+      {
+       "id": "UYVRkU16bb8",
+       "title": "Differences Between The SRT 392 & Scat Pack Dodge Charger",
+       "views": 2384023
+      },
+      {
+       "id": "hSZ4RYm1kTI",
+       "title": "Blown & Injected vintage 392 HEMI - Start Up",
+       "views": 1548324
+      },
+      {
+       "id": "74N5NvKHZfk",
+       "title": "I Bought A CHEAP Challenger Scat Pack Listed A NO START & Fixed It For $200! Then, I Found Videos...",
+       "views": 1458080
+      }
+     ]
+    },
+    "2024": {
+     "score": 51,
+     "weight": 9.7,
+     "videos": 110,
+     "named": 3,
+     "top": [
+      {
+       "id": "UYVRkU16bb8",
+       "title": "Differences Between The SRT 392 & Scat Pack Dodge Charger",
+       "views": 2384023
+      },
+      {
+       "id": "hSZ4RYm1kTI",
+       "title": "Blown & Injected vintage 392 HEMI - Start Up",
+       "views": 1548324
+      },
+      {
+       "id": "74N5NvKHZfk",
+       "title": "I Bought A CHEAP Challenger Scat Pack Listed A NO START & Fixed It For $200! Then, I Found Videos...",
+       "views": 1458080
+      }
+     ]
+    },
+    "2025": {
+     "score": 52,
+     "weight": 11.2,
+     "videos": 112,
+     "named": 5,
+     "top": [
+      {
+       "id": "UYVRkU16bb8",
+       "title": "Differences Between The SRT 392 & Scat Pack Dodge Charger",
+       "views": 2384023
+      },
+      {
+       "id": "KV6XDHsuU1w",
+       "title": "2025 Dodge Charger Scat Pack Review // One Big Problem",
+       "views": 1906855
+      },
+      {
+       "id": "hSZ4RYm1kTI",
+       "title": "Blown & Injected vintage 392 HEMI - Start Up",
+       "views": 1548324
+      }
+     ]
+    },
+    "2026": {
+     "score": 58,
+     "weight": 18.2,
+     "videos": 119,
+     "named": 12,
+     "top": [
+      {
+       "id": "UYVRkU16bb8",
+       "title": "Differences Between The SRT 392 & Scat Pack Dodge Charger",
+       "views": 2384023
+      },
+      {
+       "id": "hSZ4RYm1kTI",
+       "title": "Blown & Injected vintage 392 HEMI - Start Up",
+       "views": 1548324
+      },
+      {
+       "id": "74N5NvKHZfk",
+       "title": "I Bought A CHEAP Challenger Scat Pack Listed A NO START & Fixed It For $200! Then, I Found Videos...",
+       "views": 1458080
+      }
+     ]
+    }
+   },
+   "videos": 187,
+   "pulled": 200
+  }
+ }
+}

@@ -309,7 +309,7 @@ def build(slug, out='docs'):
         v = lead(g); zv, zl, zt = z_fallback(g, v); top = ((v.get('top') or {}).get('v') or '')
         s = [(str(_hp(v) if _hp(v) is not None else '–'), 'horsepower'), (zv.replace(' s', '') if zv else '–', '0–60 mph, sec' + (f' ({zt})' if zt else '')), (top.replace(' mph', '') or '–', 'mph top speed')]
         if s[2][0] == '–' and s[1][0] != '–': s = s[:2]   # 11-12 round 2: no empty "top speed" tile when we have no figure
-        if D.get('jdm'): s = [x for x in s if x[0] != '–'] or s   # 11-13 JDM: no dash tiles (no stock 0-60 test exists for the R34)
+        if D.get('jdm') or all(x[0] == '–' for x in s[1:]): s = [x for x in s if x[0] != '–'] or s   # 11-13 JDM: no dash tiles (no stock 0-60 test exists for the R34); 11-17: nor when both 0-60 and top speed are unknown (the Jesko: no test, no maker figure)
         return (f'<div class="pf-stats{" on" if g is G[focus] else ""}" data-g="{g["id"]}"><p class="pf-sl">{E(v["name"])} <span>{E(g["code"])} · {E(v["years"])}</span></p>'
                 + ''.join(f'<div class="pf-st"><b>{E(a)}</b><span>{E(b)}</span></div>' for a, b in s) + (f'<p class="pf-tag">{E(g["tag"])}</p>' if g.get('tag') else '') + '</div>')
     info = ('<button class="ii" type="button" aria-label="Image info" aria-expanded="false" aria-controls="pf-ii">i</button><div class="ii-pop" id="pf-ii" role="note" hidden>'

@@ -1,0 +1,482 @@
+{
+ "built": "2026-11-17",
+ "nhtsa": {
+  "by_year": {
+   "2019": 63,
+   "2020": 13,
+   "2021": 7,
+   "2022": 32,
+   "2023": 25,
+   "2024": 3,
+   "2025": 1,
+   "2026": 1
+  },
+  "gens": {
+   "ik": {
+    "n": 83,
+    "issues": {
+     "Turbo oil feed line recall": {
+      "n": 2,
+      "ex": [
+       "11582731",
+       "11715302"
+      ]
+     },
+     "Intake valve carbon": {
+      "n": 0,
+      "ex": []
+     },
+     "Timing chain tensioner (disputed)": {
+      "n": 0,
+      "ex": []
+     }
+    },
+    "parts": [
+     [
+      "Engine",
+      20
+     ],
+     [
+      "Fuel/propulsion system",
+      18
+     ],
+     [
+      "Unknown or other",
+      16
+     ],
+     [
+      "Electrical system",
+      13
+     ],
+     [
+      "Power train",
+      8
+     ],
+     [
+      "Fuel system, gasoline",
+      8
+     ]
+    ]
+   },
+   "ik2": {
+    "n": 62,
+    "issues": {
+     "Turbo oil feed line recall": {
+      "n": 0,
+      "ex": []
+     },
+     "Intake valve carbon": {
+      "n": 0,
+      "ex": []
+     },
+     "Timing chain tensioner (disputed)": {
+      "n": 0,
+      "ex": []
+     }
+    },
+    "parts": [
+     [
+      "Exterior lighting",
+      19
+     ],
+     [
+      "Engine",
+      15
+     ],
+     [
+      "Electrical system",
+      13
+     ],
+     [
+      "Fuel/propulsion system",
+      12
+     ],
+     [
+      "Unknown or other",
+      8
+     ],
+     [
+      "Power train",
+      6
+     ]
+    ]
+   }
+  },
+  "parts": [
+   [
+    "Engine",
+    35
+   ],
+   [
+    "Fuel/propulsion system",
+    30
+   ],
+   [
+    "Electrical system",
+    26
+   ],
+   [
+    "Unknown or other",
+    24
+   ],
+   [
+    "Exterior lighting",
+    19
+   ],
+   [
+    "Power train",
+    14
+   ]
+  ]
+ },
+ "recalls": {
+  "2019": [
+   {
+    "id": "21V161000",
+    "part": "SERVICE BRAKES, HYDRAULIC:ANTILOCK/TRACTION CONTROL/ELECTRONIC LIMITED SLIP:CONTROL UNIT/MODULE",
+    "summary": "Hyundai Motor America (Hyundai) is recalling certain 2019-2021 Genesis G70 vehicles.  The Anti-Lock Brake System (ABS) module could malfunction and short circuit."
+   },
+   {
+    "id": "22V196000",
+    "part": "LATCHES/LOCKS/LINKAGES:TRUNK LID:LATCH",
+    "summary": "Hyundai Motor America (Hyundai) is recalling certain 2020 Sonata and Sonata Hybrid, and 2019 Genesis G70 vehicles.  The trunk latch may become damaged, preventing the opening of the trunk from the inside.  As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 401, \"Internal Trunk Release.\""
+   },
+   {
+    "id": "24V107000",
+    "part": "ELECTRICAL SYSTEM:STARTER ASSEMBLY:SOLENOID",
+    "summary": "Hyundai Motor America (Hyundai) is recalling certain 2015-2016 Genesis, 2017-2019 Genesis G80, Genesis G90, and 2019 Genesis G70 vehicles.  Water may enter the starter solenoid and cause an electrical short, which can result in an engine compartment fire while parked or driving."
+   },
+   {
+    "id": "24V191000",
+    "part": "ENGINE AND ENGINE COOLING:ENGINE:GASOLINE:TURBO/SUPERCHARGER",
+    "summary": "Hyundai Motor America (Hyundai) is recalling certain 2018-2020 Genesis G80, 2017-2022 G90, and 2019-2022 G70 vehicles equipped with a 3.3-liter V6 turbocharged engine.  The left turbocharger oil feed pipe may deteriorate and leak oil."
+   },
+   {
+    "id": "24V528000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP:CONTROL/DRIVE MODULE",
+    "summary": "Hyundai Motor America (Hyundai) is recalling certain 2019-2022 Veloster N, 2019-2023 Genesis G70, 2022-2023 Elantra N, and Kona N vehicles.  The fuel pump may fail, which can result in a loss of drive power."
+   }
+  ],
+  "2020": [
+   {
+    "id": "21V161000",
+    "part": "SERVICE BRAKES, HYDRAULIC:ANTILOCK/TRACTION CONTROL/ELECTRONIC LIMITED SLIP:CONTROL UNIT/MODULE",
+    "summary": "Hyundai Motor America (Hyundai) is recalling certain 2019-2021 Genesis G70 vehicles.  The Anti-Lock Brake System (ABS) module could malfunction and short circuit."
+   },
+   {
+    "id": "24V191000",
+    "part": "ENGINE AND ENGINE COOLING:ENGINE:GASOLINE:TURBO/SUPERCHARGER",
+    "summary": "Hyundai Motor America (Hyundai) is recalling certain 2018-2020 Genesis G80, 2017-2022 G90, and 2019-2022 G70 vehicles equipped with a 3.3-liter V6 turbocharged engine.  The left turbocharger oil feed pipe may deteriorate and leak oil."
+   },
+   {
+    "id": "24V528000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP:CONTROL/DRIVE MODULE",
+    "summary": "Hyundai Motor America (Hyundai) is recalling certain 2019-2022 Veloster N, 2019-2023 Genesis G70, 2022-2023 Elantra N, and Kona N vehicles.  The fuel pump may fail, which can result in a loss of drive power."
+   }
+  ],
+  "2021": [
+   {
+    "id": "21V161000",
+    "part": "SERVICE BRAKES, HYDRAULIC:ANTILOCK/TRACTION CONTROL/ELECTRONIC LIMITED SLIP:CONTROL UNIT/MODULE",
+    "summary": "Hyundai Motor America (Hyundai) is recalling certain 2019-2021 Genesis G70 vehicles.  The Anti-Lock Brake System (ABS) module could malfunction and short circuit."
+   },
+   {
+    "id": "20V569000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+    "summary": "Hyundai Motor America (Hyundai) is recalling certain 2021 Genesis G70 vehicles equipped with 2.0L GDI engines.  The fuel pump's jet nozzle may have a plastic burr remaining from the manufacturing process, possibly causing a blocked nozzle and an insufficient fuel supply to the engine."
+   },
+   {
+    "id": "24V191000",
+    "part": "ENGINE AND ENGINE COOLING:ENGINE:GASOLINE:TURBO/SUPERCHARGER",
+    "summary": "Hyundai Motor America (Hyundai) is recalling certain 2018-2020 Genesis G80, 2017-2022 G90, and 2019-2022 G70 vehicles equipped with a 3.3-liter V6 turbocharged engine.  The left turbocharger oil feed pipe may deteriorate and leak oil."
+   },
+   {
+    "id": "24V528000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP:CONTROL/DRIVE MODULE",
+    "summary": "Hyundai Motor America (Hyundai) is recalling certain 2019-2022 Veloster N, 2019-2023 Genesis G70, 2022-2023 Elantra N, and Kona N vehicles.  The fuel pump may fail, which can result in a loss of drive power."
+   }
+  ],
+  "2022": [
+   {
+    "id": "24V191000",
+    "part": "ENGINE AND ENGINE COOLING:ENGINE:GASOLINE:TURBO/SUPERCHARGER",
+    "summary": "Hyundai Motor America (Hyundai) is recalling certain 2018-2020 Genesis G80, 2017-2022 G90, and 2019-2022 G70 vehicles equipped with a 3.3-liter V6 turbocharged engine.  The left turbocharger oil feed pipe may deteriorate and leak oil."
+   },
+   {
+    "id": "24V528000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP:CONTROL/DRIVE MODULE",
+    "summary": "Hyundai Motor America (Hyundai) is recalling certain 2019-2022 Veloster N, 2019-2023 Genesis G70, 2022-2023 Elantra N, and Kona N vehicles.  The fuel pump may fail, which can result in a loss of drive power."
+   }
+  ],
+  "2023": [
+   {
+    "id": "24V528000",
+    "part": "FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP:CONTROL/DRIVE MODULE",
+    "summary": "Hyundai Motor America (Hyundai) is recalling certain 2019-2022 Veloster N, 2019-2023 Genesis G70, 2022-2023 Elantra N, and Kona N vehicles.  The fuel pump may fail, which can result in a loss of drive power."
+   }
+  ],
+  "2024": [],
+  "2025": [],
+  "2026": []
+ },
+ "yt": {
+  "car-genesis-g70-33t": null,
+  "hyundai-g6dp": {
+   "videos": 191,
+   "praise": [
+    [
+     "Looks",
+     23
+    ],
+    [
+     "Everyday comfort",
+     17
+    ],
+    [
+     "Handling and steering",
+     15
+    ],
+    [
+     "Power and acceleration",
+     12
+    ]
+   ],
+   "trouble": [],
+   "top": [
+    {
+     "id": "ZDVbx1ZEs5E",
+     "title": "Here's Why the 2018 Kia Stinger GT Is Worth $50,000",
+     "views": 5216261,
+     "ch": "Doug DeMuro"
+    },
+    {
+     "id": "dKKCmgic8Fg",
+     "title": "I Bought a Kia Stinger GT! (And Here's Why)",
+     "views": 3718168,
+     "ch": "Doug DeMuro"
+    },
+    {
+     "id": "WBUJewro6g0",
+     "title": "I Bought A Turbo Stinger GTS Listed With A Bad Engine & I Didn’t Believe It! Cheap Fix Gone Wrong!",
+     "views": 1026116,
+     "ch": "LegitStreetCars"
+    }
+   ]
+  }
+ },
+ "scores": {
+  "hyundai-g6dp": {
+   "years": {
+    "2018": {
+     "score": 58,
+     "weight": 31.3,
+     "videos": 79,
+     "named": 23,
+     "top": [
+      {
+       "id": "ZDVbx1ZEs5E",
+       "title": "Here's Why the 2018 Kia Stinger GT Is Worth $50,000",
+       "views": 5216261
+      },
+      {
+       "id": "dKKCmgic8Fg",
+       "title": "I Bought a Kia Stinger GT! (And Here's Why)",
+       "views": 3718168
+      },
+      {
+       "id": "WBUJewro6g0",
+       "title": "I Bought A Turbo Stinger GTS Listed With A Bad Engine & I Didn’t Believe It! Cheap Fix Gone Wrong!",
+       "views": 1026116
+      }
+     ]
+    },
+    "2019": {
+     "score": 54,
+     "weight": 22.4,
+     "videos": 77,
+     "named": 14,
+     "top": [
+      {
+       "id": "dKKCmgic8Fg",
+       "title": "I Bought a Kia Stinger GT! (And Here's Why)",
+       "views": 3718168
+      },
+      {
+       "id": "WBUJewro6g0",
+       "title": "I Bought A Turbo Stinger GTS Listed With A Bad Engine & I Didn’t Believe It! Cheap Fix Gone Wrong!",
+       "views": 1026116
+      },
+      {
+       "id": "FeVaPUOI7Lg",
+       "title": "2019 Genesis G70 3.3T – The New Sport Sedan Benchmark",
+       "views": 974320
+      }
+     ]
+    },
+    "2020": {
+     "score": 55,
+     "weight": 26.4,
+     "videos": 81,
+     "named": 18,
+     "top": [
+      {
+       "id": "dKKCmgic8Fg",
+       "title": "I Bought a Kia Stinger GT! (And Here's Why)",
+       "views": 3718168
+      },
+      {
+       "id": "WBUJewro6g0",
+       "title": "I Bought A Turbo Stinger GTS Listed With A Bad Engine & I Didn’t Believe It! Cheap Fix Gone Wrong!",
+       "views": 1026116
+      },
+      {
+       "id": "wcePczOW0v4",
+       "title": "I Finished My Turbo Stinger GTS Engine & Discovered The Truth About Kia! Not The Worst Cars EVER!",
+       "views": 907211
+      }
+     ]
+    },
+    "2021": {
+     "score": 52,
+     "weight": 23.4,
+     "videos": 78,
+     "named": 15,
+     "top": [
+      {
+       "id": "dKKCmgic8Fg",
+       "title": "I Bought a Kia Stinger GT! (And Here's Why)",
+       "views": 3718168
+      },
+      {
+       "id": "WBUJewro6g0",
+       "title": "I Bought A Turbo Stinger GTS Listed With A Bad Engine & I Didn’t Believe It! Cheap Fix Gone Wrong!",
+       "views": 1026116
+      },
+      {
+       "id": "wcePczOW0v4",
+       "title": "I Finished My Turbo Stinger GTS Engine & Discovered The Truth About Kia! Not The Worst Cars EVER!",
+       "views": 907211
+      }
+     ]
+    },
+    "2022": {
+     "score": 56,
+     "weight": 47.4,
+     "videos": 102,
+     "named": 39,
+     "top": [
+      {
+       "id": "dKKCmgic8Fg",
+       "title": "I Bought a Kia Stinger GT! (And Here's Why)",
+       "views": 3718168
+      },
+      {
+       "id": "WBUJewro6g0",
+       "title": "I Bought A Turbo Stinger GTS Listed With A Bad Engine & I Didn’t Believe It! Cheap Fix Gone Wrong!",
+       "views": 1026116
+      },
+      {
+       "id": "6W4Kf8LxGsE",
+       "title": "Is the NEW 2022 Kia Stinger GT Scorpion a better sport sedan than a G70?",
+       "views": 947323
+      }
+     ]
+    },
+    "2023": {
+     "score": 52,
+     "weight": 22.4,
+     "videos": 77,
+     "named": 14,
+     "top": [
+      {
+       "id": "dKKCmgic8Fg",
+       "title": "I Bought a Kia Stinger GT! (And Here's Why)",
+       "views": 3718168
+      },
+      {
+       "id": "WBUJewro6g0",
+       "title": "I Bought A Turbo Stinger GTS Listed With A Bad Engine & I Didn’t Believe It! Cheap Fix Gone Wrong!",
+       "views": 1026116
+      },
+      {
+       "id": "wcePczOW0v4",
+       "title": "I Finished My Turbo Stinger GTS Engine & Discovered The Truth About Kia! Not The Worst Cars EVER!",
+       "views": 907211
+      }
+     ]
+    },
+    "2024": {
+     "score": 63,
+     "weight": 7.4,
+     "videos": 17,
+     "named": 7,
+     "top": [
+      {
+       "id": "tBlRHAZEYSs",
+       "title": "BRUTAL Kia Sorento Lambda II V6 Engine Failure! Are These ANY Better Than The 4-Cylinder?",
+       "views": 278868
+      },
+      {
+       "id": "IkVGgWLAv4k",
+       "title": "Hyundai Genesis 3.8L Lambda GDI V6 Bad Engine Teardown. Simple Modern V6 Ruined By Negligence!",
+       "views": 260629
+      },
+      {
+       "id": "x3IWPSL29Og",
+       "title": "2024 Genesis G70 AWD 3.3T Sport Prestige - POV Driving Impressions",
+       "views": 192162
+      }
+     ]
+    },
+    "2025": {
+     "score": null,
+     "weight": 1.2,
+     "videos": 10,
+     "named": 0,
+     "top": [
+      {
+       "id": "tBlRHAZEYSs",
+       "title": "BRUTAL Kia Sorento Lambda II V6 Engine Failure! Are These ANY Better Than The 4-Cylinder?",
+       "views": 278868
+      },
+      {
+       "id": "IkVGgWLAv4k",
+       "title": "Hyundai Genesis 3.8L Lambda GDI V6 Bad Engine Teardown. Simple Modern V6 Ruined By Negligence!",
+       "views": 260629
+      },
+      {
+       "id": "Qwk4nMD9VXU",
+       "title": "Genesis G70 3.3T - One Take",
+       "views": 110154
+      }
+     ]
+    },
+    "2026": {
+     "score": 54,
+     "weight": 7.2,
+     "videos": 16,
+     "named": 6,
+     "top": [
+      {
+       "id": "tBlRHAZEYSs",
+       "title": "BRUTAL Kia Sorento Lambda II V6 Engine Failure! Are These ANY Better Than The 4-Cylinder?",
+       "views": 278868
+      },
+      {
+       "id": "IkVGgWLAv4k",
+       "title": "Hyundai Genesis 3.8L Lambda GDI V6 Bad Engine Teardown. Simple Modern V6 Ruined By Negligence!",
+       "views": 260629
+      },
+      {
+       "id": "Qwk4nMD9VXU",
+       "title": "Genesis G70 3.3T - One Take",
+       "views": 110154
+      }
+     ]
+    }
+   },
+   "videos": 189,
+   "pulled": 200
+  }
+ }
+}

@@ -1,0 +1,832 @@
+{
+ "slug": "audi-s4",
+ "name": "Audi S4",
+ "short": "S4",
+ "make": "Audi",
+ "page": "/cars/audi-s4/",
+ "focus": "b9",
+ "star": "b9",
+ "h1": "Audi S4: performance, engines and what owners say",
+ "topics_extra": {
+  "Timing chain guides": "timing chain|chain (guide|rattle)|chain tensioners?|cam adjuster",
+  "Timing belt": "timing belt",
+  "Water pump / thermostat": "water pump|thermostat|coolant (leak|loss)|losing coolant",
+  "Carbon buildup": "carbon (build ?up|deposits?)|walnut blast",
+  "Turbos": "turbos? (fail|failure|replaced|smok)|blown turbo|\\bk0[34]\\b"
+ },
+ "gens": [
+  {
+   "id": "b5",
+   "code": "B5",
+   "years": "2000–2002",
+   "y0": 2000,
+   "y1": 2002,
+   "engine": "27t",
+   "body": "Sedan, Avant",
+   "color": "Nogaro Blue",
+   "tag": "The first S4 sold in the U.S.: a 250 hp twin-turbo V-6 and a six-speed manual.",
+   "variants": [
+    {
+     "id": "b5",
+     "name": "S4 sedan",
+     "years": "2000–2002",
+     "hp": {
+      "v": 250,
+      "src": [
+       "atc99",
+       "wps4"
+      ],
+      "note": "U.S. rating"
+     },
+     "tq": {
+      "v": 258,
+      "src": [
+       "wps4"
+      ],
+      "note": "lb-ft (350 Nm), U.S. rating"
+     },
+     "z60": {
+      "v": 5.6,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ]
+     },
+     "trans": {
+      "v": "6-speed manual or 5-speed Tiptronic automatic, all-wheel drive",
+      "src": [
+       "atc99",
+       "fe00"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$37,900",
+      "src": [
+       "atc99"
+      ],
+      "note": "2000, plus $525 destination"
+     },
+     "what": "0–60 tested on a 2000 manual sedan.",
+     "what_src": [
+      "z60"
+     ]
+    }
+   ],
+   "yt_study": "audi-s4-g1",
+   "img": "/assets/perf/audi-s4-b5.webp?v=1"
+  },
+  {
+   "id": "b6",
+   "code": "B6",
+   "years": "2004–2005",
+   "y0": 2004,
+   "y1": 2005,
+   "engine": "42v8",
+   "body": "Sedan, Avant, Cabriolet",
+   "color": "Sprint Blue",
+   "tag": "The V-8 S4: a 340 hp, 40-valve 4.2 that revs to 7,000 rpm.",
+   "variants": [
+    {
+     "id": "b6",
+     "name": "S4 sedan",
+     "years": "2004–2005",
+     "hp": {
+      "v": 340,
+      "src": [
+       "atc03"
+      ],
+      "note": "at 7,000 rpm"
+     },
+     "tq": {
+      "v": 302,
+      "src": [
+       "atc03"
+      ],
+      "note": "lb-ft at 3,500 rpm"
+     },
+     "z60": {
+      "v": 5.0,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ]
+     },
+     "top": {
+      "v": "155 mph",
+      "src": [
+       "wps4"
+      ],
+      "note": "electronically limited"
+     },
+     "trans": {
+      "v": "6-speed manual or 6-speed Tiptronic automatic, all-wheel drive",
+      "src": [
+       "atc03",
+       "fe04"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "3,660 lb",
+      "src": [
+       "wps4"
+      ],
+      "note": "Wikipedia figure (1,660 kg)"
+     },
+     "what": "0–60 tested on a 2004 manual sedan. The Avant and Cabriolet used the same drivetrain.",
+     "what_src": [
+      "z60",
+      "fe04"
+     ]
+    }
+   ],
+   "yt_study": "audi-s4-g2",
+   "img": "/assets/perf/audi-s4-b6.webp?v=1"
+  },
+  {
+   "id": "b7",
+   "code": "B7",
+   "years": "2005.5–2008",
+   "y0": 2006,
+   "y1": 2008,
+   "engine": "42v8",
+   "body": "Sedan, Avant, Cabriolet",
+   "color": "Avus Silver",
+   "tag": "A facelift with the big single-frame grille, the same 4.2 V-8 and the same gearboxes.",
+   "variants": [
+    {
+     "id": "b7",
+     "name": "S4 sedan",
+     "years": "2005.5–2008",
+     "hp": {
+      "v": 340,
+      "src": [
+       "atc03",
+       "wps4"
+      ],
+      "note": "same 4.2 V-8 as the B6"
+     },
+     "tq": {
+      "v": 302,
+      "src": [
+       "atc03",
+       "wps4"
+      ],
+      "note": "lb-ft, same engine as the B6"
+     },
+     "trans": {
+      "v": "6-speed manual or 6-speed Tiptronic automatic, all-wheel drive",
+      "src": [
+       "fe06",
+       "wps4"
+      ],
+      "note": ""
+     },
+     "what": "Production began in November 2004 and U.S. cars went on sale as 2005.5 models, so 2005 model-year records stay with the B6. The Cabriolet carried on through 2009.",
+     "what_src": [
+      "wps4",
+      "fe09"
+     ]
+    }
+   ],
+   "yt_study": "audi-s4-g2",
+   "img": "/assets/perf/audi-s4-b7.webp?v=1"
+  },
+  {
+   "id": "b8",
+   "code": "B8",
+   "years": "2010–2016",
+   "y0": 2010,
+   "y1": 2016,
+   "engine": "30sc",
+   "body": "Sedan",
+   "color": "Estoril Blue",
+   "tag": "A supercharged V-6 replaced the V-8: lighter, quicker and far less thirsty. Facelifted for 2013.",
+   "variants": [
+    {
+     "id": "b8-m",
+     "name": "S4 (6-speed manual)",
+     "years": "2010–2016",
+     "hp": {
+      "v": 333,
+      "src": [
+       "ma10",
+       "ma10d"
+      ],
+      "note": ""
+     },
+     "tq": {
+      "v": 325,
+      "src": [
+       "ma10d"
+      ],
+      "note": "lb-ft at 2,900 rpm"
+     },
+     "z60": {
+      "v": 4.9,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 4.9,
+      "csrc": [
+       "ma10d"
+      ]
+     },
+     "trans": {
+      "v": "6-speed manual, all-wheel drive",
+      "src": [
+       "ma10d",
+       "fe10",
+       "fe16"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$45,900",
+      "src": [
+       "ma10",
+       "ma10d"
+      ],
+      "note": "2010; destination not stated"
+     },
+     "what": "0–60 tested on a 2010 car.",
+     "what_src": [
+      "z60"
+     ]
+    },
+    {
+     "id": "b8-st",
+     "name": "S4 (S tronic)",
+     "years": "2010–2016",
+     "hp": {
+      "v": 333,
+      "src": [
+       "ma10",
+       "ma10d"
+      ],
+      "note": ""
+     },
+     "tq": {
+      "v": 325,
+      "src": [
+       "ma10d"
+      ],
+      "note": "lb-ft at 2,900 rpm"
+     },
+     "z60": {
+      "v": 4.4,
+      "who": "MotorTrend",
+      "src": [
+       "z60"
+      ],
+      "claim": 4.9,
+      "csrc": [
+       "ma10d"
+      ]
+     },
+     "trans": {
+      "v": "7-speed S tronic dual-clutch, all-wheel drive",
+      "src": [
+       "ma10d",
+       "fe10"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$47,300",
+      "src": [
+       "ma10"
+      ],
+      "note": "2010; destination not stated"
+     },
+     "what": "0–60 tested on a 2013 (facelifted) car.",
+     "what_src": [
+      "z60"
+     ]
+    }
+   ],
+   "yt_study": "audi-s4-g3",
+   "img": "/assets/perf/audi-s4-b8.webp?v=1"
+  },
+  {
+   "id": "b9",
+   "code": "B9",
+   "years": "2018–2025",
+   "y0": 2018,
+   "y1": 2025,
+   "engine": "ea839",
+   "body": "Sedan",
+   "color": "Turbo Blue",
+   "tag": "Back to a turbo: 354 hp, an 8-speed automatic and no manual. 2025 was the last U.S. year.",
+   "variants": [
+    {
+     "id": "b9",
+     "name": "S4",
+     "years": "2018–2025",
+     "star": true,
+     "hp": {
+      "v": 354,
+      "src": [
+       "ma18p",
+       "ma18d"
+      ],
+      "note": "2018 launch rating"
+     },
+     "tq": {
+      "v": 369,
+      "src": [
+       "ma18p",
+       "ma18d"
+      ],
+      "note": "lb-ft from 1,370 to 4,500 rpm"
+     },
+     "z60": {
+      "v": 4.3,
+      "who": "Car and Driver",
+      "src": [
+       "z60"
+      ],
+      "claim": 4.4,
+      "csrc": [
+       "ma18p"
+      ]
+     },
+     "top": {
+      "v": "155 mph",
+      "src": [
+       "wps4"
+      ],
+      "note": "electronically limited"
+     },
+     "trans": {
+      "v": "8-speed Tiptronic automatic, all-wheel drive",
+      "src": [
+       "awp16",
+       "ma18d",
+       "fe18"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$51,875",
+      "src": [
+       "ma18p"
+      ],
+      "note": "2018 Premium Plus; destination not stated"
+     },
+     "what": "0–60 tested on a 2018 Premium Plus. The S4 was replaced by the S5 sedan for 2026.",
+     "what_src": [
+      "z60",
+      "fe26"
+     ]
+    }
+   ],
+   "yt_study": "audi-s4-g4",
+   "img": "/assets/perf/audi-s4-b9.webp?v=1"
+  }
+ ],
+ "engines": {
+  "27t": {
+   "name": "Audi 2.7T V6 biturbo",
+   "what": "2.7-liter V-6, twin-turbo",
+   "study": "",
+   "page": "",
+   "yt": [
+    "scy",
+    ""
+   ],
+   "facts": [
+    [
+     "Output (U.S.)",
+     "250 hp, 258 lb-ft",
+     [
+      "atc99",
+      "wps4"
+     ]
+    ],
+    [
+     "Turbos",
+     "Two BorgWarner K03 turbos, one per bank",
+     [
+      "wps4"
+     ]
+    ],
+    [
+     "Valvetrain",
+     "30 valves, twin cams per bank, timing belt",
+     [
+      "wps4",
+      "ecs21"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Turbo failure",
+     "kind": "Parts seller",
+     "rx": "turbos? (fail|failure|replaced|smok)|blown turbo|\\bk0[34]\\b",
+     "x": "A parts seller says the twin turbos wear out with age even on stock cars, and fail sooner on tuned ones. They sit deep in the engine bay.",
+     "fix": "Ask whether the turbos were ever replaced. Owners often do them with the engine out.",
+     "src": [
+      "ecs21"
+     ]
+    },
+    {
+     "t": "Timing belt service",
+     "kind": "Parts seller",
+     "rx": "timing belt|belt tensioner",
+     "x": "The 2.7T uses a timing belt, not a chain, and it is hard to reach without taking off the bumper and front support.",
+     "fix": "Without proof of a recent belt job, plan one right away, with new tensioners.",
+     "src": [
+      "ecs21"
+     ]
+    },
+    {
+     "t": "Valve cover gasket oil leaks",
+     "kind": "Parts seller",
+     "rx": "valve cover|oil leak|rear main seal",
+     "x": "Gaskets on the tightly packed engine age and leak, and the source of a leak can be hard to find.",
+     "fix": "Replace the valve cover gaskets with a full kit, ideally while the engine is out.",
+     "src": [
+      "ecs21"
+     ]
+    }
+   ]
+  },
+  "42v8": {
+   "name": "Audi 4.2 V8 (40-valve)",
+   "what": "4.2-liter V-8, naturally aspirated",
+   "study": "",
+   "page": "",
+   "yt": [
+    "scy",
+    ""
+   ],
+   "facts": [
+    [
+     "Output",
+     "340 hp at 7,000 rpm, 302 lb-ft at 3,500 rpm",
+     [
+      "atc03"
+     ]
+    ],
+    [
+     "Valves",
+     "Five per cylinder",
+     [
+      "atc03"
+     ]
+    ],
+    [
+     "Cam drive",
+     "Chains on the gearbox side, at the back of the engine",
+     [
+      "atc03"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Timing chain guides and tensioners",
+     "kind": "Owner-reported",
+     "rx": "timing chain|chain (guide|rattle)|chain tensioners?|guide rail",
+     "x": "The cam chains sit at the back of the engine. Owners report worn or broken plastic guides and tensioners, often with a rattle at cold start. A parts seller says failures can start at 50,000–80,000 miles.",
+     "fix": "Owners report the engine has to come out for the job, with bills around $5,000–$7,000.",
+     "src": [
+      "ccs4",
+      "jhm",
+      "atc03"
+     ]
+    },
+    {
+     "t": "Mechanical cam adjuster",
+     "kind": "Parts seller",
+     "rx": "cam (adjuster|phaser)|camshaft adjuster|p001[0-9]",
+     "x": "The same seller says a worn mechanical cam adjuster can make one bank of cylinders misfire and can damage the electric adjuster.",
+     "fix": "It is replaced as part of a timing chain service kit.",
+     "src": [
+      "jhm"
+     ]
+    }
+   ]
+  },
+  "30sc": {
+   "name": "Audi 3.0 TFSI V6 (supercharged)",
+   "what": "3.0-liter V-6, supercharged",
+   "study": "",
+   "page": "",
+   "yt": [
+    "scy",
+    ""
+   ],
+   "facts": [
+    [
+     "Output",
+     "333 hp, 325 lb-ft at 2,900 rpm",
+     [
+      "ma10",
+      "ma10d"
+     ]
+    ],
+    [
+     "Fuel",
+     "Direct injection, supercharged",
+     [
+      "ma10d"
+     ]
+    ],
+    [
+     "Economy",
+     "18 city / 27 highway mpg, up from 13/20 for the old V-8",
+     [
+      "ma10"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Fuel rail leak recall (2011–2012)",
+     "kind": "Recall",
+     "rx": "fuel (rail|leak)|smell of (fuel|gas)|gas smell",
+     "x": "On some 2011–2012 S4s, the fuel injection system could leak fuel, which raises the risk of fire.",
+     "fix": "Dealer replaces the fuel rails and seals for free (NHTSA 15V-019).",
+     "src": [
+      "r15"
+     ]
+    },
+    {
+     "t": "Water pump leaks",
+     "kind": "Parts seller / class action (alleged)",
+     "rx": "water pump|weep hole|coolant (leak|loss)|losing coolant",
+     "x": "A parts seller says the pump sometimes leaks from its weep hole. A 2022 class action named 2013–2022 S4s with the 3.0T and alleges early bearing and seal failure.",
+     "fix": "Replace the pump. The seller also advises a new pump after any overheating.",
+     "src": [
+      "dap",
+      "cc22"
+     ]
+    },
+    {
+     "t": "Oil use on early engines",
+     "kind": "Parts seller",
+     "rx": "oil consumption|burn(s|ing)? oil|\\bpcv\\b",
+     "x": "Early engines built before mid-2012 could use extra oil, per a parts seller.",
+     "fix": "An updated PCV valve, and in rare cases new piston rings.",
+     "src": [
+      "dap"
+     ]
+    },
+    {
+     "t": "Carbon buildup",
+     "kind": "Parts seller",
+     "rx": "carbon (build ?up|deposits?)|walnut blast|intake valves?",
+     "x": "With direct injection, fuel never washes the intake valves, so carbon collects. Signs are weak acceleration, misfires and higher fuel use.",
+     "fix": "Clean the valves with the intake off; one shop lists $1,195 and up for a B8 S4.",
+     "src": [
+      "m034"
+     ]
+    }
+   ]
+  },
+  "ea839": {
+   "name": "Audi 3.0 TFSI V6 (EA839)",
+   "what": "3.0-liter V-6, single twin-scroll turbo",
+   "study": "vw-ea839",
+   "page": "/engines/vw-ea839/",
+   "yt": [
+    "scy",
+    "vw-ea839"
+   ],
+   "facts": [
+    [
+     "Output",
+     "354 hp, 369 lb-ft from 1,370 rpm",
+     [
+      "ma18p",
+      "awp16"
+     ]
+    ],
+    [
+     "Turbo",
+     "One twin-scroll turbo between the cylinder banks",
+     [
+      "ma18p",
+      "ma18d"
+     ]
+    ],
+    [
+     "Weight",
+     "31 lb lighter than the supercharged V-6 it replaced",
+     [
+      "ma18d"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Water pump and coolant module leaks",
+     "kind": "Class action (alleged)",
+     "rx": "water pump|coolant (leak|loss|module)|losing coolant|overheat",
+     "x": "Two class actions say the 3.0T water pump wears out early. The 2022 suit names 2013–2022 S4s. A 2026 suit over EA839 engines says coolant can leak inside the module, out of sight.",
+     "fix": "A parts seller says the plastic impeller can come off the shaft, and lists the pump at $300–$500 plus labor.",
+     "src": [
+      "cc22",
+      "cc26",
+      "tp"
+     ]
+    },
+    {
+     "t": "Auxiliary water pump",
+     "kind": "Parts seller",
+     "rx": "auxiliary (water |coolant )?pump|aux(iliary)? pump|after.?run pump",
+     "x": "The electric pump that cools the turbo after shutdown can fail, often around 40,000–60,000 miles, per the seller.",
+     "fix": "Replace it along with the main pump, since the labor overlaps.",
+     "src": [
+      "tp"
+     ]
+    },
+    {
+     "t": "PCV diaphragm in the valve cover",
+     "kind": "Parts seller",
+     "rx": "\\bpcv\\b|valve cover|oil consumption|blue smoke",
+     "x": "A torn PCV diaphragm can cause oil use and blue smoke, per the same seller.",
+     "fix": "Replace the valve cover, which holds the PCV; listed at $800–$1,300.",
+     "src": [
+      "tp"
+     ]
+    },
+    {
+     "t": "Carbon buildup",
+     "kind": "Parts seller",
+     "rx": "carbon (build ?up|deposits?)|walnut blast|intake valves?",
+     "x": "The S4's 3.0T has no port injection, so carbon builds on the intake valves. The seller says it shows after 60,000–80,000 miles.",
+     "fix": "Walnut blasting; the seller lists $400–$800 at a shop.",
+     "src": [
+      "tp"
+     ]
+    }
+   ]
+  }
+ },
+ "sources": {
+  "atc99": {
+   "t": "Audi of America: Audi's broadest-ever offering, 2000 model-year pricing (Sep 1999, via The Auto Channel)",
+   "u": "https://www.theautochannel.com/news/press/date/19990924/press000080.html",
+   "k": "Audi"
+  },
+  "atc03": {
+   "t": "Audi of America: 2004 Audi S4 to make North American debut (Jan 2003, via The Auto Channel)",
+   "u": "https://www.theautochannel.com/news/2003/01/04/152248.html",
+   "k": "Audi"
+  },
+  "ma10": {
+   "t": "Motor Authority: Supercharged 2010 Audi S4 sedan starts from $45,900 (Aug 2009)",
+   "u": "https://www.motorauthority.com/news/1034271_supercharged-2010-audi-s4-sedan-starts-from-45900",
+   "k": "outlet"
+  },
+  "ma10d": {
+   "t": "Motor Authority: Driven, 2010 Audi S4 (Jun 2010)",
+   "u": "https://www.motorauthority.com/news/1045868_driven-2010-audi-s4",
+   "k": "outlet"
+  },
+  "ma18p": {
+   "t": "Motor Authority: 2018 Audi S4 preview (Feb 2017)",
+   "u": "https://www.motorauthority.com/news/1109008_2018-audi-s4-preview",
+   "k": "outlet"
+  },
+  "ma18d": {
+   "t": "Motor Authority: 2018 Audi S4 first drive review (Apr 2017)",
+   "u": "https://www.motorauthority.com/news/1109677_2018-audi-s4-first-drive-review-whip-without-lash",
+   "k": "outlet"
+  },
+  "awp16": {
+   "t": "Audi press release: Audi S4 and S4 Avant (Sep 2016, via Automotive World)",
+   "u": "https://www.automotiveworld.com/news-releases/audi-s4-s4-avant/",
+   "k": "Audi"
+  },
+  "fe00": {
+   "t": "fueleconomy.gov: 2000 Audi S4",
+   "u": "https://www.fueleconomy.gov/feg/bymodel/2000_Audi_S4.shtml",
+   "k": "EPA"
+  },
+  "fe04": {
+   "t": "fueleconomy.gov: 2004 Audi S4 (sedan, Avant, Cabriolet)",
+   "u": "https://www.fueleconomy.gov/feg/bymodel/2004_Audi_S4.shtml",
+   "k": "EPA"
+  },
+  "fe06": {
+   "t": "fueleconomy.gov: 2006 Audi S4 (sedan, Avant, Cabriolet)",
+   "u": "https://www.fueleconomy.gov/feg/bymodel/2006_Audi_S4.shtml",
+   "k": "EPA"
+  },
+  "fe09": {
+   "t": "fueleconomy.gov: 2009 Audi models (S4 Cabriolet only)",
+   "u": "https://www.fueleconomy.gov/ws/rest/vehicle/menu/model?year=2009&make=Audi",
+   "k": "EPA"
+  },
+  "fe10": {
+   "t": "fueleconomy.gov: 2010 Audi S4",
+   "u": "https://www.fueleconomy.gov/feg/bymodel/2010_Audi_S4.shtml",
+   "k": "EPA"
+  },
+  "fe16": {
+   "t": "fueleconomy.gov: 2016 Audi S4",
+   "u": "https://www.fueleconomy.gov/feg/bymodel/2016_Audi_S4.shtml",
+   "k": "EPA"
+  },
+  "fe18": {
+   "t": "fueleconomy.gov: 2018 Audi S4",
+   "u": "https://www.fueleconomy.gov/feg/bymodel/2018_Audi_S4.shtml",
+   "k": "EPA"
+  },
+  "fe26": {
+   "t": "fueleconomy.gov: 2026 Audi models (no S4; S5 Sport Sedan)",
+   "u": "https://www.fueleconomy.gov/ws/rest/vehicle/menu/model?year=2026&make=Audi",
+   "k": "EPA"
+  },
+  "z60": {
+   "t": "0-60specs.com: Audi S4 0-60 runs by magazine (Car and Driver, MotorTrend, Road & Track)",
+   "u": "https://www.0-60specs.com/audi-s4-0-60-times",
+   "k": "magazine tests, aggregated"
+  },
+  "wps4": {
+   "t": "Wikipedia: Audi S4",
+   "u": "https://en.wikipedia.org/wiki/Audi_S4",
+   "k": "Wikipedia (fallback)"
+  },
+  "ecs21": {
+   "t": "ECS Tuning: Love/hate engines, how to make your N54 or 2.7T reliable (Sep 2021)",
+   "u": "https://blog.ecstuning.com/love-hate-engines-how-to-make-your-n54-or-2-7t-reliable/",
+   "k": "parts seller"
+  },
+  "jhm": {
+   "t": "JH Motorsports: timing chain service kit for B6/B7 S4 4.2 40-valve V8",
+   "u": "https://jhmotorsports.com/shop/catalog/jhm-timing-chain-service-kit-oem-for-b6-b7-s4-intermediate-plus-p-1082.html",
+   "k": "parts seller"
+  },
+  "ccs4": {
+   "t": "CarComplaints: 2005 Audi S4 engine rattle on startup (owner reports)",
+   "u": "https://www.carcomplaints.com/Audi/S4/2005/engine/engine_rattle_on_startup.shtml",
+   "k": "owner complaints"
+  },
+  "r15": {
+   "t": "NHTSA recall 15V-019: 2011–2012 S4 and other 3.0 TFSI Audis, fuel rail leak (Jan 2015)",
+   "u": "https://www.nhtsa.gov/recalls?nhtsaId=15V019000",
+   "k": "Recall"
+  },
+  "dap": {
+   "t": "Deutsche Auto Parts: common issues with 3.0T supercharged TFSI Audi engines (Mar 2018)",
+   "u": "https://www.shopdap.com/blog/post/common-issues-with-3-0t-supercharged-tfsi-audi-engines1.html",
+   "k": "parts seller"
+  },
+  "cc22": {
+   "t": "CarComplaints: Audi 3.0T water pump class action lawsuit (Oct 2022)",
+   "u": "https://www.carcomplaints.com/news/2022/audi-water-pump-class-action-lawsuit-30t-engines.shtml",
+   "k": "outlet"
+  },
+  "cc26": {
+   "t": "CarComplaints: Audi water pump lawsuit involves EA839 engines (May 2026)",
+   "u": "https://www.carcomplaints.com/news/2026/audi-water-pump-lawsuit-ea839-engines.shtml",
+   "k": "outlet"
+  },
+  "tp": {
+   "t": "ThreePiece.us: every Audi B9 S4 common failure and how to fix it (Jul 2026)",
+   "u": "https://www.threepiece.us/blog/every-audi-b9-s4-common-failure-and-how-to-fix-them/",
+   "k": "parts seller"
+  },
+  "m034": {
+   "t": "034Motorsport: carbon cleaning for direct-injected Audi/VW engines",
+   "u": "https://www.034motorsport.com/service/audi-volkswagen-carbon-cleaning-service-direct-injected-engines.html",
+   "k": "parts seller"
+  }
+ },
+ "yt_study": "",
+ "yt_model": "audi-s4",
+ "nhtsa": {
+  "make": "AUDI",
+  "models": [
+   "S4"
+  ],
+  "note": "NHTSA files the S4 sedan, Avant and Cabriolet under S4, so these counts include every body style."
+ },
+ "compare": [
+  {
+   "slug": "bmw-m340i",
+   "name": "BMW M340i"
+  },
+  {
+   "slug": "genesis-g70-33t",
+   "name": "Genesis G70 3.3T"
+  },
+  {
+   "slug": "kia-stinger-gt",
+   "name": "Kia Stinger GT"
+  },
+  {
+   "slug": "audi-rs5",
+   "name": "Audi RS 5"
+  }
+ ],
+ "parent": "/cars/audi-a4/"
+}

@@ -1,0 +1,819 @@
+{
+ "slug": "bmw-x5-m",
+ "name": "BMW X5 M / X6 M",
+ "short": "X5 M",
+ "make": "BMW",
+ "page": "/cars/bmw-x5-m/",
+ "focus": "f95lci",
+ "star": "f95lci-x5",
+ "h1": "BMW X5 M and X6 M: performance, engines and what owners say",
+ "topics_extra": {
+  "Oil use / valve stem seals": "valve stem seals?|oil consumption|burning oil|blue smoke",
+  "Turbos": "turbo(charger)?s? (fail|failure|failed|leak)|turbo oil",
+  "Rod bearings": "rod bearings?",
+  "Coolant / water pump": "water pump|coolant (leak|loss)|overheat"
+ },
+ "gens": [
+  {
+   "id": "e70",
+   "code": "E70 / E71",
+   "years": "2010–2013 (X6 M to 2014)",
+   "y0": 2010,
+   "y1": 2014,
+   "engine": "S63",
+   "body": "SUV (X5 M) and sloped-roof SUV (X6 M)",
+   "color": "Melbourne Red",
+   "tag": "The first M cars with all-wheel drive and turbos. A 555 hp V8.",
+   "variants": [
+    {
+     "id": "e70-x5",
+     "name": "X5 M",
+     "years": "2010–2013",
+     "hp": {
+      "v": 555,
+      "src": [
+       "bf09"
+      ],
+      "note": "at 6,000 rpm"
+     },
+     "tq": {
+      "v": 500,
+      "src": [
+       "bf09"
+      ],
+      "note": "lb-ft at 1,500–5,650 rpm"
+     },
+     "z60": {
+      "v": 4.0,
+      "who": "Car and Driver",
+      "src": [
+       "z60x5"
+      ],
+      "claim": 4.5,
+      "csrc": [
+       "bf09"
+      ]
+     },
+     "trans": {
+      "v": "6-speed M Sports automatic, all-wheel drive",
+      "src": [
+       "bf09"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$86,225",
+      "src": [
+       "jal09"
+      ],
+      "note": "2010, including $825 destination"
+     }
+    },
+    {
+     "id": "e71-x6",
+     "name": "X6 M",
+     "years": "2010–2014",
+     "hp": {
+      "v": 555,
+      "src": [
+       "bf09"
+      ],
+      "note": "at 6,000 rpm"
+     },
+     "tq": {
+      "v": 500,
+      "src": [
+       "bf09"
+      ],
+      "note": "lb-ft at 1,500–5,650 rpm"
+     },
+     "z60": {
+      "v": 4.3,
+      "who": "Car and Driver",
+      "src": [
+       "z60x6"
+      ],
+      "claim": 4.5,
+      "csrc": [
+       "bf09"
+      ]
+     },
+     "trans": {
+      "v": "6-speed M Sports automatic, all-wheel drive",
+      "src": [
+       "bf09"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$89,725",
+      "src": [
+       "jal09"
+      ],
+      "note": "2010, including $825 destination"
+     }
+    }
+   ],
+   "img": "/assets/perf/bmw-x5-m-e70.webp?v=1"
+  },
+  {
+   "id": "f85",
+   "code": "F85 / F86",
+   "years": "2015–2019 (X5 M to 2018)",
+   "y0": 2015,
+   "y1": 2019,
+   "engine": "S63",
+   "body": "SUV (X5 M) and sloped-roof SUV (X6 M)",
+   "color": "Long Beach Blue",
+   "tag": "567 hp, and an 8-speed automatic in place of the old 6-speed.",
+   "variants": [
+    {
+     "id": "f85-x5",
+     "name": "X5 M",
+     "years": "2015–2018",
+     "hp": {
+      "v": 567,
+      "src": [
+       "b15x"
+      ],
+      "note": "at 6,000–6,500 rpm"
+     },
+     "tq": {
+      "v": 553,
+      "src": [
+       "b15x"
+      ],
+      "note": "lb-ft at 2,200–5,000 rpm"
+     },
+     "z60": {
+      "v": 3.8,
+      "who": "Car and Driver",
+      "src": [
+       "z60x5"
+      ],
+      "claim": 4.0,
+      "csrc": [
+       "b15x"
+      ]
+     },
+     "top": {
+      "v": "155 mph",
+      "src": [
+       "b15x"
+      ],
+      "note": "limited"
+     },
+     "trans": {
+      "v": "8-speed M Steptronic, all-wheel drive",
+      "src": [
+       "b15x"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$99,650",
+      "src": [
+       "b15x"
+      ],
+      "note": "2015, including $950 destination"
+     }
+    },
+    {
+     "id": "f86-x6",
+     "name": "X6 M",
+     "years": "2015–2019",
+     "hp": {
+      "v": 567,
+      "src": [
+       "b15x"
+      ],
+      "note": "at 6,000–6,500 rpm"
+     },
+     "tq": {
+      "v": 553,
+      "src": [
+       "b15x"
+      ],
+      "note": "lb-ft at 2,200–5,000 rpm"
+     },
+     "z60": {
+      "v": 3.7,
+      "who": "Car and Driver",
+      "src": [
+       "z60x6"
+      ],
+      "claim": 4.0,
+      "csrc": [
+       "b15x"
+      ]
+     },
+     "top": {
+      "v": "155 mph",
+      "src": [
+       "b15x"
+      ],
+      "note": "limited"
+     },
+     "trans": {
+      "v": "8-speed M Steptronic, all-wheel drive",
+      "src": [
+       "b15x"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$103,050",
+      "src": [
+       "b15x"
+      ],
+      "note": "2015, including $950 destination"
+     }
+    }
+   ],
+   "img": "/assets/perf/bmw-x5-m-f85.webp?v=1"
+  },
+  {
+   "id": "f95",
+   "code": "F95 / F96",
+   "years": "2020–2023",
+   "y0": 2020,
+   "y1": 2023,
+   "engine": "S63",
+   "body": "SUV (X5 M) and sloped-roof SUV (X6 M)",
+   "color": "Marina Bay Blue",
+   "tag": "600 hp, or 617 hp as a Competition, the first Competition X5 M and X6 M.",
+   "variants": [
+    {
+     "id": "f95-x5",
+     "name": "X5 M",
+     "years": "2020–2023",
+     "hp": {
+      "v": 600,
+      "src": [
+       "b20x"
+      ],
+      "note": "at 6,000 rpm"
+     },
+     "tq": {
+      "v": 553,
+      "src": [
+       "b20x"
+      ],
+      "note": "lb-ft at 1,800–5,860 rpm"
+     },
+     "z60": {
+      "v": null,
+      "who": "",
+      "src": [],
+      "claim": 3.8,
+      "csrc": [
+       "b20x"
+      ]
+     },
+     "top": {
+      "v": "155 mph",
+      "src": [
+       "b20x"
+      ],
+      "note": "limited; 177 with M Driver’s Package"
+     },
+     "trans": {
+      "v": "8-speed M Steptronic, all-wheel drive",
+      "src": [
+       "b20x"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "5,425 lb",
+      "src": [
+       "b20x"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$105,100",
+      "src": [
+       "b20x"
+      ],
+      "note": "2020, plus $995 destination"
+     }
+    },
+    {
+     "id": "f95-comp",
+     "name": "X5 M Competition",
+     "years": "2020–2023",
+     "hp": {
+      "v": 617,
+      "src": [
+       "b20x"
+      ],
+      "note": "at 6,000 rpm"
+     },
+     "tq": {
+      "v": 553,
+      "src": [
+       "b20x"
+      ],
+      "note": "lb-ft at 1,800–5,860 rpm"
+     },
+     "z60": {
+      "v": null,
+      "who": "",
+      "src": [],
+      "claim": 3.7,
+      "csrc": [
+       "b20x"
+      ]
+     },
+     "top": {
+      "v": "155 mph",
+      "src": [
+       "b20x"
+      ],
+      "note": "limited; 177 with M Driver’s Package"
+     },
+     "trans": {
+      "v": "8-speed M Steptronic, all-wheel drive",
+      "src": [
+       "b20x"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "5,425 lb",
+      "src": [
+       "b20x"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$114,100",
+      "src": [
+       "b20x"
+      ],
+      "note": "2020, plus $995 destination"
+     }
+    },
+    {
+     "id": "f96-x6",
+     "name": "X6 M",
+     "years": "2020–2023",
+     "hp": {
+      "v": 600,
+      "src": [
+       "b20x"
+      ],
+      "note": "at 6,000 rpm"
+     },
+     "tq": {
+      "v": 553,
+      "src": [
+       "b20x"
+      ],
+      "note": "lb-ft at 1,800–5,690 rpm"
+     },
+     "z60": {
+      "v": null,
+      "who": "",
+      "src": [],
+      "claim": 3.8,
+      "csrc": [
+       "b20x"
+      ]
+     },
+     "top": {
+      "v": "155 mph",
+      "src": [
+       "b20x"
+      ],
+      "note": "limited; 177 with M Driver’s Package"
+     },
+     "trans": {
+      "v": "8-speed M Steptronic, all-wheel drive",
+      "src": [
+       "b20x"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "5,375 lb",
+      "src": [
+       "b20x"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$108,600",
+      "src": [
+       "b20x"
+      ],
+      "note": "2020, plus $995 destination"
+     }
+    },
+    {
+     "id": "f96-comp",
+     "name": "X6 M Competition",
+     "years": "2020–2023",
+     "hp": {
+      "v": 617,
+      "src": [
+       "b20x"
+      ],
+      "note": "at 6,000 rpm"
+     },
+     "tq": {
+      "v": 553,
+      "src": [
+       "b20x"
+      ],
+      "note": "lb-ft at 1,800–5,690 rpm"
+     },
+     "z60": {
+      "v": 3.3,
+      "who": "MotorTrend",
+      "src": [
+       "z60x6"
+      ],
+      "claim": 3.7,
+      "csrc": [
+       "b20x"
+      ]
+     },
+     "top": {
+      "v": "155 mph",
+      "src": [
+       "b20x"
+      ],
+      "note": "limited; 177 with M Driver’s Package"
+     },
+     "trans": {
+      "v": "8-speed M Steptronic, all-wheel drive",
+      "src": [
+       "b20x"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "5,375 lb",
+      "src": [
+       "b20x"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$117,600",
+      "src": [
+       "b20x"
+      ],
+      "note": "2020, plus $995 destination"
+     }
+    }
+   ],
+   "img": "/assets/perf/bmw-x5-m-f95.webp?v=1"
+  },
+  {
+   "id": "f95lci",
+   "code": "F95 / F96 LCI",
+   "years": "2024–",
+   "y0": 2024,
+   "y1": 2026,
+   "engine": "S68",
+   "body": "SUV (X5 M) and sloped-roof SUV (X6 M)",
+   "color": "Isle of Man Green",
+   "tag": "Competition only, with the new S68 V8 and a 48-volt mild-hybrid boost.",
+   "variants": [
+    {
+     "id": "f95lci-x5",
+     "name": "X5 M Competition",
+     "years": "2024–",
+     "star": true,
+     "hp": {
+      "v": 617,
+      "src": [
+       "b24x"
+      ],
+      "note": "at 6,000 rpm"
+     },
+     "tq": {
+      "v": 553,
+      "src": [
+       "b24x"
+      ],
+      "note": "lb-ft from 1,800 rpm"
+     },
+     "z60": {
+      "v": 3.4,
+      "who": "MotorTrend",
+      "src": [
+       "z60x5"
+      ],
+      "claim": 3.7,
+      "csrc": [
+       "b24x"
+      ]
+     },
+     "top": {
+      "v": "155 mph",
+      "src": [
+       "b24x"
+      ],
+      "note": "limited; 177 with M Driver’s Package"
+     },
+     "trans": {
+      "v": "8-speed M Steptronic, all-wheel drive",
+      "src": [
+       "b24x"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "5,498 lb",
+      "src": [
+       "b24x"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$122,300",
+      "src": [
+       "b24x"
+      ],
+      "note": "2024, plus $995 destination"
+     }
+    },
+    {
+     "id": "f96lci-x6",
+     "name": "X6 M Competition",
+     "years": "2024–",
+     "hp": {
+      "v": 617,
+      "src": [
+       "b24x"
+      ],
+      "note": "at 6,000 rpm"
+     },
+     "tq": {
+      "v": 553,
+      "src": [
+       "b24x"
+      ],
+      "note": "lb-ft from 1,800 rpm"
+     },
+     "z60": {
+      "v": 3.5,
+      "who": "MotorTrend",
+      "src": [
+       "z60x6"
+      ],
+      "claim": 3.7,
+      "csrc": [
+       "b24x"
+      ]
+     },
+     "top": {
+      "v": "155 mph",
+      "src": [
+       "b24x"
+      ],
+      "note": "limited; 177 with M Driver’s Package"
+     },
+     "trans": {
+      "v": "8-speed M Steptronic, all-wheel drive",
+      "src": [
+       "b24x"
+      ],
+      "note": ""
+     },
+     "weight": {
+      "v": "5,454 lb",
+      "src": [
+       "b24x"
+      ],
+      "note": ""
+     },
+     "price": {
+      "v": "$127,200",
+      "src": [
+       "b24x"
+      ],
+      "note": "2024, plus $995 destination"
+     }
+    }
+   ],
+   "img": "/assets/perf/bmw-x5-m-f95lci.webp?v=1"
+  }
+ ],
+ "engines": {
+  "S63": {
+   "name": "BMW S63",
+   "what": "4.4-liter V8, twin-turbo",
+   "study": "bmw-s63",
+   "page": "/engines/bmw-s63/",
+   "yt": [
+    "scy",
+    "bmw-s63"
+   ],
+   "facts": [
+    [
+     "Layout",
+     "Turbos sit inside the V, fed by a cross-bank exhaust manifold",
+     [
+      "bf09"
+     ]
+    ],
+    [
+     "Output (X5 M / X6 M)",
+     "555 hp (2010) to 617 hp (2020 Competition)",
+     [
+      "bf09",
+      "b20x"
+     ]
+    ],
+    [
+     "Torque",
+     "500 lb-ft (2010), 553 lb-ft from 2015",
+     [
+      "bf09",
+      "b15x"
+     ]
+    ],
+    [
+     "Versions",
+     "S63B44O0 in the E70/E71, S63B44T2 in the F85/F86, S63B44T4 in the F95/F96",
+     [
+      "bb63",
+      "b20x"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Valve stem seals and oil use",
+     "kind": "Outlet + parts seller",
+     "rx": "valve stem seals?|oil consumption|burning oil|using oil|blue smoke",
+     "x": "Heat from the turbos in the V can harden the valve stem seals. Owners report blue smoke and oil use between services, mostly at high miles.",
+     "fix": "Replace the valve stem seals.",
+     "src": [
+      "bb63",
+      "epp63"
+     ]
+    },
+    {
+     "t": "Turbo failures",
+     "kind": "Outlet + parts seller",
+     "rx": "turbo(charger)?s? (fail|failure|failed|went|blew|leak)|turbo oil",
+     "x": "Turbos can fail when the oil is old or dirty. The parts seller says first-gen S63 turbos fail more often than later ones.",
+     "fix": "Short oil change intervals help.",
+     "src": [
+      "bb63",
+      "epp63"
+     ]
+    },
+    {
+     "t": "Rod bearing wear",
+     "kind": "Outlet + parts seller",
+     "rx": "rod bearings?|spun bearing|bearing knock",
+     "x": "Rod bearing wear is a known complaint on early S63 engines, especially when driven hard. The parts seller suggests changing them early on E70/E71 cars.",
+     "fix": "Preventive rod bearing replacement.",
+     "src": [
+      "bb63",
+      "epp63"
+     ]
+    },
+    {
+     "t": "Auxiliary water pump recall (2010–2012)",
+     "kind": "Recall",
+     "rx": "auxiliary (water|coolant) pump|water pump|engine fire",
+     "x": "The circuit board in the turbo coolant pump could short and overheat. In rare cases this could start a fire. It covers X5 M (E70) and X6 M (E71) cars built through November 2011.",
+     "fix": "Dealer replaces the pump for free (NHTSA 18V-248).",
+     "src": [
+      "r18"
+     ]
+    }
+   ]
+  },
+  "S68": {
+   "name": "BMW S68",
+   "what": "4.4-liter V8, twin-turbo, 48-volt mild hybrid",
+   "study": "bmw-s68",
+   "page": "/engines/bmw-s68/",
+   "yt": [
+    "scy",
+    "bmw-s68"
+   ],
+   "facts": [
+    [
+     "Output",
+     "617 hp, 553 lb-ft",
+     [
+      "b24x"
+     ]
+    ],
+    [
+     "Hybrid",
+     "48-volt motor in the gearbox adds up to 12 hp and 147 lb-ft",
+     [
+      "b24x"
+     ]
+    ],
+    [
+     "Peak power",
+     "6,000 rpm",
+     [
+      "b24x"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "Too new to judge",
+     "kind": "Owner-reported",
+     "rx": "",
+     "x": "The S68 arrived in the 2024 X5 M and X6 M Competition. It is too new for a clear pattern of owner complaints.",
+     "fix": "",
+     "src": [
+      "b24x"
+     ]
+    }
+   ]
+  }
+ },
+ "sources": {
+  "bf09": {
+   "t": "Bimmerfile: BMW officially releases the X5 M and X6 M (BMW release text, Apr 2009)",
+   "u": "https://www.bimmerfile.com/2009/04/05/bmw-officially-releases-the-x5-x6-m/",
+   "k": "outlet"
+  },
+  "jal09": {
+   "t": "Jalopnik: BMW X5 M, X6 M pricing starts at $86,225, $89,725 (BMW NA announcement, Apr 2009)",
+   "u": "https://www.jalopnik.com/bmw-x5-m-x6-m-pricing-starts-at-86-225-89-725-5229613/",
+   "k": "outlet"
+  },
+  "b15x": {
+   "t": "BMW NA: The new BMW X5 M and X6 M, the second generation (Oct 2014)",
+   "u": "https://newsroom.bmwgroup.com/americas/the-new-bmw-x5-m-and-x6-m--the-second-generation-of-the-bmw-m-gmbh-ultra-high-performance-sports-activity-vehicle-and-sports-activity-coupe",
+   "k": "BMW"
+  },
+  "b20x": {
+   "t": "BMW NA: The new 2020 BMW X5 M and X6 M (Oct 2019)",
+   "u": "https://newsroom.bmwgroup.com/americas/the-new-2020-bmw-x5-m-and-x6-m",
+   "k": "BMW"
+  },
+  "b24x": {
+   "t": "BMW NA: The 2024 BMW X5 M Competition and X6 M Competition (Feb 2023)",
+   "u": "https://newsroom.bmwgroup.com/americas/the-2024-bmw-x5-m-competition-and-x6-m-competition",
+   "k": "BMW"
+  },
+  "z60x5": {
+   "t": "0-60specs.com: BMW X5 M 0-60 runs by magazine (Car and Driver, MotorTrend)",
+   "u": "https://www.0-60specs.com/bmw-x5-m-0-60-times/",
+   "k": "magazine tests, aggregated"
+  },
+  "z60x6": {
+   "t": "0-60specs.com: BMW X6 M 0-60 runs by magazine (Car and Driver, MotorTrend)",
+   "u": "https://www.0-60specs.com/bmw-x6-m-0-60-times/",
+   "k": "magazine tests, aggregated"
+  },
+  "bb63": {
+   "t": "BMWBLOG: BMW S63 engine: reliability, efficiency and tuning potential (Dec 2024)",
+   "u": "https://www.bmwblog.com/2024/12/29/bmw-s63-engine-reliability-efficiency-tuning/",
+   "k": "outlet"
+  },
+  "epp63": {
+   "t": "Euro Premium Parts: BMW S63 engine guide, reliability and common problems (2026)",
+   "u": "https://europremiumparts.com/blogs/bmw-buying-guides/bmw-s63-engine-guide-reliability-common-problems-tuning-potential",
+   "k": "parts seller"
+  },
+  "r18": {
+   "t": "NHTSA recall 18V-248 (BMW SI B11 05 18): auxiliary water pump, incl. X5 M (E70) and X6 M (E71), 2018",
+   "u": "https://static.nhtsa.gov/odi/rcl/2018/RCRIT-18V248-1597.pdf",
+   "k": "Recall"
+  }
+ },
+ "yt_study": "car-bmw-x5-m",
+ "yt_model": "",
+ "nhtsa": {
+  "make": "BMW",
+  "models": [
+   "X5 M",
+   "X6 M"
+  ],
+  "note": "Counted from the complaints owners filed under X5 M or X6 M. Most are filed under plain X5 or X6 and can’t be split by engine, so these counts are low. NHTSA’s recall lookup has no separate X5 M listing; check a VIN for open recalls."
+ },
+ "compare": [
+  {
+   "slug": "amg-g63",
+   "name": "Mercedes-AMG G63"
+  },
+  {
+   "slug": "trackhawk",
+   "name": "Jeep Grand Cherokee Trackhawk"
+  },
+  {
+   "slug": "durango-srt",
+   "name": "Dodge Durango SRT"
+  }
+ ],
+ "parent": "/cars/bmw-x5/"
+}

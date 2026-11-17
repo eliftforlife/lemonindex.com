@@ -1,0 +1,301 @@
+{
+ "slug": "koenigsegg-jesko",
+ "name": "Koenigsegg Jesko",
+ "short": "Jesko",
+ "make": "Koenigsegg",
+ "page": "/cars/koenigsegg-jesko/",
+ "focus": "jesko",
+ "star": "jesko-attack",
+ "h1": "Koenigsegg Jesko: performance, engine and what owners say",
+ "topics_extra": {
+  "Hydraulic leak / fire": "hydraulic (hose|leak|fluid|line)|caught fire|car fire",
+  "Light Speed Transmission": "\\blst\\b|light ?speed transmission|gearbox|clutch(es)?",
+  "E85 / flex fuel": "\\be85\\b|flex.?fuel|ethanol",
+  "Rear wing / aero": "rear wing|active aero|downforce"
+ },
+ "gens": [
+  {
+   "id": "jesko",
+   "code": "Jesko",
+   "years": "2022–",
+   "y0": 2022,
+   "y1": 2026,
+   "engine": "koenigsegg-v8",
+   "body": "Coupe",
+   "color": "Tang Orange Pearl",
+   "tag": "Only 125 built, as Attack or Absolut. Twin-turbo V8 with 1,600 hp on E85.",
+   "variants": [
+    {
+     "id": "jesko-attack",
+     "name": "Jesko Attack",
+     "years": "2022–",
+     "star": true,
+     "hp": {
+      "v": 1600,
+      "src": [
+       "ksA",
+       "ma19"
+      ],
+      "note": "on E85; 1,280 hp at 7,800 rpm on regular gasoline"
+     },
+     "tq": {
+      "v": 1106,
+      "src": [
+       "ksA",
+       "ma19",
+       "wpj"
+      ],
+      "note": "lb-ft at 5,100 rpm on E85 (1,500 Nm); 1,000 Nm (738 lb-ft) from 2,700 to 6,170 rpm on gasoline"
+     },
+     "trans": {
+      "v": "9-speed Light Speed Transmission (multi-clutch), rear-drive",
+      "src": [
+       "ksA",
+       "kmA",
+       "ma19",
+       "ma24sim"
+      ],
+      "note": "seven wet clutches; it can jump straight to any gear"
+     },
+     "weight": {
+      "v": "3,131 lb",
+      "src": [
+       "ksA",
+       "wpj"
+      ],
+      "note": "Koenigsegg curb weight, 1,420 kg; 1,320 kg dry"
+     },
+     "price": {
+      "v": "$3,000,000",
+      "src": [
+       "ma19",
+       "ma22"
+      ],
+      "note": "reported starting price, about $3 million; Koenigsegg publishes no US price"
+     },
+     "what": "High-downforce version with a big rear wing, up to 1,400 kg of downforce. Customer cars from late 2022.",
+     "what_src": [
+      "ksA",
+      "kmA",
+      "ma24fire"
+     ]
+    },
+    {
+     "id": "jesko-absolut",
+     "name": "Jesko Absolut",
+     "years": "2024–",
+     "hp": {
+      "v": 1600,
+      "src": [
+       "ksB",
+       "kmB"
+      ],
+      "note": "on E85; 1,280 hp at 7,800 rpm on regular gasoline"
+     },
+     "tq": {
+      "v": 1106,
+      "src": [
+       "ksB",
+       "wpj"
+      ],
+      "note": "lb-ft at 5,100 rpm on E85 (1,500 Nm); 1,000 Nm (738 lb-ft) from 2,700 to 6,170 rpm on gasoline"
+     },
+     "top": {
+      "v": "311 mph",
+      "src": [
+       "ma24sim",
+       "ma24p"
+      ],
+      "note": "maker claim from simulation only, never tested; it reached 256 mph during its 2024 record run"
+     },
+     "trans": {
+      "v": "9-speed Light Speed Transmission (multi-clutch), rear-drive",
+      "src": [
+       "ksB",
+       "kmB"
+      ],
+      "note": "seven wet clutches; it can jump straight to any gear"
+     },
+     "weight": {
+      "v": "3,064 lb",
+      "src": [
+       "ksB",
+       "wpj"
+      ],
+      "note": "Koenigsegg curb weight, 1,390 kg; 1,290 kg dry"
+     },
+     "what": "Low-drag version built for top speed: no big wing, 0.278 Cd. It set a 0-249-0 mph record of 27.8 seconds in 2024.",
+     "what_src": [
+      "kmB",
+      "ksB",
+      "ma20",
+      "ma24rec"
+     ]
+    }
+   ]
+  }
+ ],
+ "engines": {
+  "koenigsegg-v8": {
+   "name": "Koenigsegg 5.0 twin-turbo V8 (Jesko)",
+   "what": "5.0-liter V-8, twin-turbo",
+   "study": "koenigsegg-v8",
+   "page": "/engines/koenigsegg-v8/",
+   "yt": [
+    "scy",
+    "koenigsegg-v8"
+   ],
+   "facts": [
+    [
+     "Output",
+     "1,280 hp at 7,800 rpm on gasoline, 1,600 hp on E85; 1,500 Nm (1,106 lb-ft) peak",
+     [
+      "ksA",
+      "ma19"
+     ]
+    ],
+    [
+     "Redline",
+     "8,500 rpm",
+     [
+      "ksA",
+      "keng"
+     ]
+    ],
+    [
+     "Crankshaft",
+     "180-degree flat-plane crank cut from one steel billet, Koenigsegg's first",
+     [
+      "keng",
+      "ma19"
+     ]
+    ],
+    [
+     "Build",
+     "Aluminum block, 92 x 95.25 mm, dry sump, 1.7 bar boost (2.2 bar on E85), 189 kg",
+     [
+      "ksA"
+     ]
+    ]
+   ],
+   "issues": [
+    {
+     "t": "No known pattern",
+     "kind": "Owner-reported",
+     "rx": "",
+     "x": "No recurring engine failure is documented for this V8, and only 125 cars are being built. The one known Jesko fire was traced to a hydraulic hose, not the engine.",
+     "fix": "",
+     "src": [
+      "ma24fire",
+      "kmA"
+     ]
+    },
+    {
+     "t": "Hydraulic hose leak (2024 fire)",
+     "kind": "Maker statement",
+     "rx": "hydraulic (hose|leak|fluid|line)|caught fire|car fire|burn(ed|t) (down|out)",
+     "x": "A Jesko burned out in Greece in June 2024. Koenigsegg blamed a leaking pressurized hydraulic hose and asked owners to wait for a hose check before driving.",
+     "fix": "Service centers inspect the hoses, and Koenigsegg said it would add software that shuts the hydraulic system down when pressure drops.",
+     "src": [
+      "ma24fire"
+     ]
+    }
+   ]
+  }
+ },
+ "sources": {
+  "ksA": {
+   "t": "Koenigsegg: Jesko Attack technical specifications",
+   "u": "https://www.koenigsegg.com/technical-specifications-jesko-attack",
+   "k": "Koenigsegg"
+  },
+  "ksB": {
+   "t": "Koenigsegg: Jesko Absolut technical specifications",
+   "u": "https://www.koenigsegg.com/technical-specifications-jesko-absolut",
+   "k": "Koenigsegg"
+  },
+  "kmA": {
+   "t": "Koenigsegg: Jesko Attack model page",
+   "u": "https://www.koenigsegg.com/model/jesko-attack",
+   "k": "Koenigsegg"
+  },
+  "kmB": {
+   "t": "Koenigsegg: Jesko Absolut model page",
+   "u": "https://www.koenigsegg.com/model/jesko-absolut",
+   "k": "Koenigsegg"
+  },
+  "keng": {
+   "t": "Koenigsegg: Engines (Jesko V8 section)",
+   "u": "https://www.koenigsegg.com/engines",
+   "k": "Koenigsegg"
+  },
+  "ma19": {
+   "t": "Motor Authority: Koenigsegg Jesko deep dive: 7 clutches, 1,600 hp, $3M (Mar 2019)",
+   "u": "https://www.motorauthority.com/news/1121895_koenigsegg-jesko-deep-dive-7-clutches-1600-hp-3m",
+   "k": "Motor Authority"
+  },
+  "ma20": {
+   "t": "Motor Authority: New Jesko Absolut is the fastest car Koenigsegg will ever make (Mar 2020)",
+   "u": "https://www.motorauthority.com/news/1126714_new-jesko-absolut-is-the-fastest-car-koenigsegg-will-ever-make",
+   "k": "Motor Authority"
+  },
+  "ma22": {
+   "t": "Motor Authority: $3M Koenigsegg Jesko almost ready for production, already sold out (Apr 2022)",
+   "u": "https://www.motorauthority.com/news/1122165_3m-koenigsegg-jesko-almost-ready-for-production-already-sold-out",
+   "k": "Motor Authority"
+  },
+  "ma24p": {
+   "t": "Motor Authority: Koenigsegg Jesko Absolut production underway, top speed attempt in 2024 (Feb 2024)",
+   "u": "https://www.motorauthority.com/news/1142228_koenigsegg-jesko-absolut-production-underway-top-speed-attempt-in-2024",
+   "k": "Motor Authority"
+  },
+  "ma24rec": {
+   "t": "Motor Authority: Koenigsegg resets 0-249-0 mph record again with the Jesko Absolut (Jul 2024)",
+   "u": "https://www.motorauthority.com/news/1143689_koenigsegg-resets-0-249-0-mph-record-again-with-the-jesko-absolut",
+   "k": "Motor Authority"
+  },
+  "ma24fire": {
+   "t": "Motor Authority: Koenigsegg determines cause of Jesko fire in Greece (Jul 2024)",
+   "u": "https://www.motorauthority.com/news/1143714_koenigsegg-determines-cause-of-jesko-fire-in-greece",
+   "k": "Motor Authority"
+  },
+  "ma24sim": {
+   "t": "Motor Authority: Koenigsegg: Simulations say Jesko can go faster than 311 mph (Jul 2024)",
+   "u": "https://www.motorauthority.com/news/1143737_koenigsegg-simulations-say-jesko-can-go-faster-than-311-mph",
+   "k": "Motor Authority"
+  },
+  "wpj": {
+   "t": "Wikipedia: Koenigsegg Jesko (weights in lb, torque conversion)",
+   "u": "https://en.wikipedia.org/wiki/Koenigsegg_Jesko",
+   "k": "Wikipedia (fallback)"
+  }
+ },
+ "yt_study": "car-koenigsegg-jesko",
+ "yt_model": "",
+ "nhtsa": {
+  "make": "KOENIGSEGG",
+  "models": [
+   "JESKO"
+  ],
+  "note": "NHTSA has no owner complaints or recall records filed for the Jesko."
+ },
+ "compare": [
+  {
+   "slug": "bugatti-chiron",
+   "name": "Bugatti Chiron"
+  },
+  {
+   "slug": "koenigsegg-regera",
+   "name": "Koenigsegg Regera"
+  },
+  {
+   "slug": "rimac-nevera",
+   "name": "Rimac Nevera"
+  },
+  {
+   "slug": "lexus-lfa",
+   "name": "Lexus LFA"
+  }
+ ],
+ "img": "/assets/ai-perf/koenigsegg-jesko.webp?v=1"
+}

@@ -1,0 +1,136 @@
+{
+ "built": "2026-11-17",
+ "nhtsa": {
+  "by_year": {},
+  "gens": {
+   "jesko": {
+    "n": 0,
+    "issues": {
+     "Hydraulic hose leak (2024 fire)": {
+      "n": 0,
+      "ex": []
+     }
+    },
+    "parts": []
+   }
+  },
+  "parts": []
+ },
+ "recalls": {
+  "2022": [],
+  "2023": [],
+  "2024": [],
+  "2025": [],
+  "2026": []
+ },
+ "yt": {
+  "car-koenigsegg-jesko": null,
+  "koenigsegg-v8": {
+   "videos": 182,
+   "praise": [
+    [
+     "Looks",
+     10
+    ]
+   ],
+   "trouble": [],
+   "top": [
+    {
+     "id": "V4RmD_obUBo",
+     "title": "2018 Koenigsegg Agera RS VS 2018 Bugatti Chiron - World’s Fastest Cars!!",
+     "views": 15231914,
+     "ch": "CAR TV"
+    },
+    {
+     "id": "_eXcPKdarLQ",
+     "title": "Here's Why the Koenigsegg Agera RS1 Is Worth $10 Million",
+     "views": 11582222,
+     "ch": "Doug DeMuro"
+    },
+    {
+     "id": "xj4gar5dKAU",
+     "title": "Koenigsegg Agera RS hits 284 mph - VBOX verified",
+     "views": 7901961,
+     "ch": "Julian Thomas"
+    }
+   ]
+  }
+ },
+ "scores": {
+  "koenigsegg-v8": {
+   "years": {
+    "2018": {
+     "score": 54,
+     "weight": 110.7,
+     "videos": 114,
+     "named": 6,
+     "top": [
+      {
+       "id": "V4RmD_obUBo",
+       "title": "2018 Koenigsegg Agera RS VS 2018 Bugatti Chiron - World’s Fastest Cars!!",
+       "views": 15231914
+      },
+      {
+       "id": "_eXcPKdarLQ",
+       "title": "Here's Why the Koenigsegg Agera RS1 Is Worth $10 Million",
+       "views": 11582222
+      },
+      {
+       "id": "xj4gar5dKAU",
+       "title": "Koenigsegg Agera RS hits 284 mph - VBOX verified",
+       "views": 7901961
+      }
+     ]
+    },
+    "2019": {
+     "score": 56,
+     "weight": 30.2,
+     "videos": 60,
+     "named": 2,
+     "top": [
+      {
+       "id": "yuzpEXVUQaY",
+       "title": "Koenigsegg Regera REVIEW on TEST TRACK by AutoTopNL",
+       "views": 3706731
+      },
+      {
+       "id": "fmPwMGmg-h4",
+       "title": "The Koenigsegg Regera Is a $2 Million Luxury Hypercar",
+       "views": 2940751
+      },
+      {
+       "id": "FSaM9KVSxgM",
+       "title": "Koenigsegg Regera on Monaco GP Track! | Nico Rosberg",
+       "views": 2360988
+      }
+     ]
+    },
+    "2020": {
+     "score": 56,
+     "weight": 30.2,
+     "videos": 60,
+     "named": 2,
+     "top": [
+      {
+       "id": "yuzpEXVUQaY",
+       "title": "Koenigsegg Regera REVIEW on TEST TRACK by AutoTopNL",
+       "views": 3706731
+      },
+      {
+       "id": "fmPwMGmg-h4",
+       "title": "The Koenigsegg Regera Is a $2 Million Luxury Hypercar",
+       "views": 2940751
+      },
+      {
+       "id": "FSaM9KVSxgM",
+       "title": "Koenigsegg Regera on Monaco GP Track! | Nico Rosberg",
+       "views": 2360988
+      }
+     ]
+    }
+   },
+   "videos": 171,
+   "pulled": 200
+  }
+ }
+}
