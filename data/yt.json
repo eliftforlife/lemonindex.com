@@ -69086,6 +69086,534 @@
    }
   }
  ],
+ "ford-e-series": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014
+   ],
+   "gen": "1992–2014 Ford E-Series",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 11699220,
+   "topics": [
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 260114,
+     "n": 5,
+     "best": {
+      "id": "oiT3gSRpEUY",
+      "title": "Ford E-350 Van Fuel Filter Replacement 2005",
+      "channel": "Sound Barrier Entertainment (SOUNDBARRIERENTERTAINMENT)",
+      "views": 99147
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 200821,
+     "n": 3,
+     "best": {
+      "id": "MT1wRvBOmBk",
+      "title": "INSTALLATION GUIDE: Atoto Android Double Din Head Unit. Ford Econoline Vans 98 thru 2006",
+      "channel": "Jungle Explorer",
+      "views": 101584
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 174096,
+     "n": 4,
+     "best": {
+      "id": "md0IHcLbRj8",
+      "title": "How To Replace Power Window Regulator Ford 1992-Present E-250",
+      "channel": "TRQ",
+      "views": 64391
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 152075,
+     "n": 7,
+     "best": {
+      "id": "uQVvD2qvBXk",
+      "title": "Bad fuseable link on 1994 Ford Econoline E150 van",
+      "channel": "Memory Wheels",
+      "views": 38179
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 95979,
+     "n": 3,
+     "best": {
+      "id": "cv3zD6Rkx4c",
+      "title": "How to Replace Transmission Output Speed Sensor 2004-2016 Ford E-350",
+      "channel": "TRQ",
+      "views": 50381
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 62001,
+     "n": 2,
+     "best": {
+      "id": "bGCoXXtDlf0",
+      "title": "Code P0193 Fuel rail pressure sensor change on a 2005 Ford Econoline E350 5.4 L Triton V8 Gasoline",
+      "channel": "HD Kevin",
+      "views": 39114
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 58142,
+     "n": 1,
+     "best": {
+      "id": "Y5Da6R4NxYs",
+      "title": "How To Replace Ignition Lock Cylinder 1992-Present Ford E-250",
+      "channel": "TRQ",
+      "views": 58142
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 56492,
+     "n": 2,
+     "best": {
+      "id": "oJ2UMsnh3Ek",
+      "title": "1997 ford E150 blend door actuator replacement",
+      "channel": "thomas brian",
+      "views": 30929
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "I3iEI5drH_g",
+     "title": "Top 5 Problems Ford E-250 Van 4th Generation 1992-Present",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 481427
+    },
+    {
+     "id": "fseNzqEbAdc",
+     "title": "2007 Ford E-150 Van - Blower Motor Problems",
+     "channel": "GP AUTO DIAGNOSTICS",
+     "views": 81479
+    },
+    {
+     "id": "c8RdMUOeeLA",
+     "title": "Fuel Tank Ventline Filling Problems 2003 Ford E350 7.3 Diesel",
+     "channel": "Jared Morgan",
+     "views": 78464
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2015–2025 Ford E-Series",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 88,
+   "views": 1378626,
+   "topics": [
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 147942,
+     "n": 1,
+     "best": {
+      "id": "1seTPLEtVEs",
+      "title": "2020 and Below Ford F150 / Econoline Ground Cable Issue And Others - Common Forgotten Problem",
+      "channel": "Ford Boss Me - Auto / Politics / Family   ",
+      "views": 147942
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 80034,
+     "n": 4,
+     "best": {
+      "id": "zDXaavU3H1I",
+      "title": "How To Program A Ford Econoline Remote Key Fob 1999 - 2019",
+      "channel": "PYR Automotive ",
+      "views": 52703
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 58958,
+     "n": 2,
+     "best": {
+      "id": "cv3zD6Rkx4c",
+      "title": "How to Replace Transmission Output Speed Sensor 2004-2016 Ford E-350",
+      "channel": "TRQ",
+      "views": 50381
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 53420,
+     "n": 4,
+     "best": {
+      "id": "nhJz7MJEmpo",
+      "title": "How to Replace Rear Brakes 1999-2025 Ford E-350 Super Duty",
+      "channel": "TRQ",
+      "views": 19298
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 43683,
+     "n": 3,
+     "best": {
+      "id": "QKSLbXiEH0A",
+      "title": "How to Replace Ball Joints 1999-2025 Ford E-350",
+      "channel": "TRQ",
+      "views": 20864
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 38683,
+     "n": 2,
+     "best": {
+      "id": "xzUQ6KOLYkY",
+      "title": "How to Replace Intake Manifold 1999-2016 Ford E-350 (5.4L V8)",
+      "channel": "TRQ",
+      "views": 22901
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 28658,
+     "n": 2,
+     "best": {
+      "id": "z5i2AYlppXs",
+      "title": "How to Replace Right Cargo Door Latch Cables 1999-2025 Ford E-350",
+      "channel": "TRQ",
+      "views": 15604
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 21262,
+     "n": 3,
+     "best": {
+      "id": "BRshc9y6GE4",
+      "title": "2003-2015 Ford E150-F150 & E250 Blower fan replace and AC fix (5 minutes job ) DIY",
+      "channel": "Mechanic Mode",
+      "views": 12127
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "z80KD0xcPFg",
+     "title": "Top 5 Problems Ford E-350 Super Duty Van 1999-2025 4th Generation",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 58963
+    },
+    {
+     "id": "ptItFnja9xo",
+     "title": "West TN 2017 Ford E350 16 FT Box truck with lift Cargo Van for sale used info www sunsetmotors com",
+     "channel": "sunsetmotorsinc",
+     "views": 17326
+    },
+    {
+     "id": "Wm-pWciNEEE",
+     "title": "2018 Ford E350 16ft Delivery Box Truck Review",
+     "channel": "Truck-n-Trailer.com",
+     "views": 12504
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "audi-a6": [
+  {
+   "years": [
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011
+   ],
+   "gen": "2005–2011 Audi A6",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 29961282,
+   "topics": [
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 807377,
+     "n": 2,
+     "best": {
+      "id": "-bIrl2seUVQ",
+      "title": "Audi A6, S6, RS6, Allroad C6/4F 2004-2011, Door Panel Removal - How To Remove the Door Panel",
+      "channel": "different car review",
+      "views": 777190
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 630471,
+     "n": 3,
+     "best": {
+      "id": "Xpy4T46TxSg",
+      "title": "Audi A6 2005 gearbox problem",
+      "channel": "Sajmon",
+      "views": 493332
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 515592,
+     "n": 3,
+     "best": {
+      "id": "p34vZkTzb9g",
+      "title": "2005-2011 Audi A6 Tail Light Housing Removal",
+      "channel": "CarCareKiosk",
+      "views": 256519
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 501809,
+     "n": 3,
+     "best": {
+      "id": "s1A57wHCoa0",
+      "title": "2005-2011 Audi A6 cabin air/pollen filter replaement DIY by Edge Motors",
+      "channel": "EDGEMOTORS",
+      "views": 294782
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 456613,
+     "n": 1,
+     "best": {
+      "id": "BbTeVU0kXl8",
+      "title": "Buying a used Audi A6 (C6/4F) - 2004-2011, Complete Buying guide with Common Issues",
+      "channel": "different car review",
+      "views": 456613
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 342585,
+     "n": 3,
+     "best": {
+      "id": "1G1LCJebHwE",
+      "title": "How to Replace Audi A6 C6 LED Brake Light",
+      "channel": "Gröller Géza",
+      "views": 144202
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 275881,
+     "n": 3,
+     "best": {
+      "id": "qAT8mRnTtjs",
+      "title": "Audi A6 (4F/C6) Luftfederung / air suspension Repair",
+      "channel": "jugi`S Electronics",
+      "views": 102825
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 227092,
+     "n": 3,
+     "best": {
+      "id": "GVtkfvxLJ0Q",
+      "title": "How to replace park sensor on Audi A6 C6 (2004-2011)",
+      "channel": "Dom Works",
+      "views": 138701
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "XtlB6YD6qZY",
+     "title": "Should You Buy an AUDI A6 (Test Drive & Review C7 2011-2018 2.0TDI)",
+     "channel": "High Peak Autos",
+     "views": 259491
+    },
+    {
+     "id": "dtDm3Sd-Y-g",
+     "title": "AFFORDABLE and RELIABLE! - Audi A6 C6/4F Buyer's Guide | G Performance",
+     "channel": "G Performance",
+     "views": 215011
+    },
+    {
+     "id": "o6ZjPnHfqsA",
+     "title": "Used Audi A6 C6 Reliability | Most Common Problems Faults and Issues",
+     "channel": "AutoProblems",
+     "views": 49199
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018
+   ],
+   "gen": "2012–2018 Audi A6",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 24743817,
+   "topics": [
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 194855,
+     "n": 2,
+     "best": {
+      "id": "9Z5p_1KY8hc",
+      "title": "How to fix a Folding Mirror Stuck on Audi A6 C7?",
+      "channel": "Adnan Khan Channel",
+      "views": 108450
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 143496,
+     "n": 1,
+     "best": {
+      "id": "vXjOpm8gUKY",
+      "title": "Audi A6 TDI 2012 no ECM/PCM communications. No crank no start. Fault finding and repair.",
+      "channel": "LM Auto Repairs",
+      "views": 143496
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 116834,
+     "n": 1,
+     "best": {
+      "id": "LKanbjZRmhU",
+      "title": "2013 AUDI A6 NO A/C DIAG & FIX",
+      "channel": "Super Mario Diagnostics",
+      "views": 116834
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 70506,
+     "n": 3,
+     "best": {
+      "id": "ftQzw9LH26c",
+      "title": "2015 Audi A6 2.0l coolant temp sensor location/replacement",
+      "channel": "Shea Dreamz",
+      "views": 33524
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 66061,
+     "n": 1,
+     "best": {
+      "id": "eSvS0uIGjfY",
+      "title": "Audi A6 C7 Driveshaft Replacement (Clicking Sound)",
+      "channel": "290_ZAK",
+      "views": 66061
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 51818,
+     "n": 1,
+     "best": {
+      "id": "J11fC-I078c",
+      "title": "2012 Audi A6 difficult to find Coolant leaks 3.0tfsi supercharged",
+      "channel": "European Auto Repair",
+      "views": 51818
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 48361,
+     "n": 1,
+     "best": {
+      "id": "RN4wufW7pMw",
+      "title": "2017 Audi A6 2.0T (C7.5) Quick Oil change!!",
+      "channel": "Foreign Werks",
+      "views": 48361
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 33233,
+     "n": 2,
+     "best": {
+      "id": "TZb1OSKRc4Q",
+      "title": "Audi A6 2013 right side head light is not working",
+      "channel": "World Autos Car and bike",
+      "views": 16784
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "aiP_zPWdIls",
+     "title": "Audi A6 C7 Buyer's Guide - Typical Problems | G Performance",
+     "channel": "G Performance",
+     "views": 364680
+    },
+    {
+     "id": "NRNZfjItih4",
+     "title": "Audi A6 Avant estate 2014 review - Carbuyer",
+     "channel": "Carbuyer",
+     "views": 327324
+    },
+    {
+     "id": "YMu8ivowtL0",
+     "title": "Should You Buy an Audi A6 Allroad? (Test Drive & Review 2014 3.0TDI)",
+     "channel": "High Peak Autos",
+     "views": 175779
+    }
+   ],
+   "costs": null
+  }
+ ],
  "honda-passport": [
   {
    "years": [

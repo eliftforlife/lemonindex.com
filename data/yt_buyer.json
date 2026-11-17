@@ -34674,5 +34674,100 @@
 }
 ]
 }
+],
+"ford-e-series": [
+{
+"sid": "ford-e-series-g4",
+"y0": 1992,
+"y1": 2014,
+"label": "1992–2014",
+"videos": 199,
+"praise": [
+[
+"Reliability",
+10
+],
+[
+"Power",
+9
+],
+[
+"Space and practicality",
+4
+],
+[
+"Value for money",
+3
+]
+],
+"trouble": [
+[
+"Fuel pump / fuel system",
+5
+],
+[
+"Electrical / wiring / TIPM",
+4
+]
+],
+"top": [
+{
+"id": "I3iEI5drH_g",
+"title": "Top 5 Problems Ford E-250 Van 4th Generation 1992-Present",
+"views": 481427,
+"ch": "1A Auto: Repair Tips & Secrets Only Mechanics Know"
+},
+{
+"id": "D7zLKxANZ34",
+"title": "2012 Ford E-150 Wagon Review, Walkaround, Start Up, Test Drive",
+"views": 231830,
+"ch": "Redline Reviews"
+},
+{
+"id": "BB4FjMXT3kQ",
+"title": "2007 FORD E-250 VAN Super Duty Econoline Cargo Start Up and Review",
+"views": 214241,
+"ch": "AutomotiveReview"
+}
+]
+},
+{
+"sid": "ford-e-series-g5",
+"y0": 2015,
+"y1": 2025,
+"label": "2015–2025",
+"videos": 95,
+"praise": [
+[
+"Power",
+11
+],
+[
+"Reliability",
+8
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "1seTPLEtVEs",
+"title": "2020 and Below Ford F150 / Econoline Ground Cable Issue And Others - Common Forgotten Problem",
+"views": 147942,
+"ch": "Ford Boss Me - Auto / Politics / Family   "
+},
+{
+"id": "z80KD0xcPFg",
+"title": "Top 5 Problems Ford E-350 Super Duty Van 1999-2025 4th Generation",
+"views": 58963,
+"ch": "1A Auto: Repair Tips & Secrets Only Mechanics Know"
+},
+{
+"id": "Wm-pWciNEEE",
+"title": "2018  Ford E350 16ft Delivery Box Truck Review",
+"views": 12504,
+"ch": "Truck-n-Trailer.com"
+}
+]
+}
 ]
 }
