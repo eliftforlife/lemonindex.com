@@ -34023,5 +34023,53 @@
 }
 ]
 }
+],
+"saturn-ls": [
+{
+"sid": "saturn-ls-g1",
+"y0": 2000,
+"y1": 2005,
+"label": "2000–2005",
+"videos": 200,
+"praise": [
+[
+"Reliability",
+8
+],
+[
+"Power",
+4
+],
+[
+"Comfort and ride",
+4
+],
+[
+"Looks",
+4
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "c7qJ9R2OxXY",
+"title": "2000 Saturn L Series | Retro Review",
+"views": 35905,
+"ch": "MotorWeek"
+},
+{
+"id": "2VbHNmc9MI8",
+"title": "SOLD 2003 Saturn L300 V6 83K Miles One Owner Meticulous Motors Inc Florida For Sale",
+"views": 13493,
+"ch": "MeticulousMotors"
+},
+{
+"id": "wXhBg-REEoY",
+"title": "2003 Saturn L200 A/C Problem Diagnosis",
+"views": 10212,
+"ch": "Joshua Coats"
+}
+]
+}
 ]
 }
