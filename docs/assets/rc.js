@@ -51,6 +51,9 @@
       + (rows.length ? `<p class="note">This list covers every ${esc(label)}, not one car. Newest first: a recall from the last 12 months has had the least time to be fixed.</p><ul class="vin-rc">${rows.map(li).join('')}</ul>`
         : '<p>NHTSA lists no recalls for this make, model and year.</p>')
       + `<p class="vin-open"><b>Is one still open on your car?</b> Only its VIN can say: <a href="/vin/">check the VIN</a>, type it at <a href="https://www.nhtsa.gov/recalls" rel="noopener" target="_blank">nhtsa.gov/recalls</a>, or ask any dealer of that brand. In Canada, <a href="${TC_DB}" rel="noopener" target="_blank">search Transport Canada recalls</a>.</p>`
-      + `<p class="note"><a href="/cars/${esc(id)}/${y}/">The ${esc(label)}: problems, complaints and its Lemon Index</a>` + (rurl ? ` · <a href="${esc(rurl)}">Every ${esc(full)} recall, all years</a>` : '') + '</p>';
+      + `<p class="note"><a href="/cars/${esc(id)}/${y}/">The ${esc(label)}: problems, complaints and its Lemon Index</a>` + (rurl ? ` · <a href="${esc(rurl)}">Every ${esc(full)} recall, all years</a>` : '') + '</p>'
+      // 11-15 growth 4c: the recall alert signup for the car just picked (assets/ralert.js, loaded on this page)
+      + `<div class="rla" data-ra="${esc(JSON.stringify({ y, n: [[nmk, nmd]], f: id, l: label }))}"></div>`;
+    if (window.LXRA) window.LXRA.scan();
   });
 })();

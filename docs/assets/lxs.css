@@ -24,6 +24,21 @@
 /* the bar fits the box from 1200px (7 links + More + Subscribe); under that the magnifier opens the menu / More panel with its search */
 @media (min-width: 1200px) { .lxs-d { display: block; } .gh.wide .gh-in { gap: 28px; } }
 @media (max-width: 1199px) { .lxs-btn { display: block; } }
+/* 11-15 growth 4c (chunk reports: "More · Recalls" ran under the search box at 1440): the bar's links keep their size, the search box gives
+   up width first (220 -> 128px), then the "· Recalls" part of More shortens with an ellipsis. Never overlaps, at any width. */
+.gh.wide .gh-links > a { flex: none; }
+.gh.wide .gh-more { min-width: 0; flex: 0 1 auto; }
+.gh-ml { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.gh.wide .gh-r > * { flex: none; }
+@media (min-width: 1024px) { .gh.wide .gh-links { gap: 22px; } }
+@media (min-width: 1200px) {
+  .gh.wide .gh-in { gap: 24px; }
+  .gh.wide .gh-links { flex-shrink: 0; }   /* a sliver of shrink here clipped "Car symptoms" by a pixel */
+  .gh.wide .gh-r { flex: 0 1 auto; min-width: 250px; }   /* 250 = the smallest box (128) + its margin + Subscribe: shrinks this far, no further */
+  .gh.wide .gh-r > .lxs-d { flex: 0 1 220px; width: 220px; min-width: 128px; }
+  .lxs-d .lxs-db { min-width: 0; }
+  .lxs-d #ghd { width: 100%; min-width: 0; }
+}
 @media (max-width: 767px) { .lxs-btn { width: 38px; margin-right: -2px; } .lxs-btn svg { left: 10px; } }
 
 /* 11-13 (problem 10): the 404 page: an open search box, the bad address turned into a search, and the top matches */

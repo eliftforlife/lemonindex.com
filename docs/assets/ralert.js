@@ -19,16 +19,22 @@
     if (el.dataset.raOn) return;
     let d; try { d = JSON.parse(el.dataset.ra); } catch (e) { return; }
     el.dataset.raOn = '1';
+    // 11-15 (growth 4c): make pages (/recalls/<make>/) send {mk, ms: [{m, f, n, ys: [years], x: {year: names}, y0}]}: a model picker first.
+    // n = the NHTSA names most years use, x = the years that differ (keeps the page small).
+    const MS = Array.isArray(d.ms) && d.ms.length ? d.ms : null;
+    const useM = o => { const ys = {}; (o.ys || []).forEach(y => { ys[y] = (o.x && o.x[y]) || o.n; }); Object.assign(d, { m: o.m, f: o.f, ys, y0: o.y0 }); };
+    if (MS) useM(MS[0]);
+    const yopts = () => Object.keys(d.ys).sort((a, b) => b - a).map(y => `<option${+y === +d.y0 ? ' selected' : ''}>${esc(y)}</option>`).join('');
     const id = 'rla' + (++n), ys = d.ys ? Object.keys(d.ys).sort((a, b) => b - a) : null;
     el.innerHTML = `<form class="rla-f" novalidate aria-labelledby="${id}h"><div class="rla-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 1 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg></div>
-<div class="rla-b"><p class="rla-h" id="${id}h">${ys ? `Get an email if your ${esc(d.m)} gets a recall.` : `Get an email if the ${esc(d.l)} gets a new recall.`}</p>
-<div class="rla-in"><div class="rla-row">${ys ? `<label class="vh" for="${id}y">Model year</label><select id="${id}y" class="rla-y">${ys.map(y => `<option${+y === +d.y0 ? ' selected' : ''}>${esc(y)}</option>`).join('')}</select>` : ''}
+<div class="rla-b"><p class="rla-h" id="${id}h">${MS ? `Get an email if your ${esc(d.mk)} gets a recall.` : ys ? `Get an email if your ${esc(d.m)} gets a recall.` : `Get an email if the ${esc(d.l)} gets a new recall.`}</p>
+<div class="rla-in"><div class="rla-row">${MS ? `<label class="vh" for="${id}m">Model</label><select id="${id}m" class="rla-y rla-m">${MS.map((o, i) => `<option value="${i}">${esc(o.m)}</option>`).join('')}</select>` : ''}${ys ? `<label class="vh" for="${id}y">Model year</label><select id="${id}y" class="rla-y">${yopts()}</select>` : ''}
 <label class="vh" for="${id}e">Your email</label><input id="${id}e" class="rla-e" type="email" name="email" maxlength="200" autocomplete="email" inputmode="email" placeholder="Your email" required>
 <button class="rla-go" type="submit">Email me</button></div>
 <div class="rla-hpw" aria-hidden="true"><label for="${id}w">Leave this empty</label><input id="${id}w" class="rla-hp" name="website" tabindex="-1" autocomplete="off"></div><div class="rla-ts"></div>
 <p class="rla-fine">Free. We check NHTSA&#39;s recall list every week and email you only when a new recall is added. You confirm by email first; every email has a one-tap unsubscribe. <a href="/privacy/#recall-alerts">Privacy</a></p></div>
 <p class="rla-st" role="status" aria-live="polite" tabindex="-1"></p></div></form>`;
-    const f = el.querySelector('form'), em = f.querySelector('.rla-e'), btn = f.querySelector('.rla-go'), st = f.querySelector('.rla-st'), sel = f.querySelector('.rla-y'), tsBox = f.querySelector('.rla-ts');
+    const f = el.querySelector('form'), em = f.querySelector('.rla-e'), btn = f.querySelector('.rla-go'), st = f.querySelector('.rla-st'), sel = f.querySelector('.rla-y:not(.rla-m)'), msel = f.querySelector('.rla-m'), tsBox = f.querySelector('.rla-ts');
     const say = (t, bad) => { st.innerHTML = t; st.classList.toggle('bad', !!bad); };
     let tok = '', wid = null, ts = null;
     f.addEventListener('focusin', () => {
@@ -58,6 +64,7 @@
       btn.disabled = false;
     });
     sel && sel.addEventListener('change', () => { f.classList.remove('sent'); say(''); });
+    msel && msel.addEventListener('change', () => { useM(MS[+msel.value] || MS[0]); sel.innerHTML = yopts(); f.classList.remove('sent'); say(''); });
   }
   const scan = () => document.querySelectorAll('[data-ra]').forEach(mount);
   window.LXRA = { scan };
