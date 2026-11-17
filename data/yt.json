@@ -69086,6 +69086,132 @@
    }
   }
  ],
+ "saturn-sl": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002
+   ],
+   "gen": "1996–2002 Saturn SL",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 1524980,
+   "topics": [
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 99440,
+     "n": 4,
+     "best": {
+      "id": "tK5EAhpXcOc",
+      "title": "2nd Generation Saturn SL2 Fuel Injector Removal",
+      "channel": "JungleKing007",
+      "views": 51158
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 94705,
+     "n": 4,
+     "best": {
+      "id": "GtjVknK-LQM",
+      "title": "2001 Saturn Sl2 secondary air sensor code p0410 #SaturnSL2",
+      "channel": "Rob Here Trev2323",
+      "views": 84890
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 67950,
+     "n": 3,
+     "best": {
+      "id": "zYdSkDsHl5w",
+      "title": "1998 Saturn SL2 Alternator Change",
+      "channel": "Tricks of the Trade",
+      "views": 60004
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 61681,
+     "n": 4,
+     "best": {
+      "id": "7h4KWXfhZE4",
+      "title": "1999 Saturn SC2 No Start Repair by Mr. Mobile",
+      "channel": "Mr. Mobile",
+      "views": 28081
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 57406,
+     "n": 5,
+     "best": {
+      "id": "SmktxMkGU34",
+      "title": "1998 Saturn SL Lower transmission mount replacement/ Нижняя подушка коробки",
+      "channel": "VITO'S GARAGE",
+      "views": 17922
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 46122,
+     "n": 3,
+     "best": {
+      "id": "-ujyJyu3Mlw",
+      "title": "Replacing the thermostat on a 1998 Saturn SL2",
+      "channel": "Tricks of the Trade",
+      "views": 35241
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 39667,
+     "n": 1,
+     "best": {
+      "id": "Z64giH0nKOw",
+      "title": "Front Brake Pad Replacement - 2002 Saturn SL Sedan (1991-2002 Most Saturn Models)",
+      "channel": "Insane Oil",
+      "views": 39667
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 34572,
+     "n": 2,
+     "best": {
+      "id": "befsrw2cIuk",
+      "title": "Misfire code on 1999 Saturn SL1",
+      "channel": "MobileMac",
+      "views": 26173
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "-QzLQXcLJIU",
+     "title": "Overheating and Hesitating Engine - How to fix a Saturn SC2 1999 with 2 problems?",
+     "channel": "Dragon77",
+     "views": 51769
+    },
+    {
+     "id": "QOoUJpq6dFI",
+     "title": "1998 Saturn SC2 DOHC problems.mov",
+     "channel": "FinPaul",
+     "views": 3083
+    },
+    {
+     "id": "asYQj8Oazos",
+     "title": "2002 Saturn SL2 new engine problems",
+     "channel": "willipic",
+     "views": 1874
+    }
+   ],
+   "costs": null
+  }
+ ],
  "chrysler-concorde": [
   {
    "years": [
