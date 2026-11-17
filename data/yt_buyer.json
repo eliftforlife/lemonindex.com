@@ -34575,5 +34575,104 @@
 }
 ]
 }
+],
+"honda-passport": [
+{
+"sid": "honda-passport-g2",
+"y0": 1998,
+"y1": 2002,
+"label": "1998–2002",
+"videos": 200,
+"praise": [
+[
+"Reliability",
+12
+],
+[
+"Power",
+4
+],
+[
+"Comfort and ride",
+4
+],
+[
+"Fun to drive",
+4
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+3
+]
+],
+"top": [
+{
+"id": "qGDPl2Hj2-8",
+"title": "1999 izusu rodeo honda passport shifter problem",
+"views": 21289,
+"ch": "Jim K"
+},
+{
+"id": "H7_6R1O0Fu0",
+"title": "2000 Honda Passport Tune Up - Episode 3 Old Passport Review",
+"views": 1172,
+"ch": "BALUSKI'S WORLD"
+},
+{
+"id": "BLaisjMi3sY",
+"title": "🚙 NEW PROJECT! I bought a 1999 HONDA PASSPORT Was it worth it?",
+"views": 230,
+"ch": "Ansiano"
+}
+]
+},
+{
+"sid": "honda-passport-g3",
+"y0": 2019,
+"y1": 2025,
+"label": "2019–2025",
+"videos": 199,
+"praise": [
+[
+"Space and practicality",
+20
+],
+[
+"Reliability",
+17
+],
+[
+"Looks",
+17
+],
+[
+"Comfort and ride",
+12
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "Q33JyAVsZIs",
+"title": "2019 Honda Passport Review - Honda's Best SUV",
+"views": 644168,
+"ch": "TheStraightPipes"
+},
+{
+"id": "cHwp1WxhYpI",
+"title": "2019 Honda Passport AWD Elite Review and Off-Road Tests",
+"views": 244611,
+"ch": "Driving Sports TV"
+},
+{
+"id": "TsNoOvwlE3c",
+"title": "2019 Honda Passport -  Review & Road Test",
+"views": 217165,
+"ch": "Kelley Blue Book"
+}
+]
+}
 ]
 }

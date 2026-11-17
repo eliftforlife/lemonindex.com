@@ -69086,6 +69086,183 @@
    }
   }
  ],
+ "honda-passport": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002
+   ],
+   "gen": "1998–2002 Honda Passport",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 630706,
+   "topics": [
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 76282,
+     "n": 2,
+     "best": {
+      "id": "QkzO_75FGts",
+      "title": "1998 to 2002 Honda Passport or Isuzu Trooper Spark Plug Replacement Tip!",
+      "channel": "Bubba Rountree Outdoors",
+      "views": 39726
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 33662,
+     "n": 2,
+     "best": {
+      "id": "bu9EHSdp3m0",
+      "title": "2002 Honda Passport ABS Light Diagnosis - Automotive Education",
+      "channel": "DIY Auto Homeschool",
+      "views": 26607
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 21289,
+     "n": 1,
+     "best": {
+      "id": "qGDPl2Hj2-8",
+      "title": "1999 izusu rodeo honda passport shifter problem",
+      "channel": "Jim K",
+      "views": 21289
+     }
+    },
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 8820,
+     "n": 1,
+     "best": {
+      "id": "XfBEw4dHGd4",
+      "title": "2000 HONDA PASSPORT HOW TO REPLACE VALCOVER GASKET",
+      "channel": "CHAGON HUNT",
+      "views": 8820
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 8169,
+     "n": 2,
+     "best": {
+      "id": "ChIdBKhyqb8",
+      "title": "1998 Honda passport, No Crank...Won't Start... 1 Click....Fixed...",
+      "channel": "Peter L",
+      "views": 5456
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 6094,
+     "n": 1,
+     "best": {
+      "id": "Nb9lK0XG7E8",
+      "title": "Repairing Door Handle On 2000 Honda Passport No New Parts Needed!",
+      "channel": "Why Do The Nations Rage?",
+      "views": 6094
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 4184,
+     "n": 2,
+     "best": {
+      "id": "eNWgOEAB1n0",
+      "title": "2000 honda passport starter removal 3.2",
+      "channel": "Bigd okeechobee",
+      "views": 2929
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 3697,
+     "n": 1,
+     "best": {
+      "id": "cJ_U_8mXHUE",
+      "title": "2000 Honda Passport Tune Up - Episode 8 Intake Manifold and Timing Covers",
+      "channel": "BALUSKI'S WORLD",
+      "views": 3697
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "jpG1BqE7ll4",
+     "title": "Virtual Walk Around Tour of a 1999 Honda Passport at Auburn Discount Auto in Auburn",
+     "channel": "AuburnAuto",
+     "views": 7911
+    },
+    {
+     "id": "LhxPRTQF9qI",
+     "title": "2001 Honda Passport for sale call 765-456-1788",
+     "channel": "Tonys Pre Owned Auto Sales",
+     "views": 5930
+    },
+    {
+     "id": "-n-vuf7H1Bk",
+     "title": "**SOLD** 1998 Honda Passport For Sale **SOLD**",
+     "channel": "randyyoungjr",
+     "views": 2412
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2019–2025 Honda Passport",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 12864570,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 45890,
+     "n": 3,
+     "best": {
+      "id": "Va4gogjFIDQ",
+      "title": "2019 Honda Passport battery change how to",
+      "channel": "Ray of all Trades",
+      "views": 19583
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "xSZsVdM4Ps8",
+     "title": "Car Mechanic Reviews The 2024 Honda Passport. Should You Buy One?",
+     "channel": "The Car Care Nut Reviews",
+     "views": 174207
+    },
+    {
+     "id": "TLaxviZ1KLg",
+     "title": "Honda Passport 3rd gen 2019 to 2021 common problems, issues, defects, recalls and complaints",
+     "channel": "HOWSTUFFINMYCARWORKS",
+     "views": 33266
+    },
+    {
+     "id": "f59PcqWq1ag",
+     "title": "5 Reasons Why You Should Buy A 2023 Honda Passport - Quick Buyer's Guide",
+     "channel": "Boston Auto Blog",
+     "views": 31164
+    }
+   ],
+   "costs": null
+  }
+ ],
  "saturn-sl": [
   {
    "years": [
