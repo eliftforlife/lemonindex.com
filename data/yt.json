@@ -65742,7 +65742,26 @@
      "views": 8086
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 105,
+       "lo": 50.0,
+       "hi": 1000.0,
+       "n": 12,
+       "videos": 9,
+       "id": "89W-UrGz0fk",
+       "t": 206,
+       "title": "Code P1811 fix on a 2002 Buick LeSabre"
+      }
+     ]
+    ]
+   }
   }
  ],
  "chevrolet-avalanche": [
@@ -77632,7 +77651,26 @@
      "views": 27347
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 90,
+       "lo": 50.0,
+       "hi": 250.0,
+       "n": 8,
+       "videos": 4,
+       "id": "SjCFSiY3hlk",
+       "t": 553,
+       "title": "Here's 1 of America's Cheapest Used Luxury Sedans | '07 BUICK LUCERNE - In Depth Tour & Test Drive!"
+      }
+     ]
+    ]
+   }
   }
  ],
  "toyota-fj-cruiser": [
