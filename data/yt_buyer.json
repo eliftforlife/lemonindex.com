@@ -35778,5 +35778,53 @@
 }
 ]
 }
+],
+"acura-rsx": [
+{
+"sid": "acura-rsx-g1",
+"y0": 2002,
+"y1": 2006,
+"label": "2002–2006",
+"videos": 188,
+"praise": [
+[
+"Reliability",
+9
+],
+[
+"Looks",
+9
+],
+[
+"Power",
+8
+],
+[
+"Fun to drive",
+7
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "xNIkJdLTv0U",
+"title": "Regular Car Reviews: 2004 Acura RSX",
+"views": 769271,
+"ch": "Regular Car Reviews"
+},
+{
+"id": "ie-Gs5L8M78",
+"title": "2004 Acura RSX Type-S Review, Walkaround, Exhaust, & Test Drive",
+"views": 340858,
+"ch": "Redline Reviews"
+},
+{
+"id": "0ZxGa8P1l7M",
+"title": "2004 RSX Type-S Full Driving Review…I Should’ve Never Driven It! 🤬🤦🏾‍♂️",
+"views": 237176,
+"ch": "Home_Kar Network"
+}
+]
+}
 ]
 }

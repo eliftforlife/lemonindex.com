@@ -70120,6 +70120,141 @@
    }
   }
  ],
+ "nissan-armada": [
+  {
+   "years": [
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015
+   ],
+   "gen": "2004–2015 Nissan Armada",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 8258650,
+   "topics": [
+    {
+     "name": "Steering & suspension",
+     "views": 434906,
+     "n": 9,
+     "best": {
+      "id": "k8n1e18TW6U",
+      "title": "Front Struts Shocks Replacement '04-'13 Nissan Armada QX56 √ Fix it Angel",
+      "channel": "Fix It Angel",
+      "views": 102960
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 324690,
+     "n": 11,
+     "best": {
+      "id": "BjEVzwlcBvI",
+      "title": "2008 Nissan Armada Quick Fix no heat no AC #2008 #nissan #Armada #noheat",
+      "channel": "Jayme Thatcher",
+      "views": 82394
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 232913,
+     "n": 2,
+     "best": {
+      "id": "tq_XVckk7VI",
+      "title": "2004-2015 Nissan Armada SE Oil Change",
+      "channel": "NutzAboutBolts",
+      "views": 210359
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 198034,
+     "n": 4,
+     "best": {
+      "id": "kw9P5Ck6_2I",
+      "title": "Rear Brake Pads Replacement Clean Adjust Shoes '04-'13 Nissan Armada QX56 √ Fix it Angel",
+      "channel": "Fix It Angel",
+      "views": 132496
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 168891,
+     "n": 5,
+     "best": {
+      "id": "NSLkQkatAWw",
+      "title": "How to program a Nissan Armada remote key fob 2004 - 2015",
+      "channel": "PYR Automotive ",
+      "views": 85700
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 155029,
+     "n": 3,
+     "best": {
+      "id": "_QwKgBTuWUc",
+      "title": "2012 Nissan Armada transmission fluid change [EASY]",
+      "channel": "The Marginal Mechanic",
+      "views": 86950
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 90694,
+     "n": 2,
+     "best": {
+      "id": "dHEs8Q1jFK4",
+      "title": "2015 Nissan Armada 5.6 Liter V8 camshaft position sensor replacement",
+      "channel": "Ab0ut Here'll Do",
+      "views": 75213
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 85661,
+     "n": 3,
+     "best": {
+      "id": "tjjRSXesz9c",
+      "title": "How to reset Service Engine soon Light on a 2008 Nissan Armada.....",
+      "channel": "Peter L",
+      "views": 36033
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "-9y4GR5vA4g",
+     "title": "Nissan Armada/Patrol (2010–2024): A Complete Reliability Guide",
+     "channel": "The Long Last Expert",
+     "views": 151050
+    },
+    {
+     "id": "_73H9XENmNQ",
+     "title": "Maintaining the MOST Reliable Nissan in the World!! (2004 Nissan Armada)",
+     "channel": "TNT GARAGE",
+     "views": 17554
+    },
+    {
+     "id": "OkPjHdZa8Qs",
+     "title": "Top 10 Problems of the 1st Gen Nissan Armada (2004-2015) | Watch Before You Buy!",
+     "channel": "Technologia",
+     "views": 11195
+    }
+   ],
+   "costs": null
+  }
+ ],
  "nissan-quest": [
   {
    "years": [
@@ -88489,6 +88624,134 @@
      "title": "5 Reasons Why You Should Buy A 2022 Cadillac XT5 - Quick Buyer's Guide",
      "channel": "Boston Auto Blog",
      "views": 39126
+    }
+   ],
+   "costs": null
+  }
+ ],
+ "acura-rsx": [
+  {
+   "years": [
+    2002,
+    2003,
+    2004,
+    2005,
+    2006
+   ],
+   "gen": "2002–2006 Acura RSX",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 197,
+   "views": 14534606,
+   "topics": [
+    {
+     "name": "Transmission & shifter",
+     "views": 450346,
+     "n": 3,
+     "best": {
+      "id": "4n9vWwBAvwc",
+      "title": "How To Drive A Manual Transmission Car (2002 Acura RSX)?",
+      "channel": "Morozov Automotive",
+      "views": 325645
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 156447,
+     "n": 5,
+     "best": {
+      "id": "RMf7OuARCaM",
+      "title": "Acura RSX (2002-2006): Oil Change (Full Tutorial).",
+      "channel": "Morozov Automotive",
+      "views": 131562
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 153336,
+     "n": 1,
+     "best": {
+      "id": "gIc1vjUpsoA",
+      "title": "Acura RSX 2002 - 2006 D.I.Y. \"Reset Maintenance Require Light\"",
+      "channel": "JJMAX2007",
+      "views": 153336
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 82735,
+     "n": 7,
+     "best": {
+      "id": "5JdelSZNE08",
+      "title": "DIY - Easiest way to Install / Replace a STARTER in an Acura RSX (Honda DC5)",
+      "channel": "GearHeads with FHS",
+      "views": 30733
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 44184,
+     "n": 2,
+     "best": {
+      "id": "MV86ZhJJ4OQ",
+      "title": "Acura RSX (2002-2006): Hatch Lift Supports (Struts) Replacement.",
+      "channel": "Morozov Automotive",
+      "views": 25337
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 37848,
+     "n": 5,
+     "best": {
+      "id": "-oAtCJtGw3g",
+      "title": "Acura RSX (2002-2006): Air Intake Hose Replacement.",
+      "channel": "Morozov Automotive",
+      "views": 13884
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 36404,
+     "n": 1,
+     "best": {
+      "id": "su_G8ji-8WA",
+      "title": "2006 Acura RSX Type-S DC5 Build: Full Color Change with OEM Vibes // Painting Engine Bay Guide - EP6",
+      "channel": "AHC Garage",
+      "views": 36404
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 35299,
+     "n": 2,
+     "best": {
+      "id": "NPgUeQHe494",
+      "title": "Acura RSX (2002-2006): Rear Brake Pads Replacement. Wagner Thermo Quiet Ceramic Brake Pads.",
+      "channel": "Morozov Automotive",
+      "views": 24397
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "9wc8ejd8eJU",
+     "title": "FINDING A MINT DC5! | Buyer's Guide: Acura RSX | S2 - EP34",
+     "channel": "DC5R.Parts",
+     "views": 78443
+    },
+    {
+     "id": "e2oqnZ5b6YU",
+     "title": "2002 RSX Type S Shift Cable Problems - 1st,3rd & 5th Gear",
+     "channel": "Long Leaf Acres and DMR",
+     "views": 10529
+    },
+    {
+     "id": "xNIkJdLTv0U",
+     "title": "Regular Car Reviews: 2004 Acura RSX",
+     "channel": "Regular Car Reviews",
+     "views": 769271
     }
    ],
    "costs": null
