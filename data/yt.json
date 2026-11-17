@@ -69483,7 +69483,39 @@
      "views": 49199
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 650,
+       "lo": 400.0,
+       "hi": 900.0,
+       "n": 2,
+       "videos": 2,
+       "id": "RVm77DCLQm8",
+       "t": 163,
+       "title": "Review: 2008 Audi A6 Avant"
+      }
+     ],
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 600,
+       "lo": 400.0,
+       "hi": 800.0,
+       "n": 4,
+       "videos": 2,
+       "id": "WvoyLojgmhc",
+       "t": 150,
+       "title": "Buying a used AUDI A6 C7 (2011-2018): The Truth About Its Reliability (BUYING GUIDE)"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -69609,6 +69641,68 @@
      "title": "Should You Buy an Audi A6 Allroad? (Test Drive & Review 2014 3.0TDI)",
      "channel": "High Peak Autos",
      "views": 175779
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2019–2025 Audi A6",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 196,
+   "views": 34340709,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 265317,
+     "n": 1,
+     "best": {
+      "id": "YUdenI03S2Y",
+      "title": "NEW 2021 Audi A6 Ambient Lighting + Exterior Lights - HOW TO SEPARATE THE AMBIENT LIGHT COLOR",
+      "channel": "VOZI I PUTUJ",
+      "views": 265317
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 25129,
+     "n": 1,
+     "best": {
+      "id": "FOI9L-psFi4",
+      "title": "Fixing charging system in 2019 Audi A6 S-Line with hybrid battery.",
+      "channel": "Surface Automobile",
+      "views": 25129
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "E9mt252wQ6g",
+     "title": "Audi A6 saloon 2019 in-depth review - Carbuyer",
+     "channel": "Carbuyer",
+     "views": 181405
+    },
+    {
+     "id": "aIbsd4MVpkU",
+     "title": "SUV buyers – get this instead: 2025 Audi A6 TDI review",
+     "channel": "Tim Rodie Drives Stuff",
+     "views": 52432
+    },
+    {
+     "id": "AlG0HCD1GFQ",
+     "title": "Audi A6 (C8) Buyers Guide (2019-2025) Common faults and Reliability of a used Audi A6 + S6",
+     "channel": "The Miles Driven",
+     "views": 35953
     }
    ],
    "costs": null
@@ -69914,7 +70008,26 @@
      "views": 1874
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 115,
+       "lo": 100.0,
+       "hi": 600.0,
+       "n": 5,
+       "videos": 4,
+       "id": "ssqWyBbAr48",
+       "t": 930,
+       "title": "'99 Saturn SL2 1.9L DOHC no-crank diagnosis ... and the quick FIX!"
+      }
+     ]
+    ]
+   }
   }
  ],
  "chrysler-concorde": [
@@ -70031,7 +70144,26 @@
      "views": 28340
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 90,
+       "lo": 80.0,
+       "hi": 100.0,
+       "n": 2,
+       "videos": 2,
+       "id": "K48_sPvhb04",
+       "t": 166,
+       "title": "2002 Chrysler Concorde fuel leak fix"
+      }
+     ]
+    ]
+   }
   }
  ],
  "volvo-xc90": [

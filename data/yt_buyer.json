@@ -34769,5 +34769,159 @@
 }
 ]
 }
+],
+"audi-a6": [
+{
+"sid": "audi-a6-g3",
+"y0": 2005,
+"y1": 2011,
+"label": "2005–2011",
+"videos": 185,
+"praise": [
+[
+"Reliability",
+7
+],
+[
+"Looks",
+5
+],
+[
+"Power",
+4
+],
+[
+"Fun to drive",
+4
+]
+],
+"trouble": [
+[
+"Oil leaks (gaskets, seals, housings)",
+4
+],
+[
+"Electrical / wiring / TIPM",
+4
+]
+],
+"top": [
+{
+"id": "9bOZUkNvE8c",
+"title": "Audi A6 Saloon 2011 - 2018 review | Mat Watson Reviews",
+"views": 1510947,
+"ch": "carwow"
+},
+{
+"id": "bFQDzbvExuQ",
+"title": "2004 - 2011 Audi A6 C6 Breakdowns / Costs / Issues [ENGLISH SUBTITLES]",
+"views": 532252,
+"ch": "MzM TV"
+},
+{
+"id": "Xpy4T46TxSg",
+"title": "Audi A6 2005 gearbox problem",
+"views": 493332,
+"ch": "Sajmon"
+}
+]
+},
+{
+"sid": "audi-a6-g4",
+"y0": 2012,
+"y1": 2018,
+"label": "2012–2018",
+"videos": 191,
+"praise": [
+[
+"Fun to drive",
+13
+],
+[
+"Looks",
+12
+],
+[
+"Power",
+9
+],
+[
+"Space and practicality",
+6
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+4
+]
+],
+"top": [
+{
+"id": "1GVc3MBtB6w",
+"title": "Mercedes E-Class vs BMW 5 Series vs Audi A6 Saloon 2017 review | Head2Head",
+"views": 2273259,
+"ch": "carwow"
+},
+{
+"id": "zeoZi6ZlUR8",
+"title": "2016 Audi A6 Review: Fuel Efficient, Fun & Fast?",
+"views": 656148,
+"ch": "The Fast Lane Car"
+},
+{
+"id": "YX0C9gRr_5Q",
+"title": "Audi A6 2017 In Depth Review Interior Exterior",
+"views": 498096,
+"ch": "Alaatin61"
+}
+]
+},
+{
+"sid": "audi-a6-g5",
+"y0": 2019,
+"y1": 2025,
+"label": "2019–2025",
+"videos": 188,
+"praise": [
+[
+"Fun to drive",
+15
+],
+[
+"Looks",
+15
+],
+[
+"Power",
+13
+],
+[
+"Space and practicality",
+10
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "5QQrqobDAG4",
+"title": "New Audi A6 2019 review – see why it's better than a BMW 5 Series and Mercedes E-Class!",
+"views": 2176435,
+"ch": "carwow"
+},
+{
+"id": "4K4Is06NRfk",
+"title": "Audi A6 2020 in-depth review | carwow Reviews",
+"views": 1934342,
+"ch": "carwow"
+},
+{
+"id": "hGKwGHzOQnk",
+"title": "Best in class? Audi A6 FULL REVIEW all-new C8 2019 s-line neu - Autogefühl",
+"views": 559760,
+"ch": "Autogefühl"
+}
+]
+}
 ]
 }
