@@ -27,6 +27,13 @@ PART = {'ELECTRICAL SYSTEM': 'electrical', 'POWER TRAIN': 'transmission & drivet
         'WHEELS': 'wheels', 'TIRES': 'tires', 'SEATS': 'seats', 'LATCHES/LOCKS/LINKAGES': 'doors, locks & latches', 'BACK OVER PREVENTION': 'backup camera',
         'PARKING BRAKE': 'parking brake', 'HYBRID PROPULSION SYSTEM': 'hybrid system', 'ELECTRONIC STABILITY CONTROL': 'stability control', 'EQUIPMENT': 'equipment'}
 part = lambda c: PART.get(c, c.lower().replace('/', ' / '))
+def cats(comps):   # 11-17 fix: the problem areas of ONE complaint, each once (several NHTSA component strings map to one area)
+    out = set()
+    for c in (comps or '').split(' | '):
+        c = c.split(':')[0].strip()
+        if c and c not in ('UNKNOWN OR OTHER', 'UNKNOWN'): out.add(part(c))
+    return out
+top_of = lambda C: sorted(C.items(), key=lambda x: (-x[1], x[0]))
 
 # ---- the average car per model year, from what is already published
 OUTD = glob.glob(os.path.join(LEMON, 'v3-unreliable*', 'data', 'out'))[0]
@@ -93,11 +100,12 @@ def run(slug, p):
     win, allc, comp, ids, sev, nm, miles = collections.Counter(), collections.Counter(), collections.defaultdict(collections.Counter), collections.defaultdict(lambda: collections.defaultdict(list)), \
         collections.defaultdict(lambda: dict(total=0, crash=0, fire=0, towed=0, injured=0, deaths=0)), collections.defaultdict(collections.Counter), collections.defaultdict(list)
     comp_all, tot_all, miles_all = collections.Counter(), collections.Counter(), []
+    cat = collections.defaultdict(collections.Counter)   # 11-17: per year, complaints per problem area (each complaint once per area); `comp` only picks quotes
     for odino, make, model, year, ldate, comps, crash, fire, inj, dead, towed, mi in con.execute(
             f'SELECT odino, make, model, year, ldate, comps, crash, fire, injured, deaths, towed, miles FROM complaints WHERE year BETWEEN {Y0} AND {Y1} AND make IN ({",".join("?" * len(makes))})', sorted(makes)):
         if not rx.fullmatch(model or ''): continue
         allc[year] += 1; nm[year][(make, model)] += 1
-        for c in set((comps or '').split(' | ')): comp_all[c.split(':')[0].strip() or 'UNKNOWN'] += 1
+        comp_all.update(cats(comps))
         tot_all['crash'] += crash == 'Y'; tot_all['fire'] += fire == 'Y'; tot_all['injured'] += (inj or 0) > 0; tot_all['deaths'] += (dead or 0) > 0
         if mi and 0 < mi < 400000: miles_all.append(mi)
         early = year >= 2023
@@ -107,6 +115,7 @@ def run(slug, p):
         if mi and 0 < mi < 400000: miles[year].append(mi)
         for c in set((comps or '').split(' | ')):
             c = c.split(':')[0].strip() or 'UNKNOWN'; comp[year][c] += 1; ids[year][c].append(odino)
+        cat[year].update(cats(comps))
     cs, kind, url, note = sales_for(p)
     sold, into, flags = (mysales.merge(cs, win, p['name'], Y0, Y1) if kind == 'calendar' else ({y: v for y, v in cs.items() if Y0 <= y <= Y1}, {}, []))
     blended = mysales.blend(sold, into, cs) if kind == 'calendar' else sold
@@ -122,7 +131,7 @@ def run(slug, p):
             li = round(100 * n / (s * BASE[y]))
             if 2010 <= y <= 2022 and blended.get(y): li = min(li, round(100 * n / (blended[y] * BASEB[y])))
         top = [(c, k) for c, k in comp[y].most_common() if c not in ('UNKNOWN OR OTHER', 'UNKNOWN')]
-        parts = [[part(c), round(100 * k / max(n, 1))] for c, k in top[:5]]
+        parts = [[c, round(100 * k / max(n, 1))] for c, k in top_of(cat[y])[:5]]
         pool = list(dict.fromkeys(o for c, _ in top[:2] for o in ids[y][c])); random.Random(f'{slug}{y}').shuffle(pool); qs, seen = [], set()
         for o in pool[:400]:
             row = con.execute('SELECT descr FROM rows WHERE odino=? AND descr IS NOT NULL LIMIT 1', (o,)).fetchone()
@@ -148,16 +157,15 @@ def run(slug, p):
         N = sum(v['n'] for v in scored); S_ = sum(v['sold'] for v in scored); EXP = sum(v['sold'] * BASE[v['y']] for v in scored)
         tot = collections.Counter();
         for v in scored:
-            for c, k in comp[v['y']].items():
-                if c not in ('UNKNOWN OR OTHER', 'UNKNOWN'): tot[c] += k
+            tot.update(cat[v['y']])
         ser = sum(sev[v['y']]['crash'] + sev[v['y']]['fire'] + sev[v['y']]['injured'] for v in scored)
         car = dict(name=p['name'], brand=p['brand'], segment=p['seg'], years=f'{scored[0]["y"]}-{scored[-1]["y"]}', sold=S_, n=N, per100k=round(N / S_ * 1e5),
                    expected=EXP, li=round(100 * N / EXP), serious=round(100 * ser / max(N, 1)), worst=str(max(scored, key=lambda v: v['li'])['y']),
-                   issues=[[part(c), round(100 * k / N)] for c, k in tot.most_common(3)], sales_url=url, sales_kind=kind)
-    ms = sorted(miles_all); n_all = sum(allc.values()); tp = sum(k for c, k in comp_all.items() if c not in ('UNKNOWN OR OTHER', 'UNKNOWN')) or 1
+                   issues=[[c, round(100 * k / N)] for c, k in top_of(tot)[:3]], sales_url=url, sales_kind=kind)
+    ms = sorted(miles_all); n_all = sum(allc.values()); tp = sum(comp_all.values()) or 1
     by = {y: allc[y] for y in sorted(allc) if allc[y]}
     extra = dict(id=slug, name=p['name'], brand=p['brand'], a=min(by) if by else Y0, b=max(by) if by else Y1, n=n_all, by_year={str(y): v for y, v in by.items()},
-                 parts=[[part(c), round(100 * k / tp)] for c, k in comp_all.most_common() if c not in ('UNKNOWN OR OTHER', 'UNKNOWN')][:6],
+                 parts=[[c, round(100 * k / tp)] for c, k in top_of(comp_all)[:6]],
                  crash=tot_all['crash'], fire=tot_all['fire'], injured=tot_all['injured'], deaths=tot_all['deaths'],
                  miles={'median': ms[len(ms) // 2], 'p25': ms[len(ms) // 4], 'p75': ms[3 * len(ms) // 4], 'n': len(ms)} if len(ms) >= 5 else None,
                  quotes=[dict(y=v['y'], odi=q['odi'], text=q['text']) for v in sorted(years_all, key=lambda v: -v['n'])[:3] for q in v['quotes'][:1]])

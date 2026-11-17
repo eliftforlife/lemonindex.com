@@ -51,7 +51,9 @@ PART = {'ELECTRICAL SYSTEM': 'electrical', 'POWER TRAIN': 'transmission & drivet
 SEGN = {'car': 'Car', 'suv': 'SUV', 'truck': 'Truck', 'minivan': 'Minivan', 'van': 'Van'}   # 11-11 'van': the full-size Ford Transit
 ISS = defaultdict(list)
 for r in csv.DictReader(open('data/family_components.csv', encoding='utf-8')):
-    if r['component'] != 'UNKNOWN OR OTHER' and len(ISS[r['family']]) < 3: ISS[r['family']].append([PART.get(r['component'], r['component'].lower()), round(float(r['share_pct']))])
+    # 11-17: each problem area once (ENGINE and ENGINE AND ENGINE COOLING are both "engine"; the study's file lists them separately, Ford EcoSport)
+    c_ = PART.get(r['component'], r['component'].lower())
+    if r['component'] != 'UNKNOWN OR OTHER' and len(ISS[r['family']]) < 3 and all(c_ != x[0] for x in ISS[r['family']]): ISS[r['family']].append([c_, round(float(r['share_pct']))])
 CARS = []
 for r in csv.DictReader(open('data/family_rates.csv', encoding='utf-8')):
     sold = int(r['us_sold'])

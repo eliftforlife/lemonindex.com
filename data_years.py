@@ -96,6 +96,16 @@ print('2023-2025 early-read model years:', len(EARLY))
 con = sqlite3.connect(os.path.join(LEMON, 'data', 'complaints.db'))
 pats = [(fam, set(make.split('|')), re.compile(rx)) for fam, make, rx, _, _ in FAMILIES]
 comp = defaultdict(lambda: defaultdict(int)); tot = defaultdict(int); ids = defaultdict(lambda: defaultdict(list))
+# 11-17 fix: `cat` counts each complaint at most ONCE per problem area. Before, `comp` (still used to pick the quotes, unchanged) counted a
+# complaint once per NHTSA component string, so "FORWARD COLLISION AVOIDANCE: X | FORWARD COLLISION AVOIDANCE: Y" counted twice (2022 Model 3:
+# "automatic emergency braking 107%") and ENGINE + ENGINE AND ENGINE COOLING showed up as two "engine" rows. Shares now never pass 100%.
+cat = defaultdict(lambda: defaultdict(int))
+def cats(comps):
+    out = set()
+    for c in (comps or '').split(' | '):
+        c = c.split(':')[0].strip()
+        if c and c not in ('UNKNOWN OR OTHER', 'UNKNOWN'): out.add(part(c))
+    return out
 for odino, make, model, year, ldate, comps in con.execute(f'SELECT odino, make, model, year, ldate, comps FROM complaints WHERE year BETWEEN {Y0} AND {Y1}'):
     fam = next((f for f, mk, rx in (_pats if year < 2010 else pats) if make in mk and rx.fullmatch(model)), None)
     if fam is None: continue
@@ -105,6 +115,7 @@ for odino, make, model, year, ldate, comps in con.execute(f'SELECT odino, make, 
     for c in set((comps or '').split(' | ')):
         c = c.split(':')[0].strip() or 'UNKNOWN'
         comp[(fam, year)][c] += 1; ids[(fam, year)][c].append(odino)
+    for c in cats(comps): cat[(fam, year)][c] += 1
 
 BAD = re.compile(r'\d{5,}|@|https?:|www\.|\bVIN\b|\bMY NAME\b|\bMR\.|\bMRS\.|\bMS\.|\bDR\.|\bLLC\b|\bINC\b|\bthanks?\b|thank you|regards|sincerely|call me|contact me|my number|\b(my|our) (wife|husband|son|daughter|kids?|children)\b', re.I)   # no personal details or sign-offs with names
 NAMES = sorted({w for f, _, _, _, _ in FAMILIES for w in f.replace('(', ' ').replace(')', ' ').split() if w[:1].isupper() and len(w) > 2} | {'NHTSA', 'BMW', 'VW', 'GM'}, key=len, reverse=True)
@@ -139,7 +150,7 @@ for fam, _, _ in pats:
         if not m: continue
         cs = [(c, k) for c, k in sorted(comp[(fam, y)].items(), key=lambda x: -x[1]) if c not in ('UNKNOWN OR OTHER', 'UNKNOWN')]
         n = tot[(fam, y)] or 1
-        parts = [[part(c), round(100 * k / n)] for c, k in cs[:5]]
+        parts = [[c, round(100 * k / n)] for c, k in sorted(cat[(fam, y)].items(), key=lambda x: (-x[1], x[0]))[:5]]
         yrs.append(dict(y=y, li=m['li'], n=m['n'], sold=m['sold'], parts=parts, quotes=quotes(fam, y, [c for c, _ in cs[:2]])) | ({'early': True} if (fam, y) in EARLY else {}))
     if yrs: data.append(dict(id=idof(fam), name=fam, years=yrs))
 os.makedirs('data', exist_ok=True)
