@@ -35717,5 +35717,66 @@
 }
 ]
 }
+],
+"chevrolet-astro": [
+{
+"sid": "chevrolet-astro-g2",
+"y0": 1995,
+"y1": 2005,
+"label": "1995–2005",
+"videos": 198,
+"praise": [
+[
+"Space and practicality",
+5
+],
+[
+"Reliability",
+5
+],
+[
+"Looks",
+4
+],
+[
+"Power",
+4
+]
+],
+"trouble": [
+[
+"Fuel pump / fuel system",
+4
+],
+[
+"Electrical / wiring / TIPM",
+4
+],
+[
+"Spark plugs / coils / misfire",
+3
+]
+],
+"top": [
+{
+"id": "ZT4zrzFbobE",
+"title": "Is It As Reliable As You Think? Chevrolet Astro Van/GMC Safari 1985-2005",
+"views": 227729,
+"ch": "AutoMotivate"
+},
+{
+"id": "TvNiO7efswI",
+"title": "Chevy Astro Review | 1995-2005 | 2nd Gen",
+"views": 104280,
+"ch": "Driven Companion"
+},
+{
+"id": "mJUuQMHqYpE",
+"title": "2002 Chevy Astro Starcraft  (Canada Import) Japan Auction Purchase Review",
+"views": 96394,
+"ch": "Pacific Coast Auto"
+}
+]
+}
 ]
 }
