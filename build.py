@@ -2169,7 +2169,7 @@ HKCARDS = ('<nav class="hk" id="kinds" aria-label="Kinds of car">' + ''.join(_hk
            '.hk-c:hover{background:#ececf0}.hk-c:hover img{transform:translateX(-5px) scale(1.03)}'
            '.hk-c:focus-visible{outline:2px solid #1d1d1f;outline-offset:2px}'
            '.hk-c[aria-current]:not([data-type=all]){box-shadow:inset 0 0 0 2px #1d1d1f}.hk-c[aria-current]:not([data-type=all]) .hk-t b{box-shadow:inset 0 -.16em 0 #ffd400}'
-           '@media (max-width:639px){.hk-c.hk-r{flex-direction:row-reverse;padding:0 20px 0 6px}.hk-r .hk-t{align-items:flex-end;text-align:right}.hk-r .hk-p{justify-content:flex-start}.hk-r:hover img{transform:translateX(5px) scale(1.03)}}'
+           ''
            '@media (min-width:640px){.hk{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.hk-c{height:150px;padding:0 10px 0 28px}.hk-t b{font-size:32px}'
            '.hk-c:last-child:nth-child(odd){grid-column:1/-1}.hk-c:last-child:nth-child(odd) .hk-p{flex-basis:32%}}'
            '@media (min-width:1000px){.hk{gap:16px}.hk-c{height:184px;padding:0 16px 0 36px;border-radius:26px}.hk-t b{font-size:42px}.hk-t small{font-size:15px}}'
