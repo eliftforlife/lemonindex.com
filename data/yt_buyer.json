@@ -35330,5 +35330,53 @@
 }
 ]
 }
+],
+"ford-flex": [
+{
+"sid": "ford-flex-g1",
+"y0": 2009,
+"y1": 2019,
+"label": "2009–2019",
+"videos": 197,
+"praise": [
+[
+"Space and practicality",
+11
+],
+[
+"Looks",
+7
+],
+[
+"Power",
+5
+],
+[
+"Fun to drive",
+4
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "RXFSQo5qqLI",
+"title": "2013 Ford Flex EcoBoost Car Video & Crossover Review",
+"views": 327533,
+"ch": "UsedCarsTV"
+},
+{
+"id": "xt3WEPnr6-E",
+"title": "Here's the 2018 Ford Flex 3-Row 7 Passenger SUV Review on Everyman Driver",
+"views": 286899,
+"ch": "Everyman Driver"
+},
+{
+"id": "a-xOMixNqks",
+"title": "2013 Ford Flex vs Mazda CX-9: What is the Best Camping Car Mashup Review?",
+"views": 275436,
+"ch": "The Fast Lane Car"
+}
+]
+}
 ]
 }

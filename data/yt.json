@@ -69501,6 +69501,159 @@
      "views": 180229
     }
    ],
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 500,
+       "lo": 75.0,
+       "hi": 800.0,
+       "n": 7,
+       "videos": 7,
+       "id": "2lZ2imbbxz4",
+       "t": 435,
+       "title": "2000 Cadillac Deville Starter Replacement"
+      }
+     ]
+    ]
+   }
+  }
+ ],
+ "ford-flex": [
+  {
+   "years": [
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019
+   ],
+   "gen": "2009–2019 Ford Flex",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 7563728,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 198685,
+     "n": 5,
+     "best": {
+      "id": "epWSgYm7UHo",
+      "title": "How to Replace Starter 2009-2019 Ford Flex",
+      "channel": "TRQ",
+      "views": 57942
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 143842,
+     "n": 4,
+     "best": {
+      "id": "RuOjeAp9ju8",
+      "title": "How to Replace Wheel Bearing And Hub Assembly 2009-2019 Ford Flex",
+      "channel": "TRQ",
+      "views": 52360
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 100071,
+     "n": 5,
+     "best": {
+      "id": "ZSn7_KS40B4",
+      "title": "How to Replace Cabin Air Filter 2016 Ford Flex | AQ1153",
+      "channel": "Filterheads",
+      "views": 40928
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 84156,
+     "n": 4,
+     "best": {
+      "id": "756xlQF6jqQ",
+      "title": "WHERE IS THE DOOR CODE FOR MY FORD FLEX 2013, 2014, 2015, 2016, 2017, 2018, 2019 FLEX DOOR CODE FIND",
+      "channel": "Summit Auto 4K Reviews",
+      "views": 32858
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 75730,
+     "n": 4,
+     "best": {
+      "id": "DqTjdJObjeY",
+      "title": "How to Replace Thermostat with Housing Assembly 2009-2019 Ford Flex",
+      "channel": "TRQ",
+      "views": 32234
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 73370,
+     "n": 3,
+     "best": {
+      "id": "o8pzOCvOaSM",
+      "title": "2009 Ford Flex oxygen sensor replacement (1)",
+      "channel": "Jeff Yingling",
+      "views": 34651
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 47323,
+     "n": 2,
+     "best": {
+      "id": "9HSSFDYD6X4",
+      "title": "How to Replace Rear CV Axle 2009-2019 Ford Flex",
+      "channel": "TRQ",
+      "views": 33462
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 44933,
+     "n": 1,
+     "best": {
+      "id": "F7g_h5cJb60",
+      "title": "How to Replace Front Brakes 2009-2019 Ford Flex",
+      "channel": "TRQ",
+      "views": 44933
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "tZs5UpiB5PU",
+     "title": "2019 Ford Flex Problems and Recalls. Should you buy it?",
+     "channel": "car PROblems",
+     "views": 32847
+    },
+    {
+     "id": "VRjPvgW1ZOY",
+     "title": "2019 Ford Flex Limited EcoBoost: Best Size for Most Buyers?",
+     "channel": "DeLo Enterprises",
+     "views": 27608
+    },
+    {
+     "id": "uprWflVetCc",
+     "title": "Ford flex 2014 starting problems. Fuel pump relay module.",
+     "channel": "Jr Manu",
+     "views": 9832
+    }
+   ],
    "costs": null
   }
  ],
