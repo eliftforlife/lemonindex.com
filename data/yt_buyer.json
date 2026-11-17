@@ -34257,5 +34257,92 @@
 }
 ]
 }
+],
+"mazda-tribute": [
+{
+"sid": "mazda-tribute-g1",
+"y0": 2001,
+"y1": 2006,
+"label": "2001–2006",
+"videos": 200,
+"praise": [
+[
+"Reliability",
+10
+],
+[
+"Power",
+4
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+4
+]
+],
+"top": [
+{
+"id": "f7zJew22ZSE",
+"title": "Watch this before replacing O2 sensors Mazda tribute 2001-2004",
+"views": 81265,
+"ch": "WrenchTheory501"
+},
+{
+"id": "XqV9bWg3p10",
+"title": "2003 Mazda Tribute - Power Steering Problems Fixed! (Part 1)",
+"views": 42356,
+"ch": "Ryan45678"
+},
+{
+"id": "tAaSSdohxWQ",
+"title": "2001-2006 Mazda Tribute Pre-Owned Vehicle Review",
+"views": 41078,
+"ch": "WheelsTV Test Drives"
+}
+]
+},
+{
+"sid": "mazda-tribute-g2",
+"y0": 2008,
+"y1": 2011,
+"label": "2008–2011",
+"videos": 200,
+"praise": [
+[
+"Reliability",
+6
+],
+[
+"Power",
+4
+],
+[
+"Looks",
+3
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "qgJALkIS0PE",
+"title": "WARNING!!! Ford Escape, Mercury Mariner, and Mazda Tribute owners of 2009 or newer vehicles.",
+"views": 166492,
+"ch": "Joseph Vollmar"
+},
+{
+"id": "kVyjfgQlX8c",
+"title": "2008 Mazda Tribute Review - Kelley Blue Book",
+"views": 130326,
+"ch": "Kelley Blue Book"
+},
+{
+"id": "5EvvHO98t1I",
+"title": "2011 Mazda Tribute i Touring Start Up, Exterior/ Interior Review",
+"views": 66683,
+"ch": "The Driveway Auto Reviews"
+}
+]
+}
 ]
 }

@@ -68640,6 +68640,260 @@
    "costs": null
   }
  ],
+ "mazda-tribute": [
+  {
+   "years": [
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006
+   ],
+   "gen": "2001–2006 Mazda Tribute",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 199,
+   "views": 4026290,
+   "topics": [
+    {
+     "name": "Transmission & shifter",
+     "views": 281022,
+     "n": 2,
+     "best": {
+      "id": "dkhWk07Pc0I",
+      "title": "2004 Mazda Tribute / Ford Escape Transmission trouble ( Code P0708 )",
+      "channel": "2stroketurbo",
+      "views": 276383
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 181294,
+     "n": 9,
+     "best": {
+      "id": "0pFC4asbMFU",
+      "title": "2003 Mazda Tribute V6 ES - Cleaning MAF Sensor, IAC, Throttle Body (Ford Escape, Mercury Mariner)",
+      "channel": "Ryan45678",
+      "views": 63215
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 179065,
+     "n": 3,
+     "best": {
+      "id": "XlZmC8RayJM",
+      "title": "2001 (2001-2007) Ford Escape, Mazda Tribute, Mercury Mariner V6 3.0L Starter Motor Replacement",
+      "channel": "FoxRecon383",
+      "views": 82415
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 132262,
+     "n": 1,
+     "best": {
+      "id": "oXS1SSoN3RQ",
+      "title": "2004 Mazda Tribute / Ford Escape 3.0 V6 Spark Plug Replacement",
+      "channel": "2stroketurbo",
+      "views": 132262
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 110043,
+     "n": 5,
+     "best": {
+      "id": "6FDu6Q4dpsc",
+      "title": "Thermostat Replacement for 2005 Mazda Tribute V6",
+      "channel": "Albaro Perez",
+      "views": 50660
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 105614,
+     "n": 1,
+     "best": {
+      "id": "e-w-aAOcwe4",
+      "title": "How to Replace Cabin Air Filter 2004 Mazda Tribute | AQ1038",
+      "channel": "Filterheads",
+      "views": 105614
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 80900,
+     "n": 4,
+     "best": {
+      "id": "tgQbfe2TYsg",
+      "title": "How to replace 2001-2004 mazda tribute power steering pump 3.0l v6",
+      "channel": "WrenchTheory501",
+      "views": 64667
+     }
+    },
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 67068,
+     "n": 1,
+     "best": {
+      "id": "9B3Jhag3SSM",
+      "title": "HOW TO REPLACE OIL PAN GASKET '01-'06 Mazda Tribute Ford Escape | Fix It Angel",
+      "channel": "Fix It Angel",
+      "views": 67068
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "XqV9bWg3p10",
+     "title": "2003 Mazda Tribute - Power Steering Problems Fixed! (Part 1)",
+     "channel": "Ryan45678",
+     "views": 42356
+    },
+    {
+     "id": "PAioNB3VoXc",
+     "title": "A/C Problems on '05 Mazda Tribute",
+     "channel": "Andy Guice",
+     "views": 25155
+    },
+    {
+     "id": "tmESoJTXux4",
+     "title": "Mazda tribute 2005 with evap problems",
+     "channel": "green traffic automotive GTA",
+     "views": 3732
+    }
+   ],
+   "costs": null
+  },
+  {
+   "years": [
+    2008,
+    2009,
+    2010,
+    2011
+   ],
+   "gen": "2008–2011 Mazda Tribute",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 1463269,
+   "topics": [
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 121816,
+     "n": 2,
+     "best": {
+      "id": "IZz3WqSy3ks",
+      "title": "How To ReCharge AC Ford Escape Mercury Mariner Mazda Tribute 2008 2009 2010 2011 2012 08 09 10 11 12",
+      "channel": "Dirt Road Auto Repair",
+      "views": 119915
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 38848,
+     "n": 4,
+     "best": {
+      "id": "Jy4VBdg4srA",
+      "title": "2008 Mazda Tribute Steering Wheel Torque Sensor Replacement",
+      "channel": "Hangry Angler",
+      "views": 14780
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 17108,
+     "n": 1,
+     "best": {
+      "id": "hPhPP8iGJUA",
+      "title": "Radiator Replacement MAZDA TRIBUTE 2.3L 2004~2010 L3 GF4A-EL 4WD",
+      "channel": "mesing2005",
+      "views": 17108
+     }
+    },
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 10321,
+     "n": 1,
+     "best": {
+      "id": "77CkBB9sBZ8",
+      "title": "How to replace the rear main seal on a 2008 Mazda Tribute/Mariner/Escape 3.0l v6 duratech",
+      "channel": "WrenchTheory501",
+      "views": 10321
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 9155,
+     "n": 1,
+     "best": {
+      "id": "BsPx0XsDtxU",
+      "title": "2008–2011 Mazda Tribute Rear Tail Light Assembly Removal & Replacement | Step-by-Step DIY",
+      "channel": "Texas Yard Man and More",
+      "views": 9155
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 8697,
+     "n": 1,
+     "best": {
+      "id": "4UkCWDt6Nfs",
+      "title": "How To Change Oil Ford Escape Mercury Mariner Mazda Tribute 2008 2009 2010 2011 2012 08 09 10 11 12",
+      "channel": "Dirt Road Auto Repair",
+      "views": 8697
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 6401,
+     "n": 3,
+     "best": {
+      "id": "lEX2nNnhJac",
+      "title": "2009 MAZDA TRIBUTE | HOW TO REPLACE FRONT BRAKE PADS | HOW TO CHANGE OIL | VIN DADI | V-NATION",
+      "channel": "Vin Dadi",
+      "views": 3003
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 2852,
+     "n": 2,
+     "best": {
+      "id": "j-SFbRm9T-8",
+      "title": "2008 Mazda Tribute Battery Cable Replacement",
+      "channel": "Hangry Angler",
+      "views": 2754
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "4cBh1AoTSpQ",
+     "title": "2010 Mazda Tribute Instrument Cluster Repair | Dashboard Gauge Problems",
+     "channel": "South side boy style",
+     "views": 4280
+    },
+    {
+     "id": "JMDHIISQZlU",
+     "title": "2008. Ford Escape and Mazda Tribute. Battery goes dead battery problems",
+     "channel": "Sam Elsaadi",
+     "views": 3567
+    },
+    {
+     "id": "S0hN4Jbqz1A",
+     "title": "2008 Mazda Tribute blower motor problems",
+     "channel": "SPB Automotive",
+     "views": 1681
+    }
+   ],
+   "costs": null
+  }
+ ],
  "volvo-xc90": [
   {
    "years": [
