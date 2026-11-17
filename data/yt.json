@@ -68751,6 +68751,130 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2016,
+    2017,
+    2018
+   ],
+   "gen": "2016–2018 Lincoln MKX",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 3448956,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 268717,
+     "n": 4,
+     "best": {
+      "id": "hlu8xd4O-Fg",
+      "title": "2016 - 2018 Lincoln MKX Key Fob Battery Replacement - How To Change Or Replace Remote Fob Batteries",
+      "channel": "PYR Automotive ",
+      "views": 124870
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 62230,
+     "n": 1,
+     "best": {
+      "id": "Vz267Ko3We0",
+      "title": "2007-2018 Ford Edge/Lincoln MKX Spark Plug Replacement How-To",
+      "channel": "Blue Collar Garage",
+      "views": 62230
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 15007,
+     "n": 3,
+     "best": {
+      "id": "imrdFzRXt-Y",
+      "title": "2nd Generation 2016 - Present (2016) Lincoln MKX / Ford Edge / Lincoln Nautilus Oil Change",
+      "channel": "Cars and Espresso",
+      "views": 9515
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 9381,
+     "n": 1,
+     "best": {
+      "id": "f4JWkvqzp34",
+      "title": "2017 Lincoln MKX front strut/shock replacement",
+      "channel": "Derek King",
+      "views": 9381
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 7336,
+     "n": 1,
+     "best": {
+      "id": "nKS8-n_d24o",
+      "title": "2016 LINCOLN MKX REAR DIFFERENTIAL REPLACEMENT",
+      "channel": "White One Auto, LLC",
+      "views": 7336
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 6782,
+     "n": 2,
+     "best": {
+      "id": "Ah00QU1niMo",
+      "title": "2017 Lincoln MKX Coolant Drain / Flush Refill",
+      "channel": "Eric Baumgartner",
+      "views": 4007
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 6038,
+     "n": 1,
+     "best": {
+      "id": "QNDvoMBmdWo",
+      "title": "Diagnosing A No Crank No Start Problem on A 2016 Lincoln MKX/ Just Clicks- Fixed",
+      "channel": "Peter L",
+      "views": 6038
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 5459,
+     "n": 2,
+     "best": {
+      "id": "ejSMVsCANWY",
+      "title": "2018 Lincoln MKX front brakes rotor and pads replacement @hu-mungusGarage",
+      "channel": "Hu-mungus Garage",
+      "views": 3459
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "m_NRVodcXD0",
+     "title": "2016 Lincoln MKX Problems",
+     "channel": "Ron Miller",
+     "views": 5493
+    },
+    {
+     "id": "7iRPbcB5Kys",
+     "title": "2016 Lincoln MKX Review",
+     "channel": "Cars.com",
+     "views": 198343
+    },
+    {
+     "id": "jgltegOHNko",
+     "title": "2017 Lincoln MKX Black Label Review: Curbed with Craig Cole",
+     "channel": "AutoGuide.com",
+     "views": 144999
+    }
+   ],
+   "costs": null
   }
  ],
  "buick-century": [

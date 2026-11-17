@@ -33753,5 +33753,99 @@
 }
 ]
 }
+],
+"lincoln-mkx": [
+{
+"sid": "lincoln-mkx-g1",
+"y0": 2007,
+"y1": 2015,
+"label": "2007–2015",
+"videos": 200,
+"praise": [
+[
+"Power",
+6
+],
+[
+"Reliability",
+4
+],
+[
+"Looks",
+4
+],
+[
+"Comfort and ride",
+3
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "vQs9YybQLCg",
+"title": "2008 Lincoln MKX Review - Kelley Blue Book",
+"views": 134559,
+"ch": "Kelley Blue Book"
+},
+{
+"id": "g0jRmHmCtLQ",
+"title": "2011 Lincoln MKX Review - Kelley Blue Book",
+"views": 83216,
+"ch": "Kelley Blue Book"
+},
+{
+"id": "sjs9loTkv6U",
+"title": "2013 Lincoln MKX - Drive Time Review with Steve Hammes | TestDriveNow",
+"views": 82849,
+"ch": "Steve Hammes New Car Reviews"
+}
+]
+},
+{
+"sid": "lincoln-mkx-g2",
+"y0": 2016,
+"y1": 2018,
+"label": "2016–2018",
+"videos": 199,
+"praise": [
+[
+"Looks",
+10
+],
+[
+"Power",
+9
+],
+[
+"Fun to drive",
+6
+],
+[
+"Comfort and ride",
+6
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "7iRPbcB5Kys",
+"title": "2016 Lincoln MKX Review",
+"views": 198343,
+"ch": "Cars.com"
+},
+{
+"id": "tMo6qttQ96U",
+"title": "2016 / 2017 Lincoln MKX 2.7L Turbo Review and Road Test | DETAILED in 4K UHD!",
+"views": 181773,
+"ch": "Auto Buyers Guide | Alex on Autos"
+},
+{
+"id": "jgltegOHNko",
+"title": "2017 Lincoln MKX Black Label Review: Curbed with Craig Cole",
+"views": 144999,
+"ch": "AutoGuide.com"
+}
+]
+}
 ]
 }
