@@ -542,5 +542,101 @@
   "ai": true,
   "title": "Toyota 1JZ-GTE 2.5 turbo engine, 2.5 L inline-6 turbo (illustration)",
   "bytes": 145420
+ },
+ "bmw-m57": {
+  "src": "/assets/engines/bmw-m57-3-0-l-inline-6-twin-turbo-diesel-engine.webp",
+  "w": 1200,
+  "h": 1101,
+  "ai": true,
+  "title": "BMW M57 3.0 diesel engine, 3.0 L inline-6 twin-turbo diesel (illustration)",
+  "bytes": 132114
+ },
+ "bmw-n47-b47": {
+  "src": "/assets/engines/bmw-n47-b47-2-0-l-inline-4-turbo-diesel-engine.webp",
+  "w": 1200,
+  "h": 1158,
+  "ai": true,
+  "title": "BMW 2.0 diesel (N47 / B47) engine, 2.0 L inline-4 turbo diesel (illustration)",
+  "bytes": 131602
+ },
+ "ford-20-hybrid": {
+  "src": "/assets/engines/ford-20-hybrid-2-0-l-inline-4-hybrid-engine.webp",
+  "w": 1200,
+  "h": 1255,
+  "ai": true,
+  "title": "Ford 2.0 hybrid engine, 2.0 L inline-4, hybrid (illustration)",
+  "bytes": 149204
+ },
+ "honda-20-hybrid": {
+  "src": "/assets/engines/honda-20-hybrid-2-0-l-inline-4-hybrid-engine.webp",
+  "w": 1200,
+  "h": 1004,
+  "ai": true,
+  "title": "Honda 2.0 hybrid (i-MMD) engine, 2.0 L inline-4, hybrid (illustration)",
+  "bytes": 140660
+ },
+ "toyota-25-hybrid": {
+  "src": "/assets/engines/toyota-25-hybrid-2-5-l-inline-4-hybrid-engine.webp",
+  "w": 1200,
+  "h": 1083,
+  "ai": true,
+  "title": "Toyota 2.5 hybrid (2AR-FXE / A25A-FXS) engine, 2.5 L inline-4, hybrid (illustration)",
+  "bytes": 134478
+ },
+ "toyota-v35a-hybrid": {
+  "src": "/assets/engines/toyota-v35a-hybrid-3-4-l-v6-twin-turbo-hybrid-engine.webp",
+  "w": 1200,
+  "h": 1007,
+  "ai": true,
+  "title": "Toyota 3.4 twin-turbo V6 hybrid (i-FORCE MAX) engine, 3.4 L V6 twin-turbo, hybrid (illustration)",
+  "bytes": 148004
+ },
+ "gm-60-hybrid": {
+  "src": "/assets/engines/gm-60-hybrid-6-0-l-v8-hybrid-engine.webp",
+  "w": 1200,
+  "h": 1099,
+  "ai": true,
+  "title": "GM 6.0 V8 Two-Mode Hybrid engine, 6.0 L V8, hybrid (illustration)",
+  "bytes": 129410
+ },
+ "mazda-25t": {
+  "src": "/assets/engines/mazda-25t-2-5-l-inline-4-turbo-engine.webp",
+  "w": 1200,
+  "h": 1210,
+  "ai": true,
+  "title": "Mazda Skyactiv-G 2.5 Turbo engine, 2.5 L inline-4 turbo (illustration)",
+  "bytes": 138442
+ },
+ "ford-23-duratec": {
+  "src": "/assets/engines/ford-23-duratec-2-3-l-inline-4-engine.webp",
+  "w": 1200,
+  "h": 1183,
+  "ai": true,
+  "title": "Ford 2.3 Duratec (Ranger) engine, 2.3 L inline-4 (illustration)",
+  "bytes": 140198
+ },
+ "ford-46-modular": {
+  "src": "/assets/engines/ford-46-modular-4-6-l-v8-sohc-engine.webp",
+  "w": 1200,
+  "h": 1034,
+  "ai": true,
+  "title": "Ford 4.6 Modular V8 engine, 4.6 L V8, SOHC (illustration)",
+  "bytes": 139528
+ },
+ "audi-30-tfsi": {
+  "src": "/assets/engines/audi-30-tfsi-3-0-l-v6-supercharged-engine.webp",
+  "w": 1200,
+  "h": 1132,
+  "ai": true,
+  "title": "Audi 3.0 TFSI supercharged V6 engine, 3.0 L V6, supercharged (illustration)",
+  "bytes": 138790
+ },
+ "hyundai-38-lambda": {
+  "src": "/assets/engines/hyundai-38-lambda-3-8-l-v6-engine.webp",
+  "w": 1200,
+  "h": 1161,
+  "ai": true,
+  "title": "Hyundai / Kia 3.8 V6 (Genesis, Veracruz, Sedona) engine, 3.8 L V6 (illustration)",
+  "bytes": 144288
  }
 }

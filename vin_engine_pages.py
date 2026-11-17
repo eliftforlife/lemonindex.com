@@ -15,7 +15,7 @@ if VEX == 'hooks':
     VEE, VER = VEJ.get('engines') or {}, VEJ.get('recalls') or {}
     VE_URL = {e: d.get('page') or f'/engines/{e}/' for e, d in VEE.items()}
     # the name on car pages' engine chips ("Engines in the 2017 Highlander: 2GR-FKS 3.5 V6")
-    VE_CHIP = {e: _vre.sub(r'^(Toyota|GM|Hyundai / Kia|Honda|Ford|Nissan|Chrysler|Subaru|Mazda|VW / Audi) ', '', d['name']) for e, d in VEE.items()}
+    VE_CHIP = {e: _vre.sub(r'^(Toyota|GM|Hyundai / Kia|Honda|Ford|Nissan|Chrysler|Subaru|Mazda|VW / Audi|Audi|BMW) ', '', d['name']) for e, d in VEE.items()}
     VE_USE = []
     for _e, _d in VEE.items():
         for _fid, _c in _d['by_car'].items():
@@ -30,7 +30,10 @@ if VEX == 'hooks':
     _VW = VEJ.get('words') or {}
     _VM = {f['id']: f for f in YEARS}
     _vsc = lambda t: sent_case(t) if 'sent_case' in globals() else t
-    _vcar = lambda fid: _VM[fid]['name'] if fid in _VM else fid
+    # 11-17: complaints-only models (Town Car, Grand Marquis ...: data/extra_models*.json) have /cars/<id>/ pages but aren't in YEARS
+    _VXN = {**(_load('data/extra_models.json') if _vos.path.exists('data/extra_models.json') else {}), **(_load('data/extra_models_new.json') if _vos.path.exists('data/extra_models_new.json') else {})}
+    _vcar = lambda fid: _VM[fid]['name'] if fid in _VM else (_VXN.get(fid) or {}).get('name', fid)
+    _vcaru = lambda fid: CARU(_VM[fid]) if fid in _VM else f'/cars/{fid}/' if fid in _VXN else ''
     _VHOW = ('Complaints: NHTSA owner complaints filed under each car&#39;s own NHTSA names (the same ones its car pages count), all years filed, one per complaint number. '
              'Engine: decoded from the complaint&#39;s VIN with NHTSA&#39;s vPIC decoder (displacement, cylinders, engine model, turbo, hybrid) and the engine maker&#39;s model years; '
              'a VIN that doesn&#39;t decode to exactly one engine is left out. Older cars have had more years to collect complaints, and popular cars draw more because more were sold.')
@@ -88,10 +91,24 @@ if VEX == 'hooks':
                 'hyundai-lambda2-33': [('oil_use', 'oil consumption')], 'gm-14-turbo': [('coolant', 'coolant leaks'), ('oil_leak', 'oil leaks (PCV / valve cover)')],
                 'gm-36-v6': [('timing_chain', 'timing chain stretch')], 'gm-24-ecotec': [('oil_use', 'oil consumption (piston rings)'), ('timing_chain', 'the timing chain')],
                 'ram-30-ecodiesel': [('seize', 'engine failure (crankshaft / bearings)')], 'jeep-38-v6': [('oil_use', 'oil consumption')], 'gm-48-vortec': [('oil_use', 'oil consumption')],
-                'ford-54-triton': [('cam_phaser', 'cam phasers'), ('spark_plug', 'broken or ejected spark plugs')], 'ford-ecoboost-23': [('coolant', 'coolant loss')]}
+                'ford-54-triton': [('cam_phaser', 'cam phasers'), ('spark_plug', 'broken or ejected spark plugs')], 'ford-ecoboost-23': [('coolant', 'coolant loss')],
+                # wave 3 (11-17, visitor requests)
+                'bmw-m57': [('def_scr', 'the DEF (AdBlue) system and NOx sensors'), ('egr_dpf', 'the EGR and the particulate filter'), ('turbo', 'the turbochargers')],
+                'bmw-n47-b47': [('timing_chain', 'the timing chain'), ('def_scr', 'the DEF (AdBlue) system and NOx sensors'), ('egr_dpf', 'the EGR and the particulate filter')],
+                'ford-20-hybrid': [('hybrid_sys', 'the hybrid battery and inverter'), ('power_loss', 'sudden loss of power')],
+                'honda-20-hybrid': [('hybrid_sys', 'the hybrid system and its battery'), ('power_loss', 'sudden loss of power')],
+                'toyota-25-hybrid': [('hybrid_sys', 'the hybrid battery and inverter'), ('oil_use', 'oil consumption')],
+                'toyota-v35a-hybrid': [('seize', 'engine knock and failure'), ('hybrid_sys', 'the hybrid system'), ('power_loss', 'stalling and loss of power')],
+                'gm-60-hybrid': [('hybrid_sys', 'the hybrid system and its battery'), ('power_loss', 'stalling and loss of power')],
+                'mazda-25t': [('turbo', 'the turbo'), ('coolant', 'coolant loss')],
+                'ford-23-duratec': [('timing_chain', 'the timing chain'), ('misfire', 'misfires')],
+                'ford-46-modular': [('spark_plug', 'blown-out or broken spark plugs'), ('coolant', 'intake manifold coolant leaks and overheating'), ('oil_leak', 'oil leaks')],
+                'audi-30-tfsi': [('water_pump', 'water pump and thermostat leaks'), ('carbon', 'carbon buildup'), ('oil_use', 'oil consumption')],
+                'hyundai-38-lambda': [('oil_use', 'oil consumption'), ('timing_chain', 'the timing chain'), ('carbon', 'carbon buildup')]}
     _VPEERS = f'{len(VEE)} everyday engines we track'
     _VOTH = f'other {len(VEE) - 1} everyday engines we track'
-    VE_TRUCKS = {'gm-53-gen5', 'gm-53-gen4', 'gm-62-gen5', 'gm-48-vortec', 'gm-27-turbo', 'chrysler-57-hemi', 'ram-30-ecodiesel', 'ford-54-triton', 'toyota-3ur-fe', 'toyota-1gr-fe'}   # the 'Trucks & diesel' tab on /engines/
+    VE_TRUCKS = {'gm-53-gen5', 'gm-53-gen4', 'gm-62-gen5', 'gm-48-vortec', 'gm-27-turbo', 'chrysler-57-hemi', 'ram-30-ecodiesel', 'ford-54-triton', 'toyota-3ur-fe', 'toyota-1gr-fe',
+                 'toyota-v35a-hybrid', 'gm-60-hybrid', 'ford-23-duratec', 'bmw-m57', 'bmw-n47-b47'}   # the 'Trucks & diesel' tab on /engines/
     def _v_known(e, h2=True):
         ok, no = [], []
         for k, what in VE_KNOWN.get(e, []):
@@ -118,7 +135,7 @@ if VEX == 'hooks':
         d = VEE[e]; R = []
         for f, c in sorted(d['by_car'].items(), key=lambda kv: -kv[1]['n']):
             ys = sorted(int(y) for y in c['years']); span = f'{ys[0]}–{str(ys[-1])[-2:]}' if len(ys) > 1 else str(ys[0])
-            R.append([f'<a href="{CARU(_VM[f])}">{E(_vcar(f))}</a>' if f in _VM else E(f), span, f'{c["n"]:,}', f'{c["eng"]}%'])
+            R.append([f'<a href="{_vcaru(f)}">{E(_vcar(f))}</a>' if _vcaru(f) else E(_vcar(f)), span, f'{c["n"]:,}', f'{c["eng"]}%'])
         return _v_rows(['Car', 'Model years matched', 'Complaints', 'Name the engine'], R)
     def _v_rank(e): return sorted(VEE, key=lambda o: -_v_share(VEE[o]['comps'], 'engine')).index(e) + 1
     def _v_cmp(cur):
@@ -222,7 +239,7 @@ if VEX == 'hooks':
         mk = {'GM': 'Chevrolet'}.get(d['maker'], d['maker'])
         VE_AE.append(dict(url=path, name=nm, code=d['code'], lay=d['lay'], yrs=f'{y0}–{str(y1)[-2:]}', img=None, yt=(None, 0, ''), used=[],   # all_engines.py fills it from ENGINE_USES (the cars' own short names, mainstream first)
                          
-                          t=({'t'} if e in VE_TRUCKS else set()) | ({'h'} if d['maker'] == 'Honda' else set()),
+                          t=({'t'} if e in VE_TRUCKS else set()) | ({'h'} if d['maker'] == 'Honda' else set()) | ({'b'} if d['maker'] == 'BMW' else set()),
                           f=d['fuel'], mk=mk, o=(0.5, -d['n']), alias=al))
     # ------------------------------------------------------------------ engines whose page already exists: sections to add to it
     def VE_SCE(path):

@@ -15,7 +15,7 @@ import collections, hashlib, json, os, re, sys, time, urllib.parse, urllib.reque
 sys.stdout.reconfigure(encoding='utf-8')
 HERE = os.path.dirname(os.path.abspath(__file__))
 LEMON = r'C:\Users\elift\Desktop\Eliftforlife youtube\3 Lemon Index'
-WORK = os.path.join(LEMON, 'data', 'vin_engines'); os.makedirs(WORK, exist_ok=True)
+WORK = os.environ.get('VE_WORK') or os.path.join(LEMON, 'data', 'vin_engines'); os.makedirs(WORK, exist_ok=True)   # VE_WORK: a builder's own copy while it tests new rules
 FLAT = os.path.join(LEMON, 'video 1 most reliable', 'data', 'raw', 'FLAT_CMPL.txt')
 NEWZ = os.path.join(LEMON, 'data', 'raw', 'nhtsa', 'COMPLAINTS_RECEIVED_2025-2026.zip')
 CACHE = r'C:\Users\elift\Code\lemonindex-site\data\cache'   # the shared API cache (main checkout)
@@ -166,6 +166,48 @@ ENG = {
     'hyundai-lambda2-33': dict(name='Hyundai / Kia 3.3 V6 (Lambda II)', short='3.3 Lambda II', maker='Hyundai', code='G6DH', lay='3.3 L V6', fuel='gas',
                                cars={'hyundai-santa-fe': (2013, 2019), 'kia-sorento': (2016, 2020), 'kia-sedona': (2015, 2021)},
                                rule=dict(disp=3.3, cyl=6, turbo=False, hybrid=False), alias='3.3 v6 lambda g6dh santa fe sorento sedona'),
+    # ---- wave 3 (11-17): engines visitors asked for by vote or message (3 Lemon Index/REQUESTED CARS BRIEF 11-15.md)
+    #   hybrid=True: vPIC's ElectrificationLevel must say strong hybrid (HEV), except hybrid_ok cars, which were sold with no other engine of this size
+    #   phev=False: plug-in versions left out. mild=True: a mild hybrid counts as this engine's hybrid. vin8_no: car -> Ford VIN position-8 engine codes left out
+    #   (no 5.3 hybrid page: vPIC marks neither GM's 2004-07 PHT nor the 2016-18 eAssist pickups as hybrids, so their VINs can't be told from regular 5.3s)
+    #   no_rx: a decode whose engine model or other-engine text matches it is left out (e.g. the supercharged 4.6 in the Mustang SVT Cobra)
+    'bmw-m57': dict(name='BMW M57 3.0 diesel', short='M57 diesel', maker='BMW', code='M57D30 (M57TU2)', lay='3.0 L inline-6 twin-turbo diesel', fuel='diesel',
+                    cars={'bmw-3-series': (2009, 2011), 'bmw-x5': (2009, 2013)},
+                    rule=dict(disp=3.0, cyl=6, diesel=True), alias='m57 m57d30 335d 335 d x5 xdrive35d x5 35d e90 e70 bmw diesel adblue def'),
+    'bmw-n47-b47': dict(name='BMW 2.0 diesel (N47 / B47)', short='2.0 diesel', maker='BMW', code='N47 / B47', lay='2.0 L inline-4 turbo diesel', fuel='diesel',
+                        cars={'bmw-3-series': (2014, 2018), 'bmw-x3': (2014, 2017)},
+                        rule=dict(disp=2.0, cyl=4, diesel=True), alias='n47 b47 328d 328 d x3 xdrive28d x3 28d f30 f25 bmw 2.0 diesel'),
+    'ford-20-hybrid': dict(name='Ford 2.0 hybrid', short='2.0 hybrid', maker='Ford', code='2.0 iVCT Atkinson', lay='2.0 L inline-4, hybrid', fuel='hybrid',
+                           cars={'ford-fusion': (2013, 2020), 'ford-c-max': (2013, 2018), 'lincoln-mkz': (2013, 2020)},
+                           rule=dict(disp=2.0, cyl=4, turbo=False, hybrid=True, phev=False), alias='2.0 hybrid fusion hybrid c-max hybrid cmax mkz hybrid atkinson'),
+    'honda-20-hybrid': dict(name='Honda 2.0 hybrid (i-MMD)', short='2.0 hybrid', maker='Honda', code='LFA / LFB / LFC', lay='2.0 L inline-4, hybrid', fuel='hybrid',
+                            cars={'honda-accord': (2014, 2025), 'honda-cr-v': (2020, 2025)},
+                            rule=dict(disp=2.0, cyl=4, turbo=False, hybrid=True, phev=False), alias='2.0 hybrid i-mmd immd e:hev lfa lfb accord hybrid cr-v hybrid crv hybrid two-motor'),
+    'toyota-25-hybrid': dict(name='Toyota 2.5 hybrid (2AR-FXE / A25A-FXS)', short='2.5 hybrid', maker='Toyota', code='2AR-FXE / A25A-FXS', lay='2.5 L inline-4, hybrid', fuel='hybrid',
+                             cars={'toyota-camry': (2012, 2025), 'toyota-rav4': (2016, 2025), 'toyota-avalon': (2013, 2022), 'lexus-es': (2013, 2025)},
+                             rule=dict(disp=2.5, cyl=4, turbo=False, hybrid=True, phev=False, code=r'2AR|A25|^$'), alias='2.5 hybrid 2ar-fxe 2arfxe a25a-fxs a25afxs camry hybrid rav4 hybrid avalon hybrid es 300h es300h hybrid synergy drive'),
+    'toyota-v35a-hybrid': dict(name='Toyota 3.4 twin-turbo V6 hybrid (i-FORCE MAX)', short='i-FORCE MAX', maker='Toyota', code='V35A-FTS hybrid', lay='3.4 L V6 twin-turbo, hybrid', fuel='hybrid',
+                               cars={'toyota-tundra': (2022, 2025), 'toyota-sequoia': (2023, 2025)},
+                               rule=dict(disp=3.4, cyl=6, hybrid=True, phev=False, hybrid_ok={'toyota-sequoia'}), alias='i-force max iforce max 3.4 hybrid v35a tundra hybrid sequoia hybrid twin turbo'),
+    'gm-60-hybrid': dict(name='GM 6.0 V8 Two-Mode Hybrid', short='6.0 Two-Mode Hybrid', maker='GM', code='LFA / LZ1', lay='6.0 L V8, hybrid', fuel='hybrid',
+                         cars={'chevrolet-tahoe': (2008, 2013), 'gmc-yukon': (2008, 2013), 'cadillac-escalade': (2009, 2013), 'chevrolet-silverado': (2009, 2013), 'gmc-sierra': (2009, 2013)},
+                         rule=dict(disp=6.0, cyl=8, hybrid=True, phev=False), alias='6.0 hybrid two mode 2-mode hybrid lfa lz1 tahoe hybrid yukon hybrid escalade hybrid silverado hybrid sierra hybrid'),
+    'mazda-25t': dict(name='Mazda Skyactiv-G 2.5 Turbo', short='Skyactiv-G 2.5T', maker='Mazda', code='PY-VPTS', lay='2.5 L inline-4 turbo', fuel='gas',
+                      cars={'mazda-cx-9': (2016, 2023), 'mazda-cx-5': (2019, 2025), 'mazda6': (2018, 2021)},
+                      rule=dict(disp=2.5, cyl=4, turbo=True, hybrid=False, turbo_ok={'mazda-cx-9'}), alias='2.5 turbo 2.5t skyactiv-g 2.5t pyvpts cx-9 cx9 cx-5 turbo mazda6 turbo'),
+    'ford-23-duratec': dict(name='Ford 2.3 Duratec (Ranger)', short='2.3 Duratec', maker='Ford', code='Duratec 23', lay='2.3 L inline-4', fuel='gas',
+                            cars={'ford-ranger': (2001, 2011)},
+                            rule=dict(disp=2.3, cyl=4, turbo=False, hybrid=False), alias='2.3 duratec 23 ranger 4 cylinder 2.3l ranger 4cyl'),
+    'ford-46-modular': dict(name='Ford 4.6 Modular V8', short='4.6 V8', maker='Ford', code='4.6 2V / 3V', lay='4.6 L V8, SOHC', fuel='gas',
+                            cars={'ford-crown-victoria': (2000, 2011), 'lincoln-town-car': (2000, 2011), 'mercury-grand-marquis': (2000, 2011), 'ford-mustang': (2000, 2010),
+                                  'ford-f-series': (2000, 2010), 'ford-explorer': (2002, 2010), 'mercury-mountaineer': (2002, 2010), 'ford-expedition': (2000, 2004)},
+                            rule=dict(disp=4.6, cyl=8, turbo=False, hybrid=False, no_rx=r'supercharg|dohc|32v|\b4v\b', vin8_no={'ford-mustang': {'V', 'R', 'Y'}}), alias='4.6 modular v8 46 2v 3v triton crown victoria crown vic town car grand marquis panther mustang gt f150 f-150 explorer mountaineer expedition intake manifold spark plug'),
+    'audi-30-tfsi': dict(name='Audi 3.0 TFSI supercharged V6', short='3.0 TFSI', maker='Audi', code='EA837', lay='3.0 L V6, supercharged', fuel='gas',
+                         cars={'audi-a6': (2009, 2018), 'audi-q7': (2011, 2019), 'audi-q5': (2013, 2017)},
+                         rule=dict(disp=3.0, cyl=6, diesel=False, hybrid=False, no_rx=r'tdi|diesel|2\.0'), alias='3.0t 3.0 tfsi supercharged v6 ea837 a6 3.0t q7 3.0t q5 3.0t audi'),
+    'hyundai-38-lambda': dict(name='Hyundai / Kia 3.8 V6 (Genesis, Veracruz, Sedona)', short='3.8 V6 (G6DA / G6DJ)', maker='Hyundai', code='G6DA / G6DJ', lay='3.8 L V6', fuel='gas',
+                              cars={'hyundai-genesis': (2009, 2016), 'hyundai-veracruz': (2007, 2012), 'kia-sedona': (2006, 2010)},
+                              rule=dict(disp=3.8, cyl=6, turbo=False, hybrid=False), alias='3.8 v6 lambda g6da g6dj genesis 3.8 veracruz sedona'),
 }
 # every /cars/ model and model year any engine above needs
 TARGET = collections.defaultdict(set)
@@ -191,16 +233,29 @@ def want_map():
             for y in TARGET[fid]:
                 if y not in ys: ys[y] = {fid}
     return W
+def plan_rx():
+    """[(fid, makes, compiled model regex)] for TARGET models whose pages count complaints by data/new_plan.json (no names list in extras_local*)"""
+    fp = os.path.join(HERE, 'data', 'new_plan.json')
+    if not os.path.exists(fp): return []
+    have = set()
+    for p in ('extras_local.json', 'extras_local_new.json', 'extras_local_low.json'):
+        q = os.path.join(HERE, 'data', p)
+        if os.path.exists(q):
+            for fid, ys in json.load(open(q, encoding='utf-8')).items():
+                if any(e.get('names') for e in ys.values()): have.add(fid)
+    return [(fid, set(p['make'].split('|')), re.compile(p['rx'])) for fid, p in json.load(open(fp, encoding='utf-8')).items() if fid in TARGET and fid not in have and p.get('rx')]
 
 CMPL_JL = os.path.join(WORK, 'cmpl.jsonl')
-VALID = re.compile(r'^[1-5JKSWYZ][A-HJ-NPR-Z0-9]{10}$')
+VALID = re.compile(r'^[1-57JKSWYZ][A-HJ-NPR-Z0-9]{10}$')   # 11-17: 7 = the newer US maker codes (Toyota's 7SV Sequoia, 2023 on)
 def extract():
-    W = want_map(); seen = {}
+    W = want_map(); PR = plan_rx(); seen = {}
     def take(p):
         if len(p) < 20 or not p[5].strip().isdigit(): return
         y = int(p[5])
         if not Y0 <= y <= Y1: return
         fids = (W.get((p[3].strip().upper(), norm(p[4]))) or {}).get(y)
+        if not fids:   # complaints-only models: the make + NHTSA model regex their own pages count (data/new_plan.json)
+            fids = {fid for fid, mks, rx in PR if p[3].strip().upper() in mks and rx.fullmatch(p[4].strip().upper()) and y in TARGET[fid]}
         if not fids: return
         vin = p[14].strip().upper()
         if len(vin) < 11 or not VALID.match(vin[:11]): return   # no VIN = no engine: these pages only count VIN-matched complaints
@@ -284,7 +339,8 @@ def facts(x):
     return dict(disp=_f(x.get('DisplacementL')), cyl=int(x['EngineCylinders']) if (x.get('EngineCylinders') or '').isdigit() else None, em=em,
                 turbo=(x.get('Turbo') or '').lower() == 'yes' or bool(re.search(r'turbo|t-gdi|\btsi\b|tfsi|ecoboost|gtdi', em + ' ' + oth, re.I)),
                 diesel='diesel' in fu, electric=fu.strip().startswith('electric'),
-                hybrid=bool(re.search(r'hev|hybrid', el)) and not re.search(r'mild|mhev', el), mild=bool(re.search(r'mild|mhev', el)))
+                hybrid=bool(re.search(r'hev|hybrid', el)) and not re.search(r'mild|mhev', el), mild=bool(re.search(r'mild|mhev', el)),
+                phev=bool(re.search(r'phev|plug', el)), oth=oth)
 def classify(fid, y, x, vin=''):
     """-> engine slug or None: the one engine whose rule this decode fits for this car and model year (two fits = ambiguous = None)"""
     if not x or not x.get('DisplacementL'): return None
@@ -297,8 +353,12 @@ def classify(fid, y, x, vin=''):
         if r.get('turbo') is True and not a['turbo'] and fid not in r.get('turbo_ok', ()): continue   # turbo_ok: cars sold with no non-turbo engine of this size (vPIC often leaves Turbo blank)
         if r.get('turbo') is False and a['turbo']: continue
         if r.get('hybrid') is False and a['hybrid']: continue
+        if r.get('hybrid') is True and not (a['hybrid'] or (r.get('mild') and a['mild'])) and fid not in r.get('hybrid_ok', ()): continue
+        if r.get('phev') is False and a['phev']: continue
+        if r.get('no_rx') and re.search(r['no_rx'], a['em'] + ' ' + a['oth'], re.I): continue
         if r.get('code') and not re.search(r['code'], a['em'], re.I): continue
-        if r.get('vin8') and (x.get('vin') or vin)[7:8] not in r['vin8']: continue   # Ford: VIN position 8 is the engine code (T / G = EcoBoost) where vPIC leaves Turbo blank
+        if r.get('vin8') and (x.get('vin') or vin)[7:8] not in r['vin8']: continue
+        if (x.get('vin') or vin)[7:8] in (r.get('vin8_no') or {}).get(fid, ()): continue   # Ford VIN position 8: the Mustang's DOHC Cobra / Mach 1 codes   # Ford: VIN position 8 is the engine code (T / G = EcoBoost) where vPIC leaves Turbo blank
         hits.append(e)
     return hits[0] if len(hits) == 1 else None
 
@@ -315,6 +375,10 @@ def rnames():
                 if int(y) not in TARGET[fid] or not e.get('names'): continue
                 tot = sum(n for *_, n in e['names']) or 1
                 out[f'{fid}|{y}'] = [(mk, md) for mk, md, n in e['names'] if n / tot >= .10][:2] or [tuple(e['names'][0][:2])]
+    for fid, mks, rx in plan_rx():   # complaints-only models: the plain model name in their regex
+        nm = re.sub(r'[()\\]', '', rx.pattern)
+        if not re.fullmatch(r'[A-Z0-9 -]+', nm): continue
+        for y in TARGET[fid]: out.setdefault(f'{fid}|{y}', [(sorted(mks)[0], nm)])
     return out
 def recalls():
     out = {}; N = rnames()
@@ -347,10 +411,20 @@ REC_RX = {
     'jeep-38-v6': (SZ('3.8'), None), 'gm-48-vortec': (SZ('4.8'), None), 'ford-54-triton': (SZ('5.4'), r'supercharg'), 'honda-15t': (SZ('1.5') + r'[^.]{0,40}turbo|1\.5t', None),
     'honda-k24': (SZ('2.4'), r'hybrid'), 'nissan-qr25': (SZ('2.5'), r'hybrid'), 'toyota-2az-fe': (SZ('2.4') + r'|2az', r'hybrid'), 'toyota-1gr-fe': (SZ('4.0') + r'|1gr', None),
     'toyota-3ur-fe': (SZ('5.7') + r'|3ur', None), 'chrysler-24-tigershark': (SZ('2.4') + r'|tigershark', None), 'hyundai-lambda2-38': (SZ('3.8'), None), 'hyundai-lambda2-33': (SZ('3.3'), None),
+    'bmw-m57': (SZ('3.0') + r'[^.]{0,40}diesel|diesel', None), 'bmw-n47-b47': (SZ('2.0') + r'[^.]{0,40}diesel|diesel', None),
+    'ford-20-hybrid': (r'hybrid|inverter|high[- ]voltage', r'ecoboost|turbo|plug-in|energi'), 'honda-20-hybrid': (r'hybrid|inverter|high[- ]voltage', r'turbo|plug-in'),
+    'toyota-25-hybrid': (r'hybrid|inverter|high[- ]voltage', r'plug-in|prime'), 'toyota-v35a-hybrid': (r'hybrid|i-force max', None), 'gm-60-hybrid': (r'hybrid', None),
+    'mazda-25t': (SZ('2.5') + r'[^.]{0,40}turbo|turbo', None), 'ford-23-duratec': (SZ('2.3'), r'ecoboost|turbo'), 'ford-46-modular': (SZ('4.6'), r'supercharg'),
+    'audi-30-tfsi': (SZ('3.0') + r'[^.]{0,40}(tfsi|supercharg|gasoline)|supercharg', r'tdi|diesel'), 'hyundai-38-lambda': (SZ('3.8'), None),
 }
+# 11-17: a hybrid's recalls name the car as "X Hybrid" for seats and air bags too, and BMW's list diesel models in steering and driveshaft recalls,
+# so for these engines the recall's own component must also be the engine, its fuel system or the hybrid drive
+REC_PART = {e: r'^(ENGINE|HYBRID PROPULSION|ELECTRICAL SYSTEM: ?PROPULSION)' for e in ('ford-20-hybrid', 'honda-20-hybrid', 'toyota-25-hybrid', 'toyota-v35a-hybrid', 'gm-60-hybrid')}
+REC_PART.update({e: r'^(ENGINE|FUEL SYSTEM)' for e in ('bmw-m57', 'bmw-n47-b47')})
 SIZE_RX = re.compile(r'(?<![\d.])(\d\.\d)\s?-?\s?(?:l\b|liter|litre)', re.I)
 def rec_names(e, r):
     s = r['summary']; rx, nrx = REC_RX[e]
+    if e in REC_PART and not re.search(REC_PART[e], r.get('part') or '', re.I): return False
     return bool(re.search(rx, s, re.I)) and not (nrx and re.search(nrx, s, re.I))
 
 # ---------------------------------------------------------------- 4. aggregate
@@ -386,6 +460,9 @@ WORDS = {
     'oil_dil': ('mention fuel in the oil (oil dilution)', r'oil dilution|(gas|fuel|gasoline) in (the |my )?(engine )?oil|oil (level )?(is )?(rising|increas|overfull)|oil smell\w* (like|of) (gas|fuel)'),
     'cam_phaser': ('mention a cam phaser or VTC actuator', r'cam ?phaser|phaser|vtc actuator|vtc rattle'),
     'spark_plug': ('mention a spark plug', r'spark ?plug'),
+    'hybrid_sys': ('mention the hybrid battery, inverter or hybrid system', r'hybrid (battery|system|component|warning)|inverter|high[- ]voltage (battery|system)|traction battery'),
+    'def_scr': ('mention the DEF (AdBlue) system or a NOx sensor', r'\bdef\b|adblue|diesel exhaust fluid|\burea\b|nox sensor|\bscr\b'),
+    'egr_dpf': ('mention the EGR or the diesel particulate filter', r'\begr\b|particulate filter|\bdpf\b'),
 }
 WRX = {k: re.compile(p, re.I) for k, (_, p) in WORDS.items()}
 def pct(k, n): return round(k / n * 100) if n else 0
