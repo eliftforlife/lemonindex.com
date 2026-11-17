@@ -68772,7 +68772,26 @@
      "views": 209518
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 150,
+       "lo": 60.0,
+       "hi": 500.0,
+       "n": 12,
+       "videos": 7,
+       "id": "4B1X1vTc4Zo",
+       "t": 423,
+       "title": "2003 to 2014 Volvo XC90 Buyers guide - How to buy the right one"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -68870,7 +68889,39 @@
      "views": 124168
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 1250,
+       "lo": 700.0,
+       "hi": 1800.0,
+       "n": 4,
+       "videos": 3,
+       "id": "oYVneUDf0dQ",
+       "t": 1081,
+       "title": "2016 Volvo XC90 Review - In 4K! - Test Drive & Interior Detail"
+      }
+     ],
+     [
+      "Insurance",
+      {
+       "median": 1512,
+       "lo": 864.0,
+       "hi": 1518.0,
+       "n": 3,
+       "videos": 2,
+       "id": "jfYGMPg-MYM",
+       "t": 98,
+       "title": "Volvo XC90 2024 | Cost to Own | Money Breakdown"
+      }
+     ]
+    ]
+   }
   }
  ],
  "gmc-canyon": [
@@ -69241,7 +69292,52 @@
      "views": 7809
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 30,
+       "lo": 30.0,
+       "hi": 120.0,
+       "n": 5,
+       "videos": 3,
+       "id": "JV-JC-SkzF8",
+       "t": 617,
+       "title": "Let's Talk Mods, 2025 GMC Canyon "
+      }
+     ],
+     [
+      "Lift / wheels / mods",
+      {
+       "median": 800,
+       "lo": 100.0,
+       "hi": 1300.0,
+       "n": 3,
+       "videos": 3,
+       "id": "H8mc9vB2op8",
+       "t": 903,
+       "title": "Two Mods In One Day!!!!! 2025 GMC Canyon!!!!"
+      }
+     ],
+     [
+      "Brakes",
+      {
+       "median": 665,
+       "lo": 665.0,
+       "hi": 665.0,
+       "n": 2,
+       "videos": 2,
+       "id": "uwyJ2g5kdf8",
+       "t": 480,
+       "title": "I Didn't Expect This! 2024 GMC Canyon AT4 vs 2024 Toyota Tacoma TRD Off Road"
+      }
+     ]
+    ]
+   }
   }
  ],
  "lincoln-mkx": [
