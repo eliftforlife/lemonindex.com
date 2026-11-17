@@ -68898,7 +68898,26 @@
      "views": 14394
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 524,
+       "lo": 500.0,
+       "hi": 548.0,
+       "n": 2,
+       "videos": 2,
+       "id": "wlmsfdVK5wM",
+       "t": 274,
+       "title": "2.8 Duramax Fuel Filter Replacement- Chevy Colorado/GMC Canyon 2016-2021"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -69374,7 +69393,26 @@
      "views": 36541
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 600,
+       "lo": 400.0,
+       "hi": 800.0,
+       "n": 2,
+       "videos": 2,
+       "id": "Ban40Z3R0qg",
+       "t": 171,
+       "title": "1998 Buick Century"
+      }
+     ]
+    ]
+   }
   }
  ],
  "mitsubishi-galant": [

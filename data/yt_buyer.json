@@ -33979,5 +33979,49 @@
 }
 ]
 }
+],
+"saturn-aura": [
+{
+"sid": "saturn-aura-g1",
+"y0": 2007,
+"y1": 2009,
+"label": "2007–2009",
+"videos": 198,
+"praise": [
+[
+"Power",
+4
+],
+[
+"Reliability",
+4
+],
+[
+"Space and practicality",
+3
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "pACaaYybZv0",
+"title": "Top 5 Problems Saturn Aura Sedan 1st Generation 2007-2010",
+"views": 141047,
+"ch": "1A Auto: Repair Tips & Secrets Only Mechanics Know"
+},
+{
+"id": "dAWiTxCp1uM",
+"title": "Saturn Aura 2007 - Reviewed by MotorWeek",
+"views": 52037,
+"ch": "Bicycle Crossroads"
+},
+{
+"id": "i8O2AFPX5ac",
+"title": "2008 Saturn Aura 3.5 v6 leaking problems",
+"views": 42359,
+"ch": "Michael Borquez"
+}
+]
+}
 ]
 }
