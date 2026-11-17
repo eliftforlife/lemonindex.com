@@ -88897,6 +88897,130 @@
    "costs": null
   }
  ],
+ "lexus-ls": [
+  {
+   "years": [
+    2000
+   ],
+   "gen": "1995–2000 Lexus LS",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 7819369,
+   "topics": [
+    {
+     "name": "Oil changes & service",
+     "views": 335913,
+     "n": 1,
+     "best": {
+      "id": "vkMepmadSN4",
+      "title": "250K mile '97 Lexus LS400 with NO maintenance AND it's still running. What does the CAR WIZARD find?",
+      "channel": "Car Wizard",
+      "views": 335913
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 128801,
+     "n": 5,
+     "best": {
+      "id": "HbRswRHO9mQ",
+      "title": "Lexus LS400 Radio Removal 1995 - 2000 = Car Stereo HELP",
+      "channel": "Factory Car Stereo Repair",
+      "views": 81036
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 60038,
+     "n": 1,
+     "best": {
+      "id": "hQpzqtcSU7A",
+      "title": "1999 Lexus LS400 Power Steering Pump Replacement",
+      "channel": "Generation High Output",
+      "views": 60038
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 31899,
+     "n": 3,
+     "best": {
+      "id": "Ij6h1RU6lBU",
+      "title": "1999 Lexus LS400 Ignition Lock Repair | Key Won’t Turn? Fixed!",
+      "channel": "TheKeySpecialist",
+      "views": 27815
+     }
+    },
+    {
+     "name": "Oil leaks & gaskets",
+     "views": 25343,
+     "n": 3,
+     "best": {
+      "id": "YYWVz5E3-ec",
+      "title": "How To Replace Valve Cover Gaskets 1998-2000 Lexus LS 400",
+      "channel": "Generation High Output",
+      "views": 19971
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 23795,
+     "n": 2,
+     "best": {
+      "id": "iH7pt_8ashI",
+      "title": "How to Remove 1995-1997 Lexus LS400 Climate Control for LCD Screen & Lighting Repair | TAE",
+      "channel": "Tanin Auto Electronix",
+      "views": 14573
+     }
+    },
+    {
+     "name": "Driveshaft, axles & 4x4",
+     "views": 8755,
+     "n": 1,
+     "best": {
+      "id": "NaVSeGtwYeE",
+      "title": "Lexus LS400 Differential Oil change (1999)",
+      "channel": "Emerson Rainey",
+      "views": 8755
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 5325,
+     "n": 1,
+     "best": {
+      "id": "xmeFli1b94I",
+      "title": "1996 LS400 distributor cap and rotor replacement",
+      "channel": "Gerry Burkhardt",
+      "views": 5325
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "1PPcSlWGsZw",
+     "title": "Maximum Reliability, Modest Luxury | 1999 Lexus LS 400 Review",
+     "channel": "PRN_TestDrive",
+     "views": 103394
+    },
+    {
+     "id": "cCmKpVDGwu4",
+     "title": "So Many Hidden Problems With This Cheap 2000 Lexus LS400",
+     "channel": "JJ in Motion",
+     "views": 6488
+    },
+    {
+     "id": "qzdWTP9Fx8Y",
+     "title": "VLOG | 1992 Lexus LS400 Code Reading / troubleshooting | 1998 Lexus GS300 Battery problems",
+     "channel": "My Lifestyle Shoppe",
+     "views": 777
+    }
+   ],
+   "costs": null
+  }
+ ],
  "acura-rsx": [
   {
    "years": [
