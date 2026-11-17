@@ -201,10 +201,12 @@ if HDX == 'pages' and HDT:
                (f'Which {sh} years have the most complaints?', f'{", ".join(str(y) for y in worst)} drew the most complaints filed so far ({", ".join(f"{Y[y]["n"]:,}" for y in worst)}). Popular years draw more because more were sold, so these are counts, not a score.'),
                (f'Why doesn&#39;t the {sh} have a Lemon Index score?', _HD_WHY),
                (f'How many recalls does the {nm} have?', f'{len(allrec)} NHTSA recalls across model years {ys[0]}–{ys[-1]}.')]
-        if lf: faq.append((f'Where is the {sh} in the {lf["name"]} score?', f'Blended in: the {lf["name"]} page scores the whole line, because sales are reported for the whole line. Its banner shows how much of each year is heavy-duty.'))
+        _fs = line in globals().get('FS_IDS', ())   # 11-17 (f150_split.py): the F-150 pages count F-150 complaints only
+        if lf and _fs: faq.append((f'Are Super Duty complaints in the F-150 numbers?', f'No, not since November 2026. The <a href="{CARU(lf)}">F-150 page</a> counts only complaints NHTSA files as F-150 or F-150 Hybrid; every F-250/F-350 complaint is on this page.'))
+        elif lf: faq.append((f'Where is the {sh} in the {lf["name"]} score?', f'Blended in: the {lf["name"]} page scores the whole line, because sales are reported for the whole line. Its banner shows how much of each year is heavy-duty.'))
         qa = '<section class="yc yqa"><h2>Quick answers</h2>' + qa_fold(''.join(f'<h3>{q}</h3><p>{a}</p>' for q, a in faq)) + '</section>'
-        lnk = (f'<p class="yc-cap">The half-ton has its own scored page: <a href="{CARU(lf)}">{E(lf["name"])} reliability by year</a> (whole line, mostly half-tons). '
-               f'Diesel engines: ' + ' · '.join(f'<a href="{HE_URLS[e]}">{_hdE(HDE[e]["short"])}</a>' for e in de) + f' · <a href="{HD_DIESEL_HUB}">all compared</a>.</p>') if lf else ''
+        lnk = (f'<p class="yc-cap">' + (f'The half-ton has its own page: <a href="{CARU(lf)}">Ford F-150 reliability by year</a> (F-150 complaints only). ' if _fs else f'The half-ton has its own scored page: <a href="{CARU(lf)}">{E(lf["name"])} reliability by year</a> (whole line, mostly half-tons). ')
+               + f'Diesel engines: ' + ' · '.join(f'<a href="{HE_URLS[e]}">{_hdE(HDE[e]["short"])}</a>' for e in de) + f' · <a href="{HD_DIESEL_HUB}">all compared</a>.</p>') if lf else ''
         body = (f'<div class="advp"><header class="advh1"><p class="ph-e"><a href="/cars/">All cars</a> · {BRAND_A(mk)} · Trucks</p><h1>{E(nm)} problems by year and engine.</h1><p class="ans">{ans}</p></header>'
                 + (lambda h: f'<div class="advimg">{h}</div>' if h else '')(_hd_img(t))
                 + f'<div class="ygrid">{eng_sec}{years_sec}{prob}{mil}{ser}{rec}{qa}</div>{lnk}<p class="yc-cap">{_HD_WHY} {_HD_HOW} Source: {E(_HD_SRC.get("complaints", "NHTSA"))}; {E(_HD_SRC.get("vin", ""))}; {E(_HD_SRC.get("recalls", ""))}.</p></div>')
@@ -249,7 +251,8 @@ if HDX == 'pages' and HDT:
                    (f'What engine does the {y} {sh} have?', 'By the VINs in owner complaints: ' + ', '.join(f'{x[1]} ({x[4]}%)' for x in mix if x[3] >= 3) + '.' if mix else 'Too few complaints had a VIN to tell.'),
                    (f'How many recalls does the {y} {nm} have?', f'{len(rr)}. Recall repairs are free at any dealer; check the truck&#39;s VIN at nhtsa.gov/recalls.')]
             qa = '<section class="yc yqa"><h2>Quick answers</h2>' + qa_fold(''.join(f'<h3>{q}</h3><p>{a}</p>' for q, a in faq)) + '</section>'
-            ly = (f'<p class="yc-cap">The whole-line score for {y}, mostly half-tons: <a href="{CARU(lf, y)}">{y} {E(lf["name"])}</a>.</p>' if lf and any(w['y'] == y for w in lf['years']) else '')
+            ly = (f'<p class="yc-cap">The half-ton, F-150 complaints only: <a href="{CARU(lf, y)}">{y} Ford F-150</a>.</p>' if _fs and lf and any(w['y'] == y for w in lf['years']) else
+                  f'<p class="yc-cap">The whole-line score for {y}, mostly half-tons: <a href="{CARU(lf, y)}">{y} {E(lf["name"])}</a>.</p>' if lf and any(w['y'] == y for w in lf['years']) else '')
             body = (f'<div class="advp"><header class="advh1"><p class="ph-e"><a href="/cars/">All cars</a> · {BRAND_A(mk)} · <a href="{HDU(t)}">{E(nm)}</a></p>'
                     f'<h1>{y} {E(nm)} problems, engines and recalls.</h1><p class="ans">{ans}</p></header>'
                     + (lambda h: f'<div class="advimg">{h}</div>' if h else '')(_hd_img(t))

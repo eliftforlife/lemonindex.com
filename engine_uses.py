@@ -108,7 +108,7 @@ if ENGU == 'hooks':
             return f'<a class="n3-c" href="{E(url)}"><b>{E(EU_NAME[url])}</b>' + (f'<small>{E(sub)}</small>' if sub else '') + '</a>'
         srcs = sorted({s for _, u in rows for s in u['src']})
         js = '<script src="/assets/n3nav.js?v=2" defer></script>' if any('#eng-' in url for url, _ in rows) else ''
-        return (f'<nav class="n3-row" aria-label="Engines in this car">{EU_CSS}{js}<p class="n3-h">{f"Engines in the {y} {E(mnm.split(' ', 1)[-1])}" if y else "Engines in this car"}</p><div class="n3-cs">'
+        return (f'<nav class="n3-row" aria-label="Engines in this car">{EU_CSS}{js}<p class="n3-h">{f"Engines in the {y} {E((SN[fid][0] if fid in FS_IDS else mnm).split(' ', 1)[-1])}" if y else "Engines in this car"}</p><div class="n3-cs">'
                 + ''.join(chip(url, u) for url, u in rows) + (f'<a class="n3-c n3-more" href="/engines/"><b>+{more} more</b><small>every engine</small></a>' if more else '') + '</div>'
                 + f'<p class="n3-n">Engines with a page of their own, in the versions named, from {" and ".join(_EU_SRC[s] for s in srcs)}. Other versions can have other engines.</p></nav>')
     # ---- report problem 4: performance, supercar and electric pages <-> their regular model (two-way chips)

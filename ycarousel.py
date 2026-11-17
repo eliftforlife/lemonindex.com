@@ -136,7 +136,10 @@ def _explorer(c, d, best):
     li_of = {v['y']: v.get('li') for v in c['years']}
     for v in ys: v['li'] = li_of.get(v['y'], v.get('li')); v['rk'] = rk.get(v['y']); v['n'] = nrk
     mx = max([v['li'] for v in ys if v.get('li') is not None] + [150])
+    cnt = {v['y']: v['cnt'] for v in c['years'] if v.get('cnt') is not None}   # 11-17: a complaints-only model (the F-150): bars = complaint counts
+    co = bool(cnt) and all(v.get('li') is None for v in ys); mxc = max(list(cnt.values()) + [1])
     def bar(i, v):
+        if co: return f'<i class="na{" on" if i == si else ""}" style="--h:{max(8, min(100, round((cnt.get(v["y"]) or 0) / mxc * 100)))}%"></i>'
         h = 8 if v.get('li') is None else max(10, min(100, round(v['li'] / mx * 100)))
         return f'<i class="{_cls(v.get("li"))}{" on" if i == si else ""}" style="--h:{h}%"></i>'
     def ytxt(v): return f'YouTube #{v["rk"]} of {nrk}' if v.get('rk') else ''
@@ -153,7 +156,7 @@ def _explorer(c, d, best):
             f'<p class="yx-yr"><b>{v0["y"]}</b><span class="yx-gen">{E(v0.get("gen") or "")}</span></p>{info}'
             f'<div class="yx-strip"><div class="yx-bars" aria-hidden="true">{"".join(bar(i, v) for i, v in enumerate(ys))}</div>'
             f'<input class="yx-r" type="range" min="0" max="{len(ys) - 1}" step="1" value="{si}" aria-label="Model year" aria-valuetext="{v0["y"]}"></div>'
-            f'<div class="yx-ends"><span>{ys[0]["y"]}</span><span class="yx-key">Taller bar = more complaints per car sold</span><span>{ys[-1]["y"]}</span></div>'
+            f'<div class="yx-ends"><span>{ys[0]["y"]}</span><span class="yx-key">{"Taller bar = more owner complaints (a count, not per truck sold)" if co else "Taller bar = more complaints per car sold"}</span><span>{ys[-1]["y"]}</span></div>'
             f'<script type="application/json" class="yx-data">{json.dumps({"name": c["name"], "best": best, "years": [{k: v.get(k) for k in ("y", "src", "gen", "li", "rk", "n", "url")} for v in ys]})}</script></section>')
 
 def _bars(rows, cls):

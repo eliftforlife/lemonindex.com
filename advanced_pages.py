@@ -81,7 +81,7 @@ def _build_adv():
     global _adv_idx, _adv_no
     _adv_idx = _adv_no = 0
     for f in YEARS:
-        ys = f['years']; sc = [v for v in ys if v['ok'] and not v.get('early')]; best, worst = min(sc, key=lambda v: v['li']), max(sc, key=lambda v: v['li']); snm = SNM(f)
+        ys = f['years']; sc = [v for v in ys if v['ok'] and not v.get('early')]; best, worst = (min(sc, key=lambda v: v['li']), max(sc, key=lambda v: v['li'])) if sc else (None, None); snm = SNM(f)
         for v in ys:
             y = v['y']; x = yearx(f['id'], y); x2 = X2.get(f['id'], {}).get(str(y), {}); body, u = adv_year(f, v, y, x, x2, best, worst, ys); path = CARU(f, y) + 'advanced/'
             nrec = len(x.get('recalls') or [])

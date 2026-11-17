@@ -77,6 +77,7 @@ _YJ += json.load(open('data/years_tesla.json', encoding='utf-8')) if os.path.exi
 _YLOW = json.load(open('data/years_low.json', encoding='utf-8')) if os.path.exists('data/years_low.json') else {}
 for _f in _YJ:
     if _YLOW.get(_f['id']): _f['years'] = sorted(_f['years'] + [v for v in _YLOW[_f['id']] if v['y'] not in {w['y'] for w in _f['years']}], key=lambda v: v['y'])
+FSX = 'years'; exec(open('f150_split.py', encoding='utf-8').read())   # 11-17: the F-150 page counts F-150 complaints only, no score (Super Duty split out)
 COUNTED = sum(c['n'] for c in CARS)
 BYNAME = {c['name']: c for c in CARS + CARS_NEW}
 YP = {f['id'] for f in _YJ}   # models with a page per model year (10-29)
@@ -773,8 +774,9 @@ for f in YEARS:
     for v in f['years']: v['ok'] = v.get('li') is not None and ((v['y'] >= 2010 and not v.get('early')) or v['n'] >= 20)   # 11-03: early-read years (2023-2025) need 20+ complaints too; 11-11: low-sales years never
 LOWS = lambda v: f'{v["low"]["sold"]:,}'   # the cited calendar-year U.S. sales of a low-sales year
 # 11-12: a Tesla year with no per-model sales figure at all (low.why == 'tesla'): complaints only, and the page says why
-NOSALES = lambda v: (v.get('low') or {}).get('why') == 'tesla'
+NOSALES = lambda v: (v.get('low') or {}).get('why') in ('tesla', 'fseries')
 NOSALES_WHY = 'Tesla doesn&#39;t report U.S. sales by model, and no estimate covers this model year on its own'
+NSW = lambda v: FS_WHY if FS_CO(v) else NOSALES_WHY   # 11-17: the F-150 (f150_split.py) has its own reason
 LOWSRC = lambda v: (f' (<a href="{E(v["low"]["url"])}" rel="nofollow">sales source</a>)' if v['low'].get('url') else '')
 LIS = lambda v: v['li'] if v['ok'] else '–'
 USD = lambda a: f'${a[0]:,}' if a[0] == a[1] else f'${a[0]:,}–${a[1]:,}'   # 11-12 r2 (Ryan: "$3050–4000"): money ranges with commas
@@ -799,6 +801,7 @@ XL, XA = _load('data/extras_local.json'), _load('data/extras_api.json')
 if os.path.exists('data/extras_local_new.json'): XL.update(_load('data/extras_local_new.json')); XA.update(_load('data/extras_api_new.json'))   # 11-11 new models
 for _src, _dst in (('data/extras_local_low.json', XL), ('data/extras_api_low.json', XA), ('data/extras_local_tesla.json', XL), ('data/extras_api_tesla.json', XA)):   # 11-11 the study models' low-sales years
     for _fid, _ys in _load(_src).items(): _dst.setdefault(_fid, {}).update(_ys)
+FSX = 'extras'; exec(open('f150_split.py', encoding='utf-8').read())   # 11-17: F-150-only mileage, severity and NHTSA names
 # 11-12 (Jess: "38 crashes, 4 fires" needs a baseline): how often a complaint mentions a crash / injury / fire / tow across every model year we track
 _SV = defaultdict(int)
 for _ys in XL.values():
@@ -961,7 +964,7 @@ YT_MIN = 10   # 11-10 (Elijah: "remove YT rank from cars that don't have enough 
 def yt_rankable(f, sc):
     """Years that may get a YouTube rank: 10+ videos, and (if 2010 or newer) an owner-complaint score too. Brand-new years only have
     launch reviews and no owner data yet, so they used to win #1 by default (e.g. the 2026 Civic)."""
-    li = {v['y'] for v in f['years'] if v['ok']}
+    li = {v['y'] for v in f['years'] if v['ok'] or (FS_CO(v) and v['n'])}
     return {int(y) for y, s in sc.items() if s.get('score') is not None and (s.get('videos') or 0) >= YT_MIN and (int(y) < 2010 or int(y) in li)}
 def ybars_yt(f, cur, sc):
     mx = max(120, max(v['li'] for v in f['years'] if v['ok']) * 1.08); byy = {v['y']: v for v in f['years']}
@@ -1018,7 +1021,7 @@ def _yc_ctx(fid):
     """what ycarousel.py needs about one model: every year page with its picture and score, YouTube ranks, the fix/guide videos"""
     if fid in _YC: return _YC[fid]
     f = FY[fid]; mi = (YSL.model_img(fid) or {}).get('src')
-    yrs = [{'y': v['y'], 'li': round(v['li']) if v['ok'] else None, 'url': CARU(f, v['y']), 'src': YSL.ai_src(fid, v['y']) or (None if YSL.no_img(fid, v['y']) else mi), 'gen': gen_of(f, v['y']), 'top': NICE(v['parts'][0][0]) if v.get('parts') else None} for v in f['years']]
+    yrs = [{'y': v['y'], 'li': round(v['li']) if v['ok'] else None, 'url': CARU(f, v['y']), 'src': YSL.ai_src(fid, v['y']) or (None if YSL.no_img(fid, v['y']) else mi), 'gen': gen_of(f, v['y']), 'top': NICE(v['parts'][0][0]) if v.get('parts') else None} | ({'cnt': v['n']} if fid in FS_IDS else {}) for v in f['years']]
     _YC[fid] = dict(fid=fid, name=f['name'], short=f['name'].split(' ', 1)[-1], years=yrs, yt_rank=yt_rank_map(f), ytr=YTR.get(fid), ytv=YTV.get(fid, []),
                     start=popular_year(f), url=lambda yy: CARU(f, yy))
     return _YC[fid]
@@ -1132,6 +1135,7 @@ def ybars(f, cur=None):
     if cur is None or out.count('class="b ') < 13: return out
     return out.replace('<div class="bars yb', f'<div data-cur="{cur}" class="lfa-sc bars yb', 1) + LFA_JS   # a long list scrolls inside its box to the page's year
 def _ybars(f, cur=None):
+    if f['id'] in FS_IDS: return FS_BARS(f, cur)   # 11-17: F-150 complaints-only (f150_split.py)
     if YTS.get(f['id']): return ybars_yt(f, cur, YTS[f['id']])
     mx = max(120, max(v['li'] for v in f['years'] if v['ok']) * 1.08)
     return (f'<div class="bars yb"><div class="bl" aria-hidden="true"><span></span><span class="al" style="--a:{100 / mx * 100:.1f}%">average car = 100</span><span></span></div>'
@@ -1495,7 +1499,7 @@ def year_faq(f, v, y, x, best):
         ctx = model_context(f, v, y)
         if ctx: a += ' ' + ctx
         if best['y'] != y: a += f' The {n} year with the fewest complaints per car sold{" since 2010" if best["y"] >= 2010 and f["years"][0]["y"] < 2010 else ""} is {best["y"]}.'   # 11-12: the same rec_year as everywhere else
-    elif NOSALES(v): a = f'We can&#39;t score it: {NOSALES_WHY}, so there is no per-car rate. Owners filed {v["n"]} complaints with NHTSA in its first 3 years.'
+    elif NOSALES(v): a = f'We can&#39;t score it: {NSW(v)}, so there is no per-car rate. Owners filed {v["n"]} complaints with NHTSA in its first 3 years.'
     elif v.get('low'):
         a = (f'We can&#39;t score it: only {LOWS(v)} were sold in the U.S. in {y} (calendar-year sales), under the 20,000 we need for a fair per-car score. '
              f'Owners filed {v["n"]} complaints with NHTSA in its first 3 years.')
@@ -1532,7 +1536,7 @@ def answer_box(f, v, y, x, best):
         w = ('one of the most reliable years' if v['li'] < 50 else 'better than average' if v['li'] < 85 else 'about average' if v['li'] <= 115 else 'worse than average' if v['li'] < 200 else 'one of the worst years')
         s1 = (f'The {y} {n} is <b>too new to judge</b>: its partial score so far is {v["li"]} (100 is the average {y} car), from {v["n"]:,} owner complaints.' if v.get('early') else
               f'The {y} {n} is <b>{w}</b> by owner complaints: {v["n"]:,} complaints in its first 3 years and a Lemon Index of {v["li"]}, where 100 is the average car.')
-    elif NOSALES(v): s1 = f'The {y} {n} can&#39;t be scored ({NOSALES_WHY}): owners filed {v["n"]:,} complaints in its first 3 years.'
+    elif NOSALES(v): s1 = f'The {y} {n} can&#39;t be scored ({NSW(v)}): owners filed {v["n"]:,} complaints in its first 3 years.'
     elif v.get('low'): s1 = f'The {y} {n} sold too few to score ({LOWS(v)} in the U.S. in {y}, under 20,000): owners filed {v["n"]:,} complaints in its first 3 years.'
     else: s1 = f'The {y} {n} has too few complaints to score: {v["n"]:,} in its first 3 years.'
     if v['parts']: bits.append(f'owners complain most about {E(NICE(v["parts"][0][0]))}')
@@ -1541,7 +1545,7 @@ def answer_box(f, v, y, x, best):
     s2 = (bits[0][0].upper() + bits[0][1:] + (', ' + ', '.join(bits[1:-1]) + (',' if len(bits) > 2 else '') + ' and ' + bits[-1] if len(bits) > 1 else '') + '.') if bits else ''
     nb, how = near_pick(f, y); ctx = model_context(f, v, y)
     s3 = (f' {ctx}' if ctx else '') + (f' Nearby, the {nb["y"]} drew fewer complaints.' if how == 'near' else f' The {nb["y"]} drew the fewest complaints of any {n} year.' if how == 'model' else
-                                       f' It drew the fewest complaints of any {n} year.' if best['y'] == y else '')
+                                       f' It drew the fewest complaints of any {n} year.' if best and best['y'] == y else '')
     return f'<p class="ans">{s1} {s2}{s3}</p>'
 # 11-03 (Elijah: "add newer car years... just have a disclaimer"): 2023-2025 are early reads
 ASOF = 'October 2026'
@@ -1555,7 +1559,7 @@ def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
         cls, word, why = buy_verdict(f, v, y)
         hero = f'<div class="yhero">{gauge(v["li"], 190, f"{y} Lemon Index" + (" (partial)" if v.get("early") else ""))}<div class="yverd {cls}"><p class="yvd"><b>{word}.</b> <span>{why}</span></p>{{BW}}</div></div>'
     elif NOSALES(v):
-        hero = (f'<div class="yhero yhero-na"><div class="yverd mid"><p><b>Complaints only.</b> <span>{NOSALES_WHY}, so there&#39;s no per-car score. '
+        hero = (f'<div class="yhero yhero-na"><div class="yverd mid"><p><b>Complaints only.</b> <span>{NSW(v)}, so there&#39;s no per-car score. '
                 f'Owners filed {v["n"]:,} complaint{"" if v["n"] == 1 else "s"} in its first 3 years.</span></p>{{BW}}</div></div>')
     elif v.get('low'):
         hero = (f'<div class="yhero yhero-na"><div class="yverd mid"><p><b>Complaints only.</b> <span>Too few sold to score: {LOWS(v)} in the U.S. in {y}{LOWSRC(v)}, under the 20,000 a fair per-car '
@@ -1584,7 +1588,7 @@ def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
     seg = (f'<a href="{CARU(f, prev["y"])}" aria-label="{prev["y"]}">‹ {prev["y"]}</a>' if prev else '') + f'<span aria-current="page">{y}</span>' + (f'<a href="{CARU(f, nxt["y"])}" aria-label="{nxt["y"]}">{nxt["y"]} ›</a>' if nxt else '')
     bw = (lambda xs: f'<p class="ybw">{" · ".join(xs)}</p>' if xs else '')([f'{lab} <a class="{c}" href="{CARU(f, w["y"])}">{w["y"]}</a>' for lab, w, c in
                                                                          (('Fewer complaints nearby', nb if how == 'near' else None, 'good' if nb and nb['li'] <= 110 else ''),
-                                                                          ('Fewest of any year', best, 'good' if best['li'] <= 110 else '')) if w and w['y'] != y and not (lab.startswith('Fewest') and how == 'near' and nb['y'] == best['y'])])
+                                                                          ('Fewest of any year', best, 'good' if best and best['li'] <= 110 else '')) if w and w['y'] != y and not (lab.startswith('Fewest') and how == 'near' and nb['y'] == best['y'])])
     _by = N2_BETTER(f, v, y)   # 11-13 nav (N2): 'Better years to buy' replaces the two chips; inside .yhero, so the tab layout keeps it
     n2_hero = (hero.replace('<div class="yhero', '<div class="n2-w yhero', 1) if _by else hero).replace('{BW}', '' if _by else bw)[:-6] + _by + N2_PILLS(f, y) + '</div>'
     parts = ''.join(f'<div class="pt"><span>{E(NICE(p))}</span><span class="bt"><i style="width:{k}%"></i></span><b>{k}%</b></div>' for p, k in v['parts'])
@@ -1705,7 +1709,9 @@ def gas_hybrid_html(f):
             + f'<p class="ghc-n"><b>Complaints are combined.</b> Owner complaints to NHTSA don&#39;t reliably say which version the owner drives, so this model&#39;s score, complaints and recalls cover the gas and hybrid versions together.</p>'
             '<p class="yc-cap">MPG and fuel cost: EPA (fueleconomy.gov), which assumes 15,000 miles a year at U.S. fuel prices; the commute line is that cost per mile times your miles. '
             '<a href="https://www.fueleconomy.gov/feg/pdfs/guides/FEG2026.pdf" rel="noopener nofollow" target="_blank">EPA fuel economy guide</a>.</p></section>')
+FSX = 'pages'; exec(open('f150_split.py', encoding='utf-8').read())   # 11-17: FS_PAGES (F-150 complaints-only model + year pages)
 for f in YEARS:
+    if f['id'] in FS_IDS: FS_PAGES(f); continue
     c = BYNAME[f['name']]; ys = f['years']; sc = scored(f)
     rec, kind = rec_year(f); best = rec or min(year_pool(f), key=lambda v: v['li']); kind = kind or 'least'; worst = worst_year(f)   # 11-12: one rule everywhere
     lists = len(sc) >= LIST_MIN; good3 = good_years(f)[:3] if lists else []

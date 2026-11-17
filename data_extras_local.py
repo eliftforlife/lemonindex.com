@@ -37,6 +37,7 @@ q = f'SELECT make, model, year, crash, fire, injured, deaths, towed, miles, comp
 for make, model, year, crash, fire, injured, deaths, towed, mi, comps in con.execute(q):
     fam = next((f for f, mk, rx in (old_pats if year < 2010 else pats) if make in mk and rx.fullmatch(model)), None)
     if fam is None: continue
+    if fam == 'Ford F-Series' and model not in ('F-150', 'F-150 HYBRID'): continue   # 11-17 F-150 split: the F-150 page counts F-150 names only (data_f150_split.py); Super Duty = hd_pages.py
     key = (fam, mysales.code(fam, year))
     names[key][(make, model)] += 1
     s = sev[key]
