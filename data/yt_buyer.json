@@ -34409,5 +34409,70 @@
 }
 ]
 }
+],
+"lincoln-town-car": [
+{
+"sid": "lincoln-town-car-g3",
+"y0": 1998,
+"y1": 2011,
+"label": "1998–2011",
+"videos": 198,
+"praise": [
+[
+"Looks",
+25
+],
+[
+"Reliability",
+15
+],
+[
+"Space and practicality",
+14
+],
+[
+"Power",
+12
+]
+],
+"trouble": [
+[
+"Rust",
+4
+],
+[
+"Coolant leaks / water pump / overheating",
+4
+],
+[
+"Electrical / wiring / TIPM",
+3
+],
+[
+"Heat / A/C / blend door",
+3
+]
+],
+"top": [
+{
+"id": "cjFEkj8iZpA",
+"title": "2007 Lincoln Town Car Executive L: Regular Car Reviews",
+"views": 401809,
+"ch": "Regular Car Reviews"
+},
+{
+"id": "9fJSXUqXTSA",
+"title": "2007 Lincoln Town Car Executive L Livery Review and Test Drive by Bill - Auto Europa Naples",
+"views": 280220,
+"ch": "Curious Cars"
+},
+{
+"id": "YGxvbQYnqS4",
+"title": "MotorWeek | Retro Review: 1998 Lincoln Town Car",
+"views": 268920,
+"ch": "MotorWeek"
+}
+]
+}
 ]
 }
