@@ -8,62 +8,16 @@
 # model name or the owner's words tie to the engine, over 3+ years). Everywhere else the page says so and leads with YouTube, recalls and
 # the automaker's repair notes. Nothing is estimated or padded.
 import html as _shtml
-SCENG = _load('data/supercar_engines.json') if os.path.exists('data/supercar_engines.json') else {'engines': {}, 'cars': {}}
-# YouTube scores: the workers write data/supercar_engine_yt.json in the main checkout (and commit it when they deploy); a snapshot of it is
-# committed with each engine-page push so builds from other checkouts keep the ranks. The live file wins per engine.
-SCY = dict(_load('data/supercar_engine_yt_snapshot.json') if os.path.exists('data/supercar_engine_yt_snapshot.json') else {})
-SCY.update(_load('data/supercar_engine_yt.json') if os.path.exists('data/supercar_engine_yt.json') else {})
+exec(open('eng_pool.py', encoding='utf-8').read())   # 11-17: YouTube scores + the one rank pool (also exec'd earlier by build.py, before hd_pages.py's pages)
 SCP = _load('data/supercar_engine_photos.json') if os.path.exists('data/supercar_engine_photos.json') else {}
 SCP.update({_k: _v for _k, _v in (globals().get('AIE') or {}).items() if _k not in SCP and _k in SCENG['engines']})   # 11-13 AI engine illustrations
 SCE_URLS, SCE_IMGS = [], []
-SCE_SLUG = {'rr-n73': 'rolls-royce-n73', 'rr-n74': 'rolls-royce-n74'}
-SCE_URL = lambda e: f'/engines/{SCE_SLUG.get(e, e)}/'
-SCE_HUB = '/engines/supercars/'
 SC_NAME = {re.sub(r'[^a-z0-9]+', '-', c['name'].lower().replace("'", '')).strip('-'): c['name'] for c in (_load('data/supercars.json') if os.path.exists('data/supercars.json') else [])}
 _SCCBY = 'https://creativecommons.org/licenses/by/4.0/'
 _SCE_AI = ('Illustration (AI-generated) in the style of a factory press photo, not a photo of a specific engine; brand names and logos belong to their owners. '
            f'Free to use under <a href="{_SCCBY}" rel="noopener license">CC BY 4.0</a>: credit The Lemon Index (lemonindex.com). <a href="/images/">Download and credit text</a>')
 _SCYTI = '<svg aria-hidden="true" viewBox="0 0 24 24" width="11" height="11"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>'
 
-def _sce_yt(e):
-    """{year: score} for the engine's own years, and the average (half-up, like the BMW pages)"""
-    d = (SCY.get(e) or {}).get('years') or {}; yrs = SCENG['engines'][e]['years']
-    s = {int(y): v['score'] for y, v in d.items() if y in yrs and v and v.get('score') is not None}
-    return s, (int(sum(s.values()) / len(s) + 0.5) if s else None)
-_SCAVG = {}
-for _e in SCENG['engines']:
-    _s, _a = _sce_yt(_e)
-    if _s: _SCAVG[_e] = sum(_s.values()) / len(_s)
-# 11-11: two groups share this code - supercar engines (/engines/supercars/) and performance-car engines (/engines/performance/);
-# each engine's YouTube rank is among the engines of its own group
-_GRP = lambda e: SCENG['engines'][e].get('group', 'super')
-SCE_YTRANK = {}
-for _g in ('super', 'perf'):
-    SCE_YTRANK.update({e: i + 1 for i, e in enumerate(sorted([e for e in _SCAVG if _GRP(e) == _g], key=lambda e: (-_SCAVG[e], e)))})
-SCE_NRANK = {g: sum(1 for e in SCE_YTRANK if _GRP(e) == g) for g in ('super', 'perf')}
-GW = {'super': 'supercar engines', 'perf': 'performance engines'}
-HUBS = {'super': '/engines/supercars/', 'perf': '/engines/performance/'}
-SCE_N = len(SCENG['engines'])
-# 11-12 round 2 (UX test, Devin: the B58 was "#1 of 13 BMW engines" while the Coyote was "#25 of 48 performance engines", and /engines/ showed
-# "YT #1" twice): ONE YouTube ranking pool for every engine page on the site (BMW, performance, supercar), keyed by page URL, same average as
-# each page shows (the engine's own model years). The BMW numbers use bmw_pages.py's rule (perf page engine study first, else the BMW attribution).
-import perf_page as _PPX
-ENG_POOL = {}   # url -> average YouTube tone
-for _c in BENG:
-    _yy = BEY.get(_c) or {}
-    if not _yy: continue
-    _x = _PPX.engine_ext(ENG_URL(_c)); _yd = (_x['years'] if _x and _x['years'] else None) or BYT.get(_c) or {}
-    _v = [d['score'] for y, d in _yd.items() if y in _yy and d and d.get('score') is not None]
-    if _v: ENG_POOL[ENG_URL(_c)] = sum(_v) / len(_v)
-for _e, _a in _SCAVG.items():
-    if _e not in {'bmw-s65'}: ENG_POOL.setdefault(SCE_URL(_e), _a)   # = SCE_EXTERNAL below: the BMW engine page owns that URL
-for _u, _a in (globals().get('VE_YTAVG') or {}).items(): ENG_POOL.setdefault(_u, _a)   # 11-13: the everyday / diesel / EA888 engine studies (vin_engine_pages.py)
-ENG_POOL_RANK = {u: i + 1 for i, u in enumerate(sorted(ENG_POOL, key=lambda u: (-ENG_POOL[u], u)))}
-ENG_POOL_N = len(ENG_POOL_RANK)
-ENG_POOL_LBL = 'engines with a YouTube study'
-SCE_YTRANK = {e: ENG_POOL_RANK[SCE_URL(e)] for e in _SCAVG if SCE_URL(e) in ENG_POOL_RANK}
-SCE_NRANK = {g: ENG_POOL_N for g in ('super', 'perf')}
-GW = {'super': ENG_POOL_LBL, 'perf': ENG_POOL_LBL}
 # 11-12 round 2: perf-file-only engine pages (engine_more.py builds them from data/perf/*.json engines whose `page` is this URL) and the
 # engine head-to-heads: (url, [engine page urls], "the other engines" label). The FA24 slot uses the WRX's turbo FA24 page once a performance
 # file links one, else the BRZ/GR86 FA20/FA24 page (the page says which).

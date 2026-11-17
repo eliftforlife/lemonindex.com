@@ -75,8 +75,10 @@ AE_FL = {'gas': 'Gas', 'diesel': 'Diesel', 'hybrid': 'Hybrid', 'phev': 'Plug-in 
 _FG = lambda f: 'hybrid' if f == 'phev' else f   # the selector's four groups: gas, diesel, hybrid (incl. plug-in), electric
 _FSUF = {'gas': '', 'diesel': ' diesel', 'hybrid': ' hybrid', 'phev': ' plug-in hybrid', 'electric': ''}
 def _ae_desc(t): return re.sub(r'(\d+)-cyl$', r'\1-cylinder', t.strip())
+_AE_FY = {}   # 11-17: model id -> the model years _ae_fuels was asked about (the coming-soon YouTube studies need them, AE_DUMP below)
 def _ae_fuels(fid, years=None):
     """[(engine text, fuel)]: per fuel group, the EPA engine on the most model years (ties: the newer one)"""
+    _AE_FY[fid] = list(years) if years else None
     ys = {str(y) for y in years} if years else None; cnt, last = {}, {}
     def add(k, y): cnt[k] = cnt.get(k, 0) + 1; last[k] = max(last.get(k, 0), int(y))
     if AE_FUEL.get(fid):
@@ -137,6 +139,9 @@ for fid, nm, mk, eng, fu in _ae_models:
     if fu == 'electric': eng = 'electric motors'
     v = AE_SOON.setdefault((mk, eng), {'models': [], 'fuel': fu})
     if sh not in v['models']: v['models'].append(sh)
+for fid, nm, mk, eng, fu in _ae_models:   # 11-17: which model ids each coming-soon card stands for (its YouTube study, 3 Lemon Index/data/yt/engine_studies_soon.py)
+    if fu == 'electric': eng = 'electric motors'
+    AE_SOON[(mk, eng)].setdefault('fids', []).append((fid, nm, fu))
 for v in AE_SOON.values():
     if v['fuel'] == 'electric': v['models'] = [m for m in v['models'] if not any(o != m and o.startswith(m + ' ') for o in v['models'])]
 # ---- the page
@@ -157,14 +162,43 @@ def _ae_card(c, eager=False):
 # 11-12: AI factory-cover illustrations for the coming-soon engines (data/engine_soon_images.json, key = brand + engine without "(...)")
 AE_SOON_IMG = _load('data/engine_soon_images.json')
 _AE_KEY = lambda mk, eng: re.sub(r'[^a-z0-9]+', '-', f'{mk} {re.sub(r"\s*\(.*?\)", "", eng)}'.lower()).strip('-')
+def _ae_yeng(fid):
+    """{model year: [engine text as on the cards, fuel]} for every engine EPA lists on that model year (the soon studies' year filter)"""
+    ys = _AE_FY.get(fid); ys = {int(y) for y in ys} if ys else None; out = {}
+    if AE_FUEL.get(fid):
+        for y, rs in AE_FUEL[fid].items():
+            if ys and int(y) not in ys: continue
+            out[y] = [('electric motors' if fu == 'electric' else _ae_desc(eng) + _FSUF[fu], fu) for eng, fu, mot in rs]
+    else:
+        for y in sorted(ys or ()):
+            m = extra(fid, y).get('mpg') or {}
+            if m.get('ev'): out[str(y)] = [('electric motors', 'electric')]
+            elif m.get('engines'): out[str(y)] = [(_ae_desc(t), 'gas') for t in m['engines'] if t != 'electric']
+    if out: return out
+    for c in EVX:   # cards made without model years: the EV list, the supercar list (EPA engines per year), the performance list (its one engine line)
+        if c['slug'] == fid: return {str(y): [('electric motors', 'electric')] for y in _evyears(c)}
+    for c in SCX:
+        if _slg(c['name']) == fid: return {str(y['y']): [(_ae_desc(t), 'gas') for t in y.get('engines') or []] for y in c['years']}
+    for c in PERFX:
+        if c.get('perf') or perf_info(c)['id'] != fid: continue
+        for a, z in re.findall(r'((?:19|20)\d\d)\s*(?:-\s*((?:19|20)\d\d)?)?', str(c.get('years') or '')):
+            for y in range(int(a), int(z or (TODAY[:4] if re.search(a + r'\s*-\s*(,|$)', str(c['years'])) else a)) + 1): out[str(y)] = [('*perf', 'gas')]
+        return out
+    return out
+if os.environ.get('AE_DUMP'):   # 11-17: `AE_DUMP=<file> py build.py --only /engines/` writes the coming-soon cards with their model ids and years
+    json.dump([dict(key=_AE_KEY(mk, eng), mk=mk, eng=eng, fuel=v['fuel'], models=v['models'], fids=[dict(fid=f, name=n, fuel=fu, yeng=_ae_yeng(f)) for f, n, fu in v['fids']])
+               for (mk, eng), v in AE_SOON.items()], QM._REAL_OPEN(os.environ['AE_DUMP'], 'w', encoding='utf-8'), ensure_ascii=False, indent=0)   # past quick mode's write gate
 _AE_AI = ('Illustration (AI-generated) in the style of a factory press photo, not a photo of a specific engine; brand names and logos belong to their owners. '
           'Free to use under <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener license">CC BY 4.0</a>: credit The Lemon Index (lemonindex.com). <a href="/images/">Download and credit text</a>')
 def _ae_soon(mk, eng, models, fu):
     k = _AEF(' '.join([mk, eng, AE_FL[fu]] + models)); ph = AE_SOON_IMG.get(_AE_KEY(mk, eng)); im = _ae_img(ph)
     pic = (f'<span class="aec-p"><img src="{E(im[0])}" width="{im[1]}" height="{im[2]}" alt="{E(mk)} {E(eng)} engine (illustration)" loading="lazy" decoding="async">{YSL.info(_AE_AI)}{_ae_ftag(fu)}</span>'
            if im else f'<span class="aec-p aec-ic">{_AE_IC}{_ae_ftag(fu)}</span>')
+    rk = ENG_POOL_RANK.get('soon:' + _AE_KEY(mk, eng))   # 11-17: its YouTube study (engine_soon_yt.json, scored from its cars' videos) is in the one rank pool
+    yt = (f'<span class="ytbadge aec-yt" title="YouTube rank by owner tone, of {ENG_POOL_N} {E(ENG_POOL_LBL)}: from YouTube videos about the cars it was the engine in">{_AE_YT}YT #{rk}</span>'
+          if rk else '')
     return (f'<div class="aec aec-soon" data-t="c" data-f="{_FG(fu)}" data-k="{E(k)}" aria-disabled="true" title="Coming soon">{pic}'
-            f'<span class="aec-b">Coming soon</span><b>{E(mk)} {E(eng)}</b><small class="aec-u">{E(_ae_used(models))}</small></div>')
+            f'<span class="aec-b">Coming soon</span>{yt}<b>{E(mk)} {E(eng)}</b><small class="aec-u">{E(_ae_used(models))}</small></div>')
 _ae_live = sorted(AE_LIVE.values(), key=lambda c: (c['o'], c['name']))
 _ae_soonl = sorted(AE_SOON.items(), key=lambda kv: (kv[0][0], ('gas', 'diesel', 'hybrid', 'phev', 'electric').index(kv[1]['fuel']), kv[0][1]))
 _aeN, _aeS = len(_ae_live), len(_ae_soonl)
@@ -207,4 +241,6 @@ def _ae_years(t):
 for c in _ae_live: AE_FIND.append((c['name'] + ' engine', c['mk'], c['url'], 'eng', c.get('ylist') or _ae_years(c.get('yrs')), ' '.join([c['code'], c.get('alias', ''), 'engine', AE_FL[c['f']].lower()] + c['used']), 0))
 for (mk, eng), v in _ae_soonl:
     ms = v['models']; AE_FIND.append((f'{mk} {eng} engine ({", ".join(ms[:3])}{"…" if len(ms) > 3 else ""})', mk, '', 'eng', (), ' '.join(ms + ['engine', AE_FL[v['fuel']].lower()]), 1))
-print('all engines page:', _aeN, 'live,', _aeS, 'coming soon,', len({m[0] for m in _ae_models}), 'models | soon by fuel:', {g: sum(_FG(v['fuel']) == g for v in AE_SOON.values()) for g in ('gas', 'diesel', 'hybrid', 'electric')})
+_ae_orph = sorted(k[5:] for k in (globals().get('ENG_SOON_YT') or {}) if 'soon:' + k[5:] in ENG_POOL and k[5:] not in {_AE_KEY(mk, eng) for mk, eng in AE_SOON})
+if _ae_orph: print('NOTE coming-soon YouTube studies with no card any more (the engine has a page now; still counted in the rank pool):', ', '.join(_ae_orph))
+print('all engines page:', _aeN, 'live,', _aeS, 'coming soon (' + str(sum(1 for _mk, _eg in AE_SOON if 'soon:' + _AE_KEY(_mk, _eg) in ENG_POOL_RANK)) + ' with a YT rank),', len({m[0] for m in _ae_models}), 'models | soon by fuel:', {g: sum(_FG(v['fuel']) == g for v in AE_SOON.values()) for g in ('gas', 'diesel', 'hybrid', 'electric')})
