@@ -70253,6 +70253,113 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+   ],
+   "gen": "2017–2024 Nissan Armada",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 11267711,
+   "topics": [
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 119732,
+     "n": 3,
+     "best": {
+      "id": "7uTwalks2m4",
+      "title": "2017 - 2020 Nissan Armada \"No Key\" - How to Start With Dead Bad Broken Remote Fob Battery - No Key",
+      "channel": "PYR Automotive ",
+      "views": 89510
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 88999,
+     "n": 1,
+     "best": {
+      "id": "ISnSAiz0BbE",
+      "title": "2017 - 2020 Nissan Armada Cabin Air Filter - How To Change Replace Remove Location A/C AC Air Filter",
+      "channel": "PYR Automotive ",
+      "views": 88999
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 52975,
+     "n": 2,
+     "best": {
+      "id": "9j_W9V3d4RQ",
+      "title": "No Start Problem with a 2017 Nissan Armada, Lights on Dash, No Crank....Clicking...Fixed...",
+      "channel": "Peter L",
+      "views": 30629
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 32066,
+     "n": 1,
+     "best": {
+      "id": "OnGf_C8tSw0",
+      "title": "2018 Nissan Armada Gen 2, Y62 Nissan Patrol, Infiniti QX 56 Auto Transmission Fluid Change",
+      "channel": "Mike's Do It Yourself",
+      "views": 32066
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 26768,
+     "n": 1,
+     "best": {
+      "id": "YnT76s2mg4I",
+      "title": "2020 Nissan Armada maintenance and alert reset",
+      "channel": "MJD09",
+      "views": 26768
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 19505,
+     "n": 1,
+     "best": {
+      "id": "WoaGPeP2iPU",
+      "title": "2017-20 Nissan Armada SL rear strut replacement #nissanarmada #StrutReplacement #automobile",
+      "channel": "Daddy N Daughterz Garage",
+      "views": 19505
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "-9y4GR5vA4g",
+     "title": "Nissan Armada/Patrol (2010–2024): A Complete Reliability Guide",
+     "channel": "The Long Last Expert",
+     "views": 151050
+    },
+    {
+     "id": "NmssVn492No",
+     "title": "2021 Nissan Armada: Fresh Look, Same Problems | CAR MOM TOUR",
+     "channel": "The_Car_Mom",
+     "views": 77449
+    },
+    {
+     "id": "QsYt3xMiWmI",
+     "title": "Is The 2022 Nissan Armada Reliable?",
+     "channel": "The Ben Hardy Show",
+     "views": 47808
+    }
+   ],
+   "costs": null
   }
  ],
  "nissan-quest": [

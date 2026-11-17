@@ -35826,5 +35826,96 @@
 }
 ]
 }
+],
+"nissan-armada": [
+{
+"sid": "nissan-armada-g1",
+"y0": 2004,
+"y1": 2015,
+"label": "2004–2015",
+"videos": 198,
+"praise": [
+[
+"Reliability",
+5
+],
+[
+"Looks",
+4
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+4
+]
+],
+"top": [
+{
+"id": "_EgZAWtGPEY",
+"title": "2011 Nissan Armada Platinum Start Up, Exterior/ Interior Review",
+"views": 297751,
+"ch": "The Driveway Auto Reviews"
+},
+{
+"id": "fgEnq0gDRlo",
+"title": "2011 Nissan Armada  Review & Test Drive Platinum Edition",
+"views": 201180,
+"ch": "Streetwalk Media"
+},
+{
+"id": "JmOaa1w7uK8",
+"title": "2007 Nissan Armada Review - Kelley Blue Book",
+"views": 187218,
+"ch": "Kelley Blue Book"
+}
+]
+},
+{
+"sid": "nissan-armada-g2",
+"y0": 2017,
+"y1": 2024,
+"label": "2017–2024",
+"videos": 200,
+"praise": [
+[
+"Power",
+19
+],
+[
+"Looks",
+16
+],
+[
+"Reliability",
+14
+],
+[
+"Space and practicality",
+14
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "g4F726mJWrc",
+"title": "2017 Nissan Armada First Drive Review - In 4K UHD!",
+"views": 301788,
+"ch": "Auto Buyers Guide | Alex on Autos"
+},
+{
+"id": "TdXHNxbUoYM",
+"title": "2017 Nissan Armada SL 4WD - Test Drive & Review",
+"views": 278636,
+"ch": "Saabkyle04"
+},
+{
+"id": "bqSKXomk6Zg",
+"title": "2022 Nissan Armada SUV Walkaround & Review",
+"views": 259321,
+"ch": "Nissan USA"
+}
+]
+}
 ]
 }
