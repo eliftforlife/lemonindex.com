@@ -69221,7 +69221,26 @@
      "views": 78464
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 200,
+       "lo": 100.0,
+       "hi": 300.0,
+       "n": 4,
+       "videos": 4,
+       "id": "MZ7jCYjeSJw",
+       "t": 229,
+       "title": "Ford Econoline e150 Club Wagon. Walkaround Start up and Future Plans. 1992 MT Truck of the Year"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
