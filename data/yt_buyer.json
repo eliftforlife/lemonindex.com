@@ -34344,5 +34344,70 @@
 }
 ]
 }
+],
+"ford-crown-victoria": [
+{
+"sid": "ford-crown-victoria-g2",
+"y0": 1998,
+"y1": 2011,
+"label": "1998–2011",
+"videos": 188,
+"praise": [
+[
+"Reliability",
+15
+],
+[
+"Power",
+7
+],
+[
+"Space and practicality",
+6
+],
+[
+"Fun to drive",
+5
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+5
+],
+[
+"Coolant leaks / water pump / overheating",
+5
+],
+[
+"Battery / alternator / starter",
+4
+],
+[
+"Rust",
+3
+]
+],
+"top": [
+{
+"id": "2uH_X-9fjfI",
+"title": "Regular Car Reviews: 2000 Ford Crown Victoria P-71 Police Interceptor",
+"views": 1202265,
+"ch": "Regular Car Reviews"
+},
+{
+"id": "YLnUa2XK4ko",
+"title": "1999 Ford Crown Victoria LX (25k miles) - POV Driving Impressions",
+"views": 548164,
+"ch": "TheTopher"
+},
+{
+"id": "GCFMx_ahkiw",
+"title": "2011 NYC Taxi Ford Crown Victoria: Regular Car Reviews",
+"views": 428626,
+"ch": "Regular Car Reviews"
+}
+]
+}
 ]
 }

@@ -68894,6 +68894,141 @@
    "costs": null
   }
  ],
+ "ford-crown-victoria": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011
+   ],
+   "gen": "1998–2011 Ford Crown Victoria",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 16243241,
+   "topics": [
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 321841,
+     "n": 3,
+     "best": {
+      "id": "s8jf2uWpOHE",
+      "title": "2003-2011 Ford Crown Vic & Mercury Grand Marquis: The Most Common A/C System Failures",
+      "channel": "FordTechMakuloco",
+      "views": 212959
+     }
+    },
+    {
+     "name": "Death wobble & steering",
+     "views": 233697,
+     "n": 4,
+     "best": {
+      "id": "B8gDRy_TWfo",
+      "title": "1995 - 2002 Grand Marquis or Crown Victoria Steering Gearbox Change or replacement",
+      "channel": "Oldsmob455",
+      "views": 123487
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 208596,
+     "n": 4,
+     "best": {
+      "id": "WHr9QRDRFeY",
+      "title": "2006 Ford Crown Vic Brake Light Switch Replacement, Stop Light Fuses",
+      "channel": "Lehew",
+      "views": 100603
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 200501,
+     "n": 3,
+     "best": {
+      "id": "kwsHErysF3M",
+      "title": "2006-2011 Ford Crown Victoria Vic P71 P7B Gauge Cluster Removal - How to Remove Speedometer",
+      "channel": "Automotive Circuit Solutions",
+      "views": 85735
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 172519,
+     "n": 2,
+     "best": {
+      "id": "nr_WvZRo2TE",
+      "title": "How to Change Fuel Filter 1998-2011 Crown Victoria, Grand Marquis and Lincoln Town car",
+      "channel": "Mr Random Reviews",
+      "views": 144231
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 158961,
+     "n": 1,
+     "best": {
+      "id": "H4ca7P0udl4",
+      "title": "How to Replace Intake Manifold 1998-2012 Ford Crown Victoria",
+      "channel": "TRQ",
+      "views": 158961
+     }
+    },
+    {
+     "name": "Transmission & shifter",
+     "views": 143196,
+     "n": 4,
+     "best": {
+      "id": "vSxPSpE9PCc",
+      "title": "Transmission Problem 2003 Ford Crown Victoria",
+      "channel": "sauber7",
+      "views": 46845
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 92901,
+     "n": 1,
+     "best": {
+      "id": "aSVnfXCzqbc",
+      "title": "How to Replace Spark Plugs on a Ford Crown Victoria 4.6L 1998-2012",
+      "channel": "Fixbook",
+      "views": 92901
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "nIc4VyMq-rk",
+     "title": "Top 5 Problems Ford Crown Victoria Sedan 2nd Gen 1998-2012",
+     "channel": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+     "views": 256506
+    },
+    {
+     "id": "-LDr4ER5nfI",
+     "title": "1998-2011 Crown Victoria Police Interceptor Buyers Guide",
+     "channel": "mkm230",
+     "views": 28870
+    },
+    {
+     "id": "2uH_X-9fjfI",
+     "title": "Regular Car Reviews: 2000 Ford Crown Victoria P-71 Police Interceptor",
+     "channel": "Regular Car Reviews",
+     "views": 1202265
+    }
+   ],
+   "costs": null
+  }
+ ],
  "volvo-xc90": [
   {
    "years": [
