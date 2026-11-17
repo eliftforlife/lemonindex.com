@@ -470,7 +470,27 @@
   "seg": "car",
   "make": "BUICK",
   "rx": "(LESABRE)",
-  "sales": {}
+  "sales": {
+   "manual": {
+    "1999": 149445,
+    "2000": 148633,
+    "2001": 145304,
+    "2002": 135916,
+    "2003": 114572,
+    "2004": 114157,
+    "2005": 75369,
+    "2006": 2313,
+    "2007": 121
+   },
+   "url": "https://www.goodcarbadcar.net/buick-lesabre-sales-figures-usa-canada/",
+   "kind": "calendar",
+   "note": "GoodCarBadCar U.S. sales table; 2000-2003 match GM's December sales reports filed with the SEC (8-K), 'LeSabre' line",
+   "sources": {
+    "2000-2001": "https://www.sec.gov/Archives/edgar/data/40730/000004073002000002/december01sales-prod8k010302.txt",
+    "2002-2003": "https://www.sec.gov/Archives/edgar/data/40730/000004073004000007/dec03sales010504.txt",
+    "1999-2007": "https://www.goodcarbadcar.net/buick-lesabre-sales-figures-usa-canada/"
+   }
+  }
  },
  "volvo-xc90": {
   "name": "Volvo XC90",
@@ -916,7 +936,21 @@
   "seg": "car",
   "make": "BUICK",
   "rx": "(LUCERNE)",
-  "sales": {}
+  "sales": {
+   "manual": {
+    "2005": 8821,
+    "2006": 96515,
+    "2007": 82923,
+    "2008": 54930,
+    "2009": 31292,
+    "2010": 26459,
+    "2011": 20358,
+    "2012": 971
+   },
+   "url": "https://en.wikipedia.org/wiki/Buick_Lucerne",
+   "kind": "calendar",
+   "note": "Wikipedia U.S. sales table ('Total American sales'), citing GM's December sales releases"
+  }
  },
  "isuzu-rodeo": {
   "name": "Isuzu Rodeo",

@@ -3808,5 +3808,65 @@
 "sales_url": "https://www.goodcarbadcar.net/suzuki-sx4-sales-figures/",
 "sales_kind": "calendar",
 "id": "suzuki-sx4"
+},
+{
+"name": "Buick LeSabre",
+"brand": "Buick",
+"segment": "car",
+"years": "2000-2005",
+"sold": 736264,
+"n": 546,
+"per100k": 74,
+"expected": 700.8418108735896,
+"li": 78,
+"serious": 16,
+"worst": "2000",
+"issues": [
+[
+"electrical",
+16
+],
+[
+"engine",
+16
+],
+[
+"visibility",
+14
+]
+],
+"sales_url": "https://www.goodcarbadcar.net/buick-lesabre-sales-figures-usa-canada/",
+"sales_kind": "calendar",
+"id": "buick-lesabre"
+},
+{
+"name": "Buick Lucerne",
+"brand": "Buick",
+"segment": "car",
+"years": "2006-2011",
+"sold": 322269,
+"n": 241,
+"per100k": 75,
+"expected": 273.86541086478496,
+"li": 88,
+"serious": 15,
+"worst": "2006",
+"issues": [
+[
+"electrical",
+35
+],
+[
+"body structure",
+12
+],
+[
+"visibility",
+10
+]
+],
+"sales_url": "https://en.wikipedia.org/wiki/Buick_Lucerne",
+"sales_kind": "calendar",
+"id": "buick-lucerne"
 }
 ]

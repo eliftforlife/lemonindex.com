@@ -1406,18 +1406,6 @@
   ]
  },
  {
-  "slug": "buick-lesabre",
-  "sales": {},
-  "kind": "none",
-  "url": "",
-  "note": "no sales source",
-  "flags": [
-   "Buick LeSabre: 0 scorable model years / 0 complaints -> complaints only"
-  ],
-  "complaints": 1713,
-  "scored": []
- },
- {
   "slug": "volvo-xc90",
   "sales": {
    "2002": 4379,
@@ -2728,18 +2716,6 @@
    2020,
    2021
   ]
- },
- {
-  "slug": "buick-lucerne",
-  "sales": {},
-  "kind": "none",
-  "url": "",
-  "note": "no sales source",
-  "flags": [
-   "Buick Lucerne: 0 scorable model years / 0 complaints -> complaints only"
-  ],
-  "complaints": 943,
-  "scored": []
  },
  {
   "slug": "isuzu-rodeo",
@@ -5673,6 +5649,65 @@
   "scored": [
    2000,
    2001
+  ]
+ },
+ {
+  "slug": "buick-lesabre",
+  "sales": {
+   "1999": 149445,
+   "2000": 148633,
+   "2001": 145304,
+   "2002": 135916,
+   "2003": 114572,
+   "2004": 114157,
+   "2005": 75369,
+   "2006": 2313,
+   "2007": 121
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/buick-lesabre-sales-figures-usa-canada/",
+  "note": "GoodCarBadCar U.S. sales table; 2000-2003 match GM's December sales reports filed with the SEC (8-K), 'LeSabre' line",
+  "flags": [
+   "Buick LeSabre 2006: 2,313 sold, 0 complaints in window -> sales merged into 2005",
+   "Buick LeSabre 2007: 121 sold, 0 complaints in window (no neighbour with complaints: dropped)"
+  ],
+  "complaints": 1713,
+  "scored": [
+   2000,
+   2001,
+   2002,
+   2003,
+   2004,
+   2005
+  ]
+ },
+ {
+  "slug": "buick-lucerne",
+  "sales": {
+   "2005": 8821,
+   "2006": 96515,
+   "2007": 82923,
+   "2008": 54930,
+   "2009": 31292,
+   "2010": 26459,
+   "2011": 20358,
+   "2012": 971
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Buick_Lucerne",
+  "note": "Wikipedia U.S. sales table ('Total American sales'), citing GM's December sales releases",
+  "flags": [
+   "Buick Lucerne 2005: 8,821 sold, 0 complaints in window -> sales merged into 2006",
+   "Buick Lucerne 2012: 971 sold, 0 complaints in window -> sales merged into 2011"
+  ],
+  "complaints": 943,
+  "scored": [
+   2006,
+   2007,
+   2008,
+   2009,
+   2010,
+   2011
   ]
  }
 ]
