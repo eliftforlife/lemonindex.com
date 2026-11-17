@@ -34474,5 +34474,53 @@
 }
 ]
 }
+],
+"chrysler-concorde": [
+{
+"sid": "chrysler-concorde-g2",
+"y0": 1998,
+"y1": 2004,
+"label": "1998–2004",
+"videos": 199,
+"praise": [
+[
+"Power",
+8
+],
+[
+"Reliability",
+6
+],
+[
+"Fun to drive",
+6
+],
+[
+"Looks",
+5
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "qfK0PqP_Bjg",
+"title": "1998 Chrysler Concorde: Regular Car Reviews",
+"views": 600357,
+"ch": "Regular Car Reviews"
+},
+{
+"id": "ViPsQbeV388",
+"title": "2002 CHRYSLER CONCORDE Auto Review - Used Car 👈",
+"views": 28340,
+"ch": "New Day Videos"
+},
+{
+"id": "7tgBs3QeW9k",
+"title": "CHRYSLER Starting Issues... 2001 Concorde Won't Crank...Clicks... Solved...",
+"views": 6475,
+"ch": "Peter L"
+}
+]
+}
 ]
 }

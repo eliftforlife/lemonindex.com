@@ -69029,6 +69029,123 @@
    "costs": null
   }
  ],
+ "chrysler-concorde": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004
+   ],
+   "gen": "1998–2004 Chrysler Concorde",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 1753589,
+   "topics": [
+    {
+     "name": "Cooling system",
+     "views": 58559,
+     "n": 2,
+     "best": {
+      "id": "1HwJwbqBJmM",
+      "title": "Easiest way to change thermostat on 2001 Chrysler Concorde",
+      "channel": "Thomas Lovett",
+      "views": 36224
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 41315,
+     "n": 4,
+     "best": {
+      "id": "WB9lt7ryd0I",
+      "title": "How to replace the starter on a Chrysler 300 m, Concorde, Dodge Intrepid from 1999 to 2004. - VOTD",
+      "channel": "Robert DIY",
+      "views": 22505
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 38702,
+     "n": 2,
+     "best": {
+      "id": "yJB-WD9pRSI",
+      "title": "Car solution for - window popping off track and Power door locks making loud noise - 2001 concorde",
+      "channel": "hippa2dahoppa2",
+      "views": 37008
+     }
+    },
+    {
+     "name": "Brakes & ABS",
+     "views": 17740,
+     "n": 1,
+     "best": {
+      "id": "WPA6R11UG7c",
+      "title": "Rear disc brake pad replacement Chrysler 300M 2003. 1999-2004 LHS Intrepid Concorde",
+      "channel": "Fixing cars and stuff",
+      "views": 17740
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 10523,
+     "n": 3,
+     "best": {
+      "id": "tkcS03i344M",
+      "title": "2004 Chrysler Concorde Camshaft Position Sensor Replacement",
+      "channel": "Mechanic In The Making",
+      "views": 6499
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 2943,
+     "n": 2,
+     "best": {
+      "id": "iP4rb08B8ZY",
+      "title": "Chrysler Concorde 1993-2004 Car Service Repair Workshop Manual",
+      "channel": "Farrah Stelmack",
+      "views": 1813
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 178,
+     "n": 1,
+     "best": {
+      "id": "AYSXT9gNv8w",
+      "title": "Chrysler Concorde 2001 2.7L Oil Light Problem [FIXED] #diyrepair #mechanic",
+      "channel": "JasmineFatherGarage4k",
+      "views": 178
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "4WtIMAkk_vA",
+     "title": "1999 Chrysler Concorde Headlights flashing problems ( need new Headlights switch",
+     "channel": "Técnico Hernandez",
+     "views": 2011
+    },
+    {
+     "id": "qfK0PqP_Bjg",
+     "title": "1998 Chrysler Concorde: Regular Car Reviews",
+     "channel": "Regular Car Reviews",
+     "views": 600357
+    },
+    {
+     "id": "ViPsQbeV388",
+     "title": "2002 CHRYSLER CONCORDE Auto Review - Used Car 👈",
+     "channel": "New Day Videos",
+     "views": 28340
+    }
+   ],
+   "costs": null
+  }
+ ],
  "volvo-xc90": [
   {
    "years": [
