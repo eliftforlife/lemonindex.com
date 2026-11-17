@@ -33705,5 +33705,53 @@
 }
 ]
 }
+],
+"buick-century": [
+{
+"sid": "buick-century-g6",
+"y0": 1997,
+"y1": 2005,
+"label": "1997–2005",
+"videos": 200,
+"praise": [
+[
+"Reliability",
+10
+],
+[
+"Power",
+4
+],
+[
+"Space and practicality",
+3
+],
+[
+"Comfort and ride",
+3
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "rIjofPhpCjg",
+"title": "2000 Buick Century Review",
+"views": 44799,
+"ch": "Shooting Cars"
+},
+{
+"id": "p6V1oYpeQzk",
+"title": "Time Capsule 2003 Buick Century with 18k Miles ONE OWNER  “Creampuff” for sale Specialty Motor Cars",
+"views": 36541,
+"ch": "Specialty Motor Cars"
+},
+{
+"id": "jtXnb-0-KFc",
+"title": "2000 Buick Century Limited Review - A Very Long Shelf Life!",
+"views": 25639,
+"ch": "Shooting Cars"
+}
+]
+}
 ]
 }

@@ -68532,6 +68532,135 @@
    "costs": null
   }
  ],
+ "buick-century": [
+  {
+   "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005
+   ],
+   "gen": "1997–2005 Buick Century",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 4250130,
+   "topics": [
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 459871,
+     "n": 4,
+     "best": {
+      "id": "rtRINop3gE8",
+      "title": "2003 Buick Century Odometer Instrument Panel Repair",
+      "channel": "MrMnmn911",
+      "views": 232524
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 312572,
+     "n": 8,
+     "best": {
+      "id": "RWPayxz8hWA",
+      "title": "A/C Compressor Replacement 2001 Buick Century",
+      "channel": "airpedro",
+      "views": 83213
+     }
+    },
+    {
+     "name": "Cooling system",
+     "views": 307630,
+     "n": 6,
+     "best": {
+      "id": "QmXbt-prq5Y",
+      "title": "How to install a Water Pump: 1994 - 2005 Buick Century 3.1L V6 WP-625 AW5033",
+      "channel": "Airtex-ASC Performance Pumps",
+      "views": 204373
+     }
+    },
+    {
+     "name": "Fuel pump, filter & tank",
+     "views": 242280,
+     "n": 4,
+     "best": {
+      "id": "TLNsXxPeFL4",
+      "title": "Fuel pump replacement 1999 Buick Century Access cover in trunk. Install Remove Replace.",
+      "channel": "Fixing cars and stuff",
+      "views": 133333
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 229522,
+     "n": 8,
+     "best": {
+      "id": "rC4x8nnwRT0",
+      "title": "2002 Buick century radio removal and double din install",
+      "channel": "JPtheinstallguy",
+      "views": 88347
+     }
+    },
+    {
+     "name": "Intake, EGR & engine sensors",
+     "views": 201848,
+     "n": 5,
+     "best": {
+      "id": "yEhTwzpn4JQ",
+      "title": "2002 Buick century 3.1L Replace o2 Sensor",
+      "channel": "white wolf",
+      "views": 106402
+     }
+    },
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 172789,
+     "n": 2,
+     "best": {
+      "id": "QKdDTupYOCM",
+      "title": "How to install a 1998 Buick Century Blend Air Door Actuator with Auto Climate Control Model 09352034",
+      "channel": "E Behrman",
+      "views": 150646
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 113784,
+     "n": 2,
+     "best": {
+      "id": "BxLLDBntjqQ",
+      "title": "Howto DIY 2004 Buick Century Oil Change replace filter - 2003 2002 2001 2000 2005 04 03 02 01 05 00",
+      "channel": "DIY Tinker",
+      "views": 70109
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "LkpwJvmpqOg",
+     "title": "This is how the 1997 Buick Century catered to its traditional buyers",
+     "channel": "Antique TAGS",
+     "views": 5045
+    },
+    {
+     "id": "rIjofPhpCjg",
+     "title": "2000 Buick Century Review",
+     "channel": "Shooting Cars",
+     "views": 44799
+    },
+    {
+     "id": "p6V1oYpeQzk",
+     "title": "Time Capsule 2003 Buick Century with 18k Miles ONE OWNER “Creampuff” for sale Specialty Motor Cars",
+     "channel": "Specialty Motor Cars",
+     "views": 36541
+    }
+   ],
+   "costs": null
+  }
+ ],
  "mitsubishi-galant": [
   {
    "years": [
