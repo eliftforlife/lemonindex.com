@@ -123,7 +123,7 @@ def _code_pages():
             body.append(f'<h2>{"Models that report it most" if _cmx else "Cars owners report it on"}</h2><div class="mbs"><div class="mb"><div class="mg cpg">{cards}</div></div></div><p class="note">Complaints that name {c}, by model. Raw counts, not a failure rate: popular models get more complaints.'
                         + (f' Tap a model for its years, mileage and what owners say fixed it.</p><p class="cpx"><b>{c} by model:</b> ' + ' · '.join(f'<a href="{CM_URL(c, o["fid"])}">{c} {E(FY[o["fid"]]["name"])}</a> ({o["n"]})' for o in _cmn) if _cmn else '') + '</p>')
         _tr = c[:3] in ('P07', 'P08', 'P09') or bool(re.search(r'transmission|shift|gear|torque converter|cvt|clutch', title_bits, re.I))
-        _tl = [(i, nm) for i, nm, k in models[:8] if _tr and os.path.exists(os.path.join(OUT, 'cars', i, 'transmission', 'index.html'))]
+        _tl = [(i, nm) for i, nm, k in models[:8] if _tr and os.path.exists(os.path.join(OUT, 'cars', i, 'transmission', 'index.html')) and not open(os.path.join(OUT, 'cars', i, 'transmission', 'index.html'), encoding='utf-8', errors='replace').read(40).startswith('<!doctype html><!--lx-alias-->')]   # 11-17: not a redirect stub (the F-150's, since the split)
         _sk = code_symptoms(c, th)
         if years or _tl or _sk:
             body.append('<div class="cpx">' + sym_row(c, _sk) + (f'<p><b>Years owners report it on most:</b> ' + ' · '.join(f'<a href="/cars/{i}/{y}/">{y} {E(nm)}</a>' for i, nm, y, k in years[:6]) + '</p>' if years else '')

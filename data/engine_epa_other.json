@@ -1,0 +1,31 @@
+{
+ "note": "EPA fueleconomy.gov vehicles.csv: engines per model year with no engine page of their own",
+ "models": {
+  "chrysler-300": {
+   "2005": [
+    "2.7 L V6",
+    "3.5 L V6"
+   ],
+   "2006": [
+    "2.7 L V6",
+    "3.5 L V6"
+   ],
+   "2007": [
+    "2.7 L V6",
+    "3.5 L V6"
+   ],
+   "2008": [
+    "2.7 L V6",
+    "3.5 L V6"
+   ],
+   "2009": [
+    "2.7 L V6",
+    "3.5 L V6"
+   ],
+   "2010": [
+    "2.7 L V6",
+    "3.5 L V6"
+   ]
+  }
+ }
+}

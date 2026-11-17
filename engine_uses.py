@@ -91,6 +91,15 @@ if ENGU == 'hooks':
     _eu_span = lambda ys: (f'{min(ys)}–{str(max(ys))[-2:]}' if max(ys) // 100 == min(ys) // 100 else f'{min(ys)}–{max(ys)}') if len(ys) > 1 else str(min(ys))
     _EU_SRC = {'epa': 'EPA version lists', 'vin': 'NHTSA VIN decoding of owner complaints', 'tsb': 'the automaker&#39;s repair notes to dealers (NHTSA)', 'list': 'EPA and the engine makers&#39; specs'}
     def _eu_vers(u, y=None): return [v for v, ys in u['vers'].items() if v and (y is None or y in ys)]
+    # 11-17 visitor report: engines EPA lists for a model year that have no page of their own (data_engine_epa_other.py), named as plain chips
+    EU_EPA = (_load('data/engine_epa_other.json') if _euos.path.exists('data/engine_epa_other.json') else {}).get('models', {})
+    def _eu_other(fid, y):
+        d = EU_EPA.get(fid) or {}
+        if y is not None: return [(e, None) for e in d.get(str(y), [])]
+        by = {}
+        for yy, es in d.items():
+            for e in es: by.setdefault(e, set()).add(int(yy))
+        return sorted(by.items())
     def EU_ROW(fid, y=None):
         """'Engines in this car': every engine with a page that this model (this model year) was sold with, newest first"""
         es = CAR_ENG.get(fid) or {}
@@ -109,8 +118,8 @@ if ENGU == 'hooks':
         srcs = sorted({s for _, u in rows for s in u['src']})
         js = '<script src="/assets/n3nav.js?v=2" defer></script>' if any('#eng-' in url for url, _ in rows) else ''
         return (f'<nav class="n3-row" aria-label="Engines in this car">{EU_CSS}{js}<p class="n3-h">{f"Engines in the {y} {E((SN[fid][0] if fid in FS_IDS else mnm).split(' ', 1)[-1])}" if y else "Engines in this car"}</p><div class="n3-cs">'
-                + ''.join(chip(url, u) for url, u in rows) + (f'<a class="n3-c n3-more" href="/engines/"><b>+{more} more</b><small>every engine</small></a>' if more else '') + '</div>'
-                + f'<p class="n3-n">Engines with a page of their own, in the versions named, from {" and ".join(_EU_SRC[s] for s in srcs)}. Other versions can have other engines.</p></nav>')
+                + ''.join(chip(url, u) for url, u in rows) + ''.join(f'<span class="n3-c"><b>{E(e)}</b><small>{E(_eu_span(ys)) if ys else "no engine page yet"}</small></span>' for e, ys in _eu_other(fid, y)) + (f'<a class="n3-c n3-more" href="/engines/"><b>+{more} more</b><small>every engine</small></a>' if more else '') + '</div>'
+                + f'<p class="n3-n">Engines with a page of their own, in the versions named, from {" and ".join(_EU_SRC[s] for s in srcs)}. {"Engines without a link: EPA version lists." if _eu_other(fid, y) else "Other versions can have other engines."}</p></nav>')
     # ---- report problem 4: performance, supercar and electric pages <-> their regular model (two-way chips)
     EU_KIDS = {}   # /cars/ model id -> [(label, url, years or None, kind)]
     for _s, _D in EU_PERF.items():
