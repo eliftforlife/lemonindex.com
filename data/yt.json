@@ -69931,7 +69931,26 @@
      "views": 31472
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 55,
+       "lo": 50.0,
+       "hi": 60.0,
+       "n": 4,
+       "videos": 3,
+       "id": "dkt2Zes1j_U",
+       "t": 1641,
+       "title": "I won this 1998 GMC Jimmy 4x4 for $925 from IAA! You Won't Believe it!"
+      }
+     ]
+    ]
+   }
   }
  ],
  "chevrolet-astro": [
