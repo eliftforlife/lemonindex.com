@@ -20,3 +20,10 @@ namespace_id = "1109"
   [ratelimits.simple]
   limit = 5
   period = 60
+
+# 11-18 owner opinions: Workers AI checks each opinion; the cron retries any that waited for it
+[ai]
+binding = "AI"
+
+[triggers]
+crons = ["*/15 * * * *"]

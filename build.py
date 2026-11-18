@@ -463,7 +463,8 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
     if re.fullmatch(r'/cars/[^/]+/', path) and 'SEARCH_MINI' in globals(): body += SEARCH_MINI + (CM_ROW(path[6:-1]) if 'CM_ROW' in globals() else '') + CODES_JS   # 11-10: engine code lookup on model pages (added after the date hash, so dates don't move)
     _lxm = re.fullmatch(r'/cars/(.+?)/(\d{4})/', path)
     if _lxm and 'LX_HTML' in globals(): body += LX_HTML(_lxm.group(1), int(_lxm.group(2)))   # 11-12 related links (after the date hash too)
-    if 'RA_HOOK' in globals(): body = RA_HOOK(path, body)   # 11-14 growth 4a: recall alert signup (after the date hash, so page dates don't move)
+    if 'RA_HOOK' in globals(): body = RA_HOOK(path, body)
+    if 'OP_HOOK' in globals(): body = OP_HOOK(path, body)   # 11-18 owner opinions box (opinions.py)   # 11-14 growth 4a: recall alert signup (after the date hash, so page dates don't move)
     _shl = ''
     _sm = list(re.finditer(r'<p class="shline">.*?</p>', body, re.S))
     if _sm: _shl = _sm[-1].group(0); body = body[:_sm[-1].start()] + body[_sm[-1].end():]
@@ -1145,6 +1146,7 @@ def _ybars(f, cur=None):
             + ''.join(f'<a class="b {CLS(v)}{" cur" if v["y"] == cur else ""}{" early" if v.get("early") else ""}" href="{CARU(f, v["y"])}" data-tip="{E(f["name"])} {v["y"]}: ' + (f'Lemon Index {v["li"]}, {plain(v["li"])}' if v['ok'] else f'{v["n"]} complaints, {"no sales figure to score" if NOSALES(v) else "too few sold to score"}' if v.get('low') else f'only {v["n"]} complaints, too few to score') + f'."><span class="bn">{v["y"]}</span><span class="bt"><i style="width:{min(100, v["li"] / mx * 100) if v["ok"] else 0:.1f}%"></i><em style="left:{100 / mx * 100:.1f}%"></em></span><b>{LIS(v)}</b><small>{("partial · " if v.get("early") else "") + short(v["li"]) if v["ok"] else "few complaints"}</small></a>' for v in sorted(f['years'], key=lambda v: -v['y'])) + '</div>' + BARS_LEG(f))
 # 10-31 idea 5: "X vs Y" pages for the best-selling rivals in each type (people search "camry vs accord reliability").
 FY = {f['id']: f for f in YEARS}
+exec(open('opinions.py', encoding='utf-8').read())   # 11-18 owner opinions box (OP_HOOK in page())
 exec(open('recall_alerts.py', encoding='utf-8').read())   # 11-14 growth 4a: recall alert signup box (RA_HOOK in page()), /alerts/ page, privacy text
 RIVALS = defaultdict(list); PAIRS = []
 for seg, top in (('car', 10), ('suv', 10), ('truck', 7), ('minivan', 5)):

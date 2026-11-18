@@ -51,10 +51,43 @@ async function alertMail(env, subject, rows, replyTo) {
   } catch (e) { /* an alert failure never breaks the form */ }
 }
 
+// 11-18 owner opinions (Elijah: "a leave-your-opinion box ... anonymous or show their name ... 10 a day, 1 per car ... AI review, then it
+// displays for that car"). Table opinions. One opinion per car per visitor per 30 days, max 10 a day per visitor, 300 a day site-wide.
+// Every opinion is checked by rules (no links, emails, phone numbers, VINs, swearing) and two Workers AI models (Llama Guard for safety,
+// Llama 3.1 for "a real opinion about this car, no spam or personal info"); only approved ones are shown. If AI is down the opinion waits
+// (status pending) and the cron retries it. Remove one by hand: UPDATE opinions SET status='removed' WHERE id=N (D1 console).
+const OP_KINDS = { owner: 'Owner', former: 'Former owner', drove: 'Drove one', opinion: 'Opinion' };
+const OP_BAD = /(https?:|www\.|\b[a-z0-9-]+\.(com|net|org|io|co|ly|gg|xyz|info|biz)\b|[^@\s]+@[^@\s]+\.[a-z]{2,}|\b\d{3}[-.\s)]*\d{3}[-.\s]*\d{4}\b|\b[A-HJ-NPR-Z0-9]{17}\b)/i;
+const OP_SWEAR = /\b(f+u+c+k+\w*|s+h+i+t+\w*|b+i+t+c+h+\w*|c+u+n+t+\w*|n+i+g+g+\w*|f+a+g+\w*|r+e+t+a+r+d+\w*|wh+o+r+e+\w*|d+i+c+k+\w*|p+u+s+s+y+\w*|a+s+s+h+o+l+e+\w*)\b/i;
+async function opReview(env, car, text) {
+  if (OP_BAD.test(text)) return { status: 'rejected', reason: 'No links, emails, phone numbers or VINs, please.' };
+  if (OP_SWEAR.test(text)) return { status: 'rejected', reason: 'Please keep it clean: no swearing.' };
+  if (!env.AI) return { status: 'pending', reason: '' };
+  try {
+    const g = await env.AI.run('@cf/meta/llama-guard-3-8b', { messages: [{ role: 'user', content: text }] });
+    const gr = typeof g?.response === 'string' ? g.response : JSON.stringify(g?.response || '');
+    if (/unsafe/i.test(gr) || g?.response?.safe === false) return { status: 'rejected', reason: 'It didn\u2019t pass the safety check.' };
+    const sys = `You moderate short opinions that visitors post about cars on a car reliability website. The page is about the ${car}. Approve only if ALL are true: it is a genuine opinion or experience about this car (or its brand, its model years, or cars like it); it is mostly English; no hate, harassment, threats, sexual content or slurs; no personal information about anyone (private names, phone, email, address, license plate, VIN); no ads, promo codes, links or spam; not gibberish or a test message; it does not accuse a named person of a crime. Negative opinions about cars, brands, dealers and repair shops are fine. Reply with JSON only: {"ok": true or false, "reason": "short reason for the visitor"}`;
+    const r = await env.AI.run('@cf/meta/llama-3.1-8b-instruct-fast', { messages: [{ role: 'system', content: sys }, { role: 'user', content: text }], max_tokens: 80, temperature: 0 });
+    const resp = typeof r?.response === 'string' ? r.response : JSON.stringify(r?.response || '');
+    const m = resp.match(/\{[\s\S]*\}/); let v = null; try { v = m ? JSON.parse(m[0]) : null; } catch (e) { v = null; }
+    if (!v || typeof v.ok !== 'boolean') return { status: 'pending', reason: '' };
+    return v.ok ? { status: 'approved', reason: '' } : { status: 'rejected', reason: String(v.reason || 'It didn\u2019t pass review.').slice(0, 140) };
+  } catch (e) { return { status: 'pending', reason: '' }; }
+}
+const OP_TABLE = "CREATE TABLE IF NOT EXISTS opinions (id INTEGER PRIMARY KEY AUTOINCREMENT, ts INTEGER, day TEXT, fid TEXT, car TEXT, year INTEGER, kind TEXT, name TEXT, text TEXT, buy TEXT, status TEXT, reason TEXT, ih TEXT, ch TEXT)";
+const opPublic = r => ({ id: r.id, ts: r.ts, year: r.year || null, kind: r.kind, name: r.name || '', text: r.text, buy: r.buy || '' });
+
 export default {
   async fetch(req, env, ctx) {
     const o = req.headers.get('Origin') || '', url = new URL(req.url);
     if (req.method === 'OPTIONS') return new Response(null, { headers: cors(o) });
+    if (req.method === 'GET' && url.pathname === '/ops_all') {   // 11-18: approved opinions for the static build (build.py bakes them into the car pages)
+      await env.DB.prepare(OP_TABLE).run();
+      const { results } = await env.DB.prepare("SELECT * FROM opinions WHERE status = 'approved' ORDER BY ts DESC LIMIT 5000").all();
+      const out = {}; for (const r of results) (out[r.fid] ||= []).push(opPublic(r));
+      return new Response(JSON.stringify(out), { headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' } });
+    }
     if (!ORIGINS.includes(o)) return json(o, { error: 'origin' }, 403);
     const fidOk = s => typeof s === 'string' && /^[a-z0-9/-]{2,40}$/.test(s), yOk = y => Number.isInteger(y) && y >= 1990 && y <= 2030;
     if (req.method === 'GET' && url.pathname === '/r') {
@@ -152,6 +185,47 @@ export default {
       if (ctx && ctx.waitUntil) ctx.waitUntil(m); else await m;
       return json(o, { ok: true });
     }
+    if (req.method === 'GET' && url.pathname === '/ops') {
+      const fid = url.searchParams.get('fid'); if (!fidOk(fid)) return json(o, { error: 'bad' }, 400);
+      await env.DB.prepare(OP_TABLE).run();
+      const { results } = await env.DB.prepare("SELECT * FROM opinions WHERE fid = ? AND status = 'approved' ORDER BY ts DESC LIMIT 60").bind(fid).all();
+      return json(o, { ops: results.map(opPublic) });
+    }
+    if (req.method === 'POST' && url.pathname === '/op') {
+      let b; try { b = await req.json(); } catch { return json(o, { error: 'bad' }, 400); }
+      if (b.hp) return json(o, { ok: true, status: 'pending' });                                  // honeypot: only bots fill it in
+      const str = (v, n) => typeof v === 'string' ? v.replace(/\s+/g, ' ').trim().slice(0, n) : '';
+      const fid = b.fid, car = str(b.car, 60), text = typeof b.text === 'string' ? b.text.replace(/[ \t]+/g, ' ').replace(/\n{3,}/g, '\n\n').trim() : '';
+      const year = b.year == null || b.year === '' ? null : +b.year, kind = OP_KINDS[b.kind] ? b.kind : 'opinion', buy = b.buy === 'yes' || b.buy === 'no' ? b.buy : '';
+      const name = b.anon ? '' : str(b.name, 30);
+      if (!fidOk(fid) || !car || (year !== null && !yOk(year))) return json(o, { error: 'bad' }, 400);
+      if (text.length < 20 || text.length > 800) return json(o, { error: 'length' }, 400);
+      if (name && !/^[\p{L}][\p{L} .'-]{1,29}$/u.test(name)) return json(o, { error: 'name' }, 400);
+      const raw = req.headers.get('CF-Connecting-IP') || '', org = String(req.cf?.asOrganization || '');
+      if (HOSTING.test(org) || HOSTING_ASN.has(+req.cf?.asn)) return json(o, { error: 'vpn' }, 403);
+      if (env.FEEDBACK_RL && !(await env.FEEDBACK_RL.limit({ key: 'op:' + raw })).success) return json(o, { error: 'limit' }, 429);
+      if (env.TURNSTILE_SECRET) {
+        const fd = new FormData(); fd.append('secret', env.TURNSTILE_SECRET); fd.append('response', String(b.t || '')); fd.append('remoteip', raw);
+        const ok = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', { method: 'POST', body: fd }).then(r => r.json()).then(j => j.success).catch(() => false);
+        if (!ok) return json(o, { error: 'human' }, 403);
+      }
+      const ip = raw.includes(':') ? raw.split(':').slice(0, 4).join(':') + '::/64' : raw, salt = env.SALT || 'lemon-survey-v1', day = new Date().toISOString().slice(0, 10);
+      const hx = async t => [...new Uint8Array(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(t)))].slice(0, 12).map(x => x.toString(16).padStart(2, '0')).join('');
+      const ih = await hx(`${ip}|${day}|${salt}|op`), ch = await hx(`${ip}|${fid}|${Math.floor(Date.now() / (30 * 864e5))}|${salt}|opcar`);
+      await env.DB.prepare(OP_TABLE).run();
+      const [r1, r2, r3] = await env.DB.batch([
+        env.DB.prepare('SELECT COUNT(*) n FROM opinions WHERE ih = ? AND day = ?').bind(ih, day),
+        env.DB.prepare("SELECT COUNT(*) n FROM opinions WHERE ch = ? AND status != 'rejected'").bind(ch),
+        env.DB.prepare('SELECT COUNT(*) n FROM opinions WHERE day = ?').bind(day)]);
+      if (r1.results[0].n >= 10) return json(o, { error: 'day' }, 429);
+      if (r2.results[0].n >= 1) return json(o, { error: 'car' }, 429);
+      if (r3.results[0].n >= 300) return json(o, { error: 'limit' }, 429);
+      const v = await opReview(env, car, text);
+      const ins = await env.DB.prepare('INSERT INTO opinions (ts, day, fid, car, year, kind, name, text, buy, status, reason, ih, ch) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)')
+        .bind(Date.now(), day, fid, car, year, kind, name, text, buy, v.status, v.reason, ih, ch).run();
+      const id = ins.meta?.last_row_id;
+      return json(o, { ok: true, status: v.status, reason: v.reason, op: v.status === 'approved' ? { id, ts: Date.now(), year, kind, name, text, buy } : null });
+    }
     if (req.method === 'POST' && url.pathname === '/a') {
       let b; try { b = await req.json(); } catch { return json(o, { error: 'bad' }, 400); }
       const q = Q[b.qid]; if (!q || !q.a.includes(b.a)) return json(o, { error: 'bad' }, 400);
@@ -186,5 +260,10 @@ export default {
       return json(o, { counts: await counts(env, b.qid, b.fid, b.year) });
     }
     return json(o, { error: 'not found' }, 404);
+  },
+  async scheduled(ev, env, ctx) {   // 11-18: opinions that waited for the AI check (status pending) get reviewed again
+    await env.DB.prepare(OP_TABLE).run();
+    const { results } = await env.DB.prepare("SELECT id, car, text FROM opinions WHERE status = 'pending' ORDER BY ts LIMIT 20").all();
+    for (const r of results) { const v = await opReview(env, r.car, r.text); if (v.status !== 'pending') await env.DB.prepare('UPDATE opinions SET status = ?, reason = ? WHERE id = ?').bind(v.status, v.reason, r.id).run(); }
   }
 };

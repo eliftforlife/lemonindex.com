@@ -1,5 +1,5 @@
 /* Recall alert signup (11-14, growth plan 4a; assets/ralert.js). Own prefix: rla-. Apple-calm neutrals like the feedback box. */
-.rla { margin: 22px 0 6px; min-height: 132px; }
+.rla { margin: 22px 0 6px; min-height: 68px; }
 .rla-f { display: flex; gap: 14px; align-items: flex-start; background: #f5f5f7; border-radius: 18px; padding: 18px 18px 16px; max-width: 640px; box-sizing: border-box; }
 .rla-ic { flex: none; width: 40px; height: 40px; border-radius: 50%; background: #fff; color: #1d1d1f; display: grid; place-items: center; box-shadow: 0 1px 2px rgba(0,0,0,.06); }
 .rla-b { flex: 1; min-width: 0; }
@@ -39,3 +39,14 @@
 .rla-cy { padding: 7px 28px 7px 10px; font-size: 15px; }
 .rla-nc, .rla-none { margin: 8px 0 0; font-size: 14px; line-height: 1.45; color: #6e6e73; }
 .rla-miss { display: block; margin-top: 6px; font-size: 14px; color: #6e6e73; }
+
+/* 11-18 (Elijah): collapsed to one button: AI bell, the line, an arrow; tap drops the form down */
+.rla-tg { display: flex; align-items: center; gap: 12px; width: 100%; max-width: 640px; box-sizing: border-box; padding: 10px 16px 10px 10px; background: #f5f5f7; border: 0; border-radius: 18px; font: inherit; color: #1d1d1f; text-align: left; cursor: pointer; }
+.rla-tg img { flex: none; width: 44px; height: 44px; object-fit: contain; }
+.rla-tg span { flex: 1; min-width: 0; text-align: left; font-size: 16px; font-weight: 700; line-height: 1.3; letter-spacing: -.01em; }
+.rla-tg .rla-ar { flex: none; color: #6e6e73; transition: transform .2s ease; }
+.rla-tg:hover { background: #ececf0; } .rla-tg:focus-visible { outline: 3px solid var(--lemon, #ffd400); outline-offset: 2px; }
+.rla-col.rla-open .rla-ar { transform: rotate(180deg); }
+.rla-col .rla-f { display: none; }
+.rla-col.rla-open .rla-f { display: flex; margin-top: 8px; }
+.rla-col .rla-f .rla-ic, .rla-col .rla-f .rla-h { display: none; }

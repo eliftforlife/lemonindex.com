@@ -117,6 +117,15 @@
 <div class="rla-hpw" aria-hidden="true"><label for="${id}w">Leave this empty</label><input id="${id}w" class="rla-hp" name="website" tabindex="-1" autocomplete="off"></div><div class="rla-ts"></div>
 <p class="rla-fine">Free. We check NHTSA&#39;s recall list every week and email you only when a new recall is added. You confirm by email first; every email has a one-tap unsubscribe. <a href="/privacy/#recall-alerts">Privacy</a></p></div>
 <p class="rla-st" role="status" aria-live="polite" tabindex="-1"></p></div></form>`;
+    // 11-18 (Elijah): on car pages the box starts as one small button (AI bell, the line, an arrow); a tap drops the form down
+    if (!el.closest('.rla-page')) {
+      const hh = el.querySelector('.rla-h'), tg = document.createElement('button');
+      tg.type = 'button'; tg.className = 'rla-tg'; tg.setAttribute('aria-expanded', 'false');
+      tg.innerHTML = `<img src="/assets/icons/bell.webp" alt="" width="44" height="44" decoding="async"><span>${hh.innerHTML}</span><svg class="rla-ar" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>`;
+      el.prepend(tg); el.classList.add('rla-col');
+      tg.addEventListener('click', () => { const on = !el.classList.contains('rla-open'); el.classList.toggle('rla-open', on); tg.setAttribute('aria-expanded', String(on));
+        if (on) { const e1 = el.querySelector('.rla-e'); if (e1) e1.focus({ preventScroll: true }); } });
+    }
     const f = el.querySelector('form'), em = f.querySelector('.rla-e'), btn = f.querySelector('.rla-go'), st = f.querySelector('.rla-st'), sel = f.querySelector('.rla-y:not(.rla-m)'), msel = f.querySelector('.rla-m'), tsBox = f.querySelector('.rla-ts');
     const say = (t, bad) => { st.innerHTML = t; st.classList.toggle('bad', !!bad); };
     let tok = '', wid = null, ts = null;
