@@ -51,9 +51,9 @@ if RCP == 'hooks':
         ls = RC_LINKS(fid)
         if not ls: return ''
         nm = FY[fid]['name']
-        return (f'<nav class="n3-row rcp-row" aria-label="Repair costs">{EU_CSS if "EU_CSS" in globals() else ""}<p class="n3-h">What {E(nm)} owners paid for repairs</p><div class="n3-cs">'
+        return '<div class="cpl cpl-one">' + PILL('/assets/icons/wrench.webp', 'What owners paid for repairs', f'{E(RC_Q(ls[0][1]))} tops the list · {len(ls)} repairs', (f'<nav class="n3-row rcp-row" aria-label="Repair costs">{EU_CSS if "EU_CSS" in globals() else ""}<div class="n3-cs">'
                 + ''.join(f'<a class="n3-c" href="{u}"><b>{E(RC_Q(s))}</b><small>{n} owner reports</small></a>' for u, s, n in ls[:8])
-                + '</div>' + (('<p class="n3-n">More: ' + ' · '.join(f'<a href="{u}">{E(RC_LOW(RC_Q(s)))}</a> ({n})' for u, s, n in ls[8:]) + '</p>') if ls[8:] else '') + '<p class="n3-n">Repair bills owners named in complaints to NHTSA and said out loud in YouTube videos. <a href="/repair-cost/">Every repair cost →</a></p></nav>')
+                + '</div>' + (('<p class="n3-n">More: ' + ' · '.join(f'<a href="{u}">{E(RC_LOW(RC_Q(s)))}</a> ({n})' for u, s, n in ls[8:]) + '</p>') if ls[8:] else '') + '<p class="n3-n">Repair bills owners named in complaints to NHTSA and said out loud in YouTube videos. <a href="/repair-cost/">Every repair cost →</a></p></nav>')) + '</div>'
 
 if RCP == 'pages':
     os.makedirs(os.path.join(OUT, 'repair-cost'), exist_ok=True)

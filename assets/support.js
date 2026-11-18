@@ -82,8 +82,8 @@
     const yt = !!document.querySelector('#diy');
     const card = document.createElement('aside');
     card.className = 'supc'; card.setAttribute('aria-label', 'Support the Lemon Index');
-    card.innerHTML = `<img src="/assets/icon-64.png" alt="" width="40" height="40"><div class="supc-t"><b>Did this help?</b><span>Free, with no ads. A $5 coffee keeps it that way.</span></div>
-<div class="supc-b"><a class="btn supc-go" href="${LINKS[5]}" target="_blank" rel="noopener">Buy us a $5 coffee</a><button type="button" class="supc-o">Other amount</button></div>`;
+    card.innerHTML = `<img src="/assets/icon-64.png" alt="" width="40" height="40"><div class="supc-t"><b>Did this help?</b><span>Keeps Lemon free, with no ads. <button type="button" class="supc-o">Other amount</button></span></div>
+<a class="supc-go" href="${LINKS[5]}" target="_blank" rel="noopener">$5 coffee</a>`;   // 11-18 (Elijah): one compact row
     spot.insertAdjacentElement('afterend', card);
     card.querySelector('.supc-go').addEventListener('click', () => { mark(); set(PAID, String(Date.now())); });
     card.querySelector('.supc-o').addEventListener('click', show);

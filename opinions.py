@@ -33,7 +33,7 @@ def _op_box(fid, y=None):
     return (f'{_OP_CSS}<section class="yc opn" id="opinions" data-fid="{E(fid)}" data-car="{E(name)}" data-y="{y or ""}" data-ts="{_OP_TS}">'
             f'<h2 class="opn-h"{"" if n else " hidden"}>What owners say <span class="h2s">{n} opinion{"s" * (n != 1)} from Lemon Index readers about the {E(name)}. Checked before they show; not part of the score.</span></h2>'
             f'<div class="opn-l">{items}</div>'
-            f'<div class="opn-share"><button class="btn opn-open" type="button">Own a {E(car)}? Share your take</button><p class="opn-msg" hidden aria-live="polite"></p></div>'
+            f'<div class="opn-share cpl"><button class="cpl-a opn-open" type="button">{PILL_SUM("/assets/icons/opinion.webp", f"Own a {E(car)}? Share your take", "Anonymous is fine. Checked before it shows.")}{PILL_GO}</button><p class="opn-msg" hidden aria-live="polite"></p></div>'
             f'<form class="opn-f" hidden novalidate><label for="opn-t-{E(fid.replace("/", "-"))}"><b>Your opinion of the {E(car)}</b></label>'
             f'<textarea id="opn-t-{E(fid.replace("/", "-"))}" name="text" maxlength="800" required placeholder="What has it been like? Problems, repairs, what you love, what you&#39;d tell a buyer."></textarea><span class="opn-c">0/800</span>'
             f'<div class="opn-row"><select name="kind" aria-label="How you know this car"><option value="owner">I own one</option><option value="former">I used to own one</option><option value="drove">I drove one</option><option value="opinion">Just an opinion</option></select>'

@@ -41,10 +41,10 @@ if CMP == 'hooks':
         nm = FY[fid]['name']
         chip = lambda x: (f'<a class="n3-c" href="{CM_URL(x["code"], fid)}"><b>{x["code"]}</b><small>' + (E(_cm_short((_cm_mean(x["code"], x["mk"]) or {}).get('t', ''))) + ' · ' if _cm_mean(x['code'], x['mk']) else '')
                           + f'{x["n"]} complaints</small></a>')
-        return ((EU_CSS if 'EU_CSS' in globals() else '') + f'<nav class="n3-row cmx-row" aria-label="Engine codes {E(nm)} owners report" data-mc="{",".join(x["code"] for x in xs)}" data-mf="{E(CM_MS(fid))}" data-mn="{E(nm)}">'
-                f'<p class="n3-h">Engine codes {E(nm)} owners report most</p><div class="n3-cs">' + ''.join(chip(x) for x in xs[:8]) + '</div>'
+        return '<div class="cpl cpl-one">' + PILL('/assets/icons/engine.webp', 'Engine codes owners report most', f'{xs[0]["code"]} is reported most · {len(xs)} code{"s" * (len(xs) != 1)}', ((EU_CSS if 'EU_CSS' in globals() else '') + f'<nav class="n3-row cmx-row" aria-label="Engine codes {E(nm)} owners report" data-mc="{",".join(x["code"] for x in xs)}" data-mf="{E(CM_MS(fid))}" data-mn="{E(nm)}">'
+                f'<div class="n3-cs">' + ''.join(chip(x) for x in xs[:8]) + '</div>'
                 + (('<p class="n3-n">More: ' + ' · '.join(f'<a href="{CM_URL(x["code"], fid)}">{x["code"]}</a> ({x["n"]})' for x in xs[8:]) + '</p>') if xs[8:] else '')
-                + f'<p class="n3-n">Codes named in {CM_MIN}+ owner complaints to NHTSA about the {E(nm)}. <a href="/check-engine-light/">Every engine code →</a></p></nav>')
+                + f'<p class="n3-n">Codes named in {CM_MIN}+ owner complaints to NHTSA about the {E(nm)}. <a href="/check-engine-light/">Every engine code →</a></p></nav>')) + '</div>'
 
 if CMP == 'pages':
     CM_URLS = []; CM_NOINDEX = []

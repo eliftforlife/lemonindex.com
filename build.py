@@ -210,6 +210,18 @@ def explorer():
 def share_btn(text, label='Share ↗'):
     """11-09 'send this to a friend' button (assets/share.js; native share sheet on phones, panel elsewhere)."""
     return f'<button type="button" class="btn btn-ghost" data-share="{E(text)}">{label}</button>'
+# 11-18 (Elijah: "do the same thing to all these"): small tap-to-open boxes (icon, one line, arrow) for the bits that used to be loose text:
+# the end-of-page share / data credit / feedback lines, the repair-cost and engine-code rows, the year-chart notes. Styles: assets/cpl.css.
+PILL_AR = ('<svg class="cpl-ar" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" '
+           'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>')
+PILL_GO = ('<svg class="cpl-ar" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" '
+           'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>')
+def PILL_SUM(img, title, sub=''):
+    return (f'<img src="{img}" alt="" width="44" height="44" loading="lazy" decoding="async"><span><b>{title}</b>'
+            + (f'<small>{sub}</small>' if sub else '') + '</span>')
+def PILL(img, title, sub='', body='', cls=''):
+    """a closed box: the summary row (icon, title, small line, arrow) opens `body` in a white card under it"""
+    return f'<details{f" class={chr(34)}{cls}{chr(34)}" if cls else ""}><summary>{PILL_SUM(img, title, sub)}{PILL_AR}</summary><div class="cpl-b">{body}</div></details>'
 def share_line(text, ask='Know someone shopping for a used car?', label='Send them this ↗'):
     return f'<p class="shline">{ask} <button type="button" class="shl" data-share="{E(text)}">{label}</button></p>'
 NOFB = ('/vote/', '/terms/', '/privacy/', '/refunds/', '/contact/', '/thanks/', '/alerts/')   # legal pages and pages that are already a form
@@ -220,17 +232,31 @@ def feedback_html(q, placeholder='', note=''):
             '<label class="fb-l" for="fb-e">Email (optional, only if you want a reply)</label><input id="fb-e" name="email" type="email" maxlength="200" autocomplete="email">'
             '<div class="fb-hpw" aria-hidden="true"><label for="fb-w">Leave this empty</label><input id="fb-w" class="fb-hp" name="website" tabindex="-1" autocomplete="off"></div>'
             '<button class="fb-go" type="submit">Send</button></div><p class="fb-st" role="status" aria-live="polite" tabindex="-1"></p></form></section>')
-def end_block(path, upd, shl):
-    """11-10 desktop pass (Elijah: the share line, Updated, the credit line and the footer were 4 separately centered bits): one end-of-page
-    block in the content column: the share line on the left, Updated + credit as one small line under it."""
-    meta = ' · '.join(x for x in (upd, 'Free to use with credit: <q>Source: The Lemon Index (lemonindex.com)</q>. <a href="/data/">Get the data</a>' if path.startswith(('/cars/', '/stats/', '/best', '/electric/', '/engines/', '/check-engine-light/', '/symptoms/')) else '') if x)
-    if not (shl or meta): return ''
-    return f'<div class="pend">{shl.replace("<p class=" + chr(34) + "shline" + chr(34), "<p class=" + chr(34) + "shline pend-s" + chr(34), 1)}' + (f'<p class="pend-m">{meta}</p>' if meta else '') + '</div>'
+def end_block(path, upd, shl, fb=''):
+    """11-10 desktop pass: one end-of-page block in the content column. 11-18 (Elijah): its parts are small boxes:
+    share (one tap opens the share sheet), the data credit (with the Updated date), and the folded feedback form."""
+    items = []
+    m = re.search(r'<p class="shline">(.*?)\s*<button([^>]*)>(.*?)</button>\s*</p>', shl or '', re.S)   # attribute order varies (tabbed.py re-serializes)
+    d = re.search(r'data-share="([^"]*)"', m.group(2)) if m else None
+    if m and d:
+        ask, data, label = m.group(1), d.group(1), re.sub(r'\s*↗$', '', m.group(3))
+        items.append(f'<button type="button" class="cpl-a" data-share="{data}">{PILL_SUM("/assets/icons/share.webp", ask.strip(), label + " page" if label == "Send them this" else label)}{PILL_GO}</button>')
+    elif shl: items.append(shl)
+    if path.startswith(('/cars/', '/stats/', '/best', '/electric/', '/engines/', '/check-engine-light/', '/symptoms/')):
+        items.append(PILL('/assets/icons/data.webp', 'Use this data free', upd or 'Credit The Lemon Index',
+                          '<p class="yc-cap">Free to use with credit: <q>Source: The Lemon Index (lemonindex.com)</q>. <a href="/data/">Get the data</a> · <a href="/images/">Free images</a></p>'))
+    elif upd: items.append(f'<p class="pend-m">{upd}</p>')
+    if fb: items.append(fb)
+    if not items: return ''
+    return f'<div class="pend"><div class="cpl">{"".join(items)}</div></div>'
+def ask_fb(path):
+    """11-09 feedback box, folded (11-10) into a box at the end of the page (11-18)."""
+    if path in NOFB: return ''
+    return PILL('/assets/icons/talk.webp', 'Spot a mistake or have an idea?', 'Tell us. We read every message.',
+                feedback_html('How can we make Lemon Index better?', 'A car we should add, something confusing, a mistake you spotted…'), 'cpl-fb')
 def ask_html(path):
-    """Bottom of every page: 11-09 the one-tap survey (survey.js) is gone (Elijah: "remove the bottom questions and instead just have a feedback box")."""
-    fb = '' if path in NOFB else feedback_html('How can we make Lemon Index better?', 'A car we should add, something confusing, a mistake you spotted…')
-    if fb: fb = f'<details class="fbx"><summary>Spot a mistake or have an idea? Tell us</summary>{fb}</details>'   # 11-10 desktop pass: folded on every page
-    return ((fb + '<script src="/assets/feedback.js?v=1109" defer></script>' if fb else '')
+    """Bottom of every page: the scripts for the feedback box (in end_block since 11-18) and the share / 3D bars / loan widgets."""
+    return (('' if path in NOFB else '<script src="/assets/feedback.js?v=1109" defer></script>')
             + '<script src="/assets/share.js?v=1112d" defer></script><script src="/assets/bars3d.js?v=1103" defer></script><script src="/assets/loan.js?v=1103" defer></script>')
 def fit_title(t):
     if len(t) > 65 and t.endswith(' | The Lemon Index'): t = t[:-len(' | The Lemon Index')] + ' | Lemon Index'
@@ -464,6 +490,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
     _lxm = re.fullmatch(r'/cars/(.+?)/(\d{4})/', path)
     if _lxm and 'LX_HTML' in globals(): body += LX_HTML(_lxm.group(1), int(_lxm.group(2)))   # 11-12 related links (after the date hash too)
     if 'RA_HOOK' in globals(): body = RA_HOOK(path, body)
+    if 'ENG_HOOK' in globals(): body = ENG_HOOK(path, body)   # 11-18 engine pages: compact boxes (engine_pills.py), after the date hash
     if 'OP_HOOK' in globals(): body = OP_HOOK(path, body)   # 11-18 owner opinions box (opinions.py)   # 11-14 growth 4a: recall alert signup (after the date hash, so page dates don't move)
     _shl = ''
     _sm = list(re.finditer(r'<p class="shline">.*?</p>', body, re.S))
@@ -480,15 +507,14 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' '{DB_HASH}' https://static.cloudflareinsights.com https://challenges.cloudflare.com https://www.googletagmanager.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; frame-src https://challenges.cloudflare.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cloudflareinsights.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://vpic.nhtsa.dot.gov https://api.nhtsa.gov https://lemon-survey.elift08.workers.dev https://lemon-alerts.elift08.workers.dev https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="google-adsense-account" content="{ADS}"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/lxs.css?v={LXS_V}">
-<link rel="stylesheet" href="/assets/site.css?v=1117-soonyt"><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
+<link rel="stylesheet" href="/assets/site.css?v=1117-soonyt"><link rel="stylesheet" href="/assets/cpl.css?v=2"><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
 <body>{'' if path.startswith('/thanks/') else DONBAR}{gh_header(path)}
-<main>{body}{end_block(path, _upd, _shl)}{'' if path == '/vote/' else ask_html(path)}</main>
-<footer class="foot f2"><div class="f2-in"><div class="f2-brand"><a class="f2-logo" href="/"><img src="/assets/icon-64.png" alt="" width="28" height="28">The Lemon Index</a>
-<p>Car reliability from owner complaints to the U.S. government, per car sold. Free.</p><div class="f2-soc">{F2_SOC}</div></div>
+<main>{body}{end_block(path, _upd, _shl, '' if path == '/vote/' else ask_fb(path))}{'' if path == '/vote/' else ask_html(path)}</main>
+<footer class="foot f2"><div class="f2-in"><div class="f2-brand"><a class="f2-logo" href="/"><img src="/assets/icon-64.png" alt="" width="40" height="40"><span><b>The Lemon Index</b><small>Car reliability from owner complaints, per car sold. Free.</small></span></a><div class="f2-soc">{F2_SOC}</div></div>
 <nav class="f2-col" aria-label="Explore"><p class="f2-h">Explore</p><a href="/compare/">Compare cars</a><a href="/best/">Best cars</a><a href="/rankings/">Every car ranked</a><a href="/brands/">Brands</a><a href="/engines/">Every engine</a><a href="/electric/">Electric cars</a><a href="/stats/car-complaints/">Statistics</a><a href="/car-loan-rates/">Car loan rates</a></nav>
 <nav class="f2-col" aria-label="Tools and data"><p class="f2-h">Tools and data</p><a href="/vin/">VIN check</a><a href="/recalls/">Recall check</a><a href="/check-engine-light/">Engine codes</a><a href="/symptoms/">Car symptoms</a><a href="/uk/">UK MOT pass rates</a><a href="/method/">How the index works</a><a href="/data/">Free data</a><a href="/images/">Free images</a><a href="/vote/">Vote</a></nav>
 <nav class="f2-col" aria-label="Support"><p class="f2-h">Support</p><button class="supl" type="button">Keep Lemon ad-free</button><a href="/about/">About</a><a href="/press/">Press</a><a href="/contact/">Contact</a><a href="{YT}?sub_confirmation=1" rel="noopener">Subscribe on YouTube</a></nav></div>
-<div class="f2-bot"><span>© {TODAY[:4]} The Lemon Index</span><a href="/terms/">Terms</a><a href="/privacy/">Privacy</a><a href="/refunds/">Refunds</a><span class="f2-dis">Built from public NHTSA complaint data and published U.S. sales figures. Not affiliated with any automaker. Not a repair-cost or safety rating.</span></div></footer><script src="/assets/explorer.js?v=1112d" defer></script><script src="/assets/support.js?v=1111d" defer></script><script src="/assets/imginfo.js?v=2" defer></script><script src="/assets/lookup.js?v={LXS_V}" defer></script>{beacon}</body></html>'''
+<div class="f2-bot"><span>© {TODAY[:4]} The Lemon Index</span><a href="/terms/">Terms</a><a href="/privacy/">Privacy</a><a href="/refunds/">Refunds</a><span class="f2-dis">Built from public NHTSA complaint data and published U.S. sales figures. Not affiliated with any automaker. Not a repair-cost or safety rating.</span></div></footer><script src="/assets/explorer.js?v=1112d" defer></script><script src="/assets/support.js?v=1118" defer></script><script src="/assets/imginfo.js?v=2" defer></script><script src="/assets/lookup.js?v={LXS_V}" defer></script>{beacon}</body></html>'''
     doc = _ii_stable(doc)
     LG[path] = (set(_LGHREF.findall(doc)), bool(_LGNOIX.search(doc)), url)   # 11-12 link graph (linkgraph.py, end of build)
     f = os.path.join(OUT, path.strip('/'), 'index.html') if path.endswith('/') else os.path.join(OUT, path.strip('/'))
@@ -1133,6 +1159,34 @@ def BARS_LEG(f, yt=0):
     return ('<p class="yc-cap lfa-leg">Newest year first. Red = worse than average, gray = about average'
             + (', too new (2023+: a partial score, marked &ldquo;partial&rdquo;)' if part else '') + ' or too few complaints to score.'
             + (f' <b>#1, #2…</b> = that year&#39;s YouTube rank among the {yt} {E(f["name"])} years with enough videos (#1 = the year owners and reviewers talk about most positively). It is not a reliability rank.' if yt else '') + '</p>')
+# 11-18 (Elijah: "compact this into one or a few little compact boxes ... like the recall one ... a drop down for older years with an image of an
+# older year, a YT icon that says how YT ranks work, one for embed"): under the year chart, the older-years list, the legend + notes, the
+# YouTube-rank note and Embed are small tap-to-open boxes (icon, one line, arrow) instead of loose paragraphs. Styles: assets/cpl.css.
+_CPL_CSS = ''   # cpl.css is in every page's head since 11-18
+_CPL_AR = ('<svg class="cpl-ar" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" '
+           'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>')
+_CPL_OLD = re.compile(r'<details class="yrs-more"><summary>Show (\d+) older years \((\d{4})–(\d{4})[^<]*</summary>(.*?)</details>', re.S)
+_CPL_LEG = re.compile(r'<p class="yc-cap lfa-leg">.*?</p>', re.S)
+def _cpl_sum(img, title, sub=''):
+    return (f'<summary><img src="{img}" alt="" width="44" height="44" loading="lazy" decoding="async"><span><b>{title}</b>'
+            + (f'<small>{sub}</small>' if sub else '') + f'</span>{_CPL_AR}</summary>')
+def CHART_PILLS(f, bars, emx='', notes=''):
+    """bars = ybars() output, emx = EMX_BTN() output, notes = extra <p class="yc-cap"> lines. Returns the bars + the box stack."""
+    old = _CPL_OLD.search(bars); leg = _CPL_LEG.search(bars); out = []
+    if old:
+        bars = bars.replace(old.group(0), '', 1); n, a, b, rows = old.groups()
+        ys = [y for y in range(int(a), int(b) + 1) if YSL.ai_src(f['id'], y)]
+        im = rsmall(YSL.ai_src(f['id'], ys[len(ys) // 2])) if ys else '/assets/icons/chart.webp'
+        out.append(f'<details class="yrs-more cpl-y">{_cpl_sum(im, f"Show {n} older years", f"{a}–{b} · YouTube reviews only")}{rows}</details>')
+    if leg: bars = bars.replace(leg.group(0), '', 1)
+    read = (leg.group(0) if leg else '') + (notes or '')
+    if read.strip(): out.append(f'<details class="cpl-r">{_cpl_sum("/assets/icons/chart.webp", "How to read this chart", "Colors, ranks and what counts")}<div class="cpl-b">{read}</div></details>')
+    yn = yt_note(f)
+    if yn:
+        sc = YTS.get(f['id']) or {}; nv = round(sum(s.get('videos') or 0 for s in sc.values())); rk = yt_rank_map(f); fav = min(rk, key=rk.get) if rk else None
+        out.append(f'<details class="cpl-t">{_cpl_sum("/assets/icons/youtube.webp", "How the YouTube ranks work", f"{nv:,} videos read" + (f" · favorite year: {fav}" if fav else ""))}<div class="cpl-b">{yn}</div></details>')
+    if emx: out.append(emx.replace('<summary>Embed this chart</summary>', _cpl_sum('/assets/icons/embed.webp', 'Embed this chart', 'Free for your site, credit built in'), 1))
+    return bars + (f'{_CPL_CSS}<div class="cpl">{"".join(out)}</div>' if out else '')
 LFA_JS = '<script src="/assets/lfa.js?v=2" defer></script>'   # 11-12 r2: year lists open on the reader's year, match-up "your years"
 def ybars(f, cur=None):
     out = _ybars(f, cur)
@@ -1147,6 +1201,7 @@ def _ybars(f, cur=None):
 # 10-31 idea 5: "X vs Y" pages for the best-selling rivals in each type (people search "camry vs accord reliability").
 FY = {f['id']: f for f in YEARS}
 exec(open('opinions.py', encoding='utf-8').read())   # 11-18 owner opinions box (OP_HOOK in page())
+exec(open('engine_pills.py', encoding='utf-8').read())   # 11-18 engine pages: long sections fold into boxes (ENG_HOOK in page())
 exec(open('recall_alerts.py', encoding='utf-8').read())   # 11-14 growth 4a: recall alert signup box (RA_HOOK in page()), /alerts/ page, privacy text
 RIVALS = defaultdict(list); PAIRS = []
 for seg, top in (('car', 10), ('suv', 10), ('truck', 7), ('minivan', 5)):
@@ -1671,7 +1726,7 @@ def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
 {f'<p class="yc-note">{SN[f["id"]][1]}</p>' if f["id"] in SN else ""}{GROUP_NOTE(f, y)}{PIN_HTML(f['id'], y)}{n2_hero}
 <nav class="modes" aria-label="Page mode"><a href="{CARU(f, y)}" aria-current="page">Normal</a><a href="{CARU(f, y)}advanced/">Advanced</a></nav><nav class="yswitch" aria-label="Model years"><div class="yseg">{seg}<a class="yall" href="{CARU(f)}">All years</a></div><div class="yact"><a class="btn btn-ghost" href="/compare/?c={f['id']}-{y}">Compare</a><button type="button" class="btn btn-ghost yshare" data-share="{E(share_txt)}">Share</button></div></nav></div>{f'<div class="ph-v">{ph}</div>' if ph else ''}</section>
 {buy}{N2_SIMILAR(f, y)}{top_fails_html(f, y, nm)}{mil}{fix_sell_html(f, y, nm)}{ask}<div class="yts">{tiles}</div>{ytfix(f["id"], y)}{sev}{old}
-<section class="yyears noph"><div class="yy-ch"><h2>Every {nm} year. <span class="h2s">{y} is highlighted. Lower is better.</span></h2>{N2_SORT}{ybars(f, y)}{EMX_BTN(f, y)}</div>{ev_note}</section>
+<section class="yyears noph"><div class="yy-ch"><h2>Every {nm} year. <span class="h2s">{y} is highlighted. Lower is better.</span></h2>{N2_SORT}{CHART_PILLS(f, ybars(f, y), EMX_BTN(f, y), ev_note)}</div></section>
 <div class="ygrid">{probs}{timeline(x["miles"], x.get("comps") or [], (x.get("sev") or {}).get("total")) if x.get("miles") else ""}{recs}{(lambda pr: f'<section class="yc">{pr}</section>' if pr else '')(price_html(f["id"], y, f["name"]))}
 {fixes}{invs}{safety}{f'<section class="yc">{crash}{fuel}</section>' if crash or fuel else ''}{YEAR_SPECS_HOOK(f['id'], y)}{words}
 {f'<section class="yc yqa"><h2>Quick answers</h2>' + qa_fold("".join(f"<h3>{E(q)}</h3><p>{a}</p>" for q, a, _ in qa)) + '</section>' if qa else ''}</div>
@@ -1787,7 +1842,7 @@ for f in YEARS:
 <div class="pg mp6"><section class="ph yph6"><div class="yh-t">{N2_CRUMB(f)}{rel_html}{f'<p class="yc-note">{SN[f["id"]][1]}</p>' if f["id"] in SN else ""}{PIN_HTML(f['id'])}
 <div class="yhero">{gauge(c["li"], 190, "All years " + c["years"].replace("-", "–"))}<div class="yverd {verdict(c["li"])[0]}"><p><b>{verdict(c["li"])[1]}.</b> <span>Whole model, {c["years"]}{"" if plain(c["li"]).lower() in verdict(c["li"])[1].lower() else ": " + E(plain(c["li"]))}.</span></p><p class="ybw">Fewest complaints <a class="{'good' if best['li'] <= 110 else ''}" href="{CARU(f, best["y"])}">{best["y"]}</a>{f' · Most complaints <a class="bad" href="{CARU(f, worst["y"])}">{worst["y"]}</a>' if worst and worst['y'] != best['y'] else ''}</p>{N2_RANK(f)}</div></div>
 <p><button type="button" class="btn btn-ghost" data-share="{E(f'Every {snm} year ranked by owner complaints. Fewest: {best["y"]}. Most: {(worst or best)["y"]}. Free report:')}">Share ↗</button></p></div><div class="ph-v">{(YSL.year_slider_html(f['id'], f['name'], {v['y']: round(v['li']) for v in ys if v.get('ok') and v.get('li') is not None}, {y: sc_ for y, sc_ in YSL.yt_scores(f['id']).items() if y in yt_rankable(f, YTS.get(f['id'], {}))}, {v['y'] for v in ys}, start=popular_year(f), best=best['y'], hero=True, mli=c['li'], early={v['y'] for v in ys if v.get('early')}) if YSL.has(f['id']) else (YSL.model_hero_html(f['id'], f['name']) or car_hero(f, ys[-1]["y"])))}{rel_tiles}</div></section>
-<section class="yyears noph" id="years"><div class="yy-ch"><h2>Every year. <span class="h2s">Lower is better. Tap a year for its full report.</span></h2>{N2_SORT}{ybars(f)}{EMX_BTN(f)}</div>{'<p class="yc-cap">Scores before 2010 are rough: fewer owners filed complaints back then.</p>' if ys[0]["y"] < 2010 else ''}{yt_note(f)}{(lambda t: f'<p class="yc-cap">{t}</p>' if t else '')(two_windows(f['id']))}</section>
+<section class="yyears noph" id="years"><div class="yy-ch"><h2>Every year. <span class="h2s">Lower is better. Tap a year for its full report.</span></h2>{N2_SORT}{CHART_PILLS(f, ybars(f), EMX_BTN(f), ('<p class="yc-cap">Scores before 2010 are rough: fewer owners filed complaints back then.</p>' if ys[0]["y"] < 2010 else '') + (lambda t: f'<p class="yc-cap">{t}</p>' if t else '')(two_windows(f['id'])))}</div></section>
 {ytfix("model:" + f["id"])}{picks}{gas_hybrid_html(f)}{SPECS_HOOK(f["id"])}
 {f'<section><h2>Compare the {E(f["name"])}.</h2><div class="mus">{vcards}</div>' + (f'<p class="yc-cap">{vs}</p>' if vs else '') + '</section>' if vcards or vs else N2_CMP(f)}
 {model_qa_html}
