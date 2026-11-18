@@ -1,0 +1,29 @@
+/* 11-18 (Elijah: "compact this into a few little compact boxes ... like the recall one"): the notes under the year chart became small
+   tap-to-open boxes (build.py CHART_PILLS): older years, how to read the chart, how the YouTube ranks work, embed. Prefix cpl-. */
+.cpl { display: grid; gap: 8px; margin: 14px 0 0; max-width: 640px; }
+.cpl > details { background: #f5f5f7; border-radius: 18px; margin: 0; }
+.cpl > details > summary, .cpl > details.yrs-more > summary, .cpl > details.emx > summary {
+  display: flex; align-items: center; gap: 12px; list-style: none; cursor: pointer; margin: 0; padding: 8px 16px 8px 10px; min-height: 60px; box-sizing: border-box;
+  border: 0; border-radius: 18px; background: transparent; color: #1d1d1f; font-size: 16px; font-weight: 400; text-decoration: none; }
+.cpl > details > summary::-webkit-details-marker { display: none; }
+.cpl > details.emx > summary::before { content: none; }
+.cpl > details.yrs-more[open] > summary { display: flex; }
+.cpl > details > summary:hover { background: #ececf0; }
+.cpl > details > summary:focus-visible { outline: 3px solid var(--lemon, #ffd400); outline-offset: 2px; }
+.cpl summary img { flex: none; width: 44px; height: 44px; object-fit: contain; }
+.cpl .cpl-y summary img { width: 60px; height: 40px; margin: 2px -2px; }
+.cpl summary span { flex: 1; min-width: 0; display: grid; gap: 1px; }
+.cpl summary b { font-size: 16px; font-weight: 700; line-height: 1.3; letter-spacing: -.01em; }
+.cpl summary small { font-size: 13.5px; line-height: 1.3; color: #6e6e73; }
+.cpl .cpl-ar { flex: none; color: #6e6e73; transition: transform .2s ease; }
+.cpl > details[open] .cpl-ar { transform: rotate(180deg); }
+/* what opens: a white card inside the gray box */
+.cpl .cpl-b, .cpl .yrs-more > .bars, .cpl .emx-p { background: #fff; border-radius: 14px; margin: 0 8px 8px; padding: 12px 14px; max-width: none; }
+.cpl .yrs-more > .bars { padding: 8px 10px; }
+.cpl .cpl-b .yc-cap { margin: 0; font-size: 14.5px; line-height: 1.5; color: #424245; }
+.cpl .cpl-b .yc-cap + .yc-cap { margin-top: 10px; }
+@media (max-width: 480px) {
+  .cpl > details > summary, .cpl > details.yrs-more > summary, .cpl > details.emx > summary { padding: 8px 12px 8px 8px; gap: 10px; }
+  .cpl summary img { width: 40px; height: 40px; }
+  .cpl .cpl-b, .cpl .yrs-more > .bars, .cpl .emx-p { margin: 0 6px 6px; }
+}
