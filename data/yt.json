@@ -89146,6 +89146,138 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017
+   ],
+   "gen": "2007–2017 Lexus LS",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 20912963,
+   "topics": [
+    {
+     "name": "Brakes & ABS",
+     "views": 120721,
+     "n": 3,
+     "best": {
+      "id": "HulMDywcd50",
+      "title": "How to Replace Front Brake Pads and Turn Rotors on a 2008 Lexus LS460",
+      "channel": "How to Automotive",
+      "views": 59024
+     }
+    },
+    {
+     "name": "Timing chain & engine",
+     "views": 108879,
+     "n": 1,
+     "best": {
+      "id": "E82qCNK0BDM",
+      "title": "Lexus LS 460 2007 2008 2009 GROM VLine install CarPlay Android Auto, car stereo removal guide LEX5LS",
+      "channel": "GROM Audio",
+      "views": 108879
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 86590,
+     "n": 2,
+     "best": {
+      "id": "m6MWVWKpA18",
+      "title": "2015 Lexus ls460 Maintenance / oil life reminder reset",
+      "channel": "Oil Light Reset ",
+      "views": 45042
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 74591,
+     "n": 2,
+     "best": {
+      "id": "qljXnGbYWlU",
+      "title": "How to Change the cabin air filter in a 2006-2017 Lexus LS 460",
+      "channel": "LiquidRetro",
+      "views": 60556
+     }
+    },
+    {
+     "name": "Infotainment, battery & electrical",
+     "views": 57892,
+     "n": 2,
+     "best": {
+      "id": "dP_8aaWvjrU",
+      "title": "How To Replace 2007 - 2012 Lexus LS460 Remote Key Fob Battery - Change Replacement LS 60 Batteries",
+      "channel": "PYR Automotive ",
+      "views": 34591
+     }
+    },
+    {
+     "name": "Steering & suspension",
+     "views": 33951,
+     "n": 2,
+     "best": {
+      "id": "W0BqQD7o_LY",
+      "title": "2009-2012 Lexus LS460 AWD Front Suspension Conversion Kit Installation",
+      "channel": "Strutmasters",
+      "views": 20123
+     }
+    },
+    {
+     "name": "No-start: theft light, key & ignition",
+     "views": 22016,
+     "n": 1,
+     "best": {
+      "id": "7Y7vv8ydr-Q",
+      "title": "2008 LEXUS LS 460 Starting Issues...No Start...Diagnosis...Solved...",
+      "channel": "Peter L",
+      "views": 22016
+     }
+    },
+    {
+     "name": "Spark plugs & ignition coils",
+     "views": 18058,
+     "n": 1,
+     "best": {
+      "id": "zsFOE15Z2OM",
+      "title": "2006-2017 LS 460 change Ignition Coils and Spark plugs. Easy!!",
+      "channel": "RalphFixer",
+      "views": 18058
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "skhIwsvtvuA",
+     "title": "Lexus LS Saloon 2013 review - CarBuyer",
+     "channel": "Carbuyer",
+     "views": 340623
+    },
+    {
+     "id": "Vx55qzTz_EY",
+     "title": "2009 Lexus LS460 - 5 Year Owner Review - Buyer Tips in 2021",
+     "channel": "Tanner Richie",
+     "views": 269829
+    },
+    {
+     "id": "TTfFkQiPo_E",
+     "title": "2007-2012 Lexus LS 460 Reliability....BEFORE YOU BUY",
+     "channel": "Discerning Cars",
+     "views": 173695
+    }
+   ],
+   "costs": null
   }
  ],
  "acura-rsx": [
