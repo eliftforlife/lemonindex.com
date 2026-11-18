@@ -89278,6 +89278,69 @@
     }
    ],
    "costs": null
+  },
+  {
+   "years": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "gen": "2018–2025 Lexus LS",
+   "kind": "repair",
+   "noun": "generation",
+   "head": "Fixes owners look up most.",
+   "n": 200,
+   "views": 29897359,
+   "topics": [
+    {
+     "name": "Windows, doors & mirrors",
+     "views": 47337,
+     "n": 1,
+     "best": {
+      "id": "szp1YD9Mk04",
+      "title": "How to Program Garage Door Opener on a 2022 Lexus LS 500",
+      "channel": "Lexus of Memphis",
+      "views": 47337
+     }
+    },
+    {
+     "name": "Gauges, lights & wiring",
+     "views": 11287,
+     "n": 1,
+     "best": {
+      "id": "RBl9RXMpzYw",
+      "title": "2007-2024 Lexus LS 460/LS500 Oil Light Reset | DIY Maintenance Made Simple! 🚗🔧",
+      "channel": "Doctor Reset",
+      "views": 11287
+     }
+    }
+   ],
+   "guides": [
+    {
+     "id": "sdNBbjEwVbc",
+     "title": "Should You Buy a Lexus LS500 in 2025? The Unfortunate Truth that is Heart Breaking!",
+     "channel": "The Car Care Nut",
+     "views": 528976
+    },
+    {
+     "id": "Vx55qzTz_EY",
+     "title": "2009 Lexus LS460 - 5 Year Owner Review - Buyer Tips in 2021",
+     "channel": "Tanner Richie",
+     "views": 269830
+    },
+    {
+     "id": "qOqGVCGDmIk",
+     "title": "Reliable, 500+ Mile Range, Ultra-Luxury Cruiser! | 2020 Lexus LS500H Review",
+     "channel": "Forrest's Auto Reviews",
+     "views": 49443
+    }
+   ],
+   "costs": null
   }
  ],
  "acura-rsx": [

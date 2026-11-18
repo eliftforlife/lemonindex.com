@@ -35974,5 +35974,210 @@
 }
 ]
 }
+],
+"lexus-ls": [
+{
+"sid": "lexus-ls-g2",
+"y0": 1995,
+"y1": 2000,
+"label": "1995–2000",
+"videos": 197,
+"praise": [
+[
+"Reliability",
+17
+],
+[
+"Power",
+10
+],
+[
+"Looks",
+7
+],
+[
+"Comfort and ride",
+7
+]
+],
+"trouble": [
+[
+"Oil leaks (gaskets, seals, housings)",
+6
+],
+[
+"Coolant leaks / water pump / overheating",
+4
+]
+],
+"top": [
+{
+"id": "ZIJm7ZKMpNY",
+"title": "This '96 Lexus LS400 is still bulletproof even with 230K miles. So what did the CAR WIZARD find?",
+"views": 304119,
+"ch": "Car Wizard"
+},
+{
+"id": "5nxVrMpxEcE",
+"title": "2000 Lexus LS400 Review and Test Drive ( 240,000 mile tank! )",
+"views": 186893,
+"ch": "Intechdude300"
+},
+{
+"id": "W0UYcKXjKWY",
+"title": "Mercedes-Benz S320 vs Lexus LS400 - Comparison & Review (1997)",
+"views": 183254,
+"ch": "Men and Motors"
+}
+]
+},
+{
+"sid": "lexus-ls-g3",
+"y0": 2001,
+"y1": 2006,
+"label": "2001–2006",
+"videos": 199,
+"praise": [
+[
+"Reliability",
+24
+],
+[
+"Looks",
+14
+],
+[
+"Comfort and ride",
+13
+],
+[
+"Power",
+12
+]
+],
+"trouble": [
+[
+"Electrical / wiring / TIPM",
+3
+]
+],
+"top": [
+{
+"id": "0YSM-3j00vA",
+"title": "2006 Lexus LS430 Review",
+"views": 407080,
+"ch": "Atomic Auto"
+},
+{
+"id": "pgDdoXfYikQ",
+"title": "2002 Lexus LS430: Regular Car Reviews",
+"views": 328173,
+"ch": "Regular Car Reviews"
+},
+{
+"id": "NPkOE2ttylU",
+"title": "2004 Lexus LS430 Review...Do You Agree That This Is the Best Car?",
+"views": 168080,
+"ch": "Discerning Cars"
+}
+]
+},
+{
+"sid": "lexus-ls-g4",
+"y0": 2007,
+"y1": 2017,
+"label": "2007–2017",
+"videos": 197,
+"praise": [
+[
+"Reliability",
+22
+],
+[
+"Comfort and ride",
+14
+],
+[
+"Power",
+14
+],
+[
+"Space and practicality",
+13
+]
+],
+"trouble": [
+[
+"Steering / wobble / front end",
+3
+]
+],
+"top": [
+{
+"id": "RoF_KNoVLlI",
+"title": "2007-2012 Lexus LS460 | What You Should Know Before Buying",
+"views": 855146,
+"ch": "Discerning Cars"
+},
+{
+"id": "tLxpYEVe8uA",
+"title": "Why The 2011 Lexus LS600hL is The BEST Car You Can Buy for £12,000",
+"views": 541851,
+"ch": "JayEmm on Cars"
+},
+{
+"id": "CULpsJwnRiQ",
+"title": "Here's a Tour of this $70,000 2007 Lexus LS460 LWB - 10 Years Later Review",
+"views": 425656,
+"ch": "CCV TV"
+}
+]
+},
+{
+"sid": "lexus-ls-g5",
+"y0": 2018,
+"y1": 2025,
+"label": "2018–2025",
+"videos": 198,
+"praise": [
+[
+"Looks",
+24
+],
+[
+"Reliability",
+20
+],
+[
+"Comfort and ride",
+19
+],
+[
+"Power",
+16
+]
+],
+"trouble": [],
+"top": [
+{
+"id": "3boOxQW5EyI",
+"title": "New Lexus LS 2018 review - finally better than a Mercedes S-Class?",
+"views": 2633802,
+"ch": "carwow"
+},
+{
+"id": "EVY_sGJQlCE",
+"title": "EXTRAVAGANT! 2021 Lexus LS 500 Review",
+"views": 875013,
+"ch": "TheStraightPipes"
+},
+{
+"id": "sdNBbjEwVbc",
+"title": "Should You Buy a Lexus LS500 in 2025? The Unfortunate Truth that is Heart Breaking!",
+"views": 528976,
+"ch": "The Car Care Nut"
+}
+]
+}
 ]
 }
