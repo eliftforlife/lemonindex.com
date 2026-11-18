@@ -70520,7 +70520,26 @@
      "views": 29297
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 35,
+       "lo": 25.0,
+       "hi": 1000.0,
+       "n": 3,
+       "videos": 3,
+       "id": "S3lw-nRpXMw",
+       "t": 123,
+       "title": "2010 Dodge Caliber Cabin Air Filter Replacement"
+      }
+     ]
+    ]
+   }
   }
  ],
  "nissan-quest": [
@@ -89018,7 +89037,26 @@
      "views": 777
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 800,
+       "lo": 300.0,
+       "hi": 1500.0,
+       "n": 18,
+       "videos": 10,
+       "id": "kMiF08Zgp4Q",
+       "t": 401,
+       "title": "I am selling my 1999 Lexus LS400"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -89145,7 +89183,52 @@
      "views": 11422
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 1125,
+       "lo": 150.0,
+       "hi": 3000.0,
+       "n": 10,
+       "videos": 6,
+       "id": "esdiPel6IOw",
+       "t": 2755,
+       "title": "2004 Lexus LS430 Review | Ultra Luxury Package"
+      }
+     ],
+     [
+      "Tires",
+      {
+       "median": 650,
+       "lo": 300.0,
+       "hi": 1800.0,
+       "n": 6,
+       "videos": 5,
+       "id": "XIECIKWcHtA",
+       "t": 456,
+       "title": "2001 2002 2003 lexus ls430 walkaround test drive owner review high miles"
+      }
+     ],
+     [
+      "Water pump / cooling",
+      {
+       "median": 740,
+       "lo": 700.0,
+       "hi": 780.0,
+       "n": 4,
+       "videos": 3,
+       "id": "8EnXevFCrn0",
+       "t": 391,
+       "title": "2006 Lexus LS430 update highway drive and walk around   Repairs pov test drive owner review"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
@@ -89277,7 +89360,39 @@
      "views": 173695
     }
    ],
-   "costs": null
+   "costs": {
+    "paid": null,
+    "used": null,
+    "msrp": null,
+    "items": [
+     [
+      "Other repairs (parts or shop quote)",
+      {
+       "median": 850,
+       "lo": 280.0,
+       "hi": 1300.0,
+       "n": 30,
+       "videos": 11,
+       "id": "RoF_KNoVLlI",
+       "t": 83,
+       "title": "2007-2012 Lexus LS460 | What You Should Know Before Buying"
+      }
+     ],
+     [
+      "Brakes",
+      {
+       "median": 850,
+       "lo": 350.0,
+       "hi": 3000.0,
+       "n": 10,
+       "videos": 5,
+       "id": "77vp2-XVCEI",
+       "t": 134,
+       "title": "2013 Lexus LS 460 Problems and Complaints. Should you buy it?"
+      }
+     ]
+    ]
+   }
   },
   {
    "years": [
