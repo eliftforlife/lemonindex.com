@@ -8,9 +8,9 @@ workers_dev = true
 preview_urls = false
 
 [vars]
-SEND_ENABLED = "0"                                  # "1" once lemonindex.com is verified in Resend
+SEND_ENABLED = "1"                                  # "1" once lemonindex.com is verified in Resend
 FROM = "Lemon Index <recalls@lemonindex.com>"
-REPLY_TO = "hello@elijahwestbrook.com"
+REPLY_TO = "hello@lemonindex.com"
 DAILY_CAP = "80"                                    # Resend free plan: 100 emails a day for the whole account (curbdibs alerts share it)
 
 [[d1_databases]]

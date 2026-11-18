@@ -68,7 +68,7 @@ async function send(env, msgs) {   // msgs: [{to, subject, html, text, unsub?}] 
   const used = (await env.DB.prepare('SELECT n FROM sends WHERE day = ?').bind(day).first('n')) || 0;
   if (used + msgs.length > cap(env)) return false;
   const body = msgs.map(m => ({ from: env.FROM || 'Lemon Index <recalls@lemonindex.com>', to: [m.to], subject: m.subject, html: m.html, text: m.text,
-    reply_to: env.REPLY_TO || 'hello@elijahwestbrook.com',
+    reply_to: env.REPLY_TO || 'hello@lemonindex.com',
     ...(m.unsub ? { headers: { 'List-Unsubscribe': `<${SELF}/unsub?t=${m.unsub}>`, 'List-Unsubscribe-Post': 'List-Unsubscribe=One-Click' } } : {}) }));
   const r = await fetch(body.length === 1 ? 'https://api.resend.com/emails' : 'https://api.resend.com/emails/batch', { method: 'POST',
     headers: { Authorization: `Bearer ${env.RESEND_KEY}`, 'Content-Type': 'application/json' }, body: JSON.stringify(body.length === 1 ? body[0] : body) });
