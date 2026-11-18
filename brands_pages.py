@@ -81,11 +81,7 @@ def _brand_lists(b, ms, co, soon, live, later, moto, study_ids):
         mo = (f'<p class="bn4-moto"><b>{E(b)} motorcycles:</b> ' + ' · '.join(f'<a href="{E(u)}">{E(_short_nm(n, b))}</a>' for n, u in moto) + '</p>') if moto else ''
         out += (f'<section class="bn4-also"><h2>Also on Lemon Index. <span class="h2s">{E(b)} performance, electric and supercar pages.</span></h2>'
                 + (f'<div class="mbs"><div class="mb"><div class="mg">{"".join(live)}</div></div></div>' if live else '') + mo
-                + (f'<p class="yc-cap">Coming soon: {E(", ".join(_short_nm(n, b) for n in later))}.</p>' if later else '') + '</section>')
-    elif later:
-        out += f'<section class="bn4-also"><h2>Coming soon.</h2><p class="yc-cap">{E(", ".join(_short_nm(n, b) for n in later))}.</p></section>'
-    if soon:
-        out += f'<p class="yc-cap bn4-soon">No data yet: {E(", ".join(_short_nm(n, b) for n in soon))}. These get a page once we have their complaint records.</p>'
+                + '</section>')   # 11-18 (low-value review fix): no "Coming soon" / "No data yet" name lists
     return out
 def _best_tiles(b, ms):
     if len(ms) < 2: return ''

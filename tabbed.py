@@ -266,7 +266,7 @@ def _replab(h):
 def _ovcard(tid, label, value, line='', vis='', go=None):
     na = not value
     return (f'<a class="ovc{" ovc-na" if na else ""}" href="#p-{tid}"><span class="ovc-h">{_ovsvg(tid)}{E(label)}</span>'
-            + (f'<b class="ovc-v">{value}</b>' if not na else '<b class="ovc-v">No data yet</b>')
+            + (f'<b class="ovc-v">{value}</b>' if not na else '<b class="ovc-v">Too few reports</b>')
             + (f'<span class="ovc-s">{line}</span>' if line and not na else '') + (vis if not na else '')
             + f'<span class="ovc-go">See {E(go or label.lower())} →</span></a>')
 def _ovbars(rows):   # [(label, pct)] -> 3 thin labelled bars

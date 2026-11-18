@@ -419,6 +419,7 @@ def build(slug, out='docs'):
         for x in (f'/compare/{slug}-vs-{cs}/', f'/compare/{cs}-vs-{slug}/'):
             if real_page(x, out): u = x; break
         u = u or perf_url(cs, out) or None
+        if not u: continue   # 11-18 (low-value review fix): no "Coming soon" compare chips
         img = c.get('img') or (PL.get(cs) or {}).get('img') or ''
         chips += ((f'<a class="pf-c" href="{E(u)}">' if u else '<div class="pf-c soon">') + (f'<img src="{E(img)}" alt="" width="1000" height="600" loading="lazy" decoding="async">' if img else '')
                   + f'<span>{E(short)} vs {E(c["name"])}</span><small>{"See it →" if u else "Coming soon"}</small>' + ('</a>' if u else '</div>'))

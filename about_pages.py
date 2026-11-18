@@ -20,6 +20,13 @@ def _about_pages():
                    '<p>Complaints are owners&#39; own reports, not proof of a defect. The score measures early complaints per car sold; it is not a repair-cost or safety rating.</p>')
              + sec('How the score works', '<p>Complaints filed within 3 years of each model year, divided by U.S. sales, compared with the average car of the same model years. 100 is average; 50 means half the complaints; 200 means twice as many. '
                    'The full method, its limits and its corrections: <a href="/method/">how the index works</a>.</p>')
+             + sec('How the pages are made', '<p>Every number on the site is computed by code straight from the source files above, then checked against them; no number is typed in by hand or made up. '
+                   'We use AI tools to help write and build pages, and the car and engine pictures are AI-generated illustrations (each one is labeled). '
+                   'Where we quote an owner, it is their own words from an NHTSA complaint or a YouTube video.</p>')
+             + sec('Corrections', f'<p>Found a wrong number, a missing recall or a car in the wrong place? Email <a href="mailto:{CONTACT}">{CONTACT}</a>. '
+                   'We check it against the source, fix the page and the data download, and the page&#39;s "Updated" date moves. Fixes to the method are listed on the <a href="/method/">method page</a>.</p>')
+             + sec('How the site makes money', '<p>Ads and reader donations. No automaker, dealer or seller pays to change a score or a ranking, and none can. '
+                   'If we ever add affiliate links, they will be labeled where they appear.</p>')
              + sec('Use the data', '<p>Everything is free to use with credit (CC BY 4.0): <a href="/data/">download the data</a>, <a href="/images/">free images</a>. Writing about cars? See the <a href="/press/">press page</a>.</p>')
              + sec('Contact', f'<p>Questions, corrections or a car you want covered: <a href="mailto:{CONTACT}">{CONTACT}</a> or the <a href="/contact/">contact page</a>. We usually answer within 2 business days.</p>')
              + '</div></div>')

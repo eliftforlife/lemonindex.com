@@ -875,7 +875,7 @@ def ytfix(key, y=None):
             + (f'<h3 class="yf-g">Before you buy, watch</h3><div class="ygs">{cards}</div>' if cards else '')
             + f'<p class="yc-cap">{cap} Videos belong to their creators; we link to them.{(" " + E(same.strip())) if same else ""}</p>' + costcap + '</section>')
 mi = lambda n: f'{int(n):,} miles'
-REPORT_NOTE = '<p class="note">The full Lemon Index report adds the mileage for every problem area, every recall in plain English and what to check before you buy. <b>Coming soon.</b></p>'
+REPORT_NOTE = ''   # 11-18 (low-value review fix): no "coming soon" report teaser
 RPART = lambda s: PART.get((s or 'other').split(':')[0], (s or 'other').split(':')[0].lower()).replace('service brakes, hydraulic', 'brakes')   # 11-11: some NHTSA recalls carry no component
 def rtag(r):
     """11-12 (UX test, Marcus: diesel fuel-pump and EGR recalls on his 3.6L gas Jeep): which engines or fuel a recall covers, from the
@@ -922,7 +922,7 @@ def price_html(fid, y, name):
     if not rows: return ''
     return f'''<h2>What to pay</h2><p>Typical dealer asking price for a {y} {E(d.get("model", name))} by mileage, from <b>{d["n"]:,}</b> dealer listings nationwide ({E(d["date"])}). Under the great-deal number is about 10% below typical; over the high number is more than 5% above.</p>
 <div class="tw"><table class="price"><thead><tr><th>Miles</th><th>Great deal<br><small>at or under</small></th><th>Typical</th><th>Too high<br><small>at or over</small></th></tr></thead><tbody>{rows}</tbody></table></div>
-<div class="pnotes"><p><b>Private seller:</b> coming soon. Private sellers often ask less than dealers, but we only publish a number once it&#39;s measured.</p>
+<div class="pnotes"><p><b>Private seller:</b> private sellers often ask less than dealers. We only publish a number once it&#39;s measured.</p>
 <p><b>Salvage or rebuilt title:</b> usually sells for well under a clean title. Estimates run from about 27% less (a matched study of 2,389 cars) to as much as 50% less (Edmunds). This is a guide, not a price; get an inspection.</p></div>
 <p class="note">Asking prices, not sale prices. Trim, engine, 4x4, condition and location move the price. Estimates, not an appraisal.</p>'''
 def sev_html(x):
@@ -2043,8 +2043,7 @@ def ndcard(m):
         if m['slug'] in YTS:   # 11-13 (Elijah): no Lemon Index yet, but a YouTube study: the card says so
             return f'<a class="mc mc-co" data-t="r {SEGT.get(SEG_EXN.get(m["slug"]), "")}" href="/cars/{m["slug"]}/" title="No Lemon Index yet: YouTube owners + complaint counts">{img}<b>{E(short)}</b><span class="nd">YouTube score</span></a>'
         return f'<a class="mc mc-co" data-t="r {SEGT.get(SEG_EXN.get(m["slug"]), "")}" href="/cars/{m["slug"]}/" title="Owner complaints, no sales figures yet">{img}<b>{E(short)}</b><span class="nd">Complaints only</span></a>'
-    return (f'<div class="mc mc-nd" data-t="r" aria-disabled="true" title="No data yet"><span class="mc-p"><img src="/assets/ai-models/{m["slug"]}.webp?v=1" alt="{E(nm)}" width="1000" height="600" loading="lazy"></span>'
-            f'<b>{E(short)}</b><span class="nd">No data yet</span></div>')
+    return ''   # 11-18 (low-value review fix): no gray "No data yet" cards; a model shows once it has a page
 _nd = {}
 for m in NEWM: _nd.setdefault(m['make'], []).append(m)
 # 11-13 (nav #5/#6): the Silverado HD and Sierra HD have pages (hd_pages.py) but had no card on the grid or their brand page. No illustration of
@@ -2075,8 +2074,7 @@ def pfcard(c):
     if c.get('slug') in JDM_ALSO: t += ' j'   # 11-13: a performance car that is also a JDM film car (the S2000) shows on both tabs
     t += {'pickup': ' tk', 'SUV': ' sv'}.get(c.get('body'), '')   # 11-13: the Raptor and TRX on the Trucks tab, the Trackhawk on SUVs (sports cars stay off the Cars tab)
     if i['url']: return f'<a class="mc mc-sc{" mc-dup" if c.get("perf") else ""}" data-t="{t}" href="{E(i["url"])}">{inner}</a>'   # 11-14: a JDM card for a US page's generation shows on the JDM tab only
-    nd = 'Hypercar · coming soon' if c.get('group') == 'C' else 'Coming soon'
-    return f'<div class="mc mc-nd mc-sc" data-t="{t}" aria-disabled="true" title="{nd}">{inner}<span class="nd">{nd}</span></div>'
+    return ''   # 11-18 (low-value review fix): no "Coming soon" cards; a car shows once its page is live
 JDM_ALSO = {'honda-s2000'}   # 11-13 JDM: performance pages that are also Fast & Furious film cars (data/perf/<slug>.json `films`)
 _xb = {}
 for c in SCX: _xb.setdefault(_brandof(c['make']), []).append((c['name'], sccard(c)))
@@ -2095,10 +2093,11 @@ def _m3twin():
             f'<small class="mc-k">{E(lead)}</small></a>')
 if os.path.exists('data/perf/bmw-m3.json') and not any(c.get('slug') == 'bmw-m3' for c in PERFX): _xb.setdefault('BMW', []).append(('BMW M3', _m3twin()))
 # 11-10 (Elijah): brands with no scored model at all go last, under a small "Coming soon" heading (A-Z within each group)
-_brand = lambda b: (f'<div class="mb"><h3>{E(b)}</h3><div class="mg">' + ''.join(mcard(n, i) for n, i, _ in pick.get(b, [])) + ''.join(h for _, h in sorted(_xb.get(b, [])))
-                    + ''.join(ndcard(m) for m in sorted(_nd.get(b, []), key=lambda m: m['name'])) + '</div></div>')
-_soon = sorted(set(_nd) - set(pick) - set(_xb))
-lst = ''.join(_brand(b) for b in sorted(set(pick) | set(_xb))) + (f'<p class="mb-soon">Coming soon: no scores yet for these brands</p>' + ''.join(_brand(b) for b in _soon) if _soon else '')
+def _brand(b):
+    _in = (''.join(mcard(n, i) for n, i, _ in pick.get(b, [])) + ''.join(h for _, h in sorted(_xb.get(b, [])))
+           + ''.join(ndcard(m) for m in sorted(_nd.get(b, []), key=lambda m: m['name'])))
+    return f'<div class="mb"><h3>{E(b)}</h3><div class="mg">{_in}</div></div>' if _in else ''   # 11-18: a brand with no live card isn't listed
+lst = ''.join(_brand(b) for b in sorted(set(pick) | set(_xb) | set(_nd)))
 def _mwcard(s):
     if s == 'bmw-m3':
         m = YSL.model_img('bmw-m3')
@@ -2108,8 +2107,9 @@ def _mwcard(s):
     return pfcard(c).replace('class="mc ', 'class="mc mc-dup ', 1) if c else ''
 _MW = ''.join(_mwcard(s) for s in ('bmw-m3', 'gr-supra', 'shelby-gt500', 'trackhawk', 'ct5-v-blackwing', 'civic-type-r'))
 _MW = f'<div class="mb pf-top"><h3>Most wanted</h3><div class="mg">{_MW}</div></div>' if PERFX else ''
-_nev = len(EVX); _npf = sum(c.get('group', 'A') == 'A' for c in PERFX); _nsc = len(SCX) + sum(c.get('group') in ('B', 'C') for c in PERFX)
-_njd = sum(c.get('group') == 'J' or c.get('slug') in JDM_ALSO for c in PERFX)   # 11-13 JDM tab
+_PFL = [c for c in PERFX if perf_info(c)['url']]   # 11-18: only cars with a live page count (coming-soon cards are gone)
+_nev = len(EVX); _npf = sum(c.get('group', 'A') == 'A' for c in _PFL); _nsc = len(SCX) + sum(c.get('group') in ('B', 'C') for c in _PFL)
+_njd = sum(c.get('group') == 'J' or c.get('slug') in JDM_ALSO for c in _PFL)   # 11-13 JDM tab
 # 11-13 (nav review #6): Trucks / SUVs / Cars / Minivans tabs from each card's body type (the count = cards that tab shows: no Electric-tab twins, no "No data yet")
 _nseg = {g: sum(1 for cl, t in re.findall(r'<(?:a|div) class="mc([^"]*)" data-t="([^"]*)"', lst) if g in t.split() and 'mc-dup' not in cl and 'mc-nd' not in cl) for g in ('tk', 'sv', 'cr', 'mv')}
 CTABS = ('<nav class="ctabs ctb8 ctb9" aria-label="Kinds of car">' + ''.join(f'<a href="{u}" data-type="{k}"{" aria-current=true" if k == "all" else ""}>{t}{f" <small>{n}</small>" if n else ""}</a>' for u, k, t, n in (
@@ -2119,11 +2119,11 @@ CTABS = ('<nav class="ctabs ctb8 ctb9" aria-label="Kinds of car">' + ''.join(f'<
 # 11-11: one slim row of other ways in, right under the tabs (replaces the home's 3 pill buttons and its big compare box)
 HCHIPS = ('<nav class="hchips" aria-label="More ways in"><a href="/compare/">Compare up to 4 cars</a><a href="/rankings/">Every car ranked</a>'
           '<a href="/best/safest-cars-for-teens/">Safest for teens</a><a href="/motorcycles/">Motorcycles</a></nav>')
-_nsx = sum(c.get('group') in ('B', 'C') for c in PERFX)   # 11-11 (Elijah: tidy the Performance tab): a real tab header instead of one plain sentence
-CNOTES = (f'<div class="ctn pfh" data-for="performance" hidden><span class="pfh-pill">Coming soon</span><h3>Performance cars</h3>'
+_nsx = sum(c.get('group') in ('B', 'C') for c in _PFL)   # 11-11 (Elijah: tidy the Performance tab): a real tab header instead of one plain sentence
+CNOTES = (f'<div class="ctn pfh" data-for="performance" hidden><h3>Performance cars</h3>'
           f'<p class="pfh-s">Horsepower, engines and owner reports, from the GT500 to the Type R.{ai_note("performance cars on this tab")}</p>'
-          + (f'<p class="pfh-n"><b>{_npf + _nsx} cars on the way:</b> {_npf} here, {_nsx} supercars and hypercars under <a href="/cars/?type=supercars">Supercars</a>.</p>' if _npf else '') + '</div>'
-          f'<p class="ctn" data-for="supercars" hidden>Owner complaints are too rare to score supercars, so their cards lead with the engine. Cards marked Coming soon, hypercars included, are next. <a href="/supercars/">Supercar fuel costs and recalls, ranked</a></p>'
+          + (f'<p class="pfh-n"><b>{_npf} performance cars</b> here, plus supercars and hypercars under <a href="/cars/?type=supercars">Supercars</a>.</p>' if _npf else '') + '</div>'
+          f'<p class="ctn" data-for="supercars" hidden>Owner complaints are too rare to score supercars, so their cards lead with the engine. <a href="/supercars/">Supercar fuel costs and recalls, ranked</a></p>'
           + ''.join(f'<p class="ctn" data-for="{k}" hidden>{_nseg[g]} {w}{x}. <a href="/best/most-reliable-{k}/">The most reliable {k if k != "suvs" else "SUVs"}, ranked</a></p>'
                     for k, g, w, x in (('trucks', 'tk', 'trucks', ', from the Tacoma to the HD pickups and the Raptor'), ('suvs', 'sv', 'SUVs', ''), ('cars', 'cr', 'sedans, hatchbacks and other cars', '. Sports cars are under Performance'), ('minivans', 'mv', 'minivans and vans', '')))
           + f'<p class="ctn" data-for="jdm" hidden>The Japanese hero cars of The Fast and the Furious (2001) and 2 Fast 2 Furious (2003), plus JDM legends like the AE86, R32 GT-R and Silvia S15: specs, the engine and, where they were sold in the US, owner complaints and recalls. <a href="/jdm/">Every JDM car and its engine</a></p>'
@@ -2197,7 +2197,7 @@ mcards = ''.join(f'<a class="mu" href="{u}"><span class="mu-p">{pimg(mphoto(a), 
 UXC = 'compare'; exec(open('ux_c.py', encoding='utf-8').read())   # 11-12 UX test: performance side-by-sides + the hub (up to 4 cars, every car)
 
 # 10-31: policy pages Stripe checks before it activates payments (and that a paid report needs anyway).
-LEGAL_NAME, ADDRESS, CONTACT = 'Westbrook Software LLC', '4539 N 22nd St Ste R, Phoenix, AZ 85016', 'hello@elijahwestbrook.com'
+LEGAL_NAME, ADDRESS, CONTACT = 'Westbrook Software LLC', '4539 N 22nd St Ste R, Phoenix, AZ 85016', 'hello@lemonindex.com'   # 11-18: the site's own domain (was hello@elijahwestbrook.com)
 def legal(path, title, body, seo_title, desc):
     page(path, seo_title, desc, f'<article class="study"><p class="kicker">Updated {TODAY}</p><h1>{title}</h1>{body}</article>')
 legal('/contact/', 'Contact', f'''<p>Questions about the data, a correction, a car you want covered or a donation: email <a href="mailto:{CONTACT}">{CONTACT}</a>. We usually answer within 2 business days.</p>
@@ -2281,6 +2281,7 @@ _404 = _404.replace('</body>', f'<script src="/assets/lx404.js?v={LXS_V}" defer>
 open(f'{OUT}/404.html', 'w', encoding='utf-8').write(_404)
 RCLP = 'pages'; exec(open('recall_pages.py', encoding='utf-8').read())   # 11-14 growth plan 2B-1: /recalls/ hub, make and model recall pages (RCL_URLS)
 urls = ['/', '/rankings/', STUDY, '/studies/', '/method/', '/vin/', '/car-loan-rates/', '/vote/', '/data/', '/brands/'] + PERF_URLS + JDM_URLS + burls + purls + murls + surls + eurls + GAP_URLS + CODE_URLS + globals().get('SYM_URLS', []) + SEO_URLS + EXTRA_URLS + BMW_URLS + SCE_URLS + AE_URLS + yurls + ADV_URLS + curls + LEGAL_URLS + UXC_URLS + MST_URLS + globals().get('HD_URLS', []) + globals().get('VE_URLS', []) + globals().get('RC_URLS', []) + globals().get('CM_URLS', []) + globals().get('RCL_URLS', []) + globals().get('UK_URLS', [])
+exec(open('quality_gate.py', encoding='utf-8').read())   # 11-18 low-value review fix: thin pages noindex + out of the sitemap (THIN)
 open(f'{OUT}/sitemap.xml', 'w', encoding='utf-8').write('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + ''.join(f'<url><loc>{BASE}{u}</loc><lastmod>{PD.get(u, {}).get("d", TODAY)}</lastmod></url>' for u in urls) + '</urlset>')
 open(f'{OUT}/ads.txt', 'w').write(f'google.com, {ADS.replace("ca-", "")}, DIRECT, f08c47fec0942fa0\n')
 open(f'{OUT}/robots.txt', 'w').write(f'User-agent: *\nAllow: /\n\nUser-agent: GPTBot\nAllow: /\nUser-agent: ClaudeBot\nAllow: /\nUser-agent: PerplexityBot\nAllow: /\nUser-agent: Google-Extended\nAllow: /\nUser-agent: Googlebot-Image\nAllow: /\n\n# bulk dataset scrapers: the data is free at /data/ with credit instead\nUser-agent: CCBot\nDisallow: /\nUser-agent: Bytespider\nDisallow: /\nUser-agent: Diffbot\nDisallow: /\nUser-agent: Omgilibot\nDisallow: /\nUser-agent: ImagesiftBot\nDisallow: /\n\nSitemap: {BASE}/sitemap.xml\nSitemap: {BASE}/image-sitemap.xml\n')

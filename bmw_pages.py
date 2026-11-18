@@ -379,7 +379,7 @@ else:
         if globals().get('SCE_IMGS'): groups.append(('supercar-engines', 'Supercar and performance engines', [card(ph['src'], ph['w'], ph['h'], ph['title'], ph['title'], p_, 'Engine page') for p_, ph in SCE_IMGS]))   # 11-11 (supercar_engine_pages.py)
         if globals().get('AIE_IMGS'): groups.append(('everyday-engines', 'Everyday, truck and diesel engines', [card(ph['src'], ph['w'], ph['h'], ph['title'], ph['title'], p_, 'Engine page') for p_, ph in AIE_IMGS]))   # 11-13 (ai_engine_photos.py)
         _ES = json.load(open('data/engine_soon_images.json', encoding='utf-8')) if os.path.exists('data/engine_soon_images.json') else {}   # 11-12 /engines/ coming-soon engines
-        if _ES: groups.append(('engines-coming-soon', 'More engines (pages coming soon)', [card(ph['src'], ph['w'], ph['h'], ph['title'], ph['title'], '/engines/?type=soon', 'All engines') for _k, ph in sorted(_ES.items())]))
+        if _ES: groups.append(('engines-coming-soon', 'More engine illustrations', [card(ph['src'], ph['w'], ph['h'], ph['title'], ph['title'], '/engines/', 'All engines') for _k, ph in sorted(_ES.items())]))
         _pages = {f['id'] for f in YEARS}
         if YSL.AIM:
             groups.append(('models', 'Every car model', [card(m['src'], m['w'], m['h'], f'{m["year"]} {m["name"]} illustration', f'{m["year"]} {m["name"]}',
@@ -392,9 +392,9 @@ else:
         _PF = [c for c in (json.load(open('data/perf_cars.json', encoding='utf-8')) if os.path.exists('data/perf_cars.json') else []) if isinstance(c, dict) and c.get('img')]   # 11-11 coming-soon performance cars
         _JD = [c for c in _PF if c.get('group') == 'J']; _PF = [c for c in _PF if c.get('group') != 'J']   # 11-13 JDM film cars: their own group, linking their pages
         if _JD: groups.append(('jdm', 'JDM cars', [card(c['img'], c.get('w', 1000), c.get('h', 600), f'{c["img_year"]} {c["name"]} illustration', c['name'], c.get('url') or '/jdm/' + c['slug'] + '/', 'Page') for c in _JD]))   # 11-14: + the JDM legends (a twin card links its US page)
-        if _PF: groups.append(('performance', 'Performance cars, supercars and hypercars', [card(c['img'], c.get('w', 1000), c.get('h', 600), f'{c["name"]} illustration', c['name'], '/cars/?type=' + ('supercars' if c.get('group') in ('B', 'C') else 'performance'), 'Cars page (coming soon)') for c in _PF]))
+        if _PF: groups.append(('performance', 'Performance cars, supercars and hypercars', [card(c['img'], c.get('w', 1000), c.get('h', 600), f'{c["name"]} illustration', c['name'], '/cars/?type=' + ('supercars' if c.get('group') in ('B', 'C') else 'performance'), 'Cars page') for c in _PF]))
         _MS = [c for c in (json.load(open('data/moto_soon.json', encoding='utf-8')) if os.path.exists('data/moto_soon.json') else []) if c.get('img')]   # 11-11 coming-soon motorcycles
-        if _MS: groups.append(('motorcycles-soon', 'Motorcycles (coming soon)', [card(c['img'], c['w'], c['h'], f'{c["name"]} illustration', c['name'], '/motorcycles/', 'Motorcycles page (coming soon)') for c in _MS]))
+        if _MS: groups.append(('motorcycles-soon', 'More motorcycle illustrations', [card(c['img'], c['w'], c['h'], f'{c["name"]} illustration', c['name'], '/motorcycles/', 'Motorcycles') for c in _MS]))
         _names = {f['id']: f['name'] for f in YEARS}; _yp = {f['id']: {v['y'] for v in f['years']} for f in YEARS}
         _gen = []   # 11-10: one picture per generation for every model
         for _fid, _ims in sorted(YSL.AIY.items(), key=lambda kv: _names.get(kv[0], kv[0])):

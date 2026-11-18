@@ -21,7 +21,7 @@
     g.querySelector('.aenone').hidden = n + s > 0;
     g.querySelectorAll('.aetabs a[data-type]').forEach(a => { if (a.dataset.type === tab) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); });
     g.querySelectorAll('.aefuel a[data-fuel]').forEach(a => { if (a.dataset.fuel === fuel) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); });
-    const parts = (w.length || t || fuel !== 'all') ? [n ? `<b>${n}</b> engine${n === 1 ? '' : 's'}` : '', s ? `<b>${s}</b> coming soon` : ''].filter(Boolean) : [`<b>${N}</b> engines`, `<b>${S}</b> coming soon`];
+    const parts = (w.length || t || fuel !== 'all') ? [n ? `<b>${n}</b> engine${n === 1 ? '' : 's'}` : '', s ? `<b>${s}</b> coming soon` : ''].filter(Boolean) : [`<b>${N}</b> engines`, S ? `<b>${S}</b> coming soon` : ''].filter(Boolean);
     cnt.innerHTML = (parts.join(' · ') || '<b>0</b> engines') + (w.length ? ' match' : '');
     if (push) { const u = new URLSearchParams(); if (tab !== 'all') u.set('type', tab); if (fuel !== 'all') u.set('fuel', fuel); history.replaceState(null, '', location.pathname + (u.toString() ? '?' + u : '')); }
   };

@@ -208,24 +208,23 @@ AE_TABS = [('all', 'All', ''), ('trucks', 'Trucks & diesel', _ae_n('t')), ('bmw'
            ('honda', 'Honda', _ae_n('h')), ('soon', 'Coming soon', _aeS)]
 _ae_tabs = ('<nav class="ctabs aetabs" aria-label="Kinds of engine">' + ''.join(
     f'<a href="/engines/{"?type=" + k if k != "all" else ""}" data-type="{k}"{" aria-current=true" if k == "all" else ""}>{t}{f" <small>{n}</small>" if n else ""}</a>'
-    for k, t, n in AE_TABS if k in ('all', 'soon') or n) + '</nav>')
-_ae_fn = lambda g: sum(_FG(c['f']) == g for c in _ae_live) + sum(_FG(v['fuel']) == g for v in AE_SOON.values())
+    for k, t, n in AE_TABS if k == 'all' or (n and k != 'soon')) + '</nav>')   # 11-18: no Coming soon tab
+_ae_fn = lambda g: sum(_FG(c['f']) == g for c in _ae_live)   # 11-18: live engines only
 _ae_fuel = ('<div class="aefuel" role="group" aria-label="Fuel">' + ''.join(
     f'<a href="/engines/{"?fuel=" + g if g != "all" else ""}" data-fuel="{g}"{" aria-current=true" if g == "all" else ""}>{t}{f" <small>{_ae_fn(g)}</small>" if g != "all" else ""}</a>'
     for g, t in (('all', 'Any fuel'), ('gas', 'Gas'), ('diesel', 'Diesel'), ('hybrid', 'Hybrid'), ('electric', 'Electric')) if g == 'all' or _ae_fn(g)) + '</div>')
 _ae_body = f'''<div class="pg"><div class="ph ph-f"><section class="finder aefind" aria-labelledby="fh"><h1 id="fh"><span class="ph-e">Engines</span>Every engine.</h1>
-<p class="lede">{_aeN} engines with their own page, from the BMW B58 to the Ferrari F154: owner complaints, recalls and a YouTube owner score by model year. Coming soon: one engine for every other model we cover, per fuel it was sold with (gas, diesel, hybrid, electric).</p>
+<p class="lede">{_aeN} engines with their own page, from the BMW B58 to the Ferrari F154: owner complaints, recalls and a YouTube owner score by model year.</p>
 <div class="fq"><input id="aeq" type="search" placeholder="e.g. LS3, B58, 2JZ, Honda K20" autocomplete="off" aria-label="Search engines" aria-controls="aegrid"></div>
-<p class="fnote" id="aen" aria-live="polite"><b>{_aeN}</b> engines · <b>{_aeS}</b> coming soon</p></section></div>
+<p class="fnote" id="aen" aria-live="polite"><b>{_aeN}</b> engines</p></section></div>
 <section class="aeng" id="aegrid">{_ae_tabs}{_ae_fuel}
 <section class="aes" data-s="live"><h2>Engine pages <span class="h2s">YouTube rank in the corner, where owners have posted enough videos.</span></h2><div class="aeg">{"".join(_ae_card(c, i == 0) for i, c in enumerate(_ae_live))}</div></section>
-<section class="aes" data-s="soon" data-nosnippet><h2>Coming soon <span class="h2s">One engine per model and fuel: the one EPA lists on the most model years. Pages are on the way.</span></h2><div class="aeg">{"".join(_ae_soon(mk, eng, v['models'], v['fuel']) for (mk, eng), v in _ae_soonl)}</div></section>
 <p class="aenone" hidden>No engine matches that yet. Try a code like B58 or a model like Camry.</p>
 <p class="note aehubs">Engine head-to-head: {" · ".join(f'<a href="{u}">{lab.replace(", ", " vs ").replace(" and ", " vs ")}</a>' for u, us, lab in ENG_H2H)}. YT # = YouTube rank among all {ENG_POOL_N} {ENG_POOL_LBL}.</p>
 <p class="note aehubs">Engine hubs: <a href="/engines/bmw/">BMW engines</a> · <a href="/engines/supercars/">Supercar engines</a> · <a href="/engines/performance/">Performance engines</a> · <a href="/check-engine-light/">Check engine light codes</a> (OBD-II trouble codes, a different lookup)</p>
-<p class="ph-cr">Engine images: AI-generated illustrations by The Lemon Index, free under CC BY 4.0 (<a href="/images/">download</a>), except the BMW S55 and S58 photos (Wikimedia Commons, credited on their pages). Engine sizes and cylinders: EPA (fueleconomy.gov).</p></section></div><script src="/assets/engines.js?v=6" defer></script><script src="/assets/soonvote.js?v=2" defer></script>'''
+<p class="ph-cr">Engine images: AI-generated illustrations by The Lemon Index, free under CC BY 4.0 (<a href="/images/">download</a>), except the BMW S55 and S58 photos (Wikimedia Commons, credited on their pages). Engine sizes and cylinders: EPA (fueleconomy.gov).</p></section></div><script src="/assets/engines.js?v=7" defer></script><script src="/assets/soonvote.js?v=2" defer></script>'''
 page('/engines/', 'Every Car Engine: Reliability, Problems & YouTube Owner Ranks',
-     f'Search {_aeN} car engines, from the BMW B58 and N54 to the GM LS3 and Ferrari F154: owner complaints, recalls and YouTube owner ranks by model year. {_aeS} more coming soon.',
+     f'Search {_aeN} car engines, from the BMW B58 and N54 to the GM LS3 and Ferrari F154: owner complaints, recalls and YouTube owner ranks by model year.',
      _ae_body, ld=[{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Every car engine", "url": BASE + '/engines/',
                     "hasPart": [{"@type": "WebPage", "name": c['name'], "url": BASE + c['url']} for c in _ae_live if '#' not in c['url']]}])
 AE_URLS.append('/engines/')

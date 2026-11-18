@@ -87,7 +87,7 @@ if PL:
 <section><h2>Every model. <span class="h2s">Tap one for what happened, the phase of flight and the plane-vs-pilot split.</span></h2><div class="mbs">{groups}</div>{vgrid_note([p["name"] for p in PL], "planes and helicopters", "aircraft")}</section>
 <section class="yc hbsec"><h2>When it crashes, how often is it fatal? <span class="h2s">Models with 80+ accidents.</span></h2>{hub_bars([(p["name"], p["fatal_pct"]) for p in fat[:12]], '%')}</section>
 <section class="yc hbsec"><h2>How often is the plane to blame? <span class="h2s">Accidents where NTSB listed an engine, system, structure or propeller problem among the causes.</span></h2>{hub_bars([(p["name"], p["mech_pct"]) for p in mech[:12]], '%')}</section>
-<p class="yc-cap" style="text-align:center">Counts follow fleet size (the Cessna 172 is the most common plane in the U.S.), so compare the shares, not the totals. Per-plane rates need the FAA registry; coming soon. Source: {NTSB}</p></div>''',
+<p class="yc-cap" style="text-align:center">Counts follow fleet size (the Cessna 172 is the most common plane in the U.S.), so compare the shares, not the totals. Per-plane rates would need the FAA registry, so we don&#39;t show them. Source: {NTSB}</p></div>''',
          ld=[{"@context": "https://schema.org", "@type": "Dataset", "name": "Plane accidents by model (NTSB, 2008-2025)", "url": BASE + '/planes/', "isBasedOn": "https://www.ntsb.gov/Pages/AviationQueryV2.aspx", "creator": {"@type": "Organization", "name": "The Lemon Index"}}])
     purls.insert(0, '/planes/')
 
@@ -312,7 +312,7 @@ def _ecard(href, name, spec, years, ph=None, soon=False):
         alt = re.sub(r'\s*\(illustration\)$', '', html.unescape(ph.get('title') or name)) + ', illustration'
         im = f'<img src="{E(src)}" alt="{E(alt)}" width="{w}" height="{h}" loading="lazy" decoding="async">'
     inner = (f'<span class="ecard-i{"" if im else " ecard-ni"}">{im or (_EIC + ("" if soon else _ENI))}</span><span class="ecard-t"><b>{E(name)}</b><small>{E(spec)}</small>'
-             f'<small class="ecard-y">{E(years)}</small>' + ('<span class="ecard-s">Coming soon</span>' if soon else '') + '</span>')
+             f'<small class="ecard-y">{E(years)}</small>' + '</span>')   # 11-18: no "Coming soon" label
     return f'<div class="ecard ecard-soon" aria-disabled="true">{inner}</div>' if soon else f'<a class="ecard" href="{E(href)}">{inner}</a>'
 def _sce_map(slug, c):
     """[(engine id or None, years)] for the car, oldest first; None = model years with a version no source ties to an engine yet"""
@@ -371,7 +371,7 @@ def _scs_specs(slug, c):
     srcs['https://www.fueleconomy.gov/'] = 'EPA fueleconomy.gov: versions, drive and mpg'
     fold = '<details class="scs-src"><summary>Sources</summary><ol>' + ''.join(f'<li><a href="{E(u)}" rel="noopener">{E(t)}</a></li>' for u, t in srcs.items()) + '</ol></details>'
     body = (f'<section class="yc scs" id="specs"><h2>Specs <span class="h2s">Factory power from each engine&#39;s sources, everything else from the EPA.</span></h2>'
-            f'<div class="scs-g">{"".join(cards)}</div><p class="scs-soon">0–60 and top speed: coming soon. We only show times from a published test.</p>{fold}</section>')
+            f'<div class="scs-g">{"".join(cards)}</div><p class="scs-soon">0–60 and top speed are left out: we only show times from a published test.</p>{fold}</section>')
     # hero tiles: lead with power and the engine (11-11 lemon-performance-section), from the newest engine era
     last = next((e for e, yl in sorted(es, key=lambda kv: -max(kv[1])) if e), None)
     tiles = []
