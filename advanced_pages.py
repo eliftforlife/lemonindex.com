@@ -73,7 +73,7 @@ def adv_year(f, v, y, x, x2, best, worst, ys):
         unique += 1; sec.append(f'<section class="yc" id="youtube"><h2>YouTube repair topics</h2><p>{yd["n"]} videos about the {E(yd["gen"])}, {_vw(yd["views"])} views.</p>' + TABLE(['Topic', 'Videos', 'Views'], [[E(t['name']), t['n'], _vw(t['views'])] for t in yd['topics']]) + '</section>')
     nbrs = [w for w in ys if abs(w['y'] - y) <= 3]
     sec.append('<section class="yc" id="neighbors"><h2>Nearby model years</h2>' + TABLE(['Year', 'Lemon Index', 'Complaints', 'Sold', 'Top system'], [[f'<a href="{CARU(f, w["y"])}advanced/">{w["y"]}</a>' if w['y'] != y else f'<b>{w["y"]}</b>', w['li'] if w['ok'] else '–', f'{w["n"]:,}', f'{w["sold"]:,}' if w.get('sold') else '–', E(NICE(w['parts'][0][0])).capitalize() if w.get('parts') else '–'] for w in nbrs]) + '</section>')
-    body = (f'<div class="advp"><header class="advh1"><p class="ph-e"><a href="/cars/">All cars</a> · <a href="{CARU(f)}">{nm}</a> · <a href="{CARU(f, y)}">{y}</a></p><h1>{y} {nm}. Advanced data.</h1>'
+    body = (f'<div class="advp"><header class="advh1"><p class="ph-e"><a href="/">All cars</a> · <a href="{CARU(f)}">{nm}</a> · <a href="{CARU(f, y)}">{y}</a></p><h1>{y} {nm}. Advanced data.</h1>'
             f'<p>The raw numbers: engines, recall campaign numbers, failure mileage and manufacturer communications.</p>{mode_toggle(CARU(f, y), CARU(f, y) + "advanced/", "a")}</header>{tiles}<div class="ygrid">{"".join(sec)}</div>'
             f'<p class="yc-cap">Sources: NHTSA complaints, recalls, investigations and manufacturer communications; EPA fuel economy data; YouTube video titles. Complaints are owner reports, not proof of a defect.</p></div>')
     return body, unique

@@ -44,7 +44,7 @@ def _n2_names(f):
     return b, nm
 def N2_CRUMB(f, y=None):
     b, short = _n2_names(f); sep = '<span class="n2-cs" aria-hidden="true">›</span>'
-    items = ['<a href="/cars/">All cars</a>', BRAND_A(b)]
+    items = ['<a href="/">All cars</a>', BRAND_A(b)]
     items.append(f'<a href="{CARU(f)}">{E(short)}</a>' if y else f'<span aria-current="page">{E(short)}</span>')
     if y: items.append(f'<span aria-current="page">{y}</span>')
     return f'<p class="ph-e n2-cr">{N2_ASSET}{sep.join(items)}</p>'

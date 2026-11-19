@@ -1943,7 +1943,7 @@ def trans_body(f):
     if best: qa.append((f'Which {SNM(f)} years have the fewest transmission complaints?', '', f'Since 2010, the {SNM(f)} years with the fewest transmission complaints per car sold are {", ".join(str(y) for y, _ in best)}.'))
     share = E(f'{SNM(f)} transmission problems by year. Worst: {", ".join(str(y) for y, _ in worst)}. Free report:')
     body = f'''
-<article class="study tr2"><p class="kicker"><a href="/cars/">All cars</a> · <a href="{CARU(f)}">{nm}</a> · Transmission</p><h1>{nm} transmission problems by year</h1>
+<article class="study tr2"><p class="kicker"><a href="/">All cars</a> · <a href="{CARU(f)}">{nm}</a> · Transmission</p><h1>{nm} transmission problems by year</h1>
 <p class="tra">Worst years: <b>{AND(wys)}</b>.{f" Best since 2010: <b>{AND(bys)}</b>." if best else ""} <button type="button" class="shl" data-share="{share}">Share ↗</button></p>
 {chips}
 <h2>Every year</h2>

@@ -308,7 +308,7 @@ def cmp_page(a, b):
          f'{QN(A)} vs {QN(B)} reliability: ' + (f'about the same owner complaints per car sold (Lemon Index {ca["li"]} vs {cb["li"]}).' if close else
          f'the {_lead_s} drew {fewer}% fewer owner complaints per car sold than the {_trail_s} (Lemon Index {cL["li"]} vs {cT["li"]}).')
          + f' Every model year both were sold, {shared[0]}–{shared[-1]}, plus recalls, crash tests and MPG.', f'''
-<article class="study cmpp cb"><p class="kicker"><a href="/cars/">All cars</a> · Compare</p><h1>{E(_sa)} vs {E(_sb)}: which is more reliable?</h1>
+<article class="study cmpp cb"><p class="kicker"><a href="/">All cars</a> · Compare</p><h1>{E(_sa)} vs {E(_sb)}: which is more reliable?</h1>
 {CB_ASSET}{hero}{src}{nav}
 {h2h}{board}
 {buy}{ybys}{LFA_JS}{brk}{rec}{yt}{pick_}

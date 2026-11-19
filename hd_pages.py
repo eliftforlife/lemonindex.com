@@ -207,7 +207,7 @@ if HDX == 'pages' and HDT:
         qa = '<section class="yc yqa"><h2>Quick answers</h2>' + qa_fold(''.join(f'<h3>{q}</h3><p>{a}</p>' for q, a in faq)) + '</section>'
         lnk = (f'<p class="yc-cap">' + (f'The half-ton has its own page: <a href="{CARU(lf)}">Ford F-150 reliability by year</a> (F-150 complaints only). ' if _fs else f'The half-ton has its own scored page: <a href="{CARU(lf)}">{E(lf["name"])} reliability by year</a> (whole line, mostly half-tons). ')
                + f'Diesel engines: ' + ' · '.join(f'<a href="{HE_URLS[e]}">{_hdE(HDE[e]["short"])}</a>' for e in de) + f' · <a href="{HD_DIESEL_HUB}">all compared</a>.</p>') if lf else ''
-        body = (f'<div class="advp"><header class="advh1"><p class="ph-e"><a href="/cars/">All cars</a> · {BRAND_A(mk)} · Trucks</p><h1>{E(nm)} problems by year and engine.</h1><p class="ans">{ans}</p></header>'
+        body = (f'<div class="advp"><header class="advh1"><p class="ph-e"><a href="/">All cars</a> · {BRAND_A(mk)} · Trucks</p><h1>{E(nm)} problems by year and engine.</h1><p class="ans">{ans}</p></header>'
                 + (lambda h: f'<div class="advimg">{h}</div>' if h else '')(_hd_img(t))
                 + f'<div class="ygrid">{eng_sec}{years_sec}{prob}{mil}{ser}{rec}{qa}</div>{lnk}<p class="yc-cap">{_HD_WHY} {_HD_HOW} Source: {E(_HD_SRC.get("complaints", "NHTSA"))}; {E(_HD_SRC.get("vin", ""))}; {E(_HD_SRC.get("recalls", ""))}.</p></div>')
         page(HDU(t), f'{nm} Problems by Year and Engine', _hh.unescape(_hre.sub('<[^>]+>', '', ans)), body, ld=[faq_ld([(q, '', _hh.unescape(_hre.sub('<[^>]+>', '', a))) for q, a in faq])])
@@ -253,7 +253,7 @@ if HDX == 'pages' and HDT:
             qa = '<section class="yc yqa"><h2>Quick answers</h2>' + qa_fold(''.join(f'<h3>{q}</h3><p>{a}</p>' for q, a in faq)) + '</section>'
             ly = (f'<p class="yc-cap">The half-ton, F-150 complaints only: <a href="{CARU(lf, y)}">{y} Ford F-150</a>.</p>' if _fs and lf and any(w['y'] == y for w in lf['years']) else
                   f'<p class="yc-cap">The whole-line score for {y}, mostly half-tons: <a href="{CARU(lf, y)}">{y} {E(lf["name"])}</a>.</p>' if lf and any(w['y'] == y for w in lf['years']) else '')
-            body = (f'<div class="advp"><header class="advh1"><p class="ph-e"><a href="/cars/">All cars</a> · {BRAND_A(mk)} · <a href="{HDU(t)}">{E(nm)}</a></p>'
+            body = (f'<div class="advp"><header class="advh1"><p class="ph-e"><a href="/">All cars</a> · {BRAND_A(mk)} · <a href="{HDU(t)}">{E(nm)}</a></p>'
                     f'<h1>{y} {E(nm)} problems, engines and recalls.</h1><p class="ans">{ans}</p></header>'
                     + (lambda h: f'<div class="advimg">{h}</div>' if h else '')(_hd_img(t))
                     + f'<div class="ygrid">{eng_sec}{prob}{mil}{ser}{rec}{qs}{nb}{qa}</div>{ly}<p class="yc-cap">{_HD_WHY} {_HD_HOW}</p></div>')
