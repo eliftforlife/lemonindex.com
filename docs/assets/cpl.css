@@ -266,3 +266,16 @@ section.opn#opinions .opn-share { margin-top: 0; }
 .cpl-ins > * + .cpl > details > summary::before { content: ''; position: absolute; top: 0; left: 56px; right: 0; height: 1px; background: #dcdce1; pointer-events: none; }
 .cpl-nest.cpl-ins > * + .cpl > details > summary::before { background: #e8e8ed; }
 @media (max-width: 480px) { .cpl-ins > * + .cpl > details > summary::before { left: 54px; } }
+
+/* 11-19 footer v3 (Elijah): big "Lemon Index" across the page with the logo, the slogan, the apps' own icons, then the link columns */
+.f3 .f3-top { max-width: calc(var(--content, 1080px) + 32px); margin: 0 auto; padding: 40px 16px 6px; box-sizing: border-box; }
+.f3 .f3-name { display: flex; align-items: center; gap: clamp(10px, 2.4vw, 22px); color: var(--ink, #1d1d1f); text-decoration: none; }
+.f3 .f3-name img { flex: none; width: clamp(44px, 12vw, 116px); height: auto; aspect-ratio: 1; border-radius: 22%; }
+.f3 .f3-name span { font-weight: 800; font-size: clamp(38px, 12.2vw, 150px); line-height: .9; letter-spacing: -.045em; white-space: nowrap; }
+.f3 .f3-tag { margin: 14px 0 0; font-size: clamp(19px, 4.6vw, 28px); font-weight: 600; letter-spacing: -.015em; color: #6e6e73; }
+.f3 .f3-soc { display: flex; gap: 12px; margin: 20px 0 0; }
+.f3 .f3-soc a { display: block; width: 48px; height: 48px; border-radius: 11px; box-shadow: 0 1px 2px rgba(0,0,0,.12), 0 0 0 1px rgba(0,0,0,.06); transition: transform .15s; }
+.f3 .f3-soc a:hover { transform: translateY(-2px); }
+.f3 .f3-soc svg { display: block; width: 100%; height: 100%; }
+.f3 .f2-in { grid-template-columns: repeat(3, minmax(0, 1fr)); padding-top: 28px; }
+@media (max-width: 699px) { .f3 .f2-in { grid-template-columns: repeat(2, minmax(0, 1fr)); padding-top: 24px; } .f3 .f3-top { padding-top: 32px; } }
