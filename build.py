@@ -499,7 +499,8 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
     if 'ENG_HOOK' in globals(): body = ENG_HOOK(path, body)   # 11-18 engine pages: compact boxes (engine_pills.py), after the date hash
     if 'OP_HOOK' in globals(): body = OP_HOOK(path, body)   # 11-18 owner opinions box (opinions.py)   # 11-14 growth 4a: recall alert signup (after the date hash, so page dates don't move)
     if 'CAT_HOOK' in globals(): body = CAT_HOOK(path, body)   # 11-19 /jdm/, /supercars/, /electric/, /motorcycles/: the category page top (cat_pages.py), after the date hash
-    if 'CAR_HOOK' in globals(): body = CAR_HOOK(path, body)   # 11-18 car pages: no tab bar; every tab and long section is a tap-to-open box (car_pills.py), after the date hash
+    if 'CAR_HOOK' in globals(): body = CAR_HOOK(path, body)
+    if 'SUB_HOOK' in globals(): body = SUB_HOOK(path, body)   # 11-19 (Elijah): on cars in SUB_CARS (sub_pages.py) each card opens a page of its own instead of a dropdown   # 11-18 car pages: no tab bar; every tab and long section is a tap-to-open box (car_pills.py), after the date hash
     _rel = ''; _rm = re.search(r'<!--cpl-rel-->(.*?)<!--/cpl-rel-->', body, re.S)   # 11-18 r4 (Elijah): the Related box goes last, after the end-of-page boxes
     if _rm: _rel = _rm.group(1); body = body[:_rm.start()] + body[_rm.end():]
     _shl = ''
@@ -1219,6 +1220,7 @@ FY = {f['id']: f for f in YEARS}
 exec(open('opinions.py', encoding='utf-8').read())   # 11-18 owner opinions box (OP_HOOK in page())
 exec(open('engine_pills.py', encoding='utf-8').read())   # 11-18 engine pages: long sections fold into boxes (ENG_HOOK in page())
 exec(open('car_pills.py', encoding='utf-8').read())   # 11-18 car pages: tabs and long sections fold into boxes (CAR_HOOK in page())
+exec(open('sub_pages.py', encoding='utf-8').read())   # 11-19 card -> own page test (Integra GS-R), SUB_HOOK in page()
 exec(open('recall_alerts.py', encoding='utf-8').read())   # 11-14 growth 4a: recall alert signup box (RA_HOOK in page()), /alerts/ page, privacy text
 RIVALS = defaultdict(list); PAIRS = []
 for seg, top in (('car', 10), ('suv', 10), ('truck', 7), ('minivan', 5)):
@@ -2355,7 +2357,7 @@ _404 = re.sub(r'<main>.*</main>', lambda m: (
 _404 = _404.replace('</body>', f'<script src="/assets/lx404.js?v={LXS_V}" defer></script></body>', 1)
 open(f'{OUT}/404.html', 'w', encoding='utf-8').write(_404)
 RCLP = 'pages'; exec(open('recall_pages.py', encoding='utf-8').read())   # 11-14 growth plan 2B-1: /recalls/ hub, make and model recall pages (RCL_URLS)
-urls = ['/', '/rankings/', STUDY, '/studies/', '/method/', '/vin/', '/car-loan-rates/', '/vote/', '/data/', '/brands/'] + PERF_URLS + JDM_URLS + CAT_URLS + burls + purls + murls + surls + eurls + GAP_URLS + CODE_URLS + globals().get('SYM_URLS', []) + SEO_URLS + EXTRA_URLS + BMW_URLS + SCE_URLS + AE_URLS + yurls + ADV_URLS + curls + LEGAL_URLS + UXC_URLS + MST_URLS + globals().get('HD_URLS', []) + globals().get('VE_URLS', []) + globals().get('RC_URLS', []) + globals().get('CM_URLS', []) + globals().get('RCL_URLS', []) + globals().get('UK_URLS', [])
+urls = ['/', '/rankings/', STUDY, '/studies/', '/method/', '/vin/', '/car-loan-rates/', '/vote/', '/data/', '/brands/'] + PERF_URLS + JDM_URLS + globals().get('SUB_URLS', []) + CAT_URLS + burls + purls + murls + surls + eurls + GAP_URLS + CODE_URLS + globals().get('SYM_URLS', []) + SEO_URLS + EXTRA_URLS + BMW_URLS + SCE_URLS + AE_URLS + yurls + ADV_URLS + curls + LEGAL_URLS + UXC_URLS + MST_URLS + globals().get('HD_URLS', []) + globals().get('VE_URLS', []) + globals().get('RC_URLS', []) + globals().get('CM_URLS', []) + globals().get('RCL_URLS', []) + globals().get('UK_URLS', [])
 exec(open('quality_gate.py', encoding='utf-8').read())   # 11-18 low-value review fix: thin pages noindex + out of the sitemap (THIN)
 open(f'{OUT}/sitemap.xml', 'w', encoding='utf-8').write('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + ''.join(f'<url><loc>{BASE}{u}</loc><lastmod>{PD.get(u, {}).get("d", TODAY)}</lastmod></url>' for u in urls) + '</urlset>')
 open(f'{OUT}/ads.txt', 'w').write(f'google.com, {ADS.replace("ca-", "")}, DIRECT, f08c47fec0942fa0\n')
