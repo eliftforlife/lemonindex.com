@@ -41,6 +41,60 @@ SUB_CARS = {
     },
 }
 
+
+# 11-19 r3 (Elijah: "do similar thing for all jdm cars"): every page in SUB_GROUPS gets its config made from its data/perf/<slug>.json.
+# SUB_CARS entries (hand-written titles) win over the made ones.
+SUB_GROUPS = {'jdm'}
+_SB_PERF = {}
+for _p in glob.glob(os.path.join('data', 'perf', '*.json')):
+    if _p.endswith('.auto.json'): continue
+    try:
+        _d = json.load(open(_p, encoding='utf-8'))
+        if _d.get('page'): _SB_PERF[_d['page']] = _d
+    except Exception: pass
+
+def _sb_an(w):   
+    return ('an ' if re.match(r'(?i)[aeio]', w) else 'a ') + w   # the make is said first: "an Acura NSX", "a Mazda RX-7"
+
+def _sb_auto(path, D):
+    nm = re.split(r' \(|:', D.get('h1') or D['name'])[0].strip()
+    G = D.get('gens') or []
+    yrs = f'{min(g["y0"] for g in G)}-{max(g["y1"] for g in G)}' if G and all(g.get('y0') and g.get('y1') for g in G) else ''
+    yp = f' ({yrs})' if yrs else ''
+    fl = D.get('films') or []
+    films = list(dict.fromkeys(f['film'] for f in fl))
+    who = list(dict.fromkeys(f['who'] for f in fl if f.get('who') and 'film cars' not in f['who'].lower() and 'crew' not in f['who'].lower()))
+    ff = all(re.search(r'Fast|Furious', f) for f in films)
+    if films:
+        f_h1 = f'The {nm} in ' + (re.sub(r' \(\d{4}\)$', '', films[0]) if len(films) == 1 else ('the Fast & Furious films' if ff else 'the films'))
+        f_t = f'{nm} in Fast and Furious' if ff else f'{nm} in the Movies'
+        if who and len(f_t) + len(' & '.join(who)) + 10 <= 65: f_t += ': ' + ' and '.join(who) + ('&#39;s Car' if len(who) == 1 else '&#39;s Cars')
+        f_d = f'The {nm} in ' + ' and '.join(films) + (': ' + ', '.join(f"{w}&#39;s car" for w in who) if who else '') + '. Which scene, which car, with sources.'
+        films_pg = ('films', r'^In the films', 'films', None, None, f_t, f_h1, '', f_d)
+    else:
+        films_pg = ('films', r'^Why it', 'famous', None, None, f'Why the {nm} Is Famous', f'Why the {nm} is famous', '',
+                    f'Why the {nm} is famous: the races, games and history behind it, with sources.')
+    nh = bool(D.get('nhtsa'))
+    return {'name': nm, 'pages': [
+        films_pg,
+        ('speed', r'^How fast', '0-60', None, None, f'{nm} 0-60, Horsepower and Specs{yp}', f'How fast is the {nm}?', '',
+         f'{nm}{yp} 0-60 times, horsepower, torque, weight and price new for every version. Every number sourced.'),
+        ('engine', r'^The engine', 'engine', None, None, f'{nm} Engine Specs{yp}', None, '', f'The {nm} engine: specs, power and what it was built for, with sources.'),
+        ('problems', r'^(Known issues|Problems & recalls)', 'problems', 'Problems &amp; recalls' if nh else 'Known issues', 'warning',
+         f'{nm} Problems and Recalls{yp}' if nh else f'{nm} Known Issues and Problems{yp}',
+         f'{nm} problems and recalls' if nh else f'{nm} known issues', '',
+         f'{nm}{yp} problems: known issues' + (', owner complaints to NHTSA by year and every recall' if nh else ' owners and buyers report') + ', with sources.'),
+        ('buy', r'^(Should you buy|What owners say)', 'buying', None, None, f'Should You Buy {_sb_an(nm)}? What to Check',
+         f'Should you buy {_sb_an(nm)}?', '', f'Should you buy {_sb_an(nm)}{yp}? Price new, best and worst years, what to check and what YouTube owners say.'),
+    ]}
+
+def _sb_cfg(path):
+    if path in SUB_CARS: return SUB_CARS[path]
+    D = _SB_PERF.get(path)
+    if not D: return None
+    grp = 'jdm' if D.get('jdm') else 'perf'
+    return _sb_auto(path, D) if grp in SUB_GROUPS else None
+
 _SB_CHEV = ('<svg aria-hidden="true" class="cpl-ar" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" '
             'stroke-width="2.2" viewBox="0 0 24 24" width="18"><path d="m9 6 6 6-6 6"></path></svg>')
 
@@ -61,17 +115,6 @@ def _sb_inner(d):
     t = _sb_title(d)
     if sm: sm.decompose()
     return t, d.decode_contents()
-
-def _sb_nav(cfg, here, base):
-    rows = []
-    for key, rx, slug, label, icon, *_ in cfg['pages']:
-        if key == here: continue
-        if key == 'engine':
-            if cfg.get('_engine'): rows.append(_sb_row(cfg['_engine'][0], cfg['_engine'][1], 'engine'))
-            continue
-        if slug and slug in cfg.get('_built', ()): rows.append(_sb_row(f'{base}{slug}/', label, icon))
-    rows.append(_sb_row(base, f'Back to the {cfg["name"]} page', 'car'))
-    return f'<section class="cpl-sec sb-more"><h2 class="sb-h">More on the {cfg["name"]}</h2><div class="cpl">{"".join(rows)}</div></section>'
 
 SB_CSS = ('<style>.sbp .sb-top{max-width:760px;margin:0 auto;padding:18px 0 0}'
           '.sbp .sb-back{display:inline-flex;align-items:center;gap:4px;margin-left:-6px;padding:6px 10px 6px 4px;border-radius:999px;color:#1d1d1f;'
@@ -112,7 +155,7 @@ def _sb_trim(html, key):
 SB_LINKCSS = '<style>a.sb-go,a.sb-go:hover{text-decoration:none;color:inherit}</style>'
 
 def SUB_HOOK(path, body):
-    cfg = SUB_CARS.get(path)
+    cfg = _sb_cfg(path)
     if not cfg or 'cpl-sec' not in body: return body
     try: return _sub_hook(path, body, cfg)
     except Exception as ex:
@@ -127,19 +170,14 @@ def _sub_hook(path, body, cfg):
         for key, rx, *_ in cfg['pages']:
             if re.match(rx, t): got.setdefault(key, []).append(d); break
     assets = body[:body.find('<div class="advp')] if '<div class="advp' in body else ''
-    hi = soup.select_one('section.tb-hero img.pf-car') or soup.select_one('section.tb-hero img')
-    pic = ''
-    if hi is not None:
-        hi = _SBS(str(hi), 'html.parser').find('img'); hi['class'] = ['sb-pic']; hi['fetchpriority'] = 'high'
-        pic = str(hi)
-    cfg['_built'] = [p[2] for p in cfg['pages'] if p[2] and got.get(p[0])]
     if got.get('engine'):
         a = got['engine'][0].select_one('a[href^="/engines/"]')
         cfg['_engine'] = (a['href'].split('#')[0], _sb_title(got['engine'][0])) if a else None
     # the subpages (11-19 r2, Elijah: "only have what they clicked for ... short, big header and back arrow"): back arrow, big title, that
     # card's content and its sources. No photo, intro line, other cards, side notes, fine print or feedback box.
     for key, rx, slug, label, icon, title, h1, dek, desc in cfg['pages']:
-        if not slug or not got.get(key): continue
+        if not slug or not got.get(key) or (key == 'engine' and cfg.get('_engine')): continue   # an engine with its own page links there
+        h1 = h1 or _sb_title(got[key][0])
         parts = [_sb_inner(d) for d in got[key]]
         inner = ''.join((f'<h2 class="sb-sh">{E(re.sub(r":.*", "", t))}</h2>' if len(parts) > 1 and '<h2' not in h else '') + h for t, h in parts)
         inner = _sb_trim(inner, key)
@@ -153,11 +191,15 @@ def _sub_hook(path, body, cfg):
     for key, rx, slug, label, icon, *_ in cfg['pages']:
         ds = got.get(key) or []
         if not ds: continue
-        if key == 'engine':
-            if not cfg.get('_engine'): continue
-            href, lab, ico = cfg['_engine'][0], cfg['_engine'][1], 'engine'
-        else: href, lab, ico = f'{path}{slug}/', label, icon
-        ds[0].replace_with(_SBS(_sb_row(href, E(lab), ico), 'html.parser'))
+        if key == 'engine' and cfg.get('_engine'): href, lab, ico = cfg['_engine'][0], cfg['_engine'][1], 'engine'
+        elif not slug: continue
+        else:
+            sm = ds[0].find('summary', recursive=False)
+            u, im = sm.select_one('use') if sm else None, sm.select_one('img[src*="/assets/icons/"]') if sm else None
+            href, lab = f'{path}{slug}/', label or E(_sb_title(ds[0]))
+            ico = icon or (u.get('href', '').rsplit('#', 1)[-1] if u is not None else re.sub(r'\.\w+(\?.*)?$', '', im['src'].rsplit('/', 1)[-1]) if im is not None else None)
+            if ico and ico not in _CP_SPR: ico = 'info'
+        ds[0].replace_with(_SBS(_sb_row(href, lab if '&' in lab else E(lab), ico), 'html.parser'))
         for d in ds[1:]:
             sec = d.find_parent('section', class_='cpl-sec'); d.decompose()
             if sec is not None and not sec.find(['details', 'a']): sec.decompose()
