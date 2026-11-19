@@ -8,7 +8,7 @@
 # Runs in build.py page() after the date hash (like ENG_HOOK), so page dates don't move. exec'd by build.py (needs PILL_AR, _ep_txt, _ep_cut
 # from engine_pills.py). Styles: assets/cpl.css (.cpl-stk, .cpl-pan). No film stills or logos: the films box uses our own clapperboard icon.
 import copy, glob
-from bs4 import BeautifulSoup as _CPS
+from bs4 import BeautifulSoup as _CPS, Comment
 _CP_I = lambda k: f'/assets/icons/{k}.webp'
 _CP_PAN_ICON = {'problems': 'warning', 'repairs': 'wrench', 'recalls': 'bell', 'questions': 'question', 'compare': 'scale', 'data': 'data',
                 'specs': 'engine', 'cost': 'tag', 'owners': 'wrench', 'uk-fails': 'warning', 'uk-faq': 'question', 'years': 'calendar', 'overview': 'chart'}
@@ -207,7 +207,7 @@ def _cp_pan_sub(pid, pan, card, label=''):
 def CAR_HOOK(path, body, force=False):
     if 'class="tbx"' not in body or 'role="tab"' not in body: return body
     if path in _CP_INJ and not force: return body   # perf_page.inject() calls it again (force) once the page is finished
-    try: return _car_hook(path, body)
+    try: return CPL_POLISH(_car_hook(path, body)) if force else _car_hook(path, body)   # perf inject pages are already past page()'s polish
     except Exception as ex:
         globals().setdefault('TAB_FAIL', []).append(f'car_pills {path}: {type(ex).__name__} {ex}'); return body
 def _car_hook(path, body):
@@ -371,12 +371,6 @@ def _cp_group(soup, tbx, base, notes):
         if _cp_isbox(c) or 'pf' in _cp_cls(c) or c.name not in ('section', 'div'): continue
         if c.name == 'section' and ('yav' in _cp_cls(c) or c.get('id') in ('avoid', 'ukx-pick')) : lead.append(c)
         elif c.name == 'section': charts.append(c)
-    for c in lead: g1.insert_before(c.extract())
-    # Similar cars sits after the content boxes, just before the buyer questions
-    sim = g1.find('section', id='similar', recursive=False)
-    ask = next((b for b in g1.find_all('section', recursive=False) if 'ask the seller' in _ep_txt(b.find(['h2', 'b'])).lower() or b.get('id') in ('p-questions', 'p-uk-faq')), None)
-    if sim is not None and ask is not None and ask is not sim: ask.insert_before(sim.extract())
-    # 2. the year chart + how to read it
     # the model page's "Looking at a 2023 or newer? ..." note (loose text under the hero) -> a box under the year chart
     newer = []
     for sl in base.find_all('p', class_='ovslim', recursive=False):
@@ -385,13 +379,87 @@ def _cp_group(soup, tbx, base, notes):
         y = re.search(r'like the (\d{4}) best', m.group(2))
         sub = 'Too new for a full complaint score' + (f' · YouTube owners like the {y.group(1)} best' if y else '') if 'too new' in m.group(2).lower() else _cp_cut(m.group(2), 60)
         sl.attrs = {}; sl['class'] = ['yc-cap']; sl.string = m.group(2); newer.append(_cp_box(soup, m.group(1), sub, [sl.extract()], None, _CP_I('calendar'), h2=False))
-    if opened or charts or newer or notes is not None:
+    # 2. the year chart + years to avoid / buy (open)
+    g2 = None
+    if opened or charts:   # 11-19 (Elijah: "hero, the core cards, then the chart with avoid/buy"): years to avoid / buy open the chart group
         g2 = _cp_grp(soup, 'cpl-g2'); base.append(g2)
-        for p in charts + opened + newer: g2.append(p.extract())
-        if notes is not None: g2.append(notes.extract())
-    # 3. recall alerts + opinions, after the article
+        for p in lead + charts + opened: g2.append(p.extract())
+    else:
+        for c in lead: g1.insert_before(c.extract())
+    # 3. round 5 (11-19, Elijah: fewer cards): the stack keeps the boxes a buyer wants right away; every method/meta box (how to read, sources,
+    #    the data table, embed, YouTube ranks, the engine-code tools, the newer-years note, and the end block's "Use this data free" and
+    #    feedback) goes into ONE "Info" box as a nested stack. Similar cars / other versions join Related at the end; "Questions to ask the
+    #    seller" opens inside Questions. cpl.js opens every parent <details> of an #anchor, so old links still land on the nested box.
+    info, relb = [], []
+    for x in [y for y in g1.find_all('section') if _cp_isbox(y) and y.find_parent(class_='cpl-b') is None]:
+        t = _cp_btitle(x)
+        if any(w in t for w in _CP_INFO_W): info.append(x.extract())
+        elif x.get('id') == 'similar' or t.startswith(('similar', 'other versions', 'more like this', 'compare')): relb.append(x.extract())
+    # boxes that belong to a core box open inside it (the seller questions in Questions, "What breaks most" in Problems, gas or hybrid in Engines)
+    tops = lambda: [y for y in g1.find_all('section') if _cp_isbox(y) and y.find_parent(class_='cpl-b') is None]
+    for kid, par in (('ask the seller', ('questions', 'common questions')), ('what breaks most', ('problems',)), ('gas or hybrid', ('engines', 'specs'), ),
+                     ('reliability', ('problems',)), ('what owners say on youtube', ('should you buy',))):
+        for x in [y for y in tops() if kid in _cp_btitle(y)]:
+            near = [y for y in x.parent.find_all('section', recursive=False) if y is not x and _cp_isbox(y) and _cp_btitle(y).startswith(par) and kid not in _cp_btitle(y)]   # same generation first (perf pages)
+            pb = (near or [y for y in tops() if y is not x and _cp_btitle(y).startswith(par) and kid not in _cp_btitle(y)] or [None])[0]
+            pb = pb.find(class_='cpl-b') if pb is not None else None
+            if pb is not None: pb.append(x.extract())
+    if g2 is not None:
+        for d in g2.select('div.cpl > details'):
+            if d.find_parent(class_='cpl-b') is not None: continue
+            if any(w in _cp_btitle(d) for w in ('how to read', 'youtube ranks', 'embed')):
+                w = soup.new_tag('div'); w['class'] = ['cpl']; w.append(d.extract()); info.append(w)
+        for c in g2.find_all('div', class_='cpl'):
+            if not c.find(True): c.decompose()
+    info += newer
+    if notes is not None: info.append(notes.extract())
+    pend = soup.find('div', class_='pend')   # perf inject pages: the end block is already on the page
+    endb = pend.select('div.cpl > details') if pend is not None else []
+    nest = soup.new_tag('div'); nest['class'] = ['cpl-nest']
+    for x in info: nest.append(x)
+    for d in endb: w = soup.new_tag('div'); w['class'] = ['cpl']; w.append(d.extract()); nest.append(w)
+    if pend is None: nest.append(Comment('cpl-info-end'))   # build.py page() puts "Use this data free" and the feedback box here
+    tl = ' '.join(_cp_btitle(x) for x in info) + (' use this data feedback' if pend is None or endb else '')
+    words = [k for k, ws in _CP_INFO_LINE if any(w in tl for w in ws)][:3]   # one line on a phone
+    line = ' · '.join(words); line = line[:1].upper() + line[1:]
+    ib = _cp_box(soup, 'Info', line, [nest], 'info', _CP_I('info'), h2=False, cls='cpl-info')
+    ib.find('summary')['class'] = ['cpl-keep']
+    g4 = _cp_grp(soup, 'cpl-g4'); g4.append(ib)
+    (g2 if g2 is not None else g1).insert_after(g4)
+    # 4. recall alerts + opinions, after the article
     if g3.contents: top.insert_after(g3)
+    # 11-19: a group of nothing but boxes is one inset list (cpl.css .cpl-ins)
+    for g in (g1, nest):
+        if all(_cp_isbox(c) or (c.name == 'div' and 'cpl' in _cp_cls(c)) for c in g.find_all(recursive=False)) and g.find(recursive=False) is not None: g['class'] = _cp_cls(g) + ['cpl-ins']
+    if rel is None and relb: rel = _cp_grp(soup, 'cpl-rel')
     if rel is None: return ''
-    pend = soup.find('div', class_='pend')
-    if pend is not None: pend.insert_after(rel); return ''   # perf inject pages: the end block is already on the page
+    for x in reversed(relb): rel.insert(0, x)
+    rel['class'] = _cp_cls(rel) + ['cpl-ins']
+    if pend is not None: pend.insert_after(rel); return ''
     return str(rel)   # build.py page() puts it after the end-of-page boxes
+def _cp_btitle(x):
+    sm = x if x.name == 'summary' else x.find('summary')
+    t = sm.find(['h2', 'b']) if sm is not None else None
+    return _ep_txt(t).lower() if t is not None else ''
+_CP_INFO_W = ('how to read', 'sources', 'all the data', 'check engine light', 'engine codes', 'embed', 'youtube ranks', 'about these', 'looking at a', 'method')
+_CP_INFO_LINE = [('sources', ('sources',)), ('data', ('all the data', 'use this data')), ('embed', ('embed',)), ('how to read', ('how to read', 'looking at a')),
+                 ('YouTube ranks', ('youtube ranks',)), ('engine codes', ('engine codes', 'check engine light')), ('feedback', ('spot a mistake', 'feedback'))]
+# 11-19 (Elijah): every card is title-only (the one-line fact under the title goes; the "Info" box keeps its short contents line), and the
+# icons are flat black line icons from one open-source set (Lucide, ISC licence in the sprite; assets/ic.svg) instead of the GPT .webp set
+# (those stay in assets/icons, unused). Runs on the finished page (build.py page() after the date hash, and on CAR_HOOK's output for perf
+# inject pages), so page dates don't move.
+IC_V = '1'
+_CP_SPR = {'warning', 'wrench', 'bell', 'question', 'scale', 'data', 'tag', 'calendar', 'film', 'stopwatch', 'youtube', 'chart', 'embed', 'share', 'talk',
+           'opinion', 'signpost', 'car', 'search', 'info', 'history', 'engine'}
+def _cp_svg(k): return f'<svg class="cpl-i" width="24" height="24" aria-hidden="true" focusable="false"><use href="/assets/ic.svg?v={IC_V}#{k}"></use></svg>'
+_CP_SUMM = re.compile(r'<summary\b[^>]*>.*?</summary>', re.S)
+_CP_BTN = re.compile(r'<button\b[^>]*\bclass="cpl-a\b[^"]*"[^>]*>.*?</button>', re.S)
+_CP_IMG = re.compile(r'<img\b[^>]*?\bsrc="/assets/icons/([\w-]+)\.webp(?:\?v=\d+)?"[^>]*>')
+_CP_OLDY = re.compile(r'(<details\b[^>]*\bcpl-y\b[^>]*>\s*<summary\b[^>]*>)\s*<img\b[^>]*>')
+_CP_SMALL = re.compile(r'<small\b[^>]*>.*?</small>', re.S)
+def CPL_POLISH(h):
+    if 'cpl' not in h: return h
+    h = _CP_OLDY.sub(lambda m: m.group(1) + _cp_svg('history'), h)
+    h = _CP_SUMM.sub(lambda m: m.group(0) if ('cpl-keep' in m.group(0) or 'cpl-ar' not in m.group(0)) else _CP_SMALL.sub('', m.group(0)), h)
+    h = _CP_BTN.sub(lambda m: _CP_SMALL.sub('', m.group(0)), h)
+    return _CP_IMG.sub(lambda m: _cp_svg(m.group(1) if m.group(1) in _CP_SPR else 'info'), h)

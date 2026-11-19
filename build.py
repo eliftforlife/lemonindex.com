@@ -232,7 +232,7 @@ def feedback_html(q, placeholder='', note=''):
             '<label class="fb-l" for="fb-e">Email (optional, only if you want a reply)</label><input id="fb-e" name="email" type="email" maxlength="200" autocomplete="email">'
             '<div class="fb-hpw" aria-hidden="true"><label for="fb-w">Leave this empty</label><input id="fb-w" class="fb-hp" name="website" tabindex="-1" autocomplete="off"></div>'
             '<button class="fb-go" type="submit">Send</button></div><p class="fb-st" role="status" aria-live="polite" tabindex="-1"></p></form></section>')
-def end_block(path, upd, shl, fb=''):
+def end_block(path, upd, shl, fb='', info=None):
     """11-10 desktop pass: one end-of-page block in the content column. 11-18 (Elijah): its parts are small boxes:
     share (one tap opens the share sheet), the data credit (with the Updated date), and the folded feedback form."""
     items = []
@@ -243,10 +243,10 @@ def end_block(path, upd, shl, fb=''):
         items.append(f'<button type="button" class="cpl-a" data-share="{data}">{PILL_SUM("/assets/icons/share.webp", ask.strip(), label + " page" if label == "Send them this" else label)}{PILL_GO}</button>')
     elif shl: items.append(shl)
     if path.startswith(('/cars/', '/stats/', '/best', '/electric/', '/engines/', '/check-engine-light/', '/symptoms/')):
-        items.append(PILL('/assets/icons/data.webp', 'Use this data free', upd or 'Credit The Lemon Index',
+        (items if info is None else info).append(PILL('/assets/icons/data.webp', 'Use this data free', upd or 'Credit The Lemon Index',
                           '<p class="yc-cap">Free to use with credit: <q>Source: The Lemon Index (lemonindex.com)</q>. <a href="/data/">Get the data</a> · <a href="/images/">Free images</a></p>'))
     elif upd: items.append(f'<p class="pend-m">{upd}</p>')
-    if fb: items.append(fb)
+    if fb: (items if info is None else info).append(fb)   # 11-19: car pages put these two inside their "Info" box (info = a list)
     if not items: return ''
     return f'<div class="pend"><div class="cpl">{"".join(items)}</div></div>'
 def ask_fb(path):
@@ -277,13 +277,13 @@ NAV = [('/cars/', 'Look up a car'), ('/brands/', 'Brands'), ('/compare/', 'Compa
 # header v7 (11-05, Elijah: "headers look AI-made, look at Stripe and Apple"): Apple-thin bar, 7 plain links + More flyout, one small CTA pill;
 # phones get a full-screen menu. Styles/JS: assets/gh.css + gh.js (master copy in 0 HQ/Tools/site header/).
 # 11-13 (nav review #6): Trucks (the /cars/ grid's Trucks tab) in the bar; Studies and Motorcycles moved to More, Engines up from More
-NAV_TOP = [('/cars/', 'Cars'), ('/?type=trucks', 'Trucks'), ('/brands/', 'Brands'), ('/compare/', 'Compare'), ('/electric/', 'Electric'), ('/engines/', 'Engines'), ('/vin/', 'VIN check')]
+NAV_TOP = [('/cars/', 'Cars'), ('/trucks/', 'Trucks'), ('/brands/', 'Brands'), ('/compare/', 'Compare'), ('/electric/', 'Electric'), ('/engines/', 'Engines'), ('/vin/', 'VIN check')]
 NAV_MORE = [('/recalls/', 'Recall check'), ('/best/', 'Best cars'), ('/rankings/', 'Every car ranked'), ('/stats/car-complaints/', 'Statistics'), ('/supercars/', 'Supercars'), ('/jdm/', 'JDM'), ('/motorcycles/', 'Motorcycles'), ('/studies/', 'Studies'), ('/check-engine-light/', 'Engine code lookup'), ('/symptoms/', 'Car symptoms'), ('/best-gas-mileage/', 'Gas mileage'), ('/planes/', 'Planes'), ('/car-loan-rates/', 'Loan rates'), ('/vote/', 'Vote'), ('/data/', 'Free data'), ('/method/', 'How it works')]
 GH_CHEV = '<svg viewBox="0 0 8 8" aria-hidden="true"><path d="M2.5 1 5.5 4 2.5 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 GH_DOWN = '<svg viewBox="0 0 8 8" aria-hidden="true"><path d="M1 2.75 4 5.75 7 2.75" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 # 11-10 v2 (Elijah: "it still can look a little better"): one small monochrome line icon per main menu item (24 px grid, stroke 1.8)
 GH_IC = {'/cars/': '<path d="M4 16v-4l2.2-5h11.6L20 12v4z"/><path d="M4 12h16"/><circle cx="7.5" cy="16.5" r="1.6"/><circle cx="16.5" cy="16.5" r="1.6"/>',
-         '/?type=trucks': '<path d="M3 16v-5h9V7h5l3 4v5z"/><path d="M12 11h8"/><circle cx="7" cy="16.5" r="1.6"/><circle cx="16.5" cy="16.5" r="1.6"/>',
+         '/trucks/': '<path d="M3 16v-5h9V7h5l3 4v5z"/><path d="M12 11h8"/><circle cx="7" cy="16.5" r="1.6"/><circle cx="16.5" cy="16.5" r="1.6"/>',
          '/brands/': '<path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/>',
          '/compare/': '<path d="M8 20V9M16 20V4M4 20h16"/>',
          '/vin/': '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 9v6M10 9v6M13.5 9v6M17 9v6"/>',
@@ -301,7 +301,12 @@ GH_IC = {'/cars/': '<path d="M4 16v-4l2.2-5h11.6L20 12v4z"/><path d="M4 12h16"/>
          '/stats/car-complaints/': '<path d="M4 20V4M4 20h16"/><path d="M7 15l4-4 3 3 5-6"/>'}
 # 11-11 (Elijah: one Cars section): the menu's Electric and Supercars open that tab of /cars/; /electric/ and /supercars/ stay as pages
 # (they rank for their own searches) and keep their links from the footer and from the tabs
-GH_HREF = {'/cars/': '/', '/electric/': '/?type=electric', '/supercars/': '/?type=supercars'}   # 11-11: the grid lives on / now
+GH_HREF = {'/cars/': '/'}   # 11-11: the grid lives on / now; 11-19: Electric and Supercars open their own pages again (cat_pages.py)
+# 11-19 (Elijah: every category chip opens its own page): the old /?type=<tab> links (the home cards, the /cars/ tabs, links inside pages)
+# point at those pages; page() rewrites them after the date hash, so no page date moves (cat_pages.py builds the pages)
+CAT_PATH = {'trucks': '/trucks/', 'suvs': '/suvs/', 'cars': '/sedans/', 'minivans': '/minivans/', 'performance': '/performance/',
+            'supercars': '/supercars/', 'electric': '/electric/', 'jdm': '/jdm/'}
+_CAT_RW = re.compile(r'href="(?:/cars)?/\?type=(' + '|'.join(CAT_PATH) + ')"')
 def gh_ic(u):
     return (f'<svg class="gh-ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">{GH_IC[u]}</svg>'
             if u in GH_IC else '')
@@ -314,7 +319,7 @@ def gh_header(path):
     # 11-10 (Elijah: the phone menu didn't fit one screen): grouped (Look up / Explore / More) in two columns on phones; headings and the
     # top-bar links (gh-x) only show where the top bar is folded away (<1024 px). Lemon-only: the styles live in site.css, not the shared gh.css.
     inbar = {u for u, _ in NAV_TOP}; lab = dict(NAV_TOP + NAV_MORE); lab['/check-engine-light/'] = 'Engine codes'
-    grp = [('Look up', ['/cars/', '/?type=trucks', '/brands/', '/compare/', '/vin/', '/recalls/', '/engines/', '/check-engine-light/', '/symptoms/']),
+    grp = [('Look up', ['/cars/', '/trucks/', '/brands/', '/compare/', '/vin/', '/recalls/', '/engines/', '/check-engine-light/', '/symptoms/']),
            ('Explore', ['/best/', '/rankings/', '/electric/', '/motorcycles/', '/supercars/', '/jdm/', '/best-gas-mileage/', '/studies/', '/stats/car-complaints/']),   # 11-13 JDM section
            ('More', ['/planes/', '/car-loan-rates/', '/vote/', '/data/', '/method/'])]
     assert sorted(u for _, us in grp for u in us) == sorted(lab), 'gh menu groups miss a link'
@@ -337,7 +342,7 @@ GH_SB = f'<button class="lxs-btn" type="button" aria-label="Search" aria-control
 GH_SD = (f'<form class="lxs-d" role="search" action="/" method="get"><div class="lxs-db">{_LXS_IC.replace("<svg ", "<svg class=\"lxs-di\" ", 1)}'
          '<input id="ghd" name="q" type="search" autocomplete="off" placeholder="Search cars, codes, lists" aria-label="Search cars, engine codes and lists" enterkeyhint="search">'
          '<div id="ghds" class="fsug" role="listbox" hidden></div></div></form>')
-LXS_V = '1115fb'   # lxs.css + lookup.js version (N1 navigation fixes; 11-15 4c: header fit + symptom search)
+LXS_V = '1119ck'   # lxs.css + lookup.js version (N1 navigation fixes; 11-15 4c: header fit + symptom search)
 GH_IC.setdefault('/rankings/', '<path d="M4 6h16M4 12h11M4 18h6"/>')   # 11-13 (N1, problem 12): "Every car ranked" in the menu, best to worst bars
 def navlinks(path):
     on = lambda u: path.startswith(u) or (u == '/cars/' and path.startswith('/cars'))
@@ -493,12 +498,16 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
     if 'RA_HOOK' in globals(): body = RA_HOOK(path, body)
     if 'ENG_HOOK' in globals(): body = ENG_HOOK(path, body)   # 11-18 engine pages: compact boxes (engine_pills.py), after the date hash
     if 'OP_HOOK' in globals(): body = OP_HOOK(path, body)   # 11-18 owner opinions box (opinions.py)   # 11-14 growth 4a: recall alert signup (after the date hash, so page dates don't move)
+    if 'CAT_HOOK' in globals(): body = CAT_HOOK(path, body)   # 11-19 /jdm/, /supercars/, /electric/, /motorcycles/: the category page top (cat_pages.py), after the date hash
     if 'CAR_HOOK' in globals(): body = CAR_HOOK(path, body)   # 11-18 car pages: no tab bar; every tab and long section is a tap-to-open box (car_pills.py), after the date hash
     _rel = ''; _rm = re.search(r'<!--cpl-rel-->(.*?)<!--/cpl-rel-->', body, re.S)   # 11-18 r4 (Elijah): the Related box goes last, after the end-of-page boxes
     if _rm: _rel = _rm.group(1); body = body[:_rm.start()] + body[_rm.end():]
     _shl = ''
     _sm = list(re.finditer(r'<p class="shline">.*?</p>', body, re.S))
     if _sm: _shl = _sm[-1].group(0); body = body[:_sm[-1].start()] + body[_sm[-1].end():]
+    _inf = [] if '<!--cpl-info-end-->' in body else None   # 11-19 (Elijah: fewer cards): car pages fold "Use this data free" + feedback into the Info box
+    _eb = end_block(path, _upd, _shl, '' if path == '/vote/' else ask_fb(path), _inf)
+    if _inf is not None: body = body.replace('<!--cpl-info-end-->', ''.join(f'<div class="cpl">{x}</div>' for x in _inf), 1)
     url = BASE + (canon or path); ld = list(ld or []) + [crumbs(path, title)]
     lds = ''.join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in (ld or [])).replace('%%PD_ISO%%', _d)
     beacon = f"<script defer src=\"https://static.cloudflareinsights.com/beacon.min.js\" data-cf-beacon='{{\"token\": \"{CF}\"}}'></script>" if CF else ''
@@ -511,9 +520,9 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' '{DB_HASH}' https://static.cloudflareinsights.com https://challenges.cloudflare.com https://www.googletagmanager.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; frame-src https://challenges.cloudflare.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cloudflareinsights.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://vpic.nhtsa.dot.gov https://api.nhtsa.gov https://lemon-survey.elift08.workers.dev https://lemon-alerts.elift08.workers.dev https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="google-adsense-account" content="{ADS}"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/lxs.css?v={LXS_V}">
-<link rel="stylesheet" href="/assets/site.css?v=1117-soonyt"><link rel="stylesheet" href="/assets/cpl.css?v=4"><script src="/assets/cpl.js?v=1" defer></script><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
+<link rel="stylesheet" href="/assets/site.css?v=1117-soonyt"><link rel="stylesheet" href="/assets/cpl.css?v=5"><script src="/assets/cpl.js?v=1" defer></script><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
 <body>{'' if path.startswith('/thanks/') else DONBAR}{gh_header(path)}
-<main>{body}{end_block(path, _upd, _shl, '' if path == '/vote/' else ask_fb(path))}{_rel}{'' if path == '/vote/' else ask_html(path)}</main>
+<main>{body}{_eb}{_rel}{'' if path == '/vote/' else ask_html(path)}</main>
 <footer class="foot f2"><div class="f2-in"><div class="f2-brand"><a class="f2-logo" href="/"><img src="/assets/icon-64.png" alt="" width="40" height="40"><span><b>The Lemon Index</b><small>Car reliability from owner complaints, per car sold. Free.</small></span></a><div class="f2-soc">{F2_SOC}</div></div>
 <nav class="f2-col" aria-label="Explore"><p class="f2-h">Explore</p><a href="/compare/">Compare cars</a><a href="/best/">Best cars</a><a href="/rankings/">Every car ranked</a><a href="/brands/">Brands</a><a href="/engines/">Every engine</a><a href="/electric/">Electric cars</a><a href="/stats/car-complaints/">Statistics</a><a href="/car-loan-rates/">Car loan rates</a></nav>
 <nav class="f2-col" aria-label="Tools and data"><p class="f2-h">Tools and data</p><a href="/vin/">VIN check</a><a href="/recalls/">Recall check</a><a href="/check-engine-light/">Engine codes</a><a href="/symptoms/">Car symptoms</a><a href="/uk/">UK MOT pass rates</a><a href="/method/">How the index works</a><a href="/data/">Free data</a><a href="/images/">Free images</a><a href="/vote/">Vote</a></nav>
@@ -521,6 +530,8 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <div class="f2-bot"><span>© {TODAY[:4]} The Lemon Index</span><a href="/terms/">Terms</a><a href="/privacy/">Privacy</a><a href="/refunds/">Refunds</a><span class="f2-dis">Built from public NHTSA complaint data and published U.S. sales figures. Not affiliated with any automaker. Not a repair-cost or safety rating.</span></div></footer><script src="/assets/explorer.js?v=1112d" defer></script><script src="/assets/support.js?v=1118b" defer></script><script src="/assets/imginfo.js?v=2" defer></script><script src="/assets/lookup.js?v={LXS_V}" defer></script>{beacon}</body></html>'''
     doc = _ii_stable(doc)
     doc = _ICONV.sub(r'\1?v=2', doc)   # 11-18: the box icons were redrawn (GPT image), same names
+    doc = _CAT_RW.sub(lambda m: f'href="{CAT_PATH[m.group(1)]}"', doc)   # 11-19: /?type=<tab> -> the category page
+    if 'CPL_POLISH' in globals(): doc = CPL_POLISH(doc)   # 11-19 (Elijah): title-only cards + flat black line icons (car_pills.py), after the date hash
     LG[path] = (set(_LGHREF.findall(doc)), bool(_LGNOIX.search(doc)), url)   # 11-12 link graph (linkgraph.py, end of build)
     f = os.path.join(OUT, path.strip('/'), 'index.html') if path.endswith('/') else os.path.join(OUT, path.strip('/'))
     os.makedirs(os.path.dirname(f), exist_ok=True)
@@ -2246,6 +2257,7 @@ page('/', HOME_PAGE['title'], HOME_PAGE['desc'], f'''
 {CARS_GRID.replace(CTABS, HKBAR, 1)}
 <section class="faq"><h2>Questions</h2>{HOME_FAQ}</section></div><script src="/assets/ctabs.js?v=6" defer></script>''', ld=HOME_PAGE['ld'])
 
+exec(open('cat_pages.py', encoding='utf-8').read())   # 11-19 (Elijah): every kind-of-car chip opens its own page (/trucks/, /suvs/, /sedans/, /minivans/, /performance/ + the hubs' new top)
 curls = []
 exec(open('cmp_pages.py', encoding='utf-8').read())   # 11-12 (Elijah): match-up pages rebuilt around who wins and why, years to buy, what breaks, recalls, YouTube
 for a, b in PAIRS:
@@ -2343,7 +2355,7 @@ _404 = re.sub(r'<main>.*</main>', lambda m: (
 _404 = _404.replace('</body>', f'<script src="/assets/lx404.js?v={LXS_V}" defer></script></body>', 1)
 open(f'{OUT}/404.html', 'w', encoding='utf-8').write(_404)
 RCLP = 'pages'; exec(open('recall_pages.py', encoding='utf-8').read())   # 11-14 growth plan 2B-1: /recalls/ hub, make and model recall pages (RCL_URLS)
-urls = ['/', '/rankings/', STUDY, '/studies/', '/method/', '/vin/', '/car-loan-rates/', '/vote/', '/data/', '/brands/'] + PERF_URLS + JDM_URLS + burls + purls + murls + surls + eurls + GAP_URLS + CODE_URLS + globals().get('SYM_URLS', []) + SEO_URLS + EXTRA_URLS + BMW_URLS + SCE_URLS + AE_URLS + yurls + ADV_URLS + curls + LEGAL_URLS + UXC_URLS + MST_URLS + globals().get('HD_URLS', []) + globals().get('VE_URLS', []) + globals().get('RC_URLS', []) + globals().get('CM_URLS', []) + globals().get('RCL_URLS', []) + globals().get('UK_URLS', [])
+urls = ['/', '/rankings/', STUDY, '/studies/', '/method/', '/vin/', '/car-loan-rates/', '/vote/', '/data/', '/brands/'] + PERF_URLS + JDM_URLS + CAT_URLS + burls + purls + murls + surls + eurls + GAP_URLS + CODE_URLS + globals().get('SYM_URLS', []) + SEO_URLS + EXTRA_URLS + BMW_URLS + SCE_URLS + AE_URLS + yurls + ADV_URLS + curls + LEGAL_URLS + UXC_URLS + MST_URLS + globals().get('HD_URLS', []) + globals().get('VE_URLS', []) + globals().get('RC_URLS', []) + globals().get('CM_URLS', []) + globals().get('RCL_URLS', []) + globals().get('UK_URLS', [])
 exec(open('quality_gate.py', encoding='utf-8').read())   # 11-18 low-value review fix: thin pages noindex + out of the sitemap (THIN)
 open(f'{OUT}/sitemap.xml', 'w', encoding='utf-8').write('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + ''.join(f'<url><loc>{BASE}{u}</loc><lastmod>{PD.get(u, {}).get("d", TODAY)}</lastmod></url>' for u in urls) + '</urlset>')
 open(f'{OUT}/ads.txt', 'w').write(f'google.com, {ADS.replace("ca-", "")}, DIRECT, f08c47fec0942fa0\n')

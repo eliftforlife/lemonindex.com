@@ -4,6 +4,14 @@
 // its kind (r s e p); the body tabs skip the Electric-tab twins (mc-dup) and the gray "No data yet" cards.
 // 11-17 (Elijah's sketch): the home page has big photo cards (.hk, above the grid) instead of the text tabs. A card filters the grid the same
 // way and scrolls to it; the grid's .hkon line names the open kind and links back to every car.
+// 11-19 (Elijah: "category cards open their own page, not a jump down /cars/"): each kind now has a page of its own (cat_pages.py), and
+// the tabs and cards link to it (build.py rewrites the old /?type= links); an old /?type=<kind> link opens that page. "All cars" still
+// shows the whole grid here.
+(() => {
+  const P = { trucks: '/trucks/', suvs: '/suvs/', cars: '/sedans/', minivans: '/minivans/', performance: '/performance/', supercars: '/supercars/', electric: '/electric/', jdm: '/jdm/' };
+  const k = new URLSearchParams(location.search).get('type');
+  if (k && P[k]) location.replace(P[k] + location.hash);
+})();
 (() => {
   const grid = document.querySelector('.cgrid'), navs = [...document.querySelectorAll('.ctabs, .hk, .hkon')]; if (!navs.length || !grid) return;
   const nav = navs[0], bar = grid.querySelector('.hkon'), cards = document.querySelector('.hk');
@@ -46,6 +54,7 @@
   const to = bar || nav;   // where a filtered view opens: the grid's own line on the home page, the tabs on /cars/
   navs.forEach(n => n.addEventListener('click', e => {
     const a = e.target.closest('a[data-type]'); if (!a || e.metaKey || e.ctrlKey || e.shiftKey) return;
+    const h = a.getAttribute('href') || ''; if (h !== '/' && !h.includes('?type=')) return;   // 11-19: a kind's own page opens as a normal link
     e.preventDefault(); set(a.dataset.type, true);
     if (n === cards) (a.dataset.type === 'all' ? grid : to).scrollIntoView({ block: 'start', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
   }));

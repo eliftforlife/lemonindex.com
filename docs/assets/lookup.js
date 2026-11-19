@@ -125,7 +125,8 @@
 
   // ---- what the words ask for besides a car
   const BEST = (u, b, s) => ({ u, b, s: s || 'Ranked list', kind: 'list' });
-  const has = u => u.startsWith('/?type=') || !GO || !GO.best || GO.best.includes(u);
+  const KPG = { suvs: '/suvs/', trucks: '/trucks/', minivans: '/minivans/', cars: '/sedans/' };   // 11-19: each kind has its own page
+  const has = u => Object.values(KPG).includes(u) || !GO || !GO.best || GO.best.includes(u);
   const INTENT = [
     [/\b(teen(ager)?s?|first (car|time driver)s?|new drivers?|student drivers?|young drivers?|(for )?(my )?(daughter|son|kid)s?|16 ?(year|yr) ?olds?)\b/, () => BEST('/best/safest-cars-for-teens/', 'Safest used cars for teens', 'Crash-test stars + fewest complaints, by model year')],
     [/\b(safe(st|ty)?|crash (test|rating)s?)\b/, () => BEST('/best/safest-cars-for-teens/', 'Safest used cars, by model year', 'NHTSA crash-test stars + fewest complaints')],
@@ -139,7 +140,7 @@
     [/^\s*(?:(?:all|every|used|the|best|popular|list of|show me)\s+)*(suvs?|crossovers?|trucks?|pickups?(?: trucks?)?|minivans?|vans?|sedans?(?: (?:and|&) hatchbacks?)?|hatchbacks?)(?:\s+(?:list|for sale|ranked|page))?\s*$/, m => {
       const w = m[1], k = /suv|crossover/.test(w) ? 'suvs' : /truck|pickup/.test(w) ? 'trucks' : /van/.test(w) ? 'minivans' : 'cars';
       const lab = { suvs: 'SUVs', trucks: 'Trucks', minivans: 'Minivans', cars: 'Sedans & hatchbacks' }[k];
-      return BEST(`/?type=${k}`, { suvs: 'Every SUV', trucks: 'Every truck', minivans: 'Every minivan and van', cars: 'Every sedan and hatchback' }[k] + ', scored', `${lab} tab · every model with its Lemon Index`); }],
+      return BEST(KPG[k], { suvs: 'Every SUV', trucks: 'Every truck', minivans: 'Every minivan and van', cars: 'Every sedan and hatchback' }[k] + ', scored', `${lab} · every model, by brand`); }],
     [/\b(check engine( light)?|engine light|cel|obd ?2?|engine codes?|error codes?|codes?)\b/, () => BEST('/check-engine-light/', 'Engine code lookup', 'What a check engine light code means')],
     [/\b(vin|recall check|check recalls?)\b/, () => BEST('/vin/', 'VIN check', 'Decode a VIN, then see its recalls')],
     [/\b(compare|comparison)\b/, () => BEST('/compare/', 'Compare cars side by side', 'Compare')],
@@ -373,10 +374,14 @@
     };
     // 11-12 round 2 (Liam, Mitch: "Enter does nothing"): Enter opens the highlighted match, else the top one, closest matches included
     const first = () => res.items.findIndex(h => h.kind !== 'pop');
-    const run = () => { const v = q.value.trim(); res = v ? find(q.value) : { items: [] }; cur = res.brands ? -1 : first(); show(); say(''); };
+    // 11-19: a category page's box (#ckq, data-pref="grid") lists that page's own cars first, then everything else, in the usual order
+    const pref = q.dataset.pref === 'grid' ? new Set([...document.querySelectorAll('.ckg a[href]')].map(a => a.getAttribute('href').split('#')[0])) : null;
+    const rank = h => h.u && pref.has(h.u.split('#')[0].replace(/\d{4}\/$/, '')) ? 0 : 1;
+    const find2 = v => { const r = find(v); if (pref && pref.size && r.items) r.items = r.items.map((h, i) => [h, i]).sort((x, y) => (x[0].kind === 'pop') - (y[0].kind === 'pop') || rank(x[0]) - rank(y[0]) || x[1] - y[1]).map(x => x[0]); return r; };
+    const run = () => { const v = q.value.trim(); res = v ? find2(q.value) : { items: [] }; cur = res.brands ? -1 : first(); show(); say(''); };
     const go = () => {
       const v = q.value.trim(); if (!v) return false;
-      res = find(q.value);
+      res = find2(q.value);
       if (res.brands) { say(`Add the brand and model, e.g. '${res.brands[0] ? res.brands[0].y : 2016} Honda Civic'.`); show(); return false; }
       const h = res.items[cur >= 0 && cur < res.items.length ? cur : first()];
       if (!h) { show(); say('Pick one of the closest matches.'); return false; }
@@ -410,7 +415,7 @@
   }
   // 11-13 navigation test (N1, problem 1): the bar's own search box (1024px+) and the magnifier (under 1024px: opens the menu, search focused)
   // ... and the 404 page's box (#lxq, assets/lx404.js fills it from the address that wasn't found)
-  [['ghd', 'ghds'], ['lxq', 'lxqs']].forEach(([qi, si]) => {
+  [['ghd', 'ghds'], ['lxq', 'lxqs'], ['ckq', 'ckqs']].forEach(([qi, si]) => {
     const xq = $(qi); if (!xq || !xq.form) return;
     const xf = xq.form, xsay = document.createElement('p'); xsay.className = 'fmiss'; xsay.setAttribute('role', 'status'); xsay.setAttribute('aria-live', 'polite');
     xf.appendChild(xsay);

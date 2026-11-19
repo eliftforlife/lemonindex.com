@@ -121,7 +121,7 @@
     if (!el.closest('.rla-page')) {
       const hh = el.querySelector('.rla-h'), tg = document.createElement('button');
       tg.type = 'button'; tg.className = 'rla-tg'; tg.setAttribute('aria-expanded', 'false');
-      tg.innerHTML = `<img src="/assets/icons/bell.webp" alt="" width="44" height="44" decoding="async"><span>${hh.innerHTML}</span><svg class="rla-ar" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>`;
+      tg.innerHTML = `<svg class="cpl-i" width="24" height="24" aria-hidden="true" focusable="false"><use href="/assets/ic.svg?v=1#bell"></use></svg><span>${hh.innerHTML}</span><svg class="rla-ar" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>`;
       el.prepend(tg); el.classList.add('rla-col');
       tg.addEventListener('click', () => { const on = !el.classList.contains('rla-open'); el.classList.toggle('rla-open', on); tg.setAttribute('aria-expanded', String(on));
         if (on) { const e1 = el.querySelector('.rla-e'); if (e1) e1.focus({ preventScroll: true }); } });

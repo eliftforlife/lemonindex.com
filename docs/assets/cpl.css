@@ -197,3 +197,72 @@ section.opn#opinions .opn-share { margin-top: 0; }
 .cpl-page ~ .pend { max-width: 760px; margin-left: auto; margin-right: auto; }
 .cpl-grp > .cpl-one, .cpl-grp > section, .cpl-grp > .cpl-sec, .cpl-grp > .pf, .cpl-grp .rla { width: 100%; max-width: none; margin-left: 0; margin-right: 0; box-sizing: border-box; }
 .cpl-grp .rla-tg, .cpl-grp .opn-share { max-width: none; }
+/* 11-19 round 5 (Elijah: "fewer cards ... make them look slightly better"; "plain black icons like a normal site"): one-line cards
+   (title only; the Info box keeps its short contents line), flat black Lucide line icons from the assets/ic.svg sprite (car_pills.py
+   CPL_POLISH), 62 px rows, 17.5 px semibold titles, a light chevron, 8 px gaps. */
+.cpl-i { flex: none; display: block; width: 24px; height: 24px; color: #1d1d1f; }
+.cpl, .cpl-grp, .cpl-grp .pf, .cpl-grp .pf-g.on, .cpl-grp .cpl-stk, .cpl-nest { gap: 8px; }
+.cpl > details, .cpl > .cpl-a { border-radius: 18px; }
+.cpl > details > summary, .cpl > details.yrs-more > summary, .cpl > details.emx > summary, .cpl > .cpl-a, .rla-tg {
+  gap: 14px; padding: 10px 14px 10px 18px; min-height: 62px; border-radius: 18px; }
+.cpl summary b, .cpl summary .cpl-h, .cpl > .cpl-a b, .rla-tg span { font-size: 17.5px; font-weight: 600; line-height: 1.25; letter-spacing: -.012em; }
+.cpl summary small, .cpl > .cpl-a small { font-size: 13.5px; }
+.cpl .cpl-ar, .rla-tg .rla-ar { width: 18px; height: 18px; color: #aeaeb2; }
+.cpl .cpl-b, .cpl .yrs-more > .bars, .cpl .emx-p { margin: 0 8px 8px; }
+.supc { min-height: 62px; border-radius: 18px; }
+@media (max-width: 480px) {
+  .cpl > details > summary, .cpl > details.yrs-more > summary, .cpl > details.emx > summary, .cpl > .cpl-a, .rla-tg { gap: 14px; padding: 10px 12px 10px 16px; min-height: 60px; }
+  .cpl summary b, .cpl summary .cpl-h, .cpl > .cpl-a b, .rla-tg span { font-size: 17px; }
+}
+/* the Info box: its nested stack of method/meta boxes sits straight in the open card */
+.cpl-info .cpl-b:has(> .cpl-nest) { background: none; padding: 0; margin: 0 8px 8px; }
+.cpl-nest { display: grid; grid-template-columns: minmax(0, 1fr); }
+.cpl-nest > *, .cpl-nest .cpl { margin: 0; max-width: none; }
+.cpl-nest .cpl > details, .cpl-nest .cpl > .cpl-a { background: #fff; box-shadow: none; }
+.cpl-nest .cpl > details > summary:hover { background: #fafafa; }
+.cpl-nest .cpl-b, .cpl-nest .yrs-more > .bars, .cpl-nest .emx-p { background: #f5f5f7; }
+.cpl-nest > p.yc-cap, .cpl-nest > .yc-cap { margin: 0; padding: 12px 16px; background: #fff; border-radius: 18px; }
+.cpl-g4:empty { display: none; }
+.cpl-g2:empty { display: none; }
+/* 11-19 category pages (cat_pages.py: /trucks/, /suvs/, /sedans/, /minivans/, /performance/, and the top of /jdm/, /supercars/, /electric/,
+   /motorcycles/): a big title, the search box (this kind first), one grey source line, then the cars by brand with only their names */
+.ckp .ck-h { max-width: 640px; margin: 0 auto; padding: 34px 0 6px; text-align: center; }
+.ckp .ck-h h1 { margin: 0 0 20px; font-size: clamp(44px, 12vw, 72px); font-weight: 800; line-height: 1; letter-spacing: -.045em; }
+.ck-s { position: relative; max-width: 560px; margin: 0 auto; text-align: left; }
+.ck-s #ckq { width: 100%; box-sizing: border-box; min-height: 52px; padding: 12px 18px; border: 0; border-radius: 16px; background: #f3f3f5; font: inherit; font-size: 17px; color: #1d1d1f; box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .04); }
+.ck-s #ckq::placeholder { color: #86868b; }
+.ck-s #ckq:focus { outline: 3px solid var(--lemon, #ffd400); outline-offset: 1px; background: #fff; box-shadow: inset 0 0 0 1.5px #1d1d1f; }
+.ck-s .fsug { max-height: min(60vh, 520px); overflow-y: auto; }
+.ckp .ck-src { margin: 12px 0 0; font-size: 14px; line-height: 1.4; color: #6e6e73; }
+.ckp .ckg { margin: 26px 0 0; padding: 0; }
+.ckp .ckg .mbs .mb h2.ck-b { margin: 0 0 14px; font-size: 22px; line-height: 1.2; letter-spacing: -.02em; text-align: center; }
+.ckp .ckg .mg .mc { padding: 12px 6px 12px; gap: 4px; }
+.ckp .ckg .mc b { font-size: 15px; line-height: 1.25; }
+.ckp .ckg .mc .ck-o { margin-top: 2px; font-size: 12.5px; line-height: 1.2; color: #6e6e73; text-align: center; }
+.ckp .ck-more { margin-top: 34px; }
+.ckp .ck-more .cpl-b > .tw, .ckp .ck-more .cpl-b table { max-width: 100%; }
+.ckp .ck-rl { margin: 0; padding: 0 0 0 18px; display: grid; gap: 6px; font-size: 15.5px; }
+.ckp .ck-cr { margin: 26px auto 0; text-align: center; }
+.ckp .cpl-rel { margin-top: 30px; }
+@media (max-width: 480px) { .ckp .ck-h { padding-top: 22px; } .ckp .ck-h h1 { margin-bottom: 16px; } }
+/* 11-19: the core stack (and Related, the Info box's inner stack, the category pages' boxes) is one inset grouped list, like iOS Settings:
+   one rounded gray block, thin dividers that start after the icon. Picked over separate pills on the 2016 Civic page (phone screenshots).
+   car_pills.py / cat_pages.py add .cpl-ins only to groups that hold nothing but boxes. */
+.cpl-grp.cpl-ins, .cpl-nest.cpl-ins { gap: 0; background: #f3f3f5; border-radius: 18px; box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .035); }
+.cpl-nest.cpl-ins { background: #fff; box-shadow: none; }
+.cpl-ins > .cpl-sec > .cpl > details, .cpl-ins > .cpl > details, .cpl-ins > .cpl > .cpl-a { background: transparent; border-radius: 0; box-shadow: none; }
+.cpl-ins > .cpl-sec > .cpl > details > summary, .cpl-ins > .cpl > details > summary, .cpl-ins > .cpl > .cpl-a { position: relative; border-radius: 0; }
+.cpl-ins > :first-child > .cpl > details > summary, .cpl-ins > .cpl:first-child > details > summary { border-radius: 18px 18px 0 0; }
+.cpl-ins > :last-child > .cpl > details:not([open]) > summary, .cpl-ins > .cpl:last-child > details:not([open]) > summary { border-radius: 0 0 18px 18px; }
+.cpl-ins > :only-child > .cpl > details:not([open]) > summary, .cpl-ins > .cpl:only-child > details:not([open]) > summary { border-radius: 18px; }
+.cpl-ins > * + * > .cpl > details > summary::before, .cpl-ins > .cpl + .cpl > details > summary::before {
+  content: ''; position: absolute; top: 0; left: 56px; right: 0; height: 1px; background: #dcdce1; pointer-events: none; }
+.cpl-nest.cpl-ins > * + * > .cpl > details > summary::before, .cpl-nest.cpl-ins > .cpl + .cpl > details > summary::before { background: #e8e8ed; }
+.cpl-nest.cpl-ins .cpl > details > summary:hover { background: #f7f7f9; }
+@media (max-width: 480px) { .cpl-ins > * + * > .cpl > details > summary::before, .cpl-ins > .cpl + .cpl > details > summary::before { left: 54px; } }
+.ckp .ckg .mbs { gap: 34px; } .ckp .ckg { margin-top: 22px; }
+/* a closed box inside an open one keeps its chevron pointing down; a divider before every row of an inset list */
+.cpl > details:not([open]) > summary .cpl-ar { transform: none; }
+.cpl-ins > * + .cpl > details > summary::before { content: ''; position: absolute; top: 0; left: 56px; right: 0; height: 1px; background: #dcdce1; pointer-events: none; }
+.cpl-nest.cpl-ins > * + .cpl > details > summary::before { background: #e8e8ed; }
+@media (max-width: 480px) { .cpl-ins > * + .cpl > details > summary::before { left: 54px; } }

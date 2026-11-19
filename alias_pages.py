@@ -57,7 +57,7 @@ for d in os.listdir(f'{OUT}/compare'):
 for _nqb, _nqk in (('trucks', 'trucks'), ('truck', 'trucks'), ('pickups', 'trucks'), ('suvs', 'suvs'), ('suv', 'suvs'), ('crossovers', 'suvs'),
                  ('minivans', 'minivans'), ('minivan', 'minivans'), ('vans', 'minivans'), ('sedans', 'cars'), ('sedan', 'cars'), ('hatchbacks', 'cars')):
     _nqa = f'/{_nqb}/'
-    if _nqa not in _ALIAS and not _is_real(_nqa) and f'data-type="{_nqk}"' in open(f'{OUT}/index.html', encoding='utf-8').read(): _ALIAS[_nqa] = f'/?type={_nqk}'
+    if _nqa not in _ALIAS and not _is_real(_nqa) and _nqa not in (globals().get('CAT_URLS') or []): _ALIAS[_nqa] = (globals().get('CAT_PATH') or {}).get(_nqk, f'/?type={_nqk}')   # 11-19: the category pages
     if _nqk != 'cars': _al(f'/best/{_nqb}/', f'/best/most-reliable-{_nqk}/'); _al(f'/best/most-reliable-{_nqb}/', f'/best/most-reliable-{_nqk}/')
 for a, tgt in _ALIAS.items():
     os.makedirs(f'{OUT}{a}', exist_ok=True)
