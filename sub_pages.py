@@ -44,7 +44,7 @@ SUB_CARS = {
 
 # 11-19 r3 (Elijah: "do similar thing for all jdm cars"): every page in SUB_GROUPS gets its config made from its data/perf/<slug>.json.
 # SUB_CARS entries (hand-written titles) win over the made ones.
-SUB_GROUPS = {'jdm'}
+SUB_GROUPS = {'jdm', 'cars'}
 _SB_PERF = {}
 for _p in glob.glob(os.path.join('data', 'perf', '*.json')):
     if _p.endswith('.auto.json'): continue
@@ -88,8 +88,41 @@ def _sb_auto(path, D):
          f'Should you buy {_sb_an(nm)}?', '', f'Should you buy {_sb_an(nm)}{yp}? Price new, best and worst years, what to check and what YouTube owners say.'),
     ]}
 
-def _sb_cfg(path):
+# 11-19 r4 regular cars, pilot first (Elijah picked "Pilot first": the 20 most-searched models and all their years, watch Search Console
+# ~7 days, then the rest). Year page: problems, repairs, recalls, engines, mileage. Model page: youtube, engines.
+SUB_CAR_PILOT = {'mercedes-benz-c-class', 'hyundai-sonata', 'honda-civic', 'bmw-3-series', 'nissan-sentra', 'chevrolet-equinox', 'audi-q5',
+                 'audi-a4', 'jeep-patriot', 'toyota-4runner', 'toyota-camry', 'jeep-wrangler', 'toyota-tacoma', 'jeep-grand-cherokee',
+                 'dodge-grand-caravan', 'ram-pickup', 'acura-mdx', 'acura-rdx', 'nissan-rogue', 'kia-sedona'}
+SUB_THIN_KEYS = {'engines-y'}   # subpages too small to stand in search on their own (noindex, out of the sitemap; quality_gate.py)
+
+def _sb_car(path, nm, year):
+    if year:
+        return {'name': nm, 'pages': [
+            ('problems', r'^Problems$', 'problems', None, None, f'{nm} Problems and Complaints', f'{nm} problems', '',
+             f'{nm} problems: what owners reported to NHTSA most, by part, with real complaint counts.'),
+            ('repairs', r'^Repairs', 'repairs', None, None, f'{nm} Repair Costs', f'{nm} repair costs', '',
+             f'What {nm} repairs cost: the bills owners named in their complaints to NHTSA, by part.'),
+            ('recalls', r'^Recalls', 'recalls', None, None, f'{nm} Recalls and Safety Ratings', f'{nm} recalls and safety', '',
+             f'Every {nm} recall and its crash test ratings, from NHTSA.'),
+            ('engines-y', r'^Engines', 'engines', None, None, f'{nm} Engines', f'{nm} engines', '',
+             f'The engines in the {nm}, each with a page of its own.'),
+            ('mileage', r'^When problems show up', 'mileage', None, None, f'{nm} Problems by Mileage', f'When {nm} problems show up', '',
+             f'At what mileage {nm} problems show up, from the mileage owners gave in their NHTSA complaints.'),
+        ]}
+    return {'name': nm, 'pages': [
+        ('youtube', r'^What owners say', 'youtube', None, None, f'{nm} Owner Reviews: What YouTube Owners Say', f'What {nm} owners say on YouTube', '',
+         f'What {nm} owners say on YouTube: the topics they praise and complain about, the best-rated years and the most-watched videos.'),
+        ('engines', r'^Engines', 'engines', None, None, f'{nm} Engines by Year', f'{nm} engines and versions', '',
+         f'Every {nm} engine and version by year, gas or hybrid, with specs from EPA and the maker.'),
+    ]}
+
+def _sb_cfg(path, body=''):
     if path in SUB_CARS: return SUB_CARS[path]
+    m = re.fullmatch(r'/cars/([^/]+)/(?:(\d{4})/)?', path)
+    if m and 'cars' in SUB_GROUPS and m.group(1) in SUB_CAR_PILOT and path not in _SB_PERF:
+        h = re.search(r'<h1[^>]*>(.*?)</h1>', body, re.S)
+        nm = re.sub(r'\s+reliability\.?$', '', re.sub(r'<[^>]+>', '', h.group(1)).strip()) if h else ''
+        return _sb_car(path, nm, m.group(2)) if nm else None
     D = _SB_PERF.get(path)
     if not D: return None
     grp = 'jdm' if D.get('jdm') else 'perf'
@@ -125,6 +158,7 @@ SB_CSS = ('<style>.sbp .sb-top{max-width:760px;margin:0 auto;padding:18px 0 0}'
           '.sbp .sb-body>h2.sb-sh:first-child{margin-top:0}.sbp .sb-more{max-width:760px;margin:40px auto 0;padding:0 16px}'
           '.sbp .sb-h{font-size:22px;margin:0 0 12px;letter-spacing:-.015em}.sbp .sb-more .cpl{display:grid;gap:8px}'
           '.sbp .sb-body details.pf-cs{margin-top:10px}.sbp .sb-pic{display:block;width:100%;max-width:520px;height:auto;margin:18px auto 0}'
+          '.sbp .sb-body>.cpl-b{padding:0;margin:0}.sbp .sb-body>.cpl-b>:first-child,.sbp .sb-body>.cpl-b>:first-child>h2:first-child{margin-top:0!important;padding-top:0!important}'
           '.sbp .sb-body .pf-iss,.sbp .sb-body .pf-recs{padding-left:0;padding-right:0}a.sb-go,a.sb-go:hover{text-decoration:none}</style>')
 _SB_BACK = ('<svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" '
             'stroke-width="2.4" viewBox="0 0 24 24" width="22"><path d="m15 18-6-6 6-6"></path></svg>')
@@ -137,7 +171,7 @@ def _sb_trim(html, key):
         sm = d.find('summary', recursive=False)
         t = _sb_title(d) if sm else ''
         if sm: sm.decompose()
-        if t and not d.find('h2'): d.insert(0, _SBS(f'<h2 class="sb-sh">{E(t)}</h2>', 'html.parser'))
+        if t and not d.find('h2') and not re.match(r'(?i)(show|more|see) ', t): d.insert(0, _SBS(f'<h2 class="sb-sh">{E(t)}</h2>', 'html.parser'))   # "Show all 5 recalls" just opens
         d.unwrap()
     for el in x.select('.pf-li'):
         if key == 'problems' and el.get_text(' ', strip=True).startswith('NHTSA files'): continue
@@ -155,7 +189,7 @@ def _sb_trim(html, key):
 SB_LINKCSS = '<style>a.sb-go,a.sb-go:hover{text-decoration:none;color:inherit}</style>'
 
 def SUB_HOOK(path, body):
-    cfg = _sb_cfg(path)
+    cfg = _sb_cfg(path, body)
     if not cfg or 'cpl-sec' not in body: return body
     try: return _sub_hook(path, body, cfg)
     except Exception as ex:
@@ -169,7 +203,7 @@ def _sub_hook(path, body, cfg):
         t = _sb_title(d)
         for key, rx, *_ in cfg['pages']:
             if re.match(rx, t): got.setdefault(key, []).append(d); break
-    assets = body[:body.find('<div class="advp')] if '<div class="advp' in body else ''
+    assets = body[:body.find('<div class="advp')] if '<div class="advp' in body else ''.join(str(t) for t in soup.find_all(['link', 'style']) + soup.find_all('script', src=True))
     if got.get('engine'):
         a = got['engine'][0].select_one('a[href^="/engines/"]')
         cfg['_engine'] = (a['href'].split('#')[0], _sb_title(got['engine'][0])) if a else None

@@ -242,7 +242,7 @@ def end_block(path, upd, shl, fb='', info=None):
         ask, data, label = m.group(1), d.group(1), re.sub(r'\s*↗$', '', m.group(3))
         items.append(f'<button type="button" class="cpl-a" data-share="{data}">{PILL_SUM("/assets/icons/share.webp", ask.strip(), label + " page" if label == "Send them this" else label)}{PILL_GO}</button>')
     elif shl: items.append(shl)
-    if path.startswith(('/cars/', '/stats/', '/best', '/electric/', '/engines/', '/check-engine-light/', '/symptoms/')):
+    if path.startswith(('/cars/', '/stats/', '/best', '/electric/', '/engines/', '/check-engine-light/', '/symptoms/')) and path not in NOFB:   # 11-19: not on a card's own short page (sub_pages.py)
         (items if info is None else info).append(PILL('/assets/icons/data.webp', 'Use this data free', upd or 'Credit The Lemon Index',
                           '<p class="yc-cap">Free to use with credit: <q>Source: The Lemon Index (lemonindex.com)</q>. <a href="/data/">Get the data</a> · <a href="/images/">Free images</a></p>'))
     elif upd: items.append(f'<p class="pend-m">{upd}</p>')
