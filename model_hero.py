@@ -7,7 +7,7 @@
 #   -> "Year by year" (the year explorer's year, chips and bars) -> the cards.
 # Dropped from the top: the answer line ("Is it reliable? Mostly...") and the verdict block (the Questions card still answers it,
 # and the bars + year pages carry fewest / most), and the hero Share button (the page's end has one).
-import math, re as _mh_re
+import math, html as _html, re as _mh_re
 from bs4 import BeautifulSoup as _MHS
 
 _MH_PATH = _mh_re.compile(r'/cars/[a-z0-9-]+/')
@@ -86,6 +86,7 @@ def MH_HOOK(path, body):
     if not m: return body
     cls = next((c for c in fig.get('class', []) if c in ('good', 'mid', 'bad')), 'mid')
     rest, years = _mh_take_years(body[j:], 0)
+    rest, shr = _mh_acts(rest)
     score = _MHS(f'<div class="mh-score">{_mh_gauge(int(m.group(1)), cls, fig["aria-label"])}</div>'
                  + (f'<div class="mh-years">{years}</div>' if years else ''), 'html.parser')
     hero.select_one('div.yhero').decompose()
@@ -96,4 +97,84 @@ def MH_HOOK(path, body):
     else: img.insert_after(score)
     hero['class'] = hero.get('class', []) + ['mh']
     hero.insert(0, _MHS(MH_CSS, 'html.parser'))
+    if shr:
+        hero.insert(1, _MHS(f'<button type="button" class="mh-share" data-share="{shr.replace(chr(38), "&amp;").replace(chr(34), "&quot;")}" aria-label="Share this page" title="Share">{_MH_SHARE_SVG}</button>', 'html.parser'))
     return body[:i] + str(s) + rest
+
+# 11-19 r4 (Elijah, MDX phone screenshots): the recall-email, "Share your take" and Compare boxes become three small tiles side by side
+# (a tap opens that one full width under the row), and the "Know someone shopping for a used car?" row becomes a share icon in the hero.
+MH_ACTS_CSS = '''<style id="mh-acts-css">
+.tbl .tb-hero.mh { position: relative; }
+.tbl .tb-hero.mh .yct-h1 { padding-right: 46px; }
+.mh-share { position: absolute; top: 6px; right: 0; z-index: 2; display: grid; place-items: center; width: 42px; height: 42px; padding: 0; border: 0;
+  border-radius: 50%; background: #f5f5f7; color: #1d1d1f; cursor: pointer; }
+.mh-share:hover { background: #ececf0; } .mh-share:focus-visible { outline: 3px solid var(--lemon, #ffd400); outline-offset: 2px; }
+.mh-share svg { width: 21px; height: 21px; }
+.mh-acts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-auto-flow: row dense; gap: 8px; max-width: 760px; margin: 24px auto 0; }
+.mh-acts > section { margin: 0 !important; padding: 0 !important; min-width: 0; max-width: none; }
+.mh-acts .rla, .mh-acts .cpl { margin: 0 !important; }
+.mh-acts .opn-share { margin: 0; display: block; }
+.mh-acts .rla-tg, .mh-acts .opn-open, .mh-acts #p-compare details > summary {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; width: 100%; max-width: none; height: 100%;
+  min-height: 82px; padding: 12px 6px !important; box-sizing: border-box; border-radius: 16px; text-align: center; }
+.mh-acts #p-compare, .mh-acts #p-compare .cpl, .mh-acts #p-compare details, .mh-acts .rla-sec, .mh-acts .rla, .mh-acts .opn-share { height: 100%; }
+.mh-acts .rla-tg .rla-ar, .mh-acts .opn-open .cpl-ar, .mh-acts #p-compare summary .cpl-ar { display: none; }
+.mh-acts .rla-tg .cpl-i, .mh-acts .opn-open .cpl-i, .mh-acts #p-compare summary .cpl-i { width: 26px; height: 26px; margin: 0; }
+.mh-acts .rla-tg span, .mh-acts .opn-open span, .mh-acts #p-compare summary span { flex: none; display: block; text-align: center; }
+.mh-acts .opn-open span, .mh-acts #p-compare summary span, .mh-acts .rla-tg span { line-height: 1.2; }
+.mh-acts .opn-open b, .mh-acts #p-compare summary b { display: block; font-size: 14px; line-height: 1.2; }
+.mh-acts > #p-compare details[open] > summary b, .mh-acts > .rla-sec:has(.rla-open) .rla-tg span::after { font-size: 16px; }
+.mh-acts .rla-tg span { font-size: 0; }
+.mh-acts .rla-tg span::after { content: "Recall alerts"; font-size: 14px; font-weight: 700; line-height: 1.2; letter-spacing: -.01em; }
+/* an open tile takes the whole row (the other two stay tiles) */
+.mh-acts > .rla-sec:has(.rla-open), .mh-acts > .opn:has(.opn-f:not([hidden])), .mh-acts > .opn:has(.opn-h:not([hidden])),
+.mh-acts > #p-compare:has(details[open]) { grid-column: 1 / -1; }
+.mh-acts > .rla-sec:has(.rla-open) .rla-tg, .mh-acts > #p-compare details[open] > summary {
+  flex-direction: row; justify-content: flex-start; gap: 12px; min-height: 0; height: auto; padding: 10px 16px !important; text-align: left; }
+.mh-acts > .rla-sec:has(.rla-open) .rla-tg .rla-ar, .mh-acts > #p-compare details[open] .cpl-ar { display: block; margin-left: auto; }
+.mh-acts > .rla-sec:has(.rla-open), .mh-acts > .rla-sec:has(.rla-open) .rla, .mh-acts > #p-compare:has(details[open]),
+.mh-acts > #p-compare:has(details[open]) .cpl, .mh-acts > #p-compare details[open] { height: auto; }
+.mh-acts > .opn:has(.opn-h:not([hidden])) .opn-open { flex-direction: row; min-height: 0; height: auto; padding: 10px 16px !important; }
+.mh-acts > .opn:has(.opn-h:not([hidden])) .opn-share { height: auto; margin-top: 8px; }
+</style>'''
+
+def _mh_block(body, k, tag='div'):
+    """end index of the <tag> element that starts at k (depth-matched), or -1"""
+    depth = 0
+    for m in _mh_re.finditer(rf'<{tag}\b|</{tag}>', body[k:]):
+        depth += 1 if m.group(0) != f'</{tag}>' else -1
+        if depth == 0: return k + m.end()
+    return -1
+
+_MH_SHARE_SVG = '<svg aria-hidden="true" focusable="false"><use href="/assets/ic.svg?v=1#share"></use></svg>'
+
+def _mh_acts(rest):
+    """returns (rest, share text or ''): the recall / opinions / compare boxes as one tile row, the share row cut out"""
+    g = rest.find('<div class="cpl-grp cpl-g3">'); r = rest.find('<div class="cpl-grp cpl-rel cpl-ins">', g)
+    if g < 0 or r < 0: return rest, ''
+    e = _mh_block(rest, r)
+    if e < 0: return rest, ''
+    s = _MHS(rest[g:e], 'html.parser')
+    rla, opn, cmp_ = s.select_one('section.rla-sec'), s.select_one('section#opinions'), s.select_one('section#p-compare')
+    if not (rla and opn and cmp_): return rest, ''
+    shr = ''
+    pend = s.select_one('div.pend')
+    if pend is not None:
+        b = pend.select_one('[data-share]')
+        if b is not None and 'Know someone shopping' in b.get_text():
+            shr = b['data-share']; (b.find_parent('div', class_='cpl') or b).decompose()
+            if not pend.find(True): pend.decompose()
+    lab = opn.select_one('.opn-open b')
+    if lab is not None: lab.string = 'Share your take'
+    g3 = s.select_one('div.cpl-g3')
+    acts = s.new_tag('div', attrs={'class': 'mh-acts'})
+    g3.insert_before(acts)
+    for x in (rla, opn, cmp_): acts.append(x.extract())
+    for grp in s.select('div.cpl-g3, div.cpl-rel'):
+        if not grp.find(True): grp.decompose()
+    rest = rest[:g] + MH_ACTS_CSS + str(s) + rest[e:]
+    if not shr:   # page() turns the page's last share line into the end "Know someone shopping" box later; take it here instead
+        sm = [m for m in _mh_re.finditer(r'<p class="shline">.*?</p>', rest, _mh_re.S) if 'Know someone shopping' in m.group(0)]
+        d = _mh_re.search(r'data-share="([^"]*)"', sm[-1].group(0)) if sm else None
+        if d: shr = _html.unescape(d.group(1)); rest = rest[:sm[-1].start()] + rest[sm[-1].end():]
+    return rest, shr
