@@ -500,6 +500,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
     if 'OP_HOOK' in globals(): body = OP_HOOK(path, body)   # 11-18 owner opinions box (opinions.py)   # 11-14 growth 4a: recall alert signup (after the date hash, so page dates don't move)
     if 'CAT_HOOK' in globals(): body = CAT_HOOK(path, body)   # 11-19 /jdm/, /supercars/, /electric/, /motorcycles/: the category page top (cat_pages.py), after the date hash
     if 'CAR_HOOK' in globals(): body = CAR_HOOK(path, body)
+    if 'MH_HOOK' in globals(): body = MH_HOOK(path, body)   # 11-19 model page top v2 (model_hero.py): name, photo, big gauge, score, year by year
     if 'SUB_HOOK' in globals(): body = SUB_HOOK(path, body)   # 11-19 (Elijah): on cars in SUB_CARS (sub_pages.py) each card opens a page of its own instead of a dropdown   # 11-18 car pages: no tab bar; every tab and long section is a tap-to-open box (car_pills.py), after the date hash
     _rel = ''; _rm = re.search(r'<!--cpl-rel-->(.*?)<!--/cpl-rel-->', body, re.S)   # 11-18 r4 (Elijah): the Related box goes last, after the end-of-page boxes
     if _rm: _rel = _rm.group(1); body = body[:_rm.start()] + body[_rm.end():]
@@ -1220,6 +1221,7 @@ FY = {f['id']: f for f in YEARS}
 exec(open('opinions.py', encoding='utf-8').read())   # 11-18 owner opinions box (OP_HOOK in page())
 exec(open('engine_pills.py', encoding='utf-8').read())   # 11-18 engine pages: long sections fold into boxes (ENG_HOOK in page())
 exec(open('car_pills.py', encoding='utf-8').read())   # 11-18 car pages: tabs and long sections fold into boxes (CAR_HOOK in page())
+exec(open('model_hero.py', encoding='utf-8').read())   # 11-19 model page top v2 (MH_HOOK in page())
 exec(open('sub_pages.py', encoding='utf-8').read())   # 11-19 card -> own page test (Integra GS-R), SUB_HOOK in page()
 exec(open('recall_alerts.py', encoding='utf-8').read())   # 11-14 growth 4a: recall alert signup box (RA_HOOK in page()), /alerts/ page, privacy text
 RIVALS = defaultdict(list); PAIRS = []
