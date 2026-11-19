@@ -151,14 +151,29 @@ _AE_YT = '<svg aria-hidden="true" viewBox="0 0 24 24" width="11" height="11"><pa
 _ae_ftag = lambda fu: f'<span class="aec-f aec-f-{_FG(fu)}">{AE_FL[fu]}</span>'
 def _ae_used(u, n=4): return 'Used in: ' + ', '.join(u[:n]) + (f' +{len(u) - n} more' if len(u) > n else '')
 def _ae_card(c, eager=False):
+    """11-19 r2 (Elijah, phone screenshot): no gray card and no image box: the engine floats on the page, a tiny YouTube rank under it,
+    then only the name and the fuel. Years, layout and "Used in" wait for the engine's own page (they stay in data-k, so search still finds them)."""
     k = _AEF(' '.join([c['name'], c['code'], c.get('alias', ''), c['lay'], c['mk'], AE_FL[c['f']]] + c['used']))
     im = (f'<span class="aec-p"><img src="{E(c["img"][0])}" width="{c["img"][1]}" height="{c["img"][2]}" alt="{E(c["name"])} engine" '
-          + ('fetchpriority="high" decoding="async">' if eager else 'loading="lazy" decoding="async">') + '</span>') if c['img'] else f'<span class="aec-p aec-ic">{_AE_IC}</span>'
+          + ('fetchpriority="high" decoding="async">' if eager else 'loading="lazy" decoding="async">') + '</span>')
     rk, n, grp = c['yt']
-    yt = f'<span class="ytbadge aec-yt" title="YouTube rank by owner tone, of {n} {E(grp)} with enough videos">{_AE_YT}YT #{rk}</span>' if rk else ''
-    im = im.replace('</span>', _ae_ftag(c['f']) + '</span>', 1) if c['img'] else im.replace('</svg></span>', '</svg>' + _ae_ftag(c['f']) + '</span>', 1)
-    return (f'<a class="aec" data-t="{" ".join(sorted(c["t"]))}" data-f="{_FG(c["f"])}" data-k="{E(k)}" data-yr="{E(c["yrs"])}" href="{E(c["url"])}">{im}{yt}<b>{E(c["name"])}</b>'
-            f'<small class="aec-l">{E(c["lay"])}{" · " + E(c["yrs"]) if c["yrs"] else ""}</small><small class="aec-u">{E(_ae_used(c["used"]))}</small></a>')
+    yt = (f'<span class="aec-sc"><span class="aec-yt2" title="YouTube rank by owner tone, of {n} {E(grp)} with enough videos">{_AE_YT}YT #{rk}</span></span>'
+          if rk else '')
+    return (f'<a class="aec aec2" data-t="{" ".join(sorted(c["t"]))}" data-f="{_FG(c["f"])}" data-k="{E(k)}" data-yr="{E(c["yrs"])}" href="{E(c["url"])}">{im}{yt}'
+            f'<b>{E(c["name"])}</b><small class="aec-fu aec-fu-{_FG(c["f"])}">{AE_FL[c["f"]]}</small></a>')
+AEC2_CSS = '''<style id="aec2-css">
+.aeg:has(.aec2) { gap: 26px 14px; }
+.aec.aec2 { background: none; padding: 0; border-radius: 0; gap: 2px; }
+.aec2 .aec-p { flex: none; width: 100%; aspect-ratio: 4 / 3; height: auto; border-radius: 0; background: none; margin: 0 0 4px; overflow: hidden; }
+.aec2 .aec-p img { width: 100%; height: 100%; object-fit: contain; mix-blend-mode: multiply; }
+.aec2 .aec-sc { display: flex; justify-content: center; gap: 6px; margin: 0 0 4px; }
+.aec2 .aec-yt2 { display: inline-flex; align-items: center; gap: 3px; font-size: 11.5px; font-weight: 700; line-height: 1; color: #6e6e73; font-variant-numeric: tabular-nums; }
+.aec2 .aec-yt2 svg { color: #e8141c; }
+.aec2 b { padding: 0; text-align: center; font-size: 15px; font-weight: 700; }
+.aec2 small.aec-fu { padding: 0; text-align: center; font-size: 13px; font-weight: 600; color: #6e6e73; }
+.aec2 small.aec-fu-diesel { color: #8a6a00; }
+@media (max-width: 600px) { .aec.aec2 { padding: 0; } .aec2 b { font-size: 14px; } }
+</style>'''
 # 11-12: AI factory-cover illustrations for the coming-soon engines (data/engine_soon_images.json, key = brand + engine without "(...)")
 AE_SOON_IMG = _load('data/engine_soon_images.json')
 _AE_KEY = lambda mk, eng: re.sub(r'[^a-z0-9]+', '-', f'{mk} {re.sub(r"\s*\(.*?\)", "", eng)}'.lower()).strip('-')
@@ -200,7 +215,7 @@ def _ae_soon(mk, eng, models, fu):
           if rk else '')
     return (f'<div class="aec aec-soon" data-t="c" data-f="{_FG(fu)}" data-k="{E(k)}" aria-disabled="true" title="Coming soon">{pic}'
             f'<span class="aec-b">Coming soon</span>{yt}<b>{E(mk)} {E(eng)}</b><small class="aec-u">{E(_ae_used(models))}</small></div>')
-_ae_live = sorted(AE_LIVE.values(), key=lambda c: (c['o'], c['name']))
+_ae_live = [c for c in sorted(AE_LIVE.values(), key=lambda c: (c['o'], c['name'])) if c['img']]   # 11-19 (Elijah): cards without an engine image don't show (they looked unfinished); the pages stay in search
 _ae_soonl = sorted(AE_SOON.items(), key=lambda kv: (kv[0][0], ('gas', 'diesel', 'hybrid', 'phev', 'electric').index(kv[1]['fuel']), kv[0][1]))
 _aeN, _aeS = len(_ae_live), len(_ae_soonl)
 _ae_n = lambda t: sum(t in c['t'] for c in _ae_live)
@@ -218,7 +233,7 @@ _ae_body = f'''<div class="pg"><div class="ph ph-f"><section class="finder aefin
 <div class="fq"><input id="aeq" type="search" placeholder="e.g. LS3, B58, 2JZ, Honda K20" autocomplete="off" aria-label="Search engines" aria-controls="aegrid"></div>
 <p class="fnote" id="aen" aria-live="polite"><b>{_aeN}</b> engines</p></section></div>
 <section class="aeng" id="aegrid">{_ae_tabs}{_ae_fuel}
-<section class="aes" data-s="live"><h2>Engine pages <span class="h2s">YouTube rank in the corner, where owners have posted enough videos.</span></h2><div class="aeg">{"".join(_ae_card(c, i == 0) for i, c in enumerate(_ae_live))}</div></section>
+{AEC2_CSS}<section class="aes" data-s="live"><h2>Engine pages <span class="h2s">YouTube rank under each engine, where owners have posted enough videos.</span></h2><div class="aeg">{"".join(_ae_card(c, i == 0) for i, c in enumerate(_ae_live))}</div></section>
 <p class="aenone" hidden>No engine matches that yet. Try a code like B58 or a model like Camry.</p>
 <p class="note aehubs">Engine head-to-head: {" · ".join(f'<a href="{u}">{lab.replace(", ", " vs ").replace(" and ", " vs ")}</a>' for u, us, lab in ENG_H2H)}. YT # = YouTube rank among all {ENG_POOL_N} {ENG_POOL_LBL}.</p>
 <p class="note aehubs">Engine hubs: <a href="/engines/bmw/">BMW engines</a> · <a href="/engines/supercars/">Supercar engines</a> · <a href="/engines/performance/">Performance engines</a> · <a href="/check-engine-light/">Check engine light codes</a> (OBD-II trouble codes, a different lookup)</p>
@@ -238,7 +253,7 @@ def _ae_years(t):
         b = (int(b) if len(b) == 4 else a // 100 * 100 + int(b) + (100 if a // 100 * 100 + int(b) < a else 0)) if b else (int(TODAY[:4]) + 1 if m.group(2) else a)
         if a <= b <= a + 60: ys.update(range(a, b + 1))
     return sorted(ys)
-for c in _ae_live: AE_FIND.append((c['name'] + ' engine', c['mk'], c['url'], 'eng', c.get('ylist') or _ae_years(c.get('yrs')), ' '.join([c['code'], c.get('alias', ''), 'engine', AE_FL[c['f']].lower()] + c['used']), 0))
+for c in sorted(AE_LIVE.values(), key=lambda c: (c['o'], c['name'])): AE_FIND.append((c['name'] + ' engine', c['mk'], c['url'], 'eng', c.get('ylist') or _ae_years(c.get('yrs')), ' '.join([c['code'], c.get('alias', ''), 'engine', AE_FL[c['f']].lower()] + c['used']), 0))
 for (mk, eng), v in _ae_soonl:
     ms = v['models']; AE_FIND.append((f'{mk} {eng} engine ({", ".join(ms[:3])}{"…" if len(ms) > 3 else ""})', mk, '', 'eng', (), ' '.join(ms + ['engine', AE_FL[v['fuel']].lower()]), 1))
 _ae_orph = sorted(k[5:] for k in (globals().get('ENG_SOON_YT') or {}) if 'soon:' + k[5:] in ENG_POOL and k[5:] not in {_AE_KEY(mk, eng) for mk, eng in AE_SOON})
