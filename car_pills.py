@@ -89,6 +89,9 @@ def _cp_sub(sec, title):
         rk = re.search(r'#(\d+) of ([\d,]+)', t_all)
         if rk and 'tone' in t_all: return f'#{rk.group(1)} of {rk.group(2)} cars by YouTube owner tone'
         if m: return f'Owner tone {m.group(1)}/100' + (f' · {v.group(1)} videos' if v else '')
+    if 'show up' in tl or 'mileage' in tl:
+        m = re.search(r'between ([\d,]+) and ([\d,]+) miles', t_all)
+        if m: return f'Most problems at {m.group(1)}–{m.group(2)} miles'
     if 'how fast' in tl:
         hp = re.search(r'(\d[\d,]*) hp', t_all); z = re.search(r'0–60 mph\s*([\d.]+) s', t_all)
         bits = [f'{hp.group(1)} hp' if hp else '', f'0–60 in {z.group(1)} s' if z else '']
@@ -117,7 +120,7 @@ def _cp_title(h):
     """an h2's own words (no .h2s second sentence, counters or buttons)"""
     h = copy.copy(h)
     for x in h.select('.h2s, button, .yc-n, svg, small'): x.decompose()
-    return _ep_txt(h).rstrip('.') or 'More'
+    return re.sub(r'\b(buy|is it|Is it) a (?=[AEIOU])', r'\1 an ', _ep_txt(h).rstrip('.')) or 'More'
 def _cp_fold_sec(soup, sec):
     """a <section> with an h2 -> a box; its h2 sits in the box's top row"""
     h = sec.find('h2', recursive=False)
@@ -194,7 +197,7 @@ def _cp_pan_sub(pid, pan, card, label=''):
         tb = pan.find('table'); n = len(tb.select('tbody tr')) if tb is not None else 0
         if n: return f'{n} model years in one table'
     if k == 'specs':
-        m = re.search(r'([~\d][\d,–~]*(?: \([^)]*\))? hp)', t)
+        m = re.search(r'([~\d][\d,–~]*(?: \([^)]*\))? hp)\b', t)
         if m and not pan.select('tbody tr'): return f'{m.group(1)} · every version'
 
         n = len(pan.select('tbody tr')) or len(pan.select('.chip'))
@@ -289,9 +292,106 @@ def _car_hook(path, body):
     host = tbx.parent
     notes = [c for c in host.find_all(['p', 'section'], recursive=False) if c is not tbx and (
         (c.name == 'p' and any(x in (c.get('class') or []) for x in ('yc-cap', 'note'))) or 'ukx-src' in (c.get('class') or []))]
+    hb = None
     if notes:
         t0 = _ep_txt(notes[0]); src_only = all(_ep_txt(n).startswith('Source') for n in notes)
         hb = _cp_box(soup, 'Sources' if src_only else 'How to read these numbers', _cp_cut(_cp_label(t0), 60), notes, None, _CP_I('data'), h2=False)
         tbx.insert_after(hb)
     _cp_stack(soup, soup)
-    return str(soup)
+    rel = _cp_group(soup, tbx, base, hb)
+    return str(soup) + (f'<!--cpl-rel-->{rel}<!--/cpl-rel-->' if rel else '')
+
+# 11-18 round 4 (Elijah, the 2011 Civic page: "the cards blend in ... group them ... Related at the very bottom"): the boxes sit in groups.
+# 1. one stack of every content box (no gaps between the old tab's sections, the model page's repair-cost / engine-code rows and the code
+#    lookup join it; Questions last); 2. the open year chart with "How to read these numbers" under it; 3. recall alerts + owner opinions;
+#    then the page's end boxes (share / data / feedback, from build.py end_block) and, last of all, Related (build.py moves it after the end
+#    block: CAR_HOOK marks it with <!--cpl-rel-->). Spacing and the card look are in assets/cpl.css (.cpl-grp).
+def _cp_cls(e): return e.get('class') or [] if hasattr(e, 'get') else []
+def _cp_isbox(e): k = _cp_cls(e); return 'cpl-sec' in k or ('cpl' in k and 'cpl-one' in k)
+def _cp_grp(soup, *cls):
+    g = soup.new_tag('div'); g['class'] = ['cpl-grp'] + list(cls); return g
+def _cp_csearch(soup, cs):
+    """the model page's engine-code lookup form -> a box"""
+    b = _cp_box(soup, 'Check engine light on?', 'Look up any code, like P0420', list(cs.contents), None, _CP_I('search'), h2=False)
+    b['class'] = b['class'] + ['csearch', 'mini']; b['aria-label'] = 'Engine code search'; return b
+def _cp_n3box(soup, nav):
+    """a loose chip row (the perf page's 'Regular model · Type S' links) -> a box"""
+    cs = [re.sub(r'\s*\(.*?\)', '', _ep_txt(a.find(['b', 'strong']) or a)) for a in nav.find_all('a')]
+    if not cs: return None
+    sub = _cp_cut(cs[0], 40) + (f' · {len(cs) - 1} more' if len(cs) > 1 else '')
+    t = 'Other versions of this car' if 'n3-par' in _cp_cls(nav) else 'More like this'
+    return _cp_box(soup, t, sub, [nav], None, _CP_I('car'), h2=False)
+def _cp_related(soup, nodes):
+    """the page's related links (the year page's LX_HTML list, the UK page's "More Audi MOT pass rates") -> one box, last on the page"""
+    for n in nodes:
+        for h in n.find_all(['h2']) + n.find_all(class_='lx-h'): h.decompose()
+    ts = [_ep_txt(a) for n in nodes for a in n.find_all('a')]
+    sub = (_cp_cut(re.sub(r'\s*→$', '', ts[0]), 40) + (f' · {len(ts) - 1} more' if len(ts) > 1 else '')) if ts else ''
+    b = _cp_box(soup, 'Related pages', sub, nodes, 'related', _CP_I('signpost'), h2=False)
+    g = _cp_grp(soup, 'cpl-rel'); g.append(b); return g
+def _cp_group(soup, tbx, base, notes):
+    opened = [p for p in base.find_all('section', recursive=False) if 'cpl-open' in _cp_cls(p)]
+    # 1. the main stack
+    g1 = _cp_grp(soup, 'cpl-g1')
+    kids = [k for k in base.find_all(recursive=False) if k not in opened and 'ovslim' not in _cp_cls(k)]
+    if kids: kids[0].insert_before(g1)
+    else: (opened[0].insert_before(g1) if opened else base.append(g1))
+    for k in kids: g1.append(k.extract())
+    for w in g1.find_all('div', class_='cpl-stk'): w.unwrap()   # the group is the stack now
+    for w in g1.find_all('div', class_='ovk', recursive=False):
+        if all(_cp_isbox(c) for c in w.find_all(recursive=False)): w.unwrap()
+    # the top-level blocks after the page's article: repair costs, engine codes, the code lookup, recall alerts, opinions, Related
+    top = tbx
+    while top.parent is not None and top.parent is not soup: top = top.parent
+    if top is not tbx and top.name in ('div', 'article', 'section'): top['class'] = _cp_cls(top) + ['cpl-page']   # (cpl.css: no side or bottom padding of its own, so the groups line up with the end boxes)
+    after, a = [], tbx
+    while a is not None and a is not soup:
+        after += [e for e in a.find_next_siblings() if e is not notes]; a = a.parent
+    qbox = g1.find(id=['p-questions', 'p-uk-faq'])
+    def put_main(b):
+        if qbox is not None: qbox.insert_before(b)
+        else: g1.append(b)
+    g3 = _cp_grp(soup, 'cpl-g3'); reln = []
+    for e in after:
+        k = _cp_cls(e)
+        if 'cpl-one' in k: put_main(e.extract())
+        elif e.name == 'section' and 'csearch' in k: b = _cp_csearch(soup, e); e.decompose(); put_main(b)
+        elif e.name == 'nav' and 'lx' in k: reln.append(e.extract())
+        elif e.name == 'section' and 'yc' in k and e.find('h2') is not None and _ep_txt(e.find('h2')).startswith('More ') and not e.find(class_='cpl'): reln.append(e.extract())   # UK: "More Audi MOT pass rates."
+        elif e.name == 'p' and 'ukx-cap' in k and e.find('a') is not None and reln: e.attrs.pop('style', None); reln.append(e.extract())   # "Every UK model ranked ... →"
+        elif 'rla-sec' in k or 'opn' in k: g3.append(e.extract())
+    rel = _cp_related(soup, reln) if reln else None
+    # loose chip rows in the stack -> boxes
+    for nav in [n for n in g1.select('nav.n3-row') if n.find_parent(class_='cpl') is None]:
+        ph = soup.new_tag('i'); nav.insert_before(ph); b = _cp_n3box(soup, nav)
+        if b is not None: ph.replace_with(b)
+        else: ph.decompose()
+    lead, charts = [], []
+    for c in g1.find_all(recursive=False):
+        if _cp_isbox(c) or 'pf' in _cp_cls(c) or c.name not in ('section', 'div'): continue
+        if c.name == 'section' and ('yav' in _cp_cls(c) or c.get('id') in ('avoid', 'ukx-pick')) : lead.append(c)
+        elif c.name == 'section': charts.append(c)
+    for c in lead: g1.insert_before(c.extract())
+    # Similar cars sits after the content boxes, just before the buyer questions
+    sim = g1.find('section', id='similar', recursive=False)
+    ask = next((b for b in g1.find_all('section', recursive=False) if 'ask the seller' in _ep_txt(b.find(['h2', 'b'])).lower() or b.get('id') in ('p-questions', 'p-uk-faq')), None)
+    if sim is not None and ask is not None and ask is not sim: ask.insert_before(sim.extract())
+    # 2. the year chart + how to read it
+    # the model page's "Looking at a 2023 or newer? ..." note (loose text under the hero) -> a box under the year chart
+    newer = []
+    for sl in base.find_all('p', class_='ovslim', recursive=False):
+        m = re.match(r'(Looking at an? [^?]{3,40}\?)\s*(.+)$', _ep_txt(sl))
+        if not m or sl.find('b') is not None: continue
+        y = re.search(r'like the (\d{4}) best', m.group(2))
+        sub = 'Too new for a full complaint score' + (f' · YouTube owners like the {y.group(1)} best' if y else '') if 'too new' in m.group(2).lower() else _cp_cut(m.group(2), 60)
+        sl.attrs = {}; sl['class'] = ['yc-cap']; sl.string = m.group(2); newer.append(_cp_box(soup, m.group(1), sub, [sl.extract()], None, _CP_I('calendar'), h2=False))
+    if opened or charts or newer or notes is not None:
+        g2 = _cp_grp(soup, 'cpl-g2'); base.append(g2)
+        for p in charts + opened + newer: g2.append(p.extract())
+        if notes is not None: g2.append(notes.extract())
+    # 3. recall alerts + opinions, after the article
+    if g3.contents: top.insert_after(g3)
+    if rel is None: return ''
+    pend = soup.find('div', class_='pend')
+    if pend is not None: pend.insert_after(rel); return ''   # perf inject pages: the end block is already on the page
+    return str(rel)   # build.py page() puts it after the end-of-page boxes

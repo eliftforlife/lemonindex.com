@@ -77,7 +77,8 @@
   document.querySelectorAll('.supl').forEach(b => b.addEventListener('click', show));   // no inline onclick (CSP)
 
   // ---- 1. inline "aha" card under the best data on the page
-  const spot = document.querySelector('#diy') || document.querySelector('.yyears') || document.querySelector('main .yc, main section.yc');
+  const vis = (e) => (e && !e.closest('details') ? e : null);   // 11-18: never inside a closed box (car pages fold their sections into boxes)
+  const spot = vis(document.querySelector('#diy')) || vis(document.querySelector('.yyears')) || [...document.querySelectorAll('main .yc, main section.yc')].find((e) => !e.closest('details')) || document.querySelector('main .cpl-g1');
   if (spot && !paid()) {
     const yt = !!document.querySelector('#diy');
     const card = document.createElement('aside');

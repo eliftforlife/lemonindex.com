@@ -116,3 +116,84 @@ section.opn#opinions .opn-share { margin-top: 0; }
 .cpl .cpl-b .pf-li { font-size: 14.5px; margin: 12px 0 0; }
 .cpl .cpl-b .pf-cap { margin-top: 10px; }
 .cpl .cpl-b .pf-dek { font-size: 14.5px; margin-bottom: 12px; }
+/* 11-18 round 4 (Elijah, the 2011 Civic page: "the cards blend into the white ... make them pop like the home page cards ... group them"):
+   taller cards with a bigger title and icon, a faint hairline, and the boxes sit in groups (car_pills.py .cpl-grp): 10 px between cards,
+   30 px between groups. Every .cpl box on the site gets the new card look. */
+.cpl { gap: 10px; }
+.cpl > details, .cpl > .cpl-a { background: #f3f3f5; border-radius: 22px; box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .035); }
+.cpl > details > summary, .cpl > details.yrs-more > summary, .cpl > details.emx > summary, .cpl > .cpl-a {
+  gap: 14px; padding: 12px 18px 12px 14px; min-height: 78px; border-radius: 22px; }
+.cpl > details > summary:hover, .cpl > .cpl-a:hover { background: #ebebee; }
+.cpl summary img, .cpl > .cpl-a img { width: 52px; height: 52px; }
+.cpl .cpl-y summary img { width: 66px; height: 44px; }
+.cpl summary b, .cpl summary .cpl-h, .cpl > .cpl-a b { font-size: 18px; font-weight: 700; line-height: 1.25; letter-spacing: -.015em; }
+.cpl summary span, .cpl > .cpl-a span { gap: 2px; }
+.cpl summary small, .cpl > .cpl-a small { font-size: 14px; line-height: 1.35; color: #6e6e73; }
+.cpl .cpl-b, .cpl .yrs-more > .bars, .cpl .emx-p { margin: 0 10px 10px; border-radius: 16px; padding: 14px 16px; }
+@media (max-width: 480px) {
+  .cpl > details > summary, .cpl > details.yrs-more > summary, .cpl > details.emx > summary, .cpl > .cpl-a { gap: 12px; padding: 12px 14px 12px 12px; min-height: 74px; }
+  .cpl summary img, .cpl > .cpl-a img { width: 48px; height: 48px; }
+  .cpl .cpl-y summary img { width: 62px; height: 42px; }
+  .cpl summary b, .cpl summary .cpl-h, .cpl > .cpl-a b { font-size: 17.5px; }
+  .cpl .cpl-b, .cpl .yrs-more > .bars, .cpl .emx-p { margin: 0 8px 8px; padding: 12px 14px; }
+}
+.supc { min-height: 78px; border-radius: 22px; }
+/* groups: one stack of content boxes, the year chart + how to read it, opinions, the end boxes, Related */
+.cpl-grp { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; width: 100%; max-width: 760px; margin: 30px auto 0; padding: 0; box-sizing: border-box; min-width: 0; }
+.cpl-grp > *, .cpl-grp .cpl-sec, .cpl-grp .cpl-one, .cpl-grp section.opn#opinions { margin-top: 0; margin-bottom: 0; }
+.cpl-g1 { margin-top: 22px; }
+.cpl-grp .pf, .cpl-grp .pf-g.on, .cpl-grp .cpl-stk { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; margin: 0; padding: 0; min-width: 0; }
+.cpl-grp .pf > *, .cpl-grp .pf-g > * { margin-top: 0; margin-bottom: 0; }
+.cpl-grp .pf-g:not(.on) { display: none; }
+.cpl-g2 > .cpl-open, .cpl-g2 > section { padding-top: 0; }
+.cpl-g2 .yyears, .cpl-g2 .yc { margin-top: 0; }
+.cpl-g3:empty { display: none; }
+.cpl-grp .rla-sec:empty, .cpl-grp .opn-l:empty, .opn-l:empty { display: none; }
+.pend { margin-top: 30px; padding-top: 0; border-top: 0; gap: 10px; }
+
+.cpl-rel .lx { margin: 0; padding: 0; border: 0; max-width: none; }
+.cpl-rel .lx-l { margin: 0; }
+.cpl-rel .crel { margin: 0; }
+.cpl-rel .ukx-cap { margin: 12px 0 0; text-align: left; }
+/* the engine-code lookup, as a box */
+.cpl-sec.csearch.mini { padding: 0; background: none; border: 0; }
+.cpl-sec.csearch .cpl-b .cs-f { margin: 0; max-width: none; }
+/* opening: a short fade-in; on browsers that can animate to height:auto, the box also grows open smoothly */
+@media (prefers-reduced-motion: no-preference) {
+  .cpl > details[open] > .cpl-b, .cpl > details[open] > .bars, .cpl > details[open] > .emx-p { animation: cpl-in .24s ease-out; }
+  @keyframes cpl-in { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+  @supports (interpolate-size: allow-keywords) {
+    .cpl > details { interpolate-size: allow-keywords; }
+    .cpl > details::details-content { height: 0; overflow: clip; transition: height .26s ease, content-visibility .26s allow-discrete; }
+    .cpl > details[open]::details-content { height: auto; }
+  }
+}
+/* inside the old main tab the groups are spaced by its own grid gap */
+.tbl .tb-p.cpl-main { gap: 30px; padding-bottom: 0; }
+.cpl-g2 > .cpl-open, .cpl-g2 > .cpl-open > section:last-child, .cpl-g2 > section:not(.cpl-sec) { padding-bottom: 0; margin-bottom: 0; }
+.cpl-grp section.opn#opinions { padding-bottom: 0; }
+.cpl-g3 { margin-top: 30px; }
+.cpl-rel { margin-top: 30px; }
+.cpl-page { padding-bottom: 0; }
+.cpl-page.advp, .cpl-page.pg { padding-left: 0; padding-right: 0; }
+.cpl-grp .supc { margin: 0; max-width: none; }
+.cpl-grp .cpl-open .supc { margin-top: 10px; }
+.cpl-grp > section, .cpl-grp > .cpl-open > section:first-child { padding-top: 0; }
+.cpl-grp > section:not(.cpl-sec) { padding-bottom: 0; }
+.cpl-grp .rla { margin: 0; min-height: 0; }
+/* the recall-alert box (assets/ralert.js) in the same card look */
+.rla-tg { gap: 14px; padding: 12px 18px 12px 14px; min-height: 78px; max-width: none; background: #f3f3f5; border-radius: 22px; box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .035); }
+.rla-tg:hover { background: #ebebee; }
+.rla-tg img { width: 52px; height: 52px; }
+.rla-tg span { font-size: 18px; line-height: 1.25; letter-spacing: -.015em; }
+.cpl-grp .rla-f { max-width: none; }
+@media (max-width: 480px) { .rla-tg { gap: 12px; padding: 12px 14px 12px 12px; min-height: 74px; } .rla-tg img { width: 48px; height: 48px; } .rla-tg span { font-size: 17.5px; } }
+.cpl-grp > section.rla-sec, .cpl-grp > section.opn { margin: 0; }
+.tb-p.cpl-main, .cpl-page > article { padding-bottom: 0; }
+/* one 760 px column on wide screens: the stats line, every group, the year chart, opinions, the end boxes and Related line up */
+.tbl .tb-p.cpl-main > .cpl-grp, .tbl .tb-p.cpl-main > .ovslim, .tbl .tb-p.cpl-main > section.yav, .tbl .tb-p.cpl-main > #ukx-pick { width: 100%; max-width: 760px !important; margin-left: auto !important; margin-right: auto !important; box-sizing: border-box; }
+.cpl-grp .yyears, .cpl-grp .cpl-open > section, .cpl-g2 > section { width: 100%; max-width: 760px; margin-left: auto; margin-right: auto; box-sizing: border-box; }
+.cpl-grp .cpl, .cpl-page ~ .pend .cpl { max-width: none; }
+.cpl-page ~ .pend { max-width: 760px; margin-left: auto; margin-right: auto; }
+.cpl-grp > .cpl-one, .cpl-grp > section, .cpl-grp > .cpl-sec, .cpl-grp > .pf, .cpl-grp .rla { width: 100%; max-width: none; margin-left: 0; margin-right: 0; box-sizing: border-box; }
+.cpl-grp .rla-tg, .cpl-grp .opn-share { max-width: none; }
