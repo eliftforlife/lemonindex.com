@@ -497,6 +497,7 @@ def _qa(D, P):
     if D.get('us'): out.append((f'Was the {D["name"]} sold in the US?', ('Yes. ' if D['us'].get('sold') else 'No. ') + D['us'].get('x', '')))
     return out
 
+POST_HOOK = None   # set by build.py (car_pills.CAR_HOOK)
 def inject(slug, out='docs'):
     """mode 1: the car already has a model page (BMW M3)"""
     P = build(slug, out)
@@ -555,6 +556,11 @@ def inject(slug, out='docs'):
         if m.get('property') == 'og:title' or m.get('name') == 'twitter:title': m['content'] = t.string
     ld = f'<script type="application/ld+json">{json.dumps(R.ld(BASE + D["page"], t.string), ensure_ascii=False)}</script>'
     s.head.append(BeautifulSoup(ASSET + ld + ('' if s.find('script', src=re.compile('imginfo')) else '<script src="/assets/imginfo.js?v=2" defer></script>'), 'html.parser'))
+    if POST_HOOK:   # 11-18: build.py's CAR_HOOK (car_pills.py) folds the finished page's tabs and sections into boxes
+        mn = s.find('main')
+        if mn is not None:
+            new = POST_HOOK(D['page'], mn.decode_contents(), True)
+            mn.clear(); mn.append(BeautifulSoup(new, 'html.parser'))
     open(page, 'w', encoding='utf-8').write(str(s))
     return True
 

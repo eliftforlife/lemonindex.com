@@ -465,6 +465,7 @@ _IIRE = re.compile(r'\b(id|aria-controls)="(ii[a-z]?\d+)"')
 def _ii_stable(s, pre='ii'):
     m = {}
     return _IIRE.sub(lambda x: f'{x.group(1)}="{pre}{m.setdefault(x.group(2), len(m) + 1)}"', s)
+_ICONV = re.compile(r'(/assets/icons/[\w-]+\.webp)(?=")')
 def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, vis='', canon=None):
     if QM.ON and not QM.want(path): LG.setdefault(path, ()); return   # 11-17 quick mode: a page outside --only keeps its file and page_dates.json entry; LG still lists it ("built this build" checks)
     if TOV.get(path, {}).get('title'): title = TOV[path]['title']   # 11-12: search-title test from 0 HQ/Tools/gsc_titles.py (data/title_overrides.json)
@@ -492,6 +493,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
     if 'RA_HOOK' in globals(): body = RA_HOOK(path, body)
     if 'ENG_HOOK' in globals(): body = ENG_HOOK(path, body)   # 11-18 engine pages: compact boxes (engine_pills.py), after the date hash
     if 'OP_HOOK' in globals(): body = OP_HOOK(path, body)   # 11-18 owner opinions box (opinions.py)   # 11-14 growth 4a: recall alert signup (after the date hash, so page dates don't move)
+    if 'CAR_HOOK' in globals(): body = CAR_HOOK(path, body)   # 11-18 car pages: no tab bar; every tab and long section is a tap-to-open box (car_pills.py), after the date hash
     _shl = ''
     _sm = list(re.finditer(r'<p class="shline">.*?</p>', body, re.S))
     if _sm: _shl = _sm[-1].group(0); body = body[:_sm[-1].start()] + body[_sm[-1].end():]
@@ -507,7 +509,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' '{DB_HASH}' https://static.cloudflareinsights.com https://challenges.cloudflare.com https://www.googletagmanager.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; frame-src https://challenges.cloudflare.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cloudflareinsights.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://vpic.nhtsa.dot.gov https://api.nhtsa.gov https://lemon-survey.elift08.workers.dev https://lemon-alerts.elift08.workers.dev https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="google-adsense-account" content="{ADS}"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/lxs.css?v={LXS_V}">
-<link rel="stylesheet" href="/assets/site.css?v=1117-soonyt"><link rel="stylesheet" href="/assets/cpl.css?v=2"><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
+<link rel="stylesheet" href="/assets/site.css?v=1117-soonyt"><link rel="stylesheet" href="/assets/cpl.css?v=3"><script src="/assets/cpl.js?v=1" defer></script><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
 <body>{'' if path.startswith('/thanks/') else DONBAR}{gh_header(path)}
 <main>{body}{end_block(path, _upd, _shl, '' if path == '/vote/' else ask_fb(path))}{'' if path == '/vote/' else ask_html(path)}</main>
 <footer class="foot f2"><div class="f2-in"><div class="f2-brand"><a class="f2-logo" href="/"><img src="/assets/icon-64.png" alt="" width="40" height="40"><span><b>The Lemon Index</b><small>Car reliability from owner complaints, per car sold. Free.</small></span></a><div class="f2-soc">{F2_SOC}</div></div>
@@ -516,6 +518,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <nav class="f2-col" aria-label="Support"><p class="f2-h">Support</p><button class="supl" type="button">Keep Lemon ad-free</button><a href="/about/">About</a><a href="/press/">Press</a><a href="/contact/">Contact</a><a href="{YT}?sub_confirmation=1" rel="noopener">Subscribe on YouTube</a></nav></div>
 <div class="f2-bot"><span>© {TODAY[:4]} The Lemon Index</span><a href="/terms/">Terms</a><a href="/privacy/">Privacy</a><a href="/refunds/">Refunds</a><span class="f2-dis">Built from public NHTSA complaint data and published U.S. sales figures. Not affiliated with any automaker. Not a repair-cost or safety rating.</span></div></footer><script src="/assets/explorer.js?v=1112d" defer></script><script src="/assets/support.js?v=1118" defer></script><script src="/assets/imginfo.js?v=2" defer></script><script src="/assets/lookup.js?v={LXS_V}" defer></script>{beacon}</body></html>'''
     doc = _ii_stable(doc)
+    doc = _ICONV.sub(r'\1?v=2', doc)   # 11-18: the box icons were redrawn (GPT image), same names
     LG[path] = (set(_LGHREF.findall(doc)), bool(_LGNOIX.search(doc)), url)   # 11-12 link graph (linkgraph.py, end of build)
     f = os.path.join(OUT, path.strip('/'), 'index.html') if path.endswith('/') else os.path.join(OUT, path.strip('/'))
     os.makedirs(os.path.dirname(f), exist_ok=True)
@@ -1202,6 +1205,7 @@ def _ybars(f, cur=None):
 FY = {f['id']: f for f in YEARS}
 exec(open('opinions.py', encoding='utf-8').read())   # 11-18 owner opinions box (OP_HOOK in page())
 exec(open('engine_pills.py', encoding='utf-8').read())   # 11-18 engine pages: long sections fold into boxes (ENG_HOOK in page())
+exec(open('car_pills.py', encoding='utf-8').read())   # 11-18 car pages: tabs and long sections fold into boxes (CAR_HOOK in page())
 exec(open('recall_alerts.py', encoding='utf-8').read())   # 11-14 growth 4a: recall alert signup box (RA_HOOK in page()), /alerts/ page, privacy text
 RIVALS = defaultdict(list); PAIRS = []
 for seg, top in (('car', 10), ('suv', 10), ('truck', 7), ('minivan', 5)):
@@ -2307,7 +2311,7 @@ BMW_PHASE = 'pages'; exec(open('bmw_pages.py', encoding='utf-8').read())   # 11-
 exec(open('thanks_page.py', encoding='utf-8').read())   # 11-07 donation thank-you page (noindex)
 exec(open('saved_page.py', encoding='utf-8').read())   # 11-14 growth 4d: /saved/ "My cars" (browser storage only; noindex)
 RA_PAGE()   # 11-14 growth 4a: /alerts/ confirm + unsubscribe page (noindex, not in the sitemap)
-import perf_page; PERF_URLS = perf_page.build_all(OUT, page)   # 11-11 performance-car pages (data/perf/<slug>.json): the M3's own page gets the slider + performance Overview; the rest get pages of their own
+import perf_page; perf_page.POST_HOOK = globals().get('CAR_HOOK'); PERF_URLS = perf_page.build_all(OUT, page)   # 11-11 performance-car pages (data/perf/<slug>.json): the M3's own page gets the slider + performance Overview; the rest get pages of their own
 exec(open('jdm_pages.py', encoding='utf-8').read())   # 11-13 JDM section: the /jdm/ hub (the car pages are performance pages above, the engine pages in supercar_engine_pages.py)
 exec(open('all_engines.py', encoding='utf-8').read())   # 11-12 /engines/: every engine, searchable, + one coming-soon engine per model
 exec(open('find_index.py', encoding='utf-8').read())   # 11-11: the search index of every car page and card + a build check that none is missing
