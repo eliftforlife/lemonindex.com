@@ -82,12 +82,12 @@
   if (spot && !paid()) {
     const yt = !!document.querySelector('#diy');
     const card = document.createElement('aside');
-    card.className = 'supc'; card.setAttribute('aria-label', 'Support the Lemon Index');
-    card.innerHTML = `<img src="/assets/icon-64.png" alt="" width="40" height="40"><div class="supc-t"><b>Did this help?</b><span>Keeps Lemon free, with no ads. <button type="button" class="supc-o">Other amount</button></span></div>
-<a class="supc-go" href="${LINKS[5]}" target="_blank" rel="noopener">$5 coffee</a>`;   // 11-18 (Elijah): one compact row
+    card.className = 'supc supc3'; card.setAttribute('aria-label', 'Support the Lemon Index');
+    // 11-19 (Elijah): black card, no icon, "Help keep this site ad-free" + four white buttons straight to Stripe ($5 / $10 / $15 / custom)
+    card.innerHTML = `<div class="supc3-t"><b>Help keep this site ad-free</b><small>Tap an amount. Secure checkout by Stripe.</small></div>
+<div class="supc3-a">${[5, 10, 15].map(a => `<a href="${LINKS[a]}" target="_blank" rel="noopener">$${a}</a>`).join('')}<a href="${LINKS.custom}" target="_blank" rel="noopener">Custom</a></div>`;
     spot.insertAdjacentElement('afterend', card);
-    card.querySelector('.supc-go').addEventListener('click', () => { mark(); set(PAID, String(Date.now())); });
-    card.querySelector('.supc-o').addEventListener('click', show);
+    card.querySelectorAll('.supc3-a a').forEach(a => a.addEventListener('click', () => { mark(); set(PAID, String(Date.now())); }));
   }
   // ---- 2. the sheet when someone comes back from a video we sent them to (the "this just saved me" moment)
   let away = 0;

@@ -279,3 +279,11 @@ section.opn#opinions .opn-share { margin-top: 0; }
 .f3 .f3-soc svg { display: block; width: 100%; height: 100%; }
 .f3 .f2-in { grid-template-columns: repeat(3, minmax(0, 1fr)); padding-top: 28px; }
 @media (max-width: 699px) { .f3 .f2-in { grid-template-columns: repeat(2, minmax(0, 1fr)); padding-top: 24px; } .f3 .f3-top { padding-top: 32px; } }
+
+/* 11-19 donate card v3 (Elijah): black, no icon, four white amount buttons that go straight to Stripe */
+.supc.supc3 { display: block; min-height: 0; padding: 18px 16px 16px; border-radius: 22px; background: #1f1f22; color: #fff; }
+.supc3 .supc3-t b { display: block; font-size: 20px; font-weight: 800; line-height: 1.2; letter-spacing: -.02em; color: #fff; }
+.supc3 .supc3-t small { display: block; margin-top: 3px; font-size: 13px; line-height: 1.35; color: #a1a1a6; }
+.supc3 .supc3-a { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin-top: 14px; }
+.supc3 .supc3-a a { display: block; padding: 12px 0; border-radius: 999px; background: #fff; color: #111; font-size: 16px; font-weight: 700; line-height: 1; text-align: center; text-decoration: none; }
+.supc3 .supc3-a a:hover { background: #e8e8ed; }
