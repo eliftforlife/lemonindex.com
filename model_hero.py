@@ -54,9 +54,26 @@ MH_CSS = '''<style id="mh-css">
 .mh-bar.good figcaption b { color: var(--good); }
 .mh-bar.bad figcaption b { color: var(--red); }
 .mh-bar figcaption span { display: block; margin-top: 6px; font-size: 17px; font-weight: 600; color: var(--mute); }
-.mh-yy { margin: 26px 0 2px; text-align: center; font-size: 13px; font-weight: 700; letter-spacing: .02em; color: var(--mute); }
 .tbl .tb-hero.mh > .ycn-wide, .tbl .tb-hero.mh > .cpl-acts { display: none; }
+/* r3 (Elijah, MDX screenshot): no photo arrows / year strip; the "Every year" list (Lemon Index + YouTube rank per year) sits under the score.
+   Hidden, not removed: ycar.js still binds to them, and the photo keeps its default year. */
+.tbl .tb-hero.mh .yx-sp, .tbl .tb-hero.mh .yx-sn, .tbl .tb-hero.mh .yx-yr, .tbl .tb-hero.mh .yx-info, .tbl .tb-hero.mh .yx-strip, .tbl .tb-hero.mh .yx-ends { display: none !important; }
+.mh-years { width: 100%; max-width: 760px; margin: 4px auto 0; text-align: left; box-sizing: border-box; }
+.mh-years .yyears { margin: 0; }
+.mh-years .yy-ch > h2 { margin-top: 0; }
+.tbl .tb-hero.mh .yx-stage + .mh-score { margin-bottom: 0; }
 </style>'''
+
+def _mh_take_years(body, start):
+    """Cut the page's 'Every year' list (section#years) out of the body after `start`; returns (body, html or '')."""
+    k = body.find('<section class="yyears noph" id="years">', start)
+    if k < 0: return body, ''
+    depth, p = 0, k
+    for m in _mh_re.finditer(r'<section\b|</section>', body[k:]):
+        depth += 1 if m.group(0) == '<section' else -1
+        if depth == 0: p = k + m.end(); break
+    else: return body, ''
+    return body[:k] + body[p:], body[k:p]
 
 def MH_HOOK(path, body):
     if not _MH_PATH.fullmatch(path) or 'tb-hero yx-hero' not in body: return body
@@ -68,16 +85,15 @@ def MH_HOOK(path, body):
     m = _mh_re.match(r'Lemon Index (\d+)', fig.get('aria-label', ''))
     if not m: return body
     cls = next((c for c in fig.get('class', []) if c in ('good', 'mid', 'bad')), 'mid')
-    score = _MHS(f'<div class="mh-score">{_mh_gauge(int(m.group(1)), cls, fig["aria-label"])}</div>', 'html.parser')
+    rest, years = _mh_take_years(body[j:], 0)
+    score = _MHS(f'<div class="mh-score">{_mh_gauge(int(m.group(1)), cls, fig["aria-label"])}</div>'
+                 + (f'<div class="mh-years">{years}</div>' if years else ''), 'html.parser')
     hero.select_one('div.yhero').decompose()
     for x in hero.select('p.tb-ans'): x.decompose()
     h1.insert_after(img.extract())
     stage = img.select_one('.yx-stage')
-    if stage is not None:
-        stage.insert_after(score)
-        yr = img.select_one('.yx-yr')
-        if yr is not None: yr.insert_before(_MHS('<p class="mh-yy">Year by year</p>', 'html.parser'))
+    if stage is not None: stage.insert_after(score)
     else: img.insert_after(score)
     hero['class'] = hero.get('class', []) + ['mh']
     hero.insert(0, _MHS(MH_CSS, 'html.parser'))
-    return body[:i] + str(s) + body[j:]
+    return body[:i] + str(s) + rest
