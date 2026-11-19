@@ -59,9 +59,9 @@ else:
     print('quality gate:', len(THIN), 'thin pages noindex + out of the sitemap |', dict(_qgc.Counter(_qgw.values())),
           '| kept because Google showed them:', sum(1 for u in urls if u in _QG_SEEN and _qg_thin(u)))
 # 11-19 sub_pages.py: a card's own page is thin when its car page is, and SUB_THIN_KEYS pages always (quick builds too)
-for _u in globals().get('SUB_URLS', []):
+for _u in [u for u in urls if u in globals().get('SUB_URLS', ()) or (PD.get(u) or {}).get('sb')]:
     _par = re.sub(r'[^/]+/$', '', _u)
-    if _par in THIN or any(_u.endswith(f'/{s}/') and re.search(r'/\d{4}/[^/]+/$', _u) for s in ('engines',)): THIN.add(_u)
+    if _u in globals().get('SUB_THIN', ()) or _par in THIN or any(_u.endswith(f'/{s}/') and re.search(r'/\d{4}/[^/]+/$', _u) for s in ('engines',)): THIN.add(_u)
 _qg_n = 0
 for _u in THIN:
     if not QM.want(_u): continue

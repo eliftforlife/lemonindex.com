@@ -12,6 +12,7 @@
 from bs4 import BeautifulSoup as _SBS
 
 SUB_URLS = []
+SUB_THIN = set()   # subpages with under 60 words of their own (noindex, out of the sitemap)
 SUB_CARS = {
     '/jdm/acura-integra-gs-r/': {
         'name': 'Integra GS-R', 'crumb': '<a href="/jdm/">JDM</a> · <a href="/jdm/acura-integra-gs-r/">Acura Integra GS-R</a>',
@@ -44,7 +45,7 @@ SUB_CARS = {
 
 # 11-19 r3 (Elijah: "do similar thing for all jdm cars"): every page in SUB_GROUPS gets its config made from its data/perf/<slug>.json.
 # SUB_CARS entries (hand-written titles) win over the made ones.
-SUB_GROUPS = {'jdm', 'cars'}
+SUB_GROUPS = {'jdm', 'cars', 'moto', 'super', 'plane', 'perf'}
 _SB_PERF = {}
 for _p in glob.glob(os.path.join('data', 'perf', '*.json')):
     if _p.endswith('.auto.json'): continue
@@ -80,10 +81,13 @@ def _sb_auto(path, D):
         ('speed', r'^How fast', '0-60', None, None, f'{nm} 0-60, Horsepower and Specs{yp}', f'How fast is the {nm}?', '',
          f'{nm}{yp} 0-60 times, horsepower, torque, weight and price new for every version. Every number sourced.'),
         ('engine', r'^The engine', 'engine', None, None, f'{nm} Engine Specs{yp}', None, '', f'The {nm} engine: specs, power and what it was built for, with sources.'),
-        ('problems', r'^(Known issues|Problems & recalls)', 'problems', 'Problems &amp; recalls' if nh else 'Known issues', 'warning',
+        ('problems', r'^(Known issues|Problems)', 'problems', 'Problems &amp; recalls' if nh else 'Known issues', 'warning',
          f'{nm} Problems and Recalls{yp}' if nh else f'{nm} Known Issues and Problems{yp}',
          f'{nm} problems and recalls' if nh else f'{nm} known issues', '',
          f'{nm}{yp} problems: known issues' + (', owner complaints to NHTSA by year and every recall' if nh else ' owners and buyers report') + ', with sources.'),
+        ('recalls', r'^Recalls', 'recalls', None, None, f'{nm} Recalls{yp}', f'{nm} recalls', '', f'Every {nm} recall from NHTSA, by year.'),
+        ('specs', r'^Specs', 'specs', None, None, f'{nm} Specs and Engines by Year', f'{nm} specs and engines', '',
+         f'{nm} specs and engines for every year and version, from the EPA and the maker.'),
         ('buy', r'^(Should you buy|What owners say)', 'buying', None, None, f'Should You Buy {_sb_an(nm)}? What to Check',
          f'Should you buy {_sb_an(nm)}?', '', f'Should you buy {_sb_an(nm)}{yp}? Price new, best and worst years, what to check and what YouTube owners say.'),
     ]}
@@ -116,17 +120,52 @@ def _sb_car(path, nm, year):
          f'Every {nm} engine and version by year, gas or hybrid, with specs from EPA and the maker.'),
     ]}
 
+# 11-19 r5 motorcycles, planes, supercars, performance (Elijah's order after regular cars). Only the model pages: their year pages are
+# made automatically and already stay out of search.
+def _sb_simple(nm, kind):
+    if kind == 'moto': return {'name': nm, 'pages': [
+        ('problems', r'^Problems', 'problems', None, None, f'{nm} Problems', f'{nm} problems', '', f'{nm} problems: what owners report to NHTSA most, by part.'),
+        ('recalls', r'^Recalls', 'recalls', None, None, f'{nm} Recalls', f'{nm} recalls', '', f'Every {nm} recall from NHTSA, newest first.'),
+        ('specs', r'^Specs', 'specs', None, None, f'{nm} Specs and Engine', f'{nm} specs', '', f'{nm} specs: engine, power and weight from the maker.'),
+        ('repairs', r'^Repairs', 'repairs', None, None, f'{nm} Repair Costs', f'{nm} repair costs', '', f'What {nm} repairs cost, from owners.')]}
+    if kind == 'super': return {'name': nm, 'pages': [
+        ('repairs', r'^Repairs', 'repairs', None, None, f'{nm} Repair and Service Costs', f'{nm} repair and service costs', '',
+         f'What {nm} service and repairs cost, from owners on YouTube.'),
+        ('recalls', r'^Recalls', 'recalls', None, None, f'{nm} Recalls', f'{nm} recalls', '', f'Every {nm} recall from NHTSA.'),
+        ('specs', r'^Specs', 'specs', None, None, f'{nm} Specs, Engine and MPG', f'{nm} specs and engines', '',
+         f'{nm} specs: engines, power and EPA fuel economy for every version.')]}
+    if kind == 'plane': return {'name': nm, 'pages': [
+        ('accidents', r'^(What happened|Pilot or plane|When$)', 'accidents', None, None, f'{nm} Accident Causes: What Happened',
+         f'Why {nm} accidents happen', '', f'Why {nm} accidents happen: what NTSB found, pilot or plane, and the phase of flight.'),
+        ('by-year', r'^Accidents per year', 'by-year', None, None, f'{nm} Accidents by Year', f'{nm} accidents by year', '',
+         f'{nm} accidents in the US by year, from the NTSB database.'),
+        ('repairs', r'^Repairs', 'repairs', None, None, f'{nm} Repair Costs', f'{nm} repair costs', '', f'What {nm} repairs cost.')]}
+
+_SB_RENAME = {'When': 'Phase of flight'}
+
+def _sb_h1name(body):
+    h = re.search(r'<h1[^>]*>(.*?)</h1>', body, re.S)
+    if not h: return ''
+    t = re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', ' ', h.group(1))).strip()
+    return re.split(r':', re.sub(r'\s+reliability\.?$|\.$', '', t))[0].strip()
+
 def _sb_cfg(path, body=''):
     if path in SUB_CARS: return SUB_CARS[path]
-    m = re.fullmatch(r'/cars/([^/]+)/(?:(\d{4})/)?', path)
-    if m and 'cars' in SUB_GROUPS and m.group(1) in SUB_CAR_PILOT and path not in _SB_PERF:
-        h = re.search(r'<h1[^>]*>(.*?)</h1>', body, re.S)
-        nm = re.sub(r'\s+reliability\.?$', '', re.sub(r'<[^>]+>', '', h.group(1)).strip()) if h else ''
-        return _sb_car(path, nm, m.group(2)) if nm else None
     D = _SB_PERF.get(path)
-    if not D: return None
-    grp = 'jdm' if D.get('jdm') else 'perf'
-    return _sb_auto(path, D) if grp in SUB_GROUPS else None
+    if D:
+        grp = 'jdm' if D.get('jdm') else 'perf'
+        if grp not in SUB_GROUPS or (D.get('mode') == 'inject' and not globals().get('_SB_POST')): return None   # the M3: after perf_page.inject
+        return _sb_auto(path, D)
+    m = re.fullmatch(r'/cars/([^/]+)/(?:(\d{4})/)?', path)
+    if m and 'cars' in SUB_GROUPS and m.group(1) in SUB_CAR_PILOT:
+        nm = _sb_h1name(body)
+        return _sb_car(path, nm, m.group(2)) if nm else None
+    m = re.fullmatch(r'/(motorcycles|supercars|planes)/([^/]+)/', path)
+    if m:
+        kind = {'motorcycles': 'moto', 'supercars': 'super', 'planes': 'plane'}[m.group(1)]
+        nm = _sb_h1name(body)
+        return _sb_simple(nm, kind) if nm and kind in SUB_GROUPS else None
+    return None
 
 _SB_CHEV = ('<svg aria-hidden="true" class="cpl-ar" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" '
             'stroke-width="2.2" viewBox="0 0 24 24" width="18"><path d="m9 6 6 6-6 6"></path></svg>')
@@ -204,39 +243,76 @@ def _sub_hook(path, body, cfg):
         for key, rx, *_ in cfg['pages']:
             if re.match(rx, t): got.setdefault(key, []).append(d); break
     assets = body[:body.find('<div class="advp')] if '<div class="advp' in body else ''.join(str(t) for t in soup.find_all(['link', 'style']) + soup.find_all('script', src=True))
-    if got.get('engine'):
-        a = got['engine'][0].select_one('a[href^="/engines/"]')
-        cfg['_engine'] = (a['href'].split('#')[0], _sb_title(got['engine'][0])) if a else None
+    # engines (11-19 r5): each engine card links to that engine's own page; one engine card without a page gets a subpage
+    eng = got.pop('engine', [])
+    for d in eng:
+        a = d.select_one('a[href^="/engines/"]')
+        if a is not None: d.replace_with(_SBS(_sb_row(a['href'].split('#')[0], E(_sb_title(d)), 'engine'), 'html.parser'))
+    if len(eng) == 1 and eng[0].select_one('a[href^="/engines/"]') is None: got['engine'] = eng
     # the subpages (11-19 r2, Elijah: "only have what they clicked for ... short, big header and back arrow"): back arrow, big title, that
     # card's content and its sources. No photo, intro line, other cards, side notes, fine print or feedback box.
     for key, rx, slug, label, icon, title, h1, dek, desc in cfg['pages']:
-        if not slug or not got.get(key) or (key == 'engine' and cfg.get('_engine')): continue   # an engine with its own page links there
+        if not slug or not got.get(key): continue
         h1 = h1 or _sb_title(got[key][0])
         parts = [_sb_inner(d) for d in got[key]]
-        inner = ''.join((f'<h2 class="sb-sh">{E(re.sub(r":.*", "", t))}</h2>' if len(parts) > 1 and '<h2' not in h else '') + h for t, h in parts)
+        ts = [_SB_RENAME.get(re.sub(r':.*', '', t), re.sub(r':.*', '', t)) for t, _ in parts]
+        if len(set(ts)) < len(ts): ts = [t for t, _ in parts]   # "Known issues: BMW S54", "Known issues: BMW S65" keep their engine
+        inner = ''.join((f'<h2 class="sb-sh">{E(t)}</h2>' if len(parts) > 1 and '<h2' not in h else '') + h for t, (_, h) in zip(ts, parts))
         inner = _sb_trim(inner, key)
         sub = (f'{assets}{SB_CSS}<div class="advp tbl pfp sbp"><section class="sb-top"><a class="sb-back" href="{path}">{_SB_BACK}<span>{E(cfg["name"])}</span></a>'
                f'<h1>{E(h1)}</h1></section><div class="pf sb-body">{inner}</div></div>')
         u = f'{path}{slug}/'
+        if len(re.sub(r'<[^>]+>', ' ', inner).split()) < 60: SUB_THIN.add(u)
         if u not in NOFB: globals()['NOFB'] = tuple(NOFB) + (u,)   # no feedback box on these short pages
         page(u, title.replace('&#39;', "'"), desc, sub)
         if u not in SUB_URLS: SUB_URLS.append(u)
-    # the car page: each box becomes a link row (merged boxes: the first one stays as the row, the rest go)
-    for key, rx, slug, label, icon, *_ in cfg['pages']:
+        if u in PD: PD[u]['sb'] = 2 if u in SUB_THIN else 1   # remembered in page_dates.json, so quick builds that skip this car keep it (SUB_ALL)
+    # the car page: each box becomes a link row (merged boxes: the first one stays as the row, the rest go). 11-19 r5: on a page with a
+    # generation picker (.pf-g blocks, only the picked one shows) a card that spans generations gets ONE row after the last block, so it
+    # shows whichever generation is picked; a one-generation card (the engine) keeps its row inside its block.
+    gens = soup.select('div.pf-g')
+    shared = None
+    for key, rx, slug, label, icon, title, h1, *_ in cfg['pages']:
         ds = got.get(key) or []
-        if not ds: continue
-        if key == 'engine' and cfg.get('_engine'): href, lab, ico = cfg['_engine'][0], cfg['_engine'][1], 'engine'
-        elif not slug: continue
+        if not ds or not slug: continue
+        sm = ds[0].find('summary', recursive=False)
+        u, im = sm.select_one('use') if sm else None, sm.select_one('img[src*="/assets/icons/"]') if sm else None
+        multi = len({id(d.find_parent('div', class_='pf-g')) for d in ds}) > 1 or (len(ds) > 1 and ds[0].find_parent('div', class_='pf-g') is not None)
+        if key == 'problems' and got.get('recalls') and label and 'recalls' in label: label = 'Problems'   # the M3 has its own Recalls card
+        href, lab = f'{path}{slug}/', label or (E(h1) if multi and h1 else E(_sb_title(ds[0])))
+        ico = icon or (u.get('href', '').rsplit('#', 1)[-1] if u is not None else re.sub(r'\.\w+(\?.*)?$', '', im['src'].rsplit('/', 1)[-1]) if im is not None else None)
+        if ico and ico not in _CP_SPR: ico = 'info'
+        row = _SBS(_sb_row(href, lab if '&' in lab else E(lab), ico), 'html.parser')
+        if gens and any(d.find_parent('div', class_='pf-g') is not None for d in ds):
+            if shared is None:
+                shared = _SBS('<section class="cpl-sec sb-shared"><div class="cpl"></div></section>', 'html.parser').section
+                gens[-1].insert_after(shared)
+            shared.div.append(row)
+            rest = ds
         else:
-            sm = ds[0].find('summary', recursive=False)
-            u, im = sm.select_one('use') if sm else None, sm.select_one('img[src*="/assets/icons/"]') if sm else None
-            href, lab = f'{path}{slug}/', label or E(_sb_title(ds[0]))
-            ico = icon or (u.get('href', '').rsplit('#', 1)[-1] if u is not None else re.sub(r'\.\w+(\?.*)?$', '', im['src'].rsplit('/', 1)[-1]) if im is not None else None)
-            if ico and ico not in _CP_SPR: ico = 'info'
-        ds[0].replace_with(_SBS(_sb_row(href, lab if '&' in lab else E(lab), ico), 'html.parser'))
-        for d in ds[1:]:
+            ds[0].replace_with(row); rest = ds[1:]
+        for d in rest:
             sec = d.find_parent('section', class_='cpl-sec'); d.decompose()
             if sec is not None and not sec.find(['details', 'a']): sec.decompose()
     first = soup.select_one('a.sb-go')
     if first is not None: first.insert_before(_SBS(SB_LINKCSS, 'html.parser'))
     return str(soup)
+
+def SUB_POST(path, body, force=False):
+    """perf_page.inject() (the M3): fold into boxes first, then cards -> own pages"""
+    body = CAR_HOOK(path, body, force)
+    globals()['_SB_POST'] = True
+    try:
+        cfg = _sb_cfg(path, body)
+        return _sub_hook(path, body, cfg) if cfg and 'cpl-sec' in body else body
+    finally: globals()['_SB_POST'] = False
+
+def SUB_ALL():
+    """every card page for the sitemap: the ones built now, plus (quick builds) the ones whose car wasn't rebuilt, from page_dates.json"""
+    out = list(SUB_URLS)
+    if QM.ON:
+        for u, e in PD.items():
+            if isinstance(e, dict) and e.get('sb') and u not in SUB_URLS and not QM.want(u):
+                out.append(u)
+                if e['sb'] == 2: SUB_THIN.add(u)
+    return out
