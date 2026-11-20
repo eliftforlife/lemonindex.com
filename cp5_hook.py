@@ -70,6 +70,64 @@ def CP5_HOOK(body):
 
 # 11-19 v5, engine pages (article.study.tr2.eng2, engine_pages.py): hero + tiles, then the by-year chart open under a big centered
 # heading, then every box. The "Cars with this engine" year links, Quick answers and the source note become boxes too.
+# 11-19 (Elijah: "the reliability by year charts just don't really feel good"): the row-of-gray-bars chart (div.egc) becomes one column chart
+# per measure (YouTube tone, owner complaints, Lemon Index), best year yellow, weakest red, values on the bars. Same numbers; the cars each
+# year used show on hover (title) and in the year table / car boxes. Raw counts mixed into a Lemon Index column (gray dots) stay out of that chart.
+def _eg5_chart(egc):
+    hs = egc.find('div', class_='egh'); labs = []
+    for s in (hs.find_all('span', recursive=False)[1:] if hs else []):
+        em = s.find('em'); sub = em.get_text(' ', strip=True) if em else ''
+        if em: em.extract()
+        labs.append((s.get_text(' ', strip=True), sub))
+    if not labs: return None
+    rows = []
+    for r in egc.find_all('div', class_='egr', recursive=False):
+        y = r.find('span', class_='egy')
+        if y is None: return None
+        sm = y.find('small'); cars = sm.get_text(' ', strip=True) if sm else ''
+        if sm: sm.extract()
+        vals = []
+        for b in r.find_all('b', recursive=False):
+            for x in b.find_all('small'): x.extract()
+            t = b.get_text('', strip=True).replace(',', '')
+            lb = ' '.join(labs[min(len(vals), len(labs) - 1)])
+            vals.append(None if not re.fullmatch(r'-?\d+(\.\d+)?', t) or ('mute' in (b.get('class') or []) and 'Lemon Index' in lb) else float(t))
+        rows.append((y.get_text('', strip=True), cars, vals))
+    if not rows: return None
+    out = []
+    for m, (lab, sub) in sorted(enumerate(labs), key=lambda x: 'YouTube' not in x[1][0]):   # YouTube tone first
+        pts = [(y, c, v[m]) for y, c, v in rows if m < len(v)]
+        got = [p for p in pts if p[2] is not None]
+        tone = 'YouTube' in lab; idx = 'Lemon Index' in lab + sub
+        if len(got) < 2 or (not tone and not idx and max(p[2] for p in got) < 10):   # a handful of complaints: one plain line, not a chart
+            if got: out.append(f'<p class="eg5-one"><b>{html.escape(lab)}:</b> ' + ', '.join(f'{p[2]:,.0f} ({html.escape(p[0])})' for p in got)
+                               + (f'. <span>{html.escape(sub)}; years not listed had none.</span></p>' if len(got) < len(pts) else f'. <span>{html.escape(sub)}.</span></p>'))
+            continue
+        vs = [p[2] for p in got]; vmin, vmax = min(vs), max(vs)
+        if tone: lo, hi = min(30, (vmin - 5) // 10 * 10), max(70, -(-(vmax + 5) // 10) * 10)
+        else: lo, hi = 0, (vmax * 1.12) or 1
+        good = (vmax if tone else vmin) if (tone and vmax - vmin >= 3) or (idx and vmax - vmin >= 10) else None
+        bad = (vmin if tone else vmax) if (tone and vmax - vmin >= 8) or (not tone and vmax - vmin >= max(10, vmax * .2)) else None
+        cols = []
+        for y, c, v in pts:
+            k = 'na' if v is None else 'best' if v == good else ('worst' if tone or idx else 'most') if v == bad else ''
+            h = 0 if v is None else max(3, (v - lo) / (hi - lo) * 100)
+            yl = y if len(pts) <= 10 else "’" + y[-2:]
+            cols.append(f'<div class="eg5-c {k}" title="{html.escape(y + (": " + cars if cars else ""))}"><span class="eg5-b">'
+                        + (f'<i style="height:{h:.0f}%"><em>{v:,.0f}</em></i>' if v is not None else '<i class="z"><em>·</em></i>') + f'</span><span class="eg5-y">{html.escape(yl)}</span></div>')
+        lg = []
+        if good is not None:
+            lg.append(f'<span class="g">Best: {", ".join(p[0] for p in got if p[2] == good)} ({good:,.0f})</span>')
+        if bad is not None:
+            lg.append(f'<span class="w{"" if tone or idx else " m"}">{"Weakest" if tone else "Most complaints"}: {", ".join(p[0] for p in got if p[2] == bad)} ({bad:,.0f})</span>')
+        gls = list(range(int(lo) + 10, int(hi) + 1, 10 if hi - lo <= 50 else 20)) if tone else (lambda st: [st * k for k in range(1, 6) if st * k <= hi])(next(f * 10 ** e for e in range(0, 7) for f in (1, 2, 2.5, 5) if f * 10 ** e >= vmax / 3))
+        grid = ''.join(f'<span class="eg5-gl" style="bottom:{(g - lo) / (hi - lo) * 100:.0f}%"><b>{g:,.0f}</b></span>' for g in gls)
+        out.append(f'<figure class="eg5{" eg5-m" if len(pts) > 10 else ""}"><figcaption><b>{html.escape(lab)}</b><span>{html.escape(sub)}</span></figcaption>'
+                   f'<div class="eg5-p" style="--n:{len(pts)}">{grid}{"".join(cols)}</div>' + (f'<p class="eg5-lg">{"".join(lg)}</p>' if lg else '') + '</figure>')
+    if not out: return None
+    return '<div class="egc eg5w">' + ''.join(out) + '</div>'
+
+
 def ENG5_HOOK(body):
     i = body.find('<article class="study tr2 eng2')
     if i < 0: return body
@@ -77,6 +135,15 @@ def ENG5_HOOK(body):
     if j < 0: return body
     art = _C5S(body[i:j + len('</article>')], 'html.parser').article
     if not art: return body
+    for egc in art.find_all('div', class_='egc'):
+        try:
+            nw = _eg5_chart(egc)
+            if nw: egc.replace_with(_C5S(nw, 'html.parser'))
+        except Exception as ex:
+            globals().setdefault('TAB_FAIL', []).append(f'EG5: {type(ex).__name__} {ex}')
+    for s in art.select('.trc span'):   # shorter chip labels ("#62 of 409 engines with a YouTube study" -> "#62 of 409 engines")
+        t = s.get_text(' ', strip=True); t2 = re.sub(r'\s*with a YouTube study', '', t).replace('YouTube owner tone /100', 'YouTube tone /100')
+        if t2 != t: s.string = t2
     head, chart, secs, mid, cars, qa, cap = [], [], [], [], None, None, []
     for c in [c for c in art.children if getattr(c, 'name', None)]:
         cls = c.get('class') or []
