@@ -234,3 +234,31 @@ def INFO5_HOOK(path, body):
            + (f'<div class="cpl cp5-pl">{"".join(boxes)}</div>' if boxes else '') + '</div>')
     s = str(so); j = s.find(str(d))
     return body[:i] + s[:j] + new + s[j + len(str(d)):]
+
+
+# 11-19 v5 (polish list A1): the Advanced pages (cars, motorcycles, planes). Centered hero with the car's photo and roomy 2-up tiles;
+# "Nearby model years" / "Complaints by model year" (the long open stack) goes into a box; one chart stays open (complaints by system).
+# Same words, ids and URLs.
+def ADV5_HOOK(path, body):
+    if not path.endswith('/advanced/') or 'class="advp tbl cpl-page"' not in body: return body
+    try:
+        s = _C5S(body, 'html.parser')
+        root = s.select_one('div.advp.tbl.cpl-page')
+        root['class'] = root.get('class', []) + ['adv5']
+        hero = root.select_one('section.tb-hero')
+        m = re.fullmatch(r'/cars/([^/]+)/(\d{4})/advanced/', path)
+        if hero is not None and m and hero.h1 is not None and not hero.find('img'):
+            ay = YSL.AIY.get(m.group(1), {}).get(m.group(2))   # that model year's own illustration (as on the year page), else the model photo
+            ph = {'src': ay['src'], 'w': ay.get('w', 1000), 'h': ay.get('h', 600)} if ay and ay.get('src') else mphoto(m.group(1), int(m.group(2)))
+            if ph: hero.h1.insert_after(_C5S(f'<div class="v5-im adv5-im">{pimg(ph, hero.h1.get_text(" ", strip=True).split(".")[0]).replace(" loading=" + chr(34) + "lazy" + chr(34), " fetchpriority=" + chr(34) + "high" + chr(34))}</div>', 'html.parser'))
+        for op in root.select('section.cpl-open'):
+            for sec in op.find_all('section', class_='yc', recursive=False):
+                h = sec.find('h2', recursive=False)
+                if h is None: continue
+                t = h.decode_contents().strip(); h.decompose()
+                sec.replace_with(_C5S(f'<div class="cpl adv5-bx">{V5_BOX("calendar", t, str(sec), h2=True)}</div>', 'html.parser'))
+        sy = root.select_one('section#systems details') or root.select_one('section.cpl-sec:not(.cpl-info) details')
+        if sy is not None: sy['open'] = ''
+        return str(s)
+    except Exception as ex:
+        globals().setdefault('TAB_FAIL', []).append(f'ADV5 {path}: {type(ex).__name__} {ex}'); return body

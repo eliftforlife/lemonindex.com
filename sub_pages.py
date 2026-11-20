@@ -198,7 +198,19 @@ SB_CSS = ('<style>.sbp .sb-top{max-width:760px;margin:0 auto;padding:18px 0 0}'
           '.sbp .sb-h{font-size:22px;margin:0 0 12px;letter-spacing:-.015em}.sbp .sb-more .cpl{display:grid;gap:8px}'
           '.sbp .sb-body details.pf-cs{margin-top:10px}.sbp .sb-pic{display:block;width:100%;max-width:520px;height:auto;margin:18px auto 0}'
           '.sbp .sb-body>.cpl-b{padding:0;margin:0}.sbp .sb-body>.cpl-b>:first-child,.sbp .sb-body>.cpl-b>:first-child>h2:first-child{margin-top:0!important;padding-top:0!important}'
-          '.sbp .sb-body .pf-iss,.sbp .sb-body .pf-recs{padding-left:0;padding-right:0}a.sb-go,a.sb-go:hover{text-decoration:none}</style>')
+          '.sbp .sb-body .pf-iss,.sbp .sb-body .pf-recs{padding-left:0;padding-right:0}a.sb-go,a.sb-go:hover{text-decoration:none}'
+          # 11-19 v5 (polish list A1/A8): centered back pill, big centered title, the car's photo; headings centered with their second line small and gray;
+          # engine chips wrap instead of running off the screen; later sections of model-year pages sit in boxes (_sb_box)
+          '.sbp .sb-top{text-align:center;padding-top:14px}.sbp .sb-back{margin:0;padding:7px 14px 7px 8px;background:#f3f3f5;font-size:15px;color:#1d1d1f}'
+          '.sbp .sb-back:hover{background:#e8e8ed}.sbp .sb-top h1{text-align:center;font-size:clamp(34px,10vw,58px);margin:14px auto 0;max-width:680px;letter-spacing:-.035em;line-height:1.04}'
+          '.sbp .sb-im img{display:block;width:100%;max-width:440px;height:auto;margin:12px auto 0}'
+          '.sbp .sb-body h2:not(.cpl-h){text-align:center;justify-content:center;font-size:clamp(24px,6.6vw,30px);line-height:1.12;letter-spacing:-.02em;margin-left:auto;margin-right:auto}'
+          '.sbp .sb-body h2 .h2s{display:block;flex-basis:100%;margin-top:6px;font-size:15px;line-height:1.4;font-weight:500;letter-spacing:0;color:#6e6e73}'
+          '.sbp .sb-body section.yc,.sbp .sb-body section.ysev{margin-top:34px}.sbp .sb-body .cpl-b>section:first-child{margin-top:0}'
+          '.sbp .n3-row{text-align:center}.sbp .n3-cs{flex-wrap:wrap;overflow:visible;justify-content:center;padding-bottom:0}.sbp .n3-c{max-width:100%;flex:0 1 auto}'
+          '.sbp .n3-c b,.sbp .n3-c small{white-space:normal;overflow:visible}'
+          '.sbp .sb-bx{margin:12px 0 0;padding:0}.sbp .sb-bx+.sb-bx{margin-top:8px}.sbp .sb-body>:not(.sb-bx)+.sb-bx{margin-top:30px}.sbp .sb-bx .cpl-b section{margin-top:0}'
+          '.sbp .sb-bx h2.cpl-h{font-size:17px;margin:0;text-align:left}.sbp .sb-bx .sb-bd{margin:0 0 10px}</style>')
 _SB_BACK = ('<svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" '
             'stroke-width="2.4" viewBox="0 0 24 24" width="22"><path d="m15 18-6-6 6-6"></path></svg>')
 
@@ -224,6 +236,43 @@ def _sb_trim(html, key):
         t = el.get_text(' ', strip=True)
         if sum(c.isupper() for c in t) > .6 * max(1, sum(c.isalpha() for c in t)): el.string = t[:1] + t[1:].lower()
     return str(x)
+
+def _sb_pic(body):
+    """11-19 v5 (A1/A8): the car's own photo from its parent page (the hero image first), for the subpage hero"""
+    best = None
+    for t in re.findall(r'<img\b[^>]*>', body):
+        src, w = re.search(r'\bsrc="([^"]+)"', t), re.search(r'\bwidth="(\d+)"', t)
+        if not src or not w or int(w.group(1)) < 600 or not src.group(1).startswith('/assets/') or re.search(r'/assets/(engines|icons)/|icon-', src.group(1)): continue
+        if best is None or 'fetchpriority="high"' in t: best = t
+        if 'fetchpriority="high"' in t: break
+    if best is None: return ''
+    g = lambda a: (re.search(a + r'="([^"]*)"', best) or [None, ''])[1]
+    return (f'<div class="sb-im"><img alt="{g("alt")}" decoding="async" fetchpriority="high" height="{g("height") or 600}" src="{g("src")}" '
+            f'width="{g("width")}"></div>')
+
+_SB_BXIC = ((r'words|say', 'talk'), (r'recall', 'bell'), (r'repair|cost|bill', 'wrench'), (r'when|mileage|year', 'calendar'), (r'engine', 'engine'),
+            (r'crash|safety|serious', 'warning'), (r'source', 'info'))
+
+def _sb_box(html):
+    """11-19 v5 (A1): a model-year subpage keeps its first two sections open (the main chart); the rest go into boxes. Same words, same ids."""
+    x = _SBS(html, 'html.parser')
+    root = x.select_one('div.cpl-b') or x
+    secs = root.find_all('section', recursive=False)
+    if len(secs) < 3: return html
+    bx = []
+    for sec in secs[2:]:
+        h = sec.find('h2', recursive=False)
+        if h is None: continue
+        sm = h.select_one('.h2s')
+        if sm is not None: sm = sm.extract()
+        t = h.decode_contents().strip()
+        h.decompose()
+        if sm is not None and sm.get_text(strip=True): sec.insert(0, _SBS(f'<p class="yc-cap sb-bd">{sm.decode_contents()}</p>', 'html.parser'))
+        tl = re.sub(r'<[^>]+>', '', t).lower()
+        ic = next((i for rx, i in _SB_BXIC if re.search(rx, tl)), 'chart')
+        bx.append(f'<div class="cpl sb-bx">{V5_BOX(ic, t, str(sec), h2=True)}</div>')
+        sec.decompose()
+    return str(x) + ''.join(bx)   # the boxes go last, after the open sections
 
 SB_LINKCSS = '<style>a.sb-go,a.sb-go:hover{text-decoration:none;color:inherit}</style>'
 
@@ -251,6 +300,7 @@ def _sub_hook(path, body, cfg):
     if len(eng) == 1 and eng[0].select_one('a[href^="/engines/"]') is None: got['engine'] = eng
     # the subpages (11-19 r2, Elijah: "only have what they clicked for ... short, big header and back arrow"): back arrow, big title, that
     # card's content and its sources. No photo, intro line, other cards, side notes, fine print or feedback box.
+    pic = _sb_pic(body)
     for key, rx, slug, label, icon, title, h1, dek, desc in cfg['pages']:
         if not slug or not got.get(key): continue
         h1 = h1 or _sb_title(got[key][0])
@@ -259,8 +309,9 @@ def _sub_hook(path, body, cfg):
         if len(set(ts)) < len(ts): ts = [t for t, _ in parts]   # "Known issues: BMW S54", "Known issues: BMW S65" keep their engine
         inner = ''.join((f'<h2 class="sb-sh">{E(t)}</h2>' if len(parts) > 1 and '<h2' not in h else '') + h for t, (_, h) in zip(ts, parts))
         inner = _sb_trim(inner, key)
+        if re.fullmatch(r'/cars/[^/]+/\d{4}/', path): inner = _sb_box(inner)
         sub = (f'{assets}{SB_CSS}<div class="advp tbl pfp sbp"><section class="sb-top"><a class="sb-back" href="{path}">{_SB_BACK}<span>{E(cfg["name"])}</span></a>'
-               f'<h1>{E(h1)}</h1></section><div class="pf sb-body">{inner}</div></div>')
+               f'<h1>{E(h1)}</h1>{pic}</section><div class="pf sb-body">{inner}</div></div>')
         u = f'{path}{slug}/'
         if len(re.sub(r'<[^>]+>', ' ', inner).split()) < 60: SUB_THIN.add(u)
         if u not in NOFB: globals()['NOFB'] = tuple(NOFB) + (u,)   # no feedback box on these short pages
