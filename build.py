@@ -292,7 +292,11 @@ NAV = [('/cars/', 'Look up a car'), ('/brands/', 'Brands'), ('/compare/', 'Compa
 # header v7 (11-05, Elijah: "headers look AI-made, look at Stripe and Apple"): Apple-thin bar, 7 plain links + More flyout, one small CTA pill;
 # phones get a full-screen menu. Styles/JS: assets/gh.css + gh.js (master copy in 0 HQ/Tools/site header/).
 # 11-13 (nav review #6): Trucks (the /cars/ grid's Trucks tab) in the bar; Studies and Motorcycles moved to More, Engines up from More
-NAV_TOP = [('/cars/', 'Cars'), ('/trucks/', 'Trucks'), ('/brands/', 'Brands'), ('/compare/', 'Compare'), ('/electric/', 'Electric'), ('/engines/', 'Engines'), ('/vin/', 'VIN check')]
+# 11-19 (Elijah: "remove Trucks from the top navigation on desktop ... put Electric under Cars, because that is a car"): Cars is a small
+# dropdown (NAV_CARS, assets/nav.js), then Brands, Compare, Engines, VIN check, Motorcycles and More. The phone menu keeps Trucks and Electric.
+NAV_TOP = [('/cars/', 'Cars'), ('/brands/', 'Brands'), ('/compare/', 'Compare'), ('/engines/', 'Engines'), ('/vin/', 'VIN check'), ('/motorcycles/', 'Motorcycles')]
+NAV_CARS = [('/cars/', 'All cars'), ('/electric/', 'Electric'), ('/trucks/', 'Trucks'), ('/suvs/', 'SUVs'), ('/sedans/', 'Sedans & hatchbacks'), ('/minivans/', 'Minivans'),
+            ('/performance/', 'Performance'), ('/supercars/', 'Supercars'), ('/jdm/', 'JDM')]
 NAV_MORE = [('/recalls/', 'Recall check'), ('/best/', 'Best cars'), ('/rankings/', 'Every car ranked'), ('/stats/car-complaints/', 'Statistics'), ('/supercars/', 'Supercars'), ('/jdm/', 'JDM'), ('/motorcycles/', 'Motorcycles'), ('/studies/', 'Studies'), ('/check-engine-light/', 'Engine code lookup'), ('/symptoms/', 'Car symptoms'), ('/best-gas-mileage/', 'Gas mileage'), ('/planes/', 'Planes'), ('/car-loan-rates/', 'Loan rates'), ('/vote/', 'Vote'), ('/data/', 'Free data'), ('/method/', 'How it works')]
 GH_CHEV = '<svg viewBox="0 0 8 8" aria-hidden="true"><path d="M2.5 1 5.5 4 2.5 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 GH_DOWN = '<svg viewBox="0 0 8 8" aria-hidden="true"><path d="M1 2.75 4 5.75 7 2.75" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>'
@@ -330,10 +334,13 @@ def gh_header(path):
     _mi = next((t for u, t in NAV_MORE if path.startswith(u) and u != '/'), None) if not any(path.startswith(u) for u, _ in NAV_TOP) else None   # 11-13 nav (N2)
     _mi = {'Engine code lookup': 'Engine codes', 'Recall check': 'Recalls'}.get(_mi, _mi)
     _mc, _ml = (' data-cur="1" style="color:var(--gh-ink);font-weight:500"', f'<span class="gh-ml">· {_mi}</span>') if _mi else ('', '')   # 11-15 4c: the label may shorten (lxs.css), never runs under the search box
-    top = ''.join(f'<a href="{GH_HREF.get(u, u)}"{cur(u)}>{t}</a>' for u, t in NAV_TOP)
+    _cc = path.startswith(tuple(u for u, _ in NAV_CARS)) and not path.startswith(('/supercars/', '/jdm/'))
+    _dd = (f'<div class="gh-dd"><button class="gh-ddb" type="button" aria-expanded="false" aria-controls="gh-carsdd"{" data-cur=\"1\"" if _cc else ""}>Cars{GH_DOWN}</button>'
+           f'<div class="gh-ddm" id="gh-carsdd">' + ''.join(f'<a href="{u}"{cur(u) if u != "/cars/" or path == "/cars/" else ""}>{t}</a>' for u, t in NAV_CARS) + '</div></div>')
+    top = _dd + ''.join(f'<a href="{GH_HREF.get(u, u)}"{cur(u)}>{t}</a>' for u, t in NAV_TOP if u != '/cars/')
     # 11-10 (Elijah: the phone menu didn't fit one screen): grouped (Look up / Explore / More) in two columns on phones; headings and the
     # top-bar links (gh-x) only show where the top bar is folded away (<1024 px). Lemon-only: the styles live in site.css, not the shared gh.css.
-    inbar = {u for u, _ in NAV_TOP}; lab = dict(NAV_TOP + NAV_MORE); lab['/check-engine-light/'] = 'Engine codes'
+    inbar = {u for u, _ in NAV_TOP} | {'/trucks/', '/electric/'}; lab = dict(NAV_TOP + NAV_MORE + [('/trucks/', 'Trucks'), ('/electric/', 'Electric')]); lab['/check-engine-light/'] = 'Engine codes'
     grp = [('Look up', ['/cars/', '/trucks/', '/brands/', '/compare/', '/vin/', '/recalls/', '/engines/', '/check-engine-light/', '/symptoms/']),
            ('Explore', ['/best/', '/rankings/', '/electric/', '/motorcycles/', '/supercars/', '/jdm/', '/best-gas-mileage/', '/studies/', '/stats/car-complaints/']),   # 11-13 JDM section
            ('More', ['/planes/', '/car-loan-rates/', '/vote/', '/data/', '/method/'])]
@@ -543,7 +550,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' '{DB_HASH}' https://static.cloudflareinsights.com https://challenges.cloudflare.com https://www.googletagmanager.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; frame-src https://challenges.cloudflare.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cloudflareinsights.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://vpic.nhtsa.dot.gov https://api.nhtsa.gov https://lemon-survey.elift08.workers.dev https://lemon-alerts.elift08.workers.dev https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="google-adsense-account" content="{ADS}"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/lxs.css?v={LXS_V}">
-<link rel="stylesheet" href="/assets/site.css?v=1119-mu"><link rel="stylesheet" href="/assets/cpl.css?v=16"><script src="/assets/cpl.js?v=1" defer></script><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
+<link rel="stylesheet" href="/assets/site.css?v=1119-mu"><link rel="stylesheet" href="/assets/cpl.css?v=18"><script src="/assets/cpl.js?v=1" defer></script><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1119" defer></script>{lds}</head>
 <body>{'' if path.startswith('/thanks/') else DONBAR}{gh_header(path)}
 <main>{body}{_eb}{_rel}{'' if path == '/vote/' else ask_html(path)}</main>
 <footer class="foot f2 f3"><div class="f3-top"><a class="f3-name" href="/"><img src="/assets/icon-64.png" alt="" width="64" height="64"><span>Lemon Index</span></a><p class="f3-tag">Check here before you buy.</p><div class="f3-soc">{F3_SOC}</div></div><div class="f2-in">

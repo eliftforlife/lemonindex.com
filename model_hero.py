@@ -146,7 +146,7 @@ def _mh_block(body, k, tag='div'):
         if depth == 0: return k + m.end()
     return -1
 
-_MH_SHARE_SVG = '<svg aria-hidden="true" focusable="false"><use href="/assets/ic.svg?v=1#share"></use></svg>'
+_MH_SHARE_SVG = '<svg aria-hidden="true" focusable="false" width="21" height="21" style="width:21px;height:21px"><use href="/assets/ic.svg?v=1#share"></use></svg>'
 
 def _mh_acts(rest):
     """returns (rest, share text or ''): the recall / opinions / compare boxes as one tile row, the share row cut out"""
@@ -164,17 +164,66 @@ def _mh_acts(rest):
         if b is not None and 'Know someone shopping' in b.get_text():
             shr = b['data-share']; (b.find_parent('div', class_='cpl') or b).decompose()
             if not pend.find(True): pend.decompose()
+    # 11-19 r5 (Elijah: "Recall alerts and Share your take side by side, then Compare and Info side by side. Four cards, the same size"):
+    # the labels name the car; the Info box moves in as the fourth card (CSS: assets/cpl.css, "mh-acts 2x2")
+    car = opn.get('data-car') or ''
     lab = opn.select_one('.opn-open b')
-    if lab is not None: lab.string = 'Share your take'
+    if lab is not None: lab.string = f'Share your opinion about the {car}' if car else 'Share your take'
+    cl = cmp_.select_one('details > summary b')
+    if cl is not None and car: cl.string = f'Compare the {car} to another car'
     g3 = s.select_one('div.cpl-g3')
-    acts = s.new_tag('div', attrs={'class': 'mh-acts'})
+    acts = s.new_tag('div', attrs={'class': 'mh-acts mh-a4'})
+    if car: acts['style'] = '--rla-lab:"Get ' + car.replace('"', '') + ' recall alerts"'
     g3.insert_before(acts)
     for x in (rla, opn, cmp_): acts.append(x.extract())
     for grp in s.select('div.cpl-g3, div.cpl-rel'):
         if not grp.find(True): grp.decompose()
     rest = rest[:g] + MH_ACTS_CSS + str(s) + rest[e:]
+    ii = rest.find('<div class="cpl-grp cpl-g4"><section class="cpl-sec cpl-info" id="info">')
+    if ii >= 0:
+        k0 = ii + len('<div class="cpl-grp cpl-g4">'); k1 = _mh_block(rest, k0, 'section')
+        ie = k1 + len('</div>') if k1 > 0 and rest.startswith('</div>', k1) else -1   # only when Info is the whole group
+        a0 = rest.find('<div class="mh-acts mh-a4"')
+        a1 = _mh_block(rest, a0) if a0 >= 0 else -1
+        if ie > 0 and a0 > ie:
+            info = rest[k0:k1]
+            info = info.replace('<b>Info</b><small>Data · embed · how to read</small>', '<b>Info: how to read the charts</b>', 1)
+            rest = rest[:ii] + rest[ie:a1 - len('</div>')] + info + rest[a1 - len('</div>'):]
     if not shr:   # page() turns the page's last share line into the end "Know someone shopping" box later; take it here instead
         sm = [m for m in _mh_re.finditer(r'<p class="shline">.*?</p>', rest, _mh_re.S) if 'Know someone shopping' in m.group(0)]
         d = _mh_re.search(r'data-share="([^"]*)"', sm[-1].group(0)) if sm else None
         if d: shr = _html.unescape(d.group(1)); rest = rest[:sm[-1].start()] + rest[sm[-1].end():]
     return rest, shr
+
+
+# 11-19 (Elijah: "Fewest complaints / Most complaints ... shown with bars, compacted ... two side-by-side things, with a link to that
+# year"): the bw2 block becomes two compact columns; each row = the year (its page), a bar sized by its Lemon Index, the number.
+_BW2 = _mh_re.compile(r'<section class="bw2">.*?</div></div></section>', _mh_re.S)
+_YCH = _mh_re.compile(r'<a class="ych (\w+)" href="([^"]+)"><b>(\d{4})</b><span>(\d+)</span><small>(.*?)</small></a>', _mh_re.S)
+def _mh_bw3(body):
+    m = _BW2.search(body)
+    if not m: return body
+    cols = [(t, _YCH.findall(c)) for t, c in _mh_re.findall(r'<p class="te">(.*?)</p>.*?<div class="ychs">(.*?)</div>', m.group(0), _mh_re.S)]
+    if len(cols) != 2 or not all(r for _, r in cols): return body
+    top = max(int(r[3]) for _, rs in cols for r in rs) or 1
+    col = lambda t, rs: (f'<div class="bw3c"><p class="bw3h">{t}</p>' + ''.join(
+        f'<a class="bw3r {c}" href="{u}" title="{y}: {sm}"><b>{y}</b><span class="bw3b"><i style="width:{max(4, round(int(v) / top * 100))}%"></i></span><span class="bw3n">{v}</span></a>'
+        for c, u, y, v, sm in rs) + '</div>')
+    return body[:m.start()] + '<section class="bw3">' + ''.join(col(t, rs) for t, rs in cols) + '</section>' + body[m.end():]
+
+# 11-19 (Elijah, Acura NSX: "the header that says Acura NSX isn't at the top, the car image isn't the same size"): supercar model pages
+# get the model pages' top order: breadcrumb, big centered name, the photo at the /cars/ size, then the tiles (CSS: cpl.css "sch").
+_SC_PATH = _mh_re.compile(r'/supercars/[a-z0-9-]+/')
+def _sc_hero(path, body):
+    if not _SC_PATH.fullmatch(path): return body
+    i = body.find('<section class="ph tb-hero">')
+    if i < 0: return body
+    j = body.find('<div class="tb-img">', i); h = _mh_re.compile(r'<h1>.*?</h1>', _mh_re.S).search(body, i)
+    if j < 0 or not h or h.start() < j: return body
+    return body[:i] + '<section class="ph tb-hero sch">' + body[i + len('<section class="ph tb-hero">'):j] + h.group(0) + body[j:h.start()] + body[h.end():]
+
+_MH_HOOK1 = MH_HOOK
+def MH_HOOK(path, body):
+    body = _MH_HOOK1(path, body)
+    if _MH_PATH.fullmatch(path): body = _mh_bw3(body)
+    return _sc_hero(path, body)

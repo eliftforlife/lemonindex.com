@@ -23,7 +23,7 @@ def _cp_icon(t):
         if any(k in t for k in ks): return _CP_I(ic)
     return _CP_I('chart')
 _CP_OPEN_PANELS = ('p-years', 'p-uk-years')   # the year chart / year table stays open
-_CP_KEEP = ('yyears', 'bw2', 'yhero', 'cpl', 'cpl-sec', 'rla-sec', 'opn', 'n3-row', 'pinb', 'trc', 'pf-yf', 'yav', 'xc-no')
+_CP_KEEP = ('yyears', 'bw2', 'yhero', 'cpl', 'cpl-sec', 'rla-sec', 'opn', 'n3-row', 'pinb', 'trc', 'pf-yf', 'yav', 'xc-no', 'sce1')   # sce1: a supercar's one-row EPA numbers (vehicles_pages.py) stay open like the year table
 def _cp_inject_pages():
     """performance pages that perf_page.inject() rewrites after the build: the hook runs there instead (POST_HOOK), on the finished page"""
     out = set()
