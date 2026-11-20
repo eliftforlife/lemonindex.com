@@ -232,18 +232,26 @@ if UXC == 'hooks':
         return out
     def worst_years_page(EMB):
         rs = worst_years(); top = rs[:50]
-        tr = ''.join(f'<tr><td class="num">{i}</td><td><a href="{CARU(f, v["y"])}">{v["y"]} {E(f["name"])}</a>{" <small class=muted>early read</small>" if v.get("early") else ""}</td>'
-                     f'<td class="num bad">{v["li"]:,}</td><td class="num">{v["n"]:,}</td><td>{E(v["parts"][0][0]) if v["parts"] else "—"}</td></tr>' for i, (f, v) in enumerate(top, 1))
+        # 11-19 v5 (polish list A2): compact ranked rows with a photo instead of a 50-row table that stacked into tall cards on phones;
+        # top 20 open, 21-50 in a box, the method, download and embed in boxes. Same numbers and words.
         w = top[0]
-        body = (f'<article class="study"><p class="kicker"><a href="/rankings/">Every car ranked</a> · Worst model years</p><h1>The worst car model years, {WY0}–{WY1}</h1>'
-                f'<p class="lede">Of {len(rs):,} scored model years from {WY0} to {WY1}, the <b>{w[1]["y"]} {E(w[0]["name"])}</b> drew the most owner complaints per car sold: a Lemon Index of {w[1]["li"]:,}, '
-                f'about {w[1]["li"] / 100:.0f} times the average car of that year.</p>'
-                f'<p class="sub">Lemon Index = NHTSA owner complaints filed in a car&#39;s first 3 years, per car sold, against the average car of the same model year. <b>100 is average.</b> '
-                f'Only model years with 20,000+ sold are scored. 2023–2025 are early reads (complaints filed so far). A complaint is an owner&#39;s report, not a confirmed defect, and this is not a safety rating.</p>'
-                f'<p><a class="btn" href="/data/worst-model-years-{WY0}-{WY1}.csv" download>Download all {len(rs):,} (CSV)</a></p>'
-                f'<div class="tw"><table><thead><tr><th>#</th><th>Model year</th><th>Lemon Index</th><th>Complaints</th><th>Top problem</th></tr></thead><tbody>{tr}</tbody></table></div>'
-                + embed_block(EMB, ['worst-years'], 'Use this chart') +
-                f'<p class="note">Every number here is on the model year&#39;s own page. <a href="/method/">How the index works</a> · <a href="/data/">All free data</a></p></article>')
+        def _row(f, v):
+            return {'href': CARU(f, v['y']), 'ph': aph(f['id'], v['y']), 'title': f'{v["y"]} {E(f["name"])}' + (' <small class=muted>early read</small>' if v.get('early') else ''),
+                    'sub': f'{v["n"]:,} complaints' + (f' · top problem: {E(v["parts"][0][0])}' if v['parts'] else ''), 'score': f'{v["li"]:,}', 'cls': 'bad'}
+        rows = [_row(f, v) for f, v in top]
+        wph = aph(w[0]['id'], w[1]['y'])
+        body = ('<div class="pg v5 wy5">' + V5_HERO('<a href="/rankings/">Every car ranked</a> · Worst model years', f'The worst car model years, {WY0}–{WY1}',
+                f'Of {len(rs):,} scored model years from {WY0} to {WY1}, the <b>{w[1]["y"]} {E(w[0]["name"])}</b> drew the most owner complaints per car sold: a Lemon Index of {w[1]["li"]:,}, '
+                f'about {w[1]["li"] / 100:.0f} times the average car of that year.', extra=(f'<div class="v5-im">{pimg(wph, str(w[1]["y"]) + " " + w[0]["name"]).replace(" loading=\"lazy\"", "")}</div>' if wph else ''))
+                + '<section class="cp5-sec"><h2>Top 50, worst first.</h2>' + V5_RANK(rows[:20]) + '</section>'
+                + '<div class="cpl v5-pl">'
+                + V5_BOX('chart', f'Show #21–{len(rows)}', V5_RANK(rows[20:], 21), 'more')
+                + V5_BOX('info', 'How the score works', f'<p class="yc-cap">Lemon Index = NHTSA owner complaints filed in a car&#39;s first 3 years, per car sold, against the average car of the same model year. <b>100 is average.</b> '
+                         f'Only model years with 20,000+ sold are scored. 2023–2025 are early reads (complaints filed so far). A complaint is an owner&#39;s report, not a confirmed defect, and this is not a safety rating.</p>'
+                         '<p class="yc-cap">Every number here is on the model year&#39;s own page. <a href="/method/">How the index works</a> · <a href="/data/">All free data</a></p>')
+                + V5_BOX('data', f'Download all {len(rs):,} (CSV)', f'<p><a class="btn" href="/data/worst-model-years-{WY0}-{WY1}.csv" download>Download all {len(rs):,} (CSV)</a></p>')
+                + V5_BOX('share', 'Use this chart', embed_block(EMB, ['worst-years'], 'Use this chart'))
+                + '</div>' + pcredit(who(*[r['ph'] for r in rows if r['ph']])) + '</div>')
         page('/rankings/worst-years/', f'The Worst Car Model Years, {WY0}–{WY1}, by Owner Complaints | The Lemon Index',
              f'The {len(top)} model years from {WY0} to {WY1} with the most NHTSA owner complaints per car sold, led by the {w[1]["y"]} {w[0]["name"]}. Free CSV of all {len(rs):,} scored model years.',
              body, kind='article', ld=[{"@context": "https://schema.org", "@type": "Dataset", "name": f"Worst car model years {WY0}-{WY1} by NHTSA complaints per car sold", "url": BASE + '/rankings/worst-years/',

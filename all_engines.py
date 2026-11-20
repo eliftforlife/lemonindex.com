@@ -21,11 +21,13 @@ def _ae_add(url, **c):
     if not c['yt'][0] and ENG_POOL_RANK.get(url): c['yt'] = (ENG_POOL_RANK[url], ENG_POOL_N, ENG_POOL_LBL)   # 11-13: every engine in the one YouTube pool shows its rank
     AE_LIVE[url] = dict(url=url, **c)
 # 1. BMW engine pages (ranked the same way as /engines/bmw/)
+# 11-19 (polish A10): S58 + S55 had real photos with backgrounds; the hub uses the cutout illustrations we already have (the engine pages keep the credited photos)
+_AE_CUT = {c: {'src': f'/assets/engines/bmw-{c.lower()}-twin-turbo-inline-6-engine.webp', 'w': w, 'h': h} for c, w, h in (('S58', 1200, 850), ('S55', 1200, 1056))}
 _ae_ytn = ENG_POOL_N   # 11-12 round 2: one YouTube rank pool for every engine (supercar_engine_pages.py), so no two cards say YT #1
 for s in (globals().get('STATS') or []):
     code = s['code']; m = BENG[code]; asp = m.get('asp') or ''
     tur = 'twin-turbo' if 'twin-turbo' in asp else 'turbo' if 'turbo' in asp else ''
-    _ae_add(ENG_URL(code), name=f'BMW {code}', code=code, lay=' '.join(x for x in (m['size'], m['layout'], tur) if x), yrs=s['years'], img=_ae_img(BPH.get(code)),
+    _ae_add(ENG_URL(code), name=f'BMW {code}', code=code, lay=' '.join(x for x in (m['size'], m['layout'], tur) if x), yrs=s['years'], img=_ae_img(_AE_CUT.get(code) or BPH.get(code)),
             yt=(_YTRANK.get(code), _ae_ytn, ENG_POOL_LBL), used=[BFAM.get(f, f).replace('BMW ', '') for f in s['fams']], t={'b'}, f='gas', mk='BMW', o=(0, _YTRANK.get(code, 999)))
 # 2. supercar + performance engine pages
 for e, d in SCENG['engines'].items():
@@ -237,7 +239,7 @@ _ae_body = f'''<div class="pg"><div class="ph ph-f"><section class="finder aefin
 <p class="aenone" hidden>No engine matches that yet. Try a code like B58 or a model like Camry.</p>
 <p class="note aehubs">Engine head-to-head: {" · ".join(f'<a href="{u}">{lab.replace(", ", " vs ").replace(" and ", " vs ")}</a>' for u, us, lab in ENG_H2H)}. YT # = YouTube rank among all {ENG_POOL_N} {ENG_POOL_LBL}.</p>
 <p class="note aehubs">Engine hubs: <a href="/engines/bmw/">BMW engines</a> · <a href="/engines/supercars/">Supercar engines</a> · <a href="/engines/performance/">Performance engines</a> · <a href="/check-engine-light/">Check engine light codes</a> (OBD-II trouble codes, a different lookup)</p>
-<p class="ph-cr">Engine images: AI-generated illustrations by The Lemon Index, free under CC BY 4.0 (<a href="/images/">download</a>), except the BMW S55 and S58 photos (Wikimedia Commons, credited on their pages). Engine sizes and cylinders: EPA (fueleconomy.gov).</p></section></div><script src="/assets/engines.js?v=7" defer></script><script src="/assets/soonvote.js?v=2" defer></script>'''
+<p class="ph-cr">Engine images: AI-generated illustrations by The Lemon Index, free under CC BY 4.0 (<a href="/images/">download</a>). Engine sizes and cylinders: EPA (fueleconomy.gov).</p></section></div><script src="/assets/engines.js?v=7" defer></script><script src="/assets/soonvote.js?v=2" defer></script>'''
 page('/engines/', 'Every Car Engine: Reliability, Problems & YouTube Owner Ranks',
      f'Search {_aeN} car engines, from the BMW B58 and N54 to the GM LS3 and Ferrari F154: owner complaints, recalls and YouTube owner ranks by model year.',
      _ae_body, ld=[{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Every car engine", "url": BASE + '/engines/',

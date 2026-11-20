@@ -47,10 +47,20 @@ def _gap_pages():
     page('/check-engine-light/', 'Check Engine Light Codes: Free Lookup and Which Cars Get Them | The Lemon Index', 'Look up any engine code free, see what a solid or flashing check engine light means, and every model ranked by check engine complaints to the U.S. government.', body + (CODES_JS if 'CODES_JS' in globals() else '') + '<script src="/assets/cardfilter.js?v=1" defer></script>',
          ld=[faq_ld([(q, re.sub('&#39;', "'", a), None) for q, a in faq])] if False else [{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": html.unescape(a)}} for q, a in faq]}]); GAP_URLS.append('/check-engine-light/')
     M = GAP['mpg'][:25]; gas = sorted([m for m in GAP['mpg'] if m.get('gas')], key=lambda m: -m['gas'])[:15]; both = sorted([m for m in GAP['mpg'] if m.get('li') and m['li'] <= 80], key=lambda m: -m['comb'])[:10]
-    body = (f'<div class="advp"><header class="advh1"><p class="ph-e"><a href="/">The Lemon Index</a></p><h1>Best gas mileage cars, with their complaint scores.</h1><p>EPA mileage tells you what a car saves at the pump. The Lemon Index tells you what owners complained about. Here are both, side by side.</p></header>'
-            '<div class="ygrid"><section class="yc" id="both"><h2>High mileage and few complaints</h2>' + mpg_rows(both) + '<p class="yc-cap">Models with a Lemon Index of 80 or lower. 100 is the average car, lower is better.</p></section>'
-            '<section class="yc" id="all"><h2>Best combined mpg, any model</h2>' + mpg_rows(M) + '</section>'
-            '<section class="yc" id="gas"><h2>Best mpg without a hybrid</h2>' + mpg_rows([dict(m, comb=m['gas'], hyb=False) for m in gas]) + '</section></div>'
-            '<p class="yc-cap">Mileage: EPA, best version sold 2019 to 2025, gas and hybrid only, so no plug-ins or EVs. Fuel cost is the EPA&#39;s current estimate. Lemon Index covers model years 2010 to 2022, so a very new redesign may differ.</p></div>')
+    # 11-19 v5 (polish list A4): one ranked list with three tabs instead of three lists that repeated the same cars (CSS-only tabs, CSP-safe)
+    hyb = sorted([m for m in GAP['mpg'] if m.get('hyb')], key=lambda m: -m['comb'])[:15]
+    gasl = [dict(m, comb=m['gas'], hyb=False) for m in gas]
+    tabs = [('mp-h', 'Hybrid', hyb, 'The best combined mpg, hybrids (no plug-ins).'), ('mp-g', 'Gas only', gasl, 'The best combined mpg without a hybrid.'),
+            ('mp-l', 'Few complaints', both, 'High mileage and a Lemon Index of 80 or lower. 100 is the average car, lower is better.')]
+    tabs = [t for t in tabs if t[2]]
+    top_ph = aph(tabs[0][2][0]['id']) if tabs else None
+    tb = ('<div class="tb5" role="group" aria-label="Pick a list">' + ''.join(f'<input type="radio" name="mp" id="{k}"{" checked" if n == 0 else ""}><label for="{k}">{lab}</label>' for n, (k, lab, _, _) in enumerate(tabs))
+          + ''.join(f'<div class="tb5-p tb5-{k}"><h2 class="tb5-h">{lab}</h2><p class="yc-cap">{cap}</p>{mpg_rows(L)}</div>' for k, lab, L, cap in tabs) + '</div>')
+    body = ('<div class="pg v5 mpg5">' + V5_HERO('<a href="/">The Lemon Index</a>', 'Best gas mileage cars, with their complaint scores.',
+            'EPA mileage tells you what a car saves at the pump. The Lemon Index tells you what owners complained about. Here are both, side by side.',
+            extra=(f'<div class="v5-im">{pimg(top_ph, tabs[0][2][0]["name"]).replace(" loading=\"lazy\"", "")}</div>' if top_ph else ''))
+            + tb
+            + '<div class="cpl v5-pl">' + V5_BOX('info', 'Where these numbers come from', '<p class="yc-cap">Mileage: EPA, best version sold 2019 to 2025, gas and hybrid only, so no plug-ins or EVs. Fuel cost is the EPA&#39;s current estimate. Lemon Index covers model years 2010 to 2022, so a very new redesign may differ.</p>')
+            + '</div></div>')
     page('/best-gas-mileage/', 'Best Gas Mileage Cars, Ranked With Owner Complaint Scores | The Lemon Index', 'The best gas mileage cars and SUVs by EPA combined mpg, next to their owner complaint scores, so you can see which ones save gas and stay out of the shop.', body); GAP_URLS.append('/best-gas-mileage/')
 _gap_pages()

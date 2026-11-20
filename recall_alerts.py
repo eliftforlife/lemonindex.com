@@ -75,8 +75,10 @@ RA_PRIVACY = ('<h2 id="recall-alerts">Recall alerts</h2><p>If you sign up for re
               'list once a week and email you only when a new recall is added. Every email has a one-click unsubscribe, and unsubscribing deletes your email address '
               'and all your alerts. Emails are sent through Resend; the list lives in a Cloudflare database. We never sell, rent or share the list.</p>')
 def RA_PAGE():
-    page('/alerts/', 'Recall Alerts | The Lemon Index', 'Get an email when NHTSA adds a new recall for your car. Confirm or stop your Lemon Index recall alerts here.', f'''<div class="pg"><section class="rla-page" id="rla-page">
-<h1>Recall alerts</h1><div class="rla-intro"><p class="lede">Get an email when NHTSA adds a new recall for your car.</p>
+    page('/alerts/', 'Recall Alerts | The Lemon Index', 'Get an email when NHTSA adds a new recall for your car. Confirm or stop your Lemon Index recall alerts here.', f'''<div class="pg v5 rla5"><section class="rla-page v5-h" id="rla-page">
+<p class="v5-e">Free</p><h1>Recall alerts</h1><div class="rla-intro"><p class="lede v5-s">Get an email when NHTSA adds a new recall for your car.</p>
+<div class="v5-im">{pimg(mphoto('toyota-camry', 2019), 'Toyota Camry').replace(' loading="lazy"', '')}</div>
+<ol class="rla5-st"><li><b>1</b><span>Pick your car, or check your VIN</span></li><li><b>2</b><span>Tap Email me in its Recalls section</span></li><li><b>3</b><span>We email you only when a new recall is added</span></li></ol>
 <p>Pick your car on its Lemon Index page and tap <b>Email me</b> in its Recalls section, or <a href="/vin/">check your VIN</a> first. We check the recall list every week and email you only when something new is added. You confirm by email first, and every email has a one-click unsubscribe.</p>
 <p><a class="btn" href="/cars/">Find your car</a></p></div><div class="rla-out" aria-live="polite" hidden></div>
 <p class="note">Details in our <a href="/privacy/#recall-alerts">privacy policy</a>. We never sell or share the list.</p></section></div>{RA_ASSETS}''')

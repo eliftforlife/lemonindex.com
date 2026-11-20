@@ -425,7 +425,7 @@ else:
                 f'{jump}<input class="cf-q imgq" type="search" placeholder="Find an image, e.g. Civic or N54" aria-label="Find an image">'
                 f'<p class="cf-none imgnone" hidden>No image matches.</p>{secs}' + (f'<section class="yc imgsec">{TAB.images_cards()}</section>' if TAB.images_cards() else '') +
                 '<p class="yc-cap">Engine photos on our engine pages that come from Wikimedia Commons are not ours: they keep their authors&#39; own licenses, linked under each photo.</p></div>'
-                '<script src="/assets/imgpage.js?v=1" defer></script>')
+                '<script src="/assets/imgpage.js?v=2" defer></script>')
         page('/images/', 'Free Car & Engine Illustrations (CC BY 4.0) | Lemon Index', lede, body, ld=[img_ld(p.split('bmw-')[1].strip('/').upper(), ph) for p, ph in ours] + [dict(img_ld('', ph), name=ph['title'], description=ph['title'] + '. AI-generated illustration, not a photo of a specific engine.') for p, ph in list(globals().get('SCE_IMGS', [])) + list(globals().get('AIE_IMGS', []))])
         BMW_URLS.append('/images/')
     # ---- image sitemap (listed in robots.txt by build.py)

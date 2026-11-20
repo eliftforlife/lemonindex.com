@@ -384,8 +384,16 @@ def _scs_specs(slug, c):
 if SC:
     for c in SC:
         slug = slugify(c['name']); c['slug'] = slug; ph = vph(c['name']); ys = c['years']; last = ys[-1]
-        rows = ''.join(f'<tr><td><b>{y["y"]}</b></td><td class="num">{rng2(y["comb"])}</td><td class="num">{rng2(y["cost"], "$")}</td><td>{E(", ".join(y["engines"][:2]))}{" · hybrid" if y["hybrid"] else ""}{_sce_links(slug, y["y"])}</td>'
-                       f'<td>{"Yes" if y["guzzler"] else "—"}</td><td class="num">{len(y["recalls"])}</td></tr>' for y in reversed(ys))
+        # 11-19 (polish list A6): identical years in a row merge into one line, newest first; no Guzzler tax column when no year paid it
+        guz = any(y['guzzler'] for y in ys)
+        key = lambda y: (str(y['comb']), str(y['cost']), tuple(y['engines'][:2]), y['hybrid'], y['guzzler'], len(y['recalls']))
+        runs = []
+        for y in reversed(ys):
+            if runs and key(runs[-1][-1]) == key(y) and runs[-1][-1]['y'] - y['y'] == 1: runs[-1].append(y)
+            else: runs.append([y])
+        def _yrun(r): return f'{r[-1]["y"]}–{r[0]["y"]}' if len(r) > 1 else f'{r[0]["y"]}'
+        rows = ''.join(f'<tr><td><b>{_yrun(r)}</b></td><td class="num">{rng2(r[0]["comb"])}</td><td class="num">{rng2(r[0]["cost"], "$")}</td><td>{E(", ".join(r[0]["engines"][:2]))}{" · hybrid" if r[0]["hybrid"] else ""}{_sce_links(slug, r[0]["y"])}</td>'
+                       + (f'<td>{"Yes" if r[0]["guzzler"] else "—"}</td>' if guz else '') + f'<td class="num">{len(r[0]["recalls"])}{" each" if len(r) > 1 and r[0]["recalls"] else ""}</td></tr>' for r in runs)
         allrec = sorted({r['id']: dict(r, y=y['y']) for y in ys for r in y['recalls']}.values(), key=lambda r: r['date'][-4:] if r['date'] else '', reverse=True)
         rc = ''.join(f'<li><b>{E((r["part"] or "").split(":")[0].title())}</b> <small>{r["y"]} model · {E(r["id"])}</small><p>{E(rsum(r))}</p></li>' for r in allrec[:4])
         more = ''.join(f'<li><b>{E((r["part"] or "").split(":")[0].title())}</b> <small>{r["y"]} model · {E(r["id"])}</small><p>{E(rsum(r))}</p></li>' for r in allrec[4:])
@@ -397,8 +405,8 @@ if SC:
         body = f'''<div class="pg mp6"><section class="ph yph6"><div class="yh-t"><p class="ph-e"><a href="/supercars/">Supercars</a> · {E(c["make"])}</p><h1>{E(c["name"])}.</h1>
 <p class="ph-s">Power, engine, fuel economy and recalls, {ys[0]["y"]} to {last["y"]}.</p>{(globals().get("EU_SC_ROW") or (lambda s: ""))(slug)}</div><div class="ph-v">{pimg(ph, valt(ph, c["name"])) if ph else ""}{vcredit(ph)}</div></section>
 <div class="yts">{"".join(tl[:3])}</div>{ytfix('super:' + slug)}
-<section class="yc"><h2>Every year. <span class="h2s">EPA numbers across the versions sold that year.</span></h2><div class="tw"><table><thead><tr><th>Year</th><th>MPG</th><th>Fuel / yr</th><th>Engine</th><th>Guzzler tax</th><th>Recalls</th></tr></thead><tbody>{rows}</tbody></table></div>
-<p class="yc-cap">EPA yearly fuel cost assumes 15,000 miles at national average prices. The gas-guzzler tax is a federal tax paid on new cars that use a lot of fuel.</p></section>
+<section class="yc"><h2>Every year. <span class="h2s">EPA numbers across the versions sold that year.</span></h2><div class="tw"><table><thead><tr><th>Year</th><th>MPG</th><th>Fuel / yr</th><th>Engine</th>{'<th>Guzzler tax</th>' if guz else ''}<th>Recalls</th></tr></thead><tbody>{rows}</tbody></table></div>
+<p class="yc-cap">EPA yearly fuel cost assumes 15,000 miles at national average prices.{' The gas-guzzler tax is a federal tax paid on new cars that use a lot of fuel.' if guz else ''}</p></section>
 {specs}{_sce_section(slug, c["name"], c)}{recs}
 <p class="yc-cap" style="text-align:center">Sources: EPA fueleconomy.gov, NHTSA recalls and each engine&#39;s sources (Specs tab). <a href="/supercars/">Every supercar</a></p></div>'''
         page(f'/supercars/{slug}/', f'{c["name"]} MPG, Fuel Cost & Recalls by Year | The Lemon Index',

@@ -39,6 +39,7 @@ def _ck_card(a, jdm=False, brand=''):
     own = _ck_owner(a['href']) if jdm else ''
     nm = b.get_text(' ', strip=True) if b else ''
     if brand and re.fullmatch(r'[\d.]{1,3}', nm): nm = f'{brand} {nm}'   # "Polestar 2", not "2"
+    if nm[:1].islower(): nm = nm[:1].upper() + nm[1:]   # 11-19: Ram 'pickup' -> 'Pickup'
     return (f'<a class="mc ck-c" href="{E(a["href"])}">{str(p) if p is not None else ""}'
             + (f'<small class="ck-o">{E(own)}</small>' if own else '') + f'<b>{E(nm)}</b></a>')
 

@@ -59,7 +59,10 @@ def _bdata(b):
     return ms, co, soon, live, later, moto
 def _short_nm(n, b): return n[len(b) + 1:] if n.startswith(b + ' ') else n
 BN4_CSS = ('<style>.bn4 section > .yc-cap,.bn4 .bn4-soon,.bn4 .bn4-moto{text-align:center;max-width:640px;margin-left:auto;margin-right:auto}'
-           '.bn4-h .ybw{text-align:center}.bn4-moto{margin-top:18px;font-size:15px;line-height:1.7}</style>')
+           '.bn4-h .ybw{text-align:center}.bn4-moto{margin-top:22px}.bn4-mh{margin:0 0 10px;font-weight:800;font-size:17px;letter-spacing:-.01em}'
+           '.bn4-mr{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;text-align:left}'
+           '.bn4-mr a{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:14px 16px;border-radius:16px;background:#f5f5f7;color:#1d1d1f;text-decoration:none;font-size:15px}'
+           '.bn4-mr a:hover{background:#ececf0}.bn4-mr a i{font-style:normal;color:#6e6e73;font-size:18px}</style>')
 def _brand_lists(b, ms, co, soon, live, later, moto, study_ids):
     out = BN4_CSS
     if ms:
@@ -78,7 +81,7 @@ def _brand_lists(b, ms, co, soon, live, later, moto, study_ids):
         out += (f'<section><h2>{"More " if ms else ""}{E(b)} models with owner complaints. <span class="h2s">No score: we don&#39;t have their U.S. sales by year, so each page shows the complaints and recalls.</span></h2>'
                 f'<div class="mbs"><div class="mb"><div class="mg">{"".join(ndcard(m) for m in co)}</div></div></div></section>')
     if live or moto:
-        mo = (f'<p class="bn4-moto"><b>{E(b)} motorcycles:</b> ' + ' · '.join(f'<a href="{E(u)}">{E(_short_nm(n, b))}</a>' for n, u in moto) + '</p>') if moto else ''
+        mo = (f'<div class="bn4-moto"><p class="bn4-mh">{E(b)} motorcycles</p><div class="bn4-mr">' + ''.join(f'<a href="{E(u)}"><b>{E(_short_nm(n, b))}</b><i>›</i></a>' for n, u in moto) + '</div></div>') if moto else ''   # 11-19 (polish A7): card row, not an underlined link line
         out += (f'<section class="bn4-also"><h2>Also on Lemon Index. <span class="h2s">{E(b)} performance, electric and supercar pages.</span></h2>'
                 + (f'<div class="mbs"><div class="mb"><div class="mg">{"".join(live)}</div></div></div>' if live else '') + mo
                 + '</section>')   # 11-18 (low-value review fix): no "Coming soon" / "No data yet" name lists

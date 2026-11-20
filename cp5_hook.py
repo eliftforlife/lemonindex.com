@@ -109,3 +109,128 @@ def ENG5_HOOK(body):
     if boxes: out += f'<section class="cpl-sec"><div class="cpl">{boxes}</div></section>'
     cls = ' '.join(art.get('class') or []) + ' cp5 eng5'
     return body[:i] + f'<article class="{cls}">' + out + '</article>' + body[j + len('</article>'):]
+
+
+# 11-19 v5 ranked rows (polish list A2-A4): rank, small photo, name + one small line, score on the right. Each row is one link.
+def V5_RANK(items, start=1):
+    """items: dicts {href, ph, title, sub, score, cls}; ph from aph()/mphoto() (may be None)."""
+    out = []
+    for i, it in enumerate(items, start):
+        ph = it.get('ph')
+        th = (f'<img src="{rsmall(ph["src"])}" alt="" width="{ph["w"]}" height="{ph["h"]}" loading="lazy" decoding="async">' if ph else '')
+        out.append(f'<li><a href="{it["href"]}"><span class="rk5-n">{i}</span><span class="rk5-p">{th}</span>'
+                   f'<span class="rk5-t"><b>{it["title"]}</b>' + (f'<small>{it["sub"]}</small>' if it.get('sub') else '') + '</span>'
+                   + (f'<b class="rk5-s {it.get("cls", "")}">{it["score"]}</b>' if it.get('score') not in (None, '') else '') + '</a></li>')
+    return f'<ol class="rk5" start="{start}">' + ''.join(out) + '</ol>'
+
+
+# 11-19 v5 (polish list A3): every /best/ list (best_ui.py: div.advp.cb.cbx). Hero with the #1 car's picture, the first ranked list open
+# under a big centered heading ("At a glance" chart folded into a box above the cards), every other section a box. Same words and links.
+_CBX_IC = [(r'complaint|other end', 'warning'), (r'type', 'car'), (r'question|answer', 'talk'), (r'before you buy', 'signpost'), (r'budget', 'tag')]
+def CBX5_HOOK(body):
+    i = body.find('<div class="advp cb cbx">')
+    if i < 0: return body
+    so = _C5S(body[i:], 'html.parser'); d = so.find('div', class_='advp')
+    if d is None: return body
+    end = i + len(str(d)) if body[i:].startswith(str(d)) else -1
+    hd = d.find('header', class_='cbx-h', recursive=False)
+    first = d.find('section', class_='cbx-list', recursive=False)
+    im = first.find('img') if first else None
+    vis, boxes, keep = [], [], []
+    for c_ in [x for x in d.children if getattr(x, 'name', None)]:
+        cls = c_.get('class') or []
+        if c_ is hd:
+            k = hd.find(class_='ph-e'); h1 = hd.find('h1'); ln = hd.find(class_='cbx-line')
+            ph = ''
+            if im is not None:
+                ph = (f'<div class="v5-im"><img src="{im["src"]}" alt="{im.get("alt", "")}" width="{im.get("width", 1000)}" height="{im.get("height", 600)}" decoding="async"></div>')
+            vis.append(V5_HERO(k.decode_contents() if k else '', h1.decode_contents() if h1 else '', ln.decode_contents() if ln else '', extra=ph))
+        elif c_ is first:
+            h = c_.find('h2'); ch = c_.find('div', class_='cbx-chart')
+            if ch is not None:
+                ch.extract(); boxes.insert(0, V5_BOX('chart', 'At a glance', str(ch), 'glance'))
+            ht = h.decode_contents() if h else ''
+            if h: h.decompose()
+            vis.append(f'<section class="cp5-sec cbx-list"><h2>{ht}</h2>' + (''.join(boxes) and f'<div class="cpl cp5-pl cbx5-g">{boxes.pop(0)}</div>') + c_.decode_contents() + '</section>')
+        elif c_.name == 'section' and 'cbx-sec' in cls:
+            h = c_.find('h2'); t = h.get_text(' ', strip=True) if h else ''
+            ht = h.decode_contents() if h else t
+            if h: h.decompose()
+            ic = next((v for p, v in _CBX_IC if re.search(p, t, re.I)), 'info')
+            boxes.append(V5_BOX(ic, ht, c_.decode_contents(), c_.get('id') or '', h2=True))
+        elif 'cbx-srcrow' in cls:
+            pop = c_.find(class_='cb-pop')
+            boxes.append(V5_BOX('info', 'Sources and method', f'<p class="yc-cap">{pop.decode_contents() if pop else c_.decode_contents()}</p>'))
+        else: keep.append(str(c_))
+    new = (f'<div class="advp cb cbx v5 cbx5">' + ''.join(keep) + ''.join(vis) + (f'<div class="cpl v5-pl">{"".join(boxes)}</div>' if boxes else '') + '</div>')
+    s = str(so); j = s.find(str(d))
+    return body[:i] + s[:j] + new + s[j + len(str(d)):]
+
+
+# 11-19 v5 (polish list A5, A9): the info pages. Two shapes:
+#   div.pg > section.ph + article.study with top-level h2s (car loans, data)  -> group by h2 (a <section> with its own h2 is its own group)
+#   div.advp > header.advh1 + section.yc (about, press, images)                -> the header becomes the v5 hero, each section a group
+# The first KEEP groups stay open under big centered headings, the rest become boxes that keep their h2. Same words, links and ids.
+INFO5_KEEP = {'/car-loan-rates/': 1, '/data/': 2, '/about/': 1, '/press/': 2, '/images/': 0}
+def _i5_groups(kids):
+    pre, groups, cur = [], [], None
+    for c_ in kids:
+        cls = c_.get('class') or []
+        if c_.name == 'h2':
+            cur = {'h': c_.decode_contents(), 't': c_.get_text(' ', strip=True), 'id': c_.get('id') or '', 'els': []}; groups.append(cur); continue
+        if c_.name == 'section' and c_.find('h2', recursive=False) is not None:
+            h = c_.find('h2', recursive=False); ht, tt = h.decode_contents(), h.get_text(' ', strip=True); h.decompose()
+            groups.append({'h': ht, 't': tt, 'id': c_.get('id') or '', 'els': [c_], 'sec': True}); cur = None; continue
+        if cur is None:
+            if groups: groups[-1]['els'].append(c_)
+            else: pre.append(c_)
+        else: cur['els'].append(c_)
+    return pre, groups
+def _i5_render(groups, keep, loan=False):
+    vis, boxes = [], []
+    n = 0
+    for g in groups:
+        inner = (g['els'][0].decode_contents() + ''.join(str(e) for e in g['els'][1:])) if g.get('sec') else ''.join(str(e) for e in g['els'])
+        if n < keep:
+            if loan:   # the same rates as a table (with monthly payments) go in a box under the chart
+                tw = [e for e in g['els'] if e.name == 'div' and 'tw' in (e.get('class') or [])]
+                if tw:
+                    inner = ''.join(str(e) for e in g['els'] if e not in tw)
+                    inner += '<div class="cpl cp5-pl i5-in">' + V5_BOX('data', 'Rates and monthly payments, as a table', ''.join(str(e) for e in tw), 'rates-table') + '</div>'
+            vis.append(f'<section class="cp5-sec"' + (f' id="{g["id"]}"' if g['id'] else '') + f'><h2>{g["h"]}</h2>{inner}</section>')
+        else:
+            boxes.append(V5_BOX(_c5_ic(g['t']), g['h'], inner, g['id'], h2=True))
+        n += 1
+    return ''.join(vis), boxes
+def INFO5_HOOK(path, body):
+    keep = INFO5_KEEP.get(path)
+    if keep is None: return body
+    if '<article class="study">' in body:
+        i = body.find('<article class="study">'); j = body.find('</article>', i)
+        art = _C5S(body[i:j + 10], 'html.parser').article
+        pre, groups = _i5_groups([x for x in art.children if getattr(x, 'name', None)])
+        vis, boxes = _i5_render(groups, keep, loan=path == '/car-loan-rates/')
+        new = ('<article class="study cp5 i5">' + ''.join(str(e) for e in pre) + vis + (f'<div class="cpl cp5-pl">{"".join(boxes)}</div>' if boxes else '') + '</article>')
+        return body[:i] + new + body[j + 10:]
+    i = body.find('<div class="advp')
+    if i < 0: return body
+    so = _C5S(body[i:], 'html.parser'); d = so.find('div', class_='advp')
+    hd = d.find('header', class_='advh1', recursive=False)
+    for g_ in d.find_all('div', class_='ygrid', recursive=False): g_.unwrap()
+    kids = [x for x in d.children if getattr(x, 'name', None)]
+    hero, rest = '', []
+    jump = ''
+    for c_ in kids:
+        if c_ is hd:
+            k = hd.find(class_='ph-e'); h1 = hd.find('h1'); p = hd.find('p', class_=lambda v: v != 'ph-e')
+            hero = V5_HERO(k.decode_contents() if k else '', h1.decode_contents() if h1 else '', p.decode_contents() if p else '')
+        elif c_.name == 'nav' and 'imgj' in (c_.get('class') or []):
+            jump = V5_BOX('signpost', 'Jump to a group', str(c_), 'jump')
+        else: rest.append(c_)
+    pre, groups = _i5_groups(rest)
+    vis, boxes = _i5_render(groups, keep)
+    # /images/: the search box and its "no match" line stay on top, the groups go in boxes (imgpage.js opens the boxes that match a search)
+    new = (f'<div class="{" ".join(d.get("class") or [])} v5 i5">' + hero + (f'<div class="cpl cp5-pl">{jump}</div>' if jump else '') + ''.join(str(e) for e in pre) + vis
+           + (f'<div class="cpl cp5-pl">{"".join(boxes)}</div>' if boxes else '') + '</div>')
+    s = str(so); j = s.find(str(d))
+    return body[:i] + s[:j] + new + s[j + len(str(d)):]

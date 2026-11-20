@@ -499,6 +499,8 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
     if QM.ON: QM.page_new(path, path in PD)
     if 'class="study tr2 cp2' in body: body = CP5_HOOK(body)   # 11-19 v5 look (cp5_hook.py)
     if 'class="study tr2 eng2' in body: body = ENG5_HOOK(body)   # 11-19 v5 look, engine pages (cp5_hook.py)
+    if 'class="advp cb cbx"' in body: body = CBX5_HOOK(body)   # 11-19 v5 look, /best/ lists (cp5_hook.py)
+    if path in INFO5_KEEP: body = INFO5_HOOK(path, body)   # 11-19 v5 look, info pages (cp5_hook.py)
     _pd_mark(path, body, title + '\n' + desc)
     if 'RCL_LINK' in globals(): body = RCL_LINK(path, body)   # 11-14 growth 2B-1: links to the /recalls/ pages, after the date hash (a link alone doesn't redate a page)
     _d = PD[path]['d']; _dl = f'{_MN[int(_d[5:7]) - 1]} {int(_d[8:])}, {_d[:4]}'; _upd = ''
@@ -539,7 +541,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' '{DB_HASH}' https://static.cloudflareinsights.com https://challenges.cloudflare.com https://www.googletagmanager.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; frame-src https://challenges.cloudflare.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cloudflareinsights.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://vpic.nhtsa.dot.gov https://api.nhtsa.gov https://lemon-survey.elift08.workers.dev https://lemon-alerts.elift08.workers.dev https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="google-adsense-account" content="{ADS}"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/lxs.css?v={LXS_V}">
-<link rel="stylesheet" href="/assets/site.css?v=1119-mu"><link rel="stylesheet" href="/assets/cpl.css?v=9"><script src="/assets/cpl.js?v=1" defer></script><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
+<link rel="stylesheet" href="/assets/site.css?v=1119-mu"><link rel="stylesheet" href="/assets/cpl.css?v=10"><script src="/assets/cpl.js?v=1" defer></script><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
 <body>{'' if path.startswith('/thanks/') else DONBAR}{gh_header(path)}
 <main>{body}{_eb}{_rel}{'' if path == '/vote/' else ask_html(path)}</main>
 <footer class="foot f2 f3"><div class="f3-top"><a class="f3-name" href="/"><img src="/assets/icon-64.png" alt="" width="64" height="64"><span>Lemon Index</span></a><p class="f3-tag">Check here before you buy.</p><div class="f3-soc">{F3_SOC}</div></div><div class="f2-in">
@@ -2130,13 +2132,14 @@ NEWM = [m for m in NEWM if not os.path.exists(f'data/perf/{m["slug"]}.json')]
 _ID = {c['id']: c for c in CARS + CARS_NEW}
 def ndcard(m):
     nm = m['name']; short = nm.split(' ', 1)[1] if nm.startswith(m['make'] + ' ') else nm
+    if short[:1].islower(): short = short[:1].upper() + short[1:]   # 11-19: 'Ram pickup' -> 'Pickup', not 'pickup'
     img = f'<span class="mc-p"><img src="{m.get("src") or f"/assets/ai-models/{m['slug']}.webp?v=1"}" alt="{E(m.get("alt") or nm)}" width="1000" height="600" loading="lazy"></span>'
     if m['slug'] in _DUP and _DUP[m['slug']] in _ID:   # the same model under another name: the card opens that model's page
         t = _ID[_DUP[m['slug']]]
         return f'<a class="mc" data-t="r {SEGT.get(t["seg"], "")}" href="/cars/{t["id"]}/" title="Counted with the {E(t["name"])}">{img}<b>{E(short)}</b><span class="{"good" if t["li"] < 100 else "bad"}">{t["li"]}</span></a>'
     if m['slug'] in _EXN:
         if m['slug'] in YTS:   # 11-13 (Elijah): no Lemon Index yet, but a YouTube study: the card says so
-            return f'<a class="mc mc-co" data-t="r {SEGT.get(SEG_EXN.get(m["slug"]), "")}" href="/cars/{m["slug"]}/" title="No Lemon Index yet: YouTube owners + complaint counts">{img}<b>{E(short)}</b><span class="nd">YouTube score</span></a>'
+            return f'<a class="mc mc-co" data-t="r {SEGT.get(SEG_EXN.get(m["slug"]), "")}" href="/cars/{m["slug"]}/" title="No Lemon Index yet: YouTube owners + complaint counts">{img}<b>{E(short)}</b></a>'
         return f'<a class="mc mc-co" data-t="r {SEGT.get(SEG_EXN.get(m["slug"]), "")}" href="/cars/{m["slug"]}/" title="Owner complaints, no sales figures yet">{img}<b>{E(short)}</b><span class="nd">Complaints only</span></a>'
     return ''   # 11-18 (low-value review fix): no gray "No data yet" cards; a model shows once it has a page
 _nd = {}
@@ -2296,9 +2299,13 @@ UXC = 'compare'; exec(open('ux_c.py', encoding='utf-8').read())   # 11-12 UX tes
 LEGAL_NAME, ADDRESS, CONTACT = 'Westbrook Software LLC', '4539 N 22nd St Ste R, Phoenix, AZ 85016', 'hello@lemonindex.com'   # 11-18: the site's own domain (was hello@elijahwestbrook.com)
 def legal(path, title, body, seo_title, desc):
     page(path, seo_title, desc, f'<article class="study"><p class="kicker">Updated {TODAY}</p><h1>{title}</h1>{body}</article>')
-legal('/contact/', 'Contact', f'''<p>Questions about the data, a correction, a car you want covered or a donation: email <a href="mailto:{CONTACT}">{CONTACT}</a>. We usually answer within 2 business days.</p>
-<p>The Lemon Index is operated by {LEGAL_NAME}, {ADDRESS}.</p>''', 'Contact the Lemon Index: Data Questions and Corrections',
-      'Email the Lemon Index about our car reliability data, a correction, a car you want us to cover or a donation. We usually answer within 2 business days.')
+# 11-19 v5 (polish list A9): centered hero, the email as a big button, where-to-go rows; same words
+page('/contact/', 'Contact the Lemon Index: Data Questions and Corrections',
+     'Email the Lemon Index about our car reliability data, a correction, a car you want us to cover or a donation. We usually answer within 2 business days.',
+     '<div class="pg v5 ct5">' + V5_HERO(f'Updated {TODAY}', 'Contact.', f'Questions about the data, a correction, a car you want covered or a donation: email <a href="mailto:{CONTACT}">{CONTACT}</a>. We usually answer within 2 business days.',
+     extra=f'<p class="ct5-b"><a class="btn" href="mailto:{CONTACT}">Email us</a></p>')
+     + '<div class="cpl v5-pl">' + V5_GO('data', 'Free data and downloads', '/data/') + V5_GO('share', 'Press and citations', '/press/') + V5_GO('info', 'How the index works', '/method/') + '</div>'
+     + f'<p class="v5-fn ct5-a">The Lemon Index is operated by {LEGAL_NAME}, {ADDRESS}.</p></div>')
 legal('/refunds/', 'Refund policy', f'''<p>Every Lemon Index report is free. Donations are voluntary and don&#39;t unlock anything extra.</p>
 <p>If you were charged twice, donated the wrong amount or didn&#39;t mean to donate, email <a href="mailto:{CONTACT}">{CONTACT}</a> within 14 days and we&#39;ll refund it in full. Payments are processed by Stripe.</p>''', 'Refund Policy for Donations | The Lemon Index',
       'Lemon Index reports are free and donations are voluntary. If you were charged twice or donated by mistake, email us within 14 days for a full refund.')
