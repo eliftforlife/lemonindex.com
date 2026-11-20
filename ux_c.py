@@ -290,6 +290,38 @@ elif UXC == 'compare':
         x, y = _num(a), _num(b)
         if x is None or y is None or x == y: return '', ''
         return ('w', '') if (x > y) == high else ('', 'w')
+    PF5_CSS = """<style id="pf5-css">
+.pf5-hero { margin: 0; padding: 0 !important; }
+.pf5-cars { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: start; gap: 6px; }
+.pf5-car { display: flex; flex-direction: column; align-items: center; text-align: center; min-width: 0; color: var(--ink); text-decoration: none; }
+.pf5-im { display: block; width: 100%; max-width: 320px; aspect-ratio: 5 / 3; height: auto; object-fit: contain; }
+.pf5-r { transform: scaleX(-1); }
+.pf5-car > b { margin-top: 6px; font-size: clamp(17px, 4.6vw, 24px); line-height: 1.15; letter-spacing: -.02em; }
+.pf5-gen { margin-top: 2px; font-size: 12.5px; color: #6e6e73; }
+.pf5-vs { align-self: center; margin-top: -40px; font-size: clamp(26px, 7vw, 44px); font-weight: 900; letter-spacing: -.03em; }
+.pf5-g { display: flex; flex-direction: column; align-items: center; width: 100%; max-width: 240px; margin-top: 12px; }
+.pf5-gt { display: block; width: 100%; height: 12px; border-radius: 6px; background: #ececf0; overflow: hidden; }
+.pf5-gt i { display: block; width: var(--w); height: 100%; border-radius: 6px; background: #8e8e93; }
+.pf5-g-good .pf5-gt i { background: #1a8f4c; } .pf5-g-bad .pf5-gt i { background: #e8141c; }
+.pf5-gn { margin-top: 10px; font: 800 clamp(32px, 9vw, 46px)/1 var(--sys, Archivo, Inter, sans-serif); letter-spacing: -.03em; }
+.pf5-g-good .pf5-gn { color: #1a8f4c; } .pf5-g-bad .pf5-gn { color: #d0121a; }
+.pf5-g small { margin-top: 4px; font-size: 12px; font-weight: 600; color: #6e6e73; }
+.pf5-lede { margin: 18px auto 0; max-width: 600px; text-align: center; font-size: 17px; line-height: 1.45; }
+.pf5-hero .cmp-sh { text-align: center; }
+.cb5 .cb-pills { display: grid; gap: 10px; margin: 26px 0 8px; }
+.cb5 .cb-pills summary small { display: block; }
+.cb5 .cb-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 0 0 14px; }
+.cb5 .cb-dc { min-width: 0; padding: 14px 14px 12px; border-radius: 18px; background: #fff; box-shadow: inset 0 0 0 1px #e5e5ea; }
+.cb5 .cb-dc h3 { margin: 0; font-size: clamp(18px, 4.8vw, 22px); font-weight: 800; letter-spacing: -.02em; line-height: 1.15; overflow-wrap: anywhere; }
+.cb5 .cb-dc > b { display: block; margin-top: 8px; font: 800 clamp(26px, 7.4vw, 38px)/1 var(--sys, Archivo, Inter, sans-serif); letter-spacing: -.03em; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.cb5 .cb-dt { display: block; height: 14px; margin-top: 10px; border-radius: 7px; background: #ececf0; overflow: hidden; }
+.cb5 .cb-dt i { display: block; width: var(--w); height: 100%; border-radius: 7px; background: #c9ccd1; }
+.cb5 .cb-dg > b { color: #1a8f4c; } .cb5 .cb-dg .cb-dt i { background: #1a8f4c; }
+.cb5 .cb-dr > b { color: #d0121a; } .cb5 .cb-dr .cb-dt i { background: #e8141c; }
+.cb5 .cb-dc small { display: block; margin-top: 8px; font-size: 13px; line-height: 1.3; color: #6e6e73; }
+.cb5 .cb-dx { margin: 8px 0 0; font-size: 13.5px; line-height: 1.4; color: #3c4043; }
+.cb5 .cb-pills .duel { margin-top: 0; }
+</style>"""
     PERF_PAIR_URLS, PERF_PAIRS = [], []
     _first = [('bmw-m3', 'amg-c63'), ('shelby-gt500', 'camaro-zl1'), ('gr-supra', 'nissan-z'), ('bmw-m4', 'audi-rs5'), ('mustang-gt', 'camaro-ss'), ('challenger-hellcat', 'shelby-gt500'),
               ('civic-type-r', 'golf-r'), ('wrx-sti', 'lancer-evolution'), ('gr86', 'mx-5-miata'), ('f150-raptor', 'ram-trx')]
@@ -326,17 +358,52 @@ elif UXC == 'compare':
                 + (f' The {E(sa if faster is ga else sb)} is quicker to 60 ({E(faster["z"])} s).' if faster and faster['z'] else ''))
         title = f'{na} vs {nb}: Specs, Engines and Reliability'
         ia, ib = perf_img(a), perf_img(b)
+        # 11-19 v5 (Elijah, phone): the same layout as the everyday match-ups: the two cars on top (picture, name, one score bar), then
+        # tap-to-open boxes; a box that compares one number shows two side-by-side bars under big car-name headers (green = better).
+        # Performance cars have no Lemon Index (too few sold for a per-car score), so the top bar is the YouTube owner tone, out of 100.
+        def pcar(D, g, im, flip):
+            pic = (f'<img class="pf5-im{" pf5-r" if flip else ""}" src="{E(im["src"])}" alt="{E(D["name"])}" width="{im["w"]}" height="{im["h"]}" decoding="async">' if im else '<span class="pf5-im"></span>')
+            yt = _num(g['yt'])
+            bar = (f'<span class="pf5-g{" pf5-g-good" if yt >= 70 else " pf5-g-bad" if yt < 50 else ""}"><span class="pf5-gt"><i style="--w:{max(3, min(100, yt)):.0f}%"></i></span>'
+                   f'<span class="pf5-gn">{dash(g["yt"])}</span><small>YouTube owner tone · out of 100</small></span>') if yt is not None else '<span class="pf5-g"><small>No YouTube owner score yet</small></span>'
+            return f'<a class="pf5-car" href="{E(D["page"])}">{pic}<b>{E(D["name"])}</b><small class="pf5-gen">{E(g["c"])} · {E(g["y"])}</small>{bar}</a>'
+        def pduo(lab, va, vb, high, fmt=lambda v: v, extra=('', '')):
+            x, y = _num(va), _num(vb)
+            if x is None and y is None: return ''
+            mx = max(x or 0, y or 0) or 1
+            def cell(nm_, raw, v, k, ex):
+                return (f'<div class="cb-dc {k}"><h3>{E(nm_)}</h3><b>{fmt(raw) if v is not None else "—"}</b><span class="cb-dt"><i style="--w:{max(3, min(100, (v or 0) / mx * 100)):.0f}%"></i></span>'
+                        f'<small>{lab}</small>{ex}</div>')
+            ka = kb = 'cb-dm'
+            if x is not None and y is not None and x != y: ka, kb = ('cb-dg', 'cb-dr') if (x > y) == high else ('cb-dr', 'cb-dg')
+            return f'<div class="cb-duo">{cell(sa, va, x, ka, extra[0])}{cell(sb, vb, y, kb, extra[1])}</div>'
+        def pbox(ic, t, sub, body, id_=''):
+            if not body: return ''
+            return (f'<details{f" id={chr(34)}{id_}{chr(34)}" if id_ else ""}><summary><svg class="cpl-i" width="24" height="24" aria-hidden="true" focusable="false"><use href="/assets/ic.svg?v=1#{ic}"></use></svg>'
+                    f'<span><b>{t}</b>' + (f'<small>{sub}</small>' if sub else '') + f'</span>{PILL_AR}</summary><div class="cpl-b">{body}</div></details>')
+        _eng = lambda g: (f'<p class="cb-dx">{eng(g)}</p>')
+        boxes = ('<div class="cpl cb-pills">'
+                 + pbox('engine', 'Power', 'Horsepower and torque', pduo('horsepower', ga['hp'], gb['hp'], True) + pduo('lb-ft of torque', ga['tq'], gb['tq'], True, extra=(_eng(ga), _eng(gb))), 'power')
+                 + pbox('stopwatch', 'Speed', '0–60 and top speed', pduo(f'seconds, 0–60 mph', ga['z'], gb['z'], False) + pduo('mph top speed', ga['top'], gb['top'], True), 'speed')
+                 + pbox('tag', 'Price and weight', 'Base price when new, curb weight', pduo('base price when new', ga['p'], gb['p'], False) + pduo('weight', ga['wt'], gb['wt'], False), 'price')
+                 + pbox('youtube', 'What YouTube owners say', 'Owner tone, out of 100', pduo('YouTube owner tone, out of 100', ga['yt'], gb['yt'], True), 'youtube')
+                 + pbox('warning', 'Recalls and complaints', f'{E(sa)} {dash(ga["rc"])} recalls · {E(sb)} {dash(gb["rc"])}',
+                        pduo('recalls, these years', ga['rc'], gb['rc'], False) + pduo('owner complaints to NHTSA (raw count)', ga['nc'], gb['nc'], False)
+                        + '<p class="cb-dx">Complaints are raw counts, not per car sold: performance cars sell too few for a fair per-car score, and the busier seller usually draws more.</p>', 'recalls')
+                 + pbox('scale', 'Every spec side by side', 'The full table', duel + f'<p><a class="btn" href="{E(tool)}">Pick other generations or add a car</a></p>', 'specs')
+                 + pbox('history', 'Every generation', f'{E(sa)} and {E(sb)}, newest first', gtab(A, GA) + gtab(B, GB), 'gens')
+                 + pbox('info', 'Where this data comes from', 'Sources and how to read it',
+                        '<p class="cb-dx">Each car&#39;s headline trim of its newest generation. Specs and their sources are on each car&#39;s page. YouTube owner tone = how positively the most-watched videos about those model years talk about the car (100 = all praise). Recalls and complaints: NHTSA.</p>'
+                        + (f'<p class="cb-dx">{pcredit(who(ia, ib))}</p>' if ia and ib else ''))
+                 + '</div>')
+        hero = (f'<section class="pf5-hero"><div class="pf5-cars">{pcar(A, ga, ia, False)}<span class="pf5-vs">VS</span>{pcar(B, gb, ib, True)}</div>'
+                f'<p class="pf5-lede">{lede}</p><p class="cmp-sh">{share_btn(f"{na} vs {nb}: specs, engines and owner complaints side by side. Free:")}</p></section>')
         page(url, title + ' | The Lemon Index',
-             f'{na} vs {nb} side by side: horsepower, torque, 0-60, top speed, weight, price new, engines, YouTube owner tone, NHTSA complaints and recalls, generation by generation.', f'''
-<article class="study cmpp pfcmp"><p class="kicker"><a href="/compare/">Compare</a> · Performance</p><h1>{E(na)} vs {E(nb)}</h1>
-<p class="lede">{lede}</p><p class="cmp-sh">{share_btn(f"{na} vs {nb}: specs, engines and owner complaints side by side. Free:")}</p>
-<h2>Head to head</h2><p class="sub">Each car&#39;s headline trim of its newest generation. Green check = the better of the two on that line (more power, quicker, lighter, cheaper, fewer recalls).</p>{duel}
-<p class="note">Owner complaints are raw counts from NHTSA, not per car sold: performance cars sell too few for a fair per-car score, and the busier seller usually draws more. YouTube owner tone = how positively the most-watched videos about those model years talk about the car (100 = all praise).</p>
-<p><a class="btn" href="{E(tool)}">Pick other generations or add a car</a></p>
-<h2>Every generation</h2>{gtab(A, GA)}{gtab(B, GB)}
-<p class="note"><a href="{E(A["page"])}">Everything on the {E(na)}</a> · <a href="{E(B["page"])}">Everything on the {E(nb)}</a> · Specs and their sources are on each car&#39;s page.</p>{share_line(f"{na} vs {nb}: specs and owner complaints side by side. Free:", 'Know someone choosing between these two?')}</article>''',
-             kind='article', ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": title, "url": BASE + url}],
-             vis=(pair(ia, ib, (na, nb)) + pcredit(who(ia, ib))) if ia and ib else '')
+             f'{na} vs {nb} side by side: horsepower, torque, 0-60, top speed, weight, price new, engines, YouTube owner tone, NHTSA complaints and recalls, generation by generation.',
+             f'<article class="study cmpp pfcmp cb5"><p class="kicker"><a href="/compare/">Compare</a> · Performance</p><h1>{E(na)} vs {E(nb)}</h1>{PF5_CSS}{hero}{boxes}'
+             f'<p class="note"><a href="{E(A["page"])}">Everything on the {E(na)}</a> · <a href="{E(B["page"])}">Everything on the {E(nb)}</a></p>'
+             f'{share_line(f"{na} vs {nb}: specs and owner complaints side by side. Free:", "Know someone choosing between these two?")}</article>',
+             kind='article', ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": title, "url": BASE + url}])
         PERF_PAIR_URLS.append(url)
     curls.extend(PERF_PAIR_URLS)
     UXC_FIND = [(f'{_PD[a]["name"]} vs {_PD[b]["name"]}', _PD[a].get('make') or _PD[a]['name'].split(' ')[0], f'/compare/{a}-vs-{b}/', 'perf', [],
@@ -364,7 +431,7 @@ elif UXC == 'compare':
 <details class="yd"><summary>{len(PERF_PAIRS)} performance match-ups</summary><ul class="cmp">{pl}</ul></details>
 <details class="yd"><summary>All {len(_cp)} everyday-car match-ups</summary><ul class="cmp">{cl}</ul></details></section>
 {pcredit(who(*[mphoto(x) for a, b, _ in _top[:6] for x in (a, b)], mphoto('toyota-rav4', 2019), mphoto('honda-cr-v', 2017), *[_ev(x) for a, _, b, _ in EV_TOP for x in (a, b) if _evok(x)], *[perf_img(x) for p in PERF_TOP for x in p]))}
-{share_line("Compare up to 4 cars side by side: problems, recalls, mpg, EV range and specs. Free:", 'Know someone stuck between cars?')}</div><script src="/assets/compare.js?v=1115s" defer></script>''',
+{share_line("Compare up to 4 cars side by side: problems, recalls, mpg, EV range and specs. Free:", 'Know someone stuck between cars?')}</div><script src="/assets/compare.js?v=1119c5" defer></script>''',
          ld=[{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Car comparisons", "url": BASE + '/compare/'}])
     curls.insert(0, '/compare/')
 

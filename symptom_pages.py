@@ -174,7 +174,7 @@ def _sy_pages():
 
 def _sy_card(k):
     v = SYM['symptoms'][k]; s = SYI.I[k]['s']
-    return f'<a class="cgc s{s}" href="{_sy_url(k)}"><b>{E(_sy_name(k))}</b><span>Often: {E(SYI.I[k]["causes"][0][:1].lower() + SYI.I[k]["causes"][0][1:])}</span><small>{v["n"]:,} complaints</small></a>'
+    return f'<a class="cgc s{s}" href="{_sy_url(k)}"><b>{E(_sy_name(k))}</b><small>{v["n"]:,} complaints</small></a>'   # 11-19 v5: name + count only, causes on the page'
 
 def _sy_live(): return [k for k in SYD.P if _sy_url(k) in SYM_URLS or _sy_url(k) in SYM_NOINDEX]
 
@@ -184,21 +184,20 @@ def _sy_hub():
     for g in SYI.GROUPS:
         ks = sorted([k for k in live if SYD.P[k][1] == g], key=lambda k: -S[k]['n'])
         if not ks: continue
-        grid += f'<h3 class="sy-g" style="grid-column:1/-1;margin:14px 0 2px">{E(g)}</h3>' + ''.join(_sy_card(k) for k in ks)
+        grid += f'<h3 class="sy-g v5-gh">{E(g)}</h3>' + ''.join(_sy_card(k) for k in ks)
     big = sorted(live, key=lambda k: -S[k]['n'])[:3]
     faq = [('What is the most common car symptom in complaints?', f'Among the symptoms we track, owners describe {_sy_low(_sy_name(big[0]))} most ({S[big[0]]["n"]:,} complaints), then {_sy_low(_sy_name(big[1]))} and {_sy_low(_sy_name(big[2]))}.'),
            ('Which symptoms mean I should stop driving?', 'Brakes that fail or a pedal that sinks, steering that locks or goes heavy, overheating, smoke, a fuel smell, a flashing check engine light, a car that stalls or speeds up on its own, and exhaust fumes inside the car. Pull over safely and get help.'),
            ('Is a symptom proof that my car is defective?', 'No. These pages count owner complaints to NHTSA. They show which model years owners report a symptom on, not what is wrong with any one car. A shop has to diagnose your car.')]
-    body = (f'<div class="advp"><header class="advh1"><p class="ph-e"><a href="/">The Lemon Index</a></p><h1>Car symptoms: what that shake, noise or smell usually means.</h1>'
-            f'<p>Pick what your car is doing. Each page gives the common causes, how serious it is, and the models and years owners report it on most, from {SYM["total"]:,} complaints to the U.S. government.</p></header>'
-            '<div class="ygrid"><section class="yc" id="symptoms"><h2>Find your symptom</h2>'
-            '<input class="cf-q" type="search" placeholder="Filter, e.g. brake, smell or noise" aria-label="Filter the symptoms" data-filter="#sygrid">'
-            f'<div class="cgrid" id="sygrid">{grid}</div><p class="cf-none" hidden>No symptom in this list matches. Try one word, like shake or leak.</p>'
-            '<p class="yc-cap">The dot is how serious it usually is: yellow get it checked, orange fix soon, red stop and get help.</p></section>'
-            '<section class="yc" id="codes"><h2>Got a warning light with a code?</h2><p>If the check engine light is on, the code tells a shop where to look. <a href="/check-engine-light/">Look up any engine code →</a></p></section>'
-            '<section class="yc yqa"><h2>Quick answers</h2>' + qa_fold(''.join(f'<h3>{E(q)}</h3><p>{E(a)}</p>' for q, a in faq)) + '</section></div>'
-            f'<p class="yc-cap">How we count: we matched owners&#39; own wording in NHTSA complaint text (for example &ldquo;shakes when braking&rdquo;), then read samples of each match to check them. A complaint can describe several symptoms. '
-            f'Pages with fewer than {SYM_MIN} matching complaints stay out of search results. General information, not repair advice for your car.</p></div>')
+    body = (f'<div class="pg v5">' + V5_HERO('Car symptoms', 'What&#39;s your car doing?', 'The usual causes, how serious it is, and the cars owners report it on most.',
+                                          line=f'From <b>{SYM["total"]:,}</b> complaints to the U.S. government',
+                                          extra='<input class="cf-q v5-q" type="search" placeholder="Search, e.g. brake, smell or noise" aria-label="Filter the symptoms" data-filter="#sygrid">')
+            + f'<section class="v5-sec" id="symptoms"><div class="cgrid v5-sy" id="sygrid">{grid}</div><p class="cf-none" hidden>No symptom in this list matches. Try one word, like shake or leak.</p>'
+            '<p class="v5-dots"><i class="s1"></i>Get it checked <i class="s2"></i>Fix soon <i class="s3"></i>Stop and get help</p></section>'
+            '<div class="cpl v5-pl">' + V5_GO('engine', 'Warning light with a code? Look it up', '/check-engine-light/')
+            + V5_BOX('talk', 'Questions', qa_fold(''.join(f'<h3>{E(q)}</h3><p>{E(a)}</p>' for q, a in faq)))
+            + V5_BOX('info', 'How we count', f'<p class="yc-cap">We matched owners&#39; own wording in NHTSA complaint text (for example &ldquo;shakes when braking&rdquo;), then read samples of each match to check them. A complaint can describe several symptoms. '
+                     f'Pages with fewer than {SYM_MIN} matching complaints stay out of search results. General information, not repair advice for your car.</p>') + '</div></div>')
     ld = [{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]}]
     page('/symptoms/', 'Car Symptoms: Shakes, Noises, Smells and What They Mean | The Lemon Index',
          'What a shake, noise, smell or warning light usually means, how serious it is, and which cars owners report it on most in NHTSA complaints.',

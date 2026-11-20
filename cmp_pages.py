@@ -81,6 +81,48 @@ def _cb_facts(F):
     return dict(last=last, mpg=(m['comb'] if m else None), cost=(m.get('cost') if m else None), ev=bool(m and m.get('ev')), st=int(st) if st else None)
 
 
+def _cb_gauge(li):
+    """11-19 v5: the model page's Lemon bar, small, under each car: 0-200 so 100 sits in the middle; green < 85, gray 85-115, red > 115"""
+    k = 'good' if li < 85 else 'bad' if li > 115 else 'mid'
+    return (f'<span class="cb-g cb-g-{k}" style="--p:{min(max(li, 0), 200) / 2:.1f}%" aria-label="Lemon Index {li}, 100 is average">'
+            f'<span class="cb-gt" aria-hidden="true"><i class="cb-gg"></i><i class="cb-gm"></i><i class="cb-gr"></i><em></em></span>'
+            f'<span class="cb-gn">{li}</span><small>Lemon Index · 100 is average</small></span>')
+CB5_CSS = """<style id="cb5-css">
+.cb5 .cb-car .cb-flag { display: none; }
+.cb5 .cb-g { display: flex; flex-direction: column; align-items: center; width: 100%; max-width: 260px; margin-top: 10px; }
+.cb5 .cb-gt { position: relative; display: flex; gap: 2px; width: 100%; height: 10px; margin: 8px 0 0; }
+.cb5 .cb-gt i { display: block; height: 100%; }
+.cb5 .cb-gg { flex: 0 0 calc(42.5% - 1px); background: #1a8f4c; border-radius: 5px 0 0 5px; }
+.cb5 .cb-gm { flex: 0 0 calc(15% - 1px); background: #c9ccd1; }
+.cb5 .cb-gr { flex: 1 1 auto; background: #e8141c; border-radius: 0 5px 5px 0; }
+.cb5 .cb-gt em { position: absolute; top: -9px; bottom: -9px; left: var(--p); width: 4px; margin-left: -2px; border-radius: 2px; background: #1d1d1f; box-shadow: 0 0 0 2px #fff; }
+.cb5 .cb-gt em::before { content: ""; position: absolute; left: 50%; top: -7px; width: 12px; height: 12px; margin-left: -6px; border-radius: 50%; background: #ffd400; border: 3px solid #1d1d1f; box-sizing: border-box; }
+.cb5 .cb-gn { margin-top: 14px; font: 800 clamp(34px, 9vw, 48px)/1 var(--sys, Archivo, Inter, sans-serif); letter-spacing: -.03em; font-variant-numeric: tabular-nums; color: #6e6e73; }
+.cb5 .cb-g-good .cb-gn { color: #1a8f4c; } .cb5 .cb-g-bad .cb-gn { color: #d0121a; }
+.cb5 .cb-g small { margin-top: 4px; font-size: 12px; font-weight: 600; color: #6e6e73; }
+.cb5 .cb-vline { margin: 18px auto 0; max-width: 560px; text-align: center; font-size: 17px; line-height: 1.4; color: #1d1d1f; }
+.cb5 .cb-hero2 .cb-hf { justify-content: center; margin-top: 10px; }
+.cb5 .cb-pills { display: grid; gap: 10px; margin: 26px 0 8px; }
+.cb5 .cb-pills .cpl-b > :first-child { margin-top: 0; }
+.cb5 .cb-sha2 { display: flex; justify-content: flex-end; gap: 8px; margin: 0 0 8px; }
+.cb5 .cb-pills .cb-card h3, .cb5 .cb-pills .cb-bk-car { font-size: 20px; letter-spacing: -.015em; }
+.cb5 .cb-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 0 0 14px; }
+.cb5 .cb-dc { min-width: 0; padding: 14px 14px 12px; border-radius: 18px; background: #fff; box-shadow: inset 0 0 0 1px #e5e5ea; }
+.cb5 .cb-dc h3 { margin: 0; font-size: clamp(18px, 4.8vw, 22px); font-weight: 800; letter-spacing: -.02em; line-height: 1.15; overflow-wrap: anywhere; }
+.cb5 .cb-dc b { display: block; margin-top: 8px; font: 800 clamp(30px, 8vw, 40px)/1 var(--sys, Archivo, Inter, sans-serif); letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+.cb5 .cb-dt { display: block; height: 14px; margin-top: 10px; border-radius: 7px; background: #ececf0; overflow: hidden; }
+.cb5 .cb-dt i { display: block; width: var(--w); height: 100%; border-radius: 7px; background: #c9ccd1; }
+.cb5 .cb-dg b { color: #1a8f4c; } .cb5 .cb-dg .cb-dt i { background: #1a8f4c; }
+.cb5 .cb-dr b { color: #d0121a; } .cb5 .cb-dr .cb-dt i { background: #e8141c; }
+.cb5 .cb-dc small { display: block; margin-top: 8px; font-size: 13px; line-height: 1.3; color: #6e6e73; }
+.cb5 .cb-dx { margin: 8px 0 0; font-size: 13px; line-height: 1.35; color: #3c4043; }
+.cb5 .cb-dc .cb-dx b { display: inline; margin: 0; font: inherit; font-weight: 700; letter-spacing: 0; color: #1d1d1f; }
+.cb5 .cb-pills summary small { display: block; }
+.cb5 .cb-src2 { font-size: 15px; line-height: 1.5; color: #3c4043; } .cb5 .cb-src2 .cmp-lede { color: #3c4043; }
+.cb5 .cb-crd2 { font-size: 13px; color: #6e6e73; }
+.cb5 .cb-pick { margin: 0; padding: 0; background: none; }
+.cb5 .cb-more { margin: 0; }
+</style>"""
 def cmp_page(a, b):
     A, B = FY[a], FY[b]; ca, cb = BYNAME[A['name']], BYNAME[B['name']]
     ya, yb = {v['y']: v for v in A['years'] if v['ok']}, {v['y']: v for v in B['years'] if v['ok']}
@@ -109,7 +151,7 @@ def cmp_page(a, b):
     def car(F, c):
         win = (not close) and F is L
         return (f'<a class="cb-car{" cb-win" if win else ""}" href="{CARU(F)}">{img(F)}<b>{E(F["name"])}</b>'
-                f'<span class="cb-car-s">Lemon Index <i>{c["li"]}</i></span>' + ('<span class="cb-flag">WINNER</span>' if win else '') + '</a>')
+                + _cb_gauge(c['li']) + ('<span class="cb-flag">WINNER</span>' if win else '') + '</a>')
     lw, tw = (wa, wb) if aL else (wb, wa)
     lr, tr = (ra[0], rb[0]) if aL else (rb[0], ra[0])
     lwy, twy = (wA, wB) if aL else (wB, wA)
@@ -304,14 +346,60 @@ def cmp_page(a, b):
                                                '100 is the average car; lower is better. Green check = the better of the two on that line.', 'How to read this'))
     _ld_name = title.replace(' | Lemon Index', '')
     _lead_s, _trail_s = (_sa, _sb) if aL else (_sb, _sa)
+    # 11-19 v5 (Elijah, phone): the top is just the two cars (picture, name, Lemon bar); everything else is a tap-to-open box (the car
+    # pages' compact style), and the boxes that compare one number show it as two side-by-side Lemon bars under big car-name headers.
+    verdict = (f'<p class="cb-vline">Too close to call: about the same complaints per car sold.</p>' if close else
+               f'<p class="cb-vline">The <b>{E(sL)}</b> drew <b>{fewer}% fewer</b> owner complaints per car sold.</p>')
+    hero2 = (f'<section class="cb-hero cb-hero2{" cb-tie" if close else ""}"><div class="cb-cars" style="--ar:1000 / {_cbh}">{car(A, ca)}<span class="cb-vs">VS</span>{car(B, cb)}</div>'
+             f'{verdict}<div class="cb-hf"><span class="cb-sh">{share_btn(sh_txt)}</span></div></section>')
+    def duo(lab, va, vb, lower=True, fmt=str, w=None, extra=('', '')):
+        """two Lemon-style bars side by side, a big car-name header over each; green = the better one, red = the other"""
+        if va is None or vb is None: return ''
+        if va == vb: ka = kb = 'cb-dm'
+        elif (va < vb) == lower: ka, kb = 'cb-dg', 'cb-dr'
+        else: ka, kb = 'cb-dr', 'cb-dg'
+        mxv = max(va, vb) or 1
+        wa_, wb_ = w if w else (va / mxv * 100, vb / mxv * 100)
+        def cell_(nmx, v, k, ww, ex):
+            return (f'<div class="cb-dc {k}"><h3>{E(nmx)}</h3><b>{fmt(v)}</b><span class="cb-dt"><i style="--w:{max(3, min(100, ww)):.0f}%"></i></span>'
+                    f'<small>{lab}</small>{ex}</div>')
+        return f'<div class="cb-duo">{cell_(_sa, va, ka, wa_, extra[0])}{cell_(_sb, vb, kb, wb_, extra[1])}</div>'
+    _ytA, _ytB = YTR.get(A['id']), YTR.get(B['id'])
+    yt_duo = (duo('YouTube owner tone rank', _ytA[0], _ytB[0], True, lambda v: f'#{v}',
+                  ((1 - (_ytA[0] - 1) / max(_ytA[1], 1)) * 100, (1 - (_ytB[0] - 1) / max(_ytB[1], 1)) * 100)) if _ytA and _ytB else '')
+    li_duo = duo('Lemon Index (100 = average)', ca['li'], cb['li'], True, str, (min(100, ca['li'] / 2), min(100, cb['li'] / 2)))
+    _most = lambda r: (f'<p class="cb-dx">Most for: ' + ', '.join(f'<b>{E(x)}</b> ({n})' for x, n in r[1]) + '</p>') if r[1] else ''
+    rec_duo = duo(f'recall campaigns, {rspan} models', ra[0], rb[0], True, extra=(_most(ra), _most(rb)))
+    _rec_top = re.search(r'<div class="cb-sha">(.*?)</div></div>', rec, re.S)
+    rec_body = (f'<div class="cb-sha cb-sha2">{_rec_top.group(1)}</div>' if _rec_top else '') + rec_duo
+    fuel_duo = (duo('fuel a year (EPA)' if not (fa['ev'] and fb['ev']) else 'electricity a year (EPA)', round(mid(fa)), round(mid(fb)), True, lambda v: f'${v:,}')
+                if fa['cost'] and fb['cost'] and fa['ev'] == fb['ev'] else '')
+    def _strip(h):   # the section's h2 is the box title now; keep its (i) / VIN buttons
+        return re.sub(r'<div class="cb-sh2"><h2[^>]*>.*?</h2><div class="cb-sha">(.*?)</div></div>', r'<div class="cb-sha cb-sha2">\1</div>', h, count=1, flags=re.S)
+    def box(ic, t, sub, body, id_=''):
+        return (f'<details{f" id={chr(34)}{id_}{chr(34)}" if id_ else ""}><summary><svg class="cpl-i" width="24" height="24" aria-hidden="true" focusable="false"><use href="/assets/ic.svg?v=1#{ic}"></use></svg>'
+                f'<span><b>{t}</b>' + (f'<small>{sub}</small>' if sub else '') + f'</span>{PILL_AR}</summary><div class="cpl-b">{body}</div></details>')
+    _rsub = f'{E(_sa)} {ra[0]} · {E(_sb)} {rb[0]}'
+    _wsub = 'Too close to call' if close else f'Why the {E(sL)} comes out ahead'
+    boxes = ('<div class="cpl cb-pills">'
+             + box('chart', 'Who wins and why', _wsub, li_duo + why + other, 'h2h')
+             + box('scale', 'Head to head', 'Every number side by side', fuel_duo + board)
+             + box('calendar', 'Which years to buy', 'Best and worst years of each', _strip(buy), 'buy')
+             + box('history', 'Year by year', f'{shared[0]}–{shared[-1]}, both cars', _strip(ybys), 'your-years')
+             + box('wrench', 'What breaks', 'Top problem areas and repair bills', _strip(brk), 'breaks')
+             + box('warning', 'Recalls', _rsub, rec_body, 'recalls')
+             + box('youtube', 'What YouTube owners say', 'Owner tone and what they praise', yt_duo + _strip(yt), 'youtube')
+             + box('tag', 'Our pick', 'Overall, by years, best single year', pick_.replace('<h2 id="our-pick">Our pick</h2>', ''), 'our-pick')
+             + (box('car', 'More match-ups', f'Other cars to compare with the {E(_sa)} or {E(_sb)}', more_.replace('<h2>More match-ups</h2>', '')) if more_ else '')
+             + box('info', 'Where this data comes from', 'Sources and how to read it', f'<div class="cb-src2">{src_}<p class="cb-crd2">{crd}</p></div>')
+             + '</div>')
     page(CMPU(a, b), title,
          f'{QN(A)} vs {QN(B)} reliability: ' + (f'about the same owner complaints per car sold (Lemon Index {ca["li"]} vs {cb["li"]}).' if close else
          f'the {_lead_s} drew {fewer}% fewer owner complaints per car sold than the {_trail_s} (Lemon Index {cL["li"]} vs {cT["li"]}).')
-         + f' Every model year both were sold, {shared[0]}–{shared[-1]}, plus recalls, crash tests and MPG.', f'''
-<article class="study cmpp cb"><p class="kicker"><a href="/">All cars</a> · Compare</p><h1>{E(_sa)} vs {E(_sb)}: which is more reliable?</h1>
-{CB_ASSET}{hero}{src}{nav}
-{h2h}{board}
-{buy}{ybys}{LFA_JS}{brk}{rec}{yt}{pick_}
-{more_}{CB_JS}<p class="note"><a href="{CARU(A)}">Every {E(A["name"])} year</a> · <a href="{CARU(B)}">Every {E(B["name"])} year</a> · <a href="/method/">How the index works</a></p>{share_line(sh_txt, 'Know someone choosing between these two?')}</article>''', kind='article',
+         + f' Every model year both were sold, {shared[0]}–{shared[-1]}, plus recalls, crash tests and MPG.',
+         f'<article class="study cmpp cb cb5"><p class="kicker"><a href="/">All cars</a> · Compare</p><h1>{E(_sa)} vs {E(_sb)}: which is more reliable?</h1>\n'
+         f'{CB_ASSET}{CB5_CSS}{hero2}\n{boxes}{LFA_JS}\n'
+         f'{CB_JS}<p class="note"><a href="{CARU(A)}">Every {E(A["name"])} year</a> · <a href="{CARU(B)}">Every {E(B["name"])} year</a> · <a href="/method/">How the index works</a></p>'
+         f'{share_line(sh_txt, "Know someone choosing between these two?")}</article>', kind='article',
          ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": _ld_name, "url": BASE + CMPU(a, b)}])
     return CMPU(a, b)

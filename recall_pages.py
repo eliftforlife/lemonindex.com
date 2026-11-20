@@ -97,7 +97,7 @@ if RCLP == 'hooks':
 
 if RCLP == 'pages':
     RCL = _rcl_data(); RCL_URLS = []; _rcl_noix = []
-    _RCLCSS = '<link rel="stylesheet" href="/assets/rcx.css?v=3"><script src="/assets/rc.js?v=3" defer></script>'
+    _RCLCSS = '<link rel="stylesheet" href="/assets/rcx.css?v=4"><script src="/assets/rc.js?v=3" defer></script>'
     def _rcl_noindex(path):
         _f = _rclos.path.join(OUT, path.strip('/'), 'index.html'); _s = open(_f, encoding='utf-8').read()
         if 'name="robots"' not in _s: open(_f, 'w', encoding='utf-8').write(_s.replace('<link rel="canonical"', '<meta name="robots" content="noindex,follow"><link rel="canonical"', 1))
@@ -132,6 +132,31 @@ if RCLP == 'pages':
     _RCL_SRC = ('<p class="yc-cap">Source: NHTSA recall campaigns (api.nhtsa.gov), matched to the model names owners use in NHTSA complaints. Vehicle counts and the '
                '"park it" warnings come from NHTSA&#39;s recall file, which starts in 2010, so older recalls have no count. A campaign&#39;s count covers every '
                'make and model in it.</p>')
+    # 11-19 v5 (Elijah, phone: "make this page more like the home page / the new model page"): centered title, one big number, a rounded
+    # VIN field with the button inside, car cards like the home grid, and every list as a tap-to-open box (the car pages' compact style)
+    _RX_IC = lambda i: f'<svg class="cpl-i" width="24" height="24" aria-hidden="true" focusable="false"><use href="/assets/ic.svg?v=1#{i}"></use></svg>'
+    def _rx_box(ic, t, sub, body, id_=''):
+        return (f'<details{f" id={chr(34)}{id_}{chr(34)}" if id_ else ""}><summary>{_RX_IC(ic)}<span><b>{t}</b>' + (f'<small>{sub}</small>' if sub else '')
+                + f'</span>{PILL_AR}</summary><div class="cpl-b">{body}</div></details>')
+    def _rx_go(ic, t, sub, href):
+        return f'<a class="cpl-a" href="{href}">{_RX_IC(ic)}<span><b>{t}</b></span>{PILL_GO}</a>'   # title-only, like every compact box (11-19)
+    def _rx_vin(note=''):
+        return (f'<form class="vinf rcx-vf rx5-vf" autocomplete="off" action="/vin/"><input maxlength="20" placeholder="Enter a VIN (17 characters)" aria-label="VIN" spellcheck="false">'
+                f'<button class="btn" type="submit">Check</button><p class="rcx-msg" role="alert" hidden></p></form>' + (f'<p class="rx5-fn">{note}</p>' if note else ''))
+    _rx_big = lambda n, lab: f'<div class="rx5-big"><b>{n}</b><span>{lab}</span></div>'
+    def _rx_card(href, ph, name, n, sub=''):
+        tag = 'a' if href else 'div'
+        return (f'<{tag} class="rx5-c"' + (f' href="{href}"' if href else '') + f'><span class="rx5-cn">{n:,}</span>{pimg(ph, name)}<b>{E(name)}</b>'
+                + (f'<small>{sub}</small>' if sub else '') + f'</{tag}>')
+    def _rx_bars(rows, keep=14):
+        """rows: (label html, number): the model page's year chart look; the busiest row(s) red"""
+        mx = max((k for _, k in rows), default=1) or 1
+        li = lambda lab, k: (f'<li{" class=hi" if k == mx else ""}><span class="rx5-bl">{lab}</span><span class="rx5-bb"><i style="width:{max(3, round(k / mx * 100))}%"></i></span><b>{k:,}</b></li>')
+        out = '<ul class="rx5-bars">' + ''.join(li(*r) for r in rows[:keep]) + '</ul>'
+        if len(rows) > keep:
+            out += (f'<details class="rx5-more"><summary>Show {len(rows) - keep} more</summary><ul class="rx5-bars">' + ''.join(li(*r) for r in rows[keep:]) + '</ul></details>')
+        return out
+    _rx_ph = lambda ms: next((aph(m['id']) for m in sorted(ms, key=lambda m: -(BYNAME.get(m['name'], {}).get('sold') or 0)) if m['kind'] == 'y' and aph(m['id'])), None)
     M, B = RCL['M'], RCL['B']
 
     # ---- per-model pages
@@ -161,18 +186,27 @@ if RCLP == 'pages':
         qa.append((f'What is the newest {nm} recall?', f'{E(RPART(rs[0].get("part")).capitalize())}, filed {_rcldate(rs[0])} (NHTSA {E(rs[0]["id"])}): {E(rsum(rs[0]))}'))
         if big: qa.append((f'What is the biggest {nm} recall?', f'NHTSA {E(big[0]["id"])} ({E(RPART(big[0].get("part")))}, {_rcldate(big[0])}) covers {_rcl_u(big[0]["id"])[0]:,} vehicles in all, every model in that campaign. {E(rsum(big[0]))}'))
         qa.append((f'How do I check if my {nm} has an open recall?', f'Use its VIN: type it at nhtsa.gov/recalls or ask any {E(m["brand"])} dealer. Our <a href="/vin/">VIN check</a> decodes it and lists every recall for that model year. Recall repairs are free.'))
-        body = (f'<div class="pg mp6 rcx">{_RCLCSS}<section class="ph yph6"><div class="yh-t"><p class="ph-e"><a href="/recalls/">Recall check</a> · <a href="/recalls/{m["mk"]}/">{E(m["brand"])}</a></p>'
-                f'<h1>{nm} recalls.</h1><p class="ph-s">Every NHTSA recall campaign for the {y0}–{y1} {nm}, newest first. Each one is listed once, with the model years it covers.</p>'
-                f'{stats}{_rcl_vin("Check a VIN to see that car&#39;s model-year report and recalls.")}</div>' + (f'<div class="ph-v">{vis}</div>' if vis else '') + '</section>'
-                + (f'<section class="yc rcx-warn"><h2>Park-it warnings <span class="yc-n">{len(park)}</span></h2><p class="yc-cap">NHTSA flagged these: don&#39;t drive the car, or park it outside, until the fix is done.</p><ul class="rc">{"".join(_rcl_card(r, years=m["ry"].get(r["id"])) for r in park)}</ul></section>' if park else '')
-                + f'<section class="yc"><h2>Every recall <span class="yc-n">{n}</span></h2>' + (f'<p class="yc-cap">{newn} filed in the last 12 months. A new recall has had the least time to be fixed, so it&#39;s the one most likely still open on a used car.</p>' if newn else '')
-                + f'<ul class="rc">{cards}</ul>' + (f'<details class="rcx-more"><summary>Show all {n} recalls</summary><ul class="rc">{more}</ul></details>' if more else '') + '</section>'
-                + f'<section class="yc"><h2>Recalls by model year. <span class="h2s">Campaigns that cover each year.</span></h2>{_rcl_bars(yrow)}'
-                + (f'<p class="yc-cap">Tap a year for its problems, complaints and Lemon Index.</p>' if m['kind'] == 'y' and m['car'].startswith('/cars/') else '') + '</section>'
-                + f'<section class="yc"><h2>What they fix. <span class="h2s">Campaigns by system.</span></h2>{_rcl_bars([(E(p), k, "") for p, k in parts[:8]])}</section>'
-                + f'<section class="yc rcx-open"><h2>Is one open on your {E(m["short"])}?</h2>{_RCL_OPEN}{_rcl_vin()}{CA_RECALL}</section>'
-                + _rcl_faq(qa) + f'<p class="yc-cap" style="text-align:center">' + (f'<a href="{m["car"]}">{nm}: problems and best years</a> · ' if m['car'] else '') + f'<a href="/recalls/{m["mk"]}/">All {E(m["brand"])} recalls</a> · <a href="/recalls/">Recall check</a></p>'
-                + _RCL_SRC + share_line(f'Every {m["name"]} recall, {y0}–{y1}: {n} campaigns. Free:', f'Know someone with a {E(m["short"])}?') + '</div>')
+        _yr = [(lab, k) for lab, k, _ in yrow]
+        _open = f'{_RCL_OPEN}{_rcl_vin()}{CA_RECALL}'
+        body = (f'<div class="pg rcx rx5">{_RCLCSS}<section class="rx5-h"><p class="rx5-e"><a href="/recalls/">Recall check</a> › <a href="/recalls/{m["mk"]}/">{E(m["brand"])}</a></p>'
+                f'<h1>{nm}</h1><p class="rx5-s">recalls.</p>' + (f'<div class="rx5-im">{pimg(ph, m["name"]).replace(" loading=" + chr(34) + "lazy" + chr(34), "")}</div>' if ph else '')
+                + _rx_big(n, f'recall campaigns, {y0}–{y1}')
+                + f'<p class="rx5-line">Newest: <b>{_rcldate(rs[0])}</b> ({E(RPART(rs[0].get("part")))})' + (f' · Most-recalled year: <b>{topy}</b>' if topy else '') + '</p>'
+                + _rx_vin('Check a VIN to see that exact car&#39;s recalls. We don&#39;t store it.') + '</section>'
+                + f'<section class="rx5-sec"><h2>Every year.</h2><p class="rx5-sub">Recall campaigns that cover each model year.' + (' Tap a year for its full report.' if m['kind'] == 'y' and m['car'].startswith('/cars/') else '') + f'</p>{_rx_bars(_yr)}</section>'
+                + '<div class="cpl rx5-pl">'
+                + (_rx_box('warning', 'Park-it warnings', f'{len(park)} where NHTSA says don&#39;t drive it or park outside', f'<ul class="rc rcx-warn">{"".join(_rcl_card(r, years=m["ry"].get(r["id"])) for r in park)}</ul>', 'park') if park else '')
+                + _rx_box('bell', 'Every recall', f'All {n}, newest first' + (f' · {newn} in the last 12 months' if newn else ''),
+                          (f'<p class="yc-cap">{newn} filed in the last 12 months. A new recall has had the least time to be fixed, so it&#39;s the one most likely still open on a used car.</p>' if newn else '')
+                          + f'<ul class="rc">{cards}</ul>' + (f'<details class="rcx-more"><summary>Show all {n} recalls</summary><ul class="rc">{more}</ul></details>' if more else ''), 'every')
+                + (_rx_box('wrench', 'What they fix', f'Most: {E(parts[0][0].lower())} ({parts[0][1]})', _rx_bars([(E(pp), k) for pp, k in parts[:10]], 10), 'fix') if parts else '')
+                + _rx_box('question', f'Is one open on your {E(m["short"])}?', 'How to check one car, and what the fix costs', _open, 'open')
+                + _rx_box('talk', 'Questions', f'{len(qa)} answers about {nm} recalls', qa_fold(''.join(f'<h3>{q}</h3><p>{a}</p>' for q, a in qa)))
+                + (_rx_go('car', f'{nm} problems', 'Every year&#39;s complaints and the best years to buy', m['car']) if m['car'] else '')
+                + _rx_go('warning', f'All {E(m["brand"])} recalls', 'Every model, the biggest and the newest', f'/recalls/{m["mk"]}/')
+                + _rx_box('info', 'Where this data comes from', 'NHTSA recall campaigns', _RCL_SRC + (pcredit(who(ph)) if ph else ''))
+                + '</div>'
+                + share_line(f'Every {m["name"]} recall, {y0}–{y1}: {n} campaigns. Free:', f'Know someone with a {E(m["short"])}?') + '</div>')
         page(m['url'], f'{m["name"]} Recalls: All {n} Recalls by Year ({y0}–{y1}) | The Lemon Index',
              f'Every {m["name"]} recall from NHTSA: {n} campaigns for model years {y0}–{y1}, newest first, with the years each covers. Most-recalled year: {topy}. Check a VIN free.',
              body, ld=[_rcl_ld(qa)])
@@ -198,18 +232,34 @@ if RCLP == 'pages':
         if big: qa.append((f'What is the biggest {bn} recall?', f'NHTSA {E(big[0]["id"])} ({E(RPART(big[0].get("part")))}, {_rcldate(big[0])}): {_rcl_u(big[0]["id"])[0]:,} vehicles in the whole campaign, on the {E(who_(big[0]["id"]))} among the models we track. {E(rsum(big[0]))}'))
         qa.append((f'What is the newest {bn} recall?', f'Filed {_rcldate(rs[0])} for the {E(who_(rs[0]["id"]))} (NHTSA {E(rs[0]["id"])}): {E(rsum(rs[0]))}'))
         qa.append((f'How do I check a {bn} for recalls by VIN?', f'Type the VIN at nhtsa.gov/recalls or ask any {bn} dealer: that shows whether a recall is still open on that car. Our <a href="/vin/">VIN check</a> decodes it and lists every recall for that model year. Recall repairs are free.'))
-        body = (f'<div class="pg mp6 rcx">{_RCLCSS}<section class="ph yph6"><div class="yh-t"><p class="ph-e"><a href="/recalls/">Recall check</a> · <a href="/brands/{b["mk"]}/">{bn}</a></p>'
-                f'<h1>{bn} recalls.</h1><p class="ph-s">Every NHTSA recall on the {bn} models we track, by model and year. Check yours by VIN.</p>{stats}'
-                f'{_rcl_vin("We hand the VIN to our free VIN check: the car, its model-year record and every recall for it.")}</div>' + (f'<div class="ph-v">{vis}</div>' if vis else '') + '</section>'
-                + f'<section class="yc"><h2>Recalls by model. <span class="h2s">Campaigns per model, all years.</span></h2>{_rcl_bars(mrow)}'
-                + f'<p class="yc-cap">Tap a model for {"every recall in one list" if any(m["url"] for m in ms) else "its recalls year by year"}. Models on sale for more years have had more time to collect recalls.</p></section>'
-                + (f'<section class="yc"><h2>The biggest {bn} recalls. <span class="h2s">By vehicles in the campaign, since 2010.</span></h2><ul class="rc">{"".join(_rcl_card(r, who_(r["id"]), yrs_(r["id"])) for r in big)}</ul></section>' if big else '')
-                + f'<section class="yc"><h2>The newest {bn} recalls.</h2><ul class="rc">{"".join(_rcl_card(r, who_(r["id"]), yrs_(r["id"])) for r in rs[:6])}</ul></section>'
-                + (f'<section class="yc rcx-warn"><h2>Park-it warnings <span class="yc-n">{len(park)}</span></h2><p class="yc-cap">NHTSA flagged these: don&#39;t drive the car, or park it outside, until the fix is done.</p><ul class="rc">{"".join(_rcl_card(r, who_(r["id"]), yrs_(r["id"])) for r in park[:8])}</ul>'
-                   + (f'<details class="rcx-more"><summary>Show all {len(park)}</summary><ul class="rc">{"".join(_rcl_card(r, who_(r["id"]), yrs_(r["id"])) for r in park[8:])}</ul></details>' if len(park) > 8 else '') + '</section>' if park else '')
-                + f'<section class="yc rcx-open"><h2>Is one open on your {bn}?</h2>{_RCL_OPEN}{_rcl_vin()}{CA_RECALL}</section>'
-                + _rcl_faq(qa) + f'<p class="yc-cap" style="text-align:center"><a href="/brands/{b["mk"]}/">Is {bn} reliable?</a> · <a href="/recalls/">Recall check for every make</a></p>'
-                + _RCL_SRC + share_line(f'Every {b["name"]} recall by model and year: {n:,} campaigns. Check yours by VIN, free:', f'Know someone with a {bn}?') + '</div>')
+        _mc, _mx, _phs = [], [], []
+        for m in ms:
+            _h = m['url'] or m['car'] or ''
+            _p = aph(m['id']) if m['kind'] == 'y' else None
+            if _p: _mc.append(_rx_card(_h, _p, m['short'], m['n'], f'{min(m["yc"])}–{max(m["yc"])}' if m['yc'] else '')); _phs.append(_p)
+            else: _mx.append((f'<a class="chip" href="{_h}">' if _h else '<span class="chip">') + f'{E(m["short"])} <small>{m["n"]}</small>' + ('</a>' if _h else '</span>'))
+        _open = f'{_RCL_OPEN}{_rcl_vin()}{CA_RECALL}'
+        body = (f'<div class="pg rcx rx5">{_RCLCSS}<section class="rx5-h"><p class="rx5-e"><a href="/recalls/">Recall check</a> › <a href="/brands/{b["mk"]}/">{bn}</a></p>'
+                f'<h1>{bn}</h1><p class="rx5-s">recalls.</p>' + (f'<div class="rx5-im">{pimg(ph, b["name"]).replace(" loading=" + chr(34) + "lazy" + chr(34), "")}</div>' if ph else '')
+                + _rx_big(f'{n:,}', f'recall campaigns on {len(ms)} model{"s" * (len(ms) != 1)}, {y0}–{y1}')
+                + f'<p class="rx5-line">Newest: <b>{_rcldate(rs[0])}</b>' + (f' · Biggest: <b>{_rcl_u(big[0]["id"])[0]:,}</b> vehicles' if big else '') + '</p>'
+                + _rx_vin('We hand the VIN to our free VIN check: the car and every recall for it. We don&#39;t store it.') + '</section>'
+                + (f'<section class="rx5-sec"><h2>Every {bn} model.</h2><p class="rx5-sub">Recall campaigns in the corner, all years. Tap one for its full list.</p><div class="rx5-g">{"".join(_mc)}</div>'
+                   + (f'<p class="chips rcx-chips rx5-chips">{"".join(_mx)}</p>' if _mx else '') + '</section>' if _mc else
+                   f'<section class="rx5-sec"><h2>Every {bn} model.</h2>{_rx_bars([(lab, k) for lab, k, _ in mrow], 20)}</section>')
+                + '<div class="cpl rx5-pl">'
+                + (_rx_box('warning', 'Park-it warnings', f'{len(park)} where NHTSA says don&#39;t drive it or park outside',
+                           f'<ul class="rc rcx-warn">{"".join(_rcl_card(r, who_(r["id"]), yrs_(r["id"])) for r in park[:8])}</ul>'
+                           + (f'<details class="rcx-more"><summary>Show all {len(park)}</summary><ul class="rc">{"".join(_rcl_card(r, who_(r["id"]), yrs_(r["id"])) for r in park[8:])}</ul></details>' if len(park) > 8 else ''), 'park') if park else '')
+                + (_rx_box('chart', f'The biggest {bn} recalls', 'By vehicles in the campaign, since 2010', f'<ul class="rc">{"".join(_rcl_card(r, who_(r["id"]), yrs_(r["id"])) for r in big)}</ul>', 'biggest') if big else '')
+                + _rx_box('bell', f'The newest {bn} recalls', f'Latest: {_rcldate(rs[0])}', f'<ul class="rc">{"".join(_rcl_card(r, who_(r["id"]), yrs_(r["id"])) for r in rs[:6])}</ul>', 'newest')
+                + _rx_box('question', f'Is one open on your {bn}?', 'How to check one car, and what the fix costs', _open, 'open')
+                + _rx_box('talk', 'Questions', f'{len(qa)} answers about {bn} recalls', qa_fold(''.join(f'<h3>{q}</h3><p>{a}</p>' for q, a in qa)))
+                + _rx_go('scale', f'Is {bn} reliable?', 'Every model scored on owner complaints', f'/brands/{b["mk"]}/')
+                + _rx_go('warning', 'Recall check for every make', 'By VIN, or pick the car', '/recalls/')
+                + _rx_box('info', 'Where this data comes from', 'NHTSA recall campaigns', _RCL_SRC + pcredit(who(*_phs, ph)))
+                + '</div>'
+                + share_line(f'Every {b["name"]} recall by model and year: {n:,} campaigns. Check yours by VIN, free:', f'Know someone with a {bn}?') + '</div>')
         page(path, f'{b["name"]} Recalls: Check by VIN, Model and Year | The Lemon Index',
              f'{n:,} NHTSA recall campaigns on {len(ms)} {b["name"]} model{"s" * (len(ms) != 1)} ({y0}–{y1}): by model, the biggest, the newest. Check your {b["name"]} for recalls by VIN, free.',
              body, ld=[_rcl_ld(qa)])
@@ -249,21 +299,29 @@ if RCLP == 'pages':
           ('What does "park it" or "park outside" mean on a recall?', 'NHTSA flags the most urgent recalls: "park it" means don&#39;t drive the car until it&#39;s fixed, and "park outside" means it could catch fire while parked, so keep it away from buildings.'),
           ('Does this cover cars in Canada?', 'The recall lists here are U.S. (NHTSA) campaigns. Canadian cars can have different recalls: search Transport Canada&#39;s recall database or check the VIN on the maker&#39;s Canadian recall site.'),
           ('Where does this data come from?', f'NHTSA&#39;s recall campaigns (api.nhtsa.gov) for the {nmod} models we track, model years {min(ally)}–{max(ally)}, and NHTSA&#39;s recall file for vehicle counts and park-it warnings (2010 and later). The make, model and year lookup at the top asks NHTSA live, so it&#39;s always current.')]
-    body = (f'<div class="pg rcx">{_RCLCSS}<section class="finder ph ph-f"><h1><span class="ph-e">Recall check</span>Is your car recalled?</h1>'
-            f'<p class="lede">Check by VIN, or pick the car. Every NHTSA recall, free.</p>{_rcl_vin("We hand the VIN to our free VIN check, which decodes it and lists its recalls. We don&#39;t store it.")}'
-            f'<section class="vnv" id="no-vin"><h2>No VIN? Pick the car.</h2><p class="note">Every recall for that make, model and year, live from NHTSA, newest first.</p>'
+    _top = [b for b in mk_list if not b['thin']][:12]
+    _bp = {b['mk']: _rx_ph(b['models']) for b in _top}
+    _mkc = ''.join(_rx_card(f'/recalls/{b["mk"]}/', _bp[b['mk']], b['name'], b['n']) for b in _top if _bp[b['mk']])
+    _popc = ''.join(_rx_card(m['url'], aph(m['id']), m['name'], m['n']) for m in pop if aph(m['id']))
+    _newn = sum(1 for t in allr if _rcl_new(t[0]))
+    body = (f'<div class="pg rcx rx5">{_RCLCSS}<section class="rx5-h"><p class="rx5-e">Recall check</p><h1>Is your car recalled?</h1>'
+            f'<p class="rx5-s2">Check by VIN, or pick the car. Every NHTSA recall, free.</p>{_rx_vin("We hand the VIN to our free VIN check, which lists its recalls. We don&#39;t store it.")}'
+            f'<section class="vnv rx5-pick" id="no-vin"><h2>No VIN? Pick the car.</h2>'
             f'<form id="rcpf" class="vnv-f" autocomplete="off"><label><span>Make</span><select name="mk" aria-label="Make"></select></label><label><span>Model</span><select name="md" aria-label="Model"></select></label><label><span>Year</span><select name="y" aria-label="Year"></select></label><button class="btn" type="submit">Show recalls</button></form>'
             f'<div id="rcpout" class="vin-recalls" aria-live="polite"></div></section>'
-            f'<p class="fnote vin-ca">Canada? See recalls at <a href="{TC_DB}" rel="noopener nofollow" target="_blank">Transport Canada</a></p>'
-            f'<div class="stats rcx-st"><div><b>{ncamp:,}</b><span>recall campaigns on the cars we track</span></div><div><b>{nmod}</b><span>models, {min(ally)}–{max(ally)}</span></div>'
-            f'<div><b>{sum(1 for t in allr if _rcl_new(t[0]))}</b><span>filed in the last 12 months</span></div></div>'
+            f'<p class="rx5-line"><b>{ncamp:,}</b> recall campaigns · <b>{nmod}</b> models, {min(ally)}–{max(ally)} · <b>{_newn}</b> in the last 12 months</p>'
             f'<script id="rcpick" type="application/json">{_rclj.dumps(PK, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")}</script></section>'
-            f'<section class="yc rcx-open"><h2>Recalled, or still open? <span class="h2s">Not the same thing.</span></h2>{_RCL_OPEN}</section>'
-            f'<section class="yc"><h2>Recalls by make. <span class="h2s">Campaigns on the models we track.</span></h2><p class="chips rcx-chips">{chips}</p></section>'
-            + (f'<section class="yc"><h2>Every recall for a popular model.</h2><p class="chips rcx-chips">' + ''.join(f'<a class="chip" href="{m["url"]}">{E(m["name"])} <small>{m["n"]}</small></a>' for m in pop) + '</p></section>' if pop else '')
-            + f'<section class="yc"><h2>The biggest recalls. <span class="h2s">By vehicles in the campaign, since 2010.</span></h2><ul class="rc">{"".join(_rcl_card(r, _who_all(r["id"]), _yrs_all(r["id"])) for r, _ in bigall)}</ul></section>'
-            + f'<section class="yc"><h2>The newest recalls.</h2><ul class="rc">{"".join(_rcl_card(r, _who_all(r["id"]), _yrs_all(r["id"])) for r, _ in allr[:8])}</ul></section>'
-            + _rcl_faq(qa) + _RCL_SRC + share_line('Free recall check: by VIN, or pick the make, model and year. Every NHTSA recall:', 'Know someone shopping for a used car?') + '</div>')
+            + (f'<section class="rx5-sec"><h2>Recalls by make.</h2><p class="rx5-sub">Recall campaigns in the corner, on the models we track.</p><div class="rx5-g">{_mkc}</div></section>' if _mkc else '')
+            + (f'<section class="rx5-sec"><h2>Popular models.</h2><p class="rx5-sub">Every recall for each, in one list.</p><div class="rx5-g">{_popc}</div></section>' if _popc else '')
+            + '<div class="cpl rx5-pl">'
+            + _rx_box('car', f'All {len(mk_list)} makes', 'Recall campaigns per make', f'<p class="chips rcx-chips">{chips}</p>', 'makes')
+            + _rx_box('question', 'Recalled, or still open?', 'Not the same thing: how to check one car', f'{_RCL_OPEN}{CA_RECALL}', 'open')
+            + _rx_box('chart', 'The biggest recalls', 'By vehicles in the campaign, since 2010', f'<ul class="rc">{"".join(_rcl_card(r, _who_all(r["id"]), _yrs_all(r["id"])) for r, _ in bigall)}</ul>', 'biggest')
+            + _rx_box('bell', 'The newest recalls', f'{_newn} filed in the last 12 months', f'<ul class="rc">{"".join(_rcl_card(r, _who_all(r["id"]), _yrs_all(r["id"])) for r, _ in allr[:8])}</ul>', 'newest')
+            + _rx_box('talk', 'Questions', f'{len(qa)} answers about recalls', qa_fold(''.join(f'<h3>{q}</h3><p>{a}</p>' for q, a in qa)))
+            + _rx_box('info', 'Where this data comes from', 'NHTSA recall campaigns', _RCL_SRC + pcredit(who(*[x for x in _bp.values() if x], *[aph(m['id']) for m in pop if aph(m['id'])])))
+            + '</div>'
+            + share_line('Free recall check: by VIN, or pick the make, model and year. Every NHTSA recall:', 'Know someone shopping for a used car?') + '</div>')
     page('/recalls/', 'Recall Check: Is My Car Recalled? Search by VIN or Model | The Lemon Index',
          f'Free car recall check: type a VIN, or pick the make, model and year to see every NHTSA recall. {ncamp:,} recall campaigns on {nmod} models, by make, with the newest and biggest.',
          body, ld=[_rcl_ld(qa), {"@context": "https://schema.org", "@type": "WebApplication", "name": "Free car recall check", "url": BASE + '/recalls/', "applicationCategory": "UtilitiesApplication",

@@ -1,3 +1,4 @@
+import re
 # Best-of and statistics pages (11-06, SEO plan). Run by build.py with exec(). Every number comes from our own data; nothing here is hand-typed.
 SEO_URLS = []
 YT_SRC = r'C:\Users\elift\Desktop\Eliftforlife youtube\3 Lemon Index\data\yt'
@@ -136,11 +137,10 @@ def _seo_pages():
     if TEEN_CARD: allc.insert(0, TEEN_CARD[:2]); lead[TEEN_CARD[0]] = TEEN_CARD[2]   # 11-12: the teen list first (Linda)
     def _bc(u, t):
         ph = aph(lead[u]) if lead.get(u) else None
-        im = f'<span class="bcp"><img src="{ph["src"]}" alt="" width="{ph["w"]}" height="{ph["h"]}" loading="lazy" decoding="async"></span>' if ph else '<span class="bcp"></span>'
-        return f'<a class="bcard" href="{u}">{im}<b>{E(t)}</b><span class="tl">See the list <i>›</i></span></a>'
-    hub = ('<div class="advp"><header class="advh1"><h1>Best cars, by the data.</h1><p class="ans">Rankings built from government complaint data and YouTube buyer&#39;s guides.</p></header><div class="bcards">'
-           + ''.join(_bc(u, t) for u, t in allc) + '</div></div>')
-    hub += share_line('The best cars, SUVs, trucks and minivans, ranked by real owner data. Free:')
+        return f'<a class="v5-c" href="{u}">{pimg(ph, "") if ph else ""}<b>{E(t)}</b></a>'
+    hub = ('<div class="pg v5">' + V5_HERO('Rankings', 'Best cars, by the data.', 'Rankings built from government complaint data and YouTube buyer&#39;s guides.')
+           + '<div class="v5-g v5-bg">' + ''.join(_bc(u, t) for u, t in allc) + '</div>')
+    hub += share_line('The best cars, SUVs, trucks and minivans, ranked by real owner data. Free:') + '</div>'
     page('/best/', 'Best Cars Ranked by Real Owner Data | The Lemon Index', 'The most reliable cars, SUVs, trucks and minivans, plus the best used cars by budget, ranked from government complaint data.', hub); SEO_URLS.insert(0, '/best/')
     # ---- statistics (11-14 growth plan 5c: every number computed here from the site's data at build time; the page's date and the citation
     # date are its content-hash date, so they move only when a number or the text changes)
@@ -190,7 +190,7 @@ def _seo_pages():
     T_ = [(f'{sev["total"]:,}', 'owner complaints', f'{len(YEARS)} models, model years 2000–2025, filed any time'), (f'{sev["crash"]:,}', 'crashes reported', 'owner reports, not verified'),
           (f'{sev["fire"]:,}', 'fires reported', 'owner reports'), (f'{sev["injured"]:,}', 'injuries reported', 'owner reports'),
           (f'{sev["deaths"]:,}', 'deaths reported', 'owner reports'), (f'{sev["towed"]:,}', 'cars towed', 'owner reports'), (f'{len(rec):,}', 'recall campaigns', 'across those models')]
-    tiles = '<div class="stt">' + ''.join(f'<div><b>{a}</b><span>{b}</span><small>{c}</small></div>' for a, b, c in T_) + '</div>'
+    tiles = '<div class="stt v5-tiles">' + ''.join(f'<div><b>{a}</b><span>{b}</span><small>{c}</small></div>' for a, b, c in T_[1:]) + '</div>'   # 11-19 v5: the total is the hero number
     def hbar(rows, mx, line=None, unit=''):
         return '<div class="sbb">' + ''.join(f'<div class="sbr {cl}"><span class="sbl">{lab}</span><span class="sbt"><i style="width:{v / mx * 100:.1f}%"></i>'
                                              + (f'<em style="left:{line / mx * 100:.1f}%"></em>' if line else '') + f'</span><b>{txt}</b></div>' for lab, v, txt, cl in rows) + '</div>'
@@ -212,34 +212,38 @@ def _seo_pages():
     def _cp(lab, txt):
         return f'<div class="cpy"><p class="cpy-l">{lab}</p><div class="cpy-r"><code>{E(txt)}</code><button type="button" class="btn btn-ghost cpy-b" data-copy="{E(txt)}">Copy</button></div></div>'
     sec = lambda id_, h, inner, cap: f'<section class="yc" id="{id_}"><h2>{h}</h2>{inner}<p class="yc-cap">{cap}</p></section>'
-    body = (f'<div class="advp stp"><header class="advh1"><p class="ph-e"><a href="/">The Lemon Index</a></p><h1>Car complaint statistics.</h1><p class="ans">{E(lede)}</p>'
-            '<p class="yc-cap">Numbers last changed <b>%%PD_DATE%%</b>. Every figure is computed from our data files when the site is built.</p></header>'
-            '<section class="yc" id="key-facts"><h2>Key facts</h2><ul>' + ''.join(f'<li>{x}</li>' for x in facts) + '</ul></section>'
+    box = lambda ic, id_, h, inner, cap: V5_BOX(ic, h, inner + f'<p class="yc-cap">{cap}</p>', id_)
+    _tot = totals_html()
+    _tot = re.sub(r'^<section class="yc" id="totals"><h2>[^<]*</h2>', '', _tot); _tot = re.sub(r'</section>\s*$', '', _tot)
+    body = ('<div class="pg v5 stp">' + V5_HERO('Statistics', 'Car complaint statistics.', 'U.S. owner complaints to the government, by model year, brand, system and fuel type.',
+                                                big=f'<b>{sev["total"]:,}</b><span>owner complaints</span>', line='Numbers last changed <b>%%PD_DATE%%</b> · free to cite')
             + tiles
-            + sec('worst-model-years', f'Most complained-about model years, {WY0}–{WYF}', hbar(wyr, max(v for _, v, _, _ in wyr) * 1.05, 100),
-                  f'Lemon Index for that model year: complaints per car sold against the average car of the same year (100, the line). Model years with 20,000+ sold and a full 3 years of complaints. '
+            + '<div class="cpl v5-pl">'
+            + V5_BOX('data', 'Key facts', '<ul class="v5-facts">' + ''.join(f'<li>{x}</li>' for x in facts) + '</ul>', 'key-facts')
+            + box('warning', 'worst-model-years', f'Most complained-about model years', hbar(wyr, max(v for _, v, _, _ in wyr) * 1.05, 100),
+                  f'Lemon Index for that model year: complaints per car sold against the average car of the same year (100, the line). Model years with 20,000+ sold and a full 3 years of complaints, {WY0}–{WYF}. '
                   f'<a href="/rankings/worst-years/">All {len(WYR):,} model years ranked, {WY0}–{WY1}</a> (2023+ as early reads).')
-            + sec('brands', 'Brands ranked by complaints per car sold', hbar(brr, max(130, max(v for _, v, _, _ in brr)) * 1.05, 100),
-                  'Lemon Index, model years 2010 to 2022. 100 (the line) is the average car; lower is better. <a href="/brands/">Every brand</a>.')
-            + sec('trend', 'Complaints per car sold, by model year', hbar(trr, max(r for _, r, _, _ in trr) * 1.08, avg_t),
+            + box('chart', 'brands', 'Brands ranked', hbar(brr, max(130, max(v for _, v, _, _ in brr)) * 1.05, 100),
+                  'Complaints per car sold (Lemon Index), model years 2010 to 2022. 100 (the line) is the average car; lower is better. <a href="/brands/">Every brand</a>.')
+            + box('calendar', 'trend', 'Complaints by model year', hbar(trr, max(r for _, r, _, _ in trr) * 1.08, avg_t),
                   f'Owner complaints per 100,000 cars sold, filed in each model year&#39;s first 3 years, for every model we track with a U.S. sales figure. The line is the 2010–2022 average ({avg_t:.0f}).')
-            + sec('problem-areas', 'Most common problem areas', hbar(sysr, max(v for _, v, _, _ in sysr) * 1.05),
+            + box('wrench', 'problem-areas', 'Most common problem areas', hbar(sysr, max(v for _, v, _, _ in sysr) * 1.05),
                   f'Share of all complaint mentions, model years 2010 to 2022 ({(comps.get("UNKNOWN OR OTHER", 0) + comps.get("UNKNOWN", 0)) / all_c * 100:.0f}% name no system and are left off). One complaint can name several systems.')
-            + sec('ev-vs-gas', 'Electric cars vs other cars', hbar(evr, max(PE['per100k'], PG['per100k']) * 1.08),
+            + box('signpost', 'ev-vs-gas', 'Electric cars vs other cars', hbar(evr, max(PE['per100k'], PG['per100k']) * 1.08),
                   f'Owner complaints per 100,000 cars sold, model years {evy[0]}–{evy[1]}, filed by the end of the year after the model year: {PE["sold"]:,} EVs and {PG["sold"]:,} other cars. '
                   f'Driver-assist = automatic emergency braking, lane keeping, blind-spot and backup systems. Fire complaints: {PE["fire100k"]} per 100,000 EVs, {PG["fire100k"]} per 100,000 other cars. '
                   '<a href="/electric/">Every EV ranked</a>.')
-            + sec('first-3-years', 'When complaints are filed', hbar(f3r, fall),
+            + box('history', 'first-3-years', 'When complaints are filed', hbar(f3r, fall),
                   f'All {fall:,} complaints filed so far about the 2010–2022 model years of the {len(FR)} models we rank, split by whether NHTSA got them within 3 years of the model year. '
                   'Our scores count only the first 3 years, so old and new cars are compared fairly.')
-            + sec('models', 'Popular models: best 5 and worst 5', hbar(pmr, max(c['li'] for c in pm) * 1.05, 100),
+            + box('car', 'models', 'Popular models: best 5 and worst 5', hbar(pmr, max(c['li'] for c in pm) * 1.05, 100),
                   'Models with 150,000 or more sold.' + (f' Most check engine light complaints per car sold: the {E(cel[0]["name"])} ({cel[0]["per"]:g} per 100,000).' if cel else ''))
-            + totals_html() +   # 11-12 (Priya): what each site-wide total covers
-            '<section class="yc stc" id="cite"><h2>How to cite this</h2><p>Free to use under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license noopener">CC BY 4.0</a> with credit and a link.</p>'
-            + _cp('Credit line', cite_line) + _cp('Citation', cite_apa) + _cp('Link (HTML)', cite_html)
-            + '<p>Raw data: <a href="/data/">free CSV downloads</a>. Method: <a href="/method/">how the index works</a>. Charts for your site: <a href="/embed/">embed a chart</a>. Reporters: <a href="/press/">press page</a>.</p></section>'
-            '<p class="yc-cap">Source: NHTSA owner complaints and recalls, and published U.S. sales. Complaints are owner reports, not proof of a defect. Not a safety rating.</p></div>'
-            '<script src="/assets/data.js?v=1103" defer></script>')
+            + V5_BOX('question', 'Why our totals differ', _tot, 'totals')
+            + V5_BOX('share', 'How to cite this', f'<div class="stc"><p>Free to use under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license noopener">CC BY 4.0</a> with credit and a link.</p>'
+                     + _cp('Credit line', cite_line) + _cp('Citation', cite_apa) + _cp('Link (HTML)', cite_html)
+                     + '<p>Raw data: <a href="/data/">free CSV downloads</a>. Method: <a href="/method/">how the index works</a>. Charts for your site: <a href="/embed/">embed a chart</a>. Reporters: <a href="/press/">press page</a>.</p></div>', 'cite')
+            + V5_BOX('info', 'Where this data comes from', '<p class="yc-cap">NHTSA owner complaints and recalls, and published U.S. sales. Complaints are owner reports, not proof of a defect. Not a safety rating. Every figure is computed from our data files when the site is built.</p>')
+            + '</div></div><script src="/assets/data.js?v=1103" defer></script>')
     body += share_line(f'{sev["total"]:,} car complaints to the government, broken down by brand, model and system. Free to cite:', 'Know someone who writes about cars?')
     ds = {"@context": "https://schema.org", "@type": "Dataset", "name": "Car complaint statistics (The Lemon Index)", "url": url,
           "description": f'{lede} Includes the most complained-about model years, brands ranked by complaints per car sold, complaints per car sold by model year, the most common problem areas, electric vs other cars, and the share of complaints filed in a car\'s first 3 years.',

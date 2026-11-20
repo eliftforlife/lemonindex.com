@@ -220,6 +220,15 @@ PILL_AR = ('<svg class="cpl-ar" width="18" height="18" viewBox="0 0 24 24" fill=
            'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>')
 PILL_GO = ('<svg class="cpl-ar" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" '
            'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>')
+# 11-19 v5 page look (Elijah: "make these pages like the home page / the new model page"): centered hero, one big number, car cards,
+# every list a title-only tap-to-open box. Styles: assets/cpl.css (.v5-*).
+V5_IC = lambda i: f'<svg class="cpl-i" width="24" height="24" aria-hidden="true" focusable="false"><use href="/assets/ic.svg?v=1#{i}"></use></svg>'
+def V5_BOX(ic, t, body, id_='', open_=False):
+    return (f'<details{f" id={chr(34)}{id_}{chr(34)}" if id_ else ""}{" open" if open_ else ""}><summary>{V5_IC(ic)}<span><b>{t}</b></span>{PILL_AR}</summary><div class="cpl-b">{body}</div></details>')
+def V5_GO(ic, t, href): return f'<a class="cpl-a" href="{href}">{V5_IC(ic)}<span><b>{t}</b></span>{PILL_GO}</a>'
+def V5_HERO(kicker, h1, sub='', big='', line='', extra=''):
+    return (f'<section class="v5-h">' + (f'<p class="v5-e">{kicker}</p>' if kicker else '') + f'<h1>{h1}</h1>' + (f'<p class="v5-s">{sub}</p>' if sub else '')
+            + (f'<div class="v5-big">{big}</div>' if big else '') + (f'<p class="v5-line">{line}</p>' if line else '') + extra + '</section>')
 def PILL_SUM(img, title, sub=''):
     return (f'<img src="{img}" alt="" width="44" height="44" loading="lazy" decoding="async"><span><b>{title}</b>'
             + (f'<small>{sub}</small>' if sub else '') + '</span>')
@@ -526,7 +535,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' '{DB_HASH}' https://static.cloudflareinsights.com https://challenges.cloudflare.com https://www.googletagmanager.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; frame-src https://challenges.cloudflare.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cloudflareinsights.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://vpic.nhtsa.dot.gov https://api.nhtsa.gov https://lemon-survey.elift08.workers.dev https://lemon-alerts.elift08.workers.dev https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="google-adsense-account" content="{ADS}"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/lxs.css?v={LXS_V}">
-<link rel="stylesheet" href="/assets/site.css?v=1117-soonyt"><link rel="stylesheet" href="/assets/cpl.css?v=7"><script src="/assets/cpl.js?v=1" defer></script><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
+<link rel="stylesheet" href="/assets/site.css?v=1119-mu"><link rel="stylesheet" href="/assets/cpl.css?v=8"><script src="/assets/cpl.js?v=1" defer></script><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1105" defer></script>{lds}</head>
 <body>{'' if path.startswith('/thanks/') else DONBAR}{gh_header(path)}
 <main>{body}{_eb}{_rel}{'' if path == '/vote/' else ask_html(path)}</main>
 <footer class="foot f2 f3"><div class="f3-top"><a class="f3-name" href="/"><img src="/assets/icon-64.png" alt="" width="64" height="64"><span>Lemon Index</span></a><p class="f3-tag">Check here before you buy.</p><div class="f3-soc">{F3_SOC}</div></div><div class="f2-in">
@@ -779,12 +788,12 @@ page(STUDY, 'The Most Reliable Cars, According to 1.6 Million Owner Complaints',
 # ---- studies index
 # 11-12 monthly data studies (research #4): data/studies/<yyyy-mm>.json from 3 Lemon Index/data/studies/make_study.py; pages by studies_month.py (exec'd after /press/)
 MST = [json.load(open(os.path.join('data/studies', _f), encoding='utf-8')) for _f in sorted((f for f in os.listdir('data/studies') if re.fullmatch(r'\d{4}-\d{2}\.json', f)), reverse=True)] if os.path.isdir('data/studies') else []
-_MST_TILES = ''.join(f'<a class="tile" href="/studies/{s["ym"]}/"><div class="tt"><p class="te">Monthly study · {E(s["label"])}</p><h2>{E(s["title"])}</h2><p class="ts">{s["n"]:,} owner complaints to NHTSA{"" if s["final"] else " so far"}.</p><span class="tl">Read the study <i>›</i></span></div><div class="tp"><img src="{s["chart"]}" alt="Chart: most owner complaints by model, {E(s["label"])}" width="720" height="472" loading="lazy"></div></a>' for s in MST[:2])
+_MST_TILES = ''.join(f'<a class="v5-w" href="/studies/{s["ym"]}/"><img src="{s["chart"]}" alt="Chart: most owner complaints by model, {E(s["label"])}" width="720" height="472" loading="lazy" decoding="async"><small>Monthly study · {E(s["label"])}</small><b>{E(s["title"])}</b><span>{s["n"]:,} owner complaints to NHTSA{"" if s["final"] else " so far"}</span></a>' for s in MST[:2])
 page('/studies/', 'Car Reliability Studies: Rankings From Owner Complaints | Lemon Index', 'Every Lemon Index study: the most and least reliable cars, brands and electric cars, measured with 1.6 million NHTSA owner complaints and U.S. sales.', f'''
-<div class="pg">{phero('Studies', 'Studies.', 'Millions of public records. One clear ranking each.')}
-<section class="tiles">{_MST_TILES}
-<a class="tile" href="{STUDY}"><div class="tt"><p class="te">Study #1</p><h2>The most reliable cars.</h2><p class="ts">{len(CARS)} models. 1.6 million owner complaints.</p><span class="tl">Read the study <i>›</i></span></div><div class="tp">{pimg(mphoto('toyota-4runner'), 'Toyota 4Runner')}</div></a>
-<a class="tile" href="/electric/"><div class="tt"><p class="te">Electric cars</p><h2>The most reliable EVs.</h2><p class="ts">22 electric cars, plus fires and fuel cost.</p><span class="tl">See the ranking <i>›</i></span></div><div class="tp">{pimg(mphoto('tesla-model-s'), 'Tesla Model S')}</div></a></section>
+<div class="pg v5">{V5_HERO('The Lemon Index', 'Studies.', 'Millions of public records. One clear ranking each.')}
+<div class="v5-ws">{_MST_TILES}
+<a class="v5-w v5-wc" href="{STUDY}">{pimg(mphoto('toyota-4runner'), 'Toyota 4Runner')}<small>Study #1</small><b>The most reliable cars.</b><span>{len(CARS)} models. 1.6 million owner complaints.</span></a>
+<a class="v5-w v5-wc" href="/electric/">{pimg(mphoto('tesla-model-s'), 'Tesla Model S')}<small>Electric cars</small><b>The most reliable EVs.</b><span>22 electric cars, plus fires and fuel cost.</span></a></div>
 {pcredit(who(mphoto('toyota-4runner'), mphoto('tesla-model-s')))}
 {share_line("Which cars have the fewest problems? Free studies from 1.6 million owner complaints:")}</div>''',
      ld=[{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Car Reliability Studies", "url": BASE + '/studies/', "hasPart": [{"@type": "Article", "headline": s['title'], "url": BASE + f'/studies/{s["ym"]}/'} for s in MST] + [{"@type": "Article", "headline": "The Most Reliable Cars, According to 1.6 Million Owner Complaints", "url": BASE + STUDY}]}])
