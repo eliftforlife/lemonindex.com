@@ -42,7 +42,7 @@ elif FSX == 'pages':
                    + (f'. YouTube rank #{rk} of {len(RK)} (score {s["score"]}, {s["videos"]:g} videos)' if rk else '. Not enough YouTube videos to rank'))
             return (f'<a class="b na{" cur" if y == cur else ""}" href="{CARU(f, y)}" data-tip="{E(tip)}."><span class="bn">{y}</span><span class="bt"><i style="width:{100 * v["n"] / mx:.1f}%"></i></span>'
                     f'<b>{v["n"]:,}</b>{yt}</a>')
-        return (f'<div class="bars yb yt2"><div class="bl yth2" aria-hidden="true"><span></span><span>Complaints <em>a count, first 3 years</em></span><span></span><span>YouTube rank <em>#1 = favorite</em></span><span></span></div>'
+        return (f'<div class="bars yb yt2"><div class="bl yth2" aria-hidden="true"><span></span><span>Complaint count <em>first 3 years · lower = better</em></span><span></span><span>YouTube owner rank <em>#1 = best-liked year</em></span><span></span></div>'
                 + ''.join(row(v) for v in ys) + '</div>'
                 + '<p class="yc-cap lfa-leg">Newest year first. Complaints = F-150 owner complaints filed with NHTSA in each model year&#39;s first 3 years. It is a count, not a rate: '
                   'years that sold more draw more, and Ford doesn&#39;t report F-150 sales on their own, so we can&#39;t turn it into a per-truck score.'

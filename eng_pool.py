@@ -49,9 +49,11 @@ ENG_SOON_YT = _load('data/engine_soon_yt.json') if os.path.exists('data/engine_s
 for _k, _r in ENG_SOON_YT.items():
     _v = [d['score'] for d in ((_r or {}).get('years') or {}).values() if d and d.get('score') is not None]
     if _v and _k.startswith('soon-'): ENG_POOL.setdefault('soon:' + _k[5:], sum(_v) / len(_v))
-ENG_POOL_RANK = {u: i + 1 for i, u in enumerate(sorted(ENG_POOL, key=lambda u: (-ENG_POOL[u], u)))}
+# 11-20 (Elijah: "fix the number"): /engines/ said "195 engines with their own page" while each page said "#21 of 409 engines": the 409 counted
+# the coming-soon engines too, which have no page. The rank is now among the engine PAGES only; coming-soon cards show no YT #.
+ENG_POOL_RANK = {u: i + 1 for i, u in enumerate(sorted((u for u in ENG_POOL if not u.startswith('soon:')), key=lambda u: (-ENG_POOL[u], u)))}
 ENG_POOL_N = len(ENG_POOL_RANK)
-ENG_POOL_LBL = 'engines with a YouTube study'
+ENG_POOL_LBL = 'engine pages with a YouTube study'
 SCE_YTRANK = {e: ENG_POOL_RANK[SCE_URL(e)] for e in _SCAVG if SCE_URL(e) in ENG_POOL_RANK}
 SCE_NRANK = {g: ENG_POOL_N for g in ('super', 'perf')}
 GW = {'super': ENG_POOL_LBL, 'perf': ENG_POOL_LBL}

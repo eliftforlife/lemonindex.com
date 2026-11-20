@@ -51,7 +51,7 @@ def _teen_page():
            'a Lemon Index of 110 or lower (about average or better); no sports or muscle cars (IIHS advises new drivers to stay away from high horsepower) and no cargo vans. '
            'Ranked by the lowest crash rating NHTSA gave any version that year, then by the fewest owner complaints per car sold. '
            '&#34;Lowest&#34; = the lowest overall rating NHTSA gave any version (body style, drive) that year: check the exact car&#39;s rating by VIN.')
-    faq = [('What is the safest used car for a teenager?', f'By NHTSA crash ratings and owner complaints, the {t0["y"]} {t0["f"]["name"]} ranks first: 5 stars overall in NHTSA crash tests and a Lemon Index of {t0["li"]} (100 is the average car, lower is better).'),
+    faq = [('What is the safest used car for a teenager?', f'By NHTSA crash ratings and owner complaints, the {t0["y"]} {t0["f"]["name"]} ranks first: a 5-star NHTSA overall safety rating for {"every version NHTSA rated" if t0["lo"] == 5 else "its best-rated version"} that year and a Lemon Index of {t0["li"]} (100 is the average car, lower is better).'),
            ('Why only 2012 and newer?', 'Electronic stability control, which helps stop skids and rollovers, has been required on every new U.S. passenger vehicle since the 2012 model year (federal standard FMVSS No. 126). Older cars may not have it.'),
            ('Does this list include prices?', 'Not yet. We only publish a price when we can cite where it came from, and we don\'t have a free used-price source for every model year. For budget picks, see the lists of the best used cars under $10,000, $15,000 and $20,000.')]
     qa = faq + [('How did you pick these cars?', how)]
@@ -62,21 +62,24 @@ def _teen_page():
                       'Lemon Index: shorter bar = fewer complaints per car sold. Dashed line = the average car (100). Tap a car.')
     def card(i, rs):
         r = rs[0]; f = r['f']
-        crash = '5 stars in every NHTSA crash test' if r['lo'] == 5 else f'5 stars in its best NHTSA crash test ({r["lo"]} in its lowest)'
+        # 11-20: the data is NHTSA's OVERALL rating per version, not every crash test, so say only that
+        crash = ((f'a 5-star NHTSA overall rating for all {r["nv"]} versions rated' if r['nv'] > 1 else 'a 5-star NHTSA overall rating (1 version rated)') if r['lo'] == 5
+                 else f'a 5-star NHTSA overall rating for its best version ({r["lo"]} stars for its lowest)')
+        crash = crash[0].upper() + crash[1:]
         why = f'{crash}, and {cbx_times(r["li"], r["y"])}.'
         more = sorted(rs[1:], key=lambda x: x['y'])
         also = (f'<p class="cbx-also">Also on the list: ' + ' '.join(f'<a href="{CARU(f, x["y"])}">{x["y"]}</a>' for x in more) + '</p>') if more else ''
         return cbx_card(f'teen-{i}', i, best_img(f['id'], f['name']), f'<a href="{CARU(f, r["y"])}">{r["y"]} {E(f["name"])}</a>', why,
                         cbx_stars(r['lo'], r['hi']) + cbx_meter('Complaints', r['li'], mx, r['li'], best_tier(r['li']), unit='Lemon Index'), also)
     vis_list = (f'<section class="cbx-sec cbx-list"><h2>The top {len(top)}</h2>{chart}<ol class="cbx-cards">' + ''.join(card(i, rs) for i, rs in enumerate(top, 1)) + '</ol></section>')
-    body = ('<div class="advp cb cbx">' + cbx_head('Safest used cars for teens.', '5-star crash tests first, then the fewest owner complaints per car sold. 2012 and newer, no sports cars.')
+    body = ('<div class="advp cb cbx">' + cbx_head('Safest used cars for teens.', '5-star NHTSA overall ratings first, then the fewest owner complaints per car sold. 2012 and newer, no sports cars.')
             + vis_list
 
             + types + cbx_faq([(q, f'<p>{E(a)}</p>') for q, a in qa]) + cbx_buy() + cbx_budgets()
             + cbx_src(f'{lede} Sources: NHTSA 5-Star Safety Ratings (overall rating, per model year and version, api.nhtsa.gov); NHTSA owner complaints filed within 3 years of each model year, per vehicle sold; '
                       f'published U.S. sales. Stability control: FMVSS No. 126. {n5:,} model years earned 5 stars for every version tested. Complaints are owner reports, not proof of a defect. '
                       'This is not a safety rating of its own: it combines NHTSA&#39;s crash tests with our complaint score.') + '</div>')
-    body += share_line(f'The safest used cars for teens: 5-star crash tests, stability control and the fewest owner complaints. #1: the {t0["y"]} {t0["f"]["name"]}. Free list:', 'Know a parent shopping for a first car?')
+    body += share_line(f'The safest used cars for teens: 5-star NHTSA ratings, stability control and the fewest owner complaints. #1: the {t0["y"]} {t0["f"]["name"]}. Free list:', 'Know a parent shopping for a first car?')
     page(TEEN_URL, 'Safest Used Cars for Teens, by Crash Tests and Complaints | The Lemon Index', lede, body, ld=[faq_ld([(q, '', a) for q, a in faq])])
     SEO_URLS.append(TEEN_URL)
     print('teen page:', len(models), 'models,', len(rows), 'model years; top', t0['y'], t0['f']['name'])

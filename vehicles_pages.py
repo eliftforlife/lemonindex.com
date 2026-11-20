@@ -33,13 +33,15 @@ def bars_pct(rows, cls=''):
 def bars_n(rows):
     mx = max([v for _, v in rows] + [1])
     return '<div class="pts vyr">' + ''.join(f'<div class="pt"><span>{E(str(k))}</span><span class="bt"><i style="width:{v / mx * 100:.0f}%"></i></span><b>{v:,}</b></div>' for k, v in rows) + '</div>'
+_HB_MAKES2 = ('Aston Martin', 'Alfa Romeo', 'Land Rover', 'Range Rover', 'Harley-Davidson', 'Royal Enfield', 'Moto Guzzi', 'MV Agusta')   # makes of two words
 def hub_bars(rows, unit='', pre=''):
     """11-10 (Elijah: "this doesn't look good"): the hub ranking lists. A small AI cutout, the model on one line with the make under it,
     a light bar (red for the 3 highest, gray for the rest) and the number. Centered at 760 px; the label column never squeezes."""
     mx = max([v for _, v in rows] + [1]); hi = sorted((v for _, v in rows), reverse=True)[:3]
     out = []
     for k, v in rows:
-        k = str(k); parts = k.split(' ', 1); make, model = (parts[0], parts[1]) if len(parts) == 2 else ('', k)
+        k = str(k); mk2 = next((m for m in _HB_MAKES2 if k.startswith(m + ' ')), None)   # 11-20: "Aston Martin Vantage" showed as "Martin Vantage / Aston"
+        parts = [mk2, k[len(mk2) + 1:]] if mk2 else k.split(' ', 1); make, model = (parts[0], parts[1]) if len(parts) == 2 else ('', k)
         ph = vph(k); im = f'<img src="{E(ph["src"])}" alt="" width="{ph["w"]}" height="{ph["h"]}" loading="lazy" decoding="async">' if ph else ''
         out.append(f'<div class="hb{" bad" if v in hi else ""}"><span class="hb-i">{im}</span><span class="hb-n"><b>{E(model)}</b><small>{E(make)}</small></span>'
                    f'<span class="hb-t"><i style="width:{v / mx * 100:.0f}%"></i></span><b class="hb-v">{pre}{v:,}{unit}</b></div>')

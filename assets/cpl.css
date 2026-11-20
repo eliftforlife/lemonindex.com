@@ -646,3 +646,14 @@ main:has(.tb-hero.sch) > aside.supc { max-width: 760px; }
 .sce1-r b { display: block; font-size: 24px; font-weight: 800; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
 .sce1-r small { display: block; margin-top: 2px; font-size: 13px; color: #6e6e73; }
 @media (max-width: 520px) { .sce1-r { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+/* 11-20 site fixes: year ranges ("2003–07") and "89% vs 57%" stay on one line; 4 engine tiles go 2x2 on phones so the numbers fit */
+article.tr2 .trc b, .pg.ev5 article.ev2 .trc b, .ukx .ukx-st b { white-space: nowrap; }
+@media (max-width: 480px) {
+  article.eng5 > .trc:has(> div:nth-child(4)) { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  article.tr2 .trc b { font-size: clamp(16px, 5vw, 20px); }
+}
+@media (max-width: 600px) { .ukx .ph .ukx-st b { font-size: clamp(18px, 5.6vw, 24px); } }
+/* 11-20: the "Every year" column headers were clipped to one 18px line (their explainer line never showed); let them grow, each over its bar + number */
+.yb.yt2 .bl.yth2 { height: auto !important; overflow: visible !important; align-items: end; line-height: 1.25; }
+.yb.yt2 .yth2 > span:nth-child(2) { grid-column: 2 / 4; } .yb.yt2 .yth2 > span:nth-child(4) { grid-column: 4 / 6; }
+.yb.yt2 .yth2 > span:nth-child(3), .yb.yt2 .yth2 > span:nth-child(5) { display: none; }

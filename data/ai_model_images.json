@@ -603,13 +603,13 @@
   "bytes": 40344
  },
  "honda-cr-v": {
-  "src": "/assets/ai-models/honda-cr-v.webp?v=1",
+  "src": "/assets/ai-cars/honda-cr-v-2019.webp?v=1",
   "w": 1000,
   "h": 600,
-  "year": 2001,
+  "year": 2019,
   "name": "Honda CR-V",
   "color": "white",
-  "bytes": 39926
+  "bytes": 31954
  },
  "honda-fit": {
   "src": "/assets/ai-models/honda-fit.webp?v=1",

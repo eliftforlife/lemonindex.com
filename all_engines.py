@@ -239,7 +239,7 @@ _AE_KT = {t for _k, _l, t in AE_CATS if t}
 def _ae_cat_box(k, lab, cs, first):
     r = cs[0]; im = r['img']
     pic = f'<span class="ae5-im"><img src="{E(im[0])}" width="{im[1]}" height="{im[2]}" alt=""{"" if first else " loading=" + chr(34) + "lazy" + chr(34)} decoding="async"></span>'
-    return (f'<div class="cpl"><details class="ae5-c" data-type="{k}"><summary class="cpl-keep">{pic}<span><b>{E(lab)}</b><small>{E(r["name"])} · {len(cs)} engines</small></span>{PILL_AR}</summary>'
+    return (f'<div class="cpl"><details class="ae5-c" data-type="{k}"><summary class="cpl-keep">{pic}<span><b>{E(lab)}</b><small>{len(cs)} engines · e.g. {E(r["name"])}</small></span>{PILL_AR}</summary>'
             f'<div class="cpl-b"><div class="aeg">{"".join(_ae_card(c) for c in cs)}</div></div></details></div>')
 _ae_boxes = []
 for _k, _lab, _t in AE_CATS:
@@ -249,7 +249,7 @@ _ae_h2h = '<ul class="ae5-l">' + ''.join(f'<li><a href="{u}">{lab.replace(", ", 
 _ae_hubs = ('<ul class="ae5-l"><li><a href="/engines/bmw/">BMW engines</a></li><li><a href="/engines/supercars/">Supercar engines</a></li><li><a href="/engines/performance/">Performance engines</a></li>'
             '<li><a href="/check-engine-light/">Check engine light codes</a> (OBD-II trouble codes, a different lookup)</li></ul>')
 _ae_body = f'''<div class="pg ae5"><div class="ph ph-f"><section class="finder aefind" aria-labelledby="fh"><h1 id="fh"><span class="ph-e">Engines</span>Every engine.</h1>
-<p class="lede">{_aeN} engines with their own page. Free.</p>
+<p class="lede">{_aeN} engines with their own page · {ENG_POOL_N} ranked by YouTube owner tone. Free.</p>
 <div class="fq"><input id="aeq" type="search" placeholder="e.g. LS3, B58, 2JZ, Honda K20" autocomplete="off" aria-label="Search engines" aria-controls="aegrid"></div>
 <p class="fnote" id="aen" aria-live="polite"></p></section></div>
 <section class="aeng ae5g" id="aegrid">{AEC2_CSS}<div class="cpl-grp cpl-ins ae5-cats">{"".join(_ae_boxes)}</div>
@@ -272,8 +272,8 @@ def _ae_years(t):
         if a <= b <= a + 60: ys.update(range(a, b + 1))
     return sorted(ys)
 for c in sorted(AE_LIVE.values(), key=lambda c: (c['o'], c['name'])): AE_FIND.append((c['name'] + ' engine', c['mk'], c['url'], 'eng', c.get('ylist') or _ae_years(c.get('yrs')), ' '.join([c['code'], c.get('alias', ''), 'engine', AE_FL[c['f']].lower()] + c['used']), 0))
-for (mk, eng), v in _ae_soonl:
-    ms = v['models']; AE_FIND.append((f'{mk} {eng} engine ({", ".join(ms[:3])}{"…" if len(ms) > 3 else ""})', mk, '', 'eng', (), ' '.join(ms + ['engine', AE_FL[v['fuel']].lower()]), 1))
+# 11-20: coming-soon engines have no page, so they stay out of site search (a "Cybertruck" search showed a grayed-out engine row); the /engines/ grid still lists them
+# (was: one grayed-out AE_FIND row per coming-soon engine)
 _ae_orph = sorted(k[5:] for k in (globals().get('ENG_SOON_YT') or {}) if 'soon:' + k[5:] in ENG_POOL and k[5:] not in {_AE_KEY(mk, eng) for mk, eng in AE_SOON})
-if _ae_orph: print('NOTE coming-soon YouTube studies with no card any more (the engine has a page now; still counted in the rank pool):', ', '.join(_ae_orph))
+if _ae_orph: print('NOTE coming-soon YouTube studies with no card any more (the engine has a page now):', ', '.join(_ae_orph))
 print('all engines page:', _aeN, 'live,', _aeS, 'coming soon (' + str(sum(1 for _mk, _eg in AE_SOON if 'soon:' + _AE_KEY(_mk, _eg) in ENG_POOL_RANK)) + ' with a YT rank),', len({m[0] for m in _ae_models}), 'models | soon by fuel:', {g: sum(_FG(v['fuel']) == g for v in AE_SOON.values()) for g in ('gas', 'diesel', 'hybrid', 'electric')})
