@@ -1,6 +1,49 @@
 # Electric-car pages (10-31, Elijah: "do all 5"). Run by build.py with exec(), so page(), E, plain, bars, stars, FY, CARU are in scope.
 # Data: data/ev.json from 3 Lemon Index/ev/ev_data.py (NHTSA complaints, KBB sales estimates, EPA, NHTSA recalls, NHTSA driver-assist crash reports).
 # Pages: /electric/ (ranking) + /electric/fires/ /electric/cost/ /electric/problems/ /electric/driver-assist-crashes/ + /electric/<car>/.
+# 11-19 v5 (Elijah, Equinox EV page on desktop: "the cards are off to the side ... compared to what it's supposed to look like with the stuff in
+# the center"): every /electric/ page gets the model-page look in one centered column. Runs in page() after the date hash (EV5_HOOK), so no
+# page date moves. Same URLs, titles, H1s and text: the model pages get the model-page top (photo, Good / Average / Bad bar, score, the
+# answer line); the topic pages keep their first section open and fold the later sections into boxes; the hub only gets the centering class.
+from bs4 import BeautifulSoup as _EV5BS
+EV5_LI = {}   # model page path -> (EV score, car name), filled below
+_EV5_TOPIC_IC = [(r'cover|source', 'info'), (r'brand', 'chart'), (r'without', 'warning'), (r'recall|fire', 'bell')]
+def EV5_HOOK(path, body):
+    if not path.startswith('/electric/') or 'ev5' in body: return body
+    try:
+        body = body.replace('<div class="pg', '<div class="pg ev5', 1)
+        if path in EV5_LI: return _ev5_model(path, body)
+        if path != '/electric/': return _ev5_topic(body)
+    except Exception as ex:
+        import traceback; globals().setdefault('TAB_FAIL', []).append(f'EV5 {path}: {type(ex).__name__} {ex} ' + traceback.format_exc()[-600:])
+    return body
+def _ev5_model(path, body):
+    li, nm = EV5_LI[path]
+    m = re.search(r'<p class="tra">.*?</p>', body, re.S)
+    tra = m.group(0) if m else ''
+    if m: body = body[:m.start()] + body[m.end():]
+    cl = 'bad' if li > 110 else 'good' if li < 90 else ''
+    top = (MH_CSS + f'<div class="mh-score">{_mh_gauge(li, cl, f"{E(nm)} EV score {li}; 100 is the average car")}</div>'
+           + tra.replace('class="tra"', 'class="tra ev5-ans"', 1))
+    i = body.find('<article class="study tr2 ev2')
+    j = body.rfind('</section>', 0, i)   # the end of the hero (section.ph)
+    return body[:j] + top + body[j:] if i > 0 and j > 0 else body
+def _ev5_topic(body):
+    s = _EV5BS(body, 'html.parser'); art = s.find('article', class_='study')
+    if art is None: return body
+    art['class'] = art.get('class', []) + ['ev5-t']
+    groups = []
+    for k in [k for k in art.children if getattr(k, 'name', None)]:
+        if k.name == 'h2': groups.append((k, []))
+        elif groups: groups[-1][1].append(k)
+    for n, (h, nodes) in enumerate(groups):
+        if n == 0: h['class'] = h.get('class', []) + ['ev5-h2']; continue   # the first section (its table) stays open under a big centered heading
+        t = h.get_text(' ', strip=True); ic = next((i for r, i in _EV5_TOPIC_IC if re.search(r, t, re.I)), 'chart')
+        inner = ''.join(str(x) for x in nodes)
+        box = _EV5BS(f'<div class="cpl-grp cpl-ins ev5-box"><div class="cpl">{V5_BOX(ic, E(t), inner, h2=True)}</div></div>', 'html.parser')
+        for x in nodes: x.decompose()
+        h.replace_with(box)
+    return str(s)
 EV = json.load(open('data/ev.json', encoding='utf-8'))
 EVC = EV['cars']; RK = [c for c in EVC if c.get('rank')]; P = EV['pooled']; SG = EV['sgo']
 EPART = {'FORWARD COLLISION AVOIDANCE': 'automatic emergency braking', 'ELECTRICAL SYSTEM': 'electrical', 'VEHICLE SPEED CONTROL': 'cruise and speed control',
@@ -146,6 +189,7 @@ for c in EVC:
                     f'<span class="bt"><i style="width:{y["li"] / _mx * 100:.1f}%"></i><em style="left:{100 / _mx * 100:.1f}%"></em></span><b>{y["li"]}</b></div>' for y in c['years_detail'])
     rec_note = f'{len(c["recalls"])} recalls for model years {c["years"]}' + (f', {c["recalls_fire"]} mentioning fire' if c['recalls_fire'] else '')
     title = f'{c["name"]} Reliability: Problems, Recalls and Range ({c["years"]})'
+    EV5_LI[EVU(c)] = (c['li'], c['name'])
     page(EVU(c), title + ' | The Lemon Index',
          f'{c["name"]}: Lemon Index {c["li"]} ({plain(c["li"])}), {rank}. Top problem: {ep(c["issues"][0][0]) if c["issues"] else "n/a"}. Recalls, fire complaints, EPA range and yearly cost.', f'''
 <article class="study tr2 ev2"><p class="kicker"><a href="/electric/">Electric cars</a> · {E(c["name"])}</p><h1>{E(c["name"])} reliability, {c["years"]}</h1>

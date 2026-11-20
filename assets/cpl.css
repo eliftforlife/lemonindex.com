@@ -500,3 +500,75 @@ article.eng5 > p.note, article.eng5 > .eg5-one { max-width: 760px !important; ma
 @media (max-width: 520px) { .eg5 { padding: 16px 12px 12px; border-radius: 18px; } .eg5-p { height: 170px; margin-left: 24px; } .eg5-gl b { left: -26px; width: 20px; } .eg5-b i em { font-size: 11.5px; } .eg5-y { font-size: 11px; } }
 article.eng5 .egc.eg5w { margin: 6px auto 12px; }
 .eg5-c.most i { background: #8e8e93; } .eg5-lg .w.m::before { background: #8e8e93; }
+/* 11-19 brand pages top = model pages' top (brands_pages.py .bn5-h): centered name, line, photo, Good/Average/Bad bar, score, verdict */
+.bn5-h { display: flex; flex-direction: column; align-items: center; text-align: center; padding-top: clamp(20px, 3vw, 36px); }
+.bn5-h h1 { font-size: clamp(46px, 13vw, 76px); letter-spacing: -.035em; line-height: .98; margin: 6px 0 0; }
+.bn5-h .ph-s { max-width: 560px; margin: 10px auto 0; font-size: clamp(17px, 4.6vw, 22px); color: #6e6e73; }
+.bn5-h .bn5-v { width: min(100%, 680px); margin: 8px auto 0 !important; }
+.bn5-h .bn5-v img { width: 100%; height: auto; mix-blend-mode: multiply; }
+.bn5-h .mh-score { width: 100%; max-width: 680px; margin: 10px auto 4px; text-align: left; }
+.bn5-h .bn5-vd { margin: 14px auto 0; max-width: 560px; font-size: 16px; line-height: 1.5; color: #3a3a3c; }
+.bn5-h .bn5-vd .ybw { display: inline-block; margin-top: 4px; font-weight: 600; }
+.bn5-h .bn5-vd a.good { color: var(--good, #137a3a); } .bn5-h .bn5-vd a.bad { color: var(--red, #e8141c); }
+/* 11-19 v5 electric pages (electric_pages.py EV5_HOOK; Elijah: "the cards are off to the side"): one centered column like the model pages */
+.pg.ev5 > article.study, .pg.ev5 > article.study.cmpp { max-width: 760px; margin-left: auto; margin-right: auto; }
+.pg.ev5 ~ .pend, .pg.ev5 .pend { max-width: 760px; margin-left: auto; margin-right: auto; }
+.pg.ev5 .cpl-grp, .pg.ev5 .supc, .pg.ev5 .tbx { margin-left: auto; margin-right: auto; }
+.pg.ev5 .supc { width: 100%; max-width: 760px; }
+.pg.ev5 ~ .pend .cpl, .pg.ae5 ~ .pend .cpl { max-width: none; }
+.pg.ae5 ~ .pend { max-width: 760px; margin-left: auto; margin-right: auto; }
+.pg.ev5 > .ph-a .ph-v { display: flex; flex-direction: column; align-items: center; }
+.pg.ev5 > .ph-a .ph-v > img { width: min(100%, 560px); height: auto; margin: 0 auto; }
+.pg.ev5 > .ph-a .mh-score { margin-top: 0; }
+.pg.ev5 .ev5-ans { max-width: 600px; margin: 18px auto 0; font-size: 18px; line-height: 1.45; text-align: center; color: #1d1d1f; }
+.pg.ev5 article.ev2 > .note { text-align: center; }
+.pg.ev5 article.ev2 .n3-row { max-width: 760px; margin: 18px auto 0; text-align: center; }
+.pg.ev5 article.ev2 .n3-cs { justify-content: center; }
+.pg.ev5 article.ev2 .trc { max-width: 760px; margin: 18px auto 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.pg.ev5 article.ev2 .trc > div { min-width: 0; }
+.pg.ev5 article.ev2 .cpl-g2 { text-align: left; }
+.pg.ev5 article.ev2 .cpl-g2 > section > h2 { text-align: center; font-size: clamp(30px, 6vw, 44px); letter-spacing: -.03em; margin: 0 0 6px; }
+.pg.ev5 article.ev2 .cpl-g2 > section > .note { text-align: center; max-width: 600px; margin-left: auto; margin-right: auto; }
+/* topic pages (fires, cost, problems, driver-assist crashes) */
+.pg.ev5 article.ev5-t > p, .pg.ev5 article.ev5-t > ol { max-width: none; }
+.pg.ev5 article.ev5-t > .stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; max-width: 760px; margin: 22px auto 0; }
+@media (min-width: 700px) { .pg.ev5 article.ev5-t > .stats { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); } }
+.pg.ev5 article.ev5-t > .stats > div { min-width: 0; padding: 14px; border-radius: 18px; background: #f5f5f7; text-align: center; }
+.pg.ev5 article.ev5-t > h2.ev5-h2 { margin: 34px 0 14px; font-size: clamp(28px, 5.4vw, 40px); line-height: 1.1; letter-spacing: -.03em; text-align: center; }
+.pg.ev5 article.ev5-t .ev5-box { margin-top: 26px; }
+.pg.ev5 article.ev5-t .ev5-box + .ev5-box { margin-top: 10px; }
+.pg.ev5 article.ev5-t .cpl-b > .tw, .pg.ev5 article.ev5-t .cpl-b table { max-width: 100%; }
+.pg.ev5 article.ev5-t .cpl-b h2.cpl-h { margin: 0; }
+/* the hub (cat_pages.py top): the boxes and end cards in the same column, the brand grid centered */
+.pg.ev5.ckp .ck-more, .pg.ev5.ckp .cpl-rel { max-width: 760px; }
+.pg.ev5.ckp > .ckg { width: 100%; margin-left: auto; margin-right: auto; }
+/* 11-19 v5 /engines/ (all_engines.py; Elijah: "like the car page ... the compact cards with one engine from that category") */
+.ae5 .aefind .lede { max-width: 640px; margin-left: auto; margin-right: auto; margin-bottom: 18px; }
+.ae5 #aen:empty { display: none; }
+.ae5 .ae5g { max-width: 760px; margin: 28px auto 0; padding: 0; }
+.ae5 .ae5-cats, .ae5 .ae5-more { max-width: 760px; margin: 0 auto; }
+.ae5 .ae5-more { margin-top: 26px; }
+.ae5 .ae5-cats > .cpl[hidden] { display: none; }
+.ae5 .cpl > details.ae5-c > summary { min-height: 92px; }
+.ae5 .ae5-im { flex: none; display: block; width: 92px; height: 68px; }
+.ae5 .ae5-im img { display: block; width: 100%; height: 100%; object-fit: contain; mix-blend-mode: multiply; }
+.ae5 details.ae5-c summary small { display: block; margin-top: 2px; font-size: 14px; font-weight: 500; color: #6e6e73; }
+.ae5 details.ae5-c summary b { font-size: 19px; }
+.ae5 details.ae5-c .cpl-b { padding-top: 6px; }
+.ae5 details.ae5-c .aeg { grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); }
+.ae5 .ae5-l { margin: 0; padding: 0 0 0 18px; display: grid; gap: 6px; font-size: 15.5px; }
+.ae5 .aenone { text-align: center; }
+.ae5 .aeng .ph-cr { margin-top: 26px; }
+@media (max-width: 600px) {
+  .ae5 .ae5-im { width: 68px; height: 50px; }
+  .ae5 .cpl > details.ae5-c > summary { min-height: 74px; }
+  .ae5 details.ae5-c summary b { font-size: 17px; }
+  .ae5 details.ae5-c .aeg { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+/* 11-19 every category page (cat_pages.py: /trucks/, /suvs/ ...): same centering as /electric/ */
+.pg.ckp .ck-more, .pg.ckp .cpl-rel { max-width: 760px; margin-left: auto; margin-right: auto; }
+.pg.ckp > .ckg { width: 100%; margin-left: auto; margin-right: auto; }
+/* 11-19 (Elijah): footer logo + name, slogan and app icons centered */
+.f3 .f3-top { text-align: center; }
+.f3 .f3-name { justify-content: center; }
+.f3 .f3-soc { justify-content: center; }

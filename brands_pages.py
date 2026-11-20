@@ -101,11 +101,15 @@ for b, (rk, li) in brank.items():
     top = max(study, key=lambda c: c['sold']); ph = aph(top['id'])   # 11-10 (Elijah: 'update brands car images'): AI illustrations first, Commons only where none
     cls, word = _verdict(li); est = b in ('Tesla', 'Porsche')
     best, worst = ms[0], ms[-1]
-    body = f'''<div class="pg mp6 bn4"><section class="ph yph6"><div class="yh-t"><p class="ph-e"><a href="/brands/">Brands</a> · #{rk} of {len(brank)} brands with enough data</p><h1>{E(b)}.</h1>
+    # 11-19 (Elijah, BMW brand page on desktop: "isn't it supposed to have a BMW in the center, then the text below it, and then the new bar thing?"):
+    # the model pages' v2 top (model_hero.py): centered name and line, the photo, then the Good / Average / Bad bar with the score
+    _bimg = YSL.model_hero_html(top['id'], top['name']) if ph and ph.get('ai') else pimg(ph, top["name"]) + pcredit(who(ph))
+    body = f'''<div class="pg mp6 bn4 bn5"><section class="ph bn5-h">{MH_CSS}<p class="ph-e"><a href="/brands/">Brands</a> · #{rk} of {len(brank)} brands with enough data</p><h1>{E(b)}.</h1>
 <p class="ph-s">Every {E(b)} model, ranked by owner complaints per car sold.</p>
-<div class="yhero">{gauge(li, 190)}<div class="yverd {cls}"><p><b>{word}.</b> <span>{E(b)} models in our 2010–2022 study{"" if plain(li).lower() in word.lower() else ": " + E(plain(li))}.</span></p>
-<p class="ybw">Best <a class="good" href="{car_href(best["id"]) or "/brands/"}">{E(best["name"])}</a>{f' · Worst <a class="bad" href="{car_href(worst["id"]) or "/brands/"}">{E(worst["name"])}</a>' if worst is not best else ''}</p></div></div></div>
-<div class="ph-v">{YSL.model_hero_html(top['id'], top['name']) if ph and ph.get('ai') else pimg(ph, top["name"]) + pcredit(who(ph))}</div></section>
+<div class="ph-v bn5-v">{_bimg}</div>
+<div class="mh-score">{_mh_gauge(li, cls if cls != 'mid' else '', f'{b} Lemon Index {li}; 100 is the average car')}</div>
+<p class="bn5-vd {cls}"><b>{word}.</b> {E(b)} models in our 2010–2022 study{"" if plain(li).lower() in word.lower() else ": " + E(plain(li))}.<br>
+<span class="ybw">Best <a class="good" href="{car_href(best["id"]) or "/brands/"}">{E(best["name"])}</a>{f' · Worst <a class="bad" href="{car_href(worst["id"]) or "/brands/"}">{E(worst["name"])}</a>' if worst is not best else ''}</span></p></section>
 {warranty_html(b)}
 {_brand_lists(b, ms, co, soon, live, later, moto, _STUDY)}
 {_best_tiles(b, ms)}
