@@ -1086,7 +1086,7 @@ table.spec td { font-size: 14px; }
 .imgcard code, .yc code { font-size: 12.5px; background: #f4f3ef; padding: 2px 6px; border-radius: 6px; word-break: break-word; }
 .engt table.adv { min-width: 860px; } .engt table.adv td:nth-child(2) { min-width: 210px; } .engt table.adv td:first-child { font-weight: 600; }
 table.spec { min-width: 820px; }
-/* 11-10 donation copy: ad-free line + planned list in the support sheet; donor request box on /thanks/ */
+/* 11-10 donation copy: support line + planned list in the support sheet; donor request box on /thanks/ */
 .vh { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .sup-ads { margin: -6px 24px 10px; font-size: 15px; color: var(--ink2); }
 .sup-next { margin: 0 24px 16px; font-size: 14px; color: var(--ink2); }
