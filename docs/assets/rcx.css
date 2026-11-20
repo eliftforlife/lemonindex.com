@@ -38,3 +38,60 @@
 @media (min-width: 900px) { .yph6 .rcx-vf + .fnote { text-align: left; } }
 .rcx .yc h2 .h2s { flex-basis: 100%; }
 .yph6 .rcx-st { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 520px; }
+
+/* 11-19 v5 (Elijah: "make the recall pages like the home page / the new model page"). Prefix rx5-. */
+.rx5 { max-width: 760px; margin: 0 auto; }
+.rx5-h { text-align: center; padding: 14px 0 4px; }
+.rx5-e { margin: 0; font-size: 15px; font-weight: 600; color: #6e6e73; }
+.rx5-e a { color: inherit; text-decoration: none; }
+.rx5-h h1 { margin: 4px 0 0; font-size: clamp(40px, 11.5vw, 68px); font-weight: 800; line-height: 1.02; letter-spacing: -.035em; }
+.rx5-s { margin: 2px 0 0; font-size: 20px; font-weight: 600; color: #6e6e73; }
+.rx5-s2 { margin: 10px auto 0; max-width: 520px; font-size: 18px; line-height: 1.4; color: #6e6e73; }
+.rx5-im img { display: block; width: 100%; max-width: 440px; height: auto; margin: 10px auto 0; }
+.rx5-big { margin-top: 14px; }
+.rx5-big b { display: block; font: 800 clamp(60px, 17vw, 88px)/1 var(--sys, Archivo, Inter, sans-serif); letter-spacing: -.04em; font-variant-numeric: tabular-nums; }
+.rx5-big span { display: block; margin-top: 6px; font-size: 16px; color: #6e6e73; }
+.rx5-line { margin: 12px auto 0; font-size: 14.5px; line-height: 1.45; color: #6e6e73; } .rx5-line b { color: #1d1d1f; font-weight: 700; }
+.rx5 .rx5-vf { display: flex; flex-wrap: wrap; align-items: center; gap: 0; max-width: 560px; margin: 18px auto 0; padding: 5px; border: 2px solid #1d1d1f; border-radius: 18px; background: #fff; box-sizing: border-box; }
+.rx5 .rx5-vf input { flex: 1; min-width: 0; padding: 11px 12px; border: 0; border-radius: 12px; background: transparent; font: 600 17px Inter, system-ui, sans-serif; letter-spacing: .03em; outline: none; }
+.rx5 .rx5-vf input::placeholder { text-transform: none; letter-spacing: 0; font-weight: 400; color: #8e8e93; }
+.rx5 .rx5-vf .btn { flex: none; margin: 0; padding: 12px 20px; border-radius: 13px; font-size: 16px; }
+.rx5 .rx5-vf .rcx-msg { margin: 6px 8px 4px; }
+.rx5-vf:focus-within { box-shadow: 0 0 0 3px var(--lemon, #ffd400); }
+.rx5-fn { margin: 8px auto 0; max-width: 520px; font-size: 13px; line-height: 1.4; color: #6e6e73; }
+.rx5-pick { margin: 22px auto 0; max-width: 560px; padding: 18px 16px; border-radius: 22px; background: #f5f5f7; text-align: left; }
+.rx5-pick h2 { margin: 0 0 12px; font-size: 22px; letter-spacing: -.02em; text-align: center; }
+.rx5-pick .vnv-f { margin: 0; }
+.rx5-pick select { background-color: #fff; }
+.rx5-sec { margin: 40px 0 0; text-align: center; }
+.rx5-sec h2 { margin: 0; font-size: clamp(28px, 8vw, 38px); font-weight: 800; letter-spacing: -.03em; }
+.rx5-sub { margin: 4px 0 16px; font-size: 15px; color: #6e6e73; }
+.rx5-g { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+@media (min-width: 700px) { .rx5-g { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.rx5-c { position: relative; display: flex; flex-direction: column; align-items: center; min-width: 0; padding: 30px 10px 14px; border-radius: 22px; background: #f5f5f7; color: #1d1d1f; text-decoration: none; }
+a.rx5-c:hover { background: #ececf0; }
+.rx5-c img { display: block; width: 100%; max-width: 200px; aspect-ratio: 5 / 3; height: auto; object-fit: contain; }
+.rx5-c b { margin-top: 8px; font-size: 16px; font-weight: 700; line-height: 1.2; }
+.rx5-c small { margin-top: 2px; font-size: 12.5px; color: #6e6e73; }
+.rx5-cn { position: absolute; top: 10px; right: 14px; font-size: 15px; font-weight: 800; color: #d0121a; font-variant-numeric: tabular-nums; }
+.rx5-chips { margin-top: 14px; }
+.rx5-bars { list-style: none; margin: 0 auto; padding: 0; display: grid; gap: 6px; max-width: 560px; text-align: left; }
+.rx5-bars li { display: grid; grid-template-columns: minmax(48px, 30%) 1fr 2.6em; align-items: center; column-gap: 10px; font-size: 15px; }
+.rx5-bl { font-weight: 600; overflow-wrap: anywhere; } .rx5-bl a { color: inherit; text-decoration: none; }
+.rx5-bb { height: 14px; border-radius: 4px; background: #f0f0f3; overflow: hidden; }
+.rx5-bb i { display: block; height: 100%; border-radius: 4px; background: #1d1d1f; }
+.rx5-bars li.hi .rx5-bb i { background: #e8141c; } .rx5-bars li.hi b { color: #d0121a; }
+.rx5-bars b { text-align: right; font-variant-numeric: tabular-nums; }
+.rx5-more { max-width: 560px; margin: 8px auto 0; text-align: left; }
+.rx5-more > summary { cursor: pointer; padding: 10px 0; font-weight: 600; color: #1d1d1f; }
+.rx5-more > .rx5-bars { margin-top: 6px; }
+.rx5-pl { max-width: none; margin: 36px 0 0; }
+.rx5-pl .cpl-b .rx5-bars { max-width: none; }
+.rx5 .cpl .rc li { border: 0; border-radius: 16px; padding: 14px 16px; background: #fff; box-shadow: inset 0 0 0 1px #e5e5ea; }
+.rx5 .rc li > b { font-size: 17px; letter-spacing: -.01em; }
+.rx5 .rc li p { font-size: 15px; line-height: 1.45; }
+.rx5 .rcx-warn li { box-shadow: inset 0 0 0 1px #e5e5ea, inset 4px 0 0 #e8141c; }
+.rx5 .cpl-b .rcx-chips { margin: 0; }
+.rx5 .cpl-b details.qa { background: #fff; }
+.rx5 .cpl > a.cpl-a { color: #1d1d1f; text-decoration: none; }
+.rx5-pl { margin-top: 28px; }
