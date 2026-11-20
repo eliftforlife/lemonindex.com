@@ -68,7 +68,7 @@ def _ep_box(soup, title, sub, inner_nodes, sid=None, h2=True):
     body = box.find(class_='cpl-b')
     for n in inner_nodes: body.append(n.extract())
     sec.append(box); return sec
-_EP_KEEP = ('n3-eng', 'yqa')   # open: the "Trucks/cars with this engine" year list and Quick answers
+_EP_KEEP = ('n3-eng', 'yqa', 'cp5-sec')   # open: the "Trucks/cars with this engine" year list and Quick answers
 def _ep_details_box(soup, node):
     """<details class="trm|cpd"><summary>Title: rest</summary>...</details> -> a box"""
     sm = node.find('summary'); t = _ep_txt(sm); sm.extract()

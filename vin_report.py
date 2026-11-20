@@ -87,3 +87,11 @@ VR_SEO = (f'<section class="vr-seo"><h2>Free VIN check: the model-year&#39;s rec
           '<li><b>Test drive checklist:</b> one check for each of that year&#39;s top complaint areas, nothing generic.</li>'
           '<li><b>A share card:</b> one screen with the score, the risks and the recall count, to send to whoever you&#39;re buying with.</li></ul>'
           '<h2>Questions</h2>' + qa_fold(''.join(f'<h3>{q}</h3><p>{a}</p>' for q, a in VR_QA)) + '</section>')
+
+# 11-19 v5: the same text as title-only tap-to-open boxes (the page's v5 look); VR_SEO stays for anything else that uses it
+VR_BOXES = ('<div class="cpl v5-pl">'
+            + V5_BOX('question', 'Buying? Ask for the VIN first', '<p class="yc-cap">Ask the seller for the VIN before you go see the car. Honest sellers share it; it&#39;s also in most online listings and on the windshield.</p>')
+            + V5_BOX('data', 'What the free VIN check shows', VR_SEO.split('<h2>Questions</h2>')[0].replace('<section class="vr-seo">', '').replace("<h2>Free VIN check: the model-year&#39;s record, not the car&#39;s history</h2>", '<h2 class="v5-bh">Free VIN check: the model-year&#39;s record, not the car&#39;s history</h2>'))
+            + V5_BOX('talk', 'Questions', qa_fold(''.join(f'<h3>{q}</h3><p>{a}</p>' for q, a in VR_QA)))
+            + V5_GO('warning', 'Recalls by make and model', '/recalls/')
+            + '</div>')

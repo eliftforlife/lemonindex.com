@@ -261,7 +261,7 @@ def _uk_hub(models, pages):
            'Open Government Licence v3.0. The scores are our own analysis, not DVSA&#39;s.')]
     if av: qa.insert(2, ('Is the Toyota Avensis good on MOTs?', f'Yes, against cars its age. {_ukp(av["pass"])} of Avensis cars passed first time in {av["tests"]:,} tests, '
                          f'{_ukpts(av["diff"])} cars first registered in the same years, even though they averaged {av["miles"]:,} miles at the test (same-age cars: {av["exp_miles"]:,}).'))
-    body = (f'<div class="pg mp6 ukx">{UK_ASSET}<section class="ph"><p class="ph-e"><a href="/">The Lemon Index</a> · UK</p>'
+    body = (f'<div class="pg mp6 ukx uk5">{UK_ASSET}<section class="ph"><p class="ph-e"><a href="/">The Lemon Index</a> · UK</p>'
             f'<h1>UK MOT pass rates by car model.</h1><p class="ph-s">Which used cars pass their MOT first time, compared with cars the same age. '
             f'From {meta["tests_in_scope"]:,} MOT tests in Great Britain in {meta["test_year"]}.</p>'
             f'<div class="stats ukx-st"><div><b>{meta["tests_in_scope"] / 1e6:.1f}M</b><span>MOT tests on cars and vans first registered {y_old}–{y_new}</span></div>'
@@ -270,19 +270,22 @@ def _uk_hub(models, pages):
             f'<section class="yc" id="ukx-best"><h2>Best and worst popular cars. <span class="h2s">MOT pass rate against cars the same age, models with 50,000+ tests.</span></h2>'
             f'<div class="ukx-bw">{lst(best, "Pass more than cars their age")}{lst(worst, "Fail more than cars their age")}</div>'
             f'<p class="ukx-cap">Points = first-time pass rate minus the average for every car first registered in the same years. {UK_TEST_DAY}</p></section>'
-            f'<section class="yc" id="ukx-vans"><h2>Vans and pickups. <span class="h2s">Against other vans the same age, 30,000+ tests.</span></h2>'
-            f'<div class="ukx-bw">{lst(bestv, "Best")}{lst(worstv, "Worst")}</div><p class="ukx-cap">Vans do more miles and harder work than cars, so they get their own average. '
-            'Van-based people carriers (Berlingo, Tourneo, Transporter) count as vans. Goods vans over 3,000 kg take a different MOT (class 7) that isn&#39;t in these numbers, '
-            'so big vans like the Ducato, Boxer and Sprinter count only their lighter versions and motorhomes, which take the car MOT.</p></section>'
-            f'<section class="yc" id="ukx-age"><h2>Why we compare cars with cars the same age. <span class="h2s">First-time MOT pass rate by year of first registration, every car.</span></h2>'
-            f'<ul class="ukx-age" aria-label="Pass rate by year of first registration">{age}</ul>'
-            f'<p class="ukx-cap">Cars first registered in {y_new} (3 years old, many on their first MOT) passed {_ukp(ca[str(y_new)]["pass"])}; cars first registered in {y_old} passed '
-            f'{_ukp(ca[str(y_old)]["pass"])}. A model sold mostly as new cars would beat one whose cars are mostly old, whatever the build quality. So every score here compares a model '
-            'with every car first registered in the same years, weighted by its tests.</p></section>'
-            f'<section class="yc" id="ukx-models"><h2>Every model. <span class="h2s">Search, then tap a column to sort. The list scrolls.</span></h2>{table}</section>'
-            f'<section class="yc" id="ukx-why"><h2>What cars fail on. <span class="h2s">Share of car tests with a fail in each area.</span></h2>{abars}'
-            '<p class="ukx-cap">A test can fail in more than one area. Lights and electrics are mostly bulbs; tyres are mostly tread under the 1.6 mm legal limit; &ldquo;body, chassis and underside&rdquo; also covers exhaust pipes, driveshaft (CV) boots and engine mounts.</p></section>'
-            + _uk_faq_html(qa) + _uk_src()
+            + '<div class="cpl v5-pl uk5-pl">'
+            + V5_BOX('car', 'Vans and pickups.', '<p class="yc-cap">Against other vans the same age, 30,000+ tests.</p>'
+                     f'<div class="ukx-bw">{lst(bestv, "Best")}{lst(worstv, "Worst")}</div><p class="ukx-cap">Vans do more miles and harder work than cars, so they get their own average. '
+                     'Van-based people carriers (Berlingo, Tourneo, Transporter) count as vans. Goods vans over 3,000 kg take a different MOT (class 7) that isn&#39;t in these numbers, '
+                     'so big vans like the Ducato, Boxer and Sprinter count only their lighter versions and motorhomes, which take the car MOT.</p>', 'ukx-vans', h2=True)
+            + V5_BOX('data', 'Every model.', '<p class="yc-cap">Search, then tap a column to sort. The list scrolls.</p>' + table, 'ukx-models', h2=True)
+            + V5_BOX('calendar', 'Why we compare cars with cars the same age.', '<p class="yc-cap">First-time MOT pass rate by year of first registration, every car.</p>'
+                     f'<ul class="ukx-age" aria-label="Pass rate by year of first registration">{age}</ul>'
+                     f'<p class="ukx-cap">Cars first registered in {y_new} (3 years old, many on their first MOT) passed {_ukp(ca[str(y_new)]["pass"])}; cars first registered in {y_old} passed '
+                     f'{_ukp(ca[str(y_old)]["pass"])}. A model sold mostly as new cars would beat one whose cars are mostly old, whatever the build quality. So every score here compares a model '
+                     'with every car first registered in the same years, weighted by its tests.</p>', 'ukx-age', h2=True)
+            + V5_BOX('wrench', 'What cars fail on.', '<p class="yc-cap">Share of car tests with a fail in each area.</p>' + abars
+                     + '<p class="ukx-cap">A test can fail in more than one area. Lights and electrics are mostly bulbs; tyres are mostly tread under the 1.6 mm legal limit; &ldquo;body, chassis and underside&rdquo; also covers exhaust pipes, driveshaft (CV) boots and engine mounts.</p>', 'ukx-why', h2=True)
+            + V5_BOX('talk', 'Questions', qa_fold(''.join(f'<h3>{q}</h3><p>{a}</p>' for q, a in qa)), 'questions', h2=True)
+            + V5_BOX('info', 'How to read this, and where the data comes from', _uk_src())
+            + '</div>'
             + share_line(f'UK MOT pass rates for {len(models)} car models, against cars the same age (2024 MOT tests):', 'Know someone buying a used car in the UK?')
             + '</div><script src="/assets/ukx.js?v=1" defer></script>')
     page('/uk/', 'UK MOT Pass Rates by Car Model: Best and Worst Cars | The Lemon Index',
