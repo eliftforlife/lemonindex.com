@@ -75,11 +75,22 @@ for r in (json.load(open('data/cars_new.json', encoding='utf-8')) if os.path.exi
     CARS_NEW.append(dict(id=r['id'], name=r['name'], brand=r['brand'], seg=r['segment'], segName=SEGN.get(r['segment'], r['segment']), years=r['years'], sold=r['sold'], est=False,
                          n=r['n'], per100k=r['per100k'], avg=round(r['expected'] / r['sold'] * 1e5), li=r['li'], serious=r['serious'], worst=r['worst'], issues=r['issues'],
                          new=True, sales_url=r.get('sales_url'), sales_kind=r.get('sales_kind')))
+exec(open('quote_clean.py', encoding='utf-8').read())   # 11-20 owner quotes: light spelling cleanup, cleaner quotes first, garbled ones skipped (QC_WALK)
+def QC_WALK(o):
+    """Every 'quotes' list of owner-quote dicts ({text, odi, ...}) inside o goes through QC_PICK (quote_clean.py). Returns o."""
+    if isinstance(o, dict):
+        for k, v in o.items():
+            if k == 'quotes' and isinstance(v, list) and v and all(isinstance(q, dict) and 'text' in q for q in v): o[k] = QC_PICK(v)
+            else: QC_WALK(v)
+    elif isinstance(o, list):
+        for v in o: QC_WALK(v)
+    return o
 _YJ = json.load(open('data/years.json', encoding='utf-8')) + (json.load(open('data/years_new.json', encoding='utf-8')) if os.path.exists('data/years_new.json') else [])
 _YJ += json.load(open('data/years_tesla.json', encoding='utf-8')) if os.path.exists('data/years_tesla.json') else []   # 11-12 UX test: Tesla Model S/3/X year pages (data_tesla.py)
 # 11-11 (Elijah): low-sales years (cited U.S. sales under 20,000) are listed too: complaints, problems, recalls and a year page, never a score
 # (li None, ok False), never a best/worst pick. Study models: data/years_low.json (data_lowsales.py); new models carry them in years_new.json.
-_YLOW = json.load(open('data/years_low.json', encoding='utf-8')) if os.path.exists('data/years_low.json') else {}
+QC_WALK(_YJ)
+_YLOW = QC_WALK(json.load(open('data/years_low.json', encoding='utf-8'))) if os.path.exists('data/years_low.json') else {}
 for _f in _YJ:
     if _YLOW.get(_f['id']): _f['years'] = sorted(_f['years'] + [v for v in _YLOW[_f['id']] if v['y'] not in {w['y'] for w in _f['years']}], key=lambda v: v['y'])
 FSX = 'years'; exec(open('f150_split.py', encoding='utf-8').read())   # 11-17: the F-150 page counts F-150 complaints only, no score (Super Duty split out)
@@ -373,6 +384,15 @@ def navlinks(path):
 CITE = '<p class="cite">Free to use with credit: <q>Source: The Lemon Index (lemonindex.com)</q>. <a href="/data/">Get the data</a></p>'
 _AH = re.compile(r'<article class="study([^"]*)"><p class="kicker">(.*?)</p>\s*<h1>(.*?)</h1>\s*(?:<p class="lede">(.*?)</p>)?', re.S)
 _TBL = re.compile(r'<table(?:\s[^>]*)?>.*?</table>', re.S)
+# 11-20 (QA: "CR-" / "V" on two lines on phones): in headings and hero lines, a hyphenated model name (CR-V, F-150, CX-5, Mazda3 MPS-R)
+# is wrapped in a no-wrap span, so it never splits at its hyphen
+_NW_BLK = re.compile(r'(<(h1|h2|h3)\b[^>]*>|<p class="(?:ph-s|v5-s|ph-e)[^"]*">)(.*?)(</\2>|</p>)', re.S)
+_NW_WORD = re.compile(r'(?<![\w&#;-])([A-Za-z0-9]+(?:-[A-Za-z0-9]+)+)(?![\w-])')
+def nowrap_hy(body):
+    def blk(m):
+        inner = re.sub(r'(^|>)([^<]+)', lambda t: t.group(1) + _NW_WORD.sub(lambda w: f'<span class="nw">{w.group(1)}</span>' if any(c.isupper() or c.isdigit() for c in w.group(1)) else w.group(1), t.group(2)), m.group(3))
+        return m.group(1) + inner + m.group(4)
+    return _NW_BLK.sub(blk, body)
 def stack_tables(body):
     """11-10 (design audit: tables cut off on phones): every table with 4+ columns gets class "stk" and a data-label on each cell (its
     column header), so site.css can show each row as a small stacked card under 600 px. Narrower tables just fit the screen."""
@@ -384,7 +404,17 @@ def stack_tables(body):
         hr = next((r for r in rows if r.find('th') and not r.find('td')), None)
         if not hr: return t
         heads = [c.get_text(' ', strip=True) for c in hr.find_all(['th', 'td'])]
-        if len(heads) < 4: return t
+        # 11-20 (Elijah, Corvette: a Crash test column of nothing but dashes): a column with no data in any row is dropped
+        _br = [r for r in rows if r is not hr]; _cs = [r.find_all(['td', 'th'], recursive=False) for r in _br]
+        _nil = lambda c: c.get_text(strip=True) in ('—', '–', '-') or (not c.get_text(strip=True) and not c.find(True))
+        dead = [i for i in range(1, len(heads)) if _cs and all(len(cs) == len(heads) and _nil(cs[i]) for cs in _cs)] if not tb.find(attrs={'colspan': True}) else []
+        if dead:
+            hc = hr.find_all(['th', 'td'], recursive=False)
+            for i in reversed(dead):
+                hc[i].decompose()
+                for cs in _cs: cs[i].decompose()
+            heads = [h for i, h in enumerate(heads) if i not in dead]
+        if len(heads) < 4: return str(s) if dead else t
         for r in rows:
             if r is hr: continue
             for i, c in enumerate(r.find_all(['td', 'th'], recursive=False)):
@@ -434,7 +464,7 @@ _SNJ = json.load(open('data/search_names.json', encoding='utf-8')) if os.path.ex
 _MN = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 # 11-11 (Elijah: "above the top header might be better"): the phone donate bar sits at the very top, above the header, and scrolls away with
 # the page while the header pins as usual. In the HTML (no layout jump); DB_JS hides it before paint for 7 days after x, 60 after a donation.
-DONBAR = ('<div class="donbar" role="region" aria-label="Support the Lemon Index"><button type="button" class="donbar-go">Keep Lemon free &amp; ad-free · '
+DONBAR = ('<div class="donbar" role="region" aria-label="Support the Lemon Index"><button type="button" class="donbar-go">Support Lemon Index · '
           '<b>Donate&nbsp;›</b></button><button type="button" class="donbar-x" aria-label="Close the donate bar">×</button></div>')
 DB_JS = "try{var n=Date.now(),g=function(k){return +localStorage.getItem(k)||0};if(n-g('li-donbar-x')<6048e5||n-g('li-support-paid')<5184e6)document.documentElement.className+=' db-off'}catch(e){}"
 import base64 as _b64
@@ -517,6 +547,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
         _upd = f'Updated <time datetime="{_d}">{_dl}</time>' + (f': {E(_un)}' if _un else ''); ld = list(ld or []) + [{"@context": "https://schema.org", "@type": "WebPage", "url": BASE + path, "name": title, "dateModified": _d}]
     body = auto_hero(body, vis)
     if '<table' in body: body = stack_tables(body)   # 11-10: wide tables become stacked rows on phones (site.css .stk)
+    body = nowrap_hy(body)   # 11-20: CR-V, F-150, CX-5 never split at their hyphen in titles
     if re.fullmatch(r'/cars/[^/]+/', path) and 'RC_ROW' in globals(): body += RC_ROW(path[6:-1])   # 11-14 growth 2D-1: this model's repair cost pages
     if re.fullmatch(r'/cars/[^/]+/', path) and 'SEARCH_MINI' in globals(): body += SEARCH_MINI + (CM_ROW(path[6:-1]) if 'CM_ROW' in globals() else '') + CODES_JS   # 11-10: engine code lookup on model pages (added after the date hash, so dates don't move)
     _lxm = re.fullmatch(r'/cars/(.+?)/(\d{4})/', path)
@@ -550,14 +581,14 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' '{DB_HASH}' https://static.cloudflareinsights.com https://challenges.cloudflare.com https://www.googletagmanager.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; frame-src https://challenges.cloudflare.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cloudflareinsights.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://vpic.nhtsa.dot.gov https://api.nhtsa.gov https://lemon-survey.elift08.workers.dev https://lemon-alerts.elift08.workers.dev https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="google-adsense-account" content="{ADS}"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/lxs.css?v={LXS_V}">
-<link rel="stylesheet" href="/assets/site.css?v=1119-mu"><link rel="stylesheet" href="/assets/cpl.css?v=19"><script src="/assets/cpl.js?v=1" defer></script><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1119" defer></script>{lds}</head>
+<link rel="stylesheet" href="/assets/site.css?v=1119-mu"><link rel="stylesheet" href="/assets/cpl.css?v=21"><script src="/assets/cpl.js?v=1" defer></script><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1119" defer></script>{lds}</head>
 <body>{'' if path.startswith('/thanks/') else DONBAR}{gh_header(path)}
 <main>{body}{_eb}{_rel}{'' if path == '/vote/' else ask_html(path)}</main>
 <footer class="foot f2 f3"><div class="f3-top"><a class="f3-name" href="/"><img src="/assets/icon-64.png" alt="" width="64" height="64"><span>Lemon Index</span></a><p class="f3-tag">Check here before you buy.</p><div class="f3-soc">{F3_SOC}</div></div><div class="f2-in">
 <nav class="f2-col" aria-label="Explore"><p class="f2-h">Explore</p><a href="/compare/">Compare cars</a><a href="/best/">Best cars</a><a href="/rankings/">Every car ranked</a><a href="/brands/">Brands</a><a href="/engines/">Every engine</a><a href="/electric/">Electric cars</a><a href="/stats/car-complaints/">Statistics</a><a href="/car-loan-rates/">Car loan rates</a></nav>
 <nav class="f2-col" aria-label="Tools and data"><p class="f2-h">Tools and data</p><a href="/vin/">VIN check</a><a href="/recalls/">Recall check</a><a href="/check-engine-light/">Engine codes</a><a href="/symptoms/">Car symptoms</a><a href="/uk/">UK MOT pass rates</a><a href="/method/">How the index works</a><a href="/data/">Free data</a><a href="/images/">Free images</a><a href="/vote/">Vote</a></nav>
-<nav class="f2-col" aria-label="Support"><p class="f2-h">Support</p><button class="supl" type="button">Keep Lemon ad-free</button><a href="/about/">About</a><a href="/press/">Press</a><a href="/contact/">Contact</a><a href="{YT}?sub_confirmation=1" rel="noopener">Subscribe on YouTube</a></nav></div>
-<div class="f2-bot"><span>© {TODAY[:4]} The Lemon Index</span><a href="/terms/">Terms</a><a href="/privacy/">Privacy</a><a href="/refunds/">Refunds</a><span class="f2-dis">Built from public NHTSA complaint data and published U.S. sales figures. Not affiliated with any automaker. Not a repair-cost or safety rating.</span></div></footer><script src="/assets/explorer.js?v=1112d" defer></script><script src="/assets/support.js?v=1119" defer></script><script src="/assets/imginfo.js?v=2" defer></script><script src="/assets/lookup.js?v={LXS_V}" defer></script>{beacon}</body></html>'''
+<nav class="f2-col" aria-label="Support"><p class="f2-h">Support</p><button class="supl" type="button">Support Lemon Index</button><a href="/about/">About</a><a href="/press/">Press</a><a href="/contact/">Contact</a><a href="{YT}?sub_confirmation=1" rel="noopener">Subscribe on YouTube</a></nav></div>
+<div class="f2-bot"><span>© {TODAY[:4]} The Lemon Index</span><a href="/terms/">Terms</a><a href="/privacy/">Privacy</a><a href="/refunds/">Refunds</a><span class="f2-dis">Built from public NHTSA complaint data and published U.S. sales figures. Not affiliated with any automaker. Not a repair-cost or safety rating.</span></div></footer><script src="/assets/explorer.js?v=1112d" defer></script><script src="/assets/support.js?v=1121" defer></script><script src="/assets/imginfo.js?v=2" defer></script><script src="/assets/lookup.js?v={LXS_V}" defer></script>{beacon}</body></html>'''
     doc = _ii_stable(doc)
     doc = _ICONV.sub(r'\1?v=2', doc)   # 11-18: the box icons were redrawn (GPT image), same names
     doc = _CAT_RW.sub(lambda m: f'href="{CAT_PATH[m.group(1)]}"', doc)   # 11-19: /?type=<tab> -> the category page
@@ -872,7 +903,10 @@ yurls = []
 
 # ---- 10-31 extras (Elijah: "do all 5"): recalls, crash tests and fuel economy from the official APIs (data_fetch_api.py),
 # when problems show up (odometer at complaint) and how serious they were (data_extras_local.py).
-_load = lambda p: json.load(open(p, encoding='utf-8')) if os.path.exists(p) else {}
+def _load(p):
+    if not os.path.exists(p): return {}
+    t = open(p, encoding='utf-8').read(); d = json.loads(t)
+    return QC_WALK(d) if '"quotes"' in t else d   # 11-20: owner quotes in any data file get the same cleanup
 XL, XA = _load('data/extras_local.json'), _load('data/extras_api.json')
 if os.path.exists('data/extras_local_new.json'): XL.update(_load('data/extras_local_new.json')); XA.update(_load('data/extras_api_new.json'))   # 11-11 new models
 for _src, _dst in (('data/extras_local_low.json', XL), ('data/extras_api_low.json', XA), ('data/extras_local_tesla.json', XL), ('data/extras_api_tesla.json', XA)):   # 11-11 the study models' low-sales years
@@ -968,14 +1002,22 @@ def rtag(r):
 def rtag_html(r):
     t = rtag(r)
     return f' <span class="rtag">{E(t)}</span>' if t else ''
+RC_END = '.!?)"\'\u201d\x94'   # a sentence end, or a closing quote
+def RCUT(t, n=595):
+    """11-20: a stored recall text cut at its character cap (data_fetch_api.py: summary 600, risk 400) ends on a whole word + '…'."""
+    t = (t or '').strip()
+    return t.rsplit(' ', 1)[0].rstrip(',;:') + '…' if len(t) >= n and t[-1] not in RC_END else t
 def rsum(r):
     """A recall in one plain sentence: skip the "X is recalling certain ... vehicles ..." opener, keep the defect."""
     s = re.sub(r'\s+', ' ', r['summary']).strip()
+    # 11-20 (QA: "coil springs fracturin."): stored summaries are capped at 600 characters (data_fetch_api.py), so a 600-character one
+    # that doesn't end a sentence was cut mid-word: drop the partial word and mark the cut with an ellipsis instead of a period
+    if len(r['summary'].strip()) >= 595 and s and s[-1] not in RC_END: s = s.rsplit(' ', 1)[0].rstrip(',;:') + '…'
     s = re.sub(r'^.*?\brecalling\b.*?\b(vehicles|trucks|pick-ups|pickups|cars|SUVs|equipment|tires|seats|motorcycles)\b(?:[^.]|\.(?=\d))*?(?<!\bCo)(?<!\bInc)\.(?!\d)\s*', '', s)
     first = re.split(r'(?<!\bCo)(?<!\bInc)(?<!\bCorp)(?<!\bNo)\.\s+(?=[A-Z(])', s)[0].strip().rstrip('.') if s else ''
     if len(first) < 25 or 'recalling' in first: first = re.sub(r'\s+', ' ', r.get('risk') or '').strip().rstrip('.')
-    first = first + '.' if first else ''
-    return first[:220] + ('…' if len(first) > 220 else '')
+    first = first + ('' if first.endswith('…') else '.') if first else ''
+    return first if len(first) <= 220 else first[:220].rsplit(' ', 1)[0].rstrip(',;:') + '…'   # 11-20: cut at a word, never mid-word
 def stars(n):
     return f'<span class="stars" aria-label="{n} out of 5 stars">{"★" * int(n)}{"☆" * (5 - int(n))}</span>' if str(n).isdigit() else '<span class="muted">not rated</span>'
 def miles_html(x, name):
@@ -1042,6 +1084,13 @@ def yt_rankable(f, sc):
     launch reviews and no owner data yet, so they used to win #1 by default (e.g. the 2026 Civic)."""
     li = {v['y'] for v in f['years'] if v['ok'] or (FS_CO(v) and v['n'])}
     return {int(y) for y, s in sc.items() if s.get('score') is not None and (s.get('videos') or 0) >= YT_MIN and (int(y) < 2010 or int(y) in li)}
+def _yb_skip(f, vs):
+    """11-20 (Elijah, Corvette: many empty "–" rows): years with no score and no YouTube rank leave the Every year chart; one line under it
+    names them, each still linked to its year page."""
+    if not vs: return ''
+    rs = [('no sales figure' if NOSALES(v) else 'too few sold') if v.get('low') else 'too few complaints' for v in vs]
+    why = ' or '.join(dict.fromkeys(rs))
+    return f'<p class="yb-ns">No score ({why}): ' + ', '.join(f'<a href="{CARU(f, v["y"])}">{v["y"]}</a>' for v in vs) + '.</p>'
 def ybars_yt(f, cur, sc):
     mx = max(120, max(v['li'] for v in f['years'] if v['ok']) * 1.08); byy = {v['y']: v for v in f['years']}
     okr = yt_rankable(f, sc)
@@ -1061,8 +1110,8 @@ def ybars_yt(f, cur, sc):
                     f'<em style="left:{100 / mx * 100:.1f}%"></em></span><b>{LIS(v)}</b>{yt}</a>')
         return f'<div class="b old" data-tip="{tip}."><span class="bn">{y}</span><span class="bt na"></span><b class="mute">·</b>{yt}</div>'
     return (f'<div class="bars yb yt2"><div class="bl yth2" aria-hidden="true"><span></span><span>Complaints per car sold <em>Lemon Index · lower = better</em></span><span></span><span>YouTube owner rank <em>#1 = best-liked year</em></span><span></span></div>'
-            + ''.join(row(y) for y in ys if y in byy) + '</div>'
-            + (lambda old: f'<details class="yrs-more"><summary>Show {len(old)} older years ({old[-1]}–{old[0]}, YouTube reviews only, no complaint data)</summary><div class="bars yb yt2">{"".join(row(y) for y in old)}</div></details>' if old else '')([y for y in ys if y not in byy])
+            + ''.join(row(y) for y in ys if y in byy and (byy[y]['ok'] or y in RK or y == cur)) + '</div>' + _yb_skip(f, [byy[y] for y in ys if y in byy and not (byy[y]['ok'] or y in RK or y == cur)])
+            + (lambda old: f'<details class="yrs-more"><summary>Show {len(old)} older year{"" if len(old) == 1 else "s"} ({old[-1]}–{old[0]}, YouTube reviews only, no complaint data)</summary><div class="bars yb yt2">{"".join(row(y) for y in old)}</div></details>' if old else '')([y for y in ys if y not in byy])
             + BARS_LEG(f, len(RK)))
 def yt_rank_map(f):
     """{year: YouTube rank #} exactly as the year bars show it (rankable years only)."""
@@ -1211,7 +1260,7 @@ def BARS_LEG(f, yt=0):
 _CPL_CSS = ''   # cpl.css is in every page's head since 11-18
 _CPL_AR = ('<svg class="cpl-ar" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" '
            'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>')
-_CPL_OLD = re.compile(r'<details class="yrs-more"><summary>Show (\d+) older years \((\d{4})–(\d{4})[^<]*</summary>(.*?)</details>', re.S)
+_CPL_OLD = re.compile(r'<details class="yrs-more"><summary>Show (\d+) older years? \((\d{4})–(\d{4})[^<]*</summary>(.*?)</details>', re.S)
 _CPL_LEG = re.compile(r'<p class="yc-cap lfa-leg">.*?</p>', re.S)
 def _cpl_sum(img, title, sub=''):
     return (f'<summary><img src="{img}" alt="" width="44" height="44" loading="lazy" decoding="async"><span><b>{title}</b>'
@@ -1223,7 +1272,7 @@ def CHART_PILLS(f, bars, emx='', notes=''):
         bars = bars.replace(old.group(0), '', 1); n, a, b, rows = old.groups()
         ys = [y for y in range(int(a), int(b) + 1) if YSL.ai_src(f['id'], y)]
         im = rsmall(YSL.ai_src(f['id'], ys[len(ys) // 2])) if ys else '/assets/icons/chart.webp'
-        out.append(f'<details class="yrs-more cpl-y">{_cpl_sum(im, f"Show {n} older years", f"{a}–{b} · YouTube reviews only")}{rows}</details>')
+        out.append(f'<details class="yrs-more cpl-y">{_cpl_sum(im, f"Show {n} older year{'' if n == '1' else 's'}", f"{a}–{b} · YouTube reviews only")}{rows}</details>')
     if leg: bars = bars.replace(leg.group(0), '', 1)
     read = (leg.group(0) if leg else '') + (notes or '')
     if read.strip(): out.append(f'<details class="cpl-r">{_cpl_sum("/assets/icons/chart.webp", "How to read this chart", "Colors, ranks and what counts")}<div class="cpl-b">{read}</div></details>')
@@ -1236,14 +1285,13 @@ def CHART_PILLS(f, bars, emx='', notes=''):
 LFA_JS = '<script src="/assets/lfa.js?v=2" defer></script>'   # 11-12 r2: year lists open on the reader's year, match-up "your years"
 def ybars(f, cur=None):
     out = _ybars(f, cur)
-    if cur is None or out.count('class="b ') < 13: return out
-    return out.replace('<div class="bars yb', f'<div data-cur="{cur}" class="lfa-sc bars yb', 1) + LFA_JS   # a long list scrolls inside its box to the page's year
+    return out   # 11-20 (QA: the 560px inner scroll box hid 2000-2007 with no cue): the whole list shows; no inner scroll (was lfa-sc + LFA_JS)
 def _ybars(f, cur=None):
     if f['id'] in FS_IDS: return FS_BARS(f, cur)   # 11-17: F-150 complaints-only (f150_split.py)
     if YTS.get(f['id']): return ybars_yt(f, cur, YTS[f['id']])
     mx = max(120, max(v['li'] for v in f['years'] if v['ok']) * 1.08)
     return (f'<div class="bars yb"><div class="bl" aria-hidden="true"><span></span><span class="al" style="--a:{100 / mx * 100:.1f}%">average car = 100</span><span></span></div>'
-            + ''.join(f'<a class="b {CLS(v)}{" cur" if v["y"] == cur else ""}{" early" if v.get("early") else ""}" href="{CARU(f, v["y"])}" data-tip="{E(f["name"])} {v["y"]}: ' + (f'Lemon Index {v["li"]}, {plain(v["li"])}' if v['ok'] else f'{v["n"]} complaints, {"no sales figure to score" if NOSALES(v) else "too few sold to score"}' if v.get('low') else f'only {v["n"]} complaints, too few to score') + f'."><span class="bn">{v["y"]}</span><span class="bt"><i style="width:{min(100, v["li"] / mx * 100) if v["ok"] else 0:.1f}%"></i><em style="left:{100 / mx * 100:.1f}%"></em></span><b>{LIS(v)}</b><small>{("partial · " if v.get("early") else "") + short(v["li"]) if v["ok"] else "few complaints"}</small></a>' for v in sorted(f['years'], key=lambda v: -v['y'])) + '</div>' + BARS_LEG(f))
+            + ''.join(f'<a class="b {CLS(v)}{" cur" if v["y"] == cur else ""}{" early" if v.get("early") else ""}" href="{CARU(f, v["y"])}" data-tip="{E(f["name"])} {v["y"]}: ' + (f'Lemon Index {v["li"]}, {plain(v["li"])}' if v['ok'] else f'{v["n"]} complaints, {"no sales figure to score" if NOSALES(v) else "too few sold to score"}' if v.get('low') else f'only {v["n"]} complaints, too few to score') + f'."><span class="bn">{v["y"]}</span><span class="bt"><i style="width:{min(100, v["li"] / mx * 100) if v["ok"] else 0:.1f}%"></i><em style="left:{100 / mx * 100:.1f}%"></em></span><b>{LIS(v)}</b><small>{("partial · " if v.get("early") else "") + short(v["li"]) if v["ok"] else "few complaints"}</small></a>' for v in sorted(f['years'], key=lambda v: -v['y']) if v['ok'] or v['y'] == cur) + '</div>' + _yb_skip(f, [v for v in sorted(f['years'], key=lambda v: -v['y']) if not (v['ok'] or v['y'] == cur)]) + BARS_LEG(f))
 # 10-31 idea 5: "X vs Y" pages for the best-selling rivals in each type (people search "camry vs accord reliability").
 FY = {f['id']: f for f in YEARS}
 exec(open('opinions.py', encoding='utf-8').read())   # 11-18 owner opinions box (OP_HOOK in page())
@@ -1298,14 +1346,19 @@ def meter(li):
     mx = 250; pos = min(li, mx) / mx * 100
     return (f'<div class="ym" role="img" aria-label="Lemon Index {li}; the average car is 100"><div class="ym-bar"><i class="ym-avg" style="left:{100 / mx * 100:.1f}%"><span>average car</span></i>'
             f'<i class="ym-pin" style="left:{pos:.1f}%"><b>{li}{"+" if li > mx else ""}</b></i></div><div class="ym-ends"><span>fewer complaints</span><span>more complaints</span></div></div>')
+def _mK(n):
+    """11-20 (the 2019 Golf said "0K–0K miles": its complaints came at 200-900 miles): a mileage in K, with real hundreds under 1,000
+    and one decimal under 10,000, so a low reading never rounds to 0K."""
+    n = int(round(n, -2)) if n >= 100 else int(n)
+    return f'{n:,}' if n < 1000 else f'{n / 1000:.1f}'.rstrip('0').rstrip('.') + 'K' if n < 10000 else f'{round(n / 1000)}K'
 def timeline(m, comps, tot=None):
     mx = 200000; P = lambda n: f'{min(n, mx) / mx * 100:.1f}%'
     ticks = ''.join(f'<span style="left:{k / mx * 100:.0f}%">{k // 1000}K</span>' for k in (0, 50000, 100000, 150000, 200000))
     seen = set(); cc = [c for c in comps if c[4] >= 15 and not (NICE(c[0]).split(' (')[0] in seen or seen.add(NICE(c[0]).split(' (')[0]))][:3]
-    top = ''.join(f'<li><b>{E(NICE(c[0]))}</b> complaints mostly came at <b>{c[2] // 1000}K–{c[3] // 1000}K</b> miles <small class="km">({round(c[2] * 1.609344 / 1000)}K–{round(c[3] * 1.609344 / 1000)}K km)</small></li>' for c in cc)
+    top = ''.join(f'<li><b>{E(NICE(c[0]))}</b> complaints mostly came at <b>{_mK(c[2])}–{_mK(c[3])}</b> miles <small class="km">({_mK(c[2] * 1.609344)}–{_mK(c[3] * 1.609344)} km)</small></li>' for c in cc)
     return (f'<section class="yc"><h2>When owners reported problems. <span class="h2s">From owner complaints to the government.</span></h2><div class="tl"><div class="tl-bar"><i class="tl-band" style="left:{P(m["p25"])};width:calc({P(m["p75"])} - {P(m["p25"])})"></i>'
-            f'<i class="tl-mid" style="left:{P(m["median"])}"><b>half by {m["median"] // 1000}K</b></i></div><div class="tl-ticks">{ticks}</div></div>'
-            f'<p class="yc-cap">Most owners who filed a complaint with NHTSA had <b>{m["p25"] // 1000}K to {m["p75"] // 1000}K miles</b> ({round(m["p25"] * 1.609344 / 1000)}K to {round(m["p75"] * 1.609344 / 1000)}K km) on the car ({m["n"]:,} of {'all ' + format(tot, ',') + ' ' if tot and tot >= m['n'] else 'the '}complaints filed so far listed the miles). This shows when people who had a problem reported it, not the odds that your car will have it.</p>'
+            f'<i class="tl-mid" style="left:{P(m["median"])}"><b>half by {_mK(m["median"])}</b></i></div><div class="tl-ticks">{ticks}</div></div>'
+            f'<p class="yc-cap">Most owners who filed a complaint with NHTSA had <b>{_mK(m["p25"])} to {_mK(m["p75"])} miles</b> ({_mK(m["p25"] * 1.609344)} to {_mK(m["p75"] * 1.609344)} km) on the car ({m["n"]:,} of {'all ' + format(tot, ',') + ' ' if tot and tot >= m['n'] else 'the '}complaints filed so far listed the miles). This shows when people who had a problem reported it, not the odds that your car will have it.</p>'
             + (f'<ul class="tl-top">{top}</ul>' if top else '') + '</section>')
 X2 = _load('data/extras2.json'); X2.update(_load('data/extras2_new.json'))   # 11-11 new models: repair notes, investigations, safety tech
 exec(open('scope_filter.py', encoding='utf-8').read())   # 11-12 round 2 (fix B): each page keeps to its own model, years and fuel (heavy-duty/Lightning off the half-ton pages, "fuel system", bulletin quotes)
@@ -1366,8 +1419,9 @@ MAKER = lambda name: (BYNAME[name]['brand'] if name in BYNAME else name.split(' 
 LIST_MIN = 5
 def scored(f): return [v for v in f['years'] if v['ok'] and not v.get('early')]
 def year_pool(f):
-    sc = scored(f); p = [v for v in sc if v['y'] >= 2010]
-    return p or sc
+    # 11-20 (QA: the Fewest/Most boxes skipped years the chart shows: 2007 3 Series at 150, 2001 CR-V at 18): every scored year, the same
+    # range as the Every year chart (which notes that pre-2010 scores are rough). Partial (too new) years stay out, as before (scored()).
+    return scored(f)
 def model_li(f): c = BYNAME.get(f['name']); return c['li'] if c else None
 def good_years(f): return sorted([v for v in year_pool(f) if v['li'] <= 110], key=lambda v: (v['li'], -v['y']))
 def avoid_years(f):
@@ -1955,7 +2009,7 @@ def trans_body(f):
         if k in seen or not k or k.lower().startswith(('also included', 'this recall', 'the vehicles')): continue
         seen.add(k); rl += f'<li><b>{y}</b> <small>{E(r["date"][-4:])}</small><p>{E(rsum(r))}</p></li>'
         if len(seen) >= 5: break
-    wq = max(worst, key=lambda r: r[1]['n']); qs = [q for q in wq[1]['q']][:2]
+    wq = max(worst, key=lambda r: r[1]['n']); qs = [q['text'] for q in QC_PICK([{'text': sent_case(q)} for q in wq[1]['q']])][:2]   # 11-20: same quote cleanup as everywhere
     quotes = ''.join(f'<blockquote class="q3"><input type="checkbox" id="q3-{i}" class="q3x" hidden><p>{E(sent_case(q))}</p>'
                      + (f'<label for="q3-{i}" class="q3m">more</label>' if len(q) > 110 else '') + f'<cite>{wq[0]} {nm} owner · NHTSA complaint</cite></blockquote>' for i, q in enumerate(qs))
     AND = lambda xs: ', '.join(map(str, xs[:-1])) + (' and ' if len(xs) > 1 else '') + str(xs[-1])
@@ -2430,14 +2484,14 @@ exec(open('search_go.py', encoding='utf-8').read())   # 11-12 round 2 (fix B): s
 exec(open('vin_report.py', encoding='utf-8').read())   # 11-14 growth plan 1a/1c: VIN report data (docs/assets/vr/) + the page's search text and FAQ
 page('/vin/', 'Free VIN Decoder and Recall Check: Look Up Any VIN | The Lemon Index', 'Free VIN decoder and lookup: type a 17-character VIN to see the exact year, engine and factory, then that car\'s recalls and owner complaints. From the U.S. government VIN database.', f'''
 <div class="pg v5 vin5"><section class="v5-h"><p class="v5-e">Free VIN decoder</p><h1>Check any VIN.</h1><p class="v5-s">Decode it, then see that car&#39;s recalls and problems.</p>
-<div class="v5-im">{pimg(mphoto('toyota-camry', 2019), 'Toyota Camry').replace(' loading="lazy"', '')}</div>
+<div class="v5-im">{pimg(mphoto('toyota-camry', 2019), 'Toyota Camry').replace(' loading="lazy"', '')}{pcredit(who(mphoto("toyota-camry", 2019)))}</div>
 <form id="vinf" class="vinf v5-vf" autocomplete="off"><input name="vin" maxlength="20" placeholder="Enter a VIN (17 characters)" aria-label="VIN" spellcheck="false"><button class="btn" type="submit">Check</button></form>
 <link rel="stylesheet" href="/assets/vinr.css?v=1"><div id="vinout" class="vinout" aria-live="polite"></div><p class="v5-fn">It&#39;s on the dashboard by the windshield, the door frame, or your registration. We don&#39;t store it.</p>
 <section class="vnv v5-pick" id="no-vin"><h2>No VIN yet? Pick the car.</h2>
 <form id="vnvf" class="vnv-f" autocomplete="off"><label><span>Make</span><select name="mk" aria-label="Make"></select></label><label><span>Model</span><select name="md" aria-label="Model"></select></label><label><span>Year</span><select name="y" aria-label="Year"></select></label><button class="btn" type="submit">Show recalls</button></form>
 <div id="vnvout" class="vin-recalls" aria-live="polite"></div></section>
 <p class="v5-line">Canada? See recalls at <a href="{TC_DB}" rel="noopener nofollow" target="_blank">Transport Canada</a></p>
-<script id="pick" type="application/json">{json.dumps(PICK, ensure_ascii=False).replace("</", "<\\/")}</script><script id="valias" type="application/json">{json.dumps(VALIAS, separators=(",", ":"))}</script><script id="vnames" type="application/json">{json.dumps(VNAMES, separators=(",", ":"))}</script><script id="vimg" type="application/json">{json.dumps(sorted(f[:-5] for f in os.listdir("assets/ai-models") if f.endswith(".webp")), separators=(",", ":"))}</script><script src="/assets/vin.js?v=1114svra" defer></script></section>{VR_BOXES}{pcredit(who(mphoto("toyota-camry", 2019)))}</div>''', ld=[faq_ld(VR_FAQ), {"@context": "https://schema.org", "@type": "WebApplication", "name": "Free VIN check and model-year report", "url": BASE + '/vin/', "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Decode a VIN with NHTSA vPIC, then see that model year's Lemon Index score, top complaint areas, NHTSA recalls and a test-drive checklist. Not a vehicle history report."}])
+<script id="pick" type="application/json">{json.dumps(PICK, ensure_ascii=False).replace("</", "<\\/")}</script><script id="valias" type="application/json">{json.dumps(VALIAS, separators=(",", ":"))}</script><script id="vnames" type="application/json">{json.dumps(VNAMES, separators=(",", ":"))}</script><script id="vimg" type="application/json">{json.dumps(sorted(f[:-5] for f in os.listdir("assets/ai-models") if f.endswith(".webp")), separators=(",", ":"))}</script><script src="/assets/vin.js?v=1114svra" defer></script></section>{VR_BOXES}</div>''', ld=[faq_ld(VR_FAQ), {"@context": "https://schema.org", "@type": "WebApplication", "name": "Free VIN check and model-year report", "url": BASE + '/vin/', "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Decode a VIN with NHTSA vPIC, then see that model year's Lemon Index score, top complaint areas, NHTSA recalls and a test-drive checklist. Not a vehicle history report."}])
 QM.copy_assets('assets', f'{OUT}/assets') if QM.ON else shutil.copytree('assets', f'{OUT}/assets', dirs_exist_ok=True); print('vin report model years:', vr_write(f'{OUT}/assets/vr')); shutil.copy('data/survey.json', f'{OUT}/assets/survey-q.json'); shutil.copy('data/votes.json', f'{OUT}/assets/votes.json')
 print('built', len(urls), 'pages into', OUT)
 # 11-12 accurate freshness: pages whose content changed this build -> data/cache/indexnow_pending.txt (git-ignored); `py indexnow.py --pending`

@@ -163,7 +163,13 @@ else:
             agree = (f'Owners and YouTube agree: the {ob} is the best of these years on both.' if ob == yb2 else
                      f'Owners and YouTube disagree: owner complaints favor the {ob}, YouTube favors the {yb2}.')
         txt_total = sum(BS.get('text_mentions', {}).get(code, {}).values())
-        models_s = ', '.join(BFAM[f].replace('BMW ', '') for f in fams)
+        # 11-20 (QA: the S58 page said "2 Series, 4 Series" for the M2 / M4): a family whose versions with this engine are all one M model
+        # (M2, M4 Competition, X3 M ...) is named by that M model, from the version table (data/bmw_specs.json versions)
+        def _mname(f):
+            ns = sorted({r['model'] for ys in ((BS.get('versions') or {}).get(f) or {}).values() for r in ys if r.get('code') == code}, key=len)
+            m0 = ns[0] if ns else ''
+            return m0 if m0 and all(n.startswith(m0) for n in ns) and re.match(r'^(M\d|[A-Z]\d M$)', m0) else BFAM[f].replace('BMW ', '')
+        models_s = ', '.join(dict.fromkeys(_mname(f) for f in fams))
         ans = (f'The {E(meta["name"])} is BMW&#39;s {E(meta["size"])} {E(meta["asp"])} {E(meta["layout"])}, made {E(meta["made"])}. '
                f'In the US it was used in the {E(models_s)} from model years {y0} to {y1}' + (f', rated {hp[0]}' + (f'–{hp[-1]}' if len(hp) > 1 else '') + ' hp' if hp else '') + '. '
                + (f'{txt_total:,} owner complaints to the government name the {E(code)} in their own words. ' if txt_total else '') + (bline.replace('<b>', '').replace('</b>', '') + ' ' if bline else ''))

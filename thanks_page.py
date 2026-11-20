@@ -9,7 +9,7 @@ _REQ_CLOSE = '</form>' if DONOR_REQ_LIVE else '</form></template>'
 _TH = f'''<section class="thx">
 <img class="thx-ic" src="/assets/icon-180.png" alt="" width="96" height="96">
 <h1>Thank you. Really.</h1>
-<p class="thx-lede">You just kept Lemon free and ad-free, for you and the next person buying a car.</p>
+<p class="thx-lede">You just helped keep Lemon free, for you and the next person buying a car.</p>
 {_REQ_OPEN}
 <h2>What car or feature should we add next?</h2>
 <p>Optional. Donor requests go to the front of the line.</p>
@@ -46,7 +46,7 @@ _TH = f'''<section class="thx">
   }});
 }})();
 </script>'''
-page('/thanks/', 'Thank You for Supporting the Lemon Index', 'Thank you for your donation. It keeps every Lemon Index car report free and ad-free, and pays for more cars, images and data.', _TH)
+page('/thanks/', 'Thank You for Supporting the Lemon Index', 'Thank you for your donation. It helps keep every Lemon Index car report free, and pays for more cars, images and data.', _TH)
 _p = f'{OUT}/thanks/index.html'
 _s = open(_p, encoding='utf-8').read()
 open(_p, 'w', encoding='utf-8').write(_s.replace('<link rel="canonical"', '<meta name="robots" content="noindex, follow"><link rel="canonical"', 1))

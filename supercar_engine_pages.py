@@ -43,7 +43,8 @@ def eng_verdict(url, nm, tone, eng_recalls, issues):
     b = eng_band(url); rk = ENG_POOL_RANK.get(url)
     iss = [i for i in (issues or []) if not i['t'].lower().startswith('no ')]
     rec = eng_recalls or 0
-    pos = f'YouTube owner tone {tone}/100, #{rk} of {ENG_POOL_N} {ENG_POOL_LBL} ({_EBAND[b]})' if b else ''
+    if tone is None and ENG_POOL.get(url) is not None: tone = int(ENG_POOL[url] + 0.5)   # 11-20 (QA: 17 engine pages said "None/100"): the pool score the tile shows
+    pos = (f'YouTube owner tone {tone}/100, ' if tone is not None else 'YouTube owner rank ') + f'#{rk} of {ENG_POOL_N} {ENG_POOL_LBL} ({_EBAND[b]})' if b else ''
     tail = (f'{rec} engine-related recall{"" if rec == 1 else "s"} on record' if rec else 'no engine-related recall on record') + (f', {len(iss)} known issue{"" if len(iss) == 1 else "s"} listed below' if iss else '')
     if not b: return ('Not rated yet', f'Not rated yet: no YouTube study for the {nm} yet; {tail}.', f'We can&#39;t rate it yet: there&#39;s no YouTube owner study for it, and owner complaints are filed by car, not engine. It has {tail}.')
     if b == 'top' and rec <= 1: w, a = 'A safer bet', 'Mostly yes.'

@@ -434,11 +434,10 @@ elif UXC == 'compare':
     n_all = len(curls)
     page('/compare/', 'Compare Cars Side by Side: Reliability, Specs, EVs | The Lemon Index',
          f'Compare up to 4 cars side by side: owner complaints, recalls, mpg or MPGe, EV range, yearly fuel cost, crash tests and performance specs. Every model, EV and performance car. {n_all} ready-made match-ups.', f'''
-<div class="pg">{phero('Compare', 'Compare up to 4 cars.', 'Problems, recalls, mpg, EV range, fuel cost and performance specs, side by side.', visual=pair(mphoto('toyota-rav4', 2019), mphoto('honda-cr-v', 2017), ('Toyota RAV4', 'Honda CR-V')), extra='<div id="cmpx" class="cmpx"><p class="note">Loading…</p></div>')}
+<div class="pg">{phero('Compare', 'Compare up to 4 cars.', 'Problems, recalls, mpg, EV range, fuel cost and performance specs, side by side.', visual=pair(mphoto('toyota-rav4', 2019), mphoto('honda-cr-v', 2017), ('Toyota RAV4', 'Honda CR-V'))[:-6] + pcredit(who(*[mphoto(x) for a, b, _ in _top[:6] for x in (a, b)], mphoto('toyota-rav4', 2019), mphoto('honda-cr-v', 2017), *[_ev(x) for a, _, b, _ in EV_TOP for x in (a, b) if _evok(x)], *[perf_img(x) for p in PERF_TOP for x in p])) + '</div>', extra='<div id="cmpx" class="cmpx"><p class="note">Loading…</p></div>')}
 <section><h2>Popular match-ups.</h2><div class="mus">{pf_cards}{ev_cards}{eco_cards}</div>
-<details class="yd"><summary>{len(PERF_PAIRS)} performance match-ups</summary><ul class="cmp">{pl}</ul></details>
-<details class="yd"><summary>All {len(_cp)} everyday-car match-ups</summary><ul class="cmp">{cl}</ul></details></section>
-{pcredit(who(*[mphoto(x) for a, b, _ in _top[:6] for x in (a, b)], mphoto('toyota-rav4', 2019), mphoto('honda-cr-v', 2017), *[_ev(x) for a, _, b, _ in EV_TOP for x in (a, b) if _evok(x)], *[perf_img(x) for p in PERF_TOP for x in p]))}
+<div class="cpl cmp-l"><details class="yd"><summary><svg class="cpl-i" width="24" height="24" aria-hidden="true" focusable="false"><use href="/assets/ic.svg?v=1#stopwatch"></use></svg><span><b>{len(PERF_PAIRS)} performance match-ups</b></span>{_CPL_AR}</summary><ul class="cmp">{pl}</ul></details>
+<details class="yd"><summary><svg class="cpl-i" width="24" height="24" aria-hidden="true" focusable="false"><use href="/assets/ic.svg?v=1#scale"></use></svg><span><b>All {len(_cp)} everyday-car match-ups</b></span>{_CPL_AR}</summary><ul class="cmp">{cl}</ul></details></div></section>
 {share_line("Compare up to 4 cars side by side: problems, recalls, mpg, EV range and specs. Free:", 'Know someone stuck between cars?')}</div><script src="/assets/compare.js?v=1119c5" defer></script>''',
          ld=[{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Car comparisons", "url": BASE + '/compare/'}])
     curls.insert(0, '/compare/')

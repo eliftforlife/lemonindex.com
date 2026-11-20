@@ -119,7 +119,7 @@ if HDX == 'pages' and HDT:
     _hd_sc = lambda t: sent_case(t) if 'sent_case' in globals() else t
     def _hd_rec_li(r, tag=''):
         return (f'<li><p class="advh"><a href="https://www.nhtsa.gov/recalls?nhtsaId={E(r["id"])}" target="_blank" rel="noopener nofollow">{E(r["id"])}</a> <small>{_hd_date(r["date"])}</small> '
-                f'<b>{E((r["part"] or "Other").split(":")[0].title())}</b>{tag}</p><p>{E(_hd_sc(r["summary"]))}</p>' + (f'<p><b>Fix.</b> {E(_hd_sc(r["fix"]))}</p>' if r.get('fix') else '') + '</li>')
+                f'<b>{E((r["part"] or "Other").split(":")[0].title())}</b>{tag}</p><p>{E(_hd_sc(RCUT(r["summary"])))}</p>' + (f'<p><b>Fix.</b> {E(_hd_sc(r["fix"]))}</p>' if r.get('fix') else '') + '</li>')
     def _hd_rec_tag(r):
         es = [HDE[e]['short'] for e in r.get('eng') or [] if e in HDE]
         return f' <span class="hd-tag">Names the {E(" / ".join(es))}</span>' if es else ''

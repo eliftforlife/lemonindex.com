@@ -633,7 +633,7 @@ PARENT_ROW = lambda slug, D: ''   # 11-13 N3: set by build.py's engine_uses.py (
 def link_parent(slug, out='docs'):
     """11-12 round 2 (Devin: "the 3 Series page never mentions the M340i"; the WRX tile opened the Impreza): a performance version that has
     its own page gets one line at the top of its base model's Overview (data/perf/<slug>.json `parent`), with the featured trim's sourced hp
-    and 0-60"""
+    and 0-60. 11-20 (Elijah: JDM/performance panels clutter the model page): one compact line at the END of the Overview, not the top"""
     D = _load(f'data/perf/{slug}.json') or {}
     if not D.get('parent'): return False
     pg = os.path.join(HERE, out, D['parent'].strip('/'), 'index.html')
@@ -643,7 +643,7 @@ def link_parent(slug, out='docs'):
     g, v = _star(D); zv, zl = _z(v.get('z60'))
     nums = ' and '.join(x for x in ((f'makes {_hp(v)} hp' if _hp(v) else ''), (f'runs 0–60 in {zv} ({zl})' if zv else '')) if x)
     who = v['name'] if v['name'].startswith(D['make']) else f'{D["make"]} {v["name"]}'
-    ov.insert(0, BeautifulSoup(f'<p class="ovslim pf-par">Performance version: <a href="{E(D["page"])}">{E(D["name"])} →</a>'
+    ov.append(BeautifulSoup(f'<p class="ovslim pf-par">Performance version: <a href="{E(D["page"])}">{E(D["name"])} →</a>'
                                + (f' The {E(g["code"])} {E(who)} {E(nums)}.' if nums else '') + '</p>', 'html.parser'))
     open(pg, 'w', encoding='utf-8').write(str(s))
     return True

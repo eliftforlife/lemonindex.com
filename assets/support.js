@@ -40,7 +40,7 @@
     if (/^\/compare\//.test(P)) return { q: 'Comparing cars?', a: 'Every head-to-head is free.', why: ['Every comparison stays free', 'No paywall, no account', 'Pays for new car data and tools'] };
     if (/^\/electric\//.test(P)) return { q: 'Thinking about an EV?', a: 'Every EV report is free.', why: ['Every EV report stays free', 'No paywall, no account', 'Pays for new studies'] };
     if (/^\/brands\//.test(P)) return { q: 'Picking a brand?', a: 'Every brand report is free.', why: ['Every brand and model stays free', 'No paywall, no account', 'Pays for new studies'] };
-    return { q: 'Enjoying the Lemon Index?', a: 'Keep it free and ad-free.', why: ['Every car report stays free for everyone', 'No paywall, no account needed', 'Pays for new studies, tools and videos'] };
+    return { q: 'Enjoying the Lemon Index?', a: 'Help keep it free for everyone.', why: ['Every car report stays free for everyone', 'No paywall, no account needed', 'Pays for new studies, tools and videos'] };
   })();
   const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   // ---- the sheet (bottom sheet on phones, centered card on bigger screens)
@@ -49,7 +49,7 @@
   box.innerHTML = `<div class="sup-card">
   <button class="sup-x" aria-label="Close">×</button>
   <div class="sup-ic"><img src="/assets/icon-64.png" alt="" width="52" height="52"></div>
-  <h2 id="sup-h">Keep Lemon ad-free</h2>
+  <h2 id="sup-h">Support Lemon Index</h2>
   <p class="sup-lede">Every score, chart and image here is free. A few dollars keeps it that way.</p>
   <div class="sup-amts" role="radiogroup" aria-label="Amount">
     ${[5, 10, 15].map(a => `<button type="button" role="radio" data-a="${a}" aria-checked="${a === pick}">$${a}</button>`).join('')}
@@ -77,14 +77,14 @@
   document.querySelectorAll('.supl').forEach(b => b.addEventListener('click', show));   // no inline onclick (CSP)
 
   // ---- 1. inline "aha" card under the best data on the page
-  const vis = (e) => (e && !e.closest('details') ? e : null);   // 11-18: never inside a closed box (car pages fold their sections into boxes)
-  const spot = vis(document.querySelector('#diy')) || vis(document.querySelector('.yyears')) || [...document.querySelectorAll('main .yc, main section.yc')].find((e) => !e.closest('details')) || document.querySelector('main .cpl-g1');
+  // 11-20 (Elijah: the donate box cluttered the middle of the page): one compact line at the END of the page content, never mid-page
+  const main = document.querySelector('main');
+  const spot = main && [...main.children].filter((e) => !/^(SCRIPT|STYLE|LINK)$/.test(e.tagName) && e.offsetHeight > 0).pop();
   if (spot && !paid()) {
-    const yt = !!document.querySelector('#diy');
-    const card = document.createElement('aside');
+        const card = document.createElement('aside');
     card.className = 'supc supc3'; card.setAttribute('aria-label', 'Support the Lemon Index');
-    // 11-19 (Elijah): black card, no icon, "Help keep this site ad-free" + four white buttons straight to Stripe ($5 / $10 / $15 / custom)
-    card.innerHTML = `<div class="supc3-t"><b>Help keep this site ad-free</b><small>Tap an amount. Secure checkout by Stripe.</small></div>
+    // 11-19 (Elijah): black card, no icon, "Support Lemon Index" (11-20 wording) + four white buttons straight to Stripe ($5 / $10 / $15 / custom)
+    card.innerHTML = `<div class="supc3-t"><b>Support Lemon Index</b><small>Secure checkout by Stripe</small></div>
 <div class="supc3-a">${[5, 10, 15].map(a => `<a href="${LINKS[a]}" target="_blank" rel="noopener">$${a}</a>`).join('')}<a href="${LINKS.custom}" target="_blank" rel="noopener">Custom</a></div>`;
     spot.insertAdjacentElement('afterend', card);
     card.querySelectorAll('.supc3-a a').forEach(a => a.addEventListener('click', () => { mark(); set(PAID, String(Date.now())); }));

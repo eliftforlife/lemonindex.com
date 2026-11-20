@@ -127,6 +127,7 @@ def clean(t):
         t = re.sub(r'\bi\b', 'I', t)
         for w in NAMES: t = re.sub(r'\b' + re.escape(w.lower()) + r'\b', w, t)   # brand and model names keep their capitals
     return t
+exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'quote_clean.py'), encoding='utf-8').read())
 def quotes(fam, year, top):
     pool = []
     for c in top:
@@ -136,8 +137,8 @@ def quotes(fam, year, top):
     for o in pool[:400]:
         row = con.execute('SELECT descr FROM rows WHERE odino=? AND descr IS NOT NULL LIMIT 1', (o,)).fetchone()
         if not row: continue
-        t = clean(row[0])
-        if not (50 <= len(t) <= 230) or BAD.search(t) or t[:40] in seen: continue
+        t = QC_TIDY(clean(row[0]))   # 11-20: the site-wide quote rule (quote_clean.py): light spelling cleanup, no typos, nothing garbled
+        if not (50 <= len(t) <= 230) or BAD.search(t) or t[:40] in seen or not QC_OK(t) or QC_ODD(t): continue
         seen.add(t[:40]); out.append({'odi': o, 'text': t})
         if len(out) == 3: break
     return out

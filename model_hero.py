@@ -105,7 +105,7 @@ def MH_HOOK(path, body):
 # (a tap opens that one full width under the row), and the "Know someone shopping for a used car?" row becomes a share icon in the hero.
 MH_ACTS_CSS = '''<style id="mh-acts-css">
 .tbl .tb-hero.mh { position: relative; }
-.tbl .tb-hero.mh .yct-h1 { padding-right: 46px; }
+.tbl .tb-hero.mh .yct-h1 { padding-left: 46px; padding-right: 46px; }   /* 11-20: both sides, so the title stays optically centred */
 .mh-share { position: absolute; top: 6px; right: 0; z-index: 2; display: grid; place-items: center; width: 42px; height: 42px; padding: 0; border: 0;
   border-radius: 50%; background: #f5f5f7; color: #1d1d1f; cursor: pointer; }
 .mh-share:hover { background: #ececf0; } .mh-share:focus-visible { outline: 3px solid var(--lemon, #ffd400); outline-offset: 2px; }

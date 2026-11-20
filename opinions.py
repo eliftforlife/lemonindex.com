@@ -26,12 +26,13 @@ def _op_item(o):
             f'<time datetime="{d:%Y-%m-%d}">{_MNS[d.month - 1]} {d.day}, {d.year}</time></header>{paras}</article>')
 def _op_box(fid, y=None):
     f = FY[fid]; name = f['name']; ys = sorted({v['y'] for v in f['years']}, reverse=True)
+    shown = globals()['QN'](f) if 'QN' in globals() else name   # 11-20 (QA: the F-150 year page asked 'Own a 2015 Ford F-Series?'): the page's own name
     ops = sorted(OPS.get(fid) or [], key=lambda o: ((o.get('year') == y) if y else 0, o['ts']), reverse=True)
-    car = f'{y} {name}' if y else name; n = len(ops)
+    car = f'{y} {shown}' if y else shown; n = len(ops)
     yopt = '<option value="">Year (optional)</option>' + ''.join(f'<option value="{v}"{" selected" if v == y else ""}>{v}</option>' for v in ys)
     items = ''.join(_op_item(o) for o in ops[:8])
     return (f'{_OP_CSS}<section class="yc opn" id="opinions" data-fid="{E(fid)}" data-car="{E(name)}" data-y="{y or ""}" data-ts="{_OP_TS}">'
-            f'<h2 class="opn-h"{"" if n else " hidden"}>What owners say <span class="h2s">{n} opinion{"s" * (n != 1)} from Lemon Index readers about the {E(name)}. Checked before they show; not part of the score.</span></h2>'
+            f'<h2 class="opn-h"{"" if n else " hidden"}>What owners say <span class="h2s">{n} opinion{"s" * (n != 1)} from Lemon Index readers about the {E(shown)}. Checked before they show; not part of the score.</span></h2>'
             f'<div class="opn-l">{items}</div>'
             f'<div class="opn-share cpl"><button class="cpl-a opn-open" type="button">{PILL_SUM("/assets/icons/opinion.webp", f"Own a {E(car)}? Share your take", "Anonymous is fine. Checked before it shows.")}{PILL_GO}</button><p class="opn-msg" hidden aria-live="polite"></p></div>'
             f'<form class="opn-f" hidden novalidate><label for="opn-t-{E(fid.replace("/", "-"))}"><b>Your opinion of the {E(car)}</b></label>'

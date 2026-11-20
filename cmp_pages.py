@@ -262,7 +262,7 @@ def cmp_page(a, b):
             f'<label><span class="vh">To</span><select name="t">{_opt(full[-1])}</select></label></span><output class="lfa-yr-res" aria-live="polite"></output></form>')
     yh = f'<div class="cb-yr cb-yh"><div class="yy"></div><div>{E(_sa)}</div><div>{E(_sb)}</div></div>'
     yrs = (f'<div class="yrs cb-yrs">{yh}' + ''.join(_row(y) for y in _top)
-           + (f'<details class="yrs-more"><summary>Show {len(_rest)} older years</summary>' + ''.join(_row(y) for y in _rest) + '</details>' if _rest else '') + '</div>')
+           + (f'<details class="yrs-more"><summary>Show {len(_rest)} older year{"" if len(_rest) == 1 else "s"}</summary>' + ''.join(_row(y) for y in _rest) + '</details>' if _rest else '') + '</div>')
     _pt = '; 2023 and newer are partial and don&#39;t count toward the winner' if len(full) < len(shared) else ''
     ybys = (cb_h2('your-years', 'Year by year', cb_info(f'Lemon Index per model year, newest first: owner complaints per car sold, 100 = the average car, lower is better. '
                                                         f'Green = the car with fewer complaints that year{_pt}. Tap a year for its report.', 'How to read this'))

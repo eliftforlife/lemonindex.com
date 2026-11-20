@@ -49,7 +49,7 @@ if VEX == 'hooks':
     def _v_rec_li(r):
         cars = '; '.join(f'{_vcar(f).split(" ", 1)[-1]} {", ".join(str(y) for y in sorted(ys))}' for f, ys in (r.get('cars') or {}).items())
         return (f'<li><p class="advh"><a href="https://www.nhtsa.gov/recalls?nhtsaId={E(r["id"])}" target="_blank" rel="noopener nofollow">{E(r["id"])}</a> <small>{_v_date(r["date"])}</small> '
-                f'<b>{E((r["part"] or "Other").split(":")[0].title())}</b> <small>{E(cars)}</small></p><p>{E(_vsc(r["summary"]))}</p>' + (f'<p><b>Fix.</b> {E(_vsc(r["fix"]))}</p>' if r.get('fix') else '') + '</li>')
+                f'<b>{E((r["part"] or "Other").split(":")[0].title())}</b> <small>{E(cars)}</small></p><p>{E(_vsc(RCUT(r["summary"])))}</p>' + (f'<p><b>Fix.</b> {E(_vsc(r["fix"]))}</p>' if r.get('fix') else '') + '</li>')
     def _v_miles(g):
         return (f'Half of the owners who gave a mileage reported the problem between <b>{g["p25"]:,}</b> and <b>{g["p75"]:,}</b> miles; the middle report was at <b>{g["median"]:,}</b> miles '
                 f'({g["n"]:,} complaints with a mileage).') if g else ''

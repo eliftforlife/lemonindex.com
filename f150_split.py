@@ -9,7 +9,7 @@
 #   FSX = 'pages'   before the model/year page loop: FS_IDS (skipped by that loop), FS_PAGES(f) builds the model + year pages, FS_BARS
 import json as _fj, os as _fos
 if FSX == 'years':
-    FS = _fj.load(open('data/f150_split.json', encoding='utf-8')) if _fos.path.exists('data/f150_split.json') else None
+    FS = QC_WALK(_fj.load(open('data/f150_split.json', encoding='utf-8'))) if _fos.path.exists('data/f150_split.json') else None   # 11-20: quote cleanup (build.py QC_WALK)
     FS_IDS = {'ford-f-series'} if FS else set()
     FS_WHY = 'Ford reports F-150 and Super Duty sales together as one F-Series number (there is no F-150-only sales figure)'
     FS_CO = lambda v: (v.get('low') or {}).get('why') == 'fseries'

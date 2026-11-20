@@ -10,10 +10,14 @@ def _n2_chip(f, w):
             f'<b>{w["y"]}</b><span>{w["li"]}</span></a>')
 
 def N2_BETTER(f, v, y):
-    """'' or the strip. Only years the site would suggest (ok_pick: better than average, or for a model with no such year, at or under its own
-    average), never a partial (2023+) score, and each with a lower Lemon Index than this year when this year is scored."""
+    """'' or the strip. Only years better than the average car (or, for a model with none, years the site would suggest: ok_pick),
+    never a partial (2023+) score, and each with a clearly lower Lemon Index (15%+) than this year when this year is scored."""
     cur = v['li'] if v.get('ok') and not v.get('early') else None
-    ok = [w for w in scored(f) if w['y'] != y and ok_pick(f, w) and (cur is None or w['li'] < cur)]
+    # 11-20 (Elijah, 2007 BMW 3 Series listed the 2006 at 110 = an average year): when the model has years better than the average car
+    # (band 'good', under 85), only those count, and each must have clearly fewer complaints per car than this year (15%+ lower).
+    # A model with no such year keeps the old rule (ok_pick: at or under 110, or under the model's own average).
+    sc = scored(f); gd = any(band(w['li'])[0] == 'good' for w in sc if w['y'] != y)
+    ok = [w for w in sc if w['y'] != y and (band(w['li'])[0] == 'good' if gd else ok_pick(f, w)) and (cur is None or w['li'] <= cur * .85)]
     by = lambda ws: sorted(ws, key=lambda w: (w['li'], -w['y']))[:3]
     g = gen_of(f, y)
     if g:

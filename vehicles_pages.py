@@ -154,9 +154,17 @@ def mav_video(slug):
     return (f'<section class="yc yav mav" id="avoid">{MAV_CSS}<h2>{E(a["bike"])} years to avoid. <span class="h2s">The model years with the most complaints filed with NHTSA.</span></h2>'
             f'<div class="mav-g"><figure class="mav-ph"><img src="{ph["src"]}"{rset(ph["src"], SZ_ONE)} alt="{E(a["bike"])}" width="{ph["w"]}" height="{ph["h"]}" loading="lazy">'
             f'<figcaption>{cred}</figcaption></figure><div class="mav-ys">{cards}</div></div><p class="mav-after">{E(a["after"])}</p>'
-            + mav_chart(a['chart'], {y['y'] for y in a['years']})
+            # 11-20 (QA: the GS page showed two year charts with different numbers): no chart here; the page's one "Complaints by model year"
+            # chart below uses these same counts for y0-y1 (_mav_by)
             + f'<p class="yc-cap">Complaints filed with NHTSA per model year ({E(a["models"])}), {y0} to {y1}, from api.nhtsa.gov on Nov 14, 2026. '
               'These are counts, not rates: there are no sales figures per motorcycle model year. A complaint is not proof of a defect.</p></section>')
+def _mav_by(slug, by):
+    """A bike's complaints per model year for its one chart: with a years-to-avoid video (MAV), that video's API counts for its years (so the
+    chart and the year cards agree), our file copy for the years after; years with none left out."""
+    by = dict(by)
+    if slug in MAV:
+        for y, v in MAV[slug]['chart']: by[str(y)] = v
+    return {k: v for k, v in sorted(by.items()) if v}
 def mav_auto(b):
     """Years to avoid from our own count (data_moto_bikes.py): the top years, what their complaints describe, serious recalls, then the quietest years."""
     nm = b['name']
@@ -208,6 +216,7 @@ if MO:
     for m in MO:
         slug = slugify(m['name']); m['slug'] = slug; ph = vph(m['name'])
         av = mav_video(slug) if slug in MAV else ''
+        mby = _mav_by(slug, m['by_year'])
         own = _MBFAM.get(slug, [])
         ownl = (f'<p class="yc-cap">Bikes in this family with their own page: ' + ' · '.join(f'<a href="/motorcycles/{b["slug"]}/">{E(b["name"])}</a>' for b in sorted(own, key=lambda b: -b['n'])) + '</p>') if own else ''
         body = f'''<div class="pg mp6"><section class="ph yph6"><div class="yh-t"><p class="ph-e"><a href="/motorcycles/">Motorcycles</a> · {E(m["brand"])} · {E(m["seg"])}</p><h1>{E(m["name"])}.</h1>
@@ -215,7 +224,7 @@ if MO:
 <div class="yts">{stat(f'{m["n"]:,}', 'owner complaints')}{stat(f'{len(m["recalls"])}', 'recalls')}{stat(f'{m["serious"]}%', 'involved a crash, fire or injury', 'bad' if m['serious'] >= 25 else '')}{stat(f'{m["miles"]:,}' if m['miles'] else '—', 'typical miles at complaint')}</div>{ytfix('moto:' + slug)}
 {av}<section class="yc"><h2>What owners complain about. <span class="h2s">Share of complaints.</span></h2>{bars_pct(m["parts"])}</section>
 {mrecs(m["recalls"], slug)}
-<section class="yc"><h2>Complaints by model year.</h2>{bars_n([(y, v) for y, v in m["by_year"].items()])}<p class="yc-cap">Popular years get more complaints just because more were sold. There are no free U.S. sales figures by motorcycle model, so these are counts, not rates.</p></section>
+<section class="yc"><h2>Complaints by model year.</h2>{bars_n([(y, v) for y, v in mby.items()])}<p class="yc-cap">Popular years get more complaints just because more were sold. There are no free U.S. sales figures by motorcycle model, so these are counts, not rates.</p></section>
 <p class="yc-cap" style="text-align:center">Filed as: {E(", ".join(m["names"][:5]))}. Source: NHTSA owner complaints and recalls. <a href="/motorcycles/">Every motorcycle</a></p>{ownl}{mmore(slug, mcat(m)) if own or av else ""}{MFOLLOW if av or own else ""}</div>'''
         page(f'/motorcycles/{slug}/', f'{m["name"]} Problems & Recalls: Owner Complaints by Year | The Lemon Index',
              f'{m["n"]:,} NHTSA owner complaints about the {m["name"]} ({m["years"][0]}-{m["years"][1]}): top problem {m["parts"][0][0] if m["parts"] else "n/a"}, {len(m["recalls"])} recalls, {m["serious"]}% involved a crash, fire or injury.', body,
@@ -225,10 +234,7 @@ if MO:
     _FAMN = {slugify(m['name']): m['name'] for m in MO}
     for b in MB:
         slug = b['slug']; ph = _MBPH.get(b['name']); sp = b['specs']; cat = mcat(b)
-        by = dict(b['by_year'])
-        if slug in MAV:   # the video's API counts for 2005-2024 (they differ from our file copy by at most 1 a year), so page and video agree
-            for y, v in MAV[slug]['chart']: by[str(y)] = v
-            by = {k: v for k, v in sorted(by.items()) if v}
+        by = _mav_by(slug, b['by_year'])
         n = sum(by.values()); last = max(int(y) for y in by)
         av = mav_video(slug) if slug in MAV else mav_auto(b)
         yrs = f'{b["y0"]}–{"now" if b["y1"] >= NOWY else b["y1"]}'
