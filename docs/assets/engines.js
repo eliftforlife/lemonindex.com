@@ -1,48 +1,44 @@
-// 11-12 (Elijah: "an engine page that says all engines, you can search, and it has the selectors like the All cars page"): /engines/.
-// Every card is in the HTML (what search engines read); the tabs only hide the others and set /engines/?type=<tab>, and the search box
-// keeps the cards whose name, code, layout or cars start with every typed word ("honda k20", "ls3", "camry").
+// 11-12 (Elijah: "an engine page that says all engines, you can search ..."): /engines/.
+// 11-19 v5: no tabs any more. One tap-to-open box per kind of engine (all_engines.py AE_CATS); every card is in the HTML (what search engines
+// read). The search box keeps the cards whose name, code, layout or cars start with every typed word ("honda k20", "ls3", "camry"), opens
+// the boxes that have a match and hides the rest; an engine listed in two boxes shows once. /engines/?type=bmw opens that box.
 (() => {
   const g = document.getElementById('aegrid'), q = document.getElementById('aeq'), cnt = document.getElementById('aen'); if (!g || !q) return;
-  const T = { all: '', trucks: 't', bmw: 'b', supercars: 's', performance: 'p', honda: 'h', soon: 'c' };
   const fold = s => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9.]+/g, ' ').replace(/ \./g, ' ').trim();
   // 11-12 round 2 (fix C): data-yr "2003–07" -> [2003, 2007], so a typed year ("2017 f250") keeps only the engines built that year
   const span = t => { const m = String(t || '').match(/(\d{4})(?:\D+(\d{2,4}))?/); if (!m) return null; const a = +m[1]; let b = m[2] ? +m[2] : a; if (b < 100) b += Math.floor(a / 100) * 100; return [a, b]; };
-  const cards = [...g.querySelectorAll('.aec')].map(el => ({ el, f: el.dataset.f || 'gas', t: (el.dataset.t || '').split(' '), k: el.dataset.k.split(' '), soon: el.classList.contains('aec-soon'), yr: span(el.dataset.yr) }));
-  const N = cards.filter(c => !c.soon).length, S = cards.length - N;
-  let tab = 'all', fuel = 'all';   // 11-12: + the fuel selector (?fuel=gas|diesel|hybrid|electric), combined with the tab
-  const run = push => {
+  const cards = [...g.querySelectorAll('.aec')].map(el => ({ el, href: el.getAttribute('href') || '', k: (el.dataset.k || '').split(' '), yr: span(el.dataset.yr) }));
+  const boxes = [...g.querySelectorAll('details.ae5-c')], auto = new Set();
+  const run = () => {
     // "ram 2500 vs f250": either side; a 4-digit year filters by the years the engine was built
     const raw = fold(q.value), ym = raw.match(/\b(19|20)\d{2}\b/), yy = ym ? +ym[0] : 0;
     const sides = raw.replace(/\b(19|20)\d{2}\b/g, ' ').split(/\s(?:vs|versus|or|v)\s/).map(x => x.split(' ').filter(Boolean)).filter(x => x.length);
-    const w = sides.flat(), t = T[tab]; let n = 0, s = 0;
-    cards.forEach(c => { const on = (!t || c.t.includes(t)) && (fuel === 'all' || c.f === fuel) && (!sides.length || sides.some(ws => ws.every(x => c.k.some(k => k.startsWith(x)))))
-      && (!yy || !c.yr || (c.yr[0] <= yy && yy <= c.yr[1])); c.el.hidden = !on; if (on) c.soon ? s++ : n++; });
-    g.querySelectorAll('.aes').forEach(sec => { sec.hidden = !sec.querySelector('.aec:not([hidden])'); });
-    g.querySelector('.aenone').hidden = n + s > 0;
-    g.querySelectorAll('.aetabs a[data-type]').forEach(a => { if (a.dataset.type === tab) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); });
-    g.querySelectorAll('.aefuel a[data-fuel]').forEach(a => { if (a.dataset.fuel === fuel) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); });
-    const parts = (w.length || t || fuel !== 'all') ? [n ? `<b>${n}</b> engine${n === 1 ? '' : 's'}` : '', s ? `<b>${s}</b> coming soon` : ''].filter(Boolean) : [`<b>${N}</b> engines`, S ? `<b>${S}</b> coming soon` : ''].filter(Boolean);
-    cnt.innerHTML = (parts.join(' · ') || '<b>0</b> engines') + (w.length ? ' match' : '');
-    if (push) { const u = new URLSearchParams(); if (tab !== 'all') u.set('type', tab); if (fuel !== 'all') u.set('fuel', fuel); history.replaceState(null, '', location.pathname + (u.toString() ? '?' + u : '')); }
+    const on = !!(sides.length || yy), seen = new Set(); let n = 0;
+    cards.forEach(c => {
+      let show = true;
+      if (on) {
+        show = (!sides.length || sides.some(ws => ws.every(x => c.k.some(k => k.startsWith(x))))) && (!yy || !c.yr || (c.yr[0] <= yy && yy <= c.yr[1])) && !seen.has(c.href);
+        if (show) { seen.add(c.href); n++; }
+      }
+      c.el.hidden = !show;
+    });
+    boxes.forEach(d => {
+      const has = !on || !!d.querySelector('.aec:not([hidden])');
+      d.parentElement.hidden = !has;
+      if (on && has && !d.open) { d.open = true; auto.add(d); }
+      if (!on && auto.has(d)) { d.open = false; auto.delete(d); }
+    });
+    g.querySelector('.aenone').hidden = !on || n > 0;
+    cnt.innerHTML = on ? `<b>${n}</b> engine${n === 1 ? '' : 's'} match` : '';
   };
-  g.querySelector('.aetabs').addEventListener('click', e => {
-    const a = e.target.closest('a[data-type]'); if (!a || e.metaKey || e.ctrlKey || e.shiftKey) return;
-    e.preventDefault(); tab = a.dataset.type in T ? a.dataset.type : 'all'; run(true);
-  });
-  const F = ['all', 'gas', 'diesel', 'hybrid', 'electric'];
-  g.querySelector('.aefuel')?.addEventListener('click', e => {
-    const a = e.target.closest('a[data-fuel]'); if (!a || e.metaKey || e.ctrlKey || e.shiftKey) return;
-    e.preventDefault(); fuel = F.includes(a.dataset.fuel) ? a.dataset.fuel : 'all'; run(true);
-  });
-  q.addEventListener('input', () => { const had = tab !== 'all' || fuel !== 'all'; if (q.value.trim()) { tab = 'all'; fuel = 'all'; } run(had); });   // search covers every tab, like the home search
-  // 11-12 round 2 (Liam, Mitch: "Enter does nothing"): Enter opens the first engine shown (a coming-soon one opens its vote sheet)
+  q.addEventListener('input', run);
+  // 11-12 round 2 (Liam, Mitch: "Enter does nothing"): Enter opens the first engine shown
   q.addEventListener('keydown', e => {
     if (e.key !== 'Enter') return; e.preventDefault();
-    const c = cards.find(x => !x.el.hidden && !x.soon) || cards.find(x => !x.el.hidden); if (!c) return;
-    if (c.soon) c.el.click(); else if (c.el.href) location.href = c.el.href;
+    const c = cards.find(x => !x.el.hidden && x.el.closest('details')?.open && x.el.href); if (c) location.href = c.el.href;
   });
-  const p = new URLSearchParams(location.search); tab = (p.get('type') || 'all') in T ? (p.get('type') || 'all') : 'all';
+  const p = new URLSearchParams(location.search), t = p.get('type');
+  if (t) { const d = boxes.find(b => b.dataset.type === t); if (d) d.open = true; }
   if (p.get('q')) q.value = p.get('q');
-  fuel = F.includes(p.get('fuel')) ? p.get('fuel') : 'all';
-  run(false);
+  run();
 })();
