@@ -98,14 +98,15 @@ MO = _load('data/moto.json') if os.path.exists('data/moto.json') else []
 # 11-14: the bikes from "Motorcycles plan 11-11.md" with 15+ owner complaints get their own page (data_moto_bikes.py -> data/moto_bikes.json):
 # 26 bikes no family covered + 17 "splits" (a bike already counted inside a family, e.g. the Road King inside Harley-Davidson Touring;
 # the family page keeps its numbers and links to the bike). The rest stay cards only: "Not enough owner reports yet", no page, not in the sitemap.
-# data/moto_avoid.json (data_moto_avoid.py): the "years to avoid" block for the 10 bikes in the first @lemonindexmotorcycle videos, with the videos' numbers.
+# data/moto_avoid.json (data_moto_avoid.py): the "years to avoid" block for the 10 bikes in the first @lemonindexmotorcycles videos, with the videos' numbers.
 MB = _load('data/moto_bikes.json') if os.path.exists('data/moto_bikes.json') else []
 MAV = _load('data/moto_avoid.json') if os.path.exists('data/moto_avoid.json') else {}
+exec(open('moto_recalls.py', encoding='utf-8').read())   # 11-20 QA: one row per recall, junk rows out, each recall only on the bike it names
 _MSALL = _load('data/moto_soon.json') if os.path.exists('data/moto_soon.json') else []
 _MSI = {s['slug']: s for s in _MSALL}
 MS = [s for s in _MSALL if s['slug'] not in {b['slug'] for b in MB}]
-MIG, MTT = 'https://www.instagram.com/lemonindexmotorcycle/', 'https://www.tiktok.com/@lemonindexmotorcycle'
-MFOLLOW = (f'<p class="yc-cap mav-fol">A new bike every day: follow <b>@lemonindexmotorcycle</b> on <a href="{MTT}" rel="noopener">TikTok</a> '
+MIG, MTT = 'https://www.instagram.com/lemonindexmotorcycles/', 'https://www.tiktok.com/@lemonindexmotorcycles'
+MFOLLOW = (f'<p class="yc-cap mav-fol">A new bike every day: follow <b>@lemonindexmotorcycles</b> on <a href="{MTT}" rel="noopener">TikTok</a> '
            f'and <a href="{MIG}" rel="noopener">Instagram</a>.</p>')
 MCATS = ['Sport & naked', 'Small & fun', 'Adventure & touring', 'Cruiser & retro', 'Electric']
 _FSEG = {'Sport': 'Sport & naked', 'Standard': 'Sport & naked', 'Touring': 'Adventure & touring', 'Adventure': 'Adventure & touring', 'Cruiser': 'Cruiser & retro',
@@ -145,9 +146,10 @@ def mav_video(slug):
     a = MAV[slug]; ph = a['photo']; lic = ph.get('license_url') or LIC.get(ph['license'])
     cred = (f'Photo: <a href="{E(ph["page"])}" rel="noopener">&ldquo;{E(ph["title"])}&rdquo;</a> by {E(ph["author"])}, '
             + (f'<a href="{lic}" rel="license noopener">{E(ph["license"])}</a>' if lic else E(ph['license'])) + ', via Wikimedia Commons, resized.')
-    cards = ''
+    cards = ''; shown = {}   # 11-20 QA: a recall that covers several of these years is written out once, then named
     for y in a['years']:
-        rc = ''.join(f'<li><b>Recall {E(r["id"])}:</b> {E(r["plain"])}</li>' for r in y['recalls'])
+        rc = ''.join((f'<li><b>Recall {E(r["id"])}:</b> {E(r["plain"])}</li>' if r['id'] not in shown else f'<li><b>Recall {E(r["id"])}</b> covers this year too (see {shown[r["id"]]}).</li>')
+                     + ('' if shown.setdefault(r['id'], y['y']) else '') for r in y['recalls'])
         cards += (f'<div class="mav-y"><header><b class="mav-yr">{y["y"]}</b><span class="mav-n">{y["n"]} complaints</span></header>'
                   + (f'<p>{E(y["note"])}</p>' if y['note'] else '') + (f'<ul class="mav-r">{rc}</ul>' if rc else '') + '</div>')
     y0, y1 = a['chart'][0][0], a['chart'][-1][0]
@@ -172,7 +174,9 @@ def mav_auto(b):
         return (f'<section class="yc yav mav" id="avoid">{MAV_CSS}<h2>Years to avoid. <span class="h2s">Complaints filed with NHTSA, by model year.</span></h2>'
                 f'<p class="mav-none">No year stands out. No single {E(nm)} model year drew more than {b["top"]} complaints filed with NHTSA, so there is no year to avoid on this data.</p>'
                 '<p class="yc-cap">Counts, not rates: there are no sales figures per motorcycle model year.</p></section>')
-    R = {r['id']: r for r in b['recalls']}; cards = ''
+    R = {r['id']: r for r in b['recalls']}; cards = ''; shown = {}
+    for r in b['recalls']:   # a merged row (moto_recalls.py) answers for the campaigns it absorbed
+        for a_ in r.get('also') or []: R.setdefault(a_, r)
     for w in b['worst']:
         n = w['n']; lines = []
         pr = [p for p in w['prob'] if p[0] > 0]
@@ -185,7 +189,10 @@ def mav_auto(b):
         ev = [x for x in ((f'{w["crash"]} a crash' if w['crash'] else ''), (f'{w["fire"]} a fire' if w['fire'] else '')) if x]
         if ev: lines.append(ev[0].split(' ', 1)[0] + ' reported ' + ' and '.join([ev[0].split(' ', 1)[1]] + ev[1:]) + '.')
         if w['y'] >= NOWY - 1: lines.append(f'The {w["y"]} is still new, so its count can grow.')
-        rc = ''.join(f'<li><b>Recall {E(i)}</b> ({E(R[i]["part"].lower())}): {E(mav_sum(R[i]))}</li>' for i in w['recalls'][:2] if i in R)
+        # 11-20 QA: each recall written out once; a later year it also covers just names it
+        rc = ''.join((f'<li><b>Recall {E(i)}</b> ({E((R[i]["part"] or "recall").split(":")[0].lower())}): {E(R[i].get("plain_s") or MR_SENT(R[i]))}</li>' if R[i]['id'] not in shown
+                      else f'<li><b>Recall {E(i)}</b> covers this year too (see {shown[R[i]["id"]]}).</li>') + ('' if shown.setdefault(R[i]['id'], w['y']) else '')
+                     for i in w['recalls'][:2] if i in R)
         cards += (f'<div class="mav-y"><header><b class="mav-yr">{w["y"]}</b><span class="mav-n">{n} complaints</span></header>'
                   + ''.join(f'<p>{E(l)}</p>' for l in lines) + (f'<ul class="mav-r">{rc}</ul>' if rc else '') + '</div>')
     after = f'<p class="mav-after">After {b["after"]["y"]}, no model year drew more than {b["after"]["max"]}.</p>' if b.get('after') else ''
@@ -198,8 +205,11 @@ def mav_auto(b):
 NOWY = int(TODAY[:4])
 def mrecs(recalls, slug):
     ry = lambda d: (d or '')[:4] if re.match(r'\d{4}-', d or '') else ((d or '')[-4:] or (d or '')[:4])
-    rc = ''.join(f'<li><b>{E((r["part"] or "").split(":")[0].title())}</b> <small>{E(ry(r["date"]))}</small><p>{E(mav_sum(r) if "consequence" in r else rsum(r))}</p></li>' for r in recalls[:3])
-    more = ''.join(f'<li><b>{E((r["part"] or "").split(":")[0].title())}</b> <small>{E(r["id"])}</small><p>{E(mav_sum(r) if "consequence" in r else rsum(r))}</p></li>' for r in recalls[3:])
+    # 11-20 QA: rows come cleaned from moto_recalls.py (one per campaign, readable sentence in plain_s); each row shows its year and campaign number(s)
+    row = lambda r: (f'<li><b>{E(((r["part"] or "").split(":")[0] or "Recall").title())}</b> <small>{E(ry(r["date"]))} · {E(", ".join([r["id"]] + (r.get("also") or [])))}</small>'
+                     f'<p>{E(r.get("plain_s") or MR_SENT(r))}</p></li>')
+    rc = ''.join(row(r) for r in recalls[:3])
+    more = ''.join(row(r) for r in recalls[3:])
     return (f'<section class="yc" id="recalls"><h2>Recalls <span class="yc-n">{len(recalls)}</span></h2>'
             + (f'<ul class="rc">{rc}</ul>' + (f'<details><summary>Show all {len(recalls)}</summary><ul class="rc">{more}</ul></details>' if more else '') if recalls else '<p>No NHTSA recalls found for these model names.</p>')
             + '<p class="yc-cap">Recall repairs are free at any dealer. Check a specific bike&#39;s VIN at <a href="https://www.nhtsa.gov/recalls" rel="noopener">nhtsa.gov/recalls</a>.</p></section>')
@@ -221,7 +231,7 @@ if MO:
         ownl = (f'<p class="yc-cap">Bikes in this family with their own page: ' + ' · '.join(f'<a href="/motorcycles/{b["slug"]}/">{E(b["name"])}</a>' for b in sorted(own, key=lambda b: -b['n'])) + '</p>') if own else ''
         body = f'''<div class="pg mp6"><section class="ph yph6"><div class="yh-t"><p class="ph-e"><a href="/motorcycles/">Motorcycles</a> · {E(m["brand"])} · {E(m["seg"])}</p><h1>{E(m["name"])}.</h1>
 <p class="ph-s">Owner complaints to the U.S. government, {m["years"][0]} to {m["years"][1]} models.</p><nav class="modes" aria-label="Page mode"><a href="/motorcycles/{slug}/" aria-current="page">Normal</a><a href="/motorcycles/{slug}/advanced/">Advanced</a></nav></div><div class="ph-v">{pimg(ph, valt(ph, m["name"])) if ph else ""}{vcredit(ph)}</div></section>
-<div class="yts">{stat(f'{m["n"]:,}', 'owner complaints')}{stat(f'{len(m["recalls"])}', 'recalls')}{stat(f'{m["serious"]}%', 'involved a crash, fire or injury', 'bad' if m['serious'] >= 25 else '')}{stat(f'{m["miles"]:,}' if m['miles'] else '—', 'typical miles at complaint')}</div>{ytfix('moto:' + slug)}
+<div class="yts">{stat(f'{m["n"]:,}', 'owner complaints')}{stat(f'{len(m["recalls"])}', 'recall' if len(m['recalls']) == 1 else 'recalls')}{stat(f'{m["serious"]}%', 'involved a crash, fire or injury', 'bad' if m['serious'] >= 25 else '')}{stat(f'{m["miles"]:,}' if m['miles'] else '—', 'typical miles at complaint')}</div>{ytfix('moto:' + slug)}
 {av}<section class="yc"><h2>What owners complain about. <span class="h2s">Share of complaints.</span></h2>{bars_pct(m["parts"])}</section>
 {mrecs(m["recalls"], slug)}
 <section class="yc"><h2>Complaints by model year.</h2>{bars_n([(y, v) for y, v in mby.items()])}<p class="yc-cap">Popular years get more complaints just because more were sold. There are no free U.S. sales figures by motorcycle model, so these are counts, not rates.</p></section>
@@ -249,7 +259,7 @@ if MO:
         top = b['worst'][0] if b['worst'] else None
         body = f'''<div class="pg mp6"><section class="ph yph6"><div class="yh-t"><p class="ph-e"><a href="/motorcycles/">Motorcycles</a> · {E(b["brand"])} · {E(cat)}</p><h1>{E(b["name"])}.</h1>
 <p class="ph-s">Owner complaints filed with NHTSA, {min(int(y) for y in by)} to {last} models.</p><nav class="modes" aria-label="Page mode"><a href="/motorcycles/{slug}/" aria-current="page">Normal</a><a href="/motorcycles/{slug}/advanced/">Advanced</a></nav></div><div class="ph-v">{pimg(ph, valt(ph, b["name"])) if ph else ""}{vcredit(ph)}</div></section>
-<div class="yts">{stat(f'{n:,}', 'owner complaints')}{stat(f'{len(b["recalls"])}', 'recalls')}{stat(f'{b["serious"]}%', 'involved a crash, fire or injury', 'bad' if b['serious'] >= 25 else '')}{stat(f'{b["miles"]:,}' if b['miles'] else '—', 'typical miles at complaint')}</div>
+<div class="yts">{stat(f'{n:,}', 'owner complaints')}{stat(f'{len(b["recalls"])}', 'recall' if len(b['recalls']) == 1 else 'recalls')}{stat(f'{b["serious"]}%', 'involved a crash, fire or injury', 'bad' if b['serious'] >= 25 else '')}{stat(f'{b["miles"]:,}' if b['miles'] else '—', 'typical miles at complaint')}</div>
 {av}<section class="yc"><h2>What owners complain about. <span class="h2s">Share of complaints.</span></h2>{bars_pct(b["parts"])}</section>
 {mrecs(b["recalls"], slug)}
 <section class="yc"><h2>Complaints by model year.</h2>{bars_n([(y, v) for y, v in by.items()])}<p class="yc-cap">Popular years get more complaints just because more were sold, and newer years have had less time to collect them. There are no U.S. sales figures by motorcycle model year, so these are counts, not rates.</p></section>

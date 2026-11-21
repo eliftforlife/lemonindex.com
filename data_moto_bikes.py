@@ -4,7 +4,7 @@
 # one fullmatch regex per bike (bikes.py from the 11-11 plan). Recalls: api.nhtsa.gov recallsByVehicle, read from the plan's cache
 # (car images test/motorcycles_new/nhtsa_cache, plain curl; a miss is fetched the same way, nothing else). Equipment campaigns ("E") are left out.
 # COUNTS, NEVER RATES: there are no U.S. sales figures per motorcycle model year.
-# Also writes AVOID: the "years to avoid" blocks for the 10 bikes in the 11-14 @lemonindexmotorcycle videos, with the videos' own numbers
+# Also writes AVOID: the "years to avoid" blocks for the 10 bikes in the 11-14 @lemonindexmotorcycles videos, with the videos' own numbers
 # (NHTSA complaints API, 3 Lemon Index/motorcycles/data/<bike>.json), keyed by the page slug that shows them.
 import sqlite3, re, json, os, sys, collections, statistics, hashlib, subprocess, time, urllib.parse
 sys.stdout.reconfigure(encoding='utf-8')

@@ -6,6 +6,7 @@ import re
 # Every number comes from data/*.csv (autopilot/lib/lemon.py, with the 10-24 mysales sales-timing fix); was 3 Lemon Index/video 1 most reliable/findings.md (NHTSA complaints ÷ US sales, model years 2010-2022).
 import os, re, json, html, datetime, shutil, csv
 from collections import defaultdict
+exec(open('k5_split.py', encoding='utf-8').read())   # 11-20: the Kia K5 (2021+) gets its own pages, split from the Optima as each data file is read
 import year_slider as YSL   # 11-10: AI year illustrations + 'every year' slider (data/ai_year_images.json)
 import tabbed as TAB   # 11-10 (Elijah, Civic first): centered hero + tabs + Years/Engines chart for the models in TAB.ON
 OUT = 'docs'; TODAY = datetime.date.today().isoformat(); BASE = 'https://lemonindex.com'
@@ -75,6 +76,9 @@ for r in (json.load(open('data/cars_new.json', encoding='utf-8')) if os.path.exi
     CARS_NEW.append(dict(id=r['id'], name=r['name'], brand=r['brand'], seg=r['segment'], segName=SEGN.get(r['segment'], r['segment']), years=r['years'], sold=r['sold'], est=False,
                          n=r['n'], per100k=r['per100k'], avg=round(r['expected'] / r['sold'] * 1e5), li=r['li'], serious=r['serious'], worst=r['worst'], issues=r['issues'],
                          new=True, sales_url=r.get('sales_url'), sales_kind=r.get('sales_kind')))
+K5_CARS(CARS, CARS_NEW, SEGN)   # 11-20: Optima 2010-2020 + Kia K5 2021-2022 (data/k5_split.json); the study's ranking re-sorted with the Optima's new score
+CARS.sort(key=lambda c: c['li'])
+for i, c in enumerate(CARS, 1): c['rank'] = i
 exec(open('quote_clean.py', encoding='utf-8').read())   # 11-20 owner quotes: light spelling cleanup, cleaner quotes first, garbled ones skipped (QC_WALK)
 def QC_WALK(o):
     """Every 'quotes' list of owner-quote dicts ({text, odi, ...}) inside o goes through QC_PICK (quote_clean.py). Returns o."""
@@ -120,11 +124,9 @@ def two_windows(slug, here='main'):
     """One sentence naming both scores of a car that has both, each with its window ('' if it has only one)."""
     e, m = EVBY.get(slug), MAINBY.get(slug)
     if not e or not m: return ''
-    a = f'Lemon Index <b>{m["li"]}</b> for model years {YRS(m)} (complaints in each car&#39;s first 3 years)'
-    b = f'EV score <b>{e["li"]}</b> for model years {e["years"].replace("-", "–")} (complaints filed by the end of the year after the model year)'
-    return (f'Two scores, two windows: {a if here == "main" else b} on this page; {b if here == "main" else a} on '
-            + (f'<a href="/electric/{slug}/">its EV page</a>' if here == 'main' else f'<a href="/cars/{slug}/">its main page</a>' if slug in {f["id"] for f in _YJ} else 'the main rankings')
-            + '. Different model years and windows, so the numbers differ.')
+    # 11-20 (QA: 203 here, 366 there): both pages now lead with the Lemon Index; the EV page adds its EV ranking score as one labelled line
+    return (f'The same Lemon Index (<b>{m["li"]}</b>, model years {YRS(m)}) leads <a href="/electric/{slug}/">its EV page</a>, which also shows its EV ranking score '
+            f'(<b>{e["li"]}</b>, model years {e["years"].replace("-", "–")}, complaints filed by the end of the year after the model year), the window every EV is ranked on.')
 PERFX = _jl('data/perf_cars.json') or []   # the performance list (another agent researches it); empty = the tab shows "Coming soon"
 if isinstance(PERFX, dict): PERFX = PERFX.get('cars', [])
 _bk = {b.lower(): b for b in PICK}
@@ -157,11 +159,11 @@ for _m in (_jl('data/moto.json') or []): PICK_ALL.setdefault(_brandof(_m['brand'
 for _m in (_jl('data/moto_bikes.json') or []): PICK_ALL.setdefault(_brandof(_m['brand']), []).append([_m['name'], 'moto-' + _m['slug'], [], f"/motorcycles/{_m['slug']}/", 'moto'])   # 11-14: bike pages
 for _m in [x for x in (_jl('data/moto_soon.json') or []) if x['slug'] not in {b['slug'] for b in (_jl('data/moto_bikes.json') or [])}]: PICK_ALL.setdefault(_brandof(_m['make']), []).append([_m.get('search') or _m['name'], 'moto-' + _m['slug'], [], '', 'moto'])
 PICK_ALL = dict(sorted((b, sorted(m)) for b, m in PICK_ALL.items()))
-def finder(h='Look up any car', sub='Every model year, 2000 to 2025. Free.', foot=''):
+def finder(h='Look up any car', sub='Every model year, 2000 to 2025. Free.', foot='', ph='e.g. 2016 Honda Pilot', lab='Type a car'):
     """10-29 (Elijah): the first thing on the page is an easy car filter. Type "2016 pilot", or pick brand, model, year (assets/lookup.js)."""
     pick = json.dumps(PICK_ALL, ensure_ascii=False).replace('</', '<\\/')   # 11-11: supercars, EVs and performance cars too
     return f"""<section class="finder" aria-labelledby="fh"><h1 id="fh">{h}</h1><p class="lede">{sub}</p>
-<div class="fq"><input id="fq" type="search" placeholder="e.g. 2016 Honda Pilot" autocomplete="off" aria-label="Type a car"><div id="fsug" class="fsug" role="listbox" hidden></div></div>
+<div class="fq"><input id="fq" type="search" placeholder="{ph}" autocomplete="off" aria-label="{lab}"><div id="fsug" class="fsug" role="listbox" hidden></div></div>
 <form class="look" id="look"><select id="lb" aria-label="Brand"><option value="">Brand</option></select><select id="lm" aria-label="Model" disabled><option value="">Model</option></select><select id="ly" aria-label="Year" disabled><option value="">Year</option></select><button type="button" class="btn" id="lgo" disabled>Show problems</button></form>
 {foot}<script id="pick" type="application/json" data-find="/assets/find.json?v={TODAY}">{pick}</script></section>"""   # 11-11: data-find = the full search index (find_index.py)
 BEST = [(n, v, sold or (f"{BYNAME[n]['sold'] / 1e6:.2f}M" if n in BYNAME else '')) for n, v, sold in BEST]   # fills the E-Class's missing sales
@@ -548,6 +550,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
     body = auto_hero(body, vis)
     if '<table' in body: body = stack_tables(body)   # 11-10: wide tables become stacked rows on phones (site.css .stk)
     body = nowrap_hy(body)   # 11-20: CR-V, F-150, CX-5 never split at their hyphen in titles
+    body = K5_NOTE_INS(path, body)   # 11-20: 'The Optima was renamed the K5 for 2021' on both cars' pages
     if re.fullmatch(r'/cars/[^/]+/', path) and 'RC_ROW' in globals(): body += RC_ROW(path[6:-1])   # 11-14 growth 2D-1: this model's repair cost pages
     if re.fullmatch(r'/cars/[^/]+/', path) and 'SEARCH_MINI' in globals(): body += SEARCH_MINI + (CM_ROW(path[6:-1]) if 'CM_ROW' in globals() else '') + CODES_JS   # 11-10: engine code lookup on model pages (added after the date hash, so dates don't move)
     _lxm = re.fullmatch(r'/cars/(.+?)/(\d{4})/', path)
@@ -581,7 +584,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' '{DB_HASH}' https://static.cloudflareinsights.com https://challenges.cloudflare.com https://www.googletagmanager.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; frame-src https://challenges.cloudflare.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cloudflareinsights.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://vpic.nhtsa.dot.gov https://api.nhtsa.gov https://lemon-survey.elift08.workers.dev https://lemon-alerts.elift08.workers.dev https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="google-adsense-account" content="{ADS}"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/lxs.css?v={LXS_V}">
-<link rel="stylesheet" href="/assets/site.css?v=1119-mu"><link rel="stylesheet" href="/assets/cpl.css?v=21"><script src="/assets/cpl.js?v=1" defer></script><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1119" defer></script>{lds}</head>
+<link rel="stylesheet" href="/assets/site.css?v=1119-mu"><link rel="stylesheet" href="/assets/cpl.css?v=22"><script src="/assets/cpl.js?v=1" defer></script><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1119" defer></script>{lds}</head>
 <body>{'' if path.startswith('/thanks/') else DONBAR}{gh_header(path)}
 <main>{body}{_eb}{_rel}{'' if path == '/vote/' else ask_html(path)}</main>
 <footer class="foot f2 f3"><div class="f3-top"><a class="f3-name" href="/"><img src="/assets/icon-64.png" alt="" width="64" height="64"><span>Lemon Index</span></a><p class="f3-tag">Check here before you buy.</p><div class="f3-soc">{F3_SOC}</div></div><div class="f2-in">
@@ -906,6 +909,7 @@ yurls = []
 def _load(p):
     if not os.path.exists(p): return {}
     t = open(p, encoding='utf-8').read(); d = json.loads(t)
+    if '"kia-optima"' in t and not any(x in p for x in _K5_SKIP): K5_FIX(d)   # 11-20 K5 split (k5_split.py)
     return QC_WALK(d) if '"quotes"' in t else d   # 11-20: owner quotes in any data file get the same cleanup
 XL, XA = _load('data/extras_local.json'), _load('data/extras_api.json')
 if os.path.exists('data/extras_local_new.json'): XL.update(_load('data/extras_local_new.json')); XA.update(_load('data/extras_api_new.json'))   # 11-11 new models
@@ -2340,7 +2344,7 @@ HKCARDS = ('<nav class="hk" id="kinds" aria-label="Kinds of car">' + ''.join(_hk
 HKBAR = '<p class="hkon" hidden><b data-hkname></b><a href="/" data-type="all">Show every car</a><a href="#kinds">Other kinds of car</a></p>'
 # 11-11: the home page = this grid (search, the 4 tabs, every model), with the home's own title, schema, H1 and trust line
 page('/', HOME_PAGE['title'], HOME_PAGE['desc'], f'''
-<div class="pg pg-home"><div class="ph ph-f">{finder('<span class="ph-e">The Lemon Index</span>Look up any car.', 'Every model year, 2000 to 2025. Free.', foot=f'<p class="fnote">From {COUNTED:,} owner complaints. <a href="/data/#totals">How it works</a></p>')}{HKCARDS}</div>
+<div class="pg pg-home"><div class="ph ph-f">{finder('<span class="ph-e">The Lemon Index</span>Look up any car or motorcycle.', 'Every model year, 2000 to 2025. Free.', ph='e.g. 2016 Honda Pilot or Harley Sportster', lab='Type a car or motorcycle', foot=f'<p class="fnote">From {COUNTED:,} owner complaints. <a href="/data/#totals">How it works</a></p>')}{HKCARDS}</div>
 {CARS_GRID.replace(CTABS, HKBAR, 1)}
 <section class="faq"><h2>Questions</h2>{HOME_FAQ}</section></div><script src="/assets/ctabs.js?v=6" defer></script>''', ld=HOME_PAGE['ld'])
 
@@ -2423,6 +2427,7 @@ exec(open('find_index.py', encoding='utf-8').read())   # 11-11: the search index
 RCP = 'pages'; exec(open('repair_cost_pages.py', encoding='utf-8').read())   # 11-14 growth 2D-1: /repair-cost/ hub, repair pages, model x repair pages (5+ owner reports)
 CMP = 'pages'; exec(open('code_model_pages.py', encoding='utf-8').read())   # 11-14 growth 2A-x: /check-engine-light/<code>/<model>/ where 10+ owner complaints on that model name the code
 exec(open('alias_pages.py', encoding='utf-8').read())   # 11-13 (N1): redirect stubs at the addresses people type (/cars/ford-f150/, /cars/honda/, reversed match-ups)
+if not QM.ON or any(QM.want(f'/cars/kia-optima/{y}/') for y in range(2021, 2026)): print('K5 redirect stubs:', K5_REDIRECTS(OUT))   # 11-20: Optima 2021+ year pages moved to /cars/kia-k5/
 json.dump(PD, open('data/page_dates.json', 'w', encoding='utf-8'), separators=(',', ':'))
 
 # 11-13 navigation test (N1, problem 10: "the 404 page has 3 buttons and no search, and loads the whole 250 KB home page"): a light page

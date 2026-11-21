@@ -1,4 +1,4 @@
-# "Years to avoid" blocks (11-14) for the 10 bikes in the first @lemonindexmotorcycle videos -> data/moto_avoid.json, shown by vehicles_pages.py
+# "Years to avoid" blocks (11-14) for the 10 bikes in the first @lemonindexmotorcycles videos -> data/moto_avoid.json, shown by vehicles_pages.py
 # on the matching motorcycle page (a family page, or the bike's own page for the Street Glide and Road King).
 # The numbers are the videos' own: NHTSA complaints API (complaintsByVehicle / recallsByVehicle), model years 2005-2024, pulled 2026-11-14 by the
 # two motorcycle builders (3 Lemon Index/motorcycles/data/<bike>.json + method.md). The chart reads per_year from those files; the year notes and

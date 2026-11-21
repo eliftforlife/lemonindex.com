@@ -83,7 +83,7 @@ N2_CLASSES = [
     ('compact', ['honda-civic', 'toyota-corolla', 'hyundai-elantra', 'nissan-sentra', 'mazda3', 'volkswagen-jetta', 'kia-forte', 'subaru-impreza', 'ford-focus',
                  'chevrolet-cruze', 'volkswagen-golf', 'dodge-dart', 'mitsubishi-lancer', 'chevrolet-cobalt', 'hyundai-veloster', 'dodge-caliber', 'chevrolet-hhr',
                  'dodge-neon', 'chevrolet-cavalier'], [], ['mid', 'sub']),
-    ('mid', ['toyota-camry', 'honda-accord', 'nissan-altima', 'hyundai-sonata', 'kia-optima', 'ford-fusion', 'chevrolet-malibu', 'mazda6', 'subaru-legacy',
+    ('mid', ['toyota-camry', 'honda-accord', 'nissan-altima', 'hyundai-sonata', 'kia-optima', 'kia-k5', 'ford-fusion', 'chevrolet-malibu', 'mazda6', 'subaru-legacy',
              'volkswagen-passat', 'chrysler-200', 'buick-regal', 'dodge-avenger', 'volkswagen-cc', 'dodge-stratus'], [], ['large', 'compact']),
     ('large', ['toyota-avalon', 'chevrolet-impala', 'nissan-maxima', 'chrysler-300', 'dodge-charger', 'ford-taurus', 'buick-lacrosse', 'hyundai-genesis',
                'ford-crown-victoria'], [], ['mid']),

@@ -1,0 +1,57 @@
+{
+ "kia-optima": {
+  "name": "Kia Optima",
+  "years": "2010-2020",
+  "n_years": 11,
+  "sold": 1248760,
+  "n": 1079,
+  "per100k": 86.4,
+  "expected": 1325.8,
+  "li": 81,
+  "serious": 11.6,
+  "worst": "2013",
+  "worst_per100k": 131.5,
+  "issues": [
+   [
+    "engine",
+    30
+   ],
+   [
+    "steering",
+    21
+   ],
+   [
+    "electrical",
+    11
+   ]
+  ]
+ },
+ "kia-k5": {
+  "name": "Kia K5",
+  "years": "2021-2022",
+  "n_years": 2,
+  "sold": 158640,
+  "n": 182,
+  "per100k": 114.7,
+  "expected": 170.4,
+  "li": 107,
+  "serious": 13.8,
+  "worst": "2022",
+  "worst_per100k": 150.8,
+  "issues": [
+   [
+    "electrical",
+    25
+   ],
+   [
+    "fuel or EV drive system",
+    20
+   ],
+   [
+    "engine",
+    19
+   ]
+  ]
+ },
+ "note": "Kia Optima (study family 2010-2022) split at the 2021 rename to K5; numbers from the study files, see tools/k5_split.py"
+}

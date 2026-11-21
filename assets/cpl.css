@@ -693,3 +693,8 @@ main > .pg > section.ph:first-child > .ph-e:first-child, main > .pg > .v5-h:firs
 /* 11-20 QA: /compare/ hero credit (i) sits on the photo pair's bottom-right, not alone under it */
 .ph-pair:has(> .ph-cr) { position: relative; }
 .ph-pair > .ph-cr { position: absolute; right: 0; bottom: -6px; margin: 0; z-index: 2; }
+/* 11-20: the Optima / K5 rename line under the title on both cars' pages */
+.k5-note { text-align: center; font-size: 15px; color: var(--mute); margin: 6px auto 10px; max-width: 560px; padding: 0 16px; }
+.k5-note a { color: var(--ink); font-weight: 600; }
+/* 11-20: an EV with a main /cars/ page leads with that Lemon Index; its EV ranking score is this one labelled line */
+.ev-2nd { display: block; margin-top: 10px; font-size: 15px; line-height: 1.45; color: var(--mute); }

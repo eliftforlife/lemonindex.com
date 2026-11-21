@@ -100,7 +100,7 @@ for f, b, mk, rx, seg in pats:
         res = list(ex.map(lambda q: (q[1], get('https://api.nhtsa.gov/recalls/recallsByVehicle?' + urllib.parse.urlencode({'make': mk, 'model': q[0], 'modelYear': q[1]}))), qs))
     for y, d in res:
             for r in (d or {}).get('results', []):
-                camp[r.get('NHTSACampaignNumber')] = dict(id=r.get('NHTSACampaignNumber'), date=r.get('ReportReceivedDate'), part=r.get('Component'), summary=(r.get('Summary') or '')[:300], y=y)
+                camp[r.get('NHTSACampaignNumber')] = dict(id=r.get('NHTSACampaignNumber'), date=r.get('ReportReceivedDate'), part=r.get('Component'), summary=r.get('Summary') or '', consequence=r.get('Consequence') or '', y=y)   # 11-20: full text (a 300-character cut lost the defect)
     years = sorted(ys)
     out.append(dict(name=f, brand=b, make=mk, seg=seg, n=n, years=[years[0], years[-1]], by_year={str(y): ys[y] for y in years},
                     parts=[[p, round(k / n * 100)] for p, k in comp.most_common(5)], serious=round(ser / n * 100), crash=sum(1 for r in R if r[3] == 'Y'),
