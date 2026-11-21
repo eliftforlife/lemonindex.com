@@ -1661,11 +1661,11 @@ kia-optima,Kia Optima,2017,53,63,engine,46,electrical,17,brakes,8,
 kia-optima,Kia Optima,2018,57,60,engine,32,electrical,18,brakes,17,
 kia-optima,Kia Optima,2019,55,55,airbags,15,electrical,15,engine,15,
 kia-optima,Kia Optima,2020,55,42,engine,45,brakes,17,electrical,12,
-kia-optima,Kia Optima,2021,92,82,electrical,29,engine,16,fuel system,12,
-kia-optima,Kia Optima,2022,112,100,fuel system,26,electrical,21,engine,21,
-kia-optima,Kia Optima,2023,135,108,fuel system,37,body structure,13,"fuel system, gasoline",13,yes
-kia-optima,Kia Optima,2024,68,31,engine,29,body structure,23,electrical,19,yes
-kia-optima,Kia Optima,2025,120,53,tires,28,electrical,21,transmission & drivetrain,11,yes
+kia-k5,Kia K5,2021,92,82,electrical,29,engine,16,fuel system,12,
+kia-k5,Kia K5,2022,112,100,fuel system,26,electrical,21,engine,21,
+kia-k5,Kia K5,2023,135,108,fuel system,37,body structure,13,"fuel system, gasoline",13,yes
+kia-k5,Kia K5,2024,68,31,engine,29,body structure,23,electrical,19,yes
+kia-k5,Kia K5,2025,120,53,tires,28,electrical,21,transmission & drivetrain,11,yes
 kia-forte,Kia Forte,2010,65,49,tires,31,wheels,20,airbags,16,
 kia-forte,Kia Forte,2011,28,25,transmission & drivetrain,28,airbags,24,speed control,24,
 kia-forte,Kia Forte,2012,40,34,airbags,18,lights,18,speed control,18,

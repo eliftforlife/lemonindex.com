@@ -60,8 +60,8 @@ chevrolet-cruze,Chevrolet Cruze,Chevrolet,Car,2011-2019,79,1548,86,108,56,,https
 toyota-avalon,Toyota Avalon,Toyota,Car,2010-2022,81,412,86,107,57,,https://lemonindex.com/cars/toyota-avalon/,https://en.wikipedia.org/wiki/Toyota_Avalon
 ford-taurus,Ford Taurus,Ford,Car,2010-2019,81,410,88,109,58,,https://lemonindex.com/cars/ford-taurus/,https://en.wikipedia.org/wiki/Ford_Taurus
 dodge-challenger,Dodge Challenger,Dodge,Car,2010-2022,81,607,85,106,59,,https://lemonindex.com/cars/dodge-challenger/,https://en.wikipedia.org/wiki/Dodge_Challenger_(2008)
-honda-accord,Honda Accord,Honda,Car,2010-2022,82,3303,88,106,60,,https://lemonindex.com/cars/honda-accord/,https://en.wikipedia.org/wiki/Honda_Accord
-kia-optima,Kia Optima,Kia,Car,2010-2022,84,1261,90,106,61,,https://lemonindex.com/cars/kia-optima/,https://en.wikipedia.org/wiki/Kia_Optima
+kia-optima,Kia Optima,Kia,Car,2010-2020,81,1079,86,106,60,,https://lemonindex.com/cars/kia-optima/,https://en.wikipedia.org/wiki/Kia_Optima
+honda-accord,Honda Accord,Honda,Car,2010-2022,82,3303,88,106,61,,https://lemonindex.com/cars/honda-accord/,https://en.wikipedia.org/wiki/Honda_Accord
 chevrolet-sonic,Chevrolet Sonic,Chevrolet,Car,2012-2020,85,432,91,107,62,,https://lemonindex.com/cars/chevrolet-sonic/,https://en.wikipedia.org/wiki/Chevrolet_Aveo_(T300)
 gmc-sierra,GMC Sierra,GMC,Truck,2010-2022,87,2479,92,106,63,,https://lemonindex.com/cars/gmc-sierra/,https://en.wikipedia.org/wiki/GMC_Sierra
 chevrolet-spark,Chevrolet Spark,Chevrolet,Car,2013-2022,89,284,94,105,64,,https://lemonindex.com/cars/chevrolet-spark/,https://en.wikipedia.org/wiki/Chevrolet_Spark
@@ -261,3 +261,4 @@ suzuki-sx4,Suzuki SX4,Suzuki,Car,2008-2009,135,62,123,92,,,https://lemonindex.co
 buick-lesabre,Buick LeSabre,Buick,Car,2000-2005,78,546,74,95,,,https://lemonindex.com/cars/buick-lesabre/,https://www.goodcarbadcar.net/buick-lesabre-sales-figures-usa-canada/
 buick-lucerne,Buick Lucerne,Buick,Car,2006-2011,88,241,75,85,,,https://lemonindex.com/cars/buick-lucerne/,https://en.wikipedia.org/wiki/Buick_Lucerne
 acura-rsx,Acura RSX,Acura,Car,2002-2005,94,94,83,88,,,https://lemonindex.com/cars/acura-rsx/,https://en.wikipedia.org/wiki/Honda_Integra_(fourth_generation)
+kia-k5,Kia K5,Kia,Car,2021-2022,107,182,115,107,,,https://lemonindex.com/cars/kia-k5/,https://en.wikipedia.org/wiki/Kia_Optima
