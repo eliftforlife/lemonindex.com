@@ -80,7 +80,7 @@ def RA_PAGE():
 <div class="v5-im">{pimg(mphoto('toyota-camry', 2019), 'Toyota Camry').replace(' loading="lazy"', '')}</div>
 <ol class="rla5-st"><li><b>1</b><span>Pick your car, or check your VIN</span></li><li><b>2</b><span>Tap Email me in its Recalls section</span></li><li><b>3</b><span>We email you only when a new recall is added</span></li></ol>
 <p>Pick your car on its Lemon Index page and tap <b>Email me</b> in its Recalls section, or <a href="/vin/">check your VIN</a> first. We check the recall list every week and email you only when something new is added. You confirm by email first, and every email has a one-click unsubscribe.</p>
-<p><a class="btn" href="/cars/">Find your car</a></p></div><div class="rla-out" aria-live="polite" hidden></div>
+<p><a class="btn" href="/">Find your car</a></p></div><div class="rla-out" aria-live="polite" hidden></div>
 <p class="note">Details in our <a href="/privacy/#recall-alerts">privacy policy</a>. We never sell or share the list.</p></section></div>{RA_ASSETS}''')
     _p = f'{OUT}/alerts/index.html'; _s = open(_p, encoding='utf-8').read()
     open(_p, 'w', encoding='utf-8').write(_s.replace('<link rel="canonical"', '<meta name="robots" content="noindex, follow"><link rel="canonical"', 1))

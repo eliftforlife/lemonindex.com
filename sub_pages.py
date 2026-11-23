@@ -283,6 +283,27 @@ def SUB_HOOK(path, body):
     except Exception as ex:
         globals().setdefault('TAB_FAIL', []).append(f'sub_pages {path}: {type(ex).__name__} {ex}'); return body
 
+# 11-23 (old-pages audit #9, Elijah approved): on the engine sub-pages (/cars/<model>/<year>/engines/ and /cars/<model>/engines/) the
+# "ENGINES IN THIS CAR" capital label + pill chips become a sentence-case heading and one inset list (title + years), the source note in a box
+_N3C = re.compile(r'<(a|span) class="n3-c[^"]*"(?: href="([^"]*)")?><b>(.*?)</b>(?:<small>(.*?)</small>)?</' + chr(92) + '1>', re.S)
+N3L_CSS = ('<style>.n3l-h{text-align:center;font-size:clamp(24px,6.6vw,30px);letter-spacing:-.02em;margin:8px 0 0}.n3l{margin-top:16px}'
+           '.n3l .cpl-a span{display:flex;flex-direction:column;gap:2px;min-width:0}.n3l .cpl-a small{font-size:13px;font-weight:500;color:#6e6e73}'
+           '.n3l .n3l-x{display:flex;align-items:center;gap:12px;padding:14px 16px;color:#1d1d1f}.n3l-i{margin-top:12px}</style>')
+def _n3_list(h):
+    m = re.search(r'<nav(?=[^>]*class="n3-row")(?=[^>]*aria-label="Engines in this car")[^>]*>(.*?)</nav>', h, re.S)
+    if not m: return h
+    inner = m.group(1)
+    hd = re.search(r'<p class="n3-h">(.*?)</p>', inner, re.S); nt = re.search(r'<p class="n3-n">(.*?)</p>', inner, re.S)
+    rows = []
+    for tag, href, name, small in _N3C.findall(inner):
+        t = f'<span><b>{name}</b>' + (f'<small>{small}</small>' if small else '') + '</span>'
+        rows.append(f'<div class="cpl"><a class="cpl-a" href="{href}">{V5_IC("engine")}{t}{PILL_GO}</a></div>' if tag == 'a' and href
+                    else f'<div class="cpl"><div class="n3l-x">{V5_IC("engine")}{t}</div></div>')
+    if not rows: return h
+    keep = ''.join(re.findall(r'<script[^>]*></script>', inner))
+    out = (N3L_CSS + keep + (f'<h2 class="n3l-h">{hd.group(1)}</h2>' if hd else '') + '<div class="cpl-grp cpl-ins n3l">' + ''.join(rows) + '</div>'
+           + (f'<div class="cpl n3l-i">{V5_BOX("info", "Where this list comes from", "<p class=" + chr(34) + "yc-cap" + chr(34) + ">" + nt.group(1) + "</p>")}</div>' if nt else ''))
+    return h[:m.start()] + out + h[m.end():]
 def _sub_hook(path, body, cfg):
     soup = _SBS(body, 'html.parser')
     boxes = [d for d in soup.select('section.cpl-sec > div.cpl > details') if not d.find_parent('div', class_='cpl-b')]
@@ -309,6 +330,7 @@ def _sub_hook(path, body, cfg):
         if len(set(ts)) < len(ts): ts = [t for t, _ in parts]   # "Known issues: BMW S54", "Known issues: BMW S65" keep their engine
         inner = ''.join((f'<h2 class="sb-sh">{E(t)}</h2>' if len(parts) > 1 and '<h2' not in h else '') + h for t, (_, h) in zip(ts, parts))
         inner = _sb_trim(inner, key)
+        if slug == 'engines': inner = _n3_list(inner)   # 11-23 (old-pages audit #9): engine chips -> one inset list
         if re.fullmatch(r'/cars/[^/]+/\d{4}/', path): inner = _sb_box(inner)
         sub = (f'{assets}{SB_CSS}<div class="advp tbl pfp sbp"><section class="sb-top"><a class="sb-back" href="{path}">{_SB_BACK}<span>{E(cfg["name"])}</span></a>'
                f'<h1>{E(h1)}</h1>{pic}</section><div class="pf sb-body">{inner}</div></div>')

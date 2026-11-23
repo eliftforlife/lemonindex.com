@@ -25,7 +25,7 @@ from bs4 import BeautifulSoup
 HERE = os.path.dirname(os.path.abspath(__file__))
 BASE = 'https://lemonindex.com'
 E = lambda s: html.escape(str(s), quote=True)
-V = '4'   # perf.css / perf.js version (11-12: generation filter; 11-14: #g-<id> opens that generation)
+V = '5'   # 11-23: .pf-stage overflow fix; perf.css / perf.js version (11-12: generation filter; 11-14: #g-<id> opens that generation)
 ASSET = f'<link rel="stylesheet" href="/assets/perf.css?v={V}"><script src="/assets/perf.js?v={V}" defer></script>'
 def _load(p, d=None):
     p = os.path.join(HERE, p)

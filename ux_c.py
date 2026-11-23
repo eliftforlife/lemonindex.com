@@ -253,8 +253,8 @@ if UXC == 'hooks':
                 + V5_BOX('share', 'Use this chart', embed_block(EMB, ['worst-years'], 'Use this chart'))
                 + '</div>' + pcredit(who(*[r['ph'] for r in rows if r['ph']])) + '</div>')
         page('/rankings/worst-years/', f'The Worst Car Model Years, {WY0}–{WY1}, by Owner Complaints | The Lemon Index',
-             f'The {len(top)} model years from {WY0} to {WY1} with the most NHTSA owner complaints per car sold, led by the {w[1]["y"]} {w[0]["name"]}. Free CSV of all {len(rs):,} scored model years.',
-             body, kind='article', ld=[{"@context": "https://schema.org", "@type": "Dataset", "name": f"Worst car model years {WY0}-{WY1} by NHTSA complaints per car sold", "url": BASE + '/rankings/worst-years/',
+             (_wyd := f'The {len(top)} model years from {WY0} to {WY1} with the most NHTSA owner complaints per car sold, led by the {w[1]["y"]} {w[0]["name"]}. Free CSV of all {len(rs):,} scored model years.'),
+             body, kind='article', ld=[{"@context": "https://schema.org", "@type": "Dataset", "name": f"Worst car model years {WY0}-{WY1} by NHTSA complaints per car sold", "url": BASE + '/rankings/worst-years/', "description": _wyd,   # 11-23 GSC: description
                                         "license": "https://creativecommons.org/licenses/by/4.0/", "creator": {"@type": "Organization", "name": "The Lemon Index"}, "dateModified": TODAY,
                                         "distribution": [{"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": f'{BASE}/data/worst-model-years-{WY0}-{WY1}.csv'}]}])
         return '/rankings/worst-years/'
@@ -521,7 +521,10 @@ elif UXC == 'data':
         if not _os.path.exists(p): return
         h = open(p, encoding='utf-8').read()
         if 'id="charts"' in h or '</main>' not in h: return
-        blk = f'<div class="pg">{embed_block(EMB, ids)}</div>' + ('' if 'assets/data.js' in h else '<script src="/assets/data.js?v=1103" defer></script>')
+        eb = embed_block(EMB, ids)
+        if path == '/rankings/': eb = f'<div class="cpl v5-pl">{V5_BOX("share", "Embed or download these charts", eb, "charts-box")}</div>'   # 11-23 (old-pages audit #4): behind a tap
+        blk = f'<div class="pg v5">{eb}</div>' if path == '/rankings/' else f'<div class="pg">{eb}</div>'
+        blk += ('' if 'assets/data.js' in h else '<script src="/assets/data.js?v=1103" defer></script>')
         open(p, 'w', encoding='utf-8').write(h.replace('</main>', blk + '</main>', 1))
     _inject('/rankings/', ['brands', 'models', 'worst-years'])
     _inject('/stats/car-complaints/', ['brands', 'worst-years'])

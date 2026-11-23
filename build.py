@@ -349,7 +349,7 @@ def gh_header(path):
     _mc, _ml = (' data-cur="1" style="color:var(--gh-ink);font-weight:500"', f'<span class="gh-ml">· {_mi}</span>') if _mi else ('', '')   # 11-15 4c: the label may shorten (lxs.css), never runs under the search box
     _cc = path.startswith(tuple(u for u, _ in NAV_CARS)) and not path.startswith(('/supercars/', '/jdm/'))
     _dd = (f'<div class="gh-dd"><button class="gh-ddb" type="button" aria-expanded="false" aria-controls="gh-carsdd"{" data-cur=\"1\"" if _cc else ""}>Cars{GH_DOWN}</button>'
-           f'<div class="gh-ddm" id="gh-carsdd">' + ''.join(f'<a href="{u}"{cur(u) if u != "/cars/" or path == "/cars/" else ""}>{t}</a>' for u, t in NAV_CARS) + '</div></div>')
+           f'<div class="gh-ddm" id="gh-carsdd">' + ''.join(f'<a href="{GH_HREF.get(u, u)}"{cur(u) if u != "/cars/" else ""}>{t}</a>' for u, t in NAV_CARS) + '</div></div>')
     top = _dd + ''.join(f'<a href="{GH_HREF.get(u, u)}"{cur(u)}>{t}</a>' for u, t in NAV_TOP if u != '/cars/')
     # 11-10 (Elijah: the phone menu didn't fit one screen): grouped (Look up / Explore / More) in two columns on phones; headings and the
     # top-bar links (gh-x) only show where the top bar is folded away (<1024 px). Lemon-only: the styles live in site.css, not the shared gh.css.
@@ -377,7 +377,7 @@ GH_SB = f'<button class="lxs-btn" type="button" aria-label="Search" aria-control
 GH_SD = (f'<form class="lxs-d" role="search" action="/" method="get"><div class="lxs-db">{_LXS_IC.replace("<svg ", "<svg class=\"lxs-di\" ", 1)}'
          '<input id="ghd" name="q" type="search" autocomplete="off" placeholder="Search cars, codes, lists" aria-label="Search cars, engine codes and lists" enterkeyhint="search">'
          '<div id="ghds" class="fsug" role="listbox" hidden></div></div></form>')
-LXS_V = '1119ck'   # lxs.css + lookup.js version (N1 navigation fixes; 11-15 4c: header fit + symptom search)
+LXS_V = '1123op'   # lxs.css + lookup.js version (N1 navigation fixes; 11-15 4c: header fit + symptom search)
 GH_IC.setdefault('/rankings/', '<path d="M4 6h16M4 12h11M4 18h6"/>')   # 11-13 (N1, problem 12): "Every car ranked" in the menu, best to worst bars
 def navlinks(path):
     on = lambda u: path.startswith(u) or (u == '/cars/' and path.startswith('/cars'))
@@ -390,6 +390,31 @@ _TBL = re.compile(r'<table(?:\s[^>]*)?>.*?</table>', re.S)
 # is wrapped in a no-wrap span, so it never splits at its hyphen
 _NW_BLK = re.compile(r'(<(h1|h2|h3)\b[^>]*>|<p class="(?:ph-s|v5-s|ph-e)[^"]*">)(.*?)(</\2>|</p>)', re.S)
 _NW_WORD = re.compile(r'(?<![\w&#;-])([A-Za-z0-9]+(?:-[A-Za-z0-9]+)+)(?![\w-])')
+# 11-23 (old-pages audit #7, Elijah approved): the gray label over a page's headline ("Brands", "Compare", "How it works", "Updated <date>") goes.
+# Breadcrumb labels (with a link) stay. A label with a date or year in it moves under the headline as one plain line.
+_KICK = re.compile(r'<p class="(?:ph-e|v5-e|rx5-e)[^"]*">((?:(?!<a\b|</p>).)*?)</p>(\s*<h1\b.*?</h1>)', re.S)
+_KICK2 = re.compile(r'(<h1[^>]*>)<span class="ph-e">[^<]*</span>')
+def drop_kicker(body):
+    def f(m):
+        t = m.group(1).strip()
+        return m.group(2) + (f'<p class="hdt" style="margin:8px 0 0;font-size:15px;color:#6e6e73">{t}</p>' if re.search(r'\d{4}', t) else '')
+    body = _KICK.sub(f, body, count=1)
+    return _KICK2.sub(r'\1', body, count=1)   # the finder heroes (/engines/): <h1><span class="ph-e">Engines</span>Every engine.</h1>
+# 11-23 (old-pages audit #9, Elijah approved): the 3 engine sub-hubs: centered header, the filter pills become a select (enghub.js v3),
+# flat gray rank / YouTube badges instead of yellow and black pills, the "cars with this engine" chips as one plain line
+_EHF = re.compile(r'<div class="ehub-f" role="group" aria-label="Show">(.*?)</div>', re.S)
+_EHB = re.compile(r'<button type="button" class="ehub-p" data-f="([^"]*)"[^>]*>(.*?)</button>', re.S)
+EHUB5_CSS = ('<style>.ehub .advh1{text-align:center;max-width:760px;margin:0 auto 18px}.ehub .advh1 h1{font-size:clamp(34px,9vw,56px);font-weight:800;letter-spacing:-.035em;line-height:1.04;margin:10px 0 8px}'
+             '.ehub .advh1 .ph-e a{color:inherit;text-decoration:none}.ehub .advh1 .ph-e a:hover{text-decoration:underline}.ehub .ans{margin:0 auto;max-width:62ch}.ehub-bar{justify-content:center}'
+             '.ehub .ehc-rk,.ehub .ytbadge,.ehub .ytbadge.na{background:#f5f5f7;color:#1d1d1f;font-weight:700;box-shadow:none}.ehub .ytbadge svg,.ehub .ytbadge.na svg{color:#6e6e73}'
+             '.ehub .ehc-cars{gap:0}.ehub .ehc-cars li,.ehub .ehc-cars li.more{background:none;padding:0;border-radius:0;color:#6e6e73;font-weight:500}.ehub .ehc-cars li+li::before{content:"\\00b7";margin:0 6px}</style>')
+def EHUB5(body):
+    def sel(m):
+        opts = ''.join(f'<option value="{k}">{t}</option>' for k, t in _EHB.findall(m.group(1)))
+        return f'<label class="ehub-s">Show <select id="ehub-f">{opts}</select></label>' if opts else m.group(0)
+    body = _EHF.sub(sel, body, count=1)
+    body = re.sub(r'/assets/enghub\.js\?v=\d+', '/assets/enghub.js?v=3', body)
+    return body.replace('<div class="advp ehub', EHUB5_CSS + '<div class="advp ehub', 1)
 def nowrap_hy(body):
     def blk(m):
         inner = re.sub(r'(^|>)([^<]+)', lambda t: t.group(1) + _NW_WORD.sub(lambda w: f'<span class="nw">{w.group(1)}</span>' if any(c.isupper() or c.isdigit() for c in w.group(1)) else w.group(1), t.group(2)), m.group(3))
@@ -538,6 +563,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
     if QM.ON: QM.page_new(path, path in PD)
     if 'class="study tr2 cp2' in body: body = CP5_HOOK(body)   # 11-19 v5 look (cp5_hook.py)
     if 'class="study tr2 eng2' in body: body = ENG5_HOOK(body)   # 11-19 v5 look, engine pages (cp5_hook.py)
+    if 'class="advp ehub' in body: body = EHUB5(body)   # 11-23 (old-pages audit #9): /engines/bmw/, /engines/performance/, /engines/supercars/
     if 'class="advp cb cbx"' in body: body = CBX5_HOOK(body)   # 11-19 v5 look, /best/ lists (cp5_hook.py)
     if path in INFO5_KEEP: body = INFO5_HOOK(path, body)   # 11-19 v5 look, info pages (cp5_hook.py)
     _pd_mark(path, body, title + '\n' + desc)
@@ -550,6 +576,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
     body = auto_hero(body, vis)
     if '<table' in body: body = stack_tables(body)   # 11-10: wide tables become stacked rows on phones (site.css .stk)
     body = nowrap_hy(body)   # 11-20: CR-V, F-150, CX-5 never split at their hyphen in titles
+    body = drop_kicker(body)   # 11-23 (old-pages audit #7): no plain gray label over the headline; a date moves under it
     body = K5_NOTE_INS(path, body)   # 11-20: 'The Optima was renamed the K5 for 2021' on both cars' pages
     if re.fullmatch(r'/cars/[^/]+/', path) and 'RC_ROW' in globals(): body += RC_ROW(path[6:-1])   # 11-14 growth 2D-1: this model's repair cost pages
     if re.fullmatch(r'/cars/[^/]+/', path) and 'SEARCH_MINI' in globals(): body += SEARCH_MINI + (CM_ROW(path[6:-1]) if 'CM_ROW' in globals() else '') + CODES_JS   # 11-10: engine code lookup on model pages (added after the date hash, so dates don't move)
@@ -754,7 +781,7 @@ VOTE_IMG = lambda n: (lambda im: {'src': f'/assets/vote/{n}.webp', 'w': im.size[
 
 # 11-11 (Elijah): three quick ways in, right under the search (outside the folding selects, so always visible)
 HOME_CHIPS = ('<nav class="hqk" aria-label="Browse">' + ''.join(f'<a href="{u}">{gh_ic(i)}<span>{t}</span></a>' for u, i, t in
-              (('/cars/', '/cars/', 'All cars'), ('/cars/?type=supercars', '/supercars/', 'Supercars'), ('/motorcycles/', '/motorcycles/', 'Motorcycles'))) + '</nav>')
+              (('/', '/cars/', 'All cars'), ('/supercars/', '/supercars/', 'Supercars'), ('/motorcycles/', '/motorcycles/', 'Motorcycles'))) + '</nav>')
 def home_compare():
     """11-11 (Elijah: "right under the any car search should show the compare cars box first instead of the two random cars"): a compact compare
     box: one big match-up with both AI cars, two more popular ones as links, and the way into /compare/ to pick any two."""
@@ -795,16 +822,28 @@ def pop_checks(n=28):
 # 11-11 (Elijah: "make the page that says every model and has the 4 selectors the main page"): the home page is the /cars/ grid now (built
 # after it, below). Its old sections (the 100 scale, best/worst cards, the full ranked list, the most-checked cars, the brand bars) moved here.
 HOME_FAQ = faq
+# 11-23 (old-pages audit #4, Elijah approved): compact like /rankings/worst-years/ (polish A2): the top 20 as ranked rows with a photo, the rest
+# in a box, brands / how it works / embed code in boxes. No pill-tag cloud, no tiles, no explorer. Same numbers.
+def _rk_row(c):
+    return {'href': car_href(c['id']) or '/rankings/', 'ph': aph(c['id']), 'title': E(c['name']) + ('*' if c.get('est') else ''),
+            'sub': f'{E(c["segName"])} · {c["years"].replace("-", "–")} · {E(plain(c["li"]))}', 'score': f'{c["li"]}', 'cls': 'good' if c['li'] < 100 else 'bad'}
+_RK = [_rk_row(c) for c in CARS]
+_rk_ph = aph(best4['id'])
 page('/rankings/', 'Car Reliability Rankings: Every Model and Brand, Best to Worst | The Lemon Index',
-     f'Every car model and brand ranked by owner complaints per car sold, best to worst: {len(CARS)} models, model years 2010-2022. 100 is the average car; lower is better.', f'''
-<div class="pg">{phero('Every car ranked', 'Every car, best to worst.', 'Owner complaints filed with the U.S. government, per car sold. 100 is the average car.')}</div>
-<div class="home"><section class="hread"><h2>100 is the average car. <span class="h2s">Lower is better.</span></h2>
-<div class="scale"><div class="sbar"><i style="left:{min(96, best4["li"] / 3.5):.1f}%" title="{E(best4["name"])}, {best4["li"]}"></i></div><div class="sl"><span>25 · ¼ the complaints</span><span>100 · average</span><span class="bad">300 · 3×</span></div></div></section>
-{tiles()}
-{explorer()}
-{pop_checks()}
-<section><h2>Every brand, best to worst.</h2>{bars(BRANDS, 330, 'two')}<p class="note">* Porsche is a small sample (2 models, 258,000 sold). Tesla uses estimated U.S. sales.</p></section>
-{share_line("Every car ranked by real owner complaints, best to worst. Free:")}</div>''',
+     f'Every car model and brand ranked by owner complaints per car sold, best to worst: {len(CARS)} models, model years 2010-2022. 100 is the average car; lower is better.',
+     '<div class="pg v5 rk5p">' + V5_HERO('', 'Every car, best to worst.', f'Owner complaints filed with the U.S. government, per car sold. 100 is the average car; lower is better. '
+                                         f'The <b>{E(best4["name"])}</b> drew the fewest of {len(CARS)} models.',
+                                         extra=(f'<div class="v5-im">{pimg(_rk_ph, best4["name"]).replace(" loading=" + chr(34) + "lazy" + chr(34), "")}</div>' if _rk_ph else ''))
+     + '<section class="cp5-sec"><h2>Top 20, most reliable first.</h2>' + V5_RANK(_RK[:20]) + '</section>'
+     + '<div class="cpl v5-pl">'
+     + V5_BOX('chart', f'Show #21–{len(_RK)}', V5_RANK(_RK[20:], 21), 'more')
+     + V5_BOX('tag', 'Every brand, best to worst', bars(BRANDS, 330, 'two') + '<p class="note">* Porsche is a small sample (2 models, 258,000 sold). Tesla uses estimated U.S. sales.</p>', 'brands')
+     + V5_GO('warning', 'The worst model years', '/rankings/worst-years/')
+     + V5_BOX('info', 'How the score works', f'<p class="yc-cap">Lemon Index = NHTSA owner complaints filed in a car&#39;s first 3 years, per car sold, against the average car of the same model years. '
+              '<b>100 is average</b>; 25 is a quarter of the complaints, 300 is three times as many. A complaint is an owner&#39;s report, not a confirmed defect, and this is not a safety rating.</p>'
+              '<p class="yc-cap">* Tesla doesn&#39;t publish U.S. sales by model, so its numbers use published estimates. <a href="/method/">How the index works</a> · <a href="/data/">All free data</a></p>')
+     + '</div>' + pcredit(who(*[r['ph'] for r in _RK[:20] if r['ph']]))
+     + share_line("Every car ranked by real owner complaints, best to worst. Free:") + '</div>',
      ld=[{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Car reliability rankings", "url": BASE + '/rankings/'}])
 HOME_PAGE = dict(title="Lemon Index (LemonIndex): Look Up Any Car's Problems by Year",
                  desc=f"Look up any car's problems by model year, 2000 to 2025: its reliability score, top problem areas and real owner complaints. Scores from {COUNTED:,} owner complaints to the government. 100 is the average car.",   # 11-12 r2 (Ryan): the meta said 1.6 million while the page says {COUNTED:,}
@@ -822,7 +861,7 @@ page(STUDY, 'The Most Reliable Cars, According to 1.6 Million Owner Complaints',
 <p class="note">What it means for you: a long-running model with a low index is the surest bet. Most of this list has been on sale, mostly unchanged, for a decade. Sold = U.S. sales across 2010-2022.</p></div>
 <div><h2>Least reliable: the bottom 10</h2><div class="tw"><table><thead><tr><th>Model</th><th>Index</th><th>Compared with average</th><th>Top complaint (share of its complaints)</th></tr></thead><tbody>{worst_rows}</tbody></table></div>
 <p class="note">What it means for you: one part can sink a car. Check the top complaint for the exact model year before you buy. * Tesla uses published sales estimates. Each score covers that model&#39;s own model years (shown in the table) with complaints from each car&#39;s first 3 years. The <a href="/electric/">EV ranking</a> scores model years {EV_WIN} with a shorter window, so an EV can show two numbers{(lambda m, e: f' (Tesla Model S: {m} here, {e} there)' if m and e else '')(MAINBY.get('tesla-model-s', {}).get('li'), EVBY.get('tesla-model-s', {}).get('li'))}.</p></div></div>
-<h2>Brands, best to worst</h2>{bars(BRANDS, 330, "two")}<p class="note"><a href="/cars/">Look up any of the {len(CARS)} models by year →</a></p>
+<h2>Brands, best to worst</h2>{bars(BRANDS, 330, "two")}<p class="note"><a href="/">Look up any of the {len(CARS)} models by year →</a></p>
 <h2>Best and worst by type</h2><div class="tw"><table><thead><tr><th>Type</th><th>Best</th><th>Worst</th></tr></thead><tbody>{seg_rows}</tbody></table></div>
 <h2>Three patterns in the data</h2>
 <ol class="beats"><li><b>New designs are a gamble, but year one is only a little worse.</b> Several of the worst models are recent all-new designs (Telluride, Palisade, Pacifica, the 2014-on Cherokee). Across 31 new models, the first model year drew about 20% more complaints than the next three, so waiting a year helps a little. It isn't a rule.</li>
@@ -861,7 +900,7 @@ page('/method/', 'Method: How We Score Car Reliability | The Lemon Index', 'How 
 <div><b>2</b><h3>Divide by cars sold</h3><p>So a car that sold a million doesn&#39;t look worse than one that sold ten thousand.</p></div>
 <div><b>3</b><h3>Compare with the average car</h3><p>100 = average. 50 = half the complaints. 200 = double.</p></div></div>
 <div class="hwm"><div class="ym-bar"><i class="ym-avg" style="left:40%"><span>average car = 100</span></i><i class="ym-pin" style="left:12%"><b>30: great</b></i><i class="ym-pin" style="left:80%"><b>200: lemon</b></i></div><div class="ym-ends"><span>fewer complaints</span><span>more complaints</span></div></div>
-<p><a class="btn" href="/cars/">Look up your car</a></p>
+<p><a class="btn" href="/">Look up your car</a></p>
 <details class="yd"><summary>The details</summary><ol class="beats"><li><b>Complaints:</b> the full NHTSA owner-complaint file (1,607,537 vehicle complaints, 1995 to October 2026; <a href="/data/#totals">why our totals differ</a>).</li>
 <li><b>Sales:</b> U.S. sales per model per year from automakers' published figures. Tesla doesn't report by model, so we use published estimates and say so.</li>
 <li><b>Same window for every car:</b> a complaint counts only if it was filed within 3 years of the model year.</li>
@@ -2041,8 +2080,8 @@ def trans_body(f):
     if best: qa.append((f'Which {SNM(f)} years have the fewest transmission complaints?', '', f'Since 2010, the {SNM(f)} years with the fewest transmission complaints per car sold are {", ".join(str(y) for y, _ in best)}.'))
     share = E(f'{SNM(f)} transmission problems by year. Worst: {", ".join(str(y) for y, _ in worst)}. Free report:')
     body = f'''
-<article class="study tr2"><p class="kicker"><a href="/">All cars</a> · <a href="{CARU(f)}">{nm}</a> · Transmission</p><h1>{nm} transmission problems by year</h1>
-<p class="tra">Worst years: <b>{AND(wys)}</b>.{f" Best since 2010: <b>{AND(bys)}</b>." if best else ""} <button type="button" class="shl" data-share="{share}">Share ↗</button></p>
+{SB_CSS}<div class="pg trn5"><div class="sbp"><section class="sb-top"><a class="sb-back" href="{CARU(f)}">{_SB_BACK}<span>{nm}</span></a><h1>{nm} transmission problems by year</h1>{'<div class="sb-im">' + car_hero(f, f['years'][-1]['y']).replace(' loading="lazy"', '') + '</div>' if car_hero(f, f['years'][-1]['y']) else ''}</section></div>
+<article class="study tr2"><p class="tra">Worst years: <b>{AND(wys)}</b>.{f" Best since 2010: <b>{AND(bys)}</b>." if best else ""} <button type="button" class="shl" data-share="{share}">Share ↗</button></p>
 {chips}
 <h2>Every year</h2>
 <details class="trm"><summary>Transmission complaints per 100,000 cars sold, from NHTSA owner reports. <span>How we count</span></summary><p>A complaint counts when it&#39;s filed under the transmission, or under the power train and the owner describes the transmission (shifting, slipping, gears, CVT). It&#39;s an owner&#39;s report, not a confirmed defect, and older years have had longer to collect complaints. The thin line on each bar marks a typical year for this model. Tap a year for its full report.</p></details>
@@ -2051,7 +2090,7 @@ def trans_body(f):
 {f'<h2>Transmission and power train recalls</h2><ul class="rc">{rl}</ul><p class="note">Recall repairs are free at any dealer. Check a specific car&#39;s VIN at <a href="https://www.nhtsa.gov/recalls" rel="noopener">nhtsa.gov/recalls</a>.</p>' if rl else ''}
 {f'<h2>In owners&#39; words</h2>{quotes}' if quotes else ''}
 <section class="yqa trq"><h2>Quick answers</h2>{qa_fold(''.join(f'<h3>{E(q)}</h3><p>{E(t)}</p>' for q, _, t in qa))}</section>
-{RCQ.code_links(f['id'], None, trans_only=True, label=SNM(f))}<p class="note">Every problem, not just the transmission: <a href="{CARU(f)}">{nm} reliability by year</a>.</p></article>'''
+{RCQ.code_links(f['id'], None, trans_only=True, label=SNM(f))}<p class="note">Every problem, not just the transmission: <a href="{CARU(f)}">{nm} reliability by year</a>.</p></article></div>'''
     return body, qa
 turls = []
 for f in YEARS:
@@ -2100,7 +2139,7 @@ def loan_body():
 <h2>How dealers make money on your loan</h2>
 <p>When a dealer arranges your loan, the lender approves a rate (the &ldquo;buy rate&rdquo;) and the dealer can add points on top. Federal settlements with several big lenders capped that markup at about 1 to 1.25 points, and lenders commonly cap it at 2 to 3. That markup is negotiable.</p>
 <ol class="beats"><li><b>Get pre-approved first.</b> A quote from your bank or a credit union is your leverage.</li><li><b>Ask the dealer to beat it.</b> If they can&#39;t, use your own loan.</li><li><b>Compare the total cost, not the monthly payment.</b> A longer loan lowers the payment and raises what you pay overall.</li></ol>
-<p class="note">General information, not financial advice. Check a specific car&#39;s problems and recalls before you buy: <a href="/cars/">look up any car</a> or <a href="/vin/">check a VIN</a>.</p></article></div>"""
+<p class="note">General information, not financial advice. Check a specific car&#39;s problems and recalls before you buy: <a href="/">look up any car</a> or <a href="/vin/">check a VIN</a>.</p></article></div>"""
 # ---- free data (11-03, Elijah: "how do we give this data away for free with attribution" -> "build data page"). CC BY 4.0.
 # Only our own numbers go in the files: the Lemon Index score, NHTSA complaint counts and the transmission rate. No sales figures
 # (third-party), no prices (CarGurus/MarketCheck terms), no complaint text.
@@ -2298,8 +2337,10 @@ CTABS = ('<nav class="ctabs ctb8 ctb9" aria-label="Kinds of car">' + ''.join(f'<
     ('/?type=minivans', 'minivans', 'Minivans', _nseg['mv']), ('/?type=performance', 'performance', 'Performance', _npf or 'soon'),
     ('/?type=supercars', 'supercars', 'Supercars', _nsc), ('/?type=electric', 'electric', 'Electric', _nev), ('/?type=jdm', 'jdm', 'JDM', _njd))) + '</nav>')
 # 11-11: one slim row of other ways in, right under the tabs (replaces the home's 3 pill buttons and its big compare box)
-HCHIPS = ('<nav class="hchips" aria-label="More ways in"><a href="/compare/">Compare up to 4 cars</a><a href="/rankings/">Every car ranked</a>'
-          '<a href="/best/safest-cars-for-teens/">Safest for teens</a><a href="/motorcycles/">Motorcycles</a></nav>')
+# 11-23 (old-pages audit #2): the 4 pill links became one simple inset list (title-only rows, like every other list on the site)
+HCHIPS = ('<nav class="cpl-grp cpl-ins hlist" aria-label="More ways in">' + ''.join(f'<div class="cpl">{V5_GO(i, t, u)}</div>' for i, t, u in (
+          ('scale', 'Compare up to 4 cars', '/compare/'), ('chart', 'Every car ranked', '/rankings/'), ('car', 'Safest cars for teens', '/best/safest-cars-for-teens/'),
+          ('signpost', 'Motorcycles', '/motorcycles/'))) + '</nav><style>.cgrid .hlist{max-width:560px;margin:0 auto 34px}</style>')
 _nsx = sum(c.get('group') in ('B', 'C') for c in _PFL)   # 11-11 (Elijah: tidy the Performance tab): a real tab header instead of one plain sentence
 CNOTES = (f'<div class="ctn pfh" data-for="performance" hidden><h3>Performance cars</h3>'
           f'<p class="pfh-s">Horsepower, engines and owner reports, from the GT500 to the Type R.{ai_note("performance cars on this tab")}</p>'
@@ -2313,10 +2354,8 @@ CARS_GRID = f'''<section class="cgrid">{CTABS}{HCHIPS}<h2 data-hide="p j">Every 
 <style>.pfh{{max-width:560px}}.pfh h3{{font-size:clamp(28px,6.5vw,36px);letter-spacing:-.03em;margin:10px 0 6px}}.pfh-pill{{display:inline-block;padding:4px 12px;border-radius:999px;background:#ffd400;color:#17161a;font-size:12.5px;font-weight:700;letter-spacing:.02em}}.pfh-s{{margin:0 0 6px;font-size:16px}}.pfh-n{{margin:0;font-size:14px;color:#6e6e73}}.cgrid[data-tab="performance"] .mc.mc-dup:not([hidden]){{display:flex}}.cgrid .ph-cr{{margin-top:28px}}
 .ctabs.ctb8{{grid-template-columns:repeat(4,minmax(0,1fr));max-width:720px;border-radius:24px;scroll-margin-top:72px}}.ctabs.ctb8 a{{border-radius:20px}}.ctabs.ctb8 a[data-type=cars]{{white-space:normal;text-align:center;line-height:1.12}}.ctabs.ctb9{{grid-template-columns:repeat(3,minmax(0,1fr));max-width:600px}}
 @media (max-width:600px){{.ctabs.ctb8{{gap:3px;padding:3px;border-radius:20px}}.ctabs.ctb8 a{{min-height:40px;padding:0 2px;font-size:13px;gap:3px;border-radius:17px}}.ctabs.ctb8 a small{{display:none}}}}</style>'''   # 11-11: shared by /cars/ and the home page
-page('/cars/', 'Look Up Your Car: Problems by Model and Year | The Lemon Index', f'Pick your car and model year to see its owner complaints, its top problems and how it compares with every other year. {len(YEARS)} models, 2000-2025, plus {len(SCX)} supercars and {len(EVX)} electric cars.', f'''
-<div class="pg"><div class="ph ph-f">{finder('<span class="ph-e">Look up</span>Look up your car.', 'Every model year, 2000 to 2025. Free.')}</div>
-{CARS_GRID}</div><script src="/assets/ctabs.js?v=6" defer></script>''',
-     ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": "Look up your car", "url": BASE + '/'}], canon='/')   # 11-11: same grid as the home page: one indexable copy
+# 11-23 (Elijah approved the old-pages audit): /cars/ is a redirect stub to / now (alias_pages.py), like the 1,066 others; the old copy of the
+# home grid had a 'Look up' kicker, gray tabs and pill links. Every link that pointed at /cars/ points at / (header, breadcrumbs, body links, saved.js).
 # 11-17 (Elijah's sketch): on the home page the text tabs become big photo cards right under the search, one kind of car per card, the name
 # on one side and a car on the other, alternating sides. No page-view data per tab yet (Cloudflare/GA4 signed out), so JDM, SUVs, Trucks
 # lead as in his sketch; the rest follow by how many cars they hold, All cars last. A card filters the grid below (assets/ctabs.js) and
@@ -2360,7 +2399,7 @@ HKCARDS = ('<nav class="hk" id="kinds" aria-label="Kinds of car">' + ''.join(_hk
 HKBAR = '<p class="hkon" hidden><b data-hkname></b><a href="/" data-type="all">Show every car</a><a href="#kinds">Other kinds of car</a></p>'
 # 11-11: the home page = this grid (search, the 4 tabs, every model), with the home's own title, schema, H1 and trust line
 page('/', HOME_PAGE['title'], HOME_PAGE['desc'], f'''
-<div class="pg pg-home"><div class="ph ph-f">{finder('<span class="ph-e">The Lemon Index</span>Look up any car or motorcycle.', 'Every model year, 2000 to 2025. Free.', ph='e.g. 2016 Honda Pilot or Harley Sportster', lab='Type a car or motorcycle', foot=f'<p class="fnote">From {COUNTED:,} owner complaints. <a href="/data/#totals">How it works</a></p>')}{HKCARDS}</div>
+<div class="pg pg-home"><div class="ph ph-f">{finder('Look up any car or motorcycle.', 'Every model year, 2000 to 2025. Free.', ph='e.g. 2016 Honda Pilot or Harley Sportster', lab='Type a car or motorcycle', foot=f'<p class="fnote">From {COUNTED:,} owner complaints. <a href="/data/#totals">How it works</a></p>')}{HKCARDS}</div>
 {CARS_GRID.replace(CTABS, HKBAR, 1)}
 <section class="faq"><h2>Questions</h2>{HOME_FAQ}</section></div><script src="/assets/ctabs.js?v=6" defer></script>''', ld=HOME_PAGE['ld'])
 
@@ -2468,18 +2507,28 @@ _404 = re.sub(r'<meta property="og:url"[^>]*>', '', _404, count=1)
 _404 = re.sub(r'<script type="application/ld\+json">.*?</script>', '', _404, flags=re.S)
 _404 = _404.replace(' aria-current="page"', '')
 _404 = re.sub(r'<main>.*</main>', lambda m: (
-    '<main><div class="lxs-404"><p class="ph-e">404 · page not found</p><h1>That page drove off.</h1>'
+    '<main><div class="lxs-404"><h1>That page drove off.</h1>'
     '<p class="lxs-sub" id="lxsub">It may have moved. Search for it:</p>'
     '<form class="lxs-f" role="search" action="/" method="get"><input id="lxq" name="q" type="search" autocomplete="off" placeholder="Search a car, code or question" '
     'aria-label="Search cars, engine codes and lists" enterkeyhint="search"><div id="lxqs" class="fsug" role="listbox" hidden></div></form>'
     '<div id="lxtop" class="lxs-top" hidden></div>'
-    '<ul class="lxs-links"><li><a href="/">Look up a car</a></li><li><a href="/brands/">Every brand</a></li><li><a href="/compare/">Compare</a></li>'
-    '<li><a href="/best/">Best cars</a></li><li><a href="/engines/">Engines</a></li><li><a href="/check-engine-light/">Engine codes</a></li></ul></div></main>'), _404, count=1, flags=re.S)
+    '<nav class="cpl-grp cpl-ins lxs-list" aria-label="Popular pages">' + ''.join(f'<div class="cpl">{V5_GO(i, t, u)}</div>' for i, t, u in (   # 11-23 (old-pages audit #3): one list, no pill cloud
+        ('search', 'Look up a car', '/'), ('tag', 'Every brand', '/brands/'), ('scale', 'Compare cars', '/compare/'), ('chart', 'Best cars', '/best/'),
+        ('engine', 'Engines', '/engines/'), ('warning', 'Engine codes', '/check-engine-light/'))) + '</nav></div></main>'), _404, count=1, flags=re.S)
 _404 = _404.replace('</body>', f'<script src="/assets/lx404.js?v={LXS_V}" defer></script></body>', 1)
 open(f'{OUT}/404.html', 'w', encoding='utf-8').write(_404)
 RCLP = 'pages'; exec(open('recall_pages.py', encoding='utf-8').read())   # 11-14 growth plan 2B-1: /recalls/ hub, make and model recall pages (RCL_URLS)
 urls = ['/', '/rankings/', STUDY, '/studies/', '/method/', '/vin/', '/car-loan-rates/', '/vote/', '/data/', '/brands/'] + PERF_URLS + JDM_URLS + (SUB_ALL() if 'SUB_ALL' in globals() else []) + CAT_URLS + burls + purls + murls + surls + eurls + GAP_URLS + CODE_URLS + globals().get('SYM_URLS', []) + SEO_URLS + EXTRA_URLS + BMW_URLS + SCE_URLS + AE_URLS + yurls + ADV_URLS + curls + LEGAL_URLS + UXC_URLS + MST_URLS + globals().get('HD_URLS', []) + globals().get('VE_URLS', []) + globals().get('RC_URLS', []) + globals().get('CM_URLS', []) + globals().get('RCL_URLS', []) + globals().get('UK_URLS', [])
 exec(open('quality_gate.py', encoding='utf-8').read())   # 11-18 low-value review fix: thin pages noindex + out of the sitemap (THIN)
+# 11-23 (GSC "Not found (404)" email of 11-19): the sitemap lists only real pages. The built file must exist and must not be a
+# redirect stub (alias_pages.py, K5 stubs) or noindex. Runs on quick builds too, against the docs/ left by the last full build.
+def _sm_real(u):
+    p = f'{OUT}{u}index.html' if u.endswith('/') else f'{OUT}{u}'
+    try: h = open(p, encoding='utf-8', errors='replace').read(6000)
+    except OSError: return False
+    return 'http-equiv="refresh"' not in h and not re.search(r'<meta name="robots" content="[^"]*noindex', h)
+_sm_in = list(dict.fromkeys(urls)); urls = [u for u in _sm_in if _sm_real(u)]
+print(f'sitemap check: {len(_sm_in) - len(urls)} URLs dropped (missing, redirect stub or noindex):', [u for u in _sm_in if u not in set(urls)][:10])
 open(f'{OUT}/sitemap.xml', 'w', encoding='utf-8').write('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + ''.join(f'<url><loc>{BASE}{u}</loc><lastmod>{PD.get(u, {}).get("d", TODAY)}</lastmod></url>' for u in urls) + '</urlset>')
 open(f'{OUT}/ads.txt', 'w').write(f'google.com, {ADS.replace("ca-", "")}, DIRECT, f08c47fec0942fa0\n')
 open(f'{OUT}/robots.txt', 'w').write(f'User-agent: *\nAllow: /\n\nUser-agent: GPTBot\nAllow: /\nUser-agent: ClaudeBot\nAllow: /\nUser-agent: PerplexityBot\nAllow: /\nUser-agent: Google-Extended\nAllow: /\nUser-agent: Googlebot-Image\nAllow: /\n\n# bulk dataset scrapers: the data is free at /data/ with credit instead\nUser-agent: CCBot\nDisallow: /\nUser-agent: Bytespider\nDisallow: /\nUser-agent: Diffbot\nDisallow: /\nUser-agent: Omgilibot\nDisallow: /\nUser-agent: ImagesiftBot\nDisallow: /\n\nSitemap: {BASE}/sitemap.xml\nSitemap: {BASE}/image-sitemap.xml\n')

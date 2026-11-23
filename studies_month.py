@@ -57,7 +57,7 @@ def _month_studies():
         page(u, f'{S["title"]} | Lemon Index', desc, body, kind='article',
              ld=[{"@context": "https://schema.org", "@type": "Article", "headline": S['title'], "datePublished": S['made'][:10], "dateModified": S['made'][:10],
                   "author": {"@type": "Organization", "name": "The Lemon Index"}, "image": BASE + S['chart'], "url": BASE + u},
-                 {"@context": "https://schema.org", "@type": "Dataset", "name": f'NHTSA owner complaints by model, {S["label"]}', "url": BASE + u, "license": "https://creativecommons.org/licenses/by/4.0/",
+                 {"@context": "https://schema.org", "@type": "Dataset", "name": f'NHTSA owner complaints by model, {S["label"]}', "url": BASE + u, "description": desc, "license": "https://creativecommons.org/licenses/by/4.0/",   # 11-23 GSC: description
                   "temporalCoverage": f'{ym}-01/{S["through"]}', "isBasedOn": "https://www.nhtsa.gov/nhtsa-datasets-and-apis", "creator": {"@type": "Organization", "name": "The Lemon Index"},
                   "distribution": [{"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": BASE + S['csv']}]}])
         MST_URLS.append(u)

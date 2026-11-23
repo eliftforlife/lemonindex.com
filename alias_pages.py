@@ -59,6 +59,7 @@ for _nqb, _nqk in (('trucks', 'trucks'), ('truck', 'trucks'), ('pickups', 'truck
     _nqa = f'/{_nqb}/'
     if _nqa not in _ALIAS and not _is_real(_nqa) and _nqa not in (globals().get('CAT_URLS') or []): _ALIAS[_nqa] = (globals().get('CAT_PATH') or {}).get(_nqk, f'/?type={_nqk}')   # 11-19: the category pages
     if _nqk != 'cars': _al(f'/best/{_nqb}/', f'/best/most-reliable-{_nqk}/'); _al(f'/best/most-reliable-{_nqb}/', f'/best/most-reliable-{_nqk}/')
+_ALIAS['/cars/'] = '/'   # 11-23: the old copy of the home grid (old-pages audit #1)
 for a, tgt in _ALIAS.items():
     os.makedirs(f'{OUT}{a}', exist_ok=True)
     with open(f'{OUT}{a}index.html', 'w', encoding='utf-8') as fh:

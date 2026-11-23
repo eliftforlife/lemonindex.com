@@ -55,7 +55,7 @@ def N2_CRUMB(f, y=None):
 def N2_LD(path, items):
     m = re.match(r'^/cars/(.+?)/(?:(\d{4})/)?$', path); f = FY.get(m.group(1)) if m else None
     if not f: return items
-    b, short = _n2_names(f); out = [items[0], ('All cars', BASE + '/cars/')]
+    b, short = _n2_names(f); out = [items[0], ('All cars', BASE + '/')]
     if b in _BRAND_PG: out.append((b, BASE + f'/brands/{b.lower().replace(" ", "-")}/'))
     out.append((f['name'], BASE + CARU(f)))
     if m.group(2): out.append((m.group(2), BASE + CARU(f, int(m.group(2)))))

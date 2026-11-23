@@ -54,10 +54,16 @@ def _bdata(b):
     nd = [m for m in _nd.get(b, []) if not _eff_dup(m)]
     co = sorted([m for m in nd if m['slug'] in _EXN], key=lambda m: m['name']); soon = sorted(m['name'] for m in nd if m['slug'] not in _EXN)
     xs = sorted(_xb.get(b, []), key=lambda x: ({'p': 0, 'e': 1, 's': 2}.get((re.search(r'data-t="(\w)', x[1]) or [0, 'z'])[1], 3), x[0]))
-    live = [h for _, h in xs if 'mc-dup' not in h and 'mc-nd' not in h]; later = [n for n, h in xs if 'mc-nd' in h]
+    live = [h for _, h in xs if h and 'mc-dup' not in h and 'mc-nd' not in h]; later = [n for n, h in xs if 'mc-nd' in h]   # 11-23: '' = a coming-soon car (no card), was counted as a page
     moto = [(x[0], x[3]) for x in PICK_ALL.get(b, []) if len(x) > 4 and x[4] == 'moto' and x[3]]
     return ms, co, soon, live, later, moto
 def _short_nm(n, b): return n[len(b) + 1:] if n.startswith(b + ' ') else n
+# 11-23 (old-pages audit #5): a make with no model, EV, supercar or motorcycle page still has its engine pages (/engines/<id>/, vehicles_pages.py)
+_BENG = {}
+try:
+    for _e, _d in json.load(open('data/supercar_engines.json', encoding='utf-8'))['engines'].items():
+        _BENG.setdefault(_d.get('make'), []).append(('/engines/' + {'rr-n73': 'rolls-royce-n73', 'rr-n74': 'rolls-royce-n74'}.get(_e, _e) + '/', _d.get('name') or _e))
+except (OSError, ValueError, KeyError): pass
 BN4_CSS = ('<style>.bn4 section > .yc-cap,.bn4 .bn4-soon,.bn4 .bn4-moto{text-align:center;max-width:640px;margin-left:auto;margin-right:auto}'
            '.bn4-h .ybw{text-align:center}.bn4-moto{margin-top:22px}.bn4-mh{margin:0 0 10px;font-weight:800;font-size:17px;letter-spacing:-.01em}'
            '.bn4-mr{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;text-align:left}'
@@ -80,6 +86,11 @@ def _brand_lists(b, ms, co, soon, live, later, moto, study_ids):
     if co:
         out += (f'<section><h2>{"More " if ms else ""}{E(b)} models with owner complaints. <span class="h2s">No score: we don&#39;t have their U.S. sales by year, so each page shows the complaints and recalls.</span></h2>'
                 f'<div class="mbs"><div class="mb"><div class="mg">{"".join(ndcard(m) for m in co)}</div></div></div></section>')
+    if not (ms or co or live or moto):   # 11-23 (old-pages audit #5): nothing of its own yet: its engine pages if any, then the hubs (no empty grid)
+        eng = sorted(_BENG.get(b, []), key=lambda x: x[1])
+        out += ('<section class="bn4-also">' + (f'<div class="bn4-moto"><p class="bn4-mh">{E(b)} engines</p><div class="bn4-mr">' + ''.join(f'<a href="{E(u)}"><b>{E(_short_nm(n, b))}</b><i>›</i></a>' for u, n in eng) + '</div></div>' if eng else '')
+                + '<div class="bn4-moto"><p class="bn4-mh">More to explore</p><div class="bn4-mr"><a href="/brands/"><b>Every brand</b><i>›</i></a><a href="/supercars/"><b>Supercars</b><i>›</i></a>'
+                '<a href="/performance/"><b>Performance cars</b><i>›</i></a><a href="/electric/"><b>Electric cars</b><i>›</i></a></div></div></section>')
     if live or moto:
         mo = (f'<div class="bn4-moto"><p class="bn4-mh">{E(b)} motorcycles</p><div class="bn4-mr">' + ''.join(f'<a href="{E(u)}"><b>{E(_short_nm(n, b))}</b><i>›</i></a>' for n, u in moto) + '</div></div>') if moto else ''   # 11-19 (polish A7): card row, not an underlined link line
         out += (f'<section class="bn4-also"><h2>Also on Lemon Index. <span class="h2s">{E(b)} performance, electric and supercar pages.</span></h2>'
@@ -129,7 +140,7 @@ for b in _MAKES:
     if BSLUG(b) in _SCORED_B: continue
     ms, co, soon, live, later, moto = _bdata(b)
     npg = len(ms) + len(co) + len(live) + len(moto)
-    if not (npg or later or soon): continue
+    if not (npg or later or soon or b in _xb): continue   # 11-23: a make whose only cards are coming soon keeps its page (alias stubs point at it), noindex below
     bn = BNAME.get(b, b); path = f'/brands/{BSLUG(b)}/'
     thin = npg < 3 and len(ms) < 2   # 2+ scored models (Volvo: XC90, S60) is a real ranking
     best, worst = (ms[0], ms[-1]) if ms else (None, None)
@@ -137,10 +148,11 @@ for b in _MAKES:
     bw = (f'<p class="ybw">Best <a class="good" href="{car_href(best["id"]) or path}">{E(best["name"])}</a> {best["li"]}'
           + (f' · Worst <a class="bad" href="{car_href(worst["id"]) or path}">{E(worst["name"])}</a> {worst["li"]}' if worst is not best else '') + '</p>') if ms else ''
     _k = [w for t, w in (('p', 'performance'), ('e', 'electric'), ('s', 'supercar')) if any(f'data-t="{t}' in h for h in live)] + (['motorcycle'] if moto else [])
+    _k = _k or ['more']   # 11-23: a JDM-only card read "1  page"
     parts = [f'{len(ms)} with a Lemon Index' if ms else '', f'{len(co)} with owner complaints' if co else '',
              f'{len(live) + len(moto)} {" and ".join(_k) if len(_k) < 3 else ", ".join(_k[:-1]) + " and " + _k[-1]} page{"s" * (len(live) + len(moto) != 1)}' if live or moto else '']
     parts = [p for p in parts if p]
-    sub = (f'Every {E(bn)} model we track: ' + ', '.join(parts) + '.') if parts else f'The {E(bn)} models we track. Pages are on the way.'
+    sub = (f'Every {E(bn)} model we track: ' + ', '.join(parts) + '.') if parts else f'No {E(bn)} model page with owner data yet.'
     vis = (YSL.model_hero_html(top['id'], top['name']) if ph and ph.get('ai') else pimg(ph, top['name']) + pcredit(who(ph))) if ph else ''
     body = (f'<div class="pg mp6 bn4"><section class="ph yph6 bn4-h"><div class="yh-t"><p class="ph-e"><a href="/brands/">Brands</a> · No brand score</p><h1>{E(bn)}.</h1>'
             f'<p class="ph-s">{sub}</p>{bw}</div>' + (f'<div class="ph-v">{vis}</div>' if vis else '') + '</section>'

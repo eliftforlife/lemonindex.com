@@ -90,10 +90,10 @@ def _extra_pages():
                 + '</details></div></section><p class="yc-cap" style="text-align:center">Source: NHTSA owner complaints and recalls. <a href="/brands/">Every brand</a></p></div>')
         page('/brands/pontiac/', 'Pontiac Problems and Recalls by Model', lede, body); EXTRA_URLS.insert(0, '/brands/pontiac/')
     # links in from existing pages, so these aren't orphans
-    for f, html_ in (('docs/brands/index.html', '<p class="yc-cap" style="text-align:center"><a href="/brands/pontiac/">Pontiac (discontinued): problems and recalls by model</a></p>'), ('docs/cars/index.html', '<p class="ctn mb-more" data-hide="p s e"><b>More:</b> <a href="/brands/pontiac/">Pontiac models (discontinued)</a> · <a href="/cars/volkswagen-taos/">Volkswagen Taos</a></p>'), ('docs/brands/volkswagen/index.html', '<p class="yc-cap" style="text-align:center"><a href="/cars/volkswagen-taos/">Volkswagen Taos problems and recalls</a></p>')):
+    for f, html_ in (('docs/brands/index.html', '<p class="yc-cap" style="text-align:center"><a href="/brands/pontiac/">Pontiac (discontinued): problems and recalls by model</a></p>'), ('docs/index.html', '<p class="ctn mb-more" data-hide="p s e"><b>More:</b> <a href="/brands/pontiac/">Pontiac models (discontinued)</a> · <a href="/cars/volkswagen-taos/">Volkswagen Taos</a></p>'), ('docs/brands/volkswagen/index.html', '<p class="yc-cap" style="text-align:center"><a href="/cars/volkswagen-taos/">Volkswagen Taos problems and recalls</a></p>')):
         if os.path.exists(f):
             s = open(f, encoding='utf-8').read()
-            _at = '<p class="ph-cr" data-hide="p">' if f == 'docs/cars/index.html' and '<p class="ph-cr" data-hide="p">' in s else '</main>'   # 11-11: inside the /cars/ grid, so the tabs can hide it
+            _at = '<p class="ph-cr" data-hide="p">' if f == 'docs/index.html' and '<p class="ph-cr" data-hide="p">' in s else '</main>'   # 11-11: inside the /cars/ grid, so the tabs can hide it
             if html_ not in s: open(f, 'w', encoding='utf-8').write(s.replace(_at, html_ + _at, 1))
     print('extra pages', len(EXTRA_URLS))
 _extra_pages()

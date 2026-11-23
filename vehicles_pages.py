@@ -90,7 +90,9 @@ if PL:
 <section class="yc hbsec"><h2>When it crashes, how often is it fatal? <span class="h2s">Models with 80+ accidents.</span></h2>{hub_bars([(p["name"], p["fatal_pct"]) for p in fat[:12]], '%')}</section>
 <section class="yc hbsec"><h2>How often is the plane to blame? <span class="h2s">Accidents where NTSB listed an engine, system, structure or propeller problem among the causes.</span></h2>{hub_bars([(p["name"], p["mech_pct"]) for p in mech[:12]], '%')}</section>{REST.x_hub_block('plane')}
 <p class="yc-cap" style="text-align:center">Counts follow fleet size (the Cessna 172 is the most common plane in the U.S.), so compare the shares, not the totals. Per-plane rates would need the FAA registry, so we don&#39;t show them. Source: {NTSB}</p></div>''',
-         ld=[{"@context": "https://schema.org", "@type": "Dataset", "name": "Plane accidents by model (NTSB, 2008-2025)", "url": BASE + '/planes/', "isBasedOn": "https://www.ntsb.gov/Pages/AviationQueryV2.aspx", "creator": {"@type": "Organization", "name": "The Lemon Index"}}])
+         ld=[{"@context": "https://schema.org", "@type": "Dataset", "name": "Plane accidents by model (NTSB, 2008-2025)", "url": BASE + '/planes/',   # 11-23 GSC Datasets email: description + license (the site terms page; /data/'s CC BY covers the car CSVs only)
+              "description": f'Every U.S. plane and helicopter accident NTSB investigated, 2008-2025, by model ({len(PL)} models): how often the accidents were fatal, what happened, and how often NTSB listed the plane itself among the causes.',
+              "license": BASE + '/terms/', "isBasedOn": "https://www.ntsb.gov/Pages/AviationQueryV2.aspx", "creator": {"@type": "Organization", "name": "The Lemon Index"}}])
     purls.insert(0, '/planes/')
 
 # ---------------- motorcycles
