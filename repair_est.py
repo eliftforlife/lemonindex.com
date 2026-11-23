@@ -165,7 +165,7 @@ XMAX = {'moto': 30000, 'super': 300000, 'plane': 2000000}   # highest price a re
 # "What did you pay?" on these pages needs the lemon-survey Worker WITH job E's XREPAIRS (worker/survey_worker.js). On 11-23 that Worker
 # deploy was not allowed from the agent, so the box stays off until it's live: `cd worker && py make_worker.py && npx.cmd --yes wrangler deploy`,
 # then set XPAID = True and rebuild (full build via deploy_queue.py). The live Worker would reject most moto/plane/supercar repair slugs before that.
-XPAID = False
+XPAID = True   # 11-23: lemon-survey Worker redeployed with XREPAIRS (version c2310677)
 XWHO = {'moto': 'an independent motorcycle shop or dealer', 'super': 'a marque dealer or specialist', 'plane': 'an A&amp;P mechanic or maintenance shop'}
 XNOUN = {'moto': 'bike', 'super': 'car', 'plane': 'plane'}
 # routine jobs lead the list; the rest follow the car pages' owner-bill order, then by name
