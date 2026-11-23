@@ -2,7 +2,8 @@
 // (data-v = hours low,high,parts low,high per engine), recomputed when the rate changes and remembered in localStorage.
 // 2) "What did you pay?": posts one repair bill to the lemon-survey Worker (POST /price). Stored for review; nothing shows publicly from it yet.
 (() => {
-  const DEF = 140, KEY = 'lemon-shop-rate', W = 'https://lemon-survey.elift08.workers.dev';
+  // motorcycle, supercar and plane pages (job E) carry their own default rate and their own remembered rate (data-key on the rate input)
+  const R0 = document.querySelector('.rst-ri'), DEF = (R0 && +R0.defaultValue) || 140, KEY = (R0 && R0.dataset.key) || 'lemon-shop-rate', W = 'https://lemon-survey.elift08.workers.dev';
   const money = v => { v = Math.max(0, v); v = v < 1000 ? Math.round(v / 10) * 10 : Math.round(v / 50) * 50; return '$' + v.toLocaleString('en-US'); };
   const rng = (a, b) => money(a) === money(b) ? money(a) : `${money(a)}–${money(b)}`;
   const get = () => { try { return +localStorage.getItem(KEY) || 0; } catch (e) { return 0; } };
@@ -53,7 +54,8 @@
     e.preventDefault(); const btn = form.querySelector('button[type=submit]'); msg.hidden = true;
     const f = form.elements, repair = f.repair.value, usd = Math.round(+f.usd.value), zip = f.zip.value.trim();
     if (!repair) return say(ERR.repair);
-    if (!(usd >= 20 && usd <= 30000)) return say(ERR.usd);
+    const umax = +f.usd.max || 30000;   // planes and supercars allow bigger bills (repair_est.py XMAX)
+    if (!(usd >= 20 && usd <= umax)) return say('Enter what you paid in dollars, between $20 and $' + umax.toLocaleString('en-US') + '.');
     if (zip && !/^\d{5}$/.test(zip)) return say(ERR.zip);
     btn.disabled = true; btn.textContent = 'Checking…';
     try {
