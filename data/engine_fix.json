@@ -1,0 +1,3363 @@
+{
+"acura-tl": {
+"2000": {
+"comb": [
+20,
+20
+],
+"cost": [
+3850,
+3850
+],
+"engines": [
+"3.2L 6-cyl"
+],
+"ev": false,
+"n": 1,
+"why": "no engines in the fetched data"
+},
+"2001": {
+"comb": [
+20,
+20
+],
+"cost": [
+3850,
+3850
+],
+"engines": [
+"3.2L 6-cyl"
+],
+"ev": false,
+"n": 1,
+"why": "no engines in the fetched data"
+},
+"2002": {
+"comb": [
+21,
+21
+],
+"cost": [
+3700,
+3700
+],
+"engines": [
+"3.2L 6-cyl"
+],
+"ev": false,
+"n": 1,
+"why": "no engines in the fetched data"
+},
+"2003": {
+"comb": [
+21,
+21
+],
+"cost": [
+3700,
+3700
+],
+"engines": [
+"3.2L 6-cyl"
+],
+"ev": false,
+"n": 1,
+"why": "no engines in the fetched data"
+}
+},
+"bmw-x5": {
+"2007": {
+"comb": [
+18,
+18
+],
+"cost": [
+4300,
+4300
+],
+"engines": [
+"3.0L 6-cyl"
+],
+"ev": false,
+"n": 1,
+"why": "engine EPA does not list for this model: 4.8L 8-cyl; mpg 16-18 outside this model's EPA versions (18-18)"
+},
+"2008": {
+"comb": [
+18,
+18
+],
+"cost": [
+4300,
+4300
+],
+"engines": [
+"3.0L 6-cyl"
+],
+"ev": false,
+"n": 1,
+"why": "engine EPA does not list for this model: 4.8L 8-cyl; mpg 16-18 outside this model's EPA versions (18-18)"
+}
+},
+"buick-encore": {
+"2020": {
+"comb": [
+26,
+27
+],
+"cost": [
+2300,
+2400
+],
+"engines": [
+"1.4L 4-cyl"
+],
+"ev": false,
+"n": 2,
+"why": "engine EPA does not list for this model: 1.2L 3-cyl, 1.3L 3-cyl; mpg 26-31 outside this model's EPA versions (26-27)"
+},
+"2021": {
+"comb": [
+26,
+27
+],
+"cost": [
+2300,
+2400
+],
+"engines": [
+"1.4L 4-cyl"
+],
+"ev": false,
+"n": 4,
+"why": "engine EPA does not list for this model: 1.2L 3-cyl, 1.3L 3-cyl; mpg 26-31 outside this model's EPA versions (26-27)"
+},
+"2022": {
+"comb": [
+26,
+27
+],
+"cost": [
+2300,
+2400
+],
+"engines": [
+"1.4L 4-cyl"
+],
+"ev": false,
+"n": 2,
+"why": "engine EPA does not list for this model: 1.2L 3-cyl, 1.3L 3-cyl; mpg 26-30 outside this model's EPA versions (26-27)"
+}
+},
+"chevrolet-blazer": {
+"2024": {
+"comb": [
+21,
+25
+],
+"cost": [
+2500,
+2950
+],
+"engines": [
+"2.0L 4-cyl",
+"3.6L 6-cyl"
+],
+"ev": false,
+"n": 4,
+"why": "mpg 21-96 outside this model's EPA versions (21-25)"
+},
+"2025": {
+"comb": [
+21,
+25
+],
+"cost": [
+2500,
+2950
+],
+"engines": [
+"2.0L 4-cyl",
+"3.6L 6-cyl"
+],
+"ev": false,
+"n": 4,
+"why": "mpg 21-104 outside this model's EPA versions (21-25)"
+}
+},
+"chevrolet-cavalier": {
+"2003": {
+"comb": [
+25,
+25
+],
+"cost": [
+2500,
+2500
+],
+"engines": [
+"2.2L 4-cyl"
+],
+"ev": false,
+"n": 2,
+"why": "mpg 24-25 outside this model's EPA versions (25-25)"
+},
+"2004": {
+"comb": [
+25,
+27
+],
+"cost": [
+2300,
+2500
+],
+"engines": [
+"2.2L 4-cyl"
+],
+"ev": false,
+"n": 2,
+"why": "mpg 24-27 outside this model's EPA versions (25-27)"
+}
+},
+"chevrolet-equinox": {
+"2024": {
+"comb": [
+26,
+28
+],
+"cost": [
+2200,
+2400
+],
+"engines": [
+"1.5L 4-cyl"
+],
+"ev": false,
+"n": 2,
+"why": "mpg 26-108 outside this model's EPA versions (26-28)"
+},
+"2025": {
+"comb": [
+26,
+27
+],
+"cost": [
+2300,
+2400
+],
+"engines": [
+"1.5L 4-cyl"
+],
+"ev": false,
+"n": 2,
+"why": "mpg 26-109 outside this model's EPA versions (26-27)"
+}
+},
+"chevrolet-express": {
+"2000": {
+"comb": [
+14,
+14
+],
+"cost": [
+4450,
+4450
+],
+"engines": [
+"4.3L 6-cyl",
+"5.0L 8-cyl",
+"5.7L 8-cyl",
+"7.4L 8-cyl"
+],
+"ev": false,
+"n": 3,
+"why": "NHTSA VIN decodes add (not EPA-rated): 7.4L 8-cyl"
+},
+"2001": {
+"comb": [
+13,
+14
+],
+"cost": [
+4450,
+4800
+],
+"engines": [
+"4.3L 6-cyl",
+"5.0L 8-cyl",
+"5.7L 8-cyl",
+"6.5L 8-cyl diesel"
+],
+"ev": false,
+"n": 3,
+"why": "NHTSA VIN decodes add (not EPA-rated): 6.5L 8-cyl diesel"
+},
+"2003": {
+"comb": [
+13,
+15
+],
+"cost": [
+4150,
+4800
+],
+"engines": [
+"4.3L 6-cyl",
+"4.8L 8-cyl",
+"5.3L 8-cyl",
+"6.0L 8-cyl"
+],
+"ev": false,
+"n": 3,
+"why": "NHTSA VIN decodes add (not EPA-rated): 4.8L 8-cyl, 6.0L 8-cyl"
+},
+"2004": {
+"comb": [
+14,
+15
+],
+"cost": [
+4150,
+4450
+],
+"engines": [
+"4.3L 6-cyl",
+"4.8L 8-cyl",
+"5.3L 8-cyl",
+"6.0L 8-cyl"
+],
+"ev": false,
+"n": 3,
+"why": "engine EPA does not list for this model: 6.0L 8-cyl; NHTSA VIN decodes add (not EPA-rated): 4.8L 8-cyl, 6.0L 8-cyl; mpg 12-15 outside this model's EPA versions (14-15)"
+},
+"2005": {
+"comb": [
+14,
+15
+],
+"cost": [
+4150,
+4450
+],
+"engines": [
+"4.3L 6-cyl",
+"4.8L 8-cyl",
+"5.3L 8-cyl",
+"6.0L 8-cyl"
+],
+"ev": false,
+"n": 3,
+"why": "NHTSA VIN decodes add (not EPA-rated): 4.8L 8-cyl, 6.0L 8-cyl"
+},
+"2006": {
+"comb": [
+14,
+15
+],
+"cost": [
+4150,
+4450
+],
+"engines": [
+"4.3L 6-cyl",
+"4.8L 8-cyl",
+"5.3L 8-cyl",
+"6.6L 8-cyl diesel"
+],
+"ev": false,
+"n": 3,
+"why": "NHTSA VIN decodes add (not EPA-rated): 4.8L 8-cyl, 6.6L 8-cyl diesel"
+},
+"2007": {
+"comb": [
+14,
+15
+],
+"cost": [
+4150,
+4450
+],
+"engines": [
+"4.3L 6-cyl",
+"4.8L 8-cyl",
+"5.3L 8-cyl"
+],
+"ev": false,
+"n": 4,
+"why": "NHTSA VIN decodes add (not EPA-rated): 4.3L 6-cyl, 4.8L 8-cyl"
+},
+"2008": {
+"comb": [
+14,
+14
+],
+"cost": [
+4450,
+4450
+],
+"engines": [
+"4.8L 8-cyl",
+"5.3L 8-cyl"
+],
+"ev": false,
+"n": 4,
+"why": "NHTSA VIN decodes add (not EPA-rated): 4.8L 8-cyl"
+},
+"2009": {
+"comb": [
+14,
+14
+],
+"cost": [
+4450,
+4450
+],
+"engines": [
+"4.8L 8-cyl",
+"5.3L 8-cyl",
+"6.0L 8-cyl"
+],
+"ev": false,
+"n": 4,
+"why": "NHTSA VIN decodes add (not EPA-rated): 4.8L 8-cyl, 6.0L 8-cyl"
+},
+"2010": {
+"comb": [
+14,
+17
+],
+"cost": [
+3650,
+4450
+],
+"engines": [
+"4.3L 6-cyl",
+"4.8L 8-cyl",
+"5.3L 8-cyl"
+],
+"ev": false,
+"n": 7,
+"why": "NHTSA VIN decodes add (not EPA-rated): 4.8L 8-cyl"
+},
+"2011": {
+"comb": [
+12,
+17
+],
+"cost": [
+3650,
+5200
+],
+"engines": [
+"4.3L 6-cyl",
+"4.8L 8-cyl",
+"5.3L 8-cyl",
+"6.0L 8-cyl",
+"6.6L 8-cyl diesel"
+],
+"ev": false,
+"n": 13,
+"why": "NHTSA VIN decodes add (not EPA-rated): 6.6L 8-cyl diesel"
+},
+"2017": {
+"comb": [
+12,
+13
+],
+"cost": [
+4800,
+5200
+],
+"engines": [
+"4.8L 8-cyl",
+"6.0L 8-cyl"
+],
+"ev": false,
+"n": 2,
+"why": "NHTSA VIN decodes add (not EPA-rated): 4.8L 8-cyl"
+}
+},
+"chevrolet-impala": {
+"2015": {
+"comb": [
+21,
+25
+],
+"cost": [
+2500,
+2950
+],
+"engines": [
+"2.5L 4-cyl",
+"3.6L 6-cyl"
+],
+"ev": false,
+"n": 4,
+"why": "mpg 20-25 outside this model's EPA versions (21-25)"
+},
+"2016": {
+"comb": [
+21,
+25
+],
+"cost": [
+2500,
+2950
+],
+"engines": [
+"2.5L 4-cyl",
+"3.6L 6-cyl"
+],
+"ev": false,
+"n": 4,
+"why": "mpg 20-25 outside this model's EPA versions (21-25)"
+}
+},
+"chevrolet-silverado": {
+"2003": {
+"comb": [
+13,
+16
+],
+"cost": [
+3900,
+4800
+],
+"engines": [
+"4.3L 6-cyl",
+"4.8L 8-cyl",
+"5.3L 8-cyl",
+"6.0L 8-cyl"
+],
+"ev": false,
+"n": 13,
+"why": "mpg 10-16 outside this model's EPA versions (13-16)"
+},
+"2004": {
+"comb": [
+13,
+17
+],
+"cost": [
+3650,
+4800
+],
+"engines": [
+"4.3L 6-cyl",
+"4.8L 8-cyl",
+"5.3L 8-cyl",
+"6.0L 8-cyl"
+],
+"ev": false,
+"n": 16,
+"why": "mpg 10-17 outside this model's EPA versions (13-17)"
+}
+},
+"chevrolet-spark": {
+"2014": {
+"comb": [
+33,
+34
+],
+"cost": [
+1850,
+1900
+],
+"engines": [
+"1.2L 4-cyl",
+"electric"
+],
+"ev": false,
+"n": 3,
+"why": "mpg 33-119 outside this model's EPA versions (33-34)"
+},
+"2015": {
+"comb": [
+33,
+34
+],
+"cost": [
+1850,
+1900
+],
+"engines": [
+"1.2L 4-cyl",
+"electric"
+],
+"ev": false,
+"n": 3,
+"why": "mpg 33-119 outside this model's EPA versions (33-34)"
+},
+"2016": {
+"comb": [
+33,
+34
+],
+"cost": [
+1850,
+1900
+],
+"engines": [
+"1.4L 4-cyl",
+"electric"
+],
+"ev": false,
+"n": 3,
+"why": "mpg 33-119 outside this model's EPA versions (33-34)"
+}
+},
+"fiat-500": {
+"2013": {
+"comb": [
+29,
+34
+],
+"cost": [
+2300,
+2650
+],
+"engines": [
+"1.4L 4-cyl",
+"electric"
+],
+"ev": false,
+"n": 5,
+"why": "mpg 29-116 outside this model's EPA versions (29-34)"
+},
+"2014": {
+"comb": [
+29,
+33
+],
+"cost": [
+2350,
+2650
+],
+"engines": [
+"1.4L 4-cyl",
+"electric"
+],
+"ev": false,
+"n": 5,
+"why": "mpg 27-116 outside this model's EPA versions (29-33)"
+},
+"2015": {
+"comb": [
+27,
+34
+],
+"cost": [
+2300,
+2850
+],
+"engines": [
+"1.4L 4-cyl",
+"electric"
+],
+"ev": false,
+"n": 7,
+"why": "mpg 25-116 outside this model's EPA versions (27-34)"
+},
+"2016": {
+"comb": [
+27,
+34
+],
+"cost": [
+2300,
+2850
+],
+"engines": [
+"1.4L 4-cyl",
+"electric"
+],
+"ev": false,
+"n": 7,
+"why": "engine EPA does not list for this model: 2.4L 4-cyl; mpg 24-112 outside this model's EPA versions (27-34)"
+},
+"2017": {
+"comb": [
+27,
+34
+],
+"cost": [
+2300,
+2850
+],
+"engines": [
+"1.4L 4-cyl",
+"electric"
+],
+"ev": false,
+"n": 7,
+"why": "engine EPA does not list for this model: 2.4L 4-cyl; mpg 24-112 outside this model's EPA versions (27-34)"
+},
+"2018": {
+"comb": [
+27,
+30
+],
+"cost": [
+2600,
+2850
+],
+"engines": [
+"1.4L 4-cyl",
+"electric"
+],
+"ev": false,
+"n": 5,
+"why": "engine EPA does not list for this model: 2.4L 4-cyl; mpg 24-112 outside this model's EPA versions (27-30)"
+}
+},
+"ford-bronco": {
+"2021": {
+"comb": [
+17,
+21
+],
+"cost": [
+2950,
+3650
+],
+"engines": [
+"2.3L 4-cyl",
+"2.7L 6-cyl"
+],
+"ev": false,
+"n": 10,
+"why": "engine EPA does not list for this model: 1.5L 3-cyl, 2.0L 4-cyl; mpg 17-26 outside this model's EPA versions (17-21)"
+},
+"2025": {
+"comb": [
+15,
+20
+],
+"cost": [
+3100,
+4150
+],
+"engines": [
+"2.3L 4-cyl",
+"2.7L 6-cyl",
+"3.0L 6-cyl"
+],
+"ev": false,
+"n": 10,
+"why": "engine EPA does not list for this model: 1.5L 3-cyl, 2.0L 4-cyl; mpg 15-27 outside this model's EPA versions (15-20)"
+}
+},
+"ford-crown-victoria": {
+"2001": {
+"comb": [
+17,
+18
+],
+"cost": [
+3450,
+3650
+],
+"engines": [
+"4.6L 8-cyl"
+],
+"ev": false,
+"n": 2,
+"why": "mpg 16-18 outside this model's EPA versions (17-18)"
+},
+"2003": {
+"comb": [
+16,
+18
+],
+"cost": [
+3450,
+3900
+],
+"engines": [
+"4.6L 8-cyl"
+],
+"ev": false,
+"n": 2,
+"why": "mpg 14-18 outside this model's EPA versions (16-18)"
+},
+"2004": {
+"comb": [
+16,
+18
+],
+"cost": [
+3450,
+3900
+],
+"engines": [
+"4.6L 8-cyl"
+],
+"ev": false,
+"n": 2,
+"why": "mpg 14-18 outside this model's EPA versions (16-18)"
+}
+},
+"ford-e-series": {
+"2000": {
+"comb": [
+13,
+15
+],
+"cost": [
+4150,
+4800
+],
+"engines": [
+"4.2L 6-cyl",
+"4.6L 8-cyl",
+"5.4L 8-cyl"
+],
+"ev": false,
+"n": 8,
+"why": "no engines in the fetched data"
+},
+"2001": {
+"comb": [
+13,
+16
+],
+"cost": [
+3900,
+4800
+],
+"engines": [
+"4.2L 6-cyl",
+"4.6L 8-cyl",
+"5.4L 8-cyl"
+],
+"ev": false,
+"n": 8,
+"why": "no engines in the fetched data"
+},
+"2002": {
+"comb": [
+13,
+16
+],
+"cost": [
+3900,
+4800
+],
+"engines": [
+"4.2L 6-cyl",
+"4.6L 8-cyl",
+"5.4L 8-cyl"
+],
+"ev": false,
+"n": 8,
+"why": "no engines in the fetched data"
+},
+"2003": {
+"comb": [
+13,
+16
+],
+"cost": [
+3900,
+4800
+],
+"engines": [
+"4.2L 6-cyl",
+"4.6L 8-cyl",
+"5.4L 8-cyl"
+],
+"ev": false,
+"n": 9,
+"why": "no engines in the fetched data"
+},
+"2004": {
+"comb": [
+14,
+15
+],
+"cost": [
+4150,
+4450
+],
+"engines": [
+"4.6L 8-cyl",
+"5.4L 8-cyl"
+],
+"ev": false,
+"n": 5,
+"why": "no engines in the fetched data"
+},
+"2005": {
+"comb": [
+13,
+15
+],
+"cost": [
+4150,
+4800
+],
+"engines": [
+"4.6L 8-cyl",
+"5.4L 8-cyl"
+],
+"ev": false,
+"n": 5,
+"why": "no engines in the fetched data"
+},
+"2006": {
+"comb": [
+13,
+15
+],
+"cost": [
+4150,
+4800
+],
+"engines": [
+"4.6L 8-cyl",
+"5.4L 8-cyl"
+],
+"ev": false,
+"n": 4,
+"why": "no engines in the fetched data"
+},
+"2011": {
+"comb": [
+11,
+15
+],
+"cost": [
+4150,
+5650
+],
+"engines": [
+"4.6L 8-cyl",
+"5.4L 8-cyl",
+"6.8L 10-cyl"
+],
+"ev": false,
+"n": 10,
+"why": "no engines in the fetched data"
+},
+"2012": {
+"comb": [
+11,
+15
+],
+"cost": [
+4150,
+5650
+],
+"engines": [
+"4.6L 8-cyl",
+"5.4L 8-cyl",
+"6.8L 10-cyl"
+],
+"ev": false,
+"n": 10,
+"why": "no engines in the fetched data"
+},
+"2013": {
+"comb": [
+11,
+15
+],
+"cost": [
+4150,
+5650
+],
+"engines": [
+"4.6L 8-cyl",
+"5.4L 8-cyl",
+"6.8L 10-cyl"
+],
+"ev": false,
+"n": 10,
+"why": "no engines in the fetched data"
+},
+"2014": {
+"comb": [
+11,
+15
+],
+"cost": [
+4150,
+5650
+],
+"engines": [
+"4.6L 8-cyl",
+"5.4L 8-cyl",
+"6.8L 10-cyl"
+],
+"ev": false,
+"n": 10,
+"why": "no engines in the fetched data"
+}
+},
+"ford-f-series": {
+"2000": {
+"comb": [
+14,
+16
+],
+"cost": [
+3900,
+4450
+],
+"engines": [
+"4.2L 6-cyl",
+"4.6L 8-cyl",
+"5.4L 8-cyl"
+],
+"ev": false,
+"n": 10,
+"why": "mpg 13-16 outside this model's EPA versions (14-16)"
+},
+"2001": {
+"comb": [
+13,
+16
+],
+"cost": [
+3900,
+5950
+],
+"engines": [
+"4.2L 6-cyl",
+"4.6L 8-cyl",
+"5.4L 8-cyl"
+],
+"ev": false,
+"n": 11,
+"why": "mpg 11-16 outside this model's EPA versions (13-16)"
+},
+"2002": {
+"comb": [
+12,
+17
+],
+"cost": [
+3650,
+6450
+],
+"engines": [
+"4.2L 6-cyl",
+"4.6L 8-cyl",
+"5.4L 8-cyl"
+],
+"ev": false,
+"n": 11,
+"why": "mpg 11-16 outside this model's EPA versions (12-17)"
+},
+"2003": {
+"comb": [
+13,
+16
+],
+"cost": [
+3900,
+5950
+],
+"engines": [
+"4.2L 6-cyl",
+"4.6L 8-cyl",
+"5.4L 8-cyl"
+],
+"ev": false,
+"n": 11,
+"why": "mpg 12-16 outside this model's EPA versions (13-16)"
+},
+"2004": {
+"comb": [
+13,
+16
+],
+"cost": [
+3900,
+5950
+],
+"engines": [
+"4.2L 6-cyl",
+"4.6L 8-cyl",
+"5.4L 8-cyl"
+],
+"ev": false,
+"n": 10,
+"why": "mpg 12-16 outside this model's EPA versions (13-16)"
+},
+"2022": {
+"comb": [
+15,
+25
+],
+"cost": [
+2500,
+4150
+],
+"engines": [
+"2.7L 6-cyl",
+"3.3L 6-cyl",
+"3.5L 6-cyl",
+"5.0L 8-cyl"
+],
+"ev": false,
+"n": 21,
+"why": "mpg 19-70 outside this model's EPA versions (15-25)"
+},
+"2023": {
+"comb": [
+12,
+25
+],
+"cost": [
+2500,
+5200
+],
+"engines": [
+"2.7L 6-cyl",
+"3.3L 6-cyl",
+"3.5L 6-cyl",
+"5.0L 8-cyl",
+"5.2L 8-cyl"
+],
+"ev": false,
+"n": 25,
+"why": "mpg 19-70 outside this model's EPA versions (12-25)"
+},
+"2024": {
+"comb": [
+12,
+23
+],
+"cost": [
+2700,
+5200
+],
+"engines": [
+"2.7L 6-cyl",
+"3.5L 6-cyl",
+"5.0L 8-cyl",
+"5.2L 8-cyl"
+],
+"ev": false,
+"n": 11,
+"why": "mpg 18-70 outside this model's EPA versions (12-23)"
+},
+"2025": {
+"comb": [
+12,
+23
+],
+"cost": [
+2700,
+6450
+],
+"engines": [
+"2.7L 6-cyl",
+"3.5L 6-cyl",
+"5.0L 8-cyl",
+"5.2L 8-cyl"
+],
+"ev": false,
+"n": 11,
+"why": "mpg 19-72 outside this model's EPA versions (12-23)"
+}
+},
+"ford-focus": {
+"2012": {
+"comb": [
+29,
+32
+],
+"cost": [
+1950,
+2150
+],
+"engines": [
+"2.0L 4-cyl",
+"electric"
+],
+"ev": false,
+"n": 9,
+"why": "mpg 29-105 outside this model's EPA versions (29-32)"
+},
+"2013": {
+"comb": [
+26,
+32
+],
+"cost": [
+1950,
+2400
+],
+"engines": [
+"2.0L 4-cyl",
+"electric"
+],
+"ev": false,
+"n": 9,
+"why": "mpg 26-105 outside this model's EPA versions (26-32)"
+},
+"2014": {
+"comb": [
+26,
+32
+],
+"cost": [
+1950,
+2400
+],
+"engines": [
+"2.0L 4-cyl",
+"electric"
+],
+"ev": false,
+"n": 9,
+"why": "mpg 26-105 outside this model's EPA versions (26-32)"
+},
+"2015": {
+"comb": [
+26,
+34
+],
+"cost": [
+1850,
+2400
+],
+"engines": [
+"1.0L 3-cyl",
+"2.0L 4-cyl",
+"electric"
+],
+"ev": false,
+"n": 10,
+"why": "mpg 29-105 outside this model's EPA versions (26-34)"
+},
+"2016": {
+"comb": [
+22,
+34
+],
+"cost": [
+1850,
+3500
+],
+"engines": [
+"1.0L 3-cyl",
+"2.0L 4-cyl",
+"2.3L 4-cyl",
+"electric"
+],
+"ev": false,
+"n": 11,
+"why": "mpg 22-105 outside this model's EPA versions (22-34)"
+},
+"2017": {
+"comb": [
+22,
+34
+],
+"cost": [
+1850,
+3500
+],
+"engines": [
+"1.0L 3-cyl",
+"2.0L 4-cyl",
+"2.3L 4-cyl",
+"electric"
+],
+"ev": false,
+"n": 11,
+"why": "mpg 22-107 outside this model's EPA versions (22-34)"
+},
+"2018": {
+"comb": [
+22,
+34
+],
+"cost": [
+1850,
+3500
+],
+"engines": [
+"1.0L 3-cyl",
+"2.0L 4-cyl",
+"2.3L 4-cyl",
+"electric"
+],
+"ev": false,
+"n": 8,
+"why": "mpg 22-107 outside this model's EPA versions (22-34)"
+}
+},
+"ford-mustang": {
+"2024": {
+"comb": [
+17,
+26
+],
+"cost": [
+2400,
+3650
+],
+"engines": [
+"2.3L 4-cyl",
+"5.0L 8-cyl"
+],
+"ev": false,
+"n": 8,
+"why": "mpg 17-106 outside this model's EPA versions (17-26)"
+},
+"2025": {
+"comb": [
+12,
+26
+],
+"cost": [
+2400,
+5200
+],
+"engines": [
+"2.3L 4-cyl",
+"5.0L 8-cyl",
+"5.2L 8-cyl"
+],
+"ev": false,
+"n": 6,
+"why": "mpg 12-110 outside this model's EPA versions (12-26)"
+}
+},
+"ford-ranger": {
+"2000": {
+"comb": [
+15,
+22
+],
+"cost": [
+2850,
+4150
+],
+"engines": [
+"2.5L 4-cyl",
+"3.0L 6-cyl",
+"4.0L 6-cyl",
+"electric"
+],
+"ev": false,
+"n": 12,
+"why": "mpg 15-58 outside this model's EPA versions (15-22)"
+},
+"2001": {
+"comb": [
+15,
+23
+],
+"cost": [
+2700,
+4150
+],
+"engines": [
+"2.3L 4-cyl",
+"2.5L 4-cyl",
+"3.0L 6-cyl",
+"4.0L 6-cyl",
+"electric"
+],
+"ev": false,
+"n": 14,
+"why": "mpg 15-58 outside this model's EPA versions (15-23)"
+}
+},
+"ford-taurus": {
+"2008": {
+"comb": [
+19,
+22
+],
+"cost": [
+2850,
+3300
+],
+"engines": [
+"3.5L 6-cyl"
+],
+"ev": false,
+"n": 2,
+"why": "mpg 18-22 outside this model's EPA versions (19-22)"
+},
+"2009": {
+"comb": [
+19,
+21
+],
+"cost": [
+2950,
+3300
+],
+"engines": [
+"3.5L 6-cyl"
+],
+"ev": false,
+"n": 2,
+"why": "mpg 18-21 outside this model's EPA versions (19-21)"
+}
+},
+"ford-transit": {
+"2015": {
+"comb": [
+16,
+16
+],
+"cost": [
+3900,
+3900
+],
+"engines": [
+"3.2L 5-cyl diesel",
+"3.5L 6-cyl",
+"3.7L 6-cyl"
+],
+"ev": false,
+"n": 2,
+"why": "engine EPA does not list for this model: 1.6L 4-cyl, 2.5L 4-cyl; NHTSA VIN decodes add (not EPA-rated): 3.2L 5-cyl diesel; mpg 16-25 outside this model's EPA versions (16-16)"
+},
+"2016": {
+"comb": [
+16,
+16
+],
+"cost": [
+3900,
+3900
+],
+"engines": [
+"3.2L 5-cyl diesel",
+"3.5L 6-cyl",
+"3.7L 6-cyl"
+],
+"ev": false,
+"n": 2,
+"why": "engine EPA does not list for this model: 1.6L 4-cyl, 2.5L 4-cyl; NHTSA VIN decodes add (not EPA-rated): 3.2L 5-cyl diesel; mpg 16-25 outside this model's EPA versions (16-16)"
+},
+"2017": {
+"comb": [
+16,
+16
+],
+"cost": [
+3900,
+3900
+],
+"engines": [
+"3.2L 5-cyl diesel",
+"3.5L 6-cyl",
+"3.7L 6-cyl"
+],
+"ev": false,
+"n": 2,
+"why": "engine EPA does not list for this model: 2.5L 4-cyl; NHTSA VIN decodes add (not EPA-rated): 3.2L 5-cyl diesel; mpg 16-23 outside this model's EPA versions (16-16)"
+},
+"2018": {
+"comb": [
+16,
+16
+],
+"cost": [
+3900,
+3900
+],
+"engines": [
+"3.2L 5-cyl diesel",
+"3.5L 6-cyl",
+"3.7L 6-cyl"
+],
+"ev": false,
+"n": 3,
+"why": "engine EPA does not list for this model: 2.5L 4-cyl; NHTSA VIN decodes add (not EPA-rated): 3.2L 5-cyl diesel; mpg 16-23 outside this model's EPA versions (16-16)"
+},
+"2019": {
+"comb": [
+15,
+16
+],
+"cost": [
+3900,
+4150
+],
+"engines": [
+"3.5L 6-cyl",
+"3.7L 6-cyl"
+],
+"ev": false,
+"n": 3,
+"why": "engine EPA does not list for this model: 2.0L 4-cyl, 2.5L 4-cyl; mpg 15-26 outside this model's EPA versions (15-16)"
+},
+"2020": {
+"comb": [
+16,
+17
+],
+"cost": [
+3650,
+3900
+],
+"engines": [
+"3.5L 6-cyl"
+],
+"ev": false,
+"n": 2,
+"why": "engine EPA does not list for this model: 2.0L 4-cyl, 2.5L 4-cyl; mpg 16-26 outside this model's EPA versions (16-17)"
+},
+"2021": {
+"comb": [
+16,
+16
+],
+"cost": [
+3900,
+3900
+],
+"engines": [
+"3.5L 6-cyl"
+],
+"ev": false,
+"n": 2,
+"why": "engine EPA does not list for this model: 2.0L 4-cyl, 2.5L 4-cyl; mpg 16-26 outside this model's EPA versions (16-16)"
+},
+"2022": {
+"comb": [
+16,
+17
+],
+"cost": [
+3650,
+3900
+],
+"engines": [
+"3.5L 6-cyl",
+"electric"
+],
+"ev": false,
+"n": 2,
+"why": "engine EPA does not list for this model: 2.0L 4-cyl, 2.5L 4-cyl; NHTSA VIN decodes add (not EPA-rated): electric; mpg 16-26 outside this model's EPA versions (16-17)"
+}
+},
+"honda-civic": {
+"2001": {
+"comb": [
+29,
+34
+],
+"cost": [
+1850,
+2150
+],
+"engines": [
+"1.7L 4-cyl"
+],
+"ev": false,
+"n": 6,
+"why": "mpg 28-34 outside this model's EPA versions (29-34)"
+}
+},
+"honda-fit": {
+"2013": {
+"comb": [
+29,
+31
+],
+"cost": [
+2000,
+2150
+],
+"engines": [
+"1.5L 4-cyl"
+],
+"ev": false,
+"n": 3,
+"why": "mpg 29-118 outside this model's EPA versions (29-31)"
+}
+},
+"hyundai-kona": {
+"2019": {
+"comb": [
+27,
+30
+],
+"cost": [
+2100,
+2300
+],
+"engines": [
+"1.6L 4-cyl",
+"2.0L 4-cyl",
+"electric"
+],
+"ev": false,
+"n": 5,
+"why": "mpg 27-120 outside this model's EPA versions (27-30)"
+},
+"2020": {
+"comb": [
+27,
+30
+],
+"cost": [
+2100,
+2300
+],
+"engines": [
+"1.6L 4-cyl",
+"2.0L 4-cyl",
+"electric"
+],
+"ev": false,
+"n": 5,
+"why": "mpg 27-120 outside this model's EPA versions (27-30)"
+},
+"2021": {
+"comb": [
+27,
+30
+],
+"cost": [
+2100,
+2300
+],
+"engines": [
+"1.6L 4-cyl",
+"2.0L 4-cyl",
+"electric"
+],
+"ev": false,
+"n": 5,
+"why": "mpg 27-120 outside this model's EPA versions (27-30)"
+},
+"2022": {
+"comb": [
+23,
+32
+],
+"cost": [
+1950,
+3350
+],
+"engines": [
+"1.6L 4-cyl",
+"2.0L 4-cyl",
+"electric"
+],
+"ev": false,
+"n": 6,
+"why": "mpg 23-120 outside this model's EPA versions (23-32)"
+},
+"2023": {
+"comb": [
+23,
+32
+],
+"cost": [
+1950,
+3350
+],
+"engines": [
+"1.6L 4-cyl",
+"2.0L 4-cyl",
+"electric"
+],
+"ev": false,
+"n": 6,
+"why": "mpg 23-120 outside this model's EPA versions (23-32)"
+},
+"2024": {
+"comb": [
+26,
+31
+],
+"cost": [
+2000,
+2400
+],
+"engines": [
+"1.6L 4-cyl",
+"2.0L 4-cyl",
+"electric"
+],
+"ev": false,
+"n": 8,
+"why": "mpg 26-118 outside this model's EPA versions (26-31)"
+},
+"2025": {
+"comb": [
+26,
+31
+],
+"cost": [
+2000,
+2400
+],
+"engines": [
+"1.6L 4-cyl",
+"2.0L 4-cyl",
+"electric"
+],
+"ev": false,
+"n": 9,
+"why": "mpg 26-118 outside this model's EPA versions (26-31)"
+}
+},
+"hyundai-tucson": {
+"2015": {
+"comb": [
+22,
+25
+],
+"cost": [
+2500,
+2850
+],
+"engines": [
+"2.0L 4-cyl",
+"2.4L 4-cyl"
+],
+"ev": false,
+"n": 4,
+"why": "mpg 22-50 outside this model's EPA versions (22-25)"
+},
+"2016": {
+"comb": [
+23,
+28
+],
+"cost": [
+2200,
+2700
+],
+"engines": [
+"1.6L 4-cyl",
+"2.0L 4-cyl"
+],
+"ev": false,
+"n": 6,
+"why": "mpg 23-50 outside this model's EPA versions (23-28)"
+},
+"2017": {
+"comb": [
+23,
+28
+],
+"cost": [
+2200,
+2700
+],
+"engines": [
+"1.6L 4-cyl",
+"2.0L 4-cyl"
+],
+"ev": false,
+"n": 6,
+"why": "mpg 23-50 outside this model's EPA versions (23-28)"
+}
+},
+"kia-niro": {
+"2019": {
+"comb": [
+43,
+50
+],
+"cost": [
+1250,
+1450
+],
+"engines": [
+"1.6L 4-cyl",
+"electric"
+],
+"ev": false,
+"n": 5,
+"why": "mpg 43-112 outside this model's EPA versions (43-50)"
+},
+"2020": {
+"comb": [
+43,
+50
+],
+"cost": [
+1250,
+1450
+],
+"engines": [
+"1.6L 4-cyl",
+"electric"
+],
+"ev": false,
+"n": 5,
+"why": "mpg 43-112 outside this model's EPA versions (43-50)"
+},
+"2021": {
+"comb": [
+43,
+50
+],
+"cost": [
+1250,
+1450
+],
+"engines": [
+"1.6L 4-cyl",
+"electric"
+],
+"ev": false,
+"n": 5,
+"why": "mpg 43-112 outside this model's EPA versions (43-50)"
+},
+"2022": {
+"comb": [
+43,
+50
+],
+"cost": [
+1250,
+1450
+],
+"engines": [
+"1.6L 4-cyl",
+"electric"
+],
+"ev": false,
+"n": 5,
+"why": "mpg 43-112 outside this model's EPA versions (43-50)"
+},
+"2023": {
+"comb": [
+48,
+53
+],
+"cost": [
+1150,
+1300
+],
+"engines": [
+"1.6L 4-cyl",
+"electric"
+],
+"ev": false,
+"n": 4,
+"why": "mpg 48-113 outside this model's EPA versions (48-53)"
+},
+"2024": {
+"comb": [
+49,
+53
+],
+"cost": [
+1150,
+1250
+],
+"engines": [
+"1.6L 4-cyl",
+"electric"
+],
+"ev": false,
+"n": 3,
+"why": "mpg 49-113 outside this model's EPA versions (49-53)"
+},
+"2025": {
+"comb": [
+48,
+53
+],
+"cost": [
+1150,
+1300
+],
+"engines": [
+"1.6L 4-cyl",
+"electric"
+],
+"ev": false,
+"n": 4,
+"why": "mpg 48-113 outside this model's EPA versions (48-53)"
+}
+},
+"kia-sedona": {
+"2022": {
+"comb": [
+22,
+22
+],
+"cost": [
+2850,
+2850
+],
+"engines": [
+"3.5L 6-cyl"
+],
+"ev": false,
+"n": 1,
+"why": "no engines in the fetched data"
+},
+"2023": {
+"comb": [
+22,
+22
+],
+"cost": [
+2850,
+2850
+],
+"engines": [
+"3.5L 6-cyl"
+],
+"ev": false,
+"n": 1,
+"why": "no engines in the fetched data"
+},
+"2024": {
+"comb": [
+22,
+22
+],
+"cost": [
+2850,
+2850
+],
+"engines": [
+"3.5L 6-cyl"
+],
+"ev": false,
+"n": 1,
+"why": "no engines in the fetched data"
+},
+"2025": {
+"comb": [
+21,
+33
+],
+"cost": [
+1900,
+2950
+],
+"engines": [
+"1.6L 4-cyl",
+"3.5L 6-cyl"
+],
+"ev": false,
+"n": 2,
+"why": "no engines in the fetched data"
+}
+},
+"kia-soul": {
+"2015": {
+"comb": [
+26,
+26
+],
+"cost": [
+2400,
+2400
+],
+"engines": [
+"1.6L 4-cyl",
+"2.0L 4-cyl",
+"electric"
+],
+"ev": false,
+"n": 5,
+"why": "mpg 26-105 outside this model's EPA versions (26-26)"
+},
+"2016": {
+"comb": [
+26,
+27
+],
+"cost": [
+2300,
+2400
+],
+"engines": [
+"1.6L 4-cyl",
+"2.0L 4-cyl",
+"electric"
+],
+"ev": false,
+"n": 5,
+"why": "mpg 26-105 outside this model's EPA versions (26-27)"
+},
+"2017": {
+"comb": [
+27,
+28
+],
+"cost": [
+2200,
+2300
+],
+"engines": [
+"1.6L 4-cyl",
+"2.0L 4-cyl",
+"electric"
+],
+"ev": false,
+"n": 5,
+"why": "mpg 27-105 outside this model's EPA versions (27-28)"
+},
+"2018": {
+"comb": [
+27,
+28
+],
+"cost": [
+2200,
+2300
+],
+"engines": [
+"1.6L 4-cyl",
+"2.0L 4-cyl",
+"electric"
+],
+"ev": false,
+"n": 5,
+"why": "mpg 27-108 outside this model's EPA versions (27-28)"
+},
+"2019": {
+"comb": [
+27,
+28
+],
+"cost": [
+2200,
+2300
+],
+"engines": [
+"1.6L 4-cyl",
+"2.0L 4-cyl",
+"electric"
+],
+"ev": false,
+"n": 5,
+"why": "mpg 27-108 outside this model's EPA versions (27-28)"
+},
+"2020": {
+"comb": [
+27,
+31
+],
+"cost": [
+2000,
+2300
+],
+"engines": [
+"1.6L 4-cyl",
+"2.0L 4-cyl",
+"electric"
+],
+"ev": false,
+"n": 5,
+"why": "mpg 27-114 outside this model's EPA versions (27-31)"
+}
+},
+"land-rover-discovery": {
+"2000": {
+"comb": [
+13,
+13
+],
+"cost": [
+5950,
+5950
+],
+"engines": [
+"4.0L 8-cyl"
+],
+"ev": false,
+"n": 1,
+"why": "no engines in the fetched data"
+},
+"2001": {
+"comb": [
+13,
+13
+],
+"cost": [
+5950,
+5950
+],
+"engines": [
+"4.0L 8-cyl"
+],
+"ev": false,
+"n": 1,
+"why": "no engines in the fetched data"
+},
+"2002": {
+"comb": [
+13,
+13
+],
+"cost": [
+5950,
+5950
+],
+"engines": [
+"4.0L 8-cyl"
+],
+"ev": false,
+"n": 1,
+"why": "no engines in the fetched data"
+},
+"2003": {
+"comb": [
+12,
+12
+],
+"cost": [
+6450,
+6450
+],
+"engines": [
+"4.6L 8-cyl"
+],
+"ev": false,
+"n": 1,
+"why": "no engines in the fetched data"
+},
+"2004": {
+"comb": [
+12,
+12
+],
+"cost": [
+6450,
+6450
+],
+"engines": [
+"4.6L 8-cyl"
+],
+"ev": false,
+"n": 1,
+"why": "no engines in the fetched data"
+},
+"2005": {
+"comb": [
+14,
+14
+],
+"cost": [
+4450,
+4450
+],
+"engines": [
+"4.0L 6-cyl",
+"4.4L 8-cyl"
+],
+"ev": false,
+"n": 2,
+"why": "no engines in the fetched data"
+},
+"2006": {
+"comb": [
+14,
+14
+],
+"cost": [
+4450,
+4450
+],
+"engines": [
+"4.0L 6-cyl",
+"4.4L 8-cyl"
+],
+"ev": false,
+"n": 2,
+"why": "no engines in the fetched data"
+},
+"2007": {
+"comb": [
+14,
+14
+],
+"cost": [
+4450,
+4450
+],
+"engines": [
+"4.0L 8-cyl",
+"4.4L 8-cyl"
+],
+"ev": false,
+"n": 2,
+"why": "no engines in the fetched data"
+},
+"2008": {
+"comb": [
+14,
+14
+],
+"cost": [
+4450,
+4450
+],
+"engines": [
+"4.4L 8-cyl"
+],
+"ev": false,
+"n": 1,
+"why": "no engines in the fetched data"
+},
+"2009": {
+"comb": [
+14,
+14
+],
+"cost": [
+5550,
+5550
+],
+"engines": [
+"4.4L 8-cyl"
+],
+"ev": false,
+"n": 1,
+"why": "no engines in the fetched data"
+},
+"2010": {
+"comb": [
+14,
+14
+],
+"cost": [
+5550,
+5550
+],
+"engines": [
+"5.0L 8-cyl"
+],
+"ev": false,
+"n": 1,
+"why": "no engines in the fetched data"
+},
+"2011": {
+"comb": [
+14,
+14
+],
+"cost": [
+5550,
+5550
+],
+"engines": [
+"5.0L 8-cyl"
+],
+"ev": false,
+"n": 1,
+"why": "no engines in the fetched data"
+},
+"2012": {
+"comb": [
+14,
+14
+],
+"cost": [
+5550,
+5550
+],
+"engines": [
+"5.0L 8-cyl"
+],
+"ev": false,
+"n": 1,
+"why": "no engines in the fetched data"
+},
+"2013": {
+"comb": [
+14,
+14
+],
+"cost": [
+5550,
+5550
+],
+"engines": [
+"5.0L 8-cyl"
+],
+"ev": false,
+"n": 1,
+"why": "no engines in the fetched data"
+},
+"2014": {
+"comb": [
+16,
+16
+],
+"cost": [
+4850,
+4850
+],
+"engines": [
+"3.0L 6-cyl"
+],
+"ev": false,
+"n": 1,
+"why": "no engines in the fetched data"
+},
+"2015": {
+"comb": [
+16,
+16
+],
+"cost": [
+4850,
+4850
+],
+"engines": [
+"3.0L 6-cyl"
+],
+"ev": false,
+"n": 1,
+"why": "no engines in the fetched data"
+},
+"2016": {
+"comb": [
+16,
+16
+],
+"cost": [
+4850,
+4850
+],
+"engines": [
+"3.0L 6-cyl"
+],
+"ev": false,
+"n": 1,
+"why": "no engines in the fetched data"
+},
+"2017": {
+"comb": [
+18,
+23
+],
+"cost": [
+4100,
+4300
+],
+"engines": [
+"3.0L 6-cyl",
+"3.0L 6-cyl diesel"
+],
+"ev": false,
+"n": 2,
+"why": "no engines in the fetched data"
+},
+"2018": {
+"comb": [
+18,
+23
+],
+"cost": [
+4100,
+4300
+],
+"engines": [
+"3.0L 6-cyl",
+"3.0L 6-cyl diesel"
+],
+"ev": false,
+"n": 2,
+"why": "no engines in the fetched data"
+},
+"2019": {
+"comb": [
+18,
+23
+],
+"cost": [
+4100,
+4300
+],
+"engines": [
+"3.0L 6-cyl",
+"3.0L 6-cyl diesel"
+],
+"ev": false,
+"n": 2,
+"why": "no engines in the fetched data"
+},
+"2020": {
+"comb": [
+18,
+23
+],
+"cost": [
+4100,
+4300
+],
+"engines": [
+"3.0L 6-cyl",
+"3.0L 6-cyl diesel"
+],
+"ev": false,
+"n": 2,
+"why": "no engines in the fetched data"
+},
+"2021": {
+"comb": [
+21,
+21
+],
+"cost": [
+3700,
+3700
+],
+"engines": [
+"2.0L 4-cyl",
+"3.0L 6-cyl"
+],
+"ev": false,
+"n": 2,
+"why": "no engines in the fetched data"
+},
+"2022": {
+"comb": [
+21,
+21
+],
+"cost": [
+3700,
+3700
+],
+"engines": [
+"2.0L 4-cyl",
+"3.0L 6-cyl"
+],
+"ev": false,
+"n": 2,
+"why": "no engines in the fetched data"
+},
+"2023": {
+"comb": [
+21,
+22
+],
+"cost": [
+3500,
+3700
+],
+"engines": [
+"2.0L 4-cyl",
+"3.0L 6-cyl"
+],
+"ev": false,
+"n": 2,
+"why": "no engines in the fetched data"
+},
+"2024": {
+"comb": [
+19,
+21
+],
+"cost": [
+3700,
+4050
+],
+"engines": [
+"2.0L 4-cyl",
+"3.0L 6-cyl"
+],
+"ev": false,
+"n": 2,
+"why": "no engines in the fetched data"
+}
+},
+"land-rover-range-rover-sport": {
+"2006": {
+"comb": [
+14,
+14
+],
+"cost": [
+4450,
+4450
+],
+"engines": [
+"4.2L 8-cyl",
+"4.4L 8-cyl"
+],
+"ev": false,
+"n": 2,
+"why": "no engines in the fetched data"
+},
+"2007": {
+"comb": [
+14,
+15
+],
+"cost": [
+4150,
+4450
+],
+"engines": [
+"4.2L 8-cyl",
+"4.4L 8-cyl"
+],
+"ev": false,
+"n": 2,
+"why": "no engines in the fetched data"
+},
+"2008": {
+"comb": [
+14,
+15
+],
+"cost": [
+4150,
+4450
+],
+"engines": [
+"4.2L 8-cyl",
+"4.4L 8-cyl"
+],
+"ev": false,
+"n": 2,
+"why": "no engines in the fetched data"
+},
+"2009": {
+"comb": [
+14,
+15
+],
+"cost": [
+5150,
+5550
+],
+"engines": [
+"4.2L 8-cyl",
+"4.4L 8-cyl"
+],
+"ev": false,
+"n": 2,
+"why": "no engines in the fetched data"
+},
+"2010": {
+"comb": [
+14,
+15
+],
+"cost": [
+5150,
+5550
+],
+"engines": [
+"5.0L 8-cyl"
+],
+"ev": false,
+"n": 2,
+"why": "no engines in the fetched data"
+},
+"2011": {
+"comb": [
+14,
+15
+],
+"cost": [
+5150,
+5550
+],
+"engines": [
+"5.0L 8-cyl"
+],
+"ev": false,
+"n": 2,
+"why": "no engines in the fetched data"
+},
+"2012": {
+"comb": [
+14,
+15
+],
+"cost": [
+5150,
+5550
+],
+"engines": [
+"5.0L 8-cyl"
+],
+"ev": false,
+"n": 2,
+"why": "no engines in the fetched data"
+},
+"2013": {
+"comb": [
+14,
+15
+],
+"cost": [
+5150,
+5550
+],
+"engines": [
+"5.0L 8-cyl"
+],
+"ev": false,
+"n": 2,
+"why": "no engines in the fetched data"
+},
+"2014": {
+"comb": [
+16,
+19
+],
+"cost": [
+4050,
+4850
+],
+"engines": [
+"3.0L 6-cyl",
+"5.0L 8-cyl"
+],
+"ev": false,
+"n": 4,
+"why": "no engines in the fetched data"
+},
+"2015": {
+"comb": [
+16,
+19
+],
+"cost": [
+4050,
+4850
+],
+"engines": [
+"3.0L 6-cyl",
+"5.0L 8-cyl"
+],
+"ev": false,
+"n": 3,
+"why": "no engines in the fetched data"
+},
+"2016": {
+"comb": [
+16,
+24
+],
+"cost": [
+3950,
+4850
+],
+"engines": [
+"3.0L 6-cyl",
+"3.0L 6-cyl diesel",
+"5.0L 8-cyl"
+],
+"ev": false,
+"n": 3,
+"why": "no engines in the fetched data"
+},
+"2017": {
+"comb": [
+16,
+24
+],
+"cost": [
+3950,
+4850
+],
+"engines": [
+"3.0L 6-cyl",
+"3.0L 6-cyl diesel",
+"5.0L 8-cyl"
+],
+"ev": false,
+"n": 3,
+"why": "no engines in the fetched data"
+},
+"2018": {
+"comb": [
+16,
+24
+],
+"cost": [
+3950,
+4850
+],
+"engines": [
+"3.0L 6-cyl",
+"3.0L 6-cyl diesel",
+"5.0L 8-cyl"
+],
+"ev": false,
+"n": 4,
+"why": "no engines in the fetched data"
+},
+"2019": {
+"comb": [
+16,
+24
+],
+"cost": [
+3700,
+4850
+],
+"engines": [
+"2.0L 4-cyl",
+"3.0L 6-cyl",
+"3.0L 6-cyl diesel",
+"5.0L 8-cyl"
+],
+"ev": false,
+"n": 6,
+"why": "no engines in the fetched data"
+},
+"2020": {
+"comb": [
+16,
+24
+],
+"cost": [
+3700,
+4850
+],
+"engines": [
+"2.0L 4-cyl",
+"3.0L 6-cyl",
+"3.0L 6-cyl diesel",
+"5.0L 8-cyl"
+],
+"ev": false,
+"n": 5,
+"why": "no engines in the fetched data"
+},
+"2021": {
+"comb": [
+16,
+24
+],
+"cost": [
+3700,
+4850
+],
+"engines": [
+"2.0L 4-cyl",
+"3.0L 6-cyl",
+"3.0L 6-cyl diesel",
+"5.0L 8-cyl"
+],
+"ev": false,
+"n": 5,
+"why": "no engines in the fetched data"
+},
+"2022": {
+"comb": [
+16,
+21
+],
+"cost": [
+3700,
+4850
+],
+"engines": [
+"2.0L 4-cyl",
+"3.0L 6-cyl",
+"5.0L 8-cyl"
+],
+"ev": false,
+"n": 5,
+"why": "no engines in the fetched data"
+},
+"2023": {
+"comb": [
+18,
+22
+],
+"cost": [
+3500,
+4300
+],
+"engines": [
+"3.0L 6-cyl",
+"4.4L 8-cyl"
+],
+"ev": false,
+"n": 4,
+"why": "no engines in the fetched data"
+},
+"2024": {
+"comb": [
+18,
+21
+],
+"cost": [
+3700,
+4300
+],
+"engines": [
+"3.0L 6-cyl",
+"4.4L 8-cyl"
+],
+"ev": false,
+"n": 4,
+"why": "no engines in the fetched data"
+},
+"2025": {
+"comb": [
+18,
+22
+],
+"cost": [
+3500,
+4300
+],
+"engines": [
+"3.0L 6-cyl",
+"4.4L 8-cyl"
+],
+"ev": false,
+"n": 5,
+"why": "no engines in the fetched data"
+}
+},
+"mazda-cx-5": {
+"2023": {
+"comb": [
+24,
+26
+],
+"cost": [
+2400,
+2600
+],
+"engines": [
+"2.5L 4-cyl"
+],
+"ev": false,
+"n": 2,
+"why": "mpg 24-27 outside this model's EPA versions (24-26)"
+},
+"2025": {
+"comb": [
+24,
+28
+],
+"cost": [
+2200,
+2600
+],
+"engines": [
+"2.5L 4-cyl"
+],
+"ev": false,
+"n": 3,
+"why": "mpg 24-38 outside this model's EPA versions (24-28)"
+}
+},
+"mazda-mazda5": {
+"2006": {
+"comb": [
+21,
+22
+],
+"cost": [
+2850,
+2950
+],
+"engines": [
+"2.3L 4-cyl"
+],
+"ev": false,
+"n": 2,
+"why": "no engines in the fetched data"
+},
+"2007": {
+"comb": [
+21,
+22
+],
+"cost": [
+2850,
+2950
+],
+"engines": [
+"2.3L 4-cyl"
+],
+"ev": false,
+"n": 2,
+"why": "no engines in the fetched data"
+},
+"2008": {
+"comb": [
+23,
+24
+],
+"cost": [
+2600,
+2700
+],
+"engines": [
+"2.3L 4-cyl"
+],
+"ev": false,
+"n": 2,
+"why": "no engines in the fetched data"
+},
+"2009": {
+"comb": [
+23,
+24
+],
+"cost": [
+2600,
+2700
+],
+"engines": [
+"2.3L 4-cyl"
+],
+"ev": false,
+"n": 2,
+"why": "no engines in the fetched data"
+},
+"2010": {
+"comb": [
+23,
+24
+],
+"cost": [
+2600,
+2700
+],
+"engines": [
+"2.3L 4-cyl"
+],
+"ev": false,
+"n": 2,
+"why": "no engines in the fetched data"
+},
+"2012": {
+"comb": [
+24,
+24
+],
+"cost": [
+2600,
+2600
+],
+"engines": [
+"2.5L 4-cyl"
+],
+"ev": false,
+"n": 2,
+"why": "no engines in the fetched data"
+},
+"2013": {
+"comb": [
+24,
+24
+],
+"cost": [
+2600,
+2600
+],
+"engines": [
+"2.5L 4-cyl"
+],
+"ev": false,
+"n": 2,
+"why": "no engines in the fetched data"
+},
+"2014": {
+"comb": [
+24,
+24
+],
+"cost": [
+2600,
+2600
+],
+"engines": [
+"2.5L 4-cyl"
+],
+"ev": false,
+"n": 2,
+"why": "no engines in the fetched data"
+},
+"2015": {
+"comb": [
+24,
+24
+],
+"cost": [
+2600,
+2600
+],
+"engines": [
+"2.5L 4-cyl"
+],
+"ev": false,
+"n": 1,
+"why": "no engines in the fetched data"
+}
+},
+"nissan-pathfinder": {
+"2004": {
+"comb": [
+15,
+16
+],
+"cost": [
+3900,
+4150
+],
+"engines": [
+"3.5L 6-cyl"
+],
+"ev": false,
+"n": 2,
+"why": "engine EPA does not list for this model: 5.6L 8-cyl; mpg 14-16 outside this model's EPA versions (15-16)"
+}
+},
+"porsche-macan": {
+"2024": {
+"comb": [
+19,
+21
+],
+"cost": [
+3700,
+4050
+],
+"engines": [
+"2.0L 4-cyl",
+"2.9L 6-cyl"
+],
+"ev": false,
+"n": 4,
+"why": "mpg 19-98 outside this model's EPA versions (19-21)"
+},
+"2025": {
+"comb": [
+19,
+21
+],
+"cost": [
+3700,
+4050
+],
+"engines": [
+"2.0L 4-cyl",
+"2.9L 6-cyl"
+],
+"ev": false,
+"n": 4,
+"why": "mpg 19-99 outside this model's EPA versions (19-21)"
+}
+},
+"toyota-camry": {
+"2000": {
+"comb": [
+20,
+24
+],
+"cost": [
+2600,
+3100
+],
+"engines": [
+"2.2L 4-cyl",
+"3.0L 6-cyl"
+],
+"ev": false,
+"n": 4,
+"why": "mpg 19-24 outside this model's EPA versions (20-24)"
+},
+"2001": {
+"comb": [
+20,
+24
+],
+"cost": [
+2600,
+3100
+],
+"engines": [
+"2.2L 4-cyl",
+"3.0L 6-cyl"
+],
+"ev": false,
+"n": 4,
+"why": "mpg 19-24 outside this model's EPA versions (20-24)"
+},
+"2002": {
+"comb": [
+21,
+24
+],
+"cost": [
+2600,
+2950
+],
+"engines": [
+"2.4L 4-cyl",
+"3.0L 6-cyl"
+],
+"ev": false,
+"n": 3,
+"why": "mpg 19-24 outside this model's EPA versions (21-24)"
+},
+"2003": {
+"comb": [
+21,
+24
+],
+"cost": [
+2600,
+2950
+],
+"engines": [
+"2.4L 4-cyl",
+"3.0L 6-cyl"
+],
+"ev": false,
+"n": 4,
+"why": "mpg 19-24 outside this model's EPA versions (21-24)"
+},
+"2007": {
+"comb": [
+23,
+34
+],
+"cost": [
+1850,
+2700
+],
+"engines": [
+"2.4L 4-cyl",
+"3.5L 6-cyl"
+],
+"ev": false,
+"n": 4,
+"why": "engine EPA does not list for this model: 3.3L 6-cyl; mpg 21-34 outside this model's EPA versions (23-34)"
+},
+"2008": {
+"comb": [
+22,
+34
+],
+"cost": [
+1850,
+2850
+],
+"engines": [
+"2.4L 4-cyl",
+"3.5L 6-cyl"
+],
+"ev": false,
+"n": 4,
+"why": "engine EPA does not list for this model: 3.3L 6-cyl; mpg 21-34 outside this model's EPA versions (22-34)"
+}
+},
+"toyota-corolla": {
+"2022": {
+"comb": [
+31,
+52
+],
+"cost": [
+1200,
+2000
+],
+"engines": [
+"1.8L 4-cyl",
+"2.0L 4-cyl"
+],
+"ev": false,
+"n": 12,
+"why": "mpg 30-52 outside this model's EPA versions (31-52)"
+},
+"2023": {
+"comb": [
+33,
+50
+],
+"cost": [
+1250,
+1900
+],
+"engines": [
+"1.8L 4-cyl",
+"2.0L 4-cyl"
+],
+"ev": false,
+"n": 8,
+"why": "mpg 30-50 outside this model's EPA versions (33-50)"
+},
+"2024": {
+"comb": [
+33,
+50
+],
+"cost": [
+1250,
+1900
+],
+"engines": [
+"1.8L 4-cyl",
+"2.0L 4-cyl"
+],
+"ev": false,
+"n": 8,
+"why": "mpg 30-50 outside this model's EPA versions (33-50)"
+},
+"2025": {
+"comb": [
+33,
+50
+],
+"cost": [
+1250,
+1900
+],
+"engines": [
+"1.8L 4-cyl",
+"2.0L 4-cyl"
+],
+"ev": false,
+"n": 10,
+"why": "mpg 30-50 outside this model's EPA versions (33-50)"
+}
+},
+"toyota-rav4": {
+"2000": {
+"comb": [
+21,
+23
+],
+"cost": [
+2700,
+2950
+],
+"engines": [
+"2.0L 4-cyl"
+],
+"ev": false,
+"n": 8,
+"why": "mpg 21-72 outside this model's EPA versions (21-23)"
+},
+"2001": {
+"comb": [
+22,
+24
+],
+"cost": [
+2600,
+2850
+],
+"engines": [
+"2.0L 4-cyl"
+],
+"ev": false,
+"n": 4,
+"why": "mpg 22-72 outside this model's EPA versions (22-24)"
+},
+"2002": {
+"comb": [
+22,
+24
+],
+"cost": [
+2600,
+2850
+],
+"engines": [
+"2.0L 4-cyl"
+],
+"ev": false,
+"n": 4,
+"why": "mpg 22-78 outside this model's EPA versions (22-24)"
+},
+"2003": {
+"comb": [
+22,
+24
+],
+"cost": [
+2600,
+2850
+],
+"engines": [
+"2.0L 4-cyl"
+],
+"ev": false,
+"n": 4,
+"why": "mpg 22-78 outside this model's EPA versions (22-24)"
+},
+"2012": {
+"comb": [
+22,
+24
+],
+"cost": [
+2600,
+2850
+],
+"engines": [
+"2.5L 4-cyl",
+"3.5L 6-cyl"
+],
+"ev": false,
+"n": 4,
+"why": "mpg 22-76 outside this model's EPA versions (22-24)"
+},
+"2013": {
+"comb": [
+25,
+26
+],
+"cost": [
+2400,
+2500
+],
+"engines": [
+"2.5L 4-cyl"
+],
+"ev": false,
+"n": 3,
+"why": "mpg 25-76 outside this model's EPA versions (25-26)"
+},
+"2014": {
+"comb": [
+24,
+26
+],
+"cost": [
+2400,
+2600
+],
+"engines": [
+"2.5L 4-cyl"
+],
+"ev": false,
+"n": 3,
+"why": "mpg 24-76 outside this model's EPA versions (24-26)"
+}
+},
+"volkswagen-atlas": {
+"2025": {
+"comb": [
+20,
+22
+],
+"cost": [
+2850,
+3100
+],
+"engines": [
+"2.0L 4-cyl"
+],
+"ev": false,
+"n": 4,
+"why": "mpg 20-23 outside this model's EPA versions (20-22)"
+}
+}
+}

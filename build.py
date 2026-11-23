@@ -922,8 +922,15 @@ for _ys in XL.values():
     for _x in _ys.values():
         for _k, _n in ((_x or {}).get('sev') or {}).items(): _SV[_k] += _n
 SEVR = {k: _SV[k] / _SV['total'] for k in ('crash', 'injured', 'fire', 'towed')} if _SV['total'] else {}
+# 11-23: EPA engine / mpg corrections for model years whose fetched data matched another model (Transit Connect on the Transit, Encore GX
+# on the Encore), a fuel-cell or EV version (Tucson Fuel Cell, Mustang Mach-E), or had no engines at all (data_engine_fuels.py -> data/engine_fix.json)
+_EFIX = _load('data/engine_fix.json')
 def extra(fid, y):
-    d = dict(XL.get(fid, {}).get(str(y), {})); d.update(XA.get(fid, {}).get(str(y), {}) or {}); return d
+    d = dict(XL.get(fid, {}).get(str(y), {})); d.update(XA.get(fid, {}).get(str(y), {}) or {})
+    fx = _EFIX.get(fid, {}).get(str(y))
+    if fx and d.get('mpg'): d['mpg'] = dict(d['mpg'], engines=fx['engines'], comb=fx['comb'], cost=fx['cost'] or d['mpg'].get('cost'), ev=fx['ev'])
+    elif fx and fx.get('engines') and 'mpg' in d: d['mpg'] = dict(engines=fx['engines'], comb=fx['comb'], cost=fx['cost'], ev=fx['ev'], n=fx['n'])
+    return d
 # ---- 11-04 YouTube videos (data_yt.py): what owners/buyers watch most, by views, with the top video for each topic. Mobile first:
 # 4 topics open, the rest behind "Show more"; each topic's top video is one big tap target (thumbnail + 2-line title).
 YTV = _load('data/yt.json')
