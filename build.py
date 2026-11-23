@@ -4,7 +4,7 @@ import re
 # Pages: home, /studies/, /studies/most-reliable-cars/, /method/, 404 + sitemap.xml, robots.txt, llms.txt, CNAME.
 # Look = the channel's thumbnails: white, Inter, #111 type, lemon yellow #ffd400 for the brand, red #e8141c only for "bad" (the lemon end).
 # Every number comes from data/*.csv (autopilot/lib/lemon.py, with the 10-24 mysales sales-timing fix); was 3 Lemon Index/video 1 most reliable/findings.md (NHTSA complaints ÷ US sales, model years 2010-2022).
-import os, re, json, html, datetime, shutil, csv
+import os, re, json, html, datetime, shutil, csv, statistics
 from collections import defaultdict
 exec(open('k5_split.py', encoding='utf-8').read())   # 11-20: the Kia K5 (2021+) gets its own pages, split from the Optima as each data file is read
 import year_slider as YSL   # 11-10: AI year illustrations + 'every year' slider (data/ai_year_images.json)
@@ -562,6 +562,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
     if 'CAR_HOOK' in globals(): body = CAR_HOOK(path, body)
     if path.endswith('/advanced/'): body = ADV5_HOOK(path, body)   # 11-19 v5 look, Advanced pages (cp5_hook.py)
     if 'MH_HOOK' in globals(): body = MH_HOOK(path, body)   # 11-19 model page top v2 (model_hero.py): name, photo, big gauge, score, year by year
+    if 'ANS_HOOK' in globals(): body = ANS_HOOK(path, body)   # 11-23 Job C: short answer box on the most-searched pages (ans_box.py)
     if 'EV5_HOOK' in globals(): body = EV5_HOOK(path, body)   # 11-19 v5 look, /electric/ pages (electric_pages.py), after the date hash
     if 'SUB_HOOK' in globals(): body = SUB_HOOK(path, body)   # 11-19 (Elijah): on cars in SUB_CARS (sub_pages.py) each card opens a page of its own instead of a dropdown   # 11-18 car pages: no tab bar; every tab and long section is a tap-to-open box (car_pills.py), after the date hash
     _rel = ''; _rm = re.search(r'<!--cpl-rel-->(.*?)<!--/cpl-rel-->', body, re.S)   # 11-18 r4 (Elijah): the Related box goes last, after the end-of-page boxes
@@ -1242,7 +1243,7 @@ def rel_answer(f, c, snm, rec, kind, avoid):
     tail = '.'
     if rec and kind == 'least': tail = f'. No year beat the average car. The year with the fewest complaints, <b>{rec["y"]}</b>, still drew {x_avg(rec["li"])} the average.'
     elif rec: tail = f'. Fewest complaints: <b>{rec["y"]}</b>.'
-    av = sorted(v['y'] for v in avoid if not rec or v['y'] != rec['y'])[:3] if len(scored(f)) >= LIST_MIN else []
+    av = sorted(v['y'] for v in sorted((v for v in avoid if not rec or v['y'] != rec['y']), key=lambda v: -v['li'])[:3]) if len(scored(f)) >= LIST_MIN else []   # 11-23: the 3 with the most complaints (was: the 3 earliest)
     if av: tail += f' Most complaints: <b>{AND(av)}</b>.'
     return word, comp + yt + tail
 def rel_top(f, c, snm, ys, sc, rec, kind, worst, avoid, qn=None):
@@ -1310,6 +1311,7 @@ FY = {f['id']: f for f in YEARS}
 exec(open('opinions.py', encoding='utf-8').read())   # 11-18 owner opinions box (OP_HOOK in page())
 exec(open('engine_pills.py', encoding='utf-8').read())   # 11-18 engine pages: long sections fold into boxes (ENG_HOOK in page())
 exec(open('car_pills.py', encoding='utf-8').read())   # 11-18 car pages: tabs and long sections fold into boxes (CAR_HOOK in page())
+exec(open('ans_box.py', encoding='utf-8').read())   # 11-23 Job C: ANS_HOOK, the short answer box on the most-searched pages
 exec(open('model_hero.py', encoding='utf-8').read())   # 11-19 model page top v2 (MH_HOOK in page())
 exec(open('sub_pages.py', encoding='utf-8').read())   # 11-19 card -> own page test (Integra GS-R), SUB_HOOK in page()
 exec(open('recall_alerts.py', encoding='utf-8').read())   # 11-14 growth 4a: recall alert signup box (RA_HOOK in page()), /alerts/ page, privacy text
@@ -1946,6 +1948,11 @@ for f in YEARS:
     if _pt:
         _tp = [NICE(x) for x, _ in sorted(_pt.items(), key=lambda kv: -kv[1])[:3]]
         mqa.append((f'What are the most common {snm} problems?', f'Across every year, owners&#39; complaints to the government name {", ".join(_tp[:-1])} and {_tp[-1]} most. Some years are much worse than others: see the chart above.'))
+    _rcl = RC_LINKS(f['id']) if 'RC_LINKS' in globals() else []
+    if len(_rcl) >= 2:   # 11-23 Job C: "<car> maintenance / repair cost" searches; owner bills (5+ per repair) from the /repair-cost/ pages
+        _rcm = lambda s_: RCQ._r(statistics.median(p[5] for p in RC_BY[s_][f['id']]))
+        mqa.append((f'What do {snm} repairs cost?', f'The repairs {snm} owners reported paying for most: ' + ', '.join(f'{RC_LOW(RC_Q(s_))} (middle bill {_rcm(s_)}, {n} reports)' for _, s_, n in _rcl[:3])
+                    + '. Those are bills owners named in complaints to NHTSA and in YouTube videos, mostly at dealers. Each year&#39;s page has an estimate at your own shop rate.'))
     qn = QN(f); rel_html, rel_tiles, rel_plain = rel_top(f, c, snm, ys, sc, best, kind, worst, avoid_years(f), qn)
     mqa.insert(0, (f'Is the {snm} reliable?', E(rel_plain)))
     model_qa_html = '<section class="yqa"><h2>Quick answers.</h2>' + qa_fold(''.join(f'<h3>{E(q)}</h3><p>{a}</p>' for q, a in mqa)) + '</section>'

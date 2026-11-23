@@ -348,8 +348,10 @@ def cmp_page(a, b):
     _lead_s, _trail_s = (_sa, _sb) if aL else (_sb, _sa)
     # 11-19 v5 (Elijah, phone): the top is just the two cars (picture, name, Lemon bar); everything else is a tap-to-open box (the car
     # pages' compact style), and the boxes that compare one number show it as two side-by-side Lemon bars under big car-name headers.
-    verdict = (f'<p class="cb-vline">Too close to call: about the same complaints per car sold.</p>' if close else
-               f'<p class="cb-vline">The <b>{E(sL)}</b> drew <b>{fewer}% fewer</b> owner complaints per car sold.</p>')
+    # 11-23 Job C (answer box): a second plain sentence from the same numbers (model years won head to head, each car's best year)
+    _v2 = (f' Head to head, the {E(sL)} drew fewer complaints in {lw} of {len(full)} model years ({span})' + (f'; best years: {lb_["y"]} {E(sL)}, {tb_["y"]} {E(sT)}.' if lb_ and tb_ else '.')) if len(full) >= 3 and lw > tw else ''
+    verdict = (f'<p class="cb-vline">Too close to call: about the same complaints per car sold (Lemon Index {ca["li"]} vs {cb["li"]}).</p>' if close else
+               f'<p class="cb-vline">The <b>{E(sL)}</b> drew <b>{fewer}% fewer</b> owner complaints per car sold.{_v2}</p>')
     hero2 = (f'<section class="cb-hero cb-hero2{" cb-tie" if close else ""}"><div class="cb-cars" style="--ar:1000 / {_cbh}">{car(A, ca)}<span class="cb-vs">VS</span>{car(B, cb)}</div>'
              f'{verdict}<div class="cb-hf"><span class="cb-sh">{share_btn(sh_txt)}</span></div></section>')
     def duo(lab, va, vb, lower=True, fmt=str, w=None, extra=('', '')):
