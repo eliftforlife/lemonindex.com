@@ -127,10 +127,10 @@ def _sb_simple(nm, kind):
         ('problems', r'^Problems', 'problems', None, None, f'{nm} Problems', f'{nm} problems', '', f'{nm} problems: what owners report to NHTSA most, by part.'),
         ('recalls', r'^Recalls', 'recalls', None, None, f'{nm} Recalls', f'{nm} recalls', '', f'Every {nm} recall from NHTSA, newest first.'),
         ('specs', r'^Specs', 'specs', None, None, f'{nm} Specs and Engine', f'{nm} specs', '', f'{nm} specs: engine, power and weight from the maker.'),
-        ('repairs', r'^Repairs', 'repairs', None, None, f'{nm} Repair Costs', f'{nm} repair costs', '', f'What {nm} repairs cost, from owners.')]}
+        ('repairs', r'^Repairs', 'repairs', None, None, f'{nm} Repair Costs' if len(nm) > 12 else f'{nm} Repair and Service Costs', f'{nm} repair costs', '', f'What {nm} repairs cost: an estimate for each repair, checked against what owners paid.')]}
     if kind == 'super': return {'name': nm, 'pages': [
         ('repairs', r'^Repairs', 'repairs', None, None, f'{nm} Repair and Service Costs', f'{nm} repair and service costs', '',
-         f'What {nm} service and repairs cost, from owners on YouTube.'),
+         f'What {nm} service and repairs cost: an estimate for each job, plus what owners paid.'),
         ('recalls', r'^Recalls', 'recalls', None, None, f'{nm} Recalls', f'{nm} recalls', '', f'Every {nm} recall from NHTSA.'),
         ('specs', r'^Specs', 'specs', None, None, f'{nm} Specs, Engine and MPG', f'{nm} specs and engines', '',
          f'{nm} specs: engines, power and EPA fuel economy for every version.')]}
@@ -139,7 +139,7 @@ def _sb_simple(nm, kind):
          f'Why {nm} accidents happen', '', f'Why {nm} accidents happen: what NTSB found, pilot or plane, and the phase of flight.'),
         ('by-year', r'^Accidents per year', 'by-year', None, None, f'{nm} Accidents by Year', f'{nm} accidents by year', '',
          f'{nm} accidents in the US by year, from the NTSB database.'),
-        ('repairs', r'^Repairs', 'repairs', None, None, f'{nm} Repair Costs', f'{nm} repair costs', '', f'What {nm} repairs cost.')]}
+        ('repairs', r'^Repairs', 'repairs', None, None, f'{nm} Repair Costs' if len(nm) > 12 else f'{nm} Repair and Inspection Costs', f'{nm} repair costs', '', f'What {nm} repairs and inspections cost: an estimate for each job, checked against what owners paid.')]}
 
 _SB_RENAME = {'When': 'Phase of flight'}
 

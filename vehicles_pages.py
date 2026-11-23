@@ -64,7 +64,7 @@ if PL:
 <p class="yc-cap">Out of {p["judged"]:,} accidents where NTSB recorded a cause.{" When the plane was a cause, it was most often the " + E(p["mech_parts"][0][0]) + "." if p["mech_parts"] else ""}</p></section>'''
         body = f'''<div class="pg mp6"><section class="ph yph6"><div class="yh-t"><p class="ph-e"><a href="/planes/">Planes</a> · {E(p["kind"])}</p><h1>{E(p["name"])}.</h1>
 <p class="ph-s">Every U.S. accident NTSB investigated, 2008 to 2025.</p><nav class="modes" aria-label="Page mode"><a href="/planes/{slug}/" aria-current="page">Normal</a><a href="/planes/{slug}/advanced/">Advanced</a></nav></div><div class="ph-v">{pimg(ph, valt(ph, p["name"])) if ph else ""}{vcredit(ph)}</div></section>
-<div class="yts">{stat(f'{p["n"]:,}', 'accidents')}{stat(f'{p["fatal_pct"]}%', 'were fatal', 'bad' if p['fatal_pct'] >= 20 else '')}{stat(f'{p["deaths"]:,}', 'deaths')}{stat(f'{p["destroyed_pct"]}%', 'aircraft destroyed')}</div>{ytfix('plane:' + slug)}
+<div class="yts">{stat(f'{p["n"]:,}', 'accidents')}{stat(f'{p["fatal_pct"]}%', 'were fatal', 'bad' if p['fatal_pct'] >= 20 else '')}{stat(f'{p["deaths"]:,}', 'deaths')}{stat(f'{p["destroyed_pct"]}%', 'aircraft destroyed')}</div>{ytfix('plane:' + slug)}{REST.x_block(f'/planes/{slug}/')}
 <section class="yc"><h2>What happened. <span class="h2s">NTSB's defining event, share of accidents.</span></h2>{bars_pct(whatrows)}</section>
 {mech}
 <section class="yc"><h2>When. <span class="h2s">Phase of flight.</span></h2>{bars_pct(p["phase"])}</section>
@@ -88,7 +88,7 @@ if PL:
 <div class="tile"><div class="tt"><p class="te">Airliners</p><h2>Mostly turbulence.</h2><p class="ts">About {turb}% of U.S. airliner accidents were turbulence encounters. Under 1 in 50 were fatal.</p></div></div></section>
 <section><h2>Every model. <span class="h2s">Tap one for what happened, the phase of flight and the plane-vs-pilot split.</span></h2><div class="mbs">{groups}</div>{vgrid_note([p["name"] for p in PL], "planes and helicopters", "aircraft")}</section>
 <section class="yc hbsec"><h2>When it crashes, how often is it fatal? <span class="h2s">Models with 80+ accidents.</span></h2>{hub_bars([(p["name"], p["fatal_pct"]) for p in fat[:12]], '%')}</section>
-<section class="yc hbsec"><h2>How often is the plane to blame? <span class="h2s">Accidents where NTSB listed an engine, system, structure or propeller problem among the causes.</span></h2>{hub_bars([(p["name"], p["mech_pct"]) for p in mech[:12]], '%')}</section>
+<section class="yc hbsec"><h2>How often is the plane to blame? <span class="h2s">Accidents where NTSB listed an engine, system, structure or propeller problem among the causes.</span></h2>{hub_bars([(p["name"], p["mech_pct"]) for p in mech[:12]], '%')}</section>{REST.x_hub_block('plane')}
 <p class="yc-cap" style="text-align:center">Counts follow fleet size (the Cessna 172 is the most common plane in the U.S.), so compare the shares, not the totals. Per-plane rates would need the FAA registry, so we don&#39;t show them. Source: {NTSB}</p></div>''',
          ld=[{"@context": "https://schema.org", "@type": "Dataset", "name": "Plane accidents by model (NTSB, 2008-2025)", "url": BASE + '/planes/', "isBasedOn": "https://www.ntsb.gov/Pages/AviationQueryV2.aspx", "creator": {"@type": "Organization", "name": "The Lemon Index"}}])
     purls.insert(0, '/planes/')
@@ -231,7 +231,7 @@ if MO:
         ownl = (f'<p class="yc-cap">Bikes in this family with their own page: ' + ' · '.join(f'<a href="/motorcycles/{b["slug"]}/">{E(b["name"])}</a>' for b in sorted(own, key=lambda b: -b['n'])) + '</p>') if own else ''
         body = f'''<div class="pg mp6"><section class="ph yph6"><div class="yh-t"><p class="ph-e"><a href="/motorcycles/">Motorcycles</a> · {E(m["brand"])} · {E(m["seg"])}</p><h1>{E(m["name"])}.</h1>
 <p class="ph-s">Owner complaints to the U.S. government, {m["years"][0]} to {m["years"][1]} models.</p><nav class="modes" aria-label="Page mode"><a href="/motorcycles/{slug}/" aria-current="page">Normal</a><a href="/motorcycles/{slug}/advanced/">Advanced</a></nav></div><div class="ph-v">{pimg(ph, valt(ph, m["name"])) if ph else ""}{vcredit(ph)}</div></section>
-<div class="yts">{stat(f'{m["n"]:,}', 'owner complaints')}{stat(f'{len(m["recalls"])}', 'recall' if len(m['recalls']) == 1 else 'recalls')}{stat(f'{m["serious"]}%', 'involved a crash, fire or injury', 'bad' if m['serious'] >= 25 else '')}{stat(f'{m["miles"]:,}' if m['miles'] else '—', 'typical miles at complaint')}</div>{ytfix('moto:' + slug)}
+<div class="yts">{stat(f'{m["n"]:,}', 'owner complaints')}{stat(f'{len(m["recalls"])}', 'recall' if len(m['recalls']) == 1 else 'recalls')}{stat(f'{m["serious"]}%', 'involved a crash, fire or injury', 'bad' if m['serious'] >= 25 else '')}{stat(f'{m["miles"]:,}' if m['miles'] else '—', 'typical miles at complaint')}</div>{ytfix('moto:' + slug)}{REST.x_block(f'/motorcycles/{slug}/')}
 {av}<section class="yc"><h2>What owners complain about. <span class="h2s">Share of complaints.</span></h2>{bars_pct(m["parts"])}</section>
 {mrecs(m["recalls"], slug)}
 <section class="yc"><h2>Complaints by model year.</h2>{bars_n([(y, v) for y, v in mby.items()])}<p class="yc-cap">Popular years get more complaints just because more were sold. There are no free U.S. sales figures by motorcycle model, so these are counts, not rates.</p></section>
@@ -259,7 +259,7 @@ if MO:
         top = b['worst'][0] if b['worst'] else None
         body = f'''<div class="pg mp6"><section class="ph yph6"><div class="yh-t"><p class="ph-e"><a href="/motorcycles/">Motorcycles</a> · {E(b["brand"])} · {E(cat)}</p><h1>{E(b["name"])}.</h1>
 <p class="ph-s">Owner complaints filed with NHTSA, {min(int(y) for y in by)} to {last} models.</p><nav class="modes" aria-label="Page mode"><a href="/motorcycles/{slug}/" aria-current="page">Normal</a><a href="/motorcycles/{slug}/advanced/">Advanced</a></nav></div><div class="ph-v">{pimg(ph, valt(ph, b["name"])) if ph else ""}{vcredit(ph)}</div></section>
-<div class="yts">{stat(f'{n:,}', 'owner complaints')}{stat(f'{len(b["recalls"])}', 'recall' if len(b['recalls']) == 1 else 'recalls')}{stat(f'{b["serious"]}%', 'involved a crash, fire or injury', 'bad' if b['serious'] >= 25 else '')}{stat(f'{b["miles"]:,}' if b['miles'] else '—', 'typical miles at complaint')}</div>
+<div class="yts">{stat(f'{n:,}', 'owner complaints')}{stat(f'{len(b["recalls"])}', 'recall' if len(b['recalls']) == 1 else 'recalls')}{stat(f'{b["serious"]}%', 'involved a crash, fire or injury', 'bad' if b['serious'] >= 25 else '')}{stat(f'{b["miles"]:,}' if b['miles'] else '—', 'typical miles at complaint')}</div>{REST.x_block(f'/motorcycles/{slug}/')}
 {av}<section class="yc"><h2>What owners complain about. <span class="h2s">Share of complaints.</span></h2>{bars_pct(b["parts"])}</section>
 {mrecs(b["recalls"], slug)}
 <section class="yc"><h2>Complaints by model year.</h2>{bars_n([(y, v) for y, v in by.items()])}<p class="yc-cap">Popular years get more complaints just because more were sold, and newer years have had less time to collect them. There are no U.S. sales figures by motorcycle model year, so these are counts, not rates.</p></section>
@@ -297,7 +297,7 @@ if MO:
          f'''<div class="pg">{MAV_CSS}{phero('Motorcycles', 'Motorcycle problems, by model.', 'Owner complaints and recalls filed with the U.S. government. Corner number: recalls.', visual=pimg(vph('Harley-Davidson Touring'), valt(vph('Harley-Davidson Touring'), 'Harley-Davidson Touring')) if vph('Harley-Davidson Touring') else '', credit=vcredit(vph('Harley-Davidson Touring')))}
 <section><h2>Every model. <span class="h2s">Tap one for its years to avoid, problems, recalls and complaints by year. Bikes with under 15 owner complaints are listed, not ranked.</span></h2>{jump}<div class="mbs">{groups}</div>{vgrid_note([m["name"] for m in MO] + [b["name"] for b in MB], "motorcycles", "motorcycle")}</section>
 <section class="yc hbsec"><h2>Most recalls. <span class="h2s">NHTSA recall campaigns across the model years.</span></h2>{hub_bars([(m["name"], len(m["recalls"])) for m in rec[:10]])}</section>
-<section class="yc hbsec"><h2>Most serious complaints. <span class="h2s">Share that involved a crash, fire or injury (models with 40+ complaints).</span></h2>{hub_bars([(m["name"], m["serious"]) for m in ser[:10]], '%')}</section>
+<section class="yc hbsec"><h2>Most serious complaints. <span class="h2s">Share that involved a crash, fire or injury (models with 40+ complaints).</span></h2>{hub_bars([(m["name"], m["serious"]) for m in ser[:10]], '%')}</section>{REST.x_hub_block('moto')}
 <p class="yc-cap" style="text-align:center">There are no free U.S. sales figures by motorcycle model, so this section shows counts and shares, not a per-bike score like our cars. Source: NHTSA owner complaints and recalls.</p>{MFOLLOW}</div><script src="/assets/soonvote.js?v=2" defer></script>''',
          ld=[{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Motorcycle problems and recalls by model", "url": BASE + '/motorcycles/'}])
     murls.insert(0, '/motorcycles/')
@@ -432,7 +432,7 @@ if SC:
                                                     stat(rng2(last["cost"], "$"), f'fuel a year, {last["y"]} (EPA)', 'bad' if last['cost'][1] >= 5000 else '')]
         body = f'''<div class="pg mp6"><section class="ph yph6"><div class="yh-t"><p class="ph-e"><a href="/supercars/">Supercars</a> · {E(c["make"])}</p><h1>{E(c["name"])}.</h1>
 <p class="ph-s">Power, engine, fuel economy and recalls, {ys[0]["y"]}{" to " + str(last["y"]) if len(ys) > 1 else ""}.</p>{(globals().get("EU_SC_ROW") or (lambda s: ""))(slug)}</div><div class="ph-v">{pimg(ph, valt(ph, c["name"])) if ph else ""}{vcredit(ph)}</div></section>
-<div class="yts">{"".join(tl[:3])}</div>{ytfix('super:' + slug)}
+<div class="yts">{"".join(tl[:3])}</div>{ytfix('super:' + slug)}{REST.x_block(f'/supercars/{slug}/')}
 {epa1 or f'''<section class="yc"><h2>Every year. <span class="h2s">EPA numbers across the versions sold that year.</span></h2><div class="tw"><table><thead><tr><th>Year</th><th>MPG</th><th>Fuel / yr</th><th>Engine</th>{'<th>Guzzler tax</th>' if guz else ''}<th>Recalls</th></tr></thead><tbody>{rows}</tbody></table></div>
 <p class="yc-cap">EPA yearly fuel cost assumes 15,000 miles at national average prices.{' The gas-guzzler tax is a federal tax paid on new cars that use a lot of fuel.' if guz else ''}</p></section>'''}
 {specs}{_sce_section(slug, c["name"], c)}{recs}
@@ -454,7 +454,7 @@ if SC:
 <section><h2>Every model. <span class="h2s">Tap one for every year: mpg, fuel cost, engine and recalls.</span></h2><div class="mbs">{groups}</div>{vgrid_note([c["name"] for c in SC], "cars", "car")}</section>
 {f'<section class="yc"><h2>Supercar engines. <span class="h2s">{sum(1 for d in _SCE["engines"].values() if d.get("group", "super") == "super")} engines, from the Ferrari F154 to the Bugatti W16: YouTube score by year, recalls and repair notes.</span></h2><p><a class="btn" href="/engines/supercars/">Every supercar engine →</a></p></section>' if _SCE["engines"] else ''}
 <section class="yc hbsec"><h2>Yearly fuel cost. <span class="h2s">Newest model year, EPA estimate, the thirstiest version.</span></h2>{hub_bars([(c["name"], c["years"][-1]["cost"][1]) for c in thirst[:12]], pre='$')}</section>
-<section class="yc hbsec"><h2>Most recalls. <span class="h2s">NHTSA campaigns across all model years 2010–2025.</span></h2>{hub_bars([(c["name"], c["recalls"]) for c in rec[:12]])}</section>
+<section class="yc hbsec"><h2>Most recalls. <span class="h2s">NHTSA campaigns across all model years 2010–2025.</span></h2>{hub_bars([(c["name"], c["recalls"]) for c in rec[:12]])}</section>{REST.x_hub_block('super')}
 <p class="yc-cap" style="text-align:center">Owner complaints are too rare for supercars to score (Ferrari has about 70 in total), so this section shows EPA and recall data. Sources: EPA fueleconomy.gov, NHTSA.</p></div>''',
          ld=[{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Supercar fuel economy and recalls", "url": BASE + '/supercars/'}])
     surls.insert(0, '/supercars/')
