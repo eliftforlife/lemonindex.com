@@ -26,7 +26,7 @@ def _about_pages():
              + sec('Corrections', f'<p>Found a wrong number, a missing recall or a car in the wrong place? Email <a href="mailto:{CONTACT}">{CONTACT}</a>. '
                    'We check it against the source, fix the page and the data download, and the page&#39;s "Updated" date moves. Fixes to the method are listed on the <a href="/method/">method page</a>.</p>')
              + sec('How the site makes money', '<p>Reader donations and ads. No automaker, dealer or seller pays to change a score or a ranking, and none can. '
-                   'If we ever add affiliate links, they will be labeled where they appear.</p>')
+                   'Some links may earn us a commission; they are labeled where they appear. See the <a href="/disclosure/">affiliate disclosure</a>.</p>')
              + sec('Use the data', '<p>Everything is free to use with credit (CC BY 4.0): <a href="/data/">download the data</a>, <a href="/images/">free images</a>. Writing about cars? See the <a href="/press/">press page</a>.</p>')
              + sec('Contact', f'<p>Questions, corrections or a car you want covered: <a href="mailto:{CONTACT}">{CONTACT}</a> or the <a href="/contact/">contact page</a>. We usually answer within 2 business days.</p>')
              + '</div></div>')
