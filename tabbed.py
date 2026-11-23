@@ -262,7 +262,7 @@ def _ovfilter(html_, panels):
     return out.replace('<div class="ovg">', '<div class="ovg ovg4">') if n == 4 else out.replace('<div class="ovg ovg4">', '<div class="ovg">') if n in (3, 5) else out
 def _replab(h):
     """11-12 (UX test: an empty "costs" label): the repairs tab says "& costs" only when it shows a real cost number"""
-    return 'Repairs & costs' if ('class="rcq"' in h or 'class="yc-g"' in h) else 'Repairs'
+    return 'Repairs & costs' if ('class="rcq"' in h or 'class="yc-g"' in h or 'class="rst-list' in h) else 'Repairs'   # 11-23: + the repair estimates
 def _ovcard(tid, label, value, line='', vis='', go=None):
     na = not value
     return (f'<a class="ovc{" ovc-na" if na else ""}" href="#p-{tid}"><span class="ovc-h">{_ovsvg(tid)}{E(label)}</span>'

@@ -15,6 +15,11 @@
 // POST /donor-request (11-10): "What car or feature should we add next?" on lemonindex.com/thanks/ (where Stripe sends donors).
 //      Stores {request (2-300 chars), page, Stripe checkout session id if the thank-you URL carried one} in table donor_requests, plus the
 //      same salted daily IP hash the other routes use (only to cap repeat sends). No name or email. Not shown publicly. Max 5 per visitor per day.
+// POST /price (11-23): "What did you pay?" under the repair estimates on lemonindex.com year and /repair-cost/ pages.
+//      Stores {fid, year?, repair (one of the 69 repair slugs), usd (20-30,000), shop type?, the first 3 digits of the ZIP?} in table prices,
+//      status 'new'. No name, email or full ZIP. Same guards as /op: Turnstile, honeypot, no VPN/data-center networks, the edge rate limit,
+//      max 5 per visitor per day, one per car + repair per visitor per 30 days, 500 a day site-wide. Not shown publicly: read with
+//      GET /prices_all (no origin check, like /ops_all; without ZIP digits or hashes; the ZIP digits are read in the D1 dashboard) and folded into the owner prices after a check.
 // Deploy: py make_worker.py, then `npx.cmd --yes wrangler deploy` from this folder (wrangler.toml).
 // Q is generated from data/survey.json + data/votes.json by worker/make_worker.py -> survey_worker.dist.js (the uploaded file).
 const Q = __Q__;
@@ -76,6 +81,8 @@ async function opReview(env, car, text) {
   } catch (e) { return { status: 'pending', reason: '' }; }
 }
 const OP_TABLE = "CREATE TABLE IF NOT EXISTS opinions (id INTEGER PRIMARY KEY AUTOINCREMENT, ts INTEGER, day TEXT, fid TEXT, car TEXT, year INTEGER, kind TEXT, name TEXT, text TEXT, buy TEXT, status TEXT, reason TEXT, ih TEXT, ch TEXT)";
+const PRICE_TABLE = "CREATE TABLE IF NOT EXISTS prices (id INTEGER PRIMARY KEY AUTOINCREMENT, ts INTEGER, day TEXT, fid TEXT, year INTEGER, repair TEXT, usd INTEGER, shop TEXT, zip3 TEXT, status TEXT, ih TEXT, ch TEXT)";
+const REPAIRS = new Set('abs-module ac-compressor ac-condenser ac-evaporator air-suspension airbag-module alternator backup-camera ball-joints battery bcm blend-door brake-booster brakes cam-phaser cam-sensor catalytic-converter clutch control-arms crank-sensor cv-axle differential door-lock-actuator dpf driveshaft ecm egr engine-mounts engine-replacement evap fuel-injectors fuel-pump head-gasket heater-core hybrid-battery ignition-coils infotainment intake-manifold lifters maf-sensor master-cylinder oil-cooler oil-pan oxygen-sensor power-steering-pump radiator rear-main-seal spark-plugs starter steering-column steering-rack struts tcm thermostat throttle-body tie-rods timing-belt timing-chain tipm torque-converter transfer-case transmission-replacement turbo valve-body valve-cover-gasket water-pump wheel-bearing window-regulator wiring-harness'.split(' '));   // the 69 repairs in data/repair_est.json (repair_est.py)
 const opPublic = r => ({ id: r.id, ts: r.ts, year: r.year || null, kind: r.kind, name: r.name || '', text: r.text, buy: r.buy || '' });
 
 export default {
@@ -87,6 +94,11 @@ export default {
       const { results } = await env.DB.prepare("SELECT * FROM opinions WHERE status = 'approved' ORDER BY ts DESC LIMIT 5000").all();
       const out = {}; for (const r of results) (out[r.fid] ||= []).push(opPublic(r));
       return new Response(JSON.stringify(out), { headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' } });
+    }
+    if (req.method === 'GET' && url.pathname === '/prices_all') {   // 11-23: reader repair prices for the build / review (no hashes, no ZIP, day only)
+      await env.DB.prepare(PRICE_TABLE).run();
+      const { results } = await env.DB.prepare('SELECT id, day, fid, year, repair, usd, shop, status FROM prices ORDER BY ts DESC LIMIT 20000').all();
+      return new Response(JSON.stringify(results), { headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' } });
     }
     if (!ORIGINS.includes(o)) return json(o, { error: 'origin' }, 403);
     const fidOk = s => typeof s === 'string' && /^[a-z0-9/-]{2,40}$/.test(s), yOk = y => Number.isInteger(y) && y >= 1990 && y <= 2030;
@@ -225,6 +237,38 @@ export default {
         .bind(Date.now(), day, fid, car, year, kind, name, text, buy, v.status, v.reason, ih, ch).run();
       const id = ins.meta?.last_row_id;
       return json(o, { ok: true, status: v.status, reason: v.reason, op: v.status === 'approved' ? { id, ts: Date.now(), year, kind, name, text, buy } : null });
+    }
+    if (req.method === 'POST' && url.pathname === '/price') {
+      let b; try { b = await req.json(); } catch { return json(o, { error: 'bad' }, 400); }
+      if (b.hp) return json(o, { ok: true });                                                     // honeypot: only bots fill it in
+      const fid = b.fid, repair = String(b.repair || ''), usd = Math.round(+b.usd), year = b.year == null || b.year === '' ? null : +b.year;
+      const shop = ['dealer', 'independent', 'chain', 'other'].includes(b.shop) ? b.shop : '', zip = String(b.zip || '').trim();
+      if (!fidOk(fid) || (year !== null && !yOk(year))) return json(o, { error: 'bad' }, 400);
+      if (!REPAIRS.has(repair)) return json(o, { error: 'repair' }, 400);
+      if (!(usd >= 20 && usd <= 30000)) return json(o, { error: 'usd' }, 400);
+      if (zip && !/^\d{5}$/.test(zip)) return json(o, { error: 'zip' }, 400);
+      const raw = req.headers.get('CF-Connecting-IP') || '', org = String(req.cf?.asOrganization || '');
+      if (HOSTING.test(org) || HOSTING_ASN.has(+req.cf?.asn)) return json(o, { error: 'vpn' }, 403);
+      if (env.FEEDBACK_RL && !(await env.FEEDBACK_RL.limit({ key: 'price:' + raw })).success) return json(o, { error: 'limit' }, 429);
+      if (env.TURNSTILE_SECRET) {
+        const fd = new FormData(); fd.append('secret', env.TURNSTILE_SECRET); fd.append('response', String(b.t || '')); fd.append('remoteip', raw);
+        const ok = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', { method: 'POST', body: fd }).then(r => r.json()).then(j => j.success).catch(() => false);
+        if (!ok) return json(o, { error: 'human' }, 403);
+      }
+      const ip = raw.includes(':') ? raw.split(':').slice(0, 4).join(':') + '::/64' : raw, salt = env.SALT || 'lemon-survey-v1', day = new Date().toISOString().slice(0, 10);
+      const hx = async t => [...new Uint8Array(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(t)))].slice(0, 12).map(x => x.toString(16).padStart(2, '0')).join('');
+      const ih = await hx(`${ip}|${day}|${salt}|price`), ch = await hx(`${ip}|${fid}|${repair}|${Math.floor(Date.now() / (30 * 864e5))}|${salt}|pricecar`);
+      await env.DB.prepare(PRICE_TABLE).run();
+      const [r1, r2, r3] = await env.DB.batch([
+        env.DB.prepare('SELECT COUNT(*) n FROM prices WHERE ih = ? AND day = ?').bind(ih, day),
+        env.DB.prepare('SELECT COUNT(*) n FROM prices WHERE ch = ?').bind(ch),
+        env.DB.prepare('SELECT COUNT(*) n FROM prices WHERE day = ?').bind(day)]);
+      if (r1.results[0].n >= 5) return json(o, { error: 'day' }, 429);
+      if (r2.results[0].n >= 1) return json(o, { error: 'car' }, 429);
+      if (r3.results[0].n >= 500) return json(o, { error: 'busy' }, 429);
+      await env.DB.prepare('INSERT INTO prices (ts, day, fid, year, repair, usd, shop, zip3, status, ih, ch) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)')
+        .bind(Date.now(), day, fid, year, repair, usd, shop, zip ? zip.slice(0, 3) : '', 'new', ih, ch).run();
+      return json(o, { ok: true });
     }
     if (req.method === 'POST' && url.pathname === '/a') {
       let b; try { b = await req.json(); } catch { return json(o, { error: 'bad' }, 400); }

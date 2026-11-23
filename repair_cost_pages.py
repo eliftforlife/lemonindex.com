@@ -194,7 +194,7 @@ if RCP == 'pages':
                     cpa, f'<p class="cpm rcp-ans">{ans}</p>',
                     '<h2>What owners paid</h2>' + _hist(pts),
                     '<h2>By model year</h2><ul class="rcp-yr">' + ''.join(yrows) + '</ul><p class="yc-cap">Reports per model year, with the middle bill where there are 3 or more. YouTube amounts count for the generation the video covers.</p>',
-                    tfh]
+                    tfh, REST.model_repair_block(s, fid, nm)]   # 11-23: the estimate (hours x your shop rate + parts) for each generation
             if eng:
                 body.append('<h2>Engines in these years</h2><p class="rcp-eng">' + ' · '.join(f'<a href="{E(u)}">{E(n_)}</a>' for u, n_ in sorted(eng, key=lambda t: t[1])[:8])
                             + '</p><p class="yc-cap">Engines with a page of their own that this model was sold with in the years above. Owners don&#39;t always say which engine they had.</p>')
@@ -242,6 +242,7 @@ if RCP == 'pages':
         if trs:
             body.append(f'<h2>Every model, what owners paid</h2><table class="rcp-t"><thead><tr><th>Model</th><th>Reports</th><th>Middle bill</th><th>Middle half</th></tr></thead><tbody>{trs}</tbody></table>'
                         f'<p class="yc-cap">Models with 3+ reports. A model gets its own page and a range at {RC_MIN}+ reports.' + (f' {few} more model{"s" * (few != 1)} with 1–2 reports count in the totals above.' if few else '') + '</p>')
+        body.append(REST.hub_block(s, {f: FY[f]['name'] for f in FY}, lambda f, y: f'/cars/{f}/{y}/' if _HAS(f'/cars/{f}/{y}/') else (f'/cars/{f}/' if f in FY else None)))   # 11-23: estimates on popular cars
         links = []
         if _SYM: links.append('<a href="/symptoms/">Car symptoms and what they can mean</a>')
         links.append('<a href="/repair-cost/">Every repair cost</a>'); links.append('<a href="/check-engine-light/">Look up an engine code</a>')

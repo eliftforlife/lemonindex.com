@@ -936,6 +936,7 @@ def extra(fid, y):
 YTV = _load('data/yt.json')
 BMW_PHASE = 'hooks'; exec(open('bmw_pages.py', encoding='utf-8').read())   # 11-10 BMW specs + engines: SPECS_HOOK / YEAR_SPECS_HOOK
 def _vw(n): return f'{n / 1e6:.1f}M' if n >= 1e6 else f'{round(n / 1e3):,}K' if n >= 1e3 else str(n)
+import repair_est as REST   # 11-23 repair estimates (labor hours x your shop rate + parts) on year + /repair-cost/ pages (repair_est.py)
 import repair_costs as RCQ   # 11-12 fix D: "What repairs cost" (owners' repair bills to NHTSA + what to ask the shop)
 _YRX = re.compile(r'(?<!\d)((?:19|20)\d\d)(?:\s*[-–]\s*((?:19|20)?\d\d))?(?!\d)')
 def _vid_gen_ok(title, ys):
@@ -951,6 +952,7 @@ def _vid_gen_ok(title, ys):
 def ytfix(key, y=None):
     d = next((e for e in YTV.get(key, []) if e['years'] is None or y in e['years']), None)
     rcq = RCQ.html_block(key, y, (d or {}).get('years'), (d or {}).get('gen') or '') if y and ':' not in key else ''
+    if y and ':' not in key and key in FY: rcq += REST.year_block(key, y, FY[key]['name'])
     if d and d.get('years'):   # 11-12: only this generation's videos
         gy = d['years']; d = dict(d, topics=[t for t in d['topics'] if _vid_gen_ok(t['best']['title'], gy)], guides=[v for v in d['guides'] if _vid_gen_ok(v['title'], gy)])
     if not d or not d['topics']: return rcq
