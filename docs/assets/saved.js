@@ -270,7 +270,7 @@
       if (first) { L.filter(x => cmpTok(x)).slice(0, CMP).forEach(x => sel.add(key(x))); first = false; }
       if (!L.length) {
         top.innerHTML = ''; rap.hidden = true;
-        list.innerHTML = `<div class="lsv-empty"><p><b>No saved cars yet.</b> Tap <span class="lsv-hint">${HEART} Save</span> on any car or model-year page, or on a VIN report, and it shows up here.</p><p class="lsv-go2"><a class="btn" href="/cars/">Find a car</a><a class="btn btn-ghost" href="/vin/">Check a VIN</a></p></div>`;
+        list.innerHTML = `<div class="lsv-empty"><p><b>No saved cars yet.</b> Tap <span class="lsv-hint">${HEART} Save</span> on any car or model-year page, or on a VIN report, and it shows up here.</p><p class="lsv-go2"><a class="btn" href="/">Find a car</a><a class="btn btn-ghost" href="/vin/">Check a VIN</a></p></div>`;
         return;
       }
       const picked = L.filter(x => sel.has(key(x)) && cmpTok(x));

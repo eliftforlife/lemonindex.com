@@ -37,4 +37,6 @@
     });
   });
   if (sel) sel.addEventListener('change', draw);
+  var fs = document.getElementById('ehub-f');   // 11-23: the pills became one select (build.py EHUB5)
+  if (fs) fs.addEventListener('change', function () { f = fs.value; draw(); });
 })();
