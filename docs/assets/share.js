@@ -2,7 +2,7 @@
 // Phones: the native share sheet (Messages, WhatsApp, IG DMs...). Elsewhere: a small panel with copy link, text, WhatsApp, Facebook, X, Reddit and email.
 // Links carry ?utm_source=share so shares show in analytics. Any other query string is dropped, so a share never carries what someone typed.
 (() => {
-  const btns = document.querySelectorAll('[data-share]'); if (!btns.length) return;
+  if (window.LSHARE) return; window.LSHARE = 1;   // 11-24: one delegated click handler, so buttons drawn later (saved.js's heart + share pair) work too
   // 11-12 round 2 (Devin): a page can name what to share (data-share-url): the compare tool shares its exact set of cars, or their ready-made page
   const url = b => { const own = b && b.dataset.shareUrl; const u = new URL(own || location.href, location.origin); if (!own) u.search = ''; u.hash = ''; u.searchParams.set('utm_source', 'share'); return u.toString(); };
   const enc = encodeURIComponent;
@@ -27,9 +27,10 @@
     };
     panel.hidden = false; cp.focus();
   };
-  btns.forEach(b => b.addEventListener('click', async () => {
+  document.addEventListener('click', async e => {
+    const b = e.target.closest && e.target.closest('[data-share]'); if (!b) return;
     const text = b.dataset.share;
     if (navigator.share && matchMedia('(pointer: coarse)').matches) { try { await navigator.share({ title: document.title, text, url: url(b) }); return; } catch (e) { if (e && e.name === 'AbortError') return; } }
     open(text, b);
-  }));
+  });
 })();

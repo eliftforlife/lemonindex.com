@@ -209,3 +209,10 @@ a.pf-c:hover { box-shadow: 0 10px 24px -16px rgba(0,0,0,.3); }
 .pfjs .pf-pic.on { display: block; }
 
 .pf-k.pf-uns { margin-left: 6px; background: #fff1b8; color: #5c4a00; }
+
+/* 11-24 (Elijah: no empty "Nothing stands out." column): only one side has topics -> it runs full width (.pf-pc1, vis_fixes.py) and the
+   empty side is one quiet line under it */
+.pf-pc.pf-pc1 { grid-template-columns: minmax(0, 1fr); }
+.pf-pc1 .pf-b { grid-template-columns: minmax(96px, 180px) minmax(0, 1fr) 44px; gap: 14px; }
+.pf-pc1 .pf-b i { height: 8px; }
+.pf-n1 { color: var(--mute); font-size: 14px; margin: 8px 0 0; }

@@ -6,7 +6,7 @@
 //            11-15: u: page address + k: kind + c: compare.json id for pages with no vr file (performance, JDM, supercar, complaints-only,
 //            EV-only and motorcycle pages; data in /assets/saved-x.json, saved_page.py), sg: the generation picked for a performance car}
 // What it does:
-//   1. a Save button next to Share on model pages, year pages and Advanced pages (found from the page's Car JSON-LD or the
+//   1. a heart (Save) button + a Share button right after the page's name (11-24) on model pages, year pages and Advanced pages (found from the page's Car JSON-LD or the
 //      /cars/<id>/<year>/advanced/ address), plus any [data-lsv-id] button another script draws (the /vin/ report card);
 //      11-15: on the pages above, found by address in /assets/saved-x.json (fetched only on those pages)
 //   2. once something is saved: a count bubble on the header's More / menu button, and "My cars" first in its sheet
@@ -67,29 +67,31 @@
     return { id: r.c || base, y: null, n: r.n, img: r.im || '', u: base, k: r.k, c: r.c || '' };
   }
 
-  function mkBtn(c, kind) {
+  // 11-24 (Elijah: "instead of Save with a heart, make it just a heart that clearly looks like you can press it, next to the name ...
+  // put the save and share buttons next to each other"): one round heart + one round share button right after the page's name, on every
+  // car, year, performance, JDM, supercar, EV, complaints-only and motorcycle page. The hero's old Share buttons are gone from the HTML
+  // (vis_fixes.py) and their share text rides on the <h1> as data-lsv-share; share.js handles the click (delegated, so a button drawn
+  // here works). Phones: the pair wraps under the name when it doesn't fit beside it.
+  const SHARE = '<svg aria-hidden="true" focusable="false" width="21" height="21"><use href="/assets/ic.svg?v=1#share"></use></svg>';
+  function mkBtn(c) {
     const b = document.createElement('button'); b.type = 'button';
     b.dataset.lsvId = c.id; if (c.y) b.dataset.lsvY = c.y; b.dataset.lsvN = c.n; if (c.img) b.dataset.lsvImg = c.img;
     if (c.u) { b.dataset.lsvU = c.u; b.dataset.lsvK = c.k || ''; b.dataset.lsvC = c.c || ''; }
-    if (kind === 'ic') { b.className = 'tb-ic lsv-b'; b.innerHTML = `<span class="tb-ic-i">${HEART}</span><span class="tb-ic-l">Save</span>`; }
-    else { b.className = 'btn btn-ghost lsv-b lsv-bt'; b.innerHTML = `${HEART}<span class="lsv-l">Save</span>`; }
+    b.className = 'lsv-ic lsv-b'; b.title = 'Save'; b.innerHTML = HEART.replace('width="18" height="18"', 'width="22" height="22"');
     return b;
   }
+  const heroH1 = () => { const h = document.querySelector('main .tb-hero, main .ph'); return (h && h.querySelector('h1')) || document.querySelector('main h1'); };
   function addButtons(c) {
-    if (!c) return;
-    let n = 0;
-    document.querySelectorAll('[data-share]').forEach(sh => {
-      if (sh.classList.contains('shl') || sh.nextElementSibling && sh.nextElementSibling.matches('[data-lsv-id]')) return;
-      if (sh.classList.contains('tb-ic')) { sh.after(mkBtn(c, 'ic')); n++; }
-      else if (sh.classList.contains('btn') && sh.closest('.ph, .tb-hero, .ycn-wide')) { sh.after(mkBtn(c, 'bt')); n++; }
-    });
-    if (n) return;
-    const hero = document.querySelector('.ph, .tb-hero'); if (!hero || hero.querySelector('[data-lsv-id]')) return;
-    const row = hero.querySelector('.n3-cmp');   // supercar pages: next to "Compare it with another car"
-    if (row) { row.appendChild(mkBtn(c, 'bt')); return; }
-    // Advanced, performance, EV, motorcycle and complaints-only pages: no Share button up top, so the Save button goes under the answer line
-    const at = hero.querySelector('.ans') || hero.querySelector('h1'); if (!at) return;
-    const p = document.createElement('p'); p.className = 'lsv-row'; p.appendChild(mkBtn(c, 'bt')); at.after(p);
+    const h1 = heroH1(); if (!h1 || h1.querySelector('.lsv-ta')) return;
+    if (!c && !h1.dataset.lsvShare) return;   // nothing to save and no Share was moved here: leave the page alone
+    const box = document.createElement('span'); box.className = 'lsv-ta';
+    if (c) box.appendChild(mkBtn(c));
+    const s = document.createElement('button'); s.type = 'button'; s.className = 'lsv-ic lsv-sh'; s.title = 'Share'; s.setAttribute('aria-label', 'Share this page');
+    const nm = c ? label(c.n, c.y) : h1.textContent.replace(/\s+/g, ' ').trim().replace(/[.:]$/, '');
+    s.dataset.share = h1.dataset.lsvShare || `${nm}: owner complaints, recalls and problems. Free report:`;
+    s.innerHTML = SHARE; box.appendChild(s);
+    if (!h1.hasAttribute('aria-label')) h1.setAttribute('aria-label', h1.textContent.replace(/\s+/g, ' ').trim());   // the heading's name stays the title, not the buttons
+    (h1.querySelector('.yct-big') || h1).appendChild(box);
   }
 
   // ---- state on every Save button + the header count
@@ -319,11 +321,14 @@
   }
 
   window.LSAVE = { sync, has, ok };
-  if (!document.querySelector('link[href^="/assets/saved.css"]')) { const l = document.createElement('link'); l.rel = 'stylesheet'; l.href = '/assets/saved.css?v=2'; document.head.appendChild(l); }
+  let css = document.querySelector('link[href^="/assets/saved.css"]');
+  if (!css) { css = document.createElement('link'); css.rel = 'stylesheet'; css.href = '/assets/saved.css?v=3'; document.head.appendChild(css); }
+  // the heart + share pair waits for its stylesheet (at most 1.5 s), so it never flashes in as two plain buttons
+  const cssReady = new Promise(res => { if (css.sheet) return res(); css.addEventListener('load', res); css.addEventListener('error', res); setTimeout(res, 1500); });
   const go = () => {
     const c = ok ? pageCar() : null;
-    if (c) addButtons(c);
-    else if (ok) pageX().then(x => { if (x) { addButtons(x); sync(); } }).catch(() => { });
+    if (c) cssReady.then(() => { addButtons(c); sync(); });
+    else (ok ? pageX() : Promise.resolve(null)).catch(() => null).then(x => cssReady.then(() => { addButtons(x); sync(); }));
     sync();
     const root = document.getElementById('lsvx'); if (root) savedPage(root);
   };

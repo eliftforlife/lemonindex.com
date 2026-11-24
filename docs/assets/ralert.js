@@ -121,7 +121,11 @@
     if (!el.closest('.rla-page')) {
       const hh = el.querySelector('.rla-h'), tg = document.createElement('button');
       tg.type = 'button'; tg.className = 'rla-tg'; tg.setAttribute('aria-expanded', 'false');
-      tg.innerHTML = `<svg class="cpl-i" width="24" height="24" aria-hidden="true" focusable="false"><use href="/assets/ic.svg?v=1#bell"></use></svg><span>${hh.innerHTML}</span><svg class="rla-ar" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>`;
+      // 11-24 (Elijah: "some of them don't even have an exit"): a model page names the row (data-rla-lab, model_hero.py); while open the
+      // chevron becomes a close x (assets/agrp.css), and the whole row stays the toggle
+      const lab = el.closest('[data-rla-lab]'), fid = id + 'f';
+      tg.innerHTML = `<svg class="cpl-i" width="24" height="24" aria-hidden="true" focusable="false"><use href="/assets/ic.svg?v=1#bell"></use></svg><span>${lab ? esc(lab.dataset.rlaLab) : hh.innerHTML}</span><svg class="rla-ar" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg><svg class="act-xi" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>`;
+      el.querySelector('form').id = fid; tg.setAttribute('aria-controls', fid);
       el.prepend(tg); el.classList.add('rla-col');
       tg.addEventListener('click', () => { const on = !el.classList.contains('rla-open'); el.classList.toggle('rla-open', on); tg.setAttribute('aria-expanded', String(on));
         if (on) { const e1 = el.querySelector('.rla-e'); if (e1) e1.focus({ preventScroll: true }); } });

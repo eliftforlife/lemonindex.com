@@ -1,4 +1,4 @@
-/* 11-14 growth plan 4d: saved cars (assets/saved.js). Prefix lsv- (".sv" is taken by tabs.css). Loaded by saved.js on every page (v=2 since 11-15). */
+/* 11-14 growth plan 4d: saved cars (assets/saved.js). Prefix lsv- (".sv" is taken by tabs.css). Loaded by saved.js on every page (v=3 since 11-24). */
 /* the Save button: same shape as the Share button beside it; the heart fills once saved */
 .lsv-b .lsv-h { flex: none; transition: transform .18s ease; }
 .lsv-b.on .lsv-h { fill: var(--red, #d1121a); stroke: var(--red, #d1121a); }
@@ -8,6 +8,17 @@
 .lsv-row .lsv-bt { margin-left: 0; }
 .ycn > .lsv-b { margin-left: 6px; width: 36px; padding: 0; justify-content: center; }
 .ycn > .lsv-b .tb-ic-l { position: absolute !important; width: 1px !important; height: 1px !important; overflow: hidden !important; clip: rect(0 0 0 0) !important; }
+/* 11-24: the heart + share pair right after the page's name (saved.js addButtons). Round, soft gray, clearly tappable; the heart fills red once saved */
+.lsv-ta { display: inline-flex; gap: 8px; margin-left: 16px; vertical-align: middle; position: relative; z-index: 3; top: -.1em; font-size: 16px; line-height: 1; letter-spacing: 0; font-weight: 400; white-space: nowrap; }
+.lsv-ic { appearance: none; display: inline-grid; place-items: center; flex: none; width: 46px; height: 46px; padding: 0; margin: 0; border: 0; border-radius: 50%;
+  background: #f2f2f5; color: #1d1d1f; cursor: pointer; transition: background-color .15s ease, transform .15s ease; -webkit-tap-highlight-color: transparent; }
+.lsv-ic:hover { background: #e8e8ed; }
+.lsv-ic:active { transform: scale(.92); }
+.lsv-ic:focus-visible { outline: 3px solid var(--lemon, #ffd400); outline-offset: 2px; }
+.lsv-ic svg { display: block; width: 22px; height: 22px; }
+.lsv-ic.on { background: #fdecee; }
+.lsv-sh svg { width: 21px; height: 21px; }
+@media (max-width: 700px) { .lsv-ta { gap: 10px; margin-left: 10px; } .lsv-ic { width: 44px; height: 44px; } }
 /* header: a count bubble on More (desktop) / the menu button (phones), and "My cars" first in the sheet */
 .gh-more.lsv-dot, .gh-menu.lsv-dot { position: relative; }
 .gh-more.lsv-dot::after, .gh-menu.lsv-dot::after { content: attr(data-lsv); position: absolute; top: -7px; right: -13px; min-width: 16px; height: 16px; padding: 0 4px; box-sizing: border-box;

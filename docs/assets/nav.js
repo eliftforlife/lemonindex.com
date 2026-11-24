@@ -19,7 +19,7 @@
 })();
 // 11-14 growth plan 4d: saved cars ("My cars", browser storage only): the Save buttons, the header count and the /saved/ page
 (() => { if (document.querySelector('script[src^="/assets/saved.js"]')) return;
-  const s = document.createElement('script'); s.src = '/assets/saved.js?v=2'; s.defer = true; document.head.appendChild(s); })();
+  const s = document.createElement('script'); s.src = '/assets/saved.js?v=4'; s.defer = true; document.head.appendChild(s); })();
 // 11-19 (Elijah: Electric goes under Cars): the desktop bar's Cars dropdown (build.py NAV_CARS). Click opens it; outside click, Esc,
 // the More button or a link close it. Hidden below 1024 px with the rest of the bar (the phone menu lists the same pages).
 (() => { const d = document.querySelector('.gh-dd'); if (!d) return; const b = d.querySelector('.gh-ddb');
