@@ -337,7 +337,7 @@ elif UXC == 'compare':
     for a, b in _first + [(d['slug'], PERF_ALIAS.get(c['slug'], c['slug'])) for d in _PD.values() for c in d.get('compare', [])]:
         if a in _PD and b in _PD and a != b and frozenset((a, b)) not in _seen: _seen.add(frozenset((a, b))); PERF_PAIRS.append((a, b))
     for a, b in PERF_PAIRS:
-        A, B = _PD[a], _PD[b]; (ga, GA), (gb, GB) = perf_focus(a), perf_focus(b)
+        A, B = _PD[a], _PD[b]; (ga, GNA), (gb, GNB) = perf_focus(a), perf_focus(b)
         na, nb = A['name'], B['name']; sa, sb = A.get('short') or na, B.get('short') or nb
         url = f'/compare/{a}-vs-{b}/'
         def row(lab, va, vb, cls=('', '')): return f'<div class="dl">{lab}</div><div class="dv {cls[0]}">{va}</div><div class="dv {cls[1]}">{vb}</div>'
@@ -399,7 +399,7 @@ elif UXC == 'compare':
                         pduo('recalls, these years', ga['rc'], gb['rc'], False) + pduo('owner complaints to NHTSA (raw count)', ga['nc'], gb['nc'], False)
                         + '<p class="cb-dx">Complaints are raw counts, not per car sold: performance cars sell too few for a fair per-car score, and the busier seller usually draws more.</p>', 'recalls')
                  + pbox('scale', 'Every spec side by side', 'The full table', duel + f'<p><a class="btn" href="{E(tool)}">Pick other generations or add a car</a></p>', 'specs')
-                 + pbox('history', 'Every generation', f'{E(sa)} and {E(sb)}, newest first', gtab(A, GA) + gtab(B, GB), 'gens')
+                 + pbox('history', 'Every generation', f'{E(sa)} and {E(sb)}, newest first', gtab(A, GNA) + gtab(B, GNB), 'gens')
                  + pbox('info', 'Where this data comes from', 'Sources and how to read it',
                         '<p class="cb-dx">Each car&#39;s headline trim of its newest generation. Specs and their sources are on each car&#39;s page. YouTube owner tone = how positively the most-watched videos about those model years talk about the car (100 = all praise). Recalls and complaints: NHTSA.</p>'
                         + (f'<p class="cb-dx">{pcredit(who(ia, ib))}</p>' if ia and ib else ''))

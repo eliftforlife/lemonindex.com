@@ -2,7 +2,9 @@
 // 11-09 phone speed: gtag.js is ~180 KB, so it now loads once the page has finished loading instead of competing with the car photos.
 // Page views are still sent (gtag replays the queued commands); only a visit that closes the tab before the page loads goes uncounted.
 (function () {
-  var id = (document.currentScript && document.currentScript.dataset.ga) || 'G-3352CDDC5E';
+  // 11-24: only trust data-ga if it looks like a GA4 ID (a build bug once put car data there on 7.4K pages).
+  var id = (document.currentScript && document.currentScript.dataset.ga) || '';
+  if (!/^G-[A-Z0-9]{6,12}$/.test(id)) id = 'G-3352CDDC5E';
   window.dataLayer = window.dataLayer || [];
   window.gtag = function () { dataLayer.push(arguments); };
   gtag('js', new Date());
