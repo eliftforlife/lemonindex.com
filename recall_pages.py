@@ -97,7 +97,7 @@ if RCLP == 'hooks':
 
 if RCLP == 'pages':
     RCL = _rcl_data(); RCL_URLS = []; _rcl_noix = []
-    _RCLCSS = '<link rel="stylesheet" href="/assets/rcx.css?v=4"><script src="/assets/rc.js?v=3" defer></script>'
+    _RCLCSS = '<link rel="stylesheet" href="/assets/rcx.css?v=5"><script src="/assets/rc.js?v=3" defer></script>'
     def _rcl_noindex(path):
         _f = _rclos.path.join(OUT, path.strip('/'), 'index.html'); _s = open(_f, encoding='utf-8').read()
         if 'name="robots"' not in _s: open(_f, 'w', encoding='utf-8').write(_s.replace('<link rel="canonical"', '<meta name="robots" content="noindex,follow"><link rel="canonical"', 1))
@@ -148,14 +148,35 @@ if RCLP == 'pages':
         tag = 'a' if href else 'div'
         return (f'<{tag} class="rx5-c"' + (f' href="{href}"' if href else '') + f'><span class="rx5-cn">{n:,}</span>{pimg(ph, name)}<b>{E(name)}</b>'
                 + (f'<small>{sub}</small>' if sub else '') + f'</{tag}>')
-    def _rx_bars(rows, keep=14):
-        """rows: (label html, number): the model page's year chart look; the busiest row(s) red"""
+    def _rx_bars(rows, keep=14, cls=''):
+        """rows: (label html, number). 11-24 (Elijah: "the bars could just be overall better"): gray bars with the number at the bar's end,
+        the busiest row(s) red = the one focal point. cls 'rx5-yr' = narrow year labels (the phone version of the year chart)."""
         mx = max((k for _, k in rows), default=1) or 1
-        li = lambda lab, k: (f'<li{" class=hi" if k == mx else ""}><span class="rx5-bl">{lab}</span><span class="rx5-bb"><i style="width:{max(3, round(k / mx * 100))}%"></i></span><b>{k:,}</b></li>')
-        out = '<ul class="rx5-bars">' + ''.join(li(*r) for r in rows[:keep]) + '</ul>'
+        li = lambda lab, k: (f'<li{" class=hi" if k == mx else ""}><span class="rx5-bl">{lab}</span><span class="rx5-bb">'
+                             + (f'<i style="width:calc((100% - 2.6em) * {k / mx:.3f})"></i>' if k else '') + f'<b>{k:,}</b></span></li>')
+        keep = max(keep, max((i + 1 for i, (_, k) in enumerate(rows) if k == mx), default=0))   # never fold the red (most-recalled) row away
+        ul = f'<ul class="rx5-bars{" " + cls if cls else ""}">'
+        out = ul + ''.join(li(*r) for r in rows[:keep]) + '</ul>'
         if len(rows) > keep:
-            out += (f'<details class="rx5-more"><summary>Show {len(rows) - keep} more</summary><ul class="rx5-bars">' + ''.join(li(*r) for r in rows[keep:]) + '</ul></details>')
+            out += (f'<details class="rx5-more"><summary>Show {len(rows) - keep} more</summary>{ul}' + ''.join(li(*r) for r in rows[keep:]) + '</ul></details>')
         return out
+    def _rx_ychart(rows):
+        """rows: (year, count, href or ''). 11-24 (Elijah: "the bars don't take up the space properly on desktop"): on desktop a column chart
+        across the page, oldest year left, the most-recalled year red (the engine pages' year-chart look he liked, cpl.css .eg5); a thin gap
+        where the model skipped years. Phones get the list (_rx_bars 'rx5-yr'); rcx.css swaps them at 700 px."""
+        rows = sorted(rows); mx = max((k for _, k, _ in rows), default=1) or 1; short = len(rows) > 16
+        cols, prev = [], None
+        for y, k, h in rows:
+            if prev is not None and y - prev > 1: cols.append('<span class="rx6-gap" aria-hidden="true"></span>')
+            prev = y; tag = 'a' if h else 'div'; t = f'{y}: {k} recall campaign{"s" * (k != 1)}'
+            cols.append(f'<{tag} class="rx6-c{" hi" if k == mx else ""}"' + (f' href="{h}" aria-label="{t}"' if h else '') + f' title="{t}"><span class="rx6-b">'
+                        + (f'<i style="height:{k / mx * 100:.1f}%"><em>{k:,}</em></i>' if k else '<i class="z"><em>0</em></i>')
+                        + f'</span><span class="rx6-y">{"&#8217;" + str(y)[2:] if short else y}</span></{tag}>')
+        top = [str(y) for y, k, _ in rows if k == mx]
+        tl = top[0] if len(top) == 1 else ', '.join(top[:-1]) + ' and ' + top[-1] if len(top) <= 3 else f'{len(top)} years'
+        return (f'<figure class="rx6" style="--n:{len(rows)}"><div class="rx6-p">{"".join(cols)}</div>'
+                f'<figcaption class="rx6-lg"><i></i><span>Most recalls: <b>{tl}</b>, {mx:,} campaign{"s" * (mx != 1)}' + (' each' if len(top) > 1 else '')
+                + '</span></figcaption></figure>')
     _rx_ph = lambda ms: next((aph(m['id']) for m in sorted(ms, key=lambda m: -(BYNAME.get(m['name'], {}).get('sold') or 0)) if m['kind'] == 'y' and aph(m['id'])), None)
     M, B = RCL['M'], RCL['B']
 
@@ -187,13 +208,14 @@ if RCLP == 'pages':
         if big: qa.append((f'What is the biggest {nm} recall?', f'NHTSA {E(big[0]["id"])} ({E(RPART(big[0].get("part")))}, {_rcldate(big[0])}) covers {_rcl_u(big[0]["id"])[0]:,} vehicles in all, every model in that campaign. {E(rsum(big[0]))}'))
         qa.append((f'How do I check if my {nm} has an open recall?', f'Use its VIN: type it at nhtsa.gov/recalls or ask any {E(m["brand"])} dealer. Our <a href="/vin/">VIN check</a> decodes it and lists every recall for that model year. Recall repairs are free.'))
         _yr = [(lab, k) for lab, k, _ in yrow]
+        _ych = [(y, m['yc'][y], f'{m["car"]}{y}/' if m['kind'] == 'y' and m['car'].startswith('/cars/') else '') for y in m['yc']]
         _open = f'{_RCL_OPEN}{_rcl_vin()}{CA_RECALL}'
         body = (f'<div class="pg rcx rx5">{_RCLCSS}<section class="rx5-h"><p class="rx5-e"><a href="/recalls/">Recall check</a> › <a href="/recalls/{m["mk"]}/">{E(m["brand"])}</a></p>'
                 f'<h1>{nm}</h1><p class="rx5-s">recalls.</p>' + (f'<div class="rx5-im">{pimg(ph, m["name"]).replace(" loading=" + chr(34) + "lazy" + chr(34), "")}</div>' if ph else '')
                 + _rx_big(n, f'recall campaigns, {y0}–{y1}')
                 + f'<p class="rx5-line">Newest: <b>{_rcldate(rs[0])}</b> ({E(RPART(rs[0].get("part")))})' + (f' · Most-recalled year: <b>{topy}</b>' if topy else '') + '</p>'
                 + _rx_vin('Check a VIN to see that exact car&#39;s recalls. We don&#39;t store it.') + '</section>'
-                + f'<section class="rx5-sec"><h2>Every year.</h2><p class="rx5-sub">Recall campaigns that cover each model year.' + (' Tap a year for its full report.' if m['kind'] == 'y' and m['car'].startswith('/cars/') else '') + f'</p>{_rx_bars(_yr)}</section>'
+                + f'<section class="rx5-sec"><h2>Every year.</h2><p class="rx5-sub">Recall campaigns that cover each model year.' + (' Tap a year for its full report.' if m['kind'] == 'y' and m['car'].startswith('/cars/') else '') + f'</p>{_rx_ychart(_ych)}<div class="rx6-ph">{_rx_bars(_yr, cls="rx5-yr")}</div></section>'
                 + '<div class="cpl rx5-pl">'
                 + (_rx_box('warning', 'Park-it warnings', f'{len(park)} where NHTSA says don&#39;t drive it or park outside', f'<ul class="rc rcx-warn">{"".join(_rcl_card(r, years=m["ry"].get(r["id"])) for r in park)}</ul>', 'park') if park else '')
                 + _rx_box('bell', 'Every recall', f'All {n}, newest first' + (f' · {newn} in the last 12 months' if newn else ''),

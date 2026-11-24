@@ -1,4 +1,6 @@
 # Advanced mode (11-06, Elijah: normal for regular people, advanced for car people, on every car, plane and motorcycle). Run by build.py with exec() after the year pages.
+# 11-24 (Elijah: "remove the normal versus advanced mode on all the pages"): the switch is gone (vis_fixes.py strips mode_toggle and the other
+# copies after the date hash) and nothing links here. The pages still build so old links work, but all are noindex and ADV_URLS stays empty.
 # Normal page = /cars/<id>/<year>/ (unchanged). Advanced = /cars/<id>/<year>/advanced/, its own URL, title and data, so it answers different searches:
 # engine and transmission options (EPA), recall campaign numbers with the full defect, risk and remedy text, failure mileage by system, NHTSA investigations, dealer repair notes,
 # complaint math. Thin pages (too little that the normal page lacks) are noindex and stay out of the sitemap.
@@ -87,16 +89,15 @@ def _build_adv():
             nrec = len(x.get('recalls') or [])
             page(path, f'{y} {snm} Specs, Recalls and Failure Mileage',
                  f'{y} {snm} technical data: every EPA engine and transmission, {nrec} recall campaign{"s" if nrec != 1 else ""} with defect and remedy, failure mileage by system and manufacturer communications.', body)
-            if u >= 3: ADV_URLS.append(path); _adv_idx += 1
-            else:
-                p = os.path.join(OUT, path.strip('/'), 'index.html'); s = open(p, encoding='utf-8').read().replace('<link rel="canonical"', '<meta name="robots" content="noindex,follow"><link rel="canonical"', 1); open(p, 'w', encoding='utf-8').write(s); _adv_no += 1
-    print('advanced year pages', _adv_idx, 'indexed', _adv_no, 'noindex')
+            if u >= 3: _adv_idx += 1   # 11-24: no Advanced page goes in the sitemap any more; vis_fixes.py VF_HOOK writes noindex on every one
+            else: _adv_no += 1
+    print('advanced year pages', _adv_idx, 'with 3+ sections of their own,', _adv_no, 'thin (all noindex since 11-24)')
 _build_adv()
 
 # ---- planes and motorcycles: a raw-numbers page for each, same toggle
 def adv_table_page(path, normal, title, desc, h1, crumbs_html, tiles, secs):
     t = '<div class="yts">' + ''.join(f'<div class="yt"><span class="yt-l">{l}</span><b class="yt-v">{a}</b><small>{b}</small></div>' for l, a, b in tiles) + '</div>'
-    page(path, title, desc, f'<div class="advp"><header class="advh1"><p class="ph-e">{crumbs_html}</p><h1>{h1}</h1><p>The raw numbers behind the page, in one place.</p>{mode_toggle(normal, path, "a")}</header>{t}<div class="ygrid">{"".join(secs)}</div></div>'); ADV_URLS.append(path)
+    page(path, title, desc, f'<div class="advp"><header class="advh1"><p class="ph-e">{crumbs_html}</p><h1>{h1}</h1><p>The raw numbers behind the page, in one place.</p>{mode_toggle(normal, path, "a")}</header>{t}<div class="ygrid">{"".join(secs)}</div></div>')
 def _sec(i, h, head, rows, cap=''): return f'<section class="yc" id="{i}"><h2>{h}</h2>' + TABLE(head, rows) + (f'<p class="yc-cap">{cap}</p>' if cap else '') + '</section>'
 def _build_v():
     for m in _load('data/moto.json'):

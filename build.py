@@ -234,6 +234,11 @@ PILL_AR = ('<svg class="cpl-ar" width="18" height="18" viewBox="0 0 24 24" fill=
            'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>')
 PILL_GO = ('<svg class="cpl-ar" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" '
            'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>')
+# 11-24 (Elijah: "some of them don't even have an exit"): a row whose content is a form shows this close x instead of its chevron while open
+# (assets/agrp.css). The whole row is the toggle, so tapping it closes the box.
+PILL_X = ('<svg class="act-xi" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" '
+          'stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>')
+AGRP_CSS = '<link rel="stylesheet" href="/assets/agrp.css?v=1">'   # 11-24 one stacked list for every action / end-of-page box
 # 11-19 v5 page look (Elijah: "make these pages like the home page / the new model page"): centered hero, one big number, car cards,
 # every list a title-only tap-to-open box. Styles: assets/cpl.css (.v5-*).
 V5_IC = lambda i: f'<svg class="cpl-i" width="24" height="24" aria-hidden="true" focusable="false"><use href="/assets/ic.svg?v=1#{i}"></use></svg>'
@@ -277,16 +282,20 @@ def end_block(path, upd, shl, fb='', info=None):
     elif upd: items.append(f'<p class="pend-m">{upd}</p>')
     if fb: (items if info is None else info).append(fb)   # 11-19: car pages put these two inside their "Info" box (info = a list)
     if not items: return ''
-    return f'<div class="pend"><div class="cpl">{"".join(items)}</div></div>'
+    out = f'<div class="pend"><div class="cpl">{"".join(items)}</div></div>'
+    # 11-24: pages built before car_pills.py's CPL_POLISH exists (e.g. /studies/) kept the old big .webp icons + a gray second line here;
+    # every end box gets the same flat line icon, title-only row as the rows above it
+    out = re.sub(r'<small>.*?</small>', '', re.sub(r'<img src="/assets/icons/(share|talk|data)\.webp"[^>]*>', lambda m: V5_IC(m.group(1)), out))
+    return AGRP_CSS + out
 def ask_fb(path):
     """11-09 feedback box, folded (11-10) into a box at the end of the page (11-18)."""
     if path in NOFB: return ''
     return PILL('/assets/icons/talk.webp', 'Spot a mistake or have an idea?', 'Tell us. We read every message.',
-                feedback_html('How can we make Lemon Index better?', 'A car we should add, something confusing, a mistake you spotted…'), 'cpl-fb')
+                feedback_html('How can we make Lemon Index better?', 'A car we should add, something confusing, a mistake you spotted…'), 'cpl-fb').replace('</summary>', PILL_X + '</summary>', 1)
 def ask_html(path):
     """Bottom of every page: the scripts for the feedback box (in end_block since 11-18) and the share / 3D bars / loan widgets."""
     return (('' if path in NOFB else '<script src="/assets/feedback.js?v=1109" defer></script>')
-            + '<script src="/assets/share.js?v=1112d" defer></script><script src="/assets/bars3d.js?v=1103" defer></script><script src="/assets/loan.js?v=1103" defer></script>')
+            + '<script src="/assets/share.js?v=1124" defer></script><script src="/assets/bars3d.js?v=1103" defer></script><script src="/assets/loan.js?v=1103" defer></script>')
 def fit_title(t):
     if len(t) > 65 and t.endswith(' | The Lemon Index'): t = t[:-len(' | The Lemon Index')] + ' | Lemon Index'
     if len(t) > 65 and t.endswith(' | Lemon Index'): t = t[:-len(' | Lemon Index')]
@@ -585,6 +594,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
     if _lxm and 'LX_HTML' in globals(): body += LX_HTML(_lxm.group(1), int(_lxm.group(2)))   # 11-12 related links (after the date hash too)
     if 'RA_HOOK' in globals(): body = RA_HOOK(path, body)
     if 'ENG_HOOK' in globals(): body = ENG_HOOK(path, body)   # 11-18 engine pages: compact boxes (engine_pills.py), after the date hash
+    if 'ENG6_HOOK' in globals(): body = ENG6_HOOK(path, body)   # 11-24 engine pages: stat column, verdict card, merged + ordered boxes (eng6.py)
     if 'OP_HOOK' in globals(): body = OP_HOOK(path, body)   # 11-18 owner opinions box (opinions.py)   # 11-14 growth 4a: recall alert signup (after the date hash, so page dates don't move)
     if 'CAT_HOOK' in globals(): body = CAT_HOOK(path, body)   # 11-19 /jdm/, /supercars/, /electric/, /motorcycles/: the category page top (cat_pages.py), after the date hash
     if 'CAR_HOOK' in globals(): body = CAR_HOOK(path, body)
@@ -613,7 +623,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' '{DB_HASH}' https://static.cloudflareinsights.com https://challenges.cloudflare.com https://www.googletagmanager.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; frame-src https://challenges.cloudflare.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cloudflareinsights.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://vpic.nhtsa.dot.gov https://api.nhtsa.gov https://lemon-survey.elift08.workers.dev https://lemon-alerts.elift08.workers.dev https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="google-adsense-account" content="{ADS}"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/lxs.css?v={LXS_V}">
-<link rel="stylesheet" href="/assets/site.css?v=1119-mu"><link rel="stylesheet" href="/assets/cpl.css?v=22"><script src="/assets/cpl.js?v=1" defer></script><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1119" defer></script>{lds}</head>
+<link rel="stylesheet" href="/assets/site.css?v=1119-mu"><link rel="stylesheet" href="/assets/cpl.css?v=22"><script src="/assets/cpl.js?v=1" defer></script><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1124" defer></script>{lds}</head>
 <body>{'' if path.startswith('/thanks/') else DONBAR}{gh_header(path)}
 <main>{body}{_eb}{_rel}{'' if path == '/vote/' else ask_html(path)}</main>
 <footer class="foot f2 f3"><div class="f3-top"><a class="f3-name" href="/"><img src="/assets/icon-64.png" alt="" width="64" height="64"><span>Lemon Index</span></a><p class="f3-tag">Check here before you buy.</p><div class="f3-soc">{F3_SOC}</div></div><div class="f2-in">
@@ -626,6 +636,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
     doc = _CAT_RW.sub(lambda m: f'href="{CAT_PATH[m.group(1)]}"', doc)   # 11-19: /?type=<tab> -> the category page
     if 'CPL_POLISH' in globals(): doc = CPL_POLISH(doc)   # 11-19 (Elijah): title-only cards + flat black line icons (car_pills.py), after the date hash
     doc = PRICEBOX.budget_hook(path, doc)   # 11-24 (Elijah): 'Find a car for your budget' first in every car page's Overview list (budget_pages.py), after the date hash
+    if 'VF_HOOK' in globals(): doc = VF_HOOK(path, doc)   # 11-24 (Elijah): no Normal/Advanced switch, one-sided praise/complaints full width, engine pictures on the engine chips, heart + share by the name (vis_fixes.py), after the date hash
     LG[path] = (set(_LGHREF.findall(doc)), bool(_LGNOIX.search(doc)), url)   # 11-12 link graph (linkgraph.py, end of build)
     f = os.path.join(OUT, path.strip('/'), 'index.html') if path.endswith('/') else os.path.join(OUT, path.strip('/'))
     os.makedirs(os.path.dirname(f), exist_ok=True)
@@ -1351,6 +1362,7 @@ def _ybars(f, cur=None):
 FY = {f['id']: f for f in YEARS}
 exec(open('opinions.py', encoding='utf-8').read())   # 11-18 owner opinions box (OP_HOOK in page())
 exec(open('engine_pills.py', encoding='utf-8').read())   # 11-18 engine pages: long sections fold into boxes (ENG_HOOK in page())
+exec(open('eng6.py', encoding='utf-8').read())   # 11-24 (Elijah): engine pages v6 (ENG6_HOOK in page())
 exec(open('car_pills.py', encoding='utf-8').read())   # 11-18 car pages: tabs and long sections fold into boxes (CAR_HOOK in page())
 exec(open('ans_box.py', encoding='utf-8').read())   # 11-23 Job C: ANS_HOOK, the short answer box on the most-searched pages
 exec(open('model_hero.py', encoding='utf-8').read())   # 11-19 model page top v2 (MH_HOOK in page())
@@ -1900,6 +1912,7 @@ ENGU = 'hooks'; exec(open('engine_uses.py', encoding='utf-8').read())   # 11-13 
 RCLP = 'hooks'; exec(open('recall_pages.py', encoding='utf-8').read())   # 11-14 growth plan 2B-1: recall check pages; RCL_LINK adds their links to car pages (after the date hash)
 RCP = 'hooks'; exec(open('repair_cost_pages.py', encoding='utf-8').read())   # 11-14 growth 2D-1: repair cost data + the links car pages show (RC_ROW, RC_LINKS)
 CMP = 'hooks'; exec(open('code_model_pages.py', encoding='utf-8').read())   # 11-14 growth 2A-x: which model x engine code pages exist (CM_OK) + the model page chips (CM_ROW)
+exec(open('vis_fixes.py', encoding='utf-8').read())   # 11-24 visual fixes on car and bike pages: VF_HOOK in page()
 def yearx(fid, y): return extra(fid, y)
 # ---- 11-12 round 2 (Carlos: "rav4 hybrid" opened a RAV4 page that never said what the hybrid saves): a Gas or hybrid card on the model page
 # of every model sold both ways (data_hybrid_split.py: EPA mpg and yearly fuel cost per version), with a commute line (assets/commute.js)

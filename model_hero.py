@@ -103,6 +103,7 @@ def MH_HOOK(path, body):
 
 # 11-19 r4 (Elijah, MDX phone screenshots): the recall-email, "Share your take" and Compare boxes become three small tiles side by side
 # (a tap opens that one full width under the row), and the "Know someone shopping for a used car?" row becomes a share icon in the hero.
+# 11-24 (Elijah: tiles re-flowed and left big empty cards when one opened): back to full-width rows stacked in one list, each opening in place.
 MH_ACTS_CSS = '''<style id="mh-acts-css">
 .tbl .tb-hero.mh { position: relative; }
 .tbl .tb-hero.mh .yct-h1 { padding-left: 46px; padding-right: 46px; }   /* 11-20: both sides, so the title stays optically centred */
@@ -110,32 +111,9 @@ MH_ACTS_CSS = '''<style id="mh-acts-css">
   border-radius: 50%; background: #f5f5f7; color: #1d1d1f; cursor: pointer; }
 .mh-share:hover { background: #ececf0; } .mh-share:focus-visible { outline: 3px solid var(--lemon, #ffd400); outline-offset: 2px; }
 .mh-share svg { width: 21px; height: 21px; }
-.mh-acts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-auto-flow: row dense; gap: 8px; max-width: 760px; margin: 24px auto 0; }
-.mh-acts > section { margin: 0 !important; padding: 0 !important; min-width: 0; max-width: none; }
-.mh-acts .rla, .mh-acts .cpl { margin: 0 !important; }
-.mh-acts .opn-share { margin: 0; display: block; }
-.mh-acts .rla-tg, .mh-acts .opn-open, .mh-acts #p-compare details > summary {
-  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; width: 100%; max-width: none; height: 100%;
-  min-height: 82px; padding: 12px 6px !important; box-sizing: border-box; border-radius: 16px; text-align: center; }
-.mh-acts #p-compare, .mh-acts #p-compare .cpl, .mh-acts #p-compare details, .mh-acts .rla-sec, .mh-acts .rla, .mh-acts .opn-share { height: 100%; }
-.mh-acts .rla-tg .rla-ar, .mh-acts .opn-open .cpl-ar, .mh-acts #p-compare summary .cpl-ar { display: none; }
-.mh-acts .rla-tg .cpl-i, .mh-acts .opn-open .cpl-i, .mh-acts #p-compare summary .cpl-i { width: 26px; height: 26px; margin: 0; }
-.mh-acts .rla-tg span, .mh-acts .opn-open span, .mh-acts #p-compare summary span { flex: none; display: block; text-align: center; }
-.mh-acts .opn-open span, .mh-acts #p-compare summary span, .mh-acts .rla-tg span { line-height: 1.2; }
-.mh-acts .opn-open b, .mh-acts #p-compare summary b { display: block; font-size: 14px; line-height: 1.2; }
-.mh-acts > #p-compare details[open] > summary b, .mh-acts > .rla-sec:has(.rla-open) .rla-tg span::after { font-size: 16px; }
-.mh-acts .rla-tg span { font-size: 0; }
-.mh-acts .rla-tg span::after { content: "Recall alerts"; font-size: 14px; font-weight: 700; line-height: 1.2; letter-spacing: -.01em; }
-/* an open tile takes the whole row (the other two stay tiles) */
-.mh-acts > .rla-sec:has(.rla-open), .mh-acts > .opn:has(.opn-f:not([hidden])), .mh-acts > .opn:has(.opn-h:not([hidden])),
-.mh-acts > #p-compare:has(details[open]) { grid-column: 1 / -1; }
-.mh-acts > .rla-sec:has(.rla-open) .rla-tg, .mh-acts > #p-compare details[open] > summary {
-  flex-direction: row; justify-content: flex-start; gap: 12px; min-height: 0; height: auto; padding: 10px 16px !important; text-align: left; }
-.mh-acts > .rla-sec:has(.rla-open) .rla-tg .rla-ar, .mh-acts > #p-compare details[open] .cpl-ar { display: block; margin-left: auto; }
-.mh-acts > .rla-sec:has(.rla-open), .mh-acts > .rla-sec:has(.rla-open) .rla, .mh-acts > #p-compare:has(details[open]),
-.mh-acts > #p-compare:has(details[open]) .cpl, .mh-acts > #p-compare details[open] { height: auto; }
-.mh-acts > .opn:has(.opn-h:not([hidden])) .opn-open { flex-direction: row; min-height: 0; height: auto; padding: 10px 16px !important; }
-.mh-acts > .opn:has(.opn-h:not([hidden])) .opn-share { height: auto; margin-top: 8px; }
+/* 11-24 (Elijah: "when I open something it moves all the other buttons"): the action boxes are one stacked list of full-width rows
+   (.cpl-grp.mh-list, styles in cpl.css + assets/agrp.css), no tiles */
+.mh-list { margin-top: 24px; }
 </style>'''
 
 def _mh_block(body, k, tag='div'):
@@ -172,8 +150,8 @@ def _mh_acts(rest):
     cl = cmp_.select_one('details > summary b')
     if cl is not None and car: cl.string = f'Compare the {car} to another car'
     g3 = s.select_one('div.cpl-g3')
-    acts = s.new_tag('div', attrs={'class': 'mh-acts mh-a4'})
-    if car: acts['style'] = '--rla-lab:"Get ' + car.replace('"', '') + ' recall alerts"'
+    acts = s.new_tag('div', attrs={'class': 'cpl-grp mh-acts mh-list'})
+    if car: acts['data-rla-lab'] = f'Get {car} recall alerts'   # assets/ralert.js names its row with this
     g3.insert_before(acts)
     for x in (rla, opn, cmp_): acts.append(x.extract())
     for grp in s.select('div.cpl-g3, div.cpl-rel'):
@@ -183,7 +161,7 @@ def _mh_acts(rest):
     if ii >= 0:
         k0 = ii + len('<div class="cpl-grp cpl-g4">'); k1 = _mh_block(rest, k0, 'section')
         ie = k1 + len('</div>') if k1 > 0 and rest.startswith('</div>', k1) else -1   # only when Info is the whole group
-        a0 = rest.find('<div class="mh-acts mh-a4"')
+        a0 = rest.find('<div class="cpl-grp mh-acts mh-list"')
         a1 = _mh_block(rest, a0) if a0 >= 0 else -1
         if ie > 0 and a0 > ie:
             info = rest[k0:k1]
@@ -213,14 +191,29 @@ def _mh_bw3(body):
 
 # 11-19 (Elijah, Acura NSX: "the header that says Acura NSX isn't at the top, the car image isn't the same size"): supercar model pages
 # get the model pages' top order: breadcrumb, big centered name, the photo at the /cars/ size, then the tiles (CSS: cpl.css "sch").
-_SC_PATH = _mh_re.compile(r'/supercars/[a-z0-9-]+/')
+# 11-24 (Elijah, BMW S1000RR: "tidy up the spacing on the motorcycle page"): motorcycle model pages get the same top order, plus "mch"
+# (cpl.css) for their own even rhythm: name, photo, credit, answer line, Save, tiles (2 x 2 on a phone), then the rows.
+_SC_PATH = _mh_re.compile(r'/(supercars|motorcycles)/[a-z0-9-]+/')
 def _sc_hero(path, body):
-    if not _SC_PATH.fullmatch(path): return body
+    m = _SC_PATH.fullmatch(path)
+    if not m: return body
     i = body.find('<section class="ph tb-hero">')
     if i < 0: return body
     j = body.find('<div class="tb-img">', i); h = _mh_re.compile(r'<h1>.*?</h1>', _mh_re.S).search(body, i)
     if j < 0 or not h or h.start() < j: return body
-    return body[:i] + '<section class="ph tb-hero sch">' + body[i + len('<section class="ph tb-hero">'):j] + h.group(0) + body[j:h.start()] + body[h.end():]
+    moto = m.group(1) == 'motorcycles'
+    return (body[:i] + f'<section class="ph tb-hero {"sch mch" if moto else "sch"}">' + body[i + len('<section class="ph tb-hero">'):j]
+            + h.group(0) + (_MCH_CSS if moto else '') + body[j:h.start()] + body[h.end():])
+_MCH_CSS = ('<style>.tbl .tb-hero.mch{padding-bottom:30px}'
+            '.tbl .tb-hero.mch>h1{font-size:clamp(40px,11vw,72px)!important;overflow-wrap:normal;text-wrap:balance;max-width:860px}'
+            '.tbl .tb-hero.mch>.tb-img>.ph-cr{margin:2px auto 0}.tbl .tb-hero.mch>.tb-img>p:empty{display:none}'   # the parser's empty <p> after the credit
+            '.tbl .tb-hero.mch>.tb-ans{margin:14px auto 0;max-width:680px}'
+            '.tbl .tb-hero.mch>.yts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;max-width:760px;margin:20px auto 0}'
+            '.tbl .tb-hero.mch>.yts .yt{max-width:none;padding:12px 10px}'
+            '@media (max-width:699px){.tbl .tb-hero.mch>.yts{grid-template-columns:repeat(2,minmax(0,1fr))}}'
+            '.pg:has(>.tb-hero.mch) .tb-p.cpl-main{gap:48px}'
+            # the Problems dropdown (sub_pages.py keeps it on the page when it's only the bars): just the bars, its row already says Problems
+            '.pg:has(>.tb-hero.mch) #p-problems details>.cpl-b>.yc:only-child>h2{display:none}</style>')
 
 _MH_HOOK1 = MH_HOOK
 def MH_HOOK(path, body):

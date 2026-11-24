@@ -24,7 +24,15 @@
   fetch(`${W}/ops?fid=${encodeURIComponent(fid)}`).then(r => r.json()).then(j => j.ops && render(j.ops)).catch(() => {});
 
   // ---- form
-  open.addEventListener('click', () => { form.hidden = false; open.hidden = true; form.querySelector('textarea').focus(); loadTs(); });
+  // 11-24 (Elijah: "some of them don't even have an exit"): the row stays and is a toggle; the form opens in the row's card under it
+  // (opinions.py puts it there; older pages get it moved here), and a second tap (or the close x it shows while open) closes it
+  const share = open.closest('.opn-share');
+  if (share && form.parentElement !== share) share.insertBefore(form, msg && msg.parentElement === share ? msg : null);
+  const setOpen = on => { form.hidden = !on; open.hidden = false; box.classList.toggle('opn-on', on); open.setAttribute('aria-expanded', String(on)); };
+  open.addEventListener('click', () => {
+    const on = form.hidden; setOpen(on);
+    if (on) { form.querySelector('textarea').focus({ preventScroll: true }); loadTs(); }
+  });
   const anon = form.elements.anon, nameRow = form.querySelector('.opn-name');
   const syncAnon = () => { nameRow.hidden = anon.checked; }; anon.addEventListener('change', syncAnon); syncAnon();
   const ta = form.elements.text, cnt = form.querySelector('.opn-c');
@@ -60,8 +68,8 @@
       const r = await fetch(`${W}/op`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
       const j = await r.json().catch(() => ({}));
       if (j.error) say(ERR[j.error] || 'Something went wrong. Try again in a minute.');
-      else if (j.status === 'approved') { form.hidden = true; say('Thanks! Your opinion is up.', true); head.hidden = false; if (j.op) list.prepend(item(j.op)); }
-      else if (j.status === 'pending') { form.hidden = true; say('Thanks! It’s waiting for its check and will show within the hour if it passes.', true); }
+      else if (j.status === 'approved') { setOpen(false); say('Thanks! Your opinion is up.', true); head.hidden = false; if (j.op) list.prepend(item(j.op)); }
+      else if (j.status === 'pending') { setOpen(false); say('Thanks! It’s waiting for its check and will show within the hour if it passes.', true); }
       else say(`It wasn’t posted: ${j.reason || 'it didn’t pass review.'} You can edit it and try again.`);
     } catch (err) { say('Couldn’t reach the server. Check your connection and try again.'); }
     btn.disabled = false; btn.textContent = 'Post opinion';

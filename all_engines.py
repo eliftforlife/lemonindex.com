@@ -230,32 +230,89 @@ _ae_fn = lambda g: sum(_FG(c['f']) == g for c in _ae_live)   # 11-18: live engin
 _ae_fuel = ('<div class="aefuel" role="group" aria-label="Fuel">' + ''.join(
     f'<a href="/engines/{"?fuel=" + g if g != "all" else ""}" data-fuel="{g}"{" aria-current=true" if g == "all" else ""}>{t}{f" <small>{_ae_fn(g)}</small>" if g != "all" else ""}</a>'
     for g, t in (('all', 'Any fuel'), ('gas', 'Gas'), ('diesel', 'Diesel'), ('hybrid', 'Hybrid'), ('electric', 'Electric')) if g == 'all' or _ae_fn(g)) + '</div>')
-# 11-19 v5 (Elijah: "designed like the car page ... same search bar style, same amount of text ... instead of these filter things, the
-# compact cards with one engine from that category"): the /cars/ hero (kicker, big title, one short line, the search bar), then one tap-to-open
-# box per kind of engine (the old tabs) showing one of its engines; each box holds every engine of that kind. An engine in two kinds (the S62:
-# BMW + performance) sits in both. Engines with no kind tag go under "Everyday engines". Search (assets/engines.js) covers every box.
+# 11-24 v6 (Elijah: "make it look like the home page where each one has its own card with an engine on the right and a big title, so people
+# just click into it and get that category ... put an engine card for the engine head-to-head: 2 engines next to each other ... same with
+# engine hubs"): the kinds of engine are big separate cards like the home page's kinds of car (name + count on the left, a big engine on the
+# right), plus a Head-to-head card (two engines side by side) and an Engine hubs card. A card opens that kind's engines on this page
+# (/engines/?type=<kind>, assets/engines.js) with a back link; every engine card stays in the HTML (what search engines read).
+# An engine in two kinds (the S62: BMW + performance) sits in both. Engines with no kind tag go under "Everyday engines".
 AE_CATS = [('trucks', 'Trucks & diesel', 't'), ('bmw', 'BMW', 'b'), ('supercars', 'Supercars', 's'), ('performance', 'Performance', 'p'), ('honda', 'Honda', 'h'), ('everyday', 'Everyday engines', '')]
 _AE_KT = {t for _k, _l, t in AE_CATS if t}
-def _ae_cat_box(k, lab, cs, first):
-    r = cs[0]; im = r['img']
-    pic = f'<span class="ae5-im"><img src="{E(im[0])}" width="{im[1]}" height="{im[2]}" alt=""{"" if first else " loading=" + chr(34) + "lazy" + chr(34)} decoding="async"></span>'
-    return (f'<div class="cpl"><details class="ae5-c" data-type="{k}"><summary class="cpl-keep">{pic}<span><b>{E(lab)}</b><small>{len(cs)} engines · e.g. {E(r["name"])}</small></span>{PILL_AR}</summary>'
-            f'<div class="cpl-b"><div class="aeg">{"".join(_ae_card(c) for c in cs)}</div></div></details></div>')
-_ae_boxes = []
+def _ae6_img(im, eager, alt=''):
+    return (f'<img src="{E(im[0])}" width="{im[1]}" height="{im[2]}" alt="{E(alt)}"' + (' fetchpriority="high"' if eager else ' loading="lazy"') + ' decoding="async">')
+def _ae6_card(k, title, sub, pics, href=None, eager=False, cls=''):
+    """one big card: title + one short line on the left, the engine (or two) on the right"""
+    href = href or f'/engines/?type={k}'
+    p = f'<span class="ae6-vs" aria-hidden="true">vs</span>'.join(f'<span class="ae6-i">{_ae6_img(im, eager, alt)}</span>' for im, alt in pics)
+    return (f'<a class="ae6-c{" " + cls if cls else ""}" href="{E(href)}" data-type="{k}"><span class="ae6-t"><b>{E(title)}</b><small>{sub}</small></span>'
+            f'<span class="ae6-p{" ae6-two" if len(pics) == 2 else ""}">{p}</span></a>')
+def _ae6_panel(k, title, sub, inner):
+    return (f'<section class="ae6-pn" data-type="{k}" aria-labelledby="ae6-h-{k}" hidden><div class="ae6-ph"><a class="ae6-bk" href="/engines/" data-type="all">‹ All engines</a>'
+            f'<h2 id="ae6-h-{k}">{E(title)}</h2><p>{sub}</p></div>{inner}</section>')
+_ae6_cards, _ae6_pans, _ae6_used = [], [], set()
 for _k, _lab, _t in AE_CATS:
     _cs = [c for c in _ae_live if (_t in c['t'] if _t else not (c['t'] & _AE_KT))]
-    if _cs: _ae_boxes.append(_ae_cat_box(_k, _lab, _cs, len(_ae_boxes) < 2))
-_ae_h2h = '<ul class="ae5-l">' + ''.join(f'<li><a href="{u}">{lab.replace(", ", " vs ").replace(" and ", " vs ")}</a></li>' for u, us, lab in ENG_H2H) + f'</ul><p class="note">YT # = YouTube rank among all {ENG_POOL_N} {ENG_POOL_LBL}.</p>'
-_ae_hubs = ('<ul class="ae5-l"><li><a href="/engines/bmw/">BMW engines</a></li><li><a href="/engines/supercars/">Supercar engines</a></li><li><a href="/engines/performance/">Performance engines</a></li>'
-            '<li><a href="/check-engine-light/">Check engine light codes</a> (OBD-II trouble codes, a different lookup)</li></ul>')
+    if not _cs: continue
+    _r = next((c for c in _cs if c['url'] not in _ae6_used), _cs[0]); _ae6_used.add(_r['url'])   # a different engine on every card
+    _ae6_cards.append(_ae6_card(_k, _lab, f'{len(_cs)} engines', [(_r['img'], _r['name'] + ' engine')], eager=len(_ae6_cards) < 2))
+    _ae6_pans.append(_ae6_panel(_k, _lab, f'{len(_cs)} engines', f'<div class="aeg">{"".join(_ae_card(c) for c in _cs)}</div>'))
+# head-to-head: two of the compared engines side by side; one comparison opens straight, several open a list here
+_h2h_us = [u for _u0, us, _l in ENG_H2H for u in us]
+_h2h_pics = [(AE_LIVE[u]['img'], AE_LIVE[u]['name'] + ' engine') for u in _h2h_us if u in AE_LIVE and AE_LIVE[u].get('img')][:2]
+_h2h_lab = lambda lab: lab.replace(', ', ' vs ').replace(' and ', ' vs ')
+if ENG_H2H and len(_h2h_pics) == 2:
+    if len(ENG_H2H) == 1: _ae6_cards.append(_ae6_card('h2h', 'Head‑to‑head', E(_h2h_lab(ENG_H2H[0][2])), _h2h_pics, href=ENG_H2H[0][0], cls='ae6-w'))
+    else:
+        _ae6_cards.append(_ae6_card('h2h', 'Head‑to‑head', f'{len(ENG_H2H)} engine matchups', _h2h_pics, cls='ae6-w'))
+        _ae6_pans.append(_ae6_panel('h2h', 'Head-to-head', f'{len(ENG_H2H)} engine matchups', '<div class="cpl">' + ''.join(V5_GO('scale', E(_h2h_lab(lab)), u) for u, us, lab in ENG_H2H) + '</div>'))
+# engine hubs: the ranked hub pages that exist, plus the trouble-code lookup
+_AE6_HUBS = [('/engines/bmw/', 'BMW engines, ranked', 'engine'), ('/engines/supercars/', 'Supercar engines, ranked', 'engine'), ('/engines/performance/', 'Performance engines, ranked', 'engine'),
+             ('/engines/diesel-trucks/', 'Diesel truck engines', 'engine'), ('/engines/ford-f150-engines/', 'F-150 engines compared', 'engine'), ('/check-engine-light/', 'Check engine light codes', 'warning')]
+_ae6_hubs = [h for h in _AE6_HUBS if os.path.exists(os.path.join(OUT, h[0].strip('/'), 'index.html'))]
+_hub_pic = next((c for c in _ae_live if 's' in c['t'] and c['url'] not in _ae6_used and c['url'] not in _h2h_us), None)
+if _ae6_hubs and _hub_pic:
+    _ae6_cards.append(_ae6_card('hubs', 'Engine hubs', 'Ranked lists and guides', [(_hub_pic['img'], _hub_pic['name'] + ' engine')], cls='ae6-w'))
+    _ae6_pans.append(_ae6_panel('hubs', 'Engine hubs', 'Ranked lists and guides', '<div class="cpl">' + ''.join(V5_GO(ic, E(t), u) for u, t, ic in _ae6_hubs) + '</div>'))
+AE6_CSS = '''<style id="ae6-css">
+.ae6{display:grid;grid-template-columns:minmax(0,1fr);gap:10px;max-width:1120px;margin:8px auto 0;text-align:left}
+.ae6[hidden]{display:none}
+.ae6-c{display:flex;align-items:center;gap:8px;height:116px;padding:0 8px 0 20px;border-radius:22px;background:#f5f5f7;color:#1d1d1f;text-decoration:none;overflow:hidden;transition:background .2s ease}
+.ae6-t{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:4px}
+.ae6-t b{font-size:clamp(22px,6.4vw,30px);font-weight:800;letter-spacing:-.025em;line-height:1.02}
+.ae6-t small{font-size:14px;font-weight:600;color:#6e6e73;line-height:1.3}
+.ae6-p{flex:0 0 44%;height:100%;display:flex;align-items:center;justify-content:center;padding:8px 0}
+.ae6-i{display:block;height:100%;flex:1 1 0;min-width:0}
+.ae6-i img{display:block;width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.ae6-two{flex-basis:52%;gap:2px}
+.ae6-t b{white-space:nowrap}.ae6-c[data-type=trucks] .ae6-t b,.ae6-c[data-type=everyday] .ae6-t b{white-space:normal}
+.ae6-vs{flex:none;align-self:center;font-size:12px;font-weight:800;text-transform:uppercase;color:#1d1d1f;background:#ffd400;border-radius:99px;padding:4px 7px;line-height:1}
+@media (max-width:639px){.ae6-c[data-type=h2h] .ae6-t b{font-size:24px}}
+.ae6-c:hover{background:#ececf0}.ae6-c:hover .ae6-i img{transform:scale(1.04)}
+.ae6-c:focus-visible{outline:2px solid #1d1d1f;outline-offset:2px}
+@media (min-width:640px){.ae6{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.ae6-c{height:150px;padding:0 12px 0 28px}.ae6-t b{font-size:32px}
+.ae6-c.ae6-w{grid-column:1/-1}.ae6-w .ae6-p{flex-basis:34%}.ae6-w .ae6-two{flex-basis:46%;gap:10px}}
+@media (min-width:1000px){.ae6{gap:16px}.ae6-c{height:184px;padding:0 18px 0 36px;border-radius:26px}.ae6-t b{font-size:42px}.ae6-t small{font-size:15px}}
+@media (prefers-reduced-motion:reduce){.ae6-c,.ae6-i img{transition:none}.ae6-c:hover .ae6-i img{transform:none}}
+.ae5 .ae5g.ae6g{max-width:1120px}
+.ae6-pn{max-width:1120px;margin:0 auto;scroll-margin-top:72px}
+.ae6-pn[hidden]{display:none}
+.ae6-pn + .ae6-pn{margin-top:40px}
+.ae6-ph{text-align:center;margin:0 0 22px}
+.ae6-ph h2{font-size:clamp(30px,6vw,44px);font-weight:800;letter-spacing:-.03em;line-height:1.05;margin:6px 0 4px}
+.ae6-ph p{margin:0;font-size:15px;font-weight:600;color:#6e6e73}
+.ae6-bk{display:inline-block;font-size:15px;font-weight:600;color:#1d1d1f;text-decoration:none;padding:6px 12px;border-radius:99px;background:#f5f5f7}
+.ae6-bk:hover{background:#ececf0}
+.ae6g.ae6-q .ae6-bk{display:none}
+.ae6-pn > .cpl{max-width:760px;margin:0 auto}
+</style><noscript><style>.ae6-pn[hidden]{display:block}</style></noscript>'''
 _ae_body = f'''<div class="pg ae5"><div class="ph ph-f"><section class="finder aefind" aria-labelledby="fh"><h1 id="fh"><span class="ph-e">Engines</span>Every engine.</h1>
 <p class="lede">{_aeN} engines with their own page · {ENG_POOL_N} ranked by YouTube owner tone. Free.</p>
 <div class="fq"><input id="aeq" type="search" placeholder="e.g. LS3, B58, 2JZ, Honda K20" autocomplete="off" aria-label="Search engines" aria-controls="aegrid"></div>
 <p class="fnote" id="aen" aria-live="polite"></p></section></div>
-<section class="aeng ae5g" id="aegrid">{AEC2_CSS}<div class="cpl-grp cpl-ins ae5-cats">{"".join(_ae_boxes)}</div>
+<section class="aeng ae5g ae6g" id="aegrid">{AEC2_CSS}{AE6_CSS}<nav class="ae6" id="kinds" aria-label="Kinds of engine">{"".join(_ae6_cards)}</nav>
+{"".join(_ae6_pans)}
 <p class="aenone" hidden>No engine matches that yet. Try a code like B58 or a model like Camry.</p>
-<div class="cpl-grp cpl-ins ae5-more"><div class="cpl">{V5_BOX('scale', 'Engine head-to-head', _ae_h2h)}</div><div class="cpl">{V5_BOX('engine', 'Engine hubs', _ae_hubs)}</div></div>
-<p class="ph-cr">Engine images: AI-generated illustrations by The Lemon Index, free under CC BY 4.0 (<a href="/images/">download</a>). Engine sizes and cylinders: EPA (fueleconomy.gov).</p></section></div><script src="/assets/engines.js?v=8" defer></script><script src="/assets/soonvote.js?v=2" defer></script>'''
+<p class="ph-cr">YT # = owner rank on YouTube, of {ENG_POOL_N} engines. Engine images: AI illustrations by The Lemon Index, free under CC BY 4.0 (<a href="/images/">download</a>). Sizes and cylinders: EPA.</p></section></div><script src="/assets/engines.js?v=9" defer></script><script src="/assets/soonvote.js?v=2" defer></script>'''
 page('/engines/', 'Every Car Engine: Reliability, Problems & YouTube Owner Ranks',
      f'Search {_aeN} car engines, from the BMW B58 and N54 to the GM LS3 and Ferrari F154: owner complaints, recalls and YouTube owner ranks by model year.',
      _ae_body, ld=[{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Every car engine", "url": BASE + '/engines/',

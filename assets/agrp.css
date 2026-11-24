@@ -1,0 +1,79 @@
+/* 11-24 (Elijah: "the bottom 4 box things ... some of them don't even have an exit ... it moves them all around ... 'Spot a mistake' is off
+   to the left and looks like a mistake"): every action box is one full-width row in one stacked list, the same 760 px column as the
+   page's other rows. A row opens in place under itself (accordion), only pushes what is below it down, and shows an obvious close:
+   the chevron flips, and a row whose content is a form shows a close x instead of the chevron. Linked from build.py end_block,
+   recall_alerts.py RA_ASSETS and opinions.py (so every page with these boxes has it). */
+
+/* the end-of-page boxes (share, "Use this data free", "Spot a mistake or have an idea?", "Updated"): centred in the content column,
+   straight under the page's last rows, 8 px apart like every other list */
+main > .pend { box-sizing: border-box; width: 100%; max-width: 760px; margin: 8px auto 0; padding: 0; border: 0; }
+main > .pend > .cpl { max-width: none; margin: 0; gap: 8px; }
+main > .pend > .cpl > .pend-m { order: 9; margin: 2px 0 0 18px; }   /* the "Updated" date goes under the boxes, not between them */
+/* the page wrapper's own bottom padding was the 40-70 px hole between the page and these boxes */
+main > :is(.pg, .advp, .cpl-page, article):has(~ .pend) { padding-bottom: 0; }
+
+/* model pages (model_hero.py): recall alerts, your opinion, compare, info = four stacked rows (was a 2x2 tile grid that re-flowed) */
+.mh-list { gap: 8px; }
+.mh-list > section, .mh-list > section > .cpl, .mh-list .rla { height: auto; margin: 0; }
+/* year pages: the opinion row and the share row read as one list */
+main > .cpl-page + .cpl-g3:has(> #opinions:only-child), main > .cpl-g3 + .pend { margin-top: 8px; }
+
+/* ---- the open state, the same for every row: one gray card, the row on top, the content in a white card under it ---- */
+.act-xi { display: none; flex: none; width: 18px; height: 18px; color: #6e6e73; }
+details[open] > summary > .act-xi, .rla-open > .rla-tg > .act-xi, .opn-on .opn-open > .act-xi { display: block; }
+details[open] > summary:has(> .act-xi) > .cpl-ar, .rla-open > .rla-tg > .rla-ar, .opn-on .opn-open > .cpl-ar { display: none; }
+
+/* recall alerts (assets/ralert.js) */
+.rla-col.rla-open { display: flow-root; background: #f3f3f5; border-radius: 18px; box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .035); }
+.rla-col.rla-open > .rla-tg { background: transparent; box-shadow: none; }
+.rla-col.rla-open > .rla-tg:hover { background: #ebebee; }
+.rla-col.rla-open > .rla-f { display: flex; max-width: none; margin: 0 8px 8px; padding: 12px 14px; border-radius: 14px; background: #fff; }
+
+/* the row itself matches every other row (ralert.css loads after cpl.css and kept its older padding / type) */
+.rla-col > .rla-tg { gap: 14px; padding: 10px 14px 10px 18px; min-height: 62px; max-width: none; }
+.rla-col > .rla-tg span { font-size: 17.5px; font-weight: 600; line-height: 1.25; letter-spacing: -.012em; }
+.rla-col > .rla-tg .rla-ar { width: 18px; height: 18px; color: #aeaeb2; }
+
+/* your opinion (assets/opinions.js): the form opens inside the row's card */
+#opinions .opn-share { display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px; margin: 0; }
+#opinions.opn-on .opn-share { gap: 0; background: #f5f5f7; border-radius: 18px; }
+#opinions.opn-on .opn-share > .opn-open { background: transparent; }
+#opinions.opn-on .opn-share > .opn-open:hover { background: #ececf0; }
+#opinions .opn-share > .opn-f { grid-template-columns: minmax(0, 1fr); min-width: 0; margin: 0 8px 8px; padding: 14px; border: 0; border-radius: 14px; background: #fff; }
+#opinions .opn-share > .opn-msg { margin: 0; padding: 0 18px 14px; }
+#opinions .opn-f > label:first-child { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+#opinions .opn-f .btn { justify-self: start; min-width: 160px; }
+
+/* "Spot a mistake or have an idea?": the form sits flat in the white card (no third gray card, no repeated heading) */
+.cpl-fb .cpl-b > .fb { margin: 0; padding: 0; max-width: none; }
+.cpl-fb .cpl-b .fb-f { padding: 2px 0 0; background: none; border-radius: 0; }
+.cpl-fb .cpl-b .fb h2 { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+@media (max-width: 480px) {
+  .rla-col > .rla-tg { padding: 10px 12px 10px 16px; min-height: 60px; }
+  .rla-col > .rla-tg span { font-size: 17px; }
+  .rla-col.rla-open > .rla-f, #opinions .opn-share > .opn-f { margin: 0 6px 6px; padding: 12px; }
+  #opinions .opn-f .btn { justify-self: stretch; }
+  /* the two pickers side by side; "Would you buy it again?" on its own line with Yes / No together under it */
+  #opinions .opn-f .opn-row:has(> select) { flex-wrap: nowrap; gap: 8px; }
+  #opinions .opn-f .opn-row > select { flex: 1 1 0; min-width: 0; }
+  #opinions .opn-f .opn-row[role=radiogroup] { gap: 6px 18px; }
+  #opinions .opn-f .opn-row[role=radiogroup] > span { flex: 1 0 100%; }
+}
+/* a page that ends on a small picture-credit line gets a little air before the boxes */
+main > :is(.pg, .advp):has(> .ph-cr:last-child) ~ .pend { margin-top: 18px; }
+/* pages whose own rows run the full 1120 px content width (data, symptom, engine-code and repair-cost pages): the boxes match them */
+main:has(> .pg > article.cp5:not(.eng5)) > .pend { max-width: 1120px; }
+/* UK model pages: the Info row sat left of the centred column the end boxes use */
+.ukx .tb-p.cpl-main > .cpl-grp { margin-left: auto; margin-right: auto; }
+/* model pages, Compare open: the row already names it (no second heading), and on phones the four match-ups are a 2x2 grid, not four
+   screen-tall cards */
+.mh-list #p-compare .cpl-b > section > h2:first-child { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.mh-list #p-compare .cpl-b .mus { margin-bottom: 12px; }
+@media (max-width: 560px) {
+  .mh-list #p-compare .cpl-b .mus { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .mh-list #p-compare .cpl-b .mu { gap: 8px; padding: 14px 6px 12px; border-radius: 16px; }
+  .mh-list #p-compare .cpl-b .mu-p { height: 56px; }
+  .mh-list #p-compare .cpl-b .mu-p img { max-height: 56px; }
+  .mh-list #p-compare .cpl-b .mu b { font-size: 14.5px; line-height: 1.25; }
+}

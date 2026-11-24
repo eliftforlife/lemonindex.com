@@ -4,7 +4,7 @@
 # AFTER the content hash, so adding it doesn't redate thousands of pages. Backend: the lemon-alerts Worker (worker/alerts_worker.js):
 # double opt-in, weekly NHTSA check, one-click unsubscribe. /alerts/ (noindex, not in the sitemap) is where the email links land.
 # The box sends the NHTSA make/model names this year's recall list uses (each name with 10%+ of complaints, max 2), never a VIN.
-RA_ASSETS = '<link rel="stylesheet" href="/assets/ralert.css?v=1115"><script src="/assets/ralert.js?v=1119" defer></script>'
+RA_ASSETS = '<link rel="stylesheet" href="/assets/ralert.css?v=1115"><link rel="stylesheet" href="/assets/agrp.css?v=1"><script src="/assets/ralert.js?v=1124" defer></script>'   # 11-24 agrp.css: the open box + close x
 def _ra_names(fid, y):
     ns = extra(fid, y).get('names') or []
     if not ns: return None

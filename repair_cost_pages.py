@@ -59,7 +59,7 @@ if RCP == 'pages':
     os.makedirs(os.path.join(OUT, 'repair-cost'), exist_ok=True)
     RC_URLS = []; RC_NOINDEX = []
     _q, _r = RCQ._q, RCQ._r
-    _CSS = '<link rel="stylesheet" href="/assets/rcp.css?v=1">'
+    _CSS = '<link rel="stylesheet" href="/assets/rcp.css?v=3">'
     _GROUPS = [
         ('Engine', 'engine-replacement timing-chain timing-belt head-gasket turbo lifters cam-phaser intake-manifold valve-cover-gasket oil-pan oil-cooler rear-main-seal engine-mounts spark-plugs ignition-coils fuel-pump fuel-injectors throttle-body crank-sensor cam-sensor maf-sensor'),
         ('Transmission and drivetrain', 'transmission-replacement torque-converter valve-body tcm clutch transfer-case differential cv-axle driveshaft'),
@@ -103,19 +103,38 @@ if RCP == 'pages':
         if st['nn']: a.append(f'{st["nn"]:,} complaint{"s" * (st["nn"] != 1)} to NHTSA')
         if st['ny']: a.append(f'{st["ny"]:,} YouTube video{"s" * (st["ny"] != 1)}')
         return ' and '.join(a)
-    def _readout(st, label):
-        """the signature block: the middle bill big, the middle half as a bar on the full spread"""
+    def _srcs(st):
+        """the small source tag under the answer: where the bills came from, in two or three words"""
+        return 'NHTSA + YouTube' if st['nn'] and st['ny'] else 'YouTube videos' if st['ny'] else 'NHTSA complaints'
+    def _readout(st, label, sub=None):
+        """11-24 v2 (Elijah: "read something at the top, then go down to understand more"): the one answer. The typical bill big,
+        one short line (where half the bills fell), the spread as a bar, and the sample size small. Nothing else repeats it."""
         top = max(st['mx'], 1); L = lambda v: max(0, min(100, round(v / top * 100, 1)))
-        return (f'{_CSS}<div class="rcp-read" role="img" aria-label="{E(label)}: owners reported a median of {_r(st["med"])}, middle half {_r(st["lo"])} to {_r(st["hi"])}, from {st["n"]} reports">'
-                f'<div class="rcp-big"><span>Owners reported</span><b>{_r(st["med"])}</b><small>the middle bill · {st["n"]:,} reports</small></div>'
+        sub = sub or f'{st["n"]:,} owner report{"s" * (st["n"] != 1)} · {_srcs(st)}'
+        return (f'{_CSS}<div class="rcp-read rcp-v2" role="img" aria-label="{E(label)}: owners reported a median of {_r(st["med"])}, middle half {_r(st["lo"])} to {_r(st["hi"])}, from {st["n"]} reports">'
+                f'<div class="rcp-big"><b>{_r(st["med"])}</b></div><p class="rcp-one">Typical bill. Half of owners paid <span class="nw">{_r(st["lo"])}–{_r(st["hi"])}</span>.</p>'
                 f'<div class="rcp-bar" aria-hidden="true"><span class="rcp-track"><i style="left:{L(st["lo"])}%;width:{max(2, L(st["hi"]) - L(st["lo"]))}%"></i><em style="left:{L(st["med"])}%"></em></span>'
-                f'<span class="rcp-ax"><small>{_r(st["mn"])}</small><small>middle half {_r(st["lo"])}–{_r(st["hi"])}</small><small>{_r(st["mx"])}</small></span></div></div>')
+                f'<span class="rcp-ends"><small>Low {_r(st["mn"])}</small><small>High {_r(st["mx"])}</small></span></div>'
+                f'<p class="rcp-n">{sub}</p></div>')
+    def _cmp(nm, st, allst, nmod, ql):
+        """the one comparison: this car's typical bill next to every car's, as two bars, with the verdict as the heading"""
+        r = st['med'] / allst['med'] if allst['med'] else 1
+        v = 'Higher than' if r > 1.1 else 'Lower than' if r < .9 else 'About the same as'
+        top = max(st['med'], allst['med'], 1); W = lambda x: max(3, round(x / top * 100))
+        return (f'<h2>{v} the typical car.</h2><div class="rcp-cmp">'
+                f'<div class="rcp-cr rcp-me"><span>{E(nm)}</span><span class="rcp-cb"><i style="width:{W(st["med"])}%"></i></span><b>{_r(st["med"])}</b></div>'
+                f'<div class="rcp-cr"><span>All {nmod} models</span><span class="rcp-cb"><i style="width:{W(allst["med"])}%"></i></span><b>{_r(allst["med"])}</b></div></div>')
+    def _src_box(pts, extra=''):
+        """everything about where the numbers come from, in one closed row (kept in the HTML for search engines)"""
+        return ('<h2>The details</h2><details class="cpd"><summary>Where these numbers come from</summary>'
+                + extra + '<p>Sources: NHTSA owner complaints and YouTube videos (amounts said out loud), sorted by The Lemon Index. Owner reports, not a price quote. Costs vary by shop and region.</p>'
+                + _METHOD + (f'<h3>Check the bills yourself</h3>{_proof(pts)}' if pts else '') + '</details>')
     _BINS = [(0, 500, 'Under $500'), (500, 1000, '$500–$1,000'), (1000, 2500, '$1,000–$2,500'), (2500, 5000, '$2,500–$5,000'), (5000, 10 ** 9, '$5,000 and up')]
     def _hist(pts):
         n = len(pts); rows = [(lab, sum(1 for p in pts if a <= p[5] < b)) for a, b, lab in _BINS]
         mx = max(k for _, k in rows) or 1
         return ('<ul class="rcp-hist">' + ''.join(f'<li><span>{lab}</span><span class="rcp-hb"><i style="width:{round(k / mx * 100) if k else 0}%"></i></span><b>{round(k / n * 100)}%</b></li>' for lab, k in rows)
-                + f'</ul><p class="yc-cap">Share of the {n:,} owner reports in each price band.</p>')
+                + f'</ul><p class="yc-cap">Share of the {n:,} owner report{"s" * (n != 1)} in each price band.</p>')
     def _proof(pts):
         nh = sorted({p[7] for p in pts if p[6] == 'n'}, key=lambda o: -int(o))[:12]
         yt = []; seen = set()
@@ -136,7 +155,7 @@ if RCP == 'pages':
                'when that repair is the part named nearest to it. Left out: purchase prices, payments, rentals, towing, warranties and deductibles, amounts under $50 or '
                'over $15,000, parts-only prices ("the part was $80 on Amazon"), bills for two different repairs named together, and money someone else paid. One number per complaint '
                '(or video) and repair: the biggest, so it&#39;s the bill, not the diagnosis fee.</p>'
-               '<p>The range is the middle half of the bills (the 25th to the 75th percentile), so one wild number can&#39;t swing it. Owners who complain to the government '
+               '<p>The typical bill is the median: half of owners paid less, half paid more. The range is the middle half of the bills (the 25th to the 75th percentile), so one wild number can&#39;t swing it. Owners who complain to the government '
                'often had expensive repairs, so a typical bill can be lower. Costs vary by shop and region, by dealer vs independent shop, by parts and by miles. '
                'This is what owners reported, not a quote for your car.</p>')
     def _faq_ld(qa): return {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": _rcre.sub(r'<[^>]+>', '', html.unescape(a))}} for q, a in qa]}
@@ -159,17 +178,15 @@ if RCP == 'pages':
             gens = sorted({(p[3], p[4]) for p in pts if p[6] == 'y'})
             miles = [p[9] for p in pts if p[9]]
             vs = f'{"higher than" if st["med"] > allst["med"] * 1.1 else "lower than" if st["med"] < allst["med"] * .9 else "about the same as"}'
-            ans = (f'{E(nm)} owners reported paying a median of <b>{_r(st["med"])}</b> for a {E(ql)}, with the middle half of bills between {_r(st["lo"])} and {_r(st["hi"])}. '
-                   f'That&#39;s from {st["n"]} owner reports ({_src_line(st)}). Costs vary by shop and region.')
             # by model year (NHTSA bills carry the model year; YouTube amounts the video's generation)
             yrows = []
             for y in ys:
                 yp = [p for p in pts if p[6] == 'n' and p[2] == y]; yl = f'{y} {nm}'
                 link = _ylink(fid, y, nm)
-                yrows.append(f'<li><span>{link}</span><b>{len(yp)}</b><small>{_r(_rcst.median([p[5] for p in yp])) + " middle bill" if len(yp) >= 3 else "too few for a middle"}</small></li>')
+                yrows.append(f'<li><span>{link}</span><b>{len(yp)}</b><small>{_r(_rcst.median([p[5] for p in yp])) + " typical bill" if len(yp) >= 3 else "too few to say"}</small></li>')
             for a, b in gens:
                 gp = [p for p in pts if p[6] == 'y' and (p[3], p[4]) == (a, b)]
-                yrows.append(f'<li><span>{_span(a, b)} {E(nm)} <small>(YouTube)</small></span><b>{len(gp)}</b><small>{_r(_rcst.median([p[5] for p in gp])) + " middle bill" if len(gp) >= 3 else "too few for a middle"}</small></li>')
+                yrows.append(f'<li><span>{_span(a, b)} {E(nm)} <small>(YouTube)</small></span><b>{len(gp)}</b><small>{_r(_rcst.median([p[5] for p in gp])) + " typical bill" if len(gp) >= 3 else "too few to say"}</small></li>')
             # how often owners report the failure itself (data/top_fails.json: complaints whose words name the part, per model year)
             tf = []
             for y, d in sorted((_TOPF.get(fid) or {}).items()):
@@ -185,30 +202,30 @@ if RCP == 'pages':
             yr_all = sorted(set(ys) | {y for a, b in gens for y in range(a, b + 1)})
             eng = [(u, EU_NAME.get(u, u)) for u, x in ((globals().get('CAR_ENG') or {}).get(fid) or {}).items() if set(x.get('years') or []) & set(yr_all)]
             others = [(u, s2, n) for u, s2, n in RC_LINKS(fid) if s2 != s]
-            cpa = (f'<div class="cpa"><div><span>What owners paid</span><p><b>{_r(st["med"])}</b> middle bill · most between {_r(st["lo"])} and {_r(st["hi"])}</p></div>'
-                   f'<div><span>Compared with every car</span><p>{vs.capitalize()} the {_r(allst["med"])} middle bill owners of all {len(RC_BY[s])} models reported.</p></div>'
-                   + (f'<div><span>When it happened</span><p>Owners who gave their mileage: a middle of {round(_rcst.median(miles), -3):,.0f} miles ({len(miles)} reports).</p></div>' if len(miles) >= 5
-                      else f'<div><span>Model years reported</span><p>{E(_span(min(yr_all), max(yr_all)))} {E(nm)}</p></div>') + '</div>')
-            body = [f'<article class="study tr2 cp2 rcp"><p class="kicker"><a href="/repair-cost/">Repair costs</a> · <a href="{RC_HUBU(s)}">{E(q)}</a></p><h1>{E(nm)} {E(ql)} cost</h1>'
-                    f'<p class="lede">What {st["n"]} {E(nm)} owners reported paying.</p>',
-                    cpa, f'<p class="cpm rcp-ans">{ans}</p>',
-                    '<h2>What owners paid</h2>' + _hist(pts),
-                    '<h2>By model year</h2><ul class="rcp-yr">' + ''.join(yrows) + '</ul><p class="yc-cap">Reports per model year, with the middle bill where there are 3 or more. YouTube amounts count for the generation the video covers.</p>',
+            # 11-24 v2 (Elijah: "too much text ... more simple"): the answer once at the top (readout), then one comparison open,
+            # then everything else in closed rows. The old 3 cards + answer paragraph said the same numbers three times; gone.
+            mi = (f'<p class="rcp-mi">Owners who gave their mileage: typically <b>{round(_rcst.median(miles), -3):,.0f} miles</b> <small>({len(miles)} reports)</small></p>'
+                  if len(miles) >= 5 else '')
+            body = [f'<article class="study tr2 cp2 rcp"><p class="kicker"><a href="/repair-cost/">Repair costs</a> · <a href="{RC_HUBU(s)}">{E(q)}</a></p><h1>{E(nm)} {E(ql)} cost</h1>',
+                    _cmp(nm, st, allst, len(RC_BY[s]), ql),
+                    '<h2>Every bill, by price</h2>' + _hist(pts),
+                    ('<h2>By model year and miles</h2>' if mi else '<h2>By model year</h2>') + mi + '<ul class="rcp-yr">' + ''.join(yrows)
+                    + '</ul><p class="yc-cap">Reports per model year, with the typical bill where there are 3 or more. YouTube amounts count for the generation the video covers.</p>',
                     tfh, REST.model_repair_block(s, fid, nm)]   # 11-23: the estimate (hours x your shop rate + parts) for each generation
-            if eng:
-                body.append('<h2>Engines in these years</h2><p class="rcp-eng">' + ' · '.join(f'<a href="{E(u)}">{E(n_)}</a>' for u, n_ in sorted(eng, key=lambda t: t[1])[:8])
-                            + '</p><p class="yc-cap">Engines with a page of their own that this model was sold with in the years above. Owners don&#39;t always say which engine they had.</p>')
+            # 11-24 v2: engines, engine codes and the other links share one "Keep going" row (one less row to scan)
+            engh = ('<h3 class="rcp-h3">Engines in these years</h3><p class="rcp-eng">' + ' · '.join(f'<a href="{E(u)}">{E(n_)}</a>' for u, n_ in sorted(eng, key=lambda t: t[1])[:8])
+                    + '</p><p class="yc-cap">Engines with a page of their own that this model was sold with in the years above. Owners don&#39;t always say which engine they had.</p>') if eng else ''
             links = [f'<a href="/cars/{fid}/">{E(nm)} reliability by year</a>', f'<a href="{RC_HUBU(s)}">{E(q)} cost on every car</a>']
             if _SYM: links.append('<a href="/symptoms/">Car symptoms and what they can mean</a>')
-            body.append(_codes(s) + '<h2>Keep going</h2><ul class="rcp-more">' + ''.join(f'<li>{l}</li>' for l in links) + '</ul>'
-                        + (f'<h3 class="rcp-h3">Other repairs {E(nm)} owners reported</h3><p class="rcp-eng">' + ' · '.join(f'<a href="{u}">{E(RC_Q(s2))}</a> <small>({n})</small>' for u, s2, n in others) + '</p>' if others else ''))
-            body.append('<h2>The details</h2>' + f'<details class="cpd"><summary>How we count</summary>{_METHOD}</details>'
-                        + f'<details class="cpd"><summary>Check the bills yourself</summary>{_proof(pts)}</details>')
+            body.append('<h2>Keep going</h2><ul class="rcp-more">' + ''.join(f'<li>{l}</li>' for l in links) + '</ul>'
+                        + (f'<h3 class="rcp-h3">Other repairs {E(nm)} owners reported</h3><p class="rcp-eng">' + ' · '.join(f'<a href="{u}">{E(RC_Q(s2))}</a> <small>({n})</small>' for u, s2, n in others) + '</p>' if others else '')
+                        + engh + _codes(s))
+            body.append(_src_box(pts))
             qa = [(f'How much does {ql} cost on a {nm}?', f'{nm} owners reported a median of {_r(st["med"])}, and the middle half paid {_r(st["lo"])} to {_r(st["hi"])}, from {st["n"]} owner reports. Costs vary by shop and region.'),
                   (f'Is a {nm} {ql} more expensive than on other cars?', f'The {nm} middle bill of {_r(st["med"])} is {vs} the {_r(allst["med"])} owners of all {len(RC_BY[s])} models we have reports for paid.'),
                   (f'Where do these {nm} repair costs come from?', f'From {_src_line(st)}: what owners themselves said they paid. They aren&#39;t verified bills or a shop&#39;s quote.')]
             if tf: qa.append((f'Which {nm} years report this failure most?', f'In complaints to NHTSA, owners of the ' + ', '.join(f'{y} ({n:,})' for y, n, _ in tf[:3]) + f' {nm} named it most. Raw counts, not a failure rate.'))
-            body.append(_qa(qa) + f'<p class="note">Sources: NHTSA owner complaints and YouTube videos (amounts said out loud), sorted by The Lemon Index. Owner reports, not a price quote. Costs vary by shop and region.</p></article>')
+            body.append(_qa(qa) + '</article>')
             tt = f'{nm} {q} Cost: What {st["n"]} Owners Paid | The Lemon Index'
             desc = f'{nm} owners reported paying a median of {_r(st["med"])} for a {ql} (most {_r(st["lo"])}–{_r(st["hi"])}), from {st["n"]} owner reports. By model year, with sources.'
             page(path, tt, desc, ''.join(body), ld=[_faq_ld(qa)], vis=_readout(st, f'{nm} {ql}'))
@@ -222,42 +239,35 @@ if RCP == 'pages':
         cards = ''.join(f'<a class="mc cpc" href="{RC_MU(s, fid)}"><span class="mc-p">' + (lambda ph: f'<img src="{ph["src"]}" alt="{E(FY[fid]["name"])}" width="{ph["w"]}" height="{ph["h"]}" loading="lazy" decoding="async">' if ph else '')(aph(fid))
                         + f'</span><b>{E(FY[fid]["name"])}</b><span class="cpn">{len(M[fid])}</span></a>' for fid in top)
         trs = ''.join(f'<tr><td>' + (f'<a href="{RC_MU(s, fid)}">{E(FY[fid]["name"])}</a>' if fid in RC_MODELP[s] else E(FY[fid]['name'])) + f'</td><td>{x["n"]}</td>'
-                      + (f'<td>{_r(x["med"])}</td><td>{_r(x["lo"])}–{_r(x["hi"])}</td>' if x['n'] >= RC_MIN else '<td colspan="2">too few for a range</td>') + '</tr>'
+                      + (f'<td>{_r(x["med"])}</td><td>{_r(x["lo"])}–{_r(x["hi"])}</td>' if x['n'] >= RC_MIN else '<td colspan="2">too few to say</td>') + '</tr>'
                       for fid, x in rows if x['n'] >= 3)
         few = sum(1 for _, x in rows if x['n'] < 3)
         topn = ', '.join(E(FY[fid]['name']) for fid, _ in rows[:3])
-        ans = (f'Owners reported paying a median of <b>{_r(st["med"])}</b> for a {E(ql)}, with the middle half of bills between {_r(st["lo"])} and {_r(st["hi"])}. '
-               f'That&#39;s {st["n"]:,} owner reports on {len(M)} models ({_src_line(st)}). Costs vary by shop and region.')
         rel = [s2 for s2 in sorted(RC_HUBS, key=lambda x: -RC_N[x]) if s2 != s and _GRP.get(s2) == _GRP.get(s)][:8]
-        body = [f'<article class="study tr2 cp2 rcp"><p class="kicker"><a href="/repair-cost/">Repair costs</a> · What owners paid</p><h1>{E(q)} cost</h1>'
-                f'<p class="lede">What {st["n"]:,} owners reported paying, in their own words.</p>',
-                f'<div class="cpa"><div><span>What owners paid</span><p><b>{_r(st["med"])}</b> middle bill · most between {_r(st["lo"])} and {_r(st["hi"])}</p></div>'
-                f'<div><span>Sample size</span><p>{st["n"]:,} owner reports on {len(M)} models</p></div>'
-                f'<div><span>Comes up most on</span><p>{topn}</p></div></div>',
-                f'<p class="cpm rcp-ans">{ans}</p>',
-                '<h2>What owners paid</h2>' + _hist([p for v in M.values() for p in v])]
+        # 11-24 v2: the answer once (readout), then the cars it comes up on, then closed rows. No cards or paragraph repeating the readout.
+        body = [f'<article class="study tr2 cp2 rcp"><p class="kicker"><a href="/repair-cost/">Repair costs</a></p><h1>{E(q)} cost</h1>']
         if cards:
             body.append(f'<h2>Cars where it comes up most</h2><div class="mbs"><div class="mb"><div class="mg cpg">{cards}</div></div></div>'
-                        '<p class="note">Owner reports per model. Raw counts, not a failure rate: popular models get more reports.</p>')
+                        '<p class="note rcp-cn">Owner reports per model. Not a failure rate.</p>')
+        body.append('<h2>Every bill, by price</h2>' + _hist([p for v in M.values() for p in v]))
         if trs:
-            body.append(f'<h2>Every model, what owners paid</h2><table class="rcp-t"><thead><tr><th>Model</th><th>Reports</th><th>Middle bill</th><th>Middle half</th></tr></thead><tbody>{trs}</tbody></table>'
+            body.append(f'<h2>Every model, what owners paid</h2><table class="rcp-t"><thead><tr><th>Model</th><th>Reports</th><th>Typical bill</th><th>Half paid</th></tr></thead><tbody>{trs}</tbody></table>'
                         f'<p class="yc-cap">Models with 3+ reports. A model gets its own page and a range at {RC_MIN}+ reports.' + (f' {few} more model{"s" * (few != 1)} with 1–2 reports count in the totals above.' if few else '') + '</p>')
         body.append(REST.hub_block(s, {f: FY[f]['name'] for f in FY}, lambda f, y: f'/cars/{f}/{y}/' if _HAS(f'/cars/{f}/{y}/') else (f'/cars/{f}/' if f in FY else None)))   # 11-23: estimates on popular cars
         links = []
         if _SYM: links.append('<a href="/symptoms/">Car symptoms and what they can mean</a>')
         links.append('<a href="/repair-cost/">Every repair cost</a>'); links.append('<a href="/check-engine-light/">Look up an engine code</a>')
-        body.append(_codes(s) + (f'<h2>Related repairs</h2><p class="rcp-eng">' + ' · '.join(f'<a href="{RC_HUBU(s2)}">{E(RC_Q(s2))}</a> <small>{_r(ALL[s2]["med"])}</small>' for s2 in rel) + '</p>' if rel else '')
-                    + '<ul class="rcp-more">' + ''.join(f'<li>{l}</li>' for l in links) + '</ul>')
-        body.append('<h2>The details</h2>' + f'<details class="cpd"><summary>How we count</summary>{_METHOD}</details>'
-                    + f'<details class="cpd"><summary>Check the bills yourself</summary>{_proof([p for v in M.values() for p in v])}</details>')
+        body.append((f'<h2>Related repairs</h2><p class="rcp-eng">' + ' · '.join(f'<a href="{RC_HUBU(s2)}">{E(RC_Q(s2))}</a> <small>{_r(ALL[s2]["med"])}</small>' for s2 in rel) + '</p>' if rel else '<h2>Keep going</h2>')
+                    + '<ul class="rcp-more">' + ''.join(f'<li>{l}</li>' for l in links) + '</ul>' + _codes(s))
+        body.append(_src_box([p for v in M.values() for p in v]))
         qa = [(f'How much does a {ql} cost?', f'Owners reported a median of {_r(st["med"])}, and the middle half paid {_r(st["lo"])} to {_r(st["hi"])}, from {st["n"]:,} owner reports on {len(M)} models. Costs vary by shop and region.'),
               (f'Which cars need a {ql} most?', f'The most owner reports come from the {topn}. These are raw counts: popular models get more reports, so this isn&#39;t a failure rate.'),
               (f'Why do {ql} costs vary so much?', 'Shop labor rates differ by region, dealers usually charge more than independent shops, new, used and rebuilt parts cost different amounts, and some bills include other work done at the same time.'),
               ('Where do these numbers come from?', f'From {_src_line(st)}: the repair bills owners themselves reported. Owner reports, not a price quote.')]
-        body.append(_qa(qa) + '<p class="note">Sources: NHTSA owner complaints and YouTube videos (amounts said out loud), sorted by The Lemon Index. Owner reports, not a price quote. Costs vary by shop and region.</p></article>')
+        body.append(_qa(qa) + '</article>')
         tt = f'{q} Cost: What {st["n"]:,} Owners Paid | The Lemon Index'
         desc = f'Owners reported paying a median of {_r(st["med"])} for a {ql} (most {_r(st["lo"])}–{_r(st["hi"])}), from {st["n"]:,} reports on {len(M)} models. By model, with sources.'
-        page(path, tt, desc, ''.join(body), ld=[_faq_ld(qa)], vis=_readout(st, ql))
+        page(path, tt, desc, ''.join(body), ld=[_faq_ld(qa)], vis=_readout(st, ql, f'{st["n"]:,} owner reports on {len(M)} models · {_srcs(st)}'))
         if RC_HUB_OK(s): RC_URLS.append(path)
         else: RC_NOINDEX.append(path); _noindex(path)
 
@@ -265,23 +275,23 @@ if RCP == 'pages':
     allpts = [p for s in RC_HUBS for v in RC_BY[s].values() for p in v]
     hubs = sorted(RC_HUBS, key=lambda s: -RC_N[s])
     grp = ('<div class="cgrid rcp-grid" id="rgrid">' + ''.join(
-        f'<a class="cgc rcp-c" href="{RC_HUBU(s)}"><b>{E(RC_Q(s))}</b><span>{_r(ALL[s]["med"])} middle bill</span><small>{RC_N[s]:,} reports · {len(RC_BY[s])} models · {E(_GRP.get(s, "Other"))}</small></a>' for s in hubs) + '</div>')
+        f'<a class="cgc rcp-c" href="{RC_HUBU(s)}" title="{E(_GRP.get(s, "Other"))}"><b>{E(RC_Q(s))}</b><span>{_r(ALL[s]["med"])}</span><small>{RC_N[s]:,} reports</small></a>' for s in hubs) + '</div>')
     big = sorted(RC_HUBS, key=lambda s: -RC_N[s])[:3]
     hqa = [('How much do car repairs cost?', 'It depends on the repair. Owners reported a median of ' + ', '.join(f'{_r(ALL[s]["med"])} for a {RC_LOW(RC_Q(s))}' for s in big) + '. Each repair page has the range, the sample size and the cars it comes up on most.'),
            ('Where do these repair costs come from?', 'From repair bills owners named in their own complaints to the U.S. government (NHTSA) and amounts owners said out loud in YouTube videos. They are owner reports, not a shop&#39;s price list or a quote for your car.'),
            ('Why is my quote different?', 'Costs vary by shop and region, by dealer vs independent shop, by parts (new, used or rebuilt) and by what else was done at the same time. Use these numbers to know if a quote is in the usual range, then get a second quote.'),
            ('Which repair costs the most?', 'Among the repairs with 30+ reports, owners reported the highest middle bills for ' + ', '.join(f'{RC_LOW(RC_Q(s))} ({_r(ALL[s]["med"])})' for s in [x for x in sorted(RC_HUBS, key=lambda x: -ALL[x]['med']) if RC_N[x] >= 30][:3]) + '.')]
+    # 11-24 v2: the title, one line, then the filter and the cards (repair, typical bill, reports). The how-it-works paragraph is a closed row.
+    _nn, _ny = sum(1 for p in allpts if p[6] == 'n'), sum(1 for p in allpts if p[6] == 'y')
     body = ('<article class="study tr2 cp2 rcp"><p class="kicker">Repair costs</p><h1>Car repair costs: what owners paid</h1>'
-            f'<p class="lede">{len(allpts):,} repair bills from owners, sorted into {len(RC_HUBS)} repairs.</p>'
-            f'<p class="cpm rcp-ans">Every number on these pages is a bill an owner reported: {sum(1 for p in allpts if p[6] == "n"):,} from complaints to the U.S. government (NHTSA) and '
-            f'{sum(1 for p in allpts if p[6] == "y"):,} said out loud in YouTube videos. Each page shows the middle bill, the middle half and the sample size. Costs vary by shop and region.</p>'
-            '<h2>Every repair, most reports first</h2><input class="cf-q" type="search" placeholder="Filter, e.g. water pump or transmission" aria-label="Filter the repairs" data-filter="#rgrid">'
+            f'<p class="lede">{len(allpts):,} owner repair bills. Each card shows the typical bill.</p>{_CSS}'
+            '<h2>Pick a repair</h2><input class="cf-q" type="search" placeholder="Filter, e.g. water pump or transmission" aria-label="Filter the repairs" data-filter="#rgrid">'
             f'<div class="rcp-all">{grp}<p class="cf-none" hidden>No repair matches. Try a shorter word.</p></div>'
-            + '<h2>The details</h2>' + f'<details class="cpd"><summary>How we count</summary>{_METHOD}</details>'
-            + _qa(hqa) + '<p class="note">Sources: NHTSA owner complaints and YouTube videos, sorted by The Lemon Index. Owner reports, not a price quote.</p></article><script src="/assets/cardfilter.js?v=1" defer></script>')
-    bst = _stats(allpts) if allpts else None
+            + _src_box([], f'<p>Every number on these pages is a bill an owner reported: {_nn:,} from complaints to the U.S. government (NHTSA) and {_ny:,} said out loud in YouTube videos. '
+                       f'{len(allpts):,} bills in all, sorted into {len(RC_HUBS)} repairs and {sum(len(v) for v in RC_MODELP.values())} car pages. Each card shows the typical bill and how many owners reported it.</p>')
+            + _qa(hqa) + '</article><script src="/assets/cardfilter.js?v=1" defer></script>')
     page('/repair-cost/', 'Car Repair Costs: What Owners Actually Paid | The Lemon Index',
          f'What {len(allpts):,} owners reported paying for {len(RC_HUBS)} car repairs: transmission, engine, water pump, timing chain, brakes and more. Middle bill, range and sample size for each.',
-         body, ld=[_faq_ld(hqa)], vis=(_CSS + '<div class="rcp-read rcp-read-h"><div class="rcp-big"><span>Owner repair bills</span><b>' + f'{len(allpts):,}' + f'</b><small>{len(RC_HUBS)} repairs · {sum(len(v) for v in RC_MODELP.values())} car pages</small></div></div>') if bst else '')
+         body, ld=[_faq_ld(hqa)])
     RC_URLS.insert(0, '/repair-cost/')
     print('repair cost pages:', len(RC_URLS), 'indexed,', len(RC_NOINDEX), 'noindex |', sum(len(v) for v in RC_MODELP.values()), 'model pages,', len(RC_HUBS), 'repair pages')

@@ -13,6 +13,14 @@ from bs4 import BeautifulSoup as _SBS
 
 SUB_URLS = []
 SUB_THIN = set()   # subpages with under 60 words of their own (noindex, out of the sitemap)
+# 11-24 (Elijah, BMW S1000RR: "a whole page for the problems ... only 5 bars on it and nothing below it. It doesn't have enough content to
+# deserve its own page ... the bars should just be on the other page as a drop down"; "repairs & costs make sense to have their own page
+# because there's a lot. Same with recalls and safety"). The rule: a card earns its own page only when that page would hold at least
+# SUB_INLINE_WORDS words of its own (the same 60-word line that already marked subpages thin). Under it (one small chart or a short list),
+# the card stays a tap-to-open dropdown on the car page and nothing links to the subpage. The subpage is still written (noindex,follow, out
+# of the sitemap, via SUB_THIN + quality_gate.py) so old links and bookmarks don't 404.
+SUB_INLINE_WORDS = 60
+SUB_INLINE = {}   # subpage url -> card key, for the ones that stayed dropdowns
 SUB_CARS = {
     '/jdm/acura-integra-gs-r/': {
         'name': 'Integra GS-R', 'crumb': '<a href="/jdm/">JDM</a> · <a href="/jdm/acura-integra-gs-r/">Acura Integra GS-R</a>',
@@ -322,6 +330,7 @@ def _sub_hook(path, body, cfg):
     # the subpages (11-19 r2, Elijah: "only have what they clicked for ... short, big header and back arrow"): back arrow, big title, that
     # card's content and its sources. No photo, intro line, other cards, side notes, fine print or feedback box.
     pic = _sb_pic(body)
+    inline = set()   # 11-24 thin cards stay dropdowns on the car page (SUB_INLINE_WORDS)
     for key, rx, slug, label, icon, title, h1, dek, desc in cfg['pages']:
         if not slug or not got.get(key): continue
         h1 = h1 or _sb_title(got[key][0])
@@ -335,7 +344,7 @@ def _sub_hook(path, body, cfg):
         sub = (f'{assets}{SB_CSS}<div class="advp tbl pfp sbp"><section class="sb-top"><a class="sb-back" href="{path}">{_SB_BACK}<span>{E(cfg["name"])}</span></a>'
                f'<h1>{E(h1)}</h1>{pic}</section><div class="pf sb-body">{inner}</div></div>')
         u = f'{path}{slug}/'
-        if len(re.sub(r'<[^>]+>', ' ', inner).split()) < 60: SUB_THIN.add(u)
+        if len(re.sub(r'<[^>]+>', ' ', inner).split()) < SUB_INLINE_WORDS: SUB_THIN.add(u); inline.add(key); SUB_INLINE[u] = key
         if u not in NOFB: globals()['NOFB'] = tuple(NOFB) + (u,)   # no feedback box on these short pages
         page(u, title.replace('&#39;', "'"), desc, sub)
         if u not in SUB_URLS: SUB_URLS.append(u)
@@ -347,7 +356,7 @@ def _sub_hook(path, body, cfg):
     shared = None
     for key, rx, slug, label, icon, title, h1, *_ in cfg['pages']:
         ds = got.get(key) or []
-        if not ds or not slug: continue
+        if not ds or not slug or key in inline: continue   # thin: the card stays a dropdown right here
         sm = ds[0].find('summary', recursive=False)
         u, im = sm.select_one('use') if sm else None, sm.select_one('img[src*="/assets/icons/"]') if sm else None
         multi = len({id(d.find_parent('div', class_='pf-g')) for d in ds}) > 1 or (len(ds) > 1 and ds[0].find_parent('div', class_='pf-g') is not None)

@@ -165,3 +165,23 @@ a.yot-t:hover span { text-decoration: underline; }
   .tbl .tb-hero.yx-hero .tb-img { margin-top: 30px; }
 }
 @media (max-width: 520px) { .tbl .tb-hero.yc-hero .yct-g { display: none; } }   /* phones: the search word under the title is enough; the generation shows in the Every year tab */
+
+/* ---- 11-24 (Elijah: "the selectors for the generation can stretch across the screen better ... look better"): one full-width segmented
+   control, equal segments (like the performance pages' generation track). More generations than fit a phone: the row scrolls sideways
+   (ycar.js centers the picked one). .yot .yot-gs beats cpl.css's phone rule (body .yot-gs: wrap + centered). */
+.yot .yot-gs { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(max-content, 1fr); gap: 4px; width: 100%; max-width: 100%; box-sizing: border-box;
+  margin: 18px 0 4px; padding: 4px; background: #f2f2f5; border-radius: 14px; overflow-x: auto; flex-wrap: nowrap; justify-content: stretch; }
+.yot .yot-g { border-radius: 10px; padding: 9px 14px; gap: 1px; transition: background-color .15s ease; }
+.yot .yot-g:hover:not([aria-pressed="true"]) { background: rgba(0,0,0,.04); }
+.yot .yot-g b { font-size: 15.5px; letter-spacing: -.01em; white-space: nowrap; }
+.yot .yot-g span { white-space: nowrap; }
+.yot .yot-g[aria-pressed="true"] { background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,.1), 0 3px 10px -4px rgba(0,0,0,.18); }
+@media (max-width: 640px) { .yot .yot-gs { margin-top: 14px; gap: 2px; padding: 3px; border-radius: 12px; } .yot .yot-g { padding: 8px 5px; } .yot .yot-g b { font-size: 14px; letter-spacing: -.02em; } .yot .yot-g span { font-size: 11.5px; } }
+
+/* ---- 11-24 (Elijah: no empty "Nothing stands out." column): when only one side has topics, it runs full width (vis_fixes.py marks it
+   .yot-pc1) and the empty side shrinks to one quiet line under it */
+.yot .yot-pc1 { grid-template-columns: minmax(0, 1fr); }
+.yot .yot-pc1 .yot-b { grid-template-columns: minmax(96px, 180px) minmax(0, 1fr) 44px; gap: 14px; }
+.yot .yot-pc1 .yot-b i { height: 8px; }
+.yot-n1 { color: var(--mute); font-size: 14px; margin: 8px 0 0; }
+@media (max-width: 640px) { .yot .yot-pc1 .yot-b { grid-template-columns: minmax(84px, 1fr) minmax(90px, 1.4fr) 40px; gap: 10px; } }

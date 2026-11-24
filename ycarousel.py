@@ -11,7 +11,7 @@ import json, html, os, re
 from bs4 import BeautifulSoup
 E = lambda s: html.escape(str(s), quote=True)
 HERE = os.path.dirname(os.path.abspath(__file__))
-ASSET = '<link rel="stylesheet" href="/assets/ycar.css?v=1"><script src="/assets/ycar.js?v=1" defer></script>'
+ASSET = '<link rel="stylesheet" href="/assets/ycar.css?v=2"><script src="/assets/ycar.js?v=1" defer></script>'
 try: YB = json.load(open(os.path.join(HERE, 'data', 'yt_buyer.json'), encoding='utf-8'))
 except FileNotFoundError: YB = {}
 ORD = lambda n: f'{n}{"th" if 10 <= n % 100 <= 20 else {1: "st", 2: "nd", 3: "rd"}.get(n % 10, "th")}'

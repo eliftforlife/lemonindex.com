@@ -28,3 +28,25 @@
 .n3-blk h2 { margin-bottom: 4px; }
 .n3-blk .n3-row:first-of-type { margin-top: 8px; }
 .pf > .n3-par { margin: 0 auto 18px; }
+
+/* 11-24 (Elijah: "shouldn't these engines have images?"): "Engines in this car" chips become home-page-style cards: name + years on the
+   left, the engine's picture on the right (the same illustration its engine page and /engines/ use). An engine with no picture yet gets a
+   plain engine icon. The row gets .n3-ig from vis_fixes.py (after the date hash). */
+.n3-ig .n3-cs { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; flex-wrap: nowrap; overflow: visible; }
+.n3-ig .n3-c { flex-direction: row; align-items: center; justify-content: space-between; gap: 12px; min-height: 92px; max-width: none; padding: 12px 12px 12px 18px;
+  border: 0; border-radius: 18px; background: #f5f5f7; transition: background-color .15s ease; }
+.n3-ig a.n3-c:hover, .n3-ig a.n3-c:focus-visible { background: #ebebef; }
+.n3-ig .n3-t { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.n3-ig .n3-c b { font-size: 17px; letter-spacing: -.01em; line-height: 1.2; }
+.n3-ig .n3-c small { font-size: 13px; line-height: 1.3; }
+.n3-ig .n3-p { flex: none; display: block; width: 120px; height: 80px; }
+.n3-ig .n3-p img { display: block; width: 100%; height: 100%; max-width: none; object-fit: contain; }
+.n3-ig .n3-p0 { display: grid; place-items: center; width: 56px; height: 56px; border-radius: 14px; background: #fff; color: #86868b; }
+.n3-ig .n3-p0 svg { width: 28px; height: 28px; }
+.n3-ig .n3-more { justify-content: center; text-align: center; }
+@media (max-width: 700px) {
+  .n3-ig .n3-cs { display: grid; grid-template-columns: minmax(0, 1fr); overflow: visible; padding-bottom: 0; }
+  .n3-ig .n3-c { max-width: none; min-height: 80px; padding: 10px 10px 10px 16px; }
+  .n3-ig .n3-c b, .n3-ig .n3-c small { white-space: normal; overflow: visible; }
+  .n3-ig .n3-p { width: 104px; height: 68px; }
+}

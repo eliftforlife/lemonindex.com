@@ -42,7 +42,9 @@ def _qg_thin(u):
     if re.fullmatch(r'/check-engine-light/[^/]+/[^/]+/', u):
         n = _qg_num(u, r'in (\d[\d,]*) complaints'); return 'few complaints' if n is not None and n < 25 else None
     if re.fullmatch(r'/compare/[^/]+/', u): return 'compare'
-    if re.fullmatch(r'/(?:motorcycles|planes)/[^/]+/[^/]+/', u): return 'auto year page'
+    # 11-24: motorcycle Repairs / Recalls sub-pages are real pages (Elijah: they deserve their own page); thin ones are
+    # already noindexed by sub_pages.py's 60-word rule, so only the other auto pages fall under this blanket rule
+    if re.fullmatch(r'/motorcycles/[^/]+/(?!repairs/|recalls/)[^/]+/', u) or re.fullmatch(r'/planes/[^/]+/[^/]+/', u): return 'auto year page'
     return None
 
 if QM.ON:
