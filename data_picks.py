@@ -23,7 +23,7 @@ SKIP = {'chevrolet-express', 'gmc-savana', 'ford-e-series', 'ford-transit', 'for
         'ram-promaster-city', 'nissan-nv', 'nissan-nv200'}   # work vans: fleet-sold, complaints per car run unrealistically low
 MIN_SOLD = 15000
 GROUPS = [('car', 'Cars (sedans, hatchbacks, coupes)'), ('suv', 'SUVs'), ('truck', 'Trucks'), ('minivan', 'Minivans')]
-TIERS = [('u5', 'Under $5,000', 0, 5000), ('5-10', '$5,000 to $10,000', 5000, 10000), ('10+', 'Over $10,000', 10000, 10 ** 9)]
+TIERS = [('u5', 'Under $5,000', 0, 5000), ('5-10', '$5,000 to $10,000', 5000, 10000), ('10-20', '$10,000 to $20,000', 10000, 20000), ('20+', 'Over $20,000', 20000, 10 ** 9)]
 TOP = 5
 TWINS = [('chevrolet-silverado', 'gmc-sierra'), ('chevrolet-s-10', 'gmc-sonoma'), ('chevrolet-tahoe', 'gmc-yukon'), ('chevrolet-suburban', 'gmc-yukon-xl'),
          ('chevrolet-colorado', 'gmc-canyon'), ('dodge-grand-caravan', 'chrysler-town-and-country'), ('ford-escape', 'mazda-tribute')]
@@ -137,7 +137,7 @@ if __name__ == '__main__':
     SL = {re.sub(r'[^a-z0-9]+', '-', n.lower()).strip('-'): n for n in SN}
     def mis(c): a, b = round(c['mi'][0] / 1000), round(c['mi'][1] / 1000); return f'{a}K' if a == b else f'{a}–{b}K'
     md = ['# Best for the price: picks for review (11-24)', '',
-          'Per group: 5 best picks under $5K, $5–10K and over $10K, once by private-seller price and once by dealer price (30 per group). '
+          'Per group: 5 best picks under $5K, $5–10K, $10–20K and over $20K, once by private-seller price and once by dealer price (40 per group). '
           'A pick is a run of years in one generation, all scored average or better on the Lemon Index (100 = average car, lower = fewer complaints). '
           'Score = 60% reliability + 40% YouTube buyer score + a small bonus for a longer run. Prices are our AI estimates at the typical miles for those years (November 2026).', '']
     for g, gl in GROUPS:

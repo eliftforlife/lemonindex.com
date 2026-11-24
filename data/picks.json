@@ -245,53 +245,29 @@
     ]
    }
   ],
-  "car|private|10+": [
+  "car|private|10-20": [
    {
     "id": "bmw-3-series",
     "name": "BMW 3 Series",
     "y0": 2019,
-    "y1": 2022,
+    "y1": 2019,
     "gen": "7th generation (G20)",
-    "li": 19,
-    "yt": 57,
+    "li": 13,
+    "yt": 55,
     "yt_src": "years",
-    "sold": 263976,
-    "score": 82.2,
+    "sold": 73287,
+    "score": 77.3,
     "p": [
      16500,
-     28000
+     20000
     ],
     "d": [
      19500,
-     31750
+     23250
     ],
     "mi": [
-     44000,
+     77000,
      77000
-    ]
-   },
-   {
-    "id": "chevrolet-camaro",
-    "name": "Chevrolet Camaro",
-    "y0": 2018,
-    "y1": 2022,
-    "gen": "6th generation",
-    "li": 39,
-    "yt": 62,
-    "yt_src": "years",
-    "sold": 175548,
-    "score": 76.2,
-    "p": [
-     15750,
-     24250
-    ],
-    "d": [
-     18250,
-     27500
-    ],
-    "mi": [
-     32000,
-     62000
     ]
    },
    {
@@ -364,6 +340,152 @@
     "mi": [
      100000,
      108000
+    ]
+   },
+   {
+    "id": "infiniti-q50",
+    "name": "Infiniti Q50",
+    "y0": 2016,
+    "y1": 2019,
+    "gen": "1st generation",
+    "li": 36,
+    "yt": 58,
+    "yt_src": "years",
+    "sold": 162029,
+    "score": 72.7,
+    "p": [
+     9000,
+     18000
+    ],
+    "d": [
+     11250,
+     21000
+    ],
+    "mi": [
+     77000,
+     110000
+    ]
+   }
+  ],
+  "car|private|20+": [
+   {
+    "id": "dodge-charger",
+    "name": "Dodge Charger",
+    "y0": 2022,
+    "y1": 2022,
+    "gen": "7th generation (LD)",
+    "li": 8,
+    "yt": 63,
+    "yt_src": "years",
+    "sold": 80074,
+    "score": 89.5,
+    "p": [
+     19000,
+     23250
+    ],
+    "d": [
+     21750,
+     26250
+    ],
+    "mi": [
+     48000,
+     48000
+    ]
+   },
+   {
+    "id": "dodge-challenger",
+    "name": "Dodge Challenger",
+    "y0": 2020,
+    "y1": 2022,
+    "gen": "3rd generation",
+    "li": 20,
+    "yt": 62,
+    "yt_src": "years",
+    "sold": 162329,
+    "score": 85.6,
+    "p": [
+     18000,
+     25500
+    ],
+    "d": [
+     21000,
+     29000
+    ],
+    "mi": [
+     38000,
+     58000
+    ]
+   },
+   {
+    "id": "chevrolet-camaro",
+    "name": "Chevrolet Camaro",
+    "y0": 2021,
+    "y1": 2022,
+    "gen": "6th generation",
+    "li": 26,
+    "yt": 64,
+    "yt_src": "years",
+    "sold": 46545,
+    "score": 82.1,
+    "p": [
+     19000,
+     24250
+    ],
+    "d": [
+     21750,
+     27500
+    ],
+    "mi": [
+     32000,
+     40000
+    ]
+   },
+   {
+    "id": "toyota-camry",
+    "name": "Toyota Camry",
+    "y0": 2022,
+    "y1": 2022,
+    "gen": "8th generation (XV70)",
+    "li": 13,
+    "yt": 59,
+    "yt_src": "years",
+    "sold": 295201,
+    "score": 81.9,
+    "p": [
+     18500,
+     21500
+    ],
+    "d": [
+     21250,
+     24500
+    ],
+    "mi": [
+     46000,
+     46000
+    ]
+   },
+   {
+    "id": "bmw-3-series",
+    "name": "BMW 3 Series",
+    "y0": 2020,
+    "y1": 2022,
+    "gen": "7th generation (G20)",
+    "li": 22,
+    "yt": 58,
+    "yt_src": "years",
+    "sold": 190689,
+    "score": 79.6,
+    "p": [
+     18500,
+     28000
+    ],
+    "d": [
+     21500,
+     31750
+    ],
+    "mi": [
+     44000,
+     66000
     ]
    }
   ],
@@ -611,55 +733,7 @@
     ]
    }
   ],
-  "car|dealer|10+": [
-   {
-    "id": "bmw-3-series",
-    "name": "BMW 3 Series",
-    "y0": 2019,
-    "y1": 2022,
-    "gen": "7th generation (G20)",
-    "li": 19,
-    "yt": 57,
-    "yt_src": "years",
-    "sold": 263976,
-    "score": 82.2,
-    "p": [
-     16500,
-     28000
-    ],
-    "d": [
-     19500,
-     31750
-    ],
-    "mi": [
-     44000,
-     77000
-    ]
-   },
-   {
-    "id": "chevrolet-camaro",
-    "name": "Chevrolet Camaro",
-    "y0": 2018,
-    "y1": 2022,
-    "gen": "6th generation",
-    "li": 39,
-    "yt": 62,
-    "yt_src": "years",
-    "sold": 175548,
-    "score": 76.2,
-    "p": [
-     15750,
-     24250
-    ],
-    "d": [
-     18250,
-     27500
-    ],
-    "mi": [
-     32000,
-     62000
-    ]
-   },
+  "car|dealer|10-20": [
    {
     "id": "lexus-es",
     "name": "Lexus ES",
@@ -682,6 +756,30 @@
     "mi": [
      88000,
      143000
+    ]
+   },
+   {
+    "id": "bmw-5-series",
+    "name": "BMW 5 Series",
+    "y0": 2017,
+    "y1": 2017,
+    "gen": "7th generation (G30)",
+    "li": 21,
+    "yt": 58,
+    "yt_src": "years",
+    "sold": 40658,
+    "score": 76.0,
+    "p": [
+     14000,
+     17500
+    ],
+    "d": [
+     17000,
+     20750
+    ],
+    "mi": [
+     90000,
+     90000
     ]
    },
    {
@@ -709,27 +807,173 @@
     ]
    },
    {
-    "id": "toyota-camry",
-    "name": "Toyota Camry",
+    "id": "mazda3",
+    "name": "Mazda3",
+    "y0": 2016,
+    "y1": 2018,
+    "gen": "3rd generation",
+    "li": 35,
+    "yt": 57,
+    "yt_src": "years",
+    "sold": 235223,
+    "score": 70.5,
+    "p": [
+     7750,
+     12500
+    ],
+    "d": [
+     9750,
+     14750
+    ],
+    "mi": [
+     96000,
+     120000
+    ]
+   },
+   {
+    "id": "infiniti-g37",
+    "name": "Infiniti G37",
+    "y0": 2013,
+    "y1": 2013,
+    "gen": "1st generation",
+    "li": 21,
+    "yt": 53,
+    "yt_src": "years",
+    "sold": 40062,
+    "score": 70.3,
+    "p": [
+     7750,
+     9750
+    ],
+    "d": [
+     9750,
+     12000
+    ],
+    "mi": [
+     125000,
+     125000
+    ]
+   }
+  ],
+  "car|dealer|20+": [
+   {
+    "id": "dodge-charger",
+    "name": "Dodge Charger",
+    "y0": 2020,
+    "y1": 2022,
+    "gen": "7th generation (LD)",
+    "li": 20,
+    "yt": 63,
+    "yt_src": "years",
+    "sold": 235888,
+    "score": 86.4,
+    "p": [
+     15500,
+     23250
+    ],
+    "d": [
+     18000,
+     26250
+    ],
+    "mi": [
+     48000,
+     72000
+    ]
+   },
+   {
+    "id": "bmw-3-series",
+    "name": "BMW 3 Series",
     "y0": 2019,
     "y1": 2022,
-    "gen": "8th generation (XV70)",
-    "li": 39,
-    "yt": 59,
+    "gen": "7th generation (G20)",
+    "li": 19,
+    "yt": 57,
     "yt_src": "years",
-    "sold": 1240322,
-    "score": 72.2,
+    "sold": 263976,
+    "score": 82.2,
     "p": [
-     14750,
+     16500,
+     28000
+    ],
+    "d": [
+     19500,
+     31750
+    ],
+    "mi": [
+     44000,
+     77000
+    ]
+   },
+   {
+    "id": "dodge-challenger",
+    "name": "Dodge Challenger",
+    "y0": 2018,
+    "y1": 2022,
+    "gen": "3rd generation",
+    "li": 37,
+    "yt": 62,
+    "yt_src": "years",
+    "sold": 290042,
+    "score": 76.9,
+    "p": [
+     15500,
+     25500
+    ],
+    "d": [
+     18250,
+     29000
+    ],
+    "mi": [
+     38000,
+     77000
+    ]
+   },
+   {
+    "id": "toyota-camry",
+    "name": "Toyota Camry",
+    "y0": 2020,
+    "y1": 2022,
+    "gen": "8th generation (XV70)",
+    "li": 30,
+    "yt": 60,
+    "yt_src": "years",
+    "sold": 903344,
+    "score": 76.5,
+    "p": [
+     16000,
      21500
     ],
     "d": [
-     17250,
+     18500,
      24500
     ],
     "mi": [
      46000,
-     76000
+     66000
+    ]
+   },
+   {
+    "id": "chevrolet-camaro",
+    "name": "Chevrolet Camaro",
+    "y0": 2018,
+    "y1": 2022,
+    "gen": "6th generation",
+    "li": 39,
+    "yt": 62,
+    "yt_src": "years",
+    "sold": 175548,
+    "score": 76.2,
+    "p": [
+     15750,
+     24250
+    ],
+    "d": [
+     18250,
+     27500
+    ],
+    "mi": [
+     32000,
+     62000
     ]
    }
   ],
@@ -977,7 +1221,130 @@
     ]
    }
   ],
-  "suv|private|10+": [
+  "suv|private|10-20": [
+   {
+    "id": "lexus-rx",
+    "name": "Lexus RX",
+    "y0": 2012,
+    "y1": 2015,
+    "gen": "3rd generation",
+    "li": 19,
+    "yt": 52,
+    "yt_src": "years",
+    "sold": 407401,
+    "score": 76.8,
+    "p": [
+     9500,
+     15500
+    ],
+    "d": [
+     11750,
+     18250
+    ],
+    "mi": [
+     125000,
+     155000
+    ]
+   },
+   {
+    "id": "mazda-cx-9",
+    "name": "Mazda CX-9",
+    "y0": 2017,
+    "y1": 2020,
+    "gen": "2nd generation",
+    "li": 39,
+    "yt": 59,
+    "yt_src": "years",
+    "sold": 108584,
+    "score": 71.8,
+    "p": [
+     11750,
+     20000
+    ],
+    "d": [
+     14000,
+     23000
+    ],
+    "mi": [
+     72000,
+     108000
+    ]
+   },
+   {
+    "id": "mazda-cx-5",
+    "name": "Mazda CX-5",
+    "y0": 2017,
+    "y1": 2022,
+    "gen": "2nd generation",
+    "li": 43,
+    "yt": 60,
+    "yt_src": "years",
+    "sold": 899192,
+    "score": 71.2,
+    "p": [
+     11000,
+     20750
+    ],
+    "d": [
+     13250,
+     23750
+    ],
+    "mi": [
+     48000,
+     108000
+    ]
+   },
+   {
+    "id": "toyota-4runner",
+    "name": "Toyota 4Runner",
+    "y0": 2010,
+    "y1": 2013,
+    "gen": "5th generation",
+    "li": 27,
+    "yt": 51,
+    "yt_src": "years",
+    "sold": 191227,
+    "score": 70.4,
+    "p": [
+     13500,
+     20500
+    ],
+    "d": [
+     16000,
+     23500
+    ],
+    "mi": [
+     118000,
+     140000
+    ]
+   },
+   {
+    "id": "gmc-yukon-xl",
+    "name": "GMC Yukon XL",
+    "y0": 2011,
+    "y1": 2013,
+    "gen": "3rd generation (GMT900)",
+    "li": 21,
+    "yt": 50,
+    "yt_src": "years",
+    "sold": 79908,
+    "score": 70.2,
+    "p": [
+     9250,
+     15500
+    ],
+    "d": [
+     11500,
+     18250
+    ],
+    "mi": [
+     156000,
+     180000
+    ],
+    "twin": "Chevrolet Suburban"
+   }
+  ],
+  "suv|private|20+": [
    {
     "id": "porsche-macan",
     "name": "Porsche Macan",
@@ -1005,49 +1372,49 @@
    {
     "id": "lexus-rx",
     "name": "Lexus RX",
-    "y0": 2012,
-    "y1": 2015,
-    "gen": "3rd generation",
-    "li": 19,
-    "yt": 52,
+    "y0": 2018,
+    "y1": 2022,
+    "gen": "4th generation",
+    "li": 29,
+    "yt": 61,
     "yt_src": "years",
-    "sold": 407401,
-    "score": 76.8,
+    "sold": 535097,
+    "score": 80.1,
     "p": [
-     9500,
-     15500
+     18500,
+     37500
     ],
     "d": [
-     11750,
-     18250
+     21500,
+     42000
     ],
     "mi": [
-     125000,
-     155000
+     45000,
+     95000
     ]
    },
    {
     "id": "toyota-4runner",
     "name": "Toyota 4Runner",
-    "y0": 2010,
+    "y0": 2014,
     "y1": 2022,
     "gen": "5th generation",
     "li": 26,
-    "yt": 55,
+    "yt": 56,
     "yt_src": "years",
-    "sold": 1271762,
-    "score": 75.4,
+    "sold": 1080535,
+    "score": 76.0,
     "p": [
-     13500,
+     18000,
      34250
     ],
     "d": [
-     16000,
+     20750,
      38250
     ],
     "mi": [
      48000,
-     140000
+     110000
     ]
    },
    {
@@ -1076,27 +1443,27 @@
     "twin": "Chevrolet Tahoe"
    },
    {
-    "id": "mazda-cx-5",
-    "name": "Mazda CX-5",
-    "y0": 2017,
+    "id": "cadillac-xt5",
+    "name": "Cadillac XT5",
+    "y0": 2020,
     "y1": 2022,
-    "gen": "2nd generation",
-    "li": 43,
-    "yt": 60,
+    "gen": "1st generation",
+    "li": 24,
+    "yt": 53,
     "yt_src": "years",
-    "sold": 899192,
-    "score": 71.2,
+    "sold": 90943,
+    "score": 72.4,
     "p": [
-     11000,
-     20750
+     19500,
+     29500
     ],
     "d": [
-     13250,
-     23750
+     22500,
+     33250
     ],
     "mi": [
-     48000,
-     108000
+     45000,
+     65000
     ]
    }
   ],
@@ -1344,7 +1711,130 @@
     ]
    }
   ],
-  "suv|dealer|10+": [
+  "suv|dealer|10-20": [
+   {
+    "id": "gmc-yukon-xl",
+    "name": "GMC Yukon XL",
+    "y0": 2010,
+    "y1": 2013,
+    "gen": "3rd generation (GMT900)",
+    "li": 18,
+    "yt": 49,
+    "yt_src": "years",
+    "sold": 103705,
+    "score": 73.6,
+    "p": [
+     8000,
+     15500
+    ],
+    "d": [
+     10250,
+     18250
+    ],
+    "mi": [
+     156000,
+     192000
+    ],
+    "twin": "Chevrolet Suburban"
+   },
+   {
+    "id": "mazda-cx-5",
+    "name": "Mazda CX-5",
+    "y0": 2017,
+    "y1": 2020,
+    "gen": "2nd generation",
+    "li": 40,
+    "yt": 59,
+    "yt_src": "years",
+    "sold": 579150,
+    "score": 71.3,
+    "p": [
+     11000,
+     17750
+    ],
+    "d": [
+     13250,
+     20500
+    ],
+    "mi": [
+     72000,
+     108000
+    ]
+   },
+   {
+    "id": "buick-encore",
+    "name": "Buick Encore",
+    "y0": 2017,
+    "y1": 2020,
+    "gen": "1st generation",
+    "li": 27,
+    "yt": 52,
+    "yt_src": "years",
+    "sold": 325262,
+    "score": 71.3,
+    "p": [
+     7500,
+     13000
+    ],
+    "d": [
+     9250,
+     15250
+    ],
+    "mi": [
+     72000,
+     108000
+    ]
+   },
+   {
+    "id": "mitsubishi-outlander-sport",
+    "name": "Mitsubishi Outlander Sport",
+    "y0": 2017,
+    "y1": 2021,
+    "gen": "1st generation",
+    "li": 34,
+    "yt": 55,
+    "yt_src": "years",
+    "sold": 169009,
+    "score": 70.8,
+    "p": [
+     7750,
+     14500
+    ],
+    "d": [
+     9750,
+     17000
+    ],
+    "mi": [
+     50000,
+     88000
+    ]
+   },
+   {
+    "id": "bmw-x3",
+    "name": "BMW X3",
+    "y0": 2018,
+    "y1": 2018,
+    "gen": "3rd generation (G01)",
+    "li": 32,
+    "yt": 59,
+    "yt_src": "years",
+    "sold": 61351,
+    "score": 70.5,
+    "p": [
+     14750,
+     18000
+    ],
+    "d": [
+     17500,
+     21000
+    ],
+    "mi": [
+     88000,
+     88000
+    ]
+   }
+  ],
+  "suv|dealer|20+": [
    {
     "id": "porsche-macan",
     "name": "Porsche Macan",
@@ -1372,75 +1862,74 @@
    {
     "id": "lexus-rx",
     "name": "Lexus RX",
-    "y0": 2016,
+    "y0": 2017,
     "y1": 2022,
     "gen": "4th generation",
-    "li": 33,
+    "li": 31,
     "yt": 60,
     "yt_src": "years",
-    "sold": 752839,
-    "score": 76.8,
+    "sold": 643404,
+    "score": 78.8,
     "p": [
-     15000,
+     16500,
      37500
     ],
     "d": [
-     17750,
+     19250,
      42000
     ],
     "mi": [
      45000,
-     115000
+     105000
     ]
    },
    {
     "id": "toyota-4runner",
     "name": "Toyota 4Runner",
-    "y0": 2010,
+    "y0": 2013,
     "y1": 2022,
     "gen": "5th generation",
-    "li": 26,
-    "yt": 55,
+    "li": 25,
+    "yt": 56,
     "yt_src": "years",
-    "sold": 1271762,
-    "score": 75.4,
+    "sold": 1132160,
+    "score": 76.6,
     "p": [
-     13500,
+     16500,
      34250
     ],
     "d": [
-     16000,
+     19000,
      38250
     ],
     "mi": [
      48000,
-     140000
+     118000
     ]
    },
    {
-    "id": "gmc-yukon-xl",
-    "name": "GMC Yukon XL",
-    "y0": 2010,
-    "y1": 2013,
-    "gen": "3rd generation (GMT900)",
-    "li": 18,
-    "yt": 49,
+    "id": "cadillac-xt5",
+    "name": "Cadillac XT5",
+    "y0": 2019,
+    "y1": 2022,
+    "gen": "1st generation",
+    "li": 24,
+    "yt": 52,
     "yt_src": "years",
-    "sold": 103705,
-    "score": 73.6,
+    "sold": 140822,
+    "score": 73.3,
     "p": [
-     8000,
-     15500
+     17000,
+     29500
     ],
     "d": [
-     10250,
-     18250
+     19750,
+     33250
     ],
     "mi": [
-     156000,
-     192000
-    ],
-    "twin": "Chevrolet Suburban"
+     45000,
+     75000
+    ]
    },
    {
     "id": "gmc-yukon",
@@ -1690,28 +2179,28 @@
     ]
    }
   ],
-  "truck|private|10+": [
+  "truck|private|10-20": [
    {
     "id": "nissan-frontier",
     "name": "Nissan Frontier",
     "y0": 2014,
-    "y1": 2021,
+    "y1": 2020,
     "gen": "2nd generation (D40)",
     "li": 22,
     "yt": 53,
     "yt_src": "years",
-    "sold": 547979,
-    "score": 75.3,
+    "sold": 487286,
+    "score": 75.5,
     "p": [
      9250,
-     22500
+     21000
     ],
     "d": [
      11500,
-     25750
+     24250
     ],
     "mi": [
-     60000,
+     72000,
      144000
     ]
    },
@@ -1719,48 +2208,24 @@
     "id": "toyota-tundra",
     "name": "Toyota Tundra",
     "y0": 2010,
-    "y1": 2021,
+    "y1": 2014,
     "gen": "2nd generation",
-    "li": 33,
-    "yt": 56,
+    "li": 29,
+    "yt": 53,
     "yt_src": "years",
-    "sold": 1280810,
-    "score": 72.8,
+    "sold": 509063,
+    "score": 71.2,
     "p": [
      10500,
-     40000
+     21500
     ],
     "d": [
      12750,
-     42000
+     24750
     ],
     "mi": [
-     62000,
+     140000,
      172000
-    ]
-   },
-   {
-    "id": "toyota-tacoma",
-    "name": "Toyota Tacoma",
-    "y0": 2017,
-    "y1": 2022,
-    "gen": "3rd generation",
-    "li": 40,
-    "yt": 57,
-    "yt_src": "years",
-    "sold": 1421212,
-    "score": 69.4,
-    "p": [
-     18500,
-     34000
-    ],
-    "d": [
-     21500,
-     35750
-    ],
-    "mi": [
-     48000,
-     112000
     ]
    },
    {
@@ -1789,29 +2254,176 @@
     "twin": "GMC Sierra"
    },
    {
+    "id": "toyota-tacoma",
+    "name": "Toyota Tacoma",
+    "y0": 2010,
+    "y1": 2015,
+    "gen": "2nd generation",
+    "li": 35,
+    "yt": 52,
+    "yt_src": "years",
+    "sold": 852356,
+    "score": 66.7,
+    "p": [
+     11500,
+     19500
+    ],
+    "d": [
+     14000,
+     22500
+    ],
+    "mi": [
+     135000,
+     183000
+    ]
+   },
+   {
     "id": "gmc-canyon",
     "name": "GMC Canyon",
     "y0": 2017,
-    "y1": 2022,
+    "y1": 2019,
     "gen": "2nd generation",
-    "li": 48,
-    "yt": 54,
+    "li": 56,
+    "yt": 55,
     "yt_src": "years",
-    "sold": 175557,
-    "score": 61.3,
+    "sold": 98423,
+    "score": 55.3,
     "p": [
      14000,
-     28250
+     21750
     ],
     "d": [
      16500,
+     25000
+    ],
+    "mi": [
+     84000,
+     108000
+    ],
+    "twin": "Chevrolet Colorado"
+   }
+  ],
+  "truck|private|20+": [
+   {
+    "id": "toyota-tundra",
+    "name": "Toyota Tundra",
+    "y0": 2015,
+    "y1": 2021,
+    "gen": "2nd generation",
+    "li": 36,
+    "yt": 57,
+    "yt_src": "years",
+    "sold": 771747,
+    "score": 71.7,
+    "p": [
+     18000,
+     40000
+    ],
+    "d": [
+     21000,
+     42000
+    ],
+    "mi": [
+     62000,
+     130000
+    ]
+   },
+   {
+    "id": "toyota-tacoma",
+    "name": "Toyota Tacoma",
+    "y0": 2017,
+    "y1": 2022,
+    "gen": "3rd generation",
+    "li": 40,
+    "yt": 57,
+    "yt_src": "years",
+    "sold": 1421212,
+    "score": 69.4,
+    "p": [
+     18500,
+     34000
+    ],
+    "d": [
+     21500,
+     35750
+    ],
+    "mi": [
+     48000,
+     112000
+    ]
+   },
+   {
+    "id": "nissan-frontier",
+    "name": "Nissan Frontier",
+    "y0": 2021,
+    "y1": 2021,
+    "gen": "2nd generation (D40)",
+    "li": 24,
+    "yt": 53,
+    "yt_src": "model",
+    "sold": 60693,
+    "score": 67.9,
+    "p": [
+     18500,
+     22500
+    ],
+    "d": [
+     21500,
+     25750
+    ],
+    "mi": [
+     60000,
+     60000
+    ]
+   },
+   {
+    "id": "gmc-canyon",
+    "name": "GMC Canyon",
+    "y0": 2020,
+    "y1": 2022,
+    "gen": "2nd generation",
+    "li": 37,
+    "yt": 53,
+    "yt_src": "years",
+    "sold": 77134,
+    "score": 65.0,
+    "p": [
+     18500,
+     28250
+    ],
+    "d": [
+     21500,
      32000
     ],
     "mi": [
      48000,
-     108000
+     72000
     ],
     "twin": "Chevrolet Colorado"
+   },
+   {
+    "id": "ford-ranger",
+    "name": "Ford Ranger",
+    "y0": 2020,
+    "y1": 2022,
+    "gen": "4th generation",
+    "li": 50,
+    "yt": 55,
+    "yt_src": "years",
+    "sold": 253227,
+    "score": 58.9,
+    "p": [
+     21500,
+     29500
+    ],
+    "d": [
+     24500,
+     33250
+    ],
+    "mi": [
+     48000,
+     72000
+    ]
    }
   ],
   "truck|dealer|u5": [
@@ -1964,77 +2576,53 @@
     ]
    }
   ],
-  "truck|dealer|10+": [
-   {
-    "id": "toyota-tundra",
-    "name": "Toyota Tundra",
-    "y0": 2010,
-    "y1": 2021,
-    "gen": "2nd generation",
-    "li": 33,
-    "yt": 56,
-    "yt_src": "years",
-    "sold": 1280810,
-    "score": 72.8,
-    "p": [
-     10500,
-     40000
-    ],
-    "d": [
-     12750,
-     42000
-    ],
-    "mi": [
-     62000,
-     172000
-    ]
-   },
+  "truck|dealer|10-20": [
    {
     "id": "nissan-frontier",
     "name": "Nissan Frontier",
     "y0": 2011,
-    "y1": 2021,
+    "y1": 2019,
     "gen": "2nd generation (D40)",
-    "li": 26,
+    "li": 27,
     "yt": 52,
     "yt_src": "years",
-    "sold": 717951,
-    "score": 71.7,
+    "sold": 620413,
+    "score": 71.3,
     "p": [
      7250,
-     22500
+     18000
     ],
     "d": [
      9250,
-     25750
+     21000
     ],
     "mi": [
-     60000,
+     84000,
      160000
     ]
    },
    {
-    "id": "toyota-tacoma",
-    "name": "Toyota Tacoma",
-    "y0": 2017,
-    "y1": 2022,
-    "gen": "3rd generation",
-    "li": 40,
-    "yt": 57,
-    "yt_src": "years",
-    "sold": 1421212,
+    "id": "toyota-tundra",
+    "name": "Toyota Tundra",
+    "y0": 2010,
+    "y1": 2013,
+    "gen": "2nd generation",
+    "li": 30,
+    "yt": 52,
+    "yt_src": "model",
+    "sold": 390570,
     "score": 69.4,
     "p": [
-     18500,
-     34000
+     10500,
+     18000
     ],
     "d": [
-     21500,
-     35750
+     12750,
+     21000
     ],
     "mi": [
-     48000,
-     112000
+     148000,
+     172000
     ]
    },
    {
@@ -2063,29 +2651,175 @@
     "twin": "GMC Sierra"
    },
    {
-    "id": "gmc-canyon",
-    "name": "GMC Canyon",
+    "id": "toyota-tacoma",
+    "name": "Toyota Tacoma",
+    "y0": 2010,
+    "y1": 2014,
+    "gen": "2nd generation",
+    "li": 37,
+    "yt": 52,
+    "yt_src": "years",
+    "sold": 672794,
+    "score": 65.1,
+    "p": [
+     11500,
+     18500
+    ],
+    "d": [
+     14000,
+     21500
+    ],
+    "mi": [
+     145000,
+     183000
+    ]
+   },
+   {
+    "id": "chevrolet-colorado",
+    "name": "Chevrolet Colorado",
+    "y0": 2012,
+    "y1": 2012,
+    "gen": "1st generation",
+    "li": 38,
+    "yt": 47,
+    "yt_src": "years",
+    "sold": 40252,
+    "score": 53.2,
+    "p": [
+     7000,
+     9250
+    ],
+    "d": [
+     8750,
+     11500
+    ],
+    "mi": [
+     168000,
+     168000
+    ]
+   }
+  ],
+  "truck|dealer|20+": [
+   {
+    "id": "toyota-tundra",
+    "name": "Toyota Tundra",
+    "y0": 2014,
+    "y1": 2021,
+    "gen": "2nd generation",
+    "li": 35,
+    "yt": 56,
+    "yt_src": "years",
+    "sold": 890240,
+    "score": 71.7,
+    "p": [
+     16500,
+     40000
+    ],
+    "d": [
+     19250,
+     42000
+    ],
+    "mi": [
+     62000,
+     140000
+    ]
+   },
+   {
+    "id": "nissan-frontier",
+    "name": "Nissan Frontier",
+    "y0": 2020,
+    "y1": 2021,
+    "gen": "2nd generation (D40)",
+    "li": 24,
+    "yt": 53,
+    "yt_src": "years",
+    "sold": 97538,
+    "score": 70.2,
+    "p": [
+     17000,
+     22500
+    ],
+    "d": [
+     19750,
+     25750
+    ],
+    "mi": [
+     60000,
+     72000
+    ]
+   },
+   {
+    "id": "toyota-tacoma",
+    "name": "Toyota Tacoma",
     "y0": 2017,
     "y1": 2022,
+    "gen": "3rd generation",
+    "li": 40,
+    "yt": 57,
+    "yt_src": "years",
+    "sold": 1421212,
+    "score": 69.4,
+    "p": [
+     18500,
+     34000
+    ],
+    "d": [
+     21500,
+     35750
+    ],
+    "mi": [
+     48000,
+     112000
+    ]
+   },
+   {
+    "id": "gmc-canyon",
+    "name": "GMC Canyon",
+    "y0": 2018,
+    "y1": 2022,
     "gen": "2nd generation",
-    "li": 48,
+    "li": 38,
     "yt": 54,
     "yt_src": "years",
-    "sold": 175557,
-    "score": 61.3,
+    "sold": 143451,
+    "score": 67.3,
     "p": [
-     14000,
+     15500,
      28250
     ],
     "d": [
-     16500,
+     18250,
      32000
     ],
     "mi": [
      48000,
-     108000
+     96000
     ],
     "twin": "Chevrolet Colorado"
+   },
+   {
+    "id": "ford-ranger",
+    "name": "Ford Ranger",
+    "y0": 2020,
+    "y1": 2022,
+    "gen": "4th generation",
+    "li": 50,
+    "yt": 55,
+    "yt_src": "years",
+    "sold": 253227,
+    "score": 58.9,
+    "p": [
+     21500,
+     29500
+    ],
+    "d": [
+     24500,
+     33250
+    ],
+    "mi": [
+     48000,
+     72000
+    ]
    }
   ],
   "minivan|private|u5": [
@@ -2286,31 +3020,7 @@
     "twin": "Dodge Grand Caravan"
    }
   ],
-  "minivan|private|10+": [
-   {
-    "id": "toyota-sienna",
-    "name": "Toyota Sienna",
-    "y0": 2014,
-    "y1": 2020,
-    "gen": "3rd generation",
-    "li": 52,
-    "yt": 51,
-    "yt_src": "years",
-    "sold": 813411,
-    "score": 55.6,
-    "p": [
-     9500,
-     23000
-    ],
-    "d": [
-     11500,
-     26250
-    ],
-    "mi": [
-     72000,
-     144000
-    ]
-   },
+  "minivan|private|10-20": [
    {
     "id": "honda-odyssey",
     "name": "Honda Odyssey",
@@ -2336,6 +3046,30 @@
     ]
    },
    {
+    "id": "toyota-sienna",
+    "name": "Toyota Sienna",
+    "y0": 2014,
+    "y1": 2019,
+    "gen": "3rd generation",
+    "li": 60,
+    "yt": 51,
+    "yt_src": "years",
+    "sold": 662536,
+    "score": 50.7,
+    "p": [
+     9500,
+     21000
+    ],
+    "d": [
+     11500,
+     24000
+    ],
+    "mi": [
+     84000,
+     144000
+    ]
+   },
+   {
     "id": "dodge-grand-caravan",
     "name": "Dodge Grand Caravan",
     "y0": 2017,
@@ -2357,6 +3091,56 @@
     "mi": [
      72000,
      106000
+    ]
+   }
+  ],
+  "minivan|private|20+": [
+   {
+    "id": "toyota-sienna",
+    "name": "Toyota Sienna",
+    "y0": 2020,
+    "y1": 2020,
+    "gen": "3rd generation",
+    "li": 16,
+    "yt": 51,
+    "yt_src": "years",
+    "sold": 150875,
+    "score": 71.0,
+    "p": [
+     19000,
+     23000
+    ],
+    "d": [
+     21750,
+     26250
+    ],
+    "mi": [
+     72000,
+     72000
+    ]
+   },
+   {
+    "id": "honda-odyssey",
+    "name": "Honda Odyssey",
+    "y0": 2021,
+    "y1": 2021,
+    "gen": "5th generation",
+    "li": 82,
+    "yt": 60,
+    "yt_src": "years",
+    "sold": 76125,
+    "score": 41.7,
+    "p": [
+     23000,
+     27000
+    ],
+    "d": [
+     26000,
+     30250
+    ],
+    "mi": [
+     54000,
+     54000
     ]
    }
   ],
@@ -2557,28 +3341,28 @@
     ]
    }
   ],
-  "minivan|dealer|10+": [
+  "minivan|dealer|10-20": [
    {
     "id": "toyota-sienna",
     "name": "Toyota Sienna",
     "y0": 2012,
-    "y1": 2020,
+    "y1": 2018,
     "gen": "3rd generation",
-    "li": 48,
+    "li": 55,
     "yt": 51,
     "yt_src": "years",
-    "sold": 1049253,
-    "score": 57.5,
+    "sold": 824793,
+    "score": 53.1,
     "p": [
      7750,
-     23000
+     19000
     ],
     "d": [
      9750,
-     26250
+     21750
     ],
     "mi": [
-     72000,
+     96000,
      168000
     ]
    },
@@ -2630,6 +3414,56 @@
      106000
     ],
     "twin": "Chrysler Town & Country"
+   }
+  ],
+  "minivan|dealer|20+": [
+   {
+    "id": "toyota-sienna",
+    "name": "Toyota Sienna",
+    "y0": 2019,
+    "y1": 2020,
+    "gen": "3rd generation",
+    "li": 24,
+    "yt": 52,
+    "yt_src": "years",
+    "sold": 224460,
+    "score": 69.4,
+    "p": [
+     17250,
+     23000
+    ],
+    "d": [
+     20000,
+     26250
+    ],
+    "mi": [
+     72000,
+     84000
+    ]
+   },
+   {
+    "id": "honda-odyssey",
+    "name": "Honda Odyssey",
+    "y0": 2021,
+    "y1": 2021,
+    "gen": "5th generation",
+    "li": 82,
+    "yt": 60,
+    "yt_src": "years",
+    "sold": 76125,
+    "score": 41.7,
+    "p": [
+     23000,
+     27000
+    ],
+    "d": [
+     26000,
+     30250
+    ],
+    "mi": [
+     54000,
+     54000
+    ]
    }
   ],
   "super|private|u100": [

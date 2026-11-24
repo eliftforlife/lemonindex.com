@@ -66,21 +66,36 @@ def super_block(slug, car):
 
 # ---- 11-24 (Elijah: "a button on all car pages: find a car for your budget, the top 10 most reliable for price ranges like 5k 10k"):
 # budget ranges for /budget/ (budget_pages.py), placed by the private-seller price at the year's typical miles (the middle of its range)
-BUDGETS = [('5k', 0, 5000, 'Under $5,000'), ('10k', 5000, 10000, '$5,000 to $10,000'), ('15k', 10000, 15000, '$10,000 to $15,000'),
-           ('20k', 15000, 20000, '$15,000 to $20,000'), ('25k', 20000, 25000, '$20,000 to $25,000'), ('30k', 25000, 30000, '$25,000 to $30,000'),
-           ('40k', 30000, 40000, '$30,000 to $40,000'), ('50k', 40000, 50000, '$40,000 to $50,000')]
 def at_price(fid, y):
     """[private lo, hi, dealer lo, hi] at the year's typical miles, or None"""
     M = _data()['m'].get(fid); r = M and M['y'].get(str(y))
     return r[2] if r and len(r) > 2 and r[2] else None
+# 11-24 v2: /budget/ tiers (budget_pages.py, data_picks.py): (set, page key, picks.json key, label, lo, hi)
+BUD_TIERS_ALL = [('reg', 'u5', 'u5', 'Under $5,000', 0, 5000), ('reg', '5to10', '5-10', '$5,000 to $10,000', 5000, 10000),
+                 ('reg', '10to20', '10-20', '$10,000 to $20,000', 10000, 20000), ('reg', '20up', '20+', 'Over $20,000', 20000, 10 ** 9),
+                 ('super', 'u100', 'u100', 'Under $100,000', 0, 100000), ('super', '100to200', '100-200', '$100,000 to $200,000', 100000, 200000),
+                 ('super', '200up', '200+', 'Over $200,000', 200000, 10 ** 9)]
+_SEG = None
+def seg_of(fid):
+    """car / suv / truck / minivan (family_rates.csv + cars_new.json), or None"""
+    global _SEG
+    if _SEG is None:
+        import csv
+        idf = lambda n: n.lower().replace(' ', '-').replace('(', '').replace(')', '').replace('+', 'plus').replace('&', 'and')
+        _SEG = {idf(r['family']): r['segment'] for r in csv.DictReader(open(os.path.join(HERE, 'data', 'family_rates.csv'), encoding='utf-8'))}
+        q = os.path.join(HERE, 'data', 'cars_new.json')
+        if os.path.exists(q): _SEG.update({c['id']: c['segment'] for c in json.load(open(q, encoding='utf-8'))})
+    s = _SEG.get(fid); return s if s in ('car', 'suv', 'truck', 'minivan') else None
 def budget_of(fid, y):
     a = at_price(fid, y)
     if not a: return None
     mid = (a[0] + a[1]) / 2
-    return next((k for k, lo, hi, _ in BUDGETS if lo <= mid < hi), None)
+    return next((k for st, k, _, _, lo, hi in BUD_TIERS_ALL if st == 'reg' and lo <= mid < hi), None)
 def budget_href(fid=None, y=None):
-    k = budget_of(fid, y) if fid and y else None
-    return '/budget/' + (f'#b={k}' if k else '')
+    """the car's own type and the budget its price (private, typical miles) falls in"""
+    t = seg_of(fid) if fid else None; k = budget_of(fid, y) if fid and y else None
+    h = '&'.join(x for x in ((f't={t}' if t else ''), (f'b={k}' if k else '')) if x)
+    return '/budget/' + (f'#{h}' if h else '')
 
 # 'Find a car for your budget' row, first in the Overview list of every /cars/<model>/ and /cars/<model>/<year>/ page (build.py page(), after the date hash)
 _BUD_CAR = re.compile(r'^/cars/([^/]+(?:/[a-z]+)?)/(?:(\d{4})/)?$')
@@ -94,5 +109,5 @@ def budget_hook(path, doc):
     g = _BUD_G1.search(doc)
     if not g: return doc
     fid, y = m.group(1), m.group(2)
-    return doc[:g.end()] + _BUD_ROW.format(h=budget_href(fid, int(y)) if y else '/budget/') + doc[g.end():]
+    return doc[:g.end()] + _BUD_ROW.format(h=budget_href(fid, int(y) if y else None)) + doc[g.end():]
 

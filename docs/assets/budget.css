@@ -1,0 +1,22 @@
+/* 11-24 /budget/ (budget_pages.py): budget + type chips, one visible top-10 list */
+.bud-pick .bud-row + .bud-row { margin-top: 10px; }
+.bud-pick .bud-l { margin-top: 22px; }
+.bud-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.bud-c { font: inherit; font-size: 15px; font-weight: 600; padding: 9px 14px; border-radius: 999px; border: 1px solid #d9d9de; background: #fff; color: #111; cursor: pointer; line-height: 1.1; }
+.bud-c:hover { border-color: #111; }
+.bud-c[aria-pressed="true"] { background: #111; border-color: #111; color: #fff; }
+.bud-segs .bud-c { font-size: 14px; padding: 7px 12px; font-weight: 500; }
+.bud-h { font-size: 22px; letter-spacing: -.01em; margin: 4px 0 12px; }
+.bud-none { color: #666; }
+.bud-note { font-size: 14px; color: #666; margin: 8px 0 24px; }
+@media (max-width: 560px) {
+  .bud-row { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: 2px; margin: 0 -16px; padding-left: 16px; padding-right: 16px; }
+  .bud-row::-webkit-scrollbar { display: none; }
+  .bud-c { flex: 0 0 auto; }
+  .bud-h { font-size: 19px; }
+}
+/* the cbx page styles pad every section + h2: not wanted between the chips and the list */
+.cbx .bud-pick .bud-l { padding: 0; margin-top: 20px; border: 0; }
+.cbx .bud-pick .bud-l > .bud-h { margin: 0 0 12px; padding: 0; }
+/* v2: (private price) note in the list heading */
+.bud-h span { font-weight: 500; color: #666; font-size: .7em; }

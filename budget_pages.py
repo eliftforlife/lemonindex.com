@@ -1,85 +1,85 @@
-# 11-24 (Elijah: "the whole point of the prices was a button on all car pages that says find a car for your budget, and that page is the
-# top 10 most reliable for price ranges like 5k 10k etc"). Run by build.py with exec() (needs YEARS, BYNAME, page, best_img, best_tier,
-# cbx_* from best_ui.py). /budget/: for each price range, the 10 models whose most reliable model year fits it, ranked by that year's Lemon
-# Index. A year fits a range when its private-seller price at the year's typical miles (the middle of the AI estimate) sits in it.
-# Prices are AI estimates (price_box.py / data/price_est.json) and the page says so. BUDGET_HOOK puts the "Find a car for your budget" row
-# first in the Overview list of every /cars/<model>/ and /cars/<model>/<year>/ page (after the date hash: page dates don't move).
-BUD_SEGS = [('all', 'All'), ('car', 'Cars'), ('suv', 'SUVs'), ('truck', 'Trucks'), ('minivan', 'Minivans')]
-BUD_CSS = '<link rel="stylesheet" href="/assets/budget.css?v=3">'
-BUD_TOP = 10
-# work vans: mostly fleet-sold, so complaints per car sold run unrealistically low; not what a budget shopper means by a car
-BUD_SKIP = {'chevrolet-express', 'gmc-savana', 'ford-e-series', 'ford-transit', 'ford-transit-connect', 'mercedes-benz-sprinter', 'ram-promaster', 'ram-promaster-city', 'nissan-nv', 'nissan-nv200'}
-BUD_MIN_SOLD = 15000   # a smaller year's score swings on a handful of complaints
+# 11-24 v2 (Elijah approved the best-for-the-price picks: "a best under 5k 5 car list, a best 5-10k list ... 15 private party then 15
+# dealer ... per car group like suv, truck, sedan; supercar different money ranges ... by generations, like 2007-2009, so they can hunt for
+# that in their area"; then "approve new higher price bracket" = $10-20K and $20K+). Run by build.py with exec() (needs page, best_img,
+# best_tier, cbx_*, _vimg, SCX, share_line, faq_ld, E). Data: data/picks.json from data_picks.py (method in that file).
+# /budget/: type chips (Cars, SUVs, Trucks, Minivans, Supercars) x budget chips x Private seller / Dealer = one list of 5 at a time.
+# price_box.budget_hook puts the "Find a car for your budget" row first in the Overview list of every car model and year page.
+BUD_CSS = '<link rel="stylesheet" href="/assets/budget.css?v=4">'
+BUD_JS = '<script src="/assets/budget.js?v=2" defer></script>'   # CSP: no inline scripts
+BUD_TYPES = [('car', 'Cars', 'cars'), ('suv', 'SUVs', 'SUVs'), ('truck', 'Trucks', 'trucks'), ('minivan', 'Minivans', 'minivans'), ('super', 'Supercars', 'supercars')]
+BUD_KINDS = [('private', 'Private seller'), ('dealer', 'Dealer')]
+BUD_PK = json.load(open('data/picks.json', encoding='utf-8'))['lists']
+_SCN = {_slg(c['name']): c['name'] for c in SCX}
 
-def _bud_pool():
-    """every scored model year with a price: (budget key, li, fid, year, name, seg, [plo, phi, dlo, dhi], typical miles)"""
-    out = []
-    for f in YEARS:
-        if f['id'] in BUD_SKIP: continue
-        c = BYNAME.get(f['name']) or {}
-        for v in f['years']:
-            if not v.get('ok') or v.get('li') is None or v.get('low') or v['li'] > 100 or (v.get('sold') or 0) < BUD_MIN_SOLD: continue   # most reliable = average or better
-            a = PRICEBOX.at_price(f['id'], v['y']); k = PRICEBOX.budget_of(f['id'], v['y'])
-            if not a or not k: continue
-            mi = PRICEBOX._data()['m'][f['id']]['y'][str(v['y'])][0]
-            out.append((k, v['li'], f['id'], v['y'], f['name'], c.get('seg', ''), a, mi))
-    return out
 
-def _bud_lists():
-    pool = _bud_pool(); L = {}
-    for k, *_ in PRICEBOX.BUDGETS:
-        for sg, _l in BUD_SEGS:
-            by = {}
-            for r in pool:
-                if r[0] == k and (sg == 'all' or r[5] == sg): by.setdefault(r[2], []).append(r)
-            rows = []
-            for rs in by.values():   # each model once: its lowest-scored year in this range (newer wins a tie), the other fitting years listed under it
-                rs.sort(key=lambda r: (r[1], -r[3])); rows.append((rs[0], [r[3] for r in rs[1:]]))
-            L[(k, sg)] = sorted(rows, key=lambda x: (x[0][1], -x[0][3]))[:BUD_TOP]
-    return L
+def _bud_yrs(c): return str(c['y0']) if c['y0'] == c['y1'] else f"{c['y0']}–{c['y1']}"
 
-def _bud_row(i, r, others):
-    k, li, fid, y, nm, sg, a, mi = r
-    oth = sorted(set(others))
-    more = f' · Also fits: {", ".join(map(str, oth[:4]))}' if oth else ''
-    return (f'<li><span class="rk">{i}</span>{best_img(fid, nm)}<div><b><a href="/cars/{fid}/{y}/">{y} {E(nm)}</a></b>'
-            f'<small>{PRICEBOX._rng(a[0], a[1])} private · {PRICEBOX._rng(a[2], a[3])} dealer · about {round(mi / 1000):,}K miles{more}</small></div>'
-            f'<span class="sc {best_tier(li)}" title="Lemon Index: 100 is the average car, lower is better">{li}</span></li>')
+
+def _bud_mi(c):
+    a, b = round(c['mi'][0] / 1000), round(c['mi'][1] / 1000)
+    return f'about {a}K miles' if a == b else f'{a}K–{b}K miles'
+
+
+def _bud_row(i, c, t):
+    if t == 'super':
+        nm = _SCN.get(c['id'], c['id']); ph = _vimg(nm)
+        img = f'<span class="bph"><img src="{ph["src"]}" alt="{E(nm)}" width="{ph["w"]}" height="{ph["h"]}" loading="lazy" decoding="async"></span>' if ph else '<span class="bph"></span>'
+        sub = f'{PRICEBOX._rng(*c["p"])} private · {PRICEBOX._rng(*c["d"])} dealer · YouTube buyer score {c["yt"]}'
+        return (f'<li><span class="rk">{i}</span>{img}<div><b><a href="/supercars/{c["id"]}/">{_bud_yrs(c)} {E(nm)}</a></b><small>{sub}</small></div></li>')
+    twin = f' · Same vehicle as the {E(c["twin"])}' if c.get('twin') else ''
+    yt = f' · YouTube buyer score {c["yt"]}' if c.get('yt') is not None else ''
+    sub = (f'{E(c["gen"])} · {PRICEBOX._rng(*c["p"])} private · {PRICEBOX._rng(*c["d"])} dealer · {_bud_mi(c)}{yt}{twin}')
+    return (f'<li><span class="rk">{i}</span>{best_img(c["id"], c["name"])}<div><b><a href="/cars/{c["id"]}/{c["y0"]}/">{_bud_yrs(c)} {E(c["name"])}</a></b>'
+            f'<small>{sub}</small></div><span class="sc {best_tier(c["li"])}" title="Lemon Index of these years: 100 is the average car, lower is better">{c["li"]}</span></li>')
+
+
+def _bud_names(cs, n=3):
+    nm = lambda c: f"{_bud_yrs(c)} {_SCN.get(c['id'], c.get('name', c['id']))}"
+    xs = [nm(c) for c in cs[:n]]
+    return ', '.join(xs[:-1]) + (' and ' + xs[-1] if len(xs) > 1 else (xs[0] if xs else ''))
+
 
 def _budget_page():
-    L = _bud_lists(); B = PRICEBOX.BUDGETS; dflt = '10k'
-    bch = ''.join(f'<button type="button" class="bud-c" data-b="{k}" aria-pressed="{"true" if k == dflt else "false"}">{E(lab.replace(" to ", "–").replace("Under ", "Under "))}</button>' for k, lo, hi, lab in B)
-    sch = ''.join(f'<button type="button" class="bud-c" data-s="{s}" aria-pressed="{"true" if s == "all" else "false"}">{l}</button>' for s, l in BUD_SEGS)
-    lists = ''
-    for k, lo, hi, lab in B:
-        for sg, sl in BUD_SEGS:
-            R = L[(k, sg)]
-            noun = {'all': 'cars', 'car': 'cars', 'suv': 'SUVs', 'truck': 'trucks', 'minivan': 'minivans'}[sg]
-            head = f'<h2 class="bud-h">The {len(R) if len(R) < BUD_TOP else BUD_TOP} most reliable {noun} {"under $5,000" if k == "5k" else "for " + lab.replace(" to ", "–")}</h2>'
-            body = ('<ol class="bestl bl2">' + ''.join(_bud_row(i, r, o) for i, (r, o) in enumerate(R, 1)) + '</ol>') if R else '<p class="bud-none">No scored cars in this range yet.</p>'
-            lists += f'<section class="bud-l" data-b="{k}" data-s="{sg}"{"" if (k, sg) == (dflt, "all") else " hidden"}>{head}{body}</section>'
-    top = {k: L[(k, 'all')] for k, *_ in B}
-    def nm3(k): R = top[k][:3]; return ', '.join(f'{r[3]} {r[4]}' for r, _ in R[:-1]) + (f' and {R[-1][0][3]} {R[-1][0][4]}' if len(R) > 1 else (f'{R[0][0][3]} {R[0][0][4]}' if R else ''))
-    faq = [(f'What is the most reliable used car {"under $5,000" if k == "5k" else "for " + lab.replace(" to ", "–")}?',
-            f'By owner complaints per car sold, the {nm3(k)} come out on top among cars whose typical asking price lands {"under $5,000" if k == "5k" else "between " + lab.replace(" to ", " and ")}.')
-           for k, lo, hi, lab in B if top[k]]
-    faq.append(('Where do the prices come from?', 'They are Lemon Index estimates made with AI for November 2026, not listings or an appraisal: a fair private-seller price for an average car with a clean title at the mileage most cars of that year have. Check real listings and get an inspection before you buy.'))
-    faq.append(('What does the score mean?', 'The Lemon Index of that model year: owner complaints to NHTSA in the first 3 years, per car sold, against the average car. 100 is average and lower is better.'))
-    lede = f'The most reliable used cars for every budget. Under $5,000: {nm3("5k")}. $10,000 to $15,000: {nm3("15k")}.'
-    body = ('<div class="advp cb cbx bud">' + BUD_CSS + cbx_head('Find a car for your budget.', 'The 10 most reliable used cars in each price range: the model year with the fewest owner complaints that fits, priced at its usual mileage.')
-            + f'<section class="cbx-sec cbx-list bud-pick"><div class="bud-row" role="group" aria-label="Budget">{bch}</div><div class="bud-row bud-segs" role="group" aria-label="Type">{sch}</div>{lists}</section>'
-            + '<p class="bud-note">Prices are AI estimates (November 2026), not listings: private seller and dealer, average condition, clean title, at the miles shown. Lower score = fewer complaints (100 is the average car).</p>'
+    dt, db, dk = 'suv', '5to10', 'private'
+    tch = ''.join(f'<button type="button" class="bud-c" data-t="{t}" aria-pressed="{"true" if t == dt else "false"}">{l}</button>' for t, l, _ in BUD_TYPES)
+    bch = ''.join(f'<button type="button" class="bud-c" data-b="{k}" data-set="{"super" if st == "super" else "reg"}" aria-pressed="{"true" if k == db else "false"}"'
+                  f'{" hidden" if st == "super" else ""}>{l}</button>' for st, k, _, l, _lo, _hi in PRICEBOX.BUD_TIERS_ALL)
+    kch = ''.join(f'<button type="button" class="bud-c" data-k="{k}" aria-pressed="{"true" if k == dk else "false"}">{l}</button>' for k, l in BUD_KINDS)
+    lists = ''; faq = []
+    for t, tl, noun in BUD_TYPES:
+        for st, k, tk, bl, lo, hi in PRICEBOX.BUD_TIERS_ALL:
+            if (st == 'super') != (t == 'super'): continue
+            for kk, kl in BUD_KINDS:
+                cs = BUD_PK.get(f'{t}|{kk}|{tk}') or []
+                where = 'under ' + bl[6:] if bl.startswith('Under ') else ('over ' + bl[5:] if bl.startswith('Over ') else 'for ' + bl.replace(' to ', '–'))
+                head = f'<h2 class="bud-h">The {"best " + str(len(cs)) if len(cs) > 1 else "best"} used {noun} {where} <span>({kl.lower()} price)</span></h2>'
+                body = ('<ol class="bestl bl2">' + ''.join(_bud_row(i, c, t) for i, c in enumerate(cs, 1)) + '</ol>') if cs else '<p class="bud-none">None of our scored generations fit this range yet.</p>'
+                if len(cs) < 5 and cs: body += f'<p class="bud-none">Only {len(cs)} {"generation scores" if len(cs) == 1 else "generations score"} well enough at this price.</p>'
+                lists += f'<section class="bud-l" data-t="{t}" data-b="{k}" data-k="{kk}"{"" if (t, k, kk) == (dt, db, dk) else " hidden"}>{head}{body}</section>'
+                if kk == 'private' and cs:
+                    faq.append((f'What is the best used {noun[:-1] if noun.endswith("s") else noun} {where}?',
+                                f'From a private seller, the {_bud_names(cs)} rank highest among {noun} that usually sell {where.replace("for ", "")}'
+                                + ('' if t == 'super' else ': fewer owner complaints than the average car, and YouTube buyer guides rate them well') + '.'))
+    faq.append(('Why years and not one model year?', 'Each pick is a run of model years from one generation, so you can search for any of them near you. Every year in the run scores as well as or better than the average car.'))
+    faq.append(('Where do the prices come from?', 'They are Lemon Index estimates made with AI for November 2026, not listings or an appraisal: a fair private-seller and dealer price for an average car with a clean title at the mileage most cars of those years have. Check real listings and get an inspection before you buy.'))
+    faq.append(('How are the picks ranked?', 'Mostly by reliability: the Lemon Index of those years (owner complaints to NHTSA in the first 3 years, per car sold; 100 is the average car, lower is better). Then by how well YouTube buyer guides and owner reviews rate those years, and a little extra for a longer run of good years. Supercars have too few complaints to score, so they are ranked by YouTube buyer score and price only.'))
+    c5 = BUD_PK.get('car|private|u5') or []; s10 = BUD_PK.get('suv|private|5-10') or []
+    lede = f'The 5 best used cars, SUVs, trucks and minivans for every budget. Under $5,000: {_bud_names(c5, 2)}. SUVs for $5,000–10,000: {_bud_names(s10, 2)}.'
+    body = ('<div class="advp cb cbx bud">' + BUD_CSS + cbx_head('Find a car for your budget.', 'The 5 best used picks in every price range: model years with fewer owner complaints than the average car that YouTube buyer guides rate well, priced at their usual mileage.')
+            + f'<section class="cbx-sec cbx-list bud-pick"><div class="bud-row" role="group" aria-label="Type">{tch}</div><div class="bud-row bud-segs" role="group" aria-label="Budget">{bch}</div>'
+            + f'<div class="bud-row bud-segs" role="group" aria-label="Price from">{kch}</div>{lists}</section>'
+            + '<p class="bud-note">Prices are AI estimates (November 2026), not listings: average condition, clean title, at the miles shown. Private seller prices are usually lower than a dealer&#39;s. Lower score = fewer complaints (100 is the average car).</p>'
             + cbx_faq([(q, f'<p>{E(a)}</p>') for q, a in faq]) + cbx_buy() + cbx_budgets('/budget/', 'What YouTube buyer guides pick')
             + cbx_src('Reliability: the Lemon Index of each model year, NHTSA owner complaints filed in its first 3 years per vehicle sold, against the average car (100). '
-                      'A complaint is an owner&#39;s report, not a confirmed defect. Prices: Lemon Index AI estimates (November 2026) of a fair private-seller and dealer price at the year&#39;s typical mileage, '
-                      'average condition, clean title; not listings, sales records or an appraisal. Each car shows its lowest-scored year whose private-seller price (middle of the range) fits the budget; '
-                      'other years of the same model that also fit are listed under it. Left out: years scored worse than the average car, years with under 15,000 sold or too few complaints to score, and full-size work vans (mostly fleet-sold).')
+                      'A complaint is an owner&#39;s report, not a confirmed defect. YouTube buyer score: how YouTube buyer guides and owner reviews rate those years (Lemon Index analysis of video titles and transcripts). '
+                      'Prices: Lemon Index AI estimates (November 2026) of a fair private-seller and dealer price at the years&#39; typical mileage, average condition, clean title; not listings, sales records or an appraisal. '
+                      'A pick is a run of consecutive model years in one generation, each scored at or better than the average car, with 15,000+ sold each year, whose price (middle of the range) fits the budget. '
+                      'Ranked 60% reliability, 40% YouTube buyer score, plus a little for a longer run. Twins sold under two brands count once. Left out: full-size work vans (mostly fleet-sold). Supercars: YouTube buyer score and price only.')
             + '</div>' + BUD_JS)
-    body += share_line('The most reliable used cars for your budget, with prices and complaint scores. Free:', 'Know someone shopping on a budget?')
-    page('/budget/', 'Most Reliable Used Cars by Budget: Under $5K, $10K, $15K, $20K+ | The Lemon Index', lede, body,
+    body += share_line('The best used cars for your budget, with prices and complaint scores. Free:', 'Know someone shopping on a budget?')
+    page('/budget/', 'Best Used Cars for Your Budget: Under $5K, $10K, $20K+ | The Lemon Index', lede, body,
          ld=[faq_ld([(q, '', a) for q, a in faq])])
     if 'SEO_URLS' in globals(): SEO_URLS.append('/budget/')
 
-BUD_JS = '<script src="/assets/budget.js?v=1" defer></script>'   # CSP: no inline scripts
 
 _budget_page()

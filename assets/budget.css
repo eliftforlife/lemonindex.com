@@ -18,3 +18,5 @@
 /* the cbx page styles pad every section + h2: not wanted between the chips and the list */
 .cbx .bud-pick .bud-l { padding: 0; margin-top: 20px; border: 0; }
 .cbx .bud-pick .bud-l > .bud-h { margin: 0 0 12px; padding: 0; }
+/* v2: (private price) note in the list heading */
+.bud-h span { font-weight: 500; color: #666; font-size: .7em; }
