@@ -14,7 +14,7 @@ _CP_PAN_ICON = {'problems': 'warning', 'repairs': 'wrench', 'recalls': 'bell', '
                 'specs': 'engine', 'cost': 'tag', 'owners': 'wrench', 'uk-fails': 'warning', 'uk-faq': 'question', 'years': 'calendar', 'overview': 'chart'}
 _CP_SEC_ICON = [  # (words in the section title, icon), first match wins
     (('in the film', 'film'), 'film'), (('show up', 'mileage', 'how fast', 'performance'), 'stopwatch'), (('known issue', 'what breaks', 'problem', 'complain', 'fail'), 'warning'), (('recall',), 'bell'),
-    (('youtube',), 'youtube'), (('should you buy', 'buy', 'price', 'cost', 'fix or sell', 'range'), 'tag'),
+    (('youtube',), 'youtube'), (('should you buy', 'buy', 'price', 'cost', 'fix or sell', 'range', 'is worth'), 'tag'),   # 11-24: + the price box
     (('engine', 'version', 'spec'), 'engine'), (('similar', 'compare', ' vs', 'gas or hybrid', 'hybrid'), 'scale'), (('question', 'ask the seller', 'ask'), 'question'),
     (('source', 'how to read', 'about these', 'method'), 'data'), (('repair', 'fix'), 'wrench'), (('year',), 'calendar'), (('what owners say', 'opinion'), 'talk')]
 def _cp_icon(t):

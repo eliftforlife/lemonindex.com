@@ -353,7 +353,7 @@ def transform_year(body, eng_html, short):
     over, probs, fix, rec, yrs, qa, tail, keep = [], [], [], [], [], [], [], []
     for c in items:
         h = H(c); k = C(c)
-        if c.get('id') in ('top-fails', 'mileage-guide', 'fix-or-sell', 'ask-seller', 'hybrid', 'similar'): keep.append(c)   # 11-12 r2: + top 3 failures, fix or sell   # 11-12: shown in Overview, under the preview cards ('hybrid': the RAV4 Hybrid split, ux_c.py)
+        if c.get('id') in ('top-fails', 'mileage-guide', 'price-guide', 'fix-or-sell', 'ask-seller', 'hybrid', 'similar'): keep.append(c)   # 11-12 r2: + top 3 failures, fix or sell   # 11-12: shown in Overview, under the preview cards ('hybrid': the RAV4 Hybrid split, ux_c.py)
         elif 'shline' in k or ('yc-cap' in k and c.name == 'p'): tail.append(c)
         elif 'yyears' in k: yrs.append(c)
         elif 'yqa' in k: qa.append(c)
