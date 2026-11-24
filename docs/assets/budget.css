@@ -1,22 +1,55 @@
-/* 11-24 /budget/ (budget_pages.py): budget + type chips, one visible top-10 list */
-.bud-pick .bud-row + .bud-row { margin-top: 10px; }
-.bud-pick .bud-l { margin-top: 22px; }
+/* 11-24 /budget/ (budget_pages.py): type chips, budget chips + private/dealer switch, one grid of 5 picks at a time.
+   v6 (Eli pass, Elijah: "look more like our home page"): the picks are the home page's own car cards (.mg / a.mc from site.css):
+   picture, years + car, one price, the score in the corner. Even spacing: H1 -> chips -> grid -> one-line note. */
 .bud-row { display: flex; flex-wrap: wrap; gap: 8px; }
-.bud-c { font: inherit; font-size: 15px; font-weight: 600; padding: 9px 14px; border-radius: 999px; border: 1px solid #d9d9de; background: #fff; color: #111; cursor: pointer; line-height: 1.1; }
+.bud-c { font: inherit; font-size: 16px; font-weight: 600; padding: 10px 16px; border-radius: 999px; border: 1px solid #d9d9de; background: #fff; color: #111; cursor: pointer; line-height: 1.1; }
 .bud-c:hover { border-color: #111; }
 .bud-c[aria-pressed="true"] { background: #111; border-color: #111; color: #fff; }
-.bud-segs .bud-c { font-size: 14px; padding: 7px 12px; font-weight: 500; }
-.bud-h { font-size: 22px; letter-spacing: -.01em; margin: 4px 0 12px; }
-.bud-none { color: #666; }
-.bud-note { font-size: 14px; color: #666; margin: 8px 0 24px; }
-@media (max-width: 560px) {
-  .bud-row { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: 2px; margin: 0 -16px; padding-left: 16px; padding-right: 16px; }
+.bud-segs .bud-c { font-size: 15px; padding: 8px 14px; font-weight: 500; }
+/* budget chips left, private/dealer switch right */
+.bud-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 12px; }
+.bud-kind { display: inline-flex; background: #f0f0f3; border-radius: 999px; padding: 3px; gap: 2px; }
+.bud-kind .bud-c { border: 0; background: transparent; font-size: 15px; font-weight: 500; padding: 7px 14px; color: #3a3a3c; }
+.bud-kind .bud-c:hover { color: #111; }
+.bud-kind .bud-c[aria-pressed="true"] { background: #fff; color: #111; font-weight: 600; box-shadow: 0 1px 3px rgba(0, 0, 0, .14); }
+.bud-vh { position: absolute; width: 1px; height: 1px; margin: 0; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.bud-none { color: #6e6e73; font-size: 15px; margin: 12px 0 0; }
+.bud-note { font-size: 14px; color: #6e6e73; margin: 16px 0 0; }
+
+/* even rhythm: the cbx list section pads its top by 40px; here the chips sit 28px under the one-line intro */
+.advp.cbx .cbx-sec.bud-pick { padding-top: 6px; }
+/* the 5 picks: home-page cards, 5 across (home: 168 px cards, centered; here the row fills the column, left-aligned like the chips) */
+.cbx .bud-pick .bud-l { padding: 0; margin-top: 28px; border: 0; }
+.bud .mg.bud-g { display: grid !important; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
+.bud .mg.bud-g .mc { width: auto; }
+.bud .mc b { line-height: 1.25; }
+.bud .mc .bud-pr { margin-top: 0; font-size: 14px; font-weight: 500; color: #3a3a3c; font-variant-numeric: tabular-nums; }
+
+/* a short list (or none) carries its own one-line note; the page note hides so there is only one line under the cards */
+.bud-pick:has(.bud-l:not([hidden]) .bud-none) .bud-note { display: none; }
+
+/* 11-24 Eli mobile pass (phones): type pills scroll edge to edge (they run off the screen, so it reads as a swipe row; the picked one is
+   scrolled into view by budget.js), budget = one segmented bar that fits the width, Private/Dealer = a 2-half switch.
+   Every chip is 44 px tall. Cards: the #1 pick full width, then 2 x 2 (odd counts only; even counts stay a plain 2-column grid). */
+@media (max-width: 720px) {
+  .bud-row { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; margin: 0 -32px; padding: 0 32px; scroll-padding: 0 32px; }
   .bud-row::-webkit-scrollbar { display: none; }
-  .bud-c { flex: 0 0 auto; }
-  .bud-h { font-size: 19px; }
+  .bud-c { flex: 0 0 auto; min-height: 44px; padding: 0 18px; font-size: 16px; }
+  .bud-bar { display: block; margin-top: 10px; }
+  .bud-row.bud-segs, .bud-kind { display: flex; margin: 0; padding: 3px; gap: 0; background: #f0f0f3; border-radius: 14px; overflow-x: auto; scrollbar-width: none; }
+  .bud-segs .bud-c, .bud-kind .bud-c { flex: 1 1 auto; min-height: 44px; padding: 0 6px; border: 0; border-radius: 11px; background: transparent; color: #3a3a3c; font-size: 15px; font-weight: 500; white-space: nowrap; }
+  .bud-segs .bud-c[aria-pressed="true"], .bud-kind .bud-c[aria-pressed="true"] { background: #fff; color: #111; font-weight: 600; box-shadow: 0 1px 3px rgba(0, 0, 0, .14); }
+  .bud-kind { margin-top: 10px; }
+  .bud-kind .bud-c { flex-basis: 0; }
+  .cbx .bud-pick .bud-l { margin-top: 24px; }
+  .bud .mg.bud-g { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .bud .mg.bud-g .mc:first-child:nth-last-child(odd) { grid-column: 1 / -1; padding-top: 30px; }
+  .bud .mg.bud-g .mc:first-child:nth-last-child(odd) .mc-p { max-width: 230px; }
+  .bud .mg.bud-g .mc:first-child:nth-last-child(odd) b { font-size: 18px; }
+  .bud .mg.bud-g .mc:first-child:nth-last-child(odd) .bud-pr { font-size: 15px; }
+  .bud .mg.bud-g .mc:first-child:nth-last-child(odd) > span:last-child { font-size: 16px; top: 12px; right: 16px; }
 }
-/* the cbx page styles pad every section + h2: not wanted between the chips and the list */
-.cbx .bud-pick .bud-l { padding: 0; margin-top: 20px; border: 0; }
-.cbx .bud-pick .bud-l > .bud-h { margin: 0 0 12px; padding: 0; }
-/* v2: (private price) note in the list heading */
-.bud-h span { font-weight: 500; color: #666; font-size: .7em; }
+/* supercars have no complaint score: drop the score half of the note */
+.bud-pick:has(.bud-l[data-t="super"]:not([hidden])) .bud-sn { display: none; }
+/* supercars have no score in the corner, so their #1 card doesn't need the score's top row */
+@media (max-width: 720px) { .bud .mg.bud-g.bud-sup .mc:first-child:nth-last-child(odd) { padding-top: 16px; } }

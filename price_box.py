@@ -100,8 +100,12 @@ def budget_href(fid=None, y=None):
 # 'Find a car for your budget' row, first in the Overview list of every /cars/<model>/ and /cars/<model>/<year>/ page (build.py page(), after the date hash)
 _BUD_CAR = re.compile(r'^/cars/([^/]+(?:/[a-z]+)?)/(?:(\d{4})/)?$')
 _BUD_G1 = re.compile(r'<div class="cpl-grp cpl-g1[^"]*">')
-_BUD_ROW = ('<section class="cpl-sec cpl-pan" id="p-budget"><div class="cpl"><a class="cpl-a sb-go" href="{h}"><svg aria-hidden="true" class="cpl-i" focusable="false" height="24" width="24">'
-            '<use href="/assets/ic.svg?v=1#tag"></use></svg><span><b>Find a car for your budget</b></span><svg aria-hidden="true" class="cpl-ar" fill="none" height="18" stroke="currentColor" '
+# 11-24 Eli pass: search icon (the tag icon is already the 'What it's worth' row); the <style> makes the link sit flat in the inset group like the
+# rows under it (no underline, no own box: the shared .cpl-ins rules only reach a .cpl-a that is a direct child, and this one is wrapped in a section)
+_BUD_ROW = ('<section class="cpl-sec cpl-pan" id="p-budget"><style>#p-budget .cpl>.cpl-a,#p-budget .cpl>.cpl-a:hover{{text-decoration:none;color:inherit;box-shadow:none;'
+            'border-radius:18px 18px 0 0}}#p-budget .cpl>.cpl-a{{background:transparent}}#p-budget .cpl>.cpl-a:hover{{background:#ebebee}}'
+            '.cpl-ins>#p-budget:only-child .cpl>.cpl-a{{border-radius:18px}}</style><div class="cpl"><a class="cpl-a sb-go" href="{h}"><svg aria-hidden="true" class="cpl-i" focusable="false" height="24" width="24">'
+            '<use href="/assets/ic.svg?v=1#search"></use></svg><span><b>Find a car for your budget</b></span><svg aria-hidden="true" class="cpl-ar" fill="none" height="18" stroke="currentColor" '
             'stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24" width="18"><path d="m9 6 6 6-6 6"></path></svg></a></div></section>')
 def budget_hook(path, doc):
     m = _BUD_CAR.match(path)
