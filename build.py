@@ -7,6 +7,7 @@ import re
 import os, re, json, html, datetime, shutil, csv, statistics
 from collections import defaultdict
 exec(open('k5_split.py', encoding='utf-8').read())   # 11-20: the Kia K5 (2021+) gets its own pages, split from the Optima as each data file is read
+import price_box as PRICEBOX   # 11-24 "What it's worth" AI price by mileage on year + supercar pages (price_box.py); top of file: page() calls its budget_hook from the first page on
 import year_slider as YSL   # 11-10: AI year illustrations + 'every year' slider (data/ai_year_images.json)
 import tabbed as TAB   # 11-10 (Elijah, Civic first): centered hero + tabs + Years/Engines chart for the models in TAB.ON
 OUT = 'docs'; TODAY = datetime.date.today().isoformat(); BASE = 'https://lemonindex.com'
@@ -977,7 +978,6 @@ def extra(fid, y):
 YTV = _load('data/yt.json')
 BMW_PHASE = 'hooks'; exec(open('bmw_pages.py', encoding='utf-8').read())   # 11-10 BMW specs + engines: SPECS_HOOK / YEAR_SPECS_HOOK
 def _vw(n): return f'{n / 1e6:.1f}M' if n >= 1e6 else f'{round(n / 1e3):,}K' if n >= 1e3 else str(n)
-import price_box as PRICEBOX   # 11-24 "What it's worth" AI price by mileage on year + supercar pages (price_box.py)
 import repair_est as REST   # 11-23 repair estimates (labor hours x your shop rate + parts) on year + /repair-cost/ pages (repair_est.py)
 import repair_costs as RCQ   # 11-12 fix D: "What repairs cost" (owners' repair bills to NHTSA + what to ask the shop)
 _YRX = re.compile(r'(?<!\d)((?:19|20)\d\d)(?:\s*[-–]\s*((?:19|20)?\d\d))?(?!\d)')
