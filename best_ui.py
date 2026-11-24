@@ -43,6 +43,10 @@ def cbx_budgets(skip=None, title='Shopping on a budget?'):
         ph = aph(c0['id']) if c0 else None
         im = f'<span class="bcp"><img src="{ph["src"]}" alt="" width="{ph["w"]}" height="{ph["h"]}" loading="lazy" decoding="async"></span>' if ph else '<span class="bcp"></span>'
         cards.append(f'<a class="bcard cbx-bud" href="{u}">{im}<b>Under {label}</b>' + (f'<small>Top scored pick: {E(c0["name"])}</small>' if c0 else '') + '<span class="tl">See the list <i>›</i></span></a>')
+    if skip != '/budget/':   # 11-24: the priced top-10 lists (/budget/, budget_pages.py) first
+        ph = aph('toyota-corolla')
+        im = f'<span class="bcp"><img src="{ph["src"]}" alt="" width="{ph["w"]}" height="{ph["h"]}" loading="lazy" decoding="async"></span>' if ph else '<span class="bcp"></span>'
+        cards.insert(0, f'<a class="bcard cbx-bud" href="/budget/">{im}<b>Find a car for your budget</b><small>Top 10 most reliable in each price range, with prices</small><span class="tl">Pick your budget <i>›</i></span></a>')
     return f'<section class="cbx-sec"><h2>{title}</h2><div class="bcards cbx-buds">{"".join(cards)}</div></section>' if cards else ''
 
 
