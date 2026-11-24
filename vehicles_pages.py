@@ -434,7 +434,7 @@ if SC:
                                                     stat(rng2(last["cost"], "$"), f'fuel a year, {last["y"]} (EPA)', 'bad' if last['cost'][1] >= 5000 else '')]
         body = f'''<div class="pg mp6"><section class="ph yph6"><div class="yh-t"><p class="ph-e"><a href="/supercars/">Supercars</a> · {E(c["make"])}</p><h1>{E(c["name"])}.</h1>
 <p class="ph-s">Power, engine, fuel economy and recalls, {ys[0]["y"]}{" to " + str(last["y"]) if len(ys) > 1 else ""}.</p>{(globals().get("EU_SC_ROW") or (lambda s: ""))(slug)}</div><div class="ph-v">{pimg(ph, valt(ph, c["name"])) if ph else ""}{vcredit(ph)}</div></section>
-<div class="yts">{"".join(tl[:3])}</div>{ytfix('super:' + slug)}{REST.x_block(f'/supercars/{slug}/')}
+<div class="yts">{"".join(tl[:3])}</div>{ytfix('super:' + slug)}{PRICEBOX.super_block(slug, c['name'])}{REST.x_block(f'/supercars/{slug}/')}
 {epa1 or f'''<section class="yc"><h2>Every year. <span class="h2s">EPA numbers across the versions sold that year.</span></h2><div class="tw"><table><thead><tr><th>Year</th><th>MPG</th><th>Fuel / yr</th><th>Engine</th>{'<th>Guzzler tax</th>' if guz else ''}<th>Recalls</th></tr></thead><tbody>{rows}</tbody></table></div>
 <p class="yc-cap">EPA yearly fuel cost assumes 15,000 miles at national average prices.{' The gas-guzzler tax is a federal tax paid on new cars that use a lot of fuel.' if guz else ''}</p></section>'''}
 {specs}{_sce_section(slug, c["name"], c)}{recs}

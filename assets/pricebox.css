@@ -1,0 +1,19 @@
+/* 11-24 price box (price_box.py): "What it's worth" by mileage, AI estimates */
+.ypg .pgt td.num { white-space: nowrap; }
+.ypg .pgt tr.pg-cur td { font-weight: 700; }
+.ypg .pg-t { display: inline-block; margin-left: 6px; padding: 1px 7px; border-radius: 99px; background: #fff4bf; color: #6b5600; font-size: 11.5px; font-weight: 600; vertical-align: 1px; }
+.ypg tr.pg-rare td { color: var(--mute, #6e6e73); font-style: italic; }
+.ypg .pg-more { margin-top: 10px; }
+.ypg .pg-more summary { cursor: pointer; font-weight: 600; }
+/* phone: each mileage row stacks (miles on top, private + dealer side by side, each with its own small label) */
+@media (max-width: 560px) {
+  .ypg .pgy thead { display: none; }
+  .ypg .pgy, .ypg .pgy tbody { display: block; width: 100%; }
+  .ypg .pgy tr { display: grid; grid-template-columns: 1fr 1fr; gap: 2px 12px; padding: 10px 12px; border-top: 1px solid rgba(0, 0, 0, .08); }
+  .ypg .pgy tr:first-child { border-top: 0; }
+  .ypg .pgy td { display: block; padding: 0; border: 0; }
+  .ypg .pgy td:first-child { grid-column: 1 / -1; white-space: normal; }
+  .ypg .pgy td.num::before { content: attr(data-l); display: block; font-size: 12px; font-weight: 600; color: var(--mute, #6e6e73); font-style: normal; }
+  .ypg .pgy tr.pg-rare td:last-child { grid-column: 1 / -1; }
+  .ypg .pg-t { margin-left: 8px; }
+}

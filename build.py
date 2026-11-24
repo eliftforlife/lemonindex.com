@@ -976,6 +976,7 @@ def extra(fid, y):
 YTV = _load('data/yt.json')
 BMW_PHASE = 'hooks'; exec(open('bmw_pages.py', encoding='utf-8').read())   # 11-10 BMW specs + engines: SPECS_HOOK / YEAR_SPECS_HOOK
 def _vw(n): return f'{n / 1e6:.1f}M' if n >= 1e6 else f'{round(n / 1e3):,}K' if n >= 1e3 else str(n)
+import price_box as PRICEBOX   # 11-24 "What it's worth" AI price by mileage on year + supercar pages (price_box.py)
 import repair_est as REST   # 11-23 repair estimates (labor hours x your shop rate + parts) on year + /repair-cost/ pages (repair_est.py)
 import repair_costs as RCQ   # 11-12 fix D: "What repairs cost" (owners' repair bills to NHTSA + what to ask the shop)
 _YRX = re.compile(r'(?<!\d)((?:19|20)\d\d)(?:\s*[-–]\s*((?:19|20)?\d\d))?(?!\d)')
@@ -1882,7 +1883,7 @@ def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
 <article class="yp yp6"><section class="ph yph6"><div class="yh-t">{N2_CRUMB(f, y)}<h1>{y} {E(QN(f))} {YW(f).lower()}.</h1>{answer_box(f, v, y, x, best)}{'<p class="early-b">Too new: partial score</p>' if v.get('early') else ''}
 {f'<p class="yc-note">{SN[f["id"]][1]}</p>' if f["id"] in SN else ""}{GROUP_NOTE(f, y)}{PIN_HTML(f['id'], y)}{n2_hero}
 <nav class="modes" aria-label="Page mode"><a href="{CARU(f, y)}" aria-current="page">Normal</a><a href="{CARU(f, y)}advanced/">Advanced</a></nav><nav class="yswitch" aria-label="Model years"><div class="yseg">{seg}<a class="yall" href="{CARU(f)}">All years</a></div><div class="yact"><a class="btn btn-ghost" href="/compare/?c={f['id']}-{y}">Compare</a><button type="button" class="btn btn-ghost yshare" data-share="{E(share_txt)}">Share</button></div></nav></div>{f'<div class="ph-v">{ph}</div>' if ph else ''}</section>
-{buy}{N2_SIMILAR(f, y)}{top_fails_html(f, y, nm)}{mil}{fix_sell_html(f, y, nm)}{ask}<div class="yts">{tiles}</div>{ytfix(f["id"], y)}{sev}{old}
+{buy}{N2_SIMILAR(f, y)}{top_fails_html(f, y, nm)}{mil}{PRICEBOX.year_block(f["id"], y, nm)}{fix_sell_html(f, y, nm)}{ask}<div class="yts">{tiles}</div>{ytfix(f["id"], y)}{sev}{old}
 <section class="yyears noph"><div class="yy-ch"><h2>Every {nm} year. <span class="h2s">{y} is highlighted. Lower is better.</span></h2>{N2_SORT}{CHART_PILLS(f, ybars(f, y), EMX_BTN(f, y), ev_note)}</div></section>
 <div class="ygrid">{probs}{timeline(x["miles"], x.get("comps") or [], (x.get("sev") or {}).get("total")) if x.get("miles") else ""}{recs}{(lambda pr: f'<section class="yc">{pr}</section>' if pr else '')(price_html(f["id"], y, f["name"]))}
 {fixes}{invs}{safety}{f'<section class="yc">{crash}{fuel}</section>' if crash or fuel else ''}{YEAR_SPECS_HOOK(f['id'], y)}{words}
