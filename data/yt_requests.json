@@ -1,0 +1,1531 @@
+{
+ "note": "11-25 viewer requests with no page (3 Lemon Index/Requests we don't have 11-25.md). yt_req_pages.py builds a YouTube-only page for each 'pages' entry once its score file has a ranked year. auto_gens.py quick-builds 'quick' when a request gets scored. No older years/generations here (11-25 scope: they wait for the older-years project).",
+ "pages": [
+  {
+   "fid": "moto-kawasaki-ninja-zx-4rr",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "kawasaki-ninja-zx-4rr",
+   "name": "Kawasaki Ninja ZX-4RR",
+   "make": "Kawasaki",
+   "img": "/assets/v/moto/kawasaki-ninja-zx-4rr.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2024,
+   "asked": true,
+   "quick": [
+    "/motorcycles/kawasaki-ninja-zx-4rr/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-kawasaki-z900",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "kawasaki-z900",
+   "name": "Kawasaki Z900",
+   "make": "Kawasaki",
+   "img": "/assets/v/moto/kawasaki-z900.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2022,
+   "asked": true,
+   "quick": [
+    "/motorcycles/kawasaki-z900/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-honda-cbr650r",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "honda-cbr650r",
+   "name": "Honda CBR650R / CBR650F",
+   "make": "Honda",
+   "img": "/assets/v/moto/honda-cbr650r.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2022,
+   "asked": true,
+   "quick": [
+    "/motorcycles/honda-cbr650r/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-aprilia-rsv4",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "aprilia-rsv4",
+   "name": "Aprilia RSV4",
+   "make": "Aprilia",
+   "img": "/assets/v/moto/aprilia-rsv4.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2021,
+   "asked": true,
+   "quick": [
+    "/motorcycles/aprilia-rsv4/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-honda-cbr500r",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "honda-cbr500r",
+   "name": "Honda CBR500R",
+   "make": "Honda",
+   "img": "/assets/v/moto/honda-cbr500r.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2022,
+   "asked": true,
+   "quick": [
+    "/motorcycles/honda-cbr500r/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-triumph-street-triple",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "triumph-street-triple",
+   "name": "Triumph Street Triple",
+   "make": "Triumph",
+   "img": "/assets/v/moto/triumph-street-triple.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2023,
+   "asked": true,
+   "quick": [
+    "/motorcycles/triumph-street-triple/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-aprilia-rs-660",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "aprilia-rs-660",
+   "name": "Aprilia RS 660",
+   "make": "Aprilia",
+   "img": "/assets/v/moto/aprilia-rs-660.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2022,
+   "asked": true,
+   "quick": [
+    "/motorcycles/aprilia-rs-660/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-honda-cb650r",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "honda-cb650r",
+   "name": "Honda CB650R",
+   "make": "Honda",
+   "img": "/assets/v/moto/honda-cb650r.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2022,
+   "asked": true,
+   "quick": [
+    "/motorcycles/honda-cb650r/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-yamaha-yzf-r3",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "yamaha-yzf-r3",
+   "name": "Yamaha YZF-R3",
+   "make": "Yamaha",
+   "img": "/assets/v/moto/yamaha-yzf-r3.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2022,
+   "asked": true,
+   "quick": [
+    "/motorcycles/yamaha-yzf-r3/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-honda-cb500f",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "honda-cb500f",
+   "name": "Honda CB500F",
+   "make": "Honda",
+   "img": "/assets/v/moto/honda-cb500f.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2022,
+   "asked": true,
+   "quick": [
+    "/motorcycles/honda-cb500f/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-kawasaki-ninja-650",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "kawasaki-ninja-650",
+   "name": "Kawasaki Ninja 650",
+   "make": "Kawasaki",
+   "img": "/assets/v/moto/kawasaki-ninja-650.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2020,
+   "asked": true,
+   "quick": [
+    "/motorcycles/kawasaki-ninja-650/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-kawasaki-z650",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "kawasaki-z650",
+   "name": "Kawasaki Z650",
+   "make": "Kawasaki",
+   "img": "/assets/v/moto/kawasaki-z650.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2022,
+   "asked": true,
+   "quick": [
+    "/motorcycles/kawasaki-z650/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-suzuki-gsx-s1000",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "suzuki-gsx-s1000",
+   "name": "Suzuki GSX-S1000 / GT",
+   "make": "Suzuki",
+   "img": "/assets/v/moto/suzuki-gsx-s1000.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2022,
+   "asked": true,
+   "quick": [
+    "/motorcycles/suzuki-gsx-s1000/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-cfmoto-450ss",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "cfmoto-450ss",
+   "name": "CFMOTO 450SS / 450NK",
+   "make": "CFMOTO",
+   "img": "/assets/v/moto/cfmoto-450ss.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2023,
+   "asked": true,
+   "quick": [
+    "/motorcycles/cfmoto-450ss/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-honda-cb500x",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "honda-cb500x",
+   "name": "Honda CB500X / NX500",
+   "make": "Honda",
+   "img": "/assets/v/moto/honda-cb500x.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2024,
+   "asked": true,
+   "quick": [
+    "/motorcycles/honda-cb500x/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-bmw-g310gs",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "bmw-g310gs",
+   "name": "BMW G 310 GS / G 310 R",
+   "make": "BMW",
+   "img": "/assets/v/moto/bmw-g310gs.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2021,
+   "asked": true,
+   "quick": [
+    "/motorcycles/bmw-g310gs/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-bmw-s1000r",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "bmw-s1000r",
+   "name": "BMW S 1000 R",
+   "make": "BMW",
+   "img": "/assets/v/moto/bmw-s1000r.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2022,
+   "asked": true,
+   "quick": [
+    "/motorcycles/bmw-s1000r/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-ducati-panigale-v2",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "ducati-panigale-v2",
+   "name": "Ducati Panigale V2 / 959 / 899",
+   "make": "Ducati",
+   "img": "/assets/v/moto/ducati-panigale-v2.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2021,
+   "asked": true,
+   "quick": [
+    "/motorcycles/ducati-panigale-v2/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-kawasaki-z1000",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "kawasaki-z1000",
+   "name": "Kawasaki Z1000",
+   "make": "Kawasaki",
+   "img": "/assets/v/moto/kawasaki-z1000.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2014,
+   "asked": true,
+   "quick": [
+    "/motorcycles/kawasaki-z1000/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-kawasaki-z400-z500",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "kawasaki-z400-z500",
+   "name": "Kawasaki Z400 / Z500",
+   "make": "Kawasaki",
+   "img": "/assets/v/moto/kawasaki-z400-z500.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2023,
+   "asked": true,
+   "quick": [
+    "/motorcycles/kawasaki-z400-z500/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-mv-agusta-f3",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "mv-agusta-f3",
+   "name": "MV Agusta F3",
+   "make": "MV Agusta",
+   "img": "/assets/v/moto/mv-agusta-f3.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2018,
+   "asked": true,
+   "quick": [
+    "/motorcycles/mv-agusta-f3/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-royal-enfield-himalayan",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "royal-enfield-himalayan",
+   "name": "Royal Enfield Himalayan",
+   "make": "Royal Enfield",
+   "img": "/assets/v/moto/royal-enfield-himalayan.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2024,
+   "asked": true,
+   "quick": [
+    "/motorcycles/royal-enfield-himalayan/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-royal-enfield-interceptor-650",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "royal-enfield-interceptor-650",
+   "name": "Royal Enfield Interceptor 650 / Continental GT 650",
+   "make": "Royal Enfield",
+   "img": "/assets/v/moto/royal-enfield-interceptor-650.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2021,
+   "asked": true,
+   "quick": [
+    "/motorcycles/royal-enfield-interceptor-650/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-yamaha-yzf-r7",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "yamaha-yzf-r7",
+   "name": "Yamaha YZF-R7",
+   "make": "Yamaha",
+   "img": "/assets/v/moto/yamaha-yzf-r7.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2022,
+   "asked": true,
+   "quick": [
+    "/motorcycles/yamaha-yzf-r7/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-honda-cb300r",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "honda-cb300r",
+   "name": "Honda CB300R / CB300F",
+   "make": "Honda",
+   "img": "/assets/v/moto/honda-cb300r.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2020,
+   "asked": true,
+   "quick": [
+    "/motorcycles/honda-cb300r/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-honda-crf300l",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "honda-crf300l",
+   "name": "Honda CRF250L / CRF300L",
+   "make": "Honda",
+   "img": "/assets/v/moto/honda-crf300l.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2021,
+   "asked": true,
+   "quick": [
+    "/motorcycles/honda-crf300l/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-honda-grom",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "honda-grom",
+   "name": "Honda Grom",
+   "make": "Honda",
+   "img": "/assets/v/moto/honda-grom.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2022,
+   "asked": true,
+   "quick": [
+    "/motorcycles/honda-grom/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-honda-transalp",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "honda-transalp",
+   "name": "Honda Transalp",
+   "make": "Honda",
+   "img": "/assets/v/moto/honda-transalp.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2024,
+   "asked": true,
+   "quick": [
+    "/motorcycles/honda-transalp/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-husqvarna-vitpilen-701",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "husqvarna-vitpilen-701",
+   "name": "Husqvarna Vitpilen / Svartpilen 701 / 801",
+   "make": "Husqvarna",
+   "img": "/assets/v/moto/husqvarna-vitpilen-701.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2019,
+   "asked": true,
+   "quick": [
+    "/motorcycles/husqvarna-vitpilen-701/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-kawasaki-ninja-1000sx",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "kawasaki-ninja-1000sx",
+   "name": "Kawasaki Ninja 1000 / 1000SX",
+   "make": "Kawasaki",
+   "img": "/assets/v/moto/kawasaki-ninja-1000sx.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2020,
+   "asked": true,
+   "quick": [
+    "/motorcycles/kawasaki-ninja-1000sx/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-kawasaki-ninja-h2",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "kawasaki-ninja-h2",
+   "name": "Kawasaki Ninja H2",
+   "make": "Kawasaki",
+   "img": "/assets/v/moto/kawasaki-ninja-h2.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2021,
+   "asked": true,
+   "quick": [
+    "/motorcycles/kawasaki-ninja-h2/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-kawasaki-z-h2",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "kawasaki-z-h2",
+   "name": "Kawasaki Z H2",
+   "make": "Kawasaki",
+   "img": "/assets/v/moto/kawasaki-z-h2.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2021,
+   "asked": true,
+   "quick": [
+    "/motorcycles/kawasaki-z-h2/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-royal-enfield-classic-350",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "royal-enfield-classic-350",
+   "name": "Royal Enfield Classic 350",
+   "make": "Royal Enfield",
+   "img": "/assets/v/moto/royal-enfield-classic-350.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2022,
+   "asked": true,
+   "quick": [
+    "/motorcycles/royal-enfield-classic-350/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-suzuki-dr-z400s",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "suzuki-dr-z400s",
+   "name": "Suzuki DR-Z400S / SM",
+   "make": "Suzuki",
+   "img": "/assets/v/moto/suzuki-dr-z400s.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2022,
+   "asked": true,
+   "quick": [
+    "/motorcycles/suzuki-dr-z400s/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-suzuki-gsx-s750",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "suzuki-gsx-s750",
+   "name": "Suzuki GSX-S750",
+   "make": "Suzuki",
+   "img": "/assets/v/moto/suzuki-gsx-s750.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2018,
+   "asked": true,
+   "quick": [
+    "/motorcycles/suzuki-gsx-s750/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-suzuki-katana",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "suzuki-katana",
+   "name": "Suzuki Katana",
+   "make": "Suzuki",
+   "img": "/assets/v/moto/suzuki-katana.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2020,
+   "asked": true,
+   "quick": [
+    "/motorcycles/suzuki-katana/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-triumph-trident-660",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "triumph-trident-660",
+   "name": "Triumph Trident 660",
+   "make": "Triumph",
+   "img": "/assets/v/moto/triumph-trident-660.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2022,
+   "asked": true,
+   "quick": [
+    "/motorcycles/triumph-trident-660/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-yamaha-mt-03",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "yamaha-mt-03",
+   "name": "Yamaha MT-03",
+   "make": "Yamaha",
+   "img": "/assets/v/moto/yamaha-mt-03.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2022,
+   "asked": true,
+   "quick": [
+    "/motorcycles/yamaha-mt-03/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-aprilia-tuono-660",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "aprilia-tuono-660",
+   "name": "Aprilia Tuono 660",
+   "make": "Aprilia",
+   "img": "/assets/v/moto/aprilia-tuono-660.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2022,
+   "asked": true,
+   "quick": [
+    "/motorcycles/aprilia-tuono-660/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-aprilia-tuono-v4",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "aprilia-tuono-v4",
+   "name": "Aprilia Tuono V4",
+   "make": "Aprilia",
+   "img": "/assets/v/moto/aprilia-tuono-v4.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2021,
+   "asked": true,
+   "quick": [
+    "/motorcycles/aprilia-tuono-v4/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-bmw-r1300gs",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "bmw-r1300gs",
+   "name": "BMW R 1300 GS",
+   "make": "BMW",
+   "img": "/assets/v/moto/bmw-r1300gs.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2024,
+   "asked": true,
+   "quick": [
+    "/motorcycles/bmw-r1300gs/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-bmw-r-ninet",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "bmw-r-ninet",
+   "name": "BMW R nineT / R 12 nineT",
+   "make": "BMW",
+   "img": "/assets/v/moto/bmw-r-ninet.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2021,
+   "asked": true,
+   "quick": [
+    "/motorcycles/bmw-r-ninet/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-bmw-s1000xr",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "bmw-s1000xr",
+   "name": "BMW S 1000 XR",
+   "make": "BMW",
+   "img": "/assets/v/moto/bmw-s1000xr.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2020,
+   "asked": true,
+   "quick": [
+    "/motorcycles/bmw-s1000xr/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-honda-navi",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "honda-navi",
+   "name": "Honda Navi",
+   "make": "Honda",
+   "img": "/assets/v/moto/honda-navi.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2022,
+   "asked": true,
+   "quick": [
+    "/motorcycles/honda-navi/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-honda-trail125",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "honda-trail125",
+   "name": "Honda Trail125 / Super Cub C125",
+   "make": "Honda",
+   "img": "/assets/v/moto/honda-trail125.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2021,
+   "asked": true,
+   "quick": [
+    "/motorcycles/honda-trail125/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-honda-xr150l",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "honda-xr150l",
+   "name": "Honda XR150L",
+   "make": "Honda",
+   "asked": true,
+   "quick": [
+    "/motorcycles/honda-xr150l/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-kawasaki-klx300",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "kawasaki-klx300",
+   "name": "Kawasaki KLX250 / KLX300",
+   "make": "Kawasaki",
+   "img": "/assets/v/moto/kawasaki-klx300.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2022,
+   "asked": true,
+   "quick": [
+    "/motorcycles/kawasaki-klx300/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-royal-enfield-hunter-350",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "royal-enfield-hunter-350",
+   "name": "Royal Enfield Hunter 350",
+   "make": "Royal Enfield",
+   "img": "/assets/v/moto/royal-enfield-hunter-350.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2023,
+   "asked": true,
+   "quick": [
+    "/motorcycles/royal-enfield-hunter-350/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-royal-enfield-super-meteor-650",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "royal-enfield-super-meteor-650",
+   "name": "Royal Enfield Super Meteor 650",
+   "make": "Royal Enfield",
+   "img": "/assets/v/moto/royal-enfield-super-meteor-650.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2023,
+   "asked": true,
+   "quick": [
+    "/motorcycles/royal-enfield-super-meteor-650/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-triumph-scrambler-400x",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "triumph-scrambler-400x",
+   "name": "Triumph Scrambler 400 X",
+   "make": "Triumph",
+   "img": "/assets/v/moto/triumph-scrambler-400x.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2024,
+   "asked": true,
+   "quick": [
+    "/motorcycles/triumph-scrambler-400x/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-yamaha-mt-10",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "yamaha-mt-10",
+   "name": "Yamaha MT-10",
+   "make": "Yamaha",
+   "img": "/assets/v/moto/yamaha-mt-10.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2022,
+   "asked": true,
+   "quick": [
+    "/motorcycles/yamaha-mt-10/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-yamaha-tw200",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "yamaha-tw200",
+   "name": "Yamaha TW200",
+   "make": "Yamaha",
+   "img": "/assets/v/moto/yamaha-tw200.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2022,
+   "asked": true,
+   "quick": [
+    "/motorcycles/yamaha-tw200/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-yamaha-tracer-9",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "yamaha-tracer-9",
+   "name": "Yamaha Tracer 9 / FJ-09",
+   "make": "Yamaha",
+   "img": "/assets/v/moto/yamaha-tracer-9.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2022,
+   "asked": true,
+   "quick": [
+    "/motorcycles/yamaha-tracer-9/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-yamaha-xsr700",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "yamaha-xsr700",
+   "name": "Yamaha XSR700",
+   "make": "Yamaha",
+   "img": "/assets/v/moto/yamaha-xsr700.webp?v=2",
+   "w": 1000,
+   "h": 600,
+   "img_year": 2022,
+   "asked": true,
+   "quick": [
+    "/motorcycles/yamaha-xsr700/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-zooz",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "zooz",
+   "name": "Zooz",
+   "make": "Zooz",
+   "asked": true,
+   "quick": [
+    "/motorcycles/zooz/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "moto-mtt-420rr",
+   "file": "moto_yt.json",
+   "kind": "moto",
+   "slug": "mtt-420rr",
+   "name": "MTT 420RR",
+   "make": "MTT",
+   "asked": true,
+   "quick": [
+    "/motorcycles/mtt-420rr/",
+    "/motorcycles/"
+   ]
+  },
+  {
+   "fid": "perf-focus-st",
+   "file": "perf_yt.json",
+   "kind": "perf",
+   "slug": "focus-st",
+   "name": "Ford Focus ST",
+   "make": "Ford",
+   "img": "/assets/ai-perf/focus-st.webp",
+   "parent": "ford-focus",
+   "asked": true,
+   "quick": [
+    "/cars/focus-st/",
+    "home",
+    "/cars/",
+    "/performance/"
+   ]
+  },
+  {
+   "fid": "perf-elantra-n",
+   "file": "perf_yt.json",
+   "kind": "perf",
+   "slug": "elantra-n",
+   "name": "Hyundai Elantra N",
+   "make": "Hyundai",
+   "img": "/assets/ai-perf/elantra-n.webp",
+   "parent": "hyundai-elantra",
+   "asked": true,
+   "quick": [
+    "/cars/elantra-n/",
+    "home",
+    "/cars/",
+    "/performance/"
+   ]
+  },
+  {
+   "fid": "perf-mazdaspeed3",
+   "file": "perf_yt.json",
+   "kind": "perf",
+   "slug": "mazdaspeed3",
+   "name": "Mazdaspeed3",
+   "make": "Mazda",
+   "img": "/assets/ai-perf/mazdaspeed3.webp",
+   "parent": "mazda3",
+   "asked": true,
+   "quick": [
+    "/cars/mazdaspeed3/",
+    "home",
+    "/cars/",
+    "/performance/"
+   ]
+  },
+  {
+   "fid": "perf-ct4-v-blackwing",
+   "file": "perf_yt.json",
+   "kind": "perf",
+   "slug": "ct4-v-blackwing",
+   "name": "Cadillac CT4-V Blackwing",
+   "make": "Cadillac",
+   "img": "/assets/ai-perf/ct4-v-blackwing.webp",
+   "parent": null,
+   "asked": true,
+   "quick": [
+    "/cars/ct4-v-blackwing/",
+    "home",
+    "/cars/",
+    "/performance/"
+   ]
+  },
+  {
+   "fid": "perf-giulia-qv",
+   "file": "perf_yt.json",
+   "kind": "perf",
+   "slug": "giulia-qv",
+   "name": "Alfa Romeo Giulia Quadrifoglio",
+   "make": "Alfa Romeo",
+   "img": "/assets/ai-perf/giulia-qv.webp",
+   "parent": null,
+   "asked": true,
+   "quick": [
+    "/cars/giulia-qv/",
+    "home",
+    "/cars/",
+    "/performance/"
+   ]
+  },
+  {
+   "fid": "perf-audi-tt-rs",
+   "file": "perf_yt.json",
+   "kind": "perf",
+   "slug": "audi-tt-rs",
+   "name": "Audi TT RS",
+   "make": "Audi",
+   "img": "/assets/ai-perf/audi-tt-rs.webp",
+   "parent": null,
+   "asked": true,
+   "quick": [
+    "/cars/audi-tt-rs/",
+    "home",
+    "/cars/",
+    "/performance/"
+   ]
+  },
+  {
+   "fid": "perf-f-type-r",
+   "file": "perf_yt.json",
+   "kind": "perf",
+   "slug": "f-type-r",
+   "name": "Jaguar F-Type R / SVR",
+   "make": "Jaguar",
+   "img": "/assets/ai-perf/f-type-r.webp",
+   "parent": null,
+   "asked": true,
+   "quick": [
+    "/cars/f-type-r/",
+    "home",
+    "/cars/",
+    "/performance/"
+   ]
+  },
+  {
+   "fid": "perf-audi-rs3",
+   "file": "perf_yt.json",
+   "kind": "perf",
+   "slug": "audi-rs3",
+   "name": "Audi RS 3",
+   "make": "Audi",
+   "img": "/assets/ai-perf/audi-rs3.webp",
+   "parent": "audi-a3",
+   "asked": true,
+   "quick": [
+    "/cars/audi-rs3/",
+    "home",
+    "/cars/",
+    "/performance/"
+   ]
+  },
+  {
+   "fid": "perf-audi-rs6",
+   "file": "perf_yt.json",
+   "kind": "perf",
+   "slug": "audi-rs6",
+   "name": "Audi RS 6 Avant",
+   "make": "Audi",
+   "img": "/assets/ai-perf/audi-rs6.webp",
+   "parent": "audi-a6",
+   "asked": true,
+   "quick": [
+    "/cars/audi-rs6/",
+    "home",
+    "/cars/",
+    "/performance/"
+   ]
+  },
+  {
+   "fid": "perf-bmw-m6",
+   "file": "perf_yt.json",
+   "kind": "perf",
+   "slug": "bmw-m6",
+   "name": "BMW M6",
+   "make": "BMW",
+   "img": "/assets/ai-perf/bmw-m6.webp",
+   "parent": null,
+   "asked": true,
+   "quick": [
+    "/cars/bmw-m6/",
+    "home",
+    "/cars/",
+    "/performance/"
+   ]
+  },
+  {
+   "fid": "perf-bmw-m8",
+   "file": "perf_yt.json",
+   "kind": "perf",
+   "slug": "bmw-m8",
+   "name": "BMW M8",
+   "make": "BMW",
+   "img": "/assets/ai-perf/bmw-m8.webp",
+   "parent": null,
+   "asked": true,
+   "quick": [
+    "/cars/bmw-m8/",
+    "home",
+    "/cars/",
+    "/performance/"
+   ]
+  },
+  {
+   "fid": "perf-neon-srt4",
+   "file": "perf_yt.json",
+   "kind": "perf",
+   "slug": "neon-srt4",
+   "name": "Dodge Neon SRT-4",
+   "make": "Dodge",
+   "img": "/assets/ai-perf/neon-srt4.webp",
+   "parent": "dodge-neon",
+   "asked": true,
+   "quick": [
+    "/cars/neon-srt4/",
+    "home",
+    "/cars/",
+    "/performance/"
+   ]
+  },
+  {
+   "fid": "perf-bronco-raptor",
+   "file": "perf_yt.json",
+   "kind": "perf",
+   "slug": "bronco-raptor",
+   "name": "Ford Bronco Raptor",
+   "make": "Ford",
+   "img": "/assets/ai-perf/bronco-raptor.webp",
+   "parent": "ford-bronco",
+   "asked": true,
+   "quick": [
+    "/cars/bronco-raptor/",
+    "home",
+    "/cars/",
+    "/performance/"
+   ]
+  },
+  {
+   "fid": "perf-jaguar-xkr",
+   "file": "perf_yt.json",
+   "kind": "perf",
+   "slug": "jaguar-xkr",
+   "name": "Jaguar XKR / XKR-S",
+   "make": "Jaguar",
+   "img": "/assets/ai-perf/jaguar-xkr.webp",
+   "parent": null,
+   "asked": true,
+   "quick": [
+    "/cars/jaguar-xkr/",
+    "home",
+    "/cars/",
+    "/performance/"
+   ]
+  },
+  {
+   "fid": "perf-amg-cla45",
+   "file": "perf_yt.json",
+   "kind": "perf",
+   "slug": "amg-cla45",
+   "name": "Mercedes-AMG CLA45 / GLA45",
+   "make": "Mercedes-Benz",
+   "img": "/assets/ai-perf/amg-cla45.webp",
+   "parent": "mercedes-benz-cla",
+   "asked": true,
+   "quick": [
+    "/cars/amg-cla45/",
+    "home",
+    "/cars/",
+    "/performance/"
+   ]
+  },
+  {
+   "fid": "perf-cayman-gt4",
+   "file": "perf_yt.json",
+   "kind": "perf",
+   "slug": "cayman-gt4",
+   "name": "Porsche 718 Cayman GT4 / Boxster Spyder",
+   "make": "Porsche",
+   "img": "/assets/ai-perf/cayman-gt4.webp",
+   "parent": null,
+   "asked": true,
+   "quick": [
+    "/cars/cayman-gt4/",
+    "home",
+    "/cars/",
+    "/performance/"
+   ]
+  },
+  {
+   "fid": "perf-gr-corolla",
+   "file": "perf_yt.json",
+   "kind": "perf",
+   "slug": "gr-corolla",
+   "name": "Toyota GR Corolla",
+   "make": "Toyota",
+   "img": "/assets/ai-perf/gr-corolla.webp",
+   "parent": "toyota-corolla",
+   "asked": true,
+   "quick": [
+    "/cars/gr-corolla/",
+    "home",
+    "/cars/",
+    "/performance/"
+   ]
+  },
+  {
+   "fid": "newcar-bmw-3-series-gt",
+   "file": "newcar_yt.json",
+   "kind": "car",
+   "slug": "bmw-3-series-gt",
+   "name": "BMW 3 Series GT",
+   "make": "BMW",
+   "asked": true,
+   "quick": [
+    "/cars/bmw-3-series-gt/",
+    "home",
+    "/cars/"
+   ]
+  },
+  {
+   "fid": "newcar-bmw-5-series-gt",
+   "file": "newcar_yt.json",
+   "kind": "car",
+   "slug": "bmw-5-series-gt",
+   "name": "BMW 5 Series GT",
+   "make": "BMW",
+   "asked": true,
+   "quick": [
+    "/cars/bmw-5-series-gt/",
+    "home",
+    "/cars/"
+   ]
+  },
+  {
+   "fid": "newcar-citroen-c5",
+   "file": "newcar_yt.json",
+   "kind": "car",
+   "slug": "citroen-c5",
+   "name": "Citroen C5",
+   "make": "Citroen",
+   "asked": true,
+   "quick": [
+    "/cars/citroen-c5/",
+    "home",
+    "/cars/"
+   ]
+  },
+  {
+   "fid": "newcar-mitsubishi-pajero",
+   "file": "newcar_yt.json",
+   "kind": "car",
+   "slug": "mitsubishi-pajero",
+   "name": "Mitsubishi Pajero",
+   "make": "Mitsubishi",
+   "asked": true,
+   "quick": [
+    "/cars/mitsubishi-pajero/",
+    "home",
+    "/cars/"
+   ]
+  },
+  {
+   "fid": "newcar-toyota-mark-x",
+   "file": "newcar_yt.json",
+   "kind": "car",
+   "slug": "toyota-mark-x",
+   "name": "Toyota Mark X",
+   "make": "Toyota",
+   "asked": true,
+   "quick": [
+    "/cars/toyota-mark-x/",
+    "home",
+    "/cars/"
+   ]
+  },
+  {
+   "fid": "newcar-mazda-cx-30",
+   "file": "newcar_yt.json",
+   "kind": "car",
+   "slug": "mazda-cx-30",
+   "name": "Mazda CX-30",
+   "make": "Mazda",
+   "asked": true,
+   "quick": [
+    "/cars/mazda-cx-30/",
+    "home",
+    "/cars/"
+   ]
+  },
+  {
+   "fid": "newcar-lexus-gx",
+   "file": "newcar_yt.json",
+   "kind": "car",
+   "slug": "lexus-gx",
+   "name": "Lexus GX",
+   "make": "Lexus",
+   "asked": true,
+   "quick": [
+    "/cars/lexus-gx/",
+    "home",
+    "/cars/"
+   ]
+  },
+  {
+   "fid": "newcar-lexus-gs",
+   "file": "newcar_yt.json",
+   "kind": "car",
+   "slug": "lexus-gs",
+   "name": "Lexus GS",
+   "make": "Lexus",
+   "asked": true,
+   "quick": [
+    "/cars/lexus-gs/",
+    "home",
+    "/cars/"
+   ]
+  },
+  {
+   "fid": "newcar-lexus-ux",
+   "file": "newcar_yt.json",
+   "kind": "car",
+   "slug": "lexus-ux",
+   "name": "Lexus UX",
+   "make": "Lexus",
+   "asked": true,
+   "quick": [
+    "/cars/lexus-ux/",
+    "home",
+    "/cars/"
+   ]
+  },
+  {
+   "fid": "newcar-lexus-ct",
+   "file": "newcar_yt.json",
+   "kind": "car",
+   "slug": "lexus-ct",
+   "name": "Lexus CT 200h",
+   "make": "Lexus",
+   "asked": true,
+   "quick": [
+    "/cars/lexus-ct/",
+    "home",
+    "/cars/"
+   ]
+  },
+  {
+   "fid": "newcar-mercedes-benz-cls",
+   "file": "newcar_yt.json",
+   "kind": "car",
+   "slug": "mercedes-benz-cls",
+   "name": "Mercedes-Benz CLS",
+   "make": "Mercedes-Benz",
+   "asked": true,
+   "quick": [
+    "/cars/mercedes-benz-cls/",
+    "home",
+    "/cars/"
+   ]
+  },
+  {
+   "fid": "newcar-mercedes-benz-slk",
+   "file": "newcar_yt.json",
+   "kind": "car",
+   "slug": "mercedes-benz-slk",
+   "name": "Mercedes-Benz SLK",
+   "make": "Mercedes-Benz",
+   "asked": true,
+   "quick": [
+    "/cars/mercedes-benz-slk/",
+    "home",
+    "/cars/"
+   ]
+  },
+  {
+   "fid": "newcar-bmw-6-series",
+   "file": "newcar_yt.json",
+   "kind": "car",
+   "slug": "bmw-6-series",
+   "name": "BMW 6 Series",
+   "make": "BMW",
+   "asked": true,
+   "quick": [
+    "/cars/bmw-6-series/",
+    "home",
+    "/cars/"
+   ]
+  },
+  {
+   "fid": "newcar-cadillac-elr",
+   "file": "newcar_yt.json",
+   "kind": "car",
+   "slug": "cadillac-elr",
+   "name": "Cadillac ELR",
+   "make": "Cadillac",
+   "asked": true,
+   "quick": [
+    "/cars/cadillac-elr/",
+    "home",
+    "/cars/"
+   ]
+  },
+  {
+   "fid": "newcar-mitsubishi-eclipse-cross",
+   "file": "newcar_yt.json",
+   "kind": "car",
+   "slug": "mitsubishi-eclipse-cross",
+   "name": "Mitsubishi Eclipse Cross",
+   "make": "Mitsubishi",
+   "asked": true,
+   "quick": [
+    "/cars/mitsubishi-eclipse-cross/",
+    "home",
+    "/cars/"
+   ]
+  },
+  {
+   "fid": "newcar-acura-ilx",
+   "file": "newcar_yt.json",
+   "kind": "car",
+   "slug": "acura-ilx",
+   "name": "Acura ILX",
+   "make": "Acura",
+   "asked": true,
+   "quick": [
+    "/cars/acura-ilx/",
+    "home",
+    "/cars/"
+   ]
+  },
+  {
+   "fid": "newcar-kia-k4",
+   "file": "newcar_yt.json",
+   "kind": "car",
+   "slug": "kia-k4",
+   "name": "Kia K4",
+   "make": "Kia",
+   "asked": true,
+   "quick": [
+    "/cars/kia-k4/",
+    "home",
+    "/cars/"
+   ]
+  },
+  {
+   "fid": "newcar-honda-prelude",
+   "file": "newcar_yt.json",
+   "kind": "car",
+   "slug": "honda-prelude",
+   "name": "Honda Prelude",
+   "make": "Honda",
+   "asked": true,
+   "quick": [
+    "/cars/honda-prelude/",
+    "home",
+    "/cars/"
+   ]
+  },
+  {
+   "fid": "newcar-toyota-celica",
+   "file": "newcar_yt.json",
+   "kind": "car",
+   "slug": "toyota-celica",
+   "name": "Toyota Celica",
+   "make": "Toyota",
+   "asked": true,
+   "quick": [
+    "/cars/toyota-celica/",
+    "home",
+    "/cars/"
+   ]
+  },
+  {
+   "fid": "newcar-scion-xd",
+   "file": "newcar_yt.json",
+   "kind": "car",
+   "slug": "scion-xd",
+   "name": "Scion xD",
+   "make": "Scion",
+   "asked": true,
+   "quick": [
+    "/cars/scion-xd/",
+    "home",
+    "/cars/"
+   ]
+  },
+  {
+   "fid": "volkswagen-gti",
+   "file": "yt_scores.json",
+   "kind": "car",
+   "slug": "volkswagen-gti",
+   "name": "Volkswagen GTI",
+   "make": "Volkswagen",
+   "img": "/assets/ai-models/volkswagen-gti.webp",
+   "parent": "volkswagen-golf",
+   "parent_name": "Volkswagen Golf",
+   "asked": true,
+   "quick": [
+    "/cars/volkswagen-gti/",
+    "home",
+    "/cars/"
+   ]
+  }
+ ]
+}

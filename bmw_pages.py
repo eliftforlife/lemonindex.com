@@ -332,6 +332,8 @@ else:
                 + '</div><label class="ehub-s">Sort <select id="ehub-sort"><option value="own">Owner complaints</option><option value="new">Newest</option>'
                   '<option value="old">Oldest</option><option value="yt">YouTube tone</option></select></label></div>'
                 + f'<p class="ehub-c" aria-live="polite">{len(cards)} engines</p><ol class="ehub-g">{"".join(cards)}</ol>'
+                + '<p class="yc-cap" style="text-align:center">Diesels (not ranked here: their complaints are matched by VIN, not by model): '
+                  '<a href="/engines/bmw-m57/">M57 3.0 diesel</a> · <a href="/engines/bmw-n47-b47/">N47 / B47 2.0 diesel</a>.</p>'   # 11-25 viewers asked where the M57 was
                 + share_line('Every BMW engine ranked by owner complaints, year by year. Free:') + '</div><script src="/assets/enghub.js?v=1" defer></script>')
         faq = [('Which BMW engine is the most reliable?', ans)]
         page('/engines/bmw/', 'BMW Engines Ranked by Owner Complaints (N54, B58 & More)', ans, body, ld=[faq_ld([(q, '', a) for q, a in faq])]); BMW_URLS.insert(0, '/engines/bmw/')

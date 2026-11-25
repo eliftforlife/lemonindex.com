@@ -130,6 +130,9 @@ def two_windows(slug, here='main'):
             f'(<b>{e["li"]}</b>, model years {e["years"].replace("-", "–")}, complaints filed by the end of the year after the model year), the window every EV is ranked on.')
 PERFX = _jl('data/perf_cars.json') or []   # the performance list (another agent researches it); empty = the tab shows "Coming soon"
 if isinstance(PERFX, dict): PERFX = PERFX.get('cars', [])
+exec(open('yt_req_pages.py', encoding='utf-8').read())   # 11-25 viewer requests: YouTube-only pages (YTQ_URL now, the pages near the end)
+for c in PERFX:
+    if not c.get('url') and 'perf:' + (c.get('slug') or '') in YTQ_URL: c['url'] = YTQ_URL['perf:' + c['slug']]   # its card goes live, linking the YouTube-only page
 _bk = {b.lower(): b for b in PICK}
 _brandof = lambda mk: _bk.get(mk.lower(), mk.title() if mk.isupper() else mk)
 def _evyears(c):
@@ -158,7 +161,10 @@ for c in PERFX:
     i = perf_info(c); PICK_ALL.setdefault(i['brand'], []).append([c.get('search') or i['name'], i['id'], [], i['url'], 'perf'])   # 11-11: full name keeps the trim aliases searchable
 for _m in (_jl('data/moto.json') or []): PICK_ALL.setdefault(_brandof(_m['brand']), []).append([_m['name'], 'moto-' + _slg(_m['name']), [], f"/motorcycles/{_slg(_m['name'])}/", 'moto'])   # 11-11: motorcycles in the one search
 for _m in (_jl('data/moto_bikes.json') or []): PICK_ALL.setdefault(_brandof(_m['brand']), []).append([_m['name'], 'moto-' + _m['slug'], [], f"/motorcycles/{_m['slug']}/", 'moto'])   # 11-14: bike pages
-for _m in [x for x in (_jl('data/moto_soon.json') or []) if x['slug'] not in {b['slug'] for b in (_jl('data/moto_bikes.json') or [])}]: PICK_ALL.setdefault(_brandof(_m['make']), []).append([_m.get('search') or _m['name'], 'moto-' + _m['slug'], [], '', 'moto'])
+for _m in [x for x in (_jl('data/moto_soon.json') or []) if x['slug'] not in {b['slug'] for b in (_jl('data/moto_bikes.json') or [])}]: PICK_ALL.setdefault(_brandof(_m['make']), []).append([_m.get('search') or _m['name'], 'moto-' + _m['slug'], [], YTQ_URL.get('moto:' + _m['slug'], ''), 'moto'])
+_msn = {x['slug'] for x in (_jl('data/moto_soon.json') or [])}
+for _p in YTQ_LIVE:   # 11-25 YouTube-only request pages not already in the search (a regular car, or a bike with no coming-soon card)
+    if _p['kind'] == 'car' or (_p['kind'] == 'moto' and _p['slug'] not in _msn): PICK_ALL.setdefault(_brandof(_p['make']), []).append([_p['name'], ('moto-' if _p['kind'] == 'moto' else '') + _p['slug'], [], ytq_url(_p), 'moto' if _p['kind'] == 'moto' else 'yt'])
 PICK_ALL = dict(sorted((b, sorted(m)) for b, m in PICK_ALL.items()))
 def finder(h='Look up any car', sub='Every model year, 2000 to 2025. Free.', foot='', ph='e.g. 2016 Honda Pilot', lab='Type a car'):
     """10-29 (Elijah): the first thing on the page is an easy car filter. Type "2016 pilot", or pick brand, model, year (assets/lookup.js)."""
@@ -407,7 +413,7 @@ GH_SB = f'<button class="lxs-btn" type="button" aria-label="Search" aria-control
 GH_SD = (f'<form class="lxs-d" role="search" action="/" method="get"><div class="lxs-db">{_LXS_IC.replace("<svg ", "<svg class=\"lxs-di\" ", 1)}'
          '<input id="ghd" name="q" type="search" autocomplete="off" placeholder="Search cars, codes, lists" aria-label="Search cars, engine codes and lists" enterkeyhint="search">'
          '<div id="ghds" class="fsug" role="listbox" hidden></div></div></form>')
-LXS_V = '1123op'   # lxs.css + lookup.js version (N1 navigation fixes; 11-15 4c: header fit + symptom search)
+LXS_V = '1125yt'   # lxs.css + lookup.js version (N1 navigation fixes; 11-15 4c: header fit + symptom search)
 GH_IC.setdefault('/rankings/', '<path d="M4 6h16M4 12h11M4 18h6"/>')   # 11-13 (N1, problem 12): "Every car ranked" in the menu, best to worst bars
 def navlinks(path):
     on = lambda u: path.startswith(u) or (u == '/cars/' and path.startswith('/cars'))
@@ -1242,6 +1248,9 @@ def _tab_body(fid, y, body):
     li = {v['y']: v['li'] for v in f['years'] if v['ok']}; pages = {v['y'] for v in f['years']}
     ytr = yt_rank_map(f); _sc = YTS.get(fid) or {}
     eng = TAB.engine_chart(fid, f['name'], li, ytr, pages, cur=y, cls=lambda v: band(v)[0], ysc={yy: _sc[str(yy)]['score'] for yy in ytr}, part={v['y'] for v in f['years'] if v.get('early')})
+    if eng and fid.startswith('bmw-'):   # 11-25 (viewers: "why isn't the M57 on there"): the BMW chart is gas engines only; its diesels have their own pages
+        _de = [(u, n) for u, n in (('/engines/bmw-m57/', 'M57 3.0 diesel'), ('/engines/bmw-n47-b47/', 'N47 / B47 2.0 diesel')) if u in ((globals().get('CAR_ENG') or {}).get(fid) or {}) and u not in eng]
+        if _de: eng += '<p class="yc-cap">Diesel in this car: ' + ' · '.join(f'<a href="{u}">{n}</a>' for u, n in _de) + ' (its own page: owner complaints matched by VIN).</p>'
     short = f['name'].split(' ', 1)[-1]
     k = hashlib.md5('|'.join((_TAB_SRC, fid, str(y), short, eng, body)).encode('utf-8')).hexdigest()
     if k in _TAB_OLD: _TAB_NEW[k] = _TAB_OLD[k]; return _TAB_OLD[k]
@@ -2287,7 +2296,13 @@ for _k, _v in _PLAN.items(): SEG_EXN.setdefault(_k, _v.get('seg'))   # 11-13: co
 _DUP = {k: v for k, v in _DUP.items() if not os.path.exists(f'data/perf/{k}.json')}
 NEWM = [m for m in NEWM if not os.path.exists(f'data/perf/{m["slug"]}.json')]
 _ID = {c['id']: c for c in CARS + CARS_NEW}
+def ytqcard(p):
+    """11-25 a viewer-requested car with a YouTube-only page (yt_req_pages.py)"""
+    ph = ytq_img(p); short = _short(p['name'], p['make'])
+    return (f'<a class="mc mc-co" data-t="r" href="{ytq_url(p)}" title="YouTube buyer score only: no owner-complaint data yet"><span class="mc-p">{_cimg(ph, p["name"]) if ph else ""}</span>'
+            f'<b>{E(short)}</b><span class="nd">YouTube only</span></a>')
 def ndcard(m):
+    if 'car:' + m['slug'] in YTQ_URL: return ytqcard(next(p for p in YTQ_LIVE if p['kind'] == 'car' and p['slug'] == m['slug']))   # 11-25 (the GTI: its own page now, not the Golf's)
     nm = m['name']; short = nm.split(' ', 1)[1] if nm.startswith(m['make'] + ' ') else nm
     if short[:1].islower(): short = short[:1].upper() + short[1:]   # 11-19: 'Ram pickup' -> 'Pickup', not 'pickup'
     img = f'<span class="mc-p"><img src="{m.get("src") or f"/assets/ai-models/{m['slug']}.webp?v=1"}" alt="{E(m.get("alt") or nm)}" width="1000" height="600" loading="lazy"></span>'
@@ -2347,6 +2362,9 @@ def _m3twin():
     return (f'<a class="mc mc-sc mc-dup" data-t="p" href="/cars/bmw-m3/"><span class="mc-p">{_cimg(m, "BMW M3") if m else ""}</span><b>M3</b>'
             f'<small class="mc-k">{E(lead)}</small></a>')
 if os.path.exists('data/perf/bmw-m3.json') and not any(c.get('slug') == 'bmw-m3' for c in PERFX): _xb.setdefault('BMW', []).append(('BMW M3', _m3twin()))
+_ndn = {m['slug'] for ms in _nd.values() for m in ms}
+for _p in YTQ_LIVE:   # 11-25 viewer-requested cars with a YouTube-only page (the ones that aren't a "new model" card already)
+    if _p['kind'] == 'car' and _p['slug'] not in _ndn: _xb.setdefault(_brandof(_p['make']), []).append((_p['name'], ytqcard(_p)))
 # 11-10 (Elijah): brands with no scored model at all go last, under a small "Coming soon" heading (A-Z within each group)
 def _brand(b):
     _in = (''.join(mcard(n, i) for n, i, _ in pick.get(b, [])) + ''.join(h for _, h in sorted(_xb.get(b, [])))
@@ -2505,6 +2523,7 @@ exec(open('studies_month.py', encoding='utf-8').read())   # 11-12 monthly data s
 exec(open('electric_pages.py', encoding='utf-8').read())
 exec(open('brands_pages.py', encoding='utf-8').read())   # 11-03 brand pages
 exec(open('vehicles_pages.py', encoding='utf-8').read())   # 11-04 planes + motorcycles
+ytq_build()   # 11-25 viewer-requested vehicles: YouTube-only pages (yt_req_pages.py)
 exec(open('advanced_pages.py', encoding='utf-8').read())   # 11-06 advanced mode
 exec(open('engine_pages.py', encoding='utf-8').read())   # 11-10 engine code search + code pages (before gap_pages: the hub lists them)
 exec(open('symptom_pages.py', encoding='utf-8').read())   # 11-14 growth plan 2C: car symptom pages /symptoms/ from NHTSA complaint text (after the code pages it links, before gap_pages: the check engine hub links them)

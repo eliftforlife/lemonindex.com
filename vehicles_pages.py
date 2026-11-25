@@ -279,12 +279,18 @@ if MO:
         return (f'<div class="mc vmc mc-nd" aria-disabled="true" title="Not enough owner reports yet"><span class="mc-p">{img}</span><b>{E(nm)}</b>'
                 f'<small class="mc-k">{E(s["engine"])}</small><span class="nd">Not enough owner reports yet</span></div>')
     def mcard(x, is_bike):
+        if is_bike == 2:   # 11-25 YouTube-only page (no NHTSA complaint count to show)
+            ph = {'src': x['img'], 'w': x.get('w', 1000), 'h': x.get('h', 600), 'author': '', 'ai': x['name'], 'noun': 'motorcycle'} if x.get('img') else None
+            return card(YTQ_URL['moto:' + x['slug']], ph, x['name'], '', '', 'YouTube score only')
         u = f'/motorcycles/{x["slug"]}/'; nr = len(x['recalls'])
         return card(u, vph(x['name']), x['name'], f'{nr}', 'bad' if nr >= 10 else 'good', f'{x["n"]:,} complaints')
     groups = ''
     for c in MCATS:
         xs = sorted([(m['n'], 0, m) for m in MO if mcat(m) == c] + [(b['n'], 1, b) for b in MB if mcat(b) == c], key=lambda t: -t[0])
         ss = sorted([s for s in MS if s.get('category') == c], key=lambda s: s['name'])
+        # 11-25 viewer requests: a bike with a YouTube-only page (yt_req_pages.py) is a link card in the grid, not a folded "not enough reports" card
+        yq = [s for s in ss if 'moto:' + s['slug'] in YTQ_URL]; ss = [s for s in ss if 'moto:' + s['slug'] not in YTQ_URL]
+        xs += [(0, 2, s) for s in yq]
         if not xs and not ss: continue
         fold = (f'<details class="mav-more"><summary>{len(ss)} more {c.lower()} bike{"s" * (len(ss) != 1)}: not enough owner reports yet</summary><div class="mg">'
                 + ''.join(mscard(s) for s in ss) + '</div></details>') if ss and xs else (f'<div class="mg">' + ''.join(mscard(s) for s in ss) + '</div>' if ss else '')

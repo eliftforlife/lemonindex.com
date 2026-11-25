@@ -104,7 +104,7 @@
   // ---- the index: the small list in the page (#pick) at once, then the full one (assets/find.json, every page and card, with a
   // build check that nothing is missing) plus find-go.json (which engine codes, transmission pages and /best/ lists exist)
   const el = $('pick'), P = el ? JSON.parse(el.textContent) : {};
-  const KIND = { sc: 'Supercar · engine, fuel cost and recalls', ev: 'Electric car · EV score and problems', perf: 'Performance car · specs, engines and problems', moto: 'Motorcycle · complaints and recalls', co: 'Owner complaints and recalls', eng: 'Engine · reliability by year', br: 'Brand · every model, ranked' };
+  const KIND = { sc: 'Supercar · engine, fuel cost and recalls', ev: 'Electric car · EV score and problems', perf: 'Performance car · specs, engines and problems', moto: 'Motorcycle · complaints and recalls', co: 'Owner complaints and recalls', yt: 'YouTube buyer score only · every year ranked', eng: 'Engine · reliability by year', br: 'Brand · every model, ranked' };
   // 11-13 (NQ, "Honda ED/EJ results are mislabeled"): an engine that is a section of a car page, and a match-up page, say what they are
   const yspan = ys => ys.length ? ` · ${ys[0]}${ys.length > 1 ? '–' + ys.at(-1) : ''}` : '';
   const kindOf = c => {

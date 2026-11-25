@@ -61,7 +61,11 @@ for m in (globals().get('MB') or []): _fadd(m['name'], m['brand'], f'/motorcycle
 for c in PERFX:
     i = perf_info(c); g = c.get('group', 'A'); u = i['url'] or PERF_LIVE.get(i['id'], '')
     _fadd(i['name'], i['brand'], u, 'perf' if g == 'A' else 'sc', [], ' '.join(filter(None, [FIND_ALIAS.get(i['id'], ''), c.get('search', '')])), 0 if u else 1)
-for s in (globals().get('MS') or []): _fadd(s['name'], s['make'], '', 'moto', [], 'motorcycle bike ' + (s.get('search') or ''), 1)
+# 11-25 viewer requests with a YouTube-only page (yt_req_pages.py): a live link, before their coming-soon entry
+for _p in YTQ_LIVE: _fadd(_p['name'], _p['make'], ytq_url(_p), 'yt', [],   # no years: these pages have no year pages
+                          ('motorcycle bike ' if _p['kind'] == 'moto' else '') + 'youtube ' + (next((s.get('search') or '' for s in (globals().get('MS') or []) if s['slug'] == _p['slug']), '')))
+for s in (globals().get('MS') or []):
+    if 'moto:' + s['slug'] not in YTQ_URL: _fadd(s['name'], s['make'], '', 'moto', [], 'motorcycle bike ' + (s.get('search') or ''), 1)
 for m in NEWM:
     if m['slug'] not in _DUP and m['slug'] not in _EXN: _fadd(m['name'], m['make'], '', 'nd', [], '', 1)
 for r in (globals().get('HD_FIND') or []): _fadd(*r)   # 11-12 round 2: HD truck pages (hd_pages.py)
