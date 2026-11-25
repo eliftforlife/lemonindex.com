@@ -1972,3 +1972,49 @@ table.adv.hd-cmp td:first-child { white-space: normal; min-width: 9em; }
 header.gh .gh-cta.gh-don { background: #ffd400; color: #111; border: 0; font-family: inherit; font-weight: 700; cursor: pointer; padding: 0 16px; }
 header.gh .gh-cta.gh-don:hover { opacity: 1; background: #ffcb00; }
 header.gh .gh-cta.gh-don[hidden] { display: none; }
+/* 11-24 category menu (Elijah: "2-10 categories with subcategories", mockup 'Lemon menu dropdown.png'). Phones/tablets: the panel drops down
+   over the dimmed page; 6 category rows; a tap shows just that category's pages in the same panel ('< Menu' goes back). Desktop More
+   panel: the 6 categories as columns. Markup: build.py gh_header (.mn); switching: assets/nav.js. */
+header.gh.wide .gh-sheet-in { display: block; }
+header.gh.wide .gh-sheet .mn-a { display: none; }
+header.gh.wide .gh-sheet .mn a, header.gh.wide .gh-sheet .mn button, header.gh.wide .gh-sheet a.lsv-sl {
+  display: flex; align-items: center; gap: 14px; width: 100%; min-height: 52px; padding: 0; margin: 0; border: 0; border-bottom: 1px solid rgba(0, 0, 0, .07);
+  background: none; font: inherit; font-size: 17px; font-weight: 600; letter-spacing: -.01em; line-height: 1.2; color: var(--gh-ink); text-align: left;
+  text-decoration: none; cursor: pointer; opacity: 1; transform: none; transition: color .15s; -webkit-tap-highlight-color: transparent; }
+header.gh.wide .gh-sheet .mn .gh-ic { width: 21px; height: 21px; color: var(--gh-ink); }
+header.gh.wide .gh-sheet .mn .mn-cv { width: 16px; height: 16px; flex: none; margin-left: auto; color: #aeaeb2; }
+header.gh.wide .gh-sheet .mn a[aria-current]::after { content: none; }
+header.gh.wide .gh-sheet .mn a[aria-current] span::after { content: ""; display: inline-block; width: 7px; height: 7px; margin-left: 8px; border-radius: 50%; background: #f2c200; vertical-align: middle; }
+header.gh.wide .gh-sheet a.lsv-sl { font-weight: 700; }
+header.gh.wide .gh-sheet a.lsv-sl svg { width: 21px; height: 21px; }
+header.gh.wide .gh-sheet .mn .mn-bk { min-height: 40px; gap: 6px; border: 0; font-size: 14px; font-weight: 600; color: #6e6e73; }
+header.gh.wide .gh-sheet .mn .mn-bk span { font-size: 22px; line-height: 1; }
+header.gh.wide .gh-sheet .mn .mn-p a:last-child, header.gh.wide .gh-sheet .mn .mn-root button:last-child { border-bottom: 0; }
+.gh-sheet .mn-h { display: none; }
+.gh-sheet .mn-f { display: flex; flex-wrap: wrap; gap: 4px 18px; margin: 6px 0 0; padding-top: 12px; border-top: 1px solid rgba(0, 0, 0, .07); }
+header.gh.wide .gh-sheet .mn-f a { display: inline; min-height: 0; padding: 4px 0; font-size: 14px; font-weight: 500; letter-spacing: 0; color: #6e6e73; opacity: 1; transform: none; }
+header.gh.wide .gh-sheet .mn-f a::after { content: none; }
+@keyframes mn-in { from { opacity: 0; transform: translateX(14px); } }
+@keyframes mn-back { from { opacity: 0; transform: translateX(-14px); } }
+@media (max-width: 1023px) {
+  header.gh.wide .gh-sheet { height: auto; max-height: calc(100dvh - var(--gh-b, 48px) - 16px); overflow-y: auto; overscroll-behavior: contain;
+    border-radius: 0 0 22px 22px; box-shadow: 0 1px 0 var(--gh-line), 0 28px 48px -20px rgba(0, 0, 0, .3); }
+  header.gh.wide .gh-sheet-in { padding: 4px 20px 16px; }
+  header.gh.wide .gh-sheet-in > p { display: none; }
+  .gh-sheet .mn-p { display: none; }
+  .gh-sheet .mn.sub .mn-root { display: none; }
+  .gh-sheet .mn.sub .mn-p.on { display: block; animation: mn-in .24s cubic-bezier(.2, .8, .2, 1); }
+  .gh-sheet .mn.back .mn-root { animation: mn-back .24s cubic-bezier(.2, .8, .2, 1); }
+  .gh-sheet.mn-sub .gh-q, .gh-sheet.mn-sub a.lsv-sl, .gh-sheet.mn-sub .mn-f { display: none !important; }
+}
+@media (min-width: 1024px) {
+  .gh-sheet .mn-root, .gh-sheet .mn-bk { display: none !important; }
+  .gh-sheet .mn { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px 40px; margin-top: 6px; }
+  .gh-sheet .mn-h { display: block; margin: 0 0 4px; font-size: 13px; font-weight: 600; color: #6e6e73; }
+  header.gh.wide .gh-sheet .mn .mn-p a { min-height: 36px; border: 0; font-size: 16px; font-weight: 500; }
+  header.gh.wide .gh-sheet .mn .mn-p a:hover { color: #6e6e73; }
+  header.gh.wide .gh-sheet .mn .mn-cv { display: none; }
+  header.gh.wide .gh-sheet a.lsv-sl { width: auto; min-height: 40px; border: 0; }
+  .gh-sheet .mn-f { margin-top: 22px; }
+}
+@media (prefers-reduced-motion: reduce) { .gh-sheet .mn-p.on, .gh-sheet .mn .mn-root { animation: none !important; } }
