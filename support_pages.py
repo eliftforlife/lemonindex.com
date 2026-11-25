@@ -6,7 +6,7 @@
 # exec'd from build.py (uses page, E, json, datetime).
 import json as _sj, datetime as _sdt
 
-_SV = '1124d'
+_SV = '1124e'
 
 
 def _sp_card(img, title, line, href=None, tag=None):
@@ -22,14 +22,24 @@ def _sp_grid(cards): return '<div class="mg">' + ''.join(_sp_card(*c) for c in c
 def _sp_hero(h1, lede): return f'<section class="finder"><h1>{E(h1)}</h1><p class="lede">{E(lede)}</p></section>'
 
 
+_SP_LADDER = (100, 250, 500, 1000, 2500, 5000)   # 11-24 Elijah: $100 a month; hit it -> "Goal reached, new goal $250", and so on up
+
+
 def _sp_goal():
+    # data/support_goal.json {month: "YYYY-MM", raised: dollars this month} (stripe_goal.py writes it from Stripe).
+    # A new month starts at $0 of $100, with last month's total under the bar.
     try: g = _sj.load(open('data/support_goal.json', encoding='utf-8'))
-    except Exception: return ''
-    if g.get('month') != _sdt.date.today().strftime('%Y-%m') or not g.get('goal'): return ''
-    raised, goal = int(g.get('raised') or 0), int(g['goal'])
+    except Exception: g = {}
+    now = _sdt.date.today().strftime('%Y-%m')
+    if g.get('month') == now: raised, last = int(g.get('raised') or 0), (int((g.get('last') or {}).get('raised') or 0) or None)
+    else: raised, last = 0, (int(g.get('raised') or 0) if g.get('month') else None)
+    goal = next((x for x in _SP_LADDER if x > raised), _SP_LADDER[-1])
+    hit = max((x for x in _SP_LADDER if x <= raised), default=0)
     pct = max(1.5, min(100, raised * 100 / goal))
+    note = (f'<p class="spg-goal-n"><b>${hit:,} goal reached.</b> New goal: ${goal:,}.</p>' if hit
+            else f'<p class="spg-goal-n">Last month: ${last:,} raised.</p>' if last else '')
     return (f'<div class="spg-goal"><div class="spg-goal-t"><b>${raised:,} raised</b><span>of ${goal:,} this month</span></div>'
-            f'<div class="spg-bar" role="img" aria-label="${raised:,} of ${goal:,} raised this month"><i style="width:{pct:.1f}%"></i></div></div>')
+            f'<div class="spg-bar" role="img" aria-label="${raised:,} of ${goal:,} raised this month"><i style="width:{pct:.1f}%"></i></div>{note}</div>')
 
 
 _SP_CSS = '<link rel="stylesheet" href="/assets/support-pages.css?v=' + _SV + '">'
