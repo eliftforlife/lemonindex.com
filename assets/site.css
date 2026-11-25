@@ -1968,3 +1968,7 @@ table.adv.hd-cmp td:first-child { white-space: normal; min-width: 9em; }
 /* 11-19 (Elijah): match-up cards: a soft ground shadow under the two cars instead of an image filter */
 .mu-p::after { content: ""; position: absolute; left: 10%; right: 10%; bottom: -6px; height: 16px; background: radial-gradient(closest-side, rgba(0,0,0,.14), rgba(0,0,0,0)); z-index: 0; pointer-events: none; }
 .mu-p img { position: relative; z-index: 1; } .mu-p .l { z-index: 2; }
+/* 11-24 Elijah: the header's Subscribe became a yellow Donate button (black text) that opens the donate sheet; header pinned */
+header.gh .gh-cta.gh-don { background: #ffd400; color: #111; border: 0; font-family: inherit; font-weight: 700; cursor: pointer; padding: 0 16px; }
+header.gh .gh-cta.gh-don:hover { opacity: 1; background: #ffcb00; }
+header.gh .gh-cta.gh-don[hidden] { display: none; }
