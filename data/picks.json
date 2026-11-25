@@ -1,6 +1,128 @@
 {
  "date": "2026-11-24",
  "lists": {
+  "car|private|u2": [
+   {
+    "id": "toyota-corolla",
+    "name": "Toyota Corolla",
+    "y0": 2000,
+    "y1": 2002,
+    "gen": "8th generation (E110)",
+    "li": 21,
+    "yt": 48,
+    "yt_src": "years",
+    "sold": 729539,
+    "score": 68.2,
+    "p": [
+     1750,
+     3500
+    ],
+    "d": [
+     2000,
+     4250
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "honda-civic",
+    "name": "Honda Civic",
+    "y0": 2000,
+    "y1": 2000,
+    "gen": "6th generation",
+    "li": 39,
+    "yt": 49,
+    "yt_src": "years",
+    "sold": 324528,
+    "score": 54.9,
+    "p": [
+     2000,
+     3500
+    ],
+    "d": [
+     2500,
+     4250
+    ],
+    "mi": [
+     195000,
+     195000
+    ]
+   },
+   {
+    "id": "buick-century",
+    "name": "Buick Century",
+    "y0": 2000,
+    "y1": 2003,
+    "gen": "6th generation",
+    "li": 45,
+    "yt": 47,
+    "yt_src": "years",
+    "sold": 543260,
+    "score": 54.7,
+    "p": [
+     1500,
+     2200
+    ],
+    "d": [
+     1900,
+     2700
+    ],
+    "mi": [
+     160000,
+     160000
+    ]
+   },
+   {
+    "id": "nissan-altima",
+    "name": "Nissan Altima",
+    "y0": 2004,
+    "y1": 2004,
+    "gen": "3rd generation",
+    "li": 36,
+    "yt": 47,
+    "yt_src": "years",
+    "sold": 235889,
+    "score": 54.4,
+    "p": [
+     2000,
+     2750
+    ],
+    "d": [
+     2500,
+     3500
+    ],
+    "mi": [
+     190000,
+     190000
+    ]
+   },
+   {
+    "id": "mercedes-benz-c-class",
+    "name": "Mercedes-Benz C-Class",
+    "y0": 2001,
+    "y1": 2001,
+    "gen": "2nd generation (W203)",
+    "li": 40,
+    "yt": 48,
+    "yt_src": "years",
+    "sold": 51210,
+    "score": 53.1,
+    "p": [
+     2000,
+     2750
+    ],
+    "d": [
+     2500,
+     3500
+    ],
+    "mi": [
+     180000,
+     180000
+    ]
+   }
+  ],
   "car|private|u5": [
    {
     "id": "toyota-corolla",
@@ -974,6 +1096,129 @@
     "mi": [
      32000,
      62000
+    ]
+   }
+  ],
+  "suv|private|u2": [
+   {
+    "id": "subaru-outback",
+    "name": "Subaru Outback",
+    "y0": 2003,
+    "y1": 2004,
+    "gen": "2nd generation",
+    "li": 57,
+    "yt": 47,
+    "yt_src": "years",
+    "sold": 117524,
+    "score": 43.6,
+    "p": [
+     2000,
+     3750
+    ],
+    "d": [
+     2500,
+     4500
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "ford-explorer",
+    "name": "Ford Explorer",
+    "y0": 2001,
+    "y1": 2001,
+    "gen": "2nd generation",
+    "li": 55,
+    "yt": 46,
+    "yt_src": "years",
+    "sold": 415921,
+    "score": 41.9,
+    "p": [
+     1750,
+     3250
+    ],
+    "d": [
+     2250,
+     4000
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "ford-escape",
+    "name": "Ford Escape",
+    "y0": 2004,
+    "y1": 2004,
+    "gen": "1st generation",
+    "li": 51,
+    "yt": 42,
+    "yt_src": "years",
+    "sold": 183430,
+    "score": 39.7,
+    "p": [
+     2000,
+     3250
+    ],
+    "d": [
+     2500,
+     4000
+    ],
+    "mi": [
+     184000,
+     184000
+    ],
+    "twin": "Mazda Tribute"
+   },
+   {
+    "id": "hyundai-santa-fe",
+    "name": "Hyundai Santa Fe",
+    "y0": 2004,
+    "y1": 2006,
+    "gen": "1st generation",
+    "li": 68,
+    "yt": 45,
+    "yt_src": "years",
+    "sold": 243384,
+    "score": 36.6,
+    "p": [
+     1750,
+     3500
+    ],
+    "d": [
+     2250,
+     4500
+    ],
+    "mi": [
+     175000,
+     185000
+    ]
+   },
+   {
+    "id": "chevrolet-tracker",
+    "name": "Chevrolet Tracker",
+    "y0": 2000,
+    "y1": 2000,
+    "gen": "2nd generation",
+    "li": 70,
+    "yt": 45,
+    "yt_src": "years",
+    "sold": 48020,
+    "score": 31.7,
+    "p": [
+     2000,
+     2800
+    ],
+    "d": [
+     2500,
+     3400
+    ],
+    "mi": [
+     170000,
+     170000
     ]
    }
   ],
@@ -1957,6 +2202,7 @@
     "twin": "Chevrolet Tahoe"
    }
   ],
+  "truck|private|u2": [],
   "truck|private|u5": [
    {
     "id": "ram-pickup",
@@ -2819,6 +3065,128 @@
     "mi": [
      48000,
      72000
+    ]
+   }
+  ],
+  "minivan|private|u2": [
+   {
+    "id": "dodge-grand-caravan",
+    "name": "Dodge Grand Caravan",
+    "y0": 2004,
+    "y1": 2004,
+    "gen": "4th generation",
+    "li": 30,
+    "yt": 45,
+    "yt_src": "years",
+    "sold": 242307,
+    "score": 55.7,
+    "p": [
+     1750,
+     2250
+    ],
+    "d": [
+     2250,
+     2750
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "ford-windstar",
+    "name": "Ford Windstar",
+    "y0": 2002,
+    "y1": 2002,
+    "gen": "2nd generation",
+    "li": 61,
+    "yt": 43,
+    "yt_src": "years",
+    "sold": 148875,
+    "score": 34.8,
+    "p": [
+     1500,
+     1900
+    ],
+    "d": [
+     1900,
+     2400
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "chevrolet-uplander",
+    "name": "Chevrolet Uplander",
+    "y0": 2007,
+    "y1": 2007,
+    "gen": "1st generation",
+    "li": 70,
+    "yt": 45,
+    "yt_src": "years",
+    "sold": 69885,
+    "score": 31.7,
+    "p": [
+     2000,
+     2700
+    ],
+    "d": [
+     2500,
+     3300
+    ],
+    "mi": [
+     170000,
+     170000
+    ]
+   },
+   {
+    "id": "honda-odyssey",
+    "name": "Honda Odyssey",
+    "y0": 2003,
+    "y1": 2003,
+    "gen": "2nd generation",
+    "li": 97,
+    "yt": 42,
+    "yt_src": "years",
+    "sold": 154063,
+    "score": 12.1,
+    "p": [
+     2000,
+     3250
+    ],
+    "d": [
+     2500,
+     4000
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "kia-sedona",
+    "name": "Kia Sedona",
+    "y0": 2007,
+    "y1": 2007,
+    "gen": "2nd generation",
+    "li": 97,
+    "yt": 41,
+    "yt_src": "years",
+    "sold": 40493,
+    "score": 10.9,
+    "p": [
+     1750,
+     2250
+    ],
+    "d": [
+     2250,
+     2750
+    ],
+    "mi": [
+     200000,
+     200000
     ]
    }
   ],

@@ -91,6 +91,7 @@ _COMING = (_SP_CSS + '<div class="pg spg">' + _sp_hero('What’s coming to Lemon
         ('world', 'India and Latin America', 'Local cars, own sites'),
         ('listing', 'Listing checker', 'Paste a listing, get a report'),
         ('canada', 'Canada, Australia, NZ', 'Local cars and recalls'),
+        ('semis', 'Semi trucks', 'Problems, recalls and costs'),   # 11-25 Elijah
     ])
     + '<h2>Classic cars</h2>' + _sp_grid([
         ('dec90', '90s cars', 'Supra, NSX, Miata'),

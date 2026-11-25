@@ -25,6 +25,9 @@ MIN_SOLD = 15000
 GROUPS = [('car', 'Cars (sedans, hatchbacks, coupes)'), ('suv', 'SUVs'), ('truck', 'Trucks'), ('minivan', 'Minivans')]
 TIERS = [('u5', 'Under $5,000', 0, 5000), ('5-10', '$5,000 to $10,000', 5000, 10000), ('10-20', '$10,000 to $20,000', 10000, 20000), ('20+', 'Over $20,000', 20000, 10 ** 9)]
 TOP = 5
+# 11-25 (Elijah: "add a under 2000 budget section ... make it private party only"): u2 = private seller only. At this price the middle of the
+# range rarely fits, so a run qualifies when the LOW end of its private range (typical miles) is $2,000 or less: one you can find for under $2K.
+U2 = ('u2', 'Under $2,000', 0, 2001)
 TWINS = [('chevrolet-silverado', 'gmc-sierra'), ('chevrolet-s-10', 'gmc-sonoma'), ('chevrolet-tahoe', 'gmc-yukon'), ('chevrolet-suburban', 'gmc-yukon-xl'),
          ('chevrolet-colorado', 'gmc-canyon'), ('dodge-grand-caravan', 'chrysler-town-and-country'), ('ford-escape', 'mazda-tribute')]
 NAME = {f['id']: f['name'] for f in YEARS}
@@ -76,8 +79,10 @@ def regular():
     for g, _ in GROUPS:
         fams = [f for f in YEARS if SEG.get(f['name']) == g and f['id'] not in SKIP]
         rowsby = {f['id']: year_rows(f) for f in fams}
-        for key, kn in (('p', 'private'), ('d', 'dealer')):
-            for tk, tl, lo, hi in TIERS:
+        for rows in rowsby.values():
+            for r in rows.values(): r['plo'] = r['a'][0]
+        for key, kn in (('plo', 'private'), ('p', 'private'), ('d', 'dealer')):
+            for tk, tl, lo, hi in ([U2] if key == 'plo' else TIERS):
                 best = {}
                 for f in fams:
                     for ys in runs(rowsby[f['id']], key, lo, hi):

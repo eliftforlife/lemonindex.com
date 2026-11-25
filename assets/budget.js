@@ -8,6 +8,7 @@ var a=w.getBoundingClientRect(),b=c.getBoundingClientRect(),d=b.right>a.right-24
 function show(){var s=set(st.t);
 r.querySelectorAll('.bud-c[data-b]').forEach(function(c){c.hidden=c.dataset.set!==s});
 if(!r.querySelector('.bud-c[data-b="'+st.b+'"][data-set="'+s+'"]'))st.b=DEF[s];
+var u2=st.b==='u2';if(u2)st.k='private';r.querySelectorAll('.bud-c[data-k="dealer"]').forEach(function(c){c.hidden=u2});
 r.querySelectorAll('.bud-l').forEach(function(x){x.hidden=!(x.dataset.t===st.t&&x.dataset.b===st.b&&x.dataset.k===st.k)});
 r.querySelectorAll('.bud-c').forEach(function(c){var k=c.dataset.t?'t':c.dataset.b?'b':'k';c.setAttribute('aria-pressed',c.dataset[k]===st[k]?'true':'false')});}
 ['t','b','k'].forEach(function(k){var m=new RegExp('[#&]'+k+'=([a-z0-9]+)').exec(location.hash);if(m&&r.querySelector('.bud-c[data-'+k+'="'+m[1]+'"]'))st[k]=m[1]});show();reveal(false);

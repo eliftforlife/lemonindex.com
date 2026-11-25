@@ -71,7 +71,8 @@ def at_price(fid, y):
     M = _data()['m'].get(fid); r = M and M['y'].get(str(y))
     return r[2] if r and len(r) > 2 and r[2] else None
 # 11-24 v2: /budget/ tiers (budget_pages.py, data_picks.py): (set, page key, picks.json key, label, lo, hi)
-BUD_TIERS_ALL = [('reg', 'u5', 'u5', 'Under $5,000', 0, 5000), ('reg', '5to10', '5-10', '$5,000 to $10,000', 5000, 10000),
+BUD_TIERS_ALL = [('reg', 'u2', 'u2', 'Under $2,000', 0, 2000), ('reg', 'u5', 'u5', 'Under $5,000', 2000, 5000),   # 11-25: u2 = private seller only
+                  ('reg', '5to10', '5-10', '$5,000 to $10,000', 5000, 10000),
                  ('reg', '10to20', '10-20', '$10,000 to $20,000', 10000, 20000), ('reg', '20up', '20+', 'Over $20,000', 20000, 10 ** 9),
                  ('super', 'u100', 'u100', 'Under $100,000', 0, 100000), ('super', '100to200', '100-200', '$100,000 to $200,000', 100000, 200000),
                  ('super', '200up', '200+', 'Over $200,000', 200000, 10 ** 9)]
