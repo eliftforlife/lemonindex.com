@@ -2018,3 +2018,25 @@ header.gh.wide .gh-sheet .mn-f a::after { content: none; }
   .gh-sheet .mn-f { margin-top: 22px; }
 }
 @media (prefers-reduced-motion: reduce) { .gh-sheet .mn-p.on, .gh-sheet .mn .mn-root { animation: none !important; } }
+/* 11-24 motion (Elijah: "smooth animations for cards and stuff, super smooth across the whole site"). One easing for everything (--ez),
+   only opacity/transform animate (GPU, no layout jank), and nothing moves for people with Reduce Motion on.
+   1 page changes cross-fade (View Transitions; the header stays put)  2 cards below the fold rise in once (assets/nav.js adds .rv/.in)
+   3 cards lift on hover (mouse only) and press in on tap  4 info boxes / menu panels slide in  5 prefers-reduced-motion = no motion */
+:root { --ez: cubic-bezier(.2, .8, .2, 1); }
+@view-transition { navigation: auto; }
+header.gh { view-transition-name: gh; }
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: .22s; animation-timing-function: var(--ez); }
+.rv { opacity: 0; transform: translateY(14px); }
+.rv.in { opacity: 1; transform: none; transition: opacity .55s var(--ez), transform .55s var(--ez); }
+.mc, .spi, .hk-c, .eg, .xcd, .btn, .supl { transition: transform .25s var(--ez), background-color .2s, box-shadow .25s var(--ez); -webkit-tap-highlight-color: transparent; }
+@media (hover: hover) { .spi:hover, .hk-c:hover, .eg:hover { transform: translateY(-2px); } }
+@media (hover: none) { .mc:hover, .xcd:hover { transform: none; } }
+.mc:active, .spi:active, .hk-c:active, .eg:active, .xcm:active, .btn:active, .supl:active, .cpl summary:active { transform: scale(.975); transition-duration: .1s; }
+.info-box:not([hidden]) { animation: mo-drop .28s var(--ez); }
+@keyframes mo-drop { from { opacity: 0; transform: translateY(-6px); } }
+@media (prefers-reduced-motion: reduce) {
+  @view-transition { navigation: none; }
+  .rv, .rv.in { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .mc, .spi, .hk-c, .eg, .xcd, .btn, .supl { transition: none !important; transform: none !important; }
+  .info-box:not([hidden]) { animation: none; }
+}

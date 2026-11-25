@@ -39,3 +39,15 @@
     show(''); m.classList.add('back'); const r = k && m.querySelector(`.mn-c[data-c="${k.dataset.c}"]`); if (r) r.focus({ preventScroll: true }); }));
   new MutationObserver(() => { if (!h.classList.contains('open')) { show(''); m.classList.remove('back'); } }).observe(h, { attributes: true, attributeFilter: ['class'] });
 })();
+// 11-24 motion: cards that start below the fold fade and rise in once as they scroll into view (a small stagger when several arrive
+// together). Cards already on screen at load never move, and nothing runs with Reduce Motion on. Styles: site.css '11-24 motion'.
+(() => { if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const SEL = '.mg > .mc, .spi-g > .spi, .xgrid > .xcd, .cpl, .eg, .hk-c, .n2-c';
+  const done = e => { e.classList.remove('rv', 'in'); e.style.transitionDelay = ''; };
+  const io = new IntersectionObserver(es => { let i = 0;
+    es.forEach(x => { if (!x.isIntersecting) return; const e = x.target; io.unobserve(e);
+      e.style.transitionDelay = Math.min(i++ * 45, 270) + 'ms'; e.classList.add('in');
+      setTimeout(() => done(e), 900 + Math.min(i * 45, 270)); }); }, { rootMargin: '0px 0px -6% 0px', threshold: .08 });
+  const vh = innerHeight;
+  document.querySelectorAll(SEL).forEach(e => { if (e.getBoundingClientRect().top > vh) { e.classList.add('rv'); io.observe(e); } });
+})();
