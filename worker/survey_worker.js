@@ -229,7 +229,9 @@ export default {
       // rows it returns, and each Worker copy keeps the answer 10 min (workers.dev ignores the Cache API), so a new opinion shows within 10 min.
       const hit = OPS_CACHE.get(fid), now = Date.now();
       if (hit && now - hit.t < 600000) return json(o, hit.v);
-      const { results } = await env.DB.prepare("SELECT * FROM opinions WHERE fid = ? AND status = 'approved' ORDER BY ts DESC LIMIT 60").bind(fid).all();
+      let results;
+      try { ({ results } = await env.DB.prepare("SELECT * FROM opinions WHERE fid = ? AND status = 'approved' ORDER BY ts DESC LIMIT 60").bind(fid).all()); }
+      catch (e) { return json(o, hit ? hit.v : { ops: [] }); }   // 11-25: D1 down or over its daily limit: answer cleanly (with CORS) instead of a 1101 crash; pages keep their baked opinions
       const v = { ops: results.map(opPublic) };
       if (OPS_CACHE.size > 3000) OPS_CACHE.clear();
       OPS_CACHE.set(fid, { t: now, v });
