@@ -13,6 +13,40 @@
   const qs = new URLSearchParams(location.search);
   if (!(ready || qs.has('support-preview'))) { document.querySelectorAll('.supl').forEach(b => b.hidden = true); const _db = document.querySelector('.donbar'); if (_db) _db.remove(); return; }
   const get = k => { try { return localStorage.getItem(k); } catch { return null; } }, set = (k, v) => { try { localStorage.setItem(k, v); } catch {} };
+  // ---- 11-24 (Elijah: "new donations... what made them donate? track them"): a donor's path, no personal data.
+  // Each visit keeps where it came from (referrer site only), its first page and the pages read (last 12), in this browser only.
+  // A click on a Stripe link saves that path + the page, spot and amount, sends GA4 'donate_click', and tags the Stripe link with a
+  // random reference (client_reference_id, shows on the Stripe payment). /thanks/ then sends GA4 'donation_complete' with the same
+  // reference, so each Stripe payment can be matched to the visit that led to it.
+  const ga4 = (n, p, k = 0) => { try { if (window.gtag) gtag('event', n, p); else if (k < 40) setTimeout(() => ga4(n, p, k + 1), 250); } catch {} };   // ga.js loads after this script
+  const JK = 'li-visit', DK = 'li-donate-from';
+  let J = null; try { J = JSON.parse(get(JK) || 'null'); } catch {}
+  const now = Date.now();
+  if (!J || now - (J.t || 0) > 30 * 60e3) {   // a new visit after 30 quiet minutes
+    let rh = ''; try { rh = document.referrer ? new URL(document.referrer).hostname : ''; } catch {}
+    if (rh === location.hostname) rh = '';
+    J = { s: now, ref: rh || '(direct)', land: location.pathname, utm: qs.get('utm_source') || '', n: 0, p: [] };
+  }
+  if (!location.pathname.startsWith('/thanks/')) { J.n++; J.p = J.p.concat(location.pathname).slice(-12); }
+  J.t = now; set(JK, JSON.stringify(J));
+  document.addEventListener('click', e => {
+    const a = e.target.closest && e.target.closest('a[href^="https://buy.stripe.com/"]'); if (!a) return;
+    const id = 'li' + now.toString(36) + Math.random().toString(36).slice(2, 8);
+    const amt = (Object.entries(LINKS).find(([, u]) => a.href.startsWith(u)) || ['?'])[0];
+    const spot = a.closest('.sup') ? 'sheet' : a.closest('.donbar') ? 'bar' : a.closest('.supl, [class^="supc"]') ? 'card' : 'other';
+    try { const u = new URL(a.href); u.searchParams.set('client_reference_id', id); a.href = u.toString(); } catch {}
+    const d = { id, amt, spot, page: location.pathname, t: Date.now(), ref: J.ref, land: J.land, utm: J.utm, n: J.n, mins: Math.round((Date.now() - J.s) / 6e4), p: J.p };
+    set(DK, JSON.stringify(d));
+    ga4('donate_click', { donate_ref: id, donate_amount: amt, donate_spot: spot, donate_page: location.pathname, visit_source: J.ref, visit_landing: J.land, visit_pages: J.n });
+  }, true);
+  if (location.pathname.startsWith('/thanks/')) {
+    let d = null; try { d = JSON.parse(get(DK) || 'null'); } catch {}
+    if (d && !d.done) {
+      ga4('donation_complete', { donate_ref: d.id, donate_amount: d.amt, donate_spot: d.spot, donate_page: d.page, visit_source: d.ref, visit_landing: d.land,
+        visit_pages: d.n, visit_minutes: d.mins, visit_path: d.p.join(' > ').slice(0, 99), utm_source: d.utm });
+      d.done = 1; set(DK, JSON.stringify(d));
+    } else if (!d) ga4('donation_complete', { donate_ref: '(unknown)' });
+  }
   // 11-07: donors land on /thanks/ (Stripe redirect): count them as paid so nothing asks them again for 60 days
   if (location.pathname.startsWith('/thanks/')) { set(PAID, String(Date.now())); document.querySelectorAll('.supl').forEach(b => b.hidden = true); return; }
   const paid = () => Date.now() - (+get(PAID) || 0) < PAID_DAYS * 864e5;
@@ -114,8 +148,8 @@
     if (paid() || Date.now() - (+get(DKEY) || 0) < DBAR_DAYS * 864e5) db.remove();
     else {
       const ga = name => { try { if (window.gtag) gtag('event', name, { page_path: location.pathname }); } catch {} };
-      db.querySelector('.donbar-go').addEventListener('click', () => { ga('donate_bar_click'); show(); });
-      db.querySelector('.donbar-x').addEventListener('click', () => { ga('donate_bar_close'); set(DKEY, String(Date.now())); db.remove(); });
+      db.querySelector('.donbar-go').addEventListener('click', () => ga('coming_bar_click'));   // 11-24: a link to /coming-soon/ now (that page asks for the donation)
+      db.querySelector('.donbar-x').addEventListener('click', () => { ga('coming_bar_close'); set(DKEY, String(Date.now())); db.remove(); });
     }
   }
   if (qs.has('support-preview')) return show();

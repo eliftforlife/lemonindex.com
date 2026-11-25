@@ -1,0 +1,34 @@
+/* 11-24 /support/ and /coming-soon/ (support_pages.py), home-style cards */
+.spg{max-width:1040px;margin:0 auto;padding:0 20px 80px;text-align:center;display:block!important;gap:0!important}
+.spg .finder{padding:64px 0 0!important;margin:0!important;min-height:0!important}
+.spg .finder .lede{margin-bottom:0}
+.spg .mg{max-width:none!important;margin:0 auto}
+.spg h2{margin:60px 0 18px!important;padding:0!important;min-height:0!important}
+.spg .mg .mc{width:200px}
+.spg .mc b{font-size:16px;line-height:1.25}
+.spg .mc .mc-k{font-size:13.5px;margin-top:0}
+.spg div.mc:hover{transform:none}
+.spg .mc>span.tag{position:absolute;top:10px;right:12px;font-size:11.5px;font-weight:650;color:#5c4a00;background:#fff4b8;padding:2px 8px;border-radius:99px}
+.spg .lede{margin-left:auto!important;margin-right:auto!important;text-align:center!important}
+.spg-goal{max-width:560px!important;width:100%;box-sizing:border-box;margin:30px auto 0!important;background:#f5f5f7;border-radius:22px;padding:22px 22px 24px;text-align:left}
+.spg-goal-t{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:12px}
+.spg-goal-t b{font-size:28px;font-weight:800;letter-spacing:-.02em;white-space:nowrap}
+.spg-goal-t span{color:#6e6e73;font-size:16px}
+.spg-bar{height:12px;border-radius:99px;background:#e3e3e8;overflow:hidden}
+.spg-bar i{display:block;height:100%;width:max(1.5%,8px);border-radius:99px;background:#ffd400}
+.spg-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:40px 0 0}
+.spg-btns .btn{min-height:52px;padding:0 28px;display:inline-flex;align-items:center;justify-content:center;font-size:17px}
+.spg-note{font-size:14px;color:#86868b;margin-top:20px}
+@media(max-width:600px){.spg .finder{padding-top:36px!important}.spg .mg .mc:last-child:nth-child(odd){width:100%}.spg .mg .mc:last-child:nth-child(odd) .mc-p{aspect-ratio:auto;height:96px}.spg .mg .mc:last-child:nth-child(odd) .mc-p img{object-fit:contain;object-position:50% 100%}.spg{padding:0 16px 64px}.spg .mg .mc{width:calc(50% - 5px)}.spg h2{margin-top:44px!important}
+.spg .mc b{font-size:15px}.spg .mc .mc-k{font-size:12.5px}.spg-goal-t{flex-direction:column;align-items:flex-start;gap:2px}
+.spg-btns .btn{flex:1 1 100%}}
+
+/* 11-24 the ask on /coming-soon/ */
+.spg-ask{background:#f5f5f7;border-radius:28px;padding:48px 28px 36px!important;margin:80px auto 0!important;max-width:760px!important;box-sizing:border-box;min-height:0!important}
+.spg .spg-ask h2{margin:0 0 10px!important;font-size:clamp(30px,5vw,44px);letter-spacing:-.02em}
+.spg-ask-l{font-size:18px;color:#3a3a3c;max-width:520px;margin:0 auto}
+.spg-ask .spg-goal{background:#fff;margin-top:26px!important}
+.spg .spg-big{min-height:64px;padding:0 48px;margin-top:28px;font-size:20px;font-weight:700;background:#ffd400;color:#111;border:0;cursor:pointer;box-shadow:0 8px 24px rgba(255,212,0,.35)}
+.spg .spg-big:hover{background:#ffdc2e}
+.spg-ask .spg-note{margin-top:16px}
+@media(max-width:600px){.spg-ask{padding:34px 18px 28px!important;border-radius:22px;margin-top:56px!important}.spg .spg-big{width:100%;padding:0 20px}}
