@@ -1627,243 +1627,243 @@
  },
  "nissan-frontier": {
   "2005": {
-   "src": "/assets/ai-models/nissan-frontier.webp?v=1",
+   "src": "/assets/ai-cars/nissan-frontier-2005.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "deep blue",
+   "color": "black",
    "gen": "2nd generation (D40)"
   },
   "2006": {
-   "src": "/assets/ai-models/nissan-frontier.webp?v=1",
+   "src": "/assets/ai-cars/nissan-frontier-2006.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "deep blue",
+   "color": "dark red metallic",
    "gen": "2nd generation (D40)"
   },
   "2007": {
-   "src": "/assets/ai-models/nissan-frontier.webp?v=1",
+   "src": "/assets/ai-cars/nissan-frontier-2007.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "deep blue",
+   "color": "red",
    "gen": "2nd generation (D40)"
   },
   "2008": {
-   "src": "/assets/ai-models/nissan-frontier.webp?v=1",
+   "src": "/assets/ai-cars/nissan-frontier-2008.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "deep blue",
+   "color": "white",
    "gen": "2nd generation (D40)"
   },
   "2009": {
-   "src": "/assets/ai-models/nissan-frontier.webp?v=1",
+   "src": "/assets/ai-cars/nissan-frontier-2009.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "deep blue",
+   "color": "dark blue metallic",
    "gen": "2nd generation (D40)"
   },
   "2010": {
-   "src": "/assets/ai-models/nissan-frontier.webp?v=1",
+   "src": "/assets/ai-cars/nissan-frontier-2010.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "deep blue",
+   "color": "white",
    "gen": "2nd generation (D40)"
   },
   "2011": {
-   "src": "/assets/ai-models/nissan-frontier.webp?v=1",
+   "src": "/assets/ai-cars/nissan-frontier-2011.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "deep blue",
+   "color": "dark gray metallic",
    "gen": "2nd generation (D40)"
   },
   "2012": {
-   "src": "/assets/ai-models/nissan-frontier.webp?v=1",
+   "src": "/assets/ai-cars/nissan-frontier-2012.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "deep blue",
+   "color": "medium blue metallic",
    "gen": "2nd generation (D40)"
   },
   "2013": {
-   "src": "/assets/ai-models/nissan-frontier.webp?v=1",
+   "src": "/assets/ai-cars/nissan-frontier-2013.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "deep blue",
+   "color": "black",
    "gen": "2nd generation (D40)"
   },
   "2014": {
-   "src": "/assets/ai-models/nissan-frontier.webp?v=1",
+   "src": "/assets/ai-cars/nissan-frontier-2014.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "deep blue",
+   "color": "red",
    "gen": "2nd generation (D40)"
   },
   "2015": {
-   "src": "/assets/ai-models/nissan-frontier.webp?v=1",
+   "src": "/assets/ai-cars/nissan-frontier-2015.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "deep blue",
+   "color": "brown metallic",
    "gen": "2nd generation (D40)"
   },
   "2016": {
-   "src": "/assets/ai-models/nissan-frontier.webp?v=1",
+   "src": "/assets/ai-cars/nissan-frontier-2016.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "deep blue",
+   "color": "silver metallic",
    "gen": "2nd generation (D40)"
   },
   "2017": {
-   "src": "/assets/ai-models/nissan-frontier.webp?v=1",
+   "src": "/assets/ai-cars/nissan-frontier-2017.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "deep blue",
+   "color": "dark blue metallic",
    "gen": "2nd generation (D40)"
   },
   "2018": {
-   "src": "/assets/ai-models/nissan-frontier.webp?v=1",
+   "src": "/assets/ai-cars/nissan-frontier-2018.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "deep blue",
+   "color": "white",
    "gen": "2nd generation (D40)"
   },
   "2019": {
-   "src": "/assets/ai-models/nissan-frontier.webp?v=1",
+   "src": "/assets/ai-cars/nissan-frontier-2019.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "deep blue",
+   "color": "dark gray metallic",
    "gen": "2nd generation (D40)"
   },
   "2020": {
-   "src": "/assets/ai-models/nissan-frontier.webp?v=1",
+   "src": "/assets/ai-cars/nissan-frontier-2020.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "deep blue",
+   "color": "light gray",
    "gen": "2nd generation (D40)"
   },
   "2021": {
-   "src": "/assets/ai-models/nissan-frontier.webp?v=1",
+   "src": "/assets/ai-cars/nissan-frontier-2021.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "deep blue",
+   "color": "dark gray metallic",
    "gen": "2nd generation (D40)"
   },
   "2022": {
-   "src": "/assets/ai-cars/nissan-frontier-g3.webp?v=1",
+   "src": "/assets/ai-cars/nissan-frontier-2022.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "red",
    "gen": "3rd generation (D41)"
   },
   "2023": {
-   "src": "/assets/ai-cars/nissan-frontier-g3.webp?v=1",
+   "src": "/assets/ai-cars/nissan-frontier-2023.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark green metallic",
    "gen": "3rd generation (D41)"
   },
   "2024": {
-   "src": "/assets/ai-cars/nissan-frontier-g3.webp?v=1",
+   "src": "/assets/ai-cars/nissan-frontier-2024.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "black",
    "gen": "3rd generation (D41)"
   },
   "2025": {
-   "src": "/assets/ai-cars/nissan-frontier-g3.webp?v=1",
+   "src": "/assets/ai-cars/nissan-frontier-2025.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "silver metallic",
    "gen": "3rd generation (D41)"
   }
  },
  "honda-ridgeline": {
   "2006": {
-   "src": "/assets/ai-models/honda-ridgeline.webp?v=1",
+   "src": "/assets/ai-cars/honda-ridgeline-2006.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "red",
    "gen": "1st generation"
   },
   "2007": {
-   "src": "/assets/ai-models/honda-ridgeline.webp?v=1",
+   "src": "/assets/ai-cars/honda-ridgeline-2007.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "white",
    "gen": "1st generation"
   },
   "2008": {
-   "src": "/assets/ai-models/honda-ridgeline.webp?v=1",
+   "src": "/assets/ai-cars/honda-ridgeline-2008.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark blue metallic",
    "gen": "1st generation"
   },
   "2013": {
-   "src": "/assets/ai-models/honda-ridgeline.webp?v=1",
+   "src": "/assets/ai-cars/honda-ridgeline-2013.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "red",
    "gen": "1st generation"
   },
   "2017": {
-   "src": "/assets/ai-cars/honda-ridgeline-g2.webp?v=1",
+   "src": "/assets/ai-cars/honda-ridgeline-2017.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "white",
    "gen": "2nd generation"
   },
   "2018": {
-   "src": "/assets/ai-cars/honda-ridgeline-g2.webp?v=1",
+   "src": "/assets/ai-cars/honda-ridgeline-2018.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark gray metallic",
    "gen": "2nd generation"
   },
   "2019": {
-   "src": "/assets/ai-cars/honda-ridgeline-g2.webp?v=1",
+   "src": "/assets/ai-cars/honda-ridgeline-2019.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "medium blue metallic",
    "gen": "2nd generation"
   },
   "2020": {
-   "src": "/assets/ai-cars/honda-ridgeline-g2.webp?v=1",
+   "src": "/assets/ai-cars/honda-ridgeline-2020.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark gray metallic",
    "gen": "2nd generation"
   },
   "2021": {
-   "src": "/assets/ai-cars/honda-ridgeline-g2.webp?v=1",
+   "src": "/assets/ai-cars/honda-ridgeline-2021.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "red",
    "gen": "2nd generation"
   },
   "2022": {
-   "src": "/assets/ai-cars/honda-ridgeline-g2.webp?v=1",
+   "src": "/assets/ai-cars/honda-ridgeline-2022.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark green metallic",
    "gen": "2nd generation"
   },
   "2023": {
-   "src": "/assets/ai-cars/honda-ridgeline-g2.webp?v=1",
+   "src": "/assets/ai-cars/honda-ridgeline-2023.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "black",
    "gen": "2nd generation"
   },
   "2024": {
-   "src": "/assets/ai-cars/honda-ridgeline-g2.webp?v=1",
+   "src": "/assets/ai-cars/honda-ridgeline-2024.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "silver metallic",
    "gen": "2nd generation"
   },
   "2025": {
-   "src": "/assets/ai-cars/honda-ridgeline-g2.webp?v=1",
+   "src": "/assets/ai-cars/honda-ridgeline-2025.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "white",
    "gen": "2nd generation"
   }
  },
@@ -3133,45 +3133,45 @@
    "gen": "2nd generation"
   },
   "2019": {
-   "src": "/assets/ai-cars/jeep-compass-g2.webp?v=1",
+   "src": "/assets/ai-cars/jeep-compass-2019.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "silver metallic",
    "gen": "2nd generation"
   },
   "2020": {
-   "src": "/assets/ai-cars/jeep-compass-g2.webp?v=1",
+   "src": "/assets/ai-cars/jeep-compass-2020.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "light gray",
    "gen": "2nd generation"
   },
   "2021": {
-   "src": "/assets/ai-cars/jeep-compass-g2.webp?v=1",
+   "src": "/assets/ai-cars/jeep-compass-2021.webp?v=1",
    "w": 1000,
    "h": 600,
    "color": "white",
    "gen": "2nd generation"
   },
   "2022": {
-   "src": "/assets/ai-cars/jeep-compass-g2.webp?v=1",
+   "src": "/assets/ai-cars/jeep-compass-2022.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "medium blue metallic",
    "gen": "2nd generation"
   },
   "2023": {
-   "src": "/assets/ai-cars/jeep-compass-g2.webp?v=1",
+   "src": "/assets/ai-cars/jeep-compass-2023.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "light gray",
    "gen": "2nd generation"
   },
   "2024": {
-   "src": "/assets/ai-cars/jeep-compass-g2.webp?v=1",
+   "src": "/assets/ai-cars/jeep-compass-2024.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark gray metallic",
    "gen": "2nd generation"
   },
   "2025": {
@@ -3184,52 +3184,52 @@
  },
  "jeep-renegade": {
   "2015": {
-   "src": "/assets/ai-models/jeep-renegade.webp?v=1",
+   "src": "/assets/ai-cars/jeep-renegade-2015.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "silver metallic",
    "gen": "1st generation"
   },
   "2016": {
-   "src": "/assets/ai-models/jeep-renegade.webp?v=1",
+   "src": "/assets/ai-cars/jeep-renegade-2016.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark blue metallic",
    "gen": "1st generation"
   },
   "2017": {
-   "src": "/assets/ai-models/jeep-renegade.webp?v=1",
+   "src": "/assets/ai-cars/jeep-renegade-2017.webp?v=1",
    "w": 1000,
    "h": 600,
    "color": "white",
    "gen": "1st generation"
   },
   "2018": {
-   "src": "/assets/ai-models/jeep-renegade.webp?v=1",
+   "src": "/assets/ai-cars/jeep-renegade-2018.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark gray metallic",
    "gen": "1st generation"
   },
   "2019": {
-   "src": "/assets/ai-models/jeep-renegade.webp?v=1",
+   "src": "/assets/ai-cars/jeep-renegade-2019.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "medium blue metallic",
    "gen": "1st generation"
   },
   "2020": {
-   "src": "/assets/ai-models/jeep-renegade.webp?v=1",
+   "src": "/assets/ai-cars/jeep-renegade-2020.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark gray metallic",
    "gen": "1st generation"
   },
   "2021": {
-   "src": "/assets/ai-models/jeep-renegade.webp?v=1",
+   "src": "/assets/ai-cars/jeep-renegade-2021.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "red",
    "gen": "1st generation"
   },
   "2022": {
@@ -3240,89 +3240,89 @@
    "gen": "1st generation"
   },
   "2023": {
-   "src": "/assets/ai-models/jeep-renegade.webp?v=1",
+   "src": "/assets/ai-cars/jeep-renegade-2023.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "black",
    "gen": "1st generation"
   }
  },
  "jeep-patriot": {
   "2007": {
-   "src": "/assets/ai-models/jeep-patriot.webp?v=1",
+   "src": "/assets/ai-cars/jeep-patriot-2007.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "black",
    "gen": "1st generation"
   },
   "2008": {
-   "src": "/assets/ai-models/jeep-patriot.webp?v=1",
+   "src": "/assets/ai-cars/jeep-patriot-2008.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark red metallic",
    "gen": "1st generation"
   },
   "2009": {
-   "src": "/assets/ai-models/jeep-patriot.webp?v=1",
+   "src": "/assets/ai-cars/jeep-patriot-2009.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "red",
    "gen": "1st generation"
   },
   "2010": {
-   "src": "/assets/ai-models/jeep-patriot.webp?v=1",
+   "src": "/assets/ai-cars/jeep-patriot-2010.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "silver metallic",
    "gen": "1st generation"
   },
   "2011": {
-   "src": "/assets/ai-models/jeep-patriot.webp?v=1",
+   "src": "/assets/ai-cars/jeep-patriot-2011.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark blue metallic",
    "gen": "1st generation"
   },
   "2012": {
-   "src": "/assets/ai-models/jeep-patriot.webp?v=1",
+   "src": "/assets/ai-cars/jeep-patriot-2012.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "white",
    "gen": "1st generation"
   },
   "2013": {
-   "src": "/assets/ai-models/jeep-patriot.webp?v=1",
+   "src": "/assets/ai-cars/jeep-patriot-2013.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark gray metallic",
    "gen": "1st generation"
   },
   "2014": {
-   "src": "/assets/ai-models/jeep-patriot.webp?v=1",
+   "src": "/assets/ai-cars/jeep-patriot-2014.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "medium blue metallic",
    "gen": "1st generation"
   },
   "2015": {
-   "src": "/assets/ai-models/jeep-patriot.webp?v=1",
+   "src": "/assets/ai-cars/jeep-patriot-2015.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "black",
    "gen": "1st generation"
   },
   "2016": {
-   "src": "/assets/ai-models/jeep-patriot.webp?v=1",
+   "src": "/assets/ai-cars/jeep-patriot-2016.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "red",
    "gen": "1st generation"
   },
   "2017": {
-   "src": "/assets/ai-models/jeep-patriot.webp?v=1",
+   "src": "/assets/ai-cars/jeep-patriot-2017.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "brown metallic",
    "gen": "1st generation"
   }
  },
@@ -4173,173 +4173,173 @@
  },
  "gmc-terrain": {
   "2010": {
-   "src": "/assets/ai-models/gmc-terrain.webp?v=1",
+   "src": "/assets/ai-cars/gmc-terrain-2010.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "red",
    "gen": "1st generation"
   },
   "2011": {
-   "src": "/assets/ai-models/gmc-terrain.webp?v=1",
+   "src": "/assets/ai-cars/gmc-terrain-2011.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "brown metallic",
    "gen": "1st generation"
   },
   "2012": {
-   "src": "/assets/ai-models/gmc-terrain.webp?v=1",
+   "src": "/assets/ai-cars/gmc-terrain-2012.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "silver metallic",
    "gen": "1st generation"
   },
   "2013": {
-   "src": "/assets/ai-models/gmc-terrain.webp?v=1",
+   "src": "/assets/ai-cars/gmc-terrain-2013.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "dark blue metallic",
    "gen": "1st generation"
   },
   "2014": {
-   "src": "/assets/ai-models/gmc-terrain.webp?v=1",
+   "src": "/assets/ai-cars/gmc-terrain-2014.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "white",
    "gen": "1st generation"
   },
   "2015": {
-   "src": "/assets/ai-models/gmc-terrain.webp?v=1",
+   "src": "/assets/ai-cars/gmc-terrain-2015.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "dark gray metallic",
    "gen": "1st generation"
   },
   "2016": {
-   "src": "/assets/ai-models/gmc-terrain.webp?v=1",
+   "src": "/assets/ai-cars/gmc-terrain-2016.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "medium blue metallic",
    "gen": "1st generation"
   },
   "2017": {
-   "src": "/assets/ai-models/gmc-terrain.webp?v=1",
+   "src": "/assets/ai-cars/gmc-terrain-2017.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "black",
    "gen": "1st generation"
   },
   "2018": {
-   "src": "/assets/ai-cars/gmc-terrain-g2.webp?v=1",
+   "src": "/assets/ai-cars/gmc-terrain-2018.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "red",
    "gen": "2nd generation"
   },
   "2019": {
-   "src": "/assets/ai-cars/gmc-terrain-g2.webp?v=1",
+   "src": "/assets/ai-cars/gmc-terrain-2019.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "brown metallic",
    "gen": "2nd generation"
   },
   "2020": {
-   "src": "/assets/ai-cars/gmc-terrain-g2.webp?v=1",
+   "src": "/assets/ai-cars/gmc-terrain-2020.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "black",
    "gen": "2nd generation"
   },
   "2021": {
-   "src": "/assets/ai-cars/gmc-terrain-g2.webp?v=1",
+   "src": "/assets/ai-cars/gmc-terrain-2021.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "silver metallic",
    "gen": "2nd generation"
   },
   "2022": {
-   "src": "/assets/ai-cars/gmc-terrain-g2.webp?v=1",
+   "src": "/assets/ai-cars/gmc-terrain-2022.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "white",
    "gen": "2nd generation"
   },
   "2023": {
-   "src": "/assets/ai-cars/gmc-terrain-g2.webp?v=1",
+   "src": "/assets/ai-cars/gmc-terrain-2023.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "medium blue metallic",
    "gen": "2nd generation"
   },
   "2024": {
-   "src": "/assets/ai-cars/gmc-terrain-g2.webp?v=1",
+   "src": "/assets/ai-cars/gmc-terrain-2024.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "light gray",
    "gen": "2nd generation"
   },
   "2025": {
-   "src": "/assets/ai-cars/gmc-terrain-g3.webp?v=1",
+   "src": "/assets/ai-cars/gmc-terrain-2025.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "gray",
+   "color": "dark gray metallic",
    "gen": "3rd generation"
   }
  },
  "gmc-yukon": {
   "2000": {
-   "src": "/assets/ai-cars/gmc-yukon-g2.webp?v=1",
+   "src": "/assets/ai-cars/gmc-yukon-2000.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "red",
    "gen": "2nd generation (GMT800)"
   },
   "2001": {
-   "src": "/assets/ai-cars/gmc-yukon-g2.webp?v=1",
+   "src": "/assets/ai-cars/gmc-yukon-2001.webp?v=1",
    "w": 1000,
    "h": 600,
    "color": "white",
    "gen": "2nd generation (GMT800)"
   },
   "2002": {
-   "src": "/assets/ai-cars/gmc-yukon-g2.webp?v=1",
+   "src": "/assets/ai-cars/gmc-yukon-2002.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark blue metallic",
    "gen": "2nd generation (GMT800)"
   },
   "2003": {
-   "src": "/assets/ai-cars/gmc-yukon-g2.webp?v=1",
+   "src": "/assets/ai-cars/gmc-yukon-2003.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "silver metallic",
    "gen": "2nd generation (GMT800)"
   },
   "2004": {
-   "src": "/assets/ai-cars/gmc-yukon-g2.webp?v=1",
+   "src": "/assets/ai-cars/gmc-yukon-2004.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark gray metallic",
    "gen": "2nd generation (GMT800)"
   },
   "2005": {
-   "src": "/assets/ai-cars/gmc-yukon-g2.webp?v=1",
+   "src": "/assets/ai-cars/gmc-yukon-2005.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "light gold metallic",
    "gen": "2nd generation (GMT800)"
   },
   "2006": {
-   "src": "/assets/ai-cars/gmc-yukon-g2.webp?v=1",
-   "w": 1000,
-   "h": 600,
-   "color": "white",
-   "gen": "2nd generation (GMT800)"
-  },
-  "2007": {
-   "src": "/assets/ai-models/gmc-yukon.webp?v=1",
+   "src": "/assets/ai-cars/gmc-yukon-2006.webp?v=1",
    "w": 1000,
    "h": 600,
    "color": "black",
+   "gen": "2nd generation (GMT800)"
+  },
+  "2007": {
+   "src": "/assets/ai-cars/gmc-yukon-2007.webp?v=1",
+   "w": 1000,
+   "h": 600,
+   "color": "dark red metallic",
    "gen": "3rd generation (GMT900)"
   },
   "2008": {
@@ -4350,115 +4350,115 @@
    "gen": "3rd generation (GMT900)"
   },
   "2009": {
-   "src": "/assets/ai-models/gmc-yukon.webp?v=1",
+   "src": "/assets/ai-cars/gmc-yukon-2009.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "white",
    "gen": "3rd generation (GMT900)"
   },
   "2010": {
-   "src": "/assets/ai-models/gmc-yukon.webp?v=1",
+   "src": "/assets/ai-cars/gmc-yukon-2010.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "dark blue metallic",
    "gen": "3rd generation (GMT900)"
   },
   "2011": {
-   "src": "/assets/ai-models/gmc-yukon.webp?v=1",
+   "src": "/assets/ai-cars/gmc-yukon-2011.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "white",
    "gen": "3rd generation (GMT900)"
   },
   "2012": {
-   "src": "/assets/ai-models/gmc-yukon.webp?v=1",
+   "src": "/assets/ai-cars/gmc-yukon-2012.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "dark gray metallic",
    "gen": "3rd generation (GMT900)"
   },
   "2013": {
-   "src": "/assets/ai-models/gmc-yukon.webp?v=1",
+   "src": "/assets/ai-cars/gmc-yukon-2013.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "medium blue metallic",
    "gen": "3rd generation (GMT900)"
   },
   "2014": {
-   "src": "/assets/ai-models/gmc-yukon.webp?v=1",
+   "src": "/assets/ai-cars/gmc-yukon-2014.webp?v=1",
    "w": 1000,
    "h": 600,
    "color": "black",
    "gen": "3rd generation (GMT900)"
   },
   "2015": {
-   "src": "/assets/ai-cars/gmc-yukon-g4.webp?v=1",
+   "src": "/assets/ai-cars/gmc-yukon-2015.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "red",
    "gen": "4th generation (K2XX)"
   },
   "2016": {
-   "src": "/assets/ai-cars/gmc-yukon-g4.webp?v=1",
+   "src": "/assets/ai-cars/gmc-yukon-2016.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "brown metallic",
    "gen": "4th generation (K2XX)"
   },
   "2017": {
-   "src": "/assets/ai-cars/gmc-yukon-g4.webp?v=1",
+   "src": "/assets/ai-cars/gmc-yukon-2017.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "silver metallic",
    "gen": "4th generation (K2XX)"
   },
   "2018": {
-   "src": "/assets/ai-cars/gmc-yukon-g4.webp?v=1",
+   "src": "/assets/ai-cars/gmc-yukon-2018.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "dark blue metallic",
    "gen": "4th generation (K2XX)"
   },
   "2019": {
-   "src": "/assets/ai-cars/gmc-yukon-g4.webp?v=1",
+   "src": "/assets/ai-cars/gmc-yukon-2019.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "white",
    "gen": "4th generation (K2XX)"
   },
   "2020": {
-   "src": "/assets/ai-cars/gmc-yukon-g4.webp?v=1",
+   "src": "/assets/ai-cars/gmc-yukon-2020.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "medium blue metallic",
    "gen": "4th generation (K2XX)"
   },
   "2021": {
-   "src": "/assets/ai-cars/gmc-yukon-g5.webp?v=1",
+   "src": "/assets/ai-cars/gmc-yukon-2021.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "light gray",
    "gen": "5th generation (T1XX)"
   },
   "2022": {
-   "src": "/assets/ai-cars/gmc-yukon-g5.webp?v=1",
+   "src": "/assets/ai-cars/gmc-yukon-2022.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "dark gray metallic",
    "gen": "5th generation (T1XX)"
   },
   "2023": {
-   "src": "/assets/ai-cars/gmc-yukon-g5.webp?v=1",
+   "src": "/assets/ai-cars/gmc-yukon-2023.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "red",
    "gen": "5th generation (T1XX)"
   },
   "2024": {
-   "src": "/assets/ai-cars/gmc-yukon-g5.webp?v=1",
+   "src": "/assets/ai-cars/gmc-yukon-2024.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "dark green metallic",
    "gen": "5th generation (T1XX)"
   },
   "2025": {
@@ -4755,87 +4755,87 @@
  },
  "dodge-journey": {
   "2009": {
-   "src": "/assets/ai-models/dodge-journey.webp?v=1",
+   "src": "/assets/ai-cars/dodge-journey-2009.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark gray metallic",
    "gen": "1st generation"
   },
   "2010": {
-   "src": "/assets/ai-models/dodge-journey.webp?v=1",
+   "src": "/assets/ai-cars/dodge-journey-2010.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "medium blue metallic",
    "gen": "1st generation"
   },
   "2011": {
-   "src": "/assets/ai-models/dodge-journey.webp?v=1",
+   "src": "/assets/ai-cars/dodge-journey-2011.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "black",
    "gen": "1st generation"
   },
   "2012": {
-   "src": "/assets/ai-models/dodge-journey.webp?v=1",
+   "src": "/assets/ai-cars/dodge-journey-2012.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "red",
    "gen": "1st generation"
   },
   "2013": {
-   "src": "/assets/ai-models/dodge-journey.webp?v=1",
+   "src": "/assets/ai-cars/dodge-journey-2013.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "brown metallic",
    "gen": "1st generation"
   },
   "2014": {
-   "src": "/assets/ai-models/dodge-journey.webp?v=1",
+   "src": "/assets/ai-cars/dodge-journey-2014.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "silver metallic",
    "gen": "1st generation"
   },
   "2015": {
-   "src": "/assets/ai-models/dodge-journey.webp?v=1",
+   "src": "/assets/ai-cars/dodge-journey-2015.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark blue metallic",
    "gen": "1st generation"
   },
   "2016": {
-   "src": "/assets/ai-models/dodge-journey.webp?v=1",
+   "src": "/assets/ai-cars/dodge-journey-2016.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "white",
    "gen": "1st generation"
   },
   "2017": {
-   "src": "/assets/ai-models/dodge-journey.webp?v=1",
+   "src": "/assets/ai-cars/dodge-journey-2017.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark gray metallic",
    "gen": "1st generation"
   },
   "2018": {
-   "src": "/assets/ai-models/dodge-journey.webp?v=1",
+   "src": "/assets/ai-cars/dodge-journey-2018.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "medium blue metallic",
    "gen": "1st generation"
   },
   "2019": {
-   "src": "/assets/ai-models/dodge-journey.webp?v=1",
+   "src": "/assets/ai-cars/dodge-journey-2019.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "black",
    "gen": "1st generation"
   },
   "2020": {
-   "src": "/assets/ai-models/dodge-journey.webp?v=1",
+   "src": "/assets/ai-cars/dodge-journey-2020.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "red",
    "gen": "1st generation"
   }
  },
@@ -5926,73 +5926,73 @@
  },
  "nissan-pathfinder": {
   "2005": {
-   "src": "/assets/ai-models/nissan-pathfinder.webp?v=1",
+   "src": "/assets/ai-cars/nissan-pathfinder-2005.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "red",
    "gen": "3rd generation (R51)"
   },
   "2006": {
-   "src": "/assets/ai-models/nissan-pathfinder.webp?v=1",
+   "src": "/assets/ai-cars/nissan-pathfinder-2006.webp?v=1",
    "w": 1000,
    "h": 600,
    "color": "white",
    "gen": "3rd generation (R51)"
   },
   "2007": {
-   "src": "/assets/ai-models/nissan-pathfinder.webp?v=1",
+   "src": "/assets/ai-cars/nissan-pathfinder-2007.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark blue metallic",
    "gen": "3rd generation (R51)"
   },
   "2008": {
-   "src": "/assets/ai-models/nissan-pathfinder.webp?v=1",
+   "src": "/assets/ai-cars/nissan-pathfinder-2008.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "silver metallic",
    "gen": "3rd generation (R51)"
   },
   "2010": {
-   "src": "/assets/ai-models/nissan-pathfinder.webp?v=1",
+   "src": "/assets/ai-cars/nissan-pathfinder-2010.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "medium blue metallic",
    "gen": "3rd generation (R51)"
   },
   "2011": {
-   "src": "/assets/ai-models/nissan-pathfinder.webp?v=1",
+   "src": "/assets/ai-cars/nissan-pathfinder-2011.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "black",
    "gen": "3rd generation (R51)"
   },
   "2012": {
-   "src": "/assets/ai-models/nissan-pathfinder.webp?v=1",
+   "src": "/assets/ai-cars/nissan-pathfinder-2012.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "red",
    "gen": "3rd generation (R51)"
   },
   "2013": {
-   "src": "/assets/ai-cars/nissan-pathfinder-g4.webp?v=1",
+   "src": "/assets/ai-cars/nissan-pathfinder-2013.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "brown metallic",
    "gen": "4th generation (R52)"
   },
   "2014": {
-   "src": "/assets/ai-cars/nissan-pathfinder-g4.webp?v=1",
+   "src": "/assets/ai-cars/nissan-pathfinder-2014.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "silver metallic",
    "gen": "4th generation (R52)"
   },
   "2015": {
-   "src": "/assets/ai-cars/nissan-pathfinder-g4.webp?v=1",
+   "src": "/assets/ai-cars/nissan-pathfinder-2015.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark blue metallic",
    "gen": "4th generation (R52)"
   },
   "2016": {
@@ -6003,68 +6003,68 @@
    "gen": "4th generation (R52)"
   },
   "2017": {
-   "src": "/assets/ai-cars/nissan-pathfinder-g4.webp?v=1",
+   "src": "/assets/ai-cars/nissan-pathfinder-2017.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark gray metallic",
    "gen": "4th generation (R52)"
   },
   "2018": {
-   "src": "/assets/ai-cars/nissan-pathfinder-g4.webp?v=1",
+   "src": "/assets/ai-cars/nissan-pathfinder-2018.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "medium blue metallic",
    "gen": "4th generation (R52)"
   },
   "2019": {
-   "src": "/assets/ai-cars/nissan-pathfinder-g4.webp?v=1",
+   "src": "/assets/ai-cars/nissan-pathfinder-2019.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "black",
    "gen": "4th generation (R52)"
   },
   "2020": {
-   "src": "/assets/ai-cars/nissan-pathfinder-g4.webp?v=1",
+   "src": "/assets/ai-cars/nissan-pathfinder-2020.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "red",
    "gen": "4th generation (R52)"
   },
   "2022": {
-   "src": "/assets/ai-cars/nissan-pathfinder-g5.webp?v=1",
+   "src": "/assets/ai-cars/nissan-pathfinder-2022.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "black",
    "gen": "5th generation"
   },
   "2023": {
-   "src": "/assets/ai-cars/nissan-pathfinder-g5.webp?v=1",
+   "src": "/assets/ai-cars/nissan-pathfinder-2023.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "silver metallic",
    "gen": "5th generation"
   },
   "2024": {
-   "src": "/assets/ai-cars/nissan-pathfinder-g5.webp?v=1",
+   "src": "/assets/ai-cars/nissan-pathfinder-2024.webp?v=1",
    "w": 1000,
    "h": 600,
    "color": "white",
    "gen": "5th generation"
   },
   "2025": {
-   "src": "/assets/ai-cars/nissan-pathfinder-g5.webp?v=1",
+   "src": "/assets/ai-cars/nissan-pathfinder-2025.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "medium blue metallic",
    "gen": "5th generation"
   }
  },
  "nissan-murano": {
   "2003": {
-   "src": "/assets/ai-cars/nissan-murano-g1.webp?v=1",
+   "src": "/assets/ai-cars/nissan-murano-2003.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "light gold metallic",
    "gen": "1st generation"
   },
   "2004": {
@@ -6082,129 +6082,129 @@
    "gen": "1st generation"
   },
   "2006": {
-   "src": "/assets/ai-cars/nissan-murano-g1.webp?v=1",
+   "src": "/assets/ai-cars/nissan-murano-2006.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "red",
    "gen": "1st generation"
   },
   "2007": {
-   "src": "/assets/ai-cars/nissan-murano-g1.webp?v=1",
+   "src": "/assets/ai-cars/nissan-murano-2007.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "white",
    "gen": "1st generation"
   },
   "2009": {
-   "src": "/assets/ai-models/nissan-murano.webp?v=1",
+   "src": "/assets/ai-cars/nissan-murano-2009.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "silver metallic",
    "gen": "2nd generation"
   },
   "2010": {
-   "src": "/assets/ai-models/nissan-murano.webp?v=1",
+   "src": "/assets/ai-cars/nissan-murano-2010.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark gray metallic",
    "gen": "2nd generation"
   },
   "2011": {
-   "src": "/assets/ai-models/nissan-murano.webp?v=1",
+   "src": "/assets/ai-cars/nissan-murano-2011.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "medium blue metallic",
    "gen": "2nd generation"
   },
   "2012": {
-   "src": "/assets/ai-models/nissan-murano.webp?v=1",
+   "src": "/assets/ai-cars/nissan-murano-2012.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "black",
    "gen": "2nd generation"
   },
   "2013": {
-   "src": "/assets/ai-models/nissan-murano.webp?v=1",
+   "src": "/assets/ai-cars/nissan-murano-2013.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "red",
    "gen": "2nd generation"
   },
   "2014": {
-   "src": "/assets/ai-models/nissan-murano.webp?v=1",
+   "src": "/assets/ai-cars/nissan-murano-2014.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "brown metallic",
    "gen": "2nd generation"
   },
   "2015": {
-   "src": "/assets/ai-cars/nissan-murano-g3.webp?v=1",
+   "src": "/assets/ai-cars/nissan-murano-2015.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "silver metallic",
    "gen": "3rd generation"
   },
   "2016": {
-   "src": "/assets/ai-cars/nissan-murano-g3.webp?v=1",
+   "src": "/assets/ai-cars/nissan-murano-2016.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark blue metallic",
    "gen": "3rd generation"
   },
   "2017": {
-   "src": "/assets/ai-cars/nissan-murano-g3.webp?v=1",
+   "src": "/assets/ai-cars/nissan-murano-2017.webp?v=1",
    "w": 1000,
    "h": 600,
    "color": "white",
    "gen": "3rd generation"
   },
   "2018": {
-   "src": "/assets/ai-cars/nissan-murano-g3.webp?v=1",
+   "src": "/assets/ai-cars/nissan-murano-2018.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark gray metallic",
    "gen": "3rd generation"
   },
   "2019": {
-   "src": "/assets/ai-cars/nissan-murano-g3.webp?v=1",
+   "src": "/assets/ai-cars/nissan-murano-2019.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "medium blue metallic",
    "gen": "3rd generation"
   },
   "2020": {
-   "src": "/assets/ai-cars/nissan-murano-g3.webp?v=1",
+   "src": "/assets/ai-cars/nissan-murano-2020.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark gray metallic",
    "gen": "3rd generation"
   },
   "2021": {
-   "src": "/assets/ai-cars/nissan-murano-g3.webp?v=1",
+   "src": "/assets/ai-cars/nissan-murano-2021.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "red",
    "gen": "3rd generation"
   },
   "2022": {
-   "src": "/assets/ai-cars/nissan-murano-g3.webp?v=1",
+   "src": "/assets/ai-cars/nissan-murano-2022.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark green metallic",
    "gen": "3rd generation"
   },
   "2023": {
-   "src": "/assets/ai-cars/nissan-murano-g3.webp?v=1",
-   "w": 1000,
-   "h": 600,
-   "color": "white",
-   "gen": "3rd generation"
-  },
-  "2025": {
-   "src": "/assets/ai-cars/nissan-murano-g4.webp?v=1",
+   "src": "/assets/ai-cars/nissan-murano-2023.webp?v=1",
    "w": 1000,
    "h": 600,
    "color": "black",
+   "gen": "3rd generation"
+  },
+  "2025": {
+   "src": "/assets/ai-cars/nissan-murano-2025.webp?v=1",
+   "w": 1000,
+   "h": 600,
+   "color": "white",
    "gen": "4th generation"
   }
  },
@@ -7764,80 +7764,80 @@
  },
  "volkswagen-tiguan": {
   "2011": {
-   "src": "/assets/ai-models/volkswagen-tiguan.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-tiguan-2011.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "medium blue metallic",
    "gen": "1st generation"
   },
   "2012": {
-   "src": "/assets/ai-models/volkswagen-tiguan.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-tiguan-2012.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "black",
    "gen": "1st generation"
   },
   "2013": {
-   "src": "/assets/ai-models/volkswagen-tiguan.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-tiguan-2013.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "red",
    "gen": "1st generation"
   },
   "2014": {
-   "src": "/assets/ai-models/volkswagen-tiguan.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-tiguan-2014.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "brown metallic",
    "gen": "1st generation"
   },
   "2015": {
-   "src": "/assets/ai-models/volkswagen-tiguan.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-tiguan-2015.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "silver metallic",
    "gen": "1st generation"
   },
   "2016": {
-   "src": "/assets/ai-models/volkswagen-tiguan.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-tiguan-2016.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark blue metallic",
    "gen": "1st generation"
   },
   "2017": {
-   "src": "/assets/ai-models/volkswagen-tiguan.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-tiguan-2017.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "white",
    "gen": "1st generation"
   },
   "2018": {
-   "src": "/assets/ai-cars/volkswagen-tiguan-g2.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-tiguan-2018.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark gray metallic",
    "gen": "2nd generation"
   },
   "2019": {
-   "src": "/assets/ai-cars/volkswagen-tiguan-g2.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-tiguan-2019.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "medium blue metallic",
    "gen": "2nd generation"
   },
   "2020": {
-   "src": "/assets/ai-cars/volkswagen-tiguan-g2.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-tiguan-2020.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark gray metallic",
    "gen": "2nd generation"
   },
   "2021": {
-   "src": "/assets/ai-cars/volkswagen-tiguan-g2.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-tiguan-2021.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "red",
    "gen": "2nd generation"
   },
   "2022": {
@@ -7862,10 +7862,10 @@
    "gen": "2nd generation"
   },
   "2025": {
-   "src": "/assets/ai-cars/volkswagen-tiguan-g3.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-tiguan-2025.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "gray",
+   "color": "white",
    "gen": "3rd generation"
   }
  },
@@ -8283,17 +8283,17 @@
  },
  "acura-rdx": {
   "2007": {
-   "src": "/assets/ai-cars/acura-rdx-g1.webp?v=1",
+   "src": "/assets/ai-cars/acura-rdx-2007.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "red",
    "gen": "1st generation"
   },
   "2013": {
-   "src": "/assets/ai-models/acura-rdx.webp?v=1",
+   "src": "/assets/ai-cars/acura-rdx-2013.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "black",
    "gen": "2nd generation"
   },
   "2014": {
@@ -8311,66 +8311,66 @@
    "gen": "2nd generation"
   },
   "2016": {
-   "src": "/assets/ai-models/acura-rdx.webp?v=1",
+   "src": "/assets/ai-cars/acura-rdx-2016.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "silver metallic",
    "gen": "2nd generation"
   },
   "2017": {
-   "src": "/assets/ai-models/acura-rdx.webp?v=1",
+   "src": "/assets/ai-cars/acura-rdx-2017.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark blue metallic",
    "gen": "2nd generation"
   },
   "2018": {
-   "src": "/assets/ai-models/acura-rdx.webp?v=1",
+   "src": "/assets/ai-cars/acura-rdx-2018.webp?v=1",
    "w": 1000,
    "h": 600,
    "color": "white",
    "gen": "2nd generation"
   },
   "2019": {
-   "src": "/assets/ai-cars/acura-rdx-g3.webp?v=1",
+   "src": "/assets/ai-cars/acura-rdx-2019.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark gray metallic",
    "gen": "3rd generation"
   },
   "2020": {
-   "src": "/assets/ai-cars/acura-rdx-g3.webp?v=1",
+   "src": "/assets/ai-cars/acura-rdx-2020.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "light gray",
    "gen": "3rd generation"
   },
   "2021": {
-   "src": "/assets/ai-cars/acura-rdx-g3.webp?v=1",
+   "src": "/assets/ai-cars/acura-rdx-2021.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark gray metallic",
    "gen": "3rd generation"
   },
   "2022": {
-   "src": "/assets/ai-cars/acura-rdx-g3.webp?v=1",
+   "src": "/assets/ai-cars/acura-rdx-2022.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "red",
    "gen": "3rd generation"
   },
   "2023": {
-   "src": "/assets/ai-cars/acura-rdx-g3.webp?v=1",
+   "src": "/assets/ai-cars/acura-rdx-2023.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark green metallic",
    "gen": "3rd generation"
   },
   "2024": {
-   "src": "/assets/ai-cars/acura-rdx-g3.webp?v=1",
+   "src": "/assets/ai-cars/acura-rdx-2024.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "black",
    "gen": "3rd generation"
   },
   "2025": {
@@ -9633,136 +9633,136 @@
  },
  "ford-taurus": {
   "2000": {
-   "src": "/assets/ai-cars/ford-taurus-g4.webp?v=1",
+   "src": "/assets/ai-cars/ford-taurus-2000.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark gray metallic",
    "gen": "4th generation"
   },
   "2001": {
-   "src": "/assets/ai-cars/ford-taurus-g4.webp?v=1",
+   "src": "/assets/ai-cars/ford-taurus-2001.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "light gold metallic",
    "gen": "4th generation"
   },
   "2002": {
-   "src": "/assets/ai-cars/ford-taurus-g4.webp?v=1",
+   "src": "/assets/ai-cars/ford-taurus-2002.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "black",
    "gen": "4th generation"
   },
   "2003": {
-   "src": "/assets/ai-cars/ford-taurus-g4.webp?v=1",
+   "src": "/assets/ai-cars/ford-taurus-2003.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark red metallic",
    "gen": "4th generation"
   },
   "2004": {
-   "src": "/assets/ai-cars/ford-taurus-g4.webp?v=1",
+   "src": "/assets/ai-cars/ford-taurus-2004.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "red",
    "gen": "4th generation"
   },
   "2005": {
-   "src": "/assets/ai-cars/ford-taurus-g4.webp?v=1",
+   "src": "/assets/ai-cars/ford-taurus-2005.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "white",
    "gen": "4th generation"
   },
   "2006": {
-   "src": "/assets/ai-cars/ford-taurus-g4.webp?v=1",
+   "src": "/assets/ai-cars/ford-taurus-2006.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark blue metallic",
    "gen": "4th generation"
   },
   "2007": {
-   "src": "/assets/ai-cars/ford-taurus-g4.webp?v=1",
+   "src": "/assets/ai-cars/ford-taurus-2007.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "silver metallic",
    "gen": "4th generation"
   },
   "2008": {
-   "src": "/assets/ai-cars/ford-taurus-g5.webp?v=1",
+   "src": "/assets/ai-cars/ford-taurus-2008.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark gray metallic",
    "gen": "5th generation"
   },
   "2009": {
-   "src": "/assets/ai-cars/ford-taurus-g5.webp?v=1",
+   "src": "/assets/ai-cars/ford-taurus-2009.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "light gold metallic",
    "gen": "5th generation"
   },
   "2010": {
-   "src": "/assets/ai-models/ford-taurus.webp?v=1",
+   "src": "/assets/ai-cars/ford-taurus-2010.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "black",
    "gen": "6th generation"
   },
   "2011": {
-   "src": "/assets/ai-models/ford-taurus.webp?v=1",
+   "src": "/assets/ai-cars/ford-taurus-2011.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "red",
    "gen": "6th generation"
   },
   "2012": {
-   "src": "/assets/ai-models/ford-taurus.webp?v=1",
+   "src": "/assets/ai-cars/ford-taurus-2012.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "brown metallic",
    "gen": "6th generation"
   },
   "2013": {
-   "src": "/assets/ai-models/ford-taurus.webp?v=1",
+   "src": "/assets/ai-cars/ford-taurus-2013.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "silver metallic",
    "gen": "6th generation"
   },
   "2014": {
-   "src": "/assets/ai-models/ford-taurus.webp?v=1",
+   "src": "/assets/ai-cars/ford-taurus-2014.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "dark blue metallic",
    "gen": "6th generation"
   },
   "2015": {
-   "src": "/assets/ai-models/ford-taurus.webp?v=1",
+   "src": "/assets/ai-cars/ford-taurus-2015.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "white",
    "gen": "6th generation"
   },
   "2016": {
-   "src": "/assets/ai-models/ford-taurus.webp?v=1",
+   "src": "/assets/ai-cars/ford-taurus-2016.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "dark gray metallic",
    "gen": "6th generation"
   },
   "2017": {
-   "src": "/assets/ai-models/ford-taurus.webp?v=1",
+   "src": "/assets/ai-cars/ford-taurus-2017.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "medium blue metallic",
    "gen": "6th generation"
   },
   "2018": {
-   "src": "/assets/ai-models/ford-taurus.webp?v=1",
+   "src": "/assets/ai-cars/ford-taurus-2018.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "black",
    "gen": "6th generation"
   }
  },
@@ -10612,171 +10612,171 @@
  },
  "nissan-sentra": {
   "2000": {
-   "src": "/assets/ai-cars/nissan-sentra-g5.webp?v=1",
+   "src": "/assets/ai-cars/nissan-sentra-2000.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "white",
    "gen": "5th generation (B15)"
   },
   "2001": {
-   "src": "/assets/ai-cars/nissan-sentra-g5.webp?v=1",
+   "src": "/assets/ai-cars/nissan-sentra-2001.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark blue metallic",
    "gen": "5th generation (B15)"
   },
   "2002": {
-   "src": "/assets/ai-cars/nissan-sentra-g5.webp?v=1",
+   "src": "/assets/ai-cars/nissan-sentra-2002.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "silver metallic",
    "gen": "5th generation (B15)"
   },
   "2003": {
-   "src": "/assets/ai-cars/nissan-sentra-g5.webp?v=1",
+   "src": "/assets/ai-cars/nissan-sentra-2003.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark gray metallic",
    "gen": "5th generation (B15)"
   },
   "2004": {
-   "src": "/assets/ai-cars/nissan-sentra-g5.webp?v=1",
+   "src": "/assets/ai-cars/nissan-sentra-2004.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "light gold metallic",
    "gen": "5th generation (B15)"
   },
   "2005": {
-   "src": "/assets/ai-cars/nissan-sentra-g5.webp?v=1",
+   "src": "/assets/ai-cars/nissan-sentra-2005.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "black",
    "gen": "5th generation (B15)"
   },
   "2006": {
-   "src": "/assets/ai-cars/nissan-sentra-g5.webp?v=1",
+   "src": "/assets/ai-cars/nissan-sentra-2006.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark red metallic",
    "gen": "5th generation (B15)"
   },
   "2007": {
-   "src": "/assets/ai-models/nissan-sentra.webp?v=1",
+   "src": "/assets/ai-cars/nissan-sentra-2007.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "red",
    "gen": "6th generation (B16)"
   },
   "2008": {
-   "src": "/assets/ai-models/nissan-sentra.webp?v=1",
+   "src": "/assets/ai-cars/nissan-sentra-2008.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "white",
    "gen": "6th generation (B16)"
   },
   "2009": {
-   "src": "/assets/ai-models/nissan-sentra.webp?v=1",
+   "src": "/assets/ai-cars/nissan-sentra-2009.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "dark blue metallic",
    "gen": "6th generation (B16)"
   },
   "2010": {
-   "src": "/assets/ai-models/nissan-sentra.webp?v=1",
+   "src": "/assets/ai-cars/nissan-sentra-2010.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "white",
    "gen": "6th generation (B16)"
   },
   "2011": {
-   "src": "/assets/ai-models/nissan-sentra.webp?v=1",
+   "src": "/assets/ai-cars/nissan-sentra-2011.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "dark gray metallic",
    "gen": "6th generation (B16)"
   },
   "2012": {
-   "src": "/assets/ai-models/nissan-sentra.webp?v=1",
+   "src": "/assets/ai-cars/nissan-sentra-2012.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "medium blue metallic",
    "gen": "6th generation (B16)"
   },
   "2013": {
-   "src": "/assets/ai-cars/nissan-sentra-g7.webp?v=1",
+   "src": "/assets/ai-cars/nissan-sentra-2013.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "black",
    "gen": "7th generation (B17)"
   },
   "2014": {
-   "src": "/assets/ai-cars/nissan-sentra-g7.webp?v=1",
+   "src": "/assets/ai-cars/nissan-sentra-2014.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "red",
    "gen": "7th generation (B17)"
   },
   "2015": {
-   "src": "/assets/ai-cars/nissan-sentra-g7.webp?v=1",
+   "src": "/assets/ai-cars/nissan-sentra-2015.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "brown metallic",
    "gen": "7th generation (B17)"
   },
   "2016": {
-   "src": "/assets/ai-cars/nissan-sentra-g7.webp?v=1",
+   "src": "/assets/ai-cars/nissan-sentra-2016.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "silver metallic",
    "gen": "7th generation (B17)"
   },
   "2017": {
-   "src": "/assets/ai-cars/nissan-sentra-g7.webp?v=1",
+   "src": "/assets/ai-cars/nissan-sentra-2017.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark blue metallic",
    "gen": "7th generation (B17)"
   },
   "2018": {
-   "src": "/assets/ai-cars/nissan-sentra-g7.webp?v=1",
+   "src": "/assets/ai-cars/nissan-sentra-2018.webp?v=1",
    "w": 1000,
    "h": 600,
    "color": "white",
    "gen": "7th generation (B17)"
   },
   "2019": {
-   "src": "/assets/ai-cars/nissan-sentra-g7.webp?v=1",
+   "src": "/assets/ai-cars/nissan-sentra-2019.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark gray metallic",
    "gen": "7th generation (B17)"
   },
   "2020": {
-   "src": "/assets/ai-cars/nissan-sentra-g8.webp?v=1",
+   "src": "/assets/ai-cars/nissan-sentra-2020.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "blue",
+   "color": "light gray",
    "gen": "8th generation (B18)"
   },
   "2021": {
-   "src": "/assets/ai-cars/nissan-sentra-g8.webp?v=1",
+   "src": "/assets/ai-cars/nissan-sentra-2021.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "blue",
+   "color": "dark gray metallic",
    "gen": "8th generation (B18)"
   },
   "2022": {
-   "src": "/assets/ai-cars/nissan-sentra-g8.webp?v=1",
+   "src": "/assets/ai-cars/nissan-sentra-2022.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "blue",
+   "color": "red",
    "gen": "8th generation (B18)"
   },
   "2023": {
-   "src": "/assets/ai-cars/nissan-sentra-g8.webp?v=1",
+   "src": "/assets/ai-cars/nissan-sentra-2023.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "blue",
+   "color": "dark green metallic",
    "gen": "8th generation (B18)"
   },
   "2024": {
@@ -10924,133 +10924,133 @@
  },
  "nissan-maxima": {
   "2000": {
-   "src": "/assets/ai-cars/nissan-maxima-g5.webp?v=1",
+   "src": "/assets/ai-cars/nissan-maxima-2000.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "red",
    "gen": "5th generation"
   },
   "2001": {
-   "src": "/assets/ai-cars/nissan-maxima-g5.webp?v=1",
+   "src": "/assets/ai-cars/nissan-maxima-2001.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "white",
    "gen": "5th generation"
   },
   "2002": {
-   "src": "/assets/ai-cars/nissan-maxima-g5.webp?v=1",
+   "src": "/assets/ai-cars/nissan-maxima-2002.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark blue metallic",
    "gen": "5th generation"
   },
   "2003": {
-   "src": "/assets/ai-cars/nissan-maxima-g5.webp?v=1",
+   "src": "/assets/ai-cars/nissan-maxima-2003.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "silver metallic",
    "gen": "5th generation"
   },
   "2004": {
-   "src": "/assets/ai-cars/nissan-maxima-g6.webp?v=1",
+   "src": "/assets/ai-cars/nissan-maxima-2004.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "dark gray metallic",
    "gen": "6th generation"
   },
   "2005": {
-   "src": "/assets/ai-cars/nissan-maxima-g6.webp?v=1",
+   "src": "/assets/ai-cars/nissan-maxima-2005.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "light gold metallic",
    "gen": "6th generation"
   },
   "2006": {
-   "src": "/assets/ai-cars/nissan-maxima-g6.webp?v=1",
+   "src": "/assets/ai-cars/nissan-maxima-2006.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "black",
    "gen": "6th generation"
   },
   "2007": {
-   "src": "/assets/ai-cars/nissan-maxima-g6.webp?v=1",
+   "src": "/assets/ai-cars/nissan-maxima-2007.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "dark red metallic",
    "gen": "6th generation"
   },
   "2008": {
-   "src": "/assets/ai-cars/nissan-maxima-g6.webp?v=1",
+   "src": "/assets/ai-cars/nissan-maxima-2008.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "red",
    "gen": "6th generation"
   },
   "2009": {
-   "src": "/assets/ai-models/nissan-maxima.webp?v=1",
+   "src": "/assets/ai-cars/nissan-maxima-2009.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "white",
    "gen": "7th generation"
   },
   "2010": {
-   "src": "/assets/ai-models/nissan-maxima.webp?v=1",
+   "src": "/assets/ai-cars/nissan-maxima-2010.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "dark blue metallic",
    "gen": "7th generation"
   },
   "2011": {
-   "src": "/assets/ai-models/nissan-maxima.webp?v=1",
+   "src": "/assets/ai-cars/nissan-maxima-2011.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "white",
    "gen": "7th generation"
   },
   "2012": {
-   "src": "/assets/ai-models/nissan-maxima.webp?v=1",
+   "src": "/assets/ai-cars/nissan-maxima-2012.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "dark gray metallic",
    "gen": "7th generation"
   },
   "2013": {
-   "src": "/assets/ai-models/nissan-maxima.webp?v=1",
+   "src": "/assets/ai-cars/nissan-maxima-2013.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "medium blue metallic",
    "gen": "7th generation"
   },
   "2014": {
-   "src": "/assets/ai-models/nissan-maxima.webp?v=1",
+   "src": "/assets/ai-cars/nissan-maxima-2014.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "black",
    "gen": "7th generation"
   },
   "2016": {
-   "src": "/assets/ai-cars/nissan-maxima-g8.webp?v=1",
+   "src": "/assets/ai-cars/nissan-maxima-2016.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "brown metallic",
    "gen": "8th generation"
   },
   "2017": {
-   "src": "/assets/ai-cars/nissan-maxima-g8.webp?v=1",
+   "src": "/assets/ai-cars/nissan-maxima-2017.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "silver metallic",
    "gen": "8th generation"
   },
   "2018": {
-   "src": "/assets/ai-cars/nissan-maxima-g8.webp?v=1",
+   "src": "/assets/ai-cars/nissan-maxima-2018.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark blue metallic",
    "gen": "8th generation"
   },
   "2019": {
-   "src": "/assets/ai-cars/nissan-maxima-g8.webp?v=1",
+   "src": "/assets/ai-cars/nissan-maxima-2019.webp?v=1",
    "w": 1000,
    "h": 600,
    "color": "white",
@@ -11413,126 +11413,126 @@
  },
  "hyundai-accent": {
   "2002": {
-   "src": "/assets/ai-cars/hyundai-accent-g2.webp?v=1",
+   "src": "/assets/ai-cars/hyundai-accent-2002.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark blue metallic",
    "gen": "2nd generation"
   },
   "2003": {
-   "src": "/assets/ai-cars/hyundai-accent-g2.webp?v=1",
+   "src": "/assets/ai-cars/hyundai-accent-2003.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "silver metallic",
    "gen": "2nd generation"
   },
   "2004": {
-   "src": "/assets/ai-cars/hyundai-accent-g2.webp?v=1",
+   "src": "/assets/ai-cars/hyundai-accent-2004.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark gray metallic",
    "gen": "2nd generation"
   },
   "2005": {
-   "src": "/assets/ai-cars/hyundai-accent-g2.webp?v=1",
+   "src": "/assets/ai-cars/hyundai-accent-2005.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "light gold metallic",
    "gen": "2nd generation"
   },
   "2006": {
-   "src": "/assets/ai-cars/hyundai-accent-g3.webp?v=1",
+   "src": "/assets/ai-cars/hyundai-accent-2006.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "red",
+   "color": "black",
    "gen": "3rd generation"
   },
   "2007": {
-   "src": "/assets/ai-cars/hyundai-accent-g3.webp?v=1",
+   "src": "/assets/ai-cars/hyundai-accent-2007.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "red",
+   "color": "dark red metallic",
    "gen": "3rd generation"
   },
   "2008": {
-   "src": "/assets/ai-cars/hyundai-accent-g3.webp?v=1",
+   "src": "/assets/ai-cars/hyundai-accent-2008.webp?v=1",
    "w": 1000,
    "h": 600,
    "color": "red",
    "gen": "3rd generation"
   },
   "2009": {
-   "src": "/assets/ai-cars/hyundai-accent-g3.webp?v=1",
+   "src": "/assets/ai-cars/hyundai-accent-2009.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "red",
+   "color": "white",
    "gen": "3rd generation"
   },
   "2010": {
-   "src": "/assets/ai-cars/hyundai-accent-g3.webp?v=1",
+   "src": "/assets/ai-cars/hyundai-accent-2010.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "red",
+   "color": "dark blue metallic",
    "gen": "3rd generation"
   },
   "2011": {
-   "src": "/assets/ai-cars/hyundai-accent-g3.webp?v=1",
+   "src": "/assets/ai-cars/hyundai-accent-2011.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "red",
+   "color": "white",
    "gen": "3rd generation"
   },
   "2012": {
-   "src": "/assets/ai-models/hyundai-accent.webp?v=1",
+   "src": "/assets/ai-cars/hyundai-accent-2012.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark gray metallic",
    "gen": "4th generation"
   },
   "2013": {
-   "src": "/assets/ai-models/hyundai-accent.webp?v=1",
+   "src": "/assets/ai-cars/hyundai-accent-2013.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "medium blue metallic",
    "gen": "4th generation"
   },
   "2014": {
-   "src": "/assets/ai-models/hyundai-accent.webp?v=1",
+   "src": "/assets/ai-cars/hyundai-accent-2014.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "black",
    "gen": "4th generation"
   },
   "2015": {
-   "src": "/assets/ai-models/hyundai-accent.webp?v=1",
+   "src": "/assets/ai-cars/hyundai-accent-2015.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "red",
    "gen": "4th generation"
   },
   "2016": {
-   "src": "/assets/ai-models/hyundai-accent.webp?v=1",
+   "src": "/assets/ai-cars/hyundai-accent-2016.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "brown metallic",
    "gen": "4th generation"
   },
   "2017": {
-   "src": "/assets/ai-models/hyundai-accent.webp?v=1",
+   "src": "/assets/ai-cars/hyundai-accent-2017.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "silver metallic",
    "gen": "4th generation"
   },
   "2018": {
-   "src": "/assets/ai-cars/hyundai-accent-g5.webp?v=1",
+   "src": "/assets/ai-cars/hyundai-accent-2018.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark blue metallic",
    "gen": "5th generation"
   },
   "2019": {
-   "src": "/assets/ai-cars/hyundai-accent-g5.webp?v=1",
+   "src": "/assets/ai-cars/hyundai-accent-2019.webp?v=1",
    "w": 1000,
    "h": 600,
    "color": "white",
@@ -11718,187 +11718,187 @@
  },
  "kia-forte": {
   "2010": {
-   "src": "/assets/ai-cars/kia-forte-g1.webp?v=1",
+   "src": "/assets/ai-cars/kia-forte-2010.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark gray metallic",
    "gen": "1st generation"
   },
   "2011": {
-   "src": "/assets/ai-cars/kia-forte-g1.webp?v=1",
+   "src": "/assets/ai-cars/kia-forte-2011.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "medium blue metallic",
    "gen": "1st generation"
   },
   "2012": {
-   "src": "/assets/ai-cars/kia-forte-g1.webp?v=1",
+   "src": "/assets/ai-cars/kia-forte-2012.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "black",
    "gen": "1st generation"
   },
   "2013": {
-   "src": "/assets/ai-cars/kia-forte-g1.webp?v=1",
+   "src": "/assets/ai-cars/kia-forte-2013.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "red",
    "gen": "1st generation"
   },
   "2014": {
-   "src": "/assets/ai-cars/kia-forte-g2.webp?v=1",
+   "src": "/assets/ai-cars/kia-forte-2014.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "brown metallic",
    "gen": "2nd generation"
   },
   "2015": {
-   "src": "/assets/ai-cars/kia-forte-g2.webp?v=1",
+   "src": "/assets/ai-cars/kia-forte-2015.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "silver metallic",
    "gen": "2nd generation"
   },
   "2016": {
-   "src": "/assets/ai-cars/kia-forte-g2.webp?v=1",
+   "src": "/assets/ai-cars/kia-forte-2016.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark blue metallic",
    "gen": "2nd generation"
   },
   "2017": {
-   "src": "/assets/ai-cars/kia-forte-g2.webp?v=1",
+   "src": "/assets/ai-cars/kia-forte-2017.webp?v=1",
    "w": 1000,
    "h": 600,
    "color": "white",
    "gen": "2nd generation"
   },
   "2018": {
-   "src": "/assets/ai-cars/kia-forte-g2.webp?v=1",
+   "src": "/assets/ai-cars/kia-forte-2018.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark gray metallic",
    "gen": "2nd generation"
   },
   "2019": {
-   "src": "/assets/ai-models/kia-forte.webp?v=1",
+   "src": "/assets/ai-cars/kia-forte-2019.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "medium blue metallic",
    "gen": "3rd generation"
   },
   "2020": {
-   "src": "/assets/ai-models/kia-forte.webp?v=1",
+   "src": "/assets/ai-cars/kia-forte-2020.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "dark gray metallic",
    "gen": "3rd generation"
   },
   "2021": {
-   "src": "/assets/ai-models/kia-forte.webp?v=1",
+   "src": "/assets/ai-cars/kia-forte-2021.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "red",
    "gen": "3rd generation"
   },
   "2022": {
-   "src": "/assets/ai-models/kia-forte.webp?v=1",
+   "src": "/assets/ai-cars/kia-forte-2022.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "dark green metallic",
    "gen": "3rd generation"
   },
   "2023": {
-   "src": "/assets/ai-models/kia-forte.webp?v=1",
+   "src": "/assets/ai-cars/kia-forte-2023.webp?v=1",
    "w": 1000,
    "h": 600,
    "color": "black",
    "gen": "3rd generation"
   },
   "2024": {
-   "src": "/assets/ai-models/kia-forte.webp?v=1",
+   "src": "/assets/ai-cars/kia-forte-2024.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "silver metallic",
    "gen": "3rd generation"
   }
  },
  "kia-rio": {
   "2001": {
-   "src": "/assets/ai-cars/kia-rio-g1.webp?v=1",
+   "src": "/assets/ai-cars/kia-rio-2001.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "red",
    "gen": "1st generation"
   },
   "2002": {
-   "src": "/assets/ai-cars/kia-rio-g1.webp?v=1",
+   "src": "/assets/ai-cars/kia-rio-2002.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "white",
    "gen": "1st generation"
   },
   "2003": {
-   "src": "/assets/ai-cars/kia-rio-g1.webp?v=1",
+   "src": "/assets/ai-cars/kia-rio-2003.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark blue metallic",
    "gen": "1st generation"
   },
   "2004": {
-   "src": "/assets/ai-cars/kia-rio-g1.webp?v=1",
+   "src": "/assets/ai-cars/kia-rio-2004.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "silver metallic",
    "gen": "1st generation"
   },
   "2005": {
-   "src": "/assets/ai-cars/kia-rio-g1.webp?v=1",
+   "src": "/assets/ai-cars/kia-rio-2005.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark gray metallic",
    "gen": "1st generation"
   },
   "2006": {
-   "src": "/assets/ai-cars/kia-rio-g2.webp?v=1",
+   "src": "/assets/ai-cars/kia-rio-2006.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "light gold metallic",
    "gen": "2nd generation"
   },
   "2007": {
-   "src": "/assets/ai-cars/kia-rio-g2.webp?v=1",
+   "src": "/assets/ai-cars/kia-rio-2007.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "black",
    "gen": "2nd generation"
   },
   "2008": {
-   "src": "/assets/ai-cars/kia-rio-g2.webp?v=1",
+   "src": "/assets/ai-cars/kia-rio-2008.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "dark red metallic",
    "gen": "2nd generation"
   },
   "2009": {
-   "src": "/assets/ai-cars/kia-rio-g2.webp?v=1",
+   "src": "/assets/ai-cars/kia-rio-2009.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "red",
    "gen": "2nd generation"
   },
   "2010": {
-   "src": "/assets/ai-cars/kia-rio-g2.webp?v=1",
+   "src": "/assets/ai-cars/kia-rio-2010.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "silver metallic",
    "gen": "2nd generation"
   },
   "2011": {
-   "src": "/assets/ai-cars/kia-rio-g2.webp?v=1",
+   "src": "/assets/ai-cars/kia-rio-2011.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "dark blue metallic",
    "gen": "2nd generation"
   },
   "2012": {
@@ -11937,45 +11937,45 @@
    "gen": "3rd generation"
   },
   "2018": {
-   "src": "/assets/ai-cars/kia-rio-g4.webp?v=1",
+   "src": "/assets/ai-cars/kia-rio-2018.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "blue",
+   "color": "silver metallic",
    "gen": "4th generation"
   },
   "2019": {
-   "src": "/assets/ai-cars/kia-rio-g4.webp?v=1",
+   "src": "/assets/ai-cars/kia-rio-2019.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "blue",
+   "color": "dark blue metallic",
    "gen": "4th generation"
   },
   "2020": {
-   "src": "/assets/ai-cars/kia-rio-g4.webp?v=1",
+   "src": "/assets/ai-cars/kia-rio-2020.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "blue",
+   "color": "white",
    "gen": "4th generation"
   },
   "2021": {
-   "src": "/assets/ai-cars/kia-rio-g4.webp?v=1",
+   "src": "/assets/ai-cars/kia-rio-2021.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "blue",
+   "color": "medium blue metallic",
    "gen": "4th generation"
   },
   "2022": {
-   "src": "/assets/ai-cars/kia-rio-g4.webp?v=1",
+   "src": "/assets/ai-cars/kia-rio-2022.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "blue",
+   "color": "light gray",
    "gen": "4th generation"
   },
   "2023": {
-   "src": "/assets/ai-cars/kia-rio-g4.webp?v=1",
+   "src": "/assets/ai-cars/kia-rio-2023.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "blue",
+   "color": "dark gray metallic",
    "gen": "4th generation"
   }
  },
@@ -12514,201 +12514,201 @@
  },
  "volkswagen-jetta": {
   "2000": {
-   "src": "/assets/ai-cars/volkswagen-jetta-g4.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-jetta-2000.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "white",
    "gen": "4th generation (MK4)"
   },
   "2001": {
-   "src": "/assets/ai-cars/volkswagen-jetta-g4.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-jetta-2001.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark blue metallic",
    "gen": "4th generation (MK4)"
   },
   "2002": {
-   "src": "/assets/ai-cars/volkswagen-jetta-g4.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-jetta-2002.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "silver metallic",
    "gen": "4th generation (MK4)"
   },
   "2003": {
-   "src": "/assets/ai-cars/volkswagen-jetta-g4.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-jetta-2003.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark gray metallic",
    "gen": "4th generation (MK4)"
   },
   "2004": {
-   "src": "/assets/ai-cars/volkswagen-jetta-g4.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-jetta-2004.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "light gold metallic",
    "gen": "4th generation (MK4)"
   },
   "2005": {
-   "src": "/assets/ai-cars/volkswagen-jetta-g5.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-jetta-2005.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark blue",
+   "color": "black",
    "gen": "5th generation (MK5)"
   },
   "2006": {
-   "src": "/assets/ai-cars/volkswagen-jetta-g5.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-jetta-2006.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark blue",
+   "color": "dark red metallic",
    "gen": "5th generation (MK5)"
   },
   "2007": {
-   "src": "/assets/ai-cars/volkswagen-jetta-g5.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-jetta-2007.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark blue",
+   "color": "red",
    "gen": "5th generation (MK5)"
   },
   "2008": {
-   "src": "/assets/ai-cars/volkswagen-jetta-g5.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-jetta-2008.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark blue",
+   "color": "white",
    "gen": "5th generation (MK5)"
   },
   "2009": {
-   "src": "/assets/ai-cars/volkswagen-jetta-g5.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-jetta-2009.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark blue",
+   "color": "dark blue metallic",
    "gen": "5th generation (MK5)"
   },
   "2010": {
-   "src": "/assets/ai-cars/volkswagen-jetta-g5.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-jetta-2010.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark blue",
+   "color": "white",
    "gen": "5th generation (MK5)"
   },
   "2011": {
-   "src": "/assets/ai-models/volkswagen-jetta.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-jetta-2011.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "dark gray metallic",
    "gen": "6th generation (MK6)"
   },
   "2012": {
-   "src": "/assets/ai-models/volkswagen-jetta.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-jetta-2012.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "medium blue metallic",
    "gen": "6th generation (MK6)"
   },
   "2013": {
-   "src": "/assets/ai-models/volkswagen-jetta.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-jetta-2013.webp?v=1",
    "w": 1000,
    "h": 600,
    "color": "black",
    "gen": "6th generation (MK6)"
   },
   "2014": {
-   "src": "/assets/ai-models/volkswagen-jetta.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-jetta-2014.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "red",
    "gen": "6th generation (MK6)"
   },
   "2015": {
-   "src": "/assets/ai-models/volkswagen-jetta.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-jetta-2015.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "brown metallic",
    "gen": "6th generation (MK6)"
   },
   "2016": {
-   "src": "/assets/ai-models/volkswagen-jetta.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-jetta-2016.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "silver metallic",
    "gen": "6th generation (MK6)"
   },
   "2017": {
-   "src": "/assets/ai-models/volkswagen-jetta.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-jetta-2017.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "dark blue metallic",
    "gen": "6th generation (MK6)"
   },
   "2018": {
-   "src": "/assets/ai-models/volkswagen-jetta.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-jetta-2018.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "black",
+   "color": "white",
    "gen": "6th generation (MK6)"
   },
   "2019": {
-   "src": "/assets/ai-cars/volkswagen-jetta-g7.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-jetta-2019.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark gray metallic",
    "gen": "7th generation (MK7)"
   },
   "2020": {
-   "src": "/assets/ai-cars/volkswagen-jetta-g7.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-jetta-2020.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "light gray",
    "gen": "7th generation (MK7)"
   },
   "2021": {
-   "src": "/assets/ai-cars/volkswagen-jetta-g7.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-jetta-2021.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark gray metallic",
    "gen": "7th generation (MK7)"
   },
   "2022": {
-   "src": "/assets/ai-cars/volkswagen-jetta-g7.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-jetta-2022.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "red",
    "gen": "7th generation (MK7)"
   },
   "2023": {
-   "src": "/assets/ai-cars/volkswagen-jetta-g7.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-jetta-2023.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark green metallic",
    "gen": "7th generation (MK7)"
   },
   "2024": {
-   "src": "/assets/ai-cars/volkswagen-jetta-g7.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-jetta-2024.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "black",
    "gen": "7th generation (MK7)"
   },
   "2025": {
-   "src": "/assets/ai-cars/volkswagen-jetta-g7.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-jetta-2025.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "silver metallic",
    "gen": "7th generation (MK7)"
   }
  },
  "volkswagen-passat": {
   "2012": {
-   "src": "/assets/ai-models/volkswagen-passat.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-passat-2012.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "deep blue",
+   "color": "medium blue metallic",
    "gen": "7th generation (NMS)"
   },
   "2013": {
-   "src": "/assets/ai-models/volkswagen-passat.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-passat-2013.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "deep blue",
+   "color": "black",
    "gen": "7th generation (NMS)"
   },
   "2014": {
@@ -12719,45 +12719,45 @@
    "gen": "7th generation (NMS)"
   },
   "2015": {
-   "src": "/assets/ai-models/volkswagen-passat.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-passat-2015.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "deep blue",
+   "color": "brown metallic",
    "gen": "7th generation (NMS)"
   },
   "2016": {
-   "src": "/assets/ai-models/volkswagen-passat.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-passat-2016.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "deep blue",
+   "color": "silver metallic",
    "gen": "7th generation (NMS)"
   },
   "2017": {
-   "src": "/assets/ai-models/volkswagen-passat.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-passat-2017.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "deep blue",
+   "color": "dark blue metallic",
    "gen": "7th generation (NMS)"
   },
   "2018": {
-   "src": "/assets/ai-models/volkswagen-passat.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-passat-2018.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "deep blue",
+   "color": "white",
    "gen": "7th generation (NMS)"
   },
   "2020": {
-   "src": "/assets/ai-cars/volkswagen-passat-g8.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-passat-2020.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "light gray",
    "gen": "8th generation"
   },
   "2021": {
-   "src": "/assets/ai-cars/volkswagen-passat-g8.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-passat-2021.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark gray metallic",
    "gen": "8th generation"
   }
  },
@@ -13775,59 +13775,59 @@
  },
  "bmw-x1": {
   "2013": {
-   "src": "/assets/ai-models/bmw-x1.webp?v=1",
+   "src": "/assets/ai-cars/bmw-x1-2013.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "deep blue",
+   "color": "dark gray metallic",
    "gen": "1st generation (E84)"
   },
   "2014": {
-   "src": "/assets/ai-models/bmw-x1.webp?v=1",
+   "src": "/assets/ai-cars/bmw-x1-2014.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "deep blue",
+   "color": "medium blue metallic",
    "gen": "1st generation (E84)"
   },
   "2016": {
-   "src": "/assets/ai-cars/bmw-x1-g2.webp?v=1",
+   "src": "/assets/ai-cars/bmw-x1-2016.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "red",
    "gen": "2nd generation (F48)"
   },
   "2017": {
-   "src": "/assets/ai-cars/bmw-x1-g2.webp?v=1",
+   "src": "/assets/ai-cars/bmw-x1-2017.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "brown metallic",
    "gen": "2nd generation (F48)"
   },
   "2018": {
-   "src": "/assets/ai-cars/bmw-x1-g2.webp?v=1",
+   "src": "/assets/ai-cars/bmw-x1-2018.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "silver metallic",
    "gen": "2nd generation (F48)"
   },
   "2023": {
-   "src": "/assets/ai-cars/bmw-x1-g3.webp?v=1",
+   "src": "/assets/ai-cars/bmw-x1-2023.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "gray",
+   "color": "dark gray metallic",
    "gen": "3rd generation (U11)"
   },
   "2024": {
-   "src": "/assets/ai-cars/bmw-x1-g3.webp?v=1",
+   "src": "/assets/ai-cars/bmw-x1-2024.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "gray",
+   "color": "red",
    "gen": "3rd generation (U11)"
   },
   "2025": {
-   "src": "/assets/ai-cars/bmw-x1-g3.webp?v=1",
+   "src": "/assets/ai-cars/bmw-x1-2025.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "gray",
+   "color": "dark green metallic",
    "gen": "3rd generation (U11)"
   }
  },
@@ -14752,24 +14752,24 @@
  },
  "audi-a3": {
   "2015": {
-   "src": "/assets/ai-models/audi-a3.webp?v=1",
+   "src": "/assets/ai-cars/audi-a3-2015.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "brown metallic",
    "gen": "3rd generation (8V)"
   },
   "2016": {
-   "src": "/assets/ai-models/audi-a3.webp?v=1",
+   "src": "/assets/ai-cars/audi-a3-2016.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "silver metallic",
    "gen": "3rd generation (8V)"
   },
   "2017": {
-   "src": "/assets/ai-models/audi-a3.webp?v=1",
+   "src": "/assets/ai-cars/audi-a3-2017.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark gray",
+   "color": "dark blue metallic",
    "gen": "3rd generation (8V)"
   }
  },
@@ -14805,59 +14805,59 @@
  },
  "audi-q5": {
   "2017": {
-   "src": "/assets/ai-cars/audi-q5-g1.webp?v=1",
+   "src": "/assets/ai-cars/audi-q5-2017.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "black",
    "gen": "1st generation"
   },
   "2018": {
-   "src": "/assets/ai-models/audi-q5.webp?v=1",
+   "src": "/assets/ai-cars/audi-q5-2018.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "red",
    "gen": "2nd generation"
   },
   "2019": {
-   "src": "/assets/ai-models/audi-q5.webp?v=1",
+   "src": "/assets/ai-cars/audi-q5-2019.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "brown metallic",
    "gen": "2nd generation"
   },
   "2020": {
-   "src": "/assets/ai-models/audi-q5.webp?v=1",
+   "src": "/assets/ai-cars/audi-q5-2020.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "black",
    "gen": "2nd generation"
   },
   "2021": {
-   "src": "/assets/ai-models/audi-q5.webp?v=1",
+   "src": "/assets/ai-cars/audi-q5-2021.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "silver metallic",
    "gen": "2nd generation"
   },
   "2023": {
-   "src": "/assets/ai-models/audi-q5.webp?v=1",
+   "src": "/assets/ai-cars/audi-q5-2023.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "medium blue metallic",
    "gen": "2nd generation"
   },
   "2024": {
-   "src": "/assets/ai-models/audi-q5.webp?v=1",
+   "src": "/assets/ai-cars/audi-q5-2024.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "light gray",
    "gen": "2nd generation"
   },
   "2025": {
-   "src": "/assets/ai-models/audi-q5.webp?v=1",
+   "src": "/assets/ai-cars/audi-q5-2025.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "dark gray metallic",
    "gen": "2nd generation"
   }
  },
@@ -15009,59 +15009,59 @@
  },
  "volkswagen-golf": {
   "2000": {
-   "src": "/assets/ai-cars/volkswagen-golf-g4.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-golf-2000.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "red",
    "gen": "4th generation (MK4)"
   },
   "2001": {
-   "src": "/assets/ai-cars/volkswagen-golf-g4.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-golf-2001.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "white",
    "gen": "4th generation (MK4)"
   },
   "2002": {
-   "src": "/assets/ai-cars/volkswagen-golf-g4.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-golf-2002.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark blue metallic",
    "gen": "4th generation (MK4)"
   },
   "2003": {
-   "src": "/assets/ai-cars/volkswagen-golf-g4.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-golf-2003.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "silver metallic",
    "gen": "4th generation (MK4)"
   },
   "2004": {
-   "src": "/assets/ai-cars/volkswagen-golf-g4.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-golf-2004.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark gray metallic",
    "gen": "4th generation (MK4)"
   },
   "2006": {
-   "src": "/assets/ai-cars/volkswagen-golf-g5.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-golf-2006.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "black",
    "gen": "5th generation (MK5)"
   },
   "2007": {
-   "src": "/assets/ai-cars/volkswagen-golf-g5.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-golf-2007.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark red metallic",
    "gen": "5th generation (MK5)"
   },
   "2008": {
-   "src": "/assets/ai-cars/volkswagen-golf-g5.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-golf-2008.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "red",
    "gen": "5th generation (MK5)"
   },
   "2010": {
@@ -15100,17 +15100,17 @@
    "gen": "6th generation (MK6)"
   },
   "2015": {
-   "src": "/assets/ai-cars/volkswagen-golf-g7.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-golf-2015.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark blue",
+   "color": "dark blue metallic",
    "gen": "7th generation (MK7)"
   },
   "2016": {
-   "src": "/assets/ai-cars/volkswagen-golf-g7.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-golf-2016.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark blue",
+   "color": "brown metallic",
    "gen": "7th generation (MK7)"
   },
   "2017": {
@@ -15121,24 +15121,24 @@
    "gen": "7th generation (MK7)"
   },
   "2018": {
-   "src": "/assets/ai-cars/volkswagen-golf-g7.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-golf-2018.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark blue",
+   "color": "dark blue metallic",
    "gen": "7th generation (MK7)"
   },
   "2019": {
-   "src": "/assets/ai-cars/volkswagen-golf-g7.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-golf-2019.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark blue",
+   "color": "white",
    "gen": "7th generation (MK7)"
   },
   "2020": {
-   "src": "/assets/ai-cars/volkswagen-golf-g7.webp?v=1",
+   "src": "/assets/ai-cars/volkswagen-golf-2020.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark blue",
+   "color": "medium blue metallic",
    "gen": "7th generation (MK7)"
   }
  },
@@ -15477,45 +15477,45 @@
  },
  "dodge-grand-caravan": {
   "2002": {
-   "src": "/assets/ai-models/dodge-grand-caravan.webp?v=1",
+   "src": "/assets/ai-cars/dodge-grand-caravan-2002.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "dark gray metallic",
    "gen": "4th generation"
   },
   "2003": {
-   "src": "/assets/ai-models/dodge-grand-caravan.webp?v=1",
+   "src": "/assets/ai-cars/dodge-grand-caravan-2003.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "light gold metallic",
    "gen": "4th generation"
   },
   "2004": {
-   "src": "/assets/ai-models/dodge-grand-caravan.webp?v=1",
+   "src": "/assets/ai-cars/dodge-grand-caravan-2004.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "black",
    "gen": "4th generation"
   },
   "2005": {
-   "src": "/assets/ai-models/dodge-grand-caravan.webp?v=1",
+   "src": "/assets/ai-cars/dodge-grand-caravan-2005.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "dark red metallic",
    "gen": "4th generation"
   },
   "2006": {
-   "src": "/assets/ai-models/dodge-grand-caravan.webp?v=1",
+   "src": "/assets/ai-cars/dodge-grand-caravan-2006.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "red",
    "gen": "4th generation"
   },
   "2007": {
-   "src": "/assets/ai-models/dodge-grand-caravan.webp?v=1",
+   "src": "/assets/ai-cars/dodge-grand-caravan-2007.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "white",
    "gen": "4th generation"
   },
   "2008": {
@@ -15540,73 +15540,73 @@
    "gen": "5th generation"
   },
   "2011": {
-   "src": "/assets/ai-cars/dodge-grand-caravan-g5.webp?v=1",
+   "src": "/assets/ai-cars/dodge-grand-caravan-2011.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "medium blue metallic",
    "gen": "5th generation"
   },
   "2012": {
-   "src": "/assets/ai-cars/dodge-grand-caravan-g5.webp?v=1",
+   "src": "/assets/ai-cars/dodge-grand-caravan-2012.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "black",
    "gen": "5th generation"
   },
   "2013": {
-   "src": "/assets/ai-cars/dodge-grand-caravan-g5.webp?v=1",
+   "src": "/assets/ai-cars/dodge-grand-caravan-2013.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "red",
    "gen": "5th generation"
   },
   "2014": {
-   "src": "/assets/ai-cars/dodge-grand-caravan-g5.webp?v=1",
+   "src": "/assets/ai-cars/dodge-grand-caravan-2014.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "brown metallic",
    "gen": "5th generation"
   },
   "2015": {
-   "src": "/assets/ai-cars/dodge-grand-caravan-g5.webp?v=1",
+   "src": "/assets/ai-cars/dodge-grand-caravan-2015.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "silver metallic",
    "gen": "5th generation"
   },
   "2016": {
-   "src": "/assets/ai-cars/dodge-grand-caravan-g5.webp?v=1",
+   "src": "/assets/ai-cars/dodge-grand-caravan-2016.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark blue metallic",
    "gen": "5th generation"
   },
   "2017": {
-   "src": "/assets/ai-cars/dodge-grand-caravan-g5.webp?v=1",
+   "src": "/assets/ai-cars/dodge-grand-caravan-2017.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "white",
    "gen": "5th generation"
   },
   "2018": {
-   "src": "/assets/ai-cars/dodge-grand-caravan-g5.webp?v=1",
+   "src": "/assets/ai-cars/dodge-grand-caravan-2018.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark gray metallic",
    "gen": "5th generation"
   },
   "2019": {
-   "src": "/assets/ai-cars/dodge-grand-caravan-g5.webp?v=1",
+   "src": "/assets/ai-cars/dodge-grand-caravan-2019.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "medium blue metallic",
    "gen": "5th generation"
   },
   "2020": {
-   "src": "/assets/ai-cars/dodge-grand-caravan-g5.webp?v=1",
+   "src": "/assets/ai-cars/dodge-grand-caravan-2020.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark gray metallic",
    "gen": "5th generation"
   }
  },
@@ -15698,66 +15698,66 @@
  },
  "chrysler-pacifica": {
   "2017": {
-   "src": "/assets/ai-models/chrysler-pacifica.webp?v=1",
+   "src": "/assets/ai-cars/chrysler-pacifica-2017.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "brown metallic",
    "gen": "1st generation"
   },
   "2018": {
-   "src": "/assets/ai-models/chrysler-pacifica.webp?v=1",
+   "src": "/assets/ai-cars/chrysler-pacifica-2018.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "silver metallic",
    "gen": "1st generation"
   },
   "2019": {
-   "src": "/assets/ai-models/chrysler-pacifica.webp?v=1",
+   "src": "/assets/ai-cars/chrysler-pacifica-2019.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "dark blue metallic",
    "gen": "1st generation"
   },
   "2020": {
-   "src": "/assets/ai-models/chrysler-pacifica.webp?v=1",
+   "src": "/assets/ai-cars/chrysler-pacifica-2020.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "white",
    "gen": "1st generation"
   },
   "2021": {
-   "src": "/assets/ai-models/chrysler-pacifica.webp?v=1",
+   "src": "/assets/ai-cars/chrysler-pacifica-2021.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "medium blue metallic",
    "gen": "1st generation"
   },
   "2022": {
-   "src": "/assets/ai-models/chrysler-pacifica.webp?v=1",
+   "src": "/assets/ai-cars/chrysler-pacifica-2022.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "light gray",
    "gen": "1st generation"
   },
   "2023": {
-   "src": "/assets/ai-models/chrysler-pacifica.webp?v=1",
+   "src": "/assets/ai-cars/chrysler-pacifica-2023.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "dark gray metallic",
    "gen": "1st generation"
   },
   "2024": {
-   "src": "/assets/ai-models/chrysler-pacifica.webp?v=1",
+   "src": "/assets/ai-cars/chrysler-pacifica-2024.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "red",
    "gen": "1st generation"
   },
   "2025": {
-   "src": "/assets/ai-models/chrysler-pacifica.webp?v=1",
+   "src": "/assets/ai-cars/chrysler-pacifica-2025.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "dark green metallic",
    "gen": "1st generation"
   }
  },
