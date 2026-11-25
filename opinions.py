@@ -9,7 +9,8 @@ _OP_F = 'data/opinions.json'
 _OP_TS = '0x4AAAAAAFyhvovKDo2j0cLa'   # the site's public Turnstile key (same as TS on /vote/)
 if not QM.ON:
     try:
-        with _opu.urlopen(_opu.Request('https://lemon-survey.elift08.workers.dev/ops_all', headers={'User-Agent': 'lemonindex-build'}), timeout=20) as _r:
+        _opk = open(os.path.join(os.path.expanduser('~'), '.lemon_build_key'), encoding='utf-8').read().strip()   # 11-25: /ops_all needs the build key
+        with _opu.urlopen(_opu.Request('https://lemon-survey.elift08.workers.dev/ops_all', headers={'User-Agent': 'lemonindex-build', 'X-Build-Key': _opk}), timeout=20) as _r:
             _opd = json.loads(_r.read().decode('utf-8'))
         if isinstance(_opd, dict): json.dump(_opd, open(_OP_F, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'), sort_keys=True)
     except Exception as _ex: print('opinions: Worker not reached, using the saved file:', type(_ex).__name__)

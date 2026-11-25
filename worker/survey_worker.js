@@ -96,6 +96,10 @@ export default {
   async fetch(req, env, ctx) {
     const o = req.headers.get('Origin') || '', url = new URL(req.url);
     if (req.method === 'OPTIONS') return new Response(null, { headers: cors(o) });
+    // 11-25: the two bulk feeds are for our own build only (secret BUILD_KEY, sent as X-Build-Key; key file ~/.lemon_build_key). Open, anyone
+    // could burn the account's daily D1 read limit with a few hundred calls (5,000 / 20,000 rows each) and see unreviewed prices.
+    const buildOk = !!env.BUILD_KEY && req.headers.get('X-Build-Key') === env.BUILD_KEY;
+    if (req.method === 'GET' && (url.pathname === '/ops_all' || url.pathname === '/prices_all') && !buildOk) return new Response('not found', { status: 404 });
     if (req.method === 'GET' && url.pathname === '/ops_all') {   // 11-18: approved opinions for the static build (build.py bakes them into the car pages)
       await env.DB.prepare(OP_TABLE).run();
       const { results } = await env.DB.prepare("SELECT * FROM opinions WHERE status = 'approved' ORDER BY ts DESC LIMIT 5000").all();
@@ -104,7 +108,8 @@ export default {
     }
     if (req.method === 'GET' && url.pathname === '/prices_all') {   // 11-23: reader repair prices for the build / review (no hashes, no ZIP, day only)
       await env.DB.prepare(PRICE_TABLE).run();
-      const { results } = await env.DB.prepare('SELECT id, day, fid, year, repair, usd, shop, status FROM prices ORDER BY ts DESC LIMIT 20000').all();
+      const all = url.searchParams.get('all') === '1';   // 11-25: approved only, unless the review asks for everything (?all=1)
+      const { results } = await env.DB.prepare(`SELECT id, day, fid, year, repair, usd, shop, status FROM prices ${all ? '' : "WHERE status = 'approved' "}ORDER BY ts DESC LIMIT 20000`).all();
       return new Response(JSON.stringify(results), { headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' } });
     }
     if (!ORIGINS.includes(o)) return json(o, { error: 'origin' }, 403);
