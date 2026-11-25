@@ -27,3 +27,15 @@
   b.addEventListener('click', e => { e.stopPropagation(); set(!d.classList.contains('open')); });
   document.addEventListener('click', e => { if (d.classList.contains('open') && !d.contains(e.target)) set(false); }, true);
   addEventListener('keydown', e => { if (e.key === 'Escape' && d.classList.contains('open')) { set(false); b.focus(); } }); })();
+// 11-24 category menu (build.py gh_header .mn): a category row shows its pages in the same panel; '< Menu' goes back; closing resets it.
+(() => { const m = document.querySelector('.gh-sheet .mn'); if (!m) return; const sh = m.closest('.gh-sheet'), h = m.closest('.gh');
+  const show = k => { m.classList.remove('back'); m.classList.toggle('sub', !!k); sh.classList.toggle('mn-sub', !!k);
+    m.querySelectorAll('.mn-p').forEach(p => p.classList.toggle('on', p.dataset.c === k));
+    m.querySelectorAll('.mn-c').forEach(b => b.setAttribute('aria-expanded', String(b.dataset.c === k)));
+    sh.scrollTop = 0; };
+  m.querySelectorAll('.mn-c').forEach(b => b.addEventListener('click', e => { e.stopPropagation(); show(b.dataset.c);
+    const f = m.querySelector('.mn-p.on .mn-bk'); if (f) f.focus({ preventScroll: true }); }));
+  m.querySelectorAll('.mn-bk').forEach(b => b.addEventListener('click', e => { e.stopPropagation(); const k = m.querySelector('.mn-p.on');
+    show(''); m.classList.add('back'); const r = k && m.querySelector(`.mn-c[data-c="${k.dataset.c}"]`); if (r) r.focus({ preventScroll: true }); }));
+  new MutationObserver(() => { if (!h.classList.contains('open')) { show(''); m.classList.remove('back'); } }).observe(h, { attributes: true, attributeFilter: ['class'] });
+})();

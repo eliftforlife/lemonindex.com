@@ -364,12 +364,32 @@ def gh_header(path):
     # 11-10 (Elijah: the phone menu didn't fit one screen): grouped (Look up / Explore / More) in two columns on phones; headings and the
     # top-bar links (gh-x) only show where the top bar is folded away (<1024 px). Lemon-only: the styles live in site.css, not the shared gh.css.
     inbar = {u for u, _ in NAV_TOP} | {'/trucks/', '/electric/'}; lab = dict(NAV_TOP + NAV_MORE + [('/trucks/', 'Trucks'), ('/electric/', 'Electric')]); lab['/check-engine-light/'] = 'Engine codes'
-    grp = [('Look up', ['/cars/', '/trucks/', '/brands/', '/compare/', '/vin/', '/recalls/', '/engines/', '/check-engine-light/', '/symptoms/']),
-           ('Explore', ['/best/', '/rankings/', '/electric/', '/motorcycles/', '/supercars/', '/jdm/', '/best-gas-mileage/', '/studies/', '/stats/car-complaints/']),   # 11-13 JDM section
-           ('More', ['/planes/', '/car-loan-rates/', '/vote/', '/data/', '/method/'])]
-    assert sorted(u for _, us in grp for u in us) == sorted(lab), 'gh menu groups miss a link'
-    sheet = ''.join(f'<span class="gh-g gh-g{i}" aria-hidden="true">{g}</span>' + ''.join(f'<a class="{"gh-x " if u in inbar else ""}gh-i{i}" href="{GH_HREF.get(u, u)}"{cur(u)}>{gh_ic(u)}<span>{lab[u]}</span></a>' for u in us)
-                    for i, (g, us) in enumerate(grp))
+    # 11-24 (Elijah, menu mockup 'Lemon menu dropdown.png'): 6 categories. Phones/tablets: the menu drops down over the page (dimmed below),
+    # tap a category and the same panel shows just its pages (small '< Menu' back link, no big title). Desktop More panel: the 6 as columns.
+    # Switching panels: assets/nav.js (mn). Styles: site.css '11-24 category menu'.
+    grp = [('cars', 'Cars & trucks', [('/cars/', 'All cars'), ('/trucks/', 'Trucks'), ('/electric/', 'Electric'), ('/supercars/', 'Supercars'), ('/jdm/', 'JDM'), ('/brands/', 'Brands')]),
+           ('bikes', 'Motorcycles & more', [('/motorcycles/', 'Motorcycles'), ('/planes/', 'Planes')]),
+           ('check', 'Check a car', [('/vin/', 'VIN check'), ('/recalls/', 'Recall check'), ('/check-engine-light/', 'Engine codes'), ('/symptoms/', 'Car symptoms'), ('/engines/', 'Engines')]),
+           ('best', 'Best & rankings', [('/best/', 'Best cars'), ('/rankings/', 'Every car ranked'), ('/compare/', 'Compare'), ('/best-gas-mileage/', 'Gas mileage'), ('/budget/', 'Cars for your budget')]),
+           ('money', 'Money', [('/car-loan-rates/', 'Loan rates')]),
+           ('research', 'Research', [('/studies/', 'Studies'), ('/stats/car-complaints/', 'Statistics'), ('/data/', 'Free data'), ('/method/', 'How it works')])]
+    mfoot = [('/vote/', 'Vote on what’s next'), ('/coming-soon/', 'Coming soon'), ('/support/', 'Support')]
+    assert not set(lab) - {u for _, _, ls in grp for u, _ in ls} - {u for u, _ in mfoot}, 'gh menu groups miss a link'
+    mchev = '<svg class="mn-cv" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>'
+    mic = {   # flat Lucide icons, one per category (car, bike, shield-check, trophy, wallet, book-open)
+        'cars': '<path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/>',
+        'bikes': '<circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><circle cx="15" cy="5" r="1"/><path d="M12 17.5V14l-3-3 4-3 2 3h2"/>',
+        'check': '<path d="M20 13c0 5-3.5 7.5-7.7 9a1 1 0 0 1-.6 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.7a1.2 1.2 0 0 1 1.6 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/>',
+        'best': '<path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.7V17c0 .6-.5 1-1 1.2C7.8 18.8 7 20.2 7 22M14 14.7V17c0 .6.5 1 1 1.2 1.2.6 2 2 2 3.8M18 2H6v7a6 6 0 0 0 12 0V2z"/>',
+        'money': '<path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/>',
+        'research': '<path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/>'}
+    mi = lambda k: f'<svg class="gh-ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">{mic[k]}</svg>'
+    mcur = lambda u: '' if u == '/cars/' else cur(u)   # "All cars" never carries the current-page dot (every car page starts with /cars/)
+    sheet = ('<span class="gh-g0 mn-a" aria-hidden="true"></span><div class="mn" data-mn="">'
+             + '<div class="mn-root">' + ''.join(f'<button type="button" class="mn-c" data-c="{k}" aria-controls="mn-{k}" aria-expanded="false">{mi(k)}<span>{E(t)}</span>{mchev}</button>' for k, t, _ in grp) + '</div>'
+             + ''.join(f'<div class="mn-p" id="mn-{k}" data-c="{k}"><button type="button" class="mn-bk"><span aria-hidden="true">‹</span> Menu</button><p class="mn-h">{E(t)}</p>'
+                       + ''.join(f'<a href="{GH_HREF.get(u, u)}"{mcur(u)}><span>{E(l)}</span>{mchev}</a>' for u, l in ls) + '</div>' for k, t, ls in grp)
+             + '</div><div class="mn-f">' + ''.join(f'<a href="{u}"{cur(u)}>{E(l)}</a>' for u, l in mfoot) + '</div>')
     return (f'<header class="gh wide"><div class="gh-in"><a class="gh-brand" href="/"><img src="/assets/icon-64.png" alt="" width="24" height="24">The Lemon Index</a>'
             f'<nav class="gh-links" aria-label="Main">{top}<button class="gh-more" type="button" aria-expanded="false" aria-controls="gh-sheet"{_mc}>More{_ml}{GH_DOWN}</button></nav>'
             f'<div class="gh-r">{GH_SD}{GH_SB}<button class="gh-cta gh-don supl" type="button">Donate</button>'
@@ -623,7 +643,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' '{DB_HASH}' https://static.cloudflareinsights.com https://challenges.cloudflare.com https://www.googletagmanager.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; frame-src https://challenges.cloudflare.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cloudflareinsights.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://vpic.nhtsa.dot.gov https://api.nhtsa.gov https://lemon-survey.elift08.workers.dev https://lemon-alerts.elift08.workers.dev https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="google-adsense-account" content="{ADS}"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/lxs.css?v={LXS_V}">
-<link rel="stylesheet" href="/assets/site.css?v=1124-don"><link rel="stylesheet" href="/assets/cpl.css?v=22"><script src="/assets/cpl.js?v=1" defer></script><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1124" defer></script>{lds}</head>
+<link rel="stylesheet" href="/assets/site.css?v=1124-mn"><link rel="stylesheet" href="/assets/cpl.css?v=22"><script src="/assets/cpl.js?v=1" defer></script><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1124mn" defer></script>{lds}</head>
 <body>{'' if path.startswith(('/thanks/', '/coming-soon/', '/support/')) else DONBAR}{gh_header(path)}
 <main>{body}{_eb}{_rel}{'' if path == '/vote/' else ask_html(path)}</main>
 <footer class="foot f2 f3"><div class="f3-top"><a class="f3-name" href="/"><img src="/assets/icon-64.png" alt="" width="64" height="64"><span>Lemon Index</span></a><p class="f3-tag">Check here before you buy.</p><div class="f3-soc">{F3_SOC}</div></div><div class="f2-in">
