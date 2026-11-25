@@ -32,3 +32,4 @@
 .spg .spg-big:hover{background:#ffdc2e}
 .spg-ask .spg-note{margin-top:16px}
 @media(max-width:600px){.spg-ask{padding:34px 18px 28px!important;border-radius:22px;margin-top:56px!important}.spg .spg-big{width:100%;padding:0 20px}}
+.spg-goal-n{margin:12px 0 0;font-size:14.5px;color:#3a3a3c}.spg-goal-n b{color:#1d7a3a;font-weight:700}
