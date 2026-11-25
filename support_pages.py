@@ -6,7 +6,7 @@
 # exec'd from build.py (uses page, E, json, datetime).
 import json as _sj, datetime as _sdt
 
-_SV = '1124e'
+_SV = '1124g'
 
 
 def _sp_card(img, title, line, href=None, tag=None):
@@ -17,6 +17,25 @@ def _sp_card(img, title, line, href=None, tag=None):
 
 
 def _sp_grid(cards): return '<div class="mg">' + ''.join(_sp_card(*c) for c in cards) + '</div>'
+
+
+# 11-24 Elijah (phone screenshot of /coming-soon/): "What it helps with" = icons, not pictures. Flat black Lucide icons.
+_SP_IC = {
+    'adfree': '<circle cx="12" cy="12" r="10"/><path d="m4.9 4.9 14.2 14.2"/>',
+    'free': '<path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m9 15 2 2 4-4"/>',
+    'data': '<rect width="20" height="8" x="2" y="2" rx="2"/><rect width="20" height="8" x="2" y="14" rx="2"/><path d="M6 6h.01M6 18h.01"/>',
+    'next': '<path d="m15 12-8.373 8.373a1 1 0 1 1-3-3L12 9"/><path d="m18 15 4-4"/><path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172V7l-2.26-1.13a6 6 0 0 0-2.663-.629H12.5l.9.9a3 3 0 0 1 0 4.242L12.3 11.3"/>',
+}
+
+
+def _sp_icons(cards):
+    out = []
+    for ic, title, line, *rest in cards:
+        href = rest[0] if rest else None
+        svg = f'<span class="spi-i"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{_SP_IC[ic]}</svg></span>'
+        inner = f'{svg}<b>{E(title)}</b><small>{E(line)}</small>'
+        out.append(f'<a class="spi" href="{href}">{inner}</a>' if href else f'<div class="spi">{inner}</div>')
+    return '<div class="spi-g">' + ''.join(out) + '</div>'
 
 
 def _sp_hero(h1, lede): return f'<section class="finder"><h1>{E(h1)}</h1><p class="lede">{E(lede)}</p></section>'
@@ -46,7 +65,7 @@ _SP_CSS = '<link rel="stylesheet" href="/assets/support-pages.css?v=' + _SV + '"
 
 _SUPPORT = (_SP_CSS + '<div class="pg spg">' + _sp_hero('Where your money goes.', 'Lemon Index is free, with no ads. Donations keep it that way.')
     + _sp_goal()
-    + '<h2>What it helps with</h2>' + _sp_grid([
+    + '<h2>What it helps with</h2>' + _sp_icons([
         ('adfree', 'Keeps it ad-free', 'No pop-ups, no selling your data'),
         ('free', 'Keeps every report free', 'No paywall, no account'),
         ('data', 'Pays for data and hosting', 'Images, prices, servers'),
@@ -85,7 +104,7 @@ _COMING = (_SP_CSS + '<div class="pg spg">' + _sp_hero('What’s coming to Lemon
     + _sp_goal()
     + '<button class="btn supl spg-big" type="button">Help build it</button>'
     + '<p class="spg-note">Payments by Stripe. Not tax-deductible. Full refund within 14 days.</p></section>'
-    + '<h2>What it helps with</h2>' + _sp_grid([
+    + '<h2>What it helps with</h2>' + _sp_icons([
         ('adfree', 'Keeps it ad-free', 'No pop-ups, no selling your data'),
         ('free', 'Keeps every report free', 'No paywall, no account'),
         ('data', 'Pays for data and hosting', 'Images, prices, servers'),
