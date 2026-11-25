@@ -25,6 +25,8 @@ F3_SOC = (f'<a href="{YT}" rel="noopener" aria-label="Lemon Index on YouTube"><s
           f'<a href="{TT}" rel="noopener" aria-label="Lemon Index on TikTok"><svg viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="11" fill="#000"/><g transform="translate(11.6 11.4)"><path transform="translate(-.9 -.7)" fill="#25F4EE" d="TTP"/><path transform="translate(.9 .7)" fill="#FE2C55" d="TTP"/><path fill="#fff" d="TTP"/></g></svg></a>'
           f'<a href="{IG}" rel="noopener" aria-label="Lemon Index on Instagram"><svg viewBox="0 0 48 48" aria-hidden="true"><defs><radialGradient id="f3ig" cx="30%" cy="107%" r="150%"><stop offset="0" stop-color="#fdf497"/><stop offset=".05" stop-color="#fdf497"/><stop offset=".45" stop-color="#fd5949"/><stop offset=".6" stop-color="#d6249f"/><stop offset=".9" stop-color="#285AEB"/></radialGradient></defs><rect width="48" height="48" rx="11" fill="url(#f3ig)"/><rect x="11" y="11" width="26" height="26" rx="8" fill="none" stroke="#fff" stroke-width="3.2"/><circle cx="24" cy="24" r="6.2" fill="none" stroke="#fff" stroke-width="3.2"/><circle cx="31.6" cy="16.4" r="1.9" fill="#fff"/></svg></a>').replace('TTP', 'M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z')
 ADS = 'ca-pub-6568065738106248'   # Google AdSense, added 11-09 (auto ads; loader in assets/ads.js, ads.txt at the root)
+ADS_ON = False   # 11-25 (site audit): AdSense rejected the site 11-18 and Elijah dropped it (Mediavine later), so pages no longer load assets/ads.js and
+                 # the privacy page says no ads are shown. ads.txt and the verification meta tag stay (they load nothing for visitors).
 GA = GA4_ID = 'G-3352CDDC5E'   # Google Analytics 4, added 11-08 (Mediavine Journey checks GA4 sessions); config in assets/ga.js
 CF = 'b04082d02f994049b6b6e0f5aa631ff4'   # Cloudflare Web Analytics (cookieless) token for lemonindex.com, added 10-21
 
@@ -528,6 +530,8 @@ _SNJ = json.load(open('data/search_names.json', encoding='utf-8')) if os.path.ex
 _MN = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 # 11-11 (Elijah: "above the top header might be better"): the phone donate bar sits at the very top, above the header, and scrolls away with
 # the page while the header pins as usual. In the HTML (no layout jump); DB_JS hides it before paint for 7 days after x, 60 after a donation.
+# 11-25 (site audit, Elijah OK): DONBAR is no longer put on any page. It only ever showed on phones (site.css hides .donbar above 700 px), where it
+# competed with the yellow Donate button; /coming-soon/ stays linked from the footer ("What's coming").
 DONBAR = ('<div class="donbar" role="region" aria-label="What is coming to the Lemon Index"><a class="donbar-go" href="/coming-soon/">Coming soon to Lemon · '   # 11-24 Elijah: the top bar points to /coming-soon/ (more clicks), which asks for the donation
           '<b>See what’s next&nbsp;›</b></a><button type="button" class="donbar-x" aria-label="Close this bar">×</button></div>')
 DB_JS = "try{var n=Date.now(),g=function(k){return +localStorage.getItem(k)||0};if(n-g('li-donbar-x')<6048e5||n-g('li-support-paid')<5184e6)document.documentElement.className+=' db-off'}catch(e){}"
@@ -642,7 +646,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
     lds = ''.join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in (ld or [])).replace('%%PD_ISO%%', _d)
     beacon = f"<script defer src=\"https://static.cloudflareinsights.com/beacon.min.js\" data-cf-beacon='{{\"token\": \"{CF}\"}}'></script>" if CF else ''
     if GA4_ID: beacon += f'<script src="/assets/ga.js?v=3" data-ga="{GA4_ID}" defer></script>'   # 11-24: GA4_ID, not GA (ux_c.py runs at module level and once reused GA for car data, breaking the tag on 7.4K pages)
-    if ADS and path not in ('/thanks/', '/alerts/'): beacon += f'<script src="/assets/ads.js?v=1" data-ads="{ADS}" defer></script>'   # 11-09: ga.js loads gtag.js (180 KB) after the page has loaded
+    if ADS and ADS_ON and path not in ('/thanks/', '/alerts/'): beacon += f'<script src="/assets/ads.js?v=1" data-ads="{ADS}" defer></script>'   # 11-09: ga.js loads gtag.js (180 KB) after the page has loaded
     doc = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><script>{DB_JS}</script><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{E(title)}</title><meta name="description" content="{E(desc)}"><link rel="canonical" href="{url}">
 <meta property="og:type" content="{kind}"><meta property="og:site_name" content="The Lemon Index"><meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(desc)}">
@@ -651,7 +655,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/lxs.css?v={LXS_V}">
 <link rel="stylesheet" href="/assets/site.css?v=1124-mo"><link rel="stylesheet" href="/assets/cpl.css?v=22"><script src="/assets/cpl.js?v=1" defer></script><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1124mo" defer></script>{lds}</head>
-<body>{'' if path.startswith(('/thanks/', '/coming-soon/', '/support/')) else DONBAR}{gh_header(path)}
+<body>{gh_header(path)}
 <main>{body}{_eb}{_rel}{'' if path == '/vote/' else ask_html(path)}</main>
 <footer class="foot f2 f3"><div class="f3-top"><a class="f3-name" href="/"><img src="/assets/icon-64.png" alt="" width="64" height="64"><span>Lemon Index</span></a><p class="f3-tag">Check here before you buy.</p><div class="f3-soc">{F3_SOC}</div></div><div class="f2-in">
 <nav class="f2-col" aria-label="Explore"><p class="f2-h">Explore</p><a href="/compare/">Compare cars</a><a href="/best/">Best cars</a><a href="/rankings/">Every car ranked</a><a href="/brands/">Brands</a><a href="/engines/">Every engine</a><a href="/electric/">Electric cars</a><a href="/stats/car-complaints/">Statistics</a><a href="/car-loan-rates/">Car loan rates</a><a href="/insurance/">Car insurance</a></nav>
@@ -2490,7 +2494,7 @@ legal('/refunds/', 'Refund policy', f'''<p>Every Lemon Index report is free. Don
       'Lemon Index reports are free and donations are voluntary. If you were charged twice or donated by mistake, email us within 14 days for a full refund.')
 legal('/privacy/', 'Privacy policy', f'''<p>{LEGAL_NAME} ("we") runs lemonindex.com. This page says what we collect and why.</p>
 <h2>Visiting the site</h2><p>We use Cloudflare Web Analytics, which counts visits without cookies, and Google Analytics, which uses cookies to count visits and see which pages people read. Google Analytics gets your browser type, rough location and the pages you visit; it doesn&#39;t get your name or email. You can opt out with Google&#39;s <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">opt-out add-on</a> or by blocking cookies.</p>
-<h2>Ads</h2><p>The site is free because it shows ads from Google AdSense. Google and its partners use cookies to show ads based on your visits to this and other websites. Read <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">how Google uses information from sites that use its services</a>. You can turn off personalized ads in <a href="https://adssettings.google.com" rel="noopener">Google&#39;s Ads Settings</a> or opt out of other ad networks&#39; cookies at <a href="https://www.aboutads.info/choices/" rel="noopener">aboutads.info</a>.</p>
+<h2>Ads</h2><p>The site shows no ads right now and loads no ad code. If we add ads later, we&#39;ll update this page first to say which ad network we use and what its cookies do.</p>
 <h2>If you donate or give us your email</h2><p>Donations are handled by Stripe; we never see or store your card number. If you give us your email, we use it to send car-buying tips and new studies, and every email has an unsubscribe link.</p>
 <h2>Instagram shout-outs for donors</h2><p>When you donate, the Stripe checkout asks if you want a shout-out on our Instagram story. It&#39;s optional. If you type a name or handle there, we may post it with a thank-you (never the amount). Leave it blank and we never name you. Email us any time and we&#39;ll take a story down.</p>
 <h2>The "Help our site" questions</h2><p>Answers are anonymous. We store your answer, the page and car you were on, and a daily scrambled code (a one-way hash of your IP address and the date) that only stops repeat answers. We never store your IP address, and there&#39;s no email, name or account.</p>
@@ -2501,7 +2505,7 @@ legal('/privacy/', 'Privacy policy', f'''<p>{LEGAL_NAME} ("we") runs lemonindex.
 <h2>Sharing</h2><p>We don&#39;t sell your personal information. We share it only with the services that run the site (hosting, sign-in, email, Stripe) and when the law requires it.</p>
 <h2>Your choices</h2><p>Email <a href="mailto:{CONTACT}">{CONTACT}</a> to get a copy of your data or to have it deleted.</p>
 <p>{LEGAL_NAME}, {ADDRESS}.</p>''', 'Privacy Policy: What We Collect and Why | Lemon Index',
-      'What lemonindex.com collects: visit counts from Cloudflare and Google Analytics, Google AdSense ad cookies, and your email only if you give it to us. Donations run through Stripe.')
+      'What lemonindex.com collects: visit counts from Cloudflare and Google Analytics, and your email only if you give it to us. No ads. Donations run through Stripe.')
 legal('/terms/', 'Terms of use', f'''<p>lemonindex.com is operated by {LEGAL_NAME}, {ADDRESS}. By using the site you agree to these terms.</p>
 <h2>The data</h2><p>Our scores, recalls, crash tests and fuel-economy figures come from public U.S. government data (NHTSA and the EPA) and published sales figures. Owner complaints are owners&#39; own reports, not confirmed defects. The site is for general information. Repair-cost numbers are estimates and owner reports, not a shop&#39;s quote. Nothing here is a mechanical inspection or a guarantee about any car. Have a car inspected before you buy it.</p>
 <h2>Donations</h2><p>Every report is free. Donations are voluntary, processed by Stripe, and don&#39;t unlock anything. See the <a href="/refunds/">refund policy</a>.</p>
@@ -2528,7 +2532,7 @@ exec(open('electric_pages.py', encoding='utf-8').read())
 exec(open('brands_pages.py', encoding='utf-8').read())   # 11-03 brand pages
 exec(open('vehicles_pages.py', encoding='utf-8').read())   # 11-04 planes + motorcycles
 ytq_build()   # 11-25 viewer-requested vehicles: YouTube-only pages (yt_req_pages.py)
-exec(open('advanced_pages.py', encoding='utf-8').read())   # 11-06 advanced mode
+exec(open('advanced_pages.py', encoding='utf-8').read())   # 11-06 advanced mode (11-25: no longer built; defines ADV_REDIRECTS, run after the alias stubs)
 exec(open('engine_pages.py', encoding='utf-8').read())   # 11-10 engine code search + code pages (before gap_pages: the hub lists them)
 exec(open('symptom_pages.py', encoding='utf-8').read())   # 11-14 growth plan 2C: car symptom pages /symptoms/ from NHTSA complaint text (after the code pages it links, before gap_pages: the check engine hub links them)
 exec(open('uk_pages.py', encoding='utf-8').read())   # 11-15 growth plan 3B-3: UK MOT pass rates /uk/ + /uk/<make>-<model>/ from DVSA MOT tests (data_uk_mot.py -> data/uk_mot.json)
@@ -2555,6 +2559,7 @@ RCP = 'pages'; exec(open('repair_cost_pages.py', encoding='utf-8').read())   # 1
 CMP = 'pages'; exec(open('code_model_pages.py', encoding='utf-8').read())   # 11-14 growth 2A-x: /check-engine-light/<code>/<model>/ where 10+ owner complaints on that model name the code
 exec(open('alias_pages.py', encoding='utf-8').read())   # 11-13 (N1): redirect stubs at the addresses people type (/cars/ford-f150/, /cars/honda/, reversed match-ups)
 if not QM.ON or any(QM.want(f'/cars/kia-optima/{y}/') for y in range(2021, 2026)): print('K5 redirect stubs:', K5_REDIRECTS(OUT))   # 11-20: Optima 2021+ year pages moved to /cars/kia-k5/
+print('advanced redirect stubs (total, by section, rewritten):', ADV_REDIRECTS(OUT))   # 11-25: old /advanced/ pages -> their normal page (advanced_pages.py)
 json.dump(PD, open('data/page_dates.json', 'w', encoding='utf-8'), separators=(',', ':'))
 
 # 11-13 navigation test (N1, problem 10: "the 404 page has 3 buttons and no search, and loads the whole 250 KB home page"): a light page

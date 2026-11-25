@@ -2,7 +2,9 @@
 # Run by build.py right after the sitemap URL list is made. Thin pages stay on the site for visitors (noindex,follow: Google still follows their
 # links) but leave search and the sitemap, so Google and ad-network reviewers judge the site by its strong pages.
 # A page is thin when it has little data of its own:
-#   /cars/<model>/<year>/              under 30 owner complaints for that model year (page_dates.json facts)
+#   /cars/<model>/<year>/              under 100 owner complaints for that model year (page_dates.json facts; 30 until 11-25, raised after the site audit:
+#                                      2,306 of 3,225 indexed year pages never had an impression, most in the 30-99 band)
+#   /check-engine-light/<code>/        under 25 owner complaints naming the code (11-25 site audit; was 10, set in engine_pages.py)
 #   /cars/<model>/<year>/advanced/     always: the year page covers the same car and year (advanced keeps the deep data for visitors)
 #   /repair-cost/<repair>/<model>/     under 20 owner repair bills
 #   /check-engine-light/<code>/<model>/ under 25 owner complaints naming the code
@@ -33,10 +35,15 @@ def _qg_num(u, rx):
     except OSError: return None
     m = re.search(rx, s); return int(m.group(1).replace(',', '')) if m else None
 
-def _qg_thin(u):
+_QG_YEAR_MIN, _QG_CODE_MIN = 100, 25   # 11-25 site audit (Elijah OK): year pages 30 -> 100 complaints; engine-code pages under 25 complaints
+_QG_CODES = {c.lower(): v.get('n', 0) for c, v in ((globals().get('EC') or {}).get('codes') or {}).items()}
+def _qg_thin(u, old=False):
     if re.fullmatch(r'/cars/[^/]+/\d{4}/advanced/', u): return 'advanced'
     if re.fullmatch(r'/cars/[^/]+/\d{4}/', u):
-        f = PD.get(u, {}).get('f'); return 'few complaints' if f and f[0] < 30 else None
+        f = PD.get(u, {}).get('f'); return 'few complaints' if f and f[0] < (30 if old else _QG_YEAR_MIN) else None
+    m = re.fullmatch(r'/check-engine-light/([a-z0-9]+)/', u)
+    if m and not old:
+        n = _QG_CODES.get(m.group(1)); return 'few code complaints' if n is not None and n < _QG_CODE_MIN else None
     if re.fullmatch(r'/repair-cost/[^/]+/[^/]+/', u):
         n = _qg_num(u, r'from (\d[\d,]*) owner reports'); return 'few repair bills' if n is not None and n < 20 else None
     if re.fullmatch(r'/check-engine-light/[^/]+/[^/]+/', u):
@@ -60,6 +67,15 @@ else:
     json.dump(sorted(THIN), open(_QG_THIN_F, 'w', encoding='utf-8'), indent=0)
     print('quality gate:', len(THIN), 'thin pages noindex + out of the sitemap |', dict(_qgc.Counter(_qgw.values())),
           '| kept because Google showed them:', sum(1 for u in urls if u in _QG_SEEN and _qg_thin(u)))
+    # 11-25: what the new year (100) and engine-code (25) thresholds changed, against the old rules
+    _qg_kind = lambda u: 'year page' if re.fullmatch(r'/cars/[^/]+/\d{4}/', u) else 'code page' if re.fullmatch(r'/check-engine-light/[a-z0-9]+/', u) else None
+    _qg_new, _qg_kept = _qgc.Counter(), _qgc.Counter()
+    for _u in dict.fromkeys(urls):
+        _k = _qg_kind(_u)
+        if not _k or not _qg_thin(_u) or _qg_thin(_u, old=True): continue
+        if _u in _QG_SEEN: _qg_kept[_k] += 1
+        else: _qg_new[_k] += 1
+    print('quality gate 11-25 thresholds: newly noindexed', dict(_qg_new), '| kept indexed because Google showed them', dict(_qg_kept))
 # 11-19 sub_pages.py: a card's own page is thin when its car page is, and SUB_THIN_KEYS pages always (quick builds too)
 for _u in [u for u in urls if u in globals().get('SUB_URLS', ()) or (PD.get(u) or {}).get('sb')]:
     _par = re.sub(r'[^/]+/$', '', _u)

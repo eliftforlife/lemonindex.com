@@ -1,3 +1,7 @@
+# 11-25 (site audit, Elijah's 11-24 rule "no Normal/Advanced"): the Advanced pages are no longer built. _build_adv() and _build_v() are not
+# called any more (their code stays below for reference). ADV_REDIRECTS(), run at the end of build.py, turns every old /advanced/ page still in
+# docs/ into a redirect stub to its normal page (GitHub Pages can't send server redirects): meta refresh 0, canonical to the target, noindex,
+# and a plain link. The stubs never enter the sitemap (build.py's _sm_real drops refresh pages).
 # Advanced mode (11-06, Elijah: normal for regular people, advanced for car people, on every car, plane and motorcycle). Run by build.py with exec() after the year pages.
 # 11-24 (Elijah: "remove the normal versus advanced mode on all the pages"): the switch is gone (vis_fixes.py strips mode_toggle and the other
 # copies after the date hash) and nothing links here. The pages still build so old links work, but all are noindex and ADV_URLS stays empty.
@@ -92,7 +96,7 @@ def _build_adv():
             if u >= 3: _adv_idx += 1   # 11-24: no Advanced page goes in the sitemap any more; vis_fixes.py VF_HOOK writes noindex on every one
             else: _adv_no += 1
     print('advanced year pages', _adv_idx, 'with 3+ sections of their own,', _adv_no, 'thin (all noindex since 11-24)')
-_build_adv()
+# _build_adv()   # 11-25: not built any more (ADV_REDIRECTS)
 
 # ---- planes and motorcycles: a raw-numbers page for each, same toggle
 def adv_table_page(path, normal, title, desc, h1, crumbs_html, tiles, secs):
@@ -123,5 +127,35 @@ def _build_v():
         if pl.get('mech_parts'): secs.append(_sec('mech', 'Mechanical causes', ['Part', 'Share'], [[E(str(p[0])), f'{p[1]}%'] for p in pl['mech_parts']]))
         adv_table_page(a, n, f'{pl["name"]} Accident Data by Cause and Phase of Flight | Advanced Data', f'{pl["name"]} raw NTSB data: {pl["n"]} accidents, {pl.get("fatal", 0)} fatal, by year, cause and phase of flight.', f'{E(pl["name"])}. Advanced data.', f'<a href="/planes/">Planes</a> · <a href="{n}">{E(pl["name"])}</a>',
                        [('Accidents', f'{int(pl["n"]):,}', 'NTSB'), ('Fatal', pl.get('fatal', 0), f'{pl.get("fatal_pct", 0)}% of accidents'), ('Deaths', pl.get('deaths', 0), 'NTSB'), ('Destroyed', f'{pl.get("destroyed_pct", 0)}%', 'of aircraft'), ('Mechanical', f'{pl.get("mech_pct", 0)}%', 'of accidents')], secs)
-_build_v()
-print('advanced total in sitemap', len(ADV_URLS))
+# _build_v()   # 11-25: not built any more (ADV_REDIRECTS)
+_ADV_MARK = '<!doctype html><!--lx-alias-->'   # the same start as alias_pages.py's stubs, so find_index.py and perf_page.py skip them
+def _adv_target(path):
+    """/cars/x/2016/advanced/ -> /cars/x/2016/ if that is a real page; a redirect stub there is followed; a missing page falls back a level"""
+    t = path[:-len('advanced/')]
+    for _ in range(6):
+        if t in ('', '/'): return '/'
+        f = f'{OUT}{t}index.html'
+        if os.path.isfile(f):
+            h = open(f, encoding='utf-8', errors='replace').read(3000)
+            m = re.search(r'http-equiv="refresh" content="0; ?url=([^"]+)"', h)
+            if not m: return t
+            t = m.group(1)
+            if not t.startswith('/'): return t
+        else: t = re.sub(r'[^/]+/$', '', t)
+    return t
+def ADV_REDIRECTS(out):
+    """every docs/**/advanced/index.html -> a redirect stub to its normal page; returns (stubs, by section, rewritten this run)"""
+    n, wrote, by = 0, 0, defaultdict(int)
+    for root, dirs, files in os.walk(out):
+        if os.path.basename(root) != 'advanced' or 'index.html' not in files: continue
+        path = '/' + os.path.relpath(root, out).replace(os.sep, '/').strip('/') + '/'
+        if not QM.want(path): continue
+        tgt = _adv_target(path)
+        html = (f'{_ADV_MARK}<html lang="en"><head><meta charset="utf-8"><title>Moved | The Lemon Index</title><meta name="robots" content="noindex">'
+                f'<link rel="canonical" href="{BASE}{tgt}"><meta http-equiv="refresh" content="0; url={tgt}"><meta name="viewport" content="width=device-width,initial-scale=1"></head>'
+                f'<body style="font-family:system-ui,sans-serif;padding:24px"><p>This page is now part of <a href="{tgt}">lemonindex.com{tgt}</a>.</p></body></html>')
+        f = os.path.join(root, 'index.html'); n += 1; by[path.split('/')[1]] += 1
+        if open(f, encoding='utf-8', errors='replace').read() == html: continue
+        with open(f, 'w', encoding='utf-8') as fh: fh.write(html)
+        wrote += 1
+    return n, dict(by), wrote

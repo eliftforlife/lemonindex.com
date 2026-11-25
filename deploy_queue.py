@@ -289,8 +289,8 @@ def cmd_run(a):
         for iid, why in state['bad'].items(): result[iid] = ('skipped', why)
         for it in state['left']: result[it['id']] = ('queued', 'left for the next run (build limit reached)')
         if not final: raise RuntimeError('nothing left to ship')
-        if not os.path.isfile(os.path.join(WT, ADV)) or 'Specs &amp; engines' not in open(os.path.join(WT, ADV), encoding='utf-8').read():
-            raise RuntimeError('the "Specs & engines" tab is missing from ' + ADV)
+        if not os.path.isfile(os.path.join(WT, ADV)) or 'url=/cars/honda-civic/2016/"' not in open(os.path.join(WT, ADV), encoding='utf-8').read():   # 11-25: Advanced pages are redirect stubs now (advanced_pages.py ADV_REDIRECTS)
+            raise RuntimeError('the old Advanced page is not a redirect stub to its year page: ' + ADV)
         n, broken = link_check(); say(f'link check: {n} changed pages, {len(broken)} new broken links', broken[:10])
         if broken: raise RuntimeError(f'{len(broken)} new broken links, e.g. {broken[:3]}')
         st = run('git', 'status', '--porcelain', '--untracked-files=all', quiet=True).stdout.splitlines()

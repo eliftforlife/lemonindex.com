@@ -10,7 +10,7 @@ def _about_pages():
     about = ('<div class="advp abp"><header class="advh1"><p class="ph-e">About</p><h1>Who makes the Lemon Index.</h1>'
              '<p class="ans">The Lemon Index is made by Elijah Westbrook. It turns public U.S. government car data into one plain number per car: how many owner complaints it drew for every car sold, against the average car.</p></header><div class="ygrid">'
              + sec('Who runs it', f'<p>Elijah Westbrook researches, builds and writes the site and the <a href="{YT}" rel="noopener">Lemon Index YouTube channel</a>. It is published by {E(LEGAL_NAME)}. '
-                   'We are not paid by, or affiliated with, any automaker or dealer. Lemon Index is free to use. It&#39;s paid for by reader donations and ads.</p>')
+                   'We are not paid by, or affiliated with, any automaker or dealer. Lemon Index is free to use. It&#39;s paid for by reader donations, and it shows no ads right now.</p>')
              + sec('Where the data comes from', '<ul class="ab-l">'
                    '<li><b>Owner complaints and recalls:</b> NHTSA, the U.S. government&#39;s road safety agency (its public complaint and recall files).</li>'
                    '<li><b>Crash-test stars:</b> NHTSA&#39;s 5-Star Safety Ratings.</li>'
@@ -25,7 +25,7 @@ def _about_pages():
                    'Where we quote an owner, it is their own words from an NHTSA complaint or a YouTube video.</p>')
              + sec('Corrections', f'<p>Found a wrong number, a missing recall or a car in the wrong place? Email <a href="mailto:{CONTACT}">{CONTACT}</a>. '
                    'We check it against the source, fix the page and the data download, and the page&#39;s "Updated" date moves. Fixes to the method are listed on the <a href="/method/">method page</a>.</p>')
-             + sec('How the site makes money', '<p>Reader donations and ads. No automaker, dealer or seller pays to change a score or a ranking, and none can. '
+             + sec('How the site makes money', '<p>Reader donations. The site shows no ads right now. No automaker, dealer or seller pays to change a score or a ranking, and none can. '
                    'Some links may earn us a commission; they are labeled where they appear. See the <a href="/disclosure/">affiliate disclosure</a>.</p>')
              + sec('Use the data', '<p>Everything is free to use with credit (CC BY 4.0): <a href="/data/">download the data</a>, <a href="/images/">free images</a>. Writing about cars? See the <a href="/press/">press page</a>.</p>')
              + sec('Contact', f'<p>Questions, corrections or a car you want covered: <a href="mailto:{CONTACT}">{CONTACT}</a> or the <a href="/contact/">contact page</a>. We usually answer within 2 business days.</p>')

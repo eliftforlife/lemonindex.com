@@ -63,10 +63,10 @@ def _sp_goal():
 
 _SP_CSS = '<link rel="stylesheet" href="/assets/support-pages.css?v=' + _SV + '">'
 
-_SUPPORT = (_SP_CSS + '<div class="pg spg">' + _sp_hero('Where your money goes.', 'Lemon Index is free, with no ads. Donations keep it that way.')
+_SUPPORT = (_SP_CSS + '<div class="pg spg">' + _sp_hero('Where your money goes.', 'Lemon Index is free, with no ads. Donations keep it free.')
     + _sp_goal()
     + '<h2>What it helps with</h2>' + _sp_icons([
-        ('adfree', 'Keeps it ad-free', 'No pop-ups, no selling your data'),
+        ('adfree', 'Keeps the pages clean', 'No pop-ups, no selling your data'),   # 11-25: was 'Keeps it ad-free' (no promise of never ads; Mediavine is planned)
         ('free', 'Keeps every report free', 'No paywall, no account'),
         ('data', 'Pays for data and hosting', 'Images, prices, servers'),
         ('next', 'Builds what’s next', 'New cars, bikes and countries', '/coming-soon/'),
@@ -106,7 +106,7 @@ _COMING = (_SP_CSS + '<div class="pg spg">' + _sp_hero('What’s coming to Lemon
     + '<button class="btn supl spg-big" type="button">Help build it</button>'
     + '<p class="spg-note">Payments by Stripe. Not tax-deductible. Full refund within 14 days.</p></section>'
     + '<h2>What it helps with</h2>' + _sp_icons([
-        ('adfree', 'Keeps it ad-free', 'No pop-ups, no selling your data'),
+        ('adfree', 'Keeps the pages clean', 'No pop-ups, no selling your data'),   # 11-25: was 'Keeps it ad-free' (no promise of never ads; Mediavine is planned)
         ('free', 'Keeps every report free', 'No paywall, no account'),
         ('data', 'Pays for data and hosting', 'Images, prices, servers'),
         ('next', 'Builds what’s next', 'Everything on this page'),
@@ -114,5 +114,5 @@ _COMING = (_SP_CSS + '<div class="pg spg">' + _sp_hero('What’s coming to Lemon
     + '<div class="spg-btns"><a class="btn ghost" href="/vote/">Vote on what’s next</a></div>'
     + '<p class="spg-note">Plans, not promises. The order can change.</p></div>')
 
-page('/support/', 'Where Your Donation Goes', 'Lemon Index is free, with no ads. See what donations pay for: ad-free pages, free reports, data, hosting and new features.', _SUPPORT)
+page('/support/', 'Where Your Donation Goes', 'Lemon Index is free, with no ads. See what donations pay for: free reports, data, hosting and new features.', _SUPPORT)
 page('/coming-soon/', 'What’s Coming to the Lemon Index', 'Everything Lemon Index is building next: checklists, performance cars, 4x4s, dirt bikes, Spanish pages, repair costs and classic cars.', _COMING)
