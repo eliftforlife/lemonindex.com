@@ -2439,7 +2439,12 @@ def _hkcard(i, k, name, full, img, alt, n, unit):
     return (f'<a class="hk-c{" hk-r" if i % 2 else ""}" href="{"/" if k == "all" else "/?type=" + k}" data-type="{k}" data-name="{E(full)}"><span class="hk-t"><b>{E(name)}</b><small>{E(_cnt(n, unit))}</small></span>'
             f'<span class="hk-p"><img src="{src}"{rset(src, "(max-width: 639px) 46vw, 300px")} alt="{E(alt)}, AI illustration" width="1000" height="600"'
             f'{"" if i < 3 else " loading=" + chr(34) + "lazy" + chr(34)} decoding="async"></span></a>')
-HKCARDS = ('<nav class="hk" id="kinds" aria-label="Kinds of car">' + ''.join(_hkcard(i, *r) for i, r in enumerate(_HK)) + '</nav>'
+# 11-25 (Elijah): the old black 'Coming soon to Lemon' top bar (phones only) becomes the LAST home card: a dirt bike + a car, links to
+# /coming-soon/. No data-type, so ctabs.js leaves it a plain link.
+_HKSOON = (f'<a class="hk-c{" hk-r" if len(_HK) % 2 else ""} hk-soon" href="/coming-soon/"><span class="hk-t"><b>Coming soon</b><small>Dirt bikes &amp; more</small></span>'
+           '<span class="hk-p"><img src="/assets/support/home-soon.webp" alt="A dirt bike and a compact SUV, AI illustration" width="1000" height="600" loading="lazy" decoding="async"></span></a>')
+HKCARDS = ('<nav class="hk" id="kinds" aria-label="Kinds of car">' + ''.join(_hkcard(i, *r) for i, r in enumerate(_HK)) + _HKSOON + '</nav>'
+           '<style>.hk-soon .hk-t b{white-space:nowrap}.hk-soon .hk-p{flex-basis:44%}</style>'
            '<style>.hk{display:grid;grid-template-columns:1fr;gap:10px;max-width:1120px;margin:22px auto 0;scroll-margin-top:72px;text-align:left}'
            '.hk-c{display:flex;align-items:center;gap:8px;height:116px;padding:0 6px 0 20px;border-radius:22px;background:#f5f5f7;color:#1d1d1f;text-decoration:none;overflow:hidden;transition:background .2s ease}'
            '.hk-t{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:4px}'
