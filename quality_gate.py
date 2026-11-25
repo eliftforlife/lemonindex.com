@@ -64,7 +64,8 @@ else:
 for _u in [u for u in urls if u in globals().get('SUB_URLS', ()) or (PD.get(u) or {}).get('sb')]:
     _par = re.sub(r'[^/]+/$', '', _u)
     if _u in globals().get('SUB_THIN', ()) or _par in THIN or any(_u.endswith(f'/{s}/') and re.search(r'/\d{4}/[^/]+/$', _u) for s in ('engines',)): THIN.add(_u)
-THIN |= set(globals().get('YTQ_THIN', ()))   # 11-25 YouTube-only request pages with 1 ranked year or under 40 videos (yt_req_pages.py; quick builds too)
+THIN |= set(globals().get('YTQ_THIN', ()))
+THIN |= set(globals().get('INS_THIN', ()))   # 11-25 estimate-only /insurance/<state>/ pages (insurance_pages.py; quick builds too)   # 11-25 YouTube-only request pages with 1 ranked year or under 40 videos (yt_req_pages.py; quick builds too)
 _qg_n = 0
 for _u in THIN:
     if not QM.want(_u): continue

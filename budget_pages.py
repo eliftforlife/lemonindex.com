@@ -90,7 +90,7 @@ def _budget_page():
     body = ('<div class="advp cb cbx bud">' + BUD_CSS + cbx_head('Find a car for your budget.', 'The 5 best used picks in every price range.')
             + f'<section class="cbx-sec cbx-list bud-pick"><div class="bud-row" role="group" aria-label="Type">{tch}</div><div class="bud-bar"><div class="bud-row bud-segs" role="group" aria-label="Budget">{bch}</div>'
             + f'<div class="bud-kind" role="group" aria-label="Price from">{kch}</div></div>{lists}'
-            + '<p class="bud-note">Prices are AI estimates for November 2026, not listings.<span class="bud-sn"> Score: lower is better (100 is the average car).</span></p></section>'
+            + '<p class="bud-note">Prices are AI estimates for November 2026, not listings.<span class="bud-sn"> Score: lower is better (100 is the average car).</span></p><p class="bud-note">Insurance is part of the real monthly cost: <a href="/insurance/">compare insurers for you</a>.</p></section>'
             + cbx_faq([(q, f'<p>{E(a)}</p>') for q, a in faq]) + cbx_buy()
             + cbx_src('Reliability: the Lemon Index of each model year, NHTSA owner complaints filed in its first 3 years per vehicle sold, against the average car (100). '
                       'A complaint is an owner&#39;s report, not a confirmed defect. YouTube buyer score: how YouTube buyer guides and owner reviews rate those years (Lemon Index analysis of video titles and transcripts). '

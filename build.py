@@ -8,6 +8,7 @@ import os, re, json, html, datetime, shutil, csv, statistics
 from collections import defaultdict
 exec(open('k5_split.py', encoding='utf-8').read())   # 11-20: the Kia K5 (2021+) gets its own pages, split from the Optima as each data file is read
 import price_box as PRICEBOX   # 11-24 "What it's worth" AI price by mileage on year + supercar pages (price_box.py); top of file: page() calls its budget_hook from the first page on
+INSX = 'hooks'; exec(open('insurance_pages.py', encoding='utf-8').read())   # 11-25 insurance: INS_HOOK ('Compare insurers for you' on car year pages), before any page is built
 import year_slider as YSL   # 11-10: AI year illustrations + 'every year' slider (data/ai_year_images.json)
 import tabbed as TAB   # 11-10 (Elijah, Civic first): centered hero + tabs + Years/Engines chart for the models in TAB.ON
 OUT = 'docs'; TODAY = datetime.date.today().isoformat(); BASE = 'https://lemonindex.com'
@@ -377,7 +378,7 @@ def gh_header(path):
            ('bikes', 'Motorcycles & more', [('/motorcycles/', 'Motorcycles'), ('/planes/', 'Planes')]),
            ('check', 'Check a car', [('/vin/', 'VIN check'), ('/recalls/', 'Recall check'), ('/check-engine-light/', 'Engine codes'), ('/symptoms/', 'Car symptoms'), ('/engines/', 'Engines')]),
            ('best', 'Best & rankings', [('/best/', 'Best cars'), ('/rankings/', 'Every car ranked'), ('/compare/', 'Compare'), ('/best-gas-mileage/', 'Gas mileage'), ('/budget/', 'Cars for your budget')]),
-           ('money', 'Money', [('/car-loan-rates/', 'Loan rates')]),
+           ('money', 'Money', [('/car-loan-rates/', 'Loan rates'), ('/insurance/', 'Car insurance'), ('/budget/', 'Cars for your budget')]),   # 11-25 insurance
            ('research', 'Research', [('/studies/', 'Studies'), ('/stats/car-complaints/', 'Statistics'), ('/data/', 'Free data'), ('/method/', 'How it works')])]
     mfoot = [('/vote/', 'Vote on what’s next'), ('/coming-soon/', 'Coming soon'), ('/support/', 'Support')]
     assert not set(lab) - {u for _, _, ls in grp for u, _ in ls} - {u for u, _ in mfoot}, 'gh menu groups miss a link'
@@ -653,7 +654,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <body>{'' if path.startswith(('/thanks/', '/coming-soon/', '/support/')) else DONBAR}{gh_header(path)}
 <main>{body}{_eb}{_rel}{'' if path == '/vote/' else ask_html(path)}</main>
 <footer class="foot f2 f3"><div class="f3-top"><a class="f3-name" href="/"><img src="/assets/icon-64.png" alt="" width="64" height="64"><span>Lemon Index</span></a><p class="f3-tag">Check here before you buy.</p><div class="f3-soc">{F3_SOC}</div></div><div class="f2-in">
-<nav class="f2-col" aria-label="Explore"><p class="f2-h">Explore</p><a href="/compare/">Compare cars</a><a href="/best/">Best cars</a><a href="/rankings/">Every car ranked</a><a href="/brands/">Brands</a><a href="/engines/">Every engine</a><a href="/electric/">Electric cars</a><a href="/stats/car-complaints/">Statistics</a><a href="/car-loan-rates/">Car loan rates</a></nav>
+<nav class="f2-col" aria-label="Explore"><p class="f2-h">Explore</p><a href="/compare/">Compare cars</a><a href="/best/">Best cars</a><a href="/rankings/">Every car ranked</a><a href="/brands/">Brands</a><a href="/engines/">Every engine</a><a href="/electric/">Electric cars</a><a href="/stats/car-complaints/">Statistics</a><a href="/car-loan-rates/">Car loan rates</a><a href="/insurance/">Car insurance</a></nav>
 <nav class="f2-col" aria-label="Tools and data"><p class="f2-h">Tools and data</p><a href="/vin/">VIN check</a><a href="/recalls/">Recall check</a><a href="/check-engine-light/">Engine codes</a><a href="/symptoms/">Car symptoms</a><a href="/uk/">UK MOT pass rates</a><a href="/method/">How the index works</a><a href="/data/">Free data</a><a href="/images/">Free images</a><a href="/vote/">Vote</a></nav>
 <nav class="f2-col" aria-label="Support"><p class="f2-h">Support</p><button class="supl" type="button">Support Lemon Index</button><a href="/support/">Where your money goes</a><a href="/coming-soon/">What&#39;s coming</a><a href="/about/">About</a><a href="/press/">Press</a><a href="/contact/">Contact</a><a href="{YT}?sub_confirmation=1" rel="noopener">Subscribe on YouTube</a></nav></div>
 <div class="f2-bot"><span>© {TODAY[:4]} The Lemon Index</span><a href="/terms/">Terms</a><a href="/privacy/">Privacy</a><a href="/refunds/">Refunds</a><a href="/disclosure/">Affiliate disclosure</a><span class="f2-dis">Built from public NHTSA complaint data and published U.S. sales figures. Not affiliated with any automaker. Not a repair-cost or safety rating.</span></div></footer><script src="/assets/explorer.js?v=1112d" defer></script><script src="/assets/support.js?v=1124e" defer></script><script src="/assets/imginfo.js?v=2" defer></script><script src="/assets/lookup.js?v={LXS_V}" defer></script>{beacon}</body></html>'''
@@ -661,7 +662,9 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
     doc = _ICONV.sub(r'\1?v=2', doc)   # 11-18: the box icons were redrawn (GPT image), same names
     doc = _CAT_RW.sub(lambda m: f'href="{CAT_PATH[m.group(1)]}"', doc)   # 11-19: /?type=<tab> -> the category page
     if 'CPL_POLISH' in globals(): doc = CPL_POLISH(doc)   # 11-19 (Elijah): title-only cards + flat black line icons (car_pills.py), after the date hash
-    doc = PRICEBOX.budget_hook(path, doc)   # 11-24 (Elijah): 'Find a car for your budget' first in every car page's Overview list (budget_pages.py), after the date hash
+    doc = PRICEBOX.budget_hook(path, doc)
+    doc = INS_HOOK(path, doc)   # 11-25: 'Compare insurers for you' under the budget row on car year pages (insurance_pages.py), after the date hash
+    # 11-24 (Elijah): 'Find a car for your budget' first in every car page's Overview list (budget_pages.py), after the date hash
     if 'VF_HOOK' in globals(): doc = VF_HOOK(path, doc)   # 11-24 (Elijah): no Normal/Advanced switch, one-sided praise/complaints full width, engine pictures on the engine chips, heart + share by the name (vis_fixes.py), after the date hash
     LG[path] = (set(_LGHREF.findall(doc)), bool(_LGNOIX.search(doc)), url)   # 11-12 link graph (linkgraph.py, end of build)
     f = os.path.join(OUT, path.strip('/'), 'index.html') if path.endswith('/') else os.path.join(OUT, path.strip('/'))
@@ -2180,6 +2183,7 @@ def loan_body():
 <h2>What people pay. <span class="h2s">Average APR by credit score.</span></h2>{rates}
 <div class="tw"><table><thead><tr><th>Credit</th><th>New APR</th><th>Used APR</th><th>New payment</th><th>Used payment</th></tr></thead><tbody>{tbl}</tbody></table></div>
 <p class="note">Averages for loans opened in {LOAN["as_of"]}, from Experian&#39;s State of the Automotive Finance Market (VantageScore 4.0). Your own rate also depends on the loan length, the car&#39;s age and the lender.</p>
+<p class="note ins-line">Insurance is part of the real monthly cost too: <a href="/insurance/">compare insurers for you</a>.</p>
 <h2>How dealers make money on your loan</h2>
 <p>When a dealer arranges your loan, the lender approves a rate (the &ldquo;buy rate&rdquo;) and the dealer can add points on top. Federal settlements with several big lenders capped that markup at about 1 to 1.25 points, and lenders commonly cap it at 2 to 3. That markup is negotiable.</p>
 <ol class="beats"><li><b>Get pre-approved first.</b> A quote from your bank or a credit union is your leverage.</li><li><b>Ask the dealer to beat it.</b> If they can&#39;t, use your own loan.</li><li><b>Compare the total cost, not the monthly payment.</b> A longer loan lowers the payment and raises what you pay overall.</li></ol>
@@ -2530,6 +2534,7 @@ exec(open('symptom_pages.py', encoding='utf-8').read())   # 11-14 growth plan 2C
 exec(open('uk_pages.py', encoding='utf-8').read())   # 11-15 growth plan 3B-3: UK MOT pass rates /uk/ + /uk/<make>-<model>/ from DVSA MOT tests (data_uk_mot.py -> data/uk_mot.json)
 exec(open('gap_pages.py', encoding='utf-8').read())   # 11-06 keyword gaps
 exec(open('seo_pages.py', encoding='utf-8').read())   # 11-06 best-of + stats pages
+INSX = 'pages'; exec(open('insurance_pages.py', encoding='utf-8').read())   # 11-25 /insurance/ + 51 state pages (INS_THIN: estimate-only states, noindex)
 exec(open('budget_pages.py', encoding='utf-8').read())   # 11-24 /budget/: top 10 most reliable per price range + the 'Find a car for your budget' row on car pages
 EMBX = 'pages'; exec(open('embed_pages.py', encoding='utf-8').read())   # 11-14 growth plan 5b: /embed/cars/<model>/ + the /embed/ how-to
 exec(open('extra_pages.py', encoding='utf-8').read())   # 11-06 Taos + Pontiac
@@ -2592,6 +2597,7 @@ open(f'{OUT}/llms.txt', 'w', encoding='utf-8').write(f'# The Lemon Index\n\n> Ca
 open(f'{OUT}/llms.txt', 'a', encoding='utf-8').write(STATS_LLM + f'- [Embed a car reliability chart]({BASE}/embed/): free iframe charts of owner complaints by model year for every scored model, credit built in (CC BY 4.0)' + chr(10)
     # 11-15 growth 4c: the recall check and the VIN check were missing from llms.txt
     + (f'- [Car recall check]({BASE}/recalls/): every NHTSA recall campaign ({len({c for b in RCL["B"].values() for c in b["recs"]}):,}) on the {sum(len(b["models"]) for b in RCL["B"].values())} models we track, by make, model and year, with vehicles covered and park-it warnings; check by VIN or pick the car (live from NHTSA)' + chr(10) if 'RCL' in globals() else '')
+    + f'- [Cheapest car insurance by state]({BASE}/insurance/): official monthly car insurance prices by company from the 11 state insurance departments that publish them (sample drivers by age and record), and an estimate from the NAIC 2024 state average elsewhere (tested off by about {INS_M["err"]}%); no sign-up, no affiliate links' + chr(10)
     + f'- [Free VIN check]({BASE}/vin/): decode a VIN (NHTSA vPIC) and see that model year: its Lemon Index, top problems, complaints and recalls' + chr(10))   # 11-14 5b/5c
 open(f'{OUT}/CNAME', 'w').write('lemonindex.com')
 open(f'{OUT}/google00cb28bea71f4c18.html', 'w').write('google-site-verification: google00cb28bea71f4c18.html')   # Search Console ownership (11-02); never remove
