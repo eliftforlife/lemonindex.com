@@ -85,6 +85,7 @@ async function opReview(env, fid, text) {
     return v.ok ? { status: 'approved', reason: '' } : { status: 'rejected', reason: String(v.reason || 'It didn\u2019t pass review.').slice(0, 140) };
   } catch (e) { return { status: 'pending', reason: '' }; }
 }
+const OPS_CACHE = new Map();   // 11-25: fid -> {t, v}, see GET /ops
 const OP_TABLE = "CREATE TABLE IF NOT EXISTS opinions (id INTEGER PRIMARY KEY AUTOINCREMENT, ts INTEGER, day TEXT, fid TEXT, car TEXT, year INTEGER, kind TEXT, name TEXT, text TEXT, buy TEXT, status TEXT, reason TEXT, ih TEXT, ch TEXT)";
 const XREPAIRS = { m: new Set('abs-module battery belt-drive brake-caliper brake-fluid brake-pads brake-rotors cam-chain-tensioner chain-sprockets clutch clutch-hydraulics coolant-flush cvt-belt ecu engine-rebuild final-drive fork-seals fuel-injectors fuel-pump ignition-coils infotainment instrument-cluster oil-leak oil-service radiator rear-shock regulator-rectifier spark-plugs starter starter-clutch stator steering-bearings throttle-body timing-belts tire-front tire-rear top-end transmission valve-adjustment water-pump wheel-bearings wiring-harness'.split(' ')), p: new Set('ads-b alternator annual-inspection autopilot brakes caps-repack cylinder elt-battery engine-mounts engine-overhaul exhaust fuel-pump fuel-servo fuel-tank gear-retract gps-navigator gyro heli-overhaul hot-section hundred-hour ifr-cert interior magneto oil-change paint pre-buy prop-governor prop-overhaul rotor-blades spark-plugs starter tires turbine-overhaul turbocharger vacuum-pump windshield'.split(' ')), s: new Set('abs-module ac-compressor ac-condenser ac-evaporator air-suspension airbag-module alternator annual-service backup-camera ball-joints battery bcm blend-door brake-booster brakes cam-phaser cam-sensor carbon-brakes catalytic-converter clutch control-arms convertible-top crank-sensor cv-axle differential door-lock-actuator dpf driveshaft ecm egr engine-mounts engine-replacement evap exhaust-manifold fuel-injectors fuel-pump gearbox-pump head-gasket heater-core hybrid-battery ignition-coils infotainment intake-manifold lifters maf-sensor major-service master-cylinder nose-lift oil-cooler oil-pan oxygen-sensor power-steering-pump radiator rear-main-seal spark-plugs starter steering-column steering-rack sticky-interior struts tcm thermostat throttle-body tie-rods timing-belt timing-chain tipm tires torque-converter transfer-case transmission-replacement turbo valve-body valve-cover-gasket water-pump wheel-bearing window-regulator wiring-harness'.split(' ')) };   // job E: the motorcycle (m), supercar (s) and plane (p) repairs in data/repair_est_x.json
 const PRICE_TABLE = "CREATE TABLE IF NOT EXISTS prices (id INTEGER PRIMARY KEY AUTOINCREMENT, ts INTEGER, day TEXT, fid TEXT, year INTEGER, repair TEXT, usd INTEGER, shop TEXT, zip3 TEXT, status TEXT, ih TEXT, ch TEXT)";
@@ -205,9 +206,15 @@ export default {
     }
     if (req.method === 'GET' && url.pathname === '/ops') {
       const fid = url.searchParams.get('fid'); if (!fidOk(fid)) return json(o, { error: 'bad' }, 400);
-      await env.DB.prepare(OP_TABLE).run();
+      // 11-25: every car page view calls this (63K a day hit the D1 free read limit). Index ops_fid (fid, status, ts) makes it read only the
+      // rows it returns, and each Worker copy keeps the answer 10 min (workers.dev ignores the Cache API), so a new opinion shows within 10 min.
+      const hit = OPS_CACHE.get(fid), now = Date.now();
+      if (hit && now - hit.t < 600000) return json(o, hit.v);
       const { results } = await env.DB.prepare("SELECT * FROM opinions WHERE fid = ? AND status = 'approved' ORDER BY ts DESC LIMIT 60").bind(fid).all();
-      return json(o, { ops: results.map(opPublic) });
+      const v = { ops: results.map(opPublic) };
+      if (OPS_CACHE.size > 3000) OPS_CACHE.clear();
+      OPS_CACHE.set(fid, { t: now, v });
+      return json(o, v);
     }
     if (req.method === 'POST' && url.pathname === '/op') {
       let b; try { b = await req.json(); } catch { return json(o, { error: 'bad' }, 400); }
@@ -315,6 +322,7 @@ export default {
   },
   async scheduled(ev, env, ctx) {   // 11-18: opinions that waited for the AI check (status pending) get reviewed again
     await env.DB.prepare(OP_TABLE).run();
+    try { await env.DB.prepare('CREATE INDEX IF NOT EXISTS ops_fid ON opinions (fid, status, ts)').run(); } catch (e) {}   // 11-25: GET /ops index (added by the cron because D1 reads were blocked at deploy time)
     const { results } = await env.DB.prepare("SELECT id, fid, text FROM opinions WHERE status = 'pending' ORDER BY ts LIMIT 20").all();
     for (const r of results) { const v = await opReview(env, r.fid, r.text); if (v.status !== 'pending') await env.DB.prepare('UPDATE opinions SET status = ?, reason = ? WHERE id = ?').bind(v.status, v.reason, r.id).run(); }
   }
