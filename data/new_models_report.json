@@ -86,34 +86,6 @@
   ]
  },
  {
-  "slug": "chevrolet-cobalt",
-  "sales": {
-   "2004": 4960,
-   "2005": 212667,
-   "2006": 211451,
-   "2007": 200621,
-   "2008": 188045,
-   "2009": 104724,
-   "2010": 97376,
-   "2011": 127472
-  },
-  "kind": "model",
-  "url": "https://en.wikipedia.org/wiki/Chevrolet_Cobalt",
-  "note": "col='U.S. Sales'",
-  "flags": [
-   "Chevrolet Cobalt 2011: 127,472 sold but only 1 complaints in window -> not scored"
-  ],
-  "complaints": 7974,
-  "scored": [
-   2005,
-   2006,
-   2007,
-   2008,
-   2009,
-   2010
-  ]
- },
- {
   "slug": "jeep-liberty",
   "sales": {
    "2005": 166883,
@@ -383,54 +355,6 @@
   ]
  },
  {
-  "slug": "nissan-titan",
-  "sales": {
-   "2005": 86945,
-   "2006": 72192,
-   "2007": 65743,
-   "2008": 34053,
-   "2009": 19042,
-   "2010": 23416,
-   "2011": 21994,
-   "2012": 21576,
-   "2013": 15691,
-   "2014": 12527,
-   "2015": 12140,
-   "2016": 21880,
-   "2017": 52924,
-   "2018": 50549,
-   "2019": 31514,
-   "2020": 26439,
-   "2021": 27406,
-   "2022": 15063,
-   "2023": 19189,
-   "2024": 14662,
-   "2025": 2043
-  },
-  "kind": "calendar",
-  "url": "https://en.wikipedia.org/wiki/Nissan_Titan",
-  "note": "col='United States'",
-  "flags": [
-   "Nissan Titan 2025: 2,043 sold, 0 complaints in window -> sales merged into 2024",
-   "Nissan Titan 2012: 21,576 sold but only 3 complaints in window -> not scored"
-  ],
-  "complaints": 3464,
-  "scored": [
-   2005,
-   2006,
-   2007,
-   2008,
-   2010,
-   2011,
-   2016,
-   2017,
-   2018,
-   2019,
-   2020,
-   2021
-  ]
- },
- {
   "slug": "jeep-commander",
   "sales": {
    "2005": 17048,
@@ -529,43 +453,6 @@
    2007,
    2008,
    2010
-  ]
- },
- {
-  "slug": "chevrolet-avalanche",
-  "sales": {
-   "2001": 52955,
-   "2002": 89372,
-   "2003": 93482,
-   "2004": 80566,
-   "2005": 63186,
-   "2006": 57076,
-   "2007": 55550,
-   "2008": 35003,
-   "2009": 16432,
-   "2010": 20515,
-   "2011": 20088,
-   "2012": 23995,
-   "2013": 16986
-  },
-  "kind": "calendar",
-  "url": "https://en.wikipedia.org/wiki/Chevrolet_Avalanche",
-  "note": "col='U.S.'",
-  "flags": [
-   "Chevrolet Avalanche 2001: 52,955 sold, 1 complaints in window -> sales merged into 2002",
-   "Chevrolet Avalanche 2010: 20,515 sold but only 3 complaints in window -> not scored"
-  ],
-  "complaints": 2954,
-  "scored": [
-   2002,
-   2003,
-   2004,
-   2005,
-   2006,
-   2007,
-   2008,
-   2011,
-   2012
   ]
  },
  {
@@ -756,73 +643,6 @@
   ]
  },
  {
-  "slug": "cadillac-escalade",
-  "sales": {
-   "1998": 3089,
-   "1999": 23897,
-   "2000": 23346,
-   "2001": 31816,
-   "2002": 49644,
-   "2003": 59743,
-   "2004": 62250,
-   "2005": 51144,
-   "2006": 62206,
-   "2007": 60991,
-   "2008": 39710,
-   "2009": 25884,
-   "2010": 26874,
-   "2011": 25503,
-   "2012": 22632,
-   "2013": 22514,
-   "2014": 30522,
-   "2015": 35921,
-   "2016": 39092,
-   "2017": 37694,
-   "2018": 36872,
-   "2019": 35424,
-   "2020": 24547,
-   "2021": 40505,
-   "2022": 40247,
-   "2023": 41689,
-   "2024": 41001,
-   "2025": 49366
-  },
-  "kind": "calendar",
-  "url": "https://en.wikipedia.org/wiki/Cadillac_Escalade",
-  "note": "col='Total U.S. sales'",
-  "flags": [
-   "Cadillac Escalade 2001: 31,816 sold, 1 complaints in window -> sales merged into 2002",
-   "Cadillac Escalade 2010: 26,874 sold but only 3 complaints in window -> not scored",
-   "Cadillac Escalade 2013: 22,514 sold but only 3 complaints in window -> not scored"
-  ],
-  "complaints": 2284,
-  "scored": [
-   2000,
-   2002,
-   2003,
-   2004,
-   2005,
-   2006,
-   2007,
-   2008,
-   2009,
-   2011,
-   2012,
-   2014,
-   2015,
-   2016,
-   2017,
-   2018,
-   2019,
-   2020,
-   2021,
-   2022,
-   2023,
-   2024,
-   2025
-  ]
- },
- {
   "slug": "dodge-intrepid",
   "sales": {},
   "kind": "none",
@@ -901,51 +721,6 @@
    2023,
    2024,
    2025
-  ]
- },
- {
-  "slug": "buick-lacrosse",
-  "sales": {
-   "2004": 10995,
-   "2005": 94631,
-   "2006": 71072,
-   "2007": 47747,
-   "2008": 36873,
-   "2009": 27818,
-   "2010": 61178,
-   "2011": 58474,
-   "2012": 57076,
-   "2013": 48798,
-   "2014": 51468,
-   "2015": 42035,
-   "2016": 27582,
-   "2017": 20161,
-   "2018": 15527,
-   "2019": 7241,
-   "2020": 230
-  },
-  "kind": "calendar",
-  "url": "https://en.wikipedia.org/wiki/Buick_LaCrosse",
-  "note": "col='United States'",
-  "flags": [
-   "Buick LaCrosse 2004: 10,995 sold, 0 complaints in window -> sales merged into 2005",
-   "Buick LaCrosse 2020: 230 sold, 0 complaints in window -> sales merged into 2019",
-   "Buick LaCrosse 2009: 27,818 sold but only 4 complaints in window -> not scored"
-  ],
-  "complaints": 2123,
-  "scored": [
-   2005,
-   2006,
-   2007,
-   2008,
-   2010,
-   2011,
-   2012,
-   2013,
-   2014,
-   2015,
-   2016,
-   2017
   ]
  },
  {
@@ -1103,53 +878,6 @@
   ]
  },
  {
-  "slug": "nissan-armada",
-  "sales": {
-   "2003": 6673,
-   "2004": 37275,
-   "2005": 39508,
-   "2006": 32864,
-   "2007": 31632,
-   "2008": 15685,
-   "2009": 9903,
-   "2010": 19344,
-   "2011": 18311,
-   "2012": 18072,
-   "2013": 14383,
-   "2014": 12593,
-   "2015": 12737,
-   "2016": 14035,
-   "2017": 35667,
-   "2018": 32650,
-   "2019": 32044,
-   "2020": 19640,
-   "2021": 22814,
-   "2022": 11923,
-   "2023": 21184,
-   "2024": 15267,
-   "2025": 17465
-  },
-  "kind": "calendar",
-  "url": "https://en.wikipedia.org/wiki/Nissan_Armada",
-  "note": "col='United States'",
-  "flags": [
-   "Nissan Armada 2003: 6,673 sold, 0 complaints in window -> sales merged into 2004",
-   "Nissan Armada 2016: 14,035 sold, 1 complaints in window -> sales merged into 2017",
-   "Nissan Armada 2021: 22,814 sold but only 3 complaints in window -> not scored"
-  ],
-  "complaints": 1843,
-  "scored": [
-   2004,
-   2005,
-   2006,
-   2007,
-   2017,
-   2018,
-   2019,
-   2023
-  ]
- },
- {
   "slug": "lincoln-mkz",
   "sales": {
    "2005": 4985,
@@ -1254,64 +982,6 @@
   ],
   "complaints": 1750,
   "scored": []
- },
- {
-  "slug": "lexus-is",
-  "sales": {
-   "2000": 15540,
-   "2001": 22486,
-   "2002": 20306,
-   "2003": 13559,
-   "2004": 9972,
-   "2005": 15789,
-   "2006": 54267,
-   "2007": 54933,
-   "2008": 49432,
-   "2009": 38077,
-   "2010": 34129,
-   "2011": 29669,
-   "2012": 27708,
-   "2013": 35017,
-   "2014": 51358,
-   "2015": 46430,
-   "2016": 37289,
-   "2017": 26482,
-   "2018": 22927,
-   "2019": 14920,
-   "2020": 13600,
-   "2021": 21998,
-   "2022": 21386,
-   "2023": 22521,
-   "2024": 18946,
-   "2025": 19714
-  },
-  "kind": "calendar",
-  "url": "https://en.wikipedia.org/wiki/Lexus_IS",
-  "note": "col='Sales US'",
-  "flags": [
-   "Lexus IS 2000: 15,540 sold, 0 complaints in window -> sales merged into 2001",
-   "Lexus IS 2013: 35,017 sold but only 2 complaints in window -> not scored",
-   "Lexus IS 2016: 37,289 sold but only 4 complaints in window -> not scored",
-   "Lexus IS 2017: 26,482 sold but only 3 complaints in window -> not scored",
-   "Lexus IS 2018: 22,927 sold but only 4 complaints in window -> not scored",
-   "Lexus IS 2021: 21,998 sold but only 2 complaints in window -> not scored"
-  ],
-  "complaints": 1719,
-  "scored": [
-   2001,
-   2002,
-   2006,
-   2007,
-   2008,
-   2009,
-   2010,
-   2011,
-   2012,
-   2014,
-   2015,
-   2022,
-   2023
-  ]
  },
  {
   "slug": "volvo-xc90",
@@ -1526,47 +1196,6 @@
   ]
  },
  {
-  "slug": "lincoln-mkx",
-  "sales": {
-   "2006": 859,
-   "2007": 37953,
-   "2008": 29076,
-   "2009": 21433,
-   "2010": 21932,
-   "2011": 23395,
-   "2012": 25107,
-   "2013": 23913,
-   "2014": 23995,
-   "2015": 22199,
-   "2016": 30967,
-   "2017": 31031,
-   "2018": 28573,
-   "2019": 31711
-  },
-  "kind": "calendar",
-  "url": "https://en.wikipedia.org/wiki/Lincoln_MKX",
-  "note": "col='U.S.'",
-  "flags": [
-   "Lincoln MKX 2006: 859 sold, 0 complaints in window -> sales merged into 2007",
-   "Lincoln MKX 2019: 31,711 sold, 0 complaints in window -> sales merged into 2018",
-   "Lincoln MKX 2009: 21,433 sold but only 3 complaints in window -> not scored"
-  ],
-  "complaints": 1417,
-  "scored": [
-   2007,
-   2008,
-   2010,
-   2011,
-   2012,
-   2013,
-   2014,
-   2015,
-   2016,
-   2017,
-   2018
-  ]
- },
- {
   "slug": "chevrolet-monte-carlo",
   "sales": {},
   "kind": "none",
@@ -1601,43 +1230,6 @@
    2023,
    2024,
    2025
-  ]
- },
- {
-  "slug": "ford-transit",
-  "sales": {
-   "2014": 20448,
-   "2015": 117577,
-   "2016": 143244,
-   "2017": 127360,
-   "2018": 137794,
-   "2019": 153868,
-   "2020": 131557,
-   "2021": 99745,
-   "2022": 99382,
-   "2023": 129009,
-   "2024": 152738,
-   "2025": 161797
-  },
-  "kind": "calendar",
-  "url": "https://en.wikipedia.org/wiki/Ford_Transit",
-  "note": "col='U.S. sales'",
-  "flags": [
-   "Ford Transit 2014: 20,448 sold but only 3 complaints in window -> not scored",
-   "Ford Transit 2025: 161,797 sold but only 4 complaints in window -> not scored"
-  ],
-  "complaints": 785,
-  "scored": [
-   2015,
-   2016,
-   2017,
-   2018,
-   2019,
-   2020,
-   2021,
-   2022,
-   2023,
-   2024
   ]
  },
  {
@@ -1853,41 +1445,6 @@
    2006,
    2007,
    2008
-  ]
- },
- {
-  "slug": "volvo-s60",
-  "sales": {
-   "2010": 1437,
-   "2011": 21282,
-   "2012": 23356,
-   "2013": 23210,
-   "2014": 20457,
-   "2015": 16993,
-   "2016": 14789,
-   "2017": 12454,
-   "2018": 7583,
-   "2019": 17526,
-   "2020": 11946,
-   "2021": 10550,
-   "2022": 6151,
-   "2023": 10357,
-   "2024": 13029,
-   "2025": 940
-  },
-  "kind": "calendar",
-  "url": "https://en.wikipedia.org/wiki/Volvo_S60",
-  "note": "col='US S60'",
-  "flags": [
-   "Volvo S60 2010: 1,437 sold, 0 complaints in window -> sales merged into 2011",
-   "Volvo S60 2025: 940 sold, 0 complaints in window -> sales merged into 2024",
-   "Volvo S60 2011: 22,719 sold but only 3 complaints in window -> not scored"
-  ],
-  "complaints": 1268,
-  "scored": [
-   2012,
-   2013,
-   2014
   ]
  },
  {
@@ -2358,35 +1915,6 @@
   ]
  },
  {
-  "slug": "ford-crown-victoria",
-  "sales": {
-   "2005": 63939,
-   "2006": 62976,
-   "2007": 60901,
-   "2008": 48557,
-   "2009": 33255,
-   "2010": 33722,
-   "2011": 46725,
-   "2012": 4429
-  },
-  "kind": "calendar",
-  "url": "https://www.goodcarbadcar.net/ford-crown-victoria-sales-figures/",
-  "note": "GoodCarBadCar annual U.S. sales",
-  "flags": [
-   "Ford Crown Victoria 2012: 4,429 sold, 0 complaints in window -> sales merged into 2011",
-   "Ford Crown Victoria 2010: 33,722 sold but only 3 complaints in window -> not scored"
-  ],
-  "complaints": 1007,
-  "scored": [
-   2005,
-   2006,
-   2007,
-   2008,
-   2009,
-   2011
-  ]
- },
- {
   "slug": "honda-passport",
   "sales": {
    "1993": 106,
@@ -2699,97 +2227,6 @@
   "scored": []
  },
  {
-  "slug": "chevrolet-express",
-  "sales": {
-   "2005": 128585,
-   "2006": 123195,
-   "2007": 114730,
-   "2008": 86986,
-   "2009": 54293,
-   "2010": 59753,
-   "2011": 71943,
-   "2012": 76628,
-   "2013": 79087,
-   "2014": 79352,
-   "2015": 63382,
-   "2016": 68007,
-   "2017": 69164,
-   "2018": 66963,
-   "2019": 77457,
-   "2020": 55040,
-   "2021": 44357,
-   "2022": 52796,
-   "2023": 40659,
-   "2024": 44221,
-   "2025": 58578
-  },
-  "kind": "calendar",
-  "url": "https://www.goodcarbadcar.net/chevrolet-express-sales-figures/",
-  "note": "GoodCarBadCar annual U.S. sales",
-  "flags": [
-   "Chevrolet Express 2025: 58,578 sold, 0 complaints in window -> sales merged into 2024",
-   "Chevrolet Express 2019: 77,457 sold but only 1 complaints in window -> not scored",
-   "Chevrolet Express 2020: 55,040 sold but only 4 complaints in window -> not scored",
-   "Chevrolet Express 2022: 52,796 sold but only 3 complaints in window -> not scored",
-   "Chevrolet Express 2023: 40,659 sold but only 4 complaints in window -> not scored",
-   "Chevrolet Express 2024: 102,799 sold but only 3 complaints in window -> not scored"
-  ],
-  "complaints": 841,
-  "scored": [
-   2005,
-   2006,
-   2007,
-   2008,
-   2009,
-   2010,
-   2011,
-   2012,
-   2013,
-   2014,
-   2015,
-   2016,
-   2017,
-   2018,
-   2021
-  ]
- },
- {
-  "slug": "buick-encore",
-  "sales": {
-   "2013": 31956,
-   "2014": 48892,
-   "2015": 67549,
-   "2016": 78565,
-   "2017": 88035,
-   "2018": 93073,
-   "2019": 102402,
-   "2020": 41752,
-   "2021": 20072,
-   "2022": 13718,
-   "2023": 5887,
-   "2024": 126
-  },
-  "kind": "calendar",
-  "url": "https://en.wikipedia.org/wiki/Buick_Encore",
-  "note": "col='United States'",
-  "flags": [
-   "Buick Encore 2023: 5,887 sold, 0 complaints in window -> sales merged into 2022",
-   "Buick Encore 2024: 126 sold, 0 complaints in window (no neighbour with complaints: dropped)",
-   "Buick Encore 2021: 20,072 sold but only 4 complaints in window -> not scored"
-  ],
-  "complaints": 602,
-  "scored": [
-   2013,
-   2014,
-   2015,
-   2016,
-   2017,
-   2018,
-   2019,
-   2020
-  ]
- },
- {
   "slug": "ram-promaster",
   "sales": {
    "2014": 18039,
@@ -2822,40 +2259,6 @@
    2023,
    2024,
    2025
-  ]
- },
- {
-  "slug": "toyota-yaris",
-  "sales": {
-   "2006": 70308,
-   "2007": 84799,
-   "2008": 102328,
-   "2009": 63743,
-   "2010": 40076,
-   "2011": 32704,
-   "2012": 30590,
-   "2013": 21342,
-   "2014": 13274,
-   "2015": 16779,
-   "2016": 10872,
-   "2017": 8653,
-   "2018": 1940
-  },
-  "kind": "calendar",
-  "url": "https://en.wikipedia.org/wiki/Toyota_Yaris",
-  "note": "the article's U.S. Yaris column (Toyota reported both body styles together), 2006-2018; 2019-2020 left out because the article gives one combined Yaris / Yaris iA figure",
-  "flags": [
-   "Toyota Yaris 2006: 70,308 sold, 1 complaints in window -> sales merged into 2007",
-   "Toyota Yaris 2011: 32,704 sold but only 3 complaints in window -> not scored"
-  ],
-  "complaints": 888,
-  "scored": [
-   2007,
-   2008,
-   2009,
-   2010,
-   2012,
-   2013
   ]
  },
  {
@@ -2979,83 +2382,6 @@
   ],
   "complaints": 346,
   "scored": []
- },
- {
-  "slug": "acura-tsx",
-  "sales": {
-   "2003": 18932,
-   "2004": 30365,
-   "2005": 34856,
-   "2006": 38035,
-   "2007": 33037,
-   "2008": 31998,
-   "2009": 28650,
-   "2010": 31950,
-   "2011": 27725,
-   "2012": 24631,
-   "2013": 15508,
-   "2014": 5647
-  },
-  "kind": "calendar",
-  "url": "https://en.wikipedia.org/wiki/Acura_TSX",
-  "note": "Wikipedia U.S. sales table (col='US sales (sedan)'), citing the automaker's releases; sedan sales; the 2011-2014 Sport Wagon is left out of both sales and complaints",
-  "flags": [
-   "Acura TSX 2003: 18,932 sold, 0 complaints in window -> sales merged into 2004",
-   "Acura TSX 2011: 27,725 sold, 1 complaints in window -> sales merged into 2012",
-   "Acura TSX 2007: 33,037 sold but only 2 complaints in window -> not scored"
-  ],
-  "complaints": 671,
-  "scored": [
-   2004,
-   2005,
-   2006,
-   2008,
-   2009,
-   2010,
-   2012
-  ]
- },
- {
-  "slug": "audi-a5",
-  "sales": {
-   "2007": 625,
-   "2008": 6282,
-   "2009": 9800,
-   "2010": 16379,
-   "2011": 15385,
-   "2012": 17270,
-   "2013": 18664,
-   "2014": 16640,
-   "2015": 12934,
-   "2016": 8354,
-   "2017": 21301,
-   "2018": 25972,
-   "2019": 23023,
-   "2020": 18827,
-   "2021": 17128,
-   "2022": 18349,
-   "2023": 23807,
-   "2024": 24636,
-   "2025": 16776
-  },
-  "kind": "calendar",
-  "url": "https://www.goodcarbadcar.net/audi-a5-sales-figures/",
-  "note": "GoodCarBadCar U.S. calendar-year sales table; A5 coupe, cabriolet and Sportback",
-  "flags": [
-   "Audi A5 2007: 625 sold, 0 complaints in window (no neighbour with complaints: dropped)",
-   "Audi A5 2008: 6,282 sold, 0 complaints in window -> sales merged into 2009",
-   "Audi A5 2012: 17,270 sold, 0 complaints in window -> sales merged into 2013",
-   "Audi A5 2017: 21,301 sold but only 2 complaints in window -> not scored",
-   "Audi A5: 3 scorable model years / 29 complaints -> complaints only"
-  ],
-  "complaints": 377,
-  "scored": [
-   2013,
-   2018,
-   2019,
-   2023,
-   2024
-  ]
  },
  {
   "slug": "audi-tt",
@@ -3287,35 +2613,6 @@
    2023,
    2024,
    2025
-  ]
- },
- {
-  "slug": "chevrolet-astro",
-  "sales": {
-   "1999": 102427,
-   "2000": 92585,
-   "2001": 59395,
-   "2002": 50616,
-   "2003": 40123,
-   "2004": 34564,
-   "2005": 19215,
-   "2006": 386,
-   "2007": 25
-  },
-  "kind": "calendar",
-  "url": "https://www.goodcarbadcar.net/chevrolet-astro-sales-figures/",
-  "note": "GoodCarBadCar U.S. calendar-year sales table",
-  "flags": [
-   "Chevrolet Astro 2006: 386 sold, 0 complaints in window -> sales merged into 2005",
-   "Chevrolet Astro 2007: 25 sold, 0 complaints in window (no neighbour with complaints: dropped)",
-   "Chevrolet Astro 2004: 34,564 sold but only 4 complaints in window -> not scored"
-  ],
-  "complaints": 419,
-  "scored": [
-   2000,
-   2001,
-   2002,
-   2003
   ]
  },
  {
@@ -3571,48 +2868,6 @@
   ]
  },
  {
-  "slug": "ford-transit-connect",
-  "sales": {
-   "2009": 8834,
-   "2010": 27405,
-   "2011": 31914,
-   "2012": 37521,
-   "2013": 39703,
-   "2014": 43210,
-   "2015": 52221,
-   "2016": 43232,
-   "2017": 34473,
-   "2018": 31923,
-   "2019": 41598,
-   "2020": 34596,
-   "2021": 26112,
-   "2022": 25140,
-   "2023": 18050
-  },
-  "kind": "calendar",
-  "url": "https://en.wikipedia.org/wiki/Ford_Transit_Connect",
-  "note": "Wikipedia U.S. sales table (col='U.S.'), citing the automaker's releases",
-  "flags": [
-   "Ford Transit Connect 2009: 8,834 sold, 0 complaints in window -> sales merged into 2010",
-   "Ford Transit Connect 2021: 26,112 sold but only 4 complaints in window -> not scored",
-   "Ford Transit Connect 2022: 25,140 sold but only 4 complaints in window -> not scored"
-  ],
-  "complaints": 575,
-  "scored": [
-   2010,
-   2011,
-   2012,
-   2013,
-   2014,
-   2015,
-   2016,
-   2017,
-   2018,
-   2019,
-   2020
-  ]
- },
- {
   "slug": "gmc-jimmy",
   "sales": {
    "1995": 71807,
@@ -3799,39 +3054,6 @@
   ],
   "complaints": 662,
   "scored": []
- },
- {
-  "slug": "infiniti-fx35",
-  "sales": {
-   "2003": 27637,
-   "2004": 30964,
-   "2005": 28786,
-   "2006": 22653,
-   "2007": 20723,
-   "2008": 12670,
-   "2009": 11024,
-   "2010": 10420,
-   "2011": 9939,
-   "2012": 10424,
-   "2013": 6380,
-   "2014": 5213,
-   "2015": 557
-  },
-  "kind": "calendar",
-  "url": "https://www.goodcarbadcar.net/infiniti-fx-sales-figures/",
-  "note": "GoodCarBadCar U.S. calendar-year sales table; the whole FX line (FX35, FX45, FX37, FX50), as Infiniti reports it",
-  "flags": [
-   "Infiniti FX35 2014: 5,213 sold, 0 complaints in window -> sales merged into 2013",
-   "Infiniti FX35 2015: 557 sold, 0 complaints in window (no neighbour with complaints: dropped)",
-   "Infiniti FX35 2006: 22,653 sold but only 2 complaints in window -> not scored"
-  ],
-  "complaints": 533,
-  "scored": [
-   2003,
-   2004,
-   2005,
-   2007
-  ]
  },
  {
   "slug": "infiniti-g37",
@@ -4403,49 +3625,6 @@
   ]
  },
  {
-  "slug": "mercedes-benz-sprinter",
-  "sales": {
-   "2010": 8559,
-   "2011": 16577,
-   "2012": 20929,
-   "2013": 21816,
-   "2014": 25745,
-   "2015": 28519,
-   "2016": 28320,
-   "2017": 27415,
-   "2018": 29787,
-   "2019": 29757,
-   "2020": 37513,
-   "2021": 40534,
-   "2022": 46533,
-   "2023": 46229,
-   "2024": 43425,
-   "2025": 38460
-  },
-  "kind": "calendar",
-  "url": "https://www.goodcarbadcar.net/mercedes-benz-sprinter-sales-figures/",
-  "note": "GoodCarBadCar U.S. calendar-year sales table; Mercedes-Benz-badged Sprinters from 2010 (earlier U.S. Sprinters were sold as Dodge and Freightliner)",
-  "flags": [
-   "Mercedes-Benz Sprinter 2012: 20,929 sold but only 2 complaints in window -> not scored",
-   "Mercedes-Benz Sprinter 2025: 38,460 sold but only 4 complaints in window -> not scored"
-  ],
-  "complaints": 760,
-  "scored": [
-   2013,
-   2014,
-   2015,
-   2016,
-   2017,
-   2018,
-   2019,
-   2020,
-   2021,
-   2022,
-   2023,
-   2024
-  ]
- },
- {
   "slug": "mitsubishi-diamante",
   "sales": {
    "2003": 9174,
@@ -4518,46 +3697,6 @@
   "scored": [
    2000,
    2001
-  ]
- },
- {
-  "slug": "mitsubishi-outlander-sport",
-  "sales": {
-   "2010": 1690,
-   "2011": 16443,
-   "2012": 18091,
-   "2013": 24951,
-   "2014": 31054,
-   "2015": 36966,
-   "2016": 33067,
-   "2017": 33160,
-   "2018": 39153,
-   "2019": 33644,
-   "2020": 28836,
-   "2021": 34216,
-   "2022": 16373,
-   "2023": 15015,
-   "2024": 15125,
-   "2025": 20480
-  },
-  "kind": "calendar",
-  "url": "https://media.mitsubishicars.com/releases/mitsubishi-motors-reports-best-annual-sales-since-2007",
-  "note": "Mitsubishi Motors North America year-end releases (2017-2025); GoodCarBadCar U.S. table (2010-2016)",
-  "flags": [
-   "Mitsubishi Outlander Sport 2010: 1,690 sold, 0 complaints in window -> sales merged into 2011",
-   "Mitsubishi Outlander Sport 2025: 20,480 sold but only 1 complaints in window -> not scored"
-  ],
-  "complaints": 479,
-  "scored": [
-   2013,
-   2014,
-   2015,
-   2016,
-   2017,
-   2018,
-   2019,
-   2020,
-   2021
   ]
  },
  {
@@ -4669,49 +3808,6 @@
   ]
  },
  {
-  "slug": "porsche-cayenne",
-  "sales": {
-   "2005": 13607,
-   "2006": 10569,
-   "2007": 12547,
-   "2008": 11216,
-   "2009": 7735,
-   "2010": 7793,
-   "2011": 12978,
-   "2012": 15545,
-   "2013": 18507,
-   "2014": 16205,
-   "2015": 16474,
-   "2016": 15383,
-   "2017": 13203,
-   "2018": 11106,
-   "2019": 19001,
-   "2020": 18092,
-   "2021": 21048,
-   "2022": 21194,
-   "2023": 20288,
-   "2024": 20808,
-   "2025": 17729
-  },
-  "kind": "calendar",
-  "url": "https://www.goodcarbadcar.net/porsche-cayenne-sales-figures/",
-  "note": "GoodCarBadCar U.S. calendar-year sales table",
-  "flags": [
-   "Porsche Cayenne 2007: 12,547 sold, 0 complaints in window -> sales merged into 2008",
-   "Porsche Cayenne 2010: 7,793 sold, 0 complaints in window -> sales merged into 2011",
-   "Porsche Cayenne 2022: 21,194 sold, 0 complaints in window -> sales merged into 2023",
-   "Porsche Cayenne 2008: 23,763 sold but only 3 complaints in window -> not scored",
-   "Porsche Cayenne: 2 scorable model years / 16 complaints -> complaints only"
-  ],
-  "complaints": 665,
-  "scored": [
-   2011,
-   2021,
-   2023,
-   2024
-  ]
- },
- {
   "slug": "saturn-sl",
   "sales": {
    "1999": 207977,
@@ -4750,39 +3846,6 @@
   ],
   "complaints": 516,
   "scored": []
- },
- {
-  "slug": "scion-tc",
-  "sales": {
-   "2004": 28062,
-   "2005": 74415,
-   "2006": 79125,
-   "2007": 63852,
-   "2008": 40980,
-   "2009": 17998,
-   "2010": 15204,
-   "2011": 22433,
-   "2012": 22666,
-   "2013": 19094,
-   "2014": 17947,
-   "2015": 16459,
-   "2016": 9336
-  },
-  "kind": "calendar",
-  "url": "https://en.wikipedia.org/wiki/Scion_tC",
-  "note": "Wikipedia U.S. sales table (col='US Sales'), citing the automaker's releases",
-  "flags": [
-   "Scion tC 2004: 28,062 sold, 0 complaints in window -> sales merged into 2005",
-   "Scion tC 2012: 22,666 sold but only 4 complaints in window -> not scored"
-  ],
-  "complaints": 693,
-  "scored": [
-   2005,
-   2006,
-   2007,
-   2008,
-   2011
-  ]
  },
  {
   "slug": "toyota-c-hr",
@@ -5297,46 +4360,6 @@
   "scored": []
  },
  {
-  "slug": "land-rover-range-rover-sport",
-  "sales": {
-   "2005": 10441,
-   "2006": 18757,
-   "2007": 16989,
-   "2008": 8340,
-   "2009": 9269,
-   "2010": 12347,
-   "2011": 15375,
-   "2012": 16491,
-   "2013": 15976,
-   "2014": 17897,
-   "2015": 21459,
-   "2016": 21612,
-   "2017": 19153,
-   "2018": 24282,
-   "2019": 25768,
-   "2020": 20053,
-   "2021": 21341
-  },
-  "kind": "calendar",
-  "url": "https://www.goodcarbadcar.net/land-rover-range-rover-sport-sales/",
-  "note": "GoodCarBadCar U.S. calendar-year sales table; 2022+ left out: JLR stopped publishing U.S. sales by model and the published tables disagree",
-  "flags": [
-   "Land Rover Range Rover Sport 2005: 10,441 sold, 0 complaints in window -> sales merged into 2006",
-   "Land Rover Range Rover Sport 2009: 9,269 sold, 0 complaints in window -> sales merged into 2010",
-   "Land Rover Range Rover Sport 2021: 21,341 sold but only 3 complaints in window -> not scored"
-  ],
-  "complaints": 651,
-  "scored": [
-   2006,
-   2010,
-   2015,
-   2016,
-   2018,
-   2019,
-   2020
-  ]
- },
- {
   "slug": "mercury-cougar",
   "sales": {
    "1998": 35465,
@@ -5743,6 +4766,1007 @@
    2021,
    2022,
    2023
+  ]
+ },
+ {
+  "slug": "chevrolet-cobalt",
+  "sales": {
+   "2004": 4960,
+   "2005": 212667,
+   "2006": 211451,
+   "2007": 200621,
+   "2008": 188045,
+   "2009": 104724,
+   "2010": 97376,
+   "2011": 127472
+  },
+  "kind": "model",
+  "url": "https://en.wikipedia.org/wiki/Chevrolet_Cobalt",
+  "note": "col='U.S. Sales'",
+  "flags": [
+   "Chevrolet Cobalt 2011: 127,472 sold but only 1 complaints in window -> not scored"
+  ],
+  "complaints": 7974,
+  "scored": [
+   2005,
+   2006,
+   2007,
+   2008,
+   2009,
+   2010
+  ]
+ },
+ {
+  "slug": "nissan-titan",
+  "sales": {
+   "2005": 86945,
+   "2006": 72192,
+   "2007": 65743,
+   "2008": 34053,
+   "2009": 19042,
+   "2010": 23416,
+   "2011": 21994,
+   "2012": 21576,
+   "2013": 15691,
+   "2014": 12527,
+   "2015": 12140,
+   "2016": 21880,
+   "2017": 52924,
+   "2018": 50549,
+   "2019": 31514,
+   "2020": 26439,
+   "2021": 27406,
+   "2022": 15063,
+   "2023": 19189,
+   "2024": 14662,
+   "2025": 2043
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Nissan_Titan",
+  "note": "col='United States'",
+  "flags": [
+   "Nissan Titan 2025: 2,043 sold, 0 complaints in window -> sales merged into 2024",
+   "Nissan Titan 2012: 21,576 sold but only 3 complaints in window -> not scored",
+   "Nissan Titan 2012: listed as a year page with no score (gap year)"
+  ],
+  "complaints": 3471,
+  "scored": [
+   2005,
+   2006,
+   2007,
+   2008,
+   2010,
+   2011,
+   2016,
+   2017,
+   2018,
+   2019,
+   2020,
+   2021
+  ]
+ },
+ {
+  "slug": "chevrolet-avalanche",
+  "sales": {
+   "2001": 52955,
+   "2002": 89372,
+   "2003": 93482,
+   "2004": 80566,
+   "2005": 63186,
+   "2006": 57076,
+   "2007": 55550,
+   "2008": 35003,
+   "2009": 16432,
+   "2010": 20515,
+   "2011": 20088,
+   "2012": 23995,
+   "2013": 16986
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Chevrolet_Avalanche",
+  "note": "col='U.S.'",
+  "flags": [
+   "Chevrolet Avalanche 2001: 52,955 sold, 1 complaints in window -> sales merged into 2002",
+   "Chevrolet Avalanche 2010: 20,515 sold but only 3 complaints in window -> not scored",
+   "Chevrolet Avalanche 2010: listed as a year page with no score (gap year)"
+  ],
+  "complaints": 2954,
+  "scored": [
+   2002,
+   2003,
+   2004,
+   2005,
+   2006,
+   2007,
+   2008,
+   2011,
+   2012
+  ]
+ },
+ {
+  "slug": "cadillac-escalade",
+  "sales": {
+   "1998": 3089,
+   "1999": 23897,
+   "2000": 23346,
+   "2001": 31816,
+   "2002": 49644,
+   "2003": 59743,
+   "2004": 62250,
+   "2005": 51144,
+   "2006": 62206,
+   "2007": 60991,
+   "2008": 39710,
+   "2009": 25884,
+   "2010": 26874,
+   "2011": 25503,
+   "2012": 22632,
+   "2013": 22514,
+   "2014": 30522,
+   "2015": 35921,
+   "2016": 39092,
+   "2017": 37694,
+   "2018": 36872,
+   "2019": 35424,
+   "2020": 24547,
+   "2021": 40505,
+   "2022": 40247,
+   "2023": 41689,
+   "2024": 41001,
+   "2025": 49366
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Cadillac_Escalade",
+  "note": "col='Total U.S. sales'",
+  "flags": [
+   "Cadillac Escalade 2001: 31,816 sold, 1 complaints in window -> sales merged into 2002",
+   "Cadillac Escalade 2010: 26,874 sold but only 3 complaints in window -> not scored",
+   "Cadillac Escalade 2013: 22,514 sold but only 3 complaints in window -> not scored",
+   "Cadillac Escalade 2010: listed as a year page with no score (gap year)",
+   "Cadillac Escalade 2013: listed as a year page with no score (gap year)"
+  ],
+  "complaints": 2310,
+  "scored": [
+   2000,
+   2002,
+   2003,
+   2004,
+   2005,
+   2006,
+   2007,
+   2008,
+   2009,
+   2011,
+   2012,
+   2014,
+   2015,
+   2016,
+   2017,
+   2018,
+   2019,
+   2020,
+   2021,
+   2022,
+   2023,
+   2024,
+   2025
+  ]
+ },
+ {
+  "slug": "buick-lacrosse",
+  "sales": {
+   "2004": 10995,
+   "2005": 94631,
+   "2006": 71072,
+   "2007": 47747,
+   "2008": 36873,
+   "2009": 27818,
+   "2010": 61178,
+   "2011": 58474,
+   "2012": 57076,
+   "2013": 48798,
+   "2014": 51468,
+   "2015": 42035,
+   "2016": 27582,
+   "2017": 20161,
+   "2018": 15527,
+   "2019": 7241,
+   "2020": 230
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Buick_LaCrosse",
+  "note": "col='United States'",
+  "flags": [
+   "Buick LaCrosse 2004: 10,995 sold, 0 complaints in window -> sales merged into 2005",
+   "Buick LaCrosse 2020: 230 sold, 0 complaints in window -> sales merged into 2019",
+   "Buick LaCrosse 2009: 27,818 sold but only 4 complaints in window -> not scored",
+   "Buick LaCrosse 2009: listed as a year page with no score (gap year)"
+  ],
+  "complaints": 2128,
+  "scored": [
+   2005,
+   2006,
+   2007,
+   2008,
+   2010,
+   2011,
+   2012,
+   2013,
+   2014,
+   2015,
+   2016,
+   2017
+  ]
+ },
+ {
+  "slug": "nissan-armada",
+  "sales": {
+   "2003": 6673,
+   "2004": 37275,
+   "2005": 39508,
+   "2006": 32864,
+   "2007": 31632,
+   "2008": 15685,
+   "2009": 9903,
+   "2010": 19344,
+   "2011": 18311,
+   "2012": 18072,
+   "2013": 14383,
+   "2014": 12593,
+   "2015": 12737,
+   "2016": 14035,
+   "2017": 35667,
+   "2018": 32650,
+   "2019": 32044,
+   "2020": 19640,
+   "2021": 22814,
+   "2022": 11923,
+   "2023": 21184,
+   "2024": 15267,
+   "2025": 17465
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Nissan_Armada",
+  "note": "col='United States'",
+  "flags": [
+   "Nissan Armada 2003: 6,673 sold, 0 complaints in window -> sales merged into 2004",
+   "Nissan Armada 2016: 14,035 sold, 1 complaints in window -> sales merged into 2017",
+   "Nissan Armada 2021: 22,814 sold but only 3 complaints in window -> not scored",
+   "Nissan Armada 2021: listed as a year page with no score (gap year)"
+  ],
+  "complaints": 1852,
+  "scored": [
+   2004,
+   2005,
+   2006,
+   2007,
+   2017,
+   2018,
+   2019,
+   2023
+  ]
+ },
+ {
+  "slug": "lexus-is",
+  "sales": {
+   "2000": 15540,
+   "2001": 22486,
+   "2002": 20306,
+   "2003": 13559,
+   "2004": 9972,
+   "2005": 15789,
+   "2006": 54267,
+   "2007": 54933,
+   "2008": 49432,
+   "2009": 38077,
+   "2010": 34129,
+   "2011": 29669,
+   "2012": 27708,
+   "2013": 35017,
+   "2014": 51358,
+   "2015": 46430,
+   "2016": 37289,
+   "2017": 26482,
+   "2018": 22927,
+   "2019": 14920,
+   "2020": 13600,
+   "2021": 21998,
+   "2022": 21386,
+   "2023": 22521,
+   "2024": 18946,
+   "2025": 19714
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Lexus_IS",
+  "note": "col='Sales US'",
+  "flags": [
+   "Lexus IS 2000: 15,540 sold, 0 complaints in window -> sales merged into 2001",
+   "Lexus IS 2013: 35,017 sold but only 2 complaints in window -> not scored",
+   "Lexus IS 2016: 37,289 sold but only 4 complaints in window -> not scored",
+   "Lexus IS 2017: 26,482 sold but only 3 complaints in window -> not scored",
+   "Lexus IS 2018: 22,927 sold but only 4 complaints in window -> not scored",
+   "Lexus IS 2021: 21,998 sold but only 2 complaints in window -> not scored",
+   "Lexus IS 2013: listed as a year page with no score (gap year)",
+   "Lexus IS 2016: listed as a year page with no score (gap year)",
+   "Lexus IS 2017: listed as a year page with no score (gap year)",
+   "Lexus IS 2018: listed as a year page with no score (gap year)",
+   "Lexus IS 2021: listed as a year page with no score (gap year)"
+  ],
+  "complaints": 1722,
+  "scored": [
+   2001,
+   2002,
+   2006,
+   2007,
+   2008,
+   2009,
+   2010,
+   2011,
+   2012,
+   2014,
+   2015,
+   2022,
+   2023
+  ]
+ },
+ {
+  "slug": "lincoln-mkx",
+  "sales": {
+   "2006": 859,
+   "2007": 37953,
+   "2008": 29076,
+   "2009": 21433,
+   "2010": 21932,
+   "2011": 23395,
+   "2012": 25107,
+   "2013": 23913,
+   "2014": 23995,
+   "2015": 22199,
+   "2016": 30967,
+   "2017": 31031,
+   "2018": 28573,
+   "2019": 31711
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Lincoln_MKX",
+  "note": "col='U.S.'",
+  "flags": [
+   "Lincoln MKX 2006: 859 sold, 0 complaints in window -> sales merged into 2007",
+   "Lincoln MKX 2019: 31,711 sold, 0 complaints in window -> sales merged into 2018",
+   "Lincoln MKX 2009: 21,433 sold but only 3 complaints in window -> not scored",
+   "Lincoln MKX 2009: listed as a year page with no score (gap year)"
+  ],
+  "complaints": 1420,
+  "scored": [
+   2007,
+   2008,
+   2010,
+   2011,
+   2012,
+   2013,
+   2014,
+   2015,
+   2016,
+   2017,
+   2018
+  ]
+ },
+ {
+  "slug": "ford-transit",
+  "sales": {
+   "2014": 20448,
+   "2015": 117577,
+   "2016": 143244,
+   "2017": 127360,
+   "2018": 137794,
+   "2019": 153868,
+   "2020": 131557,
+   "2021": 99745,
+   "2022": 99382,
+   "2023": 129009,
+   "2024": 152738,
+   "2025": 161797
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Ford_Transit",
+  "note": "col='U.S. sales'",
+  "flags": [
+   "Ford Transit 2014: 20,448 sold but only 3 complaints in window -> not scored",
+   "Ford Transit 2025: 161,797 sold but only 4 complaints in window -> not scored"
+  ],
+  "complaints": 800,
+  "scored": [
+   2015,
+   2016,
+   2017,
+   2018,
+   2019,
+   2020,
+   2021,
+   2022,
+   2023,
+   2024
+  ]
+ },
+ {
+  "slug": "volvo-s60",
+  "sales": {
+   "2010": 1437,
+   "2011": 21282,
+   "2012": 23356,
+   "2013": 23210,
+   "2014": 20457,
+   "2015": 16993,
+   "2016": 14789,
+   "2017": 12454,
+   "2018": 7583,
+   "2019": 17526,
+   "2020": 11946,
+   "2021": 10550,
+   "2022": 6151,
+   "2023": 10357,
+   "2024": 13029,
+   "2025": 940
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Volvo_S60",
+  "note": "col='US S60'",
+  "flags": [
+   "Volvo S60 2010: 1,437 sold, 0 complaints in window -> sales merged into 2011",
+   "Volvo S60 2025: 940 sold, 0 complaints in window -> sales merged into 2024",
+   "Volvo S60 2011: 22,719 sold but only 3 complaints in window -> not scored"
+  ],
+  "complaints": 1274,
+  "scored": [
+   2012,
+   2013,
+   2014
+  ]
+ },
+ {
+  "slug": "ford-crown-victoria",
+  "sales": {
+   "2005": 63939,
+   "2006": 62976,
+   "2007": 60901,
+   "2008": 48557,
+   "2009": 33255,
+   "2010": 33722,
+   "2011": 46725,
+   "2012": 4429
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/ford-crown-victoria-sales-figures/",
+  "note": "GoodCarBadCar annual U.S. sales",
+  "flags": [
+   "Ford Crown Victoria 2012: 4,429 sold, 0 complaints in window -> sales merged into 2011",
+   "Ford Crown Victoria 2010: 33,722 sold but only 3 complaints in window -> not scored",
+   "Ford Crown Victoria 2010: listed as a year page with no score (gap year)"
+  ],
+  "complaints": 1010,
+  "scored": [
+   2005,
+   2006,
+   2007,
+   2008,
+   2009,
+   2011
+  ]
+ },
+ {
+  "slug": "toyota-yaris",
+  "sales": {
+   "2006": 70308,
+   "2007": 84799,
+   "2008": 102328,
+   "2009": 63743,
+   "2010": 40076,
+   "2011": 32704,
+   "2012": 30590,
+   "2013": 21342,
+   "2014": 13274,
+   "2015": 16779,
+   "2016": 10872,
+   "2017": 8653,
+   "2018": 1940
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Toyota_Yaris",
+  "note": "the article's U.S. Yaris column (Toyota reported both body styles together), 2006-2018; 2019-2020 left out because the article gives one combined Yaris / Yaris iA figure",
+  "flags": [
+   "Toyota Yaris 2006: 70,308 sold, 1 complaints in window -> sales merged into 2007",
+   "Toyota Yaris 2011: 32,704 sold but only 3 complaints in window -> not scored",
+   "Toyota Yaris 2011: listed as a year page with no score (gap year)"
+  ],
+  "complaints": 888,
+  "scored": [
+   2007,
+   2008,
+   2009,
+   2010,
+   2012,
+   2013
+  ]
+ },
+ {
+  "slug": "chevrolet-express",
+  "sales": {
+   "2005": 128585,
+   "2006": 123195,
+   "2007": 114730,
+   "2008": 86986,
+   "2009": 54293,
+   "2010": 59753,
+   "2011": 71943,
+   "2012": 76628,
+   "2013": 79087,
+   "2014": 79352,
+   "2015": 63382,
+   "2016": 68007,
+   "2017": 69164,
+   "2018": 66963,
+   "2019": 77457,
+   "2020": 55040,
+   "2021": 44357,
+   "2022": 52796,
+   "2023": 40659,
+   "2024": 44221,
+   "2025": 58578
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/chevrolet-express-sales-figures/",
+  "note": "GoodCarBadCar annual U.S. sales",
+  "flags": [
+   "Chevrolet Express 2025: 58,578 sold, 0 complaints in window -> sales merged into 2024",
+   "Chevrolet Express 2019: 77,457 sold but only 1 complaints in window -> not scored",
+   "Chevrolet Express 2020: 55,040 sold but only 4 complaints in window -> not scored",
+   "Chevrolet Express 2022: 52,796 sold but only 3 complaints in window -> not scored",
+   "Chevrolet Express 2023: 40,659 sold but only 4 complaints in window -> not scored",
+   "Chevrolet Express 2024: 102,799 sold but only 3 complaints in window -> not scored",
+   "Chevrolet Express 2019: listed as a year page with no score (gap year)",
+   "Chevrolet Express 2020: listed as a year page with no score (gap year)"
+  ],
+  "complaints": 844,
+  "scored": [
+   2005,
+   2006,
+   2007,
+   2008,
+   2009,
+   2010,
+   2011,
+   2012,
+   2013,
+   2014,
+   2015,
+   2016,
+   2017,
+   2018,
+   2021
+  ]
+ },
+ {
+  "slug": "buick-encore",
+  "sales": {
+   "2013": 31956,
+   "2014": 48892,
+   "2015": 67549,
+   "2016": 78565,
+   "2017": 88035,
+   "2018": 93073,
+   "2019": 102402,
+   "2020": 41752,
+   "2021": 20072,
+   "2022": 13718,
+   "2023": 5887,
+   "2024": 126
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Buick_Encore",
+  "note": "col='United States'",
+  "flags": [
+   "Buick Encore 2023: 5,887 sold, 0 complaints in window -> sales merged into 2022",
+   "Buick Encore 2024: 126 sold, 0 complaints in window (no neighbour with complaints: dropped)",
+   "Buick Encore 2021: 20,072 sold but only 4 complaints in window -> not scored",
+   "Buick Encore 2021: listed as a year page with no score (gap year)"
+  ],
+  "complaints": 606,
+  "scored": [
+   2013,
+   2014,
+   2015,
+   2016,
+   2017,
+   2018,
+   2019,
+   2020
+  ]
+ },
+ {
+  "slug": "acura-tsx",
+  "sales": {
+   "2003": 18932,
+   "2004": 30365,
+   "2005": 34856,
+   "2006": 38035,
+   "2007": 33037,
+   "2008": 31998,
+   "2009": 28650,
+   "2010": 31950,
+   "2011": 27725,
+   "2012": 24631,
+   "2013": 15508,
+   "2014": 5647
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Acura_TSX",
+  "note": "Wikipedia U.S. sales table (col='US sales (sedan)'), citing the automaker's releases; sedan sales; the 2011-2014 Sport Wagon is left out of both sales and complaints",
+  "flags": [
+   "Acura TSX 2003: 18,932 sold, 0 complaints in window -> sales merged into 2004",
+   "Acura TSX 2011: 27,725 sold, 1 complaints in window -> sales merged into 2012",
+   "Acura TSX 2007: 33,037 sold but only 2 complaints in window -> not scored",
+   "Acura TSX 2007: listed as a year page with no score (gap year)"
+  ],
+  "complaints": 671,
+  "scored": [
+   2004,
+   2005,
+   2006,
+   2008,
+   2009,
+   2010,
+   2012
+  ]
+ },
+ {
+  "slug": "audi-a5",
+  "sales": {
+   "2007": 625,
+   "2008": 6282,
+   "2009": 9800,
+   "2010": 16379,
+   "2011": 15385,
+   "2012": 17270,
+   "2013": 18664,
+   "2014": 16640,
+   "2015": 12934,
+   "2016": 8354,
+   "2017": 21301,
+   "2018": 25972,
+   "2019": 23023,
+   "2020": 18827,
+   "2021": 17128,
+   "2022": 18349,
+   "2023": 23807,
+   "2024": 24636,
+   "2025": 16776
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/audi-a5-sales-figures/",
+  "note": "GoodCarBadCar U.S. calendar-year sales table; A5 coupe, cabriolet and Sportback",
+  "flags": [
+   "Audi A5 2007: 625 sold, 0 complaints in window (no neighbour with complaints: dropped)",
+   "Audi A5 2008: 6,282 sold, 0 complaints in window -> sales merged into 2009",
+   "Audi A5 2012: 17,270 sold, 0 complaints in window -> sales merged into 2013",
+   "Audi A5 2017: 21,301 sold but only 2 complaints in window -> not scored",
+   "Audi A5: 3 scorable model years / 29 complaints -> complaints only"
+  ],
+  "complaints": 379,
+  "scored": [
+   2013,
+   2018,
+   2019,
+   2023,
+   2024
+  ]
+ },
+ {
+  "slug": "chevrolet-astro",
+  "sales": {
+   "1999": 102427,
+   "2000": 92585,
+   "2001": 59395,
+   "2002": 50616,
+   "2003": 40123,
+   "2004": 34564,
+   "2005": 19215,
+   "2006": 386,
+   "2007": 25
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/chevrolet-astro-sales-figures/",
+  "note": "GoodCarBadCar U.S. calendar-year sales table",
+  "flags": [
+   "Chevrolet Astro 2006: 386 sold, 0 complaints in window -> sales merged into 2005",
+   "Chevrolet Astro 2007: 25 sold, 0 complaints in window (no neighbour with complaints: dropped)",
+   "Chevrolet Astro 2004: 34,564 sold but only 4 complaints in window -> not scored",
+   "Chevrolet Astro 2004: listed as a year page with no score (gap year)"
+  ],
+  "complaints": 419,
+  "scored": [
+   2000,
+   2001,
+   2002,
+   2003
+  ]
+ },
+ {
+  "slug": "ford-transit-connect",
+  "sales": {
+   "2009": 8834,
+   "2010": 27405,
+   "2011": 31914,
+   "2012": 37521,
+   "2013": 39703,
+   "2014": 43210,
+   "2015": 52221,
+   "2016": 43232,
+   "2017": 34473,
+   "2018": 31923,
+   "2019": 41598,
+   "2020": 34596,
+   "2021": 26112,
+   "2022": 25140,
+   "2023": 18050
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Ford_Transit_Connect",
+  "note": "Wikipedia U.S. sales table (col='U.S.'), citing the automaker's releases",
+  "flags": [
+   "Ford Transit Connect 2009: 8,834 sold, 0 complaints in window -> sales merged into 2010",
+   "Ford Transit Connect 2021: 26,112 sold but only 4 complaints in window -> not scored",
+   "Ford Transit Connect 2022: 25,140 sold but only 4 complaints in window -> not scored",
+   "Ford Transit Connect 2021: listed as a year page with no score (gap year)",
+   "Ford Transit Connect 2022: listed as a year page with no score (gap year)"
+  ],
+  "complaints": 576,
+  "scored": [
+   2010,
+   2011,
+   2012,
+   2013,
+   2014,
+   2015,
+   2016,
+   2017,
+   2018,
+   2019,
+   2020
+  ]
+ },
+ {
+  "slug": "infiniti-fx35",
+  "sales": {
+   "2003": 27637,
+   "2004": 30964,
+   "2005": 28786,
+   "2006": 22653,
+   "2007": 20723,
+   "2008": 12670,
+   "2009": 11024,
+   "2010": 10420,
+   "2011": 9939,
+   "2012": 10424,
+   "2013": 6380,
+   "2014": 5213,
+   "2015": 557
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/infiniti-fx-sales-figures/",
+  "note": "GoodCarBadCar U.S. calendar-year sales table; the whole FX line (FX35, FX45, FX37, FX50), as Infiniti reports it",
+  "flags": [
+   "Infiniti FX35 2014: 5,213 sold, 0 complaints in window -> sales merged into 2013",
+   "Infiniti FX35 2015: 557 sold, 0 complaints in window (no neighbour with complaints: dropped)",
+   "Infiniti FX35 2006: 22,653 sold but only 2 complaints in window -> not scored",
+   "Infiniti FX35 2006: listed as a year page with no score (gap year)"
+  ],
+  "complaints": 533,
+  "scored": [
+   2003,
+   2004,
+   2005,
+   2007
+  ]
+ },
+ {
+  "slug": "mercedes-benz-sprinter",
+  "sales": {
+   "2010": 8559,
+   "2011": 16577,
+   "2012": 20929,
+   "2013": 21816,
+   "2014": 25745,
+   "2015": 28519,
+   "2016": 28320,
+   "2017": 27415,
+   "2018": 29787,
+   "2019": 29757,
+   "2020": 37513,
+   "2021": 40534,
+   "2022": 46533,
+   "2023": 46229,
+   "2024": 43425,
+   "2025": 38460
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/mercedes-benz-sprinter-sales-figures/",
+  "note": "GoodCarBadCar U.S. calendar-year sales table; Mercedes-Benz-badged Sprinters from 2010 (earlier U.S. Sprinters were sold as Dodge and Freightliner)",
+  "flags": [
+   "Mercedes-Benz Sprinter 2012: 20,929 sold but only 2 complaints in window -> not scored",
+   "Mercedes-Benz Sprinter 2025: 38,460 sold but only 4 complaints in window -> not scored",
+   "Mercedes-Benz Sprinter 2012: listed as a year page with no score (gap year)"
+  ],
+  "complaints": 762,
+  "scored": [
+   2013,
+   2014,
+   2015,
+   2016,
+   2017,
+   2018,
+   2019,
+   2020,
+   2021,
+   2022,
+   2023,
+   2024
+  ]
+ },
+ {
+  "slug": "mitsubishi-outlander-sport",
+  "sales": {
+   "2010": 1690,
+   "2011": 16443,
+   "2012": 18091,
+   "2013": 24951,
+   "2014": 31054,
+   "2015": 36966,
+   "2016": 33067,
+   "2017": 33160,
+   "2018": 39153,
+   "2019": 33644,
+   "2020": 28836,
+   "2021": 34216,
+   "2022": 16373,
+   "2023": 15015,
+   "2024": 15125,
+   "2025": 20480
+  },
+  "kind": "calendar",
+  "url": "https://media.mitsubishicars.com/releases/mitsubishi-motors-reports-best-annual-sales-since-2007",
+  "note": "Mitsubishi Motors North America year-end releases (2017-2025); GoodCarBadCar U.S. table (2010-2016)",
+  "flags": [
+   "Mitsubishi Outlander Sport 2010: 1,690 sold, 0 complaints in window -> sales merged into 2011",
+   "Mitsubishi Outlander Sport 2025: 20,480 sold but only 1 complaints in window -> not scored"
+  ],
+  "complaints": 480,
+  "scored": [
+   2013,
+   2014,
+   2015,
+   2016,
+   2017,
+   2018,
+   2019,
+   2020,
+   2021
+  ]
+ },
+ {
+  "slug": "porsche-cayenne",
+  "sales": {
+   "2005": 13607,
+   "2006": 10569,
+   "2007": 12547,
+   "2008": 11216,
+   "2009": 7735,
+   "2010": 7793,
+   "2011": 12978,
+   "2012": 15545,
+   "2013": 18507,
+   "2014": 16205,
+   "2015": 16474,
+   "2016": 15383,
+   "2017": 13203,
+   "2018": 11106,
+   "2019": 19001,
+   "2020": 18092,
+   "2021": 21048,
+   "2022": 21194,
+   "2023": 20288,
+   "2024": 20808,
+   "2025": 17729
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/porsche-cayenne-sales-figures/",
+  "note": "GoodCarBadCar U.S. calendar-year sales table",
+  "flags": [
+   "Porsche Cayenne 2007: 12,547 sold, 0 complaints in window -> sales merged into 2008",
+   "Porsche Cayenne 2010: 7,793 sold, 0 complaints in window -> sales merged into 2011",
+   "Porsche Cayenne 2022: 21,194 sold, 0 complaints in window -> sales merged into 2023",
+   "Porsche Cayenne 2008: 23,763 sold but only 3 complaints in window -> not scored",
+   "Porsche Cayenne: 2 scorable model years / 16 complaints -> complaints only"
+  ],
+  "complaints": 669,
+  "scored": [
+   2011,
+   2021,
+   2023,
+   2024
+  ]
+ },
+ {
+  "slug": "scion-tc",
+  "sales": {
+   "2004": 28062,
+   "2005": 74415,
+   "2006": 79125,
+   "2007": 63852,
+   "2008": 40980,
+   "2009": 17998,
+   "2010": 15204,
+   "2011": 22433,
+   "2012": 22666,
+   "2013": 19094,
+   "2014": 17947,
+   "2015": 16459,
+   "2016": 9336
+  },
+  "kind": "calendar",
+  "url": "https://en.wikipedia.org/wiki/Scion_tC",
+  "note": "Wikipedia U.S. sales table (col='US Sales'), citing the automaker's releases",
+  "flags": [
+   "Scion tC 2004: 28,062 sold, 0 complaints in window -> sales merged into 2005",
+   "Scion tC 2012: 22,666 sold but only 4 complaints in window -> not scored",
+   "Scion tC 2012: listed as a year page with no score (gap year)"
+  ],
+  "complaints": 693,
+  "scored": [
+   2005,
+   2006,
+   2007,
+   2008,
+   2011
+  ]
+ },
+ {
+  "slug": "land-rover-range-rover-sport",
+  "sales": {
+   "2005": 10441,
+   "2006": 18757,
+   "2007": 16989,
+   "2008": 8340,
+   "2009": 9269,
+   "2010": 12347,
+   "2011": 15375,
+   "2012": 16491,
+   "2013": 15976,
+   "2014": 17897,
+   "2015": 21459,
+   "2016": 21612,
+   "2017": 19153,
+   "2018": 24282,
+   "2019": 25768,
+   "2020": 20053,
+   "2021": 21341
+  },
+  "kind": "calendar",
+  "url": "https://www.goodcarbadcar.net/land-rover-range-rover-sport-sales/",
+  "note": "GoodCarBadCar U.S. calendar-year sales table; 2022+ left out: JLR stopped publishing U.S. sales by model and the published tables disagree",
+  "flags": [
+   "Land Rover Range Rover Sport 2005: 10,441 sold, 0 complaints in window -> sales merged into 2006",
+   "Land Rover Range Rover Sport 2009: 9,269 sold, 0 complaints in window -> sales merged into 2010",
+   "Land Rover Range Rover Sport 2021: 21,341 sold but only 3 complaints in window -> not scored"
+  ],
+  "complaints": 656,
+  "scored": [
+   2006,
+   2010,
+   2015,
+   2016,
+   2018,
+   2019,
+   2020
   ]
  }
 ]
