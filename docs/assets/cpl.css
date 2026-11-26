@@ -1,6 +1,6 @@
 /* 11-18 (Elijah: "compact this into a few little compact boxes ... like the recall one"): the notes under the year chart became small
    tap-to-open boxes (build.py CHART_PILLS): older years, how to read the chart, how the YouTube ranks work, embed. Prefix cpl-. */
-.cpl { display: grid; gap: 8px; margin: 14px 0 0; max-width: 640px; }
+.cpl { display: grid; gap: 8px; box-sizing: border-box; width: 100%; margin: 14px auto 0; max-width: 760px; }   /* 11-25: centered, the 760 px column every box stack shares (was 640 px on the left) */
 .cpl > details { background: #f5f5f7; border-radius: 18px; margin: 0; }
 .cpl > details > summary, .cpl > details.yrs-more > summary, .cpl > details.emx > summary {
   display: flex; align-items: center; gap: 12px; list-style: none; cursor: pointer; margin: 0; padding: 8px 16px 8px 10px; min-height: 60px; box-sizing: border-box;
@@ -698,3 +698,20 @@ main > .pg > section.ph:first-child > .ph-e:first-child, main > .pg > .v5-h:firs
 .k5-note a { color: var(--ink); font-weight: 600; }
 /* 11-20: an EV with a main /cars/ page leads with that Lemon Index; its EV ranking score is this one labelled line */
 .ev-2nd { display: block; margin-top: 10px; font-size: 15px; line-height: 1.45; color: var(--mute); }
+/* 11-25 (Elijah on /best/cheapest-500-hp-cars/: "At a glance" and the bottom boxes looked off-center, at different widths): every stack of
+   boxes is one centered column, the same 760 px as the end-of-page boxes (agrp.css) and the support card. Cause: the base .cpl rule at the
+   top of this file was max-width 640 px with margin 0, so any box list without its own width sat on the left (/best/ "At a glance",
+   the compare pages' rows), while the /best/ Quick answers ran the full 1088 px. */
+.cbx5 .cbx5-g { margin: 0 auto 14px; }
+.cbx5 > .v5-pl { max-width: 760px; margin: 30px auto 0; }
+main .cb5 .cb-pills { margin-left: auto; margin-right: auto; }   /* compare pages (their inline style set margin 26px 0 8px) */
+main .cb5 .cb-pills + p.note { max-width: 760px; margin-left: auto; margin-right: auto; text-align: center; }   /* their "Everything on the ..." links under the rows */
+/* phones and tablets: .advp pages (/best/, /budget/, about, press, images) padded their content 16 px more than the end boxes and the support
+   card under them (311 vs 343 px at 375, 704 vs 736 at 768): one gutter for both (from 900 px the column is centered anyway) */
+@media (max-width: 899px) { main > .advp { padding-left: 0; padding-right: 0; } }
+@media (max-width: 720px) { main > .advp .bud-row:not(.bud-segs) { margin: 0 -16px; padding: 0 16px; scroll-padding: 0 16px; } }   /* /budget/ type pills: still edge to edge (budget.css bled 32 px) */
+/* pages whose rows run the full 1120 px (data, symptom, engine-code, repair-cost pages; agrp.css widens their end boxes): the support card too */
+main:has(> .pg > article.cp5:not(.eng5)) > .supc.supc3 { max-width: 1120px; }
+/* 11-25 centering pass 2: the year-problem bar charts (.pts, 640px) sat left in the 760px column, and the insurance column (.ins, 680px + its own 16px gutter) was narrower than the end boxes. Both now fill the same column as .pend / .supc. */
+main .pts { max-width: 760px; }
+main > .ins { max-width: 760px; padding-left: 0; padding-right: 0; }

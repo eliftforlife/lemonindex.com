@@ -1,0 +1,106 @@
+/* 11-25 year page top v2 (year_ux.py, Elijah's go-live review). Loaded by the year page hero only. */
+
+/* title: no arrows, the name big, one small keyword line (same H1) */
+.tbl .tb-hero.yux .yct { display: block; margin: 6px auto 0; }
+.tbl .tb-hero.yux .yct-h1 { text-align: center; }
+.tbl .tb-hero.yux .yct-h1 .yct-sw { font-size: clamp(15px, 4.2vw, 19px); font-weight: 600; letter-spacing: 0; color: var(--mute, #6e6e73); margin-top: .5em; line-height: 1.3; }
+/* phones: heart + share under the title, not beside it (saved.js draws them inside .yct-big) */
+@media (max-width: 699px) {
+  .tbl .tb-hero.yux .yct-h1 { display: flex; flex-direction: column; align-items: center; }
+  .tbl .tb-hero.yux .yct-h1 .yct-big { display: contents; }
+  .tbl .tb-hero.yux .yct-h1 .yct-sw { order: 1; }
+  .tbl .tb-hero.yux .yct-h1 .lsv-ta { order: 2; margin: 16px 0 0; top: 0; gap: 12px; }
+}
+
+/* the score: one bar (same as the model page), the number, the band word, the source sheet */
+.yux-score { width: 100%; max-width: 680px; margin: 26px auto 0; text-align: center; }
+.yux-score .mh-bar { margin: 0; }
+.mh-track { position: relative; display: flex; gap: 3px; height: 16px; margin: 22px 0 0; }
+.mh-track i { display: block; height: 100%; }
+.mh-g { flex: 0 0 calc(42.5% - 2px); background: #1a8f4c; border-radius: 8px 0 0 8px; }
+.mh-m { flex: 0 0 calc(15% - 2px); background: #c9ccd1; }
+.mh-r { flex: 1 1 auto; background: #e8141c; border-radius: 0 8px 8px 0; }
+.mh-pin { position: absolute; top: -14px; bottom: -14px; left: 0; width: 5px; margin-left: -2.5px; border-radius: 3px; background: #1d1d1f;
+  box-shadow: 0 0 0 2.5px #fff; transition: left 1.2s cubic-bezier(.25, 1.25, .45, 1); }
+.mh-pin::before { content: ""; position: absolute; left: 50%; top: -9px; width: 16px; height: 16px; margin-left: -8px; border-radius: 50%;
+  background: #ffd400; border: 4px solid #1d1d1f; box-sizing: border-box; }
+.mh-bar.in .mh-pin { left: var(--p); }
+@media (prefers-reduced-motion: reduce) { .mh-pin { transition: none; } }
+.mh-labs { position: relative; height: 20px; margin-top: 16px; font: 700 15px/1 var(--sys, Inter, sans-serif); }
+.mh-labs span { position: absolute; top: 0; white-space: nowrap; }
+.mh-good { left: 0; color: #1a8f4c; }
+.mh-avg { left: 50%; transform: translateX(-50%); color: #6e6e73; }
+.mh-bad { right: 0; color: #d0121a; }
+.yux-score .mh-bar figcaption { margin-top: 14px; text-align: center; }
+.yux-score .mh-bar figcaption b { display: block; font: 800 clamp(60px, 17vw, 80px)/.95 var(--sys, Archivo, Inter, sans-serif); letter-spacing: -.04em;
+  font-variant-numeric: tabular-nums; color: var(--ink); }
+.yux-score .mh-bar.good figcaption b { color: var(--good); }
+.yux-score .mh-bar.bad figcaption b { color: var(--red); }
+.yux-vd { display: block; margin-top: 8px; font-size: 21px; font-weight: 700; letter-spacing: -.01em; color: var(--ink); }
+.yux-vd.good { color: var(--good); } .yux-vd.bad { color: var(--red); }
+.yux-part { display: block; margin-top: 8px; font-size: 16px; font-weight: 600; color: #a15c00; }
+
+/* "See where the score comes from": a small pill; opens a bottom sheet on phones, a popover on wide screens */
+.yux-src { position: relative; display: inline-block; margin: 14px auto 0; text-align: left; }
+.yux-score.yux-na { margin-top: 18px; }
+.yux-src > summary { display: inline-flex; align-items: center; gap: 7px; height: 36px; padding: 0 14px 0 11px; border-radius: 999px; background: #f2f2f5;
+  color: #3a3a3e; font-size: 14.5px; font-weight: 600; cursor: pointer; list-style: none; -webkit-user-select: none; user-select: none; }
+.yux-src > summary::-webkit-details-marker { display: none; }
+.yux-src > summary:hover { background: #e8e8ed; }
+.yux-src > summary:focus-visible { outline: 3px solid var(--lemon, #ffd400); outline-offset: 2px; }
+.yux-src > summary svg { width: 18px; height: 18px; color: #6e6e73; }
+.yux-src[open] > summary::before { content: ""; position: fixed; inset: 0; z-index: 1000; background: rgba(0, 0, 0, .32); cursor: default; }
+.yux-sheet { position: fixed; z-index: 1001; left: 0; right: 0; bottom: 0; max-height: 80vh; overflow: auto; padding: 18px 20px calc(22px + env(safe-area-inset-bottom));
+  background: #fff; border-radius: 22px 22px 0 0; box-shadow: 0 -10px 40px rgba(0, 0, 0, .18); color: var(--ink); font-size: 16px; line-height: 1.45; }
+.yux-sh-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 6px; }
+.yux-sh-h { margin: 0; font-size: 18px; font-weight: 700; letter-spacing: -.01em; }
+.yux-x { appearance: none; border: 0; background: #f2f2f5; color: var(--ink); font: inherit; font-size: 15px; font-weight: 600; height: 36px; padding: 0 16px; border-radius: 999px; cursor: pointer; }
+.yux-sh-l { margin: 6px 0 0; padding: 0; list-style: none; }
+.yux-sh-l li { padding: 11px 0; border-top: 1px solid #ececf0; color: #3a3a3e; }
+.yux-sh-l li:first-child { border-top: 0; }
+.yux-sh-l b { color: var(--ink); }
+.yux-sh-m { margin: 6px 0 0; padding-top: 12px; border-top: 1px solid #ececf0; }
+.yux-sh-m a { font-weight: 600; color: var(--ink); }
+@media (min-width: 700px) {
+  .yux-src[open] > summary::before { background: transparent; }
+  .yux-sheet { position: absolute; left: 50%; right: auto; bottom: auto; top: calc(100% + 10px); width: 400px; transform: translateX(-50%); max-height: none;
+    border-radius: 18px; padding: 16px 20px 18px; box-shadow: 0 18px 50px rgba(0, 0, 0, .18), 0 0 0 1px rgba(0, 0, 0, .05); }
+}
+
+/* "All 26 years" + "Compare": two equal buttons filling the row, every screen size */
+.tbl .tb-hero.yux .yux-btns { display: grid !important; grid-template-columns: 1fr 1fr; gap: 10px; width: 100%; max-width: 680px; margin: 24px auto 0 !important; }
+.yux-btns a { display: flex; align-items: center; justify-content: center; gap: 8px; height: 48px; border-radius: 999px; border: 1px solid #d2d2d7; background: #fff;
+  color: var(--ink); font-size: 16px; font-weight: 600; text-decoration: none; }
+.yux-btns a:hover { background: #f5f5f7; } .yux-btns a:focus-visible { outline: 3px solid var(--lemon, #ffd400); outline-offset: 2px; }
+.yux-btns svg { color: #6e6e73; }
+
+/* entry cards (CHECKLIST_ON): first in the Overview panel, above the boxes */
+.yp6.tbl .tb-p > .yux-entry, .tbl .yux-entry { display: grid; gap: 10px; width: 100%; max-width: 760px !important; margin-left: auto !important; margin-right: auto !important; box-sizing: border-box; }
+.yux-card { display: flex; align-items: center; gap: 14px; min-height: 76px; padding: 14px 16px; border-radius: 20px; border: 1.5px solid #e5e5ea; background: #fff;
+  color: var(--ink); text-decoration: none; box-sizing: border-box; }
+.yux-card:hover { border-color: #c7c7cc; } .yux-card:focus-visible { outline: 3px solid var(--lemon, #ffd400); outline-offset: 2px; }
+.yux-ci { flex: none; display: grid; place-items: center; width: 48px; height: 48px; border-radius: 14px; background: #ffd400; color: #1d1d1f; }
+.yux-ct { flex: 1 1 auto; min-width: 0; }
+.yux-ct b { display: block; font-size: 19px; font-weight: 700; letter-spacing: -.015em; line-height: 1.2; }
+.yux-ct small { display: block; margin-top: 4px; font-size: 14.5px; line-height: 1.35; color: #6e6e73; }
+.yux-go { flex: none; display: grid; color: #1d1d1f; }
+.yux-card.yux-dark { background: #111; border-color: #111; color: #fff; }
+.yux-card.yux-dark small { color: #c7c7cc; } .yux-card.yux-dark .yux-go { color: #ffd400; }
+.yux-card.yux-dark:hover { background: #000; }
+@media (max-width: 699px) {
+  .yux-card { gap: 12px; padding: 14px 14px; }
+  .yux-ci { width: 44px; height: 44px; border-radius: 13px; }
+  .yux-ct b { font-size: 17.5px; }
+  .yux-ct small { font-size: 14px; }
+}
+/* the Overview panel's own gap separates the cards from the box list */
+
+/* "Better years to buy": the bottom of the page */
+.yux-bys { width: 100%; max-width: 760px; margin: 28px auto 40px; padding: 0 4px; box-sizing: border-box; }
+.yux-bys .n2-by { max-width: none; margin: 0 !important; gap: 10px; }
+.yux-bys .n2-by-h { font-size: 20px; font-weight: 700; letter-spacing: -.01em; color: var(--ink); }
+.yux-bys .n2-by-r { flex-wrap: wrap; gap: 8px 12px; }
+.yux-bys .n2-by-l { flex: 0 0 100%; font-size: 14px; font-weight: 600; }
+.yux-bys .n2-by-cs { flex-wrap: wrap; gap: 8px; }
+.yux-bys .n2-c { padding: 9px 14px; font-size: 16px; }
+.yux-bys .n2-c span { font-size: 14px; }
