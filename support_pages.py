@@ -74,7 +74,7 @@ _SUPPORT = (_SP_CSS + '<div class="pg spg">' + _sp_hero('Where your money goes.'
         ('data', 'Pays for data and hosting', 'Images, prices, servers'),
         ('next', 'Builds what’s next', 'New cars, bikes and countries', '/coming-soon/'),
     ])
-    + '<div class="spg-btns"><button class="btn supl" type="button">Chip in</button><a class="btn ghost" href="/coming-soon/">See what’s coming</a></div>'
+    + '<div class="spg-btns"><button class="btn supl" type="button">Donate</button><a class="btn ghost" href="/coming-soon/">See what’s coming</a></div>'
     + '<p class="spg-note">Payments by Stripe. Not tax-deductible. Full refund within 14 days, unless your shout-out has already been posted.</p></div>')
 
 _COMING = (_SP_CSS + '<div class="pg spg">' + _sp_hero('What’s coming to Lemon.', 'Everything we’re building next. Donations decide how fast.')

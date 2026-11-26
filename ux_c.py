@@ -58,9 +58,11 @@ if UXC == 'hooks':
         else: what = (f'{len(rs)} recall{"s" if len(rs) != 1 else ""} on the high-voltage battery of the {y} {E(ver)} mention{"" if len(rs) != 1 else "s"} a fire risk. '
                       'Gas-only versions have no high-voltage battery, so this doesn&#39;t apply to them. The repair is free at any dealer if it&#39;s still open on the car.')
         ids = ' · '.join(f'<a href="https://www.nhtsa.gov/recalls?nhtsaId={E(r["id"])}" rel="noopener nofollow" target="_blank">{E(r["id"])}</a>' for r in rs)
-        return (f'<div class="pinb" role="note"><p class="pinb-h"><b>{head}</b></p><p class="pinb-t">{what}</p>'
-                f'<p class="pinb-l">NHTSA recall{"s" if len(rs) != 1 else ""}: {ids}</p><p class="pinb-a"><a class="btn" href="/vin/">Check a VIN</a> '
-                f'<a href="https://www.nhtsa.gov/recalls" rel="noopener nofollow" target="_blank">NHTSA recall lookup</a></p></div>')
+        # 11-26 (Elijah: no big alert boxes on the site or in videos): one short line under the score, the rest opens on tap (same as hd_pages HD_ALERT)
+        short = ('Battery fire recall: check yours by VIN' if ev else f'{E(tl or "Hybrid")} only: battery fire recall' if tr and not tr.startswith('F-150') else E(head))
+        return (f'<details class="pinb hda hda-r" role="note"><summary><span class="hda-i" aria-hidden="true">!</span><span class="hda-t">{short}</span><span class="hda-m">Details</span></summary>'
+                f'<div class="hda-b"><p><b>{head}</b></p><p>{what}</p><p>NHTSA recall{"s" if len(rs) != 1 else ""}: {ids}</p><p class="hda-a"><a class="btn" href="/vin/">Check a VIN</a> '
+                f'<a href="https://www.nhtsa.gov/recalls" rel="noopener nofollow" target="_blank">NHTSA recall lookup</a></p></div></details>')
 
     # ---- RAV4 Hybrid (Dan: "rav4 hybrid" -> "No match"; the 2021 page showed one "2.5L 4-cyl" at 28-40 mpg): EPA splits the versions,
     # NHTSA doesn't, and the section says so

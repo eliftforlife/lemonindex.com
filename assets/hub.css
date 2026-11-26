@@ -1,0 +1,78 @@
+/* 11-26 model page hub (hub_cards.py): big cards + 4 small black-icon buttons. Mock-up: Tacoma, approved by Elijah 11-26. */
+.mhb { width: 100%; max-width: 760px; margin: 30px auto 0; box-sizing: border-box; min-width: 0; }
+.mhb .mhb-h { margin: 0 0 14px; padding: 0; border: 0; font-size: 26px; font-weight: 800; letter-spacing: -.02em; line-height: 1.15; color: #1d1d1f; text-align: left; }
+.mhb .mhb-h::before, .mhb .mhb-h::after { content: none; }
+.mhb-g { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; }
+.mhb .mhb-i { min-width: 0; margin: 0; padding: 0; }
+.mhb .mhb-p > section { padding-top: 0; padding-bottom: 0; }
+.mhb .mhb-i > .cpl { margin: 0; max-width: none; width: 100%; }
+/* the card face (an <a> or a <summary>) */
+.mhb .mhc, .mhb .cpl > details > summary.mhc { display: flex; align-items: center; gap: 10px; box-sizing: border-box; width: 100%; min-height: 112px; padding: 0 0 0 20px;
+  border-radius: 22px; background: #f5f5f7; color: #1d1d1f; text-decoration: none; overflow: hidden; cursor: pointer; list-style: none; }
+.mhb .cpl > details.mhx { background: #f5f5f7; border-radius: 22px; box-shadow: none; }
+.mhb .cpl > details > summary.mhc::-webkit-details-marker { display: none; }
+.mhb .mhc:hover, .mhb .cpl > details > summary.mhc:hover { background: #ececf0; }
+.mhb .mhc:focus-visible, .mhb .cpl > details > summary.mhc:focus-visible { outline: 3px solid var(--lemon, #ffd400); outline-offset: 2px; }
+.mhb .mhc .mhc-t, .mhb .cpl summary.mhc .mhc-t { flex: 1; min-width: 0; display: grid; gap: 4px; padding: 14px 0; }
+.mhb .mhc .mhc-h, .mhb .cpl summary.mhc .mhc-h { margin: 0; padding: 0; border: 0; font-size: 21px; font-weight: 800; letter-spacing: -.02em; line-height: 1.15; color: inherit; text-align: left; }
+.mhb .mhc .mhc-h::before, .mhb .mhc .mhc-h::after { content: none; }
+.mhb .mhc small, .mhb .cpl summary.mhc small { font-size: 13.5px; line-height: 1.35; color: #6e6e73; }
+.mhb .mhc .mhc-p, .mhb .cpl summary.mhc .mhc-p { flex: none; display: flex; align-items: center; justify-content: center; width: 38%; max-width: 170px; align-self: stretch; }
+.mhb .mhc .mhc-p img, .mhb .cpl summary.mhc .mhc-p img { display: block; width: 100%; height: 100px; object-fit: contain; margin: 0; }
+.mhb .mhc .mhc-p.mhc-ic img, .mhb .cpl summary.mhc .mhc-p.mhc-ic img { width: 76px; height: 76px; }
+.mhb .mhc-d { min-height: 124px; background: #1d1d1f; color: #fff; }
+.mhb .mhc-d:hover { background: #2c2c2e; }
+.mhb .mhc-d .mhc-h { color: #ffd400; }
+.mhb .mhc-d small { color: #c7c7cc; }
+.mhb .mhc-d .mhc-p img { height: 112px; }
+/* open card: the body under the face, full width on desktop */
+.mhb details.mhx[open] > summary.mhc { border-radius: 22px 22px 0 0; }
+.mhb .mhx > .cpl-b { margin: 0 8px 8px; }
+.mhb-lab { margin: 4px 0 8px; font-size: 15px; font-weight: 700; color: #1d1d1f; }
+.mhb-lab ~ .mhb-lab { margin-top: 18px; }
+.mhb-cap { margin: 0 0 10px; font-size: 13.5px; line-height: 1.45; color: #6e6e73; }
+.mhb-prs { display: grid; grid-template-columns: minmax(0, 1fr); }
+.mhb-pr { display: grid; grid-template-columns: 52px minmax(0, 1fr) auto; align-items: baseline; gap: 10px; padding: 11px 2px; border-bottom: 1px solid #ececf0; color: #1d1d1f; text-decoration: none; }
+.mhb-pr:hover { background: #f5f5f7; }
+.mhb-pr b { font-weight: 800; }
+.mhb-pr span { font-size: 13.5px; color: #6e6e73; }
+.mhb-pr em { font-style: normal; font-weight: 800; font-size: 17px; font-variant-numeric: tabular-nums; }
+.mhb-er { grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "n y" "f y"; row-gap: 2px; }
+.mhb-er:hover { background: none; }
+.mhb-er b { grid-area: n; } .mhb-er span { grid-area: f; } .mhb-er em { grid-area: y; font-size: 15px; text-align: right; }
+.mhb-more { margin: 6px 0 10px; }
+.mhb-more > summary { cursor: pointer; padding: 8px 2px; font-weight: 700; font-size: 14.5px; list-style: none; }
+.mhb-more > summary::-webkit-details-marker { display: none; }
+.mhb-more > summary::after { content: ' ›'; }
+.mhb-more[open] > summary::after { content: ''; }
+.mhb-bt { display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px; margin-top: 12px; }
+.mhb-bt a { display: flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 14px; border-radius: 14px; background: #1d1d1f; color: #fff;
+  font-weight: 700; font-size: 15px; text-decoration: none; text-align: center; }
+.mhb-bt a + a { background: #f5f5f7; color: #1d1d1f; }
+.mhb-bt a:hover { opacity: .9; }
+.mhb .mhb-pb .n3-row { margin: 0; max-width: none; }
+.mhb .mhb-years .bw3 { margin: 0; }
+/* the 4 small buttons */
+.mhb-sm { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 10px; }
+.mhb-b { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 0 10px; border-radius: 14px; background: #f5f5f7;
+  color: #1d1d1f; font-weight: 700; font-size: 15px; text-decoration: none; text-align: center; }
+.mhb-b svg { flex: none; color: #1d1d1f; }
+.mhb-b:hover { background: #ececf0; }
+.mhb-b:focus-visible { outline: 3px solid var(--lemon, #ffd400); outline-offset: 2px; }
+.mhb-b[aria-expanded="true"] { background: #1d1d1f; color: #fff; }
+.mhb-b[aria-expanded="true"] svg { color: #fff; }
+.mhb .mhb-p { display: none; margin: 10px 0 0; padding: 8px 0 0; max-width: none; border-radius: 22px; background: #f5f5f7; }
+.mhb .mhb-p.on { display: block; }
+.mhb .mhb-p > section { margin: 0; }
+.mhb .mhb-p > section > .cpl { margin: 0; max-width: none; }
+.mhb .mhb-p .rla-sec, .mhb .mhb-p .opn { padding: 4px 8px 8px; }
+@media (min-width: 700px) {
+  .mhb-g { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-auto-flow: row dense; }
+  .mhb-g > .mhb-d, .mhb-g > .mhb-i:has(details[open]) { grid-column: 1 / -1; }
+  .mhb-sm { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .mhb-bt { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 380px) {
+  .mhb .mhc .mhc-h, .mhb .cpl summary.mhc .mhc-h { font-size: 19px; }
+  .mhb .mhc, .mhb .cpl > details > summary.mhc { padding-left: 16px; }
+}

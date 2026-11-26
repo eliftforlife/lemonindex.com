@@ -9,7 +9,7 @@ STORE_API = os.environ.get('LEMON_STORE_API', 'https://lemon-store.elift08.worke
 TURNSTILE_KEY = os.environ.get('LEMON_TURNSTILE_SITEKEY', '')     # set together with the Worker's TURNSTILE_ON = "1"
 if not re.fullmatch(r'https://[a-z0-9-]+\.elift08\.workers\.dev|https://api\.lemonindex\.com|http://(127\.0\.0\.1|localhost):\d{2,5}', STORE_API):
     raise SystemExit('LEMON_STORE_API must be the lemon-store Worker (https://*.elift08.workers.dev) or a local wrangler dev address')
-CL_V = '1126b'
+CL_V = '1126d'
 
 
 def _cl_doc(path, title, desc, cfg, noscript):
@@ -49,15 +49,32 @@ def CL_PAGES():
               f'and your offer price at the end. Your first checklist is free.</p><ul class="note">{per}</ul><p class="note">This page needs JavaScript.</p></div>')
         _cl_doc(f'/checklist/{g}/', f"{t['name']} {yrs} Before-You-Buy Checklist", f"Step-by-step used {t['name']} checks for {yrs}, built from this generation's own known problems, with your offer price at the end.",
                 {'page': 'checklist', 'api': STORE_API, 'gen': g, 'teaser': tz, 'turnstile': TURNSTILE_KEY or None, 'contact': CONTACT}, ns)
-    # the list of every checklist (plain HTML, no script needed)
-    by = {}
-    for g, t in T.items(): by.setdefault(t['brand'] or 'Other', []).append((t['short'], t['years'], g))
-    rows = ''.join(f'<p class="sec">{E(b)}</p>' + ''.join(f'<a class="hk-c mini" href="/checklist/{g}/"><span class="hk-t"><b>{E(s)} {y[0]}–{y[1]}</b><small>Checklist</small></span>'
-                   f'<span class="hk-p"><img src="{titles[g][1]}" alt="" loading="lazy"></span></a>' for s, y, g in sorted(v)) for b, v in sorted(by.items()))
+    # the store: every checklist (plain HTML, no script needed; the page's CSP allows none).
+    # 11-26 (Elijah: "just say BMW 3 Series without the years ... when they click in it, they can select the year ... more like a fun store,
+    # splashes of yellow, bigger title"): one card per MODEL (its picture, no years); tapping it opens a "Choose your year" drop-down
+    # (<details>, so no script) of year buttons, newest first. Each year opens its generation's checklist with ?y= so the year is already picked.
+    by, mods = {}, {}
+    for g, t in T.items():
+        m = mods.setdefault(t['model'], {'name': t['name'], 'brand': t['brand'] or 'Other', 'ys': {}, 'img': None})
+        for y in range(t['years'][0], t['years'][1] + 1): m['ys'][y] = g
+    for k, m in mods.items():
+        m['img'] = f"/assets/ai-models/{k}.webp" if os.path.exists(f"assets/ai-models/{k}.webp") else titles[max(set(m['ys'].values()), key=lambda g: T[g]['years'][1])][1]
+        by.setdefault(m['brand'], []).append(k)
+    _bid = lambda b: 'b-' + re.sub(r'[^a-z0-9]+', '-', b.lower()).strip('-')
+    ic_ch = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>'
+    def _card(k):
+        m = mods[k]
+        yrs = ''.join(f'<a class="sx-y" href="/checklist/{g}/?y={y}">{y}</a>' for y, g in sorted(m['ys'].items(), reverse=True))
+        return (f'<details class="sx"><summary><span class="sx-t"><b>{E(m["name"])}</b><span class="sx-go">Choose your year {ic_ch}</span></span>'
+                f'<span class="sx-p"><img src="{m["img"]}" alt="" loading="lazy" decoding="async"></span></summary><div class="sx-ys">{yrs}</div></details>')
+    bs = sorted(by)
+    rows = ''.join(f'<h2 class="sx-b" id="{_bid(b)}">{E(b)}</h2><div class="sx-g">' + ''.join(_card(k) for k in sorted(by[b], key=lambda k: mods[k]['name'])) + '</div>' for b in bs)
+    jump = '<nav class="sx-j" aria-label="Brands">' + ''.join(f'<a href="#{_bid(b)}">{E(b)}</a>' for b in bs) + '</nav>'
     idx = (f'<div class="nav"><a class="lg" href="/">The Lemon Index</a><span class="sp"></span><a class="nl" href="/account/">My checklists</a></div>'
-           f'<div class="acc" style="padding:8px 20px 40px;max-width:640px;margin:0 auto"><h1>Before-you-buy checklists</h1>'
-           f'<p class="s">Step by step at the car, built from each generation’s own known problems, with your offer price at the end. First checklist free; '
-           f'$7.99 for one car, or $19.99 for every car and truck checklist (ones we add later too).</p>{rows}</div>')
+           # 11-26 (Elijah): no prices, no "first checklist free" up here (both show once a car is picked), one short line under the title
+           f'<main class="sx-w"><header class="sx-h"><h1>Know what to check <span>before you buy.</span></h1>'
+           f'<p class="sx-s">A step-by-step checklist built from your model’s own problems.</p></header>'
+           f'{jump}{rows}</main>')
     os.makedirs(f'{OUT}/checklist', exist_ok=True)
     open(f'{OUT}/checklist/index.html', 'w', encoding='utf-8').write(
         f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Used Car Checklists: Before You Buy | The Lemon Index</title>

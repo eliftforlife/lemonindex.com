@@ -2040,3 +2040,35 @@ header.gh { view-transition-name: gh; }
   .mc, .spi, .hk-c, .eg, .xcd, .btn, .supl { transition: none !important; transform: none !important; }
   .info-box:not([hidden]) { animation: none; }
 }
+
+/* 11-26 the reminder bar: one short line + Donate (was a two-line card) */
+.nud.nud2 { width: auto; max-width: 94vw; gap: 8px; padding: 6px 6px 6px 16px; }
+.nud.nud2 p { flex: none; font-size: 14px; font-weight: 500; white-space: nowrap; }
+.nud.nud2 .nud-go { padding: 7px 14px; font-size: 14px; }
+.nud.nud2 .nud-x { width: 30px; height: 30px; font-size: 18px; }
+
+/* 11-26 the heavy-duty note on the F-Series / Ram / Silverado / Sierra pages: one small line under the score (was a big yellow box above it) */
+.pinb.hda { max-width: 560px; margin: 12px auto 4px; padding: 0; text-align: left; border: 0; border-radius: 12px; background: #f5f5f7; }
+.hda summary { display: flex; align-items: center; gap: 8px; min-height: 40px; padding: 6px 12px; cursor: pointer; list-style: none; font-size: 13.5px; color: var(--ink2); }
+.hda summary::-webkit-details-marker { display: none; }
+.hda-i { flex: none; display: grid; place-items: center; width: 18px; height: 18px; border-radius: 50%; background: var(--lemon); color: var(--ink); font-size: 12px; font-weight: 800; }
+.hda-t { flex: 1; min-width: 0; font-weight: 600; color: var(--ink); }
+.hda-m { flex: none; font-size: 13px; font-weight: 600; color: var(--ink2); text-decoration: underline; text-underline-offset: 2px; }
+.hda[open] .hda-m { display: none; }
+.hda-b { padding: 0 14px 12px 38px; }
+.hda-b p { margin: 0 0 6px; font-size: 13.5px; line-height: 1.45; color: var(--ink2); }
+.hda-b a { color: var(--ink); font-weight: 600; }
+.hda-a { margin-top: 8px !important; }.hda-a .btn { min-height: 40px; display: inline-flex; align-items: center; font-size: 14px; }
+.hda-r .hda-i { background: var(--red); color: #fff; }
+.hda-a { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; }
+
+/* 11-26 an unscored year page: the YouTube owner score is the number at the top (build.py YT_HERO) */
+.ytx { max-width: 560px; margin: 6px auto 10px; padding: 14px 16px 12px; border-radius: 16px; background: #f5f5f7; text-align: left; }
+.ytx-top { display: flex; align-items: center; gap: 12px; }
+.ytx-top b { font-size: 44px; line-height: 1; font-weight: 800; letter-spacing: -.03em; color: var(--ink); font-variant-numeric: tabular-nums; }
+.ytx-top span { display: flex; flex-direction: column; font-size: 16px; font-weight: 700; color: var(--ink); }
+.ytx-top small { font-size: 13.5px; font-weight: 500; color: var(--ink2); }
+.ytx-tr { height: 8px; margin: 12px 0 8px; border-radius: 99px; background: #e3e3e8; overflow: hidden; }
+.ytx-tr i { display: block; height: 100%; border-radius: 99px; background: #8e8e93; }
+.ytx.up .ytx-tr i { background: var(--good, #1f9d55); } .ytx.dn .ytx-tr i { background: var(--red, #d33); }
+.ytx figcaption { font-size: 13.5px; line-height: 1.4; color: var(--ink2); }

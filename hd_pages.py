@@ -58,11 +58,13 @@ if HDX == 'hooks':
         hu = HDU(m['hd'], y) if _hd_has(m['hd'], y) else HDU(m['hd']) if _hd_has(m['hd']) else ''
         hl = (f'<a class="btn" href="{hu}">{y} {E(m["hdshort"])} by engine</a>' if hu and y and _hd_has(m['hd'], y) else f'<a class="btn" href="{hu}">{E(m["hdshort"])} by year and engine</a>' if hu else '')
         el = _hd_eng_links(m)
-        f150 = (f'<p class="pinb-l">Buying an F-150? <a href="{HD_F150_CMP}">2.7 vs 3.5 EcoBoost vs 5.0, by owner complaints</a></p>' if fid == 'ford-f-series' and (y is None or y >= 2011) else '')
-        return (f'<div class="pinb hdb" role="note"><p class="pinb-h"><b>{head}</b></p><p class="pinb-t">{txt}</p>'
-                + (f'<p class="pinb-l">Diesel engines: {el}</p>' if el else '') + f150 + (f'<p class="pinb-a">{hl}</p>' if hl else '') + '</div>')
-    _HD_PIN0 = PIN_HTML
-    def PIN_HTML(fid, y=None): return HD_PIN(fid, y) + _HD_PIN0(fid, y)
+        f150 = (f'<p>Buying an F-150? <a href="{HD_F150_CMP}">2.7 vs 3.5 EcoBoost vs 5.0, by owner complaints</a></p>' if fid == 'ford-f-series' and (y is None or y >= 2011) else '')
+        # 11-26 (Elijah: the big yellow box in the middle of the Ram page "doesn't even matter ... just put that as a smaller alert below
+        # the score"): one short line under the score (HD_ALERT, placed by build.py after the gauge); the why + links open on tap.
+        short = ('Mixes in 2500/3500 trucks' + (f' ({sh}% this year)' if y else '') if sh >= 50 and y else 'Mostly half-ton trucks, not 2500/3500 diesels')
+        return (f'<details class="pinb hda" role="note"><summary><span class="hda-i" aria-hidden="true">!</span><span class="hda-t">{short}</span><span class="hda-m">Why</span></summary>'
+                f'<div class="hda-b"><p>{txt}</p>' + (f'<p>Diesel engines: {el}</p>' if el else '') + f150 + (f'<p class="hda-a">{hl}</p>' if hl else '') + '</div></details>')
+    HD_ALERT = HD_PIN
     # the notes under the hero said "Covers the whole ... line (1500, 2500 and 3500)" next to "Is the Ram 1500 reliable?" (Mitch): say what it is
     for _fid, _m in HD_FAM.items():
         _sh, _ = _hd_share(_fid)

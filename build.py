@@ -660,14 +660,14 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' '{DB_HASH}' https://static.cloudflareinsights.com https://challenges.cloudflare.com https://www.googletagmanager.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; frame-src https://challenges.cloudflare.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cloudflareinsights.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://vpic.nhtsa.dot.gov https://api.nhtsa.gov https://lemon-survey.elift08.workers.dev https://lemon-alerts.elift08.workers.dev{_CSP_GOAL} https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="google-adsense-account" content="{ADS}"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/lxs.css?v={LXS_V}">
-<link rel="stylesheet" href="/assets/site.css?v=1124-mo"><link rel="stylesheet" href="/assets/cpl.css?v=23"><script src="/assets/cpl.js?v=1" defer></script><link rel="stylesheet" href="/assets/gh.css?v=3"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1124mo" defer></script>{lds}</head>
+<link rel="stylesheet" href="/assets/site.css?v=1126c"><link rel="stylesheet" href="/assets/cpl.css?v=23"><script src="/assets/cpl.js?v=1" defer></script><link rel="stylesheet" href="/assets/gh.css?v=3"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1124mo" defer></script>{lds}</head>
 <body>{gh_header(path)}
 <main>{body}{_eb}{_rel}{'' if path == '/vote/' else ask_html(path)}</main>
 <footer class="foot f2 f3"><div class="f3-top"><a class="f3-name" href="/"><img src="/assets/icon-64.png" alt="" width="64" height="64"><span>Lemon Index</span></a><p class="f3-tag">Check here before you buy.</p><div class="f3-soc">{F3_SOC}</div></div><div class="f2-in">
 <nav class="f2-col" aria-label="Explore"><p class="f2-h">Explore</p><a href="/compare/">Compare cars</a><a href="/best/">Best cars</a><a href="/rankings/">Every car ranked</a><a href="/brands/">Brands</a><a href="/engines/">Every engine</a><a href="/electric/">Electric cars</a><a href="/stats/car-complaints/">Statistics</a><a href="/car-loan-rates/">Car loan rates</a><a href="/insurance/">Car insurance</a></nav>
 <nav class="f2-col" aria-label="Tools and data"><p class="f2-h">Tools and data</p><a href="/vin/">VIN check</a><a href="/recalls/">Recall check</a><a href="/check-engine-light/">Engine codes</a><a href="/symptoms/">Car symptoms</a><a href="/uk/">UK MOT pass rates</a><a href="/method/">How the index works</a><a href="/data/">Free data</a><a href="/images/">Free images</a><a href="/vote/">Vote</a></nav>
 <nav class="f2-col" aria-label="Support"><p class="f2-h">Support</p><button class="supl" type="button">Support Lemon Index</button><a href="/support/">Where your money goes</a><a href="/coming-soon/">What&#39;s coming</a><a href="/about/">About</a><a href="/press/">Press</a><a href="/contact/">Contact</a><a href="{YT}?sub_confirmation=1" rel="noopener">Subscribe on YouTube</a></nav></div>
-<div class="f2-bot"><span>© {TODAY[:4]} The Lemon Index</span><a href="/terms/">Terms</a><a href="/privacy/">Privacy</a><a href="/refunds/">Refunds</a><a href="/disclosure/">Affiliate disclosure</a><span class="f2-dis">Built from public NHTSA complaint data and published U.S. sales figures. Not affiliated with any automaker. Not a repair-cost or safety rating.</span></div></footer><script src="/assets/explorer.js?v=1112d" defer></script><script src="/assets/support.js?v=1124e" defer></script><script src="/assets/imginfo.js?v=2" defer></script><script src="/assets/lookup.js?v={LXS_V}" defer></script>{beacon}</body></html>'''
+<div class="f2-bot"><span>© {TODAY[:4]} The Lemon Index</span><a href="/terms/">Terms</a><a href="/privacy/">Privacy</a><a href="/refunds/">Refunds</a><a href="/disclosure/">Affiliate disclosure</a><span class="f2-dis">Built from public NHTSA complaint data and published U.S. sales figures. Not affiliated with any automaker. Not a repair-cost or safety rating.</span></div></footer><script src="/assets/explorer.js?v=1112d" defer></script><script src="/assets/support.js?v=1126a" defer></script><script src="/assets/imginfo.js?v=2" defer></script><script src="/assets/lookup.js?v={LXS_V}" defer></script>{beacon}</body></html>'''
     doc = _ii_stable(doc)
     doc = _ICONV.sub(r'\1?v=2', doc)   # 11-18: the box icons were redrawn (GPT image), same names
     doc = _CAT_RW.sub(lambda m: f'href="{CAT_PATH[m.group(1)]}"', doc)   # 11-19: /?type=<tab> -> the category page
@@ -677,6 +677,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
     # 11-24 (Elijah): 'Find a car for your budget' first in every car page's Overview list (budget_pages.py), after the date hash
     if 'VF_HOOK' in globals(): doc = VF_HOOK(path, doc)   # 11-24 (Elijah): no Normal/Advanced switch, one-sided praise/complaints full width, engine pictures on the engine chips, heart + share by the name (vis_fixes.py), after the date hash
     if 'YUX_HOOK' in globals(): doc = YUX_HOOK(path, doc)   # 11-25 (Elijah's go-live review): year page top v2, bar score, source sheet, entry cards (year_ux.py), after the date hash
+    if 'HUB_HOOK' in globals(): doc = HUB_HOOK(path, doc)   # 11-26 (Elijah: "this is good to make go live"): model pages with every card get the card hub (hub_cards.py), after the date hash
     LG[path] = (set(_LGHREF.findall(doc)), bool(_LGNOIX.search(doc)), url)   # 11-12 link graph (linkgraph.py, end of build)
     f = os.path.join(OUT, path.strip('/'), 'index.html') if path.endswith('/') else os.path.join(OUT, path.strip('/'))
     os.makedirs(os.path.dirname(f), exist_ok=True)
@@ -1184,11 +1185,15 @@ def ystar(fid, y):
 # topics, top}}} from 3 Lemon Index/data/yt/yt_score.py. Models that have it get a second bar per year (higher = YouTube likes it more), plus rows
 # for older years that only YouTube covers (e.g. 1970s-90s Civics). Everything else is unchanged.
 YTS = json.load(open('data/yt_scores.json', encoding='utf-8')) if os.path.exists('data/yt_scores.json') else {}
+YT_OLD = 2022   # 11-26: newest model year an unscored year page may be YouTube-ranked
 YT_MIN = 10   # 11-10 (Elijah: "remove YT rank from cars that don't have enough data, it's making them auto first place"): a year needs 10+ videos to be ranked
 def yt_rankable(f, sc):
     """Years that may get a YouTube rank: 10+ videos, and (if 2010 or newer) an owner-complaint score too. Brand-new years only have
     launch reviews and no owner data yet, so they used to win #1 by default (e.g. the 2026 Civic)."""
     li = {v['y'] for v in f['years'] if v['ok'] or (FS_CO(v) and v['n'])}
+    # 11-26 (Elijah, Mini Cooper: "fix the gaps, even if it's just YouTube numbers"): a year page with no Lemon score (too few complaints
+    # or too few sold) gets a YouTube rank too once it's 4+ model years old (YT_OLD), when owner videos outnumber launch reviews
+    li |= {v['y'] for v in f['years'] if not v['ok'] and not v.get('early') and v['y'] <= YT_OLD}
     return {int(y) for y, s in sc.items() if s.get('score') is not None and (s.get('videos') or 0) >= YT_MIN and (int(y) < 2010 or int(y) in li)}
 def _yb_skip(f, vs):
     """11-20 (Elijah, Corvette: many empty "–" rows): years with no score and no YouTube rank leave the Every year chart; one line under it
@@ -1219,6 +1224,17 @@ def ybars_yt(f, cur, sc):
             + ''.join(row(y) for y in ys if y in byy and (byy[y]['ok'] or y in RK or y == cur)) + '</div>' + _yb_skip(f, [byy[y] for y in ys if y in byy and not (byy[y]['ok'] or y in RK or y == cur)])
             + (lambda old: f'<details class="yrs-more"><summary>Show {len(old)} older year{"" if len(old) == 1 else "s"} ({old[-1]}–{old[0]}, YouTube reviews only, no complaint data)</summary><div class="bars yb yt2">{"".join(row(y) for y in old)}</div></details>' if old else '')([y for y in ys if y not in byy])
             + BARS_LEG(f, len(RK)))
+def YT_HERO(f, y):
+    """11-26 (Elijah: "fill in the gaps, even if it's just YouTube numbers"): on a year page with no Lemon score, the YouTube owner score
+    (0-100, higher = owners like it more) + its rank among the model's years, as the number at the top. Same bar as the Lemon score, own colors."""
+    s = (YTS.get(f['id']) or {}).get(str(y)) or {}; rk = yt_rank_map(f); r = rk.get(y)
+    if r is None or s.get('score') is None: return ''
+    sc = int(s['score']); cls = 'up' if r <= len(rk) / 3 else 'dn' if r > len(rk) * 2 / 3 else 'md'
+    word = 'One of the best-liked years' if cls == 'up' else 'One of the least-liked years' if cls == 'dn' else 'About average on YouTube'
+    return (f'<figure class="ytx {cls}" aria-label="YouTube owner score {sc} out of 100, number {r} of {len(rk)} {E(SNM(f))} years">'
+            f'<div class="ytx-top"><b>{sc}</b><span>YouTube owner score<small>#{r} of {len(rk)} {E(SNM(f))} years · {s["videos"]:.0f} videos</small></span></div>'
+            f'<div class="ytx-tr" aria-hidden="true"><i style="width:{max(4, min(100, sc)):.0f}%"></i></div>'
+            f'<figcaption>{word}. No Lemon score: too little complaint data, so this is what owners say on YouTube.</figcaption></figure>')
 def yt_rank_map(f):
     """{year: YouTube rank #} exactly as the year bars show it (rankable years only)."""
     sc = YTS.get(f['id']) or {}; okr = yt_rankable(f, sc)
@@ -1411,6 +1427,7 @@ exec(open('ans_box.py', encoding='utf-8').read())   # 11-23 Job C: ANS_HOOK, the
 exec(open('seo_ld.py', encoding='utf-8').read())   # 11-23 SEO batch: Quick answers + JSON-LD for EV, supercar, motorcycle, plane, compare, sub and recall pages
 exec(open('model_hero.py', encoding='utf-8').read())   # 11-19 model page top v2 (MH_HOOK in page())
 exec(open('year_ux.py', encoding='utf-8').read())   # 11-25 year page top v2 (YUX_HOOK in page(); needs model_hero's _mh_gauge)
+exec(open('hub_cards.py', encoding='utf-8').read())   # 11-26 model page hub: big cards + 4 small buttons (HUB_HOOK in page(), after YUX_HOOK)
 exec(open('sub_pages.py', encoding='utf-8').read())   # 11-19 card -> own page test (Integra GS-R), SUB_HOOK in page()
 exec(open('recall_alerts.py', encoding='utf-8').read())   # 11-14 growth 4a: recall alert signup box (RA_HOOK in page()), /alerts/ page, privacy text
 RIVALS = defaultdict(list); PAIRS = []
@@ -1842,6 +1859,7 @@ def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
                 f'score needs. Owners filed {v["n"]:,} complaint{"" if v["n"] == 1 else "s"} in its first 3 years.</span></p>{{BW}}</div></div>')   # 11-11: in a .yhero, so the tabbed page keeps it
     else:
         hero = f'<div class="yhero yhero-na"><div class="yverd mid"><p><b>Not enough data.</b> <span>Only {v["n"]} complaint{"" if v["n"] == 1 else "s"} in its first 3 years: too few to score.</span></p>{{BW}}</div></div>'
+    if not v['ok']: hero = hero.replace('<div class="yverd mid">', YT_HERO(f, y) + '<div class="yverd mid">', 1)
     old = '<p class="yc-note">Older model year: fewer owners filed complaints back then, so treat the score as rough.</p>' if y < 2010 else ''
     if v.get('early'): old = EARLY_NOTE(y, nm)
     if v.get('low'): old = ''   # no score, so no "rough score" / "early read" caveat
@@ -1939,7 +1957,7 @@ def year_body(f, v, y, x, best, worst, prev, nxt, qs_list, qa=()):
                  + (f'<details><summary>More owner reports</summary>{more}</details>' if more else '') + '</section>')
     return f'''
 <article class="yp yp6"><section class="ph yph6"><div class="yh-t">{N2_CRUMB(f, y)}<h1>{y} {E(QN(f))} {YW(f).lower()}.</h1>{answer_box(f, v, y, x, best)}{'<p class="early-b">Too new: partial score</p>' if v.get('early') else ''}
-{f'<p class="yc-note">{SN[f["id"]][1]}</p>' if f["id"] in SN else ""}{GROUP_NOTE(f, y)}{PIN_HTML(f['id'], y)}{n2_hero}
+{f'<p class="yc-note">{SN[f["id"]][1]}</p>' if f["id"] in SN else ""}{GROUP_NOTE(f, y)}{PIN_HTML(f['id'], y)}{n2_hero}{(globals().get('HD_ALERT') or (lambda *a: ''))(f['id'], y)}
 <nav class="modes" aria-label="Page mode"><a href="{CARU(f, y)}" aria-current="page">Normal</a><a href="{CARU(f, y)}advanced/">Advanced</a></nav><nav class="yswitch" aria-label="Model years"><div class="yseg">{seg}<a class="yall" href="{CARU(f)}">All years</a></div><div class="yact"><a class="btn btn-ghost" href="/compare/?c={f['id']}-{y}">Compare</a><button type="button" class="btn btn-ghost yshare" data-share="{E(share_txt)}">Share</button></div></nav></div>{f'<div class="ph-v">{ph}</div>' if ph else ''}</section>
 {buy}{N2_SIMILAR(f, y)}{top_fails_html(f, y, nm)}{mil}{PRICEBOX.year_block(f["id"], y, nm)}{fix_sell_html(f, y, nm)}{ask}<div class="yts">{tiles}</div>{ytfix(f["id"], y)}{sev}{old}
 <section class="yyears noph"><div class="yy-ch"><h2>Every {nm} year. <span class="h2s">{y} is highlighted. Lower is better.</span></h2>{N2_SORT}{CHART_PILLS(f, ybars(f, y), EMX_BTN(f, y), ev_note)}</div></section>
@@ -2062,7 +2080,7 @@ for f in YEARS:
     page(CARU(f), _tt,
          f'{qn} reliability: {_mcmp}, per car sold (Lemon Index {li}, {c["years"].replace("-", "–")}). Fewest complaints: {best["y"]}. Most: {(worst or best)["y"]}.', f'''
 <div class="pg mp6"><section class="ph yph6"><div class="yh-t">{N2_CRUMB(f)}{rel_html}{f'<p class="yc-note">{SN[f["id"]][1]}</p>' if f["id"] in SN else ""}{PIN_HTML(f['id'])}
-<div class="yhero">{gauge(c["li"], 190, "All years " + c["years"].replace("-", "–"))}<div class="yverd {verdict(c["li"])[0]}"><p><b>{verdict(c["li"])[1]}.</b> <span>Whole model, {c["years"]}{"" if plain(c["li"]).lower() in verdict(c["li"])[1].lower() else ": " + E(plain(c["li"]))}.</span></p><p class="ybw">Fewest complaints <a class="{'good' if best['li'] <= 110 else ''}" href="{CARU(f, best["y"])}">{best["y"]}</a>{f' · Most complaints <a class="bad" href="{CARU(f, worst["y"])}">{worst["y"]}</a>' if worst and worst['y'] != best['y'] else ''}</p>{N2_RANK(f)}</div></div>
+<div class="yhero">{gauge(c["li"], 190, "All years " + c["years"].replace("-", "–"))}<div class="yverd {verdict(c["li"])[0]}"><p><b>{verdict(c["li"])[1]}.</b> <span>Whole model, {c["years"]}{"" if plain(c["li"]).lower() in verdict(c["li"])[1].lower() else ": " + E(plain(c["li"]))}.</span></p><p class="ybw">Fewest complaints <a class="{'good' if best['li'] <= 110 else ''}" href="{CARU(f, best["y"])}">{best["y"]}</a>{f' · Most complaints <a class="bad" href="{CARU(f, worst["y"])}">{worst["y"]}</a>' if worst and worst['y'] != best['y'] else ''}</p>{N2_RANK(f)}</div></div>{(globals().get('HD_ALERT') or (lambda *a: ''))(f['id'])}
 <p><button type="button" class="btn btn-ghost" data-share="{E(f'Every {snm} year ranked by owner complaints. Fewest: {best["y"]}. Most: {(worst or best)["y"]}. Free report:')}">Share ↗</button></p></div><div class="ph-v">{(YSL.year_slider_html(f['id'], f['name'], {v['y']: round(v['li']) for v in ys if v.get('ok') and v.get('li') is not None}, {y: sc_ for y, sc_ in YSL.yt_scores(f['id']).items() if y in yt_rankable(f, YTS.get(f['id'], {}))}, {v['y'] for v in ys}, start=popular_year(f), best=best['y'], hero=True, mli=c['li'], early={v['y'] for v in ys if v.get('early')}) if YSL.has(f['id']) else (YSL.model_hero_html(f['id'], f['name']) or car_hero(f, ys[-1]["y"])))}{rel_tiles}</div></section>
 <section class="yyears noph" id="years"><div class="yy-ch"><h2>Every year. <span class="h2s">Lower is better. Tap a year for its full report.</span></h2>{N2_SORT}{CHART_PILLS(f, ybars(f), EMX_BTN(f), ('<p class="yc-cap">Scores before 2010 are rough: fewer owners filed complaints back then.</p>' if ys[0]["y"] < 2010 else '') + (lambda t: f'<p class="yc-cap">{t}</p>' if t else '')(two_windows(f['id'])))}</div></section>
 {ytfix("model:" + f["id"])}{picks}{gas_hybrid_html(f)}{SPECS_HOOK(f["id"])}

@@ -89,7 +89,7 @@
     ${[5, 10, 15].map(a => `<button type="button" role="radio" data-a="${a}" aria-checked="${a === pick}">$${a}</button>`).join('')}
     <button type="button" role="radio" data-a="custom" aria-checked="false">Other</button>
   </div>
-  <a class="btn sup-go" href="#" rel="noopener" target="_blank">Chip in $10</a>
+  <a class="btn sup-go" href="#" rel="noopener" target="_blank">Donate $10</a>
   <details class="sup-next"><summary>What it pays for</summary><ul><li>More cars and years</li><li>Car images and year sliders</li><li>Engine pages for more brands</li><li>VIN reports and recall alerts</li></ul></details>
   <button type="button" class="sup-later">Maybe later</button>
   <p class="sup-fine">Secure checkout by Stripe · Not tax-deductible</p>
@@ -97,7 +97,7 @@
   document.body.appendChild(box);
   const go = box.querySelector('.sup-go');
   const sync = () => { box.querySelectorAll('[data-a]').forEach(b => b.setAttribute('aria-checked', String(String(pick) === b.dataset.a)));
-    go.textContent = pick === 'custom' ? 'Choose your amount' : `Chip in $${pick}`; go.href = LINKS[pick] || '#'; };
+    go.textContent = pick === 'custom' ? 'Choose your amount' : `Donate $${pick}`; go.href = LINKS[pick] || '#'; };
   box.querySelectorAll('[data-a]').forEach(b => b.addEventListener('click', () => { pick = b.dataset.a === 'custom' ? 'custom' : +b.dataset.a; sync(); }));
   const close = () => { box.classList.remove('on'); setTimeout(() => (box.hidden = true), 250); mark(); };
   box.querySelector('.sup-x').onclick = close; box.querySelector('.sup-later').onclick = close;
@@ -131,8 +131,9 @@
   // ---- the reminder bar
   const bar = document.createElement('div');
   bar.className = 'nud'; bar.hidden = true; bar.setAttribute('role', 'status');
-  bar.innerHTML = `<img src="/assets/icon-64.png" alt="" width="36" height="36"><p><b>${esc(CTX.q)}</b><span>${esc(CTX.a)}</span></p>
-<button type="button" class="btn nud-go">Chip in</button><button type="button" class="nud-x" aria-label="Not today">×</button>`;
+  // 11-26 (Elijah: "Looking at BMW 3 Series reliability? Chip in" made no sense): one short line and a plain Donate button
+  bar.className = 'nud nud2';
+  bar.innerHTML = `<p>Like the Lemon Index?</p><button type="button" class="btn nud-go">Donate</button><button type="button" class="nud-x" aria-label="Not today">×</button>`;
   document.body.appendChild(bar);
   let nudgeT;
   function hideNudge() { clearTimeout(nudgeT); bar.classList.remove('on'); setTimeout(() => (bar.hidden = true), 300); }

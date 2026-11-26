@@ -120,6 +120,7 @@ def run(slug, p):
     sold, into, flags = (mysales.merge(cs, win, p['name'], Y0, Y1) if kind == 'calendar' else ({y: v for y, v in cs.items() if Y0 <= y <= Y1}, {}, []))
     blended = mysales.blend(sold, into, cs) if kind == 'calendar' else sold
     years, xl, years_all = [], {}, []
+    thin, pend = set(), []   # 11-26 gap years: sold plenty, (almost) no complaints in the window
     med = sorted(win[y] for y in sold if win[y]) or [0]; med = med[len(med) // 2]
     for y in range(max(Y0, p.get('first', Y0)), Y1 + 1):   # 11-17: `first` = first U.S. model year (RSX: 2002)
         n = win[y]
@@ -127,6 +128,7 @@ def run(slug, p):
         s = sold.get(y); li = None
         if s and s >= MIN_SOLD and y in BASE and n < max(5, .05 * med):   # sales but (almost) no complaints: the model wasn't really sold as that model year
             flags.append(f'{p["name"]} {y}: {s:,} sold but only {n} complaints in window -> not scored')
+            thin.add(y)
         elif s and s >= MIN_SOLD and y in BASE:
             li = round(100 * n / (s * BASE[y]))
             if 2010 <= y <= 2022 and blended.get(y): li = min(li, round(100 * n / (blended[y] * BASEB[y])))
@@ -147,6 +149,14 @@ def run(slug, p):
         if li is not None: years.append(dict(y=y, li=li, n=n, sold=s, parts=parts, quotes=qs) | ({'early': True} if y >= 2023 else {}))   # like years.json: scored years only
         elif n >= LOW_MIN and cs.get(y) is not None and cs[y] < MIN_SOLD:   # 11-11 (Elijah): low-sales years are listed too, complaints only, no score
             years.append(dict(y=y, li=None, n=n, sold=None, parts=parts, quotes=qs, low=dict(sold=cs[y], url=url, kind=kind)) | ({'early': True} if y >= 2023 else {}))
+        elif y in thin and allc[y] >= 3:   # 11-26 (Elijah, Mini Cooper 2018: "fix the gaps, even if it's just YouTube numbers"): kept as a year page, no score
+            pend.append(dict(y=y, li=None, n=n, sold=None, parts=parts, quotes=qs, few=True) | ({'early': True} if y >= 2023 else {}))
+    # ... but only inside the model's run (a listed year on both sides): a flagged year at either end is usually one the model wasn't
+    # really sold as (Cobalt 2011, Transit 2014), so it stays out
+    _ly = [v['y'] for v in years]
+    for v in pend:
+        if _ly and min(_ly) < v['y'] < max(_ly): years.append(v); flags.append(f'{p["name"]} {v["y"]}: listed as a year page with no score (gap year)')
+    years.sort(key=lambda v: v['y'])
     # the whole-model score: model years 2010-2022 like the study; a model that mostly ended before 2010 uses all its scored years (the page says which)
     scored = [v for v in years if 2010 <= v['y'] <= 2022 and v['li'] is not None]
     if len(scored) < 3: scored = [v for v in years if not v.get('early') and v['li'] is not None]

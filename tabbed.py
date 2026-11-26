@@ -202,7 +202,10 @@ def transform_model(body, eng_html, short):
     if not slider and pv:   # 11-10 rollout: no year images -> the model's own picture fills the same hero slot (car-image work can drop in here later)
         fig = pv.find('figure', class_='yph'); sl = _s(fig)
     pin = ''.join(map(str, yt.find_all(class_='pinb'))) or None   # 11-12: pinned banners (battery-fire recall, half-ton/HD) stay in the hero
-    hero = (f'<section class="ph tb-hero">{_s(crumbs)}<div class="tb-img">{"".join(map(str, links))}{sl}</div>{_s(h1)}{short_ans}{_s(pin)}{_s(yhero)}{_s(share)}</section>')
+    # 11-26 the half-ton/HD note is a small alert UNDER the score now (hd_pages.HD_ALERT, class pinb hda)
+    pin2 = ''.join(str(x) for x in yt.find_all(class_='hda')) or None
+    if pin2: pin = ''.join(str(x) for x in yt.find_all(class_='pinb') if 'hda' not in (x.get('class') or [])) or None
+    hero = (f'<section class="ph tb-hero">{_s(crumbs)}<div class="tb-img">{"".join(map(str, links))}{sl}</div>{_s(h1)}{short_ans}{_s(pin)}{_s(yhero)}{_s(pin2)}{_s(share)}</section>')
     n3 = _n3blk(yt)   # 11-13 nav fix N3 (round 2: phone tops stay short): "Engines in this car" / "Other versions" go in the Overview tab, not the hero
     secs = [c for c in root.find_all(recursive=False) if c is not ph]
     pick = lambda pred: [c for c in secs if pred(c)]
@@ -342,8 +345,11 @@ def transform_year(body, eng_html, short):
         pop = pop.replace('<div class="ii-pop"', '<span class="ii-pop"').replace('</div>', '</span>')
         early = BeautifulSoup(f'<p class="early-b">Too new: partial score · still collecting complaints<span class="iiw">{pop}</span></p>', 'html.parser')
     pin = ''.join(map(str, yt.find_all(class_='pinb'))) or None   # 11-12: pinned banners (battery-fire recall, half-ton/HD) stay in the hero
+    # 11-26 the half-ton/HD note is a small alert UNDER the score now (hd_pages.HD_ALERT, class pinb hda)
+    pin2 = ''.join(str(x) for x in yt.find_all(class_='hda')) or None
+    if pin2: pin = ''.join(str(x) for x in yt.find_all(class_='pinb') if 'hda' not in (x.get('class') or [])) or None
     grp = yt.find('p', class_='yc-grp')   # 11-13 NQ: "Includes the WRX" (build.py GROUP_NOTE) stays in the hero
-    hero = f'<section class="ph tb-hero">{_s(crumbs)}<div class="tb-img">{img}</div>{_s(h1)}{_s(early)}{_s(pin)}{_s(yhero)}{_s(grp)}{_controls(sw, modes)}</section>'   # the gauge + verdict already say it: no answer paragraph
+    hero = f'<section class="ph tb-hero">{_s(crumbs)}<div class="tb-img">{img}</div>{_s(h1)}{_s(early)}{_s(pin)}{_s(yhero)}{_s(pin2)}{_s(grp)}{_controls(sw, modes)}</section>'   # the gauge + verdict already say it: no answer paragraph
     n3 = _n3blk(yt)   # 11-13 nav fix N3 (round 2: phone tops stay short): "Engines in this car" / "Other versions" go in the Overview tab, not the hero
     top = [c for c in root.find_all(recursive=False) if c is not ph]
     grid = next((c for c in top if 'ygrid' in (c.get('class') or [])), None)
