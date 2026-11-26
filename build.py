@@ -2500,9 +2500,10 @@ page('/contact/', 'Contact the Lemon Index: Data Questions and Corrections',
      extra=f'<p class="ct5-b"><a class="btn" href="mailto:{CONTACT}">Email us</a></p>')
      + '<div class="cpl v5-pl">' + V5_GO('data', 'Free data and downloads', '/data/') + V5_GO('share', 'Press and citations', '/press/') + V5_GO('info', 'How the index works', '/method/') + '</div>'
      + f'<p class="v5-fn ct5-a">The Lemon Index is operated by {LEGAL_NAME}, {ADDRESS}.</p></div>')
-legal('/refunds/', 'Refund policy', f'''<p>Every Lemon Index report is free. Donations are voluntary and don&#39;t unlock anything extra.</p>
-<p>If you were charged twice, donated the wrong amount or didn&#39;t mean to donate, email <a href="mailto:{CONTACT}">{CONTACT}</a> within 14 days and we&#39;ll refund it in full. Payments are processed by Stripe.</p>''', 'Refund Policy for Donations | The Lemon Index',
-      'Lemon Index reports are free and donations are voluntary. If you were charged twice or donated by mistake, email us within 14 days for a full refund.')
+legal('/refunds/', 'Refund policy', f'''<p>Every Lemon Index report is free. Payments are processed by Stripe, and we never see your card number.</p>
+<h2>Checklists</h2><p>Not happy with a before-you-buy checklist you paid for? Email <a href="mailto:{CONTACT}">{CONTACT}</a> within 14 days and we&#39;ll refund it in full. The checklist leaves your account once it&#39;s refunded.</p>
+<h2>Donations</h2><p>Donations are voluntary and don&#39;t unlock anything extra. If you were charged twice, donated the wrong amount or didn&#39;t mean to donate, email us within 14 days and we&#39;ll refund it in full, unless your shout-out has already been posted.</p>''', 'Refund Policy | The Lemon Index',
+      'Lemon Index reports are free. Paid checklists and donations can be refunded in full within 14 days (donations: unless your shout-out has already been posted).')
 legal('/privacy/', 'Privacy policy', f'''<p>{LEGAL_NAME} ("we") runs lemonindex.com. This page says what we collect and why.</p>
 <h2>Visiting the site</h2><p>We use Cloudflare Web Analytics, which counts visits without cookies, and Google Analytics, which uses cookies to count visits and see which pages people read. Google Analytics gets your browser type, rough location and the pages you visit; it doesn&#39;t get your name or email. You can opt out with Google&#39;s <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">opt-out add-on</a> or by blocking cookies.</p>
 <h2>Ads</h2><p>The site shows no ads right now and loads no ad code. If we add ads later, we&#39;ll update this page first to say which ad network we use and what its cookies do.</p>
@@ -2559,6 +2560,7 @@ exec(open('supercar_engine_pages.py', encoding='utf-8').read())   # 11-11 superc
 VEX = 'pages'; exec(open('vin_engine_pages.py', encoding='utf-8').read())   # 11-13 everyday engine pages matched by VIN (2GR-FKS, GM 5.3/6.2, Pentastar ...), in the YouTube rank pool
 BMW_PHASE = 'pages'; exec(open('bmw_pages.py', encoding='utf-8').read())   # 11-10 BMW model pages + engine pages
 exec(open('thanks_page.py', encoding='utf-8').read())   # 11-07 donation thank-you page (noindex)
+exec(open('checklist_pages.py', encoding='utf-8').read())   # 11-25 paid checklists (lemon-store): OFF unless LEMON_CHECKLIST=1; standalone app pages, own strict CSP
 exec(open('support_pages.py', encoding='utf-8').read())   # 11-24 /support/ + /coming-soon/ (Elijah approved the mockups)
 exec(open('saved_page.py', encoding='utf-8').read())   # 11-14 growth 4d: /saved/ "My cars" (browser storage only; noindex)
 RA_PAGE()   # 11-14 growth 4a: /alerts/ confirm + unsubscribe page (noindex, not in the sitemap)

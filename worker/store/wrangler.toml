@@ -1,0 +1,55 @@
+# lemon-store Worker (11-25): paid before-you-buy checklists on lemonindex.com (email-link sign-in, Stripe Checkout, D1 + KV).
+# NOT DEPLOYED. Go-live (main session, with Elijah's OK): create the D1 database and the KV namespace, paste their ids below, apply
+# schema.sql, set the secrets, upload the content (upload_content.py --remote), then `npx wrangler deploy` from this folder.
+# Secrets (wrangler secret put, never in this file): STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET, TOKEN_KEY, RESEND_KEY, TURNSTILE_SECRET.
+name = "lemon-store"
+main = "store_worker.js"
+compatibility_date = "2026-11-03"
+workers_dev = true
+preview_urls = false
+keep_vars = false
+
+[vars]
+EMAIL_ON = "1"                                   # "1" once RESEND_KEY is set (lemonindex.com is already a Resend domain: lemon-alerts sends from it)
+MAIL_FROM = "Lemon Index <signin@lemonindex.com>"
+REPLY_TO = "hello@lemonindex.com"
+DAILY_CAP = "60"                                 # sign-in emails a day; the Resend plan's daily limit is shared with lemon-alerts (DAILY_CAP 80 there)
+TURNSTILE_ON = "0"                               # "1" = the email form needs a Turnstile pass (set TURNSTILE_SECRET first)
+PRICE_ONE = "price_1Ufol4Bq7BOH4VFnH1px4CoI"     # one car checklist, $7.99 one-time (live, from 3 Lemon Index/checklist/stripe_ids.json)
+AMOUNT_ONE = "799"
+PRICE_ALL = "price_1UfolUBq7BOH4VFnO6eePeNl"     # every car and truck checklist, $19.99 one-time (live)
+AMOUNT_ALL = "1999"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "lemon-store"
+database_id = "39280e24-0701-4451-b259-63ae586247ed"   # created 11-25
+
+[[kv_namespaces]]
+binding = "CONTENT"
+id = "617104b3e8864471a233cf074f4bad68"                # created 11-25
+
+# bursts per 60 s, counted at the edge (nothing stored). Longer windows (3 emails an hour per inbox...) are D1 counters in store_lib.js.
+[[ratelimits]]
+name = "RL"                                      # every request, per IP (a whole household or phone carrier can share one)
+namespace_id = "1125"
+  [ratelimits.simple]
+  limit = 120
+  period = 60
+
+[[ratelimits]]
+name = "RL_AUTH"                                 # sign-in emails, per IP
+namespace_id = "1126"
+  [ratelimits.simple]
+  limit = 4
+  period = 60
+
+[[ratelimits]]
+name = "RL_CONTENT"                              # paid checklist fetches, per account
+namespace_id = "1127"
+  [ratelimits.simple]
+  limit = 10
+  period = 60
+
+[observability]
+enabled = true
