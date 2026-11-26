@@ -57,11 +57,14 @@ def _sp_goal():
     pct = max(1.5, min(100, raised * 100 / goal))
     note = (f'<p class="spg-goal-n"><b>${hit:,} goal reached.</b> New goal: ${goal:,}.</p>' if hit
             else f'<p class="spg-goal-n">Last month: ${last:,} raised.</p>' if last else '')
-    return (f'<div class="spg-goal"><div class="spg-goal-t"><b>${raised:,} raised</b><span>of ${goal:,} this month</span></div>'
+    # 11-25: this baked number is the fallback; assets/goal.js swaps in the live total from the lemon-store Worker's GET /goal (Stripe, cached
+    # 5 min) when its month matches data-month. Same elements, only text and the bar width change. Keep goal.js's ladder in step with _SP_LADDER.
+    return (f'<div class="spg-goal" data-month="{now}"><div class="spg-goal-t"><b>${raised:,} raised</b><span>of ${goal:,} this month</span></div>'
             f'<div class="spg-bar" role="img" aria-label="${raised:,} of ${goal:,} raised this month"><i style="width:{pct:.1f}%"></i></div>{note}</div>')
 
 
-_SP_CSS = '<link rel="stylesheet" href="/assets/support-pages.css?v=' + _SV + '">'
+_SP_CSS = ('<link rel="stylesheet" href="/assets/support-pages.css?v=' + _SV + '">'
+           '<script src="/assets/goal.js?v=1125" defer></script>')   # 11-25: live goal number (see _sp_goal)
 
 _SUPPORT = (_SP_CSS + '<div class="pg spg">' + _sp_hero('Where your money goes.', 'Lemon Index is free, with no ads. Donations keep it free.')
     + _sp_goal()
@@ -72,7 +75,7 @@ _SUPPORT = (_SP_CSS + '<div class="pg spg">' + _sp_hero('Where your money goes.'
         ('next', 'Builds what’s next', 'New cars, bikes and countries', '/coming-soon/'),
     ])
     + '<div class="spg-btns"><button class="btn supl" type="button">Chip in</button><a class="btn ghost" href="/coming-soon/">See what’s coming</a></div>'
-    + '<p class="spg-note">Payments by Stripe. Not tax-deductible. Full refund within 14 days.</p></div>')
+    + '<p class="spg-note">Payments by Stripe. Not tax-deductible. Full refund within 14 days, unless your shout-out has already been posted.</p></div>')
 
 _COMING = (_SP_CSS + '<div class="pg spg">' + _sp_hero('What’s coming to Lemon.', 'Everything we’re building next. Donations decide how fast.')
     + '<h2>Building now</h2>' + _sp_grid([
@@ -104,7 +107,7 @@ _COMING = (_SP_CSS + '<div class="pg spg">' + _sp_hero('What’s coming to Lemon
     + '<p class="spg-ask-l">Every donation goes into building these. The more we raise, the faster they ship.</p>'
     + _sp_goal()
     + '<button class="btn supl spg-big" type="button">Help build it</button>'
-    + '<p class="spg-note">Payments by Stripe. Not tax-deductible. Full refund within 14 days.</p></section>'
+    + '<p class="spg-note">Payments by Stripe. Not tax-deductible. Full refund within 14 days, unless your shout-out has already been posted.</p></section>'
     + '<h2>What it helps with</h2>' + _sp_icons([
         ('adfree', 'Keeps the pages clean', 'No pop-ups, no selling your data'),   # 11-25: was 'Keeps it ad-free' (no promise of never ads; Mediavine is planned)
         ('free', 'Keeps every report free', 'No paywall, no account'),

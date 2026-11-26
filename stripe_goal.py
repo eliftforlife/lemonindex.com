@@ -1,6 +1,6 @@
 # stripe_goal.py (11-24): this month's Lemon donations from Stripe -> data/support_goal.json (the goal box on /support/ and /coming-soon/).
 # Key: Elijah's restricted READ-only key for the Lemon Index Stripe account, in C:/Users/elift/.stripe.txt (never print it).
-# Counts succeeded, paid charges created this month (UTC), minus refunds, USD only. Prints only totals.
+# Counts paid Payment Link (donation) Checkout Sessions created this month (UTC), USD only. Prints only totals.
 # Usage: py stripe_goal.py            -> writes the file if the number changed, prints the total
 #        py stripe_goal.py --dry      -> prints, writes nothing
 import json, sys, datetime, urllib.request, urllib.parse, pathlib
@@ -22,17 +22,18 @@ def _get(path, params, key):
 
 
 def month_total(now=None):
+    # 11-25: donations only = paid Checkout Sessions from a Payment Link (the donate links). Checklist sales (sessions the store creates,
+    # no payment_link) never count. Same rule as the lemon-store Worker's GET /goal, which keeps the box live between builds.
     now = now or datetime.datetime.now(datetime.timezone.utc)
     start = datetime.datetime(now.year, now.month, 1, tzinfo=datetime.timezone.utc)
     key, cents, n, after = _key(), 0, 0, None
     while True:
-        p = {'limit': 100, 'created[gte]': int(start.timestamp())}
+        p = {'limit': 100, 'created[gte]': int(start.timestamp()), 'status': 'complete'}
         if after: p['starting_after'] = after
-        page = _get('charges', p, key)
+        page = _get('checkout/sessions', p, key)
         for c in page['data']:
-            if c.get('paid') and c.get('status') == 'succeeded' and c.get('currency') == 'usd':
-                net = c['amount'] - c.get('amount_refunded', 0)
-                if net > 0: cents += net; n += 1
+            if c.get('payment_link') and c.get('payment_status') == 'paid' and c.get('currency') == 'usd':
+                cents += c.get('amount_total') or 0; n += 1
         if not page.get('has_more'): break
         after = page['data'][-1]['id']
     return start.strftime('%Y-%m'), cents // 100, n
