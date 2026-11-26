@@ -211,6 +211,7 @@ for c in EVC:
     else:
         _ynote = 'EV score per model year: complaints filed by the end of the year after the model year, per car sold. 100 is the average car (thin line), lower is better.'
         _evline = ''
+    _slqa = SL_EV_QA(c, _big, _mn, rank, rec_note, e) if 'SL_EV_QA' in globals() else []   # 11-23 SEO batch: Quick answers from this page's own numbers (seo_ld.py)
     page(EVU(c), title + ' | The Lemon Index',
          f'{c["name"]}: Lemon Index {_big} ({plain(_big)}){"" if _mn else ", " + rank}. Top problem: {ep(c["issues"][0][0]) if c["issues"] else "n/a"}. Recalls, fire complaints, EPA range and yearly cost.', f'''
 <article class="study tr2 ev2"><p class="kicker"><a href="/electric/">Electric cars</a> · {E(c["name"])}</p><h1>{E(c["name"])} reliability{"." if _mn else ", " + c["years"]}</h1>
@@ -220,8 +221,8 @@ for c in EVC:
                        ('years', 'Years', f'<h2>Year by year</h2><p class="note">{_ynote}</p><div class="bars yb trb">{ybars}</div>' if ybars else f'<h2>Year by year</h2><p class="note">{_ynote}</p>'),
                        ('cost', 'Range & cost', cost),
                        *([('owners', 'Owners on YouTube', ytb)] if ytb else []),
-                       ('recalls', 'Recalls & safety', f'<h2>Recalls</h2><p>{rec_note}.{" The newest:" if rec else ""}</p><ul class="recalls">{rec}</ul>{sg}')], f'{c["name"]} sections')}
+                       ('recalls', 'Recalls & safety', f'<h2>Recalls</h2><p>{rec_note}.{" The newest:" if rec else ""}</p><ul class="recalls">{rec}</ul>{sg}'), *([('questions', 'Questions', SL_QA_HTML(_slqa))] if _slqa else [])], f'{c["name"]} sections')}
 <p class="note">Complaints {WIN}. {E(SRC_NOTE)} Sales source: {E(c["src"])}.</p></article>''', kind='article',
-         ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": title, "url": BASE + EVU(c)}], vis=(pimg(mphoto(c['slug']), c['name']) + pcredit(who(mphoto(c['slug'])))) if mphoto(c['slug']) else '')
+         ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": title, "url": BASE + EVU(c)}] + ([SL_EV_LD(c, (mphoto(c['slug']) or {}).get('src'))] + SL_FAQ(_slqa) if _slqa else []), vis=(pimg(mphoto(c['slug']), c['name']) + pcredit(who(mphoto(c['slug'])))) if mphoto(c['slug']) else '')
     eurls.append(EVU(c))
 print('electric pages:', len(eurls))

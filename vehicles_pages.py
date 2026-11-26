@@ -70,9 +70,10 @@ if PL:
 <section class="yc"><h2>When. <span class="h2s">Phase of flight.</span></h2>{bars_pct(p["phase"])}</section>
 <section class="yc"><h2>Accidents per year.</h2>{bars_n([(y, v) for y, v in p["by_year"].items()])}<p class="yc-cap">More planes flying means more accidents, so counts aren&#39;t a safety score by themselves. Compare the shares above.</p></section>
 <p class="yc-cap" style="text-align:center">Source: {NTSB} <a href="https://www.ntsb.gov/Pages/investigations.aspx" rel="noopener">ntsb.gov</a> · <a href="/planes/">Every plane</a></p></div>'''
+        _slqa = SL_PL_QA(p, whatrows) if 'SL_PL_QA' in globals() else []; body = SL_INS(body, _slqa) if _slqa else body   # 11-23 SEO batch: Quick answers + FAQPage (seo_ld.py)
         page(f'/planes/{slug}/', f'{p["name"]} Accidents: What Happened, How Often Fatal | The Lemon Index',
              f'{p["n"]:,} U.S. {p["name"]} accidents NTSB investigated (2008-2025): {p["fatal_pct"]}% fatal, top event: {whatrows[0][0] if whatrows else "n/a"}. Plane-caused share, phase of flight and accidents per year.', body,
-             ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": f'{p["name"]} accidents', "url": BASE + f'/planes/{slug}/'}] + vld(ph, f'/planes/{slug}/'))
+             ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": f'{p["name"]} accidents', "url": BASE + f'/planes/{slug}/'}] + vld(ph, f'/planes/{slug}/') + (SL_FAQ(_slqa) if _slqa else []))
         purls.append(f'/planes/{slug}/')
     kinds = list(dict.fromkeys(p['kind'] for p in PL))
     groups = ''.join(f'<div class="mb"><h3>{E(k)}</h3><div class="mg">' + ''.join(card(f'/planes/{p["slug"]}/', vph(p['name']), p['name'], f'{p["fatal_pct"]}%', 'bad' if p['fatal_pct'] >= 20 else '', f'{p["n"]:,} accidents') for p in sorted([p for p in PL if p['kind'] == k], key=lambda p: -p['n'])) + '</div></div>' for k in kinds)
@@ -238,9 +239,10 @@ if MO:
 {mrecs(m["recalls"], slug)}
 <section class="yc"><h2>Complaints by model year.</h2>{bars_n([(y, v) for y, v in mby.items()])}<p class="yc-cap">Popular years get more complaints just because more were sold. There are no free U.S. sales figures by motorcycle model, so these are counts, not rates.</p></section>
 <p class="yc-cap" style="text-align:center">Filed as: {E(", ".join(m["names"][:5]))}. Source: NHTSA owner complaints and recalls. <a href="/motorcycles/">Every motorcycle</a></p>{ownl}{mmore(slug, mcat(m)) if own or av else ""}{MFOLLOW if av or own else ""}</div>'''
+        _slqa = SL_MO_QA(m, m['n'], mby) if 'SL_MO_QA' in globals() else []; body = SL_INS(body, _slqa) if _slqa else body   # 11-23 SEO batch (seo_ld.py)
         page(f'/motorcycles/{slug}/', f'{m["name"]} Problems & Recalls: Owner Complaints by Year | The Lemon Index',
              f'{m["n"]:,} NHTSA owner complaints about the {m["name"]} ({m["years"][0]}-{m["years"][1]}): top problem {m["parts"][0][0] if m["parts"] else "n/a"}, {len(m["recalls"])} recalls, {m["serious"]}% involved a crash, fire or injury.', body,
-             ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": f'{m["name"]} problems', "url": BASE + f'/motorcycles/{slug}/'}] + vld(ph, f'/motorcycles/{slug}/'))
+             ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": f'{m["name"]} problems', "url": BASE + f'/motorcycles/{slug}/'}] + vld(ph, f'/motorcycles/{slug}/') + ([SL_CAR(m['name'], f'/motorcycles/{slug}/', m['years'][0], m['years'][1], ph['src'] if ph else None, make=m['brand'], typ='Vehicle', vehicleConfiguration='motorcycle')] + SL_FAQ(_slqa) if _slqa else []))
         murls.append(f'/motorcycles/{slug}/')
     # 11-14: one page per bike with 15+ complaints
     _FAMN = {slugify(m['name']): m['name'] for m in MO}
@@ -268,9 +270,10 @@ if MO:
 {specs}
 <p class="yc-cap" style="text-align:center">Filed as: {E(", ".join(b["names"][:5]))}. Source: NHTSA owner complaints (model years 2000-2026) and recalls. <a href="/motorcycles/">Every motorcycle</a></p>{famp}{mmore(slug, cat)}{MFOLLOW}</div>'''
         worst = f' Most complaints: the {top["y"]} ({top["n"]}).' if top else ''
+        _slqa = SL_MO_QA(b, n, by) if 'SL_MO_QA' in globals() else []; body = SL_INS(body, _slqa) if _slqa else body   # 11-23 SEO batch (seo_ld.py)
         page(f'/motorcycles/{slug}/', f'{b["name"]} Years to Avoid, Problems & Recalls | The Lemon Index',
              f'{n:,} owner complaints filed with NHTSA about the {b["name"]} and {len(b["recalls"])} recalls.{worst} Every model year, what owners report and the specs.', body,
-             ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": f'{b["name"]} problems', "url": BASE + f'/motorcycles/{slug}/'}] + vld(ph, f'/motorcycles/{slug}/'))
+             ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": f'{b["name"]} problems', "url": BASE + f'/motorcycles/{slug}/'}] + vld(ph, f'/motorcycles/{slug}/') + ([SL_CAR(b['name'], f'/motorcycles/{slug}/', min(int(y) for y in by), last, ph['src'] if ph else None, make=b['brand'], typ='Vehicle', vehicleConfiguration='motorcycle')] + SL_FAQ(_slqa) if _slqa else []))
         murls.append(f'/motorcycles/{slug}/')
     # the hub: five categories; each shows its pages, then the bikes without enough owner reports yet folded under it (cards only, never links)
     def mscard(s):
@@ -445,9 +448,10 @@ if SC:
 <p class="yc-cap">EPA yearly fuel cost assumes 15,000 miles at national average prices.{' The gas-guzzler tax is a federal tax paid on new cars that use a lot of fuel.' if guz else ''}</p></section>'''}
 {specs}{_sce_section(slug, c["name"], c)}{recs}
 <p class="yc-cap" style="text-align:center">Sources: EPA fueleconomy.gov, NHTSA recalls and each engine&#39;s sources (Specs tab). <a href="/supercars/">Every supercar</a></p></div>'''
+        _slqa = SL_SC_QA(c, ys, len(allrec), tiles) if 'SL_SC_QA' in globals() else []; body = SL_INS(body, _slqa) if _slqa else body   # 11-23 SEO batch (seo_ld.py)
         page(f'/supercars/{slug}/', f'{c["name"]} MPG, Fuel Cost & Recalls by Year | The Lemon Index',
              f'{c["name"]} by model year ({ys[0]["y"]}-{last["y"]}): EPA {rng2(last["comb"])} mpg, up to ${last["cost"][1]:,} a year in fuel, {c["recalls"]} NHTSA recalls.', body,
-             ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": f'{c["name"]} fuel economy and recalls', "url": BASE + f'/supercars/{slug}/'}] + vld(ph, f'/supercars/{slug}/'))
+             ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": f'{c["name"]} fuel economy and recalls', "url": BASE + f'/supercars/{slug}/'}] + vld(ph, f'/supercars/{slug}/') + ([SL_CAR(c['name'], f'/supercars/{slug}/', ys[0]['y'], last['y'], ph['src'] if ph else None, make=c['make'])] + SL_FAQ(_slqa) if _slqa else []))
         surls.append(f'/supercars/{slug}/')
     mk = list(dict.fromkeys(c['make'] for c in sorted(SC, key=lambda c: c['make'])))
     groups = ''.join(f'<div class="mb"><h3>{E(m)}</h3><div class="mg">' + ''.join(card(f'/supercars/{c["slug"]}/', vph(c['name']), c['name'].replace(m, '').strip() or c['name'], f'{c["years"][-1]["comb"][0]} mpg', 'bad' if c['years'][-1]['comb'][0] <= 14 else '', f'{c["recalls"]} recalls') for c in [x for x in SC if x['make'] == m]) + '</div></div>' for m in mk)

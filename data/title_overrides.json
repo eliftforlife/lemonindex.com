@@ -1,0 +1,85 @@
+{
+ "about": "Search-title tests written by 0 HQ/Tools/gsc_titles.py (weekly). build.py uses `title` for that page. Log: 0 HQ/Autopost/gsc/title_tests.json",
+ "pages": {
+  "/best/used-cars-under-20000/": {
+   "title": "Best Used Cars Under 20K: What Reviewers Pick | Lemon Index",
+   "query": "best used cars under 20k",
+   "set": "2026-11-23",
+   "pos": 10.7,
+   "impr": 12988,
+   "batch": "11-23 one-time striking-distance batch"
+  },
+  "/electric/tesla-model-3/": {
+   "title": "Tesla Model 3 Reliability: Problems, Recalls & Range",
+   "query": "tesla model 3 reliability",
+   "set": "2026-11-23",
+   "pos": 8.4,
+   "impr": 3283,
+   "batch": "11-23 one-time striking-distance batch"
+  },
+  "/cars/ford-escape/": {
+   "title": "Ford Escape Reliability, Problems & Repair Costs | Lemon Index",
+   "query": "ford escape maintenance cost",
+   "set": "2026-11-23",
+   "pos": 5.0,
+   "impr": 1308,
+   "batch": "11-23 one-time striking-distance batch"
+  },
+  "/electric/ford-mustang-mach-e/": {
+   "title": "Ford Mustang Mach-E Reliability: Problems, Recalls & Range",
+   "query": "ford mustang mach-e reliability",
+   "set": "2026-11-23",
+   "pos": 8.1,
+   "impr": 907,
+   "batch": "11-23 one-time striking-distance batch"
+  },
+  "/cars/infiniti-q50/": {
+   "title": "Infiniti Q50 Reliability, Problems & Repair Costs | Lemon Index",
+   "query": "infiniti q50 maintenance cost",
+   "set": "2026-11-23",
+   "pos": 9.1,
+   "impr": 352,
+   "batch": "11-23 one-time striking-distance batch"
+  },
+  "/electric/tesla-model-x/": {
+   "title": "Tesla Model X Reliability: Problems, Recalls & Range",
+   "query": "tesla model x reliability",
+   "set": "2026-11-23",
+   "pos": 10.4,
+   "impr": 303,
+   "batch": "11-23 one-time striking-distance batch"
+  },
+  "/electric/chevrolet-bolt/": {
+   "title": "Chevrolet Bolt Reliability, Problems & Repair Costs",
+   "query": "chevrolet bolt maintenance cost",
+   "set": "2026-11-23",
+   "pos": 8.3,
+   "impr": 125,
+   "batch": "11-23 one-time striking-distance batch"
+  },
+  "/cars/ford-bronco/": {
+   "title": "Ford Bronco Reliability, Problems & Repair Costs | Lemon Index",
+   "query": "ford bronco maintenance cost",
+   "set": "2026-11-23",
+   "pos": 8.1,
+   "impr": 92,
+   "batch": "11-23 one-time striking-distance batch"
+  },
+  "/electric/tesla-model-s/": {
+   "title": "Tesla Model S Reliability: Problems, Recalls & Range",
+   "query": "tesla model s reliability",
+   "set": "2026-11-23",
+   "pos": 5.6,
+   "impr": 66,
+   "batch": "11-23 one-time striking-distance batch"
+  },
+  "/engines/maserati-nettuno/": {
+   "title": "Maserati Nettuno V6 Engine Problems & Reliability | Lemon Index",
+   "query": "maserati nettuno v6 engine problems",
+   "set": "2026-11-23",
+   "pos": 17.5,
+   "impr": 59,
+   "batch": "11-23 one-time striking-distance batch"
+  }
+ }
+}

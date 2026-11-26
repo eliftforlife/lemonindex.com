@@ -595,6 +595,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
     if QM.ON and not QM.want(path): LG.setdefault(path, ()); return   # 11-17 quick mode: a page outside --only keeps its file and page_dates.json entry; LG still lists it ("built this build" checks)
     if TOV.get(path, {}).get('title'): title = TOV[path]['title']   # 11-12: search-title test from 0 HQ/Tools/gsc_titles.py (data/title_overrides.json)
     title, desc = fit_title(title), fit_desc(desc)
+    if 'SL_PRE' in globals(): SL_PRE(path, title)   # 11-23 SEO batch: page titles for sub-page breadcrumbs (seo_ld.py)
     body, desc = fix_moji(body), fix_moji(desc)
     _tm = re.match(r'^/cars/(.+?)/(?:(\d{4})/)?$', path)   # lazy, so slash ids ('mercedes-benz-glk/glc') match too
     if _tm and (_tm.group(1) in TAB.ON or _tm.group(1) in globals().get('FY', {})) and 'tab_body' in globals(): body = tab_body(_tm.group(1), int(_tm.group(2)) if _tm.group(2) else None, body)
@@ -643,6 +644,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
     _eb = end_block(path, _upd, _shl, '' if path == '/vote/' else ask_fb(path), _inf)
     if _inf is not None: body = body.replace('<!--cpl-info-end-->', ''.join(f'<div class="cpl">{x}</div>' for x in _inf), 1)
     url = BASE + (canon or path); ld = list(ld or []) + [crumbs(path, title)]
+    if 'SL_LD' in globals(): ld = SL_LD(path, title, body, ld)   # 11-23 SEO batch: Car nodes, sub-page breadcrumbs, compare FAQ, recalls WebPage (seo_ld.py)
     lds = ''.join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in (ld or [])).replace('%%PD_ISO%%', _d)
     beacon = f"<script defer src=\"https://static.cloudflareinsights.com/beacon.min.js\" data-cf-beacon='{{\"token\": \"{CF}\"}}'></script>" if CF else ''
     if GA4_ID: beacon += f'<script src="/assets/ga.js?v=3" data-ga="{GA4_ID}" defer></script>'   # 11-24: GA4_ID, not GA (ux_c.py runs at module level and once reused GA for car data, breaking the tag on 7.4K pages)
@@ -1402,6 +1404,7 @@ exec(open('engine_pills.py', encoding='utf-8').read())   # 11-18 engine pages: l
 exec(open('eng6.py', encoding='utf-8').read())   # 11-24 (Elijah): engine pages v6 (ENG6_HOOK in page())
 exec(open('car_pills.py', encoding='utf-8').read())   # 11-18 car pages: tabs and long sections fold into boxes (CAR_HOOK in page())
 exec(open('ans_box.py', encoding='utf-8').read())   # 11-23 Job C: ANS_HOOK, the short answer box on the most-searched pages
+exec(open('seo_ld.py', encoding='utf-8').read())   # 11-23 SEO batch: Quick answers + JSON-LD for EV, supercar, motorcycle, plane, compare, sub and recall pages
 exec(open('model_hero.py', encoding='utf-8').read())   # 11-19 model page top v2 (MH_HOOK in page())
 exec(open('year_ux.py', encoding='utf-8').read())   # 11-25 year page top v2 (YUX_HOOK in page(); needs model_hero's _mh_gauge)
 exec(open('sub_pages.py', encoding='utf-8').read())   # 11-19 card -> own page test (Integra GS-R), SUB_HOOK in page()
