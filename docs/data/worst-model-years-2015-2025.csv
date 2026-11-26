@@ -16,9 +16,9 @@ rank,family_id,model,model_year,lemon_index,nhtsa_complaints,top_problem,early_r
 13,jeep-wrangler,Jeep Wrangler,2018,523,1270,steering,,https://lemonindex.com/cars/jeep-wrangler/2018/
 14,gmc-yukon,GMC Yukon,2015,516,215,lights,,https://lemonindex.com/cars/gmc-yukon/2015/
 15,ford-escape,Ford Escape,2020,495,876,body structure,,https://lemonindex.com/cars/ford-escape/2020/
-16,tesla-model-3,Tesla Model 3,2021,489,578,automatic emergency braking,,https://lemonindex.com/cars/tesla-model-3/2021/
-17,honda-hr-v,Honda HR-V,2023,468,687,wipers & visibility,yes,https://lemonindex.com/cars/honda-hr-v/2023/
-18,cadillac-escalade,Cadillac Escalade,2023,467,232,engine,yes,https://lemonindex.com/cars/cadillac-escalade/2023/
+16,cadillac-escalade,Cadillac Escalade,2023,490,243,engine,yes,https://lemonindex.com/cars/cadillac-escalade/2023/
+17,tesla-model-3,Tesla Model 3,2021,489,578,automatic emergency braking,,https://lemonindex.com/cars/tesla-model-3/2021/
+18,honda-hr-v,Honda HR-V,2023,468,687,wipers & visibility,yes,https://lemonindex.com/cars/honda-hr-v/2023/
 19,chevrolet-bolt,Chevrolet Bolt,2023,465,180,electrical,yes,https://lemonindex.com/cars/chevrolet-bolt/2023/
 20,honda-civic,Honda Civic,2022,437,926,steering,,https://lemonindex.com/cars/honda-civic/2022/
 21,jeep-renegade,Jeep Renegade,2015,428,257,engine,,https://lemonindex.com/cars/jeep-renegade/2015/
@@ -117,21 +117,21 @@ rank,family_id,model,model_year,lemon_index,nhtsa_complaints,top_problem,early_r
 114,ford-bronco-sport,Ford Bronco Sport,2022,221,274,electrical,,https://lemonindex.com/cars/ford-bronco-sport/2022/
 115,kia-sedona,Kia Sedona,2022,220,121,body structure,,https://lemonindex.com/cars/kia-sedona/2022/
 116,toyota-venza,Toyota Venza,2021,220,160,wipers & visibility,,https://lemonindex.com/cars/toyota-venza/2021/
-117,jeep-gladiator,Jeep Gladiator,2021,218,209,steering,,https://lemonindex.com/cars/jeep-gladiator/2021/
-118,kia-telluride,Kia Telluride,2022,218,267,wipers & visibility,,https://lemonindex.com/cars/kia-telluride/2022/
-119,volkswagen-tiguan,Volkswagen Tiguan,2018,218,197,engine,,https://lemonindex.com/cars/volkswagen-tiguan/2018/
-120,acura-mdx,Acura MDX,2016,217,122,transmission & drivetrain,,https://lemonindex.com/cars/acura-mdx/2016/
-121,chevrolet-malibu,Chevrolet Malibu,2018,217,347,engine,,https://lemonindex.com/cars/chevrolet-malibu/2018/
-122,fiat-500,Fiat 500,2015,217,60,electrical,,https://lemonindex.com/cars/fiat-500/2015/
-123,dodge-durango,Dodge Durango,2015,216,137,lights,,https://lemonindex.com/cars/dodge-durango/2015/
-124,ford-mustang,Ford Mustang,2024,213,84,electrical,yes,https://lemonindex.com/cars/ford-mustang/2024/
-125,honda-odyssey,Honda Odyssey,2018,213,229,electrical,,https://lemonindex.com/cars/honda-odyssey/2018/
-126,honda-ridgeline,Honda Ridgeline,2020,212,64,electrical,,https://lemonindex.com/cars/honda-ridgeline/2020/
-127,hyundai-santa-fe,Hyundai Santa Fe,2017,212,298,transmission & drivetrain,,https://lemonindex.com/cars/hyundai-santa-fe/2017/
-128,honda-pilot,Honda Pilot,2019,211,305,electrical,,https://lemonindex.com/cars/honda-pilot/2019/
-129,kia-sorento,Kia Sorento,2025,210,121,engine,yes,https://lemonindex.com/cars/kia-sorento/2025/
-130,mitsubishi-outlander,Mitsubishi Outlander,2016,210,56,transmission & drivetrain,,https://lemonindex.com/cars/mitsubishi-outlander/2016/
-131,cadillac-escalade,Cadillac Escalade,2024,209,74,engine,yes,https://lemonindex.com/cars/cadillac-escalade/2024/
+117,cadillac-escalade,Cadillac Escalade,2024,218,77,engine,yes,https://lemonindex.com/cars/cadillac-escalade/2024/
+118,jeep-gladiator,Jeep Gladiator,2021,218,209,steering,,https://lemonindex.com/cars/jeep-gladiator/2021/
+119,kia-telluride,Kia Telluride,2022,218,267,wipers & visibility,,https://lemonindex.com/cars/kia-telluride/2022/
+120,volkswagen-tiguan,Volkswagen Tiguan,2018,218,197,engine,,https://lemonindex.com/cars/volkswagen-tiguan/2018/
+121,acura-mdx,Acura MDX,2016,217,122,transmission & drivetrain,,https://lemonindex.com/cars/acura-mdx/2016/
+122,chevrolet-malibu,Chevrolet Malibu,2018,217,347,engine,,https://lemonindex.com/cars/chevrolet-malibu/2018/
+123,fiat-500,Fiat 500,2015,217,60,electrical,,https://lemonindex.com/cars/fiat-500/2015/
+124,dodge-durango,Dodge Durango,2015,216,137,lights,,https://lemonindex.com/cars/dodge-durango/2015/
+125,ford-mustang,Ford Mustang,2024,213,84,electrical,yes,https://lemonindex.com/cars/ford-mustang/2024/
+126,honda-odyssey,Honda Odyssey,2018,213,229,electrical,,https://lemonindex.com/cars/honda-odyssey/2018/
+127,honda-ridgeline,Honda Ridgeline,2020,212,64,electrical,,https://lemonindex.com/cars/honda-ridgeline/2020/
+128,hyundai-santa-fe,Hyundai Santa Fe,2017,212,298,transmission & drivetrain,,https://lemonindex.com/cars/hyundai-santa-fe/2017/
+129,honda-pilot,Honda Pilot,2019,211,305,electrical,,https://lemonindex.com/cars/honda-pilot/2019/
+130,kia-sorento,Kia Sorento,2025,210,121,engine,yes,https://lemonindex.com/cars/kia-sorento/2025/
+131,mitsubishi-outlander,Mitsubishi Outlander,2016,210,56,transmission & drivetrain,,https://lemonindex.com/cars/mitsubishi-outlander/2016/
 132,honda-cr-v,Honda CR-V,2018,209,803,engine,,https://lemonindex.com/cars/honda-cr-v/2018/
 133,kia-sorento,Kia Sorento,2021,209,165,transmission & drivetrain,,https://lemonindex.com/cars/kia-sorento/2021/
 134,honda-ridgeline,Honda Ridgeline,2023,207,128,lights,yes,https://lemonindex.com/cars/honda-ridgeline/2023/
@@ -321,38 +321,38 @@ rank,family_id,model,model_year,lemon_index,nhtsa_complaints,top_problem,early_r
 318,honda-odyssey,Honda Odyssey,2023,118,105,automatic emergency braking,yes,https://lemonindex.com/cars/honda-odyssey/2023/
 319,toyota-camry,Toyota Camry,2018,118,427,transmission & drivetrain,,https://lemonindex.com/cars/toyota-camry/2018/
 320,bmw-x1,BMW X1,2018,117,35,body structure,,https://lemonindex.com/cars/bmw-x1/2018/
-321,chevrolet-blazer,Chevrolet Blazer,2025,117,33,electrical,yes,https://lemonindex.com/cars/chevrolet-blazer/2025/
-322,honda-cr-v,Honda CR-V,2025,117,288,steering,yes,https://lemonindex.com/cars/honda-cr-v/2025/
-323,hyundai-sonata,Hyundai Sonata,2022,117,87,transmission & drivetrain,,https://lemonindex.com/cars/hyundai-sonata/2022/
-324,mercedes-benz-sprinter,Mercedes-Benz Sprinter,2021,117,46,automatic emergency braking,,https://lemonindex.com/cars/mercedes-benz-sprinter/2021/
-325,nissan-armada,Nissan Armada,2019,117,38,electrical,,https://lemonindex.com/cars/nissan-armada/2019/
-326,acura-rdx,Acura RDX,2021,116,64,engine,,https://lemonindex.com/cars/acura-rdx/2021/
-327,chevrolet-blazer,Chevrolet Blazer,2024,116,51,automatic emergency braking,yes,https://lemonindex.com/cars/chevrolet-blazer/2024/
-328,ford-expedition,Ford Expedition,2024,116,78,automatic emergency braking,yes,https://lemonindex.com/cars/ford-expedition/2024/
-329,ford-taurus,Ford Taurus,2015,116,50,engine,,https://lemonindex.com/cars/ford-taurus/2015/
-330,jeep-compass,Jeep Compass,2016,116,109,engine,,https://lemonindex.com/cars/jeep-compass/2016/
-331,subaru-outback,Subaru Outback,2016,116,212,wipers & visibility,,https://lemonindex.com/cars/subaru-outback/2016/
-332,chevrolet-corvette,Chevrolet Corvette,2020,115,24,body structure,,https://lemonindex.com/cars/chevrolet-corvette/2020/
-333,kia-sportage,Kia Sportage,2023,115,192,electrical,yes,https://lemonindex.com/cars/kia-sportage/2023/
-334,chrysler-pacifica,Chrysler Pacifica,2020,114,100,engine,,https://lemonindex.com/cars/chrysler-pacifica/2020/
-335,honda-insight,Honda Insight,2019,114,42,electrical,,https://lemonindex.com/cars/honda-insight/2019/
-336,hyundai-elantra,Hyundai Elantra,2017,114,241,engine,,https://lemonindex.com/cars/hyundai-elantra/2017/
-337,subaru-forester,Subaru Forester,2015,114,194,engine,,https://lemonindex.com/cars/subaru-forester/2015/
-338,toyota-tacoma,Toyota Tacoma,2016,114,218,transmission & drivetrain,,https://lemonindex.com/cars/toyota-tacoma/2016/
-339,volvo-xc60,Volvo XC60,2023,114,54,electrical,yes,https://lemonindex.com/cars/volvo-xc60/2023/
-340,honda-ridgeline,Honda Ridgeline,2018,113,46,electrical,,https://lemonindex.com/cars/honda-ridgeline/2018/
-341,kia-sorento,Kia Sorento,2019,113,114,transmission & drivetrain,,https://lemonindex.com/cars/kia-sorento/2019/
-342,mazda3,Mazda3,2021,113,41,engine,,https://lemonindex.com/cars/mazda3/2021/
-343,chevrolet-silverado,Chevrolet Silverado,2024,112,534,engine,yes,https://lemonindex.com/cars/chevrolet-silverado/2024/
-344,chevrolet-tahoe,Chevrolet Tahoe,2022,112,145,engine,,https://lemonindex.com/cars/chevrolet-tahoe/2022/
-345,ford-edge,Ford Edge,2017,112,168,engine,,https://lemonindex.com/cars/ford-edge/2017/
-346,ford-expedition,Ford Expedition,2017,112,64,engine,,https://lemonindex.com/cars/ford-expedition/2017/
-347,ford-explorer,Ford Explorer,2021,112,239,transmission & drivetrain,,https://lemonindex.com/cars/ford-explorer/2021/
-348,ford-focus,Ford Focus,2015,112,229,transmission & drivetrain,,https://lemonindex.com/cars/ford-focus/2015/
-349,honda-pilot,Honda Pilot,2023,112,146,seat belts,yes,https://lemonindex.com/cars/honda-pilot/2023/
-350,kia-k5,Kia K5,2022,112,100,fuel system,,https://lemonindex.com/cars/kia-k5/2022/
-351,volkswagen-atlas,Volkswagen Atlas,2025,112,73,electrical,yes,https://lemonindex.com/cars/volkswagen-atlas/2025/
-352,cadillac-escalade,Cadillac Escalade,2025,111,33,engine,yes,https://lemonindex.com/cars/cadillac-escalade/2025/
+321,cadillac-escalade,Cadillac Escalade,2025,117,35,engine,yes,https://lemonindex.com/cars/cadillac-escalade/2025/
+322,chevrolet-blazer,Chevrolet Blazer,2025,117,33,electrical,yes,https://lemonindex.com/cars/chevrolet-blazer/2025/
+323,honda-cr-v,Honda CR-V,2025,117,288,steering,yes,https://lemonindex.com/cars/honda-cr-v/2025/
+324,hyundai-sonata,Hyundai Sonata,2022,117,87,transmission & drivetrain,,https://lemonindex.com/cars/hyundai-sonata/2022/
+325,mercedes-benz-sprinter,Mercedes-Benz Sprinter,2021,117,46,automatic emergency braking,,https://lemonindex.com/cars/mercedes-benz-sprinter/2021/
+326,nissan-armada,Nissan Armada,2019,117,38,electrical,,https://lemonindex.com/cars/nissan-armada/2019/
+327,acura-rdx,Acura RDX,2021,116,64,engine,,https://lemonindex.com/cars/acura-rdx/2021/
+328,chevrolet-blazer,Chevrolet Blazer,2024,116,51,automatic emergency braking,yes,https://lemonindex.com/cars/chevrolet-blazer/2024/
+329,ford-expedition,Ford Expedition,2024,116,78,automatic emergency braking,yes,https://lemonindex.com/cars/ford-expedition/2024/
+330,ford-taurus,Ford Taurus,2015,116,50,engine,,https://lemonindex.com/cars/ford-taurus/2015/
+331,jeep-compass,Jeep Compass,2016,116,109,engine,,https://lemonindex.com/cars/jeep-compass/2016/
+332,subaru-outback,Subaru Outback,2016,116,212,wipers & visibility,,https://lemonindex.com/cars/subaru-outback/2016/
+333,chevrolet-corvette,Chevrolet Corvette,2020,115,24,body structure,,https://lemonindex.com/cars/chevrolet-corvette/2020/
+334,kia-sportage,Kia Sportage,2023,115,192,electrical,yes,https://lemonindex.com/cars/kia-sportage/2023/
+335,chrysler-pacifica,Chrysler Pacifica,2020,114,100,engine,,https://lemonindex.com/cars/chrysler-pacifica/2020/
+336,honda-insight,Honda Insight,2019,114,42,electrical,,https://lemonindex.com/cars/honda-insight/2019/
+337,hyundai-elantra,Hyundai Elantra,2017,114,241,engine,,https://lemonindex.com/cars/hyundai-elantra/2017/
+338,subaru-forester,Subaru Forester,2015,114,194,engine,,https://lemonindex.com/cars/subaru-forester/2015/
+339,toyota-tacoma,Toyota Tacoma,2016,114,218,transmission & drivetrain,,https://lemonindex.com/cars/toyota-tacoma/2016/
+340,volvo-xc60,Volvo XC60,2023,114,54,electrical,yes,https://lemonindex.com/cars/volvo-xc60/2023/
+341,honda-ridgeline,Honda Ridgeline,2018,113,46,electrical,,https://lemonindex.com/cars/honda-ridgeline/2018/
+342,kia-sorento,Kia Sorento,2019,113,114,transmission & drivetrain,,https://lemonindex.com/cars/kia-sorento/2019/
+343,mazda3,Mazda3,2021,113,41,engine,,https://lemonindex.com/cars/mazda3/2021/
+344,chevrolet-silverado,Chevrolet Silverado,2024,112,534,engine,yes,https://lemonindex.com/cars/chevrolet-silverado/2024/
+345,chevrolet-tahoe,Chevrolet Tahoe,2022,112,145,engine,,https://lemonindex.com/cars/chevrolet-tahoe/2022/
+346,ford-edge,Ford Edge,2017,112,168,engine,,https://lemonindex.com/cars/ford-edge/2017/
+347,ford-expedition,Ford Expedition,2017,112,64,engine,,https://lemonindex.com/cars/ford-expedition/2017/
+348,ford-explorer,Ford Explorer,2021,112,239,transmission & drivetrain,,https://lemonindex.com/cars/ford-explorer/2021/
+349,ford-focus,Ford Focus,2015,112,229,transmission & drivetrain,,https://lemonindex.com/cars/ford-focus/2015/
+350,honda-pilot,Honda Pilot,2023,112,146,seat belts,yes,https://lemonindex.com/cars/honda-pilot/2023/
+351,kia-k5,Kia K5,2022,112,100,fuel system,,https://lemonindex.com/cars/kia-k5/2022/
+352,volkswagen-atlas,Volkswagen Atlas,2025,112,73,electrical,yes,https://lemonindex.com/cars/volkswagen-atlas/2025/
 353,hyundai-sonata,Hyundai Sonata,2020,111,80,engine,,https://lemonindex.com/cars/hyundai-sonata/2020/
 354,ram-promaster,Ram ProMaster,2021,111,68,lane assist,,https://lemonindex.com/cars/ram-promaster/2021/
 355,toyota-rav4,Toyota RAV4,2019,111,508,fuel system,,https://lemonindex.com/cars/toyota-rav4/2019/
@@ -616,25 +616,25 @@ rank,family_id,model,model_year,lemon_index,nhtsa_complaints,top_problem,early_r
 613,gmc-terrain,GMC Terrain,2018,71,82,electrical,,https://lemonindex.com/cars/gmc-terrain/2018/
 614,hyundai-veloster,Hyundai Veloster,2019,71,17,body structure,,https://lemonindex.com/cars/hyundai-veloster/2019/
 615,mercedes-benz-sprinter,Mercedes-Benz Sprinter,2022,71,41,engine,,https://lemonindex.com/cars/mercedes-benz-sprinter/2022/
-616,subaru-crosstrek,Subaru Crosstrek,2021,71,87,wipers & visibility,,https://lemonindex.com/cars/subaru-crosstrek/2021/
-617,acura-mdx,Acura MDX,2015,70,42,electrical,,https://lemonindex.com/cars/acura-mdx/2015/
-618,bmw-x3,BMW X3,2016,70,31,brakes,,https://lemonindex.com/cars/bmw-x3/2016/
-619,chevrolet-colorado,Chevrolet Colorado,2018,70,95,transmission & drivetrain,,https://lemonindex.com/cars/chevrolet-colorado/2018/
-620,chevrolet-silverado,Chevrolet Silverado,2016,70,406,brakes,,https://lemonindex.com/cars/chevrolet-silverado/2016/
-621,ford-escape,Ford Escape,2024,70,88,electrical,yes,https://lemonindex.com/cars/ford-escape/2024/
-622,ford-flex,Ford Flex,2016,70,16,transmission & drivetrain,,https://lemonindex.com/cars/ford-flex/2016/
-623,hyundai-kona,Hyundai Kona,2023,70,66,electrical,yes,https://lemonindex.com/cars/hyundai-kona/2023/
-624,lincoln-mkz,Lincoln MKZ,2017,70,21,engine,,https://lemonindex.com/cars/lincoln-mkz/2017/
-625,toyota-prius,Toyota Prius,2024,70,27,lights,yes,https://lemonindex.com/cars/toyota-prius/2024/
-626,toyota-tacoma,Toyota Tacoma,2017,70,147,transmission & drivetrain,,https://lemonindex.com/cars/toyota-tacoma/2017/
-627,audi-q7,Audi Q7,2017,69,50,brakes,,https://lemonindex.com/cars/audi-q7/2017/
-628,chevrolet-spark,Chevrolet Spark,2015,69,24,brakes,,https://lemonindex.com/cars/chevrolet-spark/2015/
-629,hyundai-santa-fe,Hyundai Santa Fe,2018,69,85,engine,,https://lemonindex.com/cars/hyundai-santa-fe/2018/
-630,jeep-wrangler,Jeep Wrangler,2017,69,138,electrical,,https://lemonindex.com/cars/jeep-wrangler/2017/
-631,kia-sorento,Kia Sorento,2020,69,50,transmission & drivetrain,,https://lemonindex.com/cars/kia-sorento/2020/
-632,kia-soul,Kia Soul,2018,69,76,engine,,https://lemonindex.com/cars/kia-soul/2018/
-633,mazda3,Mazda3,2020,69,24,automatic emergency braking,,https://lemonindex.com/cars/mazda3/2020/
-634,mercedes-benz-sprinter,Mercedes-Benz Sprinter,2023,69,38,transmission & drivetrain,yes,https://lemonindex.com/cars/mercedes-benz-sprinter/2023/
+616,mercedes-benz-sprinter,Mercedes-Benz Sprinter,2023,71,39,engine,yes,https://lemonindex.com/cars/mercedes-benz-sprinter/2023/
+617,subaru-crosstrek,Subaru Crosstrek,2021,71,87,wipers & visibility,,https://lemonindex.com/cars/subaru-crosstrek/2021/
+618,acura-mdx,Acura MDX,2015,70,42,electrical,,https://lemonindex.com/cars/acura-mdx/2015/
+619,bmw-x3,BMW X3,2016,70,31,brakes,,https://lemonindex.com/cars/bmw-x3/2016/
+620,chevrolet-colorado,Chevrolet Colorado,2018,70,95,transmission & drivetrain,,https://lemonindex.com/cars/chevrolet-colorado/2018/
+621,chevrolet-silverado,Chevrolet Silverado,2016,70,406,brakes,,https://lemonindex.com/cars/chevrolet-silverado/2016/
+622,ford-escape,Ford Escape,2024,70,88,electrical,yes,https://lemonindex.com/cars/ford-escape/2024/
+623,ford-flex,Ford Flex,2016,70,16,transmission & drivetrain,,https://lemonindex.com/cars/ford-flex/2016/
+624,hyundai-kona,Hyundai Kona,2023,70,66,electrical,yes,https://lemonindex.com/cars/hyundai-kona/2023/
+625,lincoln-mkz,Lincoln MKZ,2017,70,21,engine,,https://lemonindex.com/cars/lincoln-mkz/2017/
+626,toyota-prius,Toyota Prius,2024,70,27,lights,yes,https://lemonindex.com/cars/toyota-prius/2024/
+627,toyota-tacoma,Toyota Tacoma,2017,70,147,transmission & drivetrain,,https://lemonindex.com/cars/toyota-tacoma/2017/
+628,audi-q7,Audi Q7,2017,69,50,brakes,,https://lemonindex.com/cars/audi-q7/2017/
+629,chevrolet-spark,Chevrolet Spark,2015,69,24,brakes,,https://lemonindex.com/cars/chevrolet-spark/2015/
+630,hyundai-santa-fe,Hyundai Santa Fe,2018,69,85,engine,,https://lemonindex.com/cars/hyundai-santa-fe/2018/
+631,jeep-wrangler,Jeep Wrangler,2017,69,138,electrical,,https://lemonindex.com/cars/jeep-wrangler/2017/
+632,kia-sorento,Kia Sorento,2020,69,50,transmission & drivetrain,,https://lemonindex.com/cars/kia-sorento/2020/
+633,kia-soul,Kia Soul,2018,69,76,engine,,https://lemonindex.com/cars/kia-soul/2018/
+634,mazda3,Mazda3,2020,69,24,automatic emergency braking,,https://lemonindex.com/cars/mazda3/2020/
 635,nissan-kicks,Nissan Kicks,2025,69,43,electrical,yes,https://lemonindex.com/cars/nissan-kicks/2025/
 636,volkswagen-tiguan,Volkswagen Tiguan,2016,69,30,airbags,,https://lemonindex.com/cars/volkswagen-tiguan/2016/
 637,buick-encore,Buick Encore,2015,68,45,brakes,,https://lemonindex.com/cars/buick-encore/2015/
@@ -974,51 +974,51 @@ rank,family_id,model,model_year,lemon_index,nhtsa_complaints,top_problem,early_r
 971,chevrolet-cruze,Chevrolet Cruze,2015,41,97,electrical,,https://lemonindex.com/cars/chevrolet-cruze/2015/
 972,chevrolet-malibu,Chevrolet Malibu,2024,41,43,electrical,yes,https://lemonindex.com/cars/chevrolet-malibu/2024/
 973,chevrolet-suburban,Chevrolet Suburban,2018,41,25,brakes,,https://lemonindex.com/cars/chevrolet-suburban/2018/
-974,honda-hr-v,Honda HR-V,2019,41,41,brakes,,https://lemonindex.com/cars/honda-hr-v/2019/
-975,honda-hr-v,Honda HR-V,2022,41,59,electrical,,https://lemonindex.com/cars/honda-hr-v/2022/
-976,jeep-compass,Jeep Compass,2023,41,47,electrical,yes,https://lemonindex.com/cars/jeep-compass/2023/
-977,lexus-rx,Lexus RX,2019,41,46,fuel system,,https://lemonindex.com/cars/lexus-rx/2019/
-978,mitsubishi-outlander-sport,Mitsubishi Outlander Sport,2016,41,14,engine,,https://lemonindex.com/cars/mitsubishi-outlander-sport/2016/
-979,subaru-forester,Subaru Forester,2023,41,74,automatic emergency braking,yes,https://lemonindex.com/cars/subaru-forester/2023/
-980,bmw-x5,BMW X5,2018,40,19,fuel system,,https://lemonindex.com/cars/bmw-x5/2018/
-981,bmw-x5,BMW X5,2020,40,19,electrical,,https://lemonindex.com/cars/bmw-x5/2020/
-982,chevrolet-malibu,Chevrolet Malibu,2022,40,57,electrical,,https://lemonindex.com/cars/chevrolet-malibu/2022/
-983,ford-taurus,Ford Taurus,2017,40,14,electrical,,https://lemonindex.com/cars/ford-taurus/2017/
-984,ford-transit,Ford Transit,2016,40,57,transmission & drivetrain,,https://lemonindex.com/cars/ford-transit/2016/
-985,honda-civic,Honda Civic,2020,40,101,transmission & drivetrain,,https://lemonindex.com/cars/honda-civic/2020/
-986,hyundai-accent,Hyundai Accent,2017,40,27,airbags,,https://lemonindex.com/cars/hyundai-accent/2017/
-987,kia-forte,Kia Forte,2018,40,43,engine,,https://lemonindex.com/cars/kia-forte/2018/
-988,kia-sportage,Kia Sportage,2015,40,21,engine,,https://lemonindex.com/cars/kia-sportage/2015/
-989,lincoln-mkc,Lincoln MKC,2016,40,12,engine,,https://lemonindex.com/cars/lincoln-mkc/2016/
-990,mercedes-benz-glk/glc,Mercedes-Benz GLK/GLC,2018,40,28,brakes,,https://lemonindex.com/cars/mercedes-benz-glk/glc/2018/
-991,mini-cooper,Mini Cooper,2016,40,16,lights,,https://lemonindex.com/cars/mini-cooper/2016/
-992,nissan-altima,Nissan Altima,2024,40,41,automatic emergency braking,yes,https://lemonindex.com/cars/nissan-altima/2024/
-993,toyota-c-hr,Toyota C-HR,2021,40,15,electrical,,https://lemonindex.com/cars/toyota-c-hr/2021/
-994,toyota-sienna,Toyota Sienna,2019,40,32,fuel system,,https://lemonindex.com/cars/toyota-sienna/2019/
-995,volvo-xc90,Volvo XC90,2021,40,15,brakes,,https://lemonindex.com/cars/volvo-xc90/2021/
-996,bmw-5-series,BMW 5 Series,2019,39,16,brakes,,https://lemonindex.com/cars/bmw-5-series/2019/
-997,chevrolet-corvette,Chevrolet Corvette,2022,39,18,electrical,,https://lemonindex.com/cars/chevrolet-corvette/2022/
-998,chevrolet-cruze,Chevrolet Cruze,2018,39,62,engine,,https://lemonindex.com/cars/chevrolet-cruze/2018/
-999,chevrolet-equinox,Chevrolet Equinox,2019,39,136,engine,,https://lemonindex.com/cars/chevrolet-equinox/2019/
-1000,chrysler-pacifica,Chrysler Pacifica,2025,39,30,airbags,yes,https://lemonindex.com/cars/chrysler-pacifica/2025/
-1001,dodge-durango,Dodge Durango,2023,39,32,lights,yes,https://lemonindex.com/cars/dodge-durango/2023/
-1002,ford-e-series,Ford E-Series,2017,39,22,steering,,https://lemonindex.com/cars/ford-e-series/2017/
-1003,ford-taurus,Ford Taurus,2016,39,14,engine,,https://lemonindex.com/cars/ford-taurus/2016/
-1004,infiniti-q50,Infiniti Q50,2017,39,17,brakes,,https://lemonindex.com/cars/infiniti-q50/2017/
-1005,infiniti-q50,Infiniti Q50,2019,39,17,electrical,,https://lemonindex.com/cars/infiniti-q50/2019/
-1006,lexus-rx,Lexus RX,2017,39,45,brakes,,https://lemonindex.com/cars/lexus-rx/2017/
-1007,mazda-cx-5,Mazda CX-5,2019,39,62,electrical,,https://lemonindex.com/cars/mazda-cx-5/2019/
-1008,mercedes-benz-gla,Mercedes-Benz GLA,2019,39,9,transmission & drivetrain,,https://lemonindex.com/cars/mercedes-benz-gla/2019/
-1009,mitsubishi-outlander-sport,Mitsubishi Outlander Sport,2021,39,13,electrical,,https://lemonindex.com/cars/mitsubishi-outlander-sport/2021/
-1010,ram-promaster,Ram ProMaster,2016,39,16,lights,,https://lemonindex.com/cars/ram-promaster/2016/
-1011,subaru-crosstrek,Subaru Crosstrek,2015,39,34,brakes,,https://lemonindex.com/cars/subaru-crosstrek/2015/
-1012,volvo-xc60,Volvo XC60,2020,39,12,brakes,,https://lemonindex.com/cars/volvo-xc60/2020/
-1013,audi-q5,Audi Q5,2019,38,26,steering,,https://lemonindex.com/cars/audi-q5/2019/
-1014,buick-lacrosse,Buick LaCrosse,2015,38,17,airbags,,https://lemonindex.com/cars/buick-lacrosse/2015/
-1015,chevrolet-blazer,Chevrolet Blazer,2022,38,32,electrical,,https://lemonindex.com/cars/chevrolet-blazer/2022/
-1016,chevrolet-equinox,Chevrolet Equinox,2023,38,99,fuel system,yes,https://lemonindex.com/cars/chevrolet-equinox/2023/
-1017,ford-ecosport,Ford EcoSport,2019,38,25,engine,,https://lemonindex.com/cars/ford-ecosport/2019/
-1018,ford-transit,Ford Transit,2023,38,59,electrical,yes,https://lemonindex.com/cars/ford-transit/2023/
+974,ford-transit,Ford Transit,2023,41,63,electrical,yes,https://lemonindex.com/cars/ford-transit/2023/
+975,honda-hr-v,Honda HR-V,2019,41,41,brakes,,https://lemonindex.com/cars/honda-hr-v/2019/
+976,honda-hr-v,Honda HR-V,2022,41,59,electrical,,https://lemonindex.com/cars/honda-hr-v/2022/
+977,jeep-compass,Jeep Compass,2023,41,47,electrical,yes,https://lemonindex.com/cars/jeep-compass/2023/
+978,lexus-rx,Lexus RX,2019,41,46,fuel system,,https://lemonindex.com/cars/lexus-rx/2019/
+979,mitsubishi-outlander-sport,Mitsubishi Outlander Sport,2016,41,14,engine,,https://lemonindex.com/cars/mitsubishi-outlander-sport/2016/
+980,subaru-forester,Subaru Forester,2023,41,74,automatic emergency braking,yes,https://lemonindex.com/cars/subaru-forester/2023/
+981,bmw-x5,BMW X5,2018,40,19,fuel system,,https://lemonindex.com/cars/bmw-x5/2018/
+982,bmw-x5,BMW X5,2020,40,19,electrical,,https://lemonindex.com/cars/bmw-x5/2020/
+983,chevrolet-malibu,Chevrolet Malibu,2022,40,57,electrical,,https://lemonindex.com/cars/chevrolet-malibu/2022/
+984,ford-taurus,Ford Taurus,2017,40,14,electrical,,https://lemonindex.com/cars/ford-taurus/2017/
+985,ford-transit,Ford Transit,2016,40,57,transmission & drivetrain,,https://lemonindex.com/cars/ford-transit/2016/
+986,honda-civic,Honda Civic,2020,40,101,transmission & drivetrain,,https://lemonindex.com/cars/honda-civic/2020/
+987,hyundai-accent,Hyundai Accent,2017,40,27,airbags,,https://lemonindex.com/cars/hyundai-accent/2017/
+988,kia-forte,Kia Forte,2018,40,43,engine,,https://lemonindex.com/cars/kia-forte/2018/
+989,kia-sportage,Kia Sportage,2015,40,21,engine,,https://lemonindex.com/cars/kia-sportage/2015/
+990,lincoln-mkc,Lincoln MKC,2016,40,12,engine,,https://lemonindex.com/cars/lincoln-mkc/2016/
+991,mercedes-benz-glk/glc,Mercedes-Benz GLK/GLC,2018,40,28,brakes,,https://lemonindex.com/cars/mercedes-benz-glk/glc/2018/
+992,mini-cooper,Mini Cooper,2016,40,16,lights,,https://lemonindex.com/cars/mini-cooper/2016/
+993,nissan-altima,Nissan Altima,2024,40,41,automatic emergency braking,yes,https://lemonindex.com/cars/nissan-altima/2024/
+994,toyota-c-hr,Toyota C-HR,2021,40,15,electrical,,https://lemonindex.com/cars/toyota-c-hr/2021/
+995,toyota-sienna,Toyota Sienna,2019,40,32,fuel system,,https://lemonindex.com/cars/toyota-sienna/2019/
+996,volvo-xc90,Volvo XC90,2021,40,15,brakes,,https://lemonindex.com/cars/volvo-xc90/2021/
+997,bmw-5-series,BMW 5 Series,2019,39,16,brakes,,https://lemonindex.com/cars/bmw-5-series/2019/
+998,chevrolet-corvette,Chevrolet Corvette,2022,39,18,electrical,,https://lemonindex.com/cars/chevrolet-corvette/2022/
+999,chevrolet-cruze,Chevrolet Cruze,2018,39,62,engine,,https://lemonindex.com/cars/chevrolet-cruze/2018/
+1000,chevrolet-equinox,Chevrolet Equinox,2019,39,136,engine,,https://lemonindex.com/cars/chevrolet-equinox/2019/
+1001,chrysler-pacifica,Chrysler Pacifica,2025,39,30,airbags,yes,https://lemonindex.com/cars/chrysler-pacifica/2025/
+1002,dodge-durango,Dodge Durango,2023,39,32,lights,yes,https://lemonindex.com/cars/dodge-durango/2023/
+1003,ford-e-series,Ford E-Series,2017,39,22,steering,,https://lemonindex.com/cars/ford-e-series/2017/
+1004,ford-taurus,Ford Taurus,2016,39,14,engine,,https://lemonindex.com/cars/ford-taurus/2016/
+1005,infiniti-q50,Infiniti Q50,2017,39,17,brakes,,https://lemonindex.com/cars/infiniti-q50/2017/
+1006,infiniti-q50,Infiniti Q50,2019,39,17,electrical,,https://lemonindex.com/cars/infiniti-q50/2019/
+1007,lexus-rx,Lexus RX,2017,39,45,brakes,,https://lemonindex.com/cars/lexus-rx/2017/
+1008,mazda-cx-5,Mazda CX-5,2019,39,62,electrical,,https://lemonindex.com/cars/mazda-cx-5/2019/
+1009,mercedes-benz-gla,Mercedes-Benz GLA,2019,39,9,transmission & drivetrain,,https://lemonindex.com/cars/mercedes-benz-gla/2019/
+1010,mitsubishi-outlander-sport,Mitsubishi Outlander Sport,2021,39,13,electrical,,https://lemonindex.com/cars/mitsubishi-outlander-sport/2021/
+1011,ram-promaster,Ram ProMaster,2016,39,16,lights,,https://lemonindex.com/cars/ram-promaster/2016/
+1012,subaru-crosstrek,Subaru Crosstrek,2015,39,34,brakes,,https://lemonindex.com/cars/subaru-crosstrek/2015/
+1013,volvo-xc60,Volvo XC60,2020,39,12,brakes,,https://lemonindex.com/cars/volvo-xc60/2020/
+1014,audi-q5,Audi Q5,2019,38,26,steering,,https://lemonindex.com/cars/audi-q5/2019/
+1015,buick-lacrosse,Buick LaCrosse,2015,38,17,airbags,,https://lemonindex.com/cars/buick-lacrosse/2015/
+1016,chevrolet-blazer,Chevrolet Blazer,2022,38,32,electrical,,https://lemonindex.com/cars/chevrolet-blazer/2022/
+1017,chevrolet-equinox,Chevrolet Equinox,2023,38,99,fuel system,yes,https://lemonindex.com/cars/chevrolet-equinox/2023/
+1018,ford-ecosport,Ford EcoSport,2019,38,25,engine,,https://lemonindex.com/cars/ford-ecosport/2019/
 1019,hyundai-elantra,Hyundai Elantra,2016,38,84,engine,,https://lemonindex.com/cars/hyundai-elantra/2016/
 1020,hyundai-elantra,Hyundai Elantra,2025,38,34,lane assist,yes,https://lemonindex.com/cars/hyundai-elantra/2025/
 1021,hyundai-santa-fe,Hyundai Santa Fe,2016,38,50,airbags,,https://lemonindex.com/cars/hyundai-santa-fe/2016/
@@ -1220,19 +1220,19 @@ rank,family_id,model,model_year,lemon_index,nhtsa_complaints,top_problem,early_r
 1217,lexus-rx,Lexus RX,2020,23,22,"fuel system, gasoline",,https://lemonindex.com/cars/lexus-rx/2020/
 1218,chevrolet-cruze,Chevrolet Cruze,2019,22,11,brakes,,https://lemonindex.com/cars/chevrolet-cruze/2019/
 1219,dodge-journey,Dodge Journey,2020,22,11,steering,,https://lemonindex.com/cars/dodge-journey/2020/
-1220,hyundai-accent,Hyundai Accent,2019,22,6,engine,,https://lemonindex.com/cars/hyundai-accent/2019/
-1221,kia-forte,Kia Forte,2024,22,26,engine,yes,https://lemonindex.com/cars/kia-forte/2024/
-1222,toyota-4runner,Toyota 4Runner,2020,22,27,airbags,,https://lemonindex.com/cars/toyota-4runner/2020/
-1223,toyota-4runner,Toyota 4Runner,2022,22,34,airbags,,https://lemonindex.com/cars/toyota-4runner/2022/
-1224,toyota-4runner,Toyota 4Runner,2023,22,33,tires,yes,https://lemonindex.com/cars/toyota-4runner/2023/
-1225,toyota-camry,Toyota Camry,2017,22,89,speed control,,https://lemonindex.com/cars/toyota-camry/2017/
-1226,toyota-corolla,Toyota Corolla,2025,22,33,airbags,yes,https://lemonindex.com/cars/toyota-corolla/2025/
-1227,toyota-tacoma,Toyota Tacoma,2021,22,54,brakes,,https://lemonindex.com/cars/toyota-tacoma/2021/
-1228,toyota-tundra,Toyota Tundra,2021,22,19,seats,,https://lemonindex.com/cars/toyota-tundra/2021/
-1229,bmw-5-series,BMW 5 Series,2017,21,9,seat belts,,https://lemonindex.com/cars/bmw-5-series/2017/
-1230,chevrolet-spark,Chevrolet Spark,2018,21,5,engine,,https://lemonindex.com/cars/chevrolet-spark/2018/
-1231,chevrolet-trax,Chevrolet Trax,2022,21,8,engine,,https://lemonindex.com/cars/chevrolet-trax/2022/
-1232,ford-transit,Ford Transit,2024,21,28,body structure,yes,https://lemonindex.com/cars/ford-transit/2024/
+1220,ford-transit,Ford Transit,2024,22,29,body structure,yes,https://lemonindex.com/cars/ford-transit/2024/
+1221,hyundai-accent,Hyundai Accent,2019,22,6,engine,,https://lemonindex.com/cars/hyundai-accent/2019/
+1222,kia-forte,Kia Forte,2024,22,26,engine,yes,https://lemonindex.com/cars/kia-forte/2024/
+1223,toyota-4runner,Toyota 4Runner,2020,22,27,airbags,,https://lemonindex.com/cars/toyota-4runner/2020/
+1224,toyota-4runner,Toyota 4Runner,2022,22,34,airbags,,https://lemonindex.com/cars/toyota-4runner/2022/
+1225,toyota-4runner,Toyota 4Runner,2023,22,33,tires,yes,https://lemonindex.com/cars/toyota-4runner/2023/
+1226,toyota-camry,Toyota Camry,2017,22,89,speed control,,https://lemonindex.com/cars/toyota-camry/2017/
+1227,toyota-corolla,Toyota Corolla,2025,22,33,airbags,yes,https://lemonindex.com/cars/toyota-corolla/2025/
+1228,toyota-tacoma,Toyota Tacoma,2021,22,54,brakes,,https://lemonindex.com/cars/toyota-tacoma/2021/
+1229,toyota-tundra,Toyota Tundra,2021,22,19,seats,,https://lemonindex.com/cars/toyota-tundra/2021/
+1230,bmw-5-series,BMW 5 Series,2017,21,9,seat belts,,https://lemonindex.com/cars/bmw-5-series/2017/
+1231,chevrolet-spark,Chevrolet Spark,2018,21,5,engine,,https://lemonindex.com/cars/chevrolet-spark/2018/
+1232,chevrolet-trax,Chevrolet Trax,2022,21,8,engine,,https://lemonindex.com/cars/chevrolet-trax/2022/
 1233,lexus-es,Lexus ES,2015,21,14,brakes,,https://lemonindex.com/cars/lexus-es/2015/
 1234,lexus-es,Lexus ES,2022,21,11,automatic emergency braking,,https://lemonindex.com/cars/lexus-es/2022/
 1235,porsche-macan,Porsche Macan,2021,21,5,body structure,,https://lemonindex.com/cars/porsche-macan/2021/
