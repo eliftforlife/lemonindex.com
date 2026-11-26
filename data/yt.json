@@ -43288,15 +43288,14 @@
     2011,
     2012,
     2013,
-    2014,
-    2015
+    2014
    ],
-   "gen": "2009–2015 Nissan Maxima",
+   "gen": "2009–2014 Nissan Maxima",
    "kind": "repair",
    "noun": "generation",
    "head": "Fixes owners look up most.",
-   "n": 200,
-   "views": 15896599,
+   "n": 187,
+   "views": 14915641,
    "topics": [
     {
      "name": "Infotainment, battery & electrical",
@@ -43332,28 +43331,6 @@
      }
     },
     {
-     "name": "Heat, A/C & blend door",
-     "views": 359814,
-     "n": 7,
-     "best": {
-      "id": "NgxXGuzM0Kg",
-      "title": "2015 - 2018 Nissan Maxima Cabin Air Filter - How To Change Remove Replace Replacement Location",
-      "channel": "PYR Automotive ",
-      "views": 118572
-     }
-    },
-    {
-     "name": "Oil changes & service",
-     "views": 289638,
-     "n": 4,
-     "best": {
-      "id": "EeWsqQpL-48",
-      "title": "2010 Maxima reset maintenance",
-      "channel": "Lehew",
-      "views": 165271
-     }
-    },
-    {
      "name": "Transmission & shifter",
      "views": 265314,
      "n": 4,
@@ -43362,6 +43339,28 @@
       "title": "Nissan Maxima CVT Transmission Fluid and filters change 2013-2019",
       "channel": "RG AutoVlog",
       "views": 133974
+     }
+    },
+    {
+     "name": "Oil changes & service",
+     "views": 258306,
+     "n": 3,
+     "best": {
+      "id": "EeWsqQpL-48",
+      "title": "2010 Maxima reset maintenance",
+      "channel": "Lehew",
+      "views": 165271
+     }
+    },
+    {
+     "name": "Heat, A/C & blend door",
+     "views": 214928,
+     "n": 5,
+     "best": {
+      "id": "HLGNLQOWszw",
+      "title": "How to Replace Cabin Air Filter 2012 Nissan Maxima | AQ1140",
+      "channel": "Filterheads",
+      "views": 65863
      }
     },
     {
@@ -43395,16 +43394,16 @@
      "views": 105154
     },
     {
-     "id": "_ZWNXLYkJrA",
-     "title": "Nissan Maxima 8th Gen 2015 to 2021 common problems, issues, defects, recalls and complaints",
-     "channel": "HOWSTUFFINMYCARWORKS",
-     "views": 45547
-    },
-    {
      "id": "gYk-BZxC2-0",
      "title": "2013 Nissan Altima vs Maxima 0-60 MPH Mashup Review",
      "channel": "The Fast Lane Car",
      "views": 783529
+    },
+    {
+     "id": "mjjgm5XlMgc",
+     "title": "2014 Nissan Maxima 3.5SV Review, Walkaround, Exhaust, & Test Drive",
+     "channel": "Redline Reviews",
+     "views": 648773
     }
    ],
    "costs": {
