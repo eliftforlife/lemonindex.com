@@ -67,10 +67,12 @@
     var T = TEASE || {};
     return '<div class="bk">' + siteNav() + '<div class="bk-h"><h1>' + esc(T.title || 'Before-you-buy checklists') + '</h1><p>' + esc(T.line || '') + '</p>' + (T.img ? '<img src="' + esc(T.img) + '" alt="">' : '') + '</div><div class="bk-g"></div><div class="bk-g"></div></div>';
   }
+  // 11-26 (Elijah): opened from the list of every checklist, X goes back to that list, not to the car page
+  function sheetClose() { try { var r = document.referrer && new URL(document.referrer); if (r && r.origin === location.origin && r.pathname === '/checklist/') return '/checklist/'; } catch (e) {} return TEASE ? TEASE.home : '/'; }
   function sheet(body, o) {
     o = o || {};
     return backdrop() + '<div class="dim"></div><div class="sh" role="dialog" aria-modal="true"><div class="gr"></div><div class="sh-top"><span>' + (o.back ? '<button data-back="1">‹ Back</button>' : '') + '</span><span>' + esc(o.top || '') +
-      '</span><a class="x" href="' + (TEASE ? TEASE.home : '/') + '" aria-label="Close">' + ic('x', 18) + '</a></div>' + (o.bar ? '<div class="bar"><i style="width:' + o.bar + '%"></i></div>' : '') + body + (o.foot ? '<div class="sf">' + o.foot + '</div>' : '') + '</div>';
+      '</span><a class="x" href="' + sheetClose() + '" aria-label="Close">' + ic('x', 18) + '</a></div>' + (o.bar ? '<div class="bar"><i style="width:' + o.bar + '%"></i></div>' : '') + body + (o.foot ? '<div class="sf">' + o.foot + '</div>' : '') + '</div>';
   }
   function hk(o) {
     var pic = o.img2 ? '<span class="hk-p two"><img src="' + o.img2 + '" alt=""><img src="' + o.img + '" alt=""></span>' : o.img ? '<span class="hk-p"><img src="' + esc(o.img) + '" alt=""></span>' : '';
@@ -78,7 +80,14 @@
       (o.small ? '<small>' + esc(o.small) + '</small>' : '') + (o.price ? '<span class="hp">' + o.price + '</span>' : '') + '</span>' + pic + (o.ok ? '<span class="okb">' + ic('check', 22, 3) + '</span>' : '') + '</' + (o.href ? 'a' : 'div') + '>';
   }
   var ALLCARS = {img: '/assets/ai-models/ford-f-series.webp', img2: '/assets/ai-models/honda-civic.webp'};
-  var go = function (h) { if (location.hash === h || (location.hash === '' && h === '#')) render(); else location.hash = h; };   // same hash: no hashchange event, so draw now
+  // 11-26 (Elijah: back got stuck between 'Which year?' and 'Who is selling it?'): only a step forward adds a history entry (push); toggles,
+  // answers and the in-app Back replace the current one. Back = history.back() when this entry was pushed from the step before it.
+  var go = function (h, push) {
+    if (location.hash === h || (location.hash === '' && h === '#')) return render();
+    var u = location.pathname + location.search + h, from = location.hash || '#';
+    if (push) history.pushState({cl: 1, from: from}, '', u); else history.replaceState({cl: 1, from: history.state && history.state.from || null}, '', u);
+    render();
+  };
 
   // ======================================================================== the checklist page
   var DOC = null, S = null, RES = null, RES_KEY = '', SAVE_T = null, BUSY = false, PEND = false;
@@ -177,7 +186,7 @@
     var lab = [c.a[0], c.a[1], c.a[2] || 'Not sure'], icn = [ic('check', 16, 3), ic('bang', 17, 3), ic('q', 16, 2.6)], cls = ['p', 'b', 'u'], ak = ['ok', 'bad', 'na'], j = ak.indexOf(a);
     var foot = a ? '<div class="pick"><span class="pk ' + cls[j] + '"><span class="ai">' + icn[j] + '</span>' + esc(lab[j]) + '</span><button class="chg" data-t="change">Change</button></div><div class="btn" data-go="next">Next</div>'
       : '<div class="ans3">' + lab.map(function (l, n) { return '<button class="a3 ' + cls[n] + '" data-a="' + ak[n] + '"><span class="ai">' + icn[n] + '</span>' + esc(l) + '</button>'; }).join('') + '</div>';
-    return shell(inner, {title: CHAPTERS[s.ch - 1], sub: 'Check ' + k + ' of ' + keys.length, ch: s.ch, frac: chFrac(st, i), foot: foot, close: TEASE.home});
+    return shell(inner, {title: CHAPTERS[s.ch - 1], sub: 'Check ' + k + ' of ' + keys.length, ch: s.ch, frac: chFrac(st, i), foot: foot, close: '/account/'});
   }
 
   // ---------------- the VIN step: NHTSA vPIC + NHTSA recalls, straight from the browser (free, no key), named by recallName() ----------------
@@ -195,7 +204,7 @@
   function stepVin(st, i, k, n) {
     var out = VIN && VIN.vin === S.vin ? VIN.html : '';
     var inner = '<h1 class="q" style="margin-top:8px">Check the VIN</h1><form class="vf" id="vinf" autocomplete="off"><input class="in' + (S.vin ? ' f' : '') + '" name="vin" maxlength="20" spellcheck="false" placeholder="Paste the VIN" value="' + esc(S.vin) + '" aria-label="VIN"><button type="submit">Check</button></form><div id="vinout">' + out + '</div>';
-    return shell(inner, {title: CHAPTERS[0], sub: 'Check ' + k + ' of ' + n, ch: 1, frac: chFrac(st, i), foot: '<div class="btn" data-go="next">' + (S.ans[st[i].key] ? 'Next' : 'Skip for now') + '</div>', close: TEASE.home});
+    return shell(inner, {title: CHAPTERS[0], sub: 'Check ' + k + ' of ' + n, ch: 1, frac: chFrac(st, i), foot: '<div class="btn" data-go="next">' + (S.ans[st[i].key] ? 'Next' : 'Skip for now') + '</div>', close: '/account/'});
   }
   function liveVin(key, vin) {
     var out = document.getElementById('vinout'); vin = String(vin).toUpperCase().replace(/[^A-Z0-9]/g, '');
@@ -236,7 +245,7 @@
     if (s.k === 'msg') { var who = dlr() ? 'dealer' : 'seller', Q = (DOC.questions || {})[sel()] || [];
       inner = head('Send the ' + who + ' ' + Q.length + ' questions') + '<div class="cd gy" style="padding:6px 16px"><ol class="ml">' + Q.map(function (m) { return '<li>' + esc(m) + '</li>'; }).join('') + '</ol></div><button class="btn w" style="margin-top:6px" data-copy="msg">' + ic('copy', 18) + ' Copy questions</button>';
       foot = '<div class="btn" data-go="next">I sent them</div><button class="lnk" data-go="next" style="width:100%;margin-top:12px">No thanks</button>'; }
-    return shell(inner, {title: CHAPTERS[0], ch: 1, frac: chFrac(st, i), foot: foot, close: TEASE.home});
+    return shell(inner, {title: CHAPTERS[0], ch: 1, frac: chFrac(st, i), foot: foot, close: '/account/'});
   }
 
   // ---------------- step 10: your answer (computed by the Worker) ----------------
@@ -246,8 +255,8 @@
     return api('POST', '/answer', {gen: GEN, s: inp}).then(function (j) { if (j._s === 200) { RES = j; RES_KEY = k; } else RES = {err: j.error || 'offline'}; return RES; });
   }
   function answer(open) {
-    var A = RES; if (!A) return shell('<p class="s">Working out your answer…</p>', {title: CHAPTERS[9], ch: 10, frac: 1, close: TEASE.home});
-    if (A.err) return shell('<p class="s">' + (A.err === 'busy' ? 'Too many tries in a row. Wait a minute, then reload.' : 'Couldn’t reach the Lemon Index just now. Check your connection, then reload.') + '</p>', {title: CHAPTERS[9], ch: 10, frac: 1, close: TEASE.home});
+    var A = RES; if (!A) return shell('<p class="s">Working out your answer…</p>', {title: CHAPTERS[9], ch: 10, frac: 1, close: '/account/'});
+    if (A.err) return shell('<p class="s">' + (A.err === 'busy' ? 'Too many tries in a row. Wait a minute, then reload.' : 'Couldn’t reach the Lemon Index just now. Check your connection, then reload.') + '</p>', {title: CHAPTERS[9], ch: 10, frac: 1, close: '/account/'});
     var D = A.seller === 'dealer';
     var xc = function (key, name, small, n, body) { return '<div class="xc' + (open === key ? ' open' : '') + '"><button class="xh" data-x="' + key + '"><span class="hk-t"><b>' + esc(name) + '</b><small>' + esc(small) + '</small></span><span class="n">' + n + '</span><span class="cv">' + ic('chev', 20) + '</span></button>' + (open === key ? '<div class="xb">' + body + '</div>' : '') + '</div>'; };
     var uo = A.unk.filter(function (u) { return u.st === 'open'; }), uk = A.unk.filter(function (u) { return u.st === 'ok'; });
@@ -280,7 +289,7 @@
       (A.math ? '<details class="xc"><summary class="xh"><span class="hk-t"><b>How we got this</b><small>Our estimates, step by step</small></span><span class="cv">' + ic('chev', 20) + '</span></summary><div class="xb"><p class="note">' + esc(A.math) + '</p></div></details>' : '') +
       '<a class="cl" style="width:100%" href="' + esc(TEASE.yearPage.replace('{y}', S.y)) + '"><span>Cost to own and the full ' + esc(S.y) + ' report</span><span style="color:var(--gray2);display:grid">' + ic('chev', 18) + '</span></a>';
     var foot = '<div style="display:flex;gap:10px"><button class="btn w" style="flex:1" data-share="1">' + ic('share', 18) + ' Share</button><a class="btn" style="flex:1.4" href="/account/">Done</a></div>';
-    return shell(inner, {title: CHAPTERS[9], sub: S.y + ' ' + DOC.short + ' · ' + (D ? 'dealer' : 'private seller'), ch: 10, frac: 1, foot: foot, w: true, close: TEASE.home});
+    return shell(inner, {title: CHAPTERS[9], sub: S.y + ' ' + DOC.short + ' · ' + (D ? 'dealer' : 'private seller'), ch: 10, frac: 1, foot: foot, w: true, close: '/account/'});
   }
 
   // ---------------- before the checklist: sign up, free, paywall, checkout, unlocked ----------------
@@ -313,7 +322,7 @@
   }
   function intro(state) {
     var T = TEASE, Sx = S || {}, done = Object.keys(Sx.ans || {}).length;
-    var inner = '<div class="un">' + (state === 'unlocked' ? '<div class="glow"></div>' : '') + '<div class="ahr" style="position:relative;padding:6px 12px"><span class="ib"></span><span class="ct"></span><a class="ib" href="' + T.home + '" aria-label="Close">' + ic('x', 22) + '</a></div>' +
+    var inner = '<div class="un">' + (state === 'unlocked' ? '<div class="glow"></div>' : '') + '<div class="ahr" style="position:relative;padding:6px 12px"><span class="ib"></span><span class="ct"></span><a class="ib" href="/account/" aria-label="Close">' + ic('x', 22) + '</a></div>' +
       '<div class="bd2" style="text-align:left;padding:' + (desk() ? 18 : 0) + 'px 20px 0"><h1 style="margin:0 0 18px">' + (state === 'unlocked' ? 'Unlocked' : state === 'wait' ? 'Payment received' : done ? 'Welcome back' : 'Your checklist is ready') + '</h1>' +
       hk({name: T.title, small: state === 'wait' ? 'Unlocking…' : 'Checklist · ' + (ME && ME.free === GEN ? 'Free' : 'Paid'), img: T.img, cls: 'big', ok: state === 'unlocked'}) +
       '<div class="stats" style="justify-content:stretch;margin-top:4px"><div style="max-width:none"><b>' + T.checks + '</b><small>quick checks</small></div><div style="max-width:none"><b>' + T.mins + ' min</b><small>at the ' + (T.type === 'truck' ? 'truck' : 'car') + '</small></div></div>' +
@@ -330,7 +339,7 @@
     if (H[0] === 'email') html = emailSent(decodeURIComponent(H[1] || ''), sessionStorage.getItem('lcw-dev-link'));
     else if (!token() || !ME) html = H[0] === 'paywall' ? signup() : signup(H[0] === 'err' ? decodeURIComponent(H[1] || '') : '');
     else if (!owns(GEN)) html = H[0] === 'checkout' ? checkoutScreen(H[1] === 'all' ? '$19.99' : '$7.99', H[2] ? decodeURIComponent(H[2]) : '') : H[0] === 'wait' ? intro('wait') : paywall(H[1] || (H[0] === 'paywall' ? '' : ''));
-    else if (!DOC || !S) html = shell('<p class="s">Loading your checklist…</p>', {title: TEASE.title, close: TEASE.home});
+    else if (!DOC || !S) html = shell('<p class="s">Loading your checklist…</p>', {title: TEASE.title, close: '/account/'});
     else if (H[0] === 'run') {
       var st = seq(), i = Math.min(+H[1] || 0, st.length - 1);
       if (S.i !== i) { S.i = i; saveS(); }
@@ -344,8 +353,13 @@
   function wire() {
     var st = H[0] === 'run' && S ? seq() : null, i = st ? Math.min(+H[1] || 0, st.length - 1) : 0;
     var toggle = function (t) { var m = MODE ? MODE.split('.') : [], j = m.indexOf(t); if (j >= 0) m.splice(j, 1); else m.push(t); go('#run/' + i + (m.length ? '/' + m.join('.') : '')); };
-    var next = function () { go('#run/' + Math.min(i + 1, st.length - 1)); };
-    q('[data-back]').forEach(function (b) { b.onclick = function () { if (st && i > 0) go('#run/' + (i - 1)); else history.back(); }; });
+    var next = function () { go('#run/' + Math.min(i + 1, st.length - 1), true); };
+    q('[data-back]').forEach(function (b) { b.onclick = function () {
+      var f = history.state && history.state.from, stepOf = function (h) { var m = /^#run\/(\d+)/.exec(h || ''); return m ? +m[1] : -1; };
+      if (st && i > 0) { if (f && stepOf(f) === i - 1) history.back(); else { if (history.state) history.replaceState({cl: 1, from: null}, '', location.href); go('#run/' + (i - 1)); } }
+      else if (st && f && stepOf(f) < 0) history.back();          // pushed from the intro: go back to it
+      else if (st) go('#');                                       // first step, reached some other way: show the intro
+      else history.back(); }; });
     q('[data-go=next]').forEach(function (b) { b.onclick = function () { if (!b.classList.contains('off')) next(); }; });
     q('[data-go-h]').forEach(function (b) { b.onclick = function () { go('#' + b.dataset.goH); }; });
     q('[data-a]').forEach(function (b) { b.onclick = function () { S.ans[st[i].key] = b.dataset.a; saveS(); RES = null; if (b.dataset.a === 'ok') next(); else go('#run/' + i); }; });
@@ -353,7 +367,7 @@
     q('.ii').forEach(function (b) { b.onclick = function (e) { e.preventDefault(); e.stopPropagation(); toggle(b.closest('.dp') ? 'wi' : b.closest('.rc') ? 'pi' : 'i'); }; });
     q('[data-seller]').forEach(function (b) { b.onclick = function () { var v = b.dataset.seller; S.stype = v; S.seller = v === 'private' ? 'private' : 'dealer'; saveS(); RES = null; render(); }; });
     q('[data-set]').forEach(function (b) { b.onclick = function () { var k = b.dataset.set, v = b.dataset.v; S[k] = k === 'eng' ? +v : v === '' && k === 'trim' ? '' : v; if (k === 'y') { S.trim = null; S.eng = null; } saveS(); RES = null; render(); }; });
-    q('[data-num]').forEach(function (el) { el.oninput = function () { setNum(el); }; el.onblur = function () { render(); }; });
+    q('[data-num]').forEach(function (el) { el.oninput = function () { setNum(el); }; el.onblur = function () { var k = el.dataset.num, v = S[k]; el.value = v ? (k === 'ask' ? '$' : '') + (+v).toLocaleString('en-US') : ''; el.classList.toggle('f', !!v); }; });   // 11-26: format in place; a re-render here took focus from the next box
     q('[data-x]').forEach(function (b) { b.onclick = function () { var cur = H[2] === 'x' ? H[3] : ''; go('#run/' + i + (cur === b.dataset.x ? '' : '/x/' + b.dataset.x)); }; });
     q('[data-unk]').forEach(function (b) { b.onclick = function () { var id = b.dataset.unk; if (S.unk[id] === b.dataset.v) delete S.unk[id]; else S.unk[id] = b.dataset.v; saveS(); RES = null; render(); }; });
     q('[data-quote]').forEach(function (el) { el.onchange = function () { var v = String(el.value).replace(/[^\d]/g, '').slice(0, 6); if (+v > 0) S.quote[el.dataset.quote] = v; else delete S.quote[el.dataset.quote]; saveS(); RES = null; render(); }; });
@@ -398,10 +412,14 @@
     }
     if (DOC) return render();
     render();
-    api('GET', '/content?gen=' + GEN).then(function (j) { if (j._s !== 200) { DOC = null; return render(); } DOC = j; return loadS().then(render); });
+    api('GET', '/content?gen=' + GEN).then(function (j) { if (j._s !== 200) { DOC = null; return render(); } DOC = j; return loadS().then(function () {   // 11-26 (Elijah): no 'Welcome back' stop; reopen straight at the step you left
+      if ((location.hash === '' || location.hash === '#') && S && (S.i || Object.keys(S.ans || {}).length)) history.replaceState(null, '', location.pathname + location.search + '#run/' + (S.i || 0));
+      render(); }); });
   }
   function bootChecklist() {
-    addEventListener('hashchange', render); addEventListener('pagehide', function () { pushS(true); }); document.addEventListener('visibilitychange', function () { if (document.hidden) pushS(true); }); var rt = null; addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(render, 150); });
+    addEventListener('hashchange', render); addEventListener('pagehide', function () { pushS(true); }); document.addEventListener('visibilitychange', function () { if (document.hidden) pushS(true); }); var rt = null, wasDesk = desk(); addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(function () {   // 11-26: the phone keyboard opening is a resize; re-drawing then closed it
+      var d = desk(); if (d === wasDesk) return; var a = document.activeElement; if (a && /^(INPUT|TEXTAREA|SELECT)$/.test(a.tagName)) return; wasDesk = d; render(); }, 150); });
+    addEventListener('popstate', render);
     var paid = /[?&]paid=1/.test(location.search);
     loadMe().then(function () { if (paid) { history.replaceState(null, '', location.pathname + location.hash); return waitPaid(0); } start(); });
   }

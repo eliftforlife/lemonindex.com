@@ -77,3 +77,10 @@ header.gh .gh-links a { color: var(--gh-dim); }
 header.gh .gh-links a:hover, header.gh .gh-links a[aria-current] { color: var(--gh-ink); }
 header.gh .gh-sheet a:hover, header.gh .gh-sheet a[aria-current] { color: var(--gh-mute); }
 header.gh a.gh-cta, header.gh a.gh-cta:hover { color: var(--gh-cta-ink); }
+
+/* 11-26 sign-in icon right of Donate (all widths) */
+.gh-acc { display: block; position: relative; width: 40px; height: 40px; margin-left: 2px; border-radius: 10px; color: var(--gh-ink, #1d1d1f); flex: none; }
+.gh-acc svg { position: absolute; left: 10px; top: 10px; width: 20px; height: 20px; }
+.gh-acc:hover { background: rgba(0, 0, 0, .05); }
+.gh-acc:focus-visible { outline: 3px solid var(--lemon, #ffd400); outline-offset: 0; }
+@media (max-width: 767px) { .gh-acc { width: 36px; margin-left: 0; } .gh-acc svg { left: 8px; } }
