@@ -1,0 +1,2420 @@
+{
+"note": "Factory hp per version, from 3 Lemon Index/data/hp (data_hp500.py). 450+ hp only.",
+"gens": {
+"audi-a6-g4": {
+"name": "Audi A6",
+"model": "audi-a6",
+"years": [
+2012,
+2018
+],
+"notes": "S6 US figures 420 (2013-14) and 450 (2015-18) per Audi US; Wikipedia S and RS page is ambiguous (420 PS listed for S7, 450 PS on facelift). RS6 not sold in US for C7.",
+"variants": [
+{
+"trim": "S6",
+"engine": "4.0L twin-turbo V8",
+"years": [
+2015,
+2018
+],
+"hp": 450,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Audi_A6"
+]
+}
+]
+},
+"audi-a6-g5": {
+"name": "Audi A6",
+"model": "audi-a6",
+"years": [
+2019,
+2025
+],
+"notes": "RS6 Wikipedia gives 592 bhp global; US 591",
+"variants": [
+{
+"trim": "RS6 Avant",
+"engine": "4.0L twin-turbo V8",
+"years": [
+2021,
+2025
+],
+"hp": 591,
+"perf": true,
+"src": [
+"https://jalopnik.com/the-591-hp-2020-audi-rs6-avant-is-coming-to-america-1836100591",
+"https://en.wikipedia.org/wiki/Audi_RS_6"
+]
+},
+{
+"trim": "RS6 Avant Performance",
+"engine": "4.0L twin-turbo V8",
+"years": [
+2024,
+2025
+],
+"hp": 621,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Audi_RS_6"
+]
+}
+]
+},
+"audi-q7-g2": {
+"name": "Audi Q7",
+"model": "audi-q7",
+"years": [
+2017,
+2025
+],
+"notes": "Wikipedia lists PS ratings; US hp 333 and 335 are Audi US ratings (medium).",
+"variants": [
+{
+"trim": "SQ7",
+"engine": "4.0L twin-turbo V8",
+"years": [
+2020,
+2025
+],
+"hp": 500,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Audi_Q7"
+]
+}
+]
+},
+"bmw-5-series-g5": {
+"name": "BMW 5 Series",
+"model": "bmw-5-series",
+"years": [
+2004,
+2010
+],
+"notes": "Non-M5 rows are US ratings from knowledge (medium); Wikipedia table lists market/PS figures.",
+"variants": [
+{
+"trim": "M5",
+"engine": "5.0L V10 (S85)",
+"years": [
+2006,
+2010
+],
+"hp": 500,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/BMW_5_Series_(E60)"
+]
+}
+]
+},
+"bmw-5-series-g6": {
+"name": "BMW 5 Series",
+"model": "bmw-5-series",
+"years": [
+2011,
+2016
+],
+"notes": "Wikipedia converts metric (M5 553 hp, 550i 402/444); BMW US ratings 560/575 and 400/445 used.",
+"variants": [
+{
+"trim": "M5",
+"engine": "4.4L twin-turbo V8 (S63)",
+"years": [
+2012,
+2016
+],
+"hp": 560,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/BMW_5_Series_(F10)"
+]
+},
+{
+"trim": "M5 Competition Package",
+"engine": "4.4L twin-turbo V8 (S63)",
+"years": [
+2014,
+2016
+],
+"hp": 575,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/BMW_5_Series_(F10)"
+]
+}
+]
+},
+"bmw-5-series-g7": {
+"name": "BMW 5 Series",
+"model": "bmw-5-series",
+"years": [
+2017,
+2023
+],
+"notes": "US ratings: M550i 456 (2018-20), 523 (2021+); M5 600, Competition 617. Wikipedia lists these in kW/PS (456 hp = 462 PS, 523 hp = 530 PS, M5 600 PS, Competition 625 PS).",
+"variants": [
+{
+"trim": "M550i xDrive",
+"engine": "4.4L twin-turbo V8 (N63)",
+"years": [
+2018,
+2020
+],
+"hp": 456,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/BMW_5_Series_(G30)"
+]
+},
+{
+"trim": "M550i xDrive",
+"engine": "4.4L twin-turbo V8 (N63)",
+"years": [
+2021,
+2023
+],
+"hp": 523,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/BMW_5_Series_(G30)"
+]
+},
+{
+"trim": "M5",
+"engine": "4.4L twin-turbo V8 (S63)",
+"years": [
+2018,
+2023
+],
+"hp": 600,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/BMW_5_Series_(G30)"
+]
+},
+{
+"trim": "M5 Competition",
+"engine": "4.4L twin-turbo V8 (S63)",
+"years": [
+2019,
+2023
+],
+"hp": 617,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/BMW_5_Series_(G30)"
+]
+}
+]
+},
+"bmw-5-series-g8": {
+"name": "BMW 5 Series",
+"model": "bmw-5-series",
+"years": [
+2024,
+2025
+],
+"notes": "550e/M5 system hp per Wikipedia; mild-hybrid boost not included",
+"variants": [
+{
+"trim": "550e xDrive",
+"engine": "plug-in hybrid",
+"years": [
+2025,
+2025
+],
+"hp": 489,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/BMW_5_Series_(G60)"
+]
+},
+{
+"trim": "i5 M60",
+"engine": "electric",
+"years": [
+2024,
+2025
+],
+"hp": 593,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/BMW_5_Series_(G60)"
+]
+},
+{
+"trim": "M5 (G90)",
+"engine": "4.4L twin-turbo V8 plug-in hybrid",
+"years": [
+2025,
+2025
+],
+"hp": 717,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/BMW_5_Series_(G60)"
+]
+}
+]
+},
+"bmw-x3-g3": {
+"name": "BMW X3",
+"model": "bmw-x3",
+"years": [
+2018,
+2024
+],
+"notes": "xDrive30e system 288 hp w/ boost (conf medium).",
+"variants": [
+{
+"trim": "X3 M",
+"engine": "3.0L twin-turbo I6 (S58)",
+"years": [
+2020,
+2024
+],
+"hp": 473,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/BMW_X3_(G01)"
+]
+},
+{
+"trim": "X3 M Competition",
+"engine": "3.0L twin-turbo I6 (S58)",
+"years": [
+2020,
+2024
+],
+"hp": 503,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/BMW_X3_(G01)"
+]
+}
+]
+},
+"bmw-x5-g2": {
+"name": "BMW X5",
+"model": "bmw-x5",
+"years": [
+2007,
+2013
+],
+"notes": "X5 M 547 hp per Wikipedia (555 PS).",
+"variants": [
+{
+"trim": "X5 M",
+"engine": "4.4L twin-turbo V8 S63",
+"years": [
+2010,
+2013
+],
+"hp": 547,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/BMW_E70"
+]
+}
+]
+},
+"bmw-x5-g3": {
+"name": "BMW X5",
+"model": "bmw-x5",
+"years": [
+2014,
+2018
+],
+"notes": "",
+"variants": [
+{
+"trim": "X5 M",
+"engine": "4.4L twin-turbo V8 (S63)",
+"years": [
+2015,
+2018
+],
+"hp": 567,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/BMW_X5_(F15)"
+]
+}
+]
+},
+"bmw-x5-g4": {
+"name": "BMW X5",
+"model": "bmw-x5",
+"years": [
+2019,
+2025
+],
+"notes": "2024+ M60i/M Competition ratings not verified on page; 523 and 617 per BMW (conf medium). 2019 xDrive40i 335; 2021-23 329 per Wikipedia.",
+"variants": [
+{
+"trim": "xDrive50e",
+"engine": "3.0L plug-in hybrid",
+"years": [
+2024,
+2025
+],
+"hp": 483,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/BMW_X5_(G05)"
+]
+},
+{
+"trim": "xDrive50i",
+"engine": "4.4L twin-turbo V8",
+"years": [
+2019,
+2020
+],
+"hp": 456,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/BMW_X5_(G05)"
+]
+},
+{
+"trim": "M50i",
+"engine": "4.4L twin-turbo V8",
+"years": [
+2020,
+2023
+],
+"hp": 523,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/BMW_X5_(G05)"
+]
+},
+{
+"trim": "X5 M60i",
+"engine": "4.4L twin-turbo V8 mild hybrid",
+"years": [
+2024,
+2025
+],
+"hp": 523,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/BMW_X5_(G05)"
+]
+},
+{
+"trim": "X5 M",
+"engine": "4.4L twin-turbo V8 (S63)",
+"years": [
+2020,
+2023
+],
+"hp": 591,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/BMW_X5_(G05)"
+]
+},
+{
+"trim": "X5 M Competition",
+"engine": "4.4L twin-turbo V8 (S63)",
+"years": [
+2020,
+2023
+],
+"hp": 617,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/BMW_X5_(G05)"
+]
+},
+{
+"trim": "X5 M Competition",
+"engine": "4.4L twin-turbo V8 mild hybrid (S68)",
+"years": [
+2024,
+2025
+],
+"hp": 617,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/BMW_X5_(G05)"
+]
+}
+]
+},
+"cadillac-ats-g1": {
+"name": "Cadillac ATS",
+"model": "cadillac-ats",
+"years": [
+2013,
+2019
+],
+"notes": "ATS-V 464 hp per Wikipedia.",
+"variants": [
+{
+"trim": "ATS-V",
+"engine": "3.6L twin-turbo V6",
+"years": [
+2016,
+2019
+],
+"hp": 464,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Cadillac_ATS"
+]
+}
+]
+},
+"cadillac-cts-g2": {
+"name": "Cadillac CTS",
+"model": "cadillac-cts",
+"years": [
+2008,
+2013
+],
+"notes": "3.6 2012-13 rating 318-321; 2.0T 272 conf medium.",
+"variants": [
+{
+"trim": "CTS-V sedan/coupe/wagon",
+"engine": "6.2L supercharged V8 (LSA)",
+"years": [
+2009,
+2013
+],
+"hp": 556,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Cadillac_CTS"
+]
+}
+]
+},
+"cadillac-cts-g3": {
+"name": "Cadillac CTS",
+"model": "cadillac-cts",
+"years": [
+2014,
+2019
+],
+"notes": "",
+"variants": [
+{
+"trim": "CTS-V",
+"engine": "6.2L supercharged V8 (LT4)",
+"years": [
+2016,
+2019
+],
+"hp": 640,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Cadillac_CTS"
+]
+}
+]
+},
+"cadillac-escalade-g5": {
+"name": "Cadillac Escalade",
+"model": "cadillac-escalade",
+"years": [
+2021,
+2025
+],
+"notes": "Diesel dropped for 2025.",
+"variants": [
+{
+"trim": "Escalade-V",
+"engine": "6.2L supercharged V8 (LT4)",
+"years": [
+2023,
+2025
+],
+"hp": 682,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Cadillac_Escalade"
+]
+}
+]
+},
+"cadillac-sts-g1": {
+"name": "Cadillac STS",
+"model": "cadillac-sts",
+"years": [
+2005,
+2011
+],
+"notes": "",
+"variants": [
+{
+"trim": "STS-V",
+"engine": "4.4L supercharged Northstar V8",
+"years": [
+2006,
+2009
+],
+"hp": 469,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Cadillac_STS"
+]
+}
+]
+},
+"chevrolet-camaro-g5": {
+"name": "Chevrolet Camaro",
+"model": "chevrolet-camaro",
+"years": [
+2010,
+2015
+],
+"notes": "Z/28 505 hp per GM, Wikipedia article gives no hp (only 0-60), so listed with Wikipedia link as article source.",
+"variants": [
+{
+"trim": "ZL1",
+"engine": "6.2L supercharged V8 LSA",
+"years": [
+2012,
+2015
+],
+"hp": 580,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Chevrolet_Camaro_(fifth_generation)"
+]
+}
+]
+},
+"chevrolet-camaro-g6": {
+"name": "Chevrolet Camaro",
+"model": "chevrolet-camaro",
+"years": [
+2016,
+2024
+],
+"notes": "",
+"variants": [
+{
+"trim": "SS",
+"engine": "6.2L V8 (LT1)",
+"years": [
+2016,
+2024
+],
+"hp": 455,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Chevrolet_Camaro_(sixth_generation)"
+]
+},
+{
+"trim": "ZL1",
+"engine": "6.2L supercharged V8 (LT4)",
+"years": [
+2017,
+2024
+],
+"hp": 650,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Chevrolet_Camaro_(sixth_generation)"
+]
+}
+]
+},
+"chevrolet-corvette-g6": {
+"name": "Chevrolet Corvette",
+"model": "chevrolet-corvette",
+"years": [
+2005,
+2013
+],
+"notes": "",
+"variants": [
+{
+"trim": "Z06",
+"engine": "7.0L V8 LS7",
+"years": [
+2006,
+2013
+],
+"hp": 505,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Chevrolet_Corvette_(C6)"
+]
+},
+{
+"trim": "ZR1",
+"engine": "6.2L supercharged V8 LS9",
+"years": [
+2009,
+2013
+],
+"hp": 638,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Chevrolet_Corvette_(C6)"
+]
+}
+]
+},
+"chevrolet-corvette-g7": {
+"name": "Chevrolet Corvette",
+"model": "chevrolet-corvette",
+"years": [
+2014,
+2019
+],
+"notes": "",
+"variants": [
+{
+"trim": "Stingray",
+"engine": "6.2L V8 (LT1)",
+"years": [
+2014,
+2019
+],
+"hp": 455,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Chevrolet_Corvette_(C7)"
+]
+},
+{
+"trim": "Stingray with performance exhaust / Z51",
+"engine": "6.2L V8 (LT1)",
+"years": [
+2014,
+2019
+],
+"hp": 460,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Chevrolet_Corvette_(C7)"
+]
+},
+{
+"trim": "Grand Sport",
+"engine": "6.2L V8 (LT1)",
+"years": [
+2017,
+2019
+],
+"hp": 460,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Chevrolet_Corvette_(C7)"
+]
+},
+{
+"trim": "Z06",
+"engine": "6.2L supercharged V8 (LT4)",
+"years": [
+2015,
+2019
+],
+"hp": 650,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Chevrolet_Corvette_(C7)"
+]
+},
+{
+"trim": "ZR1",
+"engine": "6.2L supercharged V8 (LT5)",
+"years": [
+2019,
+2019
+],
+"hp": 755,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Chevrolet_Corvette_(C7)"
+]
+}
+]
+},
+"chevrolet-corvette-g8": {
+"name": "Chevrolet Corvette",
+"model": "chevrolet-corvette",
+"years": [
+2020,
+2025
+],
+"notes": "ZR1X (1250 hp hybrid) listed for 2026 only, outside range.",
+"variants": [
+{
+"trim": "Stingray",
+"engine": "6.2L LT2 V8",
+"years": [
+2020,
+2025
+],
+"hp": 490,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Chevrolet_Corvette_(C8)"
+]
+},
+{
+"trim": "Stingray with sport exhaust",
+"engine": "6.2L LT2 V8",
+"years": [
+2020,
+2025
+],
+"hp": 495,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Chevrolet_Corvette_(C8)"
+]
+},
+{
+"trim": "Z06",
+"engine": "5.5L LT6 flat-plane V8",
+"years": [
+2023,
+2025
+],
+"hp": 670,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Chevrolet_Corvette_(C8)"
+]
+},
+{
+"trim": "E-Ray",
+"engine": "6.2L V8 + electric motor",
+"years": [
+2024,
+2025
+],
+"hp": 655,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Chevrolet_Corvette_(C8)"
+]
+},
+{
+"trim": "ZR1",
+"engine": "5.5L twin-turbo LT7 V8",
+"years": [
+2025,
+2025
+],
+"hp": 1064,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Chevrolet_Corvette_(C8)"
+]
+}
+]
+},
+"chrysler-300-g2": {
+"name": "Chrysler 300",
+"model": "chrysler-300",
+"years": [
+2011,
+2023
+],
+"notes": "",
+"variants": [
+{
+"trim": "SRT8",
+"engine": "6.4L Hemi V8",
+"years": [
+2012,
+2014
+],
+"hp": 470,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Chrysler_300"
+]
+},
+{
+"trim": "300C limited run",
+"engine": "6.4L Hemi V8",
+"years": [
+2023,
+2023
+],
+"hp": 485,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Chrysler_300"
+]
+}
+]
+},
+"dodge-challenger-g3": {
+"name": "Dodge Challenger",
+"model": "dodge-challenger",
+"years": [
+2008,
+2023
+],
+"notes": "Demon 840 on 100 octane (808 on 91). V6 ratings 2015+ approx 305-309; R/T 372 auto/375 manual.",
+"variants": [
+{
+"trim": "SRT8 392",
+"engine": "6.4L Hemi V8",
+"years": [
+2011,
+2014
+],
+"hp": 470,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Dodge_Challenger_(2008)"
+]
+},
+{
+"trim": "392 / Scat Pack / SRT 392",
+"engine": "6.4L Hemi V8",
+"years": [
+2015,
+2023
+],
+"hp": 485,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Dodge_Challenger_(2008)"
+]
+},
+{
+"trim": "SRT Hellcat",
+"engine": "6.2L supercharged V8",
+"years": [
+2015,
+2018
+],
+"hp": 707,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Dodge_Challenger_(2008)"
+]
+},
+{
+"trim": "SRT Demon",
+"engine": "6.2L supercharged V8",
+"years": [
+2018,
+2018
+],
+"hp": 840,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Dodge_Challenger_(2008)"
+]
+},
+{
+"trim": "SRT Hellcat",
+"engine": "6.2L supercharged V8",
+"years": [
+2019,
+2023
+],
+"hp": 717,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Dodge_Challenger_(2008)"
+]
+},
+{
+"trim": "SRT Hellcat Redeye",
+"engine": "6.2L supercharged V8",
+"years": [
+2019,
+2023
+],
+"hp": 797,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Dodge_Challenger_(2008)"
+]
+},
+{
+"trim": "SRT Super Stock",
+"engine": "6.2L supercharged V8",
+"years": [
+2020,
+2023
+],
+"hp": 807,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Dodge_Challenger_(2008)"
+]
+},
+{
+"trim": "SRT Demon 170",
+"engine": "6.2L supercharged V8 (E85)",
+"years": [
+2023,
+2023
+],
+"hp": 1025,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Dodge_Challenger_(2008)"
+]
+}
+]
+},
+"dodge-charger-g7": {
+"name": "Dodge Charger",
+"model": "dodge-charger",
+"years": [
+2011,
+2023
+],
+"notes": "2021+ Hellcat is advertised at 717 hp (not verified in fetched source). Super Bee 2012 and Daytona 2013 use 470/370 hp engines. Jailbreak/Widebody are packages.",
+"variants": [
+{
+"trim": "SRT8",
+"engine": "6.4L HEMI V8",
+"years": [
+2012,
+2014
+],
+"hp": 470,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Dodge_Charger_(LD)"
+]
+},
+{
+"trim": "SRT 392 / R/T Scat Pack",
+"engine": "6.4L HEMI V8",
+"years": [
+2015,
+2023
+],
+"hp": 485,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Dodge_Charger_(LD)"
+]
+},
+{
+"trim": "SRT Hellcat",
+"engine": "6.2L supercharged HEMI V8",
+"years": [
+2015,
+2023
+],
+"hp": 707,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Dodge_Charger_(LD)"
+]
+},
+{
+"trim": "SRT Hellcat Redeye",
+"engine": "6.2L supercharged HEMI V8",
+"years": [
+2021,
+2023
+],
+"hp": 797,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Dodge_Charger_(LD)"
+]
+}
+]
+},
+"dodge-durango-g3": {
+"name": "Dodge Durango",
+"model": "dodge-durango",
+"years": [
+2011,
+2025
+],
+"notes": "Source states SRT 392 2018-24 and Hellcat in 2021 and 2023-25 (not 2022); 5.7 is 360 hp per source.",
+"variants": [
+{
+"trim": "SRT 392",
+"engine": "6.4L HEMI V8",
+"years": [
+2018,
+2024
+],
+"hp": 475,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Dodge_Durango"
+]
+},
+{
+"trim": "SRT Hellcat",
+"engine": "6.2L supercharged HEMI V8",
+"years": [
+2021,
+2021
+],
+"hp": 710,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Dodge_Durango"
+]
+},
+{
+"trim": "SRT Hellcat",
+"engine": "6.2L supercharged HEMI V8",
+"years": [
+2023,
+2025
+],
+"hp": 710,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Dodge_Durango"
+]
+}
+]
+},
+"ford-f-series-g13": {
+"name": "Ford F-Series",
+"model": "ford-f-series",
+"years": [
+2015,
+2020
+],
+"notes": "2019-20 Limited used the 450 hp HO EcoBoost. Raptor rating from press launch coverage.",
+"variants": [
+{
+"trim": "Raptor / Limited",
+"engine": "3.5L EcoBoost V6 high-output",
+"years": [
+2017,
+2020
+],
+"hp": 450,
+"perf": true,
+"src": [
+"https://www.torquenews.com/106/official-2017-ford-raptor-f150-packs-450hp-510lb-ft-torque",
+"https://www.equipmentworld.com/trucks/pickups/article/14965911/ford-reveals-2017-f150-raptor-power-ratings-with-leaps-in-hp-and-torque"
+]
+}
+]
+},
+"ford-f-series-g14": {
+"name": "Ford F-Series",
+"model": "ford-f-series",
+"years": [
+2021,
+2026
+],
+"notes": "Lightning model-year split of 452 vs 580 hp not stated by source.",
+"variants": [
+{
+"trim": "Raptor",
+"engine": "3.5L high-output EcoBoost V6",
+"years": [
+2021,
+2025
+],
+"hp": 450,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Ford_F-Series_(fourteenth_generation)"
+]
+},
+{
+"trim": "Raptor R",
+"engine": "5.2L supercharged V8",
+"years": [
+2023,
+2023
+],
+"hp": 700,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Ford_F-Series_(fourteenth_generation)"
+]
+},
+{
+"trim": "Raptor R",
+"engine": "5.2L supercharged V8",
+"years": [
+2024,
+2025
+],
+"hp": 720,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Ford_F-Series_(fourteenth_generation)"
+]
+},
+{
+"trim": "Lightning Standard Range",
+"engine": "electric, combined",
+"years": [
+2022,
+2025
+],
+"hp": 452,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Ford_F-150_Lightning"
+]
+},
+{
+"trim": "Lightning Extended Range",
+"engine": "electric, combined",
+"years": [
+2022,
+2025
+],
+"hp": 580,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Ford_F-150_Lightning"
+]
+}
+]
+},
+"ford-mustang-g5": {
+"name": "Ford Mustang",
+"model": "ford-mustang",
+"years": [
+2005,
+2014
+],
+"notes": "Source for all variants: Wikipedia fifth-generation Mustang article.",
+"variants": [
+{
+"trim": "Shelby GT500",
+"engine": "5.4L supercharged V8",
+"years": [
+2007,
+2009
+],
+"hp": 500,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Ford_Mustang_(fifth_generation)"
+]
+},
+{
+"trim": "Shelby GT500",
+"engine": "5.4L supercharged V8",
+"years": [
+2010,
+2010
+],
+"hp": 540,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Ford_Mustang_(fifth_generation)"
+]
+},
+{
+"trim": "Shelby GT500",
+"engine": "5.4L supercharged V8",
+"years": [
+2011,
+2012
+],
+"hp": 550,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Ford_Mustang_(fifth_generation)"
+]
+},
+{
+"trim": "Shelby GT500",
+"engine": "5.8L supercharged V8",
+"years": [
+2013,
+2014
+],
+"hp": 662,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Ford_Mustang_(fifth_generation)"
+]
+}
+]
+},
+"ford-mustang-g6": {
+"name": "Ford Mustang",
+"model": "ford-mustang",
+"years": [
+2015,
+2023
+],
+"notes": "GT350R uses the same 526 hp engine as the GT350 (Ford spec); article gives no separate figure.",
+"variants": [
+{
+"trim": "GT",
+"engine": "5.0L V8",
+"years": [
+2018,
+2021
+],
+"hp": 460,
+"src": [
+"https://en.wikipedia.org/wiki/Ford_Mustang_(sixth_generation)"
+]
+},
+{
+"trim": "GT",
+"engine": "5.0L V8",
+"years": [
+2022,
+2023
+],
+"hp": 450,
+"src": [
+"https://en.wikipedia.org/wiki/Ford_Mustang_(sixth_generation)"
+]
+},
+{
+"trim": "Bullitt",
+"engine": "5.0L V8",
+"years": [
+2019,
+2020
+],
+"hp": 480,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Ford_Mustang_(sixth_generation)"
+]
+},
+{
+"trim": "Mach 1",
+"engine": "5.0L V8",
+"years": [
+2021,
+2021
+],
+"hp": 480,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Ford_Mustang_(sixth_generation)"
+]
+},
+{
+"trim": "Mach 1",
+"engine": "5.0L V8",
+"years": [
+2022,
+2023
+],
+"hp": 470,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Ford_Mustang_(sixth_generation)"
+]
+},
+{
+"trim": "Shelby GT350/GT350R",
+"engine": "5.2L Voodoo V8",
+"years": [
+2015,
+2020
+],
+"hp": 526,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Ford_Mustang_(sixth_generation)"
+]
+},
+{
+"trim": "Shelby GT500",
+"engine": "5.2L supercharged Predator V8",
+"years": [
+2020,
+2022
+],
+"hp": 760,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Ford_Mustang_(sixth_generation)"
+]
+}
+]
+},
+"ford-mustang-g7": {
+"name": "Ford Mustang",
+"model": "ford-mustang",
+"years": [
+2024,
+2025
+],
+"notes": "",
+"variants": [
+{
+"trim": "GT",
+"engine": "5.0L V8 (Coyote)",
+"years": [
+2024,
+2025
+],
+"hp": 480,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Ford_Mustang_(seventh_generation)"
+]
+},
+{
+"trim": "GT active exhaust",
+"engine": "5.0L V8 (Coyote)",
+"years": [
+2024,
+2025
+],
+"hp": 486,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Ford_Mustang_(seventh_generation)"
+]
+},
+{
+"trim": "Dark Horse",
+"engine": "5.0L V8 (Coyote)",
+"years": [
+2024,
+2025
+],
+"hp": 500,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Ford_Mustang_(seventh_generation)"
+]
+},
+{
+"trim": "GTD",
+"engine": "5.2L supercharged V8",
+"years": [
+2025,
+2025
+],
+"hp": 815,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Ford_Mustang_(seventh_generation)"
+]
+}
+]
+},
+"jeep-grand-cherokee-g4": {
+"name": "Jeep Grand Cherokee",
+"model": "jeep-grand-cherokee",
+"years": [
+2011,
+2021
+],
+"notes": "3.6 rated 295 hp in later years.",
+"variants": [
+{
+"trim": "SRT8",
+"engine": "6.4L HEMI V8",
+"years": [
+2012,
+2014
+],
+"hp": 470,
+"perf": true,
+"src": [
+"https://www.autopadre.com/horsepower-and-torque/jeep-grand-cherokee/2014-srt8-31081"
+]
+},
+{
+"trim": "SRT",
+"engine": "6.4L HEMI V8",
+"years": [
+2015,
+2021
+],
+"hp": 475,
+"perf": true,
+"src": [
+"https://www.yahoo.com/autos/s/2015-jeep-grand-cherokee-srt-gets-power-boost-125003527.html"
+]
+},
+{
+"trim": "Trackhawk",
+"engine": "6.2L supercharged HEMI V8",
+"years": [
+2018,
+2021
+],
+"hp": 707,
+"perf": true,
+"src": [
+"https://embargoed.stellantisnorthamerica.com/text.do?id=18218",
+"https://www.slashgear.com/jeep-unveils-2018-grand-cherokee-trackhawk-with-707hp-hellcat-engine-09481344"
+]
+}
+]
+},
+"jeep-wrangler-g4": {
+"name": "Jeep Wrangler",
+"model": "jeep-wrangler",
+"years": [
+2018,
+2025
+],
+"notes": "4xe hp is system rating.",
+"variants": [
+{
+"trim": "Rubicon 392",
+"engine": "6.4L HEMI V8",
+"years": [
+2021,
+2025
+],
+"hp": 470,
+"perf": true,
+"src": [
+"https://carbuzz.com/news/v8-drag-battle-jeep-wrangler-392-vs-ram-1500-trx",
+"https://www.mopar.com/en-us/blog/the-mopar-all-star-lineup-is-here.html"
+]
+}
+]
+},
+"land-rover-range-rover-sport-g1": {
+"name": "Land Rover Range Rover Sport",
+"model": "land-rover-range-rover-sport",
+"years": [
+2006,
+2013
+],
+"notes": "Wikipedia lists 503 bhp (510 PS); US rating 510. HSE 4.4 Wikipedia 296 hp (US 300). Supercharged 4.2 US 390 (Wikipedia 385).",
+"variants": [
+{
+"trim": "Supercharged",
+"engine": "5.0L supercharged V8",
+"years": [
+2010,
+2013
+],
+"hp": 510,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Land_Rover_Range_Rover_Sport"
+]
+}
+]
+},
+"land-rover-range-rover-sport-g2": {
+"name": "Land Rover Range Rover Sport",
+"model": "land-rover-range-rover-sport",
+"years": [
+2014,
+2022
+],
+"notes": "SVR 550 (2015-2018) and 575 (2018-2022) per Wikipedia; V8 SC non-SVR 510 (to 2017) then 525.",
+"variants": [
+{
+"trim": "Autobiography/Dynamic",
+"engine": "5.0L supercharged V8",
+"years": [
+2014,
+2022
+],
+"hp": 510,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Range_Rover_Sport"
+]
+},
+{
+"trim": "SVR",
+"engine": "5.0L supercharged V8",
+"years": [
+2015,
+2018
+],
+"hp": 550,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Range_Rover_Sport"
+]
+},
+{
+"trim": "SVR",
+"engine": "5.0L supercharged V8",
+"years": [
+2018,
+2022
+],
+"hp": 575,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Range_Rover_Sport"
+]
+}
+]
+},
+"lexus-is-g3": {
+"name": "Lexus IS",
+"model": "lexus-is",
+"years": [
+2014,
+2025
+],
+"notes": "",
+"variants": [
+{
+"trim": "IS 500 F Sport Performance",
+"engine": "5.0L V8",
+"years": [
+2022,
+2025
+],
+"hp": 472,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Lexus_IS"
+]
+}
+]
+},
+"lincoln-aviator-g2": {
+"name": "Lincoln Aviator",
+"model": "lincoln-aviator",
+"years": [
+2020,
+2025
+],
+"notes": "",
+"variants": [
+{
+"trim": "Grand Touring",
+"engine": "3.0L twin-turbo V6 PHEV, combined",
+"years": [
+2020,
+2023
+],
+"hp": 494,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Lincoln_Aviator"
+]
+}
+]
+},
+"lincoln-navigator-g4": {
+"name": "Lincoln Navigator",
+"model": "lincoln-navigator",
+"years": [
+2018,
+2024
+],
+"notes": "450 hp per Wikipedia; Ford may list 440 hp for 2021+",
+"variants": [
+{
+"trim": "All trims",
+"engine": "3.5L twin-turbo V6",
+"years": [
+2018,
+2024
+],
+"hp": 450,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Lincoln_Navigator"
+]
+}
+]
+},
+"mercedes-benz-c-class-g3": {
+"name": "Mercedes-Benz C-Class",
+"model": "mercedes-benz-c-class",
+"years": [
+2008,
+2014
+],
+"notes": "481 hp from a single source (evo).",
+"variants": [
+{
+"trim": "C63 AMG",
+"engine": "6.2L V8 (M156)",
+"years": [
+2008,
+2011
+],
+"hp": 451,
+"perf": true,
+"src": [
+"https://www.thetruthaboutcars.com/2008/05/2008-mercedes-benz-c63-amg-review/?print=1"
+]
+},
+{
+"trim": "C63 AMG Performance Package",
+"engine": "6.2L V8 (M156)",
+"years": [
+2012,
+2014
+],
+"hp": 481,
+"perf": true,
+"src": [
+"https://evo.co.uk/mercedes/c-class/c63-amg"
+]
+},
+{
+"trim": "C63 AMG Black Series",
+"engine": "6.2L V8 (M156)",
+"years": [
+2012,
+2013
+],
+"hp": 510,
+"perf": true,
+"src": [
+"https://www.thedrive.com/car-reviews/2012-mercedes-benz-c63-amg-black-series-review-features-price"
+]
+}
+]
+},
+"mercedes-benz-c-class-g4": {
+"name": "Mercedes-Benz C-Class",
+"model": "mercedes-benz-c-class",
+"years": [
+2015,
+2021
+],
+"notes": "C63/C63 S from MB USA 2017 spec sheet; same output 2016-21 assumed.",
+"variants": [
+{
+"trim": "C63 AMG",
+"engine": "4.0L twin-turbo V8",
+"years": [
+2016,
+2021
+],
+"hp": 469,
+"perf": true,
+"src": [
+"https://www.media.mbusa.com/releases/2017-mercedes-amg-c63-sedan-and-c63-s-sedan-specifications"
+]
+},
+{
+"trim": "C63 S AMG",
+"engine": "4.0L twin-turbo V8",
+"years": [
+2016,
+2021
+],
+"hp": 503,
+"perf": true,
+"src": [
+"https://www.media.mbusa.com/releases/2017-mercedes-amg-c63-sedan-and-c63-s-sedan-specifications"
+]
+}
+]
+},
+"mercedes-benz-e-class-g3": {
+"name": "Mercedes-Benz E-Class",
+"model": "mercedes-benz-e-class",
+"years": [
+2003,
+2009
+],
+"notes": "",
+"variants": [
+{
+"trim": "E55 AMG",
+"engine": "5.4L supercharged V8",
+"years": [
+2003,
+2006
+],
+"hp": 469,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Mercedes-Benz_E-Class_(W211)"
+]
+},
+{
+"trim": "E63 AMG",
+"engine": "6.2L V8",
+"years": [
+2007,
+2009
+],
+"hp": 507,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Mercedes-Benz_E-Class_(W211)"
+]
+}
+]
+},
+"mercedes-benz-e-class-g4": {
+"name": "Mercedes-Benz E-Class",
+"model": "mercedes-benz-e-class",
+"years": [
+2010,
+2016
+],
+"notes": "",
+"variants": [
+{
+"trim": "E63 AMG",
+"engine": "6.2L V8",
+"years": [
+2010,
+2011
+],
+"hp": 518,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Mercedes-Benz_E-Class_(W212)"
+]
+},
+{
+"trim": "E63 AMG",
+"engine": "5.5L twin-turbo V8",
+"years": [
+2012,
+2013
+],
+"hp": 518,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Mercedes-Benz_E-Class_(W212)"
+]
+},
+{
+"trim": "E63 AMG Performance Pack",
+"engine": "5.5L twin-turbo V8",
+"years": [
+2012,
+2013
+],
+"hp": 550,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Mercedes-Benz_E-Class_(W212)"
+]
+},
+{
+"trim": "E63 AMG 4MATIC",
+"engine": "5.5L twin-turbo V8",
+"years": [
+2014,
+2016
+],
+"hp": 550,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Mercedes-Benz_E-Class_(W212)"
+]
+},
+{
+"trim": "E63 AMG S 4MATIC",
+"engine": "5.5L twin-turbo V8",
+"years": [
+2014,
+2016
+],
+"hp": 577,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Mercedes-Benz_E-Class_(W212)"
+]
+}
+]
+},
+"mercedes-benz-e-class-g5": {
+"name": "Mercedes-Benz E-Class",
+"model": "mercedes-benz-e-class",
+"years": [
+2017,
+2023
+],
+"notes": "Wikipedia lists E63 563 and E63 S 604 (US 563/603). The 2017 E550 coupe/cabriolet 402 hp is not on the fetched page; kept with W213 article as source but flag for review.",
+"variants": [
+{
+"trim": "AMG E63",
+"engine": "4.0L biturbo V8",
+"years": [
+2018,
+2023
+],
+"hp": 563,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Mercedes-Benz_E-Class_(W213)"
+]
+},
+{
+"trim": "AMG E63 S",
+"engine": "4.0L biturbo V8",
+"years": [
+2018,
+2023
+],
+"hp": 603,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Mercedes-Benz_E-Class_(W213)"
+]
+}
+]
+},
+"mercedes-benz-glk-glc-g2": {
+"name": "Mercedes-Benz GLK/GLC",
+"model": "mercedes-benz-glk/glc",
+"years": [
+2016,
+2022
+],
+"notes": "",
+"variants": [
+{
+"trim": "AMG GLC63",
+"engine": "4.0L biturbo V8",
+"years": [
+2018,
+2022
+],
+"hp": 469,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Mercedes-Benz_GLC-Class"
+]
+},
+{
+"trim": "AMG GLC63 S",
+"engine": "4.0L biturbo V8",
+"years": [
+2018,
+2022
+],
+"hp": 503,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Mercedes-Benz_GLC-Class"
+]
+}
+]
+},
+"mercedes-benz-glk-glc-g3": {
+"name": "Mercedes-Benz GLC",
+"model": "mercedes-benz-glk/glc",
+"years": [
+2023,
+2025
+],
+"notes": "US AMG GLC 43 may be rated 402 hp by Mercedes USA; Wikipedia 416. 63 S E Performance US model year unconfirmed",
+"variants": [
+{
+"trim": "AMG GLC 63 S E Performance",
+"engine": "plug-in hybrid",
+"years": [
+2025,
+2025
+],
+"hp": 671,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Mercedes-Benz_GLC-Class"
+]
+}
+]
+},
+"mercedes-benz-m-gle-g2": {
+"name": "Mercedes-Benz M/GLE",
+"model": "mercedes-benz-m/gle",
+"years": [
+2006,
+2011
+],
+"notes": "Wikipedia lists ML63 as 510 hp (517 PS); US rating 503. Diesel years/ratings approximate.",
+"variants": [
+{
+"trim": "ML 63 AMG",
+"engine": "6.2L V8 (M156)",
+"years": [
+2007,
+2011
+],
+"hp": 503,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Mercedes-Benz_GLE-Class"
+]
+}
+]
+},
+"mercedes-benz-m-gle-g3": {
+"name": "Mercedes-Benz M/GLE",
+"model": "mercedes-benz-m/gle",
+"years": [
+2012,
+2019
+],
+"notes": "Left out: GLE550e plug-in (about 436 system hp, no page fetched). 2.1 diesel ML250 and GLE300d not US models.",
+"variants": [
+{
+"trim": "ML63 AMG",
+"engine": "5.5L biturbo V8",
+"years": [
+2012,
+2015
+],
+"hp": 518,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Mercedes-Benz_GLE-Class"
+]
+},
+{
+"trim": "ML63 AMG Performance Pkg",
+"engine": "5.5L biturbo V8",
+"years": [
+2012,
+2015
+],
+"hp": 549,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Mercedes-Benz_GLE-Class"
+]
+},
+{
+"trim": "GLE63 S AMG",
+"engine": "5.5L biturbo V8",
+"years": [
+2016,
+2019
+],
+"hp": 577,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Mercedes-Benz_GLE-Class"
+]
+}
+]
+},
+"mercedes-benz-m-gle-g4": {
+"name": "Mercedes-Benz M/GLE",
+"model": "mercedes-benz-m/gle",
+"years": [
+2020,
+2025
+],
+"notes": "PHEV rating and exact model-year availability not verified. GLE 400e 375 hp from 2023 per Wikipedia.",
+"variants": [
+{
+"trim": "GLE 580",
+"engine": "4.0L twin-turbo V8 (48V)",
+"years": [
+2020,
+2023
+],
+"hp": 483,
+"src": [
+"https://en.wikipedia.org/wiki/Mercedes-Benz_GLE-Class"
+]
+},
+{
+"trim": "GLE 580",
+"engine": "4.0L twin-turbo V8 (48V)",
+"years": [
+2024,
+2025
+],
+"hp": 510,
+"src": [
+"https://en.wikipedia.org/wiki/Mercedes-Benz_GLE-Class"
+]
+},
+{
+"trim": "AMG GLE 63 S",
+"engine": "4.0L twin-turbo V8 (48V)",
+"years": [
+2021,
+2025
+],
+"hp": 603,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Mercedes-Benz_GLE-Class"
+]
+}
+]
+},
+"ram-pickup-g3": {
+"name": "Ram pickup",
+"model": "ram-pickup",
+"years": [
+2002,
+2008
+],
+"notes": "",
+"variants": [
+{
+"trim": "SRT-10",
+"engine": "8.3L Viper V10",
+"years": [
+2004,
+2006
+],
+"hp": 500,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Dodge_Ram_SRT-10"
+]
+}
+]
+},
+"ram-pickup-g5": {
+"name": "Ram pickup",
+"model": "ram-pickup",
+"years": [
+2019,
+2025
+],
+"notes": "2025 Hurricane I6 (420/540 hp) left out: no source collected.",
+"variants": [
+{
+"trim": "TRX",
+"engine": "6.2L supercharged HEMI V8",
+"years": [
+2021,
+2024
+],
+"hp": 702,
+"perf": true,
+"src": [
+"https://ram.com/ae/en/trx.html"
+]
+}
+]
+},
+"tesla-model-3-g1": {
+"name": "Tesla Model 3",
+"model": "tesla-model-3",
+"years": [
+2017,
+2023
+],
+"notes": "Tesla hp figures vary by source (maker does not publish). Long Range AWD (~346) omitted.",
+"variants": [
+{
+"trim": "Performance",
+"engine": "dual motor AWD",
+"years": [
+2018,
+2023
+],
+"hp": 455,
+"perf": true,
+"src": [
+"https://www.cars.com/research/tesla-model_3-2018/specs/402455",
+"https://www.ultimatespecs.com/car-specs/Tesla/M13637/Model-3-2023"
+]
+}
+]
+},
+"tesla-model-s-g1": {
+"name": "Tesla Model S",
+"model": "tesla-model-s",
+"years": [
+2012,
+2020
+],
+"notes": "electric, combined; hp from Wikipedia, which is inconsistent in places (e.g. 90D 417 vs 100D 483, P100D 680). Tesla does not publish official hp",
+"variants": [
+{
+"trim": "P85D",
+"engine": "dual motor",
+"years": [
+2014,
+2015
+],
+"hp": 691,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Tesla_Model_S"
+]
+},
+{
+"trim": "P90D",
+"engine": "dual motor",
+"years": [
+2015,
+2016
+],
+"hp": 762,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Tesla_Model_S"
+]
+},
+{
+"trim": "P100D",
+"engine": "dual motor",
+"years": [
+2016,
+2019
+],
+"hp": 680,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Tesla_Model_S"
+]
+},
+{
+"trim": "100D",
+"engine": "dual motor",
+"years": [
+2017,
+2019
+],
+"hp": 483,
+"src": [
+"https://en.wikipedia.org/wiki/Tesla_Model_S"
+]
+},
+{
+"trim": "Long Range",
+"engine": "dual motor",
+"years": [
+2019,
+2020
+],
+"hp": 469,
+"src": [
+"https://en.wikipedia.org/wiki/Tesla_Model_S"
+]
+},
+{
+"trim": "Performance",
+"engine": "dual motor",
+"years": [
+2019,
+2020
+],
+"hp": 754,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Tesla_Model_S"
+]
+}
+]
+},
+"tesla-model-s-g2": {
+"name": "Tesla Model S",
+"model": "tesla-model-s",
+"years": [
+2021,
+2025
+],
+"notes": "electric, combined",
+"variants": [
+{
+"trim": "Long Range",
+"engine": "dual motor electric",
+"years": [
+2021,
+2025
+],
+"hp": 670,
+"src": [
+"https://en.wikipedia.org/wiki/Tesla_Model_S"
+]
+},
+{
+"trim": "Plaid",
+"engine": "tri motor electric",
+"years": [
+2021,
+2025
+],
+"hp": 1020,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Tesla_Model_S"
+]
+}
+]
+},
+"tesla-model-x-g1": {
+"name": "Tesla Model X",
+"model": "tesla-model-x",
+"years": [
+2016,
+2020
+],
+"notes": "electric, combined = sum of motor outputs on Wikipedia; 2020 Performance hp not stated",
+"variants": [
+{
+"trim": "90D/100D",
+"engine": "dual motor (259 + 259 hp)",
+"years": [
+2016,
+2020
+],
+"hp": 518,
+"src": [
+"https://en.wikipedia.org/wiki/Tesla_Model_X"
+]
+},
+{
+"trim": "P90D/P100D",
+"engine": "dual motor (259 front + 503 rear)",
+"years": [
+2016,
+2020
+],
+"hp": 762,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Tesla_Model_X"
+]
+}
+]
+},
+"tesla-model-x-g2": {
+"name": "Tesla Model X",
+"model": "tesla-model-x",
+"years": [
+2021,
+2025
+],
+"notes": "Electric, combined. Maker peak hp.",
+"variants": [
+{
+"trim": "Long Range",
+"engine": "Dual motor electric, combined",
+"years": [
+2021,
+2025
+],
+"hp": 670,
+"src": [
+"https://en.wikipedia.org/wiki/Tesla_Model_X"
+]
+},
+{
+"trim": "Plaid",
+"engine": "Tri-motor electric, combined",
+"years": [
+2021,
+2025
+],
+"hp": 1020,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Tesla_Model_X"
+]
+}
+]
+},
+"tesla-model-y-g1": {
+"name": "Tesla Model Y",
+"model": "tesla-model-y",
+"years": [
+2020,
+2025
+],
+"notes": "Electric, combined hp. Tesla does not publish official hp; Wikipedia table figures (approximate).",
+"variants": [
+{
+"trim": "Performance",
+"engine": "Dual motor electric, combined",
+"years": [
+2020,
+2025
+],
+"hp": 456,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Tesla_Model_Y"
+]
+}
+]
+},
+"volvo-s60-g3": {
+"name": "Volvo S60",
+"model": "volvo-s60",
+"years": [
+2019,
+2024
+],
+"notes": "Polestar Engineered (415/455 hp) unverified, left out; Wikipedia says 455 from 2022 update",
+"variants": [
+{
+"trim": "T8 Recharge",
+"engine": "2.0L plug-in hybrid",
+"years": [
+2022,
+2024
+],
+"hp": 455,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Volvo_S60"
+]
+}
+]
+},
+"volvo-xc60-g2": {
+"name": "Volvo XC60",
+"model": "volvo-xc60",
+"years": [
+2018,
+2025
+],
+"notes": "Left out (400+, no URL fetched): earlier T8 PHEV (400 hp, 2018-2021) and Polestar Engineered (415 hp).",
+"variants": [
+{
+"trim": "T8 Recharge",
+"engine": "2.0L PHEV",
+"years": [
+2022,
+2025
+],
+"hp": 455,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Volvo_XC60"
+]
+}
+]
+},
+"volvo-xc90-g2": {
+"name": "Volvo XC90",
+"model": "volvo-xc90",
+"years": [
+2016,
+2025
+],
+"notes": "",
+"variants": [
+{
+"trim": "Recharge T8",
+"engine": "2.0L plug-in hybrid",
+"years": [
+2021,
+2025
+],
+"hp": 455,
+"perf": true,
+"src": [
+"https://en.wikipedia.org/wiki/Volvo_XC90_(second_generation)"
+]
+}
+]
+}
+}
+}

@@ -4,6 +4,7 @@ SEO_URLS = []
 YT_SRC = r'C:\Users\elift\Desktop\Eliftforlife youtube\3 Lemon Index\data\yt'
 exec(open('best_ui.py', encoding='utf-8').read())   # 11-12 (Elijah): shared /best/ pieces: one-line hero, tap-to-open answers, VIN box, budget cards
 exec(open('teen_page.py', encoding='utf-8').read())   # 11-12 /best/safest-cars-for-teens/ (sets TEEN_CARD for the /best/ hub below)
+exec(open('hp500_page.py', encoding='utf-8').read())   # 11-25 /best/cheapest-500-hp-cars/ (sets HP5_CARD for the /best/ hub below)
 # 11-12 (Linda: the under-$10K list showed "–" for the Miata and Silverado): buyer-guide names ("Chevy Silverado", "VW Golf / GTI",
 # "Ford F-150") resolve to our model, its score and its live page; a model we don't score still links its page and says why there's no score
 def _bu_pages():
@@ -135,8 +136,9 @@ def _seo_pages():
         lead['/best-gas-mileage/'] = GAP['mpg'][0]['id']; lead['/check-engine-light/'] = GAP['cel'][0]['id']
     allc = cards + [('/best-gas-mileage/', 'Best gas mileage'), ('/check-engine-light/', 'Which cars get the check engine light most')]
     if TEEN_CARD: allc.insert(0, TEEN_CARD[:2]); lead[TEEN_CARD[0]] = TEEN_CARD[2]   # 11-12: the teen list first (Linda)
+    if HP5_CARD: allc.insert(len(cards) + (1 if TEEN_CARD else 0), HP5_CARD[:2]); lead[HP5_CARD[0]] = HP5_CARD[2]   # 11-25: the cheapest 500 hp cars (its own picture)
     def _bc(u, t):
-        ph = aph(lead[u]) if lead.get(u) else None
+        ph = (lead[u] if isinstance(lead.get(u), dict) else aph(lead[u])) if lead.get(u) else None
         return f'<a class="v5-c" href="{u}">{pimg(ph, "") if ph else ""}<b>{E(t)}</b></a>'
     hub = ('<div class="pg v5">' + V5_HERO('Rankings', 'Best cars, by the data.', 'Rankings built from government complaint data and YouTube buyer&#39;s guides.')
            + '<div class="v5-g v5-bg">' + ''.join(_bc(u, t) for u, t in allc) + '</div>')

@@ -4,11 +4,13 @@
 # best_tier, cbx_*, _vimg, SCX, share_line, faq_ld, E). Data: data/picks.json from data_picks.py (method in that file).
 # /budget/: type chips (Cars, SUVs, Trucks, Minivans, Supercars) x budget chips x Private seller / Dealer = one list of 5 at a time.
 # price_box.budget_hook puts the "Find a car for your budget" row first in the Overview list of every car model and year page.
-BUD_CSS = '<link rel="stylesheet" href="/assets/budget.css?v=11">'
+BUD_CSS = '<link rel="stylesheet" href="/assets/budget.css?v=12">'
+BUD_PRICE = 'big'   # 11-25: 'big' (picked) or 'bar' (the runner-up), see _bud_card
 BUD_JS = '<script src="/assets/budget.js?v=4" defer></script>'   # CSP: no inline scripts
 BUD_TYPES = [('car', 'Cars', 'cars'), ('suv', 'SUVs', 'SUVs'), ('truck', 'Trucks', 'trucks'), ('minivan', 'Minivans', 'minivans'), ('super', 'Supercars', 'supercars')]
 # 11-24 Eli mobile pass: short chip labels so the budget row fits a phone (the hidden h2 and the FAQ keep the full amounts)
-BUD_SHORT = {'u2': 'Under $2K', 'u5': 'Under $5K', '5to10': '$5–10K', '10to20': '$10–20K', '20up': '$20K+', 'u100': 'Under $100K', '100to200': '$100–200K', '200up': '$200K+'}
+# 11-25: 'Under $2K' on wide screens, '<$2K' on phones (budget.css .bud-wl/.bud-ws), so all five fit one segmented bar at 375 px
+BUD_SHORT = {'u2': '<span class="bud-wl">Under </span><span class="bud-ws">&lt;</span>$2K', 'u5': '<span class="bud-wl">Under </span><span class="bud-ws">&lt;</span>$5K', '5to10': '$5–10K', '10to20': '$10–20K', '20up': '$20K+', 'u100': 'Under $100K', '100to200': '$100–200K', '200up': '$200K+'}
 BUD_KINDS = [('private', 'Private seller'), ('dealer', 'Dealer')]
 BUD_PK = json.load(open('data/picks.json', encoding='utf-8'))['lists']
 _SCN = {_slg(c['name']): c['name'] for c in SCX}
@@ -39,8 +41,11 @@ def _bud_card(c, t, kk, k=''):
         else:
             bi = best_img(c['id'], nm); im = bi[18:-7] if bi.startswith('<span class="bph">') and bi.endswith('</span>') else ''
         sc = f'<span class="{"good" if c["li"] < 100 else "bad"}" title="Lemon Index of these years: 100 is the average car, lower is better">{c["li"]}</span>'
-    return (f'<a class="mc" href="{href}"><span class="mc-p">{im}</span><b>{_bud_yrs(c)} {E(nm)}</b>'
-            f'<small class="mc-k bud-pr">{"From $" + format(pr[0], ",") if k == "u2" else PRICEBOX._rng(*pr)}</small>{sc}</a>')   # 11-25: under $2K shows the low end
+    # 11-25 (Elijah: "it's about the money, not the title"): the price leads, bigger than the car's name. BUD_PRICE picks the look:
+    # 'big' = "$6,250–10,250" in large type; 'bar' = "$6,250 ——— $10,250", a low-to-high line (budget.css .bud-pbar). Same markup.
+    pp = (f'<span class="bud-p bud-p1"><span class="bud-lo">From ${pr[0]:,}</span></span>' if k == 'u2' else
+          f'<span class="bud-p"><span class="bud-lo">${pr[0]:,}</span><span class="bud-to">–</span><i class="bud-ln" aria-hidden="true"></i><span class="bud-hi">${pr[1]:,}</span></span>')
+    return f'<a class="mc" href="{href}"><span class="mc-p">{im}</span>{pp}<b>{_bud_yrs(c)} {E(nm)}</b>{sc}</a>'   # 11-25: under $2K shows the low end
 
 
 def _bud_names(cs, n=3):
@@ -88,9 +93,12 @@ def _budget_page():
     c5 = BUD_PK.get('car|private|u5') or []; s10 = BUD_PK.get('suv|private|5-10') or []
     lede = f'The 5 best used cars, SUVs, trucks and minivans for every budget. Under $5,000: {_bud_names(c5, 2)}. SUVs for $5,000–10,000: {_bud_names(s10, 2)}.'
     body = ('<div class="advp cb cbx bud">' + BUD_CSS + cbx_head('Find a car for your budget.', 'The 5 best used picks in every price range.')
-            + f'<section class="cbx-sec cbx-list bud-pick"><div class="bud-row" role="group" aria-label="Type">{tch}</div><div class="bud-bar"><div class="bud-row bud-segs" role="group" aria-label="Budget">{bch}</div>'
-            + f'<div class="bud-kind" role="group" aria-label="Price from">{kch}</div></div>{lists}'
-            + '<p class="bud-note">Prices are AI estimates for November 2026, not listings.<span class="bud-sn"> Score: lower is better (100 is the average car).</span></p><p class="bud-note">Insurance is part of the real monthly cost: <a href="/insurance/">compare insurers for you</a>.</p></section>'
+            # 11-25 (Elijah: three chip styles felt confusing): type, budget and private/dealer are three of the same compact segmented bars
+            + f'<section class="cbx-sec cbx-list bud-pick bud-p{BUD_PRICE}"><div class="bud-fl"><div class="bud-seg bud-ty" role="group" aria-label="Type">{tch}</div>'
+            + f'<div class="bud-seg bud-segs" role="group" aria-label="Budget">{bch}</div><div class="bud-seg bud-kind" role="group" aria-label="Price from">{kch}</div></div>{lists}'
+            + '<p class="bud-note">Prices are AI estimates, not listings.</p>'   # 11-25: the score and date notes live in Sources and method
+            + '<p class="bud-note"><a href="/insurance/">Compare insurers for you</a></p>'
+            + '<p class="bud-hp" style="font-size:14px;margin:12px 0 0"><a href="/best/cheapest-500-hp-cars/">Want speed for the money? The cheapest 500 hp cars ›</a></p></section>'   # 11-25
             + cbx_faq([(q, f'<p>{E(a)}</p>') for q, a in faq]) + cbx_buy()
             + cbx_src('Reliability: the Lemon Index of each model year, NHTSA owner complaints filed in its first 3 years per vehicle sold, against the average car (100). '
                       'A complaint is an owner&#39;s report, not a confirmed defect. YouTube buyer score: how YouTube buyer guides and owner reviews rate those years (Lemon Index analysis of video titles and transcripts). '

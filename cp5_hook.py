@@ -194,9 +194,11 @@ def V5_RANK(items, start=1):
 # 11-19 v5 (polish list A3): every /best/ list (best_ui.py: div.advp.cb.cbx). Hero with the #1 car's picture, the first ranked list open
 # under a big centered heading ("At a glance" chart folded into a box above the cards), every other section a box. Same words and links.
 _CBX_IC = [(r'complaint|other end', 'warning'), (r'type', 'car'), (r'question|answer', 'talk'), (r'before you buy', 'signpost'), (r'budget', 'tag')]
+_CBX5_RE = re.compile(r'<div class="advp cb cbx( hp5)?">')   # 11-25: a list may add its own class (hp5 = /best/cheapest-500-hp-cars/) instead of a wrapper div
 def CBX5_HOOK(body):
-    i = body.find('<div class="advp cb cbx">')
-    if i < 0: return body
+    m = _CBX5_RE.search(body)
+    if not m: return body
+    i, xc = m.start(), m.group(1) or ''
     so = _C5S(body[i:], 'html.parser'); d = so.find('div', class_='advp')
     if d is None: return body
     end = i + len(str(d)) if body[i:].startswith(str(d)) else -1
@@ -229,7 +231,7 @@ def CBX5_HOOK(body):
             pop = c_.find(class_='cb-pop')
             boxes.append(V5_BOX('info', 'Sources and method', f'<p class="yc-cap">{pop.decode_contents() if pop else c_.decode_contents()}</p>'))
         else: keep.append(str(c_))
-    new = (f'<div class="advp cb cbx v5 cbx5">' + ''.join(keep) + ''.join(vis) + (f'<div class="cpl v5-pl">{"".join(boxes)}</div>' if boxes else '') + '</div>')
+    new = (f'<div class="advp cb cbx v5 cbx5{xc}">' + ''.join(keep) + ''.join(vis) + (f'<div class="cpl v5-pl">{"".join(boxes)}</div>' if boxes else '') + '</div>')
     s = str(so); j = s.find(str(d))
     return body[:i] + s[:j] + new + s[j + len(str(d)):]
 

@@ -86,10 +86,11 @@ def _ck_new(c):
     if not n: return
     names = [f'{b} {a.find("b").get_text(" ", strip=True)}' for b, cs in blocks for a in cs if a.find('b')]
     rel = [(f'/best/most-reliable-{k}/', f'The most reliable {h1 if k == "suvs" else h1.lower()}, ranked')] if k in ('trucks', 'suvs', 'minivans') else []
-    rel += [('/rankings/', 'Every car ranked'), ('/compare/', 'Compare up to 4 cars'), ('/', 'Every car, A to Z')]
+    rel += ([('/best/cheapest-500-hp-cars/', 'The cheapest 500 hp cars')] if k == 'performance' else []) + [('/rankings/', 'Every car ranked'), ('/compare/', 'Compare up to 4 cars'), ('/', 'Every car, A to Z')]
     relb = ('<div class="cpl-grp cpl-rel cpl-ins"><div class="cpl">' + PILL('/assets/icons/signpost.webp', 'Related pages', '', '<ul class="ck-rl">'
             + ''.join(f'<li><a href="{u}">{E(t)}</a></li>' for u, t in rel) + '</ul>') + '</div></div>')
-    body = f'<div class="pg ckp">{_ck_top(c, n)}<section class="ckg" aria-label="{E(h1)} by brand">{_ck_grid(blocks)}</section>{relb}{_CK_CR}</div>'
+    feat = (f'<style>.ck-feat a,.ck-feat a b{{text-decoration:none}}</style><div class="cpl ck-feat" style="max-width:420px;margin:22px auto 0">{V5_GO("tag", "The cheapest 500 hp cars", "/best/cheapest-500-hp-cars/")}</div>' if k == 'performance' else '')   # 11-25 (Elijah)
+    body = f'<div class="pg ckp">{_ck_top(c, n)}{feat}<section class="ckg" aria-label="{E(h1)} by brand">{_ck_grid(blocks)}</section>{relb}{_CK_CR}</div>'
     desc = (f'{n} {plural}, from the {names[0]} to the {names[-1]}, by brand: owner complaints, the problem years and recalls from NHTSA. Free.' if k != 'performance'
             else f'{n} performance cars, from the {names[0]} to the {names[-1]}, by brand: specs from the automakers, the engine and owner complaints from NHTSA. Free.')
     ld = [{"@context": "https://schema.org", "@type": "CollectionPage", "name": h1, "url": BASE + path,

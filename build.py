@@ -605,7 +605,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
     if 'class="study tr2 cp2' in body: body = CP5_HOOK(body)   # 11-19 v5 look (cp5_hook.py)
     if 'class="study tr2 eng2' in body: body = ENG5_HOOK(body)   # 11-19 v5 look, engine pages (cp5_hook.py)
     if 'class="advp ehub' in body: body = EHUB5(body)   # 11-23 (old-pages audit #9): /engines/bmw/, /engines/performance/, /engines/supercars/
-    if 'class="advp cb cbx"' in body: body = CBX5_HOOK(body)   # 11-19 v5 look, /best/ lists (cp5_hook.py)
+    if 'class="advp cb cbx"' in body or 'class="advp cb cbx hp5"' in body: body = CBX5_HOOK(body)   # 11-19 v5 look, /best/ lists (cp5_hook.py)
     if path in INFO5_KEEP: body = INFO5_HOOK(path, body)   # 11-19 v5 look, info pages (cp5_hook.py)
     _pd_mark(path, body, title + '\n' + desc)
     if 'RCL_LINK' in globals(): body = RCL_LINK(path, body)   # 11-14 growth 2B-1: links to the /recalls/ pages, after the date hash (a link alone doesn't redate a page)
@@ -654,7 +654,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' '{DB_HASH}' https://static.cloudflareinsights.com https://challenges.cloudflare.com https://www.googletagmanager.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; frame-src https://challenges.cloudflare.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://cloudflareinsights.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://vpic.nhtsa.dot.gov https://api.nhtsa.gov https://lemon-survey.elift08.workers.dev https://lemon-alerts.elift08.workers.dev https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.gstatic.com https://*.adtrafficquality.google https://*.googletagservices.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="google-adsense-account" content="{ADS}"><meta name="msvalidate.01" content="2F84C8106BB577C5860ABE6EC15825EC"><link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/lxs.css?v={LXS_V}">
-<link rel="stylesheet" href="/assets/site.css?v=1124-mo"><link rel="stylesheet" href="/assets/cpl.css?v=22"><script src="/assets/cpl.js?v=1" defer></script><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1124mo" defer></script>{lds}</head>
+<link rel="stylesheet" href="/assets/site.css?v=1124-mo"><link rel="stylesheet" href="/assets/cpl.css?v=23"><script src="/assets/cpl.js?v=1" defer></script><link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1124mo" defer></script>{lds}</head>
 <body>{gh_header(path)}
 <main>{body}{_eb}{_rel}{'' if path == '/vote/' else ask_html(path)}</main>
 <footer class="foot f2 f3"><div class="f3-top"><a class="f3-name" href="/"><img src="/assets/icon-64.png" alt="" width="64" height="64"><span>Lemon Index</span></a><p class="f3-tag">Check here before you buy.</p><div class="f3-soc">{F3_SOC}</div></div><div class="f2-in">
@@ -670,6 +670,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
     doc = INS_HOOK(path, doc)   # 11-25: 'Compare insurers for you' under the budget row on car year pages (insurance_pages.py), after the date hash
     # 11-24 (Elijah): 'Find a car for your budget' first in every car page's Overview list (budget_pages.py), after the date hash
     if 'VF_HOOK' in globals(): doc = VF_HOOK(path, doc)   # 11-24 (Elijah): no Normal/Advanced switch, one-sided praise/complaints full width, engine pictures on the engine chips, heart + share by the name (vis_fixes.py), after the date hash
+    if 'YUX_HOOK' in globals(): doc = YUX_HOOK(path, doc)   # 11-25 (Elijah's go-live review): year page top v2, bar score, source sheet, entry cards (year_ux.py), after the date hash
     LG[path] = (set(_LGHREF.findall(doc)), bool(_LGNOIX.search(doc)), url)   # 11-12 link graph (linkgraph.py, end of build)
     f = os.path.join(OUT, path.strip('/'), 'index.html') if path.endswith('/') else os.path.join(OUT, path.strip('/'))
     os.makedirs(os.path.dirname(f), exist_ok=True)
@@ -1402,6 +1403,7 @@ exec(open('eng6.py', encoding='utf-8').read())   # 11-24 (Elijah): engine pages 
 exec(open('car_pills.py', encoding='utf-8').read())   # 11-18 car pages: tabs and long sections fold into boxes (CAR_HOOK in page())
 exec(open('ans_box.py', encoding='utf-8').read())   # 11-23 Job C: ANS_HOOK, the short answer box on the most-searched pages
 exec(open('model_hero.py', encoding='utf-8').read())   # 11-19 model page top v2 (MH_HOOK in page())
+exec(open('year_ux.py', encoding='utf-8').read())   # 11-25 year page top v2 (YUX_HOOK in page(); needs model_hero's _mh_gauge)
 exec(open('sub_pages.py', encoding='utf-8').read())   # 11-19 card -> own page test (Integra GS-R), SUB_HOOK in page()
 exec(open('recall_alerts.py', encoding='utf-8').read())   # 11-14 growth 4a: recall alert signup box (RA_HOOK in page()), /alerts/ page, privacy text
 RIVALS = defaultdict(list); PAIRS = []

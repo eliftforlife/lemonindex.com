@@ -1,55 +1,67 @@
-/* 11-24 /budget/ (budget_pages.py): type chips, budget chips + private/dealer switch, one grid of 5 picks at a time.
-   v6 (Eli pass, Elijah: "look more like our home page"): the picks are the home page's own car cards (.mg / a.mc from site.css):
-   picture, years + car, one price, the score in the corner. Even spacing: H1 -> chips -> grid -> one-line note. */
-.bud-row { display: flex; flex-wrap: wrap; gap: 8px; }
-.bud-c { font: inherit; font-size: 16px; font-weight: 600; padding: 10px 16px; border-radius: 999px; border: 1px solid #d9d9de; background: #fff; color: #111; cursor: pointer; line-height: 1.1; }
-.bud-c:hover { border-color: #111; }
-.bud-c[aria-pressed="true"] { background: #111; border-color: #111; color: #fff; }
-.bud-segs .bud-c { font-size: 15px; padding: 8px 14px; font-weight: 500; }
-/* budget chips left, private/dealer switch right */
-.bud-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 12px; }
-.bud-kind { display: inline-flex; background: #f0f0f3; border-radius: 999px; padding: 3px; gap: 2px; }
-.bud-kind .bud-c { border: 0; background: transparent; font-size: 15px; font-weight: 500; padding: 7px 14px; color: #3a3a3c; }
-.bud-kind .bud-c:hover { color: #111; }
-.bud-kind .bud-c[aria-pressed="true"] { background: #fff; color: #111; font-weight: 600; box-shadow: 0 1px 3px rgba(0, 0, 0, .14); }
+/* 11-24 /budget/ (budget_pages.py): type, budget and private/dealer filters, one grid of 5 picks at a time.
+   v6 (Eli pass, Elijah: "look more like our home page"): the picks are the home page's own car cards (.mg / a.mc from site.css).
+   v7 (11-25, Elijah: "three different styles, it feels confusing"; "it's about the money, not the title"): the three filters are ONE style,
+   a compact segmented bar each (gray track, white thumb on the picked one, same height and type), and the price leads each card. */
+.bud-fl { display: grid; gap: 8px; }
+.bud-seg { display: flex; gap: 2px; padding: 3px; background: #f0f0f3; border-radius: 13px; overflow-x: auto; scrollbar-width: none; }
+.bud-seg::-webkit-scrollbar { display: none; }
+.bud-c { flex: 1 1 auto; min-width: 0; min-height: 40px; padding: 0 10px; border: 0; border-radius: 10px; background: transparent; color: #3a3a3c;
+  font: inherit; font-size: 15px; font-weight: 500; line-height: 1.1; white-space: nowrap; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.bud-c:hover { color: #111; }
+.bud-c[aria-pressed="true"] { background: #fff; color: #111; font-weight: 650; box-shadow: 0 1px 3px rgba(0, 0, 0, .14); }
+.bud-c:focus-visible { outline: 2.5px solid #e9b300; outline-offset: -2px; }
+.bud-c[hidden] { display: none; }
+.bud-kind .bud-c { flex-basis: 0; }
+.bud-ws { display: none; }
+/* under $2K is private-seller only (budget.js hides Dealer): a one-option bar is just noise, the list's own note says it */
+.bud-kind:has(> .bud-c[hidden]) { display: none; }
+@media (max-width: 720px) { .bud-wl { display: none; } .bud-ws { display: inline; } }
+/* wide screens: type on its own row, budget + private/dealer side by side under it, all left-aligned to the column */
+@media (min-width: 721px) {
+  .bud-fl { grid-template-columns: minmax(0, 1fr) 260px; max-width: 900px; }
+  .bud-fl .bud-ty { grid-area: 1 / 1; } .bud-fl .bud-kind { grid-area: 1 / 2; } .bud-fl .bud-segs { grid-area: 2 / 1; }
+}
 .bud-vh { position: absolute; width: 1px; height: 1px; margin: 0; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .bud-none { color: #6e6e73; font-size: 15px; margin: 12px 0 0; }
 .bud-note { font-size: 14px; color: #6e6e73; margin: 16px 0 0; }
 
-/* even rhythm: the cbx list section pads its top by 40px; here the chips sit 28px under the one-line intro */
+/* even rhythm: the cbx list section pads its top by 40px; here the filters sit 28px under the one-line intro */
 .advp.cbx .cbx-sec.bud-pick { padding-top: 6px; }
-/* the 5 picks: home-page cards, 5 across (home: 168 px cards, centered; here the row fills the column, left-aligned like the chips) */
-.cbx .bud-pick .bud-l { padding: 0; margin-top: 28px; border: 0; }
+.cbx .bud-pick .bud-l { padding: 0; margin-top: 24px; border: 0; }
 .bud .mg.bud-g { display: grid !important; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
 .bud .mg.bud-g .mc { width: auto; }
-.bud .mc b { line-height: 1.25; }
-.bud .mc .bud-pr { margin-top: 0; font-size: 14px; font-weight: 500; color: #3a3a3c; font-variant-numeric: tabular-nums; }
+
+/* the card: picture, PRICE (the hero), then the years + car in smaller type, the score in the corner */
+.bud .mc b { order: 3; font-size: 14px; font-weight: 500; line-height: 1.3; color: #3a3a3c; }
+.bud .mc .bud-p { order: 2; display: flex; align-items: baseline; justify-content: center; width: 100%; font-variant-numeric: tabular-nums; color: #111; }
+.bud .mc .bud-p > span { white-space: nowrap; }
+/* 'big': "$6,250–$10,250" larger and bolder than the name */
+.bud-pbig .mc .bud-p { margin-top: 4px; font-size: 19px; font-weight: 750; letter-spacing: -.02em; line-height: 1.15; }
+.bud-pbig .mc .bud-ln { display: none; }
+/* 'bar': "$6,250 ——— $10,250", a low-to-high line between the two ends */
+.bud-pbar .mc .bud-p { gap: 8px; align-items: center; margin-top: 6px; padding: 0 4px; font-size: 16px; font-weight: 750; letter-spacing: -.01em; box-sizing: border-box; }
+.bud-pbar .mc .bud-to { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.bud-pbar .mc .bud-ln { flex: 1 1 auto; min-width: 16px; height: 6px; border-radius: 3px; background: linear-gradient(90deg, #c9ccd1, #1d1d1f); }
+.bud-pbar .mc .bud-p1 { justify-content: center; }
 
 /* a short list (or none) carries its own one-line note; the page note hides so there is only one line under the cards */
 .bud-pick:has(.bud-l:not([hidden]) .bud-none) .bud-note { display: none; }
 
-/* 11-24 Eli mobile pass (phones): type pills scroll edge to edge (they run off the screen, so it reads as a swipe row; the picked one is
-   scrolled into view by budget.js), budget = one segmented bar that fits the width, Private/Dealer = a 2-half switch.
-   Every chip is 44 px tall. Cards: the #1 pick full width, then 2 x 2 (odd counts only; even counts stay a plain 2-column grid). */
+/* phones: each filter bar fits the width (budget.js scrolls the picked chip into view if one ever overflows), 2-column cards with the
+   #1 pick full width (odd counts only) */
 @media (max-width: 720px) {
-  .bud-row { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; margin: 0 -32px; padding: 0 32px; scroll-padding: 0 32px; }
-  .bud-row::-webkit-scrollbar { display: none; }
-  .bud-c { flex: 0 0 auto; min-height: 44px; padding: 0 18px; font-size: 16px; }
-  .bud-bar { display: block; margin-top: 10px; }
-  .bud-row.bud-segs, .bud-kind { display: flex; margin: 0; padding: 3px; gap: 0; background: #f0f0f3; border-radius: 14px; overflow-x: auto; scrollbar-width: none; }
-  .bud-segs .bud-c, .bud-kind .bud-c { flex: 1 1 auto; min-height: 44px; padding: 0 6px; border: 0; border-radius: 11px; background: transparent; color: #3a3a3c; font-size: 15px; font-weight: 500; white-space: nowrap; }
-  .bud-segs .bud-c[aria-pressed="true"], .bud-kind .bud-c[aria-pressed="true"] { background: #fff; color: #111; font-weight: 600; box-shadow: 0 1px 3px rgba(0, 0, 0, .14); }
-  .bud-kind { margin-top: 10px; }
-  .bud-kind .bud-c { flex-basis: 0; }
-  .cbx .bud-pick .bud-l { margin-top: 24px; }
+  .bud-c { padding: 0 6px; font-size: 14.5px; }
+  .bud-segs .bud-c { padding: 0 4px; font-size: 14px; }
+  .cbx .bud-pick .bud-l { margin-top: 20px; }
   .bud .mg.bud-g { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .bud .mg.bud-g .mc:first-child:nth-last-child(odd) { grid-column: 1 / -1; padding-top: 30px; }
   .bud .mg.bud-g .mc:first-child:nth-last-child(odd) .mc-p { max-width: 230px; }
-  .bud .mg.bud-g .mc:first-child:nth-last-child(odd) b { font-size: 18px; }
-  .bud .mg.bud-g .mc:first-child:nth-last-child(odd) .bud-pr { font-size: 15px; }
+  .bud .mg.bud-g .mc:first-child:nth-last-child(odd) b { font-size: 15px; }
+  .bud-pbig .mg.bud-g .mc:first-child:nth-last-child(odd) .bud-p { font-size: 24px; }
+  .bud-pbar .mg.bud-g .mc:first-child:nth-last-child(odd) .bud-p { font-size: 20px; max-width: 320px; }
   .bud .mg.bud-g .mc:first-child:nth-last-child(odd) > span:last-child { font-size: 16px; top: 12px; right: 16px; }
+  .bud-pbig .mc .bud-p { font-size: 17px; }
+  .bud-pbar .mc .bud-p { font-size: 14px; gap: 5px; padding: 0; }
 }
-/* supercars have no complaint score: drop the score half of the note */
-.bud-pick:has(.bud-l[data-t="super"]:not([hidden])) .bud-sn { display: none; }
 /* supercars have no score in the corner, so their #1 card doesn't need the score's top row */
 @media (max-width: 720px) { .bud .mg.bud-g.bud-sup .mc:first-child:nth-last-child(odd) { padding-top: 16px; } }

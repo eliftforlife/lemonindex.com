@@ -1,0 +1,32 @@
+{
+"note": "11-25: AI estimates (Claude, from its own knowledge of the U.S. used market; no paid API, no listings) of a fair private-party price for the 500+ hp version itself, average condition, clean title, at typical miles, for /best/cheapest-500-hp-cars/. Used only where data/price_est.json has no price for that version (its tables price the base trim). One row per version = its cheapest model year. hp comes from data/hp500_hp.json (gen + trim), data/perf/<slug>.json (perf + variant) or data/supercar_engines.json (eng = car slug), never from this file.",
+"cars": [
+{"key": "ml63", "gen": "mercedes-benz-m-gle-g2", "trim": "ML 63 AMG", "year": 2007, "miles": 140000, "lo": 8000, "hi": 11500, "method": "ai-estimate", "made": "2026-11-25"},
+{"key": "rrs", "gen": "land-rover-range-rover-sport-g1", "trim": "Supercharged", "year": 2010, "miles": 135000, "lo": 8500, "hi": 12000, "method": "ai-estimate", "made": "2026-11-25"},
+{"key": "e63", "gen": "mercedes-benz-e-class-g3", "trim": "E63 AMG", "year": 2007, "miles": 130000, "lo": 10500, "hi": 14500, "method": "ai-estimate", "made": "2026-11-25"},
+{"key": "m5", "gen": "bmw-5-series-g5", "trim": "M5", "year": 2006, "miles": 115000, "lo": 13500, "hi": 18500, "method": "ai-estimate", "made": "2026-11-25"},
+{"key": "model-s", "gen": "tesla-model-s-g1", "trim": "P85D", "year": 2015, "miles": 110000, "lo": 15500, "hi": 20500, "method": "ai-estimate", "made": "2026-11-25"},
+{"key": "model-x", "gen": "tesla-model-x-g1", "trim": "90D/100D", "year": 2016, "miles": 105000, "lo": 20000, "hi": 25000, "method": "ai-estimate", "made": "2026-11-25"},
+{"key": "srt10", "gen": "ram-pickup-g3", "trim": "SRT-10", "year": 2004, "miles": 85000, "lo": 21000, "hi": 29000, "method": "ai-estimate", "made": "2026-11-25"},
+{"key": "lightning", "gen": "ford-f-series-g14", "trim": "Lightning Extended Range", "year": 2022, "miles": 50000, "lo": 32000, "hi": 40000, "method": "ai-estimate", "made": "2026-11-25"},
+{"key": "z06", "gen": "chevrolet-corvette-g6", "trim": "Z06", "year": 2006, "miles": 55000, "lo": 34000, "hi": 43000, "method": "ai-estimate", "made": "2026-11-25"},
+{"key": "c63s", "gen": "mercedes-benz-c-class-g4", "trim": "C63 S AMG", "year": 2016, "miles": 70000, "lo": 32000, "hi": 40000, "method": "ai-estimate", "made": "2026-11-25"},
+{"key": "glc63", "gen": "mercedes-benz-glk-glc-g2", "trim": "AMG GLC63 S", "year": 2018, "miles": 65000, "lo": 35000, "hi": 43000, "method": "ai-estimate", "made": "2026-11-25"},
+{"key": "sq7", "gen": "audi-q7-g2", "trim": "SQ7", "year": 2020, "miles": 70000, "lo": 36000, "hi": 44000, "method": "ai-estimate", "made": "2026-11-25"},
+{"key": "x5-m50i", "gen": "bmw-x5-g4", "trim": "M50i", "year": 2020, "miles": 65000, "lo": 37000, "hi": 45000, "method": "ai-estimate", "made": "2026-11-25"},
+{"key": "x3m", "gen": "bmw-x3-g3", "trim": "X3 M Competition", "year": 2020, "miles": 55000, "lo": 38000, "hi": 46000, "method": "ai-estimate", "made": "2026-11-25"},
+{"key": "m550i", "gen": "bmw-5-series-g7", "trim": "M550i xDrive", "year": 2021, "miles": 50000, "lo": 38000, "hi": 46000, "method": "ai-estimate", "made": "2026-11-25"},
+{"key": "dark-horse", "gen": "ford-mustang-g7", "trim": "Dark Horse", "year": 2024, "miles": 15000, "lo": 45000, "hi": 53000, "method": "ai-estimate", "made": "2026-11-25"},
+{"key": "rs7", "perf": "audi-rs7", "variant": "c7", "trim": "RS 7", "year": 2014, "miles": 95000, "lo": 27000, "hi": 34000, "method": "ai-estimate", "made": "2026-11-25"},
+{"key": "xfr", "eng": "jaguar-xfr", "trim": "XFR", "year": 2010, "miles": 110000, "lo": 10500, "hi": 14500, "method": "ai-estimate", "made": "2026-11-25"},
+{"key": "s63", "eng": "mercedes-amg-s63", "trim": "S63 AMG", "year": 2011, "miles": 105000, "lo": 15000, "hi": 20500, "method": "ai-estimate", "made": "2026-11-25"},
+{"key": "m6", "eng": "bmw-m6-e63-e64", "trim": "M6 coupe", "year": 2006, "miles": 95000, "lo": 16000, "hi": 21500, "method": "ai-estimate", "made": "2026-11-25"},
+{"key": "xkr", "eng": "jaguar-xkr", "trim": "XKR coupe", "year": 2010, "miles": 85000, "lo": 16500, "hi": 22500, "method": "ai-estimate", "made": "2026-11-25"},
+{"key": "cls63", "eng": "mercedes-amg-cls63", "trim": "CLS63 AMG", "year": 2012, "miles": 100000, "lo": 17500, "hi": 23500, "method": "ai-estimate", "made": "2026-11-25"},
+{"key": "gl63", "eng": "mercedes-amg-gl63-gls63", "trim": "GL63 AMG", "year": 2013, "miles": 110000, "lo": 18000, "hi": 24000, "method": "ai-estimate", "made": "2026-11-25"},
+{"key": "cl63", "eng": "mercedes-amg-cl63", "trim": "CL63 AMG", "year": 2011, "miles": 85000, "lo": 20000, "hi": 27000, "method": "ai-estimate", "made": "2026-11-25"},
+{"key": "stelvio-qv", "eng": "alfa-romeo-stelvio-quadrifoglio", "trim": "Stelvio Quadrifoglio", "year": 2018, "miles": 60000, "lo": 26000, "hi": 33000, "method": "ai-estimate", "made": "2026-11-25"},
+{"key": "giulia-qv", "eng": "alfa-romeo-giulia-quadrifoglio", "trim": "Giulia Quadrifoglio", "year": 2017, "miles": 60000, "lo": 28000, "hi": 35000, "method": "ai-estimate", "made": "2026-11-25"},
+{"key": "f-type-r", "eng": "jaguar-f-type-r-svr-v8", "trim": "F-Type R coupe", "year": 2015, "miles": 50000, "lo": 40000, "hi": 48000, "method": "ai-estimate", "made": "2026-11-25"}
+]
+}
