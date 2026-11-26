@@ -5,6 +5,10 @@
 (function () {
   'use strict';
   var CFG = JSON.parse(document.getElementById('cl-cfg').textContent), API = CFG.api, TEASE = CFG.teaser || null, GEN = CFG.gen || null;
+  // 11-26 from the store's year buttons (?y=2021): the cards say "2021 3 Series" instead of the generation's year range
+  (function () { var y = null; try { y = new URLSearchParams(location.search).get('y'); } catch (e) {}
+    var r = TEASE && /^\d{4}$/.test(y || '') && /(\d{4})–(\d{4})$/.exec(TEASE.title || '');
+    if (r && +y >= +r[1] && +y <= +r[2]) TEASE.title = y + ' ' + TEASE.short; })();
   var app = document.getElementById('app');
 
   // ---------------- small helpers ----------------
@@ -105,6 +109,9 @@
       var srv = j && j.data && j.data.v === 1 ? j.data : null;
       S = (srv && (!loc || (srv.at || 0) >= (loc.at || 0))) ? srv : loc || freshS();
       if (!S.ans) S.ans = {}; if (!S.unk) S.unk = {}; if (!S.quote) S.quote = {}; if (!S.papers) S.papers = {};
+      // 11-26 the store's year buttons open /checklist/<gen>/?y=<year>: pick that year unless this checklist already has one
+      var PY = null; try { PY = new URLSearchParams(location.search).get('y'); } catch (e) {}
+      if (!S.y && PY && DOC.ys[PY]) S.y = PY;
       store.set(SK(), JSON.stringify(S));
     });
   }

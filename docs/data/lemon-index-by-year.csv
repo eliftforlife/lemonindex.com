@@ -2367,12 +2367,13 @@ mini-cooper,Mini Cooper,2014,72,30,transmission & drivetrain,30,engine,27,electr
 mini-cooper,Mini Cooper,2015,59,24,engine,29,electrical,25,brakes,17,
 mini-cooper,Mini Cooper,2016,40,16,lights,25,brakes,12,seat belts,12,
 mini-cooper,Mini Cooper,2017,36,13,airbags,23,engine,23,lights,23,
+mini-cooper,Mini Cooper,2018,,4,airbags,50,body structure,25,brakes,25,
 mini-cooper,Mini Cooper,2019,30,7,transmission & drivetrain,43,electrical,29,stability control,29,
 mini-cooper,Mini Cooper,2020,,8,airbags,25,electrical,25,automatic emergency braking,12,
 mini-cooper,Mini Cooper,2021,31,7,electrical,43,airbags,14,fuel system,14,
 mini-cooper,Mini Cooper,2022,28,7,airbags,14,body structure,14,electrical,14,
 mini-cooper,Mini Cooper,2023,28,7,tires,29,body structure,14,brakes,14,yes
-mini-cooper,Mini Cooper,2024,,2,brakes,50,engine,50,visibility,50,yes
+mini-cooper,Mini Cooper,2024,,4,brakes,25,engine,25,speed control,25,yes
 mini-cooper,Mini Cooper,2025,,6,"service brakes, hydraulic",33,stability control,33,automatic emergency braking,17,yes
 ford-ranger,Ford Ranger,2005,47,39,"fuel system, gasoline",28,tires,10,airbags,8,
 ford-ranger,Ford Ranger,2006,34,20,electrical,20,airbags,15,engine,15,
