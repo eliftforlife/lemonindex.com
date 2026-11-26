@@ -565,24 +565,24 @@
  },
  "chevrolet-silverado": {
   "2000": {
-   "src": "/assets/ai-cars/chevrolet-silverado-g1.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-silverado-2000.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark blue metallic",
    "gen": "1st generation (GMT800)"
   },
   "2001": {
-   "src": "/assets/ai-cars/chevrolet-silverado-g1.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-silverado-2001.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "silver metallic",
    "gen": "1st generation (GMT800)"
   },
   "2002": {
-   "src": "/assets/ai-cars/chevrolet-silverado-g1.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-silverado-2002.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "dark gray metallic",
    "gen": "1st generation (GMT800)"
   },
   "2003": {
@@ -740,10 +740,10 @@
    "gen": "4th generation (T1XX)"
   },
   "2025": {
-   "src": "/assets/ai-cars/chevrolet-silverado-g4.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-silverado-2025.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "red",
+   "color": "white",
    "gen": "4th generation (T1XX)"
   }
  },
@@ -1215,10 +1215,10 @@
    "gen": "2nd generation"
   },
   "2014": {
-   "src": "/assets/ai-cars/toyota-tacoma-g2.webp?v=1",
+   "src": "/assets/ai-cars/toyota-tacoma-2014.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "silver",
+   "color": "medium blue metallic",
    "gen": "2nd generation"
   },
   "2015": {
@@ -3647,10 +3647,10 @@
    "gen": "2nd generation (GMT800)"
   },
   "2007": {
-   "src": "/assets/ai-models/chevrolet-tahoe.webp?v=1",
+   "src": "/assets/ai-cars/chevrolet-tahoe-2007.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark red",
+   "color": "white",
    "gen": "3rd generation (GMT900)"
   },
   "2008": {
@@ -5414,17 +5414,17 @@
    "gen": "2nd generation"
   },
   "2005": {
-   "src": "/assets/ai-cars/honda-cr-v-g2.webp?v=1",
+   "src": "/assets/ai-cars/honda-cr-v-2005.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark blue",
+   "color": "light gold metallic",
    "gen": "2nd generation"
   },
   "2006": {
-   "src": "/assets/ai-cars/honda-cr-v-g2.webp?v=1",
+   "src": "/assets/ai-cars/honda-cr-v-2006.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "dark blue",
+   "color": "black",
    "gen": "2nd generation"
   },
   "2007": {
@@ -8474,10 +8474,10 @@
    "gen": "7th generation (XV50)"
   },
   "2013": {
-   "src": "/assets/ai-cars/toyota-camry-g7.webp?v=1",
+   "src": "/assets/ai-cars/toyota-camry-2013.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "black",
    "gen": "7th generation (XV50)"
   },
   "2014": {
@@ -8686,21 +8686,21 @@
    "gen": "11th generation (E170)"
   },
   "2017": {
-   "src": "/assets/ai-cars/toyota-corolla-g11.webp?v=1",
+   "src": "/assets/ai-cars/toyota-corolla-2017.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "silver metallic",
    "gen": "11th generation (E170)"
   },
   "2018": {
-   "src": "/assets/ai-cars/toyota-corolla-g11.webp?v=1",
+   "src": "/assets/ai-cars/toyota-corolla-2018.webp?v=1",
    "w": 1000,
    "h": 600,
-   "color": "white",
+   "color": "dark blue metallic",
    "gen": "11th generation (E170)"
   },
   "2019": {
-   "src": "/assets/ai-cars/toyota-corolla-g11.webp?v=1",
+   "src": "/assets/ai-cars/toyota-corolla-2019.webp?v=1",
    "w": 1000,
    "h": 600,
    "color": "white",
