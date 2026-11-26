@@ -432,37 +432,67 @@
   }
 
   // ======================================================================== /account/ and /account/signin/
+  // 11-26 (Elijah): signed out, the person icon lands here: a sign-up page that says what you get. Signed in: your checklists + settings.
+  var PERKS = [['check', 'Your first checklist free', 'Pick any car or truck. No card needed.'], ['user', 'Your answers on any device', 'Start at the car on your phone, finish at home.'],
+    ['tag', 'An offer price for the car', 'What to pay and what to open with, from your answers.']];
+  function accWrap(inner) { return siteNav() + (desk() ? '<div class="app"><div class="wrap acw">' + inner + '</div></div>' : inner); }
+  function devLink() { var d = sessionStorage.getItem('lcw-dev-link'); return d && /^http:\/\/(127\.0\.0\.1|localhost):\d+\/account\/signin\/#t=lsl_[A-Za-z0-9_-]{43}$/.test(d) ? d : ''; }
+  function joinPage(err, sent) {
+    if (sent) return accWrap('<div class="acc ctr"><div class="bigic">' + ic('mail', 36) + '</div><h1>Check your email</h1><p class="s">We sent a link to <b style="color:var(--ink)">' + esc(sent) + '</b>. It works once, for 15 minutes.</p>' +
+      (devLink() ? '<a class="btn" href="' + esc(devLink()) + '">Open the sign-in link (local test)</a>' : '') +
+      '<p class="note" style="margin-top:14px">Didn’t get it? Check spam.</p><button class="btn w" style="margin-top:18px" data-again="1">Use a different email</button></div>');
+    return accWrap('<div class="acc"><h1>Sign in or sign up</h1><p class="s">No password. We email you a link.</p>' +
+      '<form id="acf" novalidate><label class="vh" for="aem">Email</label><input class="in" id="aem" name="em" type="email" autocomplete="email" inputmode="email" placeholder="you@email.com" required maxlength="254">' +
+      (CFG.turnstile ? '<div class="cf-turnstile" data-sitekey="' + esc(CFG.turnstile) + '"></div>' : '') + '<button class="btn y" style="margin-top:12px" type="submit">Email me a link</button></form>' +
+      (err ? '<p class="note" style="color:var(--r);margin-top:10px">' + esc(err) + '</p>' : '') +
+      '<p class="sec">What you get</p><div class="pk">' + PERKS.map(function (k) { return '<div class="pki"><span class="pkc">' + ic(k[0], 20, 2.4) + '</span><span><b>' + k[1] + '</b><small>' + k[2] + '</small></span></div>'; }).join('') + '</div>' +
+      '<p class="note" style="margin-top:14px">More checklists are $7.99 a car, or $19.99 for every car and truck. We never sell or share your email.</p></div>');
+  }
   function accountPage() {
     var T = CFG.titles || {};
-    if (!ME) return siteNav() + '<div class="acc" style="padding:8px 20px 30px;max-width:560px;margin:0 auto"><h1>Your checklists</h1><p class="s">Sign in on a checklist page with your email. We send a link: no password.</p><a class="btn y" href="/checklist/">Pick a car</a></div>';
+    if (!ME) return joinPage();
     var mine = (ME.all ? Object.keys(T) : [ME.free].concat(ME.owned || [])).filter(function (g, j, a) { return g && T[g] && a.indexOf(g) === j; });
     var prog = {}; (ME.progress || []).forEach(function (p) { prog[p.gen] = p.updated; });
     mine.sort(function (a, b) { return (prog[b] || 0) - (prog[a] || 0); });
     var list = mine.slice(0, ME.all ? 12 : 99).map(function (g) { return hk({name: T[g][0], small: (ME.free === g ? 'Free' : 'Unlocked') + (prog[g] ? ' · In progress' : ' · Start'), img: T[g][1], cls: 'mini', href: '/checklist/' + g + '/'}); }).join('');
-    var inner = '<div class="acc" style="padding:8px 20px 30px"><h1>Your account</h1><p class="em">' + esc(ME.email) + '</p>' +
-      '<p class="sec" style="margin-top:6px">My checklists' + (ME.all ? ' · every car and truck' : '') + '</p>' + (list || '<p class="note">None yet. <a href="/checklist/">Pick a car</a></p>') + (ME.all && mine.length > 12 ? '<p class="note"><a href="/checklist/">See every checklist</a></p>' : '') +
+    var inner = '<div class="acc"><div class="ach"><span class="ava">' + esc((ME.email || '?').charAt(0).toUpperCase()) + '</span><span><h1>Your account</h1><p class="em">' + esc(ME.email) + '</p></span></div>' +
+      '<p class="sec">My checklists' + (ME.all ? ' · every car and truck' : '') + '</p>' + (list || '<p class="note">None yet.</p>') + (ME.all && mine.length > 12 ? '<a class="btn w" style="margin-top:4px" href="/checklist/">See every checklist</a>' : '') +
       (ME.all ? '' : '<p class="sec">Get more</p>' + hk({name: 'All cars & trucks', small: 'Every checklist · $19.99', img: ALLCARS.img, img2: ALLCARS.img2, cls: 'mini', href: '/checklist/'})) +
-      '<div class="lst" style="margin-top:18px"><button data-out="1">Sign out <span style="color:var(--gray2)">' + ic('chev', 18) + '</span></button><button data-out="all">Sign out on every device <span style="color:var(--gray2)">' + ic('chev', 18) + '</span></button><button class="r" data-del="1">Delete my account</button></div>' +
+      '<p class="sec">Settings</p><div class="lst"><button data-out="1">Sign out <span style="color:var(--gray2)">' + ic('chev', 18) + '</span></button><button data-out="all">Sign out on every device <span style="color:var(--gray2)">' + ic('chev', 18) + '</span></button><button class="r" data-del="1">Delete my account</button></div>' +
       '<div id="delbox"></div>' +
-      '<p class="note" style="margin-top:22px"><!-- needs Elijah’s OK --><b>Privacy.</b> We keep your email, what you bought and your checklist answers, so they’re there on any device. That’s all: no password, no card number (Stripe handles payment), and we never sell or share your email. Sign-in links are single-use and stored scrambled. Delete your account here any time, and the answers go with it; we keep only the Stripe receipt, which the law requires.</p>' +
-      '<p class="note"><!-- needs Elijah’s OK -->Not happy? Email us within 14 days for a full refund: <a href="mailto:' + esc(CFG.contact) + '">' + esc(CFG.contact) + '</a>.</p></div>';
-    return desk() ? siteNav() + '<div class="app"><div class="wrap" style="width:560px;padding-top:16px">' + inner + '</div></div>' : siteNav() + inner;
+      '<details class="pv"><summary>Privacy and refunds</summary><p class="note"><!-- needs Elijah’s OK -->We keep your email, what you bought and your checklist answers, so they’re there on any device. That’s all: no password, no card number (Stripe handles payment), and we never sell or share your email. Sign-in links are single-use and stored scrambled. Delete your account here any time, and the answers go with it; we keep only the Stripe receipt, which the law requires.</p>' +
+      '<p class="note"><!-- needs Elijah’s OK -->Not happy? Email us within 14 days for a full refund: <a href="mailto:' + esc(CFG.contact) + '">' + esc(CFG.contact) + '</a>.</p></details></div>';
+    return accWrap(inner);
+  }
+  function paintAcc(html) { app.innerHTML = html; wireAccount(); if (window.turnstile && document.querySelector('.cf-turnstile')) try { window.turnstile.render('.cf-turnstile'); } catch (e) {} }
+  var ABUSY = false;
+  function acctSignin(f) {
+    var em = String(f.em.value || '').trim(), tsi = f.querySelector('[name="cf-turnstile-response"]');
+    if (!/^[^@\s]+@[^@\s]+\.[a-z]{2,}$/i.test(em)) return paintAcc(joinPage('Type your email, like you@email.com.'));
+    if (ABUSY) return; ABUSY = true; device(); sessionStorage.removeItem('lcw-next');
+    api('POST', '/auth/start', {email: em, next: null, ts: tsi ? tsi.value : undefined}).then(function (j) {
+      ABUSY = false;
+      if (j._s === 200) { if (j.dev_link) sessionStorage.setItem('lcw-dev-link', j.dev_link); else sessionStorage.removeItem('lcw-dev-link'); return paintAcc(joinPage('', em)); }
+      paintAcc(joinPage({email: 'That email doesn’t work here. Use your everyday email.', disposable: 'Please use your everyday email, not a throwaway one.', busy: 'Too many sign-in emails. Try again in an hour.', 'email-off': 'Sign-in emails are paused for a moment. Try again soon.', turnstile: 'Please tick the box to show you’re not a robot.'}[j.error] || 'Couldn’t send the email. Try again in a minute.'));
+    });
   }
   function wireAccount() {
-    q('[data-out]').forEach(function (b) { b.onclick = function () { api('POST', '/auth/signout', {all: b.dataset.out === 'all'}).then(function () { dropLocal(); ME = null; app.innerHTML = accountPage(); wireAccount(); }); }; });
+    var af = document.getElementById('acf'); if (af) af.onsubmit = function (e) { e.preventDefault(); acctSignin(af); };
+    q('[data-again]').forEach(function (b) { b.onclick = function () { paintAcc(joinPage()); }; });
+    q('[data-out]').forEach(function (b) { b.onclick = function () { api('POST', '/auth/signout', {all: b.dataset.out === 'all'}).then(function () { dropLocal(); ME = null; paintAcc(accountPage()); }); }; });
     q('[data-del]').forEach(function (b) { b.onclick = function () {
       var box = document.getElementById('delbox'); box.innerHTML = '<form id="delf" class="cd gy" style="padding:14px 16px;margin-top:12px"><p class="note" style="margin-top:0">This deletes your account, your answers and your free checklist. Purchases can’t be restored. Type your email to confirm.</p><input class="in" name="c" type="email" autocomplete="off"><button class="btn" style="margin-top:10px;width:100%;background:var(--r)" type="submit">Delete for good</button></form>';
-      document.getElementById('delf').onsubmit = function (e) { e.preventDefault(); api('POST', '/account/delete', {confirm: this.c.value}).then(function (j) { if (j._s === 200) { dropLocal(); ME = null; app.innerHTML = accountPage(); wireAccount(); } else box.querySelector('p').textContent = 'That email doesn’t match this account.'; }); }; }; });
+      document.getElementById('delf').onsubmit = function (e) { e.preventDefault(); api('POST', '/account/delete', {confirm: this.c.value}).then(function (j) { if (j._s === 200) { dropLocal(); ME = null; paintAcc(accountPage()); } else box.querySelector('p').textContent = 'That email doesn’t match this account.'; }); }; }; });
   }
-  function bootAccount() { loadMe().then(function () { document.body.classList.toggle('desk', desk()); app.innerHTML = accountPage(); wireAccount(); }); }
+  function bootAccount() { loadMe().then(function () { document.body.classList.toggle('desk', desk()); paintAcc(accountPage()); }); }
   function bootSignin() {
     var m = /#t=(lsl_[A-Za-z0-9_-]{43})/.exec(location.hash);
     history.replaceState(null, '', location.pathname);          // the link is single-use: drop it from the address bar and history
-    var msg = function (h, p, a) { app.innerHTML = siteNav() + '<div class="acc" style="padding:8px 20px 30px;max-width:560px;margin:0 auto"><h1>' + h + '</h1><p class="s">' + p + '</p>' + (a || '') + '</div>'; };
-    if (!m) return msg('That link didn’t work', 'Open the newest email from us, or ask for a new link.', '<a class="btn" href="/checklist/">Back to the checklists</a>');
-    msg('Signing you in…', '');
+    var msg = function (h, p, a) { document.body.classList.toggle('desk', desk()); app.innerHTML = accWrap('<div class="acc"><h1>' + h + '</h1><p class="s">' + p + '</p>' + (a || '') + '</div>'); };
+    if (!m) return msg('That link didn’t work', 'Open the newest email from us, or ask for a new link.', '<a class="btn" href="/account/">Get a new link</a>');
+    msg('Signing you in…', '<span class="ld"><i></i></span>');
     api('POST', '/auth/verify', {t: m[1], dev: device()}).then(function (j) {
-      if (j._s !== 200) return msg('That link has ' + (j.error === 'used' ? 'already been used' : j.error === 'expired' ? 'expired' : 'a problem'), 'Sign-in links work once, for 15 minutes. Ask for a new one on the checklist page.', '<a class="btn" href="/checklist/' + (j.next || '') + '">Get a new link</a>');
+      if (j._s !== 200) return msg('That link has ' + (j.error === 'used' ? 'already been used' : j.error === 'expired' ? 'expired' : 'a problem'), 'Sign-in links work once, for 15 minutes. Ask for a new one.', '<a class="btn" href="' + (j.next ? '/checklist/' + j.next + '/' : '/account/') + '">Get a new link</a>');
       setToken(j.token, j.exp);
       var g = j.claimed || j.next || sessionStorage.getItem('lcw-next');
       location.replace(g && /^[a-z0-9]+(?:-[a-z0-9]+){0,6}-g\d{1,2}$/.test(g) ? '/checklist/' + g + '/' : '/account/');

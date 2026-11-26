@@ -9,7 +9,7 @@ STORE_API = os.environ.get('LEMON_STORE_API', 'https://lemon-store.elift08.worke
 TURNSTILE_KEY = os.environ.get('LEMON_TURNSTILE_SITEKEY', '')     # set together with the Worker's TURNSTILE_ON = "1"
 if not re.fullmatch(r'https://[a-z0-9-]+\.elift08\.workers\.dev|https://api\.lemonindex\.com|http://(127\.0\.0\.1|localhost):\d{2,5}', STORE_API):
     raise SystemExit('LEMON_STORE_API must be the lemon-store Worker (https://*.elift08.workers.dev) or a local wrangler dev address')
-CL_V = '1126d'
+CL_V = '1126e'
 
 
 def _cl_doc(path, title, desc, cfg, noscript):
@@ -18,12 +18,12 @@ def _cl_doc(path, title, desc, cfg, noscript):
            f"connect-src {STORE_API} https://vpic.nhtsa.dot.gov https://api.nhtsa.gov; frame-src{ts or ' ' + chr(39) + 'none' + chr(39)}; "
            "base-uri 'none'; form-action 'none'; object-src 'none'; manifest-src 'self'")
     cfg_js = json.dumps(cfg, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
-    turn = '<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>' if TURNSTILE_KEY and cfg.get('page') == 'checklist' else ''
+    turn = '<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>' if TURNSTILE_KEY and cfg.get('page') in ('checklist', 'account') else ''
     doc = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>{E(title)}</title><meta name="description" content="{E(desc)}"><meta name="robots" content="noindex, follow"><link rel="canonical" href="{BASE}{path}">
 <meta http-equiv="Content-Security-Policy" content="{csp}"><meta name="referrer" content="no-referrer">
 <link rel="icon" href="/assets/icon-64.png"><link rel="apple-touch-icon" href="/assets/icon-180.png"><link rel="stylesheet" href="/assets/cl.css?v={CL_V}">
-</head><body><div id="app">{noscript}</div>
+</head><body><div id="app"><div class="boot"><span class="ld"><i></i></span></div><noscript>{noscript}</noscript></div>
 <script type="application/json" id="cl-cfg">{cfg_js}</script>{turn}
 <script src="/assets/recall_names.js?v={CL_V}" defer></script><script src="/assets/cl.js?v={CL_V}" defer></script></body></html>'''
     os.makedirs(f'{OUT}{path}', exist_ok=True)
@@ -46,7 +46,7 @@ def CL_PAGES():
               'nModels': len(models), 'home': f"/cars/{t['model']}/", 'yearPage': f"/cars/{t['model']}/{{y}}/"}
         per = ''.join(f'<li>{E(n)}: {t["per"].get(str(i), 0)} checks</li>' for i, n in enumerate(['Before you go', 'Walk around it', 'Tires and brakes', 'Under the hood', 'Start it', 'A/C, then heat', 'Inside', 'Test drive', 'Paperwork'], 1) if t['per'].get(str(i)))
         ns = (f'<div class="acc" style="padding:20px"><h1>{E(t["name"])} checklist, {yrs}</h1><p class="s">{t["checks"]} quick checks ({t["all"]} in all) for the {E(t["gen"])}, '
-              f'and your offer price at the end. Your first checklist is free.</p><ul class="note">{per}</ul><p class="note">This page needs JavaScript.</p></div>')
+              f'and your offer price at the end. Your first checklist is free.</p><ul class="note">{per}</ul><p class="note">Turn on JavaScript to use the checklist.</p></div>')
         _cl_doc(f'/checklist/{g}/', f"{t['name']} {yrs} Before-You-Buy Checklist", f"Step-by-step used {t['name']} checks for {yrs}, built from this generation's own known problems, with your offer price at the end.",
                 {'page': 'checklist', 'api': STORE_API, 'gen': g, 'teaser': tz, 'turnstile': TURNSTILE_KEY or None, 'contact': CONTACT}, ns)
     # the store: every checklist (plain HTML, no script needed; the page's CSP allows none).
@@ -81,10 +81,15 @@ def CL_PAGES():
 <meta name="description" content="Step-by-step used car and truck checklists for {len(models)} models, with your offer price at the end. First checklist free."><meta name="robots" content="noindex, follow"><link rel="canonical" href="{BASE}/checklist/">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'; object-src 'none'">
 <link rel="icon" href="/assets/icon-64.png"><link rel="stylesheet" href="/assets/cl.css?v={CL_V}"></head><body>{idx}</body></html>''')
-    _cl_doc('/account/', 'Your Checklists | The Lemon Index', 'Your Lemon Index checklists, purchases and sign-in.', {'page': 'account', 'api': STORE_API, 'titles': titles, 'contact': CONTACT},
-            '<div class="acc" style="padding:20px"><h1>Your checklists</h1><p class="note">This page needs JavaScript.</p></div>')
+    _cl_doc('/account/', 'Your Checklists | The Lemon Index', 'Your Lemon Index checklists, purchases and sign-in.', {'page': 'account', 'api': STORE_API, 'titles': titles, 'turnstile': TURNSTILE_KEY or None, 'contact': CONTACT},
+            '<div class="acc" style="padding:20px"><h1>Your account</h1><p class="note">Turn on JavaScript to sign in.</p></div>')
     _cl_doc('/account/signin/', 'Signing In | The Lemon Index', 'Sign in to your Lemon Index checklists.', {'page': 'signin', 'api': STORE_API, 'contact': CONTACT},
-            '<div class="acc" style="padding:20px"><h1>Signing you in</h1><p class="note">This page needs JavaScript.</p></div>')
+            '<div class="acc" style="padding:20px"><h1>Signing you in</h1><p class="note">Turn on JavaScript to sign in.</p></div>')
+    # 11-26 security test: the sign-in and checklist pages can't be framed by another site (clickjacking). Cloudflare's static assets read
+    # docs/_headers; the page's own meta CSP can't set frame-ancestors.
+    open(f'{OUT}/_headers', 'w', encoding='utf-8', newline='\n').write(''.join(
+        f"{pat}\n  X-Frame-Options: DENY\n  Content-Security-Policy: frame-ancestors 'none'\n  X-Content-Type-Options: nosniff\n"
+        for pat in ('/account', '/account/*', '/checklist', '/checklist/*')))
     return len(T)
 
 
