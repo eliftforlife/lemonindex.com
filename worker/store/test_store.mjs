@@ -177,7 +177,7 @@ await test('sign-in start: validation, disposable block, payload cap, same answe
   assert.equal((await call('POST', '/auth/start', { body: 'not json' })).s, 400);
   assert.equal((await call('POST', '/auth/start', { body: { email: 'a@example.com', pad: 'x'.repeat(3000) } })).s, 400);
   const r = await call('POST', '/auth/start', { body: { email: 'First@Example.com', next: 'toyota-corolla-g11' } }); assert.equal(r.s, 200); assert.deepEqual(r.j, { sent: true });
-  const m = S.mails.at(-1); assert.deepEqual(m.to, ['first@example.com']); assert.equal(m.subject, 'Your Lemon Index sign-in link'); assert.equal(m.from, 'Lemon Index <signin@lemonindex.com>');
+  const m = S.mails.at(-1); assert.deepEqual(m.to, ['first@example.com']); assert.match(m.subject, /^Your Lemon Index sign-in link \([0-9A-F]{6}\)$/); assert.ok(m.headers && m.headers['X-Entity-Ref-ID']); assert.equal(m.from, 'Lemon Index <signin@lemonindex.com>');
   assert.match(m.html, /https:\/\/lemonindex\.com\/account\/signin\/#t=lsl_/); assert.match(m.text, /expires in 15 minutes/);
   const tok = linkOf(m); assert.ok(!tables().includes(tok), 'raw link token stored');
   assert.equal(env.DB.raw.prepare('SELECT next FROM links ORDER BY rowid DESC LIMIT 1').get().next, 'toyota-corolla-g11');
@@ -261,7 +261,7 @@ await test('checkout: signed in only, live price ids, metadata from the server; 
   assert.equal(b.get('mode'), 'payment'); assert.equal(b.get('line_items[0][price]'), env.PRICE_ONE); assert.equal(b.get('line_items[0][quantity]'), '1');
   assert.equal(b.get('customer_email'), 'ann.buyer@gmail.com');   // the account's own address (a sign-in link never rewrites it; Gmail variants are one inbox)
   assert.equal(b.get('metadata[site]'), 'lemon-store'); assert.equal(b.get('metadata[gen]'), 'toyota-tacoma-g2');
-  assert.match(b.get('metadata[uid]'), /^u_/); assert.notEqual(b.get('metadata[uid]'), 'u_evil'); assert.equal(b.get('payment_intent_data[metadata][item]'), 'one');
+  assert.match(b.get('metadata[uid]'), /^u_/); assert.notEqual(b.get('metadata[uid]'), 'u_evil'); assert.equal(b.get('payment_intent_data[metadata][item]'), 'one'); assert.ok(b.get('payment_intent_data[receipt_email]'));
   assert.equal(b.get('success_url'), SITE + '/checklist/toyota-tacoma-g2/?paid=1'); assert.equal(b.get('cancel_url'), SITE + '/checklist/toyota-tacoma-g2/#paywall');
   csOne = Object.keys(S.sessions).at(-1);
   const me = await call('GET', '/me', { token: A.token }); assert.deepEqual(me.j.owned, []);                     // back from Stripe, no webhook yet: nothing

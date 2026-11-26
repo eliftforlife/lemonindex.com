@@ -9,7 +9,7 @@ STORE_API = os.environ.get('LEMON_STORE_API', 'https://lemon-store.elift08.worke
 TURNSTILE_KEY = os.environ.get('LEMON_TURNSTILE_SITEKEY', '')     # set together with the Worker's TURNSTILE_ON = "1"
 if not re.fullmatch(r'https://[a-z0-9-]+\.elift08\.workers\.dev|https://api\.lemonindex\.com|http://(127\.0\.0\.1|localhost):\d{2,5}', STORE_API):
     raise SystemExit('LEMON_STORE_API must be the lemon-store Worker (https://*.elift08.workers.dev) or a local wrangler dev address')
-CL_V = '1125d'
+CL_V = '1126b'
 
 
 def _cl_doc(path, title, desc, cfg, noscript):

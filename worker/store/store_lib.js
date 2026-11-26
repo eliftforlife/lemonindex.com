@@ -263,8 +263,11 @@ async function turnstileOk(env, token, ip, url) {
 const escH = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 export function mailBody(link) {
   const f = 'font:16px/1.5 -apple-system,Segoe UI,Arial,sans-serif;color:#1d1d1f';
+  // 11-26 (Elijah): every link is its own email. Gmail threads same-subject mail from one sender, so an old, used link sat on top of the new one.
+  // A short random code (not part of the token) makes each subject unique; X-Entity-Ref-ID (sendMail) also stops Gmail threading.
+  const code = Array.from(crypto.getRandomValues(new Uint8Array(3)), b => b.toString(16).padStart(2, '0')).join('').toUpperCase();
   return {
-    subject: 'Your Lemon Index sign-in link',
+    subject: `Your Lemon Index sign-in link (${code})`,
     html: `<p style="${f}">Tap the button to sign in to the Lemon Index. The link works once and expires in 15 minutes.</p>`
       + `<p style="${f}"><a href="${escH(link)}" style="display:inline-block;background:#1d1d1f;color:#fff;text-decoration:none;padding:12px 22px;border-radius:12px;font-weight:600">Sign in</a></p>`
       + `<p style="font:13px/1.5 -apple-system,Segoe UI,Arial,sans-serif;color:#6e6e73">If you didn’t ask for this, ignore this email. Nobody can sign in without the link.</p>`,
@@ -273,7 +276,8 @@ export function mailBody(link) {
 }
 async function sendMail(env, to, m) {
   const r = await fetch('https://api.resend.com/emails', { method: 'POST', headers: { Authorization: `Bearer ${env.RESEND_KEY}`, 'Content-Type': 'application/json' },
-    body: JSON.stringify({ from: env.MAIL_FROM, to: [to], reply_to: env.REPLY_TO || undefined, subject: m.subject, html: m.html, text: m.text }) });
+    body: JSON.stringify({ from: env.MAIL_FROM, to: [to], reply_to: env.REPLY_TO || undefined, subject: m.subject, html: m.html, text: m.text,
+      headers: { 'X-Entity-Ref-ID': crypto.randomUUID() } }) });
   if (!r.ok) console.log('signin mail failed', r.status);
   return r.ok;
 }
@@ -285,7 +289,7 @@ async function checkout(env, s, item, gen) {
   if (!P || !/^price_[A-Za-z0-9]{8,64}$/.test(P.price || '')) return { error: 'price-not-configured', status: 503 };
   const meta = { site: 'lemon-store', item, gen: gen || '', uid: s.uid };
   const params = { mode: 'payment', line_items: [{ price: P.price, quantity: 1 }], customer_email: s.email, client_reference_id: s.uid,
-    metadata: meta, payment_intent_data: { metadata: meta }, submit_type: 'pay',
+    metadata: meta, payment_intent_data: { metadata: meta, receipt_email: s.email }, submit_type: 'pay',   // 11-26 (Elijah): Stripe emails a receipt
     success_url: `${SITE}/checklist/${gen}/?paid=1`, cancel_url: `${SITE}/checklist/${gen}/#paywall` };
   const cs = await stripe(env, 'POST', 'checkout/sessions', params);
   return { url: cs.url };
