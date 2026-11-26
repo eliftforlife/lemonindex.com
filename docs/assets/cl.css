@@ -344,3 +344,19 @@ details.xc>summary{list-style:none;cursor:pointer}details.xc>summary::-webkit-de
 @media (min-width:700px){.sx-w{padding:14px 28px 72px}.sx-h h1{max-width:16ch}.sx-h{padding:30px 34px 28px;border-radius:28px}.sx-h::after{width:300px;height:300px;right:-60px;top:-150px}
 .sx-g{grid-template-columns:1fr 1fr}.sx[open]{grid-column:1/-1}.sx summary{min-height:132px;padding-left:26px}.sx-t b{font-size:24px}.sx-p{height:120px;flex-basis:50%}.sx-j{margin:0 0 4px;padding-left:0;padding-right:0}}
 @media (prefers-reduced-motion:reduce){.sx,.sx-go svg{transition:none}}
+
+/* ---------- 11-26 account: sign-up page, perks, header, loading ---------- */
+.acc{padding:8px 20px 34px;max-width:560px;margin:0 auto}
+body.desk .acw{width:560px;padding:16px 0 0}body.desk .acw .acc{padding:8px 28px 34px}
+.acc .sec{margin-top:26px}
+.pk{display:grid;gap:10px}
+.pki{display:flex;gap:14px;align-items:center;padding:14px 16px;border-radius:18px;background:var(--bg)}
+.pki b{display:block;font-size:16.5px;font-weight:750}.pki small{display:block;color:var(--gray);font-size:14px;margin-top:2px;line-height:1.35}
+.pkc{width:40px;height:40px;flex:none;border-radius:12px;background:var(--y);color:var(--ink);display:grid;place-items:center}
+.ach{display:flex;align-items:center;gap:14px;margin:6px 0 4px}.ach h1{margin:0}.ach .em{margin:2px 0 0}
+.ava{width:56px;height:56px;flex:none;border-radius:50%;background:var(--y);display:grid;place-items:center;font-size:24px;font-weight:800;color:var(--ink)}
+.pv{margin-top:22px}.pv summary{font-size:14px;font-weight:650;color:var(--gray);cursor:pointer;padding:6px 0}
+.boot{min-height:60vh;display:grid;place-items:center;opacity:0;animation:bootin .2s .4s forwards}
+@keyframes bootin{to{opacity:1}}
+.ld{display:inline-block;width:30px;height:30px}.ld i{display:block;width:100%;height:100%;border-radius:50%;border:3px solid #e8e8ed;border-top-color:var(--ink);animation:ldspin .8s linear infinite}
+@keyframes ldspin{to{transform:rotate(360deg)}}
