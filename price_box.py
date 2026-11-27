@@ -116,3 +116,26 @@ def budget_hook(path, doc):
     fid, y = m.group(1), m.group(2)
     return doc[:g.end()] + _BUD_ROW.format(h=budget_href(fid, int(y) if y else None)) + doc[g.end():]
 
+
+# ---- 11-26 (Elijah: "a money evaluator on the site in the money section"): one "Get your car's value" line in every price box, opening
+# /car-value/ (car_value_pages.py) with this car and year picked. Added by build.py page() after the date hash, so 4,000+ year pages
+# don't all get a new date for one link. Inline style: pricebox.css is linked inside the hashed body (a version bump would redate them).
+_CV_IDS = None
+_CV_PATH = re.compile(r'^/(cars|supercars)/([^/]+)/(?:(\d{4})/)?$')
+def value_hook(path, doc):
+    global _CV_IDS
+    m = _CV_PATH.match(path)
+    if not m or 'id="price-guide"' not in doc or 'class="pg-cv"' in doc: return doc
+    if _CV_IDS is None:
+        p = os.path.join(HERE, 'assets', 'carvalue.json')
+        _CV_IDS = set(json.load(open(p, encoding='utf-8'))['m']) if os.path.exists(p) else set()
+    kind, fid, y = m.groups()
+    if fid not in _CV_IDS or (kind == 'cars' and not y): return doc
+    i = doc.find('id="price-guide"'); j = doc.find('<p class="yc-cap">', i)
+    if j < 0: return doc
+    k = doc.find('</section>', i)
+    if 0 <= k < j: return doc
+    href = f'/car-value/?m={fid}' + (f'&amp;y={y}' if y else '')
+    link = (f'<p class="pg-cv" style="margin:14px 0 10px;font-size:16px;font-weight:600"><a href="{href}">Value this car '
+            '<span aria-hidden="true">›</span></a></p>')
+    return doc[:j] + link + doc[j:]

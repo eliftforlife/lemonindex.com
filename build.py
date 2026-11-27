@@ -380,7 +380,7 @@ def gh_header(path):
            ('bikes', 'Motorcycles & more', [('/motorcycles/', 'Motorcycles'), ('/planes/', 'Planes')]),
            ('check', 'Check a car', [('/vin/', 'VIN check'), ('/recalls/', 'Recall check'), ('/check-engine-light/', 'Engine codes'), ('/symptoms/', 'Car symptoms'), ('/engines/', 'Engines')]),
            ('best', 'Best & rankings', [('/best/', 'Best cars'), ('/rankings/', 'Every car ranked'), ('/compare/', 'Compare'), ('/best-gas-mileage/', 'Gas mileage'), ('/budget/', 'Cars for your budget')]),
-           ('money', 'Money', [('/car-loan-rates/', 'Loan rates'), ('/insurance/', 'Car insurance'), ('/budget/', 'Cars for your budget')]),   # 11-25 insurance
+           ('money', 'Money', [('/car-value/', "What's this car worth"), ('/car-loan-rates/', 'Loan rates'), ('/insurance/', 'Car insurance'), ('/budget/', 'Cars for your budget')]),   # 11-25 insurance
            ('research', 'Research', [('/studies/', 'Studies'), ('/stats/car-complaints/', 'Statistics'), ('/data/', 'Free data'), ('/method/', 'How it works')])]
     mfoot = [('/vote/', 'Vote on what’s next'), ('/coming-soon/', 'Coming soon'), ('/support/', 'Support')]
     assert not set(lab) - {u for _, _, ls in grp for u, _ in ls} - {u for u, _ in mfoot}, 'gh menu groups miss a link'
@@ -673,6 +673,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
     doc = _CAT_RW.sub(lambda m: f'href="{CAT_PATH[m.group(1)]}"', doc)   # 11-19: /?type=<tab> -> the category page
     if 'CPL_POLISH' in globals(): doc = CPL_POLISH(doc)   # 11-19 (Elijah): title-only cards + flat black line icons (car_pills.py), after the date hash
     doc = PRICEBOX.budget_hook(path, doc)
+    doc = PRICEBOX.value_hook(path, doc)   # 11-26: "Get your car's value" in every price box (-> /car-value/), after the date hash
     doc = INS_HOOK(path, doc)   # 11-25: 'Compare insurers for you' under the budget row on car year pages (insurance_pages.py), after the date hash
     # 11-24 (Elijah): 'Find a car for your budget' first in every car page's Overview list (budget_pages.py), after the date hash
     if 'VF_HOOK' in globals(): doc = VF_HOOK(path, doc)   # 11-24 (Elijah): no Normal/Advanced switch, one-sided praise/complaints full width, engine pictures on the engine chips, heart + share by the name (vis_fixes.py), after the date hash
@@ -2573,6 +2574,7 @@ exec(open('gap_pages.py', encoding='utf-8').read())   # 11-06 keyword gaps
 exec(open('seo_pages.py', encoding='utf-8').read())   # 11-06 best-of + stats pages
 INSX = 'pages'; exec(open('insurance_pages.py', encoding='utf-8').read())   # 11-25 /insurance/ + 51 state pages (INS_THIN: estimate-only states, noindex)
 exec(open('budget_pages.py', encoding='utf-8').read())   # 11-24 /budget/: top 10 most reliable per price range + the 'Find a car for your budget' row on car pages
+exec(open('car_value_pages.py', encoding='utf-8').read())   # 11-26 /car-value/: "What's my car worth?" (assets/carvalue.json from data_car_value.py)
 EMBX = 'pages'; exec(open('embed_pages.py', encoding='utf-8').read())   # 11-14 growth plan 5b: /embed/cars/<model>/ + the /embed/ how-to
 exec(open('extra_pages.py', encoding='utf-8').read())   # 11-06 Taos + Pontiac
 exec(open('eng_pool.py', encoding='utf-8').read())   # 11-17: the one engine YouTube rank pool BEFORE any engine page is built (the HD diesel pages showed a tone with no rank)
@@ -2637,6 +2639,7 @@ open(f'{OUT}/llms.txt', 'a', encoding='utf-8').write(STATS_LLM + f'- [Embed a ca
     # 11-15 growth 4c: the recall check and the VIN check were missing from llms.txt
     + (f'- [Car recall check]({BASE}/recalls/): every NHTSA recall campaign ({len({c for b in RCL["B"].values() for c in b["recs"]}):,}) on the {sum(len(b["models"]) for b in RCL["B"].values())} models we track, by make, model and year, with vehicles covered and park-it warnings; check by VIN or pick the car (live from NHTSA)' + chr(10) if 'RCL' in globals() else '')
     + f'- [Cheapest car insurance by state]({BASE}/insurance/): official monthly car insurance prices by company from the 11 state insurance departments that publish them (sample drivers by age and record), and an estimate from the NAIC 2024 state average elsewhere (tested off by about {INS_M["err"]}%); no sign-up, no affiliate links' + chr(10)
+    + f'- [What is this car worth?]({BASE}/car-value/): free used-car value estimate for {len(CV_D["m"]) if "CV_D" in globals() else ""} models by make, model, year, trim, miles, condition and clean or salvage title: a private-sale and dealer price range (Lemon Index AI estimates, not an appraisal)' + chr(10)
     + f'- [Free VIN check]({BASE}/vin/): decode a VIN (NHTSA vPIC) and see that model year: its Lemon Index, top problems, complaints and recalls' + chr(10))   # 11-14 5b/5c
 open(f'{OUT}/CNAME', 'w').write('lemonindex.com')
 open(f'{OUT}/google00cb28bea71f4c18.html', 'w').write('google-site-verification: google00cb28bea71f4c18.html')   # Search Console ownership (11-02); never remove
