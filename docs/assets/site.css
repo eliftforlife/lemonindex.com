@@ -2072,3 +2072,8 @@ header.gh { view-transition-name: gh; }
 .ytx-tr i { display: block; height: 100%; border-radius: 99px; background: #8e8e93; }
 .ytx.up .ytx-tr i { background: var(--good, #1f9d55); } .ytx.dn .ytx-tr i { background: var(--red, #d33); }
 .ytx figcaption { font-size: 13.5px; line-height: 1.4; color: var(--ink2); }
+/* 11-27 (Elijah): the Donate pill left the top bar; '♡ Donate' is the first item in the menu footer (opens the same donate sheet, support.js) */
+.gh-sheet .mn-f .mn-don { display: inline-flex; align-items: center; gap: 5px; border: 0; background: none; padding: 4px 0; margin: 0; cursor: pointer; font: 600 14px var(--sys, Inter, system-ui, sans-serif); color: #1d1d1f; text-decoration: none; }
+.gh-sheet .mn-f .mn-don span { color: #d9a300; font-size: 15px; line-height: 1; }
+.gh-sheet .mn-f .mn-don:hover { text-decoration: underline; text-underline-offset: 3px; }
+.gh-sheet .mn-f .mn-don { line-height: inherit; }   /* a button's font shorthand resets line-height: match the footer links' height */
