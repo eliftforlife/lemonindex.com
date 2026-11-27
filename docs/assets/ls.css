@@ -63,6 +63,25 @@
 .ls-how:hover { text-decoration: underline; }
 .ls-pl { display: flex; align-items: center; justify-content: center; gap: 6px; margin: 6px 0 0; font-size: 15px; font-weight: 600; color: #a15c00; }
 .ls-pl svg { flex: 0 0 auto; width: 16px; height: 16px; }
+/* 11-27: the partial line is a tap-to-open line with a small (i); the plain explanation opens under it (no big box) */
+details.ls-pl { display: block; margin: 6px auto 0; max-width: 560px; }
+details.ls-pl > summary { display: block; padding: 4px 0; text-align: center; text-wrap: balance; line-height: 1.35; list-style: none; cursor: pointer; }
+details.ls-pl > summary > svg { display: inline-block; vertical-align: -2px; margin-right: 6px; }
+details.ls-pl > summary > .ls-iic { vertical-align: -5px; margin-left: 6px; }
+details.ls-pl > summary::-webkit-details-marker { display: none; }
+details.ls-pl > summary:focus-visible { outline: 3px solid var(--lemon, #ffd400); outline-offset: 2px; border-radius: 8px; }
+.ls-iic { display: inline-grid; place-items: center; flex: none; width: 22px; height: 22px; border-radius: 50%; background: #f2f2f5; color: #6e6e73; }
+.ls-iic svg { width: 14px !important; height: 14px !important; }
+details[open] > summary .ls-iic, summary:hover .ls-iic { background: #e3e3e8; color: #1d1d1f; }
+.ls-plb { margin: 6px 0 0; padding: 10px 14px; border-radius: 12px; background: #f5f5f7; font-size: 14.5px; font-weight: 400; line-height: 1.45; color: #3c4043; text-align: left; }
+/* a tiny (i) after an input's label in the parts list (Common failures cost) */
+.ls-ii { display: inline; }
+.ls-ii > summary { display: inline-flex; vertical-align: -5px; margin-left: 4px; list-style: none; cursor: pointer; border-radius: 50%; }
+.ls-ii > summary::-webkit-details-marker { display: none; }
+.ls-ii > summary:focus-visible { outline: 3px solid var(--lemon, #ffd400); outline-offset: 2px; }
+.ls-ii .ls-iic { width: 20px; height: 20px; }
+.ls-ii .ls-iic svg { width: 13px !important; height: 13px !important; }
+.ls-iit { display: block; margin: 8px 0 4px; padding: 8px 12px; border-radius: 10px; background: #e9e9ee; font-size: 13px !important; font-weight: 500; line-height: 1.45; color: #3c4043; }
 .mh-score.ls-only { width: 100%; max-width: 680px; margin: 10px auto 4px; }
 /* compare cards + corner badges */
 .ls-chip { display: inline-flex; flex-direction: column; align-items: center; margin-top: 8px; }
@@ -79,3 +98,16 @@
 .ls-cs small { display: block; font-size: 12.5px; font-weight: 500; color: #6e6e73; }
 .ls-cs > b { font: 800 24px/1 var(--sys, Archivo, Inter, sans-serif); font-variant-numeric: tabular-nums; }
 .ls-cs > b.good { color: var(--good, #137a3a); } .ls-cs > b.bad { color: var(--red, #d0121a); }
+/* 11-27 (Elijah: make the (i) breakdown helpful): the why line on top, a small "vs other cars" bar under each input, links to the deeper
+   section, and a reason under a missing part */
+.ls-why { margin: 0 0 12px; padding: 0 0 12px; border-bottom: 1px solid #e3e3e8; font-size: 16.5px; font-weight: 700; line-height: 1.35; letter-spacing: -.01em; color: var(--ink, #1d1d1f); }
+.ls-lg { display: flex; align-items: center; gap: 8px; margin: 8px 0 2px; font-size: 12.5px; font-weight: 500; color: #6e6e73; }
+.ls-lg .ls-mb { flex: 0 0 56px; margin: 0; }
+.ls-mb { display: block; position: relative; width: 150px; max-width: 100%; height: 4px; margin: 7px 0 3px; border-radius: 2px; background: #dcdce1; }
+.ls-mb::before { content: ""; position: absolute; left: 50%; top: -3px; width: 2px; height: 10px; margin-left: -1px; border-radius: 1px; background: #a1a1a6; }
+.ls-mb::after { content: ""; position: absolute; left: var(--v); top: 50%; width: 10px; height: 10px; margin: -5px 0 0 -5px; border-radius: 50%;
+  background: #8e8e93; box-shadow: 0 0 0 2px #f5f5f7; }
+.ls-mb.good::after { background: #1a8f4c; } .ls-mb.bad::after { background: #e8141c; }
+.ls-pr li > span { flex: 1 1 auto; min-width: 0; }
+.ls-go { display: inline-block; margin: 3px 0 0; font-size: 13px; font-weight: 600; color: #0066cc; text-decoration: none; }
+.ls-go:hover { text-decoration: underline; }
