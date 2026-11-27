@@ -39,7 +39,8 @@
   .lxs-d .lxs-db { min-width: 0; }
   .lxs-d #ghd { width: 100%; min-width: 0; }
 }
-@media (max-width: 767px) { .lxs-btn { width: 38px; margin-right: -2px; } .lxs-btn svg { left: 10px; } }
+/* 11-26 (Elijah): on phones the magnifier is gone; the menu button opens the same sheet with the search bar at its top */
+@media (max-width: 767px) { .lxs-btn { display: none; } }
 
 /* 11-13 (problem 10): the 404 page: an open search box, the bad address turned into a search, and the top matches */
 /* 11-23 (old-pages audit #3): centered like the v5 pages, no capital label; the links are one inset list (cpl.css .cpl-ins) */

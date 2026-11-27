@@ -435,7 +435,9 @@
     e.stopPropagation(); load();
     const h = sbtn.closest('.gh');
     if (h && !h.classList.contains('open')) { const m = h.querySelector('.gh-menu'); const o = m && m.offsetParent ? m : h.querySelector('.gh-more'); if (o) o.click(); }
-    mq.focus({ preventScroll: true }); setTimeout(() => { if (document.activeElement !== mq) mq.focus({ preventScroll: true }); }, 60);
+    // 11-26 (Elijah): on phones the magnifier only opens the menu + search bar; the keyboard waits until you tap the bar
+    // (auto-focus popped the keyboard over the menu). Mouse/trackpad screens still get the cursor in the box.
+    if (matchMedia('(hover: hover) and (pointer: fine)').matches) { mq.focus({ preventScroll: true }); setTimeout(() => { if (document.activeElement !== mq) mq.focus({ preventScroll: true }); }, 60); }
   });
 
   if (!el) return;

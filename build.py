@@ -419,7 +419,7 @@ GH_SB = f'<button class="lxs-btn" type="button" aria-label="Search" aria-control
 GH_SD = (f'<form class="lxs-d" role="search" action="/" method="get"><div class="lxs-db">{_LXS_IC.replace("<svg ", "<svg class=\"lxs-di\" ", 1)}'
          '<input id="ghd" name="q" type="search" autocomplete="off" placeholder="Search cars, codes, lists" aria-label="Search cars, engine codes and lists" enterkeyhint="search">'
          '<div id="ghds" class="fsug" role="listbox" hidden></div></div></form>')
-LXS_V = '1125yt'   # lxs.css + lookup.js version (N1 navigation fixes; 11-15 4c: header fit + symptom search)
+LXS_V = '1126nm'   # lxs.css + lookup.js version (N1 navigation fixes; 11-15 4c: header fit + symptom search)
 GH_IC.setdefault('/rankings/', '<path d="M4 6h16M4 12h11M4 18h6"/>')   # 11-13 (N1, problem 12): "Every car ranked" in the menu, best to worst bars
 def navlinks(path):
     on = lambda u: path.startswith(u) or (u == '/cars/' and path.startswith('/cars'))
