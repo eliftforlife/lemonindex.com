@@ -18,4 +18,5 @@
 - [Embed a car reliability chart](https://lemonindex.com/embed/): free iframe charts of owner complaints by model year for every scored model, credit built in (CC BY 4.0)
 - [Car recall check](https://lemonindex.com/recalls/): every NHTSA recall campaign (5,071) on the 341 models we track, by make, model and year, with vehicles covered and park-it warnings; check by VIN or pick the car (live from NHTSA)
 - [Cheapest car insurance by state](https://lemonindex.com/insurance/): official monthly car insurance prices by company from the 11 state insurance departments that publish them (sample drivers by age and record), and an estimate from the NAIC 2024 state average elsewhere (tested off by about 21%); no sign-up, no affiliate links
+- [What is this car worth?](https://lemonindex.com/car-value/): free used-car value estimate for 329 models by make, model, year, trim, miles, condition and clean or salvage title: a private-sale and dealer price range (Lemon Index AI estimates, not an appraisal)
 - [Free VIN check](https://lemonindex.com/vin/): decode a VIN (NHTSA vPIC) and see that model year: its Lemon Index, top problems, complaints and recalls

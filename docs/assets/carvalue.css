@@ -1,0 +1,67 @@
+/* 11-26 /car-value/ (car_value_pages.py, assets/carvalue.js): "What's my car worth?". Phone first: two fields a row, big type,
+   the same segmented bars as /budget/, then ONE focal number (the private-sale range) in a home-page gray card. Wide screens:
+   the form on the left, the result card beside it. Brand yellow only as a thin accent under the price. */
+.cv .cv-pick { padding-top: 4px; }
+.cv-grid { display: grid; gap: 22px; }
+.cv-f { display: grid; gap: 12px; min-width: 0; }
+.cv-car { margin-bottom: 4px; }
+.cv-car { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12px 10px; }
+.cv-trim:not([hidden]) ~ .cv-mi { grid-column: 1 / -1; }
+.cv-fld { display: block; min-width: 0; margin: 0; }
+.cv-fld[hidden] { display: none; }
+.cv-lab { display: block; margin: 0 0 6px 2px; font-size: 14px; font-weight: 600; color: #3a3a3c; }
+.cv-lab small { font-size: 13px; font-weight: 500; color: #8e8e93; }
+.cv-f select, .cv-f input { display: block; width: 100%; height: 52px; margin: 0; padding: 0 14px; border: 1px solid #d2d2d7; border-radius: 13px;
+  background-color: #fff; color: #111; font: inherit; font-size: 17px; font-weight: 500; -webkit-appearance: none; appearance: none; }
+.cv-f select { padding-right: 36px; text-overflow: ellipsis; cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23555' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 14px center; }
+.cv-f select:disabled { background-color: #f5f5f7; color: #8e8e93; cursor: default; }
+.cv-f input::placeholder { color: #8e8e93; font-weight: 400; }
+.cv-f select:focus-visible, .cv-f input:focus-visible { outline: 2.5px solid #e9b300; outline-offset: 1px; }
+/* condition + title: equal buttons in one gray track (the /budget/ bars) */
+.cv-seg { display: flex; gap: 2px; padding: 3px; background: #f0f0f3; border-radius: 14px; }
+.cv-seg button { flex: 1 1 0; min-width: 0; min-height: 46px; padding: 0 8px; border: 0; border-radius: 11px; background: transparent; color: #3a3a3c;
+  font: inherit; font-size: 16px; font-weight: 500; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.cv-seg button:hover { color: #111; }
+.cv-seg button[aria-pressed="true"] { background: #fff; color: #111; font-weight: 650; box-shadow: 0 1px 3px rgba(0, 0, 0, .14); }
+.cv-seg button:focus-visible { outline: 2.5px solid #e9b300; outline-offset: -2px; }
+
+/* the result */
+.cv-out { min-width: 0; }
+.cv-empty, .cv-none { margin: 0; padding: 26px 20px; border-radius: 20px; background: #f5f5f7; color: #6e6e73; font-size: 17px; text-align: center; }
+.cv-none { color: #3a3a3c; font-weight: 600; }
+.cv-res { padding: 24px 14px 22px; border-radius: 20px; background: #f5f5f7; text-align: center; }
+.cv-res p { margin: 0; }
+.cv-res .cv-name { font-size: 16px; font-weight: 600; color: #3a3a3c; }
+.cv-k { margin-top: 14px !important; font-size: 15px; font-weight: 600; color: #6e6e73; }
+.cv-big { margin-top: 2px !important; font-size: clamp(36px, 10.5vw, 50px); font-weight: 800; letter-spacing: -.035em; line-height: 1.08; color: #111;
+  font-variant-numeric: tabular-nums; }
+.cv-big span { white-space: nowrap; }
+.cv-big.cv-long { font-size: clamp(26px, 7.4vw, 42px); }   /* six-figure supercar ranges stay on one line */
+.cv-big .cv-to { color: #8e8e93; font-weight: 600; }
+.cv-big::after { content: ""; display: block; width: 44px; height: 4px; margin: 12px auto 0; border-radius: 4px; background: #ffd400; }
+.cv-dl { margin-top: 12px !important; font-size: 18px; font-weight: 600; color: #111; font-variant-numeric: tabular-nums; }
+.cv-mi { margin-top: 4px !important; font-size: 14px; color: #6e6e73; }
+.cv-how { margin: 10px 0 0; text-align: center; }
+.cv-how summary { display: inline-flex; align-items: center; gap: 6px; padding: 6px 4px; list-style: none; cursor: pointer; font-size: 14px; color: #6e6e73; }
+.cv-how summary::-webkit-details-marker { display: none; }
+.cv-how summary::after { content: "i"; display: inline-grid; place-items: center; width: 17px; height: 17px; border: 1.5px solid currentColor; border-radius: 50%;
+  font-size: 11px; font-weight: 700; font-style: normal; line-height: 1; }
+.cv-how[open] summary { color: #111; }
+.cv-hb { margin-top: 4px; padding: 14px 16px; border-radius: 14px; background: #f5f5f7; text-align: left; font-size: 14.5px; line-height: 1.5; color: #3a3a3c; }
+.cv-hb p { margin: 0; } .cv-hb p + p { margin-top: 8px; }
+.cv-rep { display: flex; align-items: center; justify-content: center; gap: 6px; min-height: 50px; margin-top: 10px; padding: 0 16px; border-radius: 14px;
+  background: #111; color: #fff !important; font-size: 16px; font-weight: 600; text-decoration: none !important; }
+.cv-rep:hover { background: #2c2c2e; }
+.cv-none + .cv-rep { margin-top: 12px; }
+.cv-faq { margin-top: 40px !important; }
+
+@media (min-width: 900px) {
+  .cv-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 480px); gap: 40px; align-items: start; max-width: 1040px; }
+  .cv-out { position: sticky; top: 90px; }
+  .cv-res { padding: 30px 26px 26px; }
+  .cv-big { font-size: 44px; }
+  .cv-big.cv-long { font-size: 38px; }
+}
+.cv-dl span { white-space: nowrap; }
