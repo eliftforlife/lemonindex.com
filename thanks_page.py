@@ -24,6 +24,7 @@ _TH = f'''<section class="thx">
 </div>
 <p class="thx-ig">Left a name for a shout-out? Watch our Instagram story, <a href="https://www.instagram.com/lemonindex/" rel="noopener">@lemonindex</a>. <b>Elijah</b></p>
 <p class="thx-fine">Donated the wrong amount, or didn&#39;t mean to? Email <a href="mailto:{CONTACT}">{CONTACT}</a> within 14 days for a full refund (unless your shout-out has already been posted). Payments are handled by Stripe, and we never see your card number.</p>
+{('<p class="thx-fine">' + DV_MNG + '</p>') if globals().get('DV_MON') and globals().get('DV_MNG') else ''}
 </section>
 <script src="/assets/thanks.js?v=1125" defer></script>'''
 page('/thanks/', 'Thank You for Supporting the Lemon Index', 'Thank you for your donation. It helps keep every Lemon Index car report free, and pays for more cars, images and data.', _TH)

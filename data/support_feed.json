@@ -1,0 +1,60 @@
+{
+ "month": "2026-11",
+ "count": 6,
+ "feed": [
+  {
+   "amount": 5,
+   "at": "2026-11-27T00:59:25Z",
+   "kind": "once",
+   "level": null,
+   "name": null
+  },
+  {
+   "amount": 5,
+   "at": "2026-11-26T19:13:33Z",
+   "kind": "once",
+   "level": null,
+   "name": null
+  },
+  {
+   "amount": 1,
+   "at": "2026-11-25T08:42:57Z",
+   "kind": "once",
+   "level": null,
+   "name": null
+  },
+  {
+   "amount": 5,
+   "at": "2026-11-23T00:02:24Z",
+   "kind": "once",
+   "level": null,
+   "name": null
+  },
+  {
+   "amount": 5,
+   "at": "2026-11-22T22:22:47Z",
+   "kind": "once",
+   "level": null,
+   "name": null
+  },
+  {
+   "amount": 5,
+   "at": "2026-11-07T20:36:43Z",
+   "kind": "once",
+   "level": null,
+   "name": null
+  }
+ ],
+ "wall": {
+  "pit": [],
+  "road": [],
+  "daily": [],
+  "once": []
+ },
+ "anon": {
+  "pit": 0,
+  "road": 0,
+  "daily": 0,
+  "once": 6
+ }
+}

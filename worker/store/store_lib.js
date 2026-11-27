@@ -20,8 +20,10 @@
 //   GET  /progress?gen= | PUT /progress {gen, data} (Bearer)
 //   POST /account/delete {confirm}     (Bearer)  -> {ok}: deletes the account, its sessions and progress
 //   POST /webhook                      (Stripe, signed) -> the ONLY place a purchase is granted or revoked (paid / async paid / refund / dispute)
-//   GET  /goal                         (public)  -> {month: 'YYYY-MM', raised: whole dollars, n}: this month's donations, for the goal box on
-//                                                  /support/ and /coming-soon/ (cached 5 min; no D1)
+//   GET  /goal                         (public)  -> {month: 'YYYY-MM', raised: whole dollars, n}: this month's donations (+ monthly renewals),
+//                                                  for the goal box on /support/ and /coming-soon/ (cached 5 min; no D1)
+//   GET  /feed                         (public)  -> {month, count, feed: [{amount, at, kind, level, name, url?}]}: the latest donations on
+//                                                  /support/ (cached 60 s; no D1; names only from the new shout-out field label)
 //
 // Secrets (wrangler secret put; never in code or logs): STRIPE_SECRET_KEY (restricted: Checkout Sessions write only), STRIPE_WEBHOOK_SECRET,
 // TOKEN_KEY (32+ chars, peppers the hashes), RESEND_KEY, TURNSTILE_SECRET. Vars: wrangler.toml. Local only (.dev.vars): DEV_MODE, DEV_ORIGIN.
@@ -295,64 +297,129 @@ async function checkout(env, s, item, gen) {
   return { url: cs.url };
 }
 
-// ---- GET /goal: this month's donations (11-25). Donations are Stripe Payment Links on this account (custom amount, $5 min), so they show up
-// as Checkout Sessions with a payment_link; checklist sales are sessions this Worker creates (metadata.item, no payment_link) and never count.
-// Sums amount_total of sessions created since the 1st of this month (UTC) that are complete + paid + usd.
-// REFUNDS: the restricted key (Checkout Sessions write, which includes read) can't see refunds, so a refunded donation still counts here
-// (rare; running stripe_goal.py by hand corrects the number baked into the page, which is the fallback when this endpoint can't be reached).
-// Cached for 5 minutes, so Stripe is called at most about once per 5 min per Cloudflare colo: caches.default under a fixed key where the
-// Cache API works (Cloudflare documents it as working on custom domains; on *.workers.dev it may do nothing), plus this Worker copy's memory.
-// On a Stripe error the last good answer is served (memory, then a 35-day copy in the cache), else 503.
+// ---- GET /goal and GET /feed: donations (11-25 goal; 11-27 donations v2: the live feed + monthly renewals).
+// Donations are Stripe Payment Links on this account (one-time $5 / $10 / $15 / custom, and since 11-27 monthly $3 / $5 / $10 subscriptions),
+// so they show up as Checkout Sessions with a payment_link; checklist sales are sessions this Worker creates (metadata.item, no payment_link)
+// and never count. A monthly donation's first payment is its session (mode 'subscription'); every later month is a paid invoice
+// (billing_reason 'subscription_cycle') of a subscription one of those sessions started.
+// /goal -> {month, raised: whole dollars this month (UTC), n: payments}                                    cached 5 min
+// /feed -> {month, count: people this month, feed: [{amount, at, kind, level, name, url?}] (newest 20)}    cached 60 s
+// Privacy (Elijah 11-27): a name only when the donor typed it into the field whose label was "Name for a shout-out + thank-you wall" (the
+// key never changed; the label each session kept decides). Names typed under the old Instagram-only label are never shown. Never the card
+// name, the customer name or the email. A website only for Pit Crew ($10/mo) and only next to such a name. Same rules as stripe_feed.py.
+// REFUNDS: the key can't see refunds, so a refunded donation still counts here (rare; stripe_goal.py / stripe_feed.py fix the baked copy).
+// Caching: caches.default under a fixed key where the Cache API works (custom domains; on *.workers.dev it may do nothing), plus this Worker
+// copy's memory. On a Stripe error the last good answer is served (memory, then a 35-day copy in the cache), else 503.
 const GOAL_KEY = 'https://lemon-store.cache/goal', GOAL_LAST = 'https://lemon-store.cache/goal-last', GOAL_TTL = 300, GOAL_PAGES = 50;
-let GOAL_MEM = null, GOAL_RUN = null;                                // {body, at}: last good answer in this Worker copy; the Stripe pull in flight
-export function clearGoal() { GOAL_MEM = null; GOAL_RUN = null; }
+const FEED_KEY = 'https://lemon-store.cache/feed', FEED_LAST = 'https://lemon-store.cache/feed-last', FEED_TTL = 60, FEED_N = 20, SUB_DAYS = 400;
+const NAME_KEY = 'instagramstoryshoutoutnameorhandle', NAME_LABEL = 'name for a shout-out', URL_KEY = 'yourwebsiteorchannelforthesupporterswall';
+const MEMO = new Map();                                              // cache key -> {mem: {body, at}, run}: one Stripe pull at a time per Worker copy
+export function clearGoal() { MEMO.clear(); }
 const edgeCache = () => (typeof caches !== 'undefined' && caches && caches.default) || null;
 async function cacheGet(key) { const c = edgeCache(); if (!c) return null; try { const r = await c.match(key); return r ? await r.text() : null; } catch { return null; } }
 async function cachePut(key, body, ttl) {
   const c = edgeCache(); if (!c) return;
   try { await c.put(key, new Response(body, { headers: { 'Content-Type': 'application/json', 'Cache-Control': `public, max-age=${ttl}` } })); } catch {}
 }
-export async function goalTotal(env, at = Date.now()) {
-  const d = new Date(at), start = Math.floor(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), 1) / 1000);
-  const month = `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(2, '0')}`;
-  let cents = 0, n = 0, after = null;
-  for (let page = 0; page < GOAL_PAGES; page++) {                   // 100 a page, newest first
-    const q = new URLSearchParams({ limit: '100', 'created[gte]': String(start), status: 'complete' });
+const monthOf = at => {
+  const d = new Date(at);
+  return { start: Math.floor(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), 1) / 1000), month: `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(2, '0')}` };
+};
+const isDonation = s => !!(s && s.status === 'complete' && s.payment_status === 'paid' && String(s.currency).toLowerCase() === 'usd' && s.payment_link
+  && Number.isInteger(s.amount_total) && s.amount_total > 0);
+const idOf2 = x => (x && typeof x === 'object' ? x.id : x) || null;
+async function list(env, path, params, pages = GOAL_PAGES) {      // every object of a Stripe list (100 a page, newest first)
+  const out = []; let after = null;
+  for (let page = 0; page < pages; page++) {
+    const q = new URLSearchParams({ limit: '100', ...params });
     if (after) q.set('starting_after', after);
-    const j = await stripe(env, 'GET', 'checkout/sessions?' + q.toString());
-    const list = Array.isArray(j.data) ? j.data : [];
-    for (const s of list) {
-      if (s && s.status === 'complete' && s.payment_status === 'paid' && String(s.currency).toLowerCase() === 'usd' && s.payment_link
-        && Number.isInteger(s.amount_total) && s.amount_total > 0 && !(s.created < start)) { cents += s.amount_total; n++; }
-    }
-    if (!j.has_more || !list.length) break;
-    after = list[list.length - 1].id;
+    const j = await stripe(env, 'GET', `${path}?${q.toString()}`);
+    const l = Array.isArray(j.data) ? j.data : [];
+    out.push(...l);
+    if (!j.has_more || !l.length) break;
+    after = l[l.length - 1].id;
   }
-  return { month, raised: Math.floor(cents / 100), n };
+  return out;
 }
-async function goal(env, ectx) {
-  const t = Date.now();
-  if (GOAL_MEM && t - GOAL_MEM.at < GOAL_TTL * 1000) return GOAL_MEM.body;
-  const hit = await cacheGet(GOAL_KEY);
-  if (hit) { GOAL_MEM = { body: hit, at: t }; return hit; }
-  if (!GOAL_RUN) GOAL_RUN = (async () => {                         // one Stripe pull at a time in this Worker copy
+const invSub = i => idOf2(i.subscription || (((i.parent || {}).subscription_details) || {}).subscription);
+async function renewals(env, subs, since) {                       // paid renewal invoices of the monthly donation subscriptions
+  if (!subs.size) return [];                                       // (no monthly donor yet: no invoice call at all)
+  const l = await list(env, 'invoices', { status: 'paid', 'created[gte]': String(since) });
+  return l.filter(i => i && i.billing_reason === 'subscription_cycle' && String(i.currency).toLowerCase() === 'usd' && Number.isInteger(i.amount_paid)
+    && i.amount_paid > 0 && subs.has(invSub(i)) && !(i.created < since));
+}
+async function donations(env, at, pages = GOAL_PAGES) {           // the last SUB_DAYS of donation sessions + this month's renewals, newest first
+  const { start, month } = monthOf(at);
+  const ses = (await list(env, 'checkout/sessions', { 'created[gte]': String(start - SUB_DAYS * 86400), status: 'complete' }, pages)).filter(isDonation);
+  const bySub = new Map(ses.filter(s => s.subscription).map(s => [idOf2(s.subscription), s]));
+  const ren = await renewals(env, new Set(bySub.keys()), start);
+  const items = ses.map(s => ({ t: s.created, cents: s.amount_total, kind: s.mode === 'subscription' ? 'monthly' : 'once', who: idOf2(s.subscription) || s.id, s }))
+    .concat(ren.map(i => ({ t: i.created, cents: i.amount_paid, kind: 'monthly', who: invSub(i), s: bySub.get(invSub(i)) })))
+    .sort((a, b) => b.t - a.t);
+  return { start, month, items };
+}
+export async function goalTotal(env, at = Date.now()) {
+  const { start, month, items } = await donations(env, at);
+  const mine = items.filter(x => x.t >= start);
+  return { month, raised: Math.floor(mine.reduce((a, x) => a + x.cents, 0) / 100), n: mine.length };
+}
+export function cleanName(v) {
+  if (typeof v !== 'string') return null;
+  v = v.replace(/\s+/g, ' ').trim().slice(0, 40).trim();
+  if (!v || /\S+@\S+\.\w{2,}/.test(v) || v.replace(/\D/g, '').length >= 7) return null;
+  return v;
+}
+export function cleanUrl(v) {
+  if (typeof v !== 'string' || !v.trim()) return null;
+  v = v.trim(); if (!/^https?:\/\//i.test(v)) v = 'https://' + v;
+  try { const u = new URL(v); return /^https?:$/.test(u.protocol) && u.hostname.includes('.') && !u.username && !u.password && v.length <= 200 ? u.href : null; }
+  catch { return null; }
+}
+const field = (s, key) => (s && Array.isArray(s.custom_fields) ? s.custom_fields : []).find(f => f && f.key === key);
+export function donorName(s) {                                    // only from the name field with the NEW label
+  const f = field(s, NAME_KEY); if (!f) return null;
+  const lab = String(((f.label || {}).custom) || '').trim().toLowerCase();
+  return lab.startsWith(NAME_LABEL) ? cleanName((f.text || {}).value) : null;
+}
+const levelOf = d => d >= 10 ? 'pit' : d >= 5 ? 'road' : 'daily';
+const iso = t => new Date(t * 1000).toISOString().replace(/\.\d{3}Z$/, 'Z');
+export async function feedList(env, at = Date.now()) {
+  const { start, month, items } = await donations(env, at, 20);
+  const count = new Set(items.filter(x => x.t >= start).map(x => x.who)).size;   // one per monthly subscription, one per one-time checkout
+  const feed = items.slice(0, FEED_N).map(x => {
+    const level = x.kind === 'monthly' ? levelOf(x.cents / 100) : null, name = donorName(x.s);
+    const o = { amount: x.cents % 100 ? x.cents / 100 : Math.floor(x.cents / 100), at: iso(x.t), kind: x.kind, level, name };
+    if (level === 'pit' && name) { const f = field(x.s, URL_KEY), u = f && cleanUrl((f.text || {}).value); if (u) o.url = u; }
+    return o;
+  });
+  return { month, count, feed };
+}
+async function memo(key, last, ttl, fn, ectx) {
+  const t = Date.now(); let m = MEMO.get(key); if (!m) MEMO.set(key, m = { mem: null, run: null });
+  if (m.mem && t - m.mem.at < ttl * 1000) return m.mem.body;
+  const hit = await cacheGet(key);
+  if (hit) { m.mem = { body: hit, at: t }; return hit; }
+  if (!m.run) m.run = (async () => {
     try {
-      const body = JSON.stringify(await goalTotal(env, t));
-      GOAL_MEM = { body, at: Date.now() };
-      const w = Promise.all([cachePut(GOAL_KEY, body, GOAL_TTL), cachePut(GOAL_LAST, body, 35 * 86400)]);
+      const body = JSON.stringify(await fn(t));
+      m.mem = { body, at: Date.now() };
+      const w = Promise.all([cachePut(key, body, ttl), cachePut(last, body, 35 * 86400)]);
       if (ectx && typeof ectx.waitUntil === 'function') ectx.waitUntil(w); else await w;
       return body;
-    } finally { GOAL_RUN = null; }
+    } finally { m.run = null; }
   })();
-  try { return await GOAL_RUN; }
+  try { return await m.run; }
   catch (e) {
-    console.log('goal: stripe', e instanceof StripeError ? `${e.status} ${e.type || ''} ${e.code || ''}` : (e && e.name) || 'error');
-    if (GOAL_MEM) { GOAL_MEM.at = t - (GOAL_TTL - 60) * 1000; return GOAL_MEM.body; }       // keep serving it; try Stripe again in a minute
-    const last = await cacheGet(GOAL_LAST);
-    if (last) { GOAL_MEM = { body: last, at: t - (GOAL_TTL - 60) * 1000 }; return last; }
+    console.log(key.split('/').pop() + ': stripe', e instanceof StripeError ? `${e.status} ${e.type || ''} ${e.code || ''}` : (e && e.name) || 'error');
+    const retry = t - Math.max(0, ttl - 60) * 1000;                // keep serving the last answer; try Stripe again in a minute
+    if (m.mem) { m.mem.at = retry; return m.mem.body; }
+    const l = await cacheGet(last);
+    if (l) { m.mem = { body: l, at: retry }; return l; }
     return null;
   }
 }
+const goal = (env, ectx) => memo(GOAL_KEY, GOAL_LAST, GOAL_TTL, t => goalTotal(env, t), ectx);
+const feed = (env, ectx) => memo(FEED_KEY, FEED_LAST, FEED_TTL, t => feedList(env, t), ectx);
 
 // ---- routes
 async function route(ctx) {
@@ -364,6 +431,13 @@ async function route(ctx) {
     const g = await goal(env, ctx.ectx);
     if (!g) return json(ctx, { error: 'unavailable' }, 503);
     const r = json(ctx, g); r.headers.set('Cache-Control', 'public, max-age=60'); return r;
+  }
+
+  if (m === 'GET' && p === '/feed') {                               // public: no session, no D1 (11-27 donations v2)
+    if (!env.STRIPE_SECRET_KEY) return json(ctx, { error: 'not-configured' }, 503);
+    const f = await feed(env, ctx.ectx);
+    if (!f) return json(ctx, { error: 'unavailable' }, 503);
+    const r = json(ctx, f); r.headers.set('Cache-Control', 'public, max-age=30'); return r;
   }
 
   if (m === 'POST' && p === '/auth/start') {

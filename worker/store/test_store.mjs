@@ -47,7 +47,7 @@ function catalogKV() {
 }
 
 // ---- fake Stripe + Resend + Turnstile
-const S = { sessions: {}, calls: [], mails: [], ts: [], list: [], listFail: false };   // list = what GET /v1/checkout/sessions returns, newest first
+const S = { sessions: {}, calls: [], mails: [], ts: [], list: [], listFail: false, inv: [], invFail: 0 };   // inv = GET /v1/invoices (11-27)   // list = what GET /v1/checkout/sessions returns, newest first
 let n = 0;
 globalThis.fetch = async (u, opt = {}) => {
   const url = new URL(u), ok = j => new Response(JSON.stringify(j), { status: 200 });
@@ -68,6 +68,14 @@ globalThis.fetch = async (u, opt = {}) => {
     const q = url.searchParams, lim = Number(q.get('limit')), gte = Number(q.get('created[gte]')), st = q.get('status'), after = q.get('starting_after');
     S.calls[S.calls.length - 1].query = q;
     let L = S.list.filter(x => x.created >= gte && (!st || x.status === st));
+    if (after) L = L.slice(L.findIndex(x => x.id === after) + 1);
+    return ok({ object: 'list', data: L.slice(0, lim), has_more: L.length > lim });
+  }
+  if (url.pathname === '/v1/invoices' && opt.method === 'GET') {
+    if (S.invFail) return new Response(JSON.stringify({ error: { type: 'invalid_request_error', code: 'secret_key_required' } }), { status: S.invFail });
+    const q = url.searchParams, lim = Number(q.get('limit')), gte = Number(q.get('created[gte]')), st = q.get('status'), after = q.get('starting_after');
+    S.calls[S.calls.length - 1].query = q;
+    let L = S.inv.filter(x => x.created >= gte && (!st || x.status === st));
     if (after) L = L.slice(L.findIndex(x => x.id === after) + 1);
     return ok({ object: 'list', data: L.slice(0, lim), has_more: L.length > lim });
   }
@@ -438,7 +446,7 @@ const monthOf = () => new Date(Date.now()).toISOString().slice(0, 7);
 const donation = (cents, extra = {}) => ({ id: 'cs_live_d' + String(++gid).padStart(12, '0'), object: 'checkout.session', status: 'complete', payment_status: 'paid', currency: 'usd',
   amount_total: cents, payment_link: 'plink_1UXW60Bq7BOH4VFnyA7cg1Z0', metadata: {}, created: Math.max(monthStart(), T() - gid), ...extra });
 const listCalls = () => S.calls.filter(c => c.method === 'GET' && c.path === '/v1/checkout/sessions');
-function goalReset(list) { clearGoal(); CACHE.m.clear(); CACHE.puts = 0; S.calls = []; S.listFail = false; S.list = list.sort((a, b) => b.created - a.created); }
+function goalReset(list, inv = []) { clearGoal(); CACHE.m.clear(); CACHE.puts = 0; S.calls = []; S.listFail = false; S.invFail = 0; S.inv = inv; S.list = list.sort((a, b) => b.created - a.created); }
 await test('goal: sums only paid usd donations (Payment Links); checklist sales, unpaid, open and other currencies never count', async () => {
   goalReset([donation(500), donation(525), donation(575),
     donation(1999, { payment_link: null, metadata: { site: 'lemon-store', item: 'all' } }),          // checklist sales: no payment_link
@@ -449,7 +457,7 @@ await test('goal: sums only paid usd donations (Payment Links); checklist sales,
   assert.equal(r.s, 200); assert.deepEqual(r.j, { month: monthOf(), raised: 16, n: 3 });
   assert.equal(r.h.get('Access-Control-Allow-Origin'), SITE); assert.equal(r.h.get('Cache-Control'), 'public, max-age=60');
   const c = listCalls(); assert.equal(c.length, 1);
-  assert.equal(c[0].query.get('limit'), '100'); assert.equal(c[0].query.get('status'), 'complete'); assert.equal(c[0].query.get('created[gte]'), String(monthStart()));
+  assert.equal(c[0].query.get('limit'), '100'); assert.equal(c[0].query.get('status'), 'complete'); assert.equal(c[0].query.get('created[gte]'), String(monthStart() - 400 * 86400));   // 11-27: back 400 days, to find monthly donors
   assert.equal(CACHE.puts, 2);
 });
 await test('goal: whole dollars (rounded down) and every page of results (limit 100, starting_after)', async () => {
@@ -487,5 +495,49 @@ await test('goal: Stripe down -> the last good number (memory, then the long cac
   assert.equal(x.status, 429);
   const nokey = await worker.fetch(new Request('https://lemon-store.elift08.workers.dev/goal', { headers: { Origin: SITE } }), { ...env, STRIPE_SECRET_KEY: '' });
   assert.equal(nokey.status, 503);
+});
+// ---- 11-27 donations v2: monthly renewals in /goal, and GET /feed (names only from the NEW field label)
+const NEWF = v => [{ key: 'instagramstoryshoutoutnameorhandle', label: { type: 'custom', custom: 'Name for a shout-out + thank-you wall' }, type: 'text', text: { value: v } }];
+const OLDF = v => [{ key: 'instagramstoryshoutoutnameorhandle', label: { type: 'custom', custom: 'Instagram story shout-out? Name or handle' }, type: 'text', text: { value: v } }];
+const renewal = (sub, cents, extra = {}) => ({ id: 'in_' + String(++gid).padStart(12, '0'), object: 'invoice', status: 'paid', billing_reason: 'subscription_cycle', currency: 'usd',
+  amount_paid: cents, parent: { subscription_details: { subscription: sub } }, created: Math.max(monthStart(), T() - gid), ...extra });
+await test('goal: + paid renewal invoices of monthly donations only (not other subscriptions, not first invoices); no monthly donor = no invoice call', async () => {
+  goalReset([donation(500), donation(1000, { mode: 'subscription', subscription: 'sub_A', created: monthStart() - 40 * 86400 })],
+    [renewal('sub_A', 1000), renewal('sub_OTHER', 9900), renewal('sub_A', 1000, { billing_reason: 'subscription_create' }), renewal('sub_A', 1000, { status: 'open' })]);
+  let r = await call('GET', '/goal'); assert.deepEqual(r.j, { month: monthOf(), raised: 15, n: 2 });
+  goalReset([donation(500)]); S.invFail = 403;
+  r = await call('GET', '/goal'); assert.equal(r.j.raised, 5); assert.equal(S.calls.filter(c => c.path === '/v1/invoices').length, 0);
+});
+await test('feed: newest first, amount/at/kind/level only; a name only from the NEW label; old-label names, card names and emails never; website only for Pit Crew', async () => {
+  goalReset([
+    donation(500, { custom_fields: OLDF('Old Label Person'), customer_details: { name: 'CARD NAME', email: 'donor@example.com' } }),
+    donation(100, { custom_fields: NEWF('  Kim   R. ') }),
+    donation(1000, { mode: 'subscription', subscription: 'sub_P', custom_fields: NEWF('Pit Shop').concat([{ key: 'yourwebsiteorchannelforthesupporterswall', label: { type: 'custom', custom: 'Your website' }, text: { value: 'pitshop.example.com' } }]) }),
+    donation(500, { mode: 'subscription', subscription: 'sub_R', custom_fields: NEWF('Road Rider').concat([{ key: 'yourwebsiteorchannelforthesupporterswall', text: { value: 'https://rider.example' } }]) }),
+    donation(300, { mode: 'subscription', subscription: 'sub_D', custom_fields: NEWF('me@mail.com') }),
+    donation(1999, { payment_link: null, metadata: { item: 'all' }, custom_fields: NEWF('Checklist Buyer') }),
+  ], [renewal('sub_P', 1000, { created: T() })]);
+  const r = await call('GET', '/feed');
+  assert.equal(r.s, 200); assert.equal(r.h.get('Cache-Control'), 'public, max-age=30'); assert.equal(r.h.get('Access-Control-Allow-Origin'), SITE);
+  assert.equal(r.j.month, monthOf()); assert.equal(r.j.count, 5);                                   // 2 one-time + 3 monthly subscriptions (the renewal is sub_P again)
+  const f = r.j.feed; assert.equal(f.length, 6);
+  assert.deepEqual(f[0], { amount: 10, at: f[0].at, kind: 'monthly', level: 'pit', name: 'Pit Shop', url: 'https://pitshop.example.com/' });   // the renewal, newest
+  assert.ok(f.every(x => Object.keys(x).every(k => ['amount', 'at', 'kind', 'level', 'name', 'url'].includes(k))));
+  const txt = r.text; for (const bad of ['Old Label Person', 'CARD NAME', 'donor@example.com', 'me@mail.com', 'Checklist Buyer', 'rider.example', 'cs_live', 'sub_']) assert.ok(!txt.includes(bad), bad);
+  assert.ok(f.some(x => x.name === 'Kim R.' && x.amount === 1 && x.kind === 'once' && x.level === null));
+  assert.ok(f.some(x => x.name === 'Road Rider' && x.level === 'road' && !('url' in x)));
+  assert.ok(f.some(x => x.name === null && x.level === 'daily'));                                   // an email typed as a name: dropped
+  assert.ok(/^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\dZ$/.test(f[0].at));
+});
+await test('feed: cached 60 s, then Stripe again; Stripe down -> last good feed, else 503; a missing invoices permission is an error, not a silent drop', async () => {
+  goalReset([donation(500)]);
+  assert.equal((await call('GET', '/feed')).j.feed.length, 1);
+  S.list.unshift(donation(700));
+  assert.equal((await call('GET', '/feed')).j.feed.length, 1);
+  skew += 61; assert.equal((await call('GET', '/feed')).j.feed.length, 2);
+  skew += 61; S.listFail = true; assert.equal((await call('GET', '/feed')).j.feed.length, 2);
+  goalReset([donation(500, { mode: 'subscription', subscription: 'sub_X' })]); S.invFail = 403;
+  const r = await call('GET', '/feed'); assert.equal(r.s, 503);
+  assert.equal((await call('GET', '/feed', { origin: 'https://evil.example' })).s, 403);
 });
 console.log(`\n${pass} tests passed`);

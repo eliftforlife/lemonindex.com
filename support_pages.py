@@ -63,19 +63,23 @@ def _sp_goal():
             f'<div class="spg-bar" role="img" aria-label="${raised:,} of ${goal:,} raised this month"><i style="width:{pct:.1f}%"></i></div>{note}</div>')
 
 
-_SP_CSS = ('<link rel="stylesheet" href="/assets/support-pages.css?v=' + _SV + '">'
+_SP_CSS = ('<link rel="stylesheet" href="/assets/support-pages.css?v=' + _SV + '">' + DV_CSS   # 11-27 donations v2: the widget, feed and wall (donate_v2.py)
+           + 
            '<script src="/assets/goal.js?v=1125" defer></script>')   # 11-25: live goal number (see _sp_goal)
 
+# 11-27 donations v2 (Elijah, modeled on Blender's fund page): the goal, then the Monthly | One-time widget, the latest donations with this
+# month's count, the supporters wall, then what it pays for.
 _SUPPORT = (_SP_CSS + '<div class="pg spg">' + _sp_hero('Where your money goes.', 'Lemon Index is free, with no ads. Donations keep it free.')
-    + _sp_goal()
+    + '<div class="spg-give" id="give">' + _sp_goal() + DV_WIDGET('page') + '<p class="spg-fine">Secure checkout by Stripe</p></div>'
+    + DV_FEED() + DV_WALL()
     + '<h2>What it helps with</h2>' + _sp_icons([
         ('adfree', 'Keeps the pages clean', 'No pop-ups, no selling your data'),   # 11-25: was 'Keeps it ad-free' (no promise of never ads; Mediavine is planned)
         ('free', 'Keeps every report free', 'No paywall, no account'),
         ('data', 'Pays for data and hosting', 'Images, prices, servers'),
         ('next', 'Builds what’s next', 'New cars, bikes and countries', '/coming-soon/'),
     ])
-    + '<div class="spg-btns"><button class="btn supl" type="button">Donate</button><a class="btn ghost" href="/coming-soon/">See what’s coming</a></div>'
-    + '<p class="spg-note">Payments by Stripe. Not tax-deductible. Full refund within 14 days, unless your shout-out has already been posted.</p></div>')
+    + '<div class="spg-btns"><a class="btn ghost" href="/coming-soon/">See what’s coming</a></div>'
+    + '<p class="spg-note">Payments by Stripe. Not tax-deductible. Full refund within 14 days, unless your shout-out has already been posted.</p>' + (f'<p class="spg-note spg-mng">{DV_MNG}</p>' if DV_MON and DV_MNG else '') + '</div>')   # 11-27: Stripe customer portal
 
 _COMING = (_SP_CSS + '<div class="pg spg">' + _sp_hero('What’s coming to Lemon.', 'Everything we’re building next. Donations decide how fast.')
     + '<h2>Building now</h2>' + _sp_grid([
@@ -106,7 +110,7 @@ _COMING = (_SP_CSS + '<div class="pg spg">' + _sp_hero('What’s coming to Lemon
     + '<section class="spg-ask"><h2>Want to make this happen?</h2>'
     + '<p class="spg-ask-l">Every donation goes into building these. The more we raise, the faster they ship.</p>'
     + _sp_goal()
-    + '<button class="btn supl spg-big" type="button">Help build it</button>'
+    + '<div class="spg-give">' + DV_WIDGET('page') + '</div>'   # 11-27: the Monthly | One-time widget (was one big 'Help build it' button)
     + '<p class="spg-note">Payments by Stripe. Not tax-deductible. Full refund within 14 days, unless your shout-out has already been posted.</p></section>'
     + '<h2>What it helps with</h2>' + _sp_icons([
         ('adfree', 'Keeps the pages clean', 'No pop-ups, no selling your data'),   # 11-25: was 'Keeps it ad-free' (no promise of never ads; Mediavine is planned)
