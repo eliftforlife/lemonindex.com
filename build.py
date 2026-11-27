@@ -646,7 +646,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
     _inf = [] if '<!--cpl-info-end-->' in body else None   # 11-19 (Elijah: fewer cards): car pages fold "Use this data free" + feedback into the Info box
     _eb = end_block(path, _upd, _shl, '' if path == '/vote/' else ask_fb(path), _inf)
     if _inf is not None: body = body.replace('<!--cpl-info-end-->', ''.join(f'<div class="cpl">{x}</div>' for x in _inf), 1)
-    if path == '/' and 'HOME_ASK' in globals(): body = HOME_ASK + body   # 11-27 donations v2: the Blender-style ask above the home page (donate_v2.py), after the date hash
+    _top = HOME_ASK if path == '/' and 'HOME_ASK' in globals() else ''   # 11-27 donations v2: the Blender-style ask (donate_v2.py); 11-27 r2 (Elijah): a full-width black band ABOVE the site header, like Blender's
     url = BASE + (canon or path); ld = list(ld or []) + [crumbs(path, title)]
     if 'SL_LD' in globals(): ld = SL_LD(path, title, body, ld)   # 11-23 SEO batch: Car nodes, sub-page breadcrumbs, compare FAQ, recalls WebPage (seo_ld.py)
     lds = ''.join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in (ld or [])).replace('%%PD_ISO%%', _d)
@@ -662,7 +662,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/lxs.css?v={LXS_V}">
 <link rel="stylesheet" href="/assets/site.css?v=1127d"><link rel="stylesheet" href="/assets/cpl.css?v=23"><script src="/assets/cpl.js?v=1" defer></script><link rel="stylesheet" href="/assets/gh.css?v=3"><script src="/assets/gh.js?v=2" defer></script><script src="/assets/nav.js?v=1124mo" defer></script>{lds}</head>
-<body>{gh_header(path)}
+<body>{_top}{gh_header(path)}
 <main>{body}{_eb}{_rel}{'' if path == '/vote/' else ask_html(path)}</main>
 <footer class="foot f2 f3"><div class="f3-top"><a class="f3-name" href="/"><img src="/assets/icon-64.png" alt="" width="64" height="64"><span>Lemon Index</span></a><p class="f3-tag">Check here before you buy.</p><div class="f3-soc">{F3_SOC}</div></div><div class="f2-in">
 <nav class="f2-col" aria-label="Explore"><p class="f2-h">Explore</p><a href="/compare/">Compare cars</a><a href="/best/">Best cars</a><a href="/rankings/">Every car ranked</a><a href="/brands/">Brands</a><a href="/engines/">Every engine</a><a href="/electric/">Electric cars</a><a href="/stats/car-complaints/">Statistics</a><a href="/car-loan-rates/">Car loan rates</a><a href="/insurance/">Car insurance</a></nav>

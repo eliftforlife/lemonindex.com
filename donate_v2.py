@@ -8,7 +8,7 @@
 # The Stripe links live in assets/support.js (LINKS, MONTHLY); this file reads them from there so there's one copy.
 import re as _dre, json as _dj, datetime as _ddt
 
-DV_V = '1127b'
+DV_V = '1127d'
 DV_CSS = f'<link rel="stylesheet" href="/assets/donate.css?v={DV_V}">'
 
 
