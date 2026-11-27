@@ -1,0 +1,25 @@
+/* 11-27 symptom pages (symptom_pages.py): the year / model page cards (hub.css) + these few symptom-only rules.
+   Every card stacks in one column (no half-width card left alone when one opens); the top three ("What it usually means",
+   "How serious", "Where a shop starts") at the home page card size. */
+.mhb.sy-top { margin-top: 22px; }
+.mhb.sy-hub .mhb-g { grid-template-columns: minmax(0, 1fr); }
+.mhb.sy-top .cpl > details > summary.mhc { min-height: 116px; }
+.mhb.sy-top .cpl summary.mhc .mhc-h { font-size: clamp(22px, 6.4vw, 30px); line-height: 1.04; letter-spacing: -.025em; }
+.mhb.sy-top .cpl summary.mhc small { font-size: 14px; font-weight: 600; }
+.mhb.sy-top .cpl summary.mhc .mhc-p.mhc-ic img { width: 84px; height: 84px; }
+.sy-hub .sy-dot { display: inline-block; width: 9px; height: 9px; margin: 0 7px 1px 0; border-radius: 50%; vertical-align: middle; background: #e9b300; }
+.sy-hub .sy-dot.s2 { background: #ff9f0a; } .sy-hub .sy-dot.s3 { background: #e8141c; }
+.mhb.sy-hub + .mhb.sy-hub { margin-top: 30px; }
+article.sy5 > .cpm { margin-top: 10px; }
+.sy-hub .cpl-b .mbs, .sy-hub .cpl-b .mb { margin: 0; }
+.sy-hub .cpl-b .mhb-ph + .mbs { margin-top: 4px; }
+.sy-hub .cpl-b ul.fx { margin: 6px 0 10px; }
+.mhb.sy-hub .mhb-p.on { padding-bottom: 8px; }
+.sy-hub .mhb-p > .cpl-b { margin: 0 8px; }
+.sy-hub .mhb-p > .cpl { margin: 8px 8px 0; max-width: none; width: auto; }
+@media (min-width: 640px) {
+  .mhb.sy-top .cpl > details > summary.mhc { min-height: 150px; padding-left: 28px; }
+  .mhb.sy-top .cpl summary.mhc .mhc-h { font-size: 32px; }
+  .mhb.sy-top .cpl summary.mhc .mhc-p.mhc-ic img { width: 104px; height: 104px; }
+}
+.sy-hub .mhb-p .cpl-b > details.qa:first-child { border-top: 0; } .sy-hub .mhb-p .cpl-b > details.qa:last-child { border-bottom: 0; }

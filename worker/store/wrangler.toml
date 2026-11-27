@@ -1,6 +1,6 @@
 # lemon-store Worker (11-25): paid before-you-buy checklists on lemonindex.com (email-link sign-in, Stripe Checkout, D1 + KV).
-# NOT DEPLOYED. Go-live (main session, with Elijah's OK): create the D1 database and the KV namespace, paste their ids below, apply
-# schema.sql, set the secrets, upload the content (upload_content.py --remote), then `npx wrangler deploy` from this folder.
+# DEPLOYED (live since 11-25; GET /feed added 11-27). Deploy: copy the private answer engine in first (build_content.py does it, or copy
+# 3 Lemon Index/checklist/store/engine.js to engine.js here; gitignored), run `node test_store.mjs`, then `npx wrangler deploy` from this folder.
 # Secrets (wrangler secret put, never in this file): STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET, TOKEN_KEY, RESEND_KEY, TURNSTILE_SECRET.
 name = "lemon-store"
 main = "store_worker.js"

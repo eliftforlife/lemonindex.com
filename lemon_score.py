@@ -27,7 +27,7 @@
 # Model years: the same, per year (the value part is the model's own: one price snapshot can't show one year's depreciation).
 import math as _lsm, statistics as _lsst, json as _lsj, html as _lsh, re as _lsre
 
-LS_V = '3'
+LS_V = '4'
 LS_W = {'rel': 40, 'cost': 25, 'yt': 20, 'val': 15}
 LS_SW = {'cpl': 18, 'sev': 4, 'rcl': 5, 'fail': 3, 'crash': 10, 'fuel': 12, 'rep': 10, 'ins': 3, 'yt': 1, 'val': 1}
 LS_OF = {'cpl': 'rel', 'sev': 'rel', 'rcl': 'rel', 'fail': 'rel', 'crash': 'rel', 'fuel': 'cost', 'rep': 'cost', 'ins': 'cost', 'yt': 'yt', 'val': 'val'}
@@ -260,34 +260,121 @@ _LS_EST = '<i class="ls-est">EST</i>'
 _ls_usd = lambda v: f'${round(v / 10) * 10:,.0f}' if v < 1000 else f'${round(v / 50) * 50:,.0f}'
 
 def _ls_rows(d, year=None):
-    """the inputs under each part: [(part, label html, value html)]"""
-    r, mt, sp = d['raw'], d['meta'], d['sp']; out = []
+    """the inputs under each part: [(part, label html, value html)]. 11-27 (Elijah: "Owners vs other cars: -1" meant nothing): every input
+    says in one short line what it is and what's typical, a small bar shows where the car sits against other cars (the input's own 0-100
+    score: middle tick = typical, right = better), and links go to the page's deeper section (#@key: LS_HOOK keeps only links whose
+    target is on the page)"""
+    r, mt, sp = d['raw'], d['meta'], d['sp']; out = []; fid = d.get('fid'); seg = mt.get('seg')
+    sw = _LS_SEGW_N.get(seg, 'car'); typ = lambda k: _ls_typ(k, seg, year)
+    def row(part, lab, mean, val, s=None, go=''):
+        out.append((part, f'{lab}<small>{mean}</small>' + (_ls_mb(sp[s]) if s in sp else '') + go, val))
     if 'cpl' in r:
-        cl = band(r['cpl'])[0]
-        out.append(('rel', 'Complaint Score <small>100 = average car, lower is better</small>', f'<b class="{cl}">{round(r["cpl"])}</b>'))
+        row('rel', 'Complaint Score', 'owner complaints per car sold · 100 = average car, lower is better', f'<b class="{band(r["cpl"])[0]}">{round(r["cpl"])}</b>', 'cpl', _ls_go('cpl', 'Problems'))
     else:
-        out.append(('rel', 'Complaint Score', '<span class="ls-na">no sales figure to score</span>'))
-    if 'sev' in r: out.append(('rel', 'Serious complaints <small>crash, fire, injury or tow</small>', f'<b>{r["sev"]:.0f}%</b>'))
+        row('rel', 'Complaint Score', 'owner complaints per car sold', '<span class="ls-na">no sales figure to score</span>')
+    if 'sev' in r: row('rel', 'Serious complaints', 'share that report a crash, fire, injury or tow', f'<b>{r["sev"]:.0f}%</b>', 'sev')
     if year is not None and 'rcl' in mt:
-        n, bad = mt['rcl']; out.append(('rel', 'Recalls' + (f' <small>{bad} do-not-drive or park-outside</small>' if bad else f' <small>median car this year: {mt.get("rcl_med", 0):g}</small>'), f'<b>{n}</b>'))
+        n, bad = mt['rcl']
+        row('rel', 'Recalls', (f'{bad} do-not-drive or park-outside · ' if bad else '') + f'typical car this year: {mt.get("rcl_med", 0):g}', f'<b>{n}</b>', 'rcl', _ls_go('rcl', 'Recalls'))
     elif 'rcl' in mt:
-        a, b = mt['rcl']; out.append(('rel', f'Recalls per model year <small>similar years, median car: {b:.1f}</small>', f'<b>{a:.1f}</b>'))
-    if 'fail' in r: out.append(('rel', f'Common failures cost {_LS_EST}', f'<b>{_ls_usd(r["fail"])}</b>'))
+        a, b = mt['rcl']; row('rel', 'Recalls per model year', f'typical car, same years: {b:.1f}', f'<b>{a:.1f}</b>', 'rcl')
+    if 'fail' in r:
+        row('rel', f'Common failures cost {_LS_EST}' + _ls_ii(_LS_FAIL_WHY.format(w='this year' if year is not None else 'this model')),
+            'what fixing the problems owners report most costs', f'<b>{_ls_usd(r["fail"])}</b>', 'fail')
     if 'crash' in r:
-        st, n = mt['crash']; out.append(('rel', 'NHTSA crash test <small>overall, out of 5' + (f', {n} versions' if year is not None and n > 1 else '') + '</small>', f'<b>{st:.1f}★</b>' if st % 1 else f'<b>{st:.0f}★</b>'))
+        st, n = mt['crash']
+        row('rel', 'NHTSA crash test', 'overall stars, out of 5' + (f' · {n} versions' if year is not None and n > 1 else ''), f'<b>{st:.1f}★</b>' if st % 1 else f'<b>{st:.0f}★</b>', 'crash')
     else:
         out.append(('rel', 'NHTSA crash test', '<span class="ls-na">not rated' + (' (2011+ only)' if (year or 2011) < 2011 else '') + '</span>'))
-    if 'fuel' in r: out.append(('cost', 'Fuel <small>EPA</small>', f'<b>{_ls_usd(r["fuel"])}/mo</b>'))
-    if 'rep' in r: out.append(('cost', f'Typical repair {_LS_EST}', f'<b>{_ls_usd(r["rep"])}</b>'))
-    out.append(('cost', f'Insurance {_LS_EST} <small>U.S. average, age 30-39</small>', f'<b>{_ls_usd(r["ins"])}/mo</b>'))
+    if 'fuel' in r:
+        m = (extra(fid, year).get('mpg') or {}) if year is not None and fid else {}
+        cb = m.get('comb'); cb = [c for c in cb if c] if isinstance(cb, list) else ([cb] if cb else [])
+        mpg = ((f'EPA {min(cb):.0f} mpg' if round(min(cb)) == round(max(cb)) else f'EPA {min(cb):.0f}-{max(cb):.0f} mpg') if cb else 'EPA fuel cost')
+        row('cost', 'Fuel', mpg + (f' · typical {sw}: {_ls_usd(typ("fuel"))}/mo' if typ('fuel') else ''), f'<b>{_ls_usd(r["fuel"])}/mo</b>', 'fuel')
+    if 'rep' in r:
+        row('cost', f'Everyday repairs {_LS_EST}', 'our average for 10 common repairs (brakes, starter, struts...) at $140/hr + parts'
+            + (f' · typical {sw}: {_ls_usd(typ("rep"))}' if typ('rep') else ''), f'<b>{_ls_usd(r["rep"])}</b>', 'rep', _ls_go('rep', 'Repair prices'))
+    row('cost', f'Insurance {_LS_EST}', 'per month: state averages × car type, driver 30-39, clean record', f'<b>{_ls_usd(r["ins"])}/mo</b>', 'ins',
+        '<a class="ls-go" href="/insurance/">Insurance by state ›</a>')
     if 'yt' in r:
-        dv = r['yt']; out.append(('yt', 'Owner score vs other cars <small>same model years</small>', f'<b>{"+" if dv >= 0 else "−"}{abs(dv):.0f}</b>'))
-        if year is None and 'yt' in mt: out.append(('yt', 'Videos read', f'<b>{mt["yt"][0]:,}</b>'))
+        ys = (YTS.get(fid) or {}).get(str(year)) if year is not None and fid else None
+        if ys and ys.get('score') is not None and year in YTB:
+            row('yt', 'YouTube owner score', f'how positive {round(ys.get("videos") or 0):,} owner and review videos sound, 0-100 · typical car this year: {YTB[year]:.0f}',
+                f'<b>{ys["score"]}</b>', 'yt', _ls_go('yt', 'What owners say'))
+        else:
+            dv = r['yt']; nv = f'{mt["yt"][0]:,} videos, ' if 'yt' in mt else ''
+            row('yt', 'YouTube owner score vs typical', f'how positive owner and review videos sound ({nv}0-100), minus the typical car of the same years',
+                f'<b>{"+" if dv >= 0 else "−"}{abs(dv):.0f}</b>', 'yt', _ls_go('yt', 'What owners say'))
     vm = mt.get('val')
     if vm and 'val' in sp:
         own, ref = vm[0], vm[1]
-        out.append(('val', f'Loses per year {_LS_EST} <small>same miles · similar cars: {ref:.0f}%</small>', f'<b>{own:.0f}%</b>'))
+        row('val', f'Value lost per year {_LS_EST}', f'at the same miles, from our price estimates · similar {sw}s: {ref:.0f}%', f'<b>{own:.0f}%</b>', 'val')
     return out
+
+# 11-27 helpers for the parts list + the "why" line (LS_HOOK -> _ls_explain)
+_LS_SEGW_N = {'car': 'car', 'suv': 'SUV', 'truck': 'truck', 'minivan': 'minivan'}
+_LS_TYP = {}
+def _ls_typ(key, seg, year):
+    """the typical (median) raw value of one input among cars of the same type: model years for a year page, models for a model page"""
+    k = (key, seg, year is not None)
+    if k not in _LS_TYP:
+        pool = [yd for dd in LS_Y.values() for yd in dd.values()] if year is not None else list(LS_M.values())
+        vs = [x['raw'][key] for x in pool if x['raw'].get(key) is not None and x['meta'].get('seg') == seg]
+        _LS_TYP[k] = _lsst.median(vs) if vs else None
+    return _LS_TYP[k]
+def _ls_mb(v):
+    """a small bar: the input's 0-100 score against other cars (middle tick = typical, right = better)"""
+    return f'<i class="ls-mb {_ls_cls(v)}" style="--v:{max(2, min(98, v)):.0f}%" aria-hidden="true"></i>'
+_LS_GO = {'cpl': ('p-problems', 'problems'), 'rcl': ('p-recalls', 'recalls'), 'rep': ('estimates', 'p-repairs', 'repairs'), 'yt': ('mhb-owners', 'youtube', 'yt-owners')}
+_ls_go = lambda k, lab: f'<a class="ls-go" href="#@{k}">{lab} ›</a>'
+def _ls_links(fig, doc):
+    """#@key -> the first of that key's section ids found on the page; a link with no target there goes"""
+    def one(m):
+        t = next((i for i in _LS_GO.get(m.group(1), ()) if f'id="{i}"' in doc), None)
+        if not t: return '<a class="ls-go" hidden>'
+        c = _lsre.search(rf'id="{t}"><a class="mhc" href="([^"#]+)"', doc)   # a hub card that links to its own page (Problems, Repairs & costs...): go there
+        if c: return f'<a class="ls-go" href="{c.group(1)}{"#estimates" if m.group(1) == "rep" else ""}">'
+        return f'<a class="ls-go" href="#{t}">'
+    fig = _lsre.sub(r'<a class="ls-go" href="#@(\w+)">', one, fig)
+    return _lsre.sub(r'<a class="ls-go" hidden>[^<]*</a>', '', fig)
+_LS_WD = {'cpl': ('many owner complaints per car sold', 'few owner complaints per car sold'),
+          'sev': ('a high share of serious complaints', 'few serious complaints'),
+          'rcl': ('more recalls than most cars', 'fewer recalls than most cars'),
+          'fail': ('costly common failures', 'cheap common failures'),
+          'crash': ('a weak crash-test rating', 'a strong crash-test rating'),
+          'fuel': ('high fuel cost for its type', 'low fuel cost for its type'),
+          'rep': ('pricey everyday repairs', 'cheap everyday repairs'),
+          'ins': ('high insurance cost', 'low insurance cost'),
+          'yt': ('lukewarm YouTube owner reviews', 'warm YouTube owner reviews'),
+          'val': ('losing value fast', 'holding its value well')}
+def _ls_why(d):
+    """one plain line: the inputs that moved this score most (from its own numbers: each input's points above or below the middle car)"""
+    sp, parts = d['sp'], d['parts']; tw = sum(LS_W[p] for p in parts) or 1; con = []
+    for s, v in sp.items():
+        p = LS_OF[s]
+        if p not in parts or s not in _LS_WD: continue
+        sw_ = sum(LS_SW[x] for x in sp if LS_OF[x] == p)
+        con.append((LS_W[p] / tw * LS_SW[s] / sw_ * (v - 50), s))
+    neg = sorted(c for c in con if c[0] <= -1.5); pos = sorted((c for c in con if c[0] >= 1.5), reverse=True)
+    say = lambda cs: ' and '.join(_LS_WD[s][0 if c < 0 else 1] for c, s in cs)
+    b = ls_band(d['s'])[0]
+    if b == 'bad' and neg: return f'Mostly because of {say(neg[:2])}.'
+    if b == 'good' and pos: return f'Mostly because of {say(pos[:2])}.'
+    bits = ([f'helped by {say(pos[:1])}'] if pos else []) + ([f'held back by {say(neg[:1])}'] if neg else [])
+    return (', '.join(bits) + '.')[0].upper() + (', '.join(bits) + '.')[1:] if bits else ''
+def _ls_explain(fig, d, y, doc):
+    """LS_HOOK: the why line at the top of the open (i), a bar legend, why each missing part is missing, and the section links"""
+    why = _ls_why(d)
+    if why: fig = fig.replace('<div class="ls-ddb">', f'<div class="ls-ddb"><p class="ls-why">{_lsh.escape(why)}</p>', 1)   # first thing in the open (i)
+    fig = fig.replace('<div class="ls-ps4">', '<p class="ls-lg"><i class="ls-mb good" style="--v:75%" aria-hidden="true"></i><span>Bars: vs other cars, middle = typical, right = better</span></p><div class="ls-ps4">', 1)
+    for p in LS_W:
+        if p in d['parts']: continue
+        ms = [m for m in d['miss'] if m == LS_MISS[p] or (p == 'val' and m.startswith('no resale part'))]
+        w = ' '.join(_LS_WHY[m] for m in ms if m in _LS_WHY)
+        if not w: continue
+        fig = _lsre.sub(rf'<div class="ls-p ls-p0">(<span class="ls-pn">{_lsre.escape(LS_NAME[p])}<small>.*?</small></span>.*?)</div>',
+                        lambda m: f'<details class="ls-p ls-pm"><summary>{m.group(1)}</summary><p class="ls-ps">{_lsh.escape(w)}</p></details>', fig, count=1, flags=_lsre.S)
+    return _ls_links(fig, doc)
 
 _LS_SRC = {'rel': 'NHTSA owner complaints and U.S. sales, NHTSA recalls and 5-Star crash tests; failure costs are AI repair estimates.',
            'cost': 'EPA fuel cost (fueleconomy.gov); repair and insurance numbers are estimates (AI repair estimates at $140/hour; NAIC state averages).',
@@ -308,6 +395,35 @@ def _ls_parts(d, y):
             out += f'<div class="ls-p ls-p0">{nm}<span class="ls-pb"></span><span class="ls-pv ls-na">–</span></div>'
     return out
 
+# 11-27 (Elijah couldn't tell what "Partial score: no resale part" meant): the partial line opens a short plain explanation, one per reason
+# _ls_combine / _ls_build can give (LS_MISS + the extra miss strings); a reason not listed here just shows the general line
+_LS_WHY = {
+    LS_MISS['rel']: 'Not enough complaint, recall and crash-test data, so the Reliability & safety part is left out.',
+    LS_MISS['cost']: 'No EPA fuel cost or repair estimates for it yet, so the Cost to own part is left out.',
+    LS_MISS['yt']: 'Too few YouTube owner and review videos about it so far, so the What YouTube thinks part is left out.',
+    LS_MISS['val']: 'No price estimates for it yet, so the Holds its value part is left out.',
+    'no resale part (15+ years old)': ('We only score resale for 2011 and newer model years: price estimates for older cars barely change from one year to the next, '
+                                       'so the Holds its value part is left out.'),
+    'no resale part (older model years)': ('We only score resale for 2011 and newer model years (older cars’ price estimates barely move), and this model has too few of them, '
+                                           'so the Holds its value part is left out.'),
+    'no complaint rate': 'No Complaint Score (we need a sales figure to count complaints per car sold), so Reliability & safety uses its other numbers.',
+    'too new (complaints still coming in)': 'Owner complaints take about 3 years to come in, so this is an early read.',
+}
+_LS_FAIL_WHY = ('The problems owners report most for {w} (NHTSA complaints), each priced with our repair estimate (labor hours × $140/hr + parts) '
+                'and weighted by how often owners name it. Problems with no single fix, like stalling, aren’t counted. Real prices vary by shop and area.')
+def _ls_ii(text):
+    """a tiny (i) that opens one short explanation under a label (assets/ls.css .ls-ii)"""
+    return (f'<details class="ls-ii"><summary aria-label="What this means"><span class="ls-iic">{_LS_INFO}</span></summary>'
+            f'<span class="ls-iit">{_lsh.escape(text)}</span></details>')
+def _ls_partial(d, y):
+    if not d['partial']: return ''
+    why = ' '.join(_LS_WHY[m] for m in d['miss'] if m in _LS_WHY)
+    lead = (f'A partial score is missing one of the 4 parts, so it uses the other {len(d["parts"])}' if len(d['parts']) < 4 else
+            'A partial score is missing part of its data')
+    lead += '.' if y else ', and the car isn’t ranked in our best-of lists.'
+    return (f'<details class="ls-pl"><summary>{_LS_WARN}<span>Partial score: {_lsh.escape(d["miss"][0])}</span><span class="ls-iic">{_LS_INFO}</span></summary>'
+            f'<p class="ls-plb">{_lsh.escape(lead)} {_lsh.escape(why)}</p></details>')
+
 def ls_hero(fid, y=None, name='', facts=()):
     """11-26 v2 (Elijah: "put it still where the old average car score thing was ... a bar and it has the score ... just now it's a lemon score
     and it has an info icon saying what this score is made of, and then it drops down the things and what percentage they affect the score"):
@@ -317,7 +433,7 @@ def ls_hero(fid, y=None, name='', facts=()):
     if not d or not d.get('s'): return ''
     d = dict(d, fid=fid); s = d['s']; cls, word = ls_band(s)
     what = f'{y} {name}' if y else name
-    part = f'<p class="ls-pl">{_LS_WARN}<span>Partial score: {_lsh.escape(d["miss"][0])}</span></p>' if d['partial'] else ''
+    part = _ls_partial(d, y)   # 11-27: the partial line opens a one-line plain explanation
     # 11-26 v3 (Elijah's taste: no uppercase kicker, no repeated warning): one plain line heads the parts
     head = (f'Uses {len(d["parts"])} of the 4 parts: {_lsh.escape("; ".join(d["miss"]))}.' if d['partial'] else 'Made of 4 parts:')
     # 11-26 v2 (coordinator): the old number first, on its own line: older videos quote it ("Lemon Index 19, lower is better"), so it's one tap away
@@ -366,6 +482,7 @@ def LS_HOOK(path, doc):
                 facts = [x for x in _lsre.findall(r'<li>(.*?)</li>', sm.group(0), _lsre.S) if not x.startswith('Owner complaints per car sold, compared')]
                 doc = doc[:sm.start()] + doc[sm.end():]
         fig = ls_hero(fid, y, _ls_name(doc), facts)
+        if fig: fig = _ls_explain(fig, dict((LS_Y.get(fid) or {}).get(y) if y else LS_M.get(fid), fid=fid), y, doc)   # 11-27: why line, missing-part reasons, links
         if fig:
             fm = _LS_FIG.search(doc)
             if fm:   # the hero's Complaint Score bar (model_hero.py / year_ux.py) becomes the Lemon Score bar; the Complaint Score sits inside its (i)

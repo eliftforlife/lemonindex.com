@@ -95,12 +95,27 @@
 }
 /* the Overview panel's own gap separates the cards from the box list */
 
-/* "Better years to buy": the bottom of the page */
-.yux-bys { width: 100%; max-width: 760px; margin: 28px auto 40px; padding: 0 4px; box-sizing: border-box; }
-.yux-bys .n2-by { max-width: none; margin: 0 !important; gap: 10px; }
+/* "Better years to buy": the bottom of the page. 11-27 (Elijah: it read as part of the share card above it): its own section, set off by
+   a hairline and space, a real heading with a small (i) (what the chip number is), and each row of years as equal full-width buttons */
+.yux-bys { width: 100%; max-width: 760px; margin: 44px auto 36px; padding: 28px 0 0; border-top: 1px solid #e5e5ea; box-sizing: border-box; }
+.yux-bys.yux-by1 { padding-top: 20px; }
+.yux-byh { display: flex; align-items: center; gap: 8px; }
+.yux-bys h2#yux-by-h { margin: 0; padding: 0; border: 0; font-size: 24px; font-weight: 800; letter-spacing: -.02em; line-height: 1.2; color: var(--ink, #1d1d1f); text-align: left; }
+.yux-bys h2#yux-by-h::before, .yux-bys h2#yux-by-h::after { content: none; }
+.yux-ib { flex: none; display: grid; place-items: center; width: 32px; height: 32px; margin: 0; padding: 0; border: 0; border-radius: 50%;
+  background: #f2f2f5; color: #6e6e73; cursor: pointer; }
+.yux-ib svg { width: 18px; height: 18px; }
+.yux-ib:hover, .yux-ib[aria-expanded="true"] { background: #e3e3e8; color: #1d1d1f; }
+.yux-ib:focus-visible { outline: 3px solid var(--lemon, #ffd400); outline-offset: 2px; }
+.yux-byn { margin: 10px 0 0; padding: 10px 14px; border-radius: 12px; background: #f5f5f7; font-size: 14.5px; line-height: 1.45; color: #3c4043; }
+.yux-byn[hidden] { display: none; }
+.yux-bys .n2-by { display: grid; max-width: none; margin: 14px 0 0 !important; gap: 18px; }
 .yux-bys .n2-by-h { font-size: 20px; font-weight: 700; letter-spacing: -.01em; color: var(--ink); }
-.yux-bys .n2-by-r { flex-wrap: wrap; gap: 8px 12px; }
-.yux-bys .n2-by-l { flex: 0 0 100%; font-size: 14px; font-weight: 600; }
-.yux-bys .n2-by-cs { flex-wrap: wrap; gap: 8px; }
-.yux-bys .n2-c { padding: 9px 14px; font-size: 16px; }
-.yux-bys .n2-c span { font-size: 14px; }
+.yux-bys .n2-by-r { display: grid; gap: 8px; }
+.yux-bys .n2-by-l { font-size: 15px; font-weight: 600; line-height: 1.2; color: #6e6e73; }
+.yux-bys .n2-by-cs { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 8px; flex-wrap: nowrap; }
+.yux-bys .n2-c { display: flex; align-items: baseline; justify-content: center; gap: 8px; min-width: 0; min-height: 52px; box-sizing: border-box;
+  padding: 0 8px; align-content: center; flex-wrap: wrap; border-radius: 14px; background: #f5f5f7; font-size: 18px; }
+.yux-bys .n2-c b { font-weight: 700; color: var(--ink, #1d1d1f); }
+.yux-bys .n2-c span { font-size: 17px; font-weight: 800; }
+.yux-bys .n2-c:hover { background: #ececf0; }

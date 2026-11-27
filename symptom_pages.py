@@ -47,6 +47,17 @@ def _sy_safeq(k):
     return 'Is it safe to drive ' + (_SYQ[k] if k in _SYQ else 'if your car ' + h[4:] if h.startswith('Car ') else 'with ' + _sy_low(h)) + '?'
 def _sy_name(k): return SYD.P[k][0]
 SY_CSS = '<style>.crel.sy-ch a{font-family:inherit;font-weight:600}</style>'   # symptom chips in the body font (.crel is the monospace code-chip style)
+# 11-27 (Elijah): the big cards of the year and model pages (hub_cards.py markup, assets/hub.css) + assets/syhub.css (bigger top three,
+# severity dot) + assets/syhub.js (one card or panel open at a time). The ?sy=1 keeps car_pills.CPL_POLISH from swapping these
+# pictures for its flat line icons (it rewrites /assets/icons/<x>.webp and /assets/icons/<x>.webp?v=N).
+SY_HUB_HEAD = (f'<link rel="stylesheet" href="/assets/hub.css?v={globals().get("HUB_V", "3")}"><link rel="stylesheet" href="/assets/syhub.css?v=1">'
+               '<script src="/assets/syhub.js?v=1" defer></script>')
+def _SY_ICON(k): return f'/assets/icons/{k}.webp?sy=1'
+def _syc_face(title, sub, img, icon=True):
+    pic = f'<span class="mhc-p{" mhc-ic" if icon else ""}"><img src="{img}" alt="" loading="lazy" decoding="async"></span>' if img else ''
+    return f'<summary class="mhc"><span class="mhc-t"><h2 class="mhc-h">{title}</h2>' + (f'<small>{sub}</small>' if sub else '') + f'</span>{pic}</summary>'
+def _syc_item(sid, face, body):
+    return f'<section class="mhb-i" id="{sid}"><div class="cpl"><details class="mhx">{face}<div class="cpl-b">{body}</div></details></div></section>'
 def _sy_url(k): return f'/symptoms/{k}/'
 def _sy_low(h): return h[0].lower() + h[1:] if not h.startswith(('ABS', 'AC ', 'RPM')) else h
 
@@ -107,58 +118,80 @@ def _sy_pages():
         top_share = sorted([y for y in yrs if y[4] >= SYM_SHARE_DEN and y[3] >= 10], key=lambda y: -y[3] / y[4])[:8]
         topm = models[0][1] if models else ''
         cost = _sy_costs(k, v); rel = _sy_related(k, v); codes = _sy_codes(v)
-        # the 3-part answer, then the cars, then everything else folded (the code page pattern)
-        body = [f'<article class="study tr2 cp2"><p class="kicker"><a href="/symptoms/">Car symptoms</a> · {E(grp)}</p><h1>{E(h1)}</h1>',
-                f'<div class="cpa"><div><span>What it usually means</span><p>{E(info["what"])}</p></div>'
-                f'<div><span>How serious</span><p><b>{E(lab)}.</b> {E(info["drive"])}</p></div>'
-                f'<div><span>Where a shop starts</span><p>{E(info["causes"][0])}. Then: {E("; ".join(c[:1].lower() + c[1:] for c in info["causes"][1:3]))}.</p></div></div>',
-                f'<p class="cpm">Owners describe this in <b>{n:,}</b> complaints to the U.S. government' + (f', most often on the {E(topm)}.' if topm else '.') + '</p>']
-        if models:
-            cards = ''.join(f'<a class="mc cpc" href="/cars/{i}/"><span class="mc-p">' + (lambda ph: f'<img src="{ph["src"]}" alt="{E(nm)}" width="{ph["w"]}" height="{ph["h"]}" loading="lazy" decoding="async">' if ph else '')(aph(i))
-                            + f'</span><b>{E(nm)}</b><span class="cpn">{c:,}</span></a>' for i, nm, c in models)
-            body.append(f'<h2>Cars owners report it on most</h2><div class="mbs"><div class="mb"><div class="mg cpg">{cards}</div></div></div>'
-                        '<p class="note">Complaints describing this symptom, by model, all years. Raw counts, not a failure rate: popular models get more complaints.</p>')
-        if top_count:
-            rows = ''.join(f'<tr><td><a href="/cars/{i}/{y}/">{y} {E(nm)}</a></td><td>{c:,}</td><td>{_sy_pct(c, d) if d >= SYM_DEN else "–"}</td></tr>' for i, nm, y, c, d in top_count)
-            body.append(f'<h2>Model years that report it most</h2><div class="tw"><table class="adv"><thead><tr><th>Model year</th><th>Complaints</th><th>Share</th></tr></thead><tbody>{rows}</tbody></table></div>'
-                        '<p class="note">Each row is that model year&#39;s record in NHTSA complaints, not the history of any one car. Share = complaints describing this symptom out of every complaint we hold for that model year'
-                        f' (shown when the year has {SYM_DEN}+ complaints).</p>')
-        if top_share:
-            body.append('<h2>Where it makes up the biggest share</h2><p class="crel sy-ch">' + ' '.join(
-                f'<a href="/cars/{i}/{y}/">{y} {E(nm)} · {_sy_pct(c, d)}</a>' for i, nm, y, c, d in top_share) + '</p>'
-                f'<p class="note">Model years with {SYM_SHARE_DEN}+ complaints in our data and 10+ describing this symptom, ranked by share. A high share means owners of that year who complained often mentioned it.</p>')
-        det = [(f'Common causes of {low}', '<ul class="fx">' + ''.join(f'<li>{E(c)}</li>' for c in info['causes']) + '</ul><p class="yc-cap">General causes, not a diagnosis. A shop should confirm the cause with tests before replacing parts.</p>')]
-        now = info['now']
-        flags = [(v['crash'], 'mention a crash'), (v['towed'], 'say the car was towed'), (v['fire'], 'mention a fire'), (v['injured'], 'report an injury')]
-        fl = [f'{_sy_pct(c, n)} {w}' for c, w in flags if c >= 10 and c / n >= .005]
-        det.append((E(_sy_safeq(k)),f'<p><b>{E(lab)}.</b> {E(info["drive"])}</p>' +
-                    (('<p>Get help right away if ' + ('; '.join(E(x) for x in now) if now != ['always'] else 'you notice it at all') + '.</p>') if now else '') +
-                    (f'<p>Of the {n:,} complaints describing it, {", ".join(fl[:-1]) + " and " + fl[-1] if len(fl) > 1 else fl[0]}.</p>' if fl else '')))
-        comps = [(c, x) for c, x in v['comps'] if c and c not in ('Unknown Or Other',)][:4]
-        bits = []
-        if comps: bits.append('<p>The parts owners filed these complaints under: ' + ', '.join(f'{E(c.lower())} ({_sy_pct(x, n)})' for c, x in comps) + '. A complaint can list more than one.</p>')
-        if v.get('miles'): bits.append(f'<p>Median odometer reading when owners reported it: <b>{v["miles"]:,} miles</b>.</p>')
-        if v.get('makes'): bits.append('<p>Most reports by make: ' + ', '.join(f'{E(m)} ({c:,})' for m, c in v['makes'][:5] if m) + '.</p>')
-        if bits: det.append(('What the complaints show', ''.join(bits)))
-        if cost:
-            det.append((f'What owners say it cost to fix', f'<p>Repair bills owners named in complaints that describe this symptom ({E(", ".join(a.lower() for a in cost["areas"]))} repairs): '
-                        f'the middle half ran <b>{_sy_usd(cost["lo"])} to {_sy_usd(cost["hi"])}</b>, typical <b>{_sy_usd(cost["mid"])}</b>, from {cost["n"]:,} bills.</p>'
-                        '<p class="yc-cap">Each figure is one repair bill as an owner wrote it in a complaint, not a quote for your car. Prices vary with the part, the shop and the year.</p>'))
-        body.append('<h2>The details</h2>' + ''.join(f'<details class="cpd"><summary>{q}</summary>{h_}</details>' for q, h_ in det))
-        if codes:
-            body.append('<h2>Engine codes that come up with it</h2><p class="crel">' + ' '.join(f'<a href="/check-engine-light/{c.lower()}/" title="{E(t)}">{c}</a>' for c, x, t in codes) + '</p>'
-                        '<p class="note">Trouble codes owners named in these complaints more often than in other symptom complaints. <a href="/check-engine-light/">Look up any code →</a></p>')
-        if rel:
-            body.append('<h2>Related symptoms</h2><p class="crel sy-ch">' + ' '.join(f'<a href="{_sy_url(j)}">{E(_sy_name(j))}</a>' for j in rel) + '</p>')
+        # 11-27 (Elijah): the home-page card look (hub.css, as on the year and model pages). Three stacked cards up top (what it means / how
+        # serious / where a shop starts), then "More about ..." with a few big cards and the Questions / Data & sources buttons. One box open
+        # at a time over all of them (assets/syhub.js). Same words, links and FAQ as before, just regrouped; nothing is dropped.
         top3 = [m[1] for m in models[:3]]
         faq = [(f'What causes {low}?', info['what'] + ' Common causes: ' + '; '.join(c[:1].lower() + c[1:] for c in info['causes']) + '.'),
                (_sy_safeq(k), f'{lab}. {info["drive"]}')]
         if top3: faq.append((f'Which cars have this problem most?', f'In complaints to NHTSA, owners describe it most on the {", ".join(top3[:-1]) + " and " + top3[-1] if len(top3) > 1 else top3[0]}. These are raw counts, so popular models rank higher; complaints are owner reports, not proof of a defect.'))
         if cost: faq.append(('How much does it cost to fix?', f'In {cost["n"]:,} repair bills owners named in complaints describing it, the middle half ran {_sy_usd(cost["lo"])} to {_sy_usd(cost["hi"])}. The right repair depends on the cause.'))
-        body.append('<section class="yqa trq"><h2>Quick answers</h2>' + qa_fold(''.join(f'<h3>{E(q)}</h3><p>{E(a)}</p>' for q, a in faq)) + '</section>')
-        body.append(f'<p class="note">Counts: NHTSA owner complaints whose text describes this symptom (we matched owners&#39; own wording, then read samples to check the matches). '
-                    'A complaint is an owner&#39;s report, not a diagnosis or proof of a defect. Causes and advice are general information in our own words, not repair advice for your car. '
-                    '<a href="/symptoms/">Every symptom</a> · <a href="/check-engine-light/">Engine code lookup</a></p></article>')
+        # --- the three cards up top
+        comps = [(c, x) for c, x in v['comps'] if c and c not in ('Unknown Or Other',)][:4]
+        bits = []
+        if comps: bits.append('<p>The parts owners filed these complaints under: ' + ', '.join(f'{E(c.lower())} ({_sy_pct(x, n)})' for c, x in comps) + '. A complaint can list more than one.</p>')
+        if v.get('miles'): bits.append(f'<p>Median odometer reading when owners reported it: <b>{v["miles"]:,} miles</b>.</p>')
+        means = f'<p>{E(info["what"])}</p>' + (f'<h3 class="mhb-ph">What the complaints show</h3>{"".join(bits)}' if bits else '')
+        now = info['now']
+        flags = [(v['crash'], 'mention a crash'), (v['towed'], 'say the car was towed'), (v['fire'], 'mention a fire'), (v['injured'], 'report an injury')]
+        fl = [f'{_sy_pct(c, n)} {w}' for c, w in flags if c >= 10 and c / n >= .005]
+        serious = (f'<h3 class="mhb-ph">{E(_sy_safeq(k))}</h3><p><b>{E(lab)}.</b> {E(info["drive"])}</p>' +
+                   (('<p>Get help right away if ' + ('; '.join(E(x) for x in now) if now != ['always'] else 'you notice it at all') + '.</p>') if now else '') +
+                   (f'<p>Of the {n:,} complaints describing it, {", ".join(fl[:-1]) + " and " + fl[-1] if len(fl) > 1 else fl[0]}.</p>' if fl else ''))
+        shop = (f'<h3 class="mhb-ph">Common causes of {E(low)}</h3><ul class="fx">' + ''.join(f'<li>{E(c)}</li>' for c in info['causes']) + '</ul>'
+                '<p class="yc-cap">General causes, not a diagnosis. A shop should confirm the cause with tests before replacing parts.</p>')
+        c0 = info['causes'][0]   # the card's small line: where a shop starts (the old "... Then: ..." sentence is the list, in the same order)
+        top = [_syc_item('sy-means', _syc_face('What it usually means', '', _SY_ICON('question')), means),
+               _syc_item('sy-serious', _syc_face('How serious', f'<i class="sy-dot s{s}"></i>{E(lab)}', _SY_ICON('warning')), serious),
+               _syc_item('sy-shop', _syc_face('Where a shop starts', E(c0) if len(c0) <= 52 else f'{len(info["causes"])} common causes', _SY_ICON('wrench')), shop)]
+        body = [f'<article class="study cp2 tr2 cp5 sy5"><p class="kicker"><a href="/symptoms/">Car symptoms</a> · {E(grp)}</p><h1>{E(h1)}</h1>',
+                f'<p class="cpm">Owners describe this in <b>{n:,}</b> complaints to the U.S. government' + (f', most often on the {E(topm)}.' if topm else '.') + '</p>',
+                SY_HUB_HEAD + f'<section class="mhb sy-hub sy-top" aria-label="The short answer"><div class="mhb-g">{"".join(top)}</div></section>']
+        # --- "More about ...": cars and years · cost · codes and related symptoms
+        cards = []
+        cb = ''
+        if models:
+            grid = ''.join(f'<a class="mc cpc" href="/cars/{i}/"><span class="mc-p">' + (lambda ph: f'<img src="{ph["src"]}" alt="{E(nm)}" width="{ph["w"]}" height="{ph["h"]}" loading="lazy" decoding="async">' if ph else '')(aph(i))
+                           + f'</span><b>{E(nm)}</b><span class="cpn">{c:,}</span></a>' for i, nm, c in models)
+            cb += (f'<h3 class="mhb-ph">Cars owners report it on most</h3><div class="mbs"><div class="mb"><div class="mg cpg">{grid}</div></div></div>'
+                   '<p class="note">Complaints describing this symptom, by model, all years. Raw counts, not a failure rate: popular models get more complaints.</p>')
+        if top_count:
+            rows = ''.join(f'<tr><td><a href="/cars/{i}/{y}/">{y} {E(nm)}</a></td><td>{c:,}</td><td>{_sy_pct(c, d) if d >= SYM_DEN else "–"}</td></tr>' for i, nm, y, c, d in top_count)
+            cb += (f'<h3 class="mhb-ph">Model years that report it most</h3><div class="tw"><table class="adv"><thead><tr><th>Model year</th><th>Complaints</th><th>Share</th></tr></thead><tbody>{rows}</tbody></table></div>'
+                   '<p class="note">Each row is that model year&#39;s record in NHTSA complaints, not the history of any one car. Share = complaints describing this symptom out of every complaint we hold for that model year'
+                   f' (shown when the year has {SYM_DEN}+ complaints).</p>')
+        if top_share:
+            cb += ('<h3 class="mhb-ph">Where it makes up the biggest share</h3><p class="crel sy-ch">' + ' '.join(
+                   f'<a href="/cars/{i}/{y}/">{y} {E(nm)} · {_sy_pct(c, d)}</a>' for i, nm, y, c, d in top_share) + '</p>'
+                   f'<p class="note">Model years with {SYM_SHARE_DEN}+ complaints in our data and 10+ describing this symptom, ranked by share. A high share means owners of that year who complained often mentioned it.</p>')
+        if v.get('makes'): cb += '<p class="note">Most reports by make: ' + ', '.join(f'{E(m)} ({c:,})' for m, c in v['makes'][:5] if m) + '.</p>'
+        if cb:
+            ph = aph(models[0][0]) if models else None
+            cards.append(_syc_item('sy-cars', _syc_face('Which cars and years', f'Most reports: {E(topm)}' if topm else 'Model years owners name most',
+                                                        ph['src'] if ph else _SY_ICON('car'), icon=not ph), cb))
+        if cost:
+            cards.append(_syc_item('sy-cost', _syc_face('What it costs to fix', f'Typical bill {_sy_usd(cost["mid"])}', _SY_ICON('tag')),
+                         f'<p>Repair bills owners named in complaints that describe this symptom ({E(", ".join(a.lower() for a in cost["areas"]))} repairs): '
+                         f'the middle half ran <b>{_sy_usd(cost["lo"])} to {_sy_usd(cost["hi"])}</b>, typical <b>{_sy_usd(cost["mid"])}</b>, from {cost["n"]:,} bills.</p>'
+                         '<p class="yc-cap">Each figure is one repair bill as an owner wrote it in a complaint, not a quote for your car. Prices vary with the part, the shop and the year.</p>'))
+        if codes or rel:
+            xb = ''
+            if codes:
+                xb += ('<h3 class="mhb-ph">Engine codes that come up with it</h3><p class="crel">' + ' '.join(f'<a href="/check-engine-light/{c.lower()}/" title="{E(t)}">{c}</a>' for c, x, t in codes) + '</p>'
+                       '<p class="note">Trouble codes owners named in these complaints more often than in other symptom complaints. <a href="/check-engine-light/">Look up any code →</a></p>')
+            if rel: xb += '<h3 class="mhb-ph">Related symptoms</h3><p class="crel sy-ch">' + ' '.join(f'<a href="{_sy_url(j)}">{E(_sy_name(j))}</a>' for j in rel) + '</p>'
+            t_ = 'Codes and related symptoms' if codes and rel else 'Engine codes' if codes else 'Related symptoms'
+            cards.append(_syc_item('sy-codes', _syc_face(t_, '', _SY_ICON('engine' if codes else 'signpost')), xb))
+        pans = [('questions', 'question', 'Questions', qa_fold(''.join(f'<h3>{E(q)}</h3><p>{E(a)}</p>' for q, a in faq))),
+                ('sources', 'data', 'Data &amp; sources',
+                 '<div class="cpl-b"><p class="yc-cap">Counts: NHTSA owner complaints whose text describes this symptom (we matched owners&#39; own wording, then read samples to check the matches). '
+                 'A complaint is an owner&#39;s report, not a diagnosis or proof of a defect. Causes and advice are general information in our own words, not repair advice for your car. '
+                 '<a href="/symptoms/">Every symptom</a> · <a href="/check-engine-light/">Engine code lookup</a></p></div><!--cpl-info-end-->')]
+        btns = ''.join(f'<a class="mhb-b" href="#{pid}" aria-controls="{pid}" aria-expanded="false"><svg aria-hidden="true" focusable="false" width="20" height="20"><use href="/assets/ic.svg?v=2#{ic}"></use></svg><span>{t_}</span></a>'
+                       for pid, ic, t_, _b in pans)
+        panels = ''.join(f'<div class="mhb-p cpl" id="{pid}">' + (f'<div class="cpl-b">{b_}</div>' if pid == 'questions' else b_) + '</div>' for pid, _i, _t, b_ in pans)
+        body.append(f'<section class="mhb sy-hub" aria-labelledby="sy-more"><h2 class="mhb-h" id="sy-more">More about {E(low)}</h2>'
+                    f'<div class="mhb-g">{"".join(cards)}</div><nav class="mhb-sm mhb-n2" aria-label="More about {E(low)}">{btns}</nav>{panels}</section></article>')
         hero = (f'<div class="creadout"><div class="cr-code"><span class="cr-sys">{E(grp)} · owner complaints</span><b>{n:,}</b></div>' + _sy_gauge(s) + '</div>')
         ld = [{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]}]
         tt = f'{h1}: Causes, Is It Safe, Cars That Get It | The Lemon Index'

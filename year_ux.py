@@ -19,7 +19,7 @@ CHECKLIST_ON = False   # 11-25: /afford/ and /checklist/ aren't live yet; screen
 import os as _yuos
 if _yuos.environ.get('LEMON_CHECKLIST') == '1': CHECKLIST_ON = True
 
-YUX_V = '1'
+YUX_V = '2'
 _YUX_PATH = _yure.compile(r'/cars/(.+?)/(\d{4})/')
 try: _YUX_CL = _yuj.load(open('data/checklists.json', encoding='utf-8'))
 except (OSError, ValueError): _YUX_CL = {}
@@ -133,9 +133,27 @@ def YUX_HOOK(path, doc):
     if ent:
         k = doc.find('<div class="cpl-grp cpl-g1', i)
         if k > 0: doc = doc[:k] + ent + doc[k:]
+    # 11-27 (Elijah): no "Know someone shopping for a used car?" box at the end of year pages: the Share button under the title does the
+    # same (share.js is delegated and loads on every page; no GA event or other script reads this box). Only a .pend holding nothing else goes.
+    doc = _YUX_PEND.sub(lambda mm: '' if (mm.group(1).count('<button') == 1 and 'Know someone shopping' in mm.group(1)
+                                          and '<div' not in mm.group(1) and '<details' not in mm.group(1)) else mm.group(0), doc, count=1)
     # 4. better years at the bottom, before Similar cars / Related (or the end of <main>)
     if by_html:
         k = doc.find('<div class="cpl-grp cpl-rel', i)
         if k < 0: k = doc.find('</main>', i)
-        if k > 0: doc = doc[:k] + f'<section class="yux-bys">{by_html}</section>' + doc[k:]
+        if k > 0: doc = doc[:k] + _yux_bys(by_html) + doc[k:]
     return doc
+
+# 11-27 (Elijah: "Better years to buy" read as part of the share card above it): its own section with a real heading, a small (i) saying
+# what the chip number is (the Complaint Score, lower = better; not the Lemon Score in the hero), and each row of chips as equal-width
+# buttons (assets/yux.css; the (i) opens via assets/yux.js, the note stays in the HTML)
+_YUX_PEND = _yure.compile(r'<div class="pend"><div class="cpl">(.*?)</div></div>', _yure.S)
+_YUX_BYN = 'The number on each year is its Complaint Score: owner complaints per car sold. 100 = the average car, lower is better.'
+def _yux_bys(by_html):
+    head = '<p class="n2-by-h">Better years to buy</p>'
+    if head not in by_html:   # the one-line "Fewest complaints of its generation" note
+        return f'<section class="yux-bys yux-by1">{by_html}</section>'
+    by_html = by_html.replace(head, '', 1).replace(' role="group"', '', 1).replace(' aria-label="Better years to buy"', '', 1)
+    return ('<section class="yux-bys" aria-labelledby="yux-by-h"><div class="yux-byh"><h2 id="yux-by-h">Better years to buy</h2>'
+            f'<button type="button" class="yux-ib" aria-expanded="false" aria-controls="yux-byn" aria-label="What the numbers mean">{_YUX_INFO}</button></div>'
+            f'<p class="yux-byn" id="yux-byn" hidden>{_YUX_BYN}</p>{by_html}</section>')

@@ -6,3 +6,12 @@
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && d.open) { close(); d.querySelector('summary').focus(); } });
   document.addEventListener('click', function (e) { if (d.open && !d.contains(e.target)) close(); });
 })();
+// 11-27 "Better years to buy": the (i) by the heading shows / hides the one-line note on what the chip numbers are
+(function () {
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('.yux-ib'); if (!b) return;
+    var n = document.getElementById(b.getAttribute('aria-controls')); if (!n) return;
+    var on = b.getAttribute('aria-expanded') !== 'true';
+    b.setAttribute('aria-expanded', on ? 'true' : 'false'); n.hidden = !on;
+  });
+})();

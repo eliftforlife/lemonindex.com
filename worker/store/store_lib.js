@@ -20,7 +20,8 @@
 //   GET  /progress?gen= | PUT /progress {gen, data} (Bearer)
 //   POST /account/delete {confirm}     (Bearer)  -> {ok}: deletes the account, its sessions and progress
 //   POST /webhook                      (Stripe, signed) -> the ONLY place a purchase is granted or revoked (paid / async paid / refund / dispute)
-//   GET  /goal                         (public)  -> {month: 'YYYY-MM', raised: whole dollars, n}: this month's donations (+ monthly renewals),
+//   GET  /goal                         (public)  -> {month: 'YYYY-MM', raised: whole dollars, n}: this month's donations (+ renewals from the site's
+//                                                  goal file; this key never reads invoices),
 //                                                  for the goal box on /support/ and /coming-soon/ (cached 5 min; no D1)
 //   GET  /feed                         (public)  -> {month, count, feed: [{amount, at, kind, level, name, url?}]}: the latest donations on
 //                                                  /support/ (cached 60 s; no D1; names only from the new shout-out field label)
@@ -300,10 +301,12 @@ async function checkout(env, s, item, gen) {
 // ---- GET /goal and GET /feed: donations (11-25 goal; 11-27 donations v2: the live feed + monthly renewals).
 // Donations are Stripe Payment Links on this account (one-time $5 / $10 / $15 / custom, and since 11-27 monthly $3 / $5 / $10 subscriptions),
 // so they show up as Checkout Sessions with a payment_link; checklist sales are sessions this Worker creates (metadata.item, no payment_link)
-// and never count. A monthly donation's first payment is its session (mode 'subscription'); every later month is a paid invoice
-// (billing_reason 'subscription_cycle') of a subscription one of those sessions started.
-// /goal -> {month, raised: whole dollars this month (UTC), n: payments}                                    cached 5 min
-// /feed -> {month, count: people this month, feed: [{amount, at, kind, level, name, url?}] (newest 20)}    cached 60 s
+// and never count. This key reads Checkout Sessions only, NEVER invoices (Elijah 11-27: no wider key).
+// /feed -> {month, count, feed: [{amount, at, kind, level, name, url?}]}: the newest 20 NEW donations (one-time + a monthly's first payment;
+//          a monthly renewal isn't a new donation). count = people this month (+ this month's renewals from the site's goal file). 60 s cache.
+// /goal -> {month, raised, n}: this month's donation sessions, plus this month's monthly renewals taken from the site's own
+//          https://lemonindex.com/data/support_goal.json ('renewals': {cents, n}, written by stripe_goal.py with the read-only key, which can
+//          read invoices). Only when its month matches; a missing file or failed fetch adds 0 and never fails /goal. 5 min cache.
 // Privacy (Elijah 11-27): a name only when the donor typed it into the field whose label was "Name for a shout-out + thank-you wall" (the
 // key never changed; the label each session kept decides). Names typed under the old Instagram-only label are never shown. Never the card
 // name, the customer name or the email. A website only for Pit Crew ($10/mo) and only next to such a name. Same rules as stripe_feed.py.
@@ -311,10 +314,12 @@ async function checkout(env, s, item, gen) {
 // Caching: caches.default under a fixed key where the Cache API works (custom domains; on *.workers.dev it may do nothing), plus this Worker
 // copy's memory. On a Stripe error the last good answer is served (memory, then a 35-day copy in the cache), else 503.
 const GOAL_KEY = 'https://lemon-store.cache/goal', GOAL_LAST = 'https://lemon-store.cache/goal-last', GOAL_TTL = 300, GOAL_PAGES = 50;
-const FEED_KEY = 'https://lemon-store.cache/feed', FEED_LAST = 'https://lemon-store.cache/feed-last', FEED_TTL = 60, FEED_N = 20, SUB_DAYS = 400;
+const FEED_KEY = 'https://lemon-store.cache/feed', FEED_LAST = 'https://lemon-store.cache/feed-last', FEED_TTL = 60, FEED_N = 20, FEED_PAGES = 20;
+const GOAL_FILE = `${SITE}/data/support_goal.json`, GOAL_FILE_TTL = 600;
 const NAME_KEY = 'instagramstoryshoutoutnameorhandle', NAME_LABEL = 'name for a shout-out', URL_KEY = 'yourwebsiteorchannelforthesupporterswall';
-const MEMO = new Map();                                              // cache key -> {mem: {body, at}, run}: one Stripe pull at a time per Worker copy
-export function clearGoal() { MEMO.clear(); }
+const MEMO = new Map();                                              // cache key -> {mem: {body, at}, run}: one pull at a time per Worker copy
+let REN = null;                                                      // {at, month, cents, n}: the goal file's renewals, 10 min in memory
+export function clearGoal() { MEMO.clear(); REN = null; }
 const edgeCache = () => (typeof caches !== 'undefined' && caches && caches.default) || null;
 async function cacheGet(key) { const c = edgeCache(); if (!c) return null; try { const r = await c.match(key); return r ? await r.text() : null; } catch { return null; } }
 async function cachePut(key, body, ttl) {
@@ -327,41 +332,35 @@ const monthOf = at => {
 };
 const isDonation = s => !!(s && s.status === 'complete' && s.payment_status === 'paid' && String(s.currency).toLowerCase() === 'usd' && s.payment_link
   && Number.isInteger(s.amount_total) && s.amount_total > 0);
-const idOf2 = x => (x && typeof x === 'object' ? x.id : x) || null;
-async function list(env, path, params, pages = GOAL_PAGES) {      // every object of a Stripe list (100 a page, newest first)
+async function sessions(env, since, pages) {                      // paid donation sessions created since `since`, newest first (100 a page)
   const out = []; let after = null;
   for (let page = 0; page < pages; page++) {
-    const q = new URLSearchParams({ limit: '100', ...params });
+    const q = new URLSearchParams({ limit: '100', 'created[gte]': String(since), status: 'complete' });
     if (after) q.set('starting_after', after);
-    const j = await stripe(env, 'GET', `${path}?${q.toString()}`);
+    const j = await stripe(env, 'GET', 'checkout/sessions?' + q.toString());
     const l = Array.isArray(j.data) ? j.data : [];
-    out.push(...l);
+    for (const s of l) if (isDonation(s) && !(s.created < since)) out.push(s);
     if (!j.has_more || !l.length) break;
     after = l[l.length - 1].id;
   }
   return out;
 }
-const invSub = i => idOf2(i.subscription || (((i.parent || {}).subscription_details) || {}).subscription);
-async function renewals(env, subs, since) {                       // paid renewal invoices of the monthly donation subscriptions
-  if (!subs.size) return [];                                       // (no monthly donor yet: no invoice call at all)
-  const l = await list(env, 'invoices', { status: 'paid', 'created[gte]': String(since) });
-  return l.filter(i => i && i.billing_reason === 'subscription_cycle' && String(i.currency).toLowerCase() === 'usd' && Number.isInteger(i.amount_paid)
-    && i.amount_paid > 0 && subs.has(invSub(i)) && !(i.created < since));
-}
-async function donations(env, at, pages = GOAL_PAGES) {           // the last SUB_DAYS of donation sessions + this month's renewals, newest first
-  const { start, month } = monthOf(at);
-  const ses = (await list(env, 'checkout/sessions', { 'created[gte]': String(start - SUB_DAYS * 86400), status: 'complete' }, pages)).filter(isDonation);
-  const bySub = new Map(ses.filter(s => s.subscription).map(s => [idOf2(s.subscription), s]));
-  const ren = await renewals(env, new Set(bySub.keys()), start);
-  const items = ses.map(s => ({ t: s.created, cents: s.amount_total, kind: s.mode === 'subscription' ? 'monthly' : 'once', who: idOf2(s.subscription) || s.id, s }))
-    .concat(ren.map(i => ({ t: i.created, cents: i.amount_paid, kind: 'monthly', who: invSub(i), s: bySub.get(invSub(i)) })))
-    .sort((a, b) => b.t - a.t);
-  return { start, month, items };
+export async function renewalsFromSite(month, at = Date.now()) {  // {cents, n} of this month's monthly renewals, from the site's goal file; else 0
+  if (!(REN && REN.month === month && at - REN.at < GOAL_FILE_TTL * 1000)) {
+    let cents = 0, n = 0;
+    try {
+      const r = await fetch(GOAL_FILE, { cf: { cacheTtl: GOAL_FILE_TTL, cacheEverything: true } });
+      const g = r.ok ? await r.json() : null, x = g && g.month === month && g.renewals;
+      if (x && Number.isInteger(x.cents) && x.cents >= 0 && x.cents < 1e8 && Number.isInteger(x.n) && x.n >= 0) { cents = x.cents; n = x.n; }
+    } catch {}
+    REN = { at, month, cents, n };
+  }
+  return { cents: REN.cents, n: REN.n };
 }
 export async function goalTotal(env, at = Date.now()) {
-  const { start, month, items } = await donations(env, at);
-  const mine = items.filter(x => x.t >= start);
-  return { month, raised: Math.floor(mine.reduce((a, x) => a + x.cents, 0) / 100), n: mine.length };
+  const { start, month } = monthOf(at);
+  const ses = await sessions(env, start, GOAL_PAGES), ren = await renewalsFromSite(month, at);
+  return { month, raised: Math.floor((ses.reduce((a, s) => a + s.amount_total, 0) + ren.cents) / 100), n: ses.length + ren.n };
 }
 export function cleanName(v) {
   if (typeof v !== 'string') return null;
@@ -384,12 +383,15 @@ export function donorName(s) {                                    // only from t
 const levelOf = d => d >= 10 ? 'pit' : d >= 5 ? 'road' : 'daily';
 const iso = t => new Date(t * 1000).toISOString().replace(/\.\d{3}Z$/, 'Z');
 export async function feedList(env, at = Date.now()) {
-  const { start, month, items } = await donations(env, at, 20);
-  const count = new Set(items.filter(x => x.t >= start).map(x => x.who)).size;   // one per monthly subscription, one per one-time checkout
-  const feed = items.slice(0, FEED_N).map(x => {
-    const level = x.kind === 'monthly' ? levelOf(x.cents / 100) : null, name = donorName(x.s);
-    const o = { amount: x.cents % 100 ? x.cents / 100 : Math.floor(x.cents / 100), at: iso(x.t), kind: x.kind, level, name };
-    if (level === 'pit' && name) { const f = field(x.s, URL_KEY), u = f && cleanUrl((f.text || {}).value); if (u) o.url = u; }
+  const { start, month } = monthOf(at);
+  // the newest donations: this month's, or (early in a month) back up to 120 days so the list isn't empty
+  const ses = (await sessions(env, start - 120 * 86400, FEED_PAGES)).sort((a, b) => b.created - a.created);
+  const ren = await renewalsFromSite(month, at);
+  const count = ses.filter(s => s.created >= start).length + ren.n;   // one per new donation this month (+ this month's renewals)
+  const feed = ses.slice(0, FEED_N).map(s => {
+    const monthly = s.mode === 'subscription', level = monthly ? levelOf(s.amount_total / 100) : null, name = donorName(s);
+    const o = { amount: s.amount_total % 100 ? s.amount_total / 100 : Math.floor(s.amount_total / 100), at: iso(s.created), kind: monthly ? 'monthly' : 'once', level, name };
+    if (level === 'pit' && name) { const f = field(s, URL_KEY), u = f && cleanUrl((f.text || {}).value); if (u) o.url = u; }
     return o;
   });
   return { month, count, feed };

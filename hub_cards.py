@@ -14,7 +14,7 @@
 import html as _hbh, re as _hbre, json, os
 from bs4 import BeautifulSoup as _HBS
 
-HUB_V = '3'
+HUB_V = '4'
 HUB_ON = True
 _HB_PATH = _hbre.compile(r'/cars/([a-z0-9-]+)/')
 _HB_GO = ('<svg aria-hidden="true" focusable="false" class="mhc-go" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
@@ -527,6 +527,7 @@ def _hy_year(path, doc, fid, y):
     pans = [p for p in (('hx-qa', 'question', 'Questions', qh), ('hx-data', 'data', 'Data &amp; sources', dh)) if p[3]]
     btns, panels = _hy_small(lk, pans)
     hub = _hy_hub(f'Everything about the {y} {E_(nm)}', cards, btns, panels, f'More about the {y} {nm}')
+    hub = hub.replace('<section class="mhb"', '<section class="mhb mhb-acc"', 1)   # 11-27 (Elijah): one card or panel open at a time (assets/hub.js)
     ov.insert(0, _HBS(hub + _hy_left(g1, g2, g4), 'html.parser'))
     return doc[:i] + str(s) + rest, ''
 
