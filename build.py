@@ -2692,6 +2692,10 @@ if not QM.ON:   # 11-17: in quick mode LG has no links for the pages it skipped,
         import linkgraph; print(linkgraph.run(LG, urls, OUT))   # 11-12 click depth / inbound links / orphans -> 3 Lemon Index/data/linkgraph/latest.md
     except Exception as ex: print('linkgraph failed:', type(ex).__name__, ex)
 print('tab layout failures:', len(TAB_FAIL), TAB_FAIL[:5], '| cache hits', sum(1 for k in _TAB_NEW if k in _TAB_OLD), 'of', len(_TAB_NEW))
+if 'HUB_COUNT' in globals():   # 11-26 r2: card hub on year pages + the model pages without the action group (hub_cards.py)
+    _hbo = {}
+    for _p, _w in HUB_OLD.items(): _hbo.setdefault(('year ' if re.fullmatch(r'/cars/[^/]+/\d{4}/', _p) else 'model ') + _w.split(':')[0], []).append(_p)
+    print('card hub: year pages', HUB_COUNT['year'], '| model pages (no action group)', HUB_COUNT['model'], '| old layout:', {k: (len(v), v[:3]) for k, v in _hbo.items()})
 if not QM.ON:   # 11-17: a quick build saw only its own pages; saving would empty the shared tab cache
     try:
         with open(_TAB_CACHE + '.tmp', 'wb') as _fh: pickle.dump(_TAB_NEW, _fh, protocol=pickle.HIGHEST_PROTOCOL)
