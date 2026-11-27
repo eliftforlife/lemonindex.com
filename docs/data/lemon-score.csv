@@ -113,7 +113,7 @@ gmc-yukon,GMC Yukon,34,full,,40,22,39,31,94,9.5,1.2,6526.3,4.1,352.1,719.5,118.8
 gmc-yukon-xl,GMC Yukon XL,47,full,,39,33,75,53,121,9.2,-0.2,1124.8,4.0,376.4,640.7,118.8,0.8,-0.0
 honda-accord,Honda Accord,60,full,,56,61,61,68,82,16.4,6.3,1516.6,5.0,197.7,633.8,118.8,1.0,0.0
 honda-civic,Honda Civic,64,full,,52,73,67,80,67,18.2,4.8,1362.1,4.8,186.2,592.0,118.8,1.3,0.0
-honda-cr-v,Honda CR-V,62,full,,49,79,56,74,99,12.6,3.9,989.7,4.9,209.5,601.3,118.8,0.1,0.0
+honda-cr-v,Honda CR-V,62,full,,49,79,56,74,99,12.6,4.0,989.7,4.9,209.5,601.3,118.8,0.1,0.0
 honda-element,Honda Element,49,partial,no resale part (older model years),27,76,60,,212,11.3,6.7,510.0,,241.4,566.7,118.8,0.2,
 honda-fit,Honda Fit,73,full,,54,84,78,96,75,15.4,3.0,935.8,4.8,168.6,550.0,118.8,2.7,0.0
 honda-hr-v,Honda HR-V,73,full,,78,80,36,95,41,14.2,-0.3,2662.8,5.0,187.3,615.6,118.8,-0.7,0.0
@@ -216,7 +216,7 @@ nissan-xterra,Nissan Xterra,50,full,,42,47,44,87,126,10.3,-0.8,2846.3,,303.4,636
 oldsmobile-bravada,Oldsmobile Bravada,59,partial,no resale part (older model years),44,53,95,,107,14.1,0.2,,,318.8,583.8,118.8,3.3,
 oldsmobile-intrigue,Oldsmobile Intrigue,,partial,no YouTube data yet; no resale part (older model years),43,58,,,126,6.2,0.3,,,245.8,546.2,118.8,,
 porsche-macan,Porsche Macan,66,full,,82,13,100,62,31,17.2,-0.5,,,334.3,1137.2,118.8,5.0,-0.0
-ram-pickup,Ram pickup,34,full,,27,18,79,18,120,13.2,10.7,1114.3,4.0,360.4,666.7,118.8,-0.2,-0.0
+ram-pickup,Ram pickup,34,full,,27,18,79,18,120,13.2,10.8,1114.3,4.0,360.4,666.7,118.8,-0.2,-0.0
 ram-promaster,Ram ProMaster,62,full,,61,60,58,75,65,9.1,5.5,1186.9,,208.3,700.3,118.8,-1.7,0.0
 saturn-sl,Saturn SL,,partial,no YouTube data yet; no resale part (older model years),68,87,,,52,30.4,-0.3,,,181.2,502.5,118.8,,
 saturn-vue,Saturn Vue,52,partial,no resale part (older model years),48,72,37,,109,16.6,-3.3,2182.0,,236.1,606.0,118.8,-0.7,
