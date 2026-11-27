@@ -43,6 +43,25 @@ def rel_vis(T, W, slug):
              + cbx_chart([(f'/cars/{c["id"]}/' if c['id'] in PAGEID else '#', f'<b>{i}</b> {E(c["name"])}', c['li'], c['li'], best_tier(c['li'])) for i, c in enumerate(W, 1)], mw,
                          'Lemon Index: longer bar = more complaints per car sold. Dashed line = the average car (100).', title='The other end') + '</section>')
     return best + worst
+# 11-26 v2: the /best/ type lists rank by the Lemon Score (lemon_score.py ls_ranked: full scores only), one score per list
+def ls_rel_vis(T, W, slug):
+    PAGEID = {f['id'] for f in YEARS}
+    link = lambda c: f'<a href="/cars/{c["id"]}/">{E(c["name"])}</a>' if c['id'] in PAGEID else E(c['name'])
+    s_ = lambda c: ls_full(c['id'])
+    def card(i, c):
+        s = s_(c); d = LS_M[c['id']]
+        why = f'{ls_band(s)[1]}: {s} out of 100 (model years {E(c["years"].replace("-", "–"))}).'
+        ms = cbx_meter('Lemon Score', s, 100, s, ls_band(s)[0], avg=False, unit='of 100')
+        ms += ''.join(cbx_meter(f'{LS_NAME[p]} <small>{LS_W[p]}%</small>', round(d['parts'][p]), 100, round(d['parts'][p]), 'gray', avg=False) for p in LS_W if p in d['parts'])
+        return cbx_card(f'{slug}-{i}', i, best_img(c['id'], c['name']), link(c), why, ms)
+    best = (f'<section class="cbx-sec cbx-list"><h2>Best buys</h2>'
+            + cbx_chart([(f'#{slug}-{i}', f'<b>{i}</b> {E(c["name"])}', s_(c), s_(c), ls_band(s_(c))[0]) for i, c in enumerate(T, 1)], 100,
+                        'Lemon Score out of 100: longer bar = better buy. 50 is the middle car. Tap a car.', avg=False)
+            + '<ol class="cbx-cards">' + ''.join(card(i, c) for i, c in enumerate(T, 1)) + '</ol></section>')
+    worst = (f'<section class="cbx-sec cbx-list"><h2>The other end</h2>'
+             + cbx_chart([(f'/cars/{c["id"]}/' if c['id'] in PAGEID else '#', f'<b>{i}</b> {E(c["name"])}', s_(c), s_(c), ls_band(s_(c))[0]) for i, c in enumerate(W, 1)], 100,
+                         'Lemon Score out of 100: shorter bar = worse buy. 50 is the middle car.', avg=False, title='Lowest scores') + '</section>')
+    return best + worst
 def bu_ylink(c, txt):
     """11-13 (nav review): the model years the videos picked link to those year pages"""
     F = FY.get(c['id']) if c else None
@@ -72,15 +91,21 @@ def _seo_pages():
     SEG = [('cars', 'car', 'cars'), ('suvs', 'suv', 'SUVs'), ('trucks', 'truck', 'trucks'), ('minivans', 'minivan', 'minivans')]
     cards = []
     for slug, sg, nm in SEG:
-        L = sorted([c for c in CARS if c['seg'] == sg and c['sold'] >= 150000], key=lambda c: c['li']); T = L[:15]; W = L[::-1][:10]
-        lede = f'The most reliable {nm} by owner complaints per vehicle sold are the {T[0]["name"]}, {T[1]["name"]} and {T[2]["name"]}. A score of 100 is the average car, and lower is better.'
-        faq = [(f'What is the most reliable {nm[:-1]}?', f'By owner complaints per vehicle sold, model years 2010 to 2022, the {T[0]["name"]} ranks first with a Lemon Index of {T[0]["li"]}.'), (f'Which {nm} get the most complaints?', f'The {W[0]["name"]} and {W[1]["name"]} drew the most complaints per vehicle sold among popular {nm}.')]
-        body = ('<div class="advp cb cbx">' + cbx_head(f'The most reliable {nm}, ranked.', f'Popular {nm} ranked by owner complaints per car sold, model years 2010 to 2022.')
-                + rel_vis(T, W, slug)
+        L = ls_ranked([c for c in CARS if c['seg'] == sg and c['sold'] >= 150000])[0]; T = L[:15]; W = L[::-1][:10]
+        F = sorted([c for c in CARS if c['seg'] == sg and c['sold'] >= 150000 and c.get('li') is not None], key=lambda c: c['li'])
+        s0 = ls_full(T[0]['id'])
+        lede = (f'The best {nm} to buy by the Lemon Score are the {T[0]["name"]}, {T[1]["name"]} and {T[2]["name"]}: reliability and safety, cost to own, '
+                f'what YouTube owners say and resale value, out of 100 (higher is better).')
+        faq = [(f'What is the best {nm[:-1]} to buy used?', f'By the Lemon Score, model years 2010 to 2022, the {T[0]["name"]} ranks first with {s0} out of 100.'),
+               (f'What is the most reliable {nm[:-1]}?', f'By owner complaints per vehicle sold alone (the Complaint Score), the {F[0]["name"]} has the fewest: a Complaint Score of {F[0]["li"]}, where 100 is the average car.'),
+               (f'Which {nm} score lowest?', f'The {W[0]["name"]} and {W[1]["name"]} have the lowest Lemon Scores among popular {nm}.')]
+        body = ('<div class="advp cb cbx">' + cbx_head(f'The best {nm} to buy, ranked.', f'Popular {nm} ranked by the Lemon Score, out of 100: reliability and safety, cost to own, YouTube owners and resale.')
+                + ls_rel_vis(T, W, slug)
                 + cbx_faq([(q, f'<p>{E(a)}</p>') for q, a in faq]) + cbx_buy() + cbx_budgets()
-                + cbx_src(f'{E(lede)} Lemon Index: NHTSA owner complaints filed in a model year&#39;s first 3 years, per vehicle sold, against the average car. Model years 2010 to 2022, models with 150,000 or more sold. Complaints are owner reports, not proof of a defect.') + '</div>')
-        body += share_line(f'The most reliable {nm}, ranked by owner complaints. #1 is the {T[0]["name"]}. Free list:')
-        page(f'/best/most-reliable-{slug}/', f'Most Reliable {nm[0].upper() + nm[1:]}, Ranked by Owner Complaints | The Lemon Index', lede, body, ld=[faq_ld([(q, '', a) for q, a in faq])]); SEO_URLS.append(f'/best/most-reliable-{slug}/'); cards.append((f'/best/most-reliable-{slug}/', f'Most reliable {nm}'))
+                + cbx_src(f'{E(lede)} Lemon Score: reliability and safety 40% (owner complaints per car sold, how serious, recalls, NHTSA crash tests), cost to own 25% (EPA fuel, estimated repairs and insurance), '
+                          f'YouTube owners 20%, resale 15% (AI price estimates). Ranked: models with all 4 parts, 150,000 or more sold. <a href="/lemon-score/">How the Lemon Score works</a>.') + '</div>')
+        body += share_line(f'The best {nm} to buy, ranked by the Lemon Score. #1 is the {T[0]["name"]}. Free list:')
+        page(f'/best/most-reliable-{slug}/', f'Most Reliable {nm[0].upper() + nm[1:]} & Best Buys, Ranked by the Lemon Score | The Lemon Index', lede, body, ld=[faq_ld([(q, '', a) for q, a in faq])]); SEO_URLS.append(f'/best/most-reliable-{slug}/'); cards.append((f'/best/most-reliable-{slug}/', f'Best {nm} to buy'))
     for k, label in (('5k', '$5,000'), ('10k', '$10,000'), ('15k', '$15,000'), ('20k', '$20,000')):
         p = os.path.join(YT_SRC, f'best-used-{k}', 'consensus.json')
         if not os.path.exists(p): continue
@@ -124,7 +149,7 @@ def _seo_pages():
     # 11-10 v2: the index as photo cards, each with the #1 car of its list
     lead = {}
     for slug, sg, nm in SEG:
-        L = sorted([c for c in CARS if c['seg'] == sg and c['sold'] >= 150000], key=lambda c: c['li']); lead[f'/best/most-reliable-{slug}/'] = L[0]['id']
+        L = ls_ranked([c for c in CARS if c['seg'] == sg and c['sold'] >= 150000])[0]; lead[f'/best/most-reliable-{slug}/'] = L[0]['id']
     for k in ('5k', '10k', '15k', '20k'):
         p_ = os.path.join(YT_SRC, f'best-used-{k}', 'consensus.json')
         if os.path.exists(p_):
@@ -143,7 +168,7 @@ def _seo_pages():
     hub = ('<div class="pg v5">' + V5_HERO('Rankings', 'Best cars, by the data.', 'Rankings built from government complaint data and YouTube buyer&#39;s guides.')
            + '<div class="v5-g v5-bg">' + ''.join(_bc(u, t) for u, t in allc) + '</div>')
     hub += share_line('The best cars, SUVs, trucks and minivans, ranked by real owner data. Free:') + '</div>'
-    page('/best/', 'Best Cars Ranked by Real Owner Data | The Lemon Index', 'The most reliable cars, SUVs, trucks and minivans, plus the best used cars by budget, ranked from government complaint data.', hub); SEO_URLS.insert(0, '/best/')
+    page('/best/', 'Best Cars Ranked by Real Owner Data | The Lemon Index', 'The best cars, SUVs, trucks and minivans by the Lemon Score, plus the best used cars by budget, ranked from government complaint data.', hub); SEO_URLS.insert(0, '/best/')
     # ---- statistics (11-14 growth plan 5c: every number computed here from the site's data at build time; the page's date and the citation
     # date are its content-hash date, so they move only when a number or the text changes)
     global STATS_LLM

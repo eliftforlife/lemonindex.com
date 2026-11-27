@@ -16,6 +16,20 @@ BUD_PK = json.load(open('data/picks.json', encoding='utf-8'))['lists']
 _SCN = {_slg(c['name']): c['name'] for c in SCX}
 
 
+def _bud_ls(c):
+    """11-26 v2: a pick's Lemon Score = the average Lemon Score of its model years (lemon_score.py LS_YR)"""
+    v = [s for s in (LS_YR(c['id'], y) for y in range(c['y0'], c['y1'] + 1)) if s] if 'LS_YR' in globals() else []
+    return round(sum(v) / len(v)) if v else None
+
+
+def _bud_rank(cs, t):
+    """data/picks.json keeps each list's 25 best runs (data_picks.py: every year average or better on complaints, 15K+ sold, price fits);
+    the 5 shown are the best by the Lemon Score (supercars: no score, data_picks order)"""
+    if t == 'super': return cs[:5]
+    sc = [(c, _bud_ls(c)) for c in cs]
+    return [c for c, s in sorted((x for x in sc if x[1]), key=lambda x: (-x[1], -x[0]['score']))][:5]
+
+
 def _bud_yrs(c): return str(c['y0']) if c['y0'] == c['y1'] else f"{c['y0']}–{c['y1']}"
 
 
@@ -40,7 +54,8 @@ def _bud_card(c, t, kk, k=''):
         if yi: im = f'<img src="{yi["src"]}" alt="{c["y0"]} {E(nm)}" width="{yi["w"]}" height="{yi["h"]}" loading="lazy" decoding="async">'
         else:
             bi = best_img(c['id'], nm); im = bi[18:-7] if bi.startswith('<span class="bph">') and bi.endswith('</span>') else ''
-        sc = f'<span class="{"good" if c["li"] < 100 else "bad"}" title="Lemon Index of these years: 100 is the average car, lower is better">{c["li"]}</span>'
+        s_ = _bud_ls(c)
+        sc = f'<span class="ls-c {ls_band(s_)[0]}" title="Lemon Score of these years, out of 100 (higher is better)">{s_}</span>' if s_ else ''
     # 11-25 (Elijah: "it's about the money, not the title"): the price leads, bigger than the car's name. BUD_PRICE picks the look:
     # 'big' = "$6,250–10,250" in large type; 'bar' = "$6,250 ——— $10,250", a low-to-high line (budget.css .bud-pbar). Same markup.
     pp = (f'<span class="bud-p bud-p1"><span class="bud-lo">From ${pr[0]:,}</span></span>' if k == 'u2' else
@@ -67,7 +82,7 @@ def _budget_page():
             if (st == 'super') != (t == 'super'): continue
             for kk, kl in BUD_KINDS:
                 if k == 'u2' and kk == 'dealer': continue   # 11-25: under $2,000 is private seller only (budget.js hides the Dealer chip)
-                cs = BUD_PK.get(f'{t}|{kk}|{tk}') or []
+                cs = _bud_rank(BUD_PK.get(f'{t}|{kk}|{tk}') or [], t)
                 where = 'under ' + bl[6:] if bl.startswith('Under ') else ('over ' + bl[5:] if bl.startswith('Over ') else 'for ' + bl.replace(' to ', '–'))
                 head = f'<h2 class="bud-vh">Best used {noun} {where} ({kl.lower()} price)</h2>'   # the chips already say it on screen
                 body = (f'<div class="mg bud-g{" bud-sup" if t == "super" else ""}">' + ''.join(_bud_card(c, t, kk, k) for c in cs) + '</div>') if cs else '<p class="bud-none">None of our scored picks fit this price yet.</p>'
@@ -83,16 +98,16 @@ def _budget_page():
             faq.append((f'What is the best used {one} ' + ('for the money?' if t == 'super' else 'on a budget?'),
                         'Our top private-seller picks: ' + '; '.join(tops) + '. '
                         + ('Supercars have too few complaints to score, so they are ranked by YouTube buyer score and price.' if t == 'super'
-                           else 'Each has fewer owner complaints than the average car, and YouTube buyer guides rate it well.')))
+                           else 'Each has no more owner complaints than the average car and the best Lemon Score at that price.')))
     # 11-24 Eli mobile pass: ~22 questions -> 7 (one per type + how picked + prices); 'Why years' and 'How ranked' merged
-    faq.append(('How are the picks chosen?', 'Mostly by reliability: the Lemon Index of those years (owner complaints to NHTSA in the first 3 years, per car sold; 100 is the average car, lower is better), then by how YouTube buyer guides rate them. '
-                'Each pick is a run of model years from one generation, every one scoring as well as or better than the average car, so you can search for any of them near you.'))
+    faq.append(('How are the picks chosen?', 'By the Lemon Score of those years, out of 100: reliability and safety, cost to own, what YouTube owners say and resale value. '
+                'Each pick is a run of model years from one generation, every one with no more owner complaints than the average car, so you can search for any of them near you.'))
     faq.append(('Can you get a reliable car for under $2,000?', 'Yes, from a private seller: dealers rarely sell cars this cheap. Expect a car about 20 years old with high miles. '
                 'Our under-$2,000 list shows the models and years owners report the fewest problems with, priced by the low end of what they sell for. Check any car before you pay.'))
     faq.append(('Where do the prices come from?', 'They are Lemon Index estimates made with AI for November 2026, not listings or an appraisal: a fair private-seller and dealer price for an average car with a clean title at the mileage most cars of those years have. Check real listings and get an inspection before you buy.'))
-    c5 = BUD_PK.get('car|private|u5') or []; s10 = BUD_PK.get('suv|private|5-10') or []
+    c5 = _bud_rank(BUD_PK.get('car|private|u5') or [], 'car'); s10 = _bud_rank(BUD_PK.get('suv|private|5-10') or [], 'suv')
     lede = f'The 5 best used cars, SUVs, trucks and minivans for every budget. Under $5,000: {_bud_names(c5, 2)}. SUVs for $5,000–10,000: {_bud_names(s10, 2)}.'
-    body = ('<div class="advp cb cbx bud">' + BUD_CSS + cbx_head('Find a car for your budget.', 'The 5 best used picks in every price range.')
+    body = ('<div class="advp cb cbx bud">' + BUD_CSS + globals().get('LS_CSS', '') + cbx_head('Find a car for your budget.', 'The 5 best used picks in every price range.')
             # 11-25 (Elijah: three chip styles felt confusing): type, budget and private/dealer are three of the same compact segmented bars
             + f'<section class="cbx-sec cbx-list bud-pick bud-p{BUD_PRICE}"><div class="bud-fl"><div class="bud-seg bud-ty" role="group" aria-label="Type">{tch}</div>'
             + f'<div class="bud-seg bud-segs" role="group" aria-label="Budget">{bch}</div><div class="bud-seg bud-kind" role="group" aria-label="Price from">{kch}</div></div>{lists}'
@@ -100,13 +115,14 @@ def _budget_page():
             + '<p class="bud-note"><a href="/insurance/">Compare insurers for you</a></p>'
             + '<p class="bud-hp" style="font-size:14px;margin:12px 0 0"><a href="/best/cheapest-500-hp-cars/">Want speed for the money? The cheapest 500 hp cars ›</a></p></section>'   # 11-25
             + cbx_faq([(q, f'<p>{E(a)}</p>') for q, a in faq]) + cbx_buy()
-            + cbx_src('Reliability: the Lemon Index of each model year, NHTSA owner complaints filed in its first 3 years per vehicle sold, against the average car (100). '
+            + cbx_src('Ranking: the Lemon Score of the pick&#39;s model years (average), out of 100: reliability and safety 40%, cost to own 25%, YouTube owners 20%, resale 15% (<a href="/lemon-score/">how it works</a>). '
+                      'To qualify, each year&#39;s Complaint Score (NHTSA owner complaints filed in its first 3 years per vehicle sold, against the average car = 100) must be 100 or lower. '
                       'A complaint is an owner&#39;s report, not a confirmed defect. YouTube buyer score: how YouTube buyer guides and owner reviews rate those years (Lemon Index analysis of video titles and transcripts). '
                       'Prices: Lemon Index AI estimates (November 2026) of a fair private-seller and dealer price at the years&#39; typical mileage, average condition, clean title; not listings, sales records or an appraisal. '
                       'A pick is a run of consecutive model years in one generation, each scored at or better than the average car, with 15,000+ sold each year, whose price (middle of the range) fits the budget; under $2,000 (private sellers only), the low end of the range. '
-                      'Ranked 60% reliability, 40% YouTube buyer score, plus a little for a longer run. Twins sold under two brands count once. Left out: full-size work vans (mostly fleet-sold). Supercars: YouTube buyer score and price only.')
+                      'The 5 with the highest Lemon Score are shown. Twins sold under two brands count once. Left out: full-size work vans (mostly fleet-sold). Supercars: YouTube buyer score and price only.')
             + '</div>' + BUD_JS)
-    body += share_line('The best used cars for your budget, with prices and complaint scores. Free:', 'Know someone shopping on a budget?')
+    body += share_line('The best used cars for your budget, with prices and Lemon Scores. Free:', 'Know someone shopping on a budget?')
     page('/budget/', 'Best Used Cars for Your Budget: Under $2K, $5K, $10K+ | The Lemon Index', lede, body,
          ld=[faq_ld([(q, '', a) for q, a in faq])])
     if 'SEO_URLS' in globals(): SEO_URLS.append('/budget/')

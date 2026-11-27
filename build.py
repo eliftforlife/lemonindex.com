@@ -679,6 +679,7 @@ def page(path, title, desc, body, ld=None, kind='website', img=None, ask=None, v
     if 'VF_HOOK' in globals(): doc = VF_HOOK(path, doc)   # 11-24 (Elijah): no Normal/Advanced switch, one-sided praise/complaints full width, engine pictures on the engine chips, heart + share by the name (vis_fixes.py), after the date hash
     if 'YUX_HOOK' in globals(): doc = YUX_HOOK(path, doc)   # 11-25 (Elijah's go-live review): year page top v2, bar score, source sheet, entry cards (year_ux.py), after the date hash
     if 'HUB_HOOK' in globals(): doc = HUB_HOOK(path, doc)   # 11-26 (Elijah: "this is good to make go live"): model pages with every card get the card hub (hub_cards.py), after the date hash
+    if 'LS_HOOK' in globals(): doc = LS_HOOK(path, doc)   # 11-26 Lemon Score headline on car model + year pages, 'Complaint Score' wording site-wide (lemon_score.py), after the date hash
     LG[path] = (set(_LGHREF.findall(doc)), bool(_LGNOIX.search(doc)), url)   # 11-12 link graph (linkgraph.py, end of build)
     f = os.path.join(OUT, path.strip('/'), 'index.html') if path.endswith('/') else os.path.join(OUT, path.strip('/'))
     os.makedirs(os.path.dirname(f), exist_ok=True)
@@ -884,22 +885,7 @@ def _rk_row(c):
             'sub': f'{E(c["segName"])} · {c["years"].replace("-", "–")} · {E(plain(c["li"]))}', 'score': f'{c["li"]}', 'cls': 'good' if c['li'] < 100 else 'bad'}
 _RK = [_rk_row(c) for c in CARS]
 _rk_ph = aph(best4['id'])
-page('/rankings/', 'Car Reliability Rankings: Every Model and Brand, Best to Worst | The Lemon Index',
-     f'Every car model and brand ranked by owner complaints per car sold, best to worst: {len(CARS)} models, model years 2010-2022. 100 is the average car; lower is better.',
-     '<div class="pg v5 rk5p">' + V5_HERO('', 'Every car, best to worst.', f'Owner complaints filed with the U.S. government, per car sold. 100 is the average car; lower is better. '
-                                         f'The <b>{E(best4["name"])}</b> drew the fewest of {len(CARS)} models.',
-                                         extra=(f'<div class="v5-im">{pimg(_rk_ph, best4["name"]).replace(" loading=" + chr(34) + "lazy" + chr(34), "")}</div>' if _rk_ph else ''))
-     + '<section class="cp5-sec"><h2>Top 20, most reliable first.</h2>' + V5_RANK(_RK[:20]) + '</section>'
-     + '<div class="cpl v5-pl">'
-     + V5_BOX('chart', f'Show #21–{len(_RK)}', V5_RANK(_RK[20:], 21), 'more')
-     + V5_BOX('tag', 'Every brand, best to worst', bars(BRANDS, 330, 'two') + '<p class="note">* Porsche is a small sample (2 models, 258,000 sold). Tesla uses estimated U.S. sales.</p>', 'brands')
-     + V5_GO('warning', 'The worst model years', '/rankings/worst-years/')
-     + V5_BOX('info', 'How the score works', f'<p class="yc-cap">Lemon Index = NHTSA owner complaints filed in a car&#39;s first 3 years, per car sold, against the average car of the same model years. '
-              '<b>100 is average</b>; 25 is a quarter of the complaints, 300 is three times as many. A complaint is an owner&#39;s report, not a confirmed defect, and this is not a safety rating.</p>'
-              '<p class="yc-cap">* Tesla doesn&#39;t publish U.S. sales by model, so its numbers use published estimates. <a href="/method/">How the index works</a> · <a href="/data/">All free data</a></p>')
-     + '</div>' + pcredit(who(*[r['ph'] for r in _RK[:20] if r['ph']]))
-     + share_line("Every car ranked by real owner complaints, best to worst. Free:") + '</div>',
-     ld=[{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Car reliability rankings", "url": BASE + '/rankings/'}])
+# 11-26 v2: /rankings/ ranks by the Lemon Score now; it's built by lemon_score.py (LS_RANKINGS), once the scores exist
 HOME_PAGE = dict(title="Lemon Index (LemonIndex): Look Up Any Car's Problems by Year",
                  desc=f"Look up any car's problems by model year, 2000 to 2025: its reliability score, top problem areas and real owner complaints. Scores from {COUNTED:,} owner complaints to the government. 100 is the average car.",   # 11-12 r2 (Ryan): the meta said 1.6 million while the page says {COUNTED:,}
                  ld=[{"@context": "https://schema.org", "@type": "WebSite", "name": "The Lemon Index", "alternateName": ["Lemon Index", "LemonIndex", "lemonindex", "lemonindex.com"], "url": BASE + '/'},
@@ -1429,6 +1415,7 @@ exec(open('seo_ld.py', encoding='utf-8').read())   # 11-23 SEO batch: Quick answ
 exec(open('model_hero.py', encoding='utf-8').read())   # 11-19 model page top v2 (MH_HOOK in page())
 exec(open('year_ux.py', encoding='utf-8').read())   # 11-25 year page top v2 (YUX_HOOK in page(); needs model_hero's _mh_gauge)
 exec(open('hub_cards.py', encoding='utf-8').read())   # 11-26 model page hub: big cards + 4 small buttons (HUB_HOOK in page(), after YUX_HOOK)
+exec(open('lemon_score.py', encoding='utf-8').read())   # 11-26 the Lemon Score (0-100, 4 parts; the old number is now the Complaint Score): LS_HOOK in page(), last
 exec(open('sub_pages.py', encoding='utf-8').read())   # 11-19 card -> own page test (Integra GS-R), SUB_HOOK in page()
 exec(open('recall_alerts.py', encoding='utf-8').read())   # 11-14 growth 4a: recall alert signup box (RA_HOOK in page()), /alerts/ page, privacy text
 RIVALS = defaultdict(list); PAIRS = []
@@ -2316,7 +2303,9 @@ def mcard(n, i):
     li = BYNAME[n]['li']; ph = YSL.model_img(i) or mphoto(i)   # 11-10 (Elijah): AI illustrations replace the Wikimedia photos on the grid
     im = (f'<img src="{ph["src"]}"{rset(ph["src"], "(max-width: 600px) 45vw, 170px")} alt="{E(n)}" width="{ph["w"]}" height="{ph["h"]}" loading="lazy">' if ph else '')
     w = f'<small class="mc-k">{YRS(BYNAME[n])} score</small>' if i in EVBY else ''   # 11-12: Bolt / Model Y also have an EV card with an EV-window score
-    return f'<a class="mc" data-t="r {SEGT.get(BYNAME[n]["seg"], "")}" href="/cars/{i}/" title="Lemon Index, model years {YRS(BYNAME[n])}"><span class="mc-p">{im}</span><b>{E(n.split(" ", 1)[1] if " " in n else n)}</b>{w}<span class="{"good" if li < 100 else "bad"}">{li}</span></a>'
+    _ls = LS(i) if 'LS' in globals() else None   # 11-26: the corner shows the Lemon Score (0-100, higher = better); the Complaint Score where a model has none
+    if _ls: return f'<a class="mc" data-t="r {SEGT.get(BYNAME[n]["seg"], "")}" href="/cars/{i}/" title="Lemon Score {_ls} out of 100 (higher is better)"><span class="mc-p">{im}</span><b>{E(n.split(" ", 1)[1] if " " in n else n)}</b>{w}<span class="ls-c {ls_band(_ls)[0]}">{_ls}</span></a>'
+    return f'<a class="mc" data-t="r {SEGT.get(BYNAME[n]["seg"], "")}" href="/cars/{i}/" title="Complaint Score, model years {YRS(BYNAME[n])}"><span class="mc-p">{im}</span><b>{E(n.split(" ", 1)[1] if " " in n else n)}</b>{w}<span class="{"good" if li < 100 else "bad"}">{li}</span></a>'
 # 11-10 (Elijah): models we don't have data for yet show as gray, non-clickable "No data yet" cards with their illustration
 try: NEWM = json.load(open('data/new_models.json', encoding='utf-8'))
 except FileNotFoundError: NEWM = []
@@ -2439,7 +2428,7 @@ CNOTES = (f'<div class="ctn pfh" data-for="performance" hidden><h3>Performance c
                     for k, g, w, x in (('trucks', 'tk', 'trucks', ', from the Tacoma to the HD pickups and the Raptor'), ('suvs', 'sv', 'SUVs', ''), ('cars', 'cr', 'sedans, hatchbacks and other cars', '. Sports cars are under Performance'), ('minivans', 'mv', 'minivans and vans', '')))
           + f'<p class="ctn" data-for="jdm" hidden>The Japanese hero cars of The Fast and the Furious (2001) and 2 Fast 2 Furious (2003), plus JDM legends like the AE86, R32 GT-R and Silvia S15: specs, the engine and, where they were sold in the US, owner complaints and recalls. <a href="/jdm/">Every JDM car and its engine</a></p>'
           + f'<p class="ctn" data-for="electric" hidden>EV scores cover model years {EV_WIN}, with complaints filed by the end of the year after the model year. Under All cars, an EV with its own page (Bolt, Model Y) shows the main Lemon Index for its own years instead, so its two numbers differ. <a href="/electric/">The most reliable EVs, ranked</a></p>')
-CARS_GRID = f'''<section class="cgrid">{CTABS}{HCHIPS}<h2 data-hide="p j">Every model. <span class="h2s" data-hide="s p j">Score in the corner: 100 is average, lower is better.</span></h2>{CNOTES}<div class="mbs">{_MW}{lst}</div><p class="ph-cr" data-hide="p">Car images: AI-generated illustrations by The Lemon Index, free under CC BY 4.0 (<a href="/images/">download</a>).</p></section><script src="/assets/soonvote.js?v=2" defer></script>
+CARS_GRID = f'''<section class="cgrid">{CTABS}{HCHIPS}<h2 data-hide="p j">Every model. <span class="h2s" data-hide="s p j">Lemon Score in the corner: out of 100, higher is better.</span></h2>{CNOTES}<div class="mbs">{_MW}{lst}</div><p class="ph-cr" data-hide="p">Car images: AI-generated illustrations by The Lemon Index, free under CC BY 4.0 (<a href="/images/">download</a>).</p></section><script src="/assets/soonvote.js?v=2" defer></script>
 <style>.pfh{{max-width:560px}}.pfh h3{{font-size:clamp(28px,6.5vw,36px);letter-spacing:-.03em;margin:10px 0 6px}}.pfh-pill{{display:inline-block;padding:4px 12px;border-radius:999px;background:#ffd400;color:#17161a;font-size:12.5px;font-weight:700;letter-spacing:.02em}}.pfh-s{{margin:0 0 6px;font-size:16px}}.pfh-n{{margin:0;font-size:14px;color:#6e6e73}}.cgrid[data-tab="performance"] .mc.mc-dup:not([hidden]){{display:flex}}.cgrid .ph-cr{{margin-top:28px}}
 .ctabs.ctb8{{grid-template-columns:repeat(4,minmax(0,1fr));max-width:720px;border-radius:24px;scroll-margin-top:72px}}.ctabs.ctb8 a{{border-radius:20px}}.ctabs.ctb8 a[data-type=cars]{{white-space:normal;text-align:center;line-height:1.12}}.ctabs.ctb9{{grid-template-columns:repeat(3,minmax(0,1fr));max-width:600px}}
 @media (max-width:600px){{.ctabs.ctb8{{gap:3px;padding:3px;border-radius:20px}}.ctabs.ctb8 a{{min-height:40px;padding:0 2px;font-size:13px;gap:3px;border-radius:17px}}.ctabs.ctb8 a small{{display:none}}}}</style>'''   # 11-11: shared by /cars/ and the home page
@@ -2620,7 +2609,7 @@ _404 = re.sub(r'<main>.*</main>', lambda m: (
 _404 = _404.replace('</body>', f'<script src="/assets/lx404.js?v={LXS_V}" defer></script></body>', 1)
 open(f'{OUT}/404.html', 'w', encoding='utf-8').write(_404)
 RCLP = 'pages'; exec(open('recall_pages.py', encoding='utf-8').read())   # 11-14 growth plan 2B-1: /recalls/ hub, make and model recall pages (RCL_URLS)
-urls = ['/', '/rankings/', STUDY, '/studies/', '/method/', '/vin/', '/car-loan-rates/', '/vote/', '/data/', '/brands/'] + PERF_URLS + JDM_URLS + (SUB_ALL() if 'SUB_ALL' in globals() else []) + CAT_URLS + burls + purls + murls + surls + eurls + GAP_URLS + CODE_URLS + globals().get('SYM_URLS', []) + SEO_URLS + EXTRA_URLS + BMW_URLS + SCE_URLS + AE_URLS + yurls + ADV_URLS + curls + LEGAL_URLS + UXC_URLS + MST_URLS + globals().get('HD_URLS', []) + globals().get('VE_URLS', []) + globals().get('RC_URLS', []) + globals().get('CM_URLS', []) + globals().get('RCL_URLS', []) + globals().get('UK_URLS', [])
+urls = ['/', '/rankings/', STUDY, '/studies/', '/method/'] + globals().get('LS_URLS', []) + ['/vin/', '/car-loan-rates/', '/vote/', '/data/', '/brands/'] + PERF_URLS + JDM_URLS + (SUB_ALL() if 'SUB_ALL' in globals() else []) + CAT_URLS + burls + purls + murls + surls + eurls + GAP_URLS + CODE_URLS + globals().get('SYM_URLS', []) + SEO_URLS + EXTRA_URLS + BMW_URLS + SCE_URLS + AE_URLS + yurls + ADV_URLS + curls + LEGAL_URLS + UXC_URLS + MST_URLS + globals().get('HD_URLS', []) + globals().get('VE_URLS', []) + globals().get('RC_URLS', []) + globals().get('CM_URLS', []) + globals().get('RCL_URLS', []) + globals().get('UK_URLS', [])
 exec(open('quality_gate.py', encoding='utf-8').read())   # 11-18 low-value review fix: thin pages noindex + out of the sitemap (THIN)
 # 11-23 (GSC "Not found (404)" email of 11-19): the sitemap lists only real pages. The built file must exist and must not be a
 # redirect stub (alias_pages.py, K5 stubs) or noindex. Runs on quick builds too, against the docs/ left by the last full build.
@@ -2678,6 +2667,7 @@ page('/vin/', 'Free VIN Decoder and Recall Check: Look Up Any VIN | The Lemon In
 <p class="v5-line">Canada? See recalls at <a href="{TC_DB}" rel="noopener nofollow" target="_blank">Transport Canada</a></p>
 <script id="pick" type="application/json">{json.dumps(PICK, ensure_ascii=False).replace("</", "<\\/")}</script><script id="valias" type="application/json">{json.dumps(VALIAS, separators=(",", ":"))}</script><script id="vnames" type="application/json">{json.dumps(VNAMES, separators=(",", ":"))}</script><script id="vimg" type="application/json">{json.dumps(sorted(f[:-5] for f in os.listdir("assets/ai-models") if f.endswith(".webp")), separators=(",", ":"))}</script><script src="/assets/vin.js?v=1114svra" defer></script></section>{VR_BOXES}</div>''', ld=[faq_ld(VR_FAQ), {"@context": "https://schema.org", "@type": "WebApplication", "name": "Free VIN check and model-year report", "url": BASE + '/vin/', "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Decode a VIN with NHTSA vPIC, then see that model year's Lemon Index score, top complaint areas, NHTSA recalls and a test-drive checklist. Not a vehicle history report."}])
 QM.copy_assets('assets', f'{OUT}/assets') if QM.ON else shutil.copytree('assets', f'{OUT}/assets', dirs_exist_ok=True); print('vin report model years:', vr_write(f'{OUT}/assets/vr')); shutil.copy('data/survey.json', f'{OUT}/assets/survey-q.json'); shutil.copy('data/votes.json', f'{OUT}/assets/votes.json')
+if 'ls_export' in globals(): ls_export(f'{OUT}/data')   # 11-26 docs/data/lemon-score.json + .csv
 print('built', len(urls), 'pages into', OUT)
 # 11-12 accurate freshness: pages whose content changed this build -> data/cache/indexnow_pending.txt (git-ignored); `py indexnow.py --pending`
 # after a push submits only those and clears the list. PD is saved again here because /vin/ is built after the first save.

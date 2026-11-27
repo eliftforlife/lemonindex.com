@@ -133,8 +133,11 @@ def cmp_page(a, b):
     _sa, _sb = vs_names(A, B)   # 'Camry', 'Civic' (the way people search)
     title = seo_title([f'{_sa} vs {_sb}: Which Is More Reliable?', f'{_sa} vs {_sb} Reliability by Year', f'{_sa} vs {_sb} Reliability'])   # unchanged (search-titles agent owns it)
     sh_txt = f'{A["name"]} vs {B["name"]}: which has fewer problems? Free comparison from owner complaints:'
-    close = abs(ca['li'] - cb['li']) <= max(ca['li'], cb['li']) * .08
-    aL = ca['li'] <= cb['li']   # A leads
+    # 11-26 v2: the winner is the car with the higher Lemon Score (lemon_score.py, 0-100, 4 parts); within 2 points = too close to call.
+    # Falls back to the Complaint Score only when a car has no Lemon Score.
+    lsA, lsB = (LS(A['id']), LS(B['id'])) if 'LS' in globals() else (None, None); use_ls = bool(lsA and lsB)
+    if use_ls: close = abs(lsA - lsB) <= 2; aL = lsA >= lsB
+    else: close = abs(ca['li'] - cb['li']) <= max(ca['li'], cb['li']) * .08; aL = ca['li'] <= cb['li']   # A leads
     L, T, cL, cT, sL, sT = (A, B, ca, cb, _sa, _sb) if aL else (B, A, cb, ca, _sb, _sa)
     fewer = round((1 - cL['li'] / max(cT['li'], 1)) * 100)
     nm = {A['id']: _sa, B['id']: _sb}
@@ -151,7 +154,8 @@ def cmp_page(a, b):
     def car(F, c):
         win = (not close) and F is L
         return (f'<a class="cb-car{" cb-win" if win else ""}" href="{CARU(F)}">{img(F)}<b>{E(F["name"])}</b>'
-                + _cb_gauge(c['li']) + ('<span class="cb-flag">WINNER</span>' if win else '') + '</a>')
+                + (globals().get('LS_CSS', '') + ls_chip(F['id']) if use_ls else _cb_gauge(c['li']))   # 11-26 v2: the Lemon Score decides, so the card shows it
+                + ('<span class="cb-flag">WINNER</span>' if win else '') + '</a>')
     lw, tw = (wa, wb) if aL else (wb, wa)
     lr, tr = (ra[0], rb[0]) if aL else (rb[0], ra[0])
     lwy, twy = (wA, wB) if aL else (wB, wA)
@@ -175,21 +179,30 @@ def cmp_page(a, b):
         if True:
             s_ = 'L' if lf['cost'][1] < tf['cost'][0] else 'T'; P, Q = (lf, tf) if s_ == 'L' else (tf, lf)
             cand.append((s_, -1, f'{USD(P["cost"])}', 'a smaller fuel bill', f'a year, vs {USD(Q["cost"])} (EPA estimate, {P["last"]} vs {Q["last"]})'))
+    if use_ls:   # the Lemon Score parts where one car is clearly ahead (5+ points) come first
+        dL, dT = (LS_M[L['id']]['parts'], LS_M[T['id']]['parts'])
+        _pl = {'rel': 'better reliability &amp; safety', 'cost': 'a lower cost to own', 'yt': 'better YouTube reviews', 'val': 'better resale'}
+        for p_ in LS_W:
+            if p_ in dL and p_ in dT and abs(dL[p_] - dT[p_]) >= 5:
+                s_ = 'L' if dL[p_] > dT[p_] else 'T'; hi, lo = (dL[p_], dT[p_]) if s_ == 'L' else (dT[p_], dL[p_])
+                cand.append((s_, 10 + LS_W[p_] / 100, f'{round(hi)}&nbsp;<small>vs&nbsp;{round(lo)}</small>', _pl[p_], f'{LS_NAME[p_]} ({LS_W[p_]}% of the score), out of 100'))
     winL = sorted([x for x in cand if x[0] == 'L'], key=lambda x: -x[1]); winT = sorted([x for x in cand if x[0] == 'T'], key=lambda x: -x[1])
     def rcard(big, lab, sub, k=''):
         return f'<div class="cb-r{k}"><b>{big}</b><span>{lab}</span><small>{sub}</small></div>'
     if close:
-        why = (f'<p class="cb-why">Too close to call</p><p class="cb-why-s">About the same complaints per car sold ({ca["li"]} vs {cb["li"]}). Pick by model year below.</p>'
+        why = (f'<p class="cb-why">Too close to call</p><p class="cb-why-s">' + (f'About the same Lemon Score ({lsA} vs {lsB}).' if use_ls else f'About the same complaints per car sold ({ca["li"]} vs {cb["li"]}).') + ' Pick by model year below.</p>'
                + '<div class="cb-rs">' + ''.join(rcard(big, f'{E(nm[(L if s_ == "L" else T)["id"]])}: {lab}', sub) for s_, _, big, lab, sub in sorted(cand, key=lambda x: -x[1])[:3]) + '</div>')
         other = ''
     else:
-        top = [rcard(f'{fewer}%', 'fewer complaints per car sold', f'Lemon Index {cL["li"]} vs {cT["li"]}', ' cb-r1')] + [rcard(big, lab, sub) for _, _, big, lab, sub in winL[:2]]
+        top = ([rcard(f'{max(lsA, lsB)}&nbsp;<small>vs&nbsp;{min(lsA, lsB)}</small>', 'a higher Lemon Score', 'out of 100: reliability, cost to own, YouTube, resale', ' cb-r1')] if use_ls
+               else [rcard(f'{fewer}%', 'fewer complaints per car sold', f'Complaint Score {cL["li"]} vs {cT["li"]}', ' cb-r1')]) + [rcard(big, lab, sub) for _, _, big, lab, sub in winL[:2]]
         why = f'<p class="cb-why">The {E(sL)} wins because it has</p><div class="cb-rs">{"".join(top)}</div>'
         other = (f'<p class="cb-oth"><b>Where the {E(sT)} is better:</b> ' + '; '.join(f'{lab} ({re.sub("<[^>]+>", "", big)})' for _, _, big, lab, _ in winT[:3]) + '.</p>') if winT else ''
     crd = pcredit(who(mphoto(a), mphoto(b)))
     try: _cbh = round(600 * (1 - YC.crop([ph['src'] for ph in (mphoto(a), mphoto(b)) if ph])))   # trim the empty sky both pictures share (ycarousel.py)
     except Exception: _cbh = 600
     src_ = (f'<p class="sub cmp-lede">{E(QN(A))} or {E(QN(B))}? Here is the {E(_sb)} vs {E(_sa)} question answered from owner complaints filed with the government, for every model year both were sold.</p>'
+           + (f'<p>The winner is the car with the higher <a href="/lemon-score/">Lemon Score</a> (out of 100: reliability and safety, cost to own, YouTube owners and resale); within 2 points is too close to call.</p>' if use_ls else '') +
            f'<p>{WHAT_LI} A year counts toward the head-to-head only when both cars have 3 full years of complaints, so 2023 and newer show as partial. '
            f'Recalls are NHTSA campaigns, counted once each. Fuel costs are the EPA&#39;s estimates (15,000 miles a year). YouTube: the most-watched owner reviews and buyer guides for each generation. '
            f'<a href="/method/">How the index works</a></p>')
@@ -207,7 +220,7 @@ def cmp_page(a, b):
     mpgv = lambda f: ('–' if not f['mpg'] else (f'{f["mpg"][0]}' if f['mpg'][0] == f['mpg'][1] else f'{f["mpg"][0]}–{f["mpg"][1]}') + ('<small>MPGe</small>' if f['ev'] else ''))
     stv = lambda f: f'{f["st"]}<small>of 5 ★</small>' if f['st'] else '–'
     mid = lambda f: sum(f['cost']) / 2 if f['cost'] else None
-    rows = [srow('Complaints per car sold', 'Lemon Index', f'{ca["li"]}', f'{cb["li"]}', better(ca['li'], cb['li'], False)),
+    rows = ([srow('Lemon Score', 'out of 100, higher is better', f'{lsA}', f'{lsB}', better(lsA, lsB, True))] if use_ls else []) + [srow('Complaints per car sold', 'Complaint Score', f'{ca["li"]}', f'{cb["li"]}', better(ca['li'], cb['li'], False)),
             srow('Years with fewer complaints', span, f'{wa}<small>of {len(full)}</small>', f'{wb}<small>of {len(full)}</small>', better(wa, wb, True)),
             srow('Best year', 'fewest complaints', yv(bA), yv(bB), better(bA['li'] if bA else None, bB['li'] if bB else None, False)),
             srow('Worst year', 'most complaints', yv(wA), yv(wB), better(wA['li'] if wA else None, wB['li'] if wB else None, False)),
@@ -263,7 +276,7 @@ def cmp_page(a, b):
     yh = f'<div class="cb-yr cb-yh"><div class="yy"></div><div>{E(_sa)}</div><div>{E(_sb)}</div></div>'
     yrs = (f'<div class="yrs cb-yrs">{yh}' + ''.join(_row(y) for y in _top)
            + (f'<details class="yrs-more"><summary>Show {len(_rest)} older year{"" if len(_rest) == 1 else "s"}</summary>' + ''.join(_row(y) for y in _rest) + '</details>' if _rest else '') + '</div>')
-    _pt = '; 2023 and newer are partial and don&#39;t count toward the winner' if len(full) < len(shared) else ''
+    _pt = ('; 2023 and newer are partial' + ('' if use_ls else ' and don&#39;t count toward the winner')) if len(full) < len(shared) else ''
     ybys = (cb_h2('your-years', 'Year by year', cb_info(f'Lemon Index per model year, newest first: owner complaints per car sold, 100 = the average car, lower is better. '
                                                         f'Green = the car with fewer complaints that year{_pt}. Tap a year for its report.', 'How to read this'))
             + f'{pick}{yrs}')
@@ -321,7 +334,9 @@ def cmp_page(a, b):
 
     # ---- 8. our pick
     nf = full[-min(5, len(full)):]
-    pk = [('Overall', (f'Too close to call' if close else f'{E(L["name"])}'), (f'Lemon Index {ca["li"]} vs {cb["li"]}' if close else f'{fewer}% fewer complaints per car sold'))]
+    _lsLT = (lsA, lsB) if aL else (lsB, lsA)
+    pk = [('Overall', (f'Too close to call' if close else f'{E(L["name"])}'), (f'Lemon Score {_lsLT[0]} vs {_lsLT[1]} out of 100' if use_ls else
+           f'Lemon Index {ca["li"]} vs {cb["li"]}' if close else f'{fewer}% fewer complaints per car sold'))]
     if len(nf) >= 3:
         ma, mb = round(sum(ya[y]['li'] for y in nf) / len(nf)), round(sum(yb[y]['li'] for y in nf) / len(nf))
         if abs(ma - mb) <= max(ma, mb) * .08: pk.append((f'Buying {nf[0]}–{nf[-1]}', 'Too close to call', f'average Lemon Index {ma} vs {mb}: compare the exact year'))
@@ -350,8 +365,12 @@ def cmp_page(a, b):
     # pages' compact style), and the boxes that compare one number show it as two side-by-side Lemon bars under big car-name headers.
     # 11-23 Job C (answer box): a second plain sentence from the same numbers (model years won head to head, each car's best year)
     _v2 = (f' Head to head, the {E(sL)} drew fewer complaints in {lw} of {len(full)} model years ({span})' + (f'; best years: {lb_["y"]} {E(sL)}, {tb_["y"]} {E(sT)}.' if lb_ and tb_ else '.')) if len(full) >= 3 and lw > tw else ''
-    verdict = (f'<p class="cb-vline">Too close to call: about the same complaints per car sold (Lemon Index {ca["li"]} vs {cb["li"]}).</p>' if close else
-               f'<p class="cb-vline">The <b>{E(sL)}</b> drew <b>{fewer}% fewer</b> owner complaints per car sold.{_v2}</p>')
+    if use_ls:
+        verdict = (f'<p class="cb-vline">Too close to call: about the same Lemon Score ({lsA} vs {lsB} out of 100).</p>' if close else
+                   f'<p class="cb-vline">The <b>{E(sL)}</b> is the better buy: a Lemon Score of <b>{_lsLT[0]}</b> vs {_lsLT[1]} out of 100.{_v2}</p>')
+    else:
+        verdict = (f'<p class="cb-vline">Too close to call: about the same complaints per car sold (Lemon Index {ca["li"]} vs {cb["li"]}).</p>' if close else
+                   f'<p class="cb-vline">The <b>{E(sL)}</b> drew <b>{fewer}% fewer</b> owner complaints per car sold.{_v2}</p>')
     hero2 = (f'<section class="cb-hero cb-hero2{" cb-tie" if close else ""}"><div class="cb-cars" style="--ar:1000 / {_cbh}">{car(A, ca)}<span class="cb-vs">VS</span>{car(B, cb)}</div>'
              f'{verdict}<div class="cb-hf"><span class="cb-sh">{share_btn(sh_txt)}</span></div></section>')
     def duo(lab, va, vb, lower=True, fmt=str, w=None, extra=('', '')):
@@ -369,7 +388,8 @@ def cmp_page(a, b):
     _ytA, _ytB = YTR.get(A['id']), YTR.get(B['id'])
     yt_duo = (duo('YouTube owner tone rank', _ytA[0], _ytB[0], True, lambda v: f'#{v}',
                   ((1 - (_ytA[0] - 1) / max(_ytA[1], 1)) * 100, (1 - (_ytB[0] - 1) / max(_ytB[1], 1)) * 100)) if _ytA and _ytB else '')
-    li_duo = duo('Lemon Index (100 = average)', ca['li'], cb['li'], True, str, (min(100, ca['li'] / 2), min(100, cb['li'] / 2)))
+    li_duo = (duo('Lemon Score (out of 100, higher is better)', lsA, lsB, False, str, (lsA, lsB)) if use_ls
+              else duo('Complaint Score (100 = average)', ca['li'], cb['li'], True, str, (min(100, ca['li'] / 2), min(100, cb['li'] / 2))))
     _most = lambda r: (f'<p class="cb-dx">Most for: ' + ', '.join(f'<b>{E(x)}</b> ({n})' for x, n in r[1]) + '</p>') if r[1] else ''
     rec_duo = duo(f'recall campaigns, {rspan} models', ra[0], rb[0], True, extra=(_most(ra), _most(rb)))
     _rec_top = re.search(r'<div class="cb-sha">(.*?)</div></div>', rec, re.S)
@@ -396,7 +416,8 @@ def cmp_page(a, b):
              + box('info', 'Where this data comes from', 'Sources and how to read it', f'<div class="cb-src2">{src_}<p class="cb-crd2">{crd}</p></div>')
              + '</div>')
     page(CMPU(a, b), title,
-         f'{QN(A)} vs {QN(B)} reliability: ' + (f'about the same owner complaints per car sold (Lemon Index {ca["li"]} vs {cb["li"]}).' if close else
+         f'{QN(A)} vs {QN(B)} reliability: ' + ((f'about the same Lemon Score ({lsA} vs {lsB} out of 100).' if close else f'the {_lead_s} scores higher on the Lemon Score ({_lsLT[0]} vs {_lsLT[1]} out of 100).') if use_ls else
+         f'about the same owner complaints per car sold (Lemon Index {ca["li"]} vs {cb["li"]}).' if close else
          f'the {_lead_s} drew {fewer}% fewer owner complaints per car sold than the {_trail_s} (Lemon Index {cL["li"]} vs {cT["li"]}).')
          + f' Every model year both were sold, {shared[0]}–{shared[-1]}, plus recalls, crash tests and MPG.',
          f'<article class="study cmpp cb cb5"><p class="kicker"><a href="/">All cars</a> · Compare</p><h1>{E(_sa)} vs {E(_sb)}: which is more reliable?</h1>\n'

@@ -25,6 +25,7 @@ MIN_SOLD = 15000
 GROUPS = [('car', 'Cars (sedans, hatchbacks, coupes)'), ('suv', 'SUVs'), ('truck', 'Trucks'), ('minivan', 'Minivans')]
 TIERS = [('u5', 'Under $5,000', 0, 5000), ('5-10', '$5,000 to $10,000', 5000, 10000), ('10-20', '$10,000 to $20,000', 10000, 20000), ('20+', 'Over $20,000', 20000, 10 ** 9)]
 TOP = 5
+POOL = 25   # 11-26 v2: picks.json keeps each list's best 25 runs; budget_pages.py re-ranks them by the Lemon Score at build time and shows 5
 # 11-25 (Elijah: "add a under 2000 budget section ... make it private party only"): u2 = private seller only. At this price the middle of the
 # range rarely fits, so a run qualifies when the LOW end of its private range (typical miles) is $2,000 or less: one you can find for under $2K.
 U2 = ('u2', 'Under $2,000', 0, 2001)
@@ -93,7 +94,7 @@ def regular():
                     if a in best and b in best:
                         keep, drop = (a, b) if best[a]['score'] >= best[b]['score'] else (b, a)
                         best[keep]['twin'] = NAME[drop]; del best[drop]
-                out[f'{g}|{kn}|{tk}'] = sorted(best.values(), key=lambda c: -c['score'])[:TOP]
+                out[f'{g}|{kn}|{tk}'] = sorted(best.values(), key=lambda c: -c['score'])[:POOL]
     return out
 
 
@@ -149,7 +150,7 @@ if __name__ == '__main__':
         md += [f'## {gl}', '']
         for kn in ('private', 'dealer'):
             for tk, tl, *_ in TIERS:
-                cs = L[f'{g}|{kn}|{tk}']
+                cs = L[f'{g}|{kn}|{tk}'][:TOP]
                 md += [f'**{tl} ({kn} price)**', '', '| # | Pick | Generation | Lemon Index | YouTube | Private | Dealer | Typical miles |', '|---|---|---|---|---|---|---|---|']
                 md += [f"| {i} | {yrs(c)} {c['name']}{' (same as ' + c['twin'] + ')' if c.get('twin') else ''} | {c['gen']} | {c['li']} | {c['yt'] if c['yt'] is not None else '–'}{'*' if c['yt_src'] == 'model' else ''} | {money(c['p'])} | {money(c['d'])} | {mis(c)} |"
                        for i, c in enumerate(cs, 1)] or ['| – | none fit | | | | | | |']
@@ -164,7 +165,7 @@ if __name__ == '__main__':
             md += ['']
     md += ['## Performance cars', '', 'Not ranked yet: only 30 of 183 have prices and 2 have YouTube scores (their pulls are queued last). Needs a price run for the other 153.', '',
            '\\* YouTube score of the whole model (no videos scored for those exact years).', '']
-    ug = {(c['id'], c.get('gen') or f"{c['y0']}") for cs in L.values() for c in cs}
+    ug = {(c['id'], c.get('gen') or f"{c['y0']}") for cs in L.values() for c in cs[:TOP]}
     md.insert(4, f'**{len(ug)} distinct generations across all lists** = the checklist build list.\n')
     open(OUTMD, 'w', encoding='utf-8').write('\n'.join(md))
     print(len(L), 'lists;', len(ug), 'distinct generations ->', OUTMD)

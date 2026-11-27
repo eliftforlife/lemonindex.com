@@ -440,7 +440,7 @@ elif UXC == 'compare':
 <section><h2>Popular match-ups.</h2><div class="mus">{pf_cards}{ev_cards}{eco_cards}</div>
 <div class="cpl cmp-l"><details class="yd"><summary><svg class="cpl-i" width="24" height="24" aria-hidden="true" focusable="false"><use href="/assets/ic.svg?v=1#stopwatch"></use></svg><span><b>{len(PERF_PAIRS)} performance match-ups</b></span>{_CPL_AR}</summary><ul class="cmp">{pl}</ul></details>
 <details class="yd"><summary><svg class="cpl-i" width="24" height="24" aria-hidden="true" focusable="false"><use href="/assets/ic.svg?v=1#scale"></use></svg><span><b>All {len(_cp)} everyday-car match-ups</b></span>{_CPL_AR}</summary><ul class="cmp">{cl}</ul></details></div></section>
-{share_line("Compare up to 4 cars side by side: problems, recalls, mpg, EV range and specs. Free:", 'Know someone stuck between cars?')}</div><script src="/assets/compare.js?v=1119c5" defer></script>''',
+{share_line("Compare up to 4 cars side by side: problems, recalls, mpg, EV range and specs. Free:", 'Know someone stuck between cars?')}</div><script src="/assets/compare.js?v=1126ls" defer></script>''',
          ld=[{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Car comparisons", "url": BASE + '/compare/'}])
     curls.insert(0, '/compare/')
 

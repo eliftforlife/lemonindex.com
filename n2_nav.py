@@ -162,11 +162,12 @@ _N2SEG = {'car': ('cars', 'car'), 'suv': ('suvs', 'SUV'), 'truck': ('trucks', 't
 def N2_RANK(f):
     c = BYNAME.get(f['name'])
     if not c or c.get('new') or c['seg'] not in _N2SEG: return ''
-    L = sorted([d for d in CARS if d['seg'] == c['seg'] and d['sold'] >= 150000], key=lambda d: d['li'])[:15]
+    L = (ls_ranked([d for d in CARS if d['seg'] == c['seg'] and d['sold'] >= 150000])[0] if 'ls_ranked' in globals()   # 11-26 v2: the /best/ lists rank by the Lemon Score
+         else sorted([d for d in CARS if d['seg'] == c['seg'] and d['sold'] >= 150000], key=lambda d: d['li']))[:15]
     i = next((k for k, d in enumerate(L, 1) if d['id'] == c['id']), None)
     if not i: return ''
     slug, nm = _N2SEG[c['seg']]
-    return (f'<p class="n2-rk"><a href="/best/most-reliable-{slug}/" aria-label="Number {i} on our list of the most reliable {nm}s">#{i} most reliable {nm}'
+    return (f'<p class="n2-rk"><a href="/best/most-reliable-{slug}/" aria-label="Number {i} on our list of the best {nm}s to buy">#{i} best {nm} to buy'
             f' <span aria-hidden="true">›</span></a></p>')
 
 # ---- phones (problem 8): All years and Compare as two visible pills under the hero (the More menu keeps Share and Advanced); wide screens

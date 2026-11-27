@@ -47,10 +47,12 @@ def _bmc(c):
     p = aph(c['id']); href = car_href(c['id'])   # 11-12: /cars/ page, else the EV page, else no link (was a 404 for the Porsche Cayenne)
     tag = f'a class="mc" href="{href}"' if href else 'div class="mc"'
     w = f'<small class="mc-k">{YRS(c)} score</small>' if c['id'] in EVBY else ''   # 11-12 (Priya): an EV's main score, labelled with its window (its EV page uses another)
-    return (f'<{tag} title="Lemon Index, model years {YRS(c)}"><span class="mc-p">{pimg(p, c["name"]) if p else ""}</span><b>{E(c["name"].split(" ", 1)[1] if " " in c["name"] else c["name"])}</b>{w}'
-            f'<span class="{"good" if c["li"] < 100 else "bad"}">{c["li"]}</span></{tag.split()[0]}>')
+    s = LS(c['id']) if 'LS' in globals() else None   # 11-26 v2: the Lemon Score in the corner (as on the home grid); the Complaint Score where a model has none
+    sc = (f'<span class="ls-c {ls_band(s)[0]}">{s}</span>' if s else f'<span class="{"good" if c["li"] < 100 else "bad"}">{c["li"]}</span>')
+    return (f'<{tag} title="' + (f'Lemon Score {s} out of 100 (higher is better)' if s else f'Complaint Score, model years {YRS(c)}') + f'"><span class="mc-p">{pimg(p, c["name"]) if p else ""}</span><b>{E(c["name"].split(" ", 1)[1] if " " in c["name"] else c["name"])}</b>{w}'
+            f'{sc}</{tag.split()[0]}>')
 def _bdata(b):
-    ms = sorted([c for c in CARS + CARS_NEW if c['brand'] == b], key=lambda c: c['li'])
+    ms = sorted([c for c in CARS + CARS_NEW if c['brand'] == b], key=lambda c: (-(LS(c['id']) or 0), c['li']) if 'LS' in globals() else c['li'])   # 11-26 v2: best Lemon Score first
     nd = [m for m in _nd.get(b, []) if not _eff_dup(m)]
     co = sorted([m for m in nd if m['slug'] in _EXN], key=lambda m: m['name']); soon = sorted(m['name'] for m in nd if m['slug'] not in _EXN)
     xs = sorted(_xb.get(b, []), key=lambda x: ({'p': 0, 'e': 1, 's': 2}.get((re.search(r'data-t="(\w)', x[1]) or [0, 'z'])[1], 3), x[0]))
@@ -81,7 +83,7 @@ def _brand_lists(b, ms, co, soon, live, later, moto, study_ids):
             note = f'<p class="yc-cap">Each score covers that model&#39;s own model years. {E(b)} wasn&#39;t one of the 22 brands in our 2010–2022 study, so it has no brand score.</p>'
         if any(c['id'] in EVBY for c in ms):
             note += f'<p class="yc-cap">The <a href="/electric/">EV ranking</a> scores model years {EV_WIN} with complaints filed by the end of the next year, so an EV&#39;s number there differs.</p>'
-        out += (f'<section><h2>Every {E(b)}, ranked. <span class="h2s">Lower is better. 100 is the average car.</span></h2>'
+        out += (f'<section><h2>Every {E(b)}, ranked. <span class="h2s">By the Lemon Score, out of 100: higher is better.</span></h2>'
                 f'<div class="mbs"><div class="mb"><div class="mg">{"".join(_bmc(c) for c in ms)}</div></div></div>{note}</section>')
     if co:
         out += (f'<section><h2>{"More " if ms else ""}{E(b)} models with owner complaints. <span class="h2s">No score: we don&#39;t have their U.S. sales by year, so each page shows the complaints and recalls.</span></h2>'
@@ -98,12 +100,13 @@ def _brand_lists(b, ms, co, soon, live, later, moto, study_ids):
                 + '</section>')   # 11-18 (low-value review fix): no "Coming soon" / "No data yet" name lists
     return out
 def _best_tiles(b, ms):
-    if len(ms) < 2: return ''
-    best, worst = ms[0], ms[-1]
+    sc = [c for c in ms if 'LS' in globals() and LS(c['id'])]   # 11-26 v2: the brand's best and lowest Lemon Score (the list above is in that order)
+    if len(sc) < 2: return ''
+    best, worst = sc[0], sc[-1]
     return (f'<section class="tiles">'
-        + ''.join(f'<a class="tile" href="/cars/{c["id"]}/"><div class="tt"><p class="te">{lab}</p><h2>{E(c["name"].split(" ", 1)[-1])}.</h2><p class="ts">{E(plain(c["li"]))}.</p>'
-                  f'<span class="tl">See every year <i>›</i></span></div><div class="tp">{pimg(aph(c["id"]), c["name"])}<span class="tsc {"good" if c["li"] < 100 else "bad"}">{c["li"]}</span></div></a>'
-                  for lab, c in ((f'Most reliable {E(b)}', best), (f'Least reliable {E(b)}', worst)) if c['id'] in FY) + '</section>')
+        + ''.join(f'<a class="tile" href="/cars/{c["id"]}/"><div class="tt"><p class="te">{lab}</p><h2>{E(c["name"].split(" ", 1)[-1])}.</h2><p class="ts">{ls_band(LS(c["id"]))[1]}.</p>'
+                  f'<span class="tl">See every year <i>›</i></span></div><div class="tp">{pimg(aph(c["id"]), c["name"])}<span class="tsc {ls_band(LS(c["id"]))[0]}">{LS(c["id"])}</span></div></a>'
+                  for lab, c in ((f'Best {E(b)} to buy', best), (f'Lowest-scoring {E(b)}', worst)) if c['id'] in FY) + '</section>')
 _STUDY = {c['id'] for c in CARS}
 for b, (rk, li) in brank.items():
     ms, co, soon, live, later, moto = _bdata(b)
@@ -111,12 +114,13 @@ for b, (rk, li) in brank.items():
     if not study: continue
     top = max(study, key=lambda c: c['sold']); ph = aph(top['id'])   # 11-10 (Elijah: 'update brands car images'): AI illustrations first, Commons only where none
     cls, word = _verdict(li); est = b in ('Tesla', 'Porsche')
-    best, worst = ms[0], ms[-1]
+    best, worst = ms[0], ms[-1]   # the list's order: best Lemon Score first
+    rbest, rworst = min(study, key=lambda c: c['li']), max(study, key=lambda c: c['li'])   # fewest / most complaints (the brand score is complaint-based)
     # 11-19 (Elijah, BMW brand page on desktop: "isn't it supposed to have a BMW in the center, then the text below it, and then the new bar thing?"):
     # the model pages' v2 top (model_hero.py): centered name and line, the photo, then the Good / Average / Bad bar with the score
     _bimg = YSL.model_hero_html(top['id'], top['name']) if ph and ph.get('ai') else pimg(ph, top["name"]) + pcredit(who(ph))
     body = f'''<div class="pg mp6 bn4 bn5"><section class="ph bn5-h">{MH_CSS}<p class="ph-e"><a href="/brands/">Brands</a> · #{rk} of {len(brank)} brands with enough data</p><h1>{E(b)}.</h1>
-<p class="ph-s">Every {E(b)} model, ranked by owner complaints per car sold.</p>
+<p class="ph-s">Every {E(b)} model, ranked by the Lemon Score.</p>
 <div class="ph-v bn5-v">{_bimg}</div>
 <div class="mh-score">{_mh_gauge(li, cls if cls != 'mid' else '', f'{b} Lemon Index {li}; 100 is the average car')}</div>
 <p class="bn5-vd {cls}"><b>{word}.</b> {E(b)} models in our 2010–2022 study{"" if plain(li).lower() in word.lower() else ": " + E(plain(li))}.<br>
@@ -125,9 +129,9 @@ for b, (rk, li) in brank.items():
 {_brand_lists(b, ms, co, soon, live, later, moto, _STUDY)}
 {_best_tiles(b, ms)}
 <p class="yc-cap" style="text-align:center">{"* Small sample or estimated sales. " if est else ""}{WHAT_LI} <a href="/method/">How it works</a> · <a href="/brands/">Every brand</a>{pcredit([x for c in ms for x in who(aph(c["id"]))]).replace('<p class="ph-cr">', ' ').replace('</p>', '')}</p>
-{share_line(f'Is {b} reliable? Every {b} model ranked by owner complaints. Best: {best["name"]}. Worst: {worst["name"]}. Free:' if worst is not best else f'Is {b} reliable? Every {b} model ranked by owner complaints. Free:', f'Know someone looking at a {E(b)}?')}</div>'''
-    page(f'/brands/{BSLUG(b)}/', f'Is {b} Reliable? Every {b} Model Ranked by Owner Complaints | The Lemon Index',
-         f'{b} ranks #{rk} of {len(brank)} brands by NHTSA owner complaints per car sold (Lemon Index {li}; 100 is average). Most reliable {b}: {best["name"]}. Least: {worst["name"]}.',
+{share_line(f'Is {b} reliable? Every {b} model ranked by the Lemon Score. Best: {best["name"]}. Free:', f'Know someone looking at a {E(b)}?')}</div>'''
+    page(f'/brands/{BSLUG(b)}/', f'Is {b} Reliable? Every {b} Model Ranked | The Lemon Index',
+         f'{b} ranks #{rk} of {len(brank)} brands by NHTSA owner complaints per car sold (Lemon Index {li}; 100 is average). Fewest complaints: {rbest["name"]}. Best {b} by the Lemon Score: {best["name"]}.',
          body, ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": f'{b} reliability', "url": BASE + f'/brands/{BSLUG(b)}/'}])
     burls.append(f'/brands/{BSLUG(b)}/')
     cards.append(f'<a class="mc bc" href="/brands/{BSLUG(b)}/"><span class="mc-p">{pimg(ph, top["name"]) if ph else ""}</span><b>{E(b)}</b><small>#{rk}</small>'
@@ -145,11 +149,12 @@ for b in _MAKES:
     thin = npg < 3 and len(ms) < 2   # 2+ scored models (Volvo: XC90, S60) is a real ranking
     best, worst = (ms[0], ms[-1]) if ms else (None, None)
     top = max(ms, key=lambda c: c['sold']) if ms else None; ph = aph(top['id']) if top else None
-    bw = (f'<p class="ybw">Best <a class="good" href="{car_href(best["id"]) or path}">{E(best["name"])}</a> {best["li"]}'
-          + (f' · Worst <a class="bad" href="{car_href(worst["id"]) or path}">{E(worst["name"])}</a> {worst["li"]}' if worst is not best else '') + '</p>') if ms else ''
+    _bs = lambda c: (LS(c['id']) if 'LS' in globals() else None) or c['li']
+    bw = (f'<p class="ybw">Best <a class="good" href="{car_href(best["id"]) or path}">{E(best["name"])}</a> {_bs(best)}'
+          + (f' · Worst <a class="bad" href="{car_href(worst["id"]) or path}">{E(worst["name"])}</a> {_bs(worst)}' if worst is not best else '') + '</p>') if ms else ''
     _k = [w for t, w in (('p', 'performance'), ('e', 'electric'), ('s', 'supercar')) if any(f'data-t="{t}' in h for h in live)] + (['motorcycle'] if moto else [])
     _k = _k or ['more']   # 11-23: a JDM-only card read "1  page"
-    parts = [f'{len(ms)} with a Lemon Index' if ms else '', f'{len(co)} with owner complaints' if co else '',
+    parts = [f'{len(ms)} with a score' if ms else '', f'{len(co)} with owner complaints' if co else '',
              f'{len(live) + len(moto)} {" and ".join(_k) if len(_k) < 3 else ", ".join(_k[:-1]) + " and " + _k[-1]} page{"s" * (len(live) + len(moto) != 1)}' if live or moto else '']
     parts = [p for p in parts if p]
     sub = (f'Every {E(bn)} model we track: ' + ', '.join(parts) + '.') if parts else f'No {E(bn)} model page with owner data yet.'
@@ -159,7 +164,7 @@ for b in _MAKES:
             + _brand_lists(bn, ms, co, soon, live, later, moto, _STUDY) + _best_tiles(bn, ms)
             + f'<p class="yc-cap" style="text-align:center">{WHAT_LI} <a href="/method/">How it works</a> · <a href="/brands/">Every brand</a></p>'
             + (share_line(f'Is {bn} reliable? Every {bn} model we track, by owner complaints. Free:', f'Know someone looking at a {E(bn)}?') if ms or co else '') + '</div>')
-    desc = (f'Every {bn} model on the Lemon Index: ' + ', '.join(parts) + '.' + (f' Most reliable by NHTSA owner complaints per car sold: {best["name"]} ({best["li"]}; 100 is average).' if ms and len(ms) > 1 else '')) if parts else f'The {bn} models the Lemon Index tracks.'
+    desc = (f'Every {bn} model on the Lemon Index: ' + ', '.join(parts) + '.' + (f' Fewest NHTSA owner complaints per car sold: {min(ms, key=lambda c: c["li"])["name"]} (Complaint Score {min(c["li"] for c in ms)}; 100 is average).' if ms and len(ms) > 1 else '')) if parts else f'The {bn} models the Lemon Index tracks.'
     page(path, f'Is {bn} Reliable? Every {bn} Model by Owner Complaints | The Lemon Index', desc, body,
          ld=[{"@context": "https://schema.org", "@type": "WebPage", "name": f'{bn} reliability', "url": BASE + path}])
     if thin:   # the site's thin-page rule (advanced_pages.py, engine_pages.py): noindex,follow and out of the sitemap

@@ -121,6 +121,486 @@
      180000,
      180000
     ]
+   },
+   {
+    "id": "toyota-camry",
+    "name": "Toyota Camry",
+    "y0": 2000,
+    "y1": 2001,
+    "gen": "4th generation (XV20)",
+    "li": 41,
+    "yt": 46,
+    "yt_src": "years",
+    "sold": 811473,
+    "score": 52.7,
+    "p": [
+     1750,
+     3500
+    ],
+    "d": [
+     2250,
+     4250
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "dodge-neon",
+    "name": "Dodge Neon",
+    "y0": 2004,
+    "y1": 2005,
+    "gen": "2nd generation",
+    "li": 42,
+    "yt": 46,
+    "yt_src": "years",
+    "sold": 244047,
+    "score": 52.0,
+    "p": [
+     1600,
+     2900
+    ],
+    "d": [
+     2000,
+     3600
+    ],
+    "mi": [
+     170000,
+     175000
+    ]
+   },
+   {
+    "id": "hyundai-sonata",
+    "name": "Hyundai Sonata",
+    "y0": 2003,
+    "y1": 2005,
+    "gen": "4th generation",
+    "li": 49,
+    "yt": 48,
+    "yt_src": "years",
+    "sold": 319884,
+    "score": 51.6,
+    "p": [
+     1750,
+     3500
+    ],
+    "d": [
+     2250,
+     4250
+    ],
+    "mi": [
+     182000,
+     194000
+    ]
+   },
+   {
+    "id": "saturn-sl",
+    "name": "Saturn SL",
+    "y0": 2000,
+    "y1": 2002,
+    "gen": "2nd generation",
+    "li": 52,
+    "yt": 49,
+    "yt_src": "years",
+    "sold": 456998,
+    "score": 51.3,
+    "p": [
+     1400,
+     2100
+    ],
+    "d": [
+     1700,
+     2600
+    ],
+    "mi": [
+     195000,
+     200000
+    ]
+   },
+   {
+    "id": "hyundai-accent",
+    "name": "Hyundai Accent",
+    "y0": 2003,
+    "y1": 2003,
+    "gen": "2nd generation",
+    "li": 46,
+    "yt": 49,
+    "yt_src": "years",
+    "sold": 56585,
+    "score": 50.7,
+    "p": [
+     1500,
+     2500
+    ],
+    "d": [
+     1750,
+     3250
+    ],
+    "mi": [
+     185000,
+     185000
+    ]
+   },
+   {
+    "id": "nissan-sentra",
+    "name": "Nissan Sentra",
+    "y0": 2003,
+    "y1": 2006,
+    "gen": "5th generation (B15)",
+    "li": 48,
+    "yt": 44,
+    "yt_src": "years",
+    "sold": 438845,
+    "score": 50.0,
+    "p": [
+     1750,
+     3250
+    ],
+    "d": [
+     2250,
+     4000
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "mercedes-benz-e-class",
+    "name": "Mercedes-Benz E-Class",
+    "y0": 2001,
+    "y1": 2001,
+    "gen": "2nd generation (W210)",
+    "li": 42,
+    "yt": 46,
+    "yt_src": "years",
+    "sold": 44445,
+    "score": 49.7,
+    "p": [
+     2000,
+     2750
+    ],
+    "d": [
+     2500,
+     3500
+    ],
+    "mi": [
+     190000,
+     190000
+    ]
+   },
+   {
+    "id": "dodge-stratus",
+    "name": "Dodge Stratus",
+    "y0": 2006,
+    "y1": 2006,
+    "gen": "2nd generation",
+    "li": 42,
+    "yt": 45,
+    "yt_src": "years",
+    "sold": 102317,
+    "score": 48.5,
+    "p": [
+     1900,
+     3000
+    ],
+    "d": [
+     2300,
+     3700
+    ],
+    "mi": [
+     165000,
+     165000
+    ]
+   },
+   {
+    "id": "hyundai-elantra",
+    "name": "Hyundai Elantra",
+    "y0": 2005,
+    "y1": 2006,
+    "gen": "3rd generation",
+    "li": 56,
+    "yt": 50,
+    "yt_src": "years",
+    "sold": 215189,
+    "score": 47.5,
+    "p": [
+     1750,
+     3000
+    ],
+    "d": [
+     2250,
+     3750
+    ],
+    "mi": [
+     175000,
+     180000
+    ]
+   },
+   {
+    "id": "ford-focus",
+    "name": "Ford Focus",
+    "y0": 2006,
+    "y1": 2006,
+    "gen": "1st generation",
+    "li": 53,
+    "yt": 49,
+    "yt_src": "years",
+    "sold": 177006,
+    "score": 46.5,
+    "p": [
+     2000,
+     3000
+    ],
+    "d": [
+     2500,
+     3750
+    ],
+    "mi": [
+     195000,
+     195000
+    ]
+   },
+   {
+    "id": "mazda6",
+    "name": "Mazda6",
+    "y0": 2004,
+    "y1": 2006,
+    "gen": "1st generation",
+    "li": 57,
+    "yt": 47,
+    "yt_src": "years",
+    "sold": 209798,
+    "score": 45.1,
+    "p": [
+     1750,
+     2750
+    ],
+    "d": [
+     2250,
+     3500
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "ford-taurus",
+    "name": "Ford Taurus",
+    "y0": 2001,
+    "y1": 2006,
+    "gen": "4th generation",
+    "li": 59,
+    "yt": 44,
+    "yt_src": "years",
+    "sold": 1606616,
+    "score": 43.1,
+    "p": [
+     1500,
+     3000
+    ],
+    "d": [
+     2000,
+     3750
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "mazda-protege",
+    "name": "Mazda Protege",
+    "y0": 2000,
+    "y1": 2003,
+    "gen": "1st generation",
+    "li": 65,
+    "yt": 47,
+    "yt_src": "years",
+    "sold": 300065,
+    "score": 42.6,
+    "p": [
+     1300,
+     2200
+    ],
+    "d": [
+     1600,
+     2700
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "mitsubishi-galant",
+    "name": "Mitsubishi Galant",
+    "y0": 2000,
+    "y1": 2003,
+    "gen": "8th generation",
+    "li": 67,
+    "yt": 46,
+    "yt_src": "years",
+    "sold": 352814,
+    "score": 41.1,
+    "p": [
+     1400,
+     2100
+    ],
+    "d": [
+     1700,
+     2600
+    ],
+    "mi": [
+     180000,
+     195000
+    ]
+   },
+   {
+    "id": "kia-optima",
+    "name": "Kia Optima",
+    "y0": 2004,
+    "y1": 2005,
+    "gen": "1st generation",
+    "li": 64,
+    "yt": 48,
+    "yt_src": "years",
+    "sold": 94841,
+    "score": 40.2,
+    "p": [
+     1500,
+     2000
+    ],
+    "d": [
+     1750,
+     2250
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "mazda3",
+    "name": "Mazda3",
+    "y0": 2004,
+    "y1": 2005,
+    "gen": "1st generation",
+    "li": 63,
+    "yt": 47,
+    "yt_src": "years",
+    "sold": 175549,
+    "score": 40.2,
+    "p": [
+     1750,
+     2750
+    ],
+    "d": [
+     2250,
+     3500
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "honda-accord",
+    "name": "Honda Accord",
+    "y0": 2000,
+    "y1": 2001,
+    "gen": "6th generation",
+    "li": 60,
+    "yt": 44,
+    "yt_src": "years",
+    "sold": 819233,
+    "score": 38.9,
+    "p": [
+     2000,
+     3500
+    ],
+    "d": [
+     2500,
+     4250
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "chevrolet-cavalier",
+    "name": "Chevrolet Cavalier",
+    "y0": 2000,
+    "y1": 2004,
+    "gen": "3rd generation",
+    "li": 63,
+    "yt": 42,
+    "yt_src": "years",
+    "sold": 1160151,
+    "score": 37.8,
+    "p": [
+     1200,
+     2200
+    ],
+    "d": [
+     1500,
+     2700
+    ],
+    "mi": [
+     170000,
+     190000
+    ]
+   },
+   {
+    "id": "nissan-maxima",
+    "name": "Nissan Maxima",
+    "y0": 2000,
+    "y1": 2003,
+    "gen": "5th generation",
+    "li": 74,
+    "yt": 46,
+    "yt_src": "years",
+    "sold": 417030,
+    "score": 36.7,
+    "p": [
+     1500,
+     3250
+    ],
+    "d": [
+     1750,
+     4000
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "dodge-caliber",
+    "name": "Dodge Caliber",
+    "y0": 2008,
+    "y1": 2008,
+    "gen": "1st generation",
+    "li": 75,
+    "yt": 52,
+    "yt_src": "years",
+    "sold": 84158,
+    "score": 36.7,
+    "p": [
+     2000,
+     2750
+    ],
+    "d": [
+     2500,
+     3500
+    ],
+    "mi": [
+     176000,
+     176000
+    ]
    }
   ],
   "car|private|u5": [
@@ -242,6 +722,486 @@
     "mi": [
      142000,
      148000
+    ]
+   },
+   {
+    "id": "kia-rio",
+    "name": "Kia Rio",
+    "y0": 2010,
+    "y1": 2011,
+    "gen": "2nd generation",
+    "li": 36,
+    "yt": 48,
+    "yt_src": "years",
+    "sold": 44730,
+    "score": 58.1,
+    "p": [
+     2250,
+     3000
+    ],
+    "d": [
+     2750,
+     3750
+    ],
+    "mi": [
+     165000,
+     175000
+    ]
+   },
+   {
+    "id": "ford-focus",
+    "name": "Ford Focus",
+    "y0": 2008,
+    "y1": 2011,
+    "gen": "2nd generation",
+    "li": 43,
+    "yt": 48,
+    "yt_src": "years",
+    "sold": 704394,
+    "score": 57.6,
+    "p": [
+     2500,
+     4250
+    ],
+    "d": [
+     3000,
+     5250
+    ],
+    "mi": [
+     150000,
+     180000
+    ]
+   },
+   {
+    "id": "toyota-yaris",
+    "name": "Toyota Yaris",
+    "y0": 2007,
+    "y1": 2010,
+    "gen": "1st generation",
+    "li": 54,
+    "yt": 52,
+    "yt_src": "years",
+    "sold": 361254,
+    "score": 55.1,
+    "p": [
+     2750,
+     4500
+    ],
+    "d": [
+     3500,
+     5500
+    ],
+    "mi": [
+     192000,
+     200000
+    ]
+   },
+   {
+    "id": "honda-civic",
+    "name": "Honda Civic",
+    "y0": 2000,
+    "y1": 2000,
+    "gen": "6th generation",
+    "li": 39,
+    "yt": 49,
+    "yt_src": "years",
+    "sold": 324528,
+    "score": 54.9,
+    "p": [
+     2000,
+     3500
+    ],
+    "d": [
+     2500,
+     4250
+    ],
+    "mi": [
+     195000,
+     195000
+    ]
+   },
+   {
+    "id": "nissan-sentra",
+    "name": "Nissan Sentra",
+    "y0": 2010,
+    "y1": 2012,
+    "gen": "6th generation (B16)",
+    "li": 42,
+    "yt": 47,
+    "yt_src": "years",
+    "sold": 315451,
+    "score": 54.9,
+    "p": [
+     2500,
+     4250
+    ],
+    "d": [
+     3000,
+     5250
+    ],
+    "mi": [
+     168000,
+     192000
+    ]
+   },
+   {
+    "id": "hyundai-sonata",
+    "name": "Hyundai Sonata",
+    "y0": 2010,
+    "y1": 2010,
+    "gen": "5th generation",
+    "li": 37,
+    "yt": 48,
+    "yt_src": "years",
+    "sold": 196623,
+    "score": 54.9,
+    "p": [
+     3500,
+     5000
+    ],
+    "d": [
+     4250,
+     6250
+    ],
+    "mi": [
+     155000,
+     155000
+    ]
+   },
+   {
+    "id": "buick-century",
+    "name": "Buick Century",
+    "y0": 2000,
+    "y1": 2003,
+    "gen": "6th generation",
+    "li": 45,
+    "yt": 47,
+    "yt_src": "years",
+    "sold": 543260,
+    "score": 54.7,
+    "p": [
+     1500,
+     2200
+    ],
+    "d": [
+     1900,
+     2700
+    ],
+    "mi": [
+     160000,
+     160000
+    ]
+   },
+   {
+    "id": "nissan-altima",
+    "name": "Nissan Altima",
+    "y0": 2004,
+    "y1": 2004,
+    "gen": "3rd generation",
+    "li": 36,
+    "yt": 47,
+    "yt_src": "years",
+    "sold": 235889,
+    "score": 54.4,
+    "p": [
+     2000,
+     2750
+    ],
+    "d": [
+     2500,
+     3500
+    ],
+    "mi": [
+     190000,
+     190000
+    ]
+   },
+   {
+    "id": "honda-accord",
+    "name": "Honda Accord",
+    "y0": 2004,
+    "y1": 2007,
+    "gen": "7th generation",
+    "li": 48,
+    "yt": 47,
+    "yt_src": "years",
+    "sold": 1502735,
+    "score": 53.5,
+    "p": [
+     3000,
+     5500
+    ],
+    "d": [
+     3750,
+     6750
+    ],
+    "mi": [
+     194000,
+     200000
+    ]
+   },
+   {
+    "id": "mercedes-benz-c-class",
+    "name": "Mercedes-Benz C-Class",
+    "y0": 2008,
+    "y1": 2009,
+    "gen": "3rd generation (W204)",
+    "li": 42,
+    "yt": 48,
+    "yt_src": "years",
+    "sold": 124898,
+    "score": 53.3,
+    "p": [
+     4000,
+     5500
+    ],
+    "d": [
+     5000,
+     7000
+    ],
+    "mi": [
+     138000,
+     145000
+    ]
+   },
+   {
+    "id": "lincoln-mkz",
+    "name": "Lincoln MKZ",
+    "y0": 2010,
+    "y1": 2011,
+    "gen": "1st generation",
+    "li": 48,
+    "yt": 50,
+    "yt_src": "years",
+    "sold": 50064,
+    "score": 53.0,
+    "p": [
+     3500,
+     5500
+    ],
+    "d": [
+     4500,
+     7000
+    ],
+    "mi": [
+     165000,
+     176000
+    ]
+   },
+   {
+    "id": "ford-fusion",
+    "name": "Ford Fusion",
+    "y0": 2006,
+    "y1": 2009,
+    "gen": "1st generation",
+    "li": 43,
+    "yt": 44,
+    "yt_src": "years",
+    "sold": 637277,
+    "score": 52.8,
+    "p": [
+     2250,
+     4000
+    ],
+    "d": [
+     2750,
+     5000
+    ],
+    "mi": [
+     172000,
+     200000
+    ]
+   },
+   {
+    "id": "toyota-camry",
+    "name": "Toyota Camry",
+    "y0": 2000,
+    "y1": 2001,
+    "gen": "4th generation (XV20)",
+    "li": 41,
+    "yt": 46,
+    "yt_src": "years",
+    "sold": 811473,
+    "score": 52.7,
+    "p": [
+     1750,
+     3500
+    ],
+    "d": [
+     2250,
+     4250
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "dodge-neon",
+    "name": "Dodge Neon",
+    "y0": 2004,
+    "y1": 2005,
+    "gen": "2nd generation",
+    "li": 42,
+    "yt": 46,
+    "yt_src": "years",
+    "sold": 244047,
+    "score": 52.0,
+    "p": [
+     1600,
+     2900
+    ],
+    "d": [
+     2000,
+     3600
+    ],
+    "mi": [
+     170000,
+     175000
+    ]
+   },
+   {
+    "id": "nissan-maxima",
+    "name": "Nissan Maxima",
+    "y0": 2007,
+    "y1": 2008,
+    "gen": "6th generation",
+    "li": 41,
+    "yt": 46,
+    "yt_src": "years",
+    "sold": 99646,
+    "score": 51.8,
+    "p": [
+     2750,
+     4500
+    ],
+    "d": [
+     3500,
+     5500
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "mazda6",
+    "name": "Mazda6",
+    "y0": 2009,
+    "y1": 2012,
+    "gen": "2nd generation",
+    "li": 55,
+    "yt": 49,
+    "yt_src": "years",
+    "sold": 139995,
+    "score": 51.6,
+    "p": [
+     3000,
+     5250
+    ],
+    "d": [
+     3750,
+     6500
+    ],
+    "mi": [
+     168000,
+     200000
+    ]
+   },
+   {
+    "id": "saturn-sl",
+    "name": "Saturn SL",
+    "y0": 2000,
+    "y1": 2002,
+    "gen": "2nd generation",
+    "li": 52,
+    "yt": 49,
+    "yt_src": "years",
+    "sold": 456998,
+    "score": 51.3,
+    "p": [
+     1400,
+     2100
+    ],
+    "d": [
+     1700,
+     2600
+    ],
+    "mi": [
+     195000,
+     200000
+    ]
+   },
+   {
+    "id": "buick-lesabre",
+    "name": "Buick LeSabre",
+    "y0": 2001,
+    "y1": 2005,
+    "gen": "9th generation",
+    "li": 52,
+    "yt": 47,
+    "yt_src": "years",
+    "sold": 587631,
+    "score": 51.1,
+    "p": [
+     1900,
+     4300
+    ],
+    "d": [
+     2300,
+     5300
+    ],
+    "mi": [
+     140000,
+     160000
+    ]
+   },
+   {
+    "id": "mercedes-benz-e-class",
+    "name": "Mercedes-Benz E-Class",
+    "y0": 2001,
+    "y1": 2001,
+    "gen": "2nd generation (W210)",
+    "li": 42,
+    "yt": 46,
+    "yt_src": "years",
+    "sold": 44445,
+    "score": 49.7,
+    "p": [
+     2000,
+     2750
+    ],
+    "d": [
+     2500,
+     3500
+    ],
+    "mi": [
+     190000,
+     190000
+    ]
+   },
+   {
+    "id": "dodge-stratus",
+    "name": "Dodge Stratus",
+    "y0": 2006,
+    "y1": 2006,
+    "gen": "2nd generation",
+    "li": 42,
+    "yt": 45,
+    "yt_src": "years",
+    "sold": 102317,
+    "score": 48.5,
+    "p": [
+     1900,
+     3000
+    ],
+    "d": [
+     2300,
+     3700
+    ],
+    "mi": [
+     165000,
+     165000
     ]
    }
   ],
@@ -365,6 +1325,486 @@
      105000,
      125000
     ]
+   },
+   {
+    "id": "ford-fiesta",
+    "name": "Ford Fiesta",
+    "y0": 2017,
+    "y1": 2019,
+    "gen": "6th generation",
+    "li": 39,
+    "yt": 56,
+    "yt_src": "years",
+    "sold": 161481,
+    "score": 67.5,
+    "p": [
+     5000,
+     7750
+    ],
+    "d": [
+     6250,
+     9750
+    ],
+    "mi": [
+     84000,
+     108000
+    ]
+   },
+   {
+    "id": "subaru-legacy",
+    "name": "Subaru Legacy",
+    "y0": 2012,
+    "y1": 2014,
+    "gen": "5th generation",
+    "li": 35,
+    "yt": 54,
+    "yt_src": "years",
+    "sold": 141688,
+    "score": 66.4,
+    "p": [
+     4500,
+     8000
+    ],
+    "d": [
+     5500,
+     10000
+    ],
+    "mi": [
+     144000,
+     168000
+    ]
+   },
+   {
+    "id": "mercedes-benz-c-class",
+    "name": "Mercedes-Benz C-Class",
+    "y0": 2010,
+    "y1": 2014,
+    "gen": "3rd generation (W204)",
+    "li": 29,
+    "yt": 48,
+    "yt_src": "years",
+    "sold": 373112,
+    "score": 65.9,
+    "p": [
+     4500,
+     10000
+    ],
+    "d": [
+     5750,
+     12250
+    ],
+    "mi": [
+     95000,
+     130000
+    ]
+   },
+   {
+    "id": "toyota-yaris",
+    "name": "Toyota Yaris",
+    "y0": 2012,
+    "y1": 2013,
+    "gen": "2nd generation",
+    "li": 23,
+    "yt": 48,
+    "yt_src": "years",
+    "sold": 51932,
+    "score": 65.9,
+    "p": [
+     4500,
+     6250
+    ],
+    "d": [
+     5500,
+     7750
+    ],
+    "mi": [
+     156000,
+     168000
+    ]
+   },
+   {
+    "id": "nissan-versa",
+    "name": "Nissan Versa",
+    "y0": 2016,
+    "y1": 2019,
+    "gen": "2nd generation",
+    "li": 34,
+    "yt": 50,
+    "yt_src": "years",
+    "sold": 381391,
+    "score": 65.4,
+    "p": [
+     4500,
+     8500
+    ],
+    "d": [
+     5500,
+     10500
+    ],
+    "mi": [
+     84000,
+     120000
+    ]
+   },
+   {
+    "id": "acura-tsx",
+    "name": "Acura TSX",
+    "y0": 2012,
+    "y1": 2012,
+    "gen": "2nd generation",
+    "li": 17,
+    "yt": 46,
+    "yt_src": "years",
+    "sold": 52356,
+    "score": 64.7,
+    "p": [
+     7250,
+     9750
+    ],
+    "d": [
+     9000,
+     11750
+    ],
+    "mi": [
+     168000,
+     168000
+    ]
+   },
+   {
+    "id": "hyundai-elantra",
+    "name": "Hyundai Elantra",
+    "y0": 2014,
+    "y1": 2016,
+    "gen": "5th generation",
+    "li": 34,
+    "yt": 51,
+    "yt_src": "years",
+    "sold": 672048,
+    "score": 64.5,
+    "p": [
+     5000,
+     8250
+    ],
+    "d": [
+     6250,
+     10000
+    ],
+    "mi": [
+     100000,
+     120000
+    ]
+   },
+   {
+    "id": "ford-crown-victoria",
+    "name": "Ford Crown Victoria",
+    "y0": 2011,
+    "y1": 2011,
+    "gen": "2nd generation",
+    "li": 21,
+    "yt": 48,
+    "yt_src": "years",
+    "sold": 51154,
+    "score": 64.5,
+    "p": [
+     4750,
+     6750
+    ],
+    "d": [
+     5750,
+     8250
+    ],
+    "mi": [
+     150000,
+     150000
+    ]
+   },
+   {
+    "id": "mini-cooper",
+    "name": "Mini Cooper",
+    "y0": 2012,
+    "y1": 2013,
+    "gen": "2nd generation (R56)",
+    "li": 24,
+    "yt": 48,
+    "yt_src": "years",
+    "sold": 90288,
+    "score": 63.9,
+    "p": [
+     4500,
+     6750
+    ],
+    "d": [
+     5500,
+     8250
+    ],
+    "mi": [
+     108000,
+     116000
+    ]
+   },
+   {
+    "id": "chevrolet-spark",
+    "name": "Chevrolet Spark",
+    "y0": 2016,
+    "y1": 2021,
+    "gen": "4th generation",
+    "li": 44,
+    "yt": 54,
+    "yt_src": "years",
+    "sold": 170920,
+    "score": 63.6,
+    "p": [
+     4750,
+     10500
+    ],
+    "d": [
+     5750,
+     12500
+    ],
+    "mi": [
+     58000,
+     112000
+    ]
+   },
+   {
+    "id": "honda-civic",
+    "name": "Honda Civic",
+    "y0": 2012,
+    "y1": 2014,
+    "gen": "9th generation",
+    "li": 40,
+    "yt": 53,
+    "yt_src": "years",
+    "sold": 980070,
+    "score": 63.2,
+    "p": [
+     6500,
+     10500
+    ],
+    "d": [
+     8000,
+     12500
+    ],
+    "mi": [
+     110000,
+     125000
+    ]
+   },
+   {
+    "id": "ford-fusion",
+    "name": "Ford Fusion",
+    "y0": 2018,
+    "y1": 2018,
+    "gen": "2nd generation",
+    "li": 37,
+    "yt": 54,
+    "yt_src": "years",
+    "sold": 173600,
+    "score": 61.8,
+    "p": [
+     8750,
+     11000
+    ],
+    "d": [
+     10750,
+     13250
+    ],
+    "mi": [
+     86000,
+     86000
+    ]
+   },
+   {
+    "id": "lexus-is",
+    "name": "Lexus IS",
+    "y0": 2008,
+    "y1": 2012,
+    "gen": "2nd generation",
+    "li": 47,
+    "yt": 53,
+    "yt_src": "years",
+    "sold": 179015,
+    "score": 61.1,
+    "p": [
+     5000,
+     10000
+    ],
+    "d": [
+     6250,
+     12250
+    ],
+    "mi": [
+     154000,
+     198000
+    ]
+   },
+   {
+    "id": "ford-taurus",
+    "name": "Ford Taurus",
+    "y0": 2016,
+    "y1": 2017,
+    "gen": "6th generation",
+    "li": 39,
+    "yt": 52,
+    "yt_src": "years",
+    "sold": 67868,
+    "score": 60.6,
+    "p": [
+     7250,
+     10500
+    ],
+    "d": [
+     9000,
+     12750
+    ],
+    "mi": [
+     108000,
+     120000
+    ]
+   },
+   {
+    "id": "hyundai-veloster",
+    "name": "Hyundai Veloster",
+    "y0": 2014,
+    "y1": 2015,
+    "gen": "1st generation",
+    "li": 39,
+    "yt": 52,
+    "yt_src": "years",
+    "sold": 51843,
+    "score": 60.6,
+    "p": [
+     5000,
+     6750
+    ],
+    "d": [
+     6250,
+     8500
+    ],
+    "mi": [
+     120000,
+     130000
+    ]
+   },
+   {
+    "id": "acura-tl",
+    "name": "Acura TL",
+    "y0": 2012,
+    "y1": 2013,
+    "gen": "4th generation",
+    "li": 44,
+    "yt": 54,
+    "yt_src": "years",
+    "sold": 89127,
+    "score": 60.2,
+    "p": [
+     7500,
+     10750
+    ],
+    "d": [
+     9250,
+     13000
+    ],
+    "mi": [
+     156000,
+     168000
+    ]
+   },
+   {
+    "id": "bmw-3-series",
+    "name": "BMW 3 Series",
+    "y0": 2012,
+    "y1": 2015,
+    "gen": "6th generation (F30)",
+    "li": 43,
+    "yt": 50,
+    "yt_src": "years",
+    "sold": 501964,
+    "score": 59.9,
+    "p": [
+     6000,
+     10250
+    ],
+    "d": [
+     7750,
+     12750
+    ],
+    "mi": [
+     121000,
+     154000
+    ]
+   },
+   {
+    "id": "toyota-camry",
+    "name": "Toyota Camry",
+    "y0": 2012,
+    "y1": 2014,
+    "gen": "7th generation (XV50)",
+    "li": 47,
+    "yt": 53,
+    "yt_src": "years",
+    "sold": 1241975,
+    "score": 59.3,
+    "p": [
+     6500,
+     10250
+    ],
+    "d": [
+     7750,
+     12250
+    ],
+    "mi": [
+     124000,
+     140000
+    ]
+   },
+   {
+    "id": "chevrolet-cruze",
+    "name": "Chevrolet Cruze",
+    "y0": 2017,
+    "y1": 2019,
+    "gen": "2nd generation",
+    "li": 43,
+    "yt": 51,
+    "yt_src": "years",
+    "sold": 376127,
+    "score": 59.0,
+    "p": [
+     6000,
+     9750
+    ],
+    "d": [
+     7500,
+     11750
+    ],
+    "mi": [
+     65000,
+     83000
+    ]
+   },
+   {
+    "id": "honda-fit",
+    "name": "Honda Fit",
+    "y0": 2010,
+    "y1": 2012,
+    "gen": "2nd generation (GE8)",
+    "li": 44,
+    "yt": 51,
+    "yt_src": "years",
+    "sold": 162935,
+    "score": 58.3,
+    "p": [
+     4250,
+     7250
+    ],
+    "d": [
+     5250,
+     9000
+    ],
+    "mi": [
+     168000,
+     192000
+    ]
    }
   ],
   "car|private|10-20": [
@@ -486,6 +1926,486 @@
     "mi": [
      77000,
      110000
+    ]
+   },
+   {
+    "id": "mazda6",
+    "name": "Mazda6",
+    "y0": 2017,
+    "y1": 2019,
+    "gen": "3rd generation",
+    "li": 33,
+    "yt": 57,
+    "yt_src": "years",
+    "sold": 85864,
+    "score": 72.2,
+    "p": [
+     9000,
+     14750
+    ],
+    "d": [
+     11000,
+     17250
+    ],
+    "mi": [
+     84000,
+     108000
+    ]
+   },
+   {
+    "id": "kia-forte",
+    "name": "Kia Forte",
+    "y0": 2020,
+    "y1": 2022,
+    "gen": "3rd generation",
+    "li": 34,
+    "yt": 57,
+    "yt_src": "years",
+    "sold": 309350,
+    "score": 71.3,
+    "p": [
+     9750,
+     14500
+    ],
+    "d": [
+     11750,
+     17000
+    ],
+    "mi": [
+     52000,
+     76000
+    ]
+   },
+   {
+    "id": "mini-cooper",
+    "name": "Mini Cooper",
+    "y0": 2021,
+    "y1": 2022,
+    "gen": "3rd generation (F56)",
+    "li": 30,
+    "yt": 56,
+    "yt_src": "years",
+    "sold": 42982,
+    "score": 71.1,
+    "p": [
+     14000,
+     19500
+    ],
+    "d": [
+     16250,
+     22250
+    ],
+    "mi": [
+     37000,
+     45000
+    ]
+   },
+   {
+    "id": "toyota-camry",
+    "name": "Toyota Camry",
+    "y0": 2015,
+    "y1": 2017,
+    "gen": "7th generation (XV50)",
+    "li": 26,
+    "yt": 53,
+    "yt_src": "years",
+    "sold": 1205052,
+    "score": 70.6,
+    "p": [
+     9750,
+     14750
+    ],
+    "d": [
+     11750,
+     17250
+    ],
+    "mi": [
+     97000,
+     115000
+    ]
+   },
+   {
+    "id": "chevrolet-camaro",
+    "name": "Chevrolet Camaro",
+    "y0": 2018,
+    "y1": 2020,
+    "gen": "6th generation",
+    "li": 43,
+    "yt": 61,
+    "yt_src": "years",
+    "sold": 129003,
+    "score": 70.1,
+    "p": [
+     15750,
+     21500
+    ],
+    "d": [
+     18250,
+     24500
+    ],
+    "mi": [
+     48000,
+     62000
+    ]
+   },
+   {
+    "id": "toyota-corolla",
+    "name": "Toyota Corolla",
+    "y0": 2020,
+    "y1": 2022,
+    "gen": "12th generation (E210)",
+    "li": 41,
+    "yt": 59,
+    "yt_src": "years",
+    "sold": 708387,
+    "score": 69.7,
+    "p": [
+     13500,
+     18250
+    ],
+    "d": [
+     15750,
+     20750
+    ],
+    "mi": [
+     45000,
+     65000
+    ]
+   },
+   {
+    "id": "nissan-altima",
+    "name": "Nissan Altima",
+    "y0": 2019,
+    "y1": 2022,
+    "gen": "6th generation",
+    "li": 39,
+    "yt": 56,
+    "yt_src": "years",
+    "sold": 590903,
+    "score": 68.5,
+    "p": [
+     9000,
+     16000
+    ],
+    "d": [
+     11000,
+     18750
+    ],
+    "mi": [
+     48000,
+     84000
+    ]
+   },
+   {
+    "id": "honda-civic",
+    "name": "Honda Civic",
+    "y0": 2017,
+    "y1": 2021,
+    "gen": "10th generation",
+    "li": 42,
+    "yt": 56,
+    "yt_src": "years",
+    "sold": 1553688,
+    "score": 67.4,
+    "p": [
+     12000,
+     18500
+    ],
+    "d": [
+     14250,
+     21250
+    ],
+    "mi": [
+     50000,
+     88000
+    ]
+   },
+   {
+    "id": "lexus-is",
+    "name": "Lexus IS",
+    "y0": 2014,
+    "y1": 2015,
+    "gen": "3rd generation",
+    "li": 36,
+    "yt": 56,
+    "yt_src": "years",
+    "sold": 97788,
+    "score": 67.2,
+    "p": [
+     11250,
+     15250
+    ],
+    "d": [
+     13750,
+     18000
+    ],
+    "mi": [
+     121000,
+     132000
+    ]
+   },
+   {
+    "id": "mazda3",
+    "name": "Mazda3",
+    "y0": 2018,
+    "y1": 2018,
+    "gen": "3rd generation",
+    "li": 36,
+    "yt": 58,
+    "yt_src": "years",
+    "sold": 64638,
+    "score": 67.0,
+    "p": [
+     10250,
+     12500
+    ],
+    "d": [
+     12250,
+     14750
+    ],
+    "mi": [
+     96000,
+     96000
+    ]
+   },
+   {
+    "id": "kia-rio",
+    "name": "Kia Rio",
+    "y0": 2021,
+    "y1": 2022,
+    "gen": "4th generation",
+    "li": 36,
+    "yt": 56,
+    "yt_src": "years",
+    "sold": 58358,
+    "score": 66.9,
+    "p": [
+     9250,
+     12500
+    ],
+    "d": [
+     11250,
+     14750
+    ],
+    "mi": [
+     50000,
+     62000
+    ]
+   },
+   {
+    "id": "honda-fit",
+    "name": "Honda Fit",
+    "y0": 2020,
+    "y1": 2020,
+    "gen": "3rd generation (GK5)",
+    "li": 31,
+    "yt": 53,
+    "yt_src": "years",
+    "sold": 41183,
+    "score": 64.3,
+    "p": [
+     12500,
+     15250
+    ],
+    "d": [
+     14750,
+     16750
+    ],
+    "mi": [
+     72000,
+     72000
+    ]
+   },
+   {
+    "id": "toyota-avalon",
+    "name": "Toyota Avalon",
+    "y0": 2015,
+    "y1": 2018,
+    "gen": "4th generation",
+    "li": 40,
+    "yt": 52,
+    "yt_src": "years",
+    "sold": 174306,
+    "score": 63.7,
+    "p": [
+     9750,
+     16750
+    ],
+    "d": [
+     12000,
+     19500
+    ],
+    "mi": [
+     82000,
+     106000
+    ]
+   },
+   {
+    "id": "nissan-maxima",
+    "name": "Nissan Maxima",
+    "y0": 2017,
+    "y1": 2019,
+    "gen": "8th generation",
+    "li": 46,
+    "yt": 56,
+    "yt_src": "years",
+    "sold": 145040,
+    "score": 62.5,
+    "p": [
+     9000,
+     15000
+    ],
+    "d": [
+     11000,
+     17500
+    ],
+    "mi": [
+     84000,
+     108000
+    ]
+   },
+   {
+    "id": "toyota-prius",
+    "name": "Toyota Prius",
+    "y0": 2016,
+    "y1": 2022,
+    "gen": "4th generation",
+    "li": 46,
+    "yt": 53,
+    "yt_src": "years",
+    "sold": 461000,
+    "score": 61.8,
+    "p": [
+     10500,
+     21000
+    ],
+    "d": [
+     12500,
+     24000
+    ],
+    "mi": [
+     52000,
+     112000
+    ]
+   },
+   {
+    "id": "dodge-charger",
+    "name": "Dodge Charger",
+    "y0": 2015,
+    "y1": 2021,
+    "gen": "7th generation (LD)",
+    "li": 55,
+    "yt": 58,
+    "yt_src": "years",
+    "sold": 611488,
+    "score": 61.4,
+    "p": [
+     9500,
+     21250
+    ],
+    "d": [
+     11500,
+     24250
+    ],
+    "mi": [
+     60000,
+     127000
+    ]
+   },
+   {
+    "id": "volkswagen-passat",
+    "name": "Volkswagen Passat",
+    "y0": 2020,
+    "y1": 2021,
+    "gen": "8th generation",
+    "li": 42,
+    "yt": 54,
+    "yt_src": "years",
+    "sold": 47360,
+    "score": 60.6,
+    "p": [
+     12500,
+     16750
+    ],
+    "d": [
+     14750,
+     19500
+    ],
+    "mi": [
+     60000,
+     72000
+    ]
+   },
+   {
+    "id": "hyundai-sonata",
+    "name": "Hyundai Sonata",
+    "y0": 2019,
+    "y1": 2019,
+    "gen": "7th generation",
+    "li": 44,
+    "yt": 56,
+    "yt_src": "years",
+    "sold": 87466,
+    "score": 59.9,
+    "p": [
+     10000,
+     12500
+    ],
+    "d": [
+     12000,
+     14750
+    ],
+    "mi": [
+     78000,
+     78000
+    ]
+   },
+   {
+    "id": "dodge-challenger",
+    "name": "Dodge Challenger",
+    "y0": 2015,
+    "y1": 2019,
+    "gen": "3rd generation",
+    "li": 59,
+    "yt": 59,
+    "yt_src": "years",
+    "sold": 323093,
+    "score": 59.8,
+    "p": [
+     12250,
+     20750
+    ],
+    "d": [
+     14750,
+     24000
+    ],
+    "mi": [
+     67000,
+     102000
+    ]
+   },
+   {
+    "id": "audi-a4",
+    "name": "Audi A4",
+    "y0": 2017,
+    "y1": 2019,
+    "gen": "5th generation (B9)",
+    "li": 52,
+    "yt": 56,
+    "yt_src": "years",
+    "sold": 98675,
+    "score": 59.1,
+    "p": [
+     10500,
+     17250
+    ],
+    "d": [
+     13000,
+     20250
+    ],
+    "mi": [
+     77000,
+     99000
     ]
    }
   ],
@@ -609,6 +2529,150 @@
      44000,
      66000
     ]
+   },
+   {
+    "id": "lexus-es",
+    "name": "Lexus ES",
+    "y0": 2019,
+    "y1": 2022,
+    "gen": "7th generation",
+    "li": 33,
+    "yt": 58,
+    "yt_src": "years",
+    "sold": 181769,
+    "score": 75.2,
+    "p": [
+     18750,
+     29250
+    ],
+    "d": [
+     21750,
+     33000
+    ],
+    "mi": [
+     44000,
+     77000
+    ]
+   },
+   {
+    "id": "chevrolet-corvette",
+    "name": "Chevrolet Corvette",
+    "y0": 2021,
+    "y1": 2022,
+    "gen": "8th generation (C8)",
+    "li": 32,
+    "yt": 58,
+    "yt_src": "years",
+    "sold": 70552,
+    "score": 70.5,
+    "p": [
+     46750,
+     56000
+    ],
+    "d": [
+     52500,
+     61000
+    ],
+    "mi": [
+     18000,
+     21000
+    ]
+   },
+   {
+    "id": "bmw-5-series",
+    "name": "BMW 5 Series",
+    "y0": 2020,
+    "y1": 2022,
+    "gen": "7th generation (G30)",
+    "li": 43,
+    "yt": 56,
+    "yt_src": "years",
+    "sold": 72255,
+    "score": 64.8,
+    "p": [
+     20000,
+     31500
+    ],
+    "d": [
+     23500,
+     35750
+    ],
+    "mi": [
+     40000,
+     60000
+    ]
+   },
+   {
+    "id": "mercedes-benz-e-class",
+    "name": "Mercedes-Benz E-Class",
+    "y0": 2019,
+    "y1": 2021,
+    "gen": "5th generation (W213)",
+    "li": 54,
+    "yt": 61,
+    "yt_src": "years",
+    "sold": 88162,
+    "score": 63.2,
+    "p": [
+     19750,
+     31250
+    ],
+    "d": [
+     23250,
+     35500
+    ],
+    "mi": [
+     52500,
+     73500
+    ]
+   },
+   {
+    "id": "ford-mustang",
+    "name": "Ford Mustang",
+    "y0": 2021,
+    "y1": 2022,
+    "gen": "6th generation (S550)",
+    "li": 55,
+    "yt": 61,
+    "yt_src": "years",
+    "sold": 99980,
+    "score": 60.9,
+    "p": [
+     19000,
+     24500
+    ],
+    "d": [
+     21750,
+     27750
+    ],
+    "mi": [
+     39000,
+     46000
+    ]
+   },
+   {
+    "id": "honda-accord",
+    "name": "Honda Accord",
+    "y0": 2022,
+    "y1": 2022,
+    "gen": "10th generation",
+    "li": 93,
+    "yt": 58,
+    "yt_src": "years",
+    "sold": 154612,
+    "score": 32.8,
+    "p": [
+     19500,
+     23000
+    ],
+    "d": [
+     22250,
+     26000
+    ],
+    "mi": [
+     40000,
+     40000
+    ]
    }
   ],
   "car|dealer|u5": [
@@ -730,6 +2794,486 @@
     "mi": [
      175000,
      192000
+    ]
+   },
+   {
+    "id": "toyota-yaris",
+    "name": "Toyota Yaris",
+    "y0": 2007,
+    "y1": 2010,
+    "gen": "1st generation",
+    "li": 54,
+    "yt": 52,
+    "yt_src": "years",
+    "sold": 361254,
+    "score": 55.1,
+    "p": [
+     2750,
+     4500
+    ],
+    "d": [
+     3500,
+     5500
+    ],
+    "mi": [
+     192000,
+     200000
+    ]
+   },
+   {
+    "id": "honda-civic",
+    "name": "Honda Civic",
+    "y0": 2000,
+    "y1": 2000,
+    "gen": "6th generation",
+    "li": 39,
+    "yt": 49,
+    "yt_src": "years",
+    "sold": 324528,
+    "score": 54.9,
+    "p": [
+     2000,
+     3500
+    ],
+    "d": [
+     2500,
+     4250
+    ],
+    "mi": [
+     195000,
+     195000
+    ]
+   },
+   {
+    "id": "nissan-sentra",
+    "name": "Nissan Sentra",
+    "y0": 2010,
+    "y1": 2012,
+    "gen": "6th generation (B16)",
+    "li": 42,
+    "yt": 47,
+    "yt_src": "years",
+    "sold": 315451,
+    "score": 54.9,
+    "p": [
+     2500,
+     4250
+    ],
+    "d": [
+     3000,
+     5250
+    ],
+    "mi": [
+     168000,
+     192000
+    ]
+   },
+   {
+    "id": "buick-century",
+    "name": "Buick Century",
+    "y0": 2000,
+    "y1": 2003,
+    "gen": "6th generation",
+    "li": 45,
+    "yt": 47,
+    "yt_src": "years",
+    "sold": 543260,
+    "score": 54.7,
+    "p": [
+     1500,
+     2200
+    ],
+    "d": [
+     1900,
+     2700
+    ],
+    "mi": [
+     160000,
+     160000
+    ]
+   },
+   {
+    "id": "nissan-altima",
+    "name": "Nissan Altima",
+    "y0": 2004,
+    "y1": 2004,
+    "gen": "3rd generation",
+    "li": 36,
+    "yt": 47,
+    "yt_src": "years",
+    "sold": 235889,
+    "score": 54.4,
+    "p": [
+     2000,
+     2750
+    ],
+    "d": [
+     2500,
+     3500
+    ],
+    "mi": [
+     190000,
+     190000
+    ]
+   },
+   {
+    "id": "ford-fusion",
+    "name": "Ford Fusion",
+    "y0": 2006,
+    "y1": 2009,
+    "gen": "1st generation",
+    "li": 43,
+    "yt": 44,
+    "yt_src": "years",
+    "sold": 637277,
+    "score": 52.8,
+    "p": [
+     2250,
+     4000
+    ],
+    "d": [
+     2750,
+     5000
+    ],
+    "mi": [
+     172000,
+     200000
+    ]
+   },
+   {
+    "id": "toyota-camry",
+    "name": "Toyota Camry",
+    "y0": 2000,
+    "y1": 2001,
+    "gen": "4th generation (XV20)",
+    "li": 41,
+    "yt": 46,
+    "yt_src": "years",
+    "sold": 811473,
+    "score": 52.7,
+    "p": [
+     1750,
+     3500
+    ],
+    "d": [
+     2250,
+     4250
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "dodge-neon",
+    "name": "Dodge Neon",
+    "y0": 2004,
+    "y1": 2005,
+    "gen": "2nd generation",
+    "li": 42,
+    "yt": 46,
+    "yt_src": "years",
+    "sold": 244047,
+    "score": 52.0,
+    "p": [
+     1600,
+     2900
+    ],
+    "d": [
+     2000,
+     3600
+    ],
+    "mi": [
+     170000,
+     175000
+    ]
+   },
+   {
+    "id": "nissan-maxima",
+    "name": "Nissan Maxima",
+    "y0": 2007,
+    "y1": 2008,
+    "gen": "6th generation",
+    "li": 41,
+    "yt": 46,
+    "yt_src": "years",
+    "sold": 99646,
+    "score": 51.8,
+    "p": [
+     2750,
+     4500
+    ],
+    "d": [
+     3500,
+     5500
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "hyundai-sonata",
+    "name": "Hyundai Sonata",
+    "y0": 2003,
+    "y1": 2005,
+    "gen": "4th generation",
+    "li": 49,
+    "yt": 48,
+    "yt_src": "years",
+    "sold": 319884,
+    "score": 51.6,
+    "p": [
+     1750,
+     3500
+    ],
+    "d": [
+     2250,
+     4250
+    ],
+    "mi": [
+     182000,
+     194000
+    ]
+   },
+   {
+    "id": "saturn-sl",
+    "name": "Saturn SL",
+    "y0": 2000,
+    "y1": 2002,
+    "gen": "2nd generation",
+    "li": 52,
+    "yt": 49,
+    "yt_src": "years",
+    "sold": 456998,
+    "score": 51.3,
+    "p": [
+     1400,
+     2100
+    ],
+    "d": [
+     1700,
+     2600
+    ],
+    "mi": [
+     195000,
+     200000
+    ]
+   },
+   {
+    "id": "buick-lesabre",
+    "name": "Buick LeSabre",
+    "y0": 2001,
+    "y1": 2005,
+    "gen": "9th generation",
+    "li": 52,
+    "yt": 47,
+    "yt_src": "years",
+    "sold": 587631,
+    "score": 51.1,
+    "p": [
+     1900,
+     4300
+    ],
+    "d": [
+     2300,
+     5300
+    ],
+    "mi": [
+     140000,
+     160000
+    ]
+   },
+   {
+    "id": "hyundai-accent",
+    "name": "Hyundai Accent",
+    "y0": 2003,
+    "y1": 2003,
+    "gen": "2nd generation",
+    "li": 46,
+    "yt": 49,
+    "yt_src": "years",
+    "sold": 56585,
+    "score": 50.7,
+    "p": [
+     1500,
+     2500
+    ],
+    "d": [
+     1750,
+     3250
+    ],
+    "mi": [
+     185000,
+     185000
+    ]
+   },
+   {
+    "id": "mercedes-benz-e-class",
+    "name": "Mercedes-Benz E-Class",
+    "y0": 2001,
+    "y1": 2001,
+    "gen": "2nd generation (W210)",
+    "li": 42,
+    "yt": 46,
+    "yt_src": "years",
+    "sold": 44445,
+    "score": 49.7,
+    "p": [
+     2000,
+     2750
+    ],
+    "d": [
+     2500,
+     3500
+    ],
+    "mi": [
+     190000,
+     190000
+    ]
+   },
+   {
+    "id": "dodge-stratus",
+    "name": "Dodge Stratus",
+    "y0": 2006,
+    "y1": 2006,
+    "gen": "2nd generation",
+    "li": 42,
+    "yt": 45,
+    "yt_src": "years",
+    "sold": 102317,
+    "score": 48.5,
+    "p": [
+     1900,
+     3000
+    ],
+    "d": [
+     2300,
+     3700
+    ],
+    "mi": [
+     165000,
+     165000
+    ]
+   },
+   {
+    "id": "mazda6",
+    "name": "Mazda6",
+    "y0": 2004,
+    "y1": 2007,
+    "gen": "1st generation",
+    "li": 57,
+    "yt": 47,
+    "yt_src": "years",
+    "sold": 267373,
+    "score": 47.8,
+    "p": [
+     1750,
+     3000
+    ],
+    "d": [
+     2250,
+     3750
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "hyundai-elantra",
+    "name": "Hyundai Elantra",
+    "y0": 2005,
+    "y1": 2006,
+    "gen": "3rd generation",
+    "li": 56,
+    "yt": 50,
+    "yt_src": "years",
+    "sold": 215189,
+    "score": 47.5,
+    "p": [
+     1750,
+     3000
+    ],
+    "d": [
+     2250,
+     3750
+    ],
+    "mi": [
+     175000,
+     180000
+    ]
+   },
+   {
+    "id": "mercedes-benz-c-class",
+    "name": "Mercedes-Benz C-Class",
+    "y0": 2001,
+    "y1": 2003,
+    "gen": "2nd generation (W203)",
+    "li": 55,
+    "yt": 46,
+    "yt_src": "years",
+    "sold": 181217,
+    "score": 45.9,
+    "p": [
+     2000,
+     3250
+    ],
+    "d": [
+     2500,
+     4000
+    ],
+    "mi": [
+     170000,
+     180000
+    ]
+   },
+   {
+    "id": "subaru-impreza",
+    "name": "Subaru Impreza",
+    "y0": 2009,
+    "y1": 2011,
+    "gen": "3rd generation",
+    "li": 67,
+    "yt": 52,
+    "yt_src": "years",
+    "sold": 110074,
+    "score": 45.4,
+    "p": [
+     2500,
+     4750
+    ],
+    "d": [
+     3000,
+     6000
+    ],
+    "mi": [
+     180000,
+     200000
+    ]
+   },
+   {
+    "id": "honda-accord",
+    "name": "Honda Accord",
+    "y0": 2000,
+    "y1": 2002,
+    "gen": "6th generation",
+    "li": 55,
+    "yt": 45,
+    "yt_src": "years",
+    "sold": 1218213,
+    "score": 44.9,
+    "p": [
+     2000,
+     3750
+    ],
+    "d": [
+     2500,
+     4500
+    ],
+    "mi": [
+     200000,
+     200000
     ]
    }
   ],
@@ -853,6 +3397,486 @@
      100000,
      120000
     ]
+   },
+   {
+    "id": "hyundai-accent",
+    "name": "Hyundai Accent",
+    "y0": 2011,
+    "y1": 2011,
+    "gen": "3rd generation",
+    "li": 23,
+    "yt": 49,
+    "yt_src": "years",
+    "sold": 55601,
+    "score": 64.5,
+    "p": [
+     3250,
+     4750
+    ],
+    "d": [
+     4000,
+     6000
+    ],
+    "mi": [
+     142000,
+     142000
+    ]
+   },
+   {
+    "id": "ford-crown-victoria",
+    "name": "Ford Crown Victoria",
+    "y0": 2011,
+    "y1": 2011,
+    "gen": "2nd generation",
+    "li": 21,
+    "yt": 48,
+    "yt_src": "years",
+    "sold": 51154,
+    "score": 64.5,
+    "p": [
+     4750,
+     6750
+    ],
+    "d": [
+     5750,
+     8250
+    ],
+    "mi": [
+     150000,
+     150000
+    ]
+   },
+   {
+    "id": "mercedes-benz-c-class",
+    "name": "Mercedes-Benz C-Class",
+    "y0": 2008,
+    "y1": 2013,
+    "gen": "3rd generation (W204)",
+    "li": 30,
+    "yt": 48,
+    "yt_src": "years",
+    "sold": 422945,
+    "score": 64.4,
+    "p": [
+     4000,
+     8750
+    ],
+    "d": [
+     5000,
+     11000
+    ],
+    "mi": [
+     103000,
+     145000
+    ]
+   },
+   {
+    "id": "mercedes-benz-e-class",
+    "name": "Mercedes-Benz E-Class",
+    "y0": 2010,
+    "y1": 2010,
+    "gen": "4th generation (W212)",
+    "li": 28,
+    "yt": 51,
+    "yt_src": "years",
+    "sold": 60922,
+    "score": 63.8,
+    "p": [
+     6250,
+     7750
+    ],
+    "d": [
+     8250,
+     10000
+    ],
+    "mi": [
+     168000,
+     168000
+    ]
+   },
+   {
+    "id": "mazda3",
+    "name": "Mazda3",
+    "y0": 2014,
+    "y1": 2015,
+    "gen": "3rd generation",
+    "li": 47,
+    "yt": 56,
+    "yt_src": "years",
+    "sold": 212869,
+    "score": 60.6,
+    "p": [
+     6250,
+     8750
+    ],
+    "d": [
+     7750,
+     10750
+    ],
+    "mi": [
+     132000,
+     144000
+    ]
+   },
+   {
+    "id": "hyundai-veloster",
+    "name": "Hyundai Veloster",
+    "y0": 2014,
+    "y1": 2015,
+    "gen": "1st generation",
+    "li": 39,
+    "yt": 52,
+    "yt_src": "years",
+    "sold": 51843,
+    "score": 60.6,
+    "p": [
+     5000,
+     6750
+    ],
+    "d": [
+     6250,
+     8500
+    ],
+    "mi": [
+     120000,
+     130000
+    ]
+   },
+   {
+    "id": "mini-cooper",
+    "name": "Mini Cooper",
+    "y0": 2010,
+    "y1": 2013,
+    "gen": "2nd generation (R56)",
+    "li": 38,
+    "yt": 47,
+    "yt_src": "years",
+    "sold": 177446,
+    "score": 59.6,
+    "p": [
+     3500,
+     6750
+    ],
+    "d": [
+     4250,
+     8250
+    ],
+    "mi": [
+     108000,
+     132000
+    ]
+   },
+   {
+    "id": "kia-forte",
+    "name": "Kia Forte",
+    "y0": 2013,
+    "y1": 2013,
+    "gen": "1st generation",
+    "li": 34,
+    "yt": 50,
+    "yt_src": "years",
+    "sold": 66146,
+    "score": 59.0,
+    "p": [
+     3750,
+     4750
+    ],
+    "d": [
+     4750,
+     6000
+    ],
+    "mi": [
+     165000,
+     165000
+    ]
+   },
+   {
+    "id": "chevrolet-spark",
+    "name": "Chevrolet Spark",
+    "y0": 2016,
+    "y1": 2019,
+    "gen": "4th generation",
+    "li": 50,
+    "yt": 52,
+    "yt_src": "years",
+    "sold": 112983,
+    "score": 58.6,
+    "p": [
+     4750,
+     8500
+    ],
+    "d": [
+     5750,
+     10500
+    ],
+    "mi": [
+     82000,
+     112000
+    ]
+   },
+   {
+    "id": "honda-fit",
+    "name": "Honda Fit",
+    "y0": 2010,
+    "y1": 2012,
+    "gen": "2nd generation (GE8)",
+    "li": 44,
+    "yt": 51,
+    "yt_src": "years",
+    "sold": 162935,
+    "score": 58.3,
+    "p": [
+     4250,
+     7250
+    ],
+    "d": [
+     5250,
+     9000
+    ],
+    "mi": [
+     168000,
+     192000
+    ]
+   },
+   {
+    "id": "lexus-is",
+    "name": "Lexus IS",
+    "y0": 2008,
+    "y1": 2011,
+    "gen": "2nd generation",
+    "li": 52,
+    "yt": 53,
+    "yt_src": "years",
+    "sold": 151307,
+    "score": 57.5,
+    "p": [
+     5000,
+     9000
+    ],
+    "d": [
+     6250,
+     11250
+    ],
+    "mi": [
+     165000,
+     198000
+    ]
+   },
+   {
+    "id": "cadillac-cts",
+    "name": "Cadillac CTS",
+    "y0": 2010,
+    "y1": 2012,
+    "gen": "2nd generation",
+    "li": 45,
+    "yt": 51,
+    "yt_src": "years",
+    "sold": 147677,
+    "score": 57.4,
+    "p": [
+     5000,
+     8250
+    ],
+    "d": [
+     6250,
+     10500
+    ],
+    "mi": [
+     115000,
+     130000
+    ]
+   },
+   {
+    "id": "acura-tl",
+    "name": "Acura TL",
+    "y0": 2007,
+    "y1": 2007,
+    "gen": "3rd generation",
+    "li": 41,
+    "yt": 52,
+    "yt_src": "years",
+    "sold": 58545,
+    "score": 57.1,
+    "p": [
+     4500,
+     6750
+    ],
+    "d": [
+     5500,
+     8500
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "nissan-maxima",
+    "name": "Nissan Maxima",
+    "y0": 2010,
+    "y1": 2014,
+    "gen": "7th generation",
+    "li": 46,
+    "yt": 49,
+    "yt_src": "years",
+    "sold": 282952,
+    "score": 56.7,
+    "p": [
+     4250,
+     8000
+    ],
+    "d": [
+     5250,
+     9750
+    ],
+    "mi": [
+     144000,
+     192000
+    ]
+   },
+   {
+    "id": "kia-rio",
+    "name": "Kia Rio",
+    "y0": 2014,
+    "y1": 2016,
+    "gen": "3rd generation",
+    "li": 46,
+    "yt": 50,
+    "yt_src": "years",
+    "sold": 88375,
+    "score": 56.1,
+    "p": [
+     3750,
+     6000
+    ],
+    "d": [
+     4500,
+     7250
+    ],
+    "mi": [
+     115000,
+     135000
+    ]
+   },
+   {
+    "id": "mazda6",
+    "name": "Mazda6",
+    "y0": 2011,
+    "y1": 2012,
+    "gen": "2nd generation",
+    "li": 42,
+    "yt": 50,
+    "yt_src": "years",
+    "sold": 69467,
+    "score": 55.7,
+    "p": [
+     3750,
+     5250
+    ],
+    "d": [
+     4750,
+     6500
+    ],
+    "mi": [
+     168000,
+     180000
+    ]
+   },
+   {
+    "id": "nissan-altima",
+    "name": "Nissan Altima",
+    "y0": 2012,
+    "y1": 2012,
+    "gen": "4th generation",
+    "li": 34,
+    "yt": 47,
+    "yt_src": "years",
+    "sold": 302934,
+    "score": 55.6,
+    "p": [
+     3500,
+     4750
+    ],
+    "d": [
+     4500,
+     6000
+    ],
+    "mi": [
+     148000,
+     148000
+    ]
+   },
+   {
+    "id": "honda-accord",
+    "name": "Honda Accord",
+    "y0": 2006,
+    "y1": 2007,
+    "gen": "7th generation",
+    "li": 40,
+    "yt": 48,
+    "yt_src": "years",
+    "sold": 746672,
+    "score": 55.5,
+    "p": [
+     3500,
+     5500
+    ],
+    "d": [
+     4250,
+     6750
+    ],
+    "mi": [
+     194000,
+     200000
+    ]
+   },
+   {
+    "id": "nissan-sentra",
+    "name": "Nissan Sentra",
+    "y0": 2014,
+    "y1": 2018,
+    "gen": "7th generation (B17)",
+    "li": 46,
+    "yt": 48,
+    "yt_src": "years",
+    "sold": 1032983,
+    "score": 55.5,
+    "p": [
+     3750,
+     8500
+    ],
+    "d": [
+     4750,
+     10500
+    ],
+    "mi": [
+     92000,
+     140000
+    ]
+   },
+   {
+    "id": "chevrolet-cruze",
+    "name": "Chevrolet Cruze",
+    "y0": 2017,
+    "y1": 2018,
+    "gen": "2nd generation",
+    "li": 46,
+    "yt": 51,
+    "yt_src": "years",
+    "sold": 327368,
+    "score": 55.1,
+    "p": [
+     6000,
+     8750
+    ],
+    "d": [
+     7500,
+     10750
+    ],
+    "mi": [
+     74000,
+     83000
+    ]
    }
   ],
   "car|dealer|10-20": [
@@ -975,6 +3999,486 @@
      125000,
      125000
     ]
+   },
+   {
+    "id": "toyota-camry",
+    "name": "Toyota Camry",
+    "y0": 2013,
+    "y1": 2017,
+    "gen": "7th generation (XV50)",
+    "li": 31,
+    "yt": 53,
+    "yt_src": "years",
+    "sold": 2042142,
+    "score": 70.1,
+    "p": [
+     7000,
+     14750
+    ],
+    "d": [
+     8750,
+     17250
+    ],
+    "mi": [
+     97000,
+     132000
+    ]
+   },
+   {
+    "id": "honda-civic",
+    "name": "Honda Civic",
+    "y0": 2013,
+    "y1": 2015,
+    "gen": "9th generation",
+    "li": 32,
+    "yt": 55,
+    "yt_src": "years",
+    "sold": 997545,
+    "score": 69.9,
+    "p": [
+     7250,
+     11500
+    ],
+    "d": [
+     8750,
+     13500
+    ],
+    "mi": [
+     102000,
+     118000
+    ]
+   },
+   {
+    "id": "toyota-corolla",
+    "name": "Toyota Corolla",
+    "y0": 2020,
+    "y1": 2022,
+    "gen": "12th generation (E210)",
+    "li": 41,
+    "yt": 59,
+    "yt_src": "years",
+    "sold": 708387,
+    "score": 69.7,
+    "p": [
+     13500,
+     18250
+    ],
+    "d": [
+     15750,
+     20750
+    ],
+    "mi": [
+     45000,
+     65000
+    ]
+   },
+   {
+    "id": "chevrolet-spark",
+    "name": "Chevrolet Spark",
+    "y0": 2020,
+    "y1": 2021,
+    "gen": "4th generation",
+    "li": 32,
+    "yt": 56,
+    "yt_src": "years",
+    "sold": 57937,
+    "score": 69.4,
+    "p": [
+     7500,
+     10500
+    ],
+    "d": [
+     9250,
+     12500
+    ],
+    "mi": [
+     58000,
+     70000
+    ]
+   },
+   {
+    "id": "nissan-altima",
+    "name": "Nissan Altima",
+    "y0": 2019,
+    "y1": 2022,
+    "gen": "6th generation",
+    "li": 39,
+    "yt": 56,
+    "yt_src": "years",
+    "sold": 590903,
+    "score": 68.5,
+    "p": [
+     9000,
+     16000
+    ],
+    "d": [
+     11000,
+     18750
+    ],
+    "mi": [
+     48000,
+     84000
+    ]
+   },
+   {
+    "id": "chevrolet-cruze",
+    "name": "Chevrolet Cruze",
+    "y0": 2019,
+    "y1": 2019,
+    "gen": "2nd generation",
+    "li": 22,
+    "yt": 51,
+    "yt_src": "years",
+    "sold": 48759,
+    "score": 67.4,
+    "p": [
+     7500,
+     9750
+    ],
+    "d": [
+     9250,
+     11750
+    ],
+    "mi": [
+     65000,
+     65000
+    ]
+   },
+   {
+    "id": "lexus-is",
+    "name": "Lexus IS",
+    "y0": 2014,
+    "y1": 2015,
+    "gen": "3rd generation",
+    "li": 36,
+    "yt": 56,
+    "yt_src": "years",
+    "sold": 97788,
+    "score": 67.2,
+    "p": [
+     11250,
+     15250
+    ],
+    "d": [
+     13750,
+     18000
+    ],
+    "mi": [
+     121000,
+     132000
+    ]
+   },
+   {
+    "id": "mercedes-benz-e-class",
+    "name": "Mercedes-Benz E-Class",
+    "y0": 2011,
+    "y1": 2016,
+    "gen": "4th generation (W212)",
+    "li": 35,
+    "yt": 52,
+    "yt_src": "years",
+    "sold": 370894,
+    "score": 67.0,
+    "p": [
+     7000,
+     15250
+    ],
+    "d": [
+     9250,
+     18250
+    ],
+    "mi": [
+     105000,
+     157500
+    ]
+   },
+   {
+    "id": "bmw-3-series",
+    "name": "BMW 3 Series",
+    "y0": 2014,
+    "y1": 2018,
+    "gen": "6th generation (F30)",
+    "li": 32,
+    "yt": 50,
+    "yt_src": "years",
+    "sold": 564102,
+    "score": 66.5,
+    "p": [
+     7250,
+     15000
+    ],
+    "d": [
+     9250,
+     17750
+    ],
+    "mi": [
+     88000,
+     132000
+    ]
+   },
+   {
+    "id": "infiniti-q50",
+    "name": "Infiniti Q50",
+    "y0": 2015,
+    "y1": 2019,
+    "gen": "1st generation",
+    "li": 46,
+    "yt": 57,
+    "yt_src": "years",
+    "sold": 205903,
+    "score": 65.8,
+    "p": [
+     8000,
+     18000
+    ],
+    "d": [
+     10250,
+     21000
+    ],
+    "mi": [
+     77000,
+     120000
+    ]
+   },
+   {
+    "id": "kia-forte",
+    "name": "Kia Forte",
+    "y0": 2019,
+    "y1": 2022,
+    "gen": "3rd generation",
+    "li": 46,
+    "yt": 56,
+    "yt_src": "years",
+    "sold": 404959,
+    "score": 65.3,
+    "p": [
+     8750,
+     14500
+    ],
+    "d": [
+     10750,
+     17000
+    ],
+    "mi": [
+     52000,
+     88000
+    ]
+   },
+   {
+    "id": "acura-tsx",
+    "name": "Acura TSX",
+    "y0": 2012,
+    "y1": 2012,
+    "gen": "2nd generation",
+    "li": 17,
+    "yt": 46,
+    "yt_src": "years",
+    "sold": 52356,
+    "score": 64.7,
+    "p": [
+     7250,
+     9750
+    ],
+    "d": [
+     9000,
+     11750
+    ],
+    "mi": [
+     168000,
+     168000
+    ]
+   },
+   {
+    "id": "honda-fit",
+    "name": "Honda Fit",
+    "y0": 2020,
+    "y1": 2020,
+    "gen": "3rd generation (GK5)",
+    "li": 31,
+    "yt": 53,
+    "yt_src": "years",
+    "sold": 41183,
+    "score": 64.3,
+    "p": [
+     12500,
+     15250
+    ],
+    "d": [
+     14750,
+     16750
+    ],
+    "mi": [
+     72000,
+     72000
+    ]
+   },
+   {
+    "id": "toyota-avalon",
+    "name": "Toyota Avalon",
+    "y0": 2015,
+    "y1": 2018,
+    "gen": "4th generation",
+    "li": 40,
+    "yt": 52,
+    "yt_src": "years",
+    "sold": 174306,
+    "score": 63.7,
+    "p": [
+     9750,
+     16750
+    ],
+    "d": [
+     12000,
+     19500
+    ],
+    "mi": [
+     82000,
+     106000
+    ]
+   },
+   {
+    "id": "ford-taurus",
+    "name": "Ford Taurus",
+    "y0": 2016,
+    "y1": 2018,
+    "gen": "6th generation",
+    "li": 36,
+    "yt": 51,
+    "yt_src": "years",
+    "sold": 96574,
+    "score": 63.1,
+    "p": [
+     7250,
+     11750
+    ],
+    "d": [
+     9000,
+     14000
+    ],
+    "mi": [
+     96000,
+     120000
+    ]
+   },
+   {
+    "id": "mini-cooper",
+    "name": "Mini Cooper",
+    "y0": 2015,
+    "y1": 2017,
+    "gen": "3rd generation (F56)",
+    "li": 46,
+    "yt": 56,
+    "yt_src": "years",
+    "sold": 113391,
+    "score": 62.8,
+    "p": [
+     7750,
+     11500
+    ],
+    "d": [
+     9500,
+     13500
+    ],
+    "mi": [
+     76000,
+     92000
+    ]
+   },
+   {
+    "id": "mazda6",
+    "name": "Mazda6",
+    "y0": 2015,
+    "y1": 2019,
+    "gen": "3rd generation",
+    "li": 53,
+    "yt": 57,
+    "yt_src": "years",
+    "sold": 189282,
+    "score": 61.6,
+    "p": [
+     7250,
+     14750
+    ],
+    "d": [
+     9000,
+     17250
+    ],
+    "mi": [
+     84000,
+     132000
+    ]
+   },
+   {
+    "id": "nissan-maxima",
+    "name": "Nissan Maxima",
+    "y0": 2016,
+    "y1": 2019,
+    "gen": "8th generation",
+    "li": 50,
+    "yt": 55,
+    "yt_src": "years",
+    "sold": 248069,
+    "score": 61.5,
+    "p": [
+     8000,
+     15000
+    ],
+    "d": [
+     9750,
+     17500
+    ],
+    "mi": [
+     84000,
+     120000
+    ]
+   },
+   {
+    "id": "kia-rio",
+    "name": "Kia Rio",
+    "y0": 2019,
+    "y1": 2022,
+    "gen": "4th generation",
+    "li": 49,
+    "yt": 55,
+    "yt_src": "years",
+    "sold": 107246,
+    "score": 61.3,
+    "p": [
+     7500,
+     12500
+    ],
+    "d": [
+     9250,
+     14750
+    ],
+    "mi": [
+     50000,
+     85000
+    ]
+   },
+   {
+    "id": "volkswagen-passat",
+    "name": "Volkswagen Passat",
+    "y0": 2020,
+    "y1": 2021,
+    "gen": "8th generation",
+    "li": 42,
+    "yt": 54,
+    "yt_src": "years",
+    "sold": 47360,
+    "score": 60.6,
+    "p": [
+     12500,
+     16750
+    ],
+    "d": [
+     14750,
+     19500
+    ],
+    "mi": [
+     60000,
+     72000
+    ]
    }
   ],
   "car|dealer|20+": [
@@ -1096,6 +4600,174 @@
     "mi": [
      32000,
      62000
+    ]
+   },
+   {
+    "id": "toyota-prius",
+    "name": "Toyota Prius",
+    "y0": 2021,
+    "y1": 2022,
+    "gen": "4th generation",
+    "li": 19,
+    "yt": 55,
+    "yt_src": "years",
+    "sold": 95900,
+    "score": 75.5,
+    "p": [
+     16500,
+     21000
+    ],
+    "d": [
+     19000,
+     24000
+    ],
+    "mi": [
+     52000,
+     64000
+    ]
+   },
+   {
+    "id": "lexus-es",
+    "name": "Lexus ES",
+    "y0": 2019,
+    "y1": 2022,
+    "gen": "7th generation",
+    "li": 33,
+    "yt": 58,
+    "yt_src": "years",
+    "sold": 181769,
+    "score": 75.2,
+    "p": [
+     18750,
+     29250
+    ],
+    "d": [
+     21750,
+     33000
+    ],
+    "mi": [
+     44000,
+     77000
+    ]
+   },
+   {
+    "id": "chevrolet-corvette",
+    "name": "Chevrolet Corvette",
+    "y0": 2021,
+    "y1": 2022,
+    "gen": "8th generation (C8)",
+    "li": 32,
+    "yt": 58,
+    "yt_src": "years",
+    "sold": 70552,
+    "score": 70.5,
+    "p": [
+     46750,
+     56000
+    ],
+    "d": [
+     52500,
+     61000
+    ],
+    "mi": [
+     18000,
+     21000
+    ]
+   },
+   {
+    "id": "bmw-5-series",
+    "name": "BMW 5 Series",
+    "y0": 2018,
+    "y1": 2022,
+    "gen": "7th generation (G30)",
+    "li": 47,
+    "yt": 55,
+    "yt_src": "years",
+    "sold": 154901,
+    "score": 63.3,
+    "p": [
+     15500,
+     31500
+    ],
+    "d": [
+     18500,
+     35750
+    ],
+    "mi": [
+     40000,
+     80000
+    ]
+   },
+   {
+    "id": "ford-mustang",
+    "name": "Ford Mustang",
+    "y0": 2019,
+    "y1": 2022,
+    "gen": "6th generation (S550)",
+    "li": 65,
+    "yt": 61,
+    "yt_src": "years",
+    "sold": 233559,
+    "score": 58.9,
+    "p": [
+     16500,
+     24500
+    ],
+    "d": [
+     19000,
+     27750
+    ],
+    "mi": [
+     39000,
+     60000
+    ]
+   },
+   {
+    "id": "mercedes-benz-e-class",
+    "name": "Mercedes-Benz E-Class",
+    "y0": 2017,
+    "y1": 2021,
+    "gen": "5th generation (W213)",
+    "li": 64,
+    "yt": 60,
+    "yt_src": "years",
+    "sold": 185896,
+    "score": 58.2,
+    "p": [
+     16000,
+     31250
+    ],
+    "d": [
+     19000,
+     35500
+    ],
+    "mi": [
+     52500,
+     94500
+    ]
+   },
+   {
+    "id": "honda-accord",
+    "name": "Honda Accord",
+    "y0": 2020,
+    "y1": 2022,
+    "gen": "10th generation",
+    "li": 76,
+    "yt": 59,
+    "yt_src": "years",
+    "sold": 556746,
+    "score": 48.1,
+    "p": [
+     16750,
+     23000
+    ],
+    "d": [
+     19250,
+     26000
+    ],
+    "mi": [
+     40000,
+     64000
     ]
    }
   ],
@@ -1220,6 +4892,102 @@
      170000,
      170000
     ]
+   },
+   {
+    "id": "kia-sorento",
+    "name": "Kia Sorento",
+    "y0": 2004,
+    "y1": 2004,
+    "gen": "1st generation",
+    "li": 78,
+    "yt": 48,
+    "yt_src": "years",
+    "sold": 52878,
+    "score": 30.3,
+    "p": [
+     2000,
+     2500
+    ],
+    "d": [
+     2250,
+     3000
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "hyundai-tucson",
+    "name": "Hyundai Tucson",
+    "y0": 2006,
+    "y1": 2006,
+    "gen": "1st generation",
+    "li": 79,
+    "yt": 47,
+    "yt_src": "years",
+    "sold": 52067,
+    "score": 28.6,
+    "p": [
+     2000,
+     3250
+    ],
+    "d": [
+     2500,
+     4000
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "saturn-vue",
+    "name": "Saturn Vue",
+    "y0": 2002,
+    "y1": 2002,
+    "gen": "1st generation",
+    "li": 69,
+    "yt": 41,
+    "yt_src": "years",
+    "sold": 75871,
+    "score": 27.7,
+    "p": [
+     1700,
+     2300
+    ],
+    "d": [
+     2100,
+     2900
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "chevrolet-equinox",
+    "name": "Chevrolet Equinox",
+    "y0": 2006,
+    "y1": 2006,
+    "gen": "1st generation",
+    "li": 100,
+    "yt": 46,
+    "yt_src": "years",
+    "sold": 113888,
+    "score": 14.9,
+    "p": [
+     2000,
+     2750
+    ],
+    "d": [
+     2500,
+     3250
+    ],
+    "mi": [
+     196000,
+     196000
+    ]
    }
   ],
   "suv|private|u5": [
@@ -1342,6 +5110,487 @@
      166000,
      172000
     ]
+   },
+   {
+    "id": "kia-soul",
+    "name": "Kia Soul",
+    "y0": 2011,
+    "y1": 2013,
+    "gen": "1st generation",
+    "li": 48,
+    "yt": 50,
+    "yt_src": "years",
+    "sold": 336124,
+    "score": 54.1,
+    "p": [
+     3000,
+     4750
+    ],
+    "d": [
+     3750,
+     5750
+    ],
+    "mi": [
+     142000,
+     165000
+    ]
+   },
+   {
+    "id": "mazda-cx-7",
+    "name": "Mazda CX-7",
+    "y0": 2010,
+    "y1": 2011,
+    "gen": "1st generation",
+    "li": 48,
+    "yt": 50,
+    "yt_src": "years",
+    "sold": 64429,
+    "score": 52.6,
+    "p": [
+     3250,
+     5000
+    ],
+    "d": [
+     4000,
+     6250
+    ],
+    "mi": [
+     180000,
+     192000
+    ]
+   },
+   {
+    "id": "nissan-rogue",
+    "name": "Nissan Rogue",
+    "y0": 2008,
+    "y1": 2013,
+    "gen": "1st generation",
+    "li": 51,
+    "yt": 48,
+    "yt_src": "years",
+    "sold": 699241,
+    "score": 52.2,
+    "p": [
+     2250,
+     5000
+    ],
+    "d": [
+     2750,
+     6250
+    ],
+    "mi": [
+     156000,
+     200000
+    ]
+   },
+   {
+    "id": "hyundai-tucson",
+    "name": "Hyundai Tucson",
+    "y0": 2010,
+    "y1": 2011,
+    "gen": "2nd generation",
+    "li": 50,
+    "yt": 50,
+    "yt_src": "years",
+    "sold": 86826,
+    "score": 52.2,
+    "p": [
+     3500,
+     5500
+    ],
+    "d": [
+     4250,
+     6750
+    ],
+    "mi": [
+     170000,
+     180000
+    ]
+   },
+   {
+    "id": "jeep-patriot",
+    "name": "Jeep Patriot",
+    "y0": 2013,
+    "y1": 2013,
+    "gen": "1st generation",
+    "li": 41,
+    "yt": 46,
+    "yt_src": "years",
+    "sold": 75797,
+    "score": 50.3,
+    "p": [
+     4250,
+     5500
+    ],
+    "d": [
+     5250,
+     6750
+    ],
+    "mi": [
+     118000,
+     118000
+    ]
+   },
+   {
+    "id": "chevrolet-captiva",
+    "name": "Chevrolet Captiva",
+    "y0": 2012,
+    "y1": 2014,
+    "gen": "1st generation",
+    "li": 52,
+    "yt": 47,
+    "yt_src": "years",
+    "sold": 119903,
+    "score": 49.3,
+    "p": [
+     2750,
+     5000
+    ],
+    "d": [
+     3500,
+     6250
+    ],
+    "mi": [
+     144000,
+     168000
+    ]
+   },
+   {
+    "id": "nissan-murano",
+    "name": "Nissan Murano",
+    "y0": 2009,
+    "y1": 2011,
+    "gen": "2nd generation",
+    "li": 57,
+    "yt": 49,
+    "yt_src": "years",
+    "sold": 231572,
+    "score": 48.1,
+    "p": [
+     3500,
+     5750
+    ],
+    "d": [
+     4250,
+     7000
+    ],
+    "mi": [
+     180000,
+     200000
+    ]
+   },
+   {
+    "id": "ford-edge",
+    "name": "Ford Edge",
+    "y0": 2010,
+    "y1": 2010,
+    "gen": "1st generation",
+    "li": 52,
+    "yt": 48,
+    "yt_src": "years",
+    "sold": 118637,
+    "score": 45.9,
+    "p": [
+     3750,
+     5500
+    ],
+    "d": [
+     4750,
+     6750
+    ],
+    "mi": [
+     154000,
+     154000
+    ]
+   },
+   {
+    "id": "subaru-outback",
+    "name": "Subaru Outback",
+    "y0": 2003,
+    "y1": 2004,
+    "gen": "2nd generation",
+    "li": 57,
+    "yt": 47,
+    "yt_src": "years",
+    "sold": 117524,
+    "score": 43.6,
+    "p": [
+     2000,
+     3750
+    ],
+    "d": [
+     2500,
+     4500
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "nissan-xterra",
+    "name": "Nissan Xterra",
+    "y0": 2002,
+    "y1": 2004,
+    "gen": "1st generation",
+    "li": 64,
+    "yt": 47,
+    "yt_src": "years",
+    "sold": 214268,
+    "score": 41.8,
+    "p": [
+     2750,
+     5250
+    ],
+    "d": [
+     3500,
+     6500
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "gmc-terrain",
+    "name": "GMC Terrain",
+    "y0": 2010,
+    "y1": 2012,
+    "gen": "1st generation",
+    "li": 63,
+    "yt": 47,
+    "yt_src": "years",
+    "sold": 241484,
+    "score": 41.6,
+    "p": [
+     3500,
+     5500
+    ],
+    "d": [
+     4250,
+     6750
+    ],
+    "mi": [
+     157000,
+     175000
+    ]
+   },
+   {
+    "id": "nissan-juke",
+    "name": "Nissan Juke",
+    "y0": 2011,
+    "y1": 2012,
+    "gen": "1st generation",
+    "li": 70,
+    "yt": 52,
+    "yt_src": "years",
+    "sold": 80883,
+    "score": 41.4,
+    "p": [
+     3500,
+     5250
+    ],
+    "d": [
+     4250,
+     6500
+    ],
+    "mi": [
+     155000,
+     165000
+    ]
+   },
+   {
+    "id": "chevrolet-tracker",
+    "name": "Chevrolet Tracker",
+    "y0": 2000,
+    "y1": 2003,
+    "gen": "2nd generation",
+    "li": 70,
+    "yt": 48,
+    "yt_src": "years",
+    "sold": 177723,
+    "score": 41.3,
+    "p": [
+     2000,
+     3300
+    ],
+    "d": [
+     2500,
+     4100
+    ],
+    "mi": [
+     160000,
+     170000
+    ]
+   },
+   {
+    "id": "chevrolet-equinox",
+    "name": "Chevrolet Equinox",
+    "y0": 2010,
+    "y1": 2012,
+    "gen": "2nd generation",
+    "li": 66,
+    "yt": 47,
+    "yt_src": "years",
+    "sold": 561874,
+    "score": 40.2,
+    "p": [
+     3250,
+     5250
+    ],
+    "d": [
+     4000,
+     6750
+    ],
+    "mi": [
+     153000,
+     170000
+    ]
+   },
+   {
+    "id": "ford-escape",
+    "name": "Ford Escape",
+    "y0": 2004,
+    "y1": 2004,
+    "gen": "1st generation",
+    "li": 51,
+    "yt": 42,
+    "yt_src": "years",
+    "sold": 183430,
+    "score": 39.7,
+    "p": [
+     2000,
+     3250
+    ],
+    "d": [
+     2500,
+     4000
+    ],
+    "mi": [
+     184000,
+     184000
+    ],
+    "twin": "Mazda Tribute"
+   },
+   {
+    "id": "acura-mdx",
+    "name": "Acura MDX",
+    "y0": 2001,
+    "y1": 2003,
+    "gen": "1st generation",
+    "li": 67,
+    "yt": 47,
+    "yt_src": "years",
+    "sold": 160936,
+    "score": 39.7,
+    "p": [
+     2500,
+     4500
+    ],
+    "d": [
+     3000,
+     5500
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "gmc-yukon-xl",
+    "name": "GMC Yukon XL",
+    "y0": 2001,
+    "y1": 2002,
+    "gen": "2nd generation (GMT800)",
+    "li": 68,
+    "yt": 48,
+    "yt_src": "years",
+    "sold": 138262,
+    "score": 39.0,
+    "p": [
+     3750,
+     5250
+    ],
+    "d": [
+     4750,
+     6750
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "toyota-highlander",
+    "name": "Toyota Highlander",
+    "y0": 2001,
+    "y1": 2004,
+    "gen": "1st generation",
+    "li": 68,
+    "yt": 45,
+    "yt_src": "years",
+    "sold": 453085,
+    "score": 38.9,
+    "p": [
+     3000,
+     5500
+    ],
+    "d": [
+     3500,
+     7000
+    ],
+    "mi": [
+     198000,
+     200000
+    ]
+   },
+   {
+    "id": "hyundai-santa-fe",
+    "name": "Hyundai Santa Fe",
+    "y0": 2004,
+    "y1": 2006,
+    "gen": "1st generation",
+    "li": 68,
+    "yt": 45,
+    "yt_src": "years",
+    "sold": 243384,
+    "score": 36.6,
+    "p": [
+     1750,
+     3500
+    ],
+    "d": [
+     2250,
+     4500
+    ],
+    "mi": [
+     175000,
+     185000
+    ]
+   },
+   {
+    "id": "subaru-forester",
+    "name": "Subaru Forester",
+    "y0": 2009,
+    "y1": 2009,
+    "gen": "3rd generation",
+    "li": 71,
+    "yt": 48,
+    "yt_src": "years",
+    "sold": 77781,
+    "score": 34.5,
+    "p": [
+     3750,
+     5500
+    ],
+    "d": [
+     4500,
+     6750
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
    }
   ],
   "suv|private|5-10": [
@@ -1462,6 +5711,487 @@
     ],
     "mi": [
      132000,
+     156000
+    ]
+   },
+   {
+    "id": "subaru-forester",
+    "name": "Subaru Forester",
+    "y0": 2010,
+    "y1": 2013,
+    "gen": "3rd generation",
+    "li": 37,
+    "yt": 50,
+    "yt_src": "years",
+    "sold": 365224,
+    "score": 63.8,
+    "p": [
+     4250,
+     8500
+    ],
+    "d": [
+     5250,
+     10500
+    ],
+    "mi": [
+     156000,
+     192000
+    ]
+   },
+   {
+    "id": "buick-enclave",
+    "name": "Buick Enclave",
+    "y0": 2012,
+    "y1": 2016,
+    "gen": "1st generation",
+    "li": 38,
+    "yt": 51,
+    "yt_src": "years",
+    "sold": 293646,
+    "score": 63.6,
+    "p": [
+     4750,
+     11000
+    ],
+    "d": [
+     6000,
+     13250
+    ],
+    "mi": [
+     120000,
+     168000
+    ]
+   },
+   {
+    "id": "buick-encore",
+    "name": "Buick Encore",
+    "y0": 2014,
+    "y1": 2018,
+    "gen": "1st generation",
+    "li": 38,
+    "yt": 50,
+    "yt_src": "years",
+    "sold": 376114,
+    "score": 63.1,
+    "p": [
+     4750,
+     10500
+    ],
+    "d": [
+     6000,
+     12750
+    ],
+    "mi": [
+     96000,
+     144000
+    ]
+   },
+   {
+    "id": "toyota-venza",
+    "name": "Toyota Venza",
+    "y0": 2010,
+    "y1": 2013,
+    "gen": "1st generation",
+    "li": 39,
+    "yt": 50,
+    "yt_src": "years",
+    "sold": 165166,
+    "score": 61.9,
+    "p": [
+     5500,
+     10500
+    ],
+    "d": [
+     6750,
+     12750
+    ],
+    "mi": [
+     156000,
+     192000
+    ]
+   },
+   {
+    "id": "honda-cr-v",
+    "name": "Honda CR-V",
+    "y0": 2007,
+    "y1": 2011,
+    "gen": "3rd generation",
+    "li": 37,
+    "yt": 48,
+    "yt_src": "years",
+    "sold": 1029740,
+    "score": 61.2,
+    "p": [
+     4750,
+     8750
+    ],
+    "d": [
+     5750,
+     10750
+    ],
+    "mi": [
+     162000,
+     195000
+    ]
+   },
+   {
+    "id": "kia-sportage",
+    "name": "Kia Sportage",
+    "y0": 2011,
+    "y1": 2016,
+    "gen": "3rd generation",
+    "li": 43,
+    "yt": 51,
+    "yt_src": "years",
+    "sold": 294535,
+    "score": 61.1,
+    "p": [
+     5000,
+     10250
+    ],
+    "d": [
+     6250,
+     12250
+    ],
+    "mi": [
+     108000,
+     150000
+    ]
+   },
+   {
+    "id": "chevrolet-equinox",
+    "name": "Chevrolet Equinox",
+    "y0": 2013,
+    "y1": 2017,
+    "gen": "2nd generation",
+    "li": 35,
+    "yt": 47,
+    "yt_src": "years",
+    "sold": 1290676,
+    "score": 60.9,
+    "p": [
+     4750,
+     11000
+    ],
+    "d": [
+     6000,
+     13500
+    ],
+    "mi": [
+     98000,
+     143000
+    ]
+   },
+   {
+    "id": "infiniti-qx60",
+    "name": "Infiniti QX60",
+    "y0": 2015,
+    "y1": 2016,
+    "gen": "1st generation",
+    "li": 40,
+    "yt": 52,
+    "yt_src": "years",
+    "sold": 83890,
+    "score": 59.7,
+    "p": [
+     7000,
+     11000
+    ],
+    "d": [
+     8750,
+     13500
+    ],
+    "mi": [
+     120000,
+     132000
+    ]
+   },
+   {
+    "id": "acura-rdx",
+    "name": "Acura RDX",
+    "y0": 2013,
+    "y1": 2013,
+    "gen": "2nd generation",
+    "li": 43,
+    "yt": 55,
+    "yt_src": "years",
+    "sold": 89466,
+    "score": 59.3,
+    "p": [
+     8000,
+     10500
+    ],
+    "d": [
+     10000,
+     12750
+    ],
+    "mi": [
+     156000,
+     156000
+    ]
+   },
+   {
+    "id": "hyundai-santa-fe",
+    "name": "Hyundai Santa Fe",
+    "y0": 2015,
+    "y1": 2016,
+    "gen": "3rd generation",
+    "li": 44,
+    "yt": 54,
+    "yt_src": "years",
+    "sold": 249391,
+    "score": 59.2,
+    "p": [
+     6000,
+     8750
+    ],
+    "d": [
+     7500,
+     11000
+    ],
+    "mi": [
+     115000,
+     125000
+    ]
+   },
+   {
+    "id": "hyundai-tucson",
+    "name": "Hyundai Tucson",
+    "y0": 2012,
+    "y1": 2015,
+    "gen": "2nd generation",
+    "li": 46,
+    "yt": 50,
+    "yt_src": "years",
+    "sold": 201681,
+    "score": 57.7,
+    "p": [
+     4500,
+     7750
+    ],
+    "d": [
+     5500,
+     9500
+    ],
+    "mi": [
+     130000,
+     160000
+    ]
+   },
+   {
+    "id": "jeep-grand-cherokee",
+    "name": "Jeep Grand Cherokee",
+    "y0": 2009,
+    "y1": 2010,
+    "gen": "3rd generation (WK)",
+    "li": 37,
+    "yt": 48,
+    "yt_src": "years",
+    "sold": 134963,
+    "score": 57.3,
+    "p": [
+     4750,
+     6750
+    ],
+    "d": [
+     5750,
+     8250
+    ],
+    "mi": [
+     165000,
+     168000
+    ]
+   },
+   {
+    "id": "toyota-rav4",
+    "name": "Toyota RAV4",
+    "y0": 2013,
+    "y1": 2013,
+    "gen": "4th generation (XA40)",
+    "li": 44,
+    "yt": 53,
+    "yt_src": "years",
+    "sold": 218249,
+    "score": 56.5,
+    "p": [
+     8500,
+     11000
+    ],
+    "d": [
+     10500,
+     13000
+    ],
+    "mi": [
+     145000,
+     145000
+    ]
+   },
+   {
+    "id": "gmc-terrain",
+    "name": "GMC Terrain",
+    "y0": 2013,
+    "y1": 2016,
+    "gen": "1st generation",
+    "li": 45,
+    "yt": 48,
+    "yt_src": "years",
+    "sold": 404496,
+    "score": 55.8,
+    "p": [
+     5000,
+     10000
+    ],
+    "d": [
+     6250,
+     12000
+    ],
+    "mi": [
+     114000,
+     147000
+    ]
+   },
+   {
+    "id": "toyota-4runner",
+    "name": "Toyota 4Runner",
+    "y0": 2000,
+    "y1": 2002,
+    "gen": "3rd generation",
+    "li": 43,
+    "yt": 48,
+    "yt_src": "years",
+    "sold": 279073,
+    "score": 55.7,
+    "p": [
+     5500,
+     7750
+    ],
+    "d": [
+     6750,
+     9750
+    ],
+    "mi": [
+     198000,
+     200000
+    ]
+   },
+   {
+    "id": "nissan-juke",
+    "name": "Nissan Juke",
+    "y0": 2013,
+    "y1": 2015,
+    "gen": "1st generation",
+    "li": 48,
+    "yt": 51,
+    "yt_src": "years",
+    "sold": 103462,
+    "score": 55.7,
+    "p": [
+     4250,
+     7250
+    ],
+    "d": [
+     5250,
+     9000
+    ],
+    "mi": [
+     125000,
+     145000
+    ]
+   },
+   {
+    "id": "ford-ecosport",
+    "name": "Ford EcoSport",
+    "y0": 2018,
+    "y1": 2019,
+    "gen": "1st generation",
+    "li": 49,
+    "yt": 52,
+    "yt_src": "years",
+    "sold": 119056,
+    "score": 54.9,
+    "p": [
+     7500,
+     10750
+    ],
+    "d": [
+     9250,
+     13000
+    ],
+    "mi": [
+     84000,
+     96000
+    ]
+   },
+   {
+    "id": "chevrolet-suburban",
+    "name": "Chevrolet Suburban",
+    "y0": 2010,
+    "y1": 2010,
+    "gen": "10th generation (GMT900)",
+    "li": 34,
+    "yt": 46,
+    "yt_src": "years",
+    "sold": 45152,
+    "score": 54.5,
+    "p": [
+     8250,
+     10750
+    ],
+    "d": [
+     10500,
+     13250
+    ],
+    "mi": [
+     170000,
+     170000
+    ],
+    "twin": "GMC Yukon XL"
+   },
+   {
+    "id": "jeep-compass",
+    "name": "Jeep Compass",
+    "y0": 2013,
+    "y1": 2013,
+    "gen": "1st generation",
+    "li": 40,
+    "yt": 49,
+    "yt_src": "years",
+    "sold": 52993,
+    "score": 54.3,
+    "p": [
+     4500,
+     6000
+    ],
+    "d": [
+     5500,
+     7500
+    ],
+    "mi": [
+     118000,
+     118000
+    ]
+   },
+   {
+    "id": "mazda-cx-5",
+    "name": "Mazda CX-5",
+    "y0": 2013,
+    "y1": 2013,
+    "gen": "1st generation",
+    "li": 50,
+    "yt": 54,
+    "yt_src": "years",
+    "sold": 122863,
+    "score": 54.0,
+    "p": [
+     6000,
+     7750
+    ],
+    "d": [
+     7500,
+     9750
+    ],
+    "mi": [
+     156000,
      156000
     ]
    }
@@ -1587,6 +6317,487 @@
      180000
     ],
     "twin": "Chevrolet Suburban"
+   },
+   {
+    "id": "gmc-terrain",
+    "name": "GMC Terrain",
+    "y0": 2017,
+    "y1": 2017,
+    "gen": "1st generation",
+    "li": 23,
+    "yt": 53,
+    "yt_src": "years",
+    "sold": 85441,
+    "score": 69.1,
+    "p": [
+     9000,
+     11500
+    ],
+    "d": [
+     11000,
+     13750
+    ],
+    "mi": [
+     102000,
+     102000
+    ]
+   },
+   {
+    "id": "toyota-rav4",
+    "name": "Toyota RAV4",
+    "y0": 2014,
+    "y1": 2018,
+    "gen": "4th generation (XA40)",
+    "li": 33,
+    "yt": 53,
+    "yt_src": "years",
+    "sold": 1770028,
+    "score": 69.0,
+    "p": [
+     9500,
+     18000
+    ],
+    "d": [
+     11500,
+     20750
+    ],
+    "mi": [
+     95000,
+     135000
+    ]
+   },
+   {
+    "id": "cadillac-escalade",
+    "name": "Cadillac Escalade",
+    "y0": 2011,
+    "y1": 2012,
+    "gen": "3rd generation",
+    "li": 24,
+    "yt": 52,
+    "yt_src": "years",
+    "sold": 48135,
+    "score": 69.0,
+    "p": [
+     13000,
+     18500
+    ],
+    "d": [
+     16000,
+     22000
+    ],
+    "mi": [
+     112000,
+     120000
+    ]
+   },
+   {
+    "id": "buick-encore",
+    "name": "Buick Encore",
+    "y0": 2019,
+    "y1": 2020,
+    "gen": "1st generation",
+    "li": 24,
+    "yt": 52,
+    "yt_src": "years",
+    "sold": 144154,
+    "score": 68.9,
+    "p": [
+     9500,
+     13000
+    ],
+    "d": [
+     11500,
+     15250
+    ],
+    "mi": [
+     72000,
+     84000
+    ]
+   },
+   {
+    "id": "buick-enclave",
+    "name": "Buick Enclave",
+    "y0": 2017,
+    "y1": 2017,
+    "gen": "1st generation",
+    "li": 31,
+    "yt": 56,
+    "yt_src": "years",
+    "sold": 48564,
+    "score": 67.7,
+    "p": [
+     9500,
+     12000
+    ],
+    "d": [
+     11500,
+     14250
+    ],
+    "mi": [
+     108000,
+     108000
+    ]
+   },
+   {
+    "id": "lincoln-mkc",
+    "name": "Lincoln MKC",
+    "y0": 2018,
+    "y1": 2019,
+    "gen": "1st generation",
+    "li": 29,
+    "yt": 52,
+    "yt_src": "years",
+    "sold": 52056,
+    "score": 67.2,
+    "p": [
+     9500,
+     14000
+    ],
+    "d": [
+     11500,
+     16500
+    ],
+    "mi": [
+     84000,
+     96000
+    ]
+   },
+   {
+    "id": "mercedes-benz-gla",
+    "name": "Mercedes-Benz GLA",
+    "y0": 2016,
+    "y1": 2019,
+    "gen": "1st generation (X156)",
+    "li": 36,
+    "yt": 52,
+    "yt_src": "years",
+    "sold": 94921,
+    "score": 66.7,
+    "p": [
+     9000,
+     16000
+    ],
+    "d": [
+     11250,
+     19000
+    ],
+    "mi": [
+     84000,
+     120000
+    ]
+   },
+   {
+    "id": "lincoln-mkx",
+    "name": "Lincoln MKX",
+    "y0": 2017,
+    "y1": 2018,
+    "gen": "2nd generation",
+    "li": 30,
+    "yt": 52,
+    "yt_src": "years",
+    "sold": 91315,
+    "score": 66.3,
+    "p": [
+     13000,
+     17750
+    ],
+    "d": [
+     15500,
+     20750
+    ],
+    "mi": [
+     88000,
+     99000
+    ]
+   },
+   {
+    "id": "honda-hr-v",
+    "name": "Honda HR-V",
+    "y0": 2016,
+    "y1": 2022,
+    "gen": "2nd generation",
+    "li": 39,
+    "yt": 54,
+    "yt_src": "years",
+    "sold": 739175,
+    "score": 66.2,
+    "p": [
+     10500,
+     19750
+    ],
+    "d": [
+     12750,
+     22750
+    ],
+    "mi": [
+     48000,
+     120000
+    ]
+   },
+   {
+    "id": "subaru-crosstrek",
+    "name": "Subaru Crosstrek",
+    "y0": 2020,
+    "y1": 2022,
+    "gen": "2nd generation",
+    "li": 42,
+    "yt": 57,
+    "yt_src": "years",
+    "sold": 402324,
+    "score": 65.9,
+    "p": [
+     15000,
+     20500
+    ],
+    "d": [
+     17500,
+     23250
+    ],
+    "mi": [
+     48000,
+     72000
+    ]
+   },
+   {
+    "id": "volvo-xc90",
+    "name": "Volvo XC90",
+    "y0": 2017,
+    "y1": 2019,
+    "gen": "2nd generation",
+    "li": 43,
+    "yt": 57,
+    "yt_src": "years",
+    "sold": 98365,
+    "score": 65.9,
+    "p": [
+     13000,
+     21000
+    ],
+    "d": [
+     15500,
+     24250
+    ],
+    "mi": [
+     84000,
+     108000
+    ]
+   },
+   {
+    "id": "chevrolet-trax",
+    "name": "Chevrolet Trax",
+    "y0": 2020,
+    "y1": 2022,
+    "gen": "1st generation",
+    "li": 28,
+    "yt": 48,
+    "yt_src": "years",
+    "sold": 175486,
+    "score": 65.0,
+    "p": [
+     9000,
+     14250
+    ],
+    "d": [
+     11000,
+     16500
+    ],
+    "mi": [
+     52000,
+     76000
+    ]
+   },
+   {
+    "id": "honda-pilot",
+    "name": "Honda Pilot",
+    "y0": 2014,
+    "y1": 2015,
+    "gen": "2nd generation",
+    "li": 31,
+    "yt": 52,
+    "yt_src": "years",
+    "sold": 245069,
+    "score": 64.8,
+    "p": [
+     8750,
+     12250
+    ],
+    "d": [
+     10750,
+     14500
+    ],
+    "mi": [
+     135000,
+     145000
+    ]
+   },
+   {
+    "id": "mitsubishi-outlander-sport",
+    "name": "Mitsubishi Outlander Sport",
+    "y0": 2019,
+    "y1": 2021,
+    "gen": "1st generation",
+    "li": 39,
+    "yt": 54,
+    "yt_src": "years",
+    "sold": 96696,
+    "score": 64.8,
+    "p": [
+     9500,
+     14500
+    ],
+    "d": [
+     11500,
+     17000
+    ],
+    "mi": [
+     50000,
+     70000
+    ]
+   },
+   {
+    "id": "mitsubishi-outlander",
+    "name": "Mitsubishi Outlander",
+    "y0": 2019,
+    "y1": 2020,
+    "gen": "3rd generation",
+    "li": 34,
+    "yt": 53,
+    "yt_src": "years",
+    "sold": 69871,
+    "score": 64.5,
+    "p": [
+     10500,
+     14750
+    ],
+    "d": [
+     12750,
+     17250
+    ],
+    "mi": [
+     60000,
+     70000
+    ]
+   },
+   {
+    "id": "volvo-xc60",
+    "name": "Volvo XC60",
+    "y0": 2018,
+    "y1": 2019,
+    "gen": "2nd generation",
+    "li": 46,
+    "yt": 60,
+    "yt_src": "years",
+    "sold": 63267,
+    "score": 64.5,
+    "p": [
+     15000,
+     20500
+    ],
+    "d": [
+     17750,
+     23750
+    ],
+    "mi": [
+     84000,
+     96000
+    ]
+   },
+   {
+    "id": "gmc-yukon",
+    "name": "GMC Yukon",
+    "y0": 2011,
+    "y1": 2014,
+    "gen": "3rd generation (GMT900)",
+    "li": 32,
+    "yt": 48,
+    "yt_src": "years",
+    "sold": 131939,
+    "score": 64.1,
+    "p": [
+     9500,
+     18000
+    ],
+    "d": [
+     12000,
+     21250
+    ],
+    "mi": [
+     124000,
+     152000
+    ],
+    "twin": "Chevrolet Tahoe"
+   },
+   {
+    "id": "land-rover-range-rover-sport",
+    "name": "Land Rover Range Rover Sport",
+    "y0": 2015,
+    "y1": 2016,
+    "gen": "2nd generation",
+    "li": 38,
+    "yt": 54,
+    "yt_src": "years",
+    "sold": 43071,
+    "score": 64.1,
+    "p": [
+     15000,
+     20000
+    ],
+    "d": [
+     18000,
+     23500
+    ],
+    "mi": [
+     85000,
+     92000
+    ]
+   },
+   {
+    "id": "toyota-c-hr",
+    "name": "Toyota C-HR",
+    "y0": 2018,
+    "y1": 2021,
+    "gen": "1st generation",
+    "li": 43,
+    "yt": 54,
+    "yt_src": "years",
+    "sold": 202970,
+    "score": 63.9,
+    "p": [
+     12500,
+     19250
+    ],
+    "d": [
+     14750,
+     22000
+    ],
+    "mi": [
+     60000,
+     90000
+    ]
+   },
+   {
+    "id": "infiniti-qx60",
+    "name": "Infiniti QX60",
+    "y0": 2017,
+    "y1": 2020,
+    "gen": "1st generation",
+    "li": 40,
+    "yt": 52,
+    "yt_src": "years",
+    "sold": 153856,
+    "score": 63.6,
+    "p": [
+     9750,
+     17500
+    ],
+    "d": [
+     12000,
+     20500
+    ],
+    "mi": [
+     72000,
+     108000
+    ]
    }
   ],
   "suv|private|20+": [
@@ -1710,6 +6921,486 @@
      45000,
      65000
     ]
+   },
+   {
+    "id": "buick-enclave",
+    "name": "Buick Enclave",
+    "y0": 2021,
+    "y1": 2022,
+    "gen": "2nd generation",
+    "li": 31,
+    "yt": 56,
+    "yt_src": "years",
+    "sold": 72495,
+    "score": 69.7,
+    "p": [
+     20000,
+     26500
+    ],
+    "d": [
+     23000,
+     30000
+    ],
+    "mi": [
+     48000,
+     60000
+    ]
+   },
+   {
+    "id": "volvo-xc90",
+    "name": "Volvo XC90",
+    "y0": 2020,
+    "y1": 2022,
+    "gen": "2nd generation",
+    "li": 43,
+    "yt": 58,
+    "yt_src": "years",
+    "sold": 107009,
+    "score": 67.4,
+    "p": [
+     20000,
+     31000
+    ],
+    "d": [
+     23000,
+     35000
+    ],
+    "mi": [
+     48000,
+     72000
+    ]
+   },
+   {
+    "id": "cadillac-escalade",
+    "name": "Cadillac Escalade",
+    "y0": 2017,
+    "y1": 2020,
+    "gen": "4th generation",
+    "li": 39,
+    "yt": 53,
+    "yt_src": "years",
+    "sold": 134537,
+    "score": 65.7,
+    "p": [
+     25000,
+     41000
+    ],
+    "d": [
+     29000,
+     46250
+    ],
+    "mi": [
+     55000,
+     78000
+    ]
+   },
+   {
+    "id": "dodge-durango",
+    "name": "Dodge Durango",
+    "y0": 2020,
+    "y1": 2020,
+    "gen": "3rd generation",
+    "li": 31,
+    "yt": 54,
+    "yt_src": "years",
+    "sold": 57828,
+    "score": 65.4,
+    "p": [
+     18000,
+     22000
+    ],
+    "d": [
+     20750,
+     25000
+    ],
+    "mi": [
+     72000,
+     72000
+    ]
+   },
+   {
+    "id": "bmw-x5",
+    "name": "BMW X5",
+    "y0": 2022,
+    "y1": 2022,
+    "gen": "4th generation (G05)",
+    "li": 46,
+    "yt": 59,
+    "yt_src": "years",
+    "sold": 82372,
+    "score": 62.1,
+    "p": [
+     32500,
+     37500
+    ],
+    "d": [
+     36750,
+     42000
+    ],
+    "mi": [
+     44000,
+     44000
+    ]
+   },
+   {
+    "id": "land-rover-range-rover-sport",
+    "name": "Land Rover Range Rover Sport",
+    "y0": 2018,
+    "y1": 2020,
+    "gen": "2nd generation",
+    "li": 46,
+    "yt": 55,
+    "yt_src": "years",
+    "sold": 70103,
+    "score": 62.1,
+    "p": [
+     21500,
+     32500
+    ],
+    "d": [
+     25000,
+     37000
+    ],
+    "mi": [
+     55000,
+     70000
+    ]
+   },
+   {
+    "id": "chevrolet-traverse",
+    "name": "Chevrolet Traverse",
+    "y0": 2021,
+    "y1": 2022,
+    "gen": "2nd generation",
+    "li": 46,
+    "yt": 56,
+    "yt_src": "years",
+    "sold": 213215,
+    "score": 61.3,
+    "p": [
+     18500,
+     24500
+    ],
+    "d": [
+     21500,
+     28250
+    ],
+    "mi": [
+     49000,
+     59000
+    ]
+   },
+   {
+    "id": "chevrolet-blazer",
+    "name": "Chevrolet Blazer",
+    "y0": 2021,
+    "y1": 2022,
+    "gen": "3rd generation",
+    "li": 46,
+    "yt": 56,
+    "yt_src": "years",
+    "sold": 137570,
+    "score": 60.0,
+    "p": [
+     18500,
+     24500
+    ],
+    "d": [
+     21250,
+     27750
+    ],
+    "mi": [
+     48000,
+     60000
+    ]
+   },
+   {
+    "id": "acura-mdx",
+    "name": "Acura MDX",
+    "y0": 2022,
+    "y1": 2022,
+    "gen": "4th generation",
+    "li": 58,
+    "yt": 62,
+    "yt_src": "years",
+    "sold": 106482,
+    "score": 58.3,
+    "p": [
+     29500,
+     34500
+    ],
+    "d": [
+     33250,
+     38500
+    ],
+    "mi": [
+     48000,
+     48000
+    ]
+   },
+   {
+    "id": "jeep-grand-cherokee",
+    "name": "Jeep Grand Cherokee",
+    "y0": 2020,
+    "y1": 2020,
+    "gen": "4th generation (WK2)",
+    "li": 49,
+    "yt": 57,
+    "yt_src": "years",
+    "sold": 209786,
+    "score": 58.0,
+    "p": [
+     19000,
+     23500
+    ],
+    "d": [
+     21750,
+     26500
+    ],
+    "mi": [
+     66000,
+     66000
+    ]
+   },
+   {
+    "id": "mazda-cx-9",
+    "name": "Mazda CX-9",
+    "y0": 2021,
+    "y1": 2022,
+    "gen": "2nd generation",
+    "li": 54,
+    "yt": 58,
+    "yt_src": "years",
+    "sold": 69073,
+    "score": 57.9,
+    "p": [
+     19000,
+     24500
+    ],
+    "d": [
+     21750,
+     27750
+    ],
+    "mi": [
+     48000,
+     60000
+    ]
+   },
+   {
+    "id": "toyota-highlander",
+    "name": "Toyota Highlander",
+    "y0": 2020,
+    "y1": 2022,
+    "gen": "4th generation",
+    "li": 67,
+    "yt": 60,
+    "yt_src": "years",
+    "sold": 699209,
+    "score": 54.9,
+    "p": [
+     23000,
+     30250
+    ],
+    "d": [
+     26250,
+     34000
+    ],
+    "mi": [
+     54000,
+     78000
+    ]
+   },
+   {
+    "id": "chevrolet-suburban",
+    "name": "Chevrolet Suburban",
+    "y0": 2017,
+    "y1": 2020,
+    "gen": "11th generation (K2XX)",
+    "li": 53,
+    "yt": 51,
+    "yt_src": "years",
+    "sold": 206713,
+    "score": 54.3,
+    "p": [
+     21500,
+     34000
+    ],
+    "d": [
+     25250,
+     39000
+    ],
+    "mi": [
+     72000,
+     102000
+    ]
+   },
+   {
+    "id": "toyota-rav4",
+    "name": "Toyota RAV4",
+    "y0": 2020,
+    "y1": 2022,
+    "gen": "5th generation (XA50)",
+    "li": 65,
+    "yt": 59,
+    "yt_src": "years",
+    "sold": 1238067,
+    "score": 54.1,
+    "p": [
+     18500,
+     24500
+    ],
+    "d": [
+     21250,
+     27750
+    ],
+    "mi": [
+     50000,
+     74000
+    ]
+   },
+   {
+    "id": "volvo-xc60",
+    "name": "Volvo XC60",
+    "y0": 2020,
+    "y1": 2021,
+    "gen": "2nd generation",
+    "li": 59,
+    "yt": 56,
+    "yt_src": "years",
+    "sold": 73660,
+    "score": 53.6,
+    "p": [
+     19000,
+     25500
+    ],
+    "d": [
+     22000,
+     29000
+    ],
+    "mi": [
+     60000,
+     72000
+    ]
+   },
+   {
+    "id": "bmw-x3",
+    "name": "BMW X3",
+    "y0": 2020,
+    "y1": 2022,
+    "gen": "3rd generation (G01)",
+    "li": 72,
+    "yt": 59,
+    "yt_src": "years",
+    "sold": 201434,
+    "score": 50.8,
+    "p": [
+     19000,
+     27500
+    ],
+    "d": [
+     22000,
+     31250
+    ],
+    "mi": [
+     44000,
+     66000
+    ]
+   },
+   {
+    "id": "subaru-ascent",
+    "name": "Subaru Ascent",
+    "y0": 2022,
+    "y1": 2022,
+    "gen": "1st generation",
+    "li": 59,
+    "yt": 55,
+    "yt_src": "years",
+    "sold": 63704,
+    "score": 49.7,
+    "p": [
+     19500,
+     23500
+    ],
+    "d": [
+     22250,
+     26750
+    ],
+    "mi": [
+     48000,
+     48000
+    ]
+   },
+   {
+    "id": "honda-cr-v",
+    "name": "Honda CR-V",
+    "y0": 2021,
+    "y1": 2022,
+    "gen": "5th generation",
+    "li": 67,
+    "yt": 57,
+    "yt_src": "years",
+    "sold": 599426,
+    "score": 49.1,
+    "p": [
+     20000,
+     24750
+    ],
+    "d": [
+     22750,
+     27000
+    ],
+    "mi": [
+     50000,
+     62000
+    ]
+   },
+   {
+    "id": "gmc-acadia",
+    "name": "GMC Acadia",
+    "y0": 2022,
+    "y1": 2022,
+    "gen": "2nd generation",
+    "li": 61,
+    "yt": 54,
+    "yt_src": "years",
+    "sold": 53014,
+    "score": 47.4,
+    "p": [
+     19500,
+     23750
+    ],
+    "d": [
+     22750,
+     27250
+    ],
+    "mi": [
+     48000,
+     48000
+    ]
+   },
+   {
+    "id": "honda-pilot",
+    "name": "Honda Pilot",
+    "y0": 2022,
+    "y1": 2022,
+    "gen": "3rd generation",
+    "li": 72,
+    "yt": 56,
+    "yt_src": "years",
+    "sold": 99567,
+    "score": 43.1,
+    "p": [
+     26000,
+     30000
+    ],
+    "d": [
+     29250,
+     33250
+    ],
+    "mi": [
+     54000,
+     54000
+    ]
    }
   ],
   "suv|dealer|u5": [
@@ -1831,6 +7522,487 @@
     "mi": [
      200000,
      200000
+    ]
+   },
+   {
+    "id": "chevrolet-captiva",
+    "name": "Chevrolet Captiva",
+    "y0": 2012,
+    "y1": 2013,
+    "gen": "1st generation",
+    "li": 44,
+    "yt": 48,
+    "yt_src": "years",
+    "sold": 84535,
+    "score": 52.1,
+    "p": [
+     2750,
+     4500
+    ],
+    "d": [
+     3500,
+     5500
+    ],
+    "mi": [
+     156000,
+     168000
+    ]
+   },
+   {
+    "id": "honda-pilot",
+    "name": "Honda Pilot",
+    "y0": 2004,
+    "y1": 2005,
+    "gen": "1st generation",
+    "li": 55,
+    "yt": 48,
+    "yt_src": "years",
+    "sold": 271511,
+    "score": 46.2,
+    "p": [
+     3000,
+     4750
+    ],
+    "d": [
+     3750,
+     5750
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "subaru-outback",
+    "name": "Subaru Outback",
+    "y0": 2003,
+    "y1": 2004,
+    "gen": "2nd generation",
+    "li": 57,
+    "yt": 47,
+    "yt_src": "years",
+    "sold": 117524,
+    "score": 43.6,
+    "p": [
+     2000,
+     3750
+    ],
+    "d": [
+     2500,
+     4500
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "ford-explorer",
+    "name": "Ford Explorer",
+    "y0": 2001,
+    "y1": 2001,
+    "gen": "2nd generation",
+    "li": 55,
+    "yt": 46,
+    "yt_src": "years",
+    "sold": 415921,
+    "score": 41.9,
+    "p": [
+     1750,
+     3250
+    ],
+    "d": [
+     2250,
+     4000
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "toyota-highlander",
+    "name": "Toyota Highlander",
+    "y0": 2001,
+    "y1": 2002,
+    "gen": "1st generation",
+    "li": 57,
+    "yt": 45,
+    "yt_src": "years",
+    "sold": 199834,
+    "score": 41.3,
+    "p": [
+     3000,
+     4750
+    ],
+    "d": [
+     3500,
+     6000
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "chevrolet-tracker",
+    "name": "Chevrolet Tracker",
+    "y0": 2000,
+    "y1": 2003,
+    "gen": "2nd generation",
+    "li": 70,
+    "yt": 48,
+    "yt_src": "years",
+    "sold": 177723,
+    "score": 41.3,
+    "p": [
+     2000,
+     3300
+    ],
+    "d": [
+     2500,
+     4100
+    ],
+    "mi": [
+     160000,
+     170000
+    ]
+   },
+   {
+    "id": "ford-escape",
+    "name": "Ford Escape",
+    "y0": 2004,
+    "y1": 2004,
+    "gen": "1st generation",
+    "li": 51,
+    "yt": 42,
+    "yt_src": "years",
+    "sold": 183430,
+    "score": 39.7,
+    "p": [
+     2000,
+     3250
+    ],
+    "d": [
+     2500,
+     4000
+    ],
+    "mi": [
+     184000,
+     184000
+    ],
+    "twin": "Mazda Tribute"
+   },
+   {
+    "id": "acura-mdx",
+    "name": "Acura MDX",
+    "y0": 2001,
+    "y1": 2003,
+    "gen": "1st generation",
+    "li": 67,
+    "yt": 47,
+    "yt_src": "years",
+    "sold": 160936,
+    "score": 39.7,
+    "p": [
+     2500,
+     4500
+    ],
+    "d": [
+     3000,
+     5500
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "chevrolet-equinox",
+    "name": "Chevrolet Equinox",
+    "y0": 2008,
+    "y1": 2008,
+    "gen": "1st generation",
+    "li": 62,
+    "yt": 46,
+    "yt_src": "years",
+    "sold": 67447,
+    "score": 37.7,
+    "p": [
+     2250,
+     3000
+    ],
+    "d": [
+     3000,
+     4000
+    ],
+    "mi": [
+     186000,
+     186000
+    ]
+   },
+   {
+    "id": "hyundai-santa-fe",
+    "name": "Hyundai Santa Fe",
+    "y0": 2004,
+    "y1": 2006,
+    "gen": "1st generation",
+    "li": 68,
+    "yt": 45,
+    "yt_src": "years",
+    "sold": 243384,
+    "score": 36.6,
+    "p": [
+     1750,
+     3500
+    ],
+    "d": [
+     2250,
+     4500
+    ],
+    "mi": [
+     175000,
+     185000
+    ]
+   },
+   {
+    "id": "chevrolet-traverse",
+    "name": "Chevrolet Traverse",
+    "y0": 2009,
+    "y1": 2009,
+    "gen": "1st generation",
+    "li": 66,
+    "yt": 46,
+    "yt_src": "years",
+    "sold": 100530,
+    "score": 35.3,
+    "p": [
+     3250,
+     4500
+    ],
+    "d": [
+     4000,
+     5500
+    ],
+    "mi": [
+     178000,
+     178000
+    ]
+   },
+   {
+    "id": "saturn-vue",
+    "name": "Saturn Vue",
+    "y0": 2004,
+    "y1": 2007,
+    "gen": "1st generation",
+    "li": 77,
+    "yt": 46,
+    "yt_src": "years",
+    "sold": 349186,
+    "score": 34.2,
+    "p": [
+     2000,
+     3400
+    ],
+    "d": [
+     2500,
+     4200
+    ],
+    "mi": [
+     190000,
+     200000
+    ]
+   },
+   {
+    "id": "bmw-x5",
+    "name": "BMW X5",
+    "y0": 2002,
+    "y1": 2002,
+    "gen": "1st generation (E53)",
+    "li": 64,
+    "yt": 43,
+    "yt_src": "years",
+    "sold": 42742,
+    "score": 33.0,
+    "p": [
+     3000,
+     3750
+    ],
+    "d": [
+     3750,
+     4750
+    ],
+    "mi": [
+     190000,
+     190000
+    ]
+   },
+   {
+    "id": "subaru-forester",
+    "name": "Subaru Forester",
+    "y0": 2006,
+    "y1": 2007,
+    "gen": "2nd generation",
+    "li": 76,
+    "yt": 46,
+    "yt_src": "years",
+    "sold": 95788,
+    "score": 32.1,
+    "p": [
+     2250,
+     4000
+    ],
+    "d": [
+     2750,
+     5000
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "nissan-xterra",
+    "name": "Nissan Xterra",
+    "y0": 2002,
+    "y1": 2003,
+    "gen": "1st generation",
+    "li": 77,
+    "yt": 46,
+    "yt_src": "years",
+    "sold": 147578,
+    "score": 31.5,
+    "p": [
+     2750,
+     4750
+    ],
+    "d": [
+     3500,
+     6000
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "chevrolet-tahoe",
+    "name": "Chevrolet Tahoe",
+    "y0": 2000,
+    "y1": 2000,
+    "gen": "2nd generation (GMT800)",
+    "li": 71,
+    "yt": 45,
+    "yt_src": "years",
+    "sold": 149834,
+    "score": 31.1,
+    "p": [
+     3000,
+     4250
+    ],
+    "d": [
+     3750,
+     5500
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "kia-sorento",
+    "name": "Kia Sorento",
+    "y0": 2004,
+    "y1": 2004,
+    "gen": "1st generation",
+    "li": 78,
+    "yt": 48,
+    "yt_src": "years",
+    "sold": 52878,
+    "score": 30.3,
+    "p": [
+     2000,
+     2500
+    ],
+    "d": [
+     2250,
+     3000
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "hyundai-tucson",
+    "name": "Hyundai Tucson",
+    "y0": 2006,
+    "y1": 2006,
+    "gen": "1st generation",
+    "li": 79,
+    "yt": 47,
+    "yt_src": "years",
+    "sold": 52067,
+    "score": 28.6,
+    "p": [
+     2000,
+     3250
+    ],
+    "d": [
+     2500,
+     4000
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "gmc-envoy",
+    "name": "GMC Envoy",
+    "y0": 2007,
+    "y1": 2007,
+    "gen": "2nd generation",
+    "li": 79,
+    "yt": 45,
+    "yt_src": "years",
+    "sold": 48586,
+    "score": 26.3,
+    "p": [
+     3300,
+     4300
+    ],
+    "d": [
+     4100,
+     5300
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "dodge-journey",
+    "name": "Dodge Journey",
+    "y0": 2011,
+    "y1": 2011,
+    "gen": "1st generation",
+    "li": 92,
+    "yt": 51,
+    "yt_src": "years",
+    "sold": 55155,
+    "score": 25.4,
+    "p": [
+     2750,
+     4000
+    ],
+    "d": [
+     3500,
+     5000
+    ],
+    "mi": [
+     158000,
+     158000
     ]
    }
   ],
@@ -1954,6 +8126,487 @@
      110000,
      118000
     ]
+   },
+   {
+    "id": "buick-enclave",
+    "name": "Buick Enclave",
+    "y0": 2012,
+    "y1": 2014,
+    "gen": "1st generation",
+    "li": 40,
+    "yt": 51,
+    "yt_src": "years",
+    "sold": 179537,
+    "score": 60.3,
+    "p": [
+     4750,
+     8500
+    ],
+    "d": [
+     6000,
+     10500
+    ],
+    "mi": [
+     144000,
+     168000
+    ]
+   },
+   {
+    "id": "subaru-forester",
+    "name": "Subaru Forester",
+    "y0": 2009,
+    "y1": 2013,
+    "gen": "3rd generation",
+    "li": 43,
+    "yt": 50,
+    "yt_src": "years",
+    "sold": 443005,
+    "score": 59.6,
+    "p": [
+     3750,
+     8500
+    ],
+    "d": [
+     4500,
+     10500
+    ],
+    "mi": [
+     156000,
+     200000
+    ]
+   },
+   {
+    "id": "hyundai-santa-fe",
+    "name": "Hyundai Santa Fe",
+    "y0": 2015,
+    "y1": 2016,
+    "gen": "3rd generation",
+    "li": 44,
+    "yt": 54,
+    "yt_src": "years",
+    "sold": 249391,
+    "score": 59.2,
+    "p": [
+     6000,
+     8750
+    ],
+    "d": [
+     7500,
+     11000
+    ],
+    "mi": [
+     115000,
+     125000
+    ]
+   },
+   {
+    "id": "jeep-grand-cherokee",
+    "name": "Jeep Grand Cherokee",
+    "y0": 2009,
+    "y1": 2010,
+    "gen": "3rd generation (WK)",
+    "li": 37,
+    "yt": 48,
+    "yt_src": "years",
+    "sold": 134963,
+    "score": 57.3,
+    "p": [
+     4750,
+     6750
+    ],
+    "d": [
+     5750,
+     8250
+    ],
+    "mi": [
+     165000,
+     168000
+    ]
+   },
+   {
+    "id": "hyundai-tucson",
+    "name": "Hyundai Tucson",
+    "y0": 2010,
+    "y1": 2015,
+    "gen": "2nd generation",
+    "li": 47,
+    "yt": 50,
+    "yt_src": "years",
+    "sold": 288507,
+    "score": 57.3,
+    "p": [
+     3500,
+     7750
+    ],
+    "d": [
+     4250,
+     9500
+    ],
+    "mi": [
+     130000,
+     180000
+    ]
+   },
+   {
+    "id": "kia-sportage",
+    "name": "Kia Sportage",
+    "y0": 2011,
+    "y1": 2014,
+    "gen": "3rd generation",
+    "li": 48,
+    "yt": 50,
+    "yt_src": "years",
+    "sold": 159730,
+    "score": 57.2,
+    "p": [
+     5000,
+     8250
+    ],
+    "d": [
+     6250,
+     10250
+    ],
+    "mi": [
+     128000,
+     150000
+    ]
+   },
+   {
+    "id": "bmw-x3",
+    "name": "BMW X3",
+    "y0": 2011,
+    "y1": 2012,
+    "gen": "2nd generation (F25)",
+    "li": 39,
+    "yt": 50,
+    "yt_src": "years",
+    "sold": 62966,
+    "score": 57.2,
+    "p": [
+     5500,
+     8000
+    ],
+    "d": [
+     7000,
+     10250
+    ],
+    "mi": [
+     154000,
+     165000
+    ]
+   },
+   {
+    "id": "nissan-xterra",
+    "name": "Nissan Xterra",
+    "y0": 2004,
+    "y1": 2004,
+    "gen": "1st generation",
+    "li": 35,
+    "yt": 48,
+    "yt_src": "years",
+    "sold": 66690,
+    "score": 56.1,
+    "p": [
+     3250,
+     5250
+    ],
+    "d": [
+     4000,
+     6500
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "toyota-4runner",
+    "name": "Toyota 4Runner",
+    "y0": 2000,
+    "y1": 2002,
+    "gen": "3rd generation",
+    "li": 43,
+    "yt": 48,
+    "yt_src": "years",
+    "sold": 279073,
+    "score": 55.7,
+    "p": [
+     5500,
+     7750
+    ],
+    "d": [
+     6750,
+     9750
+    ],
+    "mi": [
+     198000,
+     200000
+    ]
+   },
+   {
+    "id": "buick-encore",
+    "name": "Buick Encore",
+    "y0": 2013,
+    "y1": 2016,
+    "gen": "1st generation",
+    "li": 50,
+    "yt": 50,
+    "yt_src": "years",
+    "sold": 226962,
+    "score": 55.2,
+    "p": [
+     4250,
+     7500
+    ],
+    "d": [
+     5250,
+     9250
+    ],
+    "mi": [
+     120000,
+     156000
+    ]
+   },
+   {
+    "id": "ford-explorer",
+    "name": "Ford Explorer",
+    "y0": 2007,
+    "y1": 2008,
+    "gen": "4th generation",
+    "li": 39,
+    "yt": 46,
+    "yt_src": "years",
+    "sold": 216256,
+    "score": 54.3,
+    "p": [
+     3250,
+     5250
+    ],
+    "d": [
+     4000,
+     6500
+    ],
+    "mi": [
+     166000,
+     172000
+    ]
+   },
+   {
+    "id": "mazda-cx-5",
+    "name": "Mazda CX-5",
+    "y0": 2013,
+    "y1": 2013,
+    "gen": "1st generation",
+    "li": 50,
+    "yt": 54,
+    "yt_src": "years",
+    "sold": 122863,
+    "score": 54.0,
+    "p": [
+     6000,
+     7750
+    ],
+    "d": [
+     7500,
+     9750
+    ],
+    "mi": [
+     156000,
+     156000
+    ]
+   },
+   {
+    "id": "nissan-rogue",
+    "name": "Nissan Rogue",
+    "y0": 2014,
+    "y1": 2017,
+    "gen": "2nd generation",
+    "li": 56,
+    "yt": 52,
+    "yt_src": "years",
+    "sold": 1219758,
+    "score": 53.9,
+    "p": [
+     4500,
+     8500
+    ],
+    "d": [
+     5500,
+     10500
+    ],
+    "mi": [
+     110000,
+     140000
+    ]
+   },
+   {
+    "id": "toyota-venza",
+    "name": "Toyota Venza",
+    "y0": 2010,
+    "y1": 2011,
+    "gen": "1st generation",
+    "li": 44,
+    "yt": 48,
+    "yt_src": "years",
+    "sold": 86225,
+    "score": 53.3,
+    "p": [
+     5500,
+     8250
+    ],
+    "d": [
+     6750,
+     10250
+    ],
+    "mi": [
+     180000,
+     192000
+    ]
+   },
+   {
+    "id": "lexus-rx",
+    "name": "Lexus RX",
+    "y0": 2006,
+    "y1": 2009,
+    "gen": "2nd generation",
+    "li": 54,
+    "yt": 49,
+    "yt_src": "years",
+    "sold": 389248,
+    "score": 52.4,
+    "p": [
+     4750,
+     8750
+    ],
+    "d": [
+     6000,
+     11000
+    ],
+    "mi": [
+     180000,
+     195000
+    ]
+   },
+   {
+    "id": "nissan-juke",
+    "name": "Nissan Juke",
+    "y0": 2011,
+    "y1": 2015,
+    "gen": "1st generation",
+    "li": 57,
+    "yt": 51,
+    "yt_src": "years",
+    "sold": 184345,
+    "score": 52.2,
+    "p": [
+     3500,
+     7250
+    ],
+    "d": [
+     4250,
+     9000
+    ],
+    "mi": [
+     125000,
+     165000
+    ]
+   },
+   {
+    "id": "chevrolet-equinox",
+    "name": "Chevrolet Equinox",
+    "y0": 2011,
+    "y1": 2015,
+    "gen": "2nd generation",
+    "li": 49,
+    "yt": 47,
+    "yt_src": "years",
+    "sold": 1169918,
+    "score": 52.1,
+    "p": [
+     3500,
+     8000
+    ],
+    "d": [
+     4500,
+     10000
+    ],
+    "mi": [
+     122000,
+     162000
+    ]
+   },
+   {
+    "id": "toyota-rav4",
+    "name": "Toyota RAV4",
+    "y0": 2004,
+    "y1": 2004,
+    "gen": "2nd generation (XA20)",
+    "li": 38,
+    "yt": 46,
+    "yt_src": "years",
+    "sold": 70314,
+    "score": 52.1,
+    "p": [
+     3750,
+     4750
+    ],
+    "d": [
+     4500,
+     5750
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "subaru-outback",
+    "name": "Subaru Outback",
+    "y0": 2012,
+    "y1": 2014,
+    "gen": "4th generation",
+    "li": 56,
+    "yt": 51,
+    "yt_src": "years",
+    "sold": 374392,
+    "score": 51.6,
+    "p": [
+     5250,
+     9000
+    ],
+    "d": [
+     6500,
+     11000
+    ],
+    "mi": [
+     144000,
+     168000
+    ]
+   },
+   {
+    "id": "chevrolet-tahoe",
+    "name": "Chevrolet Tahoe",
+    "y0": 2005,
+    "y1": 2006,
+    "gen": "2nd generation (GMT800)",
+    "li": 44,
+    "yt": 47,
+    "yt_src": "years",
+    "sold": 313798,
+    "score": 51.5,
+    "p": [
+     4500,
+     6750
+    ],
+    "d": [
+     5750,
+     8750
+    ],
+    "mi": [
+     190000,
+     195000
+    ],
+    "twin": "GMC Yukon"
    }
   ],
   "suv|dealer|10-20": [
@@ -2076,6 +8729,487 @@
     "mi": [
      88000,
      88000
+    ]
+   },
+   {
+    "id": "acura-mdx",
+    "name": "Acura MDX",
+    "y0": 2011,
+    "y1": 2013,
+    "gen": "2nd generation",
+    "li": 23,
+    "yt": 51,
+    "yt_src": "years",
+    "sold": 147165,
+    "score": 70.4,
+    "p": [
+     7000,
+     11250
+    ],
+    "d": [
+     8750,
+     13500
+    ],
+    "mi": [
+     156000,
+     180000
+    ]
+   },
+   {
+    "id": "lexus-rx",
+    "name": "Lexus RX",
+    "y0": 2010,
+    "y1": 2015,
+    "gen": "3rd generation",
+    "li": 29,
+    "yt": 52,
+    "yt_src": "years",
+    "sold": 585786,
+    "score": 69.8,
+    "p": [
+     7750,
+     15500
+    ],
+    "d": [
+     9750,
+     18250
+    ],
+    "mi": [
+     125000,
+     172000
+    ]
+   },
+   {
+    "id": "cadillac-escalade",
+    "name": "Cadillac Escalade",
+    "y0": 2011,
+    "y1": 2012,
+    "gen": "3rd generation",
+    "li": 24,
+    "yt": 52,
+    "yt_src": "years",
+    "sold": 48135,
+    "score": 69.0,
+    "p": [
+     13000,
+     18500
+    ],
+    "d": [
+     16000,
+     22000
+    ],
+    "mi": [
+     112000,
+     120000
+    ]
+   },
+   {
+    "id": "mazda-cx-9",
+    "name": "Mazda CX-9",
+    "y0": 2017,
+    "y1": 2019,
+    "gen": "2nd generation",
+    "li": 42,
+    "yt": 59,
+    "yt_src": "years",
+    "sold": 80946,
+    "score": 68.4,
+    "p": [
+     11750,
+     18000
+    ],
+    "d": [
+     14000,
+     20750
+    ],
+    "mi": [
+     84000,
+     108000
+    ]
+   },
+   {
+    "id": "toyota-rav4",
+    "name": "Toyota RAV4",
+    "y0": 2013,
+    "y1": 2018,
+    "gen": "4th generation (XA40)",
+    "li": 34,
+    "yt": 53,
+    "yt_src": "years",
+    "sold": 1988277,
+    "score": 68.3,
+    "p": [
+     8500,
+     18000
+    ],
+    "d": [
+     10500,
+     20750
+    ],
+    "mi": [
+     95000,
+     145000
+    ]
+   },
+   {
+    "id": "buick-enclave",
+    "name": "Buick Enclave",
+    "y0": 2015,
+    "y1": 2017,
+    "gen": "1st generation",
+    "li": 34,
+    "yt": 54,
+    "yt_src": "years",
+    "sold": 162673,
+    "score": 67.2,
+    "p": [
+     7500,
+     12000
+    ],
+    "d": [
+     9250,
+     14250
+    ],
+    "mi": [
+     108000,
+     132000
+    ]
+   },
+   {
+    "id": "gmc-terrain",
+    "name": "GMC Terrain",
+    "y0": 2016,
+    "y1": 2017,
+    "gen": "1st generation",
+    "li": 28,
+    "yt": 52,
+    "yt_src": "years",
+    "sold": 173366,
+    "score": 66.6,
+    "p": [
+     7750,
+     11500
+    ],
+    "d": [
+     9750,
+     13750
+    ],
+    "mi": [
+     102000,
+     114000
+    ]
+   },
+   {
+    "id": "lincoln-mkx",
+    "name": "Lincoln MKX",
+    "y0": 2017,
+    "y1": 2018,
+    "gen": "2nd generation",
+    "li": 30,
+    "yt": 52,
+    "yt_src": "years",
+    "sold": 91315,
+    "score": 66.3,
+    "p": [
+     13000,
+     17750
+    ],
+    "d": [
+     15500,
+     20750
+    ],
+    "mi": [
+     88000,
+     99000
+    ]
+   },
+   {
+    "id": "honda-hr-v",
+    "name": "Honda HR-V",
+    "y0": 2016,
+    "y1": 2021,
+    "gen": "2nd generation",
+    "li": 39,
+    "yt": 54,
+    "yt_src": "years",
+    "sold": 623759,
+    "score": 65.9,
+    "p": [
+     10500,
+     18750
+    ],
+    "d": [
+     12750,
+     21500
+    ],
+    "mi": [
+     60000,
+     120000
+    ]
+   },
+   {
+    "id": "dodge-journey",
+    "name": "Dodge Journey",
+    "y0": 2019,
+    "y1": 2020,
+    "gen": "1st generation",
+    "li": 23,
+    "yt": 48,
+    "yt_src": "years",
+    "sold": 129062,
+    "score": 65.6,
+    "p": [
+     7250,
+     10750
+    ],
+    "d": [
+     9000,
+     12750
+    ],
+    "mi": [
+     72000,
+     84000
+    ]
+   },
+   {
+    "id": "chevrolet-equinox",
+    "name": "Chevrolet Equinox",
+    "y0": 2016,
+    "y1": 2017,
+    "gen": "2nd generation",
+    "li": 23,
+    "yt": 48,
+    "yt_src": "years",
+    "sold": 532653,
+    "score": 65.2,
+    "p": [
+     7500,
+     11000
+    ],
+    "d": [
+     9500,
+     13500
+    ],
+    "mi": [
+     98000,
+     110000
+    ]
+   },
+   {
+    "id": "lincoln-mkc",
+    "name": "Lincoln MKC",
+    "y0": 2016,
+    "y1": 2019,
+    "gen": "1st generation",
+    "li": 38,
+    "yt": 52,
+    "yt_src": "years",
+    "sold": 104666,
+    "score": 65.2,
+    "p": [
+     7250,
+     14000
+    ],
+    "d": [
+     9000,
+     16500
+    ],
+    "mi": [
+     84000,
+     120000
+    ]
+   },
+   {
+    "id": "gmc-yukon",
+    "name": "GMC Yukon",
+    "y0": 2010,
+    "y1": 2014,
+    "gen": "3rd generation (GMT900)",
+    "li": 30,
+    "yt": 48,
+    "yt_src": "years",
+    "sold": 160720,
+    "score": 65.0,
+    "p": [
+     8500,
+     18000
+    ],
+    "d": [
+     10750,
+     21250
+    ],
+    "mi": [
+     124000,
+     162000
+    ],
+    "twin": "Chevrolet Tahoe"
+   },
+   {
+    "id": "mitsubishi-outlander",
+    "name": "Mitsubishi Outlander",
+    "y0": 2019,
+    "y1": 2020,
+    "gen": "3rd generation",
+    "li": 34,
+    "yt": 53,
+    "yt_src": "years",
+    "sold": 69871,
+    "score": 64.5,
+    "p": [
+     10500,
+     14750
+    ],
+    "d": [
+     12750,
+     17250
+    ],
+    "mi": [
+     60000,
+     70000
+    ]
+   },
+   {
+    "id": "infiniti-qx60",
+    "name": "Infiniti QX60",
+    "y0": 2015,
+    "y1": 2020,
+    "gen": "1st generation",
+    "li": 40,
+    "yt": 52,
+    "yt_src": "years",
+    "sold": 237746,
+    "score": 63.6,
+    "p": [
+     7000,
+     17500
+    ],
+    "d": [
+     8750,
+     20500
+    ],
+    "mi": [
+     72000,
+     132000
+    ]
+   },
+   {
+    "id": "kia-sportage",
+    "name": "Kia Sportage",
+    "y0": 2018,
+    "y1": 2022,
+    "gen": "4th generation",
+    "li": 43,
+    "yt": 53,
+    "yt_src": "years",
+    "sold": 476290,
+    "score": 63.3,
+    "p": [
+     10750,
+     18500
+    ],
+    "d": [
+     13000,
+     21250
+    ],
+    "mi": [
+     44000,
+     88000
+    ]
+   },
+   {
+    "id": "toyota-4runner",
+    "name": "Toyota 4Runner",
+    "y0": 2010,
+    "y1": 2012,
+    "gen": "5th generation",
+    "li": 36,
+    "yt": 51,
+    "yt_src": "years",
+    "sold": 139602,
+    "score": 63.1,
+    "p": [
+     13500,
+     19000
+    ],
+    "d": [
+     16000,
+     21750
+    ],
+    "mi": [
+     125000,
+     140000
+    ]
+   },
+   {
+    "id": "toyota-venza",
+    "name": "Toyota Venza",
+    "y0": 2012,
+    "y1": 2015,
+    "gen": "1st generation",
+    "li": 41,
+    "yt": 52,
+    "yt_src": "years",
+    "sold": 130872,
+    "score": 63.1,
+    "p": [
+     7250,
+     13250
+    ],
+    "d": [
+     9000,
+     15500
+    ],
+    "mi": [
+     132000,
+     168000
+    ]
+   },
+   {
+    "id": "bmw-x5",
+    "name": "BMW X5",
+    "y0": 2014,
+    "y1": 2017,
+    "gen": "3rd generation (F15)",
+    "li": 45,
+    "yt": 53,
+    "yt_src": "years",
+    "sold": 200484,
+    "score": 62.2,
+    "p": [
+     10000,
+     17500
+    ],
+    "d": [
+     12500,
+     20500
+    ],
+    "mi": [
+     99000,
+     132000
+    ]
+   },
+   {
+    "id": "toyota-c-hr",
+    "name": "Toyota C-HR",
+    "y0": 2018,
+    "y1": 2020,
+    "gen": "1st generation",
+    "li": 44,
+    "yt": 54,
+    "yt_src": "years",
+    "sold": 167263,
+    "score": 61.5,
+    "p": [
+     12500,
+     17750
+    ],
+    "d": [
+     14750,
+     20500
+    ],
+    "mi": [
+     70000,
+     90000
     ]
    }
   ],
@@ -2200,6 +9334,486 @@
      88000
     ],
     "twin": "Chevrolet Tahoe"
+   },
+   {
+    "id": "volvo-xc90",
+    "name": "Volvo XC90",
+    "y0": 2019,
+    "y1": 2022,
+    "gen": "2nd generation",
+    "li": 37,
+    "yt": 58,
+    "yt_src": "years",
+    "sold": 142769,
+    "score": 72.6,
+    "p": [
+     17500,
+     31000
+    ],
+    "d": [
+     20500,
+     35000
+    ],
+    "mi": [
+     48000,
+     84000
+    ]
+   },
+   {
+    "id": "buick-enclave",
+    "name": "Buick Enclave",
+    "y0": 2019,
+    "y1": 2022,
+    "gen": "2nd generation",
+    "li": 35,
+    "yt": 54,
+    "yt_src": "years",
+    "sold": 162131,
+    "score": 68.4,
+    "p": [
+     16000,
+     26500
+    ],
+    "d": [
+     18500,
+     30000
+    ],
+    "mi": [
+     48000,
+     84000
+    ]
+   },
+   {
+    "id": "mazda-cx-5",
+    "name": "Mazda CX-5",
+    "y0": 2021,
+    "y1": 2022,
+    "gen": "2nd generation",
+    "li": 47,
+    "yt": 62,
+    "yt_src": "years",
+    "sold": 320042,
+    "score": 67.2,
+    "p": [
+     16250,
+     20750
+    ],
+    "d": [
+     18750,
+     23750
+    ],
+    "mi": [
+     48000,
+     60000
+    ]
+   },
+   {
+    "id": "cadillac-escalade",
+    "name": "Cadillac Escalade",
+    "y0": 2017,
+    "y1": 2020,
+    "gen": "4th generation",
+    "li": 39,
+    "yt": 53,
+    "yt_src": "years",
+    "sold": 134537,
+    "score": 65.7,
+    "p": [
+     25000,
+     41000
+    ],
+    "d": [
+     29000,
+     46250
+    ],
+    "mi": [
+     55000,
+     78000
+    ]
+   },
+   {
+    "id": "subaru-crosstrek",
+    "name": "Subaru Crosstrek",
+    "y0": 2021,
+    "y1": 2022,
+    "gen": "2nd generation",
+    "li": 40,
+    "yt": 57,
+    "yt_src": "years",
+    "sold": 282608,
+    "score": 65.3,
+    "p": [
+     16000,
+     20500
+    ],
+    "d": [
+     18500,
+     23250
+    ],
+    "mi": [
+     48000,
+     60000
+    ]
+   },
+   {
+    "id": "chevrolet-blazer",
+    "name": "Chevrolet Blazer",
+    "y0": 2020,
+    "y1": 2022,
+    "gen": "3rd generation",
+    "li": 41,
+    "yt": 55,
+    "yt_src": "years",
+    "sold": 232168,
+    "score": 64.0,
+    "p": [
+     16750,
+     24500
+    ],
+    "d": [
+     19250,
+     27750
+    ],
+    "mi": [
+     48000,
+     72000
+    ]
+   },
+   {
+    "id": "mazda-cx-9",
+    "name": "Mazda CX-9",
+    "y0": 2020,
+    "y1": 2022,
+    "gen": "2nd generation",
+    "li": 48,
+    "yt": 58,
+    "yt_src": "years",
+    "sold": 96711,
+    "score": 63.9,
+    "p": [
+     17000,
+     24500
+    ],
+    "d": [
+     19750,
+     27750
+    ],
+    "mi": [
+     48000,
+     72000
+    ]
+   },
+   {
+    "id": "audi-q5",
+    "name": "Audi Q5",
+    "y0": 2019,
+    "y1": 2020,
+    "gen": "2nd generation",
+    "li": 42,
+    "yt": 56,
+    "yt_src": "years",
+    "sold": 117951,
+    "score": 62.3,
+    "p": [
+     15500,
+     21000
+    ],
+    "d": [
+     18250,
+     24250
+    ],
+    "mi": [
+     66000,
+     77000
+    ]
+   },
+   {
+    "id": "jeep-cherokee",
+    "name": "Jeep Cherokee",
+    "y0": 2022,
+    "y1": 2022,
+    "gen": "5th generation (KL)",
+    "li": 46,
+    "yt": 59,
+    "yt_src": "years",
+    "sold": 40322,
+    "score": 62.1,
+    "p": [
+     17000,
+     20750
+    ],
+    "d": [
+     19500,
+     23750
+    ],
+    "mi": [
+     42000,
+     42000
+    ]
+   },
+   {
+    "id": "bmw-x5",
+    "name": "BMW X5",
+    "y0": 2022,
+    "y1": 2022,
+    "gen": "4th generation (G05)",
+    "li": 46,
+    "yt": 59,
+    "yt_src": "years",
+    "sold": 82372,
+    "score": 62.1,
+    "p": [
+     32500,
+     37500
+    ],
+    "d": [
+     36750,
+     42000
+    ],
+    "mi": [
+     44000,
+     44000
+    ]
+   },
+   {
+    "id": "land-rover-range-rover-sport",
+    "name": "Land Rover Range Rover Sport",
+    "y0": 2018,
+    "y1": 2020,
+    "gen": "2nd generation",
+    "li": 46,
+    "yt": 55,
+    "yt_src": "years",
+    "sold": 70103,
+    "score": 62.1,
+    "p": [
+     21500,
+     32500
+    ],
+    "d": [
+     25000,
+     37000
+    ],
+    "mi": [
+     55000,
+     70000
+    ]
+   },
+   {
+    "id": "gmc-terrain",
+    "name": "GMC Terrain",
+    "y0": 2022,
+    "y1": 2022,
+    "gen": "2nd generation",
+    "li": 33,
+    "yt": 52,
+    "yt_src": "years",
+    "sold": 86567,
+    "score": 61.9,
+    "p": [
+     16750,
+     20500
+    ],
+    "d": [
+     19500,
+     23500
+    ],
+    "mi": [
+     50000,
+     50000
+    ]
+   },
+   {
+    "id": "honda-hr-v",
+    "name": "Honda HR-V",
+    "y0": 2022,
+    "y1": 2022,
+    "gen": "2nd generation",
+    "li": 41,
+    "yt": 56,
+    "yt_src": "years",
+    "sold": 115416,
+    "score": 61.7,
+    "p": [
+     16500,
+     19750
+    ],
+    "d": [
+     19000,
+     22750
+    ],
+    "mi": [
+     48000,
+     48000
+    ]
+   },
+   {
+    "id": "volvo-xc60",
+    "name": "Volvo XC60",
+    "y0": 2019,
+    "y1": 2021,
+    "gen": "2nd generation",
+    "li": 53,
+    "yt": 58,
+    "yt_src": "years",
+    "sold": 104238,
+    "score": 60.6,
+    "p": [
+     17000,
+     25500
+    ],
+    "d": [
+     19750,
+     29000
+    ],
+    "mi": [
+     60000,
+     84000
+    ]
+   },
+   {
+    "id": "chevrolet-traverse",
+    "name": "Chevrolet Traverse",
+    "y0": 2020,
+    "y1": 2022,
+    "gen": "2nd generation",
+    "li": 51,
+    "yt": 56,
+    "yt_src": "years",
+    "sold": 338761,
+    "score": 59.8,
+    "p": [
+     16500,
+     24500
+    ],
+    "d": [
+     19250,
+     28250
+    ],
+    "mi": [
+     49000,
+     69000
+    ]
+   },
+   {
+    "id": "acura-mdx",
+    "name": "Acura MDX",
+    "y0": 2022,
+    "y1": 2022,
+    "gen": "4th generation",
+    "li": 58,
+    "yt": 62,
+    "yt_src": "years",
+    "sold": 106482,
+    "score": 58.3,
+    "p": [
+     29500,
+     34500
+    ],
+    "d": [
+     33250,
+     38500
+    ],
+    "mi": [
+     48000,
+     48000
+    ]
+   },
+   {
+    "id": "chevrolet-equinox",
+    "name": "Chevrolet Equinox",
+    "y0": 2022,
+    "y1": 2022,
+    "gen": "3rd generation",
+    "li": 52,
+    "yt": 57,
+    "yt_src": "years",
+    "sold": 212072,
+    "score": 56.2,
+    "p": [
+     15750,
+     18750
+    ],
+    "d": [
+     18500,
+     21750
+    ],
+    "mi": [
+     46000,
+     46000
+    ]
+   },
+   {
+    "id": "jeep-grand-cherokee",
+    "name": "Jeep Grand Cherokee",
+    "y0": 2019,
+    "y1": 2020,
+    "gen": "4th generation (WK2)",
+    "li": 49,
+    "yt": 53,
+    "yt_src": "years",
+    "sold": 452755,
+    "score": 55.5,
+    "p": [
+     17000,
+     23500
+    ],
+    "d": [
+     19500,
+     26500
+    ],
+    "mi": [
+     66000,
+     78000
+    ]
+   },
+   {
+    "id": "toyota-highlander",
+    "name": "Toyota Highlander",
+    "y0": 2020,
+    "y1": 2022,
+    "gen": "4th generation",
+    "li": 67,
+    "yt": 60,
+    "yt_src": "years",
+    "sold": 699209,
+    "score": 54.9,
+    "p": [
+     23000,
+     30250
+    ],
+    "d": [
+     26250,
+     34000
+    ],
+    "mi": [
+     54000,
+     78000
+    ]
+   },
+   {
+    "id": "chevrolet-suburban",
+    "name": "Chevrolet Suburban",
+    "y0": 2017,
+    "y1": 2020,
+    "gen": "11th generation (K2XX)",
+    "li": 53,
+    "yt": 51,
+    "yt_src": "years",
+    "sold": 206713,
+    "score": 54.3,
+    "p": [
+     21500,
+     34000
+    ],
+    "d": [
+     25250,
+     39000
+    ],
+    "mi": [
+     72000,
+     102000
+    ]
    }
   ],
   "truck|private|u2": [],
@@ -2423,6 +10037,174 @@
      200000,
      200000
     ]
+   },
+   {
+    "id": "nissan-titan",
+    "name": "Nissan Titan",
+    "y0": 2010,
+    "y1": 2011,
+    "gen": "1st generation",
+    "li": 44,
+    "yt": 47,
+    "yt_src": "years",
+    "sold": 45410,
+    "score": 51.7,
+    "p": [
+     7250,
+     11000
+    ],
+    "d": [
+     9250,
+     13500
+    ],
+    "mi": [
+     180000,
+     192000
+    ]
+   },
+   {
+    "id": "ford-f-series",
+    "name": "Ford F-Series",
+    "y0": 2009,
+    "y1": 2009,
+    "gen": "12th generation",
+    "li": 47,
+    "yt": 46,
+    "yt_src": "years",
+    "sold": 413625,
+    "score": 46.7,
+    "p": [
+     7750,
+     10000
+    ],
+    "d": [
+     9750,
+     12250
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "honda-ridgeline",
+    "name": "Honda Ridgeline",
+    "y0": 2007,
+    "y1": 2008,
+    "gen": "1st generation",
+    "li": 63,
+    "yt": 47,
+    "yt_src": "years",
+    "sold": 76670,
+    "score": 40.0,
+    "p": [
+     5250,
+     7750
+    ],
+    "d": [
+     6500,
+     9750
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "toyota-tundra",
+    "name": "Toyota Tundra",
+    "y0": 2003,
+    "y1": 2006,
+    "gen": "1st generation",
+    "li": 71,
+    "yt": 46,
+    "yt_src": "years",
+    "sold": 464837,
+    "score": 37.7,
+    "p": [
+     6250,
+     10000
+    ],
+    "d": [
+     8000,
+     12250
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "ram-pickup",
+    "name": "Ram pickup",
+    "y0": 2002,
+    "y1": 2002,
+    "gen": "3rd generation",
+    "li": 72,
+    "yt": 46,
+    "yt_src": "years",
+    "sold": 396934,
+    "score": 31.7,
+    "p": [
+     4250,
+     6250
+    ],
+    "d": [
+     5500,
+     8000
+    ],
+    "mi": [
+     195000,
+     195000
+    ]
+   },
+   {
+    "id": "chevrolet-avalanche",
+    "name": "Chevrolet Avalanche",
+    "y0": 2007,
+    "y1": 2007,
+    "gen": "2nd generation",
+    "li": 90,
+    "yt": 48,
+    "yt_src": "years",
+    "sold": 55550,
+    "score": 23.1,
+    "p": [
+     6750,
+     8250
+    ],
+    "d": [
+     8500,
+     10500
+    ],
+    "mi": [
+     170000,
+     170000
+    ]
+   },
+   {
+    "id": "dodge-dakota",
+    "name": "Dodge Dakota",
+    "y0": 2006,
+    "y1": 2007,
+    "gen": "3rd generation",
+    "li": 93,
+    "yt": 46,
+    "yt_src": "years",
+    "sold": 126800,
+    "score": 21.2,
+    "p": [
+     5250,
+     7500
+    ],
+    "d": [
+     6750,
+     9500
+    ],
+    "mi": [
+     183000,
+     190000
+    ]
    }
   ],
   "truck|private|10-20": [
@@ -2547,6 +10329,78 @@
      108000
     ],
     "twin": "Chevrolet Colorado"
+   },
+   {
+    "id": "chevrolet-avalanche",
+    "name": "Chevrolet Avalanche",
+    "y0": 2011,
+    "y1": 2012,
+    "gen": "2nd generation",
+    "li": 57,
+    "yt": 48,
+    "yt_src": "years",
+    "sold": 44083,
+    "score": 45.0,
+    "p": [
+     9750,
+     13000
+    ],
+    "d": [
+     12000,
+     15500
+    ],
+    "mi": [
+     134000,
+     142000
+    ]
+   },
+   {
+    "id": "ford-f-series",
+    "name": "Ford F-Series",
+    "y0": 2010,
+    "y1": 2010,
+    "gen": "12th generation",
+    "li": 50,
+    "yt": 46,
+    "yt_src": "years",
+    "sold": 528349,
+    "score": 44.9,
+    "p": [
+     8750,
+     11250
+    ],
+    "d": [
+     11000,
+     13750
+    ],
+    "mi": [
+     192000,
+     192000
+    ]
+   },
+   {
+    "id": "ram-pickup",
+    "name": "Ram pickup",
+    "y0": 2017,
+    "y1": 2017,
+    "gen": "4th generation",
+    "li": 87,
+    "yt": 55,
+    "yt_src": "years",
+    "sold": 500723,
+    "score": 32.9,
+    "p": [
+     16250,
+     20750
+    ],
+    "d": [
+     19000,
+     24000
+    ],
+    "mi": [
+     112000,
+     112000
+    ]
    }
   ],
   "truck|private|20+": [
@@ -2669,6 +10523,127 @@
     "mi": [
      48000,
      72000
+    ]
+   },
+   {
+    "id": "nissan-titan",
+    "name": "Nissan Titan",
+    "y0": 2018,
+    "y1": 2020,
+    "gen": "2nd generation",
+    "li": 55,
+    "yt": 53,
+    "yt_src": "years",
+    "sold": 108502,
+    "score": 54.0,
+    "p": [
+     18750,
+     28000
+    ],
+    "d": [
+     21750,
+     31750
+    ],
+    "mi": [
+     72000,
+     96000
+    ]
+   },
+   {
+    "id": "chevrolet-silverado",
+    "name": "Chevrolet Silverado",
+    "y0": 2018,
+    "y1": 2018,
+    "gen": "3rd generation (K2XX)",
+    "li": 37,
+    "yt": 46,
+    "yt_src": "years",
+    "sold": 585581,
+    "score": 52.7,
+    "p": [
+     18500,
+     23000
+    ],
+    "d": [
+     21500,
+     26250
+    ],
+    "mi": [
+     115000,
+     115000
+    ],
+    "twin": "GMC Sierra"
+   },
+   {
+    "id": "ford-f-series",
+    "name": "Ford F-Series",
+    "y0": 2020,
+    "y1": 2020,
+    "gen": "13th generation",
+    "li": 62,
+    "yt": 51,
+    "yt_src": "years",
+    "sold": 787372,
+    "score": 43.4,
+    "p": [
+     24500,
+     31000
+    ],
+    "d": [
+     28000,
+     35000
+    ],
+    "mi": [
+     80000,
+     80000
+    ]
+   },
+   {
+    "id": "ram-pickup",
+    "name": "Ram pickup",
+    "y0": 2020,
+    "y1": 2020,
+    "gen": "5th generation",
+    "li": 96,
+    "yt": 61,
+    "yt_src": "years",
+    "sold": 563694,
+    "score": 34.4,
+    "p": [
+     24000,
+     29000
+    ],
+    "d": [
+     27500,
+     32750
+    ],
+    "mi": [
+     72000,
+     72000
+    ]
+   },
+   {
+    "id": "jeep-gladiator",
+    "name": "Jeep Gladiator",
+    "y0": 2022,
+    "y1": 2022,
+    "gen": "1st generation (JT)",
+    "li": 98,
+    "yt": 56,
+    "yt_src": "years",
+    "sold": 77855,
+    "score": 27.5,
+    "p": [
+     26000,
+     30500
+    ],
+    "d": [
+     29500,
+     34500
+    ],
+    "mi": [
+     42000,
+     42000
     ]
    }
   ],
@@ -2820,6 +10795,199 @@
      200000,
      200000
     ]
+   },
+   {
+    "id": "ram-pickup",
+    "name": "Ram pickup",
+    "y0": 2000,
+    "y1": 2000,
+    "gen": "2nd generation",
+    "li": 50,
+    "yt": 44,
+    "yt_src": "years",
+    "sold": 380874,
+    "score": 42.6,
+    "p": [
+     3500,
+     5500
+    ],
+    "d": [
+     4500,
+     7000
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "honda-ridgeline",
+    "name": "Honda Ridgeline",
+    "y0": 2007,
+    "y1": 2008,
+    "gen": "1st generation",
+    "li": 63,
+    "yt": 47,
+    "yt_src": "years",
+    "sold": 76670,
+    "score": 40.0,
+    "p": [
+     5250,
+     7750
+    ],
+    "d": [
+     6500,
+     9750
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "ford-f-series",
+    "name": "Ford F-Series",
+    "y0": 2000,
+    "y1": 2003,
+    "gen": "10th generation",
+    "li": 75,
+    "yt": 46,
+    "yt_src": "years",
+    "sold": 3447600,
+    "score": 35.1,
+    "p": [
+     4250,
+     6250
+    ],
+    "d": [
+     5500,
+     8000
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "toyota-tundra",
+    "name": "Toyota Tundra",
+    "y0": 2003,
+    "y1": 2004,
+    "gen": "1st generation",
+    "li": 73,
+    "yt": 46,
+    "yt_src": "years",
+    "sold": 213800,
+    "score": 33.0,
+    "p": [
+     6250,
+     8750
+    ],
+    "d": [
+     8000,
+     11000
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
+   },
+   {
+    "id": "chevrolet-s-10",
+    "name": "Chevrolet S-10",
+    "y0": 2002,
+    "y1": 2003,
+    "gen": "2nd generation",
+    "li": 70,
+    "yt": 44,
+    "yt_src": "years",
+    "sold": 287565,
+    "score": 32.8,
+    "p": [
+     3500,
+     5000
+    ],
+    "d": [
+     4250,
+     6000
+    ],
+    "mi": [
+     195000,
+     198000
+    ],
+    "twin": "GMC Sonoma"
+   },
+   {
+    "id": "chevrolet-avalanche",
+    "name": "Chevrolet Avalanche",
+    "y0": 2007,
+    "y1": 2007,
+    "gen": "2nd generation",
+    "li": 90,
+    "yt": 48,
+    "yt_src": "years",
+    "sold": 55550,
+    "score": 23.1,
+    "p": [
+     6750,
+     8250
+    ],
+    "d": [
+     8500,
+     10500
+    ],
+    "mi": [
+     170000,
+     170000
+    ]
+   },
+   {
+    "id": "dodge-dakota",
+    "name": "Dodge Dakota",
+    "y0": 2006,
+    "y1": 2007,
+    "gen": "3rd generation",
+    "li": 93,
+    "yt": 46,
+    "yt_src": "years",
+    "sold": 126800,
+    "score": 21.2,
+    "p": [
+     5250,
+     7500
+    ],
+    "d": [
+     6750,
+     9500
+    ],
+    "mi": [
+     183000,
+     190000
+    ]
+   },
+   {
+    "id": "nissan-titan",
+    "name": "Nissan Titan",
+    "y0": 2007,
+    "y1": 2007,
+    "gen": "1st generation",
+    "li": 98,
+    "yt": 47,
+    "yt_src": "years",
+    "sold": 65743,
+    "score": 17.2,
+    "p": [
+     5500,
+     8000
+    ],
+    "d": [
+     7000,
+     10250
+    ],
+    "mi": [
+     200000,
+     200000
+    ]
    }
   ],
   "truck|dealer|10-20": [
@@ -2943,6 +11111,102 @@
      168000,
      168000
     ]
+   },
+   {
+    "id": "nissan-titan",
+    "name": "Nissan Titan",
+    "y0": 2010,
+    "y1": 2011,
+    "gen": "1st generation",
+    "li": 44,
+    "yt": 47,
+    "yt_src": "years",
+    "sold": 45410,
+    "score": 51.7,
+    "p": [
+     7250,
+     11000
+    ],
+    "d": [
+     9250,
+     13500
+    ],
+    "mi": [
+     180000,
+     192000
+    ]
+   },
+   {
+    "id": "ford-f-series",
+    "name": "Ford F-Series",
+    "y0": 2009,
+    "y1": 2010,
+    "gen": "12th generation",
+    "li": 49,
+    "yt": 46,
+    "yt_src": "years",
+    "sold": 941974,
+    "score": 47.6,
+    "p": [
+     7750,
+     11250
+    ],
+    "d": [
+     9750,
+     13750
+    ],
+    "mi": [
+     192000,
+     200000
+    ]
+   },
+   {
+    "id": "chevrolet-avalanche",
+    "name": "Chevrolet Avalanche",
+    "y0": 2011,
+    "y1": 2012,
+    "gen": "2nd generation",
+    "li": 57,
+    "yt": 48,
+    "yt_src": "years",
+    "sold": 44083,
+    "score": 45.0,
+    "p": [
+     9750,
+     13000
+    ],
+    "d": [
+     12000,
+     15500
+    ],
+    "mi": [
+     134000,
+     142000
+    ]
+   },
+   {
+    "id": "ram-pickup",
+    "name": "Ram pickup",
+    "y0": 2013,
+    "y1": 2013,
+    "gen": "4th generation",
+    "li": 89,
+    "yt": 52,
+    "yt_src": "years",
+    "sold": 355673,
+    "score": 28.3,
+    "p": [
+     10500,
+     13750
+    ],
+    "d": [
+     12750,
+     16250
+    ],
+    "mi": [
+     150000,
+     150000
+    ]
    }
   ],
   "truck|dealer|20+": [
@@ -3065,6 +11329,127 @@
     "mi": [
      48000,
      72000
+    ]
+   },
+   {
+    "id": "nissan-titan",
+    "name": "Nissan Titan",
+    "y0": 2018,
+    "y1": 2020,
+    "gen": "2nd generation",
+    "li": 55,
+    "yt": 53,
+    "yt_src": "years",
+    "sold": 108502,
+    "score": 54.0,
+    "p": [
+     18750,
+     28000
+    ],
+    "d": [
+     21750,
+     31750
+    ],
+    "mi": [
+     72000,
+     96000
+    ]
+   },
+   {
+    "id": "chevrolet-silverado",
+    "name": "Chevrolet Silverado",
+    "y0": 2019,
+    "y1": 2022,
+    "gen": "4th generation (T1XX)",
+    "li": 67,
+    "yt": 54,
+    "yt_src": "years",
+    "sold": 2222708,
+    "score": 50.7,
+    "p": [
+     21500,
+     35500
+    ],
+    "d": [
+     24750,
+     39750
+    ],
+    "mi": [
+     66000,
+     104000
+    ],
+    "twin": "GMC Sierra"
+   },
+   {
+    "id": "ford-f-series",
+    "name": "Ford F-Series",
+    "y0": 2020,
+    "y1": 2020,
+    "gen": "13th generation",
+    "li": 62,
+    "yt": 51,
+    "yt_src": "years",
+    "sold": 787372,
+    "score": 43.4,
+    "p": [
+     24500,
+     31000
+    ],
+    "d": [
+     28000,
+     35000
+    ],
+    "mi": [
+     80000,
+     80000
+    ]
+   },
+   {
+    "id": "ram-pickup",
+    "name": "Ram pickup",
+    "y0": 2017,
+    "y1": 2018,
+    "gen": "4th generation",
+    "li": 82,
+    "yt": 52,
+    "yt_src": "years",
+    "sold": 1037703,
+    "score": 34.9,
+    "p": [
+     16250,
+     22750
+    ],
+    "d": [
+     19000,
+     26000
+    ],
+    "mi": [
+     102000,
+     112000
+    ]
+   },
+   {
+    "id": "jeep-gladiator",
+    "name": "Jeep Gladiator",
+    "y0": 2022,
+    "y1": 2022,
+    "gen": "1st generation (JT)",
+    "li": 98,
+    "yt": 56,
+    "yt_src": "years",
+    "sold": 77855,
+    "score": 27.5,
+    "p": [
+     26000,
+     30500
+    ],
+    "d": [
+     29500,
+     34500
+    ],
+    "mi": [
+     42000,
+     42000
     ]
    }
   ],
@@ -3310,6 +11695,54 @@
     "mi": [
      165000,
      170000
+    ]
+   },
+   {
+    "id": "honda-odyssey",
+    "name": "Honda Odyssey",
+    "y0": 2009,
+    "y1": 2009,
+    "gen": "3rd generation",
+    "li": 82,
+    "yt": 48,
+    "yt_src": "years",
+    "sold": 100133,
+    "score": 27.9,
+    "p": [
+     4000,
+     5500
+    ],
+    "d": [
+     5000,
+     6750
+    ],
+    "mi": [
+     166000,
+     166000
+    ]
+   },
+   {
+    "id": "chevrolet-astro",
+    "name": "Chevrolet Astro",
+    "y0": 2000,
+    "y1": 2002,
+    "gen": "2nd generation",
+    "li": 85,
+    "yt": 45,
+    "yt_src": "years",
+    "sold": 202596,
+    "score": 26.7,
+    "p": [
+     3250,
+     4500
+    ],
+    "d": [
+     4000,
+     5500
+    ],
+    "mi": [
+     190000,
+     198000
     ]
    }
   ],
@@ -3632,6 +12065,54 @@
     "mi": [
      165000,
      170000
+    ]
+   },
+   {
+    "id": "chevrolet-astro",
+    "name": "Chevrolet Astro",
+    "y0": 2000,
+    "y1": 2002,
+    "gen": "2nd generation",
+    "li": 85,
+    "yt": 45,
+    "yt_src": "years",
+    "sold": 202596,
+    "score": 26.7,
+    "p": [
+     3250,
+     4500
+    ],
+    "d": [
+     4000,
+     5500
+    ],
+    "mi": [
+     190000,
+     198000
+    ]
+   },
+   {
+    "id": "honda-odyssey",
+    "name": "Honda Odyssey",
+    "y0": 2003,
+    "y1": 2004,
+    "gen": "2nd generation",
+    "li": 84,
+    "yt": 42,
+    "yt_src": "years",
+    "sold": 308301,
+    "score": 21.6,
+    "p": [
+     2000,
+     3500
+    ],
+    "d": [
+     2500,
+     4250
+    ],
+    "mi": [
+     200000,
+     200000
     ]
    }
   ],
