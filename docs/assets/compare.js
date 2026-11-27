@@ -103,7 +103,7 @@
   }
   // 11-19 v5 (Elijah, phone): the tool looks like the match-up pages: a card per car on top (picture, name, year, one Lemon bar),
   // then every line is a tap-to-open box with one bar per car under a big car-name header (green = best of these cars, red = worst)
-  const IC = { 'Lemon Index': 'chart', 'Owner complaints': 'talk', 'Recalls': 'warning', 'Horsepower': 'engine', 'Torque': 'engine', '0–60 mph': 'stopwatch',
+  const IC = { 'Complaint Score': 'chart', 'Owner complaints': 'talk', 'Recalls': 'warning', 'Horsepower': 'engine', 'Torque': 'engine', '0–60 mph': 'stopwatch',
     'Top speed': 'stopwatch', 'Weight': 'scale', 'Price new': 'tag', 'Engine': 'engine', 'YouTube owner tone': 'youtube', 'MPG / MPGe': 'data',
     'Fuel economy': 'data', 'Fuel cost a year': 'tag', 'EV range': 'signpost', 'Crash test': 'car', 'Top problem': 'wrench' };
   const svg = id => `<svg class="cpl-i" width="24" height="24" aria-hidden="true" focusable="false"><use href="/assets/ic.svg?v=1#${id}"></use></svg>`;
@@ -164,7 +164,7 @@
     const anyEV = R.some(r => r.c.ev || (r.v && r.v[9])), anyPerf = R.some(r => r.g), anyCar = R.some(r => r.v);
     // [label, note, value fn -> [text, number for the green check], higher is better?]
     const L = [];
-    if (anyCar) L.push(['Lemon Index', '100 = average car, lower is better', r => r.v ? [r.v[0] == null ? '—' : r.v[0] + (r.c.w === 'ev' ? '*' : '') + (part(r) ? ' <small>partial</small>' : ''), r.c.w === 'ev' || part(r) ? null : r.v[0]] : ['—'], false],
+    if (anyCar) L.push(['Complaint Score', '100 = average car, lower is better', r => r.v ? [r.v[0] == null ? '—' : r.v[0] + (r.c.w === 'ev' ? '*' : '') + (part(r) ? ' <small>partial</small>' : ''), r.c.w === 'ev' || part(r) ? null : r.v[0]] : ['—'], false],
                        ['Owner complaints', 'to NHTSA, first 3 years (raw count, not per car sold)', r => r.v ? [r.v[1] == null ? '—' : r.v[1].toLocaleString(), null] : r.g ? [r.g.nc == null ? '—' : r.g.nc.toLocaleString(), null] : ['—'], false]);
     if (anyPerf && !anyCar) L.push(['Owner complaints', 'to NHTSA, these years (raw count)', r => r.g ? [r.g.nc == null ? '—' : r.g.nc.toLocaleString(), null] : ['—'], false]);
     L.push(['Recalls', 'that model year / generation', r => r.v ? [r.v[2] == null ? '—' : r.v[2], r.v[2]] : r.g ? [r.g.rc, r.g.rc] : ['—'], false, true]);   // [4] true: 0 is a real value (Devin: 7 recalls beat 0)
@@ -189,7 +189,7 @@
       const sel = `<select class="cx-sel" data-k="${n}" aria-label="${r.g ? 'Generation' : 'Model year'}">${opts(r.c).map(([v, l]) => `<option value="${v}"${v === r.key ? ' selected' : ''}>${l}</option>`).join('')}</select>`;
       const href = r.g ? r.c.u : (r.c.u.startsWith('/cars/') && r.c.y[r.key] ? `${r.c.u}${r.key}/` : r.c.u);
       const pic = r.c.im ? `<img class="cx5-im${R.length === 2 && n === 1 ? ' cx5-r' : ''}" src="${esc(r.c.im)}" alt="${esc(r.c.n)}" width="500" height="300" decoding="async">` : '';
-      const bar = r.v ? (r.v[0] == null ? '' : gauge(r.v[0], r.c.w === 'ev' ? 'EV Lemon Index*' : part(r) ? 'Partial Lemon Index' : 'Lemon Index', part(r)))
+      const bar = r.v ? (r.v[0] == null ? '' : gauge(r.v[0], r.c.w === 'ev' ? 'EV Complaint Score*' : part(r) ? 'Partial Complaint Score' : 'Complaint Score', part(r)))
                 : r.g && r.g.yt != null ? tone(r.g.yt) : '';
       return `<div class="cx5-car${win === r ? ' win' : ''}"><button class="cx-x" type="button" data-k="${n}" aria-label="Remove ${esc(r.c.n)}">×</button>${win === r ? '<p class="cx-badge">Best score <small>per car sold</small></p>' : ''}${pic}
 <a class="cx-name" href="${esc(href)}" title="${esc(r.c.n)}">${shortN(r.c) !== r.c.n ? `<small class="cx-brand">${esc(r.c.b)}</small>` : ''}${esc(shortN(r.c))}</a>${sel}${bar}${r.g ? `<p class="cx-v">${esc(r.g.v)}</p>` : `<p class="cx-v ${cl}">${w}</p>`}</div>`;
@@ -201,7 +201,7 @@
       const cells = R.map((r, k) => {
         const [t, x] = vals[k], v = xs[k];
         const cls = best[n] != null && x === best[n] ? ' cx5-dg' : worst[n] != null && x === worst[n] ? ' cx5-dr' : '';
-        const wd = lab === 'Lemon Index' ? (v ?? 0) / 2 : lab === 'Crash test' ? (v ?? 0) / 5 * 100 : (v ?? 0) / mx * 100;
+        const wd = lab === 'Complaint Score' ? (v ?? 0) / 2 : lab === 'Crash test' ? (v ?? 0) / 5 * 100 : (v ?? 0) / mx * 100;
         return `<div class="cx5-dc${cls}${txt ? ' tx' : ''}"><h3>${esc(shortN(r.c))}</h3><b>${t}</b>${!txt && v != null ? `<span class="cx5-dt"><i style="--w:${Math.max(3, Math.min(100, wd)).toFixed(0)}%"></i></span>` : ''}${note ? `<small>${note}</small>` : ''}</div>`;
       }).join('');
       const sub = R.map((r, k) => `${shortN(r.c)} ${plain(vals[k][0]) || '—'}`).join(' · ');
@@ -217,7 +217,7 @@
     const addBox = cars.length < MAX ? `<div class="cx-add"><p><b>${cars.length ? `Add a car <small>(${cars.length} of ${MAX})</small>` : 'Pick up to 4 cars'}</b></p>${myRow}<div class="cx-box"><input type="search" enterkeyhint="go" placeholder="e.g. 2019 RAV4, Model 3, M3, Ioniq 5" aria-label="Find a car to compare" autocomplete="off"><div class="cx-sug"></div></div></div>` : `<p class="cx-full">That&#39;s 4 cars, the most at once. Remove one to add another.</p>`;
     root.innerHTML = (R.length ? `<div class="cx5-cars" style="--n:${R.length}">${R.map((r, n) => card(r, n)).join('')}</div>`
       + (R.length >= 2 ? `<div class="cpl cx5-pills" style="--n:${R.length}">${L.map(lbox).join('')}</div>` : `<div class="cpl cx5-pills" style="--n:1">${L.map(lbox).join('')}</div>`) : '') + addBox
-      + (R.length >= 2 ? `<p class="cx-cap">Tap a line to see every car side by side. Green = the best of these cars on that line, red = the worst. Best score = the lowest Lemon Index (complaints per car sold), not the fewest raw complaints. ${notes.join(' ')}</p>` : notes.length ? `<p class="cx-cap">${notes.join(' ')}</p>` : '');
+      + (R.length >= 2 ? `<p class="cx-cap">Tap a line to see every car side by side. Green = the best of these cars on that line, red = the worst. Best score = the lowest Complaint Score (complaints per car sold), not the fewest raw complaints. ${notes.join(' ')}</p>` : notes.length ? `<p class="cx-cap">${notes.join(' ')}</p>` : '');
     hero(R);
     root.querySelectorAll('.lsv-cm-b').forEach(b => b.onclick = () => { const m = my[+b.dataset.my]; if (m) add(m[0], m[1], true); });
     root.querySelectorAll('.cx-x').forEach(x => x.onclick = () => { cars.splice(+x.dataset.k, 1); save(); draw(); });

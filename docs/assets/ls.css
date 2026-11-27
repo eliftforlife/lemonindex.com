@@ -1,0 +1,81 @@
+/* 11-26 Lemon Score (lemon_score.py). v2 (Elijah: "put it still where the old average car score thing was ... a bar and it has the score ...
+   an info icon ... drops down the things and what percentage they affect the score"): the hero bar keeps model_hero.py's look, flipped so
+   higher = better (Bad left, Good right); the (i) under the number drops down the 4 parts. Plus the card corner, chips and /lemon-score/. */
+.ls-bar { --lsg: #1a8f4c; --lsr: #e8141c; --lsm: #c9ccd1; margin: 0; }
+.ls-bar .mh-track { position: relative; display: flex; gap: 3px; height: 16px; margin: 22px 0 0; }
+.ls-bar .mh-track i { display: block; height: 100%; }
+.lsb-r { flex: 0 0 calc(45% - 2px); background: var(--lsr); border-radius: 8px 0 0 8px; }
+.lsb-m { flex: 0 0 calc(11% - 2px); background: var(--lsm); }
+.lsb-g { flex: 1 1 auto; background: var(--lsg); border-radius: 0 8px 8px 0; }
+.ls-bar .mh-pin { position: absolute; top: -14px; bottom: -14px; left: 0; width: 5px; margin-left: -2.5px; border-radius: 3px; background: #1d1d1f;
+  box-shadow: 0 0 0 2.5px #fff; transition: left 1.2s cubic-bezier(.25, 1.25, .45, 1); }
+.ls-bar .mh-pin::before { content: ""; position: absolute; left: 50%; top: -9px; width: 16px; height: 16px; margin-left: -8px; border-radius: 50%;
+  background: #ffd400; border: 4px solid #1d1d1f; box-sizing: border-box; }
+.ls-bar.in .mh-pin { left: var(--p); }
+@media (prefers-reduced-motion: reduce) { .ls-bar .mh-pin { transition: none; } }
+.ls-bar .mh-labs { position: relative; height: 22px; margin-top: 18px; font: 700 16px/1 var(--sys, Inter, sans-serif); }
+.ls-bar .mh-labs span { position: absolute; top: 0; white-space: nowrap; }
+.lsb-bad { left: 0; color: #d0121a; }
+.lsb-good { right: 0; color: #1a8f4c; }
+.ls-bar .mh-avg { left: 50%; transform: translateX(-50%); color: #6e6e73; }
+.ls-bar figcaption { margin-top: 18px; text-align: center; }
+.ls-bar figcaption > b { display: block; font: 800 clamp(64px, 18vw, 84px)/.95 var(--sys, Archivo, Inter, sans-serif); letter-spacing: -.04em; font-variant-numeric: tabular-nums; color: var(--ink, #1d1d1f); }
+.ls-bar.good figcaption > b { color: var(--good, #137a3a); }
+.ls-bar.bad figcaption > b { color: var(--red, #d0121a); }
+.ls-k { display: block; margin-top: 6px; font-size: 16px; font-weight: 600; color: var(--mute, #6e6e73); }
+/* the band word + (i): one tap target that opens the parts */
+.ls-dd { margin: 4px auto 0; text-align: left; }
+.ls-dd > summary { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 40px; list-style: none; cursor: pointer; }
+.ls-dd > summary::-webkit-details-marker { display: none; }
+.ls-dd > summary:focus-visible { outline: 3px solid var(--lemon, #ffd400); outline-offset: 2px; border-radius: 10px; }
+.ls-w { font-size: 21px; font-weight: 700; letter-spacing: -.01em; color: var(--ink, #1d1d1f); }
+.ls-w.good { color: var(--good, #137a3a); } .ls-w.bad { color: var(--red, #d0121a); }
+.ls-ib { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: #f2f2f5; color: #6e6e73; }
+.ls-ib svg { width: 18px; height: 18px; }
+.ls-dd > summary:hover .ls-ib, .ls-dd[open] > summary .ls-ib { background: #e3e3e8; color: #1d1d1f; }
+.ls-ddb { margin: 12px 0 0; padding: 14px 16px 16px; border-radius: 18px; background: #f5f5f7; }
+.ls-ddh { margin: 0 0 2px; font-size: 15px; font-weight: 400; line-height: 1.4; color: #3c4043; }
+.ls-p { border-top: 1px solid #e3e3e8; }
+.ls-p:first-child { border-top: 0; }
+.ls-p > summary, .ls-p0 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(48px, 30%) 34px; align-items: center; gap: 12px; padding: 12px 0; list-style: none; cursor: pointer; }
+.ls-p > summary::-webkit-details-marker { display: none; }
+.ls-p0 { cursor: default; }
+.ls-pn { font-size: 16px; font-weight: 700; color: var(--ink, #1d1d1f); }
+.ls-pn small { margin-left: 7px; font-size: 13px; font-weight: 700; color: #6e6e73; font-variant-numeric: tabular-nums; }
+.ls-p > summary .ls-pn::after { content: ""; display: inline-block; width: 7px; height: 7px; margin: 0 0 3px 8px; border-right: 2px solid #86868b; border-bottom: 2px solid #86868b; transform: rotate(45deg); transition: transform .2s; }
+.ls-p[open] > summary .ls-pn::after { transform: rotate(-135deg); margin-bottom: -1px; }
+.ls-pb { display: block; height: 8px; border-radius: 4px; background: #e3e3e8; overflow: hidden; }
+.ls-pb i { display: block; height: 100%; border-radius: 4px; background: #9a9aa0; }
+.ls-pb.good i { background: #1a8f4c; } .ls-pb.bad i { background: #e8141c; }
+.ls-pv { font-size: 18px; font-weight: 800; text-align: right; font-variant-numeric: tabular-nums; color: var(--ink, #1d1d1f); }
+.ls-pv.good { color: var(--good, #137a3a); } .ls-pv.bad { color: var(--red, #d0121a); }
+.ls-na { color: #86868b; font-weight: 600; font-size: 14px; }
+.ls-pr { list-style: none; margin: 0 0 4px; padding: 0; }
+.ls-pr li { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 7px 0; font-size: 15px; color: #1d1d1f; border-top: 1px dashed #dcdce1; }
+.ls-pr li small { display: block; font-size: 12.5px; color: #6e6e73; font-weight: 500; }
+.ls-pr li b { flex: 0 0 auto; font-variant-numeric: tabular-nums; }
+.ls-pr li b.good { color: var(--good, #137a3a); } .ls-pr li b.bad { color: var(--red, #d0121a); }
+.ls-ps { margin: 4px 0 12px; font-size: 12.5px; line-height: 1.4; color: #6e6e73; }
+.ls-est { display: inline-block; margin-left: 4px; padding: 1px 5px; border-radius: 4px; background: #e6e6eb; color: #3c4043; font: 700 10.5px/1.4 var(--sys, Inter, sans-serif); font-style: normal; letter-spacing: .02em; vertical-align: 1px; }
+.ls-fx { list-style: none; margin: 10px 0 0; padding: 10px 0 0; border-top: 1px solid #e3e3e8; font-size: 14px; line-height: 1.45; color: #3c4043; }
+.ls-fx li { padding: 2px 0; }
+.ls-how { display: inline-block; margin: 12px 0 0; font-size: 15px; font-weight: 600; color: #0066cc; text-decoration: none; }
+.ls-how:hover { text-decoration: underline; }
+.ls-pl { display: flex; align-items: center; justify-content: center; gap: 6px; margin: 6px 0 0; font-size: 15px; font-weight: 600; color: #a15c00; }
+.ls-pl svg { flex: 0 0 auto; width: 16px; height: 16px; }
+.mh-score.ls-only { width: 100%; max-width: 680px; margin: 10px auto 4px; }
+/* compare cards + corner badges */
+.ls-chip { display: inline-flex; flex-direction: column; align-items: center; margin-top: 8px; }
+.ls-chip b { font: 800 30px/1 var(--sys, Archivo, Inter, sans-serif); font-variant-numeric: tabular-nums; }
+.ls-chip small { font-size: 12px; font-weight: 600; color: #6e6e73; }
+.ls-chip.good b { color: var(--good, #137a3a); } .ls-chip.bad b { color: var(--red, #d0121a); }
+.mc .ls-c.mid { color: #6e6e73; }
+/* /lemon-score/ */
+.ls-hw > div > b { font-size: 34px; }
+.ls-mt td.num { text-align: right; }
+/* the Complaint Score on its own, first in the dropdown (older videos quote it) */
+.ls-cs { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin: 0 0 12px; padding: 0 0 12px; border-bottom: 1px solid #e3e3e8; }
+.ls-cs > span:first-child { font-size: 16px; font-weight: 700; color: var(--ink, #1d1d1f); }
+.ls-cs small { display: block; font-size: 12.5px; font-weight: 500; color: #6e6e73; }
+.ls-cs > b { font: 800 24px/1 var(--sys, Archivo, Inter, sans-serif); font-variant-numeric: tabular-nums; }
+.ls-cs > b.good { color: var(--good, #137a3a); } .ls-cs > b.bad { color: var(--red, #d0121a); }
