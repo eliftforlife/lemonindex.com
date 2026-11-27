@@ -89,7 +89,7 @@
     ${[5, 10, 15].map(a => `<button type="button" role="radio" data-a="${a}" aria-checked="${a === pick}">$${a}</button>`).join('')}
     <button type="button" role="radio" data-a="custom" aria-checked="false">Other</button>
   </div>
-  <a class="btn sup-go" href="#" rel="noopener" target="_blank">Donate $10</a>
+  <a class="btn sup-go" href="#" rel="noopener">Donate $10</a>
   <details class="sup-next"><summary>What it pays for</summary><ul><li>More cars and years</li><li>Car images and year sliders</li><li>Engine pages for more brands</li><li>VIN reports and recall alerts</li></ul></details>
   <button type="button" class="sup-later">Maybe later</button>
   <p class="sup-fine">Secure checkout by Stripe · Not tax-deductible</p>
@@ -119,7 +119,7 @@
     card.className = 'supc supc3'; card.setAttribute('aria-label', 'Support the Lemon Index');
     // 11-19 (Elijah): black card, no icon, "Support Lemon Index" (11-20 wording) + four white buttons straight to Stripe ($5 / $10 / $15 / custom)
     card.innerHTML = `<div class="supc3-t"><b>Support Lemon Index</b><small>Secure checkout by Stripe</small></div>
-<div class="supc3-a">${[5, 10, 15].map(a => `<a href="${LINKS[a]}" target="_blank" rel="noopener">$${a}</a>`).join('')}<a href="${LINKS.custom}" target="_blank" rel="noopener">Custom</a></div>`;
+<div class="supc3-a">${[5, 10, 15].map(a => `<a href="${LINKS[a]}" rel="noopener">$${a}</a>`).join('')}<a href="${LINKS.custom}" rel="noopener">Custom</a></div>`;
     spot.insertAdjacentElement('afterend', card);
     card.querySelectorAll('.supc3-a a').forEach(a => a.addEventListener('click', () => { mark(); set(PAID, String(Date.now())); }));
   }
