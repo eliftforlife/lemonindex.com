@@ -80,3 +80,27 @@ html.db-off .hask, .hask[hidden] { display: none; }
 .dw .dw-mng, .spg-mng a, .thx-fine .dw-mng { color: #6e6e73; font-size: 14px; text-decoration: underline; text-underline-offset: 3px; }
 .dw .dw-mng[hidden] { display: none; }
 .spf-s[hidden] { display: none !important; }
+
+/* ---- 11-27 (Elijah: "contrast so your eyes know what to focus on, like Blender's"): the home ask is a dark card.
+   One reading order: small yellow date -> big white headline -> grey reason -> white ask -> yellow Donate button. Scoped to .hask,
+   so the sheet, /support/ and the end-of-page card keep the light widget. */
+.hask { background: #141416; color: #f5f5f7; }
+.hask-h { margin-bottom: 14px; color: #fff; }
+.hask-h .hask-d { min-height: 0; margin-bottom: 10px; font: 700 clamp(17px, 4.6vw, 20px)/1.2 var(--sys, Inter, system-ui, sans-serif); letter-spacing: 0; color: #ffd400; }
+.hask-l { color: #a1a1a6; }
+.hask-a { margin-top: 18px; font-size: 20px; color: #fff; }
+.hask-o button { color: #8e8e93; }
+.hask-o button:hover { color: #fff; }
+.hask .dw-tog { background: rgba(255, 255, 255, .1); }
+.hask .dw-tog button { color: #a1a1a6; }
+.hask .dw-tog button[aria-checked="true"] { background: #3a3a3c; color: #fff; box-shadow: none; }
+.hask .dw-amts button { border-color: #3a3a3c; background: #1f1f22; color: #fff; }
+.hask .dw-amts button small { color: #8e8e93; }
+.hask .dw-amts button[aria-checked="true"] { border-color: #fff; background: #fff; color: #111; }
+.hask .dw-amts button[aria-checked="true"] small { color: #3a3a3c; }
+.hask .dw .dw-mng { color: #8e8e93; }
+.hask :focus-visible { outline: 2px solid #ffd400; outline-offset: 2px; }
+
+/* 11-27 r2 (Elijah: "like Blender's"): the ask is a full-width black band above the site header; the header and the normal site follow. */
+.hask { margin: 0; border-radius: 0; padding: 30px 16px 26px; }
+@media (min-width: 900px) { .hask { margin: 0; border-radius: 0; padding: 44px max(32px, calc(50% - 600px)); } .hask-in { max-width: 1200px; } }
