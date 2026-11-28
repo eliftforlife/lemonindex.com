@@ -2440,21 +2440,24 @@ CARS_GRID = f'''<section class="cgrid">{CTABS}{HCHIPS}<h2 data-hide="p j">Every 
 # lead as in his sketch; the rest follow by how many cars they hold, All cars last. A card filters the grid below (assets/ctabs.js) and
 # scrolls to it; its href is the same /?type= link the tabs use, so it works as a plain link too. /cars/ keeps the text tabs.
 _nall = sum(1 for cl in re.findall(r'<(?:a|div) class="mc([^"]*)" data-t=', lst) if 'mc-dup' not in cl)   # = the cards All cars shows
-_cnt = lambda n, w: f'{n} {w}' if isinstance(n, int) and n else 'Coming soon'
+_cnt = lambda n, w: f'{n} {w}' if isinstance(n, int) and n else n if isinstance(n, str) else 'Coming soon'
 # (type, card name, full name for the grid's line, image, alt, count, unit)
-_HK = [('jdm', 'JDM', 'JDM', 'ai-jdm/toyota-supra-mk4', 'Toyota Supra (1993–2002)', _njd, 'cars'),
-       ('suvs', 'SUVs', 'SUVs', 'ai-models/toyota-4runner', 'Toyota 4Runner', _nseg['sv'], 'models'),
-       ('trucks', 'Trucks', 'Trucks', 'ai-models/toyota-tacoma', 'Toyota Tacoma', _nseg['tk'], 'models')]
-_HK += sorted([('cars', 'Sedans', 'Sedans & hatchbacks', 'ai-models/honda-civic', 'Honda Civic', _nseg['cr'], 'models'),
-               ('minivans', 'Minivans', 'Minivans', 'ai-models/honda-odyssey', 'Honda Odyssey', _nseg['mv'], 'models'),
-               ('performance', 'Performance', 'Performance', 'ai-perf/shelby-gt500', 'Ford Mustang Shelby GT500', _npf, 'cars'),
-               ('supercars', 'Supercars', 'Supercars', 'ai-vehicles/ferrari-488-gtb', 'Ferrari 488 GTB', _nsc, 'cars'),
-               ('electric', 'Electric', 'Electric', 'ai-models/tesla-model-y', 'Tesla Model Y', _nev, 'cars')],
-              key=lambda r: -(r[5] if isinstance(r[5], int) else 0))
+# 11-27 (Elijah: "most viewed categories first, not JDM"): ordered by Cloudflare page views of each kind's page, 11-13..11-27
+# (SUVs 6.1K, Sedans 5.6K, Budget 3.7K, Trucks 2.6K, JDM 1.9K, Performance 0.8K, Electric 0.8K, Minivans 0.4K, Supercars 0.4K).
+# Budget joins as a card of its own (a plain link to /budget/, no data-type). Re-pull the numbers and re-sort now and then.
+_HK = [('suvs', 'SUVs', 'SUVs', 'ai-models/toyota-4runner', 'Toyota 4Runner', _nseg['sv'], 'models'),
+       ('cars', 'Sedans', 'Sedans & hatchbacks', 'ai-models/honda-civic', 'Honda Civic', _nseg['cr'], 'models'),
+       ('budget', 'Budget', 'Cars for your budget', 'ai-models/toyota-corolla', 'Toyota Corolla', 'Best picks by price', ''),
+       ('trucks', 'Trucks', 'Trucks', 'ai-models/toyota-tacoma', 'Toyota Tacoma', _nseg['tk'], 'models'),
+       ('jdm', 'JDM', 'JDM', 'ai-jdm/toyota-supra-mk4', 'Toyota Supra (1993–2002)', _njd, 'cars'),
+       ('performance', 'Performance', 'Performance', 'ai-perf/shelby-gt500', 'Ford Mustang Shelby GT500', _npf, 'cars'),
+       ('electric', 'Electric', 'Electric', 'ai-models/tesla-model-y', 'Tesla Model Y', _nev, 'cars'),
+       ('minivans', 'Minivans', 'Minivans', 'ai-models/honda-odyssey', 'Honda Odyssey', _nseg['mv'], 'models'),
+       ('supercars', 'Supercars', 'Supercars', 'ai-vehicles/ferrari-488-gtb', 'Ferrari 488 GTB', _nsc, 'cars')]
 _HK.append(('all', 'All cars', 'All cars', 'ai-models/toyota-camry', 'Toyota Camry', _nall, 'cars, A to Z'))
 def _hkcard(i, k, name, full, img, alt, n, unit):
     src = f'/assets/{img}.webp'
-    return (f'<a class="hk-c{" hk-r" if i % 2 else ""}" href="{"/" if k == "all" else "/?type=" + k}" data-type="{k}" data-name="{E(full)}"><span class="hk-t"><b>{E(name)}</b><small>{E(_cnt(n, unit))}</small></span>'
+    return ((f'<a class="hk-c{" hk-r" if i % 2 else ""}" href="/budget/">' if k == 'budget' else f'<a class="hk-c{" hk-r" if i % 2 else ""}" href="{"/" if k == "all" else "/?type=" + k}" data-type="{k}" data-name="{E(full)}">') + f'<span class="hk-t"><b>{E(name)}</b><small>{E(_cnt(n, unit))}</small></span>'
             f'<span class="hk-p"><img src="{src}"{rset(src, "(max-width: 639px) 46vw, 300px")} alt="{E(alt)}, AI illustration" width="1000" height="600"'
             f'{"" if i < 3 else " loading=" + chr(34) + "lazy" + chr(34)} decoding="async"></span></a>')
 # 11-25 (Elijah): the old black 'Coming soon to Lemon' top bar (phones only) becomes the LAST home card: a dirt bike + a car, links to
